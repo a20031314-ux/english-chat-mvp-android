@@ -1,30 +1,24 @@
-languagebank membantumu benar-benar berbicara dan menulis dalam bahasa yang sedang kamu pelajari, bersama tutor AI, video asli, dan orang lain yang juga belajar. Pelajari salah satu dari 14 bahasa, dengan aplikasi dalam salah satu dari 14 bahasa.
+languagebank menentukan apa yang dipelajari setiap hari dan membuatmu mengucapkannya dengan suara. Pelajari salah satu dari 14 bahasa, dengan aplikasi dalam salah satu dari 14 bahasa.
 
-NGOBROL DENGAN TUTOR AI
-• Mengobrol dalam bahasa yang kamu pelajari. Buntu? Tulis dalam bahasamu sendiri: tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menaruh ungkapannya tepat di bawah baris itu.
-• Kalau kalimatmu ada yang salah, label "Ada yang perlu diperbaiki" muncul di bawahnya. Ketuk untuk melihat kalimat yang sudah diperbaiki.
-• Ketuk 📞 di atas obrolan untuk langsung menelepon tutor dan bicara dengan suara keras. Setiap panggilan tersimpan di obrolan sebagai kartu 🗒 untuk dilanjutkan atau dilihat lagi. Paket hari ini adalah panggilan singkat dengan tujuan.
+ALUR BELAJAR HARIANMU
+1. Mulai dari tahapmu: baca percakapan singkat dan jawab "Bisa", "Hampir", atau "Belum" untuk mulai di tahap yang pas dari lima tahap. Aksara baru? Mulai dari huruf dan bunyi.
+2. Rencana hari ini: pilih 5, 10, atau 20 menit sehari dan lihat berapa hari selesai. "Sesuai urutan" atau "Sesuai riwayatku" menentukan naskah dan struktur kalimat hari itu.
+3. Ucapkan naskah: ucapkan kalimatmu dalam naskah situasi dengan 🎤 — Ulangi, Huruf pertama, Disembunyikan, atau Dengan kata sendiri. Kalimat sempurna dapat ★; benar tapi kaku diberi cara yang lebih wajar, dan kata yang kurang jelas ditandai. Mengucapkannya dengan cara lain yang benar juga lulus, dan di hari yang sama kamu bisa lanjut dari tempat berhenti.
+4. Ganti dalam struktur kalimat: ucapkan satu struktur berkali-kali dengan mengganti katanya saja.
+5. Ulangi: di akhir naskah tandai tiap ungkapan "Sudah tahu" atau "Masih bingung". Yang membingungkan dan kalimat yang salah kembali sebagai kuis singkat setelah 2 dan 7 hari, dan terkumpul di atas tab Saya, di "Yang salah terakhir kali". Nyalakan "Pengingat pagi" agar muncul di layar kunci.
+6. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
 
-TANYAKAN KALIMAT APA PUN
-• Buka analisis kalimat pada baris dari obrolan, panggilan, video, atau catatanmu. Pilih bagian yang tidak kamu pahami dan tanyakan artinya. Jawabannya dalam bahasamu, dan "Cari di Saya" menunjukkan letaknya di tahapmu.
+PAKAI DALAM PERCAKAPAN
+• Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Tutor juga memberi kesempatan memakai lagi ungkapan yang membingungkan.
+• Panggilan AI: bicara dengan suara. Walau berantakan, tutor menemukan maksudmu, dan setelahnya bisa ditinjau.
+• Analisis kalimat: di kalimat mana pun, pilih bagian yang tidak kamu pahami dan tanyakan artinya.
+• Video: video asli dipecah per kalimat untuk diulang dan ditanyakan.
 
-BELAJAR DARI VIDEO ASLI
-• Video dibagi per kalimat dengan subtitel dalam bahasa yang kamu pelajari. Ketuk kalimat untuk memutarnya lagi, dan tanyakan baris mana pun.
+BELAJAR BERSAMA ORANG
+• Di Ruang, bicara dengan suara bersama yang belajar bahasa yang sama, dengan teks langsung, lalu lanjutkan di grup dan pesan pribadi.
 
-LIHAT APA YANG MASIH KURANG
-• Tanpa skor. Setiap kalimat hanya menunjukkan apa yang salah atau kurang, dan tulisanmu memperlihatkan bagian yang lemah serta langkah berikutnya.
-• Di Saya, kamu mulai dari contoh percakapan pendek. Jawab "Bisa", "Hampir", atau "Belum", dan kamu mulai dari tahap yang pas untukmu.
-• Petunjuk misi terbuka satu per satu, jadi kamu mencoba dulu.
-• "Tahap" di Saya: tangga 1 sampai 5, tiap tahap dengan tata bahasanya, percakapan yang nanti bisa kamu lakukan, dan hal yang bisa kamu kerjakan; kalau baru mulai, huruf dan bunyi dulu. Baris yang dikoreksi dan ungkapan yang kamu kuasai masuk ke tempatnya.
-• "Belajar hari ini": baris yang dikoreksi tutor hari ini. Simpan yang kamu mau dan baris itu masuk ke tempatnya, bisa juga dengan layar saat itu.
+TANPA NILAI LEVEL
+• Setiap kalimat ditunjukkan salah dan kurangnya; riwayatmu menentukan langkah berikutnya.
 
-BELAJAR BERSAMA ORANG LAIN
-• Room: ruang suara dengan subtitel langsung, sampai 40 orang. Ketuk baris untuk menerjemahkannya, atau pilih hanya kata yang ingin kamu tanyakan. Baris yang kamu ucapkan sendiri bisa menampilkan koreksi yang hanya kamu lihat. Tuan rumah bisa memulai permainan Pembohong dan Mafia dengan 🎭.
-• Obrolan: grup dan pesan 1:1, panggilan suara dan panggilan video 1:1, serta ruang tim bersama teman belajar.
-• Orang: tampilkan hanya orang yang mempelajari bahasa yang sama, atau yang juga berbicara bahasamu; ikuti mereka dan posting di papan. Profil menampilkan negara, bahasa, dan minat, dan kamu bisa mengirim "🙌 Membantu" ke orang yang menjawabmu.
-• Ikon: buat paket ikon sendiri (bisa animasi) dan kirim lewat pesan dan komentar.
-• Undang teman dengan satu tautan.
-• Matikan fitur yang tidak kamu pakai, dan aplikasi hanya menampilkan yang kamu butuhkan.
-
-PAKET
-Mulai gratis, dengan batas harian. Paket gratis menampilkan iklan. Langganan menambah obrolan, bantuan AI, dan waktu panggilan harian, tanpa iklan.
+HARGA
+• Naskah per tahap gratis (dengan iklan). "Paket naskah" menambah panggilan singkat dan chat; Lite, Plus, dan Premium tanpa iklan dengan lebih banyak chat dan waktu panggilan harian.

@@ -1,30 +1,24 @@
-languagebank helps you actually speak and write in the language you're learning — with an AI tutor, real videos and other learners. Learn any of 14 languages, with the app in any of 14 languages.
+languagebank sets what to study each day and gets you saying it out loud. Learn any of 14 languages, with the app in any of 14 languages.
 
-TALK WITH AN AI TUTOR
-• Chat in the language you're learning. Stuck? Write in your own language: the tutor keeps going in the language you're learning, and "Show how to say it" puts the expression right under that line.
-• When a sentence has a mistake, a "Something to fix" chip appears under it. Tap it to see the corrected sentence.
-• Tap 📞 at the top of the chat to call the tutor and talk out loud. Each call stays in the chat as a 🗒 card you can continue or look back on. Today's pack is a short call with a goal.
+YOUR DAILY LEARNING FLOW
+1. Start at your stage: read a short conversation and answer "Yes, I can", "Almost" or "Not yet" to start at the right one of five stages. New to a script? Begin with letters and sounds.
+2. Today's plan: pick 5, 10 or 20 minutes a day and see how many days it takes to finish. "In order" or "From my record" sets the day's scripts and sentence structures.
+3. Speak the script: say your lines in situation scripts with 🎤 — Repeat after, First letters, Hidden or Own words. A perfect line gets ★; a correct but stiff one gets a more natural way to say it, and unclear words are pointed out. Saying it another correct way still passes, and you can pick up where you stopped the same day.
+4. Swap the sentence structure: say one structure many times, changing only the words.
+5. Review: at the end of a script mark each phrase "I know it" or "Not sure". What confused you and lines you missed come back as a short quiz after 2 and 7 days, and gather at the top of My under "What you got wrong last time". Turn on "Morning reminder" to see them on your lock screen.
+6. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
 
-ASK ABOUT ANY SENTENCE
-• Open sentence analysis on a line from chat, calls, videos or your notes. Pick the part you don't get and ask what it means. Answers come in your own language, and "Find in My" shows where it fits in your stages.
-
-LEARN FROM REAL VIDEOS
-• Videos are split into sentences with subtitles in the language you're learning. Tap a sentence to replay it, and ask about any line.
-
-SEE WHAT YOU'RE MISSING
-• No scores. Each sentence shows only what was wrong or missing, and what you've written shows where you're weak and what to do next.
-• Start in My with short example conversations. Answer "Yes, I can", "Almost" or "Not yet", and you begin at the stage that fits you.
-• Missions open hints one at a time, so you try first.
-• "Stages" in My: a ladder from 1 to 5, each with its grammar, the conversation you'll be able to have and what you can do, plus letters and sounds first if you're just beginning. Fixed lines and phrases you've learned fill the right places.
-• "Today's learning": the lines your tutor fixed today. Keep the ones you want and they go into the right place, with the screen from that moment if you like.
+USE IT IN CONVERSATION
+• AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. The tutor also gives you chances to reuse what confused you.
+• AI calls: speak out loud. Even when it comes out messy, the tutor finds what you meant, and you can look back afterwards.
+• Sentence analysis: pick just the part you don't get in any sentence and ask what it means.
+• Video: real videos split into sentences to replay and ask about.
 
 LEARN WITH PEOPLE
-• Room: voice rooms with live captions, up to 40 people. Tap a line to translate it, or pick just the words you want to ask about. Your own lines can show corrections only you see. Hosts can start Liar and Mafia games with 🎭.
-• Chats: group chats and 1:1 messages, voice calls and 1:1 video calls, and team spaces with study mates.
-• People: show only people "Learning the same language", or those with the "Same learning & spoken language"; follow them and post on the board. Profiles show country, languages and interests, and you can send "🙌 Helpful" to someone who answered you.
-• Icons: make your own icon packs (animated too) and send them in messages and comments.
-• Invite a friend with one link.
-• Turn off the features you don't use, and the app shows only what you need.
+• In Rooms, talk by voice with others learning the same language, with live captions, and carry on in group chats and one-to-one messages.
 
-PLANS
-Free to start, with daily limits. The free plan shows ads. Subscriptions add more chats, more AI help and daily call time, without ads.
+NO LEVEL SCORES
+• Every sentence gets its mistakes and gaps pointed out; your record decides what comes next.
+
+PRICING
+• Stage scripts are free (with ads). The Scripts plan adds short calls and chat; Lite, Plus and Premium remove ads and add more chat and daily call time.

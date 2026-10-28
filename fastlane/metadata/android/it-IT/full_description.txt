@@ -1,30 +1,24 @@
-languagebank ti aiuta a parlare e scrivere davvero nella lingua che stai imparando, con un tutor IA, video veri e altre persone che imparano. Impara una delle 14 lingue, con l'app in una delle 14 lingue.
+languagebank decide cosa studiare ogni giorno e te lo fa dire ad alta voce. Impara una delle 14 lingue, con l'app in una delle 14 lingue.
 
-PARLA CON UN TUTOR IA
-• Chatta nella lingua che stai imparando. Ti blocchi? Scrivi nella tua lingua: il tutor continua nella lingua che stai imparando e «Vedi come si dice» mette l'espressione proprio sotto quella riga.
-• Se una frase contiene un errore, sotto compare l'etichetta «C'è qualcosa da correggere». Toccala per vedere la frase corretta.
-• Tocca 📞 in alto nella chat per chiamare il tutor e parlare ad alta voce. Ogni chiamata resta nella chat come scheda 🗒, da continuare o rivedere. Il pacchetto di oggi è una breve chiamata con un obiettivo.
+IL TUO PERCORSO DI OGNI GIORNO
+1. Parti dalla tua fase: leggi una breve conversazione e rispondi «Sì, ci riesco», «Quasi» o «Non ancora» per iniziare dalla fase giusta tra cinque. Scrittura nuova? Parti da lettere e suoni.
+2. Il piano di oggi: scegli 5, 10 o 20 minuti al giorno e vedi in quanti giorni finisci. «In ordine» o «In base ai miei progressi» fissa i copioni e le strutture del giorno.
+3. Parla con il copione: di' le tue battute nei copioni di situazioni con 🎤 — Ripeti, Prime lettere, Nascosto o Con parole tue. Una battuta perfetta riceve ★; se è corretta ma poco naturale ti propone un modo più naturale, e segnala le parole poco chiare. Dirlo in un altro modo corretto vale lo stesso, e puoi riprendere da dove avevi lasciato nello stesso giorno.
+4. Cambia nella struttura della frase: ripeti una struttura più volte cambiando solo le parole.
+5. Ripasso: alla fine del copione segna ogni espressione «Lo so» o «Non sono sicuro». Ciò che non è chiaro e le battute sbagliate tornano come breve quiz dopo 2 e 7 giorni, e si raccolgono in cima a Io, in «Cosa hai sbagliato l'ultima volta». Con il «Promemoria del mattino» compaiono sulla schermata di blocco.
+6. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
 
-CHIEDI DI QUALSIASI FRASE
-• Apri l'analisi della frase su una riga di chat, chiamate, video o note. Scegli la parte che non capisci e chiedi cosa significa. La risposta arriva nella tua lingua, e «Trova in Io» mostra dove si colloca nelle tue fasi.
+USALO NELLE CONVERSAZIONI
+• Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Ti dà anche occasioni per riusare ciò che non era chiaro.
+• Chiamate IA: parla ad alta voce. Anche se viene male, il tutor trova cosa volevi dire, e poi puoi rivederla.
+• Analisi della frase: in qualsiasi frase scegli solo la parte che non capisci e chiedi cosa significa.
+• Video: video veri divisi in frasi da riascoltare e chiedere.
 
-IMPARA CON VIDEO VERI
-• I video sono divisi in frasi, con sottotitoli nella lingua che stai imparando. Tocca una frase per riascoltarla e fai domande su qualsiasi riga.
+IMPARA CON ALTRE PERSONE
+• Nelle Stanze parla a voce con chi impara la stessa lingua, con sottotitoli in diretta, e continua in gruppo o in messaggi privati.
 
-VEDI COSA TI MANCA
-• Niente punteggi. Ogni frase mostra solo cosa era sbagliato o mancava, e ciò che scrivi rivela i tuoi punti deboli e cosa fare dopo.
-• In Io inizi con brevi conversazioni di esempio. Rispondi «Sì, ci riesco», «Quasi» o «Non ancora» e parti dalla fase giusta per te.
-• Gli indizi delle missioni si aprono uno alla volta, così provi prima tu.
-• «Fasi» in Io: una scala da 1 a 5, ogni fase con la sua grammatica, la conversazione che saprai fare e cosa saprai fare, e prima lettere e suoni se sei all'inizio. Le righe corrette e le espressioni imparate finiscono al posto giusto.
-• «Imparato oggi»: le righe che il tutor ha corretto oggi. Tieni quelle che vuoi e vanno al posto giusto, anche con la schermata di quel momento.
+NIENTE PUNTEGGI DI LIVELLO
+• Ogni frase riceve i suoi errori e le sue lacune; il tuo storico decide cosa viene dopo.
 
-IMPARA CON LE PERSONE
-• Room: stanze vocali con sottotitoli in tempo reale, fino a 40 persone. Tocca una riga per tradurla o scegli solo le parole su cui vuoi fare una domanda. Le tue righe possono mostrare correzioni che vedi solo tu. L'host può avviare con 🎭 i giochi del Bugiardo e della Mafia.
-• Chat: gruppi e messaggi 1:1, chiamate vocali e videochiamate 1:1, e spazi di squadra con compagni di studio.
-• Persone: mostra solo chi impara la stessa lingua, o chi parla anche la tua lingua; seguili e scrivi nella bacheca. I profili mostrano paese, lingue e interessi, e puoi inviare «🙌 Utile» a chi ti ha risposto.
-• Icone: crea i tuoi pacchetti di icone (anche animate) e inviali nei messaggi e nei commenti.
-• Invita un amico con un solo link.
-• Disattiva le funzioni che non usi e l'app mostra solo quello che ti serve.
-
-PIANI
-Si inizia gratis, con limiti giornalieri. Il piano gratuito mostra pubblicità. Gli abbonamenti aggiungono più chat, più aiuto dall'IA e tempo di chiamata ogni giorno, senza pubblicità.
+PREZZI
+• I copioni per fase sono gratis (con pubblicità). Il piano «Copioni» aggiunge chiamate brevi e chat; Lite, Plus e Premium tolgono la pubblicità e danno più chat e minuti di chiamata al giorno.

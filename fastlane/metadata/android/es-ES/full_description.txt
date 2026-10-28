@@ -1,30 +1,24 @@
-languagebank te ayuda a hablar y escribir de verdad en el idioma que aprendes, con un tutor IA, vídeos reales y otras personas que aprenden. Aprende cualquiera de 14 idiomas, con la app en cualquiera de 14 idiomas.
+languagebank decide qué estudiar cada día y te hace decirlo en voz alta. Aprende cualquiera de 14 idiomas, con la app en cualquiera de 14 idiomas.
 
-HABLA CON UN TUTOR IA
-• Chatea en el idioma que aprendes. ¿Te atascas? Escribe en tu idioma: el tutor sigue en el idioma que aprendes, y «Ver cómo se dice» pone la expresión justo debajo de esa línea.
-• Si una frase tiene un error, aparece debajo la etiqueta «Hay algo que corregir». Tócala para ver la frase corregida.
-• Toca 📞 arriba en el chat para llamar al tutor y hablar en voz alta. Cada llamada queda en el chat como una tarjeta 🗒 para seguir o repasar. El paquete de hoy es una llamada corta con un objetivo.
+TU FLUJO DE CADA DÍA
+1. Empieza en tu etapa: lee una conversación corta y responde «Sí, puedo», «Casi» o «Todavía no» para empezar en la etapa adecuada de las cinco. ¿Escritura nueva? Empieza por letras y sonidos.
+2. Para hoy: elige 5, 10 o 20 minutos al día y verás en cuántos días terminas. «En orden» o «Según mi historial» fija los guiones y estructuras de cada día.
+3. Habla con el guion: di tus líneas en guiones de situaciones con 🎤: Repetir, Primeras letras, Oculto o Con tus palabras. Una línea perfecta recibe ★; si es correcta pero poco natural, te da una forma más natural, y señala las palabras que no se oyeron bien. Decirlo de otra forma correcta también vale, y puedes seguir donde lo dejaste ese mismo día.
+4. Cambia la estructura de la frase: di una estructura muchas veces cambiando solo las palabras.
+5. Repaso: al final de cada guion marca cada expresión «Lo sé» o «Me confunde». Lo que te confundió y las líneas que fallaste vuelven como un quiz corto a los 2 y 7 días, y se reúnen arriba en Mi espacio, en «Lo que fallaste la última vez». Con el «Aviso por la mañana» aparecen en la pantalla de bloqueo.
+6. Lo que aprendiste hoy: las estructuras, la gramática y las palabras del día, cada una con el guion y la frase donde salió.
 
-PREGUNTA POR CUALQUIER FRASE
-• Abre el análisis de frase en una línea del chat, de una llamada, de un vídeo o de tus notas. Elige la parte que no entiendes y pregunta qué significa. La respuesta llega en tu idioma, y «Buscar en Mi espacio» te muestra dónde encaja en tus etapas.
+ÚSALO EN CONVERSACIÓN
+• Chat con el tutor IA: habla como con un amigo; solo se corrigen los fallos. ¿Te atascas? Escribe en español y el tutor sigue en el idioma que aprendes; «Ver cómo se dice» te muestra la frase que querías. También te da ocasiones de volver a usar lo que te confundió.
+• Llamadas con IA: habla en voz alta. Aunque salga mal, el tutor encuentra lo que querías decir, y luego puedes repasarlo.
+• Análisis de frases: en cualquier frase, elige solo la parte que no entiendes y pregunta qué significa.
+• Vídeo: vídeos reales divididos en frases para repetir y preguntar.
 
-APRENDE CON VÍDEOS REALES
-• Los vídeos se dividen en frases con subtítulos en el idioma que aprendes. Toca una frase para volver a oírla y pregunta por cualquier línea.
+APRENDE CON PERSONAS
+• En las Salas habla por voz con quien aprende el mismo idioma, con subtítulos en directo, y sigue en grupos y mensajes privados.
 
-VE LO QUE TE FALTA
-• Sin puntuaciones. Cada frase muestra solo lo que estaba mal o faltaba, y lo que escribes muestra tus puntos débiles y qué hacer después.
-• En Mi espacio empiezas con conversaciones cortas de ejemplo. Responde «Sí, puedo», «Casi» o «Todavía no», y empiezas en la etapa que te corresponde.
-• Las pistas de las misiones se abren de una en una, para que lo intentes primero.
-• «Etapas» en Mi espacio: una escalera del 1 al 5, cada etapa con su gramática, la conversación que podrás tener y lo que sabrás hacer, y si acabas de empezar, primero letras y sonidos. Lo que te corrigieron y las expresiones que aprendes van a su sitio.
-• «Lo de hoy»: las frases que el tutor te corrigió hoy. Quédate con las que quieras y van a su sitio, con la pantalla de ese momento si lo deseas.
+SIN PUNTUACIONES DE NIVEL
+• Cada frase recibe sus errores y carencias; tu historial decide lo siguiente.
 
-APRENDE CON GENTE
-• Room: salas de voz con subtítulos en directo, hasta 40 personas. Toca una línea para traducirla o elige solo las palabras por las que quieres preguntar. En tus propias frases puedes ver correcciones que solo ves tú. El anfitrión puede empezar con 🎭 los juegos del Mentiroso y la Mafia.
-• Chats: grupos y mensajes 1:1, llamadas de voz y videollamadas 1:1, y espacios de equipo con compañeros de estudio.
-• Personas: muestra solo a quien aprende tu mismo idioma, o a quien además habla tu lengua; síguelos y publica en el tablón. Los perfiles muestran país, idiomas e intereses, y puedes enviar «🙌 Me ayudó» a quien te respondió.
-• Iconos: crea tus propios paquetes de iconos (también animados) y envíalos en mensajes y comentarios.
-• Invita a un amigo con un enlace.
-• Desactiva las funciones que no uses y la app solo muestra lo que necesitas.
-
-PLANES
-Empieza gratis, con límites diarios. El plan gratuito muestra anuncios. Las suscripciones añaden más chats, más ayuda de IA y tiempo de llamada diario, sin anuncios.
+PRECIOS
+• Los guiones por etapa son gratis (con anuncios). El plan «Guiones» añade llamadas cortas y chat; Lite, Plus y Premium quitan los anuncios y dan más chat y minutos de llamada al día.

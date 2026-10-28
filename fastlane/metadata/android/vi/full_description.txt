@@ -1,30 +1,24 @@
-languagebank giúp bạn thực sự nói và viết bằng ngôn ngữ đang học, cùng gia sư AI, video thật và những người học khác. Học bất kỳ ngôn ngữ nào trong 14 ngôn ngữ, với ứng dụng bằng bất kỳ ngôn ngữ nào trong 14 ngôn ngữ.
+languagebank định ra mỗi ngày học gì và cho bạn nói thành tiếng những gì đã học. Học một trong 14 ngôn ngữ, với ứng dụng bằng một trong 14 ngôn ngữ.
 
-TRÒ CHUYỆN VỚI GIA SƯ AI
-• Nhắn tin bằng ngôn ngữ bạn đang học. Bí từ? Hãy viết bằng tiếng của bạn: gia sư vẫn tiếp tục bằng ngôn ngữ bạn đang học, và "Xem cách nói" đặt cách diễn đạt ngay dưới dòng đó.
-• Nếu câu có lỗi, nhãn "Có chỗ cần sửa" sẽ hiện bên dưới. Chạm vào để xem câu đã sửa.
-• Chạm 📞 ở đầu cuộc trò chuyện để gọi ngay cho gia sư và nói thành tiếng. Mỗi cuộc gọi nằm lại trong trò chuyện dưới dạng thẻ 🗒 để nói tiếp hoặc xem lại. Gói hôm nay là một cuộc gọi ngắn có mục tiêu.
+MỘT NGÀY HỌC
+1. Bắt đầu đúng giai đoạn: đọc một đoạn hội thoại ngắn rồi chọn "Được", "Gần được" hoặc "Chưa được" để bắt đầu ở giai đoạn phù hợp trong năm giai đoạn. Chữ viết mới? Bắt đầu từ chữ cái và âm.
+2. Hôm nay học gì: chọn 5, 10 hoặc 20 phút mỗi ngày để biết mấy ngày xong. "Theo lộ trình" hoặc "Theo kết quả của tôi" xếp kịch bản và cấu trúc câu cho ngày hôm đó.
+3. Nói theo kịch bản: nói câu của bạn trong kịch bản tình huống bằng 🎤 — Nói theo, Chỉ chữ đầu, Ẩn hoặc Bằng lời của bạn. Câu hoàn hảo được ★; đúng nhưng chưa tự nhiên sẽ có cách nói tự nhiên hơn, và từ nghe chưa rõ được chỉ ra. Nói cách khác mà đúng cũng qua, và trong ngày bạn có thể học tiếp từ chỗ dừng.
+4. Đổi trong cấu trúc câu: nói một cấu trúc nhiều lần, chỉ đổi từ.
+5. Ôn lại: cuối kịch bản đánh dấu từng cách nói "Tôi biết rồi" hoặc "Còn lẫn lộn". Chỗ còn lẫn lộn và câu sai quay lại thành câu đố ngắn sau 2 và 7 ngày, và gom ở trên cùng mục Của tôi, trong "Lần trước sai ở đâu". Bật "Nhắc buổi sáng" để thấy trên màn hình khóa.
+6. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
 
-HỎI VỀ BẤT KỲ CÂU NÀO
-• Mở phân tích câu trên một dòng trong trò chuyện, cuộc gọi, video hoặc ghi chú. Chọn phần bạn chưa hiểu và hỏi nghĩa của nó. Câu trả lời bằng tiếng của bạn, và "Tìm trong Của tôi" cho biết nó nằm ở ô nào trong các giai đoạn của bạn.
-
-HỌC TỪ VIDEO THẬT
-• Video được chia thành từng câu, kèm phụ đề bằng ngôn ngữ bạn đang học. Chạm vào một câu để nghe lại và hỏi về bất kỳ dòng nào.
-
-THẤY ĐIỀU MÌNH CÒN THIẾU
-• Không chấm điểm. Mỗi câu chỉ chỉ ra chỗ sai hoặc còn thiếu, và những gì bạn viết cho thấy điểm yếu cùng việc nên làm tiếp theo.
-• Trong Của tôi, bạn bắt đầu bằng vài đoạn hội thoại ví dụ ngắn. Chọn "Được", "Gần được" hoặc "Chưa được" là bạn bắt đầu từ giai đoạn phù hợp.
-• Gợi ý của nhiệm vụ mở từng cái một để bạn thử trước.
-• "Giai đoạn" trong Của tôi: bậc thang từ 1 đến 5, mỗi giai đoạn có ngữ pháp, đoạn hội thoại bạn sẽ nói được và việc bạn làm được; mới bắt đầu thì học chữ và âm trước. Các dòng được sửa và cách nói đã học sẽ vào đúng ô.
-• "Học hôm nay": những dòng gia sư sửa hôm nay. Chỉ giữ những dòng bạn muốn là chúng vào đúng ô, có thể kèm màn hình lúc đó.
+DÙNG TRONG HỘI THOẠI
+• Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Gia sư còn tạo cơ hội để bạn dùng lại cách nói còn lẫn lộn.
+• Gọi AI: nói thành tiếng. Dù lộn xộn, gia sư vẫn tìm ra ý bạn, và sau đó có thể xem lại.
+• Phân tích câu: ở câu nào cũng được, chọn phần chưa hiểu và hỏi nghĩa.
+• Video: video thật chia theo câu để nghe lại và hỏi.
 
 HỌC CÙNG MỌI NGƯỜI
-• Room: phòng thoại có phụ đề trực tiếp, tối đa 40 người. Chạm vào một dòng để dịch, hoặc chỉ chọn những từ bạn muốn hỏi. Những dòng chính bạn nói có thể hiện phần sửa chỉ mình bạn thấy. Chủ phòng có thể bắt đầu trò Kẻ nói dối và Ma sói bằng 🎭.
-• Trò chuyện: nhóm và tin nhắn 1:1, gọi thoại và gọi video 1:1, cùng không gian nhóm với bạn học.
-• Mọi người: chỉ xem người học cùng ngôn ngữ, hoặc người còn nói cùng tiếng với bạn; theo dõi họ và đăng bài lên bảng tin. Hồ sơ hiện quốc gia, ngôn ngữ và sở thích, và bạn có thể gửi "🙌 Hữu ích" cho người đã trả lời mình.
-• Biểu tượng: tự tạo bộ biểu tượng (cả ảnh động) và gửi trong tin nhắn, bình luận.
-• Mời bạn bè chỉ bằng một đường liên kết.
-• Tắt những tính năng bạn không dùng, ứng dụng chỉ hiện những gì bạn cần.
+• Trong Phòng nói, trò chuyện bằng giọng với người học cùng ngôn ngữ, có phụ đề trực tiếp, rồi tiếp tục trong nhóm và tin nhắn riêng.
 
-GÓI
-Bắt đầu miễn phí, có giới hạn mỗi ngày. Gói miễn phí có quảng cáo. Gói đăng ký thêm lượt trò chuyện, trợ giúp AI và thời gian gọi mỗi ngày, không có quảng cáo.
+KHÔNG CHẤM ĐIỂM TRÌNH ĐỘ
+• Mỗi câu chỉ ra lỗi và chỗ còn thiếu; lịch sử của bạn quyết định bước tiếp theo.
+
+GIÁ
+• Kịch bản theo giai đoạn miễn phí (có quảng cáo). "Gói kịch bản" thêm cuộc gọi ngắn và trò chuyện; Lite, Plus và Premium không quảng cáo, nhiều chat và thời gian gọi mỗi ngày hơn.
