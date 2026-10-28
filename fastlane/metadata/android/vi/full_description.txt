@@ -9,7 +9,7 @@ MỘT NGÀY HỌC
 6. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
 
 DÙNG TRONG HỘI THOẠI
-• Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Gia sư còn tạo cơ hội để bạn dùng lại cách nói còn lẫn lộn.
+• Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Khi bạn tự dùng cách nói đã đánh dấu, câu đó hiện "Đã dùng lại".
 • Gọi AI: nói thành tiếng. Dù lộn xộn, gia sư vẫn tìm ra ý bạn, và sau đó có thể xem lại.
 • Phân tích câu: ở câu nào cũng được, chọn phần chưa hiểu và hỏi nghĩa.
 • Video: video thật chia theo câu để nghe lại và hỏi.

@@ -9,7 +9,7 @@ IL TUO PERCORSO DI OGNI GIORNO
 6. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
 
 USALO NELLE CONVERSAZIONI
-• Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Ti dà anche occasioni per riusare ciò che non era chiaro.
+• Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Se usi da solo un'espressione che hai segnato, la riga mostra «Usato di nuovo».
 • Chiamate IA: parla ad alta voce. Anche se viene male, il tutor trova cosa volevi dire, e poi puoi rivederla.
 • Analisi della frase: in qualsiasi frase scegli solo la parte che non capisci e chiedi cosa significa.
 • Video: video veri divisi in frasi da riascoltare e chiedere.

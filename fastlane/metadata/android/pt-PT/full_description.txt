@@ -9,7 +9,7 @@ O TEU PERCURSO DE CADA DIA
 6. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
 
 USA EM CONVERSA
-• Chat com o tutor de IA: fala como com um amigo; só os erros são corrigidos. Encravaste? Escreve em português e o tutor continua na língua que aprendes; «Ver como se diz» mostra a frase que querias. Também te dá oportunidades de voltar a usar o que te confundiu.
+• Chat com o tutor de IA: fala como com um amigo; só os erros são corrigidos. Encravaste? Escreve em português e o tutor continua na língua que aprendes; «Ver como se diz» mostra a frase que querias. Se usares por ti uma expressão que marcaste, a linha mostra «Usou de novo».
 • Chamadas com IA: fala em voz alta. Mesmo que saia confuso, o tutor descobre o que querias dizer, e depois podes rever.
 • Análise de frases: em qualquer frase escolhe só a parte que não percebes e pergunta o que significa.
 • Vídeo: vídeos reais divididos em frases para repetir e perguntar.

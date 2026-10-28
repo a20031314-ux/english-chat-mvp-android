@@ -9,7 +9,7 @@ ALUR BELAJAR HARIANMU
 6. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
 
 PAKAI DALAM PERCAKAPAN
-• Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Tutor juga memberi kesempatan memakai lagi ungkapan yang membingungkan.
+• Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Kalau kamu memakai sendiri ungkapan yang sudah kamu tandai, kalimatnya diberi tanda "Dipakai lagi".
 • Panggilan AI: bicara dengan suara. Walau berantakan, tutor menemukan maksudmu, dan setelahnya bisa ditinjau.
 • Analisis kalimat: di kalimat mana pun, pilih bagian yang tidak kamu pahami dan tanyakan artinya.
 • Video: video asli dipecah per kalimat untuk diulang dan ditanyakan.

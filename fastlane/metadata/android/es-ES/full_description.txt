@@ -9,7 +9,7 @@ TU FLUJO DE CADA DÍA
 6. Lo que aprendiste hoy: las estructuras, la gramática y las palabras del día, cada una con el guion y la frase donde salió.
 
 ÚSALO EN CONVERSACIÓN
-• Chat con el tutor IA: habla como con un amigo; solo se corrigen los fallos. ¿Te atascas? Escribe en español y el tutor sigue en el idioma que aprendes; «Ver cómo se dice» te muestra la frase que querías. También te da ocasiones de volver a usar lo que te confundió.
+• Chat con el tutor IA: habla como con un amigo; solo se corrigen los fallos. ¿Te atascas? Escribe en español y el tutor sigue en el idioma que aprendes; «Ver cómo se dice» te muestra la frase que querías. Si usas por tu cuenta una expresión que marcaste, la línea muestra «Lo usaste otra vez».
 • Llamadas con IA: habla en voz alta. Aunque salga mal, el tutor encuentra lo que querías decir, y luego puedes repasarlo.
 • Análisis de frases: en cualquier frase, elige solo la parte que no entiendes y pregunta qué significa.
 • Vídeo: vídeos reales divididos en frases para repetir y preguntar.

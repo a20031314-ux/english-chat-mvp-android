@@ -9,7 +9,7 @@ YOUR DAILY LEARNING FLOW
 6. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
 
 USE IT IN CONVERSATION
-• AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. The tutor also gives you chances to reuse what confused you.
+• AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. Use a phrase you marked on your own and the line shows "Used again".
 • AI calls: speak out loud. Even when it comes out messy, the tutor finds what you meant, and you can look back afterwards.
 • Sentence analysis: pick just the part you don't get in any sentence and ask what it means.
 • Video: real videos split into sentences to replay and ask about.

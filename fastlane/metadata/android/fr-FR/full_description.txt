@@ -9,7 +9,7 @@ VOTRE PARCOURS DU JOUR
 6. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
 
 UTILISEZ-LE EN CONVERSATION
-• Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Il vous donne aussi l'occasion de réutiliser ce qui était flou.
+• Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Utilisez de vous-même une expression que vous avez marquée et la ligne affiche « Réutilisé ».
 • Appels IA : parlez à voix haute. Même si c'est confus, le tuteur retrouve ce que vous vouliez dire, et vous pouvez revoir l'appel ensuite.
 • Analyse de phrase : dans n'importe quelle phrase, choisissez juste la partie incomprise et demandez ce qu'elle veut dire.
 • Vidéo : de vraies vidéos découpées en phrases à réécouter et questionner.

@@ -9,7 +9,7 @@ SEU DIA DE ESTUDO
 6. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
 
 USE NA CONVERSA
-• Chat com o tutor de IA: converse como com um amigo; só os erros são corrigidos. Travou? Escreva em português e o tutor continua no idioma que você aprende; «Ver como se diz» mostra a frase que você queria. Ele também cria chances de você usar de novo o que confundiu.
+• Chat com o tutor de IA: converse como com um amigo; só os erros são corrigidos. Travou? Escreva em português e o tutor continua no idioma que você aprende; «Ver como se diz» mostra a frase que você queria. Se você usar por conta própria uma expressão que marcou, a linha mostra «Usou de novo».
 • Chamadas com IA: fale em voz alta. Mesmo que saia confuso, o tutor descobre o que você queria dizer, e depois dá para rever.
 • Análise de frases: em qualquer frase escolha só a parte que você não entende e pergunte o que significa.
 • Vídeo: vídeos reais divididos em frases para repetir e perguntar.
