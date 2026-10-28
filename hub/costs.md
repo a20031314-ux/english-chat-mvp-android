@@ -178,7 +178,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 39개 중 39개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 40개 중 40개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 
