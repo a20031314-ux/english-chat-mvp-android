@@ -13,6 +13,7 @@
 - 앱 안 업데이트 배너 기준 `RECOMMENDED_APP_VERSION` — Play에 실제로 공개된 뒤에만 올린다.
 - 사용자가 PC에서 빌드할 때 막히면 돕는다 (`npm run build:android` → Sync → Signed Bundle).
 
+- **2026-10-29 학습 흐름 세트(사용자 "핵심기능, 학습흐름 중심"):** 설명 14개 언어 + 스크린샷 7장(`01-plan`~`07-room`) PR #26 — 병합하면 Play에 올라감. 맞춤 등록정보 6개 설명(`store-shots/listings/`)·그림(`store-shots/out/combo/k1~k5`, 다른 언어 `6_brazil`~`11_france`)은 Console에서 사람이. 다시 찍기: `fastlane/STORE_AUTOMATION.md` "스토어 7장".
 - 등록정보(설명·제목 14개 언어, 기본 스크린샷 8장 en·ko·ja·zh·es·hi)는 저장소가 원본(2026-10-21 업로드 성공). 서비스 계정 권한 생김 — 병합하면 바로 올라감. "Store: screenshots"(v* 태그)의 옛 3장 PR은 병합 금지.
 
 ## 하지 않는 일
