@@ -1,6 +1,7 @@
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { captionPartCounts, markFixable } from "@/lib/server/entitlementStore";
 import { contentHash } from "@/lib/roleplay/script";
+import { pausesOf } from "@/lib/roleplay/pauses";
 import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -165,7 +166,9 @@ export async function POST(request: NextRequest) {
         !forRoom && text === raw.trim() && heard.words.some((word) => word.confidence !== null)
           ? heard.words.map((word) => [word.text, word.confidence === null ? null : Math.round(word.confidence * 100) / 100] as const)
           : undefined;
-      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...(clarity ? { clarity } : {}), ...fix });
+      // 낱말 사이 멈칫한 곳(대본·퀴즈 "망설인 곳", 2026-10-29, lib/roleplay/pauses.ts) — 방 밖, 글이 받아쓴 그대로일 때만.
+      const pauses = !forRoom && text === raw.trim() ? pausesOf(heard.words) : [];
+      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...(clarity ? { clarity } : {}), ...(pauses.length ? { pauses } : {}), ...fix });
     } catch (error) {
       console.error(`[roleplay/listen] ${model} failed, falling back:`, error);
       if (wantsTrialReport(request)) {

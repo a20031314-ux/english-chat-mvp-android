@@ -48,6 +48,12 @@ const WORD_GAP_MS = 400;
  * is where it was.
  */
 const TRAILING_SILENCE_MS = 900;
+/**
+ * 연습(대본·문장구조·퀴즈 말하기)에서는 멈칫해도 끊지 않는다(2026-10-29 사용자 "망설이면 바로 끊어버리는데 잘 모르겠어요 버튼을"):
+ * 위 900ms 쉼은 "멈칫"으로만 알리고(화면이 잘 모르겠어요·다 말했어요를 띄움), 이만큼 조용해야 끝난다.
+ */
+export const PATIENT_SILENCE_MS = 5000;
+export const PAUSE_NOTICE_MS = TRAILING_SILENCE_MS;
 
 /**
  * What one frame of sound does to a turn in progress.
@@ -86,7 +92,9 @@ export function hearFrame(
   was: TurnSoFar,
   level: number,
   now: number,
-): { turn: TurnSoFar; finished: boolean } {
+  /** 이만큼 조용하면 끝(기본 900ms, 연습은 PATIENT_SILENCE_MS). */
+  trailingMs: number = TRAILING_SILENCE_MS,
+): { turn: TurnSoFar; finished: boolean; paused?: boolean } {
   if (level >= SPEECH_RMS) {
     const loudSince = was.loudSince ?? now;
     const spoke = was.spoke || was.spokenMs + (now - loudSince) >= MIN_SPEECH_MS;
@@ -128,7 +136,8 @@ export function hearFrame(
     },
     // Only a pause after real speech ends a turn. Silence before it just means
     // they have not started.
-    finished: was.spoke && quietFor >= TRAILING_SILENCE_MS,
+    finished: was.spoke && quietFor >= trailingMs,
+    paused: was.spoke && quietFor >= PAUSE_NOTICE_MS,
   };
 }
 

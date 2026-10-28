@@ -60,7 +60,7 @@ export type ScriptRecommend = {
   id: string;
   why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" };
 };
-type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode; unclear?: string[] };
+type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode; unclear?: string[]; pauses?: [string, number][]; stuck?: boolean };
 
 function readMode(stage: number): ScriptMode {
   const allowed = modesFor(stage);
@@ -263,6 +263,7 @@ function ScriptPlayer({
   // 3~4단계 상대 줄: 판마다 고른 말(원래 줄 또는 alt).
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
   const [listening, setListening] = useState(false);
+  const hearing = useHearing();
   const [justPassed, setJustPassed] = useState(false);
   // 끝까지 했는데 통과 못 한 줄만 다시(2026-10-29 사용자 "무슨 기준으로 완료되는지") — 그 줄들만 차례로, 상대 줄은 건너뜀.
   const [retrying, setRetrying] = useState(false);
@@ -359,24 +360,28 @@ function ScriptPlayer({
     setListening(true);
     const own = mode === "own" && !revealed[index];
     const before = index > 0 ? textAt(index - 1) : "";
-    const { heard, practice, unclear } = await sayLine(line.text, {
+    const { heard, practice, unclear, pauses } = await sayLine(line.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
       scriptId: script.id,
       mode,
       onLimit: () => setLimited(true),
+      ...hearing.options,
       ...(own ? { meaning: glossFor(line.gloss, locale), before } : {}),
     });
     setListening(false);
+    // 잘 모르겠어요: 들린 데까지 짚고 원문을 연다 — 그 줄은 이번 판 통과로 안 셈(revealed).
+    const stuck = hearing.takeStuck();
+    if (stuck) setRevealed((r) => ({ ...r, [index]: true }));
     // 원문 방식: 낱말이 다 맞거나, 받아쓰기가 같은 소리를 다른 글자로 적은 것(はじめ ↔ 初め)을 확인 한마디가 good으로 볼 때.
     // 내 말로: 뜻이 통한다고 볼 때만.
     const compared = compareToTarget(line.text, heard);
     const named = Boolean(learnerName) && line.text.includes(learnerName!);
     const exact = compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName));
     const clean = Boolean(heard) && (own ? practice?.good === true : exact || practice?.good === true);
-    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode, unclear } }));
-    if (heard && !clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
+    setResults((current) => ({ ...current, [index]: { heard, practice, clean: clean && !stuck, mode: own ? "own" : mode, unclear, pauses, stuck } }));
+    if ((heard && !clean) || stuck) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
     // 틀린 줄을 이 폰에 남긴다(맞히면 지움) — 다음에 열면 ◐, My "지난번에 틀린 것"(curriculum/scriptMisses.ts).
     if (heard) noteLine(language, script.id, index, !clean);
   };
@@ -544,7 +549,7 @@ function ScriptPlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} />
+                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} pauses={result.pauses ?? []} />
                     {/* 대본 줄은 내 말 아래에(어색함이면 더 자연스러운 말이 이미 위에 있음). */}
                     {heardDiffers && !betterShown ? (
                       <div className="mt-1 flex items-start gap-2">
@@ -575,7 +580,8 @@ function ScriptPlayer({
                     </>
                   ) : (
                     <>
-                      <Attempt outcomes={compareToTarget(line.text, result.heard).outcomes} ui={ui} />
+                      <Attempt outcomes={compareToTarget(line.text, result.heard).outcomes} ui={ui} pauses={result.pauses} />
+                      <PauseChips ui={ui} pauses={result.pauses ?? []} />
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
                       {result.practice?.verdict === "wrong" && result.practice.better ? (
                         <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
@@ -594,6 +600,7 @@ function ScriptPlayer({
                     ) : null}
                     {result ? (
                       <>
+                        {!result.clean && listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
                         {!result.clean ? (
                           <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10 disabled:opacity-50">
                             {listening ? ui.roleplayPracticeListening : ui.roleplayPracticeRetry}
@@ -604,9 +611,12 @@ function ScriptPlayer({
                         </button>
                       </>
                     ) : (
-                      <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
-                        {listening ? ui.roleplayPracticeListening : ui.scriptSay}
-                      </button>
+                      <>
+                        {listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
+                        <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
+                          {listening ? ui.roleplayPracticeListening : ui.scriptSay}
+                        </button>
+                      </>
                     )}
                   </div>
                 ) : null}
@@ -690,14 +700,17 @@ export function LineGrade({
   exact,
   unclear,
   practice = null,
+  pauses = [],
 }: {
   ui: UICopy;
   exact: boolean;
   unclear: readonly string[];
+  /** 낱말 사이 멈칫한 곳 — 있으면 ★ 완벽해요 대신 ✓ + 칩. */
+  pauses?: readonly [string, number][];
   /** 떠올려 말한 줄의 세 갈래(natural·awkward) — 대본과 낱말이 다를 때만 의미가 있다. */
   practice?: Practice | null;
 }) {
-  const perfect = exact && unclear.length === 0;
+  const perfect = exact && unclear.length === 0 && pauses.length === 0;
   const awkward = !exact && practice?.verdict === "awkward";
   const natural = !exact && practice?.verdict === "natural";
   const label = perfect ? `★ ${ui.scriptPerfect}` : awkward ? `△ ${ui.scriptAwkward}` : natural ? `✓ ${ui.scriptNatural}` : `✓ ${ui.scriptClean}`;
@@ -709,6 +722,7 @@ export function LineGrade({
           {practice.better}
         </p>
       ) : null}
+      <PauseChips ui={ui} pauses={pauses} />
       {unclear.length ? (
         <p className="flex flex-wrap items-center gap-1.5 text-caption text-slate-400">
           <span>{ui.scriptUnclear}</span>
@@ -720,5 +734,71 @@ export function LineGrade({
         </p>
       ) : null}
     </div>
+  );
+}
+
+
+/**
+ * 말하는 동안(2026-10-29 사용자 "망설이면 바로 끊어버리는데 잘 모르겠어요 버튼을"): 연습 마이크는 멈칫해도 끊지 않고(patient),
+ * 듣는 동안 "잘 모르겠어요", 멈칫하면 "다 말했어요"도. 잘 모르겠어요 = 들린 데까지 보내고 원문을 연다(통과로는 안 셈).
+ */
+export function useHearing() {
+  const [paused, setPaused] = useState(false);
+  const end = useRef<(() => void) | null>(null);
+  const stuck = useRef(false);
+  return {
+    /** sayLine에 그대로 펼쳐 넣는다. */
+    options: {
+      patient: true,
+      onPaused: setPaused,
+      onReady: (endNow: () => void) => {
+        stuck.current = false;
+        end.current = endNow;
+      },
+    },
+    /** 듣기가 끝난 뒤: 잘 모르겠어요를 눌렀는지(한 번 읽으면 지움). */
+    takeStuck: () => {
+      const was = stuck.current;
+      stuck.current = false;
+      end.current = null;
+      setPaused(false);
+      return was;
+    },
+    paused,
+    unsure: () => {
+      stuck.current = true;
+      end.current?.();
+    },
+    saidAll: () => end.current?.(),
+  };
+}
+
+export function HearingButtons({ ui, hearing }: { ui: UICopy; hearing: ReturnType<typeof useHearing> }) {
+  return (
+    <>
+      <button type="button" onClick={hearing.unsure} className="rounded-full border border-warn/60 px-3 py-1.5 text-caption text-warn hover:bg-white/10">
+        {ui.scriptUnsure}
+      </button>
+      {hearing.paused ? (
+        <button type="button" onClick={hearing.saidAll} className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900">
+          {ui.scriptSaidAll}
+        </button>
+      ) : null}
+    </>
+  );
+}
+
+/** 멈칫한 곳 칩(서버 pauses — 그 뒤에 나온 낱말과 쉰 초). */
+export function PauseChips({ ui, pauses }: { ui: UICopy; pauses: readonly [string, number][] }) {
+  if (!pauses.length) return null;
+  return (
+    <p className="flex flex-wrap items-center gap-1.5 text-caption text-slate-400">
+      <span>{ui.scriptPaused}</span>
+      {pauses.map(([word, sec], i) => (
+        <span key={`${word}-${i}`} dir="auto" className="rounded-full border border-warn/50 px-2 py-0.5 text-warn">
+          ⏸ <bdi>{word.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "")}</bdi> · {sec}s
+        </span>
+      ))}
+    </p>
   );
 }

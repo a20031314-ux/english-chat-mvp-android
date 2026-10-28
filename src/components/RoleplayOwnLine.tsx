@@ -5,7 +5,7 @@ import { SayItBack } from "@/components/RoleplayReview";
 import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
-import { fetchPractice, listenOnce, unclearWords } from "@/lib/roleplay/listen";
+import { fetchPractice, listenOnce, pausesIn, unclearWords } from "@/lib/roleplay/listen";
 import { justTalkId } from "@/lib/roleplay/justTalk";
 import type { Practice } from "@/lib/roleplay/practice";
 
@@ -42,12 +42,17 @@ export async function sayLine(
     scriptId?: string;
     mode?: string;
     onLimit?: () => void;
+    /** 연습: 멈칫해도 끊지 않고 알린다(화면이 잘 모르겠어요·다 말했어요를 띄움, 2026-10-29). */
+    patient?: boolean;
+    onPaused?: (paused: boolean) => void;
+    onReady?: (endNow: () => void) => void;
   },
-): Promise<{ heard: string; practice: Practice | null; unclear: string[] }> {
+): Promise<{ heard: string; practice: Practice | null; unclear: string[]; pauses: [string, number][] }> {
   try {
-    const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium });
-    if (!heard) return { heard: "", practice: null, unclear: [] };
+    const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium, patient: input.patient, onPaused: input.onPaused, onReady: input.onReady });
+    if (!heard) return { heard: "", practice: null, unclear: [], pauses: [] };
     const unclear = unclearWords(heard);
+    const pauses = pausesIn(heard);
     let limited = false;
     const ask = () => fetchPractice({
       unclear,
@@ -68,10 +73,10 @@ export async function sayLine(
     });
     // 한마디가 한 번 비어 오면(네트워크·모델) 한 번 더 — 없으면 낱말이 하나만 달라도 틀린 줄로 남는다(2026-10-29).
     const practice = (await ask()) ?? (limited ? null : await ask());
-    return { heard, practice, unclear };
+    return { heard, practice, unclear, pauses };
   } catch {
     // No microphone, or it was refused: nothing came through.
-    return { heard: "", practice: null, unclear: [] };
+    return { heard: "", practice: null, unclear: [], pauses: [] };
   }
 }
 

@@ -268,7 +268,21 @@ export function RoleplayLine({
  * turned into which is arithmetic the learner can check against their own ears,
  * and it stands whether or not the sentence explaining it ever arrives.
  */
-export function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
+export function Attempt({ outcomes, ui, pauses = [] }: { outcomes: WordOutcome[]; ui: UICopy; pauses?: readonly [string, number][] }) {
+  // 멈칫한 곳(2026-10-29): 그 뒤에 나온 낱말 앞에 ⏸ — 들린 낱말(kept = 대본 낱말, changed = 들린 꼴)을 차례로 맞춰 본다.
+  const bareWord = (text: string) => text.toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
+  const pauseAt = new Set<number>();
+  let next = 0;
+  outcomes.forEach((outcome, index) => {
+    const pause = pauses[next];
+    if (!pause || outcome.kind === "dropped") return;
+    const said = bareWord(outcome.kind === "changed" ? outcome.heardAs : outcome.word);
+    const want = bareWord(pause[0]);
+    if (said && want && (said === want || said.startsWith(want) || want.startsWith(said))) {
+      pauseAt.add(index);
+      next += 1;
+    }
+  });
   // 대본 모양(대소문자·문장부호, outcome.shown)으로 보인다 — 옛 서버 답은 shown이 없어 비교용 낱말 그대로(2026-10-29).
   const edge = (shown: string | undefined, at: "lead" | "trail") =>
     shown ? (shown.match(at === "lead" ? /^[^\p{L}\p{M}\p{N}']*/u : /[^\p{L}\p{M}\p{N}']*$/u)?.[0] ?? "") : "";
@@ -278,6 +292,7 @@ export function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy 
       <p dir="auto" className="mt-1 text-[14px] leading-relaxed">
         {outcomes.map((outcome, index) => (
           <span key={index}>
+            {pauseAt.has(index) ? <span className="text-warn">⏸ </span> : null}
             {outcome.kind === "kept" ? (
               <span className="text-neutral-100">{outcome.shown ?? outcome.word}</span>
             ) : outcome.kind === "changed" ? (

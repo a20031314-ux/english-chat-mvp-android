@@ -27,7 +27,7 @@ import {
 import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
-import { LineGrade, ResumeChoice } from "@/components/studyMap/StageScripts";
+import { HearingButtons, LineGrade, PauseChips, ResumeChoice, useHearing } from "@/components/studyMap/StageScripts";
 import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
@@ -43,7 +43,7 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
  */
 
 type Mode = FrameMode;
-type Result = { heard: string; practice: Practice | null; clean: boolean; mode: Mode; unclear?: string[] };
+type Result = { heard: string; practice: Practice | null; clean: boolean; mode: Mode; unclear?: string[]; pauses?: [string, number][]; stuck?: boolean };
 type Step = { example: FrameExample; mode: Mode };
 
 function useNickname(): string | null {
@@ -265,6 +265,7 @@ function FramePlayer({
   const [results, setResults] = useState<Record<number, Result>>({});
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
   const [listening, setListening] = useState(false);
+  const hearing = useHearing();
   const [limited, setLimited] = useState(false);
   const [justPassed, setJustPassed] = useState(false);
   const sent = useRef(false);
@@ -331,7 +332,7 @@ function FramePlayer({
     stopTts();
     setListening(true);
     const own = stepMode === "own";
-    const { heard, practice, unclear } = await sayLine(example.text, {
+    const { heard, practice, unclear, pauses } = await sayLine(example.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
@@ -339,8 +340,12 @@ function FramePlayer({
       mode: stepMode,
       ...(own ? { frame: frame.pattern, meaning: glossFor(frame.meaning, "en") } : {}),
       onLimit: () => setLimited(true),
+      ...hearing.options,
     });
     setListening(false);
+    // 잘 모르겠어요: 들린 데까지 짚고 예문을 연다(통과로 안 셈).
+    const stuck = hearing.takeStuck();
+    if (stuck) setRevealed((r) => ({ ...r, [index]: true }));
     const outcomes = compareToTarget(example.text, heard).outcomes;
     const clean =
       Boolean(heard) &&
@@ -349,8 +354,8 @@ function FramePlayer({
         : compareToTarget(example.text, heard).clean ||
           practice?.good === true ||
           (isNameExample(example) && cleanBesidesName(outcomes, name)));
-    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: stepMode, unclear } }));
-    if (heard && !redo) noteLine(language, frame.id, index, !clean);
+    setResults((current) => ({ ...current, [index]: { heard, practice, clean: clean && !stuck, mode: stepMode, unclear, pauses, stuck } }));
+    if ((heard || stuck) && !redo) noteLine(language, frame.id, index, !clean || stuck);
   };
 
   const restart = () => {
@@ -472,14 +477,15 @@ function FramePlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                      <LineGrade ui={ui} exact={!own && compareToTarget(example.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} />
+                      <LineGrade ui={ui} exact={!own && compareToTarget(example.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} pauses={result.pauses ?? []} />
                       {result.practice && (own || (stepMode !== "shadow" && !compareToTarget(example.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
                         <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
                       ) : null}
                     </>
                   ) : (
                     <>
-                      {own ? null : <Attempt outcomes={compareToTarget(example.text, result.heard).outcomes} ui={ui} />}
+                      {own ? null : <Attempt outcomes={compareToTarget(example.text, result.heard).outcomes} ui={ui} pauses={result.pauses} />}
+                      <PauseChips ui={ui} pauses={result.pauses ?? []} />
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
                       {result.practice?.verdict === "wrong" && result.practice.better ? (
                         <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
@@ -497,6 +503,7 @@ function FramePlayer({
                     ) : null}
                     {result ? (
                       <>
+                        {!result.clean && listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
                         {!result.clean ? (
                           <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10 disabled:opacity-50">
                             {listening ? ui.roleplayPracticeListening : ui.roleplayPracticeRetry}
@@ -507,9 +514,12 @@ function FramePlayer({
                         </button>
                       </>
                     ) : (
-                      <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
-                        {listening ? ui.roleplayPracticeListening : ui.scriptSay}
-                      </button>
+                      <>
+                        {listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
+                        <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
+                          {listening ? ui.roleplayPracticeListening : ui.scriptSay}
+                        </button>
+                      </>
                     )}
                   </div>
                 ) : null}

@@ -755,7 +755,10 @@
     "studyWhyWeak": "弱いところ · {part}",
     "studyWhyNew": "もうすぐ出る",
     "studyWhyKeep": "おさらい",
-    "quizSkip": "スキップ"
+    "quizSkip": "スキップ",
+    "scriptUnsure": "よく分からない",
+    "scriptSaidAll": "言い終わった",
+    "scriptPaused": "詰まったところ:"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1513,7 +1516,10 @@
     "studyWhyWeak": "薄弱 · {part}",
     "studyWhyNew": "马上会学",
     "studyWhyKeep": "巩固",
-    "quizSkip": "跳过"
+    "quizSkip": "跳过",
+    "scriptUnsure": "不太确定",
+    "scriptSaidAll": "说完了",
+    "scriptPaused": "停顿处："
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2274,7 +2280,10 @@
     "studyWhyNew": "Sắp gặp",
     "studyWhyKeep": "Ôn lại",
     "quizNext": "Tiếp",
-    "quizSkip": "Bỏ qua"
+    "quizSkip": "Bỏ qua",
+    "scriptUnsure": "Không chắc lắm",
+    "scriptSaidAll": "Nói xong rồi",
+    "scriptPaused": "Ngập ngừng ở:"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3040,7 +3049,10 @@
     "studyWhyNew": "À venir",
     "studyWhyKeep": "À consolider",
     "quizNext": "Suivant",
-    "quizSkip": "Passer"
+    "quizSkip": "Passer",
+    "scriptUnsure": "Je ne sais pas",
+    "scriptSaidAll": "J'ai fini",
+    "scriptPaused": "Hésitation :"
   },
   "it": {
     "archive": "Report",
@@ -3997,7 +4009,10 @@
     "studyWhyNew": "In arrivo",
     "studyWhyKeep": "Da ripassare",
     "quizNext": "Avanti",
-    "quizSkip": "Salta"
+    "quizSkip": "Salta",
+    "scriptUnsure": "Non sono sicuro",
+    "scriptSaidAll": "Ho finito",
+    "scriptPaused": "Esitazione su:"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4766,7 +4781,10 @@
     "studyWhyNew": "Vem aí",
     "studyWhyKeep": "Para fixar",
     "quizNext": "Próxima",
-    "quizSkip": "Pular"
+    "quizSkip": "Pular",
+    "scriptUnsure": "Não tenho certeza",
+    "scriptSaidAll": "Terminei",
+    "scriptPaused": "Hesitou em:"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5721,7 +5739,10 @@
     "studyWhyNew": "Скоро будет",
     "studyWhyKeep": "Закрепить",
     "quizNext": "Дальше",
-    "quizSkip": "Пропустить"
+    "quizSkip": "Пропустить",
+    "scriptUnsure": "Не уверен",
+    "scriptSaidAll": "Я закончил",
+    "scriptPaused": "Запинка:"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6486,7 +6507,10 @@
     "studyWhyNew": "Segera muncul",
     "studyWhyKeep": "Pemantapan",
     "quizNext": "Berikutnya",
-    "quizSkip": "Lewati"
+    "quizSkip": "Lewati",
+    "scriptUnsure": "Kurang yakin",
+    "scriptSaidAll": "Sudah selesai",
+    "scriptPaused": "Ragu di:"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7244,7 +7268,10 @@
     "studyWhyWeak": "نقطة ضعف · {part}",
     "studyWhyNew": "قادم قريبًا",
     "studyWhyKeep": "للتثبيت",
-    "quizSkip": "تخطٍّ"
+    "quizSkip": "تخطٍّ",
+    "scriptUnsure": "لست متأكدًا",
+    "scriptSaidAll": "انتهيت",
+    "scriptPaused": "تردّدت عند:"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8002,7 +8029,10 @@
     "studyWhyWeak": "จุดอ่อน · {part}",
     "studyWhyNew": "กำลังจะเจอ",
     "studyWhyKeep": "ทบทวน",
-    "quizSkip": "ข้าม"
+    "quizSkip": "ข้าม",
+    "scriptUnsure": "ไม่แน่ใจ",
+    "scriptSaidAll": "พูดจบแล้ว",
+    "scriptPaused": "ติดขัดที่:"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8760,6 +8790,9 @@
     "studyWhyWeak": "कमज़ोर हिस्सा · {part}",
     "studyWhyNew": "जल्द आएगा",
     "studyWhyKeep": "पक्का करें",
-    "quizSkip": "छोड़ें"
+    "quizSkip": "छोड़ें",
+    "scriptUnsure": "पक्का नहीं पता",
+    "scriptSaidAll": "बोल दिया",
+    "scriptPaused": "यहाँ रुके:"
   }
 }

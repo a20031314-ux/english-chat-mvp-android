@@ -1,6 +1,6 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
 import { resetTtsAudio } from "../ttsPlayer.ts";
-import { TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
+import { PATIENT_SILENCE_MS, TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -196,6 +196,14 @@ export function unclearWords(text: string, max = 3): string[] {
     .map(([word]) => word.trim().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ""))
     .filter(Boolean);
 }
+/**
+ * 낱말 사이에 멈칫한 곳(서버 `pauses`, Scribe 낱말 시각 — 앞 낱말 끝과 이 낱말 시작 사이 0.7초 넘게, 2026-10-29 사용자 "망설인 부분을 디테일하게").
+ * [그 뒤에 나온 낱말, 초]. 최근 몇 개만, 글로 찾는다.
+ */
+const pausesHeard: { text: string; pauses: [string, number][] }[] = [];
+export function pausesIn(text: string): [string, number][] {
+  return pausesHeard.find((entry) => entry.text === text.trim())?.pauses ?? [];
+}
 /** 확신을 받아 온 말인지(받아쓰기가 Scribe가 아니면 없음 — 그때는 "완벽해요"를 낱말만으로). */
 export function hasClarity(text: string): boolean {
   return clarityHeard.some((entry) => entry.text === text.trim());
@@ -231,7 +239,17 @@ async function transcribe(
     text?: unknown;
     unsure?: unknown;
     clarity?: unknown;
+    pauses?: unknown;
   };
+  if (typeof body.text === "string" && body.text.trim() && Array.isArray(body.pauses)) {
+    const pauses = (body.pauses as unknown[]).filter(
+      (entry): entry is [string, number] => Array.isArray(entry) && typeof entry[0] === "string" && typeof entry[1] === "number",
+    );
+    if (pauses.length) {
+      pausesHeard.push({ text: body.text.trim(), pauses });
+      if (pausesHeard.length > 20) pausesHeard.shift();
+    }
+  }
   if (typeof body.text === "string" && body.text.trim() && Array.isArray(body.clarity)) {
     const words = (body.clarity as unknown[]).filter(
       (entry): entry is [string, number | null] => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || typeof entry[1] === "number"),
@@ -314,8 +332,9 @@ type VoiceWatch = {
 
 function watchForVoice(
   stream: MediaStream,
-  on: { speaking: (yes: boolean) => void; settled: () => void },
+  on: { speaking: (yes: boolean) => void; settled: () => void; paused?: (yes: boolean) => void },
   noSpeechMs: number = NO_SPEECH_MS,
+  trailingMs?: number,
 ): VoiceWatch {
   let source: MediaStreamAudioSourceNode;
   let analyser: AnalyserNode;
@@ -348,6 +367,7 @@ function watchForVoice(
   /** Any frame with sound in it at all. A real microphone is never exactly 0. */
   let anySignal = false;
   let peak = 0;
+  let pausedNow = false;
 
   const finish = () => {
     if (done) return;
@@ -373,9 +393,14 @@ function watchForVoice(
     const level = scaler.scale(raw, now - startedAt);
 
     const wasSpeaking = turn.spoke;
-    const heard = hearFrame(turn, level, now);
+    const heard = hearFrame(turn, level, now, trailingMs);
     turn = heard.turn;
     if (turn.spoke && !wasSpeaking) on.speaking(true);
+    const pausing = Boolean(heard.paused) && !heard.finished;
+    if (pausing !== pausedNow) {
+      pausedNow = pausing;
+      on.paused?.(pausing);
+    }
     if (heard.finished) {
       on.speaking(false);
       finish();
@@ -428,6 +453,9 @@ export async function listenForTurn(input: {
    * they had finished after all.
    */
   noSpeechMs?: number;
+  /** 연습: 멈칫해도 끊지 않고(PATIENT_SILENCE_MS) onPaused로 알린다. */
+  patient?: boolean;
+  onPaused?: (paused: boolean) => void;
 }): Promise<Recorder> {
   // iOS: 에코 제거를 켜면 애플 음성 처리(VoiceProcessingIO)를 거쳐 녹음이 기계음처럼 지직거렸다
   // (TestFlight 2.69 진단 상자 ▶로 들어 봄, 2026-10-20). 마이크는 튜터가 말을 마친 뒤 턴마다 열리니
@@ -452,7 +480,8 @@ export async function listenForTurn(input: {
   const watch = watchForVoice(stream, {
     speaking: (yes) => input.onSpeaking?.(yes),
     settled: () => input.onSettled?.(),
-  }, input.noSpeechMs);
+    paused: (yes) => input.onPaused?.(yes),
+  }, input.noSpeechMs, input.patient ? PATIENT_SILENCE_MS : undefined);
 
   const release = () => {
     watch.stop();
@@ -866,6 +895,10 @@ export async function listenOnce(input: {
   language: string;
   isPremium: boolean;
   onSpeaking?: (speaking: boolean) => void;
+  patient?: boolean;
+  onPaused?: (paused: boolean) => void;
+  /** 화면의 "다 말했어요"·"잘 모르겠어요": 지금 끝내고 들린 데까지 보낸다. */
+  onReady?: (endNow: () => void) => void;
 }): Promise<{ heard: string; cancel: () => void }> {
   let settle: (() => void) | null = null;
   const settled = new Promise<void>((resolve) => {
@@ -876,7 +909,10 @@ export async function listenOnce(input: {
     isPremium: input.isPremium,
     onSpeaking: input.onSpeaking,
     onSettled: () => settle?.(),
+    patient: input.patient,
+    onPaused: input.onPaused,
   });
+  input.onReady?.(() => settle?.());
   let given = false;
   const cancel = () => {
     if (given) return;

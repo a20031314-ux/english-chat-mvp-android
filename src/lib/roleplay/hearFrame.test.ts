@@ -160,3 +160,27 @@ test("iOS: 처음이 아주 조용해 기준이 바닥이어도, 말이 끝나�
   assert.ok(turn.spoke, "speech was heard");
   assert.ok(endedAt !== null && endedAt < 2500 + 2500, `ended at ${endedAt}`);
 });
+
+test("연습(patient): 멈칫(0.9초)은 알리기만 하고 끝내지 않는다, 5초 조용하면 끝", async () => {
+  const { PATIENT_SILENCE_MS } = await import("./hearFrame.ts");
+  let turn = TURN_NOT_STARTED;
+  let now = 0;
+  let pausedAt: number | null = null;
+  let finishedAt: number | null = null;
+  const run = (level: number, ms: number) => {
+    for (let elapsed = 0; elapsed < ms && finishedAt === null; elapsed += 60) {
+      now += 60;
+      const heard = hearFrame(turn, level, now, PATIENT_SILENCE_MS);
+      turn = heard.turn;
+      if (heard.paused && pausedAt === null) pausedAt = now;
+      if (heard.finished) finishedAt = now;
+    }
+  };
+  run(LOUD, 600);
+  run(QUIET, 2000);
+  assert.ok(pausedAt !== null, "멈칫을 알림");
+  assert.equal(finishedAt, null, "2초 멈칫으로는 안 끝남");
+  run(LOUD, 600);
+  run(QUIET, 6000);
+  assert.ok(finishedAt !== null && finishedAt - 3200 >= PATIENT_SILENCE_MS - 120, "말을 마치고 5초 뒤 끝");
+});

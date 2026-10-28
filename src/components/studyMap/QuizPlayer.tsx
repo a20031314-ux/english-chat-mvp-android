@@ -6,7 +6,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { TTSButton } from "@/components/TTSButton";
-import { LineGrade } from "@/components/studyMap/StageScripts";
+import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
 import { buildQuiz, joinWords, orderCorrect, quizPassed, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
@@ -22,7 +22,7 @@ import { stopTts } from "@/lib/ttsPlayer";
  */
 
 /** skipped = 말하기 한도에 걸려 못 함 — 점수에서 뺀다. */
-type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean };
+type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][] };
 
 export function QuizPlayer({
   ui,
@@ -417,11 +417,12 @@ function SayView({
   const [listening, setListening] = useState(false);
   const [limited, setLimited] = useState(false);
   const [last, setLast] = useState<Answer | null>(null);
+  const hearing = useHearing();
   const say = async () => {
     if (listening) return;
     stopTts();
     setListening(true);
-    const { heard, practice, unclear } = await sayLine(question.text, {
+    const { heard, practice, unclear, pauses } = await sayLine(question.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
@@ -431,10 +432,18 @@ function SayView({
         setLimited(true);
         onAnswer({ correct: false, skipped: true });
       },
+      ...hearing.options,
     });
     setListening(false);
+    // 잘 모르겠어요: 들린 데까지 짚고 틀림으로(정답 문장이 보임).
+    const stuck = hearing.takeStuck();
     const compared = compareToTarget(question.text, heard);
-    const result: Answer = { correct: Boolean(heard) && (compared.clean || practice?.good === true), heard, practice, unclear };
+    const result: Answer = { correct: !stuck && Boolean(heard) && (compared.clean || practice?.good === true), heard, practice, unclear, pauses };
+    if (stuck && !heard) {
+      setLast(result);
+      onAnswer(result);
+      return;
+    }
     setLast(result);
     // 점수는 첫 번째만, 다시 말한 것은 보여 주기만.
     if (heard) onAnswer(result);
@@ -463,9 +472,12 @@ function SayView({
             <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
           </div>
           {result.correct ? (
-            <LineGrade ui={ui} exact={compareToTarget(question.text, result.heard ?? "").clean} unclear={result.unclear ?? []} practice={result.practice ?? null} />
+            <LineGrade ui={ui} exact={compareToTarget(question.text, result.heard ?? "").clean} unclear={result.unclear ?? []} practice={result.practice ?? null} pauses={result.pauses ?? []} />
           ) : (
-            <Attempt outcomes={compareToTarget(question.text, result.heard ?? "").outcomes} ui={ui} />
+            <>
+              <Attempt outcomes={compareToTarget(question.text, result.heard ?? "").outcomes} ui={ui} pauses={result.pauses} />
+              <PauseChips ui={ui} pauses={result.pauses ?? []} />
+            </>
           )}
         </>
       ) : null}
@@ -473,7 +485,8 @@ function SayView({
       {!limited && (!result || !result.correct) ? (
         <div className="flex items-center justify-end gap-2">
           {/* 말할 수 없을 때(마이크·자리): 건너뛰면 점수에서 뺀다 — 계속 공부가 여기서 막히지 않게. */}
-          {!result ? (
+          {listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
+          {!result && !listening ? (
             <button type="button" onClick={() => onAnswer({ correct: false, skipped: true })} disabled={listening} className="rounded-full px-3 py-1.5 text-caption text-slate-400 hover:bg-white/10 disabled:opacity-50">
               {ui.quizSkip}
             </button>
