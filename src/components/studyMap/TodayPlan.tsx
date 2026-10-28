@@ -21,6 +21,7 @@ import { allFramesFor } from "@/lib/curriculum/frames";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
+import { whereLearned } from "@/lib/curriculum/learnedWhere";
 
 /**
  * 오늘 할 것(lib/curriculum/dailyPlan.ts, 2026-10-28 사용자 "매일 학습할 걸 정해 주는 흐름"):
@@ -93,6 +94,8 @@ export function TodayPlan({
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [now, setNow] = useState(0);
+  // 오늘 배운 것에서 누른 칩 — 위 목록에서 그게 나온 대본·문장구조를 표시한다.
+  const [picked, setPicked] = useState<string | null>(null);
   useEffect(() => {
     // 저장해 둔 분량·순서와 오늘 목록은 화면에 붙은 뒤 읽는다(서버 그림과 어긋나지 않게).
     setSettings(readSettings());
@@ -151,6 +154,7 @@ export function TodayPlan({
       : (frames.find((f) => f.id === item.id)?.pattern ?? item.id);
   const doneOf = (item: PlanItem) => (item.review ? !review[item.review] || review[item.review]!.due > now : passedSet.has(item.id));
   const finished = items.every(doneOf);
+  const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
   return (
@@ -198,7 +202,7 @@ export function TodayPlan({
               <button
                 type="button"
                 onClick={() => onOpen(item.stage, item.id)}
-                className="flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+                className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
               >
                 <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
                   {done ? "✓" : ""}
@@ -219,7 +223,22 @@ export function TodayPlan({
           );
         })}
       </ul>
-      {finished ? <LearnedToday ui={ui} locale={locale} language={language} ids={items.map((item) => item.id)} grammarName={grammarName} /> : null}
+      {finished ? (
+        <LearnedToday
+          ui={ui}
+          locale={locale}
+          language={language}
+          ids={items.map((item) => item.id)}
+          grammarName={grammarName}
+          picked={picked}
+          onPick={(key) => setPicked((current) => (current === key ? null : key))}
+          onOpen={onOpen}
+          nameOf={(id) => {
+            const item = items.find((one) => one.id === id);
+            return item ? labelOf(item) : id;
+          }}
+        />
+      ) : null}
     </section>
   );
 }
@@ -243,12 +262,21 @@ function LearnedToday({
   language,
   ids,
   grammarName,
+  picked,
+  onPick,
+  onOpen,
+  nameOf,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   ids: readonly string[];
   grammarName: (stage: number, index: number) => string;
+  /** 누른 칩(열쇠) — 그 아래 "어디에·어떻게"를 펼치고 위 목록의 그 대본에 테두리. */
+  picked: string | null;
+  onPick: (key: string) => void;
+  onOpen: (stage: number, id: string) => void;
+  nameOf: (id: string) => string;
 }) {
   const { isPremium, tier } = usePremium();
   const billing = useBillingUiOptional();
@@ -306,14 +334,23 @@ function LearnedToday({
               const label = keyLabel(language, key, grammarName);
               if (!label) return null;
               const flagged = asked.has(key);
+              const on = picked === key;
               return (
-                <span key={key} dir="auto" className={`rounded-full border px-2.5 py-1 text-caption ${flagged ? "border-warn/60 text-warn" : "border-line text-slate-200"}`}>
+                <button
+                  key={key}
+                  type="button"
+                  dir="auto"
+                  aria-pressed={on}
+                  onClick={() => onPick(key)}
+                  className={`rounded-full border px-2.5 py-1 text-caption ${on ? "border-status-learned bg-status-learned/15 text-ink" : flagged ? "border-warn/60 text-warn" : "border-line text-slate-200 hover:bg-white/10"}`}
+                >
                   {label}
                   {flagged ? " ?" : ""}
-                </span>
+                </button>
               );
             })}
           </div>
+          {picked && group.keys.includes(picked) ? <WherePanel locale={locale} language={language} keyId={picked} ids={ids} nameOf={nameOf} onOpen={onOpen} /> : null}
         </div>
       ))}
       {paid ? (
@@ -351,6 +388,60 @@ function LearnedToday({
         </button>
       ) : null}
     </div>
+  );
+}
+
+/** 누른 칩이 오늘 한 어디에, 어떤 줄로 나왔는지(curriculum/learnedWhere.ts) — 대본 이름·줄을 누르면 그 대본·문장구조로. */
+function WherePanel({
+  locale,
+  language,
+  keyId,
+  ids,
+  nameOf,
+  onOpen,
+}: {
+  locale: string;
+  language: string;
+  keyId: string;
+  ids: readonly string[];
+  nameOf: (id: string) => string;
+  onOpen: (stage: number, id: string) => void;
+}) {
+  const where = whereLearned(language, keyId, ids);
+  if (!where.length) return null;
+  return (
+    <ul className="mt-1 flex flex-col gap-1.5 rounded-xl border border-status-learned/40 bg-white/[0.03] p-2">
+      {where.map((item) => (
+        <li key={item.id}>
+          <button type="button" onClick={() => onOpen(item.stage, item.id)} className="flex w-full flex-col gap-1 rounded-lg px-2 py-1.5 text-start hover:bg-white/5">
+            <span className="flex w-full items-center gap-2">
+              <span dir="auto" className="min-w-0 flex-1 truncate text-meta text-slate-400">
+                {nameOf(item.id)}
+              </span>
+              <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
+            </span>
+            {item.lines.map((line, i) => (
+              <span key={i} className="flex flex-col">
+                <span dir="auto" className="text-note text-slate-100">
+                  {line.hit ? (
+                    <>
+                      {line.text.slice(0, line.hit[0])}
+                      <strong className="font-semibold text-status-learned">{line.text.slice(line.hit[0], line.hit[1])}</strong>
+                      {line.text.slice(line.hit[1])}
+                    </>
+                  ) : (
+                    line.text
+                  )}
+                </span>
+                <span dir="auto" className="text-meta text-slate-500">
+                  {glossFor(line.gloss, locale)}
+                </span>
+              </span>
+            ))}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
 
