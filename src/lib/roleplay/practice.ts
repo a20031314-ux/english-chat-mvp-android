@@ -276,6 +276,13 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
 "good" is true when nothing is worth raising. "note" is still written then — say what came through well, briefly, without praise it did not earn.`;
 }
 
+/** 떠올려 말하기에 주는 낱말 대조(2026-10-29: 대조 없이 맡겼더니 맞게 말한 과거형을 "빠졌다"고 짚음). 판단 근거가 아니라 어디가 다른지의 사실. */
+function recallDiff(comparison: Comparison): string {
+  const trouble = troubleWords(comparison);
+  if (!trouble.length && !comparison.added.length) return "Word by word, every word of the script came through.\n";
+  return `Word by word against the script (a fact about the transcript, not yet a verdict — reworded parts show up here too):\n${trouble.map((line) => `- ${line}`).join("\n")}${comparison.added.length ? `\n- also heard, not in the script: ${comparison.added.map((word) => `"${word}"`).join(", ")}` : ""}\nAny word not listed came through exactly as in the script. In the note, talk only about these differences — never call a word missing or wrong when it is not listed.\n`;
+}
+
 /**
  * 대본·문장구조를 보지 않고(첫 글자만·가리기·문장구조만) 떠올려 말했다(2026-10-28 사용자 "기존 문장에서 변형된 맞는 표현도 고치라고 함" →
  * 맞게 바꿔 말한 것은 통과). 원문 그대로가 아니어도 같은 뜻을 자연스럽고 맞게 말했으면 good — 원문과 다른 말은 note에 원문 표현을 짧게 알려 준다.
@@ -286,7 +293,7 @@ export function recallPrompt(input: { target: string; heard: string; comparison:
 
 The line in the script: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
-${unclearPart(input.unclear, input.nativeLanguage)}
+${recallDiff(input.comparison)}${unclearPart(input.unclear, input.nativeLanguage)}
 This is not a dictation check. Decide like a friendly native speaker in that conversation: would you understand the same thing, and does it sound like something people really say?
 - "good" is TRUE when the meaning is the same and it is natural and grammatical, even with different wording. Different but equivalent choices are fine: will vs. going to for a plan, a modal or impersonal form instead of a personal one when the question means the same, a synonym, a contraction, a different natural order, a polite form of the same request, a shorter natural way of saying it.
 - Speech recognisers drop or blur short unstressed words (articles, prepositions such as before days of the week, auxiliaries) and spell some words differently; they also drop punctuation and the rise of a question, so a statement-shaped transcript of something that works as the question here is fine. If the rest of the sentence is right, assume those small words were said.
