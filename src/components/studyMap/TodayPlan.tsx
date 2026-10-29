@@ -43,6 +43,7 @@ import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
+import { skeletonTotals, skeletonView } from "@/lib/notes/skeletonTotals";
 import type { LedgerState } from "@/lib/learner/ledger";
 
 /**
@@ -93,13 +94,13 @@ function saveQuizDone(day: string, keys: Set<string>) {
   }
 }
 
-type StudyFocus = "auto" | PartId;
-/** 지속 학습의 두 버튼(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘, 버튼으로"). */
+type StudyFocus = "review" | "auto" | PartId;
+/** 지속 학습의 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘" → "알아서·어휘·문법·표현·발음을 복습과 같은 층위로"). */
 type StudyLane = "review" | "learn";
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
-const FOCUSES: readonly StudyFocus[] = ["auto", "vocab", "grammar", "expression", "pronunciation"];
+const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression", "pronunciation"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
 function readSettings(): Settings {
@@ -179,7 +180,8 @@ export function TodayPlan({
   const { isPremium } = usePremium();
   const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
-  const studyFocus: PartId | null = settings.focus === "auto" ? null : settings.focus;
+  const studyFocus: PartId | null = settings.focus === "auto" || settings.focus === "review" ? null : settings.focus;
+  const pickedLane: StudyLane = settings.focus === "review" ? "review" : "learn";
   // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
   const firstPick = (picks: readonly StudyPick[], lane: StudyLane = "learn"): StudyPick | undefined =>
     lane === "learn" && !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
@@ -435,6 +437,7 @@ export function TodayPlan({
     (sum, key) => (keyPart(language, key) !== "vocab" ? sum : knownState(known, key) === "known" ? { ...sum, known: sum.known + 1 } : { ...sum, learning: sum.learning + 1 }),
     { known: 0, learning: 0 },
   );
+  const skeletonParts = skeletonView(skeletonTotals(language, { known, passed: passedSet }));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
   const placeAt = async (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -452,7 +455,7 @@ export function TodayPlan({
   const placementOffer = !lastBig && (passedSet.size > 0 || practiced.size > 0);
   // 새로 배우기 버튼의 시험(실력 확인 → 단계 시험 → 단계 미리 확인), 복습 버튼의 시험(이번 주 확인).
   const learnTest: "placement" | "stage" | "entry" | null = placementOffer ? "placement" : stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : null;
-  const reviewTest: "take" | null = checkupOffer && !learnTest ? "take" : null;
+  const reviewTest: "take" | null = checkupOffer ? "take" : null;
   const itemsOf = (test: "placement" | "stage" | "entry" | "take") => (test === "placement" ? [] : test === "stage" ? stageTestItems : test === "entry" ? entryItems : checkupItems);
   const minutesOf = (list: readonly { question: { kind: string } }[]) =>
     Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
@@ -507,46 +510,71 @@ export function TodayPlan({
       </button>
     </div>
   );
-  const laneButton = (which: StudyLane, test: "placement" | "stage" | "entry" | "take" | null, pick: StudyPick | null) => {
-    const testList = test ? itemsOf(test) : [];
-    const empty = !test && !pick;
-    const lead = which === "review" ? ui.studyReview : ui.studyLearn;
+  const testButton = (test: "placement" | "stage" | "entry" | "take") => {
+    const testList = itemsOf(test);
     return (
       <button
         type="button"
-        disabled={empty}
-        {...(which === "review" ? { "data-study-review": "" } : { "data-study-learn": "" })}
-        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : test === "take" ? { "data-checkup-offer": "" } : {})}
+        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : { "data-checkup-offer": "" })}
         onClick={() => {
-          if (!test) return startStudy(pick, which);
           if (test !== "placement") setFrozenItems(testList);
           setCheckupOpen(test);
         }}
-        className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${empty ? "border border-line text-slate-500" : finished && which === "learn" ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
+        className="mt-2 flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2 text-start text-ink hover:bg-white/5"
       >
-        <span aria-hidden className="shrink-0 text-caption">{empty ? "✓" : "▶"}</span>
+        <span aria-hidden className="shrink-0 text-caption">📝</span>
         <span className="min-w-0 flex-1">
           <span className="block text-note font-semibold">
-            {lead}
-            {which === "review" && reviewQueue.length ? <span dir="ltr" className="ms-1.5 tabular-nums text-meta font-normal opacity-70">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
+            {test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
           </span>
-          <span dir="auto" className={`block truncate text-meta ${finished && which === "learn" ? "text-slate-600" : "text-slate-400"}`}>
-            {test ? (
-              <>
-                📝 {test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
-                {test === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testList.length)).replace("{m}", String(minutesOf(testList)))}`}
-              </>
-            ) : pick ? (
-              <>
-                {reasonLabel(pick)} · <bdi>{keyLabel(language, pick.key, grammarName)}</bdi>
-              </>
-            ) : which === "review" ? (
-              ui.studyReviewNone
-            ) : null}
-          </span>
+          {test === "placement" ? null : (
+            <span className="block text-meta text-slate-400">{ui.checkupMeta.replace("{n}", String(testList.length)).replace("{m}", String(minutesOf(testList)))}</span>
+          )}
         </span>
       </button>
     );
+  };
+  const startButton = (which: StudyLane, pick: StudyPick | null) => (
+    <button
+      type="button"
+      disabled={!pick}
+      data-study-start={which}
+      onClick={() => startStudy(pick, which)}
+      className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${!pick ? "border border-line text-slate-500" : finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
+    >
+      <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-note font-semibold">{pick ? ui.studyMore : ui.studyReviewNone}</span>
+        {pick ? (
+          <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
+            {reasonLabel(pick)} · <bdi>{keyLabel(language, pick.key, grammarName)}</bdi>
+          </span>
+        ) : null}
+      </span>
+    </button>
+  );
+  // 고른 버튼의 학습량(2026-10-29 사용자 "각 버튼을 눌렀을 때 학습량") — 어휘는 빈도 단어, 문법·표현·발음은 My 맨 위와 같은 뼈대 숫자.
+  const amountRow = (id: string, label: string, have: number, total: number | null, learning: number) => (
+    <div key={id} data-amount={id} className="flex items-center gap-2">
+      <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label}</span>
+      {total ? (
+        <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">
+          <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned/35" style={{ width: `${Math.min(100, Math.round(((have + learning) / total) * 100))}%` }} />
+          <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.min(100, Math.round((have / total) * 100))}%` }} />
+        </span>
+      ) : (
+        <span className="min-w-0 flex-1" />
+      )}
+      <span dir="ltr" className="shrink-0 text-caption tabular-nums text-ink">
+        {total ? `${have.toLocaleString()} / ${total.toLocaleString()}` : have.toLocaleString()}
+      </span>
+      {learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(learning))}</span> : null}
+    </div>
+  );
+  const partAmount = (id: PartId) => {
+    if (id === "vocab") return bank ? amountRow("vocab", ui.partVocab, bank.known, bank.total, bank.learning) : amountRow("vocab", ui.partVocab, wordCount.known, null, wordCount.learning);
+    const part = skeletonParts.find((one) => one.id === id);
+    return part ? amountRow(id, partName(ui, id), part.known, part.total, part.learning) : null;
   };
   const reasonLabel = (pick: StudyPick) =>
     pick.reason === "again"
@@ -797,27 +825,31 @@ export function TodayPlan({
     </section>
     {/* Ongoing practice (2026-10-29, user: keep it apart from My, count words on their own; a card inside My): its own count, parts, endless queue. */}
     <section data-keep-learning className="mt-3 rounded-2xl border border-line bg-white/[0.03] px-3 py-3">
-      <div className="flex items-baseline gap-2">
-        <h3 className="min-w-0 flex-1 text-caption font-semibold text-ink">{ui.keepTitle}</h3>
-        <span data-keep-vocab className="shrink-0 text-caption tabular-nums text-slate-300">
-          {ui.partVocab} {bank ? <span dir="ltr">{bank.known.toLocaleString()} / {bank.total.toLocaleString()}</span> : wordCount.known}
-          {(bank ? bank.learning : wordCount.learning) ? <span className="ms-1.5 text-meta text-slate-500">{ui.totalsLearning.replace("{n}", String(bank ? bank.learning : wordCount.learning))}</span> : null}
-        </span>
-      </div>
-      {laneButton("review", reviewTest, upReview)}
-      {/* Learn-new parts (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. Review has no parts. */}
-      <div role="group" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
+      <h3 className="text-caption font-semibold text-ink">{ui.keepTitle}</h3>
+      {/* Six buttons on one level (2026-10-29, user): review, auto and the four parts; the picked one shows its amount and starts. */}
+      <div role="group" data-study-focus className="mt-2 grid grid-cols-3 gap-1.5">
         {FOCUSES.map((focus) => (
           <button
             key={focus}
             type="button"
             aria-pressed={settings.focus === focus}
+            {...(focus === "review" ? { "data-study-review": "" } : {})}
             onClick={() => save({ ...settings, focus })}
-            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+            className={`rounded-xl border px-2 py-2 text-caption ${settings.focus === focus ? "border-status-learned/60 bg-white/10 font-semibold text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
           >
-            {focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
+            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
+            {focus === "review" && reviewQueue.length ? <span dir="ltr" className="ms-1 tabular-nums text-meta text-slate-400">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
           </button>
         ))}
+      </div>
+      <div data-study-amount={settings.focus} className="mt-2 flex flex-col gap-1.5 px-1">
+        {settings.focus === "review" ? (
+          <p className="text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>
+        ) : settings.focus === "auto" ? (
+          (["vocab", "grammar", "expression", "pronunciation"] as const).map((id) => partAmount(id))
+        ) : (
+          partAmount(settings.focus)
+        )}
       </div>
       {/* Words by frequency band, part of speech or topic (2026-10-29): the learner picks the basis, then one group. */}
       {settings.focus === "vocab" && bank ? (
@@ -858,7 +890,8 @@ export function TodayPlan({
           ) : null}
         </div>
       ) : null}
-      {laneButton("learn", learnTest, upNext)}
+      {pickedLane === "review" ? (reviewTest ? testButton(reviewTest) : null) : settings.focus === "auto" && learnTest ? testButton(learnTest) : null}
+      {startButton(pickedLane, pickedLane === "review" ? upReview : upNext)}
       {tally.known.length || tally.fixed.length ? (
         <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
           {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}

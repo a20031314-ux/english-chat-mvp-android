@@ -827,8 +827,8 @@
     "setStageHere": "この段階にする",
     "readingToggle": "読み方",
     "studyReview": "復習",
-    "studyLearn": "新しく学ぶ",
-    "studyReviewNone": "今は復習するものがありません"
+    "studyReviewNone": "今は復習するものがありません",
+    "studyReviewLeft": "復習 {n}件"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1658,8 +1658,8 @@
     "setStageHere": "设为这个阶段",
     "readingToggle": "读法",
     "studyReview": "复习",
-    "studyLearn": "学新内容",
-    "studyReviewNone": "现在没有要复习的"
+    "studyReviewNone": "现在没有要复习的",
+    "studyReviewLeft": "待复习 {n}"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2492,8 +2492,8 @@
     "setStageHere": "Chọn giai đoạn này",
     "readingToggle": "Cách đọc",
     "studyReview": "Ôn tập",
-    "studyLearn": "Học mới",
-    "studyReviewNone": "Hiện chưa có gì cần ôn"
+    "studyReviewNone": "Hiện chưa có gì cần ôn",
+    "studyReviewLeft": "{n} mục cần ôn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3331,8 +3331,8 @@
     "setStageHere": "Choisir cette étape",
     "readingToggle": "Lecture",
     "studyReview": "Révision",
-    "studyLearn": "Apprendre du nouveau",
-    "studyReviewNone": "Rien à réviser pour l’instant"
+    "studyReviewNone": "Rien à réviser pour l’instant",
+    "studyReviewLeft": "{n} à réviser"
   },
   "it": {
     "archive": "Report",
@@ -4361,8 +4361,8 @@
     "setStageHere": "Scegli questa fase",
     "readingToggle": "Lettura",
     "studyReview": "Ripasso",
-    "studyLearn": "Impara cose nuove",
-    "studyReviewNone": "Niente da ripassare ora"
+    "studyReviewNone": "Niente da ripassare ora",
+    "studyReviewLeft": "{n} da ripassare"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5203,8 +5203,8 @@
     "setStageHere": "Escolher esta etapa",
     "readingToggle": "Leitura",
     "studyReview": "Revisão",
-    "studyLearn": "Aprender algo novo",
-    "studyReviewNone": "Nada para revisar agora"
+    "studyReviewNone": "Nada para revisar agora",
+    "studyReviewLeft": "{n} para revisar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6231,8 +6231,8 @@
     "setStageHere": "Выбрать этот этап",
     "readingToggle": "Чтение",
     "studyReview": "Повторение",
-    "studyLearn": "Новое",
-    "studyReviewNone": "Сейчас нечего повторять"
+    "studyReviewNone": "Сейчас нечего повторять",
+    "studyReviewLeft": "Повторить: {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7069,8 +7069,8 @@
     "setStageHere": "Pilih tahap ini",
     "readingToggle": "Cara baca",
     "studyReview": "Ulangi",
-    "studyLearn": "Belajar yang baru",
-    "studyReviewNone": "Belum ada yang perlu diulang"
+    "studyReviewNone": "Belum ada yang perlu diulang",
+    "studyReviewLeft": "{n} untuk diulang"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7900,8 +7900,8 @@
     "setStageHere": "اجعلها مرحلتي",
     "readingToggle": "طريقة القراءة",
     "studyReview": "مراجعة",
-    "studyLearn": "تعلّم جديد",
-    "studyReviewNone": "لا شيء للمراجعة الآن"
+    "studyReviewNone": "لا شيء للمراجعة الآن",
+    "studyReviewLeft": "للمراجعة: {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8731,8 +8731,8 @@
     "setStageHere": "เลือกขั้นนี้",
     "readingToggle": "คำอ่าน",
     "studyReview": "ทบทวน",
-    "studyLearn": "เรียนใหม่",
-    "studyReviewNone": "ตอนนี้ยังไม่มีอะไรต้องทบทวน"
+    "studyReviewNone": "ตอนนี้ยังไม่มีอะไรต้องทบทวน",
+    "studyReviewLeft": "ต้องทบทวน {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9562,7 +9562,7 @@
     "setStageHere": "यह चरण चुनें",
     "readingToggle": "उच्चारण",
     "studyReview": "दोहराएँ",
-    "studyLearn": "नया सीखें",
-    "studyReviewNone": "अभी दोहराने को कुछ नहीं"
+    "studyReviewNone": "अभी दोहराने को कुछ नहीं",
+    "studyReviewLeft": "दोहराने को {n}"
   }
 }
