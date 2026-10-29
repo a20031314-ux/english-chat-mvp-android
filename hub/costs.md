@@ -74,8 +74,8 @@
 |---|---|---|---|---|
 | curriculumGenerate | 65.8원 | 1 | claude-sonnet-5-5 3500/4000 토큰 (기능 curriculumMap) | 가정 |
 | curriculumMapFill | 36.4원 | 1 | claude-sonnet-5-5 4000/1800 토큰 (기능 curriculumMapFill) | 가정 |
+| scriptChoices | 19.6원 | 2 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptChoices) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
-| scriptChoices | 9.8원 | 1 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptChoices) | 가정 |
 | scriptRecheck | 9.8원 | 1 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptRecheck) | 가정 |
 | chatVerify | 5.3원 | 1 | claude-sonnet-5-5 900/200 토큰 (기능 chatVerify) | 가정 |
 | tts | 3.7원 | 1 | 음성 합성 6초 gpt-realtime-2.1-mini | 가정 |
