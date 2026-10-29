@@ -7,6 +7,7 @@ import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import type { UICopy } from "@/lib/copy";
 import { CHECK_ORIGINS, rateOf, STAGE_KEYS, summarize, type CheckItem, type CheckOrigin, type CheckResult } from "@/lib/curriculum/checkup";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedOf } from "@/lib/curriculum/itemStats";
 import { PART_IDS, type PartId } from "@/lib/notes/stageParts";
 import { stopTts } from "@/lib/ttsPlayer";
 
@@ -36,7 +37,7 @@ export function CheckupPlayer({
   language: string;
   stage: number;
   /** 이번 주 확인은 CheckItem, 단계 시험(curriculum/stageTest.ts)은 finishWith와 함께 문제만. */
-  items: readonly (CheckItem | { question: QuizQuestion })[];
+  items: readonly (CheckItem | { key?: string; question: QuizQuestion })[];
   /** 지난번 결과(차이를 보일 때) — 없으면 차이 없음. */
   previous: CheckResult | null;
   /** 이미 끝낸 확인을 다시 볼 때. */
@@ -95,7 +96,9 @@ export function CheckupPlayer({
                 const given = items.map((_, i) => (answers[i]?.skipped ? null : (answers[i]?.correct ?? false)));
                 const finished = finishWith ? finishWith(given) : summarize(items as readonly CheckItem[], given, stage);
                 setResult(finished);
-                onFinish(finished);
+                // 문제 통계(모두의 난이도)는 열쇠가 있는 문제만 — 결과와 함께 보내고 서버는 결과에 남기지 않음.
+                const keyed = items.flatMap((item, i) => (item.key ? [{ item: { key: item.key, question: item.question }, answer: given[i] ?? null }] : []));
+                onFinish({ ...finished, asked: askedOf(keyed.map((one) => one.item), keyed.map((one) => one.answer)) });
               }
               setIndex(next);
             }}

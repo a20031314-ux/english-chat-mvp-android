@@ -8,6 +8,7 @@
  * 결과는 이번 주 확인과 같은 모양(curriculum/checkup.ts CheckResult, kind "placement") — 시작 단계·단계별·갈래별 맞힌 수, 시작 단계보다 아래에서 틀린 것.
  * 레벨·등급은 보이지 않는다. 순수 모듈: 화면(studyMap/PlacementPlayer)·테스트.
  */
+import { byDifficulty, type ItemStats } from "./itemStats.ts";
 import { partOf, STAGE_KEYS, type CheckResult, type StageKey, type Tally } from "./checkup.ts";
 import { reviewKeysOf } from "./dailyPlan.ts";
 import { buildQuiz, type QuizQuestion } from "./quiz.ts";
@@ -58,10 +59,10 @@ export function stageKeys(language: string, stage: number): string[] {
 }
 
 /** 한 묶음(그 단계에서 PLACEMENT_BLOCK문제, 이미 낸 열쇠는 빼고). says = 지금까지 낸 말하기 수. */
-export function placementBlock(input: { language: string; stage: number; used: ReadonlySet<string>; says: number; seed: string }): PlacementItem[] {
+export function placementBlock(input: { language: string; stage: number; used: ReadonlySet<string>; says: number; seed: string; stats?: ItemStats | null }): PlacementItem[] {
   const out: PlacementItem[] = [];
   let says = input.says;
-  for (const key of shuffled(stageKeys(input.language, input.stage), `${input.seed}|${input.stage}`)) {
+  for (const key of byDifficulty(shuffled(stageKeys(input.language, input.stage), `${input.seed}|${input.stage}`), input.stats)) {
     if (out.length >= PLACEMENT_BLOCK) break;
     if (input.used.has(key)) continue;
     const quiz = buildQuiz(input.language, key, { seed: input.seed });

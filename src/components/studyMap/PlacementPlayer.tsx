@@ -16,6 +16,8 @@ import {
   type PlacementItem,
 } from "@/lib/curriculum/placement";
 import { stopTts } from "@/lib/ttsPlayer";
+import { askedOf } from "@/lib/curriculum/itemStats";
+import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 
 /**
  * 처음 시험(실력 확인, lib/curriculum/placement.ts): 2단계에서 4문제씩, 맞히면 위 단계·막히면 아래 단계로 → 시작 단계.
@@ -44,9 +46,10 @@ export function PlacementPlayer({
   onPick: (stage: number) => void;
   onClose: () => void;
 }) {
+  const stats = useItemStats(language);
   const seed = useMemo(() => `${language}|placement|${new Date().toDateString()}`, [language]);
   const [items, setItems] = useState<PlacementItem[]>(() =>
-    placementBlock({ language, stage: PLACEMENT_FIRST, used: new Set(), says: 0, seed }),
+    placementBlock({ language, stage: PLACEMENT_FIRST, used: new Set(), says: 0, seed, stats: peekItemStats(language) }),
   );
   const [extraDone, setExtraDone] = useState(false);
   const [index, setIndex] = useState(0);
@@ -59,7 +62,7 @@ export function PlacementPlayer({
   const finish = (list: readonly PlacementItem[], given: Record<number, Answer>) => {
     const done = placementResult(list, scored(list, given));
     setResult(done);
-    onFinish(done);
+    onFinish({ ...done, asked: askedOf(list, scored(list, given)) });
   };
   const advance = () => {
     const next = index + 1;
@@ -74,7 +77,7 @@ export function PlacementPlayer({
     const block =
       stage === null
         ? []
-        : placementBlock({ language, stage, used: new Set(items.map((item) => item.key)), says: items.filter((item) => item.question.kind === "say").length, seed });
+        : placementBlock({ language, stage, used: new Set(items.map((item) => item.key)), says: items.filter((item) => item.question.kind === "say").length, seed, stats });
     if (!block.length) {
       finish(items, answers);
       return;

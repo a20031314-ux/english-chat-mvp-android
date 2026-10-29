@@ -6,6 +6,7 @@
  *   넘음 = 그 단계 문제 70% 이상(말하기 건너뛴 것은 뺌). 넘으면 다음 단계로, 못 넘으면 그 단계에서 틀린 것이 다시 볼 것으로 가고 같은 날엔 다시 못 본다.
  * 결과는 이번 주 확인·처음 시험과 같은 모양(curriculum/checkup.ts CheckResult, kind "stage", passed). 레벨·등급은 없다. 순수 모듈(화면 studyMap/CheckupPlayer·테스트).
  */
+import { byDifficulty, type ItemStats } from "./itemStats.ts";
 import { DAY_MS } from "./dailyPlan.ts";
 import { isBigTest, partOf, type CheckResult, type StageKey, type Tally } from "./checkup.ts";
 import { stageKeys } from "./placement.ts";
@@ -53,12 +54,12 @@ export function stageTestSeed(language: string, stage: number, now = Date.now())
 }
 
 /** 단계 시험 문제(그 단계 16 · 앞 단계 5 · 다음 단계 3, 모자라면 그 단계에서 채움). */
-export function buildStageTest(input: { language: string; stage: number; now?: number; seed?: string }): StageTestItem[] {
+export function buildStageTest(input: { language: string; stage: number; now?: number; seed?: string; stats?: ItemStats | null }): StageTestItem[] {
   const { language, stage } = input;
   const seed = input.seed ?? stageTestSeed(language, stage, input.now);
-  const here = shuffled(stageKeys(language, stage), `${seed}|here`);
-  const before = shuffled(Array.from({ length: stage - 1 }, (_, i) => stageKeys(language, i + 1)).flat(), `${seed}|before`);
-  const after = stage < 5 ? shuffled(stageKeys(language, stage + 1), `${seed}|after`) : [];
+  const here = byDifficulty(shuffled(stageKeys(language, stage), `${seed}|here`), input.stats);
+  const before = byDifficulty(shuffled(Array.from({ length: stage - 1 }, (_, i) => stageKeys(language, i + 1)).flat(), `${seed}|before`), input.stats);
+  const after = stage < 5 ? byDifficulty(shuffled(stageKeys(language, stage + 1), `${seed}|after`), input.stats) : [];
   const quota: [string[], number, number][] = [
     [here, 16, stage],
     [before, 5, 0],

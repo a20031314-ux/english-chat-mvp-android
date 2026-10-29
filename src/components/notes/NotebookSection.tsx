@@ -18,6 +18,7 @@ import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
+import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
@@ -179,6 +180,7 @@ export function NotebookSection({
   // "다음 단계로" 앞의 단계 시험(curriculum/stageTest.ts, 2026-10-29 사용자 "시험을 중심으로"): 고른 단계, 시험 결과(서버 checkups).
   const [stageTestFor, setStageTestFor] = useState<number | null>(null);
   const { checkups, save: saveCheckup } = useCheckups(language);
+  useItemStats(language);
   const loaded = Boolean(book);
   useEffect(() => {
     if (!loaded) return;
@@ -1816,7 +1818,8 @@ function StageTestGate({
   const [opened] = useState(() => Date.now());
   const failed = useMemo(() => failedToday(checkups, stage, opened), [checkups, stage, opened]);
   const [shown] = useState<CheckResult | null>(failed);
-  const items = useMemo(() => (shown ? [] : buildStageTest({ language, stage, now: opened })), [shown, language, stage, opened]);
+  // 연 때의 문제로 고정(모두의 문제 통계로 가르는 문제 먼저, curriculum/itemStats.ts — 단계 보기가 미리 받아 둠).
+  const [items] = useState(() => (shown ? [] : buildStageTest({ language, stage, now: opened, stats: peekItemStats(language) })));
   const previous = [...checkups].reverse().find((result) => result.kind && result !== shown) ?? null;
   return (
     <CheckupPlayer

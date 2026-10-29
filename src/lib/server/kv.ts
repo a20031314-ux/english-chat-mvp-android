@@ -480,3 +480,51 @@ export async function kvGetJsonMany<T>(keys: string[]): Promise<(T | null)[]> {
   );
 }
 
+
+/** 해시 칸 여러 개를 한 번에 더한다(HINCRBY를 Upstash pipeline 한 번으로). 실패하면 아무것도 안 남김. */
+export async function kvHashIncrMany(key: string, amounts: Record<string, number>, ttlSeconds?: number): Promise<void> {
+  const fields = Object.entries(amounts).filter(([, amount]) => amount);
+  if (!fields.length) return;
+  const creds = credentials();
+  if (!creds) {
+    warnOnce();
+    const current = JSON.parse(memoryRead(key) ?? "{}") as Record<string, number>;
+    for (const [field, amount] of fields) current[field] = (current[field] ?? 0) + amount;
+    memoryWrite(key, JSON.stringify(current), ttlSeconds);
+    return;
+  }
+  await attempt(
+    `HINCRBY ${key} x${fields.length}`,
+    async () => {
+      const commands: (string | number)[][] = fields.map(([field, amount]) => ["HINCRBY", key, field, amount]);
+      if (ttlSeconds) commands.push(["EXPIRE", key, ttlSeconds]);
+      const response = await fetch(`${creds.url}/pipeline`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${creds.token}`, "Content-Type": "application/json" },
+        body: JSON.stringify(commands),
+        cache: "no-store",
+      });
+      if (!response.ok) throw new Error(`kv pipeline failed with ${response.status}`);
+    },
+    undefined,
+  );
+}
+
+/** 해시 전체(HGETALL) — 칸 → 수. */
+export async function kvHashGetAll(key: string): Promise<Record<string, number>> {
+  if (!credentials()) {
+    warnOnce();
+    return JSON.parse(memoryRead(key) ?? "{}") as Record<string, number>;
+  }
+  return attempt(
+    `HGETALL ${key}`,
+    async () => {
+      const result = await command(["HGETALL", key]);
+      const out: Record<string, number> = {};
+      if (Array.isArray(result)) for (let i = 0; i + 1 < result.length; i += 2) out[String(result[i])] = Number(result[i + 1]) || 0;
+      else if (result && typeof result === "object") for (const [field, value] of Object.entries(result)) out[field] = Number(value) || 0;
+      return out;
+    },
+    {},
+  );
+}

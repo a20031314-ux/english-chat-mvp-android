@@ -11,6 +11,7 @@
  * - 결과 → 학습: 틀린 열쇠는 다시 볼 것(헷갈려요처럼 2일 뒤), 약하게 나온 갈래는 계속 공부가 먼저(checkupWeakest).
  * 순수 모듈: 화면(studyMap/CheckupPlayer)·서버(/api/curriculum/scripts checkup)·테스트가 같이 쓴다.
  */
+import { byDifficulty, type AskedItem, type ItemStats } from "./itemStats.ts";
 import { isWordish, PART_IDS, type PartId } from "../notes/stageParts.ts";
 import { DAY_MS, isCurriculumKey, reviewKeysOf, type ReviewMap } from "./dailyPlan.ts";
 import type { QuizLog } from "./nextStudy.ts";
@@ -41,6 +42,8 @@ export type CheckResult = {
   stages?: Partial<Record<StageKey, Tally>>;
   /** 단계 시험: 그 단계를 넘었는지. */
   passed?: boolean;
+  /** 보낼 때만: 낸 문제마다 [열쇠, 맞음](말하기 빼고) — 서버가 모두의 문제 통계에 더하고 결과에는 남기지 않는다(curriculum/itemStats.ts). */
+  asked?: AskedItem[];
 };
 
 /** 큰 시험(처음 시험·단계 시험) — 실력 기록의 중심(2026-10-29 사용자 "시험을 중심으로 모으는 걸로"). */
@@ -151,6 +154,8 @@ export function buildCheckup(input: {
   log: QuizLog;
   now?: number;
   seed?: string;
+  /** 모든 사용자의 문제 통계(curriculum/itemStats.ts) — 가르는 문제 먼저, 막힌 문제 뒤로. */
+  stats?: ItemStats | null;
 }): CheckItem[] {
   const now = input.now ?? Date.now();
   const seed = input.seed ?? weekSeed(input.language, now);
@@ -178,7 +183,7 @@ export function buildCheckup(input: {
     items.push({ key, part: partOf(input.language, key, question.kind), origin, question });
     return true;
   };
-  const lists = Object.fromEntries(CHECK_ORIGINS.map((origin) => [origin, shuffled(pools[origin], `${seed}|${origin}`)])) as Record<CheckOrigin, string[]>;
+  const lists = Object.fromEntries(CHECK_ORIGINS.map((origin) => [origin, byDifficulty(shuffled(pools[origin], `${seed}|${origin}`), input.stats)])) as Record<CheckOrigin, string[]>;
   for (const origin of CHECK_ORIGINS) {
     let count = 0;
     for (const key of lists[origin]) {

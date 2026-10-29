@@ -23,6 +23,7 @@ import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NotebookSection } from "@/components/notes/NotebookSection";
 import { GrowthNetwork, type BoardMode, type BoardOptions } from "@/components/studyMap/GrowthNetwork";
 import { StageExamples, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
+import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { PlacementPlayer } from "@/components/studyMap/PlacementPlayer";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
@@ -594,6 +595,8 @@ function StageStart({
   const [failed, setFailed] = useState(false);
   // 처음 시험(실력 확인, lib/curriculum/placement.ts)으로 정할지, 대화 예시로 고를지 — 처음엔 둘 중 고르게(2026-10-29 사용자).
   const [mode, setMode] = useState<"choose" | "test" | "pick">(startStage ? "pick" : "choose");
+  // 시험 문제 통계를 미리 받아 둔다(첫 묶음부터 가르는 문제 먼저, curriculum/itemStats.ts).
+  useItemStats(targetLanguage);
   const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
   if (!stages?.length) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
   const idOf = (order: number) => stages.find((entry) => entry.order === order)?.id ?? stages[0]!.id;
