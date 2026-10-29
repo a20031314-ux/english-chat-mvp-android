@@ -843,7 +843,7 @@ export function TodayPlan({
             onClick={() => save({ ...settings, focus })}
             className={`rounded-xl border px-2 py-2 text-caption ${settings.focus === focus ? "border-status-learned/60 bg-white/10 font-semibold text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
           >
-            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
+            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus)}
             {focus === "review" && reviewQueue.length ? <span dir="ltr" className="ms-1 tabular-nums text-meta text-slate-400">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
           </button>
         ))}

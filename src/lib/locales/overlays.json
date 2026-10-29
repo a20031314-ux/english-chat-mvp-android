@@ -828,7 +828,8 @@
     "readingToggle": "読み方",
     "studyReview": "復習",
     "studyReviewNone": "今は復習するものがありません",
-    "studyReviewLeft": "復習 {n}件"
+    "studyReviewLeft": "復習 {n}件",
+    "studyRandom": "ランダム"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1659,7 +1660,8 @@
     "readingToggle": "读法",
     "studyReview": "复习",
     "studyReviewNone": "现在没有要复习的",
-    "studyReviewLeft": "待复习 {n}"
+    "studyReviewLeft": "待复习 {n}",
+    "studyRandom": "随机"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2493,7 +2495,8 @@
     "readingToggle": "Cách đọc",
     "studyReview": "Ôn tập",
     "studyReviewNone": "Hiện chưa có gì cần ôn",
-    "studyReviewLeft": "{n} mục cần ôn"
+    "studyReviewLeft": "{n} mục cần ôn",
+    "studyRandom": "Ngẫu nhiên"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3332,7 +3335,8 @@
     "readingToggle": "Lecture",
     "studyReview": "Révision",
     "studyReviewNone": "Rien à réviser pour l’instant",
-    "studyReviewLeft": "{n} à réviser"
+    "studyReviewLeft": "{n} à réviser",
+    "studyRandom": "Aléatoire"
   },
   "it": {
     "archive": "Report",
@@ -4362,7 +4366,8 @@
     "readingToggle": "Lettura",
     "studyReview": "Ripasso",
     "studyReviewNone": "Niente da ripassare ora",
-    "studyReviewLeft": "{n} da ripassare"
+    "studyReviewLeft": "{n} da ripassare",
+    "studyRandom": "Casuale"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5204,7 +5209,8 @@
     "readingToggle": "Leitura",
     "studyReview": "Revisão",
     "studyReviewNone": "Nada para revisar agora",
-    "studyReviewLeft": "{n} para revisar"
+    "studyReviewLeft": "{n} para revisar",
+    "studyRandom": "Aleatório"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6232,7 +6238,8 @@
     "readingToggle": "Чтение",
     "studyReview": "Повторение",
     "studyReviewNone": "Сейчас нечего повторять",
-    "studyReviewLeft": "Повторить: {n}"
+    "studyReviewLeft": "Повторить: {n}",
+    "studyRandom": "Случайно"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7070,7 +7077,8 @@
     "readingToggle": "Cara baca",
     "studyReview": "Ulangi",
     "studyReviewNone": "Belum ada yang perlu diulang",
-    "studyReviewLeft": "{n} untuk diulang"
+    "studyReviewLeft": "{n} untuk diulang",
+    "studyRandom": "Acak"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7901,7 +7909,8 @@
     "readingToggle": "طريقة القراءة",
     "studyReview": "مراجعة",
     "studyReviewNone": "لا شيء للمراجعة الآن",
-    "studyReviewLeft": "للمراجعة: {n}"
+    "studyReviewLeft": "للمراجعة: {n}",
+    "studyRandom": "عشوائي"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8732,7 +8741,8 @@
     "readingToggle": "คำอ่าน",
     "studyReview": "ทบทวน",
     "studyReviewNone": "ตอนนี้ยังไม่มีอะไรต้องทบทวน",
-    "studyReviewLeft": "ต้องทบทวน {n}"
+    "studyReviewLeft": "ต้องทบทวน {n}",
+    "studyRandom": "สุ่ม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9563,6 +9573,7 @@
     "readingToggle": "उच्चारण",
     "studyReview": "दोहराएँ",
     "studyReviewNone": "अभी दोहराने को कुछ नहीं",
-    "studyReviewLeft": "दोहराने को {n}"
+    "studyReviewLeft": "दोहराने को {n}",
+    "studyRandom": "रैंडम"
   }
 }
