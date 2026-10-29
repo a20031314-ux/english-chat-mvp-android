@@ -1,9 +1,11 @@
 /**
  * 뼈대 밖에서 막힌 것(2026-10-29 사용자 "뼈대 외의 단어·문법·구문은 사용자가 뭘 모르는지 파악하고 학습하게" → "시작해줘").
  *
- * 신호 둘부터:
+ * 신호(2026-10-29 "진행해줘"로 넷 — 흩어진 신호 연결):
  *  - 튜터가 고친 줄(노트 카드, 이미 계정에 저장됨): 고친 줄에 새로 들어간 말(낱말 차이) = 몰랐던 말.
  *  - "표현 보기"(채팅에서 편한 말로 쓰고 연 표현 카드): 그 표현 = 말하고 싶었는데 몰랐던 말. 내가 쓴 줄은 이 폰에만(학습자 문장은 서버에 안 둠).
+ *  - 낱말을 눌러 뜻을 봄(채팅·영상 자막·문장분석 어디서나, VocabPreviewProvider): 그 낱말 — 문장은 예문(없으면 그 줄), 이 폰에만.
+ *  - 통화 돌아보기에서 고친 문장을 펼침(RoleplayReview): 고친 줄에 새로 들어간 말, 이 폰에만.
  * 그 말이 뼈대 표현(e|)이면 그 열쇠로, 아니면 u|말 — 지속 학습(계속 공부·오늘 할 것 채우기)이 퀴즈로 던지고,
  * 다른 날 세 번 맞히면 이미 앎(curriculum/known.ts). 숙지·그래프(뼈대 진척)에는 넣지 않는다(PRODUCT 핵심 가치 9).
  * 순수 + 이 폰 저장(localStorage) 둘.
@@ -20,7 +22,7 @@ export type GapItem = {
   sample: string;
   /** 문장의 뜻(앱 언어) — 내가 편한 말로 쓴 줄(이 폰에만). 없으면 말하기 문제 대신 고르기·맞추기. */
   meaning?: string;
-  from: "fix" | "howToSay";
+  from: "fix" | "howToSay" | "lookup";
   at: number;
   /** 고친 줄이면 틀린 줄 고르기 문제용. */
   card?: QuizCard;
@@ -113,13 +115,7 @@ export function rememberHowToSay(language: string, input: { expression: string; 
   const expression = clean(input.expression);
   const example = clean(input.example ?? "");
   const sample = example && example.includes(expression) ? example : expression;
-  const gap: GapItem = { key, text: expression, sample, meaning: clean(input.mine).slice(0, 200), from: "howToSay", at: input.at ?? Date.now() };
-  try {
-    const list = readLocalGaps(language).filter((one) => one.key !== key);
-    localStorage.setItem(`${LOCAL_KEY}.${language}`, JSON.stringify([gap, ...list].slice(0, GAP_MAX)));
-  } catch {
-    // 남기지 못하면 이번엔 건너뜀.
-  }
+  saveLocal(language, { key, text: expression, sample, meaning: clean(input.mine).slice(0, 200), from: "howToSay", at: input.at ?? Date.now() });
 }
 
 /** 두 곳을 합쳐 최근 것부터(같은 열쇠는 하나). */
@@ -127,4 +123,32 @@ export function mergeGaps(...lists: readonly (readonly GapItem[])[]): GapItem[] 
   const out = new Map<string, GapItem>();
   for (const gap of lists.flat().sort((a, b) => b.at - a.at)) if (!out.has(gap.key)) out.set(gap.key, gap);
   return [...out.values()].slice(0, GAP_MAX);
+}
+
+function saveLocal(language: string, gap: GapItem): void {
+  try {
+    const list = readLocalGaps(language).filter((one) => one.key !== gap.key);
+    localStorage.setItem(`${LOCAL_KEY}.${language}`, JSON.stringify([gap, ...list].slice(0, GAP_MAX)));
+  } catch {
+    // 남기지 못하면 이번엔 건너뜀.
+  }
+}
+
+/** 낱말을 눌러 뜻을 봤을 때: 그 낱말을 막힌 것으로(문장은 예문 → 그 낱말이 든 줄, 없으면 남기지 않음 — 퀴즈 재료가 없어서). */
+export function rememberLookup(language: string, input: { word: string; example?: string; context?: string; at?: number }): void {
+  const word = clean(input.word);
+  const key = gapKey(language, word);
+  if (!key) return;
+  const has = (line: string) => line.toLocaleLowerCase().includes(word.toLocaleLowerCase());
+  const sample = [clean(input.example ?? ""), clean(input.context ?? "")].find((line) => line && line !== word && has(line) && line.length <= 200);
+  if (!sample) return;
+  // 문장 속 그 낱말의 실제 모양(대소문자)으로 — 빈칸 문제가 그 글자를 찾는다.
+  const at = sample.toLocaleLowerCase().indexOf(word.toLocaleLowerCase());
+  saveLocal(language, { key, text: sample.slice(at, at + word.length), sample, from: "lookup", at: input.at ?? Date.now() });
+}
+
+/** 고친 줄을 펼쳐 봤을 때(통화 돌아보기 등): 노트 카드와 같은 셈으로, 이 폰에만. */
+export function rememberFix(language: string, input: { wrong: string; right: string; note?: string; at?: number }): void {
+  const [gap] = gapsFromCards(language, [{ wrong: input.wrong, right: input.right, note: input.note ?? "", at: input.at ?? Date.now() }]);
+  if (gap) saveLocal(language, gap);
 }

@@ -18,7 +18,9 @@ import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
-import { skippedIds } from "@/lib/curriculum/known";
+import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
+import { skeletonTotals, toNextStage } from "@/lib/notes/skeletonTotals";
+import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import type { CheckResult } from "@/lib/curriculum/checkup";
@@ -385,7 +387,14 @@ export function NotebookSection({
         <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
       ) : null}
       {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
-        <ProgressLine ui={ui} row={(book.parts ?? []).find((row) => row.order === book.stage) ?? null} stage={book.stage} />
+        <SkeletonProgress
+          ui={ui}
+          language={language}
+          stage={book.stage}
+          row={(book.parts ?? []).find((row) => row.order === book.stage) ?? null}
+          known={known}
+          passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+        />
       ) : null}
       {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <TodayPlan
@@ -1839,22 +1848,39 @@ function StageTestGate({
  * My 맨 위 한 줄(2026-10-29 사용자 "정해진 학습으로 뼈대 → 지속 학습으로 채우고 → AI·사용자 간 학습으로 적용"):
  * 지금 단계와 다음 단계까지의 몫(잰 갈래 평균, My 안 재료만 — notes/myParts.ts) + 네 갈래 막대.
  */
-function ProgressLine({ ui, row, stage }: { ui: UICopy; row: StageParts | null; stage: number }) {
-  if (!row) return null;
-  const measured = row.parts.filter((part) => part.measured);
-  const share = measured.length ? measured.reduce((sum, part) => sum + shareOf(part), 0) / measured.length : 0;
+/**
+ * My 맨 위(2026-10-29 사용자 "정해진 데이터 중 얼마나 학습했다" → "진행해줘", lib/notes/skeletonTotals.ts):
+ * 지금 단계 · 다음 단계까지 n개, 그 아래 갈래마다 이미 앎 / 그 언어 뼈대 전체(배우는 중은 옅게), 뼈대 밖은 한 줄.
+ */
+function SkeletonProgress({ ui, language, stage, row, known, passed }: { ui: UICopy; language: string; stage: number; row: StageParts | null; known: KnownMap; passed: readonly string[] }) {
+  const passedKey = passed.join("|");
+  const totals = useMemo(() => skeletonTotals(language, { known, passed: new Set(passedKey.split("|")) }), [language, known, passedKey]);
+  const left = row ? toNextStage(row.parts, STAGE_DONE_SHARE) : 0;
+  const label = partLabels(ui);
   return (
-    <div data-my-progress className="mt-3 flex items-center gap-3 px-1">
-      <span className="shrink-0 text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>
-      <span className="shrink-0 text-note tabular-nums text-status-learned">{Math.round(share * 100)}%</span>
-      <span className="flex min-w-0 flex-1 gap-1">
-        {measured.map((part) => (
-          <span key={part.id} className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
-            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.round(shareOf(part) * 100)}%` }} />
+    <div data-my-progress className="mt-3 flex flex-col gap-1.5 px-1">
+      <p className="flex items-baseline gap-2">
+        <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>
+        {left > 0 ? <span className="text-meta tabular-nums text-slate-400">{ui.toNextStage.replace("{n}", String(left))}</span> : null}
+      </p>
+      {totals.parts.map((part) => (
+        <div key={part.id} data-total-part={part.id} className="flex items-center gap-2">
+          <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label[part.id]}</span>
+          <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">
+            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned/35" style={{ width: `${Math.round(((part.known + part.learning) / part.total) * 100)}%` }} />
+            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.round((part.known / part.total) * 100)}%` }} />
           </span>
-        ))}
-      </span>
+          <span className="shrink-0 text-caption tabular-nums text-ink">
+            {part.known} / {part.total}
+          </span>
+          {part.learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(part.learning))}</span> : null}
+        </div>
+      ))}
+      {totals.outside.known + totals.outside.learning > 0 ? (
+        <p className="text-meta tabular-nums text-slate-500">{ui.totalsOutside.replace("{n}", String(totals.outside.known + totals.outside.learning))}</p>
+      ) : null}
     </div>
   );
 }
+
 

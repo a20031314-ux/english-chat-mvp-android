@@ -5,6 +5,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { LedgerLinks } from "@/components/LedgerLinks";
 import { CorrectionChip, LineTools } from "@/components/conversation/LineTools";
 import { readCorrectionView } from "@/lib/correctionView";
+import { rememberFix } from "@/lib/curriculum/gaps";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
@@ -69,6 +70,10 @@ export function RoleplayLine({
   // 고친 문장은 채팅과 같은 설정(눌러서 보기 / 바로 보기, lib/correctionView.ts)을 따른다.
   const [fixOpen, setFixOpen] = useState(() => readCorrectionView() === "auto");
   const hasFix = Boolean(line.better || line.meant || line.about);
+  // Opening a correction of their own line marks what was added as a gap for the continuous study (curriculum/gaps.ts, this phone only).
+  useEffect(() => {
+    if (fixOpen && line.who === "learner" && line.better && ledgerLanguage) rememberFix(ledgerLanguage, { wrong: line.text, right: line.better, note: line.about ?? "" });
+  }, [fixOpen, line.who, line.better, line.text, line.about, ledgerLanguage]);
   const tapLine = () => {
     setToolsOpen((open) => !open);
     if (line.who === "tutor" && !translationShown) {

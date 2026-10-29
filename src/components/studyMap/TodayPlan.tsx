@@ -29,7 +29,8 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
-import { confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
+import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
+import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -90,8 +91,11 @@ function saveQuizDone(day: string, keys: Set<string>) {
   }
 }
 
-type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix };
+type StudyFocus = "auto" | PartId;
+type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
+// 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
+const FOCUSES: readonly StudyFocus[] = ["auto", "vocab", "grammar", "expression", "pronunciation"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
 function readSettings(): Settings {
@@ -99,9 +103,10 @@ function readSettings(): Settings {
     const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null") as Partial<Settings> | null;
     const pace = PACES.includes(raw?.pace as Pace) ? (raw!.pace as Pace) : 10;
     const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
-    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix };
+    const focus = FOCUSES.includes(raw?.focus as StudyFocus) ? (raw!.focus as StudyFocus) : "auto";
+    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus };
   } catch {
-    return { pace: 10, order: "curriculum", mix: "auto" };
+    return { pace: 10, order: "curriculum", mix: "auto", focus: "auto" };
   }
 }
 
@@ -164,8 +169,11 @@ export function TodayPlan({
   useStageGlosses(language, stage, locale);
   useStageGlosses(language, Math.min(5, stage + 1), locale);
   const { isPremium } = usePremium();
-  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto" });
+  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
+  const studyFocus: PartId | null = settings.focus === "auto" ? null : settings.focus;
+  // 오늘 계속 공부로 는 것(curriculum/studyTally.ts, 이 폰).
+  const [tally, setTally] = useState<Tally>({ day: "", known: [], fixed: [] });
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [now, setNow] = useState(0);
   // 오늘 배운 것에서 누른 칩 — 위 목록에서 그게 나온 대본·문장구조를 표시한다.
@@ -251,6 +259,9 @@ export function TodayPlan({
   const gapKeys = gaps.filter((gap) => knownState(known, gap.key) !== "known").map((gap) => gap.key);
   const day = now ? localDay(new Date(now)) : "";
   useEffect(() => {
+    if (day) setTally(readTally(language, day));
+  }, [language, day]);
+  useEffect(() => {
     if (day) setQuizDone(readQuizDone(day));
   }, [day]);
   const redoKey = redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|");
@@ -319,6 +330,12 @@ export function TodayPlan({
           ? false
           : passedSet.has(item.id) || practiced.has(item.id);
   const finishQuiz = (item: PlanItem, passedQuiz: boolean) => {
+    // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
+    if (passedQuiz && log[item.id] && !log[item.id]!.last) {
+      const next = addTally(tally, { fixed: item.id });
+      setTally(next);
+      saveTally(language, next);
+    }
     const logged = recordQuiz(log, item.id, passedQuiz);
     setLog(logged);
     saveQuizLog(language, logged);
@@ -336,7 +353,16 @@ export function TodayPlan({
       .then((response) => (response.ok ? response.json() : null))
       .then((body: { review?: ReviewMap; known?: unknown } | null) => {
         if (body?.review) announceReview(language, body.review);
-        if (body?.known) announceKnown(language, body.known);
+        if (body?.known) {
+          announceKnown(language, body.known);
+          if (knownState(cleanKnown(body.known), item.id) === "known" && knownState(known, item.id) !== "known") {
+            setTally((current) => {
+              const next = addTally(current, { known: item.id });
+              saveTally(language, next);
+              return next;
+            });
+          }
+        }
       })
       .catch(() => undefined);
   };
@@ -374,6 +400,7 @@ export function TodayPlan({
     skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
     confirm,
     gaps: gapKeys,
+    focus: studyFocus,
     now,
   });
   const upNext = queue[0] ?? null;
@@ -445,7 +472,7 @@ export function TodayPlan({
         data-test-continue
         onClick={() => {
           setCheckupOpen(null);
-          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, now: Date.now() })[0] ?? null);
+          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, focus: studyFocus, now: Date.now() })[0] ?? null);
         }}
         className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
       >
@@ -622,6 +649,20 @@ export function TodayPlan({
       {checkupOpen === "record" ? (
         <SkillRecord ui={ui} locale={locale} checkups={checkups} labelOf={(key) => keyLabel(language, key, grammarName)} onClose={() => setCheckupOpen(null)} />
       ) : null}
+      {/* Continuous-study part (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. */}
+      <div role="group" data-study-focus className="mt-3 flex flex-wrap gap-1.5">
+        {FOCUSES.map((focus) => (
+          <button
+            key={focus}
+            type="button"
+            aria-pressed={settings.focus === focus}
+            onClick={() => save({ ...settings, focus })}
+            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+          >
+            {focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
+          </button>
+        ))}
+      </div>
       {testNext || upNext ? (
         <button
           type="button"
@@ -650,6 +691,11 @@ export function TodayPlan({
             </span>
           </span>
         </button>
+      ) : null}
+      {tally.known.length || tally.fixed.length ? (
+        <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
+          {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
+        </p>
       ) : null}
       {checkups.length ? (
         <button
@@ -703,10 +749,10 @@ export function TodayPlan({
           card={quiz.card}
           seed={studying ? `${day}-${round}` : day}
           round={log[quiz.id]?.n ?? 0}
-          mix={settings.mix}
+          mix={studying && studyFocus === "pronunciation" ? "listen" : settings.mix}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, now: Date.now() })[0] ?? null)}
+          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, focus: studyFocus, now: Date.now() })[0] ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then

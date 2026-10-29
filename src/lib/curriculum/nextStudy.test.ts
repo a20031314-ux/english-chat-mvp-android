@@ -72,3 +72,16 @@ test("기록은 400개까지, 오래된 것부터 버림", () => {
   assert.equal(Object.keys(log).length, 400);
   assert.ok(!log["e|w0"] && log["e|w404"]);
 });
+
+test("계속 공부 갈래 고르기: 그 갈래 열쇠만, 지금 단계 것이 떨어져도 뒤 단계까지(태국어·이탈리아어)", async () => {
+  const { nextStudy, keyPart } = await import("./nextStudy.ts");
+  for (const language of ["th", "it"]) {
+    for (const focus of ["vocab", "grammar", "expression"] as const) {
+      const picks = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, focus, now: 0 });
+      assert.ok(picks.length > 0, `${language} ${focus}`);
+      assert.ok(picks.every((pick) => keyPart(language, pick.key) === focus), `${language} ${focus}`);
+    }
+    const sound = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, focus: "pronunciation", now: 0 });
+    assert.ok(sound.every((pick) => keyPart(language, pick.key) !== "grammar"), `${language} 발음`);
+  }
+});

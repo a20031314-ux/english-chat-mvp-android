@@ -55,3 +55,20 @@ test("서버: 막힌 것은 퀴즈 정답이 확인 중을 처음 만든다(뼈�
   assert.ok(known["u|exhausted"]);
   assert.equal(known["e|thank you"], undefined);
 });
+
+test("찾아본 낱말·펼친 고친 줄도 막힌 것으로(이 폰) — 영어·일본어", async () => {
+  const store = new Map<string, string>();
+  (globalThis as { localStorage?: unknown }).localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v), removeItem: (k: string) => void store.delete(k) };
+  const { rememberLookup, rememberFix, readLocalGaps } = await import("./gaps.ts");
+  rememberLookup("en", { word: "reluctant", example: "She was Reluctant to leave." });
+  rememberLookup("en", { word: "nowhere", context: "hello" });
+  rememberFix("ja", { wrong: "駅に行きました。", right: "駅まで歩いて行きました。" });
+  const en = readLocalGaps("en");
+  assert.equal(en.length, 1, "예문에 없는 낱말은 안 남김");
+  assert.equal(en[0]!.from, "lookup");
+  assert.equal(en[0]!.text, "Reluctant", "문장 속 모양 그대로");
+  const ja = readLocalGaps("ja");
+  assert.equal(ja.length, 1);
+  assert.ok(ja[0]!.sample.includes(ja[0]!.text));
+  delete (globalThis as { localStorage?: unknown }).localStorage;
+});

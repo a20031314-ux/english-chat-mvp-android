@@ -791,7 +791,12 @@
     "planMixAuto": "おまかせ",
     "planMixSpeak": "話す",
     "planMixListen": "聞く",
-    "planMixRead": "読む"
+    "planMixRead": "読む",
+    "studyTallyKnown": "今日 +{n} 覚えた",
+    "studyTallyFixed": "{n} 直せた",
+    "totalsLearning": "学習中 {n}",
+    "totalsOutside": "リスト外 +{n}",
+    "toNextStage": "次の段階まで {n}"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1585,7 +1590,12 @@
     "planMixAuto": "帮我搭配",
     "planMixSpeak": "说",
     "planMixListen": "听",
-    "planMixRead": "读"
+    "planMixRead": "读",
+    "studyTallyKnown": "今天 +{n} 已掌握",
+    "studyTallyFixed": "{n} 已改正",
+    "totalsLearning": "学习中 {n}",
+    "totalsOutside": "列表外 +{n}",
+    "toNextStage": "距下一阶段 {n} 个"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2382,7 +2392,12 @@
     "planMixAuto": "Tự phối hợp",
     "planMixSpeak": "Nói",
     "planMixListen": "Nghe",
-    "planMixRead": "Đọc"
+    "planMixRead": "Đọc",
+    "studyTallyKnown": "Hôm nay +{n} đã biết",
+    "studyTallyFixed": "{n} đã sửa",
+    "totalsLearning": "đang học {n}",
+    "totalsOutside": "ngoài danh sách +{n}",
+    "toNextStage": "còn {n} đến giai đoạn sau"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3184,7 +3199,12 @@
     "planMixAuto": "Mélange pour moi",
     "planMixSpeak": "Parler",
     "planMixListen": "Écouter",
-    "planMixRead": "Lire"
+    "planMixRead": "Lire",
+    "studyTallyKnown": "Aujourd'hui +{n} acquis",
+    "studyTallyFixed": "{n} corrigés",
+    "totalsLearning": "en cours {n}",
+    "totalsOutside": "hors liste +{n}",
+    "toNextStage": "{n} avant l’étape suivante"
   },
   "it": {
     "archive": "Report",
@@ -4177,7 +4197,12 @@
     "planMixAuto": "Mescola tu",
     "planMixSpeak": "Parlare",
     "planMixListen": "Ascoltare",
-    "planMixRead": "Leggere"
+    "planMixRead": "Leggere",
+    "studyTallyKnown": "Oggi +{n} imparate",
+    "studyTallyFixed": "{n} corrette",
+    "totalsLearning": "in corso {n}",
+    "totalsOutside": "fuori elenco +{n}",
+    "toNextStage": "{n} alla prossima fase"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4982,7 +5007,12 @@
     "planMixAuto": "Misture para mim",
     "planMixSpeak": "Falar",
     "planMixListen": "Ouvir",
-    "planMixRead": "Ler"
+    "planMixRead": "Ler",
+    "studyTallyKnown": "Hoje +{n} aprendidas",
+    "studyTallyFixed": "{n} corrigidas",
+    "totalsLearning": "aprendendo {n}",
+    "totalsOutside": "fora da lista +{n}",
+    "toNextStage": "{n} para a próxima etapa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5973,7 +6003,12 @@
     "planMixAuto": "Подбери сам",
     "planMixSpeak": "Говорить",
     "planMixListen": "Слушать",
-    "planMixRead": "Читать"
+    "planMixRead": "Читать",
+    "studyTallyKnown": "Сегодня +{n} выучено",
+    "studyTallyFixed": "исправлено {n}",
+    "totalsLearning": "учу {n}",
+    "totalsOutside": "вне списка +{n}",
+    "toNextStage": "до следующего этапа {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6774,7 +6809,12 @@
     "planMixAuto": "Campurkan untukku",
     "planMixSpeak": "Bicara",
     "planMixListen": "Dengar",
-    "planMixRead": "Baca"
+    "planMixRead": "Baca",
+    "studyTallyKnown": "Hari ini +{n} dikuasai",
+    "studyTallyFixed": "{n} diperbaiki",
+    "totalsLearning": "sedang dipelajari {n}",
+    "totalsOutside": "di luar daftar +{n}",
+    "toNextStage": "{n} lagi ke tahap berikutnya"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7568,7 +7608,12 @@
     "planMixAuto": "اخلط لي",
     "planMixSpeak": "تحدّث",
     "planMixListen": "استماع",
-    "planMixRead": "قراءة"
+    "planMixRead": "قراءة",
+    "studyTallyKnown": "اليوم +{n} أتقنتها",
+    "studyTallyFixed": "صحّحت {n}",
+    "totalsLearning": "قيد التعلّم {n}",
+    "totalsOutside": "خارج القائمة +{n}",
+    "toNextStage": "{n} حتى المرحلة التالية"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8362,7 +8407,12 @@
     "planMixAuto": "จัดให้เลย",
     "planMixSpeak": "พูด",
     "planMixListen": "ฟัง",
-    "planMixRead": "อ่าน"
+    "planMixRead": "อ่าน",
+    "studyTallyKnown": "วันนี้ +{n} รู้แล้ว",
+    "studyTallyFixed": "แก้ถูก {n}",
+    "totalsLearning": "กำลังเรียน {n}",
+    "totalsOutside": "นอกรายการ +{n}",
+    "toNextStage": "อีก {n} ถึงขั้นถัดไป"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9156,6 +9206,11 @@
     "planMixAuto": "मेरे लिए मिलाएँ",
     "planMixSpeak": "बोलना",
     "planMixListen": "सुनना",
-    "planMixRead": "पढ़ना"
+    "planMixRead": "पढ़ना",
+    "studyTallyKnown": "आज +{n} सीखे",
+    "studyTallyFixed": "{n} सुधारे",
+    "totalsLearning": "सीख रहे हैं {n}",
+    "totalsOutside": "सूची से बाहर +{n}",
+    "toNextStage": "अगले चरण तक {n}"
   }
 }

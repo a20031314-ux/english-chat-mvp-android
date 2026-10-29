@@ -19,6 +19,7 @@ import {
   type VocabularyEntry,
 } from "@/lib/vocabulary";
 import { isPronounceableAlphabetLetter } from "@/lib/letterPronunciation";
+import { rememberLookup } from "@/lib/curriculum/gaps";
 
 export function VocabPreviewProvider({
   locale,
@@ -115,6 +116,8 @@ export function VocabPreviewProvider({
           setPreviewDetail({ word: head, gloss: "" });
           return;
         }
+        // Looking a word up says it was not known: the continuous study picks it up as a gap (curriculum/gaps.ts, this phone only).
+        rememberLookup(targetLanguage, { word: head, example: item?.example, context: contextSentence });
         setPreviewDetail({
           word: head,
           gloss,
