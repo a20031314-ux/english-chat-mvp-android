@@ -1,6 +1,7 @@
 "use client";
 
 import { voiceCallAvailable } from "@/lib/platform";
+import { needsLetters, saveLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
@@ -646,6 +647,24 @@ function StageStart({
           }}
           onClose={() => setMode(startStage ? "pick" : "choose")}
         />
+      ) : null}
+      {/* Stage 0 — letters and sounds (2026-10-29), only where the learning language uses another script. */}
+      {needsLetters(targetLanguage) ? (
+        <button
+          type="button"
+          data-letters-first
+          disabled={saving}
+          onClick={() => {
+            saveLettersFirst(targetLanguage, true);
+            void start(firstStage);
+          }}
+          className="flex items-center justify-between gap-2 rounded-xl border border-line px-4 py-3 text-start text-note text-slate-100 hover:bg-white/5 disabled:opacity-40"
+        >
+          <span>
+            {ui.stageNumber.replace("{n}", "0")} · {ui.scriptEntry}
+          </span>
+          <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
+        </button>
       ) : null}
       <StagePicker
         ui={ui}

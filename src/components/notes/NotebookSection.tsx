@@ -21,6 +21,8 @@ import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
 import { skeletonTotals, skeletonView, toNextStage } from "@/lib/notes/skeletonTotals";
 import { frontierStage, useStudyMode, type StudyMode } from "@/lib/curriculum/studyMode";
+import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
+import { LettersPlan, ScriptEntry } from "@/components/studyMap/ScriptPractice";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
@@ -186,6 +188,7 @@ export function NotebookSection({
   const setStageTo = (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
     if (!id) return;
+    setLetters(false);
     void fetch(apiUrl("/api/learner/self-check"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
@@ -199,6 +202,9 @@ export function NotebookSection({
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   // 단계대로 | 자유롭게(curriculum/studyMode.ts): 자유롭게면 가장 낮은 열린 단계를 기준으로, 단계 시험·조건 없음.
   const [studyMode, setStudyMode] = useStudyMode(language);
+  // 0단계 — 글자·소리(curriculum/lettersFirst.ts): 글자가 다른 학습 언어에서 고르면 일일 학습 자리에 글자 묶음.
+  const [lettersFlag, setLetters] = useLettersFirst(language);
+  const lettersOn = lettersFlag && needsLetters(language);
   const skipped = useMemo(() => skippedIds(language, known), [language, known]);
   useItemStats(language);
   const loaded = Boolean(book);
@@ -406,15 +412,18 @@ export function NotebookSection({
         <SkeletonProgress
           ui={ui}
           language={language}
-          stage={book.stage}
+          stage={lettersOn ? 0 : book.stage}
           free={studyMode === "free"}
           onMode={setStudyMode}
-          row={(book.parts ?? []).find((row) => row.order === book.stage) ?? null}
+          row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
           known={known}
           passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
         />
       ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
+      {frame && CURRICULUM_ONLY && lettersOn ? (
+        <LettersPlan ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={() => setLetters(false)} />
+      ) : null}
+      {!lettersOn && frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <TodayPlan
           ui={ui}
           locale={locale}
@@ -500,6 +509,11 @@ export function NotebookSection({
           onNextStage={onNextStage && studyMode !== "free" ? (order) => setStageTestFor(order) : undefined}
           free={studyMode === "free"}
           onSetStage={setStageTo}
+          letters={
+            needsLetters(language)
+              ? { on: lettersOn, panel: <ScriptEntry ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} />, onPick: () => setLetters(true) }
+              : undefined
+          }
           canSpeak={canSpeak}
           focusPart={focusPart}
           jump={jump}
@@ -890,6 +904,7 @@ function StageFrame({
   jump = null,
   free = false,
   onSetStage,
+  letters,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -922,8 +937,11 @@ function StageFrame({
   free?: boolean;
   /** 보고 있는 단계를 지금 단계로(조건·시험 없이). */
   onSetStage?: (order: number) => void;
+  /** 0단계 — 글자·소리(글자가 다른 학습 언어만): 사다리 맨 앞 0, 그 칸의 연습, 고르기. */
+  letters?: { on: boolean; panel: ReactNode; onPick: () => void };
 }) {
-  const now = Math.max(1, Math.min(current, stages.length));
+  const now = letters?.on ? 0 : Math.max(1, Math.min(current, stages.length));
+  const ladder = letters ? [{ order: 0, title: "" }, ...stages] : stages;
   const [shown, setShown] = useState(focus ?? now);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- 밖에서 고른 단계(찾기)로 옮겨 간다
@@ -1004,7 +1022,7 @@ function StageFrame({
   return (
     <div className="mt-3">
       <ol className="flex items-center">
-        {stages.map((stage, index) => {
+        {ladder.map((stage, index) => {
           const done = stage.order < now;
           const here = stage.order === now;
           const on = stage.order === shown;
@@ -1035,18 +1053,18 @@ function StageFrame({
       {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
       <div className="mt-3 flex items-center gap-2">
         <p className={`min-w-0 flex-1 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
-        {shown !== now && onSetStage && !free ? (
+        {shown !== now && (onSetStage || letters) && !free ? (
           <button
             type="button"
             data-set-stage
-            onClick={() => onSetStage(shown)}
+            onClick={() => (shown === 0 ? letters?.onPick() : onSetStage?.(shown))}
             className="shrink-0 rounded-full border border-line px-3 py-1 text-caption text-slate-200 hover:bg-white/10"
           >
             {ui.setStageHere}
           </button>
         ) : null}
       </div>
-      {scripts?.(shown, stageParts, openScript)}
+      {shown === 0 && letters ? <div className="mt-2">{letters.panel}</div> : scripts?.(shown, stageParts, openScript)}
 
       {stageParts ? (
         <>
