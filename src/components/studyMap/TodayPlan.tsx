@@ -678,7 +678,7 @@ export function TodayPlan({
       {learned}
       {/* Pace, order, mix and the morning reminder fold away (2026-10-30, user: one big level on screen, the rest beneath it). */}
       <details data-plan-settings className="mt-3">
-        <summary className="cursor-pointer list-none text-caption text-slate-400">⚙ {ui.planSettings}</summary>
+        <summary aria-label={ui.planSettings} title={ui.planSettings} className="inline-flex h-8 w-8 cursor-pointer list-none items-center justify-center rounded-full border border-line text-caption text-slate-300 hover:bg-white/10">⚙</summary>
         <div role="group" className="mt-2 flex flex-wrap gap-1.5">
         {PACES.map((pace) => {
           const days = daysLeft(language, pace, planPassed, stage);

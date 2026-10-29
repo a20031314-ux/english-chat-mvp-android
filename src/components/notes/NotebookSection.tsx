@@ -527,20 +527,6 @@ export function NotebookSection({
             summary: studyMode === "free" ? ui.modeFree : stageLeft > 0 ? ui.toNextStage.replace("{n}", String(stageLeft)) : null,
             body: (
               <>
-                {book.parts?.some((row) => row.scripts) ? (
-                  <SkeletonProgress
-                    ui={ui}
-                    language={language}
-                    stage={lettersOn ? 0 : book.stage}
-                    free={studyMode === "free"}
-                    onMode={setStudyMode}
-                    row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
-                    known={known}
-                    passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
-                    views={partsView}
-                    extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
-                  />
-                ) : null}
         <StageFrame
                   ui={ui}
                   stages={book.stages}
@@ -570,6 +556,20 @@ export function NotebookSection({
                   focusPart={focusPart}
                   jump={jump}
                   onJumped={() => setJump(null)}
+          headExtra={book.parts?.some((row) => row.scripts) ? (
+            <SkeletonProgress
+                    ui={ui}
+                    language={language}
+                    stage={lettersOn ? 0 : book.stage}
+                    free={studyMode === "free"}
+                    onMode={setStudyMode}
+                    row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
+                    known={known}
+                    passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+                    views={partsView}
+                    extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
+                  />
+          ) : null}
                   scripts={(order, row, openFor) => (
                     <StageScripts
                       ui={ui}
@@ -1024,6 +1024,7 @@ function StageFrame({
   scriptFor,
   jump = null,
   onJumped,
+  headExtra,
   free = false,
   onSetStage,
   letters,
@@ -1057,6 +1058,8 @@ function StageFrame({
   jump?: { stage: number; id: string; at: number } | null;
   /** 연 뒤 밖의 jump를 비운다 — 칸을 접었다 펴면(다시 그려지면) 같은 대본이 또 열리던 것(2026-10-30 사용자 화면). */
   onJumped?: () => void;
+  /** 단계 이름 줄 끝에 붙는 것(내 진척 아이콘). */
+  headExtra?: ReactNode;
   /** 자유롭게(curriculum/studyMode.ts): 다음 단계 조건을 안 보인다. */
   free?: boolean;
   /** 보고 있는 단계를 지금 단계로(조건·시험 없이). */
@@ -1190,6 +1193,7 @@ function StageFrame({
             {ui.setStageHere}
           </button>
         ) : null}
+        {headExtra}
       </div>
       {shown === 0 && letters ? <div className="mt-2">{letters.panel}</div> : scripts?.(shown, stageParts, openScript)}
 
@@ -2073,12 +2077,17 @@ function SkeletonProgress({
       <button
         type="button"
         data-my-progress-open
+        aria-label={ui.myProgressTitle}
+        title={ui.myProgressTitle}
         onClick={() => setOpen(true)}
-        className="flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-slate-300 hover:bg-white/10"
       >
-        <span aria-hidden className="shrink-0 text-caption">📊</span>
-        <span className="min-w-0 flex-1 truncate text-note text-ink">{ui.myProgressTitle}</span>
-        <span aria-hidden className="shrink-0 text-caption text-slate-500 rtl:rotate-180">›</span>
+        {/* Icon only, no label (2026-10-30, user: not every button needs a name). */}
+        <svg aria-hidden viewBox="0 0 16 16" className="h-4 w-4" fill="currentColor">
+          <rect x="2" y="9" width="3" height="5" rx="0.5" />
+          <rect x="6.5" y="5" width="3" height="9" rx="0.5" />
+          <rect x="11" y="2" width="3" height="12" rx="0.5" />
+        </svg>
       </button>
       {open ? (
         <BodyLayer>
