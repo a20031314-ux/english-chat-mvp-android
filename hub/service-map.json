@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-29 22:44",
- "commit": "62abad56",
+ "checkedAt": "2026-10-30 06:56",
+ "commit": "d8705400",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -75,8 +75,8 @@
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "13c27181cccf",
-   "shots": "53ad23a3e4bc",
+   "text": "84ab07d0306c",
+   "shots": "f050a009b5c2",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
@@ -173,6 +173,17 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-30 06:56",
+   "commit": "d8705400",
+   "changes": [
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    }
+   ]
+  },
   {
    "at": "2026-10-29 22:44",
    "commit": "62abad56",
