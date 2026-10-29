@@ -102,7 +102,13 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   `--only en,ko,ja,zh,es,hi` → `node store-shots/promo/make.mjs room <언어>` → `tmp/promo/room/<언어>/promo-room-<언어>.mp4`(자막 6개 언어는 make.mjs `COPY.room`).
   친구 초대 편: `promo-invite`(사람 탭 친구 초대 → 링크 복사 → 친구 화면 "Minji님이 초대했어요" → 팀 단체방 → 워크스페이스) → `make.mjs invite <언어>`.
   웹에는 휴대폰 공유 창이 없어 "초대 링크를 복사했어요"가 뜨는 웹 동작 그대로 찍힌다.
-- **스토어 7장 학습 흐름 세트 (지금 올리는 세트, 2.77~, 사용자 2026-10-29 "핵심기능, 학습흐름 중심")**: 오늘 할 것 → 대본으로 말하기 → 다시 보기(지난번에 틀린 것·퀴즈) → 채팅 → 통화 → 영상 → Room.
+- **스토어 학습 흐름 8장 (지금 올리는 세트, 2.78~, 사용자 2026-10-30 "기능 나열이 아니라 뭘 해야 할지·학습 흐름이 명확하게, 큰 줄기 → 세부는 뒤쪽")**:
+  1장 하루 흐름 한눈에(① 일일 학습 → ② 말하기 → ③ 지속 학습 → ④ 대화, 단계 이름은 앱 버튼 문구 그대로) → 2~5장 그 단계 하나씩(위에 단계 막대, 큰 화면 하나, 3장은 지속 학습 카드 위에 푼 문제) → 6~8장 세부(막히면 편한 말로·통화와 영상·사람과 함께, 화면 둘).
+  `npm run build:capacitor` 뒤 `CAPTURE_RUN=<새 이름> [CAPTURE_TARGET=<학습 언어>] node --experimental-strip-types scripts/capture-whats-new.mjs store-flow --only <UI 언어>`
+  (필요한 장면만: `CAPTURE_SHOTS=today-plan,keep-learning,keep-quiz,script-play,chat-correct,chat-fix-open,chat-expression,chat-ask,meant,video-study,groups,group-pick,freetalk,quote`)
+  → `node --experimental-strip-types store-shots/flow/compose.mjs`(`FLOW_ONLY=ko,ko-ja`로 일부만) → `store-shots/out/flow/<등록정보>/1~8-*.png`. 장면·자르는 위치·글은 `store-shots/flow/strings.mjs`.
+  6개 기본 언어는 PR로 `phoneScreenshots`(`01-overview` … `08-together`), 맞춤 등록정보 11개(나라·배우는 언어)는 Console에서 사람이 폴더째.
+- **스토어 7장 학습 흐름 세트 (2.77 세트, 위 8장으로 바뀜 — 2.77~, 사용자 2026-10-29 "핵심기능, 학습흐름 중심")**: 오늘 할 것 → 대본으로 말하기 → 다시 보기(지난번에 틀린 것·퀴즈) → 채팅 → 통화 → 영상 → Room.
   `npm run build:capacitor` 뒤 `CAPTURE_RUN=<새 이름> [CAPTURE_TARGET=<학습 언어>] node --experimental-strip-types scripts/capture-whats-new.mjs store-flow --only <UI 언어>`
   (이 모드는 `x-app-version`을 빼서 무료 테스트 사용자도 채팅이 됨) → `node store-shots/combo/compose.mjs`(`COMBO_ONLY=ko`로 하나만). 장면·문구는 `strings.mjs` `SHOTS`·`FLOW`.
   6개 기본 언어는 PR로 `phoneScreenshots`(`01-plan` … `07-room`), 맞춤 등록정보(국가·언어 조합)와 나머지 언어는 Console에서 사람이 올린다.

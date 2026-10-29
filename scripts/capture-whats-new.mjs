@@ -228,7 +228,7 @@ const GUIDE_VOCAB_ITEMS = [
 // vocabulary; three lines). Run each with its own CAPTURE_RUN.
 const STORE_MY = VERSION === "store-my";
 const STORE_TABS = VERSION === "store-tabs";
-// `store-flow`(2026-10-29 사용자 "핵심 기능, 학습 흐름 중심"): 스토어 7장에 쓰는 화면만 한 번에 —
+// `store-flow`(2026-10-29 사용자 "핵심 기능, 학습 흐름 중심", 2026-10-30 8장 store-shots/flow): 스토어에 쓰는 화면만 한 번에 —
 // 단계 고르기 → 오늘 할 것 → 대본 말하기(평가) → 틀린 것·퀴즈·오늘 배운 것 → 채팅·통화·영상·같이. 합성은 store-shots/combo.
 const STORE_FLOW = VERSION === "store-flow";
 const STORE = STORE_MY || STORE_TABS || STORE_FLOW;
@@ -247,13 +247,13 @@ const STORE_FLOW_ITEMS = [
   { shot: "stage-start" },
   { shot: "stage-next" },
   { shot: "today-plan" },
-  { shot: "quiz" },
-  { shot: "learned" },
-  { shot: "learned-where" },
   { shot: "weak-strip" },
   { shot: "stage-scripts" },
   { shot: "frames-list" },
   { shot: "script-play" },
+  // 2.78 지속 학습(2026-10-30 스토어 학습 흐름 세트): 카드 + 계속 공부 문제를 맞힌 모습. 퀴즈를 풀면 오늘 목록 맨 위가 바뀌어 대본 장면 뒤에.
+  { shot: "keep-learning" },
+  { shot: "keep-quiz" },
   { shot: "chat-correct" },
   { shot: "chat-fix-open" },
   { shot: "chat-expression" },
@@ -1462,6 +1462,9 @@ const STEPS = {
   async "script-play"({ page, ui, wait, target }) {
     // 스토어: 대본을 말한 모습 — ★ 완벽해요 / △ 더 자연스러운 말 / ✓ + 흐릿했던 낱말. 마이크 없이 "이어서 하기" 기록(폰에 남는 것)을 끼워 연다.
     const id = `${target}-1-1`;
+    // 앞 장면(today-plan 등)이 끼운 노트 응답(날짜 된 복습 = 목록 맨 위 퀴즈)을 걷어 내고 오늘 목록을 새로 — 맨 위가 1단계 첫 대본이게.
+    await page.unroute("**/api/notebook?*").catch(() => undefined);
+    await page.evaluate(() => localStorage.removeItem("dailyPlan.today.v1"));
     await page.evaluate(async ([t, scriptId]) => {
       const pack = await fetch(`/api/curriculum/scripts?pack=1&lang=${t}`).then((r) => r.json());
       const script = (pack.scripts ?? []).find((one) => one.id === scriptId);
@@ -1507,6 +1510,32 @@ const STEPS = {
     for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
     await wait(2500);
     await card.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await wait(1500);
+  },
+  async "keep-quiz"(ctx) {
+    // 스토어(2026-10-30): 지속 학습 ▶ 계속 공부 → 고르는 문제 하나를 맞힌 모습(✓ + 설명). 순서·말하기 문제면 다시 연다.
+    const { page, ui, wait } = ctx;
+    await STEPS["keep-learning"](ctx);
+    await page.evaluate(() => {
+      const original = window.setTimeout;
+      window.setTimeout = (fn, ms, ...rest) => original(fn, ms === 900 ? 600_000 : ms, ...rest);
+    });
+    const keep = page.locator("[data-keep-learning]").first();
+    const close = () => page.locator(`button[aria-label="${ui.billingClose}"]`).last().click({ timeout: 3000 }).catch(() => page.keyboard.press("Escape"));
+    for (let tries = 0; tries < 8; tries += 1) {
+      await keep.locator("[data-study-start]").first().click();
+      await wait(2500);
+      const kind = await page.locator("[data-quiz] section[data-kind]").first().getAttribute("data-kind").catch(() => null);
+      const options = page.locator("[data-quiz] section button.rounded-xl");
+      if (["choose", "meaning", "fix"].includes(kind ?? "") && (await options.count()) > 1) {
+        const n = await options.count();
+        await options.nth(tries % n).click();
+        await wait(1500);
+        if (await page.locator("[data-quiz] section").first().getByText(`✓ ${ui.quizRight}`).count()) break;
+      }
+      await close();
+      await wait(1000);
+    }
     await wait(1500);
   },
   async "my-progress"(ctx) {
