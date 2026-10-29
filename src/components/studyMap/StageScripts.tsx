@@ -170,10 +170,10 @@ export function StageScripts({
   const frames = framesFor(language, stage);
   const frameDone = frames.filter((frame) => passed.includes(frame.id)).length;
   const methods = [
-    { id: "situation" as const, label: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "", bubbles: situationBubbles(situations[0]) },
-    ...(extras.length ? [{ id: "expression" as const, label: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
-    ...(frames.length ? [{ id: "frame" as const, label: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
-  ];
+    { id: "situation" as const, name: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "", bubbles: situationBubbles(situations[0]) },
+    ...(extras.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
+    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
+  ].map((one, index) => ({ ...one, label: String(index + 1) }));
   const dot = (state: LedgerState | null | undefined) =>
     state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const row = (script: StageScript) => {

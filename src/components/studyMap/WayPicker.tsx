@@ -24,15 +24,19 @@ export type Bubble = {
   again?: boolean;
 };
 
-export type Way<T extends string> = { id: T; label: string; count?: string; bubbles: Bubble[] };
+/** label = 화면에 보이는 것(단계 방식은 번호만, 2026-10-30 사용자 "상황이라는 텍스트도 삭제하고 번호로"), name = 읽어 주는 이름. */
+export type Way<T extends string> = { id: T; label: string; name?: string; count?: string; bubbles: Bubble[] };
 
 /** 칠한 곳이 잘리지 않게: 긴 줄은 칠한 곳 앞뒤만 남긴다(…). */
 const AROUND = 12;
 function BubbleText({ bubble }: { bubble: Bubble }) {
   const at = bubble.mark ? bubble.text.indexOf(bubble.mark) : -1;
   if (at < 0 || !bubble.mark) return <>{bubble.text}</>;
-  const from = Math.max(0, at - AROUND);
-  const to = Math.min(bubble.text.length, at + bubble.mark.length + AROUND);
+  // 몇 글자만 잘려 나가면("…ast night") 자르지 않는다.
+  const cut = (n: number) => (n <= 4 ? 0 : n);
+  const from = cut(Math.max(0, at - AROUND));
+  const tail = bubble.text.length - (at + bubble.mark.length + AROUND);
+  const to = tail <= 4 ? bubble.text.length : at + bubble.mark.length + AROUND;
   return (
     <>
       {from > 0 ? "…" : ""}
@@ -94,7 +98,7 @@ export function WayPicker<T extends string>({
         type="button"
         {...{ [`data-${data}`]: "" }}
         aria-haspopup="dialog"
-        aria-label={`${ui.practiceWay}: ${current.label}`}
+        aria-label={`${ui.practiceWay}: ${current.name ?? current.label}`}
         onClick={() => setOpen(true)}
         className="flex items-center gap-2 self-start rounded-full border border-line px-3 py-1 text-caption text-ink hover:bg-white/10"
       >
@@ -126,6 +130,7 @@ export function WayPicker<T extends string>({
                     type="button"
                     aria-pressed={value === one.id}
                     data-way={one.id}
+                    aria-label={one.name ?? one.label}
                     onClick={() => {
                       onPick(one.id);
                       setOpen(false);
