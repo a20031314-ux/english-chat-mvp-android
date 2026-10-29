@@ -1,0 +1,4 @@
+• ‘Học liên tục’ trong My: chọn Ôn tập, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt để làm quiz ngắn kết hợp. Từ mới được lưu vào sổ từ, xem dạng biểu đồ hoặc mạng.
+• Ngôn ngữ có chữ viết khác bắt đầu ở giai đoạn 0 với chữ cái và âm, bật ‘Cách đọc’ để xem cách đọc từng câu.
+• Chọn giai đoạn bắt đầu qua hội thoại mẫu, rồi học ‘Theo giai đoạn’ hoặc ‘Tự do’.
+• ‘Bài học hằng ngày’ đặt lượng học mỗi ngày; chỗ sai sẽ quay lại thành quiz.

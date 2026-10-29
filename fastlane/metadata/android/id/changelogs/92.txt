@@ -1,0 +1,4 @@
+• ‘Latihan berkelanjutan’ di My: pilih Ulangi, Acak, Kosakata, Tata bahasa, atau Ungkapan untuk kuis singkat campuran. Kata baru masuk ke buku kata, tampil sebagai grafik atau jaring.
+• Bahasa dengan aksara lain mulai dari tahap 0 dengan huruf dan bunyi, dan ‘Cara baca’ menampilkan cara membaca tiap baris.
+• Pilih tahap awal lewat contoh percakapan, lalu belajar ‘Per tahap’ atau ‘Bebas’.
+• ‘Pelajaran harian’ menentukan porsi tiap hari; yang salah muncul lagi sebagai kuis.
