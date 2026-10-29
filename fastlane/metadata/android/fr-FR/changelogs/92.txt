@@ -1,0 +1,4 @@
+• ‘Pratique continue’ dans My : choisissez Révision, Aléatoire, Vocabulaire, Grammaire ou Expressions pour de courts quiz. Les nouveaux mots s’ajoutent à votre lexique (graphique ou toile).
+• Les langues à autre écriture commencent à l’étape 0 avec lettres et sons, et ‘Lecture’ montre comment se lit chaque ligne.
+• Choisissez l’étape de départ avec des conversations d’exemple, puis étudiez ‘Par étapes’ ou ‘Libre’.
+• La ‘Leçon du jour’ fixe la dose quotidienne ; vos erreurs reviennent en quiz.
