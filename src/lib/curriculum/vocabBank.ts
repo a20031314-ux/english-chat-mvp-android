@@ -7,7 +7,35 @@
  * 열쇠 w|낱말. 낱말 카드(예문·뜻)는 서버가 50개 묶음마다 한 번 만들어 모두가 같이 씀(/api/curriculum/words).
  * 이미 앎·확인 중은 다른 열쇠와 같은 규칙(curriculum/known.ts — 다른 날 세 번 맞힘). 순수 + 목록 불러오기.
  */
-export type BankWord = { w: string; pos: string; reading?: string };
+export type BankWord = { w: string; pos: string; reading?: string; topic?: string };
+
+/** 낱말 나누기(2026-10-29 사용자 "세 기준 다 채택하고 사용자가 품사 위주, 품사 안에선 명사 위주 이렇게 정하도록"). */
+export type VocabBy = "all" | "band" | "pos" | "topic";
+export type VocabPick = { by: VocabBy; value: string };
+export const BAND_SIZE = 500;
+export const POS_GROUPS = ["noun", "verb", "adj", "adv", "function"] as const;
+export const TOPICS = ["people", "food", "home", "work", "health", "travel", "shopping", "time", "feelings", "actions", "describing", "nature", "society", "function"] as const;
+
+/** 품사 묶음: 명사·동사·형용사·부사, 나머지(대명사·관사·전치사·접속사·수·감탄사)는 기능어. */
+export function posGroup(pos: string): (typeof POS_GROUPS)[number] {
+  return pos === "noun" || pos === "verb" || pos === "adj" || pos === "adv" ? pos : "function";
+}
+
+/** 그 낱말(목록 순위 index)이 고른 칸에 드는지. */
+export function inPick(word: BankWord, index: number, pick: VocabPick | null | undefined): boolean {
+  if (!pick || pick.by === "all") return true;
+  if (pick.by === "band") return String(Math.floor(index / BAND_SIZE)) === pick.value;
+  if (pick.by === "pos") return posGroup(word.pos) === pick.value;
+  return (word.topic ?? "") === pick.value;
+}
+
+/** 그 기준의 칸들(목록에 있는 것만, 정해진 순서). */
+export function groupsOf(list: readonly BankWord[], by: Exclude<VocabBy, "all">): string[] {
+  if (by === "band") return Array.from({ length: Math.ceil(list.length / BAND_SIZE) }, (_, i) => String(i));
+  const have = new Set(list.map((word) => (by === "pos" ? posGroup(word.pos) : (word.topic ?? ""))).filter(Boolean));
+  const order: readonly string[] = by === "pos" ? POS_GROUPS : TOPICS;
+  return order.filter((id) => have.has(id));
+}
 
 export const BANK_LANGS = ["en", "es", "ja"] as const;
 export const BANK_CHUNK = 50;
@@ -27,7 +55,11 @@ export const wordKey = (word: string) => `w|${word}`;
 const loaded = new Map<string, readonly BankWord[]>();
 
 function fromRows(rows: readonly (readonly string[])[], language: string): BankWord[] {
-  return rows.map((row) => (language === "ja" ? { w: row[0]!, reading: row[1], pos: row[2] ?? "" } : { w: row[0]!, pos: row[1] ?? "" }));
+  return rows.map((row) =>
+    language === "ja"
+      ? { w: row[0]!, reading: row[1], pos: row[2] ?? "", ...(row[3] ? { topic: row[3] } : {}) }
+      : { w: row[0]!, pos: row[1] ?? "", ...(row[2] ? { topic: row[2] } : {}) },
+  );
 }
 
 /** 그 언어의 목록(처음 한 번 불러옴). 없는 언어는 []. */

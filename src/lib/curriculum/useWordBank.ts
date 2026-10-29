@@ -7,7 +7,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
-import { BANK_CHUNK, hasBank, loadBank, peekBank, wordKey, type BankWord } from "@/lib/curriculum/vocabBank";
+import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { knownState, type KnownMap } from "@/lib/curriculum/known";
 import { registerQuizSources, type QuizSource } from "@/lib/curriculum/quiz";
 
@@ -34,7 +34,7 @@ export function wordGloss(language: string, word: string): string {
   return glossOf.get(`${language}|${word}`) ?? "";
 }
 
-export function useWordBank(language: string, ui: string, known: KnownMap) {
+export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null) {
   const [bank, setBank] = useState<readonly BankWord[] | null>(() => peekBank(language));
   const [ready, setReady] = useState<Set<string>>(new Set());
   useEffect(() => {
@@ -46,13 +46,29 @@ export function useWordBank(language: string, ui: string, known: KnownMap) {
     };
   }, [language]);
   const list = bank && bank.length && hasBank(language) ? bank : null;
-  // 아직 모르는(이미 앎·확인 중이 아닌) 첫 낱말의 묶음.
-  const firstOpen = useMemo(() => (list ? list.findIndex((word) => !known[wordKey(word.w)]) : -1), [list, known]);
-  const chunk = firstOpen < 0 ? -1 : Math.floor(firstOpen / BANK_CHUNK);
+  // 고른 칸(curriculum/vocabBank.ts inPick)에서 아직 모르는(이미 앎·확인 중이 아닌) 앞 낱말들이 든 묶음(셋까지).
+  const pickKey = pick ? `${pick.by}:${pick.value}` : "all:";
+  const chunks = useMemo(() => {
+    if (!list) return "";
+    const out: number[] = [];
+    let open = 0;
+    for (let index = 0; index < list.length && open < 12; index += 1) {
+      const word = list[index]!;
+      if (known[wordKey(word.w)] || !inPick(word, index, pick)) continue;
+      open += 1;
+      const c = Math.floor(index / BANK_CHUNK);
+      if (!out.includes(c)) out.push(c);
+      if (out.length >= 3) break;
+    }
+    if (out.length === 1 && (out[0]! + 1) * BANK_CHUNK < list.length && (!pick || pick.by === "all" || pick.by === "band")) out.push(out[0]! + 1);
+    return out.join(",");
+    // pickKey stands for pick.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list, known, pickKey]);
   useEffect(() => {
-    if (!list || chunk < 0) return;
+    if (!list || !chunks) return;
     let alive = true;
-    const want = [chunk, chunk + 1].filter((c) => c * BANK_CHUNK < list.length);
+    const want = chunks.split(",").map(Number);
     void Promise.all(
       want.map(async (c) => {
         const cached = readCached(language, ui, c);
@@ -75,12 +91,12 @@ export function useWordBank(language: string, ui: string, known: KnownMap) {
       const cards = groups.flat();
       registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card) })));
       for (const card of cards) glossOf.set(`${language}|${card.w}`, card.gloss);
-      setReady(new Set(cards.map((card) => wordKey(card.w))));
+      setReady((current) => new Set([...current, ...cards.map((card) => wordKey(card.w))]));
     });
     return () => {
       alive = false;
     };
-  }, [list, chunk, language, ui]);
+  }, [list, chunks, language, ui]);
   return useMemo(() => {
     if (!list) return null;
     let knownCount = 0;
@@ -91,9 +107,26 @@ export function useWordBank(language: string, ui: string, known: KnownMap) {
       else if (state === "checking") learning += 1;
     }
     const next = list
-      .map((word) => wordKey(word.w))
-      .filter((key) => !known[key] && ready.has(key))
+      .map((word, index) => ({ word, index, key: wordKey(word.w) }))
+      .filter(({ word, index, key }) => !known[key] && ready.has(key) && inPick(word, index, pick))
+      .map(({ key }) => key)
       .slice(0, NEXT_MAX);
-    return { total: list.length, known: knownCount, learning, next };
-  }, [list, known, ready]);
+    // 고른 기준의 칸마다 이미 앎 / 전체.
+    const by = pick?.by && pick.by !== "all" ? pick.by : null;
+    const groups = by
+      ? groupsOf(list, by).map((id) => {
+          let have = 0;
+          let total = 0;
+          list.forEach((word, index) => {
+            if (!inPick(word, index, { by, value: id })) return;
+            total += 1;
+            if (knownState(known, wordKey(word.w)) === "known") have += 1;
+          });
+          return { id, known: have, total };
+        })
+      : [];
+    return { total: list.length, known: knownCount, learning, next, groups };
+    // pickKey stands for pick.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list, known, ready, pickKey]);
 }

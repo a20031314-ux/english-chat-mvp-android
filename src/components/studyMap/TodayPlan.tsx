@@ -32,6 +32,7 @@ import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
+import { BAND_SIZE, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -93,7 +94,7 @@ function saveQuizDone(day: string, keys: Set<string>) {
 }
 
 type StudyFocus = "auto" | PartId;
-type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus };
+type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
 const FOCUSES: readonly StudyFocus[] = ["auto", "vocab", "grammar", "expression", "pronunciation"];
@@ -105,7 +106,8 @@ function readSettings(): Settings {
     const pace = PACES.includes(raw?.pace as Pace) ? (raw!.pace as Pace) : 10;
     const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
     const focus = FOCUSES.includes(raw?.focus as StudyFocus) ? (raw!.focus as StudyFocus) : "auto";
-    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus };
+    const vocab = raw?.vocab && ["all", "band", "pos", "topic"].includes(raw.vocab.by) && typeof raw.vocab.value === "string" ? raw.vocab : undefined;
+    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}) };
   } catch {
     return { pace: 10, order: "curriculum", mix: "auto", focus: "auto" };
   }
@@ -206,7 +208,12 @@ export function TodayPlan({
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
   // 빈도 단어 묶음(curriculum/vocabBank.ts — 지금 en·es·ja): 지속 학습의 어휘 분모와 새 낱말.
-  const bank = useWordBank(language, locale, known);
+  // 기준만 고르고 칸을 안 골랐으면 그 기준의 첫 칸(1–500 · 명사 · 사람).
+  const vocabPick: VocabPick | null =
+    settings.focus === "vocab" && settings.vocab && settings.vocab.by !== "all"
+      ? { by: settings.vocab.by, value: settings.vocab.value || ({ band: "0", pos: "noun", topic: "people" } as const)[settings.vocab.by] }
+      : null;
+  const bank = useWordBank(language, locale, known, vocabPick);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
@@ -762,6 +769,45 @@ export function TodayPlan({
           </button>
         ))}
       </div>
+      {/* Words by frequency band, part of speech or topic (2026-10-29): the learner picks the basis, then one group. */}
+      {settings.focus === "vocab" && bank ? (
+        <div data-vocab-by className="mt-2 flex flex-col gap-1.5">
+          <div role="group" className="flex flex-wrap gap-1.5">
+            {(["all", "band", "pos", "topic"] as const).map((by) => (
+              <button
+                key={by}
+                type="button"
+                aria-pressed={(settings.vocab?.by ?? "all") === by}
+                onClick={() => save({ ...settings, vocab: { by, value: "" } })}
+                className={`rounded-full px-3 py-1 text-caption ${(settings.vocab?.by ?? "all") === by ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+              >
+                {{ all: ui.vocabByAll, band: ui.vocabByBand, pos: ui.vocabByPos, topic: ui.vocabByTopic }[by]}
+              </button>
+            ))}
+          </div>
+          {settings.vocab && settings.vocab.by !== "all" && bank.groups.length ? (
+            <div role="group" data-vocab-groups className="flex flex-wrap gap-1.5">
+              {bank.groups.map((group) => {
+                const on = vocabPick?.value === group.id;
+                return (
+                  <button
+                    key={group.id}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => save({ ...settings, vocab: { by: settings.vocab!.by, value: group.id } })}
+                    className={`rounded-full border px-3 py-1 text-caption ${on ? "border-status-learned/60 bg-status-learned/10 text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
+                  >
+                    {vocabGroupName(ui, settings.vocab!.by, group.id)}
+                    <span dir="ltr" className="ms-1.5 tabular-nums text-meta text-slate-500">
+                      {group.known}/{group.total}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          ) : null}
+        </div>
+      ) : null}
       {testNext || upNext ? (
         <button
           type="button"
@@ -813,6 +859,28 @@ export function TodayPlan({
     </section>
     </>
   );
+}
+
+function vocabGroupName(ui: UICopy, by: VocabBy, id: string): string {
+  if (by === "band") return `${Number(id) * BAND_SIZE + 1}–${(Number(id) + 1) * BAND_SIZE}`;
+  if (by === "pos") return ({ noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction } as Record<string, string>)[id] ?? id;
+  const topics: Record<string, string> = {
+    people: ui.topicPeople,
+    food: ui.topicFood,
+    home: ui.topicHome,
+    work: ui.topicWork,
+    health: ui.topicHealth,
+    travel: ui.topicTravel,
+    shopping: ui.topicShopping,
+    time: ui.topicTime,
+    feelings: ui.topicFeelings,
+    actions: ui.topicActions,
+    describing: ui.topicDescribing,
+    nature: ui.topicNature,
+    society: ui.topicSociety,
+    function: ui.topicFunction,
+  };
+  return topics[id] ?? id;
 }
 
 function partName(ui: UICopy, part: PartId): string {

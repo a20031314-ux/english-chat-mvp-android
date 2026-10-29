@@ -1,7 +1,7 @@
 """검토가 끝난 목록(tsv) → src/lib/curriculum/vocab/<언어>.ts (curriculum/vocabBank.ts가 불러옴).
 
 python3 scripts/vocab-bank/emit.py <en|es|ja> <bank.tsv>
-tsv 한 줄: en·es = 낱말<TAB>품사, ja = 낱말<TAB>읽기<TAB>품사. 순서 = 많이 쓰는 순서.
+tsv 한 줄: en·es = 낱말<TAB>품사<TAB>주제, ja = 낱말<TAB>읽기<TAB>품사<TAB>주제(주제는 vocabBank.ts TOPICS). 순서 = 많이 쓰는 순서.
 """
 import json
 import sys
@@ -19,7 +19,7 @@ for line in open(src, encoding="utf-8"):
     if not parts or not parts[0] or parts[0] in seen:
         continue
     seen.add(parts[0])
-    rows.append(parts[:3] if lang == "ja" else parts[:2])
+    rows.append(parts[:4] if lang == "ja" else parts[:3])
 out = f"src/lib/curriculum/vocab/{lang}.ts"
 with open(out, "w", encoding="utf-8") as f:
     f.write("// 빈도 단어 묶음 — 자동 생성(scripts/vocab-bank/emit.py), 손으로 고치지 않는다.\n")

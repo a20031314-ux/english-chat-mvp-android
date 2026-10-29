@@ -27,3 +27,21 @@ test("계속 공부: 새 낱말(w|)은 어휘 갈래면 막힌 것 다음, 알�
     assert.ok(at < 0 || auto.slice(0, at).every((pick) => pick.reason !== "new"), `${language}: 곧 나옴보다 앞`);
   }
 });
+
+test("낱말 나누기: 많이 쓰는 순 500개씩 · 품사 묶음 · 주제 — 고른 칸만", async () => {
+  const { inPick, groupsOf, posGroup } = await import("./vocabBank.ts");
+  const list = [
+    { w: "casa", pos: "noun", topic: "home" },
+    { w: "comer", pos: "verb", topic: "food" },
+    { w: "de", pos: "prep", topic: "function" },
+  ];
+  assert.equal(posGroup("prep"), "function");
+  assert.deepEqual(groupsOf(list, "pos"), ["noun", "verb", "function"]);
+  assert.deepEqual(groupsOf(list, "topic"), ["food", "home", "function"]);
+  assert.equal(inPick(list[1]!, 1, { by: "topic", value: "food" }), true);
+  assert.equal(inPick(list[0]!, 0, { by: "pos", value: "verb" }), false);
+  assert.equal(inPick(list[2]!, 700, { by: "band", value: "1" }), true);
+  assert.equal(inPick(list[2]!, 700, { by: "all", value: "" }), true);
+  const ja = await loadBank("ja");
+  assert.deepEqual(groupsOf(ja, "band").length, 6);
+});
