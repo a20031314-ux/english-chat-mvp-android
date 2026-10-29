@@ -207,11 +207,45 @@ export function compareToTarget(target: string, heard: string): Comparison {
   }
   drain(wanted.length, said.length);
 
-  return {
-    outcomes,
-    added,
-    clean: outcomes.every((outcome) => outcome.kind === "kept") && added.length === 0,
-  };
+  const clean = outcomes.every((outcome) => outcome.kind === "kept") && added.length === 0;
+  // 줄임말만 다르면 같은 말(I'm ↔ I am, don't ↔ do not — 2026-10-29 가상 사용자 "대본은 I am을 I'm이 아니라고 틀림").
+  if (!clean && sameWords(expandContractions(wanted), expandContractions(said))) {
+    return { outcomes: wanted.map((word, index) => ({ kind: "kept", word, ...dress(index) })), added: [], clean: true };
+  }
+  return { outcomes, added, clean };
+}
+
+const CONTRACTED: Record<string, string[]> = {
+  "can't": ["can", "not"],
+  cannot: ["can", "not"],
+  "won't": ["will", "not"],
+  "shan't": ["shall", "not"],
+  "it's": ["it", "is"],
+  "that's": ["that", "is"],
+  "what's": ["what", "is"],
+  "there's": ["there", "is"],
+  "here's": ["here", "is"],
+  "where's": ["where", "is"],
+  "who's": ["who", "is"],
+  "how's": ["how", "is"],
+  "let's": ["let", "us"],
+};
+
+/** 영어 줄임말을 풀어 낱말 목록으로(다른 언어 낱말은 그대로 — 뒤가 'm·'re·n't·'ll·'ve·'d인 것만). */
+export function expandContractions(list: readonly string[]): string[] {
+  return list.flatMap((word) => {
+    const w = word.replace(/’/g, "'");
+    if (CONTRACTED[w]) return CONTRACTED[w]!;
+    let m = w.match(/^(\p{L}+)n't$/u);
+    if (m) return [m[1]!, "not"];
+    m = w.match(/^(\p{L}+)'(m|re|ll|ve|d)$/u);
+    if (m) return [m[1]!, { m: "am", re: "are", ll: "will", ve: "have", d: "would" }[m[2] as "m" | "re" | "ll" | "ve" | "d"]];
+    return [w];
+  });
+}
+
+function sameWords(a: readonly string[], b: readonly string[]): boolean {
+  return a.length === b.length && a.every((word, index) => word === b[index]);
 }
 
 /** The words that did not survive, as the prompt should describe them. */

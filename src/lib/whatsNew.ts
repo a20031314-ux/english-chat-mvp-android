@@ -207,7 +207,6 @@ export const USE_SIGNAL_KEYS = [
   "videoStudySessions",
   "videoLearningSaves",
   "learningCards",
-  "appUiLocale",
 ];
 
 /**
@@ -229,12 +228,13 @@ export function pendingNotes(
   if (!current) return [];
   const from = seen ?? (usedBefore ? LAST_VERSION_WITHOUT_SHEET : null);
   if (from === null) return [];
-  return notes
-    .filter(
-      (note) =>
-        compareVersions(note.version, from) > 0 &&
-        compareVersions(note.version, current) <= 0,
-    )
+  // 본 기록 없이 쓴 흔적만 있으면(옛 빌드에서 왔거나, 설치 직후 언어만 고름) 이번 출시 것만 —
+  // 2.64부터 전부 쌓으면 같은 카드가 줄줄이 나온다(2026-10-29 가상 사용자).
+  const inferred = seen === null;
+  const within = notes.filter((note) => compareVersions(note.version, from) > 0 && compareVersions(note.version, current) <= 0);
+  const newest = within.reduce<string | null>((top, note) => (top === null || compareVersions(note.version, top) > 0 ? note.version : top), null);
+  return within
+    .filter((note) => !inferred || note.version === newest)
     .sort((a, b) => compareVersions(b.version, a.version))
     .flatMap((note) => note.items);
 }

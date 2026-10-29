@@ -27,6 +27,7 @@ import {
 import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
+import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { HearingButtons, LineGrade, PauseChips, ResumeChoice, useHearing } from "@/components/studyMap/StageScripts";
 import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
@@ -271,6 +272,9 @@ function FramePlayer({
   const sent = useRef(false);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const done = index >= steps.length;
+  useEffect(() => {
+    if (done && Object.keys(results).length) markPracticed(language, baseFrame.id);
+  }, [done, results, language, baseFrame.id]);
   // 이어서 하기(lib/curriculum/resume.ts) — 다시 연습은 차례가 달라 따로 남긴다.
   const resumeId = resumeKey(redo ? "redo" : "frame", language, baseFrame.id);
   const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));

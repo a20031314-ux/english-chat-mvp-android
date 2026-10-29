@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
@@ -69,9 +70,11 @@ function readMode(stage: number): ScriptMode {
   const allowed = modesFor(stage);
   try {
     const saved = localStorage.getItem(`${MODE_KEY}.${stage <= 2 ? "early" : "late"}`) as ScriptMode | null;
-    return saved && allowed.includes(saved) ? saved : "shadow";
+    // 처음엔 통과로 세는 방식(1~2단계 첫 글자만, 3단계부터 가리기) — 따라 말하기는 고를 수 있지만 기본이면
+    // 줄마다 ★를 받아도 통과가 안 됨(2026-10-29 가상 사용자 셋 다 "가장 헷갈린 순간").
+    return saved && allowed.includes(saved) ? saved : allowed[1]!;
   } catch {
-    return "shadow";
+    return allowed[1]!;
   }
 }
 
@@ -368,6 +371,10 @@ function ScriptPlayer({
     Object.entries(results).map(([i, result]) => [i, { clean: result.clean, mode: result.mode, revealed: Boolean(revealed[Number(i)]) }]),
   );
   const passes = done && runPasses(script, runs, passRule);
+  // 끝까지 해 봤으면(통과 못 해도) 오늘 할 것 ✓ — 이 폰에만(curriculum/practicedToday.ts).
+  useEffect(() => {
+    if (done && Object.keys(results).length) markPracticed(language, script.id);
+  }, [done, results, language, script.id]);
   // 통과로 셈해지지 않은 내 줄(틀림·원문 열어 봄·따라 말하기) — 끝 화면의 "통과까지 n줄"과 "그 줄만 다시".
   const toRedo = linesToRedo(script, runs, passRule);
   const outcome = passes ? passOutcome(runs) : "unaided";
@@ -445,6 +452,8 @@ function ScriptPlayer({
     setRevealed(drop);
     sent.current = false;
     setRetrying(true);
+    // 따라 말하기로 끝냈으면 그 줄만 다시는 통과로 세는 방식으로(따라 말하기로 다시 하면 또 통과가 안 됨).
+    if (!countsForPass(script.stage, mode, passRule)) setModeState(modesFor(script.stage)[1]!);
     setIndex(toRedo[0]!);
   };
   // 끝까지 한 대본을 닫을 때만 전면 광고(무료·안드로이드, lib/ads.ts가 간격·요금을 본다 — 2026-10-29 사용자 "무료 사용자 대상 광고").

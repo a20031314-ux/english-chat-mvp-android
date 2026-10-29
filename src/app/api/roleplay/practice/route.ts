@@ -82,7 +82,8 @@ export async function POST(request: NextRequest) {
   const judged =
     typeof body.frame === "string" ||
     typeof body.meaning === "string" ||
-    (typeof body.scriptId === "string" && Boolean(body.scriptId) && body.mode !== "shadow");
+    // 대본 줄은 따라 말하기도 같은 판단(2026-10-29 가상 사용자 "판정 기준이 화면마다 달라요").
+    (typeof body.scriptId === "string" && Boolean(body.scriptId));
   const task: JudgeTask = judged ? "scriptJudge" : "roleplayPractice";
   await meterRequest(request, judged ? "scriptJudge" : "roleplayPractice");
 

@@ -251,6 +251,17 @@ export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
 }
 
 /**
+ * 문제 뜻 줄: 영어를 배우는데 앱 언어 뜻풀이를 아직 못 받았으면 null — 영어 뜻풀이가 곧 정답이라 보이면 안 된다
+ * (2026-10-29 가상 사용자, 아랍어 앱 처음 시험). 다른 학습 언어는 영어 뜻이라도 보인다.
+ */
+export function quizGloss(gloss: ScriptGloss, uiLanguage: string, learning: string): string | null {
+  if (uiLanguage === "ko" || uiLanguage === "en") return glossFor(gloss, uiLanguage);
+  const translated = TRANSLATED.get(uiLanguage)?.get(gloss.en.trim());
+  if (translated) return translated;
+  return learning === "en" ? null : gloss.en;
+}
+
+/**
  * 영어·한국어 밖 앱 언어의 뜻풀이(2026-10-28): 서버가 처음 한 번 옮겨 저장한 표(/api/curriculum/scripts?glosses=1, server/stageCopy.ts)를
  * 앱이 받아 여기에 둔다 — glossFor가 찾고, 없으면 영어. 닉네임으로 바꾼 줄은 원문이 달라 영어로 남는다.
  */

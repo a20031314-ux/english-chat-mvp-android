@@ -794,6 +794,28 @@ export function ChatWindow({
     (!isPremium || entitlement.dailyLimit !== null) && entitlement.dailyUsed >= dailyLimit;
   const isChatInputBlocked = isChatDailyLimitReached;
 
+  // 보내지 못한 글은 이 탭이 켜져 있는 동안 남긴다 — 결제 화면을 열었다 닫거나 화면이 다시 그려져도(2026-10-29 가상 사용자 "쓴 글이 사라졌어요").
+  const draftKey = `chatDraft.v1.${targetLanguage}`;
+  const draftRestored = useRef(false);
+  useEffect(() => {
+    if (draftRestored.current) return;
+    draftRestored.current = true;
+    try {
+      const saved = sessionStorage.getItem(draftKey);
+      if (saved) setInput((current) => current || saved);
+    } catch {
+      // 남기지 못하면 지금 화면에만.
+    }
+  }, [draftKey]);
+  useEffect(() => {
+    try {
+      if (input) sessionStorage.setItem(draftKey, input);
+      else sessionStorage.removeItem(draftKey);
+    } catch {
+      // 남기지 못하면 지금 화면에만.
+    }
+  }, [draftKey, input]);
+
   // 무료 한도에 닿았을 때 "광고 보고 채팅 더"(lib/ads.ts — 안드로이드·무료만, 보상은 서버가 확인).
   const [adOffer, setAdOffer] = useState<RewardOffer | null>(null);
   const [adState, setAdState] = useState<"idle" | "waiting" | "done" | "failed">("idle");
@@ -2013,7 +2035,7 @@ export function ChatWindow({
                   }
                 }}
                 className={`w-full resize-none rounded-xl border border-white/15 bg-[#101010] px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-white/40 ${
-                  isChatInputBlocked ? "cursor-pointer" : ""
+                  isChatInputBlocked ? "cursor-pointer opacity-50" : ""
                 }`}
                 dir={learningLanguageTextDir(targetLanguage)}
               />

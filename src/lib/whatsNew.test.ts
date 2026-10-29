@@ -39,7 +39,7 @@ test("skipped versions arrive together, newest first", () => {
 });
 
 test("notes for builds newer than this one stay hidden", () => {
-  assert.deepEqual(ids(pendingNotes(null, "2.65", true, NOTES)), ["b", "a"]);
+  assert.deepEqual(ids(pendingNotes(null, "2.65", true, NOTES)), ["b"]);
 });
 
 test("patch versions count as their release", () => {

@@ -10,7 +10,8 @@ import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
 import { buildQuiz, joinWords, orderCorrect, quizPassed, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
-import { glossFor, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { stopTts } from "@/lib/ttsPlayer";
@@ -169,12 +170,14 @@ export function QuestionView({
   onNext: () => void;
 }) {
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  // 여러 단계 문장이 섞여 나오니 모든 단계 뜻풀이를 앱 언어로 받아 둔다(받으면 다시 그림).
+  useAllStageGlosses(language, locale);
   return (
     <section data-kind={question.kind} className="flex flex-col gap-3">
       <span className="self-start rounded-full border border-line px-2.5 py-0.5 text-meta text-slate-400">{kindName(ui, question.kind)}</span>
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "choose" ? <ChooseView locale={locale} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "order" ? <OrderView ui={ui} locale={locale} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
@@ -273,12 +276,14 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
 
 function ChooseView({
   locale,
+  language,
   question,
   answered,
   onAnswer,
   tag,
 }: {
   locale: string;
+  language: string;
   question: Extract<QuizQuestion, { kind: "choose" }>;
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
@@ -289,7 +294,7 @@ function ChooseView({
   return (
     <div className="flex flex-col gap-3">
       <p dir="auto" className="text-note text-slate-400">
-        {glossFor(question.gloss, locale)}
+        {quizGloss(question.gloss, locale, language) ?? "…"}
       </p>
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
@@ -333,6 +338,7 @@ function ChooseView({
 function OrderView({
   ui,
   locale,
+  language,
   question,
   answered,
   onAnswer,
@@ -340,6 +346,7 @@ function OrderView({
 }: {
   ui: UICopy;
   locale: string;
+  language: string;
   question: Extract<QuizQuestion, { kind: "order" }>;
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
@@ -351,7 +358,7 @@ function OrderView({
   return (
     <div className="flex flex-col gap-3">
       <p dir="auto" className="text-note text-slate-400">
-        {glossFor(question.gloss, locale)}
+        {quizGloss(question.gloss, locale, language) ?? "…"}
       </p>
       <div dir="auto" className="flex min-h-11 flex-wrap gap-1.5 rounded-xl border border-dashed border-line px-2 py-2">
         {placed.map((tile, i) => (
@@ -375,7 +382,8 @@ function OrderView({
         </div>
       ) : (
         <>
-          <div dir="auto" className="flex flex-wrap gap-1.5">
+          {/* Keeps its height when emptied, so the check button below does not jump under the finger (2026-10-29 virtual users: last chip / next ignored on first tap). */}
+          <div dir="auto" className="flex min-h-11 flex-wrap gap-1.5">
             {left.map((tile) => (
               <button key={tile} type="button" onClick={() => setPlaced((current) => [...current, tile])} className="rounded-lg border border-line px-2 py-1 text-chat text-slate-100 hover:bg-white/10">
                 {question.words[tile]}
@@ -452,7 +460,7 @@ function SayView({
   return (
     <div className="flex flex-col gap-3">
       <p dir="auto" className="text-chat text-slate-100">
-        {glossFor(question.gloss, locale)}
+        {quizGloss(question.gloss, locale, language) ?? "…"}
       </p>
       {result ? (
         <>

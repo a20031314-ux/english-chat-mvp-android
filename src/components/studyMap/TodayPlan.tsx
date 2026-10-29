@@ -27,6 +27,7 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
+import { PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
@@ -160,6 +161,17 @@ export function TodayPlan({
   // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
+  // 오늘 끝까지 해 본 대본·문장구조(통과 못 해도 ✓, curriculum/practicedToday.ts).
+  const [practiced, setPracticed] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    const load = () => setPracticed(readPracticed(language));
+    load();
+    const on = (event: Event) => {
+      if ((event as CustomEvent<{ language: string }>).detail?.language === language) load();
+    };
+    window.addEventListener(PRACTICED_EVENT, on);
+    return () => window.removeEventListener(PRACTICED_EVENT, on);
+  }, [language]);
   // 계속 공부(끝없이): 푼 기록·이번에 낸 열쇠·연달아 틀린 수·지금 문제가 몇 번째인지(같은 열쇠라도 문제를 바꾸는 씨앗).
   const [log, setLog] = useState<QuizLog>({});
   const [asked, setAsked] = useState<Set<string>>(new Set());
@@ -260,7 +272,7 @@ export function TodayPlan({
         ? !review[item.review] || review[item.review]!.due > now
         : item.kind === "quiz"
           ? false
-          : passedSet.has(item.id);
+          : passedSet.has(item.id) || practiced.has(item.id);
   const finishQuiz = (item: PlanItem, passedQuiz: boolean) => {
     const logged = recordQuiz(log, item.id, passedQuiz);
     setLog(logged);

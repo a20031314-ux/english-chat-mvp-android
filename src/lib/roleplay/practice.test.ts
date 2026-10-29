@@ -213,3 +213,14 @@ test("what was heard is shown in the script's own case and punctuation (2026-10-
   assert.equal(compareToTarget("¿Dónde está el baño?", "dónde está el baño").clean, true);
 });
 
+
+test("줄임말만 다르면 같은 말: I'm ↔ I am, don't ↔ do not (다른 언어는 그대로)", () => {
+  assert.equal(compareToTarget("I'm from Korea.", "I am from Korea").clean, true);
+  assert.equal(compareToTarget("I do not know.", "I don't know").clean, true);
+  assert.equal(compareToTarget("I can't swim.", "I cannot swim").clean, true);
+  assert.equal(compareToTarget("It's cold.", "it is cold").clean, true);
+  assert.equal(compareToTarget("I'm from Korea.", "I was from Korea").clean, false);
+  assert.equal(compareToTarget("C'est bon.", "c'est bon").clean, true);
+  assert.equal(compareToTarget("Soy de Corea.", "Estoy de Corea").clean, false);
+  assert.equal(compareToTarget("はじめまして", "はじめまして").clean, true);
+});

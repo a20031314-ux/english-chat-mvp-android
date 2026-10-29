@@ -60,3 +60,8 @@ export function useStageGlosses(language: string, stage: number, ui: string): nu
   }, [language, stage, ui]);
   return version;
 }
+
+/** 모든 단계(1~5) 뜻풀이 — 시험·퀴즈는 여러 단계 문장을 섞어 내서(2026-10-29 가상 사용자: 아랍어 앱에서 처음 시험 뜻 줄이 영어 정답 그대로). */
+export function useAllStageGlosses(language: string, ui: string): number {
+  return useStageGlosses(language, 1, ui) + useStageGlosses(language, 2, ui) + useStageGlosses(language, 3, ui) + useStageGlosses(language, 4, ui) + useStageGlosses(language, 5, ui);
+}

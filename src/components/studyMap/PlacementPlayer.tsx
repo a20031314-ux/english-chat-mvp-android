@@ -9,7 +9,9 @@ import type { CheckResult } from "@/lib/curriculum/checkup";
 import {
   nextPlacementStage,
   PLACEMENT_ENOUGH,
+  PLACEMENT_BLOCK,
   PLACEMENT_FIRST,
+  PLACEMENT_MIN,
   placementBlock,
   placementResult,
   stageKeys,
@@ -95,12 +97,19 @@ export function PlacementPlayer({
     onClose();
   };
   const question = result ? null : items[index]?.question;
+  // 끝까지 최대 몇 문제(오르는 중이면 5단계까지 묶음 수, 내려가면 지금 것 + 채우기) — 줄어들 수는 있어도 늘지 않는다.
+  const last = items[items.length - 1]?.stage ?? PLACEMENT_FIRST;
+  const upper = Math.max(PLACEMENT_MIN, items.length + (last >= PLACEMENT_FIRST && !extraDone ? PLACEMENT_BLOCK * (5 - last) : 0));
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="min-w-0 flex-1">
           <h2 className="truncate text-body font-semibold text-ink">{ui.placementTitle}</h2>
-          {!result ? <p className="mt-0.5 text-caption tabular-nums text-slate-400">{index + 1}</p> : null}
+          {!result ? (
+            <p className="mt-0.5 text-caption tabular-nums text-slate-400">
+              {index + 1}/{upper}
+            </p>
+          ) : null}
         </div>
         <button type="button" onClick={result ? onClose : close} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
           ✕
