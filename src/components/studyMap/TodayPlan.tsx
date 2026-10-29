@@ -44,6 +44,7 @@ import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
+import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { LedgerState } from "@/lib/learner/ledger";
@@ -219,7 +220,6 @@ export function TodayPlan({
   const [lane, setLane] = useState<StudyLane>("learn");
   // 단어장(curriculum/wordbook.ts): 저장한 단어는 이 폰(lib/vocabulary.ts), 낱말을 누르면 뜻 시트.
   const [savedWords, setSavedWords] = useState<ReturnType<typeof loadVocabulary>>([]);
-  const [wordsOpen, setWordsOpen] = useState(false);
   const preview = useVocabPreviewOptional();
   useEffect(() => {
     setSavedWords(loadVocabulary());
@@ -833,35 +833,7 @@ export function TodayPlan({
       {settings.focus === "review" ? (
         <p data-study-amount="review" className="mt-2 px-1 text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>
       ) : settings.focus === "vocab" ? (
-        <div data-wordbook className="mt-2 flex flex-col gap-1.5 px-1">
-          <p className="text-caption tabular-nums text-slate-300">
-            {ui.vocabTitle} <span dir="ltr">{words.length}</span>
-            {words.some((row) => row.state === "known") ? <span className="ms-1.5 text-meta text-slate-500">{ui.knownTag} {words.filter((row) => row.state === "known").length}</span> : null}
-          </p>
-          {words.length ? (
-            <ul className="flex flex-wrap gap-1.5">
-              {(wordsOpen ? words : words.slice(0, 18)).map((row) => (
-                <li key={row.word}>
-                  <button
-                    type="button"
-                    onClick={() => preview?.open(row.word)}
-                    className={`rounded-full border px-2.5 py-1 text-start text-meta ${row.state === "known" ? "border-status-mastered/40 text-good" : row.state === "learning" ? "border-status-learned/40 text-ink" : "border-line text-slate-300"}`}
-                  >
-                    <bdi dir="auto">{row.word}</bdi>
-                    {row.gloss ? <span className="ms-1 text-slate-500">{row.gloss}</span> : null}
-                  </button>
-                </li>
-              ))}
-              {words.length > 18 && !wordsOpen ? (
-                <li>
-                  <button type="button" onClick={() => setWordsOpen(true)} className="rounded-full px-2.5 py-1 text-meta text-slate-400 hover:bg-white/10">
-                    {ui.discoverMore} <span dir="ltr">+{words.length - 18}</span>
-                  </button>
-                </li>
-              ) : null}
-            </ul>
-          ) : null}
-        </div>
+        <WordbookCard ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} />
       ) : null}
       {/* Words by frequency band, part of speech or topic (2026-10-29): the learner picks the basis, then one group. */}
       {settings.focus === "vocab" && bank ? (
