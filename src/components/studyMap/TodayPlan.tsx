@@ -235,7 +235,15 @@ export function TodayPlan({
   }, [day]);
   const redoKey = redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|");
   const fresh = useMemo(
-    () => (now ? todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, now }) : []),
+    () => {
+      if (!now) return [];
+      // 채우기: 계속 공부와 같은 순서(아는지 확인 → 퀴즈로 틀렸던 것 → 부족한 갈래 → 곧 나올 것 → 다지기)에서 몇 개를 오늘 할 것 안에.
+      const fill = nextStudy({ language, stage, passed: planPassed, review, log, weakest, expressions, confirm, now })
+        // 다시 볼 것은 이미 앞에, 아직 안 배운 것(new)은 빼고 — 처음 쓰는 사람은 채우기 없이 새 대본만.
+        .filter((pick) => pick.reason !== "again" && pick.reason !== "new")
+        .map((pick) => pick.key);
+      return todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, fill, now });
+    },
     // 오늘 목록은 분량·순서·언어가 바뀔 때만 새로(하나 끝냈다고 바꾸지 않는다) — passed·review는 처음 계산에만.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [now, language, stage, settings.pace, settings.order, recommended, redoKey, skipKey],
@@ -577,6 +585,7 @@ export function TodayPlan({
           title={labelOf(quiz)}
           card={quiz.card}
           seed={studying ? `${day}-${round}` : day}
+          round={log[quiz.id]?.n ?? 0}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), now: Date.now() })[0] ?? null)}

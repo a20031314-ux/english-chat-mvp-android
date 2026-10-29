@@ -31,6 +31,11 @@ export type PlanItem = {
   then?: { id: string; stage: number };
 };
 
+/** 오늘 할 것 안의 채우기 퀴즈 수(분량 5·10·20분 → 1·2·4). */
+export function fillCount(pace: number): number {
+  return pace >= 20 ? 4 : pace >= 10 ? 2 : 1;
+}
+
 export type ReviewEntry = { due: number; step: number; at: number };
 export type ReviewMap = Record<string, ReviewEntry>;
 
@@ -169,6 +174,8 @@ export function todayPlan(input: {
   recommended?: string | null;
   /** 튜터가 같은 틀을 두 번 고친 것(/api/notebook redo) — 고친 줄로 퀴즈. */
   redo?: readonly { frame: string; card: QuizCard }[];
+  /** 채우기(지속 학습, 2026-10-29 사용자 "지속학습에서 계속 던져주는 식"): 계속 공부가 고른 열쇠(아는지 확인·부족한 갈래·다지기) — FILL만큼 퀴즈로. */
+  fill?: readonly string[];
   now?: number;
 }): PlanItem[] {
   const now = input.now ?? Date.now();
@@ -209,15 +216,30 @@ export function todayPlan(input: {
     const key = `f|${redo.frame}`;
     if (!out.some((item) => item.id === key)) weak(key, redo.card);
   }
-  if (used >= input.pace) return out;
-  const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
-  if (input.order === "record" && input.recommended) {
-    const first = fresh.find((item) => item.id === input.recommended);
-    if (first) take(first);
+  // 채우기 자리는 미리 비워 둔다(새 대본이 분량을 다 채우지 않게).
+  const fillKeys = (input.fill ?? []).filter((key) => !out.some((item) => item.id === key) && canQuiz(input.language, key)).slice(0, fillCount(input.pace));
+  const freshPace = input.pace - fillKeys.length * QUIZ_MINUTES;
+  if (used < freshPace) {
+    const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
+    const takeFresh = (item: PlanItem) => {
+      if (out.some((one) => one.id === item.id)) return;
+      if (out.length && used + item.minutes > freshPace) return;
+      out.push(item);
+      used += item.minutes;
+    };
+    if (input.order === "record" && input.recommended) {
+      const first = fresh.find((item) => item.id === input.recommended);
+      if (first) takeFresh(first);
+    }
+    for (const item of fresh) {
+      if (used >= freshPace) break;
+      takeFresh(item);
+    }
   }
-  for (const item of fresh) {
-    if (used >= input.pace) break;
-    take(item);
+  for (const key of fillKeys) {
+    const practice = itemForKey(input.language, key);
+    out.push({ id: key, kind: "quiz", stage: practice?.stage ?? input.stage, minutes: QUIZ_MINUTES, ...(practice ? { then: { id: practice.id, stage: practice.stage } } : {}) });
+    used += QUIZ_MINUTES;
   }
   return out;
 }

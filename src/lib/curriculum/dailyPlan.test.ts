@@ -107,3 +107,19 @@ test("오늘 할 것: 약한 곳은 퀴즈로, 분량 절반까지, 틀린 틀 �
   assert.deepEqual(redo[0]!.card, card);
   assert.equal(redo[0]!.review, undefined);
 });
+
+test("오늘 할 것 안의 채우기: 분량 5·10·20분에 1·2·4개 퀴즈 자리를 비워 두고 새 대본은 나머지로(스페인어·태국어)", async () => {
+  const { todayPlan: plan, fillCount: count } = await import("./dailyPlan.ts");
+  const { allScriptsFor } = await import("./stageScripts.ts");
+  for (const language of ["es", "th"]) {
+    const keys = allScriptsFor(language).filter((s) => s.stage === 1).flatMap((s) => s.expressions.map((e) => `e|${e}`)).slice(0, 6);
+    for (const pace of [5, 10, 20]) {
+      const items = plan({ language, stage: 1, passed: new Set(), review: {}, pace, order: "curriculum", fill: keys, now: Date.UTC(2026, 9, 29) });
+      const quizzes = items.filter((item) => item.kind === "quiz");
+      assert.equal(quizzes.length, Math.min(count(pace), keys.length), `${language} ${pace}`);
+      assert.ok(items.some((item) => item.kind !== "quiz"), "새 대본도");
+    }
+    const none = plan({ language, stage: 1, passed: new Set(), review: {}, pace: 10, order: "curriculum", now: Date.UTC(2026, 9, 29) });
+    assert.equal(none.filter((item) => item.kind === "quiz").length, 0);
+  }
+});

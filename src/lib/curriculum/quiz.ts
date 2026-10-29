@@ -15,7 +15,8 @@ import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
 
-export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string };
+/** who: 상대 줄("them")은 고르기·맞추기에만, 말하기는 내 줄·예문만. */
+export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string; who?: "me" | "them" };
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
 export type QuizCard = { wrong: string; right: string; note?: string };
@@ -101,12 +102,14 @@ export function quizSources(language: string, key: string): QuizSource[] {
   }
   if (key.startsWith("e|")) {
     const expression = key.slice(2);
-    for (const script of scripts) {
-      if (!script.expressions.includes(expression)) continue;
+    // 그 표현을 핵심으로 둔 대본 먼저, 그다음 다른 대본에 그 표현이 그대로 나온 줄(상대 줄 포함) — 같은 표현을 다른 상황에서 다시
+    // (2026-10-29 사용자 "지속학습에서 계속 던져주는 식으로 노출 수를").
+    const ordered = [...scripts.filter((s) => s.expressions.includes(expression)), ...scripts.filter((s) => !s.expressions.includes(expression))];
+    for (const script of ordered) {
       for (const line of script.lines) {
         // 핵심 표현은 소문자·문장부호 없이 적혀 있다("hola" ↔ "¡Hola!") — 줄에 든 그대로의 조각을 쓴다.
-        const piece = line.who === "me" ? pieceOf(line.text, expression) : null;
-        if (piece) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece });
+        const piece = pieceOf(line.text, expression);
+        if (piece) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece, who: line.who === "me" ? "me" : "them" });
       }
     }
     return out;
@@ -114,13 +117,21 @@ export function quizSources(language: string, key: string): QuizSource[] {
   if (key.startsWith("g|")) {
     const [stage, index] = key.slice(2).split(":").map(Number);
     for (const script of scripts) {
-      if (script.stage !== stage || !(script.grammar ?? []).includes(index!)) continue;
+      // 그 단계에서 그 문법을 쓰는 대본 + 뒤 단계에서 그 문법을 다시 쓰는 대본(earlierGrammar).
+      const here = script.stage === stage && (script.grammar ?? []).includes(index!);
+      const again = (script.earlierGrammar ?? []).includes(`${stage}:${index}`);
+      if (!here && !again) continue;
       for (const line of script.lines) {
         if (line.who !== "me") continue;
         // 문법 칸은 낱말 조각이 없다 — 그 줄의 문장구조 조각이 있으면 고르기 문제에 쓴다.
         const piece = (line.frames ?? []).map((id) => frameOf(language, id)?.core.find((core) => core && line.text.includes(core))).find(Boolean);
         add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece });
       }
+    }
+    // 그 문법 칸을 쓰는 문장구조 예문도.
+    for (const frame of allFramesFor(language)) {
+      if (frame.stage !== stage || !(frame.grammar ?? []).includes(index!)) continue;
+      for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: frame.core.find((core) => core && example.text.includes(core)) });
     }
     return out;
   }
@@ -262,9 +273,16 @@ export function fixOf(language: string, card: QuizCard, random: () => number): Q
  * 열쇠 하나의 퀴즈: [고친 줄] → 고르기·순서 → 말하기, 셋까지. 재료가 모자라면 문제가 둘 이하일 수 있고, 하나도 못 만들면 null(그땐 원래 대본으로).
  * seed = 그날(같은 날 다시 열면 같은 문제).
  */
-export function buildQuiz(language: string, key: string, options: { card?: QuizCard | null; seed?: string } = {}): Quiz | null {
+/**
+ * round = 이 열쇠를 이 폰에서 몇 번 풀었나(quizLog n): 문장을 돌려 매번 다른 줄로, 모양도 돌린다 —
+ * 0번째 고르기 먼저(알아보기) · 1번째 맞추기 먼저(구조) · 2번째부터 말하기 둘(꺼내기). 시험(checkup·stageTest·placement)은 round 없이.
+ */
+export function buildQuiz(language: string, key: string, options: { card?: QuizCard | null; seed?: string; round?: number } = {}): Quiz | null {
   const random = rng(`${key}|${options.seed ?? ""}`);
-  const sources = shuffled(quizSources(language, key), random);
+  const all = options.round === undefined ? shuffled(quizSources(language, key), random) : shuffled(quizSources(language, key), rng(key));
+  const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
+  const sources = [...all.slice(shift), ...all.slice(0, shift)];
+  const speakable = (source: QuizSource) => source.who !== "them";
   const questions: QuizQuestion[] = [];
   const used = new Set<string>();
   const fix = options.card ? fixOf(language, options.card, random) : null;
@@ -287,9 +305,15 @@ export function buildQuiz(language: string, key: string, options: { card?: QuizC
       break;
     }
   }
-  const sayFrom = sources.find((source) => !used.has(source.text)) ?? sources[0];
-  const room = QUIZ_SIZE - questions.length - (sayFrom ? 1 : 0);
-  questions.push(...middle.slice(0, Math.max(0, room)));
+  const sayFrom = sources.find((source) => speakable(source) && !used.has(source.text)) ?? sources.find(speakable);
+  const round = options.round ?? 0;
+  if (round === 1) middle.sort((a, b) => (a.kind === "order" ? -1 : 0) - (b.kind === "order" ? -1 : 0));
+  // 세 번째부터: 고르기 대신 다른 줄 말하기 하나 더(꺼내기를 늘림).
+  const secondSay = round >= 2 && !fix ? sources.find((source) => speakable(source) && !used.has(source.text) && source.text !== sayFrom?.text) : undefined;
+  const middleKept = secondSay ? middle.filter((q) => q.kind !== "choose").slice(0, 1) : middle;
+  const room = QUIZ_SIZE - questions.length - (sayFrom ? 1 : 0) - (secondSay ? 1 : 0);
+  questions.push(...middleKept.slice(0, Math.max(0, room)));
+  if (secondSay) questions.push({ kind: "say", text: secondSay.text, gloss: secondSay.gloss, from: secondSay.from });
   if (sayFrom) questions.push({ kind: "say", text: sayFrom.text, gloss: sayFrom.gloss, from: sayFrom.from });
   return questions.length >= 2 ? { key, questions } : null;
 }

@@ -33,6 +33,7 @@ export function QuizPlayer({
   title,
   card,
   seed,
+  round,
   onDone,
   onThen,
   onClose,
@@ -49,6 +50,8 @@ export function QuizPlayer({
   card?: QuizCard;
   /** 그날(같은 날 다시 열면 같은 문제). */
   seed: string;
+  /** 이 열쇠를 이 폰에서 푼 횟수(quizLog n). */
+  round?: number;
   onDone: (passed: boolean) => void;
   /** 틀렸을 때 원래 대본·문장구조로 — 없으면 버튼 없음. */
   onThen?: () => void;
@@ -60,7 +63,9 @@ export function QuizPlayer({
   /** 연달아 두 번 틀림: 다음 문제보다 원래 대본을 앞에. */
   stopHint?: boolean;
 }) {
-  const quiz = useMemo(() => buildQuiz(language, quizKey, { card, seed }), [language, quizKey, card, seed]);
+  // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
+  const [opened] = useState(() => round);
+  const quiz = useMemo(() => buildQuiz(language, quizKey, { card, seed, round: opened }), [language, quizKey, card, seed, opened]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const reported = useRef(false);

@@ -102,3 +102,32 @@ test("순서 조각: 일본어 활용은 한 조각, 긴 줄은 8조각 안팎�
   assert.ok(tiles.length >= 3 && tiles.length <= 10, String(tiles.length));
   assert.equal(tiles.join(" "), long.split(/\s+/).join(" "));
 });
+
+test("채우기 퀴즈: 다른 대본 줄까지 재료로, 풀 때마다 다른 줄·모양(고르기 → 맞추기 → 말하기 둘), 말하기는 내 줄만(영어·일본어·스페인어)", async () => {
+  const { quizSources: sourcesOf, buildQuiz: build } = await import("./quiz.ts");
+  const { allScriptsFor } = await import("./stageScripts.ts");
+  for (const language of ["en", "ja", "es"]) {
+    const script = allScriptsFor(language).find((one) => one.stage === 1)!;
+    const key = `e|${script.expressions[0]}`;
+    const sources = sourcesOf(language, key);
+    assert.ok(sources.length >= 1, `${language} ${key}`);
+    const firsts = new Set<string>();
+    for (let round = 0; round < 3; round += 1) {
+      const quiz = build(language, key, { round });
+      if (!quiz) continue;
+      firsts.add(quiz.questions.map((q) => ("text" in q ? q.text : "")).join("|"));
+      for (const q of quiz.questions) if (q.kind === "say") assert.ok(sources.find((s) => s.text === q.text)?.who !== "them", "말하기는 내 줄");
+      if (round >= 2 && sources.filter((s) => s.who !== "them").length >= 2) assert.ok(quiz.questions.filter((q) => q.kind === "say").length >= 1);
+    }
+    if (sources.length >= 3) assert.ok(firsts.size >= 2, `${language}: 풀 때마다 달라짐`);
+  }
+});
+
+test("문법 칸 퀴즈 재료: 뒤 단계 대본(earlierGrammar)·문장구조 예문까지", async () => {
+  const { quizSources: sourcesOf } = await import("./quiz.ts");
+  const { allScriptsFor } = await import("./stageScripts.ts");
+  const later = allScriptsFor("en").find((script) => (script.earlierGrammar ?? []).length);
+  if (!later) return;
+  const key = `g|${later.earlierGrammar![0]}`;
+  assert.ok(sourcesOf("en", key).some((source) => source.from === later.id));
+});
