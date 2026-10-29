@@ -418,6 +418,7 @@ export function NotebookSection({
           row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
           known={known}
           passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+          extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
         />
       ) : null}
       {frame && CURRICULUM_ONLY && lettersOn ? (
@@ -439,7 +440,6 @@ export function NotebookSection({
           cards={book.cards}
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
           onStageChanged={() => setReload((n) => n + 1)}
-          learned={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
           grammarName={(stage, index) => {
             const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
             return node ? nameOf(node.id) : "";
@@ -464,7 +464,7 @@ export function NotebookSection({
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
         />
       ) : null}
-      {frame && book.stages.length && book.parts?.some((row) => row.scripts) && (lettersOn || !CURRICULUM_ONLY) ? (
+      {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (
         <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
       ) : null}
       {stageTestFor !== null && onNextStage ? (
@@ -1919,6 +1919,7 @@ function SkeletonProgress({
   passed,
   free,
   onMode,
+  extra,
 }: {
   ui: UICopy;
   language: string;
@@ -1928,12 +1929,49 @@ function SkeletonProgress({
   passed: readonly string[];
   free: boolean;
   onMode: (mode: StudyMode) => void;
+  /** 시트 아래에 같이 — 말한 문장·할 수 있는 일(ScriptAmount inside). */
+  extra?: ReactNode;
 }) {
+  const [open, setOpen] = useState(false);
   const passedKey = passed.join("|");
   const totals = useMemo(() => skeletonTotals(language, { known, passed: new Set(passedKey.split("|")) }), [language, known, passedKey]);
   const left = row ? toNextStage(row.parts, STAGE_DONE_SHARE) : 0;
   const label = partLabels(ui);
+  // 진척은 My 안 한 곳(2026-10-29 사용자 "이미 앎·할 수 있는 일을 매번 보여 주지 말고 My 탭 안에 하나로"): 한 줄 → 누르면 시트에 전부.
   return (
+    <>
+      <button
+        type="button"
+        data-my-progress-open
+        onClick={() => setOpen(true)}
+        className="mt-3 flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+      >
+        <span aria-hidden className="shrink-0 text-caption">📊</span>
+        <span className="min-w-0 flex-1 truncate text-note font-semibold text-ink">{ui.myProgressTitle}</span>
+        {free ? null : (
+          <span className="shrink-0 text-meta tabular-nums text-slate-400">
+            {ui.stageNumber.replace("{n}", String(stage))}
+            {left > 0 ? ` · ${ui.toNextStage.replace("{n}", String(left))}` : ""}
+          </span>
+        )}
+        <span aria-hidden className="shrink-0 text-caption text-slate-500 rtl:rotate-180">›</span>
+      </button>
+      {open ? (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
+            <div
+              role="dialog"
+              aria-modal="true"
+              data-my-progress-sheet
+              onClick={(event) => event.stopPropagation()}
+              className="flex max-h-[85vh] w-full max-w-md flex-col overflow-y-auto rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
+            >
+              <div className="flex items-center gap-2">
+                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.myProgressTitle}</h3>
+                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+                  ✕
+                </button>
+              </div>
     <div data-my-progress className="mt-3 flex flex-col gap-1.5 px-1">
       <div className="flex items-center gap-2">
         {free ? null : <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>}
@@ -1969,6 +2007,12 @@ function SkeletonProgress({
         <p className="text-meta tabular-nums text-slate-500">{ui.totalsOutside.replace("{n}", String(totals.outside.known + totals.outside.learning))}</p>
       ) : null}
     </div>
+              {extra}
+            </div>
+          </div>
+        </BodyLayer>
+      ) : null}
+    </>
   );
 }
 
