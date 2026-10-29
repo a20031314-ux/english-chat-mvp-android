@@ -127,7 +127,7 @@ function partName(ui: UICopy, part: PartId): string {
 /** 갈래마다 한 줄: 시험별 막대(맞힌 몫, 그 갈래 문제가 없던 시험은 빈칸). 맨 위 줄 = 그 시험의 단계. */
 function RecordGraph({ ui, results, onOpen }: { ui: UICopy; results: readonly CheckResult[]; onOpen: (index: number) => void }) {
   const parts = PART_IDS.filter((part) => results.some((result) => result.parts[part]));
-  const columns = `5rem repeat(${results.length}, minmax(0, 1fr))`;
+  const columns = `5rem repeat(${results.length}, minmax(0, 2rem))`;
   return (
     <div data-record-graph className="flex flex-col gap-3">
       <div className="grid items-end gap-1" style={{ gridTemplateColumns: columns }}>
