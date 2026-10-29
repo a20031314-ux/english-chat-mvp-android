@@ -9,8 +9,8 @@
  *
  * 카드는 튜터가 짚은 한 줄: 내가 쓴 줄(틀린 것) → 고친 줄 + 한 줄 설명, 어디서·언제.
  * 어느 칸에 넣을지는 모델이 고르고(server/notebookStore.ts), 사용자가 옮긴 카드는 다시 옮기지 않는다.
- * 짚인 줄은 바로 카드가 되지 않고 "오늘의 학습" 후보(`pending`)로 쌓인다 — 사용자가 고른 것만 노트에 들어가고(화면 함께 고르기),
- * 안 고른 후보는 7일 뒤 사라진다(2026-10-24 사용자 결정). 진짜 실수·또 틀린 것은 미리 골라 둔다(`defaultPicked`).
+ * 짚인 줄은 바로 카드가 된다(`fileFix`, 2026-10-30 사용자 "자동으로 복습에") — 오타만 후보(`pending`)로 7일.
+ * 예전(2026-10-24~10-29)에는 모두 후보로 쌓고 사용자가 "노트에 넣기"로 골랐다(2.78 이하 앱의 고르기 화면, `defaultPicked`).
  * 학습자 문장이 들어가는 유일한 저장소라 계정을 지우면 함께 지운다(STATE "노트 문장 저장").
  *
  * 순수.
@@ -553,6 +553,20 @@ export function addPending(record: NotebookRecord, card: FixCard, now = Date.now
   };
   const pending = [next, ...base.pending].sort((a, b) => b.at - a.at).slice(0, MAX_PENDING);
   return { ...base, pending };
+}
+
+/**
+ * 짚인 줄을 바로 복습으로(2026-10-30 사용자 "노트에 넣기가 어디로 가는지 모호해" → "자동으로 복습에"):
+ * 후보로 넣은 뒤 오타가 아니면 곧바로 카드로 옮긴다. 오타는 후보로만(7일, 지난번에 틀린 것에는 보임).
+ * 2.78 이하 앱의 "노트에 넣기" 고르기 화면에는 오타만 남는다.
+ */
+export function fileFix(record: NotebookRecord, card: FixCard, now = Date.now()): NotebookRecord {
+  const next = addPending(record, card, now);
+  if (next === record || card.kind === "typo") return next;
+  const wrong = clean(card.wrong, MAX_LINE);
+  const right = clean(card.right, MAX_LINE);
+  const pending = next.pending.find((c) => same(c.wrong, wrong) && same(c.right, right));
+  return pending ? applyEdit(next, { op: "commit", ids: [pending.id], shots: [] }, now) : next;
 }
 
 /** 고르기 화면에서 처음부터 체크해 둘 것: 진짜 실수, 또 틀린 것. 오타·뜻 짐작은 비워 둔다. */

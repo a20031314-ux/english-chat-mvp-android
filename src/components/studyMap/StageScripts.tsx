@@ -8,6 +8,7 @@ import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
+import { framesFor } from "@/lib/curriculum/frames";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
@@ -123,17 +124,27 @@ export function StageScripts({
   const shown = useMemo(() => (open ? personalize(open, language, nickname) : null), [open, language, nickname]);
   const [handled, setHandled] = useState(0);
   const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
+  const [method, setMethod] = useState<"situation" | "expression" | "frame">("situation");
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
     setOpen(scripts.find((script) => script.id === openFor.id) ?? null);
     // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
-    setFrameFor(scripts.some((script) => script.id === openFor.id) ? null : openFor);
+    const target = scripts.find((script) => script.id === openFor.id);
+    setFrameFor(target ? null : openFor);
+    // 연 것이 있는 방식 칩으로 옮겨 둔다(닫은 뒤 목록이 그 자리에).
+    setMethod(!target ? "frame" : isSituationScript(target) ? "situation" : "expression");
   }
   if (!scripts.length) return null;
   const situations = scripts.filter(isSituationScript);
   const extras = scripts.filter((script) => !isSituationScript(script));
   const done = situations.filter((script) => passed.includes(script.id)).length;
+  const frames = framesFor(language, stage);
+  const methods = [
+    { id: "situation" as const, label: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "" },
+    ...(extras.length ? [{ id: "expression" as const, label: ui.scriptsByExpression, count: "" }] : []),
+    ...(frames.length ? [{ id: "frame" as const, label: ui.framesTitle, count: `${frames.filter((frame) => passed.includes(frame.id)).length}/${frames.length}` }] : []),
+  ];
   const dot = (state: LedgerState | null | undefined) =>
     state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const row = (script: StageScript) => {
@@ -212,25 +223,25 @@ export function StageScripts({
           <span aria-hidden className="text-caption text-slate-400 rtl:rotate-180">›</span>
         </button>
       ) : null}
-      <div className="flex items-center gap-2">
-        <h3 className="min-w-0 flex-1 text-caption font-semibold text-slate-300">{ui.stageScriptsTitle}</h3>
-        <span aria-hidden className="flex gap-1">
-          {situations.map((script) => (
-            <span key={script.id} className={`h-2 w-2 rounded-full ${passed.includes(script.id) ? "bg-status-mastered" : "border border-line"}`} />
-          ))}
-        </span>
-        <span className="text-caption tabular-nums text-slate-400">
-          {done}/{situations.length}
-        </span>
+      {/* Ways to practise are chips, one list at a time (2026-10-30, user: the stage is the structure, phrases and structures are ways, not siblings). */}
+      <div role="group" data-script-method className="flex flex-wrap gap-1.5">
+        {methods.map((one) => (
+          <button
+            key={one.id}
+            type="button"
+            aria-pressed={method === one.id}
+            data-method={one.id}
+            onClick={() => setMethod(one.id)}
+            className={`rounded-full px-3 py-1 text-caption ${method === one.id ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+          >
+            {one.label}
+            {one.count ? <span className={`ms-1 tabular-nums ${method === one.id ? "text-slate-600" : "text-slate-500"}`}>{one.count}</span> : null}
+          </button>
+        ))}
       </div>
-      {situations.map(row)}
-      {extras.length ? (
-        <>
-          <h3 className="mt-2 text-caption font-semibold text-slate-300">{ui.scriptsByExpression}</h3>
-          {extras.map(row)}
-        </>
-      ) : null}
-      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} />
+      {method === "situation" ? situations.map(row) : null}
+      {method === "expression" ? extras.map(row) : null}
+      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} listHidden={method !== "frame"} />
       {open ? (
         <ScriptPlayer
           ui={ui}

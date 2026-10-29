@@ -84,6 +84,18 @@ const NO_REVIEW: ReviewMap = {};
  */
 const CURRICULUM_ONLY = true;
 
+type MyLayer = "today" | "stage" | "review";
+const LAYER_KEY = "myLayer.v1";
+function readLayer(): MyLayer | null {
+  try {
+    const saved = localStorage.getItem(LAYER_KEY);
+    if (saved === "none") return null;
+    return saved === "stage" || saved === "review" ? saved : "today";
+  } catch {
+    return "today";
+  }
+}
+
 type RelatedItem = { id: string; stage: number; kind: "script" | "frame"; label: string; passed: boolean };
 
 /** 문법 칸(그 단계 문법 번호)이 나오는 대본·문장구조 — 대본의 grammar·뒤 단계의 earlierGrammar, 문장구조의 grammar. */
@@ -184,6 +196,16 @@ export function NotebookSection({
   const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
+  // My 큰 칸(오늘 할 것 · n단계 · 복습) 중 펼친 하나(2026-10-30 사용자 "큰 층위 하나만 보이게"). 이 폰에만.
+  const [layer, setLayerState] = useState<MyLayer | null>(readLayer);
+  const openLayer = (next: MyLayer | null) => {
+    setLayerState(next);
+    try {
+      localStorage.setItem(LAYER_KEY, next ?? "none");
+    } catch {
+      // 다음에 열 때 처음 칸으로.
+    }
+  };
   // 사다리에서 아무 단계나 "이 단계로 정하기"(2026-10-29) — 조건·시험 없이 지금 단계를 바꾼다.
   const setStageTo = (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -365,6 +387,40 @@ export function NotebookSection({
   // 뒤 단계 문법은 카드가 들어온 칸만.
   const inChapter = (chapter: NotebookChapter) => book.nodes.filter((node) => node.chapter === chapter && (!node.ahead || (counts[node.id] ?? 0) > 0));
   const sum = (ids: string[]) => ids.reduce((total, id) => total + (counts[id] ?? 0), 0);
+  const grammarName = (stage: number, index: number) => {
+    const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
+    return node ? nameOf(node.id) : "";
+  };
+  /** 오늘 할 것·틀린 줄·문법 칸에서 고른 상황·문장구조 → 단계 칸을 펼치고 연다. */
+  const openScript = (stage: number, id: string) => {
+    openLayer("stage");
+    setJump({ stage, id, at: Date.now() });
+  };
+  const stageRow = (book.parts ?? []).find((row) => row.order === book.stage) ?? null;
+  const stageLeft = stageRow ? toNextStage(stageRow.parts, STAGE_DONE_SHARE) : 0;
+  /** 내 진척 시트 안의 망·그래프(예전 My 맨 위 [망 | 그래프 | 단계] 토글을 여기로, 2026-10-30). */
+  const partsView = (mode: "net" | "graph") =>
+    book.parts?.length ? (
+      <PartsOverview
+        ui={ui}
+        locale={locale}
+        view={mode}
+        parts={stageRow ?? book.parts[0]!}
+        days={book.partDays ?? null}
+        items={book.partItems ?? null}
+        allOf={(id, row) =>
+          id === "vocab"
+            ? (book.words ?? []).map((word) => ({ text: word.text, state: word.state }))
+            : id === "expression"
+              ? row.expressions.map((item) => ({ text: item.text, state: item.state }))
+              : id === "grammar"
+                ? book.nodes.filter((node) => node.chapter === "grammar" && node.stage === row.order).map((node) => ({ text: nameOf(node.id), state: fill[node.id] ?? null }))
+                : []
+        }
+        nodeName={nameOf}
+        onPart={() => openLayer("stage")}
+      />
+    ) : null;
   // 네 갈래 틀이 있으면 글자·소리(발음)·관용 표현(표현)·세부(어휘·표현)는 그 갈래 안에서 — 아래 줄에는 내가 만든 칸·자리 없음만.
   const inParts = frame && book.stages.length > 0 && (book.parts?.length ?? 0) > 0;
   const rows: Array<{ key: Group; label: string; count: number; show: boolean }> = [
@@ -383,7 +439,7 @@ export function NotebookSection({
 
   return (
     <>
-      {todayPending.length || earlierPending.length ? (
+      {!CURRICULUM_ONLY && (todayPending.length || earlierPending.length) ? (
         <div className="mt-2 flex flex-wrap gap-1.5">
           {todayPending.length ? (
             <button
@@ -408,65 +464,6 @@ export function NotebookSection({
       {question && !question.node ? (
         <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
       ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
-        <SkeletonProgress
-          ui={ui}
-          language={language}
-          stage={lettersOn ? 0 : book.stage}
-          free={studyMode === "free"}
-          onMode={setStudyMode}
-          row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
-          known={known}
-          passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
-          extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
-        />
-      ) : null}
-      {frame && CURRICULUM_ONLY && lettersOn ? (
-        <LettersPlan ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={() => setLetters(false)} />
-      ) : null}
-      {!lettersOn && frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
-        <TodayPlan
-          ui={ui}
-          locale={locale}
-          language={language}
-          stage={studyMode === "free" ? frontierStage(book.parts ?? [], book.stage) : book.stage}
-          free={studyMode === "free"}
-          passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
-          review={book.review ?? NO_REVIEW}
-          recommended={book.recommend?.id ?? null}
-          redo={(book.redo ?? []).map((item) => ({ frame: item.frame, card: { wrong: item.card.wrong, right: item.card.right, note: item.card.note } }))}
-          weakest={(book.parts ?? []).find((row) => row.order === book.stage)?.weakest ?? null}
-          expressions={(book.parts ?? []).find((row) => row.order === book.stage)?.expressions ?? []}
-          cards={book.cards}
-          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
-          onStageChanged={() => setReload((n) => n + 1)}
-          grammarName={(stage, index) => {
-            const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
-            return node ? nameOf(node.id) : "";
-          }}
-        />
-      ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length ? (
-        <WeakStrip
-          ui={ui}
-          locale={locale}
-          language={language}
-          spots={weakSpots({
-            language,
-            fixes: [...book.cards, ...book.pending],
-            misses: allMisses(language),
-            review: book.review ?? NO_REVIEW,
-            grammarName: (stage, index) => {
-              const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
-              return node ? nameOf(node.id) : "";
-            },
-          })}
-          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
-        />
-      ) : null}
-      {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (
-        <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
-      ) : null}
       {stageTestFor !== null && onNextStage ? (
         <StageTestGate
           ui={ui}
@@ -489,7 +486,129 @@ export function NotebookSection({
           onClose={() => setStageTestFor(null)}
         />
       ) : null}
-      {frame && book.stages.length ? (
+      {frame && CURRICULUM_ONLY && book.stages.length ? (
+        <MyLayers
+          ui={ui}
+          language={language}
+          open={layer}
+          onOpen={openLayer}
+          today={
+            lettersOn ? (
+              { summary: null, body: <LettersPlan ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={() => setLetters(false)} /> }
+            ) : null
+          }
+          plan={
+            !lettersOn && book.parts?.some((row) => row.scripts)
+              ? (render) => (
+                  <TodayPlan
+                    ui={ui}
+                    locale={locale}
+                    language={language}
+                    stage={studyMode === "free" ? frontierStage(book.parts ?? [], book.stage) : book.stage}
+                    free={studyMode === "free"}
+                    passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+                    review={book.review ?? NO_REVIEW}
+                    recommended={book.recommend?.id ?? null}
+                    redo={(book.redo ?? []).map((item) => ({ frame: item.frame, card: { wrong: item.card.wrong, right: item.card.right, note: item.card.note } }))}
+                    weakest={(book.parts ?? []).find((row) => row.order === book.stage)?.weakest ?? null}
+                    expressions={(book.parts ?? []).find((row) => row.order === book.stage)?.expressions ?? []}
+                    cards={book.cards}
+                    onOpen={openScript}
+                    onStageChanged={() => setReload((n) => n + 1)}
+                    grammarName={grammarName}
+                  >
+                    {render}
+                  </TodayPlan>
+                )
+              : null
+          }
+          stage={{
+            title: ui.stageNumber.replace("{n}", String(lettersOn ? 0 : book.stage)),
+            summary: studyMode === "free" ? ui.modeFree : stageLeft > 0 ? ui.toNextStage.replace("{n}", String(stageLeft)) : null,
+            body: (
+              <>
+                {book.parts?.some((row) => row.scripts) ? (
+                  <SkeletonProgress
+                    ui={ui}
+                    language={language}
+                    stage={lettersOn ? 0 : book.stage}
+                    free={studyMode === "free"}
+                    onMode={setStudyMode}
+                    row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
+                    known={known}
+                    passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+                    views={partsView}
+                    extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
+                  />
+                ) : null}
+        <StageFrame
+                  ui={ui}
+                  stages={book.stages}
+                  current={book.stage}
+                  nodes={book.nodes.filter((node) => node.chapter === "grammar")}
+                  allNodes={book.nodes.filter((node) => !node.ahead)}
+                  counts={counts}
+                  fill={fill}
+                  nameOf={nameOf}
+                  onOpen={setNodeOpen}
+                  detail={stageDetail}
+                  masteredOf={masteredOf}
+                  focus={focusStage}
+                  parts={book.parts ?? []}
+                  words={book.words ?? []}
+                  pronunciationNotes={book.pronunciationNotes ?? {}}
+                  onTry={onTry}
+                  onNextStage={onNextStage && studyMode !== "free" ? (order) => setStageTestFor(order) : undefined}
+                  free={studyMode === "free"}
+                  onSetStage={setStageTo}
+                  letters={
+                    needsLetters(language)
+                      ? { on: lettersOn, panel: <ScriptEntry ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} />, onPick: () => setLetters(true) }
+                      : undefined
+                  }
+                  canSpeak={canSpeak}
+                  focusPart={focusPart}
+                  jump={jump}
+                  onJumped={() => setJump(null)}
+                  scripts={(order, row, openFor) => (
+                    <StageScripts
+                      ui={ui}
+                      locale={locale}
+                      language={language}
+                      stage={order}
+                      passed={row?.scripts?.passed ?? []}
+                      skipped={skipped}
+                      onPassed={() => setReload((n) => n + 1)}
+                      expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
+                      openFor={openFor}
+                      recommended={!CURRICULUM_ONLY && book.recommend && book.recommend.stage === order ? book.recommend : null}
+                      redo={order === book.stage ? (book.redo ?? []) : []}
+                      onRedoDone={(id) => {
+                        setBook((current) => (current ? { ...current, redo: (current.redo ?? []).filter((item) => item.frame !== id) } : current));
+                        setReload((n) => n + 1);
+                      }}
+                    />
+                  )}
+                  scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}
+                />
+              </>
+            ),
+          }}
+          weak={
+            <WeakStrip
+              ui={ui}
+              locale={locale}
+              language={language}
+              spots={weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review: book.review ?? NO_REVIEW, grammarName })}
+              onOpen={openScript}
+            />
+          }
+        />
+      ) : null}
+      {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (
+        <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
+      ) : null}
+      {frame && !CURRICULUM_ONLY && book.stages.length ? (
         <StageFrame
           ui={ui}
           stages={book.stages}
@@ -518,6 +637,7 @@ export function NotebookSection({
           canSpeak={canSpeak}
           focusPart={focusPart}
           jump={jump}
+          onJumped={() => setJump(null)}
           scripts={(order, row, openFor) => (
             <StageScripts
               ui={ui}
@@ -903,6 +1023,7 @@ function StageFrame({
   scripts,
   scriptFor,
   jump = null,
+  onJumped,
   free = false,
   onSetStage,
   letters,
@@ -934,6 +1055,8 @@ function StageFrame({
   scriptFor?: (order: number, open: string[]) => string | null;
   /** 밖(문법 칸)에서 고른 대본·문장구조 — 그 단계로 옮겨 연다. */
   jump?: { stage: number; id: string; at: number } | null;
+  /** 연 뒤 밖의 jump를 비운다 — 칸을 접었다 펴면(다시 그려지면) 같은 대본이 또 열리던 것(2026-10-30 사용자 화면). */
+  onJumped?: () => void;
   /** 자유롭게(curriculum/studyMode.ts): 다음 단계 조건을 안 보인다. */
   free?: boolean;
   /** 보고 있는 단계를 지금 단계로(조건·시험 없이). */
@@ -959,6 +1082,9 @@ function StageFrame({
     setShown(jump.stage);
     setOpenScript({ id: jump.id, at: jump.at });
   }
+  useEffect(() => {
+    if (jump && jump.at === jumped) onJumped?.();
+  }, [jump, jumped, onJumped]);
   const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
@@ -1920,6 +2046,7 @@ function SkeletonProgress({
   free,
   onMode,
   extra,
+  views,
 }: {
   ui: UICopy;
   language: string;
@@ -1931,8 +2058,11 @@ function SkeletonProgress({
   onMode: (mode: StudyMode) => void;
   /** 시트 아래에 같이 — 말한 문장·할 수 있는 일(ScriptAmount inside). */
   extra?: ReactNode;
+  /** 시트 안 보기 [막대 | 망 | 그래프](예전 My 맨 위 토글). */
+  views?: (mode: "net" | "graph") => ReactNode;
 }) {
   const [open, setOpen] = useState(false);
+  const [look, setLook] = useState<"bars" | "net" | "graph">("bars");
   const passedKey = passed.join("|");
   const totals = useMemo(() => skeletonTotals(language, { known, passed: new Set(passedKey.split("|")) }), [language, known, passedKey]);
   const left = row ? toNextStage(row.parts, STAGE_DONE_SHARE) : 0;
@@ -1944,16 +2074,10 @@ function SkeletonProgress({
         type="button"
         data-my-progress-open
         onClick={() => setOpen(true)}
-        className="mt-3 flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+        className="flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
       >
         <span aria-hidden className="shrink-0 text-caption">📊</span>
-        <span className="min-w-0 flex-1 truncate text-note font-semibold text-ink">{ui.myProgressTitle}</span>
-        {free ? null : (
-          <span className="shrink-0 text-meta tabular-nums text-slate-400">
-            {ui.stageNumber.replace("{n}", String(stage))}
-            {left > 0 ? ` · ${ui.toNextStage.replace("{n}", String(left))}` : ""}
-          </span>
-        )}
+        <span className="min-w-0 flex-1 truncate text-note text-ink">{ui.myProgressTitle}</span>
         <span aria-hidden className="shrink-0 text-caption text-slate-500 rtl:rotate-180">›</span>
       </button>
       {open ? (
@@ -1990,7 +2114,23 @@ function SkeletonProgress({
           ))}
         </span>
       </div>
-      {skeletonView(totals).map((part) => (
+      {views ? (
+        <span role="group" data-progress-look className="flex gap-1.5">
+          {(["bars", "net", "graph"] as const).map((id) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={look === id}
+              onClick={() => setLook(id)}
+              className={`rounded-full px-2.5 py-0.5 text-meta ${look === id ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+            >
+              {id === "bars" ? ui.skillViewList : id === "net" ? ui.myViewNet : ui.myViewGraph}
+            </button>
+          ))}
+        </span>
+      ) : null}
+      {look !== "bars" && views ? views(look) : null}
+      {look === "bars" ? skeletonView(totals).map((part) => (
         <div key={part.id} data-total-part={part.id} className="flex items-center gap-2">
           <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label[part.id]}</span>
           <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">
@@ -2002,7 +2142,7 @@ function SkeletonProgress({
           </span>
           {part.learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(part.learning))}</span> : null}
         </div>
-      ))}
+      )) : null}
       {totals.outside.known + totals.outside.learning > 0 ? (
         <p className="text-meta tabular-nums text-slate-500">{ui.totalsOutside.replace("{n}", String(totals.outside.known + totals.outside.learning))}</p>
       ) : null}
@@ -2017,3 +2157,67 @@ function SkeletonProgress({
 }
 
 
+
+type LayerPart = { summary: ReactNode; body: ReactNode };
+type PlanParts = { today: LayerPart; keep: LayerPart; overlays: ReactNode };
+
+/**
+ * My 큰 칸 셋(2026-10-30 사용자 "큰 층위 하나만 보이게 하고 나머지는 그 층위 아래로 — 모든 기능이 같은 층위로 나열된 게 문제"):
+ * 오늘 할 것(오늘 목록, 설정은 접힘) · n단계(내 진척, 사다리, 방식 칩 [상황 | 표현·문법 | 문장구조], 다음 단계 조건) · 복습(계속 공부·단어장·시험·틀린 줄).
+ * 한 번에 하나만 펼친다. 퀴즈·시험 화면(overlays)은 칸이 접혀도 떠 있어야 해서 따로.
+ */
+function MyLayers({
+  ui,
+  open,
+  onOpen,
+  today,
+  plan,
+  stage,
+  weak,
+}: {
+  ui: UICopy;
+  language: string;
+  open: MyLayer | null;
+  onOpen: (layer: MyLayer | null) => void;
+  /** 0단계 글자 묶음일 때 오늘 할 것 자리(TodayPlan 없음). */
+  today: LayerPart | null;
+  plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
+  stage: LayerPart & { title: string };
+  weak: ReactNode;
+}) {
+  const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
+    const on = open === id;
+    return (
+      <section key={id} data-my-layer={id} className={`mt-3 rounded-2xl border ${on ? "border-status-learned/40 bg-status-learned/[0.04]" : "border-line"}`}>
+        <button
+          type="button"
+          aria-expanded={on}
+          onClick={() => onOpen(on ? null : id)}
+          className="flex w-full items-center gap-2 px-3 py-3 text-start"
+        >
+          <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? "text-status-learned" : "text-ink"}`}>{title}</h3>
+          {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
+          <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
+        </button>
+        {on ? <div className="px-3 pb-3">{body}</div> : null}
+      </section>
+    );
+  };
+  const draw = (parts?: PlanParts) => {
+    const first = parts?.today ?? today;
+    return (
+      <>
+        {first ? card("today", ui.planTitle, first.summary, first.body) : null}
+        {card("stage", stage.title, stage.summary, stage.body)}
+        {parts || weak ? card("review", ui.keepTitle, parts?.keep.summary ?? null, (
+          <>
+            {parts?.keep.body}
+            {weak}
+          </>
+        )) : null}
+        {parts?.overlays}
+      </>
+    );
+  };
+  return <>{plan ? plan(draw) : draw()}</>;
+}

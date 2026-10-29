@@ -11,6 +11,7 @@ import {
   parseNotebook,
   addCard,
   addPending,
+  fileFix,
   defaultPicked,
   prunePending,
   PENDING_KEEP_MS,
@@ -236,4 +237,18 @@ test("틀 다시 연습: 교정 칸 고르기가 틀 id도 받고 카드에 남�
   assert.equal(addPending(emptyNotebook(), card, 2).pending[0]!.frame, "ja-f1-05");
   assert.equal(addCard(emptyNotebook(), card).cards[0]!.frame, "ja-f1-05");
   assert.equal(addCard(emptyNotebook(), { ...card, frame: "bad id" }).cards[0]!.frame, undefined);
+});
+
+test("고친 줄은 바로 복습으로(오타만 후보), 같은 줄은 한 장", () => {
+  let book = fileFix(emptyNotebook(), card({ id: "f1aaaaaa", day: "2026-10-30", kind: "mistake" }), 1000);
+  assert.equal(book.cards.length, 1);
+  assert.equal(book.pending.length, 0);
+  book = fileFix(book, card({ id: "f2bbbbbb", day: "2026-10-30", kind: "meant", wrong: "Start what?", right: "When did you start?" }), 2000);
+  assert.equal(book.cards.length, 2, "뜻 짐작도 복습으로");
+  book = fileFix(book, card({ id: "f3cccccc", day: "2026-10-30", kind: "typo", wrong: "I lvoe it.", right: "I love it." }), 3000);
+  assert.equal(book.cards.length, 2);
+  assert.equal(book.pending.length, 1, "오타는 후보로만");
+  book = fileFix(book, card({ id: "f4dddddd", day: "2026-10-31", kind: "mistake" }), 4000);
+  assert.equal(book.cards.length, 2, "같은 틀림→고침은 시각만 새로");
+  assert.equal(book.cards.find((c) => c.wrong === "She are my friend.")!.at, 4000);
 });

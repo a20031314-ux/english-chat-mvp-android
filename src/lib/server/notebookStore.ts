@@ -7,7 +7,7 @@ import { readSelfCheck } from "./selfCheckStore.ts";
 import { getDailyOpUsed } from "./entitlementStore.ts";
 import type { MeteredOp } from "./modelCalls.ts";
 import {
-  addPending,
+  fileFix as fileFixCard,
   isCardId,
   locateMessage,
   locatePrompt,
@@ -166,7 +166,7 @@ export async function fileFix(input: {
     }
     // 모델을 부르는 동안 사용자가 편집했을 수 있어 다시 읽고 넣는다.
     const latest = await readNotebook(input.userId, input.language);
-    const after = addPending(latest, {
+    const after = fileFixCard(latest, {
       id: newCardId(),
       wrong: input.wrong,
       right: input.right,

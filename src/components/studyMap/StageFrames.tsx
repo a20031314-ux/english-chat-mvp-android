@@ -61,12 +61,15 @@ export function StageFrames({
   openFor = null,
   onPassed,
   onOpenScript,
+  listHidden = false,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   stage: number;
   passed: readonly string[];
+  /** 목록은 감추고 연 화면만(방식 칩이 다른 것일 때 — 밖에서 고른 문장구조는 그대로 열린다). */
+  listHidden?: boolean;
   /** 다시 권하는 틀(/api/notebook redo) — 목록에 ◐. */
   redo?: readonly RedoItem[];
   /** 밖(문법 칸)에서 고른 문장구조를 연다(at = 누른 때). */
@@ -83,16 +86,10 @@ export function StageFrames({
     if (found) setOpen(found);
   }
   if (!frames.length) return null;
-  const done = frames.filter((frame) => passed.includes(frame.id)).length;
   const again = new Set(redo.map((item) => item.frame));
   return (
-    <section className="mt-3 flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <h3 className="min-w-0 flex-1 text-caption font-semibold text-slate-300">{ui.framesTitle}</h3>
-        <span className="text-caption tabular-nums text-slate-400">
-          {done}/{frames.length}
-        </span>
-      </div>
+    <section className={listHidden ? "contents" : "flex flex-col gap-2"}>
+      {listHidden ? null : (
       <ul className="grid grid-cols-2 gap-2">
         {frames.map((frame) => {
           const ok = passed.includes(frame.id);
@@ -116,6 +113,7 @@ export function StageFrames({
           );
         })}
       </ul>
+      )}
       {open ? (
         <FramePlayer
           ui={ui}

@@ -54,8 +54,11 @@ export type BoardOptions = { part: PartId | null; onPart: (part: PartId) => void
 export function GrowthNetwork({
   ui,
   board,
+  plain = false,
 }: {
   ui: UICopy;
+  /** 커리큘럼만(2026-10-30 사용자 "망·그래프·단계를 눌렀는데 뭔지 모르겠어"): 머리·토글 없이 단계 보기만 — 망·그래프는 내 진척 시트 안. */
+  plain?: boolean;
   /**
    * 수준별 틀(2026-10-25 사용자 "망, 그래프도 변경 내용에 맞게 통합" → 1번): 세 보기 모두 노트 틀의 네 갈래.
    * 망 = 네 꼭짓점(지금 단계에서 찬 정도), 그래프 = 갈래마다 최근 2주, 단계 = 사다리·갈래·칸·대화 예시.
@@ -82,6 +85,7 @@ export function GrowthNetwork({
     },
   };
 
+  if (plain) return <section aria-label={ui.myNetworkTitle}>{board("map", options)}</section>;
   return (
     <section aria-label={ui.myNetworkTitle} className="mt-3 rounded-2xl border border-white/10 px-3 pb-3 pt-3">
       <div className="flex items-center justify-between gap-2 px-1">

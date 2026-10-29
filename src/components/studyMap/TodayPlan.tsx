@@ -154,6 +154,7 @@ export function TodayPlan({
   onStageChanged,
   free = false,
   learned = null,
+  children,
 }: {
   ui: UICopy;
   locale: string;
@@ -180,6 +181,8 @@ export function TodayPlan({
   free?: boolean;
   /** 일일 학습 카드 맨 아래에 묶는 "익힌 것"(ScriptAmount inside) — 지속 학습 숫자와 섞이지 않게. */
   learned?: ReactNode;
+  /** 큰 칸 둘(오늘 할 것·복습)의 요약과 내용, 늘 떠 있어야 하는 퀴즈·시험 화면. */
+  children: (parts: { today: { summary: ReactNode; body: ReactNode }; keep: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -624,13 +627,59 @@ export function TodayPlan({
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
-  const todayCard = (
-    <section data-today-plan className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
-      <div className="flex items-center gap-2">
-        <h3 className="min-w-0 flex-1 text-caption font-semibold text-status-learned">{ui.planTitle}</h3>
-        <span className="text-caption tabular-nums text-slate-400">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>
-      </div>
-      <div role="group" className="mt-2 flex flex-wrap gap-1.5">
+  const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
+  const todayBody = (
+    <div data-today-plan>
+      <ul className="mt-2 flex flex-col gap-1.5">
+        {items.map((item) => {
+          const done = doneOf(item);
+          return (
+            <li key={`${item.id}-${item.review ?? ""}`}>
+              <button
+                type="button"
+                onClick={() => (item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
+                className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
+              >
+                <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
+                  {done ? "✓" : ""}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span dir="auto" className={`block truncate text-note ${done ? "text-slate-400" : "text-ink"}`}>
+                    {labelOf(item)}
+                  </span>
+                  {item.review && item.kind !== "quiz" ? (
+                    <span dir="auto" className="block truncate text-meta text-warn">
+                      {ui.planAgain} · {keyLabel(language, item.review, grammarName)}
+                    </span>
+                  ) : null}
+                </span>
+                <span className="shrink-0 text-caption tabular-nums text-slate-500">{ui.planMinutes.replace("{n}", String(item.minutes))}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      {finished ? (
+        <LearnedToday
+          ui={ui}
+          locale={locale}
+          language={language}
+          ids={items.map((item) => item.id)}
+          grammarName={grammarName}
+          picked={picked}
+          onPick={(key) => setPicked((current) => (current === key ? null : key))}
+          onOpen={onOpen}
+          nameOf={(id) => {
+            const item = items.find((one) => one.id === id);
+            return item ? labelOf(item) : id;
+          }}
+        />
+      ) : null}
+      {learned}
+      {/* Pace, order, mix and the morning reminder fold away (2026-10-30, user: one big level on screen, the rest beneath it). */}
+      <details data-plan-settings className="mt-3">
+        <summary className="cursor-pointer list-none text-caption text-slate-400">⚙ {ui.planSettings}</summary>
+        <div role="group" className="mt-2 flex flex-wrap gap-1.5">
         {PACES.map((pace) => {
           const days = daysLeft(language, pace, planPassed, stage);
           const on = settings.pace === pace;
@@ -676,35 +725,11 @@ export function TodayPlan({
         ))}
       </div>
       <MorningControl ui={ui} />
-      <ul className="mt-2 flex flex-col gap-1.5">
-        {items.map((item) => {
-          const done = doneOf(item);
-          return (
-            <li key={`${item.id}-${item.review ?? ""}`}>
-              <button
-                type="button"
-                onClick={() => (item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
-                className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
-              >
-                <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
-                  {done ? "✓" : ""}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span dir="auto" className={`block truncate text-note ${done ? "text-slate-400" : "text-ink"}`}>
-                    {labelOf(item)}
-                  </span>
-                  {item.review && item.kind !== "quiz" ? (
-                    <span dir="auto" className="block truncate text-meta text-warn">
-                      {ui.planAgain} · {keyLabel(language, item.review, grammarName)}
-                    </span>
-                  ) : null}
-                </span>
-                <span className="shrink-0 text-caption tabular-nums text-slate-500">{ui.planMinutes.replace("{n}", String(item.minutes))}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      </details>
+    </div>
+  );
+  const overlays = (
+    <>
       {checkupOpen === "stage" ? (
         <CheckupPlayer
           ui={ui}
@@ -854,30 +879,11 @@ export function TodayPlan({
           }}
         />
       ) : null}
-      {finished ? (
-        <LearnedToday
-          ui={ui}
-          locale={locale}
-          language={language}
-          ids={items.map((item) => item.id)}
-          grammarName={grammarName}
-          picked={picked}
-          onPick={(key) => setPicked((current) => (current === key ? null : key))}
-          onOpen={onOpen}
-          nameOf={(id) => {
-            const item = items.find((one) => one.id === id);
-            return item ? labelOf(item) : id;
-          }}
-        />
-      ) : null}
-      {learned}
-    </section>
+    </>
   );
-  const keepCard = (
-    <>
-    {/* Ongoing practice (2026-10-29, user: keep it apart from My, count words on their own; a card inside My): its own count, parts, endless queue. */}
-    <section data-keep-learning className="mt-3 rounded-2xl border border-line bg-white/[0.03] px-3 py-3">
-      <h3 className="text-caption font-semibold text-ink">{ui.keepTitle}</h3>
+  const keepSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</span> : null;
+  const keepBody = (
+    <div data-keep-learning>
       {/* Six buttons on one level (2026-10-29, user): review, auto and the four parts; the picked one shows its amount and starts. */}
       <div role="group" data-study-focus className="mt-2 grid grid-cols-3 gap-1.5">
         {FOCUSES.map((focus) => (
@@ -957,21 +963,10 @@ export function TodayPlan({
           </span>
         </button>
       ) : null}
-    </section>
-    </>
+    </div>
   );
-  // 오늘 것을 다 하면 지속 학습이 위로(2026-10-29 사용자).
-  return finished ? (
-    <>
-      {keepCard}
-      {todayCard}
-    </>
-  ) : (
-    <>
-      {todayCard}
-      {keepCard}
-    </>
-  );
+  // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 복습 순서로 놓는다.
+  return children({ today: { summary: todaySummary, body: todayBody }, keep: { summary: keepSummary, body: keepBody }, overlays });
 }
 
 function vocabGroupName(ui: UICopy, by: VocabBy, id: string): string {

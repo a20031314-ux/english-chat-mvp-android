@@ -283,7 +283,7 @@ export function StudyMapTab({
           </>
         ) : started ? (
           <div className="mx-auto max-w-2xl">
-            <GrowthNetwork ui={ui} board={board} />
+            <GrowthNetwork ui={ui} board={board} plain={CURRICULUM_ONLY} />
             {CURRICULUM_ONLY ? null : (
               <div className="mt-3">
                 <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-29z";
+export const GUIDE_VERSION = "2026-10-30a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -163,7 +163,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "5. 다음 단계로",
         "body": [
-          "네 갈래 70% + 그 단계 학습을 모두 통과하면 다음 단계예요."
+          "네 갈래 70% + 그 단계 상황을 모두 통과하면 다음 단계예요."
         ],
         "shot": "stage-next"
       },
@@ -177,7 +177,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "7. 단계로 보기",
         "body": [
-          "학습마다 듣고 내 줄을 🎤로, 또는 🎤 없이 ‘{ui:scriptModeChoose}’·‘{ui:scriptModeOrder}’로. 통과로 셀 방식은 ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’."
+          "상황마다 듣고 내 줄을 🎤로, 또는 🎤 없이 ‘{ui:scriptModeChoose}’·‘{ui:scriptModeOrder}’로. 통과로 셀 방식은 ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’."
         ],
         "shot": "stage-scripts"
       },
