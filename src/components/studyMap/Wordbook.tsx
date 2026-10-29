@@ -95,10 +95,24 @@ export function WordbookCard({
               key={one}
               type="button"
               aria-pressed={view === one}
+              aria-label={one === "graph" ? ui.myViewGraph : ui.myViewNet}
+              title={one === "graph" ? ui.myViewGraph : ui.myViewNet}
               onClick={() => pick(one)}
-              className={`rounded-full px-2.5 py-0.5 text-meta ${view === one ? "bg-white/15 text-ink" : "text-slate-400"}`}
+              className={`rounded-full px-2 py-1 ${view === one ? "bg-white/15 text-ink" : "text-slate-400"}`}
             >
-              {one === "graph" ? ui.myViewGraph : ui.myViewNet}
+              {/* Icons only (2026-10-29, user); the name stays in aria-label and title. */}
+              {one === "graph" ? (
+                <svg viewBox="0 0 16 16" className="h-4 w-4" aria-hidden>
+                  <rect x="2" y="9" width="3" height="5" fill="currentColor" />
+                  <rect x="6.5" y="6" width="3" height="8" fill="currentColor" />
+                  <rect x="11" y="2" width="3" height="12" fill="currentColor" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 16 16" className="h-4 w-4" aria-hidden>
+                  <polygon points="8,1.5 14.5,6.2 12,14 4,14 1.5,6.2" fill="none" stroke="currentColor" strokeWidth="1.4" />
+                  <polygon points="8,5 11,7.4 9.8,11 6.2,11 5,7.4" fill="currentColor" />
+                </svg>
+              )}
             </button>
           ))}
         </span>
