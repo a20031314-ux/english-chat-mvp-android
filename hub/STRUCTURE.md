@@ -173,9 +173,9 @@
 | 신호 | 보내는 영역 | 받는 영역 |
 |---|---|---|
 | `openTab` | 여러 영역 8곳 | 앱 틀 |
-| `chatDraft` | 여러 영역 6곳 | AI 채팅 |
+| `chatDraft` | — | AI 채팅 |
 | `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
-| `practice` | AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
+| `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `sayOwnLine` | 앱 틀 | AI 통화 |
