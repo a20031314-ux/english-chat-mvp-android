@@ -103,7 +103,8 @@ type StudyLane = "review" | "learn";
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
-const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression", "pronunciation"];
+// 발음 버튼은 뺌(2026-10-29 사용자 — 표현과 같은 문제였음). 저장된 발음은 랜덤으로.
+const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
 function readSettings(): Settings {
@@ -552,11 +553,8 @@ export function TodayPlan({
       <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
       <span className="min-w-0 flex-1">
         <span className="block text-note font-semibold">{pick ? ui.studyMore : ui.studyReviewNone}</span>
-        {pick ? (
-          <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
-            {reasonLabel(pick)} · <bdi>{keyLabel(language, pick.key, grammarName)}</bdi>
-          </span>
-        ) : null}
+        {/* Only why, not what — the name gave the answer away before the quiz opened (2026-10-29, user). */}
+        {pick ? <span className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>{reasonLabel(pick)}</span> : null}
       </span>
     </button>
   );
@@ -769,7 +767,8 @@ export function TodayPlan({
           card={quiz.card}
           seed={studying ? `${day}-${round}` : day}
           round={log[quiz.id]?.n ?? 0}
-          mix={studying && studyFocus === "pronunciation" ? "listen" : settings.mix}
+          stage={stage}
+          mix={settings.mix}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}

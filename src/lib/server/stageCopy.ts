@@ -148,6 +148,20 @@ export function looksLike(ui: string, texts: string[]): boolean {
   return hits / lettered.length >= (ui === "vi" ? 0.4 : 0.5);
 }
 
+/** 라틴 문자가 아닌 앱 언어. */
+const NON_LATIN_UI = new Set(["ja", "zh", "ru", "ar", "th", "hi", "ko"]);
+
+/**
+ * 옮긴 줄에 영어 낱말이 그대로 남았나(2026-10-29 "あなたはどこfrom出身ですか" — 라틴 문자가 아닌 앱 언어만 본다).
+ * 원문에 따옴표로 든 말·대문자로 시작하는 이름·영어 원문에 없는 낱말(학습 언어 문법 용어 등)은 남아도 된다.
+ */
+export function leftoverEnglish(ui: string, source: string, text: string): boolean {
+  if (!NON_LATIN_UI.has(ui)) return false;
+  const quoted = new Set([...source.matchAll(/["“'‘]([^"”'’]+)["”'’]/g)].flatMap((m) => m[1]!.toLowerCase().split(/[^a-z]+/)).filter(Boolean));
+  const inSource = new Set(source.toLowerCase().split(/[^a-z']+/).filter(Boolean));
+  return [...text.matchAll(/(?<![A-Za-z'-])([a-z][a-z']+)(?![A-Za-z-])/g)].some((m) => inSource.has(m[1]!) && !quoted.has(m[1]!));
+}
+
 /** 마지막으로 옮기기가 실패한 까닭(점검 사용자에게만 돌려줌, 라우트의 simDetail). */
 let lastFailure = "";
 export function lastCopyFailure(): string {
@@ -155,7 +169,7 @@ export function lastCopyFailure(): string {
 }
 
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
-export async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
+export async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void, strict = false): Promise<string[] | null> {
   lastFailure = "";
   try {
     const kept = await kvGetJson<string[]>(cacheKey);
@@ -177,7 +191,7 @@ export async function translated(source: string[], ui: string, uiName: string, c
         messages: [
           {
             role: "system",
-            content: `Translate each numbered line from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every translation must be written in ${uiName} — never in the language being studied, even when a line is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are. Answer with exactly ${part.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
+            content: `Translate each numbered line from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every translation must be written in ${uiName} — never in the language being studied, even when a line is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are.${strict ? " Translate every English word; no English word may be left in the translation unless it is inside quotes." : ""} Answer with exactly ${part.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
           },
           { role: "user", content: part.map((text, index) => `${index + 1}|${text.replace(/\s+/g, " ")}`).join("\n") },
         ],
@@ -310,5 +324,22 @@ export async function scriptGlosses(
     const texts = results[i];
     if (texts) part.forEach((text, index) => (out[text] = texts[index]!));
   });
+  // 영어 낱말이 남은 줄만 다시 옮기고(엄하게), 묶음 저장도 고친다 — 다음부터는 저장된 고친 글.
+  const bad = Object.keys(out).filter((text) => leftoverEnglish(ui, text, out[text]!));
+  if (bad.length) {
+    const again = await translated(bad, ui, uiName, `stagecopy:v1:scriptfix:${language}:${stage}:${textsFingerprint(bad)}:${ui}`, onTranslate, true);
+    if (again) {
+      bad.forEach((text, index) => {
+        if (!leftoverEnglish(ui, text, again[index]!)) out[text] = again[index]!;
+      });
+      await Promise.all(
+        parts.map((part, i) =>
+          results[i] && part.some((text) => bad.includes(text))
+            ? kvSetJson(`stagecopy:v1:scriptgloss:${language}:${stage}:${textsFingerprint(part)}:${ui}`, part.map((text) => out[text]!), TTL_SECONDS).catch(() => undefined)
+            : undefined,
+        ),
+      );
+    }
+  }
   return out;
 }

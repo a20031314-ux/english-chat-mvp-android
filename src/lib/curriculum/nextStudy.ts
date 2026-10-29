@@ -29,6 +29,8 @@ export type QuizLog = Record<string, { n: number; right: number; at: number; las
 
 /** 맞힌 열쇠는 이만큼 쉬게 한다. */
 export const QUIZ_REST_MS = 3 * DAY_MS;
+/** 이만큼 안에 푼 열쇠는 다음 것으로 내지 않고 뒤로. */
+export const RECENT_MS = 30 * 60 * 1000;
 /** 한 번에 내다보는 수(화면은 첫 것만 씀 — 테스트·다음 문제 미리 보기용). */
 const LOOKAHEAD = 30;
 
@@ -142,5 +144,7 @@ export function nextStudy(input: {
     }
   }
 
-  return out;
+  // 방금 푼 것은 뒤로(2026-10-29 사용자 — 같은 표현만 계속 나옴): 30분 안에 푼 열쇠는 맞든 틀리든, 다시 볼 것·확인 중·틀렸던 것이 아니면 맨 뒤.
+  const recent = (pick: StudyPick) => pick.reason !== "again" && pick.reason !== "confirm" && pick.reason !== "missed" && now - (input.log[pick.key]?.at ?? -Infinity) < RECENT_MS;
+  return [...out.filter((pick) => !recent(pick)), ...out.filter(recent)];
 }

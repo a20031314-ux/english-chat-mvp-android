@@ -35,6 +35,7 @@ export function QuizPlayer({
   card,
   seed,
   round,
+  stage,
   onDone,
   onThen,
   onClose,
@@ -55,6 +56,8 @@ export function QuizPlayer({
   seed: string;
   /** 이 열쇠를 이 폰에서 푼 횟수(quizLog n). */
   round?: number;
+  /** 지금 단계 — 예문을 이 단계 + 1까지에서(curriculum/quiz.ts buildQuiz). */
+  stage?: number;
   onDone: (passed: boolean) => void;
   /** 틀렸을 때 원래 대본·문장구조로 — 없으면 버튼 없음. */
   onThen?: () => void;
@@ -75,8 +78,8 @@ export function QuizPlayer({
   // "알아서"(또는 조합 없음): 이 항목에 맞는 모양 + 이 사람이 약한 모양을 앞에(curriculum/learnStyle.ts). 연 동안 고정.
   const [kinds] = useState(() => (unit || (mix && mix !== "auto") ? undefined : styleKinds(language, quizKey, readKindLog(language))));
   const quiz = useMemo(
-    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix, kinds })),
-    [language, quizKey, card, seed, opened, mix, unit, kinds],
+    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix, kinds, stage })),
+    [language, quizKey, card, seed, opened, mix, unit, kinds, stage],
   );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});

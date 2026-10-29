@@ -112,3 +112,29 @@ for (const language of ["es", "ja"]) {
     assert.ok(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "learn", now: NOW }).length > 0);
   });
 }
+
+for (const language of ["es", "ja"]) {
+  test(`${language}: 방금(30분 안) 푼 열쇠는 새로 배우기에서 뒤로 — 틀렸어도 다른 것 먼저`, () => {
+    const first = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "expression", lane: "learn", now: NOW });
+    assert.ok(first.length > 1);
+    const key = first[0]!.key;
+    // 맞힌 것(쉬는 중)이 아니라 방금 틀린 것도 — 새로 배우기 줄에서는 뒤로.
+    const log: QuizLog = { [key]: { n: 1, right: 1, at: NOW - 60 * 1000, last: false } };
+    const next = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "learn", now: NOW });
+    assert.notEqual(next[0]!.key, key);
+    // 30분이 지나면 다시 앞에 올 수 있음.
+    const later = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "learn", now: NOW + 31 * 60 * 1000 });
+    assert.equal(later[0]!.key, key);
+  });
+}
+
+test("ja: 단계 근처 예문만 — 1단계 퀴즈에 4·5단계 문장이 없다", async () => {
+  const { buildQuiz, quizSources } = await import("./quiz.ts");
+  const key = "e|ありがとうございます";
+  const stages = new Set(quizSources("ja", key).map((source) => source.stage));
+  assert.ok([...stages].some((stage) => stage >= 3), "재료가 여러 단계에 걸침");
+  const quiz = buildQuiz("ja", key, { stage: 1, seed: "s" });
+  assert.ok(quiz);
+  const texts = new Set(quizSources("ja", key).filter((source) => source.stage > 2).map((source) => source.text));
+  for (const q of quiz!.questions) if ("text" in q) assert.ok(!texts.has(q.text), q.text);
+});

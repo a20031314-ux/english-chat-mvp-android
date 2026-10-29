@@ -181,3 +181,12 @@ test("옮긴 글 검사: 아랍어 앱에 스페인어로 옮긴 글은 버린�
   assert.equal(looksLike("th", ["สวัสดี", "ครับ"]), true);
   assert.equal(looksLike("es", ["anything"]), true);
 });
+
+test("옮긴 뜻풀이에 남은 영어 낱말 찾기 — 라틴 문자가 아닌 앱 언어만, 따옴표·이름은 괜찮음", async () => {
+  const { leftoverEnglish } = await import("../../server/stageCopy.ts");
+  assert.equal(leftoverEnglish("ja", "I'm from Korea. Where are you from?", "韓国出身です。あなたはどこfrom出身ですか？"), true);
+  assert.equal(leftoverEnglish("ja", "I'm from Korea. Where are you from?", "韓国出身です。あなたはどこの出身ですか？"), false);
+  assert.equal(leftoverEnglish("th", "Use \"ser\" for jobs.", "ใช้ \"ser\" กับอาชีพ"), false);
+  assert.equal(leftoverEnglish("ar", "My name is Ji-woo.", "اسمي Ji-woo."), false);
+  assert.equal(leftoverEnglish("fr", "Where are you from?", "Where are you from?"), false);
+});

@@ -350,8 +350,17 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
 export function buildQuiz(
   language: string,
   key: string,
-  options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix; kinds?: readonly QuizQuestion["kind"][] } = {},
+  options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix; kinds?: readonly QuizQuestion["kind"][]; stage?: number } = {},
 ): Quiz | null {
+  // 지금 단계 + 1까지의 예문만(2026-10-29 사용자 — 1단계에 4·5단계 업무 문장이 나옴). 그 안에 없으면 가까운 단계부터.
+  const near = (list: QuizSource[]): QuizSource[] => {
+    const stage = options.stage;
+    if (!stage) return list;
+    const inside = list.filter((source) => source.stage === 0 || source.stage <= stage + 1);
+    if (inside.length) return inside;
+    const closest = Math.min(...list.map((source) => source.stage));
+    return list.filter((source) => source.stage === closest);
+  };
   if (key.startsWith("w|")) {
     const word = wordQuiz(language, key, options.seed);
     if (word) return word;
@@ -360,7 +369,7 @@ export function buildQuiz(
   const kinds = options.mix && options.mix !== "auto" ? MIX_KINDS[options.mix] : options.kinds;
   if (kinds?.length) {
     const random = rng(`${key}|${options.seed ?? ""}|${kinds.join(",")}`);
-    const all = shuffled(quizSources(language, key), rng(key));
+    const all = shuffled(near(quizSources(language, key)), rng(key));
     const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
     const questions = mixQuiz(language, key, [...all.slice(shift), ...all.slice(0, shift)], kinds, random);
     const fix = options.card ? fixOf(language, options.card, random) : null;
@@ -369,7 +378,7 @@ export function buildQuiz(
     if (list.length >= 2) return { key, questions: list };
   }
   const random = rng(`${key}|${options.seed ?? ""}`);
-  const all = options.round === undefined ? shuffled(quizSources(language, key), random) : shuffled(quizSources(language, key), rng(key));
+  const all = options.round === undefined ? shuffled(near(quizSources(language, key)), random) : shuffled(near(quizSources(language, key)), rng(key));
   const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
   const sources = [...all.slice(shift), ...all.slice(0, shift)];
   const speakable = (source: QuizSource) => source.who !== "them" && speakScored(key);
