@@ -424,12 +424,6 @@ export function NotebookSection({
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
         />
       ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
-        <ApplyLine
-          ui={ui}
-          phrases={((book.parts ?? []).find((row) => row.order === book.stage)?.expressions ?? []).filter((row) => row.state).map((row) => row.text)}
-        />
-      ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
       ) : null}
@@ -1862,23 +1856,3 @@ function ProgressLine({ ui, row, stage }: { ui: UICopy; row: StageParts | null; 
   );
 }
 
-/** 적용(3층): 이 단계에서 배운 표현으로 AI 대화 — 누를 때만(대본 끝에서 저절로 잇지 않음, 2026-10-29 사용자 "피로"). */
-function ApplyLine({ ui, phrases }: { ui: UICopy; phrases: readonly string[] }) {
-  if (!phrases.length) return null;
-  const picked = phrases.slice(-3);
-  return (
-    <button
-      type="button"
-      data-apply-line
-      onClick={() => sendAppIntent("practice", { tab: "chat", goal: { phrases: picked } })}
-      className="mt-2 flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start text-note text-slate-200 hover:bg-white/5"
-    >
-      <span aria-hidden>💬</span>
-      <span className="min-w-0 flex-1 truncate">{ui.applyTalk}</span>
-      <span dir="auto" className="max-w-[40%] shrink-0 truncate text-meta text-slate-500">
-        {picked.join(" · ")}
-      </span>
-      <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
-    </button>
-  );
-}
