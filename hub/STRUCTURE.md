@@ -29,8 +29,8 @@
           **큰 칸 셋, 한 번에 하나만 펼침(2026-10-30, NotebookSection MyLayers, 이 폰 localStorage myLayer.v1, 처음엔 오늘 할 것):**
           [오늘 할 것 · n분] → TodayPlan 오늘 목록(누르면 n단계 칸이 펼쳐지며 그 상황·문장구조) · 오늘 배운 것 · ⚙(아이콘만, 분량 n일 완성 · 커리큘럼 순서 | 내 기록에 맞춰 · 조합 · 🔔 아침 알림) — 0단계면 LettersPlan
           [n단계 · 다음 단계까지 n] → 단계 이름 줄 끝 막대 그래프 아이콘 = 내 진척(시트: 단계대로 | 자유롭게 · 갈래별 이미 앎/전체 [목록 | 망 | 그래프] — PartsOverview → PartDetailSheet · 익힌 것) · 사다리 0~5 → 이 단계로 정하기 ·
-              연습 방식 버튼 하나(지금 방식 그림·이름·n/m ▾) → 그림 고르기 시트 [상황 | 표현 | 문장구조](StageScripts MethodPicture, 고른 목록만 — StageFrames listHidden) → ScriptPlayer/FramePlayer · 다음 단계까지(네 갈래 70% + 상황 모두 → 단계 시험) · 네 갈래 막대·칸 · 이 단계 대화 예시
-          [복습 · 다시 볼 것 n] → [다시 볼 것 | 랜덤 | 어휘 | 문법 | 표현] → 📝 시험(이번 주 확인·실력 확인·단계 시험·미리 확인) → ▶ 계속 공부(묶음 퀴즈) · 단어장(어휘) · 📈 실력 기록 · 지난번에 틀린 것(WeakStrip)
+              연습 방식 버튼 하나(이름·n/m ▾) → 고르기 시트 [상황 | 표현 | 문장구조] — 카드마다 그 방식의 짧은 대화 그림(studyMap/WayPicker, 이 단계 대본·틀에서), 고른 목록만(StageFrames listHidden) → ScriptPlayer/FramePlayer · 다음 단계까지(네 갈래 70% + 상황 모두 → 단계 시험) · 네 갈래 막대·칸 · 이 단계 대화 예시
+          [복습 · 다시 볼 것 n] → 방식 버튼 하나 → 같은 WayPicker 시트 [다시 볼 것(고친 줄 그어 → 고친 줄) | 랜덤 | 어휘(낱말 → 뜻) | 문법(틀 ___ → 예문) | 표현] → 📝 시험(이번 주 확인·실력 확인·단계 시험·미리 확인) → ▶ 계속 공부(묶음 퀴즈) · 단어장(어휘) · 📈 실력 기록 · 지난번에 틀린 것(WeakStrip)
           퀴즈·시험 화면은 칸 밖(TodayPlan children의 overlays)이라 칸을 접어도 떠 있다. 예전 [망 | 그래프 | 단계] 토글·[오늘의 학습]·[지난 학습]·노트에 넣기는 새 앱에 없음(GrowthNetwork plain, CURRICULUM_ONLY).
           튜터가 고친 줄은 서버가 바로 복습 카드로(notes/notebook.ts fileFix, 오타만 7일 후보).
           자세한 규칙(시험·숙지·통과·퀴즈 고르기)은 PRODUCT.md "My" 절 — 아래 예전 한 줄 요약은 2026-10-29 기준:
@@ -139,7 +139,7 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
-- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/CheckupPlayer` · `studyMap/GrowthNetwork` · `studyMap/LedgerPanel` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/ScriptTap` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayPlan` · `studyMap/WeakStrip` · `studyMap/Wordbook`
+- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/CheckupPlayer` · `studyMap/GrowthNetwork` · `studyMap/LedgerPanel` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/ScriptTap` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayPlan` · `studyMap/WayPicker` · `studyMap/WeakStrip` · `studyMap/Wordbook`
 - API: `curriculum/ask` · `curriculum/choices` · `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/pick` · `curriculum/progress` · `curriculum/restore`(학습 기록 공통) · `curriculum/review` · `curriculum`(학습 기록 공통) · `curriculum/script` · `curriculum/scripts` · `curriculum/stages` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`(학습 기록 공통)
 - 다른 영역이 씀: `studyMap/GrowthNetwork` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 

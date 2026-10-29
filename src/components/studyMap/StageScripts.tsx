@@ -5,10 +5,11 @@ import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { maybeShowInterstitial } from "@/lib/ads";
-import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
+import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
-import { framesFor } from "@/lib/curriculum/frames";
+import { framesFor, type Frame } from "@/lib/curriculum/frames";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
@@ -63,38 +64,6 @@ const MODE_KEY = "stageScriptMode";
 
 type Method = "situation" | "expression" | "frame";
 
-/**
- * 연습 방식 그림(2026-10-30 사용자 "버튼을 하나로, 누르면 이미지로 보여 주고 고르게"): 글 대신 모양으로 —
- * 상황 = 주고받는 대화, 표현 = 한 줄 속 표현 하나, 문장구조 = 같은 틀에 빈칸만 바뀜. 언어와 상관없이 같은 그림.
- */
-function MethodPicture({ id, className = "" }: { id: Method; className?: string }) {
-  return (
-    <svg aria-hidden viewBox="0 0 120 72" className={className} preserveAspectRatio="xMidYMid meet">
-      {id === "situation" ? (
-        <>
-          <rect x="6" y="6" width="62" height="16" rx="8" className="fill-current text-slate-600" />
-          <rect x="44" y="28" width="70" height="16" rx="8" className="fill-current text-status-learned" />
-          <circle cx="104" cy="36" r="3" className="fill-current text-slate-900" />
-          <rect x="6" y="50" width="54" height="16" rx="8" className="fill-current text-slate-600" />
-        </>
-      ) : id === "expression" ? (
-        <>
-          <rect x="6" y="22" width="108" height="28" rx="14" className="fill-current text-slate-600" />
-          <rect x="34" y="30" width="48" height="12" rx="4" className="fill-current text-status-learned" />
-        </>
-      ) : (
-        <>
-          {[8, 30, 52].map((y, index) => (
-            <g key={y}>
-              <rect x="6" y={y} width="44" height="12" rx="4" className="fill-current text-slate-600" />
-              <rect x="56" y={y} width={[34, 48, 26][index]} height="12" rx="4" className="fill-current text-status-learned" />
-            </g>
-          ))}
-        </>
-      )}
-    </svg>
-  );
-}
 
 /** 오늘의 대본(서버가 고름): 문법 이름은 앱 언어, 표현은 학습 언어. */
 export type ScriptRecommend = {
@@ -114,6 +83,30 @@ function readMode(stage: number): ScriptMode {
   } catch {
     return allowed[1]!;
   }
+}
+
+/** 상황 = 주고받는 대화: 첫 상황의 앞 두 줄(나 줄이 하나는 들도록). */
+export function situationBubbles(script: StageScript | undefined): Bubble[] {
+  if (!script) return [];
+  const at = Math.max(0, script.lines.findIndex((line) => line.who === "me") - 1);
+  return script.lines.slice(at, at + 2).map((line) => ({ side: line.who, text: line.text }));
+}
+
+/** 표현 = 한 줄 속 그 표현: 표현이 든 내 줄과 그 앞 줄, 표현은 칠함. */
+export function expressionBubbles(script: StageScript, expression = script.expressions[0]): Bubble[] {
+  const lower = (text: string) => text.toLowerCase();
+  const at = script.lines.findIndex((line) => line.who === "me" && (!expression || lower(line.text).includes(lower(expression))));
+  const mine = script.lines[at >= 0 ? at : script.lines.findIndex((line) => line.who === "me")];
+  if (!mine) return [];
+  const before = script.lines[script.lines.indexOf(mine) - 1];
+  const start = expression ? lower(mine.text).indexOf(lower(expression)) : -1;
+  const mark = start >= 0 && expression ? mine.text.slice(start, start + expression.length) : undefined;
+  return [...(before ? [{ side: before.who, text: before.text }] : []), { side: "me" as const, text: mine.text, mark }];
+}
+
+/** 문장구조 = 같은 틀에 빈칸만 바뀜: 예문 셋, 바뀐 곳은 칠함. */
+export function frameBubbles(frame: Frame): Bubble[] {
+  return frame.examples.slice(0, 3).map((example) => ({ side: "me" as const, text: example.text, mark: example.slot }));
 }
 
 export function StageScripts({
@@ -160,7 +153,6 @@ export function StageScripts({
   const [handled, setHandled] = useState(0);
   const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
   const [method, setMethod] = useState<Method>("situation");
-  const [picking, setPicking] = useState(false);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
@@ -176,12 +168,12 @@ export function StageScripts({
   const extras = scripts.filter((script) => !isSituationScript(script));
   const done = situations.filter((script) => passed.includes(script.id)).length;
   const frames = framesFor(language, stage);
+  const frameDone = frames.filter((frame) => passed.includes(frame.id)).length;
   const methods = [
-    { id: "situation" as const, label: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "" },
-    ...(extras.length ? [{ id: "expression" as const, label: ui.scriptsByExpression, count: "" }] : []),
-    ...(frames.length ? [{ id: "frame" as const, label: ui.framesTitle, count: `${frames.filter((frame) => passed.includes(frame.id)).length}/${frames.length}` }] : []),
+    { id: "situation" as const, label: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "", bubbles: situationBubbles(situations[0]) },
+    ...(extras.length ? [{ id: "expression" as const, label: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
+    ...(frames.length ? [{ id: "frame" as const, label: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
   ];
-  const current = methods.find((one) => one.id === method) ?? methods[0];
   const dot = (state: LedgerState | null | undefined) =>
     state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const row = (script: StageScript) => {
@@ -260,59 +252,8 @@ export function StageScripts({
           <span aria-hidden className="text-caption text-slate-400 rtl:rotate-180">›</span>
         </button>
       ) : null}
-      {/* One button for the way to practise; it opens pictures to pick from (2026-10-30, user: merge the buttons into one, show the way as an image). */}
-      <button
-        type="button"
-        data-script-method
-        aria-haspopup="dialog"
-        onClick={() => setPicking(true)}
-        className="flex items-center gap-2 self-start rounded-full border border-line px-3 py-1 text-caption text-ink hover:bg-white/10"
-      >
-        <MethodPicture id={method} className="h-4 w-6" />
-        <span>{current?.label}</span>
-        {current?.count ? <span className="tabular-nums text-slate-400">{current.count}</span> : null}
-        <span aria-hidden className="text-slate-500">▾</span>
-      </button>
-      {picking ? (
-        <BodyLayer>
-          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setPicking(false)}>
-            <div
-              role="dialog"
-              aria-modal="true"
-              aria-label={ui.practiceWay}
-              data-method-sheet
-              onClick={(event) => event.stopPropagation()}
-              className="w-full max-w-md rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
-            >
-              <div className="flex items-center gap-2">
-                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.practiceWay}</h3>
-                <button type="button" aria-label={ui.billingClose} onClick={() => setPicking(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
-                  ✕
-                </button>
-              </div>
-              <div className={`mt-3 grid gap-2 ${methods.length === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
-                {methods.map((one) => (
-                  <button
-                    key={one.id}
-                    type="button"
-                    aria-pressed={method === one.id}
-                    data-method={one.id}
-                    onClick={() => {
-                      setMethod(one.id);
-                      setPicking(false);
-                    }}
-                    className={`flex flex-col items-center gap-1.5 rounded-xl border p-2 text-center ${method === one.id ? "border-status-learned bg-status-learned/10" : "border-line hover:bg-white/5"}`}
-                  >
-                    <MethodPicture id={one.id} className="h-16 w-full" />
-                    <span className="text-caption text-ink">{one.label}</span>
-                    {one.count ? <span className="text-meta tabular-nums text-slate-400">{one.count}</span> : null}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </BodyLayer>
-      ) : null}
+      {/* One button for the way to practise; its sheet shows each way as a tiny dialogue (2026-10-30, user). */}
+      <WayPicker ui={ui} ways={methods} value={method} onPick={setMethod} data="script-method" />
       {method === "situation" ? situations.map(row) : null}
       {method === "expression" ? extras.map(row) : null}
       <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} listHidden={method !== "frame"} />

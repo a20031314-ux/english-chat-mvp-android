@@ -39,6 +39,8 @@ import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
+import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
+import { expressionBubbles } from "@/components/studyMap/StageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
@@ -881,24 +883,41 @@ export function TodayPlan({
       ) : null}
     </>
   );
+  // 복습 방식 그림(짧은 대화): 이 단계 상황·문장구조와 내 단어장·고친 줄에서.
+  const sample = (() => {
+    const scripts = allScriptsFor(language).filter((one) => one.stage === stage);
+    const situation = scripts.find(isSituationScript);
+    const frame = allFramesFor(language).find((one) => one.stage === stage) ?? allFramesFor(language)[0];
+    const example = frame?.examples[0];
+    const fix = cards.find((card) => (card.kind ?? "mistake") === "mistake") ?? cards[0];
+    const word = words[0];
+    const vocab: Bubble[] = word
+      ? [{ side: "me", text: word.word, mark: word.word }, ...(word.gloss ? [{ side: "them" as const, text: word.gloss, meaning: true }] : [])]
+      : example
+        ? [{ side: "me", text: example.slot, mark: example.slot }, { side: "them", text: glossFor(example.cue, locale), meaning: true }]
+        : [];
+    const grammar: Bubble[] = frame ? [{ side: "me", text: frame.pattern, mark: "___" }, ...(example ? [{ side: "me" as const, text: example.text, mark: example.slot }] : [])] : [];
+    const expression: Bubble[] = situation ? expressionBubbles(situation) : [];
+    const review: Bubble[] = fix
+      ? [{ side: "me", text: fix.wrong, strike: true }, { side: "me", text: fix.right }]
+      : expression.length
+        ? expression.map((one) => (one.side === "me" ? { ...one, again: true } : one))
+        : [];
+    const random: Bubble[] = [vocab[0], grammar[grammar.length - 1], expression[expression.length - 1]].filter((one): one is Bubble => Boolean(one));
+    return { review, random, vocab, grammar, expression };
+  })();
+  const lanes = FOCUSES.map((focus) => ({
+    id: focus,
+    label: focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus),
+    count: focus === "review" && reviewQueue.length ? (reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length)) : "",
+    bubbles: focus === "review" ? sample.review : focus === "auto" ? sample.random : focus === "vocab" ? sample.vocab : focus === "grammar" ? sample.grammar : sample.expression,
+  }));
   const keepSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</span> : null;
   const keepBody = (
     <div data-keep-learning>
-      {/* Six buttons on one level (2026-10-29, user): review, auto and the four parts; the picked one shows its amount and starts. */}
-      <div role="group" data-study-focus className="mt-2 grid grid-cols-3 gap-1.5">
-        {FOCUSES.map((focus) => (
-          <button
-            key={focus}
-            type="button"
-            aria-pressed={settings.focus === focus}
-            {...(focus === "review" ? { "data-study-review": "" } : {})}
-            onClick={() => save({ ...settings, focus })}
-            className={`rounded-xl border px-2 py-2 text-caption ${settings.focus === focus ? "border-status-learned/60 bg-white/10 font-semibold text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
-          >
-            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus)}
-            {focus === "review" && reviewQueue.length ? <span dir="ltr" className="ms-1 tabular-nums text-meta text-slate-400">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
-          </button>
-        ))}
+      {/* One button; the sheet shows each lane as a tiny dialogue (2026-10-30, user: pick the way by picture, understand it from a short dialogue). */}
+      <div className="mt-2 flex">
+        <WayPicker ui={ui} ways={lanes} value={settings.focus} onPick={(focus) => save({ ...settings, focus })} data="study-focus" />
       </div>
       {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
       {settings.focus === "review" ? (
