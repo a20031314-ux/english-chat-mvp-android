@@ -48,11 +48,15 @@ test("처음 시험: 아는 만큼 단계가 정해진다(영어·스페인어·
   }
 });
 
-test("묶음은 4문제, 넷째는 말하기(셋까지)", () => {
+test("묶음은 4문제, 넷째는 말하기(셋까지, 문법 열쇠면 고르기·순서)", () => {
   const block = placementBlock({ language: "en", stage: 2, used: new Set(), says: 0, seed: "x" });
   assert.equal(block.length, PLACEMENT_BLOCK);
-  assert.equal(block[PLACEMENT_BLOCK - 1]!.question.kind, "say");
-  assert.equal(block[PLACEMENT_BLOCK - 1]!.part, "pronunciation");
+  const fourth = block[PLACEMENT_BLOCK - 1]!;
+  if (/^[fg]\|/.test(fourth.key)) assert.notEqual(fourth.question.kind, "say");
+  else {
+    assert.equal(fourth.question.kind, "say");
+    assert.equal(fourth.part, "pronunciation");
+  }
   const later = placementBlock({ language: "en", stage: 2, used: new Set(), says: PLACEMENT_SAY, seed: "x" });
   assert.ok(later.every((item) => item.question.kind !== "say"));
 });

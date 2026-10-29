@@ -14,7 +14,7 @@ import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/sta
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
-import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
 import { stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -513,6 +513,24 @@ function PickView({
   );
 }
 
+/** The target line, the words that did not come out as said in bold amber (shown form keeps case and punctuation). */
+function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
+  return (
+    <>
+      {outcomes.map((outcome, index) => {
+        const text = outcome.shown ?? outcome.word;
+        const gap = outcome.space === false || index === outcomes.length - 1 ? "" : " ";
+        return (
+          <span key={index}>
+            {outcome.kind === "kept" ? text : <b className="font-semibold text-amber-300">{text}</b>}
+            {gap}
+          </span>
+        );
+      })}
+    </>
+  );
+}
+
 function SayView({
   ui,
   locale,
@@ -582,12 +600,25 @@ function SayView({
               </p>
             </div>
           ) : null}
-          <div className="flex items-start gap-2">
-            <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
-              {question.text}
-            </p>
-            <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
-          </div>
+          {/* Right but worded differently: "Say it like this" + the line with the words that differ marked (2026-10-29 — meaning-judged, so not counted wrong). */}
+          {result.correct && result.heard && !compareToTarget(question.text, result.heard).clean ? (
+            <div data-say-model className="flex items-start gap-2">
+              <div className="min-w-0 flex-1">
+                <p className="text-meta text-slate-500">{ui.chatExpressionTitle}</p>
+                <p dir="auto" className="mt-1 text-chat text-emerald-200">
+                  <ModelWords outcomes={compareToTarget(question.text, result.heard).outcomes} />
+                </p>
+              </div>
+              <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+            </div>
+          ) : (
+            <div className="flex items-start gap-2">
+              <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
+                {question.text}
+              </p>
+              <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+            </div>
+          )}
           {result.correct ? (
             <LineGrade ui={ui} exact={compareToTarget(question.text, result.heard ?? "").clean} unclear={result.unclear ?? []} practice={result.practice ?? null} pauses={result.pauses ?? []} />
           ) : (

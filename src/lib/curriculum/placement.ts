@@ -8,10 +8,10 @@
  * 결과는 이번 주 확인과 같은 모양(curriculum/checkup.ts CheckResult, kind "placement") — 시작 단계·단계별·갈래별 맞힌 수, 시작 단계보다 아래에서 틀린 것.
  * 레벨·등급은 보이지 않는다. 순수 모듈: 화면(studyMap/PlacementPlayer)·테스트.
  */
-import { byDifficulty, type ItemStats } from "./itemStats.ts";
+import { byDifficulty, difficultyOf, type ItemStats } from "./itemStats.ts";
 import { partOf, STAGE_KEYS, type CheckResult, type StageKey, type Tally } from "./checkup.ts";
 import { reviewKeysOf } from "./dailyPlan.ts";
-import { buildQuiz, type QuizQuestion } from "./quiz.ts";
+import { buildQuiz, speakScored, type QuizQuestion } from "./quiz.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 import type { PartId } from "../notes/stageParts.ts";
 
@@ -62,9 +62,16 @@ export function stageKeys(language: string, stage: number): string[] {
 export function placementBlock(input: { language: string; stage: number; used: ReadonlySet<string>; says: number; seed: string; stats?: ItemStats | null }): PlacementItem[] {
   const out: PlacementItem[] = [];
   let says = input.says;
-  for (const key of byDifficulty(shuffled(stageKeys(input.language, input.stage), `${input.seed}|${input.stage}`), input.stats)) {
+  const keys = byDifficulty(shuffled(stageKeys(input.language, input.stage), `${input.seed}|${input.stage}`), input.stats).filter((key) => !input.used.has(key));
+  // 말하기 자리는 말하기로 채점하는 열쇠(표현)로 — 문법 열쇠는 말하기 문제가 없다(quiz.ts speakScored). 그 열쇠를 앞으로 당겨 둔다.
+  const sayKey = keys.slice(PLACEMENT_BLOCK - 1).find((key) => speakScored(key) && difficultyOf(input.stats, key) !== "stuck" && buildQuiz(input.language, key, { seed: input.seed })?.questions.some((q) => q.kind === "say"));
+  const at = keys.indexOf(sayKey ?? "");
+  if (sayKey && says < PLACEMENT_SAY && at > PLACEMENT_BLOCK - 1 && !speakScored(keys[PLACEMENT_BLOCK - 1] ?? "")) {
+    keys.splice(at, 1);
+    keys.splice(PLACEMENT_BLOCK - 1, 0, sayKey);
+  }
+  for (const key of keys) {
     if (out.length >= PLACEMENT_BLOCK) break;
-    if (input.used.has(key)) continue;
     const quiz = buildQuiz(input.language, key, { seed: input.seed });
     if (!quiz) continue;
     const pick = (kind: QuizQuestion["kind"]) => quiz.questions.find((q) => q.kind === kind);

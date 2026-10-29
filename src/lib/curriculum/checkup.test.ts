@@ -27,7 +27,9 @@ test("이번 주 확인: 12문제, 배운 것·다음 단계를 섞고 말하기
     assert.ok(checkupReady(items), language);
     assert.ok(items.some((item) => item.origin === "ahead"), `${language}: 다음 단계 것`);
     const says = items.filter((item) => item.question.kind === "say");
-    assert.ok(says.length >= 1 && says.length <= CHECKUP_SAY, `${language}: 말하기 ${says.length}`);
+    assert.ok(says.length <= CHECKUP_SAY, `${language}: 말하기 ${says.length}`);
+    // 문법·문장구조 열쇠는 말하기로 안 냄(quiz.ts speakScored, 2026-10-29).
+    assert.ok(says.every((item) => !/^[fg]\|/.test(item.key)), `${language}: 문법 열쇠 말하기`);
     assert.ok(says.every((item) => item.origin !== "ahead" && item.part === "pronunciation"), `${language}: 다음 단계 것은 말하기로 안 냄`);
     assert.ok(items.every((item) => item.question.kind !== "fix"), language);
     assert.equal(new Set(items.map((item) => item.key)).size, items.length, `${language}: 열쇠는 한 번씩`);

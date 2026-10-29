@@ -3,7 +3,7 @@
  *
  * 1) 항목 성격별 기본 순서(모두 같음):
  *    낱말(두 낱말까지)      뜻 고르기 → 듣고 고르기 → 말하기   (뜻·소리를 묶고 꺼냄)
- *    문법·문장구조          맞추기 → 빈칸 → 말하기             (어순·형태를 조립부터)
+ *    문법·문장구조          맞추기 → 빈칸 → 맞추기             (어순·형태를 조립부터, 말하기 채점 없음 2026-10-29)
  *    덩어리 표현(긴 표현)    듣고 고르기 → 말하기 → 말하기       (쪼개지 말고 통째로)
  *    높임·말투가 갈리는 말   빈칸 → 뜻 고르기 → 말하기           (언제 쓰는지)
  *    소리가 까다로운 말      듣고 고르기 → 듣고 고르기 → 말하기  (성조·장음·촉음·목구멍소리)
@@ -21,7 +21,8 @@ type Kind = QuizQuestion["kind"];
 
 export const STYLE_KINDS: Record<ItemStyle, Kind[]> = {
   word: ["meaning", "listen", "say"],
-  structure: ["order", "choose", "say"],
+  // 문법·문장구조는 말하기로 채점하지 않음(quiz.ts speakScored) — 맞추기 → 빈칸 → 다른 줄 맞추기.
+  structure: ["order", "choose", "order"],
   chunk: ["listen", "say", "say"],
   register: ["choose", "meaning", "say"],
   sound: ["listen", "listen", "say"],

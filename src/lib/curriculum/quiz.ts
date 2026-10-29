@@ -305,6 +305,14 @@ export function fixOf(language: string, card: QuizCard, random: () => number): Q
  * round = 이 열쇠를 이 폰에서 몇 번 풀었나(quizLog n): 문장을 돌려 매번 다른 줄로, 모양도 돌린다 —
  * 0번째 고르기 먼저(알아보기) · 1번째 맞추기 먼저(구조) · 2번째부터 말하기 둘(꺼내기). 시험(checkup·stageTest·placement)은 round 없이.
  */
+/**
+ * 문법·문장구조 열쇠는 말하기로 맞음/틀림을 가리지 않는다(2026-10-29 사용자 "문법 요소가 말하기 채점에 연결된 게 문제" → "1, 2번 먼저"):
+ * 받아쓰기가 작은 표지(3인칭 s·관사·조사)를 고쳐 듣고, 판정은 뜻으로 해서 그 규칙을 틀려도 맞음이 된다. 그래서 이 열쇠의 문제는 고르기·순서·빈칸만.
+ */
+export function speakScored(key: string): boolean {
+  return !key.startsWith("g|") && !key.startsWith("f|");
+}
+
 export function buildQuiz(
   language: string,
   key: string,
@@ -326,7 +334,7 @@ export function buildQuiz(
   const all = options.round === undefined ? shuffled(quizSources(language, key), random) : shuffled(quizSources(language, key), rng(key));
   const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
   const sources = [...all.slice(shift), ...all.slice(0, shift)];
-  const speakable = (source: QuizSource) => source.who !== "them";
+  const speakable = (source: QuizSource) => source.who !== "them" && speakScored(key);
   const questions: QuizQuestion[] = [];
   const used = new Set<string>();
   const fix = options.card ? fixOf(language, options.card, random) : null;
@@ -360,6 +368,18 @@ export function buildQuiz(
   // 세 번째부터: 고르기 대신 다른 줄 말하기 하나 더(꺼내기를 늘림).
   const secondSay = round >= 2 && !fix ? sources.find((source) => speakable(source) && !used.has(source.text) && source.text !== sayFrom?.text) : undefined;
   const middleKept = secondSay ? middle.filter((q) => q.kind !== "choose").slice(0, 1) : middle;
+  // 문법 열쇠: 말하기 자리에 다른 줄 맞추기(없으면 고르기) 하나 더.
+  if (!speakScored(key)) {
+    for (const source of sources) {
+      if (used.has(source.text)) continue;
+      const extra = orderOf(language, source, random) ?? chooseOf(language, key, source, random);
+      if (extra) {
+        middle.push(extra);
+        used.add(source.text);
+        break;
+      }
+    }
+  }
   const room = QUIZ_SIZE - questions.length - (sayFrom ? 1 : 0) - (secondSay ? 1 : 0);
   questions.push(...middleKept.slice(0, Math.max(0, room)));
   if (secondSay) questions.push({ kind: "say", text: secondSay.text, gloss: secondSay.gloss, from: secondSay.from });
@@ -406,7 +426,9 @@ const MIX_KINDS: Record<Exclude<QuizMix, "auto">, QuizQuestion["kind"][]> = {
 function mixQuiz(language: string, key: string, sources: readonly QuizSource[], kinds: readonly QuizQuestion["kind"][], random: () => number): QuizQuestion[] {
   const used = new Set<string>();
   const out: QuizQuestion[] = [];
-  for (const kind of kinds) {
+  for (const wanted of kinds) {
+    // 문법 열쇠는 말하기 대신 고르기(못 만들면 아래에서 맞추기로).
+    const kind: QuizQuestion["kind"] = wanted === "say" && !speakScored(key) ? (out.some((q) => q.kind === "choose") ? "order" : "choose") : wanted;
     const pool = sources.filter((source) => !used.has(source.text) && (kind !== "say" || source.who !== "them"));
     const fallback = sources.filter((source) => kind !== "say" || source.who !== "them");
     let made: QuizQuestion | null = null;

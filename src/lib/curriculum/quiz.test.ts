@@ -7,13 +7,13 @@ import { segmentWords } from "../wordSegments.ts";
 
 const fixed = () => 0.42;
 
-test("퀴즈: 문장구조 열쇠(ja, 띄어쓰기 없음) — 말하기로 끝나고 셋까지, 같은 날 같은 문제", () => {
+test("퀴즈: 문장구조 열쇠(ja, 띄어쓰기 없음) — 말하기 없이 셋까지, 같은 날 같은 문제", () => {
   const frame = allFramesFor("ja")[0]!;
   const key = `f|${frame.id}`;
   const quiz = buildQuiz("ja", key, { seed: "2026-10-28" })!;
   assert.ok(quiz, "퀴즈가 만들어져야 함");
   assert.ok(quiz.questions.length >= 2 && quiz.questions.length <= 3);
-  assert.equal(quiz.questions.at(-1)!.kind, "say");
+  assert.ok(quiz.questions.every((q) => q.kind !== "say"));
   assert.deepEqual(buildQuiz("ja", key, { seed: "2026-10-28" }), quiz);
   const order = quiz.questions.find((q) => q.kind === "order");
   if (order && order.kind === "order") {
@@ -72,7 +72,7 @@ test("퀴즈: 고친 줄이 있으면 맨 앞, 셋을 넘지 않음", () => {
   const quiz = buildQuiz("ja", `f|${frame.id}`, { card: { wrong: "わたしはキムだ。", right: "わたしはキムです。" }, seed: "x" })!;
   assert.equal(quiz.questions[0]!.kind, "fix");
   assert.ok(quiz.questions.length <= 3);
-  assert.equal(quiz.questions.at(-1)!.kind, "say");
+  assert.ok(quiz.questions.every((q) => q.kind !== "say"));
 });
 
 test("퀴즈: 맞음 기준과 조각 잇기", () => {
@@ -152,4 +152,26 @@ test("학습 조합: 말하기·듣기·읽기 위주로 모양이 바뀌고, �
   }
   assert.equal(unitPassed(7, 10), true);
   assert.equal(unitPassed(6, 10), false);
+});
+
+test("문법·문장구조 열쇠는 말하기 문제가 없다(고르기·순서만, 2026-10-29) — 일본어·스페인어·영어", async () => {
+  const { buildQuiz, speakScored } = await import("./quiz.ts");
+  const { buildStageTest } = await import("./stageTest.ts");
+  const { buildCheckup } = await import("./checkup.ts");
+  const { stageKeys } = await import("./placement.ts");
+  for (const language of ["ja", "es", "en"]) {
+    const grammar = [1, 2, 3].flatMap((stage) => stageKeys(language, stage)).filter((key) => !speakScored(key));
+    assert.ok(grammar.length > 0, language);
+    for (const key of grammar) {
+      for (const options of [{}, { round: 2 }, { mix: "speak" as const }, { mix: "listen" as const }, { kinds: ["say", "say", "order"] as const }]) {
+        const quiz = buildQuiz(language, key, { seed: "t", ...options, kinds: "kinds" in options ? [...options.kinds] : undefined });
+        assert.ok(!quiz?.questions.some((q) => q.kind === "say"), `${language} ${key} ${JSON.stringify(options)}`);
+      }
+    }
+    const test = buildStageTest({ language, stage: 2, now: 0 });
+    assert.ok(!test.some((item) => item.question.kind === "say" && !speakScored(item.key)), language);
+    const checkup = buildCheckup({ language, stage: 2, passed: new Set(), review: {}, log: {}, now: 0 });
+    assert.ok(!checkup.some((item) => item.question.kind === "say" && !speakScored(item.key)), language);
+  }
+  assert.equal(speakScored("e|nice to meet you"), true);
 });
