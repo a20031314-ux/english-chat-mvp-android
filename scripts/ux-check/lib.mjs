@@ -1,7 +1,8 @@
 // 체감 점검 공용(저장소 맨 위에서 실행): www를 띄우고 /api는 운영으로(시험 사용자 x-rc-user), 앱 문구(copy) 읽기.
 import http from "node:http"; import fs from "node:fs"; import path from "node:path";
 import { createRequire } from "node:module";
-export const { chromium } = createRequire(process.cwd() + "/node_modules/")("playwright");
+// PLAYWRIGHT_MODULE: 저장소 것과 깔린 브라우저 버전이 다를 때(다른 점검 도구와 같은 변수).
+export const { chromium } = process.env.PLAYWRIGHT_MODULE ? await import(process.env.PLAYWRIGHT_MODULE) : createRequire(process.cwd() + "/node_modules/")("playwright");
 export const ROOT = process.cwd(), WWW = path.join(ROOT, "www"), API = "https://www.languagebank.net";
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".webp": "image/webp", ".woff2": "font/woff2", ".mp4": "video/mp4" };
 export const state = { uid: "" };
