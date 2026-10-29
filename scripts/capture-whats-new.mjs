@@ -2151,11 +2151,14 @@ const STEPS = {
     }
   },
   async "stage-start"({ page, ui, wait }) {
+    // 2.78~: 처음엔 1단계가 골라진 대화 예시 한 장([다시 고르기 | 이 단계로 시작]) — 예전 앱은 "이런 대화, 할 수 있어요?" 제목.
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     const title = page.getByText(ui.stageCheckTitle, { exact: true });
-    for (let i = 0; i < 40 && !(await title.count()); i++) await wait(500);
-    await title.first().scrollIntoViewIfNeeded();
-    await wait(800);
+    const begin = page.getByRole("button", { name: ui.stageBegin });
+    for (let i = 0; i < 40 && !(await title.count()) && !(await begin.count()); i++) await wait(500);
+    if (await title.count()) await title.first().scrollIntoViewIfNeeded();
+    else await page.evaluate(() => window.scrollTo(0, 0));
+    await wait(1200);
   },
   async goal({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
