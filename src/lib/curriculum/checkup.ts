@@ -60,7 +60,7 @@ export const CHECKUP_SAY = 3;
 /** 이 안에 배우거나 풀었으면 "최근". */
 export const RECENT_MS = 14 * DAY_MS;
 /** 서버가 남기는 결과 수. */
-export const CHECKUP_KEEP = 12;
+export const CHECKUP_KEEP = 30;
 
 const QUOTA: Record<CheckOrigin, number> = { recent: 6, old: 4, ahead: 2 };
 

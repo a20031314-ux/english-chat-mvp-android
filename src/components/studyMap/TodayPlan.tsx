@@ -22,6 +22,8 @@ import { allFramesFor } from "@/lib/curriculum/frames";
 import type { QuizCard } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
+import { maybeShowInterstitial } from "@/lib/ads";
+import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
@@ -165,7 +167,7 @@ export function TodayPlan({
   const [studying, setStudying] = useState<StudyPick | null>(null);
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
   const { checkups, save: saveCheckup } = useCheckups(language);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "view" | "stage" | null>(null);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
   const [firstSeen, setFirstSeen] = useState(0);
   useEffect(() => {
@@ -281,9 +283,9 @@ export function TodayPlan({
   // 이번 주 확인에서 약하게 나온 갈래가 있으면 계속 공부가 그것부터(없으면 연습 기록 쪽 갈래).
   const studyWeakest = checkupWeakest(checkups, now) ?? weakest;
   const lastCheckup = checkups.length ? checkups[checkups.length - 1]! : null;
+  const lastBig = [...checkups].reverse().find((result) => result.kind) ?? null;
   const checkupItems = checkupOpen === "take" || checkupDue(checkups, now) ? buildCheckup({ language, stage, passed: passedSet, review, log, now }) : [];
   const checkupOffer = checkupDue(checkups, now) && checkupReady(checkupItems) && !bigTestDue(checkups, firstSeen, now);
-  const checkupMinutes = Math.max(1, Math.round(checkupItems.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const finishCheckup = (result: CheckResult) => {
     void saveCheckup(result).then((body) => {
       if (body?.review) announceReview(language, body.review);
@@ -305,6 +307,11 @@ export function TodayPlan({
     now,
   });
   const upNext = queue[0] ?? null;
+  // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
+  const testNext: "stage" | "take" | null = stageTestOffer && stageTestItems.length ? "stage" : checkupOffer ? "take" : null;
+  const testItems = testNext === "stage" ? stageTestItems : checkupItems;
+  const minutesOf = (list: readonly { question: { kind: string } }[]) =>
+    Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const studyItem = (pick: StudyPick): PlanItem => {
     const practice = itemForKey(language, pick.key);
     return {
@@ -327,6 +334,31 @@ export function TodayPlan({
     setStudying(pick);
     setQuiz(studyItem(pick));
   };
+  const resultActions = (
+    <div className="flex flex-wrap justify-center gap-2">
+      <button
+        type="button"
+        onClick={() => {
+          setCheckupOpen(null);
+          void maybeShowInterstitial("checkupEnd");
+        }}
+        className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
+      >
+        {ui.billingClose}
+      </button>
+      <button
+        type="button"
+        data-test-continue
+        onClick={() => {
+          setCheckupOpen(null);
+          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null);
+        }}
+        className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
+      >
+        {ui.studyMore} ›
+      </button>
+    </div>
+  );
   const reasonLabel = (pick: StudyPick) =>
     pick.reason === "again"
       ? ui.planAgain
@@ -408,24 +440,6 @@ export function TodayPlan({
           );
         })}
       </ul>
-      {stageTestOffer && stageTestItems.length ? (
-        <button
-          type="button"
-          data-stage-test-offer
-          onClick={() => setCheckupOpen("stage")}
-          className="mt-2 flex w-full items-center gap-3 rounded-xl border border-status-learned/60 px-3 py-2 text-start text-ink hover:bg-white/5"
-        >
-          <span aria-hidden className="shrink-0 text-caption">📝</span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-note font-semibold">
-              {ui.placementTitle} · {ui.stageNumber.replace("{n}", String(stage))}
-            </span>
-            <span className="block truncate text-meta text-slate-400">
-              {ui.checkupMeta.replace("{n}", String(stageTestItems.length)).replace("{m}", String(Math.max(1, Math.round(stageTestItems.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)))))}
-            </span>
-          </span>
-        </button>
-      ) : null}
       {checkupOpen === "stage" ? (
         <CheckupPlayer
           ui={ui}
@@ -438,55 +452,64 @@ export function TodayPlan({
           finishWith={(answers) => stageTestResult(stageTestItems, answers, stage)}
           heading={(result) => (result.passed ? ui.stageTestPassed.replace("{n}", String(result.stage)) : undefined)}
           labelOf={(key) => keyLabel(language, key, grammarName)}
+          actions={(result) => (result.passed ? undefined : resultActions)}
           onFinish={finishCheckup}
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
-      {checkupOffer ? (
-        <button
-          type="button"
-          data-checkup-offer
-          onClick={() => setCheckupOpen("take")}
-          className="mt-2 flex w-full items-center gap-3 rounded-xl border border-status-learned/60 px-3 py-2 text-start text-ink hover:bg-white/5"
-        >
-          <span aria-hidden className="shrink-0 text-caption">📝</span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-note font-semibold">{ui.checkupTitle}</span>
-            <span className="block truncate text-meta text-slate-400">{ui.checkupMeta.replace("{n}", String(checkupItems.length)).replace("{m}", String(checkupMinutes))}</span>
-          </span>
-        </button>
-      ) : lastCheckup ? (
-        <button type="button" onClick={() => setCheckupOpen("view")} className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200">
-          <span>📝 {ui.checkupTitle} ✓</span>
-          <span className="tabular-nums">· {ui.checkupAgo.replace("{n}", String(Math.max(0, Math.floor((now - lastCheckup.at) / 86_400_000))))}</span>
-        </button>
-      ) : null}
-      {checkupOpen === "take" || checkupOpen === "view" ? (
+      {checkupOpen === "take" ? (
         <CheckupPlayer
           ui={ui}
           locale={locale}
           language={language}
           stage={stage}
-          items={checkupOpen === "take" ? checkupItems : []}
-          result={checkupOpen === "view" ? lastCheckup : null}
-          previous={checkupOpen === "view" ? (checkups.length > 1 ? checkups[checkups.length - 2]! : null) : lastCheckup}
+          items={checkupItems}
+          previous={lastCheckup}
           labelOf={(key) => keyLabel(language, key, grammarName)}
+          actions={() => resultActions}
           onFinish={finishCheckup}
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
-      {upNext ? (
+      {checkupOpen === "record" ? (
+        <SkillRecord ui={ui} locale={locale} checkups={checkups} labelOf={(key) => keyLabel(language, key, grammarName)} onClose={() => setCheckupOpen(null)} />
+      ) : null}
+      {testNext || upNext ? (
         <button
           type="button"
-          onClick={() => startStudy(upNext)}
+          {...(testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
+          onClick={() => (testNext ? setCheckupOpen(testNext) : startStudy(upNext))}
           className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
         >
           <span aria-hidden className="shrink-0 text-caption">▶</span>
           <span className="min-w-0 flex-1">
             <span className="block text-note font-semibold">{ui.studyMore}</span>
             <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
-              {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
+              {testNext ? (
+                <>
+                  📝 {testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : ui.checkupTitle} ·{" "}
+                  {ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}
+                </>
+              ) : upNext ? (
+                <>
+                  {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
+                </>
+              ) : null}
             </span>
+          </span>
+        </button>
+      ) : null}
+      {checkups.length ? (
+        <button
+          type="button"
+          data-skill-record-open
+          onClick={() => setCheckupOpen("record")}
+          className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200"
+        >
+          <span>📈 {ui.skillRecord}</span>
+          <span className="tabular-nums">
+            · {checkups.length}
+            {lastBig ? ` · ${ui.stageNumber.replace("{n}", String(lastBig.stage))}` : ""}
           </span>
         </button>
       ) : null}

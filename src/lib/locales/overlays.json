@@ -771,7 +771,9 @@
     "placementPick": "自分で選ぶ",
     "placementTitle": "実力チェック",
     "placementStart": "ステージ{n}から始める",
-    "stageTestPassed": "✓ ステージ{n}合格"
+    "stageTestPassed": "✓ ステージ{n}合格",
+    "skillRecord": "実力の記録",
+    "skillViewList": "リスト"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1545,7 +1547,9 @@
     "placementPick": "自己选",
     "placementTitle": "水平测试",
     "placementStart": "从第{n}阶段开始",
-    "stageTestPassed": "✓ 第{n}阶段通过"
+    "stageTestPassed": "✓ 第{n}阶段通过",
+    "skillRecord": "能力记录",
+    "skillViewList": "列表"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2322,7 +2326,9 @@
     "placementPick": "Tự chọn",
     "placementTitle": "Kiểm tra trình độ",
     "placementStart": "Bắt đầu từ giai đoạn {n}",
-    "stageTestPassed": "✓ Đã qua giai đoạn {n}"
+    "stageTestPassed": "✓ Đã qua giai đoạn {n}",
+    "skillRecord": "Nhật ký trình độ",
+    "skillViewList": "Danh sách"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3104,7 +3110,9 @@
     "placementPick": "Choisir moi-même",
     "placementTitle": "Test de niveau",
     "placementStart": "Commencer à l'étape {n}",
-    "stageTestPassed": "✓ Étape {n} réussie"
+    "stageTestPassed": "✓ Étape {n} réussie",
+    "skillRecord": "Suivi du niveau",
+    "skillViewList": "Liste"
   },
   "it": {
     "archive": "Report",
@@ -4077,7 +4085,9 @@
     "placementPick": "Scelgo io",
     "placementTitle": "Test di livello",
     "placementStart": "Inizia dalla fase {n}",
-    "stageTestPassed": "✓ Fase {n} superata"
+    "stageTestPassed": "✓ Fase {n} superata",
+    "skillRecord": "Storico del livello",
+    "skillViewList": "Elenco"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4862,7 +4872,9 @@
     "placementPick": "Escolher eu mesmo",
     "placementTitle": "Teste de nível",
     "placementStart": "Começar na etapa {n}",
-    "stageTestPassed": "✓ Etapa {n} concluída"
+    "stageTestPassed": "✓ Etapa {n} concluída",
+    "skillRecord": "Histórico de nível",
+    "skillViewList": "Lista"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5833,7 +5845,9 @@
     "placementPick": "Выбрать самому",
     "placementTitle": "Проверка уровня",
     "placementStart": "Начать с этапа {n}",
-    "stageTestPassed": "✓ Этап {n} пройден"
+    "stageTestPassed": "✓ Этап {n} пройден",
+    "skillRecord": "История уровня",
+    "skillViewList": "Список"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6614,7 +6628,9 @@
     "placementPick": "Pilih sendiri",
     "placementTitle": "Cek kemampuan",
     "placementStart": "Mulai dari tahap {n}",
-    "stageTestPassed": "✓ Tahap {n} lulus"
+    "stageTestPassed": "✓ Tahap {n} lulus",
+    "skillRecord": "Riwayat kemampuan",
+    "skillViewList": "Daftar"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7388,7 +7404,9 @@
     "placementPick": "أختار بنفسي",
     "placementTitle": "اختبار المستوى",
     "placementStart": "ابدأ من المرحلة {n}",
-    "stageTestPassed": "✓ اجتزت المرحلة {n}"
+    "stageTestPassed": "✓ اجتزت المرحلة {n}",
+    "skillRecord": "سجل المستوى",
+    "skillViewList": "قائمة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8162,7 +8180,9 @@
     "placementPick": "เลือกเอง",
     "placementTitle": "วัดระดับ",
     "placementStart": "เริ่มที่ขั้นที่ {n}",
-    "stageTestPassed": "✓ ผ่านขั้นที่ {n}"
+    "stageTestPassed": "✓ ผ่านขั้นที่ {n}",
+    "skillRecord": "บันทึกระดับ",
+    "skillViewList": "รายการ"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8936,6 +8956,8 @@
     "placementPick": "खुद चुनें",
     "placementTitle": "स्तर जाँच",
     "placementStart": "चरण {n} से शुरू करें",
-    "stageTestPassed": "✓ चरण {n} पार"
+    "stageTestPassed": "✓ चरण {n} पार",
+    "skillRecord": "स्तर का रिकॉर्ड",
+    "skillViewList": "सूची"
   }
 }
