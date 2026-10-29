@@ -10,7 +10,20 @@ import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
  * My 단계 보기 맨 위: 대본으로 익힌 양(curriculum/scriptAmount.ts, 2026-10-28 사용자 "학습량을 정량적으로든 시각적으로든" → 1·2).
  * 숫자 한 줄(표현·문법·틀 = 익힌 것/전체, 말한 문장 수) + "할 수 있는 일"(공통 기능 칸, 그 기능의 틀을 통과하면 켜짐, 단계별).
  */
-export function ScriptAmount({ ui, locale, language, passed }: { ui: UICopy; locale: string; language: string; passed: readonly string[] }) {
+export function ScriptAmount({
+  ui,
+  locale,
+  language,
+  passed,
+  skipped,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  passed: readonly string[];
+  /** 시험으로 걸러진 대본·틀(curriculum/known.ts). */
+  skipped?: ReadonlySet<string>;
+}) {
   const [open, setOpen] = useState(false);
   // 기능 이름은 단계 뜻풀이와 같이 옮긴다(server/stageCopy.ts) — 1~5단계 모두 받아 둔다.
   useStageGlosses(language, 1, locale);
@@ -19,7 +32,11 @@ export function ScriptAmount({ ui, locale, language, passed }: { ui: UICopy; loc
   useStageGlosses(language, 4, locale);
   useStageGlosses(language, 5, locale);
   const key = passed.join(",");
-  const amount = useMemo(() => scriptAmount(language, new Set(key ? key.split(",") : [])), [language, key]);
+  const skippedKey = skipped ? [...skipped].sort().join(",") : "";
+  const amount = useMemo(
+    () => scriptAmount(language, new Set(key ? key.split(",") : []), new Set(skippedKey ? skippedKey.split(",") : [])),
+    [language, key, skippedKey],
+  );
   if (!amount) return null;
   const done = amount.canDo.filter((item) => item.done).length;
   const stages = [...new Set(amount.canDo.map((item) => item.fn.stage))].sort((a, b) => a - b);

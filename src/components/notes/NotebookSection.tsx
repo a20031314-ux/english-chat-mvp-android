@@ -384,23 +384,8 @@ export function NotebookSection({
       {question && !question.node ? (
         <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
       ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length ? (
-        <WeakStrip
-          ui={ui}
-          locale={locale}
-          language={language}
-          spots={weakSpots({
-            language,
-            fixes: [...book.cards, ...book.pending],
-            misses: allMisses(language),
-            review: book.review ?? NO_REVIEW,
-            grammarName: (stage, index) => {
-              const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
-              return node ? nameOf(node.id) : "";
-            },
-          })}
-          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
-        />
+      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
+        <ProgressLine ui={ui} row={(book.parts ?? []).find((row) => row.order === book.stage) ?? null} stage={book.stage} />
       ) : null}
       {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <TodayPlan
@@ -421,8 +406,32 @@ export function NotebookSection({
           }}
         />
       ) : null}
+      {frame && CURRICULUM_ONLY && book.stages.length ? (
+        <WeakStrip
+          ui={ui}
+          locale={locale}
+          language={language}
+          spots={weakSpots({
+            language,
+            fixes: [...book.cards, ...book.pending],
+            misses: allMisses(language),
+            review: book.review ?? NO_REVIEW,
+            grammarName: (stage, index) => {
+              const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
+              return node ? nameOf(node.id) : "";
+            },
+          })}
+          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
+        />
+      ) : null}
+      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
+        <ApplyLine
+          ui={ui}
+          phrases={((book.parts ?? []).find((row) => row.order === book.stage)?.expressions ?? []).filter((row) => row.state).map((row) => row.text)}
+        />
+      ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (
-        <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} />
+        <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
       ) : null}
       {stageTestFor !== null && onNextStage ? (
         <StageTestGate
@@ -1827,5 +1836,49 @@ function StageTestGate({
       onFinish={onFinish}
       onClose={onClose}
     />
+  );
+}
+
+/**
+ * My 맨 위 한 줄(2026-10-29 사용자 "정해진 학습으로 뼈대 → 지속 학습으로 채우고 → AI·사용자 간 학습으로 적용"):
+ * 지금 단계와 다음 단계까지의 몫(잰 갈래 평균, My 안 재료만 — notes/myParts.ts) + 네 갈래 막대.
+ */
+function ProgressLine({ ui, row, stage }: { ui: UICopy; row: StageParts | null; stage: number }) {
+  if (!row) return null;
+  const measured = row.parts.filter((part) => part.measured);
+  const share = measured.length ? measured.reduce((sum, part) => sum + shareOf(part), 0) / measured.length : 0;
+  return (
+    <div data-my-progress className="mt-3 flex items-center gap-3 px-1">
+      <span className="shrink-0 text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>
+      <span className="shrink-0 text-note tabular-nums text-status-learned">{Math.round(share * 100)}%</span>
+      <span className="flex min-w-0 flex-1 gap-1">
+        {measured.map((part) => (
+          <span key={part.id} className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
+            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.round(shareOf(part) * 100)}%` }} />
+          </span>
+        ))}
+      </span>
+    </div>
+  );
+}
+
+/** 적용(3층): 이 단계에서 배운 표현으로 AI 대화 — 누를 때만(대본 끝에서 저절로 잇지 않음, 2026-10-29 사용자 "피로"). */
+function ApplyLine({ ui, phrases }: { ui: UICopy; phrases: readonly string[] }) {
+  if (!phrases.length) return null;
+  const picked = phrases.slice(-3);
+  return (
+    <button
+      type="button"
+      data-apply-line
+      onClick={() => sendAppIntent("practice", { tab: "chat", goal: { phrases: picked } })}
+      className="mt-2 flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start text-note text-slate-200 hover:bg-white/5"
+    >
+      <span aria-hidden>💬</span>
+      <span className="min-w-0 flex-1 truncate">{ui.applyTalk}</span>
+      <span dir="auto" className="max-w-[40%] shrink-0 truncate text-meta text-slate-500">
+        {picked.join(" · ")}
+      </span>
+      <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
+    </button>
   );
 }

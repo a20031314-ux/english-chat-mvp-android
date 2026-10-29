@@ -12,10 +12,12 @@ import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, grammarNodeId, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
-import { partHistory, partLog, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
+import { PART_IDS, PART_LOG_MAX, partHistory, partLog, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
+import { myPartHistory, myPartLog, myStageParts } from "@/lib/notes/myParts";
+import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
 import { hasScripts } from "@/lib/curriculum/stageScripts";
 import { pickScript } from "@/lib/curriculum/scriptPick";
-import { readPassedScripts, readRedoDone, readReview } from "@/lib/server/stageScriptStore";
+import { readKnown, readPassedScripts, readPassedTimes, readRedoDone, readReview } from "@/lib/server/stageScriptStore";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { framesToRedo, type RedoItem } from "@/lib/curriculum/frameRedo";
 import { readGrowthRecord } from "@/lib/server/growthStore";
@@ -131,6 +133,7 @@ export async function GET(request: NextRequest) {
   let partItems: ReturnType<typeof partLog> | null = null;
   let redo: RedoItem[] = [];
   let review: ReviewMap | null = null;
+  let my: { passedAt: Map<string, number>; known: KnownMap } | null = null;
   let recommend: { stage: number; id: string; why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" } } | null = null;
   if (source && stages) {
     const constructionIds = source.stages.flatMap((s) => s.grammar.map((g) => g.constructionId)).filter((id): id is string => Boolean(id));
@@ -146,9 +149,19 @@ export async function GET(request: NextRequest) {
     parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab, mistakes }));
     // 대본이 있는 언어: 다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(2026-10-27). 옛 앱은 scripts=1을 안 보내 예전 조건 그대로.
     if (request.nextUrl.searchParams.get("scripts") === "1" && hasScripts(language)) {
-      const [passed, redoDone, reviewMap] = await Promise.all([readPassedScripts(userId, language), readRedoDone(userId, language), readReview(userId, language)]);
+      const [passed, redoDone, reviewMap, passedAt, known] = await Promise.all([
+        readPassedScripts(userId, language),
+        readRedoDone(userId, language),
+        readReview(userId, language),
+        readPassedTimes(userId, language),
+        readKnown(userId, language),
+      ]);
       review = reviewMap;
-      parts = withScripts(parts, language, passed);
+      // 새 앱(대본 화면): 네 갈래·다음 단계 조건은 My 안에서만 — 대본 통과·시험에서 맞힘(확인 중)·이미 앎(notes/myParts.ts, 2026-10-29
+      // 사용자 "정해진 학습으로 뼈대, 지속 학습으로 채우고, AI·사용자 간 학습으로 적용"). 채팅·통화 장부는 "다음 단계까지" 고를 때 짚인 수로만.
+      my = { passedAt, known };
+      parts = source.stages.map((s) => myStageParts({ language, order: s.order, passed: passedAt, known, mistakes }));
+      parts = withScripts(parts, language, passed, skippedIds(language, known));
       redo = framesToRedo([...record.cards, ...record.pending], redoDone);
       // 오늘의 대본(curriculum/scriptPick.ts, 2026-10-28): 지금 단계에서 최근 짚인 문법·아직인 표현·안 한 대본으로 하나.
       const here = source.stages.find((s) => s.order === stage);
@@ -192,7 +205,15 @@ export async function GET(request: NextRequest) {
     // 그래프 보기: 지금 단계 네 갈래의 최근 14일(사용자 시간대).
     const here = source.stages.find((s) => s.order === stage) ?? source.stages[0];
     const offset = parseOffset(request.headers.get(TZ_OFFSET_HEADER));
-    if (here) {
+    if (here && my) {
+      partDays = myPartHistory({ language, order: here.order, passed: my.passedAt, known: my.known, now: Date.now(), dayOf: (at) => localDay(at, offset) });
+      // 낱낱: My 안의 배움·숙지 + 튜터가 고친 줄(적용에서 온 신호 — 숫자는 안 바꿈).
+      const mine = myPartLog({ language, stage: here, passed: my.passedAt, known: my.known, now: Date.now() });
+      const fixed = partLog({ stage: here, language, ledger: null, phrases: {}, cards: [...record.cards, ...record.pending], now: Date.now() });
+      partItems = Object.fromEntries(
+        PART_IDS.map((part) => [part, [...mine[part], ...fixed[part]].sort((a, b) => b.at - a.at).slice(0, PART_LOG_MAX)]),
+      ) as ReturnType<typeof partLog>;
+    } else if (here) {
       partDays = partHistory({
         stage: here,
         language,

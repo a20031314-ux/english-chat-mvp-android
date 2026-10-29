@@ -23,7 +23,8 @@ export type ScriptAmount = {
   canDo: CanDo[];
 };
 
-export function scriptAmount(language: string, passed: ReadonlySet<string>): ScriptAmount | null {
+/** skipped = 시험으로 걸러진(이미 아는) 대본·틀(curriculum/known.ts) — 표현·문법·틀에는 넣고 말한 문장에는 안 넣음. */
+export function scriptAmount(language: string, passed: ReadonlySet<string>, skipped: ReadonlySet<string> = new Set()): ScriptAmount | null {
   const ladder = ladderFor(language);
   const scripts = allScriptsFor(language);
   if (!ladder || !scripts.length) return null;
@@ -35,13 +36,13 @@ export function scriptAmount(language: string, passed: ReadonlySet<string>): Scr
   const grammar = new Set<string>();
   let lines = 0;
   for (const script of scripts) {
-    if (!passed.has(script.id)) continue;
+    if (!passed.has(script.id) && !skipped.has(script.id)) continue;
     for (const expression of script.expressions) expressions.add(expression);
     for (const index of script.grammar ?? []) grammar.add(`${script.stage}:${index}`);
     for (const key of script.earlierGrammar ?? []) grammar.add(key);
-    lines += script.lines.filter((line) => line.who === "me").length;
+    if (passed.has(script.id)) lines += script.lines.filter((line) => line.who === "me").length;
   }
-  const passedFrames = frames.filter((frame) => passed.has(frame.id));
+  const passedFrames = frames.filter((frame) => passed.has(frame.id) || skipped.has(frame.id));
   for (const frame of passedFrames) {
     for (const expression of frame.expressions ?? []) expressions.add(expression);
     for (const index of frame.grammar ?? []) grammar.add(`${frame.stage}:${index}`);

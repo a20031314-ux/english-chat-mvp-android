@@ -160,9 +160,11 @@ export function stageParts(input: {
  * 다음 단계 = 네 갈래 70% + 그 단계 대본을 모두 통과(2026-10-27 사용자 "네 갈래 70% + 대본").
  * 대본이 없는 언어·단계는 예전 조건 그대로. 옛 앱(대본 화면 없음)은 이걸 거치지 않는다(/api/notebook scripts=1일 때만).
  */
-export function withScripts(rows: StageParts[], language: string, passed: ReadonlySet<string>): StageParts[] {
+export function withScripts(rows: StageParts[], language: string, passed: ReadonlySet<string>, skipped: ReadonlySet<string> = new Set()): StageParts[] {
   return rows.map((row) => {
     const tally = scriptTally(language, row.order, passed);
+    // 시험으로 걸러진(이미 아는) 상황 대본도 다음 단계 조건에서는 한 것으로(curriculum/known.ts) — 목록(passed)은 실제 통과만.
+    if (skipped.size) tally.done = scriptTally(language, row.order, new Set([...passed, ...skipped])).done;
     if (!tally.total) return row;
     // 틀 바꿔 말하기(curriculum/frames.ts)의 통과도 같은 목록에 — 다음 단계 조건(done/total)에는 넣지 않는다.
     const frames = framesFor(language, row.order).filter((frame) => passed.has(frame.id)).map((frame) => frame.id);

@@ -1,6 +1,7 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
-import { applyCheck, type ReviewMap } from "../curriculum/dailyPlan.ts";
+import { applyCheck, reviewKeysOf, type ReviewMap } from "../curriculum/dailyPlan.ts";
 import { CHECKUP_KEEP, type CheckResult } from "../curriculum/checkup.ts";
+import { scriptById } from "../curriculum/stageScripts.ts";
 import { applyKnown, trimKnown, type KnownMap } from "../curriculum/known.ts";
 import type { AskedItem } from "../curriculum/itemStats.ts";
 
@@ -25,6 +26,12 @@ export async function readKnown(userId: string, language: string): Promise<Known
   return record?.known ?? {};
 }
 
+/** 통과한 대본·틀 id → 처음 통과한 때(My 네 갈래·그래프, notes/myParts.ts). */
+export async function readPassedTimes(userId: string, language: string): Promise<Map<string, number>> {
+  const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
+  return new Map(Object.entries(record?.passed ?? {}));
+}
+
 export async function readPassedScripts(userId: string, language: string): Promise<Set<string>> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
   return new Set(Object.keys(record?.passed ?? {}));
@@ -34,7 +41,12 @@ export async function markScriptPassed(userId: string, language: string, id: str
   const key = stageScriptKey(userId, language);
   const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
   const passed = { ...(record.passed ?? {}), [id]: record.passed?.[id] ?? at };
-  await kvSetJson(key, { ...record, passed }, TTL_SECONDS);
+  // 대본을 넘기면 그 열쇠도 확인 중(맞힌 날 하루) — 퀴즈·이번 주 확인에서 다른 날 두 번 더 맞히면 이미 앎(뼈대 → 채우기, curriculum/known.ts).
+  let known = record.known ?? {};
+  const script = scriptById(language, id);
+  const grammarKeys = script ? (script.grammar ?? []).map((index) => `g|${script.stage}:${index}`) : [];
+  for (const one of [...reviewKeysOf(language, id), ...grammarKeys]) known = applyKnown(known, one, true, at, true);
+  await kvSetJson(key, { ...record, passed, known: trimKnown(known) }, TTL_SECONDS);
   return Object.keys(passed);
 }
 
