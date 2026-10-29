@@ -2,11 +2,12 @@ O languagebank define o que estudar em cada dia e põe-te a dizê-lo em voz alta
 
 O TEU PERCURSO DE CADA DIA
 1. Começa na tua etapa: lê uma conversa curta e responde «Sim, consigo», «Quase» ou «Ainda não» para começar na etapa certa entre cinco. Escrita nova? Começa pelas letras e sons.
-2. Plano de hoje: escolhe 5, 10 ou 20 minutos por dia e vê em quantos dias terminas. «Na ordem» ou «Pelo meu histórico» define os roteiros e estruturas do dia.
+2. Lição diária: escolhe 5, 10 ou 20 minutos por dia e vê em quantos dias terminas. «Na ordem» ou «Pelo meu histórico» define os roteiros e estruturas do dia.
 3. Fala o roteiro: diz as tuas falas em roteiros de situações com 🎤 — Repetir, Primeiras letras, Oculto ou Com suas palavras. Uma fala perfeita recebe ★; se está certa mas pouco natural, recebes uma forma mais natural, e as palavras pouco claras são assinaladas. Dizer de outra forma correta também passa, e no mesmo dia podes continuar onde paraste.
 4. Troque na estrutura da frase: diz uma estrutura várias vezes trocando só as palavras.
 5. Revisão: no fim do roteiro marca cada expressão «Eu sei» ou «Não tenho certeza». O que ficou confuso e as falas erradas voltam como um quiz curto passados 2 e 7 dias, e juntam-se no topo de Meu espaço, em «O que você errou da última vez». Com o «Lembrete da manhã» aparecem no ecrã de bloqueio.
-6. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
+6. Prática contínua: depois da lição diária, escolhe Revisão, Aleatório, Vocabulário, Gramática ou Expressões e toca em ▶ Continuar estudando para um quiz curto que mistura lacunas, ordem das palavras, audição e fala.
+7. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
 
 USA EM CONVERSA
 • Chat com o tutor de IA: fala como com um amigo; só os erros são corrigidos. Encravaste? Escreve em português e o tutor continua na língua que aprendes; «Ver como se diz» mostra a frase que querias. Se usares por ti uma expressão que marcaste, a linha mostra «Usou de novo».

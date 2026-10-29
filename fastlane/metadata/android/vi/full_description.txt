@@ -2,11 +2,12 @@ languagebank định ra mỗi ngày học gì và cho bạn nói thành tiếng 
 
 MỘT NGÀY HỌC
 1. Bắt đầu đúng giai đoạn: đọc một đoạn hội thoại ngắn rồi chọn "Được", "Gần được" hoặc "Chưa được" để bắt đầu ở giai đoạn phù hợp trong năm giai đoạn. Chữ viết mới? Bắt đầu từ chữ cái và âm.
-2. Hôm nay học gì: chọn 5, 10 hoặc 20 phút mỗi ngày để biết mấy ngày xong. "Theo lộ trình" hoặc "Theo kết quả của tôi" xếp kịch bản và cấu trúc câu cho ngày hôm đó.
+2. Bài học hằng ngày: chọn 5, 10 hoặc 20 phút mỗi ngày để biết mấy ngày xong. "Theo lộ trình" hoặc "Theo kết quả của tôi" xếp kịch bản và cấu trúc câu cho ngày hôm đó.
 3. Nói theo kịch bản: nói câu của bạn trong kịch bản tình huống bằng 🎤 — Nói theo, Chỉ chữ đầu, Ẩn hoặc Bằng lời của bạn. Câu hoàn hảo được ★; đúng nhưng chưa tự nhiên sẽ có cách nói tự nhiên hơn, và từ nghe chưa rõ được chỉ ra. Nói cách khác mà đúng cũng qua, và trong ngày bạn có thể học tiếp từ chỗ dừng.
 4. Đổi trong cấu trúc câu: nói một cấu trúc nhiều lần, chỉ đổi từ.
 5. Ôn lại: cuối kịch bản đánh dấu từng cách nói "Tôi biết rồi" hoặc "Còn lẫn lộn". Chỗ còn lẫn lộn và câu sai quay lại thành câu đố ngắn sau 2 và 7 ngày, và gom ở trên cùng mục Của tôi, trong "Lần trước sai ở đâu". Bật "Nhắc buổi sáng" để thấy trên màn hình khóa.
-6. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
+6. Học liên tục: sau bài học hằng ngày, chọn Ôn tập, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt rồi chạm ▶ Học tiếp để làm câu đố ngắn gồm điền chỗ trống, sắp xếp từ, nghe và nói.
+7. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
 
 DÙNG TRONG HỘI THOẠI
 • Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Khi bạn tự dùng cách nói đã đánh dấu, câu đó hiện "Đã dùng lại".

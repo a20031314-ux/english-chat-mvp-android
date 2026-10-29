@@ -2,11 +2,12 @@ languagebank fixe ce que vous étudiez chaque jour et vous le fait dire à voix 
 
 VOTRE PARCOURS DU JOUR
 1. Partez de votre étape : lisez une courte conversation et répondez « Oui, je peux », « Presque » ou « Pas encore » pour commencer à la bonne étape sur cinq. Écriture nouvelle ? Commencez par les lettres et les sons.
-2. Au programme aujourd'hui : choisissez 5, 10 ou 20 minutes par jour et voyez en combien de jours vous finirez. « Dans l'ordre » ou « Selon mon parcours » fixe les dialogues et structures du jour.
+2. Leçon du jour : choisissez 5, 10 ou 20 minutes par jour et voyez en combien de jours vous finirez. « Dans l'ordre » ou « Selon mon parcours » fixe les dialogues et structures du jour.
 3. Dites le dialogue : dites vos répliques dans des dialogues de situations avec 🎤 — Répéter, Premières lettres, Masqué ou Avec vos mots. Une réplique parfaite reçoit ★ ; correcte mais peu naturelle, une tournure plus naturelle est proposée, et les mots mal entendus sont signalés. Une autre formulation correcte passe aussi, et vous reprenez où vous en étiez le même jour.
 4. Changer dans la structure de phrase : dites une même structure plusieurs fois en changeant seulement les mots.
 5. Révision : à la fin d'un dialogue, marquez chaque expression « Je sais » ou « Pas sûr ». Ce qui est flou et les répliques ratées reviennent en petit quiz après 2 et 7 jours, et se regroupent en haut de Moi, dans « Ce que tu as raté la dernière fois ». Avec le « Rappel du matin », ils s'affichent sur l'écran verrouillé.
-6. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
+6. Pratique continue : après la leçon du jour, choisissez Révision, Aléatoire, Vocabulaire, Grammaire ou Expressions et touchez ▶ Continuer pour un quiz court qui mêle textes à trous, ordre des mots, écoute et oral.
+7. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
 
 UTILISEZ-LE EN CONVERSATION
 • Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Utilisez de vous-même une expression que vous avez marquée et la ligne affiche « Réutilisé ».
