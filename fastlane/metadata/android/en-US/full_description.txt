@@ -2,11 +2,12 @@ languagebank sets what to study each day and gets you saying it out loud. Learn 
 
 YOUR DAILY LEARNING FLOW
 1. Start at your stage: read a short conversation and answer "Yes, I can", "Almost" or "Not yet" to start at the right one of five stages. New to a script? Begin with letters and sounds.
-2. Today's plan: pick 5, 10 or 20 minutes a day and see how many days it takes to finish. "In order" or "From my record" sets the day's scripts and sentence structures.
+2. Daily lesson: pick 5, 10 or 20 minutes a day and see how many days it takes to finish. "In order" or "From my record" sets the day's scripts and sentence structures.
 3. Speak the script: say your lines in situation scripts with 🎤 — Repeat after, First letters, Hidden or Own words. A perfect line gets ★; a correct but stiff one gets a more natural way to say it, and unclear words are pointed out. Saying it another correct way still passes, and you can pick up where you stopped the same day.
 4. Swap the sentence structure: say one structure many times, changing only the words.
 5. Review: at the end of a script mark each phrase "I know it" or "Not sure". What confused you and lines you missed come back as a short quiz after 2 and 7 days, and gather at the top of My under "What you got wrong last time". Turn on "Morning reminder" to see them on your lock screen.
-6. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
+6. Ongoing practice: after the daily lesson, pick Review, Random, Vocabulary, Grammar or Phrases and tap ▶ Keep studying for a short quiz that mixes fill-in, word order, listening and speaking.
+7. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
 
 USE IT IN CONVERSATION
 • AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. Use a phrase you marked on your own and the line shows "Used again".

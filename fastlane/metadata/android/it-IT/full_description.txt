@@ -2,11 +2,12 @@ languagebank decide cosa studiare ogni giorno e te lo fa dire ad alta voce. Impa
 
 IL TUO PERCORSO DI OGNI GIORNO
 1. Parti dalla tua fase: leggi una breve conversazione e rispondi «Sì, ci riesco», «Quasi» o «Non ancora» per iniziare dalla fase giusta tra cinque. Scrittura nuova? Parti da lettere e suoni.
-2. Il piano di oggi: scegli 5, 10 o 20 minuti al giorno e vedi in quanti giorni finisci. «In ordine» o «In base ai miei progressi» fissa i copioni e le strutture del giorno.
+2. Lezione del giorno: scegli 5, 10 o 20 minuti al giorno e vedi in quanti giorni finisci. «In ordine» o «In base ai miei progressi» fissa i copioni e le strutture del giorno.
 3. Parla con il copione: di' le tue battute nei copioni di situazioni con 🎤 — Ripeti, Prime lettere, Nascosto o Con parole tue. Una battuta perfetta riceve ★; se è corretta ma poco naturale ti propone un modo più naturale, e segnala le parole poco chiare. Dirlo in un altro modo corretto vale lo stesso, e puoi riprendere da dove avevi lasciato nello stesso giorno.
 4. Cambia nella struttura della frase: ripeti una struttura più volte cambiando solo le parole.
 5. Ripasso: alla fine del copione segna ogni espressione «Lo so» o «Non sono sicuro». Ciò che non è chiaro e le battute sbagliate tornano come breve quiz dopo 2 e 7 giorni, e si raccolgono in cima a Io, in «Cosa hai sbagliato l'ultima volta». Con il «Promemoria del mattino» compaiono sulla schermata di blocco.
-6. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
+6. Pratica continua: dopo la lezione del giorno scegli Ripasso, Casuale, Vocabolario, Grammatica o Espressioni e tocca ▶ Continua a studiare per un breve quiz che mescola spazi vuoti, ordine delle parole, ascolto e parlato.
+7. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
 
 USALO NELLE CONVERSAZIONI
 • Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Se usi da solo un'espressione che hai segnato, la riga mostra «Usato di nuovo».

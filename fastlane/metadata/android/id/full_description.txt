@@ -2,11 +2,12 @@ languagebank menentukan apa yang dipelajari setiap hari dan membuatmu mengucapka
 
 ALUR BELAJAR HARIANMU
 1. Mulai dari tahapmu: baca percakapan singkat dan jawab "Bisa", "Hampir", atau "Belum" untuk mulai di tahap yang pas dari lima tahap. Aksara baru? Mulai dari huruf dan bunyi.
-2. Rencana hari ini: pilih 5, 10, atau 20 menit sehari dan lihat berapa hari selesai. "Sesuai urutan" atau "Sesuai riwayatku" menentukan naskah dan struktur kalimat hari itu.
+2. Pelajaran harian: pilih 5, 10, atau 20 menit sehari dan lihat berapa hari selesai. "Sesuai urutan" atau "Sesuai riwayatku" menentukan naskah dan struktur kalimat hari itu.
 3. Ucapkan naskah: ucapkan kalimatmu dalam naskah situasi dengan 🎤 — Ulangi, Huruf pertama, Disembunyikan, atau Dengan kata sendiri. Kalimat sempurna dapat ★; benar tapi kaku diberi cara yang lebih wajar, dan kata yang kurang jelas ditandai. Mengucapkannya dengan cara lain yang benar juga lulus, dan di hari yang sama kamu bisa lanjut dari tempat berhenti.
 4. Ganti dalam struktur kalimat: ucapkan satu struktur berkali-kali dengan mengganti katanya saja.
 5. Ulangi: di akhir naskah tandai tiap ungkapan "Sudah tahu" atau "Masih bingung". Yang membingungkan dan kalimat yang salah kembali sebagai kuis singkat setelah 2 dan 7 hari, dan terkumpul di atas tab Saya, di "Yang salah terakhir kali". Nyalakan "Pengingat pagi" agar muncul di layar kunci.
-6. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
+6. Latihan berkelanjutan: setelah pelajaran harian, pilih Ulangi, Acak, Kosakata, Tata bahasa, atau Ungkapan lalu ketuk ▶ Lanjut belajar untuk kuis singkat yang mencampur isian, urutan kata, mendengar, dan berbicara.
+7. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
 
 PAKAI DALAM PERCAKAPAN
 • Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Kalau kamu memakai sendiri ungkapan yang sudah kamu tandai, kalimatnya diberi tanda "Dipakai lagi".

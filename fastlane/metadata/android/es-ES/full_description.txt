@@ -2,11 +2,12 @@ languagebank decide qué estudiar cada día y te hace decirlo en voz alta. Apren
 
 TU FLUJO DE CADA DÍA
 1. Empieza en tu etapa: lee una conversación corta y responde «Sí, puedo», «Casi» o «Todavía no» para empezar en la etapa adecuada de las cinco. ¿Escritura nueva? Empieza por letras y sonidos.
-2. Para hoy: elige 5, 10 o 20 minutos al día y verás en cuántos días terminas. «En orden» o «Según mi historial» fija los guiones y estructuras de cada día.
+2. Lección diaria: elige 5, 10 o 20 minutos al día y verás en cuántos días terminas. «En orden» o «Según mi historial» fija los guiones y estructuras de cada día.
 3. Habla con el guion: di tus líneas en guiones de situaciones con 🎤: Repetir, Primeras letras, Oculto o Con tus palabras. Una línea perfecta recibe ★; si es correcta pero poco natural, te da una forma más natural, y señala las palabras que no se oyeron bien. Decirlo de otra forma correcta también vale, y puedes seguir donde lo dejaste ese mismo día.
 4. Cambia la estructura de la frase: di una estructura muchas veces cambiando solo las palabras.
 5. Repaso: al final de cada guion marca cada expresión «Lo sé» o «Me confunde». Lo que te confundió y las líneas que fallaste vuelven como un quiz corto a los 2 y 7 días, y se reúnen arriba en Mi espacio, en «Lo que fallaste la última vez». Con el «Aviso por la mañana» aparecen en la pantalla de bloqueo.
-6. Lo que aprendiste hoy: las estructuras, la gramática y las palabras del día, cada una con el guion y la frase donde salió.
+6. Práctica continua: después de la lección diaria, elige Repaso, Aleatorio, Vocabulario, Gramática o Expresiones y toca ▶ Seguir estudiando para un quiz corto que mezcla huecos, orden de palabras, escucha y habla.
+7. Lo que aprendiste hoy: las estructuras, la gramática y las palabras del día, cada una con el guion y la frase donde salió.
 
 ÚSALO EN CONVERSACIÓN
 • Chat con el tutor IA: habla como con un amigo; solo se corrigen los fallos. ¿Te atascas? Escribe en español y el tutor sigue en el idioma que aprendes; «Ver cómo se dice» te muestra la frase que querías. Si usas por tu cuenta una expresión que marcaste, la línea muestra «Lo usaste otra vez».
