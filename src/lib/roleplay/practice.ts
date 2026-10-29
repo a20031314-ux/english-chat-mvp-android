@@ -284,6 +284,12 @@ function unclearPart(unclear: readonly string[] | undefined, nativeLanguage: str
   return `\nThe recogniser hesitated over ${unclear.length === 1 ? "this word" : "these words"}: ${unclear.map((word) => `"${word}"`).join(", ")}. It still wrote ${unclear.length === 1 ? "it" : "them"} correctly, so ${unclear.length === 1 ? "it counts" : "they count"} as said and does not change "good" — but hesitation usually means the sounds were not quite clear. In the note, after saying what went well, name the least clear word and give one concrete, short tip a ${nativeLanguage} speaker can act on (which sound in the word to make clearer, e.g. a final consonant or a vowel), without claiming to know about stress, rhythm or accent.\n`;
 }
 
+/**
+ * 내 정보로 바꿔 말하기(2026-10-29 가상 사용자 민지 "이름을 내 이름으로 말하자 아쉬워요" → 사용자 "3번 고쳐줘"):
+ * 대본 인물의 이름·나라·도시·국적·직업·나이·가족을 자기 것으로 바꾼 것은 다른 사실이 아니라 맞음. 나머지는 평소대로.
+ */
+const OWN_DETAILS = `Personal details are the learner's to change. If they put their own name, country, city, nationality, job, age or family members in place of the script's character's, that part counts as matching — it is not a different fact and not a reason for "wrong" or "awkward", and the note need not mention it. Everything else in the line is judged as usual.`;
+
 export function practicePrompt(input: {
   target: string;
   heard: string;
@@ -302,6 +308,8 @@ ${unclearPart(input.unclear, input.nativeLanguage)}
 What you may conclude, and nothing beyond it: a word the recogniser turned into a different word is a word whose sounds did not land, and the word it turned into says which sounds. You are reading text, not listening — you cannot know about vowel length, stress or rhythm, so do not mention them. Never guess at an accent.
 
 One exception, and it matters: if the word it heard sounds the same as the word they were given — here and hear, piece and peace, to and too — then the sounds did land and the recogniser simply chose the other spelling. Say that it was said correctly, and when every divergence is of this kind — including the same word written in kana instead of kanji or the other way round — "good" is true. Telling someone to fix a sound they got right is the fastest way to make them stop believing the rest of this.
+
+${OWN_DETAILS} When every divergence is of this kind, "good" is true.
 
 Be plain about scale. A word or two out of a short sentence is normal and worth one specific tip. Everything coming through is worth saying so in one line and nothing more.
 
@@ -329,6 +337,8 @@ Do not compare the words. Compare what a listener would take away, in three step
 1. "scriptMeaning": what a listener in this conversation would take away from the script line, written in ${input.nativeLanguage} as short facts — what happened or is wanted, who, with whom, where, when (past, now or future), how it felt, and whether it asks something. Write the situation, not the wording: going somewhere to do something and having done it there, or being somewhere and having gone there, end up as the same fact.
 2. "saidMeaning": the same facts for the learner's line, written in the same style. The recogniser writes what it heard quite faithfully, including small words, particles, articles and endings, but it drops punctuation and the rise of a question. Exactly one kind of recogniser slip is allowed for: a single content word written as a different real word that sounds very close to the script's word and makes no sense in this conversation (a near-homophone). Only then write the script's word in "saidMeaning". Everything else in the transcript is what the learner said: a wrong or missing article, particle, preposition or ending, a changed word order, a word that does not sound like the script's, or a different word that still makes sense in the sentence. Never invent content that is not there.
 3. Compare the two lists of facts. A difference counts only when a listener would come away believing something different about the situation. Another verb for the same event, a verb that implies the script's one, a synonym, a different natural order, a contraction or a shorter way of saying it all leave the facts the same.
+
+${OWN_DETAILS}
 
 Verdicts:
 - "wrong": the two meanings differ — something is missing, added or changed (a fact, time or tense of what happened, person, amount, feeling, intention, or a question turned into a statement where it matters), or too little came through to tell.
@@ -368,6 +378,8 @@ One way a native speaker might say it (not the only right answer): "${input.refe
 What the recogniser heard: "${input.heard || "(nothing)"}"
 
 "good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation and the rise of a question — a statement-shaped transcript of something that works as a question at this point is fine. Bring up politeness only when it clearly clashes with the relationship the conversation shows; match the speech level the native line uses.
+
+${OWN_DETAILS}
 
 Also sort it into one of three verdicts:
 - "natural": the meaning fits and a native speaker could comfortably say it this way in this conversation — casual, slightly more formal or simply different from the script all count as natural.
