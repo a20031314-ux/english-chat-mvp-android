@@ -1870,7 +1870,7 @@ function SkeletonProgress({ ui, language, stage, row, known, passed }: { ui: UIC
             <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned/35" style={{ width: `${Math.round(((part.known + part.learning) / part.total) * 100)}%` }} />
             <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.round((part.known / part.total) * 100)}%` }} />
           </span>
-          <span className="shrink-0 text-caption tabular-nums text-ink">
+          <span dir="ltr" className="shrink-0 text-caption tabular-nums text-ink">
             {part.known} / {part.total}
           </span>
           {part.learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(part.learning))}</span> : null}
