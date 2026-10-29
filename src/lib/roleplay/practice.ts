@@ -288,7 +288,7 @@ function unclearPart(unclear: readonly string[] | undefined, nativeLanguage: str
  * 내 정보로 바꿔 말하기(2026-10-29 가상 사용자 민지 "이름을 내 이름으로 말하자 아쉬워요" → 사용자 "3번 고쳐줘"):
  * 대본 인물의 이름·나라·도시·국적·직업·나이·가족을 자기 것으로 바꾼 것은 다른 사실이 아니라 맞음. 나머지는 평소대로.
  */
-const OWN_DETAILS = `Personal details are the learner's to change. If they put their own name, country, city, nationality, job, age or family members in place of the script's character's, that part counts as matching — it is not a different fact and not a reason for "wrong" or "awkward", and the note need not mention it. Everything else in the line is judged as usual.`;
+const OWN_DETAILS = `Personal details are the learner's to change. If they put their own name, country, city, nationality, job, age or family members in place of the script's character's, that part counts as matching, even when that detail is all the line says (introducing yourself is exactly when people use their own details) — it is not a different fact and not a reason for "wrong" or "awkward", and the note need not mention it. Everything else in the line is judged as usual.`;
 
 export function practicePrompt(input: {
   target: string;
