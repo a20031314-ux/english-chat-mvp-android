@@ -49,12 +49,19 @@
 - 끝에 **다음 날 확인**: 해 본 것, 조합별 통과/실패, 어긋난 점. 여기서 새 수정 루프를 시작하지 않는다.
 - 화면 변경이 없으면 브라우저는 건너뛰고 그렇다고 말한다.
 
+## 사용자 체감 점검 (가상 사용자, 사용자 결정 2026-10-29)
+- 기능이 되는지와 별개로 **사용자 입장의 체감**을 가상 사용자로 본다 — ① 할 일이 명확한가 ② 계속할 이유가 있는가 ③ 실력이 느는 게 느껴지는가(각 1~5점 + 근거 스크린샷).
+- 방법: `scripts/ux-check/`(머리 주석 순서) — 앱·코드를 모르는 에이전트가 실제 앱을 **스스로 눌러** 1일째(처음 설치)·3일째·14일째를 쓰고, 화면마다 "이게 뭔지·다음에 뭘 할지·확신"을 적는다. 인물 최소 셋(언어 조합 규칙과 같게: 영어·한국어 앱 / 띄어쓰기 없는 학습 언어·한국어 앱 / 아랍어 앱). 에이전트는 저장소 코드·문서를 열지 않는다.
+- 언제: **버전을 자르기 전**, 그리고 첫 화면·My·대본·퀴즈·결제처럼 **처음 쓰는 흐름이나 화면 구성이 바뀐 커밋 뒤**. 결과는 `hub/drafts/ux-check-YYYY-MM-DD.md`(점수 표·셋 다 걸린 것·한계), 지난번과 점수·막힌 화면 수를 비교한다(첫 결과 `ux-check-2026-10-29.md`: 명확 2.3·계속 3.0·향상 2.3).
+- 점검이 찾은 것은 고치지 않고 보고 → 고칠 순서는 사용자가 정한다. 날짜 넘기기는 폰 시계만이라 그래프 날짜·7일 규칙은 이 점검으로 판단하지 않는다.
+
 ## 버전·출시
 - 버전은 저장소에서만 올린다: `package.json` + `android/app/build.gradle`(versionCode·versionName) + `package-lock.json` 맨 위 두 줄. PC에서 build.gradle을 고치게 하지 않는다.
   iOS는 따로 올리지 않는다: `npm run build:ios`(`scripts/ios-project.mjs`)가 build.gradle 값을 MARKETING_VERSION·CURRENT_PROJECT_VERSION에 넣는다.
 - 플랫폼마다 다르게 할 것(iOS에서 끄는 기능, 스토어 이름·주소)은 `src/lib/platform.ts`에만 둔다. 화면 곳곳에 `getPlatform()`을 흩지 않는다.
 - 버전을 자를 때: `src/lib/whatsNew.ts` 항목(**`code`=versionCode 필수** — 업데이트 배너가 Play의 versionCode로 바뀐 점을 찾음, **`guide`=사용법 칸 id** — 설명은 사용법 칸에만, hub/DESIGN.md "안내 글") + 14개 언어 문구 + `scripts/capture-whats-new.mjs <버전>` 캡처(`CAPTURE_USER`로 데이터 있는 테스트 사용자),
   출시 노트 `fastlane/metadata/android/*/changelogs/<versionCode>.txt`(store-listing 스킬, 500자) PR, PRODUCT.md "기준"·"버전별 변화", STATE 버전 표.
+  자르기 전에 **사용자 체감 점검**(위 절)을 한 번 돌려 지난번과 비교한 점수를 log에 남긴다.
 - **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 기능마다 사용법 글(`src/lib/guide/`, 14개 언어)을 지금 화면에 맞게 다시 쓰고
   `capture-whats-new.mjs guide`(새 `CAPTURE_RUN`)로 단계 그림을 UI 언어별로 다시 찍어 같은 PR/커밋에 넣는다. 옛 빌드가 다른 화면을 쓰면
   예전 글을 스냅숏으로 남기고 새 앱만 새 글을 받게 한다(예: `/api/guide?my=1`, `before-my.json`). 새로워진 점 캡처와 같이 확인한다(사용자 결정 2026-10-16).
