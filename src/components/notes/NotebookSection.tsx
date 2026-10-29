@@ -439,6 +439,7 @@ export function NotebookSection({
           cards={book.cards}
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
           onStageChanged={() => setReload((n) => n + 1)}
+          learned={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
           grammarName={(stage, index) => {
             const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
             return node ? nameOf(node.id) : "";
@@ -463,7 +464,7 @@ export function NotebookSection({
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
         />
       ) : null}
-      {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (
+      {frame && book.stages.length && book.parts?.some((row) => row.scripts) && (lettersOn || !CURRICULUM_ONLY) ? (
         <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />
       ) : null}
       {stageTestFor !== null && onNextStage ? (

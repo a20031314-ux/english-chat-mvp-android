@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { ladderFor } from "@/lib/curriculum/stages";
@@ -149,6 +149,7 @@ export function TodayPlan({
   cards = [],
   onStageChanged,
   free = false,
+  learned = null,
 }: {
   ui: UICopy;
   locale: string;
@@ -173,6 +174,8 @@ export function TodayPlan({
   onStageChanged?: () => void;
   /** 자유롭게(curriculum/studyMode.ts): 단계 시험·단계 미리 확인을 내지 않는다(stage = 가장 낮은 열린 단계). */
   free?: boolean;
+  /** 일일 학습 카드 맨 아래에 묶는 "익힌 것"(ScriptAmount inside) — 지속 학습 숫자와 섞이지 않게. */
+  learned?: ReactNode;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -598,9 +601,8 @@ export function TodayPlan({
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
-  return (
-    <>
-    <section className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
+  const todayCard = (
+    <section data-today-plan className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
       <div className="flex items-center gap-2">
         <h3 className="min-w-0 flex-1 text-caption font-semibold text-status-learned">{ui.planTitle}</h3>
         <span className="text-caption tabular-nums text-slate-400">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>
@@ -822,7 +824,11 @@ export function TodayPlan({
           }}
         />
       ) : null}
+      {learned}
     </section>
+  );
+  const keepCard = (
+    <>
     {/* Ongoing practice (2026-10-29, user: keep it apart from My, count words on their own; a card inside My): its own count, parts, endless queue. */}
     <section data-keep-learning className="mt-3 rounded-2xl border border-line bg-white/[0.03] px-3 py-3">
       <h3 className="text-caption font-semibold text-ink">{ui.keepTitle}</h3>
@@ -912,6 +918,18 @@ export function TodayPlan({
         </button>
       ) : null}
     </section>
+    </>
+  );
+  // 오늘 것을 다 하면 지속 학습이 위로(2026-10-29 사용자).
+  return finished ? (
+    <>
+      {keepCard}
+      {todayCard}
+    </>
+  ) : (
+    <>
+      {todayCard}
+      {keepCard}
     </>
   );
 }

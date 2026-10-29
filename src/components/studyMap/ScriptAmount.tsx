@@ -16,6 +16,7 @@ export function ScriptAmount({
   language,
   passed,
   skipped,
+  inside = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -23,6 +24,8 @@ export function ScriptAmount({
   passed: readonly string[];
   /** 시험으로 걸러진 대본·틀(curriculum/known.ts). */
   skipped?: ReadonlySet<string>;
+  /** 일일 학습 카드 안(2026-10-29 사용자 "익힌 것은 오늘의 학습 안에 묶어, 지속 학습 데이터와 헷갈리지 않게") — 테두리 없이 구분선. */
+  inside?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   // 기능 이름은 단계 뜻풀이와 같이 옮긴다(server/stageCopy.ts) — 1~5단계 모두 받아 둔다.
@@ -41,7 +44,7 @@ export function ScriptAmount({
   const done = amount.canDo.filter((item) => item.done).length;
   const stages = [...new Set(amount.canDo.map((item) => item.fn.stage))].sort((a, b) => a - b);
   return (
-    <section className="mt-3 rounded-2xl border border-line px-3 py-3">
+    <section data-script-amount className={inside ? "mt-3 border-t border-line pt-3" : "mt-3 rounded-2xl border border-line px-3 py-3"}>
       <h3 className="text-caption font-semibold text-slate-300">{ui.scriptAmountTitle}</h3>
       <div className="mt-2 grid grid-cols-4 gap-2">
         <Stat label={ui.partExpression} count={amount.expressions} />
