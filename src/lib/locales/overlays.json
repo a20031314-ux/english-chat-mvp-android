@@ -785,7 +785,13 @@
     "studyWhyConfirm": "知っているか確認",
     "entryCheckTitle": "ステージ{n}の事前チェック",
     "knownTag": "習得済み",
-    "studyWhyGap": "つまずいた言葉"
+    "studyWhyGap": "つまずいた言葉",
+    "quizKindListen": "聞いて選ぶ",
+    "quizKindMeaning": "意味を選ぶ",
+    "planMixAuto": "おまかせ",
+    "planMixSpeak": "話す",
+    "planMixListen": "聞く",
+    "planMixRead": "読む"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1573,7 +1579,13 @@
     "studyWhyConfirm": "确认是否掌握",
     "entryCheckTitle": "第{n}阶段预先检测",
     "knownTag": "已掌握",
-    "studyWhyGap": "卡住过的话"
+    "studyWhyGap": "卡住过的话",
+    "quizKindListen": "听后选择",
+    "quizKindMeaning": "选意思",
+    "planMixAuto": "帮我搭配",
+    "planMixSpeak": "说",
+    "planMixListen": "听",
+    "planMixRead": "读"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2364,7 +2376,13 @@
     "studyWhyConfirm": "Kiểm tra bạn đã biết",
     "entryCheckTitle": "Kiểm tra trước giai đoạn {n}",
     "knownTag": "Đã biết",
-    "studyWhyGap": "Chỗ bạn bị vấp"
+    "studyWhyGap": "Chỗ bạn bị vấp",
+    "quizKindListen": "Nghe và chọn",
+    "quizKindMeaning": "Chọn nghĩa",
+    "planMixAuto": "Tự phối hợp",
+    "planMixSpeak": "Nói",
+    "planMixListen": "Nghe",
+    "planMixRead": "Đọc"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3160,7 +3178,13 @@
     "studyWhyConfirm": "Vérifier que tu le sais",
     "entryCheckTitle": "Test préalable · étape {n}",
     "knownTag": "Acquis",
-    "studyWhyGap": "Là où tu as bloqué"
+    "studyWhyGap": "Là où tu as bloqué",
+    "quizKindListen": "Écoute et choisis",
+    "quizKindMeaning": "Choisis le sens",
+    "planMixAuto": "Mélange pour moi",
+    "planMixSpeak": "Parler",
+    "planMixListen": "Écouter",
+    "planMixRead": "Lire"
   },
   "it": {
     "archive": "Report",
@@ -4147,7 +4171,13 @@
     "studyWhyConfirm": "Verifica che lo sai",
     "entryCheckTitle": "Test iniziale · fase {n}",
     "knownTag": "Già noto",
-    "studyWhyGap": "Dove ti sei bloccato"
+    "studyWhyGap": "Dove ti sei bloccato",
+    "quizKindListen": "Ascolta e scegli",
+    "quizKindMeaning": "Scegli il significato",
+    "planMixAuto": "Mescola tu",
+    "planMixSpeak": "Parlare",
+    "planMixListen": "Ascoltare",
+    "planMixRead": "Leggere"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4946,7 +4976,13 @@
     "studyWhyConfirm": "Confirmar se você sabe",
     "entryCheckTitle": "Teste prévio · etapa {n}",
     "knownTag": "Já sabe",
-    "studyWhyGap": "Onde você travou"
+    "studyWhyGap": "Onde você travou",
+    "quizKindListen": "Ouça e escolha",
+    "quizKindMeaning": "Escolha o significado",
+    "planMixAuto": "Misture para mim",
+    "planMixSpeak": "Falar",
+    "planMixListen": "Ouvir",
+    "planMixRead": "Ler"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5931,7 +5967,13 @@
     "studyWhyConfirm": "Проверка, что знаешь",
     "entryCheckTitle": "Предварительная проверка · этап {n}",
     "knownTag": "Знаю",
-    "studyWhyGap": "Где ты запнулся"
+    "studyWhyGap": "Где ты запнулся",
+    "quizKindListen": "Послушай и выбери",
+    "quizKindMeaning": "Выбери значение",
+    "planMixAuto": "Подбери сам",
+    "planMixSpeak": "Говорить",
+    "planMixListen": "Слушать",
+    "planMixRead": "Читать"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6726,7 +6768,13 @@
     "studyWhyConfirm": "Cek apakah sudah tahu",
     "entryCheckTitle": "Cek awal tahap {n}",
     "knownTag": "Sudah tahu",
-    "studyWhyGap": "Yang tadi bikin macet"
+    "studyWhyGap": "Yang tadi bikin macet",
+    "quizKindListen": "Dengar lalu pilih",
+    "quizKindMeaning": "Pilih artinya",
+    "planMixAuto": "Campurkan untukku",
+    "planMixSpeak": "Bicara",
+    "planMixListen": "Dengar",
+    "planMixRead": "Baca"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7514,7 +7562,13 @@
     "studyWhyConfirm": "تأكيد أنك تعرفه",
     "entryCheckTitle": "اختبار مسبق · المرحلة {n}",
     "knownTag": "أعرفه",
-    "studyWhyGap": "ما تعثّرت فيه"
+    "studyWhyGap": "ما تعثّرت فيه",
+    "quizKindListen": "استمع واختر",
+    "quizKindMeaning": "اختر المعنى",
+    "planMixAuto": "اخلط لي",
+    "planMixSpeak": "تحدّث",
+    "planMixListen": "استماع",
+    "planMixRead": "قراءة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8302,7 +8356,13 @@
     "studyWhyConfirm": "ตรวจว่ารู้แล้ว",
     "entryCheckTitle": "ทดสอบก่อนเริ่มขั้น {n}",
     "knownTag": "รู้แล้ว",
-    "studyWhyGap": "คำที่เคยติด"
+    "studyWhyGap": "คำที่เคยติด",
+    "quizKindListen": "ฟังแล้วเลือก",
+    "quizKindMeaning": "เลือกความหมาย",
+    "planMixAuto": "จัดให้เลย",
+    "planMixSpeak": "พูด",
+    "planMixListen": "ฟัง",
+    "planMixRead": "อ่าน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9090,6 +9150,12 @@
     "studyWhyConfirm": "जाँचें कि आप जानते हैं",
     "entryCheckTitle": "चरण {n} की पूर्व-जाँच",
     "knownTag": "जानते हैं",
-    "studyWhyGap": "जहाँ आप अटके"
+    "studyWhyGap": "जहाँ आप अटके",
+    "quizKindListen": "सुनकर चुनें",
+    "quizKindMeaning": "अर्थ चुनें",
+    "planMixAuto": "मेरे लिए मिलाएँ",
+    "planMixSpeak": "बोलना",
+    "planMixListen": "सुनना",
+    "planMixRead": "पढ़ना"
   }
 }

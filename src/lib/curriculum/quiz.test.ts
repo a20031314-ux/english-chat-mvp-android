@@ -131,3 +131,25 @@ test("문법 칸 퀴즈 재료: 뒤 단계 대본(earlierGrammar)·문장구조 
   const key = `g|${later.earlierGrammar![0]}`;
   assert.ok(sourcesOf("en", key).some((source) => source.from === later.id));
 });
+
+test("학습 조합: 말하기·듣기·읽기 위주로 모양이 바뀌고, 대본 하나를 문제 묶음으로(일본어·스페인어·태국어)", async () => {
+  const { buildQuiz: build, buildUnit, unitPassed } = await import("./quiz.ts");
+  const { allScriptsFor } = await import("./stageScripts.ts");
+  for (const language of ["ja", "es", "th"]) {
+    const script = allScriptsFor(language).find((one) => one.stage === 1)!;
+    const key = `e|${script.expressions[0]}`;
+    const listen = build(language, key, { mix: "listen" });
+    assert.ok(listen && listen.questions.some((q) => q.kind === "listen"), `${language} listen`);
+    const read = build(language, key, { mix: "read" });
+    assert.ok(read && read.questions.every((q) => q.kind !== "say"), `${language} read 말하기 없음`);
+    for (const mix of ["listen", "read"] as const) {
+      const unit = buildUnit(language, script.id, mix, "d1");
+      assert.ok(unit.length >= 3 && unit.length <= 8, `${language} ${mix} ${unit.length}`);
+      for (const q of unit) if (q.kind === "listen" || q.kind === "meaning") assert.equal(q.options.length, 3);
+      if (mix === "read") assert.ok(unit.every((q) => q.kind !== "say"));
+      assert.deepEqual(buildUnit(language, script.id, mix, "d1"), unit, "같은 날 같은 문제");
+    }
+  }
+  assert.equal(unitPassed(7, 10), true);
+  assert.equal(unitPassed(6, 10), false);
+});

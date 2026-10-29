@@ -9,8 +9,8 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, joinWords, orderCorrect, quizPassed, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
-import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
@@ -40,6 +40,8 @@ export function QuizPlayer({
   reason,
   onMore,
   stopHint = false,
+  mix,
+  unit,
 }: {
   ui: UICopy;
   locale: string;
@@ -62,10 +64,17 @@ export function QuizPlayer({
   onMore?: () => void;
   /** 연달아 두 번 틀림: 다음 문제보다 원래 대본을 앞에. */
   stopHint?: boolean;
+  /** 학습 조합(curriculum/quiz.ts QuizMix) — 말하기·듣기·읽기 위주면 그 모양으로. */
+  mix?: QuizMix;
+  /** 대본 하나를 문제 묶음으로(buildUnit) — 있으면 열쇠 퀴즈 대신 이것, 70% 넘으면 넘김. */
+  unit?: readonly QuizQuestion[];
 }) {
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
-  const quiz = useMemo(() => buildQuiz(language, quizKey, { card, seed, round: opened }), [language, quizKey, card, seed, opened]);
+  const quiz = useMemo(
+    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix })),
+    [language, quizKey, card, seed, opened, mix, unit],
+  );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const reported = useRef(false);
@@ -78,7 +87,7 @@ export function QuizPlayer({
   };
   const correct = Object.values(answers).filter((answer) => answer.correct).length;
   const counted = questions.length - Object.values(answers).filter((answer) => answer.skipped).length;
-  const passed = quizPassed(correct, counted);
+  const passed = unit ? unitPassed(correct, counted) : quizPassed(correct, counted);
 
   useEffect(() => {
     if (!done || reported.current || !questions.length) return;
@@ -95,7 +104,11 @@ export function QuizPlayer({
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="min-w-0 flex-1">
           <h2 dir="auto" className="truncate text-body font-semibold text-ink">
-            <span className="text-warn">{ui.quizTag}</span> · <bdi>{title}</bdi>
+            {unit ? <bdi>{title}</bdi> : (
+              <>
+                <span className="text-warn">{ui.quizTag}</span> · <bdi>{title}</bdi>
+              </>
+            )}
           </h2>
           <p className="mt-0.5 text-caption tabular-nums text-slate-400">
             {Math.min(index + 1, questions.length)}/{questions.length}
@@ -154,7 +167,7 @@ export function QuizPlayer({
 }
 
 function kindName(ui: UICopy, kind: QuizQuestion["kind"]): string {
-  return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay }[kind];
+  return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay, listen: ui.quizKindListen, meaning: ui.quizKindMeaning }[kind];
 }
 
 export function QuestionView({
@@ -183,6 +196,9 @@ export function QuestionView({
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "listen" || question.kind === "meaning" ? (
+        <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
+      ) : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
@@ -405,6 +421,73 @@ function OrderView({
           </button>
         </>
       )}
+    </div>
+  );
+}
+
+/** 듣고 고르기(소리만 → 들은 문장)·뜻 고르기(문장 → 앱 언어 뜻). 답하면 문장·뜻을 함께 보인다. */
+function PickView({
+  locale,
+  language,
+  question,
+  answered,
+  onAnswer,
+  tag,
+}: {
+  locale: string;
+  language: string;
+  question: Extract<QuizQuestion, { kind: "listen" | "meaning" }>;
+  answered: Answer | null;
+  onAnswer: (answer: Answer) => void;
+  tag: string;
+}) {
+  const [picked, setPicked] = useState<number | null>(null);
+  const listen = question.kind === "listen";
+  const label = (i: number) => (listen ? (question.options[i] as string) : (quizGloss(question.options[i] as ScriptGloss, locale, language) ?? "…"));
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-start gap-2">
+        {listen && !answered ? (
+          <span className="min-w-0 flex-1 text-chat text-slate-500">＿＿＿</span>
+        ) : (
+          <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+            {question.text}
+          </p>
+        )}
+        <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
+      </div>
+      {answered && listen ? (
+        <p dir="auto" className="text-note text-slate-400">
+          {quizGloss(question.gloss, locale, language) ?? ""}
+        </p>
+      ) : null}
+      <div className="flex flex-col gap-2">
+        {question.options.map((_, i) => {
+          const isRight = i === question.answer;
+          const style = answered
+            ? isRight
+              ? "border-good bg-good/10 text-ink"
+              : picked === i
+                ? "border-warn text-warn line-through"
+                : "border-line text-slate-500"
+            : "border-line text-slate-100 hover:bg-white/5";
+          return (
+            <button
+              key={i}
+              type="button"
+              dir="auto"
+              disabled={Boolean(answered)}
+              onClick={() => {
+                setPicked(i);
+                onAnswer({ correct: isRight });
+              }}
+              className={`${chip} text-start ${style}`}
+            >
+              {label(i)}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

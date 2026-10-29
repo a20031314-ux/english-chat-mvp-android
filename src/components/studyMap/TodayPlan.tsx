@@ -19,7 +19,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
-import { registerQuizSources, type QuizCard } from "@/lib/curriculum/quiz";
+import { buildUnit, registerQuizSources, type QuizCard, type QuizMix } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -29,11 +29,11 @@ import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
-import { PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
+import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
-import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
+import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
@@ -88,16 +88,18 @@ function saveQuizDone(day: string, keys: Set<string>) {
   }
 }
 
-type Settings = { pace: Pace; order: PlanOrder };
+type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix };
+const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
 function readSettings(): Settings {
   try {
     const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null") as Partial<Settings> | null;
     const pace = PACES.includes(raw?.pace as Pace) ? (raw!.pace as Pace) : 10;
-    return { pace, order: raw?.order === "record" ? "record" : "curriculum" };
+    const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
+    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix };
   } catch {
-    return { pace: 10, order: "curriculum" };
+    return { pace: 10, order: "curriculum", mix: "auto" };
   }
 }
 
@@ -157,7 +159,7 @@ export function TodayPlan({
   useStageGlosses(language, stage, locale);
   useStageGlosses(language, Math.min(5, stage + 1), locale);
   const { isPremium } = usePremium();
-  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum" });
+  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [now, setNow] = useState(0);
@@ -275,6 +277,16 @@ export function TodayPlan({
     setSnapshot(next);
   }, [same, day, fresh, language, settings.pace, settings.order]);
 
+  // 대본을 대화 대신 문제 묶음으로 할지(학습 조합): 말하기 = 늘 대화, 듣기·읽기 = 묶음, 알아서 = 상황 대본은 대화·나머지는 묶음(듣기 갈래가 약하면 듣기).
+  const [unitItem, setUnitItem] = useState<PlanItem | null>(null);
+  const unitMixOf = (item: PlanItem): "listen" | "read" | null => {
+    if (item.kind !== "script") return null;
+    if (settings.mix === "listen" || settings.mix === "read") return settings.mix;
+    if (settings.mix === "speak") return null;
+    const script = scripts.find((one) => one.id === item.id);
+    if (!script || isSituationScript(script)) return null;
+    return weakest === "pronunciation" ? "listen" : "read";
+  };
   const save = (next: Settings) => {
     setSettings(next);
     try {
@@ -429,6 +441,9 @@ export function TodayPlan({
           : pick.reason === "new"
             ? ui.studyWhyNew
             : ui.studyWhyKeep;
+  const unitMix = unitItem ? unitMixOf(unitItem) : null;
+  // 같은 날·같은 조합이면 같은 문제(씨앗) — 다시 그려도 바뀌지 않는다.
+  const unitQuestions = unitItem && unitMix ? buildUnit(language, unitItem.id, unitMix, day) : [];
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
@@ -469,6 +484,20 @@ export function TodayPlan({
           </button>
         ))}
       </div>
+      {/* 학습 조합(2026-10-29 사용자 "나눠서 고르거나 학습 조합을 짜 주는 식"): 대본·퀴즈가 이 조합의 모양으로. */}
+      <div role="group" data-plan-mix className="mt-1.5 flex flex-wrap gap-1.5">
+        {MIXES.map((mix) => (
+          <button
+            key={mix}
+            type="button"
+            aria-pressed={settings.mix === mix}
+            onClick={() => save({ ...settings, mix })}
+            className={`rounded-full px-3 py-1 text-caption ${settings.mix === mix ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+          >
+            {{ auto: ui.planMixAuto, speak: ui.planMixSpeak, listen: ui.planMixListen, read: ui.planMixRead }[mix]}
+          </button>
+        ))}
+      </div>
       <MorningControl ui={ui} />
       <ul className="mt-2 flex flex-col gap-1.5">
         {items.map((item) => {
@@ -477,7 +506,7 @@ export function TodayPlan({
             <li key={`${item.id}-${item.review ?? ""}`}>
               <button
                 type="button"
-                onClick={() => (item.kind === "quiz" ? setQuiz(item) : onOpen(item.stage, item.id))}
+                onClick={() => (item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
                 className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
               >
                 <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
@@ -485,7 +514,6 @@ export function TodayPlan({
                 </span>
                 <span className="min-w-0 flex-1">
                   <span dir="auto" className={`block truncate text-note ${done ? "text-slate-400" : "text-ink"}`}>
-                    {item.kind === "quiz" ? <span className="text-warn">{ui.quizTag} · </span> : null}
                     {labelOf(item)}
                   </span>
                   {item.review && item.kind !== "quiz" ? (
@@ -593,6 +621,33 @@ export function TodayPlan({
           </span>
         </button>
       ) : null}
+      {unitItem && unitQuestions.length ? (
+        <QuizPlayer
+          key={`unit-${unitItem.id}`}
+          ui={ui}
+          locale={locale}
+          language={language}
+          quizKey={unitItem.id}
+          title={labelOf(unitItem)}
+          seed={day}
+          unit={unitQuestions}
+          onDone={(passedUnit) => {
+            markPracticed(language, unitItem.id);
+            if (!passedUnit) return;
+            void fetch(apiUrl("/api/curriculum/scripts"), {
+              method: "POST",
+              headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+              body: JSON.stringify({ language, id: unitItem.id }),
+            }).catch(() => undefined);
+          }}
+          onThen={() => {
+            const item = unitItem;
+            setUnitItem(null);
+            onOpen(item.stage, item.id);
+          }}
+          onClose={() => setUnitItem(null)}
+        />
+      ) : null}
       {quiz ? (
         <QuizPlayer
           key={`${quiz.id}-${round}`}
@@ -604,6 +659,7 @@ export function TodayPlan({
           card={quiz.card}
           seed={studying ? `${day}-${round}` : day}
           round={log[quiz.id]?.n ?? 0}
+          mix={settings.mix}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, now: Date.now() })[0] ?? null)}
