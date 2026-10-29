@@ -155,7 +155,10 @@ export async function POST(request: NextRequest) {
   const simUser = /^rc:simcheck-/.test(requestUserId(request));
   const simSplit = simUser ? request.headers.get("x-sim-map-split") : null;
   const split = simSplit === "1" || (simSplit !== "0" && mapSplitOn());
-  const wantsStream = body.stream === true && split;
+  // 아이폰 앱(CapacitorHttp → URLSession, UA에 CFNetwork)은 답을 끝까지 모아 한 번에 넘겨 흘려 받기 이득이 없고,
+  // 2.71(85.14)에서 흘려 보낸 답을 받다 "My 탭을 만들지 못했어요"가 났다(2026-10-30 사용자 폰, 같은 요청을 웹에서 하면 됨) — JSON 한 번으로.
+  const nativeIos = /CFNetwork|Darwin/i.test(request.headers.get("user-agent") ?? "");
+  const wantsStream = body.stream === true && split && !nativeIos;
   // 뼈대 짜기에서 먼저 생각할지(운영 MAP_PLAN_THINK=1이면 켬, 기본 끔) — 뼈대만 쓰면 생각 없이도 주제 수·질이 같고 10초쯤 빠름
   // (2026-10-23 운영 비교 ja·en·es 6번 모두 9~12주제). 점검 사용자는 x-sim-map-think: 1/0으로 비교.
   const simThink = simUser ? request.headers.get("x-sim-map-think") : null;
