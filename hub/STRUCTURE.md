@@ -29,7 +29,7 @@
           **큰 칸 셋, 한 번에 하나만 펼침(2026-10-30, NotebookSection MyLayers, 이 폰 localStorage myLayer.v1, 처음엔 오늘 할 것):**
           [오늘 할 것 · n분] → TodayPlan 오늘 목록(누르면 n단계 칸이 펼쳐지며 그 상황·문장구조) · 오늘 배운 것 · ⚙(아이콘만, 분량 n일 완성 · 커리큘럼 순서 | 내 기록에 맞춰 · 조합 · 🔔 아침 알림) — 0단계면 LettersPlan
           [n단계 · 다음 단계까지 n] → 단계 이름 줄 끝 막대 그래프 아이콘 = 내 진척(시트: 단계대로 | 자유롭게 · 갈래별 이미 앎/전체 [목록 | 망 | 그래프] — PartsOverview → PartDetailSheet · 익힌 것) · 사다리 0~5 → 이 단계로 정하기 ·
-              방식 칩 [상황 n/m | 표현·문법 | 문장구조 n/m](StageScripts, 하나만 펼침 — StageFrames listHidden) → ScriptPlayer/FramePlayer · 다음 단계까지(네 갈래 70% + 상황 모두 → 단계 시험) · 네 갈래 막대·칸 · 이 단계 대화 예시
+              연습 방식 버튼 하나(지금 방식 그림·이름·n/m ▾) → 그림 고르기 시트 [상황 | 표현 | 문장구조](StageScripts MethodPicture, 고른 목록만 — StageFrames listHidden) → ScriptPlayer/FramePlayer · 다음 단계까지(네 갈래 70% + 상황 모두 → 단계 시험) · 네 갈래 막대·칸 · 이 단계 대화 예시
           [복습 · 다시 볼 것 n] → [다시 볼 것 | 랜덤 | 어휘 | 문법 | 표현] → 📝 시험(이번 주 확인·실력 확인·단계 시험·미리 확인) → ▶ 계속 공부(묶음 퀴즈) · 단어장(어휘) · 📈 실력 기록 · 지난번에 틀린 것(WeakStrip)
           퀴즈·시험 화면은 칸 밖(TodayPlan children의 overlays)이라 칸을 접어도 떠 있다. 예전 [망 | 그래프 | 단계] 토글·[오늘의 학습]·[지난 학습]·노트에 넣기는 새 앱에 없음(GrowthNetwork plain, CURRICULUM_ONLY).
           튜터가 고친 줄은 서버가 바로 복습 카드로(notes/notebook.ts fileFix, 오타만 7일 후보).

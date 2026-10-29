@@ -673,7 +673,7 @@
     "scriptResume": "続きから",
     "scriptModeOwn": "自分の言葉で",
     "scriptsToNext": "次の段階まで: 場面 {n}個",
-    "scriptsByExpression": "表現・文法",
+    "scriptsByExpression": "表現",
     "scriptSayPrompt": "「{line}」と言ってみましょう。",
     "planScriptName": "台本プラン",
     "planLineCallEvery": "{days}日ごとに自由通話{minutes}分",
@@ -839,7 +839,8 @@
     "guideTodo": "やること",
     "guideCanDo": "できること",
     "guideDetails": "くわしい機能",
-    "planSettings": "設定"
+    "planSettings": "設定",
+    "practiceWay": "練習のしかた"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1515,7 +1516,7 @@
     "scriptResume": "继续",
     "scriptModeOwn": "用自己的话",
     "scriptsToNext": "距下一阶段：{n} 个场景",
-    "scriptsByExpression": "表达·语法",
+    "scriptsByExpression": "表达",
     "scriptSayPrompt": "请说：“{line}”",
     "planScriptName": "剧本套餐",
     "planLineCallEvery": "每{days}天自由通话{minutes}分钟",
@@ -1681,7 +1682,8 @@
     "guideTodo": "要做的",
     "guideCanDo": "可以做的",
     "guideDetails": "更多功能",
-    "planSettings": "设置"
+    "planSettings": "设置",
+    "practiceWay": "练习方式"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2359,7 +2361,7 @@
     "scriptResume": "Học tiếp",
     "scriptModeOwn": "Bằng lời của bạn",
     "scriptsToNext": "Đến giai đoạn sau: {n} tình huống",
-    "scriptsByExpression": "Cách nói · ngữ pháp",
+    "scriptsByExpression": "Cách nói",
     "scriptSayPrompt": "Hãy nói: “{line}”",
     "planScriptName": "Gói kịch bản",
     "planLineCallEvery": "{minutes} phút gọi tự do mỗi {days} ngày",
@@ -2526,7 +2528,8 @@
     "guideTodo": "Cần làm",
     "guideCanDo": "Có thể làm",
     "guideDetails": "Tính năng chi tiết",
-    "planSettings": "Cài đặt"
+    "planSettings": "Cài đặt",
+    "practiceWay": "Cách luyện"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3209,7 +3212,7 @@
     "scriptResume": "Reprendre",
     "scriptModeOwn": "Avec vos mots",
     "scriptsToNext": "Avant l’étape suivante : {n} situations",
-    "scriptsByExpression": "Expressions et grammaire",
+    "scriptsByExpression": "Expressions",
     "scriptSayPrompt": "Dites : « {line} »",
     "planScriptName": "Dialogues",
     "planLineCallEvery": "{minutes} min d’appel libre tous les {days} jours",
@@ -3376,7 +3379,8 @@
     "guideTodo": "À faire",
     "guideCanDo": "Possible aussi",
     "guideDetails": "Plus de fonctions",
-    "planSettings": "Réglages"
+    "planSettings": "Réglages",
+    "practiceWay": "Façon de s’entraîner"
   },
   "it": {
     "archive": "Report",
@@ -4250,7 +4254,7 @@
     "scriptResume": "Continua",
     "scriptModeOwn": "Con parole tue",
     "scriptsToNext": "Alla prossima fase: {n} situazioni",
-    "scriptsByExpression": "Espressioni e grammatica",
+    "scriptsByExpression": "Espressioni",
     "scriptSayPrompt": "Di’: «{line}»",
     "planScriptName": "Copioni",
     "planLineCallEvery": "{minutes} min di chiamata libera ogni {days} giorni",
@@ -4417,7 +4421,8 @@
     "guideTodo": "Da fare",
     "guideCanDo": "Puoi anche",
     "guideDetails": "Altre funzioni",
-    "planSettings": "Impostazioni"
+    "planSettings": "Impostazioni",
+    "practiceWay": "Come esercitarti"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5103,7 +5108,7 @@
     "scriptResume": "Continuar",
     "scriptModeOwn": "Com suas palavras",
     "scriptsToNext": "Para a próxima etapa: {n} situações",
-    "scriptsByExpression": "Expressões e gramática",
+    "scriptsByExpression": "Expressões",
     "scriptSayPrompt": "Diga: “{line}”",
     "planScriptName": "Roteiros",
     "planLineCallEvery": "{minutes} min de chamada livre a cada {days} dias",
@@ -5270,7 +5275,8 @@
     "guideTodo": "O que fazer",
     "guideCanDo": "O que dá para fazer",
     "guideDetails": "Mais recursos",
-    "planSettings": "Ajustes"
+    "planSettings": "Ajustes",
+    "practiceWay": "Como praticar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6142,7 +6148,7 @@
     "scriptResume": "Продолжить",
     "scriptModeOwn": "Своими словами",
     "scriptsToNext": "До следующего этапа: {n} ситуаций",
-    "scriptsByExpression": "Выражения и грамматика",
+    "scriptsByExpression": "Выражения",
     "scriptSayPrompt": "Скажите: «{line}»",
     "planScriptName": "Сценарии",
     "planLineCallEvery": "{minutes} мин свободного звонка раз в {days} дня",
@@ -6309,7 +6315,8 @@
     "guideTodo": "Что делать",
     "guideCanDo": "Что можно",
     "guideDetails": "Подробнее о функциях",
-    "planSettings": "Настройки"
+    "planSettings": "Настройки",
+    "practiceWay": "Способ практики"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6991,7 +6998,7 @@
     "scriptResume": "Lanjutkan",
     "scriptModeOwn": "Dengan kata sendiri",
     "scriptsToNext": "Ke tahap berikutnya: {n} situasi",
-    "scriptsByExpression": "Ungkapan & tata bahasa",
+    "scriptsByExpression": "Ungkapan",
     "scriptSayPrompt": "Ucapkan: “{line}”",
     "planScriptName": "Paket naskah",
     "planLineCallEvery": "{minutes} menit panggilan bebas tiap {days} hari",
@@ -7158,7 +7165,8 @@
     "guideTodo": "Yang perlu dilakukan",
     "guideCanDo": "Yang bisa dilakukan",
     "guideDetails": "Fitur lainnya",
-    "planSettings": "Pengaturan"
+    "planSettings": "Pengaturan",
+    "practiceWay": "Cara berlatih"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7834,7 +7842,7 @@
     "scriptResume": "متابعة",
     "scriptModeOwn": "بكلماتك",
     "scriptsToNext": "حتى المرحلة التالية: {n} مواقف",
-    "scriptsByExpression": "تعابير وقواعد",
+    "scriptsByExpression": "تعابير",
     "scriptSayPrompt": "قل: «{line}»",
     "planScriptName": "باقة النصوص",
     "planLineCallEvery": "{minutes} دقائق مكالمة حرة كل {days} أيام",
@@ -8000,7 +8008,8 @@
     "guideTodo": "ما عليك فعله",
     "guideCanDo": "ما يمكنك فعله",
     "guideDetails": "ميزات أخرى",
-    "planSettings": "الإعدادات"
+    "planSettings": "الإعدادات",
+    "practiceWay": "طريقة التدرّب"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8676,7 +8685,7 @@
     "scriptResume": "ทำต่อ",
     "scriptModeOwn": "พูดด้วยคำของคุณ",
     "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} สถานการณ์",
-    "scriptsByExpression": "สำนวน·ไวยากรณ์",
+    "scriptsByExpression": "สำนวน",
     "scriptSayPrompt": "ลองพูดว่า “{line}”",
     "planScriptName": "แพ็กบท",
     "planLineCallEvery": "โทรอิสระ {minutes} นาทีทุก {days} วัน",
@@ -8842,7 +8851,8 @@
     "guideTodo": "สิ่งที่ต้องทำ",
     "guideCanDo": "สิ่งที่ทำได้",
     "guideDetails": "ฟีเจอร์เพิ่มเติม",
-    "planSettings": "ตั้งค่า"
+    "planSettings": "ตั้งค่า",
+    "practiceWay": "วิธีฝึก"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9518,7 +9528,7 @@
     "scriptResume": "जारी रखें",
     "scriptModeOwn": "अपने शब्दों में",
     "scriptsToNext": "अगले चरण तक: {n} स्थितियाँ",
-    "scriptsByExpression": "अभिव्यक्ति · व्याकरण",
+    "scriptsByExpression": "अभिव्यक्तियाँ",
     "scriptSayPrompt": "कहिए: “{line}”",
     "planScriptName": "स्क्रिप्ट प्लान",
     "planLineCallEvery": "हर {days} दिन में {minutes} मिनट मुफ़्त कॉल",
@@ -9684,6 +9694,7 @@
     "guideTodo": "क्या करना है",
     "guideCanDo": "क्या कर सकते हैं",
     "guideDetails": "और सुविधाएँ",
-    "planSettings": "सेटिंग"
+    "planSettings": "सेटिंग",
+    "practiceWay": "अभ्यास का तरीका"
   }
 }
