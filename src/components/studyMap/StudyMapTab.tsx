@@ -23,6 +23,9 @@ import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NotebookSection } from "@/components/notes/NotebookSection";
 import { GrowthNetwork, type BoardMode, type BoardOptions } from "@/components/studyMap/GrowthNetwork";
 import { StageExamples, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
+import { PlacementPlayer } from "@/components/studyMap/PlacementPlayer";
+import type { CheckResult } from "@/lib/curriculum/checkup";
+import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -589,25 +592,67 @@ function StageStart({
   const [stage, setStage] = useState<string | null>(startStage);
   const [saving, setSaving] = useState(false);
   const [failed, setFailed] = useState(false);
+  // 처음 시험(실력 확인, lib/curriculum/placement.ts)으로 정할지, 대화 예시로 고를지 — 처음엔 둘 중 고르게(2026-10-29 사용자).
+  const [mode, setMode] = useState<"choose" | "test" | "pick">(startStage ? "pick" : "choose");
   const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
   if (!stages?.length) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
-  const start = async () => {
-    if (!stage || !stageOk || saving) return;
+  const idOf = (order: number) => stages.find((entry) => entry.order === order)?.id ?? stages[0]!.id;
+  const start = async (chosen = stage) => {
+    if (!chosen || !stages.some((entry) => entry.id === chosen) || saving) return;
     setSaving(true);
     setFailed(false);
     const ok = await fetch(apiUrl("/api/learner/self-check"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language: targetLanguage, stage }),
+      body: JSON.stringify({ language: targetLanguage, stage: chosen }),
     })
       .then((response) => response.ok)
       .catch(() => false);
     setSaving(false);
-    if (ok) onStarted(stage);
+    if (ok) onStarted(chosen);
     else setFailed(true);
   };
+  const saveTest = (result: CheckResult) => {
+    void fetch(apiUrl("/api/curriculum/scripts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language: targetLanguage, checkup: result }),
+    }).catch(() => undefined);
+  };
+  if (mode === "choose") {
+    return (
+      <div className="mx-auto flex max-w-md flex-col gap-3">
+        <button type="button" data-placement-take onClick={() => setMode("test")} className="tb-btn rounded-xl px-4 py-3 text-note font-semibold">
+          {ui.placementTake}
+        </button>
+        <button type="button" onClick={() => setMode("pick")} className="rounded-xl border border-line px-4 py-3 text-note text-slate-200 hover:bg-white/5">
+          {ui.placementPick}
+        </button>
+        {canCancel ? (
+          <button type="button" onClick={onCancel} className="self-center text-meta text-slate-400 underline-offset-4 hover:underline">
+            {ui.billingClose}
+          </button>
+        ) : null}
+      </div>
+    );
+  }
   return (
     <div className="mx-auto flex max-w-md flex-col gap-4">
+      {mode === "test" ? (
+        <PlacementPlayer
+          ui={ui}
+          locale={locale}
+          language={targetLanguage}
+          labelOf={(key) => reviewLabel(targetLanguage, key)}
+          onFinish={saveTest}
+          onStart={(order) => void start(idOf(order))}
+          onPick={(order) => {
+            setStage(idOf(order));
+            setMode("pick");
+          }}
+          onClose={() => setMode(startStage ? "pick" : "choose")}
+        />
+      ) : null}
       <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={saving} script={{ targetLanguage, locale, isPremium }} />
       <button
         type="button"
@@ -616,6 +661,9 @@ function StageStart({
         className="tb-btn rounded-xl px-4 py-3 text-note font-semibold disabled:opacity-40"
       >
         {ui.stageBegin}
+      </button>
+      <button type="button" onClick={() => setMode("test")} className="self-center rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+        {ui.placementTake}
       </button>
       {failed ? <p className="text-sm text-rose-300">{ui.mapFailed}</p> : null}
       {canCancel ? (

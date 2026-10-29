@@ -766,7 +766,11 @@
     "checkupWrong": "まちがえたもの",
     "checkupRecent": "最近学んだこと",
     "checkupOld": "前に学んだこと",
-    "checkupAhead": "次の段階"
+    "checkupAhead": "次の段階",
+    "placementTake": "テストで始める",
+    "placementPick": "自分で選ぶ",
+    "placementTitle": "実力チェック",
+    "placementStart": "ステージ{n}から始める"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1535,7 +1539,11 @@
     "checkupWrong": "做错的",
     "checkupRecent": "最近学的",
     "checkupOld": "以前学的",
-    "checkupAhead": "下一阶段"
+    "checkupAhead": "下一阶段",
+    "placementTake": "先做测试",
+    "placementPick": "自己选",
+    "placementTitle": "水平测试",
+    "placementStart": "从第{n}阶段开始"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2307,7 +2315,11 @@
     "checkupWrong": "Câu sai",
     "checkupRecent": "Mới học",
     "checkupOld": "Học từ trước",
-    "checkupAhead": "Giai đoạn tiếp"
+    "checkupAhead": "Giai đoạn tiếp",
+    "placementTake": "Bắt đầu bằng bài kiểm tra",
+    "placementPick": "Tự chọn",
+    "placementTitle": "Kiểm tra trình độ",
+    "placementStart": "Bắt đầu từ giai đoạn {n}"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3084,7 +3096,11 @@
     "checkupWrong": "Ratés",
     "checkupRecent": "Appris récemment",
     "checkupOld": "Appris plus tôt",
-    "checkupAhead": "Étape suivante"
+    "checkupAhead": "Étape suivante",
+    "placementTake": "Commencer par un test",
+    "placementPick": "Choisir moi-même",
+    "placementTitle": "Test de niveau",
+    "placementStart": "Commencer à l'étape {n}"
   },
   "it": {
     "archive": "Report",
@@ -4052,7 +4068,11 @@
     "checkupWrong": "Sbagliati",
     "checkupRecent": "Imparato da poco",
     "checkupOld": "Imparato prima",
-    "checkupAhead": "Fase successiva"
+    "checkupAhead": "Fase successiva",
+    "placementTake": "Inizia con un test",
+    "placementPick": "Scelgo io",
+    "placementTitle": "Test di livello",
+    "placementStart": "Inizia dalla fase {n}"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4832,7 +4852,11 @@
     "checkupWrong": "Errou",
     "checkupRecent": "Aprendido há pouco",
     "checkupOld": "Aprendido antes",
-    "checkupAhead": "Próxima etapa"
+    "checkupAhead": "Próxima etapa",
+    "placementTake": "Começar com um teste",
+    "placementPick": "Escolher eu mesmo",
+    "placementTitle": "Teste de nível",
+    "placementStart": "Começar na etapa {n}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5798,7 +5822,11 @@
     "checkupWrong": "Ошибки",
     "checkupRecent": "Выучено недавно",
     "checkupOld": "Выучено раньше",
-    "checkupAhead": "Следующий этап"
+    "checkupAhead": "Следующий этап",
+    "placementTake": "Начать с теста",
+    "placementPick": "Выбрать самому",
+    "placementTitle": "Проверка уровня",
+    "placementStart": "Начать с этапа {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6574,7 +6602,11 @@
     "checkupWrong": "Yang salah",
     "checkupRecent": "Baru dipelajari",
     "checkupOld": "Dipelajari sebelumnya",
-    "checkupAhead": "Tahap berikutnya"
+    "checkupAhead": "Tahap berikutnya",
+    "placementTake": "Mulai dengan tes",
+    "placementPick": "Pilih sendiri",
+    "placementTitle": "Cek kemampuan",
+    "placementStart": "Mulai dari tahap {n}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7343,7 +7375,11 @@
     "checkupWrong": "ما أخطأت فيه",
     "checkupRecent": "تعلّمته مؤخرًا",
     "checkupOld": "تعلّمته من قبل",
-    "checkupAhead": "المرحلة التالية"
+    "checkupAhead": "المرحلة التالية",
+    "placementTake": "ابدأ باختبار",
+    "placementPick": "أختار بنفسي",
+    "placementTitle": "اختبار المستوى",
+    "placementStart": "ابدأ من المرحلة {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8112,7 +8148,11 @@
     "checkupWrong": "ข้อที่ผิด",
     "checkupRecent": "เพิ่งเรียน",
     "checkupOld": "เรียนไปก่อนหน้า",
-    "checkupAhead": "ขั้นถัดไป"
+    "checkupAhead": "ขั้นถัดไป",
+    "placementTake": "เริ่มด้วยแบบทดสอบ",
+    "placementPick": "เลือกเอง",
+    "placementTitle": "วัดระดับ",
+    "placementStart": "เริ่มที่ขั้นที่ {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8881,6 +8921,10 @@
     "checkupWrong": "गलत हुए",
     "checkupRecent": "हाल में सीखा",
     "checkupOld": "पहले सीखा",
-    "checkupAhead": "अगला चरण"
+    "checkupAhead": "अगला चरण",
+    "placementTake": "टेस्ट से शुरू करें",
+    "placementPick": "खुद चुनें",
+    "placementTitle": "स्तर जाँच",
+    "placementStart": "चरण {n} से शुरू करें"
   }
 }

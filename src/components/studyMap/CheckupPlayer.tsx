@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import type { UICopy } from "@/lib/copy";
-import { CHECK_ORIGINS, rateOf, summarize, type CheckItem, type CheckOrigin, type CheckResult } from "@/lib/curriculum/checkup";
+import { CHECK_ORIGINS, rateOf, STAGE_KEYS, summarize, type CheckItem, type CheckOrigin, type CheckResult } from "@/lib/curriculum/checkup";
 import { PART_IDS, type PartId } from "@/lib/notes/stageParts";
 import { stopTts } from "@/lib/ttsPlayer";
 
@@ -105,21 +105,39 @@ function originName(ui: UICopy, origin: CheckOrigin): string {
   return { recent: ui.checkupRecent, old: ui.checkupOld, ahead: ui.checkupAhead }[origin];
 }
 
-function CheckupResult({
+/** 시험 결과 한 장(이번 주 확인·처음 시험 같이 씀). heading = 맨 위 한 줄(처음 시험의 "n단계에서 시작"), actions = 아래 버튼(없으면 닫기). */
+export function CheckupResult({
   ui,
   result,
   previous,
   labelOf,
   onClose,
+  heading,
+  actions,
 }: {
   ui: UICopy;
   result: CheckResult;
   previous: CheckResult | null;
   labelOf: (key: string) => string;
   onClose: () => void;
+  heading?: string;
+  actions?: ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-4">
+      {heading ? <p className="text-body font-semibold text-ink">{heading}</p> : null}
+      {result.stages && Object.keys(result.stages).length ? (
+        <ul className="flex flex-col gap-1">
+          {STAGE_KEYS.filter((key) => result.stages![key]).map((key) => (
+            <li key={key} data-stage={key} className="flex items-center gap-2 text-caption">
+              <span className={`min-w-0 flex-1 ${Number(key) === result.stage ? "text-status-learned" : "text-slate-400"}`}>{ui.stageNumber.replace("{n}", key)}</span>
+              <span className="tabular-nums text-slate-300">
+                {result.stages![key]![0]}/{result.stages![key]![1]}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <ul className="flex flex-col gap-2">
         {PART_IDS.filter((part) => result.parts[part]).map((part) => {
           const [right, total] = result.parts[part]!;
@@ -147,16 +165,18 @@ function CheckupResult({
           );
         })}
       </ul>
-      <ul className="flex flex-col gap-1 border-t border-line pt-3">
-        {CHECK_ORIGINS.filter((origin) => result.origins[origin]).map((origin) => (
-          <li key={origin} className="flex items-center gap-2 text-caption">
-            <span className="min-w-0 flex-1 text-slate-400">{originName(ui, origin)}</span>
-            <span className="tabular-nums text-slate-300">
-              {result.origins[origin]![0]}/{result.origins[origin]![1]}
-            </span>
-          </li>
-        ))}
-      </ul>
+      {Object.keys(result.origins).length ? (
+        <ul className="flex flex-col gap-1 border-t border-line pt-3">
+          {CHECK_ORIGINS.filter((origin) => result.origins[origin]).map((origin) => (
+            <li key={origin} className="flex items-center gap-2 text-caption">
+              <span className="min-w-0 flex-1 text-slate-400">{originName(ui, origin)}</span>
+              <span className="tabular-nums text-slate-300">
+                {result.origins[origin]![0]}/{result.origins[origin]![1]}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       {result.wrong.length ? (
         <div className="flex flex-col gap-1.5 border-t border-line pt-3">
           <h3 className="text-caption font-semibold text-warn">{ui.checkupWrong}</h3>
@@ -169,9 +189,11 @@ function CheckupResult({
           </div>
         </div>
       ) : null}
-      <button type="button" onClick={onClose} className="self-center rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
-        {ui.billingClose}
-      </button>
+      {actions ?? (
+        <button type="button" onClick={onClose} className="self-center rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
+          {ui.billingClose}
+        </button>
+      )}
     </div>
   );
 }

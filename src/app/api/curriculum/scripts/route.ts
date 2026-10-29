@@ -23,7 +23,7 @@ export const maxDuration = 60;
  * GET ?lang=&pack=1 → { scripts, frames } — 그 언어 대본·틀 전부(앱에 없는 언어를 2.76 앱이 받아 씀, curriculum/useScriptPack.ts). 로그인 없이.
  * GET ?lang=&stage=&ui=&glosses=1 → { glosses: {영어 원문: 앱 언어} } — 대본·틀 뜻풀이(영어·한국어 앱은 빈 표, 다른 앱 언어는 처음 한 번 옮겨 저장, server/stageCopy.ts). 로그인 없이.
  * GET ?lang=&checkups=1 → { checkups } — 이번 주 확인 결과(최근 12번, curriculum/checkup.ts).
- * POST { language, checkup: { stage, parts, origins, wrong } } → { checkups, review } — 이번 주 확인을 끝냄. 7일에 한 번만 받고(그 안이면 409),
+ * POST { language, checkup: { stage, parts, origins, wrong, kind?, stages? } } → { checkups, review } — 이번 주 확인(7일에 한 번, 그 안이면 409) 또는 처음 시험(kind "placement", 언제든)을 끝냄.
  *   틀린 열쇠는 다시 볼 것(2일 뒤). 문장·들린 말은 받지 않는다.
  * POST { language, check: { 열쇠(e|표현 또는 f|문장구조 id): true(알아요) | false(헷갈려요) } } — 학습 끝 체크(오늘 할 것, curriculum/dailyPlan.ts) → { review }.
  * POST { language, id, redo: true } — 틀린 틀 "다시 연습"을 끝냄(/api/notebook redo에서 3일 빠짐).
@@ -73,7 +73,8 @@ export async function POST(request: NextRequest) {
     const result = cleanResult(body.checkup, language);
     if (!result) return jsonWithCors(request, { error: "BAD_CHECKUP" }, { status: 400 });
     const before = await readCheckups(userId, language);
-    if (!checkupDue(before)) return jsonWithCors(request, { error: "CHECKUP_NOT_DUE", checkups: before }, { status: 409 });
+    // 처음 시험(kind placement)은 언제든(시작 단계를 다시 정할 때), 이번 주 확인은 7일에 한 번.
+    if (result.kind !== "placement" && !checkupDue(before)) return jsonWithCors(request, { error: "CHECKUP_NOT_DUE", checkups: before }, { status: 409 });
     return jsonWithCors(request, await saveCheckup(userId, language, result));
   }
   if (body.check && typeof body.check === "object" && !Array.isArray(body.check)) {

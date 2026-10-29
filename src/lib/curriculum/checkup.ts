@@ -32,7 +32,16 @@ export type CheckResult = {
   parts: Partial<Record<PartId, Tally>>;
   origins: Partial<Record<CheckOrigin, Tally>>;
   wrong: string[];
+  /** 시험 종류(없으면 이번 주 확인). placement = 처음 시험(curriculum/placement.ts) — stage가 거기서 정한 시작 단계. */
+  kind?: "weekly" | "placement";
+  /** 처음 시험: 단계마다 [맞힘, 낸 수]. */
+  stages?: Partial<Record<StageKey, Tally>>;
 };
+
+export type StageKey = "1" | "2" | "3" | "4" | "5";
+export const STAGE_KEYS: readonly StageKey[] = ["1", "2", "3", "4", "5"];
+/** 한 시험에서 한 칸(갈래·단계)에 낼 수 있는 최대 문제 수(서버가 숫자를 거를 때). */
+const TALLY_MAX = 30;
 
 export const CHECKUP_SIZE = 12;
 export const CHECKUP_EVERY_MS = 7 * DAY_MS;
@@ -213,7 +222,7 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
   const stage = Number(value.stage);
   if (!Number.isInteger(stage) || stage < 1 || stage > 5) return null;
   const tally = (t: unknown): Tally | null =>
-    Array.isArray(t) && t.length === 2 && t.every((n) => Number.isInteger(n) && n >= 0 && n <= CHECKUP_SIZE) && t[0] <= t[1] ? [t[0], t[1]] : null;
+    Array.isArray(t) && t.length === 2 && t.every((n) => Number.isInteger(n) && n >= 0 && n <= TALLY_MAX) && t[0] <= t[1] ? [t[0], t[1]] : null;
   const pick = <K extends string>(record: unknown, keys: readonly K[]) => {
     const out: Partial<Record<K, Tally>> = {};
     if (!record || typeof record !== "object") return out;
@@ -228,7 +237,10 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
   if (!Object.keys(parts).length) return null;
   const wrong = (Array.isArray(value.wrong) ? value.wrong : [])
     .filter((key): key is string => typeof key === "string" && key.length <= 80 && /^[efg]\|/.test(key) && isCurriculumKey(language, key))
-    .slice(0, CHECKUP_SIZE);
+    .slice(0, TALLY_MAX);
+  if (value.kind === "placement") {
+    return { at: now, stage, parts, origins, wrong, kind: "placement", stages: pick(value.stages, STAGE_KEYS) };
+  }
   return { at: now, stage, parts, origins, wrong };
 }
 
