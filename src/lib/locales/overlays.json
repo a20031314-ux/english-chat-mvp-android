@@ -821,7 +821,10 @@
     "topicDescribing": "描写",
     "topicNature": "自然",
     "topicSociety": "社会",
-    "topicFunction": "つなぐ言葉"
+    "topicFunction": "つなぐ言葉",
+    "modeStaged": "段階どおり",
+    "modeFree": "自由に",
+    "setStageHere": "この段階にする"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1645,7 +1648,10 @@
     "topicDescribing": "描述",
     "topicNature": "自然",
     "topicSociety": "社会",
-    "topicFunction": "连接词"
+    "topicFunction": "连接词",
+    "modeStaged": "按阶段",
+    "modeFree": "自由",
+    "setStageHere": "设为这个阶段"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2472,7 +2478,10 @@
     "topicDescribing": "Miêu tả",
     "topicNature": "Thiên nhiên",
     "topicSociety": "Xã hội",
-    "topicFunction": "Từ nối"
+    "topicFunction": "Từ nối",
+    "modeStaged": "Theo giai đoạn",
+    "modeFree": "Tự do",
+    "setStageHere": "Chọn giai đoạn này"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3304,7 +3313,10 @@
     "topicDescribing": "Décrire",
     "topicNature": "Nature",
     "topicSociety": "Société",
-    "topicFunction": "Mots de liaison"
+    "topicFunction": "Mots de liaison",
+    "modeStaged": "Par étapes",
+    "modeFree": "Libre",
+    "setStageHere": "Choisir cette étape"
   },
   "it": {
     "archive": "Report",
@@ -4327,7 +4339,10 @@
     "topicDescribing": "Descrivere",
     "topicNature": "Natura",
     "topicSociety": "Società",
-    "topicFunction": "Connettivi"
+    "topicFunction": "Connettivi",
+    "modeStaged": "Per fasi",
+    "modeFree": "Libero",
+    "setStageHere": "Scegli questa fase"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5162,7 +5177,10 @@
     "topicDescribing": "Descrever",
     "topicNature": "Natureza",
     "topicSociety": "Sociedade",
-    "topicFunction": "Conectivos"
+    "topicFunction": "Conectivos",
+    "modeStaged": "Por etapas",
+    "modeFree": "Livre",
+    "setStageHere": "Escolher esta etapa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6183,7 +6201,10 @@
     "topicDescribing": "Описание",
     "topicNature": "Природа",
     "topicSociety": "Общество",
-    "topicFunction": "Связующие слова"
+    "topicFunction": "Связующие слова",
+    "modeStaged": "По этапам",
+    "modeFree": "Свободно",
+    "setStageHere": "Выбрать этот этап"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7014,7 +7035,10 @@
     "topicDescribing": "Menggambarkan",
     "topicNature": "Alam",
     "topicSociety": "Masyarakat",
-    "topicFunction": "Kata penghubung"
+    "topicFunction": "Kata penghubung",
+    "modeStaged": "Per tahap",
+    "modeFree": "Bebas",
+    "setStageHere": "Pilih tahap ini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7838,7 +7862,10 @@
     "topicDescribing": "الوصف",
     "topicNature": "الطبيعة",
     "topicSociety": "المجتمع",
-    "topicFunction": "أدوات الربط"
+    "topicFunction": "أدوات الربط",
+    "modeStaged": "حسب المراحل",
+    "modeFree": "بحرّية",
+    "setStageHere": "اجعلها مرحلتي"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8662,7 +8689,10 @@
     "topicDescribing": "การบรรยาย",
     "topicNature": "ธรรมชาติ",
     "topicSociety": "สังคม",
-    "topicFunction": "คำเชื่อม"
+    "topicFunction": "คำเชื่อม",
+    "modeStaged": "ตามขั้น",
+    "modeFree": "อิสระ",
+    "setStageHere": "เลือกขั้นนี้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9486,6 +9516,9 @@
     "topicDescribing": "वर्णन",
     "topicNature": "प्रकृति",
     "topicSociety": "समाज",
-    "topicFunction": "जोड़ने वाले शब्द"
+    "topicFunction": "जोड़ने वाले शब्द",
+    "modeStaged": "चरणों के अनुसार",
+    "modeFree": "अपनी मर्ज़ी से",
+    "setStageHere": "यह चरण चुनें"
   }
 }

@@ -145,6 +145,7 @@ export function TodayPlan({
   expressions = [],
   cards = [],
   onStageChanged,
+  free = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -167,6 +168,8 @@ export function TodayPlan({
   expressions?: readonly { text: string; state: LedgerState | null }[];
   /** 실력 확인으로 시작 단계를 바꾼 뒤(NotebookSection이 다시 읽음). */
   onStageChanged?: () => void;
+  /** 자유롭게(curriculum/studyMode.ts): 단계 시험·단계 미리 확인을 내지 않는다(stage = 가장 낮은 열린 단계). */
+  free?: boolean;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -394,13 +397,13 @@ export function TodayPlan({
     });
   };
   // 큰 시험(처음 시험·단계 시험) 뒤 6주, 큰 시험이 없으면 처음 본 지 3일 — 지금 단계 시험을 권한다(이번 주 확인보다 앞).
-  const stageTestOffer = !checkupOpen || checkupOpen === "stage" ? bigTestDue(checkups, firstSeen, now) && !failedToday(checkups, stage, now) : false;
+  const stageTestOffer = free ? false : !checkupOpen || checkupOpen === "stage" ? bigTestDue(checkups, firstSeen, now) && !failedToday(checkups, stage, now) : false;
   const liveStageItems = stageTestOffer ? buildStageTest({ language, stage, now, stats: itemStats }) : [];
   const stageTestItems = checkupOpen === "stage" && frozenItems ? (frozenItems as typeof liveStageItems) : liveStageItems;
   // 단계 미리 확인(curriculum/stageTest.ts buildEntryCheck): 이 단계에서 이미 아는 것 거르기 — 단계마다 한 번, 이번 주 확인보다 앞.
   const liveEntryItems = !checkupOpen || checkupOpen === "entry" ? buildEntryCheck({ language, stage, known, passed: passedSet, now, stats: itemStats }) : [];
   const entryItems = checkupOpen === "entry" && frozenItems ? (frozenItems as typeof liveEntryItems) : liveEntryItems;
-  const entryOffer = checkupOpen === "entry" || entryDue(checkups, stage, liveEntryItems);
+  const entryOffer = checkupOpen === "entry" || (!free && entryDue(checkups, stage, liveEntryItems));
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
   const queue = nextStudy({
     language,

@@ -20,6 +20,8 @@ import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
 import { skeletonTotals, skeletonView, toNextStage } from "@/lib/notes/skeletonTotals";
+import { frontierStage, useStudyMode, type StudyMode } from "@/lib/curriculum/studyMode";
+import { ladderFor } from "@/lib/curriculum/stages";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
@@ -180,9 +182,23 @@ export function NotebookSection({
   const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
+  // 사다리에서 아무 단계나 "이 단계로 정하기"(2026-10-29) — 조건·시험 없이 지금 단계를 바꾼다.
+  const setStageTo = (order: number) => {
+    const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
+    if (!id) return;
+    void fetch(apiUrl("/api/learner/self-check"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language, stage: id }),
+    })
+      .then((response) => response.ok && setReload((n) => n + 1))
+      .catch(() => undefined);
+  };
   // "다음 단계로" 앞의 단계 시험(curriculum/stageTest.ts, 2026-10-29 사용자 "시험을 중심으로"): 고른 단계, 시험 결과(서버 checkups).
   const [stageTestFor, setStageTestFor] = useState<number | null>(null);
   const { checkups, known, save: saveCheckup } = useCheckups(language);
+  // 단계대로 | 자유롭게(curriculum/studyMode.ts): 자유롭게면 가장 낮은 열린 단계를 기준으로, 단계 시험·조건 없음.
+  const [studyMode, setStudyMode] = useStudyMode(language);
   const skipped = useMemo(() => skippedIds(language, known), [language, known]);
   useItemStats(language);
   const loaded = Boolean(book);
@@ -391,6 +407,8 @@ export function NotebookSection({
           ui={ui}
           language={language}
           stage={book.stage}
+          free={studyMode === "free"}
+          onMode={setStudyMode}
           row={(book.parts ?? []).find((row) => row.order === book.stage) ?? null}
           known={known}
           passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
@@ -401,7 +419,8 @@ export function NotebookSection({
           ui={ui}
           locale={locale}
           language={language}
-          stage={book.stage}
+          stage={studyMode === "free" ? frontierStage(book.parts ?? [], book.stage) : book.stage}
+          free={studyMode === "free"}
           passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
           review={book.review ?? NO_REVIEW}
           recommended={book.recommend?.id ?? null}
@@ -478,7 +497,9 @@ export function NotebookSection({
           words={book.words ?? []}
           pronunciationNotes={book.pronunciationNotes ?? {}}
           onTry={onTry}
-          onNextStage={onNextStage ? (order) => setStageTestFor(order) : undefined}
+          onNextStage={onNextStage && studyMode !== "free" ? (order) => setStageTestFor(order) : undefined}
+          free={studyMode === "free"}
+          onSetStage={setStageTo}
           canSpeak={canSpeak}
           focusPart={focusPart}
           jump={jump}
@@ -867,6 +888,8 @@ function StageFrame({
   scripts,
   scriptFor,
   jump = null,
+  free = false,
+  onSetStage,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -895,6 +918,10 @@ function StageFrame({
   scriptFor?: (order: number, open: string[]) => string | null;
   /** 밖(문법 칸)에서 고른 대본·문장구조 — 그 단계로 옮겨 연다. */
   jump?: { stage: number; id: string; at: number } | null;
+  /** 자유롭게(curriculum/studyMode.ts): 다음 단계 조건을 안 보인다. */
+  free?: boolean;
+  /** 보고 있는 단계를 지금 단계로(조건·시험 없이). */
+  onSetStage?: (order: number) => void;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -1006,13 +1033,25 @@ function StageFrame({
         })}
       </ol>
       {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
-      <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
+      <div className="mt-3 flex items-center gap-2">
+        <p className={`min-w-0 flex-1 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
+        {shown !== now && onSetStage && !free ? (
+          <button
+            type="button"
+            data-set-stage
+            onClick={() => onSetStage(shown)}
+            className="shrink-0 rounded-full border border-line px-3 py-1 text-caption text-slate-200 hover:bg-white/10"
+          >
+            {ui.setStageHere}
+          </button>
+        ) : null}
+      </div>
       {scripts?.(shown, stageParts, openScript)}
 
       {stageParts ? (
         <>
           {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 가장 모자란 갈래 + 연습. */}
-          {shown === now ? (
+          {shown === now && !free ? (
             readyOf(shown) && onNextStage && shown < stages.length ? (
               <button
                 type="button"
@@ -1852,17 +1891,48 @@ function StageTestGate({
  * My 맨 위(2026-10-29 사용자 "정해진 데이터 중 얼마나 학습했다" → "진행해줘", lib/notes/skeletonTotals.ts):
  * 지금 단계 · 다음 단계까지 n개, 그 아래 갈래마다 이미 앎 / 그 언어 뼈대 전체(배우는 중은 옅게), 뼈대 밖은 한 줄.
  */
-function SkeletonProgress({ ui, language, stage, row, known, passed }: { ui: UICopy; language: string; stage: number; row: StageParts | null; known: KnownMap; passed: readonly string[] }) {
+function SkeletonProgress({
+  ui,
+  language,
+  stage,
+  row,
+  known,
+  passed,
+  free,
+  onMode,
+}: {
+  ui: UICopy;
+  language: string;
+  stage: number;
+  row: StageParts | null;
+  known: KnownMap;
+  passed: readonly string[];
+  free: boolean;
+  onMode: (mode: StudyMode) => void;
+}) {
   const passedKey = passed.join("|");
   const totals = useMemo(() => skeletonTotals(language, { known, passed: new Set(passedKey.split("|")) }), [language, known, passedKey]);
   const left = row ? toNextStage(row.parts, STAGE_DONE_SHARE) : 0;
   const label = partLabels(ui);
   return (
     <div data-my-progress className="mt-3 flex flex-col gap-1.5 px-1">
-      <p className="flex items-baseline gap-2">
-        <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>
-        {left > 0 ? <span className="text-meta tabular-nums text-slate-400">{ui.toNextStage.replace("{n}", String(left))}</span> : null}
-      </p>
+      <div className="flex items-center gap-2">
+        {free ? null : <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>}
+        {!free && left > 0 ? <span className="min-w-0 truncate text-meta tabular-nums text-slate-400">{ui.toNextStage.replace("{n}", String(left))}</span> : null}
+        <span role="group" data-study-mode className="ms-auto flex shrink-0 gap-0.5 rounded-full border border-line p-0.5">
+          {(["staged", "free"] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              aria-pressed={(mode === "free") === free}
+              onClick={() => onMode(mode)}
+              className={`rounded-full px-2.5 py-0.5 text-meta ${(mode === "free") === free ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+            >
+              {mode === "free" ? ui.modeFree : ui.modeStaged}
+            </button>
+          ))}
+        </span>
+      </div>
       {skeletonView(totals).map((part) => (
         <div key={part.id} data-total-part={part.id} className="flex items-center gap-2">
           <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label[part.id]}</span>

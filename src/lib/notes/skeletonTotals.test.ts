@@ -38,3 +38,9 @@ test("My 화면은 어휘를 표현에 합친다(어휘는 지속 학습이 따�
   const sum = (list: readonly { id: string; total: number }[]) => list.filter((p) => p.id !== "pronunciation").reduce((s, p) => s + p.total, 0);
   assert.equal(sum(view), sum(totals.parts));
 });
+
+test("자유롭게: 기준 단계는 아직 다 안 한 가장 낮은 단계", async () => {
+  const { frontierStage } = await import("../curriculum/studyMode.ts");
+  assert.equal(frontierStage([{ order: 1, scripts: { done: 4, total: 4 } }, { order: 2, scripts: { done: 1, total: 5 } }, { order: 3, scripts: { done: 0, total: 5 } }], 3), 2);
+  assert.equal(frontierStage([{ order: 1, scripts: { done: 4, total: 4 } }], 1), 1);
+});
