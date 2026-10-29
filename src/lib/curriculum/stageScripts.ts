@@ -139,6 +139,25 @@ export function runPasses(script: StageScript, runs: Record<number, LineRun>, ru
 }
 
 /** 통과로 셈해지지 않은 내 줄 번호(틀림·원문 열어 봄·통과로 안 세는 방식) — 끝 화면 "통과까지 n줄"·"그 줄만 다시". */
+/**
+ * 대본 진행(2026-10-29 사용자 "학습 진행률을 실시간으로, 끝내면 그 대본은 학습 완료라고 확실히"):
+ * total = 내 줄 수, said = 말해 본 줄(방식 상관없이), passed = 통과로 셈해지는 줄(통과 기준 rule까지). 학습 완료 = said === total.
+ */
+export function scriptProgress(script: StageScript, runs: Record<number, LineRun | undefined>, rule: "speak" | "any" = "speak"): { total: number; said: number; passed: number } {
+  let total = 0;
+  let said = 0;
+  let passed = 0;
+  script.lines.forEach((line, i) => {
+    if (line.who !== "me") return;
+    total += 1;
+    const run = runs[i];
+    if (!run) return;
+    said += 1;
+    if (run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule)) passed += 1;
+  });
+  return { total, said, passed };
+}
+
 export function linesToRedo(script: StageScript, runs: Record<number, LineRun>, rule: "speak" | "any" = "speak"): number[] {
   return script.lines.flatMap((line, i) => {
     if (line.who !== "me") return [];

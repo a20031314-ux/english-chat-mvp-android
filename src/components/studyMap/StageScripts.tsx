@@ -20,6 +20,7 @@ import {
   cleanBesidesName,
   countsForPass,
   linesToRedo,
+  scriptProgress,
   glossFor,
   isSituationScript,
   passOutcome,
@@ -377,6 +378,10 @@ function ScriptPlayer({
   }, [done, results, language, script.id]);
   // 통과로 셈해지지 않은 내 줄(틀림·원문 열어 봄·따라 말하기) — 끝 화면의 "통과까지 n줄"과 "그 줄만 다시".
   const toRedo = linesToRedo(script, runs, passRule);
+  // 진행(실시간): 말해 본 줄 = 무언가 들렸거나 잘 모르겠어요를 누른 줄. 학습 완료 = 내 줄을 끝까지 다 말함(통과와 따로).
+  const spokenRuns: Record<number, LineRun> = Object.fromEntries(Object.entries(runs).filter(([i]) => Boolean(results[Number(i)]?.heard || results[Number(i)]?.stuck || isTapMode(results[Number(i)]?.mode as ScriptMode))));
+  const progress = scriptProgress(script, spokenRuns, passRule);
+  const completed = done && progress.total > 0 && progress.said === progress.total;
   const outcome = passes ? passOutcome(runs) : "unaided";
 
   useEffect(() => {
@@ -538,6 +543,20 @@ function ScriptPlayer({
             </button>
           ))}
         </span>
+      </div>
+      {/* Live progress (user, 2026-10-29): per own line ● counts toward passing · ◐ said, not yet · ○ not yet; says so when this mode does not count. */}
+      <div className="flex shrink-0 items-center gap-2 border-b border-line px-4 py-1.5">
+        <span aria-hidden className="flex gap-1">
+          {script.lines.map((line, i) => {
+            if (line.who !== "me") return null;
+            const one = spokenRuns[i];
+            const ok = one && one.clean && !one.revealed && countsForPass(script.stage, one.mode, passRule);
+            return <span key={i} className={`h-2 w-2 rounded-full ${ok ? "bg-status-mastered" : one ? "bg-warn/70" : "border border-line"}`} />;
+          })}
+        </span>
+        <span className="text-caption tabular-nums text-slate-300">{ui.scriptPassProgress.replace("{n}", String(progress.passed)).replace("{m}", String(progress.total))}</span>
+        {!countsForPass(script.stage, mode, passRule) ? <span className="text-caption text-warn">· {ui.scriptPracticeOnly}</span> : null}
+        {passed || justPassed ? <span className="ms-auto text-caption font-semibold text-good">★ {ui.scriptPassed}</span> : null}
       </div>
 
       {offer ? <ResumeChoice ui={ui} at={offer.index} total={script.lines.length} onResume={resume} onRestart={restart} /> : null}
@@ -747,7 +766,8 @@ function ScriptPlayer({
         })}
         {done ? (
           <li className="mt-3 flex flex-col items-center gap-2">
-            <p className="text-note text-slate-200">{passes || justPassed ? `✓ ${ui.scriptPassed}` : ui.scriptDone}</p>
+            {completed ? <p className="text-body font-semibold text-good">✓ {ui.scriptCompleted}</p> : <p className="text-note text-slate-200">{ui.scriptDone}</p>}
+            {passes || justPassed ? <p className="text-note font-semibold text-status-learned">★ {ui.scriptPassed}</p> : null}
             {!passes && !justPassed && toRedo.length ? (
               <div className="flex items-center gap-2">
                 <span className="text-caption text-warn">◐ {ui.scriptToPass.replace("{n}", String(toRedo.length))}</span>

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cleanBesidesName, glossFor, hintOf, isSituationScript, personalize, scriptById, swapName, usableName, modesFor, passOutcome, runPasses, linesToRedo, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
+import { scriptProgress, cleanBesidesName, glossFor, hintOf, isSituationScript, personalize, scriptById, swapName, usableName, modesFor, passOutcome, runPasses, linesToRedo, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
 import { withScripts, type StageParts } from "../notes/stageParts.ts";
 
@@ -188,4 +188,14 @@ test("단계 문법은 모두 어느 대본엔가(내 줄에서) — 오늘의 �
       assert.deepEqual(missing, [], `${language}-${stage.order} 대본 없는 문법`);
     }
   }
+});
+
+test("진행: 말해 본 줄·통과로 셈해지는 줄 — 따라 말하기로 다 말하면 학습 완료지만 통과 0", () => {
+  const ok = (mode: LineRun["mode"], revealed = false, clean = true): LineRun => ({ clean, mode, revealed });
+  assert.deepEqual(scriptProgress(two, {}), { total: 2, said: 0, passed: 0 });
+  assert.deepEqual(scriptProgress(two, { 1: ok("shadow"), 3: ok("shadow") }), { total: 2, said: 2, passed: 0 });
+  assert.deepEqual(scriptProgress(two, { 1: ok("hint"), 3: ok("hide", false, false) }), { total: 2, said: 2, passed: 1 });
+  // 일본어 대본도 줄 단위(띄어쓰기와 무관)
+  const ja = { ...two, lines: two.lines.map((line) => ({ ...line, text: line.who === "me" ? "はじめまして" : "こんにちは" })) };
+  assert.deepEqual(scriptProgress(ja, { 1: ok("hint") }), { total: 2, said: 1, passed: 1 });
 });

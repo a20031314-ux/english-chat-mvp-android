@@ -780,7 +780,10 @@
     "passRuleSpeak": "話すだけ",
     "passRuleAny": "どの方法でも",
     "choiceGrammar": "文法",
-    "choiceVocab": "語彙"
+    "choiceVocab": "語彙",
+    "scriptCompleted": "学習完了",
+    "scriptPassProgress": "合格 {n}/{m}",
+    "scriptPracticeOnly": "この方法は合格に数えません"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1563,7 +1566,10 @@
     "passRuleSpeak": "只算说",
     "passRuleAny": "任何方式",
     "choiceGrammar": "语法",
-    "choiceVocab": "词汇"
+    "choiceVocab": "词汇",
+    "scriptCompleted": "学习完成",
+    "scriptPassProgress": "通过 {n}/{m}",
+    "scriptPracticeOnly": "这种方式不算通过"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2349,7 +2355,10 @@
     "passRuleSpeak": "Chỉ khi nói",
     "passRuleAny": "Mọi cách",
     "choiceGrammar": "Ngữ pháp",
-    "choiceVocab": "Từ vựng"
+    "choiceVocab": "Từ vựng",
+    "scriptCompleted": "Đã học xong",
+    "scriptPassProgress": "Đạt {n}/{m}",
+    "scriptPracticeOnly": "Cách này không tính là đạt"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3140,7 +3149,10 @@
     "passRuleSpeak": "À l’oral",
     "passRuleAny": "Tous modes",
     "choiceGrammar": "Grammaire",
-    "choiceVocab": "Vocabulaire"
+    "choiceVocab": "Vocabulaire",
+    "scriptCompleted": "Apprentissage terminé",
+    "scriptPassProgress": "Réussi {n}/{m}",
+    "scriptPracticeOnly": "Ce mode ne compte pas pour réussir"
   },
   "it": {
     "archive": "Report",
@@ -4122,7 +4134,10 @@
     "passRuleSpeak": "Solo parlando",
     "passRuleAny": "Ogni modo",
     "choiceGrammar": "Grammatica",
-    "choiceVocab": "Lessico"
+    "choiceVocab": "Lessico",
+    "scriptCompleted": "Studio completato",
+    "scriptPassProgress": "Superate {n}/{m}",
+    "scriptPracticeOnly": "Questa modalità non conta per superarlo"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4916,7 +4931,10 @@
     "passRuleSpeak": "Só falando",
     "passRuleAny": "Qualquer jeito",
     "choiceGrammar": "Gramática",
-    "choiceVocab": "Vocabulário"
+    "choiceVocab": "Vocabulário",
+    "scriptCompleted": "Estudo concluído",
+    "scriptPassProgress": "Aprovadas {n}/{m}",
+    "scriptPracticeOnly": "Este modo não conta para passar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5896,7 +5914,10 @@
     "passRuleSpeak": "Только устно",
     "passRuleAny": "Любой способ",
     "choiceGrammar": "Грамматика",
-    "choiceVocab": "Лексика"
+    "choiceVocab": "Лексика",
+    "scriptCompleted": "Изучено",
+    "scriptPassProgress": "Зачтено {n}/{m}",
+    "scriptPracticeOnly": "Этот способ не засчитывается"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6686,7 +6707,10 @@
     "passRuleSpeak": "Hanya bicara",
     "passRuleAny": "Cara apa pun",
     "choiceGrammar": "Tata bahasa",
-    "choiceVocab": "Kosakata"
+    "choiceVocab": "Kosakata",
+    "scriptCompleted": "Selesai dipelajari",
+    "scriptPassProgress": "Lulus {n}/{m}",
+    "scriptPracticeOnly": "Cara ini tidak dihitung lulus"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7469,7 +7493,10 @@
     "passRuleSpeak": "بالكلام فقط",
     "passRuleAny": "بأي طريقة",
     "choiceGrammar": "قواعد",
-    "choiceVocab": "مفردات"
+    "choiceVocab": "مفردات",
+    "scriptCompleted": "اكتمل التعلّم",
+    "scriptPassProgress": "اجتزت {n} من {m}",
+    "scriptPracticeOnly": "هذه الطريقة لا تُحتسب للنجاح"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8252,7 +8279,10 @@
     "passRuleSpeak": "พูดเท่านั้น",
     "passRuleAny": "ทุกแบบ",
     "choiceGrammar": "ไวยากรณ์",
-    "choiceVocab": "คำศัพท์"
+    "choiceVocab": "คำศัพท์",
+    "scriptCompleted": "เรียนจบแล้ว",
+    "scriptPassProgress": "ผ่าน {n}/{m}",
+    "scriptPracticeOnly": "วิธีนี้ไม่นับว่าผ่าน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9035,6 +9065,9 @@
     "passRuleSpeak": "सिर्फ़ बोलकर",
     "passRuleAny": "किसी भी तरह",
     "choiceGrammar": "व्याकरण",
-    "choiceVocab": "शब्दावली"
+    "choiceVocab": "शब्दावली",
+    "scriptCompleted": "सीखना पूरा",
+    "scriptPassProgress": "पास {n}/{m}",
+    "scriptPracticeOnly": "यह तरीका पास में नहीं गिना जाता"
   }
 }
