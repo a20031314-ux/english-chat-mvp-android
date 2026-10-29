@@ -576,31 +576,22 @@ function StageStart({
   onStarted: (stageId: string) => void;
 }) {
   const [stage, setStage] = useState<string | null>(startStage);
+  const [firstPick, setFirstPick] = useState(false);
   const [saving, setSaving] = useState(false);
   const [failed, setFailed] = useState(false);
   // 처음 시험(실력 확인, lib/curriculum/placement.ts)으로 정할지, 대화 예시로 고를지 — 처음엔 둘 중 고르게(2026-10-29 사용자).
-  const [mode, setMode] = useState<"choose" | "test" | "pick">(startStage ? "pick" : "choose");
+  const [mode, setMode] = useState<"choose" | "test" | "pick">(startStage || !canCancel ? "pick" : "choose");
   // 시험 문제 통계를 미리 받아 둔다(첫 묶음부터 가르는 문제 먼저, curriculum/itemStats.ts).
   useItemStats(targetLanguage);
-  const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
-  // 처음엔 묻지 않고 1단계로 바로 시작(2026-10-29 사용자 — 첫 대본까지 누름 줄이기). 실력 확인은 대본 하나 뒤 계속 공부에서(TodayPlan).
+  const firstStage = stages?.length ? [...stages].sort((a, b) => a.order - b.order)[0]!.id : null;
+  const chosenStage = stage ?? (!canCancel && !startStage && !firstPick ? firstStage : null);
+  const stageOk = Boolean(chosenStage && stages?.some((entry) => entry.id === chosenStage));
+  // 처음(2026-10-29 사용자 "첫 화면은 대화 선택형 단계 구분 정도로 간소화, 세부 측정은 이후로"): 시험·고르기 갈림 없이 바로 대화 예시로 단계 고르기,
+  // 1단계가 골라진 채(누르면 바로 시작). 실력 확인 시험은 학습 하나 뒤 계속 공부에서(TodayPlan).
   const firstRun = !canCancel && !startStage;
-  const autoStarted = useRef(false);
-  useEffect(() => {
-    if (!firstRun || autoStarted.current || !stages?.length) return;
-    autoStarted.current = true;
-    const first = [...stages].sort((a, b) => a.order - b.order)[0]!.id;
-    void fetch(apiUrl("/api/learner/self-check"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language: targetLanguage, stage: first }),
-    })
-      .then((response) => (response.ok ? onStarted(first) : setFailed(true)))
-      .catch(() => setFailed(true));
-  }, [firstRun, stages, isPremium, targetLanguage, onStarted]);
-  if (!stages?.length || (firstRun && !failed)) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
+  if (!stages?.length) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
   const idOf = (order: number) => stages.find((entry) => entry.order === order)?.id ?? stages[0]!.id;
-  const start = async (chosen = stage) => {
+  const start = async (chosen = chosenStage) => {
     if (!chosen || !stages.some((entry) => entry.id === chosen) || saving) return;
     setSaving(true);
     setFailed(false);
@@ -656,7 +647,15 @@ function StageStart({
           onClose={() => setMode(startStage ? "pick" : "choose")}
         />
       ) : null}
-      <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={saving} script={{ targetLanguage, locale, isPremium }} />
+      <StagePicker
+        ui={ui}
+        stages={stages}
+        chosen={stageOk ? chosenStage : null}
+        onChoose={(id) => {
+          setFirstPick(true);
+          setStage(id);
+        }}
+        disabled={saving} script={{ targetLanguage, locale, isPremium }} />
       <button
         type="button"
         disabled={!stageOk || saving}
@@ -665,9 +664,11 @@ function StageStart({
       >
         {ui.stageBegin}
       </button>
-      <button type="button" onClick={() => setMode("test")} className="self-center rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
-        {ui.placementTake}
-      </button>
+      {firstRun ? null : (
+        <button type="button" onClick={() => setMode("test")} className="self-center rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+          {ui.placementTake}
+        </button>
+      )}
       {failed ? <p className="text-sm text-rose-300">{ui.mapFailed}</p> : null}
       {canCancel ? (
         <button type="button" onClick={onCancel} className="self-center text-meta text-slate-400 underline-offset-4 hover:underline">
