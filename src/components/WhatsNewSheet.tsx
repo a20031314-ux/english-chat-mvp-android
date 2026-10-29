@@ -5,7 +5,6 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import { appVersion } from "@/lib/appVersion";
 import { sendAppIntent } from "@/lib/appIntents";
-import { fillGuideLabels, findGuideSection, loadGuide, readCachedGuide, type GuideData } from "@/lib/guide/client";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   USE_SIGNAL_KEYS,
@@ -48,13 +47,12 @@ function markSeen() {
  * A picture taken in the learner's interface language, falling back to the
  * English set, and to no picture at all when offline.
  */
-function Shot({ item, locale, alt, guideShot }: { item: WhatsNewItem; locale: Locale; alt: string; guideShot?: string }) {
+function Shot({ item, locale, alt }: { item: WhatsNewItem; locale: Locale; alt: string }) {
   const version = noteVersionOf(item);
   const [source, setSource] = useState<"own" | "en" | "none">("own");
   if (source === "none") return null;
-  // 사용법 칸을 가리키는 노트는 그 칸의 그림(같은 그림을 두 번 찍지 않게, 2026-10-20).
   const folder = source === "own" ? locale : "en";
-  const src = apiUrl(guideShot ? `/guide/${folder}/${guideShot}.webp` : shotPath(version, folder, item.shot));
+  const src = apiUrl(shotPath(version, folder, item.shot));
   return (
     // eslint-disable-next-line @next/next/no-img-element -- remote, per-locale, and the app is a static export
     <img
@@ -67,6 +65,8 @@ function Shot({ item, locale, alt, guideShot }: { item: WhatsNewItem; locale: Lo
   );
 }
 
+const MAX_CARDS = 4;
+
 export function WhatsNewSheet({
   ui,
   locale,
@@ -76,20 +76,8 @@ export function WhatsNewSheet({
   locale: Locale;
   onOpenTab: (tab: WhatsNewTab) => void;
 }) {
-  const [items, setItems] = useState<WhatsNewItem[]>(readPending);
-  // 설명 글은 사용법 칸에서(item.guide). 못 받으면 노트 자체의 글.
-  const [guide, setGuide] = useState<GuideData | null>(() => readCachedGuide(locale));
-  const wantsGuide = items.some((item) => item.guide);
-  useEffect(() => {
-    if (!wantsGuide) return;
-    let live = true;
-    void loadGuide(locale).then((loaded) => {
-      if (live && loaded) setGuide(loaded);
-    });
-    return () => {
-      live = false;
-    };
-  }, [wantsGuide, locale]);
+  // 여러 버전을 건너뛰어도 카드는 최근 것부터 MAX_CARDS장(2026-10-29 사용자 "바뀐 점 첫 화면에 텍스트가 너무 많아").
+  const [items, setItems] = useState<WhatsNewItem[]>(() => readPending().slice(0, MAX_CARDS));
 
   // Nothing to show still records the version, so a fresh install is not
   // mistaken for an update next time.
@@ -104,15 +92,9 @@ export function WhatsNewSheet({
     setItems([]);
     if (tab) onOpenTab(tab);
   };
-  const titleOf = (item: WhatsNewItem): string => {
-    const found = item.guide ? findGuideSection(guide, item.guide) : null;
-    // 사용법 칸 제목의 단계 번호("8. 노트")는 새로워진 점에선 뺀다.
-    return found ? fillGuideLabels(found.section.heading, ui).replace(/^\d+\.\s*/, "") : String(ui[item.title]);
-  };
-  const bodyOf = (item: WhatsNewItem): string[] => {
-    const found = item.guide ? findGuideSection(guide, item.guide) : null;
-    return found ? found.section.body.map((paragraph) => fillGuideLabels(paragraph, ui)) : [String(ui[item.body])];
-  };
+  // 카드는 제목 한 줄 + 그 버전의 그림만(2026-10-29) — 설명은 "자세히"(사용법 칸). 예전엔 사용법 칸 제목·글을 그대로 써서
+  // 같은 칸(my.map)을 가리키는 카드가 모두 "단계로 보기"·같은 글·같은 그림이 됐다.
+  const titleOf = (item: WhatsNewItem): string => String(ui[item.title]);
 
   return (
     <FullScreenLayer>
@@ -124,17 +106,7 @@ export function WhatsNewSheet({
           {items.map((item) => (
             <section key={item.id}>
               <h3 className="text-chat font-semibold text-ink">{titleOf(item)}</h3>
-              <div className="mt-1.5 flex flex-col gap-1.5 text-note leading-relaxed text-slate-300">
-                {bodyOf(item).map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <Shot
-                item={item}
-                locale={locale}
-                alt={titleOf(item)}
-                guideShot={item.guide ? findGuideSection(guide, item.guide)?.section.shot : undefined}
-              />
+              <Shot item={item} locale={locale} alt={titleOf(item)} />
               <div className="mt-3 flex flex-wrap gap-2">
                 <button
                   type="button"
