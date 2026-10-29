@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, GUIDE_VERSION, guideChapters, type Guide } from "@/lib/guide/content";
+import { GUIDE_CLIPS_SINCE, GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, GUIDE_VERSION, guideChapters, type Guide } from "@/lib/guide/content";
 import translations from "@/lib/guide/translations.json";
 import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
@@ -201,7 +201,18 @@ export async function GET(request: NextRequest) {
   // 옛 빌드는 묻지 않으니 `tabs`만 받는다.
   const chapters =
     request.nextUrl.searchParams.get("chapters") === "1"
-      ? guideChapters(full).map((chapter) => ({ ...chapter, sections: chapter.sections.filter((section) => !chapterHidden.includes(section.id)) }))
+      ? guideChapters(full).map((chapter) => ({
+          ...chapter,
+          sections: chapter.sections
+            .filter((section) => !chapterHidden.includes(section.id))
+            // 새 화면을 찍은 영상은 그 화면이 있는 빌드에만(옛 빌드는 그림).
+            .map((section) => {
+              const since = GUIDE_CLIPS_SINCE[section.id];
+              if (!section.clip || !since || request.nextUrl.searchParams.get(since) === "1") return section;
+              const { clip: _clip, ...rest } = section;
+              return rest;
+            }),
+        }))
       : undefined;
   return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}) });
 }

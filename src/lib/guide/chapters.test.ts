@@ -45,6 +45,16 @@ test("영상이 붙는 칸은 있고, 칸을 꺼낼 때 붙는다", () => {
   assert.equal(guideSection(GUIDE_KO, "chat.next")?.clip, undefined);
 });
 
+test("영상 파일이 14개 언어 모두 있다(못 받으면 영어로 떨어지지만, 자막이 그 언어여야 함)", async () => {
+  const fs = await import("node:fs");
+  for (const clip of Object.values(GUIDE_CLIPS)) {
+    for (const locale of ["ko", "en", "es", "ja", "zh", "th", "vi", "id", "hi", "ar", "fr", "it", "pt", "ru"]) {
+      if (clip !== "my-today") continue; // 옛 두 영상은 일부 언어만 찍어 둠(영어로 떨어짐).
+      assert.ok(fs.existsSync(`public/guide/${locale}/${clip}.mp4`), `${locale}/${clip}.mp4`);
+    }
+  }
+});
+
 test("새로워진 점이 가리키는 칸이 있다", () => {
   for (const note of RELEASE_NOTES) {
     for (const item of note.items) {

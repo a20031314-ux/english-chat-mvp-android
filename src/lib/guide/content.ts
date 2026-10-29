@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-29w";
+export const GUIDE_VERSION = "2026-10-29x";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -96,10 +96,16 @@ export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
 
 export type GuideChapter = { id: string; title: string; go: GuideGo; sections: (GuideSection & { id: string })[] };
 
-/** 영상이 있는 칸(2026-10-20): 점을 끌어 부분을 고르는 두 곳. */
+/** 영상이 있는 칸(2026-10-20): 점을 끌어 부분을 고르는 두 곳. 2026-10-29부터 조작 + 자막 설명 영상(scripts/guide-clips.mjs). */
 export const GUIDE_CLIPS: Record<string, string> = {
   "chat.analyse": "chat-ask",
   "video.ask": "video-ask",
+  "my.map": "my-today",
+};
+
+/** 그 화면이 있는 빌드만 받는 영상: 칸 id → 빌드가 /api/guide에 보내는 표시(없으면 영상을 빼고 그림만). */
+export const GUIDE_CLIPS_SINCE: Record<string, string> = {
+  "my.map": "r281",
 };
 
 /** 한 언어의 글에서 칸 하나(없으면 null). */
