@@ -6,6 +6,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import type { UICopy } from "@/lib/copy";
 import { CHECK_ORIGINS, rateOf, STAGE_KEYS, summarize, type CheckItem, type CheckOrigin, type CheckResult } from "@/lib/curriculum/checkup";
+import type { QuizQuestion } from "@/lib/curriculum/quiz";
 import { PART_IDS, type PartId } from "@/lib/notes/stageParts";
 import { stopTts } from "@/lib/ttsPlayer";
 
@@ -25,12 +26,17 @@ export function CheckupPlayer({
   labelOf,
   onFinish,
   onClose,
+  title,
+  finishWith,
+  heading,
+  actions,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   stage: number;
-  items: readonly CheckItem[];
+  /** 이번 주 확인은 CheckItem, 단계 시험(curriculum/stageTest.ts)은 finishWith와 함께 문제만. */
+  items: readonly (CheckItem | { question: QuizQuestion })[];
   /** 지난번 결과(차이를 보일 때) — 없으면 차이 없음. */
   previous: CheckResult | null;
   /** 이미 끝낸 확인을 다시 볼 때. */
@@ -39,6 +45,13 @@ export function CheckupPlayer({
   labelOf: (key: string) => string;
   onFinish: (result: CheckResult) => void;
   onClose: () => void;
+  /** 머리 이름(없으면 이번 주 확인). */
+  title?: string;
+  /** 답(첫 답만, 건너뛴 말하기 null)으로 결과를 만드는 법 — 없으면 이번 주 확인 summarize. */
+  finishWith?: (answers: (boolean | null)[]) => CheckResult;
+  /** 결과 맨 위 한 줄·아래 버튼(결과마다). */
+  heading?: (result: CheckResult) => string | undefined;
+  actions?: (result: CheckResult) => ReactNode;
 }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
@@ -54,7 +67,7 @@ export function CheckupPlayer({
     <FullScreenLayer>
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="min-w-0 flex-1">
-          <h2 className="truncate text-body font-semibold text-ink">{ui.checkupTitle}</h2>
+          <h2 className="truncate text-body font-semibold text-ink">{title ?? ui.checkupTitle}</h2>
           {!done ? (
             <p className="mt-0.5 text-caption tabular-nums text-slate-400">
               {index + 1}/{items.length}
@@ -79,11 +92,8 @@ export function CheckupPlayer({
               const next = index + 1;
               if (next >= items.length) {
                 // 마지막 문제 다음: 첫 답만으로 결과(말하기를 못 한 것은 빼고).
-                const finished = summarize(
-                  items,
-                  items.map((_, i) => (answers[i]?.skipped ? null : (answers[i]?.correct ?? false))),
-                  stage,
-                );
+                const given = items.map((_, i) => (answers[i]?.skipped ? null : (answers[i]?.correct ?? false)));
+                const finished = finishWith ? finishWith(given) : summarize(items as readonly CheckItem[], given, stage);
                 setResult(finished);
                 onFinish(finished);
               }
@@ -91,7 +101,9 @@ export function CheckupPlayer({
             }}
           />
         ) : null}
-        {done && result ? <CheckupResult ui={ui} result={result} previous={previous} labelOf={labelOf} onClose={close} /> : null}
+        {done && result ? (
+          <CheckupResult ui={ui} result={result} previous={previous} labelOf={labelOf} onClose={close} heading={heading?.(result)} actions={actions?.(result)} />
+        ) : null}
       </div>
     </FullScreenLayer>
   );

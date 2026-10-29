@@ -23,6 +23,8 @@ import type { QuizCard } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
+import { bigTestDue, buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
+import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
@@ -162,20 +164,23 @@ export function TodayPlan({
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
-  const [checkups, setCheckups] = useState<CheckResult[]>([]);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "view" | null>(null);
+  const { checkups, save: saveCheckup } = useCheckups(language);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "view" | "stage" | null>(null);
+  // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
+  const [firstSeen, setFirstSeen] = useState(0);
   useEffect(() => {
-    let alive = true;
-    void fetch(apiUrl(`/api/curriculum/scripts?lang=${encodeURIComponent(language)}&checkups=1`), { headers: entitlementHeaders(isPremium) })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((body: { checkups?: CheckResult[] } | null) => {
-        if (alive && Array.isArray(body?.checkups)) setCheckups(body.checkups);
-      })
-      .catch(() => undefined);
-    return () => {
-      alive = false;
-    };
-  }, [language, isPremium]);
+    const key = `bigTestFirstSeen.${language}`;
+    try {
+      const saved = Number(localStorage.getItem(key));
+      if (saved > 0) setFirstSeen(saved);
+      else {
+        localStorage.setItem(key, String(Date.now()));
+        setFirstSeen(Date.now());
+      }
+    } catch {
+      // 이 폰에 남기지 못하면 권하지 않는다.
+    }
+  }, [language]);
   useEffect(() => {
     setLog(readQuizLog(language));
     setAsked(new Set());
@@ -277,21 +282,16 @@ export function TodayPlan({
   const studyWeakest = checkupWeakest(checkups, now) ?? weakest;
   const lastCheckup = checkups.length ? checkups[checkups.length - 1]! : null;
   const checkupItems = checkupOpen === "take" || checkupDue(checkups, now) ? buildCheckup({ language, stage, passed: passedSet, review, log, now }) : [];
-  const checkupOffer = checkupDue(checkups, now) && checkupReady(checkupItems);
+  const checkupOffer = checkupDue(checkups, now) && checkupReady(checkupItems) && !bigTestDue(checkups, firstSeen, now);
   const checkupMinutes = Math.max(1, Math.round(checkupItems.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const finishCheckup = (result: CheckResult) => {
-    void fetch(apiUrl("/api/curriculum/scripts"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language, checkup: result }),
-    })
-      .then((response) => response.json().catch(() => null))
-      .then((body: { checkups?: CheckResult[]; review?: ReviewMap } | null) => {
-        if (Array.isArray(body?.checkups)) setCheckups(body.checkups);
-        if (body?.review) announceReview(language, body.review);
-      })
-      .catch(() => undefined);
+    void saveCheckup(result).then((body) => {
+      if (body?.review) announceReview(language, body.review);
+    });
   };
+  // 큰 시험(처음 시험·단계 시험) 뒤 6주, 큰 시험이 없으면 처음 본 지 3일 — 지금 단계 시험을 권한다(이번 주 확인보다 앞).
+  const stageTestOffer = !checkupOpen || checkupOpen === "stage" ? bigTestDue(checkups, firstSeen, now) && !failedToday(checkups, stage, now) : false;
+  const stageTestItems = checkupOpen === "stage" || stageTestOffer ? buildStageTest({ language, stage, now }) : [];
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
   const queue = nextStudy({
     language,
@@ -408,6 +408,40 @@ export function TodayPlan({
           );
         })}
       </ul>
+      {stageTestOffer && stageTestItems.length ? (
+        <button
+          type="button"
+          data-stage-test-offer
+          onClick={() => setCheckupOpen("stage")}
+          className="mt-2 flex w-full items-center gap-3 rounded-xl border border-status-learned/60 px-3 py-2 text-start text-ink hover:bg-white/5"
+        >
+          <span aria-hidden className="shrink-0 text-caption">📝</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-note font-semibold">
+              {ui.placementTitle} · {ui.stageNumber.replace("{n}", String(stage))}
+            </span>
+            <span className="block truncate text-meta text-slate-400">
+              {ui.checkupMeta.replace("{n}", String(stageTestItems.length)).replace("{m}", String(Math.max(1, Math.round(stageTestItems.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)))))}
+            </span>
+          </span>
+        </button>
+      ) : null}
+      {checkupOpen === "stage" ? (
+        <CheckupPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          stage={stage}
+          items={stageTestItems}
+          previous={[...checkups].reverse().find((r) => r.kind) ?? null}
+          title={`${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}`}
+          finishWith={(answers) => stageTestResult(stageTestItems, answers, stage)}
+          heading={(result) => (result.passed ? ui.stageTestPassed.replace("{n}", String(result.stage)) : undefined)}
+          labelOf={(key) => keyLabel(language, key, grammarName)}
+          onFinish={finishCheckup}
+          onClose={() => setCheckupOpen(null)}
+        />
+      ) : null}
       {checkupOffer ? (
         <button
           type="button"
@@ -427,7 +461,7 @@ export function TodayPlan({
           <span className="tabular-nums">· {ui.checkupAgo.replace("{n}", String(Math.max(0, Math.floor((now - lastCheckup.at) / 86_400_000))))}</span>
         </button>
       ) : null}
-      {checkupOpen ? (
+      {checkupOpen === "take" || checkupOpen === "view" ? (
         <CheckupPlayer
           ui={ui}
           locale={locale}

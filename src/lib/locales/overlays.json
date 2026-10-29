@@ -770,7 +770,8 @@
     "placementTake": "テストで始める",
     "placementPick": "自分で選ぶ",
     "placementTitle": "実力チェック",
-    "placementStart": "ステージ{n}から始める"
+    "placementStart": "ステージ{n}から始める",
+    "stageTestPassed": "✓ ステージ{n}合格"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1543,7 +1544,8 @@
     "placementTake": "先做测试",
     "placementPick": "自己选",
     "placementTitle": "水平测试",
-    "placementStart": "从第{n}阶段开始"
+    "placementStart": "从第{n}阶段开始",
+    "stageTestPassed": "✓ 第{n}阶段通过"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2319,7 +2321,8 @@
     "placementTake": "Bắt đầu bằng bài kiểm tra",
     "placementPick": "Tự chọn",
     "placementTitle": "Kiểm tra trình độ",
-    "placementStart": "Bắt đầu từ giai đoạn {n}"
+    "placementStart": "Bắt đầu từ giai đoạn {n}",
+    "stageTestPassed": "✓ Đã qua giai đoạn {n}"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3100,7 +3103,8 @@
     "placementTake": "Commencer par un test",
     "placementPick": "Choisir moi-même",
     "placementTitle": "Test de niveau",
-    "placementStart": "Commencer à l'étape {n}"
+    "placementStart": "Commencer à l'étape {n}",
+    "stageTestPassed": "✓ Étape {n} réussie"
   },
   "it": {
     "archive": "Report",
@@ -4072,7 +4076,8 @@
     "placementTake": "Inizia con un test",
     "placementPick": "Scelgo io",
     "placementTitle": "Test di livello",
-    "placementStart": "Inizia dalla fase {n}"
+    "placementStart": "Inizia dalla fase {n}",
+    "stageTestPassed": "✓ Fase {n} superata"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4856,7 +4861,8 @@
     "placementTake": "Começar com um teste",
     "placementPick": "Escolher eu mesmo",
     "placementTitle": "Teste de nível",
-    "placementStart": "Começar na etapa {n}"
+    "placementStart": "Começar na etapa {n}",
+    "stageTestPassed": "✓ Etapa {n} concluída"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5826,7 +5832,8 @@
     "placementTake": "Начать с теста",
     "placementPick": "Выбрать самому",
     "placementTitle": "Проверка уровня",
-    "placementStart": "Начать с этапа {n}"
+    "placementStart": "Начать с этапа {n}",
+    "stageTestPassed": "✓ Этап {n} пройден"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6606,7 +6613,8 @@
     "placementTake": "Mulai dengan tes",
     "placementPick": "Pilih sendiri",
     "placementTitle": "Cek kemampuan",
-    "placementStart": "Mulai dari tahap {n}"
+    "placementStart": "Mulai dari tahap {n}",
+    "stageTestPassed": "✓ Tahap {n} lulus"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7379,7 +7387,8 @@
     "placementTake": "ابدأ باختبار",
     "placementPick": "أختار بنفسي",
     "placementTitle": "اختبار المستوى",
-    "placementStart": "ابدأ من المرحلة {n}"
+    "placementStart": "ابدأ من المرحلة {n}",
+    "stageTestPassed": "✓ اجتزت المرحلة {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8152,7 +8161,8 @@
     "placementTake": "เริ่มด้วยแบบทดสอบ",
     "placementPick": "เลือกเอง",
     "placementTitle": "วัดระดับ",
-    "placementStart": "เริ่มที่ขั้นที่ {n}"
+    "placementStart": "เริ่มที่ขั้นที่ {n}",
+    "stageTestPassed": "✓ ผ่านขั้นที่ {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8925,6 +8935,7 @@
     "placementTake": "टेस्ट से शुरू करें",
     "placementPick": "खुद चुनें",
     "placementTitle": "स्तर जाँच",
-    "placementStart": "चरण {n} से शुरू करें"
+    "placementStart": "चरण {n} से शुरू करें",
+    "stageTestPassed": "✓ चरण {n} पार"
   }
 }

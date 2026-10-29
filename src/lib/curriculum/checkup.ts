@@ -32,11 +32,21 @@ export type CheckResult = {
   parts: Partial<Record<PartId, Tally>>;
   origins: Partial<Record<CheckOrigin, Tally>>;
   wrong: string[];
-  /** 시험 종류(없으면 이번 주 확인). placement = 처음 시험(curriculum/placement.ts) — stage가 거기서 정한 시작 단계. */
-  kind?: "weekly" | "placement";
-  /** 처음 시험: 단계마다 [맞힘, 낸 수]. */
+  /**
+   * 시험 종류(없으면 이번 주 확인). placement = 처음 시험(curriculum/placement.ts) — stage가 거기서 정한 시작 단계.
+   * stage = 단계 시험(curriculum/stageTest.ts) — stage가 본 단계, passed가 넘었는지.
+   */
+  kind?: "weekly" | "placement" | "stage";
+  /** 처음 시험·단계 시험: 단계마다 [맞힘, 낸 수]. */
   stages?: Partial<Record<StageKey, Tally>>;
+  /** 단계 시험: 그 단계를 넘었는지. */
+  passed?: boolean;
 };
+
+/** 큰 시험(처음 시험·단계 시험) — 실력 기록의 중심(2026-10-29 사용자 "시험을 중심으로 모으는 걸로"). */
+export function isBigTest(result: CheckResult): boolean {
+  return result.kind === "placement" || result.kind === "stage";
+}
 
 export type StageKey = "1" | "2" | "3" | "4" | "5";
 export const STAGE_KEYS: readonly StageKey[] = ["1", "2", "3", "4", "5"];
@@ -240,6 +250,9 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
     .slice(0, TALLY_MAX);
   if (value.kind === "placement") {
     return { at: now, stage, parts, origins, wrong, kind: "placement", stages: pick(value.stages, STAGE_KEYS) };
+  }
+  if (value.kind === "stage") {
+    return { at: now, stage, parts, origins, wrong, kind: "stage", stages: pick(value.stages, STAGE_KEYS), passed: value.passed === true };
   }
   return { at: now, stage, parts, origins, wrong };
 }

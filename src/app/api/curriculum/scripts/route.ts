@@ -73,8 +73,8 @@ export async function POST(request: NextRequest) {
     const result = cleanResult(body.checkup, language);
     if (!result) return jsonWithCors(request, { error: "BAD_CHECKUP" }, { status: 400 });
     const before = await readCheckups(userId, language);
-    // 처음 시험(kind placement)은 언제든(시작 단계를 다시 정할 때), 이번 주 확인은 7일에 한 번.
-    if (result.kind !== "placement" && !checkupDue(before)) return jsonWithCors(request, { error: "CHECKUP_NOT_DUE", checkups: before }, { status: 409 });
+    // 처음 시험(placement)·단계 시험(stage)은 언제든(화면이 같은 날 다시 보지 않게 막음), 이번 주 확인은 7일에 한 번.
+    if (!result.kind && !checkupDue(before)) return jsonWithCors(request, { error: "CHECKUP_NOT_DUE", checkups: before }, { status: 409 });
     return jsonWithCors(request, await saveCheckup(userId, language, result));
   }
   if (body.check && typeof body.check === "object" && !Array.isArray(body.check)) {

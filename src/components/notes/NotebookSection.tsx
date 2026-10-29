@@ -14,8 +14,12 @@ import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
-import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
+import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
+import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
+import { useCheckups } from "@/lib/curriculum/useCheckups";
+import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
+import type { CheckResult } from "@/lib/curriculum/checkup";
 import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
 import { WeakStrip } from "@/components/studyMap/WeakStrip";
 import { curriculumItems } from "@/lib/curriculum/dailyPlan";
@@ -172,6 +176,9 @@ export function NotebookSection({
   const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
+  // "다음 단계로" 앞의 단계 시험(curriculum/stageTest.ts, 2026-10-29 사용자 "시험을 중심으로"): 고른 단계, 시험 결과(서버 checkups).
+  const [stageTestFor, setStageTestFor] = useState<number | null>(null);
+  const { checkups, save: saveCheckup } = useCheckups(language);
   const loaded = Boolean(book);
   useEffect(() => {
     if (!loaded) return;
@@ -413,6 +420,28 @@ export function NotebookSection({
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} />
       ) : null}
+      {stageTestFor !== null && onNextStage ? (
+        <StageTestGate
+          ui={ui}
+          locale={locale}
+          language={language}
+          stage={stageTestFor}
+          checkups={checkups}
+          labelOf={(key) => {
+            if (!key.startsWith("g|")) return reviewLabel(language, key);
+            const [stage, index] = key.slice(2).split(":").map(Number);
+            const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
+            return node ? nameOf(node.id) : key;
+          }}
+          onFinish={(result) => void saveCheckup(result)}
+          onNext={() => {
+            const order = stageTestFor;
+            setStageTestFor(null);
+            onNextStage(order);
+          }}
+          onClose={() => setStageTestFor(null)}
+        />
+      ) : null}
       {frame && book.stages.length ? (
         <StageFrame
           ui={ui}
@@ -431,7 +460,7 @@ export function NotebookSection({
           words={book.words ?? []}
           pronunciationNotes={book.pronunciationNotes ?? {}}
           onTry={onTry}
-          onNextStage={onNextStage}
+          onNextStage={onNextStage ? (order) => setStageTestFor(order) : undefined}
           canSpeak={canSpeak}
           focusPart={focusPart}
           jump={jump}
@@ -1756,5 +1785,61 @@ function QuestionBox({
         {ui.notebookQuestionAdd}
       </button>
     </div>
+  );
+}
+
+/**
+ * "다음 단계로" 앞의 단계 시험(curriculum/stageTest.ts): 넘으면 결과의 [다음 단계로 ›]가 예전 흐름(단계 고르기)으로, 못 넘으면 닫기만 —
+ * 그 단계에서 틀린 것은 다시 볼 것으로 가고, 같은 날 다시 누르면 시험 대신 그 결과를 보인다.
+ */
+function StageTestGate({
+  ui,
+  locale,
+  language,
+  stage,
+  checkups,
+  labelOf,
+  onFinish,
+  onNext,
+  onClose,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  stage: number;
+  checkups: readonly CheckResult[];
+  labelOf: (key: string) => string;
+  onFinish: (result: CheckResult) => void;
+  onNext: () => void;
+  onClose: () => void;
+}) {
+  const [opened] = useState(() => Date.now());
+  const failed = useMemo(() => failedToday(checkups, stage, opened), [checkups, stage, opened]);
+  const [shown] = useState<CheckResult | null>(failed);
+  const items = useMemo(() => (shown ? [] : buildStageTest({ language, stage, now: opened })), [shown, language, stage, opened]);
+  const previous = [...checkups].reverse().find((result) => result.kind && result !== shown) ?? null;
+  return (
+    <CheckupPlayer
+      ui={ui}
+      locale={locale}
+      language={language}
+      stage={stage}
+      items={items}
+      result={shown}
+      previous={previous}
+      title={`${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}`}
+      finishWith={(answers) => stageTestResult(items, answers, stage)}
+      heading={(result) => (result.passed ? ui.stageTestPassed.replace("{n}", String(result.stage)) : undefined)}
+      actions={(result) =>
+        result.passed ? (
+          <button type="button" data-stage-next onClick={onNext} className="self-center rounded-full bg-status-learned px-5 py-1.5 text-caption font-semibold text-black">
+            {ui.partReady} ›
+          </button>
+        ) : undefined
+      }
+      labelOf={labelOf}
+      onFinish={onFinish}
+      onClose={onClose}
+    />
   );
 }
