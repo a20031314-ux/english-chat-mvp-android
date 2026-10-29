@@ -174,6 +174,8 @@ const GUIDE = VERSION === "guide" || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS ||
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
+  // 2.78: 지속 학습 카드(사용법 my.next — 예전 "오늘 해볼 것" 칸).
+  { shot: "keep-learning" },
   { shot: "goal" },
   // 2.75: 네 갈래(기록은 끼움). 직접 묻기·My의 오늘 해볼 것은 2026-10-27에 뺐다.
   { shot: "parts-net" },
@@ -1485,6 +1487,40 @@ const STEPS = {
     await wait(1500);
     await page.locator("ol").last().evaluate((el) => (el.scrollTop = el.scrollHeight));
     await wait(1000);
+  },
+  async "keep-learning"({ page, ui, wait, target }) {
+    // 2.78: 지속 학습 카드 — 같은 층 버튼 [복습 | 랜덤 | 어휘 | 문법 | 표현], 📝 시험·▶ 계속 공부(묶음 퀴즈).
+    await page.evaluate(() => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+      localStorage.removeItem("dailyPlan.today.v1");
+      localStorage.setItem("dailyPlan.v1", JSON.stringify({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" }));
+    });
+    await pickStageOne(page, target);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const card = page.locator("[data-keep-learning]").first();
+    for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
+    await wait(2500);
+    await card.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await wait(1500);
+  },
+  async "letters-reading"({ page, ui, locale, wait }) {
+    // 2.78: 글자가 다른 학습 언어(일본어, 일본어 앱이면 한국어)의 단계 학습 — 줄 아래 읽는 법([읽는 법] 켬).
+    const letters = locale === "ja" ? "ko" : "ja";
+    await page.evaluate((t) => {
+      localStorage.setItem("appTargetLanguage", t);
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+      localStorage.removeItem("dailyPlan.today.v1");
+    }, letters);
+    await pickStageOne(page, letters);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const plan = page.getByRole("heading", { name: ui.planTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await plan.count()); i++) await wait(500);
+    await plan.locator("xpath=ancestor::section[1]").locator("ul li button").first().click();
+    const reading = page.locator("[data-reading]").first();
+    for (let i = 0; i < 40 && !(await reading.count()); i++) await wait(500);
+    await wait(2000);
   },
   async "weak-strip"({ page, ui, locale, wait, target }) {
     // 2.77: My 맨 위 "지난번에 틀린 것" — 튜터가 고친 줄(끼움)·대본에서 틀린 줄(이 폰 기록을 끼움)·헷갈려요, 그 아래 오늘 할 것.

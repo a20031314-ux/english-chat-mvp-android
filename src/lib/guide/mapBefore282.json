@@ -1,0 +1,226 @@
+{
+  "ko": {
+    "my.start": {
+      "heading": "1. 대화로 시작",
+      "body": [
+        "예시 대화를 보고 답하면 시작할 단계를 찾아요."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. 오늘 해볼 것",
+      "body": [
+        "쌓인 기록으로 지금 할 것 하나를 권해요."
+      ],
+      "shot": "next"
+    }
+  },
+  "en": {
+    "my.start": {
+      "heading": "1. Start with a conversation",
+      "body": [
+        "Answer about sample conversations to find where to start."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Try this",
+      "body": [
+        "One thing to do now, picked from your record."
+      ],
+      "shot": "next"
+    }
+  },
+  "es": {
+    "my.start": {
+      "heading": "1. Empieza con una conversación",
+      "body": [
+        "Responde sobre unas conversaciones de ejemplo para encontrar tu nivel de inicio."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Prueba esto",
+      "body": [
+        "Una cosa para hacer ahora, elegida según tu historial."
+      ],
+      "shot": "next"
+    }
+  },
+  "ja": {
+    "my.start": {
+      "heading": "1. 会話で始める",
+      "body": [
+        "例の会話を見て答えると、始める段階が決まります。"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. やってみよう",
+      "body": [
+        "記録から、今やることを一つすすめます。"
+      ],
+      "shot": "next"
+    }
+  },
+  "zh": {
+    "my.start": {
+      "heading": "1. 从对话开始",
+      "body": [
+        "看示例对话作答，找出从哪个阶段开始。"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. 试试这个",
+      "body": [
+        "根据你的记录，推荐现在做的一件事。"
+      ],
+      "shot": "next"
+    }
+  },
+  "vi": {
+    "my.start": {
+      "heading": "1. Bắt đầu bằng hội thoại",
+      "body": [
+        "Trả lời theo đoạn hội thoại mẫu để tìm chặng bắt đầu."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Thử cái này",
+      "body": [
+        "Một việc nên làm bây giờ, chọn từ lịch sử của bạn."
+      ],
+      "shot": "next"
+    }
+  },
+  "fr": {
+    "my.start": {
+      "heading": "1. Commencer par une conversation",
+      "body": [
+        "Répondez à propos de conversations d'exemple pour trouver par où commencer."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. À essayer",
+      "body": [
+        "Une chose à faire maintenant, choisie d'après votre historique."
+      ],
+      "shot": "next"
+    }
+  },
+  "it": {
+    "my.start": {
+      "heading": "1. Inizia da una conversazione",
+      "body": [
+        "Rispondi su alcune conversazioni d'esempio per trovare da dove partire."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Prova questo",
+      "body": [
+        "Una cosa da fare ora, scelta dal tuo storico."
+      ],
+      "shot": "next"
+    }
+  },
+  "pt": {
+    "my.start": {
+      "heading": "1. Comece com uma conversa",
+      "body": [
+        "Responda sobre conversas de exemplo para achar onde começar."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Experimente isto",
+      "body": [
+        "Uma coisa para fazer agora, escolhida pelo seu histórico."
+      ],
+      "shot": "next"
+    }
+  },
+  "ru": {
+    "my.start": {
+      "heading": "1. Начните с разговора",
+      "body": [
+        "Ответьте по примерам диалогов — и узнаете, с какого этапа начать."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Попробуйте",
+      "body": [
+        "Одно дело на сейчас — по вашей истории."
+      ],
+      "shot": "next"
+    }
+  },
+  "id": {
+    "my.start": {
+      "heading": "1. Mulai dari percakapan",
+      "body": [
+        "Jawab berdasarkan contoh percakapan untuk menemukan tahap awalmu."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. Coba ini",
+      "body": [
+        "Satu hal untuk dilakukan sekarang, dipilih dari riwayatmu."
+      ],
+      "shot": "next"
+    }
+  },
+  "ar": {
+    "my.start": {
+      "heading": "1. ابدأ بمحادثة",
+      "body": [
+        "أجب عن محادثات نموذجية لتعرف من أين تبدأ."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. جرّب هذا",
+      "body": [
+        "أمر واحد تفعله الآن، مختار من سجلّك."
+      ],
+      "shot": "next"
+    }
+  },
+  "th": {
+    "my.start": {
+      "heading": "1. เริ่มจากบทสนทนา",
+      "body": [
+        "ตอบจากบทสนทนาตัวอย่าง เพื่อหาขั้นที่จะเริ่ม"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. ลองทำสิ่งนี้",
+      "body": [
+        "แนะนำสิ่งที่ควรทำตอนนี้หนึ่งอย่างจากบันทึกของคุณ"
+      ],
+      "shot": "next"
+    }
+  },
+  "hi": {
+    "my.start": {
+      "heading": "1. बातचीत से शुरू करें",
+      "body": [
+        "नमूना बातचीत देखकर जवाब दें, शुरू करने का चरण मिल जाएगा।"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. यह आज़माएँ",
+      "body": [
+        "आपके रिकॉर्ड से अभी करने लायक एक काम।"
+      ],
+      "shot": "next"
+    }
+  }
+}

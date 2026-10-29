@@ -6,16 +6,16 @@
         {
           "heading": "1. Empieza con una conversación",
           "body": [
-            "Responde sobre unas conversaciones de ejemplo para encontrar tu nivel de inicio."
+            "Elige tu etapa inicial con conversaciones de ejemplo. Los idiomas con otra escritura empiezan con ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Prueba esto",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Una cosa para hacer ahora, elegida según tu historial."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. Creciendo",
@@ -387,16 +387,16 @@
         {
           "heading": "1. 会話で始める",
           "body": [
-            "例の会話を見て答えると、始める段階が決まります。"
+            "例の会話で始めるステージを選びます。文字が違う言語は「{ui:scriptEntry}」から。"
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. やってみよう",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "記録から、今やることを一つすすめます。"
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. 成長中",
@@ -768,16 +768,16 @@
         {
           "heading": "1. 从对话开始",
           "body": [
-            "看示例对话作答，找出从哪个阶段开始。"
+            "用示例对话选择起始阶段。文字不同的语言从“{ui:scriptEntry}”开始。"
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. 试试这个",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "根据你的记录，推荐现在做的一件事。"
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. 成长中",
@@ -1149,16 +1149,16 @@
         {
           "heading": "1. Bắt đầu bằng hội thoại",
           "body": [
-            "Trả lời theo đoạn hội thoại mẫu để tìm chặng bắt đầu."
+            "Chọn giai đoạn bắt đầu qua hội thoại mẫu. Ngôn ngữ có chữ viết khác bắt đầu từ ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Thử cái này",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Một việc nên làm bây giờ, chọn từ lịch sử của bạn."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. Đang lớn",
@@ -1530,16 +1530,16 @@
         {
           "heading": "1. Commencer par une conversation",
           "body": [
-            "Répondez à propos de conversations d'exemple pour trouver par où commencer."
+            "Choisissez l’étape de départ avec des conversations d’exemple. Les langues à autre écriture commencent par ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. À essayer",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Une chose à faire maintenant, choisie d'après votre historique."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. En progrès",
@@ -1911,16 +1911,16 @@
         {
           "heading": "1. Inizia da una conversazione",
           "body": [
-            "Rispondi su alcune conversazioni d'esempio per trovare da dove partire."
+            "Scegli il livello di partenza con conversazioni di esempio. Le lingue con un’altra scrittura partono da ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Prova questo",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Una cosa da fare ora, scelta dal tuo storico."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. In crescita",
@@ -2292,16 +2292,16 @@
         {
           "heading": "1. Comece com uma conversa",
           "body": [
-            "Responda sobre conversas de exemplo para achar onde começar."
+            "Escolha a etapa inicial com conversas de exemplo. Idiomas com outra escrita começam por ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Experimente isto",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Uma coisa para fazer agora, escolhida pelo seu histórico."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. Crescendo",
@@ -2673,16 +2673,16 @@
         {
           "heading": "1. Начните с разговора",
           "body": [
-            "Ответьте по примерам диалогов — и узнаете, с какого этапа начать."
+            "Выберите начальный этап по примерам диалогов. Языки с другой письменностью начинаются с «{ui:scriptEntry}»."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Попробуйте",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Одно дело на сейчас — по вашей истории."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. Рост",
@@ -3054,16 +3054,16 @@
         {
           "heading": "1. Mulai dari percakapan",
           "body": [
-            "Jawab berdasarkan contoh percakapan untuk menemukan tahap awalmu."
+            "Pilih tahap awal lewat contoh percakapan. Bahasa dengan aksara lain mulai dari ‘{ui:scriptEntry}’."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. Coba ini",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "Satu hal untuk dilakukan sekarang, dipilih dari riwayatmu."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. Bertumbuh",
@@ -3435,16 +3435,16 @@
         {
           "heading": "1. ابدأ بمحادثة",
           "body": [
-            "أجب عن محادثات نموذجية لتعرف من أين تبدأ."
+            "اختر مرحلة البداية من محادثات نموذجية. اللغات ذات الكتابة المختلفة تبدأ بـ«{ui:scriptEntry}»."
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. جرّب هذا",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "أمر واحد تفعله الآن، مختار من سجلّك."
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. ينمو",
@@ -3816,16 +3816,16 @@
         {
           "heading": "1. เริ่มจากบทสนทนา",
           "body": [
-            "ตอบจากบทสนทนาตัวอย่าง เพื่อหาขั้นที่จะเริ่ม"
+            "เลือกขั้นเริ่มต้นจากบทสนทนาตัวอย่าง ภาษาที่ใช้ตัวอักษรต่างกันเริ่มจาก ‘{ui:scriptEntry}’"
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. ลองทำสิ่งนี้",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "แนะนำสิ่งที่ควรทำตอนนี้หนึ่งอย่างจากบันทึกของคุณ"
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. กำลังเติบโต",
@@ -4197,16 +4197,16 @@
         {
           "heading": "1. बातचीत से शुरू करें",
           "body": [
-            "नमूना बातचीत देखकर जवाब दें, शुरू करने का चरण मिल जाएगा।"
+            "नमूना बातचीत से शुरुआती चरण चुनें। दूसरी लिपि वाली भाषाएँ ‘{ui:scriptEntry}’ से शुरू होती हैं।"
           ],
           "shot": "stage-start"
         },
         {
-          "heading": "2. यह आज़माएँ",
+          "heading": "2. {ui:keepTitle}",
           "body": [
-            "आपके रिकॉर्ड से अभी करने लायक एक काम।"
+            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
           ],
-          "shot": "next"
+          "shot": "keep-learning"
         },
         {
           "heading": "3. बढ़ रहा है",

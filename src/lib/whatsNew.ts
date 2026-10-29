@@ -44,6 +44,16 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.78(92): My 지속 학습(복습·랜덤·어휘·문법·표현, 묶음 퀴즈·단어 퀴즈·단어장 그래프/망), 0단계 글자·소리 + 단계 학습 읽는 법.
+    // 첫 고르기 간소화·단계대로/자유롭게·이 단계로 정하기·일일 학습 이름·익힌 것 묶기·퀴즈 제목 없앰·쓸 기능 고르기 사용법 창은 사용법·출시 노트에만.
+    version: "2.78",
+    code: 92,
+    items: [
+      { id: "keep-learning", title: "whatsNewKeepTitle", body: "whatsNewKeepBody", shot: "keep-learning", tab: "map", guide: "my.map" },
+      { id: "letters-reading", title: "whatsNewLettersTitle", body: "whatsNewLettersBody", shot: "letters-reading", tab: "map", guide: "my.map" },
+    ],
+  },
+  {
     // 2.77(91): My 오늘 할 것(분량·n일 완성·순서, 헷갈린 곳 퀴즈, 오늘 배운 것·직접 묻기), 지난번에 틀린 것 + 아침 알림(새 로컬 알림 플러그인).
     // 첫 화면 My·처음 설치 기능 한 장씩·대본 평가(★·더 자연스러운 말)·이어서 하기·채팅에서 다시 쓰기·1:1 읽음·팔로우 목록은 사용법·출시 노트에만.
     version: "2.77",

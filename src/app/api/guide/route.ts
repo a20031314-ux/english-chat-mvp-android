@@ -19,6 +19,7 @@ import callBefore277 from "@/lib/guide/callBefore277.json";
 import callBefore279 from "@/lib/guide/callBefore279.json";
 import mapBefore280 from "@/lib/guide/mapBefore280.json";
 import mapBefore281 from "@/lib/guide/mapBefore281.json";
+import mapBefore282 from "@/lib/guide/mapBefore282.json";
 
 export const runtime = "nodejs";
 
@@ -89,9 +90,16 @@ export async function GET(request: NextRequest) {
   const before281 = request.nextUrl.searchParams.get("r281") === "1"
     ? undefined
     : (mapBefore281 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const withTap281: Guide = before281
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before281[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+  // 지속 학습 카드·0단계가 있는 빌드(`r282=1`, 2.78, 2026-10-29): 그 전 빌드는 대화로 시작·오늘 해볼 것 칸을 예전 글로(mapBefore282.json).
+  const before282 = request.nextUrl.searchParams.get("r282") === "1"
+    ? undefined
+    : (mapBefore282 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withKeep282: Guide = before282
+    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before282[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : newest;
+  const withTap281: Guide = before281
+    ? { ...withKeep282, map: { ...withKeep282.map, sections: withKeep282.map.sections.map((section, index) => before281[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    : withKeep282;
   const withParts280: Guide = before280
     ? { ...withTap281, map: { ...withTap281.map, sections: withTap281.map.sections.map((section, index) => before280[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : withTap281;

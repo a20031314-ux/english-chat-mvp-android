@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-29x";
+export const GUIDE_VERSION = "2026-10-29y";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -135,16 +135,16 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "1. 대화로 시작",
         "body": [
-          "예시 대화를 보고 답하면 시작할 단계를 찾아요."
+          "예시 대화로 시작 단계를 골라요. 글자가 다른 언어는 ‘{ui:scriptEntry}’."
         ],
         "shot": "stage-start"
       },
       {
-        "heading": "2. 오늘 해볼 것",
+        "heading": "2. {ui:keepTitle}",
         "body": [
-          "쌓인 기록으로 지금 할 것 하나를 권해요."
+          "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
         ],
-        "shot": "next"
+        "shot": "keep-learning"
       },
       {
         "heading": "3. 자라는 중",
@@ -516,16 +516,16 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "1. Start with a conversation",
         "body": [
-          "Answer about sample conversations to find where to start."
+          "Pick a starting stage from sample conversations. Languages with a new script start with ‘{ui:scriptEntry}’."
         ],
         "shot": "stage-start"
       },
       {
-        "heading": "2. Try this",
+        "heading": "2. {ui:keepTitle}",
         "body": [
-          "One thing to do now, picked from your record."
+          "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
         ],
-        "shot": "next"
+        "shot": "keep-learning"
       },
       {
         "heading": "3. Growing",
