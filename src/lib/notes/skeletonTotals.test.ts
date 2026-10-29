@@ -29,3 +29,12 @@ test("다음 단계까지: 갈래마다 70%에 모자란 수(반 몫은 올림)"
   assert.equal(toNextStage([{ done: 3.5, total: 10 }, { done: 7, total: 10 }, { done: 0, total: 0 }], 0.7), 4);
   assert.equal(toNextStage([{ done: 9, total: 10, measured: true }], 0.7), 0);
 });
+
+test("My 화면은 어휘를 표현에 합친다(어휘는 지속 학습이 따로) — 태국어", async () => {
+  const { skeletonView } = await import("./skeletonTotals.ts");
+  const totals = skeletonTotals("th", { known: {}, passed: new Set() });
+  const view = skeletonView(totals);
+  assert.ok(!view.some((part) => part.id === "vocab"));
+  const sum = (list: readonly { id: string; total: number }[]) => list.filter((p) => p.id !== "pronunciation").reduce((s, p) => s + p.total, 0);
+  assert.equal(sum(view), sum(totals.parts));
+});

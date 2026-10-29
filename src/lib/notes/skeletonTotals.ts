@@ -57,3 +57,11 @@ export function skeletonTotals(language: string, input: { known: KnownMap; passe
 export function toNextStage(parts: readonly { done: number; total: number; measured?: boolean }[], share: number): number {
   return parts.filter((part) => part.measured !== false && part.total > 0).reduce((sum, part) => sum + Math.max(0, Math.ceil(share * part.total - part.done)), 0);
 }
+
+/** My(뼈대) 화면용: 어휘(대본의 짧은 핵심 표현)는 표현에 합친다 — 어휘 수는 지속 학습이 따로 잰다(2026-10-29 사용자 "지속 학습은 My와 분리해서 어휘 n천 개는 따로"). */
+export function skeletonView(totals: SkeletonTotals): PartTotal[] {
+  const vocab = totals.parts.find((part) => part.id === "vocab");
+  return totals.parts
+    .filter((part) => part.id !== "vocab")
+    .map((part) => (part.id === "expression" && vocab ? { ...part, known: part.known + vocab.known, learning: part.learning + vocab.learning, total: part.total + vocab.total } : part));
+}

@@ -19,7 +19,7 @@ import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
-import { skeletonTotals, toNextStage } from "@/lib/notes/skeletonTotals";
+import { skeletonTotals, skeletonView, toNextStage } from "@/lib/notes/skeletonTotals";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
@@ -1863,7 +1863,7 @@ function SkeletonProgress({ ui, language, stage, row, known, passed }: { ui: UIC
         <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>
         {left > 0 ? <span className="text-meta tabular-nums text-slate-400">{ui.toNextStage.replace("{n}", String(left))}</span> : null}
       </p>
-      {totals.parts.map((part) => (
+      {skeletonView(totals).map((part) => (
         <div key={part.id} data-total-part={part.id} className="flex items-center gap-2">
           <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label[part.id]}</span>
           <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">

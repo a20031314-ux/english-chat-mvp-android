@@ -39,7 +39,7 @@ import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
-import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
 import type { LedgerState } from "@/lib/learner/ledger";
 
@@ -404,6 +404,11 @@ export function TodayPlan({
     now,
   });
   const upNext = queue[0] ?? null;
+  // 지속 학습의 어휘 수(낱말 갈래 열쇠 — 뼈대 짧은 표현·막혔던 낱말, 빈도 묶음이 들어오면 분모가 생김).
+  const wordCount = Object.keys(known).reduce(
+    (sum, key) => (keyPart(language, key) !== "vocab" ? sum : knownState(known, key) === "known" ? { ...sum, known: sum.known + 1 } : { ...sum, learning: sum.learning + 1 }),
+    { known: 0, learning: 0 },
+  );
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
   const placeAt = async (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -501,6 +506,7 @@ export function TodayPlan({
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
   return (
+    <>
     <section className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
       <div className="flex items-center gap-2">
         <h3 className="min-w-0 flex-1 text-caption font-semibold text-status-learned">{ui.planTitle}</h3>
@@ -649,68 +655,6 @@ export function TodayPlan({
       {checkupOpen === "record" ? (
         <SkillRecord ui={ui} locale={locale} checkups={checkups} labelOf={(key) => keyLabel(language, key, grammarName)} onClose={() => setCheckupOpen(null)} />
       ) : null}
-      {/* Continuous-study part (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. */}
-      <div role="group" data-study-focus className="mt-3 flex flex-wrap gap-1.5">
-        {FOCUSES.map((focus) => (
-          <button
-            key={focus}
-            type="button"
-            aria-pressed={settings.focus === focus}
-            onClick={() => save({ ...settings, focus })}
-            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
-          >
-            {focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
-          </button>
-        ))}
-      </div>
-      {testNext || upNext ? (
-        <button
-          type="button"
-          {...(testNext === "placement" ? { "data-placement-offer": "" } : testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
-          onClick={() => {
-            if (!testNext) return startStudy(upNext);
-            if (testNext !== "placement") setFrozenItems(testItems);
-            setCheckupOpen(testNext);
-          }}
-          className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
-        >
-          <span aria-hidden className="shrink-0 text-caption">▶</span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-note font-semibold">{ui.studyMore}</span>
-            <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
-              {testNext ? (
-                <>
-                  📝 {testNext === "placement" ? ui.placementTitle : testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
-                  {testNext === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}`}
-                </>
-              ) : upNext ? (
-                <>
-                  {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
-                </>
-              ) : null}
-            </span>
-          </span>
-        </button>
-      ) : null}
-      {tally.known.length || tally.fixed.length ? (
-        <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
-          {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
-        </p>
-      ) : null}
-      {checkups.length ? (
-        <button
-          type="button"
-          data-skill-record-open
-          onClick={() => setCheckupOpen("record")}
-          className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200"
-        >
-          <span>📈 {ui.skillRecord}</span>
-          <span className="tabular-nums">
-            · {checkups.length}
-            {lastBig ? ` · ${ui.stageNumber.replace("{n}", String(lastBig.stage))}` : ""}
-          </span>
-        </button>
-      ) : null}
       {unitItem && unitQuestions.length ? (
         <QuizPlayer
           key={`unit-${unitItem.id}`}
@@ -786,6 +730,79 @@ export function TodayPlan({
         />
       ) : null}
     </section>
+    {/* Ongoing practice (2026-10-29, user: keep it apart from My, count words on their own; a card inside My): its own count, parts, endless queue. */}
+    <section data-keep-learning className="mt-3 rounded-2xl border border-line bg-white/[0.03] px-3 py-3">
+      <div className="flex items-baseline gap-2">
+        <h3 className="min-w-0 flex-1 text-caption font-semibold text-ink">{ui.keepTitle}</h3>
+        <span data-keep-vocab className="shrink-0 text-caption tabular-nums text-slate-300">
+          {ui.partVocab} {wordCount.known}
+          {wordCount.learning ? <span className="ms-1.5 text-meta text-slate-500">{ui.totalsLearning.replace("{n}", String(wordCount.learning))}</span> : null}
+        </span>
+      </div>
+      {/* Continuous-study part (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. */}
+      <div role="group" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
+        {FOCUSES.map((focus) => (
+          <button
+            key={focus}
+            type="button"
+            aria-pressed={settings.focus === focus}
+            onClick={() => save({ ...settings, focus })}
+            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+          >
+            {focus === "auto" ? ui.planMixAuto : partName(ui, focus)}
+          </button>
+        ))}
+      </div>
+      {testNext || upNext ? (
+        <button
+          type="button"
+          {...(testNext === "placement" ? { "data-placement-offer": "" } : testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
+          onClick={() => {
+            if (!testNext) return startStudy(upNext);
+            if (testNext !== "placement") setFrozenItems(testItems);
+            setCheckupOpen(testNext);
+          }}
+          className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
+        >
+          <span aria-hidden className="shrink-0 text-caption">▶</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-note font-semibold">{ui.studyMore}</span>
+            <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
+              {testNext ? (
+                <>
+                  📝 {testNext === "placement" ? ui.placementTitle : testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
+                  {testNext === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}`}
+                </>
+              ) : upNext ? (
+                <>
+                  {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
+                </>
+              ) : null}
+            </span>
+          </span>
+        </button>
+      ) : null}
+      {tally.known.length || tally.fixed.length ? (
+        <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
+          {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
+        </p>
+      ) : null}
+      {checkups.length ? (
+        <button
+          type="button"
+          data-skill-record-open
+          onClick={() => setCheckupOpen("record")}
+          className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200"
+        >
+          <span>📈 {ui.skillRecord}</span>
+          <span className="tabular-nums">
+            · {checkups.length}
+            {lastBig ? ` · ${ui.stageNumber.replace("{n}", String(lastBig.stage))}` : ""}
+          </span>
+        </button>
+      ) : null}
+    </section>
+    </>
   );
 }
 

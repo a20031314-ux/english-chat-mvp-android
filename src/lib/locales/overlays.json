@@ -796,7 +796,8 @@
     "studyTallyFixed": "{n} 直せた",
     "totalsLearning": "学習中 {n}",
     "totalsOutside": "リスト外 +{n}",
-    "toNextStage": "次の段階まで {n}"
+    "toNextStage": "次の段階まで {n}",
+    "keepTitle": "継続学習"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1595,7 +1596,8 @@
     "studyTallyFixed": "{n} 已改正",
     "totalsLearning": "学习中 {n}",
     "totalsOutside": "列表外 +{n}",
-    "toNextStage": "距下一阶段 {n} 个"
+    "toNextStage": "距下一阶段 {n} 个",
+    "keepTitle": "持续学习"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2397,7 +2399,8 @@
     "studyTallyFixed": "{n} đã sửa",
     "totalsLearning": "đang học {n}",
     "totalsOutside": "ngoài danh sách +{n}",
-    "toNextStage": "còn {n} đến giai đoạn sau"
+    "toNextStage": "còn {n} đến giai đoạn sau",
+    "keepTitle": "Học liên tục"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3204,7 +3207,8 @@
     "studyTallyFixed": "{n} corrigés",
     "totalsLearning": "en cours {n}",
     "totalsOutside": "hors liste +{n}",
-    "toNextStage": "{n} avant l’étape suivante"
+    "toNextStage": "{n} avant l’étape suivante",
+    "keepTitle": "Pratique continue"
   },
   "it": {
     "archive": "Report",
@@ -4202,7 +4206,8 @@
     "studyTallyFixed": "{n} corrette",
     "totalsLearning": "in corso {n}",
     "totalsOutside": "fuori elenco +{n}",
-    "toNextStage": "{n} alla prossima fase"
+    "toNextStage": "{n} alla prossima fase",
+    "keepTitle": "Pratica continua"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5012,7 +5017,8 @@
     "studyTallyFixed": "{n} corrigidas",
     "totalsLearning": "aprendendo {n}",
     "totalsOutside": "fora da lista +{n}",
-    "toNextStage": "{n} para a próxima etapa"
+    "toNextStage": "{n} para a próxima etapa",
+    "keepTitle": "Prática contínua"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6008,7 +6014,8 @@
     "studyTallyFixed": "исправлено {n}",
     "totalsLearning": "учу {n}",
     "totalsOutside": "вне списка +{n}",
-    "toNextStage": "до следующего этапа {n}"
+    "toNextStage": "до следующего этапа {n}",
+    "keepTitle": "Постоянная практика"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6814,7 +6821,8 @@
     "studyTallyFixed": "{n} diperbaiki",
     "totalsLearning": "sedang dipelajari {n}",
     "totalsOutside": "di luar daftar +{n}",
-    "toNextStage": "{n} lagi ke tahap berikutnya"
+    "toNextStage": "{n} lagi ke tahap berikutnya",
+    "keepTitle": "Latihan berkelanjutan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7613,7 +7621,8 @@
     "studyTallyFixed": "صحّحت {n}",
     "totalsLearning": "قيد التعلّم {n}",
     "totalsOutside": "خارج القائمة +{n}",
-    "toNextStage": "{n} حتى المرحلة التالية"
+    "toNextStage": "{n} حتى المرحلة التالية",
+    "keepTitle": "تعلّم مستمر"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8412,7 +8421,8 @@
     "studyTallyFixed": "แก้ถูก {n}",
     "totalsLearning": "กำลังเรียน {n}",
     "totalsOutside": "นอกรายการ +{n}",
-    "toNextStage": "อีก {n} ถึงขั้นถัดไป"
+    "toNextStage": "อีก {n} ถึงขั้นถัดไป",
+    "keepTitle": "เรียนต่อเนื่อง"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9211,6 +9221,7 @@
     "studyTallyFixed": "{n} सुधारे",
     "totalsLearning": "सीख रहे हैं {n}",
     "totalsOutside": "सूची से बाहर +{n}",
-    "toNextStage": "अगले चरण तक {n}"
+    "toNextStage": "अगले चरण तक {n}",
+    "keepTitle": "लगातार अभ्यास"
   }
 }
