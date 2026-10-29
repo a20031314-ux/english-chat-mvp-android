@@ -123,6 +123,8 @@ export function isCurriculumKey(language: string, key: string): boolean {
   if (key.startsWith("f|")) return allFramesFor(language).some((f) => f.id === key.slice(2));
   if (key.startsWith("g|")) return itemForKey(language, key) !== null;
   if (key.startsWith("e|")) return allScriptsFor(language).some((s) => s.expressions.includes(key.slice(2)));
+  // 뼈대 밖에서 막힌 것(curriculum/gaps.ts) — 재료는 화면이 넘김.
+  if (key.startsWith("u|")) return key.length > 2;
   return false;
 }
 

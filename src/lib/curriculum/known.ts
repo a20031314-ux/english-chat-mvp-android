@@ -77,7 +77,7 @@ export function cleanKnown(raw: unknown): KnownMap {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
   const out: KnownMap = {};
   for (const [key, value] of Object.entries(raw as Record<string, unknown>)) {
-    if (!/^[efg]\|/.test(key) || key.length > 80 || !value || typeof value !== "object") continue;
+    if (!/^[efgu]\|/.test(key) || key.length > 80 || !value || typeof value !== "object") continue;
     const entry = value as { days?: unknown; at?: unknown };
     const days = Array.isArray(entry.days) ? [...new Set(entry.days.filter((d): d is number => Number.isInteger(d)))].slice(-KNOWN_DAYS) : [];
     if (!days.length) continue;

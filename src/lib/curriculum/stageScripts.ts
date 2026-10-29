@@ -24,7 +24,8 @@ import { ZH } from "./stageScripts/zh.ts";
 import { JA } from "./stageScripts/ja.ts";
 import { KO } from "./stageScripts/ko.ts";
 
-export type ScriptGloss = { en: string; ko?: string };
+/** raw = 이미 앱 언어로 된 뜻(뼈대 밖 막힌 것 — 내가 편한 말로 쓴 줄, curriculum/gaps.ts). */
+export type ScriptGloss = { en: string; ko?: string; raw?: string };
 
 export type ScriptVariant = { text: string; gloss: ScriptGloss };
 
@@ -274,6 +275,7 @@ export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
  * (2026-10-29 가상 사용자, 아랍어 앱 처음 시험). 다른 학습 언어는 영어 뜻이라도 보인다.
  */
 export function quizGloss(gloss: ScriptGloss, uiLanguage: string, learning: string): string | null {
+  if (gloss.raw !== undefined) return gloss.raw || null;
   if (uiLanguage === "ko" || uiLanguage === "en") return glossFor(gloss, uiLanguage);
   const translated = TRANSLATED.get(uiLanguage)?.get(gloss.en.trim());
   if (translated) return translated;

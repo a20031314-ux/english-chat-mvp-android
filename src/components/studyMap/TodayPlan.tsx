@@ -19,7 +19,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
-import type { QuizCard } from "@/lib/curriculum/quiz";
+import { registerQuizSources, type QuizCard } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -27,7 +27,8 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
-import { confirmDue, skippedIds } from "@/lib/curriculum/known";
+import { confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
+import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
@@ -130,6 +131,7 @@ export function TodayPlan({
   redo = [],
   weakest = null,
   expressions = [],
+  cards = [],
 }: {
   ui: UICopy;
   locale: string;
@@ -137,6 +139,8 @@ export function TodayPlan({
   stage: number;
   passed: readonly string[];
   review: ReviewMap;
+  /** 튜터가 고친 줄(노트 카드) — 새로 들어간 말이 "막혔던 말"(curriculum/gaps.ts). */
+  cards?: readonly { wrong: string; right: string; note: string; at: number; kind?: string }[];
   /** 튜터가 같은 틀을 두 번 고친 것(/api/notebook redo) — 고친 줄과 함께 퀴즈로. */
   redo?: readonly { frame: string; card: QuizCard }[];
   /** 서버가 고른 오늘의 대본(내 기록에 맞춰). */
@@ -229,6 +233,15 @@ export function TodayPlan({
   const skipKey = [...skipSet].sort().join(",");
   const planPassed = useMemo(() => new Set([...passedSet, ...skipSet]), [passedSet, skipSet]);
   const confirm = confirmDue(known, now || Date.now());
+  // 대화에서 막힌 것(뼈대 밖 포함): 노트 카드 + 이 폰의 표현 보기 → 퀴즈 재료를 넘기고, 이미 앎은 빼고 최근 것부터.
+  const cardsKey = cards.map((card) => `${card.at}`).join(",");
+  const gaps = useMemo(() => {
+    const list = mergeGaps(gapsFromCards(language, cards), typeof window === "undefined" ? [] : readLocalGaps(language));
+    registerQuizSources(language, list.map((gap) => ({ key: gap.key, sources: gapSources(gap) })));
+    return list;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language, cardsKey, now]);
+  const gapKeys = gaps.filter((gap) => knownState(known, gap.key) !== "known").map((gap) => gap.key);
   const day = now ? localDay(new Date(now)) : "";
   useEffect(() => {
     if (day) setQuizDone(readQuizDone(day));
@@ -238,7 +251,7 @@ export function TodayPlan({
     () => {
       if (!now) return [];
       // 채우기: 계속 공부와 같은 순서(아는지 확인 → 퀴즈로 틀렸던 것 → 부족한 갈래 → 곧 나올 것 → 다지기)에서 몇 개를 오늘 할 것 안에.
-      const fill = nextStudy({ language, stage, passed: planPassed, review, log, weakest, expressions, confirm, now })
+      const fill = nextStudy({ language, stage, passed: planPassed, review, log, weakest, expressions, confirm, gaps: gapKeys, now })
         // 다시 볼 것은 이미 앞에, 아직 안 배운 것(new)은 빼고 — 처음 쓰는 사람은 채우기 없이 새 대본만.
         .filter((pick) => pick.reason !== "again" && pick.reason !== "new")
         .map((pick) => pick.key);
@@ -297,7 +310,7 @@ export function TodayPlan({
     setQuizDone(next);
     saveQuizDone(day, next);
     // 다시 볼 것에서 온 퀴즈는 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 퀴즈는 틀렸을 때만 다시 볼 것에 넣는다.
-    if (!item.review && passedQuiz && !known[item.id]) return;
+    if (!item.review && passedQuiz && !known[item.id] && !item.id.startsWith("u|")) return;
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
@@ -343,6 +356,7 @@ export function TodayPlan({
     expressions,
     skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
     confirm,
+    gaps: gapKeys,
     now,
   });
   const upNext = queue[0] ?? null;
@@ -361,6 +375,8 @@ export function TodayPlan({
       minutes: 2,
       ...(review[pick.key] ? { review: pick.key } : {}),
       ...(practice ? { then: { id: practice.id, stage: practice.stage } } : {}),
+      // 고친 줄에서 온 막힌 것: 틀린 줄 고르기 문제도(퀴즈 card).
+      ...(pick.reason === "gap" && gaps.find((gap) => gap.key === pick.key)?.card ? { card: gaps.find((gap) => gap.key === pick.key)!.card } : {}),
     };
   };
   const startStudy = (pick: StudyPick | null) => {
@@ -391,7 +407,7 @@ export function TodayPlan({
         data-test-continue
         onClick={() => {
           setCheckupOpen(null);
-          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), now: Date.now() })[0] ?? null);
+          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, now: Date.now() })[0] ?? null);
         }}
         className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
       >
@@ -404,6 +420,8 @@ export function TodayPlan({
       ? ui.planAgain
       : pick.reason === "confirm"
         ? ui.studyWhyConfirm
+        : pick.reason === "gap"
+          ? ui.studyWhyGap
         : pick.reason === "missed"
         ? ui.studyWhyMissed
         : pick.reason === "weak"
@@ -588,7 +606,7 @@ export function TodayPlan({
           round={log[quiz.id]?.n ?? 0}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), now: Date.now() })[0] ?? null)}
+          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, now: Date.now() })[0] ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then

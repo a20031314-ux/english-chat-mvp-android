@@ -5,6 +5,7 @@
  *   1. again  날짜가 된 다시 볼 것(학습 끝 헷갈려요·물어본 곳, 서버 review)
  *   1½. confirm 시험에서 맞혀 확인 중인 것(curriculum/known.ts) — 다른 날 맞힐 때마다 이미 앎에 가까워짐
  *   2. missed 이 폰에서 퀴즈로 틀렸던 것(오래된 것부터)
+ *   2½. gap   대화에서 막힌 것(튜터가 고친 줄에 새로 들어간 말·표현 보기로 연 표현, curriculum/gaps.ts)
  *   3. weak   지금 단계에서 가장 모자란 갈래(stageParts weakest)의 열쇠 — 표현·어휘·발음은 아직 숙지 안 된 핵심 표현, 문법은 그 단계 문법 칸
  *   4. new    아직 통과 안 한 그 단계 대본의 표현·문장구조(곧 나올 것 미리)
  *   5. keep   통과한 대본의 것 중 오래 안 푼 것(다지기)
@@ -16,7 +17,7 @@ import { DAY_MS, grammarKey, isCurriculumKey, reviewKeysOf, type ReviewMap } fro
 import { canQuiz } from "./quiz.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 
-export type StudyReason = "again" | "confirm" | "missed" | "weak" | "new" | "keep";
+export type StudyReason = "again" | "confirm" | "missed" | "gap" | "weak" | "new" | "keep";
 export type StudyPick = { key: string; reason: StudyReason; part?: PartId };
 
 /** 열쇠마다 이 폰에서 푼 기록(열쇠만, 문장은 없음). */
@@ -52,6 +53,8 @@ export function nextStudy(input: {
   skip?: ReadonlySet<string>;
   /** 시험에서 맞혀 확인 중인 열쇠(curriculum/known.ts confirmDue) — 다시 볼 것 다음에. */
   confirm?: readonly string[];
+  /** 대화에서 막힌 것(curriculum/gaps.ts — 고친 줄·표현 보기), 최근 것부터 — 틀렸던 것 다음에. 이미 앎은 부르는 쪽이 뺌. */
+  gaps?: readonly string[];
   now?: number;
 }): StudyPick[] {
   const now = input.now ?? Date.now();
@@ -77,6 +80,8 @@ export function nextStudy(input: {
   for (const key of input.confirm ?? []) add(key, "confirm");
 
   for (const [key] of Object.entries(input.log).filter(([, entry]) => !entry.last).sort((a, b) => a[1].at - b[1].at)) add(key, "missed");
+
+  for (const key of input.gaps ?? []) add(key, "gap");
 
   const scripts = allScriptsFor(input.language);
   const here = scripts.filter((script) => script.stage === input.stage);

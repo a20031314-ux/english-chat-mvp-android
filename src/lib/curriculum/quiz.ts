@@ -78,8 +78,21 @@ function frameOf(language: string, id: string) {
   return allFramesFor(language).find((frame) => frame.id === id) ?? null;
 }
 
+/**
+ * 뼈대 밖에서 막힌 것(u|, curriculum/gaps.ts)의 재료 — 화면이 이 폰·노트 카드에서 모아 넘긴다(대본에 없어서).
+ * 고르기 오답은 다른 막힌 것의 말 + 가까운 뼈대 표현.
+ */
+const GAP_SOURCES = new Map<string, Map<string, QuizSource[]>>();
+
+export function registerQuizSources(language: string, entries: readonly { key: string; sources: QuizSource[] }[]): void {
+  const map = GAP_SOURCES.get(language) ?? new Map<string, QuizSource[]>();
+  for (const entry of entries) if (entry.key.startsWith("u|") && entry.sources.length) map.set(entry.key, entry.sources);
+  GAP_SOURCES.set(language, map);
+}
+
 /** 열쇠가 가리키는 문장들(문제 재료) — 그 조각(piece)이 문장에 그대로 든 것엔 piece를 붙인다. */
 export function quizSources(language: string, key: string): QuizSource[] {
+  if (key.startsWith("u|")) return GAP_SOURCES.get(language)?.get(key) ?? [];
   const scripts = allScriptsFor(language);
   const out: QuizSource[] = [];
   const seen = new Set<string>();
@@ -140,6 +153,11 @@ export function quizSources(language: string, key: string): QuizSource[] {
 
 /** 고르기 오답 후보: 같은 갈래 다른 열쇠의 조각(가까운 단계 먼저). */
 function decoys(language: string, key: string, stage: number): string[] {
+  if (key.startsWith("u|")) {
+    const others = [...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key).map(([, sources]) => sources[0]?.piece ?? "").filter(Boolean);
+    const skeleton = allScriptsFor(language).flatMap((script) => script.expressions);
+    return [...new Set([...others, ...skeleton])];
+  }
   const near = (s: number) => Math.abs(s - stage) <= 1;
   if (key.startsWith("e|")) {
     const mine = key.slice(2);
@@ -304,6 +322,11 @@ export function buildQuiz(language: string, key: string, options: { card?: QuizC
       used.add(source.text);
       break;
     }
+  }
+  // 재료가 한 문장뿐이면(뼈대 밖 막힌 것) 같은 문장으로 맞추기도.
+  if (!middle.some((q) => q.kind === "order") && sources.length === 1) {
+    const order = orderOf(language, sources[0]!, random);
+    if (order) middle.push(order);
   }
   const sayFrom = sources.find((source) => speakable(source) && !used.has(source.text)) ?? sources.find(speakable);
   const round = options.round ?? 0;

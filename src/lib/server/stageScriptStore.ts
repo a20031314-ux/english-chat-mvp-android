@@ -85,10 +85,11 @@ export async function saveChecks(
   let review = record.review ?? {};
   let known = record.known ?? {};
   for (const [check, ok] of Object.entries(checks).slice(0, 12)) {
-    if (!/^[efg]\|/.test(check) || check.length > 80) continue;
+    if (!/^[efgu]\|/.test(check) || check.length > 80) continue;
     review = applyCheck(review, check, ok, now);
     // 퀴즈 답만 확인 중 열쇠를 움직인다(알아요·헷갈려요는 스스로 고른 것이라 — 헷갈려요는 지움).
-    if (quiz || !ok) known = applyKnown(known, check, ok, now);
+    // 뼈대 밖에서 막힌 것(u|, curriculum/gaps.ts)은 시험에 안 나와서 퀴즈 정답이 확인 중을 처음 만든다.
+    if (quiz || !ok) known = applyKnown(known, check, ok, now, quiz && check.startsWith("u|"));
   }
   // 오래 묵은 것은 400개까지만(가장 최근 체크 순).
   const entries = Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400);

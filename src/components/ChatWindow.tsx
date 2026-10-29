@@ -56,6 +56,7 @@ import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 import { saidPhrase } from "@/lib/learner/practice";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
+import { rememberHowToSay } from "@/lib/curriculum/gaps";
 import { compressChatImage } from "@/lib/chatImage";
 import { correctionRisk } from "@/lib/correctionRisk";
 import { captureSceneSoon } from "@/lib/notes/sceneShots";
@@ -1311,6 +1312,8 @@ export function ChatWindow({
     if (!response.ok) throw new Error("card failed");
     const data = (await response.json()) as ExpressionApiResponse;
     if (!data.expression?.trim()) throw new Error("empty card");
+    // 말하고 싶었는데 몰랐던 말 → My 지속 학습이 퀴즈로(curriculum/gaps.ts, 내가 쓴 줄은 이 폰에만).
+    rememberHowToSay(sessionLanguageCode, { expression: data.expression, example: data.example, mine: message });
     setTurns((previous) =>
       previous.map((turn) =>
         turn.id === turnId ? { ...turn, expressionResult: data } : turn,

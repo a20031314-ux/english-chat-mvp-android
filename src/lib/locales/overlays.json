@@ -784,7 +784,8 @@
     "scriptPracticeOnly": "この方法は合格に数えません",
     "studyWhyConfirm": "知っているか確認",
     "entryCheckTitle": "ステージ{n}の事前チェック",
-    "knownTag": "習得済み"
+    "knownTag": "習得済み",
+    "studyWhyGap": "つまずいた言葉"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1571,7 +1572,8 @@
     "scriptPracticeOnly": "这种方式不算通过",
     "studyWhyConfirm": "确认是否掌握",
     "entryCheckTitle": "第{n}阶段预先检测",
-    "knownTag": "已掌握"
+    "knownTag": "已掌握",
+    "studyWhyGap": "卡住过的话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2361,7 +2363,8 @@
     "scriptPracticeOnly": "Cách này không tính là đạt",
     "studyWhyConfirm": "Kiểm tra bạn đã biết",
     "entryCheckTitle": "Kiểm tra trước giai đoạn {n}",
-    "knownTag": "Đã biết"
+    "knownTag": "Đã biết",
+    "studyWhyGap": "Chỗ bạn bị vấp"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3156,7 +3159,8 @@
     "scriptPracticeOnly": "Ce mode ne compte pas pour réussir",
     "studyWhyConfirm": "Vérifier que tu le sais",
     "entryCheckTitle": "Test préalable · étape {n}",
-    "knownTag": "Acquis"
+    "knownTag": "Acquis",
+    "studyWhyGap": "Là où tu as bloqué"
   },
   "it": {
     "archive": "Report",
@@ -4142,7 +4146,8 @@
     "scriptPracticeOnly": "Questa modalità non conta per superarlo",
     "studyWhyConfirm": "Verifica che lo sai",
     "entryCheckTitle": "Test iniziale · fase {n}",
-    "knownTag": "Già noto"
+    "knownTag": "Già noto",
+    "studyWhyGap": "Dove ti sei bloccato"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4940,7 +4945,8 @@
     "scriptPracticeOnly": "Este modo não conta para passar",
     "studyWhyConfirm": "Confirmar se você sabe",
     "entryCheckTitle": "Teste prévio · etapa {n}",
-    "knownTag": "Já sabe"
+    "knownTag": "Já sabe",
+    "studyWhyGap": "Onde você travou"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5924,7 +5930,8 @@
     "scriptPracticeOnly": "Этот способ не засчитывается",
     "studyWhyConfirm": "Проверка, что знаешь",
     "entryCheckTitle": "Предварительная проверка · этап {n}",
-    "knownTag": "Знаю"
+    "knownTag": "Знаю",
+    "studyWhyGap": "Где ты запнулся"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6718,7 +6725,8 @@
     "scriptPracticeOnly": "Cara ini tidak dihitung lulus",
     "studyWhyConfirm": "Cek apakah sudah tahu",
     "entryCheckTitle": "Cek awal tahap {n}",
-    "knownTag": "Sudah tahu"
+    "knownTag": "Sudah tahu",
+    "studyWhyGap": "Yang tadi bikin macet"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7505,7 +7513,8 @@
     "scriptPracticeOnly": "هذه الطريقة لا تُحتسب للنجاح",
     "studyWhyConfirm": "تأكيد أنك تعرفه",
     "entryCheckTitle": "اختبار مسبق · المرحلة {n}",
-    "knownTag": "أعرفه"
+    "knownTag": "أعرفه",
+    "studyWhyGap": "ما تعثّرت فيه"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8292,7 +8301,8 @@
     "scriptPracticeOnly": "วิธีนี้ไม่นับว่าผ่าน",
     "studyWhyConfirm": "ตรวจว่ารู้แล้ว",
     "entryCheckTitle": "ทดสอบก่อนเริ่มขั้น {n}",
-    "knownTag": "รู้แล้ว"
+    "knownTag": "รู้แล้ว",
+    "studyWhyGap": "คำที่เคยติด"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9079,6 +9089,7 @@
     "scriptPracticeOnly": "यह तरीका पास में नहीं गिना जाता",
     "studyWhyConfirm": "जाँचें कि आप जानते हैं",
     "entryCheckTitle": "चरण {n} की पूर्व-जाँच",
-    "knownTag": "जानते हैं"
+    "knownTag": "जानते हैं",
+    "studyWhyGap": "जहाँ आप अटके"
   }
 }
