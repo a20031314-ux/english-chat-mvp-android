@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-29 21:22",
- "commit": "ec603baf",
+ "checkedAt": "2026-10-29 22:44",
+ "commit": "62abad56",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -104,7 +104,7 @@
   "video": {
    "title": "영상 학습",
    "text": "6d02e59a54ef",
-   "shots": "a1518633c123",
+   "shots": "4424222aad04",
    "links": "fbb882eac87e",
    "code": "e6d2fd936bcd"
   },
@@ -139,7 +139,7 @@
   "my": {
    "title": "My",
    "text": "95ae426a5ede",
-   "shots": "3d30db739c09",
+   "shots": "c1d0be2849f1",
    "links": "bc7ccaf1382e",
    "code": "ba396f10e1f0"
   },
@@ -167,12 +167,33 @@
   "learner": {
    "title": "오늘 해볼 것 · 표현 장부",
    "text": "f8de6be00f03",
-   "shots": "3061eb4ca0b3",
+   "shots": "d03e0c80b5d5",
    "links": "4e14f6b396a0",
    "code": "05f40b400712"
   }
  },
  "history": [
+  {
+   "at": "2026-10-29 22:44",
+   "commit": "62abad56",
+   "changes": [
+    {
+     "id": "video",
+     "title": "영상 학습",
+     "what": "그림"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "그림"
+    },
+    {
+     "id": "learner",
+     "title": "오늘 해볼 것 · 표현 장부",
+     "what": "그림"
+    }
+   ]
+  },
   {
    "at": "2026-10-29 21:22",
    "commit": "ec603baf",
