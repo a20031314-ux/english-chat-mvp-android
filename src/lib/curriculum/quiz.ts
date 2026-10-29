@@ -305,12 +305,18 @@ export function fixOf(language: string, card: QuizCard, random: () => number): Q
  * round = 이 열쇠를 이 폰에서 몇 번 풀었나(quizLog n): 문장을 돌려 매번 다른 줄로, 모양도 돌린다 —
  * 0번째 고르기 먼저(알아보기) · 1번째 맞추기 먼저(구조) · 2번째부터 말하기 둘(꺼내기). 시험(checkup·stageTest·placement)은 round 없이.
  */
-export function buildQuiz(language: string, key: string, options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix } = {}): Quiz | null {
-  if (options.mix && options.mix !== "auto") {
-    const random = rng(`${key}|${options.seed ?? ""}|${options.mix}`);
+export function buildQuiz(
+  language: string,
+  key: string,
+  options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix; kinds?: readonly QuizQuestion["kind"][] } = {},
+): Quiz | null {
+  // 조합(말하기·듣기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).
+  const kinds = options.mix && options.mix !== "auto" ? MIX_KINDS[options.mix] : options.kinds;
+  if (kinds?.length) {
+    const random = rng(`${key}|${options.seed ?? ""}|${kinds.join(",")}`);
     const all = shuffled(quizSources(language, key), rng(key));
     const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
-    const questions = mixQuiz(language, key, [...all.slice(shift), ...all.slice(0, shift)], options.mix, random);
+    const questions = mixQuiz(language, key, [...all.slice(shift), ...all.slice(0, shift)], kinds, random);
     const fix = options.card ? fixOf(language, options.card, random) : null;
     const list = fix ? [fix, ...questions].slice(0, QUIZ_SIZE) : questions;
     // 조합대로 둘 넘게 못 만들면 앱이 돌리는 퀴즈로.
@@ -397,10 +403,10 @@ const MIX_KINDS: Record<Exclude<QuizMix, "auto">, QuizQuestion["kind"][]> = {
 };
 
 /** 조합을 정한 퀴즈: 문장마다 그 조합의 모양으로(같은 문장은 한 번). */
-function mixQuiz(language: string, key: string, sources: readonly QuizSource[], mix: Exclude<QuizMix, "auto">, random: () => number): QuizQuestion[] {
+function mixQuiz(language: string, key: string, sources: readonly QuizSource[], kinds: readonly QuizQuestion["kind"][], random: () => number): QuizQuestion[] {
   const used = new Set<string>();
   const out: QuizQuestion[] = [];
-  for (const kind of MIX_KINDS[mix]) {
+  for (const kind of kinds) {
     const pool = sources.filter((source) => !used.has(source.text) && (kind !== "say" || source.who !== "them"));
     const fallback = sources.filter((source) => kind !== "say" || source.who !== "them");
     let made: QuizQuestion | null = null;

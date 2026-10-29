@@ -12,6 +12,7 @@ import type { UICopy } from "@/lib/copy";
 import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
+import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { stopTts } from "@/lib/ttsPlayer";
@@ -71,9 +72,11 @@ export function QuizPlayer({
 }) {
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
+  // "알아서"(또는 조합 없음): 이 항목에 맞는 모양 + 이 사람이 약한 모양을 앞에(curriculum/learnStyle.ts). 연 동안 고정.
+  const [kinds] = useState(() => (unit || (mix && mix !== "auto") ? undefined : styleKinds(language, quizKey, readKindLog(language))));
   const quiz = useMemo(
-    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix })),
-    [language, quizKey, card, seed, opened, mix, unit],
+    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix, kinds })),
+    [language, quizKey, card, seed, opened, mix, unit, kinds],
   );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
@@ -96,7 +99,13 @@ export function QuizPlayer({
   }, [done, questions.length, counted, passed, onDone]);
   useEffect(() => () => stopTts(), []);
 
-  const answer = (value: Answer) => setAnswers((current) => (current[index] ? current : { ...current, [index]: value }));
+  const answer = (value: Answer) => {
+    if (answers[index]) return;
+    // 모양별 기록(이 폰): 다음에 이 열쇠의 약한 모양을 앞에(curriculum/learnStyle.ts). 묶음·건너뛴 말하기는 빼고.
+    const kind = questions[index]?.kind;
+    if (!unit && kind && !value.skipped) saveKind(language, quizKey, kind, value.correct);
+    setAnswers((current) => (current[index] ? current : { ...current, [index]: value }));
+  };
   const question = questions[index];
 
   return (
