@@ -3,7 +3,6 @@
 import { voiceCallAvailable } from "@/lib/platform";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
-import { sendAppIntent } from "@/lib/appIntents";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
@@ -230,16 +229,6 @@ export function StudyMapTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         <div className="mx-auto mb-4 max-w-2xl">
           <AccountCard ui={ui} locale={locale} />
-          {door ? null : (
-            <button
-              type="button"
-              onClick={() => sendAppIntent("openGuide", { manage: true })}
-              className="mt-2 flex w-full items-center justify-between rounded-xl border border-line px-4 py-2.5 text-start text-note text-slate-200 hover:bg-white/5"
-            >
-              <span>{ui.featurePickTitle}</span>
-              <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
-            </button>
-          )}
         </div>
         {loading || !stageLoaded ? (
           <p className="text-sm text-slate-400">{ui.mapLoading}</p>

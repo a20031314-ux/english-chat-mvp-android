@@ -318,7 +318,7 @@ export function GuideButton({
     setOpen(true);
   };
 
-  // 새로워진 점 "자세히": 그 칸으로. 숨긴 기능으로 가려던 곳·My "기능 고르기"도 여기로.
+  // 새로워진 점 "자세히": 그 칸으로. 숨긴 기능으로 가려던 곳도 여기로(쓸 기능 고르기는 이 창 맨 앞 탭).
   useEffect(() => onAppIntent("openGuide", (detail) => openAt(detail)));
 
   useEffect(() => {
@@ -431,19 +431,34 @@ export function GuideButton({
           ) : null}
           {picking ? null : (
             <div className="flex shrink-0 gap-2 overflow-x-auto border-b border-line px-4 py-2" role="tablist">
+              {/* Feature picker lives here as the first tab (2026-10-29: moved out of My into the guide). */}
+              {features && chapters.length ? (
+                <button
+                  type="button"
+                  role="tab"
+                  data-feature-pick-tab
+                  aria-selected={Boolean(target.manage)}
+                  onClick={() => setTarget((prev) => ({ ...prev, manage: !prev.manage }))}
+                  className={`shrink-0 rounded-full px-3 py-1 text-caption ${
+                    target.manage ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"
+                  }`}
+                >
+                  {ui.featurePickTitle}
+                </button>
+              ) : null}
               {chapters.length
                 ? chapters.map((chapter) => (
                     <button
                       key={chapter.id}
                       type="button"
                       role="tab"
-                      aria-selected={focusChapter === chapter.id}
+                      aria-selected={!target.manage && focusChapter === chapter.id}
                       onClick={() => {
                         setTarget({ chapter: chapter.id });
                         jump(chapter.id);
                       }}
                       className={`shrink-0 rounded-full px-3 py-1 text-caption ${
-                        focusChapter === chapter.id
+                        !target.manage && focusChapter === chapter.id
                           ? "bg-platinum text-canvas"
                           : `border border-line hover:bg-white/10 ${chapterOn(chapter) ? "text-slate-300" : "text-slate-500"}`
                       }`}
