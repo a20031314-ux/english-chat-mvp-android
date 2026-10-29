@@ -900,6 +900,8 @@ export async function listenOnce(input: {
   /** 화면의 "다 말했어요"·"잘 모르겠어요": 지금 끝내고 들린 데까지 보낸다. */
   onReady?: (endNow: () => void) => void;
 }): Promise<{ heard: string; cancel: () => void }> {
+  // 대본 말하기·내 문장 말해보기도 통화처럼 권한부터(아이폰, 처음 한 번) — 말하는 도중 권한 창이 뜨면 그 녹음이 멈춤.
+  await primeMicrophone();
   let settle: (() => void) | null = null;
   const settled = new Promise<void>((resolve) => {
     settle = resolve;

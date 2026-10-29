@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | **2.77 (versionCode 91) 자름(2026-10-29)** — 2.76(90)은 Play에 안 나가 그 내용 + 오늘 할 것·퀴즈·지난번에 틀린 것·아침 알림(새 플러그인 local-notifications)·대본 평가·이어서 하기·첫 화면 My·1:1 읽음·팔로우 목록. 출시 노트 91은 PR #25(#24는 닫아도 됨). PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
-| iOS | **App Store 심사 다시 제출(2026-10-23 15:0x KST)** — 2.71 + 구독 그룹·구독 3·포인트 4 한 제출(처음 05:12 제출은 상품 빠짐·진단 빌드 85.9라 취소). 심사 대기 중. 앱 ID 6824542951. 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | **1차 심사 중 = `ios-2.71-hotfix` 85.14(통화·포인트·사람 없음)** — 10-25 Apple 2.1 정보 요청에 회신·실기기 녹화 대기(사람). **출시 범위 다시 정함(2026-10-29):** 1차는 그대로 통과만, 새 구조(2.77, 대본·script_monthly)는 통과 직후 2차 업데이트 — `hub/drafts/ios-launch.md` "출시 범위 다시 정함". 앱 ID 6824542951 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
