@@ -13,7 +13,6 @@ import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { apiUrl } from "@/lib/apiBase";
-import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
@@ -486,13 +485,6 @@ function ScriptPlayer({
     setPicks(freshPicks(script));
     setIndex(0);
   };
-  const call = () => {
-    stopTts();
-    onClose();
-    const setting = glossFor(script.setting, locale);
-    const goal = script.goal ? glossFor(script.goal, locale) : "";
-    sendAppIntent("practice", { tab: "roleplay", goal: { situation: goal ? `${setting} — ${goal}` : setting }, title: setting });
-  };
 
   const modeLabel: Record<ScriptMode, string> = {
     shadow: ui.scriptModeShadow,
@@ -519,9 +511,6 @@ function ScriptPlayer({
           <p dir="auto" className="min-w-0 flex-1 text-caption text-slate-300">
             🎯 {glossFor(script.goal, locale)}
           </p>
-          <button type="button" onClick={call} className="shrink-0 rounded-full border border-line px-3 py-1 text-caption text-slate-200 hover:bg-white/10">
-            📞 {ui.scriptCall}
-          </button>
         </div>
       ) : null}
       <div role="group" className="flex shrink-0 flex-wrap items-center gap-1.5 border-b border-line px-4 py-2">
