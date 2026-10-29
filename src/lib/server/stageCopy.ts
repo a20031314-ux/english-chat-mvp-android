@@ -155,7 +155,7 @@ export function lastCopyFailure(): string {
 }
 
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
-async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
+export async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
   lastFailure = "";
   try {
     const kept = await kvGetJson<string[]>(cacheKey);

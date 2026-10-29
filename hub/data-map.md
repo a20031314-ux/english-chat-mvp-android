@@ -63,6 +63,7 @@
 | 지도 단계 | `scriptprog:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 글자·소리 기초에서 통과한 묶음(언어별) | `scriptProgressStore.ts` |
 | 지도 단계 | `stagecopy:v1` | 모두 함께 | ?(코드에서 못 읽음) | 해당 없음 | 단계 범위 화면 글·단계 대본과 틀의 뜻풀이를 앱 언어로 옮긴 것(학습 언어 × 앱 언어마다 하나, 대본·틀은 단계마다) | `stageCopy.ts` |
 | 지도·미션 | `curriculum:` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 학습 지도·이전 지도·미션·약점(언어별) | `curriculumStore.ts` `weakPointStore.ts` |
+| 지속 학습 빈도 단어 | `words:v1` | 모두 함께 | 400일 | 해당 없음 | 빈도 단어 50개 묶음마다 모델이 만든 예문·쓴 꼴·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음 | `wordCards.ts` |
 | 채팅 | `brief:v1` | 학습자 한 명 | 계산(brief.notes.length ? BRIEF_TTL) | 지움(주 1회 정리) | 튜터에게 주는 학습자 요약(짧게 캐시) | `learnerBrief.ts` |
 | 채팅 | `usage:chat` | 학습자 한 명 | 3일 | 해당 없음 | 오늘 보낸 채팅 수 | `entitlementStore.ts` |
 | 친구 초대 | `invite:v1` | 계정 | 400일 · 40일 · 60일 · 영구 | 지움 | 초대 코드·받은 사람·보상·월 횟수 | `inviteLinkStore.ts` `inviteRewardStore.ts` |

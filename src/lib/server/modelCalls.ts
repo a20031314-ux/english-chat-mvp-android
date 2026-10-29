@@ -65,6 +65,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   curriculumMapFill: 1,
   // 단계 범위 화면 글을 앱 언어로 한 번 옮김(server/stageCopy.ts) — 학습 언어 × 앱 언어마다 한 번, 저장된 뒤엔 0.
   stageCopy: 1,
+  // 빈도 단어 카드(server/wordCards.ts) — 50개 묶음 × 앱 언어마다 한 번(만들기 1 + 옮기기 1), 저장된 뒤엔 0.
+  wordCards: 2,
   // One chat sentence read for the constructions in it (learner/classify.ts),
   // after the reply has gone out. Small model, ids in and out.
   learnerObserve: 1,

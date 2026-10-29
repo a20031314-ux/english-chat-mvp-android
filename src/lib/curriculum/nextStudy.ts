@@ -19,7 +19,7 @@ import { DAY_MS, grammarKey, isCurriculumKey, reviewKeysOf, type ReviewMap } fro
 import { canQuiz } from "./quiz.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 
-export type StudyReason = "again" | "confirm" | "missed" | "gap" | "weak" | "new" | "keep";
+export type StudyReason = "again" | "confirm" | "missed" | "gap" | "word" | "weak" | "new" | "keep";
 export type StudyPick = { key: string; reason: StudyReason; part?: PartId };
 
 /** 열쇠마다 이 폰에서 푼 기록(열쇠만, 문장은 없음). */
@@ -63,6 +63,8 @@ export function nextStudy(input: {
   confirm?: readonly string[];
   /** 대화에서 막힌 것(curriculum/gaps.ts — 고친 줄·표현 보기), 최근 것부터 — 틀렸던 것 다음에. 이미 앎은 부르는 쪽이 뺌. */
   gaps?: readonly string[];
+  /** 빈도 단어 묶음에서 아직 모르는 낱말 열쇠(w|, 순위 순, curriculum/vocabBank.ts) — 어휘 갈래면 막힌 것 다음, 알아서면 부족한 갈래 다음. */
+  words?: readonly string[];
   /** 고른 갈래(없으면 알아서 — 네 갈래 섞어 부족한 것부터). */
   focus?: PartId | null;
   now?: number;
@@ -96,6 +98,8 @@ export function nextStudy(input: {
 
   for (const key of input.gaps ?? []) add(key, "gap");
 
+  if (focus === "vocab") for (const key of input.words ?? []) add(key, "word");
+
   const scripts = allScriptsFor(input.language);
   const here = scripts.filter((script) => script.stage === input.stage);
   const open = here.filter((script) => !input.passed.has(script.id));
@@ -108,6 +112,8 @@ export function nextStudy(input: {
     const fromScripts = [...open, ...here].flatMap((script) => script.expressions);
     for (const text of [...fresh, ...fromScripts]) add(`e|${text}`, "weak", weakest);
   }
+
+  if (!focus) for (const key of input.words ?? []) add(key, "word");
 
   for (const script of open) for (const key of reviewKeysOf(input.language, script.id)) add(key, "new");
 

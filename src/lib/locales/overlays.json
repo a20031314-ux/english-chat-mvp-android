@@ -797,7 +797,8 @@
     "totalsLearning": "学習中 {n}",
     "totalsOutside": "リスト外 +{n}",
     "toNextStage": "次の段階まで {n}",
-    "keepTitle": "継続学習"
+    "keepTitle": "継続学習",
+    "studyWhyWord": "新しい単語"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1597,7 +1598,8 @@
     "totalsLearning": "学习中 {n}",
     "totalsOutside": "列表外 +{n}",
     "toNextStage": "距下一阶段 {n} 个",
-    "keepTitle": "持续学习"
+    "keepTitle": "持续学习",
+    "studyWhyWord": "新单词"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2400,7 +2402,8 @@
     "totalsLearning": "đang học {n}",
     "totalsOutside": "ngoài danh sách +{n}",
     "toNextStage": "còn {n} đến giai đoạn sau",
-    "keepTitle": "Học liên tục"
+    "keepTitle": "Học liên tục",
+    "studyWhyWord": "Từ mới"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3208,7 +3211,8 @@
     "totalsLearning": "en cours {n}",
     "totalsOutside": "hors liste +{n}",
     "toNextStage": "{n} avant l’étape suivante",
-    "keepTitle": "Pratique continue"
+    "keepTitle": "Pratique continue",
+    "studyWhyWord": "Nouveau mot"
   },
   "it": {
     "archive": "Report",
@@ -4207,7 +4211,8 @@
     "totalsLearning": "in corso {n}",
     "totalsOutside": "fuori elenco +{n}",
     "toNextStage": "{n} alla prossima fase",
-    "keepTitle": "Pratica continua"
+    "keepTitle": "Pratica continua",
+    "studyWhyWord": "Parola nuova"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5018,7 +5023,8 @@
     "totalsLearning": "aprendendo {n}",
     "totalsOutside": "fora da lista +{n}",
     "toNextStage": "{n} para a próxima etapa",
-    "keepTitle": "Prática contínua"
+    "keepTitle": "Prática contínua",
+    "studyWhyWord": "Palavra nova"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6015,7 +6021,8 @@
     "totalsLearning": "учу {n}",
     "totalsOutside": "вне списка +{n}",
     "toNextStage": "до следующего этапа {n}",
-    "keepTitle": "Постоянная практика"
+    "keepTitle": "Постоянная практика",
+    "studyWhyWord": "Новое слово"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6822,7 +6829,8 @@
     "totalsLearning": "sedang dipelajari {n}",
     "totalsOutside": "di luar daftar +{n}",
     "toNextStage": "{n} lagi ke tahap berikutnya",
-    "keepTitle": "Latihan berkelanjutan"
+    "keepTitle": "Latihan berkelanjutan",
+    "studyWhyWord": "Kata baru"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7622,7 +7630,8 @@
     "totalsLearning": "قيد التعلّم {n}",
     "totalsOutside": "خارج القائمة +{n}",
     "toNextStage": "{n} حتى المرحلة التالية",
-    "keepTitle": "تعلّم مستمر"
+    "keepTitle": "تعلّم مستمر",
+    "studyWhyWord": "كلمة جديدة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8422,7 +8431,8 @@
     "totalsLearning": "กำลังเรียน {n}",
     "totalsOutside": "นอกรายการ +{n}",
     "toNextStage": "อีก {n} ถึงขั้นถัดไป",
-    "keepTitle": "เรียนต่อเนื่อง"
+    "keepTitle": "เรียนต่อเนื่อง",
+    "studyWhyWord": "คำใหม่"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9222,6 +9232,7 @@
     "totalsLearning": "सीख रहे हैं {n}",
     "totalsOutside": "सूची से बाहर +{n}",
     "toNextStage": "अगले चरण तक {n}",
-    "keepTitle": "लगातार अभ्यास"
+    "keepTitle": "लगातार अभ्यास",
+    "studyWhyWord": "नया शब्द"
   }
 }

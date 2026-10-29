@@ -31,6 +31,7 @@ import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
+import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -172,6 +173,9 @@ export function TodayPlan({
   const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const studyFocus: PartId | null = settings.focus === "auto" ? null : settings.focus;
+  // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
+  const firstPick = (picks: readonly StudyPick[]): StudyPick | undefined =>
+    !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
   // 오늘 계속 공부로 는 것(curriculum/studyTally.ts, 이 폰).
   const [tally, setTally] = useState<Tally>({ day: "", known: [], fixed: [] });
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
@@ -201,6 +205,8 @@ export function TodayPlan({
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
+  // 빈도 단어 묶음(curriculum/vocabBank.ts — 지금 en·es·ja): 지속 학습의 어휘 분모와 새 낱말.
+  const bank = useWordBank(language, locale, known);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
@@ -344,7 +350,7 @@ export function TodayPlan({
     setQuizDone(next);
     saveQuizDone(day, next);
     // 다시 볼 것에서 온 퀴즈는 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 퀴즈는 틀렸을 때만 다시 볼 것에 넣는다.
-    if (!item.review && passedQuiz && !known[item.id] && !item.id.startsWith("u|")) return;
+    if (!item.review && passedQuiz && !known[item.id] && !item.id.startsWith("u|") && !item.id.startsWith("w|")) return;
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
@@ -400,10 +406,11 @@ export function TodayPlan({
     skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
     confirm,
     gaps: gapKeys,
+    words: bank?.next,
     focus: studyFocus,
     now,
   });
-  const upNext = queue[0] ?? null;
+  const upNext = firstPick(queue) ?? null;
   // 지속 학습의 어휘 수(낱말 갈래 열쇠 — 뼈대 짧은 표현·막혔던 낱말, 빈도 묶음이 들어오면 분모가 생김).
   const wordCount = Object.keys(known).reduce(
     (sum, key) => (keyPart(language, key) !== "vocab" ? sum : knownState(known, key) === "known" ? { ...sum, known: sum.known + 1 } : { ...sum, learning: sum.learning + 1 }),
@@ -477,7 +484,7 @@ export function TodayPlan({
         data-test-continue
         onClick={() => {
           setCheckupOpen(null);
-          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, focus: studyFocus, now: Date.now() })[0] ?? null);
+          startStudy(firstPick(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, words: bank?.next, focus: studyFocus, now: Date.now() })) ?? null);
         }}
         className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
       >
@@ -492,6 +499,8 @@ export function TodayPlan({
         ? ui.studyWhyConfirm
         : pick.reason === "gap"
           ? ui.studyWhyGap
+        : pick.reason === "word"
+          ? ui.studyWhyWord
         : pick.reason === "missed"
         ? ui.studyWhyMissed
         : pick.reason === "weak"
@@ -696,7 +705,7 @@ export function TodayPlan({
           mix={studying && studyFocus === "pronunciation" ? "listen" : settings.mix}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, focus: studyFocus, now: Date.now() })[0] ?? null)}
+          onMore={() => startStudy(firstPick(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, words: bank?.next, focus: studyFocus, now: Date.now() })) ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then
@@ -735,8 +744,8 @@ export function TodayPlan({
       <div className="flex items-baseline gap-2">
         <h3 className="min-w-0 flex-1 text-caption font-semibold text-ink">{ui.keepTitle}</h3>
         <span data-keep-vocab className="shrink-0 text-caption tabular-nums text-slate-300">
-          {ui.partVocab} {wordCount.known}
-          {wordCount.learning ? <span className="ms-1.5 text-meta text-slate-500">{ui.totalsLearning.replace("{n}", String(wordCount.learning))}</span> : null}
+          {ui.partVocab} {bank ? <span dir="ltr">{bank.known.toLocaleString()} / {bank.total.toLocaleString()}</span> : wordCount.known}
+          {(bank ? bank.learning : wordCount.learning) ? <span className="ms-1.5 text-meta text-slate-500">{ui.totalsLearning.replace("{n}", String(bank ? bank.learning : wordCount.learning))}</span> : null}
         </span>
       </div>
       {/* Continuous-study part (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. */}

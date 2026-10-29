@@ -125,6 +125,8 @@ export function isCurriculumKey(language: string, key: string): boolean {
   if (key.startsWith("e|")) return allScriptsFor(language).some((s) => s.expressions.includes(key.slice(2)));
   // 뼈대 밖에서 막힌 것(curriculum/gaps.ts) — 재료는 화면이 넘김.
   if (key.startsWith("u|")) return key.length > 2;
+  // 빈도 단어(curriculum/vocabBank.ts) — 재료는 화면이 카드를 받아 넘김.
+  if (key.startsWith("w|")) return key.length > 2;
   return false;
 }
 
