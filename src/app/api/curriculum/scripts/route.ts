@@ -10,6 +10,7 @@ import { checkupDue, cleanResult } from "@/lib/curriculum/checkup";
 import { cleanAsked } from "@/lib/curriculum/itemStats";
 import { addItemStats, readItemStats } from "@/lib/server/itemStatsStore";
 import { scriptGlosses } from "@/lib/server/stageCopy";
+import { stageReadings } from "@/lib/server/stageReadings";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { updateLedger } from "@/lib/server/ledgerStore";
@@ -54,6 +55,19 @@ export async function GET(request: NextRequest) {
       void meterRequest(request, "stageCopy");
     });
     return jsonWithCors(request, { glosses });
+  }
+  // 단계 학습 줄의 읽는 법(server/stageReadings.ts — 글자가 다른 학습 언어만, 단계마다 한 번 만들어 같이 씀).
+  if (params.get("readings") === "1") {
+    const language = coerceLanguageCode(params.get("lang"));
+    const stage = Number(params.get("stage"));
+    if (!Number.isInteger(stage) || stage < 1 || stage > 5) return jsonWithCors(request, { readings: {} });
+    let metered = false;
+    const readings = await stageReadings(language, stage, () => {
+      if (metered) return;
+      metered = true;
+      void meterRequest(request, "stageReadings");
+    });
+    return jsonWithCors(request, { readings });
   }
   if (params.get("itemStats") === "1") {
     return jsonWithCors(request, { stats: await readItemStats(coerceLanguageCode(params.get("lang"))) });

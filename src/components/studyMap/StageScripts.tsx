@@ -1,5 +1,7 @@
 "use client";
 
+import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
+import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -309,6 +311,17 @@ function ScriptPlayer({
   // 고르기·맞추기를 다시 할 때마다 보기 차례를 바꾼다.
   const [attempts, setAttempts] = useState<Record<number, number>>({});
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  // 읽는 법(글자가 다른 학습 언어, curriculum/useStageReadings.ts) — 줄 아래 작게, 칩으로 켜고 끔.
+  const readings = useStageReadings(language, script.stage);
+  const [showReading, setShowReading] = useShowReading(language, script.stage);
+  const readingOf = (text: string) => {
+    const reading = showReading ? readings[text] : undefined;
+    return reading && reading.replace(/\s+/g, "") !== text.replace(/\s+/g, "") ? (
+      <p dir="ltr" data-reading className="mt-0.5 text-caption text-slate-400">
+        {reading}
+      </p>
+    ) : null;
+  };
   const run = useRef(0);
   const sent = useRef(false);
   const bottom = useRef<HTMLDivElement>(null);
@@ -525,6 +538,17 @@ function ScriptPlayer({
             {modeLabel[id]}
           </button>
         ))}
+        {needsLetters(language) ? (
+          <button
+            type="button"
+            data-reading-toggle
+            aria-pressed={showReading}
+            onClick={() => setShowReading(!showReading)}
+            className={`rounded-full px-3 py-1 text-caption ${showReading ? "bg-white/15 text-ink" : "border border-line text-slate-400 hover:bg-white/10"}`}
+          >
+            {ui.readingToggle}
+          </button>
+        ) : null}
         <span role="group" aria-label={ui.passRuleTitle} className="ms-auto flex items-center gap-1 text-meta text-slate-500">
           {ui.passRuleTitle}
           {(["speak", "any"] as const).map((rule) => (
@@ -569,6 +593,7 @@ function ScriptPlayer({
                     </p>
                     <TTSButton text={variant.text} lang={tag} voice={scriptVoice("them", variant.text, learnerName)} className="shrink-0" />
                   </div>
+                  {readingOf(variant.text)}
                   <p dir="auto" className="mt-0.5 text-caption text-slate-500">
                     {glossFor(variant.gloss, locale)}
                   </p>
@@ -614,12 +639,15 @@ function ScriptPlayer({
                       onAnswer={(correct) => tapAnswer(i, tapKind, correct)}
                     />
                   ) : (
-                    <div className="mt-1 flex items-start gap-2">
-                      <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-                        {line.text}
-                      </p>
-                      <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
-                    </div>
+                    <>
+                      <div className="mt-1 flex items-start gap-2">
+                        <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+                          {line.text}
+                        </p>
+                        <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
+                      </div>
+                      {readingOf(line.text)}
+                    </>
                   )}
                   {result ? (
                     <p className={`mt-1 text-caption ${result.clean ? "text-good" : "text-warn"}`}>
@@ -682,6 +710,7 @@ function ScriptPlayer({
                     {show ? <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" /> : null}
                   </div>
                 ) : null}
+                {show && !heardDiffers ? readingOf(line.text) : null}
                 {result ? (
                   result.clean ? (
                     <>

@@ -824,7 +824,8 @@
     "topicFunction": "つなぐ言葉",
     "modeStaged": "段階どおり",
     "modeFree": "自由に",
-    "setStageHere": "この段階にする"
+    "setStageHere": "この段階にする",
+    "readingToggle": "読み方"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1651,7 +1652,8 @@
     "topicFunction": "连接词",
     "modeStaged": "按阶段",
     "modeFree": "自由",
-    "setStageHere": "设为这个阶段"
+    "setStageHere": "设为这个阶段",
+    "readingToggle": "读法"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2481,7 +2483,8 @@
     "topicFunction": "Từ nối",
     "modeStaged": "Theo giai đoạn",
     "modeFree": "Tự do",
-    "setStageHere": "Chọn giai đoạn này"
+    "setStageHere": "Chọn giai đoạn này",
+    "readingToggle": "Cách đọc"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3316,7 +3319,8 @@
     "topicFunction": "Mots de liaison",
     "modeStaged": "Par étapes",
     "modeFree": "Libre",
-    "setStageHere": "Choisir cette étape"
+    "setStageHere": "Choisir cette étape",
+    "readingToggle": "Lecture"
   },
   "it": {
     "archive": "Report",
@@ -4342,7 +4346,8 @@
     "topicFunction": "Connettivi",
     "modeStaged": "Per fasi",
     "modeFree": "Libero",
-    "setStageHere": "Scegli questa fase"
+    "setStageHere": "Scegli questa fase",
+    "readingToggle": "Lettura"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5180,7 +5185,8 @@
     "topicFunction": "Conectivos",
     "modeStaged": "Por etapas",
     "modeFree": "Livre",
-    "setStageHere": "Escolher esta etapa"
+    "setStageHere": "Escolher esta etapa",
+    "readingToggle": "Leitura"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6204,7 +6210,8 @@
     "topicFunction": "Связующие слова",
     "modeStaged": "По этапам",
     "modeFree": "Свободно",
-    "setStageHere": "Выбрать этот этап"
+    "setStageHere": "Выбрать этот этап",
+    "readingToggle": "Чтение"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7038,7 +7045,8 @@
     "topicFunction": "Kata penghubung",
     "modeStaged": "Per tahap",
     "modeFree": "Bebas",
-    "setStageHere": "Pilih tahap ini"
+    "setStageHere": "Pilih tahap ini",
+    "readingToggle": "Cara baca"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7865,7 +7873,8 @@
     "topicFunction": "أدوات الربط",
     "modeStaged": "حسب المراحل",
     "modeFree": "بحرّية",
-    "setStageHere": "اجعلها مرحلتي"
+    "setStageHere": "اجعلها مرحلتي",
+    "readingToggle": "طريقة القراءة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8692,7 +8701,8 @@
     "topicFunction": "คำเชื่อม",
     "modeStaged": "ตามขั้น",
     "modeFree": "อิสระ",
-    "setStageHere": "เลือกขั้นนี้"
+    "setStageHere": "เลือกขั้นนี้",
+    "readingToggle": "คำอ่าน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9519,6 +9529,7 @@
     "topicFunction": "जोड़ने वाले शब्द",
     "modeStaged": "चरणों के अनुसार",
     "modeFree": "अपनी मर्ज़ी से",
-    "setStageHere": "यह चरण चुनें"
+    "setStageHere": "यह चरण चुनें",
+    "readingToggle": "उच्चारण"
   }
 }

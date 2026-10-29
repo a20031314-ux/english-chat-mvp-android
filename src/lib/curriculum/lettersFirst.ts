@@ -9,11 +9,9 @@ import { useEffect, useState } from "react";
 
 const KEY = "lettersFirst.v1";
 const EVENT = "letters-first-changed";
-export const LETTER_LANGS = ["ja", "ko", "zh", "th", "ar", "ru", "hi"] as const;
+import { needsLetters } from "./letterLangs.ts";
 
-export function needsLetters(language: string): boolean {
-  return (LETTER_LANGS as readonly string[]).includes(language);
-}
+export { LETTER_LANGS, needsLetters } from "./letterLangs.ts";
 
 export function readLettersFirst(language: string): boolean {
   try {

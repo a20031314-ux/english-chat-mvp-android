@@ -67,6 +67,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   stageCopy: 1,
   // 빈도 단어 카드(server/wordCards.ts) — 50개 묶음 × 앱 언어마다 한 번(만들기 1 + 옮기기 1), 저장된 뒤엔 0.
   wordCards: 2,
+  // 단계 학습 줄 읽는 법(server/stageReadings.ts) — 학습 언어 × 단계마다 한 번(줄 60개 묶음 몇 개), 저장된 뒤엔 0.
+  stageReadings: 3,
   // One chat sentence read for the constructions in it (learner/classify.ts),
   // after the reply has gone out. Small model, ids in and out.
   learnerObserve: 1,

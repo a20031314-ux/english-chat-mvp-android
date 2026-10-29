@@ -93,6 +93,8 @@ export const OP_COST: Record<string, OpCost> = {
   stageCopy: estimated("translate", { input: 3500, output: 4500 }),
   // 빈도 단어 50개 카드 한 번 만들기 + 뜻 100줄 옮기기(2026-10-29 어림), 묶음 × 앱 언어마다 한 번.
   wordCards: estimated("translate", { input: 2500, output: 9000 }),
+  // 단계 하나의 줄(약 150~250) 읽는 법 — 60줄 묶음 서너 번(2026-10-29 어림).
+  stageReadings: estimated("translate", { input: 6000, output: 9000 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).
   learnerObserve: estimated("learnerRead", { input: 900, output: 80 }),
   curriculumMissions: llm("curriculum"),
