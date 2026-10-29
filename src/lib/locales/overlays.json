@@ -825,7 +825,10 @@
     "modeStaged": "段階どおり",
     "modeFree": "自由に",
     "setStageHere": "この段階にする",
-    "readingToggle": "読み方"
+    "readingToggle": "読み方",
+    "studyReview": "復習",
+    "studyLearn": "新しく学ぶ",
+    "studyReviewNone": "今は復習するものがありません"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1653,7 +1656,10 @@
     "modeStaged": "按阶段",
     "modeFree": "自由",
     "setStageHere": "设为这个阶段",
-    "readingToggle": "读法"
+    "readingToggle": "读法",
+    "studyReview": "复习",
+    "studyLearn": "学新内容",
+    "studyReviewNone": "现在没有要复习的"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2484,7 +2490,10 @@
     "modeStaged": "Theo giai đoạn",
     "modeFree": "Tự do",
     "setStageHere": "Chọn giai đoạn này",
-    "readingToggle": "Cách đọc"
+    "readingToggle": "Cách đọc",
+    "studyReview": "Ôn tập",
+    "studyLearn": "Học mới",
+    "studyReviewNone": "Hiện chưa có gì cần ôn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3320,7 +3329,10 @@
     "modeStaged": "Par étapes",
     "modeFree": "Libre",
     "setStageHere": "Choisir cette étape",
-    "readingToggle": "Lecture"
+    "readingToggle": "Lecture",
+    "studyReview": "Révision",
+    "studyLearn": "Apprendre du nouveau",
+    "studyReviewNone": "Rien à réviser pour l’instant"
   },
   "it": {
     "archive": "Report",
@@ -4347,7 +4359,10 @@
     "modeStaged": "Per fasi",
     "modeFree": "Libero",
     "setStageHere": "Scegli questa fase",
-    "readingToggle": "Lettura"
+    "readingToggle": "Lettura",
+    "studyReview": "Ripasso",
+    "studyLearn": "Impara cose nuove",
+    "studyReviewNone": "Niente da ripassare ora"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5186,7 +5201,10 @@
     "modeStaged": "Por etapas",
     "modeFree": "Livre",
     "setStageHere": "Escolher esta etapa",
-    "readingToggle": "Leitura"
+    "readingToggle": "Leitura",
+    "studyReview": "Revisão",
+    "studyLearn": "Aprender algo novo",
+    "studyReviewNone": "Nada para revisar agora"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6211,7 +6229,10 @@
     "modeStaged": "По этапам",
     "modeFree": "Свободно",
     "setStageHere": "Выбрать этот этап",
-    "readingToggle": "Чтение"
+    "readingToggle": "Чтение",
+    "studyReview": "Повторение",
+    "studyLearn": "Новое",
+    "studyReviewNone": "Сейчас нечего повторять"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7046,7 +7067,10 @@
     "modeStaged": "Per tahap",
     "modeFree": "Bebas",
     "setStageHere": "Pilih tahap ini",
-    "readingToggle": "Cara baca"
+    "readingToggle": "Cara baca",
+    "studyReview": "Ulangi",
+    "studyLearn": "Belajar yang baru",
+    "studyReviewNone": "Belum ada yang perlu diulang"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7874,7 +7898,10 @@
     "modeStaged": "حسب المراحل",
     "modeFree": "بحرّية",
     "setStageHere": "اجعلها مرحلتي",
-    "readingToggle": "طريقة القراءة"
+    "readingToggle": "طريقة القراءة",
+    "studyReview": "مراجعة",
+    "studyLearn": "تعلّم جديد",
+    "studyReviewNone": "لا شيء للمراجعة الآن"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8702,7 +8729,10 @@
     "modeStaged": "ตามขั้น",
     "modeFree": "อิสระ",
     "setStageHere": "เลือกขั้นนี้",
-    "readingToggle": "คำอ่าน"
+    "readingToggle": "คำอ่าน",
+    "studyReview": "ทบทวน",
+    "studyLearn": "เรียนใหม่",
+    "studyReviewNone": "ตอนนี้ยังไม่มีอะไรต้องทบทวน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9530,6 +9560,9 @@
     "modeStaged": "चरणों के अनुसार",
     "modeFree": "अपनी मर्ज़ी से",
     "setStageHere": "यह चरण चुनें",
-    "readingToggle": "उच्चारण"
+    "readingToggle": "उच्चारण",
+    "studyReview": "दोहराएँ",
+    "studyLearn": "नया सीखें",
+    "studyReviewNone": "अभी दोहराने को कुछ नहीं"
   }
 }

@@ -11,6 +11,8 @@
  *   5. keep   통과한 대본의 것 중 오래 안 푼 것(다지기)
  * 갈래 고르기(2026-10-29 사용자 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘"): focus가 있으면 그 갈래 열쇠만, 모자란 갈래도 그것,
  * 지금 단계 것이 떨어지면 다음 단계들(곧 나옴)까지 — 고른 갈래를 끝없이. 발음은 문법 열쇠만 뺌(말하기 채점이 없어서, quiz.ts speakScored).
+ * 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘, 버튼으로"): lane "review" = 1·1½·2·2½·5(다시 볼 것·확인 중·틀렸던 것·막힌 것·다지기, 갈래 없이),
+ * lane "learn" = 3·4·빈도 단어 + 뒤 단계(고른 갈래 또는 알아서). lane이 없으면 예전처럼 모두 한 줄.
  * 사흘 안에 맞힌 열쇠와 이번에 이미 낸 열쇠는 빼고, 퀴즈를 못 만드는 열쇠도 뺀다. 모델을 부르지 않는 순수 모듈(화면 TodayPlan·테스트).
  */
 import { isWordish, type PartId } from "../notes/stageParts.ts";
@@ -67,9 +69,14 @@ export function nextStudy(input: {
   words?: readonly string[];
   /** 고른 갈래(없으면 알아서 — 네 갈래 섞어 부족한 것부터). */
   focus?: PartId | null;
+  /** 복습만 / 새로 배우기만(없으면 둘 다). */
+  lane?: "review" | "learn";
   now?: number;
 }): StudyPick[] {
-  const focus = input.focus ?? null;
+  const lane = input.lane ?? null;
+  const reviewing = lane !== "learn";
+  const learning = lane !== "review";
+  const focus = lane === "review" ? null : (input.focus ?? null);
   const fits = (key: string) => !focus || (focus === "pronunciation" ? keyPart(input.language, key) !== "grammar" : keyPart(input.language, key) === focus);
   const weakest = focus ?? input.weakest;
   const now = input.now ?? Date.now();
@@ -89,21 +96,25 @@ export function nextStudy(input: {
     out.push(part ? { key, reason, part } : { key, reason });
   };
 
-  for (const [key] of Object.entries(input.review).filter(([, entry]) => entry.due <= now).sort((a, b) => a[1].due - b[1].due)) add(key, "again");
+  if (reviewing) {
+    for (const [key] of Object.entries(input.review).filter(([, entry]) => entry.due <= now).sort((a, b) => a[1].due - b[1].due)) add(key, "again");
 
-  // 확인 중: 오늘 아직 안 푼 것만(confirmDue가 거름) — 쉬는 중이어도 낸다(맞힌 날을 늘려야 이미 앎).
-  for (const key of input.confirm ?? []) add(key, "confirm");
+    // 확인 중: 오늘 아직 안 푼 것만(confirmDue가 거름) — 쉬는 중이어도 낸다(맞힌 날을 늘려야 이미 앎).
+    for (const key of input.confirm ?? []) add(key, "confirm");
 
-  for (const [key] of Object.entries(input.log).filter(([, entry]) => !entry.last).sort((a, b) => a[1].at - b[1].at)) add(key, "missed");
+    for (const [key] of Object.entries(input.log).filter(([, entry]) => !entry.last).sort((a, b) => a[1].at - b[1].at)) add(key, "missed");
 
-  for (const key of input.gaps ?? []) add(key, "gap");
+    for (const key of input.gaps ?? []) add(key, "gap");
+  }
 
-  if (focus === "vocab") for (const key of input.words ?? []) add(key, "word");
+  if (learning && focus === "vocab") for (const key of input.words ?? []) add(key, "word");
 
   const scripts = allScriptsFor(input.language);
   const here = scripts.filter((script) => script.stage === input.stage);
   const open = here.filter((script) => !input.passed.has(script.id));
-  if (weakest === "grammar") {
+  if (!learning) {
+    // 복습 줄은 다지기로 끝.
+  } else if (weakest === "grammar") {
     // 문법 칸: 아직 통과 안 한 대본이 쓰는 칸 먼저.
     const indexes = [...new Set([...open, ...here].flatMap((script) => script.grammar ?? []))];
     for (const index of indexes) add(grammarKey(input.stage, index), "weak", "grammar");
@@ -113,21 +124,21 @@ export function nextStudy(input: {
     for (const text of [...fresh, ...fromScripts]) add(`e|${text}`, "weak", weakest);
   }
 
-  if (!focus) for (const key of input.words ?? []) add(key, "word");
+  if (learning && !focus) for (const key of input.words ?? []) add(key, "word");
 
-  for (const script of open) for (const key of reviewKeysOf(input.language, script.id)) add(key, "new");
+  if (learning) for (const script of open) for (const key of reviewKeysOf(input.language, script.id)) add(key, "new");
 
   // 다지기: 통과한 대본(지금 단계와 그 앞)의 것 — 한 번도 안 푼 것, 그다음 오래전에 푼 것.
   const done = scripts.filter((script) => script.stage <= input.stage && input.passed.has(script.id)).sort((a, b) => b.stage - a.stage);
   const keep = done.flatMap((script) => reviewKeysOf(input.language, script.id));
   const order = (key: string) => input.log[key]?.at ?? 0;
-  for (const key of [...new Set(keep)].sort((a, b) => order(a) - order(b))) add(key, "keep");
+  if (reviewing) for (const key of [...new Set(keep)].sort((a, b) => order(a) - order(b))) add(key, "keep");
 
-  // 갈래를 골랐으면 뒤 단계 것까지 곧 나옴으로(그 갈래를 끝없이).
-  if (focus) {
+  // 갈래를 골랐거나 새로 배우기 줄이면 뒤 단계 것까지 곧 나옴으로(끝없이).
+  if (learning && (focus || lane === "learn")) {
     for (const script of scripts.filter((one) => one.stage > input.stage && !input.passed.has(one.id)).sort((a, b) => a.stage - b.stage)) {
       for (const key of reviewKeysOf(input.language, script.id)) add(key, "new");
-      if (focus === "grammar") for (const index of script.grammar ?? []) add(grammarKey(script.stage, index), "new");
+      if (focus === "grammar" || (!focus && lane === "learn")) for (const index of script.grammar ?? []) add(grammarKey(script.stage, index), "new");
     }
   }
 

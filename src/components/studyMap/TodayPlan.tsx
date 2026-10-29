@@ -94,6 +94,8 @@ function saveQuizDone(day: string, keys: Set<string>) {
 }
 
 type StudyFocus = "auto" | PartId;
+/** 지속 학습의 두 버튼(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘, 버튼으로"). */
+type StudyLane = "review" | "learn";
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
@@ -179,8 +181,8 @@ export function TodayPlan({
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const studyFocus: PartId | null = settings.focus === "auto" ? null : settings.focus;
   // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
-  const firstPick = (picks: readonly StudyPick[]): StudyPick | undefined =>
-    !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
+  const firstPick = (picks: readonly StudyPick[], lane: StudyLane = "learn"): StudyPick | undefined =>
+    lane === "learn" && !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
   // 오늘 계속 공부로 는 것(curriculum/studyTally.ts, 이 폰).
   const [tally, setTally] = useState<Tally>({ day: "", known: [], fixed: [] });
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
@@ -207,6 +209,7 @@ export function TodayPlan({
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
+  const [lane, setLane] = useState<StudyLane>("learn");
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
@@ -405,22 +408,28 @@ export function TodayPlan({
   const entryItems = checkupOpen === "entry" && frozenItems ? (frozenItems as typeof liveEntryItems) : liveEntryItems;
   const entryOffer = checkupOpen === "entry" || (!free && entryDue(checkups, stage, liveEntryItems));
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
-  const queue = nextStudy({
-    language,
-    stage,
-    passed: passedSet,
-    review,
-    log,
-    weakest: studyWeakest,
-    expressions,
-    skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
-    confirm,
-    gaps: gapKeys,
-    words: bank?.next,
-    focus: studyFocus,
-    now,
-  });
-  const upNext = firstPick(queue) ?? null;
+  const todaySkip = items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id);
+  const studyQueue = (which: StudyLane, at: number, weakestNow: PartId | null, skipToday: readonly string[] = []) =>
+    nextStudy({
+      language,
+      stage,
+      passed: passedSet,
+      review,
+      log,
+      weakest: weakestNow,
+      expressions,
+      skip: new Set([...asked, ...skipToday]),
+      confirm: confirmDue(known, at),
+      gaps: gapKeys,
+      words: bank?.next,
+      focus: studyFocus,
+      lane: which,
+      now: at,
+    });
+  const reviewQueue = studyQueue("review", now || Date.now(), studyWeakest, todaySkip);
+  const upReview = reviewQueue[0] ?? null;
+  const upNext = firstPick(studyQueue("learn", now || Date.now(), studyWeakest, todaySkip)) ?? null;
+  const nextIn = (which: StudyLane, weakestNow: PartId | null) => firstPick(studyQueue(which, Date.now(), weakestNow), which) ?? null;
   // 지속 학습의 어휘 수(낱말 갈래 열쇠 — 뼈대 짧은 표현·막혔던 낱말, 빈도 묶음이 들어오면 분모가 생김).
   const wordCount = Object.keys(known).reduce(
     (sum, key) => (keyPart(language, key) !== "vocab" ? sum : knownState(known, key) === "known" ? { ...sum, known: sum.known + 1 } : { ...sum, learning: sum.learning + 1 }),
@@ -441,16 +450,10 @@ export function TodayPlan({
   };
   // 처음 시험은 첫 화면에서 빼고(2026-10-29 사용자 — 첫 대본까지 누름 줄이기) 대본·문장구조 하나를 해 본 뒤 여기서 한 번 권한다.
   const placementOffer = !lastBig && (passedSet.size > 0 || practiced.size > 0);
-  const testNext: "placement" | "stage" | "entry" | "take" | null = placementOffer
-    ? "placement"
-    : stageTestOffer && stageTestItems.length
-      ? "stage"
-      : entryOffer
-        ? "entry"
-        : checkupOffer
-          ? "take"
-          : null;
-  const testItems = testNext === "placement" ? [] : testNext === "stage" ? stageTestItems : testNext === "entry" ? entryItems : checkupItems;
+  // 새로 배우기 버튼의 시험(실력 확인 → 단계 시험 → 단계 미리 확인), 복습 버튼의 시험(이번 주 확인).
+  const learnTest: "placement" | "stage" | "entry" | null = placementOffer ? "placement" : stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : null;
+  const reviewTest: "take" | null = checkupOffer && !learnTest ? "take" : null;
+  const itemsOf = (test: "placement" | "stage" | "entry" | "take") => (test === "placement" ? [] : test === "stage" ? stageTestItems : test === "entry" ? entryItems : checkupItems);
   const minutesOf = (list: readonly { question: { kind: string } }[]) =>
     Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const studyItem = (pick: StudyPick): PlanItem => {
@@ -466,7 +469,8 @@ export function TodayPlan({
       ...(pick.reason === "gap" && gaps.find((gap) => gap.key === pick.key)?.card ? { card: gaps.find((gap) => gap.key === pick.key)!.card } : {}),
     };
   };
-  const startStudy = (pick: StudyPick | null) => {
+  const startStudy = (pick: StudyPick | null, which: StudyLane = lane) => {
+    setLane(which);
     if (!pick) {
       setStudying(null);
       setQuiz(null);
@@ -494,7 +498,8 @@ export function TodayPlan({
         data-test-continue
         onClick={() => {
           setCheckupOpen(null);
-          startStudy(firstPick(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, words: bank?.next, focus: studyFocus, now: Date.now() })) ?? null);
+          const which: StudyLane = checkupOpen === "take" ? "review" : "learn";
+          startStudy(nextIn(which, checkupWeakest(checkups, Date.now()) ?? weakest), which);
         }}
         className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
       >
@@ -502,6 +507,47 @@ export function TodayPlan({
       </button>
     </div>
   );
+  const laneButton = (which: StudyLane, test: "placement" | "stage" | "entry" | "take" | null, pick: StudyPick | null) => {
+    const testList = test ? itemsOf(test) : [];
+    const empty = !test && !pick;
+    const lead = which === "review" ? ui.studyReview : ui.studyLearn;
+    return (
+      <button
+        type="button"
+        disabled={empty}
+        {...(which === "review" ? { "data-study-review": "" } : { "data-study-learn": "" })}
+        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : test === "take" ? { "data-checkup-offer": "" } : {})}
+        onClick={() => {
+          if (!test) return startStudy(pick, which);
+          if (test !== "placement") setFrozenItems(testList);
+          setCheckupOpen(test);
+        }}
+        className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${empty ? "border border-line text-slate-500" : finished && which === "learn" ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
+      >
+        <span aria-hidden className="shrink-0 text-caption">{empty ? "✓" : "▶"}</span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-note font-semibold">
+            {lead}
+            {which === "review" && reviewQueue.length ? <span dir="ltr" className="ms-1.5 tabular-nums text-meta font-normal opacity-70">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
+          </span>
+          <span dir="auto" className={`block truncate text-meta ${finished && which === "learn" ? "text-slate-600" : "text-slate-400"}`}>
+            {test ? (
+              <>
+                📝 {test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
+                {test === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testList.length)).replace("{m}", String(minutesOf(testList)))}`}
+              </>
+            ) : pick ? (
+              <>
+                {reasonLabel(pick)} · <bdi>{keyLabel(language, pick.key, grammarName)}</bdi>
+              </>
+            ) : which === "review" ? (
+              ui.studyReviewNone
+            ) : null}
+          </span>
+        </span>
+      </button>
+    );
+  };
   const reasonLabel = (pick: StudyPick) =>
     pick.reason === "again"
       ? ui.planAgain
@@ -715,7 +761,7 @@ export function TodayPlan({
           mix={studying && studyFocus === "pronunciation" ? "listen" : settings.mix}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(firstPick(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), gaps: gapKeys, words: bank?.next, focus: studyFocus, now: Date.now() })) ?? null)}
+          onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then
@@ -758,7 +804,8 @@ export function TodayPlan({
           {(bank ? bank.learning : wordCount.learning) ? <span className="ms-1.5 text-meta text-slate-500">{ui.totalsLearning.replace("{n}", String(bank ? bank.learning : wordCount.learning))}</span> : null}
         </span>
       </div>
-      {/* Continuous-study part (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. */}
+      {laneButton("review", reviewTest, upReview)}
+      {/* Learn-new parts (2026-10-29): auto mixes the four parts, weakest first; one part keeps to it. Review has no parts. */}
       <div role="group" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
         {FOCUSES.map((focus) => (
           <button
@@ -811,35 +858,7 @@ export function TodayPlan({
           ) : null}
         </div>
       ) : null}
-      {testNext || upNext ? (
-        <button
-          type="button"
-          {...(testNext === "placement" ? { "data-placement-offer": "" } : testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
-          onClick={() => {
-            if (!testNext) return startStudy(upNext);
-            if (testNext !== "placement") setFrozenItems(testItems);
-            setCheckupOpen(testNext);
-          }}
-          className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
-        >
-          <span aria-hidden className="shrink-0 text-caption">▶</span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-note font-semibold">{ui.studyMore}</span>
-            <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
-              {testNext ? (
-                <>
-                  📝 {testNext === "placement" ? ui.placementTitle : testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
-                  {testNext === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}`}
-                </>
-              ) : upNext ? (
-                <>
-                  {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
-                </>
-              ) : null}
-            </span>
-          </span>
-        </button>
-      ) : null}
+      {laneButton("learn", learnTest, upNext)}
       {tally.known.length || tally.fixed.length ? (
         <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
           {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}

@@ -85,3 +85,30 @@ test("계속 공부 갈래 고르기: 그 갈래 열쇠만, 지금 단계 것이
     assert.ok(sound.every((pick) => keyPart(language, pick.key) !== "grammar"), `${language} 발음`);
   }
 });
+
+for (const language of ["es", "ja"]) {
+  const stageOne = allScriptsFor(language).filter((script) => script.stage === 1);
+  const firstKeys = reviewKeysOf(language, stageOne[0]!.id);
+  test(`${language}: 복습 줄과 새로 배우기 줄은 섞이지 않는다`, () => {
+    const [due, missed] = firstKeys;
+    const base = {
+      language,
+      stage: 1,
+      passed: new Set([stageOne[0]!.id]),
+      review: { [due!]: { due: NOW - 1, step: 1, at: NOW - 3 * 86400000 } },
+      log: recordQuiz({}, missed!, false, NOW - 1000),
+      weakest: "grammar" as const,
+      now: NOW,
+    };
+    const review = nextStudy({ ...base, lane: "review", focus: "vocab" });
+    assert.ok(review.length > 0);
+    assert.ok(review.every((pick) => ["again", "confirm", "missed", "gap", "keep"].includes(pick.reason)), review.map((p) => p.reason).join());
+    assert.equal(review[0]!.key, due);
+    const learn = nextStudy({ ...base, lane: "learn" });
+    assert.ok(learn.length > 0);
+    assert.ok(learn.every((pick) => ["weak", "word", "new"].includes(pick.reason)), learn.map((p) => p.reason).join());
+    // 아무것도 없으면 복습 줄은 비고, 새로 배우기는 늘 있다.
+    assert.equal(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "review", now: NOW }).length, 0);
+    assert.ok(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "learn", now: NOW }).length > 0);
+  });
+}
