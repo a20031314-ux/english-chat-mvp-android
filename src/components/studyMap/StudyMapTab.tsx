@@ -594,7 +594,22 @@ function StageStart({
   // 시험 문제 통계를 미리 받아 둔다(첫 묶음부터 가르는 문제 먼저, curriculum/itemStats.ts).
   useItemStats(targetLanguage);
   const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
-  if (!stages?.length) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
+  // 처음엔 묻지 않고 1단계로 바로 시작(2026-10-29 사용자 — 첫 대본까지 누름 줄이기). 실력 확인은 대본 하나 뒤 계속 공부에서(TodayPlan).
+  const firstRun = !canCancel && !startStage;
+  const autoStarted = useRef(false);
+  useEffect(() => {
+    if (!firstRun || autoStarted.current || !stages?.length) return;
+    autoStarted.current = true;
+    const first = [...stages].sort((a, b) => a.order - b.order)[0]!.id;
+    void fetch(apiUrl("/api/learner/self-check"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language: targetLanguage, stage: first }),
+    })
+      .then((response) => (response.ok ? onStarted(first) : setFailed(true)))
+      .catch(() => setFailed(true));
+  }, [firstRun, stages, isPremium, targetLanguage, onStarted]);
+  if (!stages?.length || (firstRun && !failed)) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
   const idOf = (order: number) => stages.find((entry) => entry.order === order)?.id ?? stages[0]!.id;
   const start = async (chosen = stage) => {
     if (!chosen || !stages.some((entry) => entry.id === chosen) || saving) return;

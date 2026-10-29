@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
+import { ladderFor } from "@/lib/curriculum/stages";
+import { PlacementPlayer } from "@/components/studyMap/PlacementPlayer";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import {
@@ -134,6 +136,7 @@ export function TodayPlan({
   weakest = null,
   expressions = [],
   cards = [],
+  onStageChanged,
 }: {
   ui: UICopy;
   locale: string;
@@ -154,6 +157,8 @@ export function TodayPlan({
   weakest?: PartId | null;
   /** 지금 단계 핵심 표현과 장부 상태(stageParts expressions). */
   expressions?: readonly { text: string; state: LedgerState | null }[];
+  /** 실력 확인으로 시작 단계를 바꾼 뒤(NotebookSection이 다시 읽음). */
+  onStageChanged?: () => void;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -189,7 +194,7 @@ export function TodayPlan({
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | null>(null);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
   const [firstSeen, setFirstSeen] = useState(0);
   useEffect(() => {
@@ -373,9 +378,30 @@ export function TodayPlan({
   });
   const upNext = queue[0] ?? null;
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
-  const testNext: "stage" | "entry" | "take" | null =
-    stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : checkupOffer ? "take" : null;
-  const testItems = testNext === "stage" ? stageTestItems : testNext === "entry" ? entryItems : checkupItems;
+  const placeAt = async (order: number) => {
+    const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
+    if (!id || order === stage) return;
+    const ok = await fetch(apiUrl("/api/learner/self-check"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language, stage: id }),
+    })
+      .then((response) => response.ok)
+      .catch(() => false);
+    if (ok) onStageChanged?.();
+  };
+  // 처음 시험은 첫 화면에서 빼고(2026-10-29 사용자 — 첫 대본까지 누름 줄이기) 대본·문장구조 하나를 해 본 뒤 여기서 한 번 권한다.
+  const placementOffer = !lastBig && (passedSet.size > 0 || practiced.size > 0);
+  const testNext: "placement" | "stage" | "entry" | "take" | null = placementOffer
+    ? "placement"
+    : stageTestOffer && stageTestItems.length
+      ? "stage"
+      : entryOffer
+        ? "entry"
+        : checkupOffer
+          ? "take"
+          : null;
+  const testItems = testNext === "placement" ? [] : testNext === "stage" ? stageTestItems : testNext === "entry" ? entryItems : checkupItems;
   const minutesOf = (list: readonly { question: { kind: string } }[]) =>
     Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const studyItem = (pick: StudyPick): PlanItem => {
@@ -575,16 +601,34 @@ export function TodayPlan({
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
+      {checkupOpen === "placement" ? (
+        <PlacementPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          labelOf={(key) => keyLabel(language, key, grammarName)}
+          onFinish={(result) => void saveCheckup(result)}
+          onStart={(order) => {
+            setCheckupOpen(null);
+            void placeAt(order);
+          }}
+          onPick={(order) => {
+            setCheckupOpen(null);
+            void placeAt(order);
+          }}
+          onClose={() => setCheckupOpen(null)}
+        />
+      ) : null}
       {checkupOpen === "record" ? (
         <SkillRecord ui={ui} locale={locale} checkups={checkups} labelOf={(key) => keyLabel(language, key, grammarName)} onClose={() => setCheckupOpen(null)} />
       ) : null}
       {testNext || upNext ? (
         <button
           type="button"
-          {...(testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
+          {...(testNext === "placement" ? { "data-placement-offer": "" } : testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
           onClick={() => {
             if (!testNext) return startStudy(upNext);
-            setFrozenItems(testItems);
+            if (testNext !== "placement") setFrozenItems(testItems);
             setCheckupOpen(testNext);
           }}
           className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
@@ -595,8 +639,8 @@ export function TodayPlan({
             <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
               {testNext ? (
                 <>
-                  📝 {testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle} ·{" "}
-                  {ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}
+                  📝 {testNext === "placement" ? ui.placementTitle : testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
+                  {testNext === "placement" ? "" : ` · ${ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}`}
                 </>
               ) : upNext ? (
                 <>

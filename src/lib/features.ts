@@ -142,10 +142,9 @@ function boot() {
     // 그 스크립트들은 새 저장소로 열기 때문에 매번 고르기 화면에 막힌다. 고르기 화면을 찍으려면
     // 스크립트가 appFeatures에 {"off":[],"chosen":false}를 넣고 다시 연다.
     const automated = typeof navigator !== "undefined" && navigator.webdriver === true;
-    if (!automated && looksLikeFreshInstall(store)) {
-      // 고르는 중이라고 바로 적어 둔다: 고르다 앱을 닫아도 다음에 다시 묻는다.
-      save({ off: [], chosen: false });
-    }
+    // 처음 설치도 묻지 않고 전부 켬(2026-10-29 사용자 — 첫 대본까지 누름 20번 줄이기). 끄는 것은 사용법(?)의 스위치에서.
+    // 고르기 화면(FirstRunSteps)은 appFeatures {"off":[],"chosen":false}일 때만(캡처·옛 기록).
+    if (!automated && looksLikeFreshInstall(store)) save(ALL_ON);
   } catch {
     current = ALL_ON;
   }

@@ -401,6 +401,7 @@ export function NotebookSection({
           expressions={(book.parts ?? []).find((row) => row.order === book.stage)?.expressions ?? []}
           cards={book.cards}
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
+          onStageChanged={() => setReload((n) => n + 1)}
           grammarName={(stage, index) => {
             const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
             return node ? nameOf(node.id) : "";

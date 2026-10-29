@@ -199,6 +199,18 @@ export function QuestionView({
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   // 여러 단계 문장이 섞여 나오니 모든 단계 뜻풀이를 앱 언어로 받아 둔다(받으면 다시 그림).
   useAllStageGlosses(language, locale);
+  // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
+  // Wrong answers stay so the right one can be read; say/order keep the button.
+  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "listen" || question.kind === "meaning"));
+  const nextRef = useRef(onNext);
+  useEffect(() => {
+    nextRef.current = onNext;
+  });
+  useEffect(() => {
+    if (!autoNext) return;
+    const timer = window.setTimeout(() => nextRef.current(), 900);
+    return () => window.clearTimeout(timer);
+  }, [autoNext, question]);
   return (
     <section data-kind={question.kind} className="flex flex-col gap-3">
       <span className="self-start rounded-full border border-line px-2.5 py-0.5 text-meta text-slate-400">{kindName(ui, question.kind)}</span>
