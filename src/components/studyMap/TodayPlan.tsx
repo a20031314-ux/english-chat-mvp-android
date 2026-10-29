@@ -484,7 +484,7 @@ export function TodayPlan({
           </button>
         ))}
       </div>
-      {/* 학습 조합(2026-10-29 사용자 "나눠서 고르거나 학습 조합을 짜 주는 식"): 대본·퀴즈가 이 조합의 모양으로. */}
+      {/* Study mix (2026-10-29): scripts and quizzes take this mix's shape (curriculum/quiz.ts QuizMix). */}
       <div role="group" data-plan-mix className="mt-1.5 flex flex-wrap gap-1.5">
         {MIXES.map((mix) => (
           <button
