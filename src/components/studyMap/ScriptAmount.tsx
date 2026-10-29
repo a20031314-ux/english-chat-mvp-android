@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { scriptAmount, type Count } from "@/lib/curriculum/scriptAmount";
+import { scriptAmount } from "@/lib/curriculum/scriptAmount";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 
@@ -46,15 +46,10 @@ export function ScriptAmount({
   return (
     <section data-script-amount className={inside ? "mt-3 border-t border-line pt-3" : "mt-3 rounded-2xl border border-line px-3 py-3"}>
       <h3 className="text-caption font-semibold text-slate-300">{ui.scriptAmountTitle}</h3>
-      <div className="mt-2 grid grid-cols-4 gap-2">
-        <Stat label={ui.partExpression} count={amount.expressions} />
-        <Stat label={ui.partGrammar} count={amount.grammar} />
-        <Stat label={ui.amountFrames} count={amount.frames} />
-        <div className="flex flex-col gap-1">
-          <span className="text-meta text-slate-400">{ui.amountLines}</span>
-          <span className="text-note font-semibold tabular-nums text-ink">{amount.lines}</span>
-        </div>
-      </div>
+      {/* Grammar, expression and frame counts live in the My progress bars only (2026-10-29, user: one set of numbers); here what was said and can be done. */}
+      <p className="mt-2 text-caption text-slate-400">
+        {ui.amountLines} <span className="text-note font-semibold tabular-nums text-ink">{amount.lines}</span>
+      </p>
       <button
         type="button"
         aria-expanded={open}
@@ -91,21 +86,5 @@ export function ScriptAmount({
         </div>
       ) : null}
     </section>
-  );
-}
-
-function Stat({ label, count }: { label: string; count: Count }) {
-  const share = count.total ? Math.round((count.done / count.total) * 100) : 0;
-  return (
-    <div className="flex flex-col gap-1">
-      <span className="text-meta text-slate-400">{label}</span>
-      <span className="text-note font-semibold tabular-nums text-ink">
-        {count.done}
-        <span className="text-meta font-normal text-slate-500">/{count.total}</span>
-      </span>
-      <span aria-hidden className="h-1 overflow-hidden rounded-full bg-white/10">
-        <span className="block h-full rounded-full bg-status-mastered" style={{ width: `${share}%` }} />
-      </span>
-    </div>
   );
 }

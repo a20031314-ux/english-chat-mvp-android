@@ -31,7 +31,7 @@ import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
-import { useWordBank } from "@/lib/curriculum/useWordBank";
+import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
 import { BAND_SIZE, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
@@ -41,9 +41,11 @@ import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
-import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
-import { skeletonTotals, skeletonView } from "@/lib/notes/skeletonTotals";
+import { wordbook } from "@/lib/curriculum/wordbook";
+import { loadVocabulary } from "@/lib/vocabulary";
+import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { LedgerState } from "@/lib/learner/ledger";
 
 /**
@@ -215,6 +217,13 @@ export function TodayPlan({
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
   const [lane, setLane] = useState<StudyLane>("learn");
+  // 단어장(curriculum/wordbook.ts): 저장한 단어는 이 폰(lib/vocabulary.ts), 낱말을 누르면 뜻 시트.
+  const [savedWords, setSavedWords] = useState<ReturnType<typeof loadVocabulary>>([]);
+  const [wordsOpen, setWordsOpen] = useState(false);
+  const preview = useVocabPreviewOptional();
+  useEffect(() => {
+    setSavedWords(loadVocabulary());
+  }, [language, preview?.savingWord]);
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
@@ -435,12 +444,7 @@ export function TodayPlan({
   const upReview = reviewQueue[0] ?? null;
   const upNext = firstPick(studyQueue("learn", now || Date.now(), studyWeakest, todaySkip)) ?? null;
   const nextIn = (which: StudyLane, weakestNow: PartId | null) => firstPick(studyQueue(which, Date.now(), weakestNow), which) ?? null;
-  // 지속 학습의 어휘 수(낱말 갈래 열쇠 — 뼈대 짧은 표현·막혔던 낱말, 빈도 묶음이 들어오면 분모가 생김).
-  const wordCount = Object.keys(known).reduce(
-    (sum, key) => (keyPart(language, key) !== "vocab" ? sum : knownState(known, key) === "known" ? { ...sum, known: sum.known + 1 } : { ...sum, learning: sum.learning + 1 }),
-    { known: 0, learning: 0 },
-  );
-  const skeletonParts = skeletonView(skeletonTotals(language, { known, passed: passedSet }));
+  const words = wordbook(language, known, savedWords, (word) => wordGloss(language, word));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
   const placeAt = async (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -556,29 +560,6 @@ export function TodayPlan({
       </span>
     </button>
   );
-  // 고른 버튼의 학습량(2026-10-29 사용자 "각 버튼을 눌렀을 때 학습량") — 어휘는 빈도 단어, 문법·표현·발음은 My 맨 위와 같은 뼈대 숫자.
-  const amountRow = (id: string, label: string, have: number, total: number | null, learning: number) => (
-    <div key={id} data-amount={id} className="flex items-center gap-2">
-      <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label}</span>
-      {total ? (
-        <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">
-          <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned/35" style={{ width: `${Math.min(100, Math.round(((have + learning) / total) * 100))}%` }} />
-          <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.min(100, Math.round((have / total) * 100))}%` }} />
-        </span>
-      ) : (
-        <span className="min-w-0 flex-1" />
-      )}
-      <span dir="ltr" className="shrink-0 text-caption tabular-nums text-ink">
-        {total ? `${have.toLocaleString()} / ${total.toLocaleString()}` : have.toLocaleString()}
-      </span>
-      {learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(learning))}</span> : null}
-    </div>
-  );
-  const partAmount = (id: PartId) => {
-    if (id === "vocab") return bank ? amountRow("vocab", ui.partVocab, bank.known, bank.total, bank.learning) : amountRow("vocab", ui.partVocab, wordCount.known, null, wordCount.learning);
-    const part = skeletonParts.find((one) => one.id === id);
-    return part ? amountRow(id, partName(ui, id), part.known, part.total, part.learning) : null;
-  };
   const reasonLabel = (pick: StudyPick) =>
     pick.reason === "again"
       ? ui.planAgain
@@ -848,15 +829,40 @@ export function TodayPlan({
           </button>
         ))}
       </div>
-      <div data-study-amount={settings.focus} className="mt-2 flex flex-col gap-1.5 px-1">
-        {settings.focus === "review" ? (
-          <p className="text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>
-        ) : settings.focus === "auto" ? (
-          (["vocab", "grammar", "expression", "pronunciation"] as const).map((id) => partAmount(id))
-        ) : (
-          partAmount(settings.focus)
-        )}
-      </div>
+      {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
+      {settings.focus === "review" ? (
+        <p data-study-amount="review" className="mt-2 px-1 text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>
+      ) : settings.focus === "vocab" ? (
+        <div data-wordbook className="mt-2 flex flex-col gap-1.5 px-1">
+          <p className="text-caption tabular-nums text-slate-300">
+            {ui.vocabTitle} <span dir="ltr">{words.length}</span>
+            {words.some((row) => row.state === "known") ? <span className="ms-1.5 text-meta text-slate-500">{ui.knownTag} {words.filter((row) => row.state === "known").length}</span> : null}
+          </p>
+          {words.length ? (
+            <ul className="flex flex-wrap gap-1.5">
+              {(wordsOpen ? words : words.slice(0, 18)).map((row) => (
+                <li key={row.word}>
+                  <button
+                    type="button"
+                    onClick={() => preview?.open(row.word)}
+                    className={`rounded-full border px-2.5 py-1 text-start text-meta ${row.state === "known" ? "border-status-mastered/40 text-good" : row.state === "learning" ? "border-status-learned/40 text-ink" : "border-line text-slate-300"}`}
+                  >
+                    <bdi dir="auto">{row.word}</bdi>
+                    {row.gloss ? <span className="ms-1 text-slate-500">{row.gloss}</span> : null}
+                  </button>
+                </li>
+              ))}
+              {words.length > 18 && !wordsOpen ? (
+                <li>
+                  <button type="button" onClick={() => setWordsOpen(true)} className="rounded-full px-2.5 py-1 text-meta text-slate-400 hover:bg-white/10">
+                    {ui.discoverMore} <span dir="ltr">+{words.length - 18}</span>
+                  </button>
+                </li>
+              ) : null}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
       {/* Words by frequency band, part of speech or topic (2026-10-29): the learner picks the basis, then one group. */}
       {settings.focus === "vocab" && bank ? (
         <div data-vocab-by className="mt-2 flex flex-col gap-1.5">
@@ -886,9 +892,6 @@ export function TodayPlan({
                     className={`rounded-full border px-3 py-1 text-caption ${on ? "border-status-learned/60 bg-status-learned/10 text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
                   >
                     {vocabGroupName(ui, settings.vocab!.by, group.id)}
-                    <span dir="ltr" className="ms-1.5 tabular-nums text-meta text-slate-500">
-                      {group.known}/{group.total}
-                    </span>
                   </button>
                 );
               })}
