@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-29v";
+export const GUIDE_VERSION = "2026-10-29w";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -360,7 +360,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "저장한 단어",
         "body": [
-          "‘{ui:linkTry}’는 채팅에서, ‘{ui:linkFindScenes}’은 영상에서."
+          "‘{ui:linkFindScenes}’을 누르면 그 단어가 나온 영상 장면으로."
         ],
         "shot": "vocab-saved"
       },
@@ -741,7 +741,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Your saved words",
         "body": [
-          "‘{ui:linkTry}’ in chat, ‘{ui:linkFindScenes}’ in videos."
+          "‘{ui:linkFindScenes}’ opens a video scene with the word."
         ],
         "shot": "vocab-saved"
       },

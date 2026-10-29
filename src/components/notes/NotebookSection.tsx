@@ -848,9 +848,7 @@ function StageFrame({
   parts,
   words,
   pronunciationNotes,
-  onTry,
   onNextStage,
-  canSpeak,
   focusPart = null,
   scripts,
   scriptFor,
@@ -955,30 +953,12 @@ function StageFrame({
 
   const openExpressions = (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered" && item.state !== "learned").map((item) => item.text);
   const expressionScript = scriptFor && openExpressions.length ? scriptFor(shown, openExpressions) : null;
-  /** 그 갈래 연습: 문법 = 아직 안 찬 첫 칸으로 채팅, 표현 = 아직인 표현이 든 대본(없으면 채팅), 어휘 = 아직인 것 셋으로 채팅, 발음 = 통화. */
+  /** 그 갈래 연습: 아직인 표현이 든 대본을 연다 — 그런 대본이 있을 때만(채팅·통화로 보내던 "채팅으로"·"통화로"는 뺌, 2026-10-29 사용자 "이동만 하고 할 게 안 보이는 버튼 삭제"). */
   const practice = (id: PartId) => {
-    if (id === "expression" && expressionScript) {
-      setOpenScript((current) => ({ id: expressionScript, at: (current?.at ?? 0) + 1 }));
-      return;
-    }
-    if (id === "grammar") {
-      const open = inStage(shown).find((node) => !filledOf(node)) ?? inStage(shown)[0];
-      if (open) onTry?.(shown, open.index ?? 0);
-      return;
-    }
-    if (id === "vocab" && !words.some((word) => word.state === "learned")) {
-      sendAppIntent("openNotes", { section: "words" });
-      return;
-    }
-    const phrases =
-      id === "vocab"
-        ? words.filter((word) => word.state === "learned").slice(0, 3).map((word) => word.text)
-        : (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered").slice(0, 3).map((item) => item.text);
-    sendAppIntent("practice", { tab: id === "pronunciation" ? "roleplay" : "chat", goal: { phrases }, title: label[id] });
+    if (id === "expression" && expressionScript) setOpenScript((current) => ({ id: expressionScript, at: (current?.at ?? 0) + 1 }));
   };
-  const practiceLabel = (id: PartId) =>
-    id === "pronunciation" ? ui.nextByCall : id === "expression" && expressionScript ? ui.stageScriptsTitle : ui.nextByChat;
-  const canPractice = (id: PartId) => id !== "pronunciation" || canSpeak;
+  const practiceLabel = () => ui.stageScriptsTitle;
+  const canPractice = (id: PartId) => id === "expression" && Boolean(expressionScript);
 
   return (
     <div className="mt-3">
@@ -1042,7 +1022,7 @@ function StageFrame({
                     onClick={() => practice(stageParts.weakest!)}
                     className="shrink-0 rounded-lg bg-platinum px-3 py-1.5 text-caption font-semibold text-black"
                   >
-                    {practiceLabel(stageParts.weakest)}
+                    {practiceLabel()}
                   </button>
                 ) : null}
               </div>
@@ -1109,10 +1089,10 @@ function StageFrame({
                 {nodeRows(allNodes.filter((node) => node.chapter === "script"))}
               </>
             ) : null}
-            {part !== "pronunciation" || canSpeak ? (
+            {canPractice(part) ? (
               <div className="flex justify-end py-2">
                 <button type="button" onClick={() => practice(part)} className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10">
-                  {practiceLabel(part)}
+                  {practiceLabel()}
                 </button>
               </div>
             ) : null}

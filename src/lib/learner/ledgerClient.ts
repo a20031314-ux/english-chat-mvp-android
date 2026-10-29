@@ -6,7 +6,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import { sendAppIntent } from "@/lib/appIntents";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
 import { findExpression } from "@/lib/videoIndex/match";
-import type { LedgerState, LedgerTab, Place } from "@/lib/learner/ledger";
+import type { LedgerState, Place } from "@/lib/learner/ledger";
 
 /**
  * The expression ledger as the device holds it, for connecting the tabs
@@ -87,23 +87,24 @@ export function ledgerIn(items: CompactItem[], line: string, language: string): 
   );
 }
 
-/** Take the learner back to where a phrase was first met. */
-export function goToFirstMet(place: Place) {
-  if (place.tab === "video" && place.videoId) {
-    sendAppIntent("openTab", { tab: "video" });
-    sendAppIntent("openVideo", {
-      url: normalizeYouTubeWatchUrl(place.videoId),
-      ...(typeof place.t === "number" ? { startSeconds: place.t } : {}),
-    });
-    return;
-  }
-  sendAppIntent("openTab", { tab: place.tab === "call" ? "roleplay" : (place.tab as Exclude<LedgerTab, "call">) });
+/**
+ * Only a video can be gone back to: it opens at that scene. A chat or a call
+ * would only open the tab, with nothing there to do, so those have no "go
+ * back" (user, 2026-10-29: buttons that just move to a feature are removed —
+ * "채팅에서 써 보기" went the same way).
+ */
+export function canGoToFirstMet(place: Place): boolean {
+  return place.tab === "video" && Boolean(place.videoId);
 }
 
-/** Put a phrase in the chat box, to be used in a sentence of their own. */
-export function tryInChat(text: string) {
-  sendAppIntent("openTab", { tab: "chat" });
-  sendAppIntent("chatDraft", { text: `${text} ` });
+/** Take the learner back to the video scene where a phrase was first met. */
+export function goToFirstMet(place: Place) {
+  if (!canGoToFirstMet(place)) return;
+  sendAppIntent("openTab", { tab: "video" });
+  sendAppIntent("openVideo", {
+    url: normalizeYouTubeWatchUrl(place.videoId!),
+    ...(typeof place.t === "number" ? { startSeconds: place.t } : {}),
+  });
 }
 
 const SHOW_KEY = "ledgerLinksShown";

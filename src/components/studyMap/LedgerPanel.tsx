@@ -8,7 +8,7 @@ import type { UICopy } from "@/lib/copy";
 import type { LedgerState, LedgerSummary, LedgerTab, Place } from "@/lib/learner/ledger";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { WordLedgerLine, placeLabel } from "@/components/LedgerLinks";
-import { goToFirstMet, setLinksShown, useLinksShown } from "@/lib/learner/ledgerClient";
+import { canGoToFirstMet, goToFirstMet, setLinksShown, useLinksShown } from "@/lib/learner/ledgerClient";
 
 /**
  * 내 표현: what this learner has met, learned and can produce in the language
@@ -314,6 +314,7 @@ function LedgerSheet({
                     {opened === item.text ? (
                       <div className="mt-1 ps-3.5">
                         <WordLedgerLine ui={ui} locale={locale} word={item.text} language={language} onLeave={onClose} />
+                        {canGoToFirstMet(item.firstMet) ? (
                         <button
                           type="button"
                           onClick={() => {
@@ -324,6 +325,7 @@ function LedgerSheet({
                         >
                           {ui.linkGoBack} · {placeLabel(ui, item.firstMet)}
                         </button>
+                        ) : null}
                       </div>
                     ) : null}
                   </li>

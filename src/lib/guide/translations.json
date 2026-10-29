@@ -237,7 +237,7 @@
         {
           "heading": "Tus palabras guardadas",
           "body": [
-            "‘{ui:linkTry}’ en el chat, ‘{ui:linkFindScenes}’ en los vídeos."
+            "‘{ui:linkFindScenes}’ abre una escena de vídeo con la palabra."
           ],
           "shot": "vocab-saved"
         },
@@ -618,7 +618,7 @@
         {
           "heading": "保存した単語",
           "body": [
-            "「{ui:linkTry}」はチャットで、「{ui:linkFindScenes}」は動画で。"
+            "「{ui:linkFindScenes}」でその単語が出る動画の場面へ。"
           ],
           "shot": "vocab-saved"
         },
@@ -999,7 +999,7 @@
         {
           "heading": "已保存的单词",
           "body": [
-            "“{ui:linkTry}”去聊天里用，“{ui:linkFindScenes}”去视频里找。"
+            "点“{ui:linkFindScenes}”，打开出现这个词的视频片段。"
           ],
           "shot": "vocab-saved"
         },
@@ -1380,7 +1380,7 @@
         {
           "heading": "Từ đã lưu",
           "body": [
-            "‘{ui:linkTry}’ trong chat, ‘{ui:linkFindScenes}’ trong video."
+            "‘{ui:linkFindScenes}’ mở cảnh video có từ đó."
           ],
           "shot": "vocab-saved"
         },
@@ -1761,7 +1761,7 @@
         {
           "heading": "Vos mots enregistrés",
           "body": [
-            "‘{ui:linkTry}’ dans le chat, ‘{ui:linkFindScenes}’ dans les vidéos."
+            "‘{ui:linkFindScenes}’ ouvre une scène de vidéo avec ce mot."
           ],
           "shot": "vocab-saved"
         },
@@ -2142,7 +2142,7 @@
         {
           "heading": "Le parole salvate",
           "body": [
-            "‘{ui:linkTry}’ in chat, ‘{ui:linkFindScenes}’ nei video."
+            "‘{ui:linkFindScenes}’ apre una scena video con la parola."
           ],
           "shot": "vocab-saved"
         },
@@ -2523,7 +2523,7 @@
         {
           "heading": "Suas palavras salvas",
           "body": [
-            "‘{ui:linkTry}’ no chat, ‘{ui:linkFindScenes}’ nos vídeos."
+            "‘{ui:linkFindScenes}’ abre uma cena de vídeo com a palavra."
           ],
           "shot": "vocab-saved"
         },
@@ -2904,7 +2904,7 @@
         {
           "heading": "Сохранённые слова",
           "body": [
-            "‘{ui:linkTry}’ — в чате, ‘{ui:linkFindScenes}’ — в видео."
+            "‘{ui:linkFindScenes}’ открывает сцену видео с этим словом."
           ],
           "shot": "vocab-saved"
         },
@@ -3285,7 +3285,7 @@
         {
           "heading": "Kata yang disimpan",
           "body": [
-            "‘{ui:linkTry}’ di chat, ‘{ui:linkFindScenes}’ di video."
+            "‘{ui:linkFindScenes}’ membuka adegan video dengan kata itu."
           ],
           "shot": "vocab-saved"
         },
@@ -3666,7 +3666,7 @@
         {
           "heading": "كلماتك المحفوظة",
           "body": [
-            "‘{ui:linkTry}’ في المحادثة، و‘{ui:linkFindScenes}’ في الفيديو."
+            "‘{ui:linkFindScenes}’ يفتح مشهد فيديو فيه الكلمة."
           ],
           "shot": "vocab-saved"
         },
@@ -4047,7 +4047,7 @@
         {
           "heading": "คำที่บันทึกไว้",
           "body": [
-            "‘{ui:linkTry}’ ในแชต ‘{ui:linkFindScenes}’ ในวิดีโอ"
+            "‘{ui:linkFindScenes}’ เปิดฉากวิดีโอที่มีคำนั้น"
           ],
           "shot": "vocab-saved"
         },
@@ -4428,7 +4428,7 @@
         {
           "heading": "सेव किए गए शब्द",
           "body": [
-            "‘{ui:linkTry}’ चैट में, ‘{ui:linkFindScenes}’ वीडियो में।"
+            "‘{ui:linkFindScenes}’ उस शब्द वाला वीडियो दृश्य खोलता है।"
           ],
           "shot": "vocab-saved"
         },

@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
-import { sendAppIntent } from "@/lib/appIntents";
 import { TTSButton } from "@/components/TTSButton";
 import { ScriptEntry } from "@/components/studyMap/ScriptPractice";
 
@@ -153,19 +152,6 @@ export function StageExamples({ ui, stage }: { ui: UICopy; stage: StageView }) {
       {stage.dialogues.map((dialogue, index) => (
         <div key={index} className="flex flex-col gap-1.5">
           <DialogueCard dialogue={dialogue} />
-          <button
-            type="button"
-            onClick={() =>
-              sendAppIntent("practice", {
-                tab: "chat",
-                goal: { situation: dialogue.setting, phrases: dialogue.lines.slice(0, 3).map((line) => line.text) },
-                title: dialogue.setting,
-              })
-            }
-            className="self-end rounded-lg border border-line px-2.5 py-1 text-caption text-slate-200 hover:bg-white/5"
-          >
-            {ui.stageTry}
-          </button>
         </div>
       ))}
       <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="self-start text-caption text-slate-400 underline-offset-4 hover:underline">
@@ -245,19 +231,6 @@ export function StageGoal({
                       {done ? <span className="me-1 text-good">✓</span> : null}
                       {grammar.name}
                     </span>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        sendAppIntent("practice", {
-                          tab: "chat",
-                          goal: { mistake: grammar.name, phrases: [grammar.example] },
-                          title: grammar.name,
-                        })
-                      }
-                      className="shrink-0 rounded-lg border border-line px-2 py-1 text-caption text-slate-200 hover:bg-white/5"
-                    >
-                      {ui.stageTry}
-                    </button>
                   </div>
                   <div className="mt-1 flex items-center gap-1">
                     <span dir="auto" className="min-w-0 flex-1 text-note text-slate-300">{grammar.example}</span>

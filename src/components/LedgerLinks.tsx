@@ -7,9 +7,9 @@ import { sendAppIntent } from "@/lib/appIntents";
 import { findScenes } from "@/lib/studyMapClient";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
 import {
+  canGoToFirstMet,
   goToFirstMet,
   ledgerIn,
-  tryInChat,
   useLedger,
   useLinksShown,
   type CompactItem,
@@ -110,7 +110,7 @@ export function LedgerLinks({
             <button
               key={item.text}
               type="button"
-              onClick={() => (kind === "mine" && !justMastered ? goToFirstMet(item.firstMet) : setOpen(open === item.text ? null : item.text))}
+              onClick={() => (kind === "mine" && !justMastered && canGoToFirstMet(item.firstMet) ? goToFirstMet(item.firstMet) : setOpen(open === item.text ? null : item.text))}
               className={`flex max-w-full items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] ${
                 justMastered
                   ? "border-emerald-400/40 bg-emerald-950/80 text-emerald-100"
@@ -147,22 +147,17 @@ function LinkCard({ ui, item, onClose }: { ui: UICopy; item: CompactItem; onClos
       <p className="mt-0.5 text-[11px] text-slate-400">
         {stateLabel(ui, item.state)} · {ui.linkFirstMet.replace("{place}", placeLabel(ui, item.firstMet))}
       </p>
-      <div className="mt-2 flex flex-wrap gap-1.5">
-        <button
-          type="button"
-          onClick={() => goToFirstMet(item.firstMet)}
-          className="rounded-lg border border-white/15 px-2.5 py-1 text-[12px] text-slate-200 hover:bg-white/10"
-        >
-          {ui.linkGoBack}
-        </button>
-        <button
-          type="button"
-          onClick={() => tryInChat(item.text)}
-          className="rounded-lg border border-white/15 px-2.5 py-1 text-[12px] text-slate-200 hover:bg-white/10"
-        >
-          {ui.linkTry}
-        </button>
-      </div>
+      {canGoToFirstMet(item.firstMet) ? (
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          <button
+            type="button"
+            onClick={() => goToFirstMet(item.firstMet)}
+            className="rounded-lg border border-white/15 px-2.5 py-1 text-[12px] text-slate-200 hover:bg-white/10"
+          >
+            {ui.linkGoBack}
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -235,16 +230,6 @@ export function WordLedgerLine({
         {used ? ui.linkUsedIn.replace("{place}", where).replace("{ago}", agoLabel(locale, used.at)) : ui.linkNotUsed}
       </span>
       <span className="ms-auto flex gap-1.5">
-        <button
-          type="button"
-          onClick={() => {
-            onLeave?.();
-            tryInChat(word);
-          }}
-          className="rounded-lg border border-white/15 px-2 py-0.5 text-[11px] text-slate-200 hover:bg-white/10"
-        >
-          {ui.linkTry}
-        </button>
         <button
           type="button"
           onClick={() => void findScene()}

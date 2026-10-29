@@ -207,10 +207,6 @@ export function StudyMapTab({
         setStartStage(next?.id ?? null);
         setEditing(true);
       }}
-      onTry={(order, index) => {
-        const grammar = stageByOrder(order)?.grammar?.[index];
-        if (grammar) sendAppIntent("practice", { tab: "chat", goal: { mistake: grammar.name, phrases: [grammar.example] }, title: grammar.name });
-      }}
     />
   );
 
