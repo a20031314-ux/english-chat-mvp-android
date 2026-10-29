@@ -196,3 +196,26 @@ test("단어 퀴즈(w|): 빈칸 → 예문 속 밑줄 낱말 뜻 고르기 → �
     assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "listen" })!.questions.map((q) => q.kind), ["choose", "meaning", "say"]);
   }
 });
+
+test("묶음 퀴즈: 열쇠마다 한 문제, 같은 문장 없음, 말하기는 하나까지 — 일본어·스페인어", async () => {
+  const { bundleQuiz } = await import("./quiz.ts");
+  const { nextStudy } = await import("./nextStudy.ts");
+  for (const language of ["ja", "es"]) {
+    const keys = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "grammar", lane: "learn", now: 0 }).map((pick) => pick.key);
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: "s", stage: 1 });
+    assert.ok(made.questions.length >= 3, language);
+    assert.equal(made.questions.length, made.keys.length);
+    assert.equal(new Set(made.keys).size, made.keys.length, "같은 열쇠 두 번 없음");
+    assert.ok(made.questions.filter((q) => q.kind === "say").length <= 1);
+    const texts = made.questions.map((q) => ("text" in q ? q.text : ""));
+    assert.equal(new Set(texts).size, texts.length);
+  }
+});
+
+test("표현 퀴즈 재료에 빈도 단어 예문(그 표현이 든 것)도 — 영어·일본어", async () => {
+  const { registerQuizSources, quizSources } = await import("./quiz.ts");
+  registerQuizSources("en", [{ key: "w|zzthanks", sources: [{ text: "Thank you for the coffee, it was great.", gloss: { en: "", raw: "커피 고마워요" }, from: "w|zzthanks", stage: 0, piece: "coffee", who: "me", wordGloss: "커피" }] }]);
+  assert.ok(quizSources("en", "e|thank you").some((source) => source.text === "Thank you for the coffee, it was great." && source.stage === 0));
+  registerQuizSources("ja", [{ key: "w|zzお茶", sources: [{ text: "お茶をありがとうございます。", gloss: { en: "", raw: "차 고마워요" }, from: "w|zzお茶", stage: 0, piece: "お茶", who: "me", wordGloss: "차" }] }]);
+  assert.ok(quizSources("ja", "e|ありがとうございます").some((source) => source.text === "お茶をありがとうございます。"));
+});

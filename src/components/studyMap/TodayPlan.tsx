@@ -21,7 +21,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
-import { buildUnit, registerQuizSources, type QuizCard, type QuizMix } from "@/lib/curriculum/quiz";
+import { buildUnit, bundleQuiz, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -41,7 +41,7 @@ import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
-import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
@@ -200,6 +200,7 @@ export function TodayPlan({
   const [picked, setPicked] = useState<string | null>(null);
   // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
+  const [bundle, setBundle] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
   // 오늘 끝까지 해 본 대본·문장구조(통과 못 해도 ✓, curriculum/practicedToday.ts).
   const [practiced, setPracticed] = useState<Set<string>>(new Set());
@@ -363,35 +364,49 @@ export function TodayPlan({
         : item.kind === "quiz"
           ? false
           : passedSet.has(item.id) || practiced.has(item.id);
-  const finishQuiz = (item: PlanItem, passedQuiz: boolean) => {
-    // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
-    if (passedQuiz && log[item.id] && !log[item.id]!.last) {
-      const next = addTally(tally, { fixed: item.id });
-      setTally(next);
-      saveTally(language, next);
+  // 퀴즈 결과를 열쇠마다(묶음 퀴즈는 여럿을 한 번에 — 상태를 한 번에 고쳐 덮어쓰지 않게).
+  const finishMany = (results: readonly { key: string; correct: boolean; review?: string }[]) => {
+    if (!results.length) return;
+    let logged = log;
+    let nextTally = tally;
+    for (const { key, correct } of results) {
+      // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
+      if (correct && logged[key] && !logged[key]!.last) nextTally = addTally(nextTally, { fixed: key });
+      logged = recordQuiz(logged, key, correct);
     }
-    const logged = recordQuiz(log, item.id, passedQuiz);
+    if (nextTally !== tally) {
+      setTally(nextTally);
+      saveTally(language, nextTally);
+    }
     setLog(logged);
     saveQuizLog(language, logged);
-    setMissRun((run) => (passedQuiz ? 0 : run + 1));
-    const next = new Set([...quizDone, item.id]);
-    setQuizDone(next);
-    saveQuizDone(day, next);
-    // 다시 볼 것에서 온 퀴즈는 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 퀴즈는 틀렸을 때만 다시 볼 것에 넣는다.
-    if (!item.review && passedQuiz && !known[item.id] && !item.id.startsWith("u|") && !item.id.startsWith("w|")) return;
+    const allRight = results.every((one) => one.correct);
+    setMissRun((run) => (allRight ? 0 : run + 1));
+    const nextDone = new Set([...quizDone, ...results.map((one) => one.key)]);
+    setQuizDone(nextDone);
+    saveQuizDone(day, nextDone);
+    // 다시 볼 것에서 온 것은 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 것은 틀렸을 때만 다시 볼 것에 넣는다.
+    const check: Record<string, boolean> = {};
+    for (const { key, correct, review: fromReview } of results) {
+      if (!fromReview && !review[key] && correct && !known[key] && !key.startsWith("u|") && !key.startsWith("w|")) continue;
+      check[key] = correct;
+    }
+    if (!Object.keys(check).length) return;
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language, check: { [item.id]: passedQuiz }, quiz: true }),
+      body: JSON.stringify({ language, check, quiz: true }),
     })
       .then((response) => (response.ok ? response.json() : null))
       .then((body: { review?: ReviewMap; known?: unknown } | null) => {
         if (body?.review) announceReview(language, body.review);
         if (body?.known) {
           announceKnown(language, body.known);
-          if (knownState(cleanKnown(body.known), item.id) === "known" && knownState(known, item.id) !== "known") {
+          const fresh = cleanKnown(body.known);
+          const became = Object.keys(check).filter((key) => knownState(fresh, key) === "known" && knownState(known, key) !== "known");
+          if (became.length) {
             setTally((current) => {
-              const next = addTally(current, { known: item.id });
+              const next = became.reduce((acc, key) => addTally(acc, { known: key }), current);
               saveTally(language, next);
               return next;
             });
@@ -400,6 +415,7 @@ export function TodayPlan({
       })
       .catch(() => undefined);
   };
+  const finishQuiz = (item: PlanItem, passedQuiz: boolean) => finishMany([{ key: item.id, correct: passedQuiz, review: item.review }]);
   const finished = items.every(doneOf);
   // 이번 주 확인에서 약하게 나온 갈래가 있으면 계속 공부가 그것부터(없으면 연습 기록 쪽 갈래).
   const studyWeakest = checkupWeakest(checkups, now) ?? weakest;
@@ -480,11 +496,39 @@ export function TodayPlan({
       ...(pick.reason === "gap" && gaps.find((gap) => gap.key === pick.key)?.card ? { card: gaps.find((gap) => gap.key === pick.key)!.card } : {}),
     };
   };
+  // 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 랜덤은 갈래가 다른 열쇠부터, 문법·표현·복습은 그 줄의 열쇠 여럿에서 한 문제씩. 어휘는 단어 퀴즈 그대로.
+  const bundleFor = (which: StudyLane): { keys: string[]; questions: QuizQuestion[] } | null => {
+    if (which === "learn" && studyFocus === "vocab") return null;
+    const queue = studyQueue(which, Date.now(), studyWeakest);
+    let keys: string[];
+    if (which === "learn" && !studyFocus) {
+      const firstOf = new Map<PartId, string>();
+      for (const pick of queue) {
+        const part = keyPart(language, pick.key);
+        if (!firstOf.has(part)) firstOf.set(part, pick.key);
+      }
+      // 세 번에 한 번 앞에 오는 새 낱말도(firstPick).
+      const lead = firstPick(queue, which)?.key;
+      keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
+    } else keys = queue.map((pick) => pick.key);
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage });
+    return made.questions.length >= 2 ? made : null;
+  };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane) => {
     setLane(which);
     if (!pick) {
       setStudying(null);
       setQuiz(null);
+      setBundle(null);
+      return;
+    }
+    const made = bundleFor(which);
+    if (made) {
+      setAsked((current) => new Set([...current, ...made.keys]));
+      setRound((n) => n + 1);
+      setStudying(pick);
+      setQuiz(null);
+      setBundle(made);
       return;
     }
     setAsked((current) => new Set([...current, pick.key]));
@@ -754,6 +798,28 @@ export function TodayPlan({
             onOpen(item.stage, item.id);
           }}
           onClose={() => setUnitItem(null)}
+        />
+      ) : null}
+      {bundle ? (
+        <QuizPlayer
+          key={`bundle-${round}`}
+          ui={ui}
+          locale={locale}
+          language={language}
+          quizKey={bundle.keys[0]!}
+          title=""
+          seed={`${day}-${round}`}
+          unit={bundle.questions}
+          bundleKeys={bundle.keys}
+          onBundle={(results) => finishMany(results.filter((one) => !one.skipped).map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })))}
+          onDone={() => undefined}
+          reason={lane === "review" ? ui.studyReview : studyFocus ? partName(ui, studyFocus) : ui.studyRandom}
+          stopHint={missRun >= 2}
+          onMore={() => startStudy(nextIn(lane, studyWeakest), lane)}
+          onClose={() => {
+            setBundle(null);
+            setStudying(null);
+          }}
         />
       ) : null}
       {quiz ? (

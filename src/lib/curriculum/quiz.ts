@@ -135,6 +135,18 @@ export function quizSources(language: string, key: string): QuizSource[] {
         if (piece) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece, who: line.who === "me" ? "me" : "them" });
       }
     }
+    // 빈도 단어 카드 예문 중 그 표현이 그대로 든 문장도(2026-10-29 사용자 "문법·표현 퀴즈 소재가 한정" → 단어 데이터 연결, 4개까지 — 단계 0이라 어느 단계에서나).
+    let extra = 0;
+    for (const [k, list] of GAP_SOURCES.get(language)?.entries() ?? []) {
+      if (extra >= 4) break;
+      if (!k.startsWith("w|")) continue;
+      for (const source of list) {
+        const piece = pieceOf(source.text, expression);
+        if (!piece || seen.has(source.text)) continue;
+        add({ text: source.text, gloss: source.gloss, from: source.from, stage: 0, piece, who: "me" });
+        extra += 1;
+      }
+    }
     return out;
   }
   if (key.startsWith("g|")) {
@@ -345,6 +357,36 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
   }
   questions.push({ kind: "say", text: source.text, gloss: source.gloss, from: source.from, mark: source.piece });
   return questions.length >= 2 ? { key, questions: questions.slice(0, QUIZ_SIZE) } : null;
+}
+
+/**
+ * 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 열쇠 여럿에서 한 문제씩 — 같은 열쇠를 세 번 묻지 않는다.
+ * 열쇠마다 그 열쇠 퀴즈의 첫 문제(말하기는 묶음에 하나까지, 같은 문장 두 번 없음). 문제마다 열쇠를 같이 돌려준다(결과는 열쇠마다 기록).
+ */
+const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "listen", "say", "meaning"];
+
+export function bundleQuiz(language: string, keys: readonly string[], options: { seed?: string; stage?: number } = {}): { questions: QuizQuestion[]; keys: string[] } {
+  const questions: QuizQuestion[] = [];
+  const out: string[] = [];
+  const texts = new Set<string>();
+  let says = 0;
+  for (const key of keys) {
+    if (questions.length >= QUIZ_SIZE + 1) break;
+    // 모양을 돌아가며(빈칸 → 순서 → 듣기 → 말하기 → 뜻) — 묶음이 한 모양만 되지 않게. 단어(w|)는 단어 퀴즈의 첫 문제(빈칸).
+    const want = BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
+    const order = [want, ...BUNDLE_KINDS.filter((kind) => kind !== want)];
+    const quiz = key.startsWith("w|") ? buildQuiz(language, key, { seed: options.seed, stage: options.stage }) : (buildQuiz(language, key, { seed: options.seed, stage: options.stage, kinds: order }) ?? buildQuiz(language, key, { seed: options.seed, stage: options.stage }));
+    if (!quiz) continue;
+    const textOf = (q: QuizQuestion) => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
+    const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1) && q.kind !== "fix";
+    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? quiz.questions.find(usable);
+    if (!pick) continue;
+    if (pick.kind === "say") says += 1;
+    texts.add(textOf(pick));
+    questions.push(pick);
+    out.push(key);
+  }
+  return { questions, keys: out };
 }
 
 export function buildQuiz(

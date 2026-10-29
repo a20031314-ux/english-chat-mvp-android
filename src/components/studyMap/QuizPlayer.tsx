@@ -44,6 +44,8 @@ export function QuizPlayer({
   stopHint = false,
   mix,
   unit,
+  bundleKeys,
+  onBundle,
 }: {
   ui: UICopy;
   locale: string;
@@ -72,6 +74,9 @@ export function QuizPlayer({
   mix?: QuizMix;
   /** 대본 하나를 문제 묶음으로(buildUnit) — 있으면 열쇠 퀴즈 대신 이것, 70% 넘으면 넘김. */
   unit?: readonly QuizQuestion[];
+  /** 묶음 퀴즈(curriculum/quiz.ts bundleQuiz): unit 문제마다의 열쇠 — 끝나면 onBundle로 열쇠마다 결과. */
+  bundleKeys?: readonly string[];
+  onBundle?: (results: { key: string; correct: boolean; skipped: boolean }[]) => void;
 }) {
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
@@ -84,7 +89,7 @@ export function QuizPlayer({
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const reported = useRef(false);
-  const questions = quiz?.questions ?? [];
+  const questions = useMemo(() => quiz?.questions ?? [], [quiz]);
   const done = index >= questions.length;
   // 끝까지 푼 퀴즈를 닫을 때만 전면 광고(무료·안드로이드, 간격은 lib/ads.ts).
   const closeQuiz = () => {
@@ -98,8 +103,12 @@ export function QuizPlayer({
   useEffect(() => {
     if (!done || reported.current || !questions.length) return;
     reported.current = true;
+    if (bundleKeys && onBundle) {
+      onBundle(questions.map((_, i) => ({ key: bundleKeys[i] ?? quizKey, correct: Boolean(answers[i]?.correct), skipped: Boolean(answers[i]?.skipped) })));
+      return;
+    }
     if (counted > 0) onDone(passed);
-  }, [done, questions.length, counted, passed, onDone]);
+  }, [done, questions, counted, passed, onDone, bundleKeys, onBundle, answers, quizKey]);
   useEffect(() => () => stopTts(), []);
 
   const answer = (value: Answer) => {
@@ -117,7 +126,7 @@ export function QuizPlayer({
         <div className="min-w-0 flex-1">
           <h2 dir="auto" className="truncate text-body font-semibold text-ink">
             {/* A quiz shows no key in its title (2026-10-29, user: the title gave the answer away); a script unit keeps its scene name. */}
-            {unit ? <bdi>{title}</bdi> : <span className="text-warn">{ui.quizTag}</span>}
+            {unit && !bundleKeys ? <bdi>{title}</bdi> : <span className="text-warn">{ui.quizTag}</span>}
           </h2>
           <p className="mt-0.5 text-caption tabular-nums text-slate-400">
             {Math.min(index + 1, questions.length)}/{questions.length}
