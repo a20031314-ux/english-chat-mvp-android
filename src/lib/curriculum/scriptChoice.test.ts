@@ -68,3 +68,20 @@ test("모델 오답 검사: 빈칸이 줄에 없거나, 정답과 같거나, 너
   assert.deepEqual(choiceForLine("es", script, first!.i, null), ruleChoice("es", script, first!.i));
   assert.deepEqual(choiceForLine("es", script, first!.i, parsed), parsed[first!.i]);
 });
+
+test("오답 확인: 원어민이 받아들일 오답은 빼고, 둘 아래로 줄면 그 줄은 뺌", async () => {
+  const { applyCheck, checkInput } = await import("./scriptChoice.ts");
+  const script = allScriptsFor("en").find((s) => choicesInput("en", s).length >= 2)!;
+  const [a, b] = choicesInput("en", script);
+  const choices = {
+    [a!.i]: { blank: a!.blank, wrong: [{ text: "x1", type: "grammar" as const }, { text: "x2", type: "vocab" as const }, { text: "x3", type: "vocab" as const }] },
+    [b!.i]: { blank: b!.blank, wrong: [{ text: "y1", type: "grammar" as const }, { text: "y2", type: "vocab" as const }] },
+  };
+  const items = checkInput(script, choices);
+  assert.equal(items.length, 5);
+  assert.ok(items[0]!.sentence.includes("x1") && !items[0]!.sentence.includes(a!.blank) || a!.blank === "x1");
+  const out = applyCheck(choices, JSON.stringify({ accepted: [`${a!.i}:1`, `${b!.i}:0`] }));
+  assert.deepEqual(out[a!.i]!.wrong.map((w) => w.text), ["x1", "x3"]);
+  assert.equal(out[b!.i], undefined, "둘 아래면 뺌");
+  assert.deepEqual(applyCheck(choices, "nope"), choices, "확인 실패면 그대로");
+});

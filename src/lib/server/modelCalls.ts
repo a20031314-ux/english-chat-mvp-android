@@ -147,8 +147,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   scriptJudge: 1,
   // 그 판단이 "틀림"일 때만 더 좋은 모델로 한 번 더(2026-10-29) — scriptJudge 대비 비율이 Haiku가 틀림이라 한 몫.
   scriptRecheck: 1,
-  // 대본 고르기 오답 — 대본마다 한 번(공유 저장), 사용자 수와 상관없음.
-  scriptChoices: 1,
+  // 대본 고르기 오답 — 대본마다 한 번(공유 저장), 사용자 수와 상관없음. 만들기 + 확인 = 2.
+  scriptChoices: 2,
   // Not model calls — both are zero — but counted here so the ledger can answer
   // what the bank is for. A turn where the character reached for a line that
   // already exists costs no synthesis and plays a read somebody checked; one

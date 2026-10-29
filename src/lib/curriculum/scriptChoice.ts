@@ -240,6 +240,42 @@ export function parseChoices(raw: string, language: string, script: StageScript)
   return out;
 }
 
+/* ---------- 오답 확인(서버, 대본마다 한 번 더): 정답처럼 받아들여질 오답은 뺀다 ---------- */
+
+export function checkPrompt(input: { targetName: string }): string {
+  return `You check multiple-choice distractors for ${input.targetName} learners. Each item is a sentence from a dialogue with one option written into a blank, plus the previous line for context.
+Say which items a fluent ${input.targetName} speaker would accept as correct and natural in that context (same meaning or an acceptable alternative). Those must not be used as wrong answers. Judge only the filled sentence; ignore capital letters.
+Answer only JSON: {"accepted":["<id>", …]} — an empty list if none.`;
+}
+
+/** 오답마다 그 오답을 빈칸에 넣은 문장(앞 줄과 함께) — id는 "줄:번호". */
+export function checkInput(script: StageScript, choices: ScriptChoices): { id: string; before: string; sentence: string }[] {
+  return Object.entries(choices).flatMap(([at, choice]) => {
+    const i = Number(at);
+    const line = script.lines[i];
+    if (!line) return [];
+    const before = script.lines[i - 1]?.text ?? "";
+    return choice.wrong.map((option, k) => ({ id: `${i}:${k}`, before, sentence: line.text.replace(choice.blank, option.text) }));
+  });
+}
+
+/** 확인 답에서 "받아들여짐"인 오답을 빼고, 오답이 둘 아래로 줄면 그 줄은 기기 규칙으로 넘긴다(빼 버림). */
+export function applyCheck(choices: ScriptChoices, raw: string): ScriptChoices {
+  let accepted = new Set<string>();
+  try {
+    const body = JSON.parse(raw) as { accepted?: unknown };
+    accepted = new Set(Array.isArray(body.accepted) ? body.accepted.filter((id): id is string => typeof id === "string") : []);
+  } catch {
+    return choices;
+  }
+  const out: ScriptChoices = {};
+  for (const [at, choice] of Object.entries(choices)) {
+    const wrong = choice.wrong.filter((_, k) => !accepted.has(`${at}:${k}`));
+    if (wrong.length >= 2) out[Number(at)] = { blank: choice.blank, wrong };
+  }
+  return out;
+}
+
 /** 이 줄의 문제: 서버 것 → 없으면 기기 규칙. */
 export function choiceForLine(language: string, script: StageScript, index: number, server?: ScriptChoices | null): LineChoice | null {
   return server?.[index] ?? ruleChoice(language, script, index);
