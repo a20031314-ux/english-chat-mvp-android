@@ -74,6 +74,21 @@ When a release adds or changes a screen worth showing, edit
 language), run `npm run store:shots` against a running dev server, look at the
 images, and include them in the PR. Never hand-edit the PNGs.
 
+Before choosing scenes (store screenshots or promo videos in `store-shots/promo/`),
+read the latest `hub/drafts/ux-check-*.md` — the virtual-user check of what
+real first-time users understood (hub/RULES.md "사용자 체감 점검", user
+decision 2026-10-29). The set must:
+
+1. Show clearly **what the app lets you do** — as scenes of the user doing it,
+   not a list of feature names.
+2. Make **what to do next** obvious, in the order of a day's study: today's
+   plan → speaking a script → the completed/passed mark → last time's mistake
+   coming back and answered right (the moment the check found users felt
+   progress) → keep studying.
+3. Leave out screens the check found confusing (conflicting progress numbers,
+   end screens with hidden pass criteria, a locked chat with an open input,
+   the first-run test). Headlines state the result the screen already shows.
+
 ## The PR
 
 - Title: `Store: release notes for <versionName> (<versionCode>)` or
