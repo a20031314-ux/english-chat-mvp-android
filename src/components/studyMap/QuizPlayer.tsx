@@ -469,7 +469,7 @@ function PickView({
           <span className="min-w-0 flex-1 text-chat text-slate-500">＿＿＿</span>
         ) : (
           <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-            {question.text}
+            <Marked text={question.text} mark={question.kind === "meaning" ? question.mark : undefined} />
           </p>
         )}
         <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
@@ -524,6 +524,19 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
           </span>
         );
       })}
+    </>
+  );
+}
+
+/** 단어 퀴즈: 문장 속 그 낱말에 밑줄(처음 나온 곳 하나). */
+function Marked({ text, mark }: { text: string; mark?: string }) {
+  const at = mark ? text.indexOf(mark) : -1;
+  if (!mark || at < 0) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, at)}
+      <span data-word-mark className="underline decoration-status-learned decoration-2 underline-offset-4">{mark}</span>
+      {text.slice(at + mark.length)}
     </>
   );
 }
@@ -586,6 +599,11 @@ function SayView({
       <p dir="auto" className="text-chat text-slate-100">
         {quizGloss(question.gloss, locale, language) ?? "…"}
       </p>
+      {question.mark ? (
+        <span dir="auto" data-say-word className="self-start rounded-full border border-status-learned/50 px-3 py-1 text-note text-ink underline decoration-status-learned underline-offset-4">
+          {question.mark}
+        </span>
+      ) : null}
       {result ? (
         <>
           {/* 맞았지만 낱말이 다르면 내가 한 말 그대로(대본 화면과 같음, 2026-10-29). */}
@@ -611,7 +629,7 @@ function SayView({
           ) : (
             <div className="flex items-start gap-2">
               <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
-                {question.text}
+                <Marked text={question.text} mark={question.mark} />
               </p>
               <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
             </div>

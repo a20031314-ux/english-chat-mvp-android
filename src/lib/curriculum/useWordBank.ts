@@ -31,7 +31,7 @@ function readCached(language: string, ui: string, chunk: number): Card[] | null 
 }
 
 function sourcesOf(card: Card): QuizSource[] {
-  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me" }];
+  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss }];
 }
 
 /** 낱말 뜻(앱 언어) — 퀴즈 제목 옆 등. */

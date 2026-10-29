@@ -16,7 +16,7 @@ import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScript
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
 
 /** who: 상대 줄("them")은 고르기·맞추기에만, 말하기는 내 줄·예문만. */
-export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string; who?: "me" | "them" };
+export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string; who?: "me" | "them"; /** 빈도 단어: 그 낱말의 뜻(앱 언어). */ wordGloss?: string };
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
 export type QuizCard = { wrong: string; right: string; note?: string };
@@ -25,11 +25,11 @@ export type QuizQuestion =
   | { kind: "fix"; wrong: string; right: string; note?: string; words: string[]; bad: number[]; options?: string[]; answer?: number }
   | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
-  | { kind: "say"; text: string; gloss: ScriptGloss; from: string }
+  | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
   /** 듣고 고르기: 소리만 듣고 들은 문장 고르기(보기 = 같은 단계 다른 줄). */
   | { kind: "listen"; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
-  | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string };
+  | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
 
 /**
  * 학습 조합(2026-10-29 사용자 "방식에 이름을 붙이기보다 나눠서 고르거나 학습 조합을 짜 주는 식"):
@@ -317,11 +317,45 @@ export function speakScored(key: string): boolean {
   return !key.startsWith("g|") && !key.startsWith("f|");
 }
 
+/**
+ * 단어 퀴즈(빈도 단어 w|, 2026-10-29 사용자 "새 낱말 퀴즈는 단어 퀴즈인 거야?" → 셋 다): 빈칸(그 낱말 자리) 먼저 →
+ * 낱말 뜻 고르기(예문 속 그 낱말에 밑줄, 보기는 다른 낱말 뜻) → 그 예문 말하기(밑줄). 학습 조합과 상관없이 이 모양.
+ */
+export function wordQuiz(language: string, key: string, seed = ""): Quiz | null {
+  const source = quizSources(language, key)[0];
+  if (!source?.piece || !source.text.includes(source.piece)) return null;
+  const random = rng(`${key}|${seed}|word`);
+  const questions: QuizQuestion[] = [];
+  const blank = chooseOf(language, key, source, random);
+  if (blank) questions.push(blank);
+  const own = source.wordGloss?.trim();
+  const others = own
+    ? [...new Set([...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key && k.startsWith("w|")).map(([, list]) => list[0]?.wordGloss?.trim() ?? "").filter((g) => g && g !== own))]
+    : [];
+  if (own && others.length >= 2) {
+    const options = shuffled([own, ...shuffled(others, random).slice(0, 2)], random).map((raw) => ({ en: "", raw }));
+    questions.push({ kind: "meaning", text: source.text, mark: source.piece, options, answer: options.findIndex((o) => o.raw === own), gloss: source.gloss, from: source.from });
+  } else {
+    const sentence = meaningOf(language, source, random);
+    if (sentence && sentence.kind === "meaning") questions.push({ ...sentence, mark: source.piece });
+  }
+  if (!blank) {
+    const order = orderOf(language, source, random);
+    if (order) questions.unshift(order);
+  }
+  questions.push({ kind: "say", text: source.text, gloss: source.gloss, from: source.from, mark: source.piece });
+  return questions.length >= 2 ? { key, questions: questions.slice(0, QUIZ_SIZE) } : null;
+}
+
 export function buildQuiz(
   language: string,
   key: string,
   options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix; kinds?: readonly QuizQuestion["kind"][] } = {},
 ): Quiz | null {
+  if (key.startsWith("w|")) {
+    const word = wordQuiz(language, key, options.seed);
+    if (word) return word;
+  }
   // 조합(말하기·듣기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).
   const kinds = options.mix && options.mix !== "auto" ? MIX_KINDS[options.mix] : options.kinds;
   if (kinds?.length) {

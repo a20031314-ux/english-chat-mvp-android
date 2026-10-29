@@ -175,3 +175,24 @@ test("문법·문장구조 열쇠는 말하기 문제가 없다(고르기·순�
   }
   assert.equal(speakScored("e|nice to meet you"), true);
 });
+
+test("단어 퀴즈(w|): 빈칸 → 예문 속 밑줄 낱말 뜻 고르기 → 말하기 — 스페인어·일본어", async () => {
+  const { registerQuizSources, wordQuiz, buildQuiz } = await import("./quiz.ts");
+  const cases: [string, [string, string, string, string][]][] = [
+    ["es", [["casa", "Mi casa es pequeña.", "집", "우리 집은 작아요."], ["perro", "El perro come mucho.", "개", "개가 많이 먹어요."], ["agua", "Quiero agua fría.", "물", "찬물을 원해요."]]],
+    ["ja", [["駅", "駅はどこですか。", "역", "역은 어디예요?"], ["水", "水をください。", "물", "물 주세요."], ["本", "この本はおもしろい。", "책", "이 책은 재미있어요."]]],
+  ];
+  for (const [language, words] of cases) {
+    registerQuizSources(language, words.map(([w, example, gloss, exampleGloss]) => ({ key: `w|${w}`, sources: [{ text: example, gloss: { en: "", raw: exampleGloss }, from: `w|${w}`, stage: 0, piece: w, who: "me" as const, wordGloss: gloss }] })));
+    const [w, , gloss] = words[0]!;
+    const quiz = wordQuiz(language, `w|${w}`, "seed");
+    assert.ok(quiz, language);
+    assert.deepEqual(quiz!.questions.map((q) => q.kind), ["choose", "meaning", "say"], language);
+    const meaning = quiz!.questions[1]!;
+    assert.equal(meaning.kind === "meaning" && meaning.mark, w);
+    assert.equal(meaning.kind === "meaning" && meaning.options[meaning.answer]!.raw, gloss);
+    assert.equal(quiz!.questions[2]!.kind === "say" && quiz!.questions[2]!.mark, w);
+    // 학습 조합을 정해도 단어 퀴즈 모양.
+    assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "listen" })!.questions.map((q) => q.kind), ["choose", "meaning", "say"]);
+  }
+});
