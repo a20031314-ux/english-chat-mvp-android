@@ -7,13 +7,19 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
-import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, posGroup, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { knownState, type KnownMap } from "@/lib/curriculum/known";
 import { registerQuizSources, type QuizSource } from "@/lib/curriculum/quiz";
 
 type Card = { w: string; piece: string; example: string; gloss: string; exampleGloss: string; reading?: string };
 const CACHE = "wordCards.v1";
 const NEXT_MAX = 40;
+
+/** 기능어(대명사·관사·조사 등)는 뒤로(2026-10-29 사용자 — 새 낱말이 ない·i·el부터 나옴). 기능어 칸을 고르면 그대로. */
+function late(word: BankWord, pick?: VocabPick | null): boolean {
+  if (pick && pick.value === "function" && (pick.by === "pos" || pick.by === "topic")) return false;
+  return posGroup(word.pos) === "function" || word.topic === "function";
+}
 
 function readCached(language: string, ui: string, chunk: number): Card[] | null {
   try {
@@ -54,7 +60,7 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     let open = 0;
     for (let index = 0; index < list.length && open < 12; index += 1) {
       const word = list[index]!;
-      if (known[wordKey(word.w)] || !inPick(word, index, pick)) continue;
+      if (known[wordKey(word.w)] || !inPick(word, index, pick) || late(word, pick)) continue;
       open += 1;
       const c = Math.floor(index / BANK_CHUNK);
       if (!out.includes(c)) out.push(c);
@@ -106,11 +112,10 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
       if (state === "known") knownCount += 1;
       else if (state === "checking") learning += 1;
     }
-    const next = list
+    const open = list
       .map((word, index) => ({ word, index, key: wordKey(word.w) }))
-      .filter(({ word, index, key }) => !known[key] && ready.has(key) && inPick(word, index, pick))
-      .map(({ key }) => key)
-      .slice(0, NEXT_MAX);
+      .filter(({ word, index, key }) => !known[key] && ready.has(key) && inPick(word, index, pick));
+    const next = [...open.filter(({ word }) => !late(word, pick)), ...open.filter(({ word }) => late(word, pick))].map(({ key }) => key).slice(0, NEXT_MAX);
     // 고른 기준의 칸마다 이미 앎 / 전체.
     const by = pick?.by && pick.by !== "all" ? pick.by : null;
     const groups = by
