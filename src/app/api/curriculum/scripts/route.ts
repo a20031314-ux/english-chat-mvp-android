@@ -5,7 +5,7 @@ import { isIdentified } from "@/lib/server/identity";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { allScriptsFor, scriptById } from "@/lib/curriculum/stageScripts";
 import { allFramesFor, frameById } from "@/lib/curriculum/frames";
-import { markRedoDone, markScriptPassed, readCheckups, readPassedScripts, saveCheckup, saveChecks } from "@/lib/server/stageScriptStore";
+import { markRedoDone, markScriptPassed, readCheckups, readKnown, readPassedScripts, saveCheckup, saveChecks } from "@/lib/server/stageScriptStore";
 import { checkupDue, cleanResult } from "@/lib/curriculum/checkup";
 import { cleanAsked } from "@/lib/curriculum/itemStats";
 import { addItemStats, readItemStats } from "@/lib/server/itemStatsStore";
@@ -25,7 +25,7 @@ export const maxDuration = 60;
  * GET ?lang=&pack=1 → { scripts, frames } — 그 언어 대본·틀 전부(앱에 없는 언어를 2.76 앱이 받아 씀, curriculum/useScriptPack.ts). 로그인 없이.
  * GET ?lang=&stage=&ui=&glosses=1 → { glosses: {영어 원문: 앱 언어} } — 대본·틀 뜻풀이(영어·한국어 앱은 빈 표, 다른 앱 언어는 처음 한 번 옮겨 저장, server/stageCopy.ts). 로그인 없이.
  * GET ?lang=&itemStats=1 → { stats: {열쇠: [맞힘, 낸 수]} } — 모든 사용자의 시험 문제 통계(curriculum/itemStats.ts, 시험을 짤 때). 로그인 없이.
- * GET ?lang=&checkups=1 → { checkups } — 이번 주 확인 결과(최근 12번, curriculum/checkup.ts).
+ * GET ?lang=&checkups=1 → { checkups, known } — known: 시험에서 맞힌 열쇠(확인 중·이미 앎, curriculum/known.ts). — 이번 주 확인 결과(최근 12번, curriculum/checkup.ts).
  * POST { language, checkup: { stage, parts, origins, wrong, kind?, stages?, asked?: [[열쇠, 맞음]] } } → { checkups, review } — 이번 주 확인(7일에 한 번, 그 안이면 409) 또는 처음 시험(kind "placement", 언제든)을 끝냄.
  *   틀린 열쇠는 다시 볼 것(2일 뒤). 문장·들린 말은 받지 않는다.
  * POST { language, check: { 열쇠(e|표현 또는 f|문장구조 id): true(알아요) | false(헷갈려요) } } — 학습 끝 체크(오늘 할 것, curriculum/dailyPlan.ts) → { review }.
@@ -61,7 +61,10 @@ export async function GET(request: NextRequest) {
   const userId = requestUserId(request);
   if (!isIdentified(userId)) return jsonWithCors(request, { error: "IDENTITY_REQUIRED" }, { status: 401 });
   const language = coerceLanguageCode(request.nextUrl.searchParams.get("lang"));
-  if (params.get("checkups") === "1") return jsonWithCors(request, { checkups: await readCheckups(userId, language) });
+  if (params.get("checkups") === "1") {
+    const [checkups, known] = await Promise.all([readCheckups(userId, language), readKnown(userId, language)]);
+    return jsonWithCors(request, { checkups, known });
+  }
   return jsonWithCors(request, { passed: [...(await readPassedScripts(userId, language))] });
 }
 
@@ -82,12 +85,15 @@ export async function POST(request: NextRequest) {
     // 처음 시험(placement)·단계 시험(stage)은 언제든(화면이 같은 날 다시 보지 않게 막음), 이번 주 확인은 7일에 한 번.
     if (!result.kind && !checkupDue(before)) return jsonWithCors(request, { error: "CHECKUP_NOT_DUE", checkups: before }, { status: 409 });
     // 낸 문제마다 맞았는지(말하기 빼고) — 모두의 난이도 통계로(누구 것인지는 안 남김, curriculum/itemStats.ts).
-    await addItemStats(userId, language, cleanAsked((body.checkup as { asked?: unknown }).asked));
-    return jsonWithCors(request, await saveCheckup(userId, language, result));
+    const asked = cleanAsked((body.checkup as { asked?: unknown }).asked);
+    await addItemStats(userId, language, asked);
+    // 맞힌 문제 → 확인 중(커리큘럼에서 빠짐), 틀린 것 → 돌아옴(curriculum/known.ts).
+    return jsonWithCors(request, await saveCheckup(userId, language, result, Date.now(), asked));
   }
   if (body.check && typeof body.check === "object" && !Array.isArray(body.check)) {
     const checks = Object.fromEntries(Object.entries(body.check as Record<string, unknown>).filter(([, value]) => typeof value === "boolean")) as Record<string, boolean>;
-    return jsonWithCors(request, { review: await saveChecks(userId, language, checks) });
+    // quiz: true = 퀴즈 답(확인 중 열쇠를 다른 날 맞히면 이미 앎으로, curriculum/known.ts).
+    return jsonWithCors(request, await saveChecks(userId, language, checks, Date.now(), body.quiz === true));
   }
   const id = typeof body.id === "string" ? body.id : "";
   // 대본 또는 틀 바꿔 말하기의 틀(curriculum/frames.ts, id "ja-f1-01") — 통과 기록은 같은 곳.

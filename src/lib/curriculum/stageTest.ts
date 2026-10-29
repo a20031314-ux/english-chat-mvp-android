@@ -7,7 +7,8 @@
  * 결과는 이번 주 확인·처음 시험과 같은 모양(curriculum/checkup.ts CheckResult, kind "stage", passed). 레벨·등급은 없다. 순수 모듈(화면 studyMap/CheckupPlayer·테스트).
  */
 import { byDifficulty, type ItemStats } from "./itemStats.ts";
-import { DAY_MS } from "./dailyPlan.ts";
+import { DAY_MS, reviewKeysOf } from "./dailyPlan.ts";
+import { allScriptsFor } from "./stageScripts.ts";
 import { isBigTest, partOf, type CheckResult, type StageKey, type Tally } from "./checkup.ts";
 import { stageKeys } from "./placement.ts";
 import { buildQuiz, type QuizQuestion } from "./quiz.ts";
@@ -148,4 +149,75 @@ export function bigTestDue(results: readonly CheckResult[], firstSeen: number, n
   const last = results.filter(isBigTest).reduce((max, r) => Math.max(max, r.at), 0);
   if (last) return now - last >= BIG_TEST_EVERY_MS;
   return firstSeen > 0 && now - firstSeen >= BIG_TEST_FIRST_MS;
+}
+
+/** 단계 미리 확인 문제 수·말하기 수. */
+export const ENTRY_SIZE = 12;
+export const ENTRY_SAY = 3;
+
+/**
+ * 단계 미리 확인(2026-10-29 사용자 "단계별 시험에서 이미 아는 건 걸러내고 커리큘럼을"): 그 단계 표현·문장구조·문법 중
+ * 아직 통과한 대본에도 확인 중(known)에도 없는 것에서 12문제(가르는 문제 먼저, 넷째마다 말하기 — 셋까지).
+ * 맞힌 것은 서버가 확인 중으로 두어 오늘 할 것에서 빠지고, 계속 공부·이번 주 확인에서 다른 날 두 번 더 맞히면 이미 앎.
+ */
+export function buildEntryCheck(input: {
+  language: string;
+  stage: number;
+  known?: Readonly<Record<string, unknown>>;
+  passed?: ReadonlySet<string>;
+  now?: number;
+  stats?: ItemStats | null;
+}): StageTestItem[] {
+  const { language, stage } = input;
+  const seed = `${language}|entry${stage}|d${Math.floor((input.now ?? Date.now()) / DAY_MS)}`;
+  const learned = new Set(
+    allScriptsFor(language)
+      .filter((script) => input.passed?.has(script.id))
+      .flatMap((script) => reviewKeysOf(language, script.id)),
+  );
+  const keys = byDifficulty(
+    shuffled(stageKeys(language, stage), `${seed}|keys`).filter((key) => !input.known?.[key] && !learned.has(key)),
+    input.stats,
+  );
+  const items: StageTestItem[] = [];
+  let says = 0;
+  let turn = 0;
+  for (const key of keys) {
+    if (items.length >= ENTRY_SIZE) break;
+    const quiz = buildQuiz(language, key, { seed });
+    if (!quiz) continue;
+    const pick = (kind: QuizQuestion["kind"]) => quiz.questions.find((q) => q.kind === kind);
+    const wantSay = says < ENTRY_SAY && items.length % 4 === 3;
+    const question = (wantSay ? pick("say") : undefined) ?? (turn % 2 === 0 ? (pick("choose") ?? pick("order")) : (pick("order") ?? pick("choose")));
+    if (!question) continue;
+    if (question.kind === "say") says += 1;
+    else turn += 1;
+    items.push({ key, stage, part: partOf(language, key, question.kind), question });
+  }
+  return items;
+}
+
+/** 미리 확인 결과(틀린 것은 다시 볼 것에 넣지 않음 — 아직 안 배운 것이라). */
+export function entryCheckResult(items: readonly StageTestItem[], answers: readonly (boolean | null)[], stage: number, now = Date.now()): CheckResult {
+  const parts: CheckResult["parts"] = {};
+  let right = 0;
+  let total = 0;
+  items.forEach((item, i) => {
+    const answer = answers[i];
+    if (answer === null || answer === undefined) return;
+    const tally = (parts[item.part] ??= [0, 0]);
+    tally[1] += 1;
+    total += 1;
+    if (answer) {
+      tally[0] += 1;
+      right += 1;
+    }
+  });
+  return { at: now, stage, parts, origins: {}, wrong: [], kind: "entry", stages: { [String(stage) as StageKey]: [right, total] } };
+}
+
+/** 이 단계를 미리 확인할 때인지: 이 단계 미리 확인도, 이 단계에서 시작한 처음 시험도 없을 때. 문제가 넷보다 적으면 아님. */
+export function entryDue(results: readonly CheckResult[], stage: number, items: readonly unknown[]): boolean {
+  if (items.length < 4) return false;
+  return !results.some((result) => (result.kind === "entry" || result.kind === "placement") && result.stage === stage);
 }

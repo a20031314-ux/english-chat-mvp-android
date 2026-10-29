@@ -783,7 +783,10 @@
     "choiceVocab": "語彙",
     "scriptCompleted": "学習完了",
     "scriptPassProgress": "合格 {n}/{m}",
-    "scriptPracticeOnly": "この方法は合格に数えません"
+    "scriptPracticeOnly": "この方法は合格に数えません",
+    "studyWhyConfirm": "知っているか確認",
+    "entryCheckTitle": "ステージ{n}の事前チェック",
+    "knownTag": "習得済み"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1569,7 +1572,10 @@
     "choiceVocab": "词汇",
     "scriptCompleted": "学习完成",
     "scriptPassProgress": "通过 {n}/{m}",
-    "scriptPracticeOnly": "这种方式不算通过"
+    "scriptPracticeOnly": "这种方式不算通过",
+    "studyWhyConfirm": "确认是否掌握",
+    "entryCheckTitle": "第{n}阶段预先检测",
+    "knownTag": "已掌握"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2358,7 +2364,10 @@
     "choiceVocab": "Từ vựng",
     "scriptCompleted": "Đã học xong",
     "scriptPassProgress": "Đạt {n}/{m}",
-    "scriptPracticeOnly": "Cách này không tính là đạt"
+    "scriptPracticeOnly": "Cách này không tính là đạt",
+    "studyWhyConfirm": "Kiểm tra bạn đã biết",
+    "entryCheckTitle": "Kiểm tra trước giai đoạn {n}",
+    "knownTag": "Đã biết"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3152,7 +3161,10 @@
     "choiceVocab": "Vocabulaire",
     "scriptCompleted": "Apprentissage terminé",
     "scriptPassProgress": "Réussi {n}/{m}",
-    "scriptPracticeOnly": "Ce mode ne compte pas pour réussir"
+    "scriptPracticeOnly": "Ce mode ne compte pas pour réussir",
+    "studyWhyConfirm": "Vérifier que tu le sais",
+    "entryCheckTitle": "Test préalable · étape {n}",
+    "knownTag": "Acquis"
   },
   "it": {
     "archive": "Report",
@@ -4137,7 +4149,10 @@
     "choiceVocab": "Lessico",
     "scriptCompleted": "Studio completato",
     "scriptPassProgress": "Superate {n}/{m}",
-    "scriptPracticeOnly": "Questa modalità non conta per superarlo"
+    "scriptPracticeOnly": "Questa modalità non conta per superarlo",
+    "studyWhyConfirm": "Verifica che lo sai",
+    "entryCheckTitle": "Test iniziale · fase {n}",
+    "knownTag": "Già noto"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4934,7 +4949,10 @@
     "choiceVocab": "Vocabulário",
     "scriptCompleted": "Estudo concluído",
     "scriptPassProgress": "Aprovadas {n}/{m}",
-    "scriptPracticeOnly": "Este modo não conta para passar"
+    "scriptPracticeOnly": "Este modo não conta para passar",
+    "studyWhyConfirm": "Confirmar se você sabe",
+    "entryCheckTitle": "Teste prévio · etapa {n}",
+    "knownTag": "Já sabe"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5917,7 +5935,10 @@
     "choiceVocab": "Лексика",
     "scriptCompleted": "Изучено",
     "scriptPassProgress": "Зачтено {n}/{m}",
-    "scriptPracticeOnly": "Этот способ не засчитывается"
+    "scriptPracticeOnly": "Этот способ не засчитывается",
+    "studyWhyConfirm": "Проверка, что знаешь",
+    "entryCheckTitle": "Предварительная проверка · этап {n}",
+    "knownTag": "Знаю"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6710,7 +6731,10 @@
     "choiceVocab": "Kosakata",
     "scriptCompleted": "Selesai dipelajari",
     "scriptPassProgress": "Lulus {n}/{m}",
-    "scriptPracticeOnly": "Cara ini tidak dihitung lulus"
+    "scriptPracticeOnly": "Cara ini tidak dihitung lulus",
+    "studyWhyConfirm": "Cek apakah sudah tahu",
+    "entryCheckTitle": "Cek awal tahap {n}",
+    "knownTag": "Sudah tahu"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7496,7 +7520,10 @@
     "choiceVocab": "مفردات",
     "scriptCompleted": "اكتمل التعلّم",
     "scriptPassProgress": "اجتزت {n} من {m}",
-    "scriptPracticeOnly": "هذه الطريقة لا تُحتسب للنجاح"
+    "scriptPracticeOnly": "هذه الطريقة لا تُحتسب للنجاح",
+    "studyWhyConfirm": "تأكيد أنك تعرفه",
+    "entryCheckTitle": "اختبار مسبق · المرحلة {n}",
+    "knownTag": "أعرفه"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8282,7 +8309,10 @@
     "choiceVocab": "คำศัพท์",
     "scriptCompleted": "เรียนจบแล้ว",
     "scriptPassProgress": "ผ่าน {n}/{m}",
-    "scriptPracticeOnly": "วิธีนี้ไม่นับว่าผ่าน"
+    "scriptPracticeOnly": "วิธีนี้ไม่นับว่าผ่าน",
+    "studyWhyConfirm": "ตรวจว่ารู้แล้ว",
+    "entryCheckTitle": "ทดสอบก่อนเริ่มขั้น {n}",
+    "knownTag": "รู้แล้ว"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9068,6 +9098,9 @@
     "choiceVocab": "शब्दावली",
     "scriptCompleted": "सीखना पूरा",
     "scriptPassProgress": "पास {n}/{m}",
-    "scriptPracticeOnly": "यह तरीका पास में नहीं गिना जाता"
+    "scriptPracticeOnly": "यह तरीका पास में नहीं गिना जाता",
+    "studyWhyConfirm": "जाँचें कि आप जानते हैं",
+    "entryCheckTitle": "चरण {n} की पूर्व-जाँच",
+    "knownTag": "जानते हैं"
   }
 }

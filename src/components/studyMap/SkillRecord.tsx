@@ -47,7 +47,9 @@ export function SkillRecord({
   const kindName = (result: CheckResult) =>
     result.kind === "placement"
       ? ui.placementTitle
-      : result.kind === "stage"
+      : result.kind === "entry"
+        ? ui.entryCheckTitle.replace("{n}", String(result.stage))
+        : result.kind === "stage"
         ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(result.stage))}${result.passed ? " ✓" : ""}`
         : ui.checkupTitle;
   const dateOf = (at: number) => new Date(at).toLocaleDateString(locale, { month: "numeric", day: "numeric" });

@@ -3,6 +3,7 @@
  *
  * 오늘 할 것을 다 해도, 안 해도 언제나 "다음에 풀 것"을 하나씩 내준다 — 끝없이. 순서(부족한 것부터):
  *   1. again  날짜가 된 다시 볼 것(학습 끝 헷갈려요·물어본 곳, 서버 review)
+ *   1½. confirm 시험에서 맞혀 확인 중인 것(curriculum/known.ts) — 다른 날 맞힐 때마다 이미 앎에 가까워짐
  *   2. missed 이 폰에서 퀴즈로 틀렸던 것(오래된 것부터)
  *   3. weak   지금 단계에서 가장 모자란 갈래(stageParts weakest)의 열쇠 — 표현·어휘·발음은 아직 숙지 안 된 핵심 표현, 문법은 그 단계 문법 칸
  *   4. new    아직 통과 안 한 그 단계 대본의 표현·문장구조(곧 나올 것 미리)
@@ -15,7 +16,7 @@ import { DAY_MS, grammarKey, isCurriculumKey, reviewKeysOf, type ReviewMap } fro
 import { canQuiz } from "./quiz.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 
-export type StudyReason = "again" | "missed" | "weak" | "new" | "keep";
+export type StudyReason = "again" | "confirm" | "missed" | "weak" | "new" | "keep";
 export type StudyPick = { key: string; reason: StudyReason; part?: PartId };
 
 /** 열쇠마다 이 폰에서 푼 기록(열쇠만, 문장은 없음). */
@@ -49,6 +50,8 @@ export function nextStudy(input: {
   expressions?: readonly { text: string; state: LedgerState | null }[];
   /** 이번에 이미 낸 열쇠. */
   skip?: ReadonlySet<string>;
+  /** 시험에서 맞혀 확인 중인 열쇠(curriculum/known.ts confirmDue) — 다시 볼 것 다음에. */
+  confirm?: readonly string[];
   now?: number;
 }): StudyPick[] {
   const now = input.now ?? Date.now();
@@ -64,11 +67,14 @@ export function nextStudy(input: {
     seen.add(key);
     if (!isCurriculumKey(input.language, key) || !canQuiz(input.language, key)) return;
     // 날짜 된 다시 볼 것은 쉬는 중이어도 낸다(서버가 정한 날).
-    if (reason !== "again" && resting(key)) return;
+    if (reason !== "again" && reason !== "confirm" && resting(key)) return;
     out.push(part ? { key, reason, part } : { key, reason });
   };
 
   for (const [key] of Object.entries(input.review).filter(([, entry]) => entry.due <= now).sort((a, b) => a[1].due - b[1].due)) add(key, "again");
+
+  // 확인 중: 오늘 아직 안 푼 것만(confirmDue가 거름) — 쉬는 중이어도 낸다(맞힌 날을 늘려야 이미 앎).
+  for (const key of input.confirm ?? []) add(key, "confirm");
 
   for (const [key] of Object.entries(input.log).filter(([, entry]) => !entry.last).sort((a, b) => a[1].at - b[1].at)) add(key, "missed");
 

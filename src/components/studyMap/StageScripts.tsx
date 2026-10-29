@@ -91,6 +91,7 @@ export function StageScripts({
   recommended = null,
   redo = [],
   onRedoDone,
+  skipped,
 }: {
   ui: UICopy;
   locale: string;
@@ -98,6 +99,8 @@ export function StageScripts({
   stage: number;
   /** 통과한 대본 id(/api/notebook parts[].scripts.passed). */
   passed: readonly string[];
+  /** 시험으로 걸러진(열쇠가 모두 확인 중·이미 앎) 대본 id — "앎" 꼬리표, 오늘 할 것에서 빠짐(curriculum/known.ts). */
+  skipped?: ReadonlySet<string>;
   onPassed?: (id: string) => void;
   /** 그 단계 핵심 표현의 장부 상태(/api/notebook parts[].expressions) — 대본마다 붙은 표현 칩의 점. */
   expressionStates?: Record<string, LedgerState | null>;
@@ -158,6 +161,10 @@ export function StageScripts({
         </span>
         {ok ? (
           <span className="shrink-0 text-caption text-good">✓</span>
+        ) : skipped?.has(script.id) ? (
+          <span data-known className="shrink-0 rounded-full border border-good/50 px-2 py-0.5 text-meta text-good">
+            {ui.knownTag}
+          </span>
         ) : (
           <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} 🎤</span>
         )}

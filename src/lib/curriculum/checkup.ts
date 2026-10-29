@@ -36,8 +36,9 @@ export type CheckResult = {
   /**
    * 시험 종류(없으면 이번 주 확인). placement = 처음 시험(curriculum/placement.ts) — stage가 거기서 정한 시작 단계.
    * stage = 단계 시험(curriculum/stageTest.ts) — stage가 본 단계, passed가 넘었는지.
+   * entry = 단계 미리 확인(curriculum/stageTest.ts buildEntryCheck) — 그 단계에서 이미 아는 것 거르기(맞힌 것 → 확인 중, curriculum/known.ts).
    */
-  kind?: "weekly" | "placement" | "stage";
+  kind?: "weekly" | "placement" | "stage" | "entry";
   /** 처음 시험·단계 시험: 단계마다 [맞힘, 낸 수]. */
   stages?: Partial<Record<StageKey, Tally>>;
   /** 단계 시험: 그 단계를 넘었는지. */
@@ -120,6 +121,8 @@ export function checkupPools(input: {
   review: ReviewMap;
   log: QuizLog;
   now: number;
+  /** 확인 중 열쇠(curriculum/known.ts) — 최근 칸에 넣는다. */
+  confirm?: readonly string[];
 }): Record<CheckOrigin, string[]> {
   const { language, stage, passed, review, log, now } = input;
   const scripts = allScriptsFor(language);
@@ -128,6 +131,7 @@ export function checkupPools(input: {
   const ahead = new Set<string>();
   for (const [key, entry] of Object.entries(review)) (now - entry.at < RECENT_MS ? recent : old).add(key);
   for (const [key, entry] of Object.entries(log)) (now - entry.at < RECENT_MS ? recent : old).add(key);
+  for (const key of input.confirm ?? []) recent.add(key);
   for (const script of scripts) {
     if (!passed.has(script.id)) continue;
     const into = script.stage >= stage ? recent : old;
@@ -156,6 +160,8 @@ export function buildCheckup(input: {
   seed?: string;
   /** 모든 사용자의 문제 통계(curriculum/itemStats.ts) — 가르는 문제 먼저, 막힌 문제 뒤로. */
   stats?: ItemStats | null;
+  /** 확인 중 열쇠(curriculum/known.ts) — 최근 칸 맨 앞에(시험에서 맞힌 것을 다른 날 한 번 더). */
+  confirm?: readonly string[];
 }): CheckItem[] {
   const now = input.now ?? Date.now();
   const seed = input.seed ?? weekSeed(input.language, now);
@@ -184,6 +190,10 @@ export function buildCheckup(input: {
     return true;
   };
   const lists = Object.fromEntries(CHECK_ORIGINS.map((origin) => [origin, byDifficulty(shuffled(pools[origin], `${seed}|${origin}`), input.stats)])) as Record<CheckOrigin, string[]>;
+  if (input.confirm?.length) {
+    const confirm = new Set(input.confirm);
+    lists.recent = [...lists.recent.filter((key) => confirm.has(key)), ...lists.recent.filter((key) => !confirm.has(key))];
+  }
   for (const origin of CHECK_ORIGINS) {
     let count = 0;
     for (const key of lists[origin]) {
@@ -255,6 +265,9 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
     .slice(0, TALLY_MAX);
   if (value.kind === "placement") {
     return { at: now, stage, parts, origins, wrong, kind: "placement", stages: pick(value.stages, STAGE_KEYS) };
+  }
+  if (value.kind === "entry") {
+    return { at: now, stage, parts, origins, wrong: [], kind: "entry", stages: pick(value.stages, STAGE_KEYS) };
   }
   if (value.kind === "stage") {
     return { at: now, stage, parts, origins, wrong, kind: "stage", stages: pick(value.stages, STAGE_KEYS), passed: value.passed === true };

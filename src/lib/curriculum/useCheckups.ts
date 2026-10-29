@@ -6,8 +6,15 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
+import { cleanKnown, type KnownMap } from "@/lib/curriculum/known";
 
 const EVENT = "lb-checkups";
+const KNOWN_EVENT = "lb-known";
+
+/** 서버가 돌려준 known을 같은 언어의 모든 화면에(퀴즈 답·시험 결과 뒤). */
+export function announceKnown(language: string, known: unknown): void {
+  window.dispatchEvent(new CustomEvent(KNOWN_EVENT, { detail: { language, known } }));
+}
 
 /**
  * 시험 결과(이번 주 확인·처음 시험·단계 시험 — 서버 stageScripts:v1 checkups, 최근 12번)를 읽고 남긴다.
@@ -15,26 +22,37 @@ const EVENT = "lb-checkups";
  */
 export function useCheckups(language: string): {
   checkups: CheckResult[];
+  /** 시험에서 맞힌 열쇠(확인 중·이미 앎, curriculum/known.ts). */
+  known: KnownMap;
   save: (result: CheckResult) => Promise<{ review?: ReviewMap } | null>;
 } {
   const { isPremium } = usePremium();
   const [checkups, setCheckups] = useState<CheckResult[]>([]);
+  const [known, setKnown] = useState<KnownMap>({});
   useEffect(() => {
     let alive = true;
     void fetch(apiUrl(`/api/curriculum/scripts?lang=${encodeURIComponent(language)}&checkups=1`), { headers: entitlementHeaders(isPremium) })
       .then((response) => (response.ok ? response.json() : null))
-      .then((body: { checkups?: CheckResult[] } | null) => {
-        if (alive && Array.isArray(body?.checkups)) setCheckups(body.checkups);
+      .then((body: { checkups?: CheckResult[]; known?: unknown } | null) => {
+        if (!alive) return;
+        if (Array.isArray(body?.checkups)) setCheckups(body.checkups);
+        if (body?.known) setKnown(cleanKnown(body.known));
       })
       .catch(() => undefined);
     const on = (event: Event) => {
       const detail = (event as CustomEvent<{ language: string; checkups: CheckResult[] }>).detail;
       if (detail?.language === language) setCheckups(detail.checkups);
     };
+    const onKnown = (event: Event) => {
+      const detail = (event as CustomEvent<{ language: string; known: unknown }>).detail;
+      if (detail?.language === language) setKnown(cleanKnown(detail.known));
+    };
     window.addEventListener(EVENT, on);
+    window.addEventListener(KNOWN_EVENT, onKnown);
     return () => {
       alive = false;
       window.removeEventListener(EVENT, on);
+      window.removeEventListener(KNOWN_EVENT, onKnown);
     };
   }, [language, isPremium]);
   const save = useCallback(
@@ -47,11 +65,12 @@ export function useCheckups(language: string): {
         body: JSON.stringify({ language, checkup: result }),
       })
         .then((response) => response.json().catch(() => null))
-        .catch(() => null) as { checkups?: CheckResult[]; review?: ReviewMap } | null;
+        .catch(() => null) as { checkups?: CheckResult[]; review?: ReviewMap; known?: unknown } | null;
       if (Array.isArray(body?.checkups)) window.dispatchEvent(new CustomEvent(EVENT, { detail: { language, checkups: body.checkups } }));
+      if (body?.known) announceKnown(language, body.known);
       return body;
     },
     [language, isPremium],
   );
-  return { checkups, save };
+  return { checkups, known, save };
 }

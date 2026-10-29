@@ -25,8 +25,9 @@ import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
-import { bigTestDue, buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
-import { useCheckups } from "@/lib/curriculum/useCheckups";
+import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
+import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
+import { confirmDue, skippedIds } from "@/lib/curriculum/known";
 import { PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
@@ -179,10 +180,10 @@ export function TodayPlan({
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
   // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
-  const { checkups, save: saveCheckup } = useCheckups(language);
+  const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | null>(null);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
   const [firstSeen, setFirstSeen] = useState(0);
   useEffect(() => {
@@ -223,19 +224,25 @@ export function TodayPlan({
 
   const passedKey = passed.join(",");
   const passedSet = useMemo(() => new Set(passedKey ? passedKey.split(",") : []), [passedKey]);
+  // 시험에서 맞혀 확인 중·이미 앎인 것만으로 된 대본·문장구조는 커리큘럼에서 건너뜀(curriculum/known.ts) — 오늘 할 것·n일 완성.
+  const skipSet = useMemo(() => skippedIds(language, known), [language, known]);
+  const skipKey = [...skipSet].sort().join(",");
+  const planPassed = useMemo(() => new Set([...passedSet, ...skipSet]), [passedSet, skipSet]);
+  const confirm = confirmDue(known, now || Date.now());
   const day = now ? localDay(new Date(now)) : "";
   useEffect(() => {
     if (day) setQuizDone(readQuizDone(day));
   }, [day]);
   const redoKey = redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|");
   const fresh = useMemo(
-    () => (now ? todayPlan({ language, stage, passed: passedSet, review, pace: settings.pace, order: settings.order, recommended, redo, now }) : []),
+    () => (now ? todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, now }) : []),
     // 오늘 목록은 분량·순서·언어가 바뀔 때만 새로(하나 끝냈다고 바꾸지 않는다) — passed·review는 처음 계산에만.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [now, language, stage, settings.pace, settings.order, recommended, redoKey],
+    [now, language, stage, settings.pace, settings.order, recommended, redoKey, skipKey],
   );
   const same = snapshot && snapshot.day === day && snapshot.language === language && snapshot.pace === settings.pace && snapshot.order === settings.order;
-  const items = same ? snapshot.items : fresh;
+  // 오늘 목록을 정한 뒤 시험으로 걸러진 것은(아직 안 했으면) 뺀다.
+  const items = (same ? snapshot.items : fresh).filter((item) => !(item.kind !== "quiz" && skipSet.has(item.id) && !passedSet.has(item.id)));
   useEffect(() => {
     if (same || !day || !fresh.length) return;
     const next: Snapshot = { day, language, pace: settings.pace, order: settings.order, items: fresh };
@@ -282,15 +289,16 @@ export function TodayPlan({
     setQuizDone(next);
     saveQuizDone(day, next);
     // 다시 볼 것에서 온 퀴즈는 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 퀴즈는 틀렸을 때만 다시 볼 것에 넣는다.
-    if (!item.review && passedQuiz) return;
+    if (!item.review && passedQuiz && !known[item.id]) return;
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language, check: { [item.id]: passedQuiz } }),
+      body: JSON.stringify({ language, check: { [item.id]: passedQuiz }, quiz: true }),
     })
       .then((response) => (response.ok ? response.json() : null))
-      .then((body: { review?: ReviewMap } | null) => {
+      .then((body: { review?: ReviewMap; known?: unknown } | null) => {
         if (body?.review) announceReview(language, body.review);
+        if (body?.known) announceKnown(language, body.known);
       })
       .catch(() => undefined);
   };
@@ -299,7 +307,7 @@ export function TodayPlan({
   const studyWeakest = checkupWeakest(checkups, now) ?? weakest;
   const lastCheckup = checkups.length ? checkups[checkups.length - 1]! : null;
   const lastBig = [...checkups].reverse().find((result) => result.kind) ?? null;
-  const liveCheckupItems = checkupDue(checkups, now) ? buildCheckup({ language, stage, passed: passedSet, review, log, now, stats: itemStats }) : [];
+  const liveCheckupItems = checkupDue(checkups, now) ? buildCheckup({ language, stage, passed: passedSet, review, log, now, stats: itemStats, confirm }) : [];
   // 시험을 연 동안은 문제를 고정(통계·기록이 늦게 와도 풀던 문제가 바뀌지 않게).
   const checkupItems = checkupOpen === "take" && frozenItems ? (frozenItems as typeof liveCheckupItems) : liveCheckupItems;
   const checkupOffer = checkupDue(checkups, now) && checkupReady(checkupItems) && !bigTestDue(checkups, firstSeen, now);
@@ -312,6 +320,10 @@ export function TodayPlan({
   const stageTestOffer = !checkupOpen || checkupOpen === "stage" ? bigTestDue(checkups, firstSeen, now) && !failedToday(checkups, stage, now) : false;
   const liveStageItems = stageTestOffer ? buildStageTest({ language, stage, now, stats: itemStats }) : [];
   const stageTestItems = checkupOpen === "stage" && frozenItems ? (frozenItems as typeof liveStageItems) : liveStageItems;
+  // 단계 미리 확인(curriculum/stageTest.ts buildEntryCheck): 이 단계에서 이미 아는 것 거르기 — 단계마다 한 번, 이번 주 확인보다 앞.
+  const liveEntryItems = !checkupOpen || checkupOpen === "entry" ? buildEntryCheck({ language, stage, known, passed: passedSet, now, stats: itemStats }) : [];
+  const entryItems = checkupOpen === "entry" && frozenItems ? (frozenItems as typeof liveEntryItems) : liveEntryItems;
+  const entryOffer = checkupOpen === "entry" || entryDue(checkups, stage, liveEntryItems);
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
   const queue = nextStudy({
     language,
@@ -322,12 +334,14 @@ export function TodayPlan({
     weakest: studyWeakest,
     expressions,
     skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
+    confirm,
     now,
   });
   const upNext = queue[0] ?? null;
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
-  const testNext: "stage" | "take" | null = stageTestOffer && stageTestItems.length ? "stage" : checkupOffer ? "take" : null;
-  const testItems = testNext === "stage" ? stageTestItems : checkupItems;
+  const testNext: "stage" | "entry" | "take" | null =
+    stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : checkupOffer ? "take" : null;
+  const testItems = testNext === "stage" ? stageTestItems : testNext === "entry" ? entryItems : checkupItems;
   const minutesOf = (list: readonly { question: { kind: string } }[]) =>
     Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const studyItem = (pick: StudyPick): PlanItem => {
@@ -369,7 +383,7 @@ export function TodayPlan({
         data-test-continue
         onClick={() => {
           setCheckupOpen(null);
-          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null);
+          startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: checkupWeakest(checkups, Date.now()) ?? weakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), now: Date.now() })[0] ?? null);
         }}
         className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900"
       >
@@ -380,7 +394,9 @@ export function TodayPlan({
   const reasonLabel = (pick: StudyPick) =>
     pick.reason === "again"
       ? ui.planAgain
-      : pick.reason === "missed"
+      : pick.reason === "confirm"
+        ? ui.studyWhyConfirm
+        : pick.reason === "missed"
         ? ui.studyWhyMissed
         : pick.reason === "weak"
           ? ui.studyWhyWeak.replace("{part}", pick.part ? partName(ui, pick.part) : "")
@@ -398,7 +414,7 @@ export function TodayPlan({
       </div>
       <div role="group" className="mt-2 flex flex-wrap gap-1.5">
         {PACES.map((pace) => {
-          const days = daysLeft(language, pace, passedSet, stage);
+          const days = daysLeft(language, pace, planPassed, stage);
           const on = settings.pace === pace;
           return (
             <button
@@ -475,6 +491,22 @@ export function TodayPlan({
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
+      {checkupOpen === "entry" ? (
+        <CheckupPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          stage={stage}
+          items={entryItems}
+          previous={null}
+          title={ui.entryCheckTitle.replace("{n}", String(stage))}
+          finishWith={(answers) => entryCheckResult(entryItems, answers, stage)}
+          labelOf={(key) => keyLabel(language, key, grammarName)}
+          actions={() => resultActions}
+          onFinish={finishCheckup}
+          onClose={() => setCheckupOpen(null)}
+        />
+      ) : null}
       {checkupOpen === "take" ? (
         <CheckupPlayer
           ui={ui}
@@ -495,7 +527,7 @@ export function TodayPlan({
       {testNext || upNext ? (
         <button
           type="button"
-          {...(testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
+          {...(testNext === "stage" ? { "data-stage-test-offer": "" } : testNext === "entry" ? { "data-entry-offer": "" } : testNext === "take" ? { "data-checkup-offer": "" } : {})}
           onClick={() => {
             if (!testNext) return startStudy(upNext);
             setFrozenItems(testItems);
@@ -509,7 +541,7 @@ export function TodayPlan({
             <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
               {testNext ? (
                 <>
-                  📝 {testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : ui.checkupTitle} ·{" "}
+                  📝 {testNext === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : testNext === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle} ·{" "}
                   {ui.checkupMeta.replace("{n}", String(testItems.length)).replace("{m}", String(minutesOf(testItems)))}
                 </>
               ) : upNext ? (
@@ -547,7 +579,7 @@ export function TodayPlan({
           seed={studying ? `${day}-${round}` : day}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null)}
+          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), confirm: confirmDue(known), now: Date.now() })[0] ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then

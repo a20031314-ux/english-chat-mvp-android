@@ -18,6 +18,7 @@ import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
+import { skippedIds } from "@/lib/curriculum/known";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import type { CheckResult } from "@/lib/curriculum/checkup";
@@ -179,7 +180,8 @@ export function NotebookSection({
   const [reload, setReload] = useState(0);
   // "다음 단계로" 앞의 단계 시험(curriculum/stageTest.ts, 2026-10-29 사용자 "시험을 중심으로"): 고른 단계, 시험 결과(서버 checkups).
   const [stageTestFor, setStageTestFor] = useState<number | null>(null);
-  const { checkups, save: saveCheckup } = useCheckups(language);
+  const { checkups, known, save: saveCheckup } = useCheckups(language);
+  const skipped = useMemo(() => skippedIds(language, known), [language, known]);
   useItemStats(language);
   const loaded = Boolean(book);
   useEffect(() => {
@@ -473,6 +475,7 @@ export function NotebookSection({
               language={language}
               stage={order}
               passed={row?.scripts?.passed ?? []}
+              skipped={skipped}
               onPassed={() => setReload((n) => n + 1)}
               expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
               openFor={openFor}
