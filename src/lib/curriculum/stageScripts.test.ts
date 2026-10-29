@@ -72,8 +72,12 @@ test("통과: 내 줄이 모두, 통과 방식(1~2단계 첫 글자만·가리�
   assert.equal(runPasses(two, { 1: ok("hide") }), false, "안 한 줄");
   assert.equal(runPasses({ ...two, stage: 3 }, { 1: ok("own"), 3: ok("hide") }), true);
   assert.equal(runPasses({ ...two, stage: 3 }, { 1: ok("hint"), 3: ok("hide") }), false);
-  assert.deepEqual(modesFor(1), ["shadow", "hint", "hide"]);
-  assert.deepEqual(modesFor(4), ["shadow", "hide", "own"]);
+  assert.deepEqual(modesFor(1), ["shadow", "hint", "hide", "choose", "order"]);
+  assert.deepEqual(modesFor(4), ["shadow", "hide", "own", "choose", "order"]);
+  // 고르기·맞추기는 통과 기준이 "모든 방식"일 때만.
+  assert.equal(runPasses(two, { 1: ok("choose"), 3: ok("order") }), false, "기본은 말하기만");
+  assert.equal(runPasses(two, { 1: ok("choose"), 3: ok("hide") }, "any"), true);
+  assert.deepEqual(linesToRedo(two, { 1: ok("choose"), 3: ok("hide") }), [1]);
   assert.equal(variantOf(two.lines[2]!, 0).text, "¿Qué tal?");
   assert.equal(variantOf(two.lines[2]!, 1).text, "¿Cómo estás?");
   assert.equal(variantOf(two.lines[0]!, 3).text, "Hola");

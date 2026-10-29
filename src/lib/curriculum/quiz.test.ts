@@ -93,3 +93,12 @@ test("대본에서 같은 줄을 두 번 틀리면 그 줄의 문장구조·표�
     for (const frame of script.lines[at]!.frames!) assert.ok(keys.includes(`f|${frame}`));
   }
 });
+
+test("순서 조각: 일본어 활용은 한 조각, 긴 줄은 8조각 안팎으로 묶음(es)", async () => {
+  const { orderTiles, tilesOf } = await import("./quiz.ts");
+  assert.deepEqual(tilesOf("ブラジルから来ました。", "ja"), ["ブラジル", "から", "来ました"]);
+  const long = "Lo siento mucho, pero este fin de semana no puedo trabajar porque tengo una boda familiar en Sevilla.";
+  const tiles = orderTiles(long, "es");
+  assert.ok(tiles.length >= 3 && tiles.length <= 10, String(tiles.length));
+  assert.equal(tiles.join(" "), long.split(/\s+/).join(" "));
+});

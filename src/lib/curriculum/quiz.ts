@@ -182,8 +182,36 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
   };
 }
 
+/** 일본어 활용 조각(さ·れ·ま·した)은 한 조각으로 — 낱말 자르기가 동사 꼬리를 잘게 나눠 순서 문제가 이상해진다. */
+const JA_TAIL = /^(?:[ぁ-ゖ]|した|します|ました|ません|ます|です|でした|たい|ない|なかった|れる|られ|れ|て|た|だ|って|った|ている|ています|ていました|てる|ちゃ|じゃ|います|いました|いる)$/u;
+const JA_PARTICLE = new Set(["は", "が", "を", "に", "で", "へ", "と", "も", "の", "か", "ね", "よ", "や"]);
+
+export function tilesOf(text: string, language: string): string[] {
+  const words = segmentWords(text, language);
+  if (language !== "ja") return words;
+  const out: string[] = [];
+  for (const word of words) {
+    const prev = out[out.length - 1];
+    if (prev && JA_TAIL.test(word) && !JA_PARTICLE.has(word) && (JA_TAIL.test(prev) || /[ぁ-ゖ]$/u.test(prev) || /[一-鿿]$/u.test(prev))) {
+      out[out.length - 1] = prev + word;
+    } else out.push(word);
+  }
+  return out;
+}
+
+/** 순서 맞추기 조각: 긴 줄은 이웃 낱말을 묶어 8조각 안팎으로(조각이 너무 많으면 화면이 넘침). */
+export function orderTiles(text: string, language: string): string[] {
+  const words = tilesOf(text, language);
+  if (words.length <= 10) return words;
+  const size = Math.ceil(words.length / 8);
+  const glue = isSpaceless(text) ? "" : " ";
+  const out: string[] = [];
+  for (let i = 0; i < words.length; i += size) out.push(words.slice(i, i + size).join(glue));
+  return out;
+}
+
 export function orderOf(language: string, source: QuizSource, random: () => number): QuizQuestion | null {
-  const words = segmentWords(source.text, language);
+  const words = orderTiles(source.text, language);
   if (words.length < 3 || words.length > 10) return null;
   const indices = words.map((_, i) => i);
   let tiles = shuffled(indices, random);

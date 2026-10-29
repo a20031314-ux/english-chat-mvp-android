@@ -63,7 +63,13 @@ export type StageScript = {
   lines: StageScriptLine[];
 };
 
-export type ScriptMode = "shadow" | "hint" | "hide" | "own";
+/** 말하기 넷(🎤) + 고르기·맞추기(2026-10-29, 마이크 없이 — curriculum/scriptChoice.ts). */
+export type ScriptMode = "shadow" | "hint" | "hide" | "own" | "choose" | "order";
+
+/** 마이크 없이 푸는 방식. */
+export function isTapMode(mode: ScriptMode): boolean {
+  return mode === "choose" || mode === "order";
+}
 
 const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH, fr: FR, it: IT, pt: PT, ru: RU, ar: AR, hi: HI };
 
@@ -108,11 +114,15 @@ export function registerScripts(language: string, scripts: unknown): boolean {
 
 /** 그 단계에서 고를 수 있는 보는 방식(앞 단계는 첫 글자 힌트, 뒤 단계는 내 말로). */
 export function modesFor(stage: number): ScriptMode[] {
-  return stage <= 2 ? ["shadow", "hint", "hide"] : ["shadow", "hide", "own"];
+  return stage <= 2 ? ["shadow", "hint", "hide", "choose", "order"] : ["shadow", "hide", "own", "choose", "order"];
 }
 
-/** 이 방식으로 맞힌 줄이 통과로 셈해지는지 — 따라 말하기(원문을 보며)는 연습, 통과는 아니다. */
-export function countsForPass(stage: number, mode: ScriptMode): boolean {
+/**
+ * 이 방식으로 맞힌 줄이 통과로 셈해지는지 — 따라 말하기(원문을 보며)는 연습, 통과는 아니다.
+ * 고르기·맞추기는 사용자가 통과 기준을 "모든 방식"으로 둘 때만(rule any, 2026-10-29 사용자 "통과 기준도 정할 수 있도록").
+ */
+export function countsForPass(stage: number, mode: ScriptMode, rule: "speak" | "any" = "speak"): boolean {
+  if (isTapMode(mode)) return rule === "any";
   return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide" || mode === "own";
 }
 
@@ -120,20 +130,20 @@ export function countsForPass(stage: number, mode: ScriptMode): boolean {
 export type LineRun = { clean: boolean; mode: ScriptMode; revealed: boolean };
 
 /** 통과 = 내 줄이 모두, 통과로 세는 방식으로, 원문을 열지 않고 맞았다. */
-export function runPasses(script: StageScript, runs: Record<number, LineRun>): boolean {
+export function runPasses(script: StageScript, runs: Record<number, LineRun>, rule: "speak" | "any" = "speak"): boolean {
   return script.lines.every((line, i) => {
     if (line.who !== "me") return true;
     const run = runs[i];
-    return Boolean(run && run.clean && !run.revealed && countsForPass(script.stage, run.mode));
+    return Boolean(run && run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule));
   });
 }
 
 /** 통과로 셈해지지 않은 내 줄 번호(틀림·원문 열어 봄·통과로 안 세는 방식) — 끝 화면 "통과까지 n줄"·"그 줄만 다시". */
-export function linesToRedo(script: StageScript, runs: Record<number, LineRun>): number[] {
+export function linesToRedo(script: StageScript, runs: Record<number, LineRun>, rule: "speak" | "any" = "speak"): number[] {
   return script.lines.flatMap((line, i) => {
     if (line.who !== "me") return [];
     const run = runs[i];
-    return run && run.clean && !run.revealed && countsForPass(script.stage, run.mode) ? [] : [i];
+    return run && run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule) ? [] : [i];
   });
 }
 

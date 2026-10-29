@@ -18,6 +18,7 @@ import mapBefore278 from "@/lib/guide/mapBefore278.json";
 import callBefore277 from "@/lib/guide/callBefore277.json";
 import callBefore279 from "@/lib/guide/callBefore279.json";
 import mapBefore280 from "@/lib/guide/mapBefore280.json";
+import mapBefore281 from "@/lib/guide/mapBefore281.json";
 
 export const runtime = "nodejs";
 
@@ -84,9 +85,16 @@ export async function GET(request: NextRequest) {
   const before280 = request.nextUrl.searchParams.get("r280") === "1"
     ? undefined
     : (mapBefore280 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const withParts280: Guide = before280
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before280[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+  // 대본 고르기·맞추기·통과 기준이 있는 빌드(`r281=1`, 2026-10-29): 그 전 빌드는 단계로 보기 칸을 🎤만 있던 글로(mapBefore281.json).
+  const before281 = request.nextUrl.searchParams.get("r281") === "1"
+    ? undefined
+    : (mapBefore281 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withTap281: Guide = before281
+    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before281[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : newest;
+  const withParts280: Guide = before280
+    ? { ...withTap281, map: { ...withTap281.map, sections: withTap281.map.sections.map((section, index) => before280[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    : withTap281;
   const base: Guide = before279
     ? {
         ...withParts280,

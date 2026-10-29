@@ -48,7 +48,7 @@
         {
           "heading": "7. Etapas",
           "body": [
-            "Escucha y di tus frases con 🎤. Lo superas si las aciertas todas sin repetir en voz alta ni abrir el texto."
+            "Escucha y di tus frases con 🎤, o sin él en «{ui:scriptModeChoose}» y «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide qué cuenta."
           ],
           "shot": "stage-scripts"
         },
@@ -429,7 +429,7 @@
         {
           "heading": "7. ステージで見る",
           "body": [
-            "台本を聞いて自分のセリフを🎤で。まね読みせず、原文を開かずに全部合えば合格。"
+            "台本を聞いて自分のセリフを🎤で、または🎤なしで「{ui:scriptModeChoose}」「{ui:scriptModeOrder}」。合格に数える方法は「{ui:passRuleTitle}」「{ui:passRuleSpeak}」｜「{ui:passRuleAny}」。"
           ],
           "shot": "stage-scripts"
         },
@@ -810,7 +810,7 @@
         {
           "heading": "7. 按阶段看",
           "body": [
-            "听剧本，用 🎤 说你的台词。不用跟读、不看原文全部说对就通过。"
+            "听台本，用🎤说自己的台词，或不用🎤做“{ui:scriptModeChoose}”“{ui:scriptModeOrder}”。算作通过的方式由“{ui:passRuleTitle}”“{ui:passRuleSpeak}”｜“{ui:passRuleAny}”决定。"
           ],
           "shot": "stage-scripts"
         },
@@ -1191,7 +1191,7 @@
         {
           "heading": "7. Xem theo giai đoạn",
           "body": [
-            "Nghe và nói câu của bạn bằng 🎤. Đúng hết mà không nói theo, không mở câu gốc là qua."
+            "Nghe kịch bản và nói câu của bạn bằng 🎤, hoặc không cần 🎤 với “{ui:scriptModeChoose}”, “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” quyết định cách nào được tính."
           ],
           "shot": "stage-scripts"
         },
@@ -1572,7 +1572,7 @@
         {
           "heading": "7. Par étapes",
           "body": [
-            "Écoutez et dites vos répliques avec 🎤. Réussi si tout est juste, sans répéter ni ouvrir le texte."
+            "Écoute et dis tes répliques avec 🎤, ou sans dans « {ui:scriptModeChoose} » et « {ui:scriptModeOrder} ». « {ui:passRuleTitle} » « {ui:passRuleSpeak} » | « {ui:passRuleAny} » choisit ce qui compte."
           ],
           "shot": "stage-scripts"
         },
@@ -1953,7 +1953,7 @@
         {
           "heading": "7. Per fasi",
           "body": [
-            "Ascolta e di' le tue battute con 🎤. Lo superi se sono tutte giuste, senza ripetere né aprire il testo."
+            "Ascolta e di’ le tue battute con 🎤, o senza in «{ui:scriptModeChoose}» e «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide cosa conta."
           ],
           "shot": "stage-scripts"
         },
@@ -2334,7 +2334,7 @@
         {
           "heading": "7. Por etapas",
           "body": [
-            "Ouça e diga suas falas com 🎤. Passa se acertar todas sem repetir junto nem abrir o texto."
+            "Ouça e diga suas falas com 🎤, ou sem ele em “{ui:scriptModeChoose}” e “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” define o que conta."
           ],
           "shot": "stage-scripts"
         },
@@ -2715,7 +2715,7 @@
         {
           "heading": "7. По этапам",
           "body": [
-            "Слушайте и говорите свои реплики с 🎤. Зачёт — все верно, без повтора за диктором и без открытого текста."
+            "Слушай и говори свои реплики с 🎤 или без него в «{ui:scriptModeChoose}» и «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» — что засчитывать."
           ],
           "shot": "stage-scripts"
         },
@@ -3096,7 +3096,7 @@
         {
           "heading": "7. Per tahap",
           "body": [
-            "Dengarkan dan ucapkan bagianmu dengan 🎤. Lulus jika benar semua tanpa menirukan dan tanpa membuka teks."
+            "Dengarkan lalu ucapkan barismu dengan 🎤, atau tanpa 🎤 di “{ui:scriptModeChoose}” dan “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” menentukan yang dihitung."
           ],
           "shot": "stage-scripts"
         },
@@ -3477,7 +3477,7 @@
         {
           "heading": "7. حسب المراحل",
           "body": [
-            "استمع وقل جملك بـ🎤. تنجح إذا أصبت فيها كلها دون الترديد ودون فتح النص."
+            "استمع وقل جملك بـ🎤، أو بدونه في «{ui:scriptModeChoose}» و«{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» يحدّد ما يُحتسب."
           ],
           "shot": "stage-scripts"
         },
@@ -3858,7 +3858,7 @@
         {
           "heading": "7. ดูตามขั้น",
           "body": [
-            "ฟังแล้วพูดบทของคุณด้วย 🎤 ผ่านเมื่อถูกครบ โดยไม่พูดตามและไม่เปิดต้นฉบับ"
+            "ฟังบทแล้วพูดประโยคของคุณด้วย 🎤 หรือไม่ใช้ 🎤 ใน “{ui:scriptModeChoose}” “{ui:scriptModeOrder}” “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” กำหนดว่าแบบไหนนับผ่าน"
           ],
           "shot": "stage-scripts"
         },
@@ -4239,7 +4239,7 @@
         {
           "heading": "7. चरणों में देखें",
           "body": [
-            "सुनें और अपनी पंक्तियाँ 🎤 से बोलें। बिना दोहराए और मूल पाठ खोले सब सही हों तो पास।"
+            "स्क्रिप्ट सुनें और अपनी लाइनें 🎤 से बोलें, या 🎤 के बिना “{ui:scriptModeChoose}” और “{ui:scriptModeOrder}” में। “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” तय करता है कि क्या गिना जाए।"
           ],
           "shot": "stage-scripts"
         },

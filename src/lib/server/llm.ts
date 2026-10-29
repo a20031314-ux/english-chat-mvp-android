@@ -54,6 +54,7 @@ export const TASKS = {
   vision: { tier: "basic", openai: () => env("OPENAI_VISION_MODEL") ?? chatDefault(), about: "영상 장면 보기" },
   roleplayTutor: { tier: "basic", openai: () => env("OPENAI_DIRECTOR_MODEL") ?? D.roleplayTutor, about: "AI 통화 튜터 턴" },
   roleplayPractice: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.roleplayPractice, about: "통화 다시 말해보기·대본 따라 말하기 비교" },
+  scriptChoices: { tier: "high", openai: () => D.scriptChoices, about: "대본 고르기 오답(문법·어휘로 헷갈리는 것, 대본마다 한 번·공유)" },
   scriptRecheck: { tier: "high", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.scriptRecheck, about: "대본 판단 다시 보기(Haiku가 틀림이라 할 때만)" },
   scriptJudge: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.scriptJudge, about: "대본 떠올려 말하기·내 말로·문장구조 판단(뜻끼리 맞춤)" },
   ask: { tier: "high", openai: () => env("OPENAI_ASK_MODEL") ?? D.ask, about: "표현 묻기(빠른·직접 질문)" },

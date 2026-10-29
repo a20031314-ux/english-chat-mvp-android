@@ -773,7 +773,14 @@
     "placementStart": "ステージ{n}から始める",
     "stageTestPassed": "✓ ステージ{n}合格",
     "skillRecord": "実力の記録",
-    "skillViewList": "リスト"
+    "skillViewList": "リスト",
+    "scriptModeChoose": "選ぶ",
+    "scriptModeOrder": "並べる",
+    "passRuleTitle": "合格：",
+    "passRuleSpeak": "話すだけ",
+    "passRuleAny": "どの方法でも",
+    "choiceGrammar": "文法",
+    "choiceVocab": "語彙"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1549,7 +1556,14 @@
     "placementStart": "从第{n}阶段开始",
     "stageTestPassed": "✓ 第{n}阶段通过",
     "skillRecord": "能力记录",
-    "skillViewList": "列表"
+    "skillViewList": "列表",
+    "scriptModeChoose": "选择",
+    "scriptModeOrder": "排序",
+    "passRuleTitle": "通过：",
+    "passRuleSpeak": "只算说",
+    "passRuleAny": "任何方式",
+    "choiceGrammar": "语法",
+    "choiceVocab": "词汇"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2328,7 +2342,14 @@
     "placementStart": "Bắt đầu từ giai đoạn {n}",
     "stageTestPassed": "✓ Đã qua giai đoạn {n}",
     "skillRecord": "Nhật ký trình độ",
-    "skillViewList": "Danh sách"
+    "skillViewList": "Danh sách",
+    "scriptModeChoose": "Chọn",
+    "scriptModeOrder": "Sắp xếp",
+    "passRuleTitle": "Đạt:",
+    "passRuleSpeak": "Chỉ khi nói",
+    "passRuleAny": "Mọi cách",
+    "choiceGrammar": "Ngữ pháp",
+    "choiceVocab": "Từ vựng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3112,7 +3133,14 @@
     "placementStart": "Commencer à l'étape {n}",
     "stageTestPassed": "✓ Étape {n} réussie",
     "skillRecord": "Suivi du niveau",
-    "skillViewList": "Liste"
+    "skillViewList": "Liste",
+    "scriptModeChoose": "Choisir",
+    "scriptModeOrder": "Ordonner",
+    "passRuleTitle": "Validé :",
+    "passRuleSpeak": "À l’oral",
+    "passRuleAny": "Tous modes",
+    "choiceGrammar": "Grammaire",
+    "choiceVocab": "Vocabulaire"
   },
   "it": {
     "archive": "Report",
@@ -4087,7 +4115,14 @@
     "placementStart": "Inizia dalla fase {n}",
     "stageTestPassed": "✓ Fase {n} superata",
     "skillRecord": "Storico del livello",
-    "skillViewList": "Elenco"
+    "skillViewList": "Elenco",
+    "scriptModeChoose": "Scegli",
+    "scriptModeOrder": "Ordina",
+    "passRuleTitle": "Superato:",
+    "passRuleSpeak": "Solo parlando",
+    "passRuleAny": "Ogni modo",
+    "choiceGrammar": "Grammatica",
+    "choiceVocab": "Lessico"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4874,7 +4909,14 @@
     "placementStart": "Começar na etapa {n}",
     "stageTestPassed": "✓ Etapa {n} concluída",
     "skillRecord": "Histórico de nível",
-    "skillViewList": "Lista"
+    "skillViewList": "Lista",
+    "scriptModeChoose": "Escolher",
+    "scriptModeOrder": "Ordenar",
+    "passRuleTitle": "Aprovar:",
+    "passRuleSpeak": "Só falando",
+    "passRuleAny": "Qualquer jeito",
+    "choiceGrammar": "Gramática",
+    "choiceVocab": "Vocabulário"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5847,7 +5889,14 @@
     "placementStart": "Начать с этапа {n}",
     "stageTestPassed": "✓ Этап {n} пройден",
     "skillRecord": "История уровня",
-    "skillViewList": "Список"
+    "skillViewList": "Список",
+    "scriptModeChoose": "Выбор",
+    "scriptModeOrder": "Порядок",
+    "passRuleTitle": "Зачёт:",
+    "passRuleSpeak": "Только устно",
+    "passRuleAny": "Любой способ",
+    "choiceGrammar": "Грамматика",
+    "choiceVocab": "Лексика"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6630,7 +6679,14 @@
     "placementStart": "Mulai dari tahap {n}",
     "stageTestPassed": "✓ Tahap {n} lulus",
     "skillRecord": "Riwayat kemampuan",
-    "skillViewList": "Daftar"
+    "skillViewList": "Daftar",
+    "scriptModeChoose": "Pilih",
+    "scriptModeOrder": "Susun",
+    "passRuleTitle": "Lulus:",
+    "passRuleSpeak": "Hanya bicara",
+    "passRuleAny": "Cara apa pun",
+    "choiceGrammar": "Tata bahasa",
+    "choiceVocab": "Kosakata"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7406,7 +7462,14 @@
     "placementStart": "ابدأ من المرحلة {n}",
     "stageTestPassed": "✓ اجتزت المرحلة {n}",
     "skillRecord": "سجل المستوى",
-    "skillViewList": "قائمة"
+    "skillViewList": "قائمة",
+    "scriptModeChoose": "اختيار",
+    "scriptModeOrder": "ترتيب",
+    "passRuleTitle": "النجاح:",
+    "passRuleSpeak": "بالكلام فقط",
+    "passRuleAny": "بأي طريقة",
+    "choiceGrammar": "قواعد",
+    "choiceVocab": "مفردات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8182,7 +8245,14 @@
     "placementStart": "เริ่มที่ขั้นที่ {n}",
     "stageTestPassed": "✓ ผ่านขั้นที่ {n}",
     "skillRecord": "บันทึกระดับ",
-    "skillViewList": "รายการ"
+    "skillViewList": "รายการ",
+    "scriptModeChoose": "เลือก",
+    "scriptModeOrder": "เรียง",
+    "passRuleTitle": "ผ่าน:",
+    "passRuleSpeak": "พูดเท่านั้น",
+    "passRuleAny": "ทุกแบบ",
+    "choiceGrammar": "ไวยากรณ์",
+    "choiceVocab": "คำศัพท์"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8958,6 +9028,13 @@
     "placementStart": "चरण {n} से शुरू करें",
     "stageTestPassed": "✓ चरण {n} पार",
     "skillRecord": "स्तर का रिकॉर्ड",
-    "skillViewList": "सूची"
+    "skillViewList": "सूची",
+    "scriptModeChoose": "चुनें",
+    "scriptModeOrder": "क्रम",
+    "passRuleTitle": "पास:",
+    "passRuleSpeak": "सिर्फ़ बोलकर",
+    "passRuleAny": "किसी भी तरह",
+    "choiceGrammar": "व्याकरण",
+    "choiceVocab": "शब्दावली"
   }
 }

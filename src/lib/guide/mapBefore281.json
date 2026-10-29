@@ -1,0 +1,128 @@
+{
+  "ko": {
+    "my.map": {
+      "heading": "7. 단계로 보기",
+      "body": [
+        "대본을 듣고 내 줄을 🎤로. 따라 말하기 말고, 원문을 열지 않고 다 맞히면 통과."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "en": {
+    "my.map": {
+      "heading": "7. Stages",
+      "body": [
+        "Listen and say your lines with 🎤. Pass by getting them all right without shadowing or opening the text."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "es": {
+    "my.map": {
+      "heading": "7. Etapas",
+      "body": [
+        "Escucha y di tus frases con 🎤. Lo superas si las aciertas todas sin repetir en voz alta ni abrir el texto."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "ja": {
+    "my.map": {
+      "heading": "7. ステージで見る",
+      "body": [
+        "台本を聞いて自分のセリフを🎤で。まね読みせず、原文を開かずに全部合えば合格。"
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "zh": {
+    "my.map": {
+      "heading": "7. 按阶段看",
+      "body": [
+        "听剧本，用 🎤 说你的台词。不用跟读、不看原文全部说对就通过。"
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "vi": {
+    "my.map": {
+      "heading": "7. Xem theo giai đoạn",
+      "body": [
+        "Nghe và nói câu của bạn bằng 🎤. Đúng hết mà không nói theo, không mở câu gốc là qua."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "fr": {
+    "my.map": {
+      "heading": "7. Par étapes",
+      "body": [
+        "Écoutez et dites vos répliques avec 🎤. Réussi si tout est juste, sans répéter ni ouvrir le texte."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "it": {
+    "my.map": {
+      "heading": "7. Per fasi",
+      "body": [
+        "Ascolta e di' le tue battute con 🎤. Lo superi se sono tutte giuste, senza ripetere né aprire il testo."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "pt": {
+    "my.map": {
+      "heading": "7. Por etapas",
+      "body": [
+        "Ouça e diga suas falas com 🎤. Passa se acertar todas sem repetir junto nem abrir o texto."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "ru": {
+    "my.map": {
+      "heading": "7. По этапам",
+      "body": [
+        "Слушайте и говорите свои реплики с 🎤. Зачёт — все верно, без повтора за диктором и без открытого текста."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "id": {
+    "my.map": {
+      "heading": "7. Per tahap",
+      "body": [
+        "Dengarkan dan ucapkan bagianmu dengan 🎤. Lulus jika benar semua tanpa menirukan dan tanpa membuka teks."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "ar": {
+    "my.map": {
+      "heading": "7. حسب المراحل",
+      "body": [
+        "استمع وقل جملك بـ🎤. تنجح إذا أصبت فيها كلها دون الترديد ودون فتح النص."
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "th": {
+    "my.map": {
+      "heading": "7. ดูตามขั้น",
+      "body": [
+        "ฟังแล้วพูดบทของคุณด้วย 🎤 ผ่านเมื่อถูกครบ โดยไม่พูดตามและไม่เปิดต้นฉบับ"
+      ],
+      "shot": "stage-scripts"
+    }
+  },
+  "hi": {
+    "my.map": {
+      "heading": "7. चरणों में देखें",
+      "body": [
+        "सुनें और अपनी पंक्तियाँ 🎤 से बोलें। बिना दोहराए और मूल पाठ खोले सब सही हों तो पास।"
+      ],
+      "shot": "stage-scripts"
+    }
+  }
+}

@@ -135,6 +135,7 @@ export const OP_COST: Record<string, OpCost> = {
   roleplayPractice: llm("roleplayPractice"),
   scriptJudge: llm("scriptJudge"),
   scriptRecheck: llm("scriptRecheck"),
+  scriptChoices: llm("scriptChoices"),
   roleplayBankLine: counter,
   roleplayInventedLine: counter,
   roleplaySplitTurn: counter,

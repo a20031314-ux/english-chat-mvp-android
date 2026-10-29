@@ -33,6 +33,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   roleplayPractice: "gpt-6-luna",
   scriptJudge: "gpt-6-luna",
   scriptRecheck: "gpt-6-luna",
+  scriptChoices: "gpt-6-luna",
   ask: "gpt-6-luna",
   mission: "gpt-6-luna",
   curriculum: "gpt-6-luna",
@@ -83,6 +84,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   // 따라 말하기·통화 다시 말해보기는 낱말 대조라 roleplayPractice(Haiku).
   scriptJudge: HAIKU,
   scriptRecheck: SONNET,
+  // 대본 고르기 오답(2026-10-29): 대본마다 한 번 만들어 모두가 같이 쓰므로(호출 수가 대본 수로 끝남) 더 나은 모델로.
+  scriptChoices: SONNET,
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,
