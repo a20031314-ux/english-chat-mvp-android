@@ -8,6 +8,7 @@ import { onAppIntent } from "@/lib/appIntents";
 import type { Locale, UICopy } from "@/lib/copy";
 import type { GuideChapter, GuideGo, GuideSection, GuideTabId } from "@/lib/guide/content";
 import { fillGuideLabels, loadGuide, readCachedGuide, type GuideData } from "@/lib/guide/client";
+import type { GuideCard, GuideOverview } from "@/lib/guide/overview";
 import {
   FEATURE_PRESETS,
   applyPreset,
@@ -42,7 +43,8 @@ const SCREEN_CHAPTER: Record<string, string> = {
   video: "video",
   people: "people",
   rooms: "rooms",
-  map: "my",
+  // My(첫 화면)의 "?"는 학습 흐름부터(2026-10-29). 흐름을 못 받은 옛 저장분이면 My 장.
+  map: "flow",
   vocab: "notes",
 };
 
@@ -50,7 +52,7 @@ const SCREEN_CHAPTER: Record<string, string> = {
  * The picture of one step, in this person's interface language, or the English
  * one while theirs has not been taken; left out if neither loads.
  */
-function GuideShot({ locale, shot }: { locale: string; shot: string }) {
+function GuideShot({ locale, shot, className }: { locale: string; shot: string; className?: string }) {
   const [source, setSource] = useState<"own" | "en" | "none">(locale === "en" ? "en" : "own");
   if (source === "none") return null;
   return (
@@ -60,8 +62,40 @@ function GuideShot({ locale, shot }: { locale: string; shot: string }) {
       alt=""
       loading="lazy"
       onError={() => setSource(source === "own" ? "en" : "none")}
-      className="mt-2 max-h-[48vh] w-auto max-w-full rounded-xl border border-line"
+      className={className ?? "mt-2 max-h-[48vh] w-auto max-w-full rounded-xl border border-line"}
     />
+  );
+}
+
+/** 큰 그림 카드 하나: 꼬리표(해야 할 것 · 할 수 있는 것, 흐름은 없음) + 한 줄 + 실제 화면. 옆으로 넘겨 본다. */
+function OverviewCard({ card, ui, locale, tag }: { card: GuideCard; ui: UICopy; locale: string; tag?: string }) {
+  return (
+    <div data-guide-card className="flex w-[72%] max-w-[17rem] shrink-0 snap-start flex-col gap-2 rounded-2xl border border-line bg-surface p-3">
+      {tag ? <span className="self-start rounded-full bg-white/10 px-2 py-0.5 text-meta font-semibold text-slate-300">{tag}</span> : null}
+      <p className="text-note font-medium leading-snug text-ink">{fillGuideLabels(card.text, ui)}</p>
+      <GuideShot locale={locale} shot={card.shot} className="mt-auto max-h-[38vh] w-full rounded-xl border border-line object-cover object-top" />
+    </div>
+  );
+}
+
+function CardRow({ children }: { children: ReactNode }) {
+  return <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1">{children}</div>;
+}
+
+/** 맨 앞 "학습 흐름": 영상 하나(오늘 할 것 → 지속 학습 → 대화) + 그 순서의 그림 셋. */
+function FlowView({ overview, ui, locale }: { overview: GuideOverview; ui: UICopy; locale: string }) {
+  return (
+    <div data-guide-chapter="flow" className="scroll-mt-4">
+      <h2 className="mb-3 border-b border-line pb-2 text-title font-semibold text-ink">{ui.guideFlowTitle}</h2>
+      <GuideClip locale={locale} clip={overview.flow.clip} shot={overview.flow.shot} />
+      <div className="mt-4">
+        <CardRow>
+          {overview.flow.steps.map((step) => (
+            <OverviewCard key={step.text} card={step} ui={ui} locale={locale} />
+          ))}
+        </CardRow>
+      </div>
+    </div>
   );
 }
 
@@ -308,6 +342,8 @@ export function GuideButton({
     }
   };
   const scroller = useRef<HTMLDivElement>(null);
+  // 펼친 "세부 기능"(장 id). 칸으로 열린 장은 늘 펼친다.
+  const [detailsOpen, setDetailsOpen] = useState<string[]>([]);
   // 구조도에서 누른 장: 설명 보기가 그려진 뒤 그 장으로 내린다.
   const pendingJump = useRef<string | null>(null);
 
@@ -337,7 +373,12 @@ export function GuideButton({
   const shown = data ?? (open ? readCachedGuide(locale) : null);
   const chapters: GuideChapter[] = (shown?.chapters ?? []).filter((chapter) => availableGo.includes(chapter.go));
   const sectionChapter = target.section ? chapters.find((chapter) => chapter.sections.some((row) => row.id === target.section))?.id : undefined;
-  const focusChapter = sectionChapter ?? target.chapter;
+  const overview = shown?.overview;
+  const focusChapter = sectionChapter ?? (target.chapter === "flow" && !overview ? "my" : target.chapter);
+  // 큰 그림이 있으면 흐름 다음에 My(학습의 뼈대)부터.
+  const ordered = overview
+    ? [...chapters.filter((chapter) => chapter.id === "my"), ...chapters.filter((chapter) => chapter.id !== "my")]
+    : chapters;
   const off = features?.off ?? [];
   const chapterOn = (chapter: GuideChapter) => {
     const feature = featureOfGo(chapter.go);
@@ -446,8 +487,24 @@ export function GuideButton({
                   {ui.featurePickTitle}
                 </button>
               ) : null}
+              {overview && chapters.length ? (
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={!target.manage && focusChapter === "flow"}
+                  onClick={() => {
+                    setTarget({ chapter: "flow" });
+                    jump("flow");
+                  }}
+                  className={`shrink-0 rounded-full px-3 py-1 text-caption ${
+                    !target.manage && focusChapter === "flow" ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"
+                  }`}
+                >
+                  {ui.guideFlowTitle}
+                </button>
+              ) : null}
               {chapters.length
-                ? chapters.map((chapter) => (
+                ? ordered.map((chapter) => (
                     <button
                       key={chapter.id}
                       type="button"
@@ -499,11 +556,15 @@ export function GuideButton({
             ) : chapters.length ? (
               <div className={`mx-auto flex max-w-xl flex-col ${picking ? "gap-6" : "gap-10"}`}>
                 {pickTop}
-                {chapters.map((chapter) => {
+                {overview && !choosing ? <FlowView overview={overview} ui={ui} locale={locale} /> : null}
+                {ordered.map((chapter) => {
                   const feature = featureOfGo(chapter.go);
                   const on = chapterOn(chapter);
                   // 고르기 화면은 장마다 첫 칸 하나만(그림 먼저, 짧게).
                   const sections = picking ? chapter.sections.slice(0, 1) : chapter.sections;
+                  // 큰 그림 카드가 있는 장은 칸들을 접힌 "세부 기능" 안에(새로워진 점 "자세히"로 온 칸이면 펼침).
+                  const cards = !choosing ? overview?.chapters[chapter.id] : undefined;
+                  const expanded = !cards || detailsOpen.includes(chapter.id) || sectionChapter === chapter.id;
                   return (
                     <div key={chapter.id} data-guide-chapter={chapter.id} className="scroll-mt-4">
                       <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2">
@@ -525,8 +586,31 @@ export function GuideButton({
                           ) : null}
                         </div>
                       </div>
-                      <div className={`flex flex-col gap-5 ${on ? "" : "opacity-60"}`}>
-                        {sections.map((section) => (
+                      {cards ? (
+                        <div className={on ? "" : "opacity-60"}>
+                          <CardRow>
+                            <OverviewCard card={cards.todo} ui={ui} locale={locale} tag={ui.guideTodo} />
+                            <OverviewCard card={cards.cando} ui={ui} locale={locale} tag={ui.guideCanDo} />
+                          </CardRow>
+                          <button
+                            type="button"
+                            data-guide-details={chapter.id}
+                            aria-expanded={expanded}
+                            onClick={() =>
+                              setDetailsOpen((open) => (open.includes(chapter.id) ? open.filter((id) => id !== chapter.id) : [...open, chapter.id]))
+                            }
+                            className="mt-3 flex w-full items-center justify-between rounded-xl border border-line px-3 py-2 text-caption text-slate-300 hover:bg-white/5"
+                          >
+                            <span>{ui.guideDetails}</span>
+                            <span aria-hidden className={`inline-block transition-transform ${expanded ? "rotate-90" : "rtl:rotate-180"}`}>
+                              ›
+                            </span>
+                          </button>
+                        </div>
+                      ) : null}
+                      {expanded ? (
+                        <div className={`flex flex-col gap-5 ${cards ? "mt-4" : ""} ${on ? "" : "opacity-60"}`}>
+                          {sections.map((section) => (
                           <SectionView
                             key={section.id}
                             section={section}
@@ -535,8 +619,9 @@ export function GuideButton({
                             anchor={section.id}
                             isNew={!picking && newSections.includes(section.id)}
                           />
-                        ))}
-                      </div>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   );
                 })}

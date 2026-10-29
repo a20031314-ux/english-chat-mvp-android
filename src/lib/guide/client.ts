@@ -1,12 +1,13 @@
 import { apiUrl } from "@/lib/apiBase";
 import type { UICopy } from "@/lib/copy";
 import type { Guide, GuideChapter } from "@/lib/guide/content";
+import type { GuideOverview } from "@/lib/guide/overview";
 
 /**
  * 사용법 글을 받아 두는 곳(GuideSheet·WhatsNewSheet가 같이 쓴다).
  * 서버(/api/guide)가 글을 주고, 마지막으로 받은 것을 폰에 둬서 지하에서도 열린다.
  */
-export type GuideData = { tabs: Guide; chapters?: GuideChapter[] };
+export type GuideData = { tabs: Guide; chapters?: GuideChapter[]; overview?: GuideOverview };
 
 function cacheKey(locale: string): string {
   return `guide.v2.${locale}`;
@@ -31,16 +32,17 @@ const inFlight = new Map<string, Promise<GuideData | null>>();
  * `game=1`: 방 라이어 게임(2026-10-23)이 있는 빌드 — 없으면 서버가 room.game 칸을 뺀다.
  * `icons=1`: 사람 탭 아이콘 묶음(2026-10-23)이 있는 빌드 — 없으면 people.icons 칸을 뺀다.
  * `r272=1`: 2.72 화면(프로필 칩·도움됐어요·줄 지우기·게시판 ♡) — 없으면 그 세 칸은 예전 글(roomsBefore272.json).
+ * `overview=1`: 학습 흐름·장마다 카드 둘(lib/guide/overview.ts).
  * `chapters=1`: 하단 탭 대화·영상·사람·Room·My 빌드 — 같은 글을 기능별 묶음으로도 받는다.
  */
 export function loadGuide(locale: string): Promise<GuideData | null> {
   const running = inFlight.get(locale);
   if (running) return running;
-  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1`))
+  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1&overview=1`))
     .then((response) => (response.ok ? response.json() : null))
     .then((data: Partial<GuideData> | null) => {
       if (!data?.tabs) return null;
-      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}) };
+      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}), ...(data.overview ? { overview: data.overview } : {}) };
       try {
         globalThis.localStorage?.setItem(cacheKey(locale), JSON.stringify(kept));
       } catch {

@@ -834,7 +834,11 @@
     "whatsNewKeepBody": "「継続学習」で復習・ランダム・語彙・文法・表現を選んで短いクイズを解きます。新しい単語は単語帳にたまります。",
     "whatsNewLettersTitle": "ステージ0と読み方",
     "whatsNewLettersBody": "文字が違う言語はステージ0で文字と音から。「読み方」をオンにすると各行の読み方が出ます。",
-    "myProgressTitle": "自分の進み具合"
+    "myProgressTitle": "自分の進み具合",
+    "guideFlowTitle": "学習の流れ",
+    "guideTodo": "やること",
+    "guideCanDo": "できること",
+    "guideDetails": "くわしい機能"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1671,7 +1675,11 @@
     "whatsNewKeepBody": "在“持续学习”里选择复习、随机、词汇、语法或表达，做简短的组合小测；新单词会积累到单词本。",
     "whatsNewLettersTitle": "第0阶段和读法",
     "whatsNewLettersBody": "文字不同的语言从第0阶段的字母和发音开始，打开“读法”每行都会显示读法。",
-    "myProgressTitle": "我的进度"
+    "myProgressTitle": "我的进度",
+    "guideFlowTitle": "学习流程",
+    "guideTodo": "要做的",
+    "guideCanDo": "可以做的",
+    "guideDetails": "更多功能"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2511,7 +2519,11 @@
     "whatsNewKeepBody": "Trong ‘Học liên tục’, chọn Ôn tập, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt để làm quiz ngắn; từ mới được lưu vào sổ từ.",
     "whatsNewLettersTitle": "Giai đoạn 0 và cách đọc",
     "whatsNewLettersBody": "Ngôn ngữ có chữ viết khác bắt đầu ở giai đoạn 0 với chữ cái và âm, bật ‘Cách đọc’ để xem cách đọc từng câu.",
-    "myProgressTitle": "Tiến độ của tôi"
+    "myProgressTitle": "Tiến độ của tôi",
+    "guideFlowTitle": "Lộ trình học",
+    "guideTodo": "Cần làm",
+    "guideCanDo": "Có thể làm",
+    "guideDetails": "Tính năng chi tiết"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3356,7 +3368,11 @@
     "whatsNewKeepBody": "Dans ‘Pratique continue’, choisissez Révision, Aléatoire, Vocabulaire, Grammaire ou Expressions pour de courts quiz ; les nouveaux mots s’ajoutent à votre lexique.",
     "whatsNewLettersTitle": "Étape 0 et lecture",
     "whatsNewLettersBody": "Les langues à autre écriture commencent à l’étape 0 avec lettres et sons, et ‘Lecture’ montre comment se lit chaque ligne.",
-    "myProgressTitle": "Ma progression"
+    "myProgressTitle": "Ma progression",
+    "guideFlowTitle": "Parcours d’apprentissage",
+    "guideTodo": "À faire",
+    "guideCanDo": "Possible aussi",
+    "guideDetails": "Plus de fonctions"
   },
   "it": {
     "archive": "Report",
@@ -4392,7 +4408,11 @@
     "whatsNewKeepBody": "In ‘Pratica continua’ scegli Ripasso, Casuale, Vocabolario, Grammatica o Espressioni per quiz brevi; le parole nuove finiscono nel tuo vocabolario.",
     "whatsNewLettersTitle": "Livello 0 e lettura",
     "whatsNewLettersBody": "Le lingue con un’altra scrittura partono dal livello 0 con lettere e suoni, e ‘Lettura’ mostra come si legge ogni riga.",
-    "myProgressTitle": "I miei progressi"
+    "myProgressTitle": "I miei progressi",
+    "guideFlowTitle": "Percorso di studio",
+    "guideTodo": "Da fare",
+    "guideCanDo": "Puoi anche",
+    "guideDetails": "Altre funzioni"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5240,7 +5260,11 @@
     "whatsNewKeepBody": "Em ‘Prática contínua’, escolha Revisão, Aleatório, Vocabulário, Gramática ou Expressões para quizzes curtos; as palavras novas vão para o seu vocabulário.",
     "whatsNewLettersTitle": "Etapa 0 e leitura",
     "whatsNewLettersBody": "Idiomas com outra escrita começam na etapa 0 com letras e sons, e ‘Leitura’ mostra como se lê cada linha.",
-    "myProgressTitle": "O meu progresso"
+    "myProgressTitle": "O meu progresso",
+    "guideFlowTitle": "Fluxo de estudo",
+    "guideTodo": "O que fazer",
+    "guideCanDo": "O que dá para fazer",
+    "guideDetails": "Mais recursos"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6274,7 +6298,11 @@
     "whatsNewKeepBody": "В «Постоянной практике» выберите Повторение, Случайно, Словарь, Грамматика или Выражения для коротких тестов; новые слова попадают в словарик.",
     "whatsNewLettersTitle": "Этап 0 и чтение",
     "whatsNewLettersBody": "Языки с другой письменностью начинаются с этапа 0 — буквы и звуки, а «Чтение» показывает, как читается каждая строка.",
-    "myProgressTitle": "Мой прогресс"
+    "myProgressTitle": "Мой прогресс",
+    "guideFlowTitle": "Как идёт учёба",
+    "guideTodo": "Что делать",
+    "guideCanDo": "Что можно",
+    "guideDetails": "Подробнее о функциях"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7118,7 +7146,11 @@
     "whatsNewKeepBody": "Di ‘Latihan berkelanjutan’, pilih Ulangi, Acak, Kosakata, Tata bahasa, atau Ungkapan untuk kuis singkat; kata baru masuk ke buku kata.",
     "whatsNewLettersTitle": "Tahap 0 dan cara baca",
     "whatsNewLettersBody": "Bahasa dengan aksara lain mulai dari tahap 0 dengan huruf dan bunyi, dan ‘Cara baca’ menampilkan cara membaca tiap baris.",
-    "myProgressTitle": "Kemajuanku"
+    "myProgressTitle": "Kemajuanku",
+    "guideFlowTitle": "Alur belajar",
+    "guideTodo": "Yang perlu dilakukan",
+    "guideCanDo": "Yang bisa dilakukan",
+    "guideDetails": "Fitur lainnya"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7955,7 +7987,11 @@
     "whatsNewKeepBody": "في «تعلّم مستمر» اختر مراجعة أو عشوائي أو المفردات أو القواعد أو التعابير لاختبارات قصيرة، وتُجمع الكلمات الجديدة في دفتر كلماتك.",
     "whatsNewLettersTitle": "المرحلة 0 وطريقة القراءة",
     "whatsNewLettersBody": "اللغات ذات الكتابة المختلفة تبدأ من المرحلة 0 بالحروف والأصوات، و«طريقة القراءة» تُظهر كيف يُقرأ كل سطر.",
-    "myProgressTitle": "تقدّمي"
+    "myProgressTitle": "تقدّمي",
+    "guideFlowTitle": "مسار التعلّم",
+    "guideTodo": "ما عليك فعله",
+    "guideCanDo": "ما يمكنك فعله",
+    "guideDetails": "ميزات أخرى"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8792,7 +8828,11 @@
     "whatsNewKeepBody": "ใน ‘เรียนต่อเนื่อง’ เลือกทบทวน สุ่ม คำศัพท์ ไวยากรณ์ หรือสำนวน เพื่อทำควิซสั้นๆ คำใหม่จะสะสมในสมุดคำศัพท์",
     "whatsNewLettersTitle": "ขั้น 0 และคำอ่าน",
     "whatsNewLettersBody": "ภาษาที่ใช้ตัวอักษรต่างกันเริ่มที่ขั้น 0 ด้วยตัวอักษรและเสียง และ ‘คำอ่าน’ จะแสดงวิธีอ่านแต่ละบรรทัด",
-    "myProgressTitle": "ความคืบหน้าของฉัน"
+    "myProgressTitle": "ความคืบหน้าของฉัน",
+    "guideFlowTitle": "ลำดับการเรียน",
+    "guideTodo": "สิ่งที่ต้องทำ",
+    "guideCanDo": "สิ่งที่ทำได้",
+    "guideDetails": "ฟีเจอร์เพิ่มเติม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9629,6 +9669,10 @@
     "whatsNewKeepBody": "‘लगातार अभ्यास’ में दोहराएँ, रैंडम, शब्दावली, व्याकरण या अभिव्यक्तियाँ चुनकर छोटे क्विज़ करें; नए शब्द आपकी शब्द-पुस्तिका में जुड़ते हैं।",
     "whatsNewLettersTitle": "चरण 0 और उच्चारण",
     "whatsNewLettersBody": "दूसरी लिपि वाली भाषाएँ चरण 0 में अक्षर और ध्वनि से शुरू होती हैं, और ‘उच्चारण’ हर पंक्ति पढ़ने का तरीका दिखाता है।",
-    "myProgressTitle": "मेरी प्रगति"
+    "myProgressTitle": "मेरी प्रगति",
+    "guideFlowTitle": "सीखने का क्रम",
+    "guideTodo": "क्या करना है",
+    "guideCanDo": "क्या कर सकते हैं",
+    "guideDetails": "और सुविधाएँ"
   }
 }

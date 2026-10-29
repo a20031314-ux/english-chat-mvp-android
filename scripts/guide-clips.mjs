@@ -4,7 +4,7 @@
 //
 // 순서(저장소 맨 위에서):
 //   1. npm run build:capacitor            (www — 지금 화면)
-//   2. PLAYWRIGHT_BROWSERS_PATH=… node scripts/guide-clips.mjs my-today [ko,en,ja…]
+//   2. PLAYWRIGHT_BROWSERS_PATH=… node scripts/guide-clips.mjs <my-today|flow> [ko,en,ja…]
 //      /api는 운영으로(시험 사용자 simcheck-clip-…, 끝나면 지움), 🎤는 가짜 마이크 + 받아쓰기를 그 줄로 바꿔 끼움.
 import fs from "node:fs";
 import path from "node:path";
@@ -18,6 +18,23 @@ const learnFor = (locale) => (locale === "en" ? "es" : "en");
 
 /** 영상마다 장면 자막(14개 언어). 「」 안은 그 언어 앱의 실제 버튼·칸 이름. */
 const CAPTIONS = {
+  // 사용법 맨 앞 "학습 흐름"(lib/guide/overview.ts와 같은 순서).
+  flow: {
+    ko: ["①「{planTitle}」부터 하나씩", "대본: 내 차례에 「{scriptSay}」", "②「{keepTitle}」: 퀴즈로 다시 채워요", "③「{homeTabTalk}」: AI 튜터와 써 봐요"],
+    en: ["① Start with “{planTitle}”", "Script: on your turn, “{scriptSay}”", "② “{keepTitle}”: fill gaps with quizzes", "③ “{homeTabTalk}”: use it with the AI tutor"],
+    es: ["① Empieza por «{planTitle}»", "Guion: en tu turno, «{scriptSay}»", "② «{keepTitle}»: repasa con pruebas", "③ «{homeTabTalk}»: úsalo con el tutor IA"],
+    ja: ["①「{planTitle}」から1つずつ", "台本：自分の番で「{scriptSay}」", "②「{keepTitle}」：クイズで埋める", "③「{homeTabTalk}」：AIチューターと使う"],
+    zh: ["①从「{planTitle}」开始", "剧本：轮到你时「{scriptSay}」", "②「{keepTitle}」：用小测验补上", "③「{homeTabTalk}」：和AI导师用起来"],
+    th: ["① เริ่มจาก “{planTitle}”", "บท: ถึงตาคุณ “{scriptSay}”", "② “{keepTitle}”: ทบทวนด้วยแบบทดสอบ", "③ “{homeTabTalk}”: ลองใช้กับติวเตอร์ AI"],
+    vi: ["① Bắt đầu từ “{planTitle}”", "Kịch bản: đến lượt bạn, “{scriptSay}”", "② “{keepTitle}”: ôn lại bằng câu đố", "③ “{homeTabTalk}”: dùng với gia sư AI"],
+    id: ["① Mulai dari “{planTitle}”", "Naskah: saat giliranmu, “{scriptSay}”", "② “{keepTitle}”: isi celah dengan kuis", "③ “{homeTabTalk}”: pakai bersama tutor AI"],
+    hi: ["① “{planTitle}” से शुरू करें", "स्क्रिप्ट: अपनी बारी पर “{scriptSay}”", "② “{keepTitle}”: क्विज़ से दोहराएँ", "③ “{homeTabTalk}”: AI ट्यूटर के साथ इस्तेमाल करें"],
+    ar: ["① ابدأ بـ«{planTitle}»", "النص: في دورك «{scriptSay}»", "② «{keepTitle}»: راجع بالاختبارات", "③ «{homeTabTalk}»: استخدمه مع المعلّم الذكي"],
+    fr: ["① Commencez par « {planTitle} »", "Script : à votre tour, « {scriptSay} »", "② « {keepTitle} » : révisez par quiz", "③ « {homeTabTalk} » : pratiquez avec le tuteur IA"],
+    it: ["① Inizia da «{planTitle}»", "Copione: al tuo turno, «{scriptSay}»", "② «{keepTitle}»: ripassa con i quiz", "③ «{homeTabTalk}»: usalo con il tutor IA"],
+    pt: ["① Comece por “{planTitle}”", "Roteiro: na sua vez, “{scriptSay}”", "② “{keepTitle}”: revise com quizzes", "③ “{homeTabTalk}”: use com o tutor de IA"],
+    ru: ["① Начните с «{planTitle}»", "Сценарий: в свою очередь — «{scriptSay}»", "② «{keepTitle}»: повторяйте в тестах", "③ «{homeTabTalk}»: пробуйте с ИИ-репетитором"],
+  },
   "my-today": {
     ko: ["「{planTitle}」에서 하나를 눌러요", "내 차례에 「{scriptSay}」", "맞게 말하면 ★, 위 줄이 차요", "끝까지 말하면 「{scriptCompleted}」", "「{planTitle}」에 ✓"],
     en: ["Tap one in “{planTitle}”", "Your turn: “{scriptSay}”", "Say it right for ★ — the bar fills", "Finish for “{scriptCompleted}”", "“{planTitle}” gets a ✓"],
@@ -106,7 +123,8 @@ for (const locale of locales) {
 
   await page.goto(`http://localhost:${PORT}/?screen=map`, { waitUntil: "domcontentloaded" });
   await wait(8000);
-  const firstItem = page.locator("section ul li button").first();
+  const plan = page.locator("[data-today-plan]").first();
+  const firstItem = plan.locator("ul li button").first();
   await firstItem.scrollIntoViewIfNeeded();
   await page.evaluate(() => window.scrollBy(0, -140));
   await wait(600);
@@ -114,49 +132,96 @@ for (const locale of locales) {
   await wait(300);
   const start = await now();
 
-  await showCaption(caption(0));
-  await wait(3000);
-  await firstItem.click();
-  await wait(1800);
-
   const pack = await (await fetch(`${API}/api/curriculum/scripts?pack=1&lang=${learn}`, { headers: { "x-rc-user": state.uid } })).json();
   const script = (pack.scripts ?? []).filter((s) => s.stage === 1).sort((a, b) => (a.situation ?? 99) - (b.situation ?? 99))[0];
   const mine = script.lines.filter((l) => l.who === "me");
-  let said = 0;
-  await showCaption(caption(1));
-  for (let turn = 0; turn < 14; turn += 1) {
-    const say = page.locator("div.fixed button", { hasText: new RegExp(ui.scriptSay.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) }).last();
-    const next = page.locator("div.fixed button", { hasText: new RegExp(`^${ui.scriptNext}$`) }).last();
-    const finished = () => page.locator("div.fixed").last().innerText().then((t) => t.includes(ui.scriptCompleted)).catch(() => false);
-    for (let w = 0; w < 30 && !(await say.count()) && !(await next.count()) && !(await finished()); w += 1) await wait(300);
-    if (await finished()) break;
-    if (await next.count()) { await next.click(); await wait(900); continue; }
-    if (!(await say.count())) break;
-    const k = (await page.locator("div.fixed ol li.justify-end").count()) - 1;
-    sayNext = mine[Math.max(0, k)]?.text ?? "";
-    await wait(350);
-    await say.click();
-    const from = await now();
-    // 결과가 뜰 때까지(🎤 버튼이 다시 생기거나 다음 버튼) — 이 구간은 영상에서 빨리.
-    await wait(1500);
-    for (let w = 0; w < 40; w += 1) {
-      const busy = await page.locator("div.fixed").last().evaluate((el) => /…|\.\.\./.test(el.innerText.slice(-200))).catch(() => false);
-      if (!busy && ((await say.count()) || (await next.count()))) break;
-      await wait(400);
+  // 대본을 내 차례마다 말한다(받아쓰기는 그 줄로 바꿔 끼움). 채점 기다림은 빨리 감는다. upTo줄 말하면 멈춤.
+  const speak = async (upTo, onFirst) => {
+    let said = 0;
+    for (let turn = 0; turn < 14 && said < upTo; turn += 1) {
+      const say = page.locator("div.fixed button", { hasText: new RegExp(ui.scriptSay.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) }).last();
+      const next = page.locator("div.fixed button", { hasText: new RegExp(`^${ui.scriptNext}$`) }).last();
+      const finished = () => page.locator("div.fixed").last().innerText().then((t) => t.includes(ui.scriptCompleted)).catch(() => false);
+      for (let w = 0; w < 30 && !(await say.count()) && !(await next.count()) && !(await finished()); w += 1) await wait(300);
+      if (await finished()) break;
+      if (await next.count()) { await next.click(); await wait(900); continue; }
+      if (!(await say.count())) break;
+      const k = (await page.locator("div.fixed ol li.justify-end").count()) - 1;
+      sayNext = mine[Math.max(0, k)]?.text ?? "";
+      await wait(350);
+      await say.click();
+      const from = await now();
+      await wait(1500);
+      for (let w = 0; w < 40; w += 1) {
+        const busy = await page.locator("div.fixed").last().evaluate((el) => /…|\.\.\./.test(el.innerText.slice(-200))).catch(() => false);
+        if (!busy && ((await say.count()) || (await next.count()))) break;
+        await wait(400);
+      }
+      fast.push([from + 0.4, (await now()) - 0.2]);
+      said += 1;
+      await wait(said === 1 ? 600 : 700);
+      if (said === 1 && onFirst) await onFirst();
     }
-    fast.push([from + 0.4, (await now()) - 0.2]);
-    said += 1;
-    await wait(said === 1 ? 600 : 700);
-    if (said === 1) { await showCaption(caption(2)); await wait(3400); }
+    return said;
+  };
+  const closeTop = () => page.locator("div.fixed button", { hasText: new RegExp(`^${ui.billingClose}$`) }).last().click({ timeout: 3000 }).catch(() => page.keyboard.press("Escape"));
+  let said = 0;
+
+  if (clipName === "flow") {
+    // 사용법 맨 앞 "학습 흐름"(2026-10-29): 오늘 할 것(대본 두 줄) → 지속 학습(퀴즈 한 문제) → 대화 탭(AI 튜터).
+    await showCaption(caption(0));
+    await wait(2600);
+    await firstItem.click();
+    await wait(1600);
+    await showCaption(caption(1));
+    said = await speak(2);
+    await wait(900);
+    const x = page.locator(`div.fixed button[aria-label="${ui.billingClose}"]`).filter({ hasText: "✕" }).last();
+    if (await x.count()) await x.click({ timeout: 3000 }).catch(closeTop);
+    else await closeTop();
+    await wait(1200);
+    const keep = page.locator("[data-keep-learning]").first();
+    await keep.evaluate((el) => el.scrollIntoView({ block: "center", behavior: "smooth" }));
+    await wait(900);
+    await showCaption(caption(2));
+    await wait(2600);
+    await keep.locator("[data-study-start]").first().click();
+    await wait(2200);
+    // 맞는 답을 누른다(문제 글에 그대로 있는 보기 — 고르기·뜻 문제), 못 찾으면 첫 보기.
+    const options = page.locator("[data-quiz] section button.rounded-xl");
+    const right = await page.locator("[data-quiz] section").first().evaluate((el) => {
+      const buttons = [...el.querySelectorAll("button.rounded-xl")];
+      const clone = el.cloneNode(true);
+      clone.querySelectorAll("button").forEach((b) => b.remove());
+      const text = clone.textContent ?? "";
+      return buttons.findIndex((b) => (b.textContent ?? "").trim() && text.includes((b.textContent ?? "").trim()));
+    }).catch(() => -1);
+    const option = options.nth(Math.max(0, right));
+    if (await options.count()) {
+      await option.click();
+      await wait(2200);
+    }
+    await page.locator(`button[aria-label="${ui.billingClose}"]`).last().click({ timeout: 3000 }).catch(() => page.keyboard.press("Escape"));
+    await wait(1000);
+    await showCaption(caption(3));
+    await page.locator(`nav button[aria-label="${ui.homeTabTalk}"]`).first().click({ timeout: 5000 }).catch(() => page.goto(`http://localhost:${PORT}/?screen=talk`));
+    await wait(4200);
+  } else {
+    await showCaption(caption(0));
+    await wait(3000);
+    await firstItem.click();
+    await wait(1800);
+    await showCaption(caption(1));
+    said = await speak(99, async () => { await showCaption(caption(2)); await wait(3400); });
+    await wait(800);
+    await page.locator("div.fixed ol").last().evaluate((el) => el.scrollTo({ top: el.scrollHeight, behavior: "smooth" })).catch(() => {});
+    await showCaption(caption(3));
+    await wait(4000);
+    await closeTop();
+    await wait(1200);
+    await showCaption(caption(4));
+    await wait(4000);
   }
-  await wait(800);
-  await page.locator("div.fixed ol").last().evaluate((el) => el.scrollTo({ top: el.scrollHeight, behavior: "smooth" })).catch(() => {});
-  await showCaption(caption(3));
-  await wait(4000);
-  await page.locator("div.fixed button", { hasText: new RegExp(`^${ui.billingClose}$`) }).last().click().catch(() => page.keyboard.press("Escape"));
-  await wait(1200);
-  await showCaption(caption(4));
-  await wait(4000);
   const end = await now();
   await cdp.send("Page.stopScreencast").catch(() => {});
 

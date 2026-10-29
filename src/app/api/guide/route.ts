@@ -20,6 +20,7 @@ import callBefore279 from "@/lib/guide/callBefore279.json";
 import mapBefore280 from "@/lib/guide/mapBefore280.json";
 import mapBefore281 from "@/lib/guide/mapBefore281.json";
 import mapBefore282 from "@/lib/guide/mapBefore282.json";
+import { guideOverview } from "@/lib/guide/overview";
 
 export const runtime = "nodejs";
 
@@ -222,7 +223,9 @@ export async function GET(request: NextRequest) {
             }),
         }))
       : undefined;
-  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}) });
+  // `overview=1`(2026-10-29): 학습 흐름(영상 + 그림 셋)과 장마다 해야 할 것·할 수 있는 것 카드 — 그리는 빌드만 묻는다.
+  const overview = chapters && request.nextUrl.searchParams.get("overview") === "1" ? guideOverview(language) : undefined;
+  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}), ...(overview ? { overview } : {}) });
 }
 
 /** 뺀 칸(RETIRED_MY_SECTIONS)을 건너뛰고 "1. …" 번호를 다시 매긴다(숫자로 시작하는 제목만, 14개 언어 모두 "n. "). */

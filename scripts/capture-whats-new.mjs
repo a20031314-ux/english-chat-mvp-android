@@ -170,7 +170,10 @@ const GUIDE_MORE_ITEMS = [
 // `guide-calls`: 통화 기록을 채팅과 따로(2026-10-27) — 대화 목록에 "AI 튜터와 통화" 줄이 생겨 talk-list 대신 talk-calls.
 const GUIDE_CALLS = VERSION === "guide-calls";
 const GUIDE_PARTS = VERSION === "guide-parts";
-const GUIDE = VERSION === "guide" || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+// `guide-overview`(2026-10-29): 사용법 큰 그림(lib/guide/overview.ts) — 학습 흐름 첫 그림(오늘 할 것)·내 진척 시트·영상 목록(지금 화면).
+const GUIDE_OVERVIEW = VERSION === "guide-overview";
+const GUIDE_OVERVIEW_ITEMS = [{ shot: "ov-today", step: "today-plan" }, { shot: "ov-progress", step: "my-progress" }, { shot: "video-library" }];
+const GUIDE = VERSION === "guide" || GUIDE_OVERVIEW || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
@@ -337,6 +340,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_MORE_ITEMS }
   : GUIDE_PARTS
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
+  : GUIDE_OVERVIEW
+  ? { version: "guide", items: GUIDE_OVERVIEW_ITEMS }
   : GUIDE_CALLS
   ? { version: "guide", items: [{ shot: "talk-calls", step: "talk-list" }, { shot: "people-ai", step: "people-lang" }] }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
@@ -1503,6 +1508,16 @@ const STEPS = {
     await wait(2500);
     await card.evaluate((el) => el.scrollIntoView({ block: "center" }));
     await wait(1500);
+  },
+  async "my-progress"(ctx) {
+    // 사용법 큰 그림(2026-10-29): My 맨 위 "📊 내 진척" 한 줄을 연 시트(단계·이미 앎·말한 문장·할 수 있는 일).
+    const { page, wait } = ctx;
+    await STEPS["keep-learning"](ctx);
+    const row = page.locator("[data-my-progress-open]").first();
+    for (let i = 0; i < 40 && !(await row.count()); i++) await wait(500);
+    await row.click();
+    await page.locator("[data-my-progress-sheet]").first().waitFor({ timeout: 20_000 });
+    await wait(2500);
   },
   async "letters-reading"({ page, ui, locale, wait }) {
     // 2.78: 글자가 다른 학습 언어(일본어, 일본어 앱이면 한국어)의 단계 학습 — 줄 아래 읽는 법([읽는 법] 켬).

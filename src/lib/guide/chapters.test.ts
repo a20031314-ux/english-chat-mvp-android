@@ -80,3 +80,29 @@ test("글에 탭 경로를 쓰지 않는다(지금 글, 14개 언어)", () => {
     }
   }
 });
+
+// 사용법 큰 그림(2026-10-29): 14개 언어 모두 흐름 셋·장마다 카드 둘, 그림 파일이 있고 버튼 이름은 copy 키.
+import { OVERVIEW_CHAPTERS, OVERVIEW_LANGUAGES, guideOverview } from "./overview.ts";
+import { existsSync } from "node:fs";
+const COPY_TEXT = readFileSync(new URL("../copy.ts", import.meta.url), "utf8");
+
+test("overview: every language, every card, real pictures", () => {
+  assert.equal(OVERVIEW_LANGUAGES.length, 14);
+  for (const language of OVERVIEW_LANGUAGES) {
+    const overview = guideOverview(language);
+    assert.equal(overview.flow.steps.length, 3);
+    for (const id of OVERVIEW_CHAPTERS) {
+      const cards = overview.chapters[id];
+      assert.ok(cards?.todo.text && cards.cando.text, `${language} ${id}`);
+    }
+    const cards = [...overview.flow.steps, ...Object.values(overview.chapters).flatMap((one) => [one.todo, one.cando])];
+    for (const card of cards) {
+      assert.ok(!/\n/.test(card.text), "one line");
+      for (const [, key] of card.text.matchAll(/\{ui:(\w+)\}/g)) assert.ok(new RegExp(`\\n\\s+${key}:`).test(COPY_TEXT), `${key} is a copy key`);
+    }
+  }
+  for (const card of [...guideOverview("en").flow.steps, ...Object.values(guideOverview("en").chapters).flatMap((one) => [one.todo, one.cando])]) {
+    if (card.shot.startsWith("ov-")) continue; // 새로 찍는 그림(capture-whats-new guide-overview)
+    assert.ok(existsSync(new URL(`../../../public/guide/en/${card.shot}.webp`, import.meta.url)), card.shot);
+  }
+});
