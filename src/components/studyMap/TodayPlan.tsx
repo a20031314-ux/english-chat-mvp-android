@@ -39,7 +39,9 @@ import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
-import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
+import { MiniDialogue, type Bubble } from "@/components/studyMap/WayPicker";
+import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/studyMap/WordMatch";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
@@ -215,7 +217,10 @@ export function TodayPlan({
   const [bundle, setBundle] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
   const [matching, setMatching] = useState(false);
-  const [vocabByOpen, setVocabByOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState<"keep" | "review" | null>(null);
+  // 어휘 짝 맞추기에서 막 본 낱말들(그다음 예문 빈칸 묶음).
+  const [wordRound, setWordRound] = useState<string[] | null>(null);
+  const servedWords = useRef<string>("");
   // 오늘 끝까지 해 본 대본·문장구조(통과 못 해도 ✓, curriculum/practicedToday.ts).
   const [practiced, setPracticed] = useState<Set<string>>(new Set());
   useEffect(() => {
@@ -473,7 +478,6 @@ export function TodayPlan({
     });
   const reviewQueue = studyQueue("review", now || Date.now(), studyWeakest, todaySkip);
   const upReview = reviewQueue[0] ?? null;
-  const upNext = firstPick(studyQueue("learn", now || Date.now(), studyWeakest, todaySkip)) ?? null;
   const nextIn = (which: StudyLane, weakestNow: PartId | null) => firstPick(studyQueue(which, Date.now(), weakestNow), which) ?? null;
   const words = wordbook(language, known, savedWords, (word) => wordGloss(language, word));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
@@ -495,8 +499,6 @@ export function TodayPlan({
   const learnTest: "placement" | "stage" | "entry" | null = placementOffer ? "placement" : stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : null;
   const reviewTest: "take" | null = checkupOffer ? "take" : null;
   const itemsOf = (test: "placement" | "stage" | "entry" | "take") => (test === "placement" ? [] : test === "stage" ? stageTestItems : test === "entry" ? entryItems : checkupItems);
-  const minutesOf = (list: readonly { question: { kind: string } }[]) =>
-    Math.max(1, Math.round(list.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
   const studyItem = (pick: StudyPick): PlanItem => {
     const practice = itemForKey(language, pick.key);
     return {
@@ -591,66 +593,6 @@ export function TodayPlan({
       </button>
     </div>
   );
-  const testButton = (test: "placement" | "stage" | "entry" | "take") => {
-    const testList = itemsOf(test);
-    return (
-      <button
-        type="button"
-        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : { "data-checkup-offer": "" })}
-        onClick={() => {
-          if (test !== "placement") setFrozenItems(testList);
-          setCheckupOpen(test);
-        }}
-        className="mt-2 flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2 text-start text-ink hover:bg-white/5"
-      >
-        <span aria-hidden className="shrink-0 text-caption">📝</span>
-        <span className="min-w-0 flex-1">
-          <span className="block text-note font-semibold">
-            {test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle}
-          </span>
-          {test === "placement" ? null : (
-            <span className="block text-meta text-slate-400">{ui.checkupMeta.replace("{n}", String(testList.length)).replace("{m}", String(minutesOf(testList)))}</span>
-          )}
-        </span>
-      </button>
-    );
-  };
-  const startButton = (which: StudyLane, pick: StudyPick | null, bare = false) => (
-    <button
-      type="button"
-      disabled={!pick}
-      data-study-start={which}
-      onClick={() => startStudy(pick, which)}
-      className={
-        bare
-          ? `flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${pick ? "text-ink hover:bg-white/5" : "text-slate-500"}`
-          : `mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${!pick ? "border border-line text-slate-500" : finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`
-      }
-    >
-      <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
-      <span className="min-w-0 flex-1">
-        <span className="block text-note font-semibold">{pick ? ui.studyMore : ui.studyReviewNone}</span>
-        {/* Only why, not what — the name gave the answer away before the quiz opened (2026-10-29, user). */}
-        {pick ? <span className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>{reasonLabel(pick)}</span> : null}
-      </span>
-    </button>
-  );
-  const reasonLabel = (pick: StudyPick) =>
-    pick.reason === "again"
-      ? ui.planAgain
-      : pick.reason === "confirm"
-        ? ui.studyWhyConfirm
-        : pick.reason === "gap"
-          ? ui.studyWhyGap
-        : pick.reason === "word"
-          ? ui.studyWhyWord
-        : pick.reason === "missed"
-        ? ui.studyWhyMissed
-        : pick.reason === "weak"
-          ? ui.studyWhyWeak.replace("{part}", pick.part ? partName(ui, pick.part) : "")
-          : pick.reason === "new"
-            ? ui.studyWhyNew
-            : ui.studyWhyKeep;
   const unitMix = unitItem ? unitMixOf(unitItem) : null;
   // 같은 날·같은 조합이면 같은 문제(씨앗) — 다시 그려도 바뀌지 않는다.
   const unitQuestions = unitItem && unitMix ? buildUnit(language, unitItem.id, unitMix, day) : [];
@@ -820,6 +762,20 @@ export function TodayPlan({
   );
   const overlays = (
     <>
+      {matching && vocabPairs.length >= 3 ? (
+        <WordMatch
+          ui={ui}
+          pairs={vocabPairs}
+          onClose={() => {
+            setMatching(false);
+            setStudying(null);
+          }}
+          onNext={(seen) => {
+            setMatching(false);
+            startStudy(studying, "learn", seen.map((word) => `w|${word}`));
+          }}
+        />
+      ) : null}
       {checkupOpen === "stage" ? (
         <CheckupPlayer
           ui={ui}
@@ -928,7 +884,6 @@ export function TodayPlan({
           bundleKeys={bundle.keys}
           onBundle={(results) => finishMany(results.filter((one) => !one.skipped).map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })))}
           onDone={() => undefined}
-          reason={lane === "review" ? ui.studyReview : studyFocus ? partName(ui, studyFocus) : ui.studyRandom}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(lane, studyWeakest), lane)}
           onClose={() => {
@@ -951,7 +906,6 @@ export function TodayPlan({
           stage={stage}
           mix={settings.mix}
           style={studying ? styleFor(lane) : undefined}
-          reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
@@ -972,58 +926,121 @@ export function TodayPlan({
       ) : null}
     </>
   );
-  const keepBody = (
-    <div data-keep-learning>
-      {/* 층위(2026-10-30 사용자 "지속 학습 > 단어 > 학습 방식"): 탭(무엇을) → 그 탭 안 ▶ 계속 공부 한 줄, 방식·낱말 고르기는 그 줄 안의 칩. */}
-      <div role="tablist" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
-        {FOCUSES.filter((focus) => focus !== "review" && focus !== "auto").map((focus) => (
-          <button
-            key={focus}
-            type="button"
-            role="tab"
-            aria-selected={keepFocus === focus}
-            data-focus={focus}
-            onClick={() => save({ ...settings, focus })}
-            className={`rounded-full px-3 py-1 text-caption ${keepFocus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
-          >
-            {partName(ui, focus as PartId)}
-          </button>
-        ))}
-      </div>
-      <div data-study-card className="mt-2 rounded-xl border border-dashed border-line">
-        {startButton("learn", upNext, true)}
-        {/* 이 공부의 옵션(방식 · 어떤 낱말)은 ▶ 아래 한 줄 — 탭과 같은 크기로 늘어놓지 않음. */}
-        <div data-study-options className="flex flex-wrap items-center gap-1.5 px-3 pb-2 ps-10">
-          {waysFor(keepFocus).length > 1 ? (
-            <WayPicker
-              ui={ui}
-              ways={waysFor(keepFocus)}
-              value={keepStyle}
-              onPick={(next) => save({ ...settings, styles: { ...settings.styles, [keepFocus]: next } })}
-              data="study-style"
-            />
-          ) : null}
-          {keepFocus === "vocab" && bank ? (
-            <button
-              type="button"
-              data-vocab-by-open
-              aria-expanded={vocabByOpen}
-              onClick={() => setVocabByOpen(!vocabByOpen)}
-              className="flex shrink-0 items-center gap-1 rounded-full border border-line px-3 py-1 text-caption text-ink hover:bg-white/10"
-            >
-              <span>
-                {settings.vocab && settings.vocab.by !== "all" && vocabPick?.value
-                  ? vocabGroupName(ui, settings.vocab.by, vocabPick.value)
-                  : { all: ui.vocabByAll, band: ui.vocabByBand, pos: ui.vocabByPos, topic: ui.vocabByTopic }[settings.vocab?.by ?? "all"]}
-              </span>
-              <span aria-hidden className="text-slate-500">▾</span>
+  // 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 … 풀면 다음 문제로, 설명이나 옵션은 그 내부에"):
+  // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
+  const recordOne = (one: { key: string; correct: boolean; skipped: boolean }) => {
+    if (one.skipped || !one.key) return;
+    setAsked((current) => new Set([...current, one.key]));
+    finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
+  };
+  const takeBatch = (made: { keys: string[]; questions: QuizQuestion[] } | null): QuizBatch | null => {
+    if (!made) return null;
+    setAsked((current) => new Set([...current, ...made.keys]));
+    setRound((n) => n + 1);
+    return made;
+  };
+  // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
+  const keepMake = (): QuizBatch | null => {
+    if (keepFocus === "vocab") {
+      if (keepStyle === "match") {
+        if (!wordRound) return null;
+        const id = wordRound.join("|");
+        if (servedWords.current === id) {
+          setWordRound(null);
+          return null;
+        }
+        servedWords.current = id;
+        return takeBatch(bundleFor("learn", wordRound));
+      }
+      const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
+      return keys.length ? takeBatch(bundleFor("learn", keys.slice(0, MATCH_SIZE))) : null;
+    }
+    return takeBatch(bundleFor("learn"));
+  };
+  const iconButton = "flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink";
+  const testIcon = (test: "placement" | "stage" | "entry" | "take") => {
+    const testList = itemsOf(test);
+    const name =
+      test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle;
+    return (
+      <button
+        type="button"
+        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : { "data-checkup-offer": "" })}
+        aria-label={name}
+        title={name}
+        onClick={() => {
+          if (test !== "placement") setFrozenItems(testList);
+          setCheckupOpen(test);
+        }}
+        className={iconButton}
+      >
+        <span aria-hidden>📝</span>
+      </button>
+    );
+  };
+  const settingsIcon = (which: "keep" | "review") => (
+    <button type="button" data-quiz-settings={which} aria-label={ui.planSettings} title={ui.planSettings} onClick={() => setSettingsOpen(which)} className={iconButton}>
+      <span aria-hidden>⚙</span>
+    </button>
+  );
+  const waysGrid = (ways: ReturnType<typeof waysFor>, value: Style, onPick: (next: Style) => void, data: string) => (
+    <div data-way-sheet={data} className="grid grid-cols-2 gap-2">
+      {ways.map((one) => (
+        <button
+          key={one.id}
+          type="button"
+          aria-pressed={value === one.id}
+          data-way={one.id}
+          aria-label={one.label}
+          onClick={() => onPick(one.id)}
+          className={`flex min-w-0 flex-col gap-2 rounded-xl border p-2 text-start ${value === one.id ? "border-status-learned bg-status-learned/10" : "border-line hover:bg-white/5"}`}
+        >
+          <MiniDialogue bubbles={one.bubbles} />
+          <span className="text-caption font-semibold text-ink">{one.label}</span>
+        </button>
+      ))}
+    </div>
+  );
+  const settingsSheet = settingsOpen ? (
+    <BodyLayer>
+      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setSettingsOpen(null)}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={ui.planSettings}
+          data-quiz-settings-sheet={settingsOpen}
+          onClick={(event) => event.stopPropagation()}
+          className="flex max-h-[85vh] w-full max-w-md flex-col gap-3 overflow-y-auto rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
+        >
+          <div className="flex items-center justify-end">
+            <button type="button" aria-label={ui.billingClose} onClick={() => setSettingsOpen(null)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+              ✕
             </button>
-          ) : null}
-        </div>
-        {/* Which words (frequency band, part of speech, topic) — an option of this study, folded into its row (2026-10-30). */}
-        {keepFocus === "vocab" && bank && vocabByOpen ? (
-          <div data-vocab-by className="flex flex-col gap-1.5 border-t border-line px-3 py-2">
-          <div role="group" className="flex flex-wrap gap-1.5">
+          </div>
+          {settingsOpen === "keep" ? (
+            <>
+              {/* 무엇을 */}
+              <div role="tablist" data-study-focus className="flex flex-wrap gap-1.5">
+                {(["vocab", "grammar", "expression"] as const).map((focus) => (
+                  <button
+                    key={focus}
+                    type="button"
+                    role="tab"
+                    aria-selected={keepFocus === focus}
+                    data-focus={focus}
+                    onClick={() => save({ ...settings, focus })}
+                    className={`rounded-full px-3 py-1 text-caption ${keepFocus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+                  >
+                    {partName(ui, focus)}
+                  </button>
+                ))}
+              </div>
+              {/* 어떻게 */}
+              {waysFor(keepFocus).length > 1 ? waysGrid(waysFor(keepFocus), keepStyle, (next) => save({ ...settings, styles: { ...settings.styles, [keepFocus]: next } }), "study-style") : null}
+              {/* 어떤 낱말 */}
+              {keepFocus === "vocab" && bank ? (
+                <div data-vocab-by className="flex flex-col gap-1.5">
+                  <div role="group" className="flex flex-wrap gap-1.5">
             {(["all", "band", "pos", "topic"] as const).map((by) => (
               <button
                 key={by}
@@ -1054,68 +1071,70 @@ export function TodayPlan({
               })}
             </div>
           ) : null}
-          </div>
-        ) : null}
+                </div>
+              ) : null}
+            </>
+          ) : (
+            waysGrid(waysFor("review"), reviewStyle, (next) => save({ ...settings, styles: { ...settings.styles, review: next } }), "review-style")
+          )}
+        </div>
       </div>
-      {matching && vocabPairs.length >= 3 ? (
-        <WordMatch
+    </BodyLayer>
+  ) : null;
+  const keepResetKey = `${language}|${keepFocus}|${keepStyle}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}|${wordRound?.join("|") ?? ""}`;
+  const keepBody = (
+    <div data-keep-learning>
+      <div className="flex items-center justify-end gap-0.5">
+        {keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} /> : null}
+        {checkups.length ? (
+          <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
+            <span aria-hidden>📈</span>
+          </button>
+        ) : null}
+        {learnTest ? testIcon(learnTest) : null}
+        {settingsIcon("keep")}
+      </div>
+      {keepFocus === "vocab" && keepStyle === "match" && !wordRound ? (
+        <WordMatch key={keepResetKey} inline ui={ui} pairs={vocabPairs} onClose={() => undefined} onNext={(seen) => setWordRound(seen.map((word) => `w|${word}`))} />
+      ) : (
+        <InlineQuiz
           ui={ui}
-          pairs={vocabPairs}
-          onClose={() => {
-            setMatching(false);
-            setStudying(null);
-          }}
-          onNext={(seen) => {
-            setMatching(false);
-            startStudy(studying, "learn", seen.map((word) => `w|${word}`));
-          }}
+          locale={locale}
+          language={language}
+          resetKey={keepResetKey}
+          make={keepMake}
+          onResult={recordOne}
+          empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {ui.planAllDone}</p>}
         />
-      ) : null}
+      )}
       {tally.known.length || tally.fixed.length ? (
         <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
           {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
         </p>
       ) : null}
-      {checkups.length ? (
-        <button
-          type="button"
-          data-skill-record-open
-          onClick={() => setCheckupOpen("record")}
-          className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200"
-        >
-          <span>📈 {ui.skillRecord}</span>
-          <span className="tabular-nums">
-            · {checkups.length}
-            {lastBig ? ` · ${ui.stageNumber.replace("{n}", String(lastBig.stage))}` : ""}
-          </span>
-        </button>
-      ) : null}
-      {learnTest ? testButton(learnTest) : null}
-      {/* 단어장은 어휘 탭 안의 한 줄(눌러서 시트) — 그래프·망 미리보기를 칸에 늘어놓지 않음(2026-10-30). */}
-      {keepFocus === "vocab" ? <WordbookCard compact ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} /> : null}
+      {settingsSheet}
     </div>
   );
-  // 복습 칸(지속 학습 아래, 따로): 다시 볼 것 수 · 연습 방식 · 이번 주 확인 · ▶ 계속 공부(복습 줄).
+  // 복습 칸(지속 학습 아래, 따로): 틀린 것이 바로 문제로, 방식은 ⚙, 이번 주 확인은 아이콘. 남은 수는 칸 머리에만.
   const reviewLeft = reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length);
   const reviewSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewLeft)}</span> : null;
   const reviewBody = (
     <div data-review>
-      {/* 남은 수는 칸 머리에만(같은 숫자 두 번 안 씀), 방식은 ▶ 줄 안의 칩(2026-10-30). */}
-      <div data-study-card className="mt-2 rounded-xl border border-dashed border-line">
-        {startButton("review", upReview, true)}
-        {upReview && waysFor("review").length > 1 ? (
-          <div data-study-options className="flex px-3 pb-2 ps-10">
-            <WayPicker
-              ui={ui}
-              ways={waysFor("review")}
-              value={reviewStyle}
-              onPick={(next) => save({ ...settings, styles: { ...settings.styles, review: next } })}
-              data="review-style"
-            />
-          </div>
-        ) : null}
-      </div>
-      {reviewTest ? testButton(reviewTest) : null}
+      {upReview || reviewTest ? (
+        <div className="flex items-center justify-end gap-0.5">
+          {reviewTest ? testIcon(reviewTest) : null}
+          {upReview && waysFor("review").length > 1 ? settingsIcon("review") : null}
+        </div>
+      ) : null}
+      <InlineQuiz
+        ui={ui}
+        locale={locale}
+        language={language}
+        resetKey={`${language}|review|${reviewStyle}`}
+        make={() => (upReview ? takeBatch(bundleFor("review")) : null)}
+        onResult={recordOne}
+        empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {ui.studyReviewNone}</p>}
+      />
     </div>
   );
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.

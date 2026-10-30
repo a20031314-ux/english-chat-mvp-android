@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import type { UICopy } from "@/lib/copy";
 
@@ -42,7 +42,20 @@ export function matchPairs(candidates: readonly MatchPair[]): MatchPair[] {
 }
 
 /** onNext: 어휘 계속 공부 — 짝을 다 맞히면 같은 낱말들의 예문 빈칸으로(2026-10-30 사용자 "단순하게 맞추기 > 예문 형태로"). */
-export function WordMatch({ ui, pairs, onClose, onNext }: { ui: UICopy; pairs: readonly MatchPair[]; onClose: () => void; onNext?: (words: string[]) => void }) {
+export function WordMatch({
+  ui,
+  pairs,
+  onClose,
+  onNext,
+  inline = false,
+}: {
+  ui: UICopy;
+  pairs: readonly MatchPair[];
+  onClose: () => void;
+  onNext?: (words: string[]) => void;
+  /** 퀴즈 칸 안에 바로(머리·닫기 없이, 다 맞히면 저절로 onNext — 2026-10-30). */
+  inline?: boolean;
+}) {
   const [round, setRound] = useState(0);
   const set = useMemo(() => {
     const start = (round * MATCH_SIZE) % Math.max(1, pairs.length);
@@ -53,6 +66,15 @@ export function WordMatch({ ui, pairs, onClose, onNext }: { ui: UICopy; pairs: r
   const [done, setDone] = useState<Set<number>>(new Set());
   const [miss, setMiss] = useState<number | null>(null);
   const finished = done.size === set.picked.length && set.picked.length > 0;
+  const nextRef = useRef(onNext);
+  useEffect(() => {
+    nextRef.current = onNext;
+  });
+  useEffect(() => {
+    if (!inline || !finished) return;
+    const timer = window.setTimeout(() => nextRef.current?.(set.picked.map((one) => one.word)), 700);
+    return () => window.clearTimeout(timer);
+  }, [inline, finished, set]);
 
   const pickRight = (index: number) => {
     if (chosen === null || done.has(index)) return;
@@ -66,6 +88,49 @@ export function WordMatch({ ui, pairs, onClose, onNext }: { ui: UICopy; pairs: r
   };
 
   const cell = "min-h-12 w-full rounded-xl border px-3 py-2 text-start text-note";
+  if (inline) {
+    return (
+      <div data-word-match className="mt-1">
+        <div className="grid grid-cols-2 gap-2">
+          <ul className="flex flex-col gap-2">
+            {set.left.map((i) => (
+              <li key={`w${i}`}>
+                <button
+                  type="button"
+                  data-match-word={i}
+                  disabled={done.has(i)}
+                  onClick={() => setChosen(i)}
+                  dir="auto"
+                  className={`${cell} ${
+                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : chosen === i ? "border-status-learned bg-status-learned/15 text-ink" : "border-line text-ink hover:bg-white/5"
+                  }`}
+                >
+                  {set.picked[i]!.word}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex flex-col gap-2">
+            {set.right.map((i) => (
+              <li key={`m${i}`}>
+                <button
+                  type="button"
+                  data-match-meaning={i}
+                  disabled={done.has(i)}
+                  onClick={() => pickRight(i)}
+                  className={`${cell} ${
+                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : miss === i ? "border-warn bg-warn/10 text-ink" : "border-line text-slate-200 hover:bg-white/5"
+                  }`}
+                >
+                  {set.picked[i]!.meaning}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  }
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">

@@ -35,6 +35,7 @@ export function WordbookCard({
   words,
   onWord,
   compact = false,
+  icon = false,
 }: {
   ui: UICopy;
   language: string;
@@ -42,6 +43,8 @@ export function WordbookCard({
   onWord: (word: string) => void;
   /** 지속 학습 어휘 탭 안: 이름·개수 한 줄만, 누르면 시트(2026-10-30 "기능 안의 옵션이 주요 기능처럼"). */
   compact?: boolean;
+  /** 퀴즈 칸 머리의 아이콘(📖)만 — 누르면 같은 시트. */
+  icon?: boolean;
 }) {
   const [view, setView] = useState<View>(readView);
   const [open, setOpen] = useState(false);
@@ -84,6 +87,59 @@ export function WordbookCard({
   const posName: Record<string, string> = { noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction };
   const posTop = Math.max(1, ...pos.map((one) => one.all));
 
+  const sheet = (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
+            <div
+              role="dialog"
+              aria-modal="true"
+              data-wordbook-sheet
+              onClick={(event) => event.stopPropagation()}
+              className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
+            >
+              <div className="flex items-center gap-2">
+                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">
+                  {ui.vocabTitle} <span dir="ltr" className="tabular-nums text-slate-400">{words.length}</span>
+                </h3>
+                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+                  ✕
+                </button>
+              </div>
+              <ul className="mt-3 flex min-h-0 flex-wrap gap-1.5 overflow-y-auto">
+                {words.map((row) => (
+                  <li key={row.word}>
+                    <button
+                      type="button"
+                      onClick={() => onWord(row.word)}
+                      className={`rounded-full border px-2.5 py-1 text-start text-meta ${row.state === "known" ? "border-status-mastered/40 text-good" : row.state === "learning" ? "border-status-learned/40 text-ink" : "border-line text-slate-300"}`}
+                    >
+                      <bdi dir="auto">{row.word}</bdi>
+                      {row.gloss ? <span className="ms-1 text-slate-500">{row.gloss}</span> : null}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </BodyLayer>
+  );
+  if (icon) {
+    return (
+      <>
+        <button
+          type="button"
+          data-wordbook-open
+          aria-label={`${ui.vocabTitle} ${words.length}`}
+          title={`${ui.vocabTitle} ${words.length}`}
+          onClick={() => setOpen(true)}
+          className="flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
+        >
+          <span aria-hidden>📖</span>
+        </button>
+        {open ? sheet : null}
+      </>
+    );
+  }
   return (
     <div data-wordbook className="mt-2 flex flex-col gap-1.5">
       {compact ? (
@@ -150,42 +206,7 @@ export function WordbookCard({
           <Net rows={pos.map((one) => ({ label: posName[one.id] ?? one.id, value: one.all / posTop, known: one.known / posTop, count: one.all }))} />
         )}
       </button>
-      {open ? (
-        <BodyLayer>
-          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
-            <div
-              role="dialog"
-              aria-modal="true"
-              data-wordbook-sheet
-              onClick={(event) => event.stopPropagation()}
-              className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
-            >
-              <div className="flex items-center gap-2">
-                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">
-                  {ui.vocabTitle} <span dir="ltr" className="tabular-nums text-slate-400">{words.length}</span>
-                </h3>
-                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
-                  ✕
-                </button>
-              </div>
-              <ul className="mt-3 flex min-h-0 flex-wrap gap-1.5 overflow-y-auto">
-                {words.map((row) => (
-                  <li key={row.word}>
-                    <button
-                      type="button"
-                      onClick={() => onWord(row.word)}
-                      className={`rounded-full border px-2.5 py-1 text-start text-meta ${row.state === "known" ? "border-status-mastered/40 text-good" : row.state === "learning" ? "border-status-learned/40 text-ink" : "border-line text-slate-300"}`}
-                    >
-                      <bdi dir="auto">{row.word}</bdi>
-                      {row.gloss ? <span className="ms-1 text-slate-500">{row.gloss}</span> : null}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </BodyLayer>
-      ) : null}
+      {open ? sheet : null}
     </div>
   );
 }

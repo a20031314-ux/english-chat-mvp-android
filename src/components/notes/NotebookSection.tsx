@@ -2218,7 +2218,7 @@ function MyLayers({
       <>
         {first ? card("today", ui.planTitle, first.summary, first.body) : null}
         {card("stage", stage.title, stage.summary, stage.body)}
-        {parts ? card("keep", ui.keepTitle, parts.keep.summary, parts.keep.body) : null}
+        {parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null}
         {parts || weak ? card("review", ui.reviewLayerTitle, parts?.review.summary ?? null, (
           <>
             {parts?.review.body}

@@ -187,10 +187,6 @@ export function QuizPlayer({
   );
 }
 
-function kindName(ui: UICopy, kind: QuizQuestion["kind"]): string {
-  return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay, meaning: ui.quizKindMeaning }[kind];
-}
-
 export function QuestionView({
   ui,
   locale,
@@ -225,7 +221,7 @@ export function QuestionView({
   }, [autoNext, question]);
   return (
     <section data-kind={question.kind} className="flex flex-col gap-3">
-      <span className="self-start rounded-full border border-line px-2.5 py-0.5 text-meta text-slate-400">{kindName(ui, question.kind)}</span>
+      {/* 모양 이름(빈칸·순서…)은 띄우지 않음 — 문제 모양이 곧 할 일(2026-10-30 사용자 "의미 없는 라벨"). 점검은 data-kind로. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
