@@ -47,7 +47,12 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
   const client = getOpenAIClient();
   if (!target || !client) return null;
   const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
-  const have = [...entry.items.map((item) => item.t), ...allScriptsFor(language).flatMap((script) => script.lines.map((line) => line.text)).filter((text) => text.toLocaleLowerCase().includes(target.piece.toLocaleLowerCase()))].slice(0, 12);
+  // 앱에 이미 있는 문장(문장구조 예문·대본 줄)과 겹치지 않게 — 모델에 보여 주는 건 열둘, 거르는 건 전부.
+  const inApp = [
+    ...(key.startsWith("f|") ? (allFramesFor(language).find((one) => one.id === key.slice(2))?.examples.map((example) => example.text) ?? []) : []),
+    ...allScriptsFor(language).flatMap((script) => script.lines.map((line) => line.text)).filter((text) => text.toLocaleLowerCase().includes(target.piece.toLocaleLowerCase())),
+  ];
+  const have = [...entry.items.map((item) => item.t), ...inApp].slice(0, 12);
   const decoysHave = Object.values(entry.decoys).flat().map((d) => d.d);
   const completion = await completeChat(client, "translate", {
     temperature: 0.8,
@@ -68,7 +73,7 @@ Answer with exactly four S lines and three D lines, nothing else.`,
   const raw = String(completion.choices[0]?.message?.content ?? "");
   const items: { t: string; p: string; g: string }[] = [];
   const decoys: string[] = [];
-  const existing = new Set(have);
+  const existing = new Set([...have, ...inApp]);
   for (const line of raw.split(/\r?\n/)) {
     // "1. S|…", "**S|**…", "- D|…"처럼 앞에 붙은 것은 떼고 읽는다.
     const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());

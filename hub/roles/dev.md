@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **빈칸 쓰기·헷갈리는 오답·자라는 문제은행 (2026-10-30, 서버 바로·화면 앱 빌드):** 지켜볼 것: 문제은행 운영 성장량(`qbank:v1:budget:<날짜>`, 하루 400 상한)·원가(op qbankGrow), 모델이 만든 어색한 예문("Hola, perro. Mucho gusto.") — 정답률 도태만으로 걸러지는지, 필요하면 받기 전 판단(Haiku 한 번 더) 넣기. 표현·문장구조 오답은 한 낱말 조각이 약함(원어민 확인 전). 점검용 `x-qbank-debug: 1` 헤더는 묶음에 남긴 못 건진 모델 답만 보여 줌.
 - **통화 정리 → My 문장구조 (2026-10-30, 사용자 "셋다넣고, 자동으로, 일단은 통화만", 앱 빌드 + 서버 from "call"):** `lib/roleplay/recap.ts`(buildRecap·framesInLine·recapReviewKeys), `roleplay/CallRecap`, 끝난 통화·RoleplayPast 맨 아래, 튜터 줄 `looked`, `locateHandoff.handOffFrame` → NotebookSection, `saveChecks(reviewOnly)`. 남은 것: 채팅에도(사용자 결정 대기), 틀 맞추기가 고정 부분 전부 일치라 "please" 빠진 말 등은 못 찾음(그땐 🔎 My에서 찾기) — 너무 흔한 1단계 틀(I like ___ 등)이 자주 붙는지 실제 통화로 보기, 사용법 통화 장 칸(버전 자를 때).
 - **내 말도 하는 튜터 (2026-10-30, 사용자 "통화와 채팅 둘 다 적용하되 옵션으로", 서버 바로·스위치 앱 빌드):** `lib/tutorLanguage.ts`(기기 저장 tutorLanguageMode), AI 대화 ⋮ 그룹(문구 tutorLanguage 14개), 채팅 `bilingualTutorRule`·통화 `bilingualCharacterRule`. 남은 것: 통화 화면에서도 바꿀 수 있게 할지(지금은 AI 대화 ⋮만), 목소리가 앱 언어 문장을 어떻게 읽는지 기기에서 듣기, 사용법(?) AI 대화·통화 장에 칸(버전 자를 때, 그림), 튜터 프로필(이름·사연)은 사용자가 아직 안 정함.
 - **통화 💡 힌트 (2026-10-30, 사용자 "막힐 시 버튼 → 일시정지 → 확인 → 재개", 서버 바로·버튼 앱 빌드):** `RoleplayScreen` 4초 조용·끊긴 앞부분 → 버튼 → `openReview(live)` → 패널(힌트·이렇게 말할 수 있어요·이어서 하기) → `resumeListening`, 받은 문장은 튜터 줄 tip. 프롬프트 `review.ts livePrompt`. 남은 것: 기기에서 마이크로 확인(inbox qa), 멈춘 동안도 통화 시간이 흐름(턴 간격 최대 1분까지 셈 — 힌트 패널 동안 빼려면 서버 `entitlementStore` 손봐야, 사용자 결정), 4초가 짧거나 길지.
