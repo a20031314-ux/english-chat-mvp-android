@@ -34,11 +34,14 @@ export function WordbookCard({
   language,
   words,
   onWord,
+  compact = false,
 }: {
   ui: UICopy;
   language: string;
   words: readonly WordbookRow[];
   onWord: (word: string) => void;
+  /** 지속 학습 어휘 탭 안: 이름·개수 한 줄만, 누르면 시트(2026-10-30 "기능 안의 옵션이 주요 기능처럼"). */
+  compact?: boolean;
 }) {
   const [view, setView] = useState<View>(readView);
   const [open, setOpen] = useState(false);
@@ -83,7 +86,15 @@ export function WordbookCard({
 
   return (
     <div data-wordbook className="mt-2 flex flex-col gap-1.5">
-      <div className="flex items-center gap-2 px-1">
+      {compact ? (
+        <button type="button" data-wordbook-open onClick={() => setOpen(true)} className="flex items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200">
+          <span className="min-w-0 flex-1 tabular-nums">
+            {ui.vocabTitle} <span dir="ltr">{words.length}</span>
+          </span>
+          <span aria-hidden className="rtl:rotate-180">›</span>
+        </button>
+      ) : null}
+      <div hidden={compact} className="flex items-center gap-2 px-1">
         <p className="min-w-0 flex-1 text-caption tabular-nums text-slate-300">
           {ui.vocabTitle} <span dir="ltr">{words.length}</span>
           {knownCount ? <span className="ms-1.5 text-meta text-slate-500">{ui.knownTag} {knownCount}</span> : null}
@@ -119,6 +130,7 @@ export function WordbookCard({
       </div>
       <button
         type="button"
+        hidden={compact}
         data-wordbook-open
         aria-label={ui.vocabTitle}
         onClick={() => setOpen(true)}
