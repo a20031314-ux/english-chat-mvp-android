@@ -1,7 +1,7 @@
 /**
  * 문장구조 수업(2026-10-30 사용자 "일반적인 설명(문법, 구문) > 문제풀이 > 대화" → 대화는 주고받기형, curriculum/frameLesson.ts):
  * 틀(curriculum/frames.ts)마다 한 번 Haiku가 ① 짧은 설명 두세 줄(영어) ② 그 틀로 대답하는 주고받기 세 번(상대 줄·내 줄은 학습 언어,
- * 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 설명·뜻을 옮겨 둔다(stageCopy.translated). 모두가 같이 쓰는 저장(`framelesson:v1`), 학습자 글 없음.
+ * 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 설명·뜻을 옮겨 둔다(stageCopy.translated). 모두가 같이 쓰는 저장(`framelesson:v2`), 학습자 글 없음.
  * 내 줄은 그 틀이 알아보는 조각(core)을 담아야 하고, 연습 예문과 겹치면 안 된다 — 지키지 않은 차례는 버린다.
  */
 import { kvGetJson, kvSetJson } from "./kv.ts";
@@ -32,8 +32,8 @@ Then write three short, natural exchanges in ${name}: another person says one li
 Answer in exactly this format and nothing else:
 E|<explanation line>
 E|<explanation line>
-T|<other person's line in ${name}>|<its English meaning>|<learner's answer in ${name}>|<its English meaning>
-(two or three E lines, then three T lines)`,
+T|<other person's line in ${name}>|<its English translation>|<learner's answer in ${name}>|<its English translation>
+(two or three E lines, then three T lines). Translations are plain translations of the line itself, not descriptions of it.`,
       },
       { role: "user", content: `Pattern: ${frame.pattern} — ${glossFor(frame.meaning, "en")}\nPractice sentences already used: ${frame.examples.map((example) => example.text).join(" / ")}` },
     ],
@@ -57,7 +57,8 @@ T|<other person's line in ${name}>|<its English meaning>|<learner's answer in ${
 
 /** 틀 하나의 수업. 앱 언어가 영어가 아니면 설명·뜻을 그 말로. */
 export async function frameLesson(language: string, frame: Frame, ui: string, uiName: string, onMake?: () => void): Promise<FrameLesson | null> {
-  const key = `framelesson:v1:${language}:${frame.id}`;
+  // v2(2026-10-30): 뜻이 설명("…를 묻습니다")으로 나오던 것을 그대로 옮긴 말로.
+  const key = `framelesson:v2:${language}:${frame.id}`;
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
   if (!lesson?.turns?.length) {
     onMake?.();
