@@ -16,6 +16,9 @@ SOURCES = {
 for code, name in {"ar": "ar", "fr": "fr", "id": "id", "it": "it", "ko": "ko", "pt": "pt_br", "ru": "ru", "th": "th", "vi": "vi", "zh": "zh_cn"}.items():
     SOURCES[code] = f"FrequencyWords (Hermit Dave, OpenSubtitles 2018 {name}_50k), CC BY-SA 4.0 — Claude가 사전형으로 묶고 이름·잡음을 빼고 품사·주제를 붙임(2026-10-31, 원어민 확인 전)"
 SOURCES["hi"] = "wordfreq 3.1 (Robyn Speer) hi, data CC BY-SA 4.0 — Claude가 사전형으로 묶고 이름·잡음을 빼고 품사·주제를 붙임(2026-10-31, 원어민 확인 전)"
+# 2026-10-31(낱말 층위 ③): 14개 언어 모두 약 7,000개로 — 3,000 뒤 4,000개는 같은 출처의 다음 순위에서 Claude가 B2~C1에 쓸모 있는 낱말로 고름(원어민 확인 전).
+for code in list(SOURCES):
+    SOURCES[code] += " · 3,001위부터 약 7,000까지 Claude가 같은 출처 다음 순위에서 고름(2026-10-31, 원어민 확인 전)"
 READING = {"ja", "zh"}
 rows = []
 seen = set()
