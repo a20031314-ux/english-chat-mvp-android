@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 프랑스어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** 프랑스어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const FR_FRAMES: Frame[] = [
   {
     "id": "fr-f1-01",
@@ -3935,6 +3935,2724 @@ export const FR_FRAMES: Frame[] = [
         "gloss": {
           "en": "Sorry I'm late, my alarm didn't go off.",
           "ko": "늦어서 미안, 알람이 안 울렸어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-01",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "D'un côté, ___. De l'autre, …",
+    "core": [
+      "D'un côté"
+    ],
+    "meaning": {
+      "en": "Weighing two sides: On the one hand, ___. On the other, …",
+      "ko": "장단점 따지기: 한편으로는 ___. 다른 한편으로는 …"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "D'un côté",
+      "De l'autre"
+    ],
+    "examples": [
+      {
+        "text": "D'un côté, on gagne du temps. De l'autre, on se sent seul.",
+        "slot": "on gagne du temps",
+        "cue": {
+          "en": "we save time",
+          "ko": "시간을 아끼다"
+        },
+        "gloss": {
+          "en": "On the one hand, we save time. On the other, we feel lonely.",
+          "ko": "한편으로는 시간을 아끼죠. 다른 한편으로는 외로워요."
+        }
+      },
+      {
+        "text": "D'un côté, le salaire est meilleur. De l'autre, le trajet est long.",
+        "slot": "le salaire est meilleur",
+        "cue": {
+          "en": "the salary is better",
+          "ko": "월급이 더 좋다"
+        },
+        "gloss": {
+          "en": "On the one hand, the salary is better. On the other, the commute is long.",
+          "ko": "한편으로는 월급이 더 좋아요. 다른 한편으로는 출퇴근이 길어요."
+        }
+      },
+      {
+        "text": "D'un côté, j'adore cette ville. De l'autre, tout y coûte cher.",
+        "slot": "j'adore cette ville",
+        "cue": {
+          "en": "I love this city",
+          "ko": "이 도시를 아주 좋아하다"
+        },
+        "gloss": {
+          "en": "On the one hand, I love this city. On the other, everything there is expensive.",
+          "ko": "한편으로는 이 도시가 정말 좋아요. 다른 한편으로는 거기선 다 비싸요."
+        }
+      },
+      {
+        "text": "D'un côté, c'est plus rapide. De l'autre, c'est moins sûr.",
+        "slot": "c'est plus rapide",
+        "cue": {
+          "en": "it's faster",
+          "ko": "더 빠르다"
+        },
+        "gloss": {
+          "en": "On the one hand, it's faster. On the other, it's less safe.",
+          "ko": "한편으로는 더 빨라요. 다른 한편으로는 덜 안전해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-02",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "… Cela dit, ___.",
+    "core": [
+      "Cela dit"
+    ],
+    "meaning": {
+      "en": "Adding a reservation: That said, ___.",
+      "ko": "단서 달기: 그렇긴 해도, ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "Cela dit"
+    ],
+    "examples": [
+      {
+        "text": "Le projet avance bien. Cela dit, on a pris un peu de retard.",
+        "slot": "on a pris un peu de retard",
+        "cue": {
+          "en": "we have fallen a bit behind",
+          "ko": "조금 늦어지다"
+        },
+        "gloss": {
+          "en": "The project is going well. That said, we've fallen a bit behind.",
+          "ko": "프로젝트는 잘 되고 있어요. 그렇긴 해도 조금 늦어졌어요."
+        }
+      },
+      {
+        "text": "L'hôtel était parfait. Cela dit, le petit-déjeuner était décevant.",
+        "slot": "le petit-déjeuner était décevant",
+        "cue": {
+          "en": "breakfast was disappointing",
+          "ko": "아침 식사가 실망스럽다"
+        },
+        "gloss": {
+          "en": "The hotel was perfect. That said, the breakfast was disappointing.",
+          "ko": "호텔은 완벽했어요. 그렇긴 해도 아침 식사는 실망스러웠어요."
+        }
+      },
+      {
+        "text": "Il est très compétent. Cela dit, il n'écoute personne.",
+        "slot": "il n'écoute personne",
+        "cue": {
+          "en": "he listens to no one",
+          "ko": "아무 말도 안 듣다"
+        },
+        "gloss": {
+          "en": "He's very competent. That said, he doesn't listen to anyone.",
+          "ko": "그는 아주 유능해요. 그렇긴 해도 아무 말도 안 들어요."
+        }
+      },
+      {
+        "text": "J'aime bien mon travail. Cela dit, je cherche autre chose.",
+        "slot": "je cherche autre chose",
+        "cue": {
+          "en": "I'm looking for something else",
+          "ko": "다른 걸 찾고 있다"
+        },
+        "gloss": {
+          "en": "I like my job. That said, I'm looking for something else.",
+          "ko": "제 일이 좋긴 해요. 그렇긴 해도 다른 걸 찾고 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-03",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "… En revanche, ___.",
+    "core": [
+      "En revanche"
+    ],
+    "meaning": {
+      "en": "Contrasting: On the other hand, ___.",
+      "ko": "대조하기: 반면에, ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "En revanche"
+    ],
+    "examples": [
+      {
+        "text": "Le loyer est raisonnable. En revanche, le quartier est bruyant.",
+        "slot": "le quartier est bruyant",
+        "cue": {
+          "en": "the neighbourhood is noisy",
+          "ko": "동네가 시끄럽다"
+        },
+        "gloss": {
+          "en": "The rent is reasonable. On the other hand, the neighbourhood is noisy.",
+          "ko": "월세는 적당해요. 반면에 동네가 시끄러워요."
+        }
+      },
+      {
+        "text": "En revanche, si on livrait à temps, il y aurait des bugs.",
+        "slot": "si on livrait à temps, il y aurait des bugs",
+        "cue": {
+          "en": "if we delivered on time, there would be bugs",
+          "ko": "제때 넘기면 버그가 생기다"
+        },
+        "gloss": {
+          "en": "On the other hand, if we delivered on time, there would be bugs.",
+          "ko": "반면에 제때 넘기면 버그가 생길 거예요."
+        }
+      },
+      {
+        "text": "Il parle bien anglais. En revanche, il ne parle pas du tout espagnol.",
+        "slot": "il ne parle pas du tout espagnol",
+        "cue": {
+          "en": "he doesn't speak Spanish at all",
+          "ko": "스페인어를 전혀 못 하다"
+        },
+        "gloss": {
+          "en": "He speaks English well. On the other hand, he doesn't speak Spanish at all.",
+          "ko": "그는 영어를 잘해요. 반면에 스페인어는 전혀 못 해요."
+        }
+      },
+      {
+        "text": "Le train est cher. En revanche, il est beaucoup plus confortable.",
+        "slot": "il est beaucoup plus confortable",
+        "cue": {
+          "en": "it is much more comfortable",
+          "ko": "훨씬 편하다"
+        },
+        "gloss": {
+          "en": "The train is expensive. On the other hand, it's much more comfortable.",
+          "ko": "기차는 비싸요. 반면에 훨씬 편해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-04",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "… Par contre, ___.",
+    "core": [
+      "Par contre"
+    ],
+    "meaning": {
+      "en": "Contrasting in speech: But on the other hand, ___.",
+      "ko": "말로 대조하기: 그런데 반면에, ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "Par contre"
+    ],
+    "examples": [
+      {
+        "text": "Je comprends. Par contre, une visio ne remplace pas un café.",
+        "slot": "une visio ne remplace pas un café",
+        "cue": {
+          "en": "a video call doesn't replace a coffee",
+          "ko": "화상 통화가 커피 한 잔을 대신 못 하다"
+        },
+        "gloss": {
+          "en": "I understand. But a video call doesn't replace a coffee.",
+          "ko": "이해해요. 그런데 화상 통화가 커피 한 잔을 대신하진 못해요."
+        }
+      },
+      {
+        "text": "Le film est beau. Par contre, il est un peu long.",
+        "slot": "il est un peu long",
+        "cue": {
+          "en": "it's a bit long",
+          "ko": "좀 길다"
+        },
+        "gloss": {
+          "en": "The film is beautiful. But it's a bit long.",
+          "ko": "영화는 아름다워요. 그런데 좀 길어요."
+        }
+      },
+      {
+        "text": "Je peux venir lundi. Par contre, mardi, je suis pris.",
+        "slot": "mardi, je suis pris",
+        "cue": {
+          "en": "on Tuesday I'm busy",
+          "ko": "화요일엔 일이 있다"
+        },
+        "gloss": {
+          "en": "I can come on Monday. But on Tuesday I'm busy.",
+          "ko": "월요일엔 갈 수 있어요. 그런데 화요일엔 일이 있어요."
+        }
+      },
+      {
+        "text": "Le restaurant est bon. Par contre, le service est lent.",
+        "slot": "le service est lent",
+        "cue": {
+          "en": "the service is slow",
+          "ko": "서비스가 느리다"
+        },
+        "gloss": {
+          "en": "The restaurant is good. But the service is slow.",
+          "ko": "식당은 맛있어요. 그런데 서비스가 느려요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-05",
+    "stage": 4,
+    "fn": "rephrase",
+    "pattern": "Autrement dit, ___.",
+    "core": [
+      "Autrement dit"
+    ],
+    "meaning": {
+      "en": "Saying it another way: In other words, ___.",
+      "ko": "다른 말로 바꾸기: 다시 말해, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Autrement dit"
+    ],
+    "examples": [
+      {
+        "text": "On décale d'une semaine. Autrement dit, au vingt-deux.",
+        "slot": "au vingt-deux",
+        "cue": {
+          "en": "on the twenty-second",
+          "ko": "이십이 일에"
+        },
+        "gloss": {
+          "en": "We push it back a week. In other words, to the twenty-second.",
+          "ko": "일주일 미뤄요. 다시 말해 이십이 일에요."
+        }
+      },
+      {
+        "text": "Il n'a pas répondu. Autrement dit, ça ne l'intéresse pas.",
+        "slot": "ça ne l'intéresse pas",
+        "cue": {
+          "en": "he isn't interested",
+          "ko": "관심이 없다"
+        },
+        "gloss": {
+          "en": "He didn't answer. In other words, he isn't interested.",
+          "ko": "답이 없었어요. 다시 말해 관심이 없는 거죠."
+        }
+      },
+      {
+        "text": "Le budget est fixe. Autrement dit, on ne peut rien ajouter.",
+        "slot": "on ne peut rien ajouter",
+        "cue": {
+          "en": "we can't add anything",
+          "ko": "아무것도 더할 수 없다"
+        },
+        "gloss": {
+          "en": "The budget is fixed. In other words, we can't add anything.",
+          "ko": "예산이 정해져 있어요. 다시 말해 아무것도 더할 수 없어요."
+        }
+      },
+      {
+        "text": "Autrement dit, tu veux qu'on recommence tout ?",
+        "slot": "tu veux qu'on recommence tout",
+        "cue": {
+          "en": "you want us to start all over",
+          "ko": "처음부터 다시 하길 원하다"
+        },
+        "gloss": {
+          "en": "In other words, you want us to start all over?",
+          "ko": "다시 말해 처음부터 다시 하자는 거야?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-06",
+    "stage": 4,
+    "fn": "disagree-soft",
+    "pattern": "Je ne suis pas d'accord : ___.",
+    "core": [
+      "Je ne suis pas d'accord"
+    ],
+    "meaning": {
+      "en": "Disagreeing openly: I don't agree: ___.",
+      "ko": "반대 밝히기: 동의하지 않아요. ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Je ne suis pas d'accord"
+    ],
+    "examples": [
+      {
+        "text": "Je ne suis pas d'accord avec cette décision.",
+        "slot": "avec cette décision",
+        "cue": {
+          "en": "with this decision",
+          "ko": "이 결정에"
+        },
+        "gloss": {
+          "en": "I don't agree with this decision.",
+          "ko": "이 결정에 동의하지 않아요."
+        }
+      },
+      {
+        "text": "Je ne suis pas d'accord : deux jours, c'est trop peu.",
+        "slot": "deux jours, c'est trop peu",
+        "cue": {
+          "en": "two days is too little",
+          "ko": "이틀은 너무 적다"
+        },
+        "gloss": {
+          "en": "I don't agree: two days is too little.",
+          "ko": "동의하지 않아요. 이틀은 너무 적어요."
+        }
+      },
+      {
+        "text": "Je ne suis pas d'accord avec toi sur ce point.",
+        "slot": "avec toi sur ce point",
+        "cue": {
+          "en": "with you on this point",
+          "ko": "이 점에서 너와"
+        },
+        "gloss": {
+          "en": "I don't agree with you on this point.",
+          "ko": "이 점에서는 너와 생각이 달라."
+        }
+      },
+      {
+        "text": "Je ne suis pas d'accord, le prix n'est pas le seul critère.",
+        "slot": "le prix n'est pas le seul critère",
+        "cue": {
+          "en": "price isn't the only criterion",
+          "ko": "가격이 유일한 기준이 아니다"
+        },
+        "gloss": {
+          "en": "I don't agree, price isn't the only criterion.",
+          "ko": "동의하지 않아요. 가격만 기준은 아니에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-07",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Je comprends ton point de vue, mais ___.",
+    "core": [
+      "Je comprends ton point de vue"
+    ],
+    "meaning": {
+      "en": "Acknowledging before objecting: I see your point, but ___.",
+      "ko": "인정하고 반론하기: 네 입장은 이해하지만 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Je comprends ton point de vue"
+    ],
+    "examples": [
+      {
+        "text": "Je comprends ton point de vue, mais je ne suis pas convaincu.",
+        "slot": "je ne suis pas convaincu",
+        "cue": {
+          "en": "I'm not convinced",
+          "ko": "확신이 안 들다"
+        },
+        "gloss": {
+          "en": "I see your point, but I'm not convinced.",
+          "ko": "네 입장은 이해하지만 확신이 안 들어."
+        }
+      },
+      {
+        "text": "Je comprends ton point de vue, mais il faut penser au budget.",
+        "slot": "il faut penser au budget",
+        "cue": {
+          "en": "we have to think about the budget",
+          "ko": "예산을 생각해야 하다"
+        },
+        "gloss": {
+          "en": "I see your point, but we have to think about the budget.",
+          "ko": "네 입장은 이해하지만 예산을 생각해야 해."
+        }
+      },
+      {
+        "text": "Je comprends ton point de vue, mais les clients ne verront pas la différence.",
+        "slot": "les clients ne verront pas la différence",
+        "cue": {
+          "en": "customers won't see the difference",
+          "ko": "손님들이 차이를 모르다"
+        },
+        "gloss": {
+          "en": "I see your point, but customers won't see the difference.",
+          "ko": "네 입장은 이해하지만 손님들은 차이를 모를 거야."
+        }
+      },
+      {
+        "text": "Je comprends ton point de vue, mais c'est trop risqué pour moi.",
+        "slot": "c'est trop risqué pour moi",
+        "cue": {
+          "en": "it's too risky for me",
+          "ko": "나한테 너무 위험하다"
+        },
+        "gloss": {
+          "en": "I see your point, but it's too risky for me.",
+          "ko": "네 입장은 이해하지만 나한텐 너무 위험해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-08",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "Si j'étais toi, je ___.",
+    "core": [
+      "Si j'étais toi"
+    ],
+    "meaning": {
+      "en": "Advising with a hypothesis: If I were you, I would ___.",
+      "ko": "가정으로 조언하기: 내가 너라면 ___할 거야."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [
+      "Si j'étais toi"
+    ],
+    "examples": [
+      {
+        "text": "Si j'étais toi, je ne refuserais pas une offre pareille.",
+        "slot": "ne refuserais pas une offre pareille",
+        "cue": {
+          "en": "not turn down such an offer",
+          "ko": "그런 제안을 거절하지 않다"
+        },
+        "gloss": {
+          "en": "If I were you, I wouldn't turn down an offer like that.",
+          "ko": "내가 너라면 그런 제안은 거절하지 않을 거야."
+        }
+      },
+      {
+        "text": "Si j'étais toi, je changerais de poste.",
+        "slot": "changerais de poste",
+        "cue": {
+          "en": "change jobs",
+          "ko": "자리를 옮기다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd change jobs.",
+          "ko": "내가 너라면 자리를 옮기겠어."
+        }
+      },
+      {
+        "text": "Si j'étais toi, j'en parlerais d'abord à ton chef.",
+        "slot": "j'en parlerais d'abord à ton chef",
+        "cue": {
+          "en": "talk to your boss about it first",
+          "ko": "먼저 상사에게 이야기하다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd talk to your boss about it first.",
+          "ko": "내가 너라면 먼저 상사한테 이야기하겠어."
+        }
+      },
+      {
+        "text": "Si j'étais toi, je prendrais quelques jours de repos.",
+        "slot": "prendrais quelques jours de repos",
+        "cue": {
+          "en": "take a few days off",
+          "ko": "며칠 쉬다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd take a few days off.",
+          "ko": "내가 너라면 며칠 쉬겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-09",
+    "stage": 4,
+    "fn": "hypothetical",
+    "pattern": "Si j'avais ___, je …",
+    "core": [
+      "Si j'avais"
+    ],
+    "meaning": {
+      "en": "Imagining an unreal situation: If I had ___, I would …",
+      "ko": "가정해서 말하기: 나에게 ___이 있다면 …할 텐데."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Si j'avais un appartement vide, je le louerais à une famille.",
+        "slot": "un appartement vide",
+        "cue": {
+          "en": "an empty flat",
+          "ko": "빈 아파트"
+        },
+        "gloss": {
+          "en": "If I had an empty flat, I'd rent it to a family.",
+          "ko": "빈 아파트가 있다면 한 가족에게 빌려줄 거예요."
+        }
+      },
+      {
+        "text": "Si j'avais plus de temps, j'apprendrais le piano.",
+        "slot": "plus de temps",
+        "cue": {
+          "en": "more time",
+          "ko": "더 많은 시간"
+        },
+        "gloss": {
+          "en": "If I had more time, I'd learn the piano.",
+          "ko": "시간이 더 있다면 피아노를 배울 텐데요."
+        }
+      },
+      {
+        "text": "Si j'avais le choix, je travaillerais de chez moi.",
+        "slot": "le choix",
+        "cue": {
+          "en": "the choice",
+          "ko": "선택권"
+        },
+        "gloss": {
+          "en": "If I had the choice, I'd work from home.",
+          "ko": "고를 수 있다면 집에서 일할 거예요."
+        }
+      },
+      {
+        "text": "Si j'avais su, je serais venu plus tôt.",
+        "slot": "su",
+        "cue": {
+          "en": "known",
+          "ko": "알다"
+        },
+        "gloss": {
+          "en": "If I had known, I would have come earlier.",
+          "ko": "알았더라면 더 일찍 왔을 텐데요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-10",
+    "stage": 4,
+    "fn": "must",
+    "pattern": "Il faut que ___ (subjonctif).",
+    "core": [
+      "Il faut que",
+      "Il faut qu'",
+      "il faut qu'"
+    ],
+    "meaning": {
+      "en": "Saying what has to happen: ___ has to … (subjunctive)",
+      "ko": "해야 할 일 말하기: ___해야 해요(접속법)."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il faut que tu finisses le rapport avant jeudi.",
+        "slot": "tu finisses le rapport avant jeudi",
+        "cue": {
+          "en": "you finish the report before Thursday",
+          "ko": "목요일 전에 보고서를 끝내다"
+        },
+        "gloss": {
+          "en": "You have to finish the report before Thursday.",
+          "ko": "목요일 전에 보고서를 끝내야 해요."
+        }
+      },
+      {
+        "text": "Il faut que tu penses à ce que tu veux vraiment.",
+        "slot": "tu penses à ce que tu veux vraiment",
+        "cue": {
+          "en": "you think about what you really want",
+          "ko": "정말 원하는 걸 생각하다"
+        },
+        "gloss": {
+          "en": "You have to think about what you really want.",
+          "ko": "정말 원하는 게 뭔지 생각해야 해."
+        }
+      },
+      {
+        "text": "Il faut qu'on se voie au moins une fois par semaine.",
+        "slot": "on se voie au moins une fois par semaine",
+        "cue": {
+          "en": "we see each other at least once a week",
+          "ko": "적어도 일주일에 한 번 만나다"
+        },
+        "gloss": {
+          "en": "We have to see each other at least once a week.",
+          "ko": "적어도 일주일에 한 번은 만나야 해요."
+        }
+      },
+      {
+        "text": "Ça vaut le coup, mais il faut qu'elle connaisse le projet.",
+        "slot": "elle connaisse le projet",
+        "cue": {
+          "en": "she knows the project",
+          "ko": "그녀가 프로젝트를 알다"
+        },
+        "gloss": {
+          "en": "It's worth it, but she has to know the project.",
+          "ko": "해 볼 만해요. 하지만 그녀가 프로젝트를 알아야 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-11",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "Il faudrait qu'on ___.",
+    "core": [
+      "Il faudrait"
+    ],
+    "meaning": {
+      "en": "Suggesting what should be done, politely: We would need to ___.",
+      "ko": "정중하게 필요한 일 말하기: ___해야 할 것 같아요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "Il faudrait"
+    ],
+    "examples": [
+      {
+        "text": "Il faudrait qu'on puisse décaler la livraison d'une semaine.",
+        "slot": "qu'on puisse décaler la livraison d'une semaine",
+        "cue": {
+          "en": "we can postpone delivery by a week",
+          "ko": "납품을 일주일 미룰 수 있다"
+        },
+        "gloss": {
+          "en": "We would need to be able to push delivery back a week.",
+          "ko": "납품을 일주일 미룰 수 있어야 할 것 같아요."
+        }
+      },
+      {
+        "text": "Il faudrait prévenir le client dès aujourd'hui.",
+        "slot": "prévenir le client dès aujourd'hui",
+        "cue": {
+          "en": "warn the client today",
+          "ko": "오늘 바로 고객에게 알리다"
+        },
+        "gloss": {
+          "en": "We should let the client know today.",
+          "ko": "오늘 바로 고객에게 알려야 할 것 같아요."
+        }
+      },
+      {
+        "text": "Il faudrait que tu relises le contrat avant de signer.",
+        "slot": "que tu relises le contrat avant de signer",
+        "cue": {
+          "en": "you reread the contract before signing",
+          "ko": "서명 전에 계약서를 다시 읽다"
+        },
+        "gloss": {
+          "en": "You should reread the contract before signing.",
+          "ko": "서명하기 전에 계약서를 다시 읽어 봐야 할 것 같아."
+        }
+      },
+      {
+        "text": "Il faudrait revoir le planning de la semaine.",
+        "slot": "revoir le planning de la semaine",
+        "cue": {
+          "en": "review the week's schedule",
+          "ko": "이번 주 일정을 다시 보다"
+        },
+        "gloss": {
+          "en": "We should go over the week's schedule again.",
+          "ko": "이번 주 일정을 다시 봐야 할 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-12",
+    "stage": 4,
+    "fn": "sympathy",
+    "pattern": "C'est dommage que ___ (subjonctif).",
+    "core": [
+      "C'est dommage que",
+      "C'est dommage qu'"
+    ],
+    "meaning": {
+      "en": "Regretting a situation: It's a shame that ___.",
+      "ko": "아쉬움 말하기: ___라니 아쉬워요(접속법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "C'est dommage que les salaires n'augmentent pas aussi vite.",
+        "slot": "les salaires n'augmentent pas aussi vite",
+        "cue": {
+          "en": "salaries don't rise as fast",
+          "ko": "월급이 그만큼 빨리 오르지 않다"
+        },
+        "gloss": {
+          "en": "It's a shame salaries aren't rising as fast.",
+          "ko": "월급이 그만큼 빨리 오르지 않는 게 아쉬워요."
+        }
+      },
+      {
+        "text": "C'est dommage que tu ne puisses pas venir ce soir.",
+        "slot": "tu ne puisses pas venir ce soir",
+        "cue": {
+          "en": "you can't come tonight",
+          "ko": "오늘 밤 못 오다"
+        },
+        "gloss": {
+          "en": "It's a shame you can't come tonight.",
+          "ko": "오늘 밤 못 온다니 아쉽다."
+        }
+      },
+      {
+        "text": "C'est dommage qu'il fasse si froid ce week-end.",
+        "slot": "il fasse si froid ce week-end",
+        "cue": {
+          "en": "it's so cold this weekend",
+          "ko": "이번 주말이 아주 춥다"
+        },
+        "gloss": {
+          "en": "It's a shame it's so cold this weekend.",
+          "ko": "이번 주말이 이렇게 추워서 아쉬워요."
+        }
+      },
+      {
+        "text": "C'est dommage qu'elle parte déjà.",
+        "slot": "elle parte déjà",
+        "cue": {
+          "en": "she's already leaving",
+          "ko": "그녀가 벌써 떠나다"
+        },
+        "gloss": {
+          "en": "It's a shame she's leaving already.",
+          "ko": "그녀가 벌써 떠난다니 아쉬워요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-13",
+    "stage": 4,
+    "fn": "disagree-soft",
+    "pattern": "Je ne pense pas que ___ (subjonctif).",
+    "core": [
+      "Je ne pense pas que",
+      "Je ne pense pas qu'"
+    ],
+    "meaning": {
+      "en": "Doubting with the subjunctive: I don't think that ___.",
+      "ko": "의심 말하기: ___라고는 생각하지 않아요(접속법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Je ne pense pas que ce soit de ma faute.",
+        "slot": "ce soit de ma faute",
+        "cue": {
+          "en": "it's my fault",
+          "ko": "내 잘못이다"
+        },
+        "gloss": {
+          "en": "I don't think it's my fault.",
+          "ko": "제 잘못이라고는 생각하지 않아요."
+        }
+      },
+      {
+        "text": "Je ne pense pas qu'il soit d'accord.",
+        "slot": "il soit d'accord",
+        "cue": {
+          "en": "he agrees",
+          "ko": "그가 동의하다"
+        },
+        "gloss": {
+          "en": "I don't think he'll agree.",
+          "ko": "그가 동의할 것 같지 않아요."
+        }
+      },
+      {
+        "text": "Je ne pense pas que ce prix soit raisonnable.",
+        "slot": "ce prix soit raisonnable",
+        "cue": {
+          "en": "this price is reasonable",
+          "ko": "이 가격이 적당하다"
+        },
+        "gloss": {
+          "en": "I don't think this price is reasonable.",
+          "ko": "이 가격이 적당하다고는 생각하지 않아요."
+        }
+      },
+      {
+        "text": "Je ne pense pas qu'on ait le temps de tout finir.",
+        "slot": "on ait le temps de tout finir",
+        "cue": {
+          "en": "we have time to finish everything",
+          "ko": "다 끝낼 시간이 있다"
+        },
+        "gloss": {
+          "en": "I don't think we have time to finish everything.",
+          "ko": "다 끝낼 시간이 있을 것 같지 않아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-14",
+    "stage": 4,
+    "fn": "story-past",
+    "pattern": "Quand je suis arrivé, on avait déjà ___.",
+    "core": [
+      "avait déjà",
+      "avais déjà"
+    ],
+    "meaning": {
+      "en": "Saying what had already happened (pluperfect): … had already ___.",
+      "ko": "더 앞선 과거 말하기(대과거): 이미 ___했었다."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Quand je suis arrivé, la réunion avait déjà commencé.",
+        "slot": "commencé",
+        "cue": {
+          "en": "start (past participle)",
+          "ko": "시작하다"
+        },
+        "gloss": {
+          "en": "When I arrived, the meeting had already started.",
+          "ko": "제가 도착했을 때 회의는 이미 시작했었어요."
+        }
+      },
+      {
+        "text": "Quand je l'ai appelé, il avait déjà quitté le bureau.",
+        "slot": "quitté le bureau",
+        "cue": {
+          "en": "leave the office",
+          "ko": "사무실을 나가다"
+        },
+        "gloss": {
+          "en": "When I called him, he had already left the office.",
+          "ko": "제가 전화했을 때 그는 이미 사무실을 나간 뒤였어요."
+        }
+      },
+      {
+        "text": "Quand on a reçu leurs maquettes, on avait déjà lancé le développement.",
+        "slot": "lancé le développement",
+        "cue": {
+          "en": "start development",
+          "ko": "개발을 시작하다"
+        },
+        "gloss": {
+          "en": "When we got their mock-ups, we had already started development.",
+          "ko": "그쪽 시안을 받았을 때 우리는 이미 개발을 시작했었어요."
+        }
+      },
+      {
+        "text": "Quand elle m'a écrit, j'avais déjà acheté les billets.",
+        "slot": "acheté les billets",
+        "cue": {
+          "en": "buy the tickets",
+          "ko": "표를 사다"
+        },
+        "gloss": {
+          "en": "When she wrote to me, I had already bought the tickets.",
+          "ko": "그녀가 연락했을 때 저는 이미 표를 사 둔 뒤였어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-15",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Le document ? Je vous l'envoie ___.",
+    "core": [
+      "Je vous l'envoie",
+      "je vous l'envoie"
+    ],
+    "meaning": {
+      "en": "Promising to send something (two pronouns): I'll send it to you ___.",
+      "ko": "보낼 것 약속하기(대명사 두 개): ___ 그것을 보내 드릴게요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Le rapport ? Je vous l'envoie ce soir.",
+        "slot": "ce soir",
+        "cue": {
+          "en": "this evening",
+          "ko": "오늘 저녁"
+        },
+        "gloss": {
+          "en": "The report? I'll send it to you this evening.",
+          "ko": "보고서요? 오늘 저녁에 보내 드릴게요."
+        }
+      },
+      {
+        "text": "Comme convenu, je vous l'envoie avant midi.",
+        "slot": "avant midi",
+        "cue": {
+          "en": "before noon",
+          "ko": "정오 전에"
+        },
+        "gloss": {
+          "en": "As agreed, I'll send it to you before noon.",
+          "ko": "말씀드린 대로 정오 전에 보내 드릴게요."
+        }
+      },
+      {
+        "text": "La facture ? Je vous l'envoie dès demain matin.",
+        "slot": "dès demain matin",
+        "cue": {
+          "en": "first thing tomorrow morning",
+          "ko": "내일 아침 바로"
+        },
+        "gloss": {
+          "en": "The invoice? I'll send it to you first thing tomorrow morning.",
+          "ko": "청구서요? 내일 아침에 바로 보내 드릴게요."
+        }
+      },
+      {
+        "text": "Le devis est prêt, je vous l'envoie par mail.",
+        "slot": "par mail",
+        "cue": {
+          "en": "by email",
+          "ko": "메일로"
+        },
+        "gloss": {
+          "en": "The quote is ready, I'll send it to you by email.",
+          "ko": "견적서가 준비됐어요. 메일로 보내 드릴게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-16",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "Dis-le-lui ___.",
+    "core": [
+      "Dis-le-lui"
+    ],
+    "meaning": {
+      "en": "Telling someone to pass something on (two pronouns): Tell him/her ___.",
+      "ko": "전하라고 하기(대명사 두 개): 그 사람한테 ___ 말해."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Dis-le-lui dès que tu as signé le contrat.",
+        "slot": "dès que tu as signé le contrat",
+        "cue": {
+          "en": "as soon as you've signed the contract",
+          "ko": "계약서에 서명하자마자"
+        },
+        "gloss": {
+          "en": "Tell him as soon as you've signed the contract.",
+          "ko": "계약서에 서명하자마자 그 사람한테 말해."
+        }
+      },
+      {
+        "text": "Dis-le-lui franchement, elle comprendra.",
+        "slot": "franchement",
+        "cue": {
+          "en": "frankly",
+          "ko": "솔직하게"
+        },
+        "gloss": {
+          "en": "Tell her frankly, she'll understand.",
+          "ko": "솔직하게 말해. 그녀는 이해할 거야."
+        }
+      },
+      {
+        "text": "Dis-le-lui ce soir, pas au bureau.",
+        "slot": "ce soir",
+        "cue": {
+          "en": "tonight",
+          "ko": "오늘 밤"
+        },
+        "gloss": {
+          "en": "Tell him tonight, not at the office.",
+          "ko": "오늘 밤에 말해, 회사에서 말고."
+        }
+      },
+      {
+        "text": "Dis-le-lui avant qu'il l'apprenne par quelqu'un d'autre.",
+        "slot": "avant qu'il l'apprenne par quelqu'un d'autre",
+        "cue": {
+          "en": "before he hears it from someone else",
+          "ko": "다른 사람한테 듣기 전에"
+        },
+        "gloss": {
+          "en": "Tell him before he hears it from someone else.",
+          "ko": "다른 사람한테 듣기 전에 그한테 말해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-17",
+    "stage": 4,
+    "fn": "while-when",
+    "pattern": "Je l'ai lu en prenant ___.",
+    "core": [
+      "en prenant"
+    ],
+    "meaning": {
+      "en": "Saying what you do at the same time (gerund): while taking ___.",
+      "ko": "동시에 하는 일 말하기(제롱디프): ___을 타면서·들면서."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Je l'ai lu ce matin en prenant le métro.",
+        "slot": "le métro",
+        "cue": {
+          "en": "the metro",
+          "ko": "지하철"
+        },
+        "gloss": {
+          "en": "I read it this morning on the metro.",
+          "ko": "오늘 아침 지하철 타면서 읽었어요."
+        }
+      },
+      {
+        "text": "Tu peux revenir nous voir en prenant le train.",
+        "slot": "le train",
+        "cue": {
+          "en": "the train",
+          "ko": "기차"
+        },
+        "gloss": {
+          "en": "You can come back and see us by taking the train.",
+          "ko": "기차 타고 우리 보러 다시 올 수 있잖아."
+        }
+      },
+      {
+        "text": "Il réfléchit toujours en prenant son café.",
+        "slot": "son café",
+        "cue": {
+          "en": "his coffee",
+          "ko": "그의 커피"
+        },
+        "gloss": {
+          "en": "He always thinks things over while having his coffee.",
+          "ko": "그는 늘 커피를 마시면서 생각해요."
+        }
+      },
+      {
+        "text": "Je me suis brûlé en prenant le plat dans le four.",
+        "slot": "le plat dans le four",
+        "cue": {
+          "en": "the dish out of the oven",
+          "ko": "오븐 속 그릇"
+        },
+        "gloss": {
+          "en": "I burned myself taking the dish out of the oven.",
+          "ko": "오븐에서 그릇을 꺼내다가 데었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-18",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "…, alors que ___.",
+    "core": [
+      "alors que",
+      "alors qu'"
+    ],
+    "meaning": {
+      "en": "Pointing out a contrast: …, whereas ___.",
+      "ko": "대조하기: …인데 ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Les loyers augmentent, alors que beaucoup d'appartements sont vides.",
+        "slot": "beaucoup d'appartements sont vides",
+        "cue": {
+          "en": "many flats are empty",
+          "ko": "빈 아파트가 많다"
+        },
+        "gloss": {
+          "en": "Rents are rising, whereas many flats are empty.",
+          "ko": "월세는 오르는데 빈 아파트는 많아요."
+        }
+      },
+      {
+        "text": "L'appareil ne marche pas, alors que je l'ai à peine utilisé.",
+        "slot": "je l'ai à peine utilisé",
+        "cue": {
+          "en": "I've hardly used it",
+          "ko": "거의 쓰지 않았다"
+        },
+        "gloss": {
+          "en": "The device doesn't work, even though I've hardly used it.",
+          "ko": "거의 쓰지도 않았는데 기계가 작동하지 않아요."
+        }
+      },
+      {
+        "text": "Il est parti tôt, alors qu'on avait besoin de lui.",
+        "slot": "on avait besoin de lui",
+        "cue": {
+          "en": "we needed him",
+          "ko": "그가 필요했다"
+        },
+        "gloss": {
+          "en": "He left early, whereas we needed him.",
+          "ko": "우리가 그를 필요로 했는데 그는 일찍 가 버렸어요."
+        }
+      },
+      {
+        "text": "Le loyer est cher, alors que l'appartement est petit.",
+        "slot": "l'appartement est petit",
+        "cue": {
+          "en": "the flat is small",
+          "ko": "아파트가 작다"
+        },
+        "gloss": {
+          "en": "The rent is high, whereas the flat is small.",
+          "ko": "아파트는 작은데 월세는 비싸요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-19",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "Ça vaut le coup de ___.",
+    "core": [
+      "Ça vaut le coup",
+      "ça vaut le coup"
+    ],
+    "meaning": {
+      "en": "Saying something is worth it: It's worth ___.",
+      "ko": "해 볼 만하다고 설득하기: ___할 만해요."
+    },
+    "grammar": [],
+    "expressions": [
+      "Ça vaut le coup"
+    ],
+    "examples": [
+      {
+        "text": "Ça vaut le coup d'essayer.",
+        "slot": "d'essayer",
+        "cue": {
+          "en": "to try",
+          "ko": "해 보다"
+        },
+        "gloss": {
+          "en": "It's worth trying.",
+          "ko": "해 볼 만해요."
+        }
+      },
+      {
+        "text": "Ça vaut le coup de visiter le vieux port.",
+        "slot": "de visiter le vieux port",
+        "cue": {
+          "en": "to visit the old port",
+          "ko": "옛 항구를 구경하다"
+        },
+        "gloss": {
+          "en": "It's worth visiting the old port.",
+          "ko": "옛 항구는 가 볼 만해요."
+        }
+      },
+      {
+        "text": "Ça vaut le coup de payer un peu plus pour la qualité.",
+        "slot": "de payer un peu plus pour la qualité",
+        "cue": {
+          "en": "to pay a bit more for quality",
+          "ko": "품질을 위해 조금 더 내다"
+        },
+        "gloss": {
+          "en": "It's worth paying a bit more for quality.",
+          "ko": "품질을 생각하면 조금 더 낼 만해요."
+        }
+      },
+      {
+        "text": "Franchement, ça vaut le coup de demander à ton chef.",
+        "slot": "de demander à ton chef",
+        "cue": {
+          "en": "to ask your boss",
+          "ko": "상사에게 물어보다"
+        },
+        "gloss": {
+          "en": "Honestly, it's worth asking your boss.",
+          "ko": "솔직히 상사한테 물어볼 만해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f4-20",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Pour résumer, ___.",
+    "core": [
+      "Pour résumer"
+    ],
+    "meaning": {
+      "en": "Summing up: To sum up, ___.",
+      "ko": "정리하기: 정리하자면 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Pour résumer"
+    ],
+    "examples": [
+      {
+        "text": "Pour résumer, l'appareil ne marche plus.",
+        "slot": "l'appareil ne marche plus",
+        "cue": {
+          "en": "the device no longer works",
+          "ko": "기계가 더는 작동하지 않다"
+        },
+        "gloss": {
+          "en": "To sum up, the device no longer works.",
+          "ko": "정리하자면 기계가 더는 작동하지 않아요."
+        }
+      },
+      {
+        "text": "Pour résumer, on livre une première version vendredi.",
+        "slot": "on livre une première version vendredi",
+        "cue": {
+          "en": "we deliver a first version on Friday",
+          "ko": "금요일에 첫 버전을 넘기다"
+        },
+        "gloss": {
+          "en": "To sum up, we deliver a first version on Friday.",
+          "ko": "정리하자면 금요일에 첫 버전을 넘겨요."
+        }
+      },
+      {
+        "text": "Pour résumer, tout le monde est d'accord sauf Paul.",
+        "slot": "tout le monde est d'accord sauf Paul",
+        "cue": {
+          "en": "everyone agrees except Paul",
+          "ko": "폴만 빼고 모두 동의하다"
+        },
+        "gloss": {
+          "en": "To sum up, everyone agrees except Paul.",
+          "ko": "정리하자면 폴만 빼고 모두 동의해요."
+        }
+      },
+      {
+        "text": "Pour résumer, il faut plus de temps et plus de monde.",
+        "slot": "il faut plus de temps et plus de monde",
+        "cue": {
+          "en": "we need more time and more people",
+          "ko": "시간과 사람이 더 필요하다"
+        },
+        "gloss": {
+          "en": "To sum up, we need more time and more people.",
+          "ko": "정리하자면 시간도 사람도 더 필요해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-01",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "À vrai dire, ___.",
+    "core": [
+      "À vrai dire"
+    ],
+    "meaning": {
+      "en": "Admitting your real view: To tell the truth, ___.",
+      "ko": "속마음 털어놓기: 사실 말하자면 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "À vrai dire"
+    ],
+    "examples": [
+      {
+        "text": "À vrai dire, je m'attendais à mieux.",
+        "slot": "je m'attendais à mieux",
+        "cue": {
+          "en": "I expected better",
+          "ko": "더 나은 걸 기대했다"
+        },
+        "gloss": {
+          "en": "To tell the truth, I expected better.",
+          "ko": "사실 말하자면 더 나을 줄 알았어요."
+        }
+      },
+      {
+        "text": "À vrai dire, ce genre de soirée, ce n'est pas trop pour moi.",
+        "slot": "ce genre de soirée, ce n'est pas trop pour moi",
+        "cue": {
+          "en": "this kind of party isn't really for me",
+          "ko": "이런 파티는 별로 내 취향이 아니다"
+        },
+        "gloss": {
+          "en": "To tell the truth, this kind of party isn't really my thing.",
+          "ko": "사실 이런 파티는 저랑 잘 안 맞아요."
+        }
+      },
+      {
+        "text": "À vrai dire, je n'ai pas lu le dossier jusqu'au bout.",
+        "slot": "je n'ai pas lu le dossier jusqu'au bout",
+        "cue": {
+          "en": "I didn't read the file to the end",
+          "ko": "서류를 끝까지 안 읽었다"
+        },
+        "gloss": {
+          "en": "To tell the truth, I didn't read the file all the way through.",
+          "ko": "사실 서류를 끝까지 읽진 않았어요."
+        }
+      },
+      {
+        "text": "À vrai dire, il n'a pas complètement tort.",
+        "slot": "il n'a pas complètement tort",
+        "cue": {
+          "en": "he's not completely wrong",
+          "ko": "그가 완전히 틀린 건 아니다"
+        },
+        "gloss": {
+          "en": "To be honest, he's not completely wrong.",
+          "ko": "사실 그가 완전히 틀린 건 아니에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-02",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Je dirais plutôt que ___.",
+    "core": [
+      "Je dirais plutôt",
+      "je dirais plutôt"
+    ],
+    "meaning": {
+      "en": "Correcting someone gently: I'd rather say that ___.",
+      "ko": "부드럽게 바로잡기: 오히려 ___라고 하겠어요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "Je dirais plutôt"
+    ],
+    "examples": [
+      {
+        "text": "Je dirais plutôt qu'elle est maladroite.",
+        "slot": "qu'elle est maladroite",
+        "cue": {
+          "en": "she is clumsy",
+          "ko": "그녀가 서투르다"
+        },
+        "gloss": {
+          "en": "I'd rather say she's clumsy.",
+          "ko": "오히려 서툴다고 하겠어요."
+        }
+      },
+      {
+        "text": "Ce n'est pas un échec. Je dirais plutôt que c'est un début.",
+        "slot": "que c'est un début",
+        "cue": {
+          "en": "it's a beginning",
+          "ko": "시작이다"
+        },
+        "gloss": {
+          "en": "It's not a failure. I'd rather say it's a beginning.",
+          "ko": "실패는 아니에요. 오히려 시작이라고 하겠어요."
+        }
+      },
+      {
+        "text": "Paresseux ? Je dirais plutôt fatigué.",
+        "slot": "fatigué",
+        "cue": {
+          "en": "tired",
+          "ko": "피곤하다"
+        },
+        "gloss": {
+          "en": "Lazy? I'd rather say tired.",
+          "ko": "게으르다고요? 오히려 피곤한 거라고 하겠어요."
+        }
+      },
+      {
+        "text": "Cher ? Non, je dirais plutôt que c'est un investissement.",
+        "slot": "que c'est un investissement",
+        "cue": {
+          "en": "it's an investment",
+          "ko": "투자다"
+        },
+        "gloss": {
+          "en": "Expensive? I'd rather say it's an investment.",
+          "ko": "비싸다기보다는 투자라고 하겠어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-03",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___ ? Je n'irais pas jusque-là.",
+    "core": [
+      "Je n'irais pas jusque-là",
+      "je n'irais pas jusque-là"
+    ],
+    "meaning": {
+      "en": "Refusing to go as far as someone: ___? I wouldn't go that far.",
+      "ko": "과장 누그러뜨리기: ___라고요? 그렇게까지는 말 안 하겠어요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "Je n'irais pas jusque-là"
+    ],
+    "examples": [
+      {
+        "text": "Scandaleuse ? Je n'irais pas jusque-là.",
+        "slot": "Scandaleuse",
+        "cue": {
+          "en": "scandalous",
+          "ko": "터무니없다"
+        },
+        "gloss": {
+          "en": "Scandalous? I wouldn't go that far.",
+          "ko": "터무니없다고요? 그렇게까지는 말 안 하겠어요."
+        }
+      },
+      {
+        "text": "Un génie ? Je n'irais pas jusque-là.",
+        "slot": "Un génie",
+        "cue": {
+          "en": "a genius",
+          "ko": "천재"
+        },
+        "gloss": {
+          "en": "A genius? I wouldn't go that far.",
+          "ko": "천재라고요? 그렇게까지는 말 안 하겠어요."
+        }
+      },
+      {
+        "text": "Le pire film de l'année ? Je n'irais pas jusque-là.",
+        "slot": "Le pire film de l'année",
+        "cue": {
+          "en": "the worst film of the year",
+          "ko": "올해 최악의 영화"
+        },
+        "gloss": {
+          "en": "The worst film of the year? I wouldn't go that far.",
+          "ko": "올해 최악의 영화요? 그렇게까지는 아니에요."
+        }
+      },
+      {
+        "text": "Il est un peu lent, mais incompétent, je n'irais pas jusque-là.",
+        "slot": "incompétent",
+        "cue": {
+          "en": "incompetent",
+          "ko": "무능하다"
+        },
+        "gloss": {
+          "en": "He's a bit slow, but incompetent, I wouldn't go that far.",
+          "ko": "좀 느리긴 해도 무능하다고까지는 못 하겠어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-04",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Ce qui me gêne, c'est ___.",
+    "core": [
+      "Ce qui me gêne, c'est"
+    ],
+    "meaning": {
+      "en": "Pinpointing what bothers you (cleft): What bothers me is ___.",
+      "ko": "걸리는 점 짚기(강조 구문): 제가 걸리는 건 ___예요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Ce qui me gêne, c'est le manque de transparence.",
+        "slot": "le manque de transparence",
+        "cue": {
+          "en": "the lack of transparency",
+          "ko": "투명성 부족"
+        },
+        "gloss": {
+          "en": "What bothers me is the lack of transparency.",
+          "ko": "제가 걸리는 건 투명성이 부족하다는 거예요."
+        }
+      },
+      {
+        "text": "Ce qui me gêne, c'est la méthode, pas le fond.",
+        "slot": "la méthode, pas le fond",
+        "cue": {
+          "en": "the method, not the substance",
+          "ko": "내용이 아니라 방식"
+        },
+        "gloss": {
+          "en": "What bothers me is the method, not the substance.",
+          "ko": "제가 걸리는 건 내용이 아니라 방식이에요."
+        }
+      },
+      {
+        "text": "Ce qui me gêne, c'est qu'on ne nous a rien demandé.",
+        "slot": "qu'on ne nous a rien demandé",
+        "cue": {
+          "en": "nobody asked us anything",
+          "ko": "아무도 우리에게 묻지 않았다"
+        },
+        "gloss": {
+          "en": "What bothers me is that nobody asked us.",
+          "ko": "제가 걸리는 건 아무도 우리 의견을 묻지 않았다는 거예요."
+        }
+      },
+      {
+        "text": "Ce qui me gêne, c'est le ton de son message.",
+        "slot": "le ton de son message",
+        "cue": {
+          "en": "the tone of his message",
+          "ko": "그 메시지의 말투"
+        },
+        "gloss": {
+          "en": "What bothers me is the tone of his message.",
+          "ko": "제가 걸리는 건 그 메시지 말투예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-05",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "C'est toi qui ___.",
+    "core": [
+      "C'est toi qui",
+      "c'est toi qui"
+    ],
+    "meaning": {
+      "en": "Stressing who did it (cleft): You're the one who ___.",
+      "ko": "누가 했는지 강조하기: ___한 건 바로 너야."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "C'est toi qui l'as fait ?",
+        "slot": "l'as fait",
+        "cue": {
+          "en": "made it",
+          "ko": "그것을 만들다"
+        },
+        "gloss": {
+          "en": "Did you make it?",
+          "ko": "이거 네가 만든 거야?"
+        }
+      },
+      {
+        "text": "C'est toi qui as raison, pas moi.",
+        "slot": "as raison, pas moi",
+        "cue": {
+          "en": "are right, not me",
+          "ko": "내가 아니라 네가 맞다"
+        },
+        "gloss": {
+          "en": "You're the one who's right, not me.",
+          "ko": "맞는 건 내가 아니라 너야."
+        }
+      },
+      {
+        "text": "Il paraît que c'est toi qui organises la fête.",
+        "slot": "organises la fête",
+        "cue": {
+          "en": "organise the party",
+          "ko": "파티를 준비하다"
+        },
+        "gloss": {
+          "en": "Apparently you're the one organising the party.",
+          "ko": "파티 준비하는 게 너라며."
+        }
+      },
+      {
+        "text": "C'est toi qui m'as dit de venir !",
+        "slot": "m'as dit de venir",
+        "cue": {
+          "en": "told me to come",
+          "ko": "나에게 오라고 했다"
+        },
+        "gloss": {
+          "en": "You're the one who told me to come!",
+          "ko": "오라고 한 건 바로 너잖아!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-06",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "Bien que ___ (subjonctif), …",
+    "core": [
+      "Bien que",
+      "Bien qu'"
+    ],
+    "meaning": {
+      "en": "Conceding with the subjunctive: Although ___, …",
+      "ko": "양보하기(접속법): ___이긴 하지만 …."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Bien que je comprenne le problème, j'aurais préféré un vrai débat.",
+        "slot": "je comprenne le problème",
+        "cue": {
+          "en": "I understand the problem",
+          "ko": "문제를 이해하다"
+        },
+        "gloss": {
+          "en": "Although I understand the problem, I'd have preferred a real debate.",
+          "ko": "문제는 이해하지만 제대로 된 토론이 있었으면 했어요."
+        }
+      },
+      {
+        "text": "Bien que ce soit rageant, il faut passer à autre chose.",
+        "slot": "ce soit rageant",
+        "cue": {
+          "en": "it's infuriating",
+          "ko": "화가 나다"
+        },
+        "gloss": {
+          "en": "Although it's infuriating, you have to move on.",
+          "ko": "화나긴 하지만 털고 넘어가야 해요."
+        }
+      },
+      {
+        "text": "Bien qu'il fasse beau, je reste à la maison.",
+        "slot": "il fasse beau",
+        "cue": {
+          "en": "the weather is nice",
+          "ko": "날씨가 좋다"
+        },
+        "gloss": {
+          "en": "Although the weather is nice, I'm staying home.",
+          "ko": "날씨는 좋지만 집에 있을래요."
+        }
+      },
+      {
+        "text": "Bien que nous ayons peu de temps, nous allons tout vérifier.",
+        "slot": "nous ayons peu de temps",
+        "cue": {
+          "en": "we have little time",
+          "ko": "시간이 별로 없다"
+        },
+        "gloss": {
+          "en": "Although we have little time, we'll check everything.",
+          "ko": "시간은 별로 없지만 전부 확인하겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-07",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "J'ai beau ___, …",
+    "core": [
+      "J'ai beau"
+    ],
+    "meaning": {
+      "en": "Saying effort makes no difference: However much I ___, …",
+      "ko": "아무리 해도 소용없다고 말하기: 아무리 ___해도 …."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "J'ai beau y réfléchir, je ne comprends pas la fin.",
+        "slot": "y réfléchir",
+        "cue": {
+          "en": "think about it",
+          "ko": "그것을 곰곰이 생각하다"
+        },
+        "gloss": {
+          "en": "However much I think about it, I don't understand the ending.",
+          "ko": "아무리 생각해도 결말을 모르겠어요."
+        }
+      },
+      {
+        "text": "J'ai beau lui expliquer, il ne veut rien entendre.",
+        "slot": "lui expliquer",
+        "cue": {
+          "en": "explain to him",
+          "ko": "그에게 설명하다"
+        },
+        "gloss": {
+          "en": "No matter how much I explain, he won't listen.",
+          "ko": "아무리 설명해도 그는 들으려 하지 않아요."
+        }
+      },
+      {
+        "text": "J'ai beau me coucher tôt, je suis toujours fatigué.",
+        "slot": "me coucher tôt",
+        "cue": {
+          "en": "go to bed early",
+          "ko": "일찍 자다"
+        },
+        "gloss": {
+          "en": "Even though I go to bed early, I'm always tired.",
+          "ko": "아무리 일찍 자도 늘 피곤해요."
+        }
+      },
+      {
+        "text": "J'ai beau chercher, je ne trouve pas mes clés.",
+        "slot": "chercher",
+        "cue": {
+          "en": "look for",
+          "ko": "찾다"
+        },
+        "gloss": {
+          "en": "However hard I look, I can't find my keys.",
+          "ko": "아무리 찾아도 열쇠가 안 보여요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-08",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "J'aurais dû ___.",
+    "core": [
+      "J'aurais dû"
+    ],
+    "meaning": {
+      "en": "Regretting (past conditional): I should have ___.",
+      "ko": "후회하기(조건법 과거): ___했어야 했는데."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "J'aurais dû te prévenir plus tôt.",
+        "slot": "te prévenir plus tôt",
+        "cue": {
+          "en": "warn you earlier",
+          "ko": "너에게 더 일찍 알리다"
+        },
+        "gloss": {
+          "en": "I should have told you earlier.",
+          "ko": "너한테 더 일찍 알렸어야 했는데."
+        }
+      },
+      {
+        "text": "J'aurais dû apporter du cidre !",
+        "slot": "apporter du cidre",
+        "cue": {
+          "en": "bring some cider",
+          "ko": "사과주를 가져오다"
+        },
+        "gloss": {
+          "en": "I should have brought some cider!",
+          "ko": "사과주를 가져올걸!"
+        }
+      },
+      {
+        "text": "J'aurais dû écouter ma mère.",
+        "slot": "écouter ma mère",
+        "cue": {
+          "en": "listen to my mother",
+          "ko": "엄마 말을 듣다"
+        },
+        "gloss": {
+          "en": "I should have listened to my mother.",
+          "ko": "엄마 말을 들을걸 그랬어요."
+        }
+      },
+      {
+        "text": "J'aurais dû réserver une table.",
+        "slot": "réserver une table",
+        "cue": {
+          "en": "book a table",
+          "ko": "자리를 예약하다"
+        },
+        "gloss": {
+          "en": "I should have booked a table.",
+          "ko": "자리를 예약해 둘걸 그랬어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-09",
+    "stage": 5,
+    "fn": "feedback-give",
+    "pattern": "Il aurait pu ___.",
+    "core": [
+      "Il aurait pu"
+    ],
+    "meaning": {
+      "en": "Reproaching (past conditional): He could have ___.",
+      "ko": "아쉬움·질책(조건법 과거): 그가 ___할 수도 있었을 텐데."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il aurait pu être plus nuancé.",
+        "slot": "être plus nuancé",
+        "cue": {
+          "en": "be more nuanced",
+          "ko": "더 섬세하다"
+        },
+        "gloss": {
+          "en": "It could have been more nuanced.",
+          "ko": "좀 더 섬세할 수도 있었을 텐데요."
+        }
+      },
+      {
+        "text": "Il aurait pu inventer une excuse !",
+        "slot": "inventer une excuse",
+        "cue": {
+          "en": "make up an excuse",
+          "ko": "핑계를 지어내다"
+        },
+        "gloss": {
+          "en": "He could have made up an excuse!",
+          "ko": "핑계라도 댈 수 있었잖아!"
+        }
+      },
+      {
+        "text": "Il aurait pu nous prévenir avant de partir.",
+        "slot": "nous prévenir avant de partir",
+        "cue": {
+          "en": "let us know before leaving",
+          "ko": "떠나기 전에 우리에게 알리다"
+        },
+        "gloss": {
+          "en": "He could have told us before leaving.",
+          "ko": "떠나기 전에 우리한테 말할 수도 있었을 텐데."
+        }
+      },
+      {
+        "text": "Il aurait pu pleuvoir, on a eu de la chance.",
+        "slot": "pleuvoir",
+        "cue": {
+          "en": "rain",
+          "ko": "비가 오다"
+        },
+        "gloss": {
+          "en": "It could have rained, we were lucky.",
+          "ko": "비가 올 수도 있었는데 운이 좋았어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-10",
+    "stage": 5,
+    "fn": "sympathy",
+    "pattern": "Je suis désolé que tu ___ (subjonctif passé).",
+    "core": [
+      "Je suis désolé que"
+    ],
+    "meaning": {
+      "en": "Sympathising about something past: I'm sorry you ___.",
+      "ko": "지난 일에 공감하기(접속법 과거): ___했다니 안타까워요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Je suis désolé que tu aies vécu ça.",
+        "slot": "tu aies vécu ça",
+        "cue": {
+          "en": "you went through that",
+          "ko": "그런 일을 겪다"
+        },
+        "gloss": {
+          "en": "I'm sorry you went through that.",
+          "ko": "그런 일을 겪었다니 안타까워."
+        }
+      },
+      {
+        "text": "Je suis désolé que vous ayez attendu si longtemps.",
+        "slot": "vous ayez attendu si longtemps",
+        "cue": {
+          "en": "you waited so long",
+          "ko": "그렇게 오래 기다리다"
+        },
+        "gloss": {
+          "en": "I'm sorry you waited so long.",
+          "ko": "그렇게 오래 기다리시게 해서 죄송해요."
+        }
+      },
+      {
+        "text": "Je suis désolé que tu n'aies pas pu venir.",
+        "slot": "tu n'aies pas pu venir",
+        "cue": {
+          "en": "you couldn't come",
+          "ko": "오지 못했다"
+        },
+        "gloss": {
+          "en": "I'm sorry you couldn't come.",
+          "ko": "네가 못 와서 아쉬워."
+        }
+      },
+      {
+        "text": "Je suis désolé que ça se soit passé comme ça.",
+        "slot": "ça se soit passé comme ça",
+        "cue": {
+          "en": "it happened like that",
+          "ko": "일이 그렇게 되다"
+        },
+        "gloss": {
+          "en": "I'm sorry it turned out like that.",
+          "ko": "일이 그렇게 돼서 유감이에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-11",
+    "stage": 5,
+    "fn": "formal-request",
+    "pattern": "Je regrette que vous ___ (subjonctif passé).",
+    "core": [
+      "Je regrette que"
+    ],
+    "meaning": {
+      "en": "Expressing formal regret: I regret that you ___.",
+      "ko": "격식 있게 유감 표하기(접속법 과거): ___하신 게 유감입니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Je regrette que vous ne nous en ayez pas parlé plus tôt.",
+        "slot": "vous ne nous en ayez pas parlé plus tôt",
+        "cue": {
+          "en": "you didn't tell us earlier",
+          "ko": "더 일찍 말하지 않았다"
+        },
+        "gloss": {
+          "en": "I regret that you didn't mention it to us earlier.",
+          "ko": "더 일찍 말씀해 주시지 않은 게 유감입니다."
+        }
+      },
+      {
+        "text": "Je regrette que la réunion ait été annulée.",
+        "slot": "la réunion ait été annulée",
+        "cue": {
+          "en": "the meeting was cancelled",
+          "ko": "회의가 취소되다"
+        },
+        "gloss": {
+          "en": "I'm sorry the meeting was cancelled.",
+          "ko": "회의가 취소된 게 유감이에요."
+        }
+      },
+      {
+        "text": "Je regrette que tu sois parti si vite.",
+        "slot": "tu sois parti si vite",
+        "cue": {
+          "en": "you left so quickly",
+          "ko": "그렇게 빨리 떠나다"
+        },
+        "gloss": {
+          "en": "I'm sorry you left so quickly.",
+          "ko": "네가 그렇게 빨리 가 버려서 아쉬워."
+        }
+      },
+      {
+        "text": "Je regrette que personne ne m'ait prévenu.",
+        "slot": "personne ne m'ait prévenu",
+        "cue": {
+          "en": "no one warned me",
+          "ko": "아무도 알려 주지 않았다"
+        },
+        "gloss": {
+          "en": "I regret that no one warned me.",
+          "ko": "아무도 알려 주지 않은 게 유감이에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-12",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Il semblerait que ___.",
+    "core": [
+      "Il semblerait que"
+    ],
+    "meaning": {
+      "en": "Hedging a claim: It would seem that ___.",
+      "ko": "말 누그러뜨리기: ___인 것 같기도 해요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il semblerait que les chiffres soient un peu optimistes.",
+        "slot": "les chiffres soient un peu optimistes",
+        "cue": {
+          "en": "the figures are a bit optimistic",
+          "ko": "수치가 좀 낙관적이다"
+        },
+        "gloss": {
+          "en": "It would seem the figures are a bit optimistic.",
+          "ko": "수치가 좀 낙관적인 것 같기도 해요."
+        }
+      },
+      {
+        "text": "Il semblerait que personne n'ait écouté les syndicats.",
+        "slot": "personne n'ait écouté les syndicats",
+        "cue": {
+          "en": "no one listened to the unions",
+          "ko": "아무도 노조 말을 듣지 않았다"
+        },
+        "gloss": {
+          "en": "It would seem nobody listened to the unions.",
+          "ko": "아무도 노조 말을 안 들은 것 같기도 해요."
+        }
+      },
+      {
+        "text": "Il semblerait que le client ait changé d'avis.",
+        "slot": "le client ait changé d'avis",
+        "cue": {
+          "en": "the client changed their mind",
+          "ko": "고객이 마음을 바꾸다"
+        },
+        "gloss": {
+          "en": "It would seem the client has changed their mind.",
+          "ko": "고객이 마음을 바꾼 것 같아요."
+        }
+      },
+      {
+        "text": "Il semblerait que le problème vienne du serveur.",
+        "slot": "le problème vienne du serveur",
+        "cue": {
+          "en": "the problem comes from the server",
+          "ko": "문제가 서버에서 생기다"
+        },
+        "gloss": {
+          "en": "It would seem the problem comes from the server.",
+          "ko": "문제가 서버 쪽에서 생긴 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-13",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Il serait peut-être utile de ___.",
+    "core": [
+      "Il serait peut-être utile de",
+      "Il serait peut-être utile d'"
+    ],
+    "meaning": {
+      "en": "Suggesting carefully in formal speech: It might be useful to ___.",
+      "ko": "격식 있게 조심스레 제안하기: ___하는 게 도움이 될지도 모르겠어요."
+    },
+    "grammar": [
+      6,
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il serait peut-être utile de comparer les deux offres.",
+        "slot": "comparer les deux offres",
+        "cue": {
+          "en": "compare the two offers",
+          "ko": "두 제안을 비교하다"
+        },
+        "gloss": {
+          "en": "It might be useful to compare the two offers.",
+          "ko": "두 제안을 비교해 보는 게 도움이 될지도 몰라요."
+        }
+      },
+      {
+        "text": "Il serait peut-être utile d'en parler à toute l'équipe.",
+        "slot": "en parler à toute l'équipe",
+        "cue": {
+          "en": "talk about it with the whole team",
+          "ko": "팀 전체와 이야기하다"
+        },
+        "gloss": {
+          "en": "It might be useful to discuss it with the whole team.",
+          "ko": "팀 전체와 이야기해 보는 게 좋을지도 몰라요."
+        }
+      },
+      {
+        "text": "Il serait peut-être utile de fixer une date limite.",
+        "slot": "fixer une date limite",
+        "cue": {
+          "en": "set a deadline",
+          "ko": "마감일을 정하다"
+        },
+        "gloss": {
+          "en": "It might be useful to set a deadline.",
+          "ko": "마감일을 정해 두는 게 좋을지도 몰라요."
+        }
+      },
+      {
+        "text": "Il serait peut-être utile d'attendre la fin du mois.",
+        "slot": "attendre la fin du mois",
+        "cue": {
+          "en": "wait until the end of the month",
+          "ko": "월말까지 기다리다"
+        },
+        "gloss": {
+          "en": "It might be useful to wait until the end of the month.",
+          "ko": "월말까지 기다려 보는 게 좋을지도 몰라요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-14",
+    "stage": 5,
+    "fn": "report",
+    "pattern": "Il a été convenu que ___.",
+    "core": [
+      "Il a été convenu"
+    ],
+    "meaning": {
+      "en": "Reporting a decision impersonally: It has been agreed that ___.",
+      "ko": "결정 사항 보고하기(비인칭 수동): ___하기로 합의되었습니다."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il a été convenu qu'un paiement en trois fois pourrait être accepté.",
+        "slot": "qu'un paiement en trois fois pourrait être accepté",
+        "cue": {
+          "en": "a payment in three instalments could be accepted",
+          "ko": "세 번 나눠 내는 것을 받아들일 수 있다"
+        },
+        "gloss": {
+          "en": "It has been agreed that payment in three instalments could be accepted.",
+          "ko": "세 번 나눠 내는 것도 받아들일 수 있다고 합의되었습니다."
+        }
+      },
+      {
+        "text": "Il a été convenu de reporter le projet.",
+        "slot": "de reporter le projet",
+        "cue": {
+          "en": "to postpone the project",
+          "ko": "프로젝트를 미루다"
+        },
+        "gloss": {
+          "en": "It has been agreed to postpone the project.",
+          "ko": "프로젝트를 미루기로 합의되었습니다."
+        }
+      },
+      {
+        "text": "Il a été convenu que chaque service enverrait son bilan.",
+        "slot": "que chaque service enverrait son bilan",
+        "cue": {
+          "en": "each department would send its report",
+          "ko": "부서마다 결산을 보내다"
+        },
+        "gloss": {
+          "en": "It was agreed that each department would send its report.",
+          "ko": "부서마다 결산을 보내기로 합의되었습니다."
+        }
+      },
+      {
+        "text": "Il a été convenu que la réunion aurait lieu en ligne.",
+        "slot": "que la réunion aurait lieu en ligne",
+        "cue": {
+          "en": "the meeting would take place online",
+          "ko": "회의를 온라인으로 하다"
+        },
+        "gloss": {
+          "en": "It was agreed that the meeting would take place online.",
+          "ko": "회의는 온라인으로 하기로 합의되었습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-15",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Force est de constater que ___.",
+    "core": [
+      "Force est de constater"
+    ],
+    "meaning": {
+      "en": "Stating an undeniable fact (formal): One has to admit that ___.",
+      "ko": "부정할 수 없는 사실 말하기(격식): ___라는 걸 인정할 수밖에 없어요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "Force est de constater"
+    ],
+    "examples": [
+      {
+        "text": "Force est de constater que tout le monde est resté sur ses positions.",
+        "slot": "que tout le monde est resté sur ses positions",
+        "cue": {
+          "en": "everyone stuck to their positions",
+          "ko": "모두 자기 입장을 고수했다"
+        },
+        "gloss": {
+          "en": "One has to admit that everyone stuck to their positions.",
+          "ko": "모두 자기 입장을 고수했다는 걸 인정할 수밖에 없어요."
+        }
+      },
+      {
+        "text": "Force est de constater que la méthode ne marche pas.",
+        "slot": "que la méthode ne marche pas",
+        "cue": {
+          "en": "the method doesn't work",
+          "ko": "그 방법이 통하지 않다"
+        },
+        "gloss": {
+          "en": "One has to admit the method doesn't work.",
+          "ko": "그 방법이 통하지 않는다는 걸 인정할 수밖에 없어요."
+        }
+      },
+      {
+        "text": "Force est de constater que les ventes ont baissé.",
+        "slot": "que les ventes ont baissé",
+        "cue": {
+          "en": "sales have dropped",
+          "ko": "매출이 줄었다"
+        },
+        "gloss": {
+          "en": "One has to admit that sales have dropped.",
+          "ko": "매출이 줄었다는 걸 인정할 수밖에 없어요."
+        }
+      },
+      {
+        "text": "Force est de constater qu'il avait raison.",
+        "slot": "qu'il avait raison",
+        "cue": {
+          "en": "he was right",
+          "ko": "그가 옳았다"
+        },
+        "gloss": {
+          "en": "One has to admit he was right.",
+          "ko": "그가 옳았다는 걸 인정할 수밖에 없네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-16",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Il se trouve que ___.",
+    "core": [
+      "Il se trouve que"
+    ],
+    "meaning": {
+      "en": "Bringing in a relevant fact: As it happens, ___.",
+      "ko": "마침 사실 덧붙이기: 실은 ___예요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "Il se trouve que"
+    ],
+    "examples": [
+      {
+        "text": "Il se trouve que ce tarif comprend la maintenance.",
+        "slot": "ce tarif comprend la maintenance",
+        "cue": {
+          "en": "this rate includes maintenance",
+          "ko": "이 요금에 유지 보수가 포함되다"
+        },
+        "gloss": {
+          "en": "As it happens, this rate includes maintenance.",
+          "ko": "실은 이 요금에 유지 보수가 포함돼 있어요."
+        }
+      },
+      {
+        "text": "Il se trouve que je connais bien le quartier.",
+        "slot": "je connais bien le quartier",
+        "cue": {
+          "en": "I know the area well",
+          "ko": "그 동네를 잘 알다"
+        },
+        "gloss": {
+          "en": "As it happens, I know the area well.",
+          "ko": "실은 제가 그 동네를 잘 알아요."
+        }
+      },
+      {
+        "text": "Il se trouve que ma sœur travaille là-bas.",
+        "slot": "ma sœur travaille là-bas",
+        "cue": {
+          "en": "my sister works there",
+          "ko": "내 여동생이 거기서 일하다"
+        },
+        "gloss": {
+          "en": "As it happens, my sister works there.",
+          "ko": "실은 제 여동생이 거기서 일해요."
+        }
+      },
+      {
+        "text": "Il se trouve que le directeur est absent cette semaine.",
+        "slot": "le directeur est absent cette semaine",
+        "cue": {
+          "en": "the director is away this week",
+          "ko": "이번 주에 이사가 자리에 없다"
+        },
+        "gloss": {
+          "en": "As it happens, the director is away this week.",
+          "ko": "실은 이사님이 이번 주에 안 계세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-17",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "Sans vouloir te vexer, ___.",
+    "core": [
+      "Sans vouloir te vexer"
+    ],
+    "meaning": {
+      "en": "Criticising tactfully: No offence, but ___.",
+      "ko": "눈치 있게 지적하기: 기분 나쁘게 듣지 말고, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Sans vouloir te vexer"
+    ],
+    "examples": [
+      {
+        "text": "Sans vouloir te vexer, le refrain est un peu long.",
+        "slot": "le refrain est un peu long",
+        "cue": {
+          "en": "the chorus is a bit long",
+          "ko": "후렴이 좀 길다"
+        },
+        "gloss": {
+          "en": "No offence, but the chorus is a bit long.",
+          "ko": "기분 나쁘게 듣지 마. 후렴이 좀 길어."
+        }
+      },
+      {
+        "text": "Sans vouloir te vexer, ta sauce manque de sel.",
+        "slot": "ta sauce manque de sel",
+        "cue": {
+          "en": "your sauce lacks salt",
+          "ko": "소스가 좀 싱겁다"
+        },
+        "gloss": {
+          "en": "No offence, but your sauce needs salt.",
+          "ko": "기분 나쁘게 듣지 마. 소스가 좀 싱거워."
+        }
+      },
+      {
+        "text": "Sans vouloir te vexer, cette couleur ne te va pas.",
+        "slot": "cette couleur ne te va pas",
+        "cue": {
+          "en": "this colour doesn't suit you",
+          "ko": "이 색이 너한테 안 어울리다"
+        },
+        "gloss": {
+          "en": "No offence, but that colour doesn't suit you.",
+          "ko": "기분 나쁘게 듣지 마. 이 색은 너한테 안 어울려."
+        }
+      },
+      {
+        "text": "Sans vouloir te vexer, ton plan ne tient pas debout.",
+        "slot": "ton plan ne tient pas debout",
+        "cue": {
+          "en": "your plan doesn't hold up",
+          "ko": "네 계획이 말이 안 되다"
+        },
+        "gloss": {
+          "en": "No offence, but your plan doesn't hold up.",
+          "ko": "기분 나쁘게 듣지 마. 네 계획은 말이 안 돼."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-18",
+    "stage": 5,
+    "fn": "dislike",
+    "pattern": "___, ce n'est pas mon truc.",
+    "core": [
+      "ce n'est pas mon truc",
+      "Ce n'est pas mon truc"
+    ],
+    "meaning": {
+      "en": "Saying something isn't for you (familiar): ___ isn't my thing.",
+      "ko": "취향 아니라고 말하기(친한 말투): ___은 내 스타일이 아니야."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [
+      "Ce n'est pas mon truc"
+    ],
+    "examples": [
+      {
+        "text": "Les refrains interminables, ce n'est pas mon truc.",
+        "slot": "Les refrains interminables",
+        "cue": {
+          "en": "endless choruses",
+          "ko": "끝없는 후렴"
+        },
+        "gloss": {
+          "en": "Endless choruses aren't my thing.",
+          "ko": "끝없이 긴 후렴은 내 스타일이 아니야."
+        }
+      },
+      {
+        "text": "Le camping, ce n'est pas mon truc.",
+        "slot": "Le camping",
+        "cue": {
+          "en": "camping",
+          "ko": "캠핑"
+        },
+        "gloss": {
+          "en": "Camping isn't my thing.",
+          "ko": "캠핑은 내 스타일이 아니야."
+        }
+      },
+      {
+        "text": "Les personnages caricaturaux, ce n'est pas mon truc.",
+        "slot": "Les personnages caricaturaux",
+        "cue": {
+          "en": "caricatured characters",
+          "ko": "과장된 인물"
+        },
+        "gloss": {
+          "en": "Caricatured characters aren't my thing.",
+          "ko": "과장된 인물은 내 취향이 아니야."
+        }
+      },
+      {
+        "text": "Me lever à l'aube, ce n'est pas mon truc.",
+        "slot": "Me lever à l'aube",
+        "cue": {
+          "en": "get up at dawn",
+          "ko": "새벽에 일어나다"
+        },
+        "gloss": {
+          "en": "Getting up at dawn isn't my thing.",
+          "ko": "새벽에 일어나는 건 내 스타일이 아니야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-19",
+    "stage": 5,
+    "fn": "best-to",
+    "pattern": "Il vaudrait peut-être mieux que ___.",
+    "core": [
+      "Il vaudrait peut-être mieux"
+    ],
+    "meaning": {
+      "en": "Advising gently what's best: It might be better ___.",
+      "ko": "조심스레 최선을 권하기: ___하는 게 나을지도 몰라요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il vaudrait peut-être mieux que tu lui dises ce que tu ressens.",
+        "slot": "que tu lui dises ce que tu ressens",
+        "cue": {
+          "en": "you tell him how you feel",
+          "ko": "그에게 네 마음을 말하다"
+        },
+        "gloss": {
+          "en": "It might be better for you to tell him how you feel.",
+          "ko": "네 마음을 그한테 말하는 게 나을지도 몰라."
+        }
+      },
+      {
+        "text": "Il vaudrait peut-être mieux partir avant la pluie.",
+        "slot": "partir avant la pluie",
+        "cue": {
+          "en": "leave before the rain",
+          "ko": "비 오기 전에 떠나다"
+        },
+        "gloss": {
+          "en": "It might be better to leave before the rain.",
+          "ko": "비 오기 전에 떠나는 게 나을지도 몰라요."
+        }
+      },
+      {
+        "text": "Il vaudrait peut-être mieux attendre sa réponse.",
+        "slot": "attendre sa réponse",
+        "cue": {
+          "en": "wait for his answer",
+          "ko": "그의 답을 기다리다"
+        },
+        "gloss": {
+          "en": "It might be better to wait for his reply.",
+          "ko": "그의 답을 기다리는 게 나을지도 몰라요."
+        }
+      },
+      {
+        "text": "Il vaudrait peut-être mieux qu'on en reparle demain.",
+        "slot": "qu'on en reparle demain",
+        "cue": {
+          "en": "we talk about it again tomorrow",
+          "ko": "내일 다시 이야기하다"
+        },
+        "gloss": {
+          "en": "It might be better if we talked about it again tomorrow.",
+          "ko": "내일 다시 이야기하는 게 나을지도 몰라요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "fr-f5-20",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "Il ___ sans un mot. (passé simple)",
+    "core": [
+      "sans un mot"
+    ],
+    "meaning": {
+      "en": "Recognising the passé simple in a story: He ___ without a word.",
+      "ko": "글 속 단순과거 알아보기: 그는 말없이 ___했다."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Il ouvrit la porte et sortit sans un mot.",
+        "slot": "ouvrit la porte et sortit",
+        "cue": {
+          "en": "open the door and go out",
+          "ko": "문을 열고 나가다"
+        },
+        "gloss": {
+          "en": "He opened the door and went out without a word.",
+          "ko": "그는 문을 열고 말없이 나갔다."
+        }
+      },
+      {
+        "text": "Elle se leva et partit sans un mot.",
+        "slot": "se leva et partit",
+        "cue": {
+          "en": "get up and leave",
+          "ko": "일어나 떠나다"
+        },
+        "gloss": {
+          "en": "She got up and left without a word.",
+          "ko": "그녀는 일어나 말없이 떠났다."
+        }
+      },
+      {
+        "text": "Le vieil homme le regarda sans un mot.",
+        "slot": "le regarda",
+        "cue": {
+          "en": "look at him",
+          "ko": "그를 바라보다"
+        },
+        "gloss": {
+          "en": "The old man looked at him without a word.",
+          "ko": "노인은 말없이 그를 바라보았다."
+        }
+      },
+      {
+        "text": "Ils prirent leurs valises et descendirent sans un mot.",
+        "slot": "prirent leurs valises et descendirent",
+        "cue": {
+          "en": "take their suitcases and go down",
+          "ko": "가방을 들고 내려가다"
+        },
+        "gloss": {
+          "en": "They took their suitcases and went downstairs without a word.",
+          "ko": "그들은 가방을 들고 말없이 내려갔다."
         }
       }
     ]

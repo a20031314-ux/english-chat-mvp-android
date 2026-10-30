@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 러시아어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** 러시아어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const RU_FRAMES: Frame[] = [
   {
     "id": "ru-f1-01",
@@ -3713,6 +3713,2723 @@ export const RU_FRAMES: Frame[] = [
         "gloss": {
           "en": "To be honest, I don't know what to do.",
           "ko": "솔직히 어떻게 해야 할지 모르겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-01",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "С одной стороны, ___, с другой стороны, …",
+    "core": [
+      "С одной стороны",
+      "с одной стороны"
+    ],
+    "meaning": {
+      "en": "Weighing one side: On the one hand, ___.",
+      "ko": "한쪽 면 말하기: 한편으로는 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "С одной стороны"
+    ],
+    "examples": [
+      {
+        "text": "С одной стороны, в большом городе больше возможностей.",
+        "slot": "в большом городе больше возможностей",
+        "cue": {
+          "en": "a big city has more opportunities",
+          "ko": "큰 도시에 기회가 더 많다"
+        },
+        "gloss": {
+          "en": "On the one hand, a big city has more opportunities.",
+          "ko": "한편으로는 큰 도시에 기회가 더 많아."
+        }
+      },
+      {
+        "text": "С одной стороны, новая программа удобнее.",
+        "slot": "новая программа удобнее",
+        "cue": {
+          "en": "the new program is more convenient",
+          "ko": "새 프로그램이 더 편하다"
+        },
+        "gloss": {
+          "en": "On the one hand, the new program is more convenient.",
+          "ko": "한편으로는 새 프로그램이 더 편해요."
+        }
+      },
+      {
+        "text": "Я, с одной стороны, рад переезду.",
+        "slot": "рад переезду",
+        "cue": {
+          "en": "be glad about the move",
+          "ko": "이사가 기쁘다"
+        },
+        "gloss": {
+          "en": "On the one hand, I'm glad about the move.",
+          "ko": "한편으로는 이사하는 게 기뻐."
+        }
+      },
+      {
+        "text": "С одной стороны, собака — это большая ответственность.",
+        "slot": "собака — это большая ответственность",
+        "cue": {
+          "en": "a dog is a big responsibility",
+          "ko": "개는 큰 책임이다"
+        },
+        "gloss": {
+          "en": "On the one hand, a dog is a big responsibility.",
+          "ko": "한편으로는 개는 큰 책임이야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-02",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "С другой стороны, ___.",
+    "core": [
+      "С другой стороны",
+      "с другой стороны"
+    ],
+    "meaning": {
+      "en": "Weighing the other side: On the other hand, ___.",
+      "ko": "다른 면 말하기: 다른 한편으로는 ___."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [
+      "С другой стороны"
+    ],
+    "examples": [
+      {
+        "text": "С другой стороны, жить там гораздо дороже.",
+        "slot": "жить там гораздо дороже",
+        "cue": {
+          "en": "living there is much more expensive",
+          "ko": "거기 사는 게 훨씬 비싸다"
+        },
+        "gloss": {
+          "en": "On the other hand, living there is much more expensive.",
+          "ko": "다른 한편으로는 거기 사는 게 훨씬 비싸."
+        }
+      },
+      {
+        "text": "С другой стороны, никто не обещал, что будет легко.",
+        "slot": "никто не обещал, что будет легко",
+        "cue": {
+          "en": "nobody promised it would be easy",
+          "ko": "쉬울 거라고 아무도 약속 안 했다"
+        },
+        "gloss": {
+          "en": "On the other hand, nobody promised it would be easy.",
+          "ko": "다른 한편으로는 쉬울 거라고 아무도 약속 안 했잖아."
+        }
+      },
+      {
+        "text": "А с другой стороны, отдых тоже нужен.",
+        "slot": "отдых тоже нужен",
+        "cue": {
+          "en": "rest is needed too",
+          "ko": "쉬는 것도 필요하다"
+        },
+        "gloss": {
+          "en": "But on the other hand, you need rest too.",
+          "ko": "그런데 다른 한편으로는 쉬는 것도 필요해."
+        }
+      },
+      {
+        "text": "С другой стороны, клиенты к нам уже привыкли.",
+        "slot": "клиенты к нам уже привыкли",
+        "cue": {
+          "en": "customers are already used to us",
+          "ko": "고객들이 이미 우리에게 익숙하다"
+        },
+        "gloss": {
+          "en": "On the other hand, our customers are already used to us.",
+          "ko": "다른 한편으로는 고객들이 이미 우리한테 익숙해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-03",
+    "stage": 4,
+    "fn": "reason",
+    "pattern": "Дело в том, что ___.",
+    "core": [
+      "Дело в том, что",
+      "дело в том, что"
+    ],
+    "meaning": {
+      "en": "Explaining the real reason: The thing is, ___.",
+      "ko": "진짜 이유 설명하기: 실은 ___거든요."
+    },
+    "grammar": [],
+    "expressions": [
+      "Дело в том"
+    ],
+    "examples": [
+      {
+        "text": "Дело в том, что поезд опоздал на час.",
+        "slot": "поезд опоздал на час",
+        "cue": {
+          "en": "the train was an hour late",
+          "ko": "기차가 한 시간 늦었다"
+        },
+        "gloss": {
+          "en": "The thing is, the train was an hour late.",
+          "ko": "실은 기차가 한 시간 늦었거든요."
+        }
+      },
+      {
+        "text": "Дело в том, что я не получил ваше письмо.",
+        "slot": "я не получил ваше письмо",
+        "cue": {
+          "en": "I didn't get your letter",
+          "ko": "당신의 편지를 못 받았다"
+        },
+        "gloss": {
+          "en": "The thing is, I didn't get your letter.",
+          "ko": "실은 보내 주신 편지를 못 받았어요."
+        }
+      },
+      {
+        "text": "Извините, дело в том, что у нас сегодня нет свободных столиков.",
+        "slot": "у нас сегодня нет свободных столиков",
+        "cue": {
+          "en": "we have no free tables today",
+          "ko": "오늘 빈 테이블이 없다"
+        },
+        "gloss": {
+          "en": "Sorry, the thing is, we have no free tables today.",
+          "ko": "죄송해요, 실은 오늘 빈 테이블이 없어서요."
+        }
+      },
+      {
+        "text": "Дело в том, что отчёт ещё не готов.",
+        "slot": "отчёт ещё не готов",
+        "cue": {
+          "en": "the report isn't ready yet",
+          "ko": "보고서가 아직 안 됐다"
+        },
+        "gloss": {
+          "en": "The thing is, the report isn't ready yet.",
+          "ko": "실은 보고서가 아직 안 끝났어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-04",
+    "stage": 4,
+    "fn": "not-necessarily",
+    "pattern": "Это зависит от того, ___.",
+    "core": [
+      "зависит от того"
+    ],
+    "meaning": {
+      "en": "Saying it depends: It depends on ___.",
+      "ko": "조건에 따라 다르다고 말하기: ___에 달렸어."
+    },
+    "grammar": [],
+    "expressions": [
+      "Это зависит от"
+    ],
+    "examples": [
+      {
+        "text": "Это зависит от того, сколько у нас будет времени.",
+        "slot": "сколько у нас будет времени",
+        "cue": {
+          "en": "how much time we'll have",
+          "ko": "시간이 얼마나 있을지"
+        },
+        "gloss": {
+          "en": "It depends on how much time we'll have.",
+          "ko": "시간이 얼마나 있을지에 달렸어."
+        }
+      },
+      {
+        "text": "Всё зависит от того, что скажет врач.",
+        "slot": "что скажет врач",
+        "cue": {
+          "en": "what the doctor says",
+          "ko": "의사가 뭐라고 할지"
+        },
+        "gloss": {
+          "en": "It all depends on what the doctor says.",
+          "ko": "다 의사가 뭐라고 하느냐에 달렸어요."
+        }
+      },
+      {
+        "text": "Цена зависит от того, когда вы бронируете.",
+        "slot": "когда вы бронируете",
+        "cue": {
+          "en": "when you book",
+          "ko": "언제 예약하는지"
+        },
+        "gloss": {
+          "en": "The price depends on when you book.",
+          "ko": "가격은 언제 예약하느냐에 따라 달라요."
+        }
+      },
+      {
+        "text": "Успех зависит от того, как мы подготовимся.",
+        "slot": "как мы подготовимся",
+        "cue": {
+          "en": "how we prepare",
+          "ko": "우리가 어떻게 준비할지"
+        },
+        "gloss": {
+          "en": "Success depends on how we prepare.",
+          "ko": "성공은 우리가 어떻게 준비하느냐에 달렸어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-05",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "Давайте обсудим ___.",
+    "core": [
+      "Давайте обсудим",
+      "давайте обсудим"
+    ],
+    "meaning": {
+      "en": "Opening a discussion: Let's discuss ___.",
+      "ko": "논의 꺼내기: ___ 얘기해 봅시다."
+    },
+    "grammar": [],
+    "expressions": [
+      "Давайте обсудим"
+    ],
+    "examples": [
+      {
+        "text": "Давайте обсудим условия договора.",
+        "slot": "условия договора",
+        "cue": {
+          "en": "the terms of the contract",
+          "ko": "계약 조건"
+        },
+        "gloss": {
+          "en": "Let's discuss the terms of the contract.",
+          "ko": "계약 조건을 얘기해 봅시다."
+        }
+      },
+      {
+        "text": "Давайте обсудим, кто будет отвечать за рекламу.",
+        "slot": "кто будет отвечать за рекламу",
+        "cue": {
+          "en": "who will be in charge of advertising",
+          "ko": "누가 광고를 맡을지"
+        },
+        "gloss": {
+          "en": "Let's discuss who will be in charge of advertising.",
+          "ko": "누가 광고를 맡을지 얘기해 봅시다."
+        }
+      },
+      {
+        "text": "Тогда давайте обсудим сроки.",
+        "slot": "сроки",
+        "cue": {
+          "en": "deadlines",
+          "ko": "기한"
+        },
+        "gloss": {
+          "en": "Then let's discuss the deadlines.",
+          "ko": "그럼 기한을 얘기해 봅시다."
+        }
+      },
+      {
+        "text": "Давайте обсудим это после обеда.",
+        "slot": "это после обеда",
+        "cue": {
+          "en": "this after lunch",
+          "ko": "이것을 점심 뒤에"
+        },
+        "gloss": {
+          "en": "Let's discuss this after lunch.",
+          "ko": "이건 점심 먹고 얘기해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-06",
+    "stage": 4,
+    "fn": "rephrase",
+    "pattern": "Я имею в виду, что ___.",
+    "core": [
+      "Я имею в виду",
+      "я имею в виду"
+    ],
+    "meaning": {
+      "en": "Saying what you meant: I mean ___.",
+      "ko": "내 말뜻 밝히기: 내 말은 ___라는 거예요."
+    },
+    "grammar": [],
+    "expressions": [
+      "Я имею в виду"
+    ],
+    "examples": [
+      {
+        "text": "Я имею в виду, что нам нужно больше людей.",
+        "slot": "что нам нужно больше людей",
+        "cue": {
+          "en": "we need more people",
+          "ko": "사람이 더 필요하다"
+        },
+        "gloss": {
+          "en": "I mean that we need more people.",
+          "ko": "제 말은 사람이 더 필요하다는 거예요."
+        }
+      },
+      {
+        "text": "Нет, я имею в виду другой ресторан.",
+        "slot": "другой ресторан",
+        "cue": {
+          "en": "a different restaurant",
+          "ko": "다른 식당"
+        },
+        "gloss": {
+          "en": "No, I mean a different restaurant.",
+          "ko": "아니, 다른 식당 말하는 거야."
+        }
+      },
+      {
+        "text": "Я имею в виду, что спешить не стоит.",
+        "slot": "что спешить не стоит",
+        "cue": {
+          "en": "there's no point rushing",
+          "ko": "서두를 필요가 없다"
+        },
+        "gloss": {
+          "en": "I mean there's no need to rush.",
+          "ko": "제 말은 서두를 필요 없다는 거예요."
+        }
+      },
+      {
+        "text": "Я имею в виду не цену, а качество.",
+        "slot": "не цену, а качество",
+        "cue": {
+          "en": "not the price but the quality",
+          "ko": "값이 아니라 품질"
+        },
+        "gloss": {
+          "en": "I don't mean the price, I mean the quality.",
+          "ko": "값 말고 품질 얘기예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-07",
+    "stage": 4,
+    "fn": "guess",
+    "pattern": "Судя по всему, ___.",
+    "core": [
+      "Судя по всему",
+      "судя по всему"
+    ],
+    "meaning": {
+      "en": "Drawing a conclusion from signs: By all accounts, ___.",
+      "ko": "정황으로 짐작하기: 보아하니 ___."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "Судя по всему"
+    ],
+    "examples": [
+      {
+        "text": "Судя по всему, дождь будет весь день.",
+        "slot": "дождь будет весь день",
+        "cue": {
+          "en": "it will rain all day",
+          "ko": "하루 종일 비가 오겠다"
+        },
+        "gloss": {
+          "en": "By the looks of it, it will rain all day.",
+          "ko": "보아하니 하루 종일 비가 오겠네."
+        }
+      },
+      {
+        "text": "Судя по всему, они уже договорились.",
+        "slot": "они уже договорились",
+        "cue": {
+          "en": "they've already agreed",
+          "ko": "그들이 벌써 합의했다"
+        },
+        "gloss": {
+          "en": "Apparently they've already reached an agreement.",
+          "ko": "보아하니 그 사람들 벌써 합의했나 봐."
+        }
+      },
+      {
+        "text": "Он, судя по всему, не придёт.",
+        "slot": "не придёт",
+        "cue": {
+          "en": "he won't come",
+          "ko": "그가 안 온다"
+        },
+        "gloss": {
+          "en": "Apparently he isn't coming.",
+          "ko": "보아하니 그 사람 안 오겠네."
+        }
+      },
+      {
+        "text": "Судя по всему, магазин закрыли на ремонт.",
+        "slot": "магазин закрыли на ремонт",
+        "cue": {
+          "en": "the shop was closed for repairs",
+          "ko": "가게가 수리로 문을 닫았다"
+        },
+        "gloss": {
+          "en": "It looks like the shop has been closed for repairs.",
+          "ko": "보아하니 가게가 수리 때문에 문을 닫았나 봐."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-08",
+    "stage": 4,
+    "fn": "the-more",
+    "pattern": "Чем ___, тем лучше.",
+    "core": [
+      "тем лучше"
+    ],
+    "meaning": {
+      "en": "The more…, the better: The ___, the better.",
+      "ko": "~할수록 좋다고 말하기: ___할수록 좋아."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Чем раньше мы начнём, тем лучше.",
+        "slot": "раньше мы начнём",
+        "cue": {
+          "en": "we start earlier",
+          "ko": "우리가 더 일찍 시작하다"
+        },
+        "gloss": {
+          "en": "The sooner we start, the better.",
+          "ko": "빨리 시작할수록 좋아."
+        }
+      },
+      {
+        "text": "Чем меньше сахара, тем лучше.",
+        "slot": "меньше сахара",
+        "cue": {
+          "en": "less sugar",
+          "ko": "설탕이 더 적다"
+        },
+        "gloss": {
+          "en": "The less sugar, the better.",
+          "ko": "설탕은 적을수록 좋아."
+        }
+      },
+      {
+        "text": "Чем проще объяснение, тем лучше.",
+        "slot": "проще объяснение",
+        "cue": {
+          "en": "a simpler explanation",
+          "ko": "더 간단한 설명"
+        },
+        "gloss": {
+          "en": "The simpler the explanation, the better.",
+          "ko": "설명은 간단할수록 좋아요."
+        }
+      },
+      {
+        "text": "Чем больше людей придёт, тем лучше.",
+        "slot": "больше людей придёт",
+        "cue": {
+          "en": "more people come",
+          "ko": "사람이 더 많이 오다"
+        },
+        "gloss": {
+          "en": "The more people come, the better.",
+          "ko": "사람이 많이 올수록 좋아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-09",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Хотя ___, …",
+    "core": [
+      "Хотя",
+      "хотя"
+    ],
+    "meaning": {
+      "en": "Conceding a point: Although ___, …",
+      "ko": "일부 인정하기: ___이긴 하지만, …"
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Хотя было холодно, мы пошли на пляж.",
+        "slot": "было холодно",
+        "cue": {
+          "en": "it was cold",
+          "ko": "추웠다"
+        },
+        "gloss": {
+          "en": "Although it was cold, we went to the beach.",
+          "ko": "추웠지만 우리는 해변에 갔어."
+        }
+      },
+      {
+        "text": "Я согласна, хотя есть одна проблема.",
+        "slot": "есть одна проблема",
+        "cue": {
+          "en": "there is one problem",
+          "ko": "문제가 하나 있다"
+        },
+        "gloss": {
+          "en": "I agree, although there is one problem.",
+          "ko": "동의해요, 문제가 하나 있긴 하지만요."
+        }
+      },
+      {
+        "text": "Хотя он и опоздал, встреча прошла хорошо.",
+        "slot": "он и опоздал",
+        "cue": {
+          "en": "he was late",
+          "ko": "그가 늦었다"
+        },
+        "gloss": {
+          "en": "Although he was late, the meeting went well.",
+          "ko": "그 사람이 늦긴 했지만 회의는 잘 끝났어요."
+        }
+      },
+      {
+        "text": "Квартира уютная, хотя и маленькая.",
+        "slot": "маленькая",
+        "cue": {
+          "en": "small",
+          "ko": "작다"
+        },
+        "gloss": {
+          "en": "The flat is cosy, though small.",
+          "ko": "집이 작긴 해도 아늑해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-10",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Несмотря на ___, …",
+    "core": [
+      "Несмотря на",
+      "несмотря на"
+    ],
+    "meaning": {
+      "en": "Saying something happened anyway: Despite ___, …",
+      "ko": "그래도 했다고 말하기: ___에도 불구하고 …"
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Несмотря на погоду, концерт не отменили.",
+        "slot": "погоду",
+        "cue": {
+          "en": "the weather",
+          "ko": "날씨"
+        },
+        "gloss": {
+          "en": "Despite the weather, the concert wasn't cancelled.",
+          "ko": "날씨에도 불구하고 공연은 취소되지 않았어요."
+        }
+      },
+      {
+        "text": "Несмотря на усталость, она закончила работу.",
+        "slot": "усталость",
+        "cue": {
+          "en": "tiredness",
+          "ko": "피곤함"
+        },
+        "gloss": {
+          "en": "Despite being tired, she finished the work.",
+          "ko": "피곤했는데도 그녀는 일을 끝냈어요."
+        }
+      },
+      {
+        "text": "Мы решили купить эту машину, несмотря на цену.",
+        "slot": "цену",
+        "cue": {
+          "en": "the price",
+          "ko": "가격"
+        },
+        "gloss": {
+          "en": "We decided to buy this car despite the price.",
+          "ko": "가격에도 불구하고 이 차를 사기로 했어요."
+        }
+      },
+      {
+        "text": "Несмотря на все проблемы, проект сдали вовремя.",
+        "slot": "все проблемы",
+        "cue": {
+          "en": "all the problems",
+          "ko": "온갖 문제"
+        },
+        "gloss": {
+          "en": "Despite all the problems, the project was handed in on time.",
+          "ko": "온갖 문제에도 프로젝트는 제때 제출됐어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-11",
+    "stage": 4,
+    "fn": "debate",
+    "pattern": "Вопрос в том, ___.",
+    "core": [
+      "Вопрос в том",
+      "вопрос в том"
+    ],
+    "meaning": {
+      "en": "Naming the real question: The question is whether ___.",
+      "ko": "핵심 질문 짚기: 문제는 ___이냐는 거예요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Вопрос в том, успеем ли мы к пятнице.",
+        "slot": "успеем ли мы к пятнице",
+        "cue": {
+          "en": "whether we'll make it by Friday",
+          "ko": "금요일까지 해낼 수 있을지"
+        },
+        "gloss": {
+          "en": "The question is whether we'll make it by Friday.",
+          "ko": "문제는 금요일까지 끝낼 수 있느냐예요."
+        }
+      },
+      {
+        "text": "Вопрос в том, кто за это заплатит.",
+        "slot": "кто за это заплатит",
+        "cue": {
+          "en": "who will pay for it",
+          "ko": "누가 그 돈을 낼지"
+        },
+        "gloss": {
+          "en": "The question is who will pay for it.",
+          "ko": "문제는 누가 돈을 내느냐야."
+        }
+      },
+      {
+        "text": "Главный вопрос в том, нужно ли нам это вообще.",
+        "slot": "нужно ли нам это вообще",
+        "cue": {
+          "en": "whether we need it at all",
+          "ko": "우리에게 그게 필요하기는 한지"
+        },
+        "gloss": {
+          "en": "The main question is whether we need it at all.",
+          "ko": "핵심은 우리한테 그게 필요하긴 하냐는 거예요."
+        }
+      },
+      {
+        "text": "Вопрос в том, согласится ли директор.",
+        "slot": "согласится ли директор",
+        "cue": {
+          "en": "whether the director will agree",
+          "ko": "사장이 동의할지"
+        },
+        "gloss": {
+          "en": "The question is whether the director will agree.",
+          "ko": "문제는 사장님이 동의하느냐예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-12",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "Подскажите, пожалуйста, ___?",
+    "core": [
+      "Подскажите, пожалуйста",
+      "подскажите, пожалуйста"
+    ],
+    "meaning": {
+      "en": "Politely asking for information: Could you tell me ___?",
+      "ko": "정중하게 정보 묻기: ___ 알려 주시겠어요?"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Подскажите, пожалуйста, нужна ли предварительная запись?",
+        "slot": "нужна ли предварительная запись",
+        "cue": {
+          "en": "whether an appointment is needed",
+          "ko": "예약이 필요한지"
+        },
+        "gloss": {
+          "en": "Could you tell me whether I need to book in advance?",
+          "ko": "미리 예약해야 하는지 알려 주시겠어요?"
+        }
+      },
+      {
+        "text": "Подскажите, пожалуйста, как пройти к вокзалу?",
+        "slot": "как пройти к вокзалу",
+        "cue": {
+          "en": "how to get to the station",
+          "ko": "역에 어떻게 가는지"
+        },
+        "gloss": {
+          "en": "Could you tell me how to get to the station?",
+          "ko": "역에 어떻게 가는지 알려 주시겠어요?"
+        }
+      },
+      {
+        "text": "Подскажите, пожалуйста, есть ли у вас доставка?",
+        "slot": "есть ли у вас доставка",
+        "cue": {
+          "en": "whether you deliver",
+          "ko": "배달이 되는지"
+        },
+        "gloss": {
+          "en": "Could you tell me whether you deliver?",
+          "ko": "배달 되는지 알려 주시겠어요?"
+        }
+      },
+      {
+        "text": "Подскажите, пожалуйста, можно ли оплатить картой?",
+        "slot": "можно ли оплатить картой",
+        "cue": {
+          "en": "whether I can pay by card",
+          "ko": "카드로 낼 수 있는지"
+        },
+        "gloss": {
+          "en": "Could you tell me whether I can pay by card?",
+          "ko": "카드로 계산할 수 있는지 알려 주시겠어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-13",
+    "stage": 4,
+    "fn": "compare",
+    "pattern": "Это гораздо ___.",
+    "core": [
+      "гораздо"
+    ],
+    "meaning": {
+      "en": "Saying something is much more so: It's much ___.",
+      "ko": "훨씬 더하다고 말하기: 훨씬 ___."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Этот маршрут гораздо короче.",
+        "slot": "короче",
+        "cue": {
+          "en": "shorter",
+          "ko": "더 짧다"
+        },
+        "gloss": {
+          "en": "This route is much shorter.",
+          "ko": "이 길이 훨씬 짧아."
+        }
+      },
+      {
+        "text": "Поездом ехать гораздо дешевле.",
+        "slot": "дешевле",
+        "cue": {
+          "en": "cheaper",
+          "ko": "더 싸다"
+        },
+        "gloss": {
+          "en": "It's much cheaper to go by train.",
+          "ko": "기차로 가는 게 훨씬 싸요."
+        }
+      },
+      {
+        "text": "Сегодня мне гораздо лучше.",
+        "slot": "лучше",
+        "cue": {
+          "en": "better",
+          "ko": "더 낫다"
+        },
+        "gloss": {
+          "en": "I feel much better today.",
+          "ko": "오늘은 훨씬 나아요."
+        }
+      },
+      {
+        "text": "Новая версия работает гораздо быстрее.",
+        "slot": "быстрее",
+        "cue": {
+          "en": "faster",
+          "ko": "더 빠르다"
+        },
+        "gloss": {
+          "en": "The new version runs much faster.",
+          "ko": "새 버전이 훨씬 빨라요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-14",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "Можно предложить ___.",
+    "core": [
+      "Можно предложить",
+      "можно предложить"
+    ],
+    "meaning": {
+      "en": "Putting forward an option: We could offer ___.",
+      "ko": "대안 내놓기: ___을 제안해 볼 수 있어요."
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Можно предложить клиенту скидку.",
+        "slot": "клиенту скидку",
+        "cue": {
+          "en": "a discount to the client",
+          "ko": "고객에게 할인"
+        },
+        "gloss": {
+          "en": "We could offer the client a discount.",
+          "ko": "고객에게 할인을 제안해 볼 수 있어요."
+        }
+      },
+      {
+        "text": "Можно предложить другой вариант?",
+        "slot": "другой вариант",
+        "cue": {
+          "en": "another option",
+          "ko": "다른 방안"
+        },
+        "gloss": {
+          "en": "May I suggest another option?",
+          "ko": "다른 방안을 제안해도 될까요?"
+        }
+      },
+      {
+        "text": "Если сроки горят, можно предложить сдать работу частями.",
+        "slot": "сдать работу частями",
+        "cue": {
+          "en": "hand in the work in parts",
+          "ko": "일을 나눠서 넘기다"
+        },
+        "gloss": {
+          "en": "If the deadline is tight, we could offer to hand in the work in parts.",
+          "ko": "기한이 급하면 일을 나눠서 넘기자고 제안할 수 있어요."
+        }
+      },
+      {
+        "text": "Можно предложить им встречу в понедельник.",
+        "slot": "им встречу в понедельник",
+        "cue": {
+          "en": "them a meeting on Monday",
+          "ko": "그들에게 월요일 회의"
+        },
+        "gloss": {
+          "en": "We could offer them a meeting on Monday.",
+          "ko": "그쪽에 월요일 회의를 제안해 볼 수 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-15",
+    "stage": 4,
+    "fn": "story-past",
+    "pattern": "Открыв ___, я увидел …",
+    "core": [
+      "Открыв",
+      "открыв"
+    ],
+    "meaning": {
+      "en": "Saying what you did first: Having opened ___, I …",
+      "ko": "먼저 한 일 말하기: ___을 열고 나서 …"
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Открыв дверь, я увидел соседа.",
+        "slot": "дверь",
+        "cue": {
+          "en": "the door",
+          "ko": "문"
+        },
+        "gloss": {
+          "en": "Opening the door, I saw my neighbour.",
+          "ko": "문을 열어 보니 이웃이 있었어."
+        }
+      },
+      {
+        "text": "Открыв письмо, она сразу позвонила мне.",
+        "slot": "письмо",
+        "cue": {
+          "en": "the letter",
+          "ko": "편지"
+        },
+        "gloss": {
+          "en": "Having opened the letter, she called me right away.",
+          "ko": "편지를 열어 보고 그녀는 바로 나한테 전화했어."
+        }
+      },
+      {
+        "text": "Я, открыв окно, почувствовал запах моря.",
+        "slot": "окно",
+        "cue": {
+          "en": "the window",
+          "ko": "창문"
+        },
+        "gloss": {
+          "en": "When I opened the window, I smelled the sea.",
+          "ko": "창문을 열자 바다 냄새가 났어."
+        }
+      },
+      {
+        "text": "Открыв приложение, вы увидите кнопку оплаты.",
+        "slot": "приложение",
+        "cue": {
+          "en": "the app",
+          "ko": "앱"
+        },
+        "gloss": {
+          "en": "Once you open the app, you'll see the payment button.",
+          "ko": "앱을 열면 결제 버튼이 보여요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-16",
+    "stage": 4,
+    "fn": "describe-person",
+    "pattern": "Человек, умеющий ___, …",
+    "core": [
+      "умеющий"
+    ],
+    "meaning": {
+      "en": "Describing someone by a skill: a person who can ___",
+      "ko": "할 줄 아는 것으로 사람 묘사하기: ___할 줄 아는 사람"
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Человек, умеющий слушать, всегда найдёт друзей.",
+        "slot": "слушать",
+        "cue": {
+          "en": "listen",
+          "ko": "들어 주다"
+        },
+        "gloss": {
+          "en": "A person who knows how to listen will always find friends.",
+          "ko": "들어 줄 줄 아는 사람은 늘 친구를 찾아요."
+        }
+      },
+      {
+        "text": "Нам нужен сотрудник, умеющий работать с клиентами.",
+        "slot": "работать с клиентами",
+        "cue": {
+          "en": "work with clients",
+          "ko": "고객을 상대하다"
+        },
+        "gloss": {
+          "en": "We need an employee who can work with clients.",
+          "ko": "고객을 상대할 줄 아는 직원이 필요해요."
+        }
+      },
+      {
+        "text": "Ребёнок, умеющий плавать, не боится воды.",
+        "slot": "плавать",
+        "cue": {
+          "en": "swim",
+          "ko": "수영하다"
+        },
+        "gloss": {
+          "en": "A child who can swim isn't afraid of water.",
+          "ko": "수영할 줄 아는 아이는 물을 무서워하지 않아요."
+        }
+      },
+      {
+        "text": "Повар, умеющий готовить без рецепта, — большая редкость.",
+        "slot": "готовить без рецепта",
+        "cue": {
+          "en": "cook without a recipe",
+          "ko": "레시피 없이 요리하다"
+        },
+        "gloss": {
+          "en": "A cook who can cook without a recipe is a rare thing.",
+          "ko": "레시피 없이 요리할 줄 아는 요리사는 드물어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-17",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Решение было принято ___.",
+    "core": [
+      "было принято"
+    ],
+    "meaning": {
+      "en": "Reporting a decision formally: The decision was made ___.",
+      "ko": "격식 있게 결정 알리기: 결정은 ___ 내려졌어요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Решение было принято на общем собрании.",
+        "slot": "на общем собрании",
+        "cue": {
+          "en": "at the general meeting",
+          "ko": "전체 회의에서"
+        },
+        "gloss": {
+          "en": "The decision was made at the general meeting.",
+          "ko": "결정은 전체 회의에서 내려졌어요."
+        }
+      },
+      {
+        "text": "Это правило было принято после аварии.",
+        "slot": "после аварии",
+        "cue": {
+          "en": "after the accident",
+          "ko": "사고 뒤에"
+        },
+        "gloss": {
+          "en": "This rule was adopted after the accident.",
+          "ko": "이 규칙은 사고 뒤에 정해졌어요."
+        }
+      },
+      {
+        "text": "Всё было принято без обсуждения.",
+        "slot": "без обсуждения",
+        "cue": {
+          "en": "without discussion",
+          "ko": "논의 없이"
+        },
+        "gloss": {
+          "en": "Everything was approved without discussion.",
+          "ko": "전부 논의 없이 통과됐어요."
+        }
+      },
+      {
+        "text": "Предложение было принято единогласно.",
+        "slot": "единогласно",
+        "cue": {
+          "en": "unanimously",
+          "ko": "만장일치로"
+        },
+        "gloss": {
+          "en": "The proposal was accepted unanimously.",
+          "ko": "제안은 만장일치로 받아들여졌어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-18",
+    "stage": 4,
+    "fn": "agree",
+    "pattern": "Я согласен, ___.",
+    "core": [
+      "Я согласен",
+      "я согласен",
+      "Я согласна",
+      "я согласна"
+    ],
+    "meaning": {
+      "en": "Agreeing: I agree, ___.",
+      "ko": "동의하기: 동의해요, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Я согласен"
+    ],
+    "examples": [
+      {
+        "text": "Я согласен, это хорошая идея.",
+        "slot": "это хорошая идея",
+        "cue": {
+          "en": "it's a good idea",
+          "ko": "좋은 생각이다"
+        },
+        "gloss": {
+          "en": "I agree, it's a good idea.",
+          "ko": "동의해, 좋은 생각이야."
+        }
+      },
+      {
+        "text": "Я согласна с тобой.",
+        "slot": "с тобой",
+        "cue": {
+          "en": "with you",
+          "ko": "너와"
+        },
+        "gloss": {
+          "en": "I agree with you.",
+          "ko": "네 말에 동의해."
+        }
+      },
+      {
+        "text": "В целом я согласен, хотя кое-что я бы изменил.",
+        "slot": "хотя кое-что я бы изменил",
+        "cue": {
+          "en": "though I'd change a few things",
+          "ko": "몇 가지는 바꾸고 싶다"
+        },
+        "gloss": {
+          "en": "On the whole I agree, though I'd change a few things.",
+          "ko": "대체로 동의하지만 몇 가지는 바꾸고 싶어요."
+        }
+      },
+      {
+        "text": "Я согласна, что нужно подождать.",
+        "slot": "что нужно подождать",
+        "cue": {
+          "en": "that we should wait",
+          "ko": "기다려야 한다"
+        },
+        "gloss": {
+          "en": "I agree that we should wait.",
+          "ko": "기다려야 한다는 데 동의해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-19",
+    "stage": 4,
+    "fn": "disagree-soft",
+    "pattern": "Не совсем так. ___",
+    "core": [
+      "Не совсем так",
+      "не совсем так"
+    ],
+    "meaning": {
+      "en": "Correcting someone gently: That's not quite right. ___",
+      "ko": "부드럽게 바로잡기: 꼭 그렇진 않아요. ___"
+    },
+    "grammar": [],
+    "expressions": [
+      "Не совсем так"
+    ],
+    "examples": [
+      {
+        "text": "Не совсем так. Мы говорили о другом.",
+        "slot": "Мы говорили о другом",
+        "cue": {
+          "en": "we were talking about something else",
+          "ko": "우리는 다른 얘기를 했다"
+        },
+        "gloss": {
+          "en": "Not quite. We were talking about something else.",
+          "ko": "꼭 그렇진 않아요. 우리는 다른 얘기를 했어요."
+        }
+      },
+      {
+        "text": "Не совсем так: он не уволился, а перешёл в другой отдел.",
+        "slot": "он не уволился, а перешёл в другой отдел",
+        "cue": {
+          "en": "he didn't quit but moved to another department",
+          "ko": "그는 그만둔 게 아니라 다른 부서로 옮겼다"
+        },
+        "gloss": {
+          "en": "Not quite: he didn't quit, he moved to another department.",
+          "ko": "꼭 그렇진 않아요. 그만둔 게 아니라 다른 부서로 옮긴 거예요."
+        }
+      },
+      {
+        "text": "Это не совсем так, цены выросли только летом.",
+        "slot": "цены выросли только летом",
+        "cue": {
+          "en": "prices only went up in summer",
+          "ko": "가격은 여름에만 올랐다"
+        },
+        "gloss": {
+          "en": "That's not quite true, prices only went up in summer.",
+          "ko": "그건 꼭 그렇지 않아요. 가격은 여름에만 올랐어요."
+        }
+      },
+      {
+        "text": "Не совсем так. Решение ещё не принято.",
+        "slot": "Решение ещё не принято",
+        "cue": {
+          "en": "the decision hasn't been made yet",
+          "ko": "결정은 아직 안 났다"
+        },
+        "gloss": {
+          "en": "Not quite. The decision hasn't been made yet.",
+          "ko": "꼭 그렇진 않아요. 결정은 아직 안 났어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f4-20",
+    "stage": 4,
+    "fn": "opinion",
+    "pattern": "Если честно, ___.",
+    "core": [
+      "Если честно",
+      "если честно"
+    ],
+    "meaning": {
+      "en": "Being frank: To be honest, ___.",
+      "ko": "솔직하게 말하기: 솔직히 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Если честно"
+    ],
+    "examples": [
+      {
+        "text": "Если честно, мне фильм не понравился.",
+        "slot": "мне фильм не понравился",
+        "cue": {
+          "en": "I didn't like the film",
+          "ko": "영화가 마음에 안 들었다"
+        },
+        "gloss": {
+          "en": "To be honest, I didn't like the film.",
+          "ko": "솔직히 영화 별로였어."
+        }
+      },
+      {
+        "text": "Если честно, я забыл про встречу.",
+        "slot": "я забыл про встречу",
+        "cue": {
+          "en": "I forgot about the meeting",
+          "ko": "약속을 잊었다"
+        },
+        "gloss": {
+          "en": "To be honest, I forgot about the meeting.",
+          "ko": "솔직히 약속을 잊어버렸어."
+        }
+      },
+      {
+        "text": "Я, если честно, не знаю, что ответить.",
+        "slot": "не знаю, что ответить",
+        "cue": {
+          "en": "not know what to answer",
+          "ko": "뭐라고 답할지 모르다"
+        },
+        "gloss": {
+          "en": "To be honest, I don't know what to say.",
+          "ko": "솔직히 뭐라고 답해야 할지 모르겠어요."
+        }
+      },
+      {
+        "text": "Если честно, этот план мне кажется рискованным.",
+        "slot": "этот план мне кажется рискованным",
+        "cue": {
+          "en": "this plan seems risky to me",
+          "ko": "이 계획이 위험해 보인다"
+        },
+        "gloss": {
+          "en": "To be honest, this plan seems risky to me.",
+          "ko": "솔직히 이 계획은 위험해 보여요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-01",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Ты ведь ___.",
+    "core": [
+      "ведь"
+    ],
+    "meaning": {
+      "en": "Reminding with a soft emphasis: After all, ___.",
+      "ko": "부드럽게 상기시키기: ___잖아."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Ты ведь обещал прийти.",
+        "slot": "обещал прийти",
+        "cue": {
+          "en": "promise to come",
+          "ko": "오겠다고 약속하다"
+        },
+        "gloss": {
+          "en": "You did promise to come, didn't you.",
+          "ko": "너 오겠다고 약속했잖아."
+        }
+      },
+      {
+        "text": "Не переживай, это ведь не экзамен.",
+        "slot": "не экзамен",
+        "cue": {
+          "en": "not an exam",
+          "ko": "시험이 아니다"
+        },
+        "gloss": {
+          "en": "Don't worry, it's not an exam, after all.",
+          "ko": "걱정 마, 시험도 아니잖아."
+        }
+      },
+      {
+        "text": "Возьми зонт, ведь обещали дождь.",
+        "slot": "обещали дождь",
+        "cue": {
+          "en": "rain is forecast",
+          "ko": "비 예보가 있다"
+        },
+        "gloss": {
+          "en": "Take an umbrella, they did forecast rain.",
+          "ko": "우산 챙겨, 비 온다고 했잖아."
+        }
+      },
+      {
+        "text": "Мы ведь уже это обсуждали.",
+        "slot": "уже это обсуждали",
+        "cue": {
+          "en": "have already discussed this",
+          "ko": "이미 이걸 논의했다"
+        },
+        "gloss": {
+          "en": "We've already discussed this, haven't we.",
+          "ko": "우리 이거 벌써 얘기했잖아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-02",
+    "stage": 5,
+    "fn": "clarify",
+    "pattern": "Я же не говорю, что ___.",
+    "core": [
+      "Я же не говорю",
+      "я же не говорю"
+    ],
+    "meaning": {
+      "en": "Heading off a misunderstanding: I'm not saying ___.",
+      "ko": "오해 막기: ___라는 말은 아니잖아."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Я же не говорю, что ты виноват.",
+        "slot": "что ты виноват",
+        "cue": {
+          "en": "you're to blame",
+          "ko": "네 잘못이다"
+        },
+        "gloss": {
+          "en": "I'm not saying it's your fault.",
+          "ko": "네 잘못이라는 말은 아니잖아."
+        }
+      },
+      {
+        "text": "Я же не говорю, что это плохая идея.",
+        "slot": "что это плохая идея",
+        "cue": {
+          "en": "it's a bad idea",
+          "ko": "나쁜 생각이다"
+        },
+        "gloss": {
+          "en": "I'm not saying it's a bad idea.",
+          "ko": "나쁜 생각이라는 말은 아니잖아."
+        }
+      },
+      {
+        "text": "Да я же не говорю, что надо всё бросить.",
+        "slot": "что надо всё бросить",
+        "cue": {
+          "en": "we should drop everything",
+          "ko": "다 그만둬야 한다"
+        },
+        "gloss": {
+          "en": "I'm not saying we should drop everything.",
+          "ko": "다 그만두자는 말은 아니잖아."
+        }
+      },
+      {
+        "text": "Я же не говорю, что мне не понравилось.",
+        "slot": "что мне не понравилось",
+        "cue": {
+          "en": "I didn't like it",
+          "ko": "마음에 안 들었다"
+        },
+        "gloss": {
+          "en": "I'm not saying I didn't like it.",
+          "ko": "마음에 안 들었다는 말은 아니잖아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-03",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Давай-ка ___.",
+    "core": [
+      "Давай-ка",
+      "давай-ка"
+    ],
+    "meaning": {
+      "en": "Suggesting in a friendly, softened way: Come on, let's ___.",
+      "ko": "다정하게 권하기: 자, ___하자."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Давай-ка сделаем перерыв.",
+        "slot": "сделаем перерыв",
+        "cue": {
+          "en": "take a break",
+          "ko": "쉬다"
+        },
+        "gloss": {
+          "en": "Come on, let's take a break.",
+          "ko": "자, 좀 쉬자."
+        }
+      },
+      {
+        "text": "Давай-ка я тебе помогу.",
+        "slot": "я тебе помогу",
+        "cue": {
+          "en": "I'll help you",
+          "ko": "내가 너를 돕다"
+        },
+        "gloss": {
+          "en": "Here, let me help you.",
+          "ko": "자, 내가 도와줄게."
+        }
+      },
+      {
+        "text": "Ну, давай-ка посмотрим, что тут у нас.",
+        "slot": "посмотрим, что тут у нас",
+        "cue": {
+          "en": "see what we've got here",
+          "ko": "여기 뭐가 있는지 보다"
+        },
+        "gloss": {
+          "en": "Well, let's see what we've got here.",
+          "ko": "자, 여기 뭐가 있나 볼까."
+        }
+      },
+      {
+        "text": "Давай-ка без спешки.",
+        "slot": "без спешки",
+        "cue": {
+          "en": "without rushing",
+          "ko": "서두르지 않고"
+        },
+        "gloss": {
+          "en": "Let's not rush, okay?",
+          "ko": "자, 서두르지 말자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-04",
+    "stage": 5,
+    "fn": "feel",
+    "pattern": "Что-то мне не ___.",
+    "core": [
+      "Что-то мне не",
+      "что-то мне не"
+    ],
+    "meaning": {
+      "en": "Saying you can't seem to: I just can't seem to ___.",
+      "ko": "왠지 잘 안 된다고 말하기: 왠지 ___이 잘 안 돼."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Что-то мне не спится.",
+        "slot": "спится",
+        "cue": {
+          "en": "sleep",
+          "ko": "잠자다"
+        },
+        "gloss": {
+          "en": "I just can't seem to sleep.",
+          "ko": "왠지 잠이 안 와."
+        }
+      },
+      {
+        "text": "Что-то мне не работается сегодня.",
+        "slot": "работается",
+        "cue": {
+          "en": "work",
+          "ko": "일하다"
+        },
+        "gloss": {
+          "en": "I just can't get any work done today.",
+          "ko": "오늘은 왠지 일이 손에 안 잡혀."
+        }
+      },
+      {
+        "text": "Что-то мне не читается в последнее время.",
+        "slot": "читается",
+        "cue": {
+          "en": "read",
+          "ko": "읽다"
+        },
+        "gloss": {
+          "en": "Somehow I can't get into reading lately.",
+          "ko": "요즘 왠지 책이 안 읽혀."
+        }
+      },
+      {
+        "text": "Что-то мне не сидится дома.",
+        "slot": "сидится",
+        "cue": {
+          "en": "stay put",
+          "ko": "가만히 있다"
+        },
+        "gloss": {
+          "en": "Somehow I can't stay put at home.",
+          "ko": "왠지 집에 가만히 못 있겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-05",
+    "stage": 5,
+    "fn": "wish",
+    "pattern": "Вот бы ___!",
+    "core": [
+      "Вот бы",
+      "вот бы"
+    ],
+    "meaning": {
+      "en": "Daydreaming aloud: If only ___!",
+      "ko": "바람 말하기: ___면 좋겠다!"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Вот бы сейчас в отпуск!",
+        "slot": "сейчас в отпуск",
+        "cue": {
+          "en": "be on holiday now",
+          "ko": "지금 휴가 가다"
+        },
+        "gloss": {
+          "en": "If only I could be on holiday right now!",
+          "ko": "지금 휴가 가면 좋겠다!"
+        }
+      },
+      {
+        "text": "Вот бы выиграть в лотерею!",
+        "slot": "выиграть в лотерею",
+        "cue": {
+          "en": "win the lottery",
+          "ko": "복권에 당첨되다"
+        },
+        "gloss": {
+          "en": "If only I could win the lottery!",
+          "ko": "복권 당첨되면 좋겠다!"
+        }
+      },
+      {
+        "text": "Ах, вот бы снег пошёл!",
+        "slot": "снег пошёл",
+        "cue": {
+          "en": "it snows",
+          "ko": "눈이 오다"
+        },
+        "gloss": {
+          "en": "Oh, if only it would snow!",
+          "ko": "아, 눈 왔으면 좋겠다!"
+        }
+      },
+      {
+        "text": "Вот бы он позвонил сегодня!",
+        "slot": "он позвонил сегодня",
+        "cue": {
+          "en": "he calls today",
+          "ko": "그가 오늘 전화하다"
+        },
+        "gloss": {
+          "en": "If only he'd call today!",
+          "ko": "그 사람이 오늘 전화하면 좋겠다!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-06",
+    "stage": 5,
+    "fn": "report",
+    "pattern": "В связи с ___, …",
+    "core": [
+      "В связи с",
+      "в связи с"
+    ],
+    "meaning": {
+      "en": "Giving a reason in official style: Due to ___, …",
+      "ko": "공식체로 이유 말하기: ___로 인해 …"
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "В связи с плохой погодой рейс задерживается.",
+        "slot": "плохой погодой",
+        "cue": {
+          "en": "bad weather",
+          "ko": "나쁜 날씨"
+        },
+        "gloss": {
+          "en": "Due to bad weather, the flight is delayed.",
+          "ko": "악천후로 인해 항공편이 지연됩니다."
+        }
+      },
+      {
+        "text": "В связи с праздником магазин не работает.",
+        "slot": "праздником",
+        "cue": {
+          "en": "the holiday",
+          "ko": "명절"
+        },
+        "gloss": {
+          "en": "Due to the holiday, the shop is closed.",
+          "ko": "명절로 인해 매장은 쉽니다."
+        }
+      },
+      {
+        "text": "Занятия отменены в связи с болезнью преподавателя.",
+        "slot": "болезнью преподавателя",
+        "cue": {
+          "en": "the teacher's illness",
+          "ko": "강사의 병"
+        },
+        "gloss": {
+          "en": "Classes are cancelled due to the teacher's illness.",
+          "ko": "강사의 병으로 인해 수업이 취소되었습니다."
+        }
+      },
+      {
+        "text": "В связи с переездом офиса мы временно не принимаем посетителей.",
+        "slot": "переездом офиса",
+        "cue": {
+          "en": "the office move",
+          "ko": "사무실 이전"
+        },
+        "gloss": {
+          "en": "Due to the office move, we are temporarily not receiving visitors.",
+          "ko": "사무실 이전으로 인해 당분간 방문객을 받지 않습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-07",
+    "stage": 5,
+    "fn": "report",
+    "pattern": "В целях ___ …",
+    "core": [
+      "В целях",
+      "в целях"
+    ],
+    "meaning": {
+      "en": "Stating a purpose in official style: For the purpose of ___, …",
+      "ko": "공식체로 목적 말하기: ___을 위하여 …"
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "В целях безопасности двери закрываются в десять вечера.",
+        "slot": "безопасности",
+        "cue": {
+          "en": "safety",
+          "ko": "안전"
+        },
+        "gloss": {
+          "en": "For safety reasons, the doors are locked at ten p.m.",
+          "ko": "안전을 위하여 문은 밤 열 시에 닫힙니다."
+        }
+      },
+      {
+        "text": "В целях экономии свет в коридоре выключают.",
+        "slot": "экономии",
+        "cue": {
+          "en": "saving money",
+          "ko": "절약"
+        },
+        "gloss": {
+          "en": "To save money, the corridor lights are switched off.",
+          "ko": "절약을 위하여 복도 불을 끕니다."
+        }
+      },
+      {
+        "text": "Камеры установлены в целях охраны порядка.",
+        "slot": "охраны порядка",
+        "cue": {
+          "en": "keeping order",
+          "ko": "질서 유지"
+        },
+        "gloss": {
+          "en": "Cameras have been installed to keep order.",
+          "ko": "질서 유지를 위하여 카메라가 설치되었습니다."
+        }
+      },
+      {
+        "text": "В целях защиты данных пароль нужно менять каждый месяц.",
+        "slot": "защиты данных",
+        "cue": {
+          "en": "data protection",
+          "ko": "정보 보호"
+        },
+        "gloss": {
+          "en": "For data protection, the password must be changed every month.",
+          "ko": "정보 보호를 위하여 비밀번호를 매달 바꿔야 합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-08",
+    "stage": 5,
+    "fn": "explain-process",
+    "pattern": "Оплата осуществляется ___.",
+    "core": [
+      "осуществляется",
+      "осуществляются"
+    ],
+    "meaning": {
+      "en": "Describing procedure in official style: Payment is made ___.",
+      "ko": "공식체로 절차 설명하기: 결제는 ___ 이루어집니다."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Оплата осуществляется только картой.",
+        "slot": "только картой",
+        "cue": {
+          "en": "by card only",
+          "ko": "카드로만"
+        },
+        "gloss": {
+          "en": "Payment is by card only.",
+          "ko": "결제는 카드로만 가능합니다."
+        }
+      },
+      {
+        "text": "Доставка осуществляется в течение недели.",
+        "slot": "в течение недели",
+        "cue": {
+          "en": "within a week",
+          "ko": "일주일 안에"
+        },
+        "gloss": {
+          "en": "Delivery is made within a week.",
+          "ko": "배송은 일주일 안에 이루어집니다."
+        }
+      },
+      {
+        "text": "Работы осуществляются с понедельника по пятницу.",
+        "slot": "с понедельника по пятницу",
+        "cue": {
+          "en": "from Monday to Friday",
+          "ko": "월요일부터 금요일까지"
+        },
+        "gloss": {
+          "en": "The work is carried out Monday to Friday.",
+          "ko": "작업은 월요일부터 금요일까지 진행됩니다."
+        }
+      },
+      {
+        "text": "Приём документов осуществляется по записи.",
+        "slot": "по записи",
+        "cue": {
+          "en": "by appointment",
+          "ko": "예약제로"
+        },
+        "gloss": {
+          "en": "Documents are accepted by appointment.",
+          "ko": "서류 접수는 예약제로 진행됩니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-09",
+    "stage": 5,
+    "fn": "request-action",
+    "pattern": "Подожди минутку, ___.",
+    "core": [
+      "минутку"
+    ],
+    "meaning": {
+      "en": "Asking for a moment warmly: Just a minute, ___.",
+      "ko": "다정하게 잠깐 기다려 달라고 하기: 잠깐만, ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Подожди минутку, я сейчас вернусь.",
+        "slot": "я сейчас вернусь",
+        "cue": {
+          "en": "I'll be right back",
+          "ko": "금방 돌아오다"
+        },
+        "gloss": {
+          "en": "Wait a sec, I'll be right back.",
+          "ko": "잠깐만, 금방 올게."
+        }
+      },
+      {
+        "text": "Подождите минутку, я найду ваш заказ.",
+        "slot": "я найду ваш заказ",
+        "cue": {
+          "en": "I'll find your order",
+          "ko": "주문을 찾다"
+        },
+        "gloss": {
+          "en": "Just a moment, I'll find your order.",
+          "ko": "잠시만요, 주문 찾아 드릴게요."
+        }
+      },
+      {
+        "text": "Подожди минутку, у меня звонок.",
+        "slot": "у меня звонок",
+        "cue": {
+          "en": "I have a call",
+          "ko": "전화가 왔다"
+        },
+        "gloss": {
+          "en": "Hang on a sec, I've got a call.",
+          "ko": "잠깐만, 전화 왔어."
+        }
+      },
+      {
+        "text": "Посиди минутку, чайник уже кипит.",
+        "slot": "чайник уже кипит",
+        "cue": {
+          "en": "the kettle is already boiling",
+          "ko": "주전자 물이 벌써 끓다"
+        },
+        "gloss": {
+          "en": "Sit for a minute, the kettle's already boiling.",
+          "ko": "잠깐 앉아 있어, 물 벌써 끓어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-10",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "___, а вот …",
+    "core": [
+      "а вот"
+    ],
+    "meaning": {
+      "en": "Contrasting with emphasis: ___, but as for …",
+      "ko": "대조하며 강조하기: ___, 그런데 …은"
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Машина-то у меня есть, а вот прав нет.",
+        "slot": "Машина-то у меня есть",
+        "cue": {
+          "en": "I do have a car",
+          "ko": "차는 있다"
+        },
+        "gloss": {
+          "en": "I do have a car, but no licence.",
+          "ko": "차는 있는데 면허가 없어."
+        }
+      },
+      {
+        "text": "Работа интересная, а вот зарплата маленькая.",
+        "slot": "Работа интересная",
+        "cue": {
+          "en": "the job is interesting",
+          "ko": "일이 재미있다"
+        },
+        "gloss": {
+          "en": "The job is interesting, but the pay is low.",
+          "ko": "일은 재미있는데 월급이 적어."
+        }
+      },
+      {
+        "text": "Время-то есть, а вот желания нет.",
+        "slot": "Время-то есть",
+        "cue": {
+          "en": "there is time",
+          "ko": "시간은 있다"
+        },
+        "gloss": {
+          "en": "There's time, all right, but no desire.",
+          "ko": "시간은 있는데 하고 싶지가 않아."
+        }
+      },
+      {
+        "text": "Английский я понимаю, а вот говорю с трудом.",
+        "slot": "Английский я понимаю",
+        "cue": {
+          "en": "I understand English",
+          "ko": "영어는 알아듣는다"
+        },
+        "gloss": {
+          "en": "English I understand, but speaking is hard.",
+          "ko": "영어는 알아듣는데 말하기가 힘들어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-11",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "___ я так и не …",
+    "core": [
+      "так и не"
+    ],
+    "meaning": {
+      "en": "Saying something never got done: I never did ___.",
+      "ko": "끝내 못 한 일 말하기: ___은 끝내 못 했어."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Фильм этот я так и не посмотрел.",
+        "slot": "Фильм этот",
+        "cue": {
+          "en": "this film",
+          "ko": "이 영화"
+        },
+        "gloss": {
+          "en": "I never did get round to watching this film.",
+          "ko": "이 영화는 끝내 못 봤어."
+        }
+      },
+      {
+        "text": "Письмо он так и не отправил.",
+        "slot": "Письмо",
+        "cue": {
+          "en": "the letter",
+          "ko": "편지"
+        },
+        "gloss": {
+          "en": "He never did send the letter.",
+          "ko": "편지는 그가 끝내 안 보냈어."
+        }
+      },
+      {
+        "text": "Ответа мы так и не получили.",
+        "slot": "Ответа",
+        "cue": {
+          "en": "a reply",
+          "ko": "답장"
+        },
+        "gloss": {
+          "en": "We never did get a reply.",
+          "ko": "답은 끝내 못 받았어요."
+        }
+      },
+      {
+        "text": "Ключи она так и не нашла.",
+        "slot": "Ключи",
+        "cue": {
+          "en": "the keys",
+          "ko": "열쇠"
+        },
+        "gloss": {
+          "en": "She never did find the keys.",
+          "ko": "열쇠는 그녀가 끝내 못 찾았어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-12",
+    "stage": 5,
+    "fn": "idiom-react",
+    "pattern": "Ещё бы! ___",
+    "core": [
+      "Ещё бы",
+      "ещё бы"
+    ],
+    "meaning": {
+      "en": "Reacting with \"of course\": You bet! ___",
+      "ko": "당연하다고 반응하기: 당연하지! ___"
+    },
+    "grammar": [],
+    "expressions": [
+      "Ещё бы"
+    ],
+    "examples": [
+      {
+        "text": "Ещё бы! Я этого целый год ждал.",
+        "slot": "Я этого целый год ждал",
+        "cue": {
+          "en": "I waited a whole year for this",
+          "ko": "이걸 일 년 내내 기다렸다"
+        },
+        "gloss": {
+          "en": "You bet! I waited a whole year for this.",
+          "ko": "당연하지! 이거 일 년 내내 기다렸어."
+        }
+      },
+      {
+        "text": "Ещё бы, весь день на ногах!",
+        "slot": "весь день на ногах",
+        "cue": {
+          "en": "on my feet all day",
+          "ko": "하루 종일 서 있다"
+        },
+        "gloss": {
+          "en": "No wonder, I've been on my feet all day!",
+          "ko": "당연하지, 하루 종일 서 있었는데!"
+        }
+      },
+      {
+        "text": "Ещё бы он не обиделся после таких слов!",
+        "slot": "он не обиделся после таких слов",
+        "cue": {
+          "en": "he'd be hurt after such words",
+          "ko": "그런 말 듣고 서운해하다"
+        },
+        "gloss": {
+          "en": "Of course he was hurt after words like that!",
+          "ko": "그런 말을 들었으니 서운할 만하지!"
+        }
+      },
+      {
+        "text": "Ещё бы! Такой торт кто угодно съест.",
+        "slot": "Такой торт кто угодно съест",
+        "cue": {
+          "en": "anyone would eat a cake like that",
+          "ko": "그런 케이크면 누구든 먹는다"
+        },
+        "gloss": {
+          "en": "Of course! Anyone would eat a cake like that.",
+          "ko": "당연하지! 그런 케이크면 누구라도 먹지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-13",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "Руки не доходят ___.",
+    "core": [
+      "Руки не доходят",
+      "руки не доходят"
+    ],
+    "meaning": {
+      "en": "Saying you never get round to it: I never get round to ___.",
+      "ko": "손이 안 간다고 말하기: ___까지는 손이 안 가."
+    },
+    "grammar": [],
+    "expressions": [
+      "Руки не доходят"
+    ],
+    "examples": [
+      {
+        "text": "Руки не доходят разобрать шкаф.",
+        "slot": "разобрать шкаф",
+        "cue": {
+          "en": "sort out the wardrobe",
+          "ko": "옷장을 정리하다"
+        },
+        "gloss": {
+          "en": "I never get round to sorting out the wardrobe.",
+          "ko": "옷장 정리까지는 손이 안 가."
+        }
+      },
+      {
+        "text": "Всё руки не доходят до ремонта.",
+        "slot": "до ремонта",
+        "cue": {
+          "en": "to the renovation",
+          "ko": "수리까지"
+        },
+        "gloss": {
+          "en": "I still haven't got round to the renovation.",
+          "ko": "수리까지는 영 손이 안 가."
+        }
+      },
+      {
+        "text": "Хочу записаться в бассейн, но руки не доходят.",
+        "slot": "Хочу записаться в бассейн",
+        "cue": {
+          "en": "want to sign up for the pool",
+          "ko": "수영장에 등록하고 싶다"
+        },
+        "gloss": {
+          "en": "I want to sign up for the pool, but I never get round to it.",
+          "ko": "수영장 등록하고 싶은데 손이 안 가."
+        }
+      },
+      {
+        "text": "Руки не доходят ответить на все письма.",
+        "slot": "ответить на все письма",
+        "cue": {
+          "en": "answer all the emails",
+          "ko": "모든 메일에 답하다"
+        },
+        "gloss": {
+          "en": "I never get round to answering all the emails.",
+          "ko": "메일에 다 답장할 짬이 안 나."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-14",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "Мне не до ___.",
+    "core": [
+      "Мне не до",
+      "мне не до"
+    ],
+    "meaning": {
+      "en": "Saying you have no head for something now: I'm in no mood for ___.",
+      "ko": "지금은 그럴 여유가 없다고 하기: ___할 때가 아니야."
+    },
+    "grammar": [],
+    "expressions": [
+      "Мне не до этого"
+    ],
+    "examples": [
+      {
+        "text": "Мне не до шуток.",
+        "slot": "шуток",
+        "cue": {
+          "en": "jokes",
+          "ko": "농담"
+        },
+        "gloss": {
+          "en": "I'm in no mood for jokes.",
+          "ko": "지금 농담할 기분 아니야."
+        }
+      },
+      {
+        "text": "Извини, мне не до кино сейчас.",
+        "slot": "кино",
+        "cue": {
+          "en": "the cinema",
+          "ko": "영화"
+        },
+        "gloss": {
+          "en": "Sorry, I can't think about the cinema right now.",
+          "ko": "미안, 지금 영화 볼 여유가 없어."
+        }
+      },
+      {
+        "text": "Мне не до этого, у меня экзамены.",
+        "slot": "этого",
+        "cue": {
+          "en": "that",
+          "ko": "그것"
+        },
+        "gloss": {
+          "en": "I've no time for that, I have exams.",
+          "ko": "그럴 여유 없어, 시험 기간이야."
+        }
+      },
+      {
+        "text": "Мне не до отдыха, работы много.",
+        "slot": "отдыха",
+        "cue": {
+          "en": "rest",
+          "ko": "휴식"
+        },
+        "gloss": {
+          "en": "I can't think about resting, there's too much work.",
+          "ko": "쉴 때가 아니야, 일이 많아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-15",
+    "stage": 5,
+    "fn": "concede",
+    "pattern": "Так и быть, ___.",
+    "core": [
+      "Так и быть",
+      "так и быть"
+    ],
+    "meaning": {
+      "en": "Giving in graciously: Oh, all right, ___.",
+      "ko": "못 이기는 척 들어주기: 그래, 좋아, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Так и быть"
+    ],
+    "examples": [
+      {
+        "text": "Так и быть, возьму тебя с собой.",
+        "slot": "возьму тебя с собой",
+        "cue": {
+          "en": "I'll take you with me",
+          "ko": "너를 데려가다"
+        },
+        "gloss": {
+          "en": "Oh, all right, I'll take you with me.",
+          "ko": "그래, 좋아, 데려가 줄게."
+        }
+      },
+      {
+        "text": "Ладно, так и быть: сегодня посуду мою я.",
+        "slot": "сегодня посуду мою я",
+        "cue": {
+          "en": "I'll do the dishes today",
+          "ko": "오늘 설거지는 내가 한다"
+        },
+        "gloss": {
+          "en": "Fine, all right: I'll do the dishes today.",
+          "ko": "알았어, 좋아. 오늘 설거지는 내가 할게."
+        }
+      },
+      {
+        "text": "Так и быть, дам вам ещё один день.",
+        "slot": "дам вам ещё один день",
+        "cue": {
+          "en": "I'll give you one more day",
+          "ko": "하루 더 주다"
+        },
+        "gloss": {
+          "en": "All right, I'll give you one more day.",
+          "ko": "좋아요, 하루 더 드리죠."
+        }
+      },
+      {
+        "text": "Так и быть, прощаю.",
+        "slot": "прощаю",
+        "cue": {
+          "en": "I forgive you",
+          "ko": "용서하다"
+        },
+        "gloss": {
+          "en": "Oh, all right, you're forgiven.",
+          "ko": "그래, 용서해 줄게."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-16",
+    "stage": 5,
+    "fn": "idiom-react",
+    "pattern": "Как говорится, ___.",
+    "core": [
+      "Как говорится",
+      "как говорится"
+    ],
+    "meaning": {
+      "en": "Bringing in a saying: As they say, ___.",
+      "ko": "속담 끌어오기: 말하자면 ___라잖아."
+    },
+    "grammar": [],
+    "expressions": [
+      "Как говорится"
+    ],
+    "examples": [
+      {
+        "text": "Как говорится, лучше поздно, чем никогда.",
+        "slot": "лучше поздно, чем никогда",
+        "cue": {
+          "en": "better late than never",
+          "ko": "늦어도 안 하는 것보다 낫다"
+        },
+        "gloss": {
+          "en": "As they say, better late than never.",
+          "ko": "늦어도 안 하는 것보단 낫다잖아."
+        }
+      },
+      {
+        "text": "Как говорится, на вкус и цвет товарищей нет.",
+        "slot": "на вкус и цвет товарищей нет",
+        "cue": {
+          "en": "tastes differ",
+          "ko": "취향은 제각각이다"
+        },
+        "gloss": {
+          "en": "As they say, there's no accounting for taste.",
+          "ko": "취향은 제각각이라잖아."
+        }
+      },
+      {
+        "text": "Ну что ж, как говорится, утро вечера мудренее.",
+        "slot": "утро вечера мудренее",
+        "cue": {
+          "en": "sleep on it",
+          "ko": "하룻밤 자고 생각하자"
+        },
+        "gloss": {
+          "en": "Well, as they say, the morning is wiser than the evening.",
+          "ko": "뭐, 하룻밤 자고 나면 생각이 정리된다잖아."
+        }
+      },
+      {
+        "text": "Как говорится, без труда не выловишь и рыбку из пруда.",
+        "slot": "без труда не выловишь и рыбку из пруда",
+        "cue": {
+          "en": "no pain, no gain",
+          "ko": "노력 없이는 얻는 게 없다"
+        },
+        "gloss": {
+          "en": "As they say, no pain, no gain.",
+          "ko": "노력 없이는 얻는 게 없다잖아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-17",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Не в этом дело. ___",
+    "core": [
+      "Не в этом дело",
+      "не в этом дело"
+    ],
+    "meaning": {
+      "en": "Shifting to the real point: That's not the point. ___",
+      "ko": "핵심 바로잡기: 그게 문제가 아니야. ___"
+    },
+    "grammar": [],
+    "expressions": [
+      "Не в этом дело"
+    ],
+    "examples": [
+      {
+        "text": "Не в этом дело. Просто я устал.",
+        "slot": "Просто я устал",
+        "cue": {
+          "en": "I'm just tired",
+          "ko": "그냥 피곤하다"
+        },
+        "gloss": {
+          "en": "That's not the point. I'm just tired.",
+          "ko": "그게 문제가 아니야. 그냥 피곤해."
+        }
+      },
+      {
+        "text": "Деньги тут ни при чём, не в этом дело.",
+        "slot": "Деньги тут ни при чём",
+        "cue": {
+          "en": "money has nothing to do with it",
+          "ko": "돈은 상관없다"
+        },
+        "gloss": {
+          "en": "Money has nothing to do with it, that's not the point.",
+          "ko": "돈은 상관없어, 그게 문제가 아니야."
+        }
+      },
+      {
+        "text": "Не в этом дело: главное — что он не предупредил.",
+        "slot": "главное — что он не предупредил",
+        "cue": {
+          "en": "the main thing is he didn't warn us",
+          "ko": "중요한 건 그가 미리 말 안 한 것"
+        },
+        "gloss": {
+          "en": "That's not the point: the main thing is he didn't warn us.",
+          "ko": "그게 문제가 아니라, 중요한 건 미리 말을 안 했다는 거야."
+        }
+      },
+      {
+        "text": "Да не в этом дело, я просто хочу понять, что случилось.",
+        "slot": "я просто хочу понять, что случилось",
+        "cue": {
+          "en": "I just want to understand what happened",
+          "ko": "무슨 일인지 이해하고 싶다"
+        },
+        "gloss": {
+          "en": "That's not it, I just want to understand what happened.",
+          "ko": "그게 아니라, 무슨 일이 있었는지 알고 싶을 뿐이야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-18",
+    "stage": 5,
+    "fn": "sympathy",
+    "pattern": "Не берите в голову, ___.",
+    "core": [
+      "Не берите в голову",
+      "не берите в голову"
+    ],
+    "meaning": {
+      "en": "Reassuring someone politely: Don't worry about it, ___.",
+      "ko": "정중하게 안심시키기: 마음 쓰지 마세요, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Не берите в голову"
+    ],
+    "examples": [
+      {
+        "text": "Не берите в голову, всё уже решено.",
+        "slot": "всё уже решено",
+        "cue": {
+          "en": "everything is already settled",
+          "ko": "다 이미 해결됐다"
+        },
+        "gloss": {
+          "en": "Don't worry about it, it's all settled.",
+          "ko": "마음 쓰지 마세요, 다 해결됐어요."
+        }
+      },
+      {
+        "text": "Не берите в голову, с кем не бывает.",
+        "slot": "с кем не бывает",
+        "cue": {
+          "en": "it happens to everyone",
+          "ko": "누구에게나 있는 일이다"
+        },
+        "gloss": {
+          "en": "Don't worry about it, it happens to everyone.",
+          "ko": "신경 쓰지 마세요, 누구나 그럴 수 있죠."
+        }
+      },
+      {
+        "text": "Не берите в голову, это мелочь.",
+        "slot": "это мелочь",
+        "cue": {
+          "en": "it's a trifle",
+          "ko": "사소한 일이다"
+        },
+        "gloss": {
+          "en": "Don't give it a thought, it's nothing.",
+          "ko": "마음 쓰지 마세요, 별일 아니에요."
+        }
+      },
+      {
+        "text": "Да не берите в голову, мы сами всё уберём.",
+        "slot": "мы сами всё уберём",
+        "cue": {
+          "en": "we'll clean up ourselves",
+          "ko": "우리가 다 치우겠다"
+        },
+        "gloss": {
+          "en": "Oh, don't worry about it, we'll clean everything up ourselves.",
+          "ko": "신경 쓰지 마세요, 저희가 다 치울게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-19",
+    "stage": 5,
+    "fn": "change-topic",
+    "pattern": "Я тут подумал: ___.",
+    "core": [
+      "Я тут подумал",
+      "я тут подумал",
+      "Я тут подумала",
+      "я тут подумала"
+    ],
+    "meaning": {
+      "en": "Floating a new idea: I've been thinking: ___.",
+      "ko": "새 생각 꺼내기: 나 생각해 봤는데, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Я тут подумал"
+    ],
+    "examples": [
+      {
+        "text": "Я тут подумал: может, поедем на выходные за город?",
+        "slot": "может, поедем на выходные за город",
+        "cue": {
+          "en": "go out of town for the weekend",
+          "ko": "주말에 교외로 가다"
+        },
+        "gloss": {
+          "en": "I've been thinking: shall we go out of town for the weekend?",
+          "ko": "생각해 봤는데, 주말에 교외로 갈까?"
+        }
+      },
+      {
+        "text": "Я тут подумала, что нам пора сделать ремонт.",
+        "slot": "что нам пора сделать ремонт",
+        "cue": {
+          "en": "it's time we renovated",
+          "ko": "수리할 때가 됐다"
+        },
+        "gloss": {
+          "en": "I've been thinking it's time we did some renovating.",
+          "ko": "생각해 봤는데 이제 집 수리할 때가 된 것 같아."
+        }
+      },
+      {
+        "text": "Слушай, я тут подумал: давай пригласим родителей.",
+        "slot": "давай пригласим родителей",
+        "cue": {
+          "en": "let's invite our parents",
+          "ko": "부모님을 초대하자"
+        },
+        "gloss": {
+          "en": "Listen, I've been thinking: let's invite our parents.",
+          "ko": "있잖아, 생각해 봤는데 부모님 초대하자."
+        }
+      },
+      {
+        "text": "Я тут подумала: а зачем нам вторая машина?",
+        "slot": "а зачем нам вторая машина",
+        "cue": {
+          "en": "why do we need a second car",
+          "ko": "차가 두 대 왜 필요하냐"
+        },
+        "gloss": {
+          "en": "I've been thinking: why do we need a second car?",
+          "ko": "생각해 봤는데, 차가 두 대나 왜 필요해?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ru-f5-20",
+    "stage": 5,
+    "fn": "concede",
+    "pattern": "Делать нечего, ___.",
+    "core": [
+      "Делать нечего",
+      "делать нечего"
+    ],
+    "meaning": {
+      "en": "Accepting what can't be helped: Nothing for it, ___.",
+      "ko": "어쩔 수 없다고 받아들이기: 어쩔 수 없지, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "Делать нечего"
+    ],
+    "examples": [
+      {
+        "text": "Делать нечего, придётся идти пешком.",
+        "slot": "придётся идти пешком",
+        "cue": {
+          "en": "we'll have to walk",
+          "ko": "걸어가야 한다"
+        },
+        "gloss": {
+          "en": "Nothing for it, we'll have to walk.",
+          "ko": "어쩔 수 없지, 걸어가야겠다."
+        }
+      },
+      {
+        "text": "Автобус ушёл — делать нечего, ждём следующий.",
+        "slot": "ждём следующий",
+        "cue": {
+          "en": "we wait for the next one",
+          "ko": "다음 것을 기다린다"
+        },
+        "gloss": {
+          "en": "The bus has gone — nothing for it, we wait for the next one.",
+          "ko": "버스 떠났네. 어쩔 수 없지, 다음 거 기다리자."
+        }
+      },
+      {
+        "text": "Делать нечего, будем решать проблему сами.",
+        "slot": "будем решать проблему сами",
+        "cue": {
+          "en": "we'll solve the problem ourselves",
+          "ko": "문제를 우리가 직접 해결하다"
+        },
+        "gloss": {
+          "en": "Nothing for it, we'll solve the problem ourselves.",
+          "ko": "어쩔 수 없지, 우리가 직접 해결하자."
+        }
+      },
+      {
+        "text": "Магазин закрыт. Делать нечего, вернёмся завтра.",
+        "slot": "вернёмся завтра",
+        "cue": {
+          "en": "we'll come back tomorrow",
+          "ko": "내일 다시 오다"
+        },
+        "gloss": {
+          "en": "The shop is closed. Nothing for it, we'll come back tomorrow.",
+          "ko": "가게가 닫혔네. 어쩔 수 없지, 내일 다시 오자."
         }
       }
     ]

@@ -538,5 +538,331 @@
     "magare",
     "magara",
     "magaro"
+  ],
+  "it-f4-01|Sarebbe meglio": [
+    "Sarebbe migliore",
+    "Sarebbe più meglio",
+    "Fosse meglio"
+  ],
+  "it-f4-01|sarebbe meglio": [
+    "sarebbe migliore",
+    "sarebbe più meglio",
+    "fosse meglio"
+  ],
+  "it-f4-02|Non credo che sia": [
+    "Non credo che è",
+    "Non credo che essere",
+    "Non credo che sii"
+  ],
+  "it-f4-02|non credo che sia": [
+    "non credo che è",
+    "non credo che essere",
+    "non credo che sii"
+  ],
+  "it-f4-03|Spero che": [
+    "Spero di che",
+    "Spero se"
+  ],
+  "it-f4-03|spero che": [
+    "spero di che",
+    "spero se"
+  ],
+  "it-f4-04|Se avessi": [
+    "Se avrei",
+    "Se ho",
+    "Se abbia"
+  ],
+  "it-f4-04|se avessi": [
+    "se avrei",
+    "se ho",
+    "se abbia"
+  ],
+  "it-f4-05|Avrei preferito": [
+    "Avrò preferito",
+    "Avevo preferito",
+    "Avessi preferito"
+  ],
+  "it-f4-05|avrei preferito": [
+    "avrò preferito",
+    "avevo preferito",
+    "avessi preferito"
+  ],
+  "it-f4-06|Avrei dovuto": [
+    "Avessi dovuto",
+    "Avrei devuto"
+  ],
+  "it-f4-06|avrei dovuto": [
+    "avessi dovuto",
+    "avrei devuto"
+  ],
+  "it-f4-07|Mi ha detto che": [
+    "Mi ha detta che",
+    "Mi è detto che",
+    "Mi ha dicuto che"
+  ],
+  "it-f4-07|mi ha detto che": [
+    "mi ha detta che",
+    "mi è detto che",
+    "mi ha dicuto che"
+  ],
+  "it-f4-08|purché": [
+    "per cui"
+  ],
+  "it-f4-09|a meno che": [
+    "almeno che",
+    "a meno se"
+  ],
+  "it-f4-10|Benché": [
+    "Bene che"
+  ],
+  "it-f4-10|benché": [
+    "bene che"
+  ],
+  "it-f4-11|Di solito viene": [
+    "Di solito vengono",
+    "Di solito venire"
+  ],
+  "it-f4-11|di solito viene": [
+    "di solito vengono",
+    "di solito venire"
+  ],
+  "it-f4-12|Qui si": [
+    "Qui se",
+    "Qui lo"
+  ],
+  "it-f4-12|qui si": [
+    "qui se",
+    "qui lo"
+  ],
+  "it-f4-13|con cui": [
+    "con che",
+    "con chi",
+    "con quale"
+  ],
+  "it-f4-14|per il quale": [
+    "per quale",
+    "per la quale",
+    "per il cui"
+  ],
+  "it-f4-15|Da un lato": [
+    "Da un lati",
+    "Di un lato",
+    "Dal un lato"
+  ],
+  "it-f4-15|da un lato": [
+    "da un lati",
+    "di un lato",
+    "dal un lato"
+  ],
+  "it-f4-16|Il punto è che": [
+    "Il punto è di",
+    "La punta è che",
+    "Il punto sia che"
+  ],
+  "it-f4-16|il punto è che": [
+    "il punto è di",
+    "la punta è che",
+    "il punto sia che"
+  ],
+  "it-f4-17|Hai ragione": [
+    "Sei ragione",
+    "Hai la ragione"
+  ],
+  "it-f4-17|hai ragione": [
+    "sei ragione",
+    "hai la ragione"
+  ],
+  "it-f4-18|Non mi sembra": [
+    "Non mi sembro",
+    "Non me sembra",
+    "Non mi sembrano"
+  ],
+  "it-f4-18|non mi sembra": [
+    "non mi sembro",
+    "non me sembra",
+    "non mi sembrano"
+  ],
+  "it-f4-19|Vale la pena": [
+    "Vale le pene",
+    "Vale il pena"
+  ],
+  "it-f4-19|vale la pena": [
+    "vale le pene",
+    "vale il pena"
+  ],
+  "it-f4-20|Per quanto riguarda": [
+    "Per quanto riguardo",
+    "Per quanto ragguarda"
+  ],
+  "it-f4-20|per quanto riguarda": [
+    "per quanto riguardo",
+    "per quanto ragguarda"
+  ],
+  "it-f5-01|Se avessi accettato": [
+    "Se avrei accettato",
+    "Se ho accettato"
+  ],
+  "it-f5-01|se avessi accettato": [
+    "se avrei accettato",
+    "se ho accettato"
+  ],
+  "it-f5-02|una soluzione che": [
+    "una soluzione chi",
+    "una soluzione cui",
+    "una soluzione quale"
+  ],
+  "it-f5-03|l'unica persona che": [
+    "l'unico persona che",
+    "l'unica persona chi",
+    "l'unica persona cui"
+  ],
+  "it-f5-04|Per quanto": [
+    "Per quando",
+    "Pur quanto"
+  ],
+  "it-f5-04|per quanto": [
+    "per quando",
+    "pur quanto"
+  ],
+  "it-f5-05|Non ce la faccio": [
+    "Non ce lo faccio",
+    "Non ci la faccio",
+    "Non me la faccio"
+  ],
+  "it-f5-05|non ce la faccio": [
+    "non ce lo faccio",
+    "non ci la faccio",
+    "non me la faccio"
+  ],
+  "it-f5-06|Non prendertela": [
+    "Non prenditela",
+    "Non prendertelo"
+  ],
+  "it-f5-06|non prendertela": [
+    "non prenditela",
+    "non prendertelo"
+  ],
+  "it-f5-07|te la cav": [
+    "te lo cav",
+    "ti la cav",
+    "te le cav"
+  ],
+  "it-f5-07|Te la cav": [
+    "Te lo cav",
+    "Ti la cav",
+    "Te le cav"
+  ],
+  "it-f5-08|A quanto pare": [
+    "A quanto paio",
+    "A quanto pari",
+    "A quando pare"
+  ],
+  "it-f5-08|a quanto pare": [
+    "a quanto paio",
+    "a quanto pari",
+    "a quando pare"
+  ],
+  "it-f5-09|Secondo i giornali": [
+    "Secondo il giornali",
+    "Seconda i giornali",
+    "Secondo le giornali"
+  ],
+  "it-f5-09|secondo i giornali": [
+    "secondo il giornali",
+    "seconda i giornali",
+    "secondo le giornali"
+  ],
+  "it-f5-10|Finita la riunione": [
+    "Finito la riunione",
+    "Finita il riunione",
+    "Finiti la riunione"
+  ],
+  "it-f5-10|finita la riunione": [
+    "finito la riunione",
+    "finita il riunione",
+    "finiti la riunione"
+  ],
+  "it-f5-11|Lavorando da casa": [
+    "Lavorato da casa",
+    "Lavorare da casa",
+    "Lavorando di casa"
+  ],
+  "it-f5-11|lavorando da casa": [
+    "lavorato da casa",
+    "lavorare da casa",
+    "lavorando di casa"
+  ],
+  "it-f5-12|Volevo chiederle": [
+    "Volevo chiederla",
+    "Vorrò chiederle"
+  ],
+  "it-f5-12|volevo chiederle": [
+    "volevo chiederla",
+    "vorrò chiederle"
+  ],
+  "it-f5-13|Volevo sapere se": [
+    "Volevo sapere che",
+    "Volevo sapere si",
+    "Volevo saputo se"
+  ],
+  "it-f5-13|volevo sapere se": [
+    "volevo sapere che",
+    "volevo sapere si",
+    "volevo saputo se"
+  ],
+  "it-f5-14|lo porto io": [
+    "la porto io",
+    "porto io",
+    "gli porto io"
+  ],
+  "it-f5-15|l'ho trovata": [
+    "l'ho trovato",
+    "ho trovata",
+    "l'ho trovate"
+  ],
+  "it-f5-16|Non è che": [
+    "Non è chi",
+    "Non sia che",
+    "Non è di"
+  ],
+  "it-f5-16|non è che": [
+    "non è chi",
+    "non sia che",
+    "non è di"
+  ],
+  "it-f5-17|Mettiamola così": [
+    "Mettiamolo così",
+    "Mettiamo la così"
+  ],
+  "it-f5-17|mettiamola così": [
+    "mettiamolo così",
+    "mettiamo la così"
+  ],
+  "it-f5-18|Mi sa che": [
+    "Mi so che",
+    "Mi sa di"
+  ],
+  "it-f5-18|mi sa che": [
+    "mi so che",
+    "mi sa di",
+    "me so che"
+  ],
+  "it-f5-19|Tutto sommato": [
+    "Tutti sommati",
+    "Tutto sommando",
+    "Tutto somma"
+  ],
+  "it-f5-19|tutto sommato": [
+    "tutti sommati",
+    "tutto sommando",
+    "tutto somma"
+  ],
+  "it-f5-20|Non me la sento": [
+    "Non mi la sento",
+    "Non me la sente"
+  ],
+  "it-f5-20|non me la sento": [
+    "non mi la sento",
+    "non me la sente"
   ]
 }

@@ -565,5 +565,393 @@ export const ES_DECOYS: Record<string, string[]> = {
     "no soy segur",
     "no tengo segur",
     "estoy no segur"
+  ],
+  "es-f4-01|Espero que": [
+    "Espero de que",
+    "Espera que",
+    "Espero qué"
+  ],
+  "es-f4-01|espero que": [
+    "espero de que",
+    "espera que",
+    "espero qué"
+  ],
+  "es-f4-02|Ojalá": [
+    "Ojalá de",
+    "Ojalá si",
+    "Hojalá"
+  ],
+  "es-f4-02|ojalá": [
+    "ojalá de",
+    "ojalá si",
+    "hojalá"
+  ],
+  "es-f4-03|Si yo fuera tú": [
+    "Si yo sería tú",
+    "Si yo era tú",
+    "Si yo fui tú"
+  ],
+  "es-f4-03|si yo fuera tú": [
+    "si yo sería tú",
+    "si yo era tú",
+    "si yo fui tú"
+  ],
+  "es-f4-04|Si pudiera": [
+    "Si podría",
+    "Si pueda",
+    "Si puedo"
+  ],
+  "es-f4-04|si pudiera": [
+    "si podría",
+    "si pueda",
+    "si puedo"
+  ],
+  "es-f4-05|Si tuviera": [
+    "Si tendría",
+    "Si tenga",
+    "Si tenía"
+  ],
+  "es-f4-05|si tuviera": [
+    "si tendría",
+    "si tenga",
+    "si tenía"
+  ],
+  "es-f4-06|Aunque": [
+    "Aun que",
+    "Aunque que",
+    "Pero"
+  ],
+  "es-f4-06|aunque": [
+    "aun que",
+    "aunque que",
+    "pero"
+  ],
+  "es-f4-07|A pesar de": [
+    "A pesar",
+    "Pese de",
+    "En pesar de"
+  ],
+  "es-f4-07|a pesar de": [
+    "a pesar",
+    "pese de",
+    "en pesar de"
+  ],
+  "es-f4-08|Me dijo que": [
+    "Me dijo de que",
+    "Mi dijo que",
+    "Me dijó que"
+  ],
+  "es-f4-08|me dijo que": [
+    "me dijo de que",
+    "mi dijo que",
+    "me dijó que"
+  ],
+  "es-f4-09|Se dice que": [
+    "Se dicen que",
+    "Es dice que",
+    "Se dijo de que"
+  ],
+  "es-f4-09|se dice que": [
+    "se dicen que",
+    "es dice que",
+    "se dijo de que"
+  ],
+  "es-f4-10|Se espera que": [
+    "Se esperan que",
+    "Se espera de que",
+    "Es espera que"
+  ],
+  "es-f4-10|se espera que": [
+    "se esperan que",
+    "se espera de que",
+    "es espera que"
+  ],
+  "es-f4-11|En cuanto": [
+    "En cuando",
+    "Cuanto",
+    "En cuanto que"
+  ],
+  "es-f4-11|en cuanto": [
+    "en cuando",
+    "cuanto",
+    "en cuanto que"
+  ],
+  "es-f4-12|Cuando tengas": [
+    "Cuando tendrás",
+    "Cuando tienes",
+    "Cuando tuvieras"
+  ],
+  "es-f4-12|cuando tengas": [
+    "cuando tendrás",
+    "cuando tienes",
+    "cuando tuvieras"
+  ],
+  "es-f4-13|Por un lado": [
+    "Por una lado",
+    "Para un lado",
+    "Por un lada"
+  ],
+  "es-f4-13|por un lado": [
+    "por una lado",
+    "para un lado",
+    "por un lada"
+  ],
+  "es-f4-14|Por otro lado": [
+    "Por otra lado",
+    "Para otro lado",
+    "Por otro lados"
+  ],
+  "es-f4-14|por otro lado": [
+    "por otra lado",
+    "para otro lado",
+    "por otro lados"
+  ],
+  "es-f4-15|En cambio": [
+    "En cambios",
+    "Al cambio",
+    "Por cambio"
+  ],
+  "es-f4-15|en cambio": [
+    "en cambios",
+    "al cambio",
+    "por cambio"
+  ],
+  "es-f4-16|Por lo tanto": [
+    "Por la tanto",
+    "Por lo tan",
+    "Para lo tanto"
+  ],
+  "es-f4-16|por lo tanto": [
+    "por la tanto",
+    "por lo tan",
+    "para lo tanto"
+  ],
+  "es-f4-17|Vale la pena": [
+    "Vale el pena",
+    "Vale pena",
+    "Vala la pena"
+  ],
+  "es-f4-17|vale la pena": [
+    "vale el pena",
+    "vale pena",
+    "vala la pena"
+  ],
+  "es-f4-18|Habría que": [
+    "Habrían que",
+    "Habría de que",
+    "Haría que"
+  ],
+  "es-f4-18|habría que": [
+    "habrían que",
+    "habría de que",
+    "haría que"
+  ],
+  "es-f4-19|Qué te parece si": [
+    "Qué te parece que si",
+    "Qué te pareces si",
+    "Qué te parezca si"
+  ],
+  "es-f4-19|qué te parece si": [
+    "qué te parece que si",
+    "qué te pareces si",
+    "qué te parezca si"
+  ],
+  "es-f4-20|Cuanto más": [
+    "Cuando más",
+    "Lo más",
+    "Cuanto lo más"
+  ],
+  "es-f4-20|cuanto más": [
+    "cuando más",
+    "lo más",
+    "cuanto lo más"
+  ],
+  "es-f5-01|Si lo hubiera sabido": [
+    "Si lo habría sabido",
+    "Si lo había sabido",
+    "Si lo sabría"
+  ],
+  "es-f5-01|si lo hubiera sabido": [
+    "si lo habría sabido",
+    "si lo había sabido",
+    "si lo sabría"
+  ],
+  "es-f5-02|Ojalá hubiera": [
+    "Ojalá habría",
+    "Ojalá había"
+  ],
+  "es-f5-02|ojalá hubiera": [
+    "ojalá habría",
+    "ojalá había"
+  ],
+  "es-f5-03|Quería comentarte": [
+    "Quería comentarse",
+    "Quería comentar a ti",
+    "Quería te comentar"
+  ],
+  "es-f5-03|quería comentarte": [
+    "quería comentarse",
+    "quería comentar a ti",
+    "quería te comentar"
+  ],
+  "es-f5-04|Yo diría que": [
+    "Yo dijera que",
+    "Yo diría de que",
+    "Yo decía que"
+  ],
+  "es-f5-04|yo diría que": [
+    "yo dijera que",
+    "yo diría de que",
+    "yo decía que"
+  ],
+  "es-f5-05|Lo que me preocupa": [
+    "Lo que me preocupo",
+    "Lo cual me preocupa",
+    "Lo que me preocupan"
+  ],
+  "es-f5-05|lo que me preocupa": [
+    "lo que me preocupo",
+    "lo cual me preocupa",
+    "lo que me preocupan"
+  ],
+  "es-f5-06|Fuiste tú quien": [
+    "Fuiste tú que",
+    "Fuiste tú quienes",
+    "Fuiste tú quién"
+  ],
+  "es-f5-06|fuiste tú quien": [
+    "fuiste tú que",
+    "fuiste tú quienes",
+    "fuiste tú quién"
+  ],
+  "es-f5-07|Busco a alguien que": [
+    "Busco alguien que",
+    "Busco a alguien quien",
+    "Busco a nadie que"
+  ],
+  "es-f5-07|busco a alguien que": [
+    "busco alguien que",
+    "busco a alguien quien",
+    "busco a nadie que"
+  ],
+  "es-f5-08|Hay alguien que": [
+    "Hay alguien quien",
+    "Hay nadie que",
+    "Hay alguno quien"
+  ],
+  "es-f5-08|hay alguien que": [
+    "hay alguien quien",
+    "hay nadie que",
+    "hay alguno quien"
+  ],
+  "es-f5-09|No hay nadie que": [
+    "No hay alguien que",
+    "No hay nadie quien",
+    "No hay ninguno quien"
+  ],
+  "es-f5-09|no hay nadie que": [
+    "no hay alguien que",
+    "no hay nadie quien",
+    "no hay ninguno quien"
+  ],
+  "es-f5-10|Le agradecería que": [
+    "Le agradecerías que",
+    "Lo agradecería que",
+    "Le agradecería de que"
+  ],
+  "es-f5-10|le agradecería que": [
+    "le agradecerías que",
+    "lo agradecería que",
+    "le agradecería de que"
+  ],
+  "es-f5-11|Sería posible que": [
+    "Sería posible de que",
+    "Sería posibles que",
+    "Fuera posible que"
+  ],
+  "es-f5-11|sería posible que": [
+    "sería posible de que",
+    "sería posibles que",
+    "fuera posible que"
+  ],
+  "es-f5-12|Le importaría": [
+    "Lo importaría",
+    "Le importarías",
+    "Le importara"
+  ],
+  "es-f5-12|le importaría": [
+    "lo importaría",
+    "le importarías",
+    "le importara"
+  ],
+  "es-f5-13|de nada": [
+    "de nadie",
+    "en nada",
+    "por nada"
+  ],
+  "es-f5-14|O sea": [
+    "O se",
+    "O sería",
+    "Osea"
+  ],
+  "es-f5-14|o sea": [
+    "o se",
+    "o sería",
+    "osea"
+  ],
+  "es-f5-15|Es decir": [
+    "Es dicho",
+    "Es a decir",
+    "Eso decir"
+  ],
+  "es-f5-15|es decir": [
+    "es dicho",
+    "es a decir",
+    "eso decir"
+  ],
+  "es-f5-16|En definitiva": [
+    "En definitivo",
+    "En definitivamente",
+    "Por definitiva"
+  ],
+  "es-f5-16|en definitiva": [
+    "en definitivo",
+    "en definitivamente",
+    "por definitiva"
+  ],
+  "es-f5-17|A fin de cuentas": [
+    "Al fin de cuentas",
+    "A fin de cuenta",
+    "A fines de cuentas"
+  ],
+  "es-f5-17|a fin de cuentas": [
+    "al fin de cuentas",
+    "a fin de cuenta",
+    "a fines de cuentas"
+  ],
+  "es-f5-18|me saca de quicio": [
+    "me saca del quicio",
+    "me sale de quicio",
+    "me saca de quicios"
+  ],
+  "es-f5-19|A lo mejor": [
+    "A lo mejor que",
+    "Al mejor",
+    "A la mejor"
+  ],
+  "es-f5-19|a lo mejor": [
+    "a lo mejor que",
+    "al mejor",
+    "a la mejor"
+  ],
+  "es-f5-20|Me echas una mano con": [
+    "Me echas un mano con",
+    "Me echas una mano de",
+    "Me hechas una mano con"
+  ],
+  "es-f5-20|me echas una mano con": [
+    "me echas un mano con",
+    "me echas una mano de",
+    "me hechas una mano con"
   ]
 };

@@ -358,5 +358,323 @@ export const VI_PLAIN: Record<string, string[]> = {
     "có lẻ",
     "lẽ có",
     "có lễ"
+  ],
+  "vi-f4-01|không những": [
+    "không nhưng",
+    "những không",
+    "không nhiều"
+  ],
+  "vi-f4-01|Không những": [
+    "Không nhưng",
+    "Những không",
+    "Không nhiều"
+  ],
+  "vi-f4-02|Dù": [
+    "Vì",
+    "Do",
+    "Để"
+  ],
+  "vi-f4-02|dù": [
+    "vì",
+    "do",
+    "để"
+  ],
+  "vi-f4-03|để": [
+    "đề",
+    "vì",
+    "do"
+  ],
+  "vi-f4-04|càng": [
+    "cành",
+    "căng",
+    "cũng"
+  ],
+  "vi-f4-05|hơi": [
+    "hời",
+    "hỏi",
+    "hơn"
+  ],
+  "vi-f4-05|Hơi": [
+    "Hời",
+    "Hỏi",
+    "Hơn"
+  ],
+  "vi-f4-06|khá": [
+    "khác",
+    "khả",
+    "khà"
+  ],
+  "vi-f4-07|Về": [
+    "Vì",
+    "Với",
+    "Vế"
+  ],
+  "vi-f4-07|về": [
+    "vì",
+    "với",
+    "vế"
+  ],
+  "vi-f4-08|Tuy nhiên": [
+    "Tùy nhiên",
+    "Tuy nhưng",
+    "Tuy nên"
+  ],
+  "vi-f4-08|tuy nhiên": [
+    "tùy nhiên",
+    "tuy nhưng",
+    "tuy nên"
+  ],
+  "vi-f4-09|Ngoài ra": [
+    "Ngoài vào",
+    "Ngoại ra",
+    "Ngoài đi"
+  ],
+  "vi-f4-09|ngoài ra": [
+    "ngoài vào",
+    "ngoại ra",
+    "ngoài đi"
+  ],
+  "vi-f4-10|Nói thẳng ra": [
+    "Nói thằng ra",
+    "Nói thẳng lên"
+  ],
+  "vi-f4-10|nói thẳng ra": [
+    "nói thằng ra",
+    "nói thẳng lên"
+  ],
+  "vi-f4-11|Điều quan trọng là": [
+    "Điều quan trọng thì",
+    "Điều quan trọng nhưng",
+    "Điều quan trọng như"
+  ],
+  "vi-f4-11|điều quan trọng là": [
+    "điều quan trọng thì",
+    "điều quan trọng nhưng",
+    "điều quan trọng như"
+  ],
+  "vi-f4-12|e là": [
+    "é là",
+    "ê là",
+    "e mà"
+  ],
+  "vi-f4-13|Mặt khác": [
+    "Mặt kia",
+    "Mặt khắc"
+  ],
+  "vi-f4-13|mặt khác": [
+    "mặt kia",
+    "mặt khắc"
+  ],
+  "vi-f4-14|đồng ý một phần": [
+    "đồng ý một phận",
+    "đồng ý một mặt",
+    "đồng ý một khúc"
+  ],
+  "vi-f4-15|Chốt lại": [
+    "Chốt lên",
+    "Chột lại",
+    "Chốt đi"
+  ],
+  "vi-f4-15|chốt lại": [
+    "chốt lên",
+    "chột lại",
+    "chốt đi"
+  ],
+  "vi-f4-16|Tóm lại": [
+    "Tóm lên",
+    "Tốm lại",
+    "Tóm lấy"
+  ],
+  "vi-f4-16|tóm lại": [
+    "tóm lên",
+    "tốm lại",
+    "tóm lấy"
+  ],
+  "vi-f4-17|giảm được không": [
+    "giảm được chưa",
+    "giảm có không",
+    "giảm được hay"
+  ],
+  "vi-f4-18|Nếu được thì": [
+    "Nếu được là",
+    "Nếu được nên",
+    "Nếu được mà"
+  ],
+  "vi-f4-18|nếu được thì": [
+    "nếu được là",
+    "nếu được nên",
+    "nếu được mà"
+  ],
+  "vi-f4-19|xác nhận lại": [
+    "xác nhận vào",
+    "sát nhận lại"
+  ],
+  "vi-f4-20|chịu trách nhiệm": [
+    "chịu trách nghiệm",
+    "chịu chách nhiệm",
+    "chịu nhiệm trách"
+  ],
+  "vi-f5-01|Chính": [
+    "Chín",
+    "Chỉnh",
+    "Chình"
+  ],
+  "vi-f5-01|chính": [
+    "chín",
+    "chỉnh",
+    "chình"
+  ],
+  "vi-f5-02|Ngay cả": [
+    "Ngày cả",
+    "Ngay cũng",
+    "Ngay khi"
+  ],
+  "vi-f5-02|ngay cả": [
+    "ngày cả",
+    "ngay cũng",
+    "ngay khi"
+  ],
+  "vi-f5-03|Đến cả": [
+    "Đến cùng",
+    "Đến khi",
+    "Đền cả"
+  ],
+  "vi-f5-03|đến cả": [
+    "đến cùng",
+    "đến khi",
+    "đền cả"
+  ],
+  "vi-f5-04|rồi mà": [
+    "rồi mả",
+    "rồi nhưng",
+    "rồi mới"
+  ],
+  "vi-f5-05|chứ": [
+    "chư",
+    "chữ",
+    "chú"
+  ],
+  "vi-f5-06|đấy": [
+    "đây",
+    "đáy",
+    "đầy"
+  ],
+  "vi-f5-07|Sao lại": [
+    "Sao là",
+    "Sau lại",
+    "Xao lại"
+  ],
+  "vi-f5-07|sao lại": [
+    "sao là",
+    "sau lại",
+    "xao lại"
+  ],
+  "vi-f5-08|Có phải": [
+    "Có phái",
+    "Cố phải",
+    "Có phại"
+  ],
+  "vi-f5-08|có phải": [
+    "có phái",
+    "cố phải",
+    "có phại"
+  ],
+  "vi-f5-09|Đối với": [
+    "Đối vơi",
+    "Đội với",
+    "Đối cho"
+  ],
+  "vi-f5-09|đối với": [
+    "đối vơi",
+    "đội với",
+    "đối cho"
+  ],
+  "vi-f5-10|Trong bối cảnh": [
+    "Trong bối cánh",
+    "Trên bối cảnh",
+    "Trong bồi cảnh"
+  ],
+  "vi-f5-10|trong bối cảnh": [
+    "trong bối cánh",
+    "trên bối cảnh",
+    "trong bồi cảnh"
+  ],
+  "vi-f5-11|nhằm": [
+    "nhầm",
+    "nhắm",
+    "nhằng"
+  ],
+  "vi-f5-12|Không phải là": [
+    "Không phái là",
+    "Không phải thì",
+    "Không phải như"
+  ],
+  "vi-f5-12|không phải là": [
+    "không phái là",
+    "không phải thì",
+    "không phải như"
+  ],
+  "vi-f5-13|nhè nhẹ": [
+    "nhẹ nhè",
+    "nhè nhè",
+    "nhẹ nhẹ"
+  ],
+  "vi-f5-14|Nói thật lòng": [
+    "Nói thật lồng",
+    "Nói thật lỏng",
+    "Nói thất lòng"
+  ],
+  "vi-f5-14|nói thật lòng": [
+    "nói thật lồng",
+    "nói thật lỏng",
+    "nói thất lòng"
+  ],
+  "vi-f5-15|Biết là": [
+    "Biệt là",
+    "Biết làm"
+  ],
+  "vi-f5-15|biết là": [
+    "biệt là",
+    "biết làm"
+  ],
+  "vi-f5-16|Nói gì thì nói": [
+    "Nói gì cũng nói",
+    "Nói gì là nói",
+    "Nói gì mà nói"
+  ],
+  "vi-f5-16|nói gì thì nói": [
+    "nói gì cũng nói",
+    "nói gì là nói",
+    "nói gì mà nói"
+  ],
+  "vi-f5-17|được cái là": [
+    "được cái mà",
+    "được cải là",
+    "được cái thì"
+  ],
+  "vi-f5-17|Được cái là": [
+    "Được cái mà",
+    "Được cải là",
+    "Được cái thì"
+  ],
+  "vi-f5-18|Xin phép được": [
+    "Xin phép bị",
+    "Xin phép phải",
+    "Xin phép đã"
+  ],
+  "vi-f5-18|xin phép được": [
+    "xin phép bị",
+    "xin phép phải",
+    "xin phép đã"
+  ],
+  "vi-f5-19|Thay mặt": [
+    "Thay mắt",
+    "Thay vì",
+    "Thây mặt"
+  ],
+  "vi-f5-19|thay mặt": [
+    "thay mắt",
+    "thay vì",
+    "thây mặt"
   ]
 };

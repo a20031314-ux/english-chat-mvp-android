@@ -7,7 +7,7 @@ import { ladderFor } from "./stages/index.ts";
 
 /** 틀이 있는 언어·단계(2026-10-28 1단계 "틀을 뼈대로": ko·es·ja 1~3단계). */
 const FRAMED: Record<string, number[]> = Object.fromEntries(
-  ["ko", "ja", "es", "en", "zh", "vi", "id", "th", "fr", "it", "pt", "ru", "ar", "hi"].filter((language) => framesFor(language, 1).length).map((language) => [language, [1, 2, 3]]),
+  ["ko", "ja", "es", "en", "zh", "vi", "id", "th", "fr", "it", "pt", "ru", "ar", "hi"].filter((language) => framesFor(language, 1).length).map((language) => [language, [1, 2, 3, 4, 5]]),
 );
 
 test("공통 기능 목록: id 겹침 없음, 이름 en·ko, 단계 1~5", () => {
@@ -132,7 +132,7 @@ test("대본으로 익힌 양: 통과한 대본·틀만, 할 수 있는 일은 �
     assert.equal(none.expressions.done, 0);
     assert.equal(none.lines, 0);
     assert.ok(none.canDo.length >= 20 && none.canDo.every((item) => !item.done), `${language} 할 수 있는 일`);
-    const all = new Set([...allScriptsFor(language).map((s) => s.id), ...framesFor(language, 1).map((f) => f.id), ...framesFor(language, 2).map((f) => f.id), ...framesFor(language, 3).map((f) => f.id)]);
+    const all = new Set([...allScriptsFor(language).map((s) => s.id), ...framesFor(language, 1).map((f) => f.id), ...framesFor(language, 2).map((f) => f.id), ...framesFor(language, 3).map((f) => f.id), ...framesFor(language, 4).map((f) => f.id), ...framesFor(language, 5).map((f) => f.id)]);
     const full = scriptAmount(language, all)!;
     assert.equal(full.expressions.done, full.expressions.total, `${language} 표현 모두`);
     assert.equal(full.grammar.done, full.grammar.total, `${language} 문법 모두`);

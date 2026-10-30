@@ -2182,7 +2182,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "On the one hand, the client changed the requirements last week. On the other hand, Ana has been ill for a few days and I've got to do her part.",
           "ko": "한편으로는 고객이 지난주에 요구 사항을 바꿨고요. 다른 한편으로는 아나가 며칠째 아파서 그 부분까지 제가 해야 해요."
-        }
+        },
+        "frames": [
+          "es-f4-13",
+          "es-f4-14"
+        ]
       },
       {
         "who": "them",
@@ -2207,7 +2211,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I understand. But even if I work late, I don't think I can finish it properly by Thursday.",
           "ko": "이해해요. 하지만 늦게까지 일하더라도 목요일까지 제대로 끝낼 수 있을 것 같지 않아요."
-        }
+        },
+        "frames": [
+          "es-f4-06",
+          "es-f3-02"
+        ]
       },
       {
         "who": "them",
@@ -2264,7 +2272,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "OK. Then how about I send you a summary with the main figures on Thursday and the full version on Friday?",
           "ko": "알겠어요. 그럼 목요일에 핵심 수치만 담은 요약을 보내고, 금요일에 전체본을 드리면 어떨까요?"
-        }
+        },
+        "frames": [
+          "es-f4-19"
+        ]
       },
       {
         "who": "them",
@@ -2321,7 +2332,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I promise. Let's hope the client doesn't change anything else...",
           "ko": "약속할게요. 고객이 더는 아무것도 안 바꾸길 바랄 뿐이에요..."
-        }
+        },
+        "frames": [
+          "es-f4-02"
+        ]
       }
     ],
     "expressions": [
@@ -2364,7 +2378,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, it depends. On the one hand, you don't waste time commuting. On the other, I find it hard to switch off.",
           "ko": "글쎄, 경우에 따라 달라. 한편으론 출퇴근 시간이 안 들지. 그런데 난 일에서 벗어나기가 힘들어."
-        }
+        },
+        "frames": [
+          "es-f4-13"
+        ]
       },
       {
         "who": "them",
@@ -2428,7 +2445,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Maybe, but even if you're disciplined, when you live alone it's very easy to isolate yourself.",
           "ko": "그럴 수도 있지. 하지만 자기 관리를 해도 혼자 살면 고립되기 쉬워."
-        }
+        },
+        "frames": [
+          "es-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2478,7 +2498,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "See? That's why I don't think the answer is all at home or all at the office.",
           "ko": "봐. 그래서 난 전부 재택이나 전부 출근이 답이라고 생각하지 않아."
-        }
+        },
+        "frames": [
+          "es-f3-02"
+        ]
       },
       {
         "who": "them",
@@ -2503,7 +2526,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "If I could choose, I'd go to the office two days a week. The good thing is that way you see people without losing the whole week on the metro.",
           "ko": "고를 수 있다면 일주일에 이틀은 출근할 거야. 그러면 일주일 내내 지하철에서 시간 버리지 않고 사람들도 볼 수 있다는 게 좋지."
-        }
+        },
+        "frames": [
+          "es-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2570,7 +2596,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, I think it's a bold measure. According to the article, pollution is expected to drop by almost thirty percent.",
           "ko": "용기 있는 조치라고 생각해요. 기사에 따르면 오염이 30% 가까이 줄 거라고 해요."
-        }
+        },
+        "frames": [
+          "es-f4-10"
+        ]
       },
       {
         "who": "them",
@@ -2602,7 +2631,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "That's true. The mayor said there would be support for shops during the first year, although he didn't explain how much money.",
           "ko": "맞아요. 시장은 첫해 동안 가게에 지원금을 주겠다고 했는데, 얼마인지는 밝히지 않았어요."
-        }
+        },
+        "frames": [
+          "es-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2634,7 +2666,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Honestly, I don't think that support will be enough. On the other hand, if they improved public transport, people would keep going to the centre.",
           "ko": "솔직히 그 지원으로는 부족할 것 같아요. 반면에 대중교통을 개선하면 사람들은 계속 도심에 올 거예요."
-        }
+        },
+        "frames": [
+          "es-f4-15",
+          "es-f3-02"
+        ]
       },
       {
         "who": "them",
@@ -2723,7 +2759,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, unless they do it all at once. It should be done gradually, listening to the residents.",
           "ko": "네, 한꺼번에 밀어붙이지만 않는다면요. 주민 의견을 들으면서 조금씩 해야 해요."
-        }
+        },
+        "frames": [
+          "es-f4-18"
+        ]
       },
       {
         "who": "them",
@@ -2748,7 +2787,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "In short: the idea is worth it, but it will only work if there are real alternatives to the car.",
           "ko": "정리하면, 해 볼 만한 아이디어지만 차를 대신할 현실적인 수단이 있어야만 성공할 거예요."
-        }
+        },
+        "frames": [
+          "es-f4-17"
+        ]
       }
     ],
     "expressions": [
@@ -2845,7 +2887,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, when you get there, you can sign up for classes. If I were you, I'd start with an app right now.",
           "ko": "가서 수업 등록하면 되지. 나라면 지금 당장 앱으로 시작하겠어."
-        }
+        },
+        "frames": [
+          "es-f4-03"
+        ]
       },
       {
         "who": "them",
@@ -2902,7 +2947,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Sure, but the good thing is you're young and don't have a mortgage. Besides, an experience like that is worth it even if it goes wrong.",
           "ko": "그렇긴 한데, 다행인 건 넌 젊고 대출도 없잖아. 게다가 그런 경험은 잘 안 풀려도 해 볼 만해."
-        }
+        },
+        "frames": [
+          "es-f4-17",
+          "es-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2952,7 +3001,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "That's what friends are for. Whatever you decide, I hope it goes brilliantly. And if you go, I'm coming to visit!",
           "ko": "친구 좋다는 게 뭐야. 뭘 결정하든 잘되길 바라. 그리고 가면 놀러 갈게!"
-        }
+        },
+        "frames": [
+          "es-f4-02"
+        ]
       }
     ],
     "expressions": [
@@ -3025,7 +3077,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, despite that, I'm sure the presentation went well. What did the others say?",
           "ko": "그래도 그거 말고는 발표 잘됐을 거야. 다른 사람들은 뭐래?"
-        }
+        },
+        "frames": [
+          "es-f4-07"
+        ]
       },
       {
         "who": "them",
@@ -3110,7 +3165,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "The electric heating is what uses the most. Therefore, we should only use it at night.",
           "ko": "전기 난방이 전기를 제일 많이 먹어. 그러니까 밤에만 쓰는 게 좋겠어."
-        }
+        },
+        "frames": [
+          "es-f4-16"
+        ]
       },
       {
         "who": "them",
@@ -3173,7 +3231,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Ha ha, nothing gets past you. I wanted to mention a little thing about the budget, nothing serious.",
           "ko": "하하, 하나도 안 놓치네. 예산 관련해서 사소한 거 하나 얘기하고 싶었어, 별건 아니고."
-        }
+        },
+        "frames": [
+          "es-f5-03"
+        ]
       },
       {
         "who": "them",
@@ -3189,7 +3250,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I mean, you've hit the nail on the head with the creator videos, but what worries me a tiny bit is that they eat up almost half the budget.",
           "ko": "그러니까, 크리에이터 영상 아이디어는 정말 딱 맞았는데, 조금 걱정되는 건 그게 예산의 거의 절반을 잡아먹는다는 거야."
-        }
+        },
+        "frames": [
+          "es-f5-14",
+          "es-f5-05"
+        ]
       },
       {
         "who": "them",
@@ -3205,7 +3270,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I don't doubt it for a second. I'd say that maybe we could try two or three creators first and see how people respond before going all in.",
           "ko": "그건 의심의 여지가 없지. 내 생각엔 먼저 크리에이터 두세 명으로 시험해 보고, 반응을 본 다음에 전력을 쏟아도 될 것 같아."
-        }
+        },
+        "frames": [
+          "es-f5-04",
+          "es-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -3318,7 +3387,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Oh, yes please, even just a little. It's absolutely delicious, really. What's the secret?",
           "ko": "아, 네, 조금만 주세요. 정말 너무 맛있어요. 비법이 뭐예요?"
-        }
+        },
+        "frames": [
+          "es-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -3334,7 +3406,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Ha ha, my lips are sealed. If I'd known, I'd have come hungrier.",
           "ko": "하하, 무덤까지 가져갈게요. 알았으면 배를 더 비우고 올 걸 그랬어요."
-        }
+        },
+        "frames": [
+          "es-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -3366,7 +3441,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Just a little hour... Well, two. I was off in the clouds, listening to a podcast.",
           "ko": "한 시간밖에 안 걸렸어요... 음, 두 시간. 팟캐스트 들으면서 딴생각을 하고 있었거든요."
-        }
+        },
+        "frames": [
+          "es-f5-13"
+        ]
       },
       {
         "who": "them",
@@ -3475,7 +3553,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "On the contrary, I loved it. It's just that I'm still mulling over the ending.",
           "ko": "오히려 너무 좋았어. 그냥 결말을 아직 곱씹고 있는 중이야."
-        }
+        },
+        "frames": [
+          "es-f3-18"
+        ]
       },
       {
         "who": "them",
@@ -3491,7 +3572,12 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Hmm, I'm not so sure. Maybe it's the other way round. I mean, I don't think she gives up; I think she finally chooses for herself, not her family.",
           "ko": "음, 글쎄. 오히려 반대일 수도 있어. 그러니까 포기한 게 아니라, 드디어 가족이 아니라 자기가 선택한 것 같아."
-        }
+        },
+        "frames": [
+          "es-f5-19",
+          "es-f5-14",
+          "es-f3-02"
+        ]
       },
       {
         "who": "them",
@@ -3555,7 +3641,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Ooh, that reading makes sense too, honestly. Maybe the beauty of it is that it can be read both ways.",
           "ko": "와, 그 해석도 일리가 있다, 진짜. 어쩌면 두 가지로 읽힌다는 게 이 영화의 묘미인지도 몰라."
-        }
+        },
+        "frames": [
+          "es-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -3571,7 +3660,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "No way! Let's say we're both a bit right. At the end of the day, a good film is one that leaves you arguing at the cinema door.",
           "ko": "절대 아니지! 우리 둘 다 조금씩 맞다고 하자. 결국 좋은 영화란 극장 앞에서 계속 토론하게 만드는 영화잖아."
-        }
+        },
+        "frames": [
+          "es-f5-17"
+        ]
       },
       {
         "who": "them",
@@ -3676,7 +3768,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Excuse me, but that surprises me, because I attached it to the email. Would it be possible for you to check again?",
           "ko": "죄송하지만 이상하네요, 이메일에 첨부했거든요. 다시 한번 확인해 주실 수 있을까요?"
-        }
+        },
+        "frames": [
+          "es-f5-11"
+        ]
       },
       {
         "who": "them",
@@ -3692,7 +3787,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I see. In that case, I'd be grateful if you could tell me how I can send it again so that it doesn't happen again.",
           "ko": "알겠습니다. 그렇다면 같은 일이 없도록 어떻게 다시 보내면 되는지 알려 주시면 감사하겠습니다."
-        }
+        },
+        "frames": [
+          "es-f5-10"
+        ]
       },
       {
         "who": "them",
@@ -3804,7 +3902,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "The upstairs neighbour. He's been doing building work at seven in the morning for a week and it drives me up the wall.",
           "ko": "윗집 사람. 일주일째 아침 일곱 시에 공사를 하는데 미치겠어."
-        }
+        },
+        "frames": [
+          "es-f5-18"
+        ]
       },
       {
         "who": "them",
@@ -3954,7 +4055,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Not at all. I'm looking for someone who's tidy and doesn't smoke, and apparently that's asking a lot.",
           "ko": "전혀. 깔끔하고 담배 안 피우는 사람을 찾는데, 그게 무리한 요구인가 봐."
-        }
+        },
+        "frames": [
+          "es-f5-07"
+        ]
       },
       {
         "who": "them",
@@ -3970,7 +4074,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, but among the people who've written to me there isn't a single one who can pay on time. In other words, a disaster.",
           "ko": "올렸지. 근데 연락 온 사람 중에 제때 낼 수 있는 사람이 한 명도 없어. 한마디로 엉망이야."
-        }
+        },
+        "frames": [
+          "es-f5-14"
+        ]
       },
       {
         "who": "them",

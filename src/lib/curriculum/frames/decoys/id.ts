@@ -490,5 +490,335 @@ export const ID_DECOYS: Record<string, string[]> = {
     "kebenaran",
     "membenarkan",
     "aktualnya"
+  ],
+  "id-f4-01|Meskipun": [
+    "Sehingga",
+    "Supaya",
+    "Maka"
+  ],
+  "id-f4-01|meskipun": [
+    "sehingga",
+    "supaya",
+    "maka"
+  ],
+  "id-f4-02|walaupun": [
+    "sehingga",
+    "supaya",
+    "maka"
+  ],
+  "id-f4-02|Walaupun": [
+    "Sehingga",
+    "Supaya",
+    "Maka"
+  ],
+  "id-f4-03|supaya": [
+    "sehingga",
+    "meskipun",
+    "walaupun"
+  ],
+  "id-f4-03|Supaya": [
+    "Sehingga",
+    "Meskipun",
+    "Walaupun"
+  ],
+  "id-f4-04|sehingga": [
+    "supaya",
+    "agar",
+    "meskipun"
+  ],
+  "id-f4-05|Seharusnya": [
+    "Seharus",
+    "Keharusan",
+    "Haruskah"
+  ],
+  "id-f4-05|seharusnya": [
+    "seharus",
+    "keharusan",
+    "haruskah"
+  ],
+  "id-f4-06|bilang bahwa": [
+    "bilang kepada",
+    "bilang yang",
+    "bilang apakah"
+  ],
+  "id-f4-07|kurang": [
+    "kekurangan",
+    "berkurang",
+    "dikurangi"
+  ],
+  "id-f4-08|bisa kurang": [
+    "bisa kurangi",
+    "bisa kekurangan",
+    "bisa pengurangan"
+  ],
+  "id-f4-09|Bagaimana kalau": [
+    "Bagaimana kalaupun",
+    "Mengapa kalau",
+    "Bagaimana sehingga"
+  ],
+  "id-f4-09|bagaimana kalau": [
+    "bagaimana kalaupun",
+    "mengapa kalau",
+    "bagaimana sehingga"
+  ],
+  "id-f4-10|Kalau boleh usul": [
+    "Kalau boleh usulan",
+    "Kalau boleh mengusul",
+    "Kalau boleh diusul"
+  ],
+  "id-f4-10|kalau boleh usul": [
+    "kalau boleh usulan",
+    "kalau boleh mengusul",
+    "kalau boleh diusul"
+  ],
+  "id-f4-11|Di satu sisi": [
+    "Di sisi satu",
+    "Dari sisi satu",
+    "Di sebuah sisi"
+  ],
+  "id-f4-11|di satu sisi": [
+    "di sisi satu",
+    "dari sisi satu",
+    "di sebuah sisi"
+  ],
+  "id-f4-12|Saya paham maksudnya": [
+    "Saya paham dimaksud",
+    "Saya paham bermaksud",
+    "Saya paham maksud"
+  ],
+  "id-f4-12|saya paham maksudnya": [
+    "saya paham dimaksud",
+    "saya paham bermaksud",
+    "saya paham maksud"
+  ],
+  "id-f4-13|Tapi masalahnya": [
+    "Tapi masalahan",
+    "Tapi bermasalah",
+    "Tapi permasalah"
+  ],
+  "id-f4-13|tapi masalahnya": [
+    "tapi masalahan",
+    "tapi bermasalah",
+    "tapi permasalah"
+  ],
+  "id-f4-14|Tenggat": [
+    "Tenggatan",
+    "Bertenggat",
+    "Ditenggat"
+  ],
+  "id-f4-14|tenggat": [
+    "tenggatan",
+    "bertenggat",
+    "ditenggat"
+  ],
+  "id-f4-15|Kelebihannya": [
+    "Lebihannya",
+    "Berlebihannya",
+    "Kelebihnya"
+  ],
+  "id-f4-15|kelebihannya": [
+    "lebihannya",
+    "berlebihannya",
+    "kelebihnya"
+  ],
+  "id-f4-16|memper": [
+    "mem",
+    "menper",
+    "diper"
+  ],
+  "id-f4-17|Intinya": [
+    "Inti",
+    "Keintian",
+    "Berinti"
+  ],
+  "id-f4-17|intinya": [
+    "inti",
+    "keintian",
+    "berinti"
+  ],
+  "id-f4-18|Dengan kata lain": [
+    "Dalam kata lain",
+    "Dengan lain kata",
+    "Pada kata lain"
+  ],
+  "id-f4-18|dengan kata lain": [
+    "dalam kata lain",
+    "dengan lain kata",
+    "pada kata lain"
+  ],
+  "id-f4-19|Tergantung": [
+    "Tergantungan",
+    "Digantung",
+    "Menggantung"
+  ],
+  "id-f4-19|tergantung": [
+    "tergantungan",
+    "digantung",
+    "menggantung"
+  ],
+  "id-f4-20|Kita sepakat": [
+    "Kita kesepakatan",
+    "Kita disepakati",
+    "Kita sepakatkan"
+  ],
+  "id-f4-20|kita sepakat": [
+    "kita kesepakatan",
+    "kita disepakati",
+    "kita sepakatkan"
+  ],
+  "id-f5-01|merupakan": [
+    "merupa",
+    "dirupakan",
+    "berupakan"
+  ],
+  "id-f5-02|Izinkan saya": [
+    "Izin saya",
+    "Mengizinkan saya",
+    "Diizinkan saya"
+  ],
+  "id-f5-02|izinkan saya": [
+    "izin saya",
+    "mengizinkan saya",
+    "diizinkan saya"
+  ],
+  "id-f5-03|Atas nama": [
+    "Pada nama",
+    "Atas penamaan",
+    "Oleh nama"
+  ],
+  "id-f5-03|atas nama": [
+    "pada nama",
+    "atas penamaan",
+    "oleh nama"
+  ],
+  "id-f5-04|Dengan segala hormat": [
+    "Dengan segala kehormatan",
+    "Dengan semua hormat",
+    "Dalam segala hormat"
+  ],
+  "id-f5-04|dengan segala hormat": [
+    "dengan segala kehormatan",
+    "dengan semua hormat",
+    "dalam segala hormat"
+  ],
+  "id-f5-05|agak sulit": [
+    "agak kesulitan",
+    "agak disulitkan",
+    "agak bersulit"
+  ],
+  "id-f5-06|lain kali aja": [
+    "lain kalinya aja",
+    "berlainan kali aja",
+    "lain-lain kali aja"
+  ],
+  "id-f5-07|Mending": [
+    "Kemendingan",
+    "Dimending",
+    "Bermending"
+  ],
+  "id-f5-07|mending": [
+    "kemendingan",
+    "dimending",
+    "bermending"
+  ],
+  "id-f5-08|Kok": [
+    "Dong",
+    "Deh",
+    "Nih"
+  ],
+  "id-f5-09|dong": [
+    "kok",
+    "sih",
+    "kan"
+  ],
+  "id-f5-10|Emang sih": [
+    "Emang kok",
+    "Emang dong",
+    "Emang kan"
+  ],
+  "id-f5-10|emang sih": [
+    "emang kok",
+    "emang dong",
+    "emang kan"
+  ],
+  "id-f5-11|Biar aku yang": [
+    "Biar yang aku",
+    "Bikin aku yang",
+    "Biar aku punya"
+  ],
+  "id-f5-11|biar aku yang": [
+    "biar yang aku",
+    "bikin aku yang",
+    "biar aku punya"
+  ],
+  "id-f5-12|satu-satu": [
+    "satu-satunya",
+    "sesatu-satu",
+    "bersatu-satu"
+  ],
+  "id-f5-13|Soal": [
+    "Soalan",
+    "Bersoal",
+    "Persoal"
+  ],
+  "id-f5-13|soal": [
+    "soalan",
+    "bersoal",
+    "persoal"
+  ],
+  "id-f5-14|Ujung-ujungnya": [
+    "Ujungnya-ujungnya",
+    "Ujung-ujung",
+    "Berujung-ujung"
+  ],
+  "id-f5-14|ujung-ujungnya": [
+    "ujungnya-ujungnya",
+    "ujung-ujung",
+    "berujung-ujung"
+  ],
+  "id-f5-15|Jujur aja": [
+    "Kejujuran aja",
+    "Berjujur aja",
+    "Jujuran aja"
+  ],
+  "id-f5-15|jujur aja": [
+    "kejujuran aja",
+    "berjujur aja",
+    "jujuran aja"
+  ],
+  "id-f5-16|Ya ampun": [
+    "Ya ampunan",
+    "Ya mengampun",
+    "Ya diampun"
+  ],
+  "id-f5-16|ya ampun": [
+    "ya ampunan",
+    "ya mengampun",
+    "ya diampun"
+  ],
+  "id-f5-17|Santai aja": [
+    "Kesantaian aja",
+    "Santainya aja",
+    "Disantai aja"
+  ],
+  "id-f5-17|santai aja": [
+    "kesantaian aja",
+    "santainya aja",
+    "disantai aja"
+  ],
+  "id-f5-18|Apa boleh buat": [
+    "Apa bisa buat",
+    "Apa boleh membuat",
+    "Apakah boleh buat"
+  ],
+  "id-f5-18|apa boleh buat": [
+    "apa bisa buat",
+    "apa boleh membuat",
+    "apakah boleh buat"
+  ],
+  "id-f5-19|nggak enak hati": [
+    "nggak lezat hati",
+    "nggak enak jantung",
+    "nggak enak perasaan"
   ]
 };

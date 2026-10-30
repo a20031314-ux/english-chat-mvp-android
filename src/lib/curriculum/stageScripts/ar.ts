@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** ar 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~3단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** ar 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~5단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const AR: StageScript[] = [
   {
     "id": "ar-1-1",
@@ -1970,7 +1970,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "If you'll allow me, I'll explain. In fact, the design was changed twice last month.",
           "ko": "제가 설명드리겠습니다. 사실 지난달에 디자인이 두 번 바뀌었어요."
-        }
+        },
+        "frames": [
+          "ar-f4-17",
+          "ar-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -1986,7 +1990,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "I understand your point of view. If we'd known about the changes early, we would have finished on time.",
           "ko": "그 입장 이해합니다. 변경 사항을 일찍 알았다면 제때 끝냈을 거예요."
-        }
+        },
+        "frames": [
+          "ar-f4-11",
+          "ar-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2011,7 +2019,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Let's be realistic: the more new tasks we add, the bigger the delay gets.",
           "ko": "현실적으로 보죠. 새 업무를 더할수록 지연이 커져요."
-        }
+        },
+        "frames": [
+          "ar-f4-15",
+          "ar-f4-05"
+        ]
       },
       {
         "who": "them",
@@ -2027,7 +2039,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Not necessarily. It might be better to postpone some of them to the second phase.",
           "ko": "꼭 그렇진 않아요. 일부를 2단계로 미루는 게 나을 수도 있어요."
-        }
+        },
+        "frames": [
+          "ar-f4-12",
+          "ar-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2052,7 +2068,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "That depends on how we present it. As for the budget, it won't change.",
           "ko": "어떻게 제시하느냐에 달렸어요. 예산은 바뀌지 않을 거고요."
-        }
+        },
+        "frames": [
+          "ar-f4-13",
+          "ar-f4-08"
+        ]
       },
       {
         "who": "them",
@@ -2068,7 +2088,12 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "For my part, I can call him today. In addition, I'll send him a new plan.",
           "ko": "제가 오늘 연락할 수 있어요. 그리고 새 계획도 보내겠습니다."
-        }
+        },
+        "frames": [
+          "ar-f4-10",
+          "ar-f4-09",
+          "ar-f3-06"
+        ]
       },
       {
         "who": "them",
@@ -2084,7 +2109,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Agreed, then. In short: we postpone some tasks and deliver the rest on time.",
           "ko": "네, 그렇게 하죠. 요약하면, 일부는 미루고 나머지는 제때 넘기는 거예요."
-        }
+        },
+        "frames": [
+          "ar-f4-16"
+        ]
       }
     ]
   },
@@ -2126,7 +2154,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "The flat is lovely, although the kitchen is a bit small. But honestly, the price is high.",
           "ko": "집은 예쁘네요, 부엌이 좀 작긴 하지만요. 그런데 솔직히 가격이 높아요."
-        }
+        },
+        "frames": [
+          "ar-f4-03"
+        ]
       },
       {
         "who": "them",
@@ -2151,7 +2182,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Generally speaking, you're right, but the flat hasn't been renovated in years.",
           "ko": "대체로 맞는 말씀인데, 이 집은 몇 년째 수리가 안 됐잖아요."
-        }
+        },
+        "frames": [
+          "ar-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -2167,7 +2201,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "If the rent were four hundred and fifty, I'd sign the contract today.",
           "ko": "월세가 사백오십이면 오늘 바로 계약할게요."
-        }
+        },
+        "frames": [
+          "ar-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2233,7 +2270,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Let's agree on four hundred and seventy, and I'll pay two months in advance. And I don't mind a two-year contract.",
           "ko": "사백칠십으로 하고 두 달 치를 미리 낼게요. 2년 계약도 괜찮아요."
-        }
+        },
+        "frames": [
+          "ar-f4-14"
+        ]
       },
       {
         "who": "them",
@@ -2249,7 +2289,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Anyway, thank you. I might see another flat today, but this one is the best.",
           "ko": "어쨌든 감사해요. 오늘 다른 집도 볼지 모르지만, 여기가 제일 좋아요."
-        }
+        },
+        "frames": [
+          "ar-f4-07"
+        ]
       }
     ]
   },
@@ -2304,7 +2347,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "I don't disagree with you. Remote work saves a lot of time.",
           "ko": "네 말에 반대하진 않아. 재택근무는 시간을 많이 아껴 줘."
-        }
+        },
+        "frames": [
+          "ar-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2320,7 +2366,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Not necessarily. It's said some teams lose touch over time.",
           "ko": "꼭 그렇진 않아. 시간이 지나면 소통이 끊기는 팀도 있다고 하더라."
-        }
+        },
+        "frames": [
+          "ar-f4-12",
+          "ar-f4-18"
+        ]
       },
       {
         "who": "them",
@@ -2345,7 +2395,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "True, but the fewer the meetings, the weaker the bond between colleagues.",
           "ko": "맞아, 그래도 만남이 줄수록 동료 사이가 멀어져."
-        }
+        },
+        "frames": [
+          "ar-f4-05"
+        ]
       },
       {
         "who": "them",
@@ -2386,7 +2439,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "That depends on the nature of the job. As for me, I like two days in the office.",
           "ko": "일의 성격에 따라 달라. 나는 사무실 이틀이 좋아."
-        }
+        },
+        "frames": [
+          "ar-f4-13",
+          "ar-f4-08"
+        ]
       },
       {
         "who": "them",
@@ -2402,7 +2459,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Although the manager wants four, I think three days is a reasonable compromise.",
           "ko": "부장님은 나흘을 원하시지만, 사흘이 적당한 절충안 같아."
-        }
+        },
+        "frames": [
+          "ar-f4-03",
+          "ar-f3-13"
+        ]
       },
       {
         "who": "them",
@@ -2418,7 +2479,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "In short, we write him a joint proposal. On top of that, we trial the idea for two months.",
           "ko": "요컨대 같이 제안서를 쓰자. 그리고 두 달 동안 시범으로 해 보고."
-        }
+        },
+        "frames": [
+          "ar-f4-16",
+          "ar-f4-09"
+        ]
       }
     ]
   },
@@ -2504,7 +2569,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Actually, you might feel fine, but your body gets worn out. It can't go on like this.",
           "ko": "사실 괜찮다고 느낄 수는 있지만 몸은 지쳐. 이대로는 안 돼."
-        }
+        },
+        "frames": [
+          "ar-f4-17"
+        ]
       },
       {
         "who": "them",
@@ -2529,7 +2597,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "He said the further we keep from our phones before bed, the better we sleep.",
           "ko": "자기 전에 휴대폰을 멀리할수록 더 잘 잔대."
-        }
+        },
+        "frames": [
+          "ar-f4-05"
+        ]
       },
       {
         "who": "them",
@@ -2545,7 +2616,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "I understand your point of view, I'm exactly the same. If I left it in the kitchen, I'd fall asleep faster.",
           "ko": "네 말 이해해, 나도 똑같아. 부엌에 두면 더 빨리 잠들 텐데."
-        }
+        },
+        "frames": [
+          "ar-f4-11",
+          "ar-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2561,7 +2636,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "He said coffee after late afternoon can delay sleep. On top of that, he recommended walking every day.",
           "ko": "늦은 오후 이후 커피는 잠을 늦출 수 있대. 그리고 매일 걸으라고 했어."
-        }
+        },
+        "frames": [
+          "ar-f4-09"
+        ]
       },
       {
         "who": "them",
@@ -2624,7 +2702,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Thank you. I've worked with Layla for five years, and all I can say is: thank you from the bottom of my heart.",
           "ko": "고마워요. 레일라와 5년을 함께 일했는데, 진심으로 고맙다는 말밖에 할 수 없네요."
-        }
+        },
+        "frames": [
+          "ar-f5-01",
+          "ar-f5-03"
+        ]
       },
       {
         "who": "them",
@@ -2640,7 +2722,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "It's no secret to anyone that Layla was the heart of this team, if I may put it that way.",
           "ko": "이렇게 말해도 될지 모르겠지만, 레일라가 이 팀의 심장이었다는 건 다들 아는 사실이죠."
-        }
+        },
+        "frames": [
+          "ar-f5-11",
+          "ar-f5-15"
+        ]
       },
       {
         "who": "them",
@@ -2656,7 +2742,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Exactly! And which of us hasn't asked her for help at the last minute?",
           "ko": "그러니까요! 우리 중에 마지막 순간에 레일라한테 도움 안 청한 사람 있어요?"
-        }
+        },
+        "frames": [
+          "ar-f5-13"
+        ]
       },
       {
         "who": "them",
@@ -2672,7 +2761,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Our office changed enormously thanks to her. It got calmer, and sweeter too!",
           "ko": "레일라 덕분에 사무실이 정말 많이 바뀌었어요. 더 차분해지고, 더 달콤해졌죠!"
-        }
+        },
+        "frames": [
+          "ar-f5-01",
+          "ar-f5-06"
+        ]
       },
       {
         "who": "them",
@@ -2688,7 +2781,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Honestly, I really don't know. It looks like our meetings will be longer and less fun.",
           "ko": "솔직히, 모르겠어요. 회의가 더 길고 재미없어질 것 같네요."
-        }
+        },
+        "frames": [
+          "ar-f5-14",
+          "ar-f5-10"
+        ]
       },
       {
         "who": "them",
@@ -2704,7 +2801,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Don't cry, Layla, every cloud has a silver lining: the new company is lucky to have you.",
           "ko": "울지 마요, 레일라. 전화위복이에요. 새 회사는 운이 좋네요."
-        }
+        },
+        "frames": [
+          "ar-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -2720,7 +2820,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "And we'll miss you. God bless you, and may He grant you success in your new job.",
           "ko": "우리도요. 늘 복 받고, 새 직장에서 잘되길 빌어요."
-        }
+        },
+        "frames": [
+          "ar-f5-09"
+        ]
       },
       {
         "who": "them",
@@ -2799,7 +2902,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "May God have mercy on him and grant him paradise. He was a truly good man.",
           "ko": "고인께서 편히 잠드시길 빕니다. 정말 좋은 분이셨어요."
-        }
+        },
+        "frames": [
+          "ar-f5-08",
+          "ar-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -2815,7 +2922,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "And I loved him dearly. I still remember his stories about the sea.",
           "ko": "저도 정말 좋아했어요. 바다 이야기를 해 주시던 게 아직도 기억나요."
-        }
+        },
+        "frames": [
+          "ar-f5-07"
+        ]
       },
       {
         "who": "them",
@@ -2863,7 +2973,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Don't worry about a thing. Anything you need, consider it done.",
           "ko": "아무 걱정 마. 필요한 건 뭐든 기꺼이 할게."
-        }
+        },
+        "frames": [
+          "ar-f5-20"
+        ]
       },
       {
         "who": "them",
@@ -2895,7 +3008,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "And you. I've done nothing but my duty.",
           "ko": "별말을. 당연한 일을 하는 것뿐이야."
-        }
+        },
+        "frames": [
+          "ar-f5-04"
+        ]
       }
     ]
   },
@@ -2944,7 +3060,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Thank you for the invitation. Language is not merely a tool; it is a way through which we see the world.",
           "ko": "초대해 주셔서 감사합니다. 언어는 단순한 도구가 아니라 세상을 보는 방식입니다."
-        }
+        },
+        "frames": [
+          "ar-f5-02"
+        ]
       },
       {
         "who": "them",
@@ -2960,7 +3079,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "It seems the matter is more complex than we think. Young people aren't abandoning their language; they're adding to it.",
           "ko": "생각보다 복잡한 문제 같습니다. 젊은이들은 자기 언어를 버리는 게 아니라 거기에 더하고 있어요."
-        }
+        },
+        "frames": [
+          "ar-f5-10"
+        ]
       },
       {
         "who": "them",
@@ -2976,7 +3098,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "That's not quite what I mean. I mean mixing is natural, and which of us doesn't mix sometimes?",
           "ko": "꼭 그런 뜻은 아닙니다. 섞는 건 자연스럽다는 거죠. 우리 중에 가끔 안 섞는 사람이 있나요?"
-        }
+        },
+        "frames": [
+          "ar-f5-17",
+          "ar-f5-13"
+        ]
       },
       {
         "who": "them",
@@ -2992,7 +3118,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "It's no secret this is a real problem. We see it clearly, but our hands are tied: schools need more support.",
           "ko": "이게 실제 문제라는 건 다 압니다. 알면서도 손쓸 수가 없는 거죠. 학교에 지원이 더 필요해요."
-        }
+        },
+        "frames": [
+          "ar-f5-11"
+        ]
       },
       {
         "who": "them",
@@ -3024,7 +3153,12 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "An awkward question, if I may say so! Honestly, at home I speak nothing but dialect.",
           "ko": "곤란한 질문이네요! 솔직히 말하면 집에서는 사투리만 써요."
-        }
+        },
+        "frames": [
+          "ar-f5-15",
+          "ar-f5-14",
+          "ar-f5-04"
+        ]
       },
       {
         "who": "them",
@@ -3040,7 +3174,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "It's not a contradiction; it's reality. Every language has its place, doesn't it?",
           "ko": "모순이 아니라 현실입니다. 언어마다 제자리가 있잖아요, 그렇지 않나요?"
-        }
+        },
+        "frames": [
+          "ar-f5-12"
+        ]
       },
       {
         "who": "them",
@@ -3123,7 +3260,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "The new job? Or the cooking? Looks like you've put on a bit of weight!",
           "ko": "새 직장? 아니면 요리? 살 좀 찐 것 같은데!"
-        }
+        },
+        "frames": [
+          "ar-f5-10"
+        ]
       },
       {
         "who": "them",
@@ -3139,7 +3279,11 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "No, no, that's not what I meant! I was joking. Don't take it to heart.",
           "ko": "아니아니, 그런 뜻 아니야! 농담이었어. 마음에 담아 두지 마."
-        }
+        },
+        "frames": [
+          "ar-f5-17",
+          "ar-f5-18"
+        ]
       },
       {
         "who": "them",
@@ -3155,7 +3299,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Only three times! And which of us hasn't failed once or twice?",
           "ko": "세 번뿐이야! 한두 번 안 떨어진 사람이 어딨어?"
-        }
+        },
+        "frames": [
+          "ar-f5-13"
+        ]
       },
       {
         "who": "them",
@@ -3171,7 +3318,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "Put yourself in my shoes: the examiner was shouting non-stop!",
           "ko": "내 입장이 돼 봐. 감독관이 쉬지 않고 소리를 질렀다니까!"
-        }
+        },
+        "frames": [
+          "ar-f5-16"
+        ]
       },
       {
         "who": "them",
@@ -3187,7 +3337,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "I passed, thank God! What's done is done.",
           "ko": "붙었지, 다행히! 지난 일은 지난 일이야."
-        }
+        },
+        "frames": [
+          "ar-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -3272,7 +3425,10 @@ export const AR: StageScript[] = [
         "gloss": {
           "en": "How lovely! Your mother went to so much trouble. God bless her.",
           "ko": "와! 어머님이 정말 많이 애쓰셨네요. 감사하다고 전해 주세요."
-        }
+        },
+        "frames": [
+          "ar-f5-01"
+        ]
       },
       {
         "who": "them",

@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** zh 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~3단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** zh 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~5단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const ZH: StageScript[] = [
   {
     "id": "zh-1-1",
@@ -1925,7 +1925,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "The problem is that testing turned up a lot of bugs, and the client changed the designs three times.",
           "ko": "문제는 테스트하면서 버그가 많이 나왔고, 디자인 시안도 고객이 세 번이나 바꿨다는 거예요."
-        }
+        },
+        "frames": [
+          "zh-f4-12"
+        ]
       },
       {
         "who": "them",
@@ -1950,7 +1953,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "I understand the pressure everyone's under. Although time is tight, we can't ignore quality.",
           "ko": "다들 부담되는 거 이해해요. 시간이 빠듯하긴 하지만 품질을 놓칠 순 없어요."
-        }
+        },
+        "frames": [
+          "zh-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -1966,7 +1972,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Only if we add two more testers can we finish on the new schedule. What do you think?",
           "ko": "테스트 인원을 두 명 더 넣어야만 새 일정에 맞출 수 있어요. 어떻게 생각하세요?"
-        }
+        },
+        "frames": [
+          "zh-f4-05",
+          "zh-f4-15"
+        ]
       },
       {
         "who": "them",
@@ -1991,7 +2001,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "As far as I know, two people on the team next door will be free next month.",
           "ko": "제가 알기로는 옆 팀에서 다음 달에 두 명이 비어요."
-        }
+        },
+        "frames": [
+          "zh-f4-14"
+        ]
       },
       {
         "who": "them",
@@ -2007,7 +2020,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Not only do they know it, they also did testing for us last quarter.",
           "ko": "알 뿐만 아니라 지난 분기에 우리 테스트도 도와줬어요."
-        }
+        },
+        "frames": [
+          "zh-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2074,7 +2090,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "I don't really agree. Working from home isn't necessarily more efficient.",
           "ko": "난 별로 동의 안 해. 재택이 꼭 효율이 더 높은 건 아니야."
-        }
+        },
+        "frames": [
+          "zh-f4-10",
+          "zh-f4-13"
+        ]
       },
       {
         "who": "them",
@@ -2090,7 +2110,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "That may be so, but it's easy to get distracted at home. On the other hand, it's harder to communicate with colleagues.",
           "ko": "그렇긴 한데 집에서는 딴짓하기 쉬워. 다른 한편으로는 동료랑 소통하기도 불편하고."
-        }
+        },
+        "frames": [
+          "zh-f4-11"
+        ]
       },
       {
         "who": "them",
@@ -2115,7 +2138,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Do you really think a video call solves everything? Lots of little things are quicker face to face.",
           "ko": "화상 회의 한 번이면 모든 게 해결된다는 거야? 사소한 건 얼굴 보고 말하는 게 훨씬 빨라."
-        }
+        },
+        "frames": [
+          "zh-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2131,7 +2157,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Fair point. The key is that the company needs a good management system.",
           "ko": "일리 있어. 핵심은 회사에 좋은 관리 제도가 있어야 한다는 거야."
-        }
+        },
+        "frames": [
+          "zh-f4-16"
+        ]
       },
       {
         "who": "them",
@@ -2147,7 +2176,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "In other words, the problem isn't the place, it's the management.",
           "ko": "다시 말해 문제는 장소가 아니라 관리라는 거지."
-        }
+        },
+        "frames": [
+          "zh-f4-19"
+        ]
       },
       {
         "who": "them",
@@ -2172,7 +2204,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Then it's worth a try. As long as everyone gets used to it, you'll be able to see whether it works.",
           "ko": "그럼 해 볼 만하네. 다들 익숙해지기만 하면 효과가 보일 거야."
-        }
+        },
+        "frames": [
+          "zh-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2188,7 +2223,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Since our boss loves meetings so much, I wouldn't count on it.",
           "ko": "우리 사장님이 회의를 그렇게 좋아하시니 기대도 안 해."
-        }
+        },
+        "frames": [
+          "zh-f4-09"
+        ]
       }
     ]
   },
@@ -2252,7 +2290,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "I've sent the order number in the chat. By rights it should have arrived in three days.",
           "ko": "주문 번호는 채팅창에 보냈어요. 원래대로라면 사흘이면 왔어야 하잖아요."
-        }
+        },
+        "frames": [
+          "zh-f4-18"
+        ]
       },
       {
         "who": "them",
@@ -2277,7 +2318,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Sent to another city? That's unreasonable. Didn't you even check the address?",
           "ko": "다른 도시로요? 이건 말이 안 돼요. 주소 확인도 안 하셨어요?"
-        }
+        },
+        "frames": [
+          "zh-f4-06"
+        ]
       },
       {
         "who": "them",
@@ -2293,7 +2337,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Although you've apologised, I've still waited ten days for nothing.",
           "ko": "사과는 하셨지만 저는 벌써 열흘을 헛되이 기다렸어요."
-        }
+        },
+        "frames": [
+          "zh-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -2309,7 +2356,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "At the end of the day, what I want isn't a coupon, it's my order.",
           "ko": "결국 제가 원하는 건 쿠폰이 아니라 제 물건이에요."
-        }
+        },
+        "frames": [
+          "zh-f4-20"
+        ]
       },
       {
         "who": "them",
@@ -2334,7 +2384,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "As long as it arrives within three days, I'll accept that.",
           "ko": "사흘 안에만 오면 받아들일게요."
-        }
+        },
+        "frames": [
+          "zh-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2350,7 +2403,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "All in all, I hope this doesn't happen again. Thank you.",
           "ko": "전체적으로 앞으로 이런 일이 다시 없었으면 좋겠어요. 감사합니다."
-        }
+        },
+        "frames": [
+          "zh-f4-17"
+        ]
       }
     ]
   },
@@ -2402,7 +2458,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "I did! Not only was it shared millions of times, it even made the news.",
           "ko": "봤어요! 수백만 번 공유됐을 뿐 아니라 뉴스에도 나왔어요."
-        }
+        },
+        "frames": [
+          "zh-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2418,7 +2477,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Not necessarily. As far as I know, the local police have confirmed it.",
           "ko": "꼭 그렇진 않을걸요. 제가 알기로는 현지 경찰이 이미 사실이라고 확인했어요."
-        }
+        },
+        "frames": [
+          "zh-f4-13",
+          "zh-f4-14"
+        ]
       },
       {
         "who": "them",
@@ -2443,7 +2506,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "That's true. Since nobody's sure, let's not rush to conclusions.",
           "ko": "그건 그래요. 다들 확실하지 않으니 성급하게 결론 내리지 말죠."
-        }
+        },
+        "frames": [
+          "zh-f4-09"
+        ]
       },
       {
         "who": "them",
@@ -2459,7 +2525,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Now that you say that, I remember — there was a similar story last year.",
           "ko": "그 말 들으니 생각나네요. 작년에도 비슷한 뉴스가 있었어요."
-        }
+        },
+        "frames": [
+          "zh-f4-07"
+        ]
       },
       {
         "who": "them",
@@ -2475,7 +2544,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Only if stories like this get publicised more will society get better and better.",
           "ko": "이런 일이 더 많이 알려져야 사회 분위기도 점점 좋아질 거예요."
-        }
+        },
+        "frames": [
+          "zh-f4-05"
+        ]
       },
       {
         "who": "them",
@@ -2491,7 +2563,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "I read a few and couldn't go on — too many people just insult others.",
           "ko": "몇 개 보다가 더는 못 보겠더라고요. 욕만 하는 사람이 너무 많아서요."
-        }
+        },
+        "frames": [
+          "zh-f4-08"
+        ]
       },
       {
         "who": "them",
@@ -2507,7 +2582,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Even so, that guy is truly amazing.",
           "ko": "그렇긴 해도 그 기사님은 정말 대단해요."
-        }
+        },
+        "frames": [
+          "zh-f4-11"
+        ]
       }
     ]
   },
@@ -2569,7 +2647,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Oh, not at all, I can't take the credit. The whole team pulled several all-nighters to produce it.",
           "ko": "아이고 아닙니다, 과찬이세요. 기획안은 팀 전체가 며칠 밤을 새워서 만든 거예요."
-        }
+        },
+        "frames": [
+          "zh-f5-07"
+        ]
       },
       {
         "who": "them",
@@ -2585,7 +2666,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Sure, let me try. Mm, it looks, smells and tastes perfect — it really lives up to its reputation.",
           "ko": "네, 맛볼게요. 음, 색깔·향·맛 다 훌륭하네요. 정말 명성 그대로예요."
-        }
+        },
+        "frames": [
+          "zh-f5-12"
+        ]
       },
       {
         "who": "them",
@@ -2601,7 +2685,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Mr Wang, I'm afraid I can't drink any more — I have an early flight tomorrow.",
           "ko": "대표님, 저는 더는 못 마실 것 같습니다. 내일 아침 일찍 비행기를 타야 해서요."
-        }
+        },
+        "frames": [
+          "zh-f5-08"
+        ]
       },
       {
         "who": "them",
@@ -2633,7 +2720,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Given that both sides are sincere, I suggest our technical teams meet next week so we can settle the details as soon as possible.",
           "ko": "양측 모두 의지가 있으니, 다음 주에 먼저 기술팀끼리 만나서 세부 사항을 빨리 정하는 게 좋겠습니다."
-        }
+        },
+        "frames": [
+          "zh-f5-01",
+          "zh-f5-02"
+        ]
       },
       {
         "who": "them",
@@ -2711,7 +2802,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Fifty pages? By Friday? To be blunt, that's a tough one.",
           "ko": "오십 쪽? 금요일까지? 솔직히 말해서 이건 좀 어려워."
-        }
+        },
+        "frames": [
+          "zh-f5-15",
+          "zh-f5-16"
+        ]
       },
       {
         "who": "them",
@@ -2727,7 +2822,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "You think too highly of me. I'm not confident with legal contracts, and a mistranslation is no joke.",
           "ko": "날 너무 높게 봐 주는 거야. 법률 계약서는 자신이 없고, 잘못 번역하면 장난이 아니야."
-        }
+        },
+        "frames": [
+          "zh-f5-17"
+        ]
       },
       {
         "who": "them",
@@ -2743,7 +2841,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "It's not that I don't want to help. Even if I stayed up every night, I might not finish.",
           "ko": "돕기 싫어서가 아니야. 매일 밤을 새워도 다 못 할 수도 있어."
-        }
+        },
+        "frames": [
+          "zh-f5-04",
+          "zh-f5-10"
+        ]
       },
       {
         "who": "them",
@@ -2759,7 +2861,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "You might as well try a professional translation agency — they even know the legal terms well.",
           "ko": "전문 번역 회사에 맡겨 보는 것도 괜찮아. 거기는 법률 용어까지 잘 알거든."
-        }
+        },
+        "frames": [
+          "zh-f5-09",
+          "zh-f5-06"
+        ]
       },
       {
         "who": "them",
@@ -2775,7 +2881,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Let me put it this way: would you let someone who just got their licence drive you on a long trip?",
           "ko": "비유를 하나 들어 볼게. 면허 막 딴 사람한테 장거리 운전을 맡기겠어?"
-        }
+        },
+        "frames": [
+          "zh-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -2791,7 +2900,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Here's what: once you've found a translator, I'll look over the most important pages for you.",
           "ko": "이렇게 하자. 번역가를 구하면 내가 제일 중요한 몇 쪽은 봐 줄게."
-        }
+        },
+        "frames": [
+          "zh-f5-14"
+        ]
       },
       {
         "who": "them",
@@ -2882,7 +2994,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "The quality is beyond question. Given that this is our first partnership, could we sign for one year first, thereby reducing the risk for both sides?",
           "ko": "품질은 정말 나무랄 데가 없죠. 다만 처음 협력하는 만큼 우선 일 년만 계약해서 양측 위험을 줄이면 어떨까요?"
-        }
+        },
+        "frames": [
+          "zh-f5-01",
+          "zh-f5-03"
+        ]
       },
       {
         "who": "them",
@@ -2898,7 +3014,11 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "With three years, we don't feel confident. Better to sign for one year first and take it step by step.",
           "ko": "삼 년이면 저희가 확신이 없어서요. 일단 일 년 하고 차차 보는 게 낫겠습니다."
-        }
+        },
+        "frames": [
+          "zh-f5-17",
+          "zh-f5-18"
+        ]
       },
       {
         "who": "them",
@@ -2978,7 +3098,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Yes. Even if there are still some differences, we really are sincere about this.",
           "ko": "네. 아직 이견이 좀 있더라도 저희는 정말 진심입니다."
-        }
+        },
+        "frames": [
+          "zh-f5-04"
+        ]
       }
     ]
   },
@@ -3023,7 +3146,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "It's a long story. I nearly set the kitchen on fire just boiling noodles.",
           "ko": "말하자면 길어. 라면 하나 끓이다가 부엌 태울 뻔했어."
-        }
+        },
+        "frames": [
+          "zh-f5-06"
+        ]
       },
       {
         "who": "them",
@@ -3039,7 +3165,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Why not? Even if you get a stomach ache, it's no big deal. Just kidding.",
           "ko": "못 할 게 뭐 있어? 배탈 좀 나도 별일 아니잖아. 농담이야."
-        }
+        },
+        "frames": [
+          "zh-f5-20"
+        ]
       },
       {
         "who": "them",
@@ -3103,7 +3232,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Even if it's only three of us, we should get together. How about Saturday?",
           "ko": "세 명만 모여도 꼭 한번 보자. 토요일 어때?"
-        }
+        },
+        "frames": [
+          "zh-f5-05"
+        ]
       },
       {
         "who": "them",
@@ -3119,7 +3251,10 @@ export const ZH: StageScript[] = [
         "gloss": {
           "en": "Then let's play it by ear and decide on Friday.",
           "ko": "그럼 상황 봐 가면서 금요일에 다시 정하자."
-        }
+        },
+        "frames": [
+          "zh-f5-18"
+        ]
       },
       {
         "who": "them",

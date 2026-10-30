@@ -655,5 +655,248 @@
     "désolé de le retard",
     "désolé au retard",
     "désolé du tard"
+  ],
+  "fr-f4-01|D'un côté": [
+    "D'une côté",
+    "De un côté"
+  ],
+  "fr-f4-02|Cela dit": [
+    "Cela dite",
+    "Cela dis",
+    "Cela disant"
+  ],
+  "fr-f4-03|En revanche": [
+    "Au revanche"
+  ],
+  "fr-f4-04|Par contre": [
+    "Pour contre",
+    "Au contre",
+    "Par contraire"
+  ],
+  "fr-f4-05|Autrement dit": [
+    "Autrement dire",
+    "Autrement dis",
+    "Autre dit"
+  ],
+  "fr-f4-06|Je ne suis pas d'accord": [
+    "Je ne suis pas accord",
+    "Je n'ai pas d'accord",
+    "Je ne suis d'accord pas"
+  ],
+  "fr-f4-07|Je comprends ton point de vue": [
+    "Je comprends ta point de vue",
+    "Je comprends ton point du vue"
+  ],
+  "fr-f4-08|Si j'étais toi": [
+    "Si je serais toi",
+    "Si j'ai été toi",
+    "Si j'étais à toi"
+  ],
+  "fr-f4-09|Si j'avais": [
+    "Si j'aurais",
+    "Si j'ai eu"
+  ],
+  "fr-f4-10|Il faut que": [
+    "Il faut de",
+    "Il fait que",
+    "Il faut à"
+  ],
+  "fr-f4-10|Il faut qu'": [
+    "Il faut d'",
+    "Il fait qu'",
+    "Il faut qui"
+  ],
+  "fr-f4-10|il faut qu'": [
+    "il faut d'",
+    "il fait qu'",
+    "il faut qui"
+  ],
+  "fr-f4-11|Il faudrait": [
+    "Il faudrais",
+    "Ils faudraient"
+  ],
+  "fr-f4-12|C'est dommage que": [
+    "C'est dommage de que",
+    "Ce est dommage que",
+    "C'est dommage qui"
+  ],
+  "fr-f4-12|C'est dommage qu'": [
+    "C'est dommage d'",
+    "Ce est dommage qu'",
+    "C'est dommage qui"
+  ],
+  "fr-f4-13|Je ne pense pas que": [
+    "Je ne pense pas de",
+    "Je ne pense pas à que"
+  ],
+  "fr-f4-13|Je ne pense pas qu'": [
+    "Je ne pense pas d'",
+    "Je ne pense pas qui"
+  ],
+  "fr-f4-14|avait déjà": [
+    "a déjà",
+    "aurait déjà"
+  ],
+  "fr-f4-14|avais déjà": [
+    "ai déjà",
+    "avait déjà"
+  ],
+  "fr-f4-15|Je vous l'envoie": [
+    "Je le vous envoie",
+    "Je l'envoie vous",
+    "Je vous lui envoie"
+  ],
+  "fr-f4-15|je vous l'envoie": [
+    "je le vous envoie",
+    "je l'envoie vous",
+    "je vous lui envoie"
+  ],
+  "fr-f4-16|Dis-le-lui": [
+    "Dis-lui-le",
+    "Dis-le-le",
+    "Le dis-lui"
+  ],
+  "fr-f4-17|en prenant": [
+    "en prendant",
+    "en prend",
+    "à prenant"
+  ],
+  "fr-f4-18|alors que": [
+    "alors de",
+    "alors qui"
+  ],
+  "fr-f4-18|alors qu'": [
+    "alors d'",
+    "alors qui"
+  ],
+  "fr-f4-19|Ça vaut le coup": [
+    "Ça vaut la coup",
+    "Ça vaux le coup"
+  ],
+  "fr-f4-19|ça vaut le coup": [
+    "ça vaut la coup",
+    "ça vaux le coup"
+  ],
+  "fr-f4-20|Pour résumer": [
+    "Pour résumé",
+    "Pour résume",
+    "En résumer"
+  ],
+  "fr-f5-01|À vrai dire": [
+    "À vraie dire",
+    "Au vrai dire",
+    "À vrai dit"
+  ],
+  "fr-f5-02|Je dirais plutôt": [
+    "Je dirait plutôt",
+    "Je dirais plus tôt"
+  ],
+  "fr-f5-02|je dirais plutôt": [
+    "je dirait plutôt",
+    "je dirais plus tôt"
+  ],
+  "fr-f5-03|Je n'irais pas jusque-là": [
+    "Je n'irais pas jusqu'à là",
+    "Je ne irais pas jusque-là"
+  ],
+  "fr-f5-03|je n'irais pas jusque-là": [
+    "je n'irais pas jusqu'à là",
+    "je ne irais pas jusque-là"
+  ],
+  "fr-f5-04|Ce qui me gêne, c'est": [
+    "Ce que me gêne, c'est",
+    "Ce qui me gênent, c'est",
+    "Qui me gêne, c'est"
+  ],
+  "fr-f5-05|C'est toi qui": [
+    "C'est toi que",
+    "C'est tu qui",
+    "C'est te qui"
+  ],
+  "fr-f5-05|c'est toi qui": [
+    "c'est toi que",
+    "c'est tu qui",
+    "c'est te qui"
+  ],
+  "fr-f5-06|Bien que": [
+    "Bien de",
+    "Bien qui",
+    "Bon que"
+  ],
+  "fr-f5-06|Bien qu'": [
+    "Bien d'",
+    "Bien qui",
+    "Bon qu'"
+  ],
+  "fr-f5-07|J'ai beau": [
+    "J'ai belle",
+    "J'ai beaux",
+    "Je suis beau"
+  ],
+  "fr-f5-08|J'aurais dû": [
+    "J'aurai dû",
+    "Je serais dû"
+  ],
+  "fr-f5-09|Il aurait pu": [
+    "Il aurait peut",
+    "Il aurait pouvoir"
+  ],
+  "fr-f5-10|Je suis désolé que": [
+    "Je suis désolé de que",
+    "Je suis désolé à que",
+    "Je désole que"
+  ],
+  "fr-f5-11|Je regrette que": [
+    "Je regrette de que",
+    "Je regrette qui"
+  ],
+  "fr-f5-12|Il semblerait que": [
+    "Il semblerait de",
+    "Il sembleraient que"
+  ],
+  "fr-f5-13|Il serait peut-être utile de": [
+    "Il serait peut-être utile à",
+    "Il serait peut-être utile que de"
+  ],
+  "fr-f5-13|Il serait peut-être utile d'": [
+    "Il serait peut-être utile à",
+    "Il serait peut-être utile que d'"
+  ],
+  "fr-f5-14|Il a été convenu": [
+    "Il a été convenue",
+    "Il est été convenu"
+  ],
+  "fr-f5-15|Force est de constater": [
+    "Force et de constater",
+    "La force est de constater",
+    "Force est à constater"
+  ],
+  "fr-f5-16|Il se trouve que": [
+    "Il se trouve de",
+    "Il se trouvent que",
+    "Il se trouve qui"
+  ],
+  "fr-f5-17|Sans vouloir te vexer": [
+    "Sans vouloir de te vexer",
+    "Sans veux te vexer",
+    "Sans vouloir vexer te"
+  ],
+  "fr-f5-18|ce n'est pas mon truc": [
+    "ce n'est pas ma truc",
+    "ce n'est mon truc pas"
+  ],
+  "fr-f5-18|Ce n'est pas mon truc": [
+    "Ce n'est pas ma truc",
+    "Ce n'est mon truc pas"
+  ],
+  "fr-f5-19|Il vaudrait peut-être mieux": [
+    "Il voudrait peut-être mieux",
+    "Il vaudrait peut-être meilleur",
+    "Il vaudrais peut-être mieux"
+  ],
+  "fr-f5-20|sans un mot": [
+    "sans une mot",
+    "sans de mot",
+    "sans mot un"
   ]
 }

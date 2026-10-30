@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 아랍어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** 아랍어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const AR_FRAMES: Frame[] = [
   {
     "id": "ar-f1-01",
@@ -3480,6 +3480,2632 @@ export const AR_FRAMES: Frame[] = [
         "gloss": {
           "en": "On the contrary, the trip was easy.",
           "ko": "오히려 여행은 수월했어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-01",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "تم ___.",
+    "core": [
+      "تم"
+    ],
+    "meaning": {
+      "en": "Reporting what was done (passive): ___ was done.",
+      "ko": "한 일 알리기(수동): ___이/가 되었어요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "تم تأجيل الاجتماع إلى الأسبوع القادم.",
+        "slot": "تأجيل الاجتماع",
+        "cue": {
+          "en": "postpone the meeting",
+          "ko": "회의를 미루다"
+        },
+        "gloss": {
+          "en": "The meeting was postponed to next week.",
+          "ko": "회의가 다음 주로 미뤄졌어요."
+        }
+      },
+      {
+        "text": "تم إرسال التقرير إلى المدير صباحا.",
+        "slot": "إرسال التقرير",
+        "cue": {
+          "en": "send the report",
+          "ko": "보고서를 보내다"
+        },
+        "gloss": {
+          "en": "The report was sent to the manager this morning.",
+          "ko": "보고서는 아침에 부장님께 보내졌어요."
+        }
+      },
+      {
+        "text": "تم تغيير التصميم مرتين.",
+        "slot": "تغيير التصميم",
+        "cue": {
+          "en": "change the design",
+          "ko": "디자인을 바꾸다"
+        },
+        "gloss": {
+          "en": "The design was changed twice.",
+          "ko": "디자인이 두 번 바뀌었어요."
+        }
+      },
+      {
+        "text": "تم إلغاء الرحلة بسبب الطقس.",
+        "slot": "إلغاء الرحلة",
+        "cue": {
+          "en": "cancel the trip",
+          "ko": "여행을 취소하다"
+        },
+        "gloss": {
+          "en": "The trip was cancelled because of the weather.",
+          "ko": "날씨 때문에 여행이 취소됐어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-02",
+    "stage": 4,
+    "fn": "hypothetical",
+    "pattern": "لو ___ لـ...",
+    "core": [
+      "لو"
+    ],
+    "meaning": {
+      "en": "Imagining what would have happened: If ___, I would have …",
+      "ko": "가정해서 말하기: 만약 ___했다면 …했을 텐데요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "لو عرفت مبكرا لساعدتك.",
+        "slot": "عرفت مبكرا",
+        "cue": {
+          "en": "know earlier",
+          "ko": "일찍 알다"
+        },
+        "gloss": {
+          "en": "If I had known earlier, I would have helped you.",
+          "ko": "일찍 알았다면 도와줬을 텐데요."
+        }
+      },
+      {
+        "text": "لو كان عندي وقت لسافرت معكم.",
+        "slot": "كان عندي وقت",
+        "cue": {
+          "en": "have time",
+          "ko": "시간이 있다"
+        },
+        "gloss": {
+          "en": "If I had time, I would travel with you.",
+          "ko": "시간이 있으면 같이 여행 갔을 텐데요."
+        }
+      },
+      {
+        "text": "لو كان الإيجار أرخص لوقعت العقد.",
+        "slot": "كان الإيجار أرخص",
+        "cue": {
+          "en": "the rent be cheaper",
+          "ko": "월세가 더 싸다"
+        },
+        "gloss": {
+          "en": "If the rent were cheaper, I would sign the contract.",
+          "ko": "월세가 더 싸면 계약할 텐데요."
+        }
+      },
+      {
+        "text": "لو سألتني لقلت لك الحقيقة.",
+        "slot": "سألتني",
+        "cue": {
+          "en": "ask me",
+          "ko": "나에게 묻다"
+        },
+        "gloss": {
+          "en": "If you had asked me, I would have told you the truth.",
+          "ko": "물어봤다면 사실대로 말했을 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-03",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "رغم أن ___، ...",
+    "core": [
+      "رغم أن",
+      "مع أن"
+    ],
+    "meaning": {
+      "en": "Admitting a point but going on: Although ___, …",
+      "ko": "인정하면서 이어 말하기: 비록 ___지만, …"
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "رغم أن الفكرة جيدة، التكلفة عالية.",
+        "slot": "الفكرة جيدة",
+        "cue": {
+          "en": "the idea is good",
+          "ko": "아이디어가 좋다"
+        },
+        "gloss": {
+          "en": "Although the idea is good, the cost is high.",
+          "ko": "아이디어는 좋지만 비용이 많이 들어요."
+        }
+      },
+      {
+        "text": "رغم أن المطبخ صغير، الشقة جميلة.",
+        "slot": "المطبخ صغير",
+        "cue": {
+          "en": "the kitchen is small",
+          "ko": "부엌이 작다"
+        },
+        "gloss": {
+          "en": "Although the kitchen is small, the flat is lovely.",
+          "ko": "부엌은 작지만 집이 예뻐요."
+        }
+      },
+      {
+        "text": "مع أن المدير يريد أربعة أيام، ثلاثة أيام تكفي.",
+        "slot": "المدير يريد أربعة أيام",
+        "cue": {
+          "en": "the manager wants four days",
+          "ko": "부장님이 나흘을 원하다"
+        },
+        "gloss": {
+          "en": "Although the manager wants four days, three days are enough.",
+          "ko": "부장님은 나흘을 원하지만 사흘이면 충분해요."
+        }
+      },
+      {
+        "text": "مع أن الطريق طويل، وصلنا في الوقت.",
+        "slot": "الطريق طويل",
+        "cue": {
+          "en": "the road is long",
+          "ko": "길이 멀다"
+        },
+        "gloss": {
+          "en": "Although the road was long, we arrived on time.",
+          "ko": "길은 멀었지만 제시간에 도착했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-04",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "___ يوفر الكثير من الوقت.",
+    "core": [
+      "يوفر"
+    ],
+    "meaning": {
+      "en": "Naming an advantage with a verbal noun: ___ saves a lot of time.",
+      "ko": "장점 말하기(동명사 주어): ___은/는 시간을 많이 아껴 줘요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "العمل عن بعد يوفر الكثير من الوقت.",
+        "slot": "العمل عن بعد",
+        "cue": {
+          "en": "working remotely",
+          "ko": "재택근무"
+        },
+        "gloss": {
+          "en": "Working remotely saves a lot of time.",
+          "ko": "재택근무는 시간을 많이 아껴 줘요."
+        }
+      },
+      {
+        "text": "التخطيط المبكر يوفر الكثير من الوقت.",
+        "slot": "التخطيط المبكر",
+        "cue": {
+          "en": "planning early",
+          "ko": "미리 계획하기"
+        },
+        "gloss": {
+          "en": "Planning early saves a lot of time.",
+          "ko": "미리 계획하면 시간이 많이 절약돼요."
+        }
+      },
+      {
+        "text": "استخدام القطار يوفر الكثير من الوقت.",
+        "slot": "استخدام القطار",
+        "cue": {
+          "en": "using the train",
+          "ko": "기차 이용"
+        },
+        "gloss": {
+          "en": "Taking the train saves a lot of time.",
+          "ko": "기차를 타면 시간이 많이 절약돼요."
+        }
+      },
+      {
+        "text": "الطبخ مرة في الأسبوع يوفر الكثير من الوقت.",
+        "slot": "الطبخ مرة في الأسبوع",
+        "cue": {
+          "en": "cooking once a week",
+          "ko": "일주일에 한 번 요리하기"
+        },
+        "gloss": {
+          "en": "Cooking once a week saves a lot of time.",
+          "ko": "일주일에 한 번 요리하면 시간이 많이 절약돼요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-05",
+    "stage": 4,
+    "fn": "the-more",
+    "pattern": "كلما ___، زاد ...",
+    "core": [
+      "كلما"
+    ],
+    "meaning": {
+      "en": "Saying one thing grows with another: The more ___, the more …",
+      "ko": "~할수록 ~하다: ___할수록 더 …해요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "كلما تأخرنا، زادت المشكلة.",
+        "slot": "تأخرنا",
+        "cue": {
+          "en": "we be late",
+          "ko": "우리가 늦다"
+        },
+        "gloss": {
+          "en": "The later we are, the bigger the problem gets.",
+          "ko": "늦을수록 문제가 커져요."
+        }
+      },
+      {
+        "text": "كلما قرأت أكثر، تحسنت لغتي.",
+        "slot": "قرأت أكثر",
+        "cue": {
+          "en": "read more",
+          "ko": "더 많이 읽다"
+        },
+        "gloss": {
+          "en": "The more I read, the better my language gets.",
+          "ko": "많이 읽을수록 언어 실력이 늘어요."
+        }
+      },
+      {
+        "text": "كلما ابتعدنا عن الهاتف قبل النوم، نمنا أفضل.",
+        "slot": "ابتعدنا عن الهاتف قبل النوم",
+        "cue": {
+          "en": "stay away from the phone before sleep",
+          "ko": "자기 전에 휴대폰을 멀리하다"
+        },
+        "gloss": {
+          "en": "The more we stay off the phone before bed, the better we sleep.",
+          "ko": "자기 전에 휴대폰을 멀리할수록 잠을 잘 자요."
+        }
+      },
+      {
+        "text": "كلما تكلمت مع الناس، زادت ثقتي بنفسي.",
+        "slot": "تكلمت مع الناس",
+        "cue": {
+          "en": "talk with people",
+          "ko": "사람들과 이야기하다"
+        },
+        "gloss": {
+          "en": "The more I talk with people, the more confident I get.",
+          "ko": "사람들과 이야기할수록 자신감이 생겨요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-06",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "قد يكون من الأفضل أن ___.",
+    "core": [
+      "قد يكون من الأفضل أن"
+    ],
+    "meaning": {
+      "en": "Suggesting softly: It might be better to ___.",
+      "ko": "부드럽게 제안하기: ___하는 게 나을 수도 있어요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "قد يكون من الأفضل أن ننتظر قليلا.",
+        "slot": "ننتظر قليلا",
+        "cue": {
+          "en": "wait a little (we)",
+          "ko": "조금 기다리다(우리)"
+        },
+        "gloss": {
+          "en": "It might be better to wait a little.",
+          "ko": "조금 기다리는 게 나을 수도 있어요."
+        }
+      },
+      {
+        "text": "قد يكون من الأفضل أن نؤجل بعضها إلى المرحلة الثانية.",
+        "slot": "نؤجل بعضها إلى المرحلة الثانية",
+        "cue": {
+          "en": "postpone some to the second phase (we)",
+          "ko": "일부를 2단계로 미루다(우리)"
+        },
+        "gloss": {
+          "en": "It might be better to postpone some of them to the second phase.",
+          "ko": "일부는 2단계로 미루는 게 나을 수도 있어요."
+        }
+      },
+      {
+        "text": "قد يكون من الأفضل أن تتصل به اليوم.",
+        "slot": "تتصل به اليوم",
+        "cue": {
+          "en": "call him today (you)",
+          "ko": "오늘 그에게 전화하다(너)"
+        },
+        "gloss": {
+          "en": "It might be better for you to call him today.",
+          "ko": "오늘 그에게 전화하는 게 나을 수도 있어요."
+        }
+      },
+      {
+        "text": "قد يكون من الأفضل أن نسأل المدير أولا.",
+        "slot": "نسأل المدير أولا",
+        "cue": {
+          "en": "ask the manager first (we)",
+          "ko": "먼저 부장님께 묻다(우리)"
+        },
+        "gloss": {
+          "en": "It might be better to ask the manager first.",
+          "ko": "먼저 부장님께 여쭤보는 게 나을 수도 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-07",
+    "stage": 4,
+    "fn": "guess",
+    "pattern": "ربما ___.",
+    "core": [
+      "ربما"
+    ],
+    "meaning": {
+      "en": "Saying something is possible: Maybe ___.",
+      "ko": "가능성 말하기: 어쩌면 ___할지도 몰라요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "ربما أزور شقة أخرى اليوم.",
+        "slot": "أزور شقة أخرى اليوم",
+        "cue": {
+          "en": "visit another flat today",
+          "ko": "오늘 다른 집을 보러 가다"
+        },
+        "gloss": {
+          "en": "Maybe I'll visit another flat today.",
+          "ko": "어쩌면 오늘 다른 집을 보러 갈지도 몰라요."
+        }
+      },
+      {
+        "text": "ربما نسافر في الصيف.",
+        "slot": "نسافر في الصيف",
+        "cue": {
+          "en": "travel in the summer (we)",
+          "ko": "여름에 여행하다(우리)"
+        },
+        "gloss": {
+          "en": "Maybe we'll travel in the summer.",
+          "ko": "어쩌면 여름에 여행 갈지도 몰라요."
+        }
+      },
+      {
+        "text": "ربما يتأخر القطار قليلا.",
+        "slot": "يتأخر القطار قليلا",
+        "cue": {
+          "en": "the train be a bit late",
+          "ko": "기차가 조금 늦다"
+        },
+        "gloss": {
+          "en": "The train may be a little late.",
+          "ko": "기차가 조금 늦을지도 몰라요."
+        }
+      },
+      {
+        "text": "ربما تكون الفكرة جيدة، لكنها مكلفة.",
+        "slot": "تكون الفكرة جيدة",
+        "cue": {
+          "en": "the idea be good",
+          "ko": "아이디어가 좋다"
+        },
+        "gloss": {
+          "en": "Maybe the idea is good, but it's expensive.",
+          "ko": "아이디어는 좋을지도 모르지만 비싸요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-08",
+    "stage": 4,
+    "fn": "change-topic",
+    "pattern": "أما ___ فـ...",
+    "core": [
+      "أما"
+    ],
+    "meaning": {
+      "en": "Turning to another point: As for ___, …",
+      "ko": "화제 넘기기: ___은/는 말이죠, …"
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "أما الميزانية فسنناقشها لاحقا.",
+        "slot": "الميزانية",
+        "cue": {
+          "en": "the budget",
+          "ko": "예산"
+        },
+        "gloss": {
+          "en": "As for the budget, we'll discuss it later.",
+          "ko": "예산은 나중에 논의할게요."
+        }
+      },
+      {
+        "text": "أما أنا فأحب يومين في المكتب.",
+        "slot": "أنا",
+        "cue": {
+          "en": "me",
+          "ko": "나"
+        },
+        "gloss": {
+          "en": "As for me, I like two days in the office.",
+          "ko": "저는 사무실에 이틀 나가는 게 좋아요."
+        }
+      },
+      {
+        "text": "أما المطبخ فصغير قليلا.",
+        "slot": "المطبخ",
+        "cue": {
+          "en": "the kitchen",
+          "ko": "부엌"
+        },
+        "gloss": {
+          "en": "As for the kitchen, it's a bit small.",
+          "ko": "부엌은 좀 작아요."
+        }
+      },
+      {
+        "text": "أما التصميم الجديد فجاهز تقريبا.",
+        "slot": "التصميم الجديد",
+        "cue": {
+          "en": "the new design",
+          "ko": "새 디자인"
+        },
+        "gloss": {
+          "en": "As for the new design, it's almost ready.",
+          "ko": "새 디자인은 거의 다 됐어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-09",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "بالإضافة إلى ذلك، ___.",
+    "core": [
+      "بالإضافة إلى ذلك"
+    ],
+    "meaning": {
+      "en": "Adding another point: In addition, ___.",
+      "ko": "덧붙이기: 게다가 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "بالإضافة إلى ذلك"
+    ],
+    "examples": [
+      {
+        "text": "بالإضافة إلى ذلك، سأرسل له خطة جديدة.",
+        "slot": "سأرسل له خطة جديدة",
+        "cue": {
+          "en": "send him a new plan",
+          "ko": "그에게 새 계획을 보내다"
+        },
+        "gloss": {
+          "en": "In addition, I'll send him a new plan.",
+          "ko": "게다가 그에게 새 계획도 보낼게요."
+        }
+      },
+      {
+        "text": "بالإضافة إلى ذلك، الشقة قريبة من المحطة.",
+        "slot": "الشقة قريبة من المحطة",
+        "cue": {
+          "en": "the flat is near the station",
+          "ko": "집이 역에서 가깝다"
+        },
+        "gloss": {
+          "en": "In addition, the flat is near the station.",
+          "ko": "게다가 집이 역에서 가까워요."
+        }
+      },
+      {
+        "text": "بالإضافة إلى ذلك، نصح الطبيب بالمشي كل يوم.",
+        "slot": "نصح الطبيب بالمشي كل يوم",
+        "cue": {
+          "en": "the doctor advised walking every day",
+          "ko": "의사가 매일 걷기를 권하다"
+        },
+        "gloss": {
+          "en": "In addition, the doctor advised walking every day.",
+          "ko": "게다가 의사는 매일 걸으라고 했어요."
+        }
+      },
+      {
+        "text": "بالإضافة إلى ذلك، يمكننا أن نجرب الفكرة لشهرين.",
+        "slot": "يمكننا أن نجرب الفكرة لشهرين",
+        "cue": {
+          "en": "we can try the idea for two months",
+          "ko": "두 달 동안 그 생각을 시험해 볼 수 있다"
+        },
+        "gloss": {
+          "en": "In addition, we can try the idea for two months.",
+          "ko": "게다가 두 달 동안 시험해 볼 수도 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-10",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "من ناحيتي، ___.",
+    "core": [
+      "من ناحيتي"
+    ],
+    "meaning": {
+      "en": "Saying what you can offer: For my part, ___.",
+      "ko": "내 쪽 입장 말하기: 제 쪽에서는 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "من ناحيتي"
+    ],
+    "examples": [
+      {
+        "text": "من ناحيتي، أستطيع أن أتصل به اليوم.",
+        "slot": "أستطيع أن أتصل به اليوم",
+        "cue": {
+          "en": "I can call him today",
+          "ko": "오늘 그에게 전화할 수 있다"
+        },
+        "gloss": {
+          "en": "For my part, I can call him today.",
+          "ko": "제 쪽에서는 오늘 그에게 전화할 수 있어요."
+        }
+      },
+      {
+        "text": "من ناحيتي، ما عندي مانع من التأجيل.",
+        "slot": "ما عندي مانع من التأجيل",
+        "cue": {
+          "en": "I don't mind postponing",
+          "ko": "미루는 것도 괜찮다"
+        },
+        "gloss": {
+          "en": "For my part, I don't mind postponing.",
+          "ko": "저로서는 미뤄도 괜찮아요."
+        }
+      },
+      {
+        "text": "من ناحيتي، أفضل أن نبدأ مبكرا.",
+        "slot": "أفضل أن نبدأ مبكرا",
+        "cue": {
+          "en": "prefer to start early",
+          "ko": "일찍 시작하는 게 좋다"
+        },
+        "gloss": {
+          "en": "For my part, I'd prefer we start early.",
+          "ko": "저는 일찍 시작하는 게 좋아요."
+        }
+      },
+      {
+        "text": "من ناحيتي، سأنهي التقرير قبل الخميس.",
+        "slot": "سأنهي التقرير قبل الخميس",
+        "cue": {
+          "en": "finish the report before Thursday",
+          "ko": "목요일 전에 보고서를 끝내다"
+        },
+        "gloss": {
+          "en": "For my part, I'll finish the report before Thursday.",
+          "ko": "저는 목요일 전에 보고서를 끝낼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-11",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "أفهم وجهة نظرك، لكن ___.",
+    "core": [
+      "أفهم وجهة نظرك"
+    ],
+    "meaning": {
+      "en": "Answering an objection politely: I understand your point, but ___.",
+      "ko": "반론에 정중히 답하기: 무슨 말인지 알겠지만 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "أفهم وجهة نظرك"
+    ],
+    "examples": [
+      {
+        "text": "أفهم وجهة نظرك، لكن التكلفة عالية جدا.",
+        "slot": "التكلفة عالية جدا",
+        "cue": {
+          "en": "the cost is very high",
+          "ko": "비용이 아주 많이 들다"
+        },
+        "gloss": {
+          "en": "I understand your point, but the cost is very high.",
+          "ko": "무슨 말인지 알겠지만 비용이 너무 많이 들어요."
+        }
+      },
+      {
+        "text": "أفهم وجهة نظرك، لكن الوقت لا يكفي.",
+        "slot": "الوقت لا يكفي",
+        "cue": {
+          "en": "there isn't enough time",
+          "ko": "시간이 부족하다"
+        },
+        "gloss": {
+          "en": "I understand your point, but there isn't enough time.",
+          "ko": "무슨 말인지 알겠지만 시간이 부족해요."
+        }
+      },
+      {
+        "text": "أفهم وجهة نظرك، لكن الفريق متعب.",
+        "slot": "الفريق متعب",
+        "cue": {
+          "en": "the team is tired",
+          "ko": "팀이 지쳐 있다"
+        },
+        "gloss": {
+          "en": "I understand your point, but the team is tired.",
+          "ko": "무슨 말인지 알겠지만 팀이 지쳐 있어요."
+        }
+      },
+      {
+        "text": "أفهم وجهة نظرك، لكن العميل يريد النتيجة الآن.",
+        "slot": "العميل يريد النتيجة الآن",
+        "cue": {
+          "en": "the client wants the result now",
+          "ko": "고객이 결과를 지금 원하다"
+        },
+        "gloss": {
+          "en": "I understand your point, but the client wants the result now.",
+          "ko": "무슨 말인지 알겠지만 고객은 지금 결과를 원해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-12",
+    "stage": 4,
+    "fn": "not-necessarily",
+    "pattern": "ليس بالضرورة أن ___.",
+    "core": [
+      "ليس بالضرورة"
+    ],
+    "meaning": {
+      "en": "Saying it's not necessarily so: It's not necessarily the case that ___.",
+      "ko": "꼭 그렇지는 않다고 말하기: 꼭 ___라는 법은 없어요."
+    },
+    "grammar": [],
+    "expressions": [
+      "ليس بالضرورة"
+    ],
+    "examples": [
+      {
+        "text": "ليس بالضرورة أن يكون الأغلى هو الأفضل.",
+        "slot": "يكون الأغلى هو الأفضل",
+        "cue": {
+          "en": "the most expensive be the best",
+          "ko": "가장 비싼 게 가장 좋다"
+        },
+        "gloss": {
+          "en": "The most expensive isn't necessarily the best.",
+          "ko": "가장 비싼 게 꼭 가장 좋은 건 아니에요."
+        }
+      },
+      {
+        "text": "ليس بالضرورة أن نجتمع كل يوم.",
+        "slot": "نجتمع كل يوم",
+        "cue": {
+          "en": "meet every day (we)",
+          "ko": "매일 모이다(우리)"
+        },
+        "gloss": {
+          "en": "We don't necessarily have to meet every day.",
+          "ko": "꼭 매일 모일 필요는 없어요."
+        }
+      },
+      {
+        "text": "ليس بالضرورة أن تعرف كل الكلمات.",
+        "slot": "تعرف كل الكلمات",
+        "cue": {
+          "en": "know all the words (you)",
+          "ko": "모든 단어를 알다(너)"
+        },
+        "gloss": {
+          "en": "You don't necessarily need to know every word.",
+          "ko": "모든 단어를 꼭 알아야 하는 건 아니에요."
+        }
+      },
+      {
+        "text": "ليس بالضرورة أن ينجح الحل نفسه مرتين.",
+        "slot": "ينجح الحل نفسه مرتين",
+        "cue": {
+          "en": "the same solution work twice",
+          "ko": "같은 방법이 두 번 통하다"
+        },
+        "gloss": {
+          "en": "The same solution won't necessarily work twice.",
+          "ko": "같은 방법이 꼭 두 번 통하는 건 아니에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-13",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "هذا يعتمد على ___.",
+    "core": [
+      "هذا يعتمد على"
+    ],
+    "meaning": {
+      "en": "Saying the answer depends: That depends on ___.",
+      "ko": "조건에 따라 다르다고 말하기: 그건 ___에 달렸어요."
+    },
+    "grammar": [],
+    "expressions": [
+      "هذا يعتمد على"
+    ],
+    "examples": [
+      {
+        "text": "هذا يعتمد على طبيعة العمل.",
+        "slot": "طبيعة العمل",
+        "cue": {
+          "en": "the nature of the work",
+          "ko": "일의 성격"
+        },
+        "gloss": {
+          "en": "That depends on the nature of the work.",
+          "ko": "그건 일의 성격에 달렸어요."
+        }
+      },
+      {
+        "text": "هذا يعتمد على طريقة العرض.",
+        "slot": "طريقة العرض",
+        "cue": {
+          "en": "the way it's presented",
+          "ko": "발표 방식"
+        },
+        "gloss": {
+          "en": "That depends on how it's presented.",
+          "ko": "그건 발표 방식에 달렸어요."
+        }
+      },
+      {
+        "text": "هذا يعتمد على الميزانية.",
+        "slot": "الميزانية",
+        "cue": {
+          "en": "the budget",
+          "ko": "예산"
+        },
+        "gloss": {
+          "en": "That depends on the budget.",
+          "ko": "그건 예산에 달렸어요."
+        }
+      },
+      {
+        "text": "هذا يعتمد على رأي المدير.",
+        "slot": "رأي المدير",
+        "cue": {
+          "en": "the manager's opinion",
+          "ko": "부장님 의견"
+        },
+        "gloss": {
+          "en": "That depends on what the manager thinks.",
+          "ko": "그건 부장님 의견에 달렸어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-14",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "نتفق على ___.",
+    "core": [
+      "نتفق على"
+    ],
+    "meaning": {
+      "en": "Settling terms: Let's agree on ___.",
+      "ko": "조건 정하기: ___(으)로 합의해요."
+    },
+    "grammar": [],
+    "expressions": [
+      "نتفق على"
+    ],
+    "examples": [
+      {
+        "text": "نتفق على أربعمئة وسبعين.",
+        "slot": "أربعمئة وسبعين",
+        "cue": {
+          "en": "four hundred and seventy",
+          "ko": "사백칠십"
+        },
+        "gloss": {
+          "en": "Let's agree on four hundred and seventy.",
+          "ko": "사백칠십으로 합의해요."
+        }
+      },
+      {
+        "text": "نتفق على موعد جديد للتسليم.",
+        "slot": "موعد جديد للتسليم",
+        "cue": {
+          "en": "a new delivery date",
+          "ko": "새 납품 날짜"
+        },
+        "gloss": {
+          "en": "Let's agree on a new delivery date.",
+          "ko": "새 납품 날짜를 정해요."
+        }
+      },
+      {
+        "text": "نتفق على هذا السعر إذن.",
+        "slot": "هذا السعر",
+        "cue": {
+          "en": "this price",
+          "ko": "이 가격"
+        },
+        "gloss": {
+          "en": "Then let's agree on this price.",
+          "ko": "그럼 이 가격으로 해요."
+        }
+      },
+      {
+        "text": "نتفق على يومين في المكتب.",
+        "slot": "يومين في المكتب",
+        "cue": {
+          "en": "two days in the office",
+          "ko": "사무실 출근 이틀"
+        },
+        "gloss": {
+          "en": "Let's agree on two days in the office.",
+          "ko": "사무실 출근은 이틀로 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-15",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "خلينا نكون واقعيين: ___.",
+    "core": [
+      "خلينا نكون واقعيين"
+    ],
+    "meaning": {
+      "en": "Bringing people back to facts: Let's be realistic: ___.",
+      "ko": "현실적으로 설득하기: 현실적으로 보자면, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "خلينا نكون واقعيين"
+    ],
+    "examples": [
+      {
+        "text": "خلينا نكون واقعيين: الوقت لا يكفي لكل شيء.",
+        "slot": "الوقت لا يكفي لكل شيء",
+        "cue": {
+          "en": "there isn't time for everything",
+          "ko": "모든 걸 할 시간이 없다"
+        },
+        "gloss": {
+          "en": "Let's be realistic: there isn't time for everything.",
+          "ko": "현실적으로 보자면, 모든 걸 할 시간은 없어요."
+        }
+      },
+      {
+        "text": "خلينا نكون واقعيين: الميزانية محدودة.",
+        "slot": "الميزانية محدودة",
+        "cue": {
+          "en": "the budget is limited",
+          "ko": "예산이 한정되어 있다"
+        },
+        "gloss": {
+          "en": "Let's be realistic: the budget is limited.",
+          "ko": "현실적으로 보자면, 예산이 한정돼 있어요."
+        }
+      },
+      {
+        "text": "خلينا نكون واقعيين: لن ننتهي اليوم.",
+        "slot": "لن ننتهي اليوم",
+        "cue": {
+          "en": "we won't finish today",
+          "ko": "오늘 못 끝내다"
+        },
+        "gloss": {
+          "en": "Let's be realistic: we won't finish today.",
+          "ko": "현실적으로 보자면, 오늘은 못 끝내요."
+        }
+      },
+      {
+        "text": "خلينا نكون واقعيين: العميل لن يدفع أكثر.",
+        "slot": "العميل لن يدفع أكثر",
+        "cue": {
+          "en": "the client won't pay more",
+          "ko": "고객이 더 내지 않다"
+        },
+        "gloss": {
+          "en": "Let's be realistic: the client won't pay more.",
+          "ko": "현실적으로 보자면, 고객은 더 안 낼 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-16",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "باختصار، ___.",
+    "core": [
+      "باختصار"
+    ],
+    "meaning": {
+      "en": "Summing up: In short, ___.",
+      "ko": "요약하기: 간단히 말해서 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "باختصار"
+    ],
+    "examples": [
+      {
+        "text": "باختصار، نؤجل بعض المهام ونسلم الباقي في الوقت.",
+        "slot": "نؤجل بعض المهام ونسلم الباقي في الوقت",
+        "cue": {
+          "en": "postpone some tasks and deliver the rest on time",
+          "ko": "일부 일은 미루고 나머지는 제때 넘기다"
+        },
+        "gloss": {
+          "en": "In short, we postpone some tasks and deliver the rest on time.",
+          "ko": "간단히 말해서, 일부는 미루고 나머지는 제때 넘겨요."
+        }
+      },
+      {
+        "text": "باختصار، الشقة جميلة لكنها غالية.",
+        "slot": "الشقة جميلة لكنها غالية",
+        "cue": {
+          "en": "the flat is nice but expensive",
+          "ko": "집이 예쁘지만 비싸다"
+        },
+        "gloss": {
+          "en": "In short, the flat is nice but expensive.",
+          "ko": "간단히 말해서, 집은 예쁘지만 비싸요."
+        }
+      },
+      {
+        "text": "باختصار، نحتاج إلى أسبوع إضافي.",
+        "slot": "نحتاج إلى أسبوع إضافي",
+        "cue": {
+          "en": "we need an extra week",
+          "ko": "일주일이 더 필요하다"
+        },
+        "gloss": {
+          "en": "In short, we need an extra week.",
+          "ko": "간단히 말해서, 일주일이 더 필요해요."
+        }
+      },
+      {
+        "text": "باختصار، نكتب له اقتراحا مشتركا.",
+        "slot": "نكتب له اقتراحا مشتركا",
+        "cue": {
+          "en": "write him a joint proposal",
+          "ko": "그에게 공동 제안서를 쓰다"
+        },
+        "gloss": {
+          "en": "In short, we write him a joint proposal.",
+          "ko": "간단히 말해서, 같이 제안서를 써서 보내요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-17",
+    "stage": 4,
+    "fn": "clarify",
+    "pattern": "في الواقع، ___.",
+    "core": [
+      "في الواقع"
+    ],
+    "meaning": {
+      "en": "Correcting or explaining the facts: Actually, ___.",
+      "ko": "사실 바로잡기: 실은 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "في الواقع"
+    ],
+    "examples": [
+      {
+        "text": "في الواقع، الاجتماع انتهى قبل ساعة.",
+        "slot": "الاجتماع انتهى قبل ساعة",
+        "cue": {
+          "en": "the meeting ended an hour ago",
+          "ko": "회의가 한 시간 전에 끝나다"
+        },
+        "gloss": {
+          "en": "Actually, the meeting ended an hour ago.",
+          "ko": "실은 회의가 한 시간 전에 끝났어요."
+        }
+      },
+      {
+        "text": "في الواقع، لم أقرأ التقرير بعد.",
+        "slot": "لم أقرأ التقرير بعد",
+        "cue": {
+          "en": "haven't read the report yet",
+          "ko": "보고서를 아직 안 읽다"
+        },
+        "gloss": {
+          "en": "Actually, I haven't read the report yet.",
+          "ko": "실은 보고서를 아직 못 읽었어요."
+        }
+      },
+      {
+        "text": "في الواقع، السعر يشمل الكهرباء.",
+        "slot": "السعر يشمل الكهرباء",
+        "cue": {
+          "en": "the price includes electricity",
+          "ko": "가격에 전기세가 포함되다"
+        },
+        "gloss": {
+          "en": "Actually, the price includes electricity.",
+          "ko": "실은 가격에 전기세가 포함돼 있어요."
+        }
+      },
+      {
+        "text": "في الواقع، تم تغيير الخطة في آخر لحظة.",
+        "slot": "تم تغيير الخطة في آخر لحظة",
+        "cue": {
+          "en": "the plan was changed at the last minute",
+          "ko": "계획이 막판에 바뀌다"
+        },
+        "gloss": {
+          "en": "Actually, the plan was changed at the last minute.",
+          "ko": "실은 계획이 막판에 바뀌었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-18",
+    "stage": 4,
+    "fn": "hearsay",
+    "pattern": "يقال إن ___.",
+    "core": [
+      "يقال إن"
+    ],
+    "meaning": {
+      "en": "Passing on what people say (passive): It is said that ___.",
+      "ko": "들은 말 전하기(수동): ___라고들 해요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "يقال إن بعض الفرق تفقد التواصل مع الوقت.",
+        "slot": "بعض الفرق تفقد التواصل مع الوقت",
+        "cue": {
+          "en": "some teams lose touch over time",
+          "ko": "어떤 팀은 시간이 지나며 소통이 끊기다"
+        },
+        "gloss": {
+          "en": "It is said that some teams lose touch over time.",
+          "ko": "어떤 팀은 시간이 지나면 소통이 끊긴다고들 해요."
+        }
+      },
+      {
+        "text": "يقال إن المطعم الجديد ممتاز.",
+        "slot": "المطعم الجديد ممتاز",
+        "cue": {
+          "en": "the new restaurant is excellent",
+          "ko": "새 식당이 아주 좋다"
+        },
+        "gloss": {
+          "en": "People say the new restaurant is excellent.",
+          "ko": "새 식당이 아주 좋다고들 해요."
+        }
+      },
+      {
+        "text": "يقال إن الإيجارات سترتفع هذا العام.",
+        "slot": "الإيجارات سترتفع هذا العام",
+        "cue": {
+          "en": "rents will rise this year",
+          "ko": "올해 월세가 오르다"
+        },
+        "gloss": {
+          "en": "It is said that rents will go up this year.",
+          "ko": "올해 월세가 오른다고들 해요."
+        }
+      },
+      {
+        "text": "يقال إن المدير سيغادر الشركة.",
+        "slot": "المدير سيغادر الشركة",
+        "cue": {
+          "en": "the manager will leave the company",
+          "ko": "부장님이 회사를 떠나다"
+        },
+        "gloss": {
+          "en": "Word is that the manager will leave the company.",
+          "ko": "부장님이 회사를 떠난다는 말이 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f4-19",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "لو كنت مكانك، ل___.",
+    "core": [
+      "لو كنت مكانك"
+    ],
+    "meaning": {
+      "en": "Advising through a hypothetical: If I were you, I would ___.",
+      "ko": "가정으로 조언하기: 내가 너라면 ___할 텐데."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "لو كنت مكانك، لقبلت العرض.",
+        "slot": "قبلت العرض",
+        "cue": {
+          "en": "accept the offer",
+          "ko": "제안을 받아들이다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd accept the offer.",
+          "ko": "내가 너라면 그 제안을 받아들일 거야."
+        }
+      },
+      {
+        "text": "لو كنت مكانك، لسألت الطبيب.",
+        "slot": "سألت الطبيب",
+        "cue": {
+          "en": "ask the doctor",
+          "ko": "의사에게 묻다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd ask the doctor.",
+          "ko": "내가 너라면 의사한테 물어볼 거야."
+        }
+      },
+      {
+        "text": "لو كنت مكانك، لنمت مبكرا الليلة.",
+        "slot": "نمت مبكرا الليلة",
+        "cue": {
+          "en": "go to bed early tonight",
+          "ko": "오늘 밤 일찍 자다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd go to bed early tonight.",
+          "ko": "내가 너라면 오늘 밤 일찍 잘 거야."
+        }
+      },
+      {
+        "text": "لو كنت مكانك، لانتظرت قليلا.",
+        "slot": "انتظرت قليلا",
+        "cue": {
+          "en": "wait a little",
+          "ko": "조금 기다리다"
+        },
+        "gloss": {
+          "en": "If I were you, I'd wait a little.",
+          "ko": "내가 너라면 조금 기다리겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-01",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "لقد ___.",
+    "core": [
+      "لقد"
+    ],
+    "meaning": {
+      "en": "Stressing that something really happened: (Indeed) I have ___.",
+      "ko": "강조하며 말하기: 정말로 ___했어요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "لقد كان لي شرف العمل معكم.",
+        "slot": "كان لي شرف العمل معكم",
+        "cue": {
+          "en": "have the honour of working with you",
+          "ko": "여러분과 함께 일하는 영광을 누리다"
+        },
+        "gloss": {
+          "en": "It has been an honour to work with you.",
+          "ko": "여러분과 함께 일한 건 정말 영광이었어요."
+        }
+      },
+      {
+        "text": "لقد نجحت في الامتحان أخيرا.",
+        "slot": "نجحت في الامتحان",
+        "cue": {
+          "en": "pass the exam",
+          "ko": "시험에 붙다"
+        },
+        "gloss": {
+          "en": "I've finally passed the exam.",
+          "ko": "드디어 시험에 붙었어요."
+        }
+      },
+      {
+        "text": "لقد عملت مع ليلى سنوات طويلة.",
+        "slot": "عملت مع ليلى",
+        "cue": {
+          "en": "work with Layla",
+          "ko": "라일라와 함께 일하다"
+        },
+        "gloss": {
+          "en": "I worked with Layla for many long years.",
+          "ko": "라일라와 정말 오랜 세월 함께 일했어요."
+        }
+      },
+      {
+        "text": "لقد تغير كل شيء في الحي.",
+        "slot": "تغير كل شيء",
+        "cue": {
+          "en": "everything change",
+          "ko": "모든 것이 바뀌다"
+        },
+        "gloss": {
+          "en": "Everything in the neighbourhood has changed.",
+          "ko": "동네가 정말 다 바뀌었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-02",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "إن ___ ليس مجرد ...، بل ...",
+    "core": [
+      "إن"
+    ],
+    "meaning": {
+      "en": "Making a strong formal claim: Indeed, ___ is not just …, but …",
+      "ko": "격식 있게 힘주어 주장하기: 무릇 ___은/는 단지 …이 아니라 …예요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "إن اللغة ليست مجرد أداة، بل هي طريقة نرى بها العالم.",
+        "slot": "اللغة",
+        "cue": {
+          "en": "language",
+          "ko": "언어"
+        },
+        "gloss": {
+          "en": "Language is not just a tool; it is a way we see the world.",
+          "ko": "언어는 단지 도구가 아니라 세상을 보는 방식이에요."
+        }
+      },
+      {
+        "text": "إن العمل ليس مجرد راتب، بل هو جزء من حياتنا.",
+        "slot": "العمل",
+        "cue": {
+          "en": "work",
+          "ko": "일"
+        },
+        "gloss": {
+          "en": "Work is not just a salary; it is part of our lives.",
+          "ko": "일은 단지 월급이 아니라 삶의 일부예요."
+        }
+      },
+      {
+        "text": "إن الصداقة ليست مجرد كلام، بل هي أفعال.",
+        "slot": "الصداقة",
+        "cue": {
+          "en": "friendship",
+          "ko": "우정"
+        },
+        "gloss": {
+          "en": "Friendship is not just words; it is deeds.",
+          "ko": "우정은 말이 아니라 행동이에요."
+        }
+      },
+      {
+        "text": "إن السفر ليس مجرد متعة، بل هو مدرسة.",
+        "slot": "السفر",
+        "cue": {
+          "en": "travel",
+          "ko": "여행"
+        },
+        "gloss": {
+          "en": "Travel is not just fun; it is a school.",
+          "ko": "여행은 단지 즐거움이 아니라 배움터예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-03",
+    "stage": 5,
+    "fn": "thank",
+    "pattern": "لا يسعني إلا أن ___.",
+    "core": [
+      "لا يسعني إلا"
+    ],
+    "meaning": {
+      "en": "Formal speech: I can only ___ (I cannot but ___).",
+      "ko": "격식 있는 인사말: ___할 수밖에 없어요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "لا يسعني إلا"
+    ],
+    "examples": [
+      {
+        "text": "لا يسعني إلا أن أشكركم.",
+        "slot": "أشكركم",
+        "cue": {
+          "en": "thank you all",
+          "ko": "여러분께 감사하다"
+        },
+        "gloss": {
+          "en": "I can only thank you all.",
+          "ko": "여러분께 감사드릴 뿐입니다."
+        }
+      },
+      {
+        "text": "لا يسعني إلا أن أعتذر عن التأخير.",
+        "slot": "أعتذر عن التأخير",
+        "cue": {
+          "en": "apologize for the delay",
+          "ko": "늦어진 것을 사과하다"
+        },
+        "gloss": {
+          "en": "I can only apologize for the delay.",
+          "ko": "늦어진 점 사과드릴 수밖에 없습니다."
+        }
+      },
+      {
+        "text": "لا يسعني إلا أن أتمنى لكم التوفيق.",
+        "slot": "أتمنى لكم التوفيق",
+        "cue": {
+          "en": "wish you success",
+          "ko": "여러분의 성공을 빌다"
+        },
+        "gloss": {
+          "en": "I can only wish you every success.",
+          "ko": "여러분의 성공을 빌 뿐입니다."
+        }
+      },
+      {
+        "text": "لا يسعني إلا أن أعبر عن فخري بهذا الفريق.",
+        "slot": "أعبر عن فخري بهذا الفريق",
+        "cue": {
+          "en": "express my pride in this team",
+          "ko": "이 팀이 자랑스럽다고 말하다"
+        },
+        "gloss": {
+          "en": "I can only express how proud I am of this team.",
+          "ko": "이 팀이 정말 자랑스럽다는 말밖에 할 게 없습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-04",
+    "stage": 5,
+    "fn": "describe-thing",
+    "pattern": "لا ___ إلا ...",
+    "core": [
+      "إلا"
+    ],
+    "meaning": {
+      "en": "Saying 'only' with an exception: I ___ nothing but …",
+      "ko": "예외로 '~만' 말하기: …밖에 ___하지 않아요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "في البيت لا أتكلم إلا العامية.",
+        "slot": "أتكلم",
+        "cue": {
+          "en": "speak",
+          "ko": "말하다"
+        },
+        "gloss": {
+          "en": "At home I speak nothing but the dialect.",
+          "ko": "집에서는 사투리만 써요."
+        }
+      },
+      {
+        "text": "لا أشرب إلا القهوة في الصباح.",
+        "slot": "أشرب",
+        "cue": {
+          "en": "drink",
+          "ko": "마시다"
+        },
+        "gloss": {
+          "en": "In the morning I drink only coffee.",
+          "ko": "아침에는 커피만 마셔요."
+        }
+      },
+      {
+        "text": "لم أفعل شيئا إلا الواجب.",
+        "slot": "أفعل شيئا",
+        "cue": {
+          "en": "do anything",
+          "ko": "무언가를 하다"
+        },
+        "gloss": {
+          "en": "I did nothing but my duty.",
+          "ko": "도리를 했을 뿐이에요."
+        }
+      },
+      {
+        "text": "لا نعرف عنه إلا اسمه.",
+        "slot": "نعرف عنه",
+        "cue": {
+          "en": "know about him (we)",
+          "ko": "그에 대해 알다(우리)"
+        },
+        "gloss": {
+          "en": "We know nothing about him except his name.",
+          "ko": "그에 대해선 이름밖에 몰라요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-05",
+    "stage": 5,
+    "fn": "describe-thing",
+    "pattern": "... غير ___.",
+    "core": [
+      "غير"
+    ],
+    "meaning": {
+      "en": "Exception with غير: no one/nothing except ___.",
+      "ko": "غير로 예외 말하기: ___ 말고는 없어요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "لا أعرف أحدا هنا غير أخي.",
+        "slot": "أخي",
+        "cue": {
+          "en": "my brother",
+          "ko": "내 형/동생"
+        },
+        "gloss": {
+          "en": "I don't know anyone here except my brother.",
+          "ko": "여기서 아는 사람은 동생밖에 없어요."
+        }
+      },
+      {
+        "text": "لم يحضر غير ثلاثة أشخاص.",
+        "slot": "ثلاثة أشخاص",
+        "cue": {
+          "en": "three people",
+          "ko": "세 사람"
+        },
+        "gloss": {
+          "en": "Only three people came.",
+          "ko": "세 사람밖에 안 왔어요."
+        }
+      },
+      {
+        "text": "ما عندي غير هذا الحل.",
+        "slot": "هذا الحل",
+        "cue": {
+          "en": "this solution",
+          "ko": "이 해결책"
+        },
+        "gloss": {
+          "en": "I have no solution other than this one.",
+          "ko": "이 방법밖에 없어요."
+        }
+      },
+      {
+        "text": "لم يبق غير أسبوع على الامتحان.",
+        "slot": "أسبوع على الامتحان",
+        "cue": {
+          "en": "a week until the exam",
+          "ko": "시험까지 일주일"
+        },
+        "gloss": {
+          "en": "There's only a week left until the exam.",
+          "ko": "시험까지 일주일밖에 안 남았어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-06",
+    "stage": 5,
+    "fn": "changed",
+    "pattern": "تغير ___ تغيرا كبيرا.",
+    "core": [
+      "تغيرا كبيرا",
+      "تغيرا جذريا"
+    ],
+    "meaning": {
+      "en": "Stressing how much something changed: ___ changed enormously.",
+      "ko": "크게 변했다고 강조하기: ___이/가 크게 변했어요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "تغيرت المدينة تغيرا كبيرا.",
+        "slot": "المدينة",
+        "cue": {
+          "en": "the city",
+          "ko": "도시"
+        },
+        "gloss": {
+          "en": "The city has changed enormously.",
+          "ko": "도시가 정말 크게 변했어요."
+        }
+      },
+      {
+        "text": "لقد تغير مكتبنا بفضلها تغيرا كبيرا.",
+        "slot": "مكتبنا",
+        "cue": {
+          "en": "our office",
+          "ko": "우리 사무실"
+        },
+        "gloss": {
+          "en": "Thanks to her, our office has changed a great deal.",
+          "ko": "그녀 덕분에 우리 사무실이 크게 바뀌었어요."
+        }
+      },
+      {
+        "text": "تغير أخي تغيرا كبيرا بعد السفر.",
+        "slot": "أخي",
+        "cue": {
+          "en": "my brother",
+          "ko": "내 형/동생"
+        },
+        "gloss": {
+          "en": "My brother changed a lot after travelling.",
+          "ko": "동생이 여행 뒤로 많이 변했어요."
+        }
+      },
+      {
+        "text": "تغيرت حياتي تغيرا جذريا بعد الزواج.",
+        "slot": "حياتي",
+        "cue": {
+          "en": "my life",
+          "ko": "내 삶"
+        },
+        "gloss": {
+          "en": "My life changed radically after marriage.",
+          "ko": "결혼 후 제 삶이 완전히 바뀌었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-07",
+    "stage": 5,
+    "fn": "like",
+    "pattern": "___ حبا كبيرا.",
+    "core": [
+      "حبا كبيرا"
+    ],
+    "meaning": {
+      "en": "Stressing how much you love something: I love ___ dearly.",
+      "ko": "강하게 좋아한다고 말하기: ___을/를 정말 많이 사랑해요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "كنت أحبه حبا كبيرا.",
+        "slot": "كنت أحبه",
+        "cue": {
+          "en": "love him (used to)",
+          "ko": "그를 사랑하다(예전)"
+        },
+        "gloss": {
+          "en": "I loved him dearly.",
+          "ko": "그분을 정말 많이 좋아했어요."
+        }
+      },
+      {
+        "text": "أحب هذه المدينة حبا كبيرا.",
+        "slot": "أحب هذه المدينة",
+        "cue": {
+          "en": "love this city",
+          "ko": "이 도시를 사랑하다"
+        },
+        "gloss": {
+          "en": "I love this city dearly.",
+          "ko": "이 도시를 정말 사랑해요."
+        }
+      },
+      {
+        "text": "تحب أمي حديقتها حبا كبيرا.",
+        "slot": "تحب أمي حديقتها",
+        "cue": {
+          "en": "my mother loves her garden",
+          "ko": "엄마가 정원을 사랑하다"
+        },
+        "gloss": {
+          "en": "My mother loves her garden dearly.",
+          "ko": "엄마는 정원을 정말 아끼세요."
+        }
+      },
+      {
+        "text": "أحببنا ذلك المعلم حبا كبيرا.",
+        "slot": "أحببنا ذلك المعلم",
+        "cue": {
+          "en": "we loved that teacher",
+          "ko": "우리가 그 선생님을 좋아하다"
+        },
+        "gloss": {
+          "en": "We loved that teacher dearly.",
+          "ko": "우리는 그 선생님을 정말 좋아했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-08",
+    "stage": 5,
+    "fn": "sympathy",
+    "pattern": "رحمه الله و___.",
+    "core": [
+      "رحمه الله",
+      "رحمها الله"
+    ],
+    "meaning": {
+      "en": "Offering a prayer for someone who died: May God have mercy on him and ___.",
+      "ko": "고인을 위해 기원하기: 하나님이 그에게 자비를 베푸시고 ___하시길."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "رحمه الله وأسكنه فسيح جناته.",
+        "slot": "أسكنه فسيح جناته",
+        "cue": {
+          "en": "grant him a place in paradise",
+          "ko": "그를 천국에 머물게 하다"
+        },
+        "gloss": {
+          "en": "May God have mercy on him and grant him paradise.",
+          "ko": "고인이 편히 쉬시길 빕니다."
+        }
+      },
+      {
+        "text": "رحمها الله وغفر لها.",
+        "slot": "غفر لها",
+        "cue": {
+          "en": "forgive her",
+          "ko": "그녀를 용서하다"
+        },
+        "gloss": {
+          "en": "May God have mercy on her and forgive her.",
+          "ko": "고인이 용서받고 편히 쉬시길 빕니다."
+        }
+      },
+      {
+        "text": "رحمه الله وجعل مثواه الجنة.",
+        "slot": "جعل مثواه الجنة",
+        "cue": {
+          "en": "make paradise his resting place",
+          "ko": "천국을 그의 안식처로 삼다"
+        },
+        "gloss": {
+          "en": "May God have mercy on him and make paradise his home.",
+          "ko": "고인이 천국에서 쉬시길 빕니다."
+        }
+      },
+      {
+        "text": "رحمها الله وصبركم على فراقها.",
+        "slot": "صبركم على فراقها",
+        "cue": {
+          "en": "give you patience at her loss",
+          "ko": "그녀를 잃은 슬픔을 견디게 하다"
+        },
+        "gloss": {
+          "en": "May God have mercy on her and give you patience at her loss.",
+          "ko": "고인이 편히 쉬시고 여러분이 슬픔을 견디시길 빕니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-09",
+    "stage": 5,
+    "fn": "thank",
+    "pattern": "بارك الله فيك ___.",
+    "core": [
+      "بارك الله فيك",
+      "بارك الله فيكم"
+    ],
+    "meaning": {
+      "en": "Thanking with a blessing: God bless you ___.",
+      "ko": "축복으로 고마움 말하기: ___ 정말 고마워요(축복을 빌어요)."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "بارك الله فيك على هذه المساعدة.",
+        "slot": "على هذه المساعدة",
+        "cue": {
+          "en": "for this help",
+          "ko": "이 도움에 대해"
+        },
+        "gloss": {
+          "en": "God bless you for this help.",
+          "ko": "도와줘서 정말 고마워요."
+        }
+      },
+      {
+        "text": "بارك الله فيكم على الضيافة الجميلة.",
+        "slot": "على الضيافة الجميلة",
+        "cue": {
+          "en": "for the lovely hospitality",
+          "ko": "따뜻한 대접에 대해"
+        },
+        "gloss": {
+          "en": "God bless you all for the lovely hospitality.",
+          "ko": "따뜻하게 대접해 주셔서 감사합니다."
+        }
+      },
+      {
+        "text": "بارك الله فيك على وقتك وصبرك.",
+        "slot": "على وقتك وصبرك",
+        "cue": {
+          "en": "for your time and patience",
+          "ko": "시간 내주고 참아 준 것에 대해"
+        },
+        "gloss": {
+          "en": "God bless you for your time and patience.",
+          "ko": "시간 내 주고 기다려 줘서 고마워요."
+        }
+      },
+      {
+        "text": "بارك الله فيك، ووفقك في عملك الجديد.",
+        "slot": "ووفقك في عملك الجديد",
+        "cue": {
+          "en": "and grant you success in your new job",
+          "ko": "새 일에서 잘되길"
+        },
+        "gloss": {
+          "en": "God bless you and grant you success in your new job.",
+          "ko": "새 일에서도 잘되길 빌어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-10",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "يبدو أن ___.",
+    "core": [
+      "يبدو أن"
+    ],
+    "meaning": {
+      "en": "Hedging: It seems that ___.",
+      "ko": "에둘러 말하기: ___인 것 같아요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "يبدو أن الأمر أعقد مما توقعنا.",
+        "slot": "الأمر أعقد مما توقعنا",
+        "cue": {
+          "en": "the matter is more complex than we expected",
+          "ko": "일이 예상보다 복잡하다"
+        },
+        "gloss": {
+          "en": "It seems the matter is more complex than we expected.",
+          "ko": "일이 생각보다 복잡한 것 같아요."
+        }
+      },
+      {
+        "text": "يبدو أن اجتماعاتنا ستكون أطول.",
+        "slot": "اجتماعاتنا ستكون أطول",
+        "cue": {
+          "en": "our meetings will be longer",
+          "ko": "회의가 더 길어지다"
+        },
+        "gloss": {
+          "en": "It seems our meetings will be longer.",
+          "ko": "회의가 더 길어질 것 같아요."
+        }
+      },
+      {
+        "text": "يبدو أن وزنك زاد قليلا!",
+        "slot": "وزنك زاد قليلا",
+        "cue": {
+          "en": "you've put on a little weight",
+          "ko": "살이 좀 찌다"
+        },
+        "gloss": {
+          "en": "Looks like you've put on a bit of weight!",
+          "ko": "살이 좀 찐 것 같은데!"
+        }
+      },
+      {
+        "text": "يبدو أن المطر لن يتوقف اليوم.",
+        "slot": "المطر لن يتوقف اليوم",
+        "cue": {
+          "en": "the rain won't stop today",
+          "ko": "오늘 비가 그치지 않다"
+        },
+        "gloss": {
+          "en": "It seems the rain won't stop today.",
+          "ko": "오늘은 비가 안 그칠 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-11",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "لا يخفى على أحد أن ___.",
+    "core": [
+      "لا يخفى على أحد"
+    ],
+    "meaning": {
+      "en": "Stating something everyone knows: It is no secret that ___.",
+      "ko": "누구나 아는 사실 말하기: ___라는 건 다 아는 사실이에요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "لا يخفى على أحد"
+    ],
+    "examples": [
+      {
+        "text": "لا يخفى على أحد أن ليلى كانت قلب هذا الفريق.",
+        "slot": "ليلى كانت قلب هذا الفريق",
+        "cue": {
+          "en": "Layla was the heart of this team",
+          "ko": "라일라가 이 팀의 중심이었다"
+        },
+        "gloss": {
+          "en": "It's no secret that Layla was the heart of this team.",
+          "ko": "라일라가 이 팀의 중심이었다는 건 다 아는 사실이에요."
+        }
+      },
+      {
+        "text": "لا يخفى على أحد أن هذه مشكلة حقيقية.",
+        "slot": "هذه مشكلة حقيقية",
+        "cue": {
+          "en": "this is a real problem",
+          "ko": "이건 진짜 문제다"
+        },
+        "gloss": {
+          "en": "It's no secret that this is a real problem.",
+          "ko": "이게 진짜 문제라는 건 다 알아요."
+        }
+      },
+      {
+        "text": "لا يخفى على أحد أن الأسعار ارتفعت كثيرا.",
+        "slot": "الأسعار ارتفعت كثيرا",
+        "cue": {
+          "en": "prices have risen a lot",
+          "ko": "물가가 많이 올랐다"
+        },
+        "gloss": {
+          "en": "It's no secret that prices have gone up a lot.",
+          "ko": "물가가 많이 오른 건 다 아는 사실이에요."
+        }
+      },
+      {
+        "text": "لا يخفى على أحد أن الشباب يحبون التكنولوجيا.",
+        "slot": "الشباب يحبون التكنولوجيا",
+        "cue": {
+          "en": "young people love technology",
+          "ko": "젊은이들이 기술을 좋아하다"
+        },
+        "gloss": {
+          "en": "It's no secret that young people love technology.",
+          "ko": "젊은 사람들이 기술을 좋아한다는 건 다 알죠."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-12",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "___، أليس كذلك؟",
+    "core": [
+      "أليس كذلك"
+    ],
+    "meaning": {
+      "en": "Asking a rhetorical tag question: ___, isn't it?",
+      "ko": "수사 의문으로 동의 끌어내기: ___, 그렇지 않나요?"
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "لكل لغة مكانها، أليس كذلك؟",
+        "slot": "لكل لغة مكانها",
+        "cue": {
+          "en": "every language has its place",
+          "ko": "언어마다 제자리가 있다"
+        },
+        "gloss": {
+          "en": "Every language has its place, doesn't it?",
+          "ko": "언어마다 제자리가 있잖아요, 안 그래요?"
+        }
+      },
+      {
+        "text": "الفكرة كانت جيدة في البداية، أليس كذلك؟",
+        "slot": "الفكرة كانت جيدة في البداية",
+        "cue": {
+          "en": "the idea was good at first",
+          "ko": "처음엔 생각이 좋았다"
+        },
+        "gloss": {
+          "en": "The idea was good at first, wasn't it?",
+          "ko": "처음엔 괜찮은 생각이었잖아요, 그렇죠?"
+        }
+      },
+      {
+        "text": "أنت من بيروت، أليس كذلك؟",
+        "slot": "أنت من بيروت",
+        "cue": {
+          "en": "you're from Beirut",
+          "ko": "베이루트 출신이다"
+        },
+        "gloss": {
+          "en": "You're from Beirut, aren't you?",
+          "ko": "베이루트 출신이시죠, 그렇죠?"
+        }
+      },
+      {
+        "text": "الامتحان كان صعبا، أليس كذلك؟",
+        "slot": "الامتحان كان صعبا",
+        "cue": {
+          "en": "the exam was hard",
+          "ko": "시험이 어려웠다"
+        },
+        "gloss": {
+          "en": "The exam was hard, wasn't it?",
+          "ko": "시험 어려웠죠, 그렇죠?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-13",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "ومن منا لم ___؟",
+    "core": [
+      "ومن منا لم",
+      "ومن منا لا"
+    ],
+    "meaning": {
+      "en": "Rhetorical question to include everyone: And who among us hasn't ___?",
+      "ko": "수사 의문으로 공감 끌어내기: ___ 안 해 본 사람이 어디 있어요?"
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "ومن منا لم يخطئ في البداية؟",
+        "slot": "يخطئ في البداية",
+        "cue": {
+          "en": "make mistakes at the start",
+          "ko": "처음에 실수하다"
+        },
+        "gloss": {
+          "en": "And who among us didn't make mistakes at the start?",
+          "ko": "처음에 실수 안 해 본 사람이 어디 있어요?"
+        }
+      },
+      {
+        "text": "ومن منا لم يرسب مرة أو مرتين؟",
+        "slot": "يرسب مرة أو مرتين",
+        "cue": {
+          "en": "fail once or twice",
+          "ko": "한두 번 떨어지다"
+        },
+        "gloss": {
+          "en": "And who among us hasn't failed once or twice?",
+          "ko": "한두 번 안 떨어져 본 사람이 어디 있어요?"
+        }
+      },
+      {
+        "text": "ومن منا لم يطلب منها المساعدة في آخر لحظة؟",
+        "slot": "يطلب منها المساعدة في آخر لحظة",
+        "cue": {
+          "en": "ask her for help at the last minute",
+          "ko": "막판에 그녀에게 도움을 청하다"
+        },
+        "gloss": {
+          "en": "And which of us never asked her for help at the last minute?",
+          "ko": "막판에 그녀한테 도움 안 청해 본 사람이 누가 있어요?"
+        }
+      },
+      {
+        "text": "ومن منا لا يخلط أحيانا؟",
+        "slot": "يخلط أحيانا",
+        "cue": {
+          "en": "mix languages sometimes",
+          "ko": "가끔 말을 섞다"
+        },
+        "gloss": {
+          "en": "And which of us doesn't mix languages sometimes?",
+          "ko": "가끔 말 안 섞는 사람이 어디 있어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-14",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "بصراحة يعني، ___.",
+    "core": [
+      "بصراحة يعني"
+    ],
+    "meaning": {
+      "en": "Switching to a casual, honest tone: Honestly, you know, ___.",
+      "ko": "일부러 말투를 풀어 솔직하게: 솔직히 말하면, ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "بصراحة يعني، لا أعرف.",
+        "slot": "لا أعرف",
+        "cue": {
+          "en": "I don't know",
+          "ko": "모르다"
+        },
+        "gloss": {
+          "en": "Honestly, you know, I don't know.",
+          "ko": "솔직히 말하면, 잘 모르겠어요."
+        }
+      },
+      {
+        "text": "بصراحة يعني، في البيت لا أتكلم إلا العامية.",
+        "slot": "في البيت لا أتكلم إلا العامية",
+        "cue": {
+          "en": "at home I only speak dialect",
+          "ko": "집에서는 사투리만 쓰다"
+        },
+        "gloss": {
+          "en": "Honestly, at home I only speak dialect.",
+          "ko": "솔직히 집에서는 사투리만 써요."
+        }
+      },
+      {
+        "text": "بصراحة يعني، الاقتراح يحتاج إلى وقت أطول.",
+        "slot": "الاقتراح يحتاج إلى وقت أطول",
+        "cue": {
+          "en": "the proposal needs more time",
+          "ko": "제안이 시간이 더 필요하다"
+        },
+        "gloss": {
+          "en": "Honestly, the proposal needs more time.",
+          "ko": "솔직히 그 제안은 시간이 더 필요해요."
+        }
+      },
+      {
+        "text": "الموضوع، بصراحة يعني، أكبر من مجرد لغة.",
+        "slot": "أكبر من مجرد لغة",
+        "cue": {
+          "en": "bigger than just language",
+          "ko": "단순한 언어 문제보다 크다"
+        },
+        "gloss": {
+          "en": "The issue, honestly, is bigger than just language.",
+          "ko": "이 문제는, 솔직히, 언어만의 문제가 아니에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-15",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___، إن جاز التعبير.",
+    "core": [
+      "إن جاز التعبير"
+    ],
+    "meaning": {
+      "en": "Flagging a figurative phrase: ___, so to speak.",
+      "ko": "비유임을 밝히기: ___, 말하자면 그래요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "إن جاز التعبير"
+    ],
+    "examples": [
+      {
+        "text": "كانت ليلى قلب هذا الفريق، إن جاز التعبير.",
+        "slot": "كانت ليلى قلب هذا الفريق",
+        "cue": {
+          "en": "Layla was the heart of this team",
+          "ko": "라일라가 이 팀의 중심이었다"
+        },
+        "gloss": {
+          "en": "Layla was the heart of this team, so to speak.",
+          "ko": "라일라는 말하자면 이 팀의 심장이었어요."
+        }
+      },
+      {
+        "text": "سؤال محرج، إن جاز التعبير!",
+        "slot": "سؤال محرج",
+        "cue": {
+          "en": "an awkward question",
+          "ko": "난처한 질문"
+        },
+        "gloss": {
+          "en": "An awkward question, so to speak!",
+          "ko": "말하자면 좀 난처한 질문이네요!"
+        }
+      },
+      {
+        "text": "المدينة متحف مفتوح، إن جاز التعبير.",
+        "slot": "المدينة متحف مفتوح",
+        "cue": {
+          "en": "the city is an open-air museum",
+          "ko": "도시가 야외 박물관이다"
+        },
+        "gloss": {
+          "en": "The city is an open-air museum, so to speak.",
+          "ko": "이 도시는 말하자면 야외 박물관이에요."
+        }
+      },
+      {
+        "text": "هذا الكتاب صديقي الأول، إن جاز التعبير.",
+        "slot": "هذا الكتاب صديقي الأول",
+        "cue": {
+          "en": "this book is my first friend",
+          "ko": "이 책이 내 첫 친구다"
+        },
+        "gloss": {
+          "en": "This book is my first friend, so to speak.",
+          "ko": "이 책은 말하자면 제 첫 친구예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-16",
+    "stage": 5,
+    "fn": "persuade",
+    "pattern": "حط نفسك مكاني: ___.",
+    "core": [
+      "حط نفسك مكاني"
+    ],
+    "meaning": {
+      "en": "Asking for empathy (colloquial): Put yourself in my shoes: ___.",
+      "ko": "입장 바꿔 생각하게 하기(구어): 내 입장이 돼 봐, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "حط نفسك مكاني"
+    ],
+    "examples": [
+      {
+        "text": "حط نفسك مكاني: الفاحص كان يصرخ صراخا متواصلا!",
+        "slot": "الفاحص كان يصرخ صراخا متواصلا",
+        "cue": {
+          "en": "the examiner kept shouting",
+          "ko": "시험관이 계속 소리 지르다"
+        },
+        "gloss": {
+          "en": "Put yourself in my shoes: the examiner kept shouting non-stop!",
+          "ko": "내 입장이 돼 봐, 시험관이 계속 소리를 질렀다니까!"
+        }
+      },
+      {
+        "text": "حط نفسك مكاني: كيف أرفض طلب أمي؟",
+        "slot": "كيف أرفض طلب أمي؟",
+        "cue": {
+          "en": "how can I refuse my mother",
+          "ko": "엄마 부탁을 어떻게 거절하다"
+        },
+        "gloss": {
+          "en": "Put yourself in my shoes: how can I refuse my mother?",
+          "ko": "내 입장이 돼 봐, 엄마 부탁을 어떻게 거절해?"
+        }
+      },
+      {
+        "text": "حط نفسك مكاني: العمل كثير والوقت قليل.",
+        "slot": "العمل كثير والوقت قليل",
+        "cue": {
+          "en": "lots of work and little time",
+          "ko": "일은 많고 시간은 없다"
+        },
+        "gloss": {
+          "en": "Put yourself in my shoes: lots of work and little time.",
+          "ko": "내 입장이 돼 봐, 일은 많고 시간은 없어."
+        }
+      },
+      {
+        "text": "حط نفسك مكاني: ماذا كنت ستفعل؟",
+        "slot": "ماذا كنت ستفعل؟",
+        "cue": {
+          "en": "what would you have done",
+          "ko": "너라면 어떻게 했겠니"
+        },
+        "gloss": {
+          "en": "Put yourself in my shoes: what would you have done?",
+          "ko": "내 입장이 돼 봐, 너라면 어떻게 했겠어?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-17",
+    "stage": 5,
+    "fn": "clarify",
+    "pattern": "مش هيك القصد، ___.",
+    "core": [
+      "مش هيك القصد"
+    ],
+    "meaning": {
+      "en": "Correcting a misunderstanding (colloquial): That's not what I meant, ___.",
+      "ko": "오해 바로잡기(구어): 그런 뜻이 아니야, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "مش هيك القصد"
+    ],
+    "examples": [
+      {
+        "text": "مش هيك القصد! كنت أمزح.",
+        "slot": "كنت أمزح",
+        "cue": {
+          "en": "I was joking",
+          "ko": "농담이었다"
+        },
+        "gloss": {
+          "en": "That's not what I meant! I was joking.",
+          "ko": "그런 뜻 아니야! 농담이었어."
+        }
+      },
+      {
+        "text": "مش هيك القصد، أقصد أن الخلط طبيعي.",
+        "slot": "أقصد أن الخلط طبيعي",
+        "cue": {
+          "en": "I mean mixing is natural",
+          "ko": "섞어 쓰는 게 자연스럽다는 뜻이다"
+        },
+        "gloss": {
+          "en": "That's not quite it; I mean that mixing is natural.",
+          "ko": "그런 뜻이 아니라, 섞어 쓰는 게 자연스럽다는 거예요."
+        }
+      },
+      {
+        "text": "مش هيك القصد، كنت أسأل فقط.",
+        "slot": "كنت أسأل فقط",
+        "cue": {
+          "en": "I was only asking",
+          "ko": "그냥 물어본 것이다"
+        },
+        "gloss": {
+          "en": "That's not what I meant, I was only asking.",
+          "ko": "그런 뜻 아니야, 그냥 물어본 거야."
+        }
+      },
+      {
+        "text": "مش هيك القصد، أردت أن أساعدك.",
+        "slot": "أردت أن أساعدك",
+        "cue": {
+          "en": "I wanted to help you",
+          "ko": "도와주고 싶었다"
+        },
+        "gloss": {
+          "en": "That's not what I meant, I wanted to help you.",
+          "ko": "그런 뜻 아니야, 도와주고 싶었던 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-18",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "لا تاخذها على خاطرك، ___.",
+    "core": [
+      "لا تاخذها على خاطرك"
+    ],
+    "meaning": {
+      "en": "Smoothing hurt feelings (colloquial): Don't take it personally, ___.",
+      "ko": "서운함 달래기(구어): 마음에 두지 마, ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "لا تاخذها على خاطرك"
+    ],
+    "examples": [
+      {
+        "text": "لا تاخذها على خاطرك، كنت أمزح.",
+        "slot": "كنت أمزح",
+        "cue": {
+          "en": "I was joking",
+          "ko": "농담이었다"
+        },
+        "gloss": {
+          "en": "Don't take it personally, I was joking.",
+          "ko": "마음에 두지 마, 농담이었어."
+        }
+      },
+      {
+        "text": "لا تاخذها على خاطرك، المدير متوتر اليوم.",
+        "slot": "المدير متوتر اليوم",
+        "cue": {
+          "en": "the manager is stressed today",
+          "ko": "부장님이 오늘 예민하다"
+        },
+        "gloss": {
+          "en": "Don't take it personally, the manager is stressed today.",
+          "ko": "마음에 두지 마, 부장님이 오늘 예민하셔."
+        }
+      },
+      {
+        "text": "لا تاخذها على خاطرك، الكل يخطئ أحيانا.",
+        "slot": "الكل يخطئ أحيانا",
+        "cue": {
+          "en": "everyone makes mistakes sometimes",
+          "ko": "누구나 가끔 실수하다"
+        },
+        "gloss": {
+          "en": "Don't take it to heart, everyone makes mistakes sometimes.",
+          "ko": "마음에 두지 마, 누구나 가끔 실수해."
+        }
+      },
+      {
+        "text": "لا تاخذها على خاطرك، ما قصدت شيئا.",
+        "slot": "ما قصدت شيئا",
+        "cue": {
+          "en": "I didn't mean anything",
+          "ko": "아무 뜻 없었다"
+        },
+        "gloss": {
+          "en": "Don't take it personally, I didn't mean anything by it.",
+          "ko": "마음에 두지 마, 아무 뜻 없었어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-19",
+    "stage": 5,
+    "fn": "idiom-react",
+    "pattern": "___، رب ضارة نافعة.",
+    "core": [
+      "رب ضارة نافعة"
+    ],
+    "meaning": {
+      "en": "Reacting with a proverb: ___, every cloud has a silver lining.",
+      "ko": "속담으로 반응하기: ___, 전화위복이에요."
+    },
+    "grammar": [],
+    "expressions": [
+      "رب ضارة نافعة"
+    ],
+    "examples": [
+      {
+        "text": "خسرت العمل، لكن رب ضارة نافعة.",
+        "slot": "خسرت العمل",
+        "cue": {
+          "en": "lose the job",
+          "ko": "일자리를 잃다"
+        },
+        "gloss": {
+          "en": "I lost the job, but every cloud has a silver lining.",
+          "ko": "일자리를 잃었지만 전화위복이에요."
+        }
+      },
+      {
+        "text": "تأجلت الرحلة، ورب ضارة نافعة.",
+        "slot": "تأجلت الرحلة",
+        "cue": {
+          "en": "the trip was postponed",
+          "ko": "여행이 미뤄지다"
+        },
+        "gloss": {
+          "en": "The trip was postponed, and maybe that's a blessing in disguise.",
+          "ko": "여행이 미뤄졌는데, 오히려 잘된 걸지도 몰라요."
+        }
+      },
+      {
+        "text": "تعطلت السيارة فمشينا، ورب ضارة نافعة.",
+        "slot": "تعطلت السيارة فمشينا",
+        "cue": {
+          "en": "the car broke down so we walked",
+          "ko": "차가 고장 나서 걸었다"
+        },
+        "gloss": {
+          "en": "The car broke down so we walked — a blessing in disguise.",
+          "ko": "차가 고장 나서 걸었는데, 전화위복이었어요."
+        }
+      },
+      {
+        "text": "ألغي الحفل، لكن رب ضارة نافعة: ارتحنا قليلا.",
+        "slot": "ألغي الحفل",
+        "cue": {
+          "en": "the party was cancelled",
+          "ko": "파티가 취소되다"
+        },
+        "gloss": {
+          "en": "The party was cancelled, but there's a silver lining: we got some rest.",
+          "ko": "파티가 취소됐지만 전화위복이에요. 좀 쉬었거든요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ar-f5-20",
+    "stage": 5,
+    "fn": "accept",
+    "pattern": "___ على العين والراس.",
+    "core": [
+      "على العين والراس"
+    ],
+    "meaning": {
+      "en": "Accepting warmly (colloquial): ___ — with pleasure, gladly.",
+      "ko": "기꺼이 받아들이기(구어): ___, 얼마든지요."
+    },
+    "grammar": [],
+    "expressions": [
+      "على العين والراس"
+    ],
+    "examples": [
+      {
+        "text": "أي شيء تحتاجه، على العين والراس.",
+        "slot": "أي شيء تحتاجه",
+        "cue": {
+          "en": "anything you need",
+          "ko": "필요한 건 뭐든지"
+        },
+        "gloss": {
+          "en": "Anything you need, it would be my pleasure.",
+          "ko": "필요한 건 뭐든지 기꺼이 할게요."
+        }
+      },
+      {
+        "text": "تريد أن أساعدك في النقل؟ على العين والراس.",
+        "slot": "تريد أن أساعدك في النقل؟",
+        "cue": {
+          "en": "you want me to help you move",
+          "ko": "이사를 도와주길 원하다"
+        },
+        "gloss": {
+          "en": "You want me to help you move? Gladly.",
+          "ko": "이사 도와 달라고? 얼마든지."
+        }
+      },
+      {
+        "text": "زيارتكم لنا على العين والراس.",
+        "slot": "زيارتكم لنا",
+        "cue": {
+          "en": "your visit to us",
+          "ko": "우리 집에 오시는 것"
+        },
+        "gloss": {
+          "en": "Your visit is most welcome.",
+          "ko": "오시는 건 언제든 대환영이에요."
+        }
+      },
+      {
+        "text": "ضيوفك على العين والراس.",
+        "slot": "ضيوفك",
+        "cue": {
+          "en": "your guests",
+          "ko": "네 손님들"
+        },
+        "gloss": {
+          "en": "Your guests are most welcome.",
+          "ko": "네 손님이라면 대환영이야."
         }
       }
     ]

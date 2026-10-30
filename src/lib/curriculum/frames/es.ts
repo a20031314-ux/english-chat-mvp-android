@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 스페인어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
+/** 스페인어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
 export const ES_FRAMES: Frame[] = [
   {
     "id": "es-f1-01",
@@ -4094,6 +4094,2743 @@ export const ES_FRAMES: Frame[] = [
         "gloss": {
           "en": "I'm still not sure I want to go.",
           "ko": "아직 가고 싶은지 잘 모르겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-01",
+    "stage": 4,
+    "fn": "wish",
+    "pattern": "Espero que ___.",
+    "core": [
+      "Espero que",
+      "espero que"
+    ],
+    "meaning": {
+      "en": "Hoping for something: I hope (that) ___ (+ subjunctive).",
+      "ko": "바람 말하기: ___하면 좋겠어요(espero que + 접속법)."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Espero que te vaya bien en la entrevista.",
+        "slot": "te vaya bien en la entrevista",
+        "cue": {
+          "en": "it goes well for you in the interview (irle bien)",
+          "ko": "면접이 잘 되다(irle bien)"
+        },
+        "gloss": {
+          "en": "I hope the interview goes well for you.",
+          "ko": "면접 잘 보길 바라."
+        }
+      },
+      {
+        "text": "Espero que el tren no llegue tarde.",
+        "slot": "el tren no llegue tarde",
+        "cue": {
+          "en": "the train isn't late (llegar tarde)",
+          "ko": "기차가 늦지 않다(llegar tarde)"
+        },
+        "gloss": {
+          "en": "I hope the train isn't late.",
+          "ko": "기차가 늦지 않으면 좋겠어요."
+        }
+      },
+      {
+        "text": "Espero que puedas venir a la cena del sábado.",
+        "slot": "puedas venir a la cena del sábado",
+        "cue": {
+          "en": "you can come to Saturday's dinner (poder)",
+          "ko": "토요일 저녁 식사에 올 수 있다(poder)"
+        },
+        "gloss": {
+          "en": "I hope you can come to dinner on Saturday.",
+          "ko": "토요일 저녁에 올 수 있으면 좋겠어."
+        }
+      },
+      {
+        "text": "Espero que les guste el regalo.",
+        "slot": "les guste el regalo",
+        "cue": {
+          "en": "they like the present (gustar)",
+          "ko": "선물이 마음에 들다(gustar)"
+        },
+        "gloss": {
+          "en": "I hope they like the present.",
+          "ko": "선물이 마음에 들면 좋겠어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-02",
+    "stage": 4,
+    "fn": "wish",
+    "pattern": "Ojalá ___.",
+    "core": [
+      "Ojalá",
+      "ojalá"
+    ],
+    "meaning": {
+      "en": "Wishing strongly: I really hope ___ / If only ___ (+ subjunctive).",
+      "ko": "간절히 바라기: ___면 좋겠다(ojalá + 접속법)."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "ojalá"
+    ],
+    "examples": [
+      {
+        "text": "Ojalá haga sol el fin de semana.",
+        "slot": "haga sol el fin de semana",
+        "cue": {
+          "en": "it's sunny at the weekend (hacer sol)",
+          "ko": "주말에 해가 나다(hacer sol)"
+        },
+        "gloss": {
+          "en": "I really hope it's sunny at the weekend.",
+          "ko": "주말에 날씨가 맑으면 좋겠다."
+        }
+      },
+      {
+        "text": "Ojalá me den el trabajo.",
+        "slot": "me den el trabajo",
+        "cue": {
+          "en": "they give me the job (dar)",
+          "ko": "나를 뽑아 주다(dar el trabajo)"
+        },
+        "gloss": {
+          "en": "I really hope they give me the job.",
+          "ko": "그 일자리에 붙으면 좋겠어."
+        }
+      },
+      {
+        "text": "Ojalá encuentres piso pronto.",
+        "slot": "encuentres piso pronto",
+        "cue": {
+          "en": "you find a flat soon (encontrar)",
+          "ko": "곧 집을 구하다(encontrar)"
+        },
+        "gloss": {
+          "en": "I hope you find a flat soon.",
+          "ko": "곧 집 구하길 바라."
+        }
+      },
+      {
+        "text": "¡Ojalá no se acabe nunca este verano!",
+        "slot": "no se acabe nunca este verano",
+        "cue": {
+          "en": "this summer never ends (acabarse)",
+          "ko": "이 여름이 끝나지 않다(acabarse)"
+        },
+        "gloss": {
+          "en": "If only this summer never ended!",
+          "ko": "이 여름이 영원히 안 끝났으면!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-03",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "Si yo fuera tú, ___.",
+    "core": [
+      "Si yo fuera tú",
+      "si yo fuera tú"
+    ],
+    "meaning": {
+      "en": "Giving advice: If I were you, ___ (+ conditional).",
+      "ko": "조언하기: 내가 너라면 ___할 거야(조건법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "si yo fuera tú"
+    ],
+    "examples": [
+      {
+        "text": "Si yo fuera tú, hablaría con ella hoy mismo.",
+        "slot": "hablaría con ella hoy mismo",
+        "cue": {
+          "en": "I'd talk to her today (hablar)",
+          "ko": "오늘 당장 그녀와 이야기하다(hablar)"
+        },
+        "gloss": {
+          "en": "If I were you, I'd talk to her today.",
+          "ko": "내가 너라면 오늘 당장 그녀랑 얘기하겠어."
+        }
+      },
+      {
+        "text": "Si yo fuera tú, no aceptaría esa oferta.",
+        "slot": "no aceptaría esa oferta",
+        "cue": {
+          "en": "I wouldn't accept that offer (aceptar)",
+          "ko": "그 제안을 받아들이지 않다(aceptar)"
+        },
+        "gloss": {
+          "en": "If I were you, I wouldn't accept that offer.",
+          "ko": "내가 너라면 그 제안은 안 받겠어."
+        }
+      },
+      {
+        "text": "Si yo fuera tú, pediría una segunda opinión.",
+        "slot": "pediría una segunda opinión",
+        "cue": {
+          "en": "I'd ask for a second opinion (pedir)",
+          "ko": "다른 의견도 들어 보다(pedir una segunda opinión)"
+        },
+        "gloss": {
+          "en": "If I were you, I'd get a second opinion.",
+          "ko": "내가 너라면 다른 의견도 들어 볼 거야."
+        }
+      },
+      {
+        "text": "Sinceramente, si yo fuera tú, me tomaría unos días libres.",
+        "slot": "me tomaría unos días libres",
+        "cue": {
+          "en": "I'd take a few days off (tomarse)",
+          "ko": "며칠 쉬다(tomarse unos días libres)"
+        },
+        "gloss": {
+          "en": "Honestly, if I were you, I'd take a few days off.",
+          "ko": "솔직히 내가 너라면 며칠 쉬겠어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-04",
+    "stage": 4,
+    "fn": "hypothetical",
+    "pattern": "Si pudiera ___, …",
+    "core": [
+      "Si pudiera",
+      "si pudiera"
+    ],
+    "meaning": {
+      "en": "Imagining: If I could ___, I would… (si + imperfect subjunctive + conditional).",
+      "ko": "가정하기: ___할 수 있다면 ~할 텐데(si + 접속법 과거 + 조건법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Si pudiera elegir, viviría cerca del mar.",
+        "slot": "elegir",
+        "cue": {
+          "en": "choose (elegir)",
+          "ko": "고르다(elegir)"
+        },
+        "gloss": {
+          "en": "If I could choose, I'd live near the sea.",
+          "ko": "고를 수 있다면 바닷가 근처에 살 거예요."
+        }
+      },
+      {
+        "text": "Si pudiera cambiar algo, empezaría antes.",
+        "slot": "cambiar algo",
+        "cue": {
+          "en": "change something (cambiar)",
+          "ko": "뭔가 바꾸다(cambiar)"
+        },
+        "gloss": {
+          "en": "If I could change something, I'd start earlier.",
+          "ko": "뭔가 바꿀 수 있다면 더 일찍 시작하겠어요."
+        }
+      },
+      {
+        "text": "Si pudiera viajar en el tiempo, visitaría a mis abuelos de jóvenes.",
+        "slot": "viajar en el tiempo",
+        "cue": {
+          "en": "travel in time (viajar)",
+          "ko": "시간 여행을 하다(viajar en el tiempo)"
+        },
+        "gloss": {
+          "en": "If I could travel in time, I'd visit my grandparents when they were young.",
+          "ko": "시간 여행을 할 수 있다면 젊은 시절의 조부모님을 만나러 가겠어요."
+        }
+      },
+      {
+        "text": "Te ayudaría si pudiera salir antes del trabajo.",
+        "slot": "salir antes del trabajo",
+        "cue": {
+          "en": "leave work earlier (salir)",
+          "ko": "일찍 퇴근하다(salir del trabajo)"
+        },
+        "gloss": {
+          "en": "I'd help you if I could leave work earlier.",
+          "ko": "일찍 퇴근할 수 있으면 도와줄 텐데."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-05",
+    "stage": 4,
+    "fn": "hypothetical",
+    "pattern": "Si tuviera ___, …",
+    "core": [
+      "Si tuviera",
+      "si tuviera"
+    ],
+    "meaning": {
+      "en": "Imagining: If I had ___, I would… (si + imperfect subjunctive + conditional).",
+      "ko": "가정하기: ___이 있다면 ~할 텐데(si + 접속법 과거 + 조건법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Si tuviera más tiempo, aprendería a tocar el piano.",
+        "slot": "más tiempo",
+        "cue": {
+          "en": "more time",
+          "ko": "시간이 더"
+        },
+        "gloss": {
+          "en": "If I had more time, I'd learn to play the piano.",
+          "ko": "시간이 더 있다면 피아노를 배울 텐데."
+        }
+      },
+      {
+        "text": "Si tuviera un jardín, plantaría tomates.",
+        "slot": "un jardín",
+        "cue": {
+          "en": "a garden",
+          "ko": "정원"
+        },
+        "gloss": {
+          "en": "If I had a garden, I'd grow tomatoes.",
+          "ko": "정원이 있다면 토마토를 심을 거예요."
+        }
+      },
+      {
+        "text": "Si tuviera dinero ahorrado, me compraría una bici eléctrica.",
+        "slot": "dinero ahorrado",
+        "cue": {
+          "en": "savings (ahorrar)",
+          "ko": "모아 둔 돈(ahorrar)"
+        },
+        "gloss": {
+          "en": "If I had some savings, I'd buy an electric bike.",
+          "ko": "모아 둔 돈이 있으면 전기 자전거를 살 텐데."
+        }
+      },
+      {
+        "text": "Me iría a vivir al campo si tuviera trabajo allí.",
+        "slot": "trabajo allí",
+        "cue": {
+          "en": "a job there",
+          "ko": "거기 일자리"
+        },
+        "gloss": {
+          "en": "I'd move to the countryside if I had a job there.",
+          "ko": "거기 일자리가 있다면 시골로 이사 갈 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-06",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Aunque ___, …",
+    "core": [
+      "Aunque",
+      "aunque"
+    ],
+    "meaning": {
+      "en": "Conceding: Even if / although ___ (subjunctive = even if, indicative = although).",
+      "ko": "양보하기: ___해도/~이지만(aunque + 접속법·직설법)."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [
+      "aunque"
+    ],
+    "examples": [
+      {
+        "text": "Aunque llueva, vamos a salir a correr.",
+        "slot": "llueva",
+        "cue": {
+          "en": "it rains (llover)",
+          "ko": "비가 오다(llover)"
+        },
+        "gloss": {
+          "en": "Even if it rains, we're going out for a run.",
+          "ko": "비가 와도 달리러 나갈 거야."
+        }
+      },
+      {
+        "text": "Aunque estaba cansada, terminó el informe.",
+        "slot": "estaba cansada",
+        "cue": {
+          "en": "she was tired (estar cansada)",
+          "ko": "피곤했다(estar cansada)"
+        },
+        "gloss": {
+          "en": "Although she was tired, she finished the report.",
+          "ko": "피곤했지만 그녀는 보고서를 끝냈다."
+        }
+      },
+      {
+        "text": "Voy a ir a la fiesta aunque no conozca a nadie.",
+        "slot": "no conozca a nadie",
+        "cue": {
+          "en": "I don't know anyone (conocer)",
+          "ko": "아는 사람이 없다(conocer)"
+        },
+        "gloss": {
+          "en": "I'm going to the party even if I don't know anyone.",
+          "ko": "아는 사람이 없어도 파티에 갈 거예요."
+        }
+      },
+      {
+        "text": "Aunque el piso es pequeño, tiene mucha luz.",
+        "slot": "el piso es pequeño",
+        "cue": {
+          "en": "the flat is small",
+          "ko": "집이 작다"
+        },
+        "gloss": {
+          "en": "Although the flat is small, it gets a lot of light.",
+          "ko": "집은 작지만 햇빛이 잘 들어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-07",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "A pesar de ___, …",
+    "core": [
+      "A pesar de",
+      "a pesar de"
+    ],
+    "meaning": {
+      "en": "Conceding: Despite ___ (+ noun or infinitive).",
+      "ko": "양보하기: ___에도 불구하고(+ 명사·동사원형)."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [
+      "a pesar de"
+    ],
+    "examples": [
+      {
+        "text": "A pesar de la lluvia, llegamos a tiempo.",
+        "slot": "la lluvia",
+        "cue": {
+          "en": "the rain",
+          "ko": "비"
+        },
+        "gloss": {
+          "en": "Despite the rain, we arrived on time.",
+          "ko": "비가 왔는데도 제시간에 도착했어요."
+        }
+      },
+      {
+        "text": "A pesar de estar muy cansado, fue a la reunión.",
+        "slot": "estar muy cansado",
+        "cue": {
+          "en": "being very tired (estar cansado)",
+          "ko": "아주 피곤하다(estar cansado)"
+        },
+        "gloss": {
+          "en": "Despite being very tired, he went to the meeting.",
+          "ko": "아주 피곤했는데도 그는 회의에 갔다."
+        }
+      },
+      {
+        "text": "Compramos la casa a pesar de su precio.",
+        "slot": "su precio",
+        "cue": {
+          "en": "its price",
+          "ko": "그 가격"
+        },
+        "gloss": {
+          "en": "We bought the house despite its price.",
+          "ko": "가격이 비쌌는데도 그 집을 샀어요."
+        }
+      },
+      {
+        "text": "A pesar de todo, fue un buen año.",
+        "slot": "todo",
+        "cue": {
+          "en": "everything",
+          "ko": "모든 일"
+        },
+        "gloss": {
+          "en": "Despite everything, it was a good year.",
+          "ko": "그 모든 일에도 불구하고 좋은 한 해였어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-08",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Me dijo que ___.",
+    "core": [
+      "Me dijo que",
+      "me dijo que"
+    ],
+    "meaning": {
+      "en": "Reporting what someone said: He/She told me (that) ___ (tenses shift back).",
+      "ko": "말 전하기: ___라고 했어요(간접화법, 시제가 한 칸 뒤로)."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Me dijo que llegaría tarde por el tráfico.",
+        "slot": "llegaría tarde por el tráfico",
+        "cue": {
+          "en": "he'd be late because of the traffic (llegar tarde)",
+          "ko": "차가 막혀 늦을 것이다(llegar tarde)"
+        },
+        "gloss": {
+          "en": "He told me he'd be late because of the traffic.",
+          "ko": "차가 막혀서 늦을 거라고 했어요."
+        }
+      },
+      {
+        "text": "Me dijo que ya había enviado el paquete.",
+        "slot": "ya había enviado el paquete",
+        "cue": {
+          "en": "she had already sent the parcel (enviar)",
+          "ko": "이미 소포를 보냈다(enviar)"
+        },
+        "gloss": {
+          "en": "She told me she had already sent the parcel.",
+          "ko": "이미 소포를 보냈다고 했어요."
+        }
+      },
+      {
+        "text": "Mi hermana me dijo que estaba pensando en mudarse.",
+        "slot": "estaba pensando en mudarse",
+        "cue": {
+          "en": "she was thinking of moving (pensar en)",
+          "ko": "이사할까 생각 중이었다(pensar en)"
+        },
+        "gloss": {
+          "en": "My sister told me she was thinking of moving.",
+          "ko": "언니가 이사할까 생각 중이라고 했어요."
+        }
+      },
+      {
+        "text": "El médico me dijo que descansara unos días.",
+        "slot": "descansara unos días",
+        "cue": {
+          "en": "to rest for a few days (descansar)",
+          "ko": "며칠 쉬라(descansar)"
+        },
+        "gloss": {
+          "en": "The doctor told me to rest for a few days.",
+          "ko": "의사가 며칠 쉬라고 했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-09",
+    "stage": 4,
+    "fn": "hearsay",
+    "pattern": "Se dice que ___.",
+    "core": [
+      "Se dice que",
+      "se dice que"
+    ],
+    "meaning": {
+      "en": "Passing on rumours: People say / It's said that ___ (impersonal se).",
+      "ko": "들은 말 전하기: ___라고들 해요(무인칭 se)."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Se dice que van a subir los precios.",
+        "slot": "van a subir los precios",
+        "cue": {
+          "en": "prices are going to go up (subir)",
+          "ko": "물가가 오를 것이다(subir)"
+        },
+        "gloss": {
+          "en": "They say prices are going to go up.",
+          "ko": "물가가 오를 거라고들 해요."
+        }
+      },
+      {
+        "text": "Se dice que este restaurante es el mejor del barrio.",
+        "slot": "este restaurante es el mejor del barrio",
+        "cue": {
+          "en": "this restaurant is the best in the area",
+          "ko": "이 식당이 동네에서 제일 좋다"
+        },
+        "gloss": {
+          "en": "People say this restaurant is the best in the area.",
+          "ko": "이 식당이 동네에서 제일 맛있다고들 해요."
+        }
+      },
+      {
+        "text": "En el pueblo se dice que la casa está encantada.",
+        "slot": "la casa está encantada",
+        "cue": {
+          "en": "the house is haunted (estar encantada)",
+          "ko": "그 집에 귀신이 나온다(estar encantada)"
+        },
+        "gloss": {
+          "en": "In the village, people say the house is haunted.",
+          "ko": "마을에서는 그 집에 귀신이 나온다고들 해요."
+        }
+      },
+      {
+        "text": "Se dice que el nuevo director es muy exigente.",
+        "slot": "el nuevo director es muy exigente",
+        "cue": {
+          "en": "the new manager is very demanding",
+          "ko": "새 부장이 아주 깐깐하다"
+        },
+        "gloss": {
+          "en": "Word is the new manager is very demanding.",
+          "ko": "새 부장님이 아주 깐깐하다고들 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-10",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Se espera que ___.",
+    "core": [
+      "Se espera que",
+      "se espera que"
+    ],
+    "meaning": {
+      "en": "Reporting expectations: It is expected that ___ (se + subjunctive).",
+      "ko": "전망 전하기: ___할 것으로 예상돼요(se espera que + 접속법)."
+    },
+    "grammar": [
+      5,
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Se espera que el puente esté listo en primavera.",
+        "slot": "el puente esté listo en primavera",
+        "cue": {
+          "en": "the bridge is ready in spring (estar listo)",
+          "ko": "다리가 봄에 완공되다(estar listo)"
+        },
+        "gloss": {
+          "en": "The bridge is expected to be ready in spring.",
+          "ko": "다리는 봄에 완공될 것으로 예상돼요."
+        }
+      },
+      {
+        "text": "Se espera que mañana bajen las temperaturas.",
+        "slot": "mañana bajen las temperaturas",
+        "cue": {
+          "en": "temperatures drop tomorrow (bajar)",
+          "ko": "내일 기온이 내려가다(bajar)"
+        },
+        "gloss": {
+          "en": "Temperatures are expected to drop tomorrow.",
+          "ko": "내일 기온이 내려갈 것으로 예상돼요."
+        }
+      },
+      {
+        "text": "Según la prensa, se espera que el acuerdo se firme esta semana.",
+        "slot": "el acuerdo se firme esta semana",
+        "cue": {
+          "en": "the deal is signed this week (firmarse)",
+          "ko": "이번 주에 협정이 체결되다(firmarse)"
+        },
+        "gloss": {
+          "en": "According to the press, the deal is expected to be signed this week.",
+          "ko": "언론에 따르면 이번 주에 협정이 체결될 것으로 예상돼요."
+        }
+      },
+      {
+        "text": "Se espera que miles de personas visiten la feria.",
+        "slot": "miles de personas visiten la feria",
+        "cue": {
+          "en": "thousands of people visit the fair (visitar)",
+          "ko": "수천 명이 박람회를 찾다(visitar)"
+        },
+        "gloss": {
+          "en": "Thousands of people are expected to visit the fair.",
+          "ko": "수천 명이 박람회를 찾을 것으로 예상돼요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-11",
+    "stage": 4,
+    "fn": "deadline",
+    "pattern": "En cuanto ___, …",
+    "core": [
+      "En cuanto",
+      "en cuanto"
+    ],
+    "meaning": {
+      "en": "Timing: As soon as ___ (+ subjunctive when it's in the future), …",
+      "ko": "때 말하기: ___하자마자(앞으로의 일이면 접속법)."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "En cuanto llegue a casa, te llamo.",
+        "slot": "llegue a casa",
+        "cue": {
+          "en": "I get home (llegar)",
+          "ko": "집에 도착하다(llegar)"
+        },
+        "gloss": {
+          "en": "As soon as I get home, I'll call you.",
+          "ko": "집에 도착하자마자 전화할게."
+        }
+      },
+      {
+        "text": "En cuanto tengas los datos, mándamelos.",
+        "slot": "tengas los datos",
+        "cue": {
+          "en": "you have the figures (tener)",
+          "ko": "자료가 나오다(tener los datos)"
+        },
+        "gloss": {
+          "en": "As soon as you have the figures, send them to me.",
+          "ko": "자료가 나오는 대로 보내 줘."
+        }
+      },
+      {
+        "text": "Te lo devuelvo en cuanto lo termine.",
+        "slot": "lo termine",
+        "cue": {
+          "en": "I finish it (terminar)",
+          "ko": "다 끝내다(terminar)"
+        },
+        "gloss": {
+          "en": "I'll give it back as soon as I finish it.",
+          "ko": "다 보는 대로 돌려줄게."
+        }
+      },
+      {
+        "text": "En cuanto se entere tu madre, se va a enfadar.",
+        "slot": "se entere tu madre",
+        "cue": {
+          "en": "your mother finds out (enterarse)",
+          "ko": "엄마가 알게 되다(enterarse)"
+        },
+        "gloss": {
+          "en": "As soon as your mother finds out, she's going to be angry.",
+          "ko": "엄마가 아시는 순간 화내실 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-12",
+    "stage": 4,
+    "fn": "time-when",
+    "pattern": "Cuando tengas ___, …",
+    "core": [
+      "Cuando tengas",
+      "cuando tengas"
+    ],
+    "meaning": {
+      "en": "Talking about a future moment: When you have ___ (cuando + subjunctive), …",
+      "ko": "때 말하기: ___이 생기면(cuando + 접속법)."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Cuando tengas un momento, ¿me ayudas con esto?",
+        "slot": "un momento",
+        "cue": {
+          "en": "a moment",
+          "ko": "잠깐 시간"
+        },
+        "gloss": {
+          "en": "When you have a moment, can you help me with this?",
+          "ko": "잠깐 시간 날 때 이것 좀 도와줄래?"
+        }
+      },
+      {
+        "text": "Cuando tengas noticias, avísame.",
+        "slot": "noticias",
+        "cue": {
+          "en": "news",
+          "ko": "소식"
+        },
+        "gloss": {
+          "en": "When you have news, let me know.",
+          "ko": "소식 있으면 알려 줘."
+        }
+      },
+      {
+        "text": "Llámame cuando tengas tiempo libre.",
+        "slot": "tiempo libre",
+        "cue": {
+          "en": "free time",
+          "ko": "여유 시간"
+        },
+        "gloss": {
+          "en": "Call me when you have some free time.",
+          "ko": "여유 생기면 전화해."
+        }
+      },
+      {
+        "text": "Cuando tengas el presupuesto, lo revisamos juntos.",
+        "slot": "el presupuesto",
+        "cue": {
+          "en": "the budget",
+          "ko": "예산안"
+        },
+        "gloss": {
+          "en": "When you have the budget, we'll go over it together.",
+          "ko": "예산안 나오면 같이 검토하자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-13",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "Por un lado, ___.",
+    "core": [
+      "Por un lado",
+      "por un lado"
+    ],
+    "meaning": {
+      "en": "Weighing sides: On the one hand, ___.",
+      "ko": "장단점 따지기: 한편으로는 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "por un lado"
+    ],
+    "examples": [
+      {
+        "text": "Por un lado, el trabajo está muy bien pagado.",
+        "slot": "el trabajo está muy bien pagado",
+        "cue": {
+          "en": "the job is very well paid",
+          "ko": "보수가 아주 좋다"
+        },
+        "gloss": {
+          "en": "On the one hand, the job is very well paid.",
+          "ko": "한편으로는 보수가 아주 좋아요."
+        }
+      },
+      {
+        "text": "Por un lado, vivir en el centro es muy cómodo.",
+        "slot": "vivir en el centro es muy cómodo",
+        "cue": {
+          "en": "living in the centre is very convenient",
+          "ko": "시내에 사는 게 아주 편하다"
+        },
+        "gloss": {
+          "en": "On the one hand, living in the centre is very convenient.",
+          "ko": "한편으로는 시내에 사는 게 아주 편해요."
+        }
+      },
+      {
+        "text": "Por un lado, me apetece mucho el viaje; por otro, no tengo vacaciones.",
+        "slot": "me apetece mucho el viaje",
+        "cue": {
+          "en": "I really fancy the trip (apetecer)",
+          "ko": "여행이 정말 끌리다(apetecer)"
+        },
+        "gloss": {
+          "en": "On the one hand, I really fancy the trip; on the other, I have no holidays left.",
+          "ko": "한편으로는 여행이 정말 끌리지만, 다른 한편으로는 휴가가 없어요."
+        }
+      },
+      {
+        "text": "Es verdad que, por un lado, las redes nos conectan.",
+        "slot": "las redes nos conectan",
+        "cue": {
+          "en": "social media connects us (conectar)",
+          "ko": "SNS가 우리를 이어 준다(conectar)"
+        },
+        "gloss": {
+          "en": "It's true that, on the one hand, social media connects us.",
+          "ko": "한편으로는 SNS가 우리를 이어 주는 건 사실이에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-14",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "Por otro lado, ___.",
+    "core": [
+      "Por otro lado",
+      "por otro lado"
+    ],
+    "meaning": {
+      "en": "Weighing sides: On the other hand, ___.",
+      "ko": "장단점 따지기: 다른 한편으로는 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "por otro lado"
+    ],
+    "examples": [
+      {
+        "text": "Por otro lado, el alquiler es carísimo.",
+        "slot": "el alquiler es carísimo",
+        "cue": {
+          "en": "the rent is very expensive",
+          "ko": "월세가 아주 비싸다"
+        },
+        "gloss": {
+          "en": "On the other hand, the rent is very expensive.",
+          "ko": "다른 한편으로는 월세가 너무 비싸요."
+        }
+      },
+      {
+        "text": "Por otro lado, tendrías que mudarte lejos de tu familia.",
+        "slot": "tendrías que mudarte lejos de tu familia",
+        "cue": {
+          "en": "you'd have to move away from your family (mudarse)",
+          "ko": "가족과 멀리 이사해야 한다(mudarse)"
+        },
+        "gloss": {
+          "en": "On the other hand, you'd have to move away from your family.",
+          "ko": "다른 한편으로는 가족과 멀리 떨어져 이사해야 하잖아."
+        }
+      },
+      {
+        "text": "Es barato; por otro lado, la calidad deja mucho que desear.",
+        "slot": "la calidad deja mucho que desear",
+        "cue": {
+          "en": "the quality leaves a lot to be desired",
+          "ko": "품질이 많이 아쉽다"
+        },
+        "gloss": {
+          "en": "It's cheap; on the other hand, the quality leaves a lot to be desired.",
+          "ko": "싸긴 한데, 다른 한편으로는 품질이 많이 아쉬워요."
+        }
+      },
+      {
+        "text": "Por otro lado, nadie nos obliga a decidir hoy.",
+        "slot": "nadie nos obliga a decidir hoy",
+        "cue": {
+          "en": "nobody is forcing us to decide today (obligar)",
+          "ko": "오늘 꼭 정할 필요는 없다(obligar)"
+        },
+        "gloss": {
+          "en": "On the other hand, nobody is forcing us to decide today.",
+          "ko": "다른 한편으로는 오늘 꼭 정해야 하는 것도 아니잖아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-15",
+    "stage": 4,
+    "fn": "compare",
+    "pattern": "En cambio, ___.",
+    "core": [
+      "En cambio",
+      "en cambio"
+    ],
+    "meaning": {
+      "en": "Contrasting: In contrast / Whereas ___.",
+      "ko": "대조하기: 반면에 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "en cambio"
+    ],
+    "examples": [
+      {
+        "text": "Mi hermano es muy ordenado; en cambio, yo soy un desastre.",
+        "slot": "yo soy un desastre",
+        "cue": {
+          "en": "I'm a mess",
+          "ko": "나는 엉망이다"
+        },
+        "gloss": {
+          "en": "My brother is very tidy; I, on the other hand, am a mess.",
+          "ko": "형은 아주 깔끔한데, 반면에 나는 엉망이야."
+        }
+      },
+      {
+        "text": "El tren es caro. En cambio, el autobús sale baratísimo.",
+        "slot": "el autobús sale baratísimo",
+        "cue": {
+          "en": "the bus works out really cheap (salir barato)",
+          "ko": "버스는 아주 싸게 먹힌다(salir barato)"
+        },
+        "gloss": {
+          "en": "The train is expensive. The bus, in contrast, works out really cheap.",
+          "ko": "기차는 비싸요. 반면에 버스는 아주 싸요."
+        }
+      },
+      {
+        "text": "En casa me distraigo; en cambio, en la biblioteca me concentro.",
+        "slot": "en la biblioteca me concentro",
+        "cue": {
+          "en": "I concentrate in the library (concentrarse)",
+          "ko": "도서관에서는 집중이 된다(concentrarse)"
+        },
+        "gloss": {
+          "en": "At home I get distracted, whereas in the library I concentrate.",
+          "ko": "집에서는 딴짓을 하는데, 반면에 도서관에서는 집중이 돼요."
+        }
+      },
+      {
+        "text": "Antes leía mucho. En cambio, ahora solo miro el móvil.",
+        "slot": "ahora solo miro el móvil",
+        "cue": {
+          "en": "now I only look at my phone (mirar)",
+          "ko": "요즘은 휴대폰만 본다(mirar)"
+        },
+        "gloss": {
+          "en": "I used to read a lot. Now, in contrast, I just look at my phone.",
+          "ko": "예전엔 책을 많이 읽었어요. 반면에 요즘은 휴대폰만 봐요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-16",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "Por lo tanto, ___.",
+    "core": [
+      "Por lo tanto",
+      "por lo tanto"
+    ],
+    "meaning": {
+      "en": "Drawing a conclusion: Therefore, ___.",
+      "ko": "결론 내기: 그러므로 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "por lo tanto"
+    ],
+    "examples": [
+      {
+        "text": "El vuelo sale muy temprano; por lo tanto, deberíamos dormir en el aeropuerto.",
+        "slot": "deberíamos dormir en el aeropuerto",
+        "cue": {
+          "en": "we should sleep at the airport (deber)",
+          "ko": "공항에서 자야 한다(deber)"
+        },
+        "gloss": {
+          "en": "The flight leaves very early; therefore, we should sleep at the airport.",
+          "ko": "비행기가 아주 일찍 떠나요. 그러니 공항에서 자는 게 좋겠어요."
+        }
+      },
+      {
+        "text": "No hay suficientes datos. Por lo tanto, no podemos sacar conclusiones.",
+        "slot": "no podemos sacar conclusiones",
+        "cue": {
+          "en": "we can't draw conclusions (sacar)",
+          "ko": "결론을 낼 수 없다(sacar conclusiones)"
+        },
+        "gloss": {
+          "en": "There isn't enough data. Therefore, we can't draw conclusions.",
+          "ko": "자료가 충분하지 않아요. 그러므로 결론을 낼 수 없어요."
+        }
+      },
+      {
+        "text": "La demanda ha crecido y, por lo tanto, necesitamos más personal.",
+        "slot": "necesitamos más personal",
+        "cue": {
+          "en": "we need more staff (necesitar)",
+          "ko": "인력이 더 필요하다(necesitar)"
+        },
+        "gloss": {
+          "en": "Demand has grown and, therefore, we need more staff.",
+          "ko": "수요가 늘었으니 인력이 더 필요해요."
+        }
+      },
+      {
+        "text": "Por lo tanto, propongo retrasar el lanzamiento.",
+        "slot": "propongo retrasar el lanzamiento",
+        "cue": {
+          "en": "I propose delaying the launch (proponer)",
+          "ko": "출시를 미루자고 제안한다(proponer)"
+        },
+        "gloss": {
+          "en": "Therefore, I propose delaying the launch.",
+          "ko": "그러므로 출시를 미루자고 제안합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-17",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "Vale la pena ___.",
+    "core": [
+      "Vale la pena",
+      "vale la pena"
+    ],
+    "meaning": {
+      "en": "Saying something is worth it: It's worth ___ (+ infinitive).",
+      "ko": "가치 말하기: ___할 만해요(+ 동사원형)."
+    },
+    "grammar": [],
+    "expressions": [
+      "vale la pena"
+    ],
+    "examples": [
+      {
+        "text": "Vale la pena visitar el museo.",
+        "slot": "visitar el museo",
+        "cue": {
+          "en": "visit the museum (visitar)",
+          "ko": "박물관에 가 보다(visitar)"
+        },
+        "gloss": {
+          "en": "It's worth visiting the museum.",
+          "ko": "박물관은 가 볼 만해요."
+        }
+      },
+      {
+        "text": "Vale la pena esperar un poco más.",
+        "slot": "esperar un poco más",
+        "cue": {
+          "en": "wait a bit longer (esperar)",
+          "ko": "조금 더 기다리다(esperar)"
+        },
+        "gloss": {
+          "en": "It's worth waiting a bit longer.",
+          "ko": "조금 더 기다릴 만해요."
+        }
+      },
+      {
+        "text": "No sé si vale la pena arreglar este ordenador.",
+        "slot": "arreglar este ordenador",
+        "cue": {
+          "en": "fix this computer (arreglar)",
+          "ko": "이 컴퓨터를 고치다(arreglar)"
+        },
+        "gloss": {
+          "en": "I don't know if it's worth fixing this computer.",
+          "ko": "이 컴퓨터를 고칠 가치가 있는지 모르겠어요."
+        }
+      },
+      {
+        "text": "Creo que vale la pena intentarlo.",
+        "slot": "intentarlo",
+        "cue": {
+          "en": "give it a try (intentar)",
+          "ko": "해 보다(intentar)"
+        },
+        "gloss": {
+          "en": "I think it's worth a try.",
+          "ko": "해 볼 만하다고 생각해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-18",
+    "stage": 4,
+    "fn": "advice-give",
+    "pattern": "Habría que ___.",
+    "core": [
+      "Habría que",
+      "habría que"
+    ],
+    "meaning": {
+      "en": "Suggesting what should be done, impersonally: We'd need to / Someone should ___.",
+      "ko": "제안하기: ___해야 할 거예요(주어 없이)."
+    },
+    "grammar": [],
+    "expressions": [
+      "habría que"
+    ],
+    "examples": [
+      {
+        "text": "Habría que hablar con los vecinos antes.",
+        "slot": "hablar con los vecinos antes",
+        "cue": {
+          "en": "talk to the neighbours first (hablar)",
+          "ko": "먼저 이웃들과 이야기하다(hablar)"
+        },
+        "gloss": {
+          "en": "We'd need to talk to the neighbours first.",
+          "ko": "먼저 이웃들과 이야기해 봐야 할 거예요."
+        }
+      },
+      {
+        "text": "Habría que revisar el contrato con calma.",
+        "slot": "revisar el contrato con calma",
+        "cue": {
+          "en": "go over the contract carefully (revisar)",
+          "ko": "계약서를 차분히 검토하다(revisar)"
+        },
+        "gloss": {
+          "en": "Someone should go over the contract carefully.",
+          "ko": "계약서를 차분히 검토해야 할 것 같아요."
+        }
+      },
+      {
+        "text": "Para ahorrar, habría que cambiar de compañía de luz.",
+        "slot": "cambiar de compañía de luz",
+        "cue": {
+          "en": "switch electricity company (cambiar de)",
+          "ko": "전기 회사를 바꾸다(cambiar de)"
+        },
+        "gloss": {
+          "en": "To save money, we'd need to switch electricity company.",
+          "ko": "아끼려면 전기 회사를 바꿔야 할 거예요."
+        }
+      },
+      {
+        "text": "Habría que pensar en un plan B.",
+        "slot": "pensar en un plan B",
+        "cue": {
+          "en": "think of a plan B (pensar en)",
+          "ko": "대안을 생각하다(pensar en)"
+        },
+        "gloss": {
+          "en": "We should think of a plan B.",
+          "ko": "대안을 생각해 둬야 할 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-19",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "¿Qué te parece si ___?",
+    "core": [
+      "Qué te parece si",
+      "qué te parece si"
+    ],
+    "meaning": {
+      "en": "Proposing a deal: What if ___? / How about ___?",
+      "ko": "조율하며 제안하기: ___하면 어때?"
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "¿Qué te parece si lo dejamos para el lunes?",
+        "slot": "lo dejamos para el lunes",
+        "cue": {
+          "en": "we leave it until Monday (dejar)",
+          "ko": "월요일로 미루다(dejar para)"
+        },
+        "gloss": {
+          "en": "What if we leave it until Monday?",
+          "ko": "월요일로 미루면 어때?"
+        }
+      },
+      {
+        "text": "¿Qué te parece si pagamos a medias?",
+        "slot": "pagamos a medias",
+        "cue": {
+          "en": "we split the cost (pagar a medias)",
+          "ko": "반반 내다(pagar a medias)"
+        },
+        "gloss": {
+          "en": "How about we split it?",
+          "ko": "반반 내면 어때?"
+        }
+      },
+      {
+        "text": "Vale, ¿qué te parece si te mando un borrador primero?",
+        "slot": "te mando un borrador primero",
+        "cue": {
+          "en": "I send you a draft first (mandar)",
+          "ko": "초안을 먼저 보내다(mandar)"
+        },
+        "gloss": {
+          "en": "OK, what if I send you a draft first?",
+          "ko": "좋아, 초안을 먼저 보내면 어때?"
+        }
+      },
+      {
+        "text": "¿Qué te parece si quedamos a mitad de camino?",
+        "slot": "quedamos a mitad de camino",
+        "cue": {
+          "en": "we meet halfway (quedar)",
+          "ko": "중간에서 만나다(quedar)"
+        },
+        "gloss": {
+          "en": "How about we meet halfway?",
+          "ko": "중간에서 만나면 어때?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f4-20",
+    "stage": 4,
+    "fn": "the-more",
+    "pattern": "Cuanto más ___, mejor.",
+    "core": [
+      "Cuanto más",
+      "cuanto más"
+    ],
+    "meaning": {
+      "en": "Saying things grow together: The more ___, the more / the better…",
+      "ko": "~할수록 ~하다: ___할수록 더 ~."
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Cuanto más practicas, más fácil te resulta.",
+        "slot": "practicas",
+        "cue": {
+          "en": "you practise (practicar)",
+          "ko": "연습하다(practicar)"
+        },
+        "gloss": {
+          "en": "The more you practise, the easier it gets.",
+          "ko": "연습할수록 더 쉬워져요."
+        }
+      },
+      {
+        "text": "Cuanto más lo pienso, menos me convence.",
+        "slot": "lo pienso",
+        "cue": {
+          "en": "I think about it (pensar)",
+          "ko": "생각하다(pensar)"
+        },
+        "gloss": {
+          "en": "The more I think about it, the less convinced I am.",
+          "ko": "생각할수록 덜 끌려요."
+        }
+      },
+      {
+        "text": "Cuanto más tarde salgamos, más tráfico habrá.",
+        "slot": "tarde salgamos",
+        "cue": {
+          "en": "we leave late (salir tarde)",
+          "ko": "늦게 출발하다(salir tarde)"
+        },
+        "gloss": {
+          "en": "The later we leave, the more traffic there'll be.",
+          "ko": "늦게 출발할수록 차가 더 막힐 거예요."
+        }
+      },
+      {
+        "text": "El café, cuanto más fuerte, mejor.",
+        "slot": "fuerte",
+        "cue": {
+          "en": "strong",
+          "ko": "진하다"
+        },
+        "gloss": {
+          "en": "Coffee: the stronger, the better.",
+          "ko": "커피는 진할수록 좋아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-01",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "Si lo hubiera sabido, ___.",
+    "core": [
+      "Si lo hubiera sabido",
+      "si lo hubiera sabido"
+    ],
+    "meaning": {
+      "en": "Regretting: If I had known, ___ (+ conditional perfect).",
+      "ko": "아쉬움 말하기: 알았더라면 ___했을 텐데(접속법 과거완료)."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Si lo hubiera sabido, habría venido antes.",
+        "slot": "habría venido antes",
+        "cue": {
+          "en": "I would have come earlier (venir)",
+          "ko": "더 일찍 왔을 것이다(venir)"
+        },
+        "gloss": {
+          "en": "If I had known, I would have come earlier.",
+          "ko": "알았더라면 더 일찍 왔을 텐데."
+        }
+      },
+      {
+        "text": "Si lo hubiera sabido, te habría avisado.",
+        "slot": "te habría avisado",
+        "cue": {
+          "en": "I would have warned you (avisar)",
+          "ko": "너한테 알려 줬을 것이다(avisar)"
+        },
+        "gloss": {
+          "en": "If I had known, I would have told you.",
+          "ko": "알았더라면 너한테 말해 줬을 텐데."
+        }
+      },
+      {
+        "text": "Si lo hubiera sabido, no habría comprado tanta comida.",
+        "slot": "no habría comprado tanta comida",
+        "cue": {
+          "en": "I wouldn't have bought so much food (comprar)",
+          "ko": "음식을 그렇게 많이 사지 않았을 것이다(comprar)"
+        },
+        "gloss": {
+          "en": "If I had known, I wouldn't have bought so much food.",
+          "ko": "알았더라면 음식을 그렇게 많이 안 샀을 텐데."
+        }
+      },
+      {
+        "text": "Pues si lo hubiera sabido, me habría quedado en casa.",
+        "slot": "me habría quedado en casa",
+        "cue": {
+          "en": "I would have stayed home (quedarse)",
+          "ko": "집에 있었을 것이다(quedarse)"
+        },
+        "gloss": {
+          "en": "Well, if I had known, I'd have stayed at home.",
+          "ko": "그럴 줄 알았으면 집에 있었을 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-02",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "Ojalá hubiera ___.",
+    "core": [
+      "Ojalá hubiera",
+      "ojalá hubiera"
+    ],
+    "meaning": {
+      "en": "Regretting the past: I wish I had ___ (+ past participle).",
+      "ko": "후회하기: ___했더라면 좋았을 텐데(ojalá + 접속법 과거완료)."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Ojalá hubiera estudiado más de joven.",
+        "slot": "estudiado más de joven",
+        "cue": {
+          "en": "studied more when young (estudiar)",
+          "ko": "어릴 때 공부를 더 하다(estudiar)"
+        },
+        "gloss": {
+          "en": "I wish I had studied more when I was young.",
+          "ko": "어릴 때 공부를 더 했더라면 좋았을 텐데."
+        }
+      },
+      {
+        "text": "Ojalá hubiera sacado una foto.",
+        "slot": "sacado una foto",
+        "cue": {
+          "en": "taken a photo (sacar)",
+          "ko": "사진을 찍다(sacar una foto)"
+        },
+        "gloss": {
+          "en": "I wish I had taken a photo.",
+          "ko": "사진 한 장 찍어 둘걸."
+        }
+      },
+      {
+        "text": "Ojalá hubiera aceptado aquel trabajo.",
+        "slot": "aceptado aquel trabajo",
+        "cue": {
+          "en": "accepted that job (aceptar)",
+          "ko": "그 일자리를 받아들이다(aceptar)"
+        },
+        "gloss": {
+          "en": "I wish I had taken that job.",
+          "ko": "그 일자리를 받아들였더라면 좋았을 텐데."
+        }
+      },
+      {
+        "text": "Ahora pienso: ojalá hubiera dicho que no.",
+        "slot": "dicho que no",
+        "cue": {
+          "en": "said no (decir)",
+          "ko": "거절하다(decir que no)"
+        },
+        "gloss": {
+          "en": "Now I think: I wish I had said no.",
+          "ko": "지금 생각하면 거절할걸 그랬어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-03",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Quería comentarte ___.",
+    "core": [
+      "Quería comentarte",
+      "quería comentarte"
+    ],
+    "meaning": {
+      "en": "Softening a request to talk: I wanted to mention ___ to you (imperfect sounds gentler).",
+      "ko": "부드럽게 말 꺼내기: ___ 얘기 좀 하고 싶었어(불완료과거로 누그러뜨림)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Quería comentarte algo sobre la reunión de ayer.",
+        "slot": "algo sobre la reunión de ayer",
+        "cue": {
+          "en": "something about yesterday's meeting",
+          "ko": "어제 회의에 관한 것"
+        },
+        "gloss": {
+          "en": "I wanted to mention something about yesterday's meeting.",
+          "ko": "어제 회의 얘기 좀 하고 싶었어."
+        }
+      },
+      {
+        "text": "Quería comentarte una idea que tuve el fin de semana.",
+        "slot": "una idea que tuve el fin de semana",
+        "cue": {
+          "en": "an idea I had at the weekend",
+          "ko": "주말에 떠오른 생각"
+        },
+        "gloss": {
+          "en": "I wanted to tell you about an idea I had at the weekend.",
+          "ko": "주말에 떠오른 생각 하나 얘기하고 싶었어."
+        }
+      },
+      {
+        "text": "Oye, quería comentarte lo del viaje.",
+        "slot": "lo del viaje",
+        "cue": {
+          "en": "the thing about the trip",
+          "ko": "여행 건"
+        },
+        "gloss": {
+          "en": "Hey, I wanted to talk to you about the trip.",
+          "ko": "저기, 여행 건 얘기 좀 하고 싶었어."
+        }
+      },
+      {
+        "text": "Quería comentarte un detallito del contrato.",
+        "slot": "un detallito del contrato",
+        "cue": {
+          "en": "a small detail in the contract (detalle → -ito)",
+          "ko": "계약서의 작은 부분(detalle → -ito)"
+        },
+        "gloss": {
+          "en": "I wanted to mention a tiny detail in the contract.",
+          "ko": "계약서에서 사소한 부분 하나 말하고 싶었어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-04",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Yo diría que ___.",
+    "core": [
+      "Yo diría que",
+      "yo diría que"
+    ],
+    "meaning": {
+      "en": "Softening an opinion: I'd say (that) ___ (conditional).",
+      "ko": "의견 누그러뜨리기: ___인 것 같아요(조건법)."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Yo diría que el problema es la comunicación.",
+        "slot": "el problema es la comunicación",
+        "cue": {
+          "en": "the problem is communication",
+          "ko": "문제는 소통이다"
+        },
+        "gloss": {
+          "en": "I'd say the problem is communication.",
+          "ko": "문제는 소통인 것 같아요."
+        }
+      },
+      {
+        "text": "Yo diría que llegamos a tiempo si salimos ya.",
+        "slot": "llegamos a tiempo si salimos ya",
+        "cue": {
+          "en": "we'll make it if we leave now (llegar a tiempo)",
+          "ko": "지금 나가면 제때 도착한다(llegar a tiempo)"
+        },
+        "gloss": {
+          "en": "I'd say we'll make it if we leave now.",
+          "ko": "지금 나가면 늦지 않을 것 같아요."
+        }
+      },
+      {
+        "text": "Mmm, yo diría que es un poco caro para lo que ofrece.",
+        "slot": "es un poco caro para lo que ofrece",
+        "cue": {
+          "en": "it's a bit expensive for what it offers",
+          "ko": "내용에 비해 좀 비싸다"
+        },
+        "gloss": {
+          "en": "Hmm, I'd say it's a bit pricey for what it offers.",
+          "ko": "음, 내용에 비해 좀 비싼 것 같아요."
+        }
+      },
+      {
+        "text": "Yo diría que no hace falta cambiar nada.",
+        "slot": "no hace falta cambiar nada",
+        "cue": {
+          "en": "there's no need to change anything (hacer falta)",
+          "ko": "아무것도 바꿀 필요 없다(hacer falta)"
+        },
+        "gloss": {
+          "en": "I'd say there's no need to change anything.",
+          "ko": "아무것도 바꿀 필요는 없을 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-05",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Lo que me preocupa es ___.",
+    "core": [
+      "Lo que me preocupa",
+      "lo que me preocupa"
+    ],
+    "meaning": {
+      "en": "Putting the focus on a concern: What worries me is ___.",
+      "ko": "강조하기: 내가 걱정하는 건 ___예요(lo que… es)."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Lo que me preocupa es el plazo.",
+        "slot": "el plazo",
+        "cue": {
+          "en": "the deadline",
+          "ko": "마감"
+        },
+        "gloss": {
+          "en": "What worries me is the deadline.",
+          "ko": "제가 걱정하는 건 마감이에요."
+        }
+      },
+      {
+        "text": "Lo que me preocupa es que nadie haya contestado.",
+        "slot": "que nadie haya contestado",
+        "cue": {
+          "en": "that nobody has answered (contestar)",
+          "ko": "아무도 답하지 않았다(contestar)"
+        },
+        "gloss": {
+          "en": "What worries me is that nobody has replied.",
+          "ko": "걱정되는 건 아무도 답이 없다는 거예요."
+        }
+      },
+      {
+        "text": "Sinceramente, lo que me preocupa es el coste.",
+        "slot": "el coste",
+        "cue": {
+          "en": "the cost",
+          "ko": "비용"
+        },
+        "gloss": {
+          "en": "Honestly, what worries me is the cost.",
+          "ko": "솔직히 제가 걱정하는 건 비용이에요."
+        }
+      },
+      {
+        "text": "Lo que me preocupa es cómo se lo va a tomar el equipo.",
+        "slot": "cómo se lo va a tomar el equipo",
+        "cue": {
+          "en": "how the team will take it (tomárselo)",
+          "ko": "팀이 어떻게 받아들일지(tomárselo)"
+        },
+        "gloss": {
+          "en": "What worries me is how the team will take it.",
+          "ko": "걱정되는 건 팀이 그걸 어떻게 받아들일지예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-06",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Fuiste tú quien ___.",
+    "core": [
+      "Fuiste tú quien",
+      "fuiste tú quien"
+    ],
+    "meaning": {
+      "en": "Emphasising who did it: It was you who ___.",
+      "ko": "강조하기: ___한 건 바로 너야(es… quien)."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Fuiste tú quien lo propuso.",
+        "slot": "lo propuso",
+        "cue": {
+          "en": "suggested it (proponer)",
+          "ko": "그걸 제안하다(proponer)"
+        },
+        "gloss": {
+          "en": "It was you who suggested it.",
+          "ko": "그걸 제안한 건 바로 너야."
+        }
+      },
+      {
+        "text": "Fuiste tú quien me recomendó este libro.",
+        "slot": "me recomendó este libro",
+        "cue": {
+          "en": "recommended this book to me (recomendar)",
+          "ko": "이 책을 추천하다(recomendar)"
+        },
+        "gloss": {
+          "en": "It was you who recommended this book to me.",
+          "ko": "이 책을 추천해 준 건 너였잖아."
+        }
+      },
+      {
+        "text": "Fuiste tú quien dijo que no hacía falta reservar.",
+        "slot": "dijo que no hacía falta reservar",
+        "cue": {
+          "en": "said there was no need to book (decir)",
+          "ko": "예약할 필요 없다고 하다(decir)"
+        },
+        "gloss": {
+          "en": "It was you who said there was no need to book.",
+          "ko": "예약 안 해도 된다고 한 건 너였어."
+        }
+      },
+      {
+        "text": "Al final fuiste tú quien tuvo razón.",
+        "slot": "tuvo razón",
+        "cue": {
+          "en": "was right (tener razón)",
+          "ko": "옳았다(tener razón)"
+        },
+        "gloss": {
+          "en": "In the end, it was you who was right.",
+          "ko": "결국 옳았던 건 너였어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-07",
+    "stage": 5,
+    "fn": "want",
+    "pattern": "Busco a alguien que ___.",
+    "core": [
+      "Busco a alguien que",
+      "busco a alguien que"
+    ],
+    "meaning": {
+      "en": "Describing someone you need but don't know yet: I'm looking for someone who ___ (+ subjunctive).",
+      "ko": "찾는 사람 말하기: ___하는 사람을 찾아요(정해지지 않은 사람 → 접속법)."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Busco a alguien que sepa de diseño.",
+        "slot": "sepa de diseño",
+        "cue": {
+          "en": "knows about design (saber de)",
+          "ko": "디자인을 알다(saber de)"
+        },
+        "gloss": {
+          "en": "I'm looking for someone who knows about design.",
+          "ko": "디자인을 아는 사람을 찾고 있어요."
+        }
+      },
+      {
+        "text": "Busco a alguien que hable alemán.",
+        "slot": "hable alemán",
+        "cue": {
+          "en": "speaks German (hablar)",
+          "ko": "독일어를 하다(hablar)"
+        },
+        "gloss": {
+          "en": "I'm looking for someone who speaks German.",
+          "ko": "독일어를 하는 사람을 찾아요."
+        }
+      },
+      {
+        "text": "Busco a alguien que pueda cuidar al perro en agosto.",
+        "slot": "pueda cuidar al perro en agosto",
+        "cue": {
+          "en": "can look after the dog in August (poder)",
+          "ko": "팔월에 개를 돌봐 줄 수 있다(poder)"
+        },
+        "gloss": {
+          "en": "I'm looking for someone who can look after the dog in August.",
+          "ko": "팔월에 개를 돌봐 줄 사람을 찾고 있어요."
+        }
+      },
+      {
+        "text": "Para el proyecto, busco a alguien que tenga experiencia en ventas.",
+        "slot": "tenga experiencia en ventas",
+        "cue": {
+          "en": "has sales experience (tener)",
+          "ko": "영업 경험이 있다(tener)"
+        },
+        "gloss": {
+          "en": "For the project, I'm looking for someone with sales experience.",
+          "ko": "이 프로젝트에는 영업 경험이 있는 사람을 찾고 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-08",
+    "stage": 5,
+    "fn": "ask-have",
+    "pattern": "¿Hay alguien que ___?",
+    "core": [
+      "Hay alguien que",
+      "hay alguien que"
+    ],
+    "meaning": {
+      "en": "Asking if anyone fits: Is there anyone who ___? (+ subjunctive)",
+      "ko": "있는지 묻기: ___하는 사람 있어요?(접속법)."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "¿Hay alguien que tenga un cargador?",
+        "slot": "tenga un cargador",
+        "cue": {
+          "en": "has a charger (tener)",
+          "ko": "충전기가 있다(tener)"
+        },
+        "gloss": {
+          "en": "Does anyone have a charger?",
+          "ko": "충전기 있는 사람 있어요?"
+        }
+      },
+      {
+        "text": "¿Hay alguien que sepa cocinar paella?",
+        "slot": "sepa cocinar paella",
+        "cue": {
+          "en": "knows how to cook paella (saber)",
+          "ko": "파에야를 할 줄 알다(saber)"
+        },
+        "gloss": {
+          "en": "Is there anyone who can cook paella?",
+          "ko": "파에야 만들 줄 아는 사람 있어요?"
+        }
+      },
+      {
+        "text": "¿Hay alguien que quiera más café?",
+        "slot": "quiera más café",
+        "cue": {
+          "en": "wants more coffee (querer)",
+          "ko": "커피를 더 원하다(querer)"
+        },
+        "gloss": {
+          "en": "Does anyone want more coffee?",
+          "ko": "커피 더 드실 분 있어요?"
+        }
+      },
+      {
+        "text": "Pregunta si hay alguien que pueda llevarnos.",
+        "slot": "pueda llevarnos",
+        "cue": {
+          "en": "can give us a lift (poder llevar)",
+          "ko": "우리를 태워 줄 수 있다(poder llevar)"
+        },
+        "gloss": {
+          "en": "Ask if there's anyone who can give us a lift.",
+          "ko": "우리 태워 줄 수 있는 사람 있는지 물어봐."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-09",
+    "stage": 5,
+    "fn": "complain",
+    "pattern": "No hay nadie que ___.",
+    "core": [
+      "No hay nadie que",
+      "no hay nadie que"
+    ],
+    "meaning": {
+      "en": "Saying nobody fits: There's nobody who ___ (+ subjunctive).",
+      "ko": "아무도 없다고 말하기: ___하는 사람이 아무도 없어요(접속법)."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "No hay nadie que entienda este formulario.",
+        "slot": "entienda este formulario",
+        "cue": {
+          "en": "understands this form (entender)",
+          "ko": "이 서류를 이해하다(entender)"
+        },
+        "gloss": {
+          "en": "Nobody understands this form.",
+          "ko": "이 서류를 이해하는 사람이 아무도 없어요."
+        }
+      },
+      {
+        "text": "No hay nadie que cocine como mi abuela.",
+        "slot": "cocine como mi abuela",
+        "cue": {
+          "en": "cooks like my grandmother (cocinar)",
+          "ko": "우리 할머니처럼 요리하다(cocinar)"
+        },
+        "gloss": {
+          "en": "Nobody cooks like my grandmother.",
+          "ko": "우리 할머니만큼 요리하는 사람은 없어요."
+        }
+      },
+      {
+        "text": "En esta oficina no hay nadie que conteste al teléfono.",
+        "slot": "conteste al teléfono",
+        "cue": {
+          "en": "answers the phone (contestar)",
+          "ko": "전화를 받다(contestar)"
+        },
+        "gloss": {
+          "en": "In this office there's nobody who answers the phone.",
+          "ko": "이 사무실엔 전화 받는 사람이 아무도 없어요."
+        }
+      },
+      {
+        "text": "No hay nadie que quiera trabajar los domingos.",
+        "slot": "quiera trabajar los domingos",
+        "cue": {
+          "en": "wants to work on Sundays (querer)",
+          "ko": "일요일에 일하고 싶어 하다(querer)"
+        },
+        "gloss": {
+          "en": "Nobody wants to work on Sundays.",
+          "ko": "일요일에 일하고 싶은 사람은 아무도 없어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-10",
+    "stage": 5,
+    "fn": "formal-request",
+    "pattern": "Le agradecería que ___.",
+    "core": [
+      "Le agradecería que",
+      "le agradecería que"
+    ],
+    "meaning": {
+      "en": "Formal request: I would be grateful if you ___ (usted + imperfect subjunctive).",
+      "ko": "격식 있게 부탁하기: ___해 주시면 감사하겠습니다(usted + 접속법 과거)."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "le agradecería que"
+    ],
+    "examples": [
+      {
+        "text": "Le agradecería que me enviara la documentación cuanto antes.",
+        "slot": "me enviara la documentación cuanto antes",
+        "cue": {
+          "en": "send me the documents as soon as possible (enviar)",
+          "ko": "서류를 되도록 빨리 보내다(enviar)"
+        },
+        "gloss": {
+          "en": "I would be grateful if you sent me the documents as soon as possible.",
+          "ko": "서류를 되도록 빨리 보내 주시면 감사하겠습니다."
+        }
+      },
+      {
+        "text": "Le agradecería que me confirmara la cita por correo.",
+        "slot": "me confirmara la cita por correo",
+        "cue": {
+          "en": "confirm the appointment by email (confirmar)",
+          "ko": "예약을 메일로 확인해 주다(confirmar)"
+        },
+        "gloss": {
+          "en": "I would be grateful if you confirmed the appointment by email.",
+          "ko": "예약을 메일로 확인해 주시면 감사하겠습니다."
+        }
+      },
+      {
+        "text": "Le agradecería que revisara mi solicitud.",
+        "slot": "revisara mi solicitud",
+        "cue": {
+          "en": "review my application (revisar)",
+          "ko": "제 신청서를 검토하다(revisar)"
+        },
+        "gloss": {
+          "en": "I would be grateful if you reviewed my application.",
+          "ko": "제 신청서를 검토해 주시면 감사하겠습니다."
+        }
+      },
+      {
+        "text": "Señora Ruiz, le agradecería que nos llamara mañana.",
+        "slot": "nos llamara mañana",
+        "cue": {
+          "en": "call us tomorrow (llamar)",
+          "ko": "내일 전화 주다(llamar)"
+        },
+        "gloss": {
+          "en": "Mrs Ruiz, I would be grateful if you called us tomorrow.",
+          "ko": "루이스 님, 내일 전화 주시면 감사하겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-11",
+    "stage": 5,
+    "fn": "formal-request",
+    "pattern": "¿Sería posible que ___?",
+    "core": [
+      "Sería posible que",
+      "sería posible que"
+    ],
+    "meaning": {
+      "en": "Formal request: Would it be possible for you to ___? (+ imperfect subjunctive)",
+      "ko": "격식 있게 부탁하기: ___해 주실 수 있을까요?(접속법 과거)."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "¿Sería posible que me cambiara la cita?",
+        "slot": "me cambiara la cita",
+        "cue": {
+          "en": "change my appointment (cambiar)",
+          "ko": "예약을 바꿔 주다(cambiar)"
+        },
+        "gloss": {
+          "en": "Would it be possible to change my appointment?",
+          "ko": "예약을 바꿔 주실 수 있을까요?"
+        }
+      },
+      {
+        "text": "¿Sería posible que lo comprobara otra vez?",
+        "slot": "lo comprobara otra vez",
+        "cue": {
+          "en": "check it again (comprobar)",
+          "ko": "다시 확인하다(comprobar)"
+        },
+        "gloss": {
+          "en": "Would it be possible for you to check it again?",
+          "ko": "다시 한번 확인해 주실 수 있을까요?"
+        }
+      },
+      {
+        "text": "¿Sería posible que habláramos en persona?",
+        "slot": "habláramos en persona",
+        "cue": {
+          "en": "we talk in person (hablar)",
+          "ko": "직접 만나 이야기하다(hablar)"
+        },
+        "gloss": {
+          "en": "Would it be possible for us to talk in person?",
+          "ko": "직접 만나서 이야기할 수 있을까요?"
+        }
+      },
+      {
+        "text": "Quería saber si sería posible que me dieran una prórroga.",
+        "slot": "me dieran una prórroga",
+        "cue": {
+          "en": "give me an extension (dar)",
+          "ko": "기한을 연장해 주다(dar una prórroga)"
+        },
+        "gloss": {
+          "en": "I wanted to know if it would be possible to get an extension.",
+          "ko": "기한을 연장해 주실 수 있는지 여쭤보고 싶었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-12",
+    "stage": 5,
+    "fn": "formal-request",
+    "pattern": "¿Le importaría ___?",
+    "core": [
+      "Le importaría",
+      "le importaría"
+    ],
+    "meaning": {
+      "en": "Asking formally: Would you mind ___? (usted + infinitive)",
+      "ko": "격식 있게 부탁하기: ___해 주시겠어요?(usted + 동사원형)."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "¿Le importaría cerrar la ventana?",
+        "slot": "cerrar la ventana",
+        "cue": {
+          "en": "close the window (cerrar)",
+          "ko": "창문을 닫다(cerrar)"
+        },
+        "gloss": {
+          "en": "Would you mind closing the window?",
+          "ko": "창문 좀 닫아 주시겠어요?"
+        }
+      },
+      {
+        "text": "¿Le importaría repetir su apellido?",
+        "slot": "repetir su apellido",
+        "cue": {
+          "en": "repeat your surname (repetir)",
+          "ko": "성을 다시 말하다(repetir)"
+        },
+        "gloss": {
+          "en": "Would you mind repeating your surname?",
+          "ko": "성을 다시 한번 말씀해 주시겠어요?"
+        }
+      },
+      {
+        "text": "Perdone, ¿le importaría bajar un poco la música?",
+        "slot": "bajar un poco la música",
+        "cue": {
+          "en": "turn the music down a bit (bajar)",
+          "ko": "음악 소리를 좀 줄이다(bajar)"
+        },
+        "gloss": {
+          "en": "Excuse me, would you mind turning the music down a bit?",
+          "ko": "실례지만 음악 소리 좀 줄여 주시겠어요?"
+        }
+      },
+      {
+        "text": "¿Le importaría esperar un momentito?",
+        "slot": "esperar un momentito",
+        "cue": {
+          "en": "wait a moment (esperar)",
+          "ko": "잠깐 기다리다(esperar)"
+        },
+        "gloss": {
+          "en": "Would you mind waiting just a moment?",
+          "ko": "잠깐만 기다려 주시겠어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-13",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Es un ___ de nada.",
+    "core": [
+      "de nada"
+    ],
+    "meaning": {
+      "en": "Playing something down with a diminutive: It's just a tiny ___ (-ito / -ita).",
+      "ko": "축소사로 별것 아니게 말하기: 아주 작은 ___일 뿐이에요(-ito/-ita)."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Es un golpecito de nada.",
+        "slot": "golpecito",
+        "cue": {
+          "en": "a little bump (golpe + -ito)",
+          "ko": "살짝 부딪힘(golpe + -ito)"
+        },
+        "gloss": {
+          "en": "It's just a tiny bump.",
+          "ko": "살짝 부딪힌 것뿐이에요."
+        }
+      },
+      {
+        "text": "Tranquila, es un cortecito de nada.",
+        "slot": "cortecito",
+        "cue": {
+          "en": "a little cut (corte + -ito)",
+          "ko": "작은 상처(corte + -ito)"
+        },
+        "gloss": {
+          "en": "Don't worry, it's just a tiny cut.",
+          "ko": "걱정 마, 살짝 베인 거야."
+        }
+      },
+      {
+        "text": "Fue un sustito de nada.",
+        "slot": "sustito",
+        "cue": {
+          "en": "a little fright (susto + -ito)",
+          "ko": "살짝 놀람(susto + -ito)"
+        },
+        "gloss": {
+          "en": "It was just a little scare.",
+          "ko": "살짝 놀란 것뿐이었어요."
+        }
+      },
+      {
+        "text": "Solo es un regalito de nada.",
+        "slot": "regalito",
+        "cue": {
+          "en": "a little gift (regalo + -ito)",
+          "ko": "작은 선물(regalo + -ito)"
+        },
+        "gloss": {
+          "en": "It's only a little something.",
+          "ko": "그냥 작은 선물이에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-14",
+    "stage": 5,
+    "fn": "clarify",
+    "pattern": "O sea, ___.",
+    "core": [
+      "O sea",
+      "o sea"
+    ],
+    "meaning": {
+      "en": "Clarifying or summing up: I mean / So, ___.",
+      "ko": "뜻 정리하기: 그러니까 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "o sea"
+    ],
+    "examples": [
+      {
+        "text": "O sea, que al final no vienes, ¿no?",
+        "slot": "que al final no vienes",
+        "cue": {
+          "en": "that you're not coming in the end (venir)",
+          "ko": "결국 안 온다(venir)"
+        },
+        "gloss": {
+          "en": "So you're not coming in the end, right?",
+          "ko": "그러니까 결국 안 온다는 거지?"
+        }
+      },
+      {
+        "text": "Llegó a las once. O sea, tarde, como siempre.",
+        "slot": "tarde, como siempre",
+        "cue": {
+          "en": "late, as always",
+          "ko": "늘 그렇듯 늦게"
+        },
+        "gloss": {
+          "en": "He arrived at eleven. In other words, late, as always.",
+          "ko": "열한 시에 왔어. 그러니까 늘 그렇듯 늦게."
+        }
+      },
+      {
+        "text": "No me gusta mucho; o sea, no está mal, pero no es lo mío.",
+        "slot": "no está mal, pero no es lo mío",
+        "cue": {
+          "en": "it's not bad, but it's not my thing",
+          "ko": "나쁘진 않은데 내 취향은 아니다"
+        },
+        "gloss": {
+          "en": "I don't love it; I mean, it's not bad, but it's not my thing.",
+          "ko": "별로야. 그러니까 나쁘진 않은데 내 취향은 아니야."
+        }
+      },
+      {
+        "text": "O sea, lo que quieres decir es que no hay presupuesto.",
+        "slot": "lo que quieres decir es que no hay presupuesto",
+        "cue": {
+          "en": "what you mean is there's no budget",
+          "ko": "예산이 없다는 말이다"
+        },
+        "gloss": {
+          "en": "So what you're saying is there's no budget.",
+          "ko": "그러니까 예산이 없다는 말이네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-15",
+    "stage": 5,
+    "fn": "rephrase",
+    "pattern": "Es decir, ___.",
+    "core": [
+      "Es decir",
+      "es decir"
+    ],
+    "meaning": {
+      "en": "Rephrasing more precisely: That is / In other words, ___.",
+      "ko": "다른 말로 바꿔 말하기: 즉 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Trabajo a media jornada, es decir, solo por las mañanas.",
+        "slot": "solo por las mañanas",
+        "cue": {
+          "en": "only in the mornings",
+          "ko": "오전에만"
+        },
+        "gloss": {
+          "en": "I work part-time, that is, only in the mornings.",
+          "ko": "파트타임으로 일해요. 즉, 오전에만요."
+        }
+      },
+      {
+        "text": "Es decir, necesitamos más tiempo.",
+        "slot": "necesitamos más tiempo",
+        "cue": {
+          "en": "we need more time (necesitar)",
+          "ko": "시간이 더 필요하다(necesitar)"
+        },
+        "gloss": {
+          "en": "In other words, we need more time.",
+          "ko": "즉, 시간이 더 필요해요."
+        }
+      },
+      {
+        "text": "Me voy en enero; es decir, nos quedan dos meses.",
+        "slot": "nos quedan dos meses",
+        "cue": {
+          "en": "we have two months left (quedar)",
+          "ko": "두 달 남았다(quedar)"
+        },
+        "gloss": {
+          "en": "I'm leaving in January; that is, we have two months left.",
+          "ko": "일월에 떠나요. 즉, 두 달 남았어요."
+        }
+      },
+      {
+        "text": "Es un plato vegano, es decir, sin ningún producto animal.",
+        "slot": "sin ningún producto animal",
+        "cue": {
+          "en": "without any animal products",
+          "ko": "동물성 재료가 하나도 없이"
+        },
+        "gloss": {
+          "en": "It's a vegan dish, that is, with no animal products at all.",
+          "ko": "비건 요리예요. 즉, 동물성 재료가 전혀 없어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-16",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "En definitiva, ___.",
+    "core": [
+      "En definitiva",
+      "en definitiva"
+    ],
+    "meaning": {
+      "en": "Wrapping up an argument: All in all / In short, ___.",
+      "ko": "결론 짓기: 결국/요컨대 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "En definitiva, la propuesta tiene más ventajas que riesgos.",
+        "slot": "la propuesta tiene más ventajas que riesgos",
+        "cue": {
+          "en": "the proposal has more advantages than risks",
+          "ko": "제안은 위험보다 장점이 많다"
+        },
+        "gloss": {
+          "en": "All in all, the proposal has more advantages than risks.",
+          "ko": "요컨대 이 제안은 위험보다 장점이 많아요."
+        }
+      },
+      {
+        "text": "En definitiva, fue un viaje inolvidable.",
+        "slot": "fue un viaje inolvidable",
+        "cue": {
+          "en": "it was an unforgettable trip",
+          "ko": "잊지 못할 여행이었다"
+        },
+        "gloss": {
+          "en": "All in all, it was an unforgettable trip.",
+          "ko": "결국 잊지 못할 여행이었어요."
+        }
+      },
+      {
+        "text": "Hubo problemas, pero, en definitiva, cumplimos el objetivo.",
+        "slot": "cumplimos el objetivo",
+        "cue": {
+          "en": "we met the goal (cumplir)",
+          "ko": "목표를 달성했다(cumplir)"
+        },
+        "gloss": {
+          "en": "There were problems, but in the end we met the goal.",
+          "ko": "문제는 있었지만 결국 목표는 달성했어요."
+        }
+      },
+      {
+        "text": "En definitiva, lo importante es que todos estemos de acuerdo.",
+        "slot": "lo importante es que todos estemos de acuerdo",
+        "cue": {
+          "en": "what matters is that we all agree",
+          "ko": "모두가 동의하는 게 중요하다"
+        },
+        "gloss": {
+          "en": "In short, what matters is that we all agree.",
+          "ko": "요컨대 중요한 건 모두가 동의하는 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-17",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "A fin de cuentas, ___.",
+    "core": [
+      "A fin de cuentas",
+      "a fin de cuentas"
+    ],
+    "meaning": {
+      "en": "Putting things in perspective: After all / At the end of the day, ___.",
+      "ko": "한발 물러서 정리하기: 결국/어차피 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "a fin de cuentas"
+    ],
+    "examples": [
+      {
+        "text": "A fin de cuentas, es tu decisión.",
+        "slot": "es tu decisión",
+        "cue": {
+          "en": "it's your decision",
+          "ko": "네가 정할 일이다"
+        },
+        "gloss": {
+          "en": "At the end of the day, it's your decision.",
+          "ko": "결국 네가 정할 일이야."
+        }
+      },
+      {
+        "text": "No te preocupes tanto; a fin de cuentas, es solo un examen.",
+        "slot": "es solo un examen",
+        "cue": {
+          "en": "it's only an exam",
+          "ko": "그냥 시험일 뿐이다"
+        },
+        "gloss": {
+          "en": "Don't worry so much; after all, it's only an exam.",
+          "ko": "너무 걱정하지 마. 어차피 시험일 뿐이야."
+        }
+      },
+      {
+        "text": "A fin de cuentas, todos queremos lo mismo.",
+        "slot": "todos queremos lo mismo",
+        "cue": {
+          "en": "we all want the same thing (querer)",
+          "ko": "모두 같은 것을 원한다(querer)"
+        },
+        "gloss": {
+          "en": "After all, we all want the same thing.",
+          "ko": "결국 우리 모두 원하는 건 같아요."
+        }
+      },
+      {
+        "text": "Me quedo con este piso; a fin de cuentas, está cerca del trabajo.",
+        "slot": "está cerca del trabajo",
+        "cue": {
+          "en": "it's close to work",
+          "ko": "회사에서 가깝다"
+        },
+        "gloss": {
+          "en": "I'll take this flat; after all, it's close to work.",
+          "ko": "이 집으로 할래요. 어차피 회사에서 가깝잖아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-18",
+    "stage": 5,
+    "fn": "idiom-react",
+    "pattern": "___ me saca de quicio.",
+    "core": [
+      "me saca de quicio"
+    ],
+    "meaning": {
+      "en": "Reacting with an idiom: ___ drives me up the wall.",
+      "ko": "관용 표현으로 반응하기: ___ 때문에 미치겠어요."
+    },
+    "grammar": [],
+    "expressions": [
+      "me saca de quicio"
+    ],
+    "examples": [
+      {
+        "text": "El ruido de la obra me saca de quicio.",
+        "slot": "El ruido de la obra",
+        "cue": {
+          "en": "the noise from the building work",
+          "ko": "공사 소음"
+        },
+        "gloss": {
+          "en": "The noise from the building work drives me up the wall.",
+          "ko": "공사 소음 때문에 미치겠어요."
+        }
+      },
+      {
+        "text": "Esperar tanto en el médico me saca de quicio.",
+        "slot": "Esperar tanto en el médico",
+        "cue": {
+          "en": "waiting so long at the doctor's",
+          "ko": "병원에서 이렇게 오래 기다리기"
+        },
+        "gloss": {
+          "en": "Waiting so long at the doctor's drives me mad.",
+          "ko": "병원에서 이렇게 오래 기다리는 건 정말 짜증 나요."
+        }
+      },
+      {
+        "text": "Su manera de interrumpir me saca de quicio.",
+        "slot": "Su manera de interrumpir",
+        "cue": {
+          "en": "the way he interrupts",
+          "ko": "그가 말을 끊는 방식"
+        },
+        "gloss": {
+          "en": "The way he interrupts drives me up the wall.",
+          "ko": "그 사람이 말 끊는 거 진짜 못 참겠어요."
+        }
+      },
+      {
+        "text": "Que me hablen mientras leo me saca de quicio.",
+        "slot": "Que me hablen mientras leo",
+        "cue": {
+          "en": "people talking to me while I read",
+          "ko": "책 읽을 때 누가 말 거는 것"
+        },
+        "gloss": {
+          "en": "People talking to me while I'm reading drives me mad.",
+          "ko": "책 읽을 때 말 거는 거 정말 싫어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-19",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "A lo mejor ___.",
+    "core": [
+      "A lo mejor",
+      "a lo mejor"
+    ],
+    "meaning": {
+      "en": "Hedging: Maybe / Perhaps ___ (+ indicative).",
+      "ko": "말 누그러뜨리기: 어쩌면 ___(직설법)."
+    },
+    "grammar": [],
+    "expressions": [
+      "a lo mejor"
+    ],
+    "examples": [
+      {
+        "text": "A lo mejor llueve esta tarde.",
+        "slot": "llueve esta tarde",
+        "cue": {
+          "en": "it rains this afternoon (llover)",
+          "ko": "오후에 비가 오다(llover)"
+        },
+        "gloss": {
+          "en": "Maybe it'll rain this afternoon.",
+          "ko": "어쩌면 오후에 비가 올지도 몰라요."
+        }
+      },
+      {
+        "text": "A lo mejor no ha visto tu mensaje.",
+        "slot": "no ha visto tu mensaje",
+        "cue": {
+          "en": "she hasn't seen your message (ver)",
+          "ko": "네 메시지를 못 봤다(ver)"
+        },
+        "gloss": {
+          "en": "Maybe she hasn't seen your message.",
+          "ko": "어쩌면 네 메시지를 못 봤을지도 몰라."
+        }
+      },
+      {
+        "text": "Pregúntale; a lo mejor te lo deja.",
+        "slot": "te lo deja",
+        "cue": {
+          "en": "he lends it to you (dejar)",
+          "ko": "너한테 빌려주다(dejar)"
+        },
+        "gloss": {
+          "en": "Ask him; maybe he'll lend it to you.",
+          "ko": "물어봐. 혹시 빌려줄지도 몰라."
+        }
+      },
+      {
+        "text": "A lo mejor nos vemos en la boda.",
+        "slot": "nos vemos en la boda",
+        "cue": {
+          "en": "we see each other at the wedding (verse)",
+          "ko": "결혼식에서 보다(verse)"
+        },
+        "gloss": {
+          "en": "Maybe we'll see each other at the wedding.",
+          "ko": "어쩌면 결혼식에서 볼 수도 있겠네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-f5-20",
+    "stage": 5,
+    "fn": "request-action",
+    "pattern": "¿Me echas una mano con ___?",
+    "core": [
+      "Me echas una mano con",
+      "me echas una mano con"
+    ],
+    "meaning": {
+      "en": "Asking for help casually: Can you give me a hand with ___?",
+      "ko": "편하게 도움 청하기: ___ 좀 도와줄래?(echar una mano)."
+    },
+    "grammar": [],
+    "expressions": [
+      "echar una mano"
+    ],
+    "examples": [
+      {
+        "text": "¿Me echas una mano con la mudanza?",
+        "slot": "la mudanza",
+        "cue": {
+          "en": "the move",
+          "ko": "이사"
+        },
+        "gloss": {
+          "en": "Can you give me a hand with the move?",
+          "ko": "이사 좀 도와줄래?"
+        }
+      },
+      {
+        "text": "¿Me echas una mano con estas cajas?",
+        "slot": "estas cajas",
+        "cue": {
+          "en": "these boxes",
+          "ko": "이 상자들"
+        },
+        "gloss": {
+          "en": "Can you give me a hand with these boxes?",
+          "ko": "이 상자들 좀 같이 들어 줄래?"
+        }
+      },
+      {
+        "text": "Oye, ¿me echas una mano con el ordenador?",
+        "slot": "el ordenador",
+        "cue": {
+          "en": "the computer",
+          "ko": "컴퓨터"
+        },
+        "gloss": {
+          "en": "Hey, can you help me with the computer?",
+          "ko": "저기, 컴퓨터 좀 봐 줄래?"
+        }
+      },
+      {
+        "text": "¿Me echas una mano con la cena?",
+        "slot": "la cena",
+        "cue": {
+          "en": "dinner",
+          "ko": "저녁 준비"
+        },
+        "gloss": {
+          "en": "Can you give me a hand with dinner?",
+          "ko": "저녁 준비 좀 도와줄래?"
         }
       }
     ]

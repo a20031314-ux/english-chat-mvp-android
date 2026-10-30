@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 일본어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
+/** 일본어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
 export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-01",
@@ -3799,6 +3799,2699 @@ export const JA_FRAMES: Frame[] = [
         "gloss": {
           "en": "Guess what! I'm moving to Osaka next month.",
           "ko": "있잖아, 다음 달에 오사카로 이사해!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-01",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "___と申します。",
+    "core": [
+      "と申します"
+    ],
+    "meaning": {
+      "en": "Giving your name humbly: My name is ___.",
+      "ko": "겸양으로 이름 대기: ___라고 합니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "営業部の田中と申します。",
+        "slot": "営業部の田中",
+        "cue": {
+          "en": "Tanaka from Sales",
+          "ko": "영업부의 다나카"
+        },
+        "gloss": {
+          "en": "I'm Tanaka from the sales department.",
+          "ko": "영업부의 다나카라고 합니다."
+        }
+      },
+      {
+        "text": "本日担当いたします、山口と申します。",
+        "slot": "本日担当いたします、山口",
+        "cue": {
+          "en": "Yamaguchi, in charge today",
+          "ko": "오늘 담당하는 야마구치"
+        },
+        "gloss": {
+          "en": "I'm Yamaguchi, and I'll be helping you today.",
+          "ko": "오늘 담당할 야마구치라고 합니다."
+        }
+      },
+      {
+        "text": "はじめまして、留学生のリーと申します。",
+        "slot": "はじめまして、留学生のリー",
+        "cue": {
+          "en": "Lee, an exchange student",
+          "ko": "유학생 리"
+        },
+        "gloss": {
+          "en": "Nice to meet you, I'm Lee, an international student.",
+          "ko": "처음 뵙겠습니다, 유학생 리라고 합니다."
+        }
+      },
+      {
+        "text": "先日お電話した森と申します。",
+        "slot": "先日お電話した森",
+        "cue": {
+          "en": "Mori, who called the other day",
+          "ko": "며칠 전 전화한 모리"
+        },
+        "gloss": {
+          "en": "I'm Mori, who called you the other day.",
+          "ko": "며칠 전에 전화드린 모리라고 합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-02",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "___はいらっしゃいますか。",
+    "core": [
+      "いらっしゃいますか"
+    ],
+    "meaning": {
+      "en": "Asking for someone politely: Is ___ there?",
+      "ko": "높여서 사람 찾기: ___ 계십니까?"
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "部長は何時ごろいらっしゃいますか。",
+        "slot": "部長は何時ごろ",
+        "cue": {
+          "en": "the manager, around what time",
+          "ko": "부장님, 몇 시쯤"
+        },
+        "gloss": {
+          "en": "Around what time will the manager be in?",
+          "ko": "부장님은 몇 시쯤 오십니까?"
+        }
+      },
+      {
+        "text": "経理部の佐藤様はいらっしゃいますか。",
+        "slot": "経理部の佐藤様は",
+        "cue": {
+          "en": "Ms. Sato in Accounting",
+          "ko": "경리부의 사토 님"
+        },
+        "gloss": {
+          "en": "Is Ms. Sato from Accounting available?",
+          "ko": "경리부의 사토 님 계십니까?"
+        }
+      },
+      {
+        "text": "先生は今、研究室にいらっしゃいますか。",
+        "slot": "先生は今、研究室に",
+        "cue": {
+          "en": "the professor, in the office now",
+          "ko": "교수님, 지금 연구실에"
+        },
+        "gloss": {
+          "en": "Is the professor in the office now?",
+          "ko": "교수님은 지금 연구실에 계십니까?"
+        }
+      },
+      {
+        "text": "ご家族の方は、どなたかいらっしゃいますか。",
+        "slot": "ご家族の方は、どなたか",
+        "cue": {
+          "en": "anyone from the family",
+          "ko": "가족분 중 누군가"
+        },
+        "gloss": {
+          "en": "Is anyone from your family here?",
+          "ko": "가족분 중에 누군가 계십니까?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-03",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "___に伺います。",
+    "core": [
+      "伺います"
+    ],
+    "meaning": {
+      "en": "Saying you will visit, humbly: I'll come to ___.",
+      "ko": "겸양으로 찾아간다고 하기: ___에 찾아뵙겠습니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "明日の午後、そちらに伺います。",
+        "slot": "明日の午後、そちらに",
+        "cue": {
+          "en": "your place tomorrow afternoon",
+          "ko": "내일 오후 그쪽"
+        },
+        "gloss": {
+          "en": "I'll come to your office tomorrow afternoon.",
+          "ko": "내일 오후에 그쪽으로 찾아뵙겠습니다."
+        }
+      },
+      {
+        "text": "会議が終わったら、すぐに伺います。",
+        "slot": "会議が終わったら、すぐに",
+        "cue": {
+          "en": "right after the meeting",
+          "ko": "회의가 끝나면 바로"
+        },
+        "gloss": {
+          "en": "I'll come over as soon as the meeting ends.",
+          "ko": "회의가 끝나면 바로 찾아뵙겠습니다."
+        }
+      },
+      {
+        "text": "来週の月曜日に、ご自宅へ伺います。",
+        "slot": "来週の月曜日に、ご自宅へ",
+        "cue": {
+          "en": "your home next Monday",
+          "ko": "다음 주 월요일 댁"
+        },
+        "gloss": {
+          "en": "I'll visit your home next Monday.",
+          "ko": "다음 주 월요일에 댁으로 찾아뵙겠습니다."
+        }
+      },
+      {
+        "text": "では、受付の前で伺います。",
+        "slot": "では、受付の前で",
+        "cue": {
+          "en": "in front of reception",
+          "ko": "접수처 앞"
+        },
+        "gloss": {
+          "en": "Then I'll come by the reception desk.",
+          "ko": "그럼 접수처 앞으로 찾아뵙겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-04",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "恐れ入りますが、___。",
+    "core": [
+      "恐れ入りますが"
+    ],
+    "meaning": {
+      "en": "Making a very polite request: I'm sorry to trouble you, but ___.",
+      "ko": "아주 정중하게 부탁하기: 죄송합니다만 ___."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "恐れ入りますが"
+    ],
+    "examples": [
+      {
+        "text": "恐れ入りますが、お名前をもう一度伺えますか。",
+        "slot": "お名前をもう一度伺えますか",
+        "cue": {
+          "en": "may I ask your name again",
+          "ko": "성함을 한 번 더 여쭤봐도 될까요"
+        },
+        "gloss": {
+          "en": "Excuse me, could I have your name once more?",
+          "ko": "죄송합니다만 성함을 한 번 더 여쭤봐도 될까요?"
+        }
+      },
+      {
+        "text": "恐れ入りますが、こちらでは写真をご遠慮ください。",
+        "slot": "こちらでは写真をご遠慮ください",
+        "cue": {
+          "en": "please refrain from photos here",
+          "ko": "여기서는 사진을 삼가 주세요"
+        },
+        "gloss": {
+          "en": "I'm sorry, but please refrain from taking photos here.",
+          "ko": "죄송합니다만 여기서는 사진 촬영을 삼가 주세요."
+        }
+      },
+      {
+        "text": "恐れ入りますが、少々声が遠いようです。",
+        "slot": "少々声が遠いようです",
+        "cue": {
+          "en": "your voice is a little faint",
+          "ko": "목소리가 조금 멀게 들린다"
+        },
+        "gloss": {
+          "en": "I'm sorry, but your voice sounds a little faint.",
+          "ko": "죄송합니다만 목소리가 조금 작게 들립니다."
+        }
+      },
+      {
+        "text": "恐れ入りますが、明日までにお返事いただけますか。",
+        "slot": "明日までにお返事いただけますか",
+        "cue": {
+          "en": "could you reply by tomorrow",
+          "ko": "내일까지 답을 주실 수 있을까요"
+        },
+        "gloss": {
+          "en": "Sorry to trouble you, but could you reply by tomorrow?",
+          "ko": "죄송합니다만 내일까지 답변 주실 수 있을까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-05",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "___させていただきます。",
+    "core": [
+      "させていただきます"
+    ],
+    "meaning": {
+      "en": "Saying what you'll do, humbly: Allow me to ___.",
+      "ko": "삼가 하겠다고 말하기: ___하겠습니다."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "本日はこれで失礼させていただきます。",
+        "slot": "本日はこれで失礼",
+        "cue": {
+          "en": "leave for today",
+          "ko": "오늘은 이만 실례하다"
+        },
+        "gloss": {
+          "en": "I'll take my leave for today.",
+          "ko": "오늘은 이만 실례하겠습니다."
+        }
+      },
+      {
+        "text": "内容を確認させていただきます。",
+        "slot": "内容を確認",
+        "cue": {
+          "en": "check the contents",
+          "ko": "내용을 확인하다"
+        },
+        "gloss": {
+          "en": "Allow me to check the contents.",
+          "ko": "내용을 확인하겠습니다."
+        }
+      },
+      {
+        "text": "最初に私から説明させていただきます。",
+        "slot": "最初に私から説明",
+        "cue": {
+          "en": "explain first",
+          "ko": "먼저 설명하다"
+        },
+        "gloss": {
+          "en": "Let me start by explaining.",
+          "ko": "먼저 제가 설명드리겠습니다."
+        }
+      },
+      {
+        "text": "次の打ち合わせで、改めてご説明させていただきます。",
+        "slot": "次の打ち合わせで、改めてご説明",
+        "cue": {
+          "en": "explain again at the next meeting",
+          "ko": "다음 회의에서 다시 설명하다"
+        },
+        "gloss": {
+          "en": "Allow me to explain again at our next meeting.",
+          "ko": "다음 회의에서 다시 설명드리겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-06",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "___ことになりました。",
+    "core": [
+      "ことになりました"
+    ],
+    "meaning": {
+      "en": "Reporting a decision made for you: It's been decided that ___.",
+      "ko": "정해진 일 알리기: ___하게 되었습니다."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "来月から大阪支社で働くことになりました。",
+        "slot": "来月から大阪支社で働く",
+        "cue": {
+          "en": "work at the Osaka branch from next month",
+          "ko": "다음 달부터 오사카 지사에서 일하다"
+        },
+        "gloss": {
+          "en": "I'll be working at the Osaka branch from next month.",
+          "ko": "다음 달부터 오사카 지사에서 일하게 되었습니다."
+        }
+      },
+      {
+        "text": "会議は来週に延期することになりました。",
+        "slot": "会議は来週に延期する",
+        "cue": {
+          "en": "postpone the meeting to next week",
+          "ko": "회의를 다음 주로 미루다"
+        },
+        "gloss": {
+          "en": "The meeting has been postponed to next week.",
+          "ko": "회의는 다음 주로 연기하게 되었습니다."
+        }
+      },
+      {
+        "text": "春から新しいプロジェクトを担当することになりました。",
+        "slot": "春から新しいプロジェクトを担当する",
+        "cue": {
+          "en": "handle a new project from spring",
+          "ko": "봄부터 새 프로젝트를 맡다"
+        },
+        "gloss": {
+          "en": "I'll be in charge of a new project from spring.",
+          "ko": "봄부터 새 프로젝트를 맡게 되었습니다."
+        }
+      },
+      {
+        "text": "工場のトラブルで、納品が遅れることになりました。",
+        "slot": "工場のトラブルで、納品が遅れる",
+        "cue": {
+          "en": "delivery is delayed due to factory trouble",
+          "ko": "공장 문제로 납품이 늦어지다"
+        },
+        "gloss": {
+          "en": "Due to trouble at the factory, the delivery will be delayed.",
+          "ko": "공장 문제로 납품이 늦어지게 되었습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-07",
+    "stage": 4,
+    "fn": "plan-intent",
+    "pattern": "___ことにしました。",
+    "core": [
+      "ことにしました"
+    ],
+    "meaning": {
+      "en": "Saying what you decided: I've decided to ___.",
+      "ko": "내가 정한 것 말하기: ___하기로 했습니다."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "今年は毎朝早く起きることにしました。",
+        "slot": "今年は毎朝早く起きる",
+        "cue": {
+          "en": "get up early every morning this year",
+          "ko": "올해는 매일 아침 일찍 일어나다"
+        },
+        "gloss": {
+          "en": "I've decided to get up early every morning this year.",
+          "ko": "올해는 매일 아침 일찍 일어나기로 했습니다."
+        }
+      },
+      {
+        "text": "よく考えて、転職することにしました。",
+        "slot": "よく考えて、転職する",
+        "cue": {
+          "en": "change jobs after thinking it over",
+          "ko": "잘 생각해서 이직하다"
+        },
+        "gloss": {
+          "en": "After thinking it over, I've decided to change jobs.",
+          "ko": "잘 생각해 보고 이직하기로 했습니다."
+        }
+      },
+      {
+        "text": "週末は家でゆっくり休むことにしました。",
+        "slot": "週末は家でゆっくり休む",
+        "cue": {
+          "en": "rest at home on the weekend",
+          "ko": "주말엔 집에서 푹 쉬다"
+        },
+        "gloss": {
+          "en": "I've decided to take it easy at home this weekend.",
+          "ko": "주말에는 집에서 푹 쉬기로 했습니다."
+        }
+      },
+      {
+        "text": "健康のために、お酒をやめることにしました。",
+        "slot": "健康のために、お酒をやめる",
+        "cue": {
+          "en": "quit drinking for my health",
+          "ko": "건강을 위해 술을 끊다"
+        },
+        "gloss": {
+          "en": "I've decided to quit drinking for my health.",
+          "ko": "건강을 위해 술을 끊기로 했습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-08",
+    "stage": 4,
+    "fn": "not-necessarily",
+    "pattern": "___わけではないのですが、…",
+    "core": [
+      "わけではない"
+    ],
+    "meaning": {
+      "en": "Softening a stance: It's not that ___, but ….",
+      "ko": "입장 누그러뜨리기: ___인 건 아니지만 …."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "反対しているわけではないのですが、もう少し時間がほしいです。",
+        "slot": "反対している",
+        "cue": {
+          "en": "be against it",
+          "ko": "반대하다"
+        },
+        "gloss": {
+          "en": "It's not that I'm against it, but I'd like a little more time.",
+          "ko": "반대하는 건 아니지만 시간이 조금 더 필요합니다."
+        }
+      },
+      {
+        "text": "嫌いなわけではないのですが、辛いものは少し苦手です。",
+        "slot": "嫌いな",
+        "cue": {
+          "en": "dislike",
+          "ko": "싫어하다"
+        },
+        "gloss": {
+          "en": "It's not that I dislike it, but I'm not great with spicy food.",
+          "ko": "싫어하는 건 아니지만 매운 건 좀 잘 못 먹어요."
+        }
+      },
+      {
+        "text": "急いでいるわけではないのですが、いつごろ届きますか。",
+        "slot": "急いでいる",
+        "cue": {
+          "en": "be in a hurry",
+          "ko": "서두르다"
+        },
+        "gloss": {
+          "en": "I'm not in a rush, but around when will it arrive?",
+          "ko": "급한 건 아니지만 언제쯤 도착하나요?"
+        }
+      },
+      {
+        "text": "広ければいいというわけではないので、場所も大事です。",
+        "slot": "広ければいいという",
+        "cue": {
+          "en": "bigger is just better",
+          "ko": "넓으면 그만이다"
+        },
+        "gloss": {
+          "en": "Bigger isn't automatically better, so location matters too.",
+          "ko": "넓으면 좋은 것만은 아니니까 위치도 중요해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-09",
+    "stage": 4,
+    "fn": "the-more",
+    "pattern": "___ほど、…",
+    "core": [
+      "ほど"
+    ],
+    "meaning": {
+      "en": "Saying one thing grows with another: The more ___, the more ___.",
+      "ko": "비례해서 말하기: ___할수록 ___."
+    },
+    "grammar": [
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "考えれば考えるほど、分からなくなります。",
+        "slot": "考えれば考える",
+        "cue": {
+          "en": "think about it",
+          "ko": "생각하다"
+        },
+        "gloss": {
+          "en": "The more I think about it, the less I understand.",
+          "ko": "생각하면 생각할수록 모르겠어요."
+        }
+      },
+      {
+        "text": "駅に近ければ近いほど、家賃は高くなります。",
+        "slot": "駅に近ければ近い",
+        "cue": {
+          "en": "be close to the station",
+          "ko": "역에 가깝다"
+        },
+        "gloss": {
+          "en": "The closer to the station, the higher the rent.",
+          "ko": "역에 가까우면 가까울수록 집세가 비싸져요."
+        }
+      },
+      {
+        "text": "練習すればするほど、上手になりますよ。",
+        "slot": "練習すればする",
+        "cue": {
+          "en": "practice",
+          "ko": "연습하다"
+        },
+        "gloss": {
+          "en": "The more you practice, the better you'll get.",
+          "ko": "연습하면 할수록 실력이 늘어요."
+        }
+      },
+      {
+        "text": "見れば見るほど、どれにするか迷ってしまいます。",
+        "slot": "見れば見る",
+        "cue": {
+          "en": "look at them",
+          "ko": "보다"
+        },
+        "gloss": {
+          "en": "The more I look, the harder it is to choose.",
+          "ko": "보면 볼수록 뭘 고를지 망설여져요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-10",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "___のはいかがでしょうか。",
+    "core": [
+      "はいかがでしょうか"
+    ],
+    "meaning": {
+      "en": "Proposing an alternative politely: How about ___?",
+      "ko": "정중하게 다른 안 내기: ___하는 건 어떠실까요?"
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "リリースを一週間遅らせるのはいかがでしょうか。",
+        "slot": "リリースを一週間遅らせる",
+        "cue": {
+          "en": "push the release back a week",
+          "ko": "출시를 일주일 미루다"
+        },
+        "gloss": {
+          "en": "How about pushing the release back a week?",
+          "ko": "출시를 일주일 미루는 건 어떠실까요?"
+        }
+      },
+      {
+        "text": "費用を二回に分けてお支払いいただくのはいかがでしょうか。",
+        "slot": "費用を二回に分けてお支払いいただく",
+        "cue": {
+          "en": "pay the cost in two parts",
+          "ko": "비용을 두 번에 나눠 내다"
+        },
+        "gloss": {
+          "en": "How about paying the cost in two installments?",
+          "ko": "비용을 두 번에 나눠 지불하시는 건 어떠실까요?"
+        }
+      },
+      {
+        "text": "打ち合わせをオンラインにするのはいかがでしょうか。",
+        "slot": "打ち合わせをオンラインにする",
+        "cue": {
+          "en": "hold the meeting online",
+          "ko": "회의를 온라인으로 하다"
+        },
+        "gloss": {
+          "en": "How about holding the meeting online?",
+          "ko": "회의를 온라인으로 하는 건 어떠실까요?"
+        }
+      },
+      {
+        "text": "まずは小さい規模で試してみるのはいかがでしょうか。",
+        "slot": "まずは小さい規模で試してみる",
+        "cue": {
+          "en": "try it on a small scale first",
+          "ko": "먼저 작은 규모로 해 보다"
+        },
+        "gloss": {
+          "en": "How about trying it on a small scale first?",
+          "ko": "우선 작은 규모로 시험해 보는 건 어떠실까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-11",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "おっしゃる通りです。___。",
+    "core": [
+      "おっしゃる通りです"
+    ],
+    "meaning": {
+      "en": "Conceding then moving on: You're quite right. ___.",
+      "ko": "인정하고 넘어가기: 말씀하신 대로입니다. ___."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "おっしゃる通りです"
+    ],
+    "examples": [
+      {
+        "text": "おっしゃる通りです。では、別の方法を考えましょう。",
+        "slot": "では、別の方法を考えましょう",
+        "cue": {
+          "en": "let's think of another way",
+          "ko": "다른 방법을 생각하자"
+        },
+        "gloss": {
+          "en": "You're quite right. Then let's think of another way.",
+          "ko": "말씀하신 대로입니다. 그럼 다른 방법을 생각해 보죠."
+        }
+      },
+      {
+        "text": "おっしゃる通りです。私の確認が足りませんでした。",
+        "slot": "私の確認が足りませんでした",
+        "cue": {
+          "en": "I didn't check enough",
+          "ko": "제 확인이 부족했다"
+        },
+        "gloss": {
+          "en": "You're right. I didn't check carefully enough.",
+          "ko": "말씀하신 대로입니다. 제 확인이 부족했습니다."
+        }
+      },
+      {
+        "text": "おっしゃる通りです。ただ、予算にも限りがありまして。",
+        "slot": "ただ、予算にも限りがありまして",
+        "cue": {
+          "en": "but the budget is limited",
+          "ko": "다만 예산에도 한계가 있다"
+        },
+        "gloss": {
+          "en": "You're right. That said, our budget is limited.",
+          "ko": "말씀하신 대로입니다. 다만 예산에도 한계가 있어서요."
+        }
+      },
+      {
+        "text": "おっしゃる通りです。すぐに資料を直します。",
+        "slot": "すぐに資料を直します",
+        "cue": {
+          "en": "fix the materials right away",
+          "ko": "바로 자료를 고치다"
+        },
+        "gloss": {
+          "en": "You're absolutely right. I'll fix the materials right away.",
+          "ko": "말씀하신 대로입니다. 바로 자료를 고치겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-12",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "___させてください。",
+    "core": [
+      "させてください"
+    ],
+    "meaning": {
+      "en": "Asking to be allowed to do something: Please let me ___.",
+      "ko": "하게 해 달라고 하기: 제가 ___하게 해 주세요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "その件は私に担当させてください。",
+        "slot": "その件は私に担当",
+        "cue": {
+          "en": "handle that matter",
+          "ko": "그 건을 맡다"
+        },
+        "gloss": {
+          "en": "Please let me handle that matter.",
+          "ko": "그 건은 제가 맡게 해 주세요."
+        }
+      },
+      {
+        "text": "少し考えさせてください。",
+        "slot": "少し考え",
+        "cue": {
+          "en": "think it over a little",
+          "ko": "조금 생각하다"
+        },
+        "gloss": {
+          "en": "Please let me think about it a little.",
+          "ko": "조금 생각하게 해 주세요."
+        }
+      },
+      {
+        "text": "一度、上司に相談させてください。",
+        "slot": "一度、上司に相談",
+        "cue": {
+          "en": "consult my boss once",
+          "ko": "상사와 한 번 상의하다"
+        },
+        "gloss": {
+          "en": "Please let me talk it over with my boss first.",
+          "ko": "한 번 상사와 상의하게 해 주세요."
+        }
+      },
+      {
+        "text": "次の発表は、ぜひ私にさせてください。",
+        "slot": "次の発表は、ぜひ私に",
+        "cue": {
+          "en": "me, for the next presentation",
+          "ko": "다음 발표는 꼭 저에게"
+        },
+        "gloss": {
+          "en": "Please let me do the next presentation.",
+          "ko": "다음 발표는 꼭 제가 하게 해 주세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-13",
+    "stage": 4,
+    "fn": "complain",
+    "pattern": "___て、困っているんです。",
+    "core": [
+      "困っているんです"
+    ],
+    "meaning": {
+      "en": "Complaining about being troubled by something: I've been ___ and it's a problem.",
+      "ko": "당해서 곤란하다고 하기: ___해서 곤란해요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "隣の人に夜遅くまで騒がれて、困っているんです。",
+        "slot": "隣の人に夜遅くまで騒がれ",
+        "cue": {
+          "en": "neighbors are noisy late at night",
+          "ko": "옆집 사람이 밤늦게까지 떠들다"
+        },
+        "gloss": {
+          "en": "My neighbors make noise late into the night, and it's a real problem.",
+          "ko": "옆집 사람이 밤늦게까지 떠들어서 곤란해요."
+        }
+      },
+      {
+        "text": "先輩に仕事を全部押しつけられて、困っているんです。",
+        "slot": "先輩に仕事を全部押しつけられ",
+        "cue": {
+          "en": "a senior dumps all the work on me",
+          "ko": "선배가 일을 전부 떠넘기다"
+        },
+        "gloss": {
+          "en": "My senior keeps dumping all the work on me, and I'm stuck.",
+          "ko": "선배가 일을 전부 떠넘겨서 곤란해요."
+        }
+      },
+      {
+        "text": "駅で傘を盗まれて、困っているんです。",
+        "slot": "駅で傘を盗まれ",
+        "cue": {
+          "en": "someone steals my umbrella at the station",
+          "ko": "역에서 우산을 도둑맞다"
+        },
+        "gloss": {
+          "en": "My umbrella was stolen at the station, and now I'm stuck.",
+          "ko": "역에서 우산을 도둑맞아서 곤란해요."
+        }
+      },
+      {
+        "text": "猫に夜中に起こされて、困っているんです。",
+        "slot": "猫に夜中に起こされ",
+        "cue": {
+          "en": "the cat wakes me at night",
+          "ko": "고양이가 한밤중에 깨우다"
+        },
+        "gloss": {
+          "en": "My cat keeps waking me up at night, and it's a problem.",
+          "ko": "고양이가 한밤중에 깨워서 곤란해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-14",
+    "stage": 4,
+    "fn": "apologize",
+    "pattern": "___、ご迷惑をおかけしました。",
+    "core": [
+      "ご迷惑をおかけし"
+    ],
+    "meaning": {
+      "en": "Apologizing formally for trouble: ___, and I'm sorry for the trouble.",
+      "ko": "정식으로 사과하기: ___, 폐를 끼쳤습니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "ご迷惑をおかけしました"
+    ],
+    "examples": [
+      {
+        "text": "昨日は会議に遅れてしまい、ご迷惑をおかけしました。",
+        "slot": "昨日は会議に遅れてしまい",
+        "cue": {
+          "en": "I was late to the meeting yesterday",
+          "ko": "어제 회의에 늦다"
+        },
+        "gloss": {
+          "en": "I'm sorry for the trouble I caused by being late to yesterday's meeting.",
+          "ko": "어제는 회의에 늦어서 폐를 끼쳤습니다."
+        }
+      },
+      {
+        "text": "私の確認ミスで、ご迷惑をおかけしました。",
+        "slot": "私の確認ミスで",
+        "cue": {
+          "en": "my checking mistake",
+          "ko": "제 확인 실수로"
+        },
+        "gloss": {
+          "en": "I'm sorry for the trouble caused by my oversight.",
+          "ko": "제 확인 실수로 폐를 끼쳤습니다."
+        }
+      },
+      {
+        "text": "返信が遅くなり、ご迷惑をおかけしました。",
+        "slot": "返信が遅くなり",
+        "cue": {
+          "en": "my reply was late",
+          "ko": "답장이 늦어지다"
+        },
+        "gloss": {
+          "en": "I apologize for the inconvenience of my late reply.",
+          "ko": "답장이 늦어져 폐를 끼쳤습니다."
+        }
+      },
+      {
+        "text": "このたびは配送の手違いで、ご迷惑をおかけして申し訳ございません。",
+        "slot": "このたびは配送の手違いで",
+        "cue": {
+          "en": "a delivery mix-up this time",
+          "ko": "이번 배송 착오로"
+        },
+        "gloss": {
+          "en": "We're very sorry for the trouble caused by the delivery mix-up.",
+          "ko": "이번에 배송 착오로 폐를 끼쳐 죄송합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-15",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "お手数ですが、___ください。",
+    "core": [
+      "お手数ですが"
+    ],
+    "meaning": {
+      "en": "Asking someone to take the trouble: Sorry for the trouble, but please ___.",
+      "ko": "수고를 부탁하기: 번거로우시겠지만 ___해 주세요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "お手数ですが"
+    ],
+    "examples": [
+      {
+        "text": "お手数ですが、こちらの用紙にご記入ください。",
+        "slot": "こちらの用紙にご記入",
+        "cue": {
+          "en": "fill in this form",
+          "ko": "이 용지에 기입하다"
+        },
+        "gloss": {
+          "en": "Sorry for the trouble, but please fill in this form.",
+          "ko": "번거로우시겠지만 이 용지에 기입해 주세요."
+        }
+      },
+      {
+        "text": "お手数ですが、もう一度お送りください。",
+        "slot": "もう一度お送り",
+        "cue": {
+          "en": "send it again",
+          "ko": "한 번 더 보내다"
+        },
+        "gloss": {
+          "en": "Sorry to trouble you, but please send it again.",
+          "ko": "번거로우시겠지만 한 번 더 보내 주세요."
+        }
+      },
+      {
+        "text": "お手数ですが、受付で番号札をお取りください。",
+        "slot": "受付で番号札をお取り",
+        "cue": {
+          "en": "take a number ticket at reception",
+          "ko": "접수처에서 번호표를 뽑다"
+        },
+        "gloss": {
+          "en": "Sorry for the trouble, but please take a number at reception.",
+          "ko": "번거로우시겠지만 접수처에서 번호표를 뽑아 주세요."
+        }
+      },
+      {
+        "text": "お手数ですが、ご都合のいい日をお知らせください。",
+        "slot": "ご都合のいい日をお知らせ",
+        "cue": {
+          "en": "let me know a convenient day",
+          "ko": "편하신 날을 알려 주다"
+        },
+        "gloss": {
+          "en": "Sorry for the trouble, but please let me know which day suits you.",
+          "ko": "번거로우시겠지만 편하신 날을 알려 주세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-16",
+    "stage": 4,
+    "fn": "clarify",
+    "pattern": "とおっしゃいますと、___でしょうか。",
+    "core": [
+      "とおっしゃいますと"
+    ],
+    "meaning": {
+      "en": "Asking what someone means, politely: By that, do you mean ___?",
+      "ko": "정중하게 뜻 확인하기: 말씀하시는 건 ___라는 뜻일까요?"
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "とおっしゃいますと"
+    ],
+    "examples": [
+      {
+        "text": "とおっしゃいますと、費用の面でしょうか。",
+        "slot": "費用の面",
+        "cue": {
+          "en": "the cost side",
+          "ko": "비용 면"
+        },
+        "gloss": {
+          "en": "By that, do you mean in terms of cost?",
+          "ko": "말씀하시는 건 비용 면일까요?"
+        }
+      },
+      {
+        "text": "とおっしゃいますと、日程を変えるということでしょうか。",
+        "slot": "日程を変えるということ",
+        "cue": {
+          "en": "changing the schedule",
+          "ko": "일정을 바꾸다"
+        },
+        "gloss": {
+          "en": "Do you mean changing the schedule?",
+          "ko": "말씀하시는 건 일정을 바꾼다는 뜻일까요?"
+        }
+      },
+      {
+        "text": "とおっしゃいますと、どの部分が問題でしょうか。",
+        "slot": "どの部分が問題",
+        "cue": {
+          "en": "which part is the problem",
+          "ko": "어느 부분이 문제"
+        },
+        "gloss": {
+          "en": "Then which part, exactly, is the problem?",
+          "ko": "말씀하시는 건 어느 부분이 문제라는 걸까요?"
+        }
+      },
+      {
+        "text": "とおっしゃいますと、今回は見送りということでしょうか。",
+        "slot": "今回は見送りということ",
+        "cue": {
+          "en": "passing this time",
+          "ko": "이번엔 보류"
+        },
+        "gloss": {
+          "en": "So you mean you'll pass on it this time?",
+          "ko": "말씀하시는 건 이번엔 보류라는 뜻일까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-17",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "念のため伺いますが、___でしょうか。",
+    "core": [
+      "念のため"
+    ],
+    "meaning": {
+      "en": "Checking just to be sure: Just to be sure, may I ask if ___?",
+      "ko": "확실히 하려고 묻기: 혹시 몰라 여쭤봅니다만 ___일까요?"
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "念のため"
+    ],
+    "examples": [
+      {
+        "text": "念のため伺いますが、楽器の演奏は可能でしょうか。",
+        "slot": "楽器の演奏は可能",
+        "cue": {
+          "en": "playing instruments is allowed",
+          "ko": "악기 연주가 가능하다"
+        },
+        "gloss": {
+          "en": "Just to be sure, may I ask if playing instruments is allowed?",
+          "ko": "혹시 몰라 여쭤봅니다만 악기 연주는 가능할까요?"
+        }
+      },
+      {
+        "text": "念のため伺いますが、駐車場はございますでしょうか。",
+        "slot": "駐車場はございます",
+        "cue": {
+          "en": "there is a parking lot",
+          "ko": "주차장이 있다"
+        },
+        "gloss": {
+          "en": "Just to check, is there parking?",
+          "ko": "혹시 몰라 여쭤봅니다만 주차장이 있을까요?"
+        }
+      },
+      {
+        "text": "念のため伺いますが、締め切りは金曜日でよろしいでしょうか。",
+        "slot": "締め切りは金曜日でよろしい",
+        "cue": {
+          "en": "the deadline is Friday",
+          "ko": "마감이 금요일이다"
+        },
+        "gloss": {
+          "en": "Just to confirm, the deadline is Friday, correct?",
+          "ko": "혹시 몰라 여쭤봅니다만 마감은 금요일이 맞을까요?"
+        }
+      },
+      {
+        "text": "念のため伺いますが、ペットを飼っても問題ないでしょうか。",
+        "slot": "ペットを飼っても問題ない",
+        "cue": {
+          "en": "keeping a pet is fine",
+          "ko": "반려동물을 길러도 된다"
+        },
+        "gloss": {
+          "en": "Just to be sure, is it all right to keep a pet?",
+          "ko": "혹시 몰라 여쭤봅니다만 반려동물을 길러도 괜찮을까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-18",
+    "stage": 4,
+    "fn": "deadline",
+    "pattern": "___、後ほどご連絡いたします。",
+    "core": [
+      "後ほどご連絡"
+    ],
+    "meaning": {
+      "en": "Promising to get back to someone: ___, and I'll contact you later.",
+      "ko": "나중에 연락하겠다고 하기: ___, 나중에 연락드리겠습니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "後ほどご連絡します"
+    ],
+    "examples": [
+      {
+        "text": "本日中に確認いたしまして、後ほどご連絡いたします。",
+        "slot": "本日中に確認いたしまして",
+        "cue": {
+          "en": "check it today",
+          "ko": "오늘 중으로 확인하다"
+        },
+        "gloss": {
+          "en": "I'll check it today and get back to you later.",
+          "ko": "오늘 중으로 확인해서 나중에 연락드리겠습니다."
+        }
+      },
+      {
+        "text": "担当者が戻りましたら、後ほどご連絡いたします。",
+        "slot": "担当者が戻りましたら",
+        "cue": {
+          "en": "when the person in charge returns",
+          "ko": "담당자가 돌아오면"
+        },
+        "gloss": {
+          "en": "When the person in charge returns, we'll contact you.",
+          "ko": "담당자가 돌아오면 나중에 연락드리겠습니다."
+        }
+      },
+      {
+        "text": "在庫を調べまして、後ほどご連絡いたします。",
+        "slot": "在庫を調べまして",
+        "cue": {
+          "en": "look into the stock",
+          "ko": "재고를 알아보다"
+        },
+        "gloss": {
+          "en": "I'll check our stock and get back to you.",
+          "ko": "재고를 알아보고 나중에 연락드리겠습니다."
+        }
+      },
+      {
+        "text": "詳しい日程が決まり次第、後ほどご連絡いたします。",
+        "slot": "詳しい日程が決まり次第",
+        "cue": {
+          "en": "as soon as the details are set",
+          "ko": "자세한 일정이 정해지는 대로"
+        },
+        "gloss": {
+          "en": "I'll contact you as soon as the details are decided.",
+          "ko": "자세한 일정이 정해지는 대로 나중에 연락드리겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-19",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "差し支えなければ、___てもよろしいでしょうか。",
+    "core": [
+      "差し支えなければ"
+    ],
+    "meaning": {
+      "en": "Asking carefully for permission: If you don't mind, may I ___?",
+      "ko": "조심스럽게 허락 구하기: 괜찮으시다면 ___해도 될까요?"
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "差し支えなければ"
+    ],
+    "examples": [
+      {
+        "text": "差し支えなければ、ご用件を伺ってもよろしいでしょうか。",
+        "slot": "ご用件を伺っ",
+        "cue": {
+          "en": "ask what it's about",
+          "ko": "용건을 여쭙다"
+        },
+        "gloss": {
+          "en": "If you don't mind, may I ask what it's regarding?",
+          "ko": "괜찮으시다면 용건을 여쭤봐도 될까요?"
+        }
+      },
+      {
+        "text": "差し支えなければ、お電話番号を教えていただけますか。",
+        "slot": "お電話番号を教えていただけますか",
+        "cue": {
+          "en": "tell me your phone number",
+          "ko": "전화번호를 알려 주다"
+        },
+        "gloss": {
+          "en": "If you don't mind, could you give me your phone number?",
+          "ko": "괜찮으시다면 전화번호를 알려 주시겠습니까?"
+        }
+      },
+      {
+        "text": "差し支えなければ、理由をお聞きしてもよろしいでしょうか。",
+        "slot": "理由をお聞きし",
+        "cue": {
+          "en": "ask the reason",
+          "ko": "이유를 여쭙다"
+        },
+        "gloss": {
+          "en": "If you don't mind, may I ask the reason?",
+          "ko": "괜찮으시다면 이유를 여쭤봐도 될까요?"
+        }
+      },
+      {
+        "text": "差し支えなければ、こちらの資料をお借りしてもよろしいでしょうか。",
+        "slot": "こちらの資料をお借りし",
+        "cue": {
+          "en": "borrow these documents",
+          "ko": "이 자료를 빌리다"
+        },
+        "gloss": {
+          "en": "If it's all right, may I borrow these documents?",
+          "ko": "괜찮으시다면 이 자료를 빌려도 될까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f4-20",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "___確認してまいります。",
+    "core": [
+      "確認してまいります"
+    ],
+    "meaning": {
+      "en": "Saying you'll go and check, humbly: I'll go and check ___.",
+      "ko": "겸양으로 확인하러 간다고 하기: ___ 확인하고 오겠습니다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "確認してまいります"
+    ],
+    "examples": [
+      {
+        "text": "在庫があるかどうか、確認してまいります。",
+        "slot": "在庫があるかどうか、",
+        "cue": {
+          "en": "whether it's in stock",
+          "ko": "재고가 있는지"
+        },
+        "gloss": {
+          "en": "I'll go and check whether we have it in stock.",
+          "ko": "재고가 있는지 확인하고 오겠습니다."
+        }
+      },
+      {
+        "text": "担当者に確認してまいります。",
+        "slot": "担当者に",
+        "cue": {
+          "en": "with the person in charge",
+          "ko": "담당자에게"
+        },
+        "gloss": {
+          "en": "I'll go and check with the person in charge.",
+          "ko": "담당자에게 확인하고 오겠습니다."
+        }
+      },
+      {
+        "text": "少々お待ちください、席が空いているか確認してまいります。",
+        "slot": "少々お待ちください、席が空いているか",
+        "cue": {
+          "en": "whether a seat is free",
+          "ko": "자리가 비었는지"
+        },
+        "gloss": {
+          "en": "One moment please, I'll check whether a table is free.",
+          "ko": "잠시만 기다려 주세요, 자리가 비었는지 확인하고 오겠습니다."
+        }
+      },
+      {
+        "text": "半分だけでも先に送れるよう、工場に確認してまいります。",
+        "slot": "半分だけでも先に送れるよう、工場に",
+        "cue": {
+          "en": "with the factory about sending half first",
+          "ko": "절반이라도 먼저 보낼 수 있게 공장에"
+        },
+        "gloss": {
+          "en": "I'll check with the factory so we can send at least half first.",
+          "ko": "절반이라도 먼저 보낼 수 있도록 공장에 확인하고 오겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-01",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___わけにはいかない。",
+    "core": [
+      "わけにはいかない"
+    ],
+    "meaning": {
+      "en": "Saying you can't very well do something: I can't very well ___.",
+      "ko": "사정상 못 한다고 하기: ___할 수는 없다."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "せっかく誘ってもらったのに、断るわけにはいかないよ。",
+        "slot": "せっかく誘ってもらったのに、断る",
+        "cue": {
+          "en": "turn it down after being invited",
+          "ko": "모처럼 초대받았는데 거절하다"
+        },
+        "gloss": {
+          "en": "They went out of their way to invite me, so I can't very well say no.",
+          "ko": "모처럼 초대받았는데 거절할 수는 없지."
+        }
+      },
+      {
+        "text": "明日は大事な会議だから、休むわけにはいかない。",
+        "slot": "明日は大事な会議だから、休む",
+        "cue": {
+          "en": "take the day off before a big meeting",
+          "ko": "중요한 회의라 쉬다"
+        },
+        "gloss": {
+          "en": "There's an important meeting tomorrow, so I can't take the day off.",
+          "ko": "내일은 중요한 회의라 쉴 수는 없어."
+        }
+      },
+      {
+        "text": "お客さんの前で、笑うわけにはいかないですよね。",
+        "slot": "お客さんの前で、笑う",
+        "cue": {
+          "en": "laugh in front of customers",
+          "ko": "손님 앞에서 웃다"
+        },
+        "gloss": {
+          "en": "I can't very well laugh in front of a customer, can I?",
+          "ko": "손님 앞에서 웃을 수는 없잖아요."
+        }
+      },
+      {
+        "text": "親の法事だから、行かないわけにはいかないんです。",
+        "slot": "親の法事だから、行かない",
+        "cue": {
+          "en": "not go to a parent's memorial",
+          "ko": "부모님 제사에 안 가다"
+        },
+        "gloss": {
+          "en": "It's my parent's memorial service, so I can't not go.",
+          "ko": "부모님 제사니까 안 갈 수는 없어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-02",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "___ざるを得ない。",
+    "core": [
+      "ざるを得ない"
+    ],
+    "meaning": {
+      "en": "Saying you have no choice: I have no choice but to ___.",
+      "ko": "어쩔 수 없다고 하기: ___하지 않을 수 없다."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "予算が足りない以上、計画を見直さざるを得ない。",
+        "slot": "予算が足りない以上、計画を見直さ",
+        "cue": {
+          "en": "review the plan",
+          "ko": "계획을 재검토하다"
+        },
+        "gloss": {
+          "en": "Since the budget is short, we have no choice but to review the plan.",
+          "ko": "예산이 부족한 이상 계획을 재검토하지 않을 수 없다."
+        }
+      },
+      {
+        "text": "雨がこれだけ強いと、試合は中止せざるを得ないね。",
+        "slot": "雨がこれだけ強いと、試合は中止せ",
+        "cue": {
+          "en": "call off the game",
+          "ko": "경기를 취소하다"
+        },
+        "gloss": {
+          "en": "With rain this heavy, they'll have to call off the game.",
+          "ko": "비가 이렇게 세면 경기는 취소하지 않을 수 없겠네."
+        }
+      },
+      {
+        "text": "部長に頼まれたら、引き受けざるを得ないでしょう。",
+        "slot": "部長に頼まれたら、引き受け",
+        "cue": {
+          "en": "take it on",
+          "ko": "맡다"
+        },
+        "gloss": {
+          "en": "If the manager asks, you'd have no choice but to take it on.",
+          "ko": "부장님이 부탁하면 맡지 않을 수 없겠죠."
+        }
+      },
+      {
+        "text": "ここまで証拠があると、認めざるを得ないな。",
+        "slot": "ここまで証拠があると、認め",
+        "cue": {
+          "en": "admit it",
+          "ko": "인정하다"
+        },
+        "gloss": {
+          "en": "With this much evidence, I have to admit it.",
+          "ko": "증거가 이 정도면 인정하지 않을 수 없네."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-03",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "___とはいえ、…",
+    "core": [
+      "とはいえ"
+    ],
+    "meaning": {
+      "en": "Granting a point then qualifying it: Even though ___, ….",
+      "ko": "인정하고 단서 달기: ___라고는 해도 …."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "春とはいえ、朝晩はまだ冷えますね。",
+        "slot": "春",
+        "cue": {
+          "en": "it's spring",
+          "ko": "봄이다"
+        },
+        "gloss": {
+          "en": "It may be spring, but mornings and evenings are still cold.",
+          "ko": "봄이라고는 해도 아침저녁은 아직 쌀쌀하네요."
+        }
+      },
+      {
+        "text": "休みが増えるとはいえ、一日の勤務は長くなるらしいよ。",
+        "slot": "休みが増える",
+        "cue": {
+          "en": "have more days off",
+          "ko": "휴일이 늘다"
+        },
+        "gloss": {
+          "en": "We may get more days off, but apparently each workday gets longer.",
+          "ko": "휴일이 는다고는 해도 하루 근무는 길어진대."
+        }
+      },
+      {
+        "text": "慣れた仕事とはいえ、油断は禁物です。",
+        "slot": "慣れた仕事",
+        "cue": {
+          "en": "a job I'm used to",
+          "ko": "익숙한 일"
+        },
+        "gloss": {
+          "en": "Even if it's work I'm used to, I can't let my guard down.",
+          "ko": "익숙한 일이라고는 해도 방심은 금물입니다."
+        }
+      },
+      {
+        "text": "制度ができたとはいえ、使いやすい雰囲気かは別の話だよね。",
+        "slot": "制度ができた",
+        "cue": {
+          "en": "the system was set up",
+          "ko": "제도가 생기다"
+        },
+        "gloss": {
+          "en": "The system may exist now, but whether people feel free to use it is another story.",
+          "ko": "제도가 생겼다고는 해도 쓰기 편한 분위기인지는 다른 얘기지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-04",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___かねない。",
+    "core": [
+      "かねない",
+      "かねません"
+    ],
+    "meaning": {
+      "en": "Warning of a bad outcome: That could well ___.",
+      "ko": "나쁜 결과 우려하기: ___할 수도 있다."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "そんな言い方をしたら、誤解されかねないよ。",
+        "slot": "そんな言い方をしたら、誤解され",
+        "cue": {
+          "en": "be misunderstood",
+          "ko": "오해받다"
+        },
+        "gloss": {
+          "en": "If you put it that way, you could well be misunderstood.",
+          "ko": "그런 식으로 말하면 오해받을 수도 있어."
+        }
+      },
+      {
+        "text": "このまま無理を続けると、体を壊しかねません。",
+        "slot": "このまま無理を続けると、体を壊し",
+        "cue": {
+          "en": "ruin your health",
+          "ko": "몸을 해치다"
+        },
+        "gloss": {
+          "en": "If you keep pushing yourself like this, you could ruin your health.",
+          "ko": "이대로 무리를 계속하면 몸을 상할 수도 있습니다."
+        }
+      },
+      {
+        "text": "確認しないで送ると、大きなミスになりかねない。",
+        "slot": "確認しないで送ると、大きなミスになり",
+        "cue": {
+          "en": "become a big mistake",
+          "ko": "큰 실수가 되다"
+        },
+        "gloss": {
+          "en": "Sending it without checking could turn into a big mistake.",
+          "ko": "확인하지 않고 보내면 큰 실수가 될 수도 있다."
+        }
+      },
+      {
+        "text": "バスをなくしたら、病院に行けない人が出かねないと思う。",
+        "slot": "バスをなくしたら、病院に行けない人が出",
+        "cue": {
+          "en": "some people can't get to hospital",
+          "ko": "병원에 못 가는 사람이 생기다"
+        },
+        "gloss": {
+          "en": "If they cut the buses, some people might not be able to get to the hospital.",
+          "ko": "버스를 없애면 병원에 못 가는 사람이 생길 수도 있다고 생각해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-05",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "___ものの、…",
+    "core": [
+      "ものの"
+    ],
+    "meaning": {
+      "en": "Admitting a fact with a catch: Although ___, ….",
+      "ko": "사실을 인정하며 반전: ___하긴 했지만 …."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "引き受けたものの、正直自信がない。",
+        "slot": "引き受けた",
+        "cue": {
+          "en": "have accepted the job",
+          "ko": "맡았다"
+        },
+        "gloss": {
+          "en": "I said yes, but honestly I'm not confident.",
+          "ko": "맡긴 했지만 솔직히 자신이 없다."
+        }
+      },
+      {
+        "text": "転職したものの、まだ前の会社のやり方が抜けない。",
+        "slot": "転職した",
+        "cue": {
+          "en": "have changed jobs",
+          "ko": "이직했다"
+        },
+        "gloss": {
+          "en": "I've changed jobs, but I still do things the old company's way.",
+          "ko": "이직은 했지만 아직 전 회사 방식이 안 빠진다."
+        }
+      },
+      {
+        "text": "聞こうとは思うものの、みんな忙しそうで声をかけにくい。",
+        "slot": "聞こうとは思う",
+        "cue": {
+          "en": "mean to ask",
+          "ko": "물어보려고는 생각하다"
+        },
+        "gloss": {
+          "en": "I mean to ask, but everyone looks busy so it's hard to approach them.",
+          "ko": "물어보려고는 하지만 다들 바빠 보여서 말 걸기가 어렵다."
+        }
+      },
+      {
+        "text": "チケットは買ったものの、当日行けるか分からない。",
+        "slot": "チケットは買った",
+        "cue": {
+          "en": "have bought the ticket",
+          "ko": "표는 샀다"
+        },
+        "gloss": {
+          "en": "I bought the ticket, but I don't know if I can go on the day.",
+          "ko": "표는 샀지만 당일에 갈 수 있을지 모르겠다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-06",
+    "stage": 5,
+    "fn": "persuade",
+    "pattern": "___からこそ、…",
+    "core": [
+      "からこそ"
+    ],
+    "meaning": {
+      "en": "Stressing the real reason: It's precisely because ___ that ….",
+      "ko": "진짜 이유 강조하기: ___이기 때문에야말로 …."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "大切な友だちだからこそ、本当のことを言いたい。",
+        "slot": "大切な友だちだ",
+        "cue": {
+          "en": "you are a dear friend",
+          "ko": "소중한 친구다"
+        },
+        "gloss": {
+          "en": "Precisely because you're a dear friend, I want to tell you the truth.",
+          "ko": "소중한 친구이기 때문에 더욱 사실을 말하고 싶어."
+        }
+      },
+      {
+        "text": "賛否が分かれるからこそ、みんな語りたくなるんだよね。",
+        "slot": "賛否が分かれる",
+        "cue": {
+          "en": "opinions are split",
+          "ko": "찬반이 갈리다"
+        },
+        "gloss": {
+          "en": "It's exactly because opinions are split that everyone wants to talk about it.",
+          "ko": "찬반이 갈리니까 더욱 다들 이야기하고 싶어지는 거지."
+        }
+      },
+      {
+        "text": "忙しいからこそ、休みをきちんと取るべきだよ。",
+        "slot": "忙しい",
+        "cue": {
+          "en": "be busy",
+          "ko": "바쁘다"
+        },
+        "gloss": {
+          "en": "It's precisely because you're busy that you should take proper breaks.",
+          "ko": "바쁘니까 더욱 휴식을 제대로 챙겨야 해."
+        }
+      },
+      {
+        "text": "失敗したからこそ、学べたこともある。",
+        "slot": "失敗した",
+        "cue": {
+          "en": "have failed",
+          "ko": "실패했다"
+        },
+        "gloss": {
+          "en": "There are things I could learn precisely because I failed.",
+          "ko": "실패했기 때문에 배울 수 있었던 것도 있다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-07",
+    "stage": 5,
+    "fn": "best-to",
+    "pattern": "___に越したことはない。",
+    "core": [
+      "に越したことはない"
+    ],
+    "meaning": {
+      "en": "Saying something is best: Nothing beats ___.",
+      "ko": "그게 제일이라고 하기: ___하는 게 제일 낫다."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "準備は早いに越したことはない。",
+        "slot": "準備は早い",
+        "cue": {
+          "en": "prepare early",
+          "ko": "준비가 이르다"
+        },
+        "gloss": {
+          "en": "When it comes to preparing, the earlier the better.",
+          "ko": "준비는 빠를수록 좋다."
+        }
+      },
+      {
+        "text": "何も起きないに越したことはないけど、保険は入っておこう。",
+        "slot": "何も起きない",
+        "cue": {
+          "en": "nothing happens",
+          "ko": "아무 일도 없다"
+        },
+        "gloss": {
+          "en": "Best if nothing happens, but let's get insurance anyway.",
+          "ko": "아무 일도 없는 게 제일이지만 보험은 들어 두자."
+        }
+      },
+      {
+        "text": "お金は少しでも替えておくに越したことはないよ。",
+        "slot": "お金は少しでも替えておく",
+        "cue": {
+          "en": "exchange a little money in advance",
+          "ko": "돈을 조금이라도 환전해 두다"
+        },
+        "gloss": {
+          "en": "It's best to exchange at least a little money beforehand.",
+          "ko": "돈은 조금이라도 환전해 두는 게 제일 나아."
+        }
+      },
+      {
+        "text": "体のためには、よく寝るに越したことはないですね。",
+        "slot": "体のためには、よく寝る",
+        "cue": {
+          "en": "sleep well",
+          "ko": "잘 자다"
+        },
+        "gloss": {
+          "en": "For your health, nothing beats a good night's sleep.",
+          "ko": "몸을 위해서는 잘 자는 게 제일이네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-08",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "___ないことには、…",
+    "core": [
+      "ないことには"
+    ],
+    "meaning": {
+      "en": "Stating a must-have condition: Unless ___, ….",
+      "ko": "필수 조건 말하기: ___하지 않고서는 …."
+    },
+    "grammar": [
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "実際に会ってみないことには、何とも言えない。",
+        "slot": "実際に会ってみ",
+        "cue": {
+          "en": "actually meet them",
+          "ko": "실제로 만나 보다"
+        },
+        "gloss": {
+          "en": "I can't say anything until I actually meet them.",
+          "ko": "실제로 만나 보지 않고서는 뭐라고 말할 수 없다."
+        }
+      },
+      {
+        "text": "電話でも予約できるようにしないことには、結局使われないと思う。",
+        "slot": "電話でも予約できるようにし",
+        "cue": {
+          "en": "let people book by phone too",
+          "ko": "전화로도 예약할 수 있게 하다"
+        },
+        "gloss": {
+          "en": "Unless they let people book by phone too, I don't think anyone will use it.",
+          "ko": "전화로도 예약할 수 있게 하지 않고서는 결국 안 쓰일 거라고 봐."
+        }
+      },
+      {
+        "text": "やってみないことには、向いているか分からないよ。",
+        "slot": "やってみ",
+        "cue": {
+          "en": "try it",
+          "ko": "해 보다"
+        },
+        "gloss": {
+          "en": "You won't know if it suits you until you try it.",
+          "ko": "해 보지 않고서는 맞는지 모르지."
+        }
+      },
+      {
+        "text": "予算が決まらないことには、計画も立てられません。",
+        "slot": "予算が決まら",
+        "cue": {
+          "en": "the budget gets decided",
+          "ko": "예산이 정해지다"
+        },
+        "gloss": {
+          "en": "Unless the budget is decided, we can't make a plan either.",
+          "ko": "예산이 정해지지 않고서는 계획도 세울 수 없습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-09",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "正直なところ、___。",
+    "core": [
+      "正直なところ"
+    ],
+    "meaning": {
+      "en": "Admitting your honest view softly: To be honest, ___.",
+      "ko": "솔직한 생각 털어놓기: 솔직히 말하면 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "正直なところ"
+    ],
+    "examples": [
+      {
+        "text": "正直なところ、あの終わり方は納得できなかった。",
+        "slot": "あの終わり方は納得できなかった",
+        "cue": {
+          "en": "not buy that ending",
+          "ko": "그 결말이 납득되지 않다"
+        },
+        "gloss": {
+          "en": "To be honest, I couldn't accept that ending.",
+          "ko": "솔직히 말하면 그 결말은 납득이 안 됐어."
+        }
+      },
+      {
+        "text": "正直なところ、まだ迷っているんです。",
+        "slot": "まだ迷っているんです",
+        "cue": {
+          "en": "still be undecided",
+          "ko": "아직 망설이다"
+        },
+        "gloss": {
+          "en": "Honestly, I'm still undecided.",
+          "ko": "솔직히 아직 망설이고 있어요."
+        }
+      },
+      {
+        "text": "正直なところ、そこが一番難しいんだろうな。",
+        "slot": "そこが一番難しいんだろうな",
+        "cue": {
+          "en": "that's the hardest part",
+          "ko": "그게 제일 어렵다"
+        },
+        "gloss": {
+          "en": "Honestly, that's probably the hardest part.",
+          "ko": "솔직히 거기가 제일 어려운 부분이겠지."
+        }
+      },
+      {
+        "text": "正直なところ、予算的にはかなり厳しいです。",
+        "slot": "予算的にはかなり厳しいです",
+        "cue": {
+          "en": "the budget is very tight",
+          "ko": "예산상 꽤 빠듯하다"
+        },
+        "gloss": {
+          "en": "To be frank, the budget is very tight.",
+          "ko": "솔직히 예산 면에서는 꽤 빠듯합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-10",
+    "stage": 5,
+    "fn": "disagree-soft",
+    "pattern": "水を差すようで悪いけど、___。",
+    "core": [
+      "水を差すようで悪いけど"
+    ],
+    "meaning": {
+      "en": "Raising a concern when others are excited: Sorry to rain on the parade, but ___.",
+      "ko": "들뜬 분위기에 우려 꺼내기: 찬물 끼얹는 것 같아 미안하지만 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "水を差すようで悪いけど"
+    ],
+    "examples": [
+      {
+        "text": "水を差すようで悪いけど、その日は雨の予報だよ。",
+        "slot": "その日は雨の予報だよ",
+        "cue": {
+          "en": "rain is forecast that day",
+          "ko": "그날 비 예보가 있다"
+        },
+        "gloss": {
+          "en": "Sorry to rain on your parade, but rain is forecast that day.",
+          "ko": "찬물 끼얹는 것 같아 미안하지만 그날 비 온대."
+        }
+      },
+      {
+        "text": "水を差すようで悪いけど、予算が足りないと思う。",
+        "slot": "予算が足りないと思う",
+        "cue": {
+          "en": "the budget isn't enough",
+          "ko": "예산이 모자라다"
+        },
+        "gloss": {
+          "en": "Sorry to be a downer, but I don't think the budget is enough.",
+          "ko": "찬물 끼얹는 것 같아 미안하지만 예산이 모자랄 것 같아."
+        }
+      },
+      {
+        "text": "水を差すようで悪いけど、田中さんってサプライズ苦手じゃなかった？",
+        "slot": "田中さんってサプライズ苦手じゃなかった？",
+        "cue": {
+          "en": "Tanaka doesn't like surprises",
+          "ko": "다나카 씨가 서프라이즈를 싫어하다"
+        },
+        "gloss": {
+          "en": "Sorry to spoil it, but doesn't Tanaka hate surprises?",
+          "ko": "찬물 끼얹는 것 같아 미안하지만 다나카 씨 서프라이즈 싫어하지 않았어?"
+        }
+      },
+      {
+        "text": "水を差すようで悪いけど、そのお店、先月閉店したらしいよ。",
+        "slot": "そのお店、先月閉店したらしいよ",
+        "cue": {
+          "en": "that shop closed last month",
+          "ko": "그 가게가 지난달 문을 닫았다"
+        },
+        "gloss": {
+          "en": "Sorry to burst your bubble, but I heard that shop closed last month.",
+          "ko": "찬물 끼얹는 것 같아 미안하지만 그 가게 지난달에 문 닫았대."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-11",
+    "stage": 5,
+    "fn": "concede",
+    "pattern": "言われてみれば、___。",
+    "core": [
+      "言われてみれば"
+    ],
+    "meaning": {
+      "en": "Seeing someone's point after they say it: Now that you mention it, ___.",
+      "ko": "듣고 보니 인정하기: 듣고 보니 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "言われてみれば"
+    ],
+    "examples": [
+      {
+        "text": "言われてみれば、あのとき彼女、何か言いかけてたね。",
+        "slot": "あのとき彼女、何か言いかけてたね",
+        "cue": {
+          "en": "she was about to say something then",
+          "ko": "그때 그녀가 뭔가 말하려 했다"
+        },
+        "gloss": {
+          "en": "Now that you mention it, she was about to say something back then.",
+          "ko": "듣고 보니 그때 그녀가 뭔가 말하려고 했었네."
+        }
+      },
+      {
+        "text": "言われてみれば、最近あまり寝ていないかも。",
+        "slot": "最近あまり寝ていないかも",
+        "cue": {
+          "en": "I haven't slept much lately",
+          "ko": "요즘 잠을 잘 못 잤다"
+        },
+        "gloss": {
+          "en": "Now that you say it, maybe I haven't been sleeping much lately.",
+          "ko": "듣고 보니 요즘 잠을 별로 못 잔 것 같아."
+        }
+      },
+      {
+        "text": "言われてみれば、そうだね。明日、先輩に聞いてみる。",
+        "slot": "そうだね。明日、先輩に聞いてみる",
+        "cue": {
+          "en": "you're right; I'll ask my senior tomorrow",
+          "ko": "그렇다, 내일 선배에게 물어보다"
+        },
+        "gloss": {
+          "en": "Now that you put it that way, you're right. I'll ask my senior tomorrow.",
+          "ko": "듣고 보니 그렇네. 내일 선배한테 물어볼게."
+        }
+      },
+      {
+        "text": "言われてみれば、この部屋ちょっと暗いですね。",
+        "slot": "この部屋ちょっと暗いですね",
+        "cue": {
+          "en": "this room is a bit dark",
+          "ko": "이 방이 좀 어둡다"
+        },
+        "gloss": {
+          "en": "Now that you mention it, this room is a bit dark.",
+          "ko": "듣고 보니 이 방 좀 어둡네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-12",
+    "stage": 5,
+    "fn": "concede",
+    "pattern": "___にも一理あるね。",
+    "core": [
+      "一理ある"
+    ],
+    "meaning": {
+      "en": "Granting part of the other view: There's some truth to ___.",
+      "ko": "상대 의견 일부 인정하기: ___에도 일리가 있네."
+    },
+    "grammar": [],
+    "expressions": [
+      "一理ある"
+    ],
+    "examples": [
+      {
+        "text": "その意見にも一理あるね。",
+        "slot": "その意見に",
+        "cue": {
+          "en": "that opinion",
+          "ko": "그 의견"
+        },
+        "gloss": {
+          "en": "There's something to that opinion.",
+          "ko": "그 의견에도 일리가 있네."
+        }
+      },
+      {
+        "text": "費用がかかるって話にも一理あると思う。",
+        "slot": "費用がかかるって話に",
+        "cue": {
+          "en": "the point that it's costly",
+          "ko": "비용이 든다는 얘기"
+        },
+        "gloss": {
+          "en": "I think there's some truth to the point about the cost.",
+          "ko": "비용이 든다는 얘기에도 일리가 있다고 생각해."
+        }
+      },
+      {
+        "text": "そう考えると、彼の言い分にも一理あるかも。",
+        "slot": "そう考えると、彼の言い分に",
+        "cue": {
+          "en": "his side of the story",
+          "ko": "그의 주장"
+        },
+        "gloss": {
+          "en": "Thinking about it that way, he might have a point.",
+          "ko": "그렇게 생각하면 그의 말에도 일리가 있을지도."
+        }
+      },
+      {
+        "text": "早く始めるべきだという意見にも、一理あるとは思います。",
+        "slot": "早く始めるべきだという意見にも、",
+        "cue": {
+          "en": "the view that we should start early",
+          "ko": "빨리 시작해야 한다는 의견"
+        },
+        "gloss": {
+          "en": "I do think the view that we should start early has a point.",
+          "ko": "빨리 시작해야 한다는 의견에도 일리가 있다고는 생각합니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-13",
+    "stage": 5,
+    "fn": "disagree-soft",
+    "pattern": "___のは、ちょっと腑に落ちない。",
+    "core": [
+      "腑に落ちない"
+    ],
+    "meaning": {
+      "en": "Saying something doesn't sit right: ___ doesn't quite sit right with me.",
+      "ko": "납득이 안 된다고 하기: ___는 좀 납득이 안 간다."
+    },
+    "grammar": [],
+    "expressions": [
+      "腑に落ちない"
+    ],
+    "examples": [
+      {
+        "text": "急にルールが変わったのは、ちょっと腑に落ちない。",
+        "slot": "急にルールが変わった",
+        "cue": {
+          "en": "the rules suddenly changed",
+          "ko": "규칙이 갑자기 바뀌다"
+        },
+        "gloss": {
+          "en": "The sudden change in the rules doesn't quite sit right with me.",
+          "ko": "갑자기 규칙이 바뀐 건 좀 납득이 안 간다."
+        }
+      },
+      {
+        "text": "説明は聞いたけど、まだ腑に落ちないところがある。",
+        "slot": "説明は聞いたけど、まだ",
+        "cue": {
+          "en": "I heard the explanation, but still",
+          "ko": "설명은 들었지만 아직"
+        },
+        "gloss": {
+          "en": "I heard the explanation, but something still doesn't add up.",
+          "ko": "설명은 들었지만 아직 납득이 안 가는 부분이 있다."
+        }
+      },
+      {
+        "text": "彼だけ怒られたのは、どうも腑に落ちないな。",
+        "slot": "彼だけ怒られた",
+        "cue": {
+          "en": "only he got scolded",
+          "ko": "그 사람만 혼나다"
+        },
+        "gloss": {
+          "en": "It doesn't sit right that only he got told off.",
+          "ko": "그 사람만 혼난 건 아무래도 납득이 안 가네."
+        }
+      },
+      {
+        "text": "値段が倍になったのは、正直腑に落ちないです。",
+        "slot": "値段が倍になった",
+        "cue": {
+          "en": "the price doubled",
+          "ko": "가격이 두 배가 되다"
+        },
+        "gloss": {
+          "en": "Honestly, the price doubling doesn't make sense to me.",
+          "ko": "가격이 두 배가 된 건 솔직히 납득이 안 갑니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-14",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___のは、正直あまり気が進まない。",
+    "core": [
+      "気が進まない"
+    ],
+    "meaning": {
+      "en": "Saying you're reluctant: I'm honestly not keen on ___.",
+      "ko": "내키지 않는다고 하기: ___는 솔직히 별로 내키지 않는다."
+    },
+    "grammar": [],
+    "expressions": [
+      "気が進まない"
+    ],
+    "examples": [
+      {
+        "text": "一応行くけど、正直あんまり気が進まないんだよね。",
+        "slot": "一応行くけど、正直あんまり",
+        "cue": {
+          "en": "I'll go anyway, but honestly not very",
+          "ko": "일단 가긴 하지만 솔직히 별로"
+        },
+        "gloss": {
+          "en": "I'll go, but honestly I'm not very keen.",
+          "ko": "일단 가긴 하는데 솔직히 별로 안 내켜."
+        }
+      },
+      {
+        "text": "みんな忙しそうで、声をかけるのは気が進まない。",
+        "slot": "みんな忙しそうで、声をかけるのは",
+        "cue": {
+          "en": "speak up when everyone is busy",
+          "ko": "다들 바빠 보여 말을 걸다"
+        },
+        "gloss": {
+          "en": "Everyone looks busy, so I don't feel like bothering them.",
+          "ko": "다들 바빠 보여서 말 거는 게 내키지 않아."
+        }
+      },
+      {
+        "text": "夜遅くに電話するのは、ちょっと気が進まないな。",
+        "slot": "夜遅くに電話するのは、ちょっと",
+        "cue": {
+          "en": "call late at night",
+          "ko": "밤늦게 전화하다"
+        },
+        "gloss": {
+          "en": "I'm not too keen on calling late at night.",
+          "ko": "밤늦게 전화하는 건 좀 내키지 않네."
+        }
+      },
+      {
+        "text": "知らない人ばかりの集まりは、どうも気が進まないです。",
+        "slot": "知らない人ばかりの集まりは、どうも",
+        "cue": {
+          "en": "a gathering of strangers",
+          "ko": "모르는 사람뿐인 모임"
+        },
+        "gloss": {
+          "en": "I'm just not keen on gatherings full of strangers.",
+          "ko": "모르는 사람만 있는 모임은 아무래도 내키지 않아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-15",
+    "stage": 5,
+    "fn": "sympathy",
+    "pattern": "考えすぎだよ。___。",
+    "core": [
+      "考えすぎだよ"
+    ],
+    "meaning": {
+      "en": "Reassuring a worried friend: You're overthinking it. ___.",
+      "ko": "걱정하는 친구 안심시키기: 너무 깊게 생각하는 거야. ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "考えすぎだよ"
+    ],
+    "examples": [
+      {
+        "text": "考えすぎだよ。それだけ準備しておけば大丈夫だって。",
+        "slot": "それだけ準備しておけば大丈夫だって",
+        "cue": {
+          "en": "with that much prep you'll be fine",
+          "ko": "그만큼 준비했으면 괜찮다"
+        },
+        "gloss": {
+          "en": "You're overthinking it. With that much preparation, you'll be fine.",
+          "ko": "너무 생각이 많아. 그만큼 준비했으면 괜찮다니까."
+        }
+      },
+      {
+        "text": "考えすぎだよ。誰も気にしてないって。",
+        "slot": "誰も気にしてないって",
+        "cue": {
+          "en": "nobody cares",
+          "ko": "아무도 신경 안 쓴다"
+        },
+        "gloss": {
+          "en": "You're overthinking it. Nobody minds.",
+          "ko": "너무 깊게 생각하는 거야. 아무도 신경 안 써."
+        }
+      },
+      {
+        "text": "考えすぎだよ。一回の失敗で嫌われたりしないよ。",
+        "slot": "一回の失敗で嫌われたりしないよ",
+        "cue": {
+          "en": "no one will dislike you for one mistake",
+          "ko": "한 번 실수로 미움받지 않는다"
+        },
+        "gloss": {
+          "en": "You're overthinking it. Nobody will dislike you over one mistake.",
+          "ko": "너무 생각이 많아. 한 번 실수했다고 미움받지 않아."
+        }
+      },
+      {
+        "text": "考えすぎだよ。返事が遅いのは忙しいだけだと思う。",
+        "slot": "返事が遅いのは忙しいだけだと思う",
+        "cue": {
+          "en": "they're slow to reply because they're busy",
+          "ko": "답이 늦는 건 바빠서다"
+        },
+        "gloss": {
+          "en": "You're overthinking it. I think they're just busy and slow to reply.",
+          "ko": "너무 생각이 많아. 답장이 늦은 건 바빠서일 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-16",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___のは、ちょっと難しいかもです。",
+    "core": [
+      "ちょっと難しいかもです"
+    ],
+    "meaning": {
+      "en": "Refusing without saying no: ___ might be a bit difficult.",
+      "ko": "싫다고 하지 않고 거절하기: ___는 좀 어려울 수도 있어요."
+    },
+    "grammar": [],
+    "expressions": [
+      "ちょっと難しいかもです"
+    ],
+    "examples": [
+      {
+        "text": "ずらすのはちょっと難しいかもです。",
+        "slot": "ずらすのは",
+        "cue": {
+          "en": "shift the date",
+          "ko": "날짜를 옮기다"
+        },
+        "gloss": {
+          "en": "Moving it might be a bit difficult.",
+          "ko": "옮기는 건 좀 어려울 수도 있어요."
+        }
+      },
+      {
+        "text": "今週中に終わらせるのは、ちょっと難しいかもです。",
+        "slot": "今週中に終わらせるのは、",
+        "cue": {
+          "en": "finish it this week",
+          "ko": "이번 주 안에 끝내다"
+        },
+        "gloss": {
+          "en": "Finishing it this week might be a bit tough.",
+          "ko": "이번 주 안에 끝내는 건 좀 어려울 수도 있어요."
+        }
+      },
+      {
+        "text": "その日は先約があって、ちょっと難しいかもです。",
+        "slot": "その日は先約があって、",
+        "cue": {
+          "en": "have a prior engagement that day",
+          "ko": "그날 선약이 있다"
+        },
+        "gloss": {
+          "en": "I have plans that day, so it might be a bit difficult.",
+          "ko": "그날은 선약이 있어서 좀 어려울 수도 있어요."
+        }
+      },
+      {
+        "text": "一人で全部やるのは、ちょっと難しいかもです。",
+        "slot": "一人で全部やるのは、",
+        "cue": {
+          "en": "do it all alone",
+          "ko": "혼자 다 하다"
+        },
+        "gloss": {
+          "en": "Doing it all on my own might be a bit hard.",
+          "ko": "혼자 전부 하는 건 좀 어려울 수도 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-17",
+    "stage": 5,
+    "fn": "read-between",
+    "pattern": "___て、本当にありがたいんですけど…",
+    "core": [
+      "ありがたいんですけど"
+    ],
+    "meaning": {
+      "en": "Thanking before a soft refusal: It's really kind that ___, but….",
+      "ko": "거절 전에 고마움 말하기: ___해 주셔서 정말 감사한데요…."
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "声をかけていただいて、本当にありがたいんですけど…。",
+        "slot": "声をかけていただい",
+        "cue": {
+          "en": "be invited",
+          "ko": "말을 걸어 주시다"
+        },
+        "gloss": {
+          "en": "It's really kind of you to ask me, but…",
+          "ko": "말씀해 주셔서 정말 감사한데요…"
+        }
+      },
+      {
+        "text": "誘ってくれて、本当にありがたいんですけど…。",
+        "slot": "誘ってくれ",
+        "cue": {
+          "en": "be asked along",
+          "ko": "불러 주다"
+        },
+        "gloss": {
+          "en": "Thanks so much for inviting me, but…",
+          "ko": "불러 줘서 정말 고마운데요…"
+        }
+      },
+      {
+        "text": "気にかけていただいて、ありがたいんですけど、今は大丈夫です。",
+        "slot": "気にかけていただい",
+        "cue": {
+          "en": "be looked out for",
+          "ko": "신경 써 주시다"
+        },
+        "gloss": {
+          "en": "I appreciate your concern, but I'm fine for now.",
+          "ko": "신경 써 주셔서 감사한데 지금은 괜찮아요."
+        }
+      },
+      {
+        "text": "そう言ってもらえて、ありがたいんですけど、まだ自信がなくて。",
+        "slot": "そう言ってもらえ",
+        "cue": {
+          "en": "be told that",
+          "ko": "그렇게 말해 주다"
+        },
+        "gloss": {
+          "en": "It's kind of you to say so, but I'm not confident yet.",
+          "ko": "그렇게 말해 줘서 고마운데 아직 자신이 없어서요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-18",
+    "stage": 5,
+    "fn": "change-topic",
+    "pattern": "それはそれとして、___。",
+    "core": [
+      "それはそれとして"
+    ],
+    "meaning": {
+      "en": "Setting a point aside to move on: That aside, ___.",
+      "ko": "한 얘기를 두고 넘어가기: 그건 그렇다 치고 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "それはそれとして"
+    ],
+    "examples": [
+      {
+        "text": "それはそれとして、動画はいいアイデアだから、当日みんなで見ようよ。",
+        "slot": "動画はいいアイデアだから、当日みんなで見ようよ",
+        "cue": {
+          "en": "let's all watch the video on the day",
+          "ko": "그날 다 같이 영상을 보자"
+        },
+        "gloss": {
+          "en": "That aside, the video's a great idea, so let's all watch it on the day.",
+          "ko": "그건 그렇다 치고 영상은 좋은 아이디어니까 당일에 다 같이 보자."
+        }
+      },
+      {
+        "text": "それはそれとして、お昼はどうする？",
+        "slot": "お昼はどうする？",
+        "cue": {
+          "en": "what about lunch",
+          "ko": "점심은 어떻게 하다"
+        },
+        "gloss": {
+          "en": "Anyway, what are we doing for lunch?",
+          "ko": "그건 그렇고 점심은 어떻게 할래?"
+        }
+      },
+      {
+        "text": "それはそれとして、来週の予定を決めましょう。",
+        "slot": "来週の予定を決めましょう",
+        "cue": {
+          "en": "let's set next week's plan",
+          "ko": "다음 주 일정을 정하자"
+        },
+        "gloss": {
+          "en": "Setting that aside, let's decide next week's schedule.",
+          "ko": "그건 그렇다 치고 다음 주 일정을 정합시다."
+        }
+      },
+      {
+        "text": "それはそれとして、彼の努力は認めるべきだと思う。",
+        "slot": "彼の努力は認めるべきだと思う",
+        "cue": {
+          "en": "we should recognize his effort",
+          "ko": "그의 노력은 인정해야 한다"
+        },
+        "gloss": {
+          "en": "That aside, I think we should give him credit for his effort.",
+          "ko": "그건 그렇다 치고 그의 노력은 인정해야 한다고 생각해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-19",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___は悪くはないけど、…",
+    "core": [
+      "悪くはないけど"
+    ],
+    "meaning": {
+      "en": "Faint praise before a complaint: ___ isn't bad, but ….",
+      "ko": "좋게 말한 뒤 아쉬움 말하기: ___는 나쁘진 않은데 …."
+    },
+    "grammar": [],
+    "expressions": [
+      "悪くはないけど"
+    ],
+    "examples": [
+      {
+        "text": "温泉は悪くはないけど、宴会がつらくて。",
+        "slot": "温泉は",
+        "cue": {
+          "en": "the hot spring",
+          "ko": "온천"
+        },
+        "gloss": {
+          "en": "The hot spring isn't bad, but the party is hard on me.",
+          "ko": "온천은 나쁘진 않은데 연회가 힘들어서."
+        }
+      },
+      {
+        "text": "味は悪くはないけど、ちょっと高いかな。",
+        "slot": "味は",
+        "cue": {
+          "en": "the taste",
+          "ko": "맛"
+        },
+        "gloss": {
+          "en": "It doesn't taste bad, but it's a bit pricey.",
+          "ko": "맛은 나쁘진 않은데 좀 비싼 것 같아."
+        }
+      },
+      {
+        "text": "デザインは悪くはないけど、使いにくいんだよね。",
+        "slot": "デザインは",
+        "cue": {
+          "en": "the design",
+          "ko": "디자인"
+        },
+        "gloss": {
+          "en": "The design isn't bad, but it's hard to use.",
+          "ko": "디자인은 나쁘진 않은데 쓰기 불편하거든."
+        }
+      },
+      {
+        "text": "その案も悪くはないけど、もう少し考えたいな。",
+        "slot": "その案も",
+        "cue": {
+          "en": "that idea too",
+          "ko": "그 안도"
+        },
+        "gloss": {
+          "en": "That idea isn't bad either, but I'd like to think a bit more.",
+          "ko": "그 안도 나쁘진 않은데 조금 더 생각해 보고 싶어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f5-20",
+    "stage": 5,
+    "fn": "not-necessarily",
+    "pattern": "___とは限らないと思う。",
+    "core": [
+      "とは限らない"
+    ],
+    "meaning": {
+      "en": "Saying it's not always so: I don't think ___ is necessarily so.",
+      "ko": "꼭 그런 건 아니라고 하기: 꼭 ___라고는 할 수 없다."
+    },
+    "grammar": [],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "それだけで決まるとは限らないと思う。",
+        "slot": "それだけで決まる",
+        "cue": {
+          "en": "be decided by that alone",
+          "ko": "그것만으로 정해지다"
+        },
+        "gloss": {
+          "en": "I don't think it's necessarily decided by that alone.",
+          "ko": "그것만으로 정해진다고는 할 수 없을 것 같아."
+        }
+      },
+      {
+        "text": "高い物がいい物とは限らないよ。",
+        "slot": "高い物がいい物",
+        "cue": {
+          "en": "expensive things are good things",
+          "ko": "비싼 물건이 좋은 물건"
+        },
+        "gloss": {
+          "en": "Expensive things aren't always good things.",
+          "ko": "비싼 물건이 꼭 좋은 물건이라고는 할 수 없어."
+        }
+      },
+      {
+        "text": "専門家の意見が正しいとは限らない。",
+        "slot": "専門家の意見が正しい",
+        "cue": {
+          "en": "experts are right",
+          "ko": "전문가 의견이 옳다"
+        },
+        "gloss": {
+          "en": "The experts' opinion isn't necessarily right.",
+          "ko": "전문가의 의견이 꼭 옳다고는 할 수 없다."
+        }
+      },
+      {
+        "text": "早く始めた人が上手になるとは限らないですよ。",
+        "slot": "早く始めた人が上手になる",
+        "cue": {
+          "en": "those who start early get good",
+          "ko": "일찍 시작한 사람이 잘하게 되다"
+        },
+        "gloss": {
+          "en": "Starting early doesn't necessarily make you better.",
+          "ko": "일찍 시작한 사람이 꼭 잘하게 된다고는 할 수 없어요."
         }
       }
     ]

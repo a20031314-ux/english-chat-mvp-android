@@ -556,5 +556,380 @@ export const PT_DECOYS: Record<string, string[]> = {
     "do repente",
     "em repente",
     "de repentino"
+  ],
+  "pt-f4-01|Se eu tivesse": [
+    "Se eu tenho",
+    "Se eu teria",
+    "Se eu tinha"
+  ],
+  "pt-f4-01|se eu tivesse": [
+    "se eu tenho",
+    "se eu teria",
+    "se eu tinha"
+  ],
+  "pt-f4-02|eu ficaria": [
+    "eu ficarei",
+    "eu fiquei",
+    "eu fique"
+  ],
+  "pt-f4-03|Quando você puder": [
+    "Quando você pode",
+    "Quando você poder",
+    "Quando você possa"
+  ],
+  "pt-f4-03|quando você puder": [
+    "quando você pode",
+    "quando você poder",
+    "quando você possa"
+  ],
+  "pt-f4-04|Assim que": [
+    "Assim como",
+    "Assim quando",
+    "Assim de"
+  ],
+  "pt-f4-04|assim que": [
+    "assim como",
+    "assim quando",
+    "assim de"
+  ],
+  "pt-f4-05|Embora seja": [
+    "Embora é",
+    "Embora era",
+    "Embora ser"
+  ],
+  "pt-f4-05|embora seja": [
+    "embora é",
+    "embora era",
+    "embora ser"
+  ],
+  "pt-f4-06|para vocês saberem": [
+    "para vocês saber",
+    "para vocês sabem",
+    "para vocês saibam"
+  ],
+  "pt-f4-07|tenho trabalhado": [
+    "tenho trabalhando",
+    "tenho trabalhar",
+    "tenho trabalhou"
+  ],
+  "pt-f4-07|Tenho trabalhado": [
+    "Tenho trabalhando",
+    "Tenho trabalhar",
+    "Tenho trabalhou"
+  ],
+  "pt-f4-08|tenho sentido falta": [
+    "tenho sentindo falta",
+    "tenho sentir falta",
+    "tenho sentido falto"
+  ],
+  "pt-f4-08|Tenho sentido falta": [
+    "Tenho sentindo falta",
+    "Tenho sentir falta",
+    "Tenho sentido falto"
+  ],
+  "pt-f4-09|disse que": [
+    "dizeu que",
+    "disse de que",
+    "disse se"
+  ],
+  "pt-f4-09|disseram que": [
+    "dizeram que",
+    "disserem que",
+    "disseram de que"
+  ],
+  "pt-f4-10|Fala-se muito": [
+    "Falam-se muito",
+    "Fala-se muita",
+    "Fala-me muito"
+  ],
+  "pt-f4-10|fala-se muito": [
+    "falam-se muito",
+    "fala-se muita",
+    "fala-me muito"
+  ],
+  "pt-f4-11|Por um lado": [
+    "Pelo um lado",
+    "Por uma lado",
+    "Para um lado"
+  ],
+  "pt-f4-11|por um lado": [
+    "pelo um lado",
+    "por uma lado",
+    "para um lado"
+  ],
+  "pt-f4-12|Por outro lado": [
+    "Pelo outro lado",
+    "Por outra lado",
+    "Para outro lado"
+  ],
+  "pt-f4-12|por outro lado": [
+    "pelo outro lado",
+    "por outra lado",
+    "para outro lado"
+  ],
+  "pt-f4-13|Entendo seu ponto": [
+    "Entendo seu ponta",
+    "Entendo sua ponto",
+    "Entendo seu pontos"
+  ],
+  "pt-f4-13|entendo seu ponto": [
+    "entendo seu ponta",
+    "entendo sua ponto",
+    "entendo seu pontos"
+  ],
+  "pt-f4-14|A questão é que": [
+    "A questão é de",
+    "A questão está que",
+    "A questão é se"
+  ],
+  "pt-f4-14|a questão é que": [
+    "a questão é de",
+    "a questão está que",
+    "a questão é se"
+  ],
+  "pt-f4-15|Tem como": [
+    "Tem com",
+    "Tem como de",
+    "Tem que"
+  ],
+  "pt-f4-15|tem como": [
+    "tem com",
+    "tem como de",
+    "tem que"
+  ],
+  "pt-f4-16|Levando em conta": [
+    "Levando em contas",
+    "Levando a conta",
+    "Levado em conta"
+  ],
+  "pt-f4-16|levando em conta": [
+    "levando em contas",
+    "levando a conta",
+    "levado em conta"
+  ],
+  "pt-f4-17|Em compensação": [
+    "Na compensação",
+    "Em compensado",
+    "Por compensação"
+  ],
+  "pt-f4-17|em compensação": [
+    "na compensação",
+    "em compensado",
+    "por compensação"
+  ],
+  "pt-f4-18|O lado bom é que": [
+    "O lado bem é que",
+    "A lado bom é que",
+    "O lado bom é de"
+  ],
+  "pt-f4-18|o lado bom é que": [
+    "o lado bem é que",
+    "a lado bom é que",
+    "o lado bom é de"
+  ],
+  "pt-f4-19|Em resumo": [
+    "No resumo",
+    "Em resumido",
+    "Por resumo"
+  ],
+  "pt-f4-19|em resumo": [
+    "no resumo",
+    "em resumido",
+    "por resumo"
+  ],
+  "pt-f4-20|Se não me engano": [
+    "Se não me enganho",
+    "Se não engano",
+    "Se não me engane"
+  ],
+  "pt-f4-20|se não me engano": [
+    "se não me enganho",
+    "se não engano",
+    "se não me engane"
+  ],
+  "pt-f5-01|já tinha": [
+    "já tenho",
+    "já tive",
+    "já tinhei"
+  ],
+  "pt-f5-01|já tinham": [
+    "já tinha",
+    "já tiveram",
+    "já tenham"
+  ],
+  "pt-f5-02|Caso": [
+    "Em caso",
+    "Caso de",
+    "Se caso"
+  ],
+  "pt-f5-02|caso": [
+    "em caso",
+    "caso de",
+    "se caso"
+  ],
+  "pt-f5-03|a não ser que": [
+    "a não sendo que",
+    "a menos de que",
+    "a não ser se"
+  ],
+  "pt-f5-03|A não ser que": [
+    "A não sendo que",
+    "A menos de que",
+    "A não ser se"
+  ],
+  "pt-f5-04|Contanto que": [
+    "Contando que",
+    "Contanto de",
+    "Com tanto que"
+  ],
+  "pt-f5-04|contanto que": [
+    "contando que",
+    "contanto de",
+    "com tanto que"
+  ],
+  "pt-f5-05|Dá uma olhadinha": [
+    "Dá um olhadinha",
+    "Dá uma olhadinho",
+    "Dá uma olhadinhas"
+  ],
+  "pt-f5-05|dá uma olhadinha": [
+    "dá um olhadinha",
+    "dá uma olhadinho",
+    "dá uma olhadinhas"
+  ],
+  "pt-f5-06|uma coisinha": [
+    "um coisinha",
+    "uma coisinho",
+    "uma coisita"
+  ],
+  "pt-f5-07|O que me incomoda é": [
+    "O que me incomodo é",
+    "Que me incomoda é",
+    "O que me incomoda está"
+  ],
+  "pt-f5-07|o que me incomoda é": [
+    "o que me incomodo é",
+    "que me incomoda é",
+    "o que me incomoda está"
+  ],
+  "pt-f5-08|não entendo é": [
+    "não entendo que é",
+    "não entende é",
+    "não entendo está"
+  ],
+  "pt-f5-09|Venho por meio deste": [
+    "Venho para meio deste",
+    "Venho por meio desse",
+    "Venho em meio deste"
+  ],
+  "pt-f5-09|venho por meio deste": [
+    "venho para meio deste",
+    "venho por meio desse",
+    "venho em meio deste"
+  ],
+  "pt-f5-10|Agradecemos desde já": [
+    "Agradecemos de já",
+    "Agradecimos desde já",
+    "Agradecemos desde agora"
+  ],
+  "pt-f5-10|agradecemos desde já": [
+    "agradecemos de já",
+    "agradecimos desde já",
+    "agradecemos desde agora"
+  ],
+  "pt-f5-11|Informamos que": [
+    "Informemos que",
+    "Informamos a que",
+    "Informamo que"
+  ],
+  "pt-f5-11|informamos que": [
+    "informemos que",
+    "informamos a que",
+    "informamo que"
+  ],
+  "pt-f5-12|Tu é": [
+    "Tu são",
+    "Ti é",
+    "Tu está"
+  ],
+  "pt-f5-12|tu é": [
+    "tu são",
+    "ti é",
+    "tu está"
+  ],
+  "pt-f5-13|pelo contrário": [
+    "por contrário",
+    "pelo contrária",
+    "no contrário"
+  ],
+  "pt-f5-13|Pelo contrário": [
+    "Por contrário",
+    "Pelo contrária",
+    "No contrário"
+  ],
+  "pt-f5-14|Aliás": [
+    "Aliás de",
+    "Além",
+    "Ali"
+  ],
+  "pt-f5-14|aliás": [
+    "aliás de",
+    "além",
+    "ali"
+  ],
+  "pt-f5-15|Inclusive": [
+    "Incluso",
+    "Inclusivo",
+    "Incluindo"
+  ],
+  "pt-f5-15|inclusive": [
+    "incluso",
+    "inclusivo",
+    "incluindo"
+  ],
+  "pt-f5-16|Com todo respeito": [
+    "Com toda respeito",
+    "Com todos respeito",
+    "Em todo respeito"
+  ],
+  "pt-f5-16|com todo respeito": [
+    "com toda respeito",
+    "com todos respeito",
+    "em todo respeito"
+  ],
+  "pt-f5-17|Sem querer ser chato": [
+    "Sem quer ser chato",
+    "Sem querendo ser chato",
+    "Sem querer de ser chato"
+  ],
+  "pt-f5-17|sem querer ser chato": [
+    "sem quer ser chato",
+    "sem querendo ser chato",
+    "sem querer de ser chato"
+  ],
+  "pt-f5-18|Vou ver e te falo": [
+    "Vou ver e te fala",
+    "Vou ver e te falei",
+    "Vou ver e te falo de"
+  ],
+  "pt-f5-18|vou ver e te falo": [
+    "vou ver e te fala",
+    "vou ver e te falei",
+    "vou ver e te falo de"
+  ],
+  "pt-f5-19|Na real": [
+    "No real",
+    "Na reais",
+    "Em real"
+  ],
+  "pt-f5-19|na real": [
+    "no real",
+    "na reais",
+    "em real"
+  ],
+  "pt-f5-20|caiu a ficha": [
+    "caiu o ficha",
+    "caíram a ficha",
+    "caiu a fichas"
   ]
 };

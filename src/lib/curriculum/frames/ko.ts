@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 한국어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
+/** 한국어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
 export const KO_FRAMES: Frame[] = [
   {
     "id": "ko-f1-01",
@@ -4068,6 +4068,2706 @@ export const KO_FRAMES: Frame[] = [
         "gloss": {
           "en": "Just tell me.",
           "ko": "그냥 말해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-01",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "___아/어 달래요.",
+    "core": [
+      "달래요"
+    ],
+    "meaning": {
+      "en": "Passing on a request: They asked (me) to ___.",
+      "ko": "부탁 전하기: ___아/어 달래요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "김 과장님께서 견적서를 다시 보내 달래요.",
+        "slot": "김 과장님께서 견적서를 다시 보내",
+        "cue": {
+          "en": "send the quote again",
+          "ko": "견적서를 다시 보내다"
+        },
+        "gloss": {
+          "en": "Manager Kim asked us to send the quote again.",
+          "ko": "김 과장님께서 견적서를 다시 보내 달래요."
+        }
+      },
+      {
+        "text": "팀장님이 자료를 오늘까지 정리해 달래요.",
+        "slot": "팀장님이 자료를 오늘까지 정리해",
+        "cue": {
+          "en": "organize the materials by today",
+          "ko": "자료를 오늘까지 정리하다"
+        },
+        "gloss": {
+          "en": "The team leader asked me to organize the materials by today.",
+          "ko": "팀장님이 자료를 오늘까지 정리해 달래요."
+        }
+      },
+      {
+        "text": "옆집 아주머니가 택배 좀 맡아 달래요.",
+        "slot": "옆집 아주머니가 택배 좀 맡아",
+        "cue": {
+          "en": "keep a parcel for her",
+          "ko": "택배를 맡다"
+        },
+        "gloss": {
+          "en": "The lady next door asked me to hold on to her parcel.",
+          "ko": "옆집 아주머니가 택배 좀 맡아 달래요."
+        }
+      },
+      {
+        "text": "동생이 내일 공항까지 태워 달래요.",
+        "slot": "동생이 내일 공항까지 태워",
+        "cue": {
+          "en": "give a ride to the airport",
+          "ko": "공항까지 태우다"
+        },
+        "gloss": {
+          "en": "My younger sibling asked me to drive them to the airport tomorrow.",
+          "ko": "동생이 내일 공항까지 태워 달래요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-02",
+    "stage": 4,
+    "fn": "hearsay",
+    "pattern": "___다고 하시더라고요.",
+    "core": [
+      "다고 하시더라고요"
+    ],
+    "meaning": {
+      "en": "Passing on what someone (senior) said: They said that ___.",
+      "ko": "들은 말 전하기: ___다고 하시더라고요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "다른 업체 견적도 받았다고 하시더라고요.",
+        "slot": "다른 업체 견적도 받았",
+        "cue": {
+          "en": "have received another company's quote",
+          "ko": "다른 업체 견적도 받다"
+        },
+        "gloss": {
+          "en": "They said they had also received a quote from another company.",
+          "ko": "다른 업체 견적도 받았다고 하시더라고요."
+        }
+      },
+      {
+        "text": "고객님이 이번 달은 예산이 없다고 하시더라고요.",
+        "slot": "고객님이 이번 달은 예산이 없",
+        "cue": {
+          "en": "have no budget this month",
+          "ko": "이번 달은 예산이 없다"
+        },
+        "gloss": {
+          "en": "The client said there's no budget this month.",
+          "ko": "고객님이 이번 달은 예산이 없다고 하시더라고요."
+        }
+      },
+      {
+        "text": "사장님이 다음 주에 출장 가신다고 하시더라고요.",
+        "slot": "사장님이 다음 주에 출장 가신",
+        "cue": {
+          "en": "go on a business trip next week",
+          "ko": "다음 주에 출장 가다"
+        },
+        "gloss": {
+          "en": "The boss said he's going on a business trip next week.",
+          "ko": "사장님이 다음 주에 출장 가신다고 하시더라고요."
+        }
+      },
+      {
+        "text": "교수님이 발표가 아주 좋았다고 하시더라고요.",
+        "slot": "교수님이 발표가 아주 좋았",
+        "cue": {
+          "en": "the presentation was very good",
+          "ko": "발표가 아주 좋았다"
+        },
+        "gloss": {
+          "en": "The professor said the presentation was very good.",
+          "ko": "교수님이 발표가 아주 좋았다고 하시더라고요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-03",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "___고 싶으시대요.",
+    "core": [
+      "고 싶으시대요"
+    ],
+    "meaning": {
+      "en": "Passing on what a senior wants: They say they'd like to ___.",
+      "ko": "윗사람의 바람 전하기: ___고 싶으시대요."
+    },
+    "grammar": [
+      0,
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "수량을 이백 개에서 삼백 개로 늘리고 싶으시대요.",
+        "slot": "수량을 이백 개에서 삼백 개로 늘리",
+        "cue": {
+          "en": "increase the quantity",
+          "ko": "수량을 늘리다"
+        },
+        "gloss": {
+          "en": "They say they'd like to raise the quantity from two hundred to three hundred.",
+          "ko": "수량을 이백 개에서 삼백 개로 늘리고 싶으시대요."
+        }
+      },
+      {
+        "text": "부장님이 회의를 오후로 미루고 싶으시대요.",
+        "slot": "부장님이 회의를 오후로 미루",
+        "cue": {
+          "en": "push the meeting to the afternoon",
+          "ko": "회의를 오후로 미루다"
+        },
+        "gloss": {
+          "en": "The director says he'd like to move the meeting to the afternoon.",
+          "ko": "부장님이 회의를 오후로 미루고 싶으시대요."
+        }
+      },
+      {
+        "text": "할머니께서 이번 주말에 손주들을 보고 싶으시대요.",
+        "slot": "할머니께서 이번 주말에 손주들을 보",
+        "cue": {
+          "en": "see the grandchildren",
+          "ko": "손주들을 보다"
+        },
+        "gloss": {
+          "en": "Grandma says she'd like to see the grandchildren this weekend.",
+          "ko": "할머니께서 이번 주말에 손주들을 보고 싶으시대요."
+        }
+      },
+      {
+        "text": "고객님께서 계약 조건을 한 번 더 확인하고 싶으시대요.",
+        "slot": "고객님께서 계약 조건을 한 번 더 확인하",
+        "cue": {
+          "en": "check the contract terms once more",
+          "ko": "계약 조건을 한 번 더 확인하다"
+        },
+        "gloss": {
+          "en": "The client says she'd like to check the contract terms once more.",
+          "ko": "고객님께서 계약 조건을 한 번 더 확인하고 싶으시대요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-04",
+    "stage": 4,
+    "fn": "formal-humble",
+    "pattern": "그건 제가 ___께 여쭤볼게요.",
+    "core": [
+      "께 여쭤볼게요"
+    ],
+    "meaning": {
+      "en": "Humbly saying you'll ask a senior: I'll ask ___ about that.",
+      "ko": "높여서 묻겠다고 하기: 그건 제가 ___께 여쭤볼게요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "그건 제가 팀장님께 여쭤볼게요.",
+        "slot": "팀장님",
+        "cue": {
+          "en": "team leader",
+          "ko": "팀장님"
+        },
+        "gloss": {
+          "en": "I'll ask the team leader about that.",
+          "ko": "그건 제가 팀장님께 여쭤볼게요."
+        }
+      },
+      {
+        "text": "일정은 제가 부장님께 여쭤볼게요.",
+        "slot": "부장님",
+        "cue": {
+          "en": "director",
+          "ko": "부장님"
+        },
+        "gloss": {
+          "en": "I'll ask the director about the schedule.",
+          "ko": "일정은 제가 부장님께 여쭤볼게요."
+        }
+      },
+      {
+        "text": "자세한 건 제가 교수님께 여쭤볼게요.",
+        "slot": "교수님",
+        "cue": {
+          "en": "professor",
+          "ko": "교수님"
+        },
+        "gloss": {
+          "en": "I'll ask the professor for the details.",
+          "ko": "자세한 건 제가 교수님께 여쭤볼게요."
+        }
+      },
+      {
+        "text": "제사 날짜는 제가 할아버지께 여쭤볼게요.",
+        "slot": "할아버지",
+        "cue": {
+          "en": "grandfather",
+          "ko": "할아버지"
+        },
+        "gloss": {
+          "en": "I'll ask Grandpa about the date of the memorial rite.",
+          "ko": "제사 날짜는 제가 할아버지께 여쭤볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-05",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "말씀하신 대로 ___.",
+    "core": [
+      "말씀하신 대로"
+    ],
+    "meaning": {
+      "en": "Confirming you'll follow instructions: As you said, ___.",
+      "ko": "지시대로 하겠다고 하기: 말씀하신 대로 ___."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "말씀하신 대로"
+    ],
+    "examples": [
+      {
+        "text": "말씀하신 대로 진행하겠습니다.",
+        "slot": "진행하겠습니다",
+        "cue": {
+          "en": "proceed",
+          "ko": "진행하다"
+        },
+        "gloss": {
+          "en": "I'll proceed as you said.",
+          "ko": "말씀하신 대로 진행하겠습니다."
+        }
+      },
+      {
+        "text": "말씀하신 대로 내일까지 수정해서 보내 드릴게요.",
+        "slot": "내일까지 수정해서 보내 드릴게요",
+        "cue": {
+          "en": "revise and send it by tomorrow",
+          "ko": "내일까지 수정해서 보내다"
+        },
+        "gloss": {
+          "en": "As you said, I'll revise it and send it by tomorrow.",
+          "ko": "말씀하신 대로 내일까지 수정해서 보내 드릴게요."
+        }
+      },
+      {
+        "text": "말씀하신 대로 회의 시간을 오후 세 시로 옮겼어요.",
+        "slot": "회의 시간을 오후 세 시로 옮겼어요",
+        "cue": {
+          "en": "move the meeting to three p.m.",
+          "ko": "회의 시간을 세 시로 옮기다"
+        },
+        "gloss": {
+          "en": "As you said, I moved the meeting to three in the afternoon.",
+          "ko": "말씀하신 대로 회의 시간을 오후 세 시로 옮겼어요."
+        }
+      },
+      {
+        "text": "말씀하신 대로 고객님께 먼저 연락드렸습니다.",
+        "slot": "고객님께 먼저 연락드렸습니다",
+        "cue": {
+          "en": "contact the client first",
+          "ko": "고객님께 먼저 연락드리다"
+        },
+        "gloss": {
+          "en": "As you said, I contacted the client first.",
+          "ko": "말씀하신 대로 고객님께 먼저 연락드렸습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-06",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "___다고 했잖아요.",
+    "core": [
+      "다고 했잖아"
+    ],
+    "meaning": {
+      "en": "Reminding someone of what was said: I told you that ___, remember?",
+      "ko": "이미 말한 것 일깨우기: ___다고 했잖아요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "제가 오늘 좀 늦는다고 했잖아요.",
+        "slot": "제가 오늘 좀 늦는",
+        "cue": {
+          "en": "be a bit late today",
+          "ko": "오늘 좀 늦다"
+        },
+        "gloss": {
+          "en": "I told you I'd be a bit late today, remember?",
+          "ko": "제가 오늘 좀 늦는다고 했잖아요."
+        }
+      },
+      {
+        "text": "너 전부터 거기 힘들다고 했잖아.",
+        "slot": "너 전부터 거기 힘들",
+        "cue": {
+          "en": "it's hard there",
+          "ko": "거기가 힘들다"
+        },
+        "gloss": {
+          "en": "You've been saying it's hard there for a while.",
+          "ko": "너 전부터 거기 힘들다고 했잖아."
+        }
+      },
+      {
+        "text": "그 가게 월요일엔 문 닫는다고 했잖아요.",
+        "slot": "그 가게 월요일엔 문 닫는",
+        "cue": {
+          "en": "close on Mondays",
+          "ko": "월요일엔 문을 닫다"
+        },
+        "gloss": {
+          "en": "I told you that shop closes on Mondays.",
+          "ko": "그 가게 월요일엔 문 닫는다고 했잖아요."
+        }
+      },
+      {
+        "text": "민수가 이번 주에 이사한다고 했잖아.",
+        "slot": "민수가 이번 주에 이사한",
+        "cue": {
+          "en": "move this week",
+          "ko": "이번 주에 이사하다"
+        },
+        "gloss": {
+          "en": "Minsu said he's moving this week, remember?",
+          "ko": "민수가 이번 주에 이사한다고 했잖아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-07",
+    "stage": 4,
+    "fn": "reason",
+    "pattern": "___아야/어야 되거든요.",
+    "core": [
+      "야 되거든요"
+    ],
+    "meaning": {
+      "en": "Explaining a reason you must: You see, I have to ___.",
+      "ko": "사정 설명하기: ___아야/어야 되거든요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "오늘은 좀 일찍 가야 되거든요.",
+        "slot": "오늘은 좀 일찍 가",
+        "cue": {
+          "en": "leave a bit early today",
+          "ko": "오늘 좀 일찍 가다"
+        },
+        "gloss": {
+          "en": "I have to leave a bit early today, you see.",
+          "ko": "오늘은 좀 일찍 가야 되거든요."
+        }
+      },
+      {
+        "text": "주말 전에 소파를 꼭 받아야 되거든요.",
+        "slot": "주말 전에 소파를 꼭 받",
+        "cue": {
+          "en": "get the sofa before the weekend",
+          "ko": "주말 전에 소파를 받다"
+        },
+        "gloss": {
+          "en": "You see, I really need to get the sofa before the weekend.",
+          "ko": "주말 전에 소파를 꼭 받아야 되거든요."
+        }
+      },
+      {
+        "text": "내일까지 보고서를 끝내야 되거든요.",
+        "slot": "내일까지 보고서를 끝내",
+        "cue": {
+          "en": "finish the report by tomorrow",
+          "ko": "내일까지 보고서를 끝내다"
+        },
+        "gloss": {
+          "en": "I have to finish the report by tomorrow, you see.",
+          "ko": "내일까지 보고서를 끝내야 되거든요."
+        }
+      },
+      {
+        "text": "아이를 데리러 유치원에 가야 되거든요.",
+        "slot": "아이를 데리러 유치원에 가",
+        "cue": {
+          "en": "go to pick up my kid at kindergarten",
+          "ko": "아이를 데리러 유치원에 가다"
+        },
+        "gloss": {
+          "en": "You see, I have to go pick up my kid from kindergarten.",
+          "ko": "아이를 데리러 유치원에 가야 되거든요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-08",
+    "stage": 4,
+    "fn": "reason",
+    "pattern": "어제 ___ 너무 피곤했거든.",
+    "core": [
+      "피곤했거든"
+    ],
+    "meaning": {
+      "en": "Giving background casually: I was really tired because ___, you see.",
+      "ko": "반말로 사정 말하기: 어제 ___ 너무 피곤했거든."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "어제 야근해서 너무 피곤했거든.",
+        "slot": "야근해서",
+        "cue": {
+          "en": "work overtime",
+          "ko": "야근하다"
+        },
+        "gloss": {
+          "en": "I worked late yesterday, so I was really tired.",
+          "ko": "어제 야근해서 너무 피곤했거든."
+        }
+      },
+      {
+        "text": "어제 이사하느라 너무 피곤했거든.",
+        "slot": "이사하느라",
+        "cue": {
+          "en": "move house",
+          "ko": "이사하다"
+        },
+        "gloss": {
+          "en": "I was moving yesterday, so I was really tired.",
+          "ko": "어제 이사하느라 너무 피곤했거든."
+        }
+      },
+      {
+        "text": "어제 밤새 아기가 울어서 너무 피곤했거든.",
+        "slot": "밤새 아기가 울어서",
+        "cue": {
+          "en": "the baby cried all night",
+          "ko": "밤새 아기가 울다"
+        },
+        "gloss": {
+          "en": "The baby cried all night, so I was really tired.",
+          "ko": "어제 밤새 아기가 울어서 너무 피곤했거든."
+        }
+      },
+      {
+        "text": "어제 하루 종일 회의해서 너무 피곤했거든.",
+        "slot": "하루 종일 회의해서",
+        "cue": {
+          "en": "have meetings all day",
+          "ko": "하루 종일 회의하다"
+        },
+        "gloss": {
+          "en": "I had meetings all day yesterday, so I was really tired.",
+          "ko": "어제 하루 종일 회의해서 너무 피곤했거든."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-09",
+    "stage": 4,
+    "fn": "story-past",
+    "pattern": "하마터면 ___ 뻔했어요.",
+    "core": [
+      "뻔했어"
+    ],
+    "meaning": {
+      "en": "Saying something almost happened: I almost ___.",
+      "ko": "아슬아슬했던 일 말하기: 하마터면 ___ 뻔했어요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [
+      "하마터면"
+    ],
+    "examples": [
+      {
+        "text": "하마터면 핸드폰도 놓고 내릴 뻔했어.",
+        "slot": "핸드폰도 놓고 내릴",
+        "cue": {
+          "en": "leave my phone behind",
+          "ko": "핸드폰을 놓고 내리다"
+        },
+        "gloss": {
+          "en": "I almost left my phone on the train too.",
+          "ko": "하마터면 핸드폰도 놓고 내릴 뻔했어."
+        }
+      },
+      {
+        "text": "늦잠 자서 하마터면 비행기를 놓칠 뻔했어요.",
+        "slot": "비행기를 놓칠",
+        "cue": {
+          "en": "miss the plane",
+          "ko": "비행기를 놓치다"
+        },
+        "gloss": {
+          "en": "I overslept and almost missed my flight.",
+          "ko": "늦잠 자서 하마터면 비행기를 놓칠 뻔했어요."
+        }
+      },
+      {
+        "text": "계단에서 미끄러져서 하마터면 넘어질 뻔했어.",
+        "slot": "넘어질",
+        "cue": {
+          "en": "fall down",
+          "ko": "넘어지다"
+        },
+        "gloss": {
+          "en": "I slipped on the stairs and almost fell.",
+          "ko": "계단에서 미끄러져서 하마터면 넘어질 뻔했어."
+        }
+      },
+      {
+        "text": "하마터면 친구 생일을 잊어버릴 뻔했어요.",
+        "slot": "친구 생일을 잊어버릴",
+        "cue": {
+          "en": "forget a friend's birthday",
+          "ko": "친구 생일을 잊어버리다"
+        },
+        "gloss": {
+          "en": "I almost forgot my friend's birthday.",
+          "ko": "하마터면 친구 생일을 잊어버릴 뻔했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-10",
+    "stage": 4,
+    "fn": "apologize-late",
+    "pattern": "___는 바람에 늦었어요.",
+    "core": [
+      "는 바람에"
+    ],
+    "meaning": {
+      "en": "Blaming an unexpected event: Because ___ (unexpectedly), I was late.",
+      "ko": "뜻밖의 일로 사정 말하기: ___는 바람에 늦었어요."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "버스가 고장 나는 바람에 늦었어요.",
+        "slot": "버스가 고장 나",
+        "cue": {
+          "en": "the bus breaks down",
+          "ko": "버스가 고장 나다"
+        },
+        "gloss": {
+          "en": "I was late because the bus broke down.",
+          "ko": "버스가 고장 나는 바람에 늦었어요."
+        }
+      },
+      {
+        "text": "알람이 안 울리는 바람에 늦었어요.",
+        "slot": "알람이 안 울리",
+        "cue": {
+          "en": "the alarm doesn't go off",
+          "ko": "알람이 안 울리다"
+        },
+        "gloss": {
+          "en": "I was late because my alarm didn't go off.",
+          "ko": "알람이 안 울리는 바람에 늦었어요."
+        }
+      },
+      {
+        "text": "급하게 내리는 바람에 우산을 두고 내렸어.",
+        "slot": "급하게 내리",
+        "cue": {
+          "en": "get off in a hurry",
+          "ko": "급하게 내리다"
+        },
+        "gloss": {
+          "en": "I got off in a hurry and left my umbrella behind.",
+          "ko": "급하게 내리는 바람에 우산을 두고 내렸어."
+        }
+      },
+      {
+        "text": "갑자기 비가 쏟아지는 바람에 길이 엄청 막혔어요.",
+        "slot": "갑자기 비가 쏟아지",
+        "cue": {
+          "en": "rain suddenly pours",
+          "ko": "갑자기 비가 쏟아지다"
+        },
+        "gloss": {
+          "en": "It suddenly poured, so traffic was terrible.",
+          "ko": "갑자기 비가 쏟아지는 바람에 길이 엄청 막혔어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-11",
+    "stage": 4,
+    "fn": "hypothetical",
+    "pattern": "___(으)ㄹ 텐데요.",
+    "core": [
+      "텐데요"
+    ],
+    "meaning": {
+      "en": "Raising a likely concern: But ___ will probably happen.",
+      "ko": "걱정되는 결과 말하기: ___(으)ㄹ 텐데요."
+    },
+    "grammar": [
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "지금 출발하면 길이 많이 막힐 텐데요.",
+        "slot": "지금 출발하면 길이 많이 막힐",
+        "cue": {
+          "en": "traffic will be heavy if we leave now",
+          "ko": "지금 출발하면 길이 막히다"
+        },
+        "gloss": {
+          "en": "If we leave now, traffic will probably be bad.",
+          "ko": "지금 출발하면 길이 많이 막힐 텐데요."
+        }
+      },
+      {
+        "text": "일은 그대로면 나머지 나흘 동안 야근이 늘어날 텐데요.",
+        "slot": "일은 그대로면 나머지 나흘 동안 야근이 늘어날",
+        "cue": {
+          "en": "overtime will increase",
+          "ko": "야근이 늘어나다"
+        },
+        "gloss": {
+          "en": "If the workload stays the same, overtime will go up on the other four days.",
+          "ko": "일은 그대로면 나머지 나흘 동안 야근이 늘어날 텐데요."
+        }
+      },
+      {
+        "text": "그렇게 하면 비용이 꽤 들 텐데요.",
+        "slot": "그렇게 하면 비용이 꽤 들",
+        "cue": {
+          "en": "it will cost quite a lot",
+          "ko": "비용이 꽤 들다"
+        },
+        "gloss": {
+          "en": "That would probably cost quite a bit.",
+          "ko": "그렇게 하면 비용이 꽤 들 텐데요."
+        }
+      },
+      {
+        "text": "오늘 안에 끝내기는 좀 어려울 텐데요.",
+        "slot": "오늘 안에 끝내기는 좀 어려울",
+        "cue": {
+          "en": "be hard to finish today",
+          "ko": "오늘 안에 끝내기 어렵다"
+        },
+        "gloss": {
+          "en": "It'll probably be hard to finish it today.",
+          "ko": "오늘 안에 끝내기는 좀 어려울 텐데요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-12",
+    "stage": 4,
+    "fn": "story-past",
+    "pattern": "___더라고요.",
+    "core": [
+      "더라고요"
+    ],
+    "meaning": {
+      "en": "Sharing what you noticed: I found that ___.",
+      "ko": "보고 느낀 것 전하기: ___더라고요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "그 식당 생각보다 맛있더라고요.",
+        "slot": "그 식당 생각보다 맛있",
+        "cue": {
+          "en": "be tastier than expected",
+          "ko": "생각보다 맛있다"
+        },
+        "gloss": {
+          "en": "That restaurant was better than I expected.",
+          "ko": "그 식당 생각보다 맛있더라고요."
+        }
+      },
+      {
+        "text": "가 보니까 사람이 정말 많더라고요.",
+        "slot": "가 보니까 사람이 정말 많",
+        "cue": {
+          "en": "there are a lot of people",
+          "ko": "사람이 많다"
+        },
+        "gloss": {
+          "en": "When I got there, it was really crowded.",
+          "ko": "가 보니까 사람이 정말 많더라고요."
+        }
+      },
+      {
+        "text": "처음 몇 달은 다들 엄청 힘들어하더라고요.",
+        "slot": "처음 몇 달은 다들 엄청 힘들어하",
+        "cue": {
+          "en": "everyone struggles",
+          "ko": "다들 힘들어하다"
+        },
+        "gloss": {
+          "en": "For the first few months, everyone was really struggling.",
+          "ko": "처음 몇 달은 다들 엄청 힘들어하더라고요."
+        }
+      },
+      {
+        "text": "새로 온 팀장님이 말씀을 참 재미있게 하시더라고요.",
+        "slot": "새로 온 팀장님이 말씀을 참 재미있게 하시",
+        "cue": {
+          "en": "talk in a fun way",
+          "ko": "말을 재미있게 하다"
+        },
+        "gloss": {
+          "en": "The new team leader turned out to be really funny.",
+          "ko": "새로 온 팀장님이 말씀을 참 재미있게 하시더라고요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-13",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "제가 알기로는 ___.",
+    "core": [
+      "제가 알기로는"
+    ],
+    "meaning": {
+      "en": "Sharing what you understand: As far as I know, ___.",
+      "ko": "아는 만큼 전하기: 제가 알기로는 ___."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [
+      "제가 알기로는"
+    ],
+    "examples": [
+      {
+        "text": "제가 알기로는 일단 공공기관부터 시작한대요.",
+        "slot": "일단 공공기관부터 시작한대요",
+        "cue": {
+          "en": "it starts with public institutions",
+          "ko": "공공기관부터 시작하다"
+        },
+        "gloss": {
+          "en": "As far as I know, they're starting with public institutions first.",
+          "ko": "제가 알기로는 일단 공공기관부터 시작한대요."
+        }
+      },
+      {
+        "text": "제가 알기로는 그 회의는 다음 주로 미뤄졌대요.",
+        "slot": "그 회의는 다음 주로 미뤄졌대요",
+        "cue": {
+          "en": "the meeting was pushed to next week",
+          "ko": "회의가 다음 주로 미뤄지다"
+        },
+        "gloss": {
+          "en": "As far as I know, that meeting was moved to next week.",
+          "ko": "제가 알기로는 그 회의는 다음 주로 미뤄졌대요."
+        }
+      },
+      {
+        "text": "제가 알기로는 이번 달까지만 할인한대요.",
+        "slot": "이번 달까지만 할인한대요",
+        "cue": {
+          "en": "the sale runs only this month",
+          "ko": "이번 달까지만 할인하다"
+        },
+        "gloss": {
+          "en": "As far as I know, the discount only lasts this month.",
+          "ko": "제가 알기로는 이번 달까지만 할인한대요."
+        }
+      },
+      {
+        "text": "제가 알기로는 그분이 이 일을 제일 오래 하셨어요.",
+        "slot": "그분이 이 일을 제일 오래 하셨어요",
+        "cue": {
+          "en": "that person has done this job the longest",
+          "ko": "그분이 이 일을 제일 오래 하다"
+        },
+        "gloss": {
+          "en": "As far as I know, he has done this job the longest.",
+          "ko": "제가 알기로는 그분이 이 일을 제일 오래 하셨어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-14",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "___ 확인 부탁드립니다.",
+    "core": [
+      "확인 부탁드립니다"
+    ],
+    "meaning": {
+      "en": "Asking formally for a check: Please check ___.",
+      "ko": "업무로 확인 부탁하기: ___ 확인 부탁드립니다."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "확인 부탁드립니다"
+    ],
+    "examples": [
+      {
+        "text": "첨부한 파일 확인 부탁드립니다.",
+        "slot": "첨부한 파일",
+        "cue": {
+          "en": "the attached file",
+          "ko": "첨부한 파일"
+        },
+        "gloss": {
+          "en": "Please check the attached file.",
+          "ko": "첨부한 파일 확인 부탁드립니다."
+        }
+      },
+      {
+        "text": "변경된 회의 일정 확인 부탁드립니다.",
+        "slot": "변경된 회의 일정",
+        "cue": {
+          "en": "the changed meeting schedule",
+          "ko": "변경된 회의 일정"
+        },
+        "gloss": {
+          "en": "Please check the updated meeting schedule.",
+          "ko": "변경된 회의 일정 확인 부탁드립니다."
+        }
+      },
+      {
+        "text": "수정한 견적서 내용 확인 부탁드립니다.",
+        "slot": "수정한 견적서 내용",
+        "cue": {
+          "en": "the revised quote",
+          "ko": "수정한 견적서 내용"
+        },
+        "gloss": {
+          "en": "Please review the revised quote.",
+          "ko": "수정한 견적서 내용 확인 부탁드립니다."
+        }
+      },
+      {
+        "text": "오늘 오전에 보낸 메일 확인 부탁드립니다.",
+        "slot": "오늘 오전에 보낸 메일",
+        "cue": {
+          "en": "the email sent this morning",
+          "ko": "오늘 오전에 보낸 메일"
+        },
+        "gloss": {
+          "en": "Please check the email I sent this morning.",
+          "ko": "오늘 오전에 보낸 메일 확인 부탁드립니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-15",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "제가 ___하고 일정 조율해 볼게요.",
+    "core": [
+      "일정 조율해 볼게요"
+    ],
+    "meaning": {
+      "en": "Offering to sort out a schedule: I'll coordinate the schedule with ___.",
+      "ko": "일정 조율 맡기: 제가 ___하고 일정 조율해 볼게요."
+    },
+    "grammar": [],
+    "expressions": [
+      "일정 조율해 볼게요"
+    ],
+    "examples": [
+      {
+        "text": "그럼 제가 생산팀하고 일정 조율해 볼게요.",
+        "slot": "생산팀",
+        "cue": {
+          "en": "production team",
+          "ko": "생산팀"
+        },
+        "gloss": {
+          "en": "Then I'll work out the schedule with the production team.",
+          "ko": "그럼 제가 생산팀하고 일정 조율해 볼게요."
+        }
+      },
+      {
+        "text": "제가 거래처하고 일정 조율해 볼게요.",
+        "slot": "거래처",
+        "cue": {
+          "en": "client company",
+          "ko": "거래처"
+        },
+        "gloss": {
+          "en": "I'll coordinate the schedule with the client.",
+          "ko": "제가 거래처하고 일정 조율해 볼게요."
+        }
+      },
+      {
+        "text": "다음 주 회의는 제가 디자인팀하고 일정 조율해 볼게요.",
+        "slot": "디자인팀",
+        "cue": {
+          "en": "design team",
+          "ko": "디자인팀"
+        },
+        "gloss": {
+          "en": "I'll sort out next week's meeting time with the design team.",
+          "ko": "다음 주 회의는 제가 디자인팀하고 일정 조율해 볼게요."
+        }
+      },
+      {
+        "text": "출장 날짜는 제가 현지 지사하고 일정 조율해 볼게요.",
+        "slot": "현지 지사",
+        "cue": {
+          "en": "the local branch",
+          "ko": "현지 지사"
+        },
+        "gloss": {
+          "en": "I'll work out the trip dates with the local branch.",
+          "ko": "출장 날짜는 제가 현지 지사하고 일정 조율해 볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-16",
+    "stage": 4,
+    "fn": "feedback-give",
+    "pattern": "___ 다시 검토해 보겠습니다.",
+    "core": [
+      "검토해 보겠습니다"
+    ],
+    "meaning": {
+      "en": "Promising to review after feedback: I'll review ___ again.",
+      "ko": "피드백 받고 답하기: ___ 다시 검토해 보겠습니다."
+    },
+    "grammar": [],
+    "expressions": [
+      "검토해 보겠습니다"
+    ],
+    "examples": [
+      {
+        "text": "휴대폰 화면 기준으로 다시 검토해 보겠습니다.",
+        "slot": "휴대폰 화면 기준으로",
+        "cue": {
+          "en": "based on the phone screen",
+          "ko": "휴대폰 화면 기준으로"
+        },
+        "gloss": {
+          "en": "I'll review it again based on the phone screen.",
+          "ko": "휴대폰 화면 기준으로 다시 검토해 보겠습니다."
+        }
+      },
+      {
+        "text": "예산 문제는 팀 안에서 다시 검토해 보겠습니다.",
+        "slot": "예산 문제는 팀 안에서",
+        "cue": {
+          "en": "the budget issue within the team",
+          "ko": "예산 문제는 팀 안에서"
+        },
+        "gloss": {
+          "en": "We'll look at the budget issue again within the team.",
+          "ko": "예산 문제는 팀 안에서 다시 검토해 보겠습니다."
+        }
+      },
+      {
+        "text": "계약 조건을 처음부터 다시 검토해 보겠습니다.",
+        "slot": "계약 조건을 처음부터",
+        "cue": {
+          "en": "the contract terms from the start",
+          "ko": "계약 조건을 처음부터"
+        },
+        "gloss": {
+          "en": "I'll go over the contract terms again from the beginning.",
+          "ko": "계약 조건을 처음부터 다시 검토해 보겠습니다."
+        }
+      },
+      {
+        "text": "지적해 주신 부분은 다시 검토해 보겠습니다.",
+        "slot": "지적해 주신 부분은",
+        "cue": {
+          "en": "the points you raised",
+          "ko": "지적해 주신 부분"
+        },
+        "gloss": {
+          "en": "I'll review the points you raised again.",
+          "ko": "지적해 주신 부분은 다시 검토해 보겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-17",
+    "stage": 4,
+    "fn": "feedback-give",
+    "pattern": "솔직히 말하면 ___.",
+    "core": [
+      "솔직히 말하면"
+    ],
+    "meaning": {
+      "en": "Giving an honest view: To be honest, ___.",
+      "ko": "솔직한 생각 말하기: 솔직히 말하면 ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "솔직히 말하면"
+    ],
+    "examples": [
+      {
+        "text": "솔직히 말하면 저는 좀 걱정되는 부분도 있거든요.",
+        "slot": "저는 좀 걱정되는 부분도 있거든요",
+        "cue": {
+          "en": "I have some concerns",
+          "ko": "걱정되는 부분이 있다"
+        },
+        "gloss": {
+          "en": "To be honest, there are parts I'm a little worried about.",
+          "ko": "솔직히 말하면 저는 좀 걱정되는 부분도 있거든요."
+        }
+      },
+      {
+        "text": "솔직히 말하면 그 디자인은 제 취향이 아니에요.",
+        "slot": "그 디자인은 제 취향이 아니에요",
+        "cue": {
+          "en": "that design is not my taste",
+          "ko": "그 디자인은 취향이 아니다"
+        },
+        "gloss": {
+          "en": "To be honest, that design isn't really my taste.",
+          "ko": "솔직히 말하면 그 디자인은 제 취향이 아니에요."
+        }
+      },
+      {
+        "text": "솔직히 말하면 이번 계획은 너무 급한 것 같아요.",
+        "slot": "이번 계획은 너무 급한 것 같아요",
+        "cue": {
+          "en": "this plan seems too rushed",
+          "ko": "계획이 너무 급하다"
+        },
+        "gloss": {
+          "en": "Honestly, this plan seems too rushed.",
+          "ko": "솔직히 말하면 이번 계획은 너무 급한 것 같아요."
+        }
+      },
+      {
+        "text": "솔직히 말하면 저도 그 얘기는 처음 들었어요.",
+        "slot": "저도 그 얘기는 처음 들었어요",
+        "cue": {
+          "en": "hear it for the first time",
+          "ko": "그 얘기를 처음 듣다"
+        },
+        "gloss": {
+          "en": "To be honest, that's the first I've heard of it too.",
+          "ko": "솔직히 말하면 저도 그 얘기는 처음 들었어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-18",
+    "stage": 4,
+    "fn": "change-topic",
+    "pattern": "그건 그렇고, ___?",
+    "core": [
+      "그건 그렇고"
+    ],
+    "meaning": {
+      "en": "Changing the subject: Anyway, ___?",
+      "ko": "화제 바꾸기: 그건 그렇고, ___?"
+    },
+    "grammar": [],
+    "expressions": [
+      "그건 그렇고"
+    ],
+    "examples": [
+      {
+        "text": "그건 그렇고, 너 번호 안 바뀌었지?",
+        "slot": "너 번호 안 바뀌었지",
+        "cue": {
+          "en": "your number hasn't changed",
+          "ko": "번호가 안 바뀌다"
+        },
+        "gloss": {
+          "en": "Anyway, your number's still the same, right?",
+          "ko": "그건 그렇고, 너 번호 안 바뀌었지?"
+        }
+      },
+      {
+        "text": "그건 그렇고, 내일 회의 몇 시였죠?",
+        "slot": "내일 회의 몇 시였죠",
+        "cue": {
+          "en": "what time is tomorrow's meeting",
+          "ko": "내일 회의가 몇 시이다"
+        },
+        "gloss": {
+          "en": "By the way, what time was tomorrow's meeting?",
+          "ko": "그건 그렇고, 내일 회의 몇 시였죠?"
+        }
+      },
+      {
+        "text": "그건 그렇고, 주말에 뭐 할 거야?",
+        "slot": "주말에 뭐 할 거야",
+        "cue": {
+          "en": "what you'll do on the weekend",
+          "ko": "주말에 뭐 하다"
+        },
+        "gloss": {
+          "en": "Anyway, what are you doing this weekend?",
+          "ko": "그건 그렇고, 주말에 뭐 할 거야?"
+        }
+      },
+      {
+        "text": "그건 그렇고, 점심은 드셨어요?",
+        "slot": "점심은 드셨어요",
+        "cue": {
+          "en": "have lunch",
+          "ko": "점심을 먹다"
+        },
+        "gloss": {
+          "en": "By the way, have you had lunch?",
+          "ko": "그건 그렇고, 점심은 드셨어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-19",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "그 부분은요, ___.",
+    "core": [
+      "그 부분은요"
+    ],
+    "meaning": {
+      "en": "Addressing a specific point: About that part, ___.",
+      "ko": "짚어서 답하기: 그 부분은요, ___."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "그 부분은요"
+    ],
+    "examples": [
+      {
+        "text": "그 부분은요, 저도 이미 말씀드렸거든요.",
+        "slot": "저도 이미 말씀드렸거든요",
+        "cue": {
+          "en": "I already mentioned it",
+          "ko": "이미 말씀드리다"
+        },
+        "gloss": {
+          "en": "About that, I already brought it up myself.",
+          "ko": "그 부분은요, 저도 이미 말씀드렸거든요."
+        }
+      },
+      {
+        "text": "그 부분은요, 다음 회의에서 다시 이야기하면 좋겠어요.",
+        "slot": "다음 회의에서 다시 이야기하면 좋겠어요",
+        "cue": {
+          "en": "talk about it again at the next meeting",
+          "ko": "다음 회의에서 다시 이야기하다"
+        },
+        "gloss": {
+          "en": "About that part, I'd like to discuss it again at the next meeting.",
+          "ko": "그 부분은요, 다음 회의에서 다시 이야기하면 좋겠어요."
+        }
+      },
+      {
+        "text": "그 부분은요, 제가 따로 정리해서 보내 드릴게요.",
+        "slot": "제가 따로 정리해서 보내 드릴게요",
+        "cue": {
+          "en": "write it up separately and send it",
+          "ko": "따로 정리해서 보내다"
+        },
+        "gloss": {
+          "en": "As for that part, I'll write it up separately and send it to you.",
+          "ko": "그 부분은요, 제가 따로 정리해서 보내 드릴게요."
+        }
+      },
+      {
+        "text": "그 부분은요, 아직 확정된 게 아니에요.",
+        "slot": "아직 확정된 게 아니에요",
+        "cue": {
+          "en": "it's not confirmed yet",
+          "ko": "아직 확정되지 않다"
+        },
+        "gloss": {
+          "en": "About that part, nothing's been confirmed yet.",
+          "ko": "그 부분은요, 아직 확정된 게 아니에요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f4-20",
+    "stage": 4,
+    "fn": "story-past",
+    "pattern": "말도 마. ___.",
+    "core": [
+      "말도 마"
+    ],
+    "meaning": {
+      "en": "Starting a story about a rough time: Don't even ask. ___.",
+      "ko": "고생담 꺼내기: 말도 마. ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "말도 마"
+    ],
+    "examples": [
+      {
+        "text": "말도 마. 나 오늘 지하철에서 완전 난리 났었어.",
+        "slot": "나 오늘 지하철에서 완전 난리 났었어",
+        "cue": {
+          "en": "it was total chaos on the subway",
+          "ko": "지하철에서 난리가 나다"
+        },
+        "gloss": {
+          "en": "Don't even ask. It was total chaos on the subway today.",
+          "ko": "말도 마. 나 오늘 지하철에서 완전 난리 났었어."
+        }
+      },
+      {
+        "text": "말도 마. 어제 회의가 밤 열 시까지 갔어.",
+        "slot": "어제 회의가 밤 열 시까지 갔어",
+        "cue": {
+          "en": "the meeting went on until ten at night",
+          "ko": "회의가 밤 열 시까지 가다"
+        },
+        "gloss": {
+          "en": "Don't even ask. Yesterday's meeting went on until ten at night.",
+          "ko": "말도 마. 어제 회의가 밤 열 시까지 갔어."
+        }
+      },
+      {
+        "text": "말도 마. 비행기가 세 시간이나 늦게 떴어.",
+        "slot": "비행기가 세 시간이나 늦게 떴어",
+        "cue": {
+          "en": "the plane took off three hours late",
+          "ko": "비행기가 늦게 뜨다"
+        },
+        "gloss": {
+          "en": "Don't even ask. The plane took off three hours late.",
+          "ko": "말도 마. 비행기가 세 시간이나 늦게 떴어."
+        }
+      },
+      {
+        "text": "말도 마. 집에 오자마자 정전이 됐어.",
+        "slot": "집에 오자마자 정전이 됐어",
+        "cue": {
+          "en": "the power went out as soon as I got home",
+          "ko": "정전이 되다"
+        },
+        "gloss": {
+          "en": "Don't even ask. The power went out the moment I got home.",
+          "ko": "말도 마. 집에 오자마자 정전이 됐어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-01",
+    "stage": 5,
+    "fn": "changed",
+    "pattern": "___다 보니까 익숙해졌어요.",
+    "core": [
+      "다 보니"
+    ],
+    "meaning": {
+      "en": "Saying a result came from repeating something: As I kept ___, I got used to it.",
+      "ko": "하다 보니 생긴 결과 말하기: ___다 보니까 익숙해졌어요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "매일 운전하다 보니까 익숙해졌어요.",
+        "slot": "매일 운전하",
+        "cue": {
+          "en": "drive every day",
+          "ko": "매일 운전하다"
+        },
+        "gloss": {
+          "en": "Driving every day, I got used to it.",
+          "ko": "매일 운전하다 보니까 익숙해졌어요."
+        }
+      },
+      {
+        "text": "새벽에 일어나다 보니까 이제는 익숙해졌어요.",
+        "slot": "새벽에 일어나",
+        "cue": {
+          "en": "get up at dawn",
+          "ko": "새벽에 일어나다"
+        },
+        "gloss": {
+          "en": "After getting up at dawn for a while, I'm used to it now.",
+          "ko": "새벽에 일어나다 보니까 이제는 익숙해졌어요."
+        }
+      },
+      {
+        "text": "매운 음식을 자주 먹다 보니까 익숙해졌어요.",
+        "slot": "매운 음식을 자주 먹",
+        "cue": {
+          "en": "eat spicy food often",
+          "ko": "매운 음식을 자주 먹다"
+        },
+        "gloss": {
+          "en": "Eating spicy food often, I got used to it.",
+          "ko": "매운 음식을 자주 먹다 보니까 익숙해졌어요."
+        }
+      },
+      {
+        "text": "예능을 매일 보다 보니까 저절로 귀가 트이더라.",
+        "slot": "예능을 매일 보",
+        "cue": {
+          "en": "watch variety shows every day",
+          "ko": "예능을 매일 보다"
+        },
+        "gloss": {
+          "en": "Watching variety shows every day, my ears just opened up on their own.",
+          "ko": "예능을 매일 보다 보니까 저절로 귀가 트이더라."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-02",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "이 정도면 ___ 셈이네요.",
+    "core": [
+      "셈이네요"
+    ],
+    "meaning": {
+      "en": "Summing up what it amounts to: At this point, it's practically ___.",
+      "ko": "결국 어떤 셈인지 말하기: 이 정도면 ___ 셈이네요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "이 정도면 거의 다 끝낸 셈이네요.",
+        "slot": "거의 다 끝낸",
+        "cue": {
+          "en": "almost finish",
+          "ko": "거의 다 끝내다"
+        },
+        "gloss": {
+          "en": "At this point, we've practically finished.",
+          "ko": "이 정도면 거의 다 끝낸 셈이네요."
+        }
+      },
+      {
+        "text": "이 정도면 공짜로 받은 셈이네요.",
+        "slot": "공짜로 받은",
+        "cue": {
+          "en": "get it for free",
+          "ko": "공짜로 받다"
+        },
+        "gloss": {
+          "en": "At this price, it's practically free.",
+          "ko": "이 정도면 공짜로 받은 셈이네요."
+        }
+      },
+      {
+        "text": "그래도 그게 지금까지 다 추억으로 남은 셈이네요.",
+        "slot": "그래도 그게 지금까지 다 추억으로 남은",
+        "cue": {
+          "en": "remain as memories",
+          "ko": "추억으로 남다"
+        },
+        "gloss": {
+          "en": "Still, in the end it all became good memories.",
+          "ko": "그래도 그게 지금까지 다 추억으로 남은 셈이네요."
+        }
+      },
+      {
+        "text": "이 정도면 처음부터 다시 만든 셈이네요.",
+        "slot": "처음부터 다시 만든",
+        "cue": {
+          "en": "remake from scratch",
+          "ko": "처음부터 다시 만들다"
+        },
+        "gloss": {
+          "en": "At this point, we've basically rebuilt it from scratch.",
+          "ko": "이 정도면 처음부터 다시 만든 셈이네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-03",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "___(으)ㄹ 걸 그랬어요.",
+    "core": [
+      "걸 그랬어",
+      "걸 그랬다"
+    ],
+    "meaning": {
+      "en": "Expressing regret: I should have ___.",
+      "ko": "아쉬움 말하기: ___(으)ㄹ 걸 그랬어요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "미리 예약할 걸 그랬어요.",
+        "slot": "미리 예약할",
+        "cue": {
+          "en": "book in advance",
+          "ko": "미리 예약하다"
+        },
+        "gloss": {
+          "en": "I should have booked in advance.",
+          "ko": "미리 예약할 걸 그랬어요."
+        }
+      },
+      {
+        "text": "알람이라도 맞춰 놓을 걸 그랬어.",
+        "slot": "알람이라도 맞춰 놓을",
+        "cue": {
+          "en": "at least set an alarm",
+          "ko": "알람을 맞춰 놓다"
+        },
+        "gloss": {
+          "en": "I should have at least set an alarm.",
+          "ko": "알람이라도 맞춰 놓을 걸 그랬어."
+        }
+      },
+      {
+        "text": "우산을 챙겨 올 걸 그랬어요.",
+        "slot": "우산을 챙겨 올",
+        "cue": {
+          "en": "bring an umbrella",
+          "ko": "우산을 챙겨 오다"
+        },
+        "gloss": {
+          "en": "I should have brought an umbrella.",
+          "ko": "우산을 챙겨 올 걸 그랬어요."
+        }
+      },
+      {
+        "text": "처음부터 너한테 같이 해 달라고 부탁할 걸 그랬다.",
+        "slot": "처음부터 너한테 같이 해 달라고 부탁할",
+        "cue": {
+          "en": "ask you to do it together",
+          "ko": "같이 해 달라고 부탁하다"
+        },
+        "gloss": {
+          "en": "I should have asked you to do it with me from the start.",
+          "ko": "처음부터 너한테 같이 해 달라고 부탁할 걸 그랬다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-04",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "___기는 한데 좀 부담스러워요.",
+    "core": [
+      "기는 한데",
+      "기는 하는데"
+    ],
+    "meaning": {
+      "en": "Admitting something but adding a catch: It's true that ___, but it's a bit much.",
+      "ko": "인정하면서 덧붙이기: ___기는 한데 좀 부담스러워요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "가고 싶기는 한데 좀 부담스러워요.",
+        "slot": "가고 싶",
+        "cue": {
+          "en": "want to go",
+          "ko": "가고 싶다"
+        },
+        "gloss": {
+          "en": "I do want to go, but it's a bit much for me.",
+          "ko": "가고 싶기는 한데 좀 부담스러워요."
+        }
+      },
+      {
+        "text": "제안이 좋기는 한데 좀 부담스러워요.",
+        "slot": "제안이 좋",
+        "cue": {
+          "en": "the offer is good",
+          "ko": "제안이 좋다"
+        },
+        "gloss": {
+          "en": "The offer is good, but it feels like a bit much.",
+          "ko": "제안이 좋기는 한데 좀 부담스러워요."
+        }
+      },
+      {
+        "text": "디자인이 예쁘기는 한데 가격이 좀 부담스러워요.",
+        "slot": "디자인이 예쁘",
+        "cue": {
+          "en": "the design is pretty",
+          "ko": "디자인이 예쁘다"
+        },
+        "gloss": {
+          "en": "The design is pretty, but the price is a bit steep.",
+          "ko": "디자인이 예쁘기는 한데 가격이 좀 부담스러워요."
+        }
+      },
+      {
+        "text": "술을 마시기는 하는데 많이는 못 마셔요.",
+        "slot": "술을 마시",
+        "cue": {
+          "en": "drink alcohol",
+          "ko": "술을 마시다"
+        },
+        "gloss": {
+          "en": "I do drink, but I can't drink much.",
+          "ko": "술을 마시기는 하는데 많이는 못 마셔요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-05",
+    "stage": 5,
+    "fn": "pretend",
+    "pattern": "___(으)ㄴ/는 척했어요.",
+    "core": [
+      "척했어",
+      "척하면서"
+    ],
+    "meaning": {
+      "en": "Saying someone pretended: (They) pretended to ___.",
+      "ko": "~하는 척 말하기: ___(으)ㄴ/는 척했어요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "그 사람은 못 들은 척했어요.",
+        "slot": "그 사람은 못 들은",
+        "cue": {
+          "en": "not hear",
+          "ko": "못 듣다"
+        },
+        "gloss": {
+          "en": "That person pretended not to hear.",
+          "ko": "그 사람은 못 들은 척했어요."
+        }
+      },
+      {
+        "text": "너무 피곤해서 자는 척했어요.",
+        "slot": "너무 피곤해서 자는",
+        "cue": {
+          "en": "be asleep",
+          "ko": "자다"
+        },
+        "gloss": {
+          "en": "I was so tired I pretended to be asleep.",
+          "ko": "너무 피곤해서 자는 척했어요."
+        }
+      },
+      {
+        "text": "그냥 알아듣는 척하면서 고개만 끄덕였어.",
+        "slot": "그냥 알아듣는",
+        "cue": {
+          "en": "understand",
+          "ko": "알아듣다"
+        },
+        "gloss": {
+          "en": "I just nodded along, pretending to understand.",
+          "ko": "그냥 알아듣는 척하면서 고개만 끄덕였어."
+        }
+      },
+      {
+        "text": "아는 사람이었는데 못 본 척했어.",
+        "slot": "아는 사람이었는데 못 본",
+        "cue": {
+          "en": "not see",
+          "ko": "못 보다"
+        },
+        "gloss": {
+          "en": "It was someone I knew, but I pretended not to see them.",
+          "ko": "아는 사람이었는데 못 본 척했어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-06",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___(으)ㄹ 만하죠.",
+    "core": [
+      "만하죠",
+      "만하지"
+    ],
+    "meaning": {
+      "en": "Saying it's understandable or worth it: It's no wonder / it's worth ___.",
+      "ko": "그럴 만하다고 말하기: ___(으)ㄹ 만하죠."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "그렇게 고생했으니 화날 만하죠.",
+        "slot": "그렇게 고생했으니 화날",
+        "cue": {
+          "en": "get angry",
+          "ko": "화나다"
+        },
+        "gloss": {
+          "en": "After all that trouble, no wonder you're angry.",
+          "ko": "그렇게 고생했으니 화날 만하죠."
+        }
+      },
+      {
+        "text": "이런 건 맥락을 알아야 웃기니까, 처음엔 못 알아들을 만하지.",
+        "slot": "이런 건 맥락을 알아야 웃기니까, 처음엔 못 알아들을",
+        "cue": {
+          "en": "not understand",
+          "ko": "못 알아듣다"
+        },
+        "gloss": {
+          "en": "You need the context for this to be funny, so it makes sense you didn't get it at first.",
+          "ko": "이런 건 맥락을 알아야 웃기니까, 처음엔 못 알아들을 만하지."
+        }
+      },
+      {
+        "text": "그 가격이면 한 번쯤 사 볼 만하죠.",
+        "slot": "그 가격이면 한 번쯤 사 볼",
+        "cue": {
+          "en": "try buying",
+          "ko": "사 보다"
+        },
+        "gloss": {
+          "en": "At that price, it's worth buying once.",
+          "ko": "그 가격이면 한 번쯤 사 볼 만하죠."
+        }
+      },
+      {
+        "text": "그 영화는 두 번 볼 만하지.",
+        "slot": "그 영화는 두 번 볼",
+        "cue": {
+          "en": "watch twice",
+          "ko": "두 번 보다"
+        },
+        "gloss": {
+          "en": "That movie is worth seeing twice.",
+          "ko": "그 영화는 두 번 볼 만하지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-07",
+    "stage": 5,
+    "fn": "sympathy",
+    "pattern": "___ 그럴 만도 하지.",
+    "core": [
+      "그럴 만도 하지"
+    ],
+    "meaning": {
+      "en": "Showing understanding: (Since ___,) it's only natural.",
+      "ko": "공감하기: ___ 그럴 만도 하지."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [
+      "그럴 만도 하지"
+    ],
+    "examples": [
+      {
+        "text": "삼 년 넘게 다녔으니까 그럴 만도 하지.",
+        "slot": "삼 년 넘게 다녔으니까",
+        "cue": {
+          "en": "have worked there for over three years",
+          "ko": "삼 년 넘게 다니다"
+        },
+        "gloss": {
+          "en": "You worked there for over three years, so it's only natural.",
+          "ko": "삼 년 넘게 다녔으니까 그럴 만도 하지."
+        }
+      },
+      {
+        "text": "그렇게 오래 기다렸으면 그럴 만도 하지.",
+        "slot": "그렇게 오래 기다렸으면",
+        "cue": {
+          "en": "wait that long",
+          "ko": "그렇게 오래 기다리다"
+        },
+        "gloss": {
+          "en": "If you waited that long, no wonder.",
+          "ko": "그렇게 오래 기다렸으면 그럴 만도 하지."
+        }
+      },
+      {
+        "text": "밤새 일했다니 그럴 만도 하지.",
+        "slot": "밤새 일했다니",
+        "cue": {
+          "en": "work all night",
+          "ko": "밤새 일하다"
+        },
+        "gloss": {
+          "en": "You worked all night? No wonder.",
+          "ko": "밤새 일했다니 그럴 만도 하지."
+        }
+      },
+      {
+        "text": "처음 해 보는 일이니 그럴 만도 하지.",
+        "slot": "처음 해 보는 일이니",
+        "cue": {
+          "en": "it's your first time doing it",
+          "ko": "처음 해 보는 일이다"
+        },
+        "gloss": {
+          "en": "It's your first time doing it, so that's understandable.",
+          "ko": "처음 해 보는 일이니 그럴 만도 하지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-08",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "___더니 결국 …",
+    "core": [
+      "더니"
+    ],
+    "meaning": {
+      "en": "Telling how something turned out after what you saw: (Earlier) ___, and then …",
+      "ko": "본 일과 그 뒤 결과 말하기: ___더니 결국 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "처음엔 힘들다고 매일 투덜대더니 요즘은 일이 재밌대.",
+        "slot": "처음엔 힘들다고 매일 투덜대",
+        "cue": {
+          "en": "grumble every day that it's hard",
+          "ko": "힘들다고 투덜대다"
+        },
+        "gloss": {
+          "en": "He used to grumble every day that it was hard, but now he says work is fun.",
+          "ko": "처음엔 힘들다고 매일 투덜대더니 요즘은 일이 재밌대."
+        }
+      },
+      {
+        "text": "아침에는 맑더니 오후에 비가 쏟아졌어요.",
+        "slot": "아침에는 맑",
+        "cue": {
+          "en": "be clear in the morning",
+          "ko": "아침에 맑다"
+        },
+        "gloss": {
+          "en": "It was clear in the morning, but then it poured in the afternoon.",
+          "ko": "아침에는 맑더니 오후에 비가 쏟아졌어요."
+        }
+      },
+      {
+        "text": "몇 달을 고민하더니 결국 회사를 옮겼어.",
+        "slot": "몇 달을 고민하",
+        "cue": {
+          "en": "agonize for months",
+          "ko": "몇 달을 고민하다"
+        },
+        "gloss": {
+          "en": "After thinking it over for months, she finally changed jobs.",
+          "ko": "몇 달을 고민하더니 결국 회사를 옮겼어."
+        }
+      },
+      {
+        "text": "동생이 운동을 시작하더니 살이 쏙 빠졌어.",
+        "slot": "동생이 운동을 시작하",
+        "cue": {
+          "en": "start working out",
+          "ko": "운동을 시작하다"
+        },
+        "gloss": {
+          "en": "My sibling started working out and lost a lot of weight.",
+          "ko": "동생이 운동을 시작하더니 살이 쏙 빠졌어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-09",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___(으)ㄹ까 봐 …",
+    "core": [
+      "까 봐"
+    ],
+    "meaning": {
+      "en": "Saying you acted out of worry: In case ___ / worried that ___.",
+      "ko": "걱정돼서 한 일 말하기: ___(으)ㄹ까 봐 ___."
+    },
+    "grammar": [
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "늦을까 봐 택시를 탔어요.",
+        "slot": "늦을",
+        "cue": {
+          "en": "be late",
+          "ko": "늦다"
+        },
+        "gloss": {
+          "en": "I took a taxi in case I was late.",
+          "ko": "늦을까 봐 택시를 탔어요."
+        }
+      },
+      {
+        "text": "비가 올까 봐 우산을 챙겼어요.",
+        "slot": "비가 올",
+        "cue": {
+          "en": "it rains",
+          "ko": "비가 오다"
+        },
+        "gloss": {
+          "en": "I brought an umbrella in case it rained.",
+          "ko": "비가 올까 봐 우산을 챙겼어요."
+        }
+      },
+      {
+        "text": "괜히 나만 모르는 사람 될까 봐 바쁜 척했어.",
+        "slot": "괜히 나만 모르는 사람 될",
+        "cue": {
+          "en": "be the only one who doesn't know",
+          "ko": "나만 모르는 사람이 되다"
+        },
+        "gloss": {
+          "en": "I pretended to be busy, worried I'd be the only one who didn't get it.",
+          "ko": "괜히 나만 모르는 사람 될까 봐 바쁜 척했어."
+        }
+      },
+      {
+        "text": "저 때문에 일정이 꼬일까 봐 마음에 걸리네요.",
+        "slot": "저 때문에 일정이 꼬일",
+        "cue": {
+          "en": "the schedule gets messed up",
+          "ko": "일정이 꼬이다"
+        },
+        "gloss": {
+          "en": "I'm worried the schedule will get messed up because of me.",
+          "ko": "저 때문에 일정이 꼬일까 봐 마음에 걸리네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-10",
+    "stage": 5,
+    "fn": "regret-light",
+    "pattern": "___ 게 계속 마음에 걸려요.",
+    "core": [
+      "마음에 걸려",
+      "마음에 걸리"
+    ],
+    "meaning": {
+      "en": "Saying something weighs on you: It keeps bothering me that ___.",
+      "ko": "마음에 남은 일 말하기: ___ 게 계속 마음에 걸려요."
+    },
+    "grammar": [],
+    "expressions": [
+      "마음에 걸려요"
+    ],
+    "examples": [
+      {
+        "text": "친구한테 심하게 말한 게 계속 마음에 걸려요.",
+        "slot": "친구한테 심하게 말한",
+        "cue": {
+          "en": "speak harshly to a friend",
+          "ko": "친구한테 심하게 말하다"
+        },
+        "gloss": {
+          "en": "It keeps bothering me that I spoke harshly to my friend.",
+          "ko": "친구한테 심하게 말한 게 계속 마음에 걸려요."
+        }
+      },
+      {
+        "text": "어머니 생신에 못 간 게 계속 마음에 걸려요.",
+        "slot": "어머니 생신에 못 간",
+        "cue": {
+          "en": "miss my mother's birthday",
+          "ko": "어머니 생신에 못 가다"
+        },
+        "gloss": {
+          "en": "It still weighs on me that I couldn't go to my mother's birthday.",
+          "ko": "어머니 생신에 못 간 게 계속 마음에 걸려요."
+        }
+      },
+      {
+        "text": "후배 부탁을 거절한 게 계속 마음에 걸려.",
+        "slot": "후배 부탁을 거절한",
+        "cue": {
+          "en": "turn down a junior's request",
+          "ko": "후배 부탁을 거절하다"
+        },
+        "gloss": {
+          "en": "It keeps bugging me that I turned down my junior's request.",
+          "ko": "후배 부탁을 거절한 게 계속 마음에 걸려."
+        }
+      },
+      {
+        "text": "인사도 못 하고 나온 게 마음에 걸리네요.",
+        "slot": "인사도 못 하고 나온",
+        "cue": {
+          "en": "leave without saying goodbye",
+          "ko": "인사도 못 하고 나오다"
+        },
+        "gloss": {
+          "en": "It bothers me that I left without saying goodbye.",
+          "ko": "인사도 못 하고 나온 게 마음에 걸리네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-11",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___고 싶은 마음은 굴뚝같은데 …",
+    "core": [
+      "마음은 굴뚝같은데"
+    ],
+    "meaning": {
+      "en": "Refusing warmly: I'd love to ___, but …",
+      "ko": "따뜻하게 거절하기: ___고 싶은 마음은 굴뚝같은데 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "마음은 굴뚝같은데"
+    ],
+    "examples": [
+      {
+        "text": "도와드리고 싶은 마음은 굴뚝같은데 이번에는 정말 어려울 것 같아요.",
+        "slot": "도와드리고 싶은",
+        "cue": {
+          "en": "want to help",
+          "ko": "도와드리고 싶다"
+        },
+        "gloss": {
+          "en": "I'd really love to help, but this time it's just too hard.",
+          "ko": "도와드리고 싶은 마음은 굴뚝같은데 이번에는 정말 어려울 것 같아요."
+        }
+      },
+      {
+        "text": "같이 가고 싶은 마음은 굴뚝같은데 그날 선약이 있어서요.",
+        "slot": "같이 가고 싶은",
+        "cue": {
+          "en": "want to go together",
+          "ko": "같이 가고 싶다"
+        },
+        "gloss": {
+          "en": "I'd love to go with you, but I already have plans that day.",
+          "ko": "같이 가고 싶은 마음은 굴뚝같은데 그날 선약이 있어서요."
+        }
+      },
+      {
+        "text": "더 놀고 싶은 마음은 굴뚝같은데 내일 출근해야 돼.",
+        "slot": "더 놀고 싶은",
+        "cue": {
+          "en": "want to hang out longer",
+          "ko": "더 놀고 싶다"
+        },
+        "gloss": {
+          "en": "I'd love to stay longer, but I have work tomorrow.",
+          "ko": "더 놀고 싶은 마음은 굴뚝같은데 내일 출근해야 돼."
+        }
+      },
+      {
+        "text": "한턱내고 싶은 마음은 굴뚝같은데 이번 달은 사정이 좀 있어서요.",
+        "slot": "한턱내고 싶은",
+        "cue": {
+          "en": "want to treat you",
+          "ko": "한턱내고 싶다"
+        },
+        "gloss": {
+          "en": "I'd love to treat you, but things are a bit tight this month.",
+          "ko": "한턱내고 싶은 마음은 굴뚝같은데 이번 달은 사정이 좀 있어서요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-12",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___ 사정이 좀 있어서요.",
+    "core": [
+      "사정이 좀 있어서"
+    ],
+    "meaning": {
+      "en": "Declining vaguely: I have some circumstances ___.",
+      "ko": "이유를 흐리며 거절하기: ___ 사정이 좀 있어서요."
+    },
+    "grammar": [],
+    "expressions": [
+      "사정이 좀 있어서"
+    ],
+    "examples": [
+      {
+        "text": "이번 주는 제가 사정이 좀 있어서요.",
+        "slot": "이번 주는 제가",
+        "cue": {
+          "en": "this week, I",
+          "ko": "이번 주는 내가"
+        },
+        "gloss": {
+          "en": "This week I've got some things going on.",
+          "ko": "이번 주는 제가 사정이 좀 있어서요."
+        }
+      },
+      {
+        "text": "요즘 집에 사정이 좀 있어서요.",
+        "slot": "요즘 집에",
+        "cue": {
+          "en": "at home lately",
+          "ko": "요즘 집에"
+        },
+        "gloss": {
+          "en": "Things have been a bit complicated at home lately.",
+          "ko": "요즘 집에 사정이 좀 있어서요."
+        }
+      },
+      {
+        "text": "그날은 가족 사정이 좀 있어서 못 갈 것 같아요.",
+        "slot": "그날은 가족",
+        "cue": {
+          "en": "family, that day",
+          "ko": "그날 가족"
+        },
+        "gloss": {
+          "en": "I have a family matter that day, so I don't think I can go.",
+          "ko": "그날은 가족 사정이 좀 있어서 못 갈 것 같아요."
+        }
+      },
+      {
+        "text": "회사에 사정이 좀 있어서 일정을 미뤄야 할 것 같아요.",
+        "slot": "회사에",
+        "cue": {
+          "en": "at work",
+          "ko": "회사에"
+        },
+        "gloss": {
+          "en": "Something's come up at work, so I think we'll have to push the schedule back.",
+          "ko": "회사에 사정이 좀 있어서 일정을 미뤄야 할 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-13",
+    "stage": 5,
+    "fn": "change-topic",
+    "pattern": "말이 나온 김에 ___.",
+    "core": [
+      "말이 나온 김에"
+    ],
+    "meaning": {
+      "en": "Seizing the moment: While we're on the subject, ___.",
+      "ko": "말 나온 김에 제안하기: 말이 나온 김에 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "말이 나온 김에"
+    ],
+    "examples": [
+      {
+        "text": "말이 나온 김에, 오늘 저녁에 한잔할래?",
+        "slot": "오늘 저녁에 한잔할래",
+        "cue": {
+          "en": "have a drink tonight",
+          "ko": "오늘 저녁에 한잔하다"
+        },
+        "gloss": {
+          "en": "Since we're on the subject, want to grab a drink tonight?",
+          "ko": "말이 나온 김에, 오늘 저녁에 한잔할래?"
+        }
+      },
+      {
+        "text": "말이 나온 김에 이번 주말에 셋이 보자.",
+        "slot": "이번 주말에 셋이 보자",
+        "cue": {
+          "en": "the three of us meet this weekend",
+          "ko": "이번 주말에 셋이 보다"
+        },
+        "gloss": {
+          "en": "While we're at it, let's all three meet up this weekend.",
+          "ko": "말이 나온 김에 이번 주말에 셋이 보자."
+        }
+      },
+      {
+        "text": "말이 나온 김에 지금 바로 예약할게요.",
+        "slot": "지금 바로 예약할게요",
+        "cue": {
+          "en": "book it right now",
+          "ko": "지금 바로 예약하다"
+        },
+        "gloss": {
+          "en": "Since it came up, I'll book it right now.",
+          "ko": "말이 나온 김에 지금 바로 예약할게요."
+        }
+      },
+      {
+        "text": "말이 나온 김에 휴가 계획도 같이 세워 봐요.",
+        "slot": "휴가 계획도 같이 세워 봐요",
+        "cue": {
+          "en": "make vacation plans together",
+          "ko": "휴가 계획을 같이 세우다"
+        },
+        "gloss": {
+          "en": "While we're on it, let's plan our vacation together too.",
+          "ko": "말이 나온 김에 휴가 계획도 같이 세워 봐요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-14",
+    "stage": 5,
+    "fn": "thank",
+    "pattern": "선배님 덕분에 ___.",
+    "core": [
+      "덕분에"
+    ],
+    "meaning": {
+      "en": "Crediting a senior politely: Thanks to you (senior), ___.",
+      "ko": "윗사람 덕을 돌리기: 선배님 덕분에 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "선배님 덕분에"
+    ],
+    "examples": [
+      {
+        "text": "선배님들 덕분에 이제 조금 감이 잡히는 것 같아요.",
+        "slot": "이제 조금 감이 잡히는 것 같아요",
+        "cue": {
+          "en": "start to get the hang of it",
+          "ko": "감이 잡히다"
+        },
+        "gloss": {
+          "en": "Thanks to my seniors, I think I'm starting to get the hang of it.",
+          "ko": "선배님들 덕분에 이제 조금 감이 잡히는 것 같아요."
+        }
+      },
+      {
+        "text": "선배님 덕분에 발표를 무사히 마쳤어요.",
+        "slot": "발표를 무사히 마쳤어요",
+        "cue": {
+          "en": "finish the presentation safely",
+          "ko": "발표를 무사히 마치다"
+        },
+        "gloss": {
+          "en": "Thanks to you, I got through the presentation without a hitch.",
+          "ko": "선배님 덕분에 발표를 무사히 마쳤어요."
+        }
+      },
+      {
+        "text": "선배님 덕분에 실력이 많이 늘었어요.",
+        "slot": "실력이 많이 늘었어요",
+        "cue": {
+          "en": "improve a lot",
+          "ko": "실력이 늘다"
+        },
+        "gloss": {
+          "en": "Thanks to you, my skills have improved a lot.",
+          "ko": "선배님 덕분에 실력이 많이 늘었어요."
+        }
+      },
+      {
+        "text": "선배님 덕분에 회사 생활에 금방 적응했어요.",
+        "slot": "회사 생활에 금방 적응했어요",
+        "cue": {
+          "en": "adapt quickly to work life",
+          "ko": "회사 생활에 적응하다"
+        },
+        "gloss": {
+          "en": "Thanks to you, I settled into work life quickly.",
+          "ko": "선배님 덕분에 회사 생활에 금방 적응했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-15",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "___ 생각 좀 해 볼게요.",
+    "core": [
+      "생각 좀 해 볼게요"
+    ],
+    "meaning": {
+      "en": "Putting off a decision politely: ___, so let me think about it.",
+      "ko": "결정 미루며 거절하기: ___ 생각 좀 해 볼게요."
+    },
+    "grammar": [],
+    "expressions": [
+      "생각 좀 해 볼게요"
+    ],
+    "examples": [
+      {
+        "text": "좋긴 한데요, 금액이 커서 생각 좀 해 볼게요.",
+        "slot": "좋긴 한데요, 금액이 커서",
+        "cue": {
+          "en": "the amount is large",
+          "ko": "금액이 크다"
+        },
+        "gloss": {
+          "en": "It's nice, but it's a lot of money, so let me think about it.",
+          "ko": "좋긴 한데요, 금액이 커서 생각 좀 해 볼게요."
+        }
+      },
+      {
+        "text": "좋은 제안인데 집에 가서 생각 좀 해 볼게요.",
+        "slot": "좋은 제안인데 집에 가서",
+        "cue": {
+          "en": "go home first",
+          "ko": "집에 가다"
+        },
+        "gloss": {
+          "en": "It's a good offer, but I'll go home and think it over.",
+          "ko": "좋은 제안인데 집에 가서 생각 좀 해 볼게요."
+        }
+      },
+      {
+        "text": "당장은 결정하기 어려워서 생각 좀 해 볼게요.",
+        "slot": "당장은 결정하기 어려워서",
+        "cue": {
+          "en": "it's hard to decide right now",
+          "ko": "당장 결정하기 어렵다"
+        },
+        "gloss": {
+          "en": "It's hard to decide right now, so let me think about it.",
+          "ko": "당장은 결정하기 어려워서 생각 좀 해 볼게요."
+        }
+      },
+      {
+        "text": "가족들하고 상의하고 생각 좀 해 볼게요.",
+        "slot": "가족들하고 상의하고",
+        "cue": {
+          "en": "talk it over with family",
+          "ko": "가족들하고 상의하다"
+        },
+        "gloss": {
+          "en": "I'll talk it over with my family and think about it.",
+          "ko": "가족들하고 상의하고 생각 좀 해 볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-16",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "아쉽지만 다음 기회에 ___.",
+    "core": [
+      "다음 기회에"
+    ],
+    "meaning": {
+      "en": "Turning down for now: Unfortunately, maybe next time ___.",
+      "ko": "다음으로 미루며 거절하기: 아쉽지만 다음 기회에 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "다음 기회에"
+    ],
+    "examples": [
+      {
+        "text": "아쉽지만 다음 기회에 같이 가요.",
+        "slot": "같이 가요",
+        "cue": {
+          "en": "go together",
+          "ko": "같이 가다"
+        },
+        "gloss": {
+          "en": "Too bad, but let's go together next time.",
+          "ko": "아쉽지만 다음 기회에 같이 가요."
+        }
+      },
+      {
+        "text": "오늘은 약속이 있어서요. 다음 기회에 할게요.",
+        "slot": "할게요",
+        "cue": {
+          "en": "do it",
+          "ko": "하다"
+        },
+        "gloss": {
+          "en": "I have plans today. I'll do it next time.",
+          "ko": "오늘은 약속이 있어서요. 다음 기회에 할게요."
+        }
+      },
+      {
+        "text": "이번 모임은 빠지고 다음 기회에 꼭 갈게요.",
+        "slot": "꼭 갈게요",
+        "cue": {
+          "en": "definitely go",
+          "ko": "꼭 가다"
+        },
+        "gloss": {
+          "en": "I'll skip this gathering, but I'll definitely come next time.",
+          "ko": "이번 모임은 빠지고 다음 기회에 꼭 갈게요."
+        }
+      },
+      {
+        "text": "그 얘기는 다음 기회에 천천히 해요.",
+        "slot": "천천히 해요",
+        "cue": {
+          "en": "talk slowly / at leisure",
+          "ko": "천천히 하다"
+        },
+        "gloss": {
+          "en": "Let's talk about that properly another time.",
+          "ko": "그 얘기는 다음 기회에 천천히 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-17",
+    "stage": 5,
+    "fn": "describe-person",
+    "pattern": "___는 발이 넓어서 …",
+    "core": [
+      "발이 넓"
+    ],
+    "meaning": {
+      "en": "Describing someone well-connected (idiom): ___ knows a lot of people.",
+      "ko": "관용 표현으로 사람 말하기: ___는 발이 넓어서 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "발이 넓다"
+    ],
+    "examples": [
+      {
+        "text": "수진이가 발이 넓잖아. 회사 사람에 동네 친구까지 다 왔더라.",
+        "slot": "수진이가",
+        "cue": {
+          "en": "Sujin",
+          "ko": "수진이"
+        },
+        "gloss": {
+          "en": "Sujin knows everyone. Coworkers and neighborhood friends all came.",
+          "ko": "수진이가 발이 넓잖아. 회사 사람에 동네 친구까지 다 왔더라."
+        }
+      },
+      {
+        "text": "우리 팀장님이 발이 넓으셔서 금방 사람을 구하셨어요.",
+        "slot": "우리 팀장님이",
+        "cue": {
+          "en": "our team leader",
+          "ko": "우리 팀장님"
+        },
+        "gloss": {
+          "en": "Our team leader knows a lot of people, so he found someone quickly.",
+          "ko": "우리 팀장님이 발이 넓으셔서 금방 사람을 구하셨어요."
+        }
+      },
+      {
+        "text": "그 친구는 발이 넓으니까 한번 물어봐.",
+        "slot": "그 친구는",
+        "cue": {
+          "en": "that friend",
+          "ko": "그 친구"
+        },
+        "gloss": {
+          "en": "That friend knows tons of people, so ask him.",
+          "ko": "그 친구는 발이 넓으니까 한번 물어봐."
+        }
+      },
+      {
+        "text": "삼촌이 발이 넓어서 동네에 모르는 사람이 없어요.",
+        "slot": "삼촌이",
+        "cue": {
+          "en": "my uncle",
+          "ko": "삼촌"
+        },
+        "gloss": {
+          "en": "My uncle is so well-connected that he knows everyone in the neighborhood.",
+          "ko": "삼촌이 발이 넓어서 동네에 모르는 사람이 없어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-18",
+    "stage": 5,
+    "fn": "describe-person",
+    "pattern": "… 손이 커서 ___.",
+    "core": [
+      "손이 커"
+    ],
+    "meaning": {
+      "en": "Describing someone generous (idiom): ___ is so generous that …",
+      "ko": "관용 표현으로 사람 말하기: ___ 손이 커서 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "손이 크다"
+    ],
+    "examples": [
+      {
+        "text": "손이 커서 음식을 산더미처럼 해 놨어.",
+        "slot": "음식을 산더미처럼 해 놨어",
+        "cue": {
+          "en": "make mountains of food",
+          "ko": "음식을 산더미처럼 하다"
+        },
+        "gloss": {
+          "en": "She's so generous she made mountains of food.",
+          "ko": "손이 커서 음식을 산더미처럼 해 놨어."
+        }
+      },
+      {
+        "text": "할머니는 손이 커서 김치를 항상 많이 담그세요.",
+        "slot": "할머니는",
+        "cue": {
+          "en": "grandma",
+          "ko": "할머니"
+        },
+        "gloss": {
+          "en": "Grandma is generous and always makes loads of kimchi.",
+          "ko": "할머니는 손이 커서 김치를 항상 많이 담그세요."
+        }
+      },
+      {
+        "text": "사장님이 손이 커서 반찬을 넉넉하게 주세요.",
+        "slot": "사장님이",
+        "cue": {
+          "en": "the owner",
+          "ko": "사장님"
+        },
+        "gloss": {
+          "en": "The owner is generous and gives plenty of side dishes.",
+          "ko": "사장님이 손이 커서 반찬을 넉넉하게 주세요."
+        }
+      },
+      {
+        "text": "엄마가 손이 커서 명절마다 음식이 남아.",
+        "slot": "엄마가",
+        "cue": {
+          "en": "mom",
+          "ko": "엄마"
+        },
+        "gloss": {
+          "en": "Mom always cooks big, so there's leftover food every holiday.",
+          "ko": "엄마가 손이 커서 명절마다 음식이 남아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-19",
+    "stage": 5,
+    "fn": "describe-person",
+    "pattern": "___ 입이 무거워서 …",
+    "core": [
+      "입이 무거"
+    ],
+    "meaning": {
+      "en": "Describing someone discreet (idiom): ___ can keep a secret.",
+      "ko": "관용 표현으로 사람 말하기: ___ 입이 무거워서 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "입이 무겁다"
+    ],
+    "examples": [
+      {
+        "text": "걱정 마. 나 입이 무거운 거 알잖아.",
+        "slot": "걱정 마. 나",
+        "cue": {
+          "en": "me",
+          "ko": "나"
+        },
+        "gloss": {
+          "en": "Don't worry. You know I can keep a secret.",
+          "ko": "걱정 마. 나 입이 무거운 거 알잖아."
+        }
+      },
+      {
+        "text": "그 선배는 입이 무거워서 믿고 말할 수 있어요.",
+        "slot": "그 선배는",
+        "cue": {
+          "en": "that senior",
+          "ko": "그 선배"
+        },
+        "gloss": {
+          "en": "That senior is discreet, so you can trust him with it.",
+          "ko": "그 선배는 입이 무거워서 믿고 말할 수 있어요."
+        }
+      },
+      {
+        "text": "민수는 입이 무거우니까 비밀 지켜 줄 거야.",
+        "slot": "민수는",
+        "cue": {
+          "en": "Minsu",
+          "ko": "민수"
+        },
+        "gloss": {
+          "en": "Minsu won't tell anyone, so he'll keep the secret.",
+          "ko": "민수는 입이 무거우니까 비밀 지켜 줄 거야."
+        }
+      },
+      {
+        "text": "우리 언니가 입이 무거워서 고민 상담을 많이 받아.",
+        "slot": "우리 언니가",
+        "cue": {
+          "en": "my older sister",
+          "ko": "우리 언니"
+        },
+        "gloss": {
+          "en": "My older sister is discreet, so people often come to her with their problems.",
+          "ko": "우리 언니가 입이 무거워서 고민 상담을 많이 받아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-f5-20",
+    "stage": 5,
+    "fn": "idiom-react",
+    "pattern": "___ 눈치가 빠르네.",
+    "core": [
+      "눈치가 빠르"
+    ],
+    "meaning": {
+      "en": "Praising someone quick to catch on (idiom): You catch on fast.",
+      "ko": "관용 표현으로 반응하기: ___ 눈치가 빠르네."
+    },
+    "grammar": [],
+    "expressions": [
+      "눈치가 빠르네"
+    ],
+    "examples": [
+      {
+        "text": "그렇지! 눈치가 빠르네.",
+        "slot": "그렇지!",
+        "cue": {
+          "en": "that's right",
+          "ko": "그렇다"
+        },
+        "gloss": {
+          "en": "Exactly! You catch on fast.",
+          "ko": "그렇지! 눈치가 빠르네."
+        }
+      },
+      {
+        "text": "벌써 알아챘어? 너 진짜 눈치가 빠르다.",
+        "slot": "벌써 알아챘어? 너 진짜",
+        "cue": {
+          "en": "notice already",
+          "ko": "벌써 알아채다"
+        },
+        "gloss": {
+          "en": "You noticed already? You're really quick.",
+          "ko": "벌써 알아챘어? 너 진짜 눈치가 빠르다."
+        }
+      },
+      {
+        "text": "역시 팀장님은 눈치가 빠르시네요.",
+        "slot": "역시 팀장님은",
+        "cue": {
+          "en": "as expected, the team leader",
+          "ko": "역시 팀장님"
+        },
+        "gloss": {
+          "en": "As expected, you don't miss a thing, sir.",
+          "ko": "역시 팀장님은 눈치가 빠르시네요."
+        }
+      },
+      {
+        "text": "말도 안 했는데 어떻게 알았어? 눈치가 빠르구나.",
+        "slot": "말도 안 했는데 어떻게 알았어?",
+        "cue": {
+          "en": "how did you know without being told",
+          "ko": "어떻게 알다"
+        },
+        "gloss": {
+          "en": "I didn't even say anything—how did you know? You're sharp.",
+          "ko": "말도 안 했는데 어떻게 알았어? 눈치가 빠르구나."
         }
       }
     ]

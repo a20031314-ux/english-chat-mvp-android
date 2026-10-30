@@ -481,5 +481,335 @@
     "it turn out",
     "it was turned out",
     "it turned off"
+  ],
+  "en-f4-01|If I were": [
+    "If I was being",
+    "If I am",
+    "If I would be"
+  ],
+  "en-f4-01|if I were": [
+    "if I am",
+    "if I would be",
+    "if I will be"
+  ],
+  "en-f4-02|If I'd": [
+    "If I would",
+    "If I have",
+    "If I'll"
+  ],
+  "en-f4-02|If we'd": [
+    "If we would",
+    "If we have",
+    "If we'll"
+  ],
+  "en-f4-02|if he'd": [
+    "if he would",
+    "if he has",
+    "if he'll"
+  ],
+  "en-f4-03|would have": [
+    "would had",
+    "will have",
+    "would has"
+  ],
+  "en-f4-03|wouldn't have": [
+    "wouldn't had",
+    "won't have",
+    "wouldn't has"
+  ],
+  "en-f4-04|By the time": [
+    "By the moment",
+    "Until the time",
+    "In the time"
+  ],
+  "en-f4-04|by the time": [
+    "by the moment",
+    "until the time",
+    "in the time"
+  ],
+  "en-f4-05|must have": [
+    "must had",
+    "must has",
+    "must to have"
+  ],
+  "en-f4-06|can't have": [
+    "can't had",
+    "can't has",
+    "don't can have"
+  ],
+  "en-f4-07|might have": [
+    "might had",
+    "might has",
+    "might to have"
+  ],
+  "en-f4-08|I wish I'd": [
+    "I wish I would",
+    "I wish I have",
+    "I wish I will"
+  ],
+  "en-f4-08|I wish I had": [
+    "I wish I have",
+    "I wish I would have",
+    "I wish I has"
+  ],
+  "en-f4-09|should have": [
+    "should had",
+    "should has",
+    "should to have"
+  ],
+  "en-f4-09|shouldn't have": [
+    "shouldn't had",
+    "shouldn't has",
+    "shouldn't to have"
+  ],
+  "en-f4-10|There used to be": [
+    "There use to be",
+    "There was used to be",
+    "There used to being"
+  ],
+  "en-f4-10|there used to be": [
+    "there use to be",
+    "there was used to be",
+    "there used to being"
+  ],
+  "en-f4-11|I used to": [
+    "I use to",
+    "I was used to"
+  ],
+  "en-f4-11|We used to": [
+    "We use to",
+    "We were used to"
+  ],
+  "en-f4-12|not used to": [
+    "not use to",
+    "not used",
+    "not using to"
+  ],
+  "en-f4-13|the point is": [
+    "the point are",
+    "the pointing is",
+    "the point it is"
+  ],
+  "en-f4-14|That's a good point": [
+    "That's a good points",
+    "That's good point",
+    "That's a well point"
+  ],
+  "en-f4-14|that's a good point": [
+    "that's a good points",
+    "that's good point",
+    "that's a well point"
+  ],
+  "en-f4-15|On the other hand": [
+    "On the other side",
+    "In the other hand",
+    "On other hand"
+  ],
+  "en-f4-15|on the other hand": [
+    "on the other side",
+    "in the other hand",
+    "on other hand"
+  ],
+  "en-f4-16|To be fair": [
+    "To be fairly",
+    "For be fair",
+    "To being fair"
+  ],
+  "en-f4-16|to be fair": [
+    "to be fairly",
+    "for be fair",
+    "to being fair"
+  ],
+  "en-f4-17|Having said that": [
+    "Have said that",
+    "Having say that",
+    "Having saying that"
+  ],
+  "en-f4-17|having said that": [
+    "have said that",
+    "having say that",
+    "having saying that"
+  ],
+  "en-f4-18|make a decision": [
+    "do a decision",
+    "make a decide",
+    "make decision"
+  ],
+  "en-f4-19|meet halfway": [
+    "meet half",
+    "meet in halfway",
+    "meet the halfway"
+  ],
+  "en-f4-20|When it comes to": [
+    "When it come to",
+    "When it comes for",
+    "When it coming to"
+  ],
+  "en-f4-20|when it comes to": [
+    "when it come to",
+    "when it comes for",
+    "when it coming to"
+  ],
+  "en-f5-01|If I hadn't": [
+    "If I didn't",
+    "If I haven't",
+    "If I wouldn't have"
+  ],
+  "en-f5-01|if I hadn't": [
+    "if I didn't",
+    "if I haven't",
+    "if I wouldn't have"
+  ],
+  "en-f5-02|Had I": [
+    "Have I",
+    "If had I",
+    "Did I"
+  ],
+  "en-f5-02|had I": [
+    "have I",
+    "if had I",
+    "did I"
+  ],
+  "en-f5-03|What bothers me is": [
+    "What bothers me are",
+    "What it bothers me is",
+    "That bothers me is"
+  ],
+  "en-f5-03|what bothers me is": [
+    "what bothers me are",
+    "what it bothers me is",
+    "that bothers me is"
+  ],
+  "en-f5-04|Not once did": [
+    "Not once he did",
+    "Not one did"
+  ],
+  "en-f5-04|not once did": [
+    "not once he did",
+    "not one did"
+  ],
+  "en-f5-05|Not knowing": [
+    "Don't knowing",
+    "Not know",
+    "No knowing"
+  ],
+  "en-f5-05|not knowing": [
+    "don't knowing",
+    "not know",
+    "no knowing"
+  ],
+  "en-f5-06|Having": [
+    "Have",
+    "Had",
+    "Being"
+  ],
+  "en-f5-06|having": [
+    "have",
+    "had",
+    "being"
+  ],
+  "en-f5-07|It seems to me that": [
+    "It seems me that",
+    "It's seems to me that",
+    "It seems for me that"
+  ],
+  "en-f5-07|it seems to me that": [
+    "it seems me that",
+    "it's seems to me that",
+    "it seems for me that"
+  ],
+  "en-f5-08|It would appear that": [
+    "It would appears that",
+    "It would appearing that",
+    "It would be appear that"
+  ],
+  "en-f5-08|it would appear that": [
+    "it would appears that",
+    "it would appearing that",
+    "it would be appear that"
+  ],
+  "en-f5-09|I'd suggest": [
+    "I'd suggest to",
+    "I'd suggesting",
+    "I'd suggests"
+  ],
+  "en-f5-10|Admittedly": [
+    "Admitted",
+    "Admittingly",
+    "Admit"
+  ],
+  "en-f5-10|admittedly": [
+    "admitted",
+    "admittingly",
+    "admit"
+  ],
+  "en-f5-11|Even so": [
+    "Even though",
+    "Even if",
+    "Even that"
+  ],
+  "en-f5-11|even so": [
+    "even though",
+    "even if",
+    "even that"
+  ],
+  "en-f5-12|Although": [
+    "Despite",
+    "In spite",
+    "Although that"
+  ],
+  "en-f5-12|although": [
+    "despite",
+    "in spite",
+    "although that"
+  ],
+  "en-f5-13|decision to": [
+    "decision of",
+    "decision for",
+    "decide to"
+  ],
+  "en-f5-14|delay in": [
+    "delay on",
+    "delay at"
+  ],
+  "en-f5-15|With all due respect": [
+    "With all the due respect",
+    "With all due respects",
+    "With all respect due to"
+  ],
+  "en-f5-15|with all due respect": [
+    "with all the due respect",
+    "with all due respects",
+    "with all respect due to"
+  ],
+  "en-f5-16|The bottom line is": [
+    "The bottom line are",
+    "The bottom lines is",
+    "The bottom of line is"
+  ],
+  "en-f5-16|the bottom line is": [
+    "the bottom line are",
+    "the bottom lines is",
+    "the bottom of line is"
+  ],
+  "en-f5-17|Bear in mind": [
+    "Bear on mind",
+    "Keep in the mind",
+    "Bear in the mind"
+  ],
+  "en-f5-17|bear in mind": [
+    "bear on mind",
+    "keep in the mind",
+    "bear in the mind"
+  ],
+  "en-f5-18|Be that as it may": [
+    "Be that as it might",
+    "Being that as it may",
+    "Be that like it may"
+  ],
+  "en-f5-18|be that as it may": [
+    "be that as it might",
+    "being that as it may",
+    "be that like it may"
   ]
 }

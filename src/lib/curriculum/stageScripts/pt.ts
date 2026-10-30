@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** pt 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~3단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** pt 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현·문법 대본(x), 1~5단계 내 줄에 틀 태그. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const PT: StageScript[] = [
   {
     "id": "pt-1-1",
@@ -1820,7 +1820,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "If I'm not mistaken, we still have three screens and all the testing left.",
           "ko": "제가 알기로는 아직 화면 세 개랑 테스트 전부가 남았어요."
-        }
+        },
+        "frames": [
+          "pt-f4-20"
+        ]
       },
       {
         "who": "them",
@@ -1852,7 +1855,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "The thing is, we've been working late for weeks. The team is tired.",
           "ko": "문제는 우리가 몇 주째 야근하고 있다는 거예요. 팀이 지쳐 있어요."
-        }
+        },
+        "frames": [
+          "pt-f4-14"
+        ]
       },
       {
         "who": "them",
@@ -1868,7 +1874,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I see your point, but if we had one more person, we'd finish with much better quality.",
           "ko": "무슨 말인지 알아요. 다만 한 명만 더 있으면 훨씬 완성도 있게 끝낼 수 있을 거예요."
-        }
+        },
+        "frames": [
+          "pt-f4-13"
+        ]
       },
       {
         "who": "them",
@@ -1893,7 +1902,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "On the one hand, we can deliver the main screens on Friday. On the other hand, testing moves to Tuesday.",
           "ko": "한편으로는 주요 화면을 금요일에 넘길 수 있어요. 대신 테스트는 화요일로 미뤄지고요."
-        }
+        },
+        "frames": [
+          "pt-f4-11",
+          "pt-f4-12"
+        ]
       },
       {
         "who": "them",
@@ -1909,7 +1922,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "It makes sense for them too. Even though it's less than they asked for, it's safer in the long run.",
           "ko": "고객 입장에서도 말이 돼요. 요청한 것보다 적긴 해도 길게 보면 더 안전하니까요."
-        }
+        },
+        "frames": [
+          "pt-f4-05"
+        ]
       },
       {
         "who": "them",
@@ -1925,7 +1941,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Great. As soon as you talk to them, let me know so we can get organized.",
           "ko": "좋아요. 통화하시자마자 알려 주세요. 그래야 저희가 정리할 수 있어요."
-        }
+        },
+        "frames": [
+          "pt-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2034,7 +2053,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Is there a way we can reach an agreement? How about five percent?",
           "ko": "우리 합의점을 찾을 수 있을까요? 5퍼센트는 어떠세요?"
-        }
+        },
+        "frames": [
+          "pt-f4-15"
+        ]
       },
       {
         "who": "them",
@@ -2059,7 +2081,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Considering that I painted the living room myself, I think it's fair. In return, I can sign for two more years.",
           "ko": "거실 페인트칠을 제가 직접 한 걸 생각하면 공정하다고 봐요. 대신 2년 더 계약할 수 있어요."
-        }
+        },
+        "frames": [
+          "pt-f4-16",
+          "pt-f4-17"
+        ]
       },
       {
         "who": "them",
@@ -2075,7 +2101,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "If I had to move now, I'd have a lot of costs, and you'd be left with an empty apartment.",
           "ko": "제가 지금 이사해야 하면 비용이 많이 들고, 사장님도 집이 비게 되잖아요."
-        }
+        },
+        "frames": [
+          "pt-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -2091,7 +2120,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Seven I can accept. The good thing is that neither of us has to worry about this again any time soon.",
           "ko": "7퍼센트는 받아들일게요. 좋은 점은 우리 둘 다 당분간 이 문제로 신경 쓸 일이 없다는 거죠."
-        }
+        },
+        "frames": [
+          "pt-f4-18"
+        ]
       },
       {
         "who": "them",
@@ -2151,7 +2183,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I get you, but I've been missing people. At home I feel lonely sometimes.",
           "ko": "이해는 해. 근데 난 요즘 사람들이 그리워. 집에 있으면 가끔 외로워."
-        }
+        },
+        "frames": [
+          "pt-f4-08"
+        ]
       },
       {
         "who": "them",
@@ -2192,7 +2227,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "People talk a lot about productivity, but little about how newcomers learn from coworkers.",
           "ko": "생산성 얘기는 많이들 하는데, 신입이 동료한테서 배우는 얘기는 잘 안 하잖아."
-        }
+        },
+        "frames": [
+          "pt-f4-10"
+        ]
       },
       {
         "who": "them",
@@ -2224,7 +2262,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "It's not the same. My boss said the interns were having trouble asking for help.",
           "ko": "그거랑은 달라. 우리 팀장님이 인턴들이 도움 요청하는 걸 어려워했다고 하더라."
-        }
+        },
+        "frames": [
+          "pt-f4-09"
+        ]
       },
       {
         "who": "them",
@@ -2240,7 +2281,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I think hybrid is better: two days in the office for the teams to meet.",
           "ko": "난 하이브리드가 낫다고 봐. 팀끼리 만날 수 있게 이틀은 사무실로."
-        }
+        },
+        "frames": [
+          "pt-f3-01"
+        ]
       },
       {
         "who": "them",
@@ -2256,7 +2300,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "In short: flexible, but with get-togethers. If the company gave me that option, I'd be happy.",
           "ko": "요약하면, 유연하게 하되 만나기도 하자는 거지. 회사가 그런 선택지를 주면 난 좋겠어."
-        }
+        },
+        "frames": [
+          "pt-f4-19",
+          "pt-f4-02"
+        ]
       },
       {
         "who": "them",
@@ -2311,7 +2359,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Good morning. I'm a designer, and for the last two years I've been working on health apps.",
           "ko": "안녕하세요. 저는 디자이너이고, 최근 2년 동안 헬스케어 앱 작업을 해 왔습니다."
-        }
+        },
+        "frames": [
+          "pt-f4-07"
+        ]
       },
       {
         "who": "them",
@@ -2352,7 +2403,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "An appointment app. Users said it was the easiest one they'd ever used.",
           "ko": "진료 예약 앱이요. 사용자들이 지금까지 써 본 것 중 제일 쉽다고 했어요."
-        }
+        },
+        "frames": [
+          "pt-f4-09"
+        ]
       },
       {
         "who": "them",
@@ -2384,7 +2438,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I prioritize what's essential. Although I like details, I know when to stop, taking the deadline into account.",
           "ko": "핵심부터 챙겨요. 디테일을 좋아하긴 하지만, 마감을 고려해서 멈출 때를 알아요."
-        }
+        },
+        "frames": [
+          "pt-f4-16"
+        ]
       },
       {
         "who": "them",
@@ -2400,7 +2457,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "If I had that chance, I'd hold short meetings every week so everyone knows the priorities.",
           "ko": "그런 기회가 있다면 매주 짧게 회의해서 모두가 우선순위를 알게 하겠어요."
-        }
+        },
+        "frames": [
+          "pt-f4-01"
+        ]
       },
       {
         "who": "them",
@@ -2498,7 +2558,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Exactly, he said one coffee a day turns into a plane ticket by the end of the year.",
           "ko": "맞아, 하루 커피 한 잔이 연말엔 비행기 표 한 장이 된다고 했어."
-        }
+        },
+        "frames": [
+          "pt-f4-09"
+        ]
       },
       {
         "who": "them",
@@ -2523,7 +2586,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "On the one hand, yes. On the other hand, in the long run, these little things make a difference.",
           "ko": "한편으론 그렇지. 근데 길게 보면 그런 자잘한 게 차이를 만들어."
-        }
+        },
+        "frames": [
+          "pt-f4-11",
+          "pt-f4-12"
+        ]
       },
       {
         "who": "them",
@@ -2564,7 +2631,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "If I'm not mistaken, he recommended starting small, as soon as you have some savings.",
           "ko": "내 기억이 맞다면, 비상금이 생기자마자 조금씩 시작하라고 했어."
-        }
+        },
+        "frames": [
+          "pt-f4-20",
+          "pt-f4-04"
+        ]
       },
       {
         "who": "them",
@@ -2580,7 +2651,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "People talk a lot about investing, but little about how to save money. He said so himself.",
           "ko": "투자 얘기는 많이 하는데 돈 모으는 법 얘기는 별로 없지. 그 사람도 그렇게 말했어."
-        }
+        },
+        "frames": [
+          "pt-f4-10"
+        ]
       },
       {
         "who": "them",
@@ -2596,7 +2670,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Do it. Even though it's long, it's worth every minute. Tell me what you think afterwards!",
           "ko": "꼭 들어. 길긴 해도 1분 1분이 아깝지 않아. 듣고 어땠는지 말해 줘!"
-        }
+        },
+        "frames": [
+          "pt-f4-05"
+        ]
       }
     ]
   },
@@ -2648,7 +2725,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I'd already left home, auntie, but traffic went bad on the Marginal.",
           "ko": "이모, 저 진작 나왔는데 마르지나우 도로가 완전 꽉 막혔어요."
-        }
+        },
+        "frames": [
+          "pt-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -2664,7 +2744,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "With all due respect, auntie, the one who woke up late was Rafa. In fact, I called him twice.",
           "ko": "이모, 실례지만 늦잠 잔 건 하파예요. 심지어 제가 두 번이나 전화했어요."
-        }
+        },
+        "frames": [
+          "pt-f5-16",
+          "pt-f5-15"
+        ]
       },
       {
         "who": "them",
@@ -2696,7 +2780,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Thanks, grandma. By the way, the smell is amazing, I could smell it from the gate.",
           "ko": "고마워요, 할머니. 그나저나 냄새 진짜 좋아요, 대문 앞에서부터 났어요."
-        }
+        },
+        "frames": [
+          "pt-f5-14"
+        ]
       },
       {
         "who": "them",
@@ -2712,7 +2799,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Grandma, I've already had two plates. Honestly, I can't fit anything else!",
           "ko": "할머니, 저 벌써 두 접시 먹었어요. 솔직히 더는 안 들어가요!"
-        }
+        },
+        "frames": [
+          "pt-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -2728,7 +2818,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "What I don't get is how you still managed to eat dinner, uncle!",
           "ko": "제가 이해 안 되는 건 그러고도 어떻게 저녁을 드셨냐는 거예요, 삼촌!"
-        }
+        },
+        "frames": [
+          "pt-f5-08"
+        ]
       },
       {
         "who": "them",
@@ -2744,7 +2837,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Relax, uncle, I'm just kidding. But I'll take a little piece of pudding, unless it's already gone.",
           "ko": "진정하세요, 삼촌, 농담이에요. 근데 푸딩 한 조각은 먹을게요, 벌써 다 떨어진 게 아니라면요."
-        }
+        },
+        "frames": [
+          "pt-f5-03"
+        ]
       },
       {
         "who": "them",
@@ -2843,7 +2939,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "What delayed everything was the integration with the old system. By the time we noticed, the vendor had already changed the interface.",
           "ko": "모든 걸 늦춘 건 기존 시스템과의 연동이었어요. 저희가 알아챘을 땐 업체가 이미 인터페이스를 바꿔 놓은 상태였고요."
-        }
+        },
+        "frames": [
+          "pt-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -2859,7 +2958,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "There was. Honestly, it only dawned on me how serious it was on Friday, and I preferred to confirm before calling you.",
           "ko": "있었죠. 솔직히 금요일에야 심각성을 깨달았고, 확실히 하고 전화드리고 싶었어요."
-        }
+        },
+        "frames": [
+          "pt-f5-19",
+          "pt-f5-20"
+        ]
       },
       {
         "who": "them",
@@ -2875,7 +2978,12 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Absolutely. That's why I wanted to ask you a small favor: could you take a quick look at the screens by Wednesday? As long as you approve them, the sign-up goes out on Friday.",
           "ko": "당연하죠. 그래서 작은 부탁 하나 드리려고요. 수요일까지 화면 좀 한번 봐 주실 수 있을까요? 승인만 해 주시면 회원가입 기능은 금요일에 나가요."
-        }
+        },
+        "frames": [
+          "pt-f5-06",
+          "pt-f5-05",
+          "pt-f5-04"
+        ]
       },
       {
         "who": "them",
@@ -2891,7 +2999,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "The rest moves to the twentieth. And we won't turn a blind eye to any test; on the contrary, we'll test twice as much.",
           "ko": "나머지는 20일로 갈 거예요. 테스트도 하나도 대충 넘기지 않을 거예요. 오히려 두 배로 할 거예요."
-        }
+        },
+        "frames": [
+          "pt-f5-13"
+        ]
       },
       {
         "who": "them",
@@ -2907,7 +3018,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "I'll look into it and let you know by tomorrow. I don't want to promise again and fail.",
           "ko": "확인해 보고 내일까지 말씀드릴게요. 또 약속하고 못 지키고 싶지 않아서요."
-        }
+        },
+        "frames": [
+          "pt-f5-18"
+        ]
       },
       {
         "who": "them",
@@ -2989,7 +3103,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Sure. Technology helps, as long as the teacher knows how to use it. Without training, it's just one more screen.",
           "ko": "물론이죠. 교사가 쓸 줄 안다면 기술은 도움이 돼요. 교육 없이는 화면 하나 더 늘어날 뿐이고요."
-        }
+        },
+        "frames": [
+          "pt-f5-04"
+        ]
       },
       {
         "who": "them",
@@ -3005,7 +3122,12 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "With all due respect, it's not quite like that. On the contrary: the easier the tool, the more guidance the student needs.",
           "ko": "외람되지만 꼭 그렇진 않아요. 오히려 도구가 쉬울수록 학생에겐 지도가 더 필요해요."
-        }
+        },
+        "frames": [
+          "pt-f5-16",
+          "pt-f5-13",
+          "pt-f3-17"
+        ]
       },
       {
         "who": "them",
@@ -3021,7 +3143,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "They went up in some schools, yes. By the way, in many of them the teachers had already taken a course beforehand.",
           "ko": "일부 학교에선 올랐죠. 덧붙이자면 그중 상당수는 교사들이 미리 연수를 받은 곳이었어요."
-        }
+        },
+        "frames": [
+          "pt-f5-01",
+          "pt-f5-14"
+        ]
       },
       {
         "who": "them",
@@ -3037,7 +3163,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "That's just it. Unless the government invests in internet access, we're going to increase inequality.",
           "ko": "바로 그게 핵심이에요. 정부가 인터넷에 투자하지 않는 한 격차만 더 벌어질 거예요."
-        }
+        },
+        "frames": [
+          "pt-f5-03"
+        ]
       },
       {
         "who": "them",
@@ -3053,7 +3182,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Maybe, but saying nothing will change is just empty talk. In fact, some states are already doing it.",
           "ko": "그럴 수도 있죠. 하지만 아무것도 안 바뀐다는 건 빈말이에요. 실제로 이미 그렇게 하는 주도 있어요."
-        }
+        },
+        "frames": [
+          "pt-f5-15"
+        ]
       },
       {
         "who": "them",
@@ -3085,7 +3217,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Thank you all. And, not to be a pain, but here I go: the debate continues outside, over coffee!",
           "ko": "감사합니다. 그리고 귀찮게 하려는 건 아니지만 한마디만요. 토론은 밖에서 커피 마시며 계속됩니다!"
-        }
+        },
+        "frames": [
+          "pt-f5-17"
+        ]
       }
     ]
   },
@@ -3134,7 +3269,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Thanks! I'm from Korea, but I've lived in São Paulo for four years. You're from the South, right?",
           "ko": "고마워! 한국 사람인데 상파울루에 산 지 4년 됐어. 너는 남부 출신이지?"
-        }
+        },
+        "frames": [
+          "pt-f5-12"
+        ]
       },
       {
         "who": "them",
@@ -3150,7 +3288,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Nice to meet you, Diego! By the way, I'd already heard your accent in a soap opera. I thought it was beautiful.",
           "ko": "반가워, 지에구! 그나저나 네 억양 드라마에서 들어 본 적 있어. 듣기 좋더라."
-        }
+        },
+        "frames": [
+          "pt-f5-14",
+          "pt-f5-01"
+        ]
       },
       {
         "who": "them",
@@ -3166,7 +3308,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Not to be a pain, but what I still don't get is oxe. Is it like nossa?",
           "ko": "귀찮게 하려는 건 아닌데, 아직 '오시'가 뭔지 모르겠어. '노사' 같은 거야?"
-        }
+        },
+        "frames": [
+          "pt-f5-17",
+          "pt-f5-08"
+        ]
       },
       {
         "who": "them",
@@ -3214,7 +3360,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "There it's more meu and mano. Honestly, after four years, I don't even notice anymore.",
           "ko": "거긴 '메우', '마누' 같은 말을 많이 써. 솔직히 4년쯤 되니까 이젠 알아채지도 못해."
-        }
+        },
+        "frames": [
+          "pt-f5-19"
+        ]
       },
       {
         "who": "them",
@@ -3230,7 +3379,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "They did, but I learned to stay chill. If anyone teases me, I tease them back!",
           "ko": "있었지. 근데 그냥 넘기는 법을 배웠어. 누가 놀리면 나도 같이 놀려!"
-        }
+        },
+        "frames": [
+          "pt-f5-02"
+        ]
       },
       {
         "who": "them",
@@ -3246,7 +3398,11 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Let's! I'll check and tell you the day. As long as there's garlic bread, I'm in for any date!",
           "ko": "좋아! 확인해 보고 날짜 말해 줄게. 마늘빵만 있으면 언제든 콜이야!"
-        }
+        },
+        "frames": [
+          "pt-f5-18",
+          "pt-f5-04"
+        ]
       }
     ]
   },
@@ -3278,7 +3434,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Sure. I'll start like this: dear sirs, I hereby request an extension of the deadline.",
           "ko": "응. 이렇게 시작할게. '관계자 여러분, 본 메일을 통해 기한 연장을 요청드립니다.'"
-        }
+        },
+        "frames": [
+          "pt-f5-09"
+        ]
       },
       {
         "who": "them",
@@ -3294,7 +3453,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Not with a public agency. There's no way to bend the rules there; you have to follow protocol.",
           "ko": "관공서엔 안 돼. 거긴 융통성 부릴 여지가 없어. 절차대로 해야 해."
-        }
+        },
+        "frames": [
+          "pt-f4-15"
+        ]
       },
       {
         "who": "them",
@@ -3310,7 +3472,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "Like this: we inform you that the delay resulted from the supplier's late delivery of the documents.",
           "ko": "이렇게. '이번 지연은 공급업체의 서류 전달 지연으로 인해 발생하였음을 알려 드립니다.'"
-        }
+        },
+        "frames": [
+          "pt-f5-11"
+        ]
       },
       {
         "who": "them",
@@ -3326,7 +3491,10 @@ export const PT: StageScript[] = [
         "gloss": {
           "en": "We thank you in advance for your attention and remain available for any clarification.",
           "ko": "'관심에 미리 감사드리며, 문의 사항이 있으시면 언제든 연락 주십시오.'"
-        }
+        },
+        "frames": [
+          "pt-f5-10"
+        ]
       }
     ]
   }

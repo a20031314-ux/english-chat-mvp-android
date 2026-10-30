@@ -233,7 +233,8 @@ export function todayPlan(input: {
   // 꺼내 쓰기 자리도 미리(틀이 있는 단계면 하루 한 칸) — 문장구조 다음에 둔다.
   const recallItem: PlanItem | null = allFramesFor(input.language).some((f) => f.stage === input.stage) ? { id: RECALL_ITEM, kind: "recall", stage: input.stage, minutes: QUIZ_MINUTES } : null;
   const freshPace = input.pace - fillKeys.length * QUIZ_MINUTES - (recallItem ? recallItem.minutes : 0);
-  if (used < freshPace) {
+  // 분량이 꺼내 쓰기·채우기만으로 차도 새 것은 하나는(처음 것은 넘쳐도 하나는).
+  if (used < freshPace || !out.length) {
     const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
     const takeFresh = (item: PlanItem) => {
       if (out.some((one) => one.id === item.id)) return;
@@ -245,6 +246,7 @@ export function todayPlan(input: {
       const first = fresh.find((item) => item.id === input.recommended);
       if (first) takeFresh(first);
     }
+    if (!out.length && fresh[0]) takeFresh(fresh[0]);
     for (const item of fresh) {
       if (used >= freshPace) break;
       takeFresh(item);

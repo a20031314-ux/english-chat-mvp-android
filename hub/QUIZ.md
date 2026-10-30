@@ -68,7 +68,7 @@
 
 고르기 보기의 오답은 **그 정답의 흔한 실수 꼴**(활용·조사·어순·성수·닮은 낱말). 맞는 대안(축약·존댓말·동의어)은 오답으로 쓰지 않는다. 고르는 순서:
 
-1. 문장구조 조각 1,245개마다 2~4개 — `curriculum/frames/decoys/<언어>.ts`(Claude가 씀, `scripts/frame-decoys.ts`)
+1. 문장구조 조각 2,058개(14개 언어 1~5단계 틀 1,334개)마다 2~4개 — `curriculum/frames/decoys/<언어>.ts`(Claude가 씀, `scripts/frame-decoys.ts`)
 2. 단계 핵심 표현 1,439개마다 — `curriculum/expressions/decoys/`(`scripts/expr-decoys.ts`)
 3. 문제은행이 키운 오답(§6)
 4. 없으면 같은 갈래·같은 품사 후보 중 정답과 가장 닮은 것(`mostAlike`)

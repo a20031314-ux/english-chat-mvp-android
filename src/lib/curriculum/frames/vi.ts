@@ -1,6 +1,6 @@
 import type { Frame } from "../frames.ts";
 
-/** 베트남어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
+/** 베트남어 1~5단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 규칙 검사, 원어민 확인 전. */
 export const VI_FRAMES: Frame[] = [
   {
     "id": "vi-f1-01",
@@ -3695,6 +3695,2647 @@ export const VI_FRAMES: Frame[] = [
         "gloss": {
           "en": "Maybe I was wrong.",
           "ko": "아마 제가 착각했나 봐요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-01",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "… không những ___ mà còn …",
+    "core": [
+      "không những",
+      "Không những"
+    ],
+    "meaning": {
+      "en": "Adding a second strong point: … not only ___ but also …",
+      "ko": "장점을 하나 더 얹기: …는 ___할 뿐 아니라 …도 해요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Kế hoạch này không những rẻ mà còn dễ làm.",
+        "slot": "rẻ",
+        "cue": {
+          "en": "cheap",
+          "ko": "싸다"
+        },
+        "gloss": {
+          "en": "This plan is not only cheap but also easy to carry out.",
+          "ko": "이 계획은 쌀 뿐 아니라 실행하기도 쉬워요."
+        }
+      },
+      {
+        "text": "Căn hộ đó không những rộng mà còn gần trường.",
+        "slot": "rộng",
+        "cue": {
+          "en": "spacious",
+          "ko": "넓다"
+        },
+        "gloss": {
+          "en": "That flat is not only spacious but also close to the school.",
+          "ko": "그 아파트는 넓을 뿐 아니라 학교에서도 가까워요."
+        }
+      },
+      {
+        "text": "Chị ấy không những giỏi tiếng Anh mà còn biết tiếng Nhật.",
+        "slot": "giỏi tiếng Anh",
+        "cue": {
+          "en": "be good at English",
+          "ko": "영어를 잘하다"
+        },
+        "gloss": {
+          "en": "She is not only good at English but also knows Japanese.",
+          "ko": "그녀는 영어를 잘할 뿐 아니라 일본어도 알아요."
+        }
+      },
+      {
+        "text": "Đi tàu không những an toàn mà còn thoải mái.",
+        "slot": "an toàn",
+        "cue": {
+          "en": "safe",
+          "ko": "안전하다"
+        },
+        "gloss": {
+          "en": "Going by train is not only safe but also comfortable.",
+          "ko": "기차로 가는 건 안전할 뿐 아니라 편하기도 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-02",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Dù ___, … vẫn …",
+    "core": [
+      "Dù",
+      "dù"
+    ],
+    "meaning": {
+      "en": "Saying something still holds: Even if ___, … still …",
+      "ko": "그래도 변함없다고 말하기: ___하더라도 …는 여전히 …해요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Dù giá cao, nhiều người vẫn mua.",
+        "slot": "giá cao",
+        "cue": {
+          "en": "the price is high",
+          "ko": "값이 비싸다"
+        },
+        "gloss": {
+          "en": "Even though the price is high, many people still buy it.",
+          "ko": "값이 비싸도 많은 사람이 여전히 사요."
+        }
+      },
+      {
+        "text": "Dù trời mưa, chúng tôi vẫn đến họp đúng giờ.",
+        "slot": "trời mưa",
+        "cue": {
+          "en": "it rains",
+          "ko": "비가 오다"
+        },
+        "gloss": {
+          "en": "Even though it rained, we still got to the meeting on time.",
+          "ko": "비가 왔는데도 우리는 제시간에 회의에 갔어요."
+        }
+      },
+      {
+        "text": "Dù hơi mệt, em vẫn muốn làm xong báo cáo hôm nay.",
+        "slot": "hơi mệt",
+        "cue": {
+          "en": "be a bit tired",
+          "ko": "좀 피곤하다"
+        },
+        "gloss": {
+          "en": "Even though I'm a bit tired, I still want to finish the report today.",
+          "ko": "좀 피곤해도 오늘 보고서를 끝내고 싶어요."
+        }
+      },
+      {
+        "text": "Anh ấy vẫn bình tĩnh dù khách hàng rất khó tính.",
+        "slot": "khách hàng rất khó tính",
+        "cue": {
+          "en": "the client is very demanding",
+          "ko": "고객이 아주 까다롭다"
+        },
+        "gloss": {
+          "en": "He stays calm even though the client is very demanding.",
+          "ko": "고객이 아주 까다로워도 그는 침착해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-03",
+    "stage": 4,
+    "fn": "explain-process",
+    "pattern": "… để ___.",
+    "core": [
+      "để"
+    ],
+    "meaning": {
+      "en": "Saying the purpose: … in order to ___.",
+      "ko": "목적 말하기: ___하기 위해 …해요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Công ty mở lớp đào tạo để nâng cao chất lượng.",
+        "slot": "nâng cao chất lượng",
+        "cue": {
+          "en": "improve quality",
+          "ko": "품질을 높이다"
+        },
+        "gloss": {
+          "en": "The company runs training classes to improve quality.",
+          "ko": "회사가 품질을 높이려고 교육 과정을 열어요."
+        }
+      },
+      {
+        "text": "Mình thuê thêm người để rút ngắn thời gian.",
+        "slot": "rút ngắn thời gian",
+        "cue": {
+          "en": "shorten the time",
+          "ko": "시간을 줄이다"
+        },
+        "gloss": {
+          "en": "We'll hire more people to shorten the time.",
+          "ko": "시간을 줄이려고 사람을 더 뽑아요."
+        }
+      },
+      {
+        "text": "Tôi dậy sớm để tránh tắc đường.",
+        "slot": "tránh tắc đường",
+        "cue": {
+          "en": "avoid traffic jams",
+          "ko": "교통 체증을 피하다"
+        },
+        "gloss": {
+          "en": "I get up early to avoid the traffic.",
+          "ko": "차 막히는 걸 피하려고 일찍 일어나요."
+        }
+      },
+      {
+        "text": "Chúng ta nên gặp nhau sớm để thống nhất kế hoạch.",
+        "slot": "thống nhất kế hoạch",
+        "cue": {
+          "en": "agree on the plan",
+          "ko": "계획을 맞추다"
+        },
+        "gloss": {
+          "en": "We should meet early to agree on the plan.",
+          "ko": "계획을 맞추기 위해 일찍 만나는 게 좋겠어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-04",
+    "stage": 4,
+    "fn": "the-more",
+    "pattern": "… càng ___, … càng …",
+    "core": [
+      "càng"
+    ],
+    "meaning": {
+      "en": "The more…, the more…: the more ___, the more …",
+      "ko": "～할수록 ～하다: ___할수록 더 …해요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Thành phố càng đông, giao thông càng tắc.",
+        "slot": "đông",
+        "cue": {
+          "en": "crowded",
+          "ko": "붐비다"
+        },
+        "gloss": {
+          "en": "The more crowded the city, the worse the traffic.",
+          "ko": "도시가 붐빌수록 교통이 더 막혀요."
+        }
+      },
+      {
+        "text": "Càng luyện nói, em càng tự tin.",
+        "slot": "luyện nói",
+        "cue": {
+          "en": "practise speaking",
+          "ko": "말하기를 연습하다"
+        },
+        "gloss": {
+          "en": "The more I practise speaking, the more confident I get.",
+          "ko": "말하기를 연습할수록 자신감이 더 생겨요."
+        }
+      },
+      {
+        "text": "Dự án càng kéo dài, chi phí càng tăng.",
+        "slot": "kéo dài",
+        "cue": {
+          "en": "drag on",
+          "ko": "길어지다"
+        },
+        "gloss": {
+          "en": "The longer the project drags on, the more the cost rises.",
+          "ko": "프로젝트가 길어질수록 비용이 늘어요."
+        }
+      },
+      {
+        "text": "Món này càng để lâu càng ngon.",
+        "slot": "để lâu",
+        "cue": {
+          "en": "leave it longer",
+          "ko": "오래 두다"
+        },
+        "gloss": {
+          "en": "The longer you leave this dish, the tastier it gets.",
+          "ko": "이 음식은 오래 둘수록 맛있어져요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-05",
+    "stage": 4,
+    "fn": "feedback-give",
+    "pattern": "… hơi ___.",
+    "core": [
+      "hơi",
+      "Hơi"
+    ],
+    "meaning": {
+      "en": "Softening a criticism: … is a bit ___.",
+      "ko": "비판 누그러뜨리기: …가 좀 ___해요."
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Giá này hơi cao so với khu này.",
+        "slot": "cao",
+        "cue": {
+          "en": "high",
+          "ko": "비싸다"
+        },
+        "gloss": {
+          "en": "This price is a bit high for this area.",
+          "ko": "이 값은 이 동네치고 좀 비싸요."
+        }
+      },
+      {
+        "text": "Bài thuyết trình hơi dài, nhưng nội dung tốt.",
+        "slot": "dài",
+        "cue": {
+          "en": "long",
+          "ko": "길다"
+        },
+        "gloss": {
+          "en": "The presentation is a bit long, but the content is good.",
+          "ko": "발표가 좀 길지만 내용은 좋아요."
+        }
+      },
+      {
+        "text": "Màu này hơi tối cho phòng khách.",
+        "slot": "tối",
+        "cue": {
+          "en": "dark",
+          "ko": "어둡다"
+        },
+        "gloss": {
+          "en": "This colour is a bit dark for the living room.",
+          "ko": "이 색은 거실에 좀 어두워요."
+        }
+      },
+      {
+        "text": "Hơi vội, nhưng em nghĩ là vẫn làm được.",
+        "slot": "vội",
+        "cue": {
+          "en": "rushed",
+          "ko": "촉박하다"
+        },
+        "gloss": {
+          "en": "It's a bit rushed, but I think we can still do it.",
+          "ko": "좀 촉박하지만 그래도 할 수 있을 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-06",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "… khá ___, nhưng …",
+    "core": [
+      "khá"
+    ],
+    "meaning": {
+      "en": "Granting a point before a but: … is quite ___, but …",
+      "ko": "인정하고 반론하기: …가 꽤 ___하지만 …"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Phòng khá đẹp, nhưng giá hơi cao.",
+        "slot": "đẹp",
+        "cue": {
+          "en": "nice",
+          "ko": "예쁘다"
+        },
+        "gloss": {
+          "en": "The room is quite nice, but the price is a bit high.",
+          "ko": "방은 꽤 예쁘지만 값이 좀 비싸요."
+        }
+      },
+      {
+        "text": "Ý tưởng này khá hay, nhưng khó làm.",
+        "slot": "hay",
+        "cue": {
+          "en": "good, interesting",
+          "ko": "좋다"
+        },
+        "gloss": {
+          "en": "This idea is quite good, but hard to carry out.",
+          "ko": "이 아이디어는 꽤 좋지만 실행하기 어려워요."
+        }
+      },
+      {
+        "text": "Công việc mới khá nhẹ, nhưng lương thấp.",
+        "slot": "nhẹ",
+        "cue": {
+          "en": "light",
+          "ko": "가볍다"
+        },
+        "gloss": {
+          "en": "The new job is quite light, but the pay is low.",
+          "ko": "새 일은 꽤 가볍지만 월급이 적어요."
+        }
+      },
+      {
+        "text": "Khách sạn khá xa trung tâm, nhưng rất yên tĩnh.",
+        "slot": "xa trung tâm",
+        "cue": {
+          "en": "far from the centre",
+          "ko": "시내에서 멀다"
+        },
+        "gloss": {
+          "en": "The hotel is quite far from the centre, but very quiet.",
+          "ko": "호텔은 시내에서 꽤 멀지만 아주 조용해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-07",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Về ___ thì …",
+    "core": [
+      "Về",
+      "về"
+    ],
+    "meaning": {
+      "en": "Putting the topic first: As for ___, …",
+      "ko": "화제 앞세우기: ___는요, …"
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Về ngân sách thì chúng ta cần bàn thêm.",
+        "slot": "ngân sách",
+        "cue": {
+          "en": "budget",
+          "ko": "예산"
+        },
+        "gloss": {
+          "en": "As for the budget, we need to discuss it more.",
+          "ko": "예산은 더 논의해야 해요."
+        }
+      },
+      {
+        "text": "Về phần thiết kế thì bọn em đã xong.",
+        "slot": "phần thiết kế",
+        "cue": {
+          "en": "the design part",
+          "ko": "디자인 부분"
+        },
+        "gloss": {
+          "en": "As for the design, we've finished it.",
+          "ko": "디자인 부분은 저희가 끝냈어요."
+        }
+      },
+      {
+        "text": "Về tiền cọc thì tôi sẽ chuyển khoản trước.",
+        "slot": "tiền cọc",
+        "cue": {
+          "en": "deposit",
+          "ko": "보증금"
+        },
+        "gloss": {
+          "en": "As for the deposit, I'll transfer it in advance.",
+          "ko": "보증금은 미리 이체할게요."
+        }
+      },
+      {
+        "text": "Về chuyện đi lại thì anh không cần lo.",
+        "slot": "chuyện đi lại",
+        "cue": {
+          "en": "getting around",
+          "ko": "이동 문제"
+        },
+        "gloss": {
+          "en": "As for getting around, you don't need to worry.",
+          "ko": "이동 문제는 걱정 안 하셔도 돼요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-08",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Tuy nhiên, ___.",
+    "core": [
+      "Tuy nhiên",
+      "tuy nhiên"
+    ],
+    "meaning": {
+      "en": "Formal contrast: However, ___.",
+      "ko": "격식 있게 반대 잇기: 그러나 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Tuy nhiên, chúng ta chưa có đủ dữ liệu.",
+        "slot": "chúng ta chưa có đủ dữ liệu",
+        "cue": {
+          "en": "we don't have enough data yet",
+          "ko": "아직 데이터가 충분하지 않다"
+        },
+        "gloss": {
+          "en": "However, we don't have enough data yet.",
+          "ko": "그러나 아직 데이터가 충분하지 않아요."
+        }
+      },
+      {
+        "text": "Tuy nhiên, phòng bên cạnh rẻ hơn nhiều.",
+        "slot": "phòng bên cạnh rẻ hơn nhiều",
+        "cue": {
+          "en": "the room next door is much cheaper",
+          "ko": "옆방이 훨씬 싸다"
+        },
+        "gloss": {
+          "en": "However, the room next door is much cheaper.",
+          "ko": "하지만 옆방이 훨씬 싸요."
+        }
+      },
+      {
+        "text": "Kết quả khá tốt. Tuy nhiên, chi phí vẫn còn cao.",
+        "slot": "chi phí vẫn còn cao",
+        "cue": {
+          "en": "costs are still high",
+          "ko": "비용이 아직 높다"
+        },
+        "gloss": {
+          "en": "The results are fairly good. However, costs are still high.",
+          "ko": "결과는 꽤 좋아요. 그러나 비용은 아직 높아요."
+        }
+      },
+      {
+        "text": "Tuy nhiên, khách hàng muốn nhận hàng sớm hơn.",
+        "slot": "khách hàng muốn nhận hàng sớm hơn",
+        "cue": {
+          "en": "the client wants delivery sooner",
+          "ko": "고객이 물건을 더 빨리 받고 싶어 하다"
+        },
+        "gloss": {
+          "en": "However, the client wants the goods sooner.",
+          "ko": "그런데 고객은 물건을 더 빨리 받고 싶어 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-09",
+    "stage": 4,
+    "fn": "explain-process",
+    "pattern": "Ngoài ra, ___.",
+    "core": [
+      "Ngoài ra",
+      "ngoài ra"
+    ],
+    "meaning": {
+      "en": "Adding another point: In addition, ___.",
+      "ko": "덧붙이기: 그 밖에 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Ngoài ra, anh sửa vòi nước giúp tôi nhé.",
+        "slot": "anh sửa vòi nước giúp tôi nhé",
+        "cue": {
+          "en": "please fix the tap for me",
+          "ko": "수도꼭지를 고쳐 주다"
+        },
+        "gloss": {
+          "en": "Also, please fix the tap for me.",
+          "ko": "그리고 수도꼭지도 좀 고쳐 주세요."
+        }
+      },
+      {
+        "text": "Ngoài ra, chúng ta cần thêm một người phiên dịch.",
+        "slot": "chúng ta cần thêm một người phiên dịch",
+        "cue": {
+          "en": "we need one more interpreter",
+          "ko": "통역사가 한 명 더 필요하다"
+        },
+        "gloss": {
+          "en": "In addition, we need one more interpreter.",
+          "ko": "그 밖에 통역사가 한 명 더 필요해요."
+        }
+      },
+      {
+        "text": "Ngoài ra, phần âm nhạc rất cảm động.",
+        "slot": "phần âm nhạc rất cảm động",
+        "cue": {
+          "en": "the music was very moving",
+          "ko": "음악 부분이 아주 감동적이다"
+        },
+        "gloss": {
+          "en": "Besides that, the music was very moving.",
+          "ko": "그 밖에 음악 부분이 아주 감동적이었어요."
+        }
+      },
+      {
+        "text": "Khách sạn gần biển. Ngoài ra, giá phòng đã bao gồm bữa sáng.",
+        "slot": "giá phòng đã bao gồm bữa sáng",
+        "cue": {
+          "en": "the price includes breakfast",
+          "ko": "방값에 아침이 포함되다"
+        },
+        "gloss": {
+          "en": "The hotel is near the sea. In addition, the price includes breakfast.",
+          "ko": "호텔은 바다 근처예요. 게다가 방값에 아침이 포함돼 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-10",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "Nói thẳng ra là ___.",
+    "core": [
+      "Nói thẳng ra",
+      "nói thẳng ra"
+    ],
+    "meaning": {
+      "en": "Saying it plainly: To be frank, ___.",
+      "ko": "솔직하게 말하기: 대놓고 말하면 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "nói thẳng ra"
+    ],
+    "examples": [
+      {
+        "text": "Nói thẳng ra là mình ủng hộ.",
+        "slot": "mình ủng hộ",
+        "cue": {
+          "en": "I support it",
+          "ko": "찬성하다"
+        },
+        "gloss": {
+          "en": "Frankly, I'm for it.",
+          "ko": "대놓고 말하면 난 찬성이야."
+        }
+      },
+      {
+        "text": "Nói thẳng ra là kế hoạch này không khả thi.",
+        "slot": "kế hoạch này không khả thi",
+        "cue": {
+          "en": "this plan isn't feasible",
+          "ko": "이 계획은 실현하기 어렵다"
+        },
+        "gloss": {
+          "en": "To be frank, this plan isn't feasible.",
+          "ko": "솔직히 말하면 이 계획은 실현이 어려워요."
+        }
+      },
+      {
+        "text": "Nói thẳng ra, tôi không thích cách làm này.",
+        "slot": "tôi không thích cách làm này",
+        "cue": {
+          "en": "I don't like this way of doing it",
+          "ko": "이 방식이 마음에 안 든다"
+        },
+        "gloss": {
+          "en": "To put it bluntly, I don't like this approach.",
+          "ko": "대놓고 말하면 이 방식이 마음에 안 들어요."
+        }
+      },
+      {
+        "text": "Nói thẳng ra là chúng ta đang thiếu người.",
+        "slot": "chúng ta đang thiếu người",
+        "cue": {
+          "en": "we are short of people",
+          "ko": "사람이 모자라다"
+        },
+        "gloss": {
+          "en": "Frankly, we're short of people.",
+          "ko": "솔직히 말하면 우리는 사람이 모자라요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-11",
+    "stage": 4,
+    "fn": "persuade",
+    "pattern": "Điều quan trọng là ___.",
+    "core": [
+      "Điều quan trọng là",
+      "điều quan trọng là"
+    ],
+    "meaning": {
+      "en": "Pointing to what matters most: The important thing is ___.",
+      "ko": "핵심 짚기: 중요한 건 ___예요."
+    },
+    "grammar": [],
+    "expressions": [
+      "điều quan trọng là"
+    ],
+    "examples": [
+      {
+        "text": "Điều quan trọng là không khí sạch.",
+        "slot": "không khí sạch",
+        "cue": {
+          "en": "clean air",
+          "ko": "깨끗한 공기"
+        },
+        "gloss": {
+          "en": "What matters is clean air.",
+          "ko": "중요한 건 깨끗한 공기예요."
+        }
+      },
+      {
+        "text": "Điều quan trọng là khách hàng hài lòng.",
+        "slot": "khách hàng hài lòng",
+        "cue": {
+          "en": "the customer is satisfied",
+          "ko": "고객이 만족하다"
+        },
+        "gloss": {
+          "en": "The important thing is that the customer is satisfied.",
+          "ko": "중요한 건 고객이 만족하는 거예요."
+        }
+      },
+      {
+        "text": "Giá không cao, nhưng điều quan trọng là chất lượng.",
+        "slot": "chất lượng",
+        "cue": {
+          "en": "quality",
+          "ko": "품질"
+        },
+        "gloss": {
+          "en": "The price isn't high, but what matters is quality.",
+          "ko": "값은 안 비싸지만 중요한 건 품질이에요."
+        }
+      },
+      {
+        "text": "Điều quan trọng là mọi người hiểu rõ mục tiêu.",
+        "slot": "mọi người hiểu rõ mục tiêu",
+        "cue": {
+          "en": "everyone clearly understands the goal",
+          "ko": "모두가 목표를 분명히 알다"
+        },
+        "gloss": {
+          "en": "The key thing is that everyone clearly understands the goal.",
+          "ko": "중요한 건 모두가 목표를 분명히 아는 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-12",
+    "stage": 4,
+    "fn": "nuance-soften",
+    "pattern": "Tôi e là ___.",
+    "core": [
+      "e là"
+    ],
+    "meaning": {
+      "en": "Breaking unwelcome news gently: I'm afraid ___.",
+      "ko": "아쉬운 말을 부드럽게: 아무래도 ___인 것 같아요."
+    },
+    "grammar": [],
+    "expressions": [
+      "tôi e là"
+    ],
+    "examples": [
+      {
+        "text": "Tôi e là giá vẫn hơi cao.",
+        "slot": "giá vẫn hơi cao",
+        "cue": {
+          "en": "the price is still a bit high",
+          "ko": "값이 아직 좀 비싸다"
+        },
+        "gloss": {
+          "en": "I'm afraid the price is still a bit high.",
+          "ko": "아무래도 값이 아직 좀 비싼 것 같아요."
+        }
+      },
+      {
+        "text": "Tôi e là chúng ta không kịp hạn chót.",
+        "slot": "chúng ta không kịp hạn chót",
+        "cue": {
+          "en": "we won't make the deadline",
+          "ko": "마감에 못 맞추다"
+        },
+        "gloss": {
+          "en": "I'm afraid we won't make the deadline.",
+          "ko": "아무래도 마감에 못 맞출 것 같아요."
+        }
+      },
+      {
+        "text": "Tôi e là anh ấy đã về rồi.",
+        "slot": "anh ấy đã về rồi",
+        "cue": {
+          "en": "he has already gone home",
+          "ko": "그가 벌써 집에 갔다"
+        },
+        "gloss": {
+          "en": "I'm afraid he has already gone home.",
+          "ko": "아무래도 그는 벌써 집에 간 것 같아요."
+        }
+      },
+      {
+        "text": "Tôi e là phòng này không còn trống.",
+        "slot": "phòng này không còn trống",
+        "cue": {
+          "en": "this room is no longer free",
+          "ko": "이 방은 더 이상 비어 있지 않다"
+        },
+        "gloss": {
+          "en": "I'm afraid this room is no longer available.",
+          "ko": "아무래도 이 방은 이제 비어 있지 않은 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-13",
+    "stage": 4,
+    "fn": "pros-cons",
+    "pattern": "Mặt khác, ___.",
+    "core": [
+      "Mặt khác",
+      "mặt khác"
+    ],
+    "meaning": {
+      "en": "Giving the other side: On the other hand, ___.",
+      "ko": "다른 면 말하기: 한편 ___."
+    },
+    "grammar": [
+      6
+    ],
+    "expressions": [
+      "mặt khác"
+    ],
+    "examples": [
+      {
+        "text": "Mặt khác, thành phố sẽ phải đầu tư thêm xe buýt.",
+        "slot": "thành phố sẽ phải đầu tư thêm xe buýt",
+        "cue": {
+          "en": "the city will have to invest in more buses",
+          "ko": "시가 버스에 더 투자해야 하다"
+        },
+        "gloss": {
+          "en": "On the other hand, the city will have to invest in more buses.",
+          "ko": "한편 시는 버스에 더 투자해야 할 거예요."
+        }
+      },
+      {
+        "text": "Lương cao. Mặt khác, công việc rất căng thẳng.",
+        "slot": "công việc rất căng thẳng",
+        "cue": {
+          "en": "the work is very stressful",
+          "ko": "일이 아주 스트레스가 많다"
+        },
+        "gloss": {
+          "en": "The pay is high. On the other hand, the work is very stressful.",
+          "ko": "월급은 높아요. 한편 일이 아주 스트레스가 많아요."
+        }
+      },
+      {
+        "text": "Mặt khác, sống ở ngoại ô thì yên tĩnh hơn.",
+        "slot": "sống ở ngoại ô thì yên tĩnh hơn",
+        "cue": {
+          "en": "living in the suburbs is quieter",
+          "ko": "교외에 사는 게 더 조용하다"
+        },
+        "gloss": {
+          "en": "On the other hand, living in the suburbs is quieter.",
+          "ko": "한편 교외에 사는 건 더 조용해요."
+        }
+      },
+      {
+        "text": "Mặt khác, học trực tuyến giúp tiết kiệm thời gian.",
+        "slot": "học trực tuyến giúp tiết kiệm thời gian",
+        "cue": {
+          "en": "studying online saves time",
+          "ko": "온라인 공부가 시간을 아껴 주다"
+        },
+        "gloss": {
+          "en": "On the other hand, studying online saves time.",
+          "ko": "한편 온라인으로 공부하면 시간이 절약돼요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-14",
+    "stage": 4,
+    "fn": "concede",
+    "pattern": "Tôi đồng ý một phần, nhưng ___.",
+    "core": [
+      "đồng ý một phần"
+    ],
+    "meaning": {
+      "en": "Agreeing only partly: I partly agree, but ___.",
+      "ko": "일부만 인정하기: 어느 정도는 동의하지만 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "đồng ý một phần"
+    ],
+    "examples": [
+      {
+        "text": "Mình đồng ý một phần, nhưng nên làm từng bước.",
+        "slot": "nên làm từng bước",
+        "cue": {
+          "en": "should do it step by step",
+          "ko": "단계적으로 해야 하다"
+        },
+        "gloss": {
+          "en": "I partly agree, but we should do it step by step.",
+          "ko": "어느 정도는 동의하지만 단계적으로 해야 해."
+        }
+      },
+      {
+        "text": "Tôi đồng ý một phần, nhưng chi phí quá lớn.",
+        "slot": "chi phí quá lớn",
+        "cue": {
+          "en": "the cost is too big",
+          "ko": "비용이 너무 크다"
+        },
+        "gloss": {
+          "en": "I partly agree, but the cost is too big.",
+          "ko": "어느 정도는 동의하지만 비용이 너무 커요."
+        }
+      },
+      {
+        "text": "Em đồng ý một phần, nhưng khách hàng chưa chắc sẽ thích.",
+        "slot": "khách hàng chưa chắc sẽ thích",
+        "cue": {
+          "en": "the client may not like it",
+          "ko": "고객이 좋아할지 모르다"
+        },
+        "gloss": {
+          "en": "I partly agree, but the client may not like it.",
+          "ko": "어느 정도는 동의하지만 고객이 좋아할지는 모르겠어요."
+        }
+      },
+      {
+        "text": "Tôi chỉ đồng ý một phần, nhưng vẫn ủng hộ anh.",
+        "slot": "vẫn ủng hộ anh",
+        "cue": {
+          "en": "still support you",
+          "ko": "그래도 당신을 지지하다"
+        },
+        "gloss": {
+          "en": "I only partly agree, but I still support you.",
+          "ko": "일부만 동의하지만 그래도 당신을 지지해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-15",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "Chốt lại là ___.",
+    "core": [
+      "Chốt lại",
+      "chốt lại"
+    ],
+    "meaning": {
+      "en": "Wrapping up a decision: To sum up what we've agreed, ___.",
+      "ko": "결정 정리하기: 정리하면 ___예요."
+    },
+    "grammar": [],
+    "expressions": [
+      "chốt lại"
+    ],
+    "examples": [
+      {
+        "text": "Chốt lại là chúng ta thuê thêm hai người.",
+        "slot": "chúng ta thuê thêm hai người",
+        "cue": {
+          "en": "we hire two more people",
+          "ko": "두 명을 더 뽑다"
+        },
+        "gloss": {
+          "en": "So it's settled: we hire two more people.",
+          "ko": "정리하면 두 명을 더 뽑는 거예요."
+        }
+      },
+      {
+        "text": "Chốt lại là thứ sáu nộp báo cáo.",
+        "slot": "thứ sáu nộp báo cáo",
+        "cue": {
+          "en": "hand in the report on Friday",
+          "ko": "금요일에 보고서를 내다"
+        },
+        "gloss": {
+          "en": "To wrap up: the report is due on Friday.",
+          "ko": "정리하면 금요일에 보고서를 내요."
+        }
+      },
+      {
+        "text": "Vậy chốt lại là mình gặp nhau ở quán cũ nhé.",
+        "slot": "mình gặp nhau ở quán cũ",
+        "cue": {
+          "en": "we meet at the usual café",
+          "ko": "늘 가던 카페에서 만나다"
+        },
+        "gloss": {
+          "en": "So it's settled, we meet at the usual café.",
+          "ko": "그럼 정리하면 늘 가던 카페에서 만나는 거야."
+        }
+      },
+      {
+        "text": "Chốt lại là ngân sách giữ nguyên.",
+        "slot": "ngân sách giữ nguyên",
+        "cue": {
+          "en": "the budget stays the same",
+          "ko": "예산은 그대로다"
+        },
+        "gloss": {
+          "en": "Final decision: the budget stays the same.",
+          "ko": "정리하면 예산은 그대로예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-16",
+    "stage": 4,
+    "fn": "opinion",
+    "pattern": "Tóm lại là ___.",
+    "core": [
+      "Tóm lại",
+      "tóm lại"
+    ],
+    "meaning": {
+      "en": "Summing up your view: In short, ___.",
+      "ko": "내 생각 요약하기: 요컨대 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "tóm lại"
+    ],
+    "examples": [
+      {
+        "text": "Tóm lại là phim hơi dài, nhưng đáng xem.",
+        "slot": "phim hơi dài, nhưng đáng xem",
+        "cue": {
+          "en": "the film is a bit long but worth watching",
+          "ko": "영화가 좀 길지만 볼 만하다"
+        },
+        "gloss": {
+          "en": "In short, the film is a bit long but worth watching.",
+          "ko": "요컨대 영화가 좀 길지만 볼 만해요."
+        }
+      },
+      {
+        "text": "Tóm lại là dự án đang đúng tiến độ.",
+        "slot": "dự án đang đúng tiến độ",
+        "cue": {
+          "en": "the project is on schedule",
+          "ko": "프로젝트가 일정대로 가고 있다"
+        },
+        "gloss": {
+          "en": "In short, the project is on schedule.",
+          "ko": "요약하면 프로젝트는 일정대로 가고 있어요."
+        }
+      },
+      {
+        "text": "Tóm lại, chúng ta cần thêm thời gian.",
+        "slot": "chúng ta cần thêm thời gian",
+        "cue": {
+          "en": "we need more time",
+          "ko": "시간이 더 필요하다"
+        },
+        "gloss": {
+          "en": "In short, we need more time.",
+          "ko": "요컨대 우리는 시간이 더 필요해요."
+        }
+      },
+      {
+        "text": "Tóm lại là mình rất thích chuyến đi này.",
+        "slot": "mình rất thích chuyến đi này",
+        "cue": {
+          "en": "I really liked this trip",
+          "ko": "이번 여행이 아주 좋았다"
+        },
+        "gloss": {
+          "en": "All in all, I really liked this trip.",
+          "ko": "결국 이번 여행이 정말 좋았어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-17",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "___ giảm được không?",
+    "core": [
+      "giảm được không"
+    ],
+    "meaning": {
+      "en": "Asking for a discount: Can you lower ___?",
+      "ko": "깎아 달라고 하기: ___ 좀 깎아 줄 수 있어요?"
+    },
+    "grammar": [],
+    "expressions": [
+      "giảm được không"
+    ],
+    "examples": [
+      {
+        "text": "Giá phòng này giảm được không?",
+        "slot": "Giá phòng này",
+        "cue": {
+          "en": "the price of this room",
+          "ko": "이 방값"
+        },
+        "gloss": {
+          "en": "Can you lower the price of this room?",
+          "ko": "이 방값 좀 깎아 줄 수 있어요?"
+        }
+      },
+      {
+        "text": "Phí giao hàng giảm được không?",
+        "slot": "Phí giao hàng",
+        "cue": {
+          "en": "delivery fee",
+          "ko": "배송비"
+        },
+        "gloss": {
+          "en": "Can the delivery fee come down?",
+          "ko": "배송비 좀 깎아 줄 수 있어요?"
+        }
+      },
+      {
+        "text": "Tiền đặt cọc giảm được không?",
+        "slot": "Tiền đặt cọc",
+        "cue": {
+          "en": "deposit",
+          "ko": "보증금"
+        },
+        "gloss": {
+          "en": "Can the deposit be reduced?",
+          "ko": "보증금 좀 줄일 수 있어요?"
+        }
+      },
+      {
+        "text": "Chị ơi, cái áo này giảm được không?",
+        "slot": "cái áo này",
+        "cue": {
+          "en": "this shirt",
+          "ko": "이 옷"
+        },
+        "gloss": {
+          "en": "Excuse me, can you take something off this shirt?",
+          "ko": "저기요, 이 옷 좀 깎아 줄 수 있어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-18",
+    "stage": 4,
+    "fn": "negotiate",
+    "pattern": "Nếu được thì ___.",
+    "core": [
+      "Nếu được thì",
+      "nếu được thì"
+    ],
+    "meaning": {
+      "en": "Proposing politely: If possible, ___.",
+      "ko": "조심스럽게 제안하기: 괜찮다면 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "nếu được thì"
+    ],
+    "examples": [
+      {
+        "text": "Nếu được thì tôi muốn ký hợp đồng hai năm.",
+        "slot": "tôi muốn ký hợp đồng hai năm",
+        "cue": {
+          "en": "I'd like to sign a two-year contract",
+          "ko": "이 년 계약을 하고 싶다"
+        },
+        "gloss": {
+          "en": "If possible, I'd like to sign a two-year contract.",
+          "ko": "괜찮다면 이 년 계약을 하고 싶어요."
+        }
+      },
+      {
+        "text": "Nếu được thì anh gửi lại tệp cho em nhé.",
+        "slot": "anh gửi lại tệp cho em nhé",
+        "cue": {
+          "en": "please send me the file again",
+          "ko": "파일을 다시 보내 주다"
+        },
+        "gloss": {
+          "en": "If you can, please send me the file again.",
+          "ko": "괜찮으시면 파일을 다시 보내 주세요."
+        }
+      },
+      {
+        "text": "Nếu được thì mình dời cuộc họp sang buổi chiều.",
+        "slot": "mình dời cuộc họp sang buổi chiều",
+        "cue": {
+          "en": "we move the meeting to the afternoon",
+          "ko": "회의를 오후로 미루다"
+        },
+        "gloss": {
+          "en": "If possible, let's move the meeting to the afternoon.",
+          "ko": "괜찮다면 회의를 오후로 옮기자."
+        }
+      },
+      {
+        "text": "Nếu được thì cho tôi phòng gần thang máy.",
+        "slot": "cho tôi phòng gần thang máy",
+        "cue": {
+          "en": "give me a room near the lift",
+          "ko": "엘리베이터 가까운 방을 주다"
+        },
+        "gloss": {
+          "en": "If possible, give me a room near the lift.",
+          "ko": "가능하면 엘리베이터 가까운 방으로 주세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-19",
+    "stage": 4,
+    "fn": "formal-request",
+    "pattern": "Để em xác nhận lại ___.",
+    "core": [
+      "xác nhận lại"
+    ],
+    "meaning": {
+      "en": "Offering to double-check at work: Let me confirm ___ again.",
+      "ko": "업무로 다시 확인하기: ___ 다시 확인해 볼게요."
+    },
+    "grammar": [],
+    "expressions": [
+      "để em xác nhận lại"
+    ],
+    "examples": [
+      {
+        "text": "Để em xác nhận lại với đội kiểm thử.",
+        "slot": "với đội kiểm thử",
+        "cue": {
+          "en": "with the testing team",
+          "ko": "테스트 팀과"
+        },
+        "gloss": {
+          "en": "Let me double-check with the testing team.",
+          "ko": "테스트 팀과 다시 확인해 볼게요."
+        }
+      },
+      {
+        "text": "Để em xác nhận lại lịch họp ngày mai.",
+        "slot": "lịch họp ngày mai",
+        "cue": {
+          "en": "tomorrow's meeting schedule",
+          "ko": "내일 회의 일정"
+        },
+        "gloss": {
+          "en": "Let me confirm tomorrow's meeting schedule again.",
+          "ko": "내일 회의 일정을 다시 확인해 볼게요."
+        }
+      },
+      {
+        "text": "Để em xác nhận lại số lượng với kho.",
+        "slot": "số lượng với kho",
+        "cue": {
+          "en": "the quantity with the warehouse",
+          "ko": "창고와 수량"
+        },
+        "gloss": {
+          "en": "Let me check the quantity with the warehouse again.",
+          "ko": "창고와 수량을 다시 확인해 볼게요."
+        }
+      },
+      {
+        "text": "Để em xác nhận lại địa chỉ giao hàng.",
+        "slot": "địa chỉ giao hàng",
+        "cue": {
+          "en": "the delivery address",
+          "ko": "배송 주소"
+        },
+        "gloss": {
+          "en": "Let me confirm the delivery address again.",
+          "ko": "배송 주소를 다시 확인해 볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f4-20",
+    "stage": 4,
+    "fn": "report",
+    "pattern": "… sẽ chịu trách nhiệm ___.",
+    "core": [
+      "chịu trách nhiệm"
+    ],
+    "meaning": {
+      "en": "Taking ownership at work: … will be responsible for ___.",
+      "ko": "책임 맡기: …가 ___을 책임질게요."
+    },
+    "grammar": [],
+    "expressions": [
+      "chịu trách nhiệm"
+    ],
+    "examples": [
+      {
+        "text": "Em sẽ chịu trách nhiệm phần kiểm thử.",
+        "slot": "phần kiểm thử",
+        "cue": {
+          "en": "the testing part",
+          "ko": "테스트 부분"
+        },
+        "gloss": {
+          "en": "I'll be responsible for the testing.",
+          "ko": "테스트 부분은 제가 책임질게요."
+        }
+      },
+      {
+        "text": "Chị Lan sẽ chịu trách nhiệm liên hệ khách hàng.",
+        "slot": "liên hệ khách hàng",
+        "cue": {
+          "en": "contact the clients",
+          "ko": "고객에게 연락하다"
+        },
+        "gloss": {
+          "en": "Lan will be in charge of contacting the clients.",
+          "ko": "란 씨가 고객 연락을 맡을 거예요."
+        }
+      },
+      {
+        "text": "Ai sẽ chịu trách nhiệm về lỗi này?",
+        "slot": "về lỗi này",
+        "cue": {
+          "en": "for this mistake",
+          "ko": "이 오류에 대해"
+        },
+        "gloss": {
+          "en": "Who will take responsibility for this mistake?",
+          "ko": "이 오류는 누가 책임질 거예요?"
+        }
+      },
+      {
+        "text": "Tôi sẽ chịu trách nhiệm toàn bộ chi phí.",
+        "slot": "toàn bộ chi phí",
+        "cue": {
+          "en": "all the costs",
+          "ko": "비용 전부"
+        },
+        "gloss": {
+          "en": "I'll cover all the costs.",
+          "ko": "비용 전부를 제가 책임질게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-01",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "Chính ___ là người …",
+    "core": [
+      "Chính",
+      "chính"
+    ],
+    "meaning": {
+      "en": "Pointing out exactly who: It was ___ who …",
+      "ko": "바로 그 사람이라고 강조하기: 바로 ___가 …한 사람이에요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Chính anh ấy là người đề xuất ý tưởng này.",
+        "slot": "anh ấy",
+        "cue": {
+          "en": "he",
+          "ko": "그"
+        },
+        "gloss": {
+          "en": "He's the very one who proposed this idea.",
+          "ko": "바로 그가 이 아이디어를 낸 사람이에요."
+        }
+      },
+      {
+        "text": "Chính chị Thu là người tìm ra lỗi.",
+        "slot": "chị Thu",
+        "cue": {
+          "en": "Thu",
+          "ko": "투 씨"
+        },
+        "gloss": {
+          "en": "It was Thu herself who found the bug.",
+          "ko": "바로 투 씨가 오류를 찾아낸 사람이에요."
+        }
+      },
+      {
+        "text": "Chính khách hàng là người muốn đổi kế hoạch.",
+        "slot": "khách hàng",
+        "cue": {
+          "en": "the client",
+          "ko": "고객"
+        },
+        "gloss": {
+          "en": "It's the client who wanted to change the plan.",
+          "ko": "계획을 바꾸자고 한 건 바로 고객이에요."
+        }
+      },
+      {
+        "text": "Chính mẹ tôi là người dạy tôi nấu ăn.",
+        "slot": "mẹ tôi",
+        "cue": {
+          "en": "my mother",
+          "ko": "우리 엄마"
+        },
+        "gloss": {
+          "en": "It was my own mother who taught me to cook.",
+          "ko": "나에게 요리를 가르쳐 준 건 바로 우리 엄마예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-02",
+    "stage": 5,
+    "fn": "surprise",
+    "pattern": "Ngay cả ___ cũng …",
+    "core": [
+      "Ngay cả",
+      "ngay cả"
+    ],
+    "meaning": {
+      "en": "Stressing an unexpected case: Even ___ …",
+      "ko": "뜻밖의 경우 강조하기: ___조차 …해요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Ngay cả sếp cũng bất ngờ.",
+        "slot": "sếp",
+        "cue": {
+          "en": "the boss",
+          "ko": "사장님"
+        },
+        "gloss": {
+          "en": "Even the boss was surprised.",
+          "ko": "사장님조차 놀랐어요."
+        }
+      },
+      {
+        "text": "Ngay cả trẻ con cũng biết điều đó.",
+        "slot": "trẻ con",
+        "cue": {
+          "en": "children",
+          "ko": "아이들"
+        },
+        "gloss": {
+          "en": "Even children know that.",
+          "ko": "아이들조차 그건 알아요."
+        }
+      },
+      {
+        "text": "Ngay cả người miền Nam cũng thấy anh ấy nói nhanh.",
+        "slot": "người miền Nam",
+        "cue": {
+          "en": "southerners",
+          "ko": "남부 사람"
+        },
+        "gloss": {
+          "en": "Even southerners find he talks fast.",
+          "ko": "남부 사람조차 그가 말이 빠르다고 느껴요."
+        }
+      },
+      {
+        "text": "Ngay cả cuối tuần cô ấy cũng đi làm.",
+        "slot": "cuối tuần",
+        "cue": {
+          "en": "weekend",
+          "ko": "주말"
+        },
+        "gloss": {
+          "en": "She goes to work even at the weekend.",
+          "ko": "그녀는 주말에조차 출근해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-03",
+    "stage": 5,
+    "fn": "storytelling",
+    "pattern": "Đến cả ___ cũng …",
+    "core": [
+      "Đến cả",
+      "đến cả"
+    ],
+    "meaning": {
+      "en": "Stressing how far it goes: Even ___ …",
+      "ko": "어디까지 미치는지 강조하기: ___까지도 …해요."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Đến cả nhân vật chính cũng chưa kịp nói lời tạm biệt.",
+        "slot": "nhân vật chính",
+        "cue": {
+          "en": "the main character",
+          "ko": "주인공"
+        },
+        "gloss": {
+          "en": "Even the main character didn't get to say goodbye.",
+          "ko": "주인공까지도 작별 인사를 할 틈이 없었어요."
+        }
+      },
+      {
+        "text": "Đến cả bà tôi cũng dùng điện thoại thông minh.",
+        "slot": "bà tôi",
+        "cue": {
+          "en": "my grandmother",
+          "ko": "우리 할머니"
+        },
+        "gloss": {
+          "en": "Even my grandmother uses a smartphone.",
+          "ko": "우리 할머니까지도 스마트폰을 써요."
+        }
+      },
+      {
+        "text": "Đến cả giáo viên cũng không trả lời được câu hỏi đó.",
+        "slot": "giáo viên",
+        "cue": {
+          "en": "the teacher",
+          "ko": "선생님"
+        },
+        "gloss": {
+          "en": "Even the teacher couldn't answer that question.",
+          "ko": "선생님까지도 그 질문에 답하지 못했어요."
+        }
+      },
+      {
+        "text": "Đến cả con mèo cũng sợ tiếng sấm.",
+        "slot": "con mèo",
+        "cue": {
+          "en": "the cat",
+          "ko": "고양이"
+        },
+        "gloss": {
+          "en": "Even the cat is scared of thunder.",
+          "ko": "고양이까지도 천둥소리를 무서워해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-04",
+    "stage": 5,
+    "fn": "complain",
+    "pattern": "… đã ___ rồi mà.",
+    "core": [
+      "rồi mà"
+    ],
+    "meaning": {
+      "en": "Reminding with mild reproach: But I already ___!",
+      "ko": "살짝 서운하게 일깨우기: 이미 ___했잖아요."
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Em đã bảo rồi mà.",
+        "slot": "bảo",
+        "cue": {
+          "en": "tell",
+          "ko": "말하다"
+        },
+        "gloss": {
+          "en": "I told you so!",
+          "ko": "내가 이미 말했잖아요."
+        }
+      },
+      {
+        "text": "Anh đã hứa rồi mà.",
+        "slot": "hứa",
+        "cue": {
+          "en": "promise",
+          "ko": "약속하다"
+        },
+        "gloss": {
+          "en": "But you promised!",
+          "ko": "이미 약속했잖아요."
+        }
+      },
+      {
+        "text": "Mình đã gửi email rồi mà.",
+        "slot": "gửi email",
+        "cue": {
+          "en": "send an email",
+          "ko": "이메일을 보내다"
+        },
+        "gloss": {
+          "en": "But I already sent the email!",
+          "ko": "이미 이메일 보냈잖아."
+        }
+      },
+      {
+        "text": "Chị đã trả tiền rồi mà.",
+        "slot": "trả tiền",
+        "cue": {
+          "en": "pay",
+          "ko": "돈을 내다"
+        },
+        "gloss": {
+          "en": "But I've already paid!",
+          "ko": "이미 돈 냈잖아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-05",
+    "stage": 5,
+    "fn": "agree",
+    "pattern": "___ chứ!",
+    "core": [
+      "chứ"
+    ],
+    "meaning": {
+      "en": "Of course, with feeling: ___, of course!",
+      "ko": "당연하다는 듯 답하기: 당연히 ___죠!"
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Biết chứ ạ.",
+        "slot": "Biết",
+        "cue": {
+          "en": "know",
+          "ko": "알다"
+        },
+        "gloss": {
+          "en": "Of course I know.",
+          "ko": "당연히 알죠."
+        }
+      },
+      {
+        "text": "Em cũng tiếc lắm chứ.",
+        "slot": "tiếc lắm",
+        "cue": {
+          "en": "feel very sorry",
+          "ko": "많이 아쉽다"
+        },
+        "gloss": {
+          "en": "Of course I'm really sorry too.",
+          "ko": "저도 당연히 많이 아쉽죠."
+        }
+      },
+      {
+        "text": "Đi chứ! Mình chờ mãi rồi.",
+        "slot": "Đi",
+        "cue": {
+          "en": "go",
+          "ko": "가다"
+        },
+        "gloss": {
+          "en": "Of course I'm going! I've been waiting ages.",
+          "ko": "당연히 가지! 오래 기다렸어."
+        }
+      },
+      {
+        "text": "Nhớ chứ, sao quên được.",
+        "slot": "Nhớ",
+        "cue": {
+          "en": "remember",
+          "ko": "기억하다"
+        },
+        "gloss": {
+          "en": "Of course I remember, how could I forget.",
+          "ko": "당연히 기억하지, 어떻게 잊어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-06",
+    "stage": 5,
+    "fn": "advice-give",
+    "pattern": "… ___ đấy!",
+    "core": [
+      "đấy"
+    ],
+    "meaning": {
+      "en": "Adding emphasis or a warning: … ___, you know!",
+      "ko": "강조·경고 싣기: …___라고요!"
+    },
+    "grammar": [
+      1
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Lần này mình không khóc đâu đấy!",
+        "slot": "không khóc đâu",
+        "cue": {
+          "en": "not cry",
+          "ko": "울지 않다"
+        },
+        "gloss": {
+          "en": "I'm not crying this time, I'm telling you!",
+          "ko": "이번엔 안 운다고!"
+        }
+      },
+      {
+        "text": "Anh ấy giỏi lắm đấy!",
+        "slot": "giỏi lắm",
+        "cue": {
+          "en": "very good",
+          "ko": "아주 잘하다"
+        },
+        "gloss": {
+          "en": "He's really good, you know!",
+          "ko": "그 사람 정말 잘한다고요!"
+        }
+      },
+      {
+        "text": "Đường trơn đấy, đi cẩn thận nhé.",
+        "slot": "trơn",
+        "cue": {
+          "en": "slippery",
+          "ko": "미끄럽다"
+        },
+        "gloss": {
+          "en": "The road's slippery, mind how you go.",
+          "ko": "길 미끄러워요, 조심해서 가요."
+        }
+      },
+      {
+        "text": "Cô ấy giận thật đấy!",
+        "slot": "giận thật",
+        "cue": {
+          "en": "really angry",
+          "ko": "정말 화나다"
+        },
+        "gloss": {
+          "en": "She's really angry, you know!",
+          "ko": "그녀 정말 화났다니까!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-07",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Sao lại ___?",
+    "core": [
+      "Sao lại",
+      "sao lại"
+    ],
+    "meaning": {
+      "en": "Rhetorical why: Why on earth ___?",
+      "ko": "반어로 따지기: 왜 ___해요?"
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Sao lại không nói sớm?",
+        "slot": "không nói sớm",
+        "cue": {
+          "en": "not say earlier",
+          "ko": "미리 말하지 않다"
+        },
+        "gloss": {
+          "en": "Why on earth didn't you say so earlier?",
+          "ko": "왜 미리 말 안 했어요?"
+        }
+      },
+      {
+        "text": "Sao lại trách em?",
+        "slot": "trách em",
+        "cue": {
+          "en": "blame me",
+          "ko": "나를 탓하다"
+        },
+        "gloss": {
+          "en": "Why blame me?",
+          "ko": "왜 나를 탓해요?"
+        }
+      },
+      {
+        "text": "Sao lại đổi kế hoạch vào phút cuối?",
+        "slot": "đổi kế hoạch vào phút cuối",
+        "cue": {
+          "en": "change the plan at the last minute",
+          "ko": "마지막에 계획을 바꾸다"
+        },
+        "gloss": {
+          "en": "Why change the plan at the last minute?",
+          "ko": "왜 막판에 계획을 바꿔요?"
+        }
+      },
+      {
+        "text": "Anh ấy làm tốt thế, sao lại chê?",
+        "slot": "chê",
+        "cue": {
+          "en": "criticise",
+          "ko": "흠잡다"
+        },
+        "gloss": {
+          "en": "He did so well, why criticise him?",
+          "ko": "그렇게 잘했는데 왜 흠을 잡아요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-08",
+    "stage": 5,
+    "fn": "disagree-soft",
+    "pattern": "Có phải ___ đâu.",
+    "core": [
+      "Có phải",
+      "có phải"
+    ],
+    "meaning": {
+      "en": "Denying through a rhetorical question: It's not as if ___.",
+      "ko": "반어로 부정하기: ___인 것도 아니잖아요."
+    },
+    "grammar": [
+      2
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Có phải lỗi của em đâu.",
+        "slot": "lỗi của em",
+        "cue": {
+          "en": "my fault",
+          "ko": "내 잘못"
+        },
+        "gloss": {
+          "en": "It's not my fault, is it.",
+          "ko": "내 잘못도 아니잖아요."
+        }
+      },
+      {
+        "text": "Nhận rồi lại bỏ dở thì có phải giúp anh đâu.",
+        "slot": "giúp anh",
+        "cue": {
+          "en": "help you",
+          "ko": "당신을 돕다"
+        },
+        "gloss": {
+          "en": "Taking it on and then quitting wouldn't really help you.",
+          "ko": "맡았다가 중간에 그만두면 도와주는 것도 아니잖아요."
+        }
+      },
+      {
+        "text": "Có phải ai cũng giàu đâu.",
+        "slot": "ai cũng giàu",
+        "cue": {
+          "en": "everyone is rich",
+          "ko": "모두가 부자다"
+        },
+        "gloss": {
+          "en": "It's not as if everyone is rich.",
+          "ko": "모두가 부자인 것도 아니잖아요."
+        }
+      },
+      {
+        "text": "Mình có phải trẻ con đâu.",
+        "slot": "trẻ con",
+        "cue": {
+          "en": "a child",
+          "ko": "어린아이"
+        },
+        "gloss": {
+          "en": "I'm not a child, you know.",
+          "ko": "내가 어린애도 아니잖아."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-09",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Đối với ___, …",
+    "core": [
+      "Đối với",
+      "đối với"
+    ],
+    "meaning": {
+      "en": "Formal framing of who it concerns: For ___, …",
+      "ko": "격식 있게 대상 세우기: ___에게는 …"
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Đối với doanh nghiệp nhỏ, đây là một thách thức lớn.",
+        "slot": "doanh nghiệp nhỏ",
+        "cue": {
+          "en": "small business",
+          "ko": "소기업"
+        },
+        "gloss": {
+          "en": "For small businesses, this is a big challenge.",
+          "ko": "소기업에게는 이것이 큰 도전이에요."
+        }
+      },
+      {
+        "text": "Đối với chúng tôi, anh ấy là một đồng nghiệp tận tâm.",
+        "slot": "chúng tôi",
+        "cue": {
+          "en": "we, us",
+          "ko": "우리"
+        },
+        "gloss": {
+          "en": "To us, he is a devoted colleague.",
+          "ko": "우리에게 그는 헌신적인 동료예요."
+        }
+      },
+      {
+        "text": "Đối với người học tiếng Việt, phim này rất có ích.",
+        "slot": "người học tiếng Việt",
+        "cue": {
+          "en": "learners of Vietnamese",
+          "ko": "베트남어 학습자"
+        },
+        "gloss": {
+          "en": "For learners of Vietnamese, this film is very useful.",
+          "ko": "베트남어 학습자에게 이 영화는 아주 유익해요."
+        }
+      },
+      {
+        "text": "Đối với trẻ em, ngủ đủ giấc rất quan trọng.",
+        "slot": "trẻ em",
+        "cue": {
+          "en": "children",
+          "ko": "아이들"
+        },
+        "gloss": {
+          "en": "For children, getting enough sleep is very important.",
+          "ko": "아이들에게는 충분히 자는 것이 아주 중요해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-10",
+    "stage": 5,
+    "fn": "debate",
+    "pattern": "Trong bối cảnh ___, …",
+    "core": [
+      "Trong bối cảnh",
+      "trong bối cảnh"
+    ],
+    "meaning": {
+      "en": "Formal setting of context: In the context of ___, …",
+      "ko": "격식 있게 배경 깔기: ___한 상황에서 …"
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Trong bối cảnh ai cũng bận rộn, tìm được người hiểu mình là điều quý.",
+        "slot": "ai cũng bận rộn",
+        "cue": {
+          "en": "everyone is busy",
+          "ko": "모두가 바쁘다"
+        },
+        "gloss": {
+          "en": "When everyone is so busy, finding someone who understands you is precious.",
+          "ko": "모두가 바쁜 상황에서 나를 이해하는 사람을 찾는 건 귀한 일이에요."
+        }
+      },
+      {
+        "text": "Trong bối cảnh kinh tế khó khăn, nhiều công ty cắt giảm chi phí.",
+        "slot": "kinh tế khó khăn",
+        "cue": {
+          "en": "a difficult economy",
+          "ko": "경제가 어렵다"
+        },
+        "gloss": {
+          "en": "In a difficult economy, many companies cut costs.",
+          "ko": "경제가 어려운 상황에서 많은 회사가 비용을 줄여요."
+        }
+      },
+      {
+        "text": "Trong bối cảnh giá nhà tăng, người trẻ khó mua nhà.",
+        "slot": "giá nhà tăng",
+        "cue": {
+          "en": "house prices rise",
+          "ko": "집값이 오르다"
+        },
+        "gloss": {
+          "en": "With house prices rising, young people struggle to buy a home.",
+          "ko": "집값이 오르는 상황에서 젊은이들은 집 사기가 어려워요."
+        }
+      },
+      {
+        "text": "Trong bối cảnh hiện nay, làm việc từ xa ngày càng phổ biến.",
+        "slot": "hiện nay",
+        "cue": {
+          "en": "the present",
+          "ko": "지금"
+        },
+        "gloss": {
+          "en": "In the current context, remote work is increasingly common.",
+          "ko": "지금 같은 상황에서 원격 근무가 점점 흔해져요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-11",
+    "stage": 5,
+    "fn": "explain-process",
+    "pattern": "… nhằm ___.",
+    "core": [
+      "nhằm"
+    ],
+    "meaning": {
+      "en": "Formal statement of aim: … aimed at ___.",
+      "ko": "격식 있게 목적 말하기: ___하기 위해(～를 목표로) …"
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Chương trình này nhằm hỗ trợ doanh nghiệp nhỏ.",
+        "slot": "hỗ trợ doanh nghiệp nhỏ",
+        "cue": {
+          "en": "support small businesses",
+          "ko": "소기업을 지원하다"
+        },
+        "gloss": {
+          "en": "This programme aims to support small businesses.",
+          "ko": "이 프로그램은 소기업 지원을 목표로 해요."
+        }
+      },
+      {
+        "text": "Thành phố cấm xe máy cuối tuần nhằm giảm ô nhiễm.",
+        "slot": "giảm ô nhiễm",
+        "cue": {
+          "en": "reduce pollution",
+          "ko": "오염을 줄이다"
+        },
+        "gloss": {
+          "en": "The city bans motorbikes at weekends to reduce pollution.",
+          "ko": "시는 오염을 줄이기 위해 주말에 오토바이를 금지해요."
+        }
+      },
+      {
+        "text": "Công ty tổ chức hội thảo nhằm giới thiệu sản phẩm mới.",
+        "slot": "giới thiệu sản phẩm mới",
+        "cue": {
+          "en": "introduce a new product",
+          "ko": "신제품을 소개하다"
+        },
+        "gloss": {
+          "en": "The company is holding a seminar to introduce its new product.",
+          "ko": "회사는 신제품을 소개하기 위해 세미나를 열어요."
+        }
+      },
+      {
+        "text": "Chính sách mới nhằm thu hút người tài.",
+        "slot": "thu hút người tài",
+        "cue": {
+          "en": "attract talent",
+          "ko": "인재를 끌어들이다"
+        },
+        "gloss": {
+          "en": "The new policy aims to attract talented people.",
+          "ko": "새 정책은 인재 유치를 목표로 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-12",
+    "stage": 5,
+    "fn": "tact-refuse",
+    "pattern": "Không phải là ___, nhưng …",
+    "core": [
+      "Không phải là",
+      "không phải là"
+    ],
+    "meaning": {
+      "en": "Refusing or criticising with tact: It's not that ___, but …",
+      "ko": "눈치 있게 거절·비판하기: ___인 건 아니지만 …"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Không phải là em không muốn, nhưng thời gian không cho phép.",
+        "slot": "em không muốn",
+        "cue": {
+          "en": "I don't want to",
+          "ko": "내가 원하지 않다"
+        },
+        "gloss": {
+          "en": "It's not that I don't want to, but time doesn't allow it.",
+          "ko": "원하지 않는 건 아니지만 시간이 허락하지 않아요."
+        }
+      },
+      {
+        "text": "Không phải là mình không thích giọng miền Nam, nhưng hơi khó nghe.",
+        "slot": "mình không thích giọng miền Nam",
+        "cue": {
+          "en": "I don't like the southern accent",
+          "ko": "남부 말투를 싫어하다"
+        },
+        "gloss": {
+          "en": "It's not that I dislike the southern accent, but it's a bit hard to follow.",
+          "ko": "남부 말투가 싫은 건 아니지만 좀 알아듣기 어려워."
+        }
+      },
+      {
+        "text": "Không phải là ý tưởng tồi, nhưng chi phí quá cao.",
+        "slot": "ý tưởng tồi",
+        "cue": {
+          "en": "a bad idea",
+          "ko": "나쁜 아이디어"
+        },
+        "gloss": {
+          "en": "It's not a bad idea, but the cost is too high.",
+          "ko": "나쁜 아이디어는 아니지만 비용이 너무 높아요."
+        }
+      },
+      {
+        "text": "Không phải là tôi chê, nhưng món này hơi mặn.",
+        "slot": "tôi chê",
+        "cue": {
+          "en": "I'm criticising",
+          "ko": "내가 흠잡다"
+        },
+        "gloss": {
+          "en": "I'm not criticising, but this dish is a bit salty.",
+          "ko": "흠잡는 건 아니지만 이 음식은 좀 짜요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-13",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "___ nhè nhẹ thôi.",
+    "core": [
+      "nhè nhẹ"
+    ],
+    "meaning": {
+      "en": "Softening with a doubled word: ___ gently, just a little.",
+      "ko": "겹말로 부드럽게: 살살 ___하세요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "Trang điểm nhè nhẹ thôi nhé.",
+        "slot": "Trang điểm",
+        "cue": {
+          "en": "put on make-up",
+          "ko": "화장하다"
+        },
+        "gloss": {
+          "en": "Just keep the make-up light.",
+          "ko": "화장은 살짝만 해."
+        }
+      },
+      {
+        "text": "Nói nhè nhẹ thôi, em bé đang ngủ.",
+        "slot": "Nói",
+        "cue": {
+          "en": "speak",
+          "ko": "말하다"
+        },
+        "gloss": {
+          "en": "Speak softly, the baby is sleeping.",
+          "ko": "살살 말해요, 아기가 자고 있어요."
+        }
+      },
+      {
+        "text": "Anh gõ cửa nhè nhẹ thôi.",
+        "slot": "gõ cửa",
+        "cue": {
+          "en": "knock on the door",
+          "ko": "노크하다"
+        },
+        "gloss": {
+          "en": "Knock gently on the door.",
+          "ko": "문을 살살 두드려요."
+        }
+      },
+      {
+        "text": "Gió thổi nhè nhẹ, rất dễ chịu.",
+        "slot": "Gió thổi",
+        "cue": {
+          "en": "the wind blows",
+          "ko": "바람이 불다"
+        },
+        "gloss": {
+          "en": "A light breeze is blowing, very pleasant.",
+          "ko": "바람이 살랑살랑 불어서 아주 기분 좋아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-14",
+    "stage": 5,
+    "fn": "nuance-soften",
+    "pattern": "Nói thật lòng, ___.",
+    "core": [
+      "Nói thật lòng",
+      "nói thật lòng"
+    ],
+    "meaning": {
+      "en": "Opening up sincerely: To be honest with you, ___.",
+      "ko": "진심을 꺼내기: 솔직한 마음으로는 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "nói thật lòng"
+    ],
+    "examples": [
+      {
+        "text": "Nói thật lòng, em cũng rất muốn.",
+        "slot": "em cũng rất muốn",
+        "cue": {
+          "en": "I really want to as well",
+          "ko": "나도 정말 하고 싶다"
+        },
+        "gloss": {
+          "en": "Honestly, I really want to as well.",
+          "ko": "솔직히 저도 정말 하고 싶어요."
+        }
+      },
+      {
+        "text": "Nói thật lòng, tôi chưa sẵn sàng.",
+        "slot": "tôi chưa sẵn sàng",
+        "cue": {
+          "en": "I'm not ready yet",
+          "ko": "아직 준비가 안 되다"
+        },
+        "gloss": {
+          "en": "To be honest, I'm not ready yet.",
+          "ko": "솔직히 아직 준비가 안 됐어요."
+        }
+      },
+      {
+        "text": "Nói thật lòng, bài hát này làm mình nhớ nhà.",
+        "slot": "bài hát này làm mình nhớ nhà",
+        "cue": {
+          "en": "this song makes me homesick",
+          "ko": "이 노래가 집을 그립게 하다"
+        },
+        "gloss": {
+          "en": "Honestly, this song makes me homesick.",
+          "ko": "솔직히 이 노래를 들으면 집이 그리워져."
+        }
+      },
+      {
+        "text": "Nói thật lòng, anh ấy đã giúp tôi rất nhiều.",
+        "slot": "anh ấy đã giúp tôi rất nhiều",
+        "cue": {
+          "en": "he has helped me a lot",
+          "ko": "그가 나를 많이 도와주었다"
+        },
+        "gloss": {
+          "en": "Truly, he has helped me a great deal.",
+          "ko": "진심으로 그는 나를 많이 도와줬어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-15",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "Biết là thế, nhưng ___.",
+    "core": [
+      "Biết là",
+      "biết là"
+    ],
+    "meaning": {
+      "en": "Granting it yet holding your view: I know, but ___.",
+      "ko": "알면서도 내 생각 지키기: 그건 알지만 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "biết là thế"
+    ],
+    "examples": [
+      {
+        "text": "Biết là thế, nhưng mình vẫn buồn.",
+        "slot": "mình vẫn buồn",
+        "cue": {
+          "en": "I'm still sad",
+          "ko": "그래도 슬프다"
+        },
+        "gloss": {
+          "en": "I know, but I'm still sad.",
+          "ko": "그건 알지만 그래도 슬퍼."
+        }
+      },
+      {
+        "text": "Em biết là thế, nhưng vẫn muốn thử.",
+        "slot": "vẫn muốn thử",
+        "cue": {
+          "en": "still want to try",
+          "ko": "그래도 해 보고 싶다"
+        },
+        "gloss": {
+          "en": "I know that, but I still want to try.",
+          "ko": "그건 알지만 그래도 해 보고 싶어요."
+        }
+      },
+      {
+        "text": "Biết là vậy, nhưng mình vẫn muốn thêm vài phút nữa.",
+        "slot": "mình vẫn muốn thêm vài phút nữa",
+        "cue": {
+          "en": "I still want a few more minutes",
+          "ko": "그래도 몇 분 더 원하다"
+        },
+        "gloss": {
+          "en": "I know, but I still wanted a few more minutes.",
+          "ko": "알긴 하지만 그래도 몇 분 더 있었으면 좋겠어."
+        }
+      },
+      {
+        "text": "Biết là khó, nhưng chúng ta phải làm.",
+        "slot": "chúng ta phải làm",
+        "cue": {
+          "en": "we have to do it",
+          "ko": "우리가 해야 하다"
+        },
+        "gloss": {
+          "en": "I know it's hard, but we have to do it.",
+          "ko": "어려운 건 알지만 우리가 해야 해요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-16",
+    "stage": 5,
+    "fn": "concession",
+    "pattern": "Nói gì thì nói, ___.",
+    "core": [
+      "Nói gì thì nói",
+      "nói gì thì nói"
+    ],
+    "meaning": {
+      "en": "Whatever anyone says: Be that as it may, ___.",
+      "ko": "뭐라 해도 하고 싶은 말: 뭐니 뭐니 해도 ___."
+    },
+    "grammar": [],
+    "expressions": [
+      "nói gì thì nói"
+    ],
+    "examples": [
+      {
+        "text": "Nói gì thì nói, mình vẫn thấy cái kết hơi vội.",
+        "slot": "mình vẫn thấy cái kết hơi vội",
+        "cue": {
+          "en": "I still think the ending is a bit rushed",
+          "ko": "그래도 결말이 좀 급하다고 느끼다"
+        },
+        "gloss": {
+          "en": "Be that as it may, I still think the ending is a bit rushed.",
+          "ko": "뭐라 해도 난 결말이 좀 급했다고 봐."
+        }
+      },
+      {
+        "text": "Nói gì thì nói, anh ấy vẫn là bạn tốt.",
+        "slot": "anh ấy vẫn là bạn tốt",
+        "cue": {
+          "en": "he's still a good friend",
+          "ko": "그는 여전히 좋은 친구다"
+        },
+        "gloss": {
+          "en": "Whatever you say, he's still a good friend.",
+          "ko": "뭐니 뭐니 해도 그는 좋은 친구예요."
+        }
+      },
+      {
+        "text": "Nói gì thì nói, sức khỏe là quan trọng nhất.",
+        "slot": "sức khỏe là quan trọng nhất",
+        "cue": {
+          "en": "health matters most",
+          "ko": "건강이 제일 중요하다"
+        },
+        "gloss": {
+          "en": "When all is said and done, health matters most.",
+          "ko": "뭐니 뭐니 해도 건강이 제일이에요."
+        }
+      },
+      {
+        "text": "Nói gì thì nói, chúng ta đã cố gắng hết sức.",
+        "slot": "chúng ta đã cố gắng hết sức",
+        "cue": {
+          "en": "we did our best",
+          "ko": "우리는 최선을 다했다"
+        },
+        "gloss": {
+          "en": "Whatever people say, we did our best.",
+          "ko": "뭐라 해도 우리는 최선을 다했어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-17",
+    "stage": 5,
+    "fn": "compliment",
+    "pattern": "… nhưng được cái là ___.",
+    "core": [
+      "được cái là",
+      "Được cái là"
+    ],
+    "meaning": {
+      "en": "Finding the redeeming point: … but the good thing is ___.",
+      "ko": "좋은 점 찾아 주기: …지만 그래도 ___라는 점은 좋아요."
+    },
+    "grammar": [],
+    "expressions": [
+      "được cái là"
+    ],
+    "examples": [
+      {
+        "text": "Chị Thu hiền, nhưng được cái là rất biết cách thuyết phục.",
+        "slot": "rất biết cách thuyết phục",
+        "cue": {
+          "en": "really know how to persuade",
+          "ko": "설득하는 법을 잘 알다"
+        },
+        "gloss": {
+          "en": "Thu is gentle, but the good thing is she really knows how to persuade.",
+          "ko": "투 씨는 순하지만 설득하는 법을 잘 안다는 게 장점이에요."
+        }
+      },
+      {
+        "text": "Phòng hơi nhỏ, nhưng được cái là gần chợ.",
+        "slot": "gần chợ",
+        "cue": {
+          "en": "close to the market",
+          "ko": "시장에서 가깝다"
+        },
+        "gloss": {
+          "en": "The room is a bit small, but at least it's close to the market.",
+          "ko": "방은 좀 작지만 시장이 가깝다는 게 좋아요."
+        }
+      },
+      {
+        "text": "Quán này đông, được cái là phục vụ nhanh.",
+        "slot": "phục vụ nhanh",
+        "cue": {
+          "en": "fast service",
+          "ko": "서비스가 빠르다"
+        },
+        "gloss": {
+          "en": "This place is crowded, but the service is fast.",
+          "ko": "이 가게는 붐비지만 서빙이 빠르다는 게 좋아요."
+        }
+      },
+      {
+        "text": "Được cái là anh ấy rất đúng giờ.",
+        "slot": "anh ấy rất đúng giờ",
+        "cue": {
+          "en": "he's very punctual",
+          "ko": "그는 시간을 아주 잘 지킨다"
+        },
+        "gloss": {
+          "en": "One good thing is that he's very punctual.",
+          "ko": "그래도 그는 시간을 잘 지킨다는 장점이 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-18",
+    "stage": 5,
+    "fn": "formal-humble",
+    "pattern": "Xin phép được ___.",
+    "core": [
+      "Xin phép được",
+      "xin phép được"
+    ],
+    "meaning": {
+      "en": "Humbly asking leave to speak or act: Allow me to ___.",
+      "ko": "겸손하게 나서기: ___하도록 하겠습니다."
+    },
+    "grammar": [],
+    "expressions": [
+      "xin phép được"
+    ],
+    "examples": [
+      {
+        "text": "Xin phép được thay mặt cả phòng gửi lời chúc mừng.",
+        "slot": "thay mặt cả phòng gửi lời chúc mừng",
+        "cue": {
+          "en": "congratulate on behalf of the team",
+          "ko": "팀을 대표해 축하하다"
+        },
+        "gloss": {
+          "en": "Allow me to offer congratulations on behalf of the whole team.",
+          "ko": "팀 모두를 대표해 축하 인사를 드리겠습니다."
+        }
+      },
+      {
+        "text": "Xin phép được nói vài lời.",
+        "slot": "nói vài lời",
+        "cue": {
+          "en": "say a few words",
+          "ko": "몇 마디 하다"
+        },
+        "gloss": {
+          "en": "Allow me to say a few words.",
+          "ko": "몇 말씀 드리겠습니다."
+        }
+      },
+      {
+        "text": "Tôi xin phép được về sớm hôm nay.",
+        "slot": "về sớm hôm nay",
+        "cue": {
+          "en": "leave early today",
+          "ko": "오늘 일찍 가다"
+        },
+        "gloss": {
+          "en": "May I be excused to leave early today?",
+          "ko": "오늘은 먼저 들어가 보겠습니다."
+        }
+      },
+      {
+        "text": "Xin phép được giới thiệu khách mời của chúng ta.",
+        "slot": "giới thiệu khách mời của chúng ta",
+        "cue": {
+          "en": "introduce our guest",
+          "ko": "우리 손님을 소개하다"
+        },
+        "gloss": {
+          "en": "Allow me to introduce our guest.",
+          "ko": "오늘의 손님을 소개해 드리겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "vi-f5-19",
+    "stage": 5,
+    "fn": "formal-humble",
+    "pattern": "Thay mặt ___, tôi xin …",
+    "core": [
+      "Thay mặt",
+      "thay mặt"
+    ],
+    "meaning": {
+      "en": "Speaking for a group: On behalf of ___, I …",
+      "ko": "대표해서 말하기: ___를 대표해 …드립니다."
+    },
+    "grammar": [],
+    "expressions": [
+      "thay mặt"
+    ],
+    "examples": [
+      {
+        "text": "Thay mặt công ty, tôi xin cảm ơn quý khách.",
+        "slot": "công ty",
+        "cue": {
+          "en": "the company",
+          "ko": "회사"
+        },
+        "gloss": {
+          "en": "On behalf of the company, I thank our customers.",
+          "ko": "회사를 대표해 고객 여러분께 감사드립니다."
+        }
+      },
+      {
+        "text": "Thay mặt gia đình, tôi xin chào đón mọi người.",
+        "slot": "gia đình",
+        "cue": {
+          "en": "the family",
+          "ko": "가족"
+        },
+        "gloss": {
+          "en": "On behalf of the family, I welcome everyone.",
+          "ko": "가족을 대표해 여러분을 환영합니다."
+        }
+      },
+      {
+        "text": "Thay mặt cả lớp, em xin cảm ơn cô.",
+        "slot": "cả lớp",
+        "cue": {
+          "en": "the whole class",
+          "ko": "반 전체"
+        },
+        "gloss": {
+          "en": "On behalf of the whole class, thank you, teacher.",
+          "ko": "반 모두를 대표해 선생님께 감사드려요."
+        }
+      },
+      {
+        "text": "Tôi xin phép thay mặt ban tổ chức phát biểu.",
+        "slot": "ban tổ chức",
+        "cue": {
+          "en": "the organising committee",
+          "ko": "주최 측"
+        },
+        "gloss": {
+          "en": "Allow me to speak on behalf of the organisers.",
+          "ko": "주최 측을 대표해 한 말씀 드리겠습니다."
         }
       }
     ]
