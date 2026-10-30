@@ -330,7 +330,14 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
   const nearFit = near.filter(fits);
   const pool = nearFit.length >= 2 ? nearFit : mostAlike(piece, decoys(language, key, source.stage, source.pos).filter(fits), 5);
   // 대소문자만 다른 같은 말("cuánto cuesta"·"Cuánto cuesta")은 보기에 한 번만(2026-10-30 화면 확인).
-  const wrong = [...new Map(shuffled(pool, random).map((one) => [lower(one), one])).values()].slice(0, 2);
+  // 보기 첫 글자를 정답에 맞춘다(문장 가운데 빈칸에 "Our·Who"처럼 대문자 보기가 섞여 한눈에 지워짐 — 가상 사용자 2026-10-31).
+  const caseLike = (one: string) => {
+    const first = piece[0] ?? "";
+    if (first.toLocaleLowerCase() === first.toLocaleUpperCase() || one === "I" || /^I\b/.test(one)) return one;
+    const head = one[0] ?? "";
+    return (first === first.toLocaleLowerCase() ? head.toLocaleLowerCase() : head.toLocaleUpperCase()) + one.slice(1);
+  };
+  const wrong = [...new Map(shuffled(pool, random).map((one) => caseLike(one)).filter((one) => !same(one, piece) && !lower(source.text).includes(lower(one))).map((one) => [lower(one), one])).values()].slice(0, 2);
   if (wrong.length < 2) return null;
   const options = shuffled([piece, ...wrong], random);
   return {

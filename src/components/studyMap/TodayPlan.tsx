@@ -265,25 +265,27 @@ export function TodayPlan({
   // 내가 저장한 낱말(이 학습 언어)은 단계와 상관없이 어휘 퀴즈 맨 앞(2026-10-31 낱말 층위 ⑤).
   const mineWords = useMemo(() => new Set(savedWords.filter((one) => one.languageCode === language).map((one) => one.word.trim())), [savedWords, language]);
   // 넓어지는 원(curriculum/circle.ts, 2026-10-31 사용자 "원을 키워 가면서 일정 비율 모르는 묶음으로 계속"): 어휘 탭에서 칸을 따로 안 골랐을 때.
-  const circleOn = !vocabPick || (vocabPick.by === "stage" && !vocabPick.value);
+  // 품사·주제 칸을 고르면 그 칸의 원을 따로(가상 사용자 셋 다 ⚙ 주제를 바꾼 뒤 예전 순서로 돌아가 같은 문장 반복 — 2026-10-31).
+  const circleOn = true;
+  const circleStore = !vocabPick || (vocabPick.by === "stage" && !vocabPick.value) ? `quizCircle.v1.${language}` : `quizCircle.v1.${language}.${vocabPick.by}:${vocabPick.value}`;
   const [circle, setCircle] = useState<Circle>(emptyCircle);
   const circleRef = useRef<Circle>(circle);
   useEffect(() => {
     let loaded: Circle = emptyCircle();
     try {
-      const raw = JSON.parse(localStorage.getItem(`quizCircle.v1.${language}`) ?? "null") as Circle | null;
+      const raw = JSON.parse(localStorage.getItem(circleStore) ?? "null") as Circle | null;
       if (raw && typeof raw.size === "number" && raw.items && typeof raw.items === "object") loaded = raw;
     } catch {
       // 이 폰에 없으면 처음부터.
     }
     circleRef.current = loaded;
     setCircle(loaded);
-  }, [language]);
+  }, [circleStore]);
   const saveCircle = (next: Circle) => {
     circleRef.current = next;
     setCircle(next);
     try {
-      localStorage.setItem(`quizCircle.v1.${language}`, JSON.stringify(next));
+      localStorage.setItem(circleStore, JSON.stringify(next));
     } catch {
       // 이번에만.
     }
@@ -1068,6 +1070,10 @@ export function TodayPlan({
   // 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 … 풀면 다음 문제로, 설명이나 옵션은 그 내부에"):
   // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
   const recordOne = (one: { key: string; correct: boolean; skipped: boolean }) => {
+    // "모르겠어요"·답 보기는 원에서는 틀림으로(다시 나오게), 다른 기록에는 그대로 안 셈.
+    if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
+      saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, false, Date.now()), circleOrder, knownWord)));
+    }
     if (one.skipped || !one.key) return;
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
@@ -1255,9 +1261,15 @@ export function TodayPlan({
         language={language}
         resetKey={keepResetKey}
         make={keepMake}
-        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${spotCards.size}`}
+        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}`}
         onResult={recordOne}
-        empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>}
+        empty={
+          !wrongTab && keepFocus === "vocab" && (!bank || !circleOrder.length) ? (
+            <p className="px-1 py-2 text-caption text-slate-400">…</p>
+          ) : (
+            <p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>
+          )
+        }
       />
       {settingsSheet}
     </div>
