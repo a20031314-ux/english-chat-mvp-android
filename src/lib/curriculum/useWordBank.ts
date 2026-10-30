@@ -21,7 +21,7 @@ function late(word: BankWord, pick?: VocabPick | null): boolean {
   return posGroup(word.pos) === "function" || word.topic === "function";
 }
 
-function readCached(language: string, ui: string, chunk: number): Card[] | null {
+function readCached(language: string, ui: string, chunk: number | string): Card[] | null {
   try {
     const raw = JSON.parse(localStorage.getItem(`${CACHE}.${language}.${ui}.${chunk}`) ?? "null") as Card[] | null;
     return Array.isArray(raw) && raw.length ? raw : null;
@@ -35,6 +35,66 @@ function sourcesOf(card: Card, pos: string | undefined): QuizSource[] {
   return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss, ...(pos ? { pos: quizPos(pos) } : {}) }];
 }
 
+/** 순위 index의 카드 묶음: 빈도 목록은 "b<n>", 그 뒤 찾아서 더한 낱말은 "x<n>". */
+function chunkOf(index: number, baseLength: number): string {
+  return index < baseLength ? `b${Math.floor(index / BANK_CHUNK)}` : `x${Math.floor((index - baseLength) / BANK_CHUNK)}`;
+}
+
+const EXTRAS = "wordsExtra.v1";
+const EXTRAS_MS = 6 * 60 * 60 * 1000;
+
+function readExtras(language: string): BankWord[] {
+  try {
+    const raw = JSON.parse(localStorage.getItem(`${EXTRAS}.${language}`) ?? "null") as { at: number; words: BankWord[] } | null;
+    return Array.isArray(raw?.words) ? raw!.words : [];
+  } catch {
+    return [];
+  }
+}
+
+/** 더한 낱말 목록(6시간마다 새로, 실패하면 null). */
+async function fetchExtras(language: string, force = false): Promise<BankWord[] | null> {
+  try {
+    const raw = JSON.parse(localStorage.getItem(`${EXTRAS}.${language}`) ?? "null") as { at: number; words: BankWord[] } | null;
+    if (!force && raw && Date.now() - raw.at < EXTRAS_MS) return raw.words;
+  } catch {
+    // 새로 받는다.
+  }
+  const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&extra=1&list=1`))
+    .then((response) => (response.ok ? (response.json() as Promise<{ words?: string[][] }>) : null))
+    .catch(() => null);
+  if (!Array.isArray(body?.words)) return null;
+  const words: BankWord[] = body!.words!.map(([w, pos, topic, reading]) => ({ w: w ?? "", pos: pos ?? "", ...(topic ? { topic } : {}), ...(reading ? { reading } : {}) })).filter((one) => one.w);
+  try {
+    localStorage.setItem(`${EXTRAS}.${language}`, JSON.stringify({ at: Date.now(), words }));
+  } catch {
+    // 이번에만.
+  }
+  return words;
+}
+
+/**
+ * 단어장에서 낱말 찾기(2026-10-31): 서버가 빈도 목록·더한 목록을 보고, 없으면 확인해 모두의 목록에 더한다.
+ * 카드가 오면 바로 퀴즈 재료로 등록하고, 더한 목록을 다시 받게 표시한다. 돌려줌: 상태와 사전형.
+ */
+export async function searchWord(language: string, ui: string, word: string): Promise<{ status: string; word?: string } | null> {
+  const body = await fetch(apiUrl("/api/curriculum/words"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ lang: language, ui, word }),
+  })
+    .then((response) => (response.ok ? (response.json() as Promise<{ status: string; word?: string; card?: Card & { pos?: string } }>) : null))
+    .catch(() => null);
+  if (!body) return null;
+  if (body.card) {
+    const card = body.card;
+    registerQuizSources(language, [{ key: wordKey(card.w), sources: sourcesOf(card, card.pos) }]);
+    glossOf.set(`${language}|${card.w}`, card.gloss);
+  }
+  if (body.status === "added") void fetchExtras(language, true);
+  return { status: body.status, ...(body.word ? { word: body.word } : {}) };
+}
+
 /** 낱말 뜻(앱 언어) — 퀴즈 제목 옆 등. */
 const glossOf = new Map<string, string>();
 export function wordGloss(language: string, word: string): string {
@@ -44,49 +104,59 @@ export function wordGloss(language: string, word: string): string {
 export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null) {
   const [bank, setBank] = useState<readonly BankWord[] | null>(() => peekBank(language));
   const [ready, setReady] = useState<Set<string>>(new Set());
+  // 사용자들이 찾아서 더한 낱말(server/wordExtras.ts) — 빈도 목록 뒤에 붙인다(2026-10-31 사용자 "검색하면 자동 추가 → 다른 사용자에게 반영").
+  const [extras, setExtras] = useState<readonly BankWord[]>(() => readExtras(language));
   useEffect(() => {
     if (!hasBank(language)) return;
     let alive = true;
     void loadBank(language).then((list) => alive && setBank(list));
+    void fetchExtras(language).then((list) => alive && list && setExtras(list));
     return () => {
       alive = false;
     };
   }, [language]);
-  const list = bank && bank.length && hasBank(language) ? bank : null;
+  const base = bank && bank.length && hasBank(language) ? bank : null;
+  const list = useMemo(() => (base ? [...base, ...extras.filter((one) => !base.some((b) => b.w === one.w))] : null), [base, extras]);
+  const baseLength = base?.length ?? 0;
   // 고른 칸(curriculum/vocabBank.ts inPick)에서 아직 모르는(이미 앎·확인 중이 아닌) 앞 낱말들이 든 묶음(셋까지).
   const pickKey = pick ? `${pick.by}:${pick.value}` : "all:";
   const chunks = useMemo(() => {
     if (!list) return "";
-    const out: number[] = [];
+    const out: string[] = [];
     let open = 0;
     for (let index = 0; index < list.length && open < 12; index += 1) {
       const word = list[index]!;
       if (known[wordKey(word.w)] || !inPick(word, index, pick) || late(word, pick)) continue;
       open += 1;
-      const c = Math.floor(index / BANK_CHUNK);
+      const c = chunkOf(index, baseLength);
       if (!out.includes(c)) out.push(c);
       if (out.length >= 3) break;
     }
-    if (out.length === 1 && (out[0]! + 1) * BANK_CHUNK < list.length && (!pick || pick.by === "all" || pick.by === "band")) out.push(out[0]! + 1);
+    const first = out[0];
+    if (out.length === 1 && first?.startsWith("b") && (Number(first.slice(1)) + 1) * BANK_CHUNK < baseLength && (!pick || pick.by === "all" || pick.by === "band")) out.push(`b${Number(first.slice(1)) + 1}`);
     return out.join(",");
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, known, pickKey]);
+  }, [list, known, pickKey, baseLength]);
   useEffect(() => {
     if (!list || !chunks) return;
     let alive = true;
-    const want = chunks.split(",").map(Number);
+    const want = chunks.split(",");
     void Promise.all(
-      want.map(async (c) => {
-        const cached = readCached(language, ui, c);
+      want.map(async (id) => {
+        const extra = id.startsWith("x");
+        const c = Number(id.slice(1));
+        const cacheId = extra ? `x${c}` : c;
+        const cached = readCached(language, ui, cacheId);
         if (cached) return cached;
-        const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&chunk=${c}`))
+        const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&chunk=${c}${extra ? "&extra=1" : ""}`))
           .then((response) => (response.ok ? (response.json() as Promise<{ cards?: Card[] }>) : null))
           .catch(() => null);
         const cards = Array.isArray(body?.cards) ? body!.cards! : [];
-        if (cards.length) {
+        // 더한 낱말 묶음은 다 찬 것만 이 폰에 남긴다(마지막 묶음은 계속 자람).
+        if (cards.length && (!extra || cards.length >= BANK_CHUNK)) {
           try {
-            localStorage.setItem(`${CACHE}.${language}.${ui}.${c}`, JSON.stringify(cards));
+            localStorage.setItem(`${CACHE}.${language}.${ui}.${cacheId}`, JSON.stringify(cards));
           } catch {
             // 이번에만.
           }
@@ -96,7 +166,7 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     ).then((groups) => {
       if (!alive) return;
       const cards = groups.flat();
-      const posOf = new Map((peekBank(language) ?? []).map((word) => [word.w, word.pos]));
+      const posOf = new Map([...(peekBank(language) ?? []), ...extras].map((word) => [word.w, word.pos]));
       registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card, posOf.get(card.w)) })));
       for (const card of cards) glossOf.set(`${language}|${card.w}`, card.gloss);
       setReady((current) => new Set([...current, ...cards.map((card) => wordKey(card.w))]));
@@ -104,6 +174,8 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     return () => {
       alive = false;
     };
+    // extras는 품사를 찾는 데만(목록이 바뀌면 chunks도 바뀜).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list, chunks, language, ui]);
   return useMemo(() => {
     if (!list) return null;

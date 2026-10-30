@@ -184,7 +184,7 @@ export function FrameLesson({
     <FullScreenLayer>
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="min-w-0 flex-1">
-          {/* 퀴즈·대화에서는 틀을 가린다(2026-10-30 사용자 "제목과 텍스트로 답이 그냥 보여") — 무엇을 하는 틀인지(뜻의 앞부분)만. */}
+          {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
             {hideFrame ? meaningHead : frame.pattern} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>

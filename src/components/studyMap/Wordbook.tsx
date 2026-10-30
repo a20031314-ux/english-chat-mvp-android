@@ -5,6 +5,7 @@ import type { UICopy } from "@/lib/copy";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { POS_GROUPS, peekBank, posGroup } from "@/lib/curriculum/vocabBank";
 import type { WordbookRow } from "@/lib/curriculum/wordbook";
+import { searchWord } from "@/lib/curriculum/useWordBank";
 
 /**
  * 지속 학습 [어휘]의 단어장(2026-10-29 사용자 "단어장은 그래프나 망으로 진행률을 보여 주고, 탭하면 열 수 있게").
@@ -36,11 +37,14 @@ export function WordbookCard({
   onWord,
   compact = false,
   icon = false,
+  locale = "en",
 }: {
   ui: UICopy;
   language: string;
   words: readonly WordbookRow[];
   onWord: (word: string) => void;
+  /** 앱 언어 — 찾은 낱말 카드의 뜻을 이 말로. */
+  locale?: string;
   /** 지속 학습 어휘 탭 안: 이름·개수 한 줄만, 누르면 시트(2026-10-30 "기능 안의 옵션이 주요 기능처럼"). */
   compact?: boolean;
   /** 퀴즈 칸 머리의 아이콘(📖)만 — 누르면 같은 시트. */
@@ -49,6 +53,25 @@ export function WordbookCard({
   const [view, setView] = useState<View>(readView);
   const [open, setOpen] = useState(false);
   const [now] = useState(() => Date.now());
+  // 낱말 찾기(2026-10-31 사용자 "은행에 없는 단어를 검색하면 자동 추가 → 다른 사용자에게 반영"): 서버가 은행에 없으면 확인해 모두의 목록에 더하고,
+  // 여기서는 그 낱말(사전형)의 뜻 시트를 연다. 실제 낱말이 아니면 입력칸에 표시만.
+  const [query, setQuery] = useState("");
+  const [searching, setSearching] = useState(false);
+  const [miss, setMiss] = useState(false);
+  const find = async () => {
+    const word = query.trim();
+    if (!word || searching) return;
+    setSearching(true);
+    setMiss(false);
+    const result = await searchWord(language, locale, word);
+    setSearching(false);
+    if (result && result.status === "invalid") {
+      setMiss(true);
+      return;
+    }
+    setQuery("");
+    onWord(result?.word ?? word);
+  };
   const pick = (next: View) => {
     setView(next);
     try {
@@ -105,6 +128,34 @@ export function WordbookCard({
                   ✕
                 </button>
               </div>
+              <form
+                role="search"
+                data-word-search
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  void find();
+                }}
+                className="mt-3 flex items-center gap-2"
+              >
+                <input
+                  dir="auto"
+                  value={query}
+                  aria-label={ui.wordSearch}
+                  title={ui.wordSearch}
+                  aria-invalid={miss}
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  onChange={(event) => {
+                    setQuery(event.target.value);
+                    setMiss(false);
+                  }}
+                  className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${miss ? "border-warn text-warn" : "border-line text-slate-100 focus:border-amber-300/60"}`}
+                />
+                <button type="submit" aria-label={ui.wordSearch} title={ui.wordSearch} disabled={!query.trim() || searching} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/90 text-slate-900 disabled:opacity-50">
+                  <span aria-hidden>{searching ? "…" : "🔎"}</span>
+                </button>
+              </form>
               <ul className="mt-3 flex min-h-0 flex-wrap gap-1.5 overflow-y-auto">
                 {words.map((row) => (
                   <li key={row.word}>

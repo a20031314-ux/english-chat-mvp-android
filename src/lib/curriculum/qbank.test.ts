@@ -65,3 +65,13 @@ test("닮은 보기 고르기·표현 오답 데이터: 14개 언어 모든 단�
   const quiz = buildQuiz("es", `e|${expression}`, { kinds: ["type", "choose", "type"], stage: 1 });
   assert.ok(quiz?.questions.some((q) => q.kind === "type"), JSON.stringify(quiz?.questions.map((q) => q.kind)));
 });
+
+test("단어 찾기: 찾는 말 다듬기 — 문장부호·대소문자, 세 낱말 넘거나 숫자면 안 받음(스페인어·일본어·태국어)", async () => {
+  const { normalizeQuery } = await import("../server/wordExtras.ts");
+  assert.equal(normalizeQuery("es", "  ¡Perro! "), "perro");
+  assert.equal(normalizeQuery("ja", "「猫」"), "猫");
+  assert.equal(normalizeQuery("th", "แมว"), "แมว");
+  assert.equal(normalizeQuery("en", "a very long phrase here"), null);
+  assert.equal(normalizeQuery("en", "abc123"), null);
+  assert.equal(normalizeQuery("en", ""), null);
+});

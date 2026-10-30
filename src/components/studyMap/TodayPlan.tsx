@@ -1181,7 +1181,7 @@ export function TodayPlan({
             );
           })}
         </div>
-        {!wrongTab && keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} /> : null}
+        {!wrongTab && keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
         {checkups.length ? (
           <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
             <span aria-hidden>📈</span>

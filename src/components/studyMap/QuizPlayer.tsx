@@ -239,7 +239,7 @@ export function QuestionView({
   }, [autoNext, question]);
   return (
     <section data-kind={question.kind} className="flex flex-col gap-3">
-      {/* 모양 이름(빈칸·순서…)은 띄우지 않음 — 문제 모양이 곧 할 일(2026-10-30 사용자 "의미 없는 라벨"). 점검은 data-kind로. */}
+      {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30). Checks read data-kind. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
