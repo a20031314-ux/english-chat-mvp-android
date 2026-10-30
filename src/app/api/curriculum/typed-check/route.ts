@@ -39,7 +39,11 @@ export async function POST(request: NextRequest) {
   const filled = (piece: string) => (sentence.includes("___") ? sentence.replace("___", piece) : sentence.replace(/＿+/, piece));
   const expected = kind === "blank" ? filled(answer) : answer;
   const learner = kind === "blank" ? filled(typed) : typed;
-  const task = `Language: ${name}
+  const task = open
+    ? `Language: ${name}
+Sentence to judge: ${learner}
+(The app's own answer was "${answer}", giving: ${expected} — other words can be right too.)`
+    : `Language: ${name}
 Expected sentence: ${expected}
 Learner's sentence: ${learner}`;
   let failure = "";
@@ -51,7 +55,7 @@ Learner's sentence: ${learner}`;
       {
         role: "system",
         content: open
-          ? `You grade one fill-in-the-blank answer. The learner saw only the sentence with a blank, no translation, so any word that fits is fine. The learner's sentence is ok when it is grammatical, has no spelling mistake, and is a natural, sensible everyday sentence — it does not need to mean exactly the same as the expected sentence. Not ok: any grammar or spelling error, a wrong form of the word, or a sentence that does not make sense. Reply with JSON only: {"ok":true} or {"ok":false}.`
+          ? `You grade one fill-in-the-blank answer. The learner saw only the sentence with a blank, no translation, so any word that fits is fine — the sentence does not need to mean the same as the app's answer. Check the sentence to judge on its own, as a careful teacher of the language: ok when it is fully grammatical by standard usage (agreement of gender, number, person and case; articles, particles and prepositions; word forms) with no spelling mistake, and it makes sense as an everyday sentence. Not ok: any grammar or spelling error, a form a teacher would correct, or a sentence that does not make sense. Reply with JSON only: {"ok":true} or {"ok":false}.`
           : `You grade one quiz answer by comparing two sentences. The learner's sentence is ok when a teacher would accept it as a correct answer: it is grammatical, has no spelling mistake, and says the same thing as the expected sentence. Accept equivalent forms: contraction vs full form, the same word in another accepted script (kana instead of kanji, or the reverse), an equally correct word order or synonym with the same meaning. Not ok: any grammar or spelling error, a different meaning, a missing or extra word that changes the sentence. Reply with JSON only: {"ok":true} or {"ok":false}.`,
       },
       { role: "user", content: task },
