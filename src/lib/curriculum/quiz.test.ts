@@ -284,3 +284,39 @@ test("빈칸 보기에 대소문자만 다른 같은 말이 둘 나오지 않는
     }
   }
 });
+
+test("답한 뒤 예문: 지금 문장 빼고 둘, 보여 준 문장은 다음 빈칸에서 뒤로 — 태국어·스페인어", async () => {
+  const { moreExamples, registerQuizSources, wordQuiz } = await import("./quiz.ts");
+  const g = (raw: string) => ({ en: "", raw });
+  registerQuizSources("es", [
+    {
+      key: "w|zzlibro",
+      sources: [
+        { text: "Leo un libro nuevo.", gloss: g("새 책을 읽어요"), from: "w|zzlibro", stage: 0, piece: "libro", who: "me" },
+        { text: "Ese libro es de mi hermana.", gloss: g("그 책은 언니 거예요"), from: "w|zzlibro", stage: 0, piece: "libro", who: "me" },
+        { text: "Busco un libro de cocina.", gloss: g("요리책을 찾아요"), from: "w|zzlibro", stage: 0, piece: "libro", who: "me" },
+      ],
+    },
+  ]);
+  const shown = moreExamples("es", "w|zzlibro", "Leo un libro nuevo.");
+  assert.equal(shown.length, 2);
+  assert.ok(shown.every((one) => one.text !== "Leo un libro nuevo." && one.text.includes("libro")));
+  // 첫 문장은 보여 주지 않았으니 다음 빈칸도 그 문장.
+  assert.equal((wordQuiz("es", "w|zzlibro")?.questions[0] as { text?: string }).text, "Leo un libro nuevo.");
+  registerQuizSources("th", [
+    {
+      key: "w|zzน้ำ",
+      sources: [
+        { text: "ขอน้ำหนึ่งแก้ว", gloss: g("물 한 잔 주세요"), from: "w|zzน้ำ", stage: 0, piece: "น้ำ", who: "me" },
+        { text: "น้ำเย็นมาก", gloss: g("물이 아주 차요"), from: "w|zzน้ำ", stage: 0, piece: "น้ำ", who: "me" },
+      ],
+    },
+  ]);
+  const th = moreExamples("th", "w|zzน้ำ", "น้ำเย็นมาก");
+  assert.deepEqual(th.map((one) => one.text), ["ขอน้ำหนึ่งแก้ว"]);
+  // 보여 준 첫 문장은 뒤로 — 다음 빈칸은 다른 문장.
+  const next = wordQuiz("th", "w|zzน้ำ")?.questions[0] as { text?: string } | undefined;
+  if (next) assert.equal(next.text, "น้ำเย็นมาก");
+  // 예문이 하나뿐이면 보여 줄 것 없음.
+  assert.equal(moreExamples("es", "w|zznada", "x").length, 0);
+});

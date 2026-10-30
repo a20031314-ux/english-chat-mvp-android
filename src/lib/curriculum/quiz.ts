@@ -139,6 +139,30 @@ export function quizSources(language: string, key: string): QuizSource[] {
   return [...base, ...extra];
 }
 
+/**
+ * 답한 뒤 보여 준 같은 열쇠의 다른 예문(2026-10-31 사용자 "퀴즈 후에 예문도 몇 개" → "바꿔줘"): 화면(QuizPlayer)이 moreExamples로 받고,
+ * 보여 준 문장은 그 열쇠의 다음 빈칸 재료에서 뒤로 민다(방금 읽은 문장이 바로 빈칸으로 나오면 베끼기). 이 폰 메모리에만.
+ */
+const SHOWN_EXAMPLES = new Map<string, Set<string>>();
+
+export function moreExamples(language: string, key: string, current: string, n = 2): QuizSource[] {
+  const id = `${language}|${key}`;
+  const shown = SHOWN_EXAMPLES.get(id) ?? new Set<string>();
+  const list = quizSources(language, key).filter((source) => source.text !== current && source.who !== "them" && Boolean(source.piece) && source.text.includes(source.piece!));
+  const fresh = list.filter((source) => !shown.has(source.text));
+  const picked = [...fresh, ...list.filter((source) => shown.has(source.text))].slice(0, n);
+  for (const source of picked) shown.add(source.text);
+  SHOWN_EXAMPLES.set(id, shown);
+  return picked;
+}
+
+/** 답한 뒤 예문으로 보여 준 문장을 뒤로(다른 문장이 있으면 그쪽부터 빈칸으로). */
+function shownLast(language: string, key: string, list: QuizSource[]): QuizSource[] {
+  const shown = SHOWN_EXAMPLES.get(`${language}|${key}`);
+  if (!shown?.size) return list;
+  return [...list.filter((source) => !shown.has(source.text)), ...list.filter((source) => shown.has(source.text))];
+}
+
 function baseSources(language: string, key: string): QuizSource[] {
   if (key.startsWith("u|") || key.startsWith("w|")) return GAP_SOURCES.get(language)?.get(key) ?? [];
   const scripts = allScriptsFor(language);
@@ -636,7 +660,7 @@ export function speakScored(key: string): boolean {
 export function wordQuiz(language: string, key: string, seed = ""): Quiz | null {
   // 단어 퀴즈 = 예문 빈칸 하나(2026-10-30 사용자 "단어 퀴즈는 단순하게 맞추기 > 예문 형태로, 발음·듣기 문제는 삭제").
   // 같은 낱말을 모양만 바꿔 세 번 묻지 않는다 — 낱말 여럿은 짝 맞추기(WordMatch) 뒤 묶음으로 한 문제씩.
-  const source = quizSources(language, key)[0];
+  const source = shownLast(language, key, quizSources(language, key))[0];
   if (!source?.piece || !source.text.includes(source.piece)) return null;
   const random = rng(`${key}|${seed}|word`);
   // 단어는 뜻 맞추기(짝 — WordMatch)·빈칸만(사용자 2026-10-30 "단어는 그냥 뜻맞추기, 빈칸채우기로 제한") — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
@@ -793,7 +817,7 @@ export function buildQuiz(
     const random = rng(`${key}|${options.seed ?? ""}|${kinds.join(",")}`);
     const all = shuffled(near(quizSources(language, key)), rng(key));
     const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
-    const questions = mixQuiz(language, key, [...all.slice(shift), ...all.slice(0, shift)], kinds, random);
+    const questions = mixQuiz(language, key, shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)]), kinds, random);
     const fix = options.card ? fixOf(language, options.card, random) : null;
     const list = fix ? [fix, ...questions].slice(0, QUIZ_SIZE) : questions;
     // 조합대로 둘 넘게 못 만들면 앱이 돌리는 퀴즈로 — 읽기 조합은 그 전에 말하기 없는 모양으로 한 번 더.
@@ -806,7 +830,7 @@ export function buildQuiz(
   const random = rng(`${key}|${options.seed ?? ""}`);
   const all = options.round === undefined ? shuffled(near(quizSources(language, key)), random) : shuffled(near(quizSources(language, key)), rng(key));
   const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
-  const sources = [...all.slice(shift), ...all.slice(0, shift)];
+  const sources = shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)]);
   const speakable = (source: QuizSource) => source.who !== "them" && speakScored(key);
   const questions: QuizQuestion[] = [];
   const used = new Set<string>();

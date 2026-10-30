@@ -9,7 +9,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, fixedRight, joinWords, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, fixedRight, joinWords, moreExamples, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -227,7 +227,9 @@ export function QuestionView({
   useAllStageGlosses(language, locale);
   // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
   // Wrong answers stay so the right one can be read; say/order keep the button.
-  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
+  // Blank questions with a key show more examples after the answer, so they wait for 다음 (user, 2026-10-31).
+  const examples = Boolean(bankKey) && (question.kind === "choose" || question.kind === "type");
+  const autoNext = Boolean(answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -250,6 +252,7 @@ export function QuestionView({
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {answered && examples && bankKey && "text" in question ? <MoreExamples key={question.text} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-warn"}`}>
@@ -265,6 +268,47 @@ export function QuestionView({
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";
+
+/**
+ * 답한 뒤 같은 낱말·틀의 다른 예문 둘(2026-10-31 사용자 "퀴즈 후에 예문도" → "바꿔줘"): 그 조각에 색, 뜻, 🔊.
+ * 예문이 없으면(문제은행이 아직 안 자람) 아무것도 안 그린다. 보여 준 문장은 그 열쇠의 다음 빈칸에서 뒤로(quiz.ts moreExamples).
+ */
+function MoreExamples({ locale, language, bankKey, current, tag }: { locale: string; language: string; bankKey: string; current: string; tag: string }) {
+  const [list] = useState(() => moreExamples(language, bankKey, current));
+  if (!list.length) return null;
+  return (
+    <ul data-quiz-more className="flex flex-col gap-2 border-t border-line pt-2">
+      {list.map((source) => {
+        const piece = source.piece ?? "";
+        const at = piece ? source.text.indexOf(piece) : -1;
+        const gloss = quizGloss(source.gloss, locale, language);
+        return (
+          <li key={source.text} className="flex items-start gap-2">
+            <div className="min-w-0 flex-1">
+              <p dir="auto" className="text-note text-slate-200">
+                {at >= 0 ? (
+                  <>
+                    {source.text.slice(0, at)}
+                    <strong className="font-semibold text-status-learned">{piece}</strong>
+                    {source.text.slice(at + piece.length)}
+                  </>
+                ) : (
+                  source.text
+                )}
+              </p>
+              {gloss ? (
+                <p dir="auto" className="text-meta text-slate-400">
+                  {gloss}
+                </p>
+              ) : null}
+            </div>
+            <TTSButton text={source.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
 
 function FixView({
   question,
