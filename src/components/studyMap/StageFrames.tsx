@@ -348,8 +348,24 @@ function FramePlayer({
     if ((heard || stuck) && !redo) noteLine(language, frame.id, index, !clean || stuck);
   };
 
+  // 예문 차례가 되면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음") — 따라 말하기는 문장을 먼저 들려주니 빼고, 차례마다 한 번.
+  const autoHeard = useRef(-1);
+  const sayRef = useRef(say);
+  sayRef.current = say;
+  useEffect(() => {
+    if (offer || done || limited || listening || currentMode === "shadow" || results[index] || autoHeard.current === index) return;
+    const timer = window.setTimeout(() => {
+      autoHeard.current = index;
+      void sayRef.current();
+    }, 250);
+    return () => window.clearTimeout(timer);
+  }, [index, currentMode, offer, done, limited, listening, results]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => () => hearing.saidAll(), []);
+
   const restart = () => {
     stopTts();
+    autoHeard.current = -1;
     clearResume(resumeId);
     setOffer(null);
     sent.current = false;

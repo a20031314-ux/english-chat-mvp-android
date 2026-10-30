@@ -132,6 +132,22 @@ export function RecallPlayer({
     setResults((current) => ({ ...current, [index]: { heard, practice, good: Boolean(heard) && practice?.good === true && !stuck } }));
   };
 
+  // 문제가 보이면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음" — 문제마다 한 번, 다시는 버튼).
+  const autoHeard = useRef(-1);
+  const sayRef = useRef(say);
+  sayRef.current = say;
+  useEffect(() => {
+    if (done || limited || listening || !items[index] || results[index] || autoHeard.current === index) return;
+    const timer = window.setTimeout(() => {
+      autoHeard.current = index;
+      void sayRef.current();
+    }, 250);
+    return () => window.clearTimeout(timer);
+  }, [index, items, done, limited, listening, results]);
+  // 닫으면 듣던 것도 끝낸다.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => () => hearing.saidAll(), []);
+
   const right = Object.values(results).filter((result) => result.good).length;
   return (
     <FullScreenLayer>

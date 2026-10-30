@@ -93,11 +93,26 @@ export function FrameLesson({
   const [justPassed, setJustPassed] = useState(false);
   const turn = turns[tIndex];
 
-  // 대화 차례가 바뀌면 상대 줄을 먼저 들려준다.
+  // 대화 차례가 바뀌면 상대 줄을 먼저 들려주고, 끝나면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음" — 차례마다 한 번, 다시는 버튼).
+  const autoHeard = useRef(-1);
+  const sayRef = useRef<() => Promise<void>>(async () => undefined);
   useEffect(() => {
-    if (step !== "talk" || !turn?.them) return;
-    void playTts(turn.them, tag, SCRIPT_VOICES.them);
-  }, [step, turn, tag]);
+    if (step !== "talk" || !turn) return;
+    let alive = true;
+    const listen = () => {
+      if (!alive || autoHeard.current === tIndex) return;
+      autoHeard.current = tIndex;
+      void sayRef.current();
+    };
+    if (turn.them) void playTts(turn.them, tag, SCRIPT_VOICES.them).finally(listen);
+    else window.setTimeout(listen, 250);
+    return () => {
+      alive = false;
+    };
+  }, [step, turn, tag, tIndex]);
+  // 닫으면 듣던 것도 끝낸다.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => () => hearing.saidAll(), []);
 
   const finished = step === "done";
   useEffect(() => {
@@ -141,6 +156,7 @@ export function FrameLesson({
       return next;
     });
   };
+  sayRef.current = say;
   const reveal = () =>
     setResults((current) => {
       const next = [...current];
