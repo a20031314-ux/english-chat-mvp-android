@@ -129,6 +129,7 @@
 | roomGameWord | 0.2원 | 1 | claude-haiku-5-5 450/160 토큰 (기능 roomGame) | 가정 |
 | roleplayTurn | 0.2원 | 1 | gpt-6-luna 851/50 토큰 (기능 roleplayTutor) | 잰 값 |
 | weakRead | 0.1원 | 1 | claude-haiku-5-5 600/80 토큰 (기능 learnerRead) | 가정 |
+| wordAdd | 0.1원 | 1 | claude-haiku-5-5 300/120 토큰 (기능 translate) | 가정 |
 | iconUpload | 0.1원 | 3 | 한 번 고정값 | 가정 |
 | mediaUpload | 0.1원 | 1 | 한 번 고정값 | 가정 |
 | roomGameJudge | 0원 | 1 | claude-haiku-5-5 220/20 토큰 (기능 roomGame) | 가정 |
@@ -198,7 +199,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.0264 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 61개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, qbankGrow, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 62개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, qbankGrow, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 
