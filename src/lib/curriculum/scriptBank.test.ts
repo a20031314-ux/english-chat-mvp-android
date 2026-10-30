@@ -61,6 +61,18 @@ test("틀을 실제로 썼나: 빈칸 앞뒤 고정 부분이 들어야(영어·
   assert.equal(frameUsed("___ 주세요.", "물 주세요"), true);
   assert.equal(frameUsed("我想___。", "你好，我想喝咖啡。"), true);
   assert.equal(frameUsed("ขอ___หน่อย", "ขอน้ำหน่อยครับ"), true);
+  // 고를 수 있는 꼴(한국어 이에요/예요·(으)·아서/어서 줄어든 꼴, 러시아어 мой / моя, 틀 전체 둘 중 하나).
+  assert.equal(frameUsed("저는 ___이에요/예요.", "저는 루카스예요."), true);
+  assert.equal(frameUsed("저는 ___이에요/예요.", "제가 루카스예요."), false);
+  assert.equal(frameUsed("___(으)러 가요.", "옷을 사러 가요."), true);
+  assert.equal(frameUsed("___(으)로 가 주세요.", "수서역으로 가 주세요."), true);
+  assert.equal(frameUsed("___아서/어서 잠을 못 잤어요.", "방이 너무 더워서 잠을 못 잤어요."), true);
+  assert.equal(frameUsed("저는 ___을/를 좋아해요.", "저는 커피를 좋아해요"), true);
+  assert.equal(frameUsed("___은/는 뭐예요?", "이거 뭐예요?"), true);
+  assert.equal(frameUsed("저는 ___을/를 할 수 있어요.", "저는 중국어도 할 수 있어요."), true);
+  assert.equal(frameUsed("Это мой / моя / моё ___.", "Это моя сумка."), true);
+  assert.equal(frameUsed("Привет, ___! / Здравствуйте, ___!", "Здравствуйте, Анна!"), true);
+  assert.equal(frameUsed("___ที่ผม / ที่คุณ / ที่เรา …", "ละครที่คุณแนะนำสนุกมาก"), true);
 });
 
 test("오늘 할 것: 은행 장면은 하루 끝에 대화 한 칸", () => {
