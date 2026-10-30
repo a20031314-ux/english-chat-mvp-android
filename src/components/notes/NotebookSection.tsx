@@ -2235,7 +2235,7 @@ function MyLayers({
             </>
           ),
         );
-    const keepCard = parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null;
+    const keepCard = parts ? card("keep", ui.keepTitle, parts.keep.summary, parts.keep.body) : null;
     return (
       <>
         {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
