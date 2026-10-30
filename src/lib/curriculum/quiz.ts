@@ -11,6 +11,7 @@
  * - say    뜻만 보고 말하기(🎤, 대본과 같은 판정) — 늘 마지막.
  * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
  */
+import { DECOYS } from "./frames/decoys/index.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
@@ -213,13 +214,28 @@ export function spacedText(text: string): boolean {
 const lower = (text: string) => text.toLocaleLowerCase();
 const same = (a: string, b: string) => lower(a) === lower(b);
 
+/**
+ * 문장구조 조각의 헷갈리는 오답(2026-10-30 사용자 "다른 선지가 누가 봐도 오답" → 살짝 틀린 꼴, frames/decoys/) — 줄의 대소문자에 맞춘다.
+ */
+export function nearMisses(language: string, frameId: string, piece: string): string[] {
+  const table = DECOYS[language];
+  if (!table) return [];
+  const exact = table[`${frameId}|${piece}`];
+  if (exact) return exact;
+  // 조각이 문장 첫머리라 대문자로 시작하면 오답도.
+  const list = Object.entries(table).find(([k]) => k.startsWith(`${frameId}|`) && lower(k.slice(frameId.length + 1)) === lower(piece))?.[1] ?? [];
+  const upper = piece.charAt(0) !== piece.charAt(0).toLocaleLowerCase();
+  return upper ? list.map((one) => one.charAt(0).toLocaleUpperCase() + one.slice(1)) : list;
+}
+
 function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
   const piece = source.piece;
   if (!piece) return null;
   const at = source.text.indexOf(piece);
   if (at < 0) return null;
+  const near = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : [];
   const wrong = shuffled(
-    decoys(language, key, source.stage).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
+    (near.length >= 2 ? near : decoys(language, key, source.stage)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
     random,
   ).slice(0, 2);
   if (wrong.length < 2) return null;
