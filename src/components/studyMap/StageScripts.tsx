@@ -8,6 +8,9 @@ import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
+import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
+import { RECALL_SIZE as RECALL_COUNT, stageFrameTally } from "@/lib/curriculum/recall";
+import { useCheckups } from "@/lib/curriculum/useCheckups";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { framesFor, type Frame } from "@/lib/curriculum/frames";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
@@ -62,7 +65,10 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 
 const MODE_KEY = "stageScriptMode";
 
-type Method = "situation" | "expression" | "frame";
+type Method = "frame" | "recall" | "situation" | "expression";
+
+/** 단계 연습 방식 아이콘(2026-10-30 사용자 "아이콘으로 구분해줘") — 이름은 읽어 주기(name)로만. */
+const METHOD_ICON: Record<Method, string> = { frame: "🧩", recall: "🎯", situation: "🎭", expression: "🔤" };
 
 
 /** 오늘의 대본(서버가 고름): 문법 이름은 앱 언어, 표현은 학습 언어. */
@@ -109,6 +115,16 @@ export function frameBubbles(frame: Frame): Bubble[] {
   return frame.examples.slice(0, 3).map((example) => ({ side: "me" as const, text: example.text, mark: example.slot }));
 }
 
+/** 꺼내 쓰기 = 뜻(앱 언어)을 보고 익힌 틀로 말함: 뜻 한 줄 → 내 말. */
+export function recallBubbles(frame: Frame, locale: string): Bubble[] {
+  const example = frame.examples[frame.examples.length - 1];
+  if (!example) return [];
+  return [
+    { side: "them" as const, text: glossFor(example.gloss, locale), meaning: true },
+    { side: "me" as const, text: example.text, mark: example.slot },
+  ];
+}
+
 export function StageScripts({
   ui,
   locale,
@@ -152,7 +168,9 @@ export function StageScripts({
   const shown = useMemo(() => (open ? personalize(open, language, nickname) : null), [open, language, nickname]);
   const [handled, setHandled] = useState(0);
   const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
-  const [method, setMethod] = useState<Method>("situation");
+  const [method, setMethod] = useState<Method>("frame");
+  const [recalling, setRecalling] = useState(false);
+  const { known } = useCheckups(language);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
@@ -169,11 +187,15 @@ export function StageScripts({
   const done = situations.filter((script) => passed.includes(script.id)).length;
   const frames = framesFor(language, stage);
   const frameDone = frames.filter((frame) => passed.includes(frame.id)).length;
+  // 문장구조 중심(2026-10-30, hub/drafts/frames-first-2026-10-30.md): 문장구조 → 꺼내 쓰기가 단계의 길, 상황·표현은 고를 수 있는 연습.
+  const tally = stageFrameTally(language, stage, new Set(passed), known);
+  const learnedOrder = framesFor(language, stage).filter((frame) => passed.includes(frame.id)).map((frame) => frame.id);
   const methods = [
+    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
+    ...(frames.length ? [{ id: "recall" as const, name: ui.recallTitle, count: `${tally.recalled}/${frames.length}`, bubbles: recallBubbles(frames[0]!, locale) }] : []),
     { id: "situation" as const, name: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "", bubbles: situationBubbles(situations[0]) },
     ...(extras.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
-    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
-  ].map((one, index) => ({ ...one, label: String(index + 1) }));
+  ].map((one) => ({ ...one, label: METHOD_ICON[one.id] }));
   const dot = (state: LedgerState | null | undefined) =>
     state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const row = (script: StageScript) => {
@@ -254,6 +276,20 @@ export function StageScripts({
       ) : null}
       {/* One button for the way to practise; its sheet shows each way as a tiny dialogue (2026-10-30, user). */}
       <WayPicker ui={ui} ways={methods} value={method} onPick={setMethod} data="script-method" />
+      {method === "recall" ? (
+        <button
+          type="button"
+          data-recall-start
+          disabled={!learnedOrder.length}
+          onClick={() => setRecalling(true)}
+          className="flex items-center gap-3 rounded-xl border border-dashed border-line px-3 py-3 text-start hover:bg-white/5 disabled:opacity-50"
+        >
+          <span aria-hidden className="text-body text-ink">▶</span>
+          <span className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.recallTitle}</span>
+          <span className="text-meta tabular-nums text-slate-400">{learnedOrder.length ? `${RECALL_COUNT}` : `0/${frames.length}`}</span>
+        </button>
+      ) : null}
+      {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}
       {method === "situation" ? situations.map(row) : null}
       {method === "expression" ? extras.map(row) : null}
       <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} listHidden={method !== "frame"} />

@@ -6,6 +6,8 @@
  * - 다시 볼 것: 헷갈려요 → 2일 뒤, 다시 헷갈려요 → 또 2일 뒤, 그 뒤 알아요 → 7일 뒤 한 번 더, 또 알아요 → 끝.
  * - 오늘 목록: 날짜가 지난 다시 볼 것 먼저, 그다음 아직 안 한 것(커리큘럼 순서 = 지금 단계부터 상황 대본 → 표현·문법 대본 → 문장구조,
  *   내 기록에 맞춰 = 오늘의 대본(서버 scriptPick)을 맨 앞에) — 고른 분량(분)이 찰 때까지.
+ * - 문장구조 중심(2026-10-30 사용자 "단계별 학습은 문장틀을 숙지시키는 게 목표", `hub/drafts/frames-first-2026-10-30.md`): 틀이 있는 단계는
+ *   새 것 = 문장구조만(대본은 단계 칸에서 고르는 연습), 그 뒤 꺼내 쓰기 한 칸(kind "recall", curriculum/recall.ts — 익힌 틀로 뜻 보고 말하기).
  * - 약한 곳은 퀴즈로(2026-10-28 사용자 "틀린 부분을 퀴즈로", curriculum/quiz.ts): 날짜 된 다시 볼 것·틀린 틀 다시 연습(노트 카드)은
  *   원래 대본 대신 짧은 퀴즈(문제를 못 만들면 원래 대본). 약한 곳은 분량의 절반까지 — 새 것도 매일 조금은.
  */
@@ -23,7 +25,7 @@ export type Pace = (typeof PACES)[number];
  */
 export type PlanItem = {
   id: string;
-  kind: "script" | "frame" | "quiz";
+  kind: "script" | "frame" | "quiz" | "recall";
   stage: number;
   minutes: number;
   review?: string;
@@ -48,7 +50,10 @@ export function minutesOf(item: StageScript | Frame): number {
   return "lines" in item ? Math.max(2, Math.round((item.lines.length * 18) / 60)) : 2;
 }
 
-/** 커리큘럼 순서: 단계마다 상황 대본(상황 차례) → 표현·문법 대본 → 문장구조. */
+/** 꺼내 쓰기 칸 id(오늘 목록, 하루 한 칸). */
+export const RECALL_ITEM = "recall";
+
+/** 커리큘럼 순서: 틀이 있는 단계는 문장구조만(2026-10-30), 틀이 없는 단계는 상황 대본(상황 차례) → 표현·문법 대본. */
 export function curriculumItems(language: string, fromStage = 1): PlanItem[] {
   const scripts = allScriptsFor(language);
   const frames = allFramesFor(language);
@@ -59,8 +64,9 @@ export function curriculumItems(language: string, fromStage = 1): PlanItem[] {
     const here = scripts.filter((s) => s.stage === stage);
     const situations = here.filter(isSituationScript).sort((a, b) => (a.situation ?? 0) - (b.situation ?? 0));
     const extras = here.filter((s) => !isSituationScript(s));
-    for (const script of [...situations, ...extras]) out.push({ id: script.id, kind: "script", stage, minutes: minutesOf(script) });
-    for (const frame of frames.filter((f) => f.stage === stage)) out.push({ id: frame.id, kind: "frame", stage, minutes: minutesOf(frame) });
+    const stageFrames = frames.filter((f) => f.stage === stage);
+    if (!stageFrames.length) for (const script of [...situations, ...extras]) out.push({ id: script.id, kind: "script", stage, minutes: minutesOf(script) });
+    for (const frame of stageFrames) out.push({ id: frame.id, kind: "frame", stage, minutes: minutesOf(frame) });
   }
   return out;
 }
@@ -222,7 +228,9 @@ export function todayPlan(input: {
   }
   // 채우기 자리는 미리 비워 둔다(새 대본이 분량을 다 채우지 않게).
   const fillKeys = (input.fill ?? []).filter((key) => !out.some((item) => item.id === key) && canQuiz(input.language, key)).slice(0, fillCount(input.pace));
-  const freshPace = input.pace - fillKeys.length * QUIZ_MINUTES;
+  // 꺼내 쓰기 자리도 미리(틀이 있는 단계면 하루 한 칸) — 문장구조 다음에 둔다.
+  const recallItem: PlanItem | null = allFramesFor(input.language).some((f) => f.stage === input.stage) ? { id: RECALL_ITEM, kind: "recall", stage: input.stage, minutes: QUIZ_MINUTES } : null;
+  const freshPace = input.pace - fillKeys.length * QUIZ_MINUTES - (recallItem ? recallItem.minutes : 0);
   if (used < freshPace) {
     const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
     const takeFresh = (item: PlanItem) => {
@@ -239,6 +247,10 @@ export function todayPlan(input: {
       if (used >= freshPace) break;
       takeFresh(item);
     }
+  }
+  if (recallItem) {
+    out.push(recallItem);
+    used += recallItem.minutes;
   }
   for (const key of fillKeys) {
     const practice = itemForKey(input.language, key);

@@ -5,22 +5,23 @@ import { scriptsFor } from "./stageScripts.ts";
 
 const NOW = Date.UTC(2026, 9, 28);
 
-test("오늘 할 것: 커리큘럼 순서로 분량만큼, 처음 것은 넘쳐도 하나는", () => {
+test("오늘 할 것: 문장구조 순서로 분량만큼, 처음 것은 넘쳐도 하나는, 꺼내 쓰기 한 칸", () => {
+  // 문장구조 중심(2026-10-30): 틀이 있는 단계는 새 것이 문장구조만, 대본은 단계 칸에서 고르는 연습.
   const items = curriculumItems("en", 1);
-  assert.equal(items[0]!.id, "en-1-1");
-  assert.ok(items.some((item) => item.kind === "frame"));
+  assert.equal(items[0]!.kind, "frame");
+  assert.ok(!items.some((item) => item.kind === "script" && item.stage === 1));
   const plan = todayPlan({ language: "en", stage: 1, passed: new Set(), review: {}, pace: 10, order: "curriculum", now: NOW });
-  assert.equal(plan[0]!.id, "en-1-1");
+  assert.equal(plan[0]!.id, items[0]!.id);
+  assert.equal(plan.filter((item) => item.kind === "recall").length, 1);
+  assert.ok(plan.findIndex((item) => item.kind === "recall") > plan.findIndex((item) => item.kind === "frame"));
   assert.ok(plan.reduce((sum, item) => sum + item.minutes, 0) <= 10);
   const one = todayPlan({ language: "en", stage: 5, passed: new Set(), review: {}, pace: 1, order: "curriculum", now: NOW });
-  assert.equal(one.length, 1);
-  const skipped = todayPlan({ language: "en", stage: 1, passed: new Set(["en-1-1"]), review: {}, pace: 5, order: "curriculum", now: NOW });
-  assert.notEqual(skipped[0]!.id, "en-1-1");
+  assert.equal(one.filter((item) => item.kind !== "recall").length, 1);
+  const skipped = todayPlan({ language: "en", stage: 1, passed: new Set([items[0]!.id]), review: {}, pace: 5, order: "curriculum", now: NOW });
+  assert.notEqual(skipped[0]!.id, items[0]!.id);
 });
 
-test("오늘 할 것: 내 기록에 맞춰면 오늘의 대본이 맨 앞, 날짜가 된 다시 볼 것은 그보다 앞", () => {
-  const plan = todayPlan({ language: "ja", stage: 1, passed: new Set(), review: {}, pace: 10, order: "record", recommended: "ja-1-3", now: NOW });
-  assert.equal(plan[0]!.id, "ja-1-3");
+test("오늘 할 것: 날짜가 된 다시 볼 것이 맨 앞, 아직 날짜 안 된 것은 없음", () => {
   const expression = scriptsFor("ja", 1)[1]!.expressions[0]!;
   const review: ReviewMap = { [`e|${expression}`]: { due: NOW - 1, step: 1, at: NOW - 2 * DAY_MS }, "f|ja-f1-02": { due: NOW + DAY_MS, step: 1, at: NOW } };
   const withReview = todayPlan({ language: "ja", stage: 1, passed: new Set(), review, pace: 10, order: "record", recommended: "ja-1-3", now: NOW });

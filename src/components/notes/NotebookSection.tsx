@@ -25,6 +25,7 @@ import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { LettersPlan, ScriptEntry } from "@/components/studyMap/ScriptPractice";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
+import { stageFrameTally } from "@/lib/curriculum/recall";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import type { CheckResult } from "@/lib/curriculum/checkup";
@@ -397,7 +398,18 @@ export function NotebookSection({
     setJump({ stage, id, at: Date.now() });
   };
   const stageRow = (book.parts ?? []).find((row) => row.order === book.stage) ?? null;
-  const stageLeft = stageRow ? toNextStage(stageRow.parts, STAGE_DONE_SHARE) : 0;
+  // 다음 단계 조건 = 문장구조 익힘 70% + 꺼내 씀 70%(2026-10-30 사용자, curriculum/recall.ts) — 틀이 있는 단계만, 없으면 예전 네 갈래.
+  const frameTally = (order: number) => {
+    const row = (book.parts ?? []).find((one) => one.order === order);
+    const tally = stageFrameTally(language, order, new Set(row?.scripts?.passed ?? []), known);
+    return tally.total ? { ...tally, need: Math.ceil(tally.total * STAGE_DONE_SHARE) } : null;
+  };
+  const hereTally = frameTally(book.stage);
+  const stageLeft = hereTally
+    ? Math.max(0, hereTally.need - hereTally.learned) + Math.max(0, hereTally.need - hereTally.recalled)
+    : stageRow
+      ? toNextStage(stageRow.parts, STAGE_DONE_SHARE)
+      : 0;
   /** 내 진척 시트 안의 망·그래프(예전 My 맨 위 [망 | 그래프 | 단계] 토글을 여기로, 2026-10-30). */
   const partsView = (mode: "net" | "graph") =>
     book.parts?.length ? (
@@ -556,6 +568,7 @@ export function NotebookSection({
                   focusPart={focusPart}
                   jump={jump}
                   onJumped={() => setJump(null)}
+                  frameTally={frameTally}
           headExtra={book.parts?.some((row) => row.scripts) ? (
             <SkeletonProgress
                     ui={ui}
@@ -638,6 +651,7 @@ export function NotebookSection({
           focusPart={focusPart}
           jump={jump}
           onJumped={() => setJump(null)}
+          frameTally={frameTally}
           scripts={(order, row, openFor) => (
             <StageScripts
               ui={ui}
@@ -1028,6 +1042,7 @@ function StageFrame({
   free = false,
   onSetStage,
   letters,
+  frameTally,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -1066,6 +1081,8 @@ function StageFrame({
   onSetStage?: (order: number) => void;
   /** 0단계 — 글자·소리(글자가 다른 학습 언어만): 사다리 맨 앞 0, 그 칸의 연습, 고르기. */
   letters?: { on: boolean; panel: ReactNode; onPick: () => void };
+  /** 그 단계 문장구조 익힘·꺼내 씀(curriculum/recall.ts) — 있으면 다음 단계 조건이 이것. */
+  frameTally?: (order: number) => { total: number; learned: number; recalled: number; ready: boolean; need: number } | null;
 }) {
   const now = letters?.on ? 0 : Math.max(1, Math.min(current, stages.length));
   const ladder = letters ? [{ order: 0, title: "" }, ...stages] : stages;
@@ -1093,7 +1110,8 @@ function StageFrame({
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
   const filledIn = (order: number) => inStage(order).filter(filledOf).length;
   const label: Record<PartId, string> = { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
-  const readyOf = (order: number) => parts.find((row) => row.order === order)?.ready ?? false;
+  const readyOf = (order: number) => frameTally?.(order)?.ready ?? parts.find((row) => row.order === order)?.ready ?? false;
+  const shownTally = frameTally?.(shown) ?? null;
 
   const dot = (node: NodeView) =>
     fill[node.id] === "mastered" || masteredOf?.(node.stage ?? 1, node.index ?? -1)
@@ -1209,6 +1227,15 @@ function StageFrame({
               >
                 {ui.partReady} ›
               </button>
+            ) : shownTally ? (
+              <div data-frame-condition className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
+                <span className="min-w-0 flex-1 text-note tabular-nums text-ink">
+                  {ui.framesToNext
+                    .replace("{a}", String(Math.min(shownTally.learned, shownTally.need)))
+                    .replace("{b}", String(Math.min(shownTally.recalled, shownTally.need)))
+                    .replaceAll("{n}", String(shownTally.need))}
+                </span>
+              </div>
             ) : !stageParts.weakest && stageParts.scripts && stageParts.scripts.done < stageParts.scripts.total ? (
               <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
                 <span className="min-w-0 flex-1 text-note text-ink">

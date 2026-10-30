@@ -12,6 +12,7 @@ import {
   itemForKey,
   learnedFrom,
   PACES,
+  RECALL_ITEM,
   reviewKeysOf,
   reviewLabel,
   todayPlan,
@@ -21,6 +22,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
+import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
 import { buildUnit, bundleQuiz, orderTiles, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
@@ -349,6 +351,9 @@ export function TodayPlan({
 
   // 대본을 대화 대신 문제 묶음으로 할지(학습 조합): 말하기 = 늘 대화, 읽기 = 묶음, 랜덤 = 상황 대본은 대화·나머지는 묶음.
   const [unitItem, setUnitItem] = useState<PlanItem | null>(null);
+  // 꺼내 쓰기 칸(dailyPlan RECALL_ITEM, curriculum/recall.ts): 익힌 문장구조(지금 단계까지, 오래된 것부터)로.
+  const [recalling, setRecalling] = useState(false);
+  const recallLearned = allFramesFor(language).filter((frame) => frame.stage <= stage && passedSet.has(frame.id)).map((frame) => frame.id);
   const unitMixOf = (item: PlanItem): "read" | null => {
     if (item.kind !== "script") return null;
     if (settings.mix === "read") return "read";
@@ -370,13 +375,17 @@ export function TodayPlan({
   const scripts = allScriptsFor(language);
   const frames = allFramesFor(language);
   const labelOf = (item: PlanItem) =>
-    item.kind === "quiz"
+    item.kind === "recall"
+      ? ui.recallTitle
+      : item.kind === "quiz"
       ? keyLabel(language, item.id, grammarName)
       : item.kind === "script"
       ? glossFor(scripts.find((s) => s.id === item.id)?.setting ?? { en: item.id }, locale)
       : (frames.find((f) => f.id === item.id)?.pattern ?? item.id);
   const doneOf = (item: PlanItem) =>
-    item.kind === "quiz" && quizDone.has(item.id)
+    item.kind === "recall"
+      ? practiced.has(RECALL_ITEM)
+      : item.kind === "quiz" && quizDone.has(item.id)
       ? true
       : item.review
         ? !review[item.review] || review[item.review]!.due > now
@@ -669,7 +678,8 @@ export function TodayPlan({
             <li key={`${item.id}-${item.review ?? ""}`}>
               <button
                 type="button"
-                onClick={() => (item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
+                disabled={item.kind === "recall" && !recallLearned.length}
+                onClick={() => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
                 className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
               >
                 <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
@@ -762,6 +772,7 @@ export function TodayPlan({
   );
   const overlays = (
     <>
+      {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={recallLearned} known={known} onClose={() => setRecalling(false)} /> : null}
       {matching && vocabPairs.length >= 3 ? (
         <WordMatch
           ui={ui}

@@ -85,7 +85,13 @@ export async function saveChecks(
   let review = record.review ?? {};
   let known = record.known ?? {};
   for (const [check, ok] of Object.entries(checks).slice(0, 12)) {
-    if (!/^[efguw]\|/.test(check) || check.length > 80) continue;
+    if (!/^[efguwr]\|/.test(check) || check.length > 80) continue;
+    // 꺼내 쓰기(r|틀id, curriculum/recall.ts): 맞히면 열쇠가 생기고, 틀리면 지우고 그 틀(f|)을 다시 볼 것으로.
+    if (check.startsWith("r|")) {
+      known = applyKnown(known, check, ok, now, true);
+      if (!ok) review = applyCheck(review, `f|${check.slice(2)}`, false, now);
+      continue;
+    }
     review = applyCheck(review, check, ok, now);
     // 퀴즈 답만 확인 중 열쇠를 움직인다(알아요·헷갈려요는 스스로 고른 것이라 — 헷갈려요는 지움).
     // 뼈대 밖에서 막힌 것(u|, curriculum/gaps.ts)은 시험에 안 나와서 퀴즈 정답이 확인 중을 처음 만든다.

@@ -842,6 +842,9 @@
     "planSettings": "設定",
     "practiceWay": "練習のしかた",
     "wordMatch": "単語あわせ",
+    "recallTitle": "使ってみる",
+    "recallNone": "まだ覚えた文型がありません",
+    "framesToNext": "次の段階まで：文型 {a}/{n} · 使ってみる {b}/{n}",
     "reviewLayerTitle": "復習"
   },
   "zh": {
@@ -1687,6 +1690,9 @@
     "planSettings": "设置",
     "practiceWay": "练习方式",
     "wordMatch": "单词配对",
+    "recallTitle": "用起来",
+    "recallNone": "还没有学会的句型",
+    "framesToNext": "进入下一阶段前：句型 {a}/{n} · 用起来 {b}/{n}",
     "reviewLayerTitle": "复习"
   },
   "vi": {
@@ -2535,6 +2541,9 @@
     "planSettings": "Cài đặt",
     "practiceWay": "Cách luyện",
     "wordMatch": "Ghép từ",
+    "recallTitle": "Dùng thử",
+    "recallNone": "Chưa có cấu trúc câu đã học",
+    "framesToNext": "Trước giai đoạn tiếp theo: Cấu trúc câu {a}/{n} · Dùng thử {b}/{n}",
     "reviewLayerTitle": "Ôn tập"
   },
   "fr": {
@@ -3388,6 +3397,9 @@
     "planSettings": "Réglages",
     "practiceWay": "Façon de s’entraîner",
     "wordMatch": "Associer les mots",
+    "recallTitle": "Réutiliser",
+    "recallNone": "Aucune structure apprise pour l’instant",
+    "framesToNext": "Avant l’étape suivante : Structures {a}/{n} · Réutiliser {b}/{n}",
     "reviewLayerTitle": "Révision"
   },
   "it": {
@@ -4432,6 +4444,9 @@
     "planSettings": "Impostazioni",
     "practiceWay": "Come esercitarti",
     "wordMatch": "Abbina le parole",
+    "recallTitle": "Usalo",
+    "recallNone": "Nessuna struttura imparata ancora",
+    "framesToNext": "Prima della fase successiva: Strutture {a}/{n} · Usalo {b}/{n}",
     "reviewLayerTitle": "Ripasso"
   },
   "pt": {
@@ -5288,6 +5303,9 @@
     "planSettings": "Ajustes",
     "practiceWay": "Como praticar",
     "wordMatch": "Combinar palavras",
+    "recallTitle": "Use você",
+    "recallNone": "Nenhuma estrutura aprendida ainda",
+    "framesToNext": "Antes da próxima etapa: Estruturas {a}/{n} · Use você {b}/{n}",
     "reviewLayerTitle": "Revisão"
   },
   "ru": {
@@ -6330,6 +6348,9 @@
     "planSettings": "Настройки",
     "practiceWay": "Способ практики",
     "wordMatch": "Подбери слова",
+    "recallTitle": "Применить",
+    "recallNone": "Пока нет выученных конструкций",
+    "framesToNext": "До следующего этапа: Конструкции {a}/{n} · Применить {b}/{n}",
     "reviewLayerTitle": "Повторение"
   },
   "id": {
@@ -7182,6 +7203,9 @@
     "planSettings": "Pengaturan",
     "practiceWay": "Cara berlatih",
     "wordMatch": "Cocokkan kata",
+    "recallTitle": "Pakai",
+    "recallNone": "Belum ada struktur kalimat yang dipelajari",
+    "framesToNext": "Sebelum tahap berikutnya: Struktur kalimat {a}/{n} · Pakai {b}/{n}",
     "reviewLayerTitle": "Ulangan"
   },
   "ar": {
@@ -8027,6 +8051,9 @@
     "planSettings": "الإعدادات",
     "practiceWay": "طريقة التدرّب",
     "wordMatch": "طابِق الكلمات",
+    "recallTitle": "استخدمها",
+    "recallNone": "لا توجد تراكيب مُتعلَّمة بعد",
+    "framesToNext": "قبل المرحلة التالية: تراكيب {a}/{n} · استخدمها {b}/{n}",
     "reviewLayerTitle": "مراجعة"
   },
   "th": {
@@ -8872,6 +8899,9 @@
     "planSettings": "ตั้งค่า",
     "practiceWay": "วิธีฝึก",
     "wordMatch": "จับคู่คำ",
+    "recallTitle": "ลองใช้",
+    "recallNone": "ยังไม่มีโครงสร้างประโยคที่เรียนแล้ว",
+    "framesToNext": "ก่อนขั้นถัดไป: โครงสร้างประโยค {a}/{n} · ลองใช้ {b}/{n}",
     "reviewLayerTitle": "ทบทวน"
   },
   "hi": {
@@ -9717,6 +9747,9 @@
     "planSettings": "सेटिंग",
     "practiceWay": "अभ्यास का तरीका",
     "wordMatch": "शब्द मिलाएँ",
+    "recallTitle": "इस्तेमाल करो",
+    "recallNone": "अभी कोई वाक्य ढाँचा नहीं सीखा",
+    "framesToNext": "अगले चरण से पहले: वाक्य ढाँचे {a}/{n} · इस्तेमाल करो {b}/{n}",
     "reviewLayerTitle": "दोहराना"
   }
 }

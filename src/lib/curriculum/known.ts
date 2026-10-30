@@ -67,7 +67,8 @@ export function confirmDue(map: KnownMap | null | undefined, now = Date.now()): 
   if (!map) return [];
   const today = dayOf(now);
   return Object.entries(map)
-    .filter(([, entry]) => entry.days.length < KNOWN_DAYS && entry.days[entry.days.length - 1] !== today)
+    // 꺼내 쓰기 열쇠(r|, curriculum/recall.ts)는 꺼내 쓰기 묶음이 다시 묻는다 — 퀴즈 확인 중에는 안 넣음.
+    .filter(([key, entry]) => !key.startsWith("r|") && entry.days.length < KNOWN_DAYS && entry.days[entry.days.length - 1] !== today)
     .sort((a, b) => a[1].at - b[1].at)
     .map(([key]) => key);
 }
@@ -77,7 +78,7 @@ export function cleanKnown(raw: unknown): KnownMap {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
   const out: KnownMap = {};
   for (const [key, value] of Object.entries(raw as Record<string, unknown>)) {
-    if (!/^[efguw]\|/.test(key) || key.length > 80 || !value || typeof value !== "object") continue;
+    if (!/^[efguwr]\|/.test(key) || key.length > 80 || !value || typeof value !== "object") continue;
     const entry = value as { days?: unknown; at?: unknown };
     const days = Array.isArray(entry.days) ? [...new Set(entry.days.filter((d): d is number => Number.isInteger(d)))].slice(-KNOWN_DAYS) : [];
     if (!days.length) continue;
