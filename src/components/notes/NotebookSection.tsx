@@ -85,15 +85,16 @@ const NO_REVIEW: ReviewMap = {};
  */
 const CURRICULUM_ONLY = true;
 
-type MyLayer = "today" | "stage" | "keep" | "review";
+// 오늘 할 것과 단계는 한 칸(2026-10-30 사용자 "오늘 할 것과 단계는 통합 — 첫 화면은 일일 학습으로 바로, 끝나면 단계 화면"): "stage".
+type MyLayer = "stage" | "keep" | "review";
 const LAYER_KEY = "myLayer.v1";
 function readLayer(): MyLayer | null {
   try {
     const saved = localStorage.getItem(LAYER_KEY);
     if (saved === "none") return null;
-    return saved === "stage" || saved === "keep" || saved === "review" ? saved : "today";
+    return saved === "keep" || saved === "review" ? saved : "stage";
   } catch {
-    return "today";
+    return "stage";
   }
 }
 
@@ -199,7 +200,10 @@ export function NotebookSection({
   const [reload, setReload] = useState(0);
   // My 큰 칸(오늘 할 것 · n단계 · 복습) 중 펼친 하나(2026-10-30 사용자 "큰 층위 하나만 보이게"). 이 폰에만.
   const [layer, setLayerState] = useState<MyLayer | null>(readLayer);
+  // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때). 칸을 바꾸면 다시 오늘로.
+  const [stagePeek, setStagePeek] = useState(false);
   const openLayer = (next: MyLayer | null) => {
+    if (next !== "stage") setStagePeek(false);
     setLayerState(next);
     try {
       localStorage.setItem(LAYER_KEY, next ?? "none");
@@ -395,6 +399,7 @@ export function NotebookSection({
   /** 오늘 할 것·틀린 줄·문법 칸에서 고른 상황·문장구조 → 단계 칸을 펼치고 연다. */
   const openScript = (stage: number, id: string) => {
     openLayer("stage");
+    setStagePeek(true);
     setJump({ stage, id, at: Date.now() });
   };
   const stageRow = (book.parts ?? []).find((row) => row.order === book.stage) ?? null;
@@ -502,6 +507,8 @@ export function NotebookSection({
         <MyLayers
           ui={ui}
           language={language}
+          peek={stagePeek}
+          onPeek={setStagePeek}
           open={layer}
           onOpen={openLayer}
           today={
@@ -2188,7 +2195,7 @@ function SkeletonProgress({
 
 
 type LayerPart = { summary: ReactNode; body: ReactNode };
-type PlanParts = { today: LayerPart; keep: LayerPart; review: LayerPart; overlays: ReactNode };
+type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart; review: LayerPart; overlays: ReactNode };
 
 /**
  * My 큰 칸 셋(2026-10-30 사용자 "큰 층위 하나만 보이게 하고 나머지는 그 층위 아래로 — 모든 기능이 같은 층위로 나열된 게 문제"):
@@ -2197,8 +2204,7 @@ type PlanParts = { today: LayerPart; keep: LayerPart; review: LayerPart; overlay
  */
 /** 큰 칸마다 다른 색(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고") — 펼친 칸의 테두리·바탕·제목. hub/DESIGN.md "My 큰 칸 색". */
 const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
-  today: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
-  stage: { box: "border-info/40 bg-info/[0.04]", title: "text-info" },
+  stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
   keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good" },
   review: { box: "border-bad/40 bg-bad/[0.04]", title: "text-bad" },
 };
@@ -2213,6 +2219,8 @@ function MyLayers({
   plan,
   stage,
   notes,
+  peek = false,
+  onPeek,
 }: {
   ui: UICopy;
   language: string;
@@ -2225,7 +2233,11 @@ function MyLayers({
   stage: LayerPart & { title: string };
   /** 복습 = 읽고 정리(지난번에 틀린 것, studyMap/ReviewNotes). */
   notes: readonly WeakSpot[];
+  /** 오늘이 안 끝났어도 단계 화면(n단계 › 또는 밖에서 문장구조·상황을 열 때 — 그 안에서 열려야 해서). */
+  peek?: boolean;
+  onPeek: (on: boolean) => void;
 }) {
+  // 오늘 할 것이 안 끝났으면 칸 안은 오늘 할 것, 끝나면 단계 화면.
   const review = useReviewNotes(language, notes);
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
     const on = open === id;
@@ -2247,10 +2259,34 @@ function MyLayers({
   };
   const draw = (parts?: PlanParts) => {
     const first = parts?.today ?? today;
+    const todayDone = !first || (parts?.today.done ?? false);
+    const stageView = todayDone || peek;
     return (
       <>
-        {first ? card("today", ui.planTitle, first.summary, first.body) : null}
-        {card("stage", stage.title, stage.summary, stage.body)}
+        {card(
+          "stage",
+          stage.title,
+          stageView ? stage.summary : first.summary,
+          stageView ? (
+            <>
+              {first && todayDone ? <div data-today-done className="mb-1">{first.body}</div> : null}
+              {first && !todayDone ? (
+                <button type="button" data-back-today onClick={() => onPeek(false)} className="mb-2 rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+                  <span aria-hidden className="inline-block rtl:rotate-180">‹</span> {ui.planTitle} · {first.summary}
+                </button>
+              ) : null}
+              {stage.body}
+            </>
+          ) : (
+            <>
+              {first.body}
+              <button type="button" data-peek-stage onClick={() => onPeek(true)} className="mt-3 flex w-full items-center justify-between rounded-xl border border-line px-3 py-2 text-start text-caption text-slate-300 hover:bg-white/5">
+                <span>{stage.title}</span>
+                <span className="tabular-nums text-slate-400">{stage.summary} <span aria-hidden className="rtl:rotate-180">›</span></span>
+              </button>
+            </>
+          ),
+        )}
         {parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null}
         {card(
           "review",

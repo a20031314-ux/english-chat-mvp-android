@@ -193,7 +193,7 @@ export function TodayPlan({
   /** 일일 학습 카드 맨 아래에 묶는 "익힌 것"(ScriptAmount inside) — 지속 학습 숫자와 섞이지 않게. */
   learned?: ReactNode;
   /** 큰 칸 둘(오늘 할 것·복습)의 요약과 내용, 늘 떠 있어야 하는 퀴즈·시험 화면. */
-  children: (parts: { today: { summary: ReactNode; body: ReactNode }; keep: { summary: ReactNode; body: ReactNode }; review: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
+  children: (parts: { today: { summary: ReactNode; body: ReactNode; done: boolean }; keep: { summary: ReactNode; body: ReactNode }; review: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -1184,7 +1184,7 @@ export function TodayPlan({
   const reviewBody = reviewTest ? <div data-review className="mb-2 flex items-center justify-end gap-0.5">{testIcon(reviewTest)}</div> : null;
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
   return children({
-    today: { summary: todaySummary, body: todayBody },
+    today: { summary: todaySummary, body: todayBody, done: finished },
     keep: { summary: null, body: keepBody },
     review: { summary: null, body: reviewBody },
     overlays,
