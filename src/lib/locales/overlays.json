@@ -854,7 +854,8 @@
     "learnPickTitle": "どの言語を学びますか？",
     "languageSettings": "言語設定",
     "learnSwitchAsk": "{lang}の学習に切り替えますか？",
-    "learnSwitchYes": "切り替える"
+    "learnSwitchYes": "切り替える",
+    "scopeTitle": "学べること"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1711,7 +1712,8 @@
     "learnPickTitle": "你想学哪种语言？",
     "languageSettings": "语言设置",
     "learnSwitchAsk": "要改为学习{lang}吗？",
-    "learnSwitchYes": "切换"
+    "learnSwitchYes": "切换",
+    "scopeTitle": "可以学到的内容"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2571,7 +2573,8 @@
     "learnPickTitle": "Bạn muốn học ngôn ngữ nào?",
     "languageSettings": "Cài đặt ngôn ngữ",
     "learnSwitchAsk": "Chuyển sang học {lang}?",
-    "learnSwitchYes": "Chuyển"
+    "learnSwitchYes": "Chuyển",
+    "scopeTitle": "Những gì bạn có thể học"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3436,7 +3439,8 @@
     "learnPickTitle": "Quelle langue veux-tu apprendre ?",
     "languageSettings": "Langues",
     "learnSwitchAsk": "Nouvelle langue à apprendre : {lang} ?",
-    "learnSwitchYes": "Changer"
+    "learnSwitchYes": "Changer",
+    "scopeTitle": "Ce que vous pouvez apprendre"
   },
   "it": {
     "archive": "Report",
@@ -4492,7 +4496,8 @@
     "learnPickTitle": "Quale lingua vuoi imparare?",
     "languageSettings": "Lingue",
     "learnSwitchAsk": "Nuova lingua da imparare: {lang}?",
-    "learnSwitchYes": "Cambia"
+    "learnSwitchYes": "Cambia",
+    "scopeTitle": "Cosa puoi imparare"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5360,7 +5365,8 @@
     "learnPickTitle": "Que idioma vais aprender?",
     "languageSettings": "Idiomas",
     "learnSwitchAsk": "Mudar para aprender {lang}?",
-    "learnSwitchYes": "Mudar"
+    "learnSwitchYes": "Mudar",
+    "scopeTitle": "O que você pode aprender"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6414,7 +6420,8 @@
     "learnPickTitle": "Какой язык будете учить?",
     "languageSettings": "Языки",
     "learnSwitchAsk": "Перейти на изучение языка: {lang}?",
-    "learnSwitchYes": "Перейти"
+    "learnSwitchYes": "Перейти",
+    "scopeTitle": "Что можно выучить"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7278,7 +7285,8 @@
     "learnPickTitle": "Bahasa apa yang ingin kamu pelajari?",
     "languageSettings": "Pengaturan bahasa",
     "learnSwitchAsk": "Ganti ke belajar {lang}?",
-    "learnSwitchYes": "Ganti"
+    "learnSwitchYes": "Ganti",
+    "scopeTitle": "Yang bisa kamu pelajari"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8135,7 +8143,8 @@
     "learnPickTitle": "أي لغة ستتعلّم؟",
     "languageSettings": "إعدادات اللغة",
     "learnSwitchAsk": "هل تريد التبديل إلى تعلّم {lang}؟",
-    "learnSwitchYes": "تبديل"
+    "learnSwitchYes": "تبديل",
+    "scopeTitle": "ما يمكنك تعلّمه"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8992,7 +9001,8 @@
     "learnPickTitle": "จะเรียนภาษาอะไรดี?",
     "languageSettings": "ตั้งค่าภาษา",
     "learnSwitchAsk": "เปลี่ยนไปเรียน{lang}ไหม?",
-    "learnSwitchYes": "เปลี่ยน"
+    "learnSwitchYes": "เปลี่ยน",
+    "scopeTitle": "สิ่งที่เรียนได้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9849,6 +9859,7 @@
     "learnPickTitle": "आप कौन-सी भाषा सीखेंगे?",
     "languageSettings": "भाषा सेटिंग",
     "learnSwitchAsk": "{lang} सीखने पर बदलें?",
-    "learnSwitchYes": "बदलें"
+    "learnSwitchYes": "बदलें",
+    "scopeTitle": "आप क्या सीख सकते हैं"
   }
 }

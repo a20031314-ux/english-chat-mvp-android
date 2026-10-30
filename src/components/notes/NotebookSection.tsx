@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { ContentScopeButton } from "@/components/studyMap/ContentScope";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
@@ -596,6 +597,8 @@ export function NotebookSection({
                   onJumped={() => setJump(null)}
                   frameTally={frameTally}
           headExtra={book.parts?.some((row) => row.scripts) ? (
+            <>
+            <ContentScopeButton ui={ui} locale={locale} language={language} />
             <SkeletonProgress
                     ui={ui}
                     stage={lettersOn ? 0 : book.stage}
@@ -604,6 +607,7 @@ export function NotebookSection({
                     learned={learnedGroups}
                     extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
                   />
+            </>
           ) : null}
                   scripts={(order, row, openFor) => (
                     <StageScripts

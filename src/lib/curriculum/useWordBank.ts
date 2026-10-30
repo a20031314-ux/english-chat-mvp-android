@@ -105,6 +105,29 @@ export async function searchWord(language: string, ui: string, word: string): Pr
   return { status: body.status, ...(body.word ? { word: body.word } : {}) };
 }
 
+/**
+ * 배울 수 있는 낱말 수(단계마다, 6 = 5단계 밖 확장) — 빈도 목록 + 사용자들이 찾아서 더한 낱말(curriculum/contentScope.ts).
+ * 더한 낱말은 6시간마다 새로 받으니 은행이 늘면 숫자도 는다.
+ */
+export async function wordsByStage(language: string): Promise<Record<number, number>> {
+  const out: Record<number, number> = {};
+  if (!hasBank(language)) return out;
+  const base = await loadBank(language);
+  const extras = (await fetchExtras(language)) ?? readExtras(language);
+  const taught = taughtStages(language);
+  const have = new Set(base.map((word) => word.w));
+  base.forEach((word, index) => {
+    const stage = wordStage(language, word, index, taught) ?? 6;
+    out[stage] = (out[stage] ?? 0) + 1;
+  });
+  for (const word of extras) {
+    if (have.has(word.w)) continue;
+    const stage = word.stage ?? 6;
+    out[stage] = (out[stage] ?? 0) + 1;
+  }
+  return out;
+}
+
 /** 앱이 단계마다 가르치는 낱말(대본 줄에 나온 꼴, 소문자) → 가장 이른 단계. 낱말 단계를 그 아래로 당기는 데 씀. */
 const taughtCache = new Map<string, Map<string, number>>();
 function taughtStages(language: string): Map<string, number> {
