@@ -33,16 +33,13 @@ export async function POST(request: NextRequest) {
   if (!client) return jsonWithCors(request, { ok: false });
   await meterRequest(request, "quizTypedCheck");
   const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
-  const task =
-    kind === "blank"
-      ? `A learner of ${name} filled the gap in this sentence.
-Sentence: ${sentence}
-Expected answer: ${answer}
-Learner typed: ${typed}`
-      : `A learner of ${name} was shown a sentence with one mistake and rewrote it.
-Sentence with the mistake: ${sentence}
-Expected correction: ${answer}
-Learner's version: ${typed}`;
+  // 빈칸이면 친 말을 넣은 온 문장끼리 비교한다(조각만 보면 모델이 "정해진 답과 다름"에 끌림, 운영 2026-10-31).
+  const filled = (piece: string) => (sentence.includes("___") ? sentence.replace("___", piece) : sentence.replace(/＿+/, piece));
+  const expected = kind === "blank" ? filled(answer) : answer;
+  const learner = kind === "blank" ? filled(typed) : typed;
+  const task = `Language: ${name}
+Expected sentence: ${expected}
+Learner's sentence: ${learner}`;
   let failure = "";
   const completion = await completeChat(client, "scriptJudge", {
     // JSON 하나 — 도구로 받는다(llm.ts). 짧은 한도면 앞 생각이 다 먹어 빈 답이 왔다(운영 2026-10-31, max_tokens 40).
@@ -51,7 +48,7 @@ Learner's version: ${typed}`;
     messages: [
       {
         role: "system",
-        content: `You grade one quiz answer. Say ok only if the learner's answer is ALSO fully correct: grammatical, spelled correctly, natural, the same meaning as the expected answer, and it fits the sentence (an equivalent contraction or expansion, or the same word written in another accepted script such as kana instead of kanji, or romaji that spells exactly the expected Japanese, counts as correct). If it repeats the mistake, has any spelling or grammar error, changes the meaning, or you are unsure, it is not ok. Reply with JSON only: {"ok":true} or {"ok":false}.`,
+        content: `You grade one quiz answer by comparing two sentences. The learner's sentence is ok when a teacher would accept it as a correct answer: it is grammatical, has no spelling mistake, and says the same thing as the expected sentence. Accept equivalent forms: contraction vs full form, the same word in another accepted script (kana instead of kanji, or the reverse), an equally correct word order or synonym with the same meaning. Not ok: any grammar or spelling error, a different meaning, a missing or extra word that changes the sentence. Reply with JSON only: {"ok":true} or {"ok":false}.`,
       },
       { role: "user", content: task },
     ],
