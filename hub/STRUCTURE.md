@@ -93,7 +93,7 @@
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법 `shell`
 - 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
-- API: `guide` · `whats-new`
+- API: `guide`(My 탭) · `whats-new`
 - 웹 페이지: `/`
 - 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `TargetLanguageSelector` ← 웹 전용 페이지
 
@@ -143,7 +143,7 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
-- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/CheckupPlayer` · `studyMap/ContentScope` · `studyMap/FrameLesson` · `studyMap/GrowthNetwork` · `studyMap/InlineQuiz` · `studyMap/LedgerPanel` · `studyMap/Logbank` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/RecallPlayer` · `studyMap/ReviewNotes` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/ScriptTap` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayPlan` · `studyMap/WayPicker` · `studyMap/WeakStrip` · `studyMap/WordMatch` · `studyMap/Wordbook`
+- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/BankHelp` · `studyMap/CheckupPlayer` · `studyMap/ContentScope` · `studyMap/FrameLesson` · `studyMap/GrowthNetwork` · `studyMap/InlineQuiz` · `studyMap/LedgerPanel` · `studyMap/Logbank` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/RecallPlayer` · `studyMap/ReviewNotes` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/ScriptTap` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayPlan` · `studyMap/WayPicker` · `studyMap/WeakStrip` · `studyMap/WordMatch` · `studyMap/Wordbook`
 - API: `curriculum/ask` · `curriculum/choices` · `curriculum/frame-lesson` · `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/pick` · `curriculum/progress` · `curriculum/qbank` · `curriculum/recall` · `curriculum/restore`(학습 기록 공통) · `curriculum/review` · `curriculum`(AI 통화, 학습 기록 공통) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`(학습 기록 공통)
 - 다른 영역이 씀: `studyMap/GrowthNetwork` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
