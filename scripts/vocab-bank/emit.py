@@ -1,7 +1,7 @@
 """검토가 끝난 목록(tsv) → src/lib/curriculum/vocab/<언어>.ts (curriculum/vocabBank.ts가 불러옴).
 
-python3 scripts/vocab-bank/emit.py <en|es|ja> <bank.tsv>
-tsv 한 줄: en·es = 낱말<TAB>품사<TAB>주제, ja = 낱말<TAB>읽기<TAB>품사<TAB>주제(주제는 vocabBank.ts TOPICS). 순서 = 많이 쓰는 순서.
+python3 scripts/vocab-bank/emit.py <언어> <bank.tsv>
+tsv 한 줄: 대부분 = 낱말<TAB>품사<TAB>주제, ja·zh = 낱말<TAB>읽기(가나·병음)<TAB>품사<TAB>주제(주제는 vocabBank.ts TOPICS). 순서 = 많이 쓰는 순서.
 """
 import json
 import sys
@@ -12,6 +12,11 @@ SOURCES = {
     "es": "FrequencyWords (Hermit Dave, OpenSubtitles 2018 es_50k), CC BY-SA 4.0 — 사전형으로 묶고 이름·잡음을 뺌(2026-10-29)",
     "ja": "wordfreq 3.1 (Robyn Speer), data CC BY-SA 4.0 — SudachiPy 사전형·읽기, 조사·조동사·이름·잡음을 뺌(2026-10-29)",
 }
+# 2026-10-31(낱말 층위 ②): 나머지 11개 언어 — FrequencyWords(OpenSubtitles 2018) 후보를 Claude가 사전형으로 묶고 이름·잡음을 빼고 품사·주제를 붙임(원어민 확인 전).
+for code, name in {"ar": "ar", "fr": "fr", "id": "id", "it": "it", "ko": "ko", "pt": "pt_br", "ru": "ru", "th": "th", "vi": "vi", "zh": "zh_cn"}.items():
+    SOURCES[code] = f"FrequencyWords (Hermit Dave, OpenSubtitles 2018 {name}_50k), CC BY-SA 4.0 — Claude가 사전형으로 묶고 이름·잡음을 빼고 품사·주제를 붙임(2026-10-31, 원어민 확인 전)"
+SOURCES["hi"] = "wordfreq 3.1 (Robyn Speer) hi, data CC BY-SA 4.0 — Claude가 사전형으로 묶고 이름·잡음을 빼고 품사·주제를 붙임(2026-10-31, 원어민 확인 전)"
+READING = {"ja", "zh"}
 rows = []
 seen = set()
 for line in open(src, encoding="utf-8"):
@@ -19,7 +24,7 @@ for line in open(src, encoding="utf-8"):
     if not parts or not parts[0] or parts[0] in seen:
         continue
     seen.add(parts[0])
-    rows.append(parts[:4] if lang == "ja" else parts[:3])
+    rows.append(parts[:4] if lang in READING else parts[:3])
 out = f"src/lib/curriculum/vocab/{lang}.ts"
 with open(out, "w", encoding="utf-8") as f:
     f.write("// 빈도 단어 묶음 — 자동 생성(scripts/vocab-bank/emit.py), 손으로 고치지 않는다.\n")

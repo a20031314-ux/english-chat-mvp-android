@@ -9,11 +9,11 @@ import { getOpenAIClient } from "./openai.ts";
 import { translated } from "./stageCopy.ts";
 import { BANK_CHUNK, loadBank, type BankWord } from "../curriculum/vocabBank.ts";
 import { segmentWords } from "../wordSegments.ts";
+import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
 
 export type WordCard = { w: string; piece: string; example: string; gloss: string; exampleGloss: string; reading?: string };
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
-const LANG_NAME: Record<string, string> = { en: "English", es: "Spanish", ja: "Japanese" };
 
 function cardOk(language: string, card: WordCard): boolean {
   if (!card.piece || !card.example || !card.gloss || !card.exampleGloss) return false;
@@ -25,7 +25,7 @@ function cardOk(language: string, card: WordCard): boolean {
 async function makeCards(language: string, words: readonly BankWord[]): Promise<WordCard[] | null> {
   const client = getOpenAIClient();
   if (!client) return null;
-  const name = LANG_NAME[language] ?? language;
+  const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
   const completion = await completeChat(client, "translate", {
     temperature: 0.3,
     max_tokens: 9000,
