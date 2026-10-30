@@ -201,7 +201,30 @@ export function FrameLesson({
         {step === "explain" ? (
           <div data-lesson-explain className="flex flex-col gap-3">
             {lesson === undefined ? <p className="text-caption text-slate-400">…</p> : null}
-            {lesson?.explain?.length ? (
+            {/* Structured explanation (2026-10-30, user): meaning → structure (each fixed part and what it does) → usage → examples. */}
+            <section data-lesson-meaning>
+              <h3 className="text-meta font-semibold text-slate-400">{ui.aboutMeaning}</h3>
+              <p dir="auto" className="mt-0.5 text-note text-ink">
+                {lesson?.meaning || glossFor(frame.meaning, locale)}
+              </p>
+            </section>
+            {lesson?.parts?.length ? (
+              <section data-lesson-parts>
+                <h3 className="text-meta font-semibold text-slate-400">{ui.insightPattern}</h3>
+                <ul className="mt-1 flex flex-col gap-1.5">
+                  {lesson.parts.map((part, index) => (
+                    <li key={index} className="flex items-baseline gap-2">
+                      <span dir="auto" className={`shrink-0 rounded-lg px-1.5 py-0.5 text-chat ${part.piece.includes("___") ? "border border-dashed border-status-learned/60 text-status-learned" : "bg-white/10 text-ink"}`}>
+                        {part.piece}
+                      </span>
+                      <span dir="auto" className="min-w-0 text-note text-slate-300">
+                        {part.role}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : lesson?.explain?.length ? (
               <ul className="flex flex-col gap-1.5 rounded-xl border border-line bg-surface-sunk px-3 py-2.5">
                 {lesson.explain.map((line, index) => (
                   <li key={index} dir="auto" className="text-note text-slate-200">
@@ -210,6 +233,15 @@ export function FrameLesson({
                 ))}
               </ul>
             ) : null}
+            {lesson?.usage ? (
+              <section data-lesson-usage>
+                <h3 className="text-meta font-semibold text-slate-400">{ui.aboutUsage}</h3>
+                <p dir="auto" className="mt-0.5 text-note text-slate-200">
+                  {lesson.usage}
+                </p>
+              </section>
+            ) : null}
+            <h3 className="-mb-1 text-meta font-semibold text-slate-400">{ui.example}</h3>
             <ul className="flex flex-col gap-2">
               {frame.examples.map((example, index) => (
                 <li key={index} className="flex items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">

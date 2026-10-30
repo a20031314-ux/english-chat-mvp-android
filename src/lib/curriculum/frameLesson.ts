@@ -9,7 +9,10 @@ import { glossFor } from "./stageScripts.ts";
 
 /** 대화 한 차례: 상대 줄(학습 언어)·그 뜻(앱 언어), 내가 할 대답(학습 언어)·그 뜻(앱 언어). */
 export type LessonTurn = { them: string; themGloss: string; me: string; meGloss: string };
-export type FrameLesson = { explain: string[]; turns: LessonTurn[] };
+/** 구조 한 조각: 틀의 고정 부분(학습 언어, ___ 칸이면 "___")과 그 조각이 하는 일(앱 언어). */
+export type LessonPart = { piece: string; role: string };
+/** 설명(2026-10-30 사용자 "이 표현은 이런 뜻이고 왜 이런 구조고 예문은 이런 게 있다"): 뜻 · 구조(조각마다) · 쓰임. explain은 v4까지의 줄글. */
+export type FrameLesson = { explain: string[]; meaning?: string; parts?: LessonPart[]; usage?: string; turns: LessonTurn[] };
 
 export type LessonStep = "explain" | "quiz" | "talk" | "done";
 
