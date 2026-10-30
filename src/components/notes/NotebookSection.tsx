@@ -88,20 +88,13 @@ const CURRICULUM_ONLY = true;
 
 // 오늘 할 것과 단계는 한 칸(2026-10-30 사용자 "오늘 할 것과 단계는 통합 — 첫 화면은 일일 학습으로 바로, 끝나면 단계 화면"): "stage".
 type MyLayer = "stage" | "keep" | "review";
-const LAYER_KEY = "myLayer.v1";
-// 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도"):
-// 고른 칸은 그날만 기억하고, 날이 바뀌면 n단계(오늘 할 것)부터.
-const LAYER_DAY_KEY = "myLayer.day";
+// 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도").
+// 큰 칸은 모두 펼친 채로 시작하고, 위 칸 이름 줄을 누르면 그 칸으로 이동(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동").
 const AUTO_KEEP_KEY = "myLayer.autoKeep";
-function readLayer(): MyLayer | null {
-  try {
-    if (localStorage.getItem(LAYER_DAY_KEY) !== localDay()) return "stage";
-    const saved = localStorage.getItem(LAYER_KEY);
-    if (saved === "none") return null;
-    return saved === "keep" || saved === "review" ? saved : "stage";
-  } catch {
-    return "stage";
-  }
+
+/** 그 큰 칸으로 스크롤(칸 이름 줄 아래에 머리가 오게). */
+function scrollToLayer(id: MyLayer) {
+  window.setTimeout(() => document.querySelector(`[data-my-layer="${id}"]`)?.scrollIntoView({ block: "start", behavior: "smooth" }), 60);
 }
 
 /** 오늘 할 것을 다 하면 그날 한 번 퀴즈 칸을 펴고 맨 위로(그 뒤 다른 칸을 고르면 그대로). */
@@ -119,8 +112,6 @@ function AutoQuiz({ done, onOpen }: { done: boolean; onOpen: (layer: MyLayer) =>
       // 이 폰에 못 남기면 이번에만.
     }
     openRef.current("keep");
-    const timer = window.setTimeout(() => document.querySelector('[data-my-layer="keep"]')?.scrollIntoView({ block: "start", behavior: "smooth" }), 150);
-    return () => window.clearTimeout(timer);
   }, [done]);
   return null;
 }
@@ -225,20 +216,28 @@ export function NotebookSection({
   const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
-  // My 큰 칸(오늘 할 것 · n단계 · 복습) 중 펼친 하나(2026-10-30 사용자 "큰 층위 하나만 보이게"). 이 폰에만.
-  const [layer, setLayerState] = useState<MyLayer | null>(readLayer);
-  // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때). 칸을 바꾸면 다시 오늘로.
+  // My 큰 칸(n단계 · Quizbank · 복습) 중 접은 것(기본은 모두 펼침, 2026-10-31). 이 화면에만.
+  const [closed, setClosed] = useState<ReadonlySet<MyLayer>>(() => new Set());
+  // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때).
   const [stagePeek, setStagePeek] = useState(false);
+  /** 그 칸을 펴고 그리로 이동. */
   const openLayer = (next: MyLayer | null) => {
-    if (next !== "stage") setStagePeek(false);
-    setLayerState(next);
-    try {
-      localStorage.setItem(LAYER_KEY, next ?? "none");
-      localStorage.setItem(LAYER_DAY_KEY, localDay());
-    } catch {
-      // 다음에 열 때 처음 칸으로.
-    }
+    if (!next) return;
+    setClosed((current) => {
+      if (!current.has(next)) return current;
+      const copy = new Set(current);
+      copy.delete(next);
+      return copy;
+    });
+    scrollToLayer(next);
   };
+  const toggleLayer = (id: MyLayer) =>
+    setClosed((current) => {
+      const copy = new Set(current);
+      if (copy.has(id)) copy.delete(id);
+      else copy.add(id);
+      return copy;
+    });
   // 사다리에서 아무 단계나 "이 단계로 정하기"(2026-10-29) — 조건·시험 없이 지금 단계를 바꾼다.
   const setStageTo = (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -528,8 +527,9 @@ export function NotebookSection({
           language={language}
           peek={stagePeek}
           onPeek={setStagePeek}
-          open={layer}
+          closed={closed}
           onOpen={openLayer}
+          onToggle={toggleLayer}
           today={
             lettersOn ? (
               { summary: null, body: <LettersPlan ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={() => setLetters(false)} /> }
@@ -2163,12 +2163,54 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
   review: { box: "border-bad/40 bg-bad/[0.04]", title: "text-bad" },
 };
 
+/**
+ * 큰 칸 이름 줄(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동"): 칸이 모두 펼쳐져 길어서,
+ * 위에 붙어 있는 이름을 누르면 그 칸으로 이동. 지금 보이는 칸은 그 칸 색.
+ */
+function LayerJump({ items, onJump }: { items: { id: MyLayer; title: string }[]; onJump: (id: MyLayer) => void }) {
+  const [current, setCurrent] = useState<MyLayer | null>(null);
+  const order = items.map((one) => one.id).join(",");
+  useEffect(() => {
+    const ids = order.split(",") as MyLayer[];
+    const look = () => {
+      let seen: MyLayer | null = null;
+      // 이름 줄 바로 아래까지 올라온 칸 중 마지막 = 지금 보는 칸.
+      const line = (document.querySelector("[data-my-jump]")?.getBoundingClientRect().bottom ?? 120) + 32;
+      for (const id of ids) {
+        const box = document.querySelector(`[data-my-layer="${id}"]`)?.getBoundingClientRect();
+        if (box && box.top <= line) seen = id;
+      }
+      setCurrent(seen ?? ids[0] ?? null);
+    };
+    look();
+    document.addEventListener("scroll", look, true);
+    return () => document.removeEventListener("scroll", look, true);
+  }, [order]);
+  return (
+    <nav data-my-jump className="sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3">
+      {items.map((one) => (
+        <button
+          key={one.id}
+          type="button"
+          data-my-jump-to={one.id}
+          aria-current={current === one.id ? "true" : undefined}
+          onClick={() => onJump(one.id)}
+          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${current === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : "border-line text-slate-300"}`}
+        >
+          {one.title}
+        </button>
+      ))}
+    </nav>
+  );
+}
+
 function MyLayers({
   ui,
   language,
   locale,
-  open,
+  closed,
   onOpen,
+  onToggle,
   today,
   plan,
   stage,
@@ -2179,8 +2221,11 @@ function MyLayers({
   ui: UICopy;
   language: string;
   locale: string;
-  open: MyLayer | null;
+  /** 접은 칸(기본 없음 = 모두 펼침). */
+  closed: ReadonlySet<MyLayer>;
+  /** 칸을 펴고 그리로 이동(칸 이름 줄·오늘 할 것이 끝났을 때). */
   onOpen: (layer: MyLayer | null) => void;
+  onToggle: (layer: MyLayer) => void;
   /** 0단계 글자 묶음일 때 오늘 할 것 자리(TodayPlan 없음). */
   today: LayerPart | null;
   plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
@@ -2194,13 +2239,13 @@ function MyLayers({
   // 오늘 할 것이 안 끝났으면 칸 안은 오늘 할 것, 끝나면 단계 화면.
   const review = useReviewNotes(language, notes);
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
-    const on = open === id;
+    const on = !closed.has(id);
     return (
-      <section key={id} data-my-layer={id} className={`mt-3 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
+      <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
         <button
           type="button"
           aria-expanded={on}
-          onClick={() => onOpen(on ? null : id)}
+          onClick={() => onToggle(id)}
           className="flex w-full items-center gap-2 px-3 py-3 text-start"
         >
           <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
@@ -2244,6 +2289,13 @@ function MyLayers({
       <>
         {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
         {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} /> : null}
+        <LayerJump
+          items={[
+            ...(todayDone && keepCard ? (["keep", "stage"] as const) : keepCard ? (["stage", "keep"] as const) : (["stage"] as const)),
+            "review" as const,
+          ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.reviewLayerTitle }))}
+          onJump={onOpen}
+        />
         {todayDone && keepCard ? keepCard : stageCard}
         {todayDone && keepCard ? stageCard : keepCard}
         {card(
