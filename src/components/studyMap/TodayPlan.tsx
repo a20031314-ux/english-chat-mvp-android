@@ -23,7 +23,7 @@ import {
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
-import { buildUnit, bundleQuiz, orderTiles, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
+import { buildQuiz, buildUnit, bundleQuiz, orderTiles, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -220,6 +220,9 @@ export function TodayPlan({
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
   const [matching, setMatching] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState<"keep" | "review" | null>(null);
+  const [todaySettings, setTodaySettings] = useState(false);
+  // 오늘 할 것의 퀴즈 한 문제: 답은 "다음"을 누를 때 기록(바로 기록하면 맞음·틀림을 보기 전에 다음 할 것으로 바뀜).
+  const todayServed = useRef<{ id: string; result: boolean | null } | null>(null);
   // 어휘 짝 맞추기에서 막 본 낱말들(그다음 예문 빈칸 묶음).
   const [wordRound, setWordRound] = useState<string[] | null>(null);
   const servedWords = useRef<string>("");
@@ -605,7 +608,6 @@ export function TodayPlan({
   const unitMix = unitItem ? unitMixOf(unitItem) : null;
   // 같은 날·같은 조합이면 같은 문제(씨앗) — 다시 그려도 바뀌지 않는다.
   const unitQuestions = unitItem && unitMix ? buildUnit(language, unitItem.id, unitMix, day) : [];
-  const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
   // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
@@ -669,38 +671,91 @@ export function TodayPlan({
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
   const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
+  // 오늘 할 것(2026-10-30 사용자 "퀴즈랑 똑같이 첫 화면으로 — 다 안 보여 줘도 되니까 뭘 할지 명확히"): 목록 대신 지금 할 것 하나를 크게,
+  // 나머지는 점으로만. 퀴즈면 칸 안에서 바로 한 문제, 상황·문장구조·꺼내 쓰기면 첫 줄이 보이는 카드 하나(누르면 시작).
+  const currentAt = items.findIndex((item) => !doneOf(item));
+  const current = currentAt >= 0 ? items[currentAt]! : null;
+  const openItem = (item: PlanItem) => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id));
+  const todayMake = (): QuizBatch | null => {
+    if (!current || current.kind !== "quiz") return null;
+    const served = todayServed.current;
+    if (served?.id === `${current.id}|${current.review ?? ""}`) {
+      // 다음을 눌렀다 → 기록하면 이 항목이 끝나고 다음 할 것으로 넘어간다.
+      if (served.result !== null) finishQuiz(current, served.result);
+      todayServed.current = null;
+      return null;
+    }
+    const quiz = buildQuiz(language, current.id, { card: current.card, seed: day, stage, mix: settings.mix });
+    const first = quiz?.questions[0];
+    if (!first) return null;
+    todayServed.current = { id: `${current.id}|${current.review ?? ""}`, result: null };
+    return { questions: [first], keys: [current.id] };
+  };
+  const previewOf = (item: PlanItem): string => {
+    if (item.kind === "script") return scripts.find((one) => one.id === item.id)?.lines[0]?.text ?? "";
+    if (item.kind === "frame") return frames.find((one) => one.id === item.id)?.examples[0]?.text ?? "";
+    return "";
+  };
   const todayBody = (
     <div data-today-plan>
-      <ul className="mt-2 flex flex-col gap-1.5">
-        {items.map((item) => {
-          const done = doneOf(item);
-          return (
-            <li key={`${item.id}-${item.review ?? ""}`}>
-              <button
-                type="button"
-                disabled={item.kind === "recall" && !recallLearned.length}
-                onClick={() => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id))}
-                className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
-              >
-                <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
-                  {done ? "✓" : ""}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span dir="auto" className={`block truncate text-note ${done ? "text-slate-400" : "text-ink"}`}>
-                    {labelOf(item)}
-                  </span>
-                  {item.review && item.kind !== "quiz" ? (
-                    <span dir="auto" className="block truncate text-meta text-warn">
-                      {ui.planAgain} · {keyLabel(language, item.review, grammarName)}
-                    </span>
-                  ) : null}
-                </span>
-                <span className="shrink-0 text-caption tabular-nums text-slate-500">{ui.planMinutes.replace("{n}", String(item.minutes))}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="flex items-center gap-2">
+        {/* 오늘 몇 개 중 어디까지 — 점만(이름 목록은 안 보임). */}
+        <span role="img" aria-label={`${Math.max(0, currentAt < 0 ? items.length : currentAt)}/${items.length}`} data-today-dots className="flex min-w-0 flex-1 flex-wrap items-center gap-1">
+          {items.map((item, i) => (
+            <span
+              key={`${item.id}-${item.review ?? ""}`}
+              aria-hidden
+              className={`h-2 w-2 rounded-full ${doneOf(item) ? "bg-status-mastered" : i === currentAt ? "bg-status-learned" : "border border-line"}`}
+            />
+          ))}
+        </span>
+        <button
+          type="button"
+          data-plan-settings
+          aria-expanded={todaySettings}
+          aria-label={ui.planSettings}
+          title={ui.planSettings}
+          onClick={() => setTodaySettings(!todaySettings)}
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
+        >
+          <span aria-hidden>⚙</span>
+        </button>
+      </div>
+      {current && current.kind === "quiz" ? (
+        <InlineQuiz
+          ui={ui}
+          locale={locale}
+          language={language}
+          resetKey={`today|${current.id}|${current.review ?? ""}`}
+          make={todayMake}
+          onResult={(one) => {
+            if (todayServed.current && !one.skipped) todayServed.current.result = one.correct;
+          }}
+          empty={null}
+        />
+      ) : current ? (
+        <button
+          type="button"
+          data-today-current={current.kind}
+          disabled={current.kind === "recall" && !recallLearned.length}
+          onClick={() => openItem(current)}
+          className="mt-1 flex w-full items-center gap-3 rounded-xl border border-status-learned/50 bg-status-learned/[0.06] px-3 py-3 text-start hover:bg-status-learned/10"
+        >
+          <span className="min-w-0 flex-1">
+            <span dir="auto" className="block truncate text-note font-semibold text-ink">
+              {labelOf(current)}
+            </span>
+            {previewOf(current) ? (
+              <span dir="auto" className="mt-1 block truncate text-chat text-slate-300">
+                {previewOf(current)}
+              </span>
+            ) : null}
+          </span>
+          <span aria-hidden className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/90 text-caption text-slate-900">
+            ▶
+          </span>
+        </button>
+      ) : null}
       {finished ? (
         <LearnedToday
           ui={ui}
@@ -718,10 +773,10 @@ export function TodayPlan({
         />
       ) : null}
       {learned}
-      {/* Pace, order, mix and the morning reminder fold away (2026-10-30, user: one big level on screen, the rest beneath it). */}
-      <details data-plan-settings className="mt-3">
-        <summary aria-label={ui.planSettings} title={ui.planSettings} className="inline-flex h-8 w-8 cursor-pointer list-none items-center justify-center rounded-full border border-line text-caption text-slate-300 hover:bg-white/10">⚙</summary>
-        <div role="group" className="mt-2 flex flex-wrap gap-1.5">
+      {/* Pace, order, mix and the morning reminder open from ⚙ (2026-10-30, user: one big level on screen, the rest beneath it). */}
+      {todaySettings ? (
+      <div data-plan-settings-panel className="mt-3 border-t border-line pt-2">
+        <div role="group" className="flex flex-wrap gap-1.5">
         {PACES.map((pace) => {
           const days = daysLeft(language, pace, planPassed, stage);
           const on = settings.pace === pace;
@@ -767,7 +822,8 @@ export function TodayPlan({
         ))}
       </div>
       <MorningControl ui={ui} />
-      </details>
+      </div>
+      ) : null}
     </div>
   );
   const overlays = (
