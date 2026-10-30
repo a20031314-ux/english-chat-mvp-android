@@ -1,6 +1,11 @@
 "use client";
 
+import { useMemo } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { CallRecap } from "@/components/roleplay/CallRecap";
+import { buildRecap } from "@/lib/roleplay/recap";
+import { handOffFrame } from "@/lib/notes/locateHandoff";
+import { sendAppIntent } from "@/lib/appIntents";
 import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import type { SavedConversation } from "@/lib/roleplay/saved";
@@ -27,15 +32,19 @@ export function RoleplayPast({
   onClose,
   nativeLanguage,
   isPremium,
+  onLeave,
 }: {
   saved: SavedConversation;
   ui: UICopy;
   onClose: () => void;
+  /** My로 넘어갈 때 — 돌아보기와 그 아래 통화 기록 목록까지 닫는다(없으면 onClose). */
+  onLeave?: () => void;
   nativeLanguage: LearningLanguageCode;
   isPremium: boolean;
 }) {
   const sayAgain = (target: string) =>
     sayLine(target, { targetLanguage: coerceLanguageCode(saved.language), nativeLanguage, isPremium });
+  const recap = useMemo(() => buildRecap(saved.language, saved.said), [saved]);
   const analysis = useEnglishAnalysisOptional();
   const analyze = analysis
     ? (text: string) =>
@@ -80,6 +89,24 @@ export function RoleplayPast({
             ledgerLanguage={saved.language}
           />
         ))}
+        {/* 통화 정리(roleplay/recap.ts) — 끝난 화면과 같은 카드. 다시 볼 것에는 끝날 때 이미 넣었으니 여기선 넣지 않는다. */}
+        {recap.length ? (
+          <li>
+            <CallRecap
+              ui={ui}
+              language={saved.language}
+              locale={nativeLanguage}
+              items={recap}
+              saved={false}
+              onOpenFrame={(frame) => {
+                handOffFrame({ language: saved.language, stage: frame.stage, id: frame.id });
+                (onLeave ?? onClose)();
+                sendAppIntent("openTab", { tab: "map" });
+              }}
+              onLeave={onLeave ?? onClose}
+            />
+          </li>
+        ) : null}
       </ol>
     </FullScreenLayer>
   );

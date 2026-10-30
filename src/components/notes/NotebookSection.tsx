@@ -7,7 +7,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
-import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
+import { onLocate, takeFrame, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
@@ -238,6 +238,13 @@ export function NotebookSection({
   useEffect(() => {
     if (!loaded) return;
     const take = () => {
+      // 통화 정리의 🧩 문장구조 → 단계 칸을 펴고 그 문장구조 수업을 연다(openScript와 같음).
+      const frame = takeFrame(language);
+      if (frame) {
+        openLayer("stage");
+        setStagePeek(true);
+        setJump({ stage: frame.stage, id: frame.id, at: Date.now() });
+      }
       const handed = takeLocate(language);
       if (!handed) return;
       setQuestion(handed);

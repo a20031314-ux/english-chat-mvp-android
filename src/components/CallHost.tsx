@@ -115,7 +115,17 @@ export function CallHost({
         <CallList ui={ui} locale={nativeLanguage} language={targetLanguage} canCall={enabled && Boolean(openTalk)} onClose={() => setListing(false)} />
       ) : null}
       {reading ? (
-        <RoleplayPast saved={reading} ui={ui} onClose={() => setReading(null)} nativeLanguage={nativeLanguage} isPremium={isPremium} />
+        <RoleplayPast
+          saved={reading}
+          ui={ui}
+          onClose={() => setReading(null)}
+          onLeave={() => {
+            setReading(null);
+            setListing(false);
+          }}
+          nativeLanguage={nativeLanguage}
+          isPremium={isPremium}
+        />
       ) : null}
       {ownLine ? (
         <BodyLayer>

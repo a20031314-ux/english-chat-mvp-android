@@ -48,3 +48,24 @@ export function onLocate(listener: () => void): () => void {
   listeners.add(listener);
   return () => listeners.delete(listener);
 }
+
+/**
+ * 통화 정리(roleplay/recap.ts)의 🧩 문장구조 → My n단계 그 문장구조 수업으로(2026-10-30).
+ * My에서 찾기와 같은 길: My 탭이 그려지고 노트 틀이 서버 답을 받은 뒤 꺼낸다(NotebookSection → openScript).
+ */
+export type FrameHandoff = { language: string; stage: number; id: string; at: number };
+
+let pendingFrame: FrameHandoff | null = null;
+
+export function handOffFrame(next: Omit<FrameHandoff, "at">): void {
+  pendingFrame = { ...next, at: Date.now() };
+  listeners.forEach((listener) => listener());
+}
+
+/** 그 언어의 넘긴 문장구조(꺼내면 지움). */
+export function takeFrame(language: string): FrameHandoff | null {
+  if (!pendingFrame || pendingFrame.language !== language || Date.now() - pendingFrame.at > KEEP_MS) return null;
+  const out = pendingFrame;
+  pendingFrame = null;
+  return out;
+}

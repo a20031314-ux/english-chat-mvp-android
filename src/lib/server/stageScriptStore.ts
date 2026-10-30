@@ -79,6 +79,11 @@ export async function saveChecks(
   checks: Record<string, boolean>,
   now = Date.now(),
   quiz = false,
+  /**
+   * 통화 정리(roleplay/recap.ts)처럼 써 보기 층에서 온 것: 다시 볼 것에만 넣고 확인 중·이미 앎은 건드리지 않는다
+   * (학습 흐름 세 층 — 숙지는 My 안에서만, 사용자 2026-10-29).
+   */
+  reviewOnly = false,
 ): Promise<{ review: ReviewMap; known: KnownMap }> {
   const key = stageScriptKey(userId, language);
   const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
@@ -93,6 +98,7 @@ export async function saveChecks(
       continue;
     }
     review = applyCheck(review, check, ok, now);
+    if (reviewOnly) continue;
     // 퀴즈 답만 확인 중 열쇠를 움직인다(알아요·헷갈려요는 스스로 고른 것이라 — 헷갈려요는 지움).
     // 뼈대 밖에서 막힌 것(u|, curriculum/gaps.ts)은 시험에 안 나와서 퀴즈 정답이 확인 중을 처음 만든다.
     if (quiz || !ok) known = applyKnown(known, check, ok, now, quiz && (check.startsWith("u|") || check.startsWith("w|")));

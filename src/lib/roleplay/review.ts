@@ -42,6 +42,8 @@ export type TranscriptLine = {
   about?: string;
   /** 학습자 줄: 받아쓰기가 확신이 낮았음 — 줄 끝에 "?"(speechConfidence.ts). */
   unsure?: boolean;
+  /** 튜터 줄: 번역이 접힌 채 눌러서 뜻을 봤음 — 통화 정리의 "뜻을 본 말"(recap.ts). */
+  looked?: boolean;
 };
 
 export type StuckTurn = {

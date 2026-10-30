@@ -30,6 +30,7 @@ export const maxDuration = 60;
  * POST { language, checkup: { stage, parts, origins, wrong, kind?, stages?, asked?: [[열쇠, 맞음]] } } → { checkups, review } — 이번 주 확인(7일에 한 번, 그 안이면 409) 또는 처음 시험(kind "placement", 언제든)을 끝냄.
  *   틀린 열쇠는 다시 볼 것(2일 뒤). 문장·들린 말은 받지 않는다.
  * POST { language, check: { 열쇠(e|표현 또는 f|문장구조 id): true(알아요) | false(헷갈려요) } } — 학습 끝 체크(오늘 할 것, curriculum/dailyPlan.ts) → { review }.
+ *   from: "call"이면 통화 정리 — 다시 볼 것에만 넣고 확인 중·이미 앎은 그대로(roleplay/recap.ts).
  * POST { language, id, redo: true } — 틀린 틀 "다시 연습"을 끝냄(/api/notebook redo에서 3일 빠짐).
  * POST { language, id, outcome? } → { passed: [id] } — id는 대본 또는 틀(frames.ts) — 앱이 내 줄을 모두 통과 방식으로 맞혔을 때만 보낸다(curriculum/stageScripts.ts runPasses).
  *   대본의 핵심 표현(expressions)을 장부에 "도움 받은 써 봄"으로 올린다(만남 → 배움, 2026-10-28 "표현연결"). outcome(앱이 보냄)은 지금 안 씀.
@@ -107,7 +108,8 @@ export async function POST(request: NextRequest) {
   if (body.check && typeof body.check === "object" && !Array.isArray(body.check)) {
     const checks = Object.fromEntries(Object.entries(body.check as Record<string, unknown>).filter(([, value]) => typeof value === "boolean")) as Record<string, boolean>;
     // quiz: true = 퀴즈 답(확인 중 열쇠를 다른 날 맞히면 이미 앎으로, curriculum/known.ts).
-    return jsonWithCors(request, await saveChecks(userId, language, checks, Date.now(), body.quiz === true));
+    // from "call": 통화 정리(roleplay/recap.ts)가 찾은 문장구조 — 다시 볼 것에만(숙지는 그대로).
+    return jsonWithCors(request, await saveChecks(userId, language, checks, Date.now(), body.quiz === true, body.from === "call"));
   }
   const id = typeof body.id === "string" ? body.id : "";
   // 대본 또는 틀 바꿔 말하기의 틀(curriculum/frames.ts, id "ja-f1-01") — 통과 기록은 같은 곳.

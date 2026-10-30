@@ -1,6 +1,10 @@
 "use client";
 
 import { tutorIsBilingual } from "@/lib/tutorLanguage";
+import { CallRecap } from "@/components/roleplay/CallRecap";
+import { buildRecap, recapReviewKeys } from "@/lib/roleplay/recap";
+import { handOffFrame } from "@/lib/notes/locateHandoff";
+import { sendAppIntent } from "@/lib/appIntents";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -1115,6 +1119,25 @@ export function RoleplayScreen({
     };
   }, []);
 
+  const callOver = Boolean(state?.finished || instruction?.do === "finish");
+  // 통화 정리(roleplay/recap.ts): 끝나면 고친 줄·도움말·뜻 본 튜터 줄 → 문장구조를 찾아 다시 볼 것에 자동으로(숙지는 그대로, from "call").
+  const recap = useMemo(() => (callOver && scenario ? buildRecap(scenario.language, said) : []), [callOver, scenario, said]);
+  const [recapSaved, setRecapSaved] = useState(false);
+  const recapSentRef = useRef("");
+  useEffect(() => {
+    if (!callOver || !scenario) return;
+    const keys = recapReviewKeys(recap);
+    const sig = keys.join(",");
+    if (!keys.length || recapSentRef.current === sig) return;
+    recapSentRef.current = sig;
+    void fetch(apiUrl("/api/curriculum/scripts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language: scenario.language, from: "call", check: Object.fromEntries(keys.map((key) => [key, false])) }),
+    })
+      .then((response) => setRecapSaved(response.ok))
+      .catch(() => undefined);
+  }, [callOver, scenario, recap, isPremium]);
   if (!scenario) return null;
 
   // Lines open in the sentence sheet once the scene is over and the
@@ -1232,6 +1255,9 @@ export function RoleplayScreen({
             onTranslate={translateLine}
             showTranslation={showTranslations}
             ledgerLanguage={scenario.language}
+            onLooked={() =>
+              setSaid((current) => current.map((one, at) => (at === index ? { ...one, looked: true } : one)))
+            }
             onAnalyze={sceneOver ? analyzeLine : undefined}
             onSayAgain={
               sceneOver
@@ -1241,6 +1267,23 @@ export function RoleplayScreen({
           />
           );
         })}
+        {sceneOver && recap.length ? (
+          <li>
+            <CallRecap
+              ui={ui}
+              language={scenario.language}
+              locale={nativeLanguage}
+              items={recap}
+              saved={recapSaved}
+              onOpenFrame={(frame) => {
+                handOffFrame({ language: scenario.language, stage: frame.stage, id: frame.id });
+                onClose();
+                sendAppIntent("openTab", { tab: "map" });
+              }}
+              onLeave={onClose}
+            />
+          </li>
+        ) : null}
         {pending ? (
           <li className="mb-2 flex justify-end">
             <div className="max-w-[80%] rounded-2xl border border-dashed border-white/20 px-3 py-2 text-[14px] leading-snug text-neutral-400">

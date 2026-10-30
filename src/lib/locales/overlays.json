@@ -846,7 +846,9 @@
     "recallNone": "まだ覚えた文型がありません",
     "framesToNext": "次の段階まで：文型 {a}/{n} · 使ってみる {b}/{n}",
     "reviewLayerTitle": "復習",
-    "tutorLanguage": "チューターが話す言葉"
+    "tutorLanguage": "チューターが話す言葉",
+    "callRecapTitle": "この通話のまとめ",
+    "callRecapLooked": "意味を見た言葉"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1695,7 +1697,9 @@
     "recallNone": "还没有学会的句型",
     "framesToNext": "进入下一阶段前：句型 {a}/{n} · 用起来 {b}/{n}",
     "reviewLayerTitle": "复习",
-    "tutorLanguage": "导师使用的语言"
+    "tutorLanguage": "导师使用的语言",
+    "callRecapTitle": "本次通话整理",
+    "callRecapLooked": "查看过意思的句子"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2547,7 +2551,9 @@
     "recallNone": "Chưa có cấu trúc câu đã học",
     "framesToNext": "Trước giai đoạn tiếp theo: Cấu trúc câu {a}/{n} · Dùng thử {b}/{n}",
     "reviewLayerTitle": "Ôn tập",
-    "tutorLanguage": "Gia sư nói bằng"
+    "tutorLanguage": "Gia sư nói bằng",
+    "callRecapTitle": "Tóm tắt cuộc gọi",
+    "callRecapLooked": "Câu đã xem nghĩa"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3404,7 +3410,9 @@
     "recallNone": "Aucune structure apprise pour l’instant",
     "framesToNext": "Avant l’étape suivante : Structures {a}/{n} · Réutiliser {b}/{n}",
     "reviewLayerTitle": "Révision",
-    "tutorLanguage": "Le tuteur parle"
+    "tutorLanguage": "Le tuteur parle",
+    "callRecapTitle": "De cet appel",
+    "callRecapLooked": "Phrases dont vous avez vu le sens"
   },
   "it": {
     "archive": "Report",
@@ -4452,7 +4460,9 @@
     "recallNone": "Nessuna struttura imparata ancora",
     "framesToNext": "Prima della fase successiva: Strutture {a}/{n} · Usalo {b}/{n}",
     "reviewLayerTitle": "Ripasso",
-    "tutorLanguage": "Il tutor parla"
+    "tutorLanguage": "Il tutor parla",
+    "callRecapTitle": "Da questa chiamata",
+    "callRecapLooked": "Frasi di cui hai visto il significato"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5312,7 +5322,9 @@
     "recallNone": "Nenhuma estrutura aprendida ainda",
     "framesToNext": "Antes da próxima etapa: Estruturas {a}/{n} · Use você {b}/{n}",
     "reviewLayerTitle": "Revisão",
-    "tutorLanguage": "O tutor fala"
+    "tutorLanguage": "O tutor fala",
+    "callRecapTitle": "Desta chamada",
+    "callRecapLooked": "Frases cujo significado você viu"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6358,7 +6370,9 @@
     "recallNone": "Пока нет выученных конструкций",
     "framesToNext": "До следующего этапа: Конструкции {a}/{n} · Применить {b}/{n}",
     "reviewLayerTitle": "Повторение",
-    "tutorLanguage": "Язык репетитора"
+    "tutorLanguage": "Язык репетитора",
+    "callRecapTitle": "Итоги звонка",
+    "callRecapLooked": "Фразы, которые вы перевели"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7214,7 +7228,9 @@
     "recallNone": "Belum ada struktur kalimat yang dipelajari",
     "framesToNext": "Sebelum tahap berikutnya: Struktur kalimat {a}/{n} · Pakai {b}/{n}",
     "reviewLayerTitle": "Ulangan",
-    "tutorLanguage": "Tutor berbicara"
+    "tutorLanguage": "Tutor berbicara",
+    "callRecapTitle": "Dari panggilan ini",
+    "callRecapLooked": "Kalimat yang kamu lihat artinya"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8063,7 +8079,9 @@
     "recallNone": "لا توجد تراكيب مُتعلَّمة بعد",
     "framesToNext": "قبل المرحلة التالية: تراكيب {a}/{n} · استخدمها {b}/{n}",
     "reviewLayerTitle": "مراجعة",
-    "tutorLanguage": "لغة المعلّم"
+    "tutorLanguage": "لغة المعلّم",
+    "callRecapTitle": "من هذه المكالمة",
+    "callRecapLooked": "جمل اطّلعت على معناها"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8912,7 +8930,9 @@
     "recallNone": "ยังไม่มีโครงสร้างประโยคที่เรียนแล้ว",
     "framesToNext": "ก่อนขั้นถัดไป: โครงสร้างประโยค {a}/{n} · ลองใช้ {b}/{n}",
     "reviewLayerTitle": "ทบทวน",
-    "tutorLanguage": "ภาษาที่ติวเตอร์ใช้"
+    "tutorLanguage": "ภาษาที่ติวเตอร์ใช้",
+    "callRecapTitle": "สรุปการโทรครั้งนี้",
+    "callRecapLooked": "ประโยคที่ดูความหมาย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9761,6 +9781,8 @@
     "recallNone": "अभी कोई वाक्य ढाँचा नहीं सीखा",
     "framesToNext": "अगले चरण से पहले: वाक्य ढाँचे {a}/{n} · इस्तेमाल करो {b}/{n}",
     "reviewLayerTitle": "दोहराना",
-    "tutorLanguage": "ट्यूटर की भाषा"
+    "tutorLanguage": "ट्यूटर की भाषा",
+    "callRecapTitle": "इस कॉल से",
+    "callRecapLooked": "वाक्य जिनका अर्थ देखा"
   }
 }

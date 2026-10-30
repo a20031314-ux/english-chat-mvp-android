@@ -36,10 +36,13 @@ export function RoleplayLine({
   onSayAgain,
   showTranslation,
   ledgerLanguage,
+  onLooked,
 }: {
   line: TranscriptLine;
   ui: UICopy;
   onReview: (turn: StuckTurn) => void;
+  /** 튜터 줄의 접힌 번역을 눌러 봤다 — 통화 정리의 "뜻을 본 말"(roleplay/recap.ts). */
+  onLooked?: () => void;
   /** Ask for the gloss of a line that has none. Absent where nothing can. */
   onTranslate?: (text: string) => void;
   /**
@@ -78,6 +81,7 @@ export function RoleplayLine({
     setToolsOpen((open) => !open);
     if (line.who === "tutor" && !translationShown) {
       setRevealed(true);
+      if (!line.looked) onLooked?.();
       if (!line.translation) onTranslate?.(line.text);
     }
   };
