@@ -53,6 +53,7 @@ import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
+import { noteQuizDay } from "@/lib/curriculum/quizDays";
 import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, TARGETS, targetOf, trimCircle, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
@@ -198,7 +199,7 @@ export function TodayPlan({
   /** 일일 학습 카드 맨 아래에 묶는 "익힌 것"(ScriptAmount inside) — 지속 학습 숫자와 섞이지 않게. */
   learned?: ReactNode;
   /** 큰 칸 둘(오늘 할 것·복습)의 요약과 내용, 늘 떠 있어야 하는 퀴즈·시험 화면. */
-  children: (parts: { today: { summary: ReactNode; body: ReactNode; done: boolean }; keep: { summary: ReactNode; body: ReactNode }; review: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
+  children: (parts: { today: { summary: ReactNode; body: ReactNode; done: boolean }; keep: { summary: ReactNode; body: ReactNode; wrong: boolean }; review: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -472,6 +473,7 @@ export function TodayPlan({
     let logged = log;
     let nextTally = tally;
     for (const { key, correct } of results) {
+      noteQuizDay(language, localDay(), correct);
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
       if (correct && logged[key] && !logged[key]!.last) nextTally = addTally(nextTally, { fixed: key });
       logged = recordQuiz(logged, key, correct);
@@ -1281,11 +1283,6 @@ export function TodayPlan({
           })}
         </div>
         {!wrongTab && keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
-        {checkups.length ? (
-          <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
-            <span aria-hidden>📈</span>
-          </button>
-        ) : null}
         {learnTest ? testIcon(learnTest) : null}
         {!wrongTab && keepFocus === "vocab" && bank ? settingsIcon("keep") : null}
       </div>
@@ -1310,11 +1307,22 @@ export function TodayPlan({
   );
   // 복습 칸(퀴즈 아래, 따로): 읽고 정리(2026-10-30 사용자 A — 카드는 NotebookSection이 studyMap/ReviewNotes로) + 📝 시험 아이콘.
   // 틀린 것 다시 풀기는 퀴즈 칸의 "지난번에 틀린 것" 탭(nextStudy review 줄).
-  const reviewBody = reviewTest ? <div data-review className="mb-2 flex items-center justify-end gap-0.5">{testIcon(reviewTest)}</div> : null;
+  // Logbank 머리 아이콘(2026-10-31): 📈 실력 기록 · 📝 이번 주 확인 — 기록을 보는 곳이라 Quizbank에서 옮김.
+  const reviewBody =
+    reviewTest || checkups.length ? (
+      <div data-review className="mb-2 flex items-center justify-end gap-0.5">
+        {checkups.length ? (
+          <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
+            <span aria-hidden>📈</span>
+          </button>
+        ) : null}
+        {reviewTest ? testIcon(reviewTest) : null}
+      </div>
+    ) : null;
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
   return children({
     today: { summary: todaySummary, body: todayBody, done: finished },
-    keep: { summary: null, body: keepBody },
+    keep: { summary: null, body: keepBody, wrong: wrongTab },
     review: { summary: null, body: reviewBody },
     overlays,
   });

@@ -273,6 +273,9 @@ export type PartLogItem = {
 };
 
 export const PART_LOG_MAX = 60;
+/** Logbank 한 줄: 낱낱 + 갈래·단계(2026-10-31, 모든 단계 최근 14일). */
+export type LogItem = PartLogItem & { part: PartId; stage: number };
+export const LOG_MAX = 200;
 
 /**
  * 지금 단계 네 갈래의 최근 기록(partHistory와 같은 셈의 낱낱 + 튜터가 고친 줄), 새것부터, 갈래마다 60개까지.

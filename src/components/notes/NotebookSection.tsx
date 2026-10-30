@@ -10,7 +10,7 @@ import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeFrame, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
-import { PART_IDS, shareOf, type PartId, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
+import { PART_IDS, shareOf, type PartId, type LogItem, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
@@ -32,6 +32,7 @@ import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/s
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
 import { ReviewNotes, useReviewNotes } from "@/components/studyMap/ReviewNotes";
+import { Logbank } from "@/components/studyMap/Logbank";
 import { curriculumItems } from "@/lib/curriculum/dailyPlan";
 import { allMisses } from "@/lib/curriculum/scriptMisses";
 import { weakSpots, wordsToShow, type WeakSpot } from "@/lib/curriculum/weakSpots";
@@ -71,6 +72,8 @@ type Book = {
   partDays?: Record<PartId, number[]> | null;
   /** 같은 14일의 낱낱(배움·숙지·고침) — 망·그래프를 누르면(PartDetailSheet). 옛 서버면 없다. */
   partItems?: Record<PartId, PartLogItem[]> | null;
+  /** Logbank(모든 단계 최근 14일, 2026-10-31). */
+  logItems?: LogItem[];
   /** 오늘의 대본(서버 curriculum/scriptPick.ts, scripts=1). */
   recommend?: ScriptRecommend;
   /** 틀린 틀 다시 연습(서버 curriculum/frameRedo.ts, scripts=1). */
@@ -87,7 +90,8 @@ const NO_REVIEW: ReviewMap = {};
 const CURRICULUM_ONLY = true;
 
 // 오늘 할 것과 단계는 한 칸(2026-10-30 사용자 "오늘 할 것과 단계는 통합 — 첫 화면은 일일 학습으로 바로, 끝나면 단계 화면"): "stage".
-type MyLayer = "stage" | "keep" | "review";
+// 복습 칸은 Logbank로(2026-10-31 사용자 "복습 탭은 단계 학습 안으로, 그 자리는 날마다·주마다 배운 것 정리 — 이름은 ~bank로").
+type MyLayer = "stage" | "keep" | "log";
 // 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도").
 // 큰 칸은 모두 펼친 채로 시작하고, 위 칸 이름 줄을 누르면 그 칸으로 이동(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동").
 const AUTO_KEEP_KEY = "myLayer.autoKeep";
@@ -570,9 +574,10 @@ export function NotebookSection({
               : null
           }
           stage={{
-            title: ui.stageNumber.replace("{n}", String(lettersOn ? 0 : book.stage)),
+            // 이름은 Stagebank(2026-10-31 사용자 "~bank식으로 이름 통일"), 지금 단계는 머리 오른쪽에.
+            title: ui.stagebankTitle,
             // 진척 숫자는 안 보임(사용자 2026-10-30 "진척 숫자는 그냥 삭제") — "다음 단계까지 n"을 뺌.
-            summary: studyMode === "free" ? ui.modeFree : null,
+            summary: [ui.stageNumber.replace("{n}", String(lettersOn ? 0 : book.stage)), studyMode === "free" ? ui.modeFree : null].filter(Boolean).join(" · "),
             body: (
               <>
         <StageFrame
@@ -644,6 +649,7 @@ export function NotebookSection({
           }}
           locale={locale}
           notes={weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review: book.review ?? NO_REVIEW, grammarName, limit: 40 })}
+          logbank={(head) => <Logbank ui={ui} locale={locale} language={language} items={book.logItems ?? []} nodeName={nameOf} head={head} />}
         />
       ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (
@@ -2158,7 +2164,7 @@ function SkeletonProgress({
 
 
 type LayerPart = { summary: ReactNode; body: ReactNode };
-type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart; review: LayerPart; overlays: ReactNode };
+type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart & { wrong: boolean }; review: LayerPart; overlays: ReactNode };
 
 /**
  * My 큰 칸 셋(2026-10-30 사용자 "큰 층위 하나만 보이게 하고 나머지는 그 층위 아래로 — 모든 기능이 같은 층위로 나열된 게 문제"):
@@ -2169,7 +2175,7 @@ type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart; review
 const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
   stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
   keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good" },
-  review: { box: "border-bad/40 bg-bad/[0.04]", title: "text-bad" },
+  log: { box: "border-info/40 bg-info/[0.04]", title: "text-info" },
 };
 
 /**
@@ -2245,6 +2251,7 @@ function MyLayers({
   plan,
   stage,
   notes,
+  logbank,
   peek = false,
   onPeek,
 }: {
@@ -2263,8 +2270,10 @@ function MyLayers({
   today: LayerPart | null;
   plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
   stage: LayerPart & { title: string };
-  /** 복습 = 읽고 정리(지난번에 틀린 것, studyMap/ReviewNotes). */
+  /** 읽고 정리 카드(지난번에 틀린 것, studyMap/ReviewNotes) — Quizbank "지난번에 틀린 것" 탭 아래. */
   notes: readonly WeakSpot[];
+  /** Logbank 칸 안(머리 아이콘을 받아서). */
+  logbank: (head: ReactNode) => ReactNode;
   /** 오늘이 안 끝났어도 단계 화면(n단계 › 또는 밖에서 문장구조·상황을 열 때 — 그 안에서 열려야 해서). */
   peek?: boolean;
   onPeek: (on: boolean) => void;
@@ -2319,20 +2328,27 @@ function MyLayers({
             </>
           ),
         );
-    const keepCard = parts ? card("keep", ui.keepTitle, parts.keep.summary, parts.keep.body) : null;
-    const reviewCard = card(
-      "review",
-      ui.reviewLayerTitle,
-      null,
-      <>
-        {parts?.review.body}
-        <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
-      </>,
-    );
+    // 지난번에 틀린 것 탭이면 문제 아래 읽고 정리 카드(예전 복습 칸, 2026-10-31).
+    const keepCard = parts
+      ? card(
+          "keep",
+          ui.keepTitle,
+          parts.keep.summary,
+          <>
+            {parts.keep.body}
+            {parts.keep.wrong ? (
+              <div data-wrong-notes className="mt-3">
+                <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
+              </div>
+            ) : null}
+          </>,
+        )
+      : null;
+    const reviewCard = card("log", ui.logbankTitle, null, logbank(parts?.review.body ?? null));
     const jumpItems = [
       ...(todayDone && parts ? (["keep", "stage"] as const) : parts ? (["stage", "keep"] as const) : (["stage"] as const)),
-      "review" as const,
-    ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.reviewLayerTitle }));
+      "log" as const,
+    ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.logbankTitle }));
     return (
       <>
         {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}

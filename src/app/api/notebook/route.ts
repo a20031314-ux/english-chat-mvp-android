@@ -12,7 +12,7 @@ import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, grammarNodeId, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
-import { PART_IDS, PART_LOG_MAX, partHistory, partLog, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
+import { LOG_MAX, PART_IDS, PART_LOG_MAX, partHistory, partLog, recentMistakes, stageParts, vocabScore, vocabWords, withScripts, type LogItem } from "@/lib/notes/stageParts";
 import { myPartHistory, myPartLog, myStageParts } from "@/lib/notes/myParts";
 import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
 import { hasScripts } from "@/lib/curriculum/stageScripts";
@@ -131,6 +131,7 @@ export async function GET(request: NextRequest) {
   let parts: ReturnType<typeof stageParts>[] = [];
   let partDays: ReturnType<typeof partHistory> | null = null;
   let partItems: ReturnType<typeof partLog> | null = null;
+  let logItems: LogItem[] | null = null;
   let redo: RedoItem[] = [];
   let review: ReviewMap | null = null;
   let my: { passedAt: Map<string, number>; known: KnownMap } | null = null;
@@ -213,6 +214,22 @@ export async function GET(request: NextRequest) {
       partItems = Object.fromEntries(
         PART_IDS.map((part) => [part, [...mine[part], ...fixed[part]].sort((a, b) => b.at - a.at).slice(0, PART_LOG_MAX)]),
       ) as ReturnType<typeof partLog>;
+      // Logbank(2026-10-31 사용자 "복습 칸 자리에 날마다·주마다 배운 것 정리"): 지금 단계까지 모든 단계의 최근 14일 배움·숙지 + 고친 줄, 갈래 표시.
+      const all: LogItem[] = [];
+      const seen = new Set<string>();
+      for (const s of source.stages.filter((one) => one.order <= here.order)) {
+        const log = s.order === here.order ? mine : myPartLog({ language, stage: s, passed: my.passedAt, known: my.known, now: Date.now() });
+        for (const part of PART_IDS) {
+          for (const item of log[part]) {
+            const id = `${part}|${item.kind}|${item.text}|${item.node ?? ""}`;
+            if (seen.has(id)) continue;
+            seen.add(id);
+            all.push({ ...item, part, stage: s.order });
+          }
+        }
+      }
+      for (const part of PART_IDS) for (const item of fixed[part]) all.push({ ...item, part, stage: here.order });
+      logItems = all.sort((a, b) => b.at - a.at).slice(0, LOG_MAX);
     } else if (here) {
       partDays = partHistory({
         stage: here,
@@ -237,6 +254,7 @@ export async function GET(request: NextRequest) {
     parts,
     partDays,
     ...(partItems ? { partItems } : {}),
+    ...(logItems ? { logItems } : {}),
     ...(recommend ? { recommend } : {}),
     ...(redo.length ? { redo } : {}),
     ...(review ? { review } : {}),
