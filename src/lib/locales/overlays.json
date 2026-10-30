@@ -840,7 +840,8 @@
     "guideCanDo": "できること",
     "guideDetails": "くわしい機能",
     "planSettings": "設定",
-    "practiceWay": "練習のしかた"
+    "practiceWay": "練習のしかた",
+    "wordMatch": "単語あわせ"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1683,7 +1684,8 @@
     "guideCanDo": "可以做的",
     "guideDetails": "更多功能",
     "planSettings": "设置",
-    "practiceWay": "练习方式"
+    "practiceWay": "练习方式",
+    "wordMatch": "单词配对"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2529,7 +2531,8 @@
     "guideCanDo": "Có thể làm",
     "guideDetails": "Tính năng chi tiết",
     "planSettings": "Cài đặt",
-    "practiceWay": "Cách luyện"
+    "practiceWay": "Cách luyện",
+    "wordMatch": "Ghép từ"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3380,7 +3383,8 @@
     "guideCanDo": "Possible aussi",
     "guideDetails": "Plus de fonctions",
     "planSettings": "Réglages",
-    "practiceWay": "Façon de s’entraîner"
+    "practiceWay": "Façon de s’entraîner",
+    "wordMatch": "Associer les mots"
   },
   "it": {
     "archive": "Report",
@@ -4422,7 +4426,8 @@
     "guideCanDo": "Puoi anche",
     "guideDetails": "Altre funzioni",
     "planSettings": "Impostazioni",
-    "practiceWay": "Come esercitarti"
+    "practiceWay": "Come esercitarti",
+    "wordMatch": "Abbina le parole"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5276,7 +5281,8 @@
     "guideCanDo": "O que dá para fazer",
     "guideDetails": "Mais recursos",
     "planSettings": "Ajustes",
-    "practiceWay": "Como praticar"
+    "practiceWay": "Como praticar",
+    "wordMatch": "Combinar palavras"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6316,7 +6322,8 @@
     "guideCanDo": "Что можно",
     "guideDetails": "Подробнее о функциях",
     "planSettings": "Настройки",
-    "practiceWay": "Способ практики"
+    "practiceWay": "Способ практики",
+    "wordMatch": "Подбери слова"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7166,7 +7173,8 @@
     "guideCanDo": "Yang bisa dilakukan",
     "guideDetails": "Fitur lainnya",
     "planSettings": "Pengaturan",
-    "practiceWay": "Cara berlatih"
+    "practiceWay": "Cara berlatih",
+    "wordMatch": "Cocokkan kata"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8009,7 +8017,8 @@
     "guideCanDo": "ما يمكنك فعله",
     "guideDetails": "ميزات أخرى",
     "planSettings": "الإعدادات",
-    "practiceWay": "طريقة التدرّب"
+    "practiceWay": "طريقة التدرّب",
+    "wordMatch": "طابِق الكلمات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8852,7 +8861,8 @@
     "guideCanDo": "สิ่งที่ทำได้",
     "guideDetails": "ฟีเจอร์เพิ่มเติม",
     "planSettings": "ตั้งค่า",
-    "practiceWay": "วิธีฝึก"
+    "practiceWay": "วิธีฝึก",
+    "wordMatch": "จับคู่คำ"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9695,6 +9705,7 @@
     "guideCanDo": "क्या कर सकते हैं",
     "guideDetails": "और सुविधाएँ",
     "planSettings": "सेटिंग",
-    "practiceWay": "अभ्यास का तरीका"
+    "practiceWay": "अभ्यास का तरीका",
+    "wordMatch": "शब्द मिलाएँ"
   }
 }

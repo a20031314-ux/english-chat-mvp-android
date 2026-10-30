@@ -40,6 +40,7 @@ import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
+import { MATCH_SIZE, WordMatch, matchPairs } from "@/components/studyMap/WordMatch";
 import { expressionBubbles } from "@/components/studyMap/StageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
@@ -207,6 +208,7 @@ export function TodayPlan({
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
   const [bundle, setBundle] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
+  const [matching, setMatching] = useState(false);
   // 오늘 끝까지 해 본 대본·문장구조(통과 못 해도 ✓, curriculum/practicedToday.ts).
   const [practiced, setPracticed] = useState<Set<string>>(new Set());
   useEffect(() => {
@@ -906,6 +908,18 @@ export function TodayPlan({
     const random: Bubble[] = [vocab[0], grammar[grammar.length - 1], expression[expression.length - 1]].filter((one): one is Bubble => Boolean(one));
     return { review, random, vocab, grammar, expression };
   })();
+  // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
+  const pairs = matchPairs([
+    ...(bank?.next ?? []).map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
+    ...words.map((row) => ({ word: row.word, meaning: row.gloss })),
+    ...allFramesFor(language)
+      .filter((one) => one.stage <= Math.max(1, stage))
+      .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
+  ]).slice(0, MATCH_SIZE * 4);
+  const matchWay =
+    pairs.length >= 3
+      ? [{ id: "match" as const, label: ui.wordMatch, bubbles: pairs.slice(0, 3).map((pair) => ({ side: "me" as const, text: `${pair.word}  —  ${pair.meaning}`, mark: pair.word })) }]
+      : [];
   const lanes = FOCUSES.map((focus) => ({
     id: focus,
     label: focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus),
@@ -917,7 +931,14 @@ export function TodayPlan({
     <div data-keep-learning>
       {/* One button; the sheet shows each lane as a tiny dialogue (2026-10-30, user: pick the way by picture, understand it from a short dialogue). */}
       <div className="mt-2 flex">
-        <WayPicker ui={ui} ways={lanes} value={settings.focus} onPick={(focus) => save({ ...settings, focus })} data="study-focus" />
+        <WayPicker
+          ui={ui}
+          ways={[...lanes, ...matchWay]}
+          value={settings.focus}
+          onPick={(focus) => (focus === "match" ? setMatching(true) : save({ ...settings, focus }))}
+          data="study-focus"
+        />
+        {matching && pairs.length >= 3 ? <WordMatch ui={ui} pairs={pairs} onClose={() => setMatching(false)} /> : null}
       </div>
       {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
       {settings.focus === "review" ? (
