@@ -181,14 +181,23 @@ test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없�
     ["es", [["casa", "Mi casa es pequeña.", "집", "우리 집은 작아요."], ["perro", "El perro come mucho.", "개", "개가 많이 먹어요."], ["agua", "Quiero agua fría.", "물", "찬물을 원해요."]]],
     ["ja", [["駅", "駅はどこですか。", "역", "역은 어디예요?"], ["水", "水をください。", "물", "물 주세요."], ["本", "この本はおもしろい。", "책", "이 책은 재미있어요."]]],
   ];
+  // 품사가 다른 낱말(동사) — 명사 빈칸의 보기에 나오면 안 된다(사용자 2026-10-30 "선지는 다 같은 품사로").
+  const verbs: Record<string, [string, string]> = { es: ["comer", "Me gusta comer."], ja: ["食べる", "ご飯を食べる。"] };
   for (const [language, words] of cases) {
-    registerQuizSources(language, words.map(([w, example, gloss, exampleGloss]) => ({ key: `w|${w}`, sources: [{ text: example, gloss: { en: "", raw: exampleGloss }, from: `w|${w}`, stage: 0, piece: w, who: "me" as const, wordGloss: gloss }] })));
+    const [verb, verbText] = verbs[language]!;
+    registerQuizSources(language, [
+      ...words.map(([w, example, gloss, exampleGloss]) => ({ key: `w|${w}`, sources: [{ text: example, gloss: { en: "", raw: exampleGloss }, from: `w|${w}`, stage: 0, piece: w, who: "me" as const, wordGloss: gloss, pos: "noun" }] })),
+      { key: `w|${verb}`, sources: [{ text: verbText, gloss: { en: "", raw: "" }, from: `w|${verb}`, stage: 0, piece: verb, who: "me" as const, wordGloss: "", pos: "verb" }] },
+    ]);
     const [w, , gloss] = words[0]!;
     const quiz = wordQuiz(language, `w|${w}`, "seed");
     assert.ok(quiz, language);
     assert.deepEqual(quiz!.questions.map((q) => q.kind), ["choose"], language);
     const blank = quiz!.questions[0]!;
     assert.ok(blank.kind === "choose" && blank.options[blank.answer] === w, `${language} 정답은 그 낱말`);
+    assert.ok(blank.kind === "choose" && !blank.options.includes(verb), `${language} 다른 품사(${verb})는 보기에 없음`);
+    // 같은 품사 낱말이 모자라면 빈칸을 만들지 않고, 순서 맞추기로 넘어가지도 않는다.
+    assert.equal(wordQuiz(language, `w|${verb}`, "seed"), null, `${language} 동사는 같은 품사 보기가 없어 문제 없음`);
     assert.ok(gloss);
     // 학습 조합을 정해도 단어 퀴즈 모양.
     assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "read" })!.questions.map((q) => q.kind), ["choose"]);

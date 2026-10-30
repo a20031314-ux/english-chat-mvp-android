@@ -16,9 +16,14 @@ test("빈도 단어 묶음: 영어·스페인어·일본어 약 3,000개, 겹침
 });
 
 test("계속 공부: 새 낱말(w|)은 어휘 갈래면 막힌 것 다음, 알아서면 부족한 갈래 다음 — 재료가 있을 때만(스페인어·일본어)", () => {
+  // 단어 빈칸 보기는 같은 품사의 다른 낱말이라(quiz.ts decoys, 2026-10-30) 같은 품사 낱말을 둘 더 받아 둔다.
+  const others: Record<string, [string, string][]> = { es: [["perro", "El perro come."], ["agua", "Quiero agua."]], ja: [["本", "本を読みます。"], ["駅", "駅に行きます。"]] };
   for (const [language, word, sentence] of [["es", "casa", "Mi casa es pequeña."], ["ja", "雨", "今日は雨が降っています。"]] as const) {
     const key = wordKey(word);
-    registerQuizSources(language, [{ key, sources: [{ text: sentence, gloss: { en: "", raw: "…" }, from: key, stage: 0, piece: word, who: "me" }] }]);
+    registerQuizSources(language, [
+      { key, sources: [{ text: sentence, gloss: { en: "", raw: "…" }, from: key, stage: 0, piece: word, who: "me", pos: "noun" }] },
+      ...others[language]!.map(([w, text]) => ({ key: wordKey(w), sources: [{ text, gloss: { en: "", raw: "…" }, from: wordKey(w), stage: 0, piece: w, who: "me" as const, pos: "noun" }] })),
+    ]);
     const vocab = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, focus: "vocab", words: [key, wordKey("없음")], now: 0 });
     assert.equal(vocab.find((pick) => pick.reason === "word")?.key, key, language);
     assert.ok(!vocab.some((pick) => pick.key === wordKey("없음")), "재료 없는 낱말은 안 냄");

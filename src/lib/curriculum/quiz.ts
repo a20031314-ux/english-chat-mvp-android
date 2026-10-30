@@ -17,7 +17,18 @@ import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScript
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
 
 /** who: 상대 줄("them")은 고르기·맞추기에만, 말하기는 내 줄·예문만. */
-export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string; who?: "me" | "them"; /** 빈도 단어: 그 낱말의 뜻(앱 언어). */ wordGloss?: string };
+export type QuizSource = {
+  text: string;
+  gloss: ScriptGloss;
+  from: string;
+  stage: number;
+  piece?: string;
+  who?: "me" | "them";
+  /** 빈도 단어: 그 낱말의 뜻(앱 언어). */
+  wordGloss?: string;
+  /** 빈도 단어: 품사 묶음(noun·verb·adj·adv·function) — 보기를 같은 품사로만(2026-10-30). */
+  pos?: string;
+};
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
 export type QuizCard = { wrong: string; right: string; note?: string };
@@ -174,10 +185,19 @@ export function quizSources(language: string, key: string): QuizSource[] {
 }
 
 /** 고르기 오답 후보: 같은 갈래 다른 열쇠의 조각(가까운 단계 먼저). */
-function decoys(language: string, key: string, stage: number): string[] {
+function decoys(language: string, key: string, stage: number, pos?: string): string[] {
   if (key.startsWith("w|")) {
-    // 빈도 단어: 같이 받아 둔 다른 낱말(가까운 순위)의 쓴 꼴.
-    return [...new Set([...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key && k.startsWith("w|")).map(([, sources]) => sources[0]?.piece ?? "").filter(Boolean))];
+    // 빈도 단어: 같이 받아 둔 다른 낱말의 쓴 꼴 — **같은 품사만**(사용자 2026-10-30 "선지가 다수일 시 다 같은 품사로").
+    // 품사를 모르면(옛 카드) 보기를 만들지 않는다 — 다른 품사가 섞여 한눈에 지워지는 보기보다 문제를 안 내는 쪽.
+    if (!pos) return [];
+    return [
+      ...new Set(
+        [...(GAP_SOURCES.get(language)?.entries() ?? [])]
+          .filter(([k, sources]) => k !== key && k.startsWith("w|") && sources[0]?.pos === pos)
+          .map(([, sources]) => sources[0]?.piece ?? "")
+          .filter(Boolean),
+      ),
+    ];
   }
   if (key.startsWith("u|")) {
     const others = [...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key).map(([, sources]) => sources[0]?.piece ?? "").filter(Boolean);
@@ -235,7 +255,7 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
   if (at < 0) return null;
   const near = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : [];
   const wrong = shuffled(
-    (near.length >= 2 ? near : decoys(language, key, source.stage)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
+    (near.length >= 2 ? near : decoys(language, key, source.stage, source.pos)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
     random,
   ).slice(0, 2);
   if (wrong.length < 2) return null;
@@ -354,7 +374,8 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
   const source = quizSources(language, key)[0];
   if (!source?.piece || !source.text.includes(source.piece)) return null;
   const random = rng(`${key}|${seed}|word`);
-  const question = chooseOf(language, key, source, random) ?? orderOf(language, source, random);
+  // 단어는 뜻 맞추기(짝 — WordMatch)·빈칸만(사용자 2026-10-30 "단어는 그냥 뜻맞추기, 빈칸채우기로 제한") — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
+  const question = chooseOf(language, key, source, random);
   return question ? { key, questions: [question] } : null;
 }
 
@@ -410,7 +431,8 @@ export function buildQuiz(
     // 모양을 골랐으면 그 모양만(없으면 단어 퀴즈 그대로).
     const only = word && options.kinds?.length ? word.questions.filter((q) => options.kinds!.includes(q.kind)) : [];
     if (word && only.length) return { key, questions: only };
-    if (word) return word;
+    // 단어는 빈칸(여기)·뜻 맞추기(WordMatch)만 — 빈칸을 못 만들면 순서·말하기·뜻 고르기로 넘어가지 않는다(사용자 2026-10-30).
+    return word;
   }
   // 조합(말하기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).
   const kinds = options.mix && options.mix !== "auto" ? MIX_KINDS[options.mix] : options.kinds;

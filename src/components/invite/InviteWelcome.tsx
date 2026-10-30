@@ -143,7 +143,7 @@ export function InviteWelcome({ ui, locale, onOpenTab }: { ui: UICopy; locale: s
                   />
                 </label>
               ) : null}
-              {/* 방 초대가 아니고 이름도 정할 게 없으면 "사람 둘러보기"(사람 탭으로 옮기기만)는 그리지 않는다(사용자 2026-10-30). */}
+              {/* 방 초대가 아니고 이름도 정할 게 없으면 t.browse(사람 탭으로 옮기기만)는 그리지 않는다(사용자 2026-10-30). */}
               {info.room || needsName ? (
                 <button
                   type="button"

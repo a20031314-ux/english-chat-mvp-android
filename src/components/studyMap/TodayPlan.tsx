@@ -34,7 +34,7 @@ import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
-import { BAND_SIZE, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { BAND_SIZE, peekBank, quizPos, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -46,6 +46,7 @@ import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
 import { pickBankScript } from "@/lib/curriculum/scriptBank";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/studyMap/WordMatch";
+import { samePosRounds } from "@/lib/curriculum/wordRounds";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
@@ -620,13 +621,18 @@ export function TodayPlan({
       .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
   ]).slice(0, MATCH_SIZE * 4);
   // 어휘 계속 공부의 짝: 지금 공부 줄의 낱말 열쇠(w|) — 뒤의 예문 빈칸이 같은 낱말로 이어진다.
+  const posOfWord = new Map((peekBank(language) ?? []).map((word) => [word.w, quizPos(word.pos)]));
   const vocabPairs: MatchPair[] =
     studyFocus === "vocab"
-      ? matchPairs(
-          studyQueue("learn", Date.now(), studyWeakest)
-            .map((pick) => pick.key)
-            .filter((key) => key.startsWith("w|"))
-            .map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
+      ? samePosRounds(
+          matchPairs(
+            studyQueue("learn", Date.now(), studyWeakest)
+              .map((pick) => pick.key)
+              .filter((key) => key.startsWith("w|"))
+              .map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
+          ),
+          (word) => posOfWord.get(word),
+          MATCH_SIZE,
         )
       : [];
   // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).

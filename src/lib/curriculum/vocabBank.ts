@@ -21,6 +21,15 @@ export function posGroup(pos: string): (typeof POS_GROUPS)[number] {
   return pos === "noun" || pos === "verb" || pos === "adj" || pos === "adv" ? pos : "function";
 }
 
+/**
+ * 퀴즈 보기를 맞출 품사(사용자 2026-10-30 "선지가 다수일 시 다 같은 품사로"): 명사·동사·형용사·부사는 그대로,
+ * 기능어는 한 묶음(posGroup "function")으로 뭉치지 않고 목록의 품사 그대로(대명사·전치사·관사·접속사·감탄사·수사) — "I / on / he"가 안 나오게.
+ */
+export function quizPos(pos: string): string {
+  const group = posGroup(pos);
+  return group === "function" ? pos || "other" : group;
+}
+
 /** 그 낱말(목록 순위 index)이 고른 칸에 드는지. */
 export function inPick(word: BankWord, index: number, pick: VocabPick | null | undefined): boolean {
   if (!pick || pick.by === "all") return true;

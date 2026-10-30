@@ -7,7 +7,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
-import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, posGroup, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, posGroup, quizPos, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { knownState, type KnownMap } from "@/lib/curriculum/known";
 import { registerQuizSources, type QuizSource } from "@/lib/curriculum/quiz";
 
@@ -30,8 +30,9 @@ function readCached(language: string, ui: string, chunk: number): Card[] | null 
   }
 }
 
-function sourcesOf(card: Card): QuizSource[] {
-  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss }];
+function sourcesOf(card: Card, pos: string | undefined): QuizSource[] {
+  // 품사(목록의 pos → 묶음 noun·verb·adj·adv·function) — 빈칸 보기를 같은 품사로만(quiz.ts decoys, 사용자 2026-10-30).
+  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss, ...(pos ? { pos: quizPos(pos) } : {}) }];
 }
 
 /** 낱말 뜻(앱 언어) — 퀴즈 제목 옆 등. */
@@ -95,7 +96,8 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     ).then((groups) => {
       if (!alive) return;
       const cards = groups.flat();
-      registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card) })));
+      const posOf = new Map((peekBank(language) ?? []).map((word) => [word.w, word.pos]));
+      registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card, posOf.get(card.w)) })));
       for (const card of cards) glossOf.set(`${language}|${card.w}`, card.gloss);
       setReady((current) => new Set([...current, ...cards.map((card) => wordKey(card.w))]));
     });
