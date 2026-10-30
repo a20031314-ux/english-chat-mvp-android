@@ -33,6 +33,7 @@ import type { CheckResult } from "@/lib/curriculum/checkup";
 import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
 import { ReviewNotes, useReviewNotes } from "@/components/studyMap/ReviewNotes";
 import { Logbank } from "@/components/studyMap/Logbank";
+import { BankHelpButton } from "@/components/studyMap/BankHelp";
 import { curriculumItems } from "@/lib/curriculum/dailyPlan";
 import { allMisses } from "@/lib/curriculum/scriptMisses";
 import { weakSpots, wordsToShow, type WeakSpot } from "@/lib/curriculum/weakSpots";
@@ -2188,6 +2189,7 @@ function LayerJump({
   active = null,
   onClose,
   closeLabel,
+  help,
 }: {
   items: { id: MyLayer; title: string }[];
   onJump: (id: MyLayer) => void;
@@ -2195,6 +2197,8 @@ function LayerJump({
   active?: MyLayer | null;
   onClose?: () => void;
   closeLabel?: string;
+  /** 전체 화면에서 그 칸의 "?"(2026-10-31). */
+  help?: ReactNode;
 }) {
   const [seenNow, setCurrent] = useState<MyLayer | null>(null);
   const current = active ?? seenNow;
@@ -2229,6 +2233,7 @@ function LayerJump({
           {one.title}
         </button>
       ))}
+      {help ? <div className="flex shrink-0 items-center">{help}</div> : null}
       {onClose ? (
         <button type="button" data-my-full-close aria-label={closeLabel} title={closeLabel} onClick={onClose} className="shrink-0 rounded-full px-2 py-1.5 text-caption text-slate-400 hover:bg-white/10">
           ✕
@@ -2286,16 +2291,15 @@ function MyLayers({
     const on = !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
-        <button
-          type="button"
-          aria-expanded={on}
-          onClick={() => onToggle(id)}
-          className="flex w-full items-center gap-2 px-3 py-3 text-start"
-        >
-          <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
-          {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
-          <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
-        </button>
+        <div className="flex items-center gap-2 pe-3">
+          <button type="button" aria-expanded={on} onClick={() => onToggle(id)} className="flex min-w-0 flex-1 items-center gap-2 py-3 ps-3 text-start">
+            <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
+            {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
+            <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
+          </button>
+          {/* 칸마다 "?" — 배울 수 있는 것·이렇게 공부해요(2026-10-31). */}
+          <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} />
+        </div>
         {on ? <div className="px-3 pb-3">{body}</div> : null}
       </section>
     );
@@ -2355,7 +2359,14 @@ function MyLayers({
         {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} /> : null}
         {full ? (
           <FullScreenLayer>
-            <LayerJump items={jumpItems} onJump={onFull} active={full} onClose={() => onFull(null)} closeLabel={ui.billingClose} />
+            <LayerJump
+              items={jumpItems}
+              onJump={onFull}
+              active={full}
+              onClose={() => onFull(null)}
+              closeLabel={ui.billingClose}
+              help={<BankHelpButton ui={ui} locale={locale} language={language} bank={full} title={jumpItems.find((one) => one.id === full)?.title ?? ""} />}
+            />
             <div className="min-h-0 flex-1 overflow-y-auto">
               {stageCard}
               {keepCard}

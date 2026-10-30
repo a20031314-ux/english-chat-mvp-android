@@ -858,6 +858,7 @@
     "learnSwitchAsk": "{lang}の学習に切り替えますか？",
     "learnSwitchYes": "切り替える",
     "scopeTitle": "学べること",
+    "bankHowTitle": "学び方",
     "quizTargetRate": "正答率"
   },
   "zh": {
@@ -1719,6 +1720,7 @@
     "learnSwitchAsk": "要改为学习{lang}吗？",
     "learnSwitchYes": "切换",
     "scopeTitle": "可以学到的内容",
+    "bankHowTitle": "学习方法",
     "quizTargetRate": "正确率"
   },
   "vi": {
@@ -2583,6 +2585,7 @@
     "learnSwitchAsk": "Chuyển sang học {lang}?",
     "learnSwitchYes": "Chuyển",
     "scopeTitle": "Những gì bạn có thể học",
+    "bankHowTitle": "Cách học",
     "quizTargetRate": "Tỉ lệ đúng"
   },
   "fr": {
@@ -3452,6 +3455,7 @@
     "learnSwitchAsk": "Nouvelle langue à apprendre : {lang} ?",
     "learnSwitchYes": "Changer",
     "scopeTitle": "Ce que vous pouvez apprendre",
+    "bankHowTitle": "Comment étudier",
     "quizTargetRate": "Taux de réussite"
   },
   "it": {
@@ -4512,6 +4516,7 @@
     "learnSwitchAsk": "Nuova lingua da imparare: {lang}?",
     "learnSwitchYes": "Cambia",
     "scopeTitle": "Cosa puoi imparare",
+    "bankHowTitle": "Come studiare",
     "quizTargetRate": "Percentuale di risposte giuste"
   },
   "pt": {
@@ -5384,6 +5389,7 @@
     "learnSwitchAsk": "Mudar para aprender {lang}?",
     "learnSwitchYes": "Mudar",
     "scopeTitle": "O que você pode aprender",
+    "bankHowTitle": "Como estudar",
     "quizTargetRate": "Taxa de acerto"
   },
   "ru": {
@@ -6442,6 +6448,7 @@
     "learnSwitchAsk": "Перейти на изучение языка: {lang}?",
     "learnSwitchYes": "Перейти",
     "scopeTitle": "Что можно выучить",
+    "bankHowTitle": "Как заниматься",
     "quizTargetRate": "Доля верных ответов"
   },
   "id": {
@@ -7310,6 +7317,7 @@
     "learnSwitchAsk": "Ganti ke belajar {lang}?",
     "learnSwitchYes": "Ganti",
     "scopeTitle": "Yang bisa kamu pelajari",
+    "bankHowTitle": "Cara belajar",
     "quizTargetRate": "Tingkat benar"
   },
   "ar": {
@@ -8171,6 +8179,7 @@
     "learnSwitchAsk": "هل تريد التبديل إلى تعلّم {lang}؟",
     "learnSwitchYes": "تبديل",
     "scopeTitle": "ما يمكنك تعلّمه",
+    "bankHowTitle": "طريقة الدراسة",
     "quizTargetRate": "نسبة الإجابات الصحيحة"
   },
   "th": {
@@ -9032,6 +9041,7 @@
     "learnSwitchAsk": "เปลี่ยนไปเรียน{lang}ไหม?",
     "learnSwitchYes": "เปลี่ยน",
     "scopeTitle": "สิ่งที่เรียนได้",
+    "bankHowTitle": "วิธีเรียน",
     "quizTargetRate": "อัตราตอบถูก"
   },
   "hi": {
@@ -9893,6 +9903,7 @@
     "learnSwitchAsk": "{lang} सीखने पर बदलें?",
     "learnSwitchYes": "बदलें",
     "scopeTitle": "आप क्या सीख सकते हैं",
+    "bankHowTitle": "कैसे पढ़ें",
     "quizTargetRate": "सही उत्तरों का प्रतिशत"
   }
 }

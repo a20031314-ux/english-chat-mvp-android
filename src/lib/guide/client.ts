@@ -2,21 +2,25 @@ import { apiUrl } from "@/lib/apiBase";
 import type { UICopy } from "@/lib/copy";
 import type { Guide, GuideChapter } from "@/lib/guide/content";
 import type { GuideOverview } from "@/lib/guide/overview";
+import type { BankGuide, BankId } from "@/lib/guide/banks";
 
 /**
  * 사용법 글을 받아 두는 곳(GuideSheet·WhatsNewSheet가 같이 쓴다).
  * 서버(/api/guide)가 글을 주고, 마지막으로 받은 것을 폰에 둬서 지하에서도 열린다.
  */
-export type GuideData = { tabs: Guide; chapters?: GuideChapter[]; overview?: GuideOverview };
+export type GuideData = { tabs: Guide; chapters?: GuideChapter[]; overview?: GuideOverview; banks?: Record<BankId, BankGuide> };
 
 function cacheKey(locale: string): string {
-  return `guide.v2.${locale}`;
+  // v3: My 큰 칸 "?" 설명(banks)이 든 저장(2026-10-31) — 예전 저장은 다시 받는다.
+  return `guide.v3.${locale}`;
 }
 
 export function readCachedGuide(locale: string): GuideData | null {
   try {
     const raw = globalThis.localStorage?.getItem(cacheKey(locale));
     if (raw) return JSON.parse(raw) as GuideData;
+    const before = globalThis.localStorage?.getItem(`guide.v2.${locale}`);
+    if (before) return JSON.parse(before) as GuideData;
     // 예전 저장(탭별 글만): 묶음 없이라도 연다.
     const old = globalThis.localStorage?.getItem(`guide.v1.${locale}`);
     return old ? { tabs: (JSON.parse(old) as { tabs: Guide }).tabs } : null;
@@ -33,16 +37,17 @@ const inFlight = new Map<string, Promise<GuideData | null>>();
  * `icons=1`: 사람 탭 아이콘 묶음(2026-10-23)이 있는 빌드 — 없으면 people.icons 칸을 뺀다.
  * `r272=1`: 2.72 화면(프로필 칩·도움됐어요·줄 지우기·게시판 ♡) — 없으면 그 세 칸은 예전 글(roomsBefore272.json).
  * `overview=1`: 학습 흐름·장마다 카드 둘(lib/guide/overview.ts).
+ * `banks=1`: My 큰 칸 셋의 "?" 설명(lib/guide/banks.ts).
  * `chapters=1`: 하단 탭 대화·영상·사람·Room·My 빌드 — 같은 글을 기능별 묶음으로도 받는다.
  */
 export function loadGuide(locale: string): Promise<GuideData | null> {
   const running = inFlight.get(locale);
   if (running) return running;
-  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1&overview=1`))
+  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1&overview=1&banks=1`))
     .then((response) => (response.ok ? response.json() : null))
     .then((data: Partial<GuideData> | null) => {
       if (!data?.tabs) return null;
-      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}), ...(data.overview ? { overview: data.overview } : {}) };
+      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}), ...(data.overview ? { overview: data.overview } : {}), ...(data.banks ? { banks: data.banks } : {}) };
       try {
         globalThis.localStorage?.setItem(cacheKey(locale), JSON.stringify(kept));
       } catch {

@@ -54,6 +54,39 @@ const CAPTIONS = {
     pt: ["Toque em um em “{planTitle}”", "Sua vez: “{scriptSay}”", "Falou certo: ★ e a barra avança", "Até o fim: “{scriptCompleted}”", "“{planTitle}” ganha ✓"],
     ru: ["Нажмите на один пункт в «{planTitle}»", "Ваша очередь: «{scriptSay}»", "Сказали верно — ★, полоса растёт", "До конца — «{scriptCompleted}»", "В «{planTitle}» появляется ✓"],
   },
+  // My 큰 칸 "?" 설명 영상(2026-10-31, lib/guide/banks.ts CLIPS): Stagebank = 오늘 할 것 ▶ → 설명 → 퀴즈, Quizbank = 빈칸 → 답한 뒤 예문 → 다음 → ⚙.
+  "bank-stage": {
+    ko: ["「{planTitle}」: 지금 할 것 하나 ▶", "「{explanation}」: 뜻 · 구조 · 예문", "「{scriptNext}」 → 「{quizTag}」: 그 틀로 빈칸", "마지막은 「{homeTabTalk}」: 그 틀로 대답해요"],
+    en: ["“{planTitle}”: one thing to do now ▶", "“{explanation}”: meaning · parts · examples", "“{scriptNext}” → “{quizTag}”: fill the gap", "Last, “{homeTabTalk}”: answer with the pattern"],
+    es: ["«{planTitle}»: una cosa que hacer ahora ▶", "«{explanation}»: significado · partes · ejemplos", "«{scriptNext}» → «{quizTag}»: completa el hueco", "Al final, «{homeTabTalk}»: responde con el patrón"],
+    ja: ["「{planTitle}」：今やることがひとつ ▶", "「{explanation}」：意味・構造・例文", "「{scriptNext}」→「{quizTag}」：その型で空欄", "最後は「{homeTabTalk}」：その型で答える"],
+    zh: ["「{planTitle}」：现在要做的一件事 ▶", "「{explanation}」：意思 · 结构 · 例句", "「{scriptNext}」→「{quizTag}」：用这个句型填空", "最后「{homeTabTalk}」：用这个句型回答"],
+    th: ["“{planTitle}”: สิ่งที่ต้องทำตอนนี้ ▶", "“{explanation}”: ความหมาย · โครงสร้าง · ตัวอย่าง", "“{scriptNext}” → “{quizTag}”: เติมช่องว่าง", "สุดท้าย “{homeTabTalk}”: ตอบด้วยแพตเทิร์นนั้น"],
+    vi: ["“{planTitle}”: một việc cần làm ngay ▶", "“{explanation}”: nghĩa · cấu trúc · ví dụ", "“{scriptNext}” → “{quizTag}”: điền chỗ trống", "Cuối cùng “{homeTabTalk}”: trả lời bằng mẫu đó"],
+    id: ["“{planTitle}”: satu hal untuk sekarang ▶", "“{explanation}”: arti · struktur · contoh", "“{scriptNext}” → “{quizTag}”: isi titik kosong", "Terakhir “{homeTabTalk}”: jawab dengan pola itu"],
+    hi: ["“{planTitle}”: अभी का एक काम ▶", "“{explanation}”: अर्थ · ढाँचा · उदाहरण", "“{scriptNext}” → “{quizTag}”: खाली जगह भरें", "आख़िर में “{homeTabTalk}”: उसी ढाँचे से जवाब"],
+    ar: ["«{planTitle}»: شيء واحد الآن ▶", "«{explanation}»: المعنى · البنية · أمثلة", "«{scriptNext}» ← «{quizTag}»: املأ الفراغ", "أخيرًا «{homeTabTalk}»: أجب بالقالب نفسه"],
+    fr: ["« {planTitle} » : une chose à faire ▶", "« {explanation} » : sens · structure · exemples", "« {scriptNext} » → « {quizTag} » : complétez le trou", "Enfin « {homeTabTalk} » : répondez avec le modèle"],
+    it: ["«{planTitle}»: una cosa da fare ▶", "«{explanation}»: significato · struttura · esempi", "«{scriptNext}» → «{quizTag}»: riempi il vuoto", "Infine «{homeTabTalk}»: rispondi con lo schema"],
+    pt: ["“{planTitle}”: uma coisa para fazer ▶", "“{explanation}”: sentido · estrutura · exemplos", "“{scriptNext}” → “{quizTag}”: preencha a lacuna", "Por fim “{homeTabTalk}”: responda com o modelo"],
+    ru: ["«{planTitle}»: одно дело на сейчас ▶", "«{explanation}»: смысл · структура · примеры", "«{scriptNext}» → «{quizTag}»: заполните пропуск", "В конце «{homeTabTalk}»: ответьте по шаблону"],
+  },
+  "bank-keep": {
+    ko: ["「{keepTitle}」: 탭을 고르고 빈칸을 채워요", "답하면 뜻과 다른 예문", "「{scriptNext}」: 다음 문제", "⚙ 「{quizTargetRate}」: 모르는 말의 비율"],
+    en: ["“{keepTitle}”: pick a tab, fill the gap", "After you answer: meaning and more examples", "“{scriptNext}”: the next question", "⚙ “{quizTargetRate}”: how many new words"],
+    es: ["«{keepTitle}»: elige pestaña y completa el hueco", "Al responder: significado y más ejemplos", "«{scriptNext}»: la siguiente pregunta", "⚙ «{quizTargetRate}»: cuántas palabras nuevas"],
+    ja: ["「{keepTitle}」：タブを選んで空欄を埋める", "答えると意味とほかの例文", "「{scriptNext}」：次の問題", "⚙「{quizTargetRate}」：知らない言葉の割合"],
+    zh: ["「{keepTitle}」：选标签，填空", "答完显示意思和更多例句", "「{scriptNext}」：下一题", "⚙「{quizTargetRate}」：生词的比例"],
+    th: ["“{keepTitle}”: เลือกแท็บ เติมช่องว่าง", "ตอบแล้วเห็นความหมายและตัวอย่างอื่น", "“{scriptNext}”: ข้อถัดไป", "⚙ “{quizTargetRate}”: สัดส่วนคำใหม่"],
+    vi: ["“{keepTitle}”: chọn thẻ, điền chỗ trống", "Trả lời xong: nghĩa và thêm ví dụ", "“{scriptNext}”: câu tiếp theo", "⚙ “{quizTargetRate}”: tỉ lệ từ mới"],
+    id: ["“{keepTitle}”: pilih tab, isi titik kosong", "Setelah menjawab: arti dan contoh lain", "“{scriptNext}”: soal berikutnya", "⚙ “{quizTargetRate}”: porsi kata baru"],
+    hi: ["“{keepTitle}”: टैब चुनें, खाली जगह भरें", "जवाब के बाद अर्थ और और उदाहरण", "“{scriptNext}”: अगला सवाल", "⚙ “{quizTargetRate}”: नए शब्दों का हिस्सा"],
+    ar: ["«{keepTitle}»: اختر تبويبًا واملأ الفراغ", "بعد الإجابة: المعنى وأمثلة أخرى", "«{scriptNext}»: السؤال التالي", "⚙ «{quizTargetRate}»: نسبة الكلمات الجديدة"],
+    fr: ["« {keepTitle} » : un onglet, un trou à compléter", "Après la réponse : sens et autres exemples", "« {scriptNext} » : question suivante", "⚙ « {quizTargetRate} » : part de mots nouveaux"],
+    it: ["«{keepTitle}»: scegli una scheda, riempi il vuoto", "Dopo la risposta: significato e altri esempi", "«{scriptNext}»: domanda successiva", "⚙ «{quizTargetRate}»: quante parole nuove"],
+    pt: ["“{keepTitle}”: escolha a aba, preencha a lacuna", "Depois de responder: sentido e mais exemplos", "“{scriptNext}”: próxima pergunta", "⚙ “{quizTargetRate}”: quantas palavras novas"],
+    ru: ["«{keepTitle}»: выберите вкладку, заполните пропуск", "После ответа — значение и другие примеры", "«{scriptNext}»: следующий вопрос", "⚙ «{quizTargetRate}»: доля новых слов"],
+  },
 };
 
 const copyAll = await loadCopy();
@@ -102,7 +135,12 @@ for (const locale of locales) {
   fs.mkdirSync(path.join(work, "out"), { recursive: true });
   cdp.on("Page.screencastFrame", async ({ data, metadata, sessionId }) => {
     const file = path.join(work, `${String(frames.length).padStart(5, "0")}.jpg`);
-    fs.writeFileSync(file, Buffer.from(data, "base64"));
+    // 영상을 다 만든 뒤 늦게 온 프레임은 버린다(작업 폴더를 이미 지웠을 수 있음).
+    try {
+      fs.writeFileSync(file, Buffer.from(data, "base64"));
+    } catch {
+      return;
+    }
     frames.push({ file, at: metadata.timestamp });
     await cdp.send("Page.screencastFrameAck", { sessionId }).catch(() => {});
   });
@@ -157,8 +195,16 @@ for (const locale of locales) {
   const plan = page.locator("[data-today-plan]").first();
   const list = plan.locator("ul").first();
   const firstItem = list.locator("li button").first();
-  await firstItem.scrollIntoViewIfNeeded();
-  await page.evaluate(() => window.scrollBy(0, -60));
+  const BANK = clipName.startsWith("bank-");
+  if (!BANK) {
+    await firstItem.scrollIntoViewIfNeeded();
+    await page.evaluate(() => window.scrollBy(0, -60));
+  } else {
+    // 칸 머리가 화면 위쪽에 오게.
+    await page.locator(clipName === "bank-keep" ? '[data-my-layer="keep"]' : '[data-my-layer="stage"]').first().evaluate((el) => el.scrollIntoView({ block: "start" })).catch(() => {});
+    await page.evaluate(() => window.scrollBy(0, -70));
+    await wait(clipName === "bank-keep" ? 6000 : 1500);
+  }
   await wait(600);
   await cdp.send("Page.startScreencast", { format: "jpeg", quality: 88, maxWidth: 780, maxHeight: 1688, everyNthFrame: 1 });
   await wait(300);
@@ -205,6 +251,65 @@ for (const locale of locales) {
   };
   let said = 0;
 
+  if (BANK) {
+    const answer = async (scope) => {
+      const q = scope.locator("section[data-kind]").first();
+      const kind = await q.getAttribute("data-kind").catch(() => null);
+      if (kind === "choose") await q.locator("button.rounded-xl").first().click().catch(() => {});
+      else if (kind === "type") {
+        await q.locator("input").first().click().catch(() => {});
+        await page.keyboard.type("the", { delay: 140 });
+        await wait(500);
+        await q.locator("input").first().press("Enter").catch(() => {});
+      }
+    };
+    if (clipName === "bank-stage") {
+      const stageBox = page.locator('[data-my-layer="stage"]').first();
+      await show(caption(0), await boxOf(stageBox));
+      await wait(3400);
+      await page.locator("[data-today-current]").first().click();
+      await hide();
+      await wait(4500);
+      await show(caption(1), { x: 0, y: 60, r: VW, b: 470 });
+      await wait(3800);
+      await hide();
+      await page.evaluate(() => document.querySelectorAll("div.fixed .overflow-y-auto").forEach((el) => el.scrollBy({ top: 260, behavior: "smooth" })));
+      await wait(2200);
+      const next = page.locator("div.fixed button", { hasText: new RegExp(`^${ui.scriptNext}$`) }).last();
+      await next.scrollIntoViewIfNeeded().catch(() => {});
+      await next.click().catch(() => {});
+      await wait(2500);
+      const lesson = page.locator("div.fixed").last();
+      await show(caption(2), await boxOf(lesson.locator("section[data-kind]").first()), "above");
+      await wait(3400);
+      await hide();
+      await answer(lesson);
+      await wait(3500);
+      await show(caption(3), await boxOf(lesson.locator("section[data-kind]").first()), "above");
+      await wait(3800);
+      await hide();
+    } else {
+      const keep = page.locator('[data-my-layer="keep"]').first();
+      await show(caption(0), await boxOf(keep));
+      await wait(3600);
+      await hide();
+      await answer(keep);
+      await wait(3000);
+      await show(caption(1), await boxOf(keep.locator("section[data-kind]").first()), "above");
+      await wait(4200);
+      await hide();
+      await keep.locator("section[data-kind] button").last().click().catch(() => {});
+      await wait(2200);
+      await show(caption(2), await boxOf(keep.locator("section[data-kind]").first()), "above");
+      await wait(3200);
+      await hide();
+      await keep.locator('[data-quiz-settings="keep"]').first().click().catch(() => {});
+      await wait(1800);
+      await show(caption(3), { x: 0, y: 420, r: VW, b: VH }, "above");
+      await wait(3800);
+      await hide();
+    }
+  } else {
   // 장면 1: 일일 학습 목록에서 하나 고르기.
   await show(caption(0), await boxOf(list));
   await wait(3200);
@@ -293,6 +398,7 @@ for (const locale of locales) {
     await wait(1200);
     await show(caption(4), await boxOf(list));
     await wait(4000);
+  }
   }
   const end = await now();
   if (process.env.CLIP_DEBUG) console.log(JSON.stringify(focuses.map((f) => ({ t: +(f.at - start).toFixed(1), ...f.box }))));
