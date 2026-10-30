@@ -57,6 +57,20 @@ export function pickBankScript(input: BankInput): StageScript | null {
 export function frameUsed(pattern: string, heard: string): boolean {
   const norm = (text: string) => text.toLowerCase().replace(/[’']/g, "'").replace(/[^\p{L}\p{M}\p{N}' ]+/gu, " ").replace(/\s+/g, " ").trim();
   const said = ` ${norm(heard)} `;
-  const parts = pattern.split("___").map(norm).filter(Boolean);
-  return parts.length > 0 && parts.every((part) => said.includes(` ${part} `) || (!/\s/.test(said.trim()) && said.includes(part)));
+  const raw = pattern.split("___");
+  const parts = raw
+    .map((piece, i) => {
+      const part = norm(piece);
+      // 빈칸에 바로 붙은 쪽(한국어 "___은", 일본어 "___を")은 낱말 경계를 따지지 않는다.
+      const left = i === 0 || /^\s/.test(piece) ? " " : "";
+      const right = i === raw.length - 1 || /\s$/.test(piece) ? " " : "";
+      return { part, left, right };
+    })
+    .filter((one) => one.part);
+  // 띄어쓰기 없는 글자(일본어·중국어·태국어)는 문장 안 어디든.
+  const spaceless = (text: string) => /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u.test(text);
+  return parts.length > 0 && parts.every(({ part, left, right }) => {
+    if (spaceless(part)) return said.replace(/\s+/g, "").includes(part.replace(/\s+/g, ""));
+    return said.includes(`${left}${part}${right}`);
+  });
 }

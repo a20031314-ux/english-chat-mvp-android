@@ -23,7 +23,7 @@ import { EN } from "./stageScripts/en.ts";
 import { ZH } from "./stageScripts/zh.ts";
 import { JA } from "./stageScripts/ja.ts";
 import { KO } from "./stageScripts/ko.ts";
-import { EN_BANK } from "./stageScripts/bank/en.ts";
+import { BANKS } from "./stageScripts/bank/index.ts";
 
 /** raw = 이미 앱 언어로 된 뜻(뼈대 밖 막힌 것 — 내가 편한 말로 쓴 줄, curriculum/gaps.ts). */
 export type ScriptGloss = { en: string; ko?: string; raw?: string };
@@ -76,8 +76,13 @@ export function isTapMode(mode: ScriptMode): boolean {
 }
 
 const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH, fr: FR, it: IT, pt: PT, ru: RU, ar: AR, hi: HI };
-/** 대본 은행(학습 언어별, 지금은 영어 1단계만) — scriptsFor(단계 목록·조건)에는 넣지 않는다. */
-const BANK: Partial<Record<string, StageScript[]>> = { en: EN_BANK };
+/** 대본 은행(학습 언어별 1~3단계, stageScripts/bank/) — scriptsFor(단계 목록·조건)에는 넣지 않는다. */
+const BANK: Partial<Record<string, StageScript[]>> = BANKS;
+
+/** 은행이 있는 학습 언어. */
+export function bankLanguages(): string[] {
+  return Object.keys(BANK);
+}
 
 /** 이 학습 언어의 은행 대본 중 이 단계 이하(2026-10-30 사용자 A "3단계면 1~3단계 범위"). */
 export function bankScriptsUpTo(language: string, stage: number): StageScript[] {
