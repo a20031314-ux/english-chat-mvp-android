@@ -12,6 +12,17 @@ export function serve(port) {
       const chunks = []; for await (const c of req) chunks.push(c);
       const headers = { ...req.headers }; for (const h of ["host", "origin", "referer", "content-length"]) delete headers[h];
       headers["x-app-version"] = "2.77.0"; headers["x-rc-user"] = state.uid;
+      // UX_PLAN=plus 등: 유료 사용자처럼 보이게(통화 점검). 운영은 앱이 말한 요금제를 믿지 않아(REQUIRE_VERIFIED_PREMIUM)
+      // 앱에 주는 /api/entitlement 답만 그 요금제로 바꾸고, 통화 턴은 차감 머리를 빼서 서버가 세지 않게 한다. 채팅 한도는 서버 그대로(무료).
+      const plan = process.env.UX_PLAN;
+      if (plan) delete headers["x-roleplay-points"];
+      if (plan && req.url.startsWith("/api/entitlement")) {
+        try { const up = await fetch(API + req.url, { headers }); const body = await up.json();
+          const terms = body.plans?.[plan] ?? {};
+          Object.assign(body, { plan, tier: plan, isPremium: true, dailyLimit: terms.dailyChat ?? body.dailyLimit, callDailyMinutes: terms.dailyCallMinutes ?? 10, callTodayLeftSeconds: (terms.dailyCallMinutes ?? 10) * 60, libraryOpen: Boolean(terms.libraryOpen) });
+          res.writeHead(200, { "content-type": "application/json" }); res.end(JSON.stringify(body)); }
+        catch { res.writeHead(502); res.end(); } return;
+      }
       try { const up = await fetch(API + req.url, { method: req.method, headers, body: ["GET", "HEAD"].includes(req.method) ? undefined : Buffer.concat(chunks) });
         res.writeHead(up.status, { "content-type": up.headers.get("content-type") || "application/octet-stream" }); res.end(Buffer.from(await up.arrayBuffer())); }
       catch { res.writeHead(502); res.end(); } return;
