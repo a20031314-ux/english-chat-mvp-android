@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -87,14 +88,40 @@ const CURRICULUM_ONLY = true;
 // 오늘 할 것과 단계는 한 칸(2026-10-30 사용자 "오늘 할 것과 단계는 통합 — 첫 화면은 일일 학습으로 바로, 끝나면 단계 화면"): "stage".
 type MyLayer = "stage" | "keep" | "review";
 const LAYER_KEY = "myLayer.v1";
+// 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도"):
+// 고른 칸은 그날만 기억하고, 날이 바뀌면 n단계(오늘 할 것)부터.
+const LAYER_DAY_KEY = "myLayer.day";
+const AUTO_KEEP_KEY = "myLayer.autoKeep";
 function readLayer(): MyLayer | null {
   try {
+    if (localStorage.getItem(LAYER_DAY_KEY) !== localDay()) return "stage";
     const saved = localStorage.getItem(LAYER_KEY);
     if (saved === "none") return null;
     return saved === "keep" || saved === "review" ? saved : "stage";
   } catch {
     return "stage";
   }
+}
+
+/** 오늘 할 것을 다 하면 그날 한 번 퀴즈 칸을 펴고 맨 위로(그 뒤 다른 칸을 고르면 그대로). */
+function AutoQuiz({ done, onOpen }: { done: boolean; onOpen: (layer: MyLayer) => void }) {
+  const openRef = useRef(onOpen);
+  useEffect(() => {
+    openRef.current = onOpen;
+  });
+  useEffect(() => {
+    if (!done) return;
+    try {
+      if (localStorage.getItem(AUTO_KEEP_KEY) === localDay()) return;
+      localStorage.setItem(AUTO_KEEP_KEY, localDay());
+    } catch {
+      // 이 폰에 못 남기면 이번에만.
+    }
+    openRef.current("keep");
+    const timer = window.setTimeout(() => document.querySelector('[data-my-layer="keep"]')?.scrollIntoView({ block: "start", behavior: "smooth" }), 150);
+    return () => window.clearTimeout(timer);
+  }, [done]);
+  return null;
 }
 
 type RelatedItem = { id: string; stage: number; kind: "script" | "frame"; label: string; passed: boolean };
@@ -206,6 +233,7 @@ export function NotebookSection({
     setLayerState(next);
     try {
       localStorage.setItem(LAYER_KEY, next ?? "none");
+      localStorage.setItem(LAYER_DAY_KEY, localDay());
     } catch {
       // 다음에 열 때 처음 칸으로.
     }
@@ -2183,9 +2211,7 @@ function MyLayers({
     const first = parts?.today ?? today;
     const todayDone = !first || (parts?.today.done ?? false);
     const stageView = todayDone || peek;
-    return (
-      <>
-        {card(
+    const stageCard = card(
           "stage",
           stage.title,
           stageView ? stage.summary : first.summary,
@@ -2208,8 +2234,14 @@ function MyLayers({
               </button>
             </>
           ),
-        )}
-        {parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null}
+        );
+    const keepCard = parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null;
+    return (
+      <>
+        {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
+        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} /> : null}
+        {todayDone && keepCard ? keepCard : stageCard}
+        {todayDone && keepCard ? stageCard : keepCard}
         {card(
           "review",
           ui.reviewLayerTitle,
