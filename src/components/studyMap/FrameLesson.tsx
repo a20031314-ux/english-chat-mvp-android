@@ -27,6 +27,9 @@ import { HearingButtons, LineGrade, useHearing } from "@/components/studyMap/Sta
  * ③ 대화 — 상대 줄을 듣고(🔊 자동) 그 틀로 대답, 뜻으로 판단(대본 "내 말로"와 같음). 원문 보기 없이 모두 맞히면 그 틀 익힘.
  */
 
+/** 조각이 틀에서 나오는 자리(없으면 맨 뒤). */
+const partAt = (pattern: string, piece: string) => (pattern.indexOf(piece) < 0 ? pattern.length : pattern.indexOf(piece));
+
 type TalkResult = { heard: string; practice: Practice | null; good: boolean; revealed: boolean };
 
 export function FrameLesson({
@@ -52,13 +55,17 @@ export function FrameLesson({
   const [lesson, setLesson] = useState<Lesson | null | undefined>(undefined);
   useEffect(() => {
     let alive = true;
-    void fetch(apiUrl(`/api/curriculum/frame-lesson?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&frame=${encodeURIComponent(frame.id)}`), {
-      headers: entitlementHeaders(isPremium),
-    })
-      .then((response) => (response.ok ? response.json() : null))
-      .catch(() => null)
-      .then((body: { lesson?: Lesson | null } | null) => {
-        if (alive) setLesson(body?.lesson ?? null);
+    const url = apiUrl(`/api/curriculum/frame-lesson?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&frame=${encodeURIComponent(frame.id)}`);
+    const get = () =>
+      fetch(url, { headers: entitlementHeaders(isPremium) })
+        .then((response) => (response.ok ? response.json() : null))
+        .catch(() => null)
+        .then((body: { lesson?: Lesson | null } | null) => body?.lesson ?? null);
+    // 처음 만드는 틀은 모델이 한 번 실패할 수 있어 한 번만 다시 묻는다(만든 뒤엔 저장된 것이 바로 옴).
+    void get()
+      .then((first) => first ?? new Promise<Lesson | null>((resolve) => window.setTimeout(() => void get().then(resolve), 1500)))
+      .then((lessonNow) => {
+        if (alive) setLesson(lessonNow);
       });
     return () => {
       alive = false;
@@ -212,7 +219,10 @@ export function FrameLesson({
               <section data-lesson-parts>
                 <h3 className="text-meta font-semibold text-slate-400">{ui.insightPattern}</h3>
                 <ul className="mt-1 flex flex-col gap-1.5">
-                  {lesson.parts.map((part, index) => (
+                  {/* In the order the parts appear in the pattern (the model sometimes lists the blank last). */}
+                  {[...lesson.parts]
+                    .sort((a, b) => partAt(frame.pattern, a.piece) - partAt(frame.pattern, b.piece))
+                    .map((part, index) => (
                     <li key={index} className="flex items-baseline gap-2">
                       <span dir="auto" className={`shrink-0 rounded-lg px-1.5 py-0.5 text-chat ${part.piece.includes("___") ? "border border-dashed border-status-learned/60 text-status-learned" : "bg-white/10 text-ink"}`}>
                         {part.piece}
