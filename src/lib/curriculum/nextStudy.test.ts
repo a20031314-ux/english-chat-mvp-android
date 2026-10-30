@@ -18,7 +18,7 @@ for (const language of ["es", "ja"]) {
 
   test(`${language}: 순서 = 다시 볼 것 → 틀렸던 것 → 가장 모자란 갈래 → 곧 나올 것 → 다지기`, () => {
     const [due, missed] = firstKeys;
-    const log: QuizLog = recordQuiz({}, missed!, false, NOW - 1000);
+    const log: QuizLog = recordQuiz({}, missed!, false, NOW - 31 * 60 * 1000);
     const picks = nextStudy({
       language,
       stage: 1,
@@ -89,7 +89,7 @@ test("계속 공부 갈래 고르기: 그 갈래 열쇠만, 지금 단계 것이
 for (const language of ["es", "ja"]) {
   const stageOne = allScriptsFor(language).filter((script) => script.stage === 1);
   const firstKeys = reviewKeysOf(language, stageOne[0]!.id);
-  test(`${language}: 복습 줄과 새로 배우기 줄은 섞이지 않는다`, () => {
+  test(`${language}: 복습 줄은 틀린 것만, 새로 배우기 줄은 틀린 것부터`, () => {
     const [due, missed] = firstKeys;
     const base = {
       language,
@@ -106,7 +106,9 @@ for (const language of ["es", "ja"]) {
     assert.equal(review[0]!.key, due);
     const learn = nextStudy({ ...base, lane: "learn" });
     assert.ok(learn.length > 0);
-    assert.ok(learn.every((pick) => ["weak", "word", "new", "confirm", "keep"].includes(pick.reason)), learn.map((p) => p.reason).join());
+    // 2026-10-30: 새로 배우기 줄도 틀린 것(다시 볼 것·틀렸던 것)을 맨 앞에(복습 칸은 읽고 정리).
+    assert.ok(learn.every((pick) => ["again", "missed", "gap", "weak", "word", "new", "confirm", "keep"].includes(pick.reason)), learn.map((p) => p.reason).join());
+    assert.equal(learn[0]!.reason, "again");
     // 아무것도 없으면 복습 줄은 비고, 새로 배우기는 늘 있다.
     assert.equal(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "review", now: NOW }).length, 0);
     assert.ok(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "learn", now: NOW }).length > 0);

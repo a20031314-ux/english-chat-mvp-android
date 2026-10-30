@@ -52,6 +52,7 @@
 | violet | 말하는 방·사람·지도에서 고른 것에만(지금 쓰는 그대로) |
 
 바탕에 깔 때는 투명도로: `bg-good/15 border-good/30 text-good`. 
+**My 큰 칸 색**(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고"): 펼친 칸의 테두리·바탕·제목만 칸마다 — 오늘 할 것 `status-learned` · 단계 `info` · 퀴즈 `good` · 복습 `bad`(`NotebookSection` `LAYER_TONE`). 칸 안의 버튼·점은 위 의미색 그대로.
 **표현의 세 상태**는 정해진 색: `bg-status-mastered`(숙지) · `bg-status-learned`(배운 것) · `bg-status-pending`(알아야 할 것·만난 것). 지도 막대·점·장부 모두 이것만.
 
 **글자 크기** (줄 높이는 물려받음)

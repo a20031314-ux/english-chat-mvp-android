@@ -30,10 +30,10 @@ import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
 import { buildStageTest, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
-import { WeakStrip } from "@/components/studyMap/WeakStrip";
+import { ReviewNotes, useReviewNotes } from "@/components/studyMap/ReviewNotes";
 import { curriculumItems } from "@/lib/curriculum/dailyPlan";
 import { allMisses } from "@/lib/curriculum/scriptMisses";
-import { weakSpots, wordsToShow } from "@/lib/curriculum/weakSpots";
+import { weakSpots, wordsToShow, type WeakSpot } from "@/lib/curriculum/weakSpots";
 import { morningDays } from "@/lib/curriculum/morningDigest";
 import { onMorningChange, readMorning, scheduleMorning } from "@/lib/morningNotify";
 import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
@@ -607,15 +607,8 @@ export function NotebookSection({
               </>
             ),
           }}
-          weak={
-            <WeakStrip
-              ui={ui}
-              locale={locale}
-              language={language}
-              spots={weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review: book.review ?? NO_REVIEW, grammarName })}
-              onOpen={openScript}
-            />
-          }
+          locale={locale}
+          notes={weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review: book.review ?? NO_REVIEW, grammarName, limit: 40 })}
         />
       ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (
@@ -2202,36 +2195,49 @@ type PlanParts = { today: LayerPart; keep: LayerPart; review: LayerPart; overlay
  * 오늘 할 것(오늘 목록, 설정은 접힘) · n단계(내 진척, 사다리, 방식 칩 [상황 | 표현·문법 | 문장구조], 다음 단계 조건) · 복습(계속 공부·단어장·시험·틀린 줄).
  * 한 번에 하나만 펼친다. 퀴즈·시험 화면(overlays)은 칸이 접혀도 떠 있어야 해서 따로.
  */
+/** 큰 칸마다 다른 색(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고") — 펼친 칸의 테두리·바탕·제목. hub/DESIGN.md "My 큰 칸 색". */
+const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
+  today: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
+  stage: { box: "border-info/40 bg-info/[0.04]", title: "text-info" },
+  keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good" },
+  review: { box: "border-bad/40 bg-bad/[0.04]", title: "text-bad" },
+};
+
 function MyLayers({
   ui,
+  language,
+  locale,
   open,
   onOpen,
   today,
   plan,
   stage,
-  weak,
+  notes,
 }: {
   ui: UICopy;
   language: string;
+  locale: string;
   open: MyLayer | null;
   onOpen: (layer: MyLayer | null) => void;
   /** 0단계 글자 묶음일 때 오늘 할 것 자리(TodayPlan 없음). */
   today: LayerPart | null;
   plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
   stage: LayerPart & { title: string };
-  weak: ReactNode;
+  /** 복습 = 읽고 정리(지난번에 틀린 것, studyMap/ReviewNotes). */
+  notes: readonly WeakSpot[];
 }) {
+  const review = useReviewNotes(language, notes);
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
     const on = open === id;
     return (
-      <section key={id} data-my-layer={id} className={`mt-3 rounded-2xl border ${on ? "border-status-learned/40 bg-status-learned/[0.04]" : "border-line"}`}>
+      <section key={id} data-my-layer={id} className={`mt-3 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
         <button
           type="button"
           aria-expanded={on}
           onClick={() => onOpen(on ? null : id)}
           className="flex w-full items-center gap-2 px-3 py-3 text-start"
         >
-          <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? "text-status-learned" : "text-ink"}`}>{title}</h3>
+          <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
           {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
           <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
         </button>
@@ -2246,12 +2252,15 @@ function MyLayers({
         {first ? card("today", ui.planTitle, first.summary, first.body) : null}
         {card("stage", stage.title, stage.summary, stage.body)}
         {parts ? card("keep", ui.quizTag, parts.keep.summary, parts.keep.body) : null}
-        {parts || weak ? card("review", ui.reviewLayerTitle, parts?.review.summary ?? null, (
+        {card(
+          "review",
+          ui.reviewLayerTitle,
+          review.left.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", review.left.length >= 30 ? "30+" : String(review.left.length))}</span> : null,
           <>
             {parts?.review.body}
-            {weak}
-          </>
-        )) : null}
+            <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
+          </>,
+        )}
         {parts?.overlays}
       </>
     );

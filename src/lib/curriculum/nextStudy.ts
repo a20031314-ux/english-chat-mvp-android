@@ -14,7 +14,7 @@
  * 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘, 버튼으로"): lane "review" = 1·1½·2·2½·5(다시 볼 것·확인 중·틀렸던 것·막힌 것·다지기, 갈래 없이),
  * lane "learn" = 3·4·빈도 단어 + 뒤 단계(고른 갈래 또는 알아서). lane이 없으면 예전처럼 모두 한 줄.
  * 복습은 틀린 것만(2026-10-30 사용자 "지속 학습 문제를 맞추면 확인 쪽으로 넘어가버려" → "복습은 틀린 것만"): lane "review" = 1·2·2½(다시 볼 것·틀렸던 것·막힌 것),
- * 맞힌 것의 확인(1½ 확인 중)과 다지기(5)는 lane "learn"에 섞는다 — 새 것 둘마다 확인 하나(CONFIRM_EVERY), 다지기는 맨 뒤. 이번 주 확인(checkup)은 그대로 확인 중을 낸다.
+ * 2026-10-30 복습 칸이 읽고 정리로 바뀌어 lane "learn"도 틀린 것(1·2·2½)을 맨 앞에 낸다(고른 갈래 안에서). 맞힌 것의 확인(1½ 확인 중)과 다지기(5)는 lane "learn"에 섞는다 — 새 것 둘마다 확인 하나(CONFIRM_EVERY), 다지기는 맨 뒤. 이번 주 확인(checkup)은 그대로 확인 중을 낸다.
  * 사흘 안에 맞힌 열쇠와 이번에 이미 낸 열쇠는 빼고, 퀴즈를 못 만드는 열쇠도 뺀다. 모델을 부르지 않는 순수 모듈(화면 TodayPlan·테스트).
  */
 import { isWordish, type PartId } from "../notes/stageParts.ts";
@@ -81,7 +81,8 @@ export function nextStudy(input: {
   now?: number;
 }): StudyPick[] {
   const lane = input.lane ?? null;
-  const reviewing = lane !== "learn";
+  // 복습 칸이 읽고 정리로 바뀌어(2026-10-30 사용자 A) 틀린 것 다시 풀기(다시 볼 것·틀렸던 것·막힌 것)는 새로 배우기 줄 맨 앞에서도 낸다.
+  const reviewing = true;
   const learning = lane !== "review";
   const focus = lane === "review" ? null : (input.focus ?? null);
   const fits = (key: string) => !focus || (focus === "pronunciation" ? keyPart(input.language, key) !== "grammar" : keyPart(input.language, key) === focus);
@@ -164,7 +165,8 @@ export function nextStudy(input: {
   // 방금 푼 것은 뒤로(2026-10-29 사용자 — 같은 표현만 계속 나옴): 30분 안에 푼 열쇠는 맞든 틀리든, 다시 볼 것·확인 중·틀렸던 것이 아니면 맨 뒤.
   if (lane === "learn") for (const key of keepKeys) add(key, "keep");
 
-  const recent = (pick: StudyPick) => pick.reason !== "again" && pick.reason !== "confirm" && pick.reason !== "missed" && now - (input.log[pick.key]?.at ?? -Infinity) < RECENT_MS;
+  // 틀렸던 것도 방금(30분 안) 틀린 것은 뒤로 — 같은 문제가 바로 다시 나오지 않게(2026-10-30, 퀴즈 칸이 틀린 것을 맨 앞에 낸 뒤).
+  const recent = (pick: StudyPick) => pick.reason !== "again" && pick.reason !== "confirm" && now - (input.log[pick.key]?.at ?? -Infinity) < RECENT_MS;
   const ordered = [...out.filter((pick) => !recent(pick)), ...out.filter(recent)];
   if (!confirms.length) return ordered;
   // 새 것 CONFIRM_EVERY개마다 확인 중 하나, 남은 확인 중은 다지기 앞에.

@@ -470,7 +470,6 @@ export function TodayPlan({
   const entryItems = checkupOpen === "entry" && frozenItems ? (frozenItems as typeof liveEntryItems) : liveEntryItems;
   const entryOffer = checkupOpen === "entry" || (!free && entryDue(checkups, stage, liveEntryItems));
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
-  const todaySkip = items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id);
   const studyQueue = (which: StudyLane, at: number, weakestNow: PartId | null, skipToday: readonly string[] = []) =>
     nextStudy({
       language,
@@ -488,8 +487,6 @@ export function TodayPlan({
       lane: which,
       now: at,
     });
-  const reviewQueue = studyQueue("review", now || Date.now(), studyWeakest, todaySkip);
-  const upReview = reviewQueue[0] ?? null;
   const nextIn = (which: StudyLane, weakestNow: PartId | null) => firstPick(studyQueue(which, Date.now(), weakestNow), which) ?? null;
   const words = wordbook(language, known, savedWords, (word) => wordGloss(language, word));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
@@ -1182,33 +1179,14 @@ export function TodayPlan({
       {settingsSheet}
     </div>
   );
-  // 복습 칸(지속 학습 아래, 따로): 틀린 것이 바로 문제로, 방식은 ⚙, 이번 주 확인은 아이콘. 남은 수는 칸 머리에만.
-  const reviewLeft = reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length);
-  const reviewSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewLeft)}</span> : null;
-  const reviewBody = (
-    <div data-review>
-      {upReview || reviewTest ? (
-        <div className="flex items-center justify-end gap-0.5">
-          {reviewTest ? testIcon(reviewTest) : null}
-          {upReview && waysFor("review").length > 1 ? settingsIcon("review") : null}
-        </div>
-      ) : null}
-      <InlineQuiz
-        ui={ui}
-        locale={locale}
-        language={language}
-        resetKey={`${language}|review|${reviewStyle}`}
-        make={() => (upReview ? takeBatch(bundleFor("review")) : null)}
-        onResult={recordOne}
-        empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {ui.studyReviewNone}</p>}
-      />
-    </div>
-  );
+  // 복습 칸(퀴즈 아래, 따로): 읽고 정리(2026-10-30 사용자 A — 카드는 NotebookSection이 studyMap/ReviewNotes로) + 📝 시험 아이콘.
+  // 틀린 것 다시 풀기는 퀴즈 칸이 맨 앞에서 낸다(nextStudy learn 줄).
+  const reviewBody = reviewTest ? <div data-review className="mb-2 flex items-center justify-end gap-0.5">{testIcon(reviewTest)}</div> : null;
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
   return children({
     today: { summary: todaySummary, body: todayBody },
     keep: { summary: null, body: keepBody },
-    review: { summary: reviewSummary, body: reviewBody },
+    review: { summary: null, body: reviewBody },
     overlays,
   });
 }
