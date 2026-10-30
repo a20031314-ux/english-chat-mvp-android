@@ -176,17 +176,23 @@ export function FrameLesson({
   };
   const result = results[tIndex];
   const ok = lessonPassed(results, turns.length);
+  const hideFrame = step === "quiz" || step === "talk";
+  // "이름 말하기: 제 이름은 ___예요." → "이름 말하기" — 뒤쪽은 틀을 그대로 담고 있어 답이 된다.
+  const meaningHead = glossFor(frame.meaning, locale).split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
 
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <div className="min-w-0 flex-1">
+          {/* 퀴즈·대화에서는 틀을 가린다(2026-10-30 사용자 "제목과 텍스트로 답이 그냥 보여") — 무엇을 하는 틀인지(뜻의 앞부분)만. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
-            {frame.pattern} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
+            {hideFrame ? meaningHead : frame.pattern} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>
-          <p dir="auto" className="mt-0.5 text-caption text-slate-400">
-            {glossFor(frame.meaning, locale)}
-          </p>
+          {hideFrame ? null : (
+            <p dir="auto" className="mt-0.5 text-caption text-slate-400">
+              {glossFor(frame.meaning, locale)}
+            </p>
+          )}
         </div>
         <button
           type="button"
@@ -351,9 +357,6 @@ export function FrameLesson({
                     </span>
                   ),
                 )}
-              </p>
-              <p dir="auto" className="text-meta text-slate-500">
-                {frame.pattern}
               </p>
               {result?.heard ? (
                 <p dir="auto" className="text-chat text-slate-100">
