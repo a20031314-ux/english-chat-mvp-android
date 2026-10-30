@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { bankFor, bankView } from "@/lib/server/qbank";
+import { bankFor, bankView, lastRaw } from "@/lib/server/qbank";
 import type { BankResult } from "@/lib/curriculum/qbankRules";
 
 export const dynamic = "force-dynamic";
@@ -50,5 +50,6 @@ export async function POST(request: NextRequest) {
     const entry = await bankFor(language, key, wanted.get(key) ?? 1, mine, wanted.has(key) ? meter : undefined).catch(() => null);
     if (entry && wanted.has(key)) banks[key] = await bankView(language, key, entry, ui, meter).catch(() => null);
   }
-  return jsonWithCors(request, { banks });
+  const debug = request.headers.get("x-qbank-debug") === "1" ? Object.fromEntries([...wanted.keys()].map((key) => [key, lastRaw.get(`${language}|${key}`) ?? ""])) : undefined;
+  return jsonWithCors(request, { banks, ...(debug ? { debug } : {}) });
 }
