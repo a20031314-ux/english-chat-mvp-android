@@ -57,7 +57,7 @@ export function ScriptEntry({ ui, targetLanguage, locale, isPremium }: { ui: UIC
           <span className="block truncate text-note text-slate-100">{data.course.title}</span>
         </span>
         <span className="shrink-0 text-meta text-slate-400" dir="ltr">
-          {data.progress.finished ? "✓" : `${data.progress.done} / ${data.progress.total}`}
+          {data.progress.finished ? "✓" : null}
         </span>
       </button>
       {open ? (
@@ -290,9 +290,6 @@ export function LettersPlan({ ui, targetLanguage, locale, isPremium, onDone }: {
     <section data-letters-plan className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
       <div className="flex items-center gap-2">
         <h3 className="min-w-0 flex-1 truncate text-caption font-semibold text-status-learned">{ui.planTitle} · {data.course.title}</h3>
-        <span className="shrink-0 text-caption tabular-nums text-slate-400" dir="ltr">
-          {data.progress.done} / {data.progress.total}
-        </span>
       </div>
       <ul className="mt-2 flex flex-col gap-1.5">
         {next.map((group) => (

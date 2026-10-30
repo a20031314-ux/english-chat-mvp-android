@@ -1175,11 +1175,6 @@ export function TodayPlan({
           empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {ui.planAllDone}</p>}
         />
       )}
-      {tally.known.length || tally.fixed.length ? (
-        <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
-          {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
-        </p>
-      ) : null}
       {settingsSheet}
     </div>
   );

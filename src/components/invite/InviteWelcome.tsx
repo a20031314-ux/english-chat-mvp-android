@@ -143,14 +143,17 @@ export function InviteWelcome({ ui, locale, onOpenTab }: { ui: UICopy; locale: s
                   />
                 </label>
               ) : null}
-              <button
-                type="button"
-                disabled={busy || !nameOk}
-                onClick={() => void go(() => (info.room ? requestRoom(info.room.id) : onOpenTab("people")))}
-                className="tb-btn w-full rounded-lg px-4 py-2.5 text-sm font-semibold disabled:opacity-50"
-              >
-                {info.room ? t.joinRoom : needsName ? t.enter : t.browse}
-              </button>
+              {/* 방 초대가 아니고 이름도 정할 게 없으면 "사람 둘러보기"(사람 탭으로 옮기기만)는 그리지 않는다(사용자 2026-10-30). */}
+              {info.room || needsName ? (
+                <button
+                  type="button"
+                  disabled={busy || !nameOk}
+                  onClick={() => void go(() => (info.room ? requestRoom(info.room.id) : onOpenTab("people")))}
+                  className="tb-btn w-full rounded-lg px-4 py-2.5 text-sm font-semibold disabled:opacity-50"
+                >
+                  {info.room ? t.joinRoom : t.enter}
+                </button>
+              ) : null}
               <button
                 type="button"
                 disabled={busy || !nameOk}

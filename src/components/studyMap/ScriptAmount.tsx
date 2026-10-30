@@ -41,25 +41,19 @@ export function ScriptAmount({
     [language, key, skippedKey],
   );
   if (!amount) return null;
-  const done = amount.canDo.filter((item) => item.done).length;
-  const stages = [...new Set(amount.canDo.map((item) => item.fn.stage))].sort((a, b) => a - b);
+  // 진척 숫자 없이 해낸 것만(사용자 2026-10-30 "진척 숫자는 삭제하고 학습한 부분만 표시"): 말한 문장 수·n/m은 뺌.
+  const doneItems = amount.canDo.filter((item) => item.done);
+  if (!doneItems.length) return null;
+  const stages = [...new Set(doneItems.map((item) => item.fn.stage))].sort((a, b) => a - b);
   return (
     <section data-script-amount className={inside ? "mt-3 border-t border-line pt-3" : "mt-3 rounded-2xl border border-line px-3 py-3"}>
-      <h3 className="text-caption font-semibold text-slate-300">{ui.scriptAmountTitle}</h3>
-      {/* Grammar, expression and frame counts live in the My progress bars only (2026-10-29, user: one set of numbers); here what was said and can be done. */}
-      <p className="mt-2 text-caption text-slate-400">
-        {ui.amountLines} <span className="text-note font-semibold tabular-nums text-ink">{amount.lines}</span>
-      </p>
       <button
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="mt-3 flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+        className="flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
       >
         <span className="min-w-0 flex-1 text-note text-slate-100">{ui.canDoTitle}</span>
-        <span className="text-caption tabular-nums text-slate-400">
-          {done}/{amount.canDo.length}
-        </span>
         <span aria-hidden className={`text-caption text-slate-500 ${open ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
       </button>
       {open ? (
@@ -68,16 +62,11 @@ export function ScriptAmount({
             <div key={stage}>
               <h4 className="text-meta text-slate-400">{ui.stageNumber.replace("{n}", String(stage))}</h4>
               <ul className="mt-1 flex flex-wrap gap-1.5">
-                {amount.canDo
+                {doneItems
                   .filter((item) => item.fn.stage === stage)
                   .map((item) => (
-                    <li
-                      key={item.fn.id}
-                      dir="auto"
-                      className={`rounded-full px-2.5 py-1 text-meta ${item.done ? "bg-status-mastered/20 text-good" : "border border-line text-slate-500"}`}
-                    >
-                      {item.done ? "✓ " : ""}
-                      {glossFor(item.fn.name, locale)}
+                    <li key={item.fn.id} dir="auto" className="rounded-full bg-status-mastered/20 px-2.5 py-1 text-meta text-good">
+                      ✓ {glossFor(item.fn.name, locale)}
                     </li>
                   ))}
               </ul>

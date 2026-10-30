@@ -121,6 +121,7 @@ export function NextStepCard({
   targetLanguage,
   canCall: languageHasCall,
   onStart,
+  canChat = true,
   refreshKey,
 }: {
   ui: UICopy;
@@ -130,6 +131,8 @@ export function NextStepCard({
   canCall: boolean;
   /** Start here instead of sending a request to another tab. */
   onStart?: (request: PracticeRequest) => void;
+  /** 채팅을 쓸 수 없으면(무료 한도 0·오늘 다 씀) false — "채팅으로"를 그리지 않는다(사용자 2026-10-30 "잠긴 채팅의 입력칸·채팅으로 삭제"). */
+  canChat?: boolean;
   /** Changes when what the steps are made from changes (a new map), so they are read again. */
   refreshKey?: string | null;
 }) {
@@ -175,7 +178,8 @@ export function NextStepCard({
   if (!step) return null;
   const labelOk = !data?.labelLanguage || data.labelLanguage === locale;
   const { title } = stepTexts(step, ui, labelOk);
-  const preferred: "chat" | "roleplay" = step.tab === "roleplay" && !canCall ? "chat" : step.tab === "roleplay" ? "roleplay" : "chat";
+  const preferred: "chat" | "roleplay" =
+    !canChat ? "roleplay" : step.tab === "roleplay" && !canCall ? "chat" : step.tab === "roleplay" ? "roleplay" : "chat";
 
   const start = (tab: "chat" | "roleplay") => {
     if (!step.goal) return;
@@ -193,6 +197,7 @@ export function NextStepCard({
     const order: Array<"chat" | "roleplay"> = preferred === "roleplay" ? ["roleplay", "chat"] : ["chat", "roleplay"];
     for (const tab of order) {
       if (tab === "roleplay" && !canCall) continue;
+      if (tab === "chat" && !canChat) continue;
       buttons.push({
         label: tab === "chat" ? ui.nextByChat : ui.nextByCall,
         act: () => start(tab),
@@ -200,6 +205,8 @@ export function NextStepCard({
       });
     }
   }
+  // 채팅·통화 둘 다 못 쓰면 갈 곳 없는 카드 — 그리지 않는다.
+  if (!buttons.length) return null;
 
   return (
     <section

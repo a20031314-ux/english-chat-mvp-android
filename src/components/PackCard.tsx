@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { elementNames } from "@/components/studyMap/GrowthNetwork";
-import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -179,10 +178,6 @@ export function PackRetroSheet({
   const names = elementNames(ui);
   const fill = (template: string, values: Record<string, string | number>) =>
     Object.entries(values).reduce((text, [key, value]) => text.replace(`{${key}}`, String(value)), template);
-  const openMy = () => {
-    sendAppIntent("openTab", { tab: "map" });
-    onClose();
-  };
   return (
     <BodyLayer>
       <div className="fixed inset-0 z-[90] flex flex-col justify-end bg-black/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-[max(0.5rem,env(safe-area-inset-top))] sm:items-center sm:justify-center">
@@ -245,13 +240,6 @@ export function PackRetroSheet({
               </div>
 
               <div className="mt-4 flex gap-2">
-                <button
-                  type="button"
-                  onClick={openMy}
-                  className="flex-1 rounded-xl border border-white/15 px-4 py-2.5 text-[13px] text-slate-100 hover:bg-white/10"
-                >
-                  {ui.packMyLink}
-                </button>
                 <button
                   type="button"
                   onClick={onClose}

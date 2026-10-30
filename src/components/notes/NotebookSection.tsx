@@ -18,8 +18,7 @@ import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
-import { skippedIds, type KnownMap } from "@/lib/curriculum/known";
-import { skeletonTotals, skeletonView, toNextStage } from "@/lib/notes/skeletonTotals";
+import { skippedIds } from "@/lib/curriculum/known";
 import { frontierStage, useStudyMode, type StudyMode } from "@/lib/curriculum/studyMode";
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { LettersPlan, ScriptEntry } from "@/components/studyMap/ScriptPractice";
@@ -37,7 +36,7 @@ import { weakSpots, wordsToShow, type WeakSpot } from "@/lib/curriculum/weakSpot
 import { morningDays } from "@/lib/curriculum/morningDigest";
 import { onMorningChange, readMorning, scheduleMorning } from "@/lib/morningNotify";
 import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
-import { allFramesFor } from "@/lib/curriculum/frames";
+import { allFramesFor, frameById } from "@/lib/curriculum/frames";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -409,42 +408,26 @@ export function NotebookSection({
     setStagePeek(true);
     setJump({ stage, id, at: Date.now() });
   };
-  const stageRow = (book.parts ?? []).find((row) => row.order === book.stage) ?? null;
   // 다음 단계 조건 = 문장구조 익힘 70% + 꺼내 씀 70%(2026-10-30 사용자, curriculum/recall.ts) — 틀이 있는 단계만, 없으면 예전 네 갈래.
   const frameTally = (order: number) => {
     const row = (book.parts ?? []).find((one) => one.order === order);
     const tally = stageFrameTally(language, order, new Set(row?.scripts?.passed ?? []), known);
     return tally.total ? { ...tally, need: Math.ceil(tally.total * STAGE_DONE_SHARE) } : null;
   };
-  const hereTally = frameTally(book.stage);
-  const stageLeft = hereTally
-    ? Math.max(0, hereTally.need - hereTally.learned) + Math.max(0, hereTally.need - hereTally.recalled)
-    : stageRow
-      ? toNextStage(stageRow.parts, STAGE_DONE_SHARE)
-      : 0;
-  /** 내 진척 시트 안의 망·그래프(예전 My 맨 위 [망 | 그래프 | 단계] 토글을 여기로, 2026-10-30). */
-  const partsView = (mode: "net" | "graph") =>
-    book.parts?.length ? (
-      <PartsOverview
-        ui={ui}
-        locale={locale}
-        view={mode}
-        parts={stageRow ?? book.parts[0]!}
-        days={book.partDays ?? null}
-        items={book.partItems ?? null}
-        allOf={(id, row) =>
-          id === "vocab"
-            ? (book.words ?? []).map((word) => ({ text: word.text, state: word.state }))
-            : id === "expression"
-              ? row.expressions.map((item) => ({ text: item.text, state: item.state }))
-              : id === "grammar"
-                ? book.nodes.filter((node) => node.chapter === "grammar" && node.stage === row.order).map((node) => ({ text: nameOf(node.id), state: fill[node.id] ?? null }))
-                : []
-        }
-        nodeName={nameOf}
-        onPart={() => openLayer("stage")}
-      />
-    ) : null;
+  /** 내 진척 시트 = 익힌 것 이름만(사용자 2026-10-30 "진척 숫자는 그냥 삭제하고, 학습한 부분만 표시"): 통과한 문장구조 · 익힌 낱말·표현·문법. */
+  const learnedGroups = (() => {
+    const learnedState = (state: string | null | undefined) => state === "learned" || state === "mastered";
+    const parts = book.parts ?? [];
+    const passedIds = [...new Set(parts.flatMap((row) => row.scripts?.passed ?? []))];
+    const label = partLabels(ui);
+    const uniq = (items: string[]) => [...new Set(items.filter(Boolean))];
+    return [
+      { id: "frame", label: ui.amountFrames, items: uniq(passedIds.map((id) => frameById(language, id)?.pattern ?? "")) },
+      { id: "vocab", label: label.vocab, items: uniq((book.words ?? []).filter((word) => learnedState(word.state)).map((word) => word.text)) },
+      { id: "expression", label: label.expression, items: uniq(parts.flatMap((row) => row.expressions).filter((item) => learnedState(item.state)).map((item) => item.text)) },
+      { id: "grammar", label: label.grammar, items: uniq(book.nodes.filter((node) => node.chapter === "grammar" && learnedState(fill[node.id])).map((node) => nameOf(node.id))) },
+    ];
+  })();
   // 네 갈래 틀이 있으면 글자·소리(발음)·관용 표현(표현)·세부(어휘·표현)는 그 갈래 안에서 — 아래 줄에는 내가 만든 칸·자리 없음만.
   const inParts = frame && book.stages.length > 0 && (book.parts?.length ?? 0) > 0;
   const rows: Array<{ key: Group; label: string; count: number; show: boolean }> = [
@@ -550,7 +533,8 @@ export function NotebookSection({
           }
           stage={{
             title: ui.stageNumber.replace("{n}", String(lettersOn ? 0 : book.stage)),
-            summary: studyMode === "free" ? ui.modeFree : stageLeft > 0 ? ui.toNextStage.replace("{n}", String(stageLeft)) : null,
+            // 진척 숫자는 안 보임(사용자 2026-10-30 "진척 숫자는 그냥 삭제") — "다음 단계까지 n"을 뺌.
+            summary: studyMode === "free" ? ui.modeFree : null,
             body: (
               <>
         <StageFrame
@@ -586,14 +570,10 @@ export function NotebookSection({
           headExtra={book.parts?.some((row) => row.scripts) ? (
             <SkeletonProgress
                     ui={ui}
-                    language={language}
                     stage={lettersOn ? 0 : book.stage}
                     free={studyMode === "free"}
                     onMode={setStudyMode}
-                    row={lettersOn ? null : ((book.parts ?? []).find((row) => row.order === book.stage) ?? null)}
-                    known={known}
-                    passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
-                    views={partsView}
+                    learned={learnedGroups}
                     extra={<ScriptAmount inside ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} skipped={skipped} />}
                   />
           ) : null}
@@ -1118,7 +1098,6 @@ function StageFrame({
   const filledIn = (order: number) => inStage(order).filter(filledOf).length;
   const label: Record<PartId, string> = { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
   const readyOf = (order: number) => frameTally?.(order)?.ready ?? parts.find((row) => row.order === order)?.ready ?? false;
-  const shownTally = frameTally?.(shown) ?? null;
 
   const dot = (node: NodeView) =>
     fill[node.id] === "mastered" || masteredOf?.(node.stage ?? 1, node.index ?? -1)
@@ -1234,21 +1213,6 @@ function StageFrame({
               >
                 {ui.partReady} ›
               </button>
-            ) : shownTally ? (
-              <div data-frame-condition className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
-                <span className="min-w-0 flex-1 text-note tabular-nums text-ink">
-                  {ui.framesToNext
-                    .replace("{a}", String(Math.min(shownTally.learned, shownTally.need)))
-                    .replace("{b}", String(Math.min(shownTally.recalled, shownTally.need)))
-                    .replaceAll("{n}", String(shownTally.need))}
-                </span>
-              </div>
-            ) : !stageParts.weakest && stageParts.scripts && stageParts.scripts.done < stageParts.scripts.total ? (
-              <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
-                <span className="min-w-0 flex-1 text-note text-ink">
-                  {ui.scriptsToNext.replace("{n}", String(stageParts.scripts.total - stageParts.scripts.done))}
-                </span>
-              </div>
             ) : stageParts.weakest ? (
               <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
                 <span className="min-w-0 flex-1 text-note text-ink">{ui.partToNext.replace("{part}", label[stageParts.weakest])}</span>
@@ -1267,7 +1231,6 @@ function StageFrame({
 
           <ul className="mt-2 space-y-1" role="group">
             {stageParts.parts.map((row) => {
-              const share = shareOf(row);
               const on = row.id === part;
               const weakest = shown === now && row.id === stageParts.weakest;
               return (
@@ -1279,21 +1242,7 @@ function StageFrame({
                     className={`flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start ${on ? "bg-white/10" : "hover:bg-white/5"}`}
                   >
                     <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[row.id]}</span>
-                    {row.measured ? (
-                      <>
-                        <span className="h-2 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
-                          <span
-                            className={`block h-full rounded-full ${share >= 0.7 ? "bg-status-mastered" : weakest ? "bg-warn" : "bg-status-learned"}`}
-                            style={{ width: `${Math.round(share * 100)}%` }}
-                          />
-                        </span>
-                        <span className="w-14 shrink-0 text-end text-caption tabular-nums text-slate-400">
-                          {Math.round(row.done)}/{row.total}
-                        </span>
-                      </>
-                    ) : (
-                      <span className="min-w-0 flex-1 text-caption text-slate-500">{ui.myNoData}</span>
-                    )}
+                    {/* 갈래 막대·n/m은 뺌(진척 숫자 삭제, 2026-10-30) — 누르면 아래에 그 갈래의 칸·익힌 것. */}
                   </button>
                 </li>
               );
@@ -2076,35 +2025,22 @@ function StageTestGate({
  */
 function SkeletonProgress({
   ui,
-  language,
   stage,
-  row,
-  known,
-  passed,
   free,
   onMode,
   extra,
-  views,
+  learned,
 }: {
   ui: UICopy;
-  language: string;
   stage: number;
-  row: StageParts | null;
-  known: KnownMap;
-  passed: readonly string[];
   free: boolean;
   onMode: (mode: StudyMode) => void;
   /** 시트 아래에 같이 — 말한 문장·할 수 있는 일(ScriptAmount inside). */
   extra?: ReactNode;
-  /** 시트 안 보기 [막대 | 망 | 그래프](예전 My 맨 위 토글). */
-  views?: (mode: "net" | "graph") => ReactNode;
+  /** 익힌 것(이름) — 갈래마다. 진척 숫자 대신(사용자 2026-10-30 "진척 숫자는 그냥 삭제하고, 학습한 부분만 표시"). */
+  learned: { id: string; label: string; items: string[] }[];
 }) {
   const [open, setOpen] = useState(false);
-  const [look, setLook] = useState<"bars" | "net" | "graph">("bars");
-  const passedKey = passed.join("|");
-  const totals = useMemo(() => skeletonTotals(language, { known, passed: new Set(passedKey.split("|")) }), [language, known, passedKey]);
-  const left = row ? toNextStage(row.parts, STAGE_DONE_SHARE) : 0;
-  const label = partLabels(ui);
   // 진척은 My 안 한 곳(2026-10-29 사용자 "이미 앎·할 수 있는 일을 매번 보여 주지 말고 My 탭 안에 하나로"): 한 줄 → 누르면 시트에 전부.
   return (
     <>
@@ -2142,7 +2078,6 @@ function SkeletonProgress({
     <div data-my-progress className="mt-3 flex flex-col gap-1.5 px-1">
       <div className="flex items-center gap-2">
         {free ? null : <span className="text-note font-semibold text-ink">{ui.stageNumber.replace("{n}", String(stage))}</span>}
-        {!free && left > 0 ? <span className="min-w-0 truncate text-meta tabular-nums text-slate-400">{ui.toNextStage.replace("{n}", String(left))}</span> : null}
         <span role="group" data-study-mode className="ms-auto flex shrink-0 gap-0.5 rounded-full border border-line p-0.5">
           {(["staged", "free"] as const).map((mode) => (
             <button
@@ -2157,38 +2092,18 @@ function SkeletonProgress({
           ))}
         </span>
       </div>
-      {views ? (
-        <span role="group" data-progress-look className="flex gap-1.5">
-          {(["bars", "net", "graph"] as const).map((id) => (
-            <button
-              key={id}
-              type="button"
-              aria-pressed={look === id}
-              onClick={() => setLook(id)}
-              className={`rounded-full px-2.5 py-0.5 text-meta ${look === id ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
-            >
-              {id === "bars" ? ui.skillViewList : id === "net" ? ui.myViewNet : ui.myViewGraph}
-            </button>
-          ))}
-        </span>
-      ) : null}
-      {look !== "bars" && views ? views(look) : null}
-      {look === "bars" ? skeletonView(totals).map((part) => (
-        <div key={part.id} data-total-part={part.id} className="flex items-center gap-2">
-          <span className="w-14 shrink-0 truncate text-caption text-slate-300">{label[part.id]}</span>
-          <span className="relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-white/10">
-            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned/35" style={{ width: `${Math.round(((part.known + part.learning) / part.total) * 100)}%` }} />
-            <span className="absolute inset-y-0 start-0 rounded-full bg-status-learned" style={{ width: `${Math.round((part.known / part.total) * 100)}%` }} />
-          </span>
-          <span dir="ltr" className="shrink-0 text-caption tabular-nums text-ink">
-            {part.known} / {part.total}
-          </span>
-          {part.learning ? <span className="shrink-0 text-meta tabular-nums text-slate-500">{ui.totalsLearning.replace("{n}", String(part.learning))}</span> : null}
+      {learned.filter((group) => group.items.length).map((group) => (
+        <div key={group.id} data-learned-part={group.id} className="mt-2">
+          <h4 className="text-meta text-slate-400">{group.label}</h4>
+          <ul className="mt-1 flex flex-wrap gap-1.5">
+            {group.items.map((item) => (
+              <li key={item} dir="auto" className="rounded-full bg-status-mastered/20 px-2.5 py-1 text-meta text-good">
+                ✓ {item}
+              </li>
+            ))}
+          </ul>
         </div>
-      )) : null}
-      {totals.outside.known + totals.outside.learning > 0 ? (
-        <p className="text-meta tabular-nums text-slate-500">{ui.totalsOutside.replace("{n}", String(totals.outside.known + totals.outside.learning))}</p>
-      ) : null}
+      ))}
     </div>
               {extra}
             </div>
@@ -2298,7 +2213,7 @@ function MyLayers({
         {card(
           "review",
           ui.reviewLayerTitle,
-          review.left.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", review.left.length >= 30 ? "30+" : String(review.left.length))}</span> : null,
+          null,
           <>
             {parts?.review.body}
             <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />

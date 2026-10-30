@@ -9,7 +9,6 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
-import { RECALL_SIZE as RECALL_COUNT, stageFrameTally } from "@/lib/curriculum/recall";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { allFramesFor, framesFor, framesOfScript, type Frame } from "@/lib/curriculum/frames";
@@ -188,16 +187,14 @@ export function StageScripts({
   if (!scripts.length) return null;
   const situations = scripts.filter(isSituationScript);
   const extras = scripts.filter((script) => !isSituationScript(script));
-  const done = situations.filter((script) => passed.includes(script.id)).length;
   const frames = framesFor(language, stage);
-  const frameDone = frames.filter((frame) => passed.includes(frame.id)).length;
   // 문장구조 중심(2026-10-30, hub/drafts/frames-first-2026-10-30.md): 문장구조 → 꺼내 쓰기가 단계의 길, 상황·표현은 고를 수 있는 연습.
-  const tally = stageFrameTally(language, stage, new Set(passed), known);
   const learnedOrder = framesFor(language, stage).filter((frame) => passed.includes(frame.id)).map((frame) => frame.id);
   const methods = [
-    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, count: `${frameDone}/${frames.length}`, bubbles: frameBubbles(frames[0]!) }] : []),
-    ...(frames.length ? [{ id: "recall" as const, name: ui.recallTitle, count: `${tally.recalled}/${frames.length}`, bubbles: recallBubbles(frames[0]!, locale) }] : []),
-    { id: "situation" as const, name: ui.stageScriptsTitle, count: situations.length ? `${done}/${situations.length}` : "", bubbles: situationBubbles(situations[0]) },
+    // 방식 옆 n/m은 뺌(진척 숫자 삭제, 사용자 2026-10-30).
+    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, bubbles: frameBubbles(frames[0]!) }] : []),
+    ...(frames.length ? [{ id: "recall" as const, name: ui.recallTitle, bubbles: recallBubbles(frames[0]!, locale) }] : []),
+    { id: "situation" as const, name: ui.stageScriptsTitle, bubbles: situationBubbles(situations[0]) },
     ...(extras.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
   ].map((one) => ({ ...one, label: METHOD_ICON[one.id] }));
   const dot = (state: LedgerState | null | undefined) =>
@@ -290,7 +287,6 @@ export function StageScripts({
         >
           <span aria-hidden className="text-body text-ink">▶</span>
           <span className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.recallTitle}</span>
-          <span className="text-meta tabular-nums text-slate-400">{learnedOrder.length ? `${RECALL_COUNT}` : `0/${frames.length}`}</span>
         </button>
       ) : null}
       {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}

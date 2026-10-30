@@ -189,6 +189,8 @@ type EntitlementState = {
   plan: Plan;
   dailyUsed: number;
   dailyLimit: number | null;
+  /** 통화를 걸 수 있는가(오늘 무료 통화·이월·구매 포인트 중 하나라도 남음). 모르면 true. */
+  callOpen?: boolean;
 };
 
 function isDailyLimitReachedError(error: unknown) {
@@ -876,8 +878,16 @@ export function ChatWindow({
         plan?: Plan;
         dailyUsed?: number;
         dailyLimit?: number | null;
+        callTodayLeftSeconds?: number | null;
+        callCarrySeconds?: number | null;
+        callPointsLeft?: number | null;
       };
+      const callNumbers = [data.callTodayLeftSeconds, data.callCarrySeconds, data.callPointsLeft].filter(
+        (value): value is number => typeof value === "number",
+      );
       setEntitlement({
+        // 숫자를 하나도 안 주는 옛 서버면 막지 않는다.
+        callOpen: callNumbers.length === 0 || callNumbers.some((value) => value > 0),
         plan: data.plan === "pro" ? "pro" : "free",
         dailyUsed: typeof data.dailyUsed === "number" ? data.dailyUsed : 0,
         dailyLimit:
@@ -1856,7 +1866,8 @@ export function ChatWindow({
               ui={ui}
               locale={locale}
               targetLanguage={targetLanguage}
-              canCall={scenariosForLanguage(targetLanguage).length > 0}
+              canCall={scenariosForLanguage(targetLanguage).length > 0 && entitlement.callOpen !== false}
+              canChat={!isChatInputBlocked}
               onStart={(request) => {
                 if (request.tab === "chat") void startPractice(request);
                 else sendAppIntent("practice", request);
@@ -2027,6 +2038,8 @@ export function ChatWindow({
           <div ref={bottomRef} />
         </div>
 
+        {/* 채팅을 쓸 수 없으면(무료 한도 0·오늘 다 씀) 입력칸·사진·먼저 말하기·보내기를 그리지 않는다 — 위 한도 줄과 구독 버튼만(사용자 2026-10-30). */}
+        {isChatInputBlocked ? null : (
         <form
           onSubmit={handleSend}
           className="sticky bottom-0 z-20 border-t border-white/10 bg-[#0a0a0a]/92 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-md sm:p-4 sm:pb-4"
@@ -2185,6 +2198,7 @@ export function ChatWindow({
             </div>
           </>
         </form>
+        )}
       </section>
 
       {bookToast ? (

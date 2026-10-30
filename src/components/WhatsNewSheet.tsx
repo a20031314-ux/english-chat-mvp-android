@@ -108,13 +108,7 @@ export function WhatsNewSheet({
               <h3 className="text-chat font-semibold text-ink">{titleOf(item)}</h3>
               <Shot item={item} locale={locale} alt={titleOf(item)} />
               <div className="mt-3 flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => close(item.tab)}
-                  className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
-                >
-                  {ui.whatsNewTry}
-                </button>
+                {/* "써보기"(그 탭으로 옮기기만)는 뺐다 — 기능 없이 다른 탭으로만 가는 버튼 정리(사용자 2026-10-30). */}
                 {item.guide ? (
                   <button
                     type="button"

@@ -45,10 +45,10 @@ function TutorName({ targetLanguage, className = "" }: { targetLanguage: string;
   );
 }
 
-const openChat = () => sendAppIntent("openTab", { tab: "chat" });
+// 💬 "메시지"(대화 탭으로 옮기기만)는 뺐다 — 기능 없이 다른 탭으로만 가는 버튼 정리(사용자 2026-10-30). AI 대화는 대화 탭의 AI 튜터 줄에서.
 
 /** 사람 탭 목록 맨 위 한 줄(사람 카드와 같은 모양). */
-export function AiTutorPerson({ ui, targetLanguage, canCall, messageLabel }: { ui: UICopy; targetLanguage: string; canCall: boolean; messageLabel: string }) {
+export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; targetLanguage: string; canCall: boolean; messageLabel?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -74,13 +74,10 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, messageLabel }: { u
                 📞 {ui.homeTabCall}
               </button>
             ) : null}
-            <button type="button" onClick={openChat} className="rounded-full border border-violet-400/50 px-3 py-1 text-meta text-violet-100">
-              💬 {messageLabel}
-            </button>
           </div>
         </div>
       </div>
-      {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={messageLabel} onClose={() => setOpen(false)} /> : null}
+      {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} onClose={() => setOpen(false)} /> : null}
     </>
   );
 }
@@ -90,13 +87,11 @@ export function AiTutorSheet({
   ui,
   targetLanguage,
   canCall,
-  messageLabel,
   onClose,
 }: {
   ui: UICopy;
   targetLanguage: string;
   canCall: boolean;
-  messageLabel: string;
   onClose: () => void;
 }) {
   const go = (action: () => void) => () => {
@@ -121,10 +116,7 @@ export function AiTutorSheet({
             </button>
           </div>
           <p className="mt-4 text-body leading-relaxed text-slate-200">{ui.aiTutorBio}</p>
-          <div className="mt-5 grid grid-cols-2 gap-2">
-            <button type="button" onClick={go(openChat)} className="rounded-xl bg-violet-500 px-3 py-2.5 text-body font-medium text-white">
-              💬 {messageLabel}
-            </button>
+          <div className="mt-5 flex flex-col gap-2">
             {canCall ? (
               <button type="button" onClick={go(() => sendAppIntent("startCall", {}))} className="rounded-xl border border-white/20 px-3 py-2.5 text-body text-slate-100">
                 📞 {ui.homeTabCall}
