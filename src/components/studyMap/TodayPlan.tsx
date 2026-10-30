@@ -188,7 +188,7 @@ export function TodayPlan({
   /** 일일 학습 카드 맨 아래에 묶는 "익힌 것"(ScriptAmount inside) — 지속 학습 숫자와 섞이지 않게. */
   learned?: ReactNode;
   /** 큰 칸 둘(오늘 할 것·복습)의 요약과 내용, 늘 떠 있어야 하는 퀴즈·시험 화면. */
-  children: (parts: { today: { summary: ReactNode; body: ReactNode }; keep: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
+  children: (parts: { today: { summary: ReactNode; body: ReactNode }; keep: { summary: ReactNode; body: ReactNode }; review: { summary: ReactNode; body: ReactNode }; overlays: ReactNode }) => ReactNode;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -196,8 +196,9 @@ export function TodayPlan({
   const { isPremium } = usePremium();
   const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
-  const studyFocus: PartId | null = settings.focus === "auto" || settings.focus === "review" ? null : settings.focus;
-  const pickedLane: StudyLane = settings.focus === "review" ? "review" : "learn";
+  // 복습은 지속 학습 아래 따로 칸(2026-10-30 사용자 "복습탭은 따로 독립된 탭으로, 지속학습 아래에") — 지속 학습 탭에는 복습이 없다(예전 설정의 review는 랜덤으로).
+  const keepFocus: StudyFocus = settings.focus === "review" ? "auto" : settings.focus;
+  const studyFocus: PartId | null = keepFocus === "auto" ? null : (keepFocus as PartId);
   // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
   const firstPick = (picks: readonly StudyPick[], lane: StudyLane = "learn"): StudyPick | undefined =>
     lane === "learn" && !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
@@ -521,7 +522,7 @@ export function TodayPlan({
       const lead = firstPick(queue, which)?.key;
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: quizStyle });
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: styleFor(which) });
     return made.questions.length >= 2 ? made : null;
   };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane) => {
@@ -599,9 +600,9 @@ export function TodayPlan({
   const startButton = (which: StudyLane, pick: StudyPick | null) => (
     <button
       type="button"
-      disabled={!pick && style !== "match"}
+      disabled={!pick && !(which === "learn" && keepStyle === "match")}
       data-study-start={which}
-      onClick={() => (style === "match" ? setMatching(true) : startStudy(pick, which))}
+      onClick={() => (which === "learn" && keepStyle === "match" ? setMatching(true) : startStudy(pick, which))}
       className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${!pick ? "border border-line text-slate-500" : finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
     >
       <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
@@ -643,10 +644,12 @@ export function TodayPlan({
       .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
   ]).slice(0, MATCH_SIZE * 4);
   // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).
-  const styleOf: Style = settings.styles?.[settings.focus] ?? "auto";
-  const style: Style = styleOf === "match" && (settings.focus !== "vocab" || pairs.length < 3) ? "auto" : styleOf;
-  const quizStyle: QuizStyle | undefined = style === "auto" || style === "match" ? undefined : style;
-  const styleWays = (() => {
+  const keepStyleOf: Style = settings.styles?.[keepFocus] ?? "auto";
+  const keepStyle: Style = keepStyleOf === "match" && (keepFocus !== "vocab" || pairs.length < 3) ? "auto" : keepStyleOf;
+  const reviewStyle: Style = settings.styles?.review && settings.styles.review !== "match" ? settings.styles.review : "auto";
+  const asQuiz = (one: Style): QuizStyle | undefined => (one === "auto" || one === "match" ? undefined : one);
+  const styleFor = (which: StudyLane): QuizStyle | undefined => asQuiz(which === "review" ? reviewStyle : keepStyle);
+  const waysFor = (focus: StudyFocus) => {
     const situation = allScriptsFor(language).filter((one) => one.stage === stage).find(isSituationScript);
     const lines = situation?.lines ?? [];
     const mineAt = Math.max(0, lines.findIndex((line) => line.who === "me"));
@@ -678,9 +681,9 @@ export function TodayPlan({
       meaning: ui.quizKindMeaning,
       match: ui.wordMatch,
     };
-    const ids: Style[] = settings.focus === "vocab" ? ["auto", ...(pairs.length >= 3 ? (["match"] as const) : []), "meaning", "choose", "say"] : ["auto", "choose", "order", "listen", "say"];
+    const ids: Style[] = focus === "vocab" ? ["auto", ...(pairs.length >= 3 ? (["match"] as const) : []), "meaning", "choose", "say"] : ["auto", "choose", "order", "listen", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
-  })();
+  };
   const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
   const todayBody = (
     <div data-today-plan>
@@ -914,7 +917,7 @@ export function TodayPlan({
           round={log[quiz.id]?.n ?? 0}
           stage={stage}
           mix={settings.mix}
-          style={studying ? quizStyle : undefined}
+          style={studying ? styleFor(lane) : undefined}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}
@@ -936,46 +939,42 @@ export function TodayPlan({
       ) : null}
     </>
   );
-  const keepSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</span> : null;
   const keepBody = (
     <div data-keep-learning>
       {/* What to study as tabs, then how — one button, the ways shown as tiny dialogues (2026-10-30, user). */}
       <div role="tablist" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
-        {FOCUSES.map((focus) => (
+        {FOCUSES.filter((focus) => focus !== "review").map((focus) => (
           <button
             key={focus}
             type="button"
             role="tab"
-            aria-selected={settings.focus === focus}
+            aria-selected={keepFocus === focus}
             data-focus={focus}
             onClick={() => save({ ...settings, focus })}
-            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+            className={`rounded-full px-3 py-1 text-caption ${keepFocus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
           >
-            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus)}
-            {focus === "review" && reviewQueue.length ? <span className="ms-1 tabular-nums text-meta opacity-70">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
+            {focus === "auto" ? ui.studyRandom : partName(ui, focus)}
           </button>
         ))}
       </div>
-      {styleWays.length ? (
+      {waysFor(keepFocus).length ? (
         <div className="mt-2 flex">
           <WayPicker
             ui={ui}
-            ways={styleWays}
-            value={style}
-            onPick={(next) => save({ ...settings, styles: { ...settings.styles, [settings.focus]: next } })}
+            ways={waysFor(keepFocus)}
+            value={keepStyle}
+            onPick={(next) => save({ ...settings, styles: { ...settings.styles, [keepFocus]: next } })}
             data="study-style"
           />
         </div>
       ) : null}
       {matching && pairs.length >= 3 ? <WordMatch ui={ui} pairs={pairs} onClose={() => setMatching(false)} /> : null}
       {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
-      {settings.focus === "review" ? (
-        <p data-study-amount="review" className="mt-2 px-1 text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>
-      ) : settings.focus === "vocab" ? (
+      {keepFocus === "vocab" ? (
         <WordbookCard ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} />
       ) : null}
       {/* Words by frequency band, part of speech or topic (2026-10-29): the learner picks the basis, then one group. */}
-      {settings.focus === "vocab" && bank ? (
+      {keepFocus === "vocab" && bank ? (
         <div data-vocab-by className="mt-2 flex flex-col gap-1.5">
           <div role="group" className="flex flex-wrap gap-1.5">
             {(["all", "band", "pos", "topic"] as const).map((by) => (
@@ -1010,8 +1009,8 @@ export function TodayPlan({
           ) : null}
         </div>
       ) : null}
-      {pickedLane === "review" ? (reviewTest ? testButton(reviewTest) : null) : settings.focus === "auto" && learnTest ? testButton(learnTest) : null}
-      {startButton(pickedLane, pickedLane === "review" ? upReview : upNext)}
+      {keepFocus === "auto" && learnTest ? testButton(learnTest) : null}
+      {startButton("learn", upNext)}
       {tally.known.length || tally.fixed.length ? (
         <p data-study-tally className="mt-1.5 px-1 text-meta tabular-nums text-status-learned">
           {[tally.known.length ? ui.studyTallyKnown.replace("{n}", String(tally.known.length)) : "", tally.fixed.length ? ui.studyTallyFixed.replace("{n}", String(tally.fixed.length)) : ""].filter(Boolean).join(" · ")}
@@ -1033,8 +1032,36 @@ export function TodayPlan({
       ) : null}
     </div>
   );
-  // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 복습 순서로 놓는다.
-  return children({ today: { summary: todaySummary, body: todayBody }, keep: { summary: keepSummary, body: keepBody }, overlays });
+  // 복습 칸(지속 학습 아래, 따로): 다시 볼 것 수 · 연습 방식 · 이번 주 확인 · ▶ 계속 공부(복습 줄).
+  const reviewLeft = reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length);
+  const reviewSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewLeft)}</span> : null;
+  const reviewBody = (
+    <div data-review>
+      <p data-study-amount="review" className="mt-2 px-1 text-caption tabular-nums text-slate-300">
+        {reviewQueue.length ? ui.studyReviewLeft.replace("{n}", reviewLeft) : ui.studyReviewNone}
+      </p>
+      {waysFor("review").length ? (
+        <div className="mt-2 flex">
+          <WayPicker
+            ui={ui}
+            ways={waysFor("review")}
+            value={reviewStyle}
+            onPick={(next) => save({ ...settings, styles: { ...settings.styles, review: next } })}
+            data="review-style"
+          />
+        </div>
+      ) : null}
+      {reviewTest ? testButton(reviewTest) : null}
+      {startButton("review", upReview)}
+    </div>
+  );
+  // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
+  return children({
+    today: { summary: todaySummary, body: todayBody },
+    keep: { summary: null, body: keepBody },
+    review: { summary: reviewSummary, body: reviewBody },
+    overlays,
+  });
 }
 
 function vocabGroupName(ui: UICopy, by: VocabBy, id: string): string {

@@ -797,7 +797,7 @@
     "totalsLearning": "学習中 {n}",
     "totalsOutside": "リスト外 +{n}",
     "toNextStage": "次の段階まで {n}",
-    "keepTitle": "復習",
+    "keepTitle": "継続学習",
     "studyWhyWord": "新しい単語",
     "vocabByAll": "すべて",
     "vocabByBand": "よく使う順",
@@ -830,8 +830,8 @@
     "studyReviewNone": "今は復習するものがありません",
     "studyReviewLeft": "見直し {n}件",
     "studyRandom": "ランダム",
-    "whatsNewKeepTitle": "すきま時間に復習",
-    "whatsNewKeepBody": "「復習」で見直し・ランダム・語彙・文法・表現を選んで短いクイズを解きます。チューターに直された文もここに来ます。",
+    "whatsNewKeepTitle": "すきま時間の継続学習",
+    "whatsNewKeepBody": "「継続学習」でランダム・語彙・文法・表現を選んで短いクイズを解きます。間違えた文とチューターに直された文は下の「復習」に集まります。",
     "whatsNewLettersTitle": "ステージ0と読み方",
     "whatsNewLettersBody": "文字が違う言語はステージ0で文字と音から。「読み方」をオンにすると各行の読み方が出ます。",
     "myProgressTitle": "自分の進み具合",
@@ -841,7 +841,8 @@
     "guideDetails": "くわしい機能",
     "planSettings": "設定",
     "practiceWay": "練習のしかた",
-    "wordMatch": "単語あわせ"
+    "wordMatch": "単語あわせ",
+    "reviewLayerTitle": "復習"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1641,7 +1642,7 @@
     "totalsLearning": "学习中 {n}",
     "totalsOutside": "列表外 +{n}",
     "toNextStage": "距下一阶段 {n} 个",
-    "keepTitle": "复习",
+    "keepTitle": "持续学习",
     "studyWhyWord": "新单词",
     "vocabByAll": "全部",
     "vocabByBand": "按常用程度",
@@ -1674,8 +1675,8 @@
     "studyReviewNone": "现在没有要复习的",
     "studyReviewLeft": "待复习 {n}",
     "studyRandom": "随机",
-    "whatsNewKeepTitle": "随时复习",
-    "whatsNewKeepBody": "在“复习”里选择待复习、随机、词汇、语法或表达，做简短的组合小测。老师改过的句子也会来到这里。",
+    "whatsNewKeepTitle": "随时持续学习",
+    "whatsNewKeepBody": "在“持续学习”里选择随机、词汇、语法或表达，做简短的小测。说错的句子和老师改过的句子会集中在下面的“复习”里。",
     "whatsNewLettersTitle": "第0阶段和读法",
     "whatsNewLettersBody": "文字不同的语言从第0阶段的字母和发音开始，打开“读法”每行都会显示读法。",
     "myProgressTitle": "我的进度",
@@ -1685,7 +1686,8 @@
     "guideDetails": "更多功能",
     "planSettings": "设置",
     "practiceWay": "练习方式",
-    "wordMatch": "单词配对"
+    "wordMatch": "单词配对",
+    "reviewLayerTitle": "复习"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2488,7 +2490,7 @@
     "totalsLearning": "đang học {n}",
     "totalsOutside": "ngoài danh sách +{n}",
     "toNextStage": "còn {n} đến giai đoạn sau",
-    "keepTitle": "Ôn tập",
+    "keepTitle": "Học liên tục",
     "studyWhyWord": "Từ mới",
     "vocabByAll": "Tất cả",
     "vocabByBand": "Theo độ phổ biến",
@@ -2521,8 +2523,8 @@
     "studyReviewNone": "Hiện chưa có gì cần ôn",
     "studyReviewLeft": "Cần xem lại {n}",
     "studyRandom": "Ngẫu nhiên",
-    "whatsNewKeepTitle": "Ôn tập mọi lúc",
-    "whatsNewKeepBody": "Trong ‘Ôn tập’, chọn Cần xem lại, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt để làm quiz ngắn. Câu gia sư đã sửa cũng về đây.",
+    "whatsNewKeepTitle": "Học liên tục mọi lúc",
+    "whatsNewKeepBody": "Trong ‘Học liên tục’, chọn Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt để làm quiz ngắn. Câu sai và câu gia sư đã sửa được gom ở ‘Ôn tập’ bên dưới.",
     "whatsNewLettersTitle": "Giai đoạn 0 và cách đọc",
     "whatsNewLettersBody": "Ngôn ngữ có chữ viết khác bắt đầu ở giai đoạn 0 với chữ cái và âm, bật ‘Cách đọc’ để xem cách đọc từng câu.",
     "myProgressTitle": "Tiến độ của tôi",
@@ -2532,7 +2534,8 @@
     "guideDetails": "Tính năng chi tiết",
     "planSettings": "Cài đặt",
     "practiceWay": "Cách luyện",
-    "wordMatch": "Ghép từ"
+    "wordMatch": "Ghép từ",
+    "reviewLayerTitle": "Ôn tập"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3340,7 +3343,7 @@
     "totalsLearning": "en cours {n}",
     "totalsOutside": "hors liste +{n}",
     "toNextStage": "{n} avant l’étape suivante",
-    "keepTitle": "Révision",
+    "keepTitle": "Pratique continue",
     "studyWhyWord": "Nouveau mot",
     "vocabByAll": "Tout",
     "vocabByBand": "Par fréquence",
@@ -3373,8 +3376,8 @@
     "studyReviewNone": "Rien à réviser pour l’instant",
     "studyReviewLeft": "{n} à revoir",
     "studyRandom": "Aléatoire",
-    "whatsNewKeepTitle": "Révision, quand vous voulez",
-    "whatsNewKeepBody": "Dans ‘Révision’, choisissez À revoir, Aléatoire, Vocabulaire, Grammaire ou Expressions pour de courts quiz. Les phrases corrigées par le tuteur arrivent ici aussi.",
+    "whatsNewKeepTitle": "La pratique continue, quand vous voulez",
+    "whatsNewKeepBody": "Dans ‘Pratique continue’, choisissez Aléatoire, Vocabulaire, Grammaire ou Expressions pour de courts quiz. Ce que vous avez raté et ce que le tuteur a corrigé se retrouve plus bas dans ‘Révision’.",
     "whatsNewLettersTitle": "Étape 0 et lecture",
     "whatsNewLettersBody": "Les langues à autre écriture commencent à l’étape 0 avec lettres et sons, et ‘Lecture’ montre comment se lit chaque ligne.",
     "myProgressTitle": "Ma progression",
@@ -3384,7 +3387,8 @@
     "guideDetails": "Plus de fonctions",
     "planSettings": "Réglages",
     "practiceWay": "Façon de s’entraîner",
-    "wordMatch": "Associer les mots"
+    "wordMatch": "Associer les mots",
+    "reviewLayerTitle": "Révision"
   },
   "it": {
     "archive": "Report",
@@ -4383,7 +4387,7 @@
     "totalsLearning": "in corso {n}",
     "totalsOutside": "fuori elenco +{n}",
     "toNextStage": "{n} alla prossima fase",
-    "keepTitle": "Ripasso",
+    "keepTitle": "Pratica continua",
     "studyWhyWord": "Parola nuova",
     "vocabByAll": "Tutto",
     "vocabByBand": "Per frequenza",
@@ -4416,8 +4420,8 @@
     "studyReviewNone": "Niente da ripassare ora",
     "studyReviewLeft": "{n} da rivedere",
     "studyRandom": "Casuale",
-    "whatsNewKeepTitle": "Ripasso, quando vuoi",
-    "whatsNewKeepBody": "In ‘Ripasso’ scegli Da rivedere, Casuale, Vocabolario, Grammatica o Espressioni per quiz brevi. Anche le frasi corrette dal tutor arrivano qui.",
+    "whatsNewKeepTitle": "Pratica continua, quando vuoi",
+    "whatsNewKeepBody": "In ‘Pratica continua’ scegli Casuale, Vocabolario, Grammatica o Espressioni per quiz brevi. Ciò che hai sbagliato e ciò che il tutor ha corretto si raccoglie sotto in ‘Ripasso’.",
     "whatsNewLettersTitle": "Livello 0 e lettura",
     "whatsNewLettersBody": "Le lingue con un’altra scrittura partono dal livello 0 con lettere e suoni, e ‘Lettura’ mostra come si legge ogni riga.",
     "myProgressTitle": "I miei progressi",
@@ -4427,7 +4431,8 @@
     "guideDetails": "Altre funzioni",
     "planSettings": "Impostazioni",
     "practiceWay": "Come esercitarti",
-    "wordMatch": "Abbina le parole"
+    "wordMatch": "Abbina le parole",
+    "reviewLayerTitle": "Ripasso"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5238,7 +5243,7 @@
     "totalsLearning": "aprendendo {n}",
     "totalsOutside": "fora da lista +{n}",
     "toNextStage": "{n} para a próxima etapa",
-    "keepTitle": "Revisão",
+    "keepTitle": "Prática contínua",
     "studyWhyWord": "Palavra nova",
     "vocabByAll": "Tudo",
     "vocabByBand": "Por frequência",
@@ -5271,8 +5276,8 @@
     "studyReviewNone": "Nada para revisar agora",
     "studyReviewLeft": "{n} para rever",
     "studyRandom": "Aleatório",
-    "whatsNewKeepTitle": "Revisão, quando quiser",
-    "whatsNewKeepBody": "Em ‘Revisão’, escolha Para rever, Aleatório, Vocabulário, Gramática ou Expressões para quizzes curtos. As frases que o tutor corrigiu também vêm para cá.",
+    "whatsNewKeepTitle": "Prática contínua, quando quiser",
+    "whatsNewKeepBody": "Em ‘Prática contínua’, escolha Aleatório, Vocabulário, Gramática ou Expressões para quizzes curtos. O que você errou e o que o tutor corrigiu fica em ‘Revisão’, logo abaixo.",
     "whatsNewLettersTitle": "Etapa 0 e leitura",
     "whatsNewLettersBody": "Idiomas com outra escrita começam na etapa 0 com letras e sons, e ‘Leitura’ mostra como se lê cada linha.",
     "myProgressTitle": "O meu progresso",
@@ -5282,7 +5287,8 @@
     "guideDetails": "Mais recursos",
     "planSettings": "Ajustes",
     "practiceWay": "Como praticar",
-    "wordMatch": "Combinar palavras"
+    "wordMatch": "Combinar palavras",
+    "reviewLayerTitle": "Revisão"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6279,7 +6285,7 @@
     "totalsLearning": "учу {n}",
     "totalsOutside": "вне списка +{n}",
     "toNextStage": "до следующего этапа {n}",
-    "keepTitle": "Повторение",
+    "keepTitle": "Постоянная практика",
     "studyWhyWord": "Новое слово",
     "vocabByAll": "Все",
     "vocabByBand": "По частоте",
@@ -6312,8 +6318,8 @@
     "studyReviewNone": "Сейчас нечего повторять",
     "studyReviewLeft": "Повторить: {n}",
     "studyRandom": "Случайно",
-    "whatsNewKeepTitle": "Повторение в любое время",
-    "whatsNewKeepBody": "В «Повторении» выберите Пора повторить, Случайно, Словарь, Грамматика или Выражения для коротких тестов. Фразы, исправленные репетитором, тоже попадают сюда.",
+    "whatsNewKeepTitle": "Постоянная практика в любое время",
+    "whatsNewKeepBody": "В «Постоянной практике» выберите Случайно, Словарь, Грамматика или Выражения для коротких тестов. Ошибки и фразы, исправленные репетитором, собираются ниже в «Повторении».",
     "whatsNewLettersTitle": "Этап 0 и чтение",
     "whatsNewLettersBody": "Языки с другой письменностью начинаются с этапа 0 — буквы и звуки, а «Чтение» показывает, как читается каждая строка.",
     "myProgressTitle": "Мой прогресс",
@@ -6323,7 +6329,8 @@
     "guideDetails": "Подробнее о функциях",
     "planSettings": "Настройки",
     "practiceWay": "Способ практики",
-    "wordMatch": "Подбери слова"
+    "wordMatch": "Подбери слова",
+    "reviewLayerTitle": "Повторение"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7130,7 +7137,7 @@
     "totalsLearning": "sedang dipelajari {n}",
     "totalsOutside": "di luar daftar +{n}",
     "toNextStage": "{n} lagi ke tahap berikutnya",
-    "keepTitle": "Ulangan",
+    "keepTitle": "Latihan berkelanjutan",
     "studyWhyWord": "Kata baru",
     "vocabByAll": "Semua",
     "vocabByBand": "Menurut frekuensi",
@@ -7163,8 +7170,8 @@
     "studyReviewNone": "Belum ada yang perlu diulang",
     "studyReviewLeft": "{n} perlu dilihat",
     "studyRandom": "Acak",
-    "whatsNewKeepTitle": "Ulangan kapan saja",
-    "whatsNewKeepBody": "Di ‘Ulangan’, pilih Perlu dilihat, Acak, Kosakata, Tata bahasa, atau Ungkapan untuk kuis singkat. Kalimat yang dikoreksi tutor juga masuk ke sini.",
+    "whatsNewKeepTitle": "Latihan berkelanjutan kapan saja",
+    "whatsNewKeepBody": "Di ‘Latihan berkelanjutan’, pilih Acak, Kosakata, Tata bahasa, atau Ungkapan untuk kuis singkat. Yang salah dan yang dikoreksi tutor terkumpul di ‘Ulangan’ di bawahnya.",
     "whatsNewLettersTitle": "Tahap 0 dan cara baca",
     "whatsNewLettersBody": "Bahasa dengan aksara lain mulai dari tahap 0 dengan huruf dan bunyi, dan ‘Cara baca’ menampilkan cara membaca tiap baris.",
     "myProgressTitle": "Kemajuanku",
@@ -7174,7 +7181,8 @@
     "guideDetails": "Fitur lainnya",
     "planSettings": "Pengaturan",
     "practiceWay": "Cara berlatih",
-    "wordMatch": "Cocokkan kata"
+    "wordMatch": "Cocokkan kata",
+    "reviewLayerTitle": "Ulangan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7974,7 +7982,7 @@
     "totalsLearning": "قيد التعلّم {n}",
     "totalsOutside": "خارج القائمة +{n}",
     "toNextStage": "{n} حتى المرحلة التالية",
-    "keepTitle": "مراجعة",
+    "keepTitle": "تعلّم مستمر",
     "studyWhyWord": "كلمة جديدة",
     "vocabByAll": "الكل",
     "vocabByBand": "حسب الشيوع",
@@ -8007,8 +8015,8 @@
     "studyReviewNone": "لا شيء للمراجعة الآن",
     "studyReviewLeft": "للمراجعة: {n}",
     "studyRandom": "عشوائي",
-    "whatsNewKeepTitle": "مراجعة في أي وقت",
-    "whatsNewKeepBody": "في «مراجعة» اختر للمراجعة أو عشوائي أو المفردات أو القواعد أو التعابير لاختبارات قصيرة. وتصل إلى هنا أيضًا الجمل التي صحّحها المعلّم.",
+    "whatsNewKeepTitle": "تعلّم مستمر في أي وقت",
+    "whatsNewKeepBody": "في «تعلّم مستمر» اختر عشوائي أو المفردات أو القواعد أو التعابير لاختبارات قصيرة. وتُجمع أخطاؤك والجمل التي صحّحها المعلّم في «مراجعة» أسفلها.",
     "whatsNewLettersTitle": "المرحلة 0 وطريقة القراءة",
     "whatsNewLettersBody": "اللغات ذات الكتابة المختلفة تبدأ من المرحلة 0 بالحروف والأصوات، و«طريقة القراءة» تُظهر كيف يُقرأ كل سطر.",
     "myProgressTitle": "تقدّمي",
@@ -8018,7 +8026,8 @@
     "guideDetails": "ميزات أخرى",
     "planSettings": "الإعدادات",
     "practiceWay": "طريقة التدرّب",
-    "wordMatch": "طابِق الكلمات"
+    "wordMatch": "طابِق الكلمات",
+    "reviewLayerTitle": "مراجعة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8818,7 +8827,7 @@
     "totalsLearning": "กำลังเรียน {n}",
     "totalsOutside": "นอกรายการ +{n}",
     "toNextStage": "อีก {n} ถึงขั้นถัดไป",
-    "keepTitle": "ทบทวน",
+    "keepTitle": "เรียนต่อเนื่อง",
     "studyWhyWord": "คำใหม่",
     "vocabByAll": "ทั้งหมด",
     "vocabByBand": "ตามความถี่",
@@ -8851,8 +8860,8 @@
     "studyReviewNone": "ตอนนี้ยังไม่มีอะไรต้องทบทวน",
     "studyReviewLeft": "ต้องดูอีก {n}",
     "studyRandom": "สุ่ม",
-    "whatsNewKeepTitle": "ทบทวนได้ทุกเมื่อ",
-    "whatsNewKeepBody": "ใน ‘ทบทวน’ เลือกต้องดูอีก สุ่ม คำศัพท์ ไวยากรณ์ หรือสำนวน เพื่อทำควิซสั้นๆ ประโยคที่ติวเตอร์แก้ก็จะมาอยู่ที่นี่ด้วย",
+    "whatsNewKeepTitle": "เรียนต่อเนื่องได้ทุกเมื่อ",
+    "whatsNewKeepBody": "ใน ‘เรียนต่อเนื่อง’ เลือกสุ่ม คำศัพท์ ไวยากรณ์ หรือสำนวน เพื่อทำควิซสั้นๆ ประโยคที่ผิดและที่ติวเตอร์แก้จะรวมอยู่ใน ‘ทบทวน’ ด้านล่าง",
     "whatsNewLettersTitle": "ขั้น 0 และคำอ่าน",
     "whatsNewLettersBody": "ภาษาที่ใช้ตัวอักษรต่างกันเริ่มที่ขั้น 0 ด้วยตัวอักษรและเสียง และ ‘คำอ่าน’ จะแสดงวิธีอ่านแต่ละบรรทัด",
     "myProgressTitle": "ความคืบหน้าของฉัน",
@@ -8862,7 +8871,8 @@
     "guideDetails": "ฟีเจอร์เพิ่มเติม",
     "planSettings": "ตั้งค่า",
     "practiceWay": "วิธีฝึก",
-    "wordMatch": "จับคู่คำ"
+    "wordMatch": "จับคู่คำ",
+    "reviewLayerTitle": "ทบทวน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9662,7 +9672,7 @@
     "totalsLearning": "सीख रहे हैं {n}",
     "totalsOutside": "सूची से बाहर +{n}",
     "toNextStage": "अगले चरण तक {n}",
-    "keepTitle": "दोहराना",
+    "keepTitle": "लगातार अभ्यास",
     "studyWhyWord": "नया शब्द",
     "vocabByAll": "सभी",
     "vocabByBand": "आवृत्ति के अनुसार",
@@ -9695,8 +9705,8 @@
     "studyReviewNone": "अभी दोहराने को कुछ नहीं",
     "studyReviewLeft": "फिर से देखें {n}",
     "studyRandom": "रैंडम",
-    "whatsNewKeepTitle": "जब चाहें, दोहराना",
-    "whatsNewKeepBody": "‘दोहराना’ में फिर से देखें, रैंडम, शब्दावली, व्याकरण या अभिव्यक्तियाँ चुनकर छोटे क्विज़ करें। ट्यूटर के सुधारे वाक्य भी यहीं आते हैं।",
+    "whatsNewKeepTitle": "जब चाहें, लगातार अभ्यास",
+    "whatsNewKeepBody": "‘लगातार अभ्यास’ में रैंडम, शब्दावली, व्याकरण या अभिव्यक्तियाँ चुनकर छोटे क्विज़ करें। गलत पंक्तियाँ और ट्यूटर के सुधारे वाक्य नीचे ‘दोहराना’ में जमा होते हैं।",
     "whatsNewLettersTitle": "चरण 0 और उच्चारण",
     "whatsNewLettersBody": "दूसरी लिपि वाली भाषाएँ चरण 0 में अक्षर और ध्वनि से शुरू होती हैं, और ‘उच्चारण’ हर पंक्ति पढ़ने का तरीका दिखाता है।",
     "myProgressTitle": "मेरी प्रगति",
@@ -9706,6 +9716,7 @@
     "guideDetails": "और सुविधाएँ",
     "planSettings": "सेटिंग",
     "practiceWay": "अभ्यास का तरीका",
-    "wordMatch": "शब्द मिलाएँ"
+    "wordMatch": "शब्द मिलाएँ",
+    "reviewLayerTitle": "दोहराना"
   }
 }

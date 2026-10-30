@@ -84,13 +84,13 @@ const NO_REVIEW: ReviewMap = {};
  */
 const CURRICULUM_ONLY = true;
 
-type MyLayer = "today" | "stage" | "review";
+type MyLayer = "today" | "stage" | "keep" | "review";
 const LAYER_KEY = "myLayer.v1";
 function readLayer(): MyLayer | null {
   try {
     const saved = localStorage.getItem(LAYER_KEY);
     if (saved === "none") return null;
-    return saved === "stage" || saved === "review" ? saved : "today";
+    return saved === "stage" || saved === "keep" || saved === "review" ? saved : "today";
   } catch {
     return "today";
   }
@@ -2168,7 +2168,7 @@ function SkeletonProgress({
 
 
 type LayerPart = { summary: ReactNode; body: ReactNode };
-type PlanParts = { today: LayerPart; keep: LayerPart; overlays: ReactNode };
+type PlanParts = { today: LayerPart; keep: LayerPart; review: LayerPart; overlays: ReactNode };
 
 /**
  * My 큰 칸 셋(2026-10-30 사용자 "큰 층위 하나만 보이게 하고 나머지는 그 층위 아래로 — 모든 기능이 같은 층위로 나열된 게 문제"):
@@ -2218,9 +2218,10 @@ function MyLayers({
       <>
         {first ? card("today", ui.planTitle, first.summary, first.body) : null}
         {card("stage", stage.title, stage.summary, stage.body)}
-        {parts || weak ? card("review", ui.keepTitle, parts?.keep.summary ?? null, (
+        {parts ? card("keep", ui.keepTitle, parts.keep.summary, parts.keep.body) : null}
+        {parts || weak ? card("review", ui.reviewLayerTitle, parts?.review.summary ?? null, (
           <>
-            {parts?.keep.body}
+            {parts?.review.body}
             {weak}
           </>
         )) : null}
