@@ -22,6 +22,7 @@
 
 ## 열린 일
 - **퀴즈 = 직접 쓰기 + 틀린 곳 고치기 + 대화 속 틀린 줄 (2026-10-30 밤, 사용자 "타이핑해서 맞추는 식" → "1,2,3 순서로", 앱 빌드 + 서버 typed-check):** `quiz.ts`(typedRight 오타·로마자, spotOf·spotFromCard·dialogOf·diffSpan, bundleQuiz fallback·spots), `romaji.ts`, `frames/decoys/plain`(확실히 틀린 꼴, `scripts/plain-decoys.mjs`), `QuizPlayer` TypeBox·SpotView·DialogView, `/api/curriculum/typed-check`(op quizTypedCheck). 남은 것: 확실히 틀린 꼴은 Claude 판단이라 원어민 확인 전(맞는 문장을 틀렸다고 하는 사례가 보이면 그 언어 json에서 빼고 `node scripts/plain-decoys.mjs`), 튜터가 고친 줄 중 여러 군데 고친 줄은 고치기 문제 못 만듦(예전 fix로), 표현(e|) 오답은 아직 고치기에 안 씀(판단 안 함), 다시 보기 실제 호출 비율 보기(hub/costs.md quizTypedCheck), 사용법 My 퀴즈 칸 그림(버전 자를 때).
+- **학습 언어별 UI 고르지 않은 곳 (2026-10-31 정리, 사용자가 고칠 순서 정함):** `hub/drafts/learning-language-ui-2026-10-31.md` 5절 — 단어장·단어 퀴즈 en·es·ja만(11개 언어 조용히 빠짐), th·hi 글자 안내 없음, 0단계 들어가는 길 두 갈래(StageCheck는 라틴도 파닉스), 말투 문제 ru·ar·hi·it·pt 없음, 읽는 법이 대본에만, 영어만 있는 분석(관용구·문법 기록), 표현 대본 ko·ja 20개대 vs 2~5개. 학습 기능을 만들 때 그 문서 3절 데이터 표부터.
 - **빈칸 쓰기·헷갈리는 오답·자라는 문제은행 (2026-10-30, 서버 바로·화면 앱 빌드):** 지켜볼 것: 문제은행 운영 성장량(`qbank:v1:budget:<날짜>`, 하루 400 상한)·원가(op qbankGrow), 모델이 만든 어색한 예문("Hola, perro. Mucho gusto.") — 정답률 도태만으로 걸러지는지, 필요하면 받기 전 판단(Haiku 한 번 더) 넣기. 표현·문장구조 오답은 한 낱말 조각이 약함(원어민 확인 전). 점검용 `x-qbank-debug: 1` 헤더는 묶음에 남긴 못 건진 모델 답만 보여 줌.
 - **통화 정리 → My 문장구조 (2026-10-30, 사용자 "셋다넣고, 자동으로, 일단은 통화만", 앱 빌드 + 서버 from "call"):** `lib/roleplay/recap.ts`(buildRecap·framesInLine·recapReviewKeys), `roleplay/CallRecap`, 끝난 통화·RoleplayPast 맨 아래, 튜터 줄 `looked`, `locateHandoff.handOffFrame` → NotebookSection, `saveChecks(reviewOnly)`. 남은 것: 채팅에도(사용자 결정 대기), 틀 맞추기가 고정 부분 전부 일치라 "please" 빠진 말 등은 못 찾음(그땐 🔎 My에서 찾기) — 너무 흔한 1단계 틀(I like ___ 등)이 자주 붙는지 실제 통화로 보기, 사용법 통화 장 칸(버전 자를 때).
 - **내 말도 하는 튜터 (2026-10-30, 사용자 "통화와 채팅 둘 다 적용하되 옵션으로", 서버 바로·스위치 앱 빌드):** `lib/tutorLanguage.ts`(기기 저장 tutorLanguageMode), AI 대화 ⋮ 그룹(문구 tutorLanguage 14개), 채팅 `bilingualTutorRule`·통화 `bilingualCharacterRule`. 남은 것: 통화 화면에서도 바꿀 수 있게 할지(지금은 AI 대화 ⋮만), 목소리가 앱 언어 문장을 어떻게 읽는지 기기에서 듣기, 사용법(?) AI 대화·통화 장에 칸(버전 자를 때, 그림), 튜터 프로필(이름·사연)은 사용자가 아직 안 정함.
@@ -259,7 +260,7 @@
   결정: 단어장은 처음 한 번 서버로 올림, 숙지 규칙은 지도와 같음, 화면은 지도 탭 안. 영상 저장(videoLearningSaves)은 쓰는 곳이 없어 제외.
   영상에서 찾아본 표현은 탭만 기록(영상 id·초는 아직 안 넘김 — 2단계에서 장면 연결할 때 함께). 2) 탭 간 연결도 main에 있음(deb783e 외): 서버(튜터 다시 써 주기, 영상 id·초 기록)는 배포됨, 칩·단어장·내 표현 동작은 다음 빌드부터. 다음: 3)은 사용자 요청으로 "사용자가 짜는 지도"(대화 구간 돌아보기 → 알아요/모르겠어요/어려웠던 점 → 지도 반영)로 바뀜 — 설계안 `hub/drafts/learner-led-map.md` — 사용자가 "문장마다 체크, 질문 뒤 지도에 반영 버튼"으로 단순화 → 문장분석 화면의 알아요·모르겠어요·지도에 넣기로 만듦(a5903a7, 서버 배포됨, 화면은 빌드 필요). 구간 돌아보기는 보류. 구독자용 "오늘의 스크립트"는 보류.
 - **내일(2026-10-12) 할 일 — 사용자가 잠정으로 정함, 시작 전에 범위 다시 확인:**
-  1. 학습 언어별 분리 명확화 (지도·대화 기록·단어장·학습자 데이터가 언어마다 따로인지, 화면에서 그게 분명히 보이는지)
+  1. 학습 언어별 분리 명확화 → 정리함(2026-10-31, `hub/drafts/learning-language-ui-2026-10-31.md` 4절 저장·5절 고르지 않은 곳)
   2. 학습지도 UI·가독성 개선
   3. (끝남 2026-10-16) 사용법(?) 스크린샷 — 아래 "사용법 그림" 줄
 - 지도를 불러오기만 실패해도 "지도를 그리지 못했어요"로 나옴(문구 문제, 작음).
