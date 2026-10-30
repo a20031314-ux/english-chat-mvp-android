@@ -252,7 +252,8 @@ export function bilingualTutorRule(targetName: string, ownName: string): string 
 - The conversation stays in ${targetName}. When they write in ${targetName}, answer only in ${targetName}.
 - When they write in ${ownName}, mix ${ownName} into a ${targetName} sentence, or are clearly stuck, start your reply with ONE short sentence in ${ownName} that hands them the ${targetName} words for what they were trying to say, the ${targetName} words quoted inside it. Then carry on in ${targetName} in the same reply.
 - That ${ownName} sentence is only ever about their words. Never ask a question, make small talk or move the conversation on in ${ownName} — everything else you say is ${targetName}.
-- Never more than one ${ownName} sentence per reply, never a whole reply in ${ownName}, and no grammar lessons: a friend helping out, not a teacher.`;
+- Never more than one ${ownName} sentence per reply, never a whole reply in ${ownName}, and no grammar lessons: a friend helping out, not a teacher.
+- That ${ownName} sentence is part of assistantMessage itself, written there in ${ownName}. It is not what spokenReply is for; spokenReply still renders the whole of assistantMessage as before.`;
 }
 
 function buildChatSystem(
@@ -290,7 +291,8 @@ This turn they wrote in ${explanationLanguage}, their own language, because they
 If it is a question to you — most often what a word or phrase YOU just used means (look at your last "you:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.
 If they ask about their own learning — what they have improved at, what to practise next — it is about THEM, not you and not the world: answer as someone who has been chatting with them, from what recent (and any brief about their practice) shows, honestly saying when there is little to go on, and name one concrete thing to practise.`
     : "";
-  const bilingualBlock = options.bilingual ? `\n${bilingualTutorRule(targetName, explanationLanguage)}` : "";
+  // 맨 끝(JSON 모양 바로 앞)에 둔다 — 앞에 두면 spokenReply(앱 언어 옮김) 규칙에 묻혀 한 문장이 거기로만 갔다(2026-10-30 운영 확인).
+  const bilingualBlock = options.bilingual ? `\n\n${bilingualTutorRule(targetName, explanationLanguage)}` : "";
   const imageBlock = options.imageDataUrl
     ? `
 They attached a photo. Look at it and react the way a friend would in chat. Do not caption it like a vision demo unless they asked what is in the picture. If they also sent text, reply to the text and the photo together. Correction applies to their text only, not the image.`
@@ -301,14 +303,14 @@ They attached a photo. Look at it and react the way a friend would in chat. Do n
 
 You chat in ${targetName} with the user. This call only writes your reply — another step corrects their language, so do not correct, quote back or comment on their wording.
 ${tutorBlock}
-${ownLanguageBlock}${bilingualBlock}
+${ownLanguageBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs).
 Their message may have mistakes (wrong word, wrong ending, a word from another language mixed in). Reply to what they clearly meant, the way a friend would who understood them.
 
 ${voice}
-${spoken}
+${spoken}${bilingualBlock}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"..."}`;
@@ -319,7 +321,7 @@ Return ONLY valid JSON (no markdown) with this exact shape:
 
 You chat in English with the user. Correction is a separate job from talking.
 ${tutorBlock}
-${ownLanguageBlock}${bilingualBlock}
+${ownLanguageBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": something a rule checker already found in message — trust it, fix it in corrected and explain it.
@@ -327,7 +329,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${englishCorrectionPolicy(explanationLanguage, explanationGuard)}
+${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
@@ -342,7 +344,7 @@ ${identity}
 
 You chat in ${targetName} with the user. Correction is a separate, DETAILED job from talking — catch real ${targetName} mistakes carefully, the same way an English tutor would for English, but using ${targetName}'s own grammar.
 ${tutorBlock}
-${ownLanguageBlock}${bilingualBlock}
+${ownLanguageBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": mistakes a rule checker already found in message — trust it, fix them in corrected and explain them.
@@ -350,7 +352,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}
+${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
