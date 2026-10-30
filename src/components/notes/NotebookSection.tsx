@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
-import { BodyLayer } from "@/components/FullScreenLayer";
+import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
 import { ContentScopeButton } from "@/components/studyMap/ContentScope";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -220,7 +220,9 @@ export function NotebookSection({
   const [closed, setClosed] = useState<ReadonlySet<MyLayer>>(() => new Set());
   // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때).
   const [stagePeek, setStagePeek] = useState(false);
-  /** 그 칸을 펴고 그리로 이동. */
+  // 칸 이름 줄을 누르면 그 칸을 전체 화면으로(2026-10-31 사용자 "탭을 누르면 전체 화면으로 학습할 수 있게, 위쪽 버튼 구조는 그대로").
+  const [full, setFull] = useState<MyLayer | null>(null);
+  /** 그 칸을 펴고 그리로(전체 화면 중이면 그 칸을 전체 화면으로). */
   const openLayer = (next: MyLayer | null) => {
     if (!next) return;
     setClosed((current) => {
@@ -229,7 +231,8 @@ export function NotebookSection({
       copy.delete(next);
       return copy;
     });
-    scrollToLayer(next);
+    if (full) setFull(next);
+    else scrollToLayer(next);
   };
   const toggleLayer = (id: MyLayer) =>
     setClosed((current) => {
@@ -528,6 +531,12 @@ export function NotebookSection({
           peek={stagePeek}
           onPeek={setStagePeek}
           closed={closed}
+          full={full}
+          onFull={(id) => {
+            if (id) setClosed((current) => (current.has(id) ? new Set([...current].filter((one) => one !== id)) : current));
+            if (!id && full) scrollToLayer(full);
+            setFull(id);
+          }}
           onOpen={openLayer}
           onToggle={toggleLayer}
           today={
@@ -2167,8 +2176,22 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
  * 큰 칸 이름 줄(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동"): 칸이 모두 펼쳐져 길어서,
  * 위에 붙어 있는 이름을 누르면 그 칸으로 이동. 지금 보이는 칸은 그 칸 색.
  */
-function LayerJump({ items, onJump }: { items: { id: MyLayer; title: string }[]; onJump: (id: MyLayer) => void }) {
-  const [current, setCurrent] = useState<MyLayer | null>(null);
+function LayerJump({
+  items,
+  onJump,
+  active = null,
+  onClose,
+  closeLabel,
+}: {
+  items: { id: MyLayer; title: string }[];
+  onJump: (id: MyLayer) => void;
+  /** 전체 화면이면 그 칸(스크롤로 고르지 않음). */
+  active?: MyLayer | null;
+  onClose?: () => void;
+  closeLabel?: string;
+}) {
+  const [seenNow, setCurrent] = useState<MyLayer | null>(null);
+  const current = active ?? seenNow;
   const order = items.map((one) => one.id).join(",");
   useEffect(() => {
     const ids = order.split(",") as MyLayer[];
@@ -2187,7 +2210,7 @@ function LayerJump({ items, onJump }: { items: { id: MyLayer; title: string }[];
     return () => document.removeEventListener("scroll", look, true);
   }, [order]);
   return (
-    <nav data-my-jump className="sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3">
+    <nav data-my-jump className={active ? "flex shrink-0 gap-1.5 border-b border-line px-3 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))]" : "sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3"}>
       {items.map((one) => (
         <button
           key={one.id}
@@ -2200,6 +2223,11 @@ function LayerJump({ items, onJump }: { items: { id: MyLayer; title: string }[];
           {one.title}
         </button>
       ))}
+      {onClose ? (
+        <button type="button" data-my-full-close aria-label={closeLabel} title={closeLabel} onClick={onClose} className="shrink-0 rounded-full px-2 py-1.5 text-caption text-slate-400 hover:bg-white/10">
+          ✕
+        </button>
+      ) : null}
     </nav>
   );
 }
@@ -2209,6 +2237,8 @@ function MyLayers({
   language,
   locale,
   closed,
+  full,
+  onFull,
   onOpen,
   onToggle,
   today,
@@ -2223,6 +2253,9 @@ function MyLayers({
   locale: string;
   /** 접은 칸(기본 없음 = 모두 펼침). */
   closed: ReadonlySet<MyLayer>;
+  /** 전체 화면으로 연 칸(칸 이름 줄을 눌렀을 때), 없으면 null. */
+  full: MyLayer | null;
+  onFull: (layer: MyLayer | null) => void;
   /** 칸을 펴고 그리로 이동(칸 이름 줄·오늘 할 것이 끝났을 때). */
   onOpen: (layer: MyLayer | null) => void;
   onToggle: (layer: MyLayer) => void;
@@ -2239,6 +2272,8 @@ function MyLayers({
   // 오늘 할 것이 안 끝났으면 칸 안은 오늘 할 것, 끝나면 단계 화면.
   const review = useReviewNotes(language, notes);
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
+    // 전체 화면이면 그 칸 안만 전체 화면 층에(같은 것을 두 곳에 그리지 않게 제자리에는 안 그림).
+    if (full) return full === id ? <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{body}</div> : null;
     const on = !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
@@ -2285,27 +2320,39 @@ function MyLayers({
           ),
         );
     const keepCard = parts ? card("keep", ui.keepTitle, parts.keep.summary, parts.keep.body) : null;
+    const reviewCard = card(
+      "review",
+      ui.reviewLayerTitle,
+      null,
+      <>
+        {parts?.review.body}
+        <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
+      </>,
+    );
+    const jumpItems = [
+      ...(todayDone && parts ? (["keep", "stage"] as const) : parts ? (["stage", "keep"] as const) : (["stage"] as const)),
+      "review" as const,
+    ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.reviewLayerTitle }));
     return (
       <>
         {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
         {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} /> : null}
-        <LayerJump
-          items={[
-            ...(todayDone && keepCard ? (["keep", "stage"] as const) : keepCard ? (["stage", "keep"] as const) : (["stage"] as const)),
-            "review" as const,
-          ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.reviewLayerTitle }))}
-          onJump={onOpen}
-        />
-        {todayDone && keepCard ? keepCard : stageCard}
-        {todayDone && keepCard ? stageCard : keepCard}
-        {card(
-          "review",
-          ui.reviewLayerTitle,
-          null,
+        {full ? (
+          <FullScreenLayer>
+            <LayerJump items={jumpItems} onJump={onFull} active={full} onClose={() => onFull(null)} closeLabel={ui.billingClose} />
+            <div className="min-h-0 flex-1 overflow-y-auto">
+              {stageCard}
+              {keepCard}
+              {reviewCard}
+            </div>
+          </FullScreenLayer>
+        ) : (
           <>
-            {parts?.review.body}
-            <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
-          </>,
+            <LayerJump items={jumpItems} onJump={onFull} />
+            {todayDone && keepCard ? keepCard : stageCard}
+            {todayDone && keepCard ? stageCard : keepCard}
+            {reviewCard}
+          </>
         )}
         {parts?.overlays}
       </>
