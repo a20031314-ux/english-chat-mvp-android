@@ -246,3 +246,26 @@ test("복습에서 고른 모양: 묶음이 그 모양만, 단어 퀴즈도 그 
   const word = buildQuiz("es", "w|zzcafé", { kinds: ["choose", "choose", "choose"] });
   if (word) assert.ok(word.questions.every((q) => q.kind === "choose"), String(word.questions.map((q) => q.kind)));
 });
+
+test("퀴즈 칸 = 빈칸 고르기만(strict) — 문법·표현 열쇠도 빈칸이 아니면 건너뜀(일본어·스페인어)", async () => {
+  const { bundleQuiz } = await import("./quiz.ts");
+  const { nextStudy } = await import("./nextStudy.ts");
+  for (const language of ["ja", "es"]) {
+    const keys = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "expression", lane: "learn", now: 0 }).map((pick) => pick.key);
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: "s", stage: 1, style: "choose", strict: true });
+    assert.ok(made.questions.length >= 1, language);
+    assert.ok(made.questions.every((q) => q.kind === "choose"), `${language} ${made.questions.map((q) => q.kind)}`);
+  }
+});
+
+test("빈칸 보기에 대소문자만 다른 같은 말이 둘 나오지 않는다(스페인어·일본어 문법)", async () => {
+  const { bundleQuiz } = await import("./quiz.ts");
+  const { nextStudy } = await import("./nextStudy.ts");
+  for (const language of ["es", "ja"]) {
+    const keys = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "grammar", focus: "grammar", lane: "learn", now: 0 }).map((pick) => pick.key);
+    for (let seed = 0; seed < 20; seed += 1) {
+      const made = bundleQuiz(language, keys.slice(0, 8), { seed: `s${seed}`, stage: 1, style: "choose", strict: true });
+      for (const q of made.questions) if (q.kind === "choose") assert.equal(new Set(q.options.map((o) => o.toLocaleLowerCase())).size, q.options.length, `${language} ${q.options}`);
+    }
+  }
+});

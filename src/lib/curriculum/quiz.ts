@@ -254,10 +254,9 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
   const at = source.text.indexOf(piece);
   if (at < 0) return null;
   const near = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : [];
-  const wrong = shuffled(
-    (near.length >= 2 ? near : decoys(language, key, source.stage, source.pos)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
-    random,
-  ).slice(0, 2);
+  // 대소문자만 다른 같은 말("cuánto cuesta"·"Cuánto cuesta")은 보기에 한 번만(2026-10-30 화면 확인).
+  const fit = (near.length >= 2 ? near : decoys(language, key, source.stage, source.pos)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece)));
+  const wrong = [...new Map(shuffled(fit, random).map((one) => [lower(one), one])).values()].slice(0, 2);
   if (wrong.length < 2) return null;
   const options = shuffled([piece, ...wrong], random);
   return {
@@ -388,7 +387,12 @@ const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "say",
 /** 복습에서 고른 문제 모양(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게") — 없으면 돌아가며. */
 export type QuizStyle = Extract<QuizQuestion["kind"], "choose" | "order" | "say" | "meaning">;
 
-export function bundleQuiz(language: string, keys: readonly string[], options: { seed?: string; stage?: number; style?: QuizStyle } = {}): { questions: QuizQuestion[]; keys: string[] } {
+export function bundleQuiz(
+  language: string,
+  keys: readonly string[],
+  /** strict: 고른 모양(style)만 — 못 만드는 열쇠는 건너뜀(퀴즈 칸 = 빈칸 고르기만, 사용자 2026-10-30). */
+  options: { seed?: string; stage?: number; style?: QuizStyle; strict?: boolean } = {},
+): { questions: QuizQuestion[]; keys: string[] } {
   const questions: QuizQuestion[] = [];
   const out: string[] = [];
   const texts = new Set<string>();
@@ -402,7 +406,7 @@ export function bundleQuiz(language: string, keys: readonly string[], options: {
     if (!quiz) continue;
     const textOf = (q: QuizQuestion) => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
     const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1 || options.style === "say") && q.kind !== "fix";
-    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? quiz.questions.find(usable);
+    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? (options.strict && options.style ? undefined : quiz.questions.find(usable));
     if (!pick) continue;
     if (pick.kind === "say") says += 1;
     texts.add(textOf(pick));

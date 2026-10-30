@@ -106,9 +106,9 @@ for (const language of ["es", "ja"]) {
     assert.equal(review[0]!.key, due);
     const learn = nextStudy({ ...base, lane: "learn" });
     assert.ok(learn.length > 0);
-    // 2026-10-30: 새로 배우기 줄도 틀린 것(다시 볼 것·틀렸던 것)을 맨 앞에(복습 칸은 읽고 정리).
-    assert.ok(learn.every((pick) => ["again", "missed", "gap", "weak", "word", "new", "confirm", "keep"].includes(pick.reason)), learn.map((p) => p.reason).join());
-    assert.equal(learn[0]!.reason, "again");
+    // 2026-10-30 저녁(사용자 "틀린 것 다시보기는 별도의 탭으로"): 틀린 것은 "지난번에 틀린 것" 탭(review 줄)에만 — 새로 배우기 줄에는 없다.
+    assert.ok(learn.every((pick) => !["again", "missed", "gap"].includes(pick.reason)), learn.map((p) => p.reason).join());
+    assert.ok(!learn.some((pick) => pick.key === due || pick.key === missed), "틀린 열쇠는 새로 배우기에서 빠짐");
     // 아무것도 없으면 복습 줄은 비고, 새로 배우기는 늘 있다.
     assert.equal(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "review", now: NOW }).length, 0);
     assert.ok(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "learn", now: NOW }).length > 0);
@@ -116,17 +116,15 @@ for (const language of ["es", "ja"]) {
 }
 
 for (const language of ["es", "ja"]) {
-  test(`${language}: 방금(30분 안) 푼 열쇠는 새로 배우기에서 뒤로 — 틀렸어도 다른 것 먼저`, () => {
+  test(`${language}: 틀린 열쇠는 새로 배우기에서 빠지고 틀린 것 탭(review 줄)에만`, () => {
     const first = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "expression", lane: "learn", now: NOW });
     assert.ok(first.length > 1);
     const key = first[0]!.key;
-    // 맞힌 것(쉬는 중)이 아니라 방금 틀린 것도 — 새로 배우기 줄에서는 뒤로.
-    const log: QuizLog = { [key]: { n: 1, right: 1, at: NOW - 60 * 1000, last: false } };
-    const next = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "learn", now: NOW });
-    assert.notEqual(next[0]!.key, key);
-    // 30분이 지나면 다시 앞에 올 수 있음.
-    const later = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "learn", now: NOW + 31 * 60 * 1000 });
-    assert.equal(later[0]!.key, key);
+    const log: QuizLog = { [key]: { n: 1, right: 0, at: NOW - 60 * 1000, last: false } };
+    const learn = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "learn", now: NOW + 31 * 60 * 1000 });
+    assert.ok(!learn.some((pick) => pick.key === key), "30분이 지나도 새로 배우기에는 안 돌아옴");
+    const wrong = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log, weakest: "expression", lane: "review", now: NOW });
+    assert.equal(wrong[0]?.key, key);
   });
 }
 

@@ -225,9 +225,6 @@ export function TodayPlan({
   const [todaySettings, setTodaySettings] = useState(false);
   // 오늘 할 것의 퀴즈 한 문제: 답은 "다음"을 누를 때 기록(바로 기록하면 맞음·틀림을 보기 전에 다음 할 것으로 바뀜).
   const todayServed = useRef<{ id: string; result: boolean | null } | null>(null);
-  // 어휘 짝 맞추기에서 막 본 낱말들(그다음 예문 빈칸 묶음).
-  const [wordRound, setWordRound] = useState<string[] | null>(null);
-  const servedWords = useRef<string>("");
   // 오늘 끝까지 해 본 대본·문장구조(통과 못 해도 ✓, curriculum/practicedToday.ts).
   const [practiced, setPracticed] = useState<Set<string>>(new Set());
   useEffect(() => {
@@ -242,6 +239,7 @@ export function TodayPlan({
   // 계속 공부(끝없이): 푼 기록·이번에 낸 열쇠·연달아 틀린 수·지금 문제가 몇 번째인지(같은 열쇠라도 문제를 바꾸는 씨앗).
   const [log, setLog] = useState<QuizLog>({});
   const [asked, setAsked] = useState<Set<string>>(new Set());
+  const askedWrong = useRef<Set<string>>(new Set());
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
@@ -279,6 +277,10 @@ export function TodayPlan({
       // 이 폰에 남기지 못하면 권하지 않는다.
     }
   }, [language]);
+  // 틀린 것 탭에 들어갈 때마다 처음부터(그 탭에서 낸 것 빼기를 비움).
+  useEffect(() => {
+    if (settings.focus === "review") askedWrong.current = new Set();
+  }, [settings.focus]);
   useEffect(() => {
     setLog(readQuizLog(language));
     setAsked(new Set());
@@ -484,7 +486,8 @@ export function TodayPlan({
       log,
       weakest: weakestNow,
       expressions,
-      skip: new Set([...asked, ...skipToday]),
+      // 틀린 것 탭(review 줄)은 이번에 낸 것 빼기를 따로 센다 — 퀴즈 탭에서 방금 틀린 문제가 틀린 것 탭에 바로 나오게(2026-10-30).
+      skip: new Set([...(which === "review" ? askedWrong.current : asked), ...skipToday]),
       confirm: confirmDue(known, at),
       gaps: gapKeys,
       words: bank?.next,
@@ -530,7 +533,7 @@ export function TodayPlan({
   const bundleFor = (which: StudyLane, wordKeys?: readonly string[]): { keys: string[]; questions: QuizQuestion[] } | null => {
     // 어휘: 짝 맞추기에서 본 낱말들의 예문 빈칸, 낱말마다 한 문제(같은 낱말을 모양만 바꿔 세 번 묻지 않음, 2026-10-30).
     if (wordKeys) {
-      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose" });
+      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose", strict: true });
       return made.questions.length ? made : null;
     }
     if (which === "learn" && studyFocus === "vocab") return null;
@@ -546,8 +549,9 @@ export function TodayPlan({
       const lead = firstPick(queue, which)?.key;
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: styleFor(which) });
-    return made.questions.length >= 2 ? made : null;
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "choose", strict: true });
+    // 틀린 것 탭은 한 문제만 남아도 낸다.
+    return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
   };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane, wordKeys?: readonly string[]) => {
     setLane(which);
@@ -636,12 +640,11 @@ export function TodayPlan({
         )
       : [];
   // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).
-  const keepStyleOf: Style = settings.styles?.[keepFocus] ?? (keepFocus === "vocab" ? "match" : "auto");
-  const keepStyle: Style =
-    keepFocus === "vocab"
-      ? keepStyleOf === "choose" || vocabPairs.length < 3 ? "choose" : "match"
-      : keepStyleOf === "match" ? "auto" : keepStyleOf;
-  const reviewStyle: Style = settings.styles?.review && settings.styles.review !== "match" ? settings.styles.review : "auto";
+  // 퀴즈 = 빈칸에 들어갈 말 고르기만(사용자 2026-10-30 "퀴즈를 빈칸에 들어갈 단어를 고르는 것으로 단순화") — 짝 맞추기·순서·말하기·뜻 고르기는 퀴즈 칸에서 안 냄.
+  const keepStyle: Style = "choose";
+  const reviewStyle: Style = "choose";
+  // 퀴즈 칸의 따로 된 탭 "지난번에 틀린 것"(사용자 2026-10-30 "틀린 것 다시보기는 별도의 탭으로") — 설정의 focus "review"를 쓴다.
+  const wrongTab = settings.focus === "review";
   const asQuiz = (one: Style): QuizStyle | undefined => (one === "auto" || one === "match" ? undefined : one);
   const styleFor = (which: StudyLane): QuizStyle | undefined => asQuiz(which === "review" ? reviewStyle : keepStyle);
   const waysFor = (focus: StudyFocus) => {
@@ -692,8 +695,10 @@ export function TodayPlan({
       todayServed.current = null;
       return null;
     }
-    const quiz = buildQuiz(language, current.id, { card: current.card, seed: day, stage, mix: settings.mix });
-    const first = quiz?.questions[0];
+    // 오늘 할 것의 퀴즈도 빈칸 고르기 먼저(사용자 2026-10-30) — 빈칸을 못 만드는 항목(문법 칸 등)만 예전 모양.
+    const blank = buildQuiz(language, current.id, { card: current.card, seed: day, stage, kinds: ["choose"] })?.questions.find((q) => q.kind === "choose");
+    const quiz = blank ? null : buildQuiz(language, current.id, { card: current.card, seed: day, stage, mix: settings.mix });
+    const first = blank ?? quiz?.questions[0];
     if (!first) return null;
     todayServed.current = { id: `${current.id}|${current.review ?? ""}`, result: null };
     return { questions: [first], keys: [current.id] };
@@ -1004,28 +1009,21 @@ export function TodayPlan({
   // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
   const recordOne = (one: { key: string; correct: boolean; skipped: boolean }) => {
     if (one.skipped || !one.key) return;
-    setAsked((current) => new Set([...current, one.key]));
+    if (wrongTab) askedWrong.current.add(one.key);
+    else setAsked((current) => new Set([...current, one.key]));
     finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
   };
   const takeBatch = (made: { keys: string[]; questions: QuizQuestion[] } | null): QuizBatch | null => {
     if (!made) return null;
-    setAsked((current) => new Set([...current, ...made.keys]));
+    if (wrongTab) for (const key of made.keys) askedWrong.current.add(key);
+    else setAsked((current) => new Set([...current, ...made.keys]));
     setRound((n) => n + 1);
     return made;
   };
   // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
   const keepMake = (): QuizBatch | null => {
+    if (wrongTab) return takeBatch(bundleFor("review"));
     if (keepFocus === "vocab") {
-      if (keepStyle === "match") {
-        if (!wordRound) return null;
-        const id = wordRound.join("|");
-        if (servedWords.current === id) {
-          setWordRound(null);
-          return null;
-        }
-        servedWords.current = id;
-        return takeBatch(bundleFor("learn", wordRound));
-      }
       const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
       return keys.length ? takeBatch(bundleFor("learn", keys.slice(0, MATCH_SIZE))) : null;
     }
@@ -1093,24 +1091,6 @@ export function TodayPlan({
           </div>
           {settingsOpen === "keep" ? (
             <>
-              {/* 무엇을 */}
-              <div role="tablist" data-study-focus className="flex flex-wrap gap-1.5">
-                {(["vocab", "grammar", "expression"] as const).map((focus) => (
-                  <button
-                    key={focus}
-                    type="button"
-                    role="tab"
-                    aria-selected={keepFocus === focus}
-                    data-focus={focus}
-                    onClick={() => save({ ...settings, focus })}
-                    className={`rounded-full px-3 py-1 text-caption ${keepFocus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
-                  >
-                    {partName(ui, focus)}
-                  </button>
-                ))}
-              </div>
-              {/* 어떻게 */}
-              {waysFor(keepFocus).length > 1 ? waysGrid(waysFor(keepFocus), keepStyle, (next) => save({ ...settings, styles: { ...settings.styles, [keepFocus]: next } }), "study-style") : null}
               {/* 어떤 낱말 */}
               {keepFocus === "vocab" && bank ? (
                 <div data-vocab-by className="flex flex-col gap-1.5">
@@ -1155,37 +1135,53 @@ export function TodayPlan({
       </div>
     </BodyLayer>
   ) : null;
-  const keepResetKey = `${language}|${keepFocus}|${keepStyle}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}|${wordRound?.join("|") ?? ""}`;
+  const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
+  const keepTabs: readonly (PartId | "review")[] = ["vocab", "grammar", "expression", "review"];
   const keepBody = (
     <div data-keep-learning>
-      <div className="flex items-center justify-end gap-0.5">
-        {keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} /> : null}
+      <div className="flex items-center gap-1">
+        {/* 무엇을 = 탭(사용자 2026-10-30): 어휘 · 문법 · 표현 · 지난번에 틀린 것 — 틀린 것 다시 풀기는 이 탭에서만(nextStudy review 줄). */}
+        <div role="tablist" data-study-focus className="flex min-w-0 flex-1 flex-wrap gap-1.5">
+          {keepTabs.map((tab) => {
+            const on = tab === "review" ? wrongTab : !wrongTab && keepFocus === tab;
+            return (
+              <button
+                key={tab}
+                type="button"
+                role="tab"
+                aria-selected={on}
+                data-focus={tab}
+                onClick={() => save({ ...settings, focus: tab })}
+                className={`rounded-full px-3 py-1 text-caption ${on ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+              >
+                {tab === "review" ? ui.weakTitle : partName(ui, tab)}
+              </button>
+            );
+          })}
+        </div>
+        {!wrongTab && keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} /> : null}
         {checkups.length ? (
           <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
             <span aria-hidden>📈</span>
           </button>
         ) : null}
         {learnTest ? testIcon(learnTest) : null}
-        {settingsIcon("keep")}
+        {!wrongTab && keepFocus === "vocab" && bank ? settingsIcon("keep") : null}
       </div>
-      {keepFocus === "vocab" && keepStyle === "match" && !wordRound ? (
-        <WordMatch key={keepResetKey} inline ui={ui} pairs={vocabPairs} onClose={() => undefined} onNext={(seen) => setWordRound(seen.map((word) => `w|${word}`))} />
-      ) : (
-        <InlineQuiz
-          ui={ui}
-          locale={locale}
-          language={language}
-          resetKey={keepResetKey}
-          make={keepMake}
-          onResult={recordOne}
-          empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {ui.planAllDone}</p>}
-        />
-      )}
+      <InlineQuiz
+        ui={ui}
+        locale={locale}
+        language={language}
+        resetKey={keepResetKey}
+        make={keepMake}
+        onResult={recordOne}
+        empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>}
+      />
       {settingsSheet}
     </div>
   );
   // 복습 칸(퀴즈 아래, 따로): 읽고 정리(2026-10-30 사용자 A — 카드는 NotebookSection이 studyMap/ReviewNotes로) + 📝 시험 아이콘.
-  // 틀린 것 다시 풀기는 퀴즈 칸이 맨 앞에서 낸다(nextStudy learn 줄).
+  // 틀린 것 다시 풀기는 퀴즈 칸의 "지난번에 틀린 것" 탭(nextStudy review 줄).
   const reviewBody = reviewTest ? <div data-review className="mb-2 flex items-center justify-end gap-0.5">{testIcon(reviewTest)}</div> : null;
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
   return children({

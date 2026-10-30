@@ -81,8 +81,10 @@ export function nextStudy(input: {
   now?: number;
 }): StudyPick[] {
   const lane = input.lane ?? null;
-  // 복습 칸이 읽고 정리로 바뀌어(2026-10-30 사용자 A) 틀린 것 다시 풀기(다시 볼 것·틀렸던 것·막힌 것)는 새로 배우기 줄 맨 앞에서도 낸다.
-  const reviewing = true;
+  // 틀린 것 다시 풀기(다시 볼 것·틀렸던 것·막힌 것)는 퀴즈 칸의 따로 된 탭 "지난번에 틀린 것"(review 줄)에서만(사용자 2026-10-30 "틀린 것 다시보기는 별도의 탭으로").
+  // 새로 배우기 줄에는 넣지 않고, 틀린 적 있는 열쇠(틀렸던 것·다시 볼 것)는 새로 배우기에서 빼서 같은 문제가 섞여 돌지 않게.
+  const reviewing = lane !== "learn";
+  const wrongBefore = (key: string) => Boolean(input.review[key]) || input.log[key]?.last === false;
   const learning = lane !== "review";
   const focus = lane === "review" ? null : (input.focus ?? null);
   const fits = (key: string) => !focus || (focus === "pronunciation" ? keyPart(input.language, key) !== "grammar" : keyPart(input.language, key) === focus);
@@ -97,6 +99,7 @@ export function nextStudy(input: {
   };
   const add = (key: string, reason: StudyReason, part?: PartId) => {
     if (out.length >= LOOKAHEAD || seen.has(key) || skip.has(key)) return;
+    if (lane === "learn" && wrongBefore(key)) return;
     seen.add(key);
     if (!fits(key) || !isCurriculumKey(input.language, key) || !canQuiz(input.language, key)) return;
     // 날짜 된 다시 볼 것은 쉬는 중이어도 낸다(서버가 정한 날).
@@ -120,7 +123,7 @@ export function nextStudy(input: {
   if (lane === "learn") {
     for (const key of input.confirm ?? []) {
       if (confirms.length >= CONFIRM_LOOKAHEAD) break;
-      if (seen.has(key) || skip.has(key)) continue;
+      if (seen.has(key) || skip.has(key) || wrongBefore(key)) continue;
       seen.add(key);
       if (fits(key) && isCurriculumKey(input.language, key) && canQuiz(input.language, key)) confirms.push({ key, reason: "confirm" });
     }
