@@ -521,6 +521,25 @@ function ScriptPlayer({
     if (heard) noteLine(language, script.id, index, !clean);
   };
 
+  // 내 줄이 되면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음") — 따라 말하기는 내 줄을 먼저 들려주니 빼고, 고르기·맞추기는 마이크 없음.
+  // 줄마다 한 번만(다시 말하기는 버튼).
+  const autoHeard = useRef<number>(-1);
+  useEffect(() => {
+    if (offer || done || limited || listening) return;
+    if (mode === "shadow" || isTapMode(mode)) return;
+    if (script.lines[index]?.who !== "me" || results[index] || autoHeard.current === index) return;
+    const timer = window.setTimeout(() => {
+      autoHeard.current = index;
+      void say();
+    }, 250);
+    return () => window.clearTimeout(timer);
+    // say는 매번 새로 만들어진다 — 줄·방식이 바뀔 때만 다시 본다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [index, mode, offer, done, limited, listening, results]);
+  // 닫으면 듣던 것도 끝낸다.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => () => hearing.saidAll(), []);
+
   const tapAnswer = (i: number, tapMode: ScriptMode, correct: boolean) => {
     stopTts();
     setResults((current) => ({ ...current, [i]: { heard: "", practice: null, clean: correct, mode: tapMode } }));
@@ -563,6 +582,7 @@ function ScriptPlayer({
     setRevealed({});
     setMisses({});
     setPicks(freshPicks(script));
+    autoHeard.current = -1;
     setIndex(0);
   };
 
