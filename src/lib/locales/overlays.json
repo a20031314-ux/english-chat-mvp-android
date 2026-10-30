@@ -800,7 +800,6 @@
     "keepTitle": "継続学習",
     "studyWhyWord": "新しい単語",
     "vocabByAll": "すべて",
-    "vocabByBand": "よく使う順",
     "vocabByPos": "品詞",
     "vocabByTopic": "テーマ",
     "posNoun": "名詞",
@@ -850,7 +849,8 @@
     "callRecapTitle": "この通話のまとめ",
     "callRecapLooked": "意味を見た言葉",
     "quizNoMistake": "間違いなし",
-    "wordSearch": "単語を探す"
+    "wordSearch": "単語を探す",
+    "vocabByStage": "段階"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1653,7 +1653,6 @@
     "keepTitle": "持续学习",
     "studyWhyWord": "新单词",
     "vocabByAll": "全部",
-    "vocabByBand": "按常用程度",
     "vocabByPos": "词性",
     "vocabByTopic": "主题",
     "posNoun": "名词",
@@ -1703,7 +1702,8 @@
     "callRecapTitle": "本次通话整理",
     "callRecapLooked": "查看过意思的句子",
     "quizNoMistake": "没有错误",
-    "wordSearch": "查找单词"
+    "wordSearch": "查找单词",
+    "vocabByStage": "阶段"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2509,7 +2509,6 @@
     "keepTitle": "Học liên tục",
     "studyWhyWord": "Từ mới",
     "vocabByAll": "Tất cả",
-    "vocabByBand": "Theo độ phổ biến",
     "vocabByPos": "Từ loại",
     "vocabByTopic": "Chủ đề",
     "posNoun": "Danh từ",
@@ -2559,7 +2558,8 @@
     "callRecapTitle": "Tóm tắt cuộc gọi",
     "callRecapLooked": "Câu đã xem nghĩa",
     "quizNoMistake": "Không có lỗi",
-    "wordSearch": "Tìm từ"
+    "wordSearch": "Tìm từ",
+    "vocabByStage": "Giai đoạn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3370,7 +3370,6 @@
     "keepTitle": "Pratique continue",
     "studyWhyWord": "Nouveau mot",
     "vocabByAll": "Tout",
-    "vocabByBand": "Par fréquence",
     "vocabByPos": "Nature du mot",
     "vocabByTopic": "Thème",
     "posNoun": "Noms",
@@ -3420,7 +3419,8 @@
     "callRecapTitle": "De cet appel",
     "callRecapLooked": "Phrases dont vous avez vu le sens",
     "quizNoMistake": "Aucune erreur",
-    "wordSearch": "Chercher un mot"
+    "wordSearch": "Chercher un mot",
+    "vocabByStage": "Étape"
   },
   "it": {
     "archive": "Report",
@@ -4422,7 +4422,6 @@
     "keepTitle": "Pratica continua",
     "studyWhyWord": "Parola nuova",
     "vocabByAll": "Tutto",
-    "vocabByBand": "Per frequenza",
     "vocabByPos": "Parte del discorso",
     "vocabByTopic": "Tema",
     "posNoun": "Nomi",
@@ -4472,7 +4471,8 @@
     "callRecapTitle": "Da questa chiamata",
     "callRecapLooked": "Frasi di cui hai visto il significato",
     "quizNoMistake": "Nessun errore",
-    "wordSearch": "Cerca una parola"
+    "wordSearch": "Cerca una parola",
+    "vocabByStage": "Fase"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5286,7 +5286,6 @@
     "keepTitle": "Prática contínua",
     "studyWhyWord": "Palavra nova",
     "vocabByAll": "Tudo",
-    "vocabByBand": "Por frequência",
     "vocabByPos": "Classe gramatical",
     "vocabByTopic": "Tema",
     "posNoun": "Substantivos",
@@ -5336,7 +5335,8 @@
     "callRecapTitle": "Desta chamada",
     "callRecapLooked": "Frases cujo significado você viu",
     "quizNoMistake": "Não há erro",
-    "wordSearch": "Procurar palavra"
+    "wordSearch": "Procurar palavra",
+    "vocabByStage": "Etapa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6336,7 +6336,6 @@
     "keepTitle": "Постоянная практика",
     "studyWhyWord": "Новое слово",
     "vocabByAll": "Все",
-    "vocabByBand": "По частоте",
     "vocabByPos": "Часть речи",
     "vocabByTopic": "Тема",
     "posNoun": "Существительные",
@@ -6386,7 +6385,8 @@
     "callRecapTitle": "Итоги звонка",
     "callRecapLooked": "Фразы, которые вы перевели",
     "quizNoMistake": "Ошибки нет",
-    "wordSearch": "Найти слово"
+    "wordSearch": "Найти слово",
+    "vocabByStage": "Этап"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7196,7 +7196,6 @@
     "keepTitle": "Latihan berkelanjutan",
     "studyWhyWord": "Kata baru",
     "vocabByAll": "Semua",
-    "vocabByBand": "Menurut frekuensi",
     "vocabByPos": "Kelas kata",
     "vocabByTopic": "Topik",
     "posNoun": "Kata benda",
@@ -7246,7 +7245,8 @@
     "callRecapTitle": "Dari panggilan ini",
     "callRecapLooked": "Kalimat yang kamu lihat artinya",
     "quizNoMistake": "Tidak ada yang salah",
-    "wordSearch": "Cari kata"
+    "wordSearch": "Cari kata",
+    "vocabByStage": "Tahap"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8049,7 +8049,6 @@
     "keepTitle": "تعلّم مستمر",
     "studyWhyWord": "كلمة جديدة",
     "vocabByAll": "الكل",
-    "vocabByBand": "حسب الشيوع",
     "vocabByPos": "نوع الكلمة",
     "vocabByTopic": "الموضوع",
     "posNoun": "الأسماء",
@@ -8099,7 +8098,8 @@
     "callRecapTitle": "من هذه المكالمة",
     "callRecapLooked": "جمل اطّلعت على معناها",
     "quizNoMistake": "لا يوجد خطأ",
-    "wordSearch": "ابحث عن كلمة"
+    "wordSearch": "ابحث عن كلمة",
+    "vocabByStage": "المرحلة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8902,7 +8902,6 @@
     "keepTitle": "เรียนต่อเนื่อง",
     "studyWhyWord": "คำใหม่",
     "vocabByAll": "ทั้งหมด",
-    "vocabByBand": "ตามความถี่",
     "vocabByPos": "ชนิดของคำ",
     "vocabByTopic": "หัวข้อ",
     "posNoun": "คำนาม",
@@ -8952,7 +8951,8 @@
     "callRecapTitle": "สรุปการโทรครั้งนี้",
     "callRecapLooked": "ประโยคที่ดูความหมาย",
     "quizNoMistake": "ไม่มีจุดผิด",
-    "wordSearch": "ค้นหาคำ"
+    "wordSearch": "ค้นหาคำ",
+    "vocabByStage": "ขั้น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9755,7 +9755,6 @@
     "keepTitle": "लगातार अभ्यास",
     "studyWhyWord": "नया शब्द",
     "vocabByAll": "सभी",
-    "vocabByBand": "आवृत्ति के अनुसार",
     "vocabByPos": "शब्द-भेद",
     "vocabByTopic": "विषय",
     "posNoun": "संज्ञा",
@@ -9805,6 +9804,7 @@
     "callRecapTitle": "इस कॉल से",
     "callRecapLooked": "वाक्य जिनका अर्थ देखा",
     "quizNoMistake": "कोई गलती नहीं",
-    "wordSearch": "शब्द खोजें"
+    "wordSearch": "शब्द खोजें",
+    "vocabByStage": "चरण"
   }
 }

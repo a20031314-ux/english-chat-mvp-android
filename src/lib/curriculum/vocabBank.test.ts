@@ -33,20 +33,40 @@ test("계속 공부: 새 낱말(w|)은 어휘 갈래면 막힌 것 다음, 알�
   }
 });
 
-test("낱말 나누기: 많이 쓰는 순 500개씩 · 품사 묶음 · 주제 — 고른 칸만", async () => {
+test("낱말 나누기: 단계 · 품사 묶음 · 주제 — 고른 칸만", async () => {
   const { inPick, groupsOf, posGroup } = await import("./vocabBank.ts");
   const list = [
-    { w: "casa", pos: "noun", topic: "home" },
-    { w: "comer", pos: "verb", topic: "food" },
-    { w: "de", pos: "prep", topic: "function" },
+    { w: "casa", pos: "noun", topic: "home", stage: 1 },
+    { w: "comer", pos: "verb", topic: "food", stage: 1 },
+    { w: "de", pos: "prep", topic: "function", stage: 2 },
   ];
   assert.equal(posGroup("prep"), "function");
   assert.deepEqual(groupsOf(list, "pos"), ["noun", "verb", "function"]);
   assert.deepEqual(groupsOf(list, "topic"), ["food", "home", "function"]);
   assert.equal(inPick(list[1]!, 1, { by: "topic", value: "food" }), true);
   assert.equal(inPick(list[0]!, 0, { by: "pos", value: "verb" }), false);
-  assert.equal(inPick(list[2]!, 700, { by: "band", value: "1" }), true);
+  assert.equal(inPick(list[2]!, 700, { by: "stage", value: "2" }), true);
+  assert.equal(inPick(list[2]!, 700, { by: "stage", value: "" }), true, "단계 칸을 안 고르면 전체");
   assert.equal(inPick(list[2]!, 700, { by: "all", value: "" }), true);
+  assert.deepEqual(groupsOf(list, "stage"), ["1", "2"]);
+  assert.deepEqual(groupsOf(list, "stage", 1), ["1"], "내 단계까지만");
+});
+
+test("낱말 단계: 언어별 필수 범위로 순위 → 단계, 대본에서 배우면 당김, 뒤는 확장(영어·일본어·중국어·한국어)", async () => {
+  const { stageOfRank, wordStage, stageCuts } = await import("./vocabBank.ts");
+  assert.deepEqual(stageCuts("en"), [700, 1500, 2500, 3500, 5000]);
+  assert.deepEqual(stageCuts("ja"), [800, 1500, 2500, 3750, 6000]);
+  assert.deepEqual(stageCuts("zh"), [500, 1000, 2000, 3600, 5400]);
+  assert.deepEqual(stageCuts("ko"), [500, 1000, 2000, 3100, 6000]);
+  assert.equal(stageOfRank("en", 0), 1);
+  assert.equal(stageOfRank("en", 699), 1);
+  assert.equal(stageOfRank("en", 700), 2);
+  assert.equal(stageOfRank("ja", 799), 1);
+  assert.equal(stageOfRank("zh", 500), 2);
+  assert.equal(stageOfRank("en", 5000), 6);
+  const taught = new Map([["coffee", 1]]);
+  assert.equal(wordStage("en", { w: "coffee", pos: "noun" }, 2000, taught), 1, "대본 1단계에 나오면 당김");
+  assert.equal(wordStage("en", { w: "ornitorrinco", pos: "noun", stage: 5 }, 10, taught), 5, "더한 낱말은 판정 그대로");
   const ja = await loadBank("ja");
-  assert.deepEqual(groupsOf(ja, "band").length, 6);
+  assert.equal(ja.length > 0 && stageOfRank("ja", ja.length - 1) >= 4, true);
 });

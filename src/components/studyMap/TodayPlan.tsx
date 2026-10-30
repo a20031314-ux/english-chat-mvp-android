@@ -34,7 +34,7 @@ import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
-import { BAND_SIZE, peekBank, quizPos, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { peekBank, quizPos, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -126,7 +126,8 @@ function readSettings(): Settings {
     const pace = PACES.includes(raw?.pace as Pace) ? (raw!.pace as Pace) : 10;
     const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
     const focus = FOCUSES.includes(raw?.focus as StudyFocus) ? (raw!.focus as StudyFocus) : "auto";
-    const vocab = raw?.vocab && ["all", "band", "pos", "topic"].includes(raw.vocab.by) && typeof raw.vocab.value === "string" ? raw.vocab : undefined;
+    // 옛 "band"(많이 쓰는 순) 설정은 버린다(전체) — 2026-10-31 단계로 바꿈.
+    const vocab = raw?.vocab && ["all", "stage", "pos", "topic"].includes(raw.vocab.by) && typeof raw.vocab.value === "string" ? raw.vocab : undefined;
     const styles = Object.fromEntries(Object.entries(raw?.styles ?? {}).filter(([key, value]) => FOCUSES.includes(key as StudyFocus) && STYLES.includes(value as Style))) as Settings["styles"];
     return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}), ...(styles && Object.keys(styles).length ? { styles } : {}) };
   } catch {
@@ -255,12 +256,14 @@ export function TodayPlan({
   const { checkups, known, save: saveCheckup } = useCheckups(language);
   const itemStats = useItemStats(language);
   // 빈도 단어 묶음(curriculum/vocabBank.ts — 지금 en·es·ja): 지속 학습의 어휘 분모와 새 낱말.
-  // 기준만 고르고 칸을 안 골랐으면 그 기준의 첫 칸(1–500 · 명사 · 사람).
+  // 기준만 고르고 칸을 안 골랐으면: 단계는 내 단계까지 전체(빈 값), 품사·주제는 첫 칸(명사 · 사람).
   const vocabPick: VocabPick | null =
     settings.focus === "vocab" && settings.vocab && settings.vocab.by !== "all"
-      ? { by: settings.vocab.by, value: settings.vocab.value || ({ band: "0", pos: "noun", topic: "people" } as const)[settings.vocab.by] }
+      ? { by: settings.vocab.by, value: settings.vocab.value || ({ stage: "", pos: "noun", topic: "people" } as const)[settings.vocab.by] }
       : null;
-  const bank = useWordBank(language, locale, known, vocabPick);
+  // 내가 저장한 낱말(이 학습 언어)은 단계와 상관없이 어휘 퀴즈 맨 앞(2026-10-31 낱말 층위 ⑤).
+  const mineWords = useMemo(() => new Set(savedWords.filter((one) => one.languageCode === language).map((one) => one.word.trim())), [savedWords, language]);
+  const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
@@ -1117,15 +1120,15 @@ export function TodayPlan({
               {keepFocus === "vocab" && bank ? (
                 <div data-vocab-by className="flex flex-col gap-1.5">
                   <div role="group" className="flex flex-wrap gap-1.5">
-            {(["all", "band", "pos", "topic"] as const).map((by) => (
+            {(["stage", "pos", "topic"] as const).map((by) => (
               <button
                 key={by}
                 type="button"
-                aria-pressed={(settings.vocab?.by ?? "all") === by}
+                aria-pressed={(settings.vocab?.by && settings.vocab.by !== "all" ? settings.vocab.by : "stage") === by}
                 onClick={() => save({ ...settings, vocab: { by, value: "" } })}
-                className={`rounded-full px-3 py-1 text-caption ${(settings.vocab?.by ?? "all") === by ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+                className={`rounded-full px-3 py-1 text-caption ${(settings.vocab?.by && settings.vocab.by !== "all" ? settings.vocab.by : "stage") === by ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
               >
-                {{ all: ui.vocabByAll, band: ui.vocabByBand, pos: ui.vocabByPos, topic: ui.vocabByTopic }[by]}
+                {{ stage: ui.vocabByStage, pos: ui.vocabByPos, topic: ui.vocabByTopic }[by]}
               </button>
             ))}
           </div>
@@ -1215,7 +1218,7 @@ export function TodayPlan({
 }
 
 function vocabGroupName(ui: UICopy, by: VocabBy, id: string): string {
-  if (by === "band") return `${Number(id) * BAND_SIZE + 1}–${(Number(id) + 1) * BAND_SIZE}`;
+  if (by === "stage") return ui.stageNumber.replace("{n}", id);
   if (by === "pos") return ({ noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction } as Record<string, string>)[id] ?? id;
   const topics: Record<string, string> = {
     people: ui.topicPeople,

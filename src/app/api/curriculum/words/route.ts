@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
     if (params.get("list") === "1") {
       const chunks = Math.ceil(total / BANK_CHUNK);
       const all = (await Promise.all(Array.from({ length: chunks }, (_, i) => extraChunk(language, i)))).flat();
-      return jsonWithCors(request, { total, words: all.map((one) => [one.w, one.pos, one.topic ?? "", one.reading ?? ""]) });
+      return jsonWithCors(request, { total, words: all.map((one) => [one.w, one.pos, one.topic ?? "", one.reading ?? "", one.stage ?? 6]) });
     }
     if (!Number.isInteger(chunk) || chunk < 0 || chunk * BANK_CHUNK >= total) return jsonWithCors(request, { cards: [], total, size: BANK_CHUNK });
     const cards = await cardsInUi(language, await extraChunk(language, chunk), ui, () => void meterRequest(request, "wordCards"));

@@ -7,7 +7,9 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
-import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, posGroup, quizPos, wordKey, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { BANK_CHUNK, groupsOf, hasBank, inPick, loadBank, peekBank, posGroup, quizPos, wordKey, wordStage, type BankWord, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { allScriptsFor } from "@/lib/curriculum/stageScripts";
+import { segmentWords } from "@/lib/wordSegments";
 import { knownState, type KnownMap } from "@/lib/curriculum/known";
 import { registerQuizSources, type QuizSource } from "@/lib/curriculum/quiz";
 
@@ -16,8 +18,10 @@ const CACHE = "wordCards.v1";
 const NEXT_MAX = 40;
 
 /** 기능어(대명사·관사·조사 등)는 뒤로(2026-10-29 사용자 — 새 낱말이 ない·i·el부터 나옴). 기능어 칸을 고르면 그대로. */
-function late(word: BankWord, pick?: VocabPick | null): boolean {
+function late(word: BankWord, pick?: VocabPick | null, userStage = 2): boolean {
   if (pick && pick.value === "function" && (pick.by === "pos" || pick.by === "topic")) return false;
+  // 1단계는 기능어(대명사·조사·전치사)를 먼저 다(2026-10-31 설계 — 문장을 만들려면 먼저 필요).
+  if (userStage <= 1) return false;
   return posGroup(word.pos) === "function" || word.topic === "function";
 }
 
@@ -61,10 +65,16 @@ async function fetchExtras(language: string, force = false): Promise<BankWord[] 
     // 새로 받는다.
   }
   const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&extra=1&list=1`))
-    .then((response) => (response.ok ? (response.json() as Promise<{ words?: string[][] }>) : null))
+    .then((response) => (response.ok ? (response.json() as Promise<{ words?: (string | number)[][] }>) : null))
     .catch(() => null);
   if (!Array.isArray(body?.words)) return null;
-  const words: BankWord[] = body!.words!.map(([w, pos, topic, reading]) => ({ w: w ?? "", pos: pos ?? "", ...(topic ? { topic } : {}), ...(reading ? { reading } : {}) })).filter((one) => one.w);
+  const words: BankWord[] = body!.words!.map(([w, pos, topic, reading, stage]) => ({
+    w: String(w ?? ""),
+    pos: String(pos ?? ""),
+    ...(topic ? { topic: String(topic) } : {}),
+    ...(reading ? { reading: String(reading) } : {}),
+    ...(Number(stage) >= 1 && Number(stage) <= 6 ? { stage: Number(stage) } : {}),
+  })).filter((one) => one.w);
   try {
     localStorage.setItem(`${EXTRAS}.${language}`, JSON.stringify({ at: Date.now(), words }));
   } catch {
@@ -95,13 +105,35 @@ export async function searchWord(language: string, ui: string, word: string): Pr
   return { status: body.status, ...(body.word ? { word: body.word } : {}) };
 }
 
+/** 앱이 단계마다 가르치는 낱말(대본 줄에 나온 꼴, 소문자) → 가장 이른 단계. 낱말 단계를 그 아래로 당기는 데 씀. */
+const taughtCache = new Map<string, Map<string, number>>();
+function taughtStages(language: string): Map<string, number> {
+  const have = taughtCache.get(language);
+  if (have) return have;
+  const out = new Map<string, number>();
+  for (const script of allScriptsFor(language)) {
+    for (const line of script.lines) {
+      for (const word of segmentWords(line.text, language)) {
+        const key = word.toLocaleLowerCase();
+        if (!out.has(key) || out.get(key)! > script.stage) out.set(key, script.stage);
+      }
+    }
+  }
+  taughtCache.set(language, out);
+  return out;
+}
+
 /** 낱말 뜻(앱 언어) — 퀴즈 제목 옆 등. */
 const glossOf = new Map<string, string>();
 export function wordGloss(language: string, word: string): string {
   return glossOf.get(`${language}|${word}`) ?? "";
 }
 
-export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null) {
+/**
+ * userStage: 지금 내 단계 — 그 위 단계 낱말은 내지 않는다(mine 빼고). mine: 내가 찾거나 저장한 낱말(단계 무관 맨 앞).
+ * 고르는 순서(2026-10-31 설계): mine → 지금 단계 필수 → 아래 단계 필수 중 아직 모르는 것 → (5단계면) 확장.
+ */
+export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null, userStage = 5, mine?: ReadonlySet<string>) {
   const [bank, setBank] = useState<readonly BankWord[] | null>(() => peekBank(language));
   const [ready, setReady] = useState<Set<string>>(new Set());
   // 사용자들이 찾아서 더한 낱말(server/wordExtras.ts) — 빈도 목록 뒤에 붙인다(2026-10-31 사용자 "검색하면 자동 추가 → 다른 사용자에게 반영").
@@ -116,28 +148,58 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     };
   }, [language]);
   const base = bank && bank.length && hasBank(language) ? bank : null;
-  const list = useMemo(() => (base ? [...base, ...extras.filter((one) => !base.some((b) => b.w === one.w))] : null), [base, extras]);
+  const list = useMemo(() => {
+    if (!base) return null;
+    const taught = taughtStages(language);
+    const joined = [...base, ...extras.filter((one) => !base.some((b) => b.w === one.w))];
+    // 순위 칸 + 대본에서 배우는 단계로 낱말마다 단계(curriculum/vocabBank.ts wordStage).
+    // 찾아서 더한 낱말은 서버가 판정한 단계(없으면 확장 6) — 목록 뒤 자리는 순위가 아니다.
+    return joined.map((word, index) => ({ ...word, stage: index >= base.length ? (word.stage ?? 6) : wordStage(language, word, index, taught) }));
+  }, [base, extras, language]);
   const baseLength = base?.length ?? 0;
+  const mineKey = mine ? [...mine].sort().join("|") : "";
+  // 낼 차례(순위 index 목록): 내 것 → 지금 단계 → 아래 단계(높은 것부터) → 확장(5단계일 때만). 지금 단계 위는 없음.
+  const order = useMemo(() => {
+    if (!list) return [] as number[];
+    const top = Math.max(1, Math.min(5, userStage));
+    const rank = (index: number) => {
+      const word = list[index]!;
+      if (mine?.has(word.w)) return 0;
+      const stage = word.stage ?? 6;
+      if (stage === top) return 1;
+      if (stage < top) return 2 + (top - stage);
+      if (stage === 6 && top >= 5) return 10;
+      return -1;
+    };
+    return list
+      .map((_, index) => [index, rank(index)] as const)
+      .filter(([, r]) => r >= 0)
+      .sort((a, b) => a[1] - b[1] || a[0] - b[0])
+      .map(([index]) => index);
+    // mineKey stands for mine.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list, userStage, mineKey]);
   // 고른 칸(curriculum/vocabBank.ts inPick)에서 아직 모르는(이미 앎·확인 중이 아닌) 앞 낱말들이 든 묶음(셋까지).
   const pickKey = pick ? `${pick.by}:${pick.value}` : "all:";
   const chunks = useMemo(() => {
     if (!list) return "";
     const out: string[] = [];
     let open = 0;
-    for (let index = 0; index < list.length && open < 12; index += 1) {
+    for (const index of order) {
+      if (open >= 12) break;
       const word = list[index]!;
-      if (known[wordKey(word.w)] || !inPick(word, index, pick) || late(word, pick)) continue;
+      if (known[wordKey(word.w)] || !inPick(word, index, pick) || (!mine?.has(word.w) && late(word, pick, userStage))) continue;
       open += 1;
       const c = chunkOf(index, baseLength);
       if (!out.includes(c)) out.push(c);
       if (out.length >= 3) break;
     }
     const first = out[0];
-    if (out.length === 1 && first?.startsWith("b") && (Number(first.slice(1)) + 1) * BANK_CHUNK < baseLength && (!pick || pick.by === "all" || pick.by === "band")) out.push(`b${Number(first.slice(1)) + 1}`);
+    if (out.length === 1 && first?.startsWith("b") && (Number(first.slice(1)) + 1) * BANK_CHUNK < baseLength && (!pick || pick.by === "all" || pick.by === "stage")) out.push(`b${Number(first.slice(1)) + 1}`);
     return out.join(",");
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, known, pickKey, baseLength]);
+  }, [list, known, pickKey, baseLength, order, userStage, mineKey]);
   useEffect(() => {
     if (!list || !chunks) return;
     let alive = true;
@@ -186,14 +248,15 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
       if (state === "known") knownCount += 1;
       else if (state === "checking") learning += 1;
     }
-    const open = list
-      .map((word, index) => ({ word, index, key: wordKey(word.w) }))
+    const open = order
+      .map((index) => ({ word: list[index]!, index, key: wordKey(list[index]!.w) }))
       .filter(({ word, index, key }) => !known[key] && ready.has(key) && inPick(word, index, pick));
-    const next = [...open.filter(({ word }) => !late(word, pick)), ...open.filter(({ word }) => late(word, pick))].map(({ key }) => key).slice(0, NEXT_MAX);
+    const isLate = (word: BankWord) => !mine?.has(word.w) && late(word, pick, userStage);
+    const next = [...open.filter(({ word }) => !isLate(word)), ...open.filter(({ word }) => isLate(word))].map(({ key }) => key).slice(0, NEXT_MAX);
     // 고른 기준의 칸마다 이미 앎 / 전체.
     const by = pick?.by && pick.by !== "all" ? pick.by : null;
     const groups = by
-      ? groupsOf(list, by).map((id) => {
+      ? groupsOf(list, by, by === "stage" ? userStage : 5).map((id) => {
           let have = 0;
           let total = 0;
           list.forEach((word, index) => {
@@ -207,5 +270,5 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     return { total: list.length, known: knownCount, learning, next, groups };
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, known, ready, pickKey]);
+  }, [list, known, ready, pickKey, order, userStage, mineKey]);
 }

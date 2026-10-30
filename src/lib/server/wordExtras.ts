@@ -14,7 +14,7 @@ import { BANK_CHUNK, loadBank, POS_GROUPS, TOPICS } from "../curriculum/vocabBan
 import { isSpaceless, segmentWords } from "../wordSegments.ts";
 import type { WordCard } from "./wordCards.ts";
 
-export type ExtraWord = WordCard & { pos: string; topic?: string };
+export type ExtraWord = WordCard & { pos: string; topic?: string; /** 단계 1~5(CEFR A1~C1, C2는 5) — 낱말 층위(2026-10-31). */ stage?: number };
 
 const TTL_SECONDS = 800 * 24 * 60 * 60;
 /** 언어마다 더할 수 있는 낱말 수, 한 사람이 하루에 더할 수 있는 수. */
@@ -54,7 +54,7 @@ async function makeCard(language: string, query: string): Promise<ExtraWord | nu
         role: "system",
         content: `A learner of ${name} looked up a word. Decide if it is a real, common ${name} word (or a common misspelling of one). If it is not a ${name} word, or it is a name of a person, brand or place, or it is rude, answer exactly NO.
 Otherwise answer one line:
-W|<dictionary form in ${name}>|<part of speech: ${POS_GROUPS.join(", ")}, or another word for function words>|<topic: ${TOPICS.join(", ")}>|<reading in kana if Japanese, else ->|<form as it appears in the sentence>|<one short natural everyday sentence in ${name}, 4 to 10 words, using the word>|<short English meaning, 1 to 4 words>|<English translation of the sentence>
+W|<dictionary form in ${name}>|<part of speech: ${POS_GROUPS.join(", ")}, or another word for function words>|<topic: ${TOPICS.join(", ")}>|<reading in kana if Japanese, else ->|<form as it appears in the sentence>|<one short natural everyday sentence in ${name}, 4 to 10 words, using the word>|<short English meaning, 1 to 4 words>|<English translation of the sentence>|<CEFR level at which learners usually meet this word: A1, A2, B1, B2, C1 or C2>
 No digits.`,
       },
       { role: "user", content: query },
@@ -65,7 +65,8 @@ No digits.`,
   if (!line) return null;
   const cells = line.split("|").map((cell) => cell.trim());
   if (cells.length < 9) return null;
-  const [, w, pos, topic, reading, piece, example, gloss, exampleGloss] = cells as [string, string, string, string, string, string, string, string, string];
+  const [, w, pos, topic, reading, piece, example, gloss, exampleGloss, level = ""] = cells as [string, string, string, string, string, string, string, string, string, string?];
+  const stage = ({ A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 5 } as Record<string, number>)[level.toUpperCase().trim()];
   const card: ExtraWord = {
     w: normalizeQuery(language, w) ?? "",
     piece,
@@ -75,6 +76,7 @@ No digits.`,
     pos: pos.toLowerCase(),
     ...((TOPICS as readonly string[]).includes(topic) ? { topic } : {}),
     ...(language === "ja" && reading && reading !== "-" ? { reading } : {}),
+    ...(stage ? { stage } : {}),
   };
   if (!card.w || !piece || !example.includes(piece) || example.length > 90 || /\p{Nd}/u.test(example) || !gloss || !exampleGloss) return null;
   return card;

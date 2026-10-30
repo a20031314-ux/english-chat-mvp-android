@@ -7,10 +7,11 @@
  * 열쇠 w|낱말. 낱말 카드(예문·뜻)는 서버가 50개 묶음마다 한 번 만들어 모두가 같이 씀(/api/curriculum/words).
  * 이미 앎·확인 중은 다른 열쇠와 같은 규칙(curriculum/known.ts — 다른 날 세 번 맞힘). 순수 + 목록 불러오기.
  */
-export type BankWord = { w: string; pos: string; reading?: string; topic?: string };
+export type BankWord = { w: string; pos: string; reading?: string; topic?: string; /** 단계(1~5, 6 = 확장) — wordStage가 붙임, 찾아서 더한 낱말은 서버가 판정. */ stage?: number };
 
 /** 낱말 나누기(2026-10-29 사용자 "세 기준 다 채택하고 사용자가 품사 위주, 품사 안에선 명사 위주 이렇게 정하도록"). */
-export type VocabBy = "all" | "band" | "pos" | "topic";
+// "band"(500개씩 많이 쓰는 순)는 2026-10-31에 "stage"(단계)로 바꿈 — 옛 설정의 band는 전체로 읽는다.
+export type VocabBy = "all" | "stage" | "pos" | "topic";
 export type VocabPick = { by: VocabBy; value: string };
 export const BAND_SIZE = 500;
 export const POS_GROUPS = ["noun", "verb", "adj", "adv", "function"] as const;
@@ -30,20 +31,58 @@ export function quizPos(pos: string): string {
   return group === "function" ? pos || "other" : group;
 }
 
-/** 그 낱말(목록 순위 index)이 고른 칸에 드는지. */
+/** 그 낱말(목록 순위 index)이 고른 칸에 드는지. 단계 칸은 그 단계 낱말만(wordStage가 붙인 stage). */
 export function inPick(word: BankWord, index: number, pick: VocabPick | null | undefined): boolean {
-  if (!pick || pick.by === "all") return true;
-  if (pick.by === "band") return String(Math.floor(index / BAND_SIZE)) === pick.value;
+  if (!pick || pick.by === "all" || !pick.value) return true;
+  if (pick.by === "stage") return String(word.stage ?? 6) === pick.value;
   if (pick.by === "pos") return posGroup(word.pos) === pick.value;
   return (word.topic ?? "") === pick.value;
 }
 
-/** 그 기준의 칸들(목록에 있는 것만, 정해진 순서). */
-export function groupsOf(list: readonly BankWord[], by: Exclude<VocabBy, "all">): string[] {
-  if (by === "band") return Array.from({ length: Math.ceil(list.length / BAND_SIZE) }, (_, i) => String(i));
+/** 그 기준의 칸들(목록에 있는 것만, 정해진 순서). 단계는 1~upTo(내 단계까지). */
+export function groupsOf(list: readonly BankWord[], by: Exclude<VocabBy, "all">, upTo = 5): string[] {
+  if (by === "stage") {
+    const have = new Set(list.map((word) => word.stage ?? 6));
+    return [1, 2, 3, 4, 5].filter((n) => n <= upTo && have.has(n)).map(String);
+  }
   const have = new Set(list.map((word) => (by === "pos" ? posGroup(word.pos) : (word.topic ?? ""))).filter(Boolean));
   const order: readonly string[] = by === "pos" ? POS_GROUPS : TOPICS;
   return order.filter((id) => have.has(id));
+}
+
+/**
+ * 단계마다 필수 낱말 범위(누적, 사전형 — 2026-10-31 사용자 "실력 기준으로 이 정도 단어가 필수라는 범위를 정해 놓고 층위",
+ * 설계 hub/drafts/vocab-levels-2026-10-31.md): 순위가 이 칸들 중 어디에 드는지가 그 낱말의 단계. 마지막 칸 뒤는 확장(6).
+ * 근거: 구어 95%·98% 덮는 몫(Nation 2006), CEFR 어휘 크기(Milton & Alexiou 2009), HSK 2025·JLPT 어림·국립국어원 학습용 어휘.
+ */
+export const STAGE_CUTS: Record<string, readonly number[]> = {
+  default: [700, 1500, 2500, 3500, 5000],
+  ja: [800, 1500, 2500, 3750, 6000],
+  zh: [500, 1000, 2000, 3600, 5400],
+  ko: [500, 1000, 2000, 3100, 6000],
+};
+export const EXTENDED_STAGE = 6;
+
+export function stageCuts(language: string): readonly number[] {
+  return STAGE_CUTS[language] ?? STAGE_CUTS.default!;
+}
+
+/** 순위(0부터) → 단계 1~5, 넘으면 6(확장). */
+export function stageOfRank(language: string, index: number): number {
+  const cuts = stageCuts(language);
+  const at = cuts.findIndex((cut) => index < cut);
+  return at < 0 ? EXTENDED_STAGE : at + 1;
+}
+
+/**
+ * 낱말의 단계: 순위 칸, 단 앱이 그 단계에서 가르치는 낱말(대본 줄에 나옴)은 그 단계 이하로 당긴다(appStage — 부르는 쪽이 준 표).
+ * 찾아서 더한 낱말(stage가 이미 있음)은 그대로.
+ */
+export function wordStage(language: string, word: BankWord, index: number, appStage?: ReadonlyMap<string, number>): number {
+  if (word.stage) return word.stage;
+  const byRank = stageOfRank(language, index);
+  const taught = appStage?.get(word.w.toLocaleLowerCase());
+  return taught ? Math.min(byRank, taught) : byRank;
 }
 
 export const BANK_LANGS = ["en", "es", "ja"] as const;
