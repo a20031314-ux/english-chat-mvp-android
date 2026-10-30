@@ -46,7 +46,7 @@
   매일 자유 통화 7 / 10 / 15분(오늘의 팩 별도, 하루 리셋·이월 없음), 넘으면 구매 포인트, 채팅 하루 10 / 30 / 50 / 100번,
   8,900원만 이달의 영상 전체·추가 팩 2번. **프리미엄 하루 시간 방식 켬(2026-10-23, 사용자 "바꿔줘")** — `PREMIUM_DAILY_PLAN_FROM="2026-10-22"`(UTC), Play·App Store 프리미엄 가격 8,900원은 사람이 같은 날. 10월은 80포인트 유지, 11월부터 없음.
 
-- **대본 중심 요금(사용자 2026-10-28, `hub/drafts/pricing-scripts-2026-10-28.md`):** 2.76부터 무료 = My 단계 대본만(채팅·자유 통화·팩 없음), **대본 플랜 2,900원 `script_monthly`**(사흘마다 통화 5분·채팅 20), 오늘의 팩은 새 앱에서 뺌, 라이트·플러스·프리미엄 그대로. 2.75 이하 앱 무료는 예전 그대로(`isScriptsApp`). Play·App Store·RevenueCat 상품은 사람이 — **Play Console `script_monthly` 만듦·RevenueCat 연결(2026-10-31)**, App Store Connect는 iOS 2차 전.
+- **대본 중심 요금(사용자 2026-10-28, `hub/drafts/pricing-scripts-2026-10-28.md`):** 2.76부터 무료 = My 단계 대본만(채팅·자유 통화·팩 없음), **대본 플랜 2,900원 `script_monthly`**(사흘마다 통화 5분·채팅 20), 오늘의 팩은 새 앱에서 뺌, 라이트·플러스·프리미엄 그대로. 2.75 이하 앱 무료는 예전 그대로(`isScriptsApp`). Play·App Store·RevenueCat 상품은 사람이 — **Play Console `script_monthly` 만듦·RevenueCat 연결(2026-10-31)**, App Store Connect는 iOS 1차(대본 플랜 포함, 갈아타기 2026-10-31) 올리기 전.
 
 - **내 말도 하는 튜터 = 옵션(사용자 2026-10-30):** 기본은 학습 언어만. AI 대화 ⋮ "튜터가 쓰는 말"로 켜면 채팅·통화 튜터가 앱 언어로 한 문장까지(내가 앱 언어로 말하거나 막혔을 때만) — `lib/tutorLanguage.ts`, PRODUCT 핵심 가치 3 예외.
 
