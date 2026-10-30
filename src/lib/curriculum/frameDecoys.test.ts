@@ -9,8 +9,6 @@ const LANGS = ["ja", "ko", "es", "zh", "en", "id", "vi", "th", "fr", "it", "pt",
 test("문장구조 헷갈리는 오답: 14개 언어 모든 틀 조각에 2~4개", () => {
   for (const language of LANGS) {
     const table = DECOYS[language];
-    // 인도네시아어는 쓰는 중(2026-10-30) — 들어오면 이 줄을 지운다.
-    if (!table && language === "id") continue;
     assert.ok(table, `${language} 없음`);
     for (const frame of allFramesFor(language)) {
       for (const core of frame.core.filter(Boolean)) {
