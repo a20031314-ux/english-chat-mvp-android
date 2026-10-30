@@ -37,9 +37,9 @@ import { ledgerKey, isLedgerText, type LedgerTab } from "../learner/ledger.ts";
 import { recordMeets } from "./ledgerStore.ts";
 import { framesFor, type Frame } from "../curriculum/frames.ts";
 
-/** 교정을 어느 틀에 걸지 고를 때 줄 틀: 지금 단계 다음 단계까지(틀은 1~3단계에만 있음). */
+/** 교정을 어느 틀에 걸지 고를 때 줄 틀: 지금 단계 다음 단계까지(틀은 1~5단계, 4·5단계는 2026-10-31). */
 export function framesForFix(language: string, stage: number): Frame[] {
-  const upTo = Math.min(3, Math.max(1, stage) + 1);
+  const upTo = Math.min(5, Math.max(1, stage) + 1);
   const out: Frame[] = [];
   for (let order = 1; order <= upTo; order += 1) out.push(...framesFor(language, order));
   return out;
