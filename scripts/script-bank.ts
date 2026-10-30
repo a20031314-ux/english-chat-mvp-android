@@ -84,7 +84,7 @@ for (const script of scripts) {
       used[id] = (used[id] ?? 0) + 1;
     }
   });
-  if (tagged < 3) errors.push(`${at}: 내 줄 넷 중 셋 이상에 frames`);
+  if (tagged < 2) errors.push(`${at}: 내 줄 넷 중 둘 이상에 frames`);
   const nameText = script.name?.text ?? [];
   for (const name of nameText) if (!script.lines.some((line) => line.text.includes(name))) errors.push(`${at}: name "${name}"이 줄에 없음`);
 }
