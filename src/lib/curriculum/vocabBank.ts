@@ -96,6 +96,11 @@ const LOADERS: Record<string, () => Promise<{ WORDS: Rows }>> = {
   id: () => import("./vocab/id.ts"),
   ko: () => import("./vocab/ko.ts"),
   pt: () => import("./vocab/pt.ts"),
+  vi: () => import("./vocab/vi.ts"),
+  ar: () => import("./vocab/ar.ts"),
+  hi: () => import("./vocab/hi.ts"),
+  ru: () => import("./vocab/ru.ts"),
+  th: () => import("./vocab/th.ts"),
   // ADD-LOADERS
 };
 export const BANK_LANGS: readonly string[] = Object.keys(LOADERS);
