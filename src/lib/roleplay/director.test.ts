@@ -1213,3 +1213,8 @@ test("두 언어 튜터: 고른 사람에게만, 학습자의 말로 한 문장�
   assert.match(rule, /none at all while they are managing in English/);
   assert.doesNotMatch(rule, /\p{Script=Hangul}/u, "베낄 수 있는 한국어 예문이 없다");
 });
+
+test("두 언어 튜터의 앱 언어 한 문장은 학습자의 말에 대해서만", async () => {
+  const { bilingualCharacterRule } = await import("./director.ts");
+  assert.match(bilingualCharacterRule("Japanese", "Arabic"), /only ever about their words/);
+});
