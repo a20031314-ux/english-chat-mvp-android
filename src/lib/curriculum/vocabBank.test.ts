@@ -4,15 +4,17 @@ import { BANK_LANGS, hasBank, loadBank, wordKey } from "./vocabBank.ts";
 import { nextStudy } from "./nextStudy.ts";
 import { registerQuizSources } from "./quiz.ts";
 
-test("빈도 단어 묶음: 영어·스페인어·일본어 약 3,000개, 겹침 없음, 일본어는 히라가나 읽기", async () => {
+test("빈도 단어 묶음: 언어마다 약 3,000개 이상, 겹침 없음, 일본어는 히라가나 읽기·중국어는 병음", async () => {
+  assert.ok(BANK_LANGS.length >= 3);
   for (const language of BANK_LANGS) {
     const list = await loadBank(language);
-    assert.ok(list.length >= 2900 && list.length <= 3000, `${language} ${list.length}`);
+    assert.ok(list.length >= 2900 && list.length <= 8000, `${language} ${list.length}`);
     assert.equal(new Set(list.map((word) => word.w)).size, list.length, language);
     if (language === "ja") assert.ok(list.every((word) => word.reading && /^[ぁ-ゖー]+$/u.test(word.reading)), "ja reading");
+    if (language === "zh") assert.ok(list.every((word) => word.reading), "zh pinyin");
   }
-  assert.equal(hasBank("th"), false);
-  assert.deepEqual(await loadBank("th"), []);
+  assert.equal(hasBank("xx"), false);
+  assert.deepEqual(await loadBank("xx"), []);
 });
 
 test("계속 공부: 새 낱말(w|)은 어휘 갈래면 막힌 것 다음, 알아서면 부족한 갈래 다음 — 재료가 있을 때만(스페인어·일본어)", () => {
