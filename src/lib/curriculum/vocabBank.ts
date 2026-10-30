@@ -85,26 +85,44 @@ export function wordStage(language: string, word: BankWord, index: number, appSt
   return taught ? Math.min(byRank, taught) : byRank;
 }
 
-export const BANK_LANGS = ["en", "es", "ja"] as const;
+type Rows = readonly (readonly string[])[];
+/** 언어마다 목록 파일(처음 한 번 불러옴 — 앱 묶음을 언어마다 나눔). 목록 만들기: scripts/vocab-bank/(build·emit). 2026-10-31부터 14개 언어로 늘리는 중. */
+const LOADERS: Record<string, () => Promise<{ WORDS: Rows }>> = {
+  en: () => import("./vocab/en.ts"),
+  es: () => import("./vocab/es.ts"),
+  ja: () => import("./vocab/ja.ts"),
+  it: () => import("./vocab/it.ts"),
+  fr: () => import("./vocab/fr.ts"),
+  id: () => import("./vocab/id.ts"),
+  // ADD-LOADERS
+};
+export const BANK_LANGS: readonly string[] = Object.keys(LOADERS);
 export const BANK_CHUNK = 50;
 /** 출처 표시(CC BY-SA 4.0). */
 export const BANK_SOURCES: Record<string, string> = {
   en: "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0",
   es: "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0",
   ja: "wordfreq (Robyn Speer; SUBTLEX, OpenSubtitles, Wikipedia 등), CC BY-SA 4.0",
+  hi: "wordfreq (Robyn Speer), CC BY-SA 4.0",
 };
+/** 그 밖의 언어는 FrequencyWords(OpenSubtitles 2018). */
+export function bankSource(language: string): string {
+  return BANK_SOURCES[language] ?? "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0";
+}
 
 export function hasBank(language: string): boolean {
-  return (BANK_LANGS as readonly string[]).includes(language);
+  return BANK_LANGS.includes(language);
 }
 
 export const wordKey = (word: string) => `w|${word}`;
 
 const loaded = new Map<string, readonly BankWord[]>();
+/** 읽기 칸이 있는 언어(일본어 가나·중국어 병음). */
+const READING = new Set(["ja", "zh"]);
 
-function fromRows(rows: readonly (readonly string[])[], language: string): BankWord[] {
+function fromRows(rows: Rows, language: string): BankWord[] {
   return rows.map((row) =>
-    language === "ja"
+    READING.has(language)
       ? { w: row[0]!, reading: row[1], pos: row[2] ?? "", ...(row[3] ? { topic: row[3] } : {}) }
       : { w: row[0]!, pos: row[1] ?? "", ...(row[2] ? { topic: row[2] } : {}) },
   );
@@ -112,12 +130,11 @@ function fromRows(rows: readonly (readonly string[])[], language: string): BankW
 
 /** 그 언어의 목록(처음 한 번 불러옴). 없는 언어는 []. */
 export async function loadBank(language: string): Promise<readonly BankWord[]> {
-  if (!hasBank(language)) return [];
+  const load = LOADERS[language];
+  if (!load) return [];
   const have = loaded.get(language);
   if (have) return have;
-  const rows =
-    language === "en" ? (await import("./vocab/en.ts")).WORDS : language === "es" ? (await import("./vocab/es.ts")).WORDS : (await import("./vocab/ja.ts")).WORDS;
-  const list = fromRows(rows, language);
+  const list = fromRows((await load()).WORDS, language);
   loaded.set(language, list);
   return list;
 }
