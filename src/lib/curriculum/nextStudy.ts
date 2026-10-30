@@ -13,6 +13,8 @@
  * 지금 단계 것이 떨어지면 다음 단계들(곧 나옴)까지 — 고른 갈래를 끝없이. 발음은 문법 열쇠만 뺌(말하기 채점이 없어서, quiz.ts speakScored).
  * 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘, 버튼으로"): lane "review" = 1·1½·2·2½·5(다시 볼 것·확인 중·틀렸던 것·막힌 것·다지기, 갈래 없이),
  * lane "learn" = 3·4·빈도 단어 + 뒤 단계(고른 갈래 또는 알아서). lane이 없으면 예전처럼 모두 한 줄.
+ * 복습은 틀린 것만(2026-10-30 사용자 "지속 학습 문제를 맞추면 확인 쪽으로 넘어가버려" → "복습은 틀린 것만"): lane "review" = 1·2·2½(다시 볼 것·틀렸던 것·막힌 것),
+ * 맞힌 것의 확인(1½ 확인 중)과 다지기(5)는 lane "learn"에 섞는다 — 새 것 둘마다 확인 하나(CONFIRM_EVERY), 다지기는 맨 뒤. 이번 주 확인(checkup)은 그대로 확인 중을 낸다.
  * 사흘 안에 맞힌 열쇠와 이번에 이미 낸 열쇠는 빼고, 퀴즈를 못 만드는 열쇠도 뺀다. 모델을 부르지 않는 순수 모듈(화면 TodayPlan·테스트).
  */
 import { isWordish, type PartId } from "../notes/stageParts.ts";
@@ -33,6 +35,9 @@ export const QUIZ_REST_MS = 3 * DAY_MS;
 export const RECENT_MS = 30 * 60 * 1000;
 /** 한 번에 내다보는 수(화면은 첫 것만 씀 — 테스트·다음 문제 미리 보기용). */
 const LOOKAHEAD = 30;
+/** 새로 배우기 줄에서 새 것 몇 개마다 확인 중 하나를 섞을지·한 번에 내다볼 확인 중 수. */
+export const CONFIRM_EVERY = 2;
+const CONFIRM_LOOKAHEAD = 10;
 
 /** 열쇠의 갈래(checkup.partOf에서 말하기 빼고, myParts와 같은 나눔). */
 export function keyPart(language: string, key: string): PartId {
@@ -101,12 +106,23 @@ export function nextStudy(input: {
   if (reviewing) {
     for (const [key] of Object.entries(input.review).filter(([, entry]) => entry.due <= now).sort((a, b) => a[1].due - b[1].due)) add(key, "again");
 
-    // 확인 중: 오늘 아직 안 푼 것만(confirmDue가 거름) — 쉬는 중이어도 낸다(맞힌 날을 늘려야 이미 앎).
-    for (const key of input.confirm ?? []) add(key, "confirm");
+    // 확인 중: 오늘 아직 안 푼 것만(confirmDue가 거름) — 쉬는 중이어도 낸다(맞힌 날을 늘려야 이미 앎). 복습 줄에는 안 넣음(맞힌 것).
+    if (!lane) for (const key of input.confirm ?? []) add(key, "confirm");
 
     for (const [key] of Object.entries(input.log).filter(([, entry]) => !entry.last).sort((a, b) => a[1].at - b[1].at)) add(key, "missed");
 
     for (const key of input.gaps ?? []) add(key, "gap");
+  }
+
+  // 새로 배우기 줄의 확인 중은 따로 모았다가 끝에서 새 것 사이에 섞는다.
+  const confirms: StudyPick[] = [];
+  if (lane === "learn") {
+    for (const key of input.confirm ?? []) {
+      if (confirms.length >= CONFIRM_LOOKAHEAD) break;
+      if (seen.has(key) || skip.has(key)) continue;
+      seen.add(key);
+      if (fits(key) && isCurriculumKey(input.language, key) && canQuiz(input.language, key)) confirms.push({ key, reason: "confirm" });
+    }
   }
 
   if (learning && focus === "vocab") for (const key of input.words ?? []) add(key, "word");
@@ -134,7 +150,8 @@ export function nextStudy(input: {
   const done = scripts.filter((script) => script.stage <= input.stage && input.passed.has(script.id)).sort((a, b) => b.stage - a.stage);
   const keep = done.flatMap((script) => reviewKeysOf(input.language, script.id));
   const order = (key: string) => input.log[key]?.at ?? 0;
-  if (reviewing) for (const key of [...new Set(keep)].sort((a, b) => order(a) - order(b))) add(key, "keep");
+  const keepKeys = [...new Set(keep)].sort((a, b) => order(a) - order(b));
+  if (!lane) for (const key of keepKeys) add(key, "keep");
 
   // 갈래를 골랐거나 새로 배우기 줄이면 뒤 단계 것까지 곧 나옴으로(끝없이).
   if (learning && (focus || lane === "learn")) {
@@ -145,6 +162,18 @@ export function nextStudy(input: {
   }
 
   // 방금 푼 것은 뒤로(2026-10-29 사용자 — 같은 표현만 계속 나옴): 30분 안에 푼 열쇠는 맞든 틀리든, 다시 볼 것·확인 중·틀렸던 것이 아니면 맨 뒤.
+  if (lane === "learn") for (const key of keepKeys) add(key, "keep");
+
   const recent = (pick: StudyPick) => pick.reason !== "again" && pick.reason !== "confirm" && pick.reason !== "missed" && now - (input.log[pick.key]?.at ?? -Infinity) < RECENT_MS;
-  return [...out.filter((pick) => !recent(pick)), ...out.filter(recent)];
+  const ordered = [...out.filter((pick) => !recent(pick)), ...out.filter(recent)];
+  if (!confirms.length) return ordered;
+  // 새 것 CONFIRM_EVERY개마다 확인 중 하나, 남은 확인 중은 다지기 앞에.
+  const mixed: StudyPick[] = [];
+  let left = [...confirms];
+  ordered.forEach((pick, index) => {
+    if (pick.reason === "keep" && left.length) { mixed.push(...left); left = []; }
+    mixed.push(pick);
+    if ((index + 1) % CONFIRM_EVERY === 0 && left.length && pick.reason !== "keep") mixed.push(left.shift()!);
+  });
+  return [...mixed, ...left];
 }

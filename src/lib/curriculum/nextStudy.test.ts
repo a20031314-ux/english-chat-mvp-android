@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { nextStudy, recordQuiz, QUIZ_REST_MS, type QuizLog } from "./nextStudy.ts";
+import { CONFIRM_EVERY, nextStudy, recordQuiz, QUIZ_REST_MS, type QuizLog } from "./nextStudy.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 import { reviewKeysOf } from "./dailyPlan.ts";
 
@@ -102,11 +102,11 @@ for (const language of ["es", "ja"]) {
     };
     const review = nextStudy({ ...base, lane: "review", focus: "vocab" });
     assert.ok(review.length > 0);
-    assert.ok(review.every((pick) => ["again", "confirm", "missed", "gap", "keep"].includes(pick.reason)), review.map((p) => p.reason).join());
+    assert.ok(review.every((pick) => ["again", "missed", "gap"].includes(pick.reason)), review.map((p) => p.reason).join());
     assert.equal(review[0]!.key, due);
     const learn = nextStudy({ ...base, lane: "learn" });
     assert.ok(learn.length > 0);
-    assert.ok(learn.every((pick) => ["weak", "word", "new"].includes(pick.reason)), learn.map((p) => p.reason).join());
+    assert.ok(learn.every((pick) => ["weak", "word", "new", "confirm", "keep"].includes(pick.reason)), learn.map((p) => p.reason).join());
     // 아무것도 없으면 복습 줄은 비고, 새로 배우기는 늘 있다.
     assert.equal(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "review", now: NOW }).length, 0);
     assert.ok(nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, lane: "learn", now: NOW }).length > 0);
@@ -138,3 +138,21 @@ test("ja: 단계 근처 예문만 — 1단계 퀴즈에 4·5단계 문장이 없
   const texts = new Set(quizSources("ja", key).filter((source) => source.stage > 2).map((source) => source.text));
   for (const q of quiz!.questions) if ("text" in q) assert.ok(!texts.has(q.text), q.text);
 });
+
+// 복습은 틀린 것만(2026-10-30 사용자 "지속 학습 문제를 맞추면 확인 쪽으로 넘어가버려"): 맞힌 것(확인 중·다지기)은 새로 배우기 줄에 섞임.
+for (const language of ["ja", "es"]) {
+  const stageOne = allScriptsFor(language).filter((script) => script.stage === 1);
+  const keys = reviewKeysOf(language, stageOne[0]!.id);
+  test(`${language}: 맞힌 것은 복습 줄로 안 가고 새로 배우기 줄에 섞인다`, () => {
+    const confirm = keys.slice(0, 2);
+    const base = { language, stage: 1, passed: new Set([stageOne[0]!.id]), review: {}, log: {}, weakest: "expression" as const, confirm, now: NOW };
+    const review = nextStudy({ ...base, lane: "review" });
+    assert.equal(review.length, 0, review.map((p) => `${p.reason}:${p.key}`).join());
+    const learn = nextStudy({ ...base, lane: "learn" });
+    const at = learn.findIndex((pick) => pick.reason === "confirm");
+    assert.ok(at >= 0 && at <= CONFIRM_EVERY, learn.map((p) => p.reason).join());
+    // 틀리면 복습으로.
+    const wrong = nextStudy({ ...base, log: recordQuiz({}, confirm[0]!, false, NOW - 1000), lane: "review" });
+    assert.equal(wrong[0]?.key, confirm[0]);
+  });
+}
