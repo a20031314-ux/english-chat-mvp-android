@@ -1,0 +1,560 @@
+/**
+ * pt 문장구조 조각마다 헷갈리는 오답(2026-10-30, scripts/frame-decoys.ts) — "틀 id|조각" → 살짝 틀린 꼴. Claude가 씀, 원어민 확인 전.
+ */
+export const PT_DECOYS: Record<string, string[]> = {
+  "pt-f1-01|Meu nome é": [
+    "Minha nome é",
+    "Meu nome está",
+    "Meu nome sou"
+  ],
+  "pt-f1-01|meu nome é": [
+    "minha nome é",
+    "meu nome está",
+    "meu nome sou"
+  ],
+  "pt-f1-02|Sou de": [
+    "Estou de",
+    "Sou em",
+    "Sou a"
+  ],
+  "pt-f1-02|sou de": [
+    "estou de",
+    "sou em",
+    "sou a"
+  ],
+  "pt-f1-03|trabalho em": [
+    "trabalho no",
+    "trabalho a",
+    "trabalhos em"
+  ],
+  "pt-f1-03|Trabalho em": [
+    "Trabalho no",
+    "Trabalho a",
+    "Trabalhos em"
+  ],
+  "pt-f1-04|Estou em": [
+    "Sou em",
+    "Estou no",
+    "Estou a"
+  ],
+  "pt-f1-04|estou em": [
+    "sou em",
+    "estou no",
+    "estou a"
+  ],
+  "pt-f1-05|Estou": [
+    "Tenho",
+    "Estoy",
+    "Estar"
+  ],
+  "pt-f1-05|estou": [
+    "tenho",
+    "estoy",
+    "estar"
+  ],
+  "pt-f1-06|Onde fica": [
+    "Onde fico",
+    "Onde fique",
+    "Onde faz"
+  ],
+  "pt-f1-06|onde fica": [
+    "onde fico",
+    "onde fique",
+    "onde faz"
+  ],
+  "pt-f1-07|Quanto custa": [
+    "Quanto custo",
+    "Quantos custa",
+    "Quanto costa"
+  ],
+  "pt-f1-07|quanto custa": [
+    "quanto custo",
+    "quantos custa",
+    "quanto costa"
+  ],
+  "pt-f1-08|quero": [
+    "quiero",
+    "queiro",
+    "querer"
+  ],
+  "pt-f1-08|Quero": [
+    "Quiero",
+    "Queiro",
+    "Querer"
+  ],
+  "pt-f1-09|Me vê um": [
+    "Mim vê um",
+    "Me ver um",
+    "Me vê a"
+  ],
+  "pt-f1-09|me vê um": [
+    "mim vê um",
+    "me ver um",
+    "me vê a"
+  ],
+  "pt-f1-10|Você tem": [
+    "Você tenho",
+    "Você há",
+    "Você está"
+  ],
+  "pt-f1-10|você tem": [
+    "você tenho",
+    "você há",
+    "você está"
+  ],
+  "pt-f1-11|tenho": [
+    "tengo",
+    "estou",
+    "hei"
+  ],
+  "pt-f1-11|Tenho": [
+    "Tengo",
+    "Estou",
+    "Hei"
+  ],
+  "pt-f1-12|não falo": [
+    "falo não",
+    "não digo",
+    "não falar"
+  ],
+  "pt-f1-12|Não falo": [
+    "Falo não",
+    "Não digo",
+    "Não falar"
+  ],
+  "pt-f1-13|moro em": [
+    "moro a",
+    "moro de",
+    "morro em"
+  ],
+  "pt-f1-13|Moro em": [
+    "Moro a",
+    "Moro de",
+    "Morro em"
+  ],
+  "pt-f1-13|moro no": [
+    "moro o",
+    "moro do",
+    "morro no"
+  ],
+  "pt-f1-13|moro na": [
+    "moro à",
+    "moro da",
+    "morro na"
+  ],
+  "pt-f1-14|O que é": [
+    "O que está",
+    "O qual é",
+    "O que são"
+  ],
+  "pt-f1-14|o que é": [
+    "o que está",
+    "o qual é",
+    "o que são"
+  ],
+  "pt-f1-15|Pode": [
+    "Puede",
+    "Pede",
+    "Posso"
+  ],
+  "pt-f1-15|pode": [
+    "puede",
+    "pede",
+    "posso"
+  ],
+  "pt-f1-16|tudo bem": [
+    "todo bem",
+    "tudo é bem",
+    "tudo bens"
+  ],
+  "pt-f1-16|Tudo bem": [
+    "Todo bem",
+    "Tudo é bem",
+    "Tudo bens"
+  ],
+  "pt-f1-17|é muito boa": [
+    "é muito bom",
+    "é muita boa",
+    "é muito bem"
+  ],
+  "pt-f1-18|Tchau": [
+    "Oi",
+    "Olá",
+    "Chao"
+  ],
+  "pt-f1-18|tchau": [
+    "oi",
+    "olá",
+    "chao"
+  ],
+  "pt-f2-01|Ontem eu": [
+    "Amanhã eu",
+    "Ontem me",
+    "Ontem mim"
+  ],
+  "pt-f2-01|ontem eu": [
+    "amanhã eu",
+    "ontem me",
+    "ontem mim"
+  ],
+  "pt-f2-02|fui": [
+    "foi",
+    "fiz",
+    "fue"
+  ],
+  "pt-f2-02|Fui": [
+    "Foi",
+    "Fiz",
+    "Fue"
+  ],
+  "pt-f2-03|Vou": [
+    "Voy",
+    "Voo",
+    "Estou"
+  ],
+  "pt-f2-03|vou": [
+    "voy",
+    "voo",
+    "estou"
+  ],
+  "pt-f2-04|Estou": [
+    "Sou",
+    "Tenho",
+    "Estar"
+  ],
+  "pt-f2-04|estou": [
+    "sou",
+    "tenho",
+    "estar"
+  ],
+  "pt-f2-05|gosto de": [
+    "gosto a",
+    "gosto em",
+    "gusto de"
+  ],
+  "pt-f2-05|Gosto de": [
+    "Gosto a",
+    "Gosto em",
+    "Gusto de"
+  ],
+  "pt-f2-05|gosto muito de": [
+    "gosto muito a",
+    "gosto muita de",
+    "gosto muito em"
+  ],
+  "pt-f2-05|Gosto muito de": [
+    "Gosto muito a",
+    "Gosto muita de",
+    "Gosto muito em"
+  ],
+  "pt-f2-05|gosto mais de": [
+    "gosto mais a",
+    "gosto mas de",
+    "gosto mais em"
+  ],
+  "pt-f2-06|Não gosto": [
+    "Gosto não",
+    "Não me gosto",
+    "Não gusto"
+  ],
+  "pt-f2-06|não gosto": [
+    "gosto não",
+    "não me gosto",
+    "não gusto"
+  ],
+  "pt-f2-07|mais": [
+    "mas",
+    "muito",
+    "maior"
+  ],
+  "pt-f2-07|do que": [
+    "de que",
+    "como",
+    "que do"
+  ],
+  "pt-f2-08|faz": [
+    "desde",
+    "faço",
+    "fez"
+  ],
+  "pt-f2-08|Faz": [
+    "Desde",
+    "Faço",
+    "Fez"
+  ],
+  "pt-f2-09|há": [
+    "à",
+    "atrás",
+    "desde"
+  ],
+  "pt-f2-10|Estou com dor de": [
+    "Estou com dor da",
+    "Tenho com dor de",
+    "Estou dor de"
+  ],
+  "pt-f2-10|estou com dor de": [
+    "estou com dor da",
+    "tenho com dor de",
+    "estou dor de"
+  ],
+  "pt-f2-11|Tem remédio para": [
+    "Tem remédio por",
+    "Tem medicina para",
+    "Está remédio para"
+  ],
+  "pt-f2-11|tem remédio para": [
+    "tem remédio por",
+    "tem medicina para",
+    "está remédio para"
+  ],
+  "pt-f2-12|A que horas": [
+    "Em que horas",
+    "A qual horas",
+    "Às que horas"
+  ],
+  "pt-f2-12|a que horas": [
+    "em que horas",
+    "a qual horas",
+    "às que horas"
+  ],
+  "pt-f2-13|Quanto tempo leva": [
+    "Quanto tempo levo",
+    "Quantos tempo leva",
+    "Quanto tempo toma"
+  ],
+  "pt-f2-13|quanto tempo leva": [
+    "quanto tempo levo",
+    "quantos tempo leva",
+    "quanto tempo toma"
+  ],
+  "pt-f2-14|Vamos": [
+    "Somos",
+    "Estamos",
+    "Ir"
+  ],
+  "pt-f2-14|vamos": [
+    "somos",
+    "estamos",
+    "ir"
+  ],
+  "pt-f2-15|Pode ser": [
+    "Posso ser",
+    "Pode é",
+    "Pode seja"
+  ],
+  "pt-f2-15|pode ser": [
+    "posso ser",
+    "pode é",
+    "pode seja"
+  ],
+  "pt-f2-16|Fica pra próxima": [
+    "Fico pra próxima",
+    "Fica pra próximo",
+    "Fica pro próxima"
+  ],
+  "pt-f2-16|fica pra próxima": [
+    "fico pra próxima",
+    "fica pra próximo",
+    "fica pro próxima"
+  ],
+  "pt-f2-17|Tô cansado": [
+    "Sou cansado",
+    "Tenho cansado",
+    "Tô cansei"
+  ],
+  "pt-f2-17|tô cansado": [
+    "sou cansado",
+    "tenho cansado",
+    "tô cansei"
+  ],
+  "pt-f2-18|De vez em quando": [
+    "De vezes em quando",
+    "De vez em quanto",
+    "De vez a quando"
+  ],
+  "pt-f2-18|de vez em quando": [
+    "de vezes em quando",
+    "de vez em quanto",
+    "de vez a quando"
+  ],
+  "pt-f3-01|acho que": [
+    "acho de",
+    "acho o que",
+    "acho se"
+  ],
+  "pt-f3-01|Acho que": [
+    "Acho de",
+    "Acho o que",
+    "Acho se"
+  ],
+  "pt-f3-02|Na minha opinião": [
+    "Na meu opinião",
+    "Para minha opinião",
+    "Na mi opinião"
+  ],
+  "pt-f3-02|na minha opinião": [
+    "na meu opinião",
+    "para minha opinião",
+    "na mi opinião"
+  ],
+  "pt-f3-03|Quando eu era criança": [
+    "Quando eu fui criança",
+    "Quando eu estava criança",
+    "Quando eu sou criança"
+  ],
+  "pt-f3-03|quando eu era criança": [
+    "quando eu fui criança",
+    "quando eu estava criança",
+    "quando eu sou criança"
+  ],
+  "pt-f3-04|Eu estava": [
+    "Eu era",
+    "Eu estou",
+    "Mim estava"
+  ],
+  "pt-f3-04|eu estava": [
+    "eu era",
+    "eu estou",
+    "mim estava"
+  ],
+  "pt-f3-04|estava": [
+    "era",
+    "estou",
+    "estaba"
+  ],
+  "pt-f3-05|Espero que": [
+    "Espero de",
+    "Espero o que",
+    "Esperança que"
+  ],
+  "pt-f3-05|espero que": [
+    "espero de",
+    "espero o que",
+    "esperança que"
+  ],
+  "pt-f3-06|É importante que": [
+    "Está importante que",
+    "É importante de",
+    "É importância que"
+  ],
+  "pt-f3-06|é importante que": [
+    "está importante que",
+    "é importante de",
+    "é importância que"
+  ],
+  "pt-f3-07|poderia": [
+    "puderia",
+    "pudesse",
+    "podría"
+  ],
+  "pt-f3-07|Poderia": [
+    "Puderia",
+    "Pudesse",
+    "Podría"
+  ],
+  "pt-f3-08|Seria possível": [
+    "Estaria possível",
+    "Seria possíveis",
+    "Seria possibilidade"
+  ],
+  "pt-f3-08|seria possível": [
+    "estaria possível",
+    "seria possíveis",
+    "seria possibilidade"
+  ],
+  "pt-f3-09|te ligo": [
+    "ti ligo",
+    "te ligar",
+    "te liguei"
+  ],
+  "pt-f3-09|Te ligo": [
+    "Ti ligo",
+    "Te ligar",
+    "Te liguei"
+  ],
+  "pt-f3-10|me indica": [
+    "mim indica",
+    "me indico",
+    "te indica"
+  ],
+  "pt-f3-11|A gente": [
+    "O gente",
+    "As gentes",
+    "Nos"
+  ],
+  "pt-f3-11|a gente": [
+    "o gente",
+    "as gentes",
+    "nos"
+  ],
+  "pt-f3-12|onde": [
+    "qual",
+    "quem",
+    "cujo"
+  ],
+  "pt-f3-13|Vale a pena": [
+    "Vale o pena",
+    "Vale pena",
+    "Vala a pena"
+  ],
+  "pt-f3-13|vale a pena": [
+    "vale o pena",
+    "vale pena",
+    "vala a pena"
+  ],
+  "pt-f3-14|não está funcionando": [
+    "não é funcionando",
+    "não está funcionado",
+    "está não funcionando"
+  ],
+  "pt-f3-15|Dá para trocar": [
+    "Dá de trocar",
+    "Dou para trocar",
+    "Dá trocar"
+  ],
+  "pt-f3-15|dá para trocar": [
+    "dá de trocar",
+    "dou para trocar",
+    "dá trocar"
+  ],
+  "pt-f3-16|Concordo": [
+    "Acordo",
+    "Concordar",
+    "Concuerdo"
+  ],
+  "pt-f3-16|concordo": [
+    "acordo",
+    "concordar",
+    "concuerdo"
+  ],
+  "pt-f3-17|Não é bem assim": [
+    "É não bem assim",
+    "Não é bem así",
+    "Não é bem tão"
+  ],
+  "pt-f3-17|não é bem assim": [
+    "é não bem assim",
+    "não é bem así",
+    "não é bem tão"
+  ],
+  "pt-f3-18|Fiquei sabendo que": [
+    "Fiquei saber que",
+    "Fiquei sabido que",
+    "Estive sabendo que"
+  ],
+  "pt-f3-18|fiquei sabendo que": [
+    "fiquei saber que",
+    "fiquei sabido que",
+    "estive sabendo que"
+  ],
+  "pt-f3-19|De repente": [
+    "Do repente",
+    "Em repente",
+    "De repentino"
+  ],
+  "pt-f3-19|de repente": [
+    "do repente",
+    "em repente",
+    "de repentino"
+  ]
+};
