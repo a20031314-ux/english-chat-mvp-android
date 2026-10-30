@@ -22,7 +22,7 @@
 | 읽는 법 | — | 글자 언어 7개, 1~2단계 기본 켬. ja 히라가나·zh 병음·ko 로마자·th 성조 로마자·ar/ru/hi 음역(모델이 만듦, `server/stageReadings.ts`). **대본·은행 줄에만** — 문장구조·퀴즈·단어장·채팅엔 없음 |
 | 퀴즈 | 빈칸 쓰기/고르기 번갈아 | ja만 동사 꼬리·조사 붙이기(`quiz.ts` `tilesOf`), ko만 조사·어미 바꾼 오답(`scriptChoice.ts`) |
 | 말투(높임) 문제 | — | ja ko en es fr th zh vi id만(`learnStyle.ts` `REGISTER`). **ru ar hi it pt 없음**, 목록에 학습 언어 아닌 `de`가 있음 |
-| 단어장·단어 퀴즈·짝 맞추기 | — | **en es ja만**(`vocabBank.ts` `BANK_LANGS`). 나머지 11개는 TodayPlan에서 조용히 빠짐 |
+| 단어장·단어 퀴즈·짝 맞추기 | — | 14개 언어 모두(2026-10-31 낱말 목록 ②) |
 | 글자 안내 탭 | — | ja zh ko ru ar만(`characterGuide/index.ts`). **th hi 없음**(글자 언어인데) |
 | 글자 발음 | — | 키릴 문자만(`letterPronunciation.ts`) |
 | 문장분석 | 서버 학습 구간 | en만 기기에서 낱말 자르기·표현 단위 미리 받기·관용구 밑줄(`AnalyzableEnglish`, `EnglishAnalysisViewer`) |

@@ -1199,6 +1199,7 @@ export function TodayPlan({
         language={language}
         resetKey={keepResetKey}
         make={keepMake}
+        retryKey={`${bank?.next.length ?? -1}|${spotCards.size}`}
         onResult={recordOne}
         empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>}
       />

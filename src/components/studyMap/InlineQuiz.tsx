@@ -19,6 +19,7 @@ export function InlineQuiz({
   language,
   resetKey,
   make,
+  retryKey,
   onResult,
   empty,
 }: {
@@ -28,6 +29,8 @@ export function InlineQuiz({
   /** 바뀌면(탭·방식·학습 언어) 새 묶음부터. */
   resetKey: string;
   make: () => QuizBatch | null;
+  /** Changes when the material behind make() arrives (e.g. word cards): an empty quiz tries make() again. */
+  retryKey?: string;
   onResult: (result: { key: string; correct: boolean; skipped: boolean }) => void;
   empty: React.ReactNode;
 }) {
@@ -47,6 +50,20 @@ export function InlineQuiz({
     setAnswered(null);
     setSerial((n) => n + 1);
   }, [resetKey]);
+  // 재료(낱말 카드 등)가 늦게 오면 첫 make()가 비어 "오늘 끝"에 머문다(2026-10-31) — 비어 있을 때만 다시.
+  const emptyRef = useRef(true);
+  useEffect(() => {
+    emptyRef.current = !batch?.questions.length;
+  });
+  useEffect(() => {
+    if (retryKey === undefined || !emptyRef.current) return;
+    const made = makeRef.current();
+    if (!made?.questions.length) return;
+    setBatch(made);
+    setIndex(0);
+    setAnswered(null);
+    setSerial((n) => n + 1);
+  }, [retryKey]);
   useEffect(() => () => stopTts(), []);
 
   const question = batch?.questions[index];
