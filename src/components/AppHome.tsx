@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "
 import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBannerPlacement, warmUpAds, watchAppLifecycle } from "@/lib/ads";
 import { ChatWindow } from "@/components/ChatWindow";
 import { FirstLanguagePick, LanguageSettingsButton } from "@/components/LanguagePick";
+import { LearnsSync } from "@/components/account/AccountCard";
 import { readAppLocale } from "@/components/LearningBookPanel";
 import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
@@ -369,6 +370,8 @@ function AppHomeInner({
   return (
     <BillingUiProvider locale={locale} ui={ui}>
     <AiConsentGate ui={ui} dir={learningLanguageTextDir(locale)} />
+    {/* 로그인했으면 배울 언어를 프로필의 배우는 언어에 더한다(2026-10-31). */}
+    <LearnsSync />
     <ExpressionInsightProvider locale={locale} ui={ui}>
       <EnglishAnalysisProvider locale={locale} ui={ui}>
           <div

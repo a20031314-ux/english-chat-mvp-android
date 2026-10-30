@@ -6,7 +6,7 @@ import { teamCopy } from "@/lib/rooms/teamCopy";
 import type { GroupSummary } from "@/lib/rooms/group";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
-import { AccountCard } from "@/components/account/AccountCard";
+import { AccountCard, PeopleFactsAsk } from "@/components/account/AccountCard";
 import { doorById, doorUrl, isDoorLang, readEntryDoor } from "@/lib/doors";
 import { randomStatus } from "@/lib/random/client";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
@@ -81,6 +81,8 @@ export function PeopleTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <>
+            {/* 사람 기능을 처음 쓸 때 한 번: 국적·모국어·할 수 있는 언어(건너뛰기 있음, 2026-10-31). */}
+            <PeopleFactsAsk locale={locale} />
             {teams.length && onOpenGroup ? (
               <section className="mb-4">
                 <h2 className="mb-2 text-sm font-semibold text-slate-300">🤝 {tt.myTeams}</h2>

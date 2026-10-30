@@ -236,7 +236,8 @@ export function ProfileSheet({
               <p className="truncate text-lg font-semibold text-white" dir="auto">
                 <bdi>{name}</bdi>
               </p>
-              {member?.langs?.length ? (
+              {/* 방에서 쓰는 앱 언어 ↔ 학습 언어 — 프로필에 모국어·할 수 있는 언어를 적었으면 그쪽(아래 칩)만 보인다(2026-10-31). */}
+              {member?.langs?.length && !profile?.facts?.native && !profile?.facts?.speaks?.length ? (
                 <p className="text-xs text-slate-400">
                   {t.languagesOf}: {languagePair(member.langs, locale)}
                 </p>

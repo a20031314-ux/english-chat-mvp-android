@@ -118,6 +118,7 @@ export async function POST(request: NextRequest) {
       if (!nickname) return;
       const facts = factsOf(account.profile.facts);
       const learns = learnsOf(facts, row.presence.learn);
+      // 거르기(내 언어를 배우는 사람 등)는 프로필이 비면 앱 언어로 어림하지만, 카드에는 프로필에 적은 말만 보낸다(2026-10-31).
       const speaks = speaksOf(facts, row.presence.ui);
       if (match && !langMatches(match, { learns, speaks }, myLangs)) return;
       const show = showOf(account.profile.show);
@@ -131,13 +132,14 @@ export async function POST(request: NextRequest) {
           nickname,
           bio: Array.from(account.profile.bio).slice(0, 140).join(""),
           hasPhoto: account.profile.hasPhoto,
-          ui: row.presence.ui,
+          // 옛 앱(2.78 이하)은 모국어가 없으면 ui를 "할 줄 아는 말"로 그린다 — 짐작을 막으려고 보내지 않는다.
+          ui: null,
           learn: row.presence.learn,
           lastSeen: row.presence.at,
           isFollowing: following.includes(account.id),
           native: facts.native,
           learns,
-          speaks,
+          speaks: speaksOf(facts, null),
           country: facts.country,
           interests: facts.interests.slice(0, 3),
           sharedInterests: shared,

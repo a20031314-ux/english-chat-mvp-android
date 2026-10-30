@@ -25,8 +25,8 @@ type Filter = "all" | "online" | LangMatch | "shared" | "call";
 const FILTERS: Filter[] = ["all", "online", "learn", "both", "partners", "shared", "call"];
 const FILTER_KEY = "peopleFilter";
 
-/** 그 사람이 할 줄 아는 말: 정한 모국어, 없으면 예전처럼 앱 언어. */
-const speaksOf = (person: PersonCard) => person.native ?? person.ui;
+/** 그 사람이 할 줄 아는 말: 정한 모국어, 없으면 할 수 있는 언어 첫째. 앱 언어로 짐작하지 않는다(2026-10-31 — 영어 화면을 쓰는 한국인이 영어 원어민처럼 보였음). */
+const speaksOf = (person: PersonCard) => person.native ?? person.speaks?.[0] ?? null;
 /** 그 사람이 배우는 언어(프로필, 없으면 앱의 학습 언어 하나). */
 const learnsOfCard = (person: PersonCard) => (person.learns?.length ? person.learns : person.learn ? [person.learn] : []);
 

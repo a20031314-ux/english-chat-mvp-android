@@ -55,6 +55,106 @@ function useAccount(): PublicAccount | null {
   return useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
 }
 
+/**
+ * 나를 소개하는 칩 화면(FactsSetup)을 이 기기에서 한 번 보였는지 — 계정마다. 고르거나 건너뛰면 다시 안 뜬다
+ * (사용자 2026-10-31 "구사 언어를 고를 수 있게, 시트는 건너뛸 수 있게").
+ */
+const FACTS_ASKED_KEY = "profileFactsAsked.v1";
+function factsAsked(accountId: string): boolean {
+  try {
+    return (JSON.parse(localStorage.getItem(FACTS_ASKED_KEY) ?? "[]") as string[]).includes(accountId);
+  } catch {
+    return false;
+  }
+}
+function markFactsAsked(accountId: string): void {
+  try {
+    const seen = JSON.parse(localStorage.getItem(FACTS_ASKED_KEY) ?? "[]") as string[];
+    if (!seen.includes(accountId)) localStorage.setItem(FACTS_ASKED_KEY, JSON.stringify([...seen, accountId].slice(-20)));
+  } catch {
+    // 기억하지 못하면 다음에 한 번 더 뜬다.
+  }
+}
+
+/** 사람 기능을 처음 쓸 때 한 번: 국적·모국어·할 수 있는 언어가 모두 비어 있으면 같은 칩 화면(건너뛰기 있음). */
+export function PeopleFactsAsk({ locale }: { locale: string }) {
+  const account = useAccount();
+  const [closed, setClosed] = useState(false);
+  if (!account || closed) return null;
+  const facts = factsOf(account.profile.facts);
+  if (facts.country || facts.native || facts.speaks.length) return null;
+  if (factsAsked(account.id)) return null;
+  const done = () => {
+    markFactsAsked(account.id);
+    setClosed(true);
+  };
+  return (
+    <BodyLayer>
+      <div className="fixed inset-0 z-[85] flex items-end justify-center bg-black/60 p-3 sm:items-center" onClick={done}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={profileCopy(locale).setupTitle}
+          data-facts-ask
+          className="flex max-h-[88%] w-full max-w-md flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <FactsSetup locale={locale} account={account} onDone={done} />
+        </div>
+      </div>
+    </BodyLayer>
+  );
+}
+
+/** 배울 언어를 프로필의 배우는 언어에 더한다(로그인했을 때, 계정·언어마다 이 기기에서 한 번). */
+const LEARNS_SYNCED_KEY = "profileLearnsSynced.v1";
+/** 앱 틀(AppHome)에 늘 붙어 있다 — 어느 탭에서 배울 언어를 바꿔도 프로필에 반영. */
+export function LearnsSync() {
+  const account = useAccount();
+  useLearnsSync(account, useLearningLanguageOptional()?.targetLanguage);
+  return null;
+}
+
+function useLearnsSync(account: PublicAccount | null, learning: string | undefined): void {
+  const accountId = account?.id;
+  useEffect(() => {
+    if (!accountId || !learning) return;
+    const key = `${accountId}:${learning}`;
+    try {
+      if ((JSON.parse(localStorage.getItem(LEARNS_SYNCED_KEY) ?? "[]") as string[]).includes(key)) return;
+    } catch {
+      return;
+    }
+    let cancelled = false;
+    // 이 기기에 남은 계정은 다른 기기에서 바뀌었을 수 있다 — 서버 것을 다시 받아 그 위에 더한다(덮어쓰지 않게).
+    void refreshAccount()
+      .then((fresh) => {
+        if (cancelled || !fresh || fresh.id !== accountId || !fresh.profile.nickname) return;
+        const facts = factsOf(fresh.profile.facts);
+        const mark = () => {
+          try {
+            const done = JSON.parse(localStorage.getItem(LEARNS_SYNCED_KEY) ?? "[]") as string[];
+            localStorage.setItem(LEARNS_SYNCED_KEY, JSON.stringify([...done.filter((item) => item !== key), key].slice(-50)));
+          } catch {
+            // 다음 실행에 다시 본다.
+          }
+        };
+        if (facts.native === learning || facts.learns.includes(learning)) return mark();
+        return saveProfile({
+          nickname: fresh.profile.nickname,
+          bio: fresh.profile.bio,
+          facts: { ...facts, learns: [...facts.learns, learning] },
+        }).then(mark);
+      })
+      .catch(() => {
+        // 다음 실행에 다시 본다.
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [accountId, learning]);
+}
+
 function errorText(ui: UICopy, code: AccountError | null): string | null {
   switch (code) {
     case null:
@@ -155,7 +255,10 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
     open && openedSignedOut && account && setupDone !== account.id && isEmptyFacts(factsOf(account.profile.facts)),
   );
   const setSetup = (value: false) => {
-    if (!value && account) setSetupDone(account.id);
+    if (!value && account) {
+      setSetupDone(account.id);
+      markFactsAsked(account.id);
+    }
   };
 
   const canSignIn = Boolean(config && (config.password || config.googleClientId || config.email));
@@ -731,10 +834,15 @@ function isEmptyFacts(facts: ProfileFacts): boolean {
   return !facts.country && !facts.native && facts.interests.length === 0 && facts.meetModes.length === 0 && facts.speaks.length === 0 && facts.learns.length === 0 && !facts.work;
 }
 
-/** 로그인 직후 한 번: 모국어·배우는 언어·관심사·대화 방식만 고르는 화면. 건너뛰면 편집 시트로(언제든 편집에서 고칠 수 있음). */
+/** 로그인 직후 한 번(또는 사람 탭을 처음 쓸 때 PeopleFactsAsk): 국적·모국어·할 수 있는 언어·배우는 언어·관심사·대화 방식만 고르는 화면. 건너뛰면 편집 시트로(언제든 편집에서 고칠 수 있음). */
 function FactsSetup({ locale, account, onDone }: { locale: string; account: PublicAccount; onDone: () => void }) {
   const t = profileCopy(locale);
-  const [facts, setFacts] = useState<ProfileFacts>(() => factsOf(account.profile.facts));
+  const learning = useLearningLanguageOptional()?.targetLanguage;
+  // 배우는 언어는 지금 배우는 언어를 미리 칠해 둔다(모국어로 고르면 FactsEditor가 뺀다).
+  const [facts, setFacts] = useState<ProfileFacts>(() => {
+    const start = factsOf(account.profile.facts);
+    return learning && !start.learns.length && start.native !== learning ? { ...start, learns: [learning] } : start;
+  });
   const [busy, setBusy] = useState(false);
   const done = async () => {
     setBusy(true);
