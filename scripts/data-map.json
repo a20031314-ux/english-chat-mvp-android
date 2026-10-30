@@ -76,6 +76,7 @@
     "framelesson:v5": { "feature": "My 문장구조 수업", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조마다 모델이 만든 뜻·구조(조각마다 하는 일)·쓰임 설명과 주고받기 세 번(학습 언어 줄과 뜻), 앱 언어로 옮긴 설명·뜻 — 학습자 글 없음" },
     "recall:v1": { "feature": "My 꺼내 쓰기", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조 하나·둘마다 모델이 만든 말할 문장과 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
     "words:v1": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 50개 묶음마다 모델이 만든 예문·쓴 꼴·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
+    "words:v2": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 묶음 카드의 앱 언어 뜻 — 원문 줄 지문까지 열쇠에 넣어 카드가 바뀌면 다시 옮김(2026-10-31), 학습자 글 없음" },
     "stagecopy:v1": { "feature": "지도 단계", "scope": "shared", "onAccountDelete": "해당 없음", "what": "단계 범위 화면 글·단계 대본과 틀의 뜻풀이를 앱 언어로 옮긴 것(학습 언어 × 앱 언어마다 하나, 대본·틀은 단계마다)" },
     "scriptprog:v1": { "feature": "지도 단계", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "글자·소리 기초에서 통과한 묶음(언어별)" },
     "selfcheck:v1": { "feature": "자라는 중", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "스스로 확인 기록(언어별)" },

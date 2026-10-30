@@ -6,7 +6,7 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
-import { translated } from "./stageCopy.ts";
+import { textsFingerprint, translated } from "./stageCopy.ts";
 import { BANK_CHUNK, loadBank, type BankWord } from "../curriculum/vocabBank.ts";
 import { segmentWords } from "../wordSegments.ts";
 import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
@@ -64,13 +64,29 @@ export async function wordCards(language: string, chunk: number, ui: string, uiN
   let cards = await kvGetJson<WordCard[]>(key).catch(() => null);
   if (!Array.isArray(cards) || !cards.length) {
     onMake?.();
-    cards = await makeCards(language, words).catch(() => null);
-    if (!cards) return [];
-    await kvSetJson(key, cards, TTL_SECONDS).catch(() => undefined);
+    const made = await makeCards(language, words).catch(() => null);
+    if (!made) return [];
+    // 같은 묶음을 두 요청이 함께 만들면 먼저 저장된 것을 쓴다(뜻 옮김이 다른 예문에 붙지 않게, 2026-10-31).
+    const raced = await kvGetJson<WordCard[]>(key).catch(() => null);
+    cards = Array.isArray(raced) && raced.length ? raced : made;
+    if (cards === made) await kvSetJson(key, cards, TTL_SECONDS).catch(() => undefined);
+  } else {
+    // 목록이 늘어 묶음 끝이 새로 찬 경우(예: 2,992개 → 7,000개, 2026-10-31): 카드 없는 낱말이 열 개 넘으면 그것만 더 만든다.
+    const have = new Set(cards.map((card) => card.w));
+    const missing = words.filter((word) => !have.has(word.w));
+    if (missing.length > 10) {
+      onMake?.();
+      const more = await makeCards(language, missing).catch(() => null);
+      if (more?.length) {
+        cards = [...cards, ...more];
+        await kvSetJson(key, cards, TTL_SECONDS).catch(() => undefined);
+      }
+    }
   }
   if (ui === "en") return cards;
   const lines = cards.flatMap((card) => [card.gloss, card.exampleGloss]);
-  const moved = await translated(lines, ui, uiName, `words:v1:${language}:${chunk}:${ui}`, onMake);
+  // 옮긴 뜻은 원문 줄에 묶는다 — 예전 열쇠는 카드가 바뀌어도 그대로 남아 다른 예문의 뜻이 붙었다(2026-10-31 태국어 ถัง).
+  const moved = await translated(lines, ui, uiName, `words:v2:${language}:${chunk}:${ui}:${textsFingerprint(lines)}`, onMake);
   if (!moved) return cards;
   return cards.map((card, index) => ({ ...card, gloss: moved[index * 2]!, exampleGloss: moved[index * 2 + 1]! }));
 }
