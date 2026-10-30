@@ -30,6 +30,7 @@ import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
 import { registerSlipHint } from "@/lib/registerSlips";
 import { hangulIsStray, stripHangul } from "@/lib/strayHangul";
+import { givesThemWords } from "@/lib/roleplay/director";
 import { explainFeelingSlips, promoteFeelingSlip } from "@/lib/feelingAdjectives";
 import { explainVerbObjectSlips, promoteVerbObjectSlip } from "@/lib/verbObjectSlips";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
@@ -248,12 +249,23 @@ ${explanationGuard}`;
  * 지시에 베낄 수 있는 예문은 넣지 않는다(RULES "자주 걸리는 것").
  */
 export function bilingualTutorRule(targetName: string, ownName: string): string {
-  return `They chose a partner who also speaks ${ownName}. You are a native ${targetName} speaker who has lived among ${ownName} speakers for a while and speaks ${ownName} fairly well, if not perfectly. This overrides anything above about never using ${ownName} or never teaching in your reply:
-- The conversation stays in ${targetName}. When they write in ${targetName}, answer only in ${targetName}.
-- When they write in ${ownName}, mix ${ownName} into a ${targetName} sentence, or are clearly stuck, start your reply with ONE short sentence in ${ownName} that hands them the ${targetName} words for the main thing they were trying to tell you — their whole point as one ${targetName} sentence they could have said, quoted inside it; never fillers or hesitation words. Then carry on in ${targetName} in the same reply.
-- That ${ownName} sentence is only ever about their words. Never ask a question, make small talk or move the conversation on in ${ownName} — everything else you say is ${targetName}.
-- Never more than one ${ownName} sentence per reply, never a whole reply in ${ownName}, and no grammar lessons: a friend helping out, not a teacher.
-- That ${ownName} sentence is part of assistantMessage itself, written there in ${ownName}. It is not what spokenReply is for; spokenReply still renders the whole of assistantMessage as before.`;
+  return `They chose a partner who also speaks ${ownName}: you are a native ${targetName} speaker who has lived among ${ownName} speakers for a while and speaks ${ownName} fairly well.
+Your JSON has one more key, "helper". assistantMessage stays entirely in ${targetName}, as always.
+- "helper" is "" when they wrote in ${targetName} and got their point across, even with small mistakes.
+- When they wrote in ${ownName}, put ${ownName} words into a ${targetName} sentence, or were clearly stuck, "helper" is ONE short, friendly sentence written in ${ownName}, the way you would say it to them, that hands them their main point as one ${targetName} sentence they could have said, quoted inside it. Their point — never their fillers or hesitation words.
+- "helper" is only about their words: no question, no small talk, no grammar lesson, never in ${targetName} apart from the quoted sentence.`;
+}
+
+/**
+ * 두 언어 튜터의 "helper"(앱 언어 한 문장)를 답 앞에 붙인다. 학습 언어 낱말이 있고 설명이 앱 언어일 때만(director.ts givesThemWords와 같은 잣대) —
+ * 아니면 버리고 답만. 모델이 답 안에 섞어 쓰게 했을 땐 영어로 쓰거나 괄호로 끝에 붙이거나 빠뜨렸다(2026-10-30 운영 확인, Haiku).
+ */
+function withHelper(reply: string, helperRaw: unknown, langs: ChatLanguages, on: boolean | undefined): string {
+  if (!on) return reply;
+  const helper = asText(helperRaw).trim().slice(0, 240);
+  if (!helper || !reply.trim()) return reply;
+  if (!givesThemWords(helper, { targetLanguage: coerceLanguageCode(langs.targetLanguage), nativeLanguage: coerceLanguageCode(langs.interfaceLanguage) })) return reply;
+  return `${helper} ${reply}`;
 }
 
 function buildChatSystem(
@@ -723,7 +735,7 @@ async function runChat(
   }
 
   return {
-    assistantMessage: withoutStrayHangul(reply, langs),
+    assistantMessage: withHelper(withoutStrayHangul(reply, langs), (parsed as { helper?: unknown }).helper, langs, options.bilingual),
     spokenReply: withoutStrayHangul(spoken, langs),
     correction: { corrected, natural, explanation },
   };
@@ -778,11 +790,11 @@ async function runChatReply(
   void recordTokens("chatReply", completion.usage);
   const raw = completion.choices[0]?.message?.content;
   if (!raw) throw new Error("empty reply");
-  const parsed = JSON.parse(raw) as { assistantMessage?: unknown; spokenReply?: unknown };
+  const parsed = JSON.parse(raw) as { assistantMessage?: unknown; spokenReply?: unknown; helper?: unknown };
   const assistantMessage = asText(parsed.assistantMessage).trim();
   if (!assistantMessage) throw new Error(`empty reply: ${raw.slice(0, 200)}`);
   return {
-    assistantMessage: withoutStrayHangul(assistantMessage, langs),
+    assistantMessage: withHelper(withoutStrayHangul(assistantMessage, langs), parsed.helper, langs, options.bilingual),
     spokenReply:
       langs.interfaceLanguage === langs.targetLanguage
         ? ""
