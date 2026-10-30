@@ -670,7 +670,7 @@ export function TodayPlan({
       match: pairs.slice(0, 3).map((one) => ({ side: "me" as const, text: `${one.word}  —  ${one.meaning}`, mark: one.word })),
     };
     const label: Record<Style, string> = {
-      auto: ui.planMixAuto,
+      auto: ui.studyRandom,
       choose: ui.quizKindChoose,
       order: ui.quizKindOrder,
       listen: ui.quizKindListen,
@@ -774,7 +774,7 @@ export function TodayPlan({
             onClick={() => save({ ...settings, mix })}
             className={`rounded-full px-3 py-1 text-caption ${settings.mix === mix ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
           >
-            {{ auto: ui.planMixAuto, speak: ui.planMixSpeak, listen: ui.planMixListen, read: ui.planMixRead }[mix]}
+            {{ auto: ui.studyRandom, speak: ui.planMixSpeak, listen: ui.planMixListen, read: ui.planMixRead }[mix]}
           </button>
         ))}
       </div>
