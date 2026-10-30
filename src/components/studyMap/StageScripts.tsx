@@ -45,7 +45,7 @@ import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/lear
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
-import { weakKeysOfScript } from "@/lib/curriculum/quiz";
+import { joinWords, orderTiles, spacedText, weakKeysOfScript } from "@/lib/curriculum/quiz";
 import { PASS_RULE_KEY, type PassRule, type ScriptChoices } from "@/lib/curriculum/scriptChoice";
 import { ScriptTap, tapKindFor } from "@/components/studyMap/ScriptTap";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
@@ -534,6 +534,27 @@ function ScriptPlayer({
     order: ui.scriptModeOrder,
   };
 
+  // 방식 그림(짧은 대화): 이 대본의 첫 내 줄과 그 앞 줄로 — 방식마다 내 줄이 어떻게 보이는지.
+  const firstMine = Math.max(0, script.lines.findIndex((line) => line.who === "me"));
+  const mine = script.lines[firstMine]!;
+  const before = script.lines[firstMine - 1];
+  const lead: Bubble[] = before ? [{ side: before.who, text: before.text }] : [];
+  const tiles = orderTiles(mine.text, language);
+  const mid = Math.floor(tiles.length / 2);
+  const meaning: Bubble = { side: "me", text: glossFor(mine.gloss, locale), meaning: true };
+  const modeBubbles: Record<ScriptMode, Bubble[]> = {
+    shadow: [...lead, { side: "me", text: mine.text }],
+    hint: [...lead, { side: "me", text: hintOf(mine.text, language) }],
+    hide: [...lead, { side: "me", text: "• • • • •" }],
+    own: [...lead, meaning, { side: "me", text: "🎤 …" }],
+    choose: [
+      { side: "me", text: joinWords(tiles.map((tile, i) => (i === mid ? "___" : tile)), spacedText(mine.text)), mark: "___" },
+      { side: "me", text: [tiles[mid], tiles[(mid + 1) % tiles.length]].filter(Boolean).join("  /  ") },
+    ],
+    order: [meaning, { side: "me", text: [...tiles].reverse().join(" · ") }],
+  };
+  const modeWays = modes.map((id) => ({ id, label: modeLabel[id], bubbles: modeBubbles[id] }));
+
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
@@ -553,17 +574,8 @@ function ScriptPlayer({
         </div>
       ) : null}
       <div role="group" className="flex shrink-0 flex-wrap items-center gap-1.5 border-b border-line px-4 py-2">
-        {modes.map((id) => (
-          <button
-            key={id}
-            type="button"
-            aria-pressed={mode === id}
-            onClick={() => setMode(id)}
-            className={`rounded-full px-3 py-1 text-caption ${mode === id ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
-          >
-            {modeLabel[id]}
-          </button>
-        ))}
+        {/* Ways to say the lines: one button, each way shown as a tiny dialogue from this script (2026-10-30, user). */}
+        <WayPicker ui={ui} ways={modeWays} value={mode} onPick={setMode} data="script-mode" />
         {needsLetters(language) ? (
           <button
             type="button"

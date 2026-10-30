@@ -207,7 +207,7 @@ function decoys(language: string, key: string, stage: number): string[] {
 }
 
 /** 띄어쓰기 없는 문장인지(조각을 붙여 보여 줄지). */
-function spacedText(text: string): boolean {
+export function spacedText(text: string): boolean {
   return !isSpaceless(text);
 }
 
