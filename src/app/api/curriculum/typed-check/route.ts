@@ -45,8 +45,9 @@ Expected correction: ${answer}
 Learner's version: ${typed}`;
   let failure = "";
   const completion = await completeChat(client, "scriptJudge", {
-    temperature: 0,
-    max_tokens: 40,
+    // JSON 하나 — 도구로 받는다(llm.ts). 짧은 한도면 앞 생각이 다 먹어 빈 답이 왔다(운영 2026-10-31, max_tokens 40).
+    response_format: { type: "json_object" },
+    max_tokens: 300,
     messages: [
       {
         role: "system",
