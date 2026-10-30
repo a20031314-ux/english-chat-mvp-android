@@ -95,6 +95,8 @@ export const OP_COST: Record<string, OpCost> = {
   wordCards: estimated("translate", { input: 2500, output: 9000 }),
   // 꺼내 쓰기 문제 여섯 줄 만들기 + 뜻 여섯 줄 옮기기(2026-10-30 어림), 틀 묶음 × 앱 언어마다 한 번.
   recallPrompts: estimated("translate", { input: 600, output: 500 }),
+  // 문장구조 설명 세 줄 + 주고받기 세 번 만들기 + 뜻 아홉 줄 옮기기(2026-10-30 어림), 틀 × 앱 언어마다 한 번.
+  frameLesson: estimated("translate", { input: 700, output: 700 }),
   // 단계 하나의 줄(약 150~250) 읽는 법 — 60줄 묶음 서너 번(2026-10-29 어림).
   stageReadings: estimated("translate", { input: 6000, output: 9000 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).

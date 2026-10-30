@@ -32,6 +32,7 @@ import { HearingButtons, LineGrade, PauseChips, ResumeChoice, useHearing } from 
 import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
+import { FrameLesson } from "@/components/studyMap/FrameLesson";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -60,7 +61,6 @@ export function StageFrames({
   redo = [],
   openFor = null,
   onPassed,
-  onOpenScript,
   listHidden = false,
 }: {
   ui: UICopy;
@@ -75,7 +75,8 @@ export function StageFrames({
   /** 밖(문법 칸)에서 고른 문장구조를 연다(at = 누른 때). */
   openFor?: { id: string; at: number } | null;
   onPassed?: (id: string) => void;
-  onOpenScript: (script: StageScript) => void;
+  /** 예전 끝 화면의 "이 틀이 나온 대본"으로 가던 것 — 수업(FrameLesson)에는 없어 쓰지 않는다(부르는 쪽 호환으로 남김). */
+  onOpenScript?: (script: StageScript) => void;
 }) {
   const frames = framesFor(language, stage);
   const [open, setOpen] = useState<Frame | null>(null);
@@ -114,21 +115,8 @@ export function StageFrames({
         })}
       </ul>
       )}
-      {open ? (
-        <FramePlayer
-          ui={ui}
-          locale={locale}
-          language={language}
-          frame={open}
-          passed={passed.includes(open.id)}
-          onPassed={onPassed}
-          onClose={() => setOpen(null)}
-          onOpenScript={(script) => {
-            setOpen(null);
-            onOpenScript(script);
-          }}
-        />
-      ) : null}
+      {/* A pattern opens as a lesson: explanation → quiz → talk (2026-10-30, user). The redo cards below keep the old player. */}
+      {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} onClose={() => setOpen(null)} /> : null}
     </section>
   );
 }
