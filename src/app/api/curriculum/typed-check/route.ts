@@ -43,6 +43,7 @@ Learner typed: ${typed}`
 Sentence with the mistake: ${sentence}
 Expected correction: ${answer}
 Learner's version: ${typed}`;
+  let failure = "";
   const completion = await completeChat(client, "scriptJudge", {
     temperature: 0,
     max_tokens: 40,
@@ -53,8 +54,13 @@ Learner's version: ${typed}`;
       },
       { role: "user", content: task },
     ],
-  }).catch(() => null);
+  }).catch((error: unknown) => {
+    failure = error instanceof Error ? error.message.slice(0, 200) : "error";
+    return null;
+  });
   const reply = completion?.choices[0]?.message?.content ?? "";
   const ok = /"ok"\s*:\s*true/.test(reply);
-  return jsonWithCors(request, { ok });
+  // 점검용: 머리 x-typed-debug면 모델 답(친 글은 없음)을 같이.
+  const debug = request.headers.get("x-typed-debug") === "1" ? { reply: reply.slice(0, 200), failure } : {};
+  return jsonWithCors(request, { ok, ...debug });
 }
