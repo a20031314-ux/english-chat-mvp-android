@@ -21,7 +21,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
-import { buildUnit, bundleQuiz, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { buildUnit, bundleQuiz, orderTiles, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -41,7 +41,6 @@ import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { MATCH_SIZE, WordMatch, matchPairs } from "@/components/studyMap/WordMatch";
-import { expressionBubbles } from "@/components/studyMap/StageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
@@ -103,7 +102,10 @@ function saveQuizDone(day: string, keys: Set<string>) {
 type StudyFocus = "review" | "auto" | PartId;
 /** 지속 학습의 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘" → "알아서·어휘·문법·표현·발음을 복습과 같은 층위로"). */
 type StudyLane = "review" | "learn";
-type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick };
+/** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
+type Style = "auto" | QuizStyle | "match";
+const STYLES: readonly Style[] = ["auto", "choose", "order", "listen", "say", "meaning", "match"];
+type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick; styles?: Partial<Record<StudyFocus, Style>> };
 const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
 // 발음 버튼은 뺌(2026-10-29 사용자 — 표현과 같은 문제였음). 저장된 발음은 랜덤으로.
@@ -117,7 +119,8 @@ function readSettings(): Settings {
     const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
     const focus = FOCUSES.includes(raw?.focus as StudyFocus) ? (raw!.focus as StudyFocus) : "auto";
     const vocab = raw?.vocab && ["all", "band", "pos", "topic"].includes(raw.vocab.by) && typeof raw.vocab.value === "string" ? raw.vocab : undefined;
-    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}) };
+    const styles = Object.fromEntries(Object.entries(raw?.styles ?? {}).filter(([key, value]) => FOCUSES.includes(key as StudyFocus) && STYLES.includes(value as Style))) as Settings["styles"];
+    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}), ...(styles && Object.keys(styles).length ? { styles } : {}) };
   } catch {
     return { pace: 10, order: "curriculum", mix: "auto", focus: "auto" };
   }
@@ -518,7 +521,7 @@ export function TodayPlan({
       const lead = firstPick(queue, which)?.key;
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage });
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: quizStyle });
     return made.questions.length >= 2 ? made : null;
   };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane) => {
@@ -596,9 +599,9 @@ export function TodayPlan({
   const startButton = (which: StudyLane, pick: StudyPick | null) => (
     <button
       type="button"
-      disabled={!pick}
+      disabled={!pick && style !== "match"}
       data-study-start={which}
-      onClick={() => startStudy(pick, which)}
+      onClick={() => (style === "match" ? setMatching(true) : startStudy(pick, which))}
       className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${!pick ? "border border-line text-slate-500" : finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
     >
       <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
@@ -631,6 +634,53 @@ export function TodayPlan({
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
+  // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
+  const pairs = matchPairs([
+    ...(bank?.next ?? []).map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
+    ...words.map((row) => ({ word: row.word, meaning: row.gloss })),
+    ...allFramesFor(language)
+      .filter((one) => one.stage <= Math.max(1, stage))
+      .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
+  ]).slice(0, MATCH_SIZE * 4);
+  // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).
+  const styleOf: Style = settings.styles?.[settings.focus] ?? "auto";
+  const style: Style = styleOf === "match" && (settings.focus !== "vocab" || pairs.length < 3) ? "auto" : styleOf;
+  const quizStyle: QuizStyle | undefined = style === "auto" || style === "match" ? undefined : style;
+  const styleWays = (() => {
+    const situation = allScriptsFor(language).filter((one) => one.stage === stage).find(isSituationScript);
+    const lines = situation?.lines ?? [];
+    const mineAt = Math.max(0, lines.findIndex((line) => line.who === "me"));
+    const mine = lines[mineAt];
+    const other = lines.find((line, i) => i !== mineAt && line.text !== mine?.text);
+    const pair = pairs[0];
+    if (!mine) return [];
+    const tiles = orderTiles(mine.text, language);
+    const mid = Math.floor(tiles.length / 2);
+    const meaning: Bubble = { side: "them", text: glossFor(mine.gloss, locale), meaning: true };
+    const blank: Bubble = { side: "me", text: mine.text.replace(tiles[mid] ?? "", "___"), mark: "___" };
+    const pictures: Record<Style, Bubble[]> = {
+      auto: [blank, { side: "me", text: [...tiles].reverse().join(" · ") }, { side: "me", text: `🎤 ${mine.text}` }],
+      choose: [blank, { side: "me", text: [tiles[mid], tiles[(mid + 1) % tiles.length]].filter(Boolean).join("  /  ") }],
+      order: [meaning, { side: "me", text: [...tiles].reverse().join(" · ") }],
+      listen: [{ side: "them", text: "🔊 …" }, { side: "me", text: mine.text, mark: mine.text }, ...(other ? [{ side: "me" as const, text: other.text }] : [])],
+      say: [meaning, { side: "me", text: `🎤 ${mine.text}` }],
+      meaning: pair
+        ? [{ side: "me", text: pair.word, mark: pair.word }, { side: "them", text: pair.meaning, meaning: true }, ...(pairs[1] ? [{ side: "them" as const, text: pairs[1].meaning, meaning: true }] : [])]
+        : [{ side: "me", text: mine.text }, meaning],
+      match: pairs.slice(0, 3).map((one) => ({ side: "me" as const, text: `${one.word}  —  ${one.meaning}`, mark: one.word })),
+    };
+    const label: Record<Style, string> = {
+      auto: ui.planMixAuto,
+      choose: ui.quizKindChoose,
+      order: ui.quizKindOrder,
+      listen: ui.quizKindListen,
+      say: ui.quizKindSay,
+      meaning: ui.quizKindMeaning,
+      match: ui.wordMatch,
+    };
+    const ids: Style[] = settings.focus === "vocab" ? ["auto", ...(pairs.length >= 3 ? (["match"] as const) : []), "meaning", "choose", "say"] : ["auto", "choose", "order", "listen", "say"];
+    return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
+  })();
   const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
   const todayBody = (
     <div data-today-plan>
@@ -864,6 +914,7 @@ export function TodayPlan({
           round={log[quiz.id]?.n ?? 0}
           stage={stage}
           mix={settings.mix}
+          style={studying ? quizStyle : undefined}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}
@@ -885,61 +936,38 @@ export function TodayPlan({
       ) : null}
     </>
   );
-  // 복습 방식 그림(짧은 대화): 이 단계 상황·문장구조와 내 단어장·고친 줄에서.
-  const sample = (() => {
-    const scripts = allScriptsFor(language).filter((one) => one.stage === stage);
-    const situation = scripts.find(isSituationScript);
-    const frame = allFramesFor(language).find((one) => one.stage === stage) ?? allFramesFor(language)[0];
-    const example = frame?.examples[0];
-    const fix = cards.find((card) => (card.kind ?? "mistake") === "mistake") ?? cards[0];
-    const word = words[0];
-    const vocab: Bubble[] = word
-      ? [{ side: "me", text: word.word, mark: word.word }, ...(word.gloss ? [{ side: "them" as const, text: word.gloss, meaning: true }] : [])]
-      : example
-        ? [{ side: "me", text: example.slot, mark: example.slot }, { side: "them", text: glossFor(example.cue, locale), meaning: true }]
-        : [];
-    const grammar: Bubble[] = frame ? [{ side: "me", text: frame.pattern, mark: "___" }, ...(example ? [{ side: "me" as const, text: example.text, mark: example.slot }] : [])] : [];
-    const expression: Bubble[] = situation ? expressionBubbles(situation) : [];
-    const review: Bubble[] = fix
-      ? [{ side: "me", text: fix.wrong, strike: true }, { side: "me", text: fix.right }]
-      : expression.length
-        ? expression.map((one) => (one.side === "me" ? { ...one, again: true } : one))
-        : [];
-    const random: Bubble[] = [vocab[0], grammar[grammar.length - 1], expression[expression.length - 1]].filter((one): one is Bubble => Boolean(one));
-    return { review, random, vocab, grammar, expression };
-  })();
-  // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
-  const pairs = matchPairs([
-    ...(bank?.next ?? []).map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
-    ...words.map((row) => ({ word: row.word, meaning: row.gloss })),
-    ...allFramesFor(language)
-      .filter((one) => one.stage <= Math.max(1, stage))
-      .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
-  ]).slice(0, MATCH_SIZE * 4);
-  const matchWay =
-    pairs.length >= 3
-      ? [{ id: "match" as const, label: ui.wordMatch, bubbles: pairs.slice(0, 3).map((pair) => ({ side: "me" as const, text: `${pair.word}  —  ${pair.meaning}`, mark: pair.word })) }]
-      : [];
-  const lanes = FOCUSES.map((focus) => ({
-    id: focus,
-    label: focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus),
-    count: focus === "review" && reviewQueue.length ? (reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length)) : "",
-    bubbles: focus === "review" ? sample.review : focus === "auto" ? sample.random : focus === "vocab" ? sample.vocab : focus === "grammar" ? sample.grammar : sample.expression,
-  }));
   const keepSummary = reviewQueue.length ? <span className="tabular-nums">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</span> : null;
   const keepBody = (
     <div data-keep-learning>
-      {/* One button; the sheet shows each lane as a tiny dialogue (2026-10-30, user: pick the way by picture, understand it from a short dialogue). */}
-      <div className="mt-2 flex">
-        <WayPicker
-          ui={ui}
-          ways={[...lanes, ...matchWay]}
-          value={settings.focus}
-          onPick={(focus) => (focus === "match" ? setMatching(true) : save({ ...settings, focus }))}
-          data="study-focus"
-        />
-        {matching && pairs.length >= 3 ? <WordMatch ui={ui} pairs={pairs} onClose={() => setMatching(false)} /> : null}
+      {/* What to study as tabs, then how — one button, the ways shown as tiny dialogues (2026-10-30, user). */}
+      <div role="tablist" data-study-focus className="mt-2 flex flex-wrap gap-1.5">
+        {FOCUSES.map((focus) => (
+          <button
+            key={focus}
+            type="button"
+            role="tab"
+            aria-selected={settings.focus === focus}
+            data-focus={focus}
+            onClick={() => save({ ...settings, focus })}
+            className={`rounded-full px-3 py-1 text-caption ${settings.focus === focus ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+          >
+            {focus === "review" ? ui.studyReview : focus === "auto" ? ui.studyRandom : partName(ui, focus)}
+            {focus === "review" && reviewQueue.length ? <span className="ms-1 tabular-nums text-meta opacity-70">{reviewQueue.length >= 30 ? "30+" : reviewQueue.length}</span> : null}
+          </button>
+        ))}
       </div>
+      {styleWays.length ? (
+        <div className="mt-2 flex">
+          <WayPicker
+            ui={ui}
+            ways={styleWays}
+            value={style}
+            onPick={(next) => save({ ...settings, styles: { ...settings.styles, [settings.focus]: next } })}
+            data="study-style"
+          />
+        </div>
+      ) : null}
+      {matching && pairs.length >= 3 ? <WordMatch ui={ui} pairs={pairs} onClose={() => setMatching(false)} /> : null}
       {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
       {settings.focus === "review" ? (
         <p data-study-amount="review" className="mt-2 px-1 text-caption tabular-nums text-slate-300">{ui.studyReviewLeft.replace("{n}", reviewQueue.length >= 30 ? "30+" : String(reviewQueue.length))}</p>

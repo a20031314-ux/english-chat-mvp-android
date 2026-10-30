@@ -365,7 +365,10 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
  */
 const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "listen", "say", "meaning"];
 
-export function bundleQuiz(language: string, keys: readonly string[], options: { seed?: string; stage?: number } = {}): { questions: QuizQuestion[]; keys: string[] } {
+/** 복습에서 고른 문제 모양(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게") — 없으면 돌아가며. */
+export type QuizStyle = Extract<QuizQuestion["kind"], "choose" | "order" | "listen" | "say" | "meaning">;
+
+export function bundleQuiz(language: string, keys: readonly string[], options: { seed?: string; stage?: number; style?: QuizStyle } = {}): { questions: QuizQuestion[]; keys: string[] } {
   const questions: QuizQuestion[] = [];
   const out: string[] = [];
   const texts = new Set<string>();
@@ -373,12 +376,12 @@ export function bundleQuiz(language: string, keys: readonly string[], options: {
   for (const key of keys) {
     if (questions.length >= QUIZ_SIZE + 1) break;
     // 모양을 돌아가며(빈칸 → 순서 → 듣기 → 말하기 → 뜻) — 묶음이 한 모양만 되지 않게. 단어(w|)는 단어 퀴즈의 첫 문제(빈칸).
-    const want = BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
+    const want = options.style ?? BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
     const order = [want, ...BUNDLE_KINDS.filter((kind) => kind !== want)];
     const quiz = key.startsWith("w|") ? buildQuiz(language, key, { seed: options.seed, stage: options.stage }) : (buildQuiz(language, key, { seed: options.seed, stage: options.stage, kinds: order }) ?? buildQuiz(language, key, { seed: options.seed, stage: options.stage }));
     if (!quiz) continue;
     const textOf = (q: QuizQuestion) => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
-    const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1) && q.kind !== "fix";
+    const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1 || options.style === "say") && q.kind !== "fix";
     const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? quiz.questions.find(usable);
     if (!pick) continue;
     if (pick.kind === "say") says += 1;
@@ -405,6 +408,9 @@ export function buildQuiz(
   };
   if (key.startsWith("w|")) {
     const word = wordQuiz(language, key, options.seed);
+    // 모양을 골랐으면 그 모양만(없으면 단어 퀴즈 그대로).
+    const only = word && options.kinds?.length ? word.questions.filter((q) => options.kinds!.includes(q.kind)) : [];
+    if (word && only.length) return { key, questions: only };
     if (word) return word;
   }
   // 조합(말하기·듣기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).

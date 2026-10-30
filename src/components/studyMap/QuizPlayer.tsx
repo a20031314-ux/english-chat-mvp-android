@@ -9,7 +9,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
@@ -43,6 +43,7 @@ export function QuizPlayer({
   onMore,
   stopHint = false,
   mix,
+  style,
   unit,
   bundleKeys,
   onBundle,
@@ -72,6 +73,8 @@ export function QuizPlayer({
   stopHint?: boolean;
   /** 학습 조합(curriculum/quiz.ts QuizMix) — 말하기·듣기·읽기 위주면 그 모양으로. */
   mix?: QuizMix;
+  /** 복습에서 고른 문제 모양 — 셋 다 이 모양으로(조합 mix보다 앞섬). */
+  style?: QuizStyle;
   /** 대본 하나를 문제 묶음으로(buildUnit) — 있으면 열쇠 퀴즈 대신 이것, 70% 넘으면 넘김. */
   unit?: readonly QuizQuestion[];
   /** 묶음 퀴즈(curriculum/quiz.ts bundleQuiz): unit 문제마다의 열쇠 — 끝나면 onBundle로 열쇠마다 결과. */
@@ -81,10 +84,10 @@ export function QuizPlayer({
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
   // "알아서"(또는 조합 없음): 이 항목에 맞는 모양 + 이 사람이 약한 모양을 앞에(curriculum/learnStyle.ts). 연 동안 고정.
-  const [kinds] = useState(() => (unit || (mix && mix !== "auto") ? undefined : styleKinds(language, quizKey, readKindLog(language))));
+  const [kinds] = useState(() => (style ? [style, style, style] : unit || (mix && mix !== "auto") ? undefined : styleKinds(language, quizKey, readKindLog(language))));
   const quiz = useMemo(
-    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix, kinds, stage })),
-    [language, quizKey, card, seed, opened, mix, unit, kinds, stage],
+    () => (unit ? { key: quizKey, questions: [...unit] } : buildQuiz(language, quizKey, { card, seed, round: opened, mix: style ? undefined : mix, kinds, stage })),
+    [language, quizKey, card, seed, opened, mix, style, unit, kinds, stage],
   );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});

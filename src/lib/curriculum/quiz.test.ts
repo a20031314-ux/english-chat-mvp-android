@@ -219,3 +219,19 @@ test("표현 퀴즈 재료에 빈도 단어 예문(그 표현이 든 것)도 —
   registerQuizSources("ja", [{ key: "w|zzお茶", sources: [{ text: "お茶をありがとうございます。", gloss: { en: "", raw: "차 고마워요" }, from: "w|zzお茶", stage: 0, piece: "お茶", who: "me", wordGloss: "차" }] }]);
   assert.ok(quizSources("ja", "e|ありがとうございます").some((source) => source.text === "お茶をありがとうございます。"));
 });
+
+test("복습에서 고른 모양: 묶음이 그 모양만, 단어 퀴즈도 그 모양만 — 일본어·스페인어", async () => {
+  const { bundleQuiz, buildQuiz, registerQuizSources } = await import("./quiz.ts");
+  const { nextStudy } = await import("./nextStudy.ts");
+  for (const language of ["ja", "es"]) {
+    const keys = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: "grammar", lane: "learn", now: 0 }).map((pick) => pick.key);
+    for (const style of ["order", "choose"] as const) {
+      const made = bundleQuiz(language, keys.slice(0, 8), { seed: "s", stage: 1, style });
+      assert.ok(made.questions.length >= 2, `${language} ${style}`);
+      assert.ok(made.questions.filter((q) => q.kind === style).length >= made.questions.length - 1, `${language} ${style}: ${made.questions.map((q) => q.kind)}`);
+    }
+  }
+  registerQuizSources("es", [{ key: "w|zzcafé", sources: [{ text: "Quiero un café, por favor.", gloss: { en: "", raw: "커피 한 잔 주세요" }, from: "w|zzcafé", stage: 0, piece: "café", who: "me", wordGloss: "커피" }] }]);
+  const word = buildQuiz("es", "w|zzcafé", { kinds: ["meaning", "meaning", "meaning"] });
+  if (word) assert.ok(word.questions.every((q) => q.kind === "meaning"), String(word.questions.map((q) => q.kind)));
+});
