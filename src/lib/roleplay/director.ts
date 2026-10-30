@@ -123,6 +123,11 @@ export type DirectorRequest = {
   level: number;
   targetLanguage: LearningLanguageCode;
   nativeLanguage: LearningLanguageCode;
+  /**
+   * 학습자가 "내 말도 하는 튜터"를 골랐다(lib/tutorLanguage.ts). 캐릭터는 학습 언어로 이어 가되,
+   * 학습자가 자기 말로 말하거나 막히면 그 말로 한 문장까지 소리 내어 받아 줄 수 있다.
+   */
+  bilingual?: boolean;
 };
 
 /** What the character says: a recorded line by id, or one written now. */
@@ -284,6 +289,15 @@ export function givesThemWords(
   // being learned ("Puedes decir …" under a Russian app — sim-users 2026-10-18) is
   // one they may not be able to read; better no tip than that one.
   return !explanationInLearningLanguage(note, request.nativeLanguage, request.targetLanguage);
+}
+
+/**
+ * 두 언어 캐릭터(lib/tutorLanguage.ts): 학습 언어 원어민인데 학습자의 말도 꽤 한다 — 소리 내어 말하는 줄에서 한 문장까지.
+ * "가르치는 말은 소리로 하지 않는다"의 단 하나 예외. 베낄 수 있는 예문은 넣지 않는다.
+ */
+export function bilingualCharacterRule(target: string, native: string): string {
+  return `- They chose to talk with someone who also speaks ${native}: you have lived among ${native} speakers for a while and speak ${native} fairly well, with an accent. Keep talking in ${target}. When they speak ${native}, mix ${native} into a ${target} sentence, or are stuck, you may say ONE short sentence in ${native} out loud in "say" — to show you understood, or to hand them the ${target} words for what they were trying to say — and then go straight back to ${target} in the same turn. Never more than one short ${native} sentence in a turn, never a whole turn in ${native}, and none at all while they are managing in ${target}. This is the one exception to keeping teaching out of what you say; "note", "better" and "meant" work as before.
+`;
 }
 
 export function leadFromPartial(partial: string): string | null {
@@ -562,7 +576,8 @@ How to answer them:
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.
-- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
+${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bilingualCharacterRule(target, native)}
+` : ""}- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
 {"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}

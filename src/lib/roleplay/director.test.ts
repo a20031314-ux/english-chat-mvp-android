@@ -1204,3 +1204,12 @@ test("quotesOwnLine: spaced and spaceless scripts", async () => {
   assert.equal(quotesOwnLine('"estoy en casa" está bien', ["¿Qué haces?"], "Estoy en casa"), false);
   assert.equal(quotesOwnLine("「今何をしていますか」と聞いています", ["今何をしていますか？"], "家にいます"), true);
 });
+
+test("두 언어 튜터: 고른 사람에게만, 학습자의 말로 한 문장까지", async () => {
+  const { bilingualCharacterRule } = await import("./director.ts");
+  const rule = bilingualCharacterRule("English", "Korean");
+  assert.match(rule, /ONE short sentence in Korean/);
+  assert.match(rule, /straight back to English/);
+  assert.match(rule, /none at all while they are managing in English/);
+  assert.doesNotMatch(rule, /\p{Script=Hangul}/u, "베낄 수 있는 한국어 예문이 없다");
+});

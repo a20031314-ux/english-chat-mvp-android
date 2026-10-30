@@ -845,7 +845,8 @@
     "recallTitle": "使ってみる",
     "recallNone": "まだ覚えた文型がありません",
     "framesToNext": "次の段階まで：文型 {a}/{n} · 使ってみる {b}/{n}",
-    "reviewLayerTitle": "復習"
+    "reviewLayerTitle": "復習",
+    "tutorLanguage": "チューターが話す言葉"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1693,7 +1694,8 @@
     "recallTitle": "用起来",
     "recallNone": "还没有学会的句型",
     "framesToNext": "进入下一阶段前：句型 {a}/{n} · 用起来 {b}/{n}",
-    "reviewLayerTitle": "复习"
+    "reviewLayerTitle": "复习",
+    "tutorLanguage": "导师使用的语言"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2544,7 +2546,8 @@
     "recallTitle": "Dùng thử",
     "recallNone": "Chưa có cấu trúc câu đã học",
     "framesToNext": "Trước giai đoạn tiếp theo: Cấu trúc câu {a}/{n} · Dùng thử {b}/{n}",
-    "reviewLayerTitle": "Ôn tập"
+    "reviewLayerTitle": "Ôn tập",
+    "tutorLanguage": "Gia sư nói bằng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3400,7 +3403,8 @@
     "recallTitle": "Réutiliser",
     "recallNone": "Aucune structure apprise pour l’instant",
     "framesToNext": "Avant l’étape suivante : Structures {a}/{n} · Réutiliser {b}/{n}",
-    "reviewLayerTitle": "Révision"
+    "reviewLayerTitle": "Révision",
+    "tutorLanguage": "Le tuteur parle"
   },
   "it": {
     "archive": "Report",
@@ -4447,7 +4451,8 @@
     "recallTitle": "Usalo",
     "recallNone": "Nessuna struttura imparata ancora",
     "framesToNext": "Prima della fase successiva: Strutture {a}/{n} · Usalo {b}/{n}",
-    "reviewLayerTitle": "Ripasso"
+    "reviewLayerTitle": "Ripasso",
+    "tutorLanguage": "Il tutor parla"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5306,7 +5311,8 @@
     "recallTitle": "Use você",
     "recallNone": "Nenhuma estrutura aprendida ainda",
     "framesToNext": "Antes da próxima etapa: Estruturas {a}/{n} · Use você {b}/{n}",
-    "reviewLayerTitle": "Revisão"
+    "reviewLayerTitle": "Revisão",
+    "tutorLanguage": "O tutor fala"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6351,7 +6357,8 @@
     "recallTitle": "Применить",
     "recallNone": "Пока нет выученных конструкций",
     "framesToNext": "До следующего этапа: Конструкции {a}/{n} · Применить {b}/{n}",
-    "reviewLayerTitle": "Повторение"
+    "reviewLayerTitle": "Повторение",
+    "tutorLanguage": "Язык репетитора"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7206,7 +7213,8 @@
     "recallTitle": "Pakai",
     "recallNone": "Belum ada struktur kalimat yang dipelajari",
     "framesToNext": "Sebelum tahap berikutnya: Struktur kalimat {a}/{n} · Pakai {b}/{n}",
-    "reviewLayerTitle": "Ulangan"
+    "reviewLayerTitle": "Ulangan",
+    "tutorLanguage": "Tutor berbicara"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8054,7 +8062,8 @@
     "recallTitle": "استخدمها",
     "recallNone": "لا توجد تراكيب مُتعلَّمة بعد",
     "framesToNext": "قبل المرحلة التالية: تراكيب {a}/{n} · استخدمها {b}/{n}",
-    "reviewLayerTitle": "مراجعة"
+    "reviewLayerTitle": "مراجعة",
+    "tutorLanguage": "لغة المعلّم"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8902,7 +8911,8 @@
     "recallTitle": "ลองใช้",
     "recallNone": "ยังไม่มีโครงสร้างประโยคที่เรียนแล้ว",
     "framesToNext": "ก่อนขั้นถัดไป: โครงสร้างประโยค {a}/{n} · ลองใช้ {b}/{n}",
-    "reviewLayerTitle": "ทบทวน"
+    "reviewLayerTitle": "ทบทวน",
+    "tutorLanguage": "ภาษาที่ติวเตอร์ใช้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9750,6 +9760,7 @@
     "recallTitle": "इस्तेमाल करो",
     "recallNone": "अभी कोई वाक्य ढाँचा नहीं सीखा",
     "framesToNext": "अगले चरण से पहले: वाक्य ढाँचे {a}/{n} · इस्तेमाल करो {b}/{n}",
-    "reviewLayerTitle": "दोहराना"
+    "reviewLayerTitle": "दोहराना",
+    "tutorLanguage": "ट्यूटर की भाषा"
   }
 }

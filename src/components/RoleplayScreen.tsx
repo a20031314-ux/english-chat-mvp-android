@@ -1,5 +1,6 @@
 "use client";
 
+import { tutorIsBilingual } from "@/lib/tutorLanguage";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -710,6 +711,7 @@ export function RoleplayScreen({
         ...instruction.request,
         history: rawLines(instruction.request.history, memory),
         context: memory.text,
+        ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -1281,7 +1283,7 @@ export function RoleplayScreen({
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
             ) : null}
-            {/* 💡 힌트: 말이 없거나 말하다 끊겼을 때만. 누르면 대화가 멈추고 힌트 패널 → "이어서 하기"로 같은 턴. */}
+            {/* 💡 힌트: 말이 없거나 말하다 끊겼을 때만. 누르면 대화가 멈추고 힌트 패널 → roleplayResume로 같은 턴. */}
             {!reviewing && !thinking && (pending || (helpReady && !learnerTalking)) ? (
               <button
                 type="button"

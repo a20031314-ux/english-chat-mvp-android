@@ -116,6 +116,11 @@ type ChatTurnOptions = {
   brief?: string;
   /** What this conversation was started to practise (learner/practice.ts). */
   practice?: PracticeGoal | null;
+  /**
+   * 학습자가 "내 말도 하는 튜터"를 골랐다(lib/tutorLanguage.ts, AI 대화 ⋮). 튜터는 학습 언어로 이어 가되,
+   * 앱 언어로 쓰거나 막혔을 때 앱 언어 한 문장까지 섞을 수 있다 — bilingualBlock.
+   */
+  bilingual?: boolean;
 };
 
 function resolveChatLanguages(body: {
@@ -237,6 +242,18 @@ Hard rules:
 ${explanationGuard}`;
 }
 
+/**
+ * 두 언어 튜터(lib/tutorLanguage.ts): 학습 언어 원어민인데 학습자의 말도 꽤 한다.
+ * 위 ownLanguage 블록의 "가르치지 말 것"보다 앞선다 — 학습자가 고른 방식이라서.
+ * 지시에 베낄 수 있는 예문은 넣지 않는다(RULES "자주 걸리는 것").
+ */
+export function bilingualTutorRule(targetName: string, ownName: string): string {
+  return `They chose a partner who also speaks ${ownName}. You are a native ${targetName} speaker who has lived among ${ownName} speakers for a while and speaks ${ownName} fairly well, if not perfectly. This overrides anything above about never using ${ownName} or never teaching in your reply:
+- The conversation stays in ${targetName}. When they write in ${targetName}, answer only in ${targetName}.
+- When they write in ${ownName}, mix ${ownName} into a ${targetName} sentence, or are clearly stuck, you may add ONE short sentence in ${ownName} — to show you understood, or to hand them the ${targetName} words for what they were trying to say — and then carry on in ${targetName} in the same reply.
+- Never more than one ${ownName} sentence per reply, never a whole reply in ${ownName}, and no grammar lessons: a friend helping out, not a teacher.`;
+}
+
 function buildChatSystem(
   langs: ChatLanguages,
   options: ChatTurnOptions = {},
@@ -272,6 +289,7 @@ This turn they wrote in ${explanationLanguage}, their own language, because they
 If it is a question to you — most often what a word or phrase YOU just used means (look at your last "you:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.
 If they ask about their own learning — what they have improved at, what to practise next — it is about THEM, not you and not the world: answer as someone who has been chatting with them, from what recent (and any brief about their practice) shows, honestly saying when there is little to go on, and name one concrete thing to practise.`
     : "";
+  const bilingualBlock = options.bilingual ? `\n${bilingualTutorRule(targetName, explanationLanguage)}` : "";
   const imageBlock = options.imageDataUrl
     ? `
 They attached a photo. Look at it and react the way a friend would in chat. Do not caption it like a vision demo unless they asked what is in the picture. If they also sent text, reply to the text and the photo together. Correction applies to their text only, not the image.`
@@ -282,7 +300,7 @@ They attached a photo. Look at it and react the way a friend would in chat. Do n
 
 You chat in ${targetName} with the user. This call only writes your reply — another step corrects their language, so do not correct, quote back or comment on their wording.
 ${tutorBlock}
-${ownLanguageBlock}
+${ownLanguageBlock}${bilingualBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs).
@@ -300,7 +318,7 @@ Return ONLY valid JSON (no markdown) with this exact shape:
 
 You chat in English with the user. Correction is a separate job from talking.
 ${tutorBlock}
-${ownLanguageBlock}
+${ownLanguageBlock}${bilingualBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": something a rule checker already found in message — trust it, fix it in corrected and explain it.
@@ -323,7 +341,7 @@ ${identity}
 
 You chat in ${targetName} with the user. Correction is a separate, DETAILED job from talking — catch real ${targetName} mistakes carefully, the same way an English tutor would for English, but using ${targetName}'s own grammar.
 ${tutorBlock}
-${ownLanguageBlock}
+${ownLanguageBlock}${bilingualBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": mistakes a rule checker already found in message — trust it, fix them in corrected and explain them.
@@ -1023,6 +1041,7 @@ export async function POST(request: NextRequest) {
     imageDataUrl?: unknown;
     conversationMode?: unknown;
     ownLanguage?: unknown;
+    bilingual?: unknown;
     expressionOnly?: unknown;
     purpose?: unknown;
     practice?: unknown;
@@ -1277,6 +1296,7 @@ export async function POST(request: NextRequest) {
       conversationMode,
       imageDataUrl,
       ownLanguage: body.ownLanguage === true,
+      bilingual: body.bilingual === true && langs.interfaceLanguage !== langs.targetLanguage,
       brief,
       practice,
     };

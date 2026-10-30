@@ -174,6 +174,8 @@ export async function POST(request: NextRequest) {
     level: Math.min(5, Math.max(1, readCount(body.level) || 3)),
     targetLanguage: coerceLanguageCode(scenario.language),
     nativeLanguage: coerceLanguageCode(body.nativeLanguage),
+    // 내 말도 하는 튜터(lib/tutorLanguage.ts, AI 대화 ⋮).
+    ...(body.bilingual === true ? { bilingual: true } : {}),
   };
 
   const bank = sentencesFor(scenario.language);

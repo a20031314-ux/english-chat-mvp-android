@@ -41,6 +41,7 @@ import {
 } from "@/lib/correctionNorm";
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
+  getLearningLanguage,
   isLearningLanguageCode,
   learningLanguageTextDir,
   type LearningLanguageCode,
@@ -66,6 +67,13 @@ import {
   writeCorrectionView,
   type CorrectionView,
 } from "@/lib/correctionView";
+import {
+  DEFAULT_TUTOR_LANGUAGE,
+  bilingualPossible,
+  readTutorLanguage,
+  writeTutorLanguage,
+  type TutorLanguage,
+} from "@/lib/tutorLanguage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
 import {
   ReportContentDialog,
@@ -780,6 +788,15 @@ export function ChatWindow({
     setCorrectionView(view);
     writeCorrectionView(view);
   };
+  // 튜터가 쓰는 말: 학습 언어만(기본) / 학습 언어 + 내 말. 통화도 같은 값을 읽는다(lib/tutorLanguage.ts).
+  const [tutorLanguage, setTutorLanguage] = useState<TutorLanguage>(DEFAULT_TUTOR_LANGUAGE);
+  useEffect(() => {
+    setTutorLanguage(readTutorLanguage());
+  }, []);
+  const chooseTutorLanguage = (mode: TutorLanguage) => {
+    setTutorLanguage(mode);
+    writeTutorLanguage(mode);
+  };
   const sessionMenuRef = useRef<HTMLDivElement>(null);
   const [sessionEnded, setSessionEnded] = useState(false);
   const photoInputRef = useRef<HTMLInputElement>(null);
@@ -1077,6 +1094,7 @@ export function ChatWindow({
       conversationMode,
       ...(imageDataUrl ? { imageDataUrl } : {}),
       ...(ownLanguage ? { ownLanguage: true } : {}),
+      ...(tutorLanguage === "both" && bilingualPossible(sessionLanguageCode, locale) ? { bilingual: true } : {}),
       ...(practice ? { practice: practice.goal } : {}),
       recent: turns
         .flatMap((turn) => {
@@ -1736,6 +1754,30 @@ export function ChatWindow({
                 >
                   {ui.reportTitle}
                 </button>
+                {bilingualPossible(sessionLanguageCode, locale) ? (
+                  <div className="border-t border-line px-3 py-2">
+                    <p className="text-meta text-slate-400">{ui.tutorLanguage}</p>
+                    <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.tutorLanguage}>
+                      {(["target", "both"] as const).map((mode) => (
+                        <button
+                          key={mode}
+                          type="button"
+                          aria-pressed={tutorLanguage === mode}
+                          onClick={() => chooseTutorLanguage(mode)}
+                          className={`rounded-lg px-2 py-1 text-start text-xs ${
+                            tutorLanguage === mode
+                              ? "bg-platinum text-slate-900"
+                              : "text-slate-200 hover:bg-white/10"
+                          }`}
+                        >
+                          {mode === "target"
+                            ? getLearningLanguage(sessionLanguageCode).nativeLabel
+                            : `${getLearningLanguage(sessionLanguageCode).nativeLabel} + ${getLearningLanguage(locale).nativeLabel}`}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
                 <div className="border-t border-line px-3 py-2">
                   <p className="text-meta text-slate-400">{ui.chatCorrectionView}</p>
                   <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.chatCorrectionView}>

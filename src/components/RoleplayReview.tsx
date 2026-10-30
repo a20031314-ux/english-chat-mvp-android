@@ -426,7 +426,7 @@ export function RoleplayReviewPanel({
         ref={scroller}
         className="max-h-[80%] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
       >
-        {/* 통화 중 💡 힌트(turn.live): 지금 이어 말할 말 — 이름은 "힌트"·"이렇게 말할 수 있어요"·"이어서 하기"(기존 문구). */}
+        {/* 통화 중 💡 힌트(turn.live): 지금 이어 말할 말 — 이름은 기존 문구 missionHint·roleplayBetter·roleplayResume. */}
         <h3 className="text-sm font-semibold text-white">{turn.live ? `💡 ${ui.missionHint}` : ui.roleplayReviewTitle}</h3>
         <p className="mt-1 text-[12px] text-neutral-500">{turn.asked}</p>
 
