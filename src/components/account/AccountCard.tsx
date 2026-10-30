@@ -834,11 +834,11 @@ function isEmptyFacts(facts: ProfileFacts): boolean {
   return !facts.country && !facts.native && facts.interests.length === 0 && facts.meetModes.length === 0 && facts.speaks.length === 0 && facts.learns.length === 0 && !facts.work;
 }
 
-/** 로그인 직후 한 번(또는 사람 탭을 처음 쓸 때 PeopleFactsAsk): 국적·모국어·할 수 있는 언어·배우는 언어·관심사·대화 방식만 고르는 화면. 건너뛰면 편집 시트로(언제든 편집에서 고칠 수 있음). */
+/** 로그인 직후 한 번(또는 사람 탭을 처음 쓸 때 PeopleFactsAsk): 국적·모국어·할 수 있는 언어·관심사·대화 방식만 고르는 화면(배우는 언어는 처음 실행에서). 건너뛰면 편집 시트로(언제든 편집에서 고칠 수 있음). */
 function FactsSetup({ locale, account, onDone }: { locale: string; account: PublicAccount; onDone: () => void }) {
   const t = profileCopy(locale);
   const learning = useLearningLanguageOptional()?.targetLanguage;
-  // 배우는 언어는 지금 배우는 언어를 미리 칠해 둔다(모국어로 고르면 FactsEditor가 뺀다).
+  // 배우는 언어 칸은 이 화면에 없다 — 지금 배우는 언어를 그대로 담아 저장한다(모국어로 고르면 FactsEditor가 뺀다).
   const [facts, setFacts] = useState<ProfileFacts>(() => {
     const start = factsOf(account.profile.facts);
     return learning && !start.learns.length && start.native !== learning ? { ...start, learns: [learning] } : start;

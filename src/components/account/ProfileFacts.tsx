@@ -59,7 +59,7 @@ function toggle<T extends string>(list: readonly T[], id: T, max: number): T[] {
   return list.length >= max ? [...list] : [...list, id];
 }
 
-/** 나에 대한 사실 고르기. `compact`면 로그인 직후 화면용(나라·모국어·할 수 있는 언어·배우는 언어·관심사·대화 방식만). */
+/** 나에 대한 사실 고르기. `compact`면 로그인 직후 화면용(나라·모국어·할 수 있는 언어·관심사·대화 방식만 — 배우는 언어는 처음 실행에서 정함). */
 export function FactsEditor({
   locale,
   facts,
@@ -125,18 +125,21 @@ export function FactsEditor({
             />
           ))}
       </Section>
-      <Section title={t.learns}>
-        {langs
-          .filter((code) => code !== facts.native)
-          .map((code) => (
-            <Chip
-              key={code}
-              label={learningLanguageUiLabel(code, locale)}
-              on={facts.learns.includes(code)}
-              onClick={() => onChange({ ...facts, learns: toggle(facts.learns, code, LANGS_MAX) })}
-            />
-          ))}
-      </Section>
+      {/* 배우는 언어는 처음 실행에서 이미 골랐고 저절로 쌓인다(LearnsSync) — 소개 화면에서는 다시 묻지 않고 편집 시트에서만(2026-10-31). */}
+      {!compact ? (
+        <Section title={t.learns}>
+          {langs
+            .filter((code) => code !== facts.native)
+            .map((code) => (
+              <Chip
+                key={code}
+                label={learningLanguageUiLabel(code, locale)}
+                on={facts.learns.includes(code)}
+                onClick={() => onChange({ ...facts, learns: toggle(facts.learns, code, LANGS_MAX) })}
+              />
+            ))}
+        </Section>
+      ) : null}
       <Section title={t.interests} aside={fillCount(t.interestsLimit, INTERESTS_MAX)}>
         {INTEREST_IDS.map((id) => (
           <Chip
