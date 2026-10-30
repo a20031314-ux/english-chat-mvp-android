@@ -132,20 +132,19 @@ test("문법 칸 퀴즈 재료: 뒤 단계 대본(earlierGrammar)·문장구조 
   assert.ok(sourcesOf("en", key).some((source) => source.from === later.id));
 });
 
-test("학습 조합: 말하기·듣기·읽기 위주로 모양이 바뀌고, 대본 하나를 문제 묶음으로(일본어·스페인어·태국어)", async () => {
+test("학습 조합: 말하기·읽기 위주로 모양이 바뀌고, 대본 하나를 문제 묶음으로 — 듣고 고르기는 없음(일본어·스페인어·태국어)", async () => {
   const { buildQuiz: build, buildUnit, unitPassed } = await import("./quiz.ts");
   const { allScriptsFor } = await import("./stageScripts.ts");
   for (const language of ["ja", "es", "th"]) {
     const script = allScriptsFor(language).find((one) => one.stage === 1)!;
     const key = `e|${script.expressions[0]}`;
-    const listen = build(language, key, { mix: "listen" });
-    assert.ok(listen && listen.questions.some((q) => q.kind === "listen"), `${language} listen`);
     const read = build(language, key, { mix: "read" });
     assert.ok(read && read.questions.every((q) => q.kind !== "say"), `${language} read 말하기 없음`);
-    for (const mix of ["listen", "read"] as const) {
+    for (const mix of ["speak", "read"] as const) {
       const unit = buildUnit(language, script.id, mix, "d1");
       assert.ok(unit.length >= 3 && unit.length <= 8, `${language} ${mix} ${unit.length}`);
-      for (const q of unit) if (q.kind === "listen" || q.kind === "meaning") assert.equal(q.options.length, 3);
+      assert.ok(unit.every((q) => q.kind !== ("listen" as never)), `${language} ${mix} 듣기 없음`);
+      for (const q of unit) if (q.kind === "meaning") assert.equal(q.options.length, 3);
       if (mix === "read") assert.ok(unit.every((q) => q.kind !== "say"));
       assert.deepEqual(buildUnit(language, script.id, mix, "d1"), unit, "같은 날 같은 문제");
     }
@@ -163,7 +162,7 @@ test("문법·문장구조 열쇠는 말하기 문제가 없다(고르기·순�
     const grammar = [1, 2, 3].flatMap((stage) => stageKeys(language, stage)).filter((key) => !speakScored(key));
     assert.ok(grammar.length > 0, language);
     for (const key of grammar) {
-      for (const options of [{}, { round: 2 }, { mix: "speak" as const }, { mix: "listen" as const }, { kinds: ["say", "say", "order"] as const }]) {
+      for (const options of [{}, { round: 2 }, { mix: "speak" as const }, { mix: "read" as const }, { kinds: ["say", "say", "order"] as const }]) {
         const quiz = buildQuiz(language, key, { seed: "t", ...options, kinds: "kinds" in options ? [...options.kinds] : undefined });
         assert.ok(!quiz?.questions.some((q) => q.kind === "say"), `${language} ${key} ${JSON.stringify(options)}`);
       }
@@ -176,8 +175,8 @@ test("문법·문장구조 열쇠는 말하기 문제가 없다(고르기·순�
   assert.equal(speakScored("e|nice to meet you"), true);
 });
 
-test("단어 퀴즈(w|): 빈칸 → 예문 속 밑줄 낱말 뜻 고르기 → 말하기 — 스페인어·일본어", async () => {
-  const { registerQuizSources, wordQuiz, buildQuiz } = await import("./quiz.ts");
+test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없음, 같은 낱말을 세 번 묻지 않음 — 스페인어·일본어", async () => {
+  const { registerQuizSources, wordQuiz, buildQuiz, bundleQuiz } = await import("./quiz.ts");
   const cases: [string, [string, string, string, string][]][] = [
     ["es", [["casa", "Mi casa es pequeña.", "집", "우리 집은 작아요."], ["perro", "El perro come mucho.", "개", "개가 많이 먹어요."], ["agua", "Quiero agua fría.", "물", "찬물을 원해요."]]],
     ["ja", [["駅", "駅はどこですか。", "역", "역은 어디예요?"], ["水", "水をください。", "물", "물 주세요."], ["本", "この本はおもしろい。", "책", "이 책은 재미있어요."]]],
@@ -187,13 +186,16 @@ test("단어 퀴즈(w|): 빈칸 → 예문 속 밑줄 낱말 뜻 고르기 → �
     const [w, , gloss] = words[0]!;
     const quiz = wordQuiz(language, `w|${w}`, "seed");
     assert.ok(quiz, language);
-    assert.deepEqual(quiz!.questions.map((q) => q.kind), ["choose", "meaning", "say"], language);
-    const meaning = quiz!.questions[1]!;
-    assert.equal(meaning.kind === "meaning" && meaning.mark, w);
-    assert.equal(meaning.kind === "meaning" && meaning.options[meaning.answer]!.raw, gloss);
-    assert.equal(quiz!.questions[2]!.kind === "say" && quiz!.questions[2]!.mark, w);
+    assert.deepEqual(quiz!.questions.map((q) => q.kind), ["choose"], language);
+    const blank = quiz!.questions[0]!;
+    assert.ok(blank.kind === "choose" && blank.options[blank.answer] === w, `${language} 정답은 그 낱말`);
+    assert.ok(gloss);
     // 학습 조합을 정해도 단어 퀴즈 모양.
-    assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "listen" })!.questions.map((q) => q.kind), ["choose", "meaning", "say"]);
+    assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "read" })!.questions.map((q) => q.kind), ["choose"]);
+    // 짝 맞추기 뒤 묶음: 낱말마다 예문 빈칸 한 문제씩.
+    const bundle = bundleQuiz(language, words.map(([one]) => `w|${one}`), { seed: "s", style: "choose" });
+    assert.equal(new Set(bundle.keys).size, bundle.keys.length, `${language} 낱말마다 한 번`);
+    assert.ok(bundle.questions.length >= 2 && bundle.questions.every((q) => q.kind === "choose"), `${language} ${bundle.questions.map((q) => q.kind)}`);
   }
 });
 
@@ -232,6 +234,6 @@ test("복습에서 고른 모양: 묶음이 그 모양만, 단어 퀴즈도 그 
     }
   }
   registerQuizSources("es", [{ key: "w|zzcafé", sources: [{ text: "Quiero un café, por favor.", gloss: { en: "", raw: "커피 한 잔 주세요" }, from: "w|zzcafé", stage: 0, piece: "café", who: "me", wordGloss: "커피" }] }]);
-  const word = buildQuiz("es", "w|zzcafé", { kinds: ["meaning", "meaning", "meaning"] });
-  if (word) assert.ok(word.questions.every((q) => q.kind === "meaning"), String(word.questions.map((q) => q.kind)));
+  const word = buildQuiz("es", "w|zzcafé", { kinds: ["choose", "choose", "choose"] });
+  if (word) assert.ok(word.questions.every((q) => q.kind === "choose"), String(word.questions.map((q) => q.kind)));
 });

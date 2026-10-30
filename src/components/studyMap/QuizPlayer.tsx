@@ -10,7 +10,7 @@ import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
 import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
-import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
+import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
@@ -188,7 +188,7 @@ export function QuizPlayer({
 }
 
 function kindName(ui: UICopy, kind: QuizQuestion["kind"]): string {
-  return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay, listen: ui.quizKindListen, meaning: ui.quizKindMeaning }[kind];
+  return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay, meaning: ui.quizKindMeaning }[kind];
 }
 
 export function QuestionView({
@@ -213,7 +213,7 @@ export function QuestionView({
   useAllStageGlosses(language, locale);
   // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
   // Wrong answers stay so the right one can be read; say/order keep the button.
-  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "listen" || question.kind === "meaning"));
+  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -229,7 +229,7 @@ export function QuestionView({
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "listen" || question.kind === "meaning" ? (
+      {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -458,7 +458,7 @@ function OrderView({
   );
 }
 
-/** 듣고 고르기(소리만 → 들은 문장)·뜻 고르기(문장 → 앱 언어 뜻). 답하면 문장·뜻을 함께 보인다. */
+/** 뜻 고르기(문장 → 앱 언어 뜻). 듣고 고르기는 뺌(2026-10-30). */
 function PickView({
   locale,
   language,
@@ -469,31 +469,21 @@ function PickView({
 }: {
   locale: string;
   language: string;
-  question: Extract<QuizQuestion, { kind: "listen" | "meaning" }>;
+  question: Extract<QuizQuestion, { kind: "meaning" }>;
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
   tag: string;
 }) {
   const [picked, setPicked] = useState<number | null>(null);
-  const listen = question.kind === "listen";
-  const label = (i: number) => (listen ? (question.options[i] as string) : (quizGloss(question.options[i] as ScriptGloss, locale, language) ?? "…"));
+  const label = (i: number) => quizGloss(question.options[i]!, locale, language) ?? "…";
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-start gap-2">
-        {listen && !answered ? (
-          <span className="min-w-0 flex-1 text-chat text-slate-500">＿＿＿</span>
-        ) : (
-          <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-            <Marked text={question.text} mark={question.kind === "meaning" ? question.mark : undefined} />
-          </p>
-        )}
+        <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+          <Marked text={question.text} mark={question.mark} />
+        </p>
         <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
       </div>
-      {answered && listen ? (
-        <p dir="auto" className="text-note text-slate-400">
-          {quizGloss(question.gloss, locale, language) ?? ""}
-        </p>
-      ) : null}
       <div className="flex flex-col gap-2">
         {question.options.map((_, i) => {
           const isRight = i === question.answer;

@@ -2,30 +2,30 @@
  * "이 부분은 이렇게 익히는 게 좋다"(2026-10-29 사용자 → "1번 2번 만들어줘"): 학습 조합이 "알아서"일 때 퀴즈 세 문제의 모양.
  *
  * 1) 항목 성격별 기본 순서(모두 같음):
- *    낱말(두 낱말까지)      뜻 고르기 → 듣고 고르기 → 말하기   (뜻·소리를 묶고 꺼냄)
+ *    낱말(두 낱말까지)      빈칸 → 뜻 고르기 → 맞추기          (발음·듣기 뺌, 2026-10-30)
  *    문법·문장구조          맞추기 → 빈칸 → 맞추기             (어순·형태를 조립부터, 말하기 채점 없음 2026-10-29)
- *    덩어리 표현(긴 표현)    듣고 고르기 → 말하기 → 말하기       (쪼개지 말고 통째로)
+ *    덩어리 표현(긴 표현)    빈칸 → 맞추기 → 말하기             (쪼개지 말고 통째로)
  *    높임·말투가 갈리는 말   빈칸 → 뜻 고르기 → 말하기           (언제 쓰는지)
- *    소리가 까다로운 말      듣고 고르기 → 듣고 고르기 → 말하기  (성조·장음·촉음·목구멍소리)
- *    높임·소리는 언어마다 짧은 목록(REGISTER·SOUND)으로, 없는 언어는 앞의 셋만.
+ *    높임은 언어마다 짧은 목록(REGISTER)으로, 없는 언어는 앞의 셋만.
+ *    듣고 고르기·소리 묶음은 뺌(2026-10-30 사용자 "발음, 듣기 문제는 그냥 삭제").
  * 2) 사람마다 고치기: 그 열쇠를 이 폰에서 모양별로 맞히고 틀린 기록(KindLog)에서 가장 약한 모양을 앞에 두 번 —
- *    고르기는 되는데 말하기가 틀리면 말하기 둘, 듣기가 틀리면 듣기 둘, 맞추기가 틀리면 맞추기 둘.
+ *    고르기는 되는데 말하기가 틀리면 말하기 둘, 맞추기가 틀리면 맞추기 둘(지금 없는 모양의 기록은 무시).
  *    앞 모양들을 두 번 넘게 다 맞혔으면 쉬운 모양을 건너뛰고 말하기 위주.
  * 화면에 설명은 띄우지 않는다(조합 "알아서"가 조용히 이 순서로). 문장은 남기지 않음 — 열쇠·모양·횟수만, 이 폰에.
  */
 import type { QuizQuestion } from "./quiz.ts";
 import { isWordish } from "../notes/stageParts.ts";
 
-export type ItemStyle = "word" | "structure" | "chunk" | "register" | "sound";
+export type ItemStyle = "word" | "structure" | "chunk" | "register";
 type Kind = QuizQuestion["kind"];
 
 export const STYLE_KINDS: Record<ItemStyle, Kind[]> = {
-  word: ["meaning", "listen", "say"],
+  // 낱말 같은 표현(e|): 발음(말하기)·듣기 없이 예문 빈칸 → 뜻 → 맞추기. 단어장 낱말(w|)은 quiz.ts wordQuiz(예문 빈칸 하나).
+  word: ["choose", "meaning", "order"],
   // 문법·문장구조는 말하기로 채점하지 않음(quiz.ts speakScored) — 맞추기 → 빈칸 → 다른 줄 맞추기.
   structure: ["order", "choose", "order"],
-  chunk: ["listen", "say", "say"],
+  chunk: ["choose", "order", "say"],
   register: ["choose", "meaning", "say"],
-  sound: ["listen", "listen", "say"],
 };
 
 /** 높임·말투가 갈리는 표지(학습 언어). */
@@ -42,22 +42,14 @@ const REGISTER: Record<string, RegExp> = {
   id: /\b(bapak|ibu|mohon|silakan)\b/iu,
 };
 
-/** 소리가 까다로운 말(학습 언어 글자 모양으로 가늠). */
-const SOUND: Record<string, RegExp> = {
-  ja: /[っッー]|おう|えい|ゅう|ょう/u,
-  th: /[่-๋]/u,
-  zh: /^[\p{Script=Han}]{1,2}$/u,
-  ar: /[عحقخغضظطص]/u,
-  vi: /[ảẩẳẻểỉỏổởủửỷãẫẵẽễĩõỗỡũữỹ]/iu,
-};
-
 export function itemStyle(language: string, key: string): ItemStyle {
   if (key.startsWith("f|") || key.startsWith("g|")) return "structure";
   const text = key.slice(2);
   if (REGISTER[language]?.test(text)) return "register";
-  if (SOUND[language]?.test(text)) return "sound";
   return isWordish(text, language) ? "word" : "chunk";
 }
+
+const LIVE_KINDS = new Set<Kind>(["fix", "choose", "order", "say", "meaning"]);
 
 /** 열쇠 → 모양 → [맞힘, 푼 수](이 폰). */
 export type KindLog = Record<string, Partial<Record<Kind, [number, number]>>>;
@@ -79,7 +71,8 @@ export function styleKinds(language: string, key: string, log?: KindLog | null):
   const base = STYLE_KINDS[itemStyle(language, key)];
   const row = log?.[key];
   if (!row) return base;
-  const tried = (Object.entries(row) as [Kind, [number, number]][]).filter(([, [, n]]) => n > 0);
+  // 뺀 모양(옛 기록의 듣고 고르기)은 세지 않는다.
+  const tried = (Object.entries(row) as [Kind, [number, number]][]).filter(([kind, [, n]]) => n > 0 && LIVE_KINDS.has(kind));
   const weak = tried.filter(([, [r, n]]) => r < n).sort((a, b) => a[1][0] / a[1][1] - b[1][0] / b[1][1])[0]?.[0];
   if (weak) {
     if (weak === "say") return ["say", "say", base.find((k) => k !== "say") ?? "choose"];

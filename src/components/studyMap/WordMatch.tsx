@@ -41,7 +41,8 @@ export function matchPairs(candidates: readonly MatchPair[]): MatchPair[] {
   return out;
 }
 
-export function WordMatch({ ui, pairs, onClose }: { ui: UICopy; pairs: readonly MatchPair[]; onClose: () => void }) {
+/** onNext: 어휘 계속 공부 — 짝을 다 맞히면 같은 낱말들의 예문 빈칸으로(2026-10-30 사용자 "단순하게 맞추기 > 예문 형태로"). */
+export function WordMatch({ ui, pairs, onClose, onNext }: { ui: UICopy; pairs: readonly MatchPair[]; onClose: () => void; onNext?: (words: string[]) => void }) {
   const [round, setRound] = useState(0);
   const set = useMemo(() => {
     const start = (round * MATCH_SIZE) % Math.max(1, pairs.length);
@@ -119,9 +120,15 @@ export function WordMatch({ ui, pairs, onClose }: { ui: UICopy; pairs: readonly 
             <button type="button" onClick={onClose} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
               {ui.billingClose}
             </button>
+            {onNext ? (
+              <button type="button" data-match-next onClick={() => onNext(set.picked.map((one) => one.word))} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
+                {ui.scriptNext}
+              </button>
+            ) : null}
             <button
               type="button"
               data-match-again
+              hidden={Boolean(onNext)}
               onClick={() => {
                 setDone(new Set());
                 setChosen(null);

@@ -26,16 +26,15 @@ export type QuizQuestion =
   | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
-  /** 듣고 고르기: 소리만 듣고 들은 문장 고르기(보기 = 같은 단계 다른 줄). */
-  | { kind: "listen"; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
 
 /**
  * 학습 조합(2026-10-29 사용자 "방식에 이름을 붙이기보다 나눠서 고르거나 학습 조합을 짜 주는 식"):
- * auto = 앱이 돌림(풀 때마다 다른 모양) · speak = 말하기 위주 · listen = 듣기 위주 · read = 읽고 고르기 위주.
+ * auto = 앱이 돌림(풀 때마다 다른 모양) · speak = 말하기 위주 · read = 읽고 고르기 위주.
+ * 듣기 위주(듣고 고르기)는 뺌(2026-10-30 사용자 "발음, 듣기 문제는 그냥 삭제" — 보기가 뜻부터 달라 듣지 않아도 풀렸음).
  */
-export type QuizMix = "auto" | "speak" | "listen" | "read";
+export type QuizMix = "auto" | "speak" | "read";
 
 export type Quiz = { key: string; questions: QuizQuestion[] };
 
@@ -334,39 +333,23 @@ export function speakScored(key: string): boolean {
  * 낱말 뜻 고르기(예문 속 그 낱말에 밑줄, 보기는 다른 낱말 뜻) → 그 예문 말하기(밑줄). 학습 조합과 상관없이 이 모양.
  */
 export function wordQuiz(language: string, key: string, seed = ""): Quiz | null {
+  // 단어 퀴즈 = 예문 빈칸 하나(2026-10-30 사용자 "단어 퀴즈는 단순하게 맞추기 > 예문 형태로, 발음·듣기 문제는 삭제").
+  // 같은 낱말을 모양만 바꿔 세 번 묻지 않는다 — 낱말 여럿은 짝 맞추기(WordMatch) 뒤 묶음으로 한 문제씩.
   const source = quizSources(language, key)[0];
   if (!source?.piece || !source.text.includes(source.piece)) return null;
   const random = rng(`${key}|${seed}|word`);
-  const questions: QuizQuestion[] = [];
-  const blank = chooseOf(language, key, source, random);
-  if (blank) questions.push(blank);
-  const own = source.wordGloss?.trim();
-  const others = own
-    ? [...new Set([...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key && k.startsWith("w|")).map(([, list]) => list[0]?.wordGloss?.trim() ?? "").filter((g) => g && g !== own))]
-    : [];
-  if (own && others.length >= 2) {
-    const options = shuffled([own, ...shuffled(others, random).slice(0, 2)], random).map((raw) => ({ en: "", raw }));
-    questions.push({ kind: "meaning", text: source.text, mark: source.piece, options, answer: options.findIndex((o) => o.raw === own), gloss: source.gloss, from: source.from });
-  } else {
-    const sentence = meaningOf(language, source, random);
-    if (sentence && sentence.kind === "meaning") questions.push({ ...sentence, mark: source.piece });
-  }
-  if (!blank) {
-    const order = orderOf(language, source, random);
-    if (order) questions.unshift(order);
-  }
-  questions.push({ kind: "say", text: source.text, gloss: source.gloss, from: source.from, mark: source.piece });
-  return questions.length >= 2 ? { key, questions: questions.slice(0, QUIZ_SIZE) } : null;
+  const question = chooseOf(language, key, source, random) ?? orderOf(language, source, random);
+  return question ? { key, questions: [question] } : null;
 }
 
 /**
  * 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 열쇠 여럿에서 한 문제씩 — 같은 열쇠를 세 번 묻지 않는다.
  * 열쇠마다 그 열쇠 퀴즈의 첫 문제(말하기는 묶음에 하나까지, 같은 문장 두 번 없음). 문제마다 열쇠를 같이 돌려준다(결과는 열쇠마다 기록).
  */
-const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "listen", "say", "meaning"];
+const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "say", "meaning"];
 
 /** 복습에서 고른 문제 모양(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게") — 없으면 돌아가며. */
-export type QuizStyle = Extract<QuizQuestion["kind"], "choose" | "order" | "listen" | "say" | "meaning">;
+export type QuizStyle = Extract<QuizQuestion["kind"], "choose" | "order" | "say" | "meaning">;
 
 export function bundleQuiz(language: string, keys: readonly string[], options: { seed?: string; stage?: number; style?: QuizStyle } = {}): { questions: QuizQuestion[]; keys: string[] } {
   const questions: QuizQuestion[] = [];
@@ -375,7 +358,7 @@ export function bundleQuiz(language: string, keys: readonly string[], options: {
   let says = 0;
   for (const key of keys) {
     if (questions.length >= QUIZ_SIZE + 1) break;
-    // 모양을 돌아가며(빈칸 → 순서 → 듣기 → 말하기 → 뜻) — 묶음이 한 모양만 되지 않게. 단어(w|)는 단어 퀴즈의 첫 문제(빈칸).
+    // 모양을 돌아가며(빈칸 → 순서 → 말하기 → 뜻) — 묶음이 한 모양만 되지 않게. 단어(w|)는 단어 퀴즈의 첫 문제(빈칸).
     const want = options.style ?? BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
     const order = [want, ...BUNDLE_KINDS.filter((kind) => kind !== want)];
     const quiz = key.startsWith("w|") ? buildQuiz(language, key, { seed: options.seed, stage: options.stage }) : (buildQuiz(language, key, { seed: options.seed, stage: options.stage, kinds: order }) ?? buildQuiz(language, key, { seed: options.seed, stage: options.stage }));
@@ -413,7 +396,7 @@ export function buildQuiz(
     if (word && only.length) return { key, questions: only };
     if (word) return word;
   }
-  // 조합(말하기·듣기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).
+  // 조합(말하기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).
   const kinds = options.mix && options.mix !== "auto" ? MIX_KINDS[options.mix] : options.kinds;
   if (kinds?.length) {
     const random = rng(`${key}|${options.seed ?? ""}|${kinds.join(",")}`);
@@ -482,7 +465,7 @@ export function buildQuiz(
   return questions.length >= 2 ? { key, questions } : null;
 }
 
-/** 같은 단계 근처의 다른 줄(듣고 고르기·뜻 고르기 오답). */
+/** 같은 단계 근처의 다른 줄(뜻 고르기 오답). */
 function otherLines(language: string, source: QuizSource): { text: string; gloss: ScriptGloss }[] {
   const near = (s: number) => source.stage === 0 || Math.abs(s - source.stage) <= 1;
   const out: { text: string; gloss: ScriptGloss }[] = [];
@@ -491,15 +474,6 @@ function otherLines(language: string, source: QuizSource): { text: string; gloss
     for (const line of script.lines) if (line.text !== source.text && line.gloss?.en && line.gloss.en !== source.gloss.en) out.push({ text: line.text, gloss: line.gloss });
   }
   return out;
-}
-
-function listenOf(language: string, source: QuizSource, random: () => number): QuizQuestion | null {
-  const length = [...source.text].length;
-  const pool = otherLines(language, source).filter((line) => Math.abs([...line.text].length - length) <= Math.max(6, length / 2));
-  const wrong = shuffled(pool, random).slice(0, 2).map((line) => line.text);
-  if (wrong.length < 2) return null;
-  const options = shuffled([source.text, ...wrong], random);
-  return { kind: "listen", text: source.text, options, answer: options.indexOf(source.text), gloss: source.gloss, from: source.from };
 }
 
 function meaningOf(language: string, source: QuizSource, random: () => number): QuizQuestion | null {
@@ -513,7 +487,6 @@ function meaningOf(language: string, source: QuizSource, random: () => number): 
 /** 조합마다 세 문제의 모양(앞에서부터, 못 만들면 다음 것). */
 const MIX_KINDS: Record<Exclude<QuizMix, "auto">, QuizQuestion["kind"][]> = {
   speak: ["order", "say", "say"],
-  listen: ["listen", "listen", "say"],
   read: ["choose", "meaning", "order"],
 };
 
@@ -531,7 +504,6 @@ function mixQuiz(language: string, key: string, sources: readonly QuizSource[], 
       made =
         kind === "choose" ? chooseOf(language, key, source, random)
         : kind === "order" ? orderOf(language, source, random)
-        : kind === "listen" ? listenOf(language, source, random)
         : kind === "meaning" ? meaningOf(language, source, random)
         : { kind: "say", text: source.text, gloss: source.gloss, from: source.from };
       if (made && !out.some((q) => q.kind === made!.kind && "text" in q && "text" in made! && q.text === made!.text)) {
@@ -562,9 +534,8 @@ export function buildUnit(language: string, scriptId: string, mix: Exclude<QuizM
     const made =
       kind === "choose" ? (source.piece ? chooseOf(language, `e|${script.expressions.find((e) => pieceOf(source.text, e))}`, source, random) : null) ?? meaningOf(language, source, random)
       : kind === "order" ? orderOf(language, source, random)
-      : kind === "listen" ? listenOf(language, source, random)
       : kind === "meaning" ? meaningOf(language, source, random)
-      : source.who === "me" ? ({ kind: "say", text: source.text, gloss: source.gloss, from: source.from } as QuizQuestion) : listenOf(language, source, random);
+      : source.who === "me" ? ({ kind: "say", text: source.text, gloss: source.gloss, from: source.from } as QuizQuestion) : meaningOf(language, source, random);
     if (made) out.push(made);
   });
   return out;

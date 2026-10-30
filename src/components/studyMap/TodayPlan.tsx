@@ -40,7 +40,7 @@ import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
-import { MATCH_SIZE, WordMatch, matchPairs } from "@/components/studyMap/WordMatch";
+import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/studyMap/WordMatch";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
@@ -104,9 +104,10 @@ type StudyFocus = "review" | "auto" | PartId;
 type StudyLane = "review" | "learn";
 /** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
 type Style = "auto" | QuizStyle | "match";
-const STYLES: readonly Style[] = ["auto", "choose", "order", "listen", "say", "meaning", "match"];
+const STYLES: readonly Style[] = ["auto", "choose", "order", "say", "meaning", "match"];
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick; styles?: Partial<Record<StudyFocus, Style>> };
-const MIXES: readonly QuizMix[] = ["auto", "speak", "listen", "read"];
+// 듣기 위주는 뺌(2026-10-30 사용자 "듣기 문제는 삭제") — 저장된 듣기는 랜덤으로.
+const MIXES: readonly QuizMix[] = ["auto", "speak", "read"];
 // 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
 // 발음 버튼은 뺌(2026-10-29 사용자 — 표현과 같은 문제였음). 저장된 발음은 랜덤으로.
 const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression"];
@@ -339,15 +340,15 @@ export function TodayPlan({
     setSnapshot(next);
   }, [same, day, fresh, language, settings.pace, settings.order]);
 
-  // 대본을 대화 대신 문제 묶음으로 할지(학습 조합): 말하기 = 늘 대화, 듣기·읽기 = 묶음, 알아서 = 상황 대본은 대화·나머지는 묶음(듣기 갈래가 약하면 듣기).
+  // 대본을 대화 대신 문제 묶음으로 할지(학습 조합): 말하기 = 늘 대화, 읽기 = 묶음, 랜덤 = 상황 대본은 대화·나머지는 묶음.
   const [unitItem, setUnitItem] = useState<PlanItem | null>(null);
-  const unitMixOf = (item: PlanItem): "listen" | "read" | null => {
+  const unitMixOf = (item: PlanItem): "read" | null => {
     if (item.kind !== "script") return null;
-    if (settings.mix === "listen" || settings.mix === "read") return settings.mix;
+    if (settings.mix === "read") return "read";
     if (settings.mix === "speak") return null;
     const script = scripts.find((one) => one.id === item.id);
     if (!script || isSituationScript(script)) return null;
-    return weakest === "pronunciation" ? "listen" : "read";
+    return "read";
   };
   const save = (next: Settings) => {
     setSettings(next);
@@ -508,7 +509,12 @@ export function TodayPlan({
     };
   };
   // 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 랜덤은 갈래가 다른 열쇠부터, 문법·표현·복습은 그 줄의 열쇠 여럿에서 한 문제씩. 어휘는 단어 퀴즈 그대로.
-  const bundleFor = (which: StudyLane): { keys: string[]; questions: QuizQuestion[] } | null => {
+  const bundleFor = (which: StudyLane, wordKeys?: readonly string[]): { keys: string[]; questions: QuizQuestion[] } | null => {
+    // 어휘: 짝 맞추기에서 본 낱말들의 예문 빈칸, 낱말마다 한 문제(같은 낱말을 모양만 바꿔 세 번 묻지 않음, 2026-10-30).
+    if (wordKeys) {
+      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose" });
+      return made.questions.length ? made : null;
+    }
     if (which === "learn" && studyFocus === "vocab") return null;
     const queue = studyQueue(which, Date.now(), studyWeakest);
     let keys: string[];
@@ -525,7 +531,7 @@ export function TodayPlan({
     const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: styleFor(which) });
     return made.questions.length >= 2 ? made : null;
   };
-  const startStudy = (pick: StudyPick | null, which: StudyLane = lane) => {
+  const startStudy = (pick: StudyPick | null, which: StudyLane = lane, wordKeys?: readonly string[]) => {
     setLane(which);
     if (!pick) {
       setStudying(null);
@@ -533,7 +539,13 @@ export function TodayPlan({
       setBundle(null);
       return;
     }
-    const made = bundleFor(which);
+    // 어휘 계속 공부는 짝 맞추기부터(낱말이 셋 넘을 때) — 끝나면 같은 낱말들의 예문으로.
+    if (which === "learn" && studyFocus === "vocab" && !wordKeys && vocabPairs.length >= 3) {
+      setStudying(pick);
+      setMatching(true);
+      return;
+    }
+    const made = bundleFor(which, wordKeys);
     if (made) {
       setAsked((current) => new Set([...current, ...made.keys]));
       setRound((n) => n + 1);
@@ -600,9 +612,9 @@ export function TodayPlan({
   const startButton = (which: StudyLane, pick: StudyPick | null) => (
     <button
       type="button"
-      disabled={!pick && !(which === "learn" && keepStyle === "match")}
+      disabled={!pick}
       data-study-start={which}
-      onClick={() => (which === "learn" && keepStyle === "match" ? setMatching(true) : startStudy(pick, which))}
+      onClick={() => startStudy(pick, which)}
       className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${!pick ? "border border-line text-slate-500" : finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
     >
       <span aria-hidden className="shrink-0 text-caption">{pick ? "▶" : "✓"}</span>
@@ -643,6 +655,16 @@ export function TodayPlan({
       .filter((one) => one.stage <= Math.max(1, stage))
       .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
   ]).slice(0, MATCH_SIZE * 4);
+  // 어휘 계속 공부의 짝: 지금 공부 줄의 낱말 열쇠(w|) — 뒤의 예문 빈칸이 같은 낱말로 이어진다.
+  const vocabPairs: MatchPair[] =
+    studyFocus === "vocab"
+      ? matchPairs(
+          studyQueue("learn", Date.now(), studyWeakest)
+            .map((pick) => pick.key)
+            .filter((key) => key.startsWith("w|"))
+            .map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
+        )
+      : [];
   // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).
   const keepStyleOf: Style = settings.styles?.[keepFocus] ?? "auto";
   const keepStyle: Style = keepStyleOf === "match" && (keepFocus !== "vocab" || pairs.length < 3) ? "auto" : keepStyleOf;
@@ -654,7 +676,6 @@ export function TodayPlan({
     const lines = situation?.lines ?? [];
     const mineAt = Math.max(0, lines.findIndex((line) => line.who === "me"));
     const mine = lines[mineAt];
-    const other = lines.find((line, i) => i !== mineAt && line.text !== mine?.text);
     const pair = pairs[0];
     if (!mine) return [];
     const tiles = orderTiles(mine.text, language);
@@ -665,7 +686,6 @@ export function TodayPlan({
       auto: [blank, { side: "me", text: [...tiles].reverse().join(" · ") }, { side: "me", text: `🎤 ${mine.text}` }],
       choose: [blank, { side: "me", text: [tiles[mid], tiles[(mid + 1) % tiles.length]].filter(Boolean).join("  /  ") }],
       order: [meaning, { side: "me", text: [...tiles].reverse().join(" · ") }],
-      listen: [{ side: "them", text: "🔊 …" }, { side: "me", text: mine.text, mark: mine.text }, ...(other ? [{ side: "me" as const, text: other.text }] : [])],
       say: [meaning, { side: "me", text: `🎤 ${mine.text}` }],
       meaning: pair
         ? [{ side: "me", text: pair.word, mark: pair.word }, { side: "them", text: pair.meaning, meaning: true }, ...(pairs[1] ? [{ side: "them" as const, text: pairs[1].meaning, meaning: true }] : [])]
@@ -676,12 +696,13 @@ export function TodayPlan({
       auto: ui.studyRandom,
       choose: ui.quizKindChoose,
       order: ui.quizKindOrder,
-      listen: ui.quizKindListen,
       say: ui.quizKindSay,
       meaning: ui.quizKindMeaning,
       match: ui.wordMatch,
     };
-    const ids: Style[] = focus === "vocab" ? ["auto", ...(pairs.length >= 3 ? (["match"] as const) : []), "meaning", "choose", "say"] : ["auto", "choose", "order", "listen", "say"];
+    // 어휘는 방식 고르기 없이 짝 맞추기 → 예문 빈칸 한 길(2026-10-30 사용자 "단순하게 맞추기 > 예문 형태로").
+    if (focus === "vocab") return [];
+    const ids: Style[] = ["auto", "choose", "order", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
   const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
@@ -777,7 +798,7 @@ export function TodayPlan({
             onClick={() => save({ ...settings, mix })}
             className={`rounded-full px-3 py-1 text-caption ${settings.mix === mix ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
           >
-            {{ auto: ui.studyRandom, speak: ui.planMixSpeak, listen: ui.planMixListen, read: ui.planMixRead }[mix]}
+            {{ auto: ui.studyRandom, speak: ui.planMixSpeak, read: ui.planMixRead }[mix]}
           </button>
         ))}
       </div>
@@ -968,7 +989,20 @@ export function TodayPlan({
           />
         </div>
       ) : null}
-      {matching && pairs.length >= 3 ? <WordMatch ui={ui} pairs={pairs} onClose={() => setMatching(false)} /> : null}
+      {matching && vocabPairs.length >= 3 ? (
+        <WordMatch
+          ui={ui}
+          pairs={vocabPairs}
+          onClose={() => {
+            setMatching(false);
+            setStudying(null);
+          }}
+          onNext={(seen) => {
+            setMatching(false);
+            startStudy(studying, "learn", seen.map((word) => `w|${word}`));
+          }}
+        />
+      ) : null}
       {/* Grammar, expression and sound are counted once, on the stage side (2026-10-29, user); here only review left and the wordbook. */}
       {keepFocus === "vocab" ? (
         <WordbookCard ui={ui} language={language} words={words} onWord={(word) => preview?.open(word)} />
