@@ -349,7 +349,7 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
 function useTypedGrade(language: string) {
   const { isPremium } = usePremium();
   const [checking, setChecking] = useState(false);
-  const grade = async (local: "exact" | "loose" | false, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string }, plainWrong: boolean): Promise<"exact" | "loose" | false> => {
+  const grade = async (local: "exact" | "loose" | false, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean }, plainWrong: boolean): Promise<"exact" | "loose" | false> => {
     if (local || plainWrong) return local;
     setChecking(true);
     const ok = await recheckTyped({ language, ...input }, entitlementHeaders(isPremium));
@@ -474,15 +474,18 @@ function TypeView({
   const submit = async (typed: string) => {
     const local = typedRight(question.answer, typed, { language, near: question.near });
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
-    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim() }, plainWrong);
+    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim(), open: true }, plainWrong);
     setResult(final);
     onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
   };
   return (
     <div className="flex flex-col gap-3">
-      <p dir="auto" className="text-note text-slate-400">
-        {quizGloss(question.gloss, locale, language) ?? "…"}
-      </p>
+      {/* Meaning line only after answering (2026-10-31, user: it gave the answer away). */}
+      {answered ? (
+        <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
+          {quizGloss(question.gloss, locale, language) ?? ""}
+        </p>
+      ) : null}
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
@@ -732,12 +735,17 @@ function ChooseView({
   tag: string;
 }) {
   const [picked, setPicked] = useState<number | null>(null);
+  // 뜻 줄 없이 내니 다른 보기도 문장에 맞을 수 있다(Su/El agua) — 틀린 보기를 고르면 서버가 한 번 더 보고, 맞으면 맞음(2026-10-31).
+  const [alsoOk, setAlsoOk] = useState(false);
+  const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
   return (
     <div className="flex flex-col gap-3">
-      <p dir="auto" className="text-note text-slate-400">
-        {quizGloss(question.gloss, locale, language) ?? "…"}
-      </p>
+      {answered ? (
+        <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
+          {quizGloss(question.gloss, locale, language) ?? ""}
+        </p>
+      ) : null}
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
@@ -753,7 +761,9 @@ function ChooseView({
             ? isRight
               ? "border-good bg-good/10 text-ink"
               : picked === i
-                ? "border-warn text-warn line-through"
+                ? alsoOk
+                  ? "border-good/60 text-ink"
+                  : "border-warn text-warn line-through"
                 : "border-line text-slate-500"
             : "border-line text-slate-100 hover:bg-white/5";
           return (
@@ -761,10 +771,16 @@ function ChooseView({
               key={i}
               type="button"
               dir="auto"
-              disabled={Boolean(answered)}
-              onClick={() => {
+              disabled={Boolean(answered) || checking}
+              onClick={async () => {
                 setPicked(i);
-                onAnswer({ correct: isRight, picked: option });
+                if (isRight) {
+                  onAnswer({ correct: true, picked: option });
+                  return;
+                }
+                const ok = await grade(false, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.options[question.answer]!, typed: option, open: true }, false);
+                setAlsoOk(Boolean(ok));
+                onAnswer({ correct: Boolean(ok), picked: option });
               }}
               className={`${chip} text-start ${style}`}
             >

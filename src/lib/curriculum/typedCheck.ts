@@ -12,6 +12,8 @@ export type TypedCheck = {
   sentence: string;
   answer: string;
   typed: string;
+  /** 뜻 줄 없이 낸 빈칸(2026-10-31) — 문맥에 맞는 다른 말도 받는다. */
+  open?: boolean;
 };
 
 const asked = new Map<string, Promise<boolean>>();

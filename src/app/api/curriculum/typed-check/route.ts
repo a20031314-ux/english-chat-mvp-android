@@ -23,6 +23,8 @@ export async function POST(request: NextRequest) {
   const text = (value: unknown, max: number) => (typeof value === "string" ? value.trim() : "").slice(0, max + 1);
   const language = coerceLanguageCode(typeof body.language === "string" ? body.language : "");
   const kind = body.kind === "fix" ? "fix" : "blank";
+  // 뜻 줄 없이 낸 빈칸(앱 2026-10-31~): 학습자는 정해진 뜻을 못 봤으니 문맥에 자연스럽게 맞는 다른 말도 맞음.
+  const open = kind === "blank" && body.open === true;
   const sentence = text(body.sentence, 200);
   const answer = text(body.answer, 200);
   const typed = text(body.typed, kind === "fix" ? 200 : 60);
@@ -48,7 +50,9 @@ Learner's sentence: ${learner}`;
     messages: [
       {
         role: "system",
-        content: `You grade one quiz answer by comparing two sentences. The learner's sentence is ok when a teacher would accept it as a correct answer: it is grammatical, has no spelling mistake, and says the same thing as the expected sentence. Accept equivalent forms: contraction vs full form, the same word in another accepted script (kana instead of kanji, or the reverse), an equally correct word order or synonym with the same meaning. Not ok: any grammar or spelling error, a different meaning, a missing or extra word that changes the sentence. Reply with JSON only: {"ok":true} or {"ok":false}.`,
+        content: open
+          ? `You grade one fill-in-the-blank answer. The learner saw only the sentence with a blank, no translation, so any word that fits is fine. The learner's sentence is ok when it is grammatical, has no spelling mistake, and is a natural, sensible everyday sentence — it does not need to mean exactly the same as the expected sentence. Not ok: any grammar or spelling error, a wrong form of the word, or a sentence that does not make sense. Reply with JSON only: {"ok":true} or {"ok":false}.`
+          : `You grade one quiz answer by comparing two sentences. The learner's sentence is ok when a teacher would accept it as a correct answer: it is grammatical, has no spelling mistake, and says the same thing as the expected sentence. Accept equivalent forms: contraction vs full form, the same word in another accepted script (kana instead of kanji, or the reverse), an equally correct word order or synonym with the same meaning. Not ok: any grammar or spelling error, a different meaning, a missing or extra word that changes the sentence. Reply with JSON only: {"ok":true} or {"ok":false}.`,
       },
       { role: "user", content: task },
     ],
