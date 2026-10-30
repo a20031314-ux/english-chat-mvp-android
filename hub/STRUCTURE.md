@@ -11,9 +11,9 @@
 ## 화면 흐름 (손으로 씀)
 
 ```
-앱 열기 ─ AI 동의(iOS만) ─ (쓸 기능 고르기는 처음 설치에도 안 띄움 — 전부 켬, 고르기는 ? 사용법 창 맨 앞 탭, 2026-10-29) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
+앱 열기 ─ AI 동의(iOS만) ─ 배울 언어 고르기(처음 설치만 — 국기 14개, 누르면 그 언어로 My, 앱 언어는 기기 언어, LanguagePick FirstLanguagePick·lib/firstLanguage.ts, 2026-10-31) ─ (쓸 기능 고르기는 처음 설치에도 안 띄움 — 전부 켬, 고르기는 ? 사용법 창 맨 앞 탭, 2026-10-29) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
 │
-상단바   학습 언어 · UI 언어 · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장 — My면 학습 흐름: [쓸 기능 고르기 | 학습 흐름 | 장마다 해야 할 것·할 수 있는 것 카드 + 접힌 세부 기능], lib/guide/overview.ts, 2026-10-29) · 💬 의견 보내기
+상단바   배우는 언어 국기 → 언어 설정 시트(배울 언어 — 바꾸기 전 확인 한 번 · 앱 언어, LanguageSettingsButton, 2026-10-31 — 언어는 여기서만 바꾼다) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장 — My면 학습 흐름: [쓸 기능 고르기 | 학습 흐름 | 장마다 해야 할 것·할 수 있는 것 카드 + 접힌 세부 기능], lib/guide/overview.ts, 2026-10-29) · 💬 의견 보내기
 │        └ 업데이트 배너
 하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: My, 2026-10-28)
 │
@@ -24,7 +24,7 @@
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
 ├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
-├ 사람 people ─ 맨 위 AI 튜터(사람 카드처럼, 로그인 없이도 — AiTutorProfile: 프로필 시트 📞 통화 · 통화 기록 — 💬 메시지(대화 탭으로 옮기기만)는 2026-10-30에 뺌, 2026-10-27 "AI 튜터를 사람들과 통합") · 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
+├ 사람 people ─ 맨 위 AI 튜터(사람 카드처럼, 로그인 없이도 — AiTutorProfile: 프로필 시트 📞 통화 · 통화 기록 — 💬 메시지(대화 탭으로 옮기기만)는 2026-10-30에 뺌, 2026-10-27 "AI 튜터를 사람들과 통합") · 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고 — 사진 모서리 국기 = 국적만, 언어 칩은 국기 없이 이름, ProfileFacts CountryMark, 2026-10-31) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
 └ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
           **큰 칸 셋, 한 번에 하나만 펼침(2026-10-30, NotebookSection MyLayers, 이 폰 localStorage myLayer.v1 — 고른 칸은 그날만(myLayer.day), 날이 바뀌면 n단계(오늘 할 것)부터; 오늘 할 것을 다 하면 그날 한 번 퀴즈 칸을 펴서 맨 위로(AutoQuiz, myLayer.autoKeep — 순서 퀴즈 · n단계 · 복습), 2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로") — 펼친 칸 색이 칸마다 다름(n단계 노랑·퀴즈 초록·복습 장미, LAYER_TONE):**
@@ -92,10 +92,10 @@
 > "다른 영역이 씀"은 이 영역 화면 코드를 가져다 쓰는 다른 영역. 고치기 전에 여기서 영향 범위를 본다.
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법 `shell`
-- 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
+- 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭, 계정·로그인 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `TargetLanguageSelector` ← 웹 전용 페이지
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`

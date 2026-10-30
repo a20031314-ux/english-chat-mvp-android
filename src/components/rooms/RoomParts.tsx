@@ -16,8 +16,7 @@ import { ICON_ONLY_TEXT, byPerson, contextBefore, overlapsPrevious, timeline, ty
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
-import { FactsView, ProfilePosts, ThankButton, TranslateToggle } from "@/components/account/ProfileFacts";
-import { countryFlag, countryName } from "@/lib/account/countries";
+import { CountryMark, FactsView, ProfilePosts, ThankButton, TranslateToggle } from "@/components/account/ProfileFacts";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
@@ -228,15 +227,14 @@ export function ProfileSheet({
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex items-start gap-3">
-            <Face accountId={accountId} name={name} size={64} />
+            <span className="relative shrink-0">
+              <Face accountId={accountId} name={name} size={64} />
+              {/* 사진 옆 국기는 국적 하나(2026-10-31). */}
+              <CountryMark country={profile?.facts?.country} locale={locale} />
+            </span>
             <div className="min-w-0 flex-1">
               <p className="truncate text-lg font-semibold text-white" dir="auto">
                 <bdi>{name}</bdi>
-                {profile?.facts?.country ? (
-                  <span className="ms-1.5" title={countryName(profile.facts.country, locale)} aria-label={countryName(profile.facts.country, locale)}>
-                    {countryFlag(profile.facts.country)}
-                  </span>
-                ) : null}
               </p>
               {member?.langs?.length ? (
                 <p className="text-xs text-slate-400">

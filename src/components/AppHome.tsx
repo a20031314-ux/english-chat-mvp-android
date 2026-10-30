@@ -4,12 +4,12 @@ import { AiConsentGate } from "@/components/AiConsentGate";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBannerPlacement, warmUpAds, watchAppLifecycle } from "@/lib/ads";
 import { ChatWindow } from "@/components/ChatWindow";
-import { LanguageSelector } from "@/components/LanguageSelector";
+import { FirstLanguagePick, LanguageSettingsButton } from "@/components/LanguagePick";
 import { readAppLocale } from "@/components/LearningBookPanel";
 import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
 import { TAB_ICON_META } from "@/components/TabIcons";
-import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
+import { deviceUiLocale, languagePickPending, subscribeLanguagePick } from "@/lib/firstLanguage";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { CallHost, hasRoleplay } from "@/components/CallHost";
@@ -42,7 +42,7 @@ import { onMorningTap } from "@/lib/morningNotify";
 import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
-import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, isLocale, type Locale } from "@/lib/copy";
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
   isLearningLanguageCode,
@@ -120,6 +120,8 @@ function AppHomeInner({
   // 쓸 기능 고르기(lib/features.ts): 숨긴 기능은 탭·버튼에서 빠진다. 창구 모드는 창구 탭 그대로(고르기 없음).
   const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
   const features = useSyncExternalStore(subscribeFeatures, readFeatures, readFeaturesOnServer);
+  // 처음 설치: 배울 언어를 고르기 전에는 앱 화면을 그리지 않는다(영어로 미리 불러오지 않게, lib/firstLanguage.ts).
+  const pickPending = useSyncExternalStore(subscribeLanguagePick, languagePickPending, () => false);
   const featureOff: FeatureId[] = door ? [] : features.off;
   const featureOn = (feature: FeatureId) => isFeatureOn(featureOff, feature);
   const callOn = roleplayAvailable && featureOn("call");
@@ -355,6 +357,15 @@ function AppHomeInner({
     ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
   ] as { id: Exclude<AppTab, "people" | "messages" | "talk" | "random">; label: string }[];
 
+  if (pickPending) {
+    return (
+      <>
+        <AiConsentGate ui={ui} dir={learningLanguageTextDir(locale)} />
+        <FirstLanguagePick ui={ui} locale={locale} onPicked={() => openTab("map")} />
+      </>
+    );
+  }
+
   return (
     <BillingUiProvider locale={locale} ui={ui}>
     <AiConsentGate ui={ui} dir={learningLanguageTextDir(locale)} />
@@ -371,12 +382,8 @@ function AppHomeInner({
                   {door.name}
                 </span>
               ) : null}
-              <TargetLanguageSelector label={ui.learningLanguageLabel} />
-              <LanguageSelector
-                locale={locale}
-                onChange={setLocale}
-                label={ui.uiLanguageLabel}
-              />
+              {/* 언어는 여기서만 바꾼다: 지금 배우는 언어 국기 → 언어 설정(2026-10-31). */}
+              <LanguageSettingsButton ui={ui} locale={locale} onLocale={setLocale} />
               <BillingOpenButton ui={ui} />
               {/* 사람 탭은 말하는 방의 일부라 사용법도 말하는 방 것을 연다. */}
               <GuideButton
@@ -388,12 +395,6 @@ function AppHomeInner({
                 onGo={goFromGuide}
                 newSections={newGuideSections(appVersion())}
                 features={door ? null : features}
-                pickHeader={
-                  <>
-                    <TargetLanguageSelector label={ui.learningLanguageLabel} />
-                    <LanguageSelector locale={locale} onChange={setLocale} label={ui.uiLanguageLabel} />
-                  </>
-                }
                 onChosen={() => openTab("map")}
               />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
@@ -605,6 +606,18 @@ export function AppHome() {
   // would disagree with it and tear the hydration. It is read once the page
   // is alive instead.
   useEffect(() => {
+    // 처음 설치는 앱 언어를 묻지 않고 기기 언어로(14개 중, 없으면 영어) — 배울 언어 고르기 화면도 그 언어로 뜬다.
+    if (languagePickPending()) {
+      const tags = typeof navigator === "undefined" ? [] : navigator.languages?.length ? navigator.languages : [navigator.language];
+      const next = deviceUiLocale(tags, isLocale, "en" as Locale);
+      setLocale(next);
+      try {
+        localStorage.setItem(APP_LOCALE_STORAGE_KEY, next);
+      } catch {
+        // ignore
+      }
+      return;
+    }
     setLocale(readAppLocale());
   }, []);
 

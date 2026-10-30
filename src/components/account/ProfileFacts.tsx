@@ -14,9 +14,8 @@ import {
 } from "@/lib/account/profileFacts";
 import { chipLabel, fillCount, profileCopy, seeInLanguage, type ProfileCopy } from "@/lib/account/profileCopy";
 import type { ProfileBadges } from "@/lib/rooms/contribution";
-import { SUPPORTED_LEARNING_LANGUAGES, getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { SUPPORTED_LEARNING_LANGUAGES, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { COUNTRY_CODES, countryFlag, countryName } from "@/lib/account/countries";
-import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { RoomApiError, aiFailText, boardLike, sendThank, translateLine, type ThankTarget } from "@/lib/rooms/client";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
@@ -259,12 +258,33 @@ function goalText(t: ProfileCopy, goal: { use: string | null; focus: string[] })
   return parts.length ? `🎯 ${parts.join(" · ")}` : "";
 }
 
-/** 언어 이름 앞에 그 언어의 국기(사람 카드의 언어 칩과 같은 그림). */
+/**
+ * 국적은 사진 모서리에 국기 하나 — 사진 옆 국기는 국적뿐이다(사용자 2026-10-31 "사진옆에 국적만, 학습 언어랑 구분").
+ * 언어(모국어·쓰는 말·배우는 말)는 국기 없이 이름 칩으로만.
+ */
+export function CountryMark({ country, locale, small = false }: { country: string | null | undefined; locale: string; small?: boolean }) {
+  if (!country) return null;
+  const name = countryName(country, locale);
+  return (
+    <span
+      role="img"
+      aria-label={name}
+      title={name}
+      data-country-mark={country}
+      className={`absolute -bottom-0.5 -start-0.5 flex items-center justify-center rounded-full border-2 border-canvas bg-surface leading-none ${
+        small ? "h-5 w-5 text-meta" : "h-6 w-6 text-body"
+      }`}
+    >
+      {countryFlag(country)}
+    </span>
+  );
+}
+
+/** 언어 이름 칩(국기 없음 — 국기는 국적에만). */
 function LangFlagChip({ code, locale }: { code: string; locale: string }) {
   if (!isLearningLanguageCode(code)) return null;
   return (
     <span className="inline-flex items-center gap-1 rounded-lg bg-white/[0.06] px-1.5 py-0.5 text-slate-200">
-      <LearningLanguageFlag language={getLearningLanguage(code)} className="h-3 w-4" />
       {learningLanguageUiLabel(code, locale)}
     </span>
   );

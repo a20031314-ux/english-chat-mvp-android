@@ -302,7 +302,6 @@ export function GuideButton({
   newSections = [],
   features = null,
   onChosen,
-  pickHeader,
 }: {
   ui: UICopy;
   locale: Locale;
@@ -319,8 +318,6 @@ export function GuideButton({
   features?: FeatureState | null;
   /** 처음 고르기를 마쳤을 때(첫 화면을 정하려고). */
   onChosen?: (off: FeatureId[]) => void;
-  /** 고르기 화면 위에 둘 것(학습 언어·화면 언어 — 첫 화면이 상단바를 가리므로). */
-  pickHeader?: ReactNode;
 }) {
   // 처음 설치면 기능 고르기가 첫 화면: 고르기를 마칠 때까지(features.chosen) 열려 있다.
   const picking = Boolean(features && !features.chosen);
@@ -467,9 +464,6 @@ export function GuideButton({
               {picking ? ui.featurePickSkip : ui.guideClose}
             </button>
           </div>
-          {picking && pickHeader ? (
-            <div className="relative z-10 flex shrink-0 flex-wrap items-center gap-2 border-b border-line px-4 py-2">{pickHeader}</div>
-          ) : null}
           {picking ? null : (
             <div className="flex shrink-0 gap-2 overflow-x-auto border-b border-line px-4 py-2" role="tablist">
               {/* Feature picker lives here as the first tab (2026-10-29: moved out of My into the guide). */}

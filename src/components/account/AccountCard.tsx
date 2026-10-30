@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
-import { FactsEditor, ShowToggles } from "./ProfileFacts";
+import { CountryMark, FactsEditor, ShowToggles } from "./ProfileFacts";
 import { factsOf, showOf, type ProfileFacts, type ProfileShow } from "@/lib/account/profileFacts";
 import { profileCopy } from "@/lib/account/profileCopy";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -92,7 +92,17 @@ function codeOf(error: unknown): AccountError {
   return error instanceof AccountRequestError ? error.code : "NETWORK";
 }
 
-function Avatar({ account, size }: { account: PublicAccount | null; size: number }) {
+/** 내 사진 + 국적(사진 모서리 국기 하나, 2026-10-31 — 남이 보는 카드와 같은 자리). */
+function Avatar({ account, size, locale }: { account: PublicAccount | null; size: number; locale: string }) {
+  return (
+    <span className="relative shrink-0">
+      <AvatarFace account={account} size={size} />
+      <CountryMark country={account?.profile.facts?.country} locale={locale} small={size < 56} />
+    </span>
+  );
+}
+
+function AvatarFace({ account, size }: { account: PublicAccount | null; size: number }) {
   const photo = account?.profile.photo;
   const letter = Array.from(account?.profile.nickname || account?.username || account?.email || "?")[0]?.toUpperCase() ?? "?";
   return photo ? (
@@ -162,7 +172,7 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
         }}
         className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-start hover:bg-white/[0.06]"
       >
-        <Avatar account={account} size={44} />
+        <Avatar account={account} size={44} locale={locale} />
         <span className="min-w-0 flex-1">
           {account ? (
             <>
@@ -587,7 +597,7 @@ function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: s
       />
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         <div className="flex items-center gap-4">
-          <Avatar account={preview} size={72} />
+          <Avatar account={preview} size={72} locale={locale} />
           <div className="flex flex-col items-start gap-2">
             <button
               type="button"

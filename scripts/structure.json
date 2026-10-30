@@ -25,6 +25,7 @@
     "components/LanguageSelector": "shell",
     "components/TargetLanguageSelector": "shell",
     "components/LearningLanguageFlag": "shell",
+    "components/LanguagePick": "shell",
     "components/UpdateNotice": "shell",
     "components/WhatsNewSheet": "shell",
     "components/GuideSheet": "shell",

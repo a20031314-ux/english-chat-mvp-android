@@ -850,7 +850,11 @@
     "callRecapLooked": "意味を見た言葉",
     "quizNoMistake": "間違いなし",
     "wordSearch": "単語を探す",
-    "vocabByStage": "段階"
+    "vocabByStage": "段階",
+    "learnPickTitle": "どの言語を学びますか？",
+    "languageSettings": "言語設定",
+    "learnSwitchAsk": "{lang}の学習に切り替えますか？",
+    "learnSwitchYes": "切り替える"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1703,7 +1707,11 @@
     "callRecapLooked": "查看过意思的句子",
     "quizNoMistake": "没有错误",
     "wordSearch": "查找单词",
-    "vocabByStage": "阶段"
+    "vocabByStage": "阶段",
+    "learnPickTitle": "你想学哪种语言？",
+    "languageSettings": "语言设置",
+    "learnSwitchAsk": "要改为学习{lang}吗？",
+    "learnSwitchYes": "切换"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2559,7 +2567,11 @@
     "callRecapLooked": "Câu đã xem nghĩa",
     "quizNoMistake": "Không có lỗi",
     "wordSearch": "Tìm từ",
-    "vocabByStage": "Giai đoạn"
+    "vocabByStage": "Giai đoạn",
+    "learnPickTitle": "Bạn muốn học ngôn ngữ nào?",
+    "languageSettings": "Cài đặt ngôn ngữ",
+    "learnSwitchAsk": "Chuyển sang học {lang}?",
+    "learnSwitchYes": "Chuyển"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3420,7 +3432,11 @@
     "callRecapLooked": "Phrases dont vous avez vu le sens",
     "quizNoMistake": "Aucune erreur",
     "wordSearch": "Chercher un mot",
-    "vocabByStage": "Étape"
+    "vocabByStage": "Étape",
+    "learnPickTitle": "Quelle langue veux-tu apprendre ?",
+    "languageSettings": "Langues",
+    "learnSwitchAsk": "Nouvelle langue à apprendre : {lang} ?",
+    "learnSwitchYes": "Changer"
   },
   "it": {
     "archive": "Report",
@@ -4472,7 +4488,11 @@
     "callRecapLooked": "Frasi di cui hai visto il significato",
     "quizNoMistake": "Nessun errore",
     "wordSearch": "Cerca una parola",
-    "vocabByStage": "Fase"
+    "vocabByStage": "Fase",
+    "learnPickTitle": "Quale lingua vuoi imparare?",
+    "languageSettings": "Lingue",
+    "learnSwitchAsk": "Nuova lingua da imparare: {lang}?",
+    "learnSwitchYes": "Cambia"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5336,7 +5356,11 @@
     "callRecapLooked": "Frases cujo significado você viu",
     "quizNoMistake": "Não há erro",
     "wordSearch": "Procurar palavra",
-    "vocabByStage": "Etapa"
+    "vocabByStage": "Etapa",
+    "learnPickTitle": "Que idioma vais aprender?",
+    "languageSettings": "Idiomas",
+    "learnSwitchAsk": "Mudar para aprender {lang}?",
+    "learnSwitchYes": "Mudar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6386,7 +6410,11 @@
     "callRecapLooked": "Фразы, которые вы перевели",
     "quizNoMistake": "Ошибки нет",
     "wordSearch": "Найти слово",
-    "vocabByStage": "Этап"
+    "vocabByStage": "Этап",
+    "learnPickTitle": "Какой язык будете учить?",
+    "languageSettings": "Языки",
+    "learnSwitchAsk": "Перейти на изучение языка: {lang}?",
+    "learnSwitchYes": "Перейти"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7246,7 +7274,11 @@
     "callRecapLooked": "Kalimat yang kamu lihat artinya",
     "quizNoMistake": "Tidak ada yang salah",
     "wordSearch": "Cari kata",
-    "vocabByStage": "Tahap"
+    "vocabByStage": "Tahap",
+    "learnPickTitle": "Bahasa apa yang ingin kamu pelajari?",
+    "languageSettings": "Pengaturan bahasa",
+    "learnSwitchAsk": "Ganti ke belajar {lang}?",
+    "learnSwitchYes": "Ganti"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8099,7 +8131,11 @@
     "callRecapLooked": "جمل اطّلعت على معناها",
     "quizNoMistake": "لا يوجد خطأ",
     "wordSearch": "ابحث عن كلمة",
-    "vocabByStage": "المرحلة"
+    "vocabByStage": "المرحلة",
+    "learnPickTitle": "أي لغة ستتعلّم؟",
+    "languageSettings": "إعدادات اللغة",
+    "learnSwitchAsk": "هل تريد التبديل إلى تعلّم {lang}؟",
+    "learnSwitchYes": "تبديل"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8952,7 +8988,11 @@
     "callRecapLooked": "ประโยคที่ดูความหมาย",
     "quizNoMistake": "ไม่มีจุดผิด",
     "wordSearch": "ค้นหาคำ",
-    "vocabByStage": "ขั้น"
+    "vocabByStage": "ขั้น",
+    "learnPickTitle": "จะเรียนภาษาอะไรดี?",
+    "languageSettings": "ตั้งค่าภาษา",
+    "learnSwitchAsk": "เปลี่ยนไปเรียน{lang}ไหม?",
+    "learnSwitchYes": "เปลี่ยน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9805,6 +9845,10 @@
     "callRecapLooked": "वाक्य जिनका अर्थ देखा",
     "quizNoMistake": "कोई गलती नहीं",
     "wordSearch": "शब्द खोजें",
-    "vocabByStage": "चरण"
+    "vocabByStage": "चरण",
+    "learnPickTitle": "आप कौन-सी भाषा सीखेंगे?",
+    "languageSettings": "भाषा सेटिंग",
+    "learnSwitchAsk": "{lang} सीखने पर बदलें?",
+    "learnSwitchYes": "बदलें"
   }
 }

@@ -918,6 +918,10 @@ const generatedWhatsNewOverlay = {
   homeTabMessages: "Messages",
   modeAi: "Learn with AI",
   modePeople: "Learn with people",
+  learnPickTitle: "Which language will you learn?",
+  languageSettings: "Language settings",
+  learnSwitchAsk: "Switch to learning {lang}?",
+  learnSwitchYes: "Switch",
 } as const;
 
 const generatedAskOverlay = {
@@ -1759,6 +1763,10 @@ export const copy = {
     studyResumeHint: "이전에 {percent}%까지 읽었습니다.",
     learningLanguageLabel: "학습 언어",
     uiLanguageLabel: "UI 언어",
+    learnPickTitle: "어떤 언어를 배울까요?",
+    languageSettings: "언어 설정",
+    learnSwitchAsk: "{lang} 배우기로 바꿀까요?",
+    learnSwitchYes: "바꾸기",
     videoLearnHeadline: "영상으로 {targetLanguage} 배우기",
     videoLearnBody:
       "이번 달 라이브러리에서 고르거나, 링크를 붙여 직접 가져올 수 있어요. 라이브러리는 차감이 없고, 가져오기는 3분당 1포인트예요.",
@@ -3272,6 +3280,10 @@ export const copy = {
     studyResumeHint: "You left off at {percent}%.",
     learningLanguageLabel: "Learning language",
     uiLanguageLabel: "App language",
+    learnPickTitle: "Which language will you learn?",
+    languageSettings: "Language settings",
+    learnSwitchAsk: "Switch to learning {lang}?",
+    learnSwitchYes: "Switch",
     videoLearnHeadline: "Learn {targetLanguage} from video",
     videoLearnBody:
       "Pick a title from this month’s library, or paste your own link. Library titles are free; custom links use import points.",
@@ -4784,6 +4796,10 @@ export const copy = {
     studyResumeHint: "Lo dejaste en el {percent}%.",
     learningLanguageLabel: "Idioma de estudio",
     uiLanguageLabel: "Idioma de la app",
+    learnPickTitle: "¿Qué idioma vas a aprender?",
+    languageSettings: "Idiomas",
+    learnSwitchAsk: "¿Cambiar a aprender {lang}?",
+    learnSwitchYes: "Cambiar",
     videoLearnHeadline: "Aprende {targetLanguage} con vídeos",
     videoLearnBody:
       "Pega un enlace para generar subtítulos y traducción. Los vídeos nuevos usan los minutos del mes; los guardados se pueden repetir gratis.",

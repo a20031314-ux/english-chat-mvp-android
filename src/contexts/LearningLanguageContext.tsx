@@ -18,6 +18,7 @@ import {
   type LearningLanguage,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
+import { languagePickPending, markLanguagePicked } from "@/lib/firstLanguage";
 
 type LearningLanguageContextValue = {
   targetLanguage: LearningLanguageCode;
@@ -40,11 +41,15 @@ export function LearningLanguageProvider({ children }: { children: ReactNode }) 
 
   useEffect(() => {
     if (!hydrated) return;
+    // 처음 설치에서 아직 안 골랐으면 기본값(영어)을 적지 않는다 — 고르기 전에 앱을 닫아도 다음에 다시 묻도록.
+    if (languagePickPending()) return;
     persistTargetLanguage(targetLanguage);
   }, [targetLanguage, hydrated]);
 
   const setTargetLanguage = useCallback((code: LearningLanguageCode) => {
     if (!isLearningLanguageCode(code)) return;
+    markLanguagePicked();
+    persistTargetLanguage(code);
     setTargetLanguageState(code);
   }, []);
 

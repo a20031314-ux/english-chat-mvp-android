@@ -6,11 +6,10 @@ import type { RoomCopy } from "@/lib/rooms/copy";
 import { listPeople, setFollow } from "@/lib/rooms/client";
 import { ONLINE_WINDOW_MS, type PersonCard } from "@/lib/rooms/social";
 import { readEntryDoor } from "@/lib/doors";
-import { getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
-import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
+import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { CountryMark } from "@/components/account/ProfileFacts";
 import { Face, ProfileSheet, loadProfile } from "./RoomParts";
 import { chipLabel, fillCount, profileCopy } from "@/lib/account/profileCopy";
-import { countryFlag, countryName } from "@/lib/account/countries";
 import { isLangMatch, type LangMatch } from "@/lib/rooms/langMatch";
 
 /**
@@ -62,7 +61,6 @@ function LangChip({ code, locale, learning }: { code: string | null; locale: str
         learning ? "bg-violet-500/20 text-violet-100" : "bg-emerald-500/15 text-emerald-100"
       }`}
     >
-      <LearningLanguageFlag language={getLearningLanguage(code)} className="h-3 w-4" />
       {learningLanguageUiLabel(code, locale)}
     </span>
   );
@@ -190,6 +188,8 @@ export function PeopleList({
             <li className="flex gap-3 py-3">
               <button type="button" onClick={() => setOpen(person)} className="relative shrink-0 self-start" aria-label={person.nickname}>
                 <Face accountId={person.id} name={person.nickname} size={60} speaking={false} photo={person.hasPhoto ? undefined : null} />
+                {/* 사진 옆 국기는 국적 하나(언어 칩에는 국기 없음, 2026-10-31). */}
+                <CountryMark country={person.country} locale={locale} />
                 {seen.online ? (
                   <span className="absolute bottom-0.5 end-0.5 h-3.5 w-3.5 rounded-full border-2 border-[#0b0b0b] bg-emerald-400" aria-hidden />
                 ) : null}
@@ -200,11 +200,6 @@ export function PeopleList({
                     <p className="truncate text-[16px] font-semibold text-white" dir="auto">
                       {/* 이름은 따로 방향을 잡아(섞인 글자·아랍어) 국기가 이름 사이에 끼지 않게. */}
                       <bdi>{person.nickname}</bdi>
-                      {person.country ? (
-                        <span className="ms-1.5 text-chat" title={countryName(person.country, locale)} aria-label={countryName(person.country, locale)}>
-                          {countryFlag(person.country)}
-                        </span>
-                      ) : null}
                     </p>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
                       <LangChip code={speaksOf(person)} locale={locale} learning={false} />
