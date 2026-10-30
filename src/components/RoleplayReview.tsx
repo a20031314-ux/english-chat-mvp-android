@@ -426,7 +426,8 @@ export function RoleplayReviewPanel({
         ref={scroller}
         className="max-h-[80%] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
       >
-        <h3 className="text-sm font-semibold text-white">{ui.roleplayReviewTitle}</h3>
+        {/* 통화 중 💡 힌트(turn.live): 지금 이어 말할 말 — 이름은 "힌트"·"이렇게 말할 수 있어요"·"이어서 하기"(기존 문구). */}
+        <h3 className="text-sm font-semibold text-white">{turn.live ? `💡 ${ui.missionHint}` : ui.roleplayReviewTitle}</h3>
         <p className="mt-1 text-[12px] text-neutral-500">{turn.asked}</p>
 
         {review ? (
@@ -436,7 +437,7 @@ export function RoleplayReviewPanel({
             </p>
             {review.say ? (
               <div className="mt-3 rounded-xl bg-white/5 p-3">
-                <p className="text-[11px] text-neutral-500">{ui.roleplayReviewSay}</p>
+                <p className="text-[11px] text-neutral-500">{turn.live ? ui.roleplayBetter : ui.roleplayReviewSay}</p>
                 <p className="mt-1 text-[14px] text-neutral-100">{review.say}</p>
                 {review.meaning ? (
                   <p className="mt-0.5 text-[12px] text-neutral-500">{review.meaning}</p>
@@ -466,7 +467,7 @@ export function RoleplayReviewPanel({
           onClick={onClose}
           className="mt-4 w-full rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
         >
-          {ui.billingClose}
+          {turn.live ? ui.roleplayResume : ui.billingClose}
         </button>
       </div>
     </div>

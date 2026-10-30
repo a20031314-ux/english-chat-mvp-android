@@ -60,6 +60,7 @@ export async function POST(request: NextRequest) {
     attempts: readCount(body.attempts),
     hesitationMs: readCount(body.hesitationMs),
     history: readSpokenLines(body.history),
+    ...(body.live === true ? { live: true } : {}),
   };
   if (!turn.asked && turn.history.length === 0) {
     return jsonWithCors(request, { error: "nothing to review" }, { status: 400 });

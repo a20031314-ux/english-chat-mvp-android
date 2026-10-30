@@ -88,3 +88,19 @@ test("a review is cut to what fits on a phone", () => {
   assert.equal(long?.why.length, 600);
   assert.equal(long?.say.length, 200);
 });
+
+test("통화 중 힌트는 끊긴 앞부분을 살려 이어 말할 문장을 묻는다", () => {
+  const live = prompt({ live: true, heard: "I want to 예약 a" });
+  assert.match(live, /paused, waiting for their answer/);
+  assert.match(live, /"I want to 예약 a"/);
+  assert.match(live, /Finish what they started/);
+  assert.match(live, /mixed in words from Korean/);
+  assert.doesNotMatch(live, /already moved on/, "돌아보기 문구가 아니다");
+  const silent = prompt({ live: true, heard: "" });
+  assert.match(silent, /not managed to say anything yet/);
+  assert.doesNotMatch(silent, /Finish what they started/);
+});
+
+test("돌아보기는 그대로", () => {
+  assert.match(prompt(), /already moved on/);
+});

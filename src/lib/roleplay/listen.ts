@@ -868,6 +868,7 @@ export async function fetchReview(input: {
         hesitationMs: input.turn.hesitationMs,
         history: input.turn.history.slice(-REVIEW_LINES),
         nativeLanguage: input.nativeLanguage,
+        ...(input.turn.live ? { live: true } : {}),
       }),
     });
     if (!response.ok) {

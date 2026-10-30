@@ -193,6 +193,12 @@ const STALL_GRACE_MS = 4000;
 const REST_OF_SENTENCE_MS = 3500;
 
 /**
+ * 내 차례에 이만큼 말이 없으면 💡 힌트 버튼을 띄운다(말하다 끊겨 나머지를 기다리는 중이면 바로).
+ * 첫마디를 기다리는 12초(listen.ts) 안에 누를 수 있게.
+ */
+const HELP_AFTER_MS = 4000;
+
+/**
  * The same, for a line synthesised on the spot. It streams, so it starts before
  * it has fully arrived, but the whole of it has to play before the turn passes.
  */
@@ -337,6 +343,8 @@ export function RoleplayScreen({
   const [thinking, setThinking] = useState(false);
   /** What they have said of a sentence the pause cut off, while the rest is awaited. */
   const [pending, setPending] = useState("");
+  /** 내 차례가 HELP_AFTER_MS 넘게 조용했다 — 💡 힌트를 띄울 때. 차례가 바뀌면 다시 센다. */
+  const [helpReady, setHelpReady] = useState(false);
   /**
    * 학습자가 말을 시작했다 — 받아쓴 글이 올 때까지 학습자 쪽에 "…" 말풍선(말하는 방과 같은 방식).
    * 예전에는 말하는 동안 화면에 아무것도 없다가, 다 끝난 뒤에야 튜터 쪽 "…"가 떴다.
@@ -926,14 +934,45 @@ export function RoleplayScreen({
     [scenario, nativeLanguage, isPremium],
   );
 
+  /**
+   * 💡 힌트 — 막힌 그 자리에서 대화를 멈추고(마이크 닫음), 하려던 말을 짐작한 문장을 보여 준다.
+   * 닫으면 같은 턴으로 돌아가 처음부터 다시 말한다(사용자 2026-10-30 "막힐 시 버튼 → 일시정지 → 확인 → 재개").
+   * 끊긴 앞부분(pending)은 보내지 않고 힌트의 재료로만 쓴다.
+   */
+  const openHelp = useCallback(() => {
+    if (!state) return;
+    const started = pending.trim();
+    const asked = [...state.history].reverse().find((line) => line.who === "tutor")?.text ?? "";
+    openReview({
+      asked,
+      heard: started,
+      attempts: Math.max(1, state.attempts + 1),
+      hesitationMs: state.listeningSince ? Math.max(0, Date.now() - state.listeningSince) : 0,
+      history: [...state.history, ...(started ? [{ who: "learner" as const, text: started }] : [])].slice(-REVIEW_LINES),
+      live: true,
+    });
+  }, [state, pending, openReview]);
+
   const closeReview = useCallback(() => {
+    // 통화 중 힌트로 받은 문장은 그 질문(튜터 줄) 아래 도움말로 남긴다 — 끝난 뒤 돌아보기에서도 보이게.
+    const hinted = reviewing?.turn.live && reviewing.review?.say ? reviewing.review : null;
+    if (hinted) {
+      const tip = hinted.meaning ? `${hinted.say} — ${hinted.meaning}` : hinted.say;
+      setSaid((current) => {
+        const index = current.map((line) => line.who).lastIndexOf("tutor");
+        if (index < 0 || current[index]!.tip) return current;
+        const marked = [...current];
+        marked[index] = { ...marked[index]!, tip };
+        return marked;
+      });
+    }
     setReviewing(null);
     if (!scenario || !state) return;
     const resumed = resumeListening(scenario, bank, state, Date.now());
     setState(resumed.state);
     setInstruction(resumed.instruction);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scenario, state]);
+  }, [scenario, state, reviewing]);
 
   const startRecording = async () => {
     if (recording || recorderRef.current || !scenario) return;
@@ -1044,6 +1083,13 @@ export function RoleplayScreen({
    * step left in a mode meant to read as a conversation that carries on. The
    * turn is still one transcription, so this costs nothing.
    */
+  useEffect(() => {
+    setHelpReady(false);
+    if (instruction?.do !== "listen" || reviewing) return;
+    const timer = window.setTimeout(() => setHelpReady(true), HELP_AFTER_MS);
+    return () => window.clearTimeout(timer);
+  }, [instruction, reviewing]);
+
   useEffect(() => {
     if (instruction?.do !== "listen" || reviewing) return;
     void startRecording();
@@ -1234,6 +1280,16 @@ export function RoleplayScreen({
             ) : null}
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
+            ) : null}
+            {/* 💡 힌트: 말이 없거나 말하다 끊겼을 때만. 누르면 대화가 멈추고 힌트 패널 → "이어서 하기"로 같은 턴. */}
+            {!reviewing && !thinking && (pending || (helpReady && !learnerTalking)) ? (
+              <button
+                type="button"
+                onClick={openHelp}
+                className="self-center rounded-full border border-line px-4 py-1.5 text-meta text-title hover:bg-white/10"
+              >
+                💡 {ui.missionHint}
+              </button>
             ) : null}
           </div>
         ) : null}

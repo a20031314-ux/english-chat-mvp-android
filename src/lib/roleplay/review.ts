@@ -55,6 +55,12 @@ export type StuckTurn = {
   hesitationMs: number;
   /** The conversation up to and including the turn, most recent last. */
   history: SpokenLine[];
+  /**
+   * 통화 중에 💡 힌트를 눌렀다(2026-10-30 사용자 "막힐 시 버튼 → 일시정지 → 확인 → 재개").
+   * 대화는 그 자리에 멈춰 이 턴을 기다리고, `heard`는 말하다 끊긴 앞부분(없으면 빈 글).
+   * 돌아보기가 아니라 지금 이어 말할 말을 준다.
+   */
+  live?: boolean;
 };
 
 /** Lines of conversation a review reads. Enough for the shape of the scene. */
@@ -115,6 +121,8 @@ export function reviewPrompt(input: {
     .map((line) => `${line.who === "tutor" ? input.tutorRole : "Them"}: ${line.text}`)
     .join("\n");
 
+  if (turn.live) return livePrompt(input, transcript);
+
   return `Someone is learning ${input.targetLanguage} by talking their way through a scene. You are looking back at one moment with them, after the conversation has already moved on.
 
 ${input.setting}
@@ -130,6 +138,48 @@ Work out what actually stopped them and say it plainly. Some possibilities: they
 Write for them, in ${input.nativeLanguage}, speaking to them directly. Address them politely, and keep the same level of politeness throughout.
 - "why": two or three sentences. What was being asked, and what went wrong for them. No praise, no scolding, no talk of scores or levels.
 - "say": one thing they could have said, in ${input.targetLanguage}. Short, the way a person really answers.
+- "meaning": that sentence in ${input.nativeLanguage}, and nothing else — no "it means", no quotation marks, no alternatives.${
+    input.focus
+      ? `
+
+What goes wrong in ${input.targetLanguage} in particular, which the sentence you write must not get wrong:
+${input.focus}`
+      : ""
+  }
+
+Reply as JSON only: {"why": "...", "say": "...", "meaning": "..."}`;
+}
+
+/**
+ * 통화 중 💡 힌트: 대화는 멈춰 있고, 이 사람이 지금 하려던 말을 짐작해 이어 말할 수 있게 한다.
+ *
+ * 돌아보기(위)와 같은 모양으로 답해서 같은 패널이 그린다. 다른 점은 셋:
+ * 끊긴 앞부분이 있으면 그 말을 살려 끝까지 이어 준다(새 답을 지어 주지 않는다),
+ * "why"는 한두 문장 — 무엇을 묻는지와 어떻게 이으면 되는지(무엇이 잘못됐는지가 아니라),
+ * 앞부분이 편한 말로 섞여 있어도 그 뜻을 학습 언어 문장으로.
+ */
+function livePrompt(
+  input: { focus?: string; tutorRole: string; setting: string; targetLanguage: string; nativeLanguage: string; turn: StuckTurn },
+  transcript: string,
+): string {
+  const { turn } = input;
+  const started = turn.heard
+    ? `They had started to answer and stopped: "${turn.heard}"
+They may have mixed in words from ${input.nativeLanguage}, or stopped mid-sentence. Work out what they were trying to say from those words and from what they were asked.`
+    : `They have not managed to say anything yet.`;
+  return `Someone is learning ${input.targetLanguage} by talking with a ${input.tutorRole}. They got stuck just now and pressed for help. The conversation is paused, waiting for their answer; when they close this they will try again.
+
+${input.setting}
+
+The conversation so far:
+${transcript}
+
+The ${input.tutorRole} has just said "${turn.asked}".
+${started}
+
+Write for them, in ${input.nativeLanguage}, speaking to them directly. Address them politely, and keep the same level of politeness throughout.
+- "why": one or two short sentences. What they are being asked, and how they can go on${turn.heard ? " from what they already said" : ""}. No praise, no scolding, no talk of scores or levels.
+- "say": the sentence they can say now, in ${input.targetLanguage}. ${turn.heard ? "Finish what they started: keep their own words and their own idea, put right, and complete it. Do not swap in a different answer." : "A short, natural answer to what was asked."} The way a person really answers — one sentence.
 - "meaning": that sentence in ${input.nativeLanguage}, and nothing else — no "it means", no quotation marks, no alternatives.${
     input.focus
       ? `
