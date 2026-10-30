@@ -71,6 +71,7 @@ test("단어 찾기: 찾는 말 다듬기 — 문장부호·대소문자, 세 �
   assert.equal(normalizeQuery("es", "  ¡Perro! "), "perro");
   assert.equal(normalizeQuery("ja", "「猫」"), "猫");
   assert.equal(normalizeQuery("th", "แมว"), "แมว");
+  assert.equal(normalizeQuery("th", "ตุ่นปากเป็ด"), "ตุ่นปากเป็ด", "태국어 합성어는 글자 수로");
   assert.equal(normalizeQuery("en", "a very long phrase here"), null);
   assert.equal(normalizeQuery("en", "abc123"), null);
   assert.equal(normalizeQuery("en", ""), null);

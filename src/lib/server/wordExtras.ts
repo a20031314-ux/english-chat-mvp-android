@@ -11,7 +11,7 @@ import { getOpenAIClient } from "./openai.ts";
 import { translated, textsFingerprint } from "./stageCopy.ts";
 import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
 import { BANK_CHUNK, loadBank, POS_GROUPS, TOPICS } from "../curriculum/vocabBank.ts";
-import { segmentWords } from "../wordSegments.ts";
+import { isSpaceless, segmentWords } from "../wordSegments.ts";
 import type { WordCard } from "./wordCards.ts";
 
 export type ExtraWord = WordCard & { pos: string; topic?: string };
@@ -29,7 +29,8 @@ const indexKey = (language: string, word: string) => `wordsextra:v1:${language}:
 export function normalizeQuery(language: string, raw: string): string | null {
   const text = raw.normalize("NFC").trim().replace(/^[\p{P}\p{S}\s]+|[\p{P}\p{S}\s]+$/gu, "");
   if (!text || text.length > 30 || /[\p{Nd}<>{}@/\\]/u.test(text)) return null;
-  if (segmentWords(text, language).length > 2) return null;
+  // 띄어쓰기 없는 말은 낱말 자르기가 합성어를 쪼개니(ตุ่นปากเป็ด → 셋) 글자 수로, 나머지는 두 낱말까지.
+  if (isSpaceless(text) ? [...text].length > 12 : segmentWords(text, language).length > 2) return null;
   return /\p{Script=Latin}|\p{Script=Cyrillic}/u.test(text) ? text.toLocaleLowerCase() : text;
 }
 
