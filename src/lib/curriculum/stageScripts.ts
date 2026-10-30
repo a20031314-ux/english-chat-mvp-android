@@ -23,6 +23,7 @@ import { EN } from "./stageScripts/en.ts";
 import { ZH } from "./stageScripts/zh.ts";
 import { JA } from "./stageScripts/ja.ts";
 import { KO } from "./stageScripts/ko.ts";
+import { EN_BANK } from "./stageScripts/bank/en.ts";
 
 /** raw = 이미 앱 언어로 된 뜻(뼈대 밖 막힌 것 — 내가 편한 말로 쓴 줄, curriculum/gaps.ts). */
 export type ScriptGloss = { en: string; ko?: string; raw?: string };
@@ -61,6 +62,8 @@ export type StageScript = {
    * 로그인한 사용자의 닉네임으로 바꿔 보인다(personalize, 2026-10-28 사용자 "마리아는 사용자 이름이야?" → "그렇게 해줘").
    */
   name?: { text: string[]; en: string[]; ko?: string[] };
+  /** 대본 은행(2026-10-30): 단계 조건·상황 목록 밖, 지금 단계 이하에서 추천하는 장면 — 내 줄은 뜻만 보고 말하기, 위쪽 틀에 불. */
+  bank?: boolean;
   lines: StageScriptLine[];
 };
 
@@ -73,6 +76,18 @@ export function isTapMode(mode: ScriptMode): boolean {
 }
 
 const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH, fr: FR, it: IT, pt: PT, ru: RU, ar: AR, hi: HI };
+/** 대본 은행(학습 언어별, 지금은 영어 1단계만) — scriptsFor(단계 목록·조건)에는 넣지 않는다. */
+const BANK: Partial<Record<string, StageScript[]>> = { en: EN_BANK };
+
+/** 이 학습 언어의 은행 대본 중 이 단계 이하(2026-10-30 사용자 A "3단계면 1~3단계 범위"). */
+export function bankScriptsUpTo(language: string, stage: number): StageScript[] {
+  return (BANK[language] ?? []).filter((script) => script.stage <= Math.max(1, stage));
+}
+
+/** 이 단계의 은행 대본(뜻풀이 옮기기·읽는 법 — server/stageCopy·stageReadings). */
+export function bankScriptsFor(language: string, stage: number): StageScript[] {
+  return (BANK[language] ?? []).filter((script) => script.stage === stage);
+}
 
 /** 이 학습 언어·단계의 대본(없으면 빈 목록 — 아직 대본이 없는 언어). */
 export function scriptsFor(language: string, stage: number): StageScript[] {
@@ -80,7 +95,7 @@ export function scriptsFor(language: string, stage: number): StageScript[] {
 }
 
 export function scriptById(language: string, id: string): StageScript | null {
-  return (ALL[language] ?? []).find((script) => script.id === id) ?? null;
+  return (ALL[language] ?? []).find((script) => script.id === id) ?? (BANK[language] ?? []).find((script) => script.id === id) ?? null;
 }
 
 /** 대본이 있는 학습 언어인지(다음 단계 조건에 대본을 넣을지). */
@@ -124,7 +139,9 @@ export function modesFor(stage: number): ScriptMode[] {
  */
 export function countsForPass(stage: number, mode: ScriptMode, rule: "speak" | "any" = "speak"): boolean {
   if (isTapMode(mode)) return rule === "any";
-  return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide" || mode === "own";
+  // 내 말로(뜻만 보고 말하기)는 어느 단계든 통과로 — 1~2단계 상황 대본에는 이 방식이 없고, 은행 대본은 이 방식뿐(2026-10-30).
+  if (mode === "own") return true;
+  return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide";
 }
 
 /** 한 번 해 본 결과: 내 줄마다 맞았는지·어떤 방식이었는지·원문을 열어 봤는지. */

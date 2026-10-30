@@ -8,7 +8,7 @@ import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
 import { ladderFor, stageText, type Stage, type StageText } from "../curriculum/stages/index.ts";
 import { scriptFor, type ScriptCourse } from "../curriculum/scripts/index.ts";
-import { scriptsFor } from "../curriculum/stageScripts.ts";
+import { bankScriptsFor, scriptsFor } from "../curriculum/stageScripts.ts";
 import { framesFor } from "../curriculum/frames.ts";
 import { FUNCTIONS } from "../curriculum/functions.ts";
 
@@ -281,6 +281,11 @@ export function scriptGlossTexts(language: string, stage: number): string[] {
   }
   // "할 수 있는 일" 칸 이름(공통 기능, 그 단계 것) — 맨 뒤에 붙여 앞 묶음의 저장을 그대로 쓴다.
   for (const fn of FUNCTIONS) if (fn.stage === stage) add(fn.name);
+  // 대본 은행(2026-10-30) — 맨 뒤에 붙여 앞 묶음 저장은 그대로.
+  for (const script of bankScriptsFor(language, stage)) {
+    add(script.setting);
+    for (const line of script.lines) add(line.gloss);
+  }
   return out;
 }
 

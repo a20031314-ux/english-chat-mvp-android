@@ -186,6 +186,8 @@ export function todayPlan(input: {
   redo?: readonly { frame: string; card: QuizCard }[];
   /** 채우기(지속 학습, 2026-10-29 사용자 "지속학습에서 계속 던져주는 식"): 계속 공부가 고른 열쇠(아는지 확인·부족한 갈래·다지기) — FILL만큼 퀴즈로. */
   fill?: readonly string[];
+  /** 대본 은행에서 고른 오늘의 장면(curriculum/scriptBank.ts) — 하루의 끝(설명·문제 다음 대화)에 한 칸, 2026-10-30. */
+  scene?: { id: string; stage: number } | null;
   now?: number;
 }): PlanItem[] {
   const now = input.now ?? Date.now();
@@ -257,5 +259,12 @@ export function todayPlan(input: {
     out.push({ id: key, kind: "quiz", stage: practice?.stage ?? input.stage, minutes: QUIZ_MINUTES, ...(practice ? { then: { id: practice.id, stage: practice.stage } } : {}) });
     used += QUIZ_MINUTES;
   }
+  if (input.scene && !out.some((item) => item.id === input.scene!.id)) {
+    out.push({ id: input.scene.id, kind: "script", stage: input.scene.stage, minutes: SCENE_MINUTES });
+    used += SCENE_MINUTES;
+  }
   return out;
 }
+
+/** 은행 장면 한 칸(줄 8개, 내 줄 4개). */
+export const SCENE_MINUTES = 3;

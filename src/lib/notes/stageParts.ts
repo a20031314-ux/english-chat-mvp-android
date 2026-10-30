@@ -18,7 +18,7 @@
  * 순수.
  */
 import { STAGE_DONE_SHARE, stageProgress } from "../curriculum/stages/index.ts";
-import { scriptTally } from "../curriculum/stageScripts.ts";
+import { bankScriptsFor, scriptTally } from "../curriculum/stageScripts.ts";
 import { framesFor } from "../curriculum/frames.ts";
 import type { Stage } from "../curriculum/stages/types.ts";
 import type { Ledger, LedgerState, LedgerTab, OutputPlace } from "../learner/ledger.ts";
@@ -168,7 +168,9 @@ export function withScripts(rows: StageParts[], language: string, passed: Readon
     if (!tally.total) return row;
     // 틀 바꿔 말하기(curriculum/frames.ts)의 통과도 같은 목록에 — 다음 단계 조건(done/total)에는 넣지 않는다.
     const frames = framesFor(language, row.order).filter((frame) => passed.has(frame.id)).map((frame) => frame.id);
-    const scripts = { ...tally, passed: [...tally.passed, ...frames] };
+    // 대본 은행 장면(2026-10-30)도 통과 목록에만 — 오늘 할 것이 다음 장면을 고르게, 조건에는 안 셈.
+    const bank = bankScriptsFor(language, row.order).filter((script) => passed.has(script.id)).map((script) => script.id);
+    const scripts = { ...tally, passed: [...tally.passed, ...frames, ...bank] };
     return { ...row, scripts, ready: row.ready && scripts.done >= scripts.total };
   });
 }

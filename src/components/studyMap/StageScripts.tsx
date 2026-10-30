@@ -12,7 +12,8 @@ import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
 import { RECALL_SIZE as RECALL_COUNT, stageFrameTally } from "@/lib/curriculum/recall";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
-import { framesFor, type Frame } from "@/lib/curriculum/frames";
+import { allFramesFor, framesFor, framesOfScript, type Frame } from "@/lib/curriculum/frames";
+import { frameUsed } from "@/lib/curriculum/scriptBank";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
@@ -35,6 +36,7 @@ import {
   personalize,
   runPasses,
   usableName,
+  scriptById,
   scriptsFor,
   scriptVoice,
   variantOf,
@@ -174,9 +176,11 @@ export function StageScripts({
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
-    setOpen(scripts.find((script) => script.id === openFor.id) ?? null);
+    // 대본 은행 장면(오늘 할 것의 대화 한 칸, 2026-10-30)은 단계 목록 밖이라 id로 찾는다.
+    const banked = scriptById(language, openFor.id);
+    const target = scripts.find((script) => script.id === openFor.id) ?? (banked?.bank ? banked : undefined);
+    setOpen(target ?? null);
     // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
-    const target = scripts.find((script) => script.id === openFor.id);
     setFrameFor(target ? null : openFor);
     // 연 것이 있는 방식 칩으로 옮겨 둔다(닫은 뒤 목록이 그 자리에).
     setMethod(!target ? "frame" : isSituationScript(target) ? "situation" : "expression");
@@ -330,8 +334,9 @@ function ScriptPlayer({
   onClose: () => void;
 }) {
   const { isPremium } = usePremium();
-  const modes = modesFor(script.stage);
-  const [mode, setModeState] = useState<ScriptMode>(() => readMode(script.stage));
+  // 대본 은행 장면: 내 줄은 뜻만 보고 말하기 하나(2026-10-30 사용자 "~라고 말해 보세요").
+  const modes: ScriptMode[] = script.bank ? ["own"] : modesFor(script.stage);
+  const [mode, setModeState] = useState<ScriptMode>(() => (script.bank ? "own" : readMode(script.stage)));
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<number, Result>>({});
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
@@ -602,6 +607,25 @@ function ScriptPlayer({
           ✕
         </button>
       </header>
+      {script.bank ? (
+        // 이 장면의 문장구조 — 그 틀을 실제로 써서 맞게 말한 줄이 있으면 불이 켜진다(2026-10-30 사용자 "위쪽에 틀을 나열, 사용하면 불").
+        <ul data-scene-frames className="flex shrink-0 flex-wrap gap-1.5 border-b border-line px-4 py-2">
+          {framesOfScript(script).map((id) => {
+            const pattern = allFramesFor(language).find((one) => one.id === id)?.pattern ?? "";
+            const lit = script.lines.some((line, i) => line.frames?.includes(id) && results[i]?.clean && frameUsed(pattern, results[i]!.heard));
+            return (
+              <li
+                key={id}
+                dir="auto"
+                data-lit={lit ? "" : undefined}
+                className={`rounded-full border px-2.5 py-0.5 text-caption transition-colors ${lit ? "border-good bg-good/15 text-ink" : "border-line text-slate-500"}`}
+              >
+                {pattern}
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
       {script.goal ? (
         <div className="flex shrink-0 items-center gap-2 border-b border-line px-4 py-2">
           <p dir="auto" className="min-w-0 flex-1 text-caption text-slate-300">
@@ -611,7 +635,7 @@ function ScriptPlayer({
       ) : null}
       <div role="group" className="flex shrink-0 flex-wrap items-center gap-1.5 border-b border-line px-4 py-2">
         {/* Ways to say the lines: one button, each way shown as a tiny dialogue from this script (2026-10-30, user). */}
-        <WayPicker ui={ui} ways={modeWays} value={mode} onPick={setMode} data="script-mode" />
+        {script.bank ? null : <WayPicker ui={ui} ways={modeWays} value={mode} onPick={setMode} data="script-mode" />}
         {needsLetters(language) ? (
           <button
             type="button"
@@ -623,6 +647,7 @@ function ScriptPlayer({
             {ui.readingToggle}
           </button>
         ) : null}
+        {script.bank ? null : (
         <span role="group" aria-label={ui.passRuleTitle} className="ms-auto flex items-center gap-1 text-meta text-slate-500">
           {ui.passRuleTitle}
           {(["speak", "any"] as const).map((rule) => (
@@ -637,6 +662,7 @@ function ScriptPlayer({
             </button>
           ))}
         </span>
+        )}
       </div>
       {/* Live progress (user, 2026-10-29): per own line ● counts toward passing · ◐ said, not yet · ○ not yet; says so when this mode does not count. */}
       <div className="flex shrink-0 items-center gap-2 border-b border-line px-4 py-1.5">

@@ -40,9 +40,10 @@ import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
-import { allScriptsFor, glossFor, isSituationScript } from "@/lib/curriculum/stageScripts";
+import { allScriptsFor, glossFor, isSituationScript, scriptById } from "@/lib/curriculum/stageScripts";
 import { MiniDialogue, type Bubble } from "@/components/studyMap/WayPicker";
 import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
+import { pickBankScript } from "@/lib/curriculum/scriptBank";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/studyMap/WordMatch";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
@@ -332,7 +333,10 @@ export function TodayPlan({
         // 다시 볼 것은 이미 앞에, 아직 안 배운 것(new)은 빼고 — 처음 쓰는 사람은 채우기 없이 새 대본만.
         .filter((pick) => pick.reason !== "again" && pick.reason !== "new")
         .map((pick) => pick.key);
-      return todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, fill, now });
+      // 하루의 끝 대화 한 칸: 대본 은행에서 지금 단계 이하 장면 하나(2026-10-30 사용자 A).
+      const sceneScript = pickBankScript({ language, stage, passed: planPassed, seed: localDay(new Date(now)) });
+      const scene = sceneScript ? { id: sceneScript.id, stage: sceneScript.stage } : null;
+      return todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, fill, scene, now });
     },
     // 오늘 목록은 분량·순서·언어가 바뀔 때만 새로(하나 끝냈다고 바꾸지 않는다) — passed·review는 처음 계산에만.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -383,7 +387,7 @@ export function TodayPlan({
       : item.kind === "quiz"
       ? keyLabel(language, item.id, grammarName)
       : item.kind === "script"
-      ? glossFor(scripts.find((s) => s.id === item.id)?.setting ?? { en: item.id }, locale)
+      ? glossFor((scripts.find((s) => s.id === item.id) ?? scriptById(language, item.id))?.setting ?? { en: item.id }, locale)
       : (frames.find((f) => f.id === item.id)?.pattern ?? item.id);
   const doneOf = (item: PlanItem) =>
     item.kind === "recall"
@@ -689,7 +693,7 @@ export function TodayPlan({
     return { questions: [first], keys: [current.id] };
   };
   const previewOf = (item: PlanItem): string => {
-    if (item.kind === "script") return scripts.find((one) => one.id === item.id)?.lines[0]?.text ?? "";
+    if (item.kind === "script") return (scripts.find((one) => one.id === item.id) ?? scriptById(language, item.id))?.lines[0]?.text ?? "";
     if (item.kind === "frame") return frames.find((one) => one.id === item.id)?.examples[0]?.text ?? "";
     return "";
   };

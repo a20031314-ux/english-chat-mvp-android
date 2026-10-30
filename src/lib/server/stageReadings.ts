@@ -6,7 +6,7 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
-import { scriptsFor } from "../curriculum/stageScripts.ts";
+import { bankScriptsFor, scriptsFor } from "../curriculum/stageScripts.ts";
 import { needsLetters } from "../curriculum/letterLangs.ts";
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
@@ -30,7 +30,7 @@ function looksRight(language: string, text: string): boolean {
 
 export function readingSources(language: string, stage: number): string[] {
   const out = new Set<string>();
-  for (const script of scriptsFor(language, stage)) {
+  for (const script of [...scriptsFor(language, stage), ...bankScriptsFor(language, stage)]) {
     for (const line of script.lines) {
       out.add(line.text);
       for (const variant of line.alt ?? []) out.add(variant.text);
