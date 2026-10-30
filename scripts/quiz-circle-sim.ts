@@ -1,0 +1,60 @@
+/**
+ * 넓어지는 원(src/lib/curriculum/circle.ts) 가상 학습자 시뮬레이션 — 숫자(시작 크기·키우는 기준·정답률 목표)를 바꿀 때 먼저 돌린다.
+ *   node --experimental-strip-types scripts/quiz-circle-sim.ts [days=14] [perDay=40]
+ * 학습자 셋: 이미 많이 아는 사람(앞 1,000개 대부분 앎) · 처음 배우는 사람 · 잘 잊는 사람.
+ * 낱말마다 "기억 세기" — 처음엔 순위에 따라, 틀린 뒤 답을 보면 오르고, 맞히면 더 오르고, 날마다 조금씩 잊는다.
+ * 보는 것: 날마다 정답률(목표 75~90%), 모르는 몫(share), 원 크기, 원 안 익힘.
+ */
+import { emptyCircle, growCircle, noteAnswer, pickCircle, circleView, type Circle } from "../src/lib/curriculum/circle.ts";
+
+const days = Number(process.argv[2] ?? 14);
+const perDay = Number(process.argv[3] ?? 40);
+const BUNDLE = 4;
+const DAY = 24 * 60 * 60 * 1000;
+const order = Array.from({ length: 700 }, (_, i) => `w|word${i}`);
+
+type Learner = { name: string; prior: (rank: number) => number; learn: number; forget: number };
+const learners: Learner[] = [
+  { name: "많이 앎", prior: (rank) => (rank < 400 ? 0.92 : rank < 600 ? 0.6 : 0.2), learn: 0.35, forget: 0.03 },
+  { name: "처음", prior: () => 0.05, learn: 0.3, forget: 0.04 },
+  { name: "잘 잊음", prior: () => 0.1, learn: 0.2, forget: 0.1 },
+];
+
+let seed = 7;
+const random = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
+
+for (const learner of learners) {
+  seed = 7;
+  const memory = new Map<string, number>();
+  order.forEach((key, rank) => memory.set(key, learner.prior(rank)));
+  let circle: Circle = emptyCircle();
+  let now = Date.UTC(2026, 10, 1, 9);
+  const rows: string[] = [];
+  for (let day = 1; day <= days; day += 1) {
+    let right = 0;
+    let asked = 0;
+    let last = new Set<string>();
+    while (asked < perDay) {
+      const keys = pickCircle(circle, order, { n: BUNDLE, now, usable: () => true, known: () => false, skip: last });
+      if (!keys.length) break;
+      for (const key of keys) {
+        const p = memory.get(key)!;
+        const correct = random() < p;
+        memory.set(key, Math.min(0.98, p + (correct ? learner.learn * 0.6 : learner.learn) * (1 - p)));
+        circle = noteAnswer(circle, key, correct, now);
+        circle = growCircle(circle, order, () => false);
+        right += correct ? 1 : 0;
+        asked += 1;
+        now += 20 * 1000;
+      }
+      last = new Set(keys);
+    }
+    const view = circleView(circle, order, () => false);
+    rows.push(`${String(day).padStart(2)}일  정답률 ${String(Math.round((right / Math.max(1, asked)) * 100)).padStart(3)}%  모르는 몫 ${Math.round(circle.share * 100)}%  원 ${String(circle.size).padStart(3)}  익힘 ${view.counts.known} · 배우는 중 ${view.counts.learning} · 새것 ${view.counts.new}`);
+    // 하룻밤: 잊기.
+    for (const [key, p] of memory) memory.set(key, Math.max(0.02, p * (1 - learner.forget)));
+    now += DAY - perDay * 20 * 1000;
+  }
+  console.log(`\n# ${learner.name}`);
+  console.log(rows.join("\n"));
+}

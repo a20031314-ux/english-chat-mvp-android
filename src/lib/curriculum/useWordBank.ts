@@ -156,7 +156,7 @@ export function wordGloss(language: string, word: string): string {
  * userStage: 지금 내 단계 — 그 위 단계 낱말은 내지 않는다(mine 빼고). mine: 내가 찾거나 저장한 낱말(단계 무관 맨 앞).
  * 고르는 순서(2026-10-31 설계): mine → 지금 단계 필수 → 아래 단계 필수 중 아직 모르는 것 → (5단계면) 확장.
  */
-export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null, userStage = 5, mine?: ReadonlySet<string>) {
+export function useWordBank(language: string, ui: string, known: KnownMap, pick?: VocabPick | null, userStage = 5, mine?: ReadonlySet<string>, also?: readonly string[]) {
   const [bank, setBank] = useState<readonly BankWord[] | null>(() => peekBank(language));
   const [ready, setReady] = useState<Set<string>>(new Set());
   // 사용자들이 찾아서 더한 낱말(server/wordExtras.ts) — 빈도 목록 뒤에 붙인다(2026-10-31 사용자 "검색하면 자동 추가 → 다른 사용자에게 반영").
@@ -204,6 +204,7 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
   }, [list, userStage, mineKey]);
   // 고른 칸(curriculum/vocabBank.ts inPick)에서 아직 모르는(이미 앎·확인 중이 아닌) 앞 낱말들이 든 묶음(셋까지).
   const pickKey = pick ? `${pick.by}:${pick.value}` : "all:";
+  const alsoKey = also?.join("|") ?? "";
   const chunks = useMemo(() => {
     if (!list) return "";
     const out: string[] = [];
@@ -217,12 +218,26 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
       if (!out.includes(c)) out.push(c);
       if (out.length >= 3) break;
     }
+    // 넓어지는 원(curriculum/circle.ts)이 낼 낱말의 묶음도(아직 카드가 없는 것, 셋까지 더).
+    if (also?.length) {
+      const at = new Map(list.map((word, index) => [wordKey(word.w), index]));
+      let extra = 0;
+      for (const key of also) {
+        const index = at.get(key);
+        if (index === undefined) continue;
+        const c = chunkOf(index, baseLength);
+        if (out.includes(c)) continue;
+        out.push(c);
+        extra += 1;
+        if (extra >= 3) break;
+      }
+    }
     const first = out[0];
     if (out.length === 1 && first?.startsWith("b") && (Number(first.slice(1)) + 1) * BANK_CHUNK < baseLength && (!pick || pick.by === "all" || pick.by === "stage")) out.push(`b${Number(first.slice(1)) + 1}`);
     return out.join(",");
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, known, pickKey, baseLength, order, userStage, mineKey]);
+  }, [list, known, pickKey, baseLength, order, userStage, mineKey, alsoKey]);
   useEffect(() => {
     if (!list || !chunks) return;
     let alive = true;
@@ -290,7 +305,10 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
           return { id, known: have, total };
         })
       : [];
-    return { total: list.length, known: knownCount, learning, next, groups };
+    // 넓어지는 원의 차례: 고른 칸 안 낱말 전부(이미 앎 포함), 늦게 낼 것(기능어 등)은 뒤로.
+    const inside = order.map((index) => ({ word: list[index]!, index })).filter(({ word, index }) => inPick(word, index, pick));
+    const orderKeys = [...inside.filter(({ word }) => !isLate(word)), ...inside.filter(({ word }) => isLate(word))].map(({ word }) => wordKey(word.w));
+    return { total: list.length, known: knownCount, learning, next, groups, orderKeys, ready };
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list, known, ready, pickKey, order, userStage, mineKey]);

@@ -23,7 +23,7 @@ import {
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
-import { buildQuiz, buildUnit, bundleQuiz, orderTiles, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
+import { buildQuiz, buildUnit, bundleQuiz, orderTiles, QUIZ_SIZE, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -53,6 +53,7 @@ import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
+import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, trimCircle, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -263,7 +264,39 @@ export function TodayPlan({
       : null;
   // 내가 저장한 낱말(이 학습 언어)은 단계와 상관없이 어휘 퀴즈 맨 앞(2026-10-31 낱말 층위 ⑤).
   const mineWords = useMemo(() => new Set(savedWords.filter((one) => one.languageCode === language).map((one) => one.word.trim())), [savedWords, language]);
-  const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords);
+  // 넓어지는 원(curriculum/circle.ts, 2026-10-31 사용자 "원을 키워 가면서 일정 비율 모르는 묶음으로 계속"): 어휘 탭에서 칸을 따로 안 골랐을 때.
+  const circleOn = !vocabPick || (vocabPick.by === "stage" && !vocabPick.value);
+  const [circle, setCircle] = useState<Circle>(emptyCircle);
+  const circleRef = useRef<Circle>(circle);
+  useEffect(() => {
+    let loaded: Circle = emptyCircle();
+    try {
+      const raw = JSON.parse(localStorage.getItem(`quizCircle.v1.${language}`) ?? "null") as Circle | null;
+      if (raw && typeof raw.size === "number" && raw.items && typeof raw.items === "object") loaded = raw;
+    } catch {
+      // 이 폰에 없으면 처음부터.
+    }
+    circleRef.current = loaded;
+    setCircle(loaded);
+  }, [language]);
+  const saveCircle = (next: Circle) => {
+    circleRef.current = next;
+    setCircle(next);
+    try {
+      localStorage.setItem(`quizCircle.v1.${language}`, JSON.stringify(next));
+    } catch {
+      // 이번에만.
+    }
+  };
+  const lastCircle = useRef<Set<string>>(new Set());
+  const [circleNeed, setCircleNeed] = useState<string[]>([]);
+  const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords, circleOn ? circleNeed : undefined);
+  const knownWord = (key: string) => knownState(known, key) === "known";
+  // 원 안인데 아직 카드가 없는 낱말(앞에서 열둘) — 그 묶음을 받아 오게.
+  const needKey = circleOn && bank ? bank.orderKeys.slice(0, circle.size).filter((key) => !bank.ready.has(key)).slice(0, 12).join("|") : "";
+  useEffect(() => {
+    setCircleNeed(needKey ? needKey.split("|") : []);
+  }, [needKey]);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
@@ -1036,6 +1069,9 @@ export function TodayPlan({
     if (one.skipped || !one.key) return;
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
+    if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
+      saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, one.correct, Date.now()), bank.orderKeys, knownWord)));
+    }
     finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
   };
   const takeBatch = (made: { keys: string[]; questions: QuizQuestion[] } | null): QuizBatch | null => {
@@ -1048,6 +1084,24 @@ export function TodayPlan({
   // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
   const keepMake = (): QuizBatch | null => {
     if (wrongTab) return takeBatch(bundleFor("review"));
+    if (keepFocus === "vocab" && circleOn && bank?.orderKeys.length) {
+      const keys = pickCircle(circleRef.current, bank.orderKeys, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
+      lastCircle.current = new Set(keys);
+      if (!keys.length) return null;
+      void growBank(language, locale, keys.map((key) => ({ key, stage })));
+      // 처음 보는 낱말은 고르기, 다시 나온 낱말은 쓰기(처음부터 쓰게 하면 첫날 정답률이 30%대 — 시뮬레이션).
+      const questions: QuizQuestion[] = [];
+      const used: string[] = [];
+      for (const key of keys) {
+        const fresh = itemState(circleRef.current, key, knownWord(key)) === "new";
+        const made = bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: fresh ? "choose" : "type", fallback: fresh ? "type" : "choose", strict: true });
+        if (made.questions[0]) {
+          questions.push(made.questions[0]);
+          used.push(key);
+        }
+      }
+      return questions.length ? takeBatch({ keys: used, questions }) : null;
+    }
     if (keepFocus === "vocab") {
       const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
       return keys.length ? takeBatch(bundleFor("learn", keys.slice(0, MATCH_SIZE))) : null;
@@ -1199,7 +1253,7 @@ export function TodayPlan({
         language={language}
         resetKey={keepResetKey}
         make={keepMake}
-        retryKey={`${bank?.next.length ?? -1}|${spotCards.size}`}
+        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${spotCards.size}`}
         onResult={recordOne}
         empty={<p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>}
       />
