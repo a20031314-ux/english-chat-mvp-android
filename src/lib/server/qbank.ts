@@ -51,7 +51,7 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
   const decoysHave = Object.values(entry.decoys).flat().map((d) => d.d);
   const completion = await completeChat(client, "translate", {
     temperature: 0.8,
-    max_tokens: 700,
+    max_tokens: 1600,
     messages: [
       {
         role: "system",
