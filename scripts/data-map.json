@@ -71,7 +71,7 @@
     "rp:daily": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "해당 없음", "what": "오늘 쓴 자유 통화 분" },
     "scriptChoices:v2": { "feature": "My 단계 대본 고르기", "scope": "shared", "onAccountDelete": "해당 없음", "what": "대본 내 줄마다 빈칸과 오답(문법·어휘로 헷갈리는 것), 대본마다 한 번 모델이 만들고 정답처럼 받아들여질 오답은 확인해 뺀 것 — 학습자 글 없음" },
     "readings:v1": { "feature": "단계 학습 읽는 법", "scope": "shared", "onAccountDelete": "해당 없음", "what": "글자가 다른 학습 언어의 단계 학습 줄 읽는 법(가나·병음·로마자), 단계마다 한 번 모델이 만든 것 — 학습자 글 없음" },
-    "framelesson:v3": { "feature": "My 문장구조 수업", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조마다 모델이 만든 짧은 설명과 주고받기 세 번(학습 언어 줄과 뜻), 앱 언어로 옮긴 설명·뜻 — 학습자 글 없음" },
+    "framelesson:v4": { "feature": "My 문장구조 수업", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조마다 모델이 만든 짧은 설명과 주고받기 세 번(학습 언어 줄과 뜻), 앱 언어로 옮긴 설명·뜻 — 학습자 글 없음" },
     "recall:v1": { "feature": "My 꺼내 쓰기", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조 하나·둘마다 모델이 만든 말할 문장과 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
     "words:v1": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 50개 묶음마다 모델이 만든 예문·쓴 꼴·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
     "stagecopy:v1": { "feature": "지도 단계", "scope": "shared", "onAccountDelete": "해당 없음", "what": "단계 범위 화면 글·단계 대본과 틀의 뜻풀이를 앱 언어로 옮긴 것(학습 언어 × 앱 언어마다 하나, 대본·틀은 단계마다)" },
