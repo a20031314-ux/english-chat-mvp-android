@@ -13,7 +13,8 @@ import { STAGE_DONE_SHARE } from "./stages/index.ts";
 import { glossFor, scriptsFor } from "./stageScripts.ts";
 import type { KnownMap } from "./known.ts";
 
-export type RecallPrompt = { text: string; gloss: string; frames: string[] };
+/** line = 대본 줄(gloss는 그 줄의 뜻 — 화면이 "…라고 말해 보세요"로 감쌈), 아니면 gloss가 이미 말하라는 지시. */
+export type RecallPrompt = { text: string; gloss: string; frames: string[]; line?: boolean };
 
 export const RECALL_SIZE = 5;
 
@@ -76,7 +77,7 @@ export function recallFromScripts(language: string, frame: Frame, locale: string
         const gloss = glossFor(line.gloss, locale);
         if (!gloss || gloss === line.text) continue;
         seen.add(line.text);
-        out.push({ text: line.text, gloss, frames: [frame.id] });
+        out.push({ text: line.text, gloss, frames: [frame.id], line: true });
       }
     }
   }

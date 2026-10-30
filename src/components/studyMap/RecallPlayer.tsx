@@ -162,16 +162,19 @@ export function RecallPlayer({
             <li key={i} className="mb-2">
               <div className={`rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.06]"}`}>
                 <p dir="auto" className={current && !result ? "text-note text-slate-200" : "text-caption text-slate-400"}>
-                  {ui.scriptSayPrompt.split("{line}").map((part, k) =>
-                    k === 0 ? (
-                      part
-                    ) : (
-                      <span key={k}>
-                        <bdi dir="auto">{item.gloss}</bdi>
-                        {part}
-                      </span>
-                    ),
-                  )}
+                  {/* Server prompts are already instructions (server/recallPrompts.ts); a script line's meaning gets "say …". */}
+                  {item.line
+                    ? ui.scriptSayPrompt.split("{line}").map((part, k) =>
+                        k === 0 ? (
+                          part
+                        ) : (
+                          <span key={k}>
+                            <bdi dir="auto">{item.gloss}</bdi>
+                            {part}
+                          </span>
+                        ),
+                      )
+                    : item.gloss}
                 </p>
                 <p dir="auto" className="mt-1 text-meta text-slate-500">
                   {patterns.join(" · ")}

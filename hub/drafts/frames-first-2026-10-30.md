@@ -2,7 +2,7 @@
 
 > 사용자 2026-10-30: "단계별 학습은 문장틀을 숙지시키는 게 목표인데, 스크립트로 숙지시키려니 주제가 부각되지 않아" →
 > "AI 대화 탭은 따로 있으니 '~라고 말해 보세요' 식으로 숙지한 부분을 활용하도록" → **B: 대본은 남기되 조건에서 뺌.**
-> 아직 코드 없음. 이 문서를 사용자가 보고 "정할 것"을 고른 뒤 만든다.
+> **만듦(2026-10-30):** 사용자가 고름 — 방식은 아이콘으로 구분, 조건은 둘 다 70%, 꺼내 쓰기 5문제. 코드: `curriculum/recall.ts`·`server/recallPrompts.ts`·`api/curriculum/recall`·`studyMap/RecallPlayer.tsx`, 단계 칸(StageScripts·NotebookSection)·오늘 할 것(dailyPlan RECALL_ITEM). 네 갈래 막대를 단계 칸에서 빼는 것(4절 두 번째 줄)은 아직.
 
 ## 왜
 
