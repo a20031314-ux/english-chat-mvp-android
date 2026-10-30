@@ -7,10 +7,10 @@ import { todayPlan } from "./dailyPlan.ts";
 
 test("대본 은행: 언어마다 1~3단계 20개씩, 줄 8개 번갈아, 내 줄 틀 태그는 그 단계 이하의 틀이고 줄에 그대로, 한국어 뜻, 숫자는 글로, 단계 목록에는 안 들어감", () => {
   const languages = bankLanguages();
-  assert.ok(languages.length >= 1, languages.join(","));
+  assert.ok(languages.length >= 14, languages.join(","));
   for (const language of languages) {
     const bank = bankScriptsUpTo(language, 5);
-    assert.ok(bank.length >= 20, language);
+    for (const stage of [1, 2, 3]) assert.ok(bank.filter((script) => script.stage === stage).length >= 20, `${language} ${stage}단계`);
     const frames = new Map(allFramesFor(language).map((frame) => [frame.id, frame]));
     const ids = new Set<string>();
     for (const script of bank) {
@@ -42,7 +42,7 @@ test("고르기: 지금 단계 이하에서, 안 한 장면 먼저, 같은 날 �
   assert.equal(pickBankScript({ language: "en", stage: 3, passed: new Set(), seed: "2026-10-30" })?.id, first!.id);
   const next = pickBankScript({ language: "en", stage: 3, passed: new Set([first!.id]), seed: "2026-10-30" });
   assert.ok(next && next.id !== first!.id);
-  assert.ok((pickBankScript({ language: "en", stage: 2, passed: new Set(), seed: "x" })?.stage ?? 9) <= 2);
+  assert.ok((pickBankScript({ language: "ja", stage: 2, passed: new Set(), seed: "x" })?.stage ?? 9) <= 2);
   assert.equal(pickBankScript({ language: "xx", stage: 1, passed: new Set() }), null);
   // 다 했으면 다시(null 아님).
   const all = new Set(bankScriptsUpTo("en", 1).map((script) => script.id));
