@@ -1,7 +1,7 @@
 /**
  * 문장구조 수업(2026-10-30 사용자 "일반적인 설명(문법, 구문) > 문제풀이 > 대화" → 대화는 주고받기형, curriculum/frameLesson.ts):
  * 틀(curriculum/frames.ts)마다 한 번 Haiku가 ① 짧은 설명 두세 줄(영어) ② 그 틀로 대답하는 주고받기 세 번(상대 줄·내 줄은 학습 언어,
- * 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 설명·뜻을 옮겨 둔다(stageCopy.translated). 모두가 같이 쓰는 저장(`framelesson:v2`), 학습자 글 없음.
+ * 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 설명·뜻을 옮겨 둔다(stageCopy.translated). 모두가 같이 쓰는 저장(`framelesson:v3`), 학습자 글 없음.
  * 내 줄은 그 틀이 알아보는 조각(core)을 담아야 하고, 연습 예문과 겹치면 안 된다 — 지키지 않은 차례는 버린다.
  */
 import { kvGetJson, kvSetJson } from "./kv.ts";
@@ -27,7 +27,7 @@ async function makeLesson(language: string, frame: Frame): Promise<FrameLesson |
       {
         role: "system",
         content: `You teach one ${name} sentence pattern to a beginner. ___ is the part that changes.
-First write a short explanation in plain English for the learner: two or three short lines, each under 20 words, saying how the pattern is built (what each fixed part does) and when to use it. No grammar jargon unless needed, no example sentences in the explanation.
+First write a short explanation in plain English for the learner: two or three short lines, each under 20 words, saying how the pattern is built (what each fixed part does) and when to use it. Quote the fixed parts in ${name} exactly as they appear in the pattern; do not compare with English words or English grammar. No grammar jargon unless needed, no example sentences in the explanation.
 Then write three short, natural exchanges in ${name}: another person says one line, and the learner answers with ONE sentence that uses the pattern (keep its fixed part exactly as written, change only the ___ part, simple everyday words). Do not repeat the practice sentences given. No names of real people, brands or places, nothing rude.
 Answer in exactly this format and nothing else:
 E|<explanation line>
@@ -57,8 +57,8 @@ T|<other person's line in ${name}>|<its English translation>|<learner's answer i
 
 /** 틀 하나의 수업. 앱 언어가 영어가 아니면 설명·뜻을 그 말로. */
 export async function frameLesson(language: string, frame: Frame, ui: string, uiName: string, onMake?: () => void): Promise<FrameLesson | null> {
-  // v2(2026-10-30): 뜻이 설명("…를 묻습니다")으로 나오던 것을 그대로 옮긴 말로.
-  const key = `framelesson:v2:${language}:${frame.id}`;
+  // v2(2026-10-30): 뜻이 설명("…를 묻습니다")으로 나오던 것을 그대로 옮긴 말로. v3: 설명이 영어("I am")에 빗대던 것을 학습 언어 조각으로.
+  const key = `framelesson:v3:${language}:${frame.id}`;
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
   if (!lesson?.turns?.length) {
     onMake?.();
