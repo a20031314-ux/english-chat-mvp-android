@@ -20,8 +20,7 @@ export const DAILY_BUDGET = 400;
 const KEEP_RETIRED = 20;
 
 const bankKey = (language: string, key: string) => `qbank:v1:${language}:${key}`;
-/** 만들기가 하나도 못 건졌을 때 모델 답(점검용, 이 서버 인스턴스에만). */
-export const lastRaw = new Map<string, string>();
+
 
 /** 열쇠가 가리키는 조각(앱 데이터로 확인 — 아무 글이나 받지 않는다)과 무엇인지. */
 export function targetOf(language: string, key: string): { piece: string; what: string } | null {
@@ -117,7 +116,8 @@ export async function bankFor(language: string, key: string, stage: number, resu
         const list = [...(entry.decoys[slot] ?? [])];
         for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !entry.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
         entry.decoys[slot] = list.slice(-6);
-        if (!more.items.length) lastRaw.set(`${language}|${key}`, more.raw.slice(0, 800));
+        // 하나도 못 건졌으면 모델 답을 묶음에 잠깐 남긴다(점검 — 앱에는 안 감, 다음 성장 때 덮임).
+        (entry as BankEntry & { last?: string }).last = !more.items.length || !list.length ? more.raw.slice(0, 800) : "";
         entry.grownAt = entry.served;
         entry.dayGrows = entry.day === day ? entry.dayGrows + 1 : 1;
         entry.day = day;
