@@ -848,7 +848,8 @@
     "reviewLayerTitle": "復習",
     "tutorLanguage": "チューターが話す言葉",
     "callRecapTitle": "この通話のまとめ",
-    "callRecapLooked": "意味を見た言葉"
+    "callRecapLooked": "意味を見た言葉",
+    "quizNoMistake": "間違いなし"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1699,7 +1700,8 @@
     "reviewLayerTitle": "复习",
     "tutorLanguage": "导师使用的语言",
     "callRecapTitle": "本次通话整理",
-    "callRecapLooked": "查看过意思的句子"
+    "callRecapLooked": "查看过意思的句子",
+    "quizNoMistake": "没有错误"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2553,7 +2555,8 @@
     "reviewLayerTitle": "Ôn tập",
     "tutorLanguage": "Gia sư nói bằng",
     "callRecapTitle": "Tóm tắt cuộc gọi",
-    "callRecapLooked": "Câu đã xem nghĩa"
+    "callRecapLooked": "Câu đã xem nghĩa",
+    "quizNoMistake": "Không có lỗi"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3412,7 +3415,8 @@
     "reviewLayerTitle": "Révision",
     "tutorLanguage": "Le tuteur parle",
     "callRecapTitle": "De cet appel",
-    "callRecapLooked": "Phrases dont vous avez vu le sens"
+    "callRecapLooked": "Phrases dont vous avez vu le sens",
+    "quizNoMistake": "Aucune erreur"
   },
   "it": {
     "archive": "Report",
@@ -4462,7 +4466,8 @@
     "reviewLayerTitle": "Ripasso",
     "tutorLanguage": "Il tutor parla",
     "callRecapTitle": "Da questa chiamata",
-    "callRecapLooked": "Frasi di cui hai visto il significato"
+    "callRecapLooked": "Frasi di cui hai visto il significato",
+    "quizNoMistake": "Nessun errore"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5324,7 +5329,8 @@
     "reviewLayerTitle": "Revisão",
     "tutorLanguage": "O tutor fala",
     "callRecapTitle": "Desta chamada",
-    "callRecapLooked": "Frases cujo significado você viu"
+    "callRecapLooked": "Frases cujo significado você viu",
+    "quizNoMistake": "Não há erro"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6372,7 +6378,8 @@
     "reviewLayerTitle": "Повторение",
     "tutorLanguage": "Язык репетитора",
     "callRecapTitle": "Итоги звонка",
-    "callRecapLooked": "Фразы, которые вы перевели"
+    "callRecapLooked": "Фразы, которые вы перевели",
+    "quizNoMistake": "Ошибки нет"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7230,7 +7237,8 @@
     "reviewLayerTitle": "Ulangan",
     "tutorLanguage": "Tutor berbicara",
     "callRecapTitle": "Dari panggilan ini",
-    "callRecapLooked": "Kalimat yang kamu lihat artinya"
+    "callRecapLooked": "Kalimat yang kamu lihat artinya",
+    "quizNoMistake": "Tidak ada yang salah"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8081,7 +8089,8 @@
     "reviewLayerTitle": "مراجعة",
     "tutorLanguage": "لغة المعلّم",
     "callRecapTitle": "من هذه المكالمة",
-    "callRecapLooked": "جمل اطّلعت على معناها"
+    "callRecapLooked": "جمل اطّلعت على معناها",
+    "quizNoMistake": "لا يوجد خطأ"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8932,7 +8941,8 @@
     "reviewLayerTitle": "ทบทวน",
     "tutorLanguage": "ภาษาที่ติวเตอร์ใช้",
     "callRecapTitle": "สรุปการโทรครั้งนี้",
-    "callRecapLooked": "ประโยคที่ดูความหมาย"
+    "callRecapLooked": "ประโยคที่ดูความหมาย",
+    "quizNoMistake": "ไม่มีจุดผิด"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9783,6 +9793,7 @@
     "reviewLayerTitle": "दोहराना",
     "tutorLanguage": "ट्यूटर की भाषा",
     "callRecapTitle": "इस कॉल से",
-    "callRecapLooked": "वाक्य जिनका अर्थ देखा"
+    "callRecapLooked": "वाक्य जिनका अर्थ देखा",
+    "quizNoMistake": "कोई गलती नहीं"
   }
 }

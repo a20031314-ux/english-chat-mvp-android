@@ -321,6 +321,14 @@ export function TodayPlan({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language, cardsKey, now]);
   const gapKeys = gaps.filter((gap) => knownState(known, gap.key) !== "known").map((gap) => gap.key);
+  // 튜터가 고친 내 줄(틀린 곳 찾아 고치기 재료): 막힌 것의 고친 줄 + 같은 틀을 두 번 고친 줄(redo, f|틀).
+  const spotCards = useMemo(() => {
+    const map = new Map<string, QuizCard>();
+    for (const item of redo) map.set(`f|${item.frame}`, item.card);
+    for (const gap of gaps) if (gap.card && !map.has(gap.key)) map.set(gap.key, gap.card);
+    return map;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gaps, redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|")]);
   const day = now ? localDay(new Date(now)) : "";
   useEffect(() => {
     if (day) setTally(readTally(language, day));
@@ -536,8 +544,8 @@ export function TodayPlan({
     if (wordKeys) {
       // 문제은행이 이 낱말들을 늘려 두게(다음 묶음부터 쓰임, curriculum/qbank.ts).
       void growBank(language, locale, wordKeys.map((key) => ({ key, stage })));
-      // 빈칸 쓰기 ↔ 빈칸 고르기를 번갈아(2026-10-30 사용자 "빈칸 고르기로 단순화" + "타이핑하는 단순 문제를 대거").
-      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose", alternate: "type", strict: true });
+      // 빈칸 쓰기(2026-10-30 사용자 "그냥 타이핑해서 맞추는 식") — 길어서 못 치는 조각만 빈칸 고르기.
+      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true });
       return made.questions.length ? made : null;
     }
     if (which === "learn" && studyFocus === "vocab") return null;
@@ -554,7 +562,10 @@ export function TodayPlan({
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "choose", alternate: "type", strict: true });
+    // 문법 탭·틀린 것 탭에는 틀린 곳 찾아 고치기를 하나씩(내가 고침받은 줄 먼저), 문법 탭은 대화 속 틀린 줄도(2026-10-30 사용자 "1,2,3 순서로").
+    const grammarTab = which === "learn" && studyFocus === "grammar";
+    const spots = which === "review" ? { cards: spotCards, anyCard: true } : grammarTab ? { cards: spotCards, dialog: round % 2 === 0 } : undefined;
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, ...(spots ? { spots } : {}) });
     // 틀린 것 탭은 한 문제만 남아도 낸다.
     return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
   };
@@ -703,9 +714,9 @@ export function TodayPlan({
       todayServed.current = null;
       return null;
     }
-    // 오늘 할 것의 퀴즈도 빈칸 먼저(사용자 2026-10-30) — 쓰기·고르기를 항목마다 번갈아, 빈칸을 못 만드는 항목(문법 칸 등)만 예전 모양.
+    // 오늘 할 것의 퀴즈도 빈칸 쓰기 먼저(사용자 2026-10-30 "타이핑해서 맞추는 식") — 못 치는 긴 조각은 고르기, 빈칸을 못 만드는 항목(문법 칸 등)만 예전 모양.
     void growBank(language, locale, [{ key: current.id, stage }]);
-    const blankKinds = currentAt % 2 === 0 ? (["type", "choose"] as const) : (["choose", "type"] as const);
+    const blankKinds = ["type", "choose"] as const;
     const blankQuiz = buildQuiz(language, current.id, { card: current.card, seed: day, stage, kinds: [...blankKinds] });
     const blank = blankKinds.map((kind) => blankQuiz?.questions.find((q) => q.kind === kind)).find(Boolean);
     const quiz = blank ? null : buildQuiz(language, current.id, { card: current.card, seed: day, stage, mix: settings.mix });

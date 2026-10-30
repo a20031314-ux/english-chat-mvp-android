@@ -1,0 +1,543 @@
+/** it 문장구조 오답 중 확실히 틀린 꼴(scripts/plain-decoys.mjs가 it.json에서 만듦). */
+export const IT_PLAIN: Record<string, string[]> = {
+  "it-f1-01|Mi chiamo": [
+    "Me chiamo",
+    "Mi chiamato"
+  ],
+  "it-f1-01|mi chiamo": [
+    "me chiamo",
+    "mi chiamato"
+  ],
+  "it-f1-02|Sono di": [
+    "Sono da",
+    "Sono del",
+    "Ho di"
+  ],
+  "it-f1-02|sono di": [
+    "sono da",
+    "sono del",
+    "ho di"
+  ],
+  "it-f1-03|Sono": [
+    "Siamo",
+    "Ho",
+    "Sto"
+  ],
+  "it-f1-03|sono": [
+    "siamo",
+    "ho",
+    "sto"
+  ],
+  "it-f1-04|Lavoro in": [
+    "Lavoro a",
+    "Lavoro nel"
+  ],
+  "it-f1-04|lavoro in": [
+    "lavoro a",
+    "lavoro nel"
+  ],
+  "it-f1-05|Abito a": [
+    "Abito in",
+    "Abito di",
+    "Abito nel"
+  ],
+  "it-f1-05|abito a": [
+    "abito in",
+    "abito di",
+    "abito nel"
+  ],
+  "it-f1-06|Vorrei": [
+    "Volerei",
+    "Volessi",
+    "Vorrebbi"
+  ],
+  "it-f1-06|vorrei": [
+    "volerei",
+    "volessi",
+    "vorrebbi"
+  ],
+  "it-f1-07|Quanto costa": [
+    "Quanta costa",
+    "Quanto costi",
+    "Quanti costa"
+  ],
+  "it-f1-07|quanto costa": [
+    "quanta costa",
+    "quanto costi",
+    "quanti costa"
+  ],
+  "it-f1-08|Dov'è": [
+    "Dove sono",
+    "Dove essere",
+    "Dove ha"
+  ],
+  "it-f1-08|dov'è": [
+    "dove sono",
+    "dove essere",
+    "dove ha"
+  ],
+  "it-f1-09|C'è": [
+    "Ci sono",
+    "Ci ha",
+    "Si è"
+  ],
+  "it-f1-09|c'è": [
+    "ci sono",
+    "ci ha",
+    "si è"
+  ],
+  "it-f1-10|Ho": [
+    "Avo",
+    "Avere",
+    "Abbio"
+  ],
+  "it-f1-10|ho": [
+    "avo",
+    "avere",
+    "abbio"
+  ],
+  "it-f1-11|Non parlo": [
+    "No parlo",
+    "Parlo non",
+    "Non parlio"
+  ],
+  "it-f1-11|non parlo": [
+    "no parlo",
+    "parlo non",
+    "non parlio"
+  ],
+  "it-f1-12|Non capisco": [
+    "No capisco",
+    "Non capo",
+    "Capisco non"
+  ],
+  "it-f1-12|non capisco": [
+    "no capisco",
+    "non capo",
+    "capisco non"
+  ],
+  "it-f1-13|Può ripetere": [
+    "Può ripetuto",
+    "Può a ripetere",
+    "Possa ripetere"
+  ],
+  "it-f1-13|può ripetere": [
+    "può ripetuto",
+    "può a ripetere",
+    "possa ripetere"
+  ],
+  "it-f1-14|Grazie per": [
+    "Grazie da",
+    "Grazia per"
+  ],
+  "it-f1-14|grazie per": [
+    "grazie da",
+    "grazia per"
+  ],
+  "it-f1-15|Che cos'è": [
+    "Che cosa sono",
+    "Che è cosa",
+    "Che cos'hai"
+  ],
+  "it-f1-15|che cos'è": [
+    "che cosa sono",
+    "che è cosa",
+    "che cos'hai"
+  ],
+  "it-f1-16|a presto": [
+    "al presto",
+    "di presto",
+    "a prossimo"
+  ],
+  "it-f1-17|Come si dice": [
+    "Come si dici",
+    "Come se dice",
+    "Come si dire"
+  ],
+  "it-f1-17|come si dice": [
+    "come si dici",
+    "come se dice",
+    "come si dire"
+  ],
+  "it-f1-18|signora": [
+    "signoro",
+    "signoria",
+    "segnora"
+  ],
+  "it-f2-01|Ieri": [
+    "Domani",
+    "Fra poco",
+    "Dopodomani"
+  ],
+  "it-f2-01|ieri": [
+    "domani",
+    "fra poco",
+    "dopodomani"
+  ],
+  "it-f2-02|sono andat": [
+    "ho andat",
+    "sono andand",
+    "avevo andat"
+  ],
+  "it-f2-03|La mattina mi": [
+    "La mattina me",
+    "La mattina si",
+    "Lo mattina mi"
+  ],
+  "it-f2-03|la mattina mi": [
+    "la mattina me",
+    "la mattina si",
+    "lo mattina mi"
+  ],
+  "it-f2-04|Mi piace": [
+    "Io piace",
+    "Mi piacciono",
+    "Me piace"
+  ],
+  "it-f2-04|mi piace": [
+    "io piace",
+    "mi piacciono",
+    "me piace"
+  ],
+  "it-f2-05|Mi piacciono": [
+    "Mi piace",
+    "Io piacciono",
+    "Me piacciono"
+  ],
+  "it-f2-05|mi piacciono": [
+    "mi piace",
+    "io piacciono",
+    "me piacciono"
+  ],
+  "it-f2-06|Sto": [
+    "Sono",
+    "Ho",
+    "Stare"
+  ],
+  "it-f2-06|sto": [
+    "sono",
+    "ho",
+    "stare"
+  ],
+  "it-f2-07|Posso": [
+    "Potere",
+    "Possio",
+    "Poto"
+  ],
+  "it-f2-07|posso": [
+    "potere",
+    "possio",
+    "poto"
+  ],
+  "it-f2-08|Puoi": [
+    "Potere",
+    "Puoti",
+    "Possi"
+  ],
+  "it-f2-08|puoi": [
+    "potere",
+    "puoti",
+    "possi"
+  ],
+  "it-f2-09|Domani": [
+    "Ieri",
+    "Due giorni fa",
+    "Domane"
+  ],
+  "it-f2-09|domani": [
+    "ieri",
+    "due giorni fa",
+    "domane"
+  ],
+  "it-f2-10|Ti va di": [
+    "Ti va a",
+    "Ti vai di",
+    "Te va di"
+  ],
+  "it-f2-10|ti va di": [
+    "ti va a",
+    "ti vai di",
+    "te va di"
+  ],
+  "it-f2-11|Volentieri": [
+    "Volentiere",
+    "Volentemente",
+    "Voglioso"
+  ],
+  "it-f2-11|volentieri": [
+    "volentiere",
+    "volentemente",
+    "voglioso"
+  ],
+  "it-f2-12|Che peccato": [
+    "Che peccata",
+    "Cosa peccato"
+  ],
+  "it-f2-12|che peccato": [
+    "che peccata",
+    "cosa peccato"
+  ],
+  "it-f2-13|Ci vediamo": [
+    "Ci vedemo",
+    "Si vediamo",
+    "Ci vediano"
+  ],
+  "it-f2-13|ci vediamo": [
+    "ci vedemo",
+    "si vediamo",
+    "ci vediano"
+  ],
+  "it-f2-14|A che ora": [
+    "In che ora",
+    "A che ore",
+    "A cui ora"
+  ],
+  "it-f2-14|a che ora": [
+    "in che ora",
+    "a che ore",
+    "a cui ora"
+  ],
+  "it-f2-15|Cosa mi consiglia": [
+    "Cosa me consiglia",
+    "Cosa mi consiglo",
+    "Cosa mi consiglie"
+  ],
+  "it-f2-15|cosa mi consiglia": [
+    "cosa me consiglia",
+    "cosa mi consiglo",
+    "cosa mi consiglie"
+  ],
+  "it-f2-16|Mi fa male": [
+    "Mi fanno male",
+    "Me fa male",
+    "Mi fa malo"
+  ],
+  "it-f2-16|mi fa male": [
+    "mi fanno male",
+    "me fa male",
+    "mi fa malo"
+  ],
+  "it-f2-17|Per me": [
+    "Per mi",
+    "Per io",
+    "Di me"
+  ],
+  "it-f2-17|per me": [
+    "per mi",
+    "per io",
+    "di me"
+  ],
+  "it-f2-18|Ho già": [
+    "Avo già",
+    "Ho mai",
+    "Abbio già"
+  ],
+  "it-f2-18|ho già": [
+    "avo già",
+    "ho mai",
+    "abbio già"
+  ],
+  "it-f2-19|Com'è andat": [
+    "Com'ha andat",
+    "Com'è andand",
+    "Come sei andat"
+  ],
+  "it-f2-19|com'è andat": [
+    "com'ha andat",
+    "com'è andand",
+    "come sei andat"
+  ],
+  "it-f3-01|Da piccol": [
+    "Di piccol",
+    "In piccol",
+    "Quando piccol"
+  ],
+  "it-f3-01|da piccol": [
+    "di piccol",
+    "in piccol",
+    "quando piccol"
+  ],
+  "it-f3-02|Mentre": [
+    "Durante",
+    "Mentra",
+    "Fra"
+  ],
+  "it-f3-02|mentre": [
+    "durante",
+    "mentra",
+    "fra"
+  ],
+  "it-f3-03|Sarà": [
+    "Serà",
+    "Esserà",
+    "Sarano"
+  ],
+  "it-f3-03|sarà": [
+    "serà",
+    "esserà",
+    "sarano"
+  ],
+  "it-f3-04|Gli ho": [
+    "Gli sono",
+    "Lui ho",
+    "Glie ho"
+  ],
+  "it-f3-04|gli ho": [
+    "gli sono",
+    "lui ho",
+    "glie ho"
+  ],
+  "it-f3-05|Ci sono stat": [
+    "Ci ho stat",
+    "Ne sono stat",
+    "Ci sono stand"
+  ],
+  "it-f3-05|ci sono stat": [
+    "ci ho stat",
+    "ne sono stat",
+    "ci sono stand"
+  ],
+  "it-f3-06|Ne ho": [
+    "Ne sono",
+    "Ho ne",
+    "Lo ho"
+  ],
+  "it-f3-06|ne ho": [
+    "ne sono",
+    "ho ne",
+    "lo ho"
+  ],
+  "it-f3-07|Potrebbe": [
+    "Potrebbi",
+    "Poterebbe",
+    "Potrebba"
+  ],
+  "it-f3-07|potrebbe": [
+    "potrebbi",
+    "poterebbe",
+    "potrebba"
+  ],
+  "it-f3-08|Mi potresti": [
+    "Me potresti",
+    "Mi potrebbi",
+    "Mi poteresti"
+  ],
+  "it-f3-08|mi potresti": [
+    "me potresti",
+    "mi potrebbi",
+    "mi poteresti"
+  ],
+  "it-f3-09|Penso che": [
+    "Penso di",
+    "Penso chi",
+    "Penso cui"
+  ],
+  "it-f3-09|penso che": [
+    "penso di",
+    "penso chi",
+    "penso cui"
+  ],
+  "it-f3-10|Non credo che": [
+    "No credo che",
+    "Non credo di",
+    "Credo non che"
+  ],
+  "it-f3-10|non credo che": [
+    "no credo che",
+    "non credo di",
+    "credo non che"
+  ],
+  "it-f3-11|Dimmi": [
+    "Dirmi",
+    "Dicimi",
+    "Dimme"
+  ],
+  "it-f3-11|dimmi": [
+    "dirmi",
+    "dicimi",
+    "dimme"
+  ],
+  "it-f3-12|Prova": [
+    "Prove",
+    "Proba",
+    "Provere"
+  ],
+  "it-f3-12|prova": [
+    "prove",
+    "proba",
+    "provere"
+  ],
+  "it-f3-13|Scusa il ritardo": [
+    "Scusa la ritardo",
+    "Scusa lo ritardo",
+    "Scusa il retardo"
+  ],
+  "it-f3-13|scusa il ritardo": [
+    "scusa la ritardo",
+    "scusa lo ritardo",
+    "scusa il retardo"
+  ],
+  "it-f3-14|Non ti preoccupare": [
+    "Non te preoccupare",
+    "No ti preoccupare"
+  ],
+  "it-f3-14|non ti preoccupare": [
+    "non te preoccupare",
+    "no ti preoccupare"
+  ],
+  "it-f3-15|Se ti va": [
+    "Se ti andi",
+    "Se te va",
+    "Si ti va"
+  ],
+  "it-f3-15|se ti va": [
+    "se ti andi",
+    "se te va",
+    "si ti va"
+  ],
+  "it-f3-16|Non vedo l'ora": [
+    "Non vedo le ore",
+    "No vedo l'ora",
+    "Non vedo il ora"
+  ],
+  "it-f3-16|non vedo l'ora": [
+    "non vedo le ore",
+    "no vedo l'ora",
+    "non vedo il ora"
+  ],
+  "it-f3-17|non funziona": [
+    "no funziona",
+    "non funziono",
+    "non lavora"
+  ],
+  "it-f3-18|Sul serio": [
+    "Su serio",
+    "Al serio",
+    "Sul seria"
+  ],
+  "it-f3-18|sul serio": [
+    "su serio",
+    "al serio",
+    "sul seria"
+  ],
+  "it-f3-19|Per fortuna": [
+    "Per fortune",
+    "A fortuna",
+    "Di fortuna"
+  ],
+  "it-f3-19|per fortuna": [
+    "per fortune",
+    "a fortuna",
+    "di fortuna"
+  ],
+  "it-f3-20|Magari": [
+    "Magare",
+    "Magara",
+    "Magaro"
+  ],
+  "it-f3-20|magari": [
+    "magare",
+    "magara",
+    "magaro"
+  ]
+};

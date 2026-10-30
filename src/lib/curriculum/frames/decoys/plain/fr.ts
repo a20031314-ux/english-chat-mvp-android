@@ -1,0 +1,660 @@
+/** fr 문장구조 오답 중 확실히 틀린 꼴(scripts/plain-decoys.mjs가 fr.json에서 만듦). */
+export const FR_PLAIN: Record<string, string[]> = {
+  "fr-f1-01|Je m'appelle": [
+    "Je m'appelez",
+    "Je me appelle",
+    "Je appelle"
+  ],
+  "fr-f1-01|je m'appelle": [
+    "je m'appelez",
+    "je me appelle",
+    "je appelle"
+  ],
+  "fr-f1-02|Je viens de": [
+    "Je vient de",
+    "Je venir de",
+    "Moi viens de"
+  ],
+  "fr-f1-02|je viens de": [
+    "je vient de",
+    "je venir de",
+    "moi viens de"
+  ],
+  "fr-f1-02|Je viens d'": [
+    "Je vient d'",
+    "Je venir d'",
+    "Moi viens d'"
+  ],
+  "fr-f1-02|je viens d'": [
+    "je vient d'",
+    "je venir d'",
+    "moi viens d'"
+  ],
+  "fr-f1-02|Je viens du": [
+    "Je vient du",
+    "Je venir du",
+    "Je viens des"
+  ],
+  "fr-f1-02|je viens du": [
+    "je vient du",
+    "je venir du",
+    "je viens des"
+  ],
+  "fr-f1-03|Je suis": [
+    "Je es",
+    "Je être",
+    "Moi suis"
+  ],
+  "fr-f1-03|je suis": [
+    "je es",
+    "je être",
+    "moi suis"
+  ],
+  "fr-f1-04|Je travaille": [
+    "Moi travaille",
+    "Je travaillons",
+    "Je travaillé"
+  ],
+  "fr-f1-04|je travaille": [
+    "moi travaille",
+    "je travaillons",
+    "je travaillé"
+  ],
+  "fr-f1-05|Je suis à": [
+    "Je es à",
+    "Je suis en",
+    "Je être à"
+  ],
+  "fr-f1-05|je suis à": [
+    "je es à",
+    "je suis en",
+    "je être à"
+  ],
+  "fr-f1-05|Je suis au": [
+    "Je es au",
+    "Je suis en",
+    "Je être au"
+  ],
+  "fr-f1-05|je suis au": [
+    "je es au",
+    "je suis en",
+    "je être au"
+  ],
+  "fr-f1-06|Je voudrais": [
+    "Je voudrait",
+    "Je vouloir",
+    "Je voudrions"
+  ],
+  "fr-f1-06|je voudrais": [
+    "je voudrait",
+    "je vouloir",
+    "je voudrions"
+  ],
+  "fr-f1-07|il y a": [
+    "il y ont",
+    "il y sont",
+    "y il a"
+  ],
+  "fr-f1-07|Il y a": [
+    "Il y ont",
+    "Il y sont",
+    "Y il a"
+  ],
+  "fr-f1-08|Où est": [
+    "Où sont",
+    "Où êtes",
+    "Où être"
+  ],
+  "fr-f1-08|où est": [
+    "où sont",
+    "où êtes",
+    "où être"
+  ],
+  "fr-f1-09|Combien coûte": [
+    "Combien coûtons",
+    "Combien de coûte",
+    "Combien coûté"
+  ],
+  "fr-f1-09|combien coûte": [
+    "combien coûtons",
+    "combien de coûte",
+    "combien coûté"
+  ],
+  "fr-f1-10|Je ne parle pas": [
+    "Je ne parles pas",
+    "Je parle ne pas",
+    "Je ne pas parle"
+  ],
+  "fr-f1-10|je ne parle pas": [
+    "je ne parles pas",
+    "je parle ne pas",
+    "je ne pas parle"
+  ],
+  "fr-f1-11|J'aime": [
+    "Je aime",
+    "Moi aime",
+    "J'aimé"
+  ],
+  "fr-f1-11|j'aime": [
+    "je aime",
+    "moi aime",
+    "j'aimé"
+  ],
+  "fr-f1-12|Je n'aime pas": [
+    "Je ne aime pas",
+    "Je n'aimes pas",
+    "Je pas aime"
+  ],
+  "fr-f1-12|je n'aime pas": [
+    "je ne aime pas",
+    "je n'aimes pas",
+    "je pas aime"
+  ],
+  "fr-f1-13|Vous pouvez": [
+    "Vous peut",
+    "Vous pouvoir",
+    "Vous pouvons"
+  ],
+  "fr-f1-13|vous pouvez": [
+    "vous peut",
+    "vous pouvoir",
+    "vous pouvons"
+  ],
+  "fr-f1-14|Ça va": [
+    "Ça allons",
+    "Ça aller",
+    "Ça vont"
+  ],
+  "fr-f1-14|ça va": [
+    "ça allons",
+    "ça aller",
+    "ça vont"
+  ],
+  "fr-f1-15|Merci pour": [
+    "Merci à",
+    "Merci par",
+    "Merci en"
+  ],
+  "fr-f1-15|merci pour": [
+    "merci à",
+    "merci par",
+    "merci en"
+  ],
+  "fr-f1-15|Merci beaucoup pour": [
+    "Merci très pour",
+    "Merci beaucoup par",
+    "Merci beaucoup à"
+  ],
+  "fr-f1-15|merci beaucoup pour": [
+    "merci très pour",
+    "merci beaucoup par",
+    "merci beaucoup à"
+  ],
+  "fr-f1-16|Est-ce que vous avez": [
+    "Est-ce que vous as",
+    "Est-ce vous avez",
+    "Est-ce que vous ont"
+  ],
+  "fr-f1-16|est-ce que vous avez": [
+    "est-ce que vous as",
+    "est-ce vous avez",
+    "est-ce que vous ont"
+  ],
+  "fr-f1-17|J'ai": [
+    "Je ai",
+    "J'as",
+    "Moi ai"
+  ],
+  "fr-f1-17|j'ai": [
+    "je ai",
+    "j'as",
+    "moi ai"
+  ],
+  "fr-f1-18|Je ne comprends pas": [
+    "Je ne comprend pas",
+    "Je ne comprendre pas",
+    "Je comprends ne pas"
+  ],
+  "fr-f1-18|je ne comprends pas": [
+    "je ne comprend pas",
+    "je ne comprendre pas",
+    "je comprends ne pas"
+  ],
+  "fr-f1-19|Bonne": [
+    "Bien",
+    "Beau",
+    "Bons"
+  ],
+  "fr-f1-19|bonne": [
+    "bien",
+    "beau",
+    "bons"
+  ],
+  "fr-f2-01|J'ai": [
+    "Je ai",
+    "J'as",
+    "Je suis"
+  ],
+  "fr-f2-01|j'ai": [
+    "je ai",
+    "j'as",
+    "je suis"
+  ],
+  "fr-f2-02|Je suis allé": [
+    "J'ai allé",
+    "Je suis aller",
+    "Je allé"
+  ],
+  "fr-f2-02|je suis allé": [
+    "j'ai allé",
+    "je suis aller",
+    "je allé"
+  ],
+  "fr-f2-03|Je vais": [
+    "Je vont",
+    "Je vas",
+    "Je aller"
+  ],
+  "fr-f2-03|je vais": [
+    "je vont",
+    "je vas",
+    "je aller"
+  ],
+  "fr-f2-04|Ça te dit": [
+    "Ça te dis",
+    "Ça tu dit",
+    "Ça te dire"
+  ],
+  "fr-f2-04|ça te dit": [
+    "ça te dis",
+    "ça tu dit",
+    "ça te dire"
+  ],
+  "fr-f2-05|Je peux": [
+    "Je peut",
+    "Je pouvoir",
+    "Je pouvez"
+  ],
+  "fr-f2-05|je peux": [
+    "je peut",
+    "je pouvoir",
+    "je pouvez"
+  ],
+  "fr-f2-06|Tu peux": [
+    "Tu peut",
+    "Tu pouvoir",
+    "Tu pouvez"
+  ],
+  "fr-f2-06|tu peux": [
+    "tu peut",
+    "tu pouvoir",
+    "tu pouvez"
+  ],
+  "fr-f2-07|Je veux": [
+    "Je veut",
+    "Je vouloir",
+    "Je voulez"
+  ],
+  "fr-f2-07|je veux": [
+    "je veut",
+    "je vouloir",
+    "je voulez"
+  ],
+  "fr-f2-08|Je me lève": [
+    "Je lève",
+    "Je me levons",
+    "Je me lever"
+  ],
+  "fr-f2-08|je me lève": [
+    "je lève",
+    "je me levons",
+    "je me lever"
+  ],
+  "fr-f2-09|Je le prends": [
+    "Je prends le",
+    "Je lui prends",
+    "Je le prendre"
+  ],
+  "fr-f2-09|je le prends": [
+    "je prends le",
+    "je lui prends",
+    "je le prendre"
+  ],
+  "fr-f2-09|Je la prends": [
+    "Je prends la",
+    "Je lui prends",
+    "Je la prendre"
+  ],
+  "fr-f2-09|je la prends": [
+    "je prends la",
+    "je lui prends",
+    "je la prendre"
+  ],
+  "fr-f2-09|Je les prends": [
+    "Je prends les",
+    "Je leur prends",
+    "Je les prendre"
+  ],
+  "fr-f2-09|je les prends": [
+    "je prends les",
+    "je leur prends",
+    "je les prendre"
+  ],
+  "fr-f2-10|parce que": [
+    "à cause de",
+    "pourquoi",
+    "parce qui"
+  ],
+  "fr-f2-10|parce qu'": [
+    "à cause d'",
+    "pourquoi",
+    "parce qui"
+  ],
+  "fr-f2-11|On se retrouve": [
+    "On se retrouvons",
+    "On retrouve",
+    "On se retrouvé"
+  ],
+  "fr-f2-11|on se retrouve": [
+    "on se retrouvons",
+    "on retrouve",
+    "on se retrouvé"
+  ],
+  "fr-f2-12|On peut": [
+    "On peux",
+    "On pouvons",
+    "On pouvoir"
+  ],
+  "fr-f2-12|on peut": [
+    "on peux",
+    "on pouvons",
+    "on pouvoir"
+  ],
+  "fr-f2-13|J'ai mal": [
+    "Je suis mal",
+    "J'ai douleur",
+    "Je ai mal"
+  ],
+  "fr-f2-13|j'ai mal": [
+    "je suis mal",
+    "j'ai douleur",
+    "je ai mal"
+  ],
+  "fr-f2-14|Qu'est-ce que vous conseillez": [
+    "Qu'est-ce qui vous conseillez",
+    "Qu'est-ce vous conseillez",
+    "Qu'est-ce que vous conseiller"
+  ],
+  "fr-f2-14|qu'est-ce que vous conseillez": [
+    "qu'est-ce qui vous conseillez",
+    "qu'est-ce vous conseillez",
+    "qu'est-ce que vous conseiller"
+  ],
+  "fr-f2-15|Je vais prendre": [
+    "Je vais prends",
+    "Je va prendre",
+    "Je vais à prendre"
+  ],
+  "fr-f2-15|je vais prendre": [
+    "je vais prends",
+    "je va prendre",
+    "je vais à prendre"
+  ],
+  "fr-f2-16|J'adore": [
+    "Je adore",
+    "Moi adore",
+    "J'adoré"
+  ],
+  "fr-f2-16|j'adore": [
+    "je adore",
+    "moi adore",
+    "j'adoré"
+  ],
+  "fr-f2-17|Je n'aime pas trop": [
+    "Je n'aime trop pas",
+    "Je ne aime pas trop",
+    "Je n'aime pas très"
+  ],
+  "fr-f2-17|je n'aime pas trop": [
+    "je n'aime trop pas",
+    "je ne aime pas trop",
+    "je n'aime pas très"
+  ],
+  "fr-f2-18|Je me suis": [
+    "Je m'ai",
+    "Je me est",
+    "Me je suis"
+  ],
+  "fr-f2-18|je me suis": [
+    "je m'ai",
+    "je me est",
+    "me je suis"
+  ],
+  "fr-f2-19|je ne peux pas": [
+    "je ne peut pas",
+    "je ne pas peux",
+    "je ne pouvoir pas"
+  ],
+  "fr-f2-19|Je ne peux pas": [
+    "Je ne peut pas",
+    "Je ne pas peux",
+    "Je ne pouvoir pas"
+  ],
+  "fr-f3-01|Je pense que": [
+    "Je pense qui",
+    "Je pense de",
+    "Je pensons que"
+  ],
+  "fr-f3-01|je pense que": [
+    "je pense qui",
+    "je pense de",
+    "je pensons que"
+  ],
+  "fr-f3-01|Je pense qu'": [
+    "Je pense qui",
+    "Je pense d'",
+    "Je pensons qu'"
+  ],
+  "fr-f3-01|je pense qu'": [
+    "je pense qui",
+    "je pense d'",
+    "je pensons qu'"
+  ],
+  "fr-f3-02|Je trouve que": [
+    "Je trouve qui",
+    "Je trouve de",
+    "Je trouvons que"
+  ],
+  "fr-f3-02|je trouve que": [
+    "je trouve qui",
+    "je trouve de",
+    "je trouvons que"
+  ],
+  "fr-f3-02|Je trouve qu'": [
+    "Je trouve qui",
+    "Je trouve d'",
+    "Je trouvons qu'"
+  ],
+  "fr-f3-02|je trouve qu'": [
+    "je trouve qui",
+    "je trouve d'",
+    "je trouvons qu'"
+  ],
+  "fr-f3-03|À mon avis": [
+    "À ma avis",
+    "Dans mon avis",
+    "À moi avis"
+  ],
+  "fr-f3-03|à mon avis": [
+    "à ma avis",
+    "dans mon avis",
+    "à moi avis"
+  ],
+  "fr-f3-04|quand": [
+    "pendant",
+    "quoi",
+    "que"
+  ],
+  "fr-f3-05|Avant, je": [
+    "Avant, me",
+    "Avant, nous",
+    "Avant de je"
+  ],
+  "fr-f3-05|avant, je": [
+    "avant, me",
+    "avant, nous",
+    "avant de je"
+  ],
+  "fr-f3-05|Avant, j'": [
+    "Avant, m'",
+    "Avant, nous",
+    "Avant, moi"
+  ],
+  "fr-f3-05|avant, j'": [
+    "avant, m'",
+    "avant, nous",
+    "avant, moi"
+  ],
+  "fr-f3-06|En fait": [
+    "Dans fait",
+    "En fact",
+    "À fait"
+  ],
+  "fr-f3-06|en fait": [
+    "dans fait",
+    "en fact",
+    "à fait"
+  ],
+  "fr-f3-07|pourrais": [
+    "pouvrais",
+    "pourrions",
+    "pouvoir"
+  ],
+  "fr-f3-07|pourriez": [
+    "pouvriez",
+    "pourrions",
+    "pouvoir"
+  ],
+  "fr-f3-07|pourrait": [
+    "pouvrait",
+    "pouvoir"
+  ],
+  "fr-f3-08|La prochaine fois": [
+    "Le prochaine fois",
+    "La prochain fois",
+    "La prochaine temps"
+  ],
+  "fr-f3-08|la prochaine fois": [
+    "le prochaine fois",
+    "la prochain fois",
+    "la prochaine temps"
+  ],
+  "fr-f3-09|Il y a un souci": [
+    "Il y a une souci",
+    "Il y est un souci",
+    "Il y ont un souci"
+  ],
+  "fr-f3-09|il y a un souci": [
+    "il y a une souci",
+    "il y est un souci",
+    "il y ont un souci"
+  ],
+  "fr-f3-10|ne marche pas": [
+    "ne marchent pas",
+    "ne pas marche",
+    "ne marcher pas"
+  ],
+  "fr-f3-10|marche pas": [
+    "marchent pas",
+    "pas marche",
+    "marcher pas"
+  ],
+  "fr-f3-11|Je ne suis pas sûr": [
+    "Je n'ai pas sûr",
+    "Je ne suis sûr pas",
+    "Je ne pas suis sûr"
+  ],
+  "fr-f3-11|je ne suis pas sûr": [
+    "je n'ai pas sûr",
+    "je ne suis sûr pas",
+    "je ne pas suis sûr"
+  ],
+  "fr-f3-12|Je sais pas": [
+    "Je sait pas",
+    "Je connais pas",
+    "Je pas sais"
+  ],
+  "fr-f3-12|je sais pas": [
+    "je sait pas",
+    "je connais pas",
+    "je pas sais"
+  ],
+  "fr-f3-13|Tu as raison": [
+    "Tu es raison",
+    "Tu a raison",
+    "Tu as la raison"
+  ],
+  "fr-f3-13|tu as raison": [
+    "tu es raison",
+    "tu a raison",
+    "tu as la raison"
+  ],
+  "fr-f3-14|J'en ai": [
+    "J'ai en",
+    "Je en ai",
+    "J'en as"
+  ],
+  "fr-f3-14|j'en ai": [
+    "j'ai en",
+    "je en ai",
+    "j'en as"
+  ],
+  "fr-f3-15|On y va": [
+    "On va y",
+    "On en va",
+    "On y allons"
+  ],
+  "fr-f3-15|on y va": [
+    "on va y",
+    "on en va",
+    "on y allons"
+  ],
+  "fr-f3-15|J'y vais": [
+    "J'en vais",
+    "J'y vas"
+  ],
+  "fr-f3-15|j'y vais": [
+    "j'en vais",
+    "j'y vas"
+  ],
+  "fr-f3-16|l'endroit où": [
+    "l'endroit que",
+    "l'endroit dont",
+    "le endroit où"
+  ],
+  "fr-f3-17|que tu m'as conseillé": [
+    "qui tu m'as conseillé",
+    "dont tu m'as conseillé",
+    "que tu me as conseillé"
+  ],
+  "fr-f3-18|un ami qui": [
+    "un ami que",
+    "une ami qui",
+    "un ami dont"
+  ],
+  "fr-f3-18|une amie qui": [
+    "une amie que",
+    "un amie qui",
+    "une amie dont"
+  ],
+  "fr-f3-19|Désolé du retard": [
+    "Désolé de le retard",
+    "Désolé au retard",
+    "Désolé du tard"
+  ],
+  "fr-f3-19|désolé du retard": [
+    "désolé de le retard",
+    "désolé au retard",
+    "désolé du tard"
+  ]
+};

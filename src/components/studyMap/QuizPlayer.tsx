@@ -9,7 +9,10 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, joinWords, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
+import { buildQuiz, fixedRight, joinWords, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { recheckTyped } from "@/lib/curriculum/typedCheck";
+import { entitlementHeaders } from "@/lib/billing/billingService";
+import { isSpaceless } from "@/lib/wordSegments";
 import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
@@ -25,7 +28,10 @@ import { stopTts } from "@/lib/ttsPlayer";
  */
 
 /** skipped = 말하기 한도에 걸려 못 함 — 점수에서 뺀다. */
-export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string };
+export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string;
+  /** 💡 힌트·모르겠어요로 답을 본 차례 — 맞게 쳤어도 맞음으로 세지 않는다(correct false), 화면엔 ✓ 대신 💡. */
+  assisted?: boolean;
+};
 
 export function QuizPlayer({
   ui,
@@ -210,7 +216,8 @@ export function QuestionView({
   bankKey?: string;
 }) {
   const onAnswer = (value: Answer) => {
-    if (bankKey && !answered && !value.skipped && "text" in question) {
+    // 문제은행 셈은 그 열쇠의 빈칸 문제만(틀린 곳 고치기의 문장은 일부러 틀린 문장이라 셈에 넣지 않음).
+    if (bankKey && !answered && !value.skipped && (question.kind === "type" || question.kind === "choose")) {
       noteBankResult(language, bankKey, { text: question.text, correct: value.correct, ...(question.kind === "choose" ? { options: question.options, picked: value.picked } : {}) });
     }
     giveAnswer(value);
@@ -220,7 +227,7 @@ export function QuestionView({
   useAllStageGlosses(language, locale);
   // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
   // Wrong answers stay so the right one can be read; say/order keep the button.
-  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type"));
+  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -235,6 +242,8 @@ export function QuestionView({
       {/* 모양 이름(빈칸·순서…)은 띄우지 않음 — 문제 모양이 곧 할 일(2026-10-30 사용자 "의미 없는 라벨"). 점검은 data-kind로. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
@@ -244,7 +253,7 @@ export function QuestionView({
       {answered ? (
         <div className="flex items-center justify-between gap-2">
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-warn"}`}>
-            {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : ui.quizWrong}
+            {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
           <button type="button" onClick={onNext} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
             {ui.scriptNext}
@@ -336,9 +345,111 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
   );
 }
 
+/** 친 답이 기기 채점으로 틀림일 때 서버 다시 보기(typedCheck) — 맞는 다른 꼴이면 맞음. 헷갈리는 오답을 그대로 친 것은 묻지 않는다. */
+function useTypedGrade(language: string) {
+  const { isPremium } = usePremium();
+  const [checking, setChecking] = useState(false);
+  const grade = async (local: "exact" | "loose" | false, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string }, plainWrong: boolean): Promise<"exact" | "loose" | false> => {
+    if (local || plainWrong) return local;
+    setChecking(true);
+    const ok = await recheckTyped({ language, ...input }, entitlementHeaders(isPremium));
+    setChecking(false);
+    return ok ? "loose" : false;
+  };
+  return { checking, grade };
+}
+
+/** 입력칸 + 확인 · 💡(첫 글자 → 글자 수) · 모르겠어요. 빈칸 쓰기와 틀린 곳 고치기가 같이 쓴다. */
+function TypeBox({
+  ui,
+  tag,
+  answer,
+  done,
+  result,
+  busy,
+  onSubmit,
+  onGiveUp,
+  hint,
+  onHint,
+  autoFocus = true,
+}: {
+  ui: UICopy;
+  tag: string;
+  answer: string;
+  done: boolean;
+  result: "exact" | "loose" | false | null;
+  busy: boolean;
+  onSubmit: (typed: string) => void;
+  onGiveUp: () => void;
+  hint: number;
+  onHint: () => void;
+  autoFocus?: boolean;
+}) {
+  const [typed, setTyped] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    // 다음 문제부터는 바로 칠 수 있게(처음 여는 순간 키보드가 튀어나오지 않게).
+    if (autoFocus && (document.activeElement?.tagName === "INPUT" || document.activeElement?.tagName === "BUTTON")) inputRef.current?.focus({ preventScroll: true });
+  }, [autoFocus]);
+  const submit = () => {
+    if (done || busy || !typed.trim()) return;
+    onSubmit(typed);
+  };
+  const letters = [...answer];
+  // 💡 한 번 = 첫 글자, 두 번 = 첫 글자 + 남은 글자 수만큼 밑줄(띄어쓰기는 그대로).
+  const hintText = hint >= 2 ? letters.map((ch, i) => (i === 0 || ch === " " ? ch : "＿")).join("") : hint === 1 ? `${letters[0] ?? ""}…` : "";
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <input
+          ref={inputRef}
+          dir="auto"
+          lang={tag}
+          value={typed}
+          disabled={done}
+          autoCapitalize="none"
+          autoCorrect="off"
+          autoComplete="off"
+          spellCheck={false}
+          placeholder={hintText || undefined}
+          onChange={(event) => setTyped(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
+          }}
+          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none placeholder:text-amber-200/70 ${done ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
+        />
+        {done ? null : (
+          <button type="button" onClick={submit} disabled={!typed.trim() || busy} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
+            {busy ? "…" : ui.quizCheck}
+          </button>
+        )}
+      </div>
+      {done ? (
+        result === "loose" || !result ? (
+          <p dir="auto" className="text-caption text-slate-300">
+            → <bdi className="font-semibold text-status-learned">{answer}</bdi>
+          </p>
+        ) : null
+      ) : (
+        <div className="flex items-center gap-2">
+          {hint < 2 ? (
+            <button type="button" data-quiz-hint onClick={onHint} className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+              💡 {ui.missionHint}
+            </button>
+          ) : null}
+          <button type="button" data-quiz-giveup onClick={onGiveUp} className="rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10">
+            {ui.markUnknown}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /**
- * 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻 · 빈칸 문장 · 입력칸 하나 · 확인.
- * 악센트만 빠졌으면 맞음으로 세고 바른 꼴을 보여 준다(quiz.ts typedRight). 친 글은 이 화면에만 — 어디에도 보내지 않는다.
+ * 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑" → "그냥 타이핑해서 맞추는 식"): 뜻 · 빈칸 문장 · 입력칸 하나 · 확인.
+ * 채점은 quiz.ts typedRight(악센트·한 글자 오타·일본어 로마자 봐줌), 그래도 틀림이면 서버가 같은 뜻의 맞는 꼴인지 한 번 더(typedCheck).
+ * 💡·모르겠어요로 답을 본 차례는 맞음으로 세지 않는다.
  */
 function TypeView({
   ui,
@@ -357,17 +468,15 @@ function TypeView({
   onAnswer: (answer: Answer) => void;
   tag: string;
 }) {
-  const [typed, setTyped] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    // 칸 안 문제는 바로 칠 수 있게(첫 화면이 아닌 다음 문제부터 — 처음 여는 순간 키보드가 튀어나오지 않게).
-    if (document.activeElement?.tagName === "INPUT" || document.activeElement?.tagName === "BUTTON") inputRef.current?.focus({ preventScroll: true });
-  }, []);
-  const grade = answered ? typedRight(question.answer, typed) : null;
-  const submit = () => {
-    if (answered || !typed.trim()) return;
-    const result = typedRight(question.answer, typed);
-    onAnswer({ correct: Boolean(result) });
+  const [result, setResult] = useState<"exact" | "loose" | false | null>(null);
+  const [hint, setHint] = useState(0);
+  const { checking, grade } = useTypedGrade(language);
+  const submit = async (typed: string) => {
+    const local = typedRight(question.answer, typed, { language, near: question.near });
+    const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
+    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim() }, plainWrong);
+    setResult(final);
+    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
   };
   return (
     <div className="flex flex-col gap-3">
@@ -382,33 +491,226 @@ function TypeView({
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
       </div>
-      <div className="flex items-center gap-2">
-        <input
-          ref={inputRef}
-          dir="auto"
-          lang={tag}
-          value={typed}
-          disabled={Boolean(answered)}
-          autoCapitalize="none"
-          autoCorrect="off"
-          autoComplete="off"
-          spellCheck={false}
-          onChange={(event) => setTyped(event.target.value)}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
-          }}
-          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (grade ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
-        />
-        {answered ? null : (
-          <button type="button" onClick={submit} disabled={!typed.trim()} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
-            {ui.quizCheck}
-          </button>
-        )}
-      </div>
-      {answered && grade === "loose" ? (
-        <p dir="auto" className="text-caption text-slate-400">
-          → <bdi>{question.answer}</bdi>
+      <TypeBox
+        ui={ui}
+        tag={tag}
+        answer={question.answer}
+        done={Boolean(answered)}
+        result={answered ? result : null}
+        busy={checking}
+        hint={hint}
+        onHint={() => setHint((n) => n + 1)}
+        onSubmit={(typed) => void submit(typed)}
+        onGiveUp={() => {
+          setResult(false);
+          onAnswer({ correct: false, assisted: true });
+        }}
+      />
+    </div>
+  );
+}
+
+/**
+ * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 낱말을 눌러 틀린 곳 → 바른 꼴을 직접 친다.
+ * "틀린 곳 없음"도 답이 될 수 있다(넷에 하나, 찍어 맞히기 막기). 틀린 낱말이 아닌 곳을 누르면 바로 틀림 + 바른 문장.
+ */
+function SpotView({
+  ui,
+  locale,
+  language,
+  question,
+  answered,
+  onAnswer,
+  tag,
+  bare = false,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  question: SpotQuestion;
+  answered: Answer | null;
+  onAnswer: (answer: Answer) => void;
+  tag: string;
+  /** 대화 안: 뜻 줄·"틀린 곳 없음" 없이(그 줄이 틀린 줄인 걸 이미 앎). */
+  bare?: boolean;
+}) {
+  const [tapped, setTapped] = useState<number | null>(null);
+  const [said, setSaid] = useState<"none" | null>(null);
+  const [result, setResult] = useState<"exact" | "loose" | false | null>(null);
+  const [hint, setHint] = useState(0);
+  const { checking, grade } = useTypedGrade(language);
+  const clean = question.bad.length === 0;
+  const found = tapped !== null && question.bad.includes(tapped);
+  const glue = isSpaceless(question.text) ? "" : " ";
+  const submit = async (typed: string) => {
+    const local = fixedRight(question, typed, language);
+    const wrongPart = question.bad.map((i) => question.words[i]).join(glue);
+    const plainWrong = typedRight(wrongPart, typed, { language }) === "exact" || Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
+    const before = question.words.slice(0, question.bad[0]).join(glue);
+    const after = question.words.slice((question.bad[question.bad.length - 1] ?? 0) + 1).join(glue);
+    const mine = [before, typed.trim(), after].filter(Boolean).join(glue);
+    const final = await grade(local, { kind: "fix", sentence: question.text, answer: question.right, typed: mine }, plainWrong);
+    setResult(final);
+    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
+  };
+  const gloss = question.gloss ? quizGloss(question.gloss, locale, language) : null;
+  return (
+    <div className="flex flex-col gap-3">
+      {!bare && gloss ? (
+        <p dir="auto" className="text-note text-slate-400">
+          {gloss}
         </p>
+      ) : null}
+      <p dir="auto" className={`flex flex-wrap ${glue ? "gap-1.5" : "gap-0.5"}`} data-spot-words>
+        {question.words.map((word, i) => {
+          const bad = question.bad.includes(i);
+          const style = answered
+            ? bad
+              ? "border-warn bg-warn/15 text-warn"
+              : tapped === i
+                ? "border-line text-slate-500 line-through"
+                : "border-transparent text-slate-200"
+            : tapped === i
+              ? "border-amber-300/70 bg-amber-300/10 text-amber-100"
+              : "border-line text-slate-100 hover:bg-white/10";
+          return (
+            <button
+              key={i}
+              type="button"
+              disabled={Boolean(answered) || found}
+              onClick={() => {
+                setTapped(i);
+                if (!question.bad.includes(i)) {
+                  setResult(false);
+                  onAnswer({ correct: false });
+                }
+              }}
+              className={`rounded-lg border px-2 py-1 text-chat ${style}`}
+            >
+              {word}
+            </button>
+          );
+        })}
+      </p>
+      {!bare && !answered && !found ? (
+        <button
+          type="button"
+          data-spot-none
+          onClick={() => {
+            setSaid("none");
+            setResult(clean ? "exact" : false);
+            onAnswer({ correct: clean });
+          }}
+          className="self-start rounded-full border border-line px-3 py-1 text-caption text-slate-200 hover:bg-white/10"
+        >
+          {ui.quizNoMistake}
+        </button>
+      ) : null}
+      {found && !clean ? (
+        <TypeBox
+          ui={ui}
+          tag={tag}
+          answer={question.want}
+          done={Boolean(answered)}
+          result={answered ? result : null}
+          busy={checking}
+          hint={hint}
+          onHint={() => setHint((n) => n + 1)}
+          onSubmit={(typed) => void submit(typed)}
+          onGiveUp={() => {
+            setResult(false);
+            onAnswer({ correct: false, assisted: true });
+          }}
+        />
+      ) : null}
+      {answered && (!found || clean || said) ? (
+        <div className="flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">
+          <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
+            {clean ? `✓ ${question.right}` : question.right}
+          </p>
+          <TTSButton text={question.right} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+        </div>
+      ) : null}
+      {answered && found && !clean ? (
+        <div className="flex items-start gap-2">
+          <p dir="auto" className="min-w-0 flex-1 text-meta text-slate-300">
+            {question.right}
+          </p>
+          <TTSButton text={question.right} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+        </div>
+      ) : null}
+      {answered && question.note ? (
+        <p dir="auto" className="text-caption text-slate-300">
+          {question.note}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/** 대화에서 틀린 줄(2026-10-30): 줄을 눌러 고르고, 맞으면 그 줄에서 틀린 곳을 고친다(SpotView). 다른 줄을 고르면 틀림 + 틀린 줄 표시. */
+function DialogView({
+  ui,
+  locale,
+  language,
+  question,
+  answered,
+  onAnswer,
+  tag,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  question: Extract<QuizQuestion, { kind: "dialog" }>;
+  answered: Answer | null;
+  onAnswer: (answer: Answer) => void;
+  tag: string;
+}) {
+  const [picked, setPicked] = useState<number | null>(null);
+  const right = picked === question.at;
+  return (
+    <div className="flex flex-col gap-2" data-dialog-lines>
+      {question.lines.map((line, i) => {
+        const mine = line.who === "me";
+        const shown = answered && !right && i === question.at;
+        const style =
+          picked === i && !right
+            ? "border-warn/70 text-slate-400 line-through"
+            : shown
+              ? "border-warn bg-warn/10 text-warn"
+              : right && i === question.at
+                ? "border-amber-300/70 bg-amber-300/10 text-amber-50"
+                : "border-line text-slate-100 hover:bg-white/5";
+        return (
+          <div key={i} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
+            {right && i === question.at ? (
+              <div className={`w-full max-w-[92%] rounded-2xl border px-3 py-2 ${style}`}>
+                <SpotView ui={ui} locale={locale} language={language} question={question.spot} answered={answered} onAnswer={onAnswer} tag={tag} bare />
+              </div>
+            ) : (
+              <button
+                type="button"
+                dir="auto"
+                disabled={Boolean(answered) || picked !== null}
+                onClick={() => {
+                  setPicked(i);
+                  if (i !== question.at) onAnswer({ correct: false });
+                }}
+                className={`max-w-[85%] rounded-2xl border px-3 py-2 text-start text-chat ${style}`}
+              >
+                {line.text}
+              </button>
+            )}
+          </div>
+        );
+      })}
+      {answered && !right ? (
+        <div className="flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">
+          <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
+            {question.spot.right}
+          </p>
+          <TTSButton text={question.spot.right} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+        </div>
       ) : null}
     </div>
   );

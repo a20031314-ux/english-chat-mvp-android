@@ -12,11 +12,13 @@
  * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
  */
 import { DECOYS } from "./frames/decoys/index.ts";
+import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
+import { hasLatin, romajiToHiragana, sameKana } from "../romaji.ts";
 
 /** who: 상대 줄("them")은 고르기·맞추기에만, 말하기는 내 줄·예문만. */
 export type QuizSource = {
@@ -30,6 +32,8 @@ export type QuizSource = {
   wordGloss?: string;
   /** 빈도 단어: 품사 묶음(noun·verb·adj·adv·function) — 보기를 같은 품사로만(2026-10-30). */
   pos?: string;
+  /** piece가 이 문장구조의 고정 부분(문법 칸 g|·문장구조 f| 재료) — 틀린 곳 고치기의 오답을 고른다. */
+  frame?: string;
 };
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
@@ -41,7 +45,14 @@ export type QuizQuestion =
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[] }
+  /**
+   * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
+   * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
+   */
+  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean }
+  /** 대화에서 틀린 줄(2026-10-30): 짧은 대화 몇 줄 중 한 줄만 틀림 — 그 줄을 고른 뒤 틀린 곳을 고친다. */
+  | { kind: "dialog"; lines: { who: "me" | "them"; text: string; gloss: ScriptGloss }[]; at: number; spot: SpotQuestion; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
 
@@ -53,6 +64,7 @@ export type QuizQuestion =
 export type QuizMix = "auto" | "speak" | "read";
 
 export type Quiz = { key: string; questions: QuizQuestion[] };
+export type SpotQuestion = Extract<QuizQuestion, { kind: "spot" }>;
 
 export const QUIZ_MINUTES = 2;
 export const QUIZ_SIZE = 3;
@@ -141,10 +153,10 @@ function baseSources(language: string, key: string): QuizSource[] {
     const frame = frameOf(language, key.slice(2));
     if (!frame) return [];
     const pieceIn = (text: string) => frame.core.find((core) => core && text.includes(core));
-    for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: pieceIn(example.text) });
+    for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: pieceIn(example.text), frame: frame.id });
     for (const script of scripts) {
       for (const line of script.lines) {
-        if (line.who === "me" && line.frames?.includes(frame.id)) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece: pieceIn(line.text) });
+        if (line.who === "me" && line.frames?.includes(frame.id)) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece: pieceIn(line.text), frame: frame.id });
       }
     }
     return out;
@@ -185,14 +197,15 @@ function baseSources(language: string, key: string): QuizSource[] {
       for (const line of script.lines) {
         if (line.who !== "me") continue;
         // 문법 칸은 낱말 조각이 없다 — 그 줄의 문장구조 조각이 있으면 고르기 문제에 쓴다.
-        const piece = (line.frames ?? []).map((id) => frameOf(language, id)?.core.find((core) => core && line.text.includes(core))).find(Boolean);
-        add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece });
+        const frameId = (line.frames ?? []).find((id) => frameOf(language, id)?.core.some((core) => core && line.text.includes(core)));
+        const piece = frameId ? frameOf(language, frameId)?.core.find((core) => core && line.text.includes(core)) : undefined;
+        add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece, ...(frameId ? { frame: frameId } : {}) });
       }
     }
     // 그 문법 칸을 쓰는 문장구조 예문도.
     for (const frame of allFramesFor(language)) {
       if (frame.stage !== stage || !(frame.grammar ?? []).includes(index!)) continue;
-      for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: frame.core.find((core) => core && example.text.includes(core)) });
+      for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: frame.core.find((core) => core && example.text.includes(core)), frame: frame.id });
     }
     return out;
   }
@@ -252,8 +265,8 @@ const same = (a: string, b: string) => lower(a) === lower(b);
 /**
  * 문장구조 조각의 헷갈리는 오답(2026-10-30 사용자 "다른 선지가 누가 봐도 오답" → 살짝 틀린 꼴, frames/decoys/) — 줄의 대소문자에 맞춘다.
  */
-export function nearMisses(language: string, frameId: string, piece: string): string[] {
-  const table = DECOYS[language];
+export function nearMisses(language: string, frameId: string, piece: string, from: Partial<Record<string, Record<string, string[]>>> = DECOYS): string[] {
+  const table = from[language];
   if (!table) return [];
   const exact = table[`${frameId}|${piece}`];
   if (exact) return exact;
@@ -331,21 +344,26 @@ export function mostAlike(piece: string, candidates: readonly string[], n: numbe
 }
 
 /** 빈칸 쓰기 문제: 비울 조각이 짧을 때만(세 낱말·띄어쓰기 없는 말은 여덟 글자까지) — 길면 치기 힘들어 학습보다 타자가 된다. */
-function typeOf(language: string, source: QuizSource): QuizQuestion | null {
+function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | null {
   const piece = source.piece?.trim();
   if (!piece) return null;
   const at = source.text.indexOf(piece);
   if (at < 0) return null;
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
   if (!short) return null;
-  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from };
+  const near = key ? nearOf(language, key, piece) : [];
+  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}) };
 }
 
 /**
  * 친 말이 맞는지: 대소문자·문장부호·띄어쓰기(띄어쓰기 없는 말은 전부)·곧은/굽은 따옴표는 따지지 않는다.
- * 라틴 글자의 악센트만 빠졌으면 "loose"(맞음으로 세고 바른 꼴을 보여 줌) — 태국어·힌디어의 모음 부호(\p{M})는 글자라 지우지 않는다.
+ * "loose"(맞음으로 세고 바른 꼴을 보여 줌):
+ * - 라틴 글자의 악센트만 빠짐 — 태국어·힌디어의 모음 부호(\p{M})는 글자라 지우지 않는다.
+ * - 한 글자 오타(2026-10-30 사용자 "타이핑해서 맞추는 식"): 다섯 글자 넘는 낱말의 가운데에서 한 글자만 — 낱말 끝 두 글자(-s·-ed·성수 어미)는
+ *   문법이라 봐주지 않고, 띄어쓰기 없는 말·한국어(한 글자가 조사·어미)도 봐주지 않는다. near(헷갈리는 오답)와 같은 꼴도 아니다.
+ * - 일본어를 로마자로 침(ga → が): 소리가 같으면(가타카나 장음 ー 포함). 한자가 든 답은 여기서 못 맞추고 서버 다시 보기(typed-check)로.
  */
-export function typedRight(answer: string, typed: string): "exact" | "loose" | false {
+export function typedRight(answer: string, typed: string, options: { language?: string; near?: readonly string[] } = {}): "exact" | "loose" | false {
   const norm = (text: string) => {
     const base = text.normalize("NFC").toLocaleLowerCase().replace(/[’‘`´]/g, "'").replace(/[\p{P}\p{S}]+/gu, " ").replace(/\s+/g, " ").trim();
     return isSpaceless(base) ? base.replace(/\s+/g, "") : base;
@@ -355,7 +373,32 @@ export function typedRight(answer: string, typed: string): "exact" | "loose" | f
   if (!b) return false;
   if (a === b) return "exact";
   const latin = (text: string) => text.normalize("NFD").replace(/(\p{Script=Latin})\p{M}+/gu, "$1").normalize("NFC");
-  return latin(a) === latin(b) ? "loose" : false;
+  if (latin(a) === latin(b)) return "loose";
+  if (options.near?.some((one) => norm(one) === b || latin(norm(one)) === latin(b))) return false;
+  // 조사 は·へ·を는 소리대로(wa·e·o) 치니 비교할 때만 소리로 맞춘다.
+  const sound = (text: string) => text.replace(/は/g, "わ").replace(/へ/g, "え").replace(/を/g, "お");
+  if (options.language === "ja" && hasLatin(typed) && !/[一-鿿]/u.test(answer) && sameKana(sound(a), sound(romajiToHiragana(b).replace(/\s+/g, "")))) return "loose";
+  if (typoOk(a, b, options.language)) return "loose";
+  return false;
+}
+
+/** 한 글자 오타로 봐줄 수 있나(typedRight 설명). */
+function typoOk(a: string, b: string, language?: string): boolean {
+  if (!language || language === "ko" || isSpaceless(a) || isSpaceless(b)) return false;
+  if (distance(a, b) !== 1) return false;
+  const x = [...a];
+  const y = [...b];
+  let at = 0;
+  while (at < x.length && at < y.length && x[at] === y[at]) at += 1;
+  // 고친 자리가 든 낱말(답 쪽).
+  let start = at;
+  while (start > 0 && x[start - 1] !== " ") start -= 1;
+  let end = at;
+  while (end < x.length && x[end] !== " ") end += 1;
+  const word = end - start;
+  if (word < 5) return false;
+  const offset = at - start;
+  return offset > 0 && offset < word - 2;
 }
 
 /** 일본어 활용 조각(さ·れ·ま·した)은 한 조각으로 — 낱말 자르기가 동사 꼬리를 잘게 나눠 순서 문제가 이상해진다. */
@@ -435,6 +478,104 @@ export function fixOf(language: string, card: QuizCard, random: () => number): Q
 }
 
 /**
+ * 틀린 문장과 바른 문장의 다른 자리(앞뒤로 같은 낱말을 걷어 낸 가운데): 틀린 쪽 낱말 번호와 바른 쪽 말.
+ * 한 자리가 세 낱말을 넘거나(여러 군데 고친 줄), 바른 쪽이 비거나(낱말을 빼기만 함) 틀린 쪽이 비면(빠진 말을 넣기만 함) null — 누르고 칠 자리가 없다.
+ */
+export function diffSpan(language: string, wrong: string, right: string): { words: string[]; bad: number[]; want: string } | null {
+  const words = segmentWords(wrong, language);
+  const goal = segmentWords(right, language);
+  const norm = (word: string) => word.toLocaleLowerCase().replace(/[\p{P}]/gu, "");
+  let head = 0;
+  while (head < words.length && head < goal.length && norm(words[head]!) === norm(goal[head]!)) head += 1;
+  let tail = 0;
+  while (tail < words.length - head && tail < goal.length - head && norm(words[words.length - 1 - tail]!) === norm(goal[goal.length - 1 - tail]!)) tail += 1;
+  const bad = words.map((_, i) => i).slice(head, words.length - tail);
+  const want = goal.slice(head, goal.length - tail);
+  if (!bad.length || !want.length || bad.length > 3 || want.length > 3) return null;
+  // 문장 끝 부호는 고칠 말에 넣지 않는다("Japan." → "Japan").
+  const glue = isSpaceless(right) ? "" : " ";
+  const text = want.join(glue).replace(/^[\p{P}]+|[\p{P}]+$/gu, "");
+  return text ? { words, bad, want: text } : null;
+}
+
+/** 확실히 틀린 꼴만(frames/decoys/plain) — 문장 첫머리 대문자에 맞춘다. */
+export function plainMisses(language: string, frameId: string, piece: string): string[] {
+  return nearMisses(language, frameId, piece, PLAIN_DECOYS);
+}
+
+/**
+ * 틀린 곳 찾아 고치기 한 문제: 예문의 문장구조 조각을 확실히 틀린 꼴로 바꾼다. clean이면 바꾸지 않은 문장(틀린 곳 없음).
+ * 그 조각의 확실히 틀린 꼴이 없으면 null(뜻만 다른 맞는 말을 틀렸다고 하지 않게).
+ */
+export function spotOf(language: string, key: string, source: QuizSource, random: () => number, clean = false): SpotQuestion | null {
+  const piece = source.piece;
+  const frameId = key.startsWith("f|") ? key.slice(2) : source.frame;
+  if (!piece || !frameId) return null;
+  const at = source.text.indexOf(piece);
+  if (at < 0) return null;
+  const misses = plainMisses(language, frameId, piece).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)));
+  if (!misses.length) return null;
+  const words = segmentWords(source.text, language);
+  if (words.length < 3 || words.length > 14) return null;
+  if (clean) return { kind: "spot", text: source.text, right: source.text, words, bad: [], want: "", gloss: source.gloss, from: source.from };
+  const miss = shuffled(misses, random)[0]!;
+  let rest = source.text.slice(at + piece.length);
+  // 프랑스어 생략(qu'·j'): 조각은 아포스트로피로 끝나 다음 낱말과 붙어 있는데 오답은 아니면 띄우고, 거꾸로면 붙인다.
+  const elided = (text: string) => /['’]$/.test(text);
+  if (elided(piece) && !elided(miss) && rest && !/^\s/.test(rest)) rest = ` ${rest}`;
+  else if (!elided(piece) && elided(miss)) rest = rest.replace(/^\s+/, "");
+  const wrong = source.text.slice(0, at) + miss + rest;
+  const span = diffSpan(language, wrong, source.text);
+  if (!span) return null;
+  return { kind: "spot", text: wrong, right: source.text, words: span.words, bad: span.bad, want: span.want, gloss: source.gloss, from: source.from, near: [miss] };
+}
+
+/** 튜터가 고친 내 줄로 틀린 곳 고치기(내가 실제로 한 실수) — 자리가 하나로 안 잡히면 null(그땐 예전 fix). */
+export function spotFromCard(language: string, card: QuizCard): SpotQuestion | null {
+  if (!card.wrong || !card.right || same(card.wrong, card.right)) return null;
+  const span = diffSpan(language, card.wrong, card.right);
+  if (!span || span.words.length > 16) return null;
+  return { kind: "spot", text: card.wrong, right: card.right, words: span.words, bad: span.bad, want: span.want, ...(card.note ? { note: card.note } : {}), from: "card", mine: true };
+}
+
+/**
+ * 대화에서 틀린 줄(2026-10-30): 지금 단계까지의 대본에서 네다섯 줄을 잘라, 문장구조 조각이 든 줄 하나만 확실히 틀린 꼴로 바꾼다.
+ * 돌려주는 key = 바꾼 줄의 문장구조(f|) — 결과는 그 열쇠에 남는다.
+ */
+export function dialogOf(language: string, stage: number, seed: string): { question: QuizQuestion; key: string } | null {
+  const random = rng(`${seed}|dialog`);
+  const top = Math.max(1, stage);
+  const scripts = shuffled(allScriptsFor(language).filter((script) => script.stage >= 1 && script.stage <= top && script.lines.length >= 4), random);
+  for (const script of scripts.slice(0, 30)) {
+    const size = Math.min(script.lines.length, 4 + Math.floor(random() * 2));
+    const start = Math.floor(random() * (script.lines.length - size + 1));
+    const window = script.lines.slice(start, start + size);
+    const order = shuffled(window.map((_, i) => i), random);
+    for (const i of order) {
+      const line = window[i]!;
+      for (const frameId of line.frames ?? []) {
+        const frame = frameOf(language, frameId);
+        const piece = frame?.core.find((core) => core && line.text.includes(core));
+        if (!frame || !piece) continue;
+        const spot = spotOf(language, `f|${frameId}`, { text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece }, random);
+        if (!spot) continue;
+        return {
+          key: `f|${frameId}`,
+          question: { kind: "dialog", lines: window.map((one, k) => ({ who: one.who, text: k === i ? spot.text : one.text, gloss: one.gloss })), at: i, spot, from: script.id },
+        };
+      }
+    }
+  }
+  return null;
+}
+
+/** 고친 말이 맞는지(틀린 곳 고치기) — 빈칸 쓰기와 같은 채점, 틀린 꼴 그대로 다시 친 것은 틀림. */
+export function fixedRight(question: SpotQuestion, typed: string, language: string): "exact" | "loose" | false {
+  const wrongPart = question.bad.map((i) => question.words[i]).join(isSpaceless(question.text) ? "" : " ");
+  return typedRight(question.want, typed, { language, near: [...(question.near ?? []), wrongPart] });
+}
+
+/**
  * 열쇠 하나의 퀴즈: [고친 줄] → 고르기·순서 → 말하기, 셋까지. 재료가 모자라면 문제가 둘 이하일 수 있고, 하나도 못 만들면 null(그땐 원래 대본으로).
  * seed = 그날(같은 날 다시 열면 같은 문제).
  */
@@ -462,7 +603,7 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
   const random = rng(`${key}|${seed}|word`);
   // 단어는 뜻 맞추기(짝 — WordMatch)·빈칸만(사용자 2026-10-30 "단어는 그냥 뜻맞추기, 빈칸채우기로 제한") — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
   // 빈칸 쓰기를 먼저(2026-10-30 사용자 "타이핑 문제를 대거") — 보기로 고르기는 다음 문장에서.
-  const typed = typeOf(language, source);
+  const typed = typeOf(language, source, key);
   const question = chooseOf(language, key, source, random);
   const list = [typed, question].filter((one): one is QuizQuestion => Boolean(one));
   return list.length ? { key, questions: list } : null;
@@ -482,7 +623,21 @@ export function bundleQuiz(
   language: string,
   keys: readonly string[],
   /** strict: 고른 모양(style)만 — 못 만드는 열쇠는 건너뜀(퀴즈 칸 = 빈칸 고르기만, 사용자 2026-10-30). */
-  options: { seed?: string; stage?: number; style?: QuizStyle; strict?: boolean; /** 고른 모양과 번갈아 낼 모양(빈칸 고르기 ↔ 빈칸 쓰기, 2026-10-30). */ alternate?: QuizStyle } = {},
+  options: {
+    seed?: string;
+    stage?: number;
+    style?: QuizStyle;
+    strict?: boolean;
+    /** 고른 모양과 번갈아 낼 모양(빈칸 고르기 ↔ 빈칸 쓰기, 2026-10-30). */
+    alternate?: QuizStyle;
+    /** strict인데 고른 모양을 못 만드는 열쇠에 대신 낼 모양(빈칸 쓰기를 못 만드는 긴 조각 → 빈칸 고르기). */
+    fallback?: QuizStyle;
+    /**
+     * 틀린 곳 찾아 고치기를 섞는다(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식 · 대화 속 틀린 문장 고르기"):
+     * cards = 열쇠마다 튜터가 고친 내 줄(내 실수 먼저), dialog = 대화에서 틀린 줄 하나도.
+     */
+    spots?: SpotMix;
+  } = {},
 ): { questions: QuizQuestion[]; keys: string[] } {
   const questions: QuizQuestion[] = [];
   const out: string[] = [];
@@ -498,14 +653,76 @@ export function bundleQuiz(
     if (!quiz) continue;
     const textOf = (q: QuizQuestion) => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
     const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1 || options.style === "say") && q.kind !== "fix";
-    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? (options.strict && options.style ? undefined : (options.style ? quiz.questions.find((q) => q.kind !== "type" && usable(q)) : undefined) ?? quiz.questions.find(usable));
+    let pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? (options.strict && options.style ? undefined : (options.style ? quiz.questions.find((q) => q.kind !== "type" && usable(q)) : undefined) ?? quiz.questions.find(usable));
+    if (!pick && options.strict && options.fallback) {
+      const again = key.startsWith("w|") ? quiz : buildQuiz(language, key, { seed: options.seed, stage: options.stage, kinds: [options.fallback] });
+      pick = again?.questions.find((q) => q.kind === options.fallback && usable(q));
+    }
     if (!pick) continue;
     if (pick.kind === "say") says += 1;
     texts.add(textOf(pick));
     questions.push(pick);
     out.push(key);
   }
+  if (options.spots) addSpots(language, keys, questions, out, texts, options);
   return { questions, keys: out };
+}
+
+/** anyCard: 묶음 열쇠 밖의 고친 줄도(틀린 것 탭 — 내 실수가 먼저). */
+export type SpotMix = { cards?: ReadonlyMap<string, QuizCard>; anyCard?: boolean; dialog?: boolean };
+
+/** 묶음에 틀린 곳 고치기 하나(+ 대화 속 틀린 줄 하나)를 끼운다 — 내 실수 줄 먼저, 없으면 문장구조 예문, 넷에 하나는 틀린 곳 없는 문장. */
+function addSpots(
+  language: string,
+  keys: readonly string[],
+  questions: QuizQuestion[],
+  out: string[],
+  texts: Set<string>,
+  options: { seed?: string; stage?: number; spots?: SpotMix },
+): void {
+  const random = rng(`${keys.join(",")}|${options.seed ?? ""}|spot`);
+  // 같은 열쇠를 모양만 바꿔 바로 잇지 않게(RULES 학습 점검 ④) — 끼울 자리 앞뒤 열쇠는 빼고, 없으면 그 열쇠도.
+  const at = Math.min(2, out.length);
+  const near = new Set([out[at - 1], out[at]].filter(Boolean));
+  const ordered = [...keys.filter((key) => !near.has(key)), ...keys.filter((key) => near.has(key))];
+  let spot: { question: QuizQuestion; key: string } | null = null;
+  const cardKeys = options.spots?.anyCard ? [...(options.spots.cards?.keys() ?? [])].filter((key) => !ordered.includes(key)) : [];
+  for (const key of [...ordered, ...cardKeys]) {
+    const card = options.spots?.cards?.get(key);
+    const mine = card ? spotFromCard(language, card) : null;
+    if (mine && !texts.has(mine.text)) {
+      spot = { question: mine, key };
+      break;
+    }
+  }
+  if (!spot) {
+    const clean = random() < 0.25;
+    for (const key of ordered) {
+      if (!key.startsWith("f|") && !key.startsWith("g|")) continue;
+      const sources = shuffled(quizSources(language, key), random).filter((source) => !texts.has(source.text) && (!options.stage || source.stage <= options.stage + 1));
+      for (const source of sources) {
+        // 틀린 곳 없는 문장도 그 조각에 확실히 틀린 꼴이 있는 문장만(같은 문장이 다른 날 틀리게 나올 수 있게).
+        const made = spotOf(language, key, source, random, clean);
+        if (made) {
+          spot = { question: made, key };
+          break;
+        }
+      }
+      if (spot) break;
+    }
+  }
+  if (spot) {
+    texts.add((spot.question as SpotQuestion).right);
+    questions.splice(at, 0, spot.question);
+    out.splice(at, 0, spot.key);
+  }
+  if (options.spots?.dialog) {
+    const dialog = dialogOf(language, options.stage ?? 1, `${options.seed ?? ""}|${keys[0] ?? ""}`);
+    if (dialog) {
+      questions.push(dialog.question);
+      out.push(dialog.key);
+    }
+  }
 }
 
 export function buildQuiz(
@@ -560,7 +777,7 @@ export function buildQuiz(
   const middle: QuizQuestion[] = [];
   // 빈칸 쓰기 하나 먼저(2026-10-30).
   for (const source of sources) {
-    const typed = typeOf(language, source);
+    const typed = typeOf(language, source, key);
     if (typed) {
       middle.push(typed);
       used.add(source.text);
@@ -652,7 +869,7 @@ function mixQuiz(language: string, key: string, sources: readonly QuizSource[], 
     let made: QuizQuestion | null = null;
     for (const source of [...pool, ...fallback]) {
       made =
-        kind === "type" ? typeOf(language, source)
+        kind === "type" ? typeOf(language, source, key)
         : kind === "choose" ? chooseOf(language, key, source, random)
         : kind === "order" ? orderOf(language, source, random)
         : kind === "meaning" ? meaningOf(language, source, random)

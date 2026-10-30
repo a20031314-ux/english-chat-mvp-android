@@ -157,6 +157,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   scriptJudge: 1,
   // 그 판단이 "틀림"일 때만 더 좋은 모델로 한 번 더(2026-10-29) — scriptJudge 대비 비율이 Haiku가 틀림이라 한 몫.
   scriptRecheck: 1,
+  // 퀴즈에서 친 답이 정해진 꼴과 글자로 다를 때만 다시 보기(빈칸 쓰기·틀린 곳 고치기, 2026-10-30) — 맞는 다른 꼴을 틀림으로 세지 않게.
+  quizTypedCheck: 1,
   // 대본 고르기 오답 — 대본마다 한 번(공유 저장), 사용자 수와 상관없음. 만들기 + 확인 = 2.
   scriptChoices: 2,
   // Not model calls — both are zero — but counted here so the ledger can answer
