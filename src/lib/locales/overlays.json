@@ -855,7 +855,8 @@
     "languageSettings": "言語設定",
     "learnSwitchAsk": "{lang}の学習に切り替えますか？",
     "learnSwitchYes": "切り替える",
-    "scopeTitle": "学べること"
+    "scopeTitle": "学べること",
+    "quizTargetRate": "正答率"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1713,7 +1714,8 @@
     "languageSettings": "语言设置",
     "learnSwitchAsk": "要改为学习{lang}吗？",
     "learnSwitchYes": "切换",
-    "scopeTitle": "可以学到的内容"
+    "scopeTitle": "可以学到的内容",
+    "quizTargetRate": "正确率"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2574,7 +2576,8 @@
     "languageSettings": "Cài đặt ngôn ngữ",
     "learnSwitchAsk": "Chuyển sang học {lang}?",
     "learnSwitchYes": "Chuyển",
-    "scopeTitle": "Những gì bạn có thể học"
+    "scopeTitle": "Những gì bạn có thể học",
+    "quizTargetRate": "Tỉ lệ đúng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3440,7 +3443,8 @@
     "languageSettings": "Langues",
     "learnSwitchAsk": "Nouvelle langue à apprendre : {lang} ?",
     "learnSwitchYes": "Changer",
-    "scopeTitle": "Ce que vous pouvez apprendre"
+    "scopeTitle": "Ce que vous pouvez apprendre",
+    "quizTargetRate": "Taux de réussite"
   },
   "it": {
     "archive": "Report",
@@ -4497,7 +4501,8 @@
     "languageSettings": "Lingue",
     "learnSwitchAsk": "Nuova lingua da imparare: {lang}?",
     "learnSwitchYes": "Cambia",
-    "scopeTitle": "Cosa puoi imparare"
+    "scopeTitle": "Cosa puoi imparare",
+    "quizTargetRate": "Percentuale di risposte giuste"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5366,7 +5371,8 @@
     "languageSettings": "Idiomas",
     "learnSwitchAsk": "Mudar para aprender {lang}?",
     "learnSwitchYes": "Mudar",
-    "scopeTitle": "O que você pode aprender"
+    "scopeTitle": "O que você pode aprender",
+    "quizTargetRate": "Taxa de acerto"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6421,7 +6427,8 @@
     "languageSettings": "Языки",
     "learnSwitchAsk": "Перейти на изучение языка: {lang}?",
     "learnSwitchYes": "Перейти",
-    "scopeTitle": "Что можно выучить"
+    "scopeTitle": "Что можно выучить",
+    "quizTargetRate": "Доля верных ответов"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7286,7 +7293,8 @@
     "languageSettings": "Pengaturan bahasa",
     "learnSwitchAsk": "Ganti ke belajar {lang}?",
     "learnSwitchYes": "Ganti",
-    "scopeTitle": "Yang bisa kamu pelajari"
+    "scopeTitle": "Yang bisa kamu pelajari",
+    "quizTargetRate": "Tingkat benar"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8144,7 +8152,8 @@
     "languageSettings": "إعدادات اللغة",
     "learnSwitchAsk": "هل تريد التبديل إلى تعلّم {lang}؟",
     "learnSwitchYes": "تبديل",
-    "scopeTitle": "ما يمكنك تعلّمه"
+    "scopeTitle": "ما يمكنك تعلّمه",
+    "quizTargetRate": "نسبة الإجابات الصحيحة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9002,7 +9011,8 @@
     "languageSettings": "ตั้งค่าภาษา",
     "learnSwitchAsk": "เปลี่ยนไปเรียน{lang}ไหม?",
     "learnSwitchYes": "เปลี่ยน",
-    "scopeTitle": "สิ่งที่เรียนได้"
+    "scopeTitle": "สิ่งที่เรียนได้",
+    "quizTargetRate": "อัตราตอบถูก"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9860,6 +9870,7 @@
     "languageSettings": "भाषा सेटिंग",
     "learnSwitchAsk": "{lang} सीखने पर बदलें?",
     "learnSwitchYes": "बदलें",
-    "scopeTitle": "आप क्या सीख सकते हैं"
+    "scopeTitle": "आप क्या सीख सकते हैं",
+    "quizTargetRate": "सही उत्तरों का प्रतिशत"
   }
 }

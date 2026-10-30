@@ -5,7 +5,8 @@
  * - 원 = 지금 다루는 범위: 낱말 순서(내 단계까지, curriculum/useWordBank) 앞에서 size개. 원 밖은 내지 않는다.
  * - 원 안 낱말: 새것(안 풀어 봄) · 배우는 중(맞힌 줄이 STREAK_KNOWN 미만) · 익힘(연속 STREAK_KNOWN번 맞힘, 또는 서버 이미 앎).
  * - 묶음 = 모르는 것(배우는 중 먼저, 그다음 새것) share 몫 + 아는 것(복습 날이 된 익힘, 오래 기다린 것 먼저). 한쪽이 모자라면 다른 쪽으로 채운다.
- * - share는 최근 RECENT문제 정답률로 움직인다: 목표 약 85%(Wilson 외 2019 "85% 규칙") — 90% 넘으면 +STEP, 75% 밑이면 −STEP, MIN~MAX.
+ * - share는 최근 RECENT문제 정답률로 움직인다: 목표 정답률(사용자가 30~70% 중 고름, 기본 70%) ±5%를 벗어나면 ±STEP, MIN~MAX.
+ *   (처음엔 85%("85% 규칙", Wilson 외 2019 — 일반 학습 이론, 단어 암기용 근거는 아님)였다가 사용자가 30~70% 옵션으로 바꿈.)
  * - 원 키우기: 원 안 익힘이 GROW_AT 넘고 배우는 중이 MAX_LEARNING 이하면 원의 GROW_SHARE(최소 GROW_MIN)만큼 더한다.
  * - 익힘 복습 간격: 연속 맞힘 2 → 1일, 3 → 3일, 4 → 7일, 5 → 14일, 6+ → 30일. 틀리면 연속 0(배우는 중으로).
  * 이 폰에만(localStorage, 낱말 열쇠·횟수·때만 — 학습자 글 없음). 순수 모듈: 화면(TodayPlan)·테스트·가상 학습자 시뮬레이션이 같이 쓴다.
@@ -19,10 +20,14 @@ export const MAX_LEARNING = 20;
 export const RECENT = 30;
 export const SHARE_START = 0.3;
 export const SHARE_MIN = 0.1;
-export const SHARE_MAX = 0.75;
+export const SHARE_MAX = 1;
 export const SHARE_STEP = 0.05;
 export const HIGH = 0.9;
 export const LOW = 0.75;
+/** 목표 정답률(사용자 2026-10-31 "정답률은 30~70 사이에서 옵션으로") — 고를 수 있는 값과 기본값. 목표 ±5%를 벗어나면 몫을 움직인다. */
+export const TARGETS = [0.3, 0.4, 0.5, 0.6, 0.7] as const;
+export const TARGET_DEFAULT = 0.7;
+const BAND = 0.05;
 /** 배우는 중 낱말은 이만큼 지나야 다시(바로 다시 내면 방금 본 답을 베낌 — 가상 사용자 2026-10-31). */
 export const LEARNING_GAP_MS = 2 * 60 * 1000;
 /** 날이 안 된 익힘으로 채울 때 이만큼 안에 푼 것은 빼기(같은 문장이 계속 돎 — 가상 사용자). */
@@ -31,7 +36,20 @@ const DAY = 24 * 60 * 60 * 1000;
 const INTERVALS = [0, 0, 1, 3, 7, 14, 30];
 
 export type CircleItem = { s: number; t: number };
-export type Circle = { size: number; share: number; recent: number[]; items: Record<string, CircleItem>; /** 푼 수(몫을 다섯 답마다 움직이는 데). */ answered?: number };
+export type Circle = {
+  size: number;
+  share: number;
+  recent: number[];
+  items: Record<string, CircleItem>;
+  /** 푼 수(몫을 다섯 답마다 움직이는 데). */
+  answered?: number;
+  /** 목표 정답률(TARGETS 중 하나, 없으면 TARGET_DEFAULT). */
+  target?: number;
+};
+
+export function targetOf(circle: Circle): number {
+  return typeof circle.target === "number" && circle.target >= 0.3 && circle.target <= 0.7 ? circle.target : TARGET_DEFAULT;
+}
 export type ItemState = "new" | "learning" | "known";
 
 export function emptyCircle(): Circle {
@@ -111,8 +129,9 @@ export function noteAnswer(circle: Circle, key: string, correct: boolean, now: n
   // 몫은 다섯 답마다 한 번만 움직인다(답마다 움직이면 하루 사이 50% ↔ 10%로 출렁임, 시뮬레이션).
   if (recent.length >= 10 && answered % 5 === 0) {
     const rate = recent.reduce((sum, one) => sum + one, 0) / recent.length;
-    if (rate > HIGH) share = Math.min(SHARE_MAX, share + SHARE_STEP);
-    else if (rate < LOW) share = Math.max(SHARE_MIN, share - SHARE_STEP);
+    const target = targetOf(circle);
+    if (rate > target + BAND) share = Math.min(SHARE_MAX, share + SHARE_STEP);
+    else if (rate < target - BAND) share = Math.max(SHARE_MIN, share - SHARE_STEP);
   }
   return { ...circle, items, recent, answered, share: Math.round(share * 100) / 100 };
 }
@@ -121,10 +140,12 @@ export function noteAnswer(circle: Circle, key: string, correct: boolean, now: n
 export function growCircle(circle: Circle, order: readonly string[], known: (key: string) => boolean): Circle {
   const view = circleView(circle, order, known);
   if (circle.size >= order.length) return circle;
-  if (view.knownShare < GROW_AT || view.counts.learning > MAX_LEARNING) return circle;
-  // 최근 정답률이 높으면 두 배로(이미 아는 사람이 원을 빨리 넘어가게).
+  // 원 안 익힘이 GROW_AT 넘거나, 원 안 새것이 다 떨어졌으면(목표 정답률이 낮아 모르는 것을 많이 낼 때) 키운다 — 배우는 중이 너무 많으면 안 키움.
+  if (view.counts.learning > MAX_LEARNING) return circle;
+  if (view.knownShare < GROW_AT && view.counts.new > 0) return circle;
+  // 최근 정답률이 목표보다 한참 높으면 두 배로(이미 아는 사람이 원을 빨리 넘어가게).
   const rate = circle.recent.length >= 10 ? circle.recent.reduce((sum, one) => sum + one, 0) / circle.recent.length : 0;
-  const add = Math.max(GROW_MIN, Math.ceil(circle.size * GROW_SHARE)) * (rate > HIGH ? 2 : 1);
+  const add = Math.max(GROW_MIN, Math.ceil(circle.size * GROW_SHARE)) * (rate > Math.max(HIGH, targetOf(circle) + 0.15) ? 2 : 1);
   return { ...circle, size: Math.min(order.length, circle.size + add) };
 }
 

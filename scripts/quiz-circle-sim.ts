@@ -1,6 +1,6 @@
 /**
  * 넓어지는 원(src/lib/curriculum/circle.ts) 가상 학습자 시뮬레이션 — 숫자(시작 크기·키우는 기준·정답률 목표)를 바꿀 때 먼저 돌린다.
- *   node --experimental-strip-types scripts/quiz-circle-sim.ts [days=14] [perDay=40]
+ *   node --experimental-strip-types scripts/quiz-circle-sim.ts [days=14] [perDay=40] [목표 정답률=0.7]
  * 학습자 셋: 이미 많이 아는 사람(앞 1,000개 대부분 앎) · 처음 배우는 사람 · 잘 잊는 사람.
  * 낱말마다 "기억 세기" — 처음엔 순위에 따라, 틀린 뒤 답을 보면 오르고, 맞히면 더 오르고, 날마다 조금씩 잊는다.
  * 보는 것: 날마다 정답률(목표 75~90%), 모르는 몫(share), 원 크기, 원 안 익힘.
@@ -9,6 +9,7 @@ import { emptyCircle, growCircle, noteAnswer, pickCircle, circleView, type Circl
 
 const days = Number(process.argv[2] ?? 14);
 const perDay = Number(process.argv[3] ?? 40);
+const target = Number(process.argv[4] ?? 0.7);
 const BUNDLE = 4;
 const DAY = 24 * 60 * 60 * 1000;
 const order = Array.from({ length: 700 }, (_, i) => `w|word${i}`);
@@ -27,7 +28,7 @@ for (const learner of learners) {
   seed = 7;
   const memory = new Map<string, number>();
   order.forEach((key, rank) => memory.set(key, learner.prior(rank)));
-  let circle: Circle = emptyCircle();
+  let circle: Circle = { ...emptyCircle(), target };
   let now = Date.UTC(2026, 10, 1, 9);
   const rows: string[] = [];
   for (let day = 1; day <= days; day += 1) {

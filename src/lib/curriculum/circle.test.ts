@@ -47,3 +47,19 @@ test("넓어지는 원: 정답률이 낮으면 모르는 몫을 줄이고 높으
   circle = noteAnswer(circle, order[0]!, false, NOW + 1000);
   assert.equal(itemState(circle, order[0]!), "learning");
 });
+
+test("넓어지는 원: 목표 정답률(30~70%)에 맞춰 몫이 움직이고, 새것이 떨어지면 원을 키움", () => {
+  // 목표 30%인데 정답률 50%면 모르는 몫을 늘린다(목표 70%면 그대로 줄인다).
+  let low: Circle = { ...emptyCircle(), target: 0.3 };
+  let high: Circle = { ...emptyCircle(), target: 0.7 };
+  for (let i = 0; i < 30; i += 1) {
+    low = noteAnswer(low, order[i % 20]!, i % 2 === 0, NOW + i);
+    high = noteAnswer(high, order[i % 20]!, i % 2 === 0, NOW + i);
+  }
+  assert.ok(low.share > emptyCircle().share, `low ${low.share}`);
+  assert.ok(high.share < emptyCircle().share, `high ${high.share}`);
+  // 원 안 20개가 모두 배우는 중(새것 0)이면 익힘이 적어도 키운다.
+  let busy: Circle = emptyCircle();
+  for (const key of order.slice(0, CIRCLE_START)) busy = noteAnswer(busy, key, false, NOW);
+  assert.ok(growCircle(busy, order, none).size > CIRCLE_START);
+});

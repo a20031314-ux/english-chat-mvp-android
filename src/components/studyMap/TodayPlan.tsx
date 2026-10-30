@@ -53,7 +53,7 @@ import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
-import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, trimCircle, type Circle } from "@/lib/curriculum/circle";
+import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, TARGETS, targetOf, trimCircle, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -278,9 +278,24 @@ export function TodayPlan({
     } catch {
       // 이 폰에 없으면 처음부터.
     }
+    // 목표 정답률은 칸과 상관없이 하나(사용자 2026-10-31 "30~70 사이에서 옵션으로").
+    try {
+      const target = Number(localStorage.getItem("quizTarget.v1"));
+      if (target >= 0.3 && target <= 0.7) loaded = { ...loaded, target };
+    } catch {
+      // 기본값.
+    }
     circleRef.current = loaded;
     setCircle(loaded);
   }, [circleStore]);
+  const setTarget = (target: number) => {
+    try {
+      localStorage.setItem("quizTarget.v1", String(target));
+    } catch {
+      // 이번에만.
+    }
+    saveCircle({ ...circleRef.current, target });
+  };
   const saveCircle = (next: Circle) => {
     circleRef.current = next;
     setCircle(next);
@@ -1178,6 +1193,25 @@ export function TodayPlan({
           </div>
           {settingsOpen === "keep" ? (
             <>
+              {/* 목표 정답률 */}
+              {keepFocus === "vocab" ? (
+                <div data-quiz-target className="flex flex-col gap-1.5">
+                  <h4 className="text-meta text-slate-400">{ui.quizTargetRate}</h4>
+                  <div role="group" className="flex flex-wrap gap-1.5">
+                    {TARGETS.map((target) => (
+                      <button
+                        key={target}
+                        type="button"
+                        aria-pressed={targetOf(circle) === target}
+                        onClick={() => setTarget(target)}
+                        className={`rounded-full px-3 py-1 text-caption ${targetOf(circle) === target ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+                      >
+                        {`${Math.round(target * 100)}%`}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
               {/* 어떤 낱말 */}
               {keepFocus === "vocab" && bank ? (
                 <div data-vocab-by className="flex flex-col gap-1.5">
