@@ -46,9 +46,12 @@ function creditOf(key: string, from: readonly string[], passed: Passed, known: K
   const state = knownState(known, key);
   const passedAt = from.map((id) => passed.get(id)).filter((at): at is number => typeof at === "number").sort((a, b) => a - b)[0];
   const entry = known[key];
-  const firstDayAt = entry ? entry.days[0]! * DAY_MS : undefined;
-  const learnedAt = [passedAt, firstDayAt].filter((at): at is number => typeof at === "number").sort((a, b) => a - b)[0];
-  if (state === "known") return { value: 1, learnedAt, masteredAt: entry!.days[entry!.days.length - 1]! * DAY_MS };
+  // 시험 기록은 날짜(UTC 날 번호)만 있어 그날 한가운데로 — 0시로 두면 UTC보다 늦은 시간대에서 전날로 보였다(Logbank, 2026-10-31).
+  // 같은 날(또는 그 전)에 통과한 때가 있으면 그 실제 시각을 쓴다.
+  const firstDay = entry?.days[0];
+  const firstDayAt = firstDay !== undefined ? firstDay * DAY_MS + DAY_MS / 2 : undefined;
+  const learnedAt = passedAt !== undefined && (firstDay === undefined || Math.floor(passedAt / DAY_MS) <= firstDay) ? passedAt : (firstDayAt ?? passedAt);
+  if (state === "known") return { value: 1, learnedAt, masteredAt: entry!.days[entry!.days.length - 1]! * DAY_MS + DAY_MS / 2 };
   if (state === "checking" || passedAt) return { value: 0.5, learnedAt };
   return { value: 0 };
 }
