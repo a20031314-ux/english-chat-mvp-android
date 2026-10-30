@@ -259,7 +259,7 @@ export function TodayPlan({
   // 빈도 단어 묶음(curriculum/vocabBank.ts — 지금 en·es·ja): 지속 학습의 어휘 분모와 새 낱말.
   // 기준만 고르고 칸을 안 골랐으면: 단계는 내 단계까지 전체(빈 값), 품사·주제는 첫 칸(명사 · 사람).
   const vocabPick: VocabPick | null =
-    settings.focus === "vocab" && settings.vocab && settings.vocab.by !== "all"
+    keepFocus === "vocab" && settings.vocab && settings.vocab.by !== "all"
       ? { by: settings.vocab.by, value: settings.vocab.value || ({ stage: "", pos: "noun", topic: "people" } as const)[settings.vocab.by] }
       : null;
   // 내가 저장한 낱말(이 학습 언어)은 단계와 상관없이 어휘 퀴즈 맨 앞(2026-10-31 낱말 층위 ⑤).
@@ -293,7 +293,9 @@ export function TodayPlan({
   const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords, circleOn ? circleNeed : undefined);
   const knownWord = (key: string) => knownState(known, key) === "known";
   // 원 안인데 아직 카드가 없는 낱말(앞에서 열둘) — 그 묶음을 받아 오게.
-  const needKey = circleOn && bank ? bank.orderKeys.slice(0, circle.size).filter((key) => !bank.ready.has(key)).slice(0, 12).join("|") : "";
+  // 원은 카드가 온 낱말로만 센다(카드 없는 낱말이 원 안에 남으면 익힘 몫이 70%에 못 닿아 원이 안 커짐 — 가상 사용자 2026-10-31: 2주에 10개).
+  const circleOrder = useMemo(() => (bank ? bank.orderKeys.filter((key) => bank.ready.has(key)) : []), [bank]);
+  const needKey = circleOn && bank ? bank.orderKeys.slice(0, circle.size + 20).filter((key) => !bank.ready.has(key)).slice(0, 12).join("|") : "";
   useEffect(() => {
     setCircleNeed(needKey ? needKey.split("|") : []);
   }, [needKey]);
@@ -1070,7 +1072,7 @@ export function TodayPlan({
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
     if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
-      saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, one.correct, Date.now()), bank.orderKeys, knownWord)));
+      saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, one.correct, Date.now()), circleOrder, knownWord)));
     }
     finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
   };
@@ -1084,8 +1086,8 @@ export function TodayPlan({
   // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
   const keepMake = (): QuizBatch | null => {
     if (wrongTab) return takeBatch(bundleFor("review"));
-    if (keepFocus === "vocab" && circleOn && bank?.orderKeys.length) {
-      const keys = pickCircle(circleRef.current, bank.orderKeys, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
+    if (keepFocus === "vocab" && circleOn && bank && circleOrder.length) {
+      const keys = pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
       lastCircle.current = new Set(keys);
       if (!keys.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));

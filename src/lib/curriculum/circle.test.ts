@@ -15,12 +15,16 @@ test("넓어지는 원: 처음엔 원 안(앞 20개)에서만, 모르는 것과 
   // 앞 10개를 익힘으로 → 모르는 몫(30%)만 모르는 것, 나머지는 익힘(복습 날 안 됐어도 채움).
   for (const key of order.slice(0, 10)) for (let i = 0; i < STREAK_KNOWN; i += 1) circle = noteAnswer(circle, key, true, NOW);
   circle = { ...circle, share: 0.3 };
-  const mixed = pickCircle(circle, order, { n: 4, now: NOW, usable: all, known: none });
+  const later = NOW + 11 * 60 * 1000;
+  const mixed = pickCircle(circle, order, { n: 4, now: later, usable: all, known: none });
   const unknown = mixed.filter((key) => itemState(circle, key) !== "known");
   assert.equal(unknown.length, 1);
   assert.equal(mixed.length, 4);
   // 방금 낸 것은 빼고.
-  const again = pickCircle(circle, order, { n: 4, now: NOW, usable: all, known: none, skip: new Set(mixed) });
+  const again = pickCircle(circle, order, { n: 4, now: later, usable: all, known: none, skip: new Set(mixed) });
+  // 방금(10분 안) 푼 익힘은 채우기로 안 씀 — 그때는 모르는 것으로 채운다.
+  const soon = pickCircle(circle, order, { n: 4, now: NOW, usable: all, known: none });
+  assert.ok(soon.every((key) => itemState(circle, key) !== "known"));
   assert.ok(again.every((key) => !mixed.includes(key)));
 });
 

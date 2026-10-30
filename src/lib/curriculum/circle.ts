@@ -23,6 +23,10 @@ export const SHARE_MAX = 0.75;
 export const SHARE_STEP = 0.05;
 export const HIGH = 0.9;
 export const LOW = 0.75;
+/** 배우는 중 낱말은 이만큼 지나야 다시(바로 다시 내면 방금 본 답을 베낌 — 가상 사용자 2026-10-31). */
+export const LEARNING_GAP_MS = 2 * 60 * 1000;
+/** 날이 안 된 익힘으로 채울 때 이만큼 안에 푼 것은 빼기(같은 문장이 계속 돎 — 가상 사용자). */
+export const FILLER_GAP_MS = 10 * 60 * 1000;
 const DAY = 24 * 60 * 60 * 1000;
 const INTERVALS = [0, 0, 1, 3, 7, 14, 30];
 
@@ -66,7 +70,9 @@ export function pickCircle(
 ): string[] {
   const { inside } = circleView(circle, order, options.known);
   const ok = (key: string) => options.usable(key) && !options.skip?.has(key);
-  const learning = inside.filter((key) => ok(key) && itemState(circle, key, options.known(key)) === "learning").sort((a, b) => circle.items[a]!.t - circle.items[b]!.t);
+  const learning = inside
+    .filter((key) => ok(key) && itemState(circle, key, options.known(key)) === "learning" && options.now - circle.items[key]!.t >= LEARNING_GAP_MS)
+    .sort((a, b) => circle.items[a]!.t - circle.items[b]!.t);
   const fresh = inside.filter((key) => ok(key) && itemState(circle, key, options.known(key)) === "new");
   const due = inside
     .filter((key) => ok(key) && itemState(circle, key, options.known(key)) === "known" && dueAt(circle, key) <= options.now)
@@ -77,7 +83,9 @@ export function pickCircle(
   take.push(...due.slice(0, options.n - take.length));
   // 아는 쪽이 모자라면 복습 날이 안 된 익힘으로(오래된 것부터) — 모르는 몫을 지킨다(2026-10-31 시뮬레이션: 처음 배우는 사람 정답률이 35~55%로 떨어짐).
   if (take.length < options.n) {
-    const waiting = inside.filter((key) => ok(key) && !take.includes(key) && itemState(circle, key, options.known(key)) === "known").sort((a, b) => dueAt(circle, a) - dueAt(circle, b));
+    const waiting = inside
+      .filter((key) => ok(key) && !take.includes(key) && itemState(circle, key, options.known(key)) === "known" && options.now - (circle.items[key]?.t ?? 0) >= FILLER_GAP_MS)
+      .sort((a, b) => dueAt(circle, a) - dueAt(circle, b));
     take.push(...waiting.slice(0, options.n - take.length));
   }
   // 그래도 모자라면(원 안에 익힘이 거의 없을 때) 모르는 것으로.

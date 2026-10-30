@@ -290,10 +290,39 @@ function nearOf(language: string, key: string, piece: string): string[] {
   return [...new Set([...made, ...grown])];
 }
 
+/**
+ * 문장 안 조각 자리: 다른 낱말 속이 아닌 곳(2026-10-31 가상 사용자 — "t___ phone"(the 안의 he), 今日 안의 日을 비움).
+ * 띄어쓰는 말은 앞뒤가 글자가 아닌 자리(없으면 -1 — 문제를 안 만듦), 띄어쓰기 없는 말은 낱말 자르기로 그 조각과 같은 낱말 자리(없으면 첫 자리).
+ */
+export function pieceAt(text: string, piece: string, language = ""): number {
+  if (!piece) return -1;
+  if (isSpaceless(text) || isSpaceless(piece)) {
+    const words = segmentWords(text, language);
+    let from = 0;
+    for (const word of words) {
+      const at = text.indexOf(word, from);
+      if (at < 0) continue;
+      if (word === piece) return at;
+      from = at + word.length;
+    }
+    return text.indexOf(piece);
+  }
+  const letter = /[\p{L}\p{M}\p{Nd}]/u;
+  for (let at = text.indexOf(piece); at >= 0; at = text.indexOf(piece, at + 1)) {
+    const before = at > 0 ? text[at - 1]! : "";
+    const after = text[at + piece.length] ?? "";
+    const startOk = !before || !letter.test(before) || !letter.test(piece[0]!);
+    const endOk = !after || !letter.test(after) || !letter.test(piece[piece.length - 1]!);
+    if (startOk && endOk) return at;
+  }
+  // 낱말로 따로 선 자리가 없으면(카드 예문이 그 낱말을 다른 낱말 속에만 담음) 문제를 만들지 않는다.
+  return -1;
+}
+
 function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
   const piece = source.piece;
   if (!piece) return null;
-  const at = source.text.indexOf(piece);
+  const at = pieceAt(source.text, piece, language);
   if (at < 0) return null;
   const near = nearOf(language, key, piece);
   // 헷갈리는 오답이 없으면 남의 조각 중 생김새가 가장 닮은 것부터(같은 갈래·품사 안에서, 랜덤 나열 대신 — 2026-10-30 사용자).
@@ -347,7 +376,9 @@ export function mostAlike(piece: string, candidates: readonly string[], n: numbe
 function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | null {
   const piece = source.piece?.trim();
   if (!piece) return null;
-  const at = source.text.indexOf(piece);
+  // 한자가 든 답은 치지 않게(가나·한자 입력기가 없으면 칠 수 없음 — 가상 사용자 준호가 人·日을 2주 내내 못 침): 고르기로.
+  if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece)) return null;
+  const at = pieceAt(source.text, piece, language);
   if (at < 0) return null;
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
   if (!short) return null;
@@ -511,7 +542,7 @@ export function spotOf(language: string, key: string, source: QuizSource, random
   const piece = source.piece;
   const frameId = key.startsWith("f|") ? key.slice(2) : source.frame;
   if (!piece || !frameId) return null;
-  const at = source.text.indexOf(piece);
+  const at = pieceAt(source.text, piece, language);
   if (at < 0) return null;
   const misses = plainMisses(language, frameId, piece).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)));
   if (!misses.length) return null;

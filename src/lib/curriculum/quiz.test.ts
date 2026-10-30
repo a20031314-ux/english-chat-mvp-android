@@ -179,10 +179,10 @@ test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없�
   const { registerQuizSources, wordQuiz, buildQuiz, bundleQuiz } = await import("./quiz.ts");
   const cases: [string, [string, string, string, string][]][] = [
     ["es", [["casa", "Mi casa es pequeña.", "집", "우리 집은 작아요."], ["perro", "El perro come mucho.", "개", "개가 많이 먹어요."], ["agua", "Quiero agua fría.", "물", "찬물을 원해요."]]],
-    ["ja", [["駅", "駅はどこですか。", "역", "역은 어디예요?"], ["水", "水をください。", "물", "물 주세요."], ["本", "この本はおもしろい。", "책", "이 책은 재미있어요."]]],
+    ["ja", [["ねこ", "ねこがすきです。", "고양이", "고양이를 좋아해요."], ["みず", "みずをください。", "물", "물 주세요."], ["ほん", "このほんはおもしろい。", "책", "이 책은 재미있어요."]]],
   ];
   // 품사가 다른 낱말(동사) — 명사 빈칸의 보기에 나오면 안 된다(사용자 2026-10-30 "선지는 다 같은 품사로").
-  const verbs: Record<string, [string, string]> = { es: ["comer", "Me gusta comer."], ja: ["食べる", "ご飯を食べる。"] };
+  const verbs: Record<string, [string, string]> = { es: ["comer", "Me gusta comer."], ja: ["たべる", "ごはんをたべる。"] };
   for (const [language, words] of cases) {
     const [verb, verbText] = verbs[language]!;
     registerQuizSources(language, [
@@ -208,6 +208,19 @@ test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없�
     assert.equal(new Set(bundle.keys).size, bundle.keys.length, `${language} 낱말마다 한 번`);
     assert.ok(bundle.questions.length >= 2 && bundle.questions.every((q) => q.kind === "choose"), `${language} ${bundle.questions.map((q) => q.kind)}`);
   }
+});
+
+test("빈칸 자리: 다른 낱말 속은 비우지 않음, 한자가 든 답은 쓰기 대신 고르기(2026-10-31 가상 사용자)", async () => {
+  const { pieceAt, registerQuizSources, wordQuiz } = await import("./quiz.ts");
+  assert.equal(pieceAt("She answers the phone.", "he", "en"), -1);
+  assert.equal(pieceAt("Hello, he said.", "he", "en"), 7);
+  assert.equal(pieceAt("Él come en el café.", "el", "es"), 11);
+  assert.equal(pieceAt("今日はとても暑い日です。", "日", "ja"), 8);
+  registerQuizSources("ja", [
+    ...["駅", "水", "本"].map((w, i) => ({ key: `w|${w}`, sources: [{ text: ["駅はどこですか。", "水をください。", "この本はおもしろい。"][i]!, gloss: { en: "", raw: "뜻" }, from: `w|${w}`, stage: 0, piece: w, who: "me" as const, wordGloss: "뜻", pos: "noun" }] })),
+  ]);
+  const kinds = wordQuiz("ja", "w|駅", "seed")!.questions.map((q) => q.kind);
+  assert.ok(!kinds.includes("type") && kinds.includes("choose"), kinds.join());
 });
 
 test("묶음 퀴즈: 열쇠마다 한 문제, 같은 문장 없음, 말하기는 하나까지 — 일본어·스페인어", async () => {
