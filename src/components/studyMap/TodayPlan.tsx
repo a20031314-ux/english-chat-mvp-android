@@ -52,6 +52,7 @@ import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
+import { growBank } from "@/lib/curriculum/qbank";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -110,7 +111,7 @@ type StudyFocus = "review" | "auto" | PartId;
 type StudyLane = "review" | "learn";
 /** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
 type Style = "auto" | QuizStyle | "match";
-const STYLES: readonly Style[] = ["auto", "choose", "order", "say", "meaning", "match"];
+const STYLES: readonly Style[] = ["auto", "type", "choose", "order", "say", "meaning", "match"];
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick; styles?: Partial<Record<StudyFocus, Style>> };
 // 듣기 위주는 뺌(2026-10-30 사용자 "듣기 문제는 삭제") — 저장된 듣기는 랜덤으로.
 const MIXES: readonly QuizMix[] = ["auto", "speak", "read"];
@@ -533,7 +534,10 @@ export function TodayPlan({
   const bundleFor = (which: StudyLane, wordKeys?: readonly string[]): { keys: string[]; questions: QuizQuestion[] } | null => {
     // 어휘: 짝 맞추기에서 본 낱말들의 예문 빈칸, 낱말마다 한 문제(같은 낱말을 모양만 바꿔 세 번 묻지 않음, 2026-10-30).
     if (wordKeys) {
-      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose", strict: true });
+      // 문제은행이 이 낱말들을 늘려 두게(다음 묶음부터 쓰임, curriculum/qbank.ts).
+      void growBank(language, locale, wordKeys.map((key) => ({ key, stage })));
+      // 빈칸 쓰기 ↔ 빈칸 고르기를 번갈아(2026-10-30 사용자 "빈칸 고르기로 단순화" + "타이핑하는 단순 문제를 대거").
+      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "choose", alternate: "type", strict: true });
       return made.questions.length ? made : null;
     }
     if (which === "learn" && studyFocus === "vocab") return null;
@@ -549,7 +553,8 @@ export function TodayPlan({
       const lead = firstPick(queue, which)?.key;
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "choose", strict: true });
+    void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "choose", alternate: "type", strict: true });
     // 틀린 것 탭은 한 문제만 남아도 낸다.
     return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
   };
@@ -660,6 +665,8 @@ export function TodayPlan({
     const blank: Bubble = { side: "me", text: mine.text.replace(tiles[mid] ?? "", "___"), mark: "___" };
     const pictures: Record<Style, Bubble[]> = {
       auto: [blank, { side: "me", text: [...tiles].reverse().join(" · ") }, { side: "me", text: `🎤 ${mine.text}` }],
+      // 빈칸 쓰기: 뜻 → 빈칸 문장에 직접 친다(보기 없음, 2026-10-30).
+      type: [meaning, blank, { side: "me", text: `⌨ ${tiles[mid] ?? ""}` }],
       choose: [blank, { side: "me", text: [tiles[mid], tiles[(mid + 1) % tiles.length]].filter(Boolean).join("  /  ") }],
       order: [meaning, { side: "me", text: [...tiles].reverse().join(" · ") }],
       say: [meaning, { side: "me", text: `🎤 ${mine.text}` }],
@@ -670,6 +677,7 @@ export function TodayPlan({
     };
     const label: Record<Style, string> = {
       auto: ui.studyRandom,
+      type: ui.selfFocusWriting,
       choose: ui.quizKindChoose,
       order: ui.quizKindOrder,
       say: ui.quizKindSay,
@@ -677,7 +685,7 @@ export function TodayPlan({
       match: ui.wordMatch,
     };
     // 어휘: 짝 맞추기(→ 그 낱말들 예문 빈칸) · 예문 빈칸(2026-10-30 사용자 "단순하게 맞추기 > 예문 형태로").
-    const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "choose"] : ["auto", "choose", "order", "say"];
+    const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "type", "choose"] : ["auto", "type", "choose", "order", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
   const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
@@ -695,8 +703,11 @@ export function TodayPlan({
       todayServed.current = null;
       return null;
     }
-    // 오늘 할 것의 퀴즈도 빈칸 고르기 먼저(사용자 2026-10-30) — 빈칸을 못 만드는 항목(문법 칸 등)만 예전 모양.
-    const blank = buildQuiz(language, current.id, { card: current.card, seed: day, stage, kinds: ["choose"] })?.questions.find((q) => q.kind === "choose");
+    // 오늘 할 것의 퀴즈도 빈칸 먼저(사용자 2026-10-30) — 쓰기·고르기를 항목마다 번갈아, 빈칸을 못 만드는 항목(문법 칸 등)만 예전 모양.
+    void growBank(language, locale, [{ key: current.id, stage }]);
+    const blankKinds = currentAt % 2 === 0 ? (["type", "choose"] as const) : (["choose", "type"] as const);
+    const blankQuiz = buildQuiz(language, current.id, { card: current.card, seed: day, stage, kinds: [...blankKinds] });
+    const blank = blankKinds.map((kind) => blankQuiz?.questions.find((q) => q.kind === kind)).find(Boolean);
     const quiz = blank ? null : buildQuiz(language, current.id, { card: current.card, seed: day, stage, mix: settings.mix });
     const first = blank ?? quiz?.questions[0];
     if (!first) return null;

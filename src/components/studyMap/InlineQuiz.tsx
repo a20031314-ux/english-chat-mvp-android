@@ -76,6 +76,7 @@ export function InlineQuiz({
           onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped) });
         }}
         onNext={next}
+        bankKey={batch.keys[index]}
       />
     </div>
   );

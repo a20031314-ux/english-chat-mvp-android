@@ -71,6 +71,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   recallPrompts: 2,
   // 문장구조 수업(server/frameLesson.ts) — 틀 × 앱 언어마다 한 번(만들기 1 + 옮기기 1), 저장된 뒤엔 0.
   frameLesson: 2,
+  // 자라는 문제은행(server/qbank.ts) — 열쇠가 모자랄 때만 만들기 1 + 앱 언어 뜻 옮기기 1, 열쇠마다 하루 3번·전체 하루 400번까지.
+  qbankGrow: 2,
   // 단계 학습 줄 읽는 법(server/stageReadings.ts) — 학습 언어 × 단계마다 한 번(줄 60개 묶음 몇 개), 저장된 뒤엔 0.
   stageReadings: 3,
   // One chat sentence read for the constructions in it (learner/classify.ts),

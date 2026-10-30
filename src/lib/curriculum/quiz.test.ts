@@ -192,15 +192,17 @@ test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없�
     const [w, , gloss] = words[0]!;
     const quiz = wordQuiz(language, `w|${w}`, "seed");
     assert.ok(quiz, language);
-    assert.deepEqual(quiz!.questions.map((q) => q.kind), ["choose"], language);
-    const blank = quiz!.questions[0]!;
+    // 빈칸 쓰기 먼저, 그다음 보기 고르기(2026-10-30 사용자 "타이핑 문제를 대거").
+    assert.deepEqual(quiz!.questions.map((q) => q.kind), ["type", "choose"], language);
+    assert.ok(quiz!.questions[0]!.kind === "type" && quiz!.questions[0]!.answer === w, `${language} 쓰기 정답은 그 낱말`);
+    const blank = quiz!.questions[1]!;
     assert.ok(blank.kind === "choose" && blank.options[blank.answer] === w, `${language} 정답은 그 낱말`);
     assert.ok(blank.kind === "choose" && !blank.options.includes(verb), `${language} 다른 품사(${verb})는 보기에 없음`);
     // 같은 품사 낱말이 모자라면 빈칸을 만들지 않고, 순서 맞추기로 넘어가지도 않는다.
-    assert.equal(wordQuiz(language, `w|${verb}`, "seed"), null, `${language} 동사는 같은 품사 보기가 없어 문제 없음`);
+    assert.deepEqual(wordQuiz(language, `w|${verb}`, "seed")?.questions.map((q) => q.kind), ["type"], `${language} 동사는 같은 품사 보기가 없어 고르기는 없고 쓰기만`);
     assert.ok(gloss);
     // 학습 조합을 정해도 단어 퀴즈 모양.
-    assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "read" })!.questions.map((q) => q.kind), ["choose"]);
+    assert.deepEqual(buildQuiz(language, `w|${w}`, { mix: "read" })!.questions.map((q) => q.kind), ["type", "choose"]);
     // 짝 맞추기 뒤 묶음: 낱말마다 예문 빈칸 한 문제씩.
     const bundle = bundleQuiz(language, words.map(([one]) => `w|${one}`), { seed: "s", style: "choose" });
     assert.equal(new Set(bundle.keys).size, bundle.keys.length, `${language} 낱말마다 한 번`);

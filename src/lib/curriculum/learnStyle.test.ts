@@ -25,15 +25,15 @@ test("사람마다: 가장 약한 모양을 앞에 둘, 다 맞히면 말하기 
   let log: KindLog = {};
   log = recordKind(log, key, "meaning", true);
   log = recordKind(log, key, "say", false);
-  assert.deepEqual(styleKinds("en", key, log), ["say", "say", "choose"]);
+  assert.deepEqual(styleKinds("en", key, log), ["say", "say", "type"]);
   // 옛 기록의 듣고 고르기는 세지 않는다(뺀 모양).
   log = recordKind({}, key, "listen" as never, false);
   assert.deepEqual(styleKinds("en", key, log), STYLE_KINDS.word);
   log = recordKind({}, key, "order", false);
   assert.deepEqual(styleKinds("en", key, log), ["order", "order", "say"]);
   let good: KindLog = {};
-  for (let i = 0; i < 2; i += 1) for (const kind of ["choose", "meaning", "order"] as const) good = recordKind(good, key, kind, true);
-  assert.deepEqual(styleKinds("en", key, good), ["say", "say", "choose"]);
+  for (let i = 0; i < 2; i += 1) for (const kind of ["type", "choose"] as const) good = recordKind(good, key, kind, true);
+  assert.deepEqual(styleKinds("en", key, good), ["say", "say", "type"]);
 });
 
 test("퀴즈가 정한 모양을 따른다(만들 수 있는 만큼): 문장구조는 맞추기 먼저, 낱말은 빈칸·뜻 고르기(스페인어·일본어)", () => {

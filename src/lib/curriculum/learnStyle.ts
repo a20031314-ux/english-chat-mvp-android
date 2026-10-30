@@ -21,11 +21,12 @@ type Kind = QuizQuestion["kind"];
 
 export const STYLE_KINDS: Record<ItemStyle, Kind[]> = {
   // 낱말 같은 표현(e|): 발음(말하기)·듣기 없이 예문 빈칸 → 뜻 → 맞추기. 단어장 낱말(w|)은 quiz.ts wordQuiz(예문 빈칸 하나).
-  word: ["choose", "meaning", "order"],
+  // 빈칸 쓰기를 앞에(2026-10-30 사용자 "타이핑하는 단순 문제를 대거").
+  word: ["type", "choose", "type"],
   // 문법·문장구조는 말하기로 채점하지 않음(quiz.ts speakScored) — 맞추기 → 빈칸 → 다른 줄 맞추기.
-  structure: ["order", "choose", "order"],
-  chunk: ["choose", "order", "say"],
-  register: ["choose", "meaning", "say"],
+  structure: ["order", "type", "choose"],
+  chunk: ["type", "order", "say"],
+  register: ["type", "choose", "say"],
 };
 
 /** 높임·말투가 갈리는 표지(학습 언어). */
@@ -49,7 +50,7 @@ export function itemStyle(language: string, key: string): ItemStyle {
   return isWordish(text, language) ? "word" : "chunk";
 }
 
-const LIVE_KINDS = new Set<Kind>(["fix", "choose", "order", "say", "meaning"]);
+const LIVE_KINDS = new Set<Kind>(["fix", "type", "choose", "order", "say", "meaning"]);
 
 /** 열쇠 → 모양 → [맞힘, 푼 수](이 폰). */
 export type KindLog = Record<string, Partial<Record<Kind, [number, number]>>>;

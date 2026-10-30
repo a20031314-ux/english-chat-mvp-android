@@ -12,6 +12,8 @@
  * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
  */
 import { DECOYS } from "./frames/decoys/index.ts";
+import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
+import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
@@ -38,6 +40,8 @@ export type QuizQuestion =
   | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
+  /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
 
@@ -113,6 +117,17 @@ export function registerQuizSources(language: string, entries: readonly { key: s
 
 /** 열쇠가 가리키는 문장들(문제 재료) — 그 조각(piece)이 문장에 그대로 든 것엔 piece를 붙인다. */
 export function quizSources(language: string, key: string): QuizSource[] {
+  const base = baseSources(language, key);
+  // 문제은행이 더한 예문(curriculum/qbank.ts) — 앱 데이터 뒤에, 같은 문장은 한 번.
+  const grown = grownItems(language, key);
+  if (!grown.length) return base;
+  const seen = new Set(base.map((source) => source.text));
+  const pos = base[0]?.pos;
+  const extra = grown.filter((item) => !seen.has(item.text) && item.text.includes(item.piece)).map((item): QuizSource => ({ text: item.text, gloss: item.gloss, from: "qbank", stage: item.stage, piece: item.piece, who: "me", ...(pos ? { pos } : {}) }));
+  return [...base, ...extra];
+}
+
+function baseSources(language: string, key: string): QuizSource[] {
   if (key.startsWith("u|") || key.startsWith("w|")) return GAP_SOURCES.get(language)?.get(key) ?? [];
   const scripts = allScriptsFor(language);
   const out: QuizSource[] = [];
@@ -248,15 +263,32 @@ export function nearMisses(language: string, frameId: string, piece: string): st
   return upper ? list.map((one) => one.charAt(0).toLocaleUpperCase() + one.slice(1)) : list;
 }
 
+/** 단계 핵심 표현의 헷갈리는 오답(expressions/decoys/, 2026-10-30) — 줄 첫머리 대문자에 맞춘다. */
+export function expressionNearMisses(language: string, expression: string, piece: string): string[] {
+  const list = EXPR_DECOYS[language]?.[expression] ?? [];
+  const upper = piece.charAt(0) !== piece.charAt(0).toLocaleLowerCase() && expression.charAt(0) === expression.charAt(0).toLocaleLowerCase();
+  return upper ? list.map((one) => one.charAt(0).toLocaleUpperCase() + one.slice(1)) : list;
+}
+
+/** 열쇠에 맞는 헷갈리는 오답(문장구조·표현은 미리 만든 데이터, 문제은행이 더한 것도 — curriculum/qbank). */
+function nearOf(language: string, key: string, piece: string): string[] {
+  const made = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : key.startsWith("e|") ? expressionNearMisses(language, key.slice(2), piece) : [];
+  const grown = grownDecoys(language, key, piece);
+  return [...new Set([...made, ...grown])];
+}
+
 function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
   const piece = source.piece;
   if (!piece) return null;
   const at = source.text.indexOf(piece);
   if (at < 0) return null;
-  const near = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : [];
+  const near = nearOf(language, key, piece);
+  // 헷갈리는 오답이 없으면 남의 조각 중 생김새가 가장 닮은 것부터(같은 갈래·품사 안에서, 랜덤 나열 대신 — 2026-10-30 사용자).
+  const fits = (one: string) => Boolean(one) && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece));
+  const nearFit = near.filter(fits);
+  const pool = nearFit.length >= 2 ? nearFit : mostAlike(piece, decoys(language, key, source.stage, source.pos).filter(fits), 5);
   // 대소문자만 다른 같은 말("cuánto cuesta"·"Cuánto cuesta")은 보기에 한 번만(2026-10-30 화면 확인).
-  const fit = (near.length >= 2 ? near : decoys(language, key, source.stage, source.pos)).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece)));
-  const wrong = [...new Map(shuffled(fit, random).map((one) => [lower(one), one])).values()].slice(0, 2);
+  const wrong = [...new Map(shuffled(pool, random).map((one) => [lower(one), one])).values()].slice(0, 2);
   if (wrong.length < 2) return null;
   const options = shuffled([piece, ...wrong], random);
   return {
@@ -269,6 +301,61 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
     gloss: source.gloss,
     from: source.from,
   };
+}
+
+/** 두 말의 편집 거리(짧은 조각용). */
+function distance(a: string, b: string): number {
+  const x = [...a];
+  const y = [...b];
+  let prev = Array.from({ length: y.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= x.length; i += 1) {
+    const row = [i];
+    for (let j = 1; j <= y.length; j += 1) row[j] = Math.min(prev[j]! + 1, row[j - 1]! + 1, prev[j - 1]! + (x[i - 1] === y[j - 1] ? 0 : 1));
+    prev = row;
+  }
+  return prev[y.length]!;
+}
+
+/** 후보 중 조각과 생김새가 가장 닮은 n개(글자 차이 비율 + 첫 글자·길이) — 한눈에 지워지는 보기를 줄인다. */
+export function mostAlike(piece: string, candidates: readonly string[], n: number): string[] {
+  const p = piece.toLocaleLowerCase();
+  const score = (one: string) => {
+    const c = one.toLocaleLowerCase();
+    const longer = Math.max([...p].length, [...c].length) || 1;
+    let s = distance(p, c) / longer;
+    if ([...c][0] === [...p][0]) s -= 0.15;
+    s += Math.abs([...c].length - [...p].length) / longer / 2;
+    return s;
+  };
+  return [...new Set(candidates)].map((one) => [one, score(one)] as const).sort((a, b) => a[1] - b[1]).slice(0, n).map(([one]) => one);
+}
+
+/** 빈칸 쓰기 문제: 비울 조각이 짧을 때만(세 낱말·띄어쓰기 없는 말은 여덟 글자까지) — 길면 치기 힘들어 학습보다 타자가 된다. */
+function typeOf(language: string, source: QuizSource): QuizQuestion | null {
+  const piece = source.piece?.trim();
+  if (!piece) return null;
+  const at = source.text.indexOf(piece);
+  if (at < 0) return null;
+  const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
+  if (!short) return null;
+  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from };
+}
+
+/**
+ * 친 말이 맞는지: 대소문자·문장부호·띄어쓰기(띄어쓰기 없는 말은 전부)·곧은/굽은 따옴표는 따지지 않는다.
+ * 라틴 글자의 악센트만 빠졌으면 "loose"(맞음으로 세고 바른 꼴을 보여 줌) — 태국어·힌디어의 모음 부호(\p{M})는 글자라 지우지 않는다.
+ */
+export function typedRight(answer: string, typed: string): "exact" | "loose" | false {
+  const norm = (text: string) => {
+    const base = text.normalize("NFC").toLocaleLowerCase().replace(/[’‘`´]/g, "'").replace(/[\p{P}\p{S}]+/gu, " ").replace(/\s+/g, " ").trim();
+    return isSpaceless(base) ? base.replace(/\s+/g, "") : base;
+  };
+  const a = norm(answer);
+  const b = norm(typed);
+  if (!b) return false;
+  if (a === b) return "exact";
+  const latin = (text: string) => text.normalize("NFD").replace(/(\p{Script=Latin})\p{M}+/gu, "$1").normalize("NFC");
+  return latin(a) === latin(b) ? "loose" : false;
 }
 
 /** 일본어 활용 조각(さ·れ·ま·した)은 한 조각으로 — 낱말 자르기가 동사 꼬리를 잘게 나눠 순서 문제가 이상해진다. */
@@ -374,24 +461,28 @@ export function wordQuiz(language: string, key: string, seed = ""): Quiz | null 
   if (!source?.piece || !source.text.includes(source.piece)) return null;
   const random = rng(`${key}|${seed}|word`);
   // 단어는 뜻 맞추기(짝 — WordMatch)·빈칸만(사용자 2026-10-30 "단어는 그냥 뜻맞추기, 빈칸채우기로 제한") — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
+  // 빈칸 쓰기를 먼저(2026-10-30 사용자 "타이핑 문제를 대거") — 보기로 고르기는 다음 문장에서.
+  const typed = typeOf(language, source);
   const question = chooseOf(language, key, source, random);
-  return question ? { key, questions: [question] } : null;
+  const list = [typed, question].filter((one): one is QuizQuestion => Boolean(one));
+  return list.length ? { key, questions: list } : null;
 }
 
 /**
  * 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 열쇠 여럿에서 한 문제씩 — 같은 열쇠를 세 번 묻지 않는다.
  * 열쇠마다 그 열쇠 퀴즈의 첫 문제(말하기는 묶음에 하나까지, 같은 문장 두 번 없음). 문제마다 열쇠를 같이 돌려준다(결과는 열쇠마다 기록).
  */
-const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["choose", "order", "say", "meaning"];
+// 빈칸 쓰기가 셋에 하나 넘게(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거 늘려줘").
+const BUNDLE_KINDS: readonly QuizQuestion["kind"][] = ["type", "choose", "type", "order", "type", "meaning", "say"];
 
 /** 복습에서 고른 문제 모양(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게") — 없으면 돌아가며. */
-export type QuizStyle = Extract<QuizQuestion["kind"], "choose" | "order" | "say" | "meaning">;
+export type QuizStyle = Extract<QuizQuestion["kind"], "type" | "choose" | "order" | "say" | "meaning">;
 
 export function bundleQuiz(
   language: string,
   keys: readonly string[],
   /** strict: 고른 모양(style)만 — 못 만드는 열쇠는 건너뜀(퀴즈 칸 = 빈칸 고르기만, 사용자 2026-10-30). */
-  options: { seed?: string; stage?: number; style?: QuizStyle; strict?: boolean } = {},
+  options: { seed?: string; stage?: number; style?: QuizStyle; strict?: boolean; /** 고른 모양과 번갈아 낼 모양(빈칸 고르기 ↔ 빈칸 쓰기, 2026-10-30). */ alternate?: QuizStyle } = {},
 ): { questions: QuizQuestion[]; keys: string[] } {
   const questions: QuizQuestion[] = [];
   const out: string[] = [];
@@ -400,13 +491,14 @@ export function bundleQuiz(
   for (const key of keys) {
     if (questions.length >= QUIZ_SIZE + 1) break;
     // 모양을 돌아가며(빈칸 → 순서 → 말하기 → 뜻) — 묶음이 한 모양만 되지 않게. 단어(w|)는 단어 퀴즈의 첫 문제(빈칸).
-    const want = options.style ?? BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
-    const order = [want, ...BUNDLE_KINDS.filter((kind) => kind !== want)];
+    const want = options.style ? (options.alternate && questions.length % 2 === 0 ? options.alternate : options.style) : BUNDLE_KINDS[questions.length % BUNDLE_KINDS.length]!;
+    // 모양을 고른 묶음이면 못 만들 때 쓰기는 맨 끝에(고른 모양에 가까운 것부터).
+    const order = options.style ? [want, ...[...new Set(BUNDLE_KINDS)].filter((kind) => kind !== want && kind !== "type"), ...(want === "type" ? [] : (["type"] as const))] : [want, ...[...new Set(BUNDLE_KINDS)].filter((kind) => kind !== want)];
     const quiz = key.startsWith("w|") ? buildQuiz(language, key, { seed: options.seed, stage: options.stage }) : (buildQuiz(language, key, { seed: options.seed, stage: options.stage, kinds: order }) ?? buildQuiz(language, key, { seed: options.seed, stage: options.stage }));
     if (!quiz) continue;
     const textOf = (q: QuizQuestion) => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
     const usable = (q: QuizQuestion) => !texts.has(textOf(q)) && (q.kind !== "say" || says < 1 || options.style === "say") && q.kind !== "fix";
-    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? (options.strict && options.style ? undefined : quiz.questions.find(usable));
+    const pick = quiz.questions.find((q) => q.kind === want && usable(q)) ?? (options.strict && options.style ? undefined : (options.style ? quiz.questions.find((q) => q.kind !== "type" && usable(q)) : undefined) ?? quiz.questions.find(usable));
     if (!pick) continue;
     if (pick.kind === "say") says += 1;
     texts.add(textOf(pick));
@@ -435,6 +527,8 @@ export function buildQuiz(
     // 모양을 골랐으면 그 모양만(없으면 단어 퀴즈 그대로).
     const only = word && options.kinds?.length ? word.questions.filter((q) => options.kinds!.includes(q.kind)) : [];
     if (word && only.length) return { key, questions: only };
+    // 모양을 골랐는데 그 모양을 못 만들면 내지 않는다(부르는 쪽이 다른 열쇠로).
+    if (options.kinds?.length) return null;
     // 단어는 빈칸(여기)·뜻 맞추기(WordMatch)만 — 빈칸을 못 만들면 순서·말하기·뜻 고르기로 넘어가지 않는다(사용자 2026-10-30).
     return word;
   }
@@ -447,8 +541,12 @@ export function buildQuiz(
     const questions = mixQuiz(language, key, [...all.slice(shift), ...all.slice(0, shift)], kinds, random);
     const fix = options.card ? fixOf(language, options.card, random) : null;
     const list = fix ? [fix, ...questions].slice(0, QUIZ_SIZE) : questions;
-    // 조합대로 둘 넘게 못 만들면 앱이 돌리는 퀴즈로.
+    // 조합대로 둘 넘게 못 만들면 앱이 돌리는 퀴즈로 — 읽기 조합은 그 전에 말하기 없는 모양으로 한 번 더.
     if (list.length >= 2) return { key, questions: list };
+    if (options.mix === "read") {
+      const again = mixQuiz(language, key, all, ["choose", "meaning", "order"], random);
+      if (again.length >= 2) return { key, questions: again };
+    }
   }
   const random = rng(`${key}|${options.seed ?? ""}`);
   const all = options.round === undefined ? shuffled(near(quizSources(language, key)), random) : shuffled(near(quizSources(language, key)), rng(key));
@@ -460,8 +558,18 @@ export function buildQuiz(
   const fix = options.card ? fixOf(language, options.card, random) : null;
   if (fix) questions.push(fix);
   const middle: QuizQuestion[] = [];
+  // 빈칸 쓰기 하나 먼저(2026-10-30).
+  for (const source of sources) {
+    const typed = typeOf(language, source);
+    if (typed) {
+      middle.push(typed);
+      used.add(source.text);
+      break;
+    }
+  }
   for (const source of sources) {
     if (middle.some((q) => q.kind === "choose")) break;
+    if (used.has(source.text)) continue;
     const choose = chooseOf(language, key, source, random);
     if (choose) {
       middle.push(choose);
@@ -529,7 +637,7 @@ function meaningOf(language: string, source: QuizSource, random: () => number): 
 /** 조합마다 세 문제의 모양(앞에서부터, 못 만들면 다음 것). */
 const MIX_KINDS: Record<Exclude<QuizMix, "auto">, QuizQuestion["kind"][]> = {
   speak: ["order", "say", "say"],
-  read: ["choose", "meaning", "order"],
+  read: ["type", "choose", "type"],
 };
 
 /** 조합을 정한 퀴즈: 문장마다 그 조합의 모양으로(같은 문장은 한 번). */
@@ -544,7 +652,8 @@ function mixQuiz(language: string, key: string, sources: readonly QuizSource[], 
     let made: QuizQuestion | null = null;
     for (const source of [...pool, ...fallback]) {
       made =
-        kind === "choose" ? chooseOf(language, key, source, random)
+        kind === "type" ? typeOf(language, source)
+        : kind === "choose" ? chooseOf(language, key, source, random)
         : kind === "order" ? orderOf(language, source, random)
         : kind === "meaning" ? meaningOf(language, source, random)
         : { kind: "say", text: source.text, gloss: source.gloss, from: source.from };
@@ -574,7 +683,8 @@ export function buildUnit(language: string, scriptId: string, mix: Exclude<QuizM
     if (out.length >= 8) return;
     const kind = kinds[i % kinds.length]!;
     const made =
-      kind === "choose" ? (source.piece ? chooseOf(language, `e|${script.expressions.find((e) => pieceOf(source.text, e))}`, source, random) : null) ?? meaningOf(language, source, random)
+      kind === "type" ? typeOf(language, source) ?? meaningOf(language, source, random)
+      : kind === "choose" ? (source.piece ? chooseOf(language, `e|${script.expressions.find((e) => pieceOf(source.text, e))}`, source, random) : null) ?? meaningOf(language, source, random)
       : kind === "order" ? orderOf(language, source, random)
       : kind === "meaning" ? meaningOf(language, source, random)
       : source.who === "me" ? ({ kind: "say", text: source.text, gloss: source.gloss, from: source.from } as QuizQuestion) : meaningOf(language, source, random);

@@ -318,6 +318,7 @@ export function FrameLesson({
               onAnswer={(value) => {
                 if (!answered) setAnswered(value);
               }}
+              bankKey={`f|${frame.id}`}
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);

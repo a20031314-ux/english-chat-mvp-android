@@ -9,10 +9,11 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, joinWords, orderCorrect, quizPassed, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
+import { buildQuiz, joinWords, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
 import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
+import { noteBankResult } from "@/lib/curriculum/qbank";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
 import { stopTts } from "@/lib/ttsPlayer";
@@ -24,7 +25,7 @@ import { stopTts } from "@/lib/ttsPlayer";
  */
 
 /** skipped = 말하기 한도에 걸려 못 함 — 점수에서 뺀다. */
-export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][] };
+export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string };
 
 export function QuizPlayer({
   ui,
@@ -151,6 +152,7 @@ export function QuizPlayer({
             answered={answers[index] ?? null}
             onAnswer={answer}
             onNext={() => setIndex((n) => n + 1)}
+            bankKey={quizKey}
           />
         ) : null}
         {done && questions.length ? (
@@ -193,8 +195,9 @@ export function QuestionView({
   language,
   question,
   answered,
-  onAnswer,
+  onAnswer: giveAnswer,
   onNext,
+  bankKey,
 }: {
   ui: UICopy;
   locale: string;
@@ -203,13 +206,21 @@ export function QuestionView({
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
   onNext: () => void;
+  /** 이 문제의 열쇠 — 주면 풀이(문장·맞음·보기·고른 보기)를 문제은행 셈에 보탠다(curriculum/qbank.ts). */
+  bankKey?: string;
 }) {
+  const onAnswer = (value: Answer) => {
+    if (bankKey && !answered && !value.skipped && "text" in question) {
+      noteBankResult(language, bankKey, { text: question.text, correct: value.correct, ...(question.kind === "choose" ? { options: question.options, picked: value.picked } : {}) });
+    }
+    giveAnswer(value);
+  };
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   // 여러 단계 문장이 섞여 나오니 모든 단계 뜻풀이를 앱 언어로 받아 둔다(받으면 다시 그림).
   useAllStageGlosses(language, locale);
   // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
   // Wrong answers stay so the right one can be read; say/order keep the button.
-  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning"));
+  const autoNext = Boolean(answered?.correct && !answered.skipped && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -223,6 +234,7 @@ export function QuestionView({
     <section data-kind={question.kind} className="flex flex-col gap-3">
       {/* 모양 이름(빈칸·순서…)은 띄우지 않음 — 문제 모양이 곧 할 일(2026-10-30 사용자 "의미 없는 라벨"). 점검은 data-kind로. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
@@ -324,6 +336,84 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
   );
 }
 
+/**
+ * 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻 · 빈칸 문장 · 입력칸 하나 · 확인.
+ * 악센트만 빠졌으면 맞음으로 세고 바른 꼴을 보여 준다(quiz.ts typedRight). 친 글은 이 화면에만 — 어디에도 보내지 않는다.
+ */
+function TypeView({
+  ui,
+  locale,
+  language,
+  question,
+  answered,
+  onAnswer,
+  tag,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  question: Extract<QuizQuestion, { kind: "type" }>;
+  answered: Answer | null;
+  onAnswer: (answer: Answer) => void;
+  tag: string;
+}) {
+  const [typed, setTyped] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    // 칸 안 문제는 바로 칠 수 있게(첫 화면이 아닌 다음 문제부터 — 처음 여는 순간 키보드가 튀어나오지 않게).
+    if (document.activeElement?.tagName === "INPUT" || document.activeElement?.tagName === "BUTTON") inputRef.current?.focus({ preventScroll: true });
+  }, []);
+  const grade = answered ? typedRight(question.answer, typed) : null;
+  const submit = () => {
+    if (answered || !typed.trim()) return;
+    const result = typedRight(question.answer, typed);
+    onAnswer({ correct: Boolean(result) });
+  };
+  return (
+    <div className="flex flex-col gap-3">
+      <p dir="auto" className="text-note text-slate-400">
+        {quizGloss(question.gloss, locale, language) ?? "…"}
+      </p>
+      <div className="flex items-start gap-2">
+        <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+          {question.before}
+          <strong className={`font-semibold ${answered ? "text-status-learned" : "text-amber-200"}`}>{answered ? question.answer : "＿＿＿"}</strong>
+          {question.after}
+        </p>
+        {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
+      </div>
+      <div className="flex items-center gap-2">
+        <input
+          ref={inputRef}
+          dir="auto"
+          lang={tag}
+          value={typed}
+          disabled={Boolean(answered)}
+          autoCapitalize="none"
+          autoCorrect="off"
+          autoComplete="off"
+          spellCheck={false}
+          onChange={(event) => setTyped(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
+          }}
+          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (grade ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
+        />
+        {answered ? null : (
+          <button type="button" onClick={submit} disabled={!typed.trim()} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
+            {ui.quizCheck}
+          </button>
+        )}
+      </div>
+      {answered && grade === "loose" ? (
+        <p dir="auto" className="text-caption text-slate-400">
+          → <bdi>{question.answer}</bdi>
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ChooseView({
   locale,
   language,
@@ -372,7 +462,7 @@ function ChooseView({
               disabled={Boolean(answered)}
               onClick={() => {
                 setPicked(i);
-                onAnswer({ correct: isRight });
+                onAnswer({ correct: isRight, picked: option });
               }}
               className={`${chip} text-start ${style}`}
             >
