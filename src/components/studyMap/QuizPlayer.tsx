@@ -204,6 +204,7 @@ export function QuestionView({
   onAnswer: giveAnswer,
   onNext,
   bankKey,
+  showExamples = true,
 }: {
   ui: UICopy;
   locale: string;
@@ -214,6 +215,8 @@ export function QuestionView({
   onNext: () => void;
   /** 이 문제의 열쇠 — 주면 풀이(문장·맞음·보기·고른 보기)를 문제은행 셈에 보탠다(curriculum/qbank.ts). */
   bankKey?: string;
+  /** 답한 뒤 다른 예문 둘(문장구조 수업은 끔 — 설명에 예문이 있고 다음 문제가 미리 정해져 있어, 보여 준 예문이 바로 다음 문제로 나옴, 가상 사용자 2026-11-01). */
+  showExamples?: boolean;
 }) {
   const onAnswer = (value: Answer) => {
     // 문제은행 셈은 그 열쇠의 빈칸 문제만(틀린 곳 고치기의 문장은 일부러 틀린 문장이라 셈에 넣지 않음).
@@ -228,7 +231,8 @@ export function QuestionView({
   // Tap-to-pick answers that are right move on by themselves (first run had ~20 taps to the first script, 2026-10-29).
   // Wrong answers stay so the right one can be read; say/order keep the button.
   // Blank questions with a key show more examples after the answer, so they wait for 다음 (user, 2026-10-31).
-  const examples = Boolean(bankKey) && (question.kind === "choose" || question.kind === "type");
+  // 문법 칸(g|)은 같은 문법을 쓴 아무 대본 줄이라 문제와 상관없어 보임(가상 사용자 2026-11-01 "정답 뒤 예문이 늘 Me llamo/Soy de") — 빼기.
+  const examples = showExamples && Boolean(bankKey) && !bankKey?.startsWith("g|") && (question.kind === "choose" || question.kind === "type");
   const autoNext = Boolean(answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
@@ -249,7 +253,7 @@ export function QuestionView({
     >
       {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30). Checks read data-kind. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -515,6 +519,7 @@ function TypeView({
   answered,
   onAnswer,
   tag,
+  strict = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -523,6 +528,8 @@ function TypeView({
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
   tag: string;
+  /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 틀림(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
+  strict?: boolean;
 }) {
   const [result, setResult] = useState<"exact" | "loose" | false | null>(null);
   const [hint, setHint] = useState(0);
@@ -530,7 +537,7 @@ function TypeView({
   const submit = async (typed: string) => {
     const local = typedRight(question.answer, typed, { language, near: question.near });
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
-    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim(), open: true }, plainWrong);
+    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim(), open: !strict }, plainWrong);
     setResult(final);
     onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
   };

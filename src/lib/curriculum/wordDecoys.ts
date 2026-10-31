@@ -4,7 +4,12 @@
  * 키: 학습 언어 → 문장 속 조각(소문자) → 오답. 맞는 대안(축약·동의어)은 넣지 않는다(RULES 11 ②).
  * 퀴즈는 이 표를 문장구조·표현의 오답처럼 먼저 쓰고, 없으면 같은 품사 낱말(quiz.ts decoys).
  */
-export const WORD_DECOYS: Record<string, Record<string, string[]>> = {};
+export const WORD_DECOYS: Record<string, Record<string, string[]>> = {
+  // 2026-11-01 가상 사용자 표시(hub/drafts/ux-marks-2026-11-01.md): 보기가 한눈에 지워지거나 맞는 대안이던 것.
+  en: { totally: ["total", "totaled"] },
+  es: { el: ["la", "los", "las"], ello: ["lo", "le"] },
+  ja: { ない: ["なく", "なくて", "なかっ"], する: ["して", "すれ"] },
+};
 
 export function wordNearMisses(language: string, piece: string): string[] {
   return WORD_DECOYS[language]?.[piece.toLocaleLowerCase()] ?? [];

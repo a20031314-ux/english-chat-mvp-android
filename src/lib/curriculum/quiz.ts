@@ -158,8 +158,9 @@ export function moreExamples(language: string, key: string, current: string, n =
 }
 
 /** 답한 뒤 예문으로 보여 준 문장을 뒤로(다른 문장이 있으면 그쪽부터 빈칸으로). */
-function shownLast(language: string, key: string, list: QuizSource[]): QuizSource[] {
-  const shown = SHOWN_EXAMPLES.get(`${language}|${key}`);
+function shownLast(language: string, key: string, list: QuizSource[], later?: ReadonlySet<string>): QuizSource[] {
+  const kept = SHOWN_EXAMPLES.get(`${language}|${key}`);
+  const shown = later?.size ? new Set([...(kept ?? []), ...later]) : kept;
   if (!shown?.size) return list;
   return [...list.filter((source) => !shown.has(source.text)), ...list.filter((source) => shown.has(source.text))];
 }
@@ -311,7 +312,8 @@ export function expressionNearMisses(language: string, expression: string, piece
 /** 열쇠에 맞는 헷갈리는 오답(문장구조·표현은 미리 만든 데이터, 문제은행이 더한 것도 — curriculum/qbank). */
 function nearOf(language: string, key: string, piece: string): string[] {
   const made = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : key.startsWith("e|") ? expressionNearMisses(language, key.slice(2), piece) : key.startsWith("w|") ? wordNearMisses(language, piece) : [];
-  const grown = grownDecoys(language, key, piece);
+  // 낱말(w|)의 문제은행 오답 중 철자 실수 꼴·운만 맞춘 낱말(totaly·aera·tank — 가상 사용자 2026-11-01 "철자 고르기")은 뺀다. 활용·성수 꼴(perra·perros)은 둔다.
+  const grown = grownDecoys(language, key, piece).filter((one) => !key.startsWith("w|") || isSpaceless(piece) || !spellingOnly(one, piece));
   return [...new Set([...made, ...grown])];
 }
 
@@ -344,11 +346,24 @@ export function pieceAt(text: string, piece: string, language = ""): number {
   return -1;
 }
 
+/**
+ * 빈칸 말고 같은 문장에 그 조각이 또 있나(가상 사용자 2026-11-01 "No ___ sé, lo siento — 뒤의 lo를 보고 고름"). 있으면 문제를 만들지 않는다.
+ * 띄어쓰는 말은 따로 선 낱말 자리만, 띄어쓰기 없는 말은 낱말 자르기로 같은 낱말만 센다. 대소문자는 가리지 않는다.
+ */
+export function pieceTwice(text: string, piece: string, language = ""): boolean {
+  const at = pieceAt(text, piece, language);
+  if (at < 0) return false;
+  const rest = text.slice(0, at) + " ".repeat(piece.length) + text.slice(at + piece.length);
+  const lowered = piece.toLocaleLowerCase();
+  if (isSpaceless(text) || isSpaceless(piece)) return segmentWords(rest, language).some((word) => word.toLocaleLowerCase() === lowered);
+  return pieceAt(rest.toLocaleLowerCase(), lowered, language) >= 0;
+}
+
 function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
   const piece = source.piece;
   if (!piece) return null;
   const at = pieceAt(source.text, piece, language);
-  if (at < 0) return null;
+  if (at < 0 || pieceTwice(source.text, piece, language)) return null;
   const near = nearOf(language, key, piece);
   // 헷갈리는 오답이 없으면 남의 조각 중 생김새가 가장 닮은 것부터(같은 갈래·품사 안에서, 랜덤 나열 대신 — 2026-10-30 사용자).
   const fits = (one: string) => Boolean(one) && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece));
@@ -411,7 +426,7 @@ function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | 
   // 한자가 든 답은 치지 않게(가나·한자 입력기가 없으면 칠 수 없음 — 가상 사용자 준호가 人·日을 2주 내내 못 침): 고르기로.
   if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece)) return null;
   const at = pieceAt(source.text, piece, language);
-  if (at < 0) return null;
+  if (at < 0 || pieceTwice(source.text, piece, language)) return null;
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
   if (!short) return null;
   const near = key ? nearOf(language, key, piece) : [];
@@ -436,12 +451,51 @@ export function typedRight(answer: string, typed: string, options: { language?: 
   if (!b) return false;
   if (a === b) return "exact";
   const latin = (text: string) => text.normalize("NFD").replace(/(\p{Script=Latin})\p{M}+/gu, "$1").normalize("NFC");
-  if (latin(a) === latin(b)) return "loose";
+  // 부호 하나로 뜻이 갈리는 말은 봐주지 않는다(가상 사용자 2026-11-01 "años 자리에 anos, Él 자리에 El도 맞음").
+  if (latin(a) === latin(b) && !meaningMark(a, b, options.language)) return "loose";
+  if (latin(a) === latin(b)) return false;
   if (options.near?.some((one) => norm(one) === b || latin(norm(one)) === latin(b))) return false;
   // 조사 は·へ·を는 소리대로(wa·e·o) 치니 비교할 때만 소리로 맞춘다.
   const sound = (text: string) => text.replace(/は/g, "わ").replace(/へ/g, "え").replace(/を/g, "お");
   if (options.language === "ja" && hasLatin(typed) && !/[一-鿿]/u.test(answer) && sameKana(sound(a), sound(romajiToHiragana(b).replace(/\s+/g, "")))) return "loose";
   if (typoOk(a, b, options.language)) return "loose";
+  return false;
+}
+
+/**
+ * 부호를 빼면 다른 말이 되는 경우: 스페인어 ñ(n과 다른 글자), 뜻을 가르는 한 음절 부호(él/el · tú/tu · sí/si · sé/se · más/mas · mí/mi · té/te · dé/de),
+ * 프랑스어 à/a · où/ou · là/la, 포르투갈어 é/e · está/esta. 그 밖의 빠진 부호는 "거의 맞음"으로 둔다.
+ */
+const MARK_PAIRS: Record<string, readonly string[]> = {
+  es: ["él", "tú", "sí", "sé", "más", "mí", "té", "dé", "qué", "cómo", "dónde", "cuándo", "quién", "cuál", "está", "esté"],
+  fr: ["à", "où", "là", "çà", "dû", "sûr"],
+  pt: ["é", "está", "têm", "pôde", "pôr", "pára", "avô", "avó"],
+};
+export function meaningMark(answer: string, typed: string, language?: string): boolean {
+  if (language === "es" && [...answer].some((ch, i) => (ch === "ñ" || ch === "Ñ") && typed.normalize("NFC")[i] !== ch)) return true;
+  const pairs = MARK_PAIRS[language ?? ""];
+  if (!pairs) return false;
+  const words = answer.toLocaleLowerCase().split(/\s+/);
+  const typedWords = typed.toLocaleLowerCase().split(/\s+/);
+  return words.some((word, i) => pairs.includes(word.replace(/[\p{P}]/gu, "")) && typedWords[i] !== undefined && typedWords[i] !== word);
+}
+
+/** 철자만 틀린 꼴(겹자 빼기·더하기, 이웃 글자 바꾸기)이나 첫 글자만 다른 운 맞춤인가 — 낱말 오답으로 쓰지 않는다. */
+export function spellingOnly(decoy: string, piece: string): boolean {
+  const a = decoy.toLocaleLowerCase();
+  const b = piece.toLocaleLowerCase();
+  if (a === b) return false;
+  if (a[0] !== b[0] && distance(a, b) <= 2) return true;
+  if (a.length === b.length) {
+    const diff = [...a].map((ch, i) => (ch === b[i] ? -1 : i)).filter((i) => i >= 0);
+    if (diff.length === 2 && diff[1] === diff[0]! + 1 && a[diff[0]!] === b[diff[1]!] && a[diff[1]!] === b[diff[0]!]) return true;
+  }
+  const [long, short] = a.length > b.length ? [a, b] : [b, a];
+  if (long.length === short.length + 1) {
+    for (let i = 0; i < long.length; i += 1) {
+      if (long.slice(0, i) + long.slice(i + 1) === short && (long[i] === long[i - 1] || long[i] === long[i + 1])) return true;
+    }
+  }
   return false;
 }
 
@@ -791,7 +845,16 @@ function addSpots(
 export function buildQuiz(
   language: string,
   key: string,
-  options: { card?: QuizCard | null; seed?: string; round?: number; mix?: QuizMix; kinds?: readonly QuizQuestion["kind"][]; stage?: number } = {},
+  options: {
+    card?: QuizCard | null;
+    seed?: string;
+    round?: number;
+    mix?: QuizMix;
+    kinds?: readonly QuizQuestion["kind"][];
+    stage?: number;
+    /** 뒤로 미룰 문장(문장구조 수업이 설명에서 이미 보여 준 예문 — 가상 사용자 2026-11-01 "퀴즈가 방금 본 예문 그대로"). 다른 문장이 없을 때만 쓴다. */
+    later?: ReadonlySet<string>;
+  } = {},
 ): Quiz | null {
   // 지금 단계 + 1까지의 예문만(2026-10-29 사용자 — 1단계에 4·5단계 업무 문장이 나옴). 그 안에 없으면 가까운 단계부터.
   const near = (list: QuizSource[]): QuizSource[] => {
@@ -818,7 +881,7 @@ export function buildQuiz(
     const random = rng(`${key}|${options.seed ?? ""}|${kinds.join(",")}`);
     const all = shuffled(near(quizSources(language, key)), rng(key));
     const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
-    const questions = mixQuiz(language, key, shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)]), kinds, random);
+    const questions = mixQuiz(language, key, shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)], options.later), kinds, random);
     const fix = options.card ? fixOf(language, options.card, random) : null;
     const list = fix ? [fix, ...questions].slice(0, QUIZ_SIZE) : questions;
     // 조합대로 둘 넘게 못 만들면 앱이 돌리는 퀴즈로 — 읽기 조합은 그 전에 말하기 없는 모양으로 한 번 더.
@@ -831,7 +894,7 @@ export function buildQuiz(
   const random = rng(`${key}|${options.seed ?? ""}`);
   const all = options.round === undefined ? shuffled(near(quizSources(language, key)), random) : shuffled(near(quizSources(language, key)), rng(key));
   const shift = options.round && all.length ? (options.round * 2) % all.length : 0;
-  const sources = shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)]);
+  const sources = shownLast(language, key, [...all.slice(shift), ...all.slice(0, shift)], options.later);
   const speakable = (source: QuizSource) => source.who !== "them" && speakScored(key);
   const questions: QuizQuestion[] = [];
   const used = new Set<string>();

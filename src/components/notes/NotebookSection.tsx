@@ -2340,7 +2340,7 @@ function MyLayers({
           parts.keep.summary,
           <>
             {parts.keep.body}
-            {parts.keep.wrong ? (
+            {parts.keep.wrong && review.left.length ? (
               <div data-wrong-notes className="mt-3">
                 <ReviewNotes ui={ui} locale={locale} language={language} notes={review.left} onKnown={review.markKnown} />
               </div>

@@ -14,6 +14,7 @@ import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { buildQuiz, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { growBank } from "@/lib/curriculum/qbank";
 import { glossFor, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { Practice } from "@/lib/roleplay/practice";
@@ -76,10 +77,24 @@ export function FrameLesson({
 
   // ② 퀴즈: 그 틀 열쇠로 세 문제(말하기 문제는 ③이 하니 뺌).
   const [seed] = useState(() => String(Date.now() % 1000));
+  // 문제은행(curriculum/qbank.ts)에 그 틀 예문을 부탁 — 설명을 읽는 동안 오면 퀴즈가 설명에 없던 문장으로(2026-11-01).
+  const [grown, setGrown] = useState(0);
+  const onExplain = useRef(true);
+  useEffect(() => {
+    void growBank(language, locale, [{ key: `f|${frame.id}`, stage: frame.stage }], (count) => {
+      if (count && onExplain.current) setGrown((n) => n + 1);
+    });
+  }, [language, locale, frame.id, frame.stage]);
+  useEffect(() => {
+    onExplain.current = step === "explain";
+  }, [step]);
+  const shownExamples = frame.examples;
   const questions = useMemo<QuizQuestion[]>(() => {
-    const quiz = buildQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage });
+    void grown;
+    // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
+    const quiz = buildQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
     return (quiz?.questions ?? []).filter((question) => question.kind !== "say").slice(0, 3);
-  }, [language, frame.id, frame.stage, seed]);
+  }, [language, frame.id, frame.stage, seed, shownExamples, grown]);
   const [qIndex, setQIndex] = useState(0);
   const [answered, setAnswered] = useState<Answer | null>(null);
 
@@ -334,6 +349,7 @@ export function FrameLesson({
                 if (!answered) setAnswered(value);
               }}
               bankKey={`f|${frame.id}`}
+              showExamples={false}
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);

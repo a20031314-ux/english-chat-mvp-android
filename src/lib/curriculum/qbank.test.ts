@@ -41,12 +41,12 @@ test("받을 예문·오답: 조각을 담고 숫자 없음, 오답은 정답을
 
 test("앱 쪽: 등록한 오답·예문이 퀴즈에 쓰이고, 쓰기 채점은 대소문자·문장부호·악센트 빠짐을 봐줌", () => {
   registerQuizSources("es", [{ key: "w|zzperro", sources: [{ text: "El perro come.", gloss: { en: "The dog eats." }, from: "w|zzperro", stage: 1, piece: "perro", who: "me", wordGloss: "개", pos: "noun" }] }]);
-  registerGrown("es", "w|zzperro", { items: [{ text: "Mi perro es grande.", piece: "perro", stage: 1, gloss: { en: "My dog is big." } }], decoys: { perro: ["pero", "perra", "perros"] } });
+  registerGrown("es", "w|zzperro", { items: [{ text: "Mi perro es grande.", piece: "perro", stage: 1, gloss: { en: "My dog is big." } }], decoys: { perro: ["pera", "perra", "perros"] } });
   assert.equal(quizSources("es", "w|zzperro").length, 2);
-  assert.deepEqual(grownDecoys("es", "w|zzperro", "Perro"), ["Pero", "Perra", "Perros"]);
+  assert.deepEqual(grownDecoys("es", "w|zzperro", "Perro"), ["Pera", "Perra", "Perros"]);
   const quiz = wordQuiz("es", "w|zzperro", "s");
   const choose = quiz?.questions.find((q) => q.kind === "choose");
-  assert.ok(choose && choose.kind === "choose" && choose.options.filter((o) => o !== "perro").every((o) => ["pero", "perra", "perros"].includes(o)), JSON.stringify(choose));
+  assert.ok(choose && choose.kind === "choose" && choose.options.filter((o) => o !== "perro").every((o) => ["pera", "perra", "perros"].includes(o)), JSON.stringify(choose));
   assert.equal(typedRight("Me llamo", "me llamo"), "exact");
   assert.equal(typedRight("café", "cafe"), "loose");
   assert.equal(typedRight("をください", "を ください"), "exact");

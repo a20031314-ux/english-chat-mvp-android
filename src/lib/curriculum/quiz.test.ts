@@ -320,3 +320,32 @@ test("답한 뒤 예문: 지금 문장 빼고 둘, 보여 준 문장은 다음 �
   // 예문이 하나뿐이면 보여 줄 것 없음.
   assert.equal(moreExamples("es", "w|zznada", "x").length, 0);
 });
+
+test("가상 사용자 표시 고침(2026-11-01): 같은 문장에 답이 또 있으면 안 냄 · 부호로 뜻이 갈리면 틀림 · 수업 예문은 뒤로 — 스페인어·일본어", async () => {
+  const { pieceTwice, typedRight, registerQuizSources, wordQuiz, buildQuiz } = await import("./quiz.ts");
+  assert.equal(pieceTwice("No lo sé, lo siento.", "lo", "es"), true);
+  assert.equal(pieceTwice("No lo sé.", "lo", "es"), false);
+  assert.equal(pieceTwice("Lo siento, no lo sé.", "lo", "es"), true);
+  assert.equal(pieceTwice("わたしはわたしです。", "わたし", "ja"), true);
+  assert.equal(pieceTwice("わたしは学生です。", "わたし", "ja"), false);
+  registerQuizSources("es", [{ key: "w|zzlo", sources: [{ text: "No lo sé, lo siento.", gloss: { en: "", raw: "모르겠어요, 미안해요" }, from: "w|zzlo", stage: 0, piece: "lo", who: "me", pos: "function" }] }]);
+  assert.equal(wordQuiz("es", "w|zzlo"), null);
+  // ñ·뜻을 가르는 부호는 틀림, 그 밖의 빠진 부호는 거의 맞음.
+  assert.equal(typedRight("años", "anos", { language: "es" }), false);
+  assert.equal(typedRight("Él", "El", { language: "es" }), false);
+  assert.equal(typedRight("café", "cafe", { language: "es" }), "loose");
+  assert.equal(typedRight("años", "años", { language: "es" }), "exact");
+  // 수업이 설명에 보여 준 예문(later)은 다른 문장이 있으면 퀴즈 첫 문제에 안 나온다.
+  const quiz = buildQuiz("es", "f|es-f1-01", { seed: "x", stage: 1, later: new Set(["Me llamo Ji-woo."]) });
+  if (quiz?.questions.length) assert.notEqual((quiz.questions[0] as { text?: string }).text, "Me llamo Ji-woo.");
+});
+
+test("낱말 오답에서 철자 실수 꼴·운 맞춤만 빼기 — 영어·스페인어", async () => {
+  const { spellingOnly } = await import("./quiz.ts");
+  assert.equal(spellingOnly("totaly", "totally"), true);
+  assert.equal(spellingOnly("aera", "area"), true);
+  assert.equal(spellingOnly("tank", "bank"), true);
+  assert.equal(spellingOnly("perra", "perro"), false);
+  assert.equal(spellingOnly("perros", "perro"), false);
+  assert.equal(spellingOnly("totals", "totally"), false);
+});
