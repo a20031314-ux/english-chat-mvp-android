@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-31 06:56",
- "commit": "17803468",
+ "checkedAt": "2026-11-01 06:56",
+ "commit": "b264d0d2",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -75,15 +75,15 @@
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "892490b79be6",
-   "shots": "ace87fd1bba2",
+   "text": "2561902c8934",
+   "shots": "73fecd439351",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
   "call": {
    "title": "AI 통화 · 오늘의 팩",
-   "text": "fa76fd3c53ad",
-   "shots": "ddbd630695e9",
+   "text": "0c03da80e250",
+   "shots": "7a863eec87f4",
    "links": "82e45a80c680",
    "code": "b2ef91409b02"
   },
@@ -141,21 +141,21 @@
    "text": "7f3927511172",
    "shots": "c1d0be2849f1",
    "links": "bc7ccaf1382e",
-   "code": "eea814222c62"
+   "code": "9062be00faee"
   },
   "growth": {
    "title": "자라는 중 · 지도",
    "text": "2d8d783cb944",
    "shots": "1d63a233c1ac",
    "links": "d558e5cc6ea2",
-   "code": "eea814222c62"
+   "code": "9062be00faee"
   },
   "notes": {
    "title": "노트 · 단어장",
    "text": "946eb5f6ee27",
    "shots": "407d775ed342",
    "links": "fbb882eac87e",
-   "code": "eea814222c62"
+   "code": "9062be00faee"
   },
   "sheet": {
    "title": "문장분석 · 표현 시트",
@@ -173,6 +173,37 @@
   }
  },
  "history": [
+  {
+   "at": "2026-11-01 06:56",
+   "commit": "b264d0d2",
+   "changes": [
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "call",
+     "title": "AI 통화 · 오늘의 팩",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "코드 영역"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "코드 영역"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "코드 영역"
+    }
+   ]
+  },
   {
    "at": "2026-10-31 06:56",
    "commit": "17803468",
@@ -914,42 +945,6 @@
      "id": "board",
      "title": "게시판",
      "what": "코드 영역"
-    },
-    {
-     "id": "room",
-     "title": "Room",
-     "what": "설명 · 그림"
-    }
-   ]
-  },
-  {
-   "at": "2026-10-20 23:40",
-   "commit": "7c31918",
-   "changes": [
-    {
-     "id": "moyeo",
-     "title": "Moyeo",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "pingo",
-     "title": "Pingo",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "webapp",
-     "title": "웹 앱",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "billing",
-     "title": "결제 · 포인트 · 광고",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "dm",
-     "title": "1:1 메시지",
-     "what": "설명 · 그림"
     },
     {
      "id": "room",
