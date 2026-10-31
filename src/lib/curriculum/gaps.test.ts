@@ -47,13 +47,13 @@ test("뼈대 밖 막힌 것도 퀴즈가 되고(고르기·맞추기, 뜻이 있
   assert.ok(buildQuiz("th", th.key) !== null);
 });
 
-test("서버: 막힌 것은 퀴즈 정답이 확인 중을 처음 만든다(뼈대 열쇠는 시험에서만)", async () => {
+test("서버: 퀴즈에서 한 번 맞히면 막힌 것도 뼈대 열쇠도 익힘(2026-11-01)", async () => {
   const { saveChecks, readKnown } = await import("../server/stageScriptStore.ts");
   const user = "rc:gap-test";
   await saveChecks(user, "en", { "u|exhausted": true, "e|thank you": true }, 1_000, true);
   const known = await readKnown(user, "en");
   assert.ok(known["u|exhausted"]);
-  assert.equal(known["e|thank you"], undefined);
+  assert.ok(known["e|thank you"]);
 });
 
 test("찾아본 낱말·펼친 고친 줄도 막힌 것으로(이 폰) — 영어·일본어", async () => {

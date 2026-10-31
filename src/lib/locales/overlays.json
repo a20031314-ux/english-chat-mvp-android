@@ -859,8 +859,7 @@
     "learnSwitchYes": "切り替える",
     "scopeTitle": "学べること",
     "bankHowTitle": "学び方",
-    "callAlsoDeleted": "通話履歴からも消えます",
-    "quizTargetRate": "正答率"
+    "callAlsoDeleted": "通話履歴からも消えます"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1722,8 +1721,7 @@
     "learnSwitchYes": "切换",
     "scopeTitle": "可以学到的内容",
     "bankHowTitle": "学习方法",
-    "callAlsoDeleted": "也会从通话记录中删除",
-    "quizTargetRate": "正确率"
+    "callAlsoDeleted": "也会从通话记录中删除"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2588,8 +2586,7 @@
     "learnSwitchYes": "Chuyển",
     "scopeTitle": "Những gì bạn có thể học",
     "bankHowTitle": "Cách học",
-    "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi",
-    "quizTargetRate": "Tỉ lệ đúng"
+    "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3459,8 +3456,7 @@
     "learnSwitchYes": "Changer",
     "scopeTitle": "Ce que vous pouvez apprendre",
     "bankHowTitle": "Comment étudier",
-    "callAlsoDeleted": "Supprimé aussi de l’historique des appels",
-    "quizTargetRate": "Taux de réussite"
+    "callAlsoDeleted": "Supprimé aussi de l’historique des appels"
   },
   "it": {
     "archive": "Report",
@@ -4521,8 +4517,7 @@
     "learnSwitchYes": "Cambia",
     "scopeTitle": "Cosa puoi imparare",
     "bankHowTitle": "Come studiare",
-    "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate",
-    "quizTargetRate": "Percentuale di risposte giuste"
+    "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5395,8 +5390,7 @@
     "learnSwitchYes": "Mudar",
     "scopeTitle": "O que você pode aprender",
     "bankHowTitle": "Como estudar",
-    "callAlsoDeleted": "Também sai do histórico de chamadas",
-    "quizTargetRate": "Taxa de acerto"
+    "callAlsoDeleted": "Também sai do histórico de chamadas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6455,8 +6449,7 @@
     "learnSwitchYes": "Перейти",
     "scopeTitle": "Что можно выучить",
     "bankHowTitle": "Как заниматься",
-    "callAlsoDeleted": "Удалится и из истории звонков",
-    "quizTargetRate": "Доля верных ответов"
+    "callAlsoDeleted": "Удалится и из истории звонков"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7325,8 +7318,7 @@
     "learnSwitchYes": "Ganti",
     "scopeTitle": "Yang bisa kamu pelajari",
     "bankHowTitle": "Cara belajar",
-    "callAlsoDeleted": "Juga terhapus dari riwayat panggilan",
-    "quizTargetRate": "Tingkat benar"
+    "callAlsoDeleted": "Juga terhapus dari riwayat panggilan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8188,8 +8180,7 @@
     "learnSwitchYes": "تبديل",
     "scopeTitle": "ما يمكنك تعلّمه",
     "bankHowTitle": "طريقة الدراسة",
-    "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات",
-    "quizTargetRate": "نسبة الإجابات الصحيحة"
+    "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9051,8 +9042,7 @@
     "learnSwitchYes": "เปลี่ยน",
     "scopeTitle": "สิ่งที่เรียนได้",
     "bankHowTitle": "วิธีเรียน",
-    "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย",
-    "quizTargetRate": "อัตราตอบถูก"
+    "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9914,7 +9904,6 @@
     "learnSwitchYes": "बदलें",
     "scopeTitle": "आप क्या सीख सकते हैं",
     "bankHowTitle": "कैसे पढ़ें",
-    "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा",
-    "quizTargetRate": "सही उत्तरों का प्रतिशत"
+    "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा"
   }
 }

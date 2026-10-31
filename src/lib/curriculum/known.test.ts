@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { applyKnown, cleanKnown, confirmDue, knownState, KNOWN_DAYS, skippedIds, type KnownMap } from "./known.ts";
+import { applyKnown, CHECK_DAYS, cleanKnown, confirmDue, knownState, skippedIds, type KnownMap } from "./known.ts";
 import { DAY_MS, reviewKeysOf } from "./dailyPlan.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 import { buildEntryCheck, entryCheckResult, entryDue } from "./stageTest.ts";
@@ -10,17 +10,23 @@ import { buildCheckup } from "./checkup.ts";
 
 const NOW = Date.UTC(2026, 9, 29, 3);
 
-test("확인 중 → 이미 앎: 시험에서 생기고, 다른 날 맞힐 때마다 하루씩, 같은 날은 한 번, 틀리면 지움", () => {
+test("한 번 맞히면 익힘, 잊을 때(1·3·7일 뒤)만 다시 묻고 그 뒤로는 안 물음, 틀리면 지움", () => {
   let map: KnownMap = {};
   map = applyKnown(map, "e|gracias", true, NOW);
-  assert.equal(knownState(map, "e|gracias"), null, "퀴즈 정답만으로는 안 생김");
+  assert.equal(knownState(map, "e|gracias"), null, "만들지 않는 답(create 없음)은 그대로");
   map = applyKnown(map, "e|gracias", true, NOW, true);
-  assert.equal(knownState(map, "e|gracias"), "checking");
+  assert.equal(knownState(map, "e|gracias"), "known", "한 번 맞히면 익힘");
   map = applyKnown(map, "e|gracias", true, NOW + 1000);
   assert.equal(map["e|gracias"]!.days.length, 1, "같은 날은 한 번");
-  for (let d = 1; d < KNOWN_DAYS; d += 1) map = applyKnown(map, "e|gracias", true, NOW + d * DAY_MS);
-  assert.equal(knownState(map, "e|gracias"), "known");
-  map = applyKnown(map, "e|gracias", false, NOW + 5 * DAY_MS);
+  assert.deepEqual(confirmDue(map, NOW), []);
+  assert.deepEqual(confirmDue(map, NOW + DAY_MS), ["e|gracias"], "다음 날");
+  map = applyKnown(map, "e|gracias", true, NOW + DAY_MS);
+  assert.deepEqual(confirmDue(map, NOW + 2 * DAY_MS), [], "1일 뒤 맞히면 3일 쉼");
+  assert.deepEqual(confirmDue(map, NOW + (1 + CHECK_DAYS[1]) * DAY_MS), ["e|gracias"]);
+  map = applyKnown(map, "e|gracias", true, NOW + 4 * DAY_MS);
+  map = applyKnown(map, "e|gracias", true, NOW + 11 * DAY_MS);
+  assert.deepEqual(confirmDue(map, NOW + 60 * DAY_MS), [], "확인을 다 하면 더 안 물음");
+  map = applyKnown(map, "e|gracias", false, NOW + 61 * DAY_MS);
   assert.equal(knownState(map, "e|gracias"), null);
   assert.deepEqual(cleanKnown({ "e|a": { days: [1, 1, 2], at: 3 }, "x|b": { days: [1] }, "e|c": { days: [] } }), { "e|a": { days: [1, 2], at: 3 } });
 });
@@ -56,7 +62,7 @@ test("단계 미리 확인: 그 단계에서 아직 모르는 것만 12문제, �
   }
 });
 
-test("확인 중 열쇠가 계속 공부(다시 볼 것 다음)·이번 주 확인(맨 앞)에 나옴", () => {
+test("익힌 열쇠(확인 날)가 계속 공부(다시 볼 것 다음)·이번 주 확인(맨 앞)에 나옴", () => {
   const language = "en";
   const script = allScriptsFor(language).find((one) => one.stage === 1)!;
   const confirm = reviewKeysOf(language, script.id).slice(0, 2);
@@ -67,14 +73,14 @@ test("확인 중 열쇠가 계속 공부(다시 볼 것 다음)·이번 주 확�
   assert.ok(confirm.every((key) => weekly.some((item) => item.key === key)));
 });
 
-test("서버: 큰 시험의 맞힌 문제 → 확인 중, 이번 주 확인은 있는 것만, 퀴즈 답(quiz)만 늘림·헷갈려요는 지움", async () => {
+test("서버: 시험·이번 주 확인·퀴즈에서 맞힌 것 → 익힘, 알아요는 안 셈, 틀리면 지움", async () => {
   const { saveCheckup, saveChecks, readKnown } = await import("../server/stageScriptStore.ts");
   const user = "rc:known-test";
   await saveCheckup(user, "es", { at: NOW, stage: 1, parts: { vocab: [1, 2] }, origins: {}, wrong: [], kind: "entry" }, NOW, [["e|gracias", true], ["e|hola", false]]);
   assert.deepEqual(Object.keys(await readKnown(user, "es")), ["e|gracias"]);
   await saveCheckup(user, "es", { at: NOW, stage: 1, parts: { vocab: [1, 1] }, origins: {}, wrong: [] }, NOW + DAY_MS, [["e|vale", true], ["e|gracias", true]]);
   const after = await readKnown(user, "es");
-  assert.deepEqual(Object.keys(after), ["e|gracias"]);
+  assert.deepEqual(Object.keys(after).sort(), ["e|gracias", "e|vale"], "한 번 맞히면 익힘(이번 주 확인도)");
   assert.equal(after["e|gracias"]!.days.length, 2);
   await saveChecks(user, "es", { "e|gracias": true }, NOW + 2 * DAY_MS, false);
   assert.equal((await readKnown(user, "es"))["e|gracias"]!.days.length, 2, "알아요는 안 셈");

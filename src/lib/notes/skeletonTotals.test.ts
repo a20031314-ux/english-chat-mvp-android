@@ -18,7 +18,7 @@ test("정해진 데이터 중 얼마나: 분모는 1~5단계 뼈대 전체, 분�
     const known = { [a!]: { days: [1, 2, 3], at: 3 * DAY }, [b!]: { days: [1], at: DAY }, "u|algo raro": { days: [1, 2, 3], at: 3 * DAY } };
     const script = allScriptsFor(language).find((one) => one.stage === 1)!;
     const after = skeletonTotals(language, { known, passed: new Set([script.id]) });
-    assert.equal(after.parts.reduce((sum, part) => sum + (part.id === "pronunciation" ? 0 : part.known), 0), 1, `${language}: 이미 앎 하나`);
+    assert.equal(after.parts.reduce((sum, part) => sum + (part.id === "pronunciation" ? 0 : part.known), 0), 2, `${language}: 한 번 맞히면 익힘 — 둘`);
     assert.ok(after.parts.reduce((sum, part) => sum + (part.id === "pronunciation" ? 0 : part.learning), 0) >= 1, `${language}: 배우는 중`);
     assert.deepEqual(after.outside, { known: 1, learning: 0 });
     assert.equal(after.parts.find((part) => part.id === "vocab")?.total, empty.parts.find((part) => part.id === "vocab")?.total, "분모는 그대로");

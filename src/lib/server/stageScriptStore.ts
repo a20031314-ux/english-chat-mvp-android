@@ -41,7 +41,7 @@ export async function markScriptPassed(userId: string, language: string, id: str
   const key = stageScriptKey(userId, language);
   const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
   const passed = { ...(record.passed ?? {}), [id]: record.passed?.[id] ?? at };
-  // 대본을 넘기면 그 열쇠도 확인 중(맞힌 날 하루) — 퀴즈·이번 주 확인에서 다른 날 두 번 더 맞히면 이미 앎(뼈대 → 채우기, curriculum/known.ts).
+  // 대본을 넘기면 그 열쇠도 익힘 — 잊을 때가 되면(1·3·7일 뒤) 퀴즈·이번 주 확인에 한 번씩(curriculum/known.ts).
   let known = record.known ?? {};
   const script = scriptById(language, id);
   const grammarKeys = script ? (script.grammar ?? []).map((index) => `g|${script.stage}:${index}`) : [];
@@ -99,9 +99,8 @@ export async function saveChecks(
     }
     review = applyCheck(review, check, ok, now);
     if (reviewOnly) continue;
-    // 퀴즈 답만 확인 중 열쇠를 움직인다(알아요·헷갈려요는 스스로 고른 것이라 — 헷갈려요는 지움).
-    // 뼈대 밖에서 막힌 것(u|, curriculum/gaps.ts)은 시험에 안 나와서 퀴즈 정답이 확인 중을 처음 만든다.
-    if (quiz || !ok) known = applyKnown(known, check, ok, now, quiz && (check.startsWith("u|") || check.startsWith("w|")));
+    // 퀴즈 답만 익힘을 움직인다(알아요·헷갈려요는 스스로 고른 것이라 — 헷갈려요는 지움). 한 번 맞히면 익힘(2026-11-01).
+    if (quiz || !ok) known = applyKnown(known, check, ok, now, quiz);
   }
   // 오래 묵은 것은 400개까지만(가장 최근 체크 순).
   const entries = Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400);
@@ -149,9 +148,9 @@ export async function saveCheckup(
   let review = record.review ?? {};
   for (const wrong of result.wrong) review = applyCheck(review, wrong, false, now);
   review = Object.fromEntries(Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400));
-  // 맞힌 것 → 확인 중(큰 시험·미리 확인은 새로 만들고, 이번 주 확인은 있는 것만 늘림), 틀린 것 → 지움(curriculum/known.ts).
+  // 맞힌 것 → 익힘(한 번 맞히면, 2026-11-01), 틀린 것 → 지움(curriculum/known.ts).
   let known = record.known ?? {};
-  for (const [item, right] of asked) known = applyKnown(known, item, right, now, Boolean(result.kind));
+  for (const [item, right] of asked) known = applyKnown(known, item, right, now, true);
   for (const wrong of result.wrong) known = applyKnown(known, wrong, false, now);
   known = trimKnown(known);
   const checkups = [...(record.checkups ?? []), result].sort((a, b) => a.at - b.at).slice(-CHECKUP_KEEP);

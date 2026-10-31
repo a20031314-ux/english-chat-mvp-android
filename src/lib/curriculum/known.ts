@@ -2,10 +2,9 @@
  * 이미 아는 것 거르기(2026-10-29 사용자 "단계별 시험에서 사용자가 이미 아는 건 그냥 걸러내고 커리큘럼을 짜주자" →
  * "이미 앎의 기준이 모호하다면 맞힌 문제는 퀴즈나 주별 시험에 몇 번 더 넣어서 확실히 아는지 확인").
  *
- * - 시험(처음 시험·단계 미리 확인·단계 시험)에서 맞힌 열쇠 → **확인 중**: 커리큘럼(오늘 할 것·n일 완성)에서 빠진다.
- * - 확인 중 열쇠는 계속 공부·이번 주 확인에 다시 나온다. **다른 날** 맞힌 날이 KNOWN_DAYS일이 되면(시험 날 포함) **이미 앎**.
- * - 시험·퀴즈에서 한 번이라도 틀리면 지운다 → 커리큘럼으로 돌아온다(다시 볼 것은 따로 서버 review).
- * - 처음 생기는 것은 시험뿐 — 퀴즈 정답은 이미 있는 열쇠만 늘린다(대본으로 배운 것은 대본 통과가 따로 센다).
+ * - 시험·퀴즈에서 맞힌 열쇠, 넘긴 대본의 열쇠 → **익힘**(한 번 맞히면, 2026-11-01): 커리큘럼(오늘 할 것·n일 완성)에서 빠진다.
+ * - 익힌 열쇠는 잊을 때가 되면(맞힌 날 다음 1·3·7일, CHECK_DAYS) 계속 공부·이번 주 확인에 한 번씩 다시 나온다.
+ * - 시험·퀴즈에서 틀리면 지운다 → 커리큘럼으로 돌아온다(다시 볼 것은 따로 서버 review).
  * 열쇠만(문장 없음), 서버 `stageScripts:v1` known. 순수 모듈.
  */
 import { DAY_MS, reviewKeysOf } from "./dailyPlan.ts";
@@ -14,10 +13,17 @@ import { allScriptsFor } from "./stageScripts.ts";
 
 /** 열쇠 → 맞힌 날(UTC 날 번호, 겹침 없음, 오래된 것부터)·마지막 때. */
 export type KnownMap = Record<string, { days: number[]; at: number }>;
+/** "checking"은 예전(다른 날 세 번) 상태 — 지금은 안 나온다. */
 export type KnownState = "checking" | "known";
 
-/** 이만큼 서로 다른 날 맞히면 이미 앎(시험 날 + 두 번 더). */
-export const KNOWN_DAYS = 3;
+/**
+ * 한 번 맞히면 익힘(2026-11-01 사용자 "익힘을 기준으로, 한 번 맞히면 익힘 · 주기별로 잊었을 확률이 있을 때만 다시").
+ * 예전엔 다른 날 세 번 맞혀야 이미 앎이었다. 지금은 맞힌 날 다음 1·3·7일 뒤에 한 번씩 다시 묻고(CHECK_DAYS), 틀리면 지운다.
+ */
+export const KNOWN_DAYS = 1;
+/** 맞힌 날 수 → 다음 확인까지 날. 다 지나면 더 묻지 않는다(퀴즈에서 다시 나오면 nextStudy REST_DAYS). */
+export const CHECK_DAYS = [1, 3, 7] as const;
+const KEEP_DAYS = CHECK_DAYS.length + 1;
 export const KNOWN_MAX = 600;
 
 const dayOf = (now: number) => Math.floor(now / DAY_MS);
@@ -39,7 +45,7 @@ export function applyKnown(map: KnownMap, key: string, right: boolean, now = Dat
   }
   if (!before && !create) return map;
   const day = dayOf(now);
-  const days = before ? (before.days.includes(day) ? before.days : [...before.days, day].slice(-KNOWN_DAYS)) : [day];
+  const days = before ? (before.days.includes(day) ? before.days : [...before.days, day].slice(-KEEP_DAYS)) : [day];
   return { ...map, [key]: { days, at: now } };
 }
 
@@ -62,14 +68,25 @@ export function skippedIds(language: string, map: KnownMap | null | undefined): 
   return out;
 }
 
-/** 오늘 다시 물어볼 확인 중 열쇠(오늘 이미 맞힌 것은 빼고, 오래된 것부터). */
+/** 다음 확인 날(UTC 날 번호) — 확인을 다 했으면 null. */
+export function checkDay(entry: { days: number[] }): number | null {
+  const gap = CHECK_DAYS[entry.days.length - 1];
+  const last = entry.days[entry.days.length - 1];
+  return gap === undefined || last === undefined ? null : last + gap;
+}
+
+/** 오늘 다시 물어볼 익힌 열쇠 — 잊을 때가 된 것만(CHECK_DAYS), 가장 오래 지난 것부터. */
 export function confirmDue(map: KnownMap | null | undefined, now = Date.now()): string[] {
   if (!map) return [];
   const today = dayOf(now);
   return Object.entries(map)
-    // 꺼내 쓰기 열쇠(r|, curriculum/recall.ts)는 꺼내 쓰기 묶음이 다시 묻는다 — 퀴즈 확인 중에는 안 넣음.
-    .filter(([key, entry]) => !key.startsWith("r|") && entry.days.length < KNOWN_DAYS && entry.days[entry.days.length - 1] !== today)
-    .sort((a, b) => a[1].at - b[1].at)
+    // 꺼내 쓰기 열쇠(r|, curriculum/recall.ts)는 꺼내 쓰기 묶음이 다시 묻는다 — 퀴즈 확인에는 안 넣음.
+    .filter(([key, entry]) => {
+      if (key.startsWith("r|")) return false;
+      const due = checkDay(entry);
+      return due !== null && due <= today;
+    })
+    .sort((a, b) => (checkDay(a[1]) ?? 0) - (checkDay(b[1]) ?? 0) || a[1].at - b[1].at)
     .map(([key]) => key);
 }
 
@@ -80,7 +97,7 @@ export function cleanKnown(raw: unknown): KnownMap {
   for (const [key, value] of Object.entries(raw as Record<string, unknown>)) {
     if (!/^[efguwr]\|/.test(key) || key.length > 80 || !value || typeof value !== "object") continue;
     const entry = value as { days?: unknown; at?: unknown };
-    const days = Array.isArray(entry.days) ? [...new Set(entry.days.filter((d): d is number => Number.isInteger(d)))].slice(-KNOWN_DAYS) : [];
+    const days = Array.isArray(entry.days) ? [...new Set(entry.days.filter((d): d is number => Number.isInteger(d)))].slice(-KEEP_DAYS) : [];
     if (!days.length) continue;
     out[key] = { days, at: typeof entry.at === "number" ? entry.at : 0 };
   }

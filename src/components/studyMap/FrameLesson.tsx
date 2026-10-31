@@ -15,6 +15,7 @@ import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { buildQuiz, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { growBank } from "@/lib/curriculum/qbank";
+import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
 import { glossFor, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { Practice } from "@/lib/roleplay/practice";
@@ -97,6 +98,8 @@ export function FrameLesson({
   }, [language, frame.id, frame.stage, seed, shownExamples, grown]);
   const [qIndex, setQIndex] = useState(0);
   const [answered, setAnswered] = useState<Answer | null>(null);
+  /** 수업 퀴즈 답(맞음) — 끝나면 퀴즈 기록(quizLog)에 한 번(모두 맞히면 익힘, 2026-11-01). */
+  const quizRight = useRef<boolean[]>([]);
 
   // ③ 대화
   const turns: LessonTurn[] = useMemo(() => (lesson?.turns?.length ? lesson.turns : fallbackTurns(frame, locale)), [lesson, frame, locale]);
@@ -346,14 +349,21 @@ export function FrameLesson({
               question={questions[qIndex]!}
               answered={answered}
               onAnswer={(value) => {
-                if (!answered) setAnswered(value);
+                if (answered) return;
+                setAnswered(value);
+                quizRight.current[qIndex] = value.correct && !value.skipped;
               }}
               bankKey={`f|${frame.id}`}
               showExamples={false}
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);
-                else goNext();
+                else {
+                  const rights = quizRight.current.slice(0, questions.length);
+                  if (rights.length) noteQuizLog(language, `f|${frame.id}`, rights.length === questions.length && rights.every(Boolean));
+                  quizRight.current = [];
+                  goNext();
+                }
               }}
             />
           </div>

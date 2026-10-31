@@ -50,11 +50,12 @@ import { samePosRounds } from "@/lib/curriculum/wordRounds";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
-import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, TARGETS, targetOf, trimCircle, type Circle } from "@/lib/curriculum/circle";
+import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, trimCircle, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -72,25 +73,6 @@ const TODAY_KEY = "dailyPlan.today.v1";
 const REVIEW_EVENT = "lb-review";
 /** 오늘 끝낸 퀴즈(열쇠) — 틀린 틀 다시 연습에서 온 퀴즈는 다시 볼 것에 없어서 이 폰에 날짜로 남긴다. */
 const QUIZ_DONE_KEY = "dailyPlan.quizDone.v1";
-/** 계속 공부: 열쇠마다 이 폰에서 푼 기록(lib/curriculum/nextStudy.ts) — 배우는 언어마다. */
-const QUIZ_LOG_KEY = "quizLog.v1";
-
-function readQuizLog(language: string): QuizLog {
-  try {
-    return (JSON.parse(localStorage.getItem(`${QUIZ_LOG_KEY}.${language}`) ?? "null") as QuizLog | null) ?? {};
-  } catch {
-    return {};
-  }
-}
-
-function saveQuizLog(language: string, log: QuizLog) {
-  try {
-    localStorage.setItem(`${QUIZ_LOG_KEY}.${language}`, JSON.stringify(log));
-  } catch {
-    // 이 화면에서만.
-  }
-}
-
 function readQuizDone(day: string): Set<string> {
   try {
     const raw = JSON.parse(localStorage.getItem(QUIZ_DONE_KEY) ?? "null") as { day?: string; keys?: string[] } | null;
@@ -279,24 +261,9 @@ export function TodayPlan({
     } catch {
       // 이 폰에 없으면 처음부터.
     }
-    // 목표 정답률은 칸과 상관없이 하나(사용자 2026-10-31 "30~70 사이에서 옵션으로").
-    try {
-      const target = Number(localStorage.getItem("quizTarget.v1"));
-      if (target >= 0.3 && target <= 0.7) loaded = { ...loaded, target };
-    } catch {
-      // 기본값.
-    }
     circleRef.current = loaded;
     setCircle(loaded);
   }, [circleStore]);
-  const setTarget = (target: number) => {
-    try {
-      localStorage.setItem("quizTarget.v1", String(target));
-    } catch {
-      // 이번에만.
-    }
-    saveCircle({ ...circleRef.current, target });
-  };
   const saveCircle = (next: Circle) => {
     circleRef.current = next;
     setCircle(next);
@@ -342,6 +309,14 @@ export function TodayPlan({
     setLog(readQuizLog(language));
     setAsked(new Set());
     setMissRun(0);
+  }, [language]);
+  // 다른 화면(문장구조 수업)이 쓴 기록을 다시 읽는다.
+  useEffect(() => {
+    const reload = (event: Event) => {
+      if ((event as CustomEvent<string>).detail === language) setLog(readQuizLog(language));
+    };
+    window.addEventListener(QUIZ_LOG_EVENT, reload);
+    return () => window.removeEventListener(QUIZ_LOG_EVENT, reload);
   }, [language]);
   useEffect(() => {
     // 저장해 둔 분량·순서와 오늘 목록은 화면에 붙은 뒤 읽는다(서버 그림과 어긋나지 않게).
@@ -483,7 +458,7 @@ export function TodayPlan({
       saveTally(language, nextTally);
     }
     setLog(logged);
-    saveQuizLog(language, logged);
+    saveQuizLog(language, logged, false);
     const allRight = results.every((one) => one.correct);
     setMissRun((run) => (allRight ? 0 : run + 1));
     const nextDone = new Set([...quizDone, ...results.map((one) => one.key)]);
@@ -492,7 +467,8 @@ export function TodayPlan({
     // 다시 볼 것에서 온 것은 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 것은 틀렸을 때만 다시 볼 것에 넣는다.
     const check: Record<string, boolean> = {};
     for (const { key, correct, review: fromReview } of results) {
-      if (!fromReview && !review[key] && correct && !known[key] && !key.startsWith("u|") && !key.startsWith("w|")) continue;
+      // 한 번 맞히면 익힘(2026-11-01) — 맞힌 것도 서버에 알려 익힘을 만든다. 이미 익힘이고 다시 볼 것도 아니면 확인 날일 때만.
+      if (!fromReview && !review[key] && correct && known[key] && !confirmDue({ [key]: known[key]! }, Date.now()).length) continue;
       check[key] = correct;
     }
     if (!Object.keys(check).length) return;
@@ -1195,25 +1171,6 @@ export function TodayPlan({
           </div>
           {settingsOpen === "keep" ? (
             <>
-              {/* 목표 정답률 */}
-              {keepFocus === "vocab" ? (
-                <div data-quiz-target className="flex flex-col gap-1.5">
-                  <h4 className="text-meta text-slate-400">{ui.quizTargetRate}</h4>
-                  <div role="group" className="flex flex-wrap gap-1.5">
-                    {TARGETS.map((target) => (
-                      <button
-                        key={target}
-                        type="button"
-                        aria-pressed={targetOf(circle) === target}
-                        onClick={() => setTarget(target)}
-                        className={`rounded-full px-3 py-1 text-caption ${targetOf(circle) === target ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
-                      >
-                        {`${Math.round(target * 100)}%`}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
               {/* 어떤 낱말 */}
               {keepFocus === "vocab" && bank ? (
                 <div data-vocab-by className="flex flex-col gap-1.5">
