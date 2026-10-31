@@ -6,14 +6,14 @@
  * 재료: 서버 logItems(/api/notebook — 지금 단계까지 모든 단계 최근 14일, notes/stageParts.ts LogItem) + 이 폰 퀴즈 수(curriculum/quizDays.ts).
  * 낱말·표현을 누르면 표현 자세히. 머리 아이콘(📈 실력 기록·📝 이번 주 확인)은 TodayPlan이 준다(head).
  */
-import { useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
-import { dayValue, readQuizDays, weekOf, type QuizDays } from "@/lib/curriculum/quizDays";
-import { DAY_LOG_EVENT, readDayResults, type DayResult } from "@/lib/curriculum/dayLog";
+import { clearQuizDay, dayValue, readQuizDays, weekOf, type QuizDays } from "@/lib/curriculum/quizDays";
+import { clearDayResults, DAY_LOG_EVENT, readDayResults, removeDayResult, type DayResult } from "@/lib/curriculum/dayLog";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { sendAppIntent } from "@/lib/appIntents";
-import { readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
+import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { buildRecap } from "@/lib/roleplay/recap";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
@@ -202,6 +202,7 @@ export function Logbank({
                     <div className="flex flex-wrap items-baseline gap-x-2">
                       <span className="text-caption font-semibold text-slate-200">{dateFormat.format(asDate(one.day))}</span>
                       {tally(counts(one.items), one.quiz)}
+                      <ClearDay ui={ui} language={language} day={one} />
                     </div>
                     <DayResults ui={ui} language={language} day={one} />
                     {PART_ORDER.map((part) => {
@@ -257,9 +258,16 @@ const RESULT_ICON: Record<DayResult["kind"], string> = { lesson: "🧩", recall:
  * 통화는 통화 정리(고친 말·💡) — 누르면 그 통화 돌아보기, Quizbank는 그날 틀린 것. 이 폰 기록만.
  */
 function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: Day }) {
+  // 통화 카드 ×는 통화 기록도 지워서 한 번 묻는다(2026-11-01 사용자 "X랑 일괄 삭제") — 지금 묻는 통화 id.
+  const [asking, setAsking] = useState<string | null>(null);
   const wrong = (day.quiz?.wrong ?? []).map((key) => reviewLabel(language, key)).filter(Boolean);
   if (!day.results.length && !day.calls.length && !wrong.length) return null;
   const card = "mt-1.5 flex flex-col gap-1 rounded-lg border border-line bg-white/[0.02] px-2.5 py-2";
+  const remove = (label: string, onClick: () => void, data: string) => (
+    <button type="button" data-day-remove={data} aria-label={`${label} · ${ui.notebookDelete}`} title={ui.notebookDelete} onClick={onClick} className="-me-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-caption text-slate-500 hover:bg-white/10 hover:text-ink">
+      ✕
+    </button>
+  );
   return (
     <div data-day-results className="mt-1">
       {day.calls.map((call) => {
@@ -268,22 +276,30 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
         const hints = recap.filter((item) => item.kind === "hint").length;
         const minutes = Math.max(1, Math.round(((call.finishedAt ?? call.updatedAt) - call.startedAt) / 60000));
         return (
-          <button key={call.id} type="button" data-day-call onClick={() => sendAppIntent("openCall", { id: call.id })} className={`${card} text-start hover:bg-white/5`}>
-            <span className="flex items-center gap-2 text-caption">
-              <span aria-hidden>📞</span>
-              <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{call.title}</span>
-              <span className="shrink-0 tabular-nums text-slate-400">{`${minutes}′`}</span>
-              {fixes.length ? <span className="shrink-0 tabular-nums text-warn">{`✎ ${fixes.length}`}</span> : null}
-              {hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${hints}`}</span> : null}
-            </span>
-            {fixes.slice(0, 2).map((item, i) => (
-              <span key={i} className="text-meta">
-                {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
-                {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
-                <span dir="auto" className="text-slate-200">{item.line}</span>
-              </span>
-            ))}
-          </button>
+          <div key={call.id} data-day-call className={card}>
+            <div className="flex items-start gap-2">
+              <button type="button" data-day-call-open onClick={() => sendAppIntent("openCall", { id: call.id })} className="flex min-w-0 flex-1 flex-col gap-1 text-start">
+                <span className="flex items-center gap-2 text-caption">
+                  <span aria-hidden>📞</span>
+                  <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{call.title}</span>
+                  <span className="shrink-0 tabular-nums text-slate-400">{`${minutes}′`}</span>
+                  {fixes.length ? <span className="shrink-0 tabular-nums text-warn">{`✎ ${fixes.length}`}</span> : null}
+                  {hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${hints}`}</span> : null}
+                </span>
+                {fixes.slice(0, 2).map((item, i) => (
+                  <span key={i} className="text-meta">
+                    {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
+                    {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
+                    <span dir="auto" className="text-slate-200">{item.line}</span>
+                  </span>
+                ))}
+              </button>
+              {remove(call.title, () => setAsking(call.id), "call")}
+            </div>
+            {asking === call.id ? (
+              <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); setAsking(null); }} onNo={() => setAsking(null)} />
+            ) : null}
+          </div>
         );
       })}
       {day.results.map((result, i) => (
@@ -292,6 +308,7 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
             <span aria-hidden>{RESULT_ICON[result.kind]}</span>
             <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{result.kind === "recall" ? ui.recallTitle : result.title}</span>
             <span className={`shrink-0 tabular-nums ${result.passed ? "text-good" : "text-slate-400"}`}>{`${result.right}/${result.total}${result.passed ? " ✓" : ""}`}</span>
+            {remove(result.title, () => removeDayResult(language, result.at, result.item), "result")}
           </span>
           {result.kind === "recall" && result.title ? <span dir="auto" className="truncate text-meta text-slate-400">{result.title}</span> : null}
           {result.said.slice(0, 3).map((line, j) => (
@@ -304,7 +321,10 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
       ))}
       {wrong.length ? (
         <div data-day-wrong className={card}>
-          <span className="text-caption font-semibold text-ink">{`${ui.keepTitle} · ${ui.weakTitle}`}</span>
+          <span className="flex items-center gap-2">
+            <span className="min-w-0 flex-1 text-caption font-semibold text-ink">{`${ui.keepTitle} · ${ui.weakTitle}`}</span>
+            {remove(ui.weakTitle, () => clearQuizDay(language, day.day, true), "wrong")}
+          </span>
           <span className="flex flex-wrap gap-1">
             {wrong.slice(0, 12).map((label) => (
               <span key={label} dir="auto" className="rounded-full bg-warn/10 px-2 py-0.5 text-meta text-warn">
@@ -315,5 +335,48 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
         </div>
       ) : null}
     </div>
+  );
+}
+
+/** 지우기 전에 한 번(누르기 직전 결과가 달라지는 것만 글로 — 통화 기록도 지워짐). */
+function Confirm({ ui, note, onYes, onNo }: { ui: UICopy; note?: string; onYes: () => void; onNo: () => void }) {
+  return (
+    <div data-day-confirm className="mt-1 flex flex-wrap items-center gap-2 text-meta">
+      {note ? <span className="min-w-0 flex-1 text-slate-400">{note}</span> : <span className="flex-1" />}
+      <button type="button" data-day-confirm-yes onClick={onYes} className="rounded-full bg-bad/20 px-3 py-1 font-semibold text-bad hover:bg-bad/30">
+        {ui.notebookDelete}
+      </button>
+      <button type="button" onClick={onNo} className="rounded-full border border-line px-3 py-1 text-slate-300 hover:bg-white/10">
+        {ui.reportCancel}
+      </button>
+    </div>
+  );
+}
+
+/** 날짜 줄 🗑: 그날 이 폰의 결과(수업·꺼내 쓰기·상황·Quizbank·통화)를 한 번에 — 계정 기록(칩·고친 줄)은 그대로. */
+function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Day }) {
+  const [asking, setAsking] = useState(false);
+  if (!day.results.length && !day.calls.length && !day.quiz) return null;
+  return (
+    <>
+      <button type="button" data-day-clear aria-label={ui.notebookDelete} title={ui.notebookDelete} onClick={() => setAsking(true)} className="ms-auto flex h-6 w-6 items-center justify-center rounded-full text-caption text-slate-500 hover:bg-white/10 hover:text-ink">
+        🗑
+      </button>
+      {asking ? (
+        <div className="w-full">
+          <Confirm
+            ui={ui}
+            {...(day.calls.length ? { note: ui.callAlsoDeleted } : {})}
+            onYes={() => {
+              clearDayResults(language, day.day);
+              clearQuizDay(language, day.day);
+              for (const call of day.calls) discardCall(call.id);
+              setAsking(false);
+            }}
+            onNo={() => setAsking(false)}
+          />
+        </div>
+      ) : null}
+    </>
   );
 }

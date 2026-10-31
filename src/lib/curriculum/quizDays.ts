@@ -51,3 +51,18 @@ export function weekOf(day: string): string {
   const monday = new Date(value - weekday * 24 * 60 * 60 * 1000);
   return `${monday.getUTCFullYear()}-${monday.getUTCMonth() + 1}-${monday.getUTCDate()}`;
 }
+
+/** 그날 퀴즈 기록 지우기(Logbank 날짜 줄 🗑 · 틀린 것 카드 ×, 2026-11-01). wrongOnly면 틀린 열쇠만. */
+export function clearQuizDay(language: string, day: string, wrongOnly = false): void {
+  try {
+    const days = readQuizDays(language);
+    if (!days[day]) return;
+    if (wrongOnly) {
+      days[day] = { n: days[day]!.n, right: days[day]!.right };
+    } else delete days[day];
+    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(days));
+    window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));
+  } catch {
+    // 이번에만.
+  }
+}

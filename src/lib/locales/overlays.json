@@ -859,6 +859,7 @@
     "learnSwitchYes": "切り替える",
     "scopeTitle": "学べること",
     "bankHowTitle": "学び方",
+    "callAlsoDeleted": "通話履歴からも消えます",
     "quizTargetRate": "正答率"
   },
   "zh": {
@@ -1721,6 +1722,7 @@
     "learnSwitchYes": "切换",
     "scopeTitle": "可以学到的内容",
     "bankHowTitle": "学习方法",
+    "callAlsoDeleted": "也会从通话记录中删除",
     "quizTargetRate": "正确率"
   },
   "vi": {
@@ -2586,6 +2588,7 @@
     "learnSwitchYes": "Chuyển",
     "scopeTitle": "Những gì bạn có thể học",
     "bankHowTitle": "Cách học",
+    "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi",
     "quizTargetRate": "Tỉ lệ đúng"
   },
   "fr": {
@@ -3456,6 +3459,7 @@
     "learnSwitchYes": "Changer",
     "scopeTitle": "Ce que vous pouvez apprendre",
     "bankHowTitle": "Comment étudier",
+    "callAlsoDeleted": "Supprimé aussi de l’historique des appels",
     "quizTargetRate": "Taux de réussite"
   },
   "it": {
@@ -4517,6 +4521,7 @@
     "learnSwitchYes": "Cambia",
     "scopeTitle": "Cosa puoi imparare",
     "bankHowTitle": "Come studiare",
+    "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate",
     "quizTargetRate": "Percentuale di risposte giuste"
   },
   "pt": {
@@ -5390,6 +5395,7 @@
     "learnSwitchYes": "Mudar",
     "scopeTitle": "O que você pode aprender",
     "bankHowTitle": "Como estudar",
+    "callAlsoDeleted": "Também sai do histórico de chamadas",
     "quizTargetRate": "Taxa de acerto"
   },
   "ru": {
@@ -6449,6 +6455,7 @@
     "learnSwitchYes": "Перейти",
     "scopeTitle": "Что можно выучить",
     "bankHowTitle": "Как заниматься",
+    "callAlsoDeleted": "Удалится и из истории звонков",
     "quizTargetRate": "Доля верных ответов"
   },
   "id": {
@@ -7318,6 +7325,7 @@
     "learnSwitchYes": "Ganti",
     "scopeTitle": "Yang bisa kamu pelajari",
     "bankHowTitle": "Cara belajar",
+    "callAlsoDeleted": "Juga terhapus dari riwayat panggilan",
     "quizTargetRate": "Tingkat benar"
   },
   "ar": {
@@ -8180,6 +8188,7 @@
     "learnSwitchYes": "تبديل",
     "scopeTitle": "ما يمكنك تعلّمه",
     "bankHowTitle": "طريقة الدراسة",
+    "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات",
     "quizTargetRate": "نسبة الإجابات الصحيحة"
   },
   "th": {
@@ -9042,6 +9051,7 @@
     "learnSwitchYes": "เปลี่ยน",
     "scopeTitle": "สิ่งที่เรียนได้",
     "bankHowTitle": "วิธีเรียน",
+    "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย",
     "quizTargetRate": "อัตราตอบถูก"
   },
   "hi": {
@@ -9904,6 +9914,7 @@
     "learnSwitchYes": "बदलें",
     "scopeTitle": "आप क्या सीख सकते हैं",
     "bankHowTitle": "कैसे पढ़ें",
+    "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा",
     "quizTargetRate": "सही उत्तरों का प्रतिशत"
   }
 }

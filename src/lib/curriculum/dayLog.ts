@@ -52,3 +52,22 @@ export function noteDayResult(language: string, result: Omit<DayResult, "at" | "
     // 이번에만.
   }
 }
+
+function save(language: string, list: DayResult[]): void {
+  try {
+    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(list));
+    window.dispatchEvent(new CustomEvent(DAY_LOG_EVENT, { detail: { language } }));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/** 결과 카드 하나 지우기(Logbank ×, 2026-11-01). */
+export function removeDayResult(language: string, at: number, item: string): void {
+  save(language, readDayResults(language).filter((one) => !(one.at === at && one.item === item)));
+}
+
+/** 그날 결과 카드 모두 지우기(Logbank 날짜 줄 🗑). */
+export function clearDayResults(language: string, day: string): void {
+  save(language, readDayResults(language).filter((one) => one.day !== day));
+}
