@@ -240,7 +240,13 @@ export function QuestionView({
     return () => window.clearTimeout(timer);
   }, [autoNext, question]);
   return (
-    <section data-kind={question.kind} className="flex flex-col gap-3">
+    <section
+      data-kind={question.kind}
+      // 점검(가상 사용자 /mark)이 "어느 문제가 왜 쉬웠나"를 문제째 남기게(2026-11-01 사용자 "피드백을 구체화해서 바로 반영"): 열쇠·문장·보기.
+      data-quiz-key={bankKey}
+      data-quiz-meta={quizMeta(question)}
+      className="flex flex-col gap-3"
+    >
       {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30). Checks read data-kind. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -265,6 +271,12 @@ export function QuestionView({
       ) : null}
     </section>
   );
+}
+
+/** 문제 한 줄 요약(점검용 data 속성): 모양·문장·보기·정답 자리 — 화면에 보이는 것 그대로라 새로 드러나는 것은 없다(정답 자리 빼고). */
+function quizMeta(question: QuizQuestion): string {
+  const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string }>;
+  return JSON.stringify({ kind: question.kind, ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}) });
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";

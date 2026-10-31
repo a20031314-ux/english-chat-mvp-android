@@ -11,6 +11,7 @@
  * - say    뜻만 보고 말하기(🎤, 대본과 같은 판정) — 늘 마지막.
  * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
  */
+import { wordNearMisses } from "./wordDecoys.ts";
 import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
@@ -309,7 +310,7 @@ export function expressionNearMisses(language: string, expression: string, piece
 
 /** 열쇠에 맞는 헷갈리는 오답(문장구조·표현은 미리 만든 데이터, 문제은행이 더한 것도 — curriculum/qbank). */
 function nearOf(language: string, key: string, piece: string): string[] {
-  const made = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : key.startsWith("e|") ? expressionNearMisses(language, key.slice(2), piece) : [];
+  const made = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : key.startsWith("e|") ? expressionNearMisses(language, key.slice(2), piece) : key.startsWith("w|") ? wordNearMisses(language, piece) : [];
   const grown = grownDecoys(language, key, piece);
   return [...new Set([...made, ...grown])];
 }

@@ -5,7 +5,7 @@
 // 사용자가 짚은 문제(hub/ux-issues.md)는 인물에게 알리지 않는다 — 끝난 뒤 scripts/ux-check/JUDGE.md로 항목별 판정.
 // 한계: /day는 폰 시계만 넘긴다(서버는 오늘) — 그래프 날짜·이번 주 확인 7일 규칙은 이 점검에서 믿지 않는다.
 // 가상 사용자가 직접 모는 앱: node scripts/ux-check/driver.mjs <학습언어> <앱언어> <이름> <제어포트>
-// 제어(curl): GET /shot · POST /click {text} 또는 {x,y} · POST /type {text} · POST /scroll {dy} · POST /say {text} · POST /key {key} · POST /reload · POST /day {n} · POST /stop
+// 제어(curl): GET /shot · POST /click {text} 또는 {x,y} · POST /type {text} · POST /scroll {dy} · POST /say {text} · POST /key {key} · POST /reload · POST /day {n} · POST /mark {reason, note} · POST /stop
 import http from "node:http"; import path from "node:path"; import fs from "node:fs";
 import { chromium, serve, state, api, ROOT } from "./lib.mjs";
 const [learn, ui, name, controlPort] = process.argv.slice(2);
@@ -91,6 +91,19 @@ const control = http.createServer(async (req, res) => {
       await page.reload({ waitUntil: "domcontentloaded" }); await page.waitForTimeout(6000);
       log.push({ day: dayOffset, passedNow: todo.map((s) => s.id) });
       return send(res, 200, { day: dayOffset, newlyPassed: todo.length, ...(await shot()) });
+    }
+    // 문제가 너무 쉽거나 어려울 때(2026-11-01 사용자 "피드백 구체화 → 바로 반영"): 이유 코드 + 한 줄 + 지금 화면의 문제(열쇠·문장·보기·정답 자리)를 tmp/ux/marks/<이름>.jsonl에.
+    if (route === "/mark") {
+      const REASONS = ["easy-decoy", "easy-leak", "easy-copy", "easy-repeat", "easy-level", "hard-level", "hard-ambiguous", "wrong-judge", "other"];
+      const reason = REASONS.includes(body.reason) ? body.reason : "other";
+      const s = await shot();
+      const questions = await page.evaluate(() => [...document.querySelectorAll("section[data-quiz-meta]")]
+        .filter((e) => { const r = e.getBoundingClientRect(); return r.height > 0 && r.bottom > 0 && r.top < innerHeight; })
+        .map((e) => { let meta = {}; try { meta = JSON.parse(e.getAttribute("data-quiz-meta") || "{}"); } catch {} return { key: e.getAttribute("data-quiz-key") || "", ...meta }; }));
+      const row = { at: Date.now(), day: dayOffset, persona: name, learn, ui, reason, note: String(body.note ?? "").slice(0, 300), shot: path.basename(s.file), questions };
+      const dir = path.join(ROOT, "tmp/ux/marks"); fs.mkdirSync(dir, { recursive: true });
+      fs.appendFileSync(path.join(dir, `${name}.jsonl`), JSON.stringify(row) + "\n");
+      return send(res, 200, { ok: true, questions: questions.length, shot: s.file });
     }
     if (route === "/stop") {
       send(res, 200, { ok: true });
