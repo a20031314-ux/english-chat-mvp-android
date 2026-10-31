@@ -859,7 +859,8 @@
     "learnSwitchYes": "切り替える",
     "scopeTitle": "学べること",
     "bankHowTitle": "学び方",
-    "callAlsoDeleted": "通話履歴からも消えます"
+    "callAlsoDeleted": "通話履歴からも消えます",
+    "wordTestTitle": "単語テスト"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1721,7 +1722,8 @@
     "learnSwitchYes": "切换",
     "scopeTitle": "可以学到的内容",
     "bankHowTitle": "学习方法",
-    "callAlsoDeleted": "也会从通话记录中删除"
+    "callAlsoDeleted": "也会从通话记录中删除",
+    "wordTestTitle": "单词测验"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2586,7 +2588,8 @@
     "learnSwitchYes": "Chuyển",
     "scopeTitle": "Những gì bạn có thể học",
     "bankHowTitle": "Cách học",
-    "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi"
+    "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi",
+    "wordTestTitle": "Kiểm tra từ vựng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3456,7 +3459,8 @@
     "learnSwitchYes": "Changer",
     "scopeTitle": "Ce que vous pouvez apprendre",
     "bankHowTitle": "Comment étudier",
-    "callAlsoDeleted": "Supprimé aussi de l’historique des appels"
+    "callAlsoDeleted": "Supprimé aussi de l’historique des appels",
+    "wordTestTitle": "Test de mots"
   },
   "it": {
     "archive": "Report",
@@ -4517,7 +4521,8 @@
     "learnSwitchYes": "Cambia",
     "scopeTitle": "Cosa puoi imparare",
     "bankHowTitle": "Come studiare",
-    "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate"
+    "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate",
+    "wordTestTitle": "Test di parole"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5390,7 +5395,8 @@
     "learnSwitchYes": "Mudar",
     "scopeTitle": "O que você pode aprender",
     "bankHowTitle": "Como estudar",
-    "callAlsoDeleted": "Também sai do histórico de chamadas"
+    "callAlsoDeleted": "Também sai do histórico de chamadas",
+    "wordTestTitle": "Teste de palavras"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6449,7 +6455,8 @@
     "learnSwitchYes": "Перейти",
     "scopeTitle": "Что можно выучить",
     "bankHowTitle": "Как заниматься",
-    "callAlsoDeleted": "Удалится и из истории звонков"
+    "callAlsoDeleted": "Удалится и из истории звонков",
+    "wordTestTitle": "Проверка слов"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7318,7 +7325,8 @@
     "learnSwitchYes": "Ganti",
     "scopeTitle": "Yang bisa kamu pelajari",
     "bankHowTitle": "Cara belajar",
-    "callAlsoDeleted": "Juga terhapus dari riwayat panggilan"
+    "callAlsoDeleted": "Juga terhapus dari riwayat panggilan",
+    "wordTestTitle": "Tes kosakata"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8180,7 +8188,8 @@
     "learnSwitchYes": "تبديل",
     "scopeTitle": "ما يمكنك تعلّمه",
     "bankHowTitle": "طريقة الدراسة",
-    "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات"
+    "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات",
+    "wordTestTitle": "اختبار الكلمات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9042,7 +9051,8 @@
     "learnSwitchYes": "เปลี่ยน",
     "scopeTitle": "สิ่งที่เรียนได้",
     "bankHowTitle": "วิธีเรียน",
-    "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย"
+    "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย",
+    "wordTestTitle": "ทดสอบคำศัพท์"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9904,6 +9914,7 @@
     "learnSwitchYes": "बदलें",
     "scopeTitle": "आप क्या सीख सकते हैं",
     "bankHowTitle": "कैसे पढ़ें",
-    "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा"
+    "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा",
+    "wordTestTitle": "शब्द परीक्षा"
   }
 }

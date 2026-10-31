@@ -55,7 +55,7 @@ import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
-import { emptyCircle, growCircle, itemState, noteAnswer, pickCircle, trimCircle, type Circle } from "@/lib/curriculum/circle";
+import { emptyCircle, growCircle, itemState, noteAnswer, noteTest, pickCircle, trimCircle, wordTest, wordTestDue, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -205,6 +205,8 @@ export function TodayPlan({
   // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
   const [bundle, setBundle] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
+  /** 단어 시험(2026-11-01 사용자 "주기적으로 단어 모음 시험 — 틀린 단어·맞힌 단어를 섞어서"). */
+  const [wordTestQ, setWordTestQ] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
   const [matching, setMatching] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState<"keep" | "review" | null>(null);
@@ -1005,6 +1007,27 @@ export function TodayPlan({
           onClose={() => setUnitItem(null)}
         />
       ) : null}
+      {wordTestQ ? (
+        <QuizPlayer
+          key={`wordtest-${round}`}
+          ui={ui}
+          locale={locale}
+          language={language}
+          quizKey={wordTestQ.keys[0]!}
+          title={ui.wordTestTitle}
+          seed={`${day}-wordtest-${round}`}
+          unit={wordTestQ.questions}
+          bundleKeys={wordTestQ.keys}
+          onBundle={(results) => {
+            let next = circleRef.current;
+            for (const one of results) next = noteAnswer(next, one.key, one.correct && !one.skipped, Date.now());
+            saveCircle(trimCircle(noteTest(next, day, Date.now())));
+            finishMany(results.filter((one) => !one.skipped).map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })));
+          }}
+          onDone={() => undefined}
+          onClose={() => setWordTestQ(null)}
+        />
+      ) : null}
       {bundle ? (
         <QuizPlayer
           key={`bundle-${round}`}
@@ -1215,6 +1238,7 @@ export function TodayPlan({
       </div>
     </BodyLayer>
   ) : null;
+  const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: (key) => bank.ready.has(key) }));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
   const keepTabs: readonly (PartId | "review")[] = ["vocab", "grammar", "expression", "review"];
   const keepBody = (
@@ -1243,6 +1267,34 @@ export function TodayPlan({
         {learnTest ? testIcon(learnTest) : null}
         {!wrongTab && keepFocus === "vocab" && bank ? settingsIcon("keep") : null}
       </div>
+      {testDue ? (
+        <button
+          type="button"
+          data-word-test
+          onClick={() => {
+            if (!bank) return;
+            const keys = wordTest(circleRef.current, { now: Date.now(), usable: (key) => bank.ready.has(key) });
+            void growBank(language, locale, keys.map((key) => ({ key, stage })));
+            // 낱말마다 한 문제(묶음 퀴즈는 네 문제까지라 하나씩 만들어 붙임).
+            const made: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
+            for (const key of keys) {
+              const one = bundleQuiz(language, [key], { seed: `${day}-wordtest-${round}-${key}`, stage, style: "type", fallback: "choose", strict: true });
+              if (one.questions[0]) {
+                made.keys.push(key);
+                made.questions.push(one.questions[0]);
+              }
+            }
+            if (!made.questions.length) return;
+            setRound((n) => n + 1);
+            setWordTestQ(made);
+          }}
+          className="mt-2 flex w-full items-center gap-2 rounded-xl border border-status-learned/50 bg-status-learned/[0.06] px-3 py-2 text-start text-chat font-semibold text-ink hover:bg-status-learned/10"
+        >
+          <span aria-hidden>📝</span>
+          <span className="min-w-0 flex-1">{ui.wordTestTitle}</span>
+          <span aria-hidden className="text-slate-400">›</span>
+        </button>
+      ) : null}
       <InlineQuiz
         ui={ui}
         locale={locale}

@@ -136,7 +136,7 @@ export function QuizPlayer({
         <div className="min-w-0 flex-1">
           <h2 dir="auto" className="truncate text-body font-semibold text-ink">
             {/* A quiz shows no key in its title (2026-10-29, user: the title gave the answer away); a script unit keeps its scene name. */}
-            {unit && !bundleKeys ? <bdi>{title}</bdi> : <span className="text-warn">{ui.quizTag}</span>}
+            {unit && (!bundleKeys || title) ? <bdi>{title}</bdi> : <span className="text-warn">{ui.quizTag}</span>}
           </h2>
           <p className="mt-0.5 text-caption tabular-nums text-slate-400">
             {Math.min(index + 1, questions.length)}/{questions.length}

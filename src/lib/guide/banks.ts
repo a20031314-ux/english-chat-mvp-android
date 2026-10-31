@@ -32,6 +32,7 @@ const N = "{ui:scriptNext}";
 const K = "{ui:keepTitle}";
 const SR = "{ui:skillRecord}";
 const C = "{ui:checkupTitle}";
+const WT = "{ui:wordTestTitle}";
 const VB = "{ui:vocabByStage} · {ui:vocabByPos} · {ui:vocabByTopic}";
 
 const TEXT: Record<string, Lines> = {
@@ -42,7 +43,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: 빈칸을 쓰거나 골라요`, `「${W}」: 통화·채팅에서 고친 말이 문제로`],
-      how: ["탭을 고르고 빈칸을 채워요", `답하면 뜻과 다른 예문 → 「${N}」`, "한 번 맞히면 익힘 — 잊을 때쯤(1·3·7일 뒤…) 다시 나와요", `⚙ ${VB}: 어떤 낱말`],
+      how: ["탭을 고르고 빈칸을 채워요", `답하면 뜻과 다른 예문 → 「${N}」`, `어휘는 처음 보는 낱말만 — 본 낱말은 📝 「${WT}」에서`, `⚙ ${VB}: 어떤 낱말`],
     },
     log: {
       can: ["주마다·날마다 배운 말과 튜터가 고친 줄", `📈 「${SR}」 · 📝 「${C}」`],
@@ -56,7 +57,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: type or pick the missing words`, `“${W}”: lines fixed in calls and chats come back as questions`],
-      how: ["Pick a tab and fill the gap", `After you answer: the meaning and more examples → “${N}”`, "Right once = learned — it comes back when you might forget (1, 3, 7 days…)", `⚙ ${VB}: which words`],
+      how: ["Pick a tab and fill the gap", `After you answer: the meaning and more examples → “${N}”`, `Vocabulary: only new words — seen ones come back in 📝 “${WT}”`, `⚙ ${VB}: which words`],
     },
     log: {
       can: ["What you learned and lines the tutor fixed, by week and day", `📈 “${SR}” · 📝 “${C}”`],
@@ -70,7 +71,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: escribe o elige lo que falta`, `«${W}»: lo que te corrigieron en llamadas y chats vuelve como pregunta`],
-      how: ["Elige una pestaña y completa el hueco", `Al responder: el significado y más ejemplos → «${N}»`, "Un acierto = aprendida — vuelve cuando podrías olvidarla (1, 3, 7 días…)", `⚙ ${VB}: qué palabras`],
+      how: ["Elige una pestaña y completa el hueco", `Al responder: el significado y más ejemplos → «${N}»`, `Vocabulario: solo palabras nuevas — las vistas vuelven en 📝 «${WT}»`, `⚙ ${VB}: qué palabras`],
     },
     log: {
       can: ["Lo que aprendiste y lo que corrigió el tutor, por semana y día", `📈 «${SR}» · 📝 «${C}»`],
@@ -84,7 +85,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V}・${G}・${E}：空欄を書くか選ぶ`, `「${W}」：通話やチャットで直された言葉が問題に`],
-      how: ["タブを選んで空欄を埋める", `答えると意味とほかの例文 →「${N}」`, "一度正解で「覚えた」— 忘れるころ（1・3・7日後…）にまた出ます", `⚙ ${VB}：どの言葉`],
+      how: ["タブを選んで空欄を埋める", `答えると意味とほかの例文 →「${N}」`, `単語は初めての言葉だけ — 見た言葉は📝「${WT}」で`, `⚙ ${VB}：どの言葉`],
     },
     log: {
       can: ["週ごと・日ごとに覚えた言葉とチューターが直した文", `📈「${SR}」・📝「${C}」`],
@@ -98,7 +99,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}：填写或选择空缺的词`, `「${W}」：通话和聊天里被纠正的话会变成题目`],
-      how: ["选一个标签，填空", `答完显示意思和更多例句 →「${N}」`, "答对一次就算学会——快忘的时候（1、3、7天后…）再出现", `⚙ ${VB}：哪些词`],
+      how: ["选一个标签，填空", `答完显示意思和更多例句 →「${N}」`, `词汇只出新词——见过的词在📝「${WT}」里再出`, `⚙ ${VB}：哪些词`],
     },
     log: {
       can: ["按周、按天列出学到的话和导师纠正的句子", `📈「${SR}」 · 📝「${C}」`],
@@ -112,7 +113,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: พิมพ์หรือเลือกคำที่หายไป`, `“${W}”: ประโยคที่ถูกแก้ในการโทรและแชตกลับมาเป็นโจทย์`],
-      how: ["เลือกแท็บแล้วเติมช่องว่าง", `ตอบแล้วเห็นความหมายและตัวอย่างอื่น → “${N}”`, "ตอบถูกครั้งเดียว = จำได้แล้ว — จะกลับมาตอนที่อาจลืม (1, 3, 7 วัน…)", `⚙ ${VB}: คำไหน`],
+      how: ["เลือกแท็บแล้วเติมช่องว่าง", `ตอบแล้วเห็นความหมายและตัวอย่างอื่น → “${N}”`, `คำศัพท์: เฉพาะคำใหม่ — คำที่เคยเห็นกลับมาใน 📝 “${WT}”`, `⚙ ${VB}: คำไหน`],
     },
     log: {
       can: ["สิ่งที่เรียนและประโยคที่ติวเตอร์แก้ แยกตามสัปดาห์และวัน", `📈 “${SR}” · 📝 “${C}”`],
@@ -126,7 +127,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: gõ hoặc chọn từ còn thiếu`, `“${W}”: câu được sửa trong cuộc gọi và trò chuyện thành câu hỏi`],
-      how: ["Chọn một thẻ rồi điền chỗ trống", `Trả lời xong thấy nghĩa và thêm ví dụ → “${N}”`, "Đúng một lần = đã thuộc — sẽ quay lại khi bạn có thể quên (1, 3, 7 ngày…)", `⚙ ${VB}: từ nào`],
+      how: ["Chọn một thẻ rồi điền chỗ trống", `Trả lời xong thấy nghĩa và thêm ví dụ → “${N}”`, `Từ vựng: chỉ từ mới — từ đã gặp quay lại trong 📝 “${WT}”`, `⚙ ${VB}: từ nào`],
     },
     log: {
       can: ["Những gì bạn đã học và câu gia sư đã sửa, theo tuần và ngày", `📈 “${SR}” · 📝 “${C}”`],
@@ -140,7 +141,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: ketik atau pilih kata yang hilang`, `“${W}”: kalimat yang dikoreksi saat panggilan dan chat jadi soal`],
-      how: ["Pilih tab lalu isi titik kosong", `Setelah menjawab: arti dan contoh lain → “${N}”`, "Benar sekali = sudah hafal — muncul lagi saat mungkin lupa (1, 3, 7 hari…)", `⚙ ${VB}: kata yang mana`],
+      how: ["Pilih tab lalu isi titik kosong", `Setelah menjawab: arti dan contoh lain → “${N}”`, `Kosakata: hanya kata baru — yang sudah dilihat muncul di 📝 “${WT}”`, `⚙ ${VB}: kata yang mana`],
     },
     log: {
       can: ["Yang kamu pelajari dan kalimat yang dikoreksi tutor, per minggu dan hari", `📈 “${SR}” · 📝 “${C}”`],
@@ -154,7 +155,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: छूटा शब्द लिखें या चुनें`, `“${W}”: कॉल और चैट में सुधारी गई बातें सवाल बनकर आती हैं`],
-      how: ["टैब चुनें और खाली जगह भरें", `जवाब के बाद अर्थ और और उदाहरण → “${N}”`, "एक बार सही = याद हो गया — भूलने के समय (1, 3, 7 दिन…) फिर आएगा", `⚙ ${VB}: कौन-से शब्द`],
+      how: ["टैब चुनें और खाली जगह भरें", `जवाब के बाद अर्थ और और उदाहरण → “${N}”`, `शब्द: सिर्फ़ नए — देखे हुए 📝 “${WT}” में फिर`, `⚙ ${VB}: कौन-से शब्द`],
     },
     log: {
       can: ["हफ़्ते और दिन के हिसाब से सीखी बातें और ट्यूटर के सुधारे वाक्य", `📈 “${SR}” · 📝 “${C}”`],
@@ -168,7 +169,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: اكتب الكلمة الناقصة أو اخترها`, `«${W}»: ما صُحّح لك في المكالمات والمحادثات يعود سؤالًا`],
-      how: ["اختر تبويبًا واملأ الفراغ", `بعد الإجابة: المعنى وأمثلة أخرى ← «${N}»`, "إجابة صحيحة واحدة = حُفظت — تعود حين قد تنساها (بعد 1، 3، 7 أيام…)", `⚙ ${VB}: أي كلمات`],
+      how: ["اختر تبويبًا واملأ الفراغ", `بعد الإجابة: المعنى وأمثلة أخرى ← «${N}»`, `المفردات: كلمات جديدة فقط — ما رأيته يعود في 📝 «${WT}»`, `⚙ ${VB}: أي كلمات`],
     },
     log: {
       can: ["ما تعلّمته والجمل التي صحّحها المعلّم، حسب الأسبوع واليوم", `📈 «${SR}» · 📝 «${C}»`],
@@ -182,7 +183,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E} : tapez ou choisissez le mot manquant`, `« ${W} » : ce qu’on vous a corrigé en appel et en chat revient en question`],
-      how: ["Choisissez un onglet et complétez le trou", `Après la réponse : le sens et d’autres exemples → « ${N} »`, "Juste une fois = acquis — revient quand vous pourriez oublier (1, 3, 7 jours…)", `⚙ ${VB} : quels mots`],
+      how: ["Choisissez un onglet et complétez le trou", `Après la réponse : le sens et d’autres exemples → « ${N} »`, `Vocabulaire : seulement des mots nouveaux — les autres dans 📝 « ${WT} »`, `⚙ ${VB} : quels mots`],
     },
     log: {
       can: ["Ce que vous avez appris et les phrases corrigées, par semaine et par jour", `📈 « ${SR} » · 📝 « ${C} »`],
@@ -196,7 +197,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: scrivi o scegli la parola mancante`, `«${W}»: ciò che ti hanno corretto in chiamate e chat torna come domanda`],
-      how: ["Scegli una scheda e riempi il vuoto", `Dopo la risposta: il significato e altri esempi → «${N}»`, "Giusta una volta = imparata — torna quando potresti dimenticarla (1, 3, 7 giorni…)", `⚙ ${VB}: quali parole`],
+      how: ["Scegli una scheda e riempi il vuoto", `Dopo la risposta: il significato e altri esempi → «${N}»`, `Vocaboli: solo parole nuove — quelle viste tornano in 📝 «${WT}»`, `⚙ ${VB}: quali parole`],
     },
     log: {
       can: ["Ciò che hai imparato e le frasi corrette dal tutor, per settimana e giorno", `📈 «${SR}» · 📝 «${C}»`],
@@ -210,7 +211,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: digite ou escolha a palavra que falta`, `“${W}”: o que foi corrigido em chamadas e chats volta como pergunta`],
-      how: ["Escolha uma aba e preencha a lacuna", `Depois de responder: o sentido e mais exemplos → “${N}”`, "Acertou uma vez = aprendida — volta quando você pode esquecer (1, 3, 7 dias…)", `⚙ ${VB}: quais palavras`],
+      how: ["Escolha uma aba e preencha a lacuna", `Depois de responder: o sentido e mais exemplos → “${N}”`, `Vocabulário: só palavras novas — as vistas voltam no 📝 “${WT}”`, `⚙ ${VB}: quais palavras`],
     },
     log: {
       can: ["O que você aprendeu e as frases corrigidas pelo tutor, por semana e dia", `📈 “${SR}” · 📝 “${C}”`],
@@ -224,7 +225,7 @@ const TEXT: Record<string, Lines> = {
     },
     keep: {
       can: [`${V} · ${G} · ${E}: впишите или выберите пропущенное`, `«${W}»: исправленное в звонках и чатах возвращается вопросом`],
-      how: ["Выберите вкладку и заполните пропуск", `После ответа — значение и другие примеры → «${N}»`, "Один верный ответ = выучено — вернётся, когда можно забыть (через 1, 3, 7 дней…)", `⚙ ${VB}: какие слова`],
+      how: ["Выберите вкладку и заполните пропуск", `После ответа — значение и другие примеры → «${N}»`, `Слова: только новые — знакомые вернутся в 📝 «${WT}»`, `⚙ ${VB}: какие слова`],
     },
     log: {
       can: ["Что вы выучили и что исправил репетитор — по неделям и дням", `📈 «${SR}» · 📝 «${C}»`],
