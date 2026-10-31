@@ -4,15 +4,20 @@
  * 열쇠(e|표현 · f|문장구조 · w|낱말)마다 모두가 같이 쓰는 묶음 `qbank:v1:<언어>:<열쇠>`: 모델(Haiku, translate 경로)이 만든 새 예문(학습 언어 + 영어 뜻)과
  * 조각마다 헷갈리는 오답. 앱이 보낸 풀이 결과(문장·맞음·보기·고른 보기 — 학습자가 친 글 없음)로 셈을 올리고, 너무 쉬운 예문·아무도 안 고르는 오답은 빼며,
  * needGrow면 한 번 더 만든다. 하루 전체 성장은 DAILY_BUDGET번까지(넘으면 있는 것만 돌려줌). 앱 언어 뜻은 stageCopy.translated로 옮겨 둔다.
+ *
+ * 출시 초반 미리 채우기·고정(2026-11-01 사용자 "출시 초반에만 문장 생성을 하고 문장은행에 추가, 시스템이 잘 돌아갈 시 고정"):
+ * - seedBanks: 예약 작업(/api/curriculum/qbank/seed, vercel.json)이 문장구조·단계 핵심 표현 열쇠를 14개 언어 1단계부터 차례로 비어 있는 것만 채운다
+ *   — 사용자가 처음 풀 때 이미 문제은행 예문이 있게. 하루 성장 예산과 따로(SEED_PER_RUN), 다 돌면 멈춤.
+ * - Vercel `QBANK_FROZEN=1`: 성장·미리 채우기 멈춤, 너무 쉬운 예문·안 골리는 오답도 안 뺌(지금 있는 것으로 고정). `QBANK_SEED=off`: 미리 채우기만 멈춤.
  */
 import { kvGetJson, kvIncrBy, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
 import { textsFingerprint, translated } from "./stageCopy.ts";
-import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
+import { INTERFACE_LANGUAGE_LABELS, SUPPORTED_LEARNING_LANGUAGES } from "../learningLanguages.ts";
 import { allFramesFor } from "../curriculum/frames.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
-import { acceptDecoy, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
+import { acceptDecoy, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
 import { allScriptsFor } from "../curriculum/stageScripts.ts";
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
@@ -20,6 +25,11 @@ export const DAILY_BUDGET = 400;
 const KEEP_RETIRED = 20;
 
 const bankKey = (language: string, key: string) => `qbank:v1:${language}:${key}`;
+
+/** 문제은행을 지금 있는 것으로 고정했나(Vercel QBANK_FROZEN=1). */
+export function bankFrozen(): boolean {
+  return process.env.QBANK_FROZEN?.trim() === "1";
+}
 
 
 /** 열쇠가 가리키는 조각(앱 데이터로 확인 — 아무 글이나 받지 않는다)과 무엇인지. */
@@ -103,12 +113,12 @@ export async function bankFor(language: string, key: string, stage: number, resu
   let entry = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? emptyEntry();
   let changed = false;
   if (results.length) {
-    entry = applyResults(entry, results);
+    entry = applyResults(entry, results, { frozen: bankFrozen() });
     changed = true;
   }
   const day = today();
   // 키우기는 앱이 지금 풀려는 열쇠만(onMake가 있을 때) — 결과만 온 열쇠는 셈만.
-  if (onMake && needGrow(entry, day)) {
+  if (onMake && !bankFrozen() && needGrow(entry, day)) {
     const spent = await kvIncrBy(`qbank:v1:budget:${day}`, 1, 2 * 24 * 60 * 60).catch(() => DAILY_BUDGET + 1);
     if (spent <= DAILY_BUDGET) {
       onMake?.();
@@ -147,4 +157,61 @@ export async function bankView(language: string, key: string, entry: BankEntry, 
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? "English";
   const moved = await translated(view.items.map((item) => item.gloss), ui, uiName, `qbank:v1:gloss:${language}:${textsFingerprint(view.items.map((item) => item.gloss))}:${ui}`, onMake).catch(() => null);
   return { ...view, items: view.items.map((item, i) => ({ ...item, ...(moved?.[i] ? { uiGloss: moved[i] } : {}) })) };
+}
+
+/** 미리 채울 열쇠 — 단계 1부터, 단계마다 14개 언어의 문장구조 틀(f|) 다음 단계 핵심 표현(e|). 늘 같은 순서(커서로 이어 감). */
+export function seedKeys(): { language: string; key: string; stage: number }[] {
+  const out: { language: string; key: string; stage: number }[] = [];
+  const languages = SUPPORTED_LEARNING_LANGUAGES.map((one) => one.code);
+  for (let stage = 1; stage <= 5; stage += 1) {
+    for (const language of languages) {
+      for (const frame of allFramesFor(language)) if (frame.stage === stage) out.push({ language, key: `f|${frame.id}`, stage });
+      const step = (ladderFor(language)?.stages ?? []).find((one) => one.order === stage);
+      for (const expression of step?.expressions ?? []) out.push({ language, key: `e|${expression}`, stage });
+    }
+  }
+  return out;
+}
+
+export const SEED_PER_RUN = 30;
+const SEED_CURSOR = "qbank:v1:seed:cursor";
+
+/**
+ * 한 번 돌 때 SEED_PER_RUN개까지 비어 있는(예문 없음) 열쇠를 채운다. 이미 예문이 있는 열쇠는 건너뛴다(모델 안 부름).
+ * onMake는 모델을 부를 때마다(계량). 끝까지 돌면 done.
+ */
+export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN): Promise<{ made: number; skipped: number; at: number; total: number; done: boolean; off?: string }> {
+  const keys = seedKeys();
+  if (bankFrozen()) return { made: 0, skipped: 0, at: 0, total: keys.length, done: false, off: "frozen" };
+  if (process.env.QBANK_SEED?.trim() === "off") return { made: 0, skipped: 0, at: 0, total: keys.length, done: false, off: "seed off" };
+  let at = (await kvGetJson<{ at: number }>(SEED_CURSOR).catch(() => null))?.at ?? 0;
+  let made = 0;
+  let skipped = 0;
+  const day = today();
+  // 한 번에 너무 오래 걸리지 않게(Vercel 한도) — 모델 호출 limit번 또는 살펴본 열쇠 limit×20개까지.
+  while (at < keys.length && made < limit && made + skipped < limit * 20) {
+    const one = keys[at]!;
+    at += 1;
+    const storeKey = bankKey(one.language, one.key);
+    const entry = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? emptyEntry();
+    if (entry.items.some((item) => !item.off) || !targetOf(one.language, one.key)) {
+      skipped += 1;
+      continue;
+    }
+    onMake?.();
+    const more = await makeMore(one.language, one.key, one.stage, entry).catch(() => null);
+    made += 1;
+    if (!more?.items.length) continue;
+    const slot = targetOf(one.language, one.key)!.piece;
+    const next: BankEntry = { ...entry, items: more.items.map((item) => ({ ...item, s: one.stage, n: 0, r: 0 })), decoys: { ...entry.decoys } };
+    const list: BankDecoy[] = [];
+    for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !next.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
+    next.decoys[slot] = list;
+    next.day = day;
+    next.dayGrows = 1;
+    next.grownAt = next.served;
+    await kvSetJson(storeKey, next, TTL_SECONDS).catch(() => undefined);
+  }
+  await kvSetJson(SEED_CURSOR, { at }, TTL_SECONDS).catch(() => undefined);
+  return { made, skipped, at, total: keys.length, done: at >= keys.length };
 }

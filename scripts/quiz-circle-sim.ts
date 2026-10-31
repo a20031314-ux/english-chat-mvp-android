@@ -51,12 +51,17 @@ for (const learner of learners) {
           circle = noteAnswer(circle, key, correct, now);
           testRight += correct ? 1 : 0;
           testAsked += 1;
+          asked += 1;
           now += 20 * 1000;
         }
         circle = noteTest(circle, dayName, now);
       }
       const keys = pickCircle(circle, order, { n: BUNDLE, now, usable: () => true, known: () => false, skip: last });
-      if (!keys.length) break;
+      if (!keys.length) {
+        // 틀린 낱말이 많아 새 낱말을 쉬는 중(circle.ts WRONG_PAUSE)이면 시험만 — 시험도 못 내면 그날 끝.
+        if (wordTestDue(circle, { now, today: dayName, usable: () => true })) continue;
+        break;
+      }
       for (const key of keys) {
         const p = memory.get(key)!;
         const correct = random() < p;

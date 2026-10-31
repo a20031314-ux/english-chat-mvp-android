@@ -6,6 +6,7 @@
  *
  * - 낱말 상태: 새것(안 풀어 봄) · 틀림(마지막에 틀림) · 익힘(한 번 맞히면, 또는 서버 이미 앎).
  * - 단어 시험(wordTest): 틀린 것(오래된 것부터) + 맞힌 것 최소 TEST_RIGHT_MIN개(잊을 때가 된 것 먼저 — 연속 맞힘 1 → 1일, 2 → 3일, 3 → 7일 …, 그다음 오래전에 본 것), TEST_SIZE문제.
+ *   틀린 낱말이 WRONG_PAUSE개 넘으면 탭은 새 낱말을 쉬고(pickCircle 빈 묶음) 시험이 늘 떠 있다.
  *   언제(wordTestDue): 지난 시험 뒤 새 낱말을 TEST_EVERY개 풀었거나 틀린 낱말이 TEST_WRONG개 쌓였거나, 오늘 아직 안 봤고 잊을 때가 된 맞힌 낱말이 TEST_MIN개 넘을 때 — 낼 낱말이 TEST_MIN개 넘어야.
  * - 원(size)은 새것을 미리 받아 둘 범위: 지금까지 다룬 낱말 + CIRCLE_START.
  * 이 폰에만(localStorage, 낱말 열쇠·횟수·때만 — 학습자 글 없음). 순수 모듈: 화면(TodayPlan)·테스트·시뮬레이션이 같이 쓴다.
@@ -19,6 +20,11 @@ export const TEST_EVERY = 20;
 export const TEST_MIN = 4;
 /** 지난 시험 뒤 틀린 낱말이 이만큼 쌓이면 새 낱말 수와 상관없이 시험(처음 배우는 사람은 틀린 것이 빨리 쌓임 — 시뮬레이션). */
 export const TEST_WRONG = 8;
+/**
+ * 틀린 낱말이 이만큼 넘게 쌓이면 새 낱말을 쉬고 단어 시험부터(2026-11-01 사용자 결정 ① — 시뮬레이션에서 처음 배우는 사람은
+ * 하루 40개면 틀린 낱말이 시험보다 빨리 쌓여 14일 뒤 약 480개). 시험으로 아래로 내려가면 새 낱말이 다시 나온다.
+ */
+export const WRONG_PAUSE = 30;
 /** 시험에 넣는 맞힌 낱말 최소 수(나머지는 틀린 것 먼저). */
 export const TEST_RIGHT_MIN = 3;
 /** 방금(이만큼 안에) 본 맞힌 낱말은 시험에 안 넣음(바로 다시 내면 베낌). */
@@ -74,6 +80,16 @@ export function circleView(circle: Circle, order: readonly string[], known: (key
   return { inside, counts, knownShare: inside.length ? counts.known / inside.length : 0 };
 }
 
+/** 지금 틀린 채로 남은 낱말 수(문제를 만들 수 있는 것만). */
+export function wrongCount(circle: Circle, usable: (key: string) => boolean): number {
+  return Object.keys(circle.items).filter((key) => usable(key) && circle.items[key]!.s === 0).length;
+}
+
+/** 틀린 낱말이 WRONG_PAUSE개를 넘어 새 낱말을 쉬는 중인가. */
+export function newPaused(circle: Circle, usable: (key: string) => boolean): boolean {
+  return wrongCount(circle, usable) >= WRONG_PAUSE;
+}
+
 /**
  * 탭의 다음 묶음 — 이 사용자가 처음 보는 낱말만(낱말 순서대로). 본 낱말은 단어 시험에서만.
  * usable: 문제를 만들 수 있는 낱말(카드가 온 것), skip: 방금 낸 것.
@@ -84,6 +100,7 @@ export function pickCircle(
   options: { n: number; now: number; usable: (key: string) => boolean; known: (key: string) => boolean; skip?: ReadonlySet<string> },
 ): string[] {
   const out: string[] = [];
+  if (newPaused(circle, options.usable)) return out;
   for (const key of order.slice(0, Math.max(circle.size, CIRCLE_START))) {
     if (out.length >= options.n) break;
     if (options.usable(key) && !options.skip?.has(key) && !circle.items[key] && !options.known(key)) out.push(key);
@@ -119,6 +136,7 @@ export function wordTest(circle: Circle, options: { now: number; usable: (key: s
 export function wordTestDue(circle: Circle, options: { now: number; today: string; usable: (key: string) => boolean }): boolean {
   const candidates = wordTest(circle, options);
   if (candidates.length < TEST_MIN) return false;
+  if (newPaused(circle, options.usable)) return true;
   if ((circle.newSeen ?? 0) - (circle.testAt ?? 0) >= TEST_EVERY) return true;
   const since = circle.testStamp ?? 0;
   const freshWrong = Object.keys(circle.items).filter((key) => options.usable(key) && circle.items[key]!.s === 0 && circle.items[key]!.t > since).length;

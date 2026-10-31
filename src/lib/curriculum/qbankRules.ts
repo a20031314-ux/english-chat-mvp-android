@@ -8,6 +8,8 @@
  * 줄어드는 법(도태):
  * - 예문: RETIRE_AFTER번 넘게 풀렸는데 거의 다 맞힘(너무 쉬움) 또는 거의 다 틀림(문제가 이상함) → 빠지고, 빈자리는 다음 성장 때 채운다.
  * - 오답: 여러 번 보였는데 거의 아무도 안 고름(한눈에 지워짐) → 빠짐, 조각마다 오답이 둘보다 적으면 다음 성장 때 더 만든다.
+ * 고정(2026-11-01 사용자 "출시 초반에만 문장 생성 → 시스템이 잘 돌아가면 고정"): frozen이면 너무 쉬운 예문·안 골리는 오답을 빼지 않는다
+ *   (새로 채우지 않으니) — 거의 다 틀리는 이상한 예문만 뺀다. 성장도 멈춤(server/qbank.ts QBANK_FROZEN).
  * 학습자 글은 받지 않는다 — 문제 글(앱이 낸 문장)·맞음·고른 보기만. 순수 모듈: 서버(server/qbank.ts)와 테스트가 같이 쓴다.
  */
 export type BankItem = {
@@ -60,7 +62,7 @@ export function liveItems(entry: BankEntry): BankItem[] {
 export type BankResult = { text: string; correct: boolean; options?: string[]; picked?: string };
 
 /** 결과를 셈에 넣고 도태시킨다(새 객체). */
-export function applyResults(entry: BankEntry, results: readonly BankResult[]): BankEntry {
+export function applyResults(entry: BankEntry, results: readonly BankResult[], options: { frozen?: boolean } = {}): BankEntry {
   const next: BankEntry = { ...entry, items: entry.items.map((item) => ({ ...item })), decoys: Object.fromEntries(Object.entries(entry.decoys).map(([p, list]) => [p, list.map((d) => ({ ...d }))])) };
   for (const result of results) {
     next.served += 1;
@@ -70,7 +72,7 @@ export function applyResults(entry: BankEntry, results: readonly BankResult[]): 
       if (result.correct) item.r += 1;
       if (item.n >= RETIRE_AFTER) {
         const rate = item.r / item.n;
-        if (rate >= 0.95) item.off = "easy";
+        if (rate >= 0.95 && !options.frozen) item.off = "easy";
         else if (rate <= 0.15) item.off = "odd";
       }
     }
@@ -84,6 +86,7 @@ export function applyResults(entry: BankEntry, results: readonly BankResult[]): 
   }
   // 한눈에 지워지는 오답: 여러 번 보였는데 3% 밑으로만 골림 — 둘은 남긴다(다음 성장 때 채움).
   for (const [piece, list] of Object.entries(next.decoys)) {
+    if (options.frozen) break;
     const weak = list.filter((d) => d.n >= DECOY_AFTER && d.k / d.n < 0.03);
     if (!weak.length) continue;
     next.decoys[piece] = list.filter((d) => !weak.includes(d));

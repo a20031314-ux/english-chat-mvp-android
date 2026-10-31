@@ -158,7 +158,7 @@ export function QuizPlayer({
             answered={answers[index] ?? null}
             onAnswer={answer}
             onNext={() => setIndex((n) => n + 1)}
-            bankKey={quizKey}
+            bankKey={bundleKeys?.[index] ?? quizKey}
           />
         ) : null}
         {done && questions.length ? (
@@ -256,7 +256,7 @@ export function QuestionView({
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "choose" ? <ChooseView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
@@ -405,16 +405,28 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
   );
 }
 
+type Graded = "exact" | "loose" | "also" | false;
+
+/** 원래 정답과 다른데 맞음으로 본 답 아래 한 줄: "이 답도 맞아요. 원래 정답: X". */
+function AlsoRight({ ui, answer }: { ui: UICopy; answer: string }) {
+  return (
+    <p dir="auto" data-quiz-also className="text-caption text-slate-300">
+      ✓ {ui.quizAlsoRight} <bdi className="font-semibold text-status-learned">{answer}</bdi>
+    </p>
+  );
+}
+
 /** 친 답이 기기 채점으로 틀림일 때 서버 다시 보기(typedCheck) — 맞는 다른 꼴이면 맞음. 헷갈리는 오답을 그대로 친 것은 묻지 않는다. */
 function useTypedGrade(language: string) {
   const { isPremium } = usePremium();
   const [checking, setChecking] = useState(false);
-  const grade = async (local: "exact" | "loose" | false, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean }, plainWrong: boolean): Promise<"exact" | "loose" | false> => {
+  // "also" = 기기 채점은 틀림인데 서버가 맞는 다른 답으로 봄 — 맞음으로 세고 원래 정답을 같이 보여 준다(사용자 2026-11-01 "일단 정답 처리, 원래 정답은 이런 것도 가능").
+  const grade = async (local: Graded, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean }, plainWrong: boolean): Promise<Graded> => {
     if (local || plainWrong) return local;
     setChecking(true);
     const ok = await recheckTyped({ language, ...input }, entitlementHeaders(isPremium));
     setChecking(false);
-    return ok ? "loose" : false;
+    return ok ? "also" : false;
   };
   return { checking, grade };
 }
@@ -437,7 +449,7 @@ function TypeBox({
   tag: string;
   answer: string;
   done: boolean;
-  result: "exact" | "loose" | false | null;
+  result: Graded | null;
   busy: boolean;
   onSubmit: (typed: string) => void;
   onGiveUp: () => void;
@@ -485,7 +497,9 @@ function TypeBox({
         )}
       </div>
       {done ? (
-        result === "loose" || !result ? (
+        result === "also" ? (
+          <AlsoRight ui={ui} answer={answer} />
+        ) : result === "loose" || !result ? (
           <p dir="auto" className="text-caption text-slate-300">
             → <bdi className="font-semibold text-status-learned">{answer}</bdi>
           </p>
@@ -531,7 +545,7 @@ function TypeView({
   /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 틀림(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
   strict?: boolean;
 }) {
-  const [result, setResult] = useState<"exact" | "loose" | false | null>(null);
+  const [result, setResult] = useState<Graded | null>(null);
   const [hint, setHint] = useState(0);
   const { checking, grade } = useTypedGrade(language);
   const submit = async (typed: string) => {
@@ -602,7 +616,7 @@ function SpotView({
 }) {
   const [tapped, setTapped] = useState<number | null>(null);
   const [said, setSaid] = useState<"none" | null>(null);
-  const [result, setResult] = useState<"exact" | "loose" | false | null>(null);
+  const [result, setResult] = useState<Graded | null>(null);
   const [hint, setHint] = useState(0);
   const { checking, grade } = useTypedGrade(language);
   const clean = question.bad.length === 0;
@@ -783,19 +797,24 @@ function DialogView({
 }
 
 function ChooseView({
+  ui,
   locale,
   language,
   question,
   answered,
   onAnswer,
   tag,
+  strict = false,
 }: {
+  ui: UICopy;
   locale: string;
   language: string;
   question: Extract<QuizQuestion, { kind: "choose" }>;
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
   tag: string;
+  /** 낱말 문제(w|): 그 낱말을 골랐는지만 본다 — 다른 보기를 서버에 다시 묻지 않음(단어 시험에서 일부러 틀린 보기가 맞음으로 기록됨, 2026-11-01). */
+  strict?: boolean;
 }) {
   const [picked, setPicked] = useState<number | null>(null);
   // 뜻 줄 없이 내니 다른 보기도 문장에 맞을 수 있다(Su/El agua) — 틀린 보기를 고르면 서버가 한 번 더 보고, 맞으면 맞음(2026-10-31).
@@ -841,6 +860,10 @@ function ChooseView({
                   onAnswer({ correct: true, picked: option });
                   return;
                 }
+                if (strict) {
+                  onAnswer({ correct: false, picked: option });
+                  return;
+                }
                 const ok = await grade(false, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.options[question.answer]!, typed: option, open: true }, false);
                 setAlsoOk(Boolean(ok));
                 onAnswer({ correct: Boolean(ok), picked: option });
@@ -852,6 +875,7 @@ function ChooseView({
           );
         })}
       </div>
+      {answered && alsoOk ? <AlsoRight ui={ui} answer={question.options[question.answer]!} /> : null}
     </div>
   );
 }

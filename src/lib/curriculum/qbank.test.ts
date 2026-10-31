@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { acceptDecoy, acceptItem, applyResults, emptyEntry, GROW_EVERY, needGrow, publicView, RETIRE_AFTER, type BankEntry } from "./qbankRules.ts";
-import { registerGrown, grownDecoys } from "./qbank.ts";
+import { registerGrown, grownDecoys, grownItems, growBank } from "./qbank.ts";
 import { buildQuiz, mostAlike, quizSources, typedRight, wordQuiz, registerQuizSources } from "./quiz.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
 import { ladderFor } from "./stages/index.ts";
@@ -75,4 +75,49 @@ test("단어 찾기: 찾는 말 다듬기 — 문장부호·대소문자, 세 �
   assert.equal(normalizeQuery("en", "a very long phrase here"), null);
   assert.equal(normalizeQuery("en", "abc123"), null);
   assert.equal(normalizeQuery("en", ""), null);
+});
+
+test("받은 문제은행은 이 폰에 남아 다음에 첫 문제부터 쓰인다(qbank.v1.<언어>)", async () => {
+  const store = new Map<string, string>();
+  const fake = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
+  (globalThis as { localStorage?: unknown }).localStorage = fake;
+  // 앞서 저장해 둔 것: 메모리에 없어도 읽힌다.
+  store.set("qbank.v1.it", JSON.stringify({ "w|zzcasa": { items: [{ text: "La casa è grande.", piece: "casa", stage: 1, gloss: { en: "The house is big." } }], decoys: { casa: ["case"] }, at: 1 } }));
+  assert.equal(grownItems("it", "w|zzcasa")[0]?.text, "La casa è grande.");
+  assert.deepEqual(grownDecoys("it", "w|zzcasa", "casa"), ["case"]);
+  // 서버에서 새로 받은 것도 저장된다.
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = (async () =>
+    new Response(JSON.stringify({ banks: { "w|zzgato": { items: [{ text: "El gato duerme.", piece: "gato", gloss: "The cat sleeps.", uiGloss: "猫が寝ている。", stage: 1 }], decoys: { gato: ["gata"] } } } }), { status: 200 })) as typeof fetch;
+  try {
+    await growBank("es", "ja", [{ key: "w|zzgato", stage: 1 }]);
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+  const saved = JSON.parse(store.get("qbank.v1.es") ?? "{}");
+  assert.equal(saved["w|zzgato"].items[0].text, "El gato duerme.");
+  assert.equal(saved["w|zzgato"].gl.ja["The cat sleeps."], "猫が寝ている。");
+  delete (globalThis as { localStorage?: unknown }).localStorage;
+});
+
+test("고정(frozen)이면 너무 쉬운 예문·안 골리는 오답을 빼지 않고, 이상한 예문만 뺀다", () => {
+  const entry: BankEntry = {
+    ...emptyEntry(),
+    items: [
+      { t: "easy one", p: "one", g: "", s: 1, n: 0, r: 0 },
+      { t: "odd one", p: "one", g: "", s: 1, n: 0, r: 0 },
+    ],
+    decoys: { one: [{ d: "won", n: 40, k: 0 }, { d: "ones", n: 0, k: 0 }, { d: "oned", n: 0, k: 0 }] },
+  };
+  const results = Array.from({ length: RETIRE_AFTER }, () => [
+    { text: "easy one", correct: true, options: ["one", "won"], picked: "one" },
+    { text: "odd one", correct: false },
+  ]).flat();
+  const frozen = applyResults(entry, results, { frozen: true });
+  assert.equal(frozen.items.find((item) => item.t === "easy one")?.off, undefined);
+  assert.equal(frozen.items.find((item) => item.t === "odd one")?.off, "odd");
+  assert.equal(frozen.decoys.one?.length, 3);
+  const live = applyResults(entry, results);
+  assert.equal(live.items.find((item) => item.t === "easy one")?.off, "easy");
+  assert.equal(live.decoys.one?.length, 2);
 });

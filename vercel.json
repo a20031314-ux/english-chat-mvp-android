@@ -8,6 +8,10 @@
     {
       "path": "/api/media/sweep",
       "schedule": "41 18 * * *"
+    },
+    {
+      "path": "/api/curriculum/qbank/seed",
+      "schedule": "23 */2 * * *"
     }
   ]
 }

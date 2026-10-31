@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { CIRCLE_START, emptyCircle, growCircle, itemState, noteAnswer, noteTest, pickCircle, TEST_EVERY, TEST_SIZE, wordTest, wordTestDue, type Circle } from "./circle.ts";
+import { CIRCLE_START, emptyCircle, growCircle, itemState, newPaused, noteAnswer, noteTest, pickCircle, TEST_EVERY, TEST_SIZE, WRONG_PAUSE, wordTest, wordTestDue, type Circle } from "./circle.ts";
 
 const order = Array.from({ length: 200 }, (_, i) => `w|w${i}`);
 const none = () => false;
@@ -66,4 +66,17 @@ test("단어 시험: 시험에서 맞히면 연속 맞힘이 늘어 다음 시�
   let wide: Circle = emptyCircle();
   for (const key of order.slice(0, 30)) wide = noteAnswer(wide, key, true, NOW);
   assert.equal(growCircle(wide, order, none).size, 30 + CIRCLE_START);
+});
+
+test("틀린 낱말이 WRONG_PAUSE개 넘으면 새 낱말을 쉬고 시험이 뜬다", () => {
+  const order = Array.from({ length: 100 }, (_, i) => `w|x${i}`);
+  let circle: Circle = emptyCircle();
+  for (let i = 0; i < WRONG_PAUSE; i += 1) circle = noteAnswer(circle, order[i]!, false, NOW + i);
+  circle = noteTest(circle, "2026-11-01", NOW + 100);
+  assert.equal(newPaused(circle, all), true);
+  assert.deepEqual(pickCircle(circle, order, { n: 5, now: NOW + 200, usable: all, known: none }), []);
+  assert.equal(wordTestDue(circle, { now: NOW + 200, today: "2026-11-01", usable: all }), true);
+  circle = noteAnswer(circle, order[0]!, true, NOW + 300);
+  assert.equal(newPaused(circle, all), false);
+  assert.equal(pickCircle(growCircle(circle, order, none), order, { n: 2, now: NOW + 400, usable: all, known: none }).length, 2);
 });

@@ -55,7 +55,7 @@ import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
-import { emptyCircle, growCircle, itemState, noteAnswer, noteTest, pickCircle, trimCircle, wordTest, wordTestDue, type Circle } from "@/lib/curriculum/circle";
+import { emptyCircle, growCircle, itemState, newPaused, noteAnswer, noteTest, pickCircle, trimCircle, wordTest, wordTestDue, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
@@ -597,6 +597,8 @@ export function TodayPlan({
       keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
     } else keys = queue.map((pick) => pick.key);
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
+    // 다음 묶음 열쇠도 미리(2026-11-01 사용자 "문제은행 미리 받기") — 받은 것은 이 폰에 남아 다음 묶음 첫 문제부터 쓰인다.
+    void growBank(language, locale, keys.slice(8, 16).map((key) => ({ key, stage })));
     // 문법 탭·틀린 것 탭에는 틀린 곳 찾아 고치기를 하나씩(내가 고침받은 줄 먼저), 문법 탭은 대화 속 틀린 줄도(2026-10-30 사용자 "1,2,3 순서로").
     const grammarTab = which === "learn" && studyFocus === "grammar";
     const spots = which === "review" ? { cards: spotCards, anyCard: true } : grammarTab ? { cards: spotCards, dialog: round % 2 === 0 } : undefined;
@@ -1113,6 +1115,9 @@ export function TodayPlan({
       lastCircle.current = new Set(keys);
       if (!keys.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));
+      // 다음 묶음에 나올 새 낱말도 미리(문제은행 미리 받기, 2026-11-01).
+      const ahead = pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: new Set(keys) });
+      void growBank(language, locale, ahead.map((key) => ({ key, stage })));
       // 처음 보는 낱말은 고르기, 다시 나온 낱말은 쓰기(처음부터 쓰게 하면 첫날 정답률이 30%대 — 시뮬레이션).
       const questions: QuizQuestion[] = [];
       const used: string[] = [];
@@ -1239,6 +1244,8 @@ export function TodayPlan({
     </BodyLayer>
   ) : null;
   const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: (key) => bank.ready.has(key) }));
+  // 틀린 낱말이 많으면 새 낱말을 쉬고 시험부터(circle.ts WRONG_PAUSE) — 탭에는 📝 줄만, "다 했어요"를 띄우지 않는다.
+  const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, (key) => bank.ready.has(key)));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
   const keepTabs: readonly (PartId | "review")[] = ["vocab", "grammar", "expression", "review"];
   const keepBody = (
@@ -1301,10 +1308,10 @@ export function TodayPlan({
         language={language}
         resetKey={keepResetKey}
         make={keepMake}
-        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}`}
+        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}`}
         onResult={recordOne}
         empty={
-          !wrongTab && keepFocus === "vocab" && (!bank || !circleOrder.length) ? (
+          vocabPaused ? null : !wrongTab && keepFocus === "vocab" && (!bank || !circleOrder.length) ? (
             <p className="px-1 py-2 text-caption text-slate-400">…</p>
           ) : (
             <p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>
