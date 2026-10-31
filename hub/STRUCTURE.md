@@ -187,7 +187,7 @@
 | `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
 | `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
-| `openCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
+| `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | 앱 틀 | AI 통화 |
 | `openNotes` | 앱 틀, My 탭 | My 탭 |
 | `openGuide` | 앱 틀 | 앱 틀 |
