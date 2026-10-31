@@ -36,6 +36,18 @@
 
 ## 새 보고
 
+### 2026-10-31 · 가상 사용자 채팅 점검 · 새 유형 없음 · 소극적 대화 질문으로 이음 79% → 62%, word_order 86%(알려진 흐름) — tense는 100%로 돌아옴
+- 무엇을: 운영 API(10-31 17시 UTC 실행, `--app-version 2.75`, seed 2026103117), 채팅·묻기·시트·팩 98명 1,152요청 + 8칸 98명 855요청, Claude 평가 표본 120줄(큰 문제 14 → 두 번째 평가자 12 동의).
+- 결과: **새 유형 없음.** 동의한 큰 문제 12 모두 알려진 유형 — 튜터 자기 말을 학습자 일로·역할 뒤바뀜·없던 일 전제 6(zh:ja 「我也是刚吃完」, ko:hi 「그냥요」에 튜터가 자기 질문에 답, en:es 이모지를 "커피"로, ru:ar 그녀 → 너, fr:it 돈 모자람 → "다 샀다", id:fr 프랑스어로 물었는데 "인도네시아어로 물었다"), 선생님께 명령조 놓침 2(id:zh 「Pak guru, kamu besok datang gak? Cepet jawab.」은 맞는 구어 표기 gak·cepet만 고침, es:ja 「dame la respuesta ya」), 고친 문장 아직 비문·끊김 2(vi:zh 「…nên đã...」에서 끊김, vi:vi 「…bây giờ đâu」), 시제 어긋남 놓침 1(id:it 「…selalu masak … besok」), 섞은 낱말 안 고침 1(vi:ja 友だち).
+  **기준에서 벗어난 칸:** 소극적 대화 · 질문으로 이음 79% → 62%(60턴, 10-22·10-26과 같은 "대화를 닫는 답" — th:zh 튜터가 질문 없이 커피 얘기만 되풀이), 실수 하나 · word_order 100% → 86%(7턴, 10-31 02시 83%에 이어). tense 89% → 100%·register 67%(기준 71%)는 기준 안. 섞은 낱말 88%(−9%p)는 경계. 좋아진 것: 괜히 고침 11% → 0%, 겹침 100%(속도 2,347ms 알려진 것).
+  오류: 채팅 묶음 1(같은 답, 알려진 것), 경고의 `prompt_leak` 1은 거절한 답이라 오탐(th 「ไม่ให้หรอก」). HTTP 500대 0/2,007, 남은 임시 계정 0.
+- 제안: 새로 넘길 것 없음(소극적 답·말투·맥락은 inbox 기존 줄과 같은 일). 서버만.
+- 재현: `id:zh` 「Pak guru, kamu besok datang gak? Cepet jawab.」
+- 재현: `zh:ja` 「我很喜欢吃辣的菜很。」
+- 재현: `vi:ja` 「Cuối tuần này 友だち của tôi sẽ đến chơi.」
+- 링크: 로컬 `tmp/sim-users/chat-20261031-17`·`tiers-20261031-17`(judge/confirm.verdicts.json)
+- 결정:
+
 ### 2026-10-31 · 잊힌 일 알림 · 급함: 2.76(90) 자른 지 3일째 빌드 없음 — 자른 뒤 main에 153커밋(My Stagebank·Quizbank·Logbank, 처음 설치 언어 고르기), 출시 노트 92는 아직 "지속 학습·일일 학습"
 - 무엇을: forgotten.md 다시 만듦, 3일 넘은 inbox 줄 가림.
 - 결과: Play 2.75, 2.76~2.78(10-28~29 자름) 빌드 없음. 2.78 자른 뒤 main 153커밋 — 큰 칸 이름이 Stagebank·Quizbank·Logbank로, 첫 설치 배울 언어 고르기·상단 국기 언어 설정(inbox 10-31 dev → store). 출시 노트 92(main)는 옛 이름 "지속 학습"·"일일 학습". 새로워진 점 92(`whatsNew.ts`)도 keep-learning·letters-reading 두 장 그대로. `script_monthly`는 Play·RevenueCat 끝(10-31, 10-28 보고의 큰 부분 풀림). iOS는 85.14 심사 취소·갈아타기(10-31)라 10-23~10-27 iOS 2.1 회신 보고들은 끝난 것 같음.
