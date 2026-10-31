@@ -473,7 +473,7 @@ export function TodayPlan({
     let logged = log;
     let nextTally = tally;
     for (const { key, correct } of results) {
-      noteQuizDay(language, localDay(), correct);
+      noteQuizDay(language, localDay(), correct, key);
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
       if (correct && logged[key] && !logged[key]!.last) nextTally = addTally(nextTally, { fixed: key });
       logged = recordQuiz(logged, key, correct);

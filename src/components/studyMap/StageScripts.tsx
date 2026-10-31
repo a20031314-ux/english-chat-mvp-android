@@ -3,6 +3,7 @@
 import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { noteDayResult } from "@/lib/curriculum/dayLog";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -458,6 +459,22 @@ function ScriptPlayer({
   useEffect(() => {
     if (done && Object.keys(results).length) markPracticed(language, script.id);
   }, [done, results, language, script.id]);
+  // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01): 끝까지 한 번에 하나.
+  const logged = useRef(false);
+  useEffect(() => {
+    if (!done || logged.current || !Object.keys(results).length) return;
+    logged.current = true;
+    const mine = script.lines.map((line, i) => ({ line, i })).filter(({ line }) => line.who === "me");
+    noteDayResult(language, {
+      kind: "script",
+      item: script.id,
+      title: glossFor(script.setting, locale),
+      right: mine.filter(({ i }) => results[i]?.clean).length,
+      total: mine.length,
+      passed: passes,
+      said: mine.map(({ i }) => ({ text: results[i]?.heard ?? "", good: Boolean(results[i]?.clean) })),
+    });
+  }, [done, results, language, script, locale, passes]);
   // 통과로 셈해지지 않은 내 줄(틀림·원문 열어 봄·따라 말하기) — 끝 화면의 "통과까지 n줄"과 "그 줄만 다시".
   const toRedo = linesToRedo(script, runs, passRule);
   // 진행(실시간): 말해 본 줄 = 무언가 들렸거나 잘 모르겠어요를 누른 줄. 학습 완료 = 내 줄을 끝까지 다 말함(통과와 따로).
@@ -572,6 +589,7 @@ function ScriptPlayer({
     clearResume(resumeId);
     setOffer(null);
     sent.current = false;
+    logged.current = false;
     setJustPassed(false);
     setRetrying(false);
     setResults({});

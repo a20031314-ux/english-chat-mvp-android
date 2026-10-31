@@ -8,6 +8,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
+import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { UICopy } from "@/lib/copy";
 import { frameById } from "@/lib/curriculum/frames";
 import type { KnownMap } from "@/lib/curriculum/known";
@@ -89,6 +90,15 @@ export function RecallPlayer({
     if (!done || sent.current || !items.length) return;
     sent.current = true;
     markPracticed(language, RECALL_ITEM);
+    // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01).
+    noteDayResult(language, {
+      kind: "recall",
+      item: RECALL_ITEM,
+      title: [...new Set(items.flatMap((item) => item.frames.map((id) => frameById(language, id)?.pattern ?? "")))].filter(Boolean).slice(0, 3).join(" · "),
+      right: items.filter((_, i) => results[i]?.good).length,
+      total: items.length,
+      said: items.map((_, i) => ({ text: results[i]?.heard ?? "", good: Boolean(results[i]?.good) })),
+    });
     const check: Record<string, boolean> = {};
     items.forEach((item, i) => {
       const result = results[i];

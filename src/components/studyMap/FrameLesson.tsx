@@ -10,6 +10,7 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import { fallbackTurns, lessonPassed, type FrameLesson as Lesson, type LessonStep, type LessonTurn } from "@/lib/curriculum/frameLesson";
+import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { buildQuiz, type QuizQuestion } from "@/lib/curriculum/quiz";
@@ -115,9 +116,23 @@ export function FrameLesson({
   useEffect(() => () => hearing.saidAll(), []);
 
   const finished = step === "done";
+  // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01).
+  const logged = useRef(false);
   useEffect(() => {
     if (!finished) return;
     markPracticed(language, frame.id);
+    if (!logged.current) {
+      logged.current = true;
+      noteDayResult(language, {
+        kind: "lesson",
+        item: frame.id,
+        title: frame.pattern,
+        right: results.filter((one) => one?.good).length,
+        total: turns.length,
+        passed: lessonPassed(results, turns.length),
+        said: results.map((one) => ({ text: one?.heard ?? "", good: Boolean(one?.good) })),
+      });
+    }
     if (sent.current || !lessonPassed(results, turns.length)) return;
     sent.current = true;
     void fetch(apiUrl("/api/curriculum/scripts"), {
@@ -131,7 +146,7 @@ export function FrameLesson({
         onPassed?.(frame.id);
       })
       .catch(() => undefined);
-  }, [finished, results, turns.length, language, frame.id, isPremium, onPassed]);
+  }, [finished, results, turns.length, language, frame.id, frame.pattern, isPremium, onPassed]);
 
   const say = async () => {
     if (!turn || listening) return;
@@ -421,6 +436,7 @@ export function FrameLesson({
                   type="button"
                   onClick={() => {
                     setResults([]);
+                    logged.current = false;
                     setTIndex(0);
                     setStep("talk");
                   }}

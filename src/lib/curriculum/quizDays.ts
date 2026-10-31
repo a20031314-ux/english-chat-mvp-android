@@ -1,11 +1,12 @@
 /**
  * 날마다 푼 퀴즈 수·맞힌 수(2026-10-31 Logbank — 사용자 "복습 칸 자리에 날마다·주마다 배운 것 정리, AI 없이 목록만").
- * 이 폰에만, 언어마다, 최근 60일. 열쇠·문장 없이 수만.
+ * 이 폰에만, 언어마다, 최근 60일. 수와 그날 틀린 열쇠(낱말·표현·틀 이름 — 학습자 문장 아님)만.
  */
 const KEY = "quizDays.v1";
 const KEEP_DAYS = 60;
 
-export type QuizDays = Record<string, { n: number; right: number }>;
+/** wrong: 그날 틀린 열쇠(w|·e|·f|…, 서른 개까지) — Logbank 그날 칸에 "틀린 것"으로(2026-11-01). */
+export type QuizDays = Record<string, { n: number; right: number; wrong?: string[] }>;
 
 export function readQuizDays(language: string): QuizDays {
   try {
@@ -17,9 +18,10 @@ export function readQuizDays(language: string): QuizDays {
 }
 
 /** 하루 칸에 한 문제를 더한다(오래된 날은 지움). 순수 — 저장은 saveQuizDays. */
-export function addQuizDay(days: QuizDays, day: string, correct: boolean): QuizDays {
+export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: string): QuizDays {
   const one = days[day] ?? { n: 0, right: 0 };
-  const next: QuizDays = { ...days, [day]: { n: one.n + 1, right: one.right + (correct ? 1 : 0) } };
+  const wrong = !correct && key && !(one.wrong ?? []).includes(key) ? [...(one.wrong ?? []), key].slice(-30) : one.wrong;
+  const next: QuizDays = { ...days, [day]: { n: one.n + 1, right: one.right + (correct ? 1 : 0), ...(wrong?.length ? { wrong } : {}) } };
   const keys = Object.keys(next);
   if (keys.length <= KEEP_DAYS) return next;
   const order = keys.sort((a, b) => dayValue(a) - dayValue(b));
@@ -27,9 +29,9 @@ export function addQuizDay(days: QuizDays, day: string, correct: boolean): QuizD
   return next;
 }
 
-export function noteQuizDay(language: string, day: string, correct: boolean): void {
+export function noteQuizDay(language: string, day: string, correct: boolean, key?: string): void {
   try {
-    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct)));
+    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct, key)));
     window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));
   } catch {
     // 이번에만.
