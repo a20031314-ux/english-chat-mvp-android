@@ -92,6 +92,7 @@ export function RoleplayPast({
             line={line.stuck ? { ...line, stuck: undefined } : line}
             ui={ui}
             face={line.who === "learner" ? <MeFace /> : <TutorFace />}
+            flat
             onReview={() => undefined}
             onAnalyze={analyze}
             onSayAgain={sayAgain}

@@ -39,8 +39,15 @@ export function RoleplayLine({
   ledgerLanguage,
   onLooked,
   face,
+  flat = false,
 }: {
   line: TranscriptLine;
+  /**
+   * 끝난 통화·돌아보기의 넘겨 보는 장(CallPages) 안 — 눌러서 펼치는 것 없이 다 펼친 채(사용자 2026-11-01
+   * "클릭해서 펼치는 걸로 하지 말고 넘김 버튼으로 넘겨 가면서"): 고친 말은 바로, 할 일 줄은 늘, 번역은 머리의 번역 켬/끔만 따름.
+   * 펼쳐서 장 길이가 바뀌지 않으니 장 나눔이 그대로다.
+   */
+  flat?: boolean;
   /** 줄 옆 얼굴 — 튜터 왼쪽, 나 오른쪽(채팅과 같게, 2026-11-01). */
   face?: ReactNode;
   ui: UICopy;
@@ -71,17 +78,20 @@ export function RoleplayLine({
   ledgerLanguage?: string;
 }) {
   const [revealed, setRevealed] = useState(false);
-  const translationShown = showTranslation !== false || revealed;
-  // 줄을 누르면 할 일 한 줄(conversation/LineTools) — 채팅·1:1과 같은 문법(2026-10-23).
-  const [toolsOpen, setToolsOpen] = useState(false);
-  // 고친 문장은 채팅과 같은 설정(눌러서 보기 / 바로 보기, lib/correctionView.ts)을 따른다.
-  const [fixOpen, setFixOpen] = useState(() => readCorrectionView() === "auto");
+  const translationShown = showTranslation !== false || (!flat && revealed);
+  // 줄을 누르면 할 일 한 줄(conversation/LineTools) — 채팅·1:1과 같은 문법(2026-10-23). 넘겨 보는 장에서는 늘 보임.
+  const [toolsTapped, setToolsOpen] = useState(false);
+  const toolsOpen = flat || toolsTapped;
+  // 고친 문장은 채팅과 같은 설정(눌러서 보기 / 바로 보기, lib/correctionView.ts)을 따른다. 넘겨 보는 장에서는 늘 펼침.
+  const [fixTapped, setFixOpen] = useState(() => readCorrectionView() === "auto");
+  const fixOpen = flat || fixTapped;
   const hasFix = Boolean(line.better || line.meant || line.about);
   // Opening a correction of their own line marks what was added as a gap for the continuous study (curriculum/gaps.ts, this phone only).
   useEffect(() => {
     if (fixOpen && line.who === "learner" && line.better && ledgerLanguage) rememberFix(ledgerLanguage, { wrong: line.text, right: line.better, note: line.about ?? "" });
   }, [fixOpen, line.who, line.better, line.text, line.about, ledgerLanguage]);
   const tapLine = () => {
+    if (flat) return;
     setToolsOpen((open) => !open);
     if (line.who === "tutor" && !translationShown) {
       setRevealed(true);
@@ -97,9 +107,9 @@ export function RoleplayLine({
     <li className={`mb-2 flex items-end gap-2 ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
       {line.who !== "learner" && face ? <ChatFaceSlot>{face}</ChatFaceSlot> : null}
       <div
-        role="button"
-        tabIndex={0}
-        aria-expanded={toolsOpen}
+        role={flat ? undefined : "button"}
+        tabIndex={flat ? undefined : 0}
+        aria-expanded={flat ? undefined : toolsOpen}
         onClick={tapLine}
         onKeyDown={(event) => {
           if (event.target !== event.currentTarget) return;
@@ -107,7 +117,7 @@ export function RoleplayLine({
           event.preventDefault();
           tapLine();
         }}
-        className={`max-w-[80%] cursor-pointer rounded-2xl px-3 py-2 ${
+        className={`max-w-[80%] rounded-2xl px-3 py-2 ${flat ? "" : "cursor-pointer"} ${
           line.who === "learner"
             ? "bg-white/10 text-neutral-200"
             : "bg-[#141414] text-neutral-100"
@@ -131,7 +141,7 @@ export function RoleplayLine({
         <p
           dir="auto"
           className={`text-[14px] leading-snug ${
-            line.who === "tutor" && !translationShown
+            line.who === "tutor" && !translationShown && !flat
               ? "decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
               : ""
           }`}
@@ -220,7 +230,7 @@ export function RoleplayLine({
             listen={Boolean(onAnalyze)}
             analyzeLabel={onAnalyze ? ui.insightAnalyze : undefined}
             translation={
-              line.who === "tutor" && line.translation
+              line.who === "tutor" && line.translation && !flat
                 ? { label: ui.roleplayTranslations, shown: translationShown, onToggle: () => setRevealed((value) => !value) }
                 : null
             }

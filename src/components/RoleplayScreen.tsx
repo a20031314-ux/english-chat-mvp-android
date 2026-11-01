@@ -865,6 +865,7 @@ export function RoleplayScreen({
             line={line}
             ui={ui}
             face={line.who === "learner" ? <MeFace /> : <TutorFace />}
+            flat
             onReview={openReview}
             onTranslate={translateLine}
             showTranslation={showTranslations}

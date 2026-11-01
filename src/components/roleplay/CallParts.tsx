@@ -356,7 +356,7 @@ export function CallPages({ ui, children }: { ui: UICopy; children: ReactNode })
           >
             ‹
           </button>
-          <span data-call-page>
+          <span data-call-page dir="ltr">
             {page + 1} / {pages}
           </span>
           <button
