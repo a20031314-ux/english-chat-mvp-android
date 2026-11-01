@@ -94,6 +94,16 @@ If they are a learner, you may keep lines a bit shorter or use easier words — 
 }
 
 /**
+ * 아랍어는 현대 표준어 하나로(사용자 2026-11-01). 말투 줄에만 두면 "사우디 친구" 설정에 밀려 답의 60%가 걸프 방언이었다 —
+ * 맨 끝(JSON 모양 바로 앞)에 한 번 더 둔다(bilingualBlock과 같은 이유). 다른 언어는 빈 문자열.
+ */
+export function standardVarietyTail(targetLanguage: string): string {
+  return targetLanguage === "ar"
+    ? "\n\nWrite assistantMessage in Modern Standard Arabic (الفصحى) only — not one dialect word or spelling (no وش، شو، إيش، الحين، كيفك، تبي، عشان، هيك، كتير، ليش, or the like). Friendly and simple, but standard."
+    : "";
+}
+
+/**
  * Parallel spokenReply in the app interface language (legacy name kept).
  * Reflects the target-language chat line — not a word-for-word calque.
  */

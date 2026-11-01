@@ -45,6 +45,7 @@ import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/serve
 import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
+  standardVarietyTail,
 } from "@/lib/conversationVoice";
 import { conversationPartnerIdentity, serverTutorGender, type TutorGender } from "@/lib/chatPartner";
 import {
@@ -324,7 +325,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 Their message may have mistakes (wrong word, wrong ending, a word from another language mixed in). Reply to what they clearly meant, the way a friend would who understood them.
 
 ${voice}
-${spoken}${bilingualBlock}
+${spoken}${bilingualBlock}${standardVarietyTail(targetLanguage)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"..."}`;
@@ -343,7 +344,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}
+${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
@@ -366,7 +367,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}
+${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
@@ -549,7 +550,7 @@ ${conversationVoicePrinciples(langs.targetLanguage)}
 ${conversationKoreanParallel(langs.interfaceLanguage, langs.targetLanguage)}
 
 recent is background only. If this turn is a new question or a new subject, answer it. Do not keep the previous topic going unless this line clearly refers back.
-Do not lecture, correct their language, or thank them unless they complimented you.
+Do not lecture, correct their language, or thank them unless they complimented you.${standardVarietyTail(langs.targetLanguage)}
 
 Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
       },
@@ -877,7 +878,7 @@ Write 1–2 spoken ${targetName} lines as assistantMessage. Sound like texting a
 A question is fine if it feels natural — not required, and not a study prompt.
 Vary the topic. Do not reuse questions from RECENT.
 ${practice ? "" : `Talk as yourself, to them as they are. You know nothing about them yet, so never give them a role or a back story: do not cast them as a coworker, a new team member, a customer, a classmate or anyone in a scene, and do not say what happened to them (a meeting, a trip, a new job). Say something about your own day or ask about theirs.`}
-${practice ? `\n${practiceOpeningPrompt(practice, targetName)}\nThis comes before "vary the topic": the situation decides what you open with.\n` : ""}
+${practice ? `\n${practiceOpeningPrompt(practice, targetName)}\nThis comes before "vary the topic": the situation decides what you open with.\n` : ""}${standardVarietyTail(langs.targetLanguage)}
 Return ONLY JSON:
 {"assistantMessage":"...","spokenReply":"..."}`,
       },
