@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "3b5adec9ad78a306fd6f90137b5769c3ee21aa43",
- "at": "2026-11-01T02:17:32.284Z",
+ "last": "6599e2718f73419cf3a7d6b12f1bc3654df26813",
+ "at": "2026-11-01T02:31:01.398Z",
  "screensFiredAt": "",
  "metrics": {
-  "commit": "3b5adec",
+  "commit": "bd51eba",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
