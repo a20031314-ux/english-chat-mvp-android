@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -53,7 +54,7 @@ export function MessagesTab({
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{title ?? ui.homeTabMessages}</h1>
+        <TabTitle tab="talk" label={title ?? ui.homeTabMessages} />
       </header>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {top ? <div className="mb-5">{top}</div> : null}

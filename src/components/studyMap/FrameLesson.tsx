@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
-import { sayLine } from "@/lib/speech/sayLine";
+import { typedLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
@@ -25,7 +25,7 @@ import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
-import { HearingButtons, LineGrade, useHearing } from "@/components/studyMap/StageScripts";
+import { LineGrade } from "@/components/studyMap/StageScripts";
 
 /**
  * 문장구조 수업(curriculum/frameLesson.ts, 2026-10-30 사용자 "일반적인 설명(문법, 구문) > 문제풀이 > 대화" → 주고받기형):
@@ -157,31 +157,17 @@ export function FrameLesson({
   const [results, setResults] = useState<TalkResult[]>([]);
   const [listening, setListening] = useState(false);
   const [limited, setLimited] = useState(false);
-  const hearing = useHearing();
+  // 대화는 채팅 입력(사용자 2026-11-02 "3단계도 채팅으로" — 예전 마이크로 바로 듣기).
+  const [draft, setDraft] = useState("");
   const sent = useRef(false);
   const [justPassed, setJustPassed] = useState(false);
   const turn = turns[tIndex];
 
-  // 대화 차례가 바뀌면 상대 줄을 먼저 들려주고, 끝나면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음" — 차례마다 한 번, 다시는 버튼).
-  const autoHeard = useRef(-1);
-  const sayRef = useRef<() => Promise<void>>(async () => undefined);
+  // 대화 차례가 바뀌면 상대 줄을 먼저 들려준다(쓰는 칸은 늘 열려 있음).
   useEffect(() => {
     if (step !== "talk" || !turn) return;
-    let alive = true;
-    const listen = () => {
-      if (!alive || autoHeard.current === tIndex) return;
-      autoHeard.current = tIndex;
-      void sayRef.current();
-    };
-    if (turn.them) void playTts(turn.them, tag, SCRIPT_VOICES.them).finally(listen);
-    else window.setTimeout(listen, 250);
-    return () => {
-      alive = false;
-    };
+    if (turn.them) void playTts(turn.them, tag, SCRIPT_VOICES.them);
   }, [step, turn, tag, tIndex]);
-  // 닫으면 듣던 것도 끝낸다.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => () => hearing.saidAll(), []);
 
   const finished = step === "done";
   // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01).
@@ -209,6 +195,7 @@ export function FrameLesson({
     // 표현·문법 칸: 대화를 모두 맞히면 퀴즈 기록에 맞음(익힘 — 잊을 때 시험에 다시). 서버 통과 기록은 문장구조만.
     if (!frame) {
       noteQuizLog(language, key, true);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- 수업이 끝난 순간 한 번(sent로 막음)
       setJustPassed(true);
       onPassed?.(key);
       return;
@@ -226,11 +213,11 @@ export function FrameLesson({
       .catch(() => undefined);
   }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed]);
 
-  const say = async () => {
-    if (!turn || listening) return;
+  const send = async () => {
+    if (!turn || listening || !draft.trim()) return;
     stopTts();
     setListening(true);
-    const { heard, practice } = await sayLine(turn.me, {
+    const { heard, practice } = await typedLine(turn.me, draft, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
@@ -239,17 +226,22 @@ export function FrameLesson({
       ...(turnGloss(turn) ? { meaning: turnGloss(turn) } : {}),
       ...(turn.them ? { before: turn.them } : {}),
       onLimit: () => setLimited(true),
-      ...hearing.options,
     });
     setListening(false);
-    const stuck = hearing.takeStuck();
     setResults((current) => {
       const next = [...current];
-      next[tIndex] = { heard, practice, good: Boolean(heard) && practice?.good === true && !stuck, revealed: Boolean(current[tIndex]?.revealed) || stuck };
+      next[tIndex] = { heard, practice, good: Boolean(heard) && practice?.good === true, revealed: Boolean(current[tIndex]?.revealed) };
       return next;
     });
   };
-  sayRef.current = say;
+  // 틀렸으면 다시 쓰기: 결과를 비우고 쓴 글은 남겨 고쳐 쓰게.
+  const retry = () =>
+    setResults((current) => {
+      const next = [...current];
+      if (current[tIndex]?.revealed) next[tIndex] = { heard: "", practice: null, good: false, revealed: true };
+      else delete next[tIndex];
+      return next;
+    });
   const reveal = () =>
     setResults((current) => {
       const next = [...current];
@@ -473,7 +465,7 @@ export function FrameLesson({
             <div className="flex flex-col gap-1 self-end rounded-2xl border border-amber-300/40 bg-amber-300/[0.06] px-3 py-2 sm:max-w-[85%]">
               {!turnGloss(turn) ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" /> : (
               <p dir="auto" className="text-note text-slate-200">
-                {ui.scriptSayPrompt.split("{line}").map((part, k) =>
+                {ui.scriptWritePrompt.split("{line}").map((part, k) =>
                   k === 0 ? (
                     part
                   ) : (
@@ -506,35 +498,60 @@ export function FrameLesson({
               {limited ? <p className="text-caption text-warn">{ui.scriptLimit}</p> : null}
               {!limited ? (
                 <div className="mt-1 flex flex-wrap justify-end gap-1.5">
-                  {listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
                   {!result ? (
                     <button type="button" onClick={reveal} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-300 hover:bg-white/10">
                       {ui.scriptReveal}
                     </button>
                   ) : null}
-                  {result && !result.good ? (
-                    <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10 disabled:opacity-50">
-                      {listening ? ui.roleplayPracticeListening : ui.roleplayPracticeRetry}
+                  {result && !result.good && result.heard ? (
+                    <button type="button" onClick={retry} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+                      {ui.roleplayPracticeRetry}
                     </button>
                   ) : null}
                   {result && (result.good || result.heard) ? (
                     <button
                       type="button"
                       data-lesson-talk-next
-                      onClick={() => (tIndex + 1 < turns.length ? setTIndex(tIndex + 1) : setStep("done"))}
+                      onClick={() => {
+                        setDraft("");
+                        if (tIndex + 1 < turns.length) setTIndex(tIndex + 1);
+                        else setStep("done");
+                      }}
                       className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900"
                     >
                       {ui.scriptNext}
                     </button>
                   ) : null}
-                  {!result || (result.revealed && !result.heard) ? (
-                    <button type="button" data-lesson-say onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
-                      {listening ? ui.roleplayPracticeListening : ui.scriptSay}
-                    </button>
-                  ) : null}
                 </div>
               ) : null}
             </div>
+            {/* 채팅 입력칸(2026-11-02): 아직 안 보냈거나(답 보기 뒤 포함) 다시 쓰기를 눌렀을 때. Enter로 보냄. */}
+            {!limited && (!result || (result.revealed && !result.heard)) ? (
+              <form
+                data-lesson-input
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  void send();
+                }}
+                className="mt-1 flex items-center gap-2"
+              >
+                <input
+                  dir="auto"
+                  value={draft}
+                  onChange={(event) => setDraft(event.target.value)}
+                  lang={tag}
+                  autoComplete="off"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  disabled={listening}
+                  aria-label={ui.scriptWritePrompt.replace("{line}", turnGloss(turn) || turn.me)}
+                  className="min-w-0 flex-1 rounded-full border border-line bg-white/5 px-4 py-2 text-chat text-ink outline-none focus:border-slate-400"
+                />
+                <button type="submit" data-lesson-send disabled={!draft.trim() || listening} className="rounded-full bg-white/90 px-4 py-2 text-caption font-semibold text-slate-900 disabled:opacity-50">
+                  {listening ? "…" : ui.send}
+                </button>
+              </form>
+            ) : null}
           </div>
         ) : null}
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { InviteRewardsCard } from "@/components/invite/InviteRewards";
 import { GroupTitle, groupIcon } from "./RoomGroups";
@@ -72,7 +73,7 @@ export function PeopleTab({
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{ui.homeTabPeople}</h1>
+        <TabTitle tab="people" label={ui.homeTabPeople} />
         {/* 앱이 없는 친구도: 링크 → Play → 로그인·이름 정하고 입장(lib/invite, 팔로우 없음). */}
         {/* 친구 초대 보상 카드는 버튼을 누르면 뜨는 시트 안에(2026-10-24 사용자 — 목록 위에서 뺌). */}
         {account ? <InviteButton locale={locale} sheet={<InviteRewardsCard ui={ui} locale={locale} />} /> : null}

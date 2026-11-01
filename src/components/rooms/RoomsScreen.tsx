@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { MateAskSheet } from "./MateAsk";
 import { Fragment, useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -137,7 +138,7 @@ export function RoomsScreen({
       {visible ? (
       <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{t.title}</h1>
+        <TabTitle tab="rooms" label={t.title} />
       </header>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (

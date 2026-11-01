@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
 import { roomCopy } from "@/lib/rooms/copy";
@@ -133,7 +134,7 @@ export function RandomScreen({ ui, locale, targetLanguage }: { ui: UICopy; local
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="shrink-0 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">🎲 {t.randomTitle}</h1>
+        <TabTitle tab="random" label={t.randomTitle} />
         <p className="mt-0.5 text-caption text-slate-400">🔞 {t.randomAdultOnly}</p>
       </header>
       <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 py-4">

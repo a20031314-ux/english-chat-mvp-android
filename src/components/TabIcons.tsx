@@ -223,3 +223,16 @@ export const TAB_ICON_META: Record<
     idleBg: "hover:bg-white/5",
   },
 };
+
+/**
+ * 화면 머리 제목 = 그 탭의 아이콘(하단 탭과 같은 그림, 사용자 2026-11-02 "각 상위 탭들의 텍스트를 아이콘으로").
+ * 이름은 aria-label·title로만.
+ */
+export function TabTitle({ tab, label }: { tab: TabId; label: string }) {
+  const { Icon } = TAB_ICON_META[tab];
+  return (
+    <h1 aria-label={label} title={label} data-tab-title={tab} className="flex items-center">
+      <Icon active className="h-7 w-7" />
+    </h1>
+  );
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { voiceCallAvailable } from "@/lib/platform";
 import { needsLetters, saveLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
@@ -213,7 +214,7 @@ export function StudyMapTab({
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{ui.homeTabProfile}</h1>
+        <TabTitle tab="map" label={ui.homeTabProfile} />
         {started && !editing ? (
           <button
             type="button"

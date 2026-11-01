@@ -1,5 +1,6 @@
 "use client";
 
+import { TabTitle } from "@/components/TabIcons";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -791,9 +792,7 @@ export function VideoLearningTab({
               {ui.videoLearnBack}
             </button>
           ) : null}
-          <h1 className="truncate text-base font-semibold text-white">
-            {ui.homeTabVideo}
-          </h1>
+          <TabTitle tab="video" label={ui.homeTabVideo} />
         </div>
       </header>
 
