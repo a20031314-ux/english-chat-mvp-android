@@ -72,11 +72,15 @@ test("the call tutor keeps one speech level, the learner's", () => {
   const ko = tutorSpeechRules("ko");
   assert.match(ko, /해요체/);
   assert.match(ko, /Never mix/);
+  // 반말 인사 뒤 첫 답이 반말로 남던 것(10/41), 해요체 답에 -구나 섞임(6).
+  assert.match(ko, /not your greeting/);
+  assert.match(ko, /never -구나/);
   assert.match(tutorSpeechRules("ja"), /です\/ます/);
   // Every language says to follow how the learner speaks, with or without a row.
   for (const { code: language } of SUPPORTED_LEARNING_LANGUAGES) {
     assert.match(tutorSpeechRules(language), /the one they use with you/, language);
     assert.match(tutorSpeechRules(language), /newest message/, language);
+    assert.match(tutorSpeechRules(language), /they have moved on/, language);
   }
 });
 
