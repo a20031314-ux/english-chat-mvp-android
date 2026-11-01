@@ -66,7 +66,7 @@ export const HEAVY_DAY = { callMinutes: 7.1, chat: 3, packs: 1, scriptLines: 12,
 // 대본 한 줄: 받아쓰기 + 판단(Haiku scriptJudge) + 틀림이면 다시 보기(Sonnet scriptRecheck).
 // 틀림 몫은 어림(실측 전) — 운영 modelCalls의 scriptRecheck ÷ scriptJudge로 바꾼다.
 export const SCRIPT_RECHECK_SHARE = { share: 0.3, source: "어림 2026-10-29(가상 사용자 점검은 틀린 줄을 절반 넣어 대표가 아님)" };
-const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("scriptJudge") + SCRIPT_RECHECK_SHARE.share * opUsd("scriptRecheck");
+export const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("scriptJudge") + SCRIPT_RECHECK_SHARE.share * opUsd("scriptRecheck");
 
 const krw = (usd) => usd * KRW_PER_USD.rate;
 const won = (n) => `${Math.round(n).toLocaleString("ko-KR")}원`;

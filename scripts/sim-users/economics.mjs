@@ -22,6 +22,7 @@ import { KRW_PER_USD, STORE_FEE_SHARE, roleplayMinuteUsd } from "../../src/lib/b
 import { termsFor } from "../../src/lib/billing/plans.ts";
 import { AD_REVENUE_USD, adsApply, adsSettings } from "../../src/lib/billing/ads.ts";
 import { chatMessageUsd, opUsd, packUsd } from "../../src/lib/billing/opCost.ts";
+import { scriptLineUsd } from "../plan-cost.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "../..");
@@ -37,12 +38,15 @@ const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "
 /**
  * 이 계산이 세는 전면 광고 순간(hub/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
  * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
- * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움, 계산은 남음.)
+ * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
+ * My 끝 순간(2026-11-01, 변경 감시 광고 안 1·2): 대본·수업을 끝까지 하고 닫음(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) — economics.json "my".
  */
-export const MODELED_MOMENTS = ["chatLeave", "roomLeave"];
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd"];
 
 export const PLANS = [
-  { id: "free", name: "무료(+광고)", terms: termsFor("free") },
+  // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
+  { id: "free", name: "무료(+광고)", terms: termsFor("free", Date.now(), undefined, { scriptsApp: true }) },
+  { id: "script", name: "대본 플랜 2,900원", terms: termsFor("script") },
   { id: "lite", name: "라이트 3,900원", terms: termsFor("lite") },
   { id: "plus", name: "플러스 5,500원", terms: termsFor("plus") },
   { id: "premium", name: "프리미엄 9,900원(지금)", terms: termsFor("premium", Date.now(), null) },
@@ -94,7 +98,7 @@ function active(type, d) {
  */
 export function simulate(type, terms, o) {
   const ads = adsApply(terms.tier, o.ads);
-  const n = { chats: 0, callMinutes: 0, packs: 0, roomMinutes: 0, ops: {}, interstitial: 0, appOpen: 0, banner: 0, native: 0, rewarded: 0, blockedChats: 0 };
+  const n = { chats: 0, callMinutes: 0, packs: 0, roomMinutes: 0, scriptLines: 0, ops: {}, interstitial: 0, appOpen: 0, banner: 0, native: 0, rewarded: 0, blockedChats: 0 };
   let callPool = terms.monthlyGrantPoints ? terms.monthlyGrantPoints * 5 : Infinity; // 옛 프리미엄: 포인트 1개 = 통화 5분
   let lastAppOpen = -1e9;
   let lastInter = -1e9;
@@ -102,13 +106,23 @@ export function simulate(type, terms, o) {
   for (let d = 0; d < DAYS; d += 1) {
     if (!active(type, d)) continue;
     const chatCap = terms.dailyChat ?? 100; // 제한 없음은 비용 표처럼 100번
-    const callCap = terms.dailyCallMinutes ?? (terms.monthlyGrantPoints ? callPool : 0);
+    // 대본 플랜은 사흘마다 5분(callWindowDays) — 하루로 나눠 셈.
+    const callCap = terms.dailyCallMinutes !== null && terms.dailyCallMinutes !== undefined ? terms.dailyCallMinutes / (terms.callWindowDays || 1) : terms.monthlyGrantPoints ? callPool : 0;
     const call = Math.min(type.callMinutes, callCap);
     callPool -= terms.monthlyGrantPoints ? call : 0;
     n.callMinutes += call;
     // 무료 팩은 주 N번(plans.ts packDaysPerWeek): 쓰는 날마다 그 비율만큼.
-    const packCap = terms.packDaysPerWeek ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
+    // packDaysPerWeek 0(대본 앱 무료·대본 플랜)은 팩 없음, null은 매일 1번 + 추가.
+    const packCap = typeof terms.packDaysPerWeek === "number" ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
     n.packs += Math.min(type.packs, packCap);
+    // My 대본 내 줄(모든 요금, 하루 한도 dailyScriptLines) + 끝 순간 전면(무료만): 수업 하나 = 내 줄 linesPerLesson개, 끝까지 하고 닫을 때 한 번.
+    const lines = Math.min(type.scriptLines ?? 0, terms.dailyScriptLines ?? 0);
+    n.scriptLines += lines;
+    if (ads && lines > 0) {
+      const my = o.assume.my;
+      n.interstitial += lines / my.linesPerLesson + my.quizEndsPerDay + my.checkupEndsPerMonth / 30 * (30 / Math.max(1, type.days));
+      lastInter = d * 1440 + 9 * 60; // 그날 첫 세션 전에 My를 한 것으로 — 채팅 나갈 때 전면과 간격
+    }
     // 방 자막은 하루 줄 수 한도(한 줄 ≈ 6초 → 분당 10줄).
     n.roomMinutes += terms.dailyCaptionLines ? Math.min(type.roomMinutes, terms.dailyCaptionLines / 10) : type.roomMinutes;
     // 누를 때만 도는 AI 도움은 하루 한도(plans.ts dailyAiHelp)까지 — 넘는 만큼은 같은 비율로 줄인다.
@@ -180,6 +194,7 @@ export function simulate(type, terms, o) {
     chat: n.chats * o.chatWon,
     call: krw(n.callMinutes * roleplayMinuteUsd()),
     pack: krw(n.packs * packUsd()),
+    script: krw(n.scriptLines * scriptLineUsd()),
     room: krw(
       n.roomMinutes *
         (o.assume.room.roomListen * opUsd("roomListen") +
@@ -248,10 +263,10 @@ export function render(o) {
   }
   push("", "유료 = 구독 수입(부가세·수수료 뺌) − 원가. 무료 = 광고 수입 − 원가. 구매 포인트는 따로 팔리므로 넣지 않았습니다.", "");
 
-  push("원가 내역(한도 꽉 유형):", "", "| 요금 | 채팅 | 자유 통화 | 팩 | 말하는 방 | 그 밖의 기능 | 원가 합 | 수입 |", "|---|---|---|---|---|---|---|---|");
+  push("원가 내역(한도 꽉 유형):", "", "| 요금 | 대본 | 채팅 | 자유 통화 | 팩 | 말하는 방 | 그 밖의 기능 | 원가 합 | 수입 |", "|---|---|---|---|---|---|---|---|---|");
   for (const p of PLANS) {
     const r = simulate(o.assume.types["한도 꽉"], p.terms, o);
-    push(`| ${p.name} | ${won(r.cost.chat)} | ${won(r.cost.call)} | ${won(r.cost.pack)} | ${won(r.cost.room)} | ${won(r.cost.other)} | ${won(r.costKrw)} | ${won(r.subKrw + r.adKrw())} |`);
+    push(`| ${p.name} | ${won(r.cost.script)} | ${won(r.cost.chat)} | ${won(r.cost.call)} | ${won(r.cost.pack)} | ${won(r.cost.room)} | ${won(r.cost.other)} | ${won(r.costKrw)} | ${won(r.subKrw + r.adKrw())} |`);
   }
   push("");
 
@@ -304,15 +319,17 @@ export function render(o) {
     ["채팅 1통 원가 두 배", { chatWon: o.chatWon * 2 }],
     ["광고 채움률 60%", { fill: 0.6 }],
     ["부가세 없음(비용 표 기준)", { vat: 0 }],
-    ["보상형 켬(1회 = 채팅 3번, 하루 3번)", { ads: { ...o.ads, rewardChats: 3, rewardedDailyMax: 3 } }],
-    ["전면 채팅 3번 뒤", { ads: { ...o.ads, interstitialAfterChats: 3 } }],
+    // 보상형(채팅 더 받기)·채팅 나갈 때 전면은 2.76~ 무료에 채팅이 없어 의미가 없어 뺌(2026-11-01).
     ["네이티브 끔", { ads: { ...o.ads, nativeEnabled: false } }],
     ["방 퇴장 전면 끔", { ads: { ...o.ads, roomLeaveMinutes: 0 } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
+    // My 끝 전면을 오늘 할 것 사이가 아니라 하루 한 번으로(hub/ads-plan.md 안 3) — 수업마다 대신 쓰는 날 1번.
+    ["대본 끝 전면을 하루 한 번으로", { assume: { ...o.assume, my: { ...o.assume.my, linesPerLesson: 1e9, quizEndsPerDay: o.assume.my.quizEndsPerDay + 1 } } }],
+    ["무료가 대본을 두 배로 씀", { assume: { ...o.assume, types: Object.fromEntries(Object.entries(o.assume.types).map(([k, t]) => [k, typeof t === "object" ? { ...t, scriptLines: (t.scriptLines ?? 0) * 2 } : t])) } }],
   ];
   for (const [name, change] of variants) {
     const r = perSignup({ ...o, ...change });
-    push(`| ${name} | ${signed(r.net * 1000)} | ${r.breakEvenConv === null ? "없음" : r.breakEvenConv === 0 ? "0%" : pct(r.breakEvenConv)} |`);
+    push(`| ${name} | ${signed(r.net * 1000)} | ${r.breakEvenConv === null || r.breakEvenConv > 1 ? "없음" : r.breakEvenConv === 0 ? "0%" : pct(r.breakEvenConv)} |`);
   }
   push(
     "",
@@ -320,6 +337,9 @@ export function render(o) {
     "",
     "- 행동 유형과 비율(`economics.json`)은 가정입니다. 서버의 사용자별 사용량(`scripts/cost-report.mjs`, KV 키 필요)으로 유형을 맞추면 가장 크게 좋아집니다.",
     "- 광고 단가·채움률은 AdMob 보고서가 쌓이기 전까지 가정입니다(`ads.ts` `AD_REVENUE_USD`).",
+    "- **무료는 2.76부터의 대본 앱 무료**(채팅·자유 통화·팩 없음, My 대본만 — 하루 내 줄 25줄까지)로 계산합니다(2026-11-01부터). 2.75 이하 앱 무료(채팅 7번·팩)는 옛 앱이 줄어들면 사라져 넣지 않았습니다. 대본 한 줄 원가·틀림 다시 보기 비율은 `plan-cost.mjs`(`hub/costs.md`)와 같은 값.",
+    "- 대본 플랜 2,900원은 1절·2절에만 — 결제한 사람 비율(`planShare`)에는 아직 없습니다(실측 전).",
+    "- My 끝 광고 횟수(`economics.json` `my`: 수업 하나 = 내 줄 8개, 퀴즈 끝 하루 0.3번, 시험 끝 한 달 2번)는 어림입니다.",
     "- 무료 첫 달의 처음 20포인트(통화 100분)는 한 번뿐이라 뺐습니다. 구매 포인트 수입, 환불, 무료 체험도 넣지 않았습니다.",
     "- 광고는 안드로이드만입니다. iOS 무료 사용자는 광고 수입 0으로 봐야 합니다(아직 iOS 사용자 없음).",
     "- 부가세 10%는 Play가 한국 부가세를 떼고 정산한다고 본 값으로, Play 정산 보고서로 확인이 필요합니다.",

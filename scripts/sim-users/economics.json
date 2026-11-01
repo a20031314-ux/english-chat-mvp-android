@@ -13,7 +13,8 @@
       "extras": {
         "analysisInput": 0.3,
         "tts": 1
-      }
+      },
+      "scriptLines": 6
     },
     "꾸준히": {
       "days": 22,
@@ -29,7 +30,8 @@
         "expressionAsk": 0.5,
         "tts": 3,
         "translate": 1
-      }
+      },
+      "scriptLines": 12
     },
     "열심히": {
       "days": 28,
@@ -46,7 +48,8 @@
         "howToSay": 2,
         "tts": 8,
         "translate": 3
-      }
+      },
+      "scriptLines": 20
     },
     "한도 꽉": {
       "days": 30,
@@ -63,7 +66,8 @@
         "howToSay": 4,
         "tts": 15,
         "translate": 6
-      }
+      },
+      "scriptLines": 999
     },
     "말하는 방 위주": {
       "days": 20,
@@ -76,7 +80,8 @@
       "rewardWill": 0,
       "extras": {
         "translate": 1
-      }
+      },
+      "scriptLines": 2
     },
     "3일 쓰고 떠남": {
       "days": 3,
@@ -91,9 +96,10 @@
         "analysisInput": 1,
         "tts": 2
       },
-      "front": true
+      "front": true,
+      "scriptLines": 8
     },
-    "_설명": "하루(쓰는 날) 기준: 세션 수, 채팅·자유 통화 분·팩·말하는 방 분, 둘러보는 화면 분(배너), 무료가 한도 차면 보상형을 볼 확률, 그 밖의 기능 호출(op 이름: 횟수). front=true면 처음 며칠만 쓰고 떠남. 요금 한도가 이보다 작으면 한도까지만."
+    "_설명": "하루(쓰는 날) 기준: 세션 수, 채팅·자유 통화 분·팩·말하는 방 분, 둘러보는 화면 분(배너), 무료가 한도 차면 보상형을 볼 확률, 그 밖의 기능 호출(op 이름: 횟수). front=true면 처음 며칠만 쓰고 떠남. 요금 한도가 이보다 작으면 한도까지만. scriptLines: 쓰는 날 My 대본·수업에서 내 줄을 말하는 수(요금 하루 한도 dailyScriptLines까지, 어림 2026-11-01 — 무료 2.76~는 이것만 씀)."
   },
   "mix": {
     "_설명": "요금 안에서 유형 비율(%). 무료는 떠나는 사람이 많고, 유료는 꾸준히·열심히가 많다고 가정.",
@@ -149,5 +155,11 @@
   "fixedMonthlyKrw": {
     "_설명": "사용자 수와 상관없는 한 달 고정비(Vercel·Upstash·도메인·개발자 계정 등). 0이면 고정비 줄은 '필요한 사용자 수'만 예시로.",
     "value": 0
+  },
+  "my": {
+    "_설명": "My 끝 전면 광고 어림(2026-11-01, 변경 감시 광고 검토 hub/ads-plan.md): 수업·대본 하나 = 내 줄 linesPerLesson개, 끝까지 하고 닫을 때 scriptEnd 한 번(지금 코드는 오늘 할 것 항목 사이에도 뜸), 쓰는 날 퀴즈 끝 quizEndsPerDay번, 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
+    "linesPerLesson": 8,
+    "quizEndsPerDay": 0.3,
+    "checkupEndsPerMonth": 2
   }
 }
