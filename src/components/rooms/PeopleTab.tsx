@@ -29,7 +29,8 @@ import { AiTutorPeople } from "@/components/AiTutorProfile";
  */
 type PeopleView = "people" | "board" | "icons";
 const VIEW_KEY = "peopleViewMode";
-const VIEW_EMOJI = { people: "👥", board: "📋", icons: "🙂" } as const;
+// 사람 = 👤(프로필) — 👥는 단체방 표시라 겹치지 않게(2026-11-02 사용자 "단체방, 프로필 아이콘이 중첩").
+const VIEW_EMOJI = { people: "👤", board: "📋", icons: "🙂" } as const;
 
 function readView(): PeopleView {
   try {

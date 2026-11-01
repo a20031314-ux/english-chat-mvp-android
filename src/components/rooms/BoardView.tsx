@@ -56,6 +56,9 @@ import { Face, ProfileSheet, photoErrorText } from "./RoomParts";
 type Names = Record<string, string>;
 
 const TOPIC_KEY = "boardTopic";
+/** 고를 수 있는 주제 — 보이스룸(room)은 Room 탭 "열린 방"과 같은 창구라 뺌(2026-11-02 사용자 "동일기능의 창구가 겹치는것같아").
+ * 예전 보이스룸 글은 "전체"에 그대로 보이고 방 들어가기도 된다. 단체방은 공개 목록이 여기뿐이라 남김. */
+const PICK_TOPICS = BOARD_TOPICS.filter((one) => one !== "room");
 const TOPIC_EMOJI: Record<BoardTopic, string> = { free: "💬", question: "❓", mate: "🤝", room: "🎙", group: "👥" };
 
 type BoardFilter = "all" | BoardTopic;
@@ -63,7 +66,8 @@ type BoardFilter = "all" | BoardTopic;
 function readFilter(): BoardFilter {
   try {
     const saved = localStorage.getItem(TOPIC_KEY);
-    return isBoardTopic(saved) ? saved : "all";
+    // 예전에 고른 보이스룸(뺀 주제)이면 전체로.
+    return isBoardTopic(saved) && (PICK_TOPICS as readonly string[]).includes(saved) ? saved : "all";
   } catch {
     return "all";
   }
@@ -158,7 +162,7 @@ export function BoardView({
     <div>
       <div className="flex items-center gap-1">
         <div className="flex min-w-0 gap-1 overflow-x-auto">
-        {(["all", ...BOARD_TOPICS] as const).map((value) => (
+        {(["all", ...PICK_TOPICS] as const).map((value) => (
           <button
             key={value}
             type="button"
@@ -387,7 +391,7 @@ function Composer({
         {initialTopic ? (
           <>
             <div className="mb-2 flex gap-1 overflow-x-auto">
-              {BOARD_TOPICS.map((value) => (
+              {PICK_TOPICS.map((value) => (
                 <button
                   key={value}
                   type="button"

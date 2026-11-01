@@ -145,7 +145,6 @@ export function RoomsScreen({
           <Lobby
             t={t}
             peerId={peerId}
-            me={{ id: account.id, nickname, photo: account.profile.photo }}
             targetLanguage={targetLanguage}
             locale={locale}
             onJoin={(room, role) => {
@@ -241,14 +240,12 @@ export function RoomsScreen({
 function Lobby({
   t,
   peerId,
-  me,
   targetLanguage,
   locale,
   onJoin,
 }: {
   t: RoomCopy;
   peerId: string;
-  me: { id: string; nickname: string; photo: string | null };
   targetLanguage: string;
   locale: string;
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
@@ -319,26 +316,26 @@ function Lobby({
 
   return (
     <div className="space-y-4">
-      {/* 내 프로필: 방에서 이 사진과 이름으로 보인다. */}
-      <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2.5">
-        <Face accountId={me.id} name={me.nickname} size={40} photo={me.photo} />
-        <div className="min-w-0 flex-1">
-          <p className="truncate text-[15px] font-semibold text-white" dir="auto">
-            {me.nickname}
-          </p>
-          <p className="text-[11px] text-slate-400">{languagePair([targetLanguage, mySide], locale)}</p>
+      {tab === "rooms" ? (
+      <section className="space-y-2">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-slate-300">{t.rooms}</h2>
+          {/* 내 프로필 줄은 뺌(2026-11-02 사용자 "프로필 아이콘이 중첩") — 내 얼굴·이름은 사람 탭·방 자리에서 보인다. */}
+          <div className="flex items-center gap-3">
+            <button type="button" onClick={() => void refresh()} className="text-xs text-slate-400 hover:text-white">
+              {t.refresh}
+            </button>
+            <button
+              type="button"
+              data-new-room
+              onClick={() => setCreating((value) => !value)}
+              className="shrink-0 rounded-xl bg-violet-500 px-3 py-1.5 text-sm font-medium text-white"
+            >
+              + {t.newRoom}
+            </button>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={() => setCreating((value) => !value)}
-          className="shrink-0 rounded-xl bg-violet-500 px-3 py-2 text-sm font-medium text-white"
-        >
-          + {t.newRoom}
-        </button>
-      </div>
-
-
-      {tab === "rooms" && creating ? (
+      {creating ? (
         <section className="space-y-2 rounded-2xl border border-violet-400/30 p-3">
           <input
             value={name}
@@ -380,14 +377,6 @@ function Lobby({
         </section>
       ) : null}
 
-      {tab === "rooms" ? (
-      <section className="space-y-2">
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-slate-300">{t.rooms}</h2>
-          <button type="button" onClick={() => void refresh()} className="text-xs text-slate-400 hover:text-white">
-            {t.refresh}
-          </button>
-        </div>
         {parked.length ? (
           <div className="space-y-1.5 rounded-2xl border border-white/10 bg-white/[0.02] p-2.5">
             <p className="text-xs text-slate-400">⏸ {t.parkedRooms}</p>
