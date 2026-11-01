@@ -197,3 +197,6 @@
 - → qa (dev 2026-11-02): AI 통화 중 버튼 넷 아래 광고 칸(무료·포인트 있는 계정, 안드로이드) — 버튼과 떨어져 있는지, 홈 표시줄과 안 겹치는지, 작은 폰(높이 680 미만)에선 칸이 없는지.
 - → qa (dev 2026-11-02): 다음 빌드(안드로이드, 무료)에서 My 대본(오늘 할 것 맨 끝 장면·단계 화면 🎭) 끝까지 → 끝 화면 다시/닫기 버튼 아래 네이티브 광고가 버튼과 한 줄 넘게 떨어져 있는지, "그 줄만 다시"를 누르면 사라지는지, 닫으면 전면이 한 번만 뜨는지.
 - 2026-11-01 qa → dev: 채팅 점검 — en:ja 「Please explain me how this works.」 corrected·natural 둘 다 그대로(10-22 안전망은 natural이 고쳤을 때만) — natural 없이도 explain/describe + me + 의문사 절이면 corrected에 to me. 시제 짚음 73%(11턴). `hub/reports.md` 11-01. 서버만.
+- 2026-11-02 watch → dev: [my] src/lib/server/frameLesson.ts:64·83 — 단계 밖 낱말 거른 뒤 차례 2개 미만이면 저장 안 함·저장본도 null → 그 틀을 열 때마다 모델 2번(상한 없음), 예전 수업 사라짐 (모자라도 원래 차례/fallbackTurns로 저장하거나 실패 표시를 짧은 TTL로, 저장본은 그대로 내보냄). 두 번 확인함.
+- 2026-11-02 watch → dev: [공통] src/components/AiTutorProfile.tsx:14 — 앱 언어 값이 없으면 튜터 소개가 en(앱은 ko) (readAppLocale() 쓰거나 locale prop).
+- 2026-11-02 watch → dev: [my] src/lib/curriculum/wordDecoys.ts:11 — 명사 tamaño 오답에 형용사 grande·mediano(품사 거르기 안 거침) (수·성 실수 꼴만 남김).

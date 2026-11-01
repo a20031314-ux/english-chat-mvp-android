@@ -1,69 +1,63 @@
 [
  {
-  "kind": "add",
-  "what": "My 대본(ScriptPlayer, 이번에 채팅으로 바뀜) 끝 화면 — 맞힌 수·'그 줄만 다시'·다시/닫기 버튼 아래 네이티브(feed results, slot script-end, spaced)",
-  "where": "My 탭 `my` · studyMap/StageScripts.tsx 끝 화면(done <li>, 약 727~749줄)",
-  "why": "끝 화면(결과)이라 원칙에 맞는 자리 — 같은 결과 화면인 FrameLesson(lesson-end)·RecallPlayer(recall-end)·QuizPlayer(quiz-end)·CheckupPlayer(checkup-end)에는 있는데 대본 끝 화면만 없음. 끝나면 입력칸(form)이 사라져 키보드가 없고, 버튼 줄과 spaced로 띄움. 전체 화면 층(FullScreenLayer)이라 배너는 숨어 한 화면 하나",
+  "kind": "move",
+  "what": "callEnd 전면을 '통화가 진짜 끝나고(state.finished) 끝 화면을 닫을 때' 한 번으로 — 포인트 없음·마이크 거부로 끝난 통화에는 안 띄움",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 296~309줄(callEnd effect) · 끝 화면 903줄 call-end 네이티브",
+  "why": "원칙 위반 둘: ① effect가 `instruction.do === \"finish\"`에도 걸려, 새 앱 무료가 📞를 누르고 첫 차례에 포인트 없음(407~408줄 setInstruction finish)·마이크 거부(687줄)로 닫힐 때도 1.5초 뒤 전면 — '끝난 자리'가 아니라 콘텐츠가 열린 직후·거절된 직후(AdMob '갑자기 뜨는 광고'). ② 끝 화면에 들어서 1.5초 뒤 뜨므로 이번에 넣은 call-end 네이티브가 있는 같은 화면 위에 전면이 겹침(다른 결과 화면은 네이티브는 끝 화면, 전면은 닫은 뒤)",
   "appBuild": true,
-  "basis": "693b20a·c06d66e(대본 채팅: 핵심 조각만 빈칸, 한 번 보내면 정답/오답)·b47c06e·9a3087d에서 바뀐 화면(새 UI 점검 0). 대본 도중(줄 사이·입력칸 위·'다음' 버튼 옆)은 쓰는 중·대화 말풍선이 채울 자리라 네이티브·전면 모두 안 됨(넘어가는 시점 0-1: '그 줄만 다시'로 다시 들어갈 때도 과제 시작 직전이라 안 됨). 닫을 때 전면은 지금 그대로(오늘 할 것에서 연 것은 fireTodayEnd 한 번, 단계 화면에서 연 것은 scriptEnd) — 끝 화면 네이티브는 닫기 전, 전면은 닫은 뒤라 겹치지 않음(다른 결과 화면과 같은 모양). 횟수: 오늘 할 것 맨 끝이 대본 은행 장면이라 오늘 할 것을 끝내는 날마다 한 번 + 단계 화면에서 직접 연 대본 가끔 → 대본을 쓰는 날 0.8번 보수적 어림(economics.json results 1.5는 네 끝 화면만 셈). 캡처 없음(tmp/ads-blank·tmp/sim-users 없음) — 끝 화면 아래 빈 높이는 코드 짐작이라 확인 필요. ScriptTap.tsx는 9a3087d 이후 지워진 파일이라 자리 없음",
-  "severity": "notify",
+  "basis": "f1a0b55·5aa36c9 이후 코드를 직접 확인. 903줄 주석에 '새 앱 무료는 통화 시간이 없어 📞를 누르면 첫 차례에 이 화면(포인트 없음)으로' — 그 경로에서 callEnd가 뜸. 손익은 지금 callEnd를 포인트로 통화한 무료만 쓰는 날 0.03번으로 셈(economics.json) → 옮겨도 계산 값은 그대로(실제 코드가 계산보다 더 띄우던 부분을 없앰). 사용자가 허용한 call-end·call-live 네이티브 자체는 위반 아님(hub/ADS.md 2026-11-02)",
+  "severity": "notify"
+ },
+ {
+  "kind": "model",
+  "what": "통화 끝 화면 네이티브(results call-end)·통화 중 칸(call call-live)을 손익 계산에 넣기",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 903줄 · roleplay/CallParts.tsx CallAdStrip · scripts/sim-users/economics.json extraAds",
+  "why": "f1a0b55·5aa36c9로 넣은 두 자리가 economics.json extraAds에 없어 손익이 0으로 셈",
+  "appBuild": false,
+  "basis": "call-end: 📞를 눌러 본 무료 모두가 끝 화면(포인트 없음)에 닿지만 2.76~ 무료는 통화가 안 되는 걸 알면 다시 누르지 않음 → 쓰는 날 0.05번 어림. call-live: 포인트로 통화하는 무료만(callEnd와 같은 0.03번), 680px 미만 화면 제외, 통화 중 교체 없음 → 한 통화 1번",
+  "severity": "report",
   "econ": {
    "extraAds": [
     {
      "format": "native",
-     "perActiveDay": 0.8,
-     "when": "my"
-    }
-   ]
-  },
-  "per1000Mid": 37131,
-  "freePersonMid": 39
- },
- {
-  "kind": "model",
-  "what": "videoLeave(영상을 몇 분 보고 나올 때 전면)를 손익 계산에 넣기",
-  "where": "영상 학습 탭 `video` · videoLearning/VideoLearningTab.tsx:241 · scripts/sim-users/economics.mjs",
-  "why": "ads-facts unmodeled에 videoLeave가 있음 — 코드는 무료 사용자가 videoLeaveMinutes(기본 2분, src/lib/billing/ads.ts:80) 넘게 보고 나오면 전면을 띄우는데 손익은 0으로 셈. 이번 범위에서 영상 목록(CatalogLibrary)이 바뀌어 같이 정리",
-  "appBuild": false,
-  "basis": "2.76~ 무료는 영상 대부분 잠김(8,900원만 이달의 영상 전체), 무료 중 영상을 2분 넘게 보는 날은 드묾 → 쓰는 날 0.05번 보수적 어림(3분 간격 한도 안). estimate interstitial 한 달 1번 = 1,000명당 중간 8,190원",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "interstitial",
      "perActiveDay": 0.05,
      "when": "any"
-    }
-   ]
-  },
-  "per1000Mid": 6034,
-  "freePersonMid": 7
- },
- {
-  "kind": "model",
-  "what": "callEnd(AI 통화 끝 전면)를 손익 계산에 넣기 — 무료가 포인트(첫 달 20P·구매)로 통화할 때",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx (끝난 뒤 1.5초) · scripts/sim-users/economics.mjs",
-  "why": "ads-facts unmodeled에 callEnd가 아직 있음 — 코드는 무료 사용자 통화가 끝까지 끝나면 전면을 띄우는데 손익은 0으로 셈. 2.76~ 무료는 자유 통화가 없어 포인트로만 통화하므로 작음",
-  "appBuild": false,
-  "basis": "지난 안 그대로(아직 economics.mjs MODELED_MOMENTS에 없음). economics.md: 무료 첫 달 20포인트(통화 100분)는 한 번뿐이라 뺌 · 구매 포인트 수입도 안 넣음. 쓰는 날 평균 0.03번 보수적 어림 — estimate interstitial 한 달 1번 = 1,000명당 중간 8,190원",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
+    },
     {
-     "format": "interstitial",
+     "format": "native",
      "perActiveDay": 0.03,
      "when": "any"
     }
    ]
   },
-  "per1000Mid": 3620,
+  "per1000Mid": 3713,
+  "freePersonMid": 3
+ },
+ {
+  "kind": "add",
+  "what": "0단계 글자 퀴즈(ScriptSheet) 끝 화면 — 틀린 글자 목록·다시/목록으로 버튼 아래 네이티브(feed results, spaced)",
+  "where": "My 탭 `my` · studyMap/ScriptPractice.tsx 끝 화면(약 280~308줄)",
+  "why": "baeec1e(체감 점검 고침)로 끝 화면에 통과 기준·틀린 글자가 더해진 결과 화면 — 다른 끝 화면(quiz-end·lesson-end·recall-end·script-end)과 같은 원칙의 자리인데 이 화면만 광고 없음. BodyLayer 층이라 배너는 숨어 한 화면 하나",
+  "appBuild": true,
+  "basis": "새 UI 점검 0. 문제 도중(틀렸을 때 바른 답 + '다음' 버튼 줄)은 버튼 옆·과제 중이라 네이티브·전면 모두 안 됨(0-1: 글자 문제 사이 전면도 안 됨 — 묶음 경계는 이 끝 화면). 0단계(글자가 다른 학습 언어, 처음 몇 주)만 지나므로 대본 쓰는 날 0.1번 보수적 어림. 캡처 없음(tmp/ads-blank·tmp/sim-users 없음) — 버튼 아래 빈 높이는 확인 필요",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.1,
+     "when": "my"
+    }
+   ]
+  },
+  "per1000Mid": 4641,
   "freePersonMid": 4
  },
  {
   "kind": "add",
   "what": "하단 탭을 열 때 전면 — 탭 전환 세 번에 한 번, 3분 간격",
   "where": "앱 틀 `shell` · AppHome.tsx 탭 바꿀 때",
-  "why": "AdMob: 클릭할 때마다 금지, '두 번 행동에 한 번까지'는 허용이지만 탭은 내비게이션이라 '핵심 콘텐츠 이동을 막는 광고'로 볼 위험 + 체감 나쁨(hub/ADS.md 넣지 않는 곳). 같은 수입은 탭 목록의 네이티브·앱 오프닝(돌아올 때)이 원칙에 맞음",
+  "why": "AdMob: 클릭할 때마다 금지, 탭은 내비게이션이라 '핵심 콘텐츠 이동을 막는 광고'로 볼 위험 + hub/ADS.md 넣지 않는 곳. 같은 수입은 탭 목록 네이티브·앱 오프닝이 원칙에 맞음",
   "risky": true,
   "appBuild": true,
   "basis": "지난 안 그대로(기록용, 코드에 없음). 쓰는 날 탭 전환으로 광고 1번 어림",
@@ -77,14 +71,14 @@
     }
    ]
   },
-  "per1000Mid": 120674,
-  "freePersonMid": 125
+  "per1000Mid": 120673,
+  "freePersonMid": 124
  },
  {
   "kind": "add",
   "what": "보이스룸(공개 Room)에 들어갈 때 전면",
   "where": "Room 탭 `room` · rooms/RoomsScreen.tsx 방 들어가기",
-  "why": "권하지 않음 — AdMob '콘텐츠가 열린 직후·과제에 집중할 때 뜨는 광고' 금지에 가깝고, 실시간 음성 방이라 광고 소리·마이크가 겹침, 다른 사람과 대화가 이미 시작됨. 대신 나올 때 전면(roomLeave, 있음)·로비 네이티브(있음)",
+  "why": "권하지 않음 — 콘텐츠가 열린 직후 + 실시간 음성 방이라 광고 소리·마이크가 겹침. 대신 나올 때 전면(roomLeave)·로비 네이티브(있음)",
   "risky": true,
   "appBuild": true,
   "basis": "지난 안 그대로(기록용, 코드에 없음). 방을 쓰는 날 들어갈 때 1번",
@@ -99,27 +93,27 @@
    ]
   },
   "per1000Mid": 30506,
-  "freePersonMid": 32
+  "freePersonMid": 31
  },
  {
   "kind": "add",
-  "what": "(넣지 않음) 통화 끝난 화면·통화 돌아보기 넘겨 보기 장(CallPages ‹ n / m ›) 안 네이티브 — 마지막 장 통화 정리 아래 빈 곳",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx 끝난 화면 · RoleplayPast.tsx · roleplay/CallParts.tsx CallPages · roleplay/CallRecap.tsx",
-  "why": "권하지 않음 — 끝난 화면은 들어서자마자 callEnd 전면이 떠 같은 화면 둘째 광고가 됨(한 화면 하나). 장은 옆으로 밀리는 칸이라 웹 위에 떠 있는 네이티브가 따라가지 못하고, 마지막 장 통화 정리에는 🧩·🔤 수업·🔎 My에서 찾기 버튼이 붙어 있어 잘못 누름 위험",
+  "what": "(넣지 않음) AI 튜터 프로필 시트 자기소개 아래 네이티브 — 그 밖의 새 화면도 자리 없음",
+  "where": "사람 탭 `people` · AiTutorProfile.tsx AiTutorSheet(BodyLayer) · lib/roleplay/callScene.ts·scenes/",
+  "why": "권하지 않음 — 9418d02·842c22c로 자기소개가 들어간 짧은 시트, 소개 바로 아래 📞 통화·통화 기록 버튼이라 잘못 누름(AdMob), 사람 목록에는 이미 people-tab 네이티브. 통화 장면 AI 튜터(072c6f9 등)는 대본 데이터만 바뀌고 화면은 통화 중(CallAdStrip 있음)·끝 화면(call-end 있음). ShellUpdate는 시험 앱 껍데기 전용(시험 광고만, af8d562). 체감 점검으로 바뀐 QuizPlayer·FrameLesson·RecallPlayer·StageScripts 끝 화면에는 이미 결과 네이티브 — 문제 사이 '다음' 버튼 자리는 과제 중이라 안 됨",
   "risky": true,
   "appBuild": true,
-  "basis": "지난 안 그대로(기록용, 코드에 없음). 캡처 없음 — 마지막 장 빈 높이는 코드 짐작. 2.76~ 무료는 포인트로만 통화해 노출 적음: 쓰는 날 0.03번",
+  "basis": "기록용. 튜터 프로필을 여는 날 드묾 → 쓰는 날 0.05번",
   "severity": "report",
   "econ": {
    "extraAds": [
     {
      "format": "native",
-     "perActiveDay": 0.03,
+     "perActiveDay": 0.05,
      "when": "any"
     }
    ]
   },
-  "per1000Mid": 1393,
+  "per1000Mid": 2320,
   "freePersonMid": 2
  }
 ]
