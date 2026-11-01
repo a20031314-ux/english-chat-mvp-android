@@ -230,6 +230,13 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+      adoptSimRoutes("rc:simcheck-models-p003", JSON.stringify({ chat: "anthropic: claude-haiku-6", high: "anthropic: claude-fable-5-1" }));
+      assert.equal(routeFor("chat").model, "claude-haiku-6"); // 새 판 후보 시험
+      assert.equal(routeFor("mission").model, "gpt-6-luna"); // fable은 허용 목록 밖
+    }),
+  );
+  await inFreshContext(() =>
+    withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("rc:real-user", JSON.stringify({ high: "anthropic: claude-sonnet-5-5" }));
       assert.equal(routeFor("curriculum").model, "gpt-6-luna"); // 실제 사용자는 헤더가 안 먹음
     }),

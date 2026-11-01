@@ -112,7 +112,14 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, forgotten, commit, builtAt: new Date().toISOString() };
+// 모델 교체 후보(hub/model-swap.md, scripts/models/whatif.mjs가 만듦 — 예약 작업 "AI 모델 살피기"가 매주).
+let models = "";
+try {
+  models = read("model-swap.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, forgotten, models, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

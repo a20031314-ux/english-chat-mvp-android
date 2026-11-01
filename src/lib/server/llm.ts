@@ -99,7 +99,8 @@ const parseTarget = (value: string) => routeModel(value);
  * 실패를 OpenAI로 덮지 않는다(점검이 실제 실패를 봐야 하므로). `meterRequest`가 요청 첫머리에서 부른다.
  */
 const simRoutes = new AsyncLocalStorage<Record<string, string>>();
-const SIM_ALLOWED = /^(anthropic:\s*claude-(haiku|sonnet)-5-5|openai:\s*gpt-[\w.-]+)$/;
+// 새 Haiku·Sonnet 판(claude-haiku-6 등)도 받는다 — 예약 작업 "AI 모델 살피기"가 교체 후보를 같은 점검으로 시험(scripts/models/whatif.mjs, 2026-11-01). Opus·Fable은 비싸서 뺌.
+const SIM_ALLOWED = /^(anthropic:\s*claude-(haiku|sonnet)-\d[\w.-]*|openai:\s*gpt-[\w.-]+)$/;
 
 /** 점검(모델 경로 바꾼 simcheck- 사용자)일 때만 오류 내용을 돌려준다 — 실제 사용자에겐 undefined. */
 export function simErrorDetail(error: unknown): string | undefined {

@@ -177,6 +177,12 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
     <p class="how">퀴즈·문제은행·낱말 은행·오답·채점을 바꾸는 채팅이 먼저 읽고, 같은 커밋에서 고칩니다(RULES 11). 영역 이름을 누르면 앱 전체구조의 그 영역으로 갑니다.</p>
   </section>
 
+  <section class="panel app-structure" aria-labelledby="models-h" id="models" hidden>
+    <h2 id="models-h">모델 교체 <small>(hub/model-swap.md, 자동 — 예약 작업 "AI 모델 살피기"가 매주 월요일)</small></h2>
+    <div id="models-body" class="md"></div>
+    <p class="how">새 모델·종료 공지를 찾아 후보마다 손익을 다시 계산하고, 돈이 되거나 종료가 다가온 후보만 운영에서 품질을 시험합니다. "권함"이 생기거나 종료 90일 전이면 폰으로 알립니다. 바꾸는 것은 사용자가 "바꿔줘" 한 뒤에만.</p>
+  </section>
+
   <section class="panel structure" aria-labelledby="map-h" id="structure" hidden>
     <h2 id="map-h">저장하는 데이터 <small>(hub/data-map.md, 코드에서 자동)</small></h2>
     <div class="map-tools" role="group" aria-label="누구 것으로 거르기" id="map-filter"></div>
@@ -382,6 +388,13 @@ if (HUB.quiz) {
   document.getElementById("quiz-body").innerHTML = html;
   document.getElementById("quiz").hidden = false;
   jumps.push(["quiz", "퀴즈 알고리즘"]);
+}
+
+// 모델 교체 후보(hub/model-swap.md — scripts/models/whatif.mjs가 만듦).
+if (HUB.models) {
+  document.getElementById("models-body").innerHTML = renderDoc(HUB.models);
+  document.getElementById("models").hidden = false;
+  jumps.push(["models", "모델 교체"]);
 }
 
 // 앱 구조: 데이터 지도. "누구 것"으로 거르고, 보는 방식(카드·표)을 고른다.
