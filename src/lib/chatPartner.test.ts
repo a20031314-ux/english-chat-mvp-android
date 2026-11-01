@@ -108,3 +108,19 @@ test("the Arabic tutor is from no one country — no country in the brief, no fl
   }
   assert.match(conversationPartnerIdentity("ja", "f"), / from Japan/);
 });
+
+test("every tutor has a profile in all fourteen app languages, in their own gender's forms", async () => {
+  const { TUTOR_ABOUT, tutorAbout } = await import("./tutorAbout.ts");
+  const locales = ["ko", "en", "es", "ja", "zh", "vi", "fr", "it", "pt", "ru", "ar", "id", "th", "hi"];
+  for (const lang of ["en", "ko", "ja", "zh", "es", "fr", "it", "pt", "ru", "ar", "id", "vi", "th", "hi"]) {
+    for (const gender of ["f", "m"] as const) {
+      for (const locale of locales) assert.ok(TUTOR_ABOUT[lang]?.[gender]?.[locale]?.trim(), `${lang}-${gender} ${locale}`);
+      // 말하는 사람의 성이 드러나는 앱 언어: 태국어 끝말, 힌디어 동사.
+      assert.match(tutorAbout(lang, gender, "th"), gender === "f" ? /ค่ะ/ : /ครับ/, `${lang}-${gender} th`);
+      assert.doesNotMatch(tutorAbout(lang, gender, "hi"), gender === "f" ? /ता हूँ/ : /ती हूँ/, `${lang}-${gender} hi`);
+    }
+  }
+  assert.equal(tutorAbout("ko", "f", "xx"), tutorAbout("ko", "f", "en"));
+  // 튜터 지시에도 같은 소개.
+  assert.match(conversationPartnerIdentity("ko", "m"), /Busan/);
+});

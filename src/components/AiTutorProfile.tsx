@@ -7,6 +7,24 @@ import type { UICopy } from "@/lib/copy";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useTutorGender } from "@/lib/tutorGender";
+import { APP_LOCALE_STORAGE_KEY } from "@/lib/copy";
+import { tutorAbout } from "@/lib/tutorAbout";
+
+/** 지금 앱 언어(AppHome이 저장) — 바뀌면 ui가 바뀌어 이 화면도 다시 그려져 새 값을 읽는다. */
+function appLocale(): string {
+  try {
+    return globalThis.localStorage?.getItem(APP_LOCALE_STORAGE_KEY) ?? "en";
+  } catch {
+    return "en";
+  }
+}
+
+/** 튜터 자기소개(lib/tutorAbout.ts — 학습 언어·고른 성별, 앱 언어로). 없으면 예전 글(aiTutorBio). */
+function useTutorAbout(targetLanguage: string, fallback: string): string {
+  const gender = useTutorGender(targetLanguage);
+  const lang = chatPartnerForLanguage(targetLanguage, gender).languageCode;
+  return tutorAbout(lang, gender, appLocale()) || fallback;
+}
 
 /**
  * AI 튜터도 사람 중 하나(2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합해줘. 프로필 탭에 가면 AI 튜터가 있고 대화를 걸 수 있는 흐름으로").
@@ -74,6 +92,7 @@ function TutorName({ targetLanguage, className = "" }: { targetLanguage: string;
 /** 사람 탭 목록 맨 위 한 줄(사람 카드와 같은 모양). */
 export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; targetLanguage: string; canCall: boolean; messageLabel?: string }) {
   const [open, setOpen] = useState(false);
+  const about = useTutorAbout(targetLanguage, ui.aiTutorBio);
   return (
     <>
       <div className="flex gap-3 border-b border-white/[0.07] pb-3">
@@ -84,7 +103,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; tar
           <button type="button" onClick={() => setOpen(true)} className="block w-full text-start">
             <TutorName targetLanguage={targetLanguage} className="text-body font-semibold text-white" />
             <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>
-            <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{ui.aiTutorBio}</p>
+            <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{about}</p>
           </button>
           <div className="mt-1.5 flex items-center justify-end gap-2">
             {canCall ? (
@@ -118,6 +137,7 @@ export function AiTutorSheet({
   canCall: boolean;
   onClose: () => void;
 }) {
+  const about = useTutorAbout(targetLanguage, ui.aiTutorBio);
   const go = (action: () => void) => () => {
     onClose();
     action();
@@ -139,7 +159,9 @@ export function AiTutorSheet({
               ×
             </button>
           </div>
-          <p className="mt-4 text-body leading-relaxed text-slate-200">{ui.aiTutorBio}</p>
+          <p className="mt-4 text-body leading-relaxed text-slate-200">{about}</p>
+          {/* AI라는 것·할 수 있는 것(사용자가 이 화면에 넣으라고 한 글) — 자기소개 아래 작게 */}
+          <p className="mt-2 text-note leading-relaxed text-slate-400">{ui.aiTutorBio}</p>
           <div className="mt-5 flex flex-col gap-2">
             {canCall ? (
               <button type="button" onClick={go(() => sendAppIntent("startCall", {}))} className="rounded-xl border border-white/20 px-3 py-2.5 text-body text-slate-100">

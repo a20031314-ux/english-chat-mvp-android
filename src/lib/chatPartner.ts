@@ -1,3 +1,4 @@
+import { tutorAbout } from "./tutorAbout.ts";
 import {
   getLearningLanguage,
   learningLanguageName,
@@ -101,6 +102,8 @@ export function conversationPartnerIdentity(
 ): string {
   const partner = chatPartnerForLanguage(targetLanguage, gender);
   const language = learningLanguageName(partner.languageCode);
+  // 프로필 소개(lib/tutorAbout.ts, 2026-11-02) — 물으면 같은 이야기를 하게.
+  const about = tutorAbout(partner.languageCode, partner.gender, "en");
   // 성별을 말해 둔다 — 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt 등)에서 이름·목소리와 맞게.
-  return `You are ${partner.givenName}, a native ${language} speaker${partner.countryEn ? ` from ${partner.countryEn}` : ""}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " You speak and write Modern Standard Arabic (الفصحى), not any one country's dialect." : ""}`;
+  return `You are ${partner.givenName}, a native ${language} speaker${partner.countryEn ? ` from ${partner.countryEn}` : ""}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " You speak and write Modern Standard Arabic (الفصحى), not any one country's dialect." : ""}${about ? ` Your profile, which the learner can read: "${about}" If they ask about you, keep to it; don't bring it up on your own.` : ""}`;
 }
