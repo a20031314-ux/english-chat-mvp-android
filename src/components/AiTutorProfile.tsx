@@ -17,8 +17,8 @@ import { useTutorGender } from "@/lib/tutorGender";
 /**
  * AI 튜터 그림(2026-10-27 사용자 "AI 아이콘으로 이미지와 프로필을 만들어 넣어줘. 사람처럼 만들 필요는 없고"):
  * 사람 얼굴 대신 말풍선 + 반짝임. 색은 토큰(info)에서 — currentColor.
- * 2026-11-01 사용자 "이걸로 국가별로 튜터 프로필에 넣어줘": 그 언어 튜터에게 그림이 있으면 그 그림(public/tutors, chatPartner.ts `photo`),
- * 없으면(그림 없는 성의 튜터) 이 아이콘. 언어를 안 주면 지금 학습 언어, 성을 안 주면 고른 튜터.
+ * 2026-11-01 사용자 "이걸로 국가별로 튜터 프로필에 넣어줘"·"성별별로 만들었어": 그 언어·성의 튜터 그림(public/tutors, chatPartner.ts `photo`).
+ * 언어를 모를 때만 이 아이콘. 언어를 안 주면 지금 학습 언어, 성을 안 주면 고른 튜터.
  */
 export function AiAvatar({ size = 60, language, gender }: { size?: number; language?: string; gender?: TutorGender }) {
   const learning = useLearningLanguageOptional();

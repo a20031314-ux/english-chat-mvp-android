@@ -1811,12 +1811,12 @@ export function ChatWindow({
                         type="button"
                         aria-pressed={tutorGender === gender}
                         onClick={() => writeTutorGender(sessionLanguageCode, gender)}
-                        className={`flex-1 rounded-lg px-2 py-1 text-xs ${
+                        className={`flex flex-1 items-center gap-1.5 rounded-lg px-1.5 py-1 text-xs ${
                           tutorGender === gender ? "bg-platinum text-slate-900" : "text-slate-200 hover:bg-white/10"
                         }`}
                       >
-                        <span aria-hidden>{gender === "f" ? "♀" : "♂"} </span>
-                        <bdi>{tutorChoices(sessionLanguageCode)[gender]}</bdi>
+                        <AiAvatar size={24} language={sessionLanguageCode} gender={gender} />
+                        <bdi className="truncate">{tutorChoices(sessionLanguageCode)[gender]}</bdi>
                       </button>
                     ))}
                   </div>

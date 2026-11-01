@@ -37,8 +37,10 @@ test("every language has a woman and a man tutor; the default is the pictured on
     // 기본 튜터는 그림이 있는 사람이고, 그 그림 파일이 있다.
     const pictured = chatPartnerForLanguage(code);
     assert.equal(pictured.gender, defaultTutorGender(code));
-    assert.ok(pictured.photo, `${code} default has a photo`);
-    assert.ok(fs.existsSync(`public${pictured.photo}`), pictured.photo);
+    for (const g of ["f", "m"] as const) {
+      const photo = chatPartnerForLanguage(code, g).photo;
+      assert.ok(fs.existsSync(`public${photo}`), photo);
+    }
     // 두 목소리는 서로 다르고, 둘 다 목소리 목록에 있다.
     assert.notEqual(tutorVoice(code, "f"), tutorVoice(code, "m"), code);
     for (const g of ["f", "m"] as const) assert.ok((TTS_VOICES as readonly string[]).includes(tutorVoice(code, g)), `${code} ${g}`);
@@ -53,7 +55,7 @@ test("chosen gender changes name, voice and the identity line (ja spaceless, es 
   assert.match(es, /Mateo/);
   assert.match(es, /a man/);
   assert.match(conversationPartnerIdentity("es", "f"), /Sofía.*a woman/);
-  assert.equal(chatPartnerForLanguage("es", "f").photo, undefined, "no picture yet: icon");
+  assert.equal(chatPartnerForLanguage("es", "f").photo, "/tutors/es-f.webp");
 });
 
 test("just talk takes the chosen tutor's voice; a recorded voice it no longer matches is synthesised", async () => {
