@@ -1,3 +1,4 @@
+import { chatPartnerForLanguage } from "../chatPartner.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
@@ -314,6 +315,15 @@ test("an open conversation has nowhere to be sent home to", () => {
     request: request({ scenarioId: open.id, nodeId: "talk" }),
   });
   assert.match(prompt, /There is nothing to get done: this is just a conversation/);
+  // 고른 튜터(lib/tutorGender.ts)의 이름·성별 — 없으면 그 언어의 예전 튜터.
+  assert.match(prompt, new RegExp(`You are ${chatPartnerForLanguage(open.language).givenName}, the`));
+  const chosen = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", tutorGender: "f" }),
+  });
+  assert.match(chosen, new RegExp(`You are ${chatPartnerForLanguage(open.language, "f").givenName}, the .*a woman`));
 });
 
 test("the tutor's plain line is read, and matched to a recording when it is one", () => {

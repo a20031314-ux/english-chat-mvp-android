@@ -4,48 +4,88 @@ import {
   type LearningLanguageCode,
 } from "./learningLanguages.ts";
 
+export type TutorGender = "f" | "m";
+
 export type ChatPartner = {
   givenName: string;
   countryEn: string;
   flagCountry: string;
   languageCode: LearningLanguageCode;
+  gender: TutorGender;
+  /** The tutor's voice (roleplay/voices.ts) — chat 듣기, the call and anything spoken without a scene voice. */
+  voice: string;
 };
 
-const PARTNERS: Record<LearningLanguageCode, { givenName: string; countryEn: string }> = {
-  en: { givenName: "Alex", countryEn: "the United States" },
-  ko: { givenName: "Minjun", countryEn: "Korea" },
-  ja: { givenName: "Yuki", countryEn: "Japan" },
-  zh: { givenName: "Chen", countryEn: "China" },
-  es: { givenName: "Sofía", countryEn: "Spain" },
-  fr: { givenName: "Camille", countryEn: "France" },
-  it: { givenName: "Luca", countryEn: "Italy" },
-  pt: { givenName: "Maria", countryEn: "Portugal" },
-  ru: { givenName: "Anya", countryEn: "Russia" },
-  ar: { givenName: "Omar", countryEn: "Saudi Arabia" },
-  id: { givenName: "Raka", countryEn: "Indonesia" },
-  vi: { givenName: "Linh", countryEn: "Vietnam" },
-  th: { givenName: "Niran", countryEn: "Thailand" },
-  hi: { givenName: "Arjun", countryEn: "India" },
+type Person = { givenName: string; voice: string };
+
+/**
+ * 튜터는 언어마다 여자·남자 한 사람씩(사용자 2026-11-01 "음성을 언어별로 남, 녀" → A: 사용자가 고름).
+ * `default`는 고르기 전의 사람 — 예전 이름(Alex·Minjun·Yuki…) 그대로라 고르지 않은 사람에게는 이름이 안 바뀐다.
+ * 목소리는 Realtime이 받는 것으로(server/realtimeSpeech.ts — nova·onyx·fable은 가까운 목소리로 바뀜).
+ * 그 언어 "그냥 대화"의 녹음된 인사·작별(justTalk.ts `voice`)과 같은 목소리면 녹음을 쓰고, 다르면 그 두 줄도 합성한다.
+ * 목소리 성별은 OpenAI가 정해 두지 않아 운영 /api/tts 샘플의 높이(기본 주파수)를 재서 고름(2026-11-01) — 남자 쪽 verse·ballad는 언어에 따라 200Hz 가까이 높게 나와 ash·echo·cedar로.
+ */
+const PARTNERS: Record<LearningLanguageCode, { countryEn: string; default: TutorGender; f: Person; m: Person }> = {
+  en: { countryEn: "the United States", default: "m", f: { givenName: "Emma", voice: "marin" }, m: { givenName: "Alex", voice: "ash" } },
+  ko: { countryEn: "Korea", default: "m", f: { givenName: "Seoyeon", voice: "sage" }, m: { givenName: "Minjun", voice: "cedar" } },
+  ja: { countryEn: "Japan", default: "f", f: { givenName: "Yuki", voice: "nova" }, m: { givenName: "Haruto", voice: "echo" } },
+  zh: { countryEn: "China", default: "m", f: { givenName: "Mei", voice: "shimmer" }, m: { givenName: "Chen", voice: "echo" } },
+  es: { countryEn: "Spain", default: "f", f: { givenName: "Sofía", voice: "coral" }, m: { givenName: "Mateo", voice: "ash" } },
+  fr: { countryEn: "France", default: "f", f: { givenName: "Camille", voice: "marin" }, m: { givenName: "Louis", voice: "echo" } },
+  it: { countryEn: "Italy", default: "m", f: { givenName: "Giulia", voice: "coral" }, m: { givenName: "Luca", voice: "cedar" } },
+  pt: { countryEn: "Portugal", default: "f", f: { givenName: "Maria", voice: "alloy" }, m: { givenName: "João", voice: "echo" } },
+  ru: { countryEn: "Russia", default: "f", f: { givenName: "Anya", voice: "sage" }, m: { givenName: "Dima", voice: "ash" } },
+  ar: { countryEn: "Saudi Arabia", default: "m", f: { givenName: "Layla", voice: "shimmer" }, m: { givenName: "Omar", voice: "onyx" } },
+  id: { countryEn: "Indonesia", default: "m", f: { givenName: "Putri", voice: "coral" }, m: { givenName: "Raka", voice: "echo" } },
+  vi: { countryEn: "Vietnam", default: "f", f: { givenName: "Linh", voice: "marin" }, m: { givenName: "Minh", voice: "verse" } },
+  th: { countryEn: "Thailand", default: "m", f: { givenName: "Ploy", voice: "coral" }, m: { givenName: "Niran", voice: "cedar" } },
+  hi: { countryEn: "India", default: "m", f: { givenName: "Priya", voice: "marin" }, m: { givenName: "Arjun", voice: "ash" } },
 };
+
+export function isTutorGender(value: unknown): value is TutorGender {
+  return value === "f" || value === "m";
+}
+
+/** 고르기 전의 튜터(예전 이름 그대로). */
+export function defaultTutorGender(code: LearningLanguageCode | string | null | undefined): TutorGender {
+  return PARTNERS[getLearningLanguage(code).code].default;
+}
+
+/** 이 언어의 여자·남자 튜터 — 고르는 칸에 이름을 보여 줄 때. */
+export function tutorChoices(code: LearningLanguageCode | string | null | undefined): Record<TutorGender, string> {
+  const profile = PARTNERS[getLearningLanguage(code).code];
+  return { f: profile.f.givenName, m: profile.m.givenName };
+}
+
+/** 튜터 목소리 — 서버(/api/tts `tutor`)와 통화가 같은 표를 읽는다. */
+export function tutorVoice(code: LearningLanguageCode | string | null | undefined, gender?: TutorGender | null): string {
+  return chatPartnerForLanguage(code, gender).voice;
+}
 
 export function chatPartnerForLanguage(
   code: LearningLanguageCode | string | null | undefined,
+  gender?: TutorGender | null,
 ): ChatPartner {
   const lang = getLearningLanguage(code);
   const profile = PARTNERS[lang.code];
+  const who = isTutorGender(gender) ? gender : profile.default;
   return {
-    givenName: profile.givenName,
+    givenName: profile[who].givenName,
     countryEn: profile.countryEn,
     flagCountry: lang.flagCountry,
     languageCode: lang.code,
+    gender: who,
+    voice: profile[who].voice,
   };
 }
 
 /** Identity block for chat/start prompts. Partner is a person, not a tutor. */
 export function conversationPartnerIdentity(
   targetLanguage: LearningLanguageCode | string | null | undefined,
+  gender?: TutorGender | null,
 ): string {
-  const partner = chatPartnerForLanguage(targetLanguage);
+  const partner = chatPartnerForLanguage(targetLanguage, gender);
   const language = learningLanguageName(partner.languageCode);
-  return `You are ${partner.givenName}, a native ${language} speaker from ${partner.countryEn}. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.`;
+  // 성별을 말해 둔다 — 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt 등)에서 이름·목소리와 맞게.
+  return `You are ${partner.givenName}, a native ${language} speaker from ${partner.countryEn}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.`;
 }

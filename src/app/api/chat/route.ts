@@ -46,7 +46,7 @@ import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
 } from "@/lib/conversationVoice";
-import { conversationPartnerIdentity } from "@/lib/chatPartner";
+import { conversationPartnerIdentity, isTutorGender, type TutorGender } from "@/lib/chatPartner";
 import {
   isConversationMode,
   type ConversationMode,
@@ -122,6 +122,8 @@ type ChatTurnOptions = {
    * 앱 언어로 쓰거나 막혔을 때 앱 언어 한 문장까지 섞을 수 있다 — bilingualBlock.
    */
   bilingual?: boolean;
+  /** 고른 튜터(여자·남자, lib/tutorGender.ts) — 이름·자기를 말하는 꼴. 없으면 그 언어의 예전 튜터. */
+  tutorGender?: TutorGender;
 };
 
 function resolveChatLanguages(body: {
@@ -289,7 +291,7 @@ function buildChatSystem(
   const targetName = learningLanguageName(targetLanguage);
   const voice = conversationVoicePrinciples(targetLanguage);
   const spoken = conversationKoreanParallel(interfaceLanguage, targetLanguage);
-  const identity = conversationPartnerIdentity(targetLanguage);
+  const identity = conversationPartnerIdentity(targetLanguage, options.tutorGender);
   const mode = options.conversationMode === "tutor" ? "tutor" : "native";
   const tutorBlock =
     mode === "tutor"
@@ -853,6 +855,7 @@ async function runStart(
   recent: string[],
   langs: ChatLanguages,
   practice: PracticeGoal | null = null,
+  tutorGender: TutorGender | null = null,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
   const targetName = learningLanguageName(langs.targetLanguage);
   const spokenRule = conversationKoreanParallel(
@@ -866,7 +869,7 @@ async function runStart(
         role: "system",
         content: `Start a casual ${targetName} conversation. You are not a tutor opening a lesson.
 
-${conversationPartnerIdentity(langs.targetLanguage)}
+${conversationPartnerIdentity(langs.targetLanguage, tutorGender)}
 ${conversationVoicePrinciples(langs.targetLanguage)}
 ${spokenRule}
 
@@ -1061,6 +1064,7 @@ export async function POST(request: NextRequest) {
     purpose?: unknown;
     practice?: unknown;
     stream?: unknown;
+    tutorGender?: unknown;
   };
   try {
     body = await request.json();
@@ -1087,7 +1091,7 @@ export async function POST(request: NextRequest) {
     }
     try {
       void meterRequest(request, "chatStart");
-      const data = await runStart(openai, recent, langs, practice);
+      const data = await runStart(openai, recent, langs, practice, isTutorGender(body.tutorGender) ? body.tutorGender : null);
       return jsonWithCors(request, data);
     } catch (error) {
       console.error("[chat-start]", error);
@@ -1312,6 +1316,7 @@ export async function POST(request: NextRequest) {
       imageDataUrl,
       ownLanguage: body.ownLanguage === true,
       bilingual: body.bilingual === true && langs.interfaceLanguage !== langs.targetLanguage,
+      ...(isTutorGender(body.tutorGender) ? { tutorGender: body.tutorGender } : {}),
       brief,
       practice,
     };

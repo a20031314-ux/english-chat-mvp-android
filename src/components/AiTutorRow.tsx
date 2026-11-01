@@ -2,6 +2,7 @@
 
 import type { UICopy } from "@/lib/copy";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import { useTutorGender } from "@/lib/tutorGender";
 import { AiAvatar } from "@/components/AiTutorProfile";
 
 /**
@@ -23,7 +24,7 @@ export function AiTutorRow({
   onChat: () => void;
   onCall: () => void;
 }) {
-  const partner = chatPartnerForLanguage(targetLanguage);
+  const partner = chatPartnerForLanguage(targetLanguage, useTutorGender(targetLanguage));
   return (
     <div className="flex items-center gap-2 rounded-xl border border-line bg-surface p-2">
       <button type="button" onClick={onChat} className="flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 text-start hover:bg-white/5">

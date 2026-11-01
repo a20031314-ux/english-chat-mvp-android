@@ -56,6 +56,8 @@ import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
 import { tutorIsBilingual } from "@/lib/tutorLanguage";
+import { readTutorGender } from "@/lib/tutorGender";
+import { withTutorGender } from "@/lib/roleplay/justTalk";
 
 /** How long to wait for the rest of a sentence the pause cut off. */
 const REST_OF_SENTENCE_MS = 3500;
@@ -129,7 +131,10 @@ export function RoleplayScreen({
   useEffect(() => enterScene("call"), []);
   const { isPremium } = usePremium();
   const timeLine = useCallTimeLine(ui, isPremium);
-  const scenario = findScenario(scenarioId);
+  // 그냥 대화는 고른 튜터(여자·남자)의 목소리로 — 통화 동안은 처음 값 그대로(lib/tutorGender.ts, 2026-11-01).
+  const catalogScene = findScenario(scenarioId);
+  const [tutorGender] = useState(() => readTutorGender(catalogScene?.language));
+  const scenario = useMemo(() => (catalogScene ? withTutorGender(catalogScene, tutorGender) : null), [catalogScene, tutorGender]);
   const analysis = useEnglishAnalysisOptional();
   const [state, setState] = useState<SessionState | null>(null);
   const [instruction, setInstruction] = useState<Instruction | null>(null);
@@ -377,6 +382,7 @@ export function RoleplayScreen({
         history: rawLines(instruction.request.history, memory),
         context: memory.text,
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
+        ...(scenario.openEnded ? { tutorGender } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -831,6 +837,7 @@ export function RoleplayScreen({
           onClose={onClose}
         />
         <CallSummary
+          gender={tutorGender}
           ui={ui}
           language={scenario.language}
           seconds={Math.max(0, Math.round(((overAt || startedAt.current) - startedAt.current) / 1000))}
@@ -928,6 +935,7 @@ export function RoleplayScreen({
         </div>
       ) : null}
       <CallStage
+        gender={tutorGender}
         language={scenario.language}
         speaker={speaker}
         timeLeft={timeLine}

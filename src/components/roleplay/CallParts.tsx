@@ -9,7 +9,8 @@
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
 import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
-import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
+import { useTutorGender } from "@/lib/tutorGender";
 import type { UICopy } from "@/lib/copy";
 import type { Instruction } from "@/lib/roleplay/session";
 
@@ -42,8 +43,11 @@ export function CallStage({
   timeLeft,
   caption,
   goal,
+  gender,
 }: {
   language: string;
+  /** 이 통화의 튜터(통화를 열 때 고정). 없으면 지금 고른 튜터. */
+  gender?: TutorGender;
   speaker: CallSpeaker;
   /** 오늘 남은 통화 시간 한 줄(서버가 답을 못 하면 null). */
   timeLeft: string | null;
@@ -51,7 +55,8 @@ export function CallStage({
   /** 대본 장면이면 지금 할 일(열린 대화에는 없음). */
   goal?: string;
 }) {
-  const partner = chatPartnerForLanguage(language);
+  const chosen = useTutorGender(language);
+  const partner = chatPartnerForLanguage(language, gender ?? chosen);
   const clock = useCallClock();
   return (
     <div className="flex min-h-0 flex-1 flex-col" data-call-stage>
@@ -215,13 +220,16 @@ export function CallSummary({
   language,
   seconds,
   tally,
+  gender,
 }: {
   ui: UICopy;
   language: string;
+  gender?: TutorGender;
   seconds: number;
   tally: { fixed: number; hints: number; missed: number };
 }) {
-  const partner = chatPartnerForLanguage(language);
+  const chosen = useTutorGender(language);
+  const partner = chatPartnerForLanguage(language, gender ?? chosen);
   const time = formatCallTime(seconds);
   const chips = [
     { icon: "✎", n: tally.fixed, label: ui.roleplayBetter },

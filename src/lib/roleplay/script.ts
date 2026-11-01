@@ -130,6 +130,11 @@ export type RoleplayScenario = {
    */
   voice: string;
   /**
+   * 녹음 파일이 이 목소리가 아니다 — 튜터 목소리를 바꾼 "그냥 대화"(justTalk `withTutorGender`).
+   * 그러면 녹음된 인사·작별도 파일 대신 이 목소리로 합성한다(없는 파일을 부르면 폰에서 소리 없이 넘어감, session.ts).
+   */
+  unrecorded?: boolean;
+  /**
    * The conversation itself is the point, and there is no script to return to.
    *
    * Set on the scene a learner opens without choosing a topic. Its one learner

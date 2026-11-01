@@ -874,7 +874,8 @@
     "examRecognize": "見分ける",
     "examRecall": "思い出す",
     "examReply": "会話の返事",
-    "examDialog": "短い会話"
+    "examDialog": "短い会話",
+    "tutorVoice": "チューターの声"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1751,7 +1752,8 @@
     "examRecognize": "辨认",
     "examRecall": "回想",
     "examReply": "对话应答",
-    "examDialog": "短对话"
+    "examDialog": "短对话",
+    "tutorVoice": "导师的声音"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2631,7 +2633,8 @@
     "examRecognize": "Nhận ra",
     "examRecall": "Nhớ lại",
     "examReply": "Trả lời",
-    "examDialog": "Hội thoại ngắn"
+    "examDialog": "Hội thoại ngắn",
+    "tutorVoice": "Giọng gia sư"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3516,7 +3519,8 @@
     "examRecognize": "Reconnaître",
     "examRecall": "Se rappeler",
     "examReply": "Réponses",
-    "examDialog": "Dialogues courts"
+    "examDialog": "Dialogues courts",
+    "tutorVoice": "Voix du tuteur"
   },
   "it": {
     "archive": "Report",
@@ -4592,7 +4596,8 @@
     "examRecognize": "Riconoscere",
     "examRecall": "Ricordare",
     "examReply": "Risposte",
-    "examDialog": "Dialoghi brevi"
+    "examDialog": "Dialoghi brevi",
+    "tutorVoice": "Voce del tutor"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5480,7 +5485,8 @@
     "examRecognize": "Reconhecer",
     "examRecall": "Lembrar",
     "examReply": "Respostas",
-    "examDialog": "Diálogos curtos"
+    "examDialog": "Diálogos curtos",
+    "tutorVoice": "Voz do tutor"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6554,7 +6560,8 @@
     "examRecognize": "Узнать",
     "examRecall": "Вспомнить",
     "examReply": "Ответы",
-    "examDialog": "Короткие диалоги"
+    "examDialog": "Короткие диалоги",
+    "tutorVoice": "Голос репетитора"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7438,7 +7445,8 @@
     "examRecognize": "Mengenali",
     "examRecall": "Mengingat",
     "examReply": "Jawaban",
-    "examDialog": "Dialog pendek"
+    "examDialog": "Dialog pendek",
+    "tutorVoice": "Suara tutor"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8315,7 +8323,8 @@
     "examRecognize": "التعرّف",
     "examRecall": "التذكّر",
     "examReply": "الردود",
-    "examDialog": "حوارات قصيرة"
+    "examDialog": "حوارات قصيرة",
+    "tutorVoice": "صوت المعلّم"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9192,7 +9201,8 @@
     "examRecognize": "จำแนก",
     "examRecall": "นึกออก",
     "examReply": "การตอบ",
-    "examDialog": "บทสนทนาสั้น"
+    "examDialog": "บทสนทนาสั้น",
+    "tutorVoice": "เสียงติวเตอร์"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -10069,6 +10079,7 @@
     "examRecognize": "पहचानना",
     "examRecall": "याद करना",
     "examReply": "जवाब",
-    "examDialog": "छोटी बातचीत"
+    "examDialog": "छोटी बातचीत",
+    "tutorVoice": "ट्यूटर की आवाज़"
   }
 }

@@ -50,7 +50,8 @@ import {
   learningLanguageTextDir,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import { chatPartnerForLanguage, tutorChoices, type TutorGender } from "@/lib/chatPartner";
+import { useTutorGender, writeTutorGender } from "@/lib/tutorGender";
 import {
   detectConversationMode,
   type ConversationMode,
@@ -814,7 +815,9 @@ export function ChatWindow({
   const [conversationMode, setConversationMode] =
     useState<ConversationMode>("native");
   const [reportTarget, setReportTarget] = useState<ReportTarget | null>(null);
-  const partner = chatPartnerForLanguage(sessionLanguageCode);
+  // 고른 튜터(여자·남자, AI 대화 ⋮ "튜터 목소리" — lib/tutorGender.ts): 이름·답의 말투·듣기 목소리.
+  const tutorGender = useTutorGender(sessionLanguageCode);
+  const partner = chatPartnerForLanguage(sessionLanguageCode, tutorGender);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
   // Every plan but premium's old terms has a daily number (billing/plans.ts).
@@ -1113,6 +1116,7 @@ export function ChatWindow({
       ...(imageDataUrl ? { imageDataUrl } : {}),
       ...(ownLanguage ? { ownLanguage: true } : {}),
       ...(tutorLanguage === "both" && bilingualPossible(sessionLanguageCode, locale) ? { bilingual: true } : {}),
+      tutorGender,
       ...(practice ? { practice: practice.goal } : {}),
       recent: turns
         .flatMap((turn) => {
@@ -1517,6 +1521,7 @@ export function ChatWindow({
         },
         body: JSON.stringify({
           mode: "start",
+          tutorGender,
           locale,
           interfaceLanguage: locale,
           targetLanguage: replacing ? targetLanguage : sessionLanguageCode,
@@ -1796,6 +1801,26 @@ export function ChatWindow({
                     </div>
                   </div>
                 ) : null}
+                {/* 튜터 목소리: 이 언어의 여자·남자 튜터(이름 = 버튼), 채팅·통화·듣기가 같이 따라감(lib/tutorGender.ts, 2026-11-01). */}
+                <div className="border-t border-line px-3 py-2" data-tutor-gender>
+                  <p className="text-meta text-slate-400">{ui.tutorVoice}</p>
+                  <div className="mt-1 flex gap-1" role="group" aria-label={ui.tutorVoice}>
+                    {(["f", "m"] as const satisfies readonly TutorGender[]).map((gender) => (
+                      <button
+                        key={gender}
+                        type="button"
+                        aria-pressed={tutorGender === gender}
+                        onClick={() => writeTutorGender(sessionLanguageCode, gender)}
+                        className={`flex-1 rounded-lg px-2 py-1 text-xs ${
+                          tutorGender === gender ? "bg-platinum text-slate-900" : "text-slate-200 hover:bg-white/10"
+                        }`}
+                      >
+                        <span aria-hidden>{gender === "f" ? "♀" : "♂"} </span>
+                        <bdi>{tutorChoices(sessionLanguageCode)[gender]}</bdi>
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 {/* 대화의 튜터 문장을 모두의 퀴즈 예문으로(걸러서, lib/curriculum/talkQuiz.ts — 기본 켬, 처리방침 2026-11-01). */}
                 <button
                   type="button"

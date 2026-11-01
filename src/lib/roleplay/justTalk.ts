@@ -1,3 +1,4 @@
+import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import type { LearningLanguageCode } from "../learningLanguages.ts";
 import type { RoleplayScenario, SentenceBank } from "./script.ts";
 
@@ -29,6 +30,11 @@ type JustTalk = {
   title: string;
   voice: string;
   greeting: string;
+  /**
+   * 말하는 사람의 성에 따라 꼴이 바뀌는 인사(ru Рад/Рада, ar سعيد/سعيدة) — 고른 튜터가 그 성이면 이 줄(녹음 없이 합성).
+   * `greeting`은 녹음된 목소리(`voice`)의 성 꼴.
+   */
+  greetingAs?: Partial<Record<TutorGender, string>>;
   goodbye: string;
   /**
    * Gloss for both lines, in the learner's own language. Undefined where the
@@ -152,6 +158,7 @@ const LANGUAGES: JustTalk[] = [
     title: "Просто поболтать",
     voice: "ash",
     greeting: "Привет! Рад тебя видеть. Как прошёл день?",
+    greetingAs: { f: "Привет! Рада тебя видеть. Как прошёл день?" },
     goodbye: "Ладно, было очень приятно поговорить. До скорого!",
     greetingGloss: HELLO_GLOSS,
     goodbyeGloss: BYE_GLOSS,
@@ -162,6 +169,7 @@ const LANGUAGES: JustTalk[] = [
     title: "مجرد دردشة",
     voice: "onyx",
     greeting: "أهلاً! سعيد برؤيتك. كيف كان يومك؟",
+    greetingAs: { f: "أهلاً! سعيدة برؤيتك. كيف كان يومك؟" },
     goodbye: "طيب، سعدت بالحديث معك. إلى اللقاء!",
     greetingGloss: HELLO_GLOSS,
     goodbyeGloss: BYE_GLOSS,
@@ -451,6 +459,12 @@ export function justTalkSentences(): Record<string, SentenceBank> {
         text: entry.goodbye,
         ...(entry.goodbyeGloss ? { translation: entry.goodbyeGloss } : {}),
       },
+      ...Object.fromEntries(
+        Object.entries(entry.greetingAs ?? {}).map(([gender, text]) => [
+          `${JUST_TALK_HELLO}.${gender}`,
+          { text, ...(entry.greetingGloss ? { translation: entry.greetingGloss } : {}) },
+        ]),
+      ),
       ...(TALK_LINES[entry.language] ?? {}),
     };
   }
@@ -491,4 +505,25 @@ export function justTalkScenarios(): RoleplayScenario[] {
       bye: { type: "tutor", id: "bye", say: JUST_TALK_BYE, next: null },
     },
   }));
+}
+
+/**
+ * "그냥 대화"를 고른 튜터(여자·남자, lib/tutorGender.ts)의 목소리로 — 채팅 듣기와 같은 사람(2026-11-01).
+ * 녹음된 인사·작별과 목소리가 다르면 `unrecorded`(두 줄도 합성, 장면 목소리라 모두와 나누는 캐시에 한 번).
+ * 대본 장면(바리스타 등)은 그 장면 사람의 목소리 그대로.
+ */
+export function withTutorGender(scenario: RoleplayScenario, gender: TutorGender | null | undefined): RoleplayScenario {
+  if (scenario.id !== justTalkId(scenario.language)) return scenario;
+  const partner = chatPartnerForLanguage(scenario.language, gender);
+  const gendered = LANGUAGES.find((entry) => entry.language === scenario.language)?.greetingAs?.[partner.gender];
+  if (partner.voice === scenario.voice && !gendered) return scenario;
+  const hi = scenario.nodes.hi;
+  return {
+    ...scenario,
+    voice: partner.voice,
+    unrecorded: true,
+    ...(gendered && hi?.type === "tutor"
+      ? { nodes: { ...scenario.nodes, hi: { ...hi, say: `${JUST_TALK_HELLO}.${partner.gender}` } } }
+      : {}),
+  };
 }

@@ -3,7 +3,7 @@ import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/c
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
-import { realtimeCallVoice } from "@/lib/realtimeCallSession";
+import { isTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { realtimeTtsModel, speechTtsModel, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
@@ -76,6 +76,7 @@ async function synthesize(
   rawText: string,
   rawLang: string,
   rawVoice?: unknown,
+  rawTutor?: unknown,
 ) {
   const client = getOpenAIClient();
   if (!client) {
@@ -100,7 +101,10 @@ async function synthesize(
   const spoken = spokenFormForTts(text, lang);
   const MODEL = speechTtsModel();
   const useInstructions = !MODEL.startsWith("tts-1");
-  const voice = isTtsVoice(rawVoice) ? rawVoice : realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang)));
+  // 장면 목소리가 없으면 그 언어 튜터의 목소리 — 고른 여자·남자(`tutor` f|m, lib/tutorGender.ts), 안 보낸 예전 앱은 그 언어의 예전 튜터(2026-11-01).
+  const voice = isTtsVoice(rawVoice)
+    ? rawVoice
+    : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), isTutorGender(rawTutor) ? rawTutor : null);
   const delivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
   const shared = mayBeShared(request, rawVoice);
 
@@ -213,11 +217,11 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const text = request.nextUrl.searchParams.get("text") ?? "";
   const lang = request.nextUrl.searchParams.get("lang") ?? "en-US";
-  return synthesize(request, text, lang, request.nextUrl.searchParams.get("voice"));
+  return synthesize(request, text, lang, request.nextUrl.searchParams.get("voice"), request.nextUrl.searchParams.get("tutor"));
 }
 
 export async function POST(request: NextRequest) {
-  let body: { text?: unknown; lang?: unknown; voice?: unknown };
+  let body: { text?: unknown; lang?: unknown; voice?: unknown; tutor?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -226,5 +230,5 @@ export async function POST(request: NextRequest) {
 
   const text = typeof body.text === "string" ? body.text : "";
   const lang = typeof body.lang === "string" ? body.lang : "en-US";
-  return synthesize(request, text, lang, body.voice);
+  return synthesize(request, text, lang, body.voice, body.tutor);
 }

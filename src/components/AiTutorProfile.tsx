@@ -5,6 +5,7 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import { useTutorGender } from "@/lib/tutorGender";
 
 /**
  * AI 튜터도 사람 중 하나(2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합해줘. 프로필 탭에 가면 AI 튜터가 있고 대화를 걸 수 있는 흐름으로").
@@ -35,7 +36,7 @@ export function AiAvatar({ size = 60 }: { size?: number }) {
 }
 
 function TutorName({ targetLanguage, className = "" }: { targetLanguage: string; className?: string }) {
-  const partner = chatPartnerForLanguage(targetLanguage);
+  const partner = chatPartnerForLanguage(targetLanguage, useTutorGender(targetLanguage));
   return (
     <span className={`flex min-w-0 items-center gap-1.5 ${className}`}>
       <bdi className="truncate">{partner.givenName}</bdi>

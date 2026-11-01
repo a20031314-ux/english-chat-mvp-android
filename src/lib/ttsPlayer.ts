@@ -1,5 +1,6 @@
-import { spokenFormForTts } from "@/lib/speech";
+import { speechLangPrefix, spokenFormForTts } from "@/lib/speech";
 import { apiUrl } from "@/lib/apiBase";
+import { readTutorGender } from "@/lib/tutorGender";
 
 const PCM_RATE = 24_000;
 const MAX_CACHE = 64;
@@ -23,8 +24,16 @@ let playGen = 0;
 let unlocked = false;
 let activePrefetch = 0;
 
+/**
+ * 목소리를 따로 정하지 않은 줄은 고른 튜터(여자·남자, lib/tutorGender.ts)의 목소리로 — 서버가 `tutor`로 고른다.
+ * 장면 목소리(`voice`)와 달리 모두와 나누는 캐시에 들어가지 않는다(내가 쓴 문장일 수 있어서, api/tts mayBeShared).
+ */
+function tutorOf(lang: string, voice?: string): string | undefined {
+  return voice ? undefined : readTutorGender(speechLangPrefix(lang));
+}
+
 function cacheKey(lang: string, spoken: string, voice?: string): string {
-  return voice ? `${lang}:${voice}:${spoken}` : `${lang}:${spoken}`;
+  return voice ? `${lang}:${voice}:${spoken}` : `${lang}:${tutorOf(lang)}:${spoken}`;
 }
 
 function notify(state: StreamState) {
@@ -186,7 +195,8 @@ function ttsUrl(
   lang: string,
   voice?: string,
 ): { url: string; init: RequestInit } {
-  const params = new URLSearchParams({ text: spoken, lang, ...(voice ? { voice } : {}) });
+  const tutor = tutorOf(lang, voice);
+  const params = new URLSearchParams({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}) });
   const query = params.toString();
   if (query.length < GET_QUERY_LIMIT) {
     return { url: apiUrl(`/api/tts?${query}`), init: { method: "GET" } };
@@ -196,7 +206,7 @@ function ttsUrl(
     init: {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: spoken, lang, ...(voice ? { voice } : {}) }),
+      body: JSON.stringify({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}) }),
     },
   };
 }

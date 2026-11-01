@@ -304,7 +304,7 @@ function recorded(
    * silence. Read off a real conversation: four bank lines in a row appear in
    * the transcript and not one of them produced a request for speech.
    */
-  const shipsAsFile = !scenario.repertoire?.includes(id);
+  const shipsAsFile = !scenario.unrecorded && !scenario.repertoire?.includes(id);
   return {
     text: sentence.text,
     translation: sentence.translation,

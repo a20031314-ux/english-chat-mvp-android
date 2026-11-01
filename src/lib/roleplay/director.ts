@@ -1,3 +1,4 @@
+import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
 import {
   interfaceLanguageName,
@@ -133,6 +134,11 @@ export type DirectorRequest = {
    * 이때 `heard`는 비어 있고, 학습자 줄도 없다.
    */
   missed?: boolean;
+  /**
+   * 고른 튜터(여자·남자, lib/tutorGender.ts) — "그냥 대화"에서만. 이름·성별을 말해 둬서 화면의 이름·목소리와 맞고,
+   * 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt)에서 자기를 말하는 꼴이 맞게. 없으면 그 언어의 예전 튜터.
+   */
+  tutorGender?: TutorGender;
 };
 
 /** What the character says: a recorded line by id, or one written now. */
@@ -557,7 +563,11 @@ export function tutorSystemPrompt(input: {
   const steps = scriptSteps(scenario);
   const quote = (id?: string) => (id && bank[id] ? `"${bank[id]!.text}"` : "");
 
-  const fixed = `You are the ${role}. ${scenario.setting}
+  const partner = scenario.openEnded ? chatPartnerForLanguage(scenario.language, request.tutorGender) : null;
+  const who = partner
+    ? `You are ${partner.givenName}, the ${role} — a ${partner.gender === "f" ? "woman" : "man"}; when you speak about yourself, use the forms a ${partner.gender === "f" ? "woman" : "man"} uses.`
+    : `You are the ${role}.`;
+  const fixed = `${who} ${scenario.setting}
 
 You are talking out loud with someone who is learning ${target}. Everything said on your side of this conversation so far was you, and you carry on as yourself. Never mention a tutor, practice, mistakes, lessons or a script, and never step out of the scene.
 
