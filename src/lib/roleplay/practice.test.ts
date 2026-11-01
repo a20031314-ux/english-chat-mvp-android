@@ -4,6 +4,7 @@ import {
   compareToTarget,
   parsePractice,
   practicePrompt,
+  shadowPasses,
   troubleWords,
   type WordOutcome,
 } from "./practice.ts";
@@ -223,4 +224,19 @@ test("줄임말만 다르면 같은 말: I'm ↔ I am, don't ↔ do not (다른 
   assert.equal(compareToTarget("C'est bon.", "c'est bon").clean, true);
   assert.equal(compareToTarget("Soy de Corea.", "Estoy de Corea").clean, false);
   assert.equal(compareToTarget("はじめまして", "はじめまして").clean, true);
+});
+
+test("따라 말하기 통과는 모델 없이 낱말 대조만(2026-11-01) — 짧은 줄은 그대로, 긴 줄은 한 낱말 차이까지", () => {
+  // 스페인어(영어 아닌 라틴): 짧은 줄은 한 낱말만 달라도 다시.
+  assert.equal(shadowPasses("Un café, por favor.", "un café por favor"), true);
+  assert.equal(shadowPasses("Un café, por favor.", "un té por favor"), false);
+  assert.equal(shadowPasses("Un café, por favor.", ""), false);
+  // 긴 줄: 다섯 낱말 중 넷이 맞고 덧붙은 말 없음 → 통과, 둘 틀리면 다시.
+  assert.equal(shadowPasses("Quiero reservar una mesa para dos personas.", "quiero reservar una mesa para tres personas"), true);
+  assert.equal(shadowPasses("Quiero reservar una mesa para dos personas.", "quiero comprar una casa para tres personas"), false);
+  // 일본어(띄어쓰기 없음): 낱말로 잘려 세어진다 — 통째로 한 낱말이 되지 않는다.
+  assert.equal(shadowPasses("コーヒーをください。", "コーヒーをください"), true);
+  assert.equal(shadowPasses("コーヒーをください。", "お茶をください"), false);
+  // 태국어 모음 부호(\p{M})가 다르면 다른 낱말.
+  assert.equal(shadowPasses("ขอกาแฟ", "ขอกาแฟ"), true);
 });

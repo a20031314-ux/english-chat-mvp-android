@@ -67,13 +67,14 @@ const two: StageScript = {
 test("통과: 내 줄이 모두, 통과 방식(1~2단계 첫 글자만·가리기)으로, 원문을 열지 않고 맞아야", () => {
   const ok = (mode: LineRun["mode"], revealed = false): LineRun => ({ clean: true, mode, revealed });
   assert.equal(runPasses(two, { 1: ok("hide"), 3: ok("hint") }), true);
-  assert.equal(runPasses(two, { 1: ok("hide"), 3: ok("shadow") }), false, "따라 말하기는 연습");
+  // 2026-11-01부터 My 대본은 따라 말하기 하나 — 통과로 센다.
+  assert.equal(runPasses(two, { 1: ok("hide"), 3: ok("shadow") }), true, "따라 말하기도 통과");
   assert.equal(runPasses(two, { 1: ok("hide"), 3: ok("hide", true) }), false, "원문을 열었으면");
   assert.equal(runPasses(two, { 1: ok("hide") }), false, "안 한 줄");
   assert.equal(runPasses({ ...two, stage: 3 }, { 1: ok("own"), 3: ok("hide") }), true);
   assert.equal(runPasses({ ...two, stage: 3 }, { 1: ok("hint"), 3: ok("hide") }), false);
-  assert.deepEqual(modesFor(1), ["shadow", "hint", "hide", "choose", "order"]);
-  assert.deepEqual(modesFor(4), ["shadow", "hide", "own", "choose", "order"]);
+  assert.deepEqual(modesFor(1), ["shadow"]);
+  assert.deepEqual(modesFor(4), ["shadow"]);
   // 고르기·맞추기는 통과 기준이 "모든 방식"일 때만.
   assert.equal(runPasses(two, { 1: ok("choose"), 3: ok("order") }), false, "기본은 말하기만");
   assert.equal(runPasses(two, { 1: ok("choose"), 3: ok("hide") }, "any"), true);
@@ -86,7 +87,7 @@ test("통과: 내 줄이 모두, 통과 방식(1~2단계 첫 글자만·가리�
 test("통과까지 남은 줄: 틀림·원문 열어 봄·따라 말하기·안 한 줄, 상대 줄은 빼고", () => {
   const ok = (mode: LineRun["mode"], revealed = false, clean = true): LineRun => ({ clean, mode, revealed });
   assert.deepEqual(linesToRedo(two, { 1: ok("hide"), 3: ok("hint") }), []);
-  assert.deepEqual(linesToRedo(two, { 1: ok("hide", false, false), 3: ok("shadow") }), [1, 3]);
+  assert.deepEqual(linesToRedo(two, { 1: ok("hide", false, false), 3: ok("shadow") }), [1]);
   assert.deepEqual(linesToRedo(two, { 1: ok("hide", true) }), [1, 3]);
   // 3단계 이상은 내 말로도 통과(일본어 같은 띄어쓰기 없는 대본도 줄 번호로만 셈).
   assert.deepEqual(linesToRedo({ ...two, stage: 3 }, { 1: ok("own"), 3: ok("hint") }), [3]);
@@ -190,10 +191,11 @@ test("단계 문법은 모두 어느 대본엔가(내 줄에서) — 오늘의 �
   }
 });
 
-test("진행: 말해 본 줄·통과로 셈해지는 줄 — 따라 말하기로 다 말하면 학습 완료지만 통과 0", () => {
+test("진행: 말해 본 줄·통과로 셈해지는 줄 — 따라 말하기로 맞게 다 말하면 통과까지", () => {
   const ok = (mode: LineRun["mode"], revealed = false, clean = true): LineRun => ({ clean, mode, revealed });
   assert.deepEqual(scriptProgress(two, {}), { total: 2, said: 0, passed: 0 });
-  assert.deepEqual(scriptProgress(two, { 1: ok("shadow"), 3: ok("shadow") }), { total: 2, said: 2, passed: 0 });
+  assert.deepEqual(scriptProgress(two, { 1: ok("shadow"), 3: ok("shadow") }), { total: 2, said: 2, passed: 2 });
+  assert.deepEqual(scriptProgress(two, { 1: ok("shadow", false, false), 3: ok("shadow", true) }), { total: 2, said: 2, passed: 0 });
   assert.deepEqual(scriptProgress(two, { 1: ok("hint"), 3: ok("hide", false, false) }), { total: 2, said: 2, passed: 1 });
   // 일본어 대본도 줄 단위(띄어쓰기와 무관)
   const ja = { ...two, lines: two.lines.map((line) => ({ ...line, text: line.who === "me" ? "はじめまして" : "こんにちは" })) };

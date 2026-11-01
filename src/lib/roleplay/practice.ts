@@ -215,6 +215,20 @@ export function compareToTarget(target: string, heard: string): Comparison {
   return { outcomes, added, clean };
 }
 
+/**
+ * My 대본 따라 말하기의 통과(2026-11-01 사용자 "채팅 > 따라 말하기로, 정해진 답과 단순 대조" — 모델 판단 없이).
+ * 낱말이 다 맞으면 통과. 긴 줄(낱말 5개 이상)은 받아쓰기가 같은 소리를 다른 글자로 적는 것(はじめ ↔ 初め)을 봐줘
+ * 80% 넘게 맞고 덧붙은 말이 하나 이하면 통과. 짧은 줄은 낱말 하나만 달라도 다시.
+ */
+export function shadowPasses(target: string, heard: string, compared: Comparison = compareToTarget(target, heard)): boolean {
+  if (!heard.trim()) return false;
+  if (compared.clean) return true;
+  const total = compared.outcomes.length;
+  if (total < 5) return false;
+  const kept = compared.outcomes.filter((outcome) => outcome.kind === "kept").length;
+  return kept / total >= 0.8 && compared.added.length <= 1;
+}
+
 const CONTRACTED: Record<string, string[]> = {
   "can't": ["can", "not"],
   cannot: ["can", "not"],

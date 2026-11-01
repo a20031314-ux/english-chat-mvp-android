@@ -133,19 +133,24 @@ export function registerScripts(language: string, scripts: unknown): boolean {
   return true;
 }
 
-/** 그 단계에서 고를 수 있는 보는 방식(앞 단계는 첫 글자 힌트, 뒤 단계는 내 말로). */
+/**
+ * My 대본을 하는 방식 — 따라 말하기 하나(2026-11-01 사용자 "My 대본은 채팅 > 따라 말하기로, 정해진 답과 단순 대조",
+ * 판단 모델 원가를 없앰). 예전 방식(첫 글자만·가리기·내 말로·고르기·맞추기)은 이 폰에 남은 지난 결과를 읽을 때만 쓰인다.
+ * 떠올려 말하기는 꺼내 쓰기·문장구조 수업 대화에 있고, 대본을 통화 탭으로 옮기는 설계는 따로(hub/drafts).
+ */
 export function modesFor(stage: number): ScriptMode[] {
-  return stage <= 2 ? ["shadow", "hint", "hide", "choose", "order"] : ["shadow", "hide", "own", "choose", "order"];
+  void stage;
+  return ["shadow"];
 }
 
 /**
- * 이 방식으로 맞힌 줄이 통과로 셈해지는지 — 따라 말하기(원문을 보며)는 연습, 통과는 아니다.
+ * 이 방식으로 맞힌 줄이 통과로 셈해지는지 — 따라 말하기는 2026-11-01부터 My 대본의 유일한 방식이라 통과로 센다(예전엔 연습만).
  * 고르기·맞추기는 사용자가 통과 기준을 "모든 방식"으로 둘 때만(rule any, 2026-10-29 사용자 "통과 기준도 정할 수 있도록").
  */
 export function countsForPass(stage: number, mode: ScriptMode, rule: "speak" | "any" = "speak"): boolean {
   if (isTapMode(mode)) return rule === "any";
   // 내 말로(뜻만 보고 말하기)는 어느 단계든 통과로 — 1~2단계 상황 대본에는 이 방식이 없고, 은행 대본은 이 방식뿐(2026-10-30).
-  if (mode === "own") return true;
+  if (mode === "own" || mode === "shadow") return true;
   return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide";
 }
 

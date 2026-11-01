@@ -66,7 +66,11 @@ export const HEAVY_DAY = { callMinutes: 7.1, chat: 3, packs: 1, scriptLines: 12,
 // 대본 한 줄: 받아쓰기 + 판단(Haiku scriptJudge) + 틀림이면 다시 보기(Sonnet scriptRecheck).
 // 틀림 몫은 어림(실측 전) — 운영 modelCalls의 scriptRecheck ÷ scriptJudge로 바꾼다.
 export const SCRIPT_RECHECK_SHARE = { share: 0.3, source: "어림 2026-10-29(가상 사용자 점검은 틀린 줄을 절반 넣어 대표가 아님)" };
-export const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("scriptJudge") + SCRIPT_RECHECK_SHARE.share * opUsd("scriptRecheck");
+// 판단을 거치는 줄의 몫(2026-11-01): My 대본은 따라 말하기 + 낱말 대조라 받아쓰기만 들고, 판단은 문장구조 수업 대화·꺼내 쓰기·
+// 퀴즈 말하기·문장구조 예문(같은 하루 한도 dailyScriptLines)만. 오늘 할 것 한 번이면 수업 대화 3 + 꺼내 쓰기 5 vs 대본 장면 5~8줄 — 어림 절반.
+// 운영 modelCalls의 scriptJudge ÷ 대본 줄 수로 바꾼다.
+export const SCRIPT_JUDGED_SHARE = { share: 0.5, source: "어림 2026-11-01(My 대본 따라 말하기는 모델 없음, 문장구조·꺼내 쓰기만 판단)" };
+export const scriptLineUsd = () => opUsd("roleplayListen") + SCRIPT_JUDGED_SHARE.share * (opUsd("scriptJudge") + SCRIPT_RECHECK_SHARE.share * opUsd("scriptRecheck"));
 
 const krw = (usd) => usd * KRW_PER_USD.rate;
 const won = (n) => `${Math.round(n).toLocaleString("ko-KR")}원`;

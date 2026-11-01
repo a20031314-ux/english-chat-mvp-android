@@ -953,6 +953,8 @@ export async function fetchPractice(input: {
   unclear?: string[];
   /** 대본 줄 보는 방식(따라 말하기 "shadow"면 원문 그대로, 그 밖엔 맞게 바꿔 말한 것도 통과 — 2026-10-28). */
   mode?: string;
+  /** My 대본 따라 말하기(2026-11-01): 서버는 모델 없이 한도·기록만 — 판단은 앱의 낱말 대조(practice.ts shadowPasses). */
+  compareOnly?: boolean;
   /** 오늘 대본 한도에 닿았을 때(429 SCRIPT_LIMIT). */
   onLimit?: () => void;
 }): Promise<Practice | null> {
@@ -972,6 +974,7 @@ export async function fetchPractice(input: {
         ...(input.frame ? { frame: input.frame } : {}),
         ...(input.scriptId ? { scriptId: input.scriptId } : {}),
         ...(input.mode ? { mode: input.mode } : {}),
+        ...(input.compareOnly ? { check: "compare" } : {}),
         ...(input.unclear?.length ? { unclear: input.unclear } : {}),
       }),
     });
@@ -984,7 +987,8 @@ export async function fetchPractice(input: {
       console.error("[roleplay] practice failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as { note?: unknown; good?: unknown; verdict?: unknown; better?: unknown };
+    const body = (await response.json()) as { note?: unknown; good?: unknown; verdict?: unknown; better?: unknown; compareOnly?: unknown };
+    if (body.compareOnly === true) return { good: body.good === true, note: "" };
     if (typeof body.note !== "string" || !body.note.trim()) return null;
     const verdict = body.verdict === "natural" || body.verdict === "awkward" || body.verdict === "wrong" ? body.verdict : undefined;
     const better = typeof body.better === "string" && body.better.trim() ? body.better.trim() : undefined;

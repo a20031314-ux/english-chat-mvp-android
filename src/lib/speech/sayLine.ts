@@ -20,6 +20,8 @@ export async function sayLine(
     frame?: string;
     scriptId?: string;
     mode?: string;
+    /** My 대본 따라 말하기: 모델 판단 없이 낱말 대조만(서버는 한도·기록만, 2026-11-01). */
+    compareOnly?: boolean;
     onLimit?: () => void;
     /** 연습: 멈칫해도 끊지 않고 알린다(화면이 잘 모르겠어요·다 말했어요를 띄움, 2026-10-29). */
     patient?: boolean;
@@ -45,6 +47,7 @@ export async function sayLine(
       frame: input.frame,
       scriptId: input.scriptId,
       mode: input.mode,
+      compareOnly: input.compareOnly,
       onLimit: () => {
         limited = true;
         input.onLimit?.();

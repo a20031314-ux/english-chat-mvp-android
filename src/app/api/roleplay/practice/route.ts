@@ -9,7 +9,7 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, shadowPasses, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest, simDetail } from "@/lib/server/meterRequest";
@@ -76,6 +76,13 @@ export async function POST(request: NextRequest) {
     }
     // 대본·문장구조 한 줄을 말함 — 프로필 공부 기록 "말한 문장"(들린 말이 있을 때만).
     if (heard) after(() => studyTick(request, "lines"));
+    // My 대본 따라 말하기(2026-11-01 사용자 "정해진 답과 단순 대조"): 모델을 부르지 않는다 — 한도·공부 기록·발음 기록만,
+    // 통과는 앱이 낱말 대조로 정한다(practice.ts shadowPasses). 원가는 받아쓰기뿐.
+    if (body.check === "compare") {
+      const compared = compareToTarget(target, heard);
+      if (heard) after(() => recordPronunciation({ userId: requestUserId(request), language: scenario.language, clean: compared.clean }));
+      return jsonWithCors(request, { good: shadowPasses(target, heard, compared), note: "", compareOnly: true, outcomes: compared.outcomes });
+    }
   }
 
   // 뜻으로 판단하는 줄(떠올려 말하기·내 말로·문장구조)은 Sonnet(scriptJudge), 따라 말하기·통화 다시 말해보기는 낱말 대조라 Haiku.
