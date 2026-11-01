@@ -284,7 +284,7 @@ export function QuestionView({
       data-quiz-meta={quizMeta(question)}
       className="flex flex-col gap-3"
     >
-      {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30). Checks read data-kind. */}
+      {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30); 2026-11-02 shapes made distinct + 🔍/🔀 icon (no text). Checks read data-kind. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -708,34 +708,43 @@ function SpotView({
           {gloss}
         </p>
       ) : null}
-      <p dir="auto" className={`flex flex-wrap ${glue ? "gap-1.5" : "gap-0.5"}`} data-spot-words>
+      {/* 2026-11-02 사용자 "순서 문제랑 틀린 것 찾기가 섞여 보임": 낱말 칸(테두리) 대신 한 줄 문장처럼 — 낱말마다 점선 밑줄만, 누르면 칠함.
+          순서 문제(OrderView)는 빈칸 자리 + 테두리 없는 낱말 조각이라 모양이 다르다. 앞의 🔍는 "찾기" 표시(이름 글 없이). */}
+      <p dir="auto" className="text-chat leading-loose text-slate-100" data-spot-words>
+        {!bare ? (
+          <span aria-hidden className="me-1.5 select-none text-caption opacity-70">
+            🔍
+          </span>
+        ) : null}
         {question.words.map((word, i) => {
           const bad = question.bad.includes(i);
           const style = answered
             ? bad
-              ? "border-warn bg-warn/15 text-warn"
+              ? "bg-warn/15 text-warn"
               : tapped === i
-                ? "border-line text-slate-500 line-through"
-                : "border-transparent text-slate-200"
+                ? "text-slate-500 line-through"
+                : "text-slate-200"
             : tapped === i
               ? tone.pick
-              : "border-line text-slate-100 hover:bg-white/10";
+              : "underline decoration-slate-500 decoration-dotted underline-offset-4 hover:bg-white/10";
           return (
-            <button
-              key={i}
-              type="button"
-              disabled={Boolean(answered) || found}
-              onClick={() => {
-                setTapped(i);
-                if (!question.bad.includes(i)) {
-                  setResult(false);
-                  onAnswer({ correct: false });
-                }
-              }}
-              className={`rounded-lg border px-2 py-1 text-chat ${style}`}
-            >
-              {word}
-            </button>
+            <span key={i}>
+              {i > 0 && glue ? glue : null}
+              <button
+                type="button"
+                disabled={Boolean(answered) || found}
+                onClick={() => {
+                  setTapped(i);
+                  if (!question.bad.includes(i)) {
+                    setResult(false);
+                    onAnswer({ correct: false });
+                  }
+                }}
+                className={`inline rounded-lg px-0.5 ${style}`}
+              >
+                {word}
+              </button>
+            </span>
           );
         })}
       </p>
@@ -1342,18 +1351,27 @@ function OrderView({
           {quizGloss(question.gloss, locale, language)}
         </p>
       )}
-      <div dir="auto" className="flex min-h-11 flex-wrap gap-1.5 rounded-xl border border-dashed border-line px-2 py-2">
+      {/* 2026-11-02: 맞출 자리를 낱말 수만큼 빈칸으로 보여 줘서 "순서대로 채우기"가 한눈에(틀린 곳 찾기와 다른 모양). 🔀 = 순서. */}
+      <div dir="auto" className="flex min-h-11 flex-wrap items-center gap-1.5" data-order-slots>
+        <span aria-hidden className="select-none text-caption opacity-70">
+          🔀
+        </span>
         {placed.map((tile, i) => (
           <button
             key={`${tile}-${i}`}
             type="button"
             disabled={Boolean(answered)}
             onClick={() => setPlaced((current) => current.filter((_, k) => k !== i))}
-            className="rounded-lg bg-white/10 px-2 py-1 text-chat text-ink"
+            className="rounded-lg border border-line px-2 py-1 text-chat text-ink"
           >
             {question.words[tile]}
           </button>
         ))}
+        {answered
+          ? null
+          : question.words.slice(placed.length).map((_, i) => (
+              <span key={`slot-${i}`} aria-hidden className="inline-block h-8 w-10 rounded-lg border border-dashed border-line" />
+            ))}
       </div>
       {answered ? (
         <div className="flex items-start gap-2">
@@ -1367,7 +1385,7 @@ function OrderView({
           {/* Keeps its height when emptied, so the check button below does not jump under the finger (2026-10-29 virtual users: last chip / next ignored on first tap). */}
           <div dir="auto" className="flex min-h-11 flex-wrap gap-1.5">
             {left.map((tile) => (
-              <button key={tile} type="button" onClick={() => setPlaced((current) => [...current, tile])} className="rounded-lg border border-line px-2 py-1 text-chat text-slate-100 hover:bg-white/10">
+              <button key={tile} type="button" onClick={() => setPlaced((current) => [...current, tile])} className="rounded-lg bg-white/10 px-2 py-1 text-chat text-slate-100 hover:bg-white/15">
                 {question.words[tile]}
               </button>
             ))}
