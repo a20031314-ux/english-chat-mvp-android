@@ -129,13 +129,18 @@ function AutoQuiz({ done, onOpen, baseDepth }: { done: boolean; onOpen: (layer: 
       sawUndone.current = true;
       return;
     }
+    // 이 화면에서 오늘 할 것을 끝낸 순간이면 늘 Quizbank로(2026-11-02 사용자 "학습이 끝날시 Quizbank화면이 뜨게").
+    // 이미 끝난 채로 들어왔을 때는 그날 한 번만(Stagebank로 돌아올 수 있게).
+    const justFinished = sawUndone.current;
+    sawUndone.current = false;
     try {
-      if (localStorage.getItem(AUTO_KEEP_KEY) === localDay()) return;
+      const seen = localStorage.getItem(AUTO_KEEP_KEY) === localDay();
       localStorage.setItem(AUTO_KEEP_KEY, localDay());
+      if (seen && !justFinished) return;
     } catch {
       // 이 폰에 못 남기면 이번에만.
     }
-    if (sawUndone.current) noteTodayFinished(adLayerDepth() > depthRef.current);
+    if (justFinished) noteTodayFinished(adLayerDepth() > depthRef.current);
     openRef.current("keep");
   }, [done]);
   return null;
@@ -243,8 +248,6 @@ export function NotebookSection({
   const [reload, setReload] = useState(0);
   // My 큰 칸(n단계 · Quizbank · 복습) 중 접은 것(기본은 모두 펼침, 2026-10-31). 이 화면에만.
   const [closed, setClosed] = useState<ReadonlySet<MyLayer>>(() => new Set());
-  // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때).
-  const [stagePeek, setStagePeek] = useState(false);
   // 지금 보는 탭(위 칸 이름 줄, 2026-11-02) — 하루 첫 화면은 Stagebank, 오늘 할 것을 다 하면 그날 한 번 Quizbank(AutoQuiz).
   const [tab, setTab] = useState<MyLayer>("stage");
   /** 그 탭으로 바꾸고 펴기(밖에서 문장구조·상황을 열 때, 오늘 할 것이 끝났을 때). */
@@ -297,7 +300,6 @@ export function NotebookSection({
       const frame = takeFrame(language);
       if (frame) {
         openLayer("stage");
-        setStagePeek(true);
         setJump({ stage: frame.stage, id: frame.id, at: Date.now() });
       }
       const handed = takeLocate(language);
@@ -462,7 +464,6 @@ export function NotebookSection({
   // from "today" = 오늘 할 것의 지금 항목(닫을 때 전면 광고를 항목 사이에 띄우지 않게, lib/ads.ts fireTodayEnd).
   const openScript = (stage: number, id: string, from?: "today") => {
     openLayer("stage");
-    setStagePeek(true);
     setJump({ stage, id, at: Date.now(), ...(from === "today" ? { today: true } : {}) });
   };
   // 다음 단계 조건 = 문장구조 익힘 70% + 꺼내 씀 70%(2026-10-30 사용자, curriculum/recall.ts) — 틀이 있는 단계만, 없으면 예전 네 갈래.
@@ -554,8 +555,6 @@ export function NotebookSection({
         <MyLayers
           ui={ui}
           language={language}
-          peek={stagePeek}
-          onPeek={setStagePeek}
           closed={closed}
           tab={tab}
           onOpen={openLayer}
@@ -2275,8 +2274,6 @@ function MyLayers({
   stage,
   notes,
   logbank,
-  peek = false,
-  onPeek,
 }: {
   ui: UICopy;
   language: string;
@@ -2296,11 +2293,8 @@ function MyLayers({
   notes: readonly WeakSpot[];
   /** Logbank 칸 안(머리 아이콘을 받아서). */
   logbank: (head: ReactNode) => ReactNode;
-  /** 오늘이 안 끝났어도 단계 화면(n단계 › 또는 밖에서 문장구조·상황을 열 때 — 그 안에서 열려야 해서). */
-  peek?: boolean;
-  onPeek: (on: boolean) => void;
 }) {
-  // 오늘 할 것이 안 끝났으면 칸 안은 오늘 할 것, 끝나면 단계 화면.
+  // Stagebank는 늘 펼친 채 맨 위에 오늘 할 것(끝났으면 오늘 끝), 그 아래 단계 화면(2026-11-02 사용자 "Stagebank는 탭이 펼쳐져있게, 가장 위에 오늘의 학습").
   const review = useReviewNotes(language, notes);
   // Quizbank가 없을 때(0단계 글자 묶음) Quizbank 탭이 남아 있으면 Stagebank를 보인다.
   let shown: MyLayer = tab;
@@ -2317,14 +2311,16 @@ function MyLayers({
     const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
     // 전체 화면이면 칸 안만 전체 화면 층에(머리는 위 이름 줄이 대신).
     if (full) return <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{toned}</div>;
-    const on = !closed.has(id);
+    // Stagebank는 접지 않는다(2026-11-02) — 머리를 눌러도 그대로.
+    const fixed = id === "stage";
+    const on = fixed || !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
         <div className="flex items-center gap-2 pe-3">
-          <button type="button" aria-expanded={on} onClick={() => onToggle(id)} className="flex min-w-0 flex-1 items-center gap-2 py-3 ps-3 text-start">
+          <button type="button" aria-expanded={on} onClick={fixed ? undefined : () => onToggle(id)} className="flex min-w-0 flex-1 items-center gap-2 py-3 ps-3 text-start">
             <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
             {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
-            <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
+            {fixed ? null : <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>}
           </button>
           {/* 칸마다 "?" — 배울 수 있는 것·이렇게 공부해요(2026-10-31). */}
           <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} />
@@ -2337,33 +2333,23 @@ function MyLayers({
     shown = tab === "keep" && !parts ? "stage" : tab;
     const first = parts?.today ?? today;
     const todayDone = !first || (parts?.today.done ?? false);
-    const stageView = todayDone || peek;
     const stageCard = card(
-          "stage",
-          stage.title,
-          stageView ? stage.summary : first.summary,
-          stageView ? (
-            <>
-              {first && todayDone ? <div data-today-done className="mb-1">{first.body}</div> : null}
-              {first && !todayDone ? (
-                <button type="button" data-back-today onClick={() => onPeek(false)} className="mb-2 rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
-                  <span aria-hidden className="inline-block rtl:rotate-180">‹</span> {ui.planTitle} · {first.summary}
-                </button>
-              ) : null}
-              {stage.body}
-            </>
-          ) : (
-            <>
-              {first.body}
-              <button type="button" data-peek-stage onClick={() => onPeek(true)} className="mt-3 flex w-full items-center justify-between rounded-xl border border-line px-3 py-2 text-start text-caption text-slate-300 hover:bg-white/5">
-                <span>{stage.title}</span>
-                <span className="tabular-nums text-slate-400">{stage.summary} <span aria-hidden className="rtl:rotate-180">›</span></span>
-              </button>
-              {/* Stagebank 전체 화면: 오늘 할 것 카드·단계 줄 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만), 줄과 띄움. */}
-              <NativeAdSlot feedId="my-full" slotKey="stagebank-today" spaced layerOnly />
-            </>
-          ),
-        );
+      "stage",
+      stage.title,
+      todayDone ? stage.summary : first.summary,
+      <>
+        {first ? (
+          <div data-stage-today data-today-done={todayDone ? "" : undefined} className="mb-3">
+            {first.body}
+          </div>
+        ) : null}
+        {/* Stagebank 전체 화면: 오늘 할 것 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만). */}
+        {first && !todayDone ? <NativeAdSlot feedId="my-full" slotKey="stagebank-today" spaced layerOnly /> : null}
+        <div data-stage-view className={first ? "border-t border-line pt-3" : undefined}>
+          {stage.body}
+        </div>
+      </>,
+    );
     // 지난번에 틀린 것 탭이면 문제 아래 읽고 정리 카드(예전 복습 칸, 2026-10-31).
     const keepCard = parts
       ? card(

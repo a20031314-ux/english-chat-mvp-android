@@ -1594,7 +1594,8 @@ const STEPS = {
   async "stage-ways"({ page, wait, target }) {
     // 2.79 사용법 my.map: Stagebank 단계 화면(n단계 ›) → 연습 방식 버튼 → 그림 고르기 시트(🧩·🎯·🎭·🔤·📐).
     await myFresh(page, target, { focus: "vocab" });
-    await page.locator("[data-peek-stage]").first().click();
+    // 단계 화면은 Stagebank 안 오늘 할 것 아래에 늘 펼쳐 있음(2026-11-02) — 옛 "n단계 ›"가 있으면 누름.
+    await page.locator("[data-peek-stage]").first().click({ timeout: 1500 }).catch(() => {});
     const way = page.locator("[data-script-method]").first();
     for (let i = 0; i < 40 && !(await way.count()); i++) await wait(500);
     await way.click();
