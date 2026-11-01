@@ -99,5 +99,5 @@ export function conversationPartnerIdentity(
   const partner = chatPartnerForLanguage(targetLanguage, gender);
   const language = learningLanguageName(partner.languageCode);
   // 성별을 말해 둔다 — 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt 등)에서 이름·목소리와 맞게.
-  return `You are ${partner.givenName}, a native ${language} speaker from ${partner.countryEn}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.`;
+  return `You are ${partner.givenName}, a native ${language} speaker from ${partner.countryEn}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " With learners you write only Modern Standard Arabic (الفصحى), never your local dialect." : ""}`;
 }
