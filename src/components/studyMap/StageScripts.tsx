@@ -517,7 +517,7 @@ function ScriptPlayer({
   const submit = () => {
     const line = script.lines[index];
     const typed = draft.trim();
-    if (!line || line.who !== "me" || !typed) return;
+    if (!line || line.who !== "me" || !typed || results[index]) return;
     stopTts();
     const piece = blankOf(index);
     // 빈칸에 넣어 줄 전체로 맞춰 본다(빈칸 조각만 따로 대조하면 문장부호·띄어쓰기가 걸림). 줄 전체를 써도 맞음.
@@ -530,10 +530,9 @@ function ScriptPlayer({
     if (!clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
     // 틀린 줄을 이 폰에 남긴다(맞히면 지움) — 다음에 열면 ◐, My "지난번에 틀린 것"(curriculum/scriptMisses.ts).
     noteLine(language, script.id, index, !clean);
-    if (clean) {
-      setDraft("");
-      void playTts(line.text, tag, scriptVoice("me", line.text, learnerName));
-    }
+    // 맞든 틀리든 한 번이면 끝 — 정답 줄을 들려준다(틀린 줄은 끝 화면 "그 줄만 다시"로).
+    setDraft("");
+    void playTts(line.text, tag, scriptVoice("me", line.text, learnerName));
   };
 
   const next = () =>
@@ -664,12 +663,13 @@ function ScriptPlayer({
           const current = i === index;
           const result = results[i];
           // 원문은 맞힌 뒤·지난 줄·원문 보기를 눌렀을 때만(쓰기 전에는 뜻만 — 답이 새지 않게).
-          const show = !current || revealed[i] || Boolean(result?.clean);
+          // 한 번 써서 보내면 끝 — 정답/오답만(2026-11-01 사용자 "원문 보기도 빼고 그냥 정답 오답 형태로"). 답한 뒤엔 대본 줄을 보여 준다.
+          const answered = Boolean(result);
           return (
             <li key={i} className="mb-2 flex justify-end">
               <div className={`max-w-[88%] rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.09]"}`}>
                 {/* The line to write now: its meaning as an instruction (scriptWritePrompt, chat input 2026-11-01). */}
-                {current && !result?.clean ? (
+                {current && !answered ? (
                   <p dir="auto" className="text-note text-slate-200">
                     {missed.has(i) ? <span className="text-warn">◐ </span> : null}
                     {ui.scriptWritePrompt.split("{line}").map((part, k) =>
@@ -689,48 +689,35 @@ function ScriptPlayer({
                     {glossFor(line.gloss, locale)}
                   </p>
                 )}
-                {!show && blankOf(i) ? (
+                {!answered && blankOf(i) ? (
                   // 쓰기 전: 줄은 보이고 핵심 조각만 빈칸(답은 그 조각뿐 — 새지 않게). 조각이 없으면 뜻만(줄 전체를 씀).
                   <p dir="auto" className="mt-1 text-chat text-slate-100">
                     {blanked(line.text, blankOf(i))}
                   </p>
                 ) : null}
-                {show ? (
+                {result && !result.clean ? (
+                  // 오답: 내가 쓴 그대로(아래에 정답 줄).
+                  <p dir="auto" className="mt-1 text-note text-warn line-through decoration-warn/60">
+                    {result.heard}
+                  </p>
+                ) : null}
+                {answered ? (
                   <div className="mt-1 flex items-start gap-2">
-                    <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+                    <p dir="auto" className={`min-w-0 flex-1 text-chat ${result!.clean ? "text-slate-100" : "text-emerald-200"}`}>
                       {line.text}
                     </p>
                     <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
                   </div>
                 ) : null}
-                {show ? readingOf(line.text) : null}
-                {result && !result.clean ? (
-                  // 틀린 줄: 내가 쓴 그대로 + 다시(아래 입력칸에 고쳐 쓰면 된다).
-                  <div className="mt-2 rounded-xl bg-white/5 p-2.5">
-                    <p dir="auto" className="text-note text-amber-300">
-                      {result.heard}
-                    </p>
-                    <p className="mt-1 text-caption text-warn">{ui.quizWrong}</p>
-                  </div>
+                {answered ? readingOf(line.text) : null}
+                {answered ? (
+                  <p className={`mt-1 text-caption ${result!.clean ? "text-good" : "text-warn"}`}>{result!.clean ? `✓ ${ui.quizRight}` : `✗ ${ui.quizWrong}`}</p>
                 ) : null}
-                {result?.clean ? (
-                  <p className="mt-1 text-caption text-good">
-                    ✓ {ui.quizRight}
-                    {revealed[i] ? <span className="text-slate-500"> · {ui.scriptReveal}</span> : null}
-                  </p>
-                ) : null}
-                {current ? (
-                  <div className="mt-2 flex flex-wrap justify-end gap-1.5">
-                    {!show ? (
-                      <button type="button" onClick={() => setRevealed((r) => ({ ...r, [i]: true }))} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-300 hover:bg-white/10">
-                        {ui.scriptReveal}
-                      </button>
-                    ) : null}
-                    {result ? (
-                      <button type="button" onClick={next} className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900">
-                        {ui.scriptNext}
-                      </button>
-                    ) : null}
+                {current && answered ? (
+                  <div className="mt-2 flex justify-end">
+                    <button type="button" onClick={next} className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900">
+                      {ui.scriptNext}
+                    </button>
                   </div>
                 ) : null}
               </div>
@@ -763,7 +750,7 @@ function ScriptPlayer({
         <div ref={bottom} />
       </ol>
       {/* 채팅 입력칸(2026-11-01): 내 줄 차례일 때만, 맞히기 전까지. Enter로 보냄. */}
-      {!offer && !done && script.lines[index]?.who === "me" && !results[index]?.clean ? (
+      {!offer && !done && script.lines[index]?.who === "me" && !results[index] ? (
         <form
           data-script-input
           onSubmit={(event) => {
