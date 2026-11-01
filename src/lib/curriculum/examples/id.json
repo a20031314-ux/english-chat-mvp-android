@@ -1,0 +1,1426 @@
+{
+ "f|id-f1-01": [
+  {
+   "text": "Halo, Bu. Nama saya Rina.",
+   "en": "Hello, ma'am. My name is Rina.",
+   "ko": "안녕하세요. 제 이름은 리나예요.",
+   "replaces": "Selamat pagi, Dewi. Nama saya Ji-woo."
+  },
+  {
+   "text": "Nama saya Andi. Saya guru.",
+   "en": "My name is Andi. I'm a teacher.",
+   "ko": "제 이름은 안디예요. 저는 선생님이에요.",
+   "replaces": "Kabar baik, terima kasih. Nama saya Ji-woo."
+  }
+ ],
+ "f|id-f1-05": [
+  {
+   "text": "Selamat pagi, Pak Joko!",
+   "en": "Good morning, Mr. Joko!",
+   "ko": "좋은 아침이에요, 조코 씨!",
+   "replaces": "Selamat pagi, Dewi. Nama saya Ji-woo."
+  },
+  {
+   "text": "Selamat sore, semuanya.",
+   "en": "Good afternoon, everyone.",
+   "ko": "여러분, 안녕하세요.",
+   "replaces": "Selamat siang, Bu. Itu buah apa?"
+  },
+  {
+   "text": "Selamat tidur, Nak. Mimpi indah.",
+   "en": "Good night, sweetie. Sweet dreams.",
+   "ko": "잘 자, 얘야. 좋은 꿈 꿔.",
+   "replaces": "Tidak apa-apa. Selamat malam, Bu!"
+  }
+ ],
+ "e|nama saya": [
+  {
+   "text": "Nama saya Siti, dari Bandung.",
+   "en": "My name is Siti, from Bandung.",
+   "ko": "제 이름은 시티이고, 반둥에서 왔어요.",
+   "replaces": "Selamat pagi, Dewi. Nama saya Ji-woo."
+  },
+  {
+   "text": "Nama saya Budi. Kamu siapa?",
+   "en": "My name is Budi. Who are you?",
+   "ko": "제 이름은 부디예요. 넌 누구야?",
+   "replaces": "Kabar baik, terima kasih. Nama saya Ji-woo."
+  }
+ ],
+ "f|id-f1-06": [
+  {
+   "text": "Terima kasih, Bu Guru.",
+   "en": "Thank you, teacher.",
+   "ko": "감사합니다, 선생님.",
+   "replaces": "Kabar baik, terima kasih. Nama saya Ji-woo."
+  },
+  {
+   "text": "Terima kasih, kopinya enak.",
+   "en": "Thank you, the coffee is good.",
+   "ko": "고마워요, 커피 맛있어요.",
+   "replaces": "Oh, itu tas saya. Terima kasih!"
+  },
+  {
+   "text": "Terima kasih, Mas. Hati-hati di jalan.",
+   "en": "Thanks. Take care on the road.",
+   "ko": "고마워요. 조심히 가세요.",
+   "replaces": "Tolong tulis namanya di sini. Terima kasih!"
+  }
+ ],
+ "e|terima kasih": [
+  {
+   "text": "Terima kasih atas makanannya.",
+   "en": "Thank you for the food.",
+   "ko": "음식 고마워요.",
+   "replaces": "Kabar baik, terima kasih. Nama saya Ji-woo."
+  },
+  {
+   "text": "Wah, bunganya cantik. Terima kasih!",
+   "en": "Wow, the flowers are pretty. Thank you!",
+   "ko": "와, 꽃이 예뻐요. 고마워요!",
+   "replaces": "Oh, itu tas saya. Terima kasih!"
+  },
+  {
+   "text": "Terima kasih banyak atas hadiahnya.",
+   "en": "Thank you so much for the gift.",
+   "ko": "선물 정말 고마워요.",
+   "replaces": "Terima kasih banyak, Pak."
+  },
+  {
+   "text": "Kembaliannya ambil saja. Terima kasih, Mbak.",
+   "en": "Keep the change. Thank you.",
+   "ko": "거스름돈은 가지세요. 고마워요.",
+   "replaces": "Tolong tulis namanya di sini. Terima kasih!"
+  },
+  {
+   "text": "Terima kasih atas bantuannya kemarin.",
+   "en": "Thanks for your help yesterday.",
+   "ko": "어제 도와줘서 고마워요.",
+   "replaces": "Wah, terima kasih. Bisa tolong kirimkan konfirmasi barunya ke email saya?"
+  },
+  {
+   "text": "Terima kasih, Pak. Ini sangat membantu saya.",
+   "en": "Thank you, sir. This really helps me.",
+   "ko": "감사합니다. 정말 도움이 돼요.",
+   "replaces": "Terima kasih. Meskipun waktunya mepet, kami usahakan selesai hari Kamis."
+  },
+  {
+   "text": "Kami ucapkan terima kasih kepada semua relawan.",
+   "en": "We'd like to thank all the volunteers.",
+   "ko": "모든 자원봉사자분들께 감사드려요.",
+   "replaces": "Bu Ratna, terima kasih untuk semuanya. Bekerja sama dengan Ibu merupakan pengalaman yang sangat berharga. Sukses selalu!"
+  },
+  {
+   "text": "Terima kasih atas undangannya, saya pasti datang.",
+   "en": "Thanks for the invitation, I'll definitely come.",
+   "ko": "초대해 줘서 고마워요, 꼭 갈게요.",
+   "replaces": "Terima kasih. Selamat sore semuanya. Izinkan saya menyampaikan beberapa kata atas nama tim."
+  },
+  {
+   "text": "Pokoknya terima kasih banget, kamu penyelamatku!",
+   "en": "Seriously, thanks so much, you're my lifesaver!",
+   "ko": "정말 고마워, 넌 내 구세주야!",
+   "replaces": "Wah, terima kasih atas kepercayaannya, Pak. Tapi saya jadi nggak enak hati, sebenarnya..."
+  },
+  {
+   "text": "Atas perhatiannya, saya ucapkan terima kasih.",
+   "en": "Thank you for your attention.",
+   "ko": "관심 가져 주셔서 감사합니다.",
+   "replaces": "Siap, Pak. Besok pagi-pagi saya temui dia. Sekali lagi, terima kasih atas pengertiannya."
+  }
+ ],
+ "f|id-f1-02": [
+  {
+   "text": "Halo! Saya dari Vietnam.",
+   "en": "Hi! I'm from Vietnam.",
+   "ko": "안녕하세요! 저는 베트남에서 왔어요.",
+   "replaces": "Senang bertemu juga. Saya dari Korea."
+  }
+ ],
+ "f|id-f2-01": [
+  {
+   "text": "Saya sudah makan siang.",
+   "en": "I've already had lunch.",
+   "ko": "저는 벌써 점심 먹었어요.",
+   "replaces": "Saya dari Korea. Sudah dua minggu di sini."
+  },
+  {
+   "text": "Adik saya sudah tidur.",
+   "en": "My little brother is already asleep.",
+   "ko": "제 동생은 벌써 자요.",
+   "replaces": "Sejauh ini, sebagian besar fitur sudah selesai. Tapi masalahnya, ada keterlambatan di tahap pengujian."
+  }
+ ],
+ "e|sudah": [
+  {
+   "text": "Kami sudah sampai di hotel.",
+   "en": "We've arrived at the hotel.",
+   "ko": "저희 호텔에 도착했어요.",
+   "replaces": "Saya dari Korea. Sudah dua minggu di sini."
+  },
+  {
+   "text": "Kopinya sudah dingin.",
+   "en": "The coffee has gone cold.",
+   "ko": "커피가 벌써 식었어요.",
+   "replaces": "Sejauh ini, sebagian besar fitur sudah selesai. Tapi masalahnya, ada keterlambatan di tahap pengujian."
+  },
+  {
+   "text": "Hujannya sudah berhenti.",
+   "en": "The rain has stopped.",
+   "ko": "비가 그쳤어요.",
+   "replaces": "Untungnya, kacamatanya sudah ditemukan sama awak kapal."
+  },
+  {
+   "text": "Aku sudah baca bukunya sampai habis.",
+   "en": "I've read the book to the end.",
+   "ko": "그 책 끝까지 다 읽었어.",
+   "replaces": "Bisa, karena semua file sudah disimpan di cloud."
+  },
+  {
+   "text": "Bus terakhir sudah lewat, jadi kita naik taksi.",
+   "en": "The last bus has already gone, so we'll take a taxi.",
+   "ko": "막차가 벌써 지나가서 택시 타요.",
+   "replaces": "Oke, saya setuju. Tolong kabari saya kalau mejanya sudah dipesan."
+  },
+  {
+   "text": "Sudah jam sepuluh. Aku pulang dulu, ya.",
+   "en": "It's already ten. I'm heading home.",
+   "ko": "벌써 열 시야. 나 먼저 갈게.",
+   "replaces": "Email konfirmasinya sudah saya cek dua kali."
+  },
+  {
+   "text": "Anak-anak sudah siap berangkat sekolah.",
+   "en": "The kids are ready to leave for school.",
+   "ko": "아이들은 학교 갈 준비가 다 됐어요.",
+   "replaces": "Sudah! Aku juga nggak nyangka dokternya ternyata pelakunya."
+  },
+  {
+   "text": "Laporannya sudah selesai, tinggal dikirim.",
+   "en": "The report is done; it just needs sending.",
+   "ko": "보고서는 다 끝났고, 보내기만 하면 돼요.",
+   "replaces": "Secara umum, MRT sekarang sudah cukup nyaman, walaupun jalurnya masih sedikit."
+  },
+  {
+   "text": "Dia sudah lima tahun tinggal di Jakarta.",
+   "en": "She's lived in Jakarta for five years.",
+   "ko": "그녀는 자카르타에 산 지 오 년 됐어요.",
+   "replaces": "Saya paham. Di satu sisi, biaya Bapak memang naik. Di sisi lain, saya sudah tiga tahun di sini dan selalu bayar tepat waktu."
+  },
+  {
+   "text": "Harga sayur sudah naik dua kali bulan ini.",
+   "en": "Vegetable prices have already gone up twice this month.",
+   "ko": "이번 달에 채소값이 벌써 두 번 올랐어요.",
+   "replaces": "Soal pengganti, Dimas sepertinya siap. Dia sudah ikut persiapan dari awal."
+  },
+  {
+   "text": "Pesanannya sudah datang, Bu.",
+   "en": "The order has arrived, ma'am.",
+   "ko": "주문한 거 왔어요.",
+   "replaces": "Saya tahu waktunya mepet, Pak. Tapi apa boleh buat, acara keluarga ini sudah direncanakan lama."
+  }
+ ],
+ "f|id-f1-12": [
+  {
+   "text": "Saya bukan guru, saya dokter.",
+   "en": "I'm not a teacher, I'm a doctor.",
+   "ko": "저는 선생님이 아니라 의사예요.",
+   "replaces": "Bukan, saya bukan mahasiswa. Saya perawat."
+  }
+ ],
+ "f|id-f1-15": [
+  {
+   "text": "Ini sayur apa, Bu?",
+   "en": "What vegetable is this, ma'am?",
+   "ko": "이건 무슨 채소예요?",
+   "replaces": "Selamat siang, Bu. Itu buah apa?"
+  },
+  {
+   "text": "Itu bunga apa, Bu?",
+   "en": "What flower is that, ma'am?",
+   "ko": "저건 무슨 꽃이에요?",
+   "replaces": "Oh, tidak apa-apa. Ini apa?"
+  }
+ ],
+ "e|tidak apa-apa": [
+  {
+   "text": "Tidak apa-apa, saya bisa jalan kaki.",
+   "en": "It's okay, I can walk.",
+   "ko": "괜찮아요, 걸어갈 수 있어요.",
+   "replaces": "Tidak apa-apa. Selamat malam, Bu!"
+  },
+  {
+   "text": "Kopinya tumpah? Tidak apa-apa.",
+   "en": "Spilled the coffee? That's okay.",
+   "ko": "커피 쏟았어요? 괜찮아요.",
+   "replaces": "Tidak apa-apa. Apa bisa dibantu untuk diganti jadi dua malam?"
+  }
+ ],
+ "f|id-f1-11": [
+  {
+   "text": "Tolong buka jendelanya.",
+   "en": "Please open the window.",
+   "ko": "창문 좀 열어 주세요.",
+   "replaces": "Tolong tulis namanya di sini. Terima kasih!"
+  }
+ ],
+ "f|id-f1-07": [
+  {
+   "text": "Tas ini berapa, Bu?",
+   "en": "How much is this bag, ma'am?",
+   "ko": "이 가방 얼마예요?",
+   "replaces": "Berapa harganya satu kilo?"
+  }
+ ],
+ "f|id-f1-08": [
+  {
+   "text": "Stasiunnya di mana, Pak?",
+   "en": "Where's the station, sir?",
+   "ko": "역이 어디예요?",
+   "replaces": "Permisi, Pak. Toiletnya di mana?"
+  }
+ ],
+ "e|toiletnya di mana": [
+  {
+   "text": "Mbak, toiletnya di mana, ya?",
+   "en": "Excuse me, where's the toilet?",
+   "ko": "저기요, 화장실이 어디예요?",
+   "replaces": "Permisi, Pak. Toiletnya di mana?"
+  }
+ ],
+ "f|id-f1-10": [
+  {
+   "text": "Saya mau teh panas.",
+   "en": "I'd like hot tea.",
+   "ko": "뜨거운 차 주세요.",
+   "replaces": "Oke. Saya mau ini, satu kilo."
+  }
+ ],
+ "f|id-f1-20": [
+  {
+   "text": "Tomatnya dua kilo, ya, Bu.",
+   "en": "Two kilos of tomatoes, please.",
+   "ko": "토마토 이 킬로 주세요.",
+   "replaces": "Oke. Saya mau ini, satu kilo."
+  }
+ ],
+ "f|id-f1-13": [
+  {
+   "text": "Saya tidak suka kopi.",
+   "en": "I don't like coffee.",
+   "ko": "저는 커피를 안 좋아해요.",
+   "replaces": "Maaf, saya tidak mengerti. Pelan-pelan saja."
+  }
+ ],
+ "f|id-f1-19": [
+  {
+   "text": "Maaf, ini kursi saya.",
+   "en": "Sorry, this is my seat.",
+   "ko": "죄송한데, 여기 제 자리예요.",
+   "replaces": "Maaf, saya tidak mengerti. Pelan-pelan saja."
+  },
+  {
+   "text": "Maaf, saya salah nomor.",
+   "en": "Sorry, wrong number.",
+   "ko": "죄송해요, 전화 잘못 걸었어요.",
+   "replaces": "Maaf, sekali lagi, Pak?"
+  }
+ ],
+ "e|maaf": [
+  {
+   "text": "Maaf, Mas, kursi ini kosong?",
+   "en": "Excuse me, is this seat free?",
+   "ko": "저기요, 이 자리 비었어요?",
+   "replaces": "Maaf, saya tidak mengerti. Pelan-pelan saja."
+  },
+  {
+   "text": "Aduh, maaf, aku lupa bawa payungmu.",
+   "en": "Oh, sorry, I forgot to bring your umbrella.",
+   "ko": "아이고, 미안, 네 우산 가져오는 걸 깜빡했어.",
+   "replaces": "Maaf, sekali lagi, Pak?"
+  },
+  {
+   "text": "Mohon maaf atas ketidaknyamanannya.",
+   "en": "We apologise for the inconvenience.",
+   "ko": "불편을 드려 죄송합니다.",
+   "replaces": "Ya ampun, maaf banget. Tadi ojeknya nyasar, muter-muter terus."
+  },
+  {
+   "text": "Maaf ya, tadi aku salah paham.",
+   "en": "Sorry, I misunderstood earlier.",
+   "ko": "미안해, 아까 내가 오해했어.",
+   "replaces": "Iya, Pak. Tapi mohon maaf sebelumnya, saya mau bicara soal harga sewa."
+  }
+ ],
+ "e|saya tidak mengerti": [
+  {
+   "text": "Bu, saya tidak mengerti soal nomor tiga.",
+   "en": "Ma'am, I don't understand question three.",
+   "ko": "선생님, 삼 번 문제를 이해 못 하겠어요.",
+   "replaces": "Maaf, saya tidak mengerti. Pelan-pelan saja."
+  }
+ ],
+ "f|id-f1-18": [
+  {
+   "text": "Sampai jumpa minggu depan!",
+   "en": "See you next week!",
+   "ko": "다음 주에 봐요!",
+   "replaces": "Ya, sampai jumpa nanti, Pak!"
+  }
+ ],
+ "e|nanti": [
+  {
+   "text": "Nanti aku telepon, ya.",
+   "en": "I'll call you later.",
+   "ko": "나중에 전화할게.",
+   "replaces": "Ya, sampai jumpa nanti, Pak!"
+  },
+  {
+   "text": "Makannya nanti saja, aku masih kenyang.",
+   "en": "Let's eat later, I'm still full.",
+   "ko": "밥은 이따 먹자, 아직 배불러.",
+   "replaces": "Belum, nanti aja. Eh, besok kamu ada acara?"
+  },
+  {
+   "text": "Nanti sore hujan, bawa payung.",
+   "en": "It'll rain this afternoon, bring an umbrella.",
+   "ko": "이따 오후에 비 와, 우산 챙겨.",
+   "replaces": "Setuju, Pak. Kita sepakat, ya. Nanti saya kirim perjanjiannya lewat WhatsApp."
+  },
+  {
+   "text": "Jangan khawatir, nanti juga kamu terbiasa.",
+   "en": "Don't worry, you'll get used to it eventually.",
+   "ko": "걱정 마, 나중엔 익숙해질 거야.",
+   "replaces": "Mending lain kali aja, deh. Nanti aku kabarin kalau dompetnya udah ketemu."
+  },
+  {
+   "text": "Piringnya taruh di situ, nanti saya cuci.",
+   "en": "Leave the dishes there, I'll wash them later.",
+   "ko": "접시는 거기 둬요, 이따 제가 씻을게요.",
+   "replaces": "Sama-sama! Tulis pendapat kalian di kolom komentar, ya, nanti aku bacain satu-satu."
+  },
+  {
+   "text": "Ceritanya nanti malam saja, sekarang aku sibuk.",
+   "en": "Tell me tonight, I'm busy right now.",
+   "ko": "얘기는 이따 밤에 해, 지금 바빠.",
+   "replaces": "Mau, Bu. Cendolnya bungkus aja, untuk nanti."
+  }
+ ],
+ "f|id-f4-13": [
+  {
+   "text": "Rumahnya bagus. Tapi masalahnya, jauh dari kantor.",
+   "en": "The house is nice. But the problem is, it's far from the office.",
+   "ko": "집은 좋아요. 그런데 문제는 회사에서 멀다는 거예요.",
+   "replaces": "Sejauh ini, sebagian besar fitur sudah selesai. Tapi masalahnya, ada keterlambatan di tahap pengujian."
+  }
+ ],
+ "e|tapi masalahnya": [
+  {
+   "text": "Aku pengin ikut. Tapi masalahnya, uangku tinggal sedikit.",
+   "en": "I want to come. But the problem is, I've got little money left.",
+   "ko": "나도 가고 싶어. 근데 문제는 돈이 얼마 안 남았어.",
+   "replaces": "Sejauh ini, sebagian besar fitur sudah selesai. Tapi masalahnya, ada keterlambatan di tahap pengujian."
+  }
+ ],
+ "f|id-f2-02": [
+  {
+   "text": "Saya belum cuci baju.",
+   "en": "I haven't done the laundry yet.",
+   "ko": "저 아직 빨래 안 했어요.",
+   "replaces": "Belum, nanti aja. Eh, besok kamu ada acara?"
+  },
+  {
+   "text": "Kereta belum datang.",
+   "en": "The train hasn't come yet.",
+   "ko": "기차가 아직 안 왔어요.",
+   "replaces": "Es teh manis. Saya belum pernah coba es cendol. Enak?"
+  },
+  {
+   "text": "Aku belum pernah naik pesawat.",
+   "en": "I've never been on a plane.",
+   "ko": "나 비행기 타 본 적 없어.",
+   "replaces": "Belum, ini pertama kali. Seru banget!"
+  },
+  {
+   "text": "Dia belum bangun.",
+   "en": "He isn't up yet.",
+   "ko": "그는 아직 안 일어났어요.",
+   "replaces": "Tidak demam. Saya belum minum obat."
+  }
+ ],
+ "e|belum": [
+  {
+   "text": "Tokonya belum buka.",
+   "en": "The shop isn't open yet.",
+   "ko": "가게가 아직 안 열었어요.",
+   "replaces": "Belum, nanti aja. Eh, besok kamu ada acara?"
+  },
+  {
+   "text": "Belum, aku masih di jalan.",
+   "en": "Not yet, I'm still on the way.",
+   "ko": "아직, 나 아직 가는 중이야.",
+   "replaces": "Es teh manis. Saya belum pernah coba es cendol. Enak?"
+  },
+  {
+   "text": "PR-ku belum selesai.",
+   "en": "My homework isn't finished yet.",
+   "ko": "내 숙제 아직 안 끝났어.",
+   "replaces": "Belum, ini pertama kali. Seru banget!"
+  },
+  {
+   "text": "Gajinya belum masuk.",
+   "en": "The salary hasn't come in yet.",
+   "ko": "월급이 아직 안 들어왔어요.",
+   "replaces": "Iya, Pak. Tapi mohon maaf sebelumnya, saya mau bicara soal harga sewa."
+  }
+ ],
+ "f|id-f2-19": [
+  {
+   "text": "Konsernya tadi malam seru banget!",
+   "en": "The concert last night was so much fun!",
+   "ko": "어젯밤 콘서트 진짜 재밌었어!",
+   "replaces": "Belum, ini pertama kali. Seru banget!"
+  },
+  {
+   "text": "Main di pantai seru banget!",
+   "en": "Playing at the beach was so much fun!",
+   "ko": "해변에서 노는 거 진짜 재밌었어!",
+   "replaces": "Oke deh. Pasti seru banget!"
+  }
+ ],
+ "f|id-f2-03": [
+  {
+   "text": "Aku lagi masak nasi.",
+   "en": "I'm cooking rice.",
+   "ko": "나 밥 하는 중이야.",
+   "replaces": "Wah, kasihan. Sekarang lagi apa?"
+  },
+  {
+   "text": "Ibu lagi tidur siang.",
+   "en": "Mom is taking a nap.",
+   "ko": "엄마는 낮잠 주무시는 중이야.",
+   "replaces": "Di rumah. Aku lagi membaca buku. Kamu udah makan?"
+  }
+ ],
+ "f|id-f2-04": [
+  {
+   "text": "Besok aku mau ke pasar.",
+   "en": "Tomorrow I'm going to the market.",
+   "ko": "내일 시장에 갈 거야.",
+   "replaces": "Oke, Bu. Besok saya mau beristirahat seharian."
+  }
+ ],
+ "f|id-f2-05": [
+  {
+   "text": "Saya ingin punya kucing.",
+   "en": "I'd like to have a cat.",
+   "ko": "고양이를 키우고 싶어요.",
+   "replaces": "Ayo ke pantai! Aku ingin berenang."
+  }
+ ],
+ "f|id-f2-06": [
+  {
+   "text": "Ayo makan bareng!",
+   "en": "Let's eat together!",
+   "ko": "같이 밥 먹자!",
+   "replaces": "Ayo ke pantai! Aku ingin berenang."
+  }
+ ],
+ "f|id-f2-07": [
+  {
+   "text": "Boleh saya pakai kamar mandinya?",
+   "en": "May I use the bathroom?",
+   "ko": "화장실 좀 써도 될까요?",
+   "replaces": "Makan di sini, Bu. Boleh saya duduk di situ?"
+  },
+  {
+   "text": "Boleh saya masuk?",
+   "en": "May I come in?",
+   "ko": "들어가도 될까요?",
+   "replaces": "Tiga kali sehari. Boleh saya minum kopi?"
+  },
+  {
+   "text": "Boleh saya coba bajunya?",
+   "en": "May I try on the shirt?",
+   "ko": "옷 입어 봐도 될까요?",
+   "replaces": "Tidak apa-apa. Supaya cepat, boleh saya minta data mentahnya hari ini?"
+  }
+ ],
+ "e|boleh": [
+  {
+   "text": "Boleh, silakan duduk.",
+   "en": "Sure, please have a seat.",
+   "ko": "그럼요, 앉으세요.",
+   "replaces": "Makan di sini, Bu. Boleh saya duduk di situ?"
+  },
+  {
+   "text": "Anak kecil tidak boleh main api.",
+   "en": "Little kids mustn't play with fire.",
+   "ko": "어린애는 불장난하면 안 돼요.",
+   "replaces": "Tidak apa-apa. Supaya cepat, boleh saya minta data mentahnya hari ini?"
+  },
+  {
+   "text": "Boleh minta air putih satu?",
+   "en": "Could I have a glass of water?",
+   "ko": "물 한 잔 주실 수 있어요?",
+   "replaces": "Kalau boleh usul, kita fokus memperbaiki bug yang paling parah dulu, supaya peluncurannya tidak terlalu mundur."
+  },
+  {
+   "text": "Kucingnya boleh ikut ke kamar?",
+   "en": "Can the cat come into the room?",
+   "ko": "고양이도 방에 같이 들어가도 돼요?",
+   "replaces": "Saya tahu waktunya mepet, Pak. Tapi apa boleh buat, acara keluarga ini sudah direncanakan lama."
+  }
+ ],
+ "f|id-f4-03": [
+  {
+   "text": "Saya berangkat pagi-pagi, supaya tidak kena macet.",
+   "en": "I leave early so that I don't get stuck in traffic.",
+   "ko": "차 막히지 않게 아침 일찍 출발해요.",
+   "replaces": "Tidak apa-apa. Supaya cepat, boleh saya minta data mentahnya hari ini?"
+  },
+  {
+   "text": "Bicaranya pelan-pelan, supaya semua orang paham.",
+   "en": "Speak slowly so that everyone understands.",
+   "ko": "모두가 이해하게 천천히 말해 주세요.",
+   "replaces": "Kalau Bapak memperbaiki atapnya bulan ini, saya setuju naik tujuh persen, supaya sama-sama enak."
+  },
+  {
+   "text": "Simpan struknya, supaya bisa menukar barang.",
+   "en": "Keep the receipt so that you can exchange the item.",
+   "ko": "물건을 교환할 수 있게 영수증을 보관하세요.",
+   "replaces": "Kalau boleh usul, kita fokus memperbaiki bug yang paling parah dulu, supaya peluncurannya tidak terlalu mundur."
+  },
+  {
+   "text": "Dia menabung tiap bulan, supaya bisa kuliah di luar negeri.",
+   "en": "She saves every month so that she can study abroad.",
+   "ko": "그녀는 유학 갈 수 있게 매달 저축해요.",
+   "replaces": "Bawa tas belanja sendiri, supaya kita terbiasa sebelum aturannya berlaku."
+  }
+ ],
+ "f|id-f2-08": [
+  {
+   "text": "Minta tolong ambilkan garam, ya.",
+   "en": "Could you pass the salt, please?",
+   "ko": "소금 좀 집어 줄래요?",
+   "replaces": "Iya. Minta tolong jangan cepat-cepat, ya."
+  }
+ ],
+ "e|tolong": [
+  {
+   "text": "Tolong matikan lampunya.",
+   "en": "Please turn off the light.",
+   "ko": "불 좀 꺼 주세요.",
+   "replaces": "Iya. Minta tolong jangan cepat-cepat, ya."
+  },
+  {
+   "text": "Tolong! Ada pencuri!",
+   "en": "Help! There's a thief!",
+   "ko": "도와주세요! 도둑이에요!",
+   "replaces": "Oke, saya setuju. Tolong kabari saya kalau mejanya sudah dipesan."
+  }
+ ],
+ "f|id-f2-11": [
+  {
+   "text": "Ketemu di depan bioskop, ya?",
+   "en": "Let's meet in front of the cinema, okay?",
+   "ko": "영화관 앞에서 만나, 알았지?",
+   "replaces": "Jam tujuh aja. Ketemu di mana?"
+  },
+  {
+   "text": "Kita ketemu hari Sabtu, ya?",
+   "en": "We're meeting on Saturday, right?",
+   "ko": "우리 토요일에 만나는 거지?",
+   "replaces": "Iya. Kita ketemu jam berapa?"
+  }
+ ],
+ "f|id-f2-12": [
+  {
+   "text": "Toko buku tutup jam berapa?",
+   "en": "What time does the bookshop close?",
+   "ko": "서점은 몇 시에 닫아요?",
+   "replaces": "Iya. Kita ketemu jam berapa?"
+  }
+ ],
+ "f|id-f2-13": [
+  {
+   "text": "Saya pesan es jeruk dua.",
+   "en": "I'll have two iced orange drinks.",
+   "ko": "아이스 오렌지 주스 두 잔 주세요.",
+   "replaces": "Saya pesan nasi goreng satu, nggak pedas ya."
+  }
+ ],
+ "f|id-f2-14": [
+  {
+   "text": "Mi ayamnya satu, nggak pedas ya.",
+   "en": "One chicken noodles, not spicy, please.",
+   "ko": "닭고기 국수 하나요, 안 맵게요.",
+   "replaces": "Saya pesan nasi goreng satu, nggak pedas ya."
+  }
+ ],
+ "f|id-f2-15": [
+  {
+   "text": "Turun di sini saja, Pak.",
+   "en": "I'll get off here, please.",
+   "ko": "여기서 내릴게요.",
+   "replaces": "Lurus terus, Pak. Nah, kiri di sini!"
+  }
+ ],
+ "e|lurus terus": [
+  {
+   "text": "Dari lampu merah, lurus terus saja.",
+   "en": "From the traffic light, just keep going straight.",
+   "ko": "신호등에서 계속 직진하세요.",
+   "replaces": "Lurus terus, Pak. Nah, kiri di sini!"
+  }
+ ],
+ "e|terus": [
+  {
+   "text": "Dia ngomong terus dari tadi.",
+   "en": "He's been talking nonstop for a while.",
+   "ko": "그는 아까부터 계속 말하고 있어요.",
+   "replaces": "Lurus terus, Pak. Nah, kiri di sini!"
+  },
+  {
+   "text": "Hujan terus seharian, jadi kami di rumah saja.",
+   "en": "It rained all day, so we just stayed home.",
+   "ko": "하루 종일 비가 계속 와서 그냥 집에 있었어요.",
+   "replaces": "Ya ampun, maaf banget. Tadi ojeknya nyasar, muter-muter terus."
+  }
+ ],
+ "f|id-f2-16": [
+  {
+   "text": "Saya sakit tenggorokan.",
+   "en": "I have a sore throat.",
+   "ko": "목이 아파요.",
+   "replaces": "Sore, Bu. Saya sakit kepala dan batuk."
+  }
+ ],
+ "f|id-f2-17": [
+  {
+   "text": "Saya batuk sejak hari Senin.",
+   "en": "I've had a cough since Monday.",
+   "ko": "월요일부터 기침을 해요.",
+   "replaces": "Sejak kemarin malam. Saya juga masuk angin."
+  }
+ ],
+ "e|seru banget": [
+  {
+   "text": "Kemah kemarin seru banget, lho.",
+   "en": "The camping trip yesterday was so much fun.",
+   "ko": "어제 캠핑 진짜 재밌었어.",
+   "replaces": "Oke deh. Pasti seru banget!"
+  },
+  {
+   "text": "Permainan ini seru banget, coba deh.",
+   "en": "This game is so much fun, give it a try.",
+   "ko": "이 게임 진짜 재밌어, 해 봐.",
+   "replaces": "Jadi! Pokoknya seru banget, kamu harus ke sana."
+  }
+ ],
+ "f|id-f3-03": [
+  {
+   "text": "Kereta lebih cepat daripada bus.",
+   "en": "The train is faster than the bus.",
+   "ko": "기차가 버스보다 빨라요.",
+   "replaces": "Bagus banget. Menurut aku, Lombok lebih indah daripada Bali."
+  },
+  {
+   "text": "Kakakku lebih tinggi daripada aku.",
+   "en": "My older sister is taller than me.",
+   "ko": "우리 언니는 나보다 키가 커.",
+   "replaces": "Menurut saya, perpustakaan lebih tenang daripada kafe."
+  },
+  {
+   "text": "Ukuran yang ini lebih kecil?",
+   "en": "Is this size smaller?",
+   "ko": "이 사이즈가 더 작아요?",
+   "replaces": "Gimana ya... Kalau deluxe, harganya lebih mahal?"
+  },
+  {
+   "text": "Masakan rumah lebih sehat daripada makanan cepat saji.",
+   "en": "Home cooking is healthier than fast food.",
+   "ko": "집밥이 패스트푸드보다 건강해요.",
+   "replaces": "Lumayan. Sebenarnya kerjanya lebih santai daripada di kantor lama."
+  },
+  {
+   "text": "Cuaca hari ini lebih dingin daripada kemarin.",
+   "en": "Today is colder than yesterday.",
+   "ko": "오늘 날씨가 어제보다 추워요.",
+   "replaces": "Betul, Bu. Seharusnya kami memberi kabar lebih awal."
+  }
+ ],
+ "f|id-f3-01": [
+  {
+   "text": "Menurut aku, warna biru cocok buat kamu.",
+   "en": "I think blue suits you.",
+   "ko": "내 생각엔 파란색이 너한테 어울려.",
+   "replaces": "Masa sih? Menurut aku, yang paling keren itu adiknya."
+  },
+  {
+   "text": "Menurut saya, rapatnya terlalu panjang.",
+   "en": "In my opinion, the meeting is too long.",
+   "ko": "제 생각에는 회의가 너무 길어요.",
+   "replaces": "Menurut saya, perpustakaan lebih tenang daripada kafe."
+  }
+ ],
+ "f|id-f3-04": [
+  {
+   "text": "Yang paling enak itu sate kambing.",
+   "en": "The tastiest one is the goat satay.",
+   "ko": "제일 맛있는 건 염소 사테예요.",
+   "replaces": "Masa sih? Menurut aku, yang paling keren itu adiknya."
+  }
+ ],
+ "f|id-f3-02": [
+  {
+   "text": "Kayaknya jalanan depan macet.",
+   "en": "Looks like the road ahead is jammed.",
+   "ko": "앞길이 막히는 것 같아.",
+   "replaces": "Kayaknya agak dipaksakan. Aku kurang setuju sama keputusan penulisnya."
+  },
+  {
+   "text": "Kayaknya dia capek banget hari ini.",
+   "en": "I guess she's really tired today.",
+   "ko": "걔 오늘 엄청 피곤한 것 같아.",
+   "replaces": "Aku juga mikir gitu. Kayaknya ada udang di balik batu, deh."
+  }
+ ],
+ "f|id-f3-13": [
+  {
+   "text": "Saya setuju dengan ide itu.",
+   "en": "I agree with that idea.",
+   "ko": "그 아이디어에 동의해요.",
+   "replaces": "Kayaknya agak dipaksakan. Aku kurang setuju sama keputusan penulisnya."
+  },
+  {
+   "text": "Aku nggak setuju, harganya terlalu mahal.",
+   "en": "I don't agree, it's too expensive.",
+   "ko": "난 반대야, 가격이 너무 비싸.",
+   "replaces": "Oke, saya setuju. Tolong kabari saya kalau mejanya sudah dipesan."
+  },
+  {
+   "text": "Kami semua setuju pindah ke hari Jumat.",
+   "en": "We all agree to move it to Friday.",
+   "ko": "저희 모두 금요일로 옮기는 데 동의해요.",
+   "replaces": "Kalau Bapak memperbaiki atapnya bulan ini, saya setuju naik tujuh persen, supaya sama-sama enak."
+  }
+ ],
+ "e|kayaknya": [
+  {
+   "text": "Kayaknya aku salah naik bus.",
+   "en": "I think I got on the wrong bus.",
+   "ko": "나 버스 잘못 탄 것 같아.",
+   "replaces": "Kayaknya agak dipaksakan. Aku kurang setuju sama keputusan penulisnya."
+  },
+  {
+   "text": "Restoran itu kayaknya baru buka.",
+   "en": "That restaurant seems to have just opened.",
+   "ko": "저 식당 새로 연 것 같아.",
+   "replaces": "Aku juga mikir gitu. Kayaknya ada udang di balik batu, deh."
+  }
+ ],
+ "f|id-f3-08": [
+  {
+   "text": "Kalau capek, istirahat saja.",
+   "en": "If you're tired, just rest.",
+   "ko": "피곤하면 그냥 쉬어.",
+   "replaces": "Gimana ya... Kalau deluxe, harganya lebih mahal?"
+  },
+  {
+   "text": "Kalau hujan, kita naik taksi.",
+   "en": "If it rains, we'll take a taxi.",
+   "ko": "비가 오면 택시 타자.",
+   "replaces": "Setuju. Kalau Rani muncul, ceritanya jadi lebih seru."
+  },
+  {
+   "text": "Kalau sempat, mampir ke rumah, ya.",
+   "en": "If you have time, drop by the house.",
+   "ko": "시간 되면 집에 들러.",
+   "replaces": "Kalau mau sepi, lebih baik datang bulan Mei."
+  },
+  {
+   "text": "Kalau lapar, ada roti di meja.",
+   "en": "If you're hungry, there's bread on the table.",
+   "ko": "배고프면 식탁에 빵 있어.",
+   "replaces": "Siap. Kalau begitu, nanti aku traktir kopi, ya."
+  },
+  {
+   "text": "Kalau kamu nggak suka, bilang saja.",
+   "en": "If you don't like it, just say so.",
+   "ko": "싫으면 그냥 말해.",
+   "replaces": "Saya paham maksudnya, Bu. Tapi kalau dirilis sekarang, kepercayaan pengguna bisa turun."
+  }
+ ],
+ "f|id-f3-19": [
+  {
+   "text": "Sebenarnya aku nggak suka durian.",
+   "en": "Actually, I don't like durian.",
+   "ko": "사실 난 두리안 안 좋아해.",
+   "replaces": "Lumayan. Sebenarnya kerjanya lebih santai daripada di kantor lama."
+  }
+ ],
+ "e|sebenarnya": [
+  {
+   "text": "Sebenarnya rumahnya dekat, cuma jalannya macet.",
+   "en": "Actually the house is close, it's just that the road is jammed.",
+   "ko": "사실 집은 가까운데 길이 막혀요.",
+   "replaces": "Lumayan. Sebenarnya kerjanya lebih santai daripada di kantor lama."
+  },
+  {
+   "text": "Dia kelihatan galak, padahal sebenarnya baik.",
+   "en": "He looks fierce, but he's actually kind.",
+   "ko": "그는 무서워 보이지만 사실 착해요.",
+   "replaces": "Wah, terima kasih atas kepercayaannya, Pak. Tapi saya jadi nggak enak hati, sebenarnya..."
+  }
+ ],
+ "f|id-f3-05": [
+  {
+   "text": "Bisa tolong pindahkan mobilnya sebentar?",
+   "en": "Could you please move your car for a moment?",
+   "ko": "차 좀 잠깐 옮겨 주실 수 있어요?",
+   "replaces": "Wah, terima kasih. Bisa tolong kirimkan konfirmasi barunya ke email saya?"
+  }
+ ],
+ "f|id-f3-06": [
+  {
+   "text": "Ada masalah dengan AC di kamar saya.",
+   "en": "There's a problem with the AC in my room.",
+   "ko": "제 방 에어컨에 문제가 있어요.",
+   "replaces": "Selamat siang. Ada masalah dengan pemesanan saya atas nama Ji-woo."
+  }
+ ],
+ "e|selamat siang": [
+  {
+   "text": "Selamat siang, Pak. Silakan masuk.",
+   "en": "Good afternoon, sir. Please come in.",
+   "ko": "안녕하세요, 들어오세요.",
+   "replaces": "Selamat siang. Ada masalah dengan pemesanan saya atas nama Ji-woo."
+  }
+ ],
+ "f|id-f3-07": [
+  {
+   "text": "Waktu kecil, aku tinggal di desa.",
+   "en": "When I was little, I lived in a village.",
+   "ko": "어렸을 때 나는 시골에 살았어.",
+   "replaces": "Iya. Waktu di Gili, aku snorkeling tiap hari. Ternyata airnya jernih banget."
+  },
+  {
+   "text": "Waktu hujan deras kemarin, listriknya padam.",
+   "en": "When it poured yesterday, the power went out.",
+   "ko": "어제 비가 많이 왔을 때 정전됐어요.",
+   "replaces": "Waktu mau pulang, laptopku tiba-tiba mati. Terus semua datanya hilang."
+  },
+  {
+   "text": "Waktu kuliah, saya sering begadang.",
+   "en": "When I was at university, I often stayed up all night.",
+   "ko": "대학 다닐 때 자주 밤을 새웠어요.",
+   "replaces": "Betul. Waktu saya baru masuk, saya sungkan banget bertanya. Tapi Bu Ratna selalu bilang, tak kenal maka tak sayang."
+  }
+ ],
+ "f|id-f3-14": [
+  {
+   "text": "Ternyata tokonya tutup hari ini.",
+   "en": "It turned out the shop is closed today.",
+   "ko": "알고 보니 가게가 오늘 문을 닫았더라고요.",
+   "replaces": "Iya. Waktu di Gili, aku snorkeling tiap hari. Ternyata airnya jernih banget."
+  },
+  {
+   "text": "Kukira dia marah, ternyata cuma capek.",
+   "en": "I thought he was angry, but it turned out he was just tired.",
+   "ko": "화난 줄 알았는데 알고 보니 그냥 피곤했던 거였어.",
+   "replaces": "Sudah! Aku juga nggak nyangka dokternya ternyata pelakunya."
+  },
+  {
+   "text": "Ternyata soal ujiannya gampang.",
+   "en": "The exam questions turned out to be easy.",
+   "ko": "시험 문제가 알고 보니 쉬웠어요.",
+   "replaces": "Dan ternyata benar. Dari obrolan-obrolan kecil di pantry, kami jadi dekat kayak keluarga."
+  }
+ ],
+ "f|id-f3-17": [
+  {
+   "text": "Aku masuk kelas. Terus, gurunya langsung kasih kuis.",
+   "en": "I went into class. Then the teacher immediately gave a quiz.",
+   "ko": "교실에 들어갔어. 그랬더니 선생님이 바로 쪽지 시험을 냈어.",
+   "replaces": "Waktu mau pulang, laptopku tiba-tiba mati. Terus semua datanya hilang."
+  }
+ ],
+ "e|tak kenal maka tak sayang": [
+  {
+   "text": "Ajak dia ngobrol dulu. Tak kenal maka tak sayang, kan?",
+   "en": "Chat with him first. You can't like someone you don't know, right?",
+   "ko": "먼저 그 사람이랑 얘기해 봐. 알아야 정이 들잖아?",
+   "replaces": "Betul. Waktu saya baru masuk, saya sungkan banget bertanya. Tapi Bu Ratna selalu bilang, tak kenal maka tak sayang."
+  }
+ ],
+ "f|id-f4-12": [
+  {
+   "text": "Saya paham maksudnya, tapi anggarannya tidak cukup.",
+   "en": "I see what you mean, but the budget isn't enough.",
+   "ko": "무슨 뜻인지는 알겠지만 예산이 부족해요.",
+   "replaces": "Saya paham maksudnya, Bu. Tapi kalau dirilis sekarang, kepercayaan pengguna bisa turun."
+  }
+ ],
+ "f|id-f3-09": [
+  {
+   "text": "Dompet saya tertinggal di taksi.",
+   "en": "I left my wallet in the taxi.",
+   "ko": "지갑을 택시에 두고 내렸어요.",
+   "replaces": "Ada. Sayangnya, kacamataku tertinggal di kapal."
+  }
+ ],
+ "f|id-f3-16": [
+  {
+   "text": "Sayangnya, tiket konsernya habis.",
+   "en": "Unfortunately, the concert tickets are sold out.",
+   "ko": "아쉽게도 콘서트 표가 매진됐어요.",
+   "replaces": "Ada. Sayangnya, kacamataku tertinggal di kapal."
+  }
+ ],
+ "f|id-f3-11": [
+  {
+   "text": "Bajunya sudah dicuci dan disetrika.",
+   "en": "The clothes have been washed and ironed.",
+   "ko": "옷은 빨고 다림질까지 다 됐어요.",
+   "replaces": "Untungnya, kacamatanya sudah ditemukan sama awak kapal."
+  },
+  {
+   "text": "Kamarnya sudah dibersihkan, silakan masuk.",
+   "en": "The room has been cleaned, please come in.",
+   "ko": "방 청소가 다 됐어요, 들어오세요.",
+   "replaces": "Oke, saya setuju. Tolong kabari saya kalau mejanya sudah dipesan."
+  }
+ ],
+ "f|id-f3-15": [
+  {
+   "text": "Untungnya, hujannya berhenti sebelum acara.",
+   "en": "Luckily, the rain stopped before the event.",
+   "ko": "다행히 행사 전에 비가 그쳤어요.",
+   "replaces": "Untungnya, kacamatanya sudah ditemukan sama awak kapal."
+  }
+ ],
+ "f|id-f3-12": [
+  {
+   "text": "Ban mobilnya sudah saya cek tadi pagi.",
+   "en": "I checked the car's tyres this morning.",
+   "ko": "자동차 타이어는 오늘 아침에 제가 확인했어요.",
+   "replaces": "Email konfirmasinya sudah saya cek dua kali."
+  }
+ ],
+ "f|id-f4-16": [
+  {
+   "text": "Kita perlu memperluas tempat parkir.",
+   "en": "We need to expand the parking area.",
+   "ko": "주차장을 넓혀야 해요.",
+   "replaces": "Kalau Bapak memperbaiki atapnya bulan ini, saya setuju naik tujuh persen, supaya sama-sama enak."
+  },
+  {
+   "text": "Kita perlu memperkuat tim penjualan.",
+   "en": "We need to strengthen the sales team.",
+   "ko": "영업팀을 강화해야 해요.",
+   "replaces": "Kalau boleh usul, kita fokus memperbaiki bug yang paling parah dulu, supaya peluncurannya tidak terlalu mundur."
+  },
+  {
+   "text": "Sekolah ini perlu memperbanyak buku di perpustakaan.",
+   "en": "This school needs more books in the library.",
+   "ko": "이 학교는 도서관 책을 늘려야 해요.",
+   "replaces": "Parah banget. Menurutku, pemerintah seharusnya memperbanyak bus dan kereta."
+  },
+  {
+   "text": "Kita perlu mempercepat proses pendaftaran.",
+   "en": "We need to speed up the registration process.",
+   "ko": "등록 절차를 더 빠르게 해야 해요.",
+   "replaces": "Intinya, aturan ini perlu, tapi pemerintah harus memperjelas detailnya."
+  }
+ ],
+ "e|sama-sama": [
+  {
+   "text": "Sama-sama, Bu. Senang bisa membantu.",
+   "en": "You're welcome. Glad I could help.",
+   "ko": "천만에요. 도와드릴 수 있어서 기뻐요.",
+   "replaces": "Kalau Bapak memperbaiki atapnya bulan ini, saya setuju naik tujuh persen, supaya sama-sama enak."
+  },
+  {
+   "text": "Oh, sama-sama, itu cuma hal kecil.",
+   "en": "Oh, you're welcome, it was nothing.",
+   "ko": "아, 천만에, 별거 아니야.",
+   "replaces": "Pagi, Pak Budi. Sama-sama. Apa kabar?"
+  }
+ ],
+ "e|ternyata": [
+  {
+   "text": "Kuncinya ternyata ada di saku jaketku.",
+   "en": "The key turned out to be in my jacket pocket.",
+   "ko": "열쇠가 알고 보니 내 재킷 주머니에 있었어.",
+   "replaces": "Sudah! Aku juga nggak nyangka dokternya ternyata pelakunya."
+  }
+ ],
+ "f|id-f4-01": [
+  {
+   "text": "Meskipun lelah, dia tetap masuk kerja.",
+   "en": "Even though she was tired, she still went to work.",
+   "ko": "피곤했지만 그녀는 그래도 출근했어요.",
+   "replaces": "Ada benarnya juga. Meskipun begitu, atap kamar mandi masih bocor sejak bulan lalu."
+  }
+ ],
+ "f|id-f4-02": [
+  {
+   "text": "Makanannya enak, walaupun porsinya kecil.",
+   "en": "The food is good, although the portions are small.",
+   "ko": "양은 적지만 음식은 맛있어요.",
+   "replaces": "Secara umum, MRT sekarang sudah cukup nyaman, walaupun jalurnya masih sedikit."
+  }
+ ],
+ "f|id-f4-10": [
+  {
+   "text": "Kalau boleh usul, rapatnya diadakan secara daring saja.",
+   "en": "If I may suggest, let's just hold the meeting online.",
+   "ko": "제안드리자면, 회의는 그냥 온라인으로 해요.",
+   "replaces": "Kalau boleh usul, kita fokus memperbaiki bug yang paling parah dulu, supaya peluncurannya tidak terlalu mundur."
+  }
+ ],
+ "e|parah": [
+  {
+   "text": "Macetnya parah banget pagi ini.",
+   "en": "The traffic was terrible this morning.",
+   "ko": "오늘 아침 차 막힌 게 정말 심했어.",
+   "replaces": "Kalau boleh usul, kita fokus memperbaiki bug yang paling parah dulu, supaya peluncurannya tidak terlalu mundur."
+  },
+  {
+   "text": "Lukanya nggak parah, kok.",
+   "en": "The wound isn't serious.",
+   "ko": "상처는 심하지 않아요.",
+   "replaces": "Pemeran utamanya, wah, keren banget. Adegan di stasiun itu bikin baper parah."
+  }
+ ],
+ "f|id-f4-05": [
+  {
+   "text": "Seharusnya aku bawa payung tadi.",
+   "en": "I should have brought an umbrella.",
+   "ko": "아까 우산을 가져왔어야 했는데.",
+   "replaces": "Parah banget. Menurutku, pemerintah seharusnya memperbanyak bus dan kereta."
+  }
+ ],
+ "f|id-f4-07": [
+  {
+   "text": "Mungkin desainnya kurang menarik buat anak muda.",
+   "en": "Maybe the design isn't quite appealing to young people.",
+   "ko": "디자인이 젊은 사람들한테는 좀 덜 매력적일 수도 있어요.",
+   "replaces": "Jangan salah paham, aku nggak bilang aturan itu sempurna. Mungkin hasilnya kurang terasa sekarang."
+  }
+ ],
+ "f|id-f4-08": [
+  {
+   "text": "Ongkos kirimnya bisa kurang sedikit, Mas?",
+   "en": "Could the shipping cost be a little lower?",
+   "ko": "배송비 좀 깎아 주실 수 있어요?",
+   "replaces": "Naik sepuluh persen agak berat buat saya. Harganya bisa kurang sedikit, Pak?"
+  }
+ ],
+ "f|id-f4-09": [
+  {
+   "text": "Bagaimana kalau kita makan di luar malam ini?",
+   "en": "How about we eat out tonight?",
+   "ko": "오늘 밤에 외식하는 거 어때요?",
+   "replaces": "Bagaimana kalau naiknya lima persen saja, tapi saya bayar enam bulan di muka?"
+  }
+ ],
+ "f|id-f4-11": [
+  {
+   "text": "Di satu sisi, kerja dari rumah itu praktis. Di sisi lain, saya jadi jarang bertemu orang.",
+   "en": "On the one hand, working from home is convenient. On the other hand, I rarely see people.",
+   "ko": "한편으로는 재택근무가 편해요. 다른 한편으로는 사람을 잘 안 만나게 돼요.",
+   "replaces": "Saya paham. Di satu sisi, biaya Bapak memang naik. Di sisi lain, saya sudah tiga tahun di sini dan selalu bayar tepat waktu."
+  }
+ ],
+ "e|di sisi lain": [
+  {
+   "text": "Gajinya besar. Di sisi lain, jam kerjanya panjang sekali.",
+   "en": "The pay is high. On the other hand, the hours are very long.",
+   "ko": "월급은 많아요. 반면에 근무 시간이 아주 길어요.",
+   "replaces": "Saya paham. Di satu sisi, biaya Bapak memang naik. Di sisi lain, saya sudah tiga tahun di sini dan selalu bayar tepat waktu."
+  }
+ ],
+ "f|id-f4-14": [
+  {
+   "text": "Tenggat laporan keuangan kapan, ya?",
+   "en": "When is the financial report due?",
+   "ko": "재무 보고서 마감이 언제예요?",
+   "replaces": "Baik, Bu. Tenggatnya kapan, ya?"
+  }
+ ],
+ "f|id-f4-17": [
+  {
+   "text": "Intinya, kita harus hemat bulan ini.",
+   "en": "The bottom line is, we have to save money this month.",
+   "ko": "결론은, 이번 달엔 아껴 써야 해요.",
+   "replaces": "Intinya, aturan ini perlu, tapi pemerintah harus memperjelas detailnya."
+  },
+  {
+   "text": "Pokoknya, intinya dia mau berhenti kerja.",
+   "en": "Anyway, the bottom line is she wants to quit her job.",
+   "ko": "아무튼 요점은 그녀가 일을 그만두고 싶어 한다는 거예요.",
+   "replaces": "Intinya begitu. Kenyamanan memang penting, tapi keselamatan dan waktu juga."
+  }
+ ],
+ "f|id-f4-18": [
+  {
+   "text": "Tokonya tutup permanen. Dengan kata lain, kita harus cari pemasok baru.",
+   "en": "The shop has closed for good. In other words, we have to find a new supplier.",
+   "ko": "그 가게는 완전히 문을 닫았어요. 다시 말해 새 공급처를 찾아야 해요.",
+   "replaces": "Mau tidak mau, iya. Dengan kata lain, kita butuh dua minggu lagi."
+  }
+ ],
+ "e|mau tidak mau": [
+  {
+   "text": "Jalannya ditutup, jadi mau tidak mau kami harus memutar.",
+   "en": "The road is closed, so like it or not we have to go around.",
+   "ko": "길이 막혀서 어쩔 수 없이 돌아가야 해요.",
+   "replaces": "Mau tidak mau, iya. Dengan kata lain, kita butuh dua minggu lagi."
+  }
+ ],
+ "f|id-f4-19": [
+  {
+   "text": "Tergantung cuacanya akhir pekan ini.",
+   "en": "It depends on the weather this weekend.",
+   "ko": "이번 주말 날씨에 달렸어요.",
+   "replaces": "Tergantung. Kalau ada bus pengumpan yang rutin, orang bisa ke stasiun dengan mudah."
+  },
+  {
+   "text": "Lamanya tergantung antrean di sana.",
+   "en": "How long it takes depends on the queue there.",
+   "ko": "얼마나 걸릴지는 거기 줄에 달렸어요.",
+   "replaces": "Tergantung pelaksanaannya. Kalau pengawasannya lemah, hasilnya sama saja."
+  }
+ ],
+ "e|tergantung": [
+  {
+   "text": "Bisa ikut atau tidak, tergantung jadwal kerjaku.",
+   "en": "Whether I can come depends on my work schedule.",
+   "ko": "갈 수 있을지는 내 근무 일정에 달렸어.",
+   "replaces": "Tergantung pelaksanaannya. Kalau pengawasannya lemah, hasilnya sama saja."
+  }
+ ],
+ "f|id-f4-20": [
+  {
+   "text": "Jadi kita sepakat pakai desain yang kedua, ya?",
+   "en": "So we agree to go with the second design, right?",
+   "ko": "그럼 두 번째 디자인으로 하기로 한 거죠?",
+   "replaces": "Jadi kita sepakat rilis akhir bulan, ya? Saya tindak lanjuti dengan klien hari ini."
+  },
+  {
+   "text": "Kita sepakat harganya segitu, ya?",
+   "en": "So we agree on that price, right?",
+   "ko": "가격은 그 정도로 합의한 거죠?",
+   "replaces": "Setuju, Pak. Kita sepakat, ya. Nanti saya kirim perjanjiannya lewat WhatsApp."
+  }
+ ],
+ "e|kita sepakat": [
+  {
+   "text": "Oke, kita sepakat. Kontraknya saya siapkan minggu ini.",
+   "en": "Okay, we have a deal. I'll prepare the contract this week.",
+   "ko": "좋아요, 합의했어요. 계약서는 이번 주에 준비할게요.",
+   "replaces": "Jadi kita sepakat rilis akhir bulan, ya? Saya tindak lanjuti dengan klien hari ini."
+  }
+ ],
+ "f|id-f5-01": [
+  {
+   "text": "Bahasa Indonesia merupakan bahasa resmi negara ini.",
+   "en": "Indonesian is the official language of this country.",
+   "ko": "인도네시아어는 이 나라의 공용어예요.",
+   "replaces": "Sama, aku juga salah fokus! Sinematografinya merupakan yang terbaik tahun ini, menurutku."
+  }
+ ],
+ "f|id-f5-02": [
+  {
+   "text": "Izinkan saya menjelaskan rencana ini secara singkat.",
+   "en": "Allow me to explain this plan briefly.",
+   "ko": "이 계획을 간단히 설명드리겠습니다.",
+   "replaces": "Terima kasih. Selamat sore semuanya. Izinkan saya menyampaikan beberapa kata atas nama tim."
+  }
+ ],
+ "f|id-f5-03": [
+  {
+   "text": "Atas nama keluarga besar, kami menyambut Anda dengan hangat.",
+   "en": "On behalf of the whole family, we welcome you warmly.",
+   "ko": "온 가족을 대표해 따뜻하게 환영합니다.",
+   "replaces": "Terima kasih. Selamat sore semuanya. Izinkan saya menyampaikan beberapa kata atas nama tim."
+  }
+ ],
+ "e|izinkan saya": [
+  {
+   "text": "Izinkan saya bertanya satu hal, Pak.",
+   "en": "Allow me to ask one thing, sir.",
+   "ko": "한 가지 여쭤봐도 될까요.",
+   "replaces": "Terima kasih. Selamat sore semuanya. Izinkan saya menyampaikan beberapa kata atas nama tim."
+  }
+ ],
+ "f|id-f5-04": [
+  {
+   "text": "Dengan segala hormat, Bu, data ini perlu diperiksa ulang.",
+   "en": "With all due respect, ma'am, this data needs to be checked again.",
+   "ko": "외람되지만, 이 데이터는 다시 확인해야 해요.",
+   "replaces": "Dengan segala hormat, Pak, sepertinya Sabtu ini agak sulit buat saya."
+  }
+ ],
+ "f|id-f5-05": [
+  {
+   "text": "Sepertinya datang jam tujuh pagi agak sulit buat saya.",
+   "en": "It seems coming at seven in the morning would be a bit difficult for me.",
+   "ko": "아침 일곱 시에 오는 건 저한테 좀 어려울 것 같아요.",
+   "replaces": "Dengan segala hormat, Pak, sepertinya Sabtu ini agak sulit buat saya."
+  }
+ ],
+ "f|id-f5-06": [
+  {
+   "text": "Nontonnya lain kali aja, ya. Hari ini aku capek.",
+   "en": "Let's watch it another time. I'm tired today.",
+   "ko": "영화는 다음에 보자. 오늘은 피곤해.",
+   "replaces": "Mending lain kali aja, deh. Nanti aku kabarin kalau dompetnya udah ketemu."
+  }
+ ],
+ "f|id-f5-07": [
+  {
+   "text": "Mending naik kereta, deh, jalanan macet.",
+   "en": "Better to take the train, the roads are jammed.",
+   "ko": "기차 타는 게 낫겠다, 길이 막혀.",
+   "replaces": "Mending lain kali aja, deh. Nanti aku kabarin kalau dompetnya udah ketemu."
+  },
+  {
+   "text": "Mending masak sendiri, deh. Hemat dan sehat.",
+   "en": "Better to cook for yourself. It's cheaper and healthier.",
+   "ko": "직접 해 먹는 게 낫겠어. 돈도 아끼고 건강하고.",
+   "replaces": "Mending di bioskop, deh. Suaranya beda jauh, apalagi pas adegan hujan."
+  }
+ ],
+ "e|mending": [
+  {
+   "text": "Daripada bengong, mending kita jalan-jalan.",
+   "en": "Rather than sitting around, we'd better go for a walk.",
+   "ko": "멍하니 있느니 산책하는 게 낫겠어.",
+   "replaces": "Mending lain kali aja, deh. Nanti aku kabarin kalau dompetnya udah ketemu."
+  }
+ ],
+ "f|id-f5-08": [
+  {
+   "text": "Kok sepi banget sih hari ini?",
+   "en": "How come it's so quiet today?",
+   "ko": "오늘 왜 이렇게 조용해?",
+   "replaces": "Nah, itu dia! Kok bisa, ya? Pas mau bayar, dompetnya tiba-tiba ketinggalan."
+  },
+  {
+   "text": "Kok kamu nggak bilang dari awal sih?",
+   "en": "How come you didn't tell me from the start?",
+   "ko": "왜 처음부터 말 안 했어?",
+   "replaces": "Kok kamu malah salah fokus sih? Yang penting kan dompetnya!"
+  }
+ ],
+ "f|id-f5-09": [
+  {
+   "text": "Ceritain dong, gimana kencannya!",
+   "en": "Come on, tell me how the date went!",
+   "ko": "데이트 어땠는지 얘기 좀 해 줘!",
+   "replaces": "Halo semua! Udah dong, semalam. Langsung aja ya, jujur aja filmnya bagus banget."
+  }
+ ],
+ "f|id-f5-15": [
+  {
+   "text": "Jujur aja, aku bosan sama kerjaanku.",
+   "en": "To be honest, I'm bored with my job.",
+   "ko": "솔직히 말하면 나 일이 지겨워.",
+   "replaces": "Halo semua! Udah dong, semalam. Langsung aja ya, jujur aja filmnya bagus banget."
+  },
+  {
+   "text": "Jujur aja, filmnya bikin aku ngantuk.",
+   "en": "Honestly, the film made me sleepy.",
+   "ko": "솔직히 그 영화 보다가 졸렸어.",
+   "replaces": "Iya nih, momen begini emang bikin baper. Jujur aja, kantor ini nggak akan sama tanpa Ibu."
+  }
+ ],
+ "f|id-f5-10": [
+  {
+   "text": "Emang sih harganya mahal, tapi kualitasnya bagus.",
+   "en": "Sure, it's expensive, but the quality is good.",
+   "ko": "비싸긴 한데 품질이 좋아.",
+   "replaces": "Emang sih aku baru bangun jam sebelas, tapi ojeknya tetap nyasar, kok!"
+  }
+ ],
+ "f|id-f5-12": [
+  {
+   "text": "Jangan rebutan, ambil kuenya satu-satu.",
+   "en": "Don't grab, take the cakes one at a time.",
+   "ko": "다투지 말고 과자는 하나씩 가져가.",
+   "replaces": "Sama-sama! Tulis pendapat kalian di kolom komentar, ya, nanti aku bacain satu-satu."
+  }
+ ],
+ "f|id-f5-14": [
+  {
+   "text": "Rencananya mau diet. Ujung-ujungnya, makan martabak juga.",
+   "en": "I planned to diet. In the end, I ate martabak anyway.",
+   "ko": "다이어트하려고 했는데 결국 마르타박을 먹었어.",
+   "replaces": "Kencannya sih lancar. Cuma ujung-ujungnya aku yang bayar semua."
+  },
+  {
+   "text": "Kami debat lama, ujung-ujungnya pilih restoran yang biasa.",
+   "en": "We argued for ages, and in the end picked the usual restaurant.",
+   "ko": "한참 토론하다가 결국 늘 가던 식당으로 골랐어.",
+   "replaces": "Delapan dari sepuluh. Ujung-ujungnya, aku keluar bioskop sambil senyum-senyum sendiri."
+  }
+ ],
+ "e|jujur aja": [
+  {
+   "text": "Jujur aja, kamu suka hadiahnya atau nggak?",
+   "en": "Be honest, do you like the present or not?",
+   "ko": "솔직히 말해 봐, 선물 마음에 들어 안 들어?",
+   "replaces": "Iya nih, momen begini emang bikin baper. Jujur aja, kantor ini nggak akan sama tanpa Ibu."
+  }
+ ],
+ "f|id-f5-16": [
+  {
+   "text": "Ya ampun, kuncinya ketinggalan di dalam!",
+   "en": "Oh my gosh, I left the keys inside!",
+   "ko": "세상에, 열쇠를 안에 두고 나왔어!",
+   "replaces": "Ya ampun, maaf banget. Tadi ojeknya nyasar, muter-muter terus."
+  }
+ ],
+ "f|id-f5-17": [
+  {
+   "text": "Santai aja, kita nggak buru-buru, kok.",
+   "en": "Take it easy, we're not in a hurry.",
+   "ko": "진정해, 우리 안 급해.",
+   "replaces": "Ya nggak lah. Santai aja, anggap aja traktiran pertama. Gitu deh."
+  }
+ ],
+ "e|santai aja": [
+  {
+   "text": "Santai aja, ujiannya pasti lancar.",
+   "en": "Relax, the exam will go fine.",
+   "ko": "걱정 마, 시험 분명 잘 볼 거야.",
+   "replaces": "Ya nggak lah. Santai aja, anggap aja traktiran pertama. Gitu deh."
+  }
+ ],
+ "f|id-f5-18": [
+  {
+   "text": "Apa boleh buat, penerbangannya dibatalkan.",
+   "en": "It can't be helped, the flight was cancelled.",
+   "ko": "어쩔 수 없죠, 비행기가 취소됐어요.",
+   "replaces": "Saya tahu waktunya mepet, Pak. Tapi apa boleh buat, acara keluarga ini sudah direncanakan lama."
+  }
+ ],
+ "f|id-f5-19": [
+  {
+   "text": "Saya jadi nggak enak hati karena dia menunggu lama.",
+   "en": "I feel bad because she waited a long time.",
+   "ko": "그녀가 오래 기다려서 미안한 마음이 들어요.",
+   "replaces": "Wah, terima kasih atas kepercayaannya, Pak. Tapi saya jadi nggak enak hati, sebenarnya..."
+  }
+ ],
+ "e|besok": [
+  {
+   "text": "Besok pagi aku ada ujian.",
+   "en": "I have an exam tomorrow morning.",
+   "ko": "나 내일 아침에 시험 있어.",
+   "replaces": "Siap, Pak. Besok pagi-pagi saya temui dia. Sekali lagi, terima kasih atas pengertiannya."
+  }
+ ]
+}

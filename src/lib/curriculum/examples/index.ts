@@ -6,15 +6,21 @@
 export type { ExtraExample } from "./types.ts";
 import type { ExtraExample } from "./types.ts";
 import { AR_EXTRA } from "./ar.ts";
+import { EN_EXTRA } from "./en.ts";
 import { ES_EXTRA } from "./es.ts";
+import { FR_EXTRA } from "./fr.ts";
 import { HI_EXTRA } from "./hi.ts";
+import { ID_EXTRA } from "./id.ts";
 import { IT_EXTRA } from "./it.ts";
+import { JA_EXTRA } from "./ja.ts";
 import { KO_EXTRA } from "./ko.ts";
 import { PT_EXTRA } from "./pt.ts";
 import { RU_EXTRA } from "./ru.ts";
+import { TH_EXTRA } from "./th.ts";
+import { VI_EXTRA } from "./vi.ts";
 import { ZH_EXTRA } from "./zh.ts";
 
-export const EXTRA_EXAMPLES: Partial<Record<string, Record<string, ExtraExample[]>>> = { ar: AR_EXTRA, es: ES_EXTRA, hi: HI_EXTRA, it: IT_EXTRA, ko: KO_EXTRA, pt: PT_EXTRA, ru: RU_EXTRA, zh: ZH_EXTRA };
+export const EXTRA_EXAMPLES: Partial<Record<string, Record<string, ExtraExample[]>>> = { ar: AR_EXTRA, en: EN_EXTRA, es: ES_EXTRA, fr: FR_EXTRA, hi: HI_EXTRA, id: ID_EXTRA, it: IT_EXTRA, ja: JA_EXTRA, ko: KO_EXTRA, pt: PT_EXTRA, ru: RU_EXTRA, th: TH_EXTRA, vi: VI_EXTRA, zh: ZH_EXTRA };
 
 /** 점검 스크립트가 새 예문을 넣기 전 상태를 셀 때만 언어를 넣는다. */
 export const SHARED_EXAMPLES_OFF = new Set<string>();

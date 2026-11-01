@@ -1,0 +1,869 @@
+/** ja 새 예문(scripts/extra-examples.mjs가 ja.json에서 만듦). */
+import type { ExtraExample } from "./types.ts";
+
+export const JA_EXTRA: Record<string, ExtraExample[]> = {
+ "f|ja-f1-04": [
+  {
+   "text": "このりんごはいくらですか。",
+   "en": "How much is this apple?",
+   "ko": "이 사과는 얼마예요?",
+   "replaces": "はい、一つください。いくらですか。"
+  }
+ ],
+ "e|ありがとうございます": [
+  {
+   "text": "傘を貸してくれて、ありがとうございます。",
+   "en": "Thank you for lending me an umbrella.",
+   "ko": "우산 빌려줘서 고마워요.",
+   "replaces": "じゃあ、そちらをください。ありがとうございます。"
+  },
+  {
+   "text": "わざわざ来てくださって、ありがとうございます。",
+   "en": "Thank you for coming all this way.",
+   "ko": "일부러 와 주셔서 감사합니다.",
+   "replaces": "ありがとうございます。この売り上げのデータなんですけど、どうすれば見やすくなりますか。"
+  },
+  {
+   "text": "ありがとうございます。とても助かりました。",
+   "en": "Thank you. That was a big help.",
+   "ko": "감사합니다. 정말 도움이 됐어요.",
+   "replaces": "ありがとうございます。では、明日の十時に伺います。"
+  },
+  {
+   "text": "お土産、ありがとうございます。みんなでいただきます。",
+   "en": "Thank you for the souvenir. We'll all enjoy it.",
+   "ko": "선물 감사합니다. 다 같이 먹을게요.",
+   "replaces": "ありがとうございます。では、木曜の午後に伺います。"
+  },
+  {
+   "text": "席を譲ってくださって、ありがとうございます。",
+   "en": "Thank you for giving me your seat.",
+   "ko": "자리 양보해 주셔서 감사합니다.",
+   "replaces": "ありがとうございます。よろしければ、その調整は私に担当させてください。"
+  },
+  {
+   "text": "お誕生日のカード、ありがとうございます。",
+   "en": "Thank you for the birthday card.",
+   "ko": "생일 카드 고마워요.",
+   "replaces": "いいえ、まだまだです。ありがとうございます。"
+  },
+  {
+   "text": "道を教えてくださって、ありがとうございます。",
+   "en": "Thank you for showing me the way.",
+   "ko": "길 알려 주셔서 감사합니다.",
+   "replaces": "ありがとうございます。いただきます。"
+  },
+  {
+   "text": "いつも丁寧に教えていただいて、ありがとうございます。",
+   "en": "Thank you for always teaching me so carefully.",
+   "ko": "늘 친절하게 가르쳐 주셔서 감사합니다.",
+   "replaces": "はい、そうです。ありがとうございます。"
+  },
+  {
+   "text": "ご連絡ありがとうございます。内容を確認しました。",
+   "en": "Thank you for getting in touch. I've checked the details.",
+   "ko": "연락 주셔서 감사합니다. 내용을 확인했어요.",
+   "replaces": "ありがとうございます。どのくらいかかりそうですか。"
+  },
+  {
+   "text": "ありがとうございます。お気持ちだけいただきます。",
+   "en": "Thank you. I'll accept just the kind thought.",
+   "ko": "감사합니다. 마음만 받을게요.",
+   "replaces": "ありがとうございます。こちらが旅程表です。お名前と日程に間違いがないか、ご確認ください。"
+  },
+  {
+   "text": "本日はお集まりいただき、ありがとうございます。",
+   "en": "Thank you all for gathering today.",
+   "ko": "오늘 모여 주셔서 감사합니다.",
+   "replaces": "私にですか。ありがとうございます。身に余るお言葉です。"
+  }
+ ],
+ "f|ja-f1-06": [
+  {
+   "text": "郵便局はどこですか。",
+   "en": "Where is the post office?",
+   "ko": "우체국은 어디예요?",
+   "replaces": "わかりました。あと、トイレはどこですか。"
+  }
+ ],
+ "e|わかりました": [
+  {
+   "text": "わかりました。すぐ行きます。",
+   "en": "Got it. I'll come right away.",
+   "ko": "알겠어요. 바로 갈게요.",
+   "replaces": "わかりました。あと、トイレはどこですか。"
+  },
+  {
+   "text": "はい、わかりました。明日、電話します。",
+   "en": "Okay, understood. I'll call tomorrow.",
+   "ko": "네, 알겠어요. 내일 전화할게요.",
+   "replaces": "わかりました。楽しみです。"
+  }
+ ],
+ "f|ja-f1-12": [
+  {
+   "text": "大阪行きのバスはどれですか。",
+   "en": "Which one is the bus to Osaka?",
+   "ko": "오사카행 버스는 어느 거예요?",
+   "replaces": "すみません、新宿に行きます。電車はどれですか。"
+  }
+ ],
+ "e|すみません": [
+  {
+   "text": "すみません、水をください。",
+   "en": "Excuse me, some water, please.",
+   "ko": "저기요, 물 주세요.",
+   "replaces": "すみません、新宿に行きます。電車はどれですか。"
+  },
+  {
+   "text": "遅れて、すみません。",
+   "en": "Sorry I'm late.",
+   "ko": "늦어서 죄송해요.",
+   "replaces": "すみません、道に迷いました。今、大きい公園の前にいます。"
+  },
+  {
+   "text": "すみません、ちょっと通ります。",
+   "en": "Excuse me, coming through.",
+   "ko": "죄송해요, 좀 지나갈게요.",
+   "replaces": "すみません、何がおすすめですか。"
+  },
+  {
+   "text": "あ、すみません。足を踏んでしまいました。",
+   "en": "Oh, sorry. I stepped on your foot.",
+   "ko": "아, 죄송해요. 발을 밟았네요.",
+   "replaces": "すみません、五〇三号室のパクですが、お湯が出ないんです。"
+  },
+  {
+   "text": "すみません、トイレを借りたいんですが。",
+   "en": "Excuse me, may I use the restroom?",
+   "ko": "저기요, 화장실 좀 쓰고 싶은데요.",
+   "replaces": "すみません、これください。"
+  },
+  {
+   "text": "すみません、写真を一枚撮っていただけますか。",
+   "en": "Excuse me, could you take a photo for us?",
+   "ko": "저기요, 사진 한 장 찍어 주실 수 있어요?",
+   "replaces": "すみません、もう一度お願いします。"
+  },
+  {
+   "text": "すみません、それは知りませんでした。",
+   "en": "Sorry, I didn't know that.",
+   "ko": "죄송해요, 그건 몰랐어요.",
+   "replaces": "すみません、まだわかりません。"
+  },
+  {
+   "text": "夜遅くに電話して、すみません。",
+   "en": "Sorry for calling so late at night.",
+   "ko": "밤늦게 전화해서 죄송해요.",
+   "replaces": "とんでもないです。お力になれなくて、すみません。代わりと言っては何ですが、金曜のうちに受付の準備だけでもしておきましょうか。"
+  }
+ ],
+ "f|ja-f1-09": [
+  {
+   "text": "今、学校の図書館にいます。",
+   "en": "I'm at the school library now.",
+   "ko": "지금 학교 도서관에 있어요.",
+   "replaces": "すみません、道に迷いました。今、大きい公園の前にいます。"
+  }
+ ],
+ "e|お願いします": [
+  {
+   "text": "コーヒーを一つお願いします。",
+   "en": "One coffee, please.",
+   "ko": "커피 하나 주세요.",
+   "replaces": "カードでお願いします。"
+  },
+  {
+   "text": "駅までお願いします。",
+   "en": "To the station, please.",
+   "ko": "역까지 가 주세요.",
+   "replaces": "じゃあ、唐揚げ定食を一つください。ご飯は大盛りでお願いします。"
+  },
+  {
+   "text": "袋はいりません。レシートだけお願いします。",
+   "en": "No bag needed. Just the receipt, please.",
+   "ko": "봉투는 필요 없어요. 영수증만 주세요.",
+   "replaces": "はじめまして。マリアです。よろしくお願いします。"
+  },
+  {
+   "text": "窓側の席でお願いします。",
+   "en": "A window seat, please.",
+   "ko": "창가 자리로 부탁해요.",
+   "replaces": "いえいえ。よろしくお願いします。"
+  },
+  {
+   "text": "お会計、お願いします。",
+   "en": "The check, please.",
+   "ko": "계산해 주세요.",
+   "replaces": "よろしくお願いします。"
+  },
+  {
+   "text": "もう少しゆっくりお願いします。",
+   "en": "A little more slowly, please.",
+   "ko": "조금 더 천천히 부탁해요.",
+   "replaces": "すみません、もう一度お願いします。"
+  }
+ ],
+ "f|ja-f2-01": [
+  {
+   "text": "この服、試着してもいいですか。",
+   "en": "May I try these clothes on?",
+   "ko": "이 옷 입어 봐도 돼요?",
+   "replaces": "わあ、すごいですね。写真を撮ってもいいですか。"
+  }
+ ],
+ "f|ja-f2-02": [
+  {
+   "text": "この紙に住所を書いてください。",
+   "en": "Please write your address on this paper.",
+   "ko": "이 종이에 주소를 써 주세요.",
+   "replaces": "お疲れさまでした。気をつけて帰ってくださいね。また明日。"
+  },
+  {
+   "text": "窓を開けてください。",
+   "en": "Please open the window.",
+   "ko": "창문을 열어 주세요.",
+   "replaces": "来年は頑張ってください。応援しています。"
+  }
+ ],
+ "e|気をつけて": [
+  {
+   "text": "雨で道が滑るから、気をつけてね。",
+   "en": "The road's slippery from the rain, so be careful.",
+   "ko": "비 때문에 길이 미끄러우니까 조심해.",
+   "replaces": "お疲れさまでした。気をつけて帰ってくださいね。また明日。"
+  }
+ ],
+ "f|ja-f2-11": [
+  {
+   "text": "今、晩ご飯を作っています。",
+   "en": "I'm making dinner right now.",
+   "ko": "지금 저녁을 만들고 있어요.",
+   "replaces": "来年は頑張ってください。応援しています。"
+  }
+ ],
+ "f|ja-f2-03": [
+  {
+   "text": "夏休みに海へ行きたいです。",
+   "en": "I want to go to the sea in the summer holidays.",
+   "ko": "여름 방학에 바다에 가고 싶어요.",
+   "replaces": "いいですね！行きたいです。"
+  }
+ ],
+ "f|ja-f2-04": [
+  {
+   "text": "週末、一緒に映画を見ませんか。",
+   "en": "Would you like to watch a movie together this weekend?",
+   "ko": "주말에 같이 영화 보지 않을래요?",
+   "replaces": "じゃあ、駅の前の新しいカフェに一緒に行きませんか。"
+  }
+ ],
+ "f|ja-f2-05": [
+  {
+   "text": "じゃあ、三時に駅の改札で会いましょう。",
+   "en": "Then let's meet at the station ticket gate at three.",
+   "ko": "그럼 세 시에 역 개찰구에서 만나요.",
+   "replaces": "大丈夫です。どこで会いましょうか。"
+  }
+ ],
+ "f|ja-f2-07": [
+  {
+   "text": "私は富士山に登ったことがあります。",
+   "en": "I've climbed Mt. Fuji before.",
+   "ko": "저는 후지산에 올라간 적이 있어요.",
+   "replaces": "おいしいです。すしとラーメンは食べたことがありますが、お好み焼きはまだです。"
+  }
+ ],
+ "f|ja-f2-16": [
+  {
+   "text": "土曜日の午後はどうですか。",
+   "en": "How about Saturday afternoon?",
+   "ko": "토요일 오후는 어때요?",
+   "replaces": "木曜日ですか。ちょっと待ってください。…木曜日の十時はどうですか。"
+  }
+ ],
+ "f|ja-f2-17": [
+  {
+   "text": "昨日からおなかが痛いです。",
+   "en": "My stomach has hurt since yesterday.",
+   "ko": "어제부터 배가 아파요.",
+   "replaces": "風邪をひきました。頭が痛いです。"
+  }
+ ],
+ "f|ja-f2-20": [
+  {
+   "text": "このお店は何がおすすめですか。",
+   "en": "What do you recommend at this shop?",
+   "ko": "이 가게는 뭐가 추천이에요?",
+   "replaces": "すみません、何がおすすめですか。"
+  }
+ ],
+ "f|ja-f3-01": [
+  {
+   "text": "実は、財布を家に忘れてきちゃったんです。",
+   "en": "Actually, I left my wallet at home.",
+   "ko": "사실 지갑을 집에 두고 왔어요.",
+   "replaces": "実は、乗り換えで電車を間違えちゃったんだ。"
+  },
+  {
+   "text": "実は、来月引っ越すことにしたんです。",
+   "en": "Actually, I've decided to move next month.",
+   "ko": "사실 다음 달에 이사하기로 했어요.",
+   "replaces": "そうなんです。実は、明日までに資料を作らなきゃいけないんですけど、終わりそうになくて。"
+  }
+ ],
+ "f|ja-f3-03": [
+  {
+   "text": "寒かったら言ってね。暖房をつけるから。",
+   "en": "Tell me if you're cold. I'll turn on the heater.",
+   "ko": "추우면 말해. 난방 켤게.",
+   "replaces": "そうなんだ。無理しないでね。手伝えることがあったら言って。"
+  }
+ ],
+ "e|そうなんだ": [
+  {
+   "text": "そうなんだ。知らなかった。",
+   "en": "Oh, really? I didn't know.",
+   "ko": "그렇구나. 몰랐어.",
+   "replaces": "そうなんだ。無理しないでね。手伝えることがあったら言って。"
+  },
+  {
+   "text": "へえ、そうなんだ。今度行ってみようかな。",
+   "en": "Huh, really? Maybe I'll go next time.",
+   "ko": "오, 그렇구나. 다음에 가 볼까.",
+   "replaces": "そうなんだ。じゃあ、もしよかったら、さっきの質問の答え、一緒に考えてみる？"
+  }
+ ],
+ "f|ja-f3-04": [
+  {
+   "text": "よかったら、作り方を教えてもらえますか。",
+   "en": "If you don't mind, could you show me how to make it?",
+   "ko": "괜찮으면 만드는 법 좀 알려 줄 수 있어요?",
+   "replaces": "わかりました。もし直らなかったら、部屋を変えてもらえますか。"
+  },
+  {
+   "text": "この荷物、ちょっと持ってもらえますか。",
+   "en": "Could you hold this bag for a moment?",
+   "ko": "이 짐 잠깐 들어 줄 수 있어요?",
+   "replaces": "本当ですか。助かります。グラフを作るのが苦手で…。もしよかったら、見てもらえますか。"
+  }
+ ],
+ "e|本当ですか": [
+  {
+   "text": "本当ですか。それはよかったですね。",
+   "en": "Really? That's great.",
+   "ko": "정말요? 그거 잘됐네요.",
+   "replaces": "本当ですか。助かります。グラフを作るのが苦手で…。もしよかったら、見てもらえますか。"
+  }
+ ],
+ "f|ja-f3-06": [
+  {
+   "text": "明日は雨かもしれません。",
+   "en": "It might rain tomorrow.",
+   "ko": "내일은 비가 올지도 몰라요.",
+   "replaces": "日帰りならいけるかも。…うん、やっぱり行く！"
+  }
+ ],
+ "f|ja-f3-16": [
+  {
+   "text": "雨なら、仕方ないね。また今度行こう。",
+   "en": "If it's raining, it can't be helped. Let's go another time.",
+   "ko": "비가 오면 어쩔 수 없지. 다음에 또 가자.",
+   "replaces": "それなら仕方ないよ。気にしないで。"
+  }
+ ],
+ "e|仕方ない": [
+  {
+   "text": "終わったことは仕方ない。次、頑張ろう。",
+   "en": "What's done is done. Let's do our best next time.",
+   "ko": "끝난 일은 어쩔 수 없어. 다음에 힘내자.",
+   "replaces": "それなら仕方ないよ。気にしないで。"
+  },
+  {
+   "text": "電車が止まってるんだから、遅れても仕方ないよ。",
+   "en": "The trains have stopped, so it can't be helped if you're late.",
+   "ko": "전철이 멈췄으니 늦어도 어쩔 수 없어.",
+   "replaces": "それ、今さら言っても仕方ないって。もう申し込んじゃったし。"
+  }
+ ],
+ "f|ja-f3-17": [
+  {
+   "text": "せっかくだから、展望台まで登ってみたいな。",
+   "en": "Since we're here, I'd like to go up to the observation deck.",
+   "ko": "기왕 왔으니 전망대까지 올라가 보고 싶다.",
+   "replaces": "せっかくだから、温泉のあとにおいしいものも食べたいな。"
+  }
+ ],
+ "f|ja-f3-19": [
+  {
+   "text": "とりあえず、新しいレシピで作ってみます。",
+   "en": "For now, I'll try making it with the new recipe.",
+   "ko": "일단 새 레시피로 만들어 볼게요.",
+   "replaces": "いえいえ、本当に助かりましたから。じゃあ、とりあえずやってみます。"
+  }
+ ],
+ "f|ja-f3-20": [
+  {
+   "text": "ちょっと聞いてよ！昨日、駅で昔の友だちに会ったんだ。",
+   "en": "Listen to this! I ran into an old friend at the station yesterday.",
+   "ko": "내 얘기 좀 들어 봐! 어제 역에서 옛날 친구를 만났어.",
+   "replaces": "ちょっと聞いてよ！好きなバンドの大阪ライブ、チケット当たったんだ！"
+  }
+ ],
+ "f|ja-f4-01": [
+  {
+   "text": "はじめまして、営業部の佐藤と申します。",
+   "en": "How do you do. My name is Sato, from the sales department.",
+   "ko": "처음 뵙겠습니다, 영업부의 사토라고 합니다.",
+   "replaces": "お世話になっております。東和パッケージのチェンと申します。購買部の木村様はいらっしゃいますか。"
+  }
+ ],
+ "f|ja-f4-02": [
+  {
+   "text": "経理部の山本様はいらっしゃいますか。",
+   "en": "Is Mr. Yamamoto from accounting available?",
+   "ko": "경리부 야마모토 님 계십니까?",
+   "replaces": "お世話になっております。東和パッケージのチェンと申します。購買部の木村様はいらっしゃいますか。"
+  }
+ ],
+ "f|ja-f4-04": [
+  {
+   "text": "恐れ入りますが、少々お待ちいただけますか。",
+   "en": "I'm sorry to trouble you, but could you wait a moment?",
+   "ko": "죄송하지만 잠시만 기다려 주시겠어요?",
+   "replaces": "恐れ入りますが、この「世帯主」の欄は、どう書けばよろしいでしょうか。"
+  }
+ ],
+ "f|ja-f4-05": [
+  {
+   "text": "本日は体調不良のため、お休みさせていただきます。",
+   "en": "As I'm feeling unwell, I'll be taking today off.",
+   "ko": "오늘은 몸이 안 좋아서 쉬겠습니다.",
+   "replaces": "安心しました。では、こちらの物件で契約させていただきます。"
+  }
+ ],
+ "f|ja-f4-06": [
+  {
+   "text": "来年の春に、本社へ異動することになりました。",
+   "en": "It's been decided that I'll transfer to head office next spring.",
+   "ko": "내년 봄에 본사로 옮기게 됐어요.",
+   "replaces": "お世話になっております。大変申し上げにくいのですが、来週月曜日に納品予定の箱が、工場のトラブルで遅れることになりました。"
+  }
+ ],
+ "f|ja-f4-08": [
+  {
+   "text": "料理が嫌いなわけではないのですが、時間がなくて。",
+   "en": "It's not that I dislike cooking, but I don't have the time.",
+   "ko": "요리가 싫은 건 아닌데 시간이 없어서요.",
+   "replaces": "なるほど。部屋は広ければ広いほどいいというわけではないので、念のため、二つ目の物件をもう一度見せていただけますか。"
+  }
+ ],
+ "f|ja-f4-09": [
+  {
+   "text": "練習すればするほど、上手になります。",
+   "en": "The more you practice, the better you get.",
+   "ko": "연습하면 할수록 잘하게 돼요.",
+   "replaces": "なるほど。部屋は広ければ広いほどいいというわけではないので、念のため、二つ目の物件をもう一度見せていただけますか。"
+  }
+ ],
+ "f|ja-f4-17": [
+  {
+   "text": "念のため伺いますが、料金には税金も含まれているでしょうか。",
+   "en": "Just to be sure, does the price include tax?",
+   "ko": "혹시 몰라 여쭙는데, 요금에 세금도 포함되어 있을까요?",
+   "replaces": "なるほど。部屋は広ければ広いほどいいというわけではないので、念のため、二つ目の物件をもう一度見せていただけますか。"
+  },
+  {
+   "text": "念のため伺いますが、当日は印鑑が必要でしょうか。",
+   "en": "Just to be sure, will I need my seal on the day?",
+   "ko": "혹시 몰라 여쭙는데, 당일에 도장이 필요할까요?",
+   "replaces": "なるほど。念のため伺いますが、楽器の演奏は可能でしょうか。"
+  }
+ ],
+ "e|なるほど": [
+  {
+   "text": "なるほど、そういう意味だったんですね。",
+   "en": "I see, so that's what it meant.",
+   "ko": "그렇군요, 그런 뜻이었군요.",
+   "replaces": "なるほど。部屋は広ければ広いほどいいというわけではないので、念のため、二つ目の物件をもう一度見せていただけますか。"
+  },
+  {
+   "text": "なるほど。だから人気があるんだ。",
+   "en": "I see. That's why it's popular.",
+   "ko": "그렇구나. 그래서 인기가 있는 거구나.",
+   "replaces": "なるほど。念のため伺いますが、楽器の演奏は可能でしょうか。"
+  },
+  {
+   "text": "なるほどね。じゃあ、先に駅前の店に行こうか。",
+   "en": "I see. Then shall we go to the shop by the station first?",
+   "ko": "그렇구나. 그럼 먼저 역 앞 가게에 갈까?",
+   "replaces": "なるほどね。そう考えると一理あるかも。でも、それにしても展開が急すぎたと思わない？"
+  }
+ ],
+ "f|ja-f4-10": [
+  {
+   "text": "会議を来週に延ばすのはいかがでしょうか。",
+   "en": "How about postponing the meeting to next week?",
+   "ko": "회의를 다음 주로 미루는 건 어떠실까요?",
+   "replaces": "でしたら、二段階に分けるのはいかがでしょうか。要するに、今年度は基本の機能だけを導入して、残りは来年度に回す形です。"
+  }
+ ],
+ "f|ja-f4-11": [
+  {
+   "text": "おっしゃる通りです。説明が足りませんでした。",
+   "en": "You're quite right. My explanation wasn't enough.",
+   "ko": "말씀하신 대로입니다. 제 설명이 부족했습니다.",
+   "replaces": "おっしゃる通りです。では、日程はそのままにして、ほかのチームにテストを手伝ってもらうことはできないでしょうか。"
+  }
+ ],
+ "f|ja-f4-14": [
+  {
+   "text": "私の確認不足で、チームの皆さんにご迷惑をおかけしました。",
+   "en": "I didn't check carefully enough and caused the team trouble. I'm sorry.",
+   "ko": "제 확인 부족으로 팀 여러분께 폐를 끼쳤습니다.",
+   "replaces": "今のところ、三日ほど遅れる見込みです。ご迷惑をおかけして、大変申し訳ございません。"
+  },
+  {
+   "text": "工事の騒音で、皆様にご迷惑をおかけしました。",
+   "en": "We apologize for the trouble the construction noise caused everyone.",
+   "ko": "공사 소음으로 여러분께 폐를 끼쳤습니다.",
+   "replaces": "このたびはご迷惑をおかけして、申し訳ございません。それでは、失礼いたします。"
+  }
+ ],
+ "e|申し訳ございません": [
+  {
+   "text": "お待たせして、申し訳ございません。",
+   "en": "We're very sorry to have kept you waiting.",
+   "ko": "기다리게 해서 정말 죄송합니다.",
+   "replaces": "このたびはご迷惑をおかけして、申し訳ございません。それでは、失礼いたします。"
+  }
+ ],
+ "f|ja-f4-15": [
+  {
+   "text": "お手数ですが、使い終わったカップは返却口へお戻しください。",
+   "en": "Sorry for the trouble, but please return used cups to the return counter.",
+   "ko": "번거로우시겠지만 다 쓰신 컵은 반납구에 돌려주세요.",
+   "replaces": "山田様ですね。お手数ですが、こちらの用紙にご住所とお電話番号をご記入いただけますか。"
+  }
+ ],
+ "f|ja-f4-16": [
+  {
+   "text": "とおっしゃいますと、来月からということでしょうか。",
+   "en": "By that, do you mean starting next month?",
+   "ko": "그 말씀은 다음 달부터라는 뜻일까요?",
+   "replaces": "とおっしゃいますと、費用の面でしょうか。"
+  }
+ ],
+ "f|ja-f4-18": [
+  {
+   "text": "担当者に確認して、後ほどご連絡いたします。",
+   "en": "I'll check with the person in charge and contact you later.",
+   "ko": "담당자에게 확인하고 나중에 연락드리겠습니다.",
+   "replaces": "かしこまりました。本日中に確認いたしまして、後ほどご連絡いたします。"
+  }
+ ],
+ "f|ja-f4-19": [
+  {
+   "text": "差し支えなければ、お名前を伺ってもよろしいでしょうか。",
+   "en": "If you don't mind, may I ask your name?",
+   "ko": "괜찮으시다면 성함을 여쭤봐도 될까요?",
+   "replaces": "差し支えなければ、ご用件を伺ってもよろしいでしょうか。鈴木に申し伝えます。"
+  }
+ ],
+ "f|ja-f4-20": [
+  {
+   "text": "在庫があるかどうか、倉庫を確認してまいります。",
+   "en": "I'll go and check the warehouse to see if it's in stock.",
+   "ko": "재고가 있는지 창고를 확인하고 오겠습니다.",
+   "replaces": "さようでございますか。でしたら、半分だけでも先にお届けできるよう、工場に確認してまいります。"
+  }
+ ],
+ "f|ja-f5-02": [
+  {
+   "text": "電車が止まったので、タクシーで帰らざるを得ない。",
+   "en": "The trains have stopped, so I have no choice but to go home by taxi.",
+   "ko": "전철이 멈춰서 택시로 집에 갈 수밖에 없어.",
+   "replaces": "まあね。税金を使わざるを得ない部分はあると思う。でも、それで暮らしが守れるなら、ある程度は仕方ないんじゃないかな。"
+  }
+ ],
+ "f|ja-f5-04": [
+  {
+   "text": "そんなに無理をしたら、体を壊しかねないよ。",
+   "en": "If you push yourself like that, you could well ruin your health.",
+   "ko": "그렇게 무리하면 몸을 망칠 수도 있어.",
+   "replaces": "それは一理ある。ただ、なくしたらなくしたで、病院にも行けない人が出かねないと思うんだよね。"
+  }
+ ],
+ "f|ja-f5-12": [
+  {
+   "text": "君の意見にも一理あるね。",
+   "en": "There's some truth to your view too.",
+   "ko": "네 의견에도 일리가 있네.",
+   "replaces": "それは一理ある。ただ、なくしたらなくしたで、病院にも行けない人が出かねないと思うんだよね。"
+  },
+  {
+   "text": "安いほうがいいという考えにも一理ある。",
+   "en": "There's some truth to the idea that cheaper is better.",
+   "ko": "싼 게 낫다는 생각에도 일리가 있어.",
+   "replaces": "なるほどね。そう考えると一理あるかも。でも、それにしても展開が急すぎたと思わない？"
+  }
+ ],
+ "f|ja-f5-05": [
+  {
+   "text": "買ったものの、まだ一度も使っていない。",
+   "en": "Although I bought it, I haven't used it even once.",
+   "ko": "사긴 했지만 아직 한 번도 안 썼어.",
+   "replaces": "聞こうとは思うものの、みんな忙しそうで、なんか気が進まないんだよね。"
+  }
+ ],
+ "f|ja-f5-14": [
+  {
+   "text": "雨の日に出かけるのは、正直あまり気が進まない。",
+   "en": "I'm honestly not keen on going out on rainy days.",
+   "ko": "비 오는 날 나가는 건 솔직히 별로 내키지 않아.",
+   "replaces": "聞こうとは思うものの、みんな忙しそうで、なんか気が進まないんだよね。"
+  },
+  {
+   "text": "誘ってくれたのは嬉しいけど、飲み会はどうも気が進まないんだ。",
+   "en": "I'm glad you invited me, but I'm just not keen on the drinking party.",
+   "ko": "불러 준 건 고마운데 회식은 어쩐지 내키지 않아.",
+   "replaces": "一応行くけど、正直あんまり気が進まないんだよね。"
+  }
+ ],
+ "f|ja-f5-06": [
+  {
+   "text": "毎日続けたからこそ、ここまで話せるようになった。",
+   "en": "It's precisely because I kept at it every day that I can speak this well now.",
+   "ko": "매일 꾸준히 했기 때문에 이만큼 말할 수 있게 됐어.",
+   "replaces": "うわ、痛いところを突かれた。それはそうかも。賛否が分かれるからこそ、みんな語りたくなるんだよね。"
+  }
+ ],
+ "f|ja-f5-07": [
+  {
+   "text": "早めに準備するに越したことはない。",
+   "en": "Nothing beats getting ready early.",
+   "ko": "일찍 준비해 두는 게 제일이야.",
+   "replaces": "それもそうなんだけど、着いてすぐ使うお金もあるし、少しは日本で替えておくに越したことはないよ。"
+  }
+ ],
+ "f|ja-f5-09": [
+  {
+   "text": "正直なところ、この仕事は私には向いていないと思う。",
+   "en": "Honestly, I don't think this job suits me.",
+   "ko": "솔직히 이 일은 나한테 안 맞는 것 같아.",
+   "replaces": "正直なところ、そこが一番難しいんだろうな。"
+  },
+  {
+   "text": "正直なところ、まだ決めかねているんです。",
+   "en": "To be honest, I still can't make up my mind.",
+   "ko": "솔직히 아직 결정을 못 하겠어요.",
+   "replaces": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。"
+  },
+  {
+   "text": "正直なところ、あの店の料理は期待外れだった。",
+   "en": "Honestly, that restaurant's food was a letdown.",
+   "ko": "솔직히 그 가게 음식은 기대 이하였어.",
+   "replaces": "見た見た！でも正直なところ、あの終わり方はちょっと腑に落ちなかったんだよね。"
+  },
+  {
+   "text": "正直なところ、一人暮らしは思ったより大変です。",
+   "en": "To be honest, living alone is harder than I thought.",
+   "ko": "솔직히 혼자 사는 건 생각보다 힘들어요.",
+   "replaces": "正直なところ、決まった時間に大きなバスを走らせるやり方自体、もう合ってないんじゃないかな。"
+  }
+ ],
+ "f|ja-f5-16": [
+  {
+   "text": "今週中に全部終わらせるのは、ちょっと難しいかもです。",
+   "en": "Finishing it all this week might be a bit difficult.",
+   "ko": "이번 주 안에 다 끝내는 건 좀 어려울 것 같아요.",
+   "replaces": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。"
+  }
+ ],
+ "e|そうです": [
+  {
+   "text": "はい、そうです。私が山田です。",
+   "en": "Yes, that's right. I'm Yamada.",
+   "ko": "네, 맞아요. 제가 야마다예요.",
+   "replaces": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。"
+  },
+  {
+   "text": "そうです。この電車は東京に行きます。",
+   "en": "That's right. This train goes to Tokyo.",
+   "ko": "맞아요. 이 전철은 도쿄에 가요.",
+   "replaces": "そうですね。傘を持ってきてよかったです。"
+  },
+  {
+   "text": "ええ、そうです。妹は大学生です。",
+   "en": "Yes, that's right. My younger sister is a university student.",
+   "ko": "네, 맞아요. 여동생은 대학생이에요.",
+   "replaces": "そうですか…。残念です。毎日練習していましたよね。"
+  },
+  {
+   "text": "そうです。右の白い建物です。",
+   "en": "That's right. It's the white building on the right.",
+   "ko": "맞아요. 오른쪽 하얀 건물이에요.",
+   "replaces": "なるほど。それなら私にもできそうです。"
+  }
+ ],
+ "e|そうですね": [
+  {
+   "text": "そうですね。今日は本当に暑いですね。",
+   "en": "That's true. It's really hot today.",
+   "ko": "그렇네요. 오늘 정말 덥네요.",
+   "replaces": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。"
+  }
+ ],
+ "e|正直なところ": [
+  {
+   "text": "正直なところ、少し疲れました。",
+   "en": "Honestly, I'm a little tired.",
+   "ko": "솔직히 좀 피곤해요.",
+   "replaces": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。"
+  }
+ ],
+ "f|ja-f5-10": [
+  {
+   "text": "水を差すようで悪いけど、そのお店、今月で閉まるらしいよ。",
+   "en": "Sorry to rain on the parade, but apparently that shop is closing this month.",
+   "ko": "찬물 끼얹는 것 같아 미안한데, 그 가게 이번 달에 문 닫는대.",
+   "replaces": "いいね。ただ、水を差すようで悪いけど、田中さんってサプライズ苦手じゃなかったっけ？"
+  }
+ ],
+ "f|ja-f5-11": [
+  {
+   "text": "言われてみれば、最近あの人を見かけないね。",
+   "en": "Now that you mention it, I haven't seen him around lately.",
+   "ko": "듣고 보니 요즘 그 사람이 안 보이네.",
+   "replaces": "あー、言われてみれば…。あのとき彼女、何か言いかけてたよね。"
+  },
+  {
+   "text": "言われてみれば、確かに部屋が寒いね。",
+   "en": "Now that you mention it, the room really is cold.",
+   "ko": "듣고 보니 정말 방이 춥네.",
+   "replaces": "言われてみれば、そうだね。明日、思い切って先輩に聞いてみる。"
+  }
+ ],
+ "f|ja-f5-15": [
+  {
+   "text": "考えすぎだよ。誰もそんなこと気にしてないって。",
+   "en": "You're overthinking it. Nobody cares about that.",
+   "ko": "너무 생각이 많아. 아무도 그런 거 신경 안 써.",
+   "replaces": "うーん、考えすぎだよ。それだけで決まるとは限らないと思う。面接って、相性とかタイミングもあるし。"
+  },
+  {
+   "text": "考えすぎだよ。一回寝たら、きっと気分も変わるよ。",
+   "en": "You're overthinking it. Once you sleep on it, you'll feel different.",
+   "ko": "너무 깊게 생각하지 마. 한숨 자면 기분도 바뀔 거야.",
+   "replaces": "考えすぎだよ。それだけ準備しておけば大丈夫だって。楽しんできてね。"
+  }
+ ],
+ "f|ja-f5-20": [
+  {
+   "text": "高い服がいい服だとは限らないと思う。",
+   "en": "I don't think expensive clothes are necessarily good clothes.",
+   "ko": "비싼 옷이 꼭 좋은 옷이라고는 할 수 없다고 생각해.",
+   "replaces": "うーん、考えすぎだよ。それだけで決まるとは限らないと思う。面接って、相性とかタイミングもあるし。"
+  }
+ ],
+ "f|ja-f5-17": [
+  {
+   "text": "誘っていただいて、本当にありがたいんですけど…。その日は仕事が入っていまして。",
+   "en": "It's really kind of you to invite me, but... I have work that day.",
+   "ko": "불러 주셔서 정말 감사한데요…. 그날은 일이 있어서요.",
+   "replaces": "声をかけていただいて、本当にありがたいんですけど…。実はその日、前から家族と約束がありまして。"
+  }
+ ],
+ "f|ja-f5-18": [
+  {
+   "text": "それはそれとして、来週の会議の準備はどうなってる？",
+   "en": "That aside, how's the prep for next week's meeting going?",
+   "ko": "그건 그렇다 치고, 다음 주 회의 준비는 어떻게 돼 가?",
+   "replaces": "うん、そのほうが喜ぶと思う。それはそれとして、動画はいいアイデアだから、当日みんなで見ようよ。"
+  }
+ ],
+ "f|ja-f5-19": [
+  {
+   "text": "このカフェは悪くはないけど、ちょっと値段が高いんだよね。",
+   "en": "This café isn't bad, but it's a bit pricey.",
+   "ko": "이 카페는 나쁘진 않은데 좀 비싸.",
+   "replaces": "温泉は悪くはないけど、夜の宴会で毎年カラオケを歌わされるのがつらくて。"
+  }
+ ],
+ "e|よろしくお願いします": [
+  {
+   "text": "今日から入りました木村です。よろしくお願いします。",
+   "en": "I'm Kimura, I started today. I look forward to working with you.",
+   "ko": "오늘부터 들어온 기무라예요. 잘 부탁드려요.",
+   "replaces": "はじめまして。マリアです。よろしくお願いします。"
+  }
+ ],
+ "e|大丈夫です": [
+  {
+   "text": "いえ、袋は大丈夫です。",
+   "en": "No, I don't need a bag.",
+   "ko": "아뇨, 봉투는 괜찮아요.",
+   "replaces": "大丈夫です。ごちそうさまでした。"
+  },
+  {
+   "text": "はい、もう熱は下がったので大丈夫です。",
+   "en": "Yes, my fever's gone down, so I'm okay.",
+   "ko": "네, 이제 열이 내려서 괜찮아요.",
+   "replaces": "お疲れさまです。はい、大丈夫です。"
+  },
+  {
+   "text": "時間なら大丈夫です。まだ間に合います。",
+   "en": "Time's no problem. We'll still make it.",
+   "ko": "시간은 괜찮아요. 아직 늦지 않았어요.",
+   "replaces": "何時にしますか。私はどちらでも大丈夫です。"
+  }
+ ],
+ "e|元気ですか": [
+  {
+   "text": "お母さん、元気ですか。こちらは毎日寒いです。",
+   "en": "Mom, how are you? It's cold here every day.",
+   "ko": "엄마, 잘 지내세요? 여기는 매일 추워요.",
+   "replaces": "あ、田中さん！久しぶりです。元気ですか。"
+  }
+ ],
+ "e|楽しみです": [
+  {
+   "text": "来週の旅行、とても楽しみです。",
+   "en": "I'm really looking forward to next week's trip.",
+   "ko": "다음 주 여행 정말 기대돼요.",
+   "replaces": "いいですね。楽しみです。"
+  }
+ ],
+ "e|かしこまりました": [
+  {
+   "text": "かしこまりました。お席までご案内いたします。",
+   "en": "Certainly. I'll show you to your seat.",
+   "ko": "알겠습니다. 자리로 안내해 드리겠습니다.",
+   "replaces": "かしこまりました。明日の打ち合わせを午後に、ですね。確かに申し伝えます。"
+  }
+ ],
+ "e|お世話になっております": [
+  {
+   "text": "お世話になっております。先日の見積もりの件でお電話しました。",
+   "en": "Thank you for your continued support. I'm calling about the estimate from the other day.",
+   "ko": "늘 신세 지고 있습니다. 지난번 견적 건으로 전화드렸습니다.",
+   "replaces": "お世話になっております。鈴木でございますね。少々お待ちください。"
+  }
+ ],
+ "e|承知しました": [
+  {
+   "text": "承知しました。資料は明日の朝までにお送りします。",
+   "en": "Understood. I'll send the materials by tomorrow morning.",
+   "ko": "알겠습니다. 자료는 내일 아침까지 보내 드리겠습니다.",
+   "replaces": "承知しました。その前に、チームの体制について一度ご相談させていただけますか。ご無理のない範囲で、お時間をいただければと思います。"
+  }
+ ],
+ "e|前向きに検討します": [
+  {
+   "text": "貴重なご提案ですので、社内で前向きに検討します。",
+   "en": "It's a valuable proposal, so we'll consider it positively within the company.",
+   "ko": "귀중한 제안이니 사내에서 긍정적으로 검토하겠습니다.",
+   "replaces": "お察しします。今の案件の目処が立つか確認したうえで、前向きに検討します。"
+  }
+ ]
+};
