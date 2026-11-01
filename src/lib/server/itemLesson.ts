@@ -56,7 +56,7 @@ Answer with exactly these lines (one M, one U, two E, three T) and nothing else.
     ],
   });
   const raw = String(completion.choices[0]?.message?.content ?? "");
-  lastLessonRaw = raw.slice(0, 2000);
+  lastLessonRaw += `\n---\n${raw.slice(0, 1500)}`;
   let meaning = "";
   let usage = "";
   const explain: string[] = [];
@@ -86,9 +86,10 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
   if (!lesson?.turns?.length) {
     onMake?.();
     // 처음 만들 때 모델이 한 번 실패하거나 형식을 안 지키는 일이 있어(2026-11-01 운영 확인) 한 번 더.
+    lastLessonRaw = "";
     const once = () =>
       makeLesson(language, item).catch((error: unknown) => {
-        lastLessonRaw = `ERR ${error instanceof Error ? error.message : String(error)}`.slice(0, 300);
+        lastLessonRaw += `\n---\nERR ${error instanceof Error ? error.message : String(error)}`.slice(0, 300);
         return null;
       });
     lesson = (await once()) ?? (await once()) ?? (await once());
