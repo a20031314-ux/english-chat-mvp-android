@@ -18,7 +18,7 @@ import { InviteButton } from "@/components/invite/InviteButton";
 import { BoardView } from "./BoardView";
 import { IconsView } from "./IconPacks";
 import { iconCopy } from "@/lib/rooms/iconCopy";
-import { AiTutorPerson } from "@/components/AiTutorProfile";
+import { AiTutorPeople } from "@/components/AiTutorProfile";
 
 /**
  * 하단 "사람" 탭: 최근에 앱을 쓴 사람들의 프로필 목록(RoomPeople.tsx).
@@ -127,9 +127,9 @@ export function PeopleTab({
               <IconsView locale={locale} targetLanguage={targetLanguage} />
             ) : (
               <>
-                {/* AI 튜터도 사람 중 하나로 맨 위에(2026-10-27). */}
+                {/* AI 튜터도 사람 중 하나로 맨 위에(2026-10-27) — 여자·남자 둘(2026-11-02). */}
                 <div className="mb-3">
-                  <AiTutorPerson ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={t.message} />
+                  <AiTutorPeople ui={ui} targetLanguage={targetLanguage} canCall={canCall} />
                 </div>
                 <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={requestDm} />
               </>
@@ -138,7 +138,7 @@ export function PeopleTab({
         ) : (
           <div className="space-y-3">
             {/* AI 튜터는 로그인 없이도(AI 기능은 로그인 없이). */}
-            <AiTutorPerson ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={t.message} />
+            <AiTutorPeople ui={ui} targetLanguage={targetLanguage} canCall={canCall} />
             <AccountCard ui={ui} locale={locale} />
             {/* 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. */}
             <NativeAdSlot feedId="people-tab" slotKey="people-login" spaced />

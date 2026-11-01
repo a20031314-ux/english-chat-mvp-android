@@ -1,5 +1,6 @@
 "use client";
 
+import { PROFILE_WIDE_BUTTON, ProfileFrame } from "@/components/ProfileFrame";
 import { MateButton } from "./MateAsk";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -216,47 +217,51 @@ export function ProfileSheet({
     }
   };
 
+  // 틀은 AI 튜터 프로필과 같은 것(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
   return (
-    <BodyLayer>
-      <div className="fixed inset-0 flex items-end justify-center bg-black/60 p-3 sm:items-center" style={{ zIndex }} onClick={onClose}>
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={name}
-          className="w-full max-w-md rounded-2xl border border-white/10 bg-[#121212] p-4 shadow-2xl"
-          onClick={(event) => event.stopPropagation()}
-        >
-          <div className="flex items-start gap-3">
-            <span className="relative shrink-0">
-              <Face accountId={accountId} name={name} size={64} />
-              {/* 사진 옆 국기는 국적 하나(2026-10-31). */}
-              <CountryMark country={profile?.facts?.country} locale={locale} />
-            </span>
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-lg font-semibold text-white" dir="auto">
-                <bdi>{name}</bdi>
-              </p>
-              {/* 방에서 쓰는 앱 언어 ↔ 학습 언어 — 프로필에 모국어·할 수 있는 언어를 적었으면 그쪽(아래 칩)만 보인다(2026-10-31). */}
-              {member?.langs?.length && !profile?.facts?.native && !profile?.facts?.speaks?.length ? (
-                <p className="text-xs text-slate-400">
-                  {t.languagesOf}: {languagePair(member.langs, locale)}
-                </p>
-              ) : null}
-              {profile ? (
-                <p className="text-[11px] text-slate-500">
-                  {t.since} {profile.since}
-                </p>
-              ) : null}
-            </div>
-            <button type="button" onClick={onClose} className="rounded-lg px-2 py-1 text-sm text-slate-400 hover:bg-white/10">
-              {t.close2}
-            </button>
-          </div>
-          <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-200" dir="auto">
-            {profile?.bio || t.noBio}
+    <>
+      <ProfileFrame
+        layer={zIndex}
+        label={name}
+        closeLabel={t.close2}
+        onClose={onClose}
+        face={
+          <>
+            <Face accountId={accountId} name={name} size={64} />
+            {/* 사진 옆 국기는 국적 하나(2026-10-31). */}
+            <CountryMark country={profile?.facts?.country} locale={locale} />
+          </>
+        }
+        name={
+          <p className="truncate">
+            <bdi>{name}</bdi>
           </p>
-          {/* 남의 자기소개는 내 앱 언어로 볼 수 있게(쓴 언어를 몰라 늘 보임, 내 프로필엔 없음). */}
-          {profile?.bio && !profile.isMe ? <TranslateToggle t={t} locale={locale} text={profile.bio} /> : null}
+        }
+        sub={
+          <>
+            {/* 방에서 쓰는 앱 언어 ↔ 학습 언어 — 프로필에 모국어·할 수 있는 언어를 적었으면 그쪽(아래 칩)만 보인다(2026-10-31). */}
+            {member?.langs?.length && !profile?.facts?.native && !profile?.facts?.speaks?.length ? (
+              <p className="text-caption text-slate-400">
+                {t.languagesOf}: {languagePair(member.langs, locale)}
+              </p>
+            ) : null}
+            {profile ? (
+              <p className="text-meta text-slate-500">
+                {t.since} {profile.since}
+              </p>
+            ) : null}
+          </>
+        }
+        bio={
+          <>
+            <p className="whitespace-pre-line text-body leading-relaxed text-slate-200" dir="auto">
+              {profile?.bio || t.noBio}
+            </p>
+            {/* 남의 자기소개는 내 앱 언어로 볼 수 있게(쓴 언어를 몰라 늘 보임, 내 프로필엔 없음). */}
+            {profile?.bio && !profile.isMe ? <TranslateToggle t={t} locale={locale} text={profile.bio} /> : null}
+          </>
+        }
+      >
           {/* 나에 대한 사실(칩)과 켠 칸(도움·꾸준함·반영 의견·목표) — 학습 상태는 서버가 보내지 않는다. */}
           {profile ? <FactsView locale={locale} facts={profile.facts} badges={profile.badges} goal={profile.goal} /> : null}
           {profile ? <ProfilePosts t={t} locale={locale} posts={profile.posts} /> : null}
@@ -334,7 +339,7 @@ export function ProfileSheet({
             <button
               type="button"
               onClick={() => onMessage(accountId)}
-              className="mt-2 w-full rounded-xl border border-violet-400/50 px-3 py-2 text-sm font-medium text-violet-100"
+              className={PROFILE_WIDE_BUTTON}
             >
               💬 {t.message}
             </button>
@@ -396,9 +401,9 @@ export function ProfileSheet({
               </button>
             )
           ) : null}
-        </div>
-      </div>
+      </ProfileFrame>
       {listOpen && accountId ? (
+        <BodyLayer>
         <FollowListSheet
           t={t}
           locale={locale}
@@ -408,8 +413,9 @@ export function ProfileSheet({
           onClose={() => setListOpen(null)}
           onMessage={onMessage}
         />
+        </BodyLayer>
       ) : null}
-    </BodyLayer>
+    </>
   );
 }
 

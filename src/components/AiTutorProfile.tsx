@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { BodyLayer } from "@/components/FullScreenLayer";
+import { PROFILE_WIDE_BUTTON, ProfileFrame } from "@/components/ProfileFrame";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
-import { useTutorGender } from "@/lib/tutorGender";
+import { useTutorGender, writeTutorGender } from "@/lib/tutorGender";
 import { APP_LOCALE_STORAGE_KEY } from "@/lib/copy";
 import { tutorAbout } from "@/lib/tutorAbout";
 
@@ -20,8 +20,9 @@ function appLocale(): string {
 }
 
 /** 튜터 자기소개(lib/tutorAbout.ts — 학습 언어·고른 성별, 앱 언어로). 없으면 예전 글(aiTutorBio). */
-function useTutorAbout(targetLanguage: string, fallback: string): string {
-  const gender = useTutorGender(targetLanguage);
+function useTutorAbout(targetLanguage: string, fallback: string, pick?: TutorGender): string {
+  const chosen = useTutorGender(targetLanguage);
+  const gender = pick ?? chosen;
   const lang = chatPartnerForLanguage(targetLanguage, gender).languageCode;
   return tutorAbout(lang, gender, appLocale()) || fallback;
 }
@@ -74,8 +75,9 @@ export function AiAvatar({ size = 60, language, gender }: { size?: number; langu
   );
 }
 
-function TutorName({ targetLanguage, className = "" }: { targetLanguage: string; className?: string }) {
-  const partner = chatPartnerForLanguage(targetLanguage, useTutorGender(targetLanguage));
+function TutorName({ targetLanguage, gender, className = "" }: { targetLanguage: string; gender?: TutorGender; className?: string }) {
+  const chosen = useTutorGender(targetLanguage);
+  const partner = chatPartnerForLanguage(targetLanguage, gender ?? chosen);
   return (
     <span className={`flex min-w-0 items-center gap-1.5 ${className}`}>
       <bdi className="truncate">{partner.givenName}</bdi>
@@ -89,19 +91,40 @@ function TutorName({ targetLanguage, className = "" }: { targetLanguage: string;
 
 // 💬 "메시지"(대화 탭으로 옮기기만)는 뺐다 — 기능 없이 다른 탭으로만 가는 버튼 정리(사용자 2026-10-30). AI 대화는 대화 탭의 AI 튜터 줄에서.
 
-/** 사람 탭 목록 맨 위 한 줄(사람 카드와 같은 모양). */
-export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; targetLanguage: string; canCall: boolean; messageLabel?: string }) {
+/** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 통화를 연다. */
+function callTutor(targetLanguage: string, gender: TutorGender | undefined) {
+  if (gender) writeTutorGender(targetLanguage, gender);
+  sendAppIntent("startCall", {});
+}
+
+/**
+ * 사람 탭 맨 위 AI 튜터 둘(그 학습 언어의 여자·남자 튜터, 사용자 2026-11-02 "AI 튜터가 한쪽 성별만 떠") — 지금 고른 튜터가 먼저.
+ */
+export function AiTutorPeople({ ui, targetLanguage, canCall }: { ui: UICopy; targetLanguage: string; canCall: boolean }) {
+  const chosen = useTutorGender(targetLanguage);
+  const order: TutorGender[] = chosen === "f" ? ["f", "m"] : ["m", "f"];
+  return (
+    <div className="flex flex-col gap-3">
+      {order.map((gender) => (
+        <AiTutorPerson key={gender} ui={ui} targetLanguage={targetLanguage} canCall={canCall} gender={gender} />
+      ))}
+    </div>
+  );
+}
+
+/** 사람 탭 목록의 AI 튜터 한 줄(사람 카드와 같은 모양). */
+export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UICopy; targetLanguage: string; canCall: boolean; gender?: TutorGender }) {
   const [open, setOpen] = useState(false);
-  const about = useTutorAbout(targetLanguage, ui.aiTutorBio);
+  const about = useTutorAbout(targetLanguage, ui.aiTutorBio, gender);
   return (
     <>
       <div className="flex gap-3 border-b border-white/[0.07] pb-3">
         <button type="button" onClick={() => setOpen(true)} className="shrink-0 self-start" aria-label={ui.talkAiTutor}>
-          <AiAvatar language={targetLanguage} />
+          <AiAvatar language={targetLanguage} gender={gender} />
         </button>
         <div className="min-w-0 flex-1">
           <button type="button" onClick={() => setOpen(true)} className="block w-full text-start">
-            <TutorName targetLanguage={targetLanguage} className="text-body font-semibold text-white" />
+            <TutorName targetLanguage={targetLanguage} gender={gender} className="text-body font-semibold text-white" />
             <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>
             <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{about}</p>
           </button>
@@ -109,7 +132,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; tar
             {canCall ? (
               <button
                 type="button"
-                onClick={() => sendAppIntent("startCall", {})}
+                onClick={() => callTutor(targetLanguage, gender)}
                 aria-label={ui.talkAiCall}
                 title={ui.talkAiCall}
                 className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100"
@@ -120,64 +143,56 @@ export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; tar
           </div>
         </div>
       </div>
-      {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} onClose={() => setOpen(false)} /> : null}
+      {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} gender={gender} onClose={() => setOpen(false)} /> : null}
     </>
   );
 }
 
-/** AI 튜터 프로필 시트 — 사람 프로필 시트처럼 아래에서 올라온다. */
+/** AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일"). */
 export function AiTutorSheet({
   ui,
   targetLanguage,
   canCall,
+  gender,
   onClose,
 }: {
   ui: UICopy;
   targetLanguage: string;
   canCall: boolean;
+  gender?: TutorGender;
   onClose: () => void;
 }) {
-  const about = useTutorAbout(targetLanguage, ui.aiTutorBio);
+  const about = useTutorAbout(targetLanguage, ui.aiTutorBio, gender);
+  const chosen = useTutorGender(targetLanguage);
+  const name = chatPartnerForLanguage(targetLanguage, gender ?? chosen).givenName;
   const go = (action: () => void) => () => {
     onClose();
     action();
   };
   return (
-    <BodyLayer>
-      <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/70 sm:items-center" role="dialog" aria-modal="true" onClick={onClose}>
-        <div
-          className="w-full max-w-md rounded-t-2xl bg-surface px-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] pt-5 sm:rounded-2xl"
-          onClick={(event) => event.stopPropagation()}
-        >
-          <div className="flex items-center gap-4">
-            <AiAvatar size={72} language={targetLanguage} />
-            <div className="min-w-0">
-              <TutorName targetLanguage={targetLanguage} className="text-title font-semibold text-white" />
-              <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>
-            </div>
-            <button type="button" onClick={onClose} aria-label={ui.billingClose} className="ms-auto self-start rounded-full px-2 text-title text-slate-400 hover:text-slate-100">
-              ×
-            </button>
-          </div>
-          <p className="mt-4 text-body leading-relaxed text-slate-200">{about}</p>
-          <div className="mt-5 flex flex-col gap-2">
-            {canCall ? (
-              <button type="button" onClick={go(() => sendAppIntent("startCall", {}))} className="rounded-xl border border-white/20 px-3 py-2.5 text-body text-slate-100">
-                📞 {ui.homeTabCall}
-              </button>
-            ) : null}
-          </div>
-          {canCall ? (
-            <button
-              type="button"
-              onClick={go(() => sendAppIntent("openCall", {}))}
-              className="mt-2 w-full rounded-xl border border-white/10 px-3 py-2.5 text-body text-slate-300 hover:bg-white/5"
-            >
-              {ui.callRecordsTitle}
-            </button>
-          ) : null}
-        </div>
-      </div>
-    </BodyLayer>
+    <ProfileFrame
+      label={name}
+      closeLabel={ui.billingClose}
+      onClose={onClose}
+      face={<AiAvatar size={64} language={targetLanguage} gender={gender} />}
+      name={<TutorName targetLanguage={targetLanguage} gender={gender} />}
+      sub={<span className="inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>}
+      bio={
+        <p className="whitespace-pre-line text-body leading-relaxed text-slate-200" dir="auto">
+          {about}
+        </p>
+      }
+    >
+      {canCall ? (
+        <>
+          <button type="button" onClick={go(() => callTutor(targetLanguage, gender))} className={`${PROFILE_WIDE_BUTTON} mt-3`}>
+            📞 {ui.homeTabCall}
+          </button>
+          <button type="button" onClick={go(() => sendAppIntent("openCall", {}))} className={PROFILE_WIDE_BUTTON}>
+            {ui.callRecordsTitle}
+          </button>
+        </>
+      ) : null}
+    </ProfileFrame>
   );
 }

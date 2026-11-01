@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
-import { BodyLayer } from "@/components/FullScreenLayer";
+import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { adLayerDepth, maybeShowInterstitial, noteTodayFinished } from "@/lib/ads";
 import { BankToneProvider } from "@/components/studyMap/bankTone";
@@ -2213,10 +2213,31 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
 
 /**
  * 큰 칸 이름 줄 = 탭(2026-11-02 사용자 "위에 있는 버튼을 기준으로 탭을 분할해줘"): 누르면 그 칸 하나만 아래에. 지금 탭은 그 칸 색.
+ * 지금 탭을 한 번 더 누르면 그 칸이 전체 화면(2026-11-02 사용자 "전체 화면은 해당 탭을 클릭하면 열리게") — 전체 화면 위에도 같은 줄 + ✕.
  */
-function LayerJump({ items, onJump, active }: { items: { id: MyLayer; title: string }[]; onJump: (id: MyLayer) => void; active: MyLayer }) {
+function LayerJump({
+  items,
+  onJump,
+  active,
+  onClose,
+  closeLabel,
+  help,
+}: {
+  items: { id: MyLayer; title: string }[];
+  onJump: (id: MyLayer) => void;
+  active: MyLayer;
+  /** 전체 화면일 때 ✕. */
+  onClose?: () => void;
+  closeLabel?: string;
+  /** 전체 화면에서 그 칸의 "?". */
+  help?: ReactNode;
+}) {
   return (
-    <nav data-my-jump role="tablist" className="sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3">
+    <nav
+      data-my-jump
+      role="tablist"
+      className={onClose ? "flex shrink-0 gap-1.5 border-b border-line px-3 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))]" : "sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3"}
+    >
       {items.map((one) => (
         <button
           key={one.id}
@@ -2231,6 +2252,12 @@ function LayerJump({ items, onJump, active }: { items: { id: MyLayer; title: str
           {one.title}
         </button>
       ))}
+      {help ? <div className="flex shrink-0 items-center">{help}</div> : null}
+      {onClose ? (
+        <button type="button" data-my-full-close aria-label={closeLabel} title={closeLabel} onClick={onClose} className="shrink-0 rounded-full px-2 py-1.5 text-caption text-slate-400 hover:bg-white/10">
+          ✕
+        </button>
+      ) : null}
     </nav>
   );
 }
@@ -2277,11 +2304,19 @@ function MyLayers({
   const review = useReviewNotes(language, notes);
   // Quizbank가 없을 때(0단계 글자 묶음) Quizbank 탭이 남아 있으면 Stagebank를 보인다.
   let shown: MyLayer = tab;
+  // 지금 탭을 한 번 더 누르면 그 칸이 전체 화면(2026-11-02).
+  const [full, setFull] = useState(false);
+  const pressTab = (id: MyLayer) => {
+    if (id === shown && !full) setFull(true);
+    else onOpen(id);
+  };
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
     // 탭으로 고른 칸만 그린다(2026-11-02).
     // 칸 안의 강조색도 그 칸 색(studyMap/bankTone.tsx, 2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘").
     if (shown !== id) return null;
     const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
+    // 전체 화면이면 칸 안만 전체 화면 층에(머리는 위 이름 줄이 대신).
+    if (full) return <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{toned}</div>;
     const on = !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
@@ -2351,11 +2386,31 @@ function MyLayers({
     return (
       <>
         {/* 오늘 할 것이 끝나면 그날 한 번 Quizbank 탭으로(2026-10-31, 탭 2026-11-02). */}
-        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={0} /> : null}
-        <LayerJump items={jumpItems} onJump={onOpen} active={shown} />
-        {stageCard}
-        {keepCard}
-        {reviewCard}
+        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
+        {full ? (
+          <FullScreenLayer>
+            <LayerJump
+              items={jumpItems}
+              onJump={pressTab}
+              active={shown}
+              onClose={() => setFull(false)}
+              closeLabel={ui.billingClose}
+              help={<BankHelpButton ui={ui} locale={locale} language={language} bank={shown} title={jumpItems.find((one) => one.id === shown)?.title ?? ""} />}
+            />
+            <div className="min-h-0 flex-1 overflow-y-auto">
+              {stageCard}
+              {keepCard}
+              {reviewCard}
+            </div>
+          </FullScreenLayer>
+        ) : (
+          <>
+            <LayerJump items={jumpItems} onJump={pressTab} active={shown} />
+            {stageCard}
+            {keepCard}
+            {reviewCard}
+          </>
+        )}
         {parts?.overlays}
       </>
     );
