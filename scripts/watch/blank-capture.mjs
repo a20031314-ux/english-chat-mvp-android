@@ -165,6 +165,15 @@ async function answerOne(page, wait, ui, scope = "[data-inline-quiz]") {
   }
   await wait(1800);
 }
+/** Stagebank 전체 화면 → 단계 화면(오늘 할 것 아래 "n단계 ›", 오늘 끝났으면 이미 단계 화면). */
+async function openStage(page, wait, ui) {
+  await openBank(page, wait, ui.stagebankTitle, ui);
+  const peek = page.locator("[data-peek-stage]");
+  if (await peek.count()) {
+    await peek.first().click();
+    await wait(2500);
+  }
+}
 async function quizTab(page, wait, ui, tab) {
   await openBank(page, wait, ui.keepTitle, ui);
   const button = page.locator(`[data-focus="${tab}"]`).first();
@@ -312,6 +321,77 @@ const SCENES = [
     await openMy(page, wait, ui);
     await page.getByRole("button", { name: exactly(ui.guideOpen) }).first().click();
     await wait(3000);
+  } },
+  // ── 학습과 떨어진 자리(사용자 2026-11-01 23시 "학습에 영향을 주지 않는 자리 더") — 둘러보기·설정·안내 시트·고르기 화면 ──
+  { id: "stage-bottom", label: "Stagebank 단계 화면 — 문장구조 목록 맨 아래", run: async ({ page, wait, ui, shot }) => {
+    await openStage(page, wait, ui);
+    await scrollBy(page, 900);
+    await wait(900);
+    await shot("mid");
+    await page.locator("[data-my-full] .overflow-y-auto, [data-my-full]").last().evaluate((el) => {
+      const box = el.closest(".overflow-y-auto") ?? el;
+      box.scrollTo(0, 99999);
+    }).catch(() => undefined);
+    await scrollBy(page, 6000);
+    await wait(1200);
+  } },
+  { id: "scope-sheet", label: "📖 배울 수 있는 것 시트", run: async ({ page, wait, ui, shot }) => {
+    await openStage(page, wait, ui);
+    await page.locator("[data-scope-open]").first().click();
+    await wait(2500);
+    await shot("top");
+    await page.locator("[data-scope-sheet]").evaluate((el) => el.scrollTo(0, 99999));
+    await wait(800);
+  } },
+  { id: "progress-sheet", label: "📈 내 진척 시트", run: async ({ page, wait, ui }) => {
+    await openStage(page, wait, ui);
+    await page.locator("[data-my-progress-open]").first().click();
+    await wait(2500);
+  } },
+  { id: "way-sheet", label: "연습 방식 고르기 시트", run: async ({ page, wait, ui }) => {
+    await openStage(page, wait, ui);
+    await page.locator('[data-my-full] button[aria-haspopup="dialog"]').first().click();
+    await wait(2500);
+  } },
+  { id: "bank-help", label: "칸 ? 설명 시트(Stagebank)", run: async ({ page, wait, ui, shot }) => {
+    await openBank(page, wait, ui.stagebankTitle, ui);
+    await page.locator("[data-bank-help]").last().click();
+    await wait(3000);
+    await shot("top");
+    await page.locator("[data-bank-help-sheet]").evaluate((el) => el.scrollTo(0, 99999));
+    await wait(1000);
+  } },
+  { id: "tutor-sheet", label: "사람 탭 — AI 튜터 프로필 시트", run: async ({ page, wait, ui }) => {
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
+    await wait(5000);
+    await page.getByRole("button", { name: exactly(ui.talkAiTutor) }).first().click();
+    await wait(2000);
+  } },
+  { id: "lang-sheet", label: "언어 설정 시트(상단 국기)", run: async ({ page, wait, ui }) => {
+    await openMy(page, wait, ui);
+    await page.locator("[data-language-settings]").first().click();
+    await wait(2000);
+  } },
+  { id: "feedback-sheet", label: "의견 보내기 시트", run: async ({ page, wait, ui }) => {
+    await openMy(page, wait, ui);
+    await page.getByRole("button", { name: exactly(ui.feedbackOpen) }).first().click();
+    await wait(2000);
+  } },
+  { id: "guide-bottom", label: "사용법(?) — 맨 아래", run: async ({ page, wait, ui }) => {
+    await openMy(page, wait, ui);
+    await page.getByRole("button", { name: exactly(ui.guideOpen) }).first().click();
+    await wait(3000);
+    await scrollBy(page, 20000);
+    await wait(1200);
+  } },
+  { id: "video-deep", label: "영상 학습 — 목록 더 아래", run: async ({ page, wait, shot }) => {
+    await page.goto(`${BASE}/?screen=video`, { waitUntil: "domcontentloaded" });
+    await wait(5000);
+    await scrollBy(page, 1400);
+    await wait(1200);
+    await shot("1400");
+    await scrollBy(page, 20000);
+    await wait(1500);
   } },
   { id: "billing", label: "결제 화면", run: async ({ page, wait, ui }) => {
     await openMy(page, wait, ui);
