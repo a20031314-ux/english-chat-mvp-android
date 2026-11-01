@@ -5,7 +5,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { CALL_CAPTIONS_KEY } from "@/components/speech/CallKit";
@@ -958,6 +958,7 @@ export function RoleplayScreen({
         onHint={openHelp}
         onEnd={onClose}
       />
+      <CallAdStrip />
 
       {reviewing ? (
         <RoleplayReviewPanel

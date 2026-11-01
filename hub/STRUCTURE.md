@@ -69,7 +69,7 @@
 - **광고**(무료·안드로이드만, 자리·설정·손익 전체는 `hub/ADS.md` — 자동): 배너는 둘러보는 화면(My·영상·대화 목록), 채팅·통화·Room·사람에는 없음. 통화·Room에서는 앱 오프닝 광고 없음(`AppHome.tsx` `BANNER_TABS`·`NO_APP_OPEN_TABS`).
   웹은 같은 목록 자리에 AdSense만(`WebAdSlot`, `lib/webAds.ts` — 전면·배너·앱 오프닝 없음, Vercel 값 넣기 전엔 꺼짐).
   목록 사이 네이티브 광고 `NativeAdSlot`: 대화 목록(단체방과 1:1 사이)·영상 목록(세 번째·여덟 번째 뒤)·사람 목록(네 번째 뒤)·게시판(세 번째 글 뒤)·Room 로비(두 번째·다섯 번째 방 뒤).
-  빈 공간 네이티브(2026-11-01): My 칸 전체 화면 안(Stagebank 오늘 할 것 아래·단계 화면 대화 예시 앞·Quizbank 문제 아래·시험 탭 대기 줄 아래·Logbank 세 번째 날 뒤 — `layerOnly`, 바닥 My는 배너), 수업 퀴즈 단계 아래, 끝 화면 점수 아래(QuizPlayer·FrameLesson·RecallPlayer·CheckupPlayer)·AI 통화 끝 화면 대본 장과 닫기 사이(RoleplayScreen call-end, 2026-11-02 — 통화 도중은 없음), 로그인 전 사람·Room 로그인 카드 아래, AI 채팅 잠김 화면.
+  빈 공간 네이티브(2026-11-01): My 칸 전체 화면 안(Stagebank 오늘 할 것 아래·단계 화면 대화 예시 앞·Quizbank 문제 아래·시험 탭 대기 줄 아래·Logbank 세 번째 날 뒤 — `layerOnly`, 바닥 My는 배너), 수업 퀴즈 단계 아래, 끝 화면 점수 아래(QuizPlayer·FrameLesson·RecallPlayer·CheckupPlayer)·AI 통화 끝 화면 대본 장과 닫기 사이(RoleplayScreen call-end)·AI 통화 중 버튼 아래 따로 만든 칸(CallAdStrip 피드 call, 화면 680px 이상, 2026-11-02), 로그인 전 사람·Room 로그인 카드 아래, AI 채팅 잠김 화면.
   읽기 화면 끝(2026-11-01 23시, 피드 `sheets`): 📖 배울 수 있는 것(ContentScope)·칸 ? 설명(BankHelp)·사용법 창 장 본문 끝(GuideSheet, 쓸 기능 고르기 제외)·📈 내 진척(익힌 것이 있을 때)·실력 기록(SkillRecord) 끝.
   Quizbank·수업 퀴즈 아래 광고는 문제가 바뀔 때 앞 광고가 60초(`lib/ads.ts` NATIVE_REFRESH_MS) 넘었으면 새것(문제 도중 안 바꿈, NativeAdSlot useNativeRefresh).
   웹 화면 위에 떠 있어 그 자리가 든 층(`FullScreenLayer`·`BodyLayer`가 주는 층 id, 바닥 0)이 맨 위일 때만 붙고, 위에 다른 층이 덮이거나 탭이 숨거나 키보드가 올라오면 떼어 낸다(플러그인 동시 화면 2개 한도, `lib/ads.ts`).

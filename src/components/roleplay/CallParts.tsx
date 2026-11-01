@@ -9,6 +9,7 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useTutorGender } from "@/lib/tutorGender";
@@ -374,3 +375,26 @@ export function CallPages({ ui, children }: { ui: UICopy; children: ReactNode })
     </div>
   );
 }
+
+/**
+ * 통화 중 맨 아래 광고 칸(무료·안드로이드만, 사용자 2026-11-02 "아래쪽에 공간을 만들고 넣을 순 없어? 하단엔 버튼이 없으니까").
+ * 버튼 넷 아래에 따로 띄운 칸 — 버튼 줄 아래 여백 + 한 줄 넘게 띄움(잘못 누름 정책). 작은 틀이라 영상·소리 없음.
+ * 화면 높이가 낮으면(680px 미만) 튜터·내 칸이 눌려서 넣지 않는다. 광고가 없는 사람(구독·iOS·웹 꺼짐)은 칸 자체가 없다.
+ */
+const CALL_AD_MIN_HEIGHT = 680;
+export function CallAdStrip() {
+  const [tall, setTall] = useState(false);
+  useEffect(() => {
+    const check = () => setTall(window.innerHeight >= CALL_AD_MIN_HEIGHT);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  if (!tall) return null;
+  return (
+    <div className="shrink-0 px-4 pb-[env(safe-area-inset-bottom)]" data-call-ad>
+      <NativeAdSlot feedId="call" slotKey="call-live" spaced />
+    </div>
+  );
+}
+

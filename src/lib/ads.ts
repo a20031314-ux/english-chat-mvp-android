@@ -561,7 +561,7 @@ async function syncBanner(): Promise<void> {
 // 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지(플러그인 한도). 그래서 자리는 보이는 동안에만 붙이고(NativeAdSlot의 active·
 // 맨 위 층), 화면을 떠나면 그 화면의 광고를 치운다 — 새 화면의 광고는 앞 화면을 다 치운 뒤에 만든다.
 // 피드 이름은 화면 단위: talk-list · video-library · people-tab · room-lobby(둘러보는 목록), my-full(My 칸 전체 화면),
-// quiz-inline(Quizbank·수업 퀴즈 아래), results(끝 화면 점수 아래), chat-locked(AI 채팅 잠김 화면),
+// quiz-inline(Quizbank·수업 퀴즈 아래), results(끝 화면 점수 아래), call(AI 통화 중 버튼 아래 칸, 2026-11-02), chat-locked(AI 채팅 잠김 화면),
 // sheets(읽는 시트·안내 창 끝 — 📖 배울 수 있는 것·칸 ?·사용법 창·내 진척·실력 기록, 한 번에 하나만 열림).
 
 /** 네이티브 광고 자리 높이(작은 틀, 플러그인 최소 120px). */
