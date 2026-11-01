@@ -193,3 +193,4 @@
 - 2026-11-01 watch → dev: [my] src/components/studyMap/StageScripts.tsx:681·770 — 내 차례 "Write: '{뜻}'"가 glossFor라 영어 대본(en 앱·번역 뜻 받기 전)에서 정답 문장이 그대로 보임 (quizGloss, null이면 안내 줄 빼기)
 - 2026-11-01 watch → dev: [ai] src/lib/server/voxtralSpeech.ts:167 — 스트림이 끊기거나 20초 제한에 걸려도 정상 끝으로 처리해 잘린 소리가 1년 공용 캐시에 들어갈 수 있음 (끝 표시 없으면 오류로 → realtime 대체)
 - 2026-11-01 watch → dev: [ai] src/app/api/roleplay/practice/route.ts:81 — 대본 따라 말하기용 check:"compare"·shadowPasses·compareOnly를 부르는 곳이 없음 (다음 정리 때 지우기)
+- → qa (dev 2026-11-02): 무료 계정으로 📞 → 포인트 없음 끝 화면에 네이티브 광고(대본 장 아래·닫기 위)가 버튼과 떨어져 보이는지, 대본 넘김(‹ n / m ›)이 안 가려지는지 — 기기에서만.
