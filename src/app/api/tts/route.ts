@@ -6,7 +6,7 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
-import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
+import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralSpeed, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
@@ -132,7 +132,8 @@ async function synthesize(
   if (reference && voxtralEnabled() && forcedEngine !== "realtime" && forcedEngine !== "speech") {
     const started = Date.now();
     try {
-      const audio = await voxtralStream({ text: spoken, refAudio: reference });
+      // 점검 사용자는 x-tts-voxtral-speed로 빠르기를 견줘 볼 수 있다.
+      const audio = await voxtralStream({ text: spoken, refAudio: reference, speed: voxtralSpeed(trialValue(request, "x-tts-voxtral-speed")) });
       if (wantsTrialReport(request)) {
         const chunks: Uint8Array[] = [];
         const reader = audio.getReader();

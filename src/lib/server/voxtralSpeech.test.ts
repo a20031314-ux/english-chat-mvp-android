@@ -42,3 +42,21 @@ test("every Voxtral language has a reference for both tutors; id and th stay on 
   // A scene voice outside the tutor table borrows the tutor of the same gender (old es open-talk used verse).
   assert.equal(voxtralReference("es", "verse"), voxtralReference("es", tutorVoice("es", "m")));
 });
+
+test("time stretch keeps pitch and lengthens by 1/rate, fed in odd-sized chunks", async () => {
+  const { TimeStretch } = await import("./timeStretch.ts");
+  const rate = 24000;
+  const pcm = Buffer.alloc(rate * 2);
+  for (let i = 0; i < rate; i++) pcm.writeInt16LE(Math.round(Math.sin((2 * Math.PI * 200 * i) / rate) * 12000), i * 2);
+  const stretch = new TimeStretch(0.9);
+  const parts: Uint8Array[] = [];
+  for (let i = 0; i < pcm.length; i += 777) parts.push(stretch.push(pcm.subarray(i, i + 777)));
+  parts.push(stretch.flush());
+  const out = Buffer.concat(parts);
+  const seconds = out.length / 2 / rate;
+  assert.ok(Math.abs(seconds - 1 / 0.9) < 0.03, `${seconds}s`);
+  // 높이: 가운데 0.5초의 영점 교차 수 ≈ 200Hz.
+  let crossings = 0;
+  for (let i = rate * 0.25; i < rate * 0.75; i++) if ((out.readInt16LE(i * 2) >= 0) !== (out.readInt16LE((i + 1) * 2) >= 0)) crossings++;
+  assert.ok(Math.abs(crossings / 2 / 0.5 - 200) < 10, `${crossings / 2 / 0.5}Hz`);
+});

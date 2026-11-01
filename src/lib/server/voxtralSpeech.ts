@@ -8,6 +8,17 @@
  */
 import { VOICE_REFS } from "./voiceRefs.generated.ts";
 import { speaksWithVoxtral } from "./voxtralLanguages.ts";
+import { TimeStretch } from "./timeStretch.ts";
+
+/**
+ * 말 빠르기(1 = 그대로, 0.9 = 10% 느리게 — 높이는 그대로, timeStretch.ts). 사용자 2026-11-02 "voxtral 발음이 좀 빠른데 살짝 느리게".
+ * Vercel `VOXTRAL_TTS_SPEED`로 바꿈(0.7~1.2).
+ */
+export const VOXTRAL_DEFAULT_SPEED = 0.9;
+export function voxtralSpeed(override?: string): number {
+  const raw = Number(override || process.env.VOXTRAL_TTS_SPEED);
+  return Number.isFinite(raw) && raw >= 0.7 && raw <= 1.2 ? raw : VOXTRAL_DEFAULT_SPEED;
+}
 
 const BASE = "https://api.mistral.ai/v1/audio";
 export const VOXTRAL_TTS_MODEL = process.env.MISTRAL_TTS_MODEL?.trim() || "voxtral-mini-tts-3-0";
@@ -116,7 +127,8 @@ export function sseAudioDecoder(): { push(text: string): Uint8Array[]; done: () 
 /**
  * 흘려 받는 소리(s16le 24kHz) — 첫 소리가 올 때까지 기다렸다가 돌려준다. 그 전에 실패하면 throw(부른 쪽이 예전 엔진으로).
  */
-export async function voxtralStream(input: { text: string; refAudio?: string; voice?: string }): Promise<ReadableStream<Uint8Array>> {
+export async function voxtralStream(input: { text: string; refAudio?: string; voice?: string; speed?: number }): Promise<ReadableStream<Uint8Array>> {
+  const stretch = new TimeStretch(input.speed ?? voxtralSpeed());
   const response = await fetch(`${BASE}/speech`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json", Accept: "text/event-stream" },
@@ -129,10 +141,19 @@ export async function voxtralStream(input: { text: string; refAudio?: string; vo
   const decoder = sseAudioDecoder();
   // 첫 소리 조각까지 읽어 둔다.
   const first: Uint8Array[] = [];
+  let sawAudio = false;
   while (!first.length) {
     const next = await reader.read();
-    if (next.done) throw new Error("voxtral: no audio");
-    first.push(...decoder.push(text.decode(next.value, { stream: true })));
+    if (next.done) {
+      if (!sawAudio) throw new Error("voxtral: no audio");
+      first.push(stretch.flush());
+      break;
+    }
+    for (const chunk of decoder.push(text.decode(next.value, { stream: true }))) {
+      sawAudio = true;
+      const out = stretch.push(chunk);
+      if (out.byteLength) first.push(out);
+    }
   }
   return new ReadableStream<Uint8Array>({
     start(controller) {
@@ -142,14 +163,20 @@ export async function voxtralStream(input: { text: string; refAudio?: string; vo
       for (;;) {
         const next = await reader.read().catch(() => ({ done: true as const, value: undefined }));
         if (next.done) {
+          const rest = stretch.flush();
+          if (rest.byteLength) controller.enqueue(rest);
           controller.close();
           return;
         }
-        const chunks = decoder.push(text.decode(next.value, { stream: true }));
-        if (chunks.length) {
-          for (const chunk of chunks) controller.enqueue(chunk);
-          return;
+        let sent = false;
+        for (const chunk of decoder.push(text.decode(next.value, { stream: true }))) {
+          const out = stretch.push(chunk);
+          if (out.byteLength) {
+            controller.enqueue(out);
+            sent = true;
+          }
         }
+        if (sent) return;
       }
     },
     cancel() {
