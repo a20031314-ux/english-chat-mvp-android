@@ -204,7 +204,7 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
   }, [list, userStage, mineKey]);
   // 고른 칸(curriculum/vocabBank.ts inPick)에서 아직 모르는(이미 앎·확인 중이 아닌) 앞 낱말들이 든 묶음(셋까지).
   const pickKey = pick ? `${pick.by}:${pick.value}` : "all:";
-  const alsoKey = also?.join("|") ?? "";
+  const alsoKey = also?.join("\n") ?? "";
   const chunks = useMemo(() => {
     if (!list) return "";
     const out: string[] = [];
@@ -229,7 +229,8 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
         if (out.includes(c)) continue;
         out.push(c);
         extra += 1;
-        if (extra >= 3) break;
+        // 수준 맞추기 가늠(curriculum/vocabLevel.ts)은 단계 구간 여섯의 첫 묶음을 한꺼번에 — 여섯까지.
+        if (extra >= 6) break;
       }
     }
     const first = out[0];
@@ -308,8 +309,19 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     // 넓어지는 원의 차례: 고른 칸 안 낱말 전부(이미 앎 포함), 늦게 낼 것(기능어 등)은 뒤로.
     const inside = order.map((index) => ({ word: list[index]!, index })).filter(({ word, index }) => inPick(word, index, pick));
     const orderKeys = [...inside.filter(({ word }) => !isLate(word)), ...inside.filter(({ word }) => isLate(word))].map(({ word }) => wordKey(word.w));
-    return { total: list.length, known: knownCount, learning, next, groups, orderKeys, ready };
+    // 수준 맞추기(curriculum/vocabLevel.ts, 2026-11-01): 이 칸 안 낱말 전부를 빈도 순위 그대로(단계 제한 없음 — 처음엔 모든 단계를 섞어 가늠).
+    const ranked = list.filter((word, index) => inPick(word, index, pick)).map((word) => wordKey(word.w));
+    // ⚙ "어디서부터" 단계 예시: 단계마다 그 구간 앞쪽에서 고루 다섯(기능어 빼고) + 그 구간 시작 순위.
+    const samples: { stage: number; start: number; words: string[] }[] = [];
+    for (const stage of [1, 2, 3, 4, 5, 6]) {
+      const inStage = list.map((word, index) => ({ word, index })).filter(({ word, index }) => index < baseLength && (word.stage ?? 6) === stage && !late(word, null, 2));
+      if (!inStage.length) continue;
+      const head = inStage.slice(0, 120);
+      const words = [0, 1, 2, 3, 4].map((i) => head[Math.floor((i * head.length) / 5)]?.word.w).filter((w): w is string => Boolean(w));
+      samples.push({ stage, start: Math.min(...inStage.map(({ index }) => index)), words: [...new Set(words)] });
+    }
+    return { total: list.length, known: knownCount, learning, next, groups, orderKeys, ready, ranked, samples };
     // pickKey stands for pick.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, known, ready, pickKey, order, userStage, mineKey]);
+  }, [list, known, ready, pickKey, order, userStage, mineKey, baseLength]);
 }

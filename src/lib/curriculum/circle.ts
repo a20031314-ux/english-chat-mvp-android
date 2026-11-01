@@ -11,6 +11,8 @@
  * - 원(size)은 새것을 미리 받아 둘 범위: 지금까지 다룬 낱말 + CIRCLE_START.
  * 이 폰에만(localStorage, 낱말 열쇠·횟수·때만 — 학습자 글 없음). 순수 모듈: 화면(TodayPlan)·테스트·시뮬레이션이 같이 쓴다.
  */
+import type { Level } from "./vocabLevel.ts";
+
 export const CIRCLE_START = 20;
 /** 이만큼 연속 맞히면 익힘(2026-11-01 사용자 "한 번 맞히면 익힘"). */
 export const STREAK_KNOWN = 1;
@@ -33,7 +35,8 @@ const DAY = 24 * 60 * 60 * 1000;
 /** 연속 맞힘 수 → 잊을 때가 될 때까지 날. */
 export const REVIEW_DAYS = [0, 1, 3, 7, 14, 30, 60] as const;
 
-export type CircleItem = { s: number; t: number };
+/** e = 아직 이른 낱말(경계보다 한참 위를 틀림, vocabLevel.ts) — 틀린 낱말 더미·단어 시험에 안 넣고 경계가 닿으면 다시. */
+export type CircleItem = { s: number; t: number; e?: 1 };
 export type Circle = {
   size: number;
   items: Record<string, CircleItem>;
@@ -46,6 +49,8 @@ export type Circle = {
   testStamp?: number;
   /** 탭에서 새 낱말을 푼 수. */
   newSeen?: number;
+  /** 수준 맞추기(vocabLevel.ts) — 경계·체크. */
+  lv?: Level;
   /** 예전 저장(정답률 목표·아는 몫) — 읽어도 쓰지 않음. */
   share?: number;
   recent?: number[];
@@ -82,12 +87,13 @@ export function circleView(circle: Circle, order: readonly string[], known: (key
 
 /** 지금 틀린 채로 남은 낱말 수(문제를 만들 수 있는 것만). */
 export function wrongCount(circle: Circle, usable: (key: string) => boolean): number {
-  return Object.keys(circle.items).filter((key) => usable(key) && circle.items[key]!.s === 0).length;
+  return Object.keys(circle.items).filter((key) => usable(key) && circle.items[key]!.s === 0 && !circle.items[key]!.e).length;
 }
 
 /** 틀린 낱말이 WRONG_PAUSE개를 넘어 새 낱말을 쉬는 중인가. */
 export function newPaused(circle: Circle, usable: (key: string) => boolean): boolean {
-  return wrongCount(circle, usable) >= WRONG_PAUSE;
+  // 어려워요를 누른 사람은 더 일찍 쉰다(vocabLevel.ts SLOW_PAUSE 15).
+  return wrongCount(circle, usable) >= (circle.lv?.slow ? 15 : WRONG_PAUSE);
 }
 
 /**
@@ -111,7 +117,7 @@ export function pickCircle(
 /** 단어 시험 낱말: 틀린 것 절반까지 + 맞힌 것(잊을 때 된 것 먼저), 섞어서. */
 export function wordTest(circle: Circle, options: { now: number; usable: (key: string) => boolean; n?: number }): string[] {
   const n = options.n ?? TEST_SIZE;
-  const keys = Object.keys(circle.items).filter(options.usable);
+  const keys = Object.keys(circle.items).filter((key) => options.usable(key) && !circle.items[key]!.e);
   const wrong = keys.filter((key) => circle.items[key]!.s === 0).sort((a, b) => circle.items[a]!.t - circle.items[b]!.t);
   const right = keys
     .filter((key) => circle.items[key]!.s > 0 && options.now - circle.items[key]!.t >= TEST_GAP_MS)
@@ -139,7 +145,7 @@ export function wordTestDue(circle: Circle, options: { now: number; today: strin
   if (newPaused(circle, options.usable)) return true;
   if ((circle.newSeen ?? 0) - (circle.testAt ?? 0) >= TEST_EVERY) return true;
   const since = circle.testStamp ?? 0;
-  const freshWrong = Object.keys(circle.items).filter((key) => options.usable(key) && circle.items[key]!.s === 0 && circle.items[key]!.t > since).length;
+  const freshWrong = Object.keys(circle.items).filter((key) => options.usable(key) && circle.items[key]!.s === 0 && !circle.items[key]!.e && circle.items[key]!.t > since).length;
   if (freshWrong >= TEST_WRONG) return true;
   if (circle.testDay === options.today) return false;
   const dueRight = Object.keys(circle.items).filter((key) => options.usable(key) && circle.items[key]!.s > 0 && dueAt(circle, key) <= options.now).length;
@@ -152,9 +158,9 @@ export function noteTest(circle: Circle, today: string, now = Date.now()): Circl
 }
 
 /** 답 하나를 넣는다(새 객체). 맞히면 연속 맞힘 +1(한 번이면 익힘), 틀리면 0. 처음 보는 낱말이었으면 newSeen +1. */
-export function noteAnswer(circle: Circle, key: string, correct: boolean, now: number): Circle {
+export function noteAnswer(circle: Circle, key: string, correct: boolean, now: number, early = false): Circle {
   const before = circle.items[key];
-  const items = { ...circle.items, [key]: { s: correct ? (before?.s ?? 0) + 1 : 0, t: now } };
+  const items = { ...circle.items, [key]: { s: correct ? (before?.s ?? 0) + 1 : 0, t: now, ...(early ? { e: 1 as const } : {}) } };
   const rest: Circle = { ...circle };
   delete rest.share;
   delete rest.recent;

@@ -34,7 +34,8 @@ import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
-import { peekBank, quizPos, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { peekBank, quizPos, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { feelDue, feelLevel, levelOf, noteLevel, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -285,9 +286,27 @@ export function TodayPlan({
   // 원 안인데 아직 카드가 없는 낱말(앞에서 열둘) — 그 묶음을 받아 오게.
   // 원은 카드가 온 낱말로만 센다(카드 없는 낱말이 원 안에 남으면 익힘 몫이 70%에 못 닿아 원이 안 커짐 — 가상 사용자 2026-10-31: 2주에 10개).
   const circleOrder = useMemo(() => (bank ? bank.orderKeys.filter((key) => bank.ready.has(key)) : []), [bank]);
-  const needKey = circleOn && bank ? bank.orderKeys.slice(0, circle.size + 20).filter((key) => !bank.ready.has(key)).slice(0, 12).join("|") : "";
+  // 수준 맞추기(curriculum/vocabLevel.ts, 2026-11-01 사용자 "처음엔 모든 단계를 섞어서, 점점 가늠해 가며 사용자별로"): 어휘 칸을 따로 안 골랐을 때.
+  const levelOn = !vocabPick || (vocabPick.by === "stage" && !vocabPick.value);
+  const cuts = stageCuts(language);
+  const level = levelOf(circle, stage, cuts);
+  const ranked = useMemo(() => bank?.ranked ?? [], [bank]);
+  const rankOf = useMemo(() => new Map(ranked.map((key, index) => [key, index])), [ranked]);
+  // 내가 찾거나 저장한 낱말은 수준과 상관없이 맨 앞(낱말 층위 ⑤).
+  const mineKeys = useMemo(() => [...mineWords].map((word) => wordKey(word)), [mineWords]);
+  const levelPick = (n: number, options: { want?: boolean; skip?: ReadonlySet<string> } = {}) => {
+    if (!bank) return [] as string[];
+    const usable = (key: string) => bank.ready.has(key);
+    const mine = mineKeys.filter((key) => !circleRef.current.items[key] && !knownWord(key) && !options.skip?.has(key) && (options.want || usable(key))).slice(0, n);
+    const rest = pickLevelWords(circleRef.current, levelOf(circleRef.current, stage, cuts), { n: n - mine.length, ranked, cuts, usable, known: knownWord, skip: new Set([...(options.skip ?? []), ...mine]), want: options.want });
+    return [...mine, ...rest];
+  };
+  const needKey = circleOn && bank
+    ? (levelOn ? levelPick(16, { want: true }) : bank.orderKeys.slice(0, circle.size + 20)).filter((key) => !bank.ready.has(key)).slice(0, 12).join("\n")
+    : "";
   useEffect(() => {
-    setCircleNeed(needKey ? needKey.split("|") : []);
+    // 열쇠 안에 "|"가 있어(w|낱말) 줄바꿈으로 잇고 나눈다(예전엔 "|"로 나눠 묶음을 하나도 못 받았음).
+    setCircleNeed(needKey ? needKey.split("\n") : []);
   }, [needKey]);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
@@ -1069,8 +1088,13 @@ export function TodayPlan({
           bundleKeys={wordTestQ.keys}
           onBundle={(results) => {
             let next = circleRef.current;
-            for (const one of results) next = noteAnswer(next, one.key, one.correct && !one.skipped, Date.now());
-            saveCircle(trimCircle(noteTest(next, day, Date.now())));
+            let lv = levelOf(next, stage, cuts);
+            for (const one of results) {
+              next = noteAnswer(next, one.key, one.correct && !one.skipped, Date.now());
+              const rank = rankOf.get(one.key);
+              if (levelOn && rank !== undefined) lv = noteLevel(lv, rank, one.correct && !one.skipped, { total: ranked.length });
+            }
+            saveCircle(trimCircle(noteTest(levelOn ? { ...next, lv } : next, day, Date.now())));
             finishMany(results.filter((one) => !one.skipped).map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })));
           }}
           onDone={() => undefined}
@@ -1143,7 +1167,16 @@ export function TodayPlan({
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
     if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
-      saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, one.correct, Date.now()), circleOrder, knownWord)));
+      const before = circleRef.current;
+      const rank = rankOf.get(one.key);
+      if (levelOn && rank !== undefined) {
+        // 수준 맞추기: 처음 보는 낱말(고르기)은 찍어 맞힐 몫을 빼고 경계를 고치고, 경계보다 한참 위를 틀린 것은 "아직 이른 낱말"로.
+        const fresh = !before.items[one.key] || Boolean(before.items[one.key]!.e);
+        const lv = levelOf(before, stage, cuts);
+        const early = fresh && tooEarly(lv, rank, one.correct);
+        const next = noteAnswer(before, one.key, one.correct, Date.now(), early);
+        saveCircle(trimCircle({ ...next, lv: noteLevel(lv, rank, one.correct, { choose: fresh, total: ranked.length, fresh }) }));
+      } else saveCircle(trimCircle(growCircle(noteAnswer(before, one.key, one.correct, Date.now()), circleOrder, knownWord)));
     }
     finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
   };
@@ -1157,13 +1190,18 @@ export function TodayPlan({
   // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
   const keepMake = (): QuizBatch | null => {
     if (wrongTab) return takeBatch(bundleFor("review"));
-    if (keepFocus === "vocab" && circleOn && bank && circleOrder.length) {
-      const keys = pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
+    if (keepFocus === "vocab" && circleOn && bank && (levelOn ? ranked.length : circleOrder.length)) {
+      const paused = newPaused(circleRef.current, (key) => bank.ready.has(key));
+      const keys = levelOn
+        ? paused
+          ? []
+          : levelPick(QUIZ_SIZE + 1, { skip: lastCircle.current })
+        : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
       lastCircle.current = new Set(keys);
       if (!keys.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));
       // 다음 묶음에 나올 새 낱말도 미리(문제은행 미리 받기, 2026-11-01).
-      const ahead = pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: new Set(keys) });
+      const ahead = levelOn ? levelPick(8, { skip: new Set(keys) }) : pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: new Set(keys) });
       void growBank(language, locale, ahead.map((key) => ({ key, stage })));
       // 처음 보는 낱말은 고르기, 다시 나온 낱말은 쓰기(처음부터 쓰게 하면 첫날 정답률이 30%대 — 시뮬레이션).
       const questions: QuizQuestion[] = [];
@@ -1262,6 +1300,32 @@ export function TodayPlan({
               </button>
             ))}
           </div>
+          {levelOn && bank.samples.length ? (
+            <div role="group" data-vocab-start className="flex flex-col gap-1 border-t border-line pt-2">
+              <p className="text-caption font-semibold text-slate-300">{ui.vocabStartFrom}</p>
+              {bank.samples.map((row, i) => {
+                const end = bank.samples[i + 1]?.start ?? Number.MAX_SAFE_INTEGER;
+                const on = level.b >= row.start && level.b < end;
+                return (
+                  <button
+                    key={row.stage}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => {
+                      saveCircle({ ...circleRef.current, lv: pickLevel(levelOf(circleRef.current, stage, cuts), row.start) });
+                      setSettingsOpen(null);
+                    }}
+                    className={`flex items-baseline gap-2 rounded-xl border px-3 py-2 text-start ${on ? "border-status-learned/60 bg-status-learned/10" : "border-line hover:bg-white/10"}`}
+                  >
+                    <span className="w-16 shrink-0 text-caption text-slate-400">{ui.stageNumber.replace("{n}", row.stage > 5 ? "\u20665+\u2069" : String(row.stage))}</span>
+                    <span dir="auto" className="min-w-0 flex-1 text-chat text-ink">
+                      {row.words.join(" · ")}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          ) : null}
           {settings.vocab && settings.vocab.by !== "all" && bank.groups.length ? (
             <div role="group" data-vocab-groups className="flex flex-wrap gap-1.5">
               {bank.groups.map((group) => {
@@ -1293,6 +1357,8 @@ export function TodayPlan({
   const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: (key) => bank.ready.has(key) }));
   // 틀린 낱말이 많으면 새 낱말을 쉬고 시험부터(circle.ts WRONG_PAUSE) — 탭에는 📝 줄만, "다 했어요"를 띄우지 않는다.
   const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, (key) => bank.ready.has(key)));
+  // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
+  const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
   const keepTabs: readonly (PartId | "review")[] = ["vocab", "grammar", "expression", "review"];
   const keepBody = (
@@ -1328,6 +1394,8 @@ export function TodayPlan({
           onClick={() => {
             if (!bank) return;
             const keys = wordTest(circleRef.current, { now: Date.now(), usable: (key) => bank.ready.has(key) });
+            // 수준 맞추기: 경계보다 한참 아래라 "아마 앎"으로 건너뛴 낱말도 둘 섞어 확인(틀리면 경계가 내려감).
+            if (levelOn) keys.push(...presumedWords(circleRef.current, level, { ranked, usable: (key) => bank.ready.has(key), known: knownWord, seed: circle.answered ?? 0 }).filter((key) => !keys.includes(key)));
             void growBank(language, locale, keys.map((key) => ({ key, stage })));
             // 낱말마다 한 문제(묶음 퀴즈는 네 문제까지라 하나씩 만들어 붙임).
             const made: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
@@ -1364,13 +1432,28 @@ export function TodayPlan({
           finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined })));
         }}
         empty={
-          vocabPaused ? null : !wrongTab && keepFocus === "vocab" && (!bank || !circleOrder.length) ? (
+          vocabPaused ? null : !wrongTab && keepFocus === "vocab" && (!bank || !(levelOn ? ranked.length : circleOrder.length)) ? (
             <p className="px-1 py-2 text-caption text-slate-400">…</p>
           ) : (
             <p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>
           )
         }
       />
+      {feelOn ? (
+        <div role="group" data-vocab-feel className="mt-2 flex flex-wrap items-center gap-1.5">
+          {(["easy", "ok", "hard"] as const).map((feel) => (
+            <button
+              key={feel}
+              type="button"
+              data-feel={feel}
+              onClick={() => saveCircle({ ...circleRef.current, lv: feelLevel(levelOf(circleRef.current, stage, cuts), feel, circleRef.current.newSeen ?? 0) })}
+              className={`rounded-full border px-3 py-1 text-caption ${feel === "easy" && (level.run ?? 0) >= 10 ? "border-status-learned/60 bg-status-learned/10 text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
+            >
+              {{ easy: `😴 ${ui.vocabFeelEasy}`, ok: `👌 ${ui.vocabFeelOk}`, hard: `😵 ${ui.vocabFeelHard}` }[feel]}
+            </button>
+          ))}
+        </div>
+      ) : null}
       {settingsSheet}
     </div>
   );

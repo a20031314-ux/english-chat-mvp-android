@@ -861,7 +861,11 @@
     "bankHowTitle": "学び方",
     "callAlsoDeleted": "通話履歴からも消えます",
     "wordTestTitle": "単語テスト",
-    "quizAlsoRight": "あなたの答えも正解です。元の答え："
+    "quizAlsoRight": "あなたの答えも正解です。元の答え：",
+    "vocabFeelEasy": "簡単",
+    "vocabFeelOk": "ちょうどいい",
+    "vocabFeelHard": "難しい",
+    "vocabStartFrom": "どこから"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1725,7 +1729,11 @@
     "bankHowTitle": "学习方法",
     "callAlsoDeleted": "也会从通话记录中删除",
     "wordTestTitle": "单词测验",
-    "quizAlsoRight": "你的答案也对。原本的答案："
+    "quizAlsoRight": "你的答案也对。原本的答案：",
+    "vocabFeelEasy": "太简单",
+    "vocabFeelOk": "刚好",
+    "vocabFeelHard": "太难",
+    "vocabStartFrom": "从哪里开始"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2592,7 +2600,11 @@
     "bankHowTitle": "Cách học",
     "callAlsoDeleted": "Cũng bị xóa khỏi lịch sử cuộc gọi",
     "wordTestTitle": "Kiểm tra từ vựng",
-    "quizAlsoRight": "Câu trả lời của bạn cũng đúng. Đáp án gốc:"
+    "quizAlsoRight": "Câu trả lời của bạn cũng đúng. Đáp án gốc:",
+    "vocabFeelEasy": "Dễ",
+    "vocabFeelOk": "Vừa sức",
+    "vocabFeelHard": "Khó",
+    "vocabStartFrom": "Bắt đầu từ"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3464,7 +3476,11 @@
     "bankHowTitle": "Comment étudier",
     "callAlsoDeleted": "Supprimé aussi de l’historique des appels",
     "wordTestTitle": "Test de mots",
-    "quizAlsoRight": "Ta réponse marche aussi. Réponse d’origine :"
+    "quizAlsoRight": "Ta réponse marche aussi. Réponse d’origine :",
+    "vocabFeelEasy": "Facile",
+    "vocabFeelOk": "Juste bien",
+    "vocabFeelHard": "Difficile",
+    "vocabStartFrom": "Commencer à"
   },
   "it": {
     "archive": "Report",
@@ -4527,7 +4543,11 @@
     "bankHowTitle": "Come studiare",
     "callAlsoDeleted": "Rimosso anche dalla cronologia delle chiamate",
     "wordTestTitle": "Test di parole",
-    "quizAlsoRight": "Va bene anche la tua risposta. Risposta originale:"
+    "quizAlsoRight": "Va bene anche la tua risposta. Risposta originale:",
+    "vocabFeelEasy": "Facile",
+    "vocabFeelOk": "Giusto",
+    "vocabFeelHard": "Difficile",
+    "vocabStartFrom": "Inizia da"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5402,7 +5422,11 @@
     "bankHowTitle": "Como estudar",
     "callAlsoDeleted": "Também sai do histórico de chamadas",
     "wordTestTitle": "Teste de palavras",
-    "quizAlsoRight": "Sua resposta também vale. Resposta original:"
+    "quizAlsoRight": "Sua resposta também vale. Resposta original:",
+    "vocabFeelEasy": "Fácil",
+    "vocabFeelOk": "Na medida",
+    "vocabFeelHard": "Difícil",
+    "vocabStartFrom": "Começar de"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6463,7 +6487,11 @@
     "bankHowTitle": "Как заниматься",
     "callAlsoDeleted": "Удалится и из истории звонков",
     "wordTestTitle": "Проверка слов",
-    "quizAlsoRight": "Ваш ответ тоже подходит. Исходный ответ:"
+    "quizAlsoRight": "Ваш ответ тоже подходит. Исходный ответ:",
+    "vocabFeelEasy": "Легко",
+    "vocabFeelOk": "В самый раз",
+    "vocabFeelHard": "Сложно",
+    "vocabStartFrom": "Начать с"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7334,7 +7362,11 @@
     "bankHowTitle": "Cara belajar",
     "callAlsoDeleted": "Juga terhapus dari riwayat panggilan",
     "wordTestTitle": "Tes kosakata",
-    "quizAlsoRight": "Jawabanmu juga benar. Jawaban aslinya:"
+    "quizAlsoRight": "Jawabanmu juga benar. Jawaban aslinya:",
+    "vocabFeelEasy": "Mudah",
+    "vocabFeelOk": "Pas",
+    "vocabFeelHard": "Sulit",
+    "vocabStartFrom": "Mulai dari"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8198,7 +8230,11 @@
     "bankHowTitle": "طريقة الدراسة",
     "callAlsoDeleted": "سيُحذف أيضًا من سجل المكالمات",
     "wordTestTitle": "اختبار الكلمات",
-    "quizAlsoRight": "إجابتك صحيحة أيضًا. الإجابة الأصلية:"
+    "quizAlsoRight": "إجابتك صحيحة أيضًا. الإجابة الأصلية:",
+    "vocabFeelEasy": "سهل",
+    "vocabFeelOk": "مناسب",
+    "vocabFeelHard": "صعب",
+    "vocabStartFrom": "ابدأ من"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9062,7 +9098,11 @@
     "bankHowTitle": "วิธีเรียน",
     "callAlsoDeleted": "จะถูกลบออกจากประวัติการโทรด้วย",
     "wordTestTitle": "ทดสอบคำศัพท์",
-    "quizAlsoRight": "คำตอบของคุณก็ถูกเหมือนกัน คำตอบเดิม:"
+    "quizAlsoRight": "คำตอบของคุณก็ถูกเหมือนกัน คำตอบเดิม:",
+    "vocabFeelEasy": "ง่าย",
+    "vocabFeelOk": "พอดี",
+    "vocabFeelHard": "ยาก",
+    "vocabStartFrom": "เริ่มจาก"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9926,6 +9966,10 @@
     "bankHowTitle": "कैसे पढ़ें",
     "callAlsoDeleted": "कॉल इतिहास से भी हट जाएगा",
     "wordTestTitle": "शब्द परीक्षा",
-    "quizAlsoRight": "आपका जवाब भी सही है। मूल उत्तर:"
+    "quizAlsoRight": "आपका जवाब भी सही है। मूल उत्तर:",
+    "vocabFeelEasy": "आसान",
+    "vocabFeelOk": "ठीक है",
+    "vocabFeelHard": "कठिन",
+    "vocabStartFrom": "कहाँ से शुरू"
   }
 }
