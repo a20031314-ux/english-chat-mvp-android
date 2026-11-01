@@ -7,6 +7,8 @@
 //        이번 범위(tmp/watch/plan.json)의 화면 흐름 변화(hub/STRUCTURE.md 위쪽 diff)·바뀐 화면 파일 → tmp/watch/ads-facts.json
 //   … ads.mjs estimate --format=interstitial --per-month=6          새 자리 하나: 무료 사용자 한 사람이 한 달에 n번 보면 1,000명당 월 수익(낮음·중간·높음)
 //   … ads.mjs settings --ads-gap=240 [--ads-after-chats=3 …]       Vercel ADS_* 값만 바꾸면: 손익(economics) 1,000명당·무료 유형별 차이
+//   … ads.mjs scenario                                              ads-plan.json의 안마다(econ 칸) 손익을 economics로 다시 계산 — 안 하나씩·모두 넣었을 때
+//                                                                   1,000명당 월(전환 3%, 단가 중간)·무료 한 사람 → per1000Mid 덮어씀 + tmp/watch/ads-scenario.json
 //   … ads.mjs render                                                tmp/watch/ads-plan.json(검토 에이전트가 씀) → hub/ads-plan.md, 알릴 것 → tmp/watch/ads-notify.json
 //
 // 알림 기준: 원칙 위반(넣지 않는 곳·흐름 도중에 뜸) · 손익 계산에서 빠진 순간이 새로 생김 · 안 하나가 1,000명당 월 ±20,000원 넘게 바꿈.
@@ -97,6 +99,45 @@ function settings() {
   console.log(JSON.stringify({ flags, per1000Mid: per1000 ?? null, rows: rows.sort((x, y) => Math.abs(y.diff) - Math.abs(x.diff)).slice(0, 12) }, null, 1));
 }
 
+/** economics를 한 번 돌려 머리 숫자 둘: 가입자 1,000명당 월(단가 중간·전환 3%), 무료 한 사람 월(중간). */
+function econHead(scenario) {
+  const out = execFileSync("node", [...NODE, "scripts/sim-users/economics.mjs", ...(scenario ? ["--scenario", JSON.stringify(scenario)] : [])], { cwd: ROOT, encoding: "utf8", maxBuffer: 16 * 1024 * 1024 });
+  const cells = tableCells(out);
+  const key = Object.keys(cells).find((k) => /^4\..* · 광고 단가 중간 · 3%$/.test(k));
+  const free = out.match(/무료 사용자 평균[^\n]*남는 돈 ([^ ]+)원 \/ ([^ ]+)원/);
+  const num = (t) => Number(String(t).replace(/−/g, "-").replace(/[+,원\s]/g, ""));
+  return { per1000: key ? numberOf(cells[key]).value : null, freePerson: free ? num(free[2]) : null };
+}
+
+const merge = (list) => ({
+  extraAds: list.flatMap((e) => e.extraAds ?? []),
+  my: Object.assign({}, ...list.map((e) => e.my ?? {})),
+});
+
+function scenario() {
+  const file = path.join(OUT, "ads-plan.json");
+  const plan = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
+  const base = econHead(null);
+  for (const p of plan) {
+    if (!p.econ) continue;
+    const r = econHead(merge([p.econ]));
+    p.per1000Mid = r.per1000 - base.per1000;
+    p.freePersonMid = r.freePerson - base.freePerson;
+  }
+  // 모두 넣으면: 같은 alt(서로 바꿔 끼우는 안) 중에는 1,000명당이 가장 좋은 것 하나만.
+  const chosen = new Map();
+  for (const p of plan.filter((x) => x.econ)) {
+    const id = p.alt ?? p.what;
+    if (!chosen.has(id) || p.per1000Mid > chosen.get(id).per1000Mid) chosen.set(id, p);
+  }
+  const picked = [...chosen.values()].filter((p) => p.per1000Mid > 0 || p.severity === "notify");
+  const all = picked.length ? econHead(merge(picked.map((p) => p.econ))) : base;
+  fs.writeFileSync(file, JSON.stringify(plan, null, 1) + "\n");
+  const result = { base, all, picked: picked.map((p) => p.what) };
+  fs.writeFileSync(path.join(OUT, "ads-scenario.json"), JSON.stringify(result, null, 1) + "\n");
+  console.log(`지금 1,000명당 ${won(base.per1000)} · 무료 한 사람 ${won(base.freePerson)} → 안 ${picked.length}개 넣으면 ${won(all.per1000)} · ${won(all.freePerson)}`);
+}
+
 function render() {
   const file = path.join(OUT, "ads-plan.json");
   const factsFile = path.join(OUT, "ads-facts.json");
@@ -110,12 +151,15 @@ function render() {
     "",
   ];
   if (f.unmodeled?.length) lines.push(`- **손익 계산에 안 들어간 전면 순간:** ${f.unmodeled.map((m) => `\`${m}\``).join(" · ")} — \`hub/economics.md\`의 광고 수익이 이 순간들을 세지 않음(\`economics.mjs\` simulate·MODELED_MOMENTS).`, "");
+  const scFile = path.join(OUT, "ads-scenario.json");
+  const sc = fs.existsSync(scFile) ? JSON.parse(fs.readFileSync(scFile, "utf8")) : null;
+  if (sc) lines.push(`- **손익(\`hub/economics.md\` 계산, 가입자 1,000명당 월 · 단가 중간 · 전환 3%):** 지금 ${won(sc.base.per1000)}(무료 한 사람 ${won(sc.base.freePerson)}) → 아래 안 중 ${sc.picked.length}개(원칙 위반 고침 + 수입이 느는 것, 바꿔 끼우는 안은 좋은 쪽 하나)를 넣으면 **${won(sc.all.per1000)}**(무료 한 사람 ${won(sc.all.freePerson)}).`, "");
   if (!plan.length) lines.push("이번 범위에서 바꿀 안 없음.");
   else {
-    lines.push("| 무엇 | 어디 | 왜(원칙) | 1,000명당 월(중간) | 바로/빌드 | 근거 |", "|---|---|---|---|---|---|");
+    lines.push("| 무엇 | 어디 | 왜(원칙) | 1,000명당 월(중간) | 무료 한 사람 | 바로/빌드 | 근거 |", "|---|---|---|---|---|---|---|");
     for (const p of plan) {
       const money = typeof p.per1000Mid === "number" ? won(p.per1000Mid) : "—";
-      lines.push(`| ${p.severity === "notify" ? "**" : ""}${p.kind}: ${p.what}${p.severity === "notify" ? "**" : ""} | ${p.where ?? "—"} | ${p.why ?? "—"} | ${money} | ${p.appBuild ? "앱 빌드" : "서버 바로"} | ${p.basis ?? "—"} |`);
+      lines.push(`| ${p.severity === "notify" ? "**" : ""}${p.kind}: ${p.what}${p.severity === "notify" ? "**" : ""} | ${p.where ?? "—"} | ${p.why ?? "—"} | ${money}${p.alt ? ` (택1: ${p.alt})` : ""} | ${typeof p.freePersonMid === "number" ? won(p.freePersonMid) : "—"} | ${p.appBuild ? "앱 빌드" : "서버 바로"} | ${p.basis ?? "—"} |`);
       if (p.severity === "notify" || (typeof p.per1000Mid === "number" && Math.abs(p.per1000Mid) >= ADS_ALERT_PER_1000)) notify.push(`${p.kind}: ${p.what}${typeof p.per1000Mid === "number" ? ` (1,000명당 월 ${won(p.per1000Mid)})` : ""}`);
     }
   }
@@ -130,8 +174,9 @@ else if (command === "estimate") {
   const r = estimate(arg("format", "interstitial"), Number(arg("per-month", "4")));
   console.log(JSON.stringify(Object.fromEntries(Object.entries(r).map(([k, v]) => [k, Math.round(v)]))));
 } else if (command === "settings") settings();
+else if (command === "scenario") scenario();
 else if (command === "render") render();
 else if (process.argv[1]?.endsWith("ads.mjs")) {
-  console.log("facts | estimate --format=… --per-month=… | settings --ads-…=… | render");
+  console.log("facts | estimate --format=… --per-month=… | settings --ads-…=… | scenario | render");
   process.exitCode = 1;
 }

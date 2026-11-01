@@ -60,6 +60,13 @@ export function options(argv = [], env = process.env) {
     return i >= 0 ? argv[i + 1] : undefined;
   };
   const assume = JSON.parse(readFileSync(arg("assume") ? resolve(arg("assume")) : join(here, "economics.json"), "utf8"));
+  // 광고 안 계산(scripts/watch/ads.mjs scenario, 2026-11-01): --scenario '{"extraAds":[{"format":"banner","perActiveDay":5,"when":"my"}],"my":{…}}'
+  // extraAds = 무료에 더하는(음수면 빼는) 광고 노출, when "my"면 대본을 쓰는 날만·"any"면 쓰는 날 모두. my = economics.json "my" 덮어쓰기.
+  if (arg("scenario")) {
+    const sc = JSON.parse(arg("scenario"));
+    if (sc.my) assume.my = { ...assume.my, ...sc.my };
+    if (sc.extraAds) assume.extraAds = [...(assume.extraAds ?? []), ...sc.extraAds];
+  }
   const num = (name, fallback) => (arg(name) !== undefined && Number.isFinite(Number(arg(name))) ? Number(arg(name)) : fallback);
   // 광고 설정: 운영과 같은 ADS_* 환경 변수, 그 위에 --ads-reward-chats 같은 옵션.
   const adEnv = { ...env };
@@ -123,6 +130,8 @@ export function simulate(type, terms, o) {
       n.interstitial += lines / my.linesPerLesson + my.quizEndsPerDay + my.checkupEndsPerMonth / 30 * (30 / Math.max(1, type.days));
       lastInter = d * 1440 + 9 * 60; // 그날 첫 세션 전에 My를 한 것으로 — 채팅 나갈 때 전면과 간격
     }
+    // 광고 안(새 자리·옮김)으로 더하거나 빼는 노출 — 무료만, 없으면 0.
+    if (ads) for (const extra of o.assume.extraAds ?? []) if (extra.when !== "my" || lines > 0) n[extra.format] = Math.max(0, n[extra.format] + extra.perActiveDay);
     // 방 자막은 하루 줄 수 한도(한 줄 ≈ 6초 → 분당 10줄).
     n.roomMinutes += terms.dailyCaptionLines ? Math.min(type.roomMinutes, terms.dailyCaptionLines / 10) : type.roomMinutes;
     // 누를 때만 도는 AI 도움은 하루 한도(plans.ts dailyAiHelp)까지 — 넘는 만큼은 같은 비율로 줄인다.
