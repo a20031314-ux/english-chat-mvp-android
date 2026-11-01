@@ -91,17 +91,19 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
         lastLessonRaw = `ERR ${error instanceof Error ? error.message : String(error)}`.slice(0, 300);
         return null;
       });
-    lesson = (await once()) ?? (await once());
+    lesson = (await once()) ?? (await once()) ?? (await once());
     if (!lesson) return null;
     await kvSetJson(key, lesson, TTL_SECONDS).catch(() => undefined);
   }
   if (ui === "en") return { ...lesson, title: item.name };
-  const source = [item.kind === "grammar" ? item.name : "", lesson.meaning ?? "", lesson.usage ?? "", ...lesson.explain, ...lesson.turns.flatMap((turn) => [turn.themGloss, turn.meGloss])];
+  // 빈 줄을 넣으면 번호가 어긋나 옮기기가 통째로 실패한다(표현 수업이 한국어 앱에서 영어로 나오던 것, 2026-11-01).
+  const grammarTitle = item.kind === "grammar";
+  const source = [...(grammarTitle ? [item.name] : []), lesson.meaning || "-", lesson.usage || "-", ...lesson.explain, ...lesson.turns.flatMap((turn) => [turn.themGloss, turn.meGloss])];
   const moved = await translated(source, ui, uiName, `${key}:${ui}`, onMake);
   if (!moved) return { ...lesson, title: item.name };
   let at = 0;
   const take = () => moved[at++] ?? "";
-  const title = take();
+  const title = grammarTitle ? take() : item.name;
   const meaning = take();
   const usage = take();
   const explain = lesson.explain.map((line) => take() || line);
