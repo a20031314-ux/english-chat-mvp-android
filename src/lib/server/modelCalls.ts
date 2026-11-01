@@ -75,6 +75,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   qbankGrow: 2,
   // 출시 초반 문제은행 미리 채우기(예약 작업 /api/curriculum/qbank/seed) — 예문 없는 열쇠마다 만들기 1, 한 번에 30개·2시간마다, 다 돌면 0.
   qbankSeed: 1,
+  // 대화에서 온 튜터 줄 판정(앱이 거른 줄만, 한 번에 다섯·하루 300까지, 사용자가 끄면 0).
+  qbankOffer: 1,
   // 단어장에서 찾은 낱말이 은행에 없을 때(server/wordExtras.ts) — 확인·카드 만들기 1, 사람마다 하루 30번·언어마다 3,000개까지.
   wordAdd: 1,
   // 단계 학습 줄 읽는 법(server/stageReadings.ts) — 학습 언어 × 단계마다 한 번(줄 60개 묶음 몇 개), 저장된 뒤엔 0.

@@ -261,6 +261,7 @@ export function QuestionView({
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "talk" ? <TalkView ui={ui} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -889,6 +890,102 @@ function ChooseView({
         })}
       </div>
       {answered && alsoOk ? <AlsoRight ui={ui} answer={question.options[question.answer]!} /> : null}
+    </div>
+  );
+}
+
+/**
+ * 대화 조각 빈칸(curriculum/talkQuiz.ts): 내 AI 채팅·통화에서 떼 온 두세 줄 + 마지막 줄의 소재 자리를 비움.
+ * 채점은 빈칸 쓰기와 같음(그 소재를 썼는지 — 다른 말을 넣는 open 다시 보기는 안 함). 칠 수 없는 조각은 고르기. 뜻은 답한 뒤 그 줄에만(통화 줄은 번역이 있음).
+ */
+function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UICopy; language: string; question: Extract<QuizQuestion, { kind: "talk" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const tone = useBankTone();
+  const [result, setResult] = useState<Graded | null>(null);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [hint, setHint] = useState(0);
+  const { checking, grade } = useTypedGrade(language);
+  const sentence = `${question.before}___${question.after}`;
+  const submit = async (typed: string) => {
+    const local = typedRight(question.answer, typed, { language, near: question.near });
+    const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
+    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim() }, plainWrong);
+    setResult(final);
+    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
+  };
+  const target = question.lines[question.at];
+  return (
+    <div className="flex flex-col gap-3" data-talk>
+      <ul className="flex flex-col gap-1.5">
+        {question.lines.map((line, i) => {
+          const mine = line.who === "me";
+          const last = i === question.at;
+          return (
+            <li key={i} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
+              <div className={`max-w-[85%] rounded-2xl px-3 py-2 ${mine ? "bg-white/10" : "bg-white/[0.04]"} ${last ? "" : "opacity-70"}`}>
+                <p dir="auto" className="text-chat text-slate-100">
+                  {last ? (
+                    <>
+                      {question.before}
+                      <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
+                      {question.after}
+                    </>
+                  ) : (
+                    line.text
+                  )}
+                </p>
+                {last && answered && target?.gloss ? (
+                  <p dir="auto" className="mt-0.5 text-meta text-slate-400">
+                    {target.gloss}
+                  </p>
+                ) : null}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      {answered ? (
+        <div className="flex justify-end">
+          <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} />
+        </div>
+      ) : null}
+      {question.options ? (
+        <div className="flex flex-wrap gap-1.5">
+          {question.options.map((option) => {
+            const style = answered ? (option === question.answer ? "border-good bg-good/10 text-ink" : picked === option ? "border-warn text-warn line-through" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
+            return (
+              <button
+                key={option}
+                type="button"
+                dir="auto"
+                disabled={Boolean(answered)}
+                onClick={() => {
+                  setPicked(option);
+                  onAnswer({ correct: option === question.answer, picked: option });
+                }}
+                className={`${chip} ${style}`}
+              >
+                {option}
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <TypeBox
+          ui={ui}
+          tag={tag}
+          answer={question.answer}
+          done={Boolean(answered)}
+          result={answered ? result : null}
+          busy={checking}
+          hint={hint}
+          onHint={() => setHint((n) => n + 1)}
+          onSubmit={(typed) => void submit(typed)}
+          onGiveUp={() => {
+            setResult(false);
+            onAnswer({ correct: false, assisted: true });
+          }}
+        />
+      )}
     </div>
   );
 }

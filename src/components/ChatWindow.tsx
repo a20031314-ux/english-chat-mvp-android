@@ -1,5 +1,6 @@
 "use client";
 
+import { setTalkShare, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -792,6 +793,10 @@ export function ChatWindow({
   };
   // 튜터가 쓰는 말: 학습 언어만(기본) / 학습 언어 + 내 말. 통화도 같은 값을 읽는다(lib/tutorLanguage.ts).
   const [tutorLanguage, setTutorLanguage] = useState<TutorLanguage>(DEFAULT_TUTOR_LANGUAGE);
+  const [talkShare, setTalkShareState] = useState(true);
+  useEffect(() => {
+    setTalkShareState(talkShareOn());
+  }, []);
   useEffect(() => {
     setTutorLanguage(readTutorLanguage());
   }, []);
@@ -1788,6 +1793,22 @@ export function ChatWindow({
                     </div>
                   </div>
                 ) : null}
+                {/* 대화의 튜터 문장을 모두의 퀴즈 예문으로(걸러서, lib/curriculum/talkQuiz.ts — 기본 켬, 처리방침 2026-11-01). */}
+                <button
+                  type="button"
+                  data-talk-share
+                  aria-pressed={talkShare}
+                  onClick={() => {
+                    setTalkShare(!talkShare);
+                    setTalkShareState(!talkShare);
+                  }}
+                  className="flex w-full items-center gap-2 border-t border-line px-3 py-2 text-start text-xs text-slate-100 hover:bg-white/10"
+                >
+                  <span aria-hidden className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border ${talkShare ? "border-good bg-good/20 text-good" : "border-line"}`}>
+                    {talkShare ? "✓" : ""}
+                  </span>
+                  <span className="min-w-0 flex-1">{ui.talkShare}</span>
+                </button>
                 <div className="border-t border-line px-3 py-2">
                   <p className="text-meta text-slate-400">{ui.chatCorrectionView}</p>
                   <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.chatCorrectionView}>

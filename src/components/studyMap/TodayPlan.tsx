@@ -52,11 +52,12 @@ import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, restUntil, streakOf, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import { multiOf, spotsOf } from "@/lib/curriculum/multiQuiz";
+import { commonWords, hitsIn, readTalks, shareable, talkOf, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { bankTone, BankToneProvider } from "@/components/studyMap/bankTone";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
-import { growBank } from "@/lib/curriculum/qbank";
+import { growBank, offerBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
 import { emptyCircle, growCircle, itemState, newPaused, noteAnswer, noteTest, pickCircle, trimCircle, wordTest, wordTestDue, type Circle } from "@/lib/curriculum/circle";
 import { WordbookCard } from "@/components/studyMap/Wordbook";
@@ -233,6 +234,7 @@ export function TodayPlan({
   const askedWrong = useRef<Set<string>>(new Set());
   // 이번에 낸 복합 문제 문장(curriculum/multiQuiz.ts) — 한 바퀴 돌면 비운다.
   const multiShown = useRef<Set<string>>(new Set());
+  const talkShown = useRef<Set<string>>(new Set());
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
@@ -313,6 +315,32 @@ export function TodayPlan({
     // 열쇠 안에 "|"가 있어(w|낱말) 줄바꿈으로 잇고 나눈다(예전엔 "|"로 나눠 묶음을 하나도 못 받았음).
     setCircleNeed(needKey ? needKey.split("\n") : []);
   }, [needKey]);
+  // 대화의 튜터 줄 중 걸러진 것을 하루 한 번 다섯 줄까지 모두의 문제은행에 내놓는다(설정 talkShare — 기본 켬, AI 대화 ⋮에서 끔).
+  // 빈도 낱말 목록이 온 뒤에만(그 목록으로 거름) — 그날 보낸 표시는 실제로 거른 뒤에 남긴다.
+  const bankReady = Boolean(bank?.total);
+  useEffect(() => {
+    if (!bankReady || !talkShareOn()) return;
+    const frequency = (peekBank(language) ?? []).map((word) => word.w);
+    if (!frequency.length) return;
+    const words = commonWords(language, frequency);
+    const stamp = `talkOfferDay.v1.${language}`;
+    const today = new Date().toDateString();
+    try {
+      if (localStorage.getItem(stamp) === today) return;
+      localStorage.setItem(stamp, today);
+    } catch {
+      return;
+    }
+    const offers: { key: string; text: string; stage: number }[] = [];
+    for (const conv of readTalks(language)) {
+      for (const line of conv) {
+        if (!shareable(language, line, words)) continue;
+        const hit = hitsIn(language, line.text, 5)[0];
+        if (hit && !offers.some((one) => one.text === line.text)) offers.push({ key: hit.key, text: line.text, stage });
+      }
+    }
+    if (offers.length) void offerBank(language, offers.slice(-12));
+  }, [language, stage, bankReady]);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
   const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
@@ -634,6 +662,14 @@ export function TodayPlan({
     // 세 묶음에 한 번 끝에 하나, 낼 것이 다 떨어지면(맞힌 것은 쉬는 중) 복합 문제만으로 — 소재가 한정돼도 탭이 비지 않게.
     const multiTab = which === "learn" && (studyFocus === "grammar" || studyFocus === "expression") ? studyFocus : null;
     if (multiTab && made.questions.length >= 2) {
+      // 대화 조각 빈칸(curriculum/talkQuiz.ts): 세 묶음에 한 번, 내 AI 채팅·통화에 그 탭 소재가 든 줄이 있으면.
+      if (round % 3 === 1) {
+        const one = talkFor(multiTab);
+        if (one) {
+          made.questions.push(one.question);
+          made.keys.push(one.key);
+        }
+      }
       if (round % 3 === 2) {
         const one = multiFor(multiTab, made.questions.map((q) => ("text" in q ? q.text : "")));
         if (one) {
@@ -645,7 +681,13 @@ export function TodayPlan({
     }
     if (multiTab) {
       const multi: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
-      for (let i = 0; i < 3; i += 1) {
+      // 낼 것이 떨어지면 대화 조각 하나 + 복합 문제.
+      const talk = talkFor(multiTab);
+      if (talk) {
+        multi.questions.push(talk.question);
+        multi.keys.push(talk.key);
+      }
+      for (let i = multi.questions.length; i < 3; i += 1) {
         const one = multiFor(multiTab, [], i);
         if (!one) break;
         multi.questions.push(one.question);
@@ -655,6 +697,18 @@ export function TodayPlan({
     }
     // 틀린 것 탭은 한 문제만 남아도 낸다.
     return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
+  };
+  // 대화 조각 하나(이 폰의 AI 채팅·통화 기록) — 그 탭 소재, 쉬는 날이 끝나 가는 것부터, 이번에 낸 줄은 빼고.
+  const talkFor = (tab: "grammar" | "expression") => {
+    const made = talkOf(language, readTalks(language), {
+      stage,
+      seed: `${day}-${round}`,
+      wants: (key: string) => (tab === "grammar" ? keyPart(language, key) === "grammar" : keyPart(language, key) !== "grammar"),
+      rank: (key: string) => restUntil(log[key]),
+      avoid: talkShown.current,
+    });
+    if (made) talkShown.current.add(made.question.text);
+    return made;
   };
   // 복합 문제 하나: 이미 맞힌 소재(이 폰 연속 맞힘 1 이상·서버 익힘)만 비우고, 잊을 때가 가까운 소재가 든 문장부터. 문법 탭은 복합 틀린 곳을 번갈아.
   const multiFor = (tab: "grammar" | "expression", avoidTexts: readonly string[], offset = 0) => {

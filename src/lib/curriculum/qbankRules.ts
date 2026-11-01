@@ -24,6 +24,8 @@ export type BankItem = {
   /** 풀린 수 · 맞힌 수. */
   n: number;
   r: number;
+  /** 어디서 왔나: 없음 = 모델이 만듦, "talk" = 대화의 튜터 줄(걸러서, 2026-11-01). */
+  o?: "talk";
   /** 빠짐(너무 쉬움 "easy" · 이상함 "odd"). */
   off?: "easy" | "odd";
 };

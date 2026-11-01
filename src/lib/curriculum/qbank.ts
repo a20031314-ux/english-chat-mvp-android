@@ -146,3 +146,37 @@ export async function growBank(language: string, ui: string, keys: readonly { ke
     // 다음에 다시(결과는 버림 — 셈이 조금 덜 될 뿐).
   }
 }
+
+/**
+ * 대화에서 온 튜터 줄을 모두의 문제은행에 내놓는다(lib/curriculum/talkQuiz.ts shareable로 이미 거른 줄만, 한 번에 다섯).
+ * 서버가 한 번 더 판정해 통과한 것만 더한다. 보낸 줄은 이 폰에 기억해 다시 보내지 않는다(talkOffered.v1.<언어>, 500줄).
+ */
+export async function offerBank(language: string, offers: readonly { key: string; text: string; stage: number }[]): Promise<number> {
+  const store = storage();
+  const name = `talkOffered.v1.${language}`;
+  let sent: string[] = [];
+  try {
+    sent = JSON.parse(store?.getItem(name) ?? "[]") as string[];
+  } catch {
+    sent = [];
+  }
+  const fresh = offers.filter((one) => !sent.includes(one.text)).slice(0, 5);
+  if (!fresh.length) return 0;
+  try {
+    store?.setItem(name, JSON.stringify([...sent, ...fresh.map((one) => one.text)].slice(-500)));
+  } catch {
+    // 이번에만.
+  }
+  try {
+    const response = await fetch(apiUrl("/api/curriculum/qbank"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ language, offers: fresh }),
+    });
+    if (!response.ok) return 0;
+    const body = (await response.json()) as { offered?: number };
+    return body.offered ?? 0;
+  } catch {
+    return 0;
+  }
+}

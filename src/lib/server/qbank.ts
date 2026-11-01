@@ -215,3 +215,62 @@ export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN): Prom
   await kvSetJson(SEED_CURSOR, { at }, TTL_SECONDS).catch(() => undefined);
   return { made, skipped, at, total: keys.length, done: at >= keys.length };
 }
+
+/** 대화에서 온 튜터 줄을 하루에 이만큼까지 판정(모델 한 번씩). */
+export const OFFER_BUDGET = 300;
+
+/**
+ * 대화에서 온 튜터 줄(2026-11-01 사용자 "예문을 통화·채팅 문장으로" → B-1 "사용자 정보가 있는 문장은 걸러서", lib/curriculum/talkQuiz.ts):
+ * 앱이 이미 거른 줄(모든 낱말이 빈도 목록 안·숫자 없음)을 모델이 한 번 더 — 특정인을 알아볼 정보·민감한 내용(건강·연애·돈·정치·종교)·
+ * 앞 대화 없이는 이상한 문장·문법 오류가 있으면 버리고, 통과하면 영어 뜻과 함께 그 열쇠 묶음에 더한다. 누가 보냈는지는 남기지 않는다.
+ * 돌려줌: 더한 수. 고정(QBANK_FROZEN)이면 아무것도 안 함.
+ */
+export async function offerToBank(language: string, offers: readonly { key: string; text: string; stage: number }[], onMake?: () => void): Promise<number> {
+  if (bankFrozen()) return 0;
+  const client = getOpenAIClient();
+  if (!client) return 0;
+  const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
+  let added = 0;
+  for (const offer of offers) {
+    const target = targetOf(language, offer.key);
+    const text = offer.text.trim();
+    if (!target || !text || text.length > 140 || /\p{Nd}/u.test(text) || !text.toLocaleLowerCase().includes(target.piece.toLocaleLowerCase())) continue;
+    const storeKey = bankKey(language, offer.key);
+    const entry = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? emptyEntry();
+    if (entry.items.some((item) => item.t === text) || entry.items.filter((item) => !item.off).length >= 40) continue;
+    const spent = await kvIncrBy(`qbank:v1:offer:${today()}`, 1, 2 * 24 * 60 * 60).catch(() => OFFER_BUDGET + 1);
+    if (spent > OFFER_BUDGET) break;
+    onMake?.();
+    const completion = await completeChat(client, "translate", {
+      temperature: 0,
+      max_tokens: 300,
+      response_format: { type: "json_object" },
+      messages: [
+        {
+          role: "system",
+          content: `You screen one ${name} sentence taken from a tutor's line in a language-learning chat, before it is shown to other learners as a quiz example.
+Reject it (ok false) if ANY of these is true: it could identify or describe a specific real person or their private life (names, places they live or work, family details, plans with dates); it touches health, relationships, money, politics, religion, sexuality, or anything sensitive; it only makes sense with the earlier conversation (refers to "that", "there", "it" or something said before without saying what); it has any grammar or spelling mistake; it is not a natural everyday sentence for a learner.
+Otherwise ok true, with a plain English translation.
+Reply with JSON only: {"ok":true,"en":"<translation>"} or {"ok":false}.`,
+        },
+        { role: "user", content: text },
+      ],
+    }).catch(() => null);
+    const reply = String(completion?.choices[0]?.message?.content ?? "");
+    let parsed: { ok?: boolean; en?: string } = {};
+    try {
+      parsed = JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1)) as { ok?: boolean; en?: string };
+    } catch {
+      continue;
+    }
+    if (parsed.ok !== true || !parsed.en || parsed.en.length > 200) continue;
+    const at = text.toLocaleLowerCase().indexOf(target.piece.toLocaleLowerCase());
+    const piece = text.toLocaleLowerCase().length === text.length && at >= 0 ? text.slice(at, at + target.piece.length) : target.piece;
+    const fresh = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? entry;
+    if (fresh.items.some((item) => item.t === text)) continue;
+    const next: BankEntry = { ...fresh, items: [...fresh.items, { t: text, p: piece, g: parsed.en, s: Math.min(5, Math.max(1, offer.stage)), n: 0, r: 0, o: "talk" }] };
+    await kvSetJson(storeKey, next, TTL_SECONDS).catch(() => undefined);
+    added += 1;
+  }
+  return added;
+}

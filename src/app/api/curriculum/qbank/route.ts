@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { bankFor, bankView } from "@/lib/server/qbank";
+import { bankFor, bankView, offerToBank } from "@/lib/server/qbank";
 import { isSimRequest } from "@/lib/server/simData";
 import type { BankResult } from "@/lib/curriculum/qbankRules";
 
@@ -20,7 +20,7 @@ export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
-type Body = { language?: string; ui?: string; keys?: { key?: string; stage?: number }[]; results?: (BankResult & { key?: string })[] };
+type Body = { language?: string; ui?: string; keys?: { key?: string; stage?: number }[]; results?: (BankResult & { key?: string })[]; offers?: { key?: string; text?: string; stage?: number }[] };
 
 export async function POST(request: NextRequest) {
   const body = (await request.json().catch(() => ({}))) as Body;
@@ -56,6 +56,13 @@ export async function POST(request: NextRequest) {
     if (entry && wanted.has(key)) banks[key] = await bankView(language, key, entry, ui, meter).catch(() => null);
     if (entry) debug[key] = (entry as { last?: string }).last ?? "";
   }
-  return jsonWithCors(request, { banks, ...(request.headers.get("x-qbank-debug") === "1" ? { debug } : {}) });
+  // 대화에서 온 튜터 줄(앱이 거른 것, 사용자가 끄지 않았을 때만 옴) — 모델이 한 번 더 판정해 통과한 것만 더함. 점검 사용자는 안 받음.
+  const offers = (simUser ? [] : Array.isArray(body.offers) ? body.offers : []).slice(0, 5).flatMap((one) => {
+    const key = str(one?.key, 80);
+    const text = str(one?.text, 140);
+    return key && text ? [{ key, text, stage: Math.min(5, Math.max(1, Math.round(Number(one.stage) || 1))) }] : [];
+  });
+  const offered = offers.length ? await offerToBank(language, offers, () => void meterRequest(request, "qbankOffer")).catch(() => 0) : 0;
+  return jsonWithCors(request, { banks, ...(offers.length ? { offered } : {}), ...(request.headers.get("x-qbank-debug") === "1" ? { debug } : {}) });
 }
 

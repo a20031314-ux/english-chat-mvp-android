@@ -99,6 +99,7 @@ export const OP_COST: Record<string, OpCost> = {
   frameLesson: estimated("translate", { input: 700, output: 700 }),
   qbankGrow: estimated("translate", { input: 500, output: 400 }),
   qbankSeed: estimated("translate", { input: 500, output: 400 }),
+  qbankOffer: estimated("translate", { input: 300, output: 60 }),
   wordAdd: estimated("translate", { input: 300, output: 120 }),
   // 단계 하나의 줄(약 150~250) 읽는 법 — 60줄 묶음 서너 번(2026-10-29 어림).
   stageReadings: estimated("translate", { input: 6000, output: 9000 }),

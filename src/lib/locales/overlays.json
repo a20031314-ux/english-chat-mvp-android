@@ -867,7 +867,8 @@
     "vocabFeelHard": "難しい",
     "vocabStartFrom": "どこから",
     "roleplayMissed": "聞き取れなかった",
-    "roleplayCaptions": "字幕"
+    "roleplayCaptions": "字幕",
+    "talkShare": "会話のチューターの文をみんなのクイズ例文に"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1737,7 +1738,8 @@
     "vocabFeelHard": "太难",
     "vocabStartFrom": "从哪里开始",
     "roleplayMissed": "没听清",
-    "roleplayCaptions": "字幕"
+    "roleplayCaptions": "字幕",
+    "talkShare": "把对话中导师的句子分享为大家的测验例句"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2610,7 +2612,8 @@
     "vocabFeelHard": "Khó",
     "vocabStartFrom": "Bắt đầu từ",
     "roleplayMissed": "Mình chưa nghe rõ",
-    "roleplayCaptions": "Phụ đề"
+    "roleplayCaptions": "Phụ đề",
+    "talkShare": "Chia sẻ câu của gia sư làm ví dụ cho bài kiểm tra"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3488,7 +3491,8 @@
     "vocabFeelHard": "Difficile",
     "vocabStartFrom": "Commencer à",
     "roleplayMissed": "Je n'ai pas compris",
-    "roleplayCaptions": "Sous-titres"
+    "roleplayCaptions": "Sous-titres",
+    "talkShare": "Partager les phrases du tuteur comme exemples de quiz"
   },
   "it": {
     "archive": "Report",
@@ -4557,7 +4561,8 @@
     "vocabFeelHard": "Difficile",
     "vocabStartFrom": "Inizia da",
     "roleplayMissed": "Non ho capito",
-    "roleplayCaptions": "Sottotitoli"
+    "roleplayCaptions": "Sottotitoli",
+    "talkShare": "Condividi le frasi del tutor come esempi per i quiz"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5438,7 +5443,8 @@
     "vocabFeelHard": "Difícil",
     "vocabStartFrom": "Começar de",
     "roleplayMissed": "Não entendi",
-    "roleplayCaptions": "Legendas"
+    "roleplayCaptions": "Legendas",
+    "talkShare": "Compartilhar frases do tutor como exemplos de quiz"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6505,7 +6511,8 @@
     "vocabFeelHard": "Сложно",
     "vocabStartFrom": "Начать с",
     "roleplayMissed": "Не расслышал",
-    "roleplayCaptions": "Субтитры"
+    "roleplayCaptions": "Субтитры",
+    "talkShare": "Делиться фразами репетитора как примерами для тестов"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7382,7 +7389,8 @@
     "vocabFeelHard": "Sulit",
     "vocabStartFrom": "Mulai dari",
     "roleplayMissed": "Aku belum dengar jelas",
-    "roleplayCaptions": "Subtitle"
+    "roleplayCaptions": "Subtitle",
+    "talkShare": "Bagikan kalimat tutor sebagai contoh kuis"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8252,7 +8260,8 @@
     "vocabFeelHard": "صعب",
     "vocabStartFrom": "ابدأ من",
     "roleplayMissed": "لم أفهم",
-    "roleplayCaptions": "الترجمة المصاحبة"
+    "roleplayCaptions": "الترجمة المصاحبة",
+    "talkShare": "مشاركة جمل المعلّم كأمثلة للاختبارات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9122,7 +9131,8 @@
     "vocabFeelHard": "ยาก",
     "vocabStartFrom": "เริ่มจาก",
     "roleplayMissed": "ฟังไม่ทัน",
-    "roleplayCaptions": "คำบรรยาย"
+    "roleplayCaptions": "คำบรรยาย",
+    "talkShare": "แชร์ประโยคของติวเตอร์เป็นตัวอย่างแบบทดสอบ"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9992,6 +10002,7 @@
     "vocabFeelHard": "कठिन",
     "vocabStartFrom": "कहाँ से शुरू",
     "roleplayMissed": "समझ नहीं आया",
-    "roleplayCaptions": "सबटाइटल"
+    "roleplayCaptions": "सबटाइटल",
+    "talkShare": "ट्यूटर के वाक्य क्विज़ उदाहरण के रूप में साझा करें"
   }
 }

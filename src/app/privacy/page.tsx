@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "October 30, 2026";
-const LAST_UPDATED_KO = "2026년 10월 30일";
+const LAST_UPDATED_EN = "November 1, 2026";
+const LAST_UPDATED_KO = "2026년 11월 1일";
 
 type Section = { title: string; body: string[] };
 
@@ -45,6 +45,7 @@ const en: Section[] = [
       "• Searches you make when looking for videos or channels, which are sent to search providers to return results.",
       "• Sentences or words you ask to have analysed, translated or looked up, and questions you type about them.",
       "• Your notebook: when the tutor corrects a line you wrote or said in chat or a practice call, that line, the corrected version, a one-line explanation, where and when it happened, and which notebook section it fits are kept on our servers for Review in My (lines where only a typo was fixed are deleted after 7 days). Kept lines follow you to other devices, along with sections you add, names you change and notes you write. The line is sent to our AI provider once to choose the section. When a correction appears, the app takes a small picture of that chat or call screen and keeps it only on your device for 7 days; it is uploaded only if you choose \"With screen\" when adding that line, and is deleted with the line. When you tap \"Find in My\" on part of a sentence, that part, the sentence (not for messages, group chats or rooms, where only the part is kept), a one-line explanation and the section it fits are sent to our AI provider once; if you then choose \"Add this moment\", they are kept in your notebook in the same way, with a small picture of the AI chat, call or video screen if you keep \"With screen\" on (never for messages, group chats or rooms). Only these lines are kept, per learning language; you can delete any of them, and all of it is deleted with your account or app identifier. It is never shown to other members.",
+      "• Quiz examples from conversations: your AI chat and practice-call history stays on your device, and quizzes in My may show a few of its lines again as questions (on your device only). Unless you turn it off, a few sentences a day written by the tutor (the AI) are sent to our servers: the app first checks that they use only common words, then our AI provider checks once more and drops anything that could identify a person, anything sensitive, and anything that only makes sense with the earlier conversation. Sentences that pass are kept as quiz examples for all learners. Sentences you wrote or said are never sent, and who a sentence came from is not kept. You can turn this off in the AI chat ⋮ menu.",
       "• Study maps. The goal you write and the level you choose are sent to our AI provider to draw a study map; the map, the goal and which topics you mark as started or done are kept on our server, linked to the anonymous app identifier, so the map is there when you come back.",
       "• Reports you send about AI-generated content, including any note you add.",
       "• An anonymous app identifier, created by our billing provider for your installation, and usage counts tied to it — for example how many chat messages you sent today, how many points or call minutes you have used, and which app version you are on. These are used for free limits, points and premium access.",
@@ -178,6 +179,7 @@ const ko: Section[] = [
       "• 영상이나 채널을 찾을 때 입력한 검색어: 결과를 받기 위해 검색 제공자에게 전송됩니다.",
       "• 분석·번역·뜻 찾기를 요청한 문장이나 단어, 그리고 그에 대해 입력한 질문.",
       "• 복습(노트): 채팅이나 말하기 통화에서 튜터가 내가 쓰거나 말한 줄을 고치면, 그 줄과 고친 문장, 한 줄 설명, 어디서·언제였는지, 어느 칸에 맞는지를 My의 복습에 쓰도록 서버에 보관합니다(오타만 고친 줄은 7일 뒤 삭제). 보관한 줄은 다른 기기에서도 볼 수 있도록 내가 만든 칸, 바꾼 칸 이름, 쓴 메모와 함께 보관합니다. 칸을 고르기 위해 그 줄을 AI 제공자에게 한 번 전송합니다. 교정이 붙을 때 앱은 그 채팅·통화 화면을 작게 찍어 이 기기에만 7일 보관하고, 그 줄을 넣으면서 \"화면 함께\"를 고른 경우에만 서버에 올리며, 줄을 지우면 함께 삭제합니다. 문장의 일부를 고르고 \"My에서 찾기\"를 누르면 그 부분과 문장(메시지·단체방·Room에서는 고른 부분만), 맞는 칸과 한 줄 설명을 위해 AI 제공자에게 한 번 전송하고, \"이 장면 넣기\"를 고르면 같은 방식으로 노트에 보관합니다. \"화면 함께\"를 켜 두면 AI 채팅·통화·영상 화면을 작게 찍은 그림도 함께 올립니다(메시지·단체방·Room 화면은 찍지 않습니다). 이 줄들만, 학습 언어별로 보관하며, 하나씩 지울 수 있고, 계정이나 앱 식별자를 지우면 모두 삭제합니다. 다른 회원에게는 보이지 않습니다.",
+      "• 퀴즈 예문(대화에서 온 문장): AI 채팅·말하기 통화의 기록은 이 기기에 있고, My의 퀴즈가 그 대화의 몇 줄을 문제로 다시 보여 줍니다(이 기기 안에서만). 설정을 끄지 않았다면 그중 튜터(AI)가 쓴 문장 일부를 하루 몇 개까지 서버로 보내, 흔한 낱말만으로 된 문장인지 앱이 먼저 확인하고 AI 제공자가 한 번 더 판정해 특정인을 알아볼 수 있는 정보·민감한 내용·앞 대화가 있어야 뜻이 통하는 문장을 버린 뒤, 통과한 문장만 모든 학습자의 퀴즈 예문으로 보관합니다. 내가 쓰거나 말한 문장은 보내지 않고, 누가 보낸 문장인지는 남기지 않습니다. AI 대화 ⋮에서 끌 수 있습니다.",
       "• 학습 지도: 이용자가 적은 학습 목표와 고른 수준은 학습 지도를 만들기 위해 AI 제공자에게 전송됩니다. 만들어진 지도, 목표, 시작하거나 완료로 표시한 주제는 다시 열었을 때 이어서 볼 수 있도록 익명 앱 식별자에 연결해 서버에 보관합니다.",
       "• AI 생성 내용에 대한 신고와, 신고 시 함께 적은 메모.",
       "• 익명 앱 식별자(결제 제공자가 설치마다 만드는 식별값)와 이에 연결된 이용 횟수: 예를 들어 오늘 보낸 채팅 수, 사용한 포인트와 통화 시간, 앱 버전. 무료 이용 한도, 포인트, 프리미엄 이용에 사용합니다.",

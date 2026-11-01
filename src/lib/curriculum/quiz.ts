@@ -59,6 +59,11 @@ export type QuizQuestion =
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
    */
   | { kind: "multi"; text: string; chunks: string[]; blanks: { key: string; answer: string; near?: string[]; /** 칠 수 없는 조각(한자가 든 일본어·중국어)은 고르기. */ options?: string[] }[]; gloss: ScriptGloss; from: string }
+  /**
+   * 대화 조각 빈칸(2026-11-01 사용자 "예문을 통화·채팅 문장으로 — 문맥은 대화를 떼 와서", curriculum/talkQuiz.ts): 이 폰의 AI 채팅·통화 기록에서
+   * 앞 두세 줄과 함께, 마지막 줄(at)의 소재 자리를 비운다. mine = 내가 고침받은 줄의 고친 꼴. options = 칠 수 없는 조각(한자)은 고르기.
+   */
+  | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; from: string }
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
