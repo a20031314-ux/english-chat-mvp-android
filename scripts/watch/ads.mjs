@@ -115,7 +115,7 @@ const merge = (list) => ({
 });
 
 function scenario() {
-  const file = path.join(OUT, "ads-plan.json");
+  const file = planFile();
   const plan = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
   const base = econHead(null);
   for (const p of plan) {
@@ -132,14 +132,21 @@ function scenario() {
   }
   const picked = [...chosen.values()].filter((p) => p.per1000Mid > 0 || p.severity === "notify");
   const all = picked.length ? econHead(merge(picked.map((p) => p.econ))) : base;
-  fs.writeFileSync(file, JSON.stringify(plan, null, 1) + "\n");
+  fs.mkdirSync(OUT, { recursive: true });
+  fs.writeFileSync(path.join(OUT, "ads-plan.json"), JSON.stringify(plan, null, 1) + "\n");
   const result = { base, all, picked: picked.map((p) => p.what) };
   fs.writeFileSync(path.join(OUT, "ads-scenario.json"), JSON.stringify(result, null, 1) + "\n");
   console.log(`지금 1,000명당 ${won(base.per1000)} · 무료 한 사람 ${won(base.freePerson)} → 안 ${picked.length}개 넣으면 ${won(all.per1000)} · ${won(all.freePerson)}`);
 }
 
+/** 안 목록: 이번 실행의 tmp/watch/ads-plan.json, 없으면 지난번 것(hub/ads-plan.json — 새로 받은 저장소에서 이어 적기). */
+function planFile() {
+  const now = path.join(OUT, "ads-plan.json");
+  return fs.existsSync(now) ? now : path.join(ROOT, "hub/ads-plan.json");
+}
+
 function render() {
-  const file = path.join(OUT, "ads-plan.json");
+  const file = planFile();
   const factsFile = path.join(OUT, "ads-facts.json");
   const plan = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
   const f = fs.existsSync(factsFile) ? JSON.parse(fs.readFileSync(factsFile, "utf8")) : { unmodeled: [] };
@@ -164,6 +171,7 @@ function render() {
     }
   }
   fs.writeFileSync(path.join(ROOT, "hub/ads-plan.md"), lines.join("\n") + "\n");
+  fs.writeFileSync(path.join(ROOT, "hub/ads-plan.json"), JSON.stringify(plan, null, 1) + "\n"); // 다음 실행이 이어 적을 수 있게
   fs.writeFileSync(path.join(OUT, "ads-notify.json"), JSON.stringify(notify, null, 1) + "\n");
   console.log(`안 ${plan.length} · 알릴 것 ${notify.length} · 손익에 없는 순간 ${f.unmodeled?.length ?? 0}`);
 }

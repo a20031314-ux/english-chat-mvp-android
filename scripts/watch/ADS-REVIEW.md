@@ -45,3 +45,4 @@
 - `severity`: `notify`(원칙 위반, 또는 1,000명당 월 ±20,000원 넘음) / `report`.
 - 안은 많아야 6개, 근거가 diff·코드·문서에 보이는 것만. 취향은 빼고, 원칙과 숫자로 말한다. 없으면 `[]`.
 - 끝나면 `… ads.mjs scenario` 다음 `… ads.mjs render`로 `hub/ads-plan.md`를 만든다(맨 위에 "지금 → 안을 넣으면" 손익 한 줄).
+- 지난번 안은 `hub/ads-plan.json`(render가 남김)에 있다 — 아직 코드에 반영 안 된 안은 `econ`째 이어 적고, 반영된 것은 뺀다.
