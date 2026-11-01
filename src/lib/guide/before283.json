@@ -1,0 +1,1010 @@
+{
+  "ko": {
+    "my.start": {
+      "heading": "1. 대화로 시작",
+      "body": [
+        "예시 대화로 시작 단계를 골라요. 글자가 다른 언어는 ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. 자라는 중",
+      "body": [
+        "네 갈래가 이 단계에서 얼마나 찼는지(점선 = 다음 단계). 누르면 그 칸에서 공부한 것."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. 그래프로 보기",
+      "body": [
+        "최근 2주 하루하루. 막대를 누르면 그날 공부한 것."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. 다음 단계로",
+      "body": [
+        "네 갈래 70% + 그 단계 상황을 모두 통과하면 다음 단계예요."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. 단계로 보기",
+      "body": [
+        "상황마다 듣고 내 줄을 🎤로, 또는 🎤 없이 ‘{ui:scriptModeChoose}’·‘{ui:scriptModeOrder}’로. 통과로 셀 방식은 ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. 노트",
+      "body": [
+        "튜터가 고친 줄을 골라 ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "말로 대화하기",
+      "body": [
+        "튜터가 먼저 말하고, 내가 말을 멈추면 내 차례가 끝나요."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "끝난 대화 돌아보기",
+      "body": [
+        "‘{ui:packSeeRetro}’로 고친 문장을 보고, ‘{ui:roleplaySayAgain}’로 다시 말해요."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "메뉴",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "en": {
+    "my.start": {
+      "heading": "1. Start with a conversation",
+      "body": [
+        "Pick a starting stage from sample conversations. Languages with a new script start with ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Growing",
+      "body": [
+        "How full the four parts are at this stage (dotted line = next stage). Tap one to see what you studied."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. As a graph",
+      "body": [
+        "The last two weeks, day by day. Tap a bar for what you studied that day."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. To the next stage",
+      "body": [
+        "Move on at 70% in all four parts with every script in the stage passed."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Stages",
+      "body": [
+        "Listen and say your lines with 🎤, or without it in ‘{ui:scriptModeChoose}’ and ‘{ui:scriptModeOrder}’. ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’ sets what counts."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "Pick lines the tutor fixed, then ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Talk out loud",
+      "body": [
+        "The tutor speaks first; your turn ends when you stop talking."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Look back at a finished call",
+      "body": [
+        "‘{ui:packSeeRetro}’ shows the fixed lines; ‘{ui:roleplaySayAgain}’ to say them again."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "The menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "es": {
+    "my.start": {
+      "heading": "1. Empieza con una conversación",
+      "body": [
+        "Elige tu etapa inicial con conversaciones de ejemplo. Los idiomas con otra escritura empiezan con ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Creciendo",
+      "body": [
+        "Cuánto has llenado las cuatro partes en esta etapa (línea punteada = la siguiente). Toca una para ver qué estudiaste."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. En gráfica",
+      "body": [
+        "Las dos últimas semanas, día a día. Toca una barra para ver qué estudiaste ese día."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. A la siguiente etapa",
+      "body": [
+        "Pasas de etapa con el 70 % en las cuatro partes y todos los guiones superados."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Etapas",
+      "body": [
+        "Escucha y di tus frases con 🎤, o sin él en «{ui:scriptModeChoose}» y «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide qué cuenta."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "Elige las frases que corrigió el tutor y toca ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Habla en voz alta",
+      "body": [
+        "El tutor habla primero; tu turno termina cuando dejas de hablar."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Revisa una llamada terminada",
+      "body": [
+        "‘{ui:packSeeRetro}’ muestra las frases corregidas; ‘{ui:roleplaySayAgain}’ para repetirlas."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "El menú",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "ja": {
+    "my.start": {
+      "heading": "1. 会話で始める",
+      "body": [
+        "例の会話で始めるステージを選びます。文字が違う言語は「{ui:scriptEntry}」から。"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. 成長中",
+      "body": [
+        "4つの分野がこの段階でどれだけ埋まったか（点線＝次の段階）。押すとその分野で勉強したもの。"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. グラフで見る",
+      "body": [
+        "直近2週間、1日ごと。棒を押すとその日に勉強したもの。"
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. 次の段階へ",
+      "body": [
+        "4分野が70%、その段階の台本をすべて合格すると次の段階へ。"
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. ステージで見る",
+      "body": [
+        "台本を聞いて自分のセリフを🎤で、または🎤なしで「{ui:scriptModeChoose}」「{ui:scriptModeOrder}」。合格に数える方法は「{ui:passRuleTitle}」「{ui:passRuleSpeak}」｜「{ui:passRuleAny}」。"
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. ノート",
+      "body": [
+        "チューターが直した文を選んで「{ui:notebookAddToNotes}」。"
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "声で話す",
+      "body": [
+        "チューターが先に話し、自分が話し終えると順番が終わります。"
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "終わった通話を振り返る",
+      "body": [
+        "「{ui:packSeeRetro}」で直した文を見て、「{ui:roleplaySayAgain}」で言い直します。"
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "メニュー",
+      "body": [
+        "⋮ → 「{ui:chatHistoryTitle}」・「{ui:endSession}」・「{ui:reportTitle}」"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "zh": {
+    "my.start": {
+      "heading": "1. 从对话开始",
+      "body": [
+        "用示例对话选择起始阶段。文字不同的语言从“{ui:scriptEntry}”开始。"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. 成长中",
+      "body": [
+        "四个方面在这一阶段完成了多少（虚线 = 下一阶段）。点开看学过什么。"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. 图表",
+      "body": [
+        "最近两周，按天显示。点柱子看那天学了什么。"
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. 进入下一阶段",
+      "body": [
+        "四个方面都到 70%，并通过本阶段所有剧本，就进入下一阶段。"
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. 按阶段看",
+      "body": [
+        "听台本，用🎤说自己的台词，或不用🎤做“{ui:scriptModeChoose}”“{ui:scriptModeOrder}”。算作通过的方式由“{ui:passRuleTitle}”“{ui:passRuleSpeak}”｜“{ui:passRuleAny}”决定。"
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. 笔记",
+      "body": [
+        "勾选导师改过的句子，点“{ui:notebookAddToNotes}”。"
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "开口说",
+      "body": [
+        "导师先说，你停下来就轮到对方。"
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "回顾结束的通话",
+      "body": [
+        "“{ui:packSeeRetro}”看改好的句子，“{ui:roleplaySayAgain}”再说一遍。"
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "菜单",
+      "body": [
+        "⋮ → “{ui:chatHistoryTitle}” · “{ui:endSession}” · “{ui:reportTitle}”"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "vi": {
+    "my.start": {
+      "heading": "1. Bắt đầu bằng hội thoại",
+      "body": [
+        "Chọn giai đoạn bắt đầu qua hội thoại mẫu. Ngôn ngữ có chữ viết khác bắt đầu từ ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Đang lớn",
+      "body": [
+        "Bốn phần đã đầy đến đâu ở chặng này (đường chấm = chặng sau). Chạm để xem đã học gì."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Xem biểu đồ",
+      "body": [
+        "Hai tuần gần đây theo từng ngày. Chạm cột để xem hôm đó học gì."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. Sang giai đoạn tiếp theo",
+      "body": [
+        "Lên chặng khi cả bốn phần đạt 70% và qua hết kịch bản của chặng."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Xem theo giai đoạn",
+      "body": [
+        "Nghe kịch bản và nói câu của bạn bằng 🎤, hoặc không cần 🎤 với “{ui:scriptModeChoose}”, “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” quyết định cách nào được tính."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Ghi chú",
+      "body": [
+        "Chọn các câu gia sư đã sửa rồi ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Nói thành tiếng",
+      "body": [
+        "Gia sư nói trước; bạn ngừng nói là hết lượt."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Xem lại cuộc gọi đã xong",
+      "body": [
+        "‘{ui:packSeeRetro}’ xem câu đã sửa, ‘{ui:roleplaySayAgain}’ để nói lại."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "Menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "fr": {
+    "my.start": {
+      "heading": "1. Commencer par une conversation",
+      "body": [
+        "Choisissez l’étape de départ avec des conversations d’exemple. Les langues à autre écriture commencent par ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. En progrès",
+      "body": [
+        "Le niveau des quatre parties à cette étape (pointillés = étape suivante). Touchez-en une pour voir ce que vous avez étudié."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. En graphique",
+      "body": [
+        "Les deux dernières semaines, jour par jour. Touchez une barre pour voir ce que vous avez étudié ce jour-là."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. Vers l’étape suivante",
+      "body": [
+        "Étape suivante à 70 % dans les quatre parties, tous les scripts de l'étape réussis."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Par étapes",
+      "body": [
+        "Écoute et dis tes répliques avec 🎤, ou sans dans « {ui:scriptModeChoose} » et « {ui:scriptModeOrder} ». « {ui:passRuleTitle} » « {ui:passRuleSpeak} » | « {ui:passRuleAny} » choisit ce qui compte."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "Choisissez les phrases corrigées par le tuteur, puis ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Parler à voix haute",
+      "body": [
+        "Le tuteur parle en premier ; votre tour se termine quand vous vous arrêtez."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Revoir un appel terminé",
+      "body": [
+        "‘{ui:packSeeRetro}’ montre les phrases corrigées ; ‘{ui:roleplaySayAgain}’ pour les redire."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "Le menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "it": {
+    "my.start": {
+      "heading": "1. Inizia da una conversazione",
+      "body": [
+        "Scegli il livello di partenza con conversazioni di esempio. Le lingue con un’altra scrittura partono da ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. In crescita",
+      "body": [
+        "Quanto sono piene le quattro parti in questa fase (tratteggio = fase successiva). Toccane una per vedere cosa hai studiato."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Come grafico",
+      "body": [
+        "Le ultime due settimane, giorno per giorno. Tocca una barra per vedere cosa hai studiato quel giorno."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. Alla fase successiva",
+      "body": [
+        "Passi alla fase successiva con il 70% in tutte e quattro le parti e tutti i copioni superati."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Per fasi",
+      "body": [
+        "Ascolta e di’ le tue battute con 🎤, o senza in «{ui:scriptModeChoose}» e «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide cosa conta."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Note",
+      "body": [
+        "Scegli le frasi corrette dal tutor, poi ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Parla ad alta voce",
+      "body": [
+        "Il tutor parla per primo; il tuo turno finisce quando smetti di parlare."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Rivedi una chiamata finita",
+      "body": [
+        "‘{ui:packSeeRetro}’ mostra le frasi corrette; ‘{ui:roleplaySayAgain}’ per ripeterle."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "Il menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "pt": {
+    "my.start": {
+      "heading": "1. Comece com uma conversa",
+      "body": [
+        "Escolha a etapa inicial com conversas de exemplo. Idiomas com outra escrita começam por ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Crescendo",
+      "body": [
+        "Quanto as quatro partes já encheram nesta etapa (pontilhado = próxima). Toque numa para ver o que estudou."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Em gráfico",
+      "body": [
+        "As duas últimas semanas, dia a dia. Toque numa barra para ver o que estudou naquele dia."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. Para a próxima etapa",
+      "body": [
+        "Avance com 70% nas quatro partes e todos os roteiros da etapa concluídos."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Por etapas",
+      "body": [
+        "Ouça e diga suas falas com 🎤, ou sem ele em “{ui:scriptModeChoose}” e “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” define o que conta."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "Escolha as frases que o tutor corrigiu e toque em ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Fale em voz alta",
+      "body": [
+        "O tutor fala primeiro; sua vez termina quando você para de falar."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Reveja uma chamada encerrada",
+      "body": [
+        "‘{ui:packSeeRetro}’ mostra as frases corrigidas; ‘{ui:roleplaySayAgain}’ para repeti-las."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "O menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "ru": {
+    "my.start": {
+      "heading": "1. Начните с разговора",
+      "body": [
+        "Выберите начальный этап по примерам диалогов. Языки с другой письменностью начинаются с «{ui:scriptEntry}»."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Рост",
+      "body": [
+        "Насколько заполнены четыре части на этом этапе (пунктир — следующий). Нажмите, чтобы увидеть, что изучено."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. График",
+      "body": [
+        "Последние две недели по дням. Нажмите столбик — что изучено в тот день."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. К следующему этапу",
+      "body": [
+        "Следующий этап — 70 % во всех четырёх частях и все сценарии этапа пройдены."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. По этапам",
+      "body": [
+        "Слушай и говори свои реплики с 🎤 или без него в «{ui:scriptModeChoose}» и «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» — что засчитывать."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Заметки",
+      "body": [
+        "Отметьте фразы, исправленные репетитором, и нажмите ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Говорите вслух",
+      "body": [
+        "Репетитор говорит первым; ваша очередь заканчивается, когда вы замолкаете."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Разбор законченного звонка",
+      "body": [
+        "‘{ui:packSeeRetro}’ — исправленные фразы, ‘{ui:roleplaySayAgain}’ — сказать их снова."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "Меню",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "id": {
+    "my.start": {
+      "heading": "1. Mulai dari percakapan",
+      "body": [
+        "Pilih tahap awal lewat contoh percakapan. Bahasa dengan aksara lain mulai dari ‘{ui:scriptEntry}’."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. Bertumbuh",
+      "body": [
+        "Seberapa penuh empat bagian di tahap ini (garis putus = tahap berikut). Ketuk untuk melihat yang sudah dipelajari."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Sebagai grafik",
+      "body": [
+        "Dua minggu terakhir, hari demi hari. Ketuk batang untuk melihat yang dipelajari hari itu."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. Ke tahap berikutnya",
+      "body": [
+        "Naik tahap saat keempat bagian 70% dan semua naskah tahap itu lulus."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. Per tahap",
+      "body": [
+        "Dengarkan lalu ucapkan barismu dengan 🎤, atau tanpa 🎤 di “{ui:scriptModeChoose}” dan “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” menentukan yang dihitung."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. Catatan",
+      "body": [
+        "Pilih kalimat yang dibetulkan tutor, lalu ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "Bicara langsung",
+      "body": [
+        "Tutor bicara duluan; giliranmu selesai saat kamu berhenti bicara."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Tinjau panggilan yang selesai",
+      "body": [
+        "‘{ui:packSeeRetro}’ menampilkan kalimat yang dibetulkan; ‘{ui:roleplaySayAgain}’ untuk mengulang."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "Menu",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "ar": {
+    "my.start": {
+      "heading": "1. ابدأ بمحادثة",
+      "body": [
+        "اختر مرحلة البداية من محادثات نموذجية. اللغات ذات الكتابة المختلفة تبدأ بـ«{ui:scriptEntry}»."
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. ينمو",
+      "body": [
+        "كم امتلأت الأقسام الأربعة في هذه المرحلة (المنقّط = المرحلة التالية). اضغط قسمًا لترى ما درسته."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. كرسم بياني",
+      "body": [
+        "آخر أسبوعين يومًا بيوم. اضغط عمودًا لترى ما درسته في ذلك اليوم."
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. إلى المرحلة التالية",
+      "body": [
+        "تنتقل للمرحلة التالية عند 70% في الأقسام الأربعة واجتياز كل نصوص المرحلة."
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. حسب المراحل",
+      "body": [
+        "استمع وقل جملك بـ🎤، أو بدونه في «{ui:scriptModeChoose}» و«{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» يحدّد ما يُحتسب."
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. الملاحظات",
+      "body": [
+        "اختر الجمل التي صحّحها المعلّم ثم ‘{ui:notebookAddToNotes}’."
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "تحدّث بصوتك",
+      "body": [
+        "يتكلّم المعلّم أولًا، وينتهي دورك عندما تتوقّف عن الكلام."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "راجع مكالمة منتهية",
+      "body": [
+        "‘{ui:packSeeRetro}’ يعرض الجمل المصحّحة، و‘{ui:roleplaySayAgain}’ لتقولها مجددًا."
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "القائمة",
+      "body": [
+        "⋮ ← ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "th": {
+    "my.start": {
+      "heading": "1. เริ่มจากบทสนทนา",
+      "body": [
+        "เลือกขั้นเริ่มต้นจากบทสนทนาตัวอย่าง ภาษาที่ใช้ตัวอักษรต่างกันเริ่มจาก ‘{ui:scriptEntry}’"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. กำลังเติบโต",
+      "body": [
+        "สี่ด้านเต็มแค่ไหนในขั้นนี้ (เส้นประ = ขั้นถัดไป) แตะเพื่อดูว่าเรียนอะไรไปบ้าง"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. ดูเป็นกราฟ",
+      "body": [
+        "สองสัปดาห์ล่าสุดรายวัน แตะแท่งเพื่อดูว่าวันนั้นเรียนอะไร"
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. ไปขั้นถัดไป",
+      "body": [
+        "ขึ้นขั้นถัดไปเมื่อทั้งสี่ด้านถึง 70% และผ่านบทพูดของขั้นนั้นครบ"
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. ดูตามขั้น",
+      "body": [
+        "ฟังบทแล้วพูดประโยคของคุณด้วย 🎤 หรือไม่ใช้ 🎤 ใน “{ui:scriptModeChoose}” “{ui:scriptModeOrder}” “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” กำหนดว่าแบบไหนนับผ่าน"
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. โน้ต",
+      "body": [
+        "เลือกประโยคที่ติวเตอร์แก้ แล้วแตะ ‘{ui:notebookAddToNotes}’"
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "พูดออกเสียง",
+      "body": [
+        "ติวเตอร์พูดก่อน พอคุณหยุดพูดก็จบตาคุณ"
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "ทบทวนการโทรที่จบแล้ว",
+      "body": [
+        "‘{ui:packSeeRetro}’ ดูประโยคที่แก้แล้ว ‘{ui:roleplaySayAgain}’ เพื่อพูดอีกครั้ง"
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "เมนู",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  },
+  "hi": {
+    "my.start": {
+      "heading": "1. बातचीत से शुरू करें",
+      "body": [
+        "नमूना बातचीत से शुरुआती चरण चुनें। दूसरी लिपि वाली भाषाएँ ‘{ui:scriptEntry}’ से शुरू होती हैं।"
+      ],
+      "shot": "stage-start"
+    },
+    "my.next": {
+      "heading": "2. {ui:keepTitle}",
+      "body": [
+        "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+      ],
+      "shot": "keep-learning"
+    },
+    "my.growth": {
+      "heading": "3. बढ़ रहा है",
+      "body": [
+        "इस चरण में चारों हिस्से कितने भरे (बिंदुदार = अगला चरण)। दबाकर देखें क्या पढ़ा।"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. ग्राफ़ में देखें",
+      "body": [
+        "पिछले दो हफ़्ते, दिन-ब-दिन। बार दबाकर उस दिन का पढ़ा देखें।"
+      ],
+      "shot": "parts-graph"
+    },
+    "my.element": {
+      "heading": "5. अगले चरण की ओर",
+      "body": [
+        "चारों हिस्से 70% और उस चरण की सारी स्क्रिप्ट पास होने पर अगला चरण।"
+      ],
+      "shot": "stage-next"
+    },
+    "my.map": {
+      "heading": "7. चरणों में देखें",
+      "body": [
+        "स्क्रिप्ट सुनें और अपनी लाइनें 🎤 से बोलें, या 🎤 के बिना “{ui:scriptModeChoose}” और “{ui:scriptModeOrder}” में। “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” तय करता है कि क्या गिना जाए।"
+      ],
+      "shot": "stage-scripts"
+    },
+    "my.notes": {
+      "heading": "8. नोट्स",
+      "body": [
+        "ट्यूटर के सुधारे वाक्य चुनें, फिर ‘{ui:notebookAddToNotes}’।"
+      ],
+      "shot": "notebook-today"
+    },
+    "call.talk": {
+      "heading": "बोलकर बात करें",
+      "body": [
+        "ट्यूटर पहले बोलता है; आप रुकते ही आपकी बारी खत्म।"
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "खत्म हुई कॉल दोबारा देखें",
+      "body": [
+        "‘{ui:packSeeRetro}’ से सुधरे वाक्य देखें, ‘{ui:roleplaySayAgain}’ से फिर बोलें।"
+      ],
+      "shot": "call-review"
+    },
+    "chat.menu": {
+      "heading": "मेनू",
+      "body": [
+        "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+      ],
+      "shot": "chat-menu"
+    }
+  }
+}

@@ -49,7 +49,7 @@ test("영상 파일이 14개 언어 모두 있다(못 받으면 영어로 떨어
   const fs = await import("node:fs");
   for (const clip of Object.values(GUIDE_CLIPS)) {
     for (const locale of ["ko", "en", "es", "ja", "zh", "th", "vi", "id", "hi", "ar", "fr", "it", "pt", "ru"]) {
-      if (clip !== "my-today") continue; // 옛 두 영상은 일부 언어만 찍어 둠(영어로 떨어짐).
+      if (!clip.startsWith("bank-")) continue; // 옛 두 영상은 일부 언어만 찍어 둠(영어로 떨어짐).
       assert.ok(fs.existsSync(`public/guide/${locale}/${clip}.mp4`), `${locale}/${clip}.mp4`);
     }
   }

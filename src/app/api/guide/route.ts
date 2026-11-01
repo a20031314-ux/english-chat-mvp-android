@@ -20,7 +20,9 @@ import callBefore279 from "@/lib/guide/callBefore279.json";
 import mapBefore280 from "@/lib/guide/mapBefore280.json";
 import mapBefore281 from "@/lib/guide/mapBefore281.json";
 import mapBefore282 from "@/lib/guide/mapBefore282.json";
+import before283 from "@/lib/guide/before283.json";
 import { guideOverview } from "@/lib/guide/overview";
+import { guideOverviewBefore283 } from "@/lib/guide/overviewBefore283";
 import { bankGuides } from "@/lib/guide/banks";
 
 export const runtime = "nodejs";
@@ -28,6 +30,8 @@ export const runtime = "nodejs";
 const GAME_SECTIONS = ["room.game", "room.mafia", "room.watch"];
 /** My 예전 기능(오늘 해볼 것·직접 묻기)을 뺀 빌드(`r278=1`, 2026-10-27)에는 그 두 칸을 빼고 번호를 다시 매긴다. */
 const RETIRED_MY_SECTIONS = ["my.next", "my.ask"];
+/** 2.79(`r283=1`)부터 my.next 칸은 Quizbank 글로 다시 쓴다 — 그 빌드에는 my.ask만 뺀다. */
+const RETIRED_MY_SECTIONS_283 = ["my.ask"];
 /** 오늘의 팩을 뺀 빌드(`r279=1`, 2.76 — 무료는 대본만·대본 플랜, 2026-10-28)에는 팩 칸을 뺀다. */
 const RETIRED_PACK_SECTIONS = ["call.pack"];
 /** 아이콘 묶음(2026-10-23) — 그 화면이 있는 빌드(`icons=1`)만. */
@@ -96,9 +100,23 @@ export async function GET(request: NextRequest) {
   const before282 = request.nextUrl.searchParams.get("r282") === "1"
     ? undefined
     : (mapBefore282 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const withKeep282: Guide = before282
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before282[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+  // My 큰 칸 셋·문장구조 수업·실제 통화 화면이 있는 빌드(`r283=1`, 2.79, 2026-11-01): 그 전 빌드는 My 칸·통화·채팅 메뉴를 2.78 글로(before283.json).
+  const r283 = request.nextUrl.searchParams.get("r283") === "1";
+  const before283Rows = r283
+    ? undefined
+    : (before283 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const swap283 = (sections: Guide["map"]["sections"], ids: string[]) => sections.map((section, index) => before283Rows?.[ids[index]] ?? section);
+  const withBanks283: Guide = before283Rows
+    ? {
+        ...newest,
+        map: { ...newest.map, sections: swap283(newest.map.sections, GUIDE_SECTION_IDS.map) },
+        roleplay: { ...newest.roleplay, sections: swap283(newest.roleplay.sections, GUIDE_SECTION_IDS.roleplay) },
+        chat: { ...newest.chat, sections: swap283(newest.chat.sections, GUIDE_SECTION_IDS.chat) },
+      }
     : newest;
+  const withKeep282: Guide = before282
+    ? { ...withBanks283, map: { ...withBanks283.map, sections: withBanks283.map.sections.map((section, index) => before282[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    : withBanks283;
   const withTap281: Guide = before281
     ? { ...withKeep282, map: { ...withKeep282.map, sections: withKeep282.map.sections.map((section, index) => before281[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : withKeep282;
@@ -116,9 +134,11 @@ export async function GET(request: NextRequest) {
     : withParts280;
   const withMy: Guide = before278
     ? { ...base, map: { ...base.map, sections: base.map.sections.map((section, index) => before278[GUIDE_SECTION_IDS.map[index]] ?? section) } }
-    : r278
-      ? { ...base, map: { ...base.map, sections: renumberMy(base.map.sections) } }
-      : base;
+    : r278 && !r283
+      ? { ...base, map: { ...base.map, sections: renumberMy(base.map.sections, RETIRED_MY_SECTIONS) } }
+      : r283
+        ? { ...base, map: { ...base.map, sections: renumberMy(base.map.sections, RETIRED_MY_SECTIONS_283) } }
+        : base;
   const withCalls: Guide = before277
     ? {
         ...withMy,
@@ -167,7 +187,7 @@ export async function GET(request: NextRequest) {
   const withIcons = request.nextUrl.searchParams.get("icons") === "1";
   const hiddenIds = [...(withGame ? [] : GAME_SECTIONS), ...(withIcons ? [] : ICON_SECTIONS)];
   // 묶음(chapters)에서만 뺀다 — `tabs`는 칸 순서가 옛 빌드와 같아야 해서 그대로 둔다.
-  const chapterHidden = [...hiddenIds, ...(r278 ? RETIRED_MY_SECTIONS : []), ...(r279 ? RETIRED_PACK_SECTIONS : [])];
+  const chapterHidden = [...hiddenIds, ...(r283 ? RETIRED_MY_SECTIONS_283 : r278 ? RETIRED_MY_SECTIONS : []), ...(r279 ? RETIRED_PACK_SECTIONS : [])];
   const hiddenAt = hiddenIds.map((id) => GUIDE_SECTION_IDS.rooms.indexOf(id)).filter((index) => index >= 0);
   const current: Guide = hiddenAt.length
     ? { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => !hiddenAt.includes(index)) } }
@@ -217,6 +237,8 @@ export async function GET(request: NextRequest) {
             .filter((section) => !chapterHidden.includes(section.id))
             // 새 화면을 찍은 영상은 그 화면이 있는 빌드에만(옛 빌드는 그림).
             .map((section) => {
+              // 2.78 이하(r281 있고 r283 없음)는 my.map에 예전 영상 my-today(대본 목록 화면 — 그 빌드엔 있음).
+              if (!r283 && section.id === "my.map" && request.nextUrl.searchParams.get("r281") === "1") return { ...section, clip: "my-today" };
               const since = GUIDE_CLIPS_SINCE[section.id];
               if (!section.clip || !since || request.nextUrl.searchParams.get(since) === "1") return section;
               const { clip: _clip, ...rest } = section;
@@ -225,17 +247,17 @@ export async function GET(request: NextRequest) {
         }))
       : undefined;
   // `overview=1`(2026-10-29): 학습 흐름(영상 + 그림 셋)과 장마다 해야 할 것·할 수 있는 것 카드 — 그리는 빌드만 묻는다.
-  const overview = chapters && request.nextUrl.searchParams.get("overview") === "1" ? guideOverview(language) : undefined;
+  const overview = chapters && request.nextUrl.searchParams.get("overview") === "1" ? (r283 ? guideOverview(language) : guideOverviewBefore283(language)) : undefined;
   // `banks=1`(2026-10-31): My 큰 칸 셋(Stagebank·Quizbank·Logbank)의 "?" 설명(lib/guide/banks.ts) — 그 버튼이 있는 빌드만 묻는다.
   const banks = request.nextUrl.searchParams.get("banks") === "1" ? bankGuides(language) : undefined;
   return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}), ...(overview ? { overview } : {}), ...(banks ? { banks } : {}) });
 }
 
 /** 뺀 칸(RETIRED_MY_SECTIONS)을 건너뛰고 "1. …" 번호를 다시 매긴다(숫자로 시작하는 제목만, 14개 언어 모두 "n. "). */
-function renumberMy(sections: Guide["map"]["sections"]): Guide["map"]["sections"] {
+function renumberMy(sections: Guide["map"]["sections"], retired: string[]): Guide["map"]["sections"] {
   let n = 0;
   return sections.map((section, index) => {
-    if (RETIRED_MY_SECTIONS.includes(GUIDE_SECTION_IDS.map[index]!)) return section;
+    if (retired.includes(GUIDE_SECTION_IDS.map[index]!)) return section;
     if (!/^\d+\.\s/.test(section.heading)) return section;
     n += 1;
     return { ...section, heading: section.heading.replace(/^\d+\./, `${n}.`) };

@@ -4,39 +4,39 @@
       "title": "Cómo usar Mi espacio",
       "sections": [
         {
-          "heading": "1. Empieza con una conversación",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Elige tu etapa inicial con conversaciones de ejemplo. Los idiomas con otra escritura empiezan con ‘{ui:scriptEntry}’."
+            "Empieza algo de «{ui:planTitle}» con ▶; al terminar, la pantalla de la etapa."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}»: escribe tus respuestas."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. Creciendo",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Cuánto has llenado las cuatro partes en esta etapa (línea punteada = la siguiente). Toca una para ver qué estudiaste."
+            "Lo que hiciste y cómo te fue, por día y por semana."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. En gráfica",
+          "heading": "4. Lecciones de estructuras",
           "body": [
-            "Las dos últimas semanas, día a día. Toca una barra para ver qué estudiaste ese día."
+            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», y luego «{ui:recallTitle}»."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. A la siguiente etapa",
           "body": [
-            "Pasas de etapa con el 70 % en las cuatro partes y todos los guiones superados."
+            "Estructuras aprendidas 70% + «{ui:recallTitle}» 70% abren el examen de etapa."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Pregunta",
@@ -46,18 +46,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Etapas",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Escucha y di tus frases con 🎤, o sin él en «{ui:scriptModeChoose}» y «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide qué cuenta."
+            "En la pantalla de la etapa, elige cómo practicar mirando dibujos."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Notas",
+          "heading": "7. Frases corregidas",
           "body": [
-            "Elige las frases que corrigió el tutor y toca ‘{ui:notebookAddToNotes}’."
+            "Lo que corrigió el tutor va solo a «{ui:weakTitle}»."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Además",
@@ -115,9 +115,9 @@
         {
           "heading": "El menú",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Retoma un chat anterior",
@@ -145,18 +145,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Habla en voz alta",
+          "heading": "La pantalla de llamada",
           "body": [
-            "El tutor habla primero; tu turno termina cuando dejas de hablar."
+            "Arriba el tutor, abajo tú. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Revisa una llamada terminada",
+          "heading": "Al terminar la llamada",
           "body": [
-            "‘{ui:packSeeRetro}’ muestra las frases corregidas; ‘{ui:roleplaySayAgain}’ para repetirlas."
+            "Toca 🧩 o 🔤 en «{ui:callRecapTitle}» para una lección con tu frase."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -378,46 +378,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "ja": {
     "map": {
       "title": "マイの使い方",
       "sections": [
         {
-          "heading": "1. 会話で始める",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "例の会話で始めるステージを選びます。文字が違う言語は「{ui:scriptEntry}」から。"
+            "「{ui:planTitle}」を▶で1つずつ。終わったら段階の画面。"
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "「{ui:partVocab}」・「{ui:examTitle}」・「{ui:weakTitle}」 — 自分で書いて解く。"
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. 成長中",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "4つの分野がこの段階でどれだけ埋まったか（点線＝次の段階）。押すとその分野で勉強したもの。"
+            "毎日・毎週の学習と結果がたまる。"
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. グラフで見る",
+          "heading": "4. 文型レッスン",
           "body": [
-            "直近2週間、1日ごと。棒を押すとその日に勉強したもの。"
+            "「{ui:explanation}」 › 「{ui:quizTag}」 › 「{ui:homeTabTalk}」、次に「{ui:recallTitle}」。"
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. 次の段階へ",
           "body": [
-            "4分野が70%、その段階の台本をすべて合格すると次の段階へ。"
+            "文型の習得70% + 「{ui:recallTitle}」70%で段階テスト。"
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. 聞いてみる",
@@ -427,18 +427,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. ステージで見る",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "台本を聞いて自分のセリフを🎤で、または🎤なしで「{ui:scriptModeChoose}」「{ui:scriptModeOrder}」。合格に数える方法は「{ui:passRuleTitle}」「{ui:passRuleSpeak}」｜「{ui:passRuleAny}」。"
+            "段階の画面で、絵を見て練習のしかたを選ぶ。"
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. ノート",
+          "heading": "7. 直された文",
           "body": [
-            "チューターが直した文を選んで「{ui:notebookAddToNotes}」。"
+            "チューターが直した文は自動で「{ui:weakTitle}」へ。"
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "そのほか",
@@ -496,9 +496,9 @@
         {
           "heading": "メニュー",
           "body": [
-            "⋮ → 「{ui:chatHistoryTitle}」・「{ui:endSession}」・「{ui:reportTitle}」"
+            "⋮ → 「{ui:tutorVoice}」・「{ui:tutorLanguage}」・「{ui:callRecordsTitle}」・「{ui:reportTitle}」"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "前の会話の続き",
@@ -526,18 +526,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "声で話す",
+          "heading": "通話画面",
           "body": [
-            "チューターが先に話し、自分が話し終えると順番が終わります。"
+            "上にチューター、下に自分。💬「{ui:roleplayCaptions}」・💡「{ui:missionHint}」・🙉「{ui:roleplayMissed}」。"
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "終わった通話を振り返る",
+          "heading": "通話が終わったら",
           "body": [
-            "「{ui:packSeeRetro}」で直した文を見て、「{ui:roleplaySayAgain}」で言い直します。"
+            "「{ui:callRecapTitle}」の🧩・🔤で自分の文のレッスンへ。"
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -759,46 +759,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "zh": {
     "map": {
       "title": "“我的”使用方法",
       "sections": [
         {
-          "heading": "1. 从对话开始",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "用示例对话选择起始阶段。文字不同的语言从“{ui:scriptEntry}”开始。"
+            "用▶逐个开始“{ui:planTitle}”，做完进入阶段画面。"
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "“{ui:partVocab}”·“{ui:examTitle}”·“{ui:weakTitle}” —— 自己写答案。"
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. 成长中",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "四个方面在这一阶段完成了多少（虚线 = 下一阶段）。点开看学过什么。"
+            "每天、每周学了什么和结果都在这里。"
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. 图表",
+          "heading": "4. 句型课",
           "body": [
-            "最近两周，按天显示。点柱子看那天学了什么。"
+            "“{ui:explanation}” › “{ui:quizTag}” › “{ui:homeTabTalk}”，然后“{ui:recallTitle}”。"
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. 进入下一阶段",
           "body": [
-            "四个方面都到 70%，并通过本阶段所有剧本，就进入下一阶段。"
+            "句型掌握70% + “{ui:recallTitle}”70%，就能参加阶段考试。"
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. 提问",
@@ -808,18 +808,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. 按阶段看",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "听台本，用🎤说自己的台词，或不用🎤做“{ui:scriptModeChoose}”“{ui:scriptModeOrder}”。算作通过的方式由“{ui:passRuleTitle}”“{ui:passRuleSpeak}”｜“{ui:passRuleAny}”决定。"
+            "在阶段画面看图选择练习方式。"
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. 笔记",
+          "heading": "7. 被改过的句子",
           "body": [
-            "勾选导师改过的句子，点“{ui:notebookAddToNotes}”。"
+            "老师改过的句子会自动进入“{ui:weakTitle}”。"
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "其他",
@@ -877,9 +877,9 @@
         {
           "heading": "菜单",
           "body": [
-            "⋮ → “{ui:chatHistoryTitle}” · “{ui:endSession}” · “{ui:reportTitle}”"
+            "⋮ → “{ui:tutorVoice}”·“{ui:tutorLanguage}”·“{ui:callRecordsTitle}”·“{ui:reportTitle}”"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "接着之前的对话",
@@ -907,18 +907,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "开口说",
+          "heading": "通话画面",
           "body": [
-            "导师先说，你停下来就轮到对方。"
+            "上面是老师，下面是你。💬“{ui:roleplayCaptions}”·💡“{ui:missionHint}”·🙉“{ui:roleplayMissed}”。"
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "回顾结束的通话",
+          "heading": "通话结束后",
           "body": [
-            "“{ui:packSeeRetro}”看改好的句子，“{ui:roleplaySayAgain}”再说一遍。"
+            "点“{ui:callRecapTitle}”里的🧩或🔤，用你的句子上课。"
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -1140,46 +1140,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "vi": {
     "map": {
       "title": "Cách dùng Của tôi",
       "sections": [
         {
-          "heading": "1. Bắt đầu bằng hội thoại",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Chọn giai đoạn bắt đầu qua hội thoại mẫu. Ngôn ngữ có chữ viết khác bắt đầu từ ‘{ui:scriptEntry}’."
+            "Bắt đầu từng mục ‘{ui:planTitle}’ bằng ▶; xong thì sang màn hình giai đoạn."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — tự gõ đáp án."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. Đang lớn",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Bốn phần đã đầy đến đâu ở chặng này (đường chấm = chặng sau). Chạm để xem đã học gì."
+            "Việc đã học và kết quả theo ngày, theo tuần."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. Xem biểu đồ",
+          "heading": "4. Bài học mẫu câu",
           "body": [
-            "Hai tuần gần đây theo từng ngày. Chạm cột để xem hôm đó học gì."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, rồi ‘{ui:recallTitle}’."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Sang giai đoạn tiếp theo",
           "body": [
-            "Lên chặng khi cả bốn phần đạt 70% và qua hết kịch bản của chặng."
+            "Thuộc mẫu câu 70% + ‘{ui:recallTitle}’ 70% là mở bài kiểm tra giai đoạn."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Hỏi",
@@ -1189,18 +1189,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Xem theo giai đoạn",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Nghe kịch bản và nói câu của bạn bằng 🎤, hoặc không cần 🎤 với “{ui:scriptModeChoose}”, “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” quyết định cách nào được tính."
+            "Ở màn hình giai đoạn, xem hình để chọn cách luyện."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Ghi chú",
+          "heading": "7. Câu được sửa",
           "body": [
-            "Chọn các câu gia sư đã sửa rồi ‘{ui:notebookAddToNotes}’."
+            "Câu gia sư đã sửa tự vào ‘{ui:weakTitle}’."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Ngoài ra",
@@ -1258,9 +1258,9 @@
         {
           "heading": "Menu",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Tiếp tục cuộc trò chuyện cũ",
@@ -1288,18 +1288,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Nói thành tiếng",
+          "heading": "Màn hình cuộc gọi",
           "body": [
-            "Gia sư nói trước; bạn ngừng nói là hết lượt."
+            "Gia sư ở trên, bạn ở dưới. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Xem lại cuộc gọi đã xong",
+          "heading": "Khi cuộc gọi kết thúc",
           "body": [
-            "‘{ui:packSeeRetro}’ xem câu đã sửa, ‘{ui:roleplaySayAgain}’ để nói lại."
+            "Chạm 🧩 hoặc 🔤 trong ‘{ui:callRecapTitle}’ để học bằng câu của bạn."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -1521,46 +1521,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "fr": {
     "map": {
       "title": "Utiliser Moi",
       "sections": [
         {
-          "heading": "1. Commencer par une conversation",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Choisissez l’étape de départ avec des conversations d’exemple. Les langues à autre écriture commencent par ‘{ui:scriptEntry}’."
+            "Lance une chose de « {ui:planTitle} » avec ▶ ; ensuite, l’écran de l’étape."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "« {ui:partVocab} » · « {ui:examTitle} » · « {ui:weakTitle} » — tape tes réponses."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. En progrès",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Le niveau des quatre parties à cette étape (pointillés = étape suivante). Touchez-en une pour voir ce que vous avez étudié."
+            "Ce que tu as fait et le résultat, par jour et par semaine."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. En graphique",
+          "heading": "4. Leçons de structures",
           "body": [
-            "Les deux dernières semaines, jour par jour. Touchez une barre pour voir ce que vous avez étudié ce jour-là."
+            "« {ui:explanation} » › « {ui:quizTag} » › « {ui:homeTabTalk} », puis « {ui:recallTitle} »."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Vers l’étape suivante",
           "body": [
-            "Étape suivante à 70 % dans les quatre parties, tous les scripts de l'étape réussis."
+            "Structures acquises 70 % + « {ui:recallTitle} » 70 % ouvrent l’examen d’étape."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Pose une question",
@@ -1570,18 +1570,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Par étapes",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Écoute et dis tes répliques avec 🎤, ou sans dans « {ui:scriptModeChoose} » et « {ui:scriptModeOrder} ». « {ui:passRuleTitle} » « {ui:passRuleSpeak} » | « {ui:passRuleAny} » choisit ce qui compte."
+            "Sur l’écran de l’étape, choisis comment t’entraîner en images."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Notes",
+          "heading": "7. Phrases corrigées",
           "body": [
-            "Choisissez les phrases corrigées par le tuteur, puis ‘{ui:notebookAddToNotes}’."
+            "Ce que le tuteur a corrigé va tout seul dans « {ui:weakTitle} »."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Aussi",
@@ -1639,9 +1639,9 @@
         {
           "heading": "Le menu",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → « {ui:tutorVoice} » · « {ui:tutorLanguage} » · « {ui:callRecordsTitle} » · « {ui:reportTitle} »"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Reprendre une conversation",
@@ -1669,18 +1669,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Parler à voix haute",
+          "heading": "L’écran d’appel",
           "body": [
-            "Le tuteur parle en premier ; votre tour se termine quand vous vous arrêtez."
+            "Le tuteur en haut, toi en bas. 💬 « {ui:roleplayCaptions} » · 💡 « {ui:missionHint} » · 🙉 « {ui:roleplayMissed} »."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Revoir un appel terminé",
+          "heading": "Après l’appel",
           "body": [
-            "‘{ui:packSeeRetro}’ montre les phrases corrigées ; ‘{ui:roleplaySayAgain}’ pour les redire."
+            "Touche 🧩 ou 🔤 dans « {ui:callRecapTitle} » pour une leçon sur ta phrase."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -1902,46 +1902,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "it": {
     "map": {
       "title": "Come usare Io",
       "sections": [
         {
-          "heading": "1. Inizia da una conversazione",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Scegli il livello di partenza con conversazioni di esempio. Le lingue con un’altra scrittura partono da ‘{ui:scriptEntry}’."
+            "Avvia una cosa di «{ui:planTitle}» con ▶; finito, la schermata del livello."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — scrivi tu le risposte."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. In crescita",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Quanto sono piene le quattro parti in questa fase (tratteggio = fase successiva). Toccane una per vedere cosa hai studiato."
+            "Cosa hai fatto e com’è andata, per giorno e per settimana."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. Come grafico",
+          "heading": "4. Lezioni sulle strutture",
           "body": [
-            "Le ultime due settimane, giorno per giorno. Tocca una barra per vedere cosa hai studiato quel giorno."
+            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», poi «{ui:recallTitle}»."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Alla fase successiva",
           "body": [
-            "Passi alla fase successiva con il 70% in tutte e quattro le parti e tutti i copioni superati."
+            "Strutture imparate 70% + «{ui:recallTitle}» 70% aprono l’esame di livello."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Chiedi",
@@ -1951,18 +1951,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Per fasi",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Ascolta e di’ le tue battute con 🎤, o senza in «{ui:scriptModeChoose}» e «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» decide cosa conta."
+            "Nella schermata del livello scegli come esercitarti dalle immagini."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Note",
+          "heading": "7. Frasi corrette",
           "body": [
-            "Scegli le frasi corrette dal tutor, poi ‘{ui:notebookAddToNotes}’."
+            "Ciò che il tutor ha corretto va da solo in «{ui:weakTitle}»."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Inoltre",
@@ -2020,9 +2020,9 @@
         {
           "heading": "Il menu",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Riprendi una chat",
@@ -2050,18 +2050,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Parla ad alta voce",
+          "heading": "La schermata di chiamata",
           "body": [
-            "Il tutor parla per primo; il tuo turno finisce quando smetti di parlare."
+            "Il tutor sopra, tu sotto. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Rivedi una chiamata finita",
+          "heading": "Dopo la chiamata",
           "body": [
-            "‘{ui:packSeeRetro}’ mostra le frasi corrette; ‘{ui:roleplaySayAgain}’ per ripeterle."
+            "Tocca 🧩 o 🔤 in «{ui:callRecapTitle}» per una lezione sulla tua frase."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -2283,46 +2283,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "pt": {
     "map": {
       "title": "Como usar Meu espaço",
       "sections": [
         {
-          "heading": "1. Comece com uma conversa",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Escolha a etapa inicial com conversas de exemplo. Idiomas com outra escrita começam por ‘{ui:scriptEntry}’."
+            "Comece algo de ‘{ui:planTitle}’ com ▶; ao terminar, a tela da etapa."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — digite as respostas."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. Crescendo",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Quanto as quatro partes já encheram nesta etapa (pontilhado = próxima). Toque numa para ver o que estudou."
+            "O que você fez e como foi, por dia e por semana."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. Em gráfico",
+          "heading": "4. Aulas de estruturas",
           "body": [
-            "As duas últimas semanas, dia a dia. Toque numa barra para ver o que estudou naquele dia."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, depois ‘{ui:recallTitle}’."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Para a próxima etapa",
           "body": [
-            "Avance com 70% nas quatro partes e todos os roteiros da etapa concluídos."
+            "Estruturas aprendidas 70% + ‘{ui:recallTitle}’ 70% liberam a prova da etapa."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Pergunte",
@@ -2332,18 +2332,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Por etapas",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Ouça e diga suas falas com 🎤, ou sem ele em “{ui:scriptModeChoose}” e “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” define o que conta."
+            "Na tela da etapa, escolha como praticar pelas imagens."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Notas",
+          "heading": "7. Frases corrigidas",
           "body": [
-            "Escolha as frases que o tutor corrigiu e toque em ‘{ui:notebookAddToNotes}’."
+            "O que o tutor corrigiu vai sozinho para ‘{ui:weakTitle}’."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Além disso",
@@ -2401,9 +2401,9 @@
         {
           "heading": "O menu",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Retome uma conversa",
@@ -2431,18 +2431,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Fale em voz alta",
+          "heading": "A tela da chamada",
           "body": [
-            "O tutor fala primeiro; sua vez termina quando você para de falar."
+            "O tutor em cima, você embaixo. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Reveja uma chamada encerrada",
+          "heading": "Depois da chamada",
           "body": [
-            "‘{ui:packSeeRetro}’ mostra as frases corrigidas; ‘{ui:roleplaySayAgain}’ para repeti-las."
+            "Toque 🧩 ou 🔤 em ‘{ui:callRecapTitle}’ para uma aula com a sua frase."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -2664,46 +2664,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "ru": {
     "map": {
       "title": "Как пользоваться разделом «Моё»",
       "sections": [
         {
-          "heading": "1. Начните с разговора",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Выберите начальный этап по примерам диалогов. Языки с другой письменностью начинаются с «{ui:scriptEntry}»."
+            "Запускайте пункты «{ui:planTitle}» кнопкой ▶; потом — экран этапа."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — ответы вводите сами."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. Рост",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Насколько заполнены четыре части на этом этапе (пунктир — следующий). Нажмите, чтобы увидеть, что изучено."
+            "Что вы делали и как прошло — по дням и неделям."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. График",
+          "heading": "4. Уроки конструкций",
           "body": [
-            "Последние две недели по дням. Нажмите столбик — что изучено в тот день."
+            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», затем «{ui:recallTitle}»."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. К следующему этапу",
           "body": [
-            "Следующий этап — 70 % во всех четырёх частях и все сценарии этапа пройдены."
+            "Конструкции 70% + «{ui:recallTitle}» 70% — и открывается тест этапа."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Спросите",
@@ -2713,18 +2713,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. По этапам",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Слушай и говори свои реплики с 🎤 или без него в «{ui:scriptModeChoose}» и «{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» — что засчитывать."
+            "На экране этапа выберите способ практики по картинкам."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Заметки",
+          "heading": "7. Исправленные фразы",
           "body": [
-            "Отметьте фразы, исправленные репетитором, и нажмите ‘{ui:notebookAddToNotes}’."
+            "Что исправил репетитор, само попадает в «{ui:weakTitle}»."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Ещё",
@@ -2782,9 +2782,9 @@
         {
           "heading": "Меню",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Продолжить прошлый чат",
@@ -2812,18 +2812,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Говорите вслух",
+          "heading": "Экран звонка",
           "body": [
-            "Репетитор говорит первым; ваша очередь заканчивается, когда вы замолкаете."
+            "Сверху репетитор, снизу вы. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Разбор законченного звонка",
+          "heading": "После звонка",
           "body": [
-            "‘{ui:packSeeRetro}’ — исправленные фразы, ‘{ui:roleplaySayAgain}’ — сказать их снова."
+            "Нажмите 🧩 или 🔤 в «{ui:callRecapTitle}» — урок по вашей фразе."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -3045,46 +3045,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "id": {
     "map": {
       "title": "Cara memakai Saya",
       "sections": [
         {
-          "heading": "1. Mulai dari percakapan",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Pilih tahap awal lewat contoh percakapan. Bahasa dengan aksara lain mulai dari ‘{ui:scriptEntry}’."
+            "Mulai satu per satu ‘{ui:planTitle}’ dengan ▶; selesai, layar tahap."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — ketik sendiri jawabannya."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. Bertumbuh",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Seberapa penuh empat bagian di tahap ini (garis putus = tahap berikut). Ketuk untuk melihat yang sudah dipelajari."
+            "Yang kamu pelajari dan hasilnya, per hari dan per minggu."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. Sebagai grafik",
+          "heading": "4. Pelajaran pola kalimat",
           "body": [
-            "Dua minggu terakhir, hari demi hari. Ketuk batang untuk melihat yang dipelajari hari itu."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, lalu ‘{ui:recallTitle}’."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Ke tahap berikutnya",
           "body": [
-            "Naik tahap saat keempat bagian 70% dan semua naskah tahap itu lulus."
+            "Pola dikuasai 70% + ‘{ui:recallTitle}’ 70% membuka ujian tahap."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. Bertanya",
@@ -3094,18 +3094,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Per tahap",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "Dengarkan lalu ucapkan barismu dengan 🎤, atau tanpa 🎤 di “{ui:scriptModeChoose}” dan “{ui:scriptModeOrder}”. “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” menentukan yang dihitung."
+            "Di layar tahap, pilih cara latihan dari gambar."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. Catatan",
+          "heading": "7. Kalimat yang diperbaiki",
           "body": [
-            "Pilih kalimat yang dibetulkan tutor, lalu ‘{ui:notebookAddToNotes}’."
+            "Yang diperbaiki tutor otomatis masuk ke ‘{ui:weakTitle}’."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "Lainnya",
@@ -3163,9 +3163,9 @@
         {
           "heading": "Menu",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "Lanjutkan obrolan lama",
@@ -3193,18 +3193,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "Bicara langsung",
+          "heading": "Layar panggilan",
           "body": [
-            "Tutor bicara duluan; giliranmu selesai saat kamu berhenti bicara."
+            "Tutor di atas, kamu di bawah. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "Tinjau panggilan yang selesai",
+          "heading": "Setelah panggilan",
           "body": [
-            "‘{ui:packSeeRetro}’ menampilkan kalimat yang dibetulkan; ‘{ui:roleplaySayAgain}’ untuk mengulang."
+            "Ketuk 🧩 atau 🔤 di ‘{ui:callRecapTitle}’ untuk belajar dari kalimatmu."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -3426,46 +3426,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "ar": {
     "map": {
       "title": "كيف تستخدم «أنا»",
       "sections": [
         {
-          "heading": "1. ابدأ بمحادثة",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "اختر مرحلة البداية من محادثات نموذجية. اللغات ذات الكتابة المختلفة تبدأ بـ«{ui:scriptEntry}»."
+            "ابدأ مهام «{ui:planTitle}» واحدة واحدة بـ▶، وبعدها شاشة المرحلة."
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — اكتب إجاباتك بنفسك."
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. ينمو",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "كم امتلأت الأقسام الأربعة في هذه المرحلة (المنقّط = المرحلة التالية). اضغط قسمًا لترى ما درسته."
+            "ما تعلّمته ونتيجته، يومًا بيوم وأسبوعًا بأسبوع."
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. كرسم بياني",
+          "heading": "4. دروس التراكيب",
           "body": [
-            "آخر أسبوعين يومًا بيوم. اضغط عمودًا لترى ما درسته في ذلك اليوم."
+            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}»، ثم «{ui:recallTitle}»."
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. إلى المرحلة التالية",
           "body": [
-            "تنتقل للمرحلة التالية عند 70% في الأقسام الأربعة واجتياز كل نصوص المرحلة."
+            "إتقان التراكيب 70% + «{ui:recallTitle}» 70% يفتحان امتحان المرحلة."
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. اسأل",
@@ -3475,18 +3475,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. حسب المراحل",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "استمع وقل جملك بـ🎤، أو بدونه في «{ui:scriptModeChoose}» و«{ui:scriptModeOrder}». «{ui:passRuleTitle}» «{ui:passRuleSpeak}» | «{ui:passRuleAny}» يحدّد ما يُحتسب."
+            "في شاشة المرحلة اختر طريقة التدريب من الصور."
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. الملاحظات",
+          "heading": "7. الجمل المصحّحة",
           "body": [
-            "اختر الجمل التي صحّحها المعلّم ثم ‘{ui:notebookAddToNotes}’."
+            "ما صحّحه المعلّم يذهب وحده إلى «{ui:weakTitle}»."
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "أيضًا",
@@ -3544,9 +3544,9 @@
         {
           "heading": "القائمة",
           "body": [
-            "⋮ ← ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ ← «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "أكمل محادثة سابقة",
@@ -3574,18 +3574,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "تحدّث بصوتك",
+          "heading": "شاشة المكالمة",
           "body": [
-            "يتكلّم المعلّم أولًا، وينتهي دورك عندما تتوقّف عن الكلام."
+            "المعلّم في الأعلى وأنت في الأسفل. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "راجع مكالمة منتهية",
+          "heading": "بعد المكالمة",
           "body": [
-            "‘{ui:packSeeRetro}’ يعرض الجمل المصحّحة، و‘{ui:roleplaySayAgain}’ لتقولها مجددًا."
+            "اضغط 🧩 أو 🔤 في «{ui:callRecapTitle}» لدرس من جملتك."
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -3807,46 +3807,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "th": {
     "map": {
       "title": "วิธีใช้ ของฉัน",
       "sections": [
         {
-          "heading": "1. เริ่มจากบทสนทนา",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "เลือกขั้นเริ่มต้นจากบทสนทนาตัวอย่าง ภาษาที่ใช้ตัวอักษรต่างกันเริ่มจาก ‘{ui:scriptEntry}’"
+            "เริ่ม ‘{ui:planTitle}’ ทีละอย่างด้วย ▶ ทำเสร็จแล้วไปหน้าขั้น"
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — พิมพ์คำตอบเอง"
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. กำลังเติบโต",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "สี่ด้านเต็มแค่ไหนในขั้นนี้ (เส้นประ = ขั้นถัดไป) แตะเพื่อดูว่าเรียนอะไรไปบ้าง"
+            "สิ่งที่เรียนและผลลัพธ์ รายวันและรายสัปดาห์"
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. ดูเป็นกราฟ",
+          "heading": "4. บทเรียนรูปประโยค",
           "body": [
-            "สองสัปดาห์ล่าสุดรายวัน แตะแท่งเพื่อดูว่าวันนั้นเรียนอะไร"
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ แล้วต่อด้วย ‘{ui:recallTitle}’"
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. ไปขั้นถัดไป",
           "body": [
-            "ขึ้นขั้นถัดไปเมื่อทั้งสี่ด้านถึง 70% และผ่านบทพูดของขั้นนั้นครบ"
+            "รูปประโยคที่จำได้ 70% + ‘{ui:recallTitle}’ 70% จะเปิดสอบประจำขั้น"
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. ถาม",
@@ -3856,18 +3856,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. ดูตามขั้น",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "ฟังบทแล้วพูดประโยคของคุณด้วย 🎤 หรือไม่ใช้ 🎤 ใน “{ui:scriptModeChoose}” “{ui:scriptModeOrder}” “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” กำหนดว่าแบบไหนนับผ่าน"
+            "ในหน้าขั้น ดูรูปแล้วเลือกวิธีฝึก"
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. โน้ต",
+          "heading": "7. ประโยคที่ถูกแก้",
           "body": [
-            "เลือกประโยคที่ติวเตอร์แก้ แล้วแตะ ‘{ui:notebookAddToNotes}’"
+            "ประโยคที่ติวเตอร์แก้จะเข้าไปใน ‘{ui:weakTitle}’ เอง"
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "อื่นๆ",
@@ -3925,9 +3925,9 @@
         {
           "heading": "เมนู",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "คุยต่อจากเดิม",
@@ -3955,18 +3955,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "พูดออกเสียง",
+          "heading": "หน้าจอโทร",
           "body": [
-            "ติวเตอร์พูดก่อน พอคุณหยุดพูดก็จบตาคุณ"
+            "ติวเตอร์อยู่บน คุณอยู่ล่าง 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’"
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "ทบทวนการโทรที่จบแล้ว",
+          "heading": "เมื่อโทรจบ",
           "body": [
-            "‘{ui:packSeeRetro}’ ดูประโยคที่แก้แล้ว ‘{ui:roleplaySayAgain}’ เพื่อพูดอีกครั้ง"
+            "แตะ 🧩 หรือ 🔤 ใน ‘{ui:callRecapTitle}’ เพื่อเรียนจากประโยคของคุณ"
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -4188,46 +4188,46 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   },
   "hi": {
     "map": {
       "title": "“मेरा” कैसे इस्तेमाल करें",
       "sections": [
         {
-          "heading": "1. बातचीत से शुरू करें",
+          "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "नमूना बातचीत से शुरुआती चरण चुनें। दूसरी लिपि वाली भाषाएँ ‘{ui:scriptEntry}’ से शुरू होती हैं।"
+            "‘{ui:planTitle}’ को ▶ से एक-एक करके शुरू करें; खत्म होने पर चरण स्क्रीन।"
           ],
-          "shot": "stage-start"
+          "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — जवाब खुद लिखें।"
           ],
-          "shot": "keep-learning"
+          "shot": "bank-keep-quiz"
         },
         {
-          "heading": "3. बढ़ रहा है",
+          "heading": "3. {ui:logbankTitle}",
           "body": [
-            "इस चरण में चारों हिस्से कितने भरे (बिंदुदार = अगला चरण)। दबाकर देखें क्या पढ़ा।"
+            "रोज़ और हर हफ़्ते की पढ़ाई और नतीजे।"
           ],
-          "shot": "parts-net"
+          "shot": "bank-log-week"
         },
         {
-          "heading": "4. ग्राफ़ में देखें",
+          "heading": "4. वाक्य-ढाँचे के पाठ",
           "body": [
-            "पिछले दो हफ़्ते, दिन-ब-दिन। बार दबाकर उस दिन का पढ़ा देखें।"
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, फिर ‘{ui:recallTitle}’।"
           ],
-          "shot": "parts-graph"
+          "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. अगले चरण की ओर",
           "body": [
-            "चारों हिस्से 70% और उस चरण की सारी स्क्रिप्ट पास होने पर अगला चरण।"
+            "ढाँचे 70% + ‘{ui:recallTitle}’ 70% पर चरण परीक्षा खुलती है।"
           ],
-          "shot": "stage-next"
+          "shot": "bank-stage-ladder"
         },
         {
           "heading": "6. पूछें",
@@ -4237,18 +4237,18 @@
           "shot": "myask"
         },
         {
-          "heading": "7. चरणों में देखें",
+          "heading": "6. {ui:practiceWay}",
           "body": [
-            "स्क्रिप्ट सुनें और अपनी लाइनें 🎤 से बोलें, या 🎤 के बिना “{ui:scriptModeChoose}” और “{ui:scriptModeOrder}” में। “{ui:passRuleTitle}” “{ui:passRuleSpeak}” | “{ui:passRuleAny}” तय करता है कि क्या गिना जाए।"
+            "चरण स्क्रीन पर चित्र देखकर अभ्यास का तरीका चुनें।"
           ],
-          "shot": "stage-scripts"
+          "shot": "stage-ways"
         },
         {
-          "heading": "8. नोट्स",
+          "heading": "7. सुधारे गए वाक्य",
           "body": [
-            "ट्यूटर के सुधारे वाक्य चुनें, फिर ‘{ui:notebookAddToNotes}’।"
+            "ट्यूटर ने जो सुधारा, वह अपने आप ‘{ui:weakTitle}’ में जाता है।"
           ],
-          "shot": "notebook-today"
+          "shot": "bank-log-day"
         },
         {
           "heading": "और",
@@ -4306,9 +4306,9 @@
         {
           "heading": "मेनू",
           "body": [
-            "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
           ],
-          "shot": "chat-menu"
+          "shot": "tutor-pick"
         },
         {
           "heading": "पुरानी बातचीत आगे बढ़ाएँ",
@@ -4336,18 +4336,18 @@
           "shot": "call-pack"
         },
         {
-          "heading": "बोलकर बात करें",
+          "heading": "कॉल स्क्रीन",
           "body": [
-            "ट्यूटर पहले बोलता है; आप रुकते ही आपकी बारी खत्म।"
+            "ऊपर ट्यूटर, नीचे आप। 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’।"
           ],
-          "shot": "call-talk"
+          "shot": "real-call"
         },
         {
-          "heading": "खत्म हुई कॉल दोबारा देखें",
+          "heading": "कॉल के बाद",
           "body": [
-            "‘{ui:packSeeRetro}’ से सुधरे वाक्य देखें, ‘{ui:roleplaySayAgain}’ से फिर बोलें।"
+            "‘{ui:callRecapTitle}’ में 🧩 या 🔤 दबाएँ — आपके वाक्य पर पाठ।"
           ],
-          "shot": "call-review"
+          "shot": "call-recap"
         },
         {
           "heading": "{ui:roleplayOwnLineOpen}",
@@ -4569,6 +4569,6 @@
         }
       ]
     },
-    "_version": "2026-10-29u"
+    "_version": "2026-11-01a"
   }
 }

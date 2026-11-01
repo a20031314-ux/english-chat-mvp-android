@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-30a";
+export const GUIDE_VERSION = "2026-11-01a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -100,12 +100,15 @@ export type GuideChapter = { id: string; title: string; go: GuideGo; sections: (
 export const GUIDE_CLIPS: Record<string, string> = {
   "chat.analyse": "chat-ask",
   "video.ask": "video-ask",
-  "my.map": "my-today",
+  // 2.79(2026-11-01): My 칸은 Bank 설명 영상(scripts/guide-clips.mjs bank-stage·bank-keep, 14개 언어)으로 — 예전 my.map "my-today"(대본 목록)는 화면이 없어짐.
+  "my.start": "bank-stage",
+  "my.next": "bank-keep",
 };
 
 /** 그 화면이 있는 빌드만 받는 영상: 칸 id → 빌드가 /api/guide에 보내는 표시(없으면 영상을 빼고 그림만). */
 export const GUIDE_CLIPS_SINCE: Record<string, string> = {
-  "my.map": "r281",
+  "my.start": "r283",
+  "my.next": "r283",
 };
 
 /** 한 언어의 글에서 칸 하나(없으면 null). */
@@ -133,39 +136,39 @@ export const GUIDE_KO: Guide = {
     "title": "My 사용법",
     "sections": [
       {
-        "heading": "1. 대화로 시작",
+        "heading": "1. {ui:stagebankTitle}",
         "body": [
-          "예시 대화로 시작 단계를 골라요. 글자가 다른 언어는 ‘{ui:scriptEntry}’."
+          "‘{ui:planTitle}’ 하나를 ▶로 시작, 다 하면 n단계 화면."
         ],
-        "shot": "stage-start"
+        "shot": "bank-stage-today"
       },
       {
         "heading": "2. {ui:keepTitle}",
         "body": [
-          "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — 직접 써서 풀어요."
         ],
-        "shot": "keep-learning"
+        "shot": "bank-keep-quiz"
       },
       {
-        "heading": "3. 자라는 중",
+        "heading": "3. {ui:logbankTitle}",
         "body": [
-          "네 갈래가 이 단계에서 얼마나 찼는지(점선 = 다음 단계). 누르면 그 칸에서 공부한 것."
+          "날마다·주마다 한 공부와 결과가 모여요."
         ],
-        "shot": "parts-net"
+        "shot": "bank-log-week"
       },
       {
-        "heading": "4. 그래프로 보기",
+        "heading": "4. 문장구조 수업",
         "body": [
-          "최근 2주 하루하루. 막대를 누르면 그날 공부한 것."
+          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, 그다음 ‘{ui:recallTitle}’."
         ],
-        "shot": "parts-graph"
+        "shot": "bank-stage-lesson"
       },
       {
         "heading": "5. 다음 단계로",
         "body": [
-          "네 갈래 70% + 그 단계 상황을 모두 통과하면 다음 단계예요."
+          "문장구조 익힘 70% + ‘{ui:recallTitle}’ 70%면 단계 시험."
         ],
-        "shot": "stage-next"
+        "shot": "bank-stage-ladder"
       },
       {
         "heading": "6. 직접 묻기",
@@ -175,18 +178,18 @@ export const GUIDE_KO: Guide = {
         "shot": "myask"
       },
       {
-        "heading": "7. 단계로 보기",
+        "heading": "6. {ui:practiceWay}",
         "body": [
-          "상황마다 듣고 내 줄을 🎤로, 또는 🎤 없이 ‘{ui:scriptModeChoose}’·‘{ui:scriptModeOrder}’로. 통과로 셀 방식은 ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’."
+          "n단계 화면에서 그림을 보고 연습 방식을 골라요."
         ],
-        "shot": "stage-scripts"
+        "shot": "stage-ways"
       },
       {
-        "heading": "8. 노트",
+        "heading": "7. 고친 줄",
         "body": [
-          "튜터가 고친 줄을 골라 ‘{ui:notebookAddToNotes}’."
+          "튜터가 고친 줄은 ‘{ui:weakTitle}’에 저절로 들어가요."
         ],
-        "shot": "notebook-today"
+        "shot": "bank-log-day"
       },
       {
         "heading": "그 밖에",
@@ -244,9 +247,9 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "메뉴",
         "body": [
-          "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
         ],
-        "shot": "chat-menu"
+        "shot": "tutor-pick"
       },
       {
         "heading": "지난 대화 이어 하기",
@@ -274,18 +277,18 @@ export const GUIDE_KO: Guide = {
         "shot": "call-pack"
       },
       {
-        "heading": "말로 대화하기",
+        "heading": "통화 화면",
         "body": [
-          "튜터가 먼저 말하고, 내가 말을 멈추면 내 차례가 끝나요."
+          "위엔 튜터, 아래엔 나. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
         ],
-        "shot": "call-talk"
+        "shot": "real-call"
       },
       {
-        "heading": "끝난 대화 돌아보기",
+        "heading": "통화가 끝나면",
         "body": [
-          "‘{ui:packSeeRetro}’로 고친 문장을 보고, ‘{ui:roleplaySayAgain}’로 다시 말해요."
+          "‘{ui:callRecapTitle}’의 🧩·🔤를 누르면 내 문장으로 수업해요."
         ],
-        "shot": "call-review"
+        "shot": "call-recap"
       },
       {
         "heading": "{ui:roleplayOwnLineOpen}",
@@ -514,39 +517,39 @@ export const GUIDE_EN: Guide = {
     "title": "Using My",
     "sections": [
       {
-        "heading": "1. Start with a conversation",
+        "heading": "1. {ui:stagebankTitle}",
         "body": [
-          "Pick a starting stage from sample conversations. Languages with a new script start with ‘{ui:scriptEntry}’."
+          "Start one thing in ‘{ui:planTitle}’ with ▶; when done, the stage screen."
         ],
-        "shot": "stage-start"
+        "shot": "bank-stage-today"
       },
       {
         "heading": "2. {ui:keepTitle}",
         "body": [
-          "‘{ui:studyReview}’ · ‘{ui:studyRandom}’ · ‘{ui:partVocab}’ · ‘{ui:partGrammar}’ · ‘{ui:partExpression}’ → ▶ ‘{ui:studyMore}’"
+          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — type your answers."
         ],
-        "shot": "keep-learning"
+        "shot": "bank-keep-quiz"
       },
       {
-        "heading": "3. Growing",
+        "heading": "3. {ui:logbankTitle}",
         "body": [
-          "How full the four parts are at this stage (dotted line = next stage). Tap one to see what you studied."
+          "What you did and how it went, by day and by week."
         ],
-        "shot": "parts-net"
+        "shot": "bank-log-week"
       },
       {
-        "heading": "4. As a graph",
+        "heading": "4. Sentence-pattern lessons",
         "body": [
-          "The last two weeks, day by day. Tap a bar for what you studied that day."
+          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, then ‘{ui:recallTitle}’."
         ],
-        "shot": "parts-graph"
+        "shot": "bank-stage-lesson"
       },
       {
-        "heading": "5. To the next stage",
+        "heading": "5. Next stage",
         "body": [
-          "Move on at 70% in all four parts with every script in the stage passed."
+          "Patterns learned 70% + ‘{ui:recallTitle}’ 70% unlock the stage test."
         ],
-        "shot": "stage-next"
+        "shot": "bank-stage-ladder"
       },
       {
         "heading": "6. Ask",
@@ -556,18 +559,18 @@ export const GUIDE_EN: Guide = {
         "shot": "myask"
       },
       {
-        "heading": "7. Stages",
+        "heading": "6. {ui:practiceWay}",
         "body": [
-          "Listen and say your lines with 🎤, or without it in ‘{ui:scriptModeChoose}’ and ‘{ui:scriptModeOrder}’. ‘{ui:passRuleTitle}’ ‘{ui:passRuleSpeak}’ | ‘{ui:passRuleAny}’ sets what counts."
+          "On the stage screen, pick how to practise from pictures."
         ],
-        "shot": "stage-scripts"
+        "shot": "stage-ways"
       },
       {
-        "heading": "8. Notes",
+        "heading": "7. Fixed lines",
         "body": [
-          "Pick lines the tutor fixed, then ‘{ui:notebookAddToNotes}’."
+          "Lines the tutor fixed go to ‘{ui:weakTitle}’ by themselves."
         ],
-        "shot": "notebook-today"
+        "shot": "bank-log-day"
       },
       {
         "heading": "Also",
@@ -623,11 +626,11 @@ export const GUIDE_EN: Guide = {
         "shot": "chat-word"
       },
       {
-        "heading": "The menu",
+        "heading": "Menu",
         "body": [
-          "⋮ → ‘{ui:chatHistoryTitle}’ · ‘{ui:endSession}’ · ‘{ui:reportTitle}’"
+          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
         ],
-        "shot": "chat-menu"
+        "shot": "tutor-pick"
       },
       {
         "heading": "Pick up a past chat",
@@ -655,18 +658,18 @@ export const GUIDE_EN: Guide = {
         "shot": "call-pack"
       },
       {
-        "heading": "Talk out loud",
+        "heading": "The call screen",
         "body": [
-          "The tutor speaks first; your turn ends when you stop talking."
+          "Tutor above, you below. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
         ],
-        "shot": "call-talk"
+        "shot": "real-call"
       },
       {
-        "heading": "Look back at a finished call",
+        "heading": "After the call",
         "body": [
-          "‘{ui:packSeeRetro}’ shows the fixed lines; ‘{ui:roleplaySayAgain}’ to say them again."
+          "Tap 🧩 or 🔤 in ‘{ui:callRecapTitle}’ for a lesson on your own sentence."
         ],
-        "shot": "call-review"
+        "shot": "call-recap"
       },
       {
         "heading": "{ui:roleplayOwnLineOpen}",
