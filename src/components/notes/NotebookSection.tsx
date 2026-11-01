@@ -2205,6 +2205,8 @@ type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart & { wro
  * 한 번에 하나만 펼친다. 퀴즈·시험 화면(overlays)은 칸이 접혀도 떠 있어야 해서 따로.
  */
 /** 큰 칸마다 다른 색(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고") — 펼친 칸의 테두리·바탕·제목. hub/DESIGN.md "My 큰 칸 색". */
+/** 칸 이름 줄은 아이콘만(사용자 2026-11-02 "위에 있는 탭 이름은 아이콘으로") — 이름은 aria-label·title. 사다리 = 단계, 연필 = 퀴즈, 달력 = 날마다 기록. */
+const LAYER_ICON: Record<MyLayer, string> = { stage: "🪜", keep: "✏️", log: "🗓️" };
 const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
   stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
   keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good" },
@@ -2246,10 +2248,12 @@ function LayerJump({
           data-my-jump-to={one.id}
           aria-selected={active === one.id}
           aria-current={active === one.id ? "true" : undefined}
+          aria-label={one.title}
+          title={one.title}
           onClick={() => onJump(one.id)}
-          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : "border-line text-slate-300"}`}
+          className={`min-w-0 flex-1 rounded-full border px-3 py-1.5 text-title leading-none ${active === one.id ? LAYER_TONE[one.id].box : "border-line opacity-60"}`}
         >
-          {one.title}
+          <span aria-hidden>{LAYER_ICON[one.id]}</span>
         </button>
       ))}
       {help ? <div className="flex shrink-0 items-center">{help}</div> : null}

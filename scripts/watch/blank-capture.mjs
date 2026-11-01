@@ -125,7 +125,7 @@ async function scrollBy(page, dy) {
 }
 async function openBank(page, wait, title, ui) {
   await openMy(page, wait, ui);
-  const jump = page.locator("[data-my-jump] button", { hasText: title }).first();
+  const jump = page.locator(`[data-my-jump] button[title="${title}"]`).first();
   await jump.waitFor({ state: "visible", timeout: 8000 });
   await jump.click();
   await wait(2500);
