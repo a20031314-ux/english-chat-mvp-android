@@ -53,7 +53,8 @@ export function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): 
 - Case endings, verb aspect (perfective/imperfective), agreement, prepositions + case, word order only when it breaks meaning, unnatural calques.`;
     case "ar":
       return `Arabic focus (use Arabic terms):
-- Root-and-pattern morphology, definite article, gender/number agreement, idafa, attached pronouns/clitics, verb form, case only when it is clearly wrong, MSA vs dialect mismatch when it breaks the intended register.`;
+- Root-and-pattern morphology, definite article, gender/number agreement, idafa, attached pronouns/clitics, verb form, case only when it is clearly wrong.
+- Register: everything you write in Arabic is Modern Standard Arabic (الفصحى) — your reply and every rewrite alike, never Levantine, Egyptian, Gulf or any other dialect, so the learner hears and reads one Arabic. A dialect word the learner used is not a mistake by itself: do not rewrite a sentence only to swap it, but when you rewrite for another reason, write the whole sentence in Modern Standard Arabic.`;
     case "id":
       return `Indonesian focus (use Indonesian terms):
 - Affixes (me-/ber-/ter-/di-/ke-an), reduplication, particles (lah/kah/pun), word order, unnatural calques. Do not invent tense endings.`;
@@ -65,8 +66,49 @@ export function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): 
 - Word boundaries, classifiers, polite particles (ครับ/ค่ะ), serial verbs, missing function words, unnatural calques. Do not split words into letters.`;
     case "hi":
       return `Hindi focus (use Hindi terms):
-- Postpositions, gender/number agreement, split verbs, honorifics, SOV word order, unnatural calques from English.`;
+- Postpositions, gender/number agreement, split verbs, honorifics, SOV word order, unnatural calques from English.
+- कल means both yesterday and tomorrow: read which from their verb tense, and keep that same reading in your reply and in any rewrite.`;
     default:
       return `Focus on real morphosyntax, agreement, function words, and patterns that natives would mark as wrong in ${learningLanguageName(targetLanguage)}.`;
   }
+}
+
+/**
+ * How the tutor speaks in a spoken conversation: one speech level, one variety,
+ * picking up what the learner just said.
+ *
+ * Found by simulated users (2026-11-01, 196 users × 3 turns): in Korean every
+ * turn answered a learner speaking 해요체 in 반말, sometimes both in one reply;
+ * in Arabic the tutor spoke Levantine while its rewrites were Modern Standard;
+ * in Portuguese and Russian it asked about an earlier topic while the learner's
+ * newest one hung there. A learner copies the tutor, so whatever the tutor
+ * mixes the learner learns mixed.
+ *
+ * The speech level follows the learner rather than the scene: a friend may open
+ * in plain speech, and a learner who answers politely is not wrong to — the
+ * tutor matching them keeps both sides in one register they can copy back.
+ */
+export function tutorSpeechRules(targetLanguage: LearningLanguageCode): string {
+  const level: Partial<Record<LearningLanguageCode, string>> = {
+    ko: "In Korean: if they speak 해요체 (or 합쇼체) to you, answer in 해요체; only when they speak 반말 to you may you use 반말. Never mix 반말 and 해요체 in one reply, or switch back and forth between replies.",
+    ja: "In Japanese: if they speak です/ます to you, answer in です/ます; only when they speak plain form to you may you use plain form. Never mix the two in one reply.",
+    es: "In Spanish: tú or usted, whichever they use with you, the same in every reply.",
+    fr: "In French: tu or vous, whichever they use with you, the same in every reply.",
+    it: "In Italian: tu or Lei, whichever they use with you, the same in every reply.",
+    pt: "In Portuguese: você/tu forms as they use them with you, the same in every reply.",
+    ru: "In Russian: ты or вы, whichever they use with you, the same in every reply.",
+    hi: "In Hindi: तुम or आप, whichever they use with you, the same in every reply.",
+    vi: "In Vietnamese: keep one pair of pronouns for you and them, matching how they address you.",
+    th: "In Thai: use your polite particle (ครับ/ค่ะ, by your own gender) the same way in every reply.",
+  };
+  return [
+    "How you speak:",
+    `- One speech level for the whole conversation, the one they use with you. ${level[targetLanguage] ?? "If they speak to you formally, stay formal; if casually, you may be casual — never both in one reply."}`,
+    targetLanguage === "ar"
+      ? "- Speak Modern Standard Arabic (الفصحى) only — never a dialect, in what you say and in what you write in \"better\" and \"meant\" — so they hear the same Arabic they are corrected into."
+      : "",
+    "- Pick up the last thing they said. Your reaction and any question are about their newest message — what they just told you — not a topic from earlier, unless they finished with it or asked to go back.",
+  ]
+    .filter(Boolean)
+    .join("\n");
 }

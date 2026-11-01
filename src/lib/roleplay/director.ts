@@ -9,7 +9,7 @@ import {
 import { compareVersions } from "../appVersion.ts";
 import { languageEvidence } from "../inputLanguage.ts";
 import { explanationInLearningLanguage } from "../languageLearningAnalysis.ts";
-import { targetLanguageFocusHints } from "../languageFocus.ts";
+import { targetLanguageFocusHints, tutorSpeechRules } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   isLearnerNode,
@@ -588,6 +588,7 @@ How to answer them:
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
+${tutorSpeechRules(request.targetLanguage)}
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.

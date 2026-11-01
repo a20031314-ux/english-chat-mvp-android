@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { SUPPORTED_LEARNING_LANGUAGES } from "./learningLanguages.ts";
-import { targetLanguageFocusHints } from "./languageFocus.ts";
+import { targetLanguageFocusHints, tutorSpeechRules } from "./languageFocus.ts";
 
 /** The shape of the row a language falls back to when it has none of its own. */
 function isFallback(hint: string): boolean {
@@ -65,4 +65,25 @@ test("the Romance languages share a row and still name themselves", () => {
     assert.ok(!isFallback(hint));
   }
   assert.notEqual(targetLanguageFocusHints("es"), targetLanguageFocusHints("fr"));
+});
+
+test("the call tutor keeps one speech level, the learner's", () => {
+  // 가상 사용자 196명(2026-11-01): ko 학습자 해요체에 튜터 반말 42턴.
+  const ko = tutorSpeechRules("ko");
+  assert.match(ko, /해요체/);
+  assert.match(ko, /Never mix/);
+  assert.match(tutorSpeechRules("ja"), /です\/ます/);
+  // Every language says to follow how the learner speaks, with or without a row.
+  for (const { code: language } of SUPPORTED_LEARNING_LANGUAGES) {
+    assert.match(tutorSpeechRules(language), /the one they use with you/, language);
+    assert.match(tutorSpeechRules(language), /newest message/, language);
+  }
+});
+
+test("Arabic is Modern Standard throughout, in the call and in corrections", () => {
+  // ar 튜터 레반트 방언 ↔ 고친 말 표준어 18턴(2026-11-01) — 사용자 결정: 표준어로 통일.
+  assert.match(tutorSpeechRules("ar"), /Modern Standard Arabic/);
+  assert.match(tutorSpeechRules("ar"), /never a dialect/);
+  assert.match(targetLanguageFocusHints("ar"), /Modern Standard Arabic/);
+  assert.doesNotMatch(tutorSpeechRules("es"), /Arabic/);
 });
