@@ -59,10 +59,10 @@ test("탭 → 기능: 채팅·My는 숨길 수 없다", () => {
 test("하단 탭: 사람을 숨기면 채팅 모양, Room은 사람과 같이, 통화는 탭이 아님(📞)", async () => {
   const { bottomTabs } = await import("./features.ts");
   const social = { social: true };
-  assert.deepEqual(bottomTabs([], social), ["talk", "video", "people", "rooms", "map"]);
-  assert.deepEqual(bottomTabs(presetOff("solo"), social), ["chat", "map"]);
-  assert.deepEqual(bottomTabs(presetOff("video"), social), ["chat", "video", "map"]);
-  assert.deepEqual(bottomTabs(presetOff("people"), social), ["talk", "people", "rooms", "map"]);
-  assert.deepEqual(bottomTabs(["call"], { social: false }), ["chat", "video", "map"]);
-  assert.deepEqual(bottomTabs([], { social: false }), ["chat", "video", "map"]);
+  assert.deepEqual(bottomTabs([], social), ["map", "talk", "people", "rooms", "video"]);
+  assert.deepEqual(bottomTabs(presetOff("solo"), social), ["map", "chat"]);
+  assert.deepEqual(bottomTabs(presetOff("video"), social), ["map", "chat", "video"]);
+  assert.deepEqual(bottomTabs(presetOff("people"), social), ["map", "talk", "people", "rooms"]);
+  assert.deepEqual(bottomTabs(["call"], { social: false }), ["map", "chat", "video"]);
+  assert.deepEqual(bottomTabs([], { social: false }), ["map", "chat", "video"]);
 });

@@ -190,12 +190,13 @@ export type BottomTabId = "talk" | "chat" | "video" | "people" | "rooms" | "map"
 /**
  * 꺼 둔 기능으로 정해지는 하단 탭(창구 모드 제외). AppHome과 구조도 미리보기가 같이 쓴다.
  * - social: 플랫폼에 사람 기능이 있는지(iOS 1차는 없음).
- * 사람을 숨기면 iOS 1차 모양(채팅 · 영상 · My). AI 통화는 탭이 아니라 AI 대화의 📞(2026-10-23, conversation-unify).
+ * 사람을 숨기면 iOS 1차 모양(My · 채팅 · 영상). AI 통화는 탭이 아니라 AI 대화의 📞(2026-10-23, conversation-unify).
+ * 순서는 왼쪽부터 My → 대화(채팅 기록) → 사람(프로필) → Room(보이스룸) → 영상 학습(사용자 2026-11-02).
  */
 export function bottomTabs(off: readonly FeatureId[], { social }: { social: boolean }): BottomTabId[] {
   const on = (feature: FeatureId) => isFeatureOn(off, feature);
   if (social && on("people")) {
-    return ["talk", ...(on("video") ? (["video"] as const) : []), "people", ...(on("rooms") ? (["rooms"] as const) : []), "map"];
+    return ["map", "talk", "people", ...(on("rooms") ? (["rooms"] as const) : []), ...(on("video") ? (["video"] as const) : [])];
   }
-  return ["chat", ...(on("video") ? (["video"] as const) : []), "map"];
+  return ["map", "chat", ...(on("video") ? (["video"] as const) : [])];
 }

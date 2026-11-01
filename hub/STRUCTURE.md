@@ -15,7 +15,7 @@
 │
 상단바   배우는 언어 국기 → 언어 설정 시트(배울 언어 — 맨 위 내 언어 줄 누르면 그 언어로 바로 · 아래 국기 ✓ 더하기·빼기, lib/myLanguages.ts appLearningLanguages 이 폰, 2026-11-02 · 앱 언어, LanguageSettingsButton, 2026-10-31 — 언어는 여기서만 바꾼다) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장 — My면 학습 흐름: [쓸 기능 고르기 | 학습 흐름 | 장마다 해야 할 것·할 수 있는 것 카드 + 접힌 세부 기능], lib/guide/overview.ts, 2026-10-29) · 💬 의견 보내기
 │        └ 업데이트 배너
-하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: My, 2026-10-28; 각 화면 머리 제목도 이름 대신 그 탭 아이콘 — TabIcons TabTitle, 이름은 aria-label·title, 2026-11-02 사용자 "상위 탭들의 텍스트를 아이콘으로")
+하단 탭  My │ 대화 │ 사람 │ Room │ 영상 학습        (왼쪽부터, 2026-11-02 사용자 "my > 채팅 기록 > 프로필 > 보이스룸 > 영상 학습" — features.ts bottomTabs; 첫 화면: My, 2026-10-28; 각 화면 머리 제목도 이름 대신 그 탭 아이콘 — TabIcons TabTitle, 이름은 aria-label·title, 2026-11-02 사용자 "상위 탭들의 텍스트를 아이콘으로")
 │
 ├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 언어별 튜터 그림·이름·국기(아랍어는 국기 없음 — 출신 나라 없음, chatPartner countryEn "", 2026-11-01) — 사람 대화처럼, 그림은 public/tutors·AiAvatar, 2026-11-01, 오늘의 팩 카드는 2.76에서 뺌) ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채, 말풍선 옆 얼굴 — 튜터 왼쪽·내 프로필 사진 오른쪽 MessageBubble face, 2026-11-01; ⋮ 튜터 목소리 [그림 이름 | 그림 이름] — 이름·채팅 말투·통화 목소리·듣기가 같이 따라감, lib/tutorGender.ts·chatPartner.ts, 2026-11-01)
 │           │                      ├ 📞 → AI 통화 call(탭 아님 — 어디서나 떠 있는 층 CallHost)
@@ -48,7 +48,7 @@
                └ 🔎 My에서 찾기(FindInMy) → 서버가 틀의 칸 → My 단계 보기 그 단계·칸 시트 + "이 장면 넣기"(화면 함께, lib/notes/locateHandoff.ts — AI 대화·통화·영상만 화면, 사람 대화는 고른 부분만)
 ```
 
-- **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 채팅 │ 영상 학습 │ My(통화는 채팅 머리 📞), 대화·사람·Room·메시지·단체방 전부 없음.
+- **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 My │ 채팅 │ 영상 학습(통화는 채팅 머리 📞), 대화·사람·Room·메시지·단체방 전부 없음.
   플랫폼마다 다른 것은 `platform.ts`에만 둔다(광고 `adsAvailable`, Google 로그인, 영상 받기 등).
 - **쓸 기능 고르기**(`src/lib/features.ts`, 2026-10-21): 사용자가 통화·영상·사람·Room·노트를 숨기면 `AppHome`이 탭에서 빼고(`tabHidden`),
   숨긴 탭으로 가는 `openTab`·`practice`는 탭을 바꾸지 않고 사용법의 그 장을 연다(`openGuide` hidden). 스위치는 사용법 창(`GuideSheet`)에만 있고, 장 ↔ 기능은 `featureOfGo`.

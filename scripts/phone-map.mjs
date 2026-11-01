@@ -74,7 +74,7 @@ for (const d of doors) OPEN[d.node] = d.open;
 const modes = {
   app: {
     label: "안드로이드 · 웹",
-    tabs: ["talk", "video", "people", "rooms", "map"].map((t) => ({ tab: t, node: TAB_NODE[t], label: TAB_LABEL[t], icon: TAB_ICON[t], open: `${APP}/?screen=${t}` })),
+    tabs: ["map", "talk", "people", "rooms", "video"].map((t) => ({ tab: t, node: TAB_NODE[t], label: TAB_LABEL[t], icon: TAB_ICON[t], open: `${APP}/?screen=${t}` })),
   },
   ios: {
     label: "iOS 1차",
