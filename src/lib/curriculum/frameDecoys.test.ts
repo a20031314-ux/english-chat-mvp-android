@@ -6,16 +6,21 @@ import { buildQuiz, nearMisses } from "./quiz.ts";
 
 const LANGS = ["ja", "ko", "es", "zh", "en", "id", "vi", "th", "fr", "it", "pt", "ru", "ar", "hi"];
 
-test("문장구조 헷갈리는 오답: 14개 언어 모든 틀 조각에 2~4개", () => {
+test("문장구조 헷갈리는 오답: 14개 언어 모든 틀 조각에 줄이 있고 4개까지 — 그럴듯한 실수 꼴이 없으면 비움(고르기 없음), 대부분은 2개 넘게", () => {
   for (const language of LANGS) {
     const table = DECOYS[language];
     assert.ok(table, `${language} 없음`);
+    let all = 0;
+    let enough = 0;
     for (const frame of allFramesFor(language)) {
       for (const core of frame.core.filter(Boolean)) {
         const list = table![`${frame.id}|${core}`];
-        assert.ok(list && list.length >= 2 && list.length <= 4, `${frame.id}|${core}`);
+        assert.ok(list && list.length <= 4, `${frame.id}|${core}`);
+        all += 1;
+        if (list.length >= 2) enough += 1;
       }
     }
+    assert.ok(enough / all >= 0.85, `${language} ${enough}/${all}`);
   }
 });
 

@@ -171,13 +171,11 @@
   ],
   "fr-f1-15|Merci pour": [
     "Merci à",
-    "Merci par",
-    "Merci en"
+    "Merci par"
   ],
   "fr-f1-15|merci pour": [
     "merci à",
-    "merci par",
-    "merci en"
+    "merci par"
   ],
   "fr-f1-15|Merci beaucoup pour": [
     "Merci très pour",
@@ -220,14 +218,10 @@
     "je comprends ne pas"
   ],
   "fr-f1-19|Bonne": [
-    "Bien",
-    "Beau",
-    "Bons"
+    "Bien"
   ],
   "fr-f1-19|bonne": [
-    "bien",
-    "beau",
-    "bons"
+    "bien"
   ],
   "fr-f2-01|J'ai": [
     "Je ai",
@@ -341,13 +335,10 @@
   ],
   "fr-f2-10|parce que": [
     "à cause de",
-    "pourquoi",
     "parce qui"
   ],
   "fr-f2-10|parce qu'": [
-    "à cause d'",
-    "pourquoi",
-    "parce qui"
+    "à cause d'"
   ],
   "fr-f2-11|On se retrouve": [
     "On se retrouvons",
@@ -421,13 +412,11 @@
   ],
   "fr-f2-18|Je me suis": [
     "Je m'ai",
-    "Je me est",
-    "Me je suis"
+    "Je me est"
   ],
   "fr-f2-18|je me suis": [
     "je m'ai",
-    "je me est",
-    "me je suis"
+    "je me est"
   ],
   "fr-f2-19|je ne peux pas": [
     "je ne peut pas",
@@ -490,38 +479,28 @@
     "à moi avis"
   ],
   "fr-f3-04|quand": [
-    "pendant",
-    "quoi",
-    "que"
+    "pendant"
   ],
   "fr-f3-05|Avant, je": [
     "Avant, me",
-    "Avant, nous",
     "Avant de je"
   ],
   "fr-f3-05|avant, je": [
     "avant, me",
-    "avant, nous",
     "avant de je"
   ],
   "fr-f3-05|Avant, j'": [
-    "Avant, m'",
-    "Avant, nous",
-    "Avant, moi"
+    "Avant, m'"
   ],
   "fr-f3-05|avant, j'": [
-    "avant, m'",
-    "avant, nous",
-    "avant, moi"
+    "avant, m'"
   ],
   "fr-f3-06|En fait": [
     "Dans fait",
-    "En fact",
     "À fait"
   ],
   "fr-f3-06|en fait": [
     "dans fait",
-    "en fact",
     "à fait"
   ],
   "fr-f3-07|pourrais": [

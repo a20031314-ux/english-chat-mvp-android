@@ -1,3 +1,4 @@
+import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { itemStyle, recordKind, styleKinds, STYLE_KINDS, type KindLog } from "./learnStyle.ts";
@@ -42,7 +43,7 @@ test("퀴즈가 정한 모양을 따른다(만들 수 있는 만큼): 문장구�
     const structure = buildQuiz(language, `f|${frame.id}`, { kinds: STYLE_KINDS.structure });
     assert.ok(structure, `${language} frame`);
     assert.equal(structure!.questions[0]!.kind, "order");
-    const word = allScriptsFor(language).flatMap((s) => s.expressions).find((e) => itemStyle(language, `e|${e}`) === "word");
+    const word = allScriptsFor(language).flatMap((s) => s.expressions).find((e) => itemStyle(language, `e|${e}`) === "word" && (EXPR_DECOYS[language]?.[e]?.length ?? 0) >= 2);
     if (!word) continue;
     const quiz = buildQuiz(language, `e|${word}`, { kinds: STYLE_KINDS.word });
     assert.ok(quiz && quiz.questions.some((q) => q.kind === "meaning" || q.kind === "choose"), `${language} ${word}`);

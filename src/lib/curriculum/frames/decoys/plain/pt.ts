@@ -12,83 +12,67 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f1-02|Sou de": [
     "Estou de",
-    "Sou em",
-    "Sou a"
+    "Sou em"
   ],
   "pt-f1-02|sou de": [
     "estou de",
-    "sou em",
-    "sou a"
+    "sou em"
   ],
   "pt-f1-03|trabalho em": [
-    "trabalho no",
     "trabalho a",
     "trabalhos em"
   ],
   "pt-f1-03|Trabalho em": [
-    "Trabalho no",
     "Trabalho a",
     "Trabalhos em"
   ],
   "pt-f1-04|Estou em": [
     "Sou em",
-    "Estou no",
     "Estou a"
   ],
   "pt-f1-04|estou em": [
     "sou em",
-    "estou no",
     "estou a"
   ],
   "pt-f1-05|Estou": [
     "Tenho",
-    "Estoy",
     "Estar"
   ],
   "pt-f1-05|estou": [
     "tenho",
-    "estoy",
     "estar"
   ],
   "pt-f1-06|Onde fica": [
     "Onde fico",
-    "Onde fique",
-    "Onde faz"
+    "Onde fique"
   ],
   "pt-f1-06|onde fica": [
     "onde fico",
-    "onde fique",
-    "onde faz"
+    "onde fique"
   ],
   "pt-f1-07|Quanto custa": [
     "Quanto custo",
-    "Quantos custa",
-    "Quanto costa"
+    "Quantos custa"
   ],
   "pt-f1-07|quanto custa": [
     "quanto custo",
-    "quantos custa",
-    "quanto costa"
+    "quantos custa"
   ],
   "pt-f1-08|quero": [
-    "quiero",
     "queiro",
     "querer"
   ],
   "pt-f1-08|Quero": [
-    "Quiero",
     "Queiro",
     "Querer"
   ],
   "pt-f1-09|Me vê um": [
     "Mim vê um",
-    "Me ver um",
-    "Me vê a"
+    "Me ver um"
   ],
   "pt-f1-09|me vê um": [
     "mim vê um",
-    "me ver um",
-    "me vê a"
+    "me ver um"
   ],
   "pt-f1-10|Você tem": [
     "Você tenho",
@@ -101,22 +85,16 @@ export const PT_PLAIN: Record<string, string[]> = {
     "você está"
   ],
   "pt-f1-11|tenho": [
-    "tengo",
-    "estou",
-    "hei"
+    "estou"
   ],
   "pt-f1-11|Tenho": [
-    "Tengo",
-    "Estou",
-    "Hei"
+    "Estou"
   ],
   "pt-f1-12|não falo": [
-    "falo não",
     "não digo",
     "não falar"
   ],
   "pt-f1-12|Não falo": [
-    "Falo não",
     "Não digo",
     "Não falar"
   ],
@@ -138,72 +116,40 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f1-14|O que é": [
     "O que está",
-    "O qual é",
-    "O que são"
+    "O qual é"
   ],
   "pt-f1-14|o que é": [
     "o que está",
-    "o qual é",
-    "o que são"
-  ],
-  "pt-f1-15|Pode": [
-    "Puede",
-    "Pede"
-  ],
-  "pt-f1-15|pode": [
-    "puede",
-    "pede"
+    "o qual é"
   ],
   "pt-f1-16|tudo bem": [
     "todo bem",
-    "tudo é bem",
-    "tudo bens"
+    "tudo é bem"
   ],
   "pt-f1-16|Tudo bem": [
     "Todo bem",
-    "Tudo é bem",
-    "Tudo bens"
+    "Tudo é bem"
   ],
   "pt-f1-17|é muito boa": [
     "é muito bom",
     "é muita boa",
     "é muito bem"
   ],
-  "pt-f1-18|Tchau": [
-    "Chao"
-  ],
-  "pt-f1-18|tchau": [
-    "chao"
-  ],
   "pt-f2-01|Ontem eu": [
-    "Amanhã eu",
     "Ontem me",
     "Ontem mim"
   ],
   "pt-f2-01|ontem eu": [
-    "amanhã eu",
     "ontem me",
     "ontem mim"
   ],
   "pt-f2-02|fui": [
     "foi",
-    "fiz",
-    "fue"
+    "fiz"
   ],
   "pt-f2-02|Fui": [
     "Foi",
-    "Fiz",
-    "Fue"
-  ],
-  "pt-f2-03|Vou": [
-    "Voy",
-    "Voo",
-    "Estou"
-  ],
-  "pt-f2-03|vou": [
-    "voy",
-    "voo",
-    "estou"
+    "Fiz"
   ],
   "pt-f2-04|Estou": [
     "Sou",
@@ -217,13 +163,11 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f2-05|gosto de": [
     "gosto a",
-    "gosto em",
-    "gusto de"
+    "gosto em"
   ],
   "pt-f2-05|Gosto de": [
     "Gosto a",
-    "Gosto em",
-    "Gusto de"
+    "Gosto em"
   ],
   "pt-f2-05|gosto muito de": [
     "gosto muito a",
@@ -241,14 +185,10 @@ export const PT_PLAIN: Record<string, string[]> = {
     "gosto mais em"
   ],
   "pt-f2-06|Não gosto": [
-    "Gosto não",
-    "Não me gosto",
-    "Não gusto"
+    "Não me gosto"
   ],
   "pt-f2-06|não gosto": [
-    "gosto não",
-    "não me gosto",
-    "não gusto"
+    "não me gosto"
   ],
   "pt-f2-07|mais": [
     "mas",
@@ -257,8 +197,7 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f2-07|do que": [
     "de que",
-    "como",
-    "que do"
+    "como"
   ],
   "pt-f2-08|faz": [
     "desde",
@@ -270,7 +209,6 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f2-09|há": [
     "à",
-    "atrás",
     "desde"
   ],
   "pt-f2-10|Estou com dor de": [
@@ -310,14 +248,6 @@ export const PT_PLAIN: Record<string, string[]> = {
   "pt-f2-13|quanto tempo leva": [
     "quanto tempo levo",
     "quantos tempo leva"
-  ],
-  "pt-f2-14|Vamos": [
-    "Somos",
-    "Estamos"
-  ],
-  "pt-f2-14|vamos": [
-    "somos",
-    "estamos"
   ],
   "pt-f2-15|Pode ser": [
     "Posso ser",
@@ -369,13 +299,11 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f3-02|Na minha opinião": [
     "Na meu opinião",
-    "Para minha opinião",
-    "Na mi opinião"
+    "Para minha opinião"
   ],
   "pt-f3-02|na minha opinião": [
     "na meu opinião",
-    "para minha opinião",
-    "na mi opinião"
+    "para minha opinião"
   ],
   "pt-f3-03|Quando eu era criança": [
     "Quando eu fui criança",
@@ -399,18 +327,15 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f3-04|estava": [
     "era",
-    "estou",
-    "estaba"
+    "estou"
   ],
   "pt-f3-05|Espero que": [
     "Espero de",
-    "Espero o que",
-    "Esperança que"
+    "Espero o que"
   ],
   "pt-f3-05|espero que": [
     "espero de",
-    "espero o que",
-    "esperança que"
+    "espero o que"
   ],
   "pt-f3-06|É importante que": [
     "Está importante que",
@@ -424,13 +349,11 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f3-07|poderia": [
     "puderia",
-    "pudesse",
-    "podría"
+    "pudesse"
   ],
   "pt-f3-07|Poderia": [
     "Puderia",
-    "Pudesse",
-    "Podría"
+    "Pudesse"
   ],
   "pt-f3-08|Seria possível": [
     "Estaria possível",
@@ -457,28 +380,23 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f3-11|A gente": [
     "O gente",
-    "As gentes",
-    "Nos"
+    "As gentes"
   ],
   "pt-f3-11|a gente": [
     "o gente",
-    "as gentes",
-    "nos"
+    "as gentes"
   ],
   "pt-f3-12|onde": [
     "qual",
-    "quem",
-    "cujo"
+    "quem"
   ],
   "pt-f3-13|Vale a pena": [
     "Vale o pena",
-    "Vale pena",
-    "Vala a pena"
+    "Vale pena"
   ],
   "pt-f3-13|vale a pena": [
     "vale o pena",
-    "vale pena",
-    "vala a pena"
+    "vale pena"
   ],
   "pt-f3-14|não está funcionando": [
     "não é funcionando",
@@ -497,23 +415,17 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f3-16|Concordo": [
     "Acordo",
-    "Concordar",
-    "Concuerdo"
+    "Concordar"
   ],
   "pt-f3-16|concordo": [
     "acordo",
-    "concordar",
-    "concuerdo"
+    "concordar"
   ],
   "pt-f3-17|Não é bem assim": [
-    "É não bem assim",
-    "Não é bem así",
-    "Não é bem tão"
+    "É não bem assim"
   ],
   "pt-f3-17|não é bem assim": [
-    "é não bem assim",
-    "não é bem así",
-    "não é bem tão"
+    "é não bem assim"
   ],
   "pt-f3-18|Fiquei sabendo que": [
     "Fiquei saber que",
@@ -636,12 +548,10 @@ export const PT_PLAIN: Record<string, string[]> = {
     "para outro lado"
   ],
   "pt-f4-13|Entendo seu ponto": [
-    "Entendo seu ponta",
     "Entendo sua ponto",
     "Entendo seu pontos"
   ],
   "pt-f4-13|entendo seu ponto": [
-    "entendo seu ponta",
     "entendo sua ponto",
     "entendo seu pontos"
   ],
@@ -654,11 +564,9 @@ export const PT_PLAIN: Record<string, string[]> = {
     "a questão está que"
   ],
   "pt-f4-15|Tem como": [
-    "Tem com",
     "Tem como de"
   ],
   "pt-f4-15|tem como": [
-    "tem com",
     "tem como de"
   ],
   "pt-f4-16|Levando em conta": [
@@ -698,12 +606,10 @@ export const PT_PLAIN: Record<string, string[]> = {
     "por resumo"
   ],
   "pt-f4-20|Se não me engano": [
-    "Se não me enganho",
     "Se não engano",
     "Se não me engane"
   ],
   "pt-f4-20|se não me engano": [
-    "se não me enganho",
     "se não engano",
     "se não me engane"
   ],
@@ -787,13 +693,11 @@ export const PT_PLAIN: Record<string, string[]> = {
   ],
   "pt-f5-11|Informamos que": [
     "Informemos que",
-    "Informamos a que",
-    "Informamo que"
+    "Informamos a que"
   ],
   "pt-f5-11|informamos que": [
     "informemos que",
-    "informamos a que",
-    "informamo que"
+    "informamos a que"
   ],
   "pt-f5-12|Tu é": [
     "Tu são",
@@ -812,14 +716,6 @@ export const PT_PLAIN: Record<string, string[]> = {
     "Por contrário",
     "Pelo contrária",
     "No contrário"
-  ],
-  "pt-f5-14|Aliás": [
-    "Aliás de",
-    "Além"
-  ],
-  "pt-f5-14|aliás": [
-    "aliás de",
-    "além"
   ],
   "pt-f5-15|Inclusive": [
     "Incluso",

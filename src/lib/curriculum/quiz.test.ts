@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { buildQuiz, canQuiz, weakKeysOfScript, fixOf, joinWords, orderCorrect, quizPassed, quizSources, wrongWords } from "./quiz.ts";
+import { buildQuiz, canQuiz, nearOf, weakKeysOfScript, fixOf, joinWords, orderCorrect, quizPassed, quizSources, wrongWords } from "./quiz.ts";
 import { segmentWords } from "../wordSegments.ts";
 
 const fixed = () => 0.42;
@@ -370,9 +370,9 @@ test("고르기: 문장구조·표현 오답은 그 정답의 실수 꼴만 — 
       const quiz = buildQuiz(language, `f|${frame.id}`, { stage: frame.stage, seed: "decoy" });
       for (const q of quiz?.questions ?? []) {
         if (q.kind !== "choose") continue;
-        const others = new Set(allFramesFor(language).filter((one) => one.id !== frame.id).flatMap((one) => one.core.map((core) => core.toLocaleLowerCase())));
         const piece = q.options[q.answer]!;
-        for (const option of q.options) if (option !== piece) assert.ok(!others.has(option.toLocaleLowerCase()) || option.length < 2, `${language} ${frame.id}: ${option}`);
+        const near = new Set(nearOf(language, `f|${frame.id}`, piece).map((one) => one.toLocaleLowerCase()));
+        for (const option of q.options) if (option !== piece) assert.ok(near.has(option.toLocaleLowerCase()), `${language} ${frame.id}: ${option}`);
       }
     }
   }

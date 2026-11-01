@@ -59,7 +59,11 @@ test("닮은 보기 고르기·표현 오답 데이터: 14개 언어 모든 단�
   for (const language of ["ja", "ko", "es", "zh", "en", "id", "vi", "th", "fr", "it", "pt", "ru", "ar", "hi"]) {
     const table = EXPR_DECOYS[language];
     assert.ok(table, language);
-    for (const stage of ladderFor(language)!.stages) for (const expression of stage.expressions) assert.ok((table![expression]?.length ?? 0) >= 2, `${language} ${expression}`);
+    // 줄은 모두 있고, 그럴듯한 실수 꼴이 없는 표현(한 낱말 인사 등)은 비움 — 2026-11-01 오답 표 정리. 대부분은 2개 넘게.
+    const all = ladderFor(language)!.stages.flatMap((stage) => stage.expressions);
+    for (const expression of all) assert.ok(Array.isArray(table![expression]) && table![expression]!.length <= 4, `${language} ${expression}`);
+    const enough = all.filter((expression) => table![expression]!.length >= 2).length;
+    assert.ok(enough / all.length >= 0.75, `${language} ${enough}/${all.length}`);
   }
   const expression = ladderFor("es")!.stages[0]!.expressions.find((e) => buildQuiz("es", `e|${e}`, { kinds: ["type", "choose", "type"], stage: 1 }));
   const quiz = buildQuiz("es", `e|${expression}`, { kinds: ["type", "choose", "type"], stage: 1 });

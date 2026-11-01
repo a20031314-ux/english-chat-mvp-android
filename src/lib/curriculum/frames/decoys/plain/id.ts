@@ -19,12 +19,10 @@ export const ID_PLAIN: Record<string, string[]> = {
     "saya adalah dari"
   ],
   "id-f1-03|Saya": [
-    "Ku",
-    "Adalah"
+    "Ku"
   ],
   "id-f1-03|saya": [
-    "ku",
-    "adalah"
+    "ku"
   ],
   "id-f1-04|kerja di": [
     "kerja ke",
@@ -43,13 +41,11 @@ export const ID_PLAIN: Record<string, string[]> = {
   ],
   "id-f1-06|Terima kasih": [
     "Kasih terima",
-    "Menerima kasih",
-    "Terima sayang"
+    "Menerima kasih"
   ],
   "id-f1-06|terima kasih": [
     "kasih terima",
-    "menerima kasih",
-    "terima sayang"
+    "menerima kasih"
   ],
   "id-f1-07|berapa": [
     "harga"
@@ -61,14 +57,6 @@ export const ID_PLAIN: Record<string, string[]> = {
     "pada mana",
     "mana di",
     "di apa"
-  ],
-  "id-f1-09|Ada": [
-    "Sudah",
-    "Milik"
-  ],
-  "id-f1-09|ada": [
-    "sudah",
-    "milik"
   ],
   "id-f1-10|Saya mau": [
     "Saya kemauan",
@@ -153,16 +141,13 @@ export const ID_PLAIN: Record<string, string[]> = {
     "sampai lihat"
   ],
   "id-f1-20|kilo": [
-    "berat",
-    "timbang"
+    "berat"
   ],
   "id-f2-01|sudah": [
-    "setelah",
-    "selama"
+    "setelah"
   ],
   "id-f2-01|Sudah": [
-    "Setelah",
-    "Selama"
+    "Setelah"
   ],
   "id-f2-02|belum": [
     "bukan",
@@ -173,9 +158,7 @@ export const ID_PLAIN: Record<string, string[]> = {
     "Tidak sudah"
   ],
   "id-f2-03|lagi": [
-    "lagu",
-    "sambil",
-    "lain"
+    "sambil"
   ],
   "id-f2-04|Besok": [
     "Akan"
@@ -184,32 +167,25 @@ export const ID_PLAIN: Record<string, string[]> = {
     "akan"
   ],
   "id-f2-05|ingin": [
-    "hasrat",
-    "cita-cita"
+    "hasrat"
   ],
   "id-f2-06|Ayo": [
-    "Membiarkan",
     "Mengajak"
   ],
   "id-f2-06|ayo": [
-    "membiarkan",
     "mengajak"
   ],
   "id-f2-06|Yuk": [
-    "Membiarkan",
     "Mengajak"
   ],
   "id-f2-06|yuk": [
-    "membiarkan",
     "mengajak"
   ],
   "id-f2-07|Boleh": [
-    "Supaya",
-    "Ingin"
+    "Supaya"
   ],
   "id-f2-07|boleh": [
-    "supaya",
-    "ingin"
+    "supaya"
   ],
   "id-f2-08|Minta tolong": [
     "Minta menolong",
@@ -264,26 +240,21 @@ export const ID_PLAIN: Record<string, string[]> = {
   ],
   "id-f2-16|sakit": [
     "penyakit",
-    "menyakit",
-    "rasa"
+    "menyakit"
   ],
   "id-f2-17|sejak": [
-    "untuk",
-    "sudah"
+    "untuk"
   ],
   "id-f2-17|Sejak": [
-    "Untuk",
-    "Sudah"
+    "Untuk"
   ],
   "id-f2-18|Setiap": [
     "Semua",
-    "Masing-masing",
-    "Sering"
+    "Masing-masing"
   ],
   "id-f2-18|setiap": [
     "semua",
-    "masing-masing",
-    "sering"
+    "masing-masing"
   ],
   "id-f2-19|seru banget": [
     "banget seru",
@@ -316,14 +287,10 @@ export const ID_PLAIN: Record<string, string[]> = {
     "menurutnya aku"
   ],
   "id-f3-02|Kayaknya": [
-    "Mungkinnya",
-    "Suka",
-    "Sama dengan"
+    "Mungkinnya"
   ],
   "id-f3-02|kayaknya": [
-    "mungkinnya",
-    "suka",
-    "sama dengan"
+    "mungkinnya"
   ],
   "id-f3-03|lebih": [
     "banyak",
@@ -331,8 +298,7 @@ export const ID_PLAIN: Record<string, string[]> = {
     "paling"
   ],
   "id-f3-04|paling": [
-    "kebanyakan",
-    "semua"
+    "kebanyakan"
   ],
   "id-f3-05|Bisa tolong": [
     "Bisa menolong",
@@ -351,12 +317,10 @@ export const ID_PLAIN: Record<string, string[]> = {
     "masalah ada"
   ],
   "id-f3-07|Waktu": [
-    "Kapan",
-    "Jam"
+    "Kapan"
   ],
   "id-f3-07|waktu": [
-    "kapan",
-    "jam"
+    "kapan"
   ],
   "id-f3-08|Kalau": [
     "Apakah",
@@ -370,12 +334,10 @@ export const ID_PLAIN: Record<string, string[]> = {
   ],
   "id-f3-09|tertinggal": [
     "meninggal",
-    "meninggalkan",
-    "tertinggi"
+    "meninggalkan"
   ],
   "id-f3-10|yang": [
-    "adalah",
-    "sang"
+    "adalah"
   ],
   "id-f3-11|sudah di": [
     "sudah me",
@@ -388,8 +350,7 @@ export const ID_PLAIN: Record<string, string[]> = {
     "sudah saya mengecek"
   ],
   "id-f3-13|setuju": [
-    "menyetujui",
-    "bersama"
+    "menyetujui"
   ],
   "id-f3-14|Ternyata": [
     "Kenyataan",
@@ -491,7 +452,6 @@ export const ID_PLAIN: Record<string, string[]> = {
     "haruskah"
   ],
   "id-f4-06|bilang bahwa": [
-    "bilang kepada",
     "bilang yang",
     "bilang apakah"
   ],
@@ -589,12 +549,10 @@ export const ID_PLAIN: Record<string, string[]> = {
     "berinti"
   ],
   "id-f4-18|Dengan kata lain": [
-    "Dalam kata lain",
     "Dengan lain kata",
     "Pada kata lain"
   ],
   "id-f4-18|dengan kata lain": [
-    "dalam kata lain",
     "dengan lain kata",
     "pada kata lain"
   ],

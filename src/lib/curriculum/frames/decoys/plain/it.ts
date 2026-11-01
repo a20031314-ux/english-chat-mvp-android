@@ -10,13 +10,11 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f1-02|Sono di": [
     "Sono da",
-    "Sono del",
-    "Ho di"
+    "Sono del"
   ],
   "it-f1-02|sono di": [
     "sono da",
-    "sono del",
-    "ho di"
+    "sono del"
   ],
   "it-f1-03|Sono": [
     "Siamo",
@@ -108,12 +106,10 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f1-12|Non capisco": [
     "No capisco",
-    "Non capo",
     "Capisco non"
   ],
   "it-f1-12|non capisco": [
     "no capisco",
-    "non capo",
     "capisco non"
   ],
   "it-f1-13|Può ripetere": [
@@ -136,18 +132,15 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f1-15|Che cos'è": [
     "Che cosa sono",
-    "Che è cosa",
-    "Che cos'hai"
+    "Che è cosa"
   ],
   "it-f1-15|che cos'è": [
     "che cosa sono",
-    "che è cosa",
-    "che cos'hai"
+    "che è cosa"
   ],
   "it-f1-16|a presto": [
     "al presto",
-    "di presto",
-    "a prossimo"
+    "di presto"
   ],
   "it-f1-17|Come si dice": [
     "Come si dici",
@@ -160,19 +153,15 @@ export const IT_PLAIN: Record<string, string[]> = {
     "come si dire"
   ],
   "it-f1-18|signora": [
-    "signoro",
-    "signoria",
-    "segnora"
+    "signoro"
   ],
   "it-f2-01|Ieri": [
     "Domani",
-    "Fra poco",
-    "Dopodomani"
+    "Fra poco"
   ],
   "it-f2-01|ieri": [
     "domani",
-    "fra poco",
-    "dopodomani"
+    "fra poco"
   ],
   "it-f2-02|sono andat": [
     "ho andat",
@@ -221,33 +210,27 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f2-07|Posso": [
     "Potere",
-    "Possio",
-    "Poto"
+    "Possio"
   ],
   "it-f2-07|posso": [
     "potere",
-    "possio",
-    "poto"
+    "possio"
   ],
   "it-f2-08|Puoi": [
     "Potere",
-    "Puoti",
     "Possi"
   ],
   "it-f2-08|puoi": [
     "potere",
-    "puoti",
     "possi"
   ],
   "it-f2-09|Domani": [
     "Ieri",
-    "Due giorni fa",
-    "Domane"
+    "Due giorni fa"
   ],
   "it-f2-09|domani": [
     "ieri",
-    "due giorni fa",
-    "domane"
+    "due giorni fa"
   ],
   "it-f2-10|Ti va di": [
     "Ti va a",
@@ -261,13 +244,11 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f2-11|Volentieri": [
     "Volentiere",
-    "Volentemente",
-    "Voglioso"
+    "Volentemente"
   ],
   "it-f2-11|volentieri": [
     "volentiere",
-    "volentemente",
-    "voglioso"
+    "volentemente"
   ],
   "it-f2-12|Che peccato": [
     "Che peccata",
@@ -329,12 +310,10 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f2-18|Ho già": [
     "Avo già",
-    "Ho mai",
     "Abbio già"
   ],
   "it-f2-18|ho già": [
     "avo già",
-    "ho mai",
     "abbio già"
   ],
   "it-f2-19|Com'è andat": [
@@ -358,24 +337,18 @@ export const IT_PLAIN: Record<string, string[]> = {
     "quando piccol"
   ],
   "it-f3-02|Mentre": [
-    "Durante",
-    "Mentra",
-    "Fra"
+    "Durante"
   ],
   "it-f3-02|mentre": [
-    "durante",
-    "mentra",
-    "fra"
+    "durante"
   ],
   "it-f3-03|Sarà": [
     "Serà",
-    "Esserà",
-    "Sarano"
+    "Esserà"
   ],
   "it-f3-03|sarà": [
     "serà",
-    "esserà",
-    "sarano"
+    "esserà"
   ],
   "it-f3-04|Gli ho": [
     "Gli sono",
@@ -389,13 +362,11 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f3-05|Ci sono stat": [
     "Ci ho stat",
-    "Ne sono stat",
-    "Ci sono stand"
+    "Ne sono stat"
   ],
   "it-f3-05|ci sono stat": [
     "ci ho stat",
-    "ne sono stat",
-    "ci sono stand"
+    "ne sono stat"
   ],
   "it-f3-06|Ne ho": [
     "Ne sono",
@@ -458,24 +429,18 @@ export const IT_PLAIN: Record<string, string[]> = {
     "dimme"
   ],
   "it-f3-12|Prova": [
-    "Prove",
-    "Proba",
-    "Provere"
+    "Prove"
   ],
   "it-f3-12|prova": [
-    "prove",
-    "proba",
-    "provere"
+    "prove"
   ],
   "it-f3-13|Scusa il ritardo": [
     "Scusa la ritardo",
-    "Scusa lo ritardo",
-    "Scusa il retardo"
+    "Scusa lo ritardo"
   ],
   "it-f3-13|scusa il ritardo": [
     "scusa la ritardo",
-    "scusa lo ritardo",
-    "scusa il retardo"
+    "scusa lo ritardo"
   ],
   "it-f3-14|Non ti preoccupare": [
     "Non te preoccupare",
@@ -529,16 +494,6 @@ export const IT_PLAIN: Record<string, string[]> = {
     "per fortune",
     "a fortuna",
     "di fortuna"
-  ],
-  "it-f3-20|Magari": [
-    "Magare",
-    "Magara",
-    "Magaro"
-  ],
-  "it-f3-20|magari": [
-    "magare",
-    "magara",
-    "magaro"
   ],
   "it-f4-01|Sarebbe meglio": [
     "Sarebbe migliore",
@@ -657,12 +612,10 @@ export const IT_PLAIN: Record<string, string[]> = {
   ],
   "it-f4-16|Il punto è che": [
     "Il punto è di",
-    "La punta è che",
     "Il punto sia che"
   ],
   "it-f4-16|il punto è che": [
     "il punto è di",
-    "la punta è che",
     "il punto sia che"
   ],
   "it-f4-17|Hai ragione": [
@@ -692,12 +645,10 @@ export const IT_PLAIN: Record<string, string[]> = {
     "vale il pena"
   ],
   "it-f4-20|Per quanto riguarda": [
-    "Per quanto riguardo",
-    "Per quanto ragguarda"
+    "Per quanto riguardo"
   ],
   "it-f4-20|per quanto riguarda": [
-    "per quanto riguardo",
-    "per quanto ragguarda"
+    "per quanto riguardo"
   ],
   "it-f5-01|Se avessi accettato": [
     "Se avrei accettato",

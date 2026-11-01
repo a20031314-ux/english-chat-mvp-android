@@ -151,13 +151,11 @@ export const EN_PLAIN: Record<string, string[]> = {
   ],
   "en-f2-01|Last night": [
     "Yesterday night",
-    "Past night",
-    "Before night"
+    "Past night"
   ],
   "en-f2-01|last night": [
     "yesterday night",
-    "past night",
-    "before night"
+    "past night"
   ],
   "en-f2-02|How was your": [
     "How were your",
@@ -254,18 +252,15 @@ export const EN_PLAIN: Record<string, string[]> = {
   ],
   "en-f2-15|any": [
     "much",
-    "every",
-    "one"
+    "every"
   ],
   "en-f2-16|much": [
     "lot",
-    "a lot",
-    "plenty"
+    "a lot"
   ],
   "en-f2-16|many": [
     "lot",
-    "a lot",
-    "plenty"
+    "a lot"
   ],
   "en-f2-17|Is this": [
     "Is these",
@@ -359,9 +354,7 @@ export const EN_PLAIN: Record<string, string[]> = {
     "must to"
   ],
   "en-f3-06|had to": [
-    "had for",
-    "haded to",
-    "hads to"
+    "had for"
   ],
   "en-f3-07|decided to": [
     "decided for",
@@ -375,8 +368,7 @@ export const EN_PLAIN: Record<string, string[]> = {
   ],
   "en-f3-09|who": [
     "which",
-    "what",
-    "how"
+    "what"
   ],
   "en-f3-09|where": [
     "which",
@@ -484,7 +476,6 @@ export const EN_PLAIN: Record<string, string[]> = {
     "it turned off"
   ],
   "en-f4-01|If I were": [
-    "If I was being",
     "If I am",
     "If I would be"
   ],
@@ -804,12 +795,10 @@ export const EN_PLAIN: Record<string, string[]> = {
     "bear in the mind"
   ],
   "en-f5-18|Be that as it may": [
-    "Be that as it might",
     "Being that as it may",
     "Be that like it may"
   ],
   "en-f5-18|be that as it may": [
-    "be that as it might",
     "being that as it may",
     "be that like it may"
   ]

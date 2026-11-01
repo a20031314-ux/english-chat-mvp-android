@@ -19,12 +19,10 @@ export const ES_PLAIN: Record<string, string[]> = {
     "soy a"
   ],
   "es-f1-03|Soy": [
-    "Son",
     "Yo es",
     "Somos"
   ],
   "es-f1-03|soy": [
-    "son",
     "yo es",
     "somos"
   ],
@@ -176,13 +174,11 @@ export const ES_PLAIN: Record<string, string[]> = {
   ],
   "es-f2-01|Ayer": [
     "Mañana",
-    "Pasado mañana",
-    "Dentro de poco"
+    "Pasado mañana"
   ],
   "es-f2-01|ayer": [
     "mañana",
-    "pasado mañana",
-    "dentro de poco"
+    "pasado mañana"
   ],
   "es-f2-02|fui": [
     "ido",
@@ -191,13 +187,11 @@ export const ES_PLAIN: Record<string, string[]> = {
   ],
   "es-f2-03|Tuve": [
     "Tení",
-    "Tenido",
-    "Tenó"
+    "Tenido"
   ],
   "es-f2-03|tuve": [
     "tení",
-    "tenido",
-    "tenó"
+    "tenido"
   ],
   "es-f2-04|Voy a": [
     "Voy de",
@@ -419,17 +413,12 @@ export const ES_PLAIN: Record<string, string[]> = {
   ],
   "es-f3-07|cuando": [
     "cuanto",
-    "cual",
-    "quando"
+    "cual"
   ],
   "es-f3-08|Antes": [
-    "Antiguo",
-    "Mañana",
     "Hace"
   ],
   "es-f3-08|antes": [
-    "antiguo",
-    "mañana",
     "hace"
   ],
   "es-f3-09|Al final": [
@@ -825,13 +814,11 @@ export const ES_PLAIN: Record<string, string[]> = {
   ],
   "es-f5-11|Sería posible que": [
     "Sería posible de que",
-    "Sería posibles que",
-    "Fuera posible que"
+    "Sería posibles que"
   ],
   "es-f5-11|sería posible que": [
     "sería posible de que",
-    "sería posibles que",
-    "fuera posible que"
+    "sería posibles que"
   ],
   "es-f5-12|Le importaría": [
     "Lo importaría",
@@ -876,12 +863,10 @@ export const ES_PLAIN: Record<string, string[]> = {
     "por definitiva"
   ],
   "es-f5-17|A fin de cuentas": [
-    "Al fin de cuentas",
     "A fin de cuenta",
     "A fines de cuentas"
   ],
   "es-f5-17|a fin de cuentas": [
-    "al fin de cuentas",
     "a fin de cuenta",
     "a fines de cuentas"
   ],
