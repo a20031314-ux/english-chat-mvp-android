@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "November 1, 2026";
-const LAST_UPDATED_KO = "2026년 11월 1일";
+const LAST_UPDATED_EN = "November 2, 2026";
+const LAST_UPDATED_KO = "2026년 11월 2일";
 
 type Section = { title: string; body: string[] };
 
@@ -93,6 +93,7 @@ const en: Section[] = [
     body: [
       "We use the following providers to run languagebank. They process information only to provide their service to us:",
       "• OpenAI (United States) — generating replies, corrections and explanations; transcribing speech; generating speech; translation.",
+      "• Mistral AI (France) — generating speech: the text to be read aloud (the tutor's lines and any sentence you tap to hear).",
       "• Vercel (United States) — hosting the app's web pages and server, including server logs.",
       "• Upstash (via Vercel) — storing usage counts, points and the conversation records described above.",
       "• RevenueCat (United States) — subscription and purchase status (and your account ID, if you sign in, so a subscription follows your account).",
@@ -227,6 +228,7 @@ const ko: Section[] = [
     body: [
       "서비스 운영을 위해 아래 업체에 정보 처리를 맡기며, 이 과정에서 정보가 국외로 이전됩니다. 이전은 이용자가 해당 기능을 사용할 때 네트워크를 통해 이루어집니다.",
       "• OpenAI (미국): 채팅·통화·영상 내용, 통화 음성(글자 변환용), 분석 요청 문장 / 답변·교정·설명 생성, 음성 인식, 음성 합성, 번역 / 처리 후 OpenAI 정책에 따라 남용 감시를 위해 제한된 기간 보관",
+      "• Mistral AI (프랑스): 소리로 읽을 글(튜터의 말, 듣기를 누른 문장) / 음성 합성 / 각 서비스 정책에 따름",
       "• Vercel (미국): 요청 내용과 서버 로그 / 앱 웹페이지와 서버 호스팅 / 호스팅 제공자가 정한 기간",
       "• Upstash (Vercel을 통해 이용): 익명 앱 식별자, 이용 횟수, 포인트, “보관하는 대화 내용”의 기록과 대화 정보 / 데이터 저장 / 이 방침의 보관 기간",
       "• RevenueCat (미국): 익명 앱 식별자(로그인한 경우 계정 ID), 구독·구매 상태 / 결제 상태 확인, 구독을 계정에 연결 / 구독 관리에 필요한 기간",

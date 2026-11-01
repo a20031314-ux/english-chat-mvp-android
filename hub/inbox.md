@@ -185,3 +185,6 @@
 - 2026-11-01 watch → dev: [ai] src/components/roleplay/CallRecap.tsx:117 — textDiff 낱말 자르기가 wordSegments.ts를 안 거쳐 태국어는 문장 전체 취소선·초록, 🔎 My에서 찾기도 문장 전체로 찾음 (태국어는 wordSegments 토큰으로 diff)
 - 2026-11-01 watch → dev: [ai] src/components/roleplay/CallParts.tsx:328 — CallPages 넘김 맞춤 setTimeout(settle)이 닫을 때 안 지워짐 (useEffect 정리에서 clearTimeout)
 - 2026-11-01 watch → dev: [my] src/components/studyMap/Logbank.tsx:258 — 바닥 My에선 layerOnly 광고가 안 그려지는데 감싼 <li>가 남아 세 번째 날 뒤 간격이 하나 더 (전체 화면일 때만 li)
+
+- → store (dev 2026-11-02): 튜터 목소리가 Mistral Voxtral(프랑스)로 감 — 처리방침에는 넣었음. 그런데 처리방침에 **Anthropic(채팅 답·교정, 미국)·ElevenLabs(받아쓰기)가 원래 없음**, iOS AI 동의 글(`aiConsentBody`)도 OpenAI만 적음(Apple 5.1.2 — 보내는 곳을 이름으로). iOS 올리기 전에 사용자 확인 후 같이 고치기.
+- → qa (dev 2026-11-02): 폰에서 통화·채팅 듣기 목소리(Voxtral 흉내) — 끊김·첫 소리 늦음·튜터가 줄마다 다른 사람처럼 들리는지(앱 녹음 줄·캐시 줄과 섞일 때).

@@ -99,28 +99,20 @@ test("the monthly grant is never sold at a loss", () => {
   );
 });
 
-test("the grant is the thin part of the plan, and by how much", () => {
-  // Recorded rather than asserted away: a subscriber who spends the whole grant
-  // on call learning leaves just under half of their payment behind (47.5% as
-  // of 2026-10-06), and everything else they do that month — chat, analysis,
-  // glossing, speech — comes out of that. Bundle buyers leave two thirds. This
-  // is the number to revisit first when real usage exists.
+test("the grant clears the bundle floor once the voice is Voxtral", () => {
+  // Was "the grant is the thin part of the plan" (47.5% as of 2026-10-06): a
+  // subscriber spending the whole grant on call learning left under half of
+  // their payment behind. Voice is most of a call minute, and moving it to
+  // Voxtral (2026-11-02, about half the price per spoken minute in English)
+  // took the grant over the floor the bundles are held to. If this fails, the
+  // voice got dearer again and the old warning applies.
   const margin = grantMargin(
     PREMIUM_MONTHLY_PRICE_KRW,
     PREMIUM_MONTHLY_IMPORT_POINTS,
   );
   assert.ok(
-    margin.marginShare < MIN_BUNDLE_MARGIN,
-    "if the grant now clears the bundle floor, this test has served its purpose and should say so",
-  );
-
-  // What the grant would have to be to clear the same floor the bundles do.
-  const affordable = Math.floor(
-    (margin.netUsd * (1 - MIN_BUNDLE_MARGIN)) / pointCostUsd(),
-  );
-  assert.ok(
-    affordable < PREMIUM_MONTHLY_IMPORT_POINTS,
-    "the grant is only thin while it is larger than what the price supports",
+    margin.marginShare >= MIN_BUNDLE_MARGIN,
+    `the grant keeps ${(margin.marginShare * 100).toFixed(1)}%, under the bundle floor again`,
   );
 });
 

@@ -35,6 +35,9 @@ export const TTS_USD_PER_MINUTE_BY_MODEL: Record<string, { usd: number; source: 
   "gpt-4o-mini-tts": { usd: 0.015, source: "OpenAI pricing — cost.ts에서 가장 약한 숫자" },
   // Realtime 오디오 출력 초당 약 20토큰 × $20/1M + 글 토큰 — 6초 약 3.7원(hub/drafts/speech-models-2026-10-21.md).
   "gpt-realtime-2.1-mini": { usd: 0.0264, source: "hub/drafts/speech-models-2026-10-21.md 어림" },
+  // 100만 글자 $13 × 말하는 빠르기(운영 샘플 2026-11-02): 영어 초당 16.8자 → 분당 $0.0131. 한국어 $0.0057·일본어 $0.0045·중국어 $0.0039,
+  // 스페인어 $0.0108·프랑스어 $0.0141 — 표에는 가장 많이 배우는 영어 값(대부분 언어보다 높아 넉넉한 쪽).
+  "voxtral-mini-tts-3-0": { usd: 0.0131, source: "Mistral 가격 $13/1M자 × 운영 샘플 말 빠르기(영어), hub/MODELS.md" },
 };
 
 // fallback: 앱 화면 쪽(`cost.ts` → billingService)에서 단가가 빠졌다고 앱이 멈추지 않게. 빠진 단가는 테스트(CI)가 잡는다.

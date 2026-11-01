@@ -128,9 +128,13 @@ export const SPEECH_DEFAULTS = {
   /** realtime 목소리가 첫 소리 전에 실패했을 때만(2027-01-06 종료 — 그 뒤엔 대비 없음). */
   speechTtsModel: "gpt-4o-mini-tts",
   realtimeTtsModel: "gpt-realtime-2.1-mini",
+  /** 튜터 목소리 기본(2026-11-02): id·th 밖의 학습 언어는 Voxtral(튜터 목소리 흉내, server/voxtralSpeech.ts) — 실패하면 위 realtime. */
+  voxtralTtsModel: "voxtral-mini-tts-3-0",
 } as const;
 
 /** 지금 코드 기본값의 튜터 목소리 모델. */
 export function codeTtsModel(): string {
+  // 비용 표의 목소리 = 대부분의 줄을 읽는 Voxtral(id·th만 realtime — 학습자가 적어 표에서는 뺌).
+  if (SPEECH_DEFAULTS.voxtralTtsModel) return SPEECH_DEFAULTS.voxtralTtsModel;
   return SPEECH_DEFAULTS.ttsEngine === "realtime" ? SPEECH_DEFAULTS.realtimeTtsModel : SPEECH_DEFAULTS.speechTtsModel;
 }

@@ -6,7 +6,7 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
-import { voxtralConfigured, voxtralRawStream, voxtralSpeech, voxtralVoices } from "@/lib/server/voxtralSpeech";
+import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
@@ -122,6 +122,32 @@ async function synthesize(
     const made = await voxtralSpeech({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), model: trialValue(request, "x-tts-voxtral-model"), refAudio });
     if (!made.ok) return jsonWithCors(request, { engine: "voxtral", status: made.status, error: made.error }, { status: 502 });
     return jsonWithCors(request, { engine: "voxtral", spoken, ms: made.ms, wavBase64: made.wav.toString("base64") });
+  }
+
+  // 기본 엔진 Voxtral(2026-11-02, id·th 빼고 — 튜터의 지금 목소리를 흉내, server/voxtralSpeech.ts). 점검 머리글로 realtime·speech를 고르면 예전 엔진.
+  // 첫 소리 전에 실패하면 아래 예전 엔진으로 — 소리가 안 나는 것보다 낫다.
+  const languageCode = coerceLanguageCode(speechLangPrefix(lang));
+  const reference = voxtralReference(languageCode, voice);
+  const forcedEngine = trialValue(request, "x-tts-engine");
+  if (reference && voxtralEnabled() && forcedEngine !== "realtime" && forcedEngine !== "speech") {
+    const started = Date.now();
+    try {
+      const audio = await voxtralStream({ text: spoken, refAudio: reference });
+      if (wantsTrialReport(request)) {
+        const chunks: Uint8Array[] = [];
+        const reader = audio.getReader();
+        for (;;) {
+          const next = await reader.read();
+          if (next.done) break;
+          chunks.push(next.value);
+        }
+        const pcm = Buffer.concat(chunks);
+        return jsonWithCors(request, { engine: "voxtral", voice, spoken, audioSeconds: pcm.byteLength / 48000, pcmBase64: pcm.toString("base64"), ms: Date.now() - started });
+      }
+      return new NextResponse(audio, { status: 200, headers: streamHeaders(request, lang, shared) });
+    } catch (error) {
+      console.error("[tts] voxtral failed, falling back:", error);
+    }
   }
 
   if (ttsEngine(request) === "realtime") {

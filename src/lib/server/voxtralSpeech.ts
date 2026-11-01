@@ -1,8 +1,14 @@
 /**
- * Mistral Voxtral 읽어 주기 — 점검 사용자만 써 보는 목소리 후보(2026-11-01 사용자 "통화 가격을 낮출 방법" → 목소리 원가가 통화의 약 80%).
- * 공개 가격 100만 글자 $13(지금 목소리 gpt-realtime-2.1-mini의 약 1/10 어림). 품질·언어(id·th 미확인)는 샘플로 듣고 정한다.
- * 실제 사용자는 쓰지 않는다 — /api/tts가 점검 머리글(x-tts-engine: voxtral)일 때만 부른다. 키는 Vercel `MISTRAL_API_KEY`.
+ * Mistral Voxtral 읽어 주기 — 튜터 목소리의 기본 엔진(2026-11-02, 사용자 "인니어, 태국어 빼고 다 바꾸고").
+ *
+ * 왜: 통화 원가의 대부분이 목소리. Voxtral은 100만 글자 $13 — 말한 1분에 영어 약 $0.013(지금 Realtime 약 $0.026의 절반),
+ * 한·중·일은 글자가 적어 약 $0.004~0.006. 미리 만든 목소리 대신 튜터의 지금 목소리를 흉내 낸다(`ref_audio`,
+ * 참고 소리는 voiceRefs.generated.ts — scripts/voice-refs.mjs) — 언어마다 여자·남자가 다 있고, 앱에 녹음된 줄과 같은 사람처럼.
+ * 키는 Vercel `MISTRAL_API_KEY`, 끄기는 `VOXTRAL_TTS=off`(그러면 예전 Realtime). 실패하면 /api/tts가 예전 엔진으로.
  */
+import { VOICE_REFS } from "./voiceRefs.generated.ts";
+import { speaksWithVoxtral } from "./voxtralLanguages.ts";
+
 const BASE = "https://api.mistral.ai/v1/audio";
 export const VOXTRAL_TTS_MODEL = process.env.MISTRAL_TTS_MODEL?.trim() || "voxtral-mini-tts-3-0";
 
@@ -15,11 +21,141 @@ export function voxtralConfigured(): boolean {
   return Boolean(key());
 }
 
+/** OpenAI 목소리 이름 → 여자·남자(운영 샘플 높이로 확인, chatPartner.ts 주석). 장면 목소리가 튜터 표에 없을 때 같은 성별 튜터로. */
+const VOICE_GENDER: Record<string, "f" | "m"> = {
+  alloy: "f", coral: "f", nova: "f", sage: "f", shimmer: "f", marin: "f",
+  ash: "m", ballad: "m", echo: "m", fable: "m", onyx: "m", verse: "m", cedar: "m",
+};
+
+/**
+ * 이 언어·목소리를 Voxtral로 읽을 참고 소리(base64 mp3). 없으면 null → 예전 엔진.
+ * 튜터 표의 목소리면 그 성별, 다른 장면 목소리(예전 앱의 es verse 등)도 이름의 성별로 — 그 언어 튜터 목소리를 흉내.
+ */
+export function voxtralReference(language: string, voice: string): string | null {
+  if (!speaksWithVoxtral(language)) return null;
+  const gender = VOICE_GENDER[voice];
+  if (!gender) return null;
+  return VOICE_REFS[`${language}-${gender}`] ?? null;
+}
+
+/** 기본으로 Voxtral을 쓰나(키가 있고 `VOXTRAL_TTS=off`가 아니면). */
+export function voxtralEnabled(): boolean {
+  return voxtralConfigured() && process.env.VOXTRAL_TTS?.trim().toLowerCase() !== "off";
+}
+
 /** 미리 정해 둔 목소리 목록(slug·id·언어 등 Mistral이 주는 그대로). */
 export async function voxtralVoices(offset = 0): Promise<unknown> {
   const response = await fetch(`${BASE}/voices?limit=100&offset=${offset}`, { headers: { Authorization: `Bearer ${key()}` } });
   const body = await response.json().catch(() => null);
   return { status: response.status, body };
+}
+
+function speechBody(input: { text: string; voice?: string; refAudio?: string; model?: string }, format: string, stream: boolean) {
+  return JSON.stringify({
+    model: input.model || VOXTRAL_TTS_MODEL,
+    input: input.text,
+    ...(input.refAudio ? { ref_audio: input.refAudio } : { voice_id: input.voice }),
+    response_format: format,
+    ...(stream ? { stream: true } : {}),
+  });
+}
+
+/** float32 LE → s16le. 남은 바이트(4의 배수가 아닌 끝)는 다음 조각과 이어 붙이도록 돌려준다. */
+export function float32ToPcm16(bytes: Uint8Array): { pcm: Uint8Array; rest: Uint8Array } {
+  const whole = bytes.byteLength - (bytes.byteLength % 4);
+  const view = new DataView(bytes.buffer, bytes.byteOffset, whole);
+  const pcm = new Uint8Array(whole / 2);
+  const out = new DataView(pcm.buffer);
+  for (let i = 0, o = 0; i < whole; i += 4, o += 2) {
+    const sample = Math.max(-1, Math.min(1, view.getFloat32(i, true)));
+    out.setInt16(o, sample < 0 ? sample * 0x8000 : sample * 0x7fff, true);
+  }
+  return { pcm, rest: bytes.slice(whole) };
+}
+
+/**
+ * SSE(`speech.audio.delta` → audio_data base64 float32 24kHz) 를 s16le 24kHz 조각으로.
+ * 줄 묶음이 조각 경계에서 끊겨도 이어 붙여 읽는다.
+ */
+export function sseAudioDecoder(): { push(text: string): Uint8Array[]; done: () => boolean } {
+  let buffer = "";
+  let rest: Uint8Array = new Uint8Array(0);
+  let finished = false;
+  return {
+    push(text: string) {
+      buffer += text;
+      const out: Uint8Array[] = [];
+      let cut: number;
+      while ((cut = buffer.indexOf("\n\n")) >= 0) {
+        const block = buffer.slice(0, cut);
+        buffer = buffer.slice(cut + 2);
+        const data = block.split("\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trim()).join("");
+        if (!data) continue;
+        let event: { type?: string; audio_data?: unknown };
+        try {
+          event = JSON.parse(data);
+        } catch {
+          continue;
+        }
+        if (event.type === "speech.audio.done") finished = true;
+        if (typeof event.audio_data !== "string") continue;
+        const raw = Buffer.from(event.audio_data, "base64");
+        const joined = new Uint8Array(rest.byteLength + raw.byteLength);
+        joined.set(rest);
+        joined.set(raw, rest.byteLength);
+        const converted = float32ToPcm16(joined);
+        rest = converted.rest;
+        if (converted.pcm.byteLength) out.push(converted.pcm);
+      }
+      return out;
+    },
+    done: () => finished,
+  };
+}
+
+/**
+ * 흘려 받는 소리(s16le 24kHz) — 첫 소리가 올 때까지 기다렸다가 돌려준다. 그 전에 실패하면 throw(부른 쪽이 예전 엔진으로).
+ */
+export async function voxtralStream(input: { text: string; refAudio?: string; voice?: string }): Promise<ReadableStream<Uint8Array>> {
+  const response = await fetch(`${BASE}/speech`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json", Accept: "text/event-stream" },
+    body: speechBody(input, "pcm", true),
+    signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok || !response.body) throw new Error(`voxtral ${response.status}: ${(await response.text().catch(() => "")).slice(0, 200)}`);
+  const reader = response.body.getReader();
+  const text = new TextDecoder();
+  const decoder = sseAudioDecoder();
+  // 첫 소리 조각까지 읽어 둔다.
+  const first: Uint8Array[] = [];
+  while (!first.length) {
+    const next = await reader.read();
+    if (next.done) throw new Error("voxtral: no audio");
+    first.push(...decoder.push(text.decode(next.value, { stream: true })));
+  }
+  return new ReadableStream<Uint8Array>({
+    start(controller) {
+      for (const chunk of first) controller.enqueue(chunk);
+    },
+    async pull(controller) {
+      for (;;) {
+        const next = await reader.read().catch(() => ({ done: true as const, value: undefined }));
+        if (next.done) {
+          controller.close();
+          return;
+        }
+        const chunks = decoder.push(text.decode(next.value, { stream: true }));
+        if (chunks.length) {
+          for (const chunk of chunks) controller.enqueue(chunk);
+          return;
+        }
+      }
+    },
+    cancel() {
+      void reader.cancel();
+    },
+  });
 }
 
 /** 점검: 흘려 받기(stream) 답의 앞부분을 글 그대로 — 사건 이름·자료 모양을 보려고. */
@@ -28,7 +164,7 @@ export async function voxtralRawStream(input: { text: string; voice?: string; re
   const response = await fetch(`${BASE}/speech`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json", Accept: "text/event-stream" },
-    body: JSON.stringify({ model: VOXTRAL_TTS_MODEL, input: input.text, ...(input.refAudio ? { ref_audio: input.refAudio } : { voice_id: input.voice }), response_format: input.format || "pcm", stream: true }),
+    body: speechBody(input, input.format || "pcm", true),
   });
   let head = "";
   let bytes = 0;
@@ -51,7 +187,7 @@ export async function voxtralSpeech(input: { text: string; voice: string; model?
   const response = await fetch(`${BASE}/speech`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: input.model || VOXTRAL_TTS_MODEL, input: input.text, ...(input.refAudio ? { ref_audio: input.refAudio } : { voice_id: input.voice }), response_format: "wav" }),
+    body: speechBody(input, "wav", false),
   });
   const body = (await response.json().catch(() => null)) as { audio_data?: unknown } | null;
   if (!response.ok || !body || typeof body.audio_data !== "string") return { ok: false, status: response.status, error: body };
