@@ -11,6 +11,7 @@ import { scriptFor, type ScriptCourse } from "../curriculum/scripts/index.ts";
 import { bankScriptsFor, scriptsFor } from "../curriculum/stageScripts.ts";
 import { framesFor } from "../curriculum/frames.ts";
 import { FUNCTIONS } from "../curriculum/functions.ts";
+import { EXTRA_EXAMPLES } from "../curriculum/examples/index.ts";
 
 export type StageLineView = { who: "A" | "B"; text: string; gloss: string };
 export type StageDialogueView = { setting: string; lines: StageLineView[] };
@@ -286,6 +287,10 @@ export function scriptGlossTexts(language: string, stage: number): string[] {
     add(script.setting);
     for (const line of script.lines) add(line.gloss);
   }
+  // 여러 소재가 같이 쓰던 문장을 바꾼 새 예문(curriculum/examples, 2026-11-01) — 그 단계 문장구조·표현 것, 맨 뒤에.
+  const extra = EXTRA_EXAMPLES[language] ?? {};
+  const keys = [...framesFor(language, stage).map((frame) => `f|${frame.id}`), ...(ladderFor(language)?.stages.find((one) => one.order === stage)?.expressions ?? []).map((e) => `e|${e}`)];
+  for (const key of keys) for (const one of extra[key] ?? []) add({ en: one.en });
   return out;
 }
 

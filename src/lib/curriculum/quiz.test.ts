@@ -377,3 +377,18 @@ test("고르기: 문장구조·표현 오답은 그 정답의 실수 꼴만 — 
     }
   }
 });
+
+test("여러 소재가 같이 쓰던 문장: 새 예문이 있으면 그 열쇠는 원래 문장 대신 새 예문(es·ja)", async () => {
+  const { EXTRA_EXAMPLES } = await import("./examples/index.ts");
+  for (const language of ["es", "ja"]) {
+    const table = EXTRA_EXAMPLES[language];
+    if (!table) continue;
+    for (const [key, list] of Object.entries(table).slice(0, 30)) {
+      const texts = quizSources(language, key).map((source) => source.text);
+      for (const one of list) {
+        assert.ok(!texts.includes(one.replaces), `${language} ${key}: 원래 문장이 남음`);
+        assert.ok(texts.includes(one.text), `${language} ${key}: 새 예문 없음 ${one.text}`);
+      }
+    }
+  }
+});

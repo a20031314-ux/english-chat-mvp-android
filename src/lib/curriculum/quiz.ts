@@ -15,6 +15,7 @@ import { wordNearMisses } from "./wordDecoys.ts";
 import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
+import { EXTRA_EXAMPLES, SHARED_EXAMPLES_OFF } from "./examples/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
@@ -177,7 +178,38 @@ function shownLast(language: string, key: string, list: QuizSource[], later?: Re
   return [...list.filter((source) => !shown.has(source.text)), ...list.filter((source) => shown.has(source.text))];
 }
 
+/**
+ * 여러 소재가 같이 쓰던 문장은 한 소재만 쓰고 나머지는 새 예문으로(curriculum/examples, 2026-11-01 사용자 "요소가 3개라면 추가 문장은 2개") —
+ * 같은 날·며칠 안에 다른 열쇠로 같은 문장이 또 나오던 것(퀴즈 전수 점검 1,397문제). 문장구조(f|)·표현(e|)만.
+ */
 function baseSources(language: string, key: string): QuizSource[] {
+  const raw = rawSources(language, key);
+  const extra = SHARED_EXAMPLES_OFF.has(language) ? undefined : EXTRA_EXAMPLES[language]?.[key];
+  if (!extra?.length) return raw;
+  const frame = key.startsWith("f|") ? frameOf(language, key.slice(2)) : undefined;
+  const pieceIn = (text: string) => (frame ? frame.core.find((core) => core && text.includes(core)) : key.startsWith("e|") ? pieceOf(text, key.slice(2)) ?? undefined : undefined);
+  const gone = new Set(extra.map((one) => one.replaces));
+  const stageOf = new Map(raw.map((source) => [source.text, source.stage]));
+  const added = extra.flatMap((one): QuizSource[] => {
+    const piece = pieceIn(one.text);
+    if (!piece) return [];
+    return [{ text: one.text, gloss: { en: one.en, ko: one.ko }, from: frame?.id ?? "extra", stage: stageOf.get(one.replaces) ?? frame?.stage ?? 1, piece, who: "me", ...(frame ? { frame: frame.id } : {}) }];
+  });
+  // 원래 문장 자리에 새 예문(같은 차례 — 앞 재료가 먼저 나오는 순서를 지킨다).
+  const out: QuizSource[] = [];
+  for (const source of raw) {
+    if (!gone.has(source.text)) {
+      out.push(source);
+      continue;
+    }
+    const next = added.find((one) => extra.find((e) => e.text === one.text)?.replaces === source.text);
+    if (next) out.push(next);
+  }
+  for (const one of added) if (!out.includes(one)) out.push(one);
+  return out;
+}
+
+function rawSources(language: string, key: string): QuizSource[] {
   if (key.startsWith("u|") || key.startsWith("w|")) return GAP_SOURCES.get(language)?.get(key) ?? [];
   const scripts = allScriptsFor(language);
   const out: QuizSource[] = [];
