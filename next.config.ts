@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
   ...(capacitorStatic ? { output: "export" as const } : {}),
   env: {
     NEXT_PUBLIC_APP_VERSION: appVersion,
+    // 이 화면을 만든 배포(Vercel이 빌드 때 줌) — 시험 앱 껍데기가 /api/build와 견줘 새 배포를 알린다(ShellUpdate).
+    NEXT_PUBLIC_BUILD_SHA: process.env.VERCEL_GIT_COMMIT_SHA ?? "",
   },
   images: {
     unoptimized: true,

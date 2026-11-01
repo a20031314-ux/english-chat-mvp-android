@@ -1,6 +1,6 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders, readCachedTier } from "@/lib/billing/billingService";
-import { adsAvailable } from "@/lib/platform";
+import { adsAvailable, isRemoteShell } from "@/lib/platform";
 
 /**
  * 광고(AdMob) — 무료 사용자에게만, 안드로이드 앱에서만(hub/drafts/ads-rewarded.md, 서버 billing/ads.ts).
@@ -49,7 +49,8 @@ const TEST_UNITS = {
   appOpen: "ca-app-pub-3940256099942544/9257395921",
   banner: "ca-app-pub-3940256099942544/9214589741",
 };
-const TESTING = process.env.NEXT_PUBLIC_ADS_TEST?.trim() === "1";
+// 시험 앱 껍데기(isRemoteShell)는 운영 웹을 불러 써서 이 값이 꺼진 채라, 거기서도 시험 광고로.
+const testAds = (): boolean => process.env.NEXT_PUBLIC_ADS_TEST?.trim() === "1" || isRemoteShell();
 
 const CONFIG_TTL_MS = 10 * 60 * 1000;
 const LAST_SHOWN_KEY = "adsLastInterstitialAt";
@@ -68,7 +69,7 @@ export function noteChatSent() {
 }
 
 function unitFor(kind: keyof typeof TEST_UNITS, cfg: AdsConfig): string {
-  return TESTING ? TEST_UNITS[kind] : (cfg.units[kind] ?? "");
+  return testAds() ? TEST_UNITS[kind] : (cfg.units[kind] ?? "");
 }
 
 function readLastShown(): number {
@@ -121,7 +122,7 @@ async function startAds(): Promise<boolean> {
         } catch {
           // 동의 정보를 못 받아도 SDK는 동의가 필요 없는 지역 기준으로 동작한다.
         }
-        await AdMob.initialize({ initializeForTesting: TESTING });
+        await AdMob.initialize({ initializeForTesting: testAds() });
         return true;
       } catch {
         return false;
@@ -136,7 +137,7 @@ async function preloadInterstitial(cfg: AdsConfig) {
   interstitialLoading = true;
   try {
     const { AdMob } = await import("@capacitor-community/admob");
-    await AdMob.prepareInterstitial({ adId: unitFor("interstitial", cfg), isTesting: TESTING });
+    await AdMob.prepareInterstitial({ adId: unitFor("interstitial", cfg), isTesting: testAds() });
     interstitialReady = true;
   } catch {
     interstitialReady = false;
@@ -241,7 +242,7 @@ export async function showRewardedForChats(): Promise<RewardResult> {
     const { AdMob } = await import("@capacitor-community/admob");
     await AdMob.prepareRewardVideoAd({
       adId: unitFor("rewarded", cfg),
-      isTesting: TESTING,
+      isTesting: testAds(),
       ssv: { customData: cfg.rewarded.token },
     });
     await AdMob.showRewardVideoAd();
@@ -542,7 +543,7 @@ async function syncBanner(): Promise<void> {
         adSize: BannerAdSize.ADAPTIVE_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: bannerBottomMargin,
-        isTesting: TESTING,
+        isTesting: testAds(),
       });
     } else if (bannerState === "hidden") {
       await AdMob.resumeBanner();
@@ -608,7 +609,7 @@ const failListeners = new Set<() => void>();
 export async function nativeAdsEnabled(): Promise<boolean> {
   if (!adsAvailable()) return false;
   const cfg = await loadAdsConfig();
-  return Boolean(cfg?.enabled && cfg.native?.enabled && (cfg.units.native || TESTING));
+  return Boolean(cfg?.enabled && cfg.native?.enabled && (cfg.units.native || testAds()));
 }
 
 function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
@@ -623,7 +624,7 @@ function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
         feedId,
         template: NativeAdTemplate.Small,
         style: NATIVE_STYLE,
-        ...(TESTING ? { isTesting: true } : { adId: cfg.units.native }),
+        ...(testAds() ? { isTesting: true } : { adId: cfg.units.native }),
       });
       // 채우지 못한 자리는 빈칸으로 남기지 않고 접는다.
       void feed.addListener(NativeAdPluginEvents.FailedToLoad, (event) => {

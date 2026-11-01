@@ -37,7 +37,6 @@
     "api/whats-new": "shell",
     "api/guide": "shell",
     "page:/": "shell",
-
     "components/AiTutorRow": "talk",
     "components/AiTutorProfile": "people",
     "components/rooms/MessagesTab": "talk",
@@ -48,7 +47,6 @@
     "components/rooms/MateAsk": "talk",
     "api/dm": "talk",
     "api/groups": "talk",
-
     "components/ChatWindow": "chat",
     "components/conversation/LineTools": "chat",
     "components/ExpressionPeek": "chat",
@@ -58,7 +56,6 @@
     "api/chat": "chat",
     "api/chat/verify": "chat",
     "api/report": "chat",
-
     "components/CallHost": "call",
     "components/CallList": "call",
     "components/RoleplayScreen": "call",
@@ -69,7 +66,6 @@
     "api/roleplay/": "call",
     "api/pack/": "call",
     "components/speech/": "speech",
-
     "components/EnglishAnalysisProvider": "sheet",
     "components/EnglishAnalysisViewer": "sheet",
     "components/SentenceAskPanel": "sheet",
@@ -92,18 +88,15 @@
     "api/tts": "sheet",
     "api/vocab": "sheet",
     "api/vocab/": "sheet",
-
     "components/NextStepCard": "learner",
     "components/LedgerLinks": "learner",
     "api/learner/": "learner",
-
     "components/videoLearning/": "video",
     "components/contentDiscovery/": "video",
     "api/video-subtitles/": "video",
     "api/video-library": "video",
     "api/content-discovery": "video",
     "api/content-discovery/": "video",
-
     "components/rooms/PeopleTab": "people",
     "components/rooms/RoomPeople": "people",
     "components/rooms/BoardView": "people",
@@ -114,7 +107,6 @@
     "api/board": "people",
     "api/icons": "people",
     "api/media": "people",
-
     "components/rooms/RoomsScreen": "room",
     "components/rooms/RoomView": "room",
     "components/rooms/RoomGame": "room",
@@ -125,7 +117,6 @@
     "api/rooms/game": "room",
     "api/random": "random",
     "components/rooms/RandomScreen": "random",
-
     "components/studyMap/": "my",
     "components/notes/": "my",
     "components/VocabularyPanel": "my",
@@ -135,10 +126,8 @@
     "api/notes/": "my",
     "api/notebook": "my",
     "api/video-index/": "my",
-
     "components/account/": "account",
     "api/account/": "account",
-
     "components/BillingScreen": "billing",
     "components/PointStore": "billing",
     "components/PointsIcon": "billing",
@@ -148,22 +137,18 @@
     "api/points/": "billing",
     "api/ads/": "billing",
     "page:/subscribe": "billing",
-
     "components/invite/": "invite",
     "api/invite": "invite",
     "page:/invite": "invite",
-
     "components/FeedbackButton": "feedback",
     "components/FeedbackFixedSheet": "feedback",
     "api/feedback": "feedback",
     "api/feedback/": "feedback",
-
     "components/LearningBookPanel": "web",
     "components/LearningReviewModal": "web",
     "page:/learning": "web",
     "page:/privacy": "web",
     "page:/door/": "web",
-
     "api/simcheck/": "ops",
     "api/account/purge": "ops",
     "api/media/sweep": "ops",
@@ -171,7 +156,9 @@
     "page:/dev/": "ops",
     "api/ops/reports": "ops",
     "page:/ops": "ops",
-    "components/SuspendedNotice": "people"
+    "components/SuspendedNotice": "people",
+    "components/ShellUpdate": "shell",
+    "api/build": "ops"
   },
   "external": {
     "api/curriculum/choices": "My 대본 고르기 방식(2026-10-29~)이 씀 — 2026-11-01 대본이 따라 말하기 하나가 되며 새 앱에서 뺌. Play에 나간 앱(2.75)은 이 방식이 없어 아무도 안 부름 — 다음 정리 때 지움(op scriptChoices도)",
@@ -199,6 +186,7 @@
     "api/learner/growth": "옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀)",
     "api/english-analysis/input": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
     "api/english-analysis/element": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
-    "api/learner/brief": "가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀"
+    "api/learner/brief": "가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀",
+    "api/build": "시험 앱 껍데기(운영 웹을 불러 쓰는 디버그 APK)의 ShellUpdate가 새 배포 확인에 씀"
   }
 }

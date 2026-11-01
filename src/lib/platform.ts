@@ -19,6 +19,18 @@ export function appPlatform(): AppPlatform {
   return "web";
 }
 
+/**
+ * 시험 앱 껍데기(2026-11-02 사용자 "내가 말할 때마다 이 앱에만 업데이트"): 디버그 APK가 앱 안 파일 대신
+ * 운영 웹(languagebank.net)을 불러 쓰는 경우(`CAPACITOR_DEV_SERVER_URL`로 만든 빌드). 이때는 main에 올라간
+ * 화면이 바로 보이므로 새 배포를 알려 주고(ShellUpdate), 광고는 언제나 시험 광고(lib/ads.ts — 실제 광고를 누르면 계정 위험).
+ * Play 앱은 앱 안 파일(https://localhost)이라 해당 없음.
+ */
+export function isRemoteShell(): boolean {
+  if (typeof window === "undefined" || appPlatform() === "web") return false;
+  const host = window.location.hostname;
+  return host !== "localhost" && host !== "127.0.0.1" && host !== "";
+}
+
 export function isIosApp(): boolean {
   return appPlatform() === "ios";
 }

@@ -12,6 +12,7 @@ import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvide
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { deviceUiLocale, languagePickPending, subscribeLanguagePick } from "@/lib/firstLanguage";
 import { UpdateNotice } from "@/components/UpdateNotice";
+import { ShellUpdate } from "@/components/ShellUpdate";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { CallHost, hasRoleplay } from "@/components/CallHost";
 import { LessonHost } from "@/components/studyMap/LessonHost";
@@ -415,6 +416,8 @@ function AppHomeInner({
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}
             <UpdateNotice ui={ui} locale={locale} />
+            {/* 시험 앱 껍데기만: main이 새로 배포되면 다시 불러오기(ShellUpdate). */}
+            <ShellUpdate ui={ui} />
             {/* Once, on the first launch after an update. */}
             <WhatsNewSheet ui={ui} locale={locale} onOpenTab={openTab} />
             {/* 앱을 열 때 한 번: 내가 보낸 의견이 반영됐다는 소식(고치기 전·후 그림). */}
