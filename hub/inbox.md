@@ -200,3 +200,5 @@
 - 2026-11-02 watch → dev: [my] src/lib/server/frameLesson.ts:64·83 — 단계 밖 낱말 거른 뒤 차례 2개 미만이면 저장 안 함·저장본도 null → 그 틀을 열 때마다 모델 2번(상한 없음), 예전 수업 사라짐 (모자라도 원래 차례/fallbackTurns로 저장하거나 실패 표시를 짧은 TTL로, 저장본은 그대로 내보냄). 두 번 확인함.
 - 2026-11-02 watch → dev: [공통] src/components/AiTutorProfile.tsx:14 — 앱 언어 값이 없으면 튜터 소개가 en(앱은 ko) (readAppLocale() 쓰거나 locale prop).
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/wordDecoys.ts:11 — 명사 tamaño 오답에 형용사 grande·mediano(품사 거르기 안 거침) (수·성 실수 꼴만 남김).
+- 2026-11-02 watch → dev: [my] src/lib/speech/sayLine.ts:69 — typedLine이 쓴 글을 음성 인식 결과로 판단받아(practice.ts recallPrompt·ownWordsPrompt) 동음 철자 실수·문장부호 빠짐이 good=true(익힘) (요청에 typed 표시, 라우트에서 인식기 예외 없는 쓴 글 판단 지시). 두 번 확인함.
+- 2026-11-02 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:220 — 뜻 줄이 비면 meaning 없이 가서 practice 라우트가 recordPronunciation — 쓴 줄이 발음 기록에 쌓임 (typed면 발음 기록 건너뜀).
