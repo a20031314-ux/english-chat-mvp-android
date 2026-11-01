@@ -15,11 +15,10 @@
 | 며칠 안 다른 열쇠로 같은 문장 | 760 | en ko ja zh es fr it pt ru ar id vi th hi |  |
 | 맞혀서 쉬는 열쇠가 다시 | 376 | en ko ja zh es fr it pt ru ar id vi th hi | 대화 속 틀린 줄(quiz.ts dialogOf)이 쉬는 중인 열쇠를 가리지 않고 고름. |
 | 같은 열쇠 연달아 | 103 | en ko ja zh es fr it pt ru ar id th hi |  |
-| 오답이 한눈에 지워짐 | 35 | ar en es hi id ja ko ru th vi zh | src/lib/curriculum/expressions/decoys/ar.ts "نعم" |
+| 오답이 한눈에 지워짐 | 45 | en es fr hi id it ja ko pt ru th vi | src/lib/curriculum/expressions/decoys/en.ts "no way" |
 | 조각이 낱말 중간에서 잘림 | 19 | ja | src/lib/curriculum/quiz.ts tilesOf·orderTiles · src/lib/wordSegments.ts |
-| 답이 여럿 | 18 | es id ja ko pt th vi | 문제은행 KV qbank:v1:es:e|hola 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움) |
-| 문장이 어색함 | 9 | en es ja | 문제은행 KV qbank:v1:en:e|nice to meet you 예문 |
-| 수준보다 쉬움 | 3 | hi it | 그 열쇠의 단계(frames·stageScripts stage) · quiz.ts near() |
+| 답이 여럿 | 18 | en es hi id ja ko th vi | 문제은행 KV qbank:v1:en:f|en-f2-02 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움) |
+| 문장이 어색함 | 12 | ar en es ja ko vi | 그 문장의 데이터 파일(frames·stageScripts·대본 은행) |
 | 배운 적 없음 | 3 | ja | 그 열쇠의 단계(frames·stageScripts stage) · quiz.ts near() |
 
 ## 이유 × 학습 언어 (문제 수, 앱 언어만 다른 같은 표시는 하나로)
@@ -28,11 +27,10 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 답이 화면에 보임 `easy-leak` | 726 | 276 | 173 | 303 | 387 | 410 | 391 | 309 | 317 | 229 | 295 | 284 | 116 | 309 | 4525 |
 | 같은 문제 또 `easy-repeat` | 184 | 144 | 168 | 146 | 119 | 176 | 86 | 88 | 116 | 118 | 131 | 92 | 168 | 140 | 1876 |
-| 오답이 한눈에 지워짐 `easy-decoy` | 5 | 2 | 3 | 4 | 1 | · | · | · | 3 | 6 | 1 | 1 | 3 | 6 | 35 |
+| 오답이 한눈에 지워짐 `easy-decoy` | 1 | 13 | 2 | · | 3 | 4 | 3 | 1 | 3 | · | 5 | 2 | 1 | 7 | 45 |
 | 조각이 낱말 중간에서 잘림 `split-word` | · | · | 19 | · | · | · | · | · | · | · | · | · | · | · | 19 |
-| 답이 여럿 `hard-ambiguous` | · | 1 | 5 | · | 2 | · | · | 1 | · | · | 4 | 3 | 2 | · | 18 |
-| 문장이 어색함 `unnatural` | 5 | · | 2 | · | 2 | · | · | · | · | · | · | · | · | · | 9 |
-| 수준보다 쉬움 `easy-level` | · | · | · | · | · | · | 1 | · | · | · | · | · | · | 2 | 3 |
+| 답이 여럿 `hard-ambiguous` | 1 | 6 | 1 | · | 3 | · | · | · | · | · | 2 | 1 | 3 | 1 | 18 |
+| 문장이 어색함 `unnatural` | 3 | 1 | 4 | · | 1 | · | · | · | · | 2 | · | 1 | · | · | 12 |
 | 배운 적 없음 `hard-level` | · | · | 3 | · | · | · | · | · | · | · | · | · | · | · | 3 |
 
 ## 뜻 줄로 답이 새는 조합 (학습 언어 / 앱 언어 → 문제 수)
@@ -78,20 +76,20 @@
 
 | 학습 언어 | 본 문제 | 문제 없음 | 오답이 한눈에 | 답이 여럿 | 어색함 | 단계에 안 맞음 |
 |---|---|---|---|---|---|---|
-| ar | 30 | 24 | 6 | 0 | 0 | 0 |
-| en | 30 | 21 | 5 | 0 | 5 | 0 |
-| es | 30 | 26 | 1 | 2 | 2 | 0 |
-| fr | 30 | 30 | 0 | 0 | 0 | 0 |
-| hi | 30 | 20 | 7 | 0 | 0 | 3 |
-| id | 30 | 24 | 1 | 5 | 0 | 0 |
-| it | 30 | 28 | 0 | 0 | 0 | 2 |
-| ja | 30 | 20 | 3 | 5 | 2 | 0 |
-| ko | 30 | 27 | 2 | 1 | 0 | 0 |
-| pt | 30 | 29 | 0 | 1 | 0 | 0 |
+| ar | 30 | 28 | 0 | 0 | 2 | 0 |
+| en | 30 | 25 | 1 | 1 | 3 | 0 |
+| es | 30 | 23 | 3 | 3 | 1 | 0 |
+| fr | 30 | 26 | 4 | 0 | 0 | 0 |
+| hi | 30 | 22 | 7 | 1 | 0 | 0 |
+| id | 30 | 24 | 5 | 2 | 0 | 0 |
+| it | 30 | 27 | 3 | 0 | 0 | 0 |
+| ja | 30 | 23 | 2 | 1 | 4 | 0 |
+| ko | 30 | 15 | 13 | 6 | 1 | 0 |
+| pt | 30 | 29 | 1 | 0 | 0 | 0 |
 | ru | 30 | 27 | 3 | 0 | 0 | 0 |
-| th | 30 | 24 | 4 | 2 | 0 | 0 |
-| vi | 30 | 26 | 1 | 3 | 0 | 0 |
-| zh | 30 | 26 | 4 | 0 | 0 | 0 |
+| th | 30 | 26 | 1 | 3 | 0 | 0 |
+| vi | 30 | 26 | 2 | 1 | 1 | 0 |
+| zh | 30 | 30 | 0 | 0 | 0 | 0 |
 
 ## 이유마다 예와 고칠 자리
 
@@ -131,23 +129,23 @@
   - 왜: grammar 탭 1일째 3번째 묶음: 같은 날 같은 문장이 또
   - 고칠 자리: src/lib/curriculum/circle.ts·nextStudy.ts(간격) · TodayPlan 첫 문제
 
-### 오답이 한눈에 지워짐 (`easy-decoy`) — 35
+### 오답이 한눈에 지워짐 (`easy-decoy`) — 45
 
-- ar 1단계 · `e|نعم` choose — لحظة... نعم. ما اسم العائلة؟ · 보기 نعيم / ناعم / **نعم**
-  - 왜: 한눈에 지워지는 오답: نعيم, ناعم — 'نعيم'(낙원·이름)·'ناعم'(부드러운)은 '예'와 뜻이 전혀 다른 낱말, 글자만 닮음
-  - 고칠 자리: src/lib/curriculum/expressions/decoys/ar.ts "نعم"
-- en 1단계 · `e|nice to meet you` choose — You are my new boss. Hi, nice to meet you. · 보기 nice meet to you / **nice to meet you** / nice for meet you
-  - 왜: 한눈에 지워지는 오답: nice meet to you — 상대에게 'You are my new boss'라고 단정하는 건 어색함(보통 'You must be…'); 'meet to' 어순 뒤섞기는 아무도 안 쓰는 꼴
-  - 고칠 자리: 문제은행 KV qbank:v1:en:e|nice to meet you 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움)
-- es 1단계 · `e|hola` choose — Hola, perro bonito. · 보기 Adiós / Hole / **Hola**
-  - 왜: 한눈에 지워지는 오답: Hole — Adiós도 맞음(작별 인사로 자연스러움), 'Hole'은 아무도 안 쓰는 철자 장난
-  - 고칠 자리: 문제은행 KV qbank:v1:es:e|hola 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움)
+- en 4단계 · `e|no way` choose — No way! A clown costume? · 보기 None way / No road / **No way**
+  - 왜: 한눈에 지워지는 오답: None way, No road — 'None way'·'No road'는 아무도 안 쓰는 꼴이라 정답만 말처럼 보임
+  - 고칠 자리: src/lib/curriculum/expressions/decoys/en.ts "no way"
+- es 5단계 · `e|o sea` choose — Sí, pero entre los que me han escrito no hay ni uno que pueda pagar a tiempo. O sea, un de · 보기 **O sea** / O fuera / U sea
+  - 왜: 한눈에 지워지는 오답: O fuera, U sea — 'O fuera'는 없는 표현, 'U sea'는 아무도 안 쓰는 철자 장난이라 5단계 학습자가 바로 지움
+  - 고칠 자리: src/lib/curriculum/expressions/decoys/es.ts "o sea"
+- fr 3단계 · `f|fr-f3-04` choose — Je cuisinais quand le téléphone a sonné. · 보기 quoi / **quand** / pendant
+  - 왜: 한눈에 지워지는 오답: quoi — 'quoi'(무엇)는 접속사 자리에 넣으면 누가 봐도 말이 안 됨 — 'pendant'만 그럴듯한 오답
+  - 고칠 자리: src/lib/curriculum/frames/decoys/fr.ts "fr-f3-04|quand"
 - hi 1단계 · `e|नमस्ते` choose — नमस्ते! मैं प्रिया हूँ। आपका नाम क्या है? · 보기 **नमस्ते** / नमस्तो / नमस्ता
-  - 왜: 한눈에 지워지는 오답: नमस्तो, नमस्ता — 끝모음만 바꾼 꼴은 아무도 안 쓰는 철자 장난
+  - 왜: 한눈에 지워지는 오답: नमस्तो, नमस्ता — 'नमस्तो·नमस्ता'는 실제로 안 쓰는 철자 장난(Holo류)이라 바로 지워짐
   - 고칠 자리: src/lib/curriculum/expressions/decoys/hi.ts "नमस्ते"
-- id 3단계 · `e|pokoknya` choose — Jadi! Pokoknya seru banget, kamu harus ke sana. · 보기 Pokokan / Kepokokan / **Pokoknya**
-  - 왜: 한눈에 지워지는 오답: Kepokokan — 'Kepokokan'은 아무도 안 쓰는 지어낸 꼴
-  - 고칠 자리: src/lib/curriculum/expressions/decoys/id.ts "pokoknya"
+- id 4단계 · `g|4:0` choose — Betul. Waktu saya baru masuk, saya sungkan banget bertanya. Tapi Bu Ratna selalu bilang, t · 보기 Satu-satu / **Waktu** / Meskipun
+  - 왜: 한눈에 지워지는 오답: Satu-satu — 'Satu-satu'(하나씩)는 절을 이끌 수 없어 '___ saya baru masuk' 자리에 넣으면 바로 말이 안 됨
+  - 고칠 자리: src/lib/curriculum/quiz.ts decoys()
 
 ### 조각이 낱말 중간에서 잘림 (`split-word`) — 19
 
@@ -169,51 +167,39 @@
 
 ### 답이 여럿 (`hard-ambiguous`) — 18
 
+- en 2단계 · `f|en-f2-02` choose — How was your lunch? · 보기 How did your / How was her / **How was your**
+  - 왜: 이것도 맞음: How was her — 'How was her lunch?'도 문법·뜻 모두 맞는 문장이라 답이 둘
+  - 고칠 자리: 문제은행 KV qbank:v1:en:f|en-f2-02 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움)
 - es 1단계 · `e|hola` choose — Hola, perro bonito. · 보기 **Hola** / Olá / Adiós
-  - 왜: 이것도 맞음: Adiós — 개에게 '잘 가, 예쁜 개야'(Adiós)도 자연스럽게 맞음 — 뜻 줄을 봐야만 Hola로 정해짐
+  - 왜: 이것도 맞음: Adiós — 'Adiós, perro bonito.'도 자연스러운 문장이라 뜻 줄 없이는 답이 하나로 안 정해짐
   - 고칠 자리: 문제은행 KV qbank:v1:es:e|hola 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움)
-- id 2단계 · `e|lagi apa` choose — Wah, kasihan. Sekarang lagi apa? · 보기 **lagi apa** / apa lagi / lagi siapa
-  - 왜: 이것도 맞음: apa lagi — 'Sekarang apa lagi?'(이제 또 뭐?)도 문장으로 자연스러워 뜻 줄 없이는 답이 하나로 안 정해짐
-  - 고칠 자리: src/lib/curriculum/expressions/decoys/id.ts "lagi apa"
+- hi 4단계 · `g|4:1` choose — मेरा सुझाव है कि हम यह काम अगले हफ़्ते तक पूरा करें। · 보기 मेरा निवेदन है कि / **मेरा सुझाव है कि** / मुझे लगता है कि
+  - 왜: 이것도 맞음: मेरा निवेदन है कि — 'मेरा निवेदन है कि हम … पूरा करें(제 요청은 …)'도 문법·뜻 모두 자연스러워 답이 둘
+  - 고칠 자리: src/lib/curriculum/quiz.ts decoys()
+- id 2단계 · `e|besok` choose — Belum, nanti aja. Eh, besok kamu ada acara? · 보기 kemarin / **besok** / tadi
+  - 왜: 이것도 맞음: kemarin, tadi — 'Eh, kemarin/tadi kamu ada acara?'(어제/아까 일 있었어?)도 자연스러운 질문이라 뜻 줄을 봐야만 'besok'로 정해짐
+  - 고칠 자리: src/lib/curriculum/expressions/decoys/id.ts "besok"
 - ja 2단계 · `e|いいですね` choose — 今日は天気がいいですね。 · 보기 よくないですね / **いいですね** / いいますね
-  - 왜: 이것도 맞음: よくないですね — '今日は天気がよくないですね'도 완전히 맞는 문장 — 뜻 줄 없이 하나로 안 정해짐
+  - 왜: 이것도 맞음: よくないですね — '今日は天気がよくないですね'도 맞는 문장이라 뜻 줄 없이는 답이 둘
   - 고칠 자리: 문제은행 KV qbank:v1:ja:e|いいですね 오답·예문(서버 server/qbank.ts — 도태 기다리거나 직접 지움)
-- ko 4단계 · `e|그 부분은요` choose — 네, 그 부분은요, 저도 말씀드렸거든요. 그런데 이번에 다른 업체 견적도 받았다고 하시더라고요. · 보기 그 부분이는요 / **그 부분은요** / 그 부분을요
-  - 왜: 이것도 맞음: 그 부분을요 — '그 부분을 저도 말씀드렸다'로 목적어가 되므로 '그 부분을요'도 구어에서 자연스럽게 맞음
-  - 고칠 자리: src/lib/curriculum/expressions/decoys/ko.ts "그 부분은요"
-- pt 2단계 · `e|beleza` choose — E aí, beleza? Como foi o fim de semana? · 보기 **beleza** / bonito / lindo
-  - 왜: 이것도 맞음: lindo — 'E aí, lindo?'는 상대를 부르는 말(잘생긴 친구야)로 브라질에서 실제로 씀 — 문법·뜻 모두 성립
-  - 고칠 자리: src/lib/curriculum/expressions/decoys/pt.ts "beleza"
 
-### 문장이 어색함 (`unnatural`) — 9
+### 문장이 어색함 (`unnatural`) — 12
 
+- ar 2단계 · `e|إن شاء الله` choose — إن شاء الله. نشوفك بكرة، لن أتأخر! · 보기 **إن شاء الله** / إن شاءت الله / إن شاء لله
+  - 왜: 어색한 문장 → إن شاء الله. أشوفك بكرة، ما راح أتأخر! — 구어 'نشوفك بكرة'와 문어 'لن أتأخر'가 한 줄에 섞여 어색함 — 한쪽 말투로 맞춰야 함
+  - 고칠 자리: 그 문장의 데이터 파일(frames·stageScripts·대본 은행)
 - en 1단계 · `e|nice to meet you` choose — You are my new boss. Hi, nice to meet you. · 보기 nice meet to you / **nice to meet you** / nice for meet you
-  - 왜: 어색한 문장 → You must be my new boss. Hi, nice to meet you. — 상대에게 'You are my new boss'라고 단정하는 건 어색함(보통 'You must be…'); 'meet to' 어순 뒤섞기는 아무도 안 쓰는 꼴
+  - 왜: 어색한 문장 → You must be my new boss. Hi, nice to meet you. — 상대에게 'You are my new boss'라고 단정하는 건 어색함 — 'You must be…'가 자연스러움
   - 고칠 자리: 문제은행 KV qbank:v1:en:e|nice to meet you 예문
-- es 2단계 · `e|qué buena idea` choose — Tengo mucha hambre. Qué buena idea, comemos pizza. · 보기 **Qué buena idea** / Qué bueno idea / Qué buen idea
-  - 왜: 어색한 문장 → —Tengo mucha hambre. ¿Comemos pizza? —¡Qué buena idea! — 같은 사람이 '배고파'라고 한 뒤 '좋은 생각이야'라고 해서 말이 안 이어짐 — 제안·대답 두 사람으로 나눠야 함
-  - 고칠 자리: 문제은행 KV qbank:v1:es:e|qué buena idea 예문
+- es 3단계 · `e|lo que pasa es que` choose — No puedo cenar contigo porque lo que pasa es que estoy cansado. · 보기 el que pasa es que / **lo que pasa es que** / lo qué pasa es que
+  - 왜: 어색한 문장 → No puedo cenar contigo; lo que pasa es que estoy cansado. — 'porque lo que pasa es que'는 이유 표현이 겹쳐 어색함 — porque를 빼야 자연스러움
+  - 고칠 자리: 문제은행 KV qbank:v1:es:e|lo que pasa es que 예문
 - ja 1단계 · `e|はじめまして` choose — 友だちのママ、はじめまして。 · 보기 はじめましょう / **はじめまして** / はじまりまして
-  - 왜: 어색한 문장 → （友だちのお母さんに）はじめまして。〇〇です。 — 상대를 직접 '友だちのママ'라고 부르는 일은 없음 — 호칭으로 부자연스러움
+  - 왜: 어색한 문장 → ゆうたくんのお母さん、はじめまして。 — 相手を直接「友だちのママ」と呼ぶのは不自然 — 「〇〇くんのお母さん」이 자연스러움
   - 고칠 자리: 문제은행 KV qbank:v1:ja:e|はじめまして 예문
-- en 2단계 · `e|how was your weekend` choose — I am at the coffee shop. How was your weekend? · 보기 **How was your weekend** / How was you weekend / How did your weekend
-  - 왜: 어색한 문장 → Hi, Sam! ___? — '커피숍에 있다'는 말 뒤에 바로 주말 안부를 묻는 흐름이 끊김, meaning 줄도 'How'에서 잘려 있음
-  - 고칠 자리: 문제은행 KV qbank:v1:en:e|how was your weekend 예문
-- en 2단계 · `e|how was your weekend` choose — I am at the coffee shop. How was your weekend? · 보기 How did your weekend / **How was your weekend** / How were your weekend
-  - 왜: 어색한 문장 → Hi, Sam! ___? — en-2와 같은 문장 — 앞 문장과 질문이 이어지지 않고 meaning 줄이 잘림
-  - 고칠 자리: 문제은행 KV qbank:v1:en:e|how was your weekend 예문
-
-### 수준보다 쉬움 (`easy-level`) — 3
-
-- hi 5단계 · `e|अरे यार` choose — अरे यार, मुझे लगता है कि कहानी बहुत लंबी थी। · 보기 **अरे यार** / अरे यर / अरी यार
-  - 왜: 5단계에 너무 쉬움 — 'अरे यार'(아이고 참)는 입문 수준 감탄사라 5단계에 너무 쉬움
-  - 고칠 자리: 그 열쇠의 단계(frames·stageScripts stage) · quiz.ts near()
-- it 4단계 · `e|hai ragione` choose — È vero, hai ragione. · 보기 sei ragione / hai ragioni / **hai ragione**
-  - 왜: 4단계에 너무 쉬움 — 'È vero, hai ragione'는 기초 인사 수준의 짧은 문장 — 4단계에는 너무 쉬움
-  - 고칠 자리: 그 열쇠의 단계(frames·stageScripts stage) · quiz.ts near()
-- hi 5단계 · `e|अरे यार` choose — अरे यार, मुँह में पानी आ गया! चल, पहले जलेबी-वलेबी खाते हैं। · 보기 **अरे यार** / अरे यर / अरा यार
-  - 왜: 5단계에 너무 쉬움 — 'अरे यार'는 입문 수준 감탄사라 5단계에 너무 쉬움
-  - 고칠 자리: 그 열쇠의 단계(frames·stageScripts stage) · quiz.ts near()
+- ko 4단계 · `f|ko-f4-01` choose — 김 과장님께서 견적서를 다시 보내 달래요. · 보기 **달래요** / 달대요 / 다래요
+  - 왜: 어색한 문장 → 김 과장님께서 견적서를 다시 보내 달라고 하셨어요. — '께서'로 높인 주어에 '달래요'(낮춤 전달)가 붙어 높임이 어긋남
+  - 고칠 자리: 그 문장의 데이터 파일(frames·stageScripts·대본 은행)
 
 ### 배운 적 없음 (`hard-level`) — 3
 
