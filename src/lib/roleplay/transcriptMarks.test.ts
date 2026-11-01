@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { markAboutTheirLine, markMissed, markStuck, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { markAboutTheirLine, markMissed, markStuck, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -50,4 +50,15 @@ test("못 알아들은 표시는 튜터 줄에만, 한 번만", () => {
   assert.equal(out[2]!.missed, true);
   assert.equal(markMissed(out, 2), out);
   assert.equal(markMissed(es, 1), es, "내 줄에는 안 붙임");
+});
+
+test("통화 요약 수: 고친 말·힌트·못 알아들은 말(일본어·스페인어 섞어)", () => {
+  const lines: TranscriptLine[] = [
+    { who: "tutor", text: "週末は何をしましたか？", missed: true },
+    { who: "tutor", text: "週末、何した？", again: true, tip: "映画を見ました — 영화 봤어요" },
+    { who: "learner", text: "昨日友達を会いました", better: "昨日友達に会いました" },
+    { who: "learner", text: "Yo ir al parque", meant: "Fui al parque" },
+    { who: "learner", text: "Sí." },
+  ];
+  assert.deepEqual(tallyCall(lines), { fixed: 2, hints: 1, missed: 1 });
 });

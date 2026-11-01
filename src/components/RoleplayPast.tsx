@@ -3,6 +3,8 @@
 import { useMemo } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { CallRecap } from "@/components/roleplay/CallRecap";
+import { CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
+import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
 import { handOffFrame } from "@/lib/notes/locateHandoff";
 import { sendAppIntent } from "@/lib/appIntents";
@@ -73,6 +75,12 @@ export function RoleplayPast({
           {ui.billingClose}
         </button>
       </header>
+      <CallSummary
+        ui={ui}
+        language={saved.language}
+        seconds={Math.max(0, Math.round(((saved.finishedAt ?? saved.updatedAt) - saved.startedAt) / 1000))}
+        tally={tallyCall(saved.said)}
+      />
 
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
         {saved.said.map((line, index) => (
@@ -83,6 +91,7 @@ export function RoleplayPast({
             // and fetching a gloss that was never fetched at the time.
             line={line.stuck ? { ...line, stuck: undefined } : line}
             ui={ui}
+            face={line.who === "learner" ? <MeFace /> : <TutorFace />}
             onReview={() => undefined}
             onAnalyze={analyze}
             onSayAgain={sayAgain}

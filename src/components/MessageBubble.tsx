@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { SelectableEnglishText } from "./SelectableEnglishText";
 import { AnalyzableEnglish } from "./AnalyzableEnglish";
 import { CorrectionChip, LineTools } from "./conversation/LineTools";
 
 type MessageBubbleProps = {
   role: "user" | "assistant";
+  /** 말풍선 옆 얼굴 — 튜터는 왼쪽, 나는 오른쪽(2026-11-01 사용자 "채팅에도 튜터 얼굴, 사용자 얼굴"). */
+  face?: ReactNode;
   message: string;
   /** English line attached under a how-to-say user message */
   attachedEnglish?: string;
@@ -93,6 +95,7 @@ export function MessageBubble({
   labels,
   imageUrl,
   onReport,
+  face,
 }: MessageBubbleProps) {
   const isUser = role === "user";
   const readingText = reading?.replace(/\s+/g, " ").trim() || "";
@@ -115,7 +118,8 @@ export function MessageBubble({
     (!isUser || analyzeUserLine);
 
   return (
-    <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
+    <div className={`flex w-full items-end gap-2 ${isUser ? "justify-end" : "justify-start"}`}>
+      {!isUser && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
       <div
         role="button"
         tabIndex={0}
@@ -265,6 +269,7 @@ export function MessageBubble({
           />
         ) : null}
       </div>
+      {isUser && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
     </div>
   );
 }

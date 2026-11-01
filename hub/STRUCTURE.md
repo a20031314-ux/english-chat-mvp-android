@@ -17,9 +17,9 @@
 │        └ 업데이트 배너
 하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: My, 2026-10-28)
 │
-├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼, 오늘의 팩 카드는 2.76에서 뺌) ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
+├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼, 오늘의 팩 카드는 2.76에서 뺌) ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채, 말풍선 옆 얼굴 — 튜터 왼쪽·내 프로필 사진 오른쪽 MessageBubble face, 2026-11-01)
 │           │                      ├ 📞 → AI 통화 call(탭 아님 — 어디서나 떠 있는 층 CallHost)
-│           │                      │   통화 중 = 실제 통화 화면(roleplay/CallParts CallStage: 위 칸 AI 튜터 얼굴·자막 한 줄은 💬 켰을 때만 · 아래 칸 내 프로필 사진(account/AccountCard MyAvatarFace)·말할 때 막대, 맨 위 통화 시간 · CallControls: 🙉 못 알아들었어요 → 튜터가 쉽게 다시(session.missedLine, 두 번째면 그 줄 자막) · 💬 자막 · 💡 힌트 · 끝내기) → 끝나면 전체 대본 + 통화 정리(2026-11-01)
+│           │                      │   통화 중 = 실제 통화 화면(roleplay/CallParts CallStage: 위 칸 AI 튜터 얼굴·자막 한 줄은 💬 켰을 때만 · 아래 칸 내 프로필 사진(account/AccountCard MyAvatarFace)·말할 때 막대, 맨 위 통화 시간 · CallControls: 🙉 못 알아들었어요 → 튜터가 쉽게 다시(session.missedLine, 두 번째면 그 줄 자막) · 💬 자막 · 💡 힌트 · 끝내기) → 끝나면 통화 요약 한 줄(CallSummary: 튜터 얼굴·⏱·✎·💡·🙉, 통화 기록 돌아보기도) + 전체 대본(줄 옆 얼굴) + 통화 정리(2026-11-01)
 │           │                      └ AI 튜터 프로필·AI 대화 ⋮ "통화 기록" → CallList(채팅과 따로, 2026-10-27: 이어서 하기·돌아보기·×, 이 폰에만)
 │           │                      └ 통화가 끝난 화면·돌아보기 맨 아래 통화 정리(roleplay/CallRecap, lib/roleplay/recap.ts, 2026-10-30): 고친 말·💡 힌트·뜻을 본 말 → 🧩 문장구조 → My n단계 그 수업(locateHandoff handOffFrame → NotebookSection openScript), 틀이 없으면 🔎 My에서 찾기. 찾은 틀은 다시 볼 것에(/api/curriculum/scripts from "call", 숙지 그대로)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
@@ -138,7 +138,7 @@
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
 - 화면: `AiTutorProfile` · `SuspendedNotice` · `rooms/BoardView` · `rooms/IconEditor` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
 - API: `board`(대화 탭, Room 탭, 계정·로그인) · `icons`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
-- 다른 영역이 씀: `AiTutorProfile` ← 대화 탭, AI 통화 · `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
+- 다른 영역이 씀: `AiTutorProfile` ← 대화 탭, AI 채팅, AI 통화 · `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
 - 화면: `rooms/RoomGame` · `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
@@ -158,7 +158,7 @@
 ### 계정·로그인 `account`
 - 화면: `account/AccountCard` · `account/ProfileFacts`
 - API: `account/config`(친구 초대·보상) · `account/delete`(친구 초대·보상) · `account/email/start`(친구 초대·보상) · `account/email/verify`(친구 초대·보상) · `account/google`(친구 초대·보상) · `account/me`(친구 초대·보상) · `account/password/change`(친구 초대·보상) · `account/password/login`(친구 초대·보상) · `account/password/signup`(친구 초대·보상) · `account/profile`(친구 초대·보상)
-- 다른 영역이 씀: `account/AccountCard` ← 여러 영역 8곳 · `account/ProfileFacts` ← 대화 탭, 사람 탭, Room 탭
+- 다른 영역이 씀: `account/AccountCard` ← 여러 영역 9곳 · `account/ProfileFacts` ← 대화 탭, 사람 탭, Room 탭
 
 ### 요금·포인트·광고 `billing`
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`

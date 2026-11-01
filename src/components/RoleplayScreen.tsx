@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
-import { CallControls, CallFooter, CallHeader, CallStage, LearnerComposing, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallControls, CallFooter, CallHeader, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
@@ -50,7 +50,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { markAboutTheirLine, markMissed, markStuck, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { markAboutTheirLine, markMissed, markStuck, tallyCall, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -799,6 +799,9 @@ export function RoleplayScreen({
 
   const callOver = Boolean(state?.finished || instruction?.do === "finish");
   const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  // 통화가 끝난 때 — 끝난 화면 요약 한 줄의 통화 시간(이어서 한 통화는 처음 시작부터, 통화 기록과 같은 셈).
+  const [overAt, setOverAt] = useState(0);
+  if (callOver && !overAt) setOverAt(Date.now());
   if (!scenario) return null;
 
   // Lines open in the sentence sheet once the scene is over and the
@@ -826,6 +829,12 @@ export function RoleplayScreen({
           onToggleTranslations={toggleTranslations}
           onClose={onClose}
         />
+        <CallSummary
+          ui={ui}
+          language={scenario.language}
+          seconds={Math.max(0, Math.round(((overAt || startedAt.current) - startedAt.current) / 1000))}
+          tally={tallyCall(said)}
+        />
       {practice ? (
         <div className="shrink-0 border-b border-white/10 px-3 py-2">
           <PracticeBanner
@@ -847,6 +856,7 @@ export function RoleplayScreen({
             key={index}
             line={line}
             ui={ui}
+            face={line.who === "learner" ? <MeFace /> : <TutorFace />}
             onReview={openReview}
             onTranslate={translateLine}
             showTranslation={showTranslations}

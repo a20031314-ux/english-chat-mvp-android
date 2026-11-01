@@ -1,5 +1,7 @@
 "use client";
 
+import { AiAvatar } from "@/components/AiTutorProfile";
+import { MyAvatarFace } from "@/components/account/AccountCard";
 import { setTalkShare, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -1930,6 +1932,7 @@ export function ChatWindow({
                 {turn.userMessage.trim() || turn.attachmentUrl ? (
                   <MessageBubble
                     role="user"
+                    face={<MyAvatarFace size={28} />}
                     message={turn.userMessage}
                     imageUrl={turn.attachmentUrl}
                     analyzeUserLine={
@@ -2009,6 +2012,7 @@ export function ChatWindow({
                   !turn.correctionResult && (
                     <MessageBubble
                       role="assistant"
+                      face={<AiAvatar size={28} />}
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
@@ -2026,6 +2030,7 @@ export function ChatWindow({
                   turn.assistantMessage && (
                     <MessageBubble
                       role="assistant"
+                      face={<AiAvatar size={28} />}
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
@@ -2042,6 +2047,7 @@ export function ChatWindow({
                 {turn.mode === "how_to_say" && turn.assistantMessage ? (
                   <MessageBubble
                     role="assistant"
+                    face={<AiAvatar size={28} />}
                     message={turn.assistantMessage}
                     reading={assistantReading}
                     labels={assistantLabels}

@@ -67,3 +67,19 @@ export function withTranslation(lines: TranscriptLine[], text: string, translati
     line.who === "tutor" && line.text === text && !line.translation ? { ...line, translation } : line,
   );
 }
+
+/** 통화 요약 한 줄의 수(끝난 화면 맨 위, 2026-11-01): 고친 내 말 · 받은 힌트 · 못 알아들은 튜터 말. */
+export function tallyCall(lines: TranscriptLine[]): { fixed: number; hints: number; missed: number } {
+  let fixed = 0;
+  let hints = 0;
+  let missed = 0;
+  for (const line of lines) {
+    if (line.who === "learner") {
+      if ((line.better || line.meant || "").trim()) fixed += 1;
+    } else {
+      if (line.tip) hints += 1;
+      if (line.missed) missed += 1;
+    }
+  }
+  return { fixed, hints, missed };
+}

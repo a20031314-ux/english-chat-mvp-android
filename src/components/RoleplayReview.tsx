@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { SayItBack } from "@/components/speech/Attempt";
 import { LedgerLinks } from "@/components/LedgerLinks";
@@ -37,8 +37,11 @@ export function RoleplayLine({
   showTranslation,
   ledgerLanguage,
   onLooked,
+  face,
 }: {
   line: TranscriptLine;
+  /** 줄 옆 얼굴 — 튜터 왼쪽, 나 오른쪽(채팅과 같게, 2026-11-01). */
+  face?: ReactNode;
   ui: UICopy;
   onReview: (turn: StuckTurn) => void;
   /** 튜터 줄의 접힌 번역을 눌러 봤다 — 통화 정리의 "뜻을 본 말"(roleplay/recap.ts). */
@@ -90,7 +93,8 @@ export function RoleplayLine({
   const sayTarget = (line.meant || line.better || line.text).trim();
   const canSayAgain = Boolean(onSayAgain && line.who === "learner" && sayTarget && sayTarget !== "…");
   return (
-    <li className={`mb-2 flex ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
+    <li className={`mb-2 flex items-end gap-2 ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
+      {line.who !== "learner" && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
       <div
         role="button"
         tabIndex={0}
@@ -266,6 +270,7 @@ export function RoleplayLine({
           </div>
         ) : null}
       </div>
+      {line.who === "learner" && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
     </li>
   );
 }

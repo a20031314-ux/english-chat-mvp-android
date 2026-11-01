@@ -287,3 +287,55 @@ export function CallFooter({
     </footer>
   );
 }
+
+/**
+ * 끝난 화면 맨 위 통화 요약 한 줄(사용자 2026-11-01 "통화 요약 한 줄"): 튜터 얼굴·이름 · ⏱ 통화 시간 · ✎ 고친 말 · 💡 힌트 · 🙉 못 알아들은 말.
+ * 0인 칸은 뺀다. 이름은 아이콘의 title·aria-label로(화면 속 설명 글 없음).
+ */
+export function CallSummary({
+  ui,
+  language,
+  seconds,
+  tally,
+}: {
+  ui: UICopy;
+  language: string;
+  seconds: number;
+  tally: { fixed: number; hints: number; missed: number };
+}) {
+  const partner = chatPartnerForLanguage(language);
+  const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+  const chips = [
+    { icon: "✎", n: tally.fixed, label: ui.roleplayBetter },
+    { icon: "💡", n: tally.hints, label: ui.missionHint },
+    { icon: "🙉", n: tally.missed, label: ui.roleplayMissed },
+  ].filter((chip) => chip.n > 0);
+  return (
+    <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 py-3" data-call-summary>
+      <AiAvatar size={40} />
+      <div className="min-w-0 flex-1">
+        <p className="flex items-center gap-1.5 text-body font-semibold text-ink">
+          <bdi className="truncate">{partner.givenName}</bdi>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+        </p>
+        <p className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
+          <span>⏱ {time}</span>
+          {chips.map((chip) => (
+            <span key={chip.icon} title={chip.label} aria-label={`${chip.label} ${chip.n}`}>
+              {chip.icon} {chip.n}
+            </span>
+          ))}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/** 대본 줄 옆 얼굴 — 튜터·나(채팅과 같은 크기). */
+export function TutorFace() {
+  return <AiAvatar size={28} />;
+}
+export function MeFace() {
+  return <MyAvatarFace size={28} />;
+}
