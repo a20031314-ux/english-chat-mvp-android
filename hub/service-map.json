@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-11-01 06:56",
- "commit": "b264d0d2",
+ "checkedAt": "2026-11-02 01:40",
+ "commit": "9ac62b9a",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -47,8 +47,8 @@
   },
   "shell": {
    "title": "상단바 · 앱 틀",
-   "text": "9c9d896a2c21",
-   "shots": "6649eb212032",
+   "text": "a18198fdb43a",
+   "shots": "3c221ee9e6a1",
    "links": "e5b81328667f",
    "code": "919038941681"
   },
@@ -68,24 +68,24 @@
   },
   "talk": {
    "title": "대화",
-   "text": "71ee68adba49",
-   "shots": "45e4738bde79",
+   "text": "b10dfc1fba16",
+   "shots": "556de97ef3b7",
    "links": "69ce588dafa2",
    "code": "3b6619968834"
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "2561902c8934",
-   "shots": "73fecd439351",
+   "text": "66baadec54d4",
+   "shots": "7e40ec4d3bfe",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
   "call": {
    "title": "AI 통화 · 오늘의 팩",
-   "text": "0c03da80e250",
-   "shots": "7a863eec87f4",
+   "text": "b0ac993a52c6",
+   "shots": "a17015d749d3",
    "links": "82e45a80c680",
-   "code": "b2ef91409b02"
+   "code": "bd57b080c6be"
   },
   "dm": {
    "title": "1:1 메시지",
@@ -110,8 +110,8 @@
   },
   "people": {
    "title": "사람",
-   "text": "dde314c414a0",
-   "shots": "839a12822f75",
+   "text": "21199616a666",
+   "shots": "fb1df997b4ee",
    "links": "73f18aa06e4c",
    "code": "aa98d9849777"
   },
@@ -134,28 +134,28 @@
    "text": "cc2bff8c4063",
    "shots": "f5c4b3994e80",
    "links": "8e1776db4308",
-   "code": "555eb584be24"
+   "code": "e406e82fa4fb"
   },
   "my": {
    "title": "My",
-   "text": "7f3927511172",
-   "shots": "c1d0be2849f1",
+   "text": "c53ef39a24b7",
+   "shots": "b4e2385626c0",
    "links": "bc7ccaf1382e",
-   "code": "9062be00faee"
+   "code": "2c18f9defd91"
   },
   "growth": {
    "title": "자라는 중 · 지도",
-   "text": "2d8d783cb944",
-   "shots": "1d63a233c1ac",
+   "text": "175b11cf8b4d",
+   "shots": "4ff020a512ab",
    "links": "d558e5cc6ea2",
-   "code": "9062be00faee"
+   "code": "2c18f9defd91"
   },
   "notes": {
    "title": "노트 · 단어장",
-   "text": "946eb5f6ee27",
-   "shots": "407d775ed342",
+   "text": "36cbf892c823",
+   "shots": "5dd8b61f8bce",
    "links": "fbb882eac87e",
-   "code": "9062be00faee"
+   "code": "2c18f9defd91"
   },
   "sheet": {
    "title": "문장분석 · 표현 시트",
@@ -166,13 +166,87 @@
   },
   "learner": {
    "title": "오늘 해볼 것 · 표현 장부",
-   "text": "a89b6597fa8e",
-   "shots": "d03e0c80b5d5",
+   "text": "7bb8d2234920",
+   "shots": "f19c6322a260",
    "links": "4e14f6b396a0",
    "code": "05f40b400712"
+  },
+  "speech": {
+   "title": "말하기 · 통화 공용 부품",
+   "text": "ab4e27950d3d",
+   "shots": "21348f77c599",
+   "links": "5c0c57a0530d",
+   "code": "4dff56390907"
   }
  },
  "history": [
+  {
+   "at": "2026-11-02 01:40",
+   "commit": "9ac62b9a",
+   "changes": [
+    {
+     "id": "speech",
+     "title": "말하기 · 통화 공용 부품",
+     "what": "새 칸"
+    }
+   ]
+  },
+  {
+   "at": "2026-11-02 01:40",
+   "commit": "9ac62b9a",
+   "changes": [
+    {
+     "id": "shell",
+     "title": "상단바 · 앱 틀",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "talk",
+     "title": "대화",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "call",
+     "title": "AI 통화 · 오늘의 팩",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "people",
+     "title": "사람",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "room",
+     "title": "Room",
+     "what": "코드 영역"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "learner",
+     "title": "오늘 해볼 것 · 표현 장부",
+     "what": "설명 · 그림"
+    }
+   ]
+  },
   {
    "at": "2026-11-01 06:56",
    "commit": "b264d0d2",
@@ -893,63 +967,6 @@
      "id": "notes",
      "title": "노트 · 단어장",
      "what": "코드 영역"
-    }
-   ]
-  },
-  {
-   "at": "2026-10-21 06:56",
-   "commit": "40907a6",
-   "changes": [
-    {
-     "id": "pingo",
-     "title": "Pingo",
-     "what": "설명"
-    },
-    {
-     "id": "spin",
-     "title": "Spin",
-     "what": "새 칸"
-    }
-   ]
-  },
-  {
-   "at": "2026-10-21 06:55",
-   "commit": "40907a6",
-   "changes": [
-    {
-     "id": "moyeo",
-     "title": "Moyeo",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "pingo",
-     "title": "Pingo",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "webapp",
-     "title": "웹 앱",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "dm",
-     "title": "1:1 메시지",
-     "what": "설명 · 그림"
-    },
-    {
-     "id": "people",
-     "title": "사람",
-     "what": "설명 · 그림 · 코드 영역"
-    },
-    {
-     "id": "board",
-     "title": "게시판",
-     "what": "코드 영역"
-    },
-    {
-     "id": "room",
-     "title": "Room",
-     "what": "설명 · 그림"
     }
    ]
   }

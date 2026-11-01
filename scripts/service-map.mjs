@@ -386,6 +386,15 @@ const nodes = [
     links: ["chat", "call", "my", "growth"],
     steps: [step("my.next"), step("chat.next"), extra("public/guide/ko/ledger.webp", "g-ledger.webp", "표현 장부", "모든 탭에서 만난 표현이 상태별로 쌓여요.")],
   },
+  {
+    id: "speech", tier: "anywhere",
+    title: "말하기 · 통화 공용 부품", sub: "한 줄 말해 보기 · 통화 화면 조각", area: "speech",
+    summary: "한 줄 말하고 들린 대로 보기(다시 말해보기)와 통화 화면 조각·말풍선 옆 얼굴 자리예요. AI 통화·사람 통화(비공개 방)·AI 채팅·My가 같이 써서, 바꾸면 네 곳을 다 봐야 해요.",
+    points: ["말풍선 옆 얼굴: 상대 왼쪽 · 내 프로필 사진 오른쪽", "AI 통화와 비공개 방 통화가 같은 통화 화면"],
+    path: "통화 돌아보기 → 다시 말해보기 / 대화 말풍선",
+    links: ["call", "chat", "room", "my"],
+    steps: [step("call.ownline")],
+  },
 ];
 
 // 확인: links·children이 실제 칸을 가리키는지.
