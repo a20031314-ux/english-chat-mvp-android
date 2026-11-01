@@ -4,18 +4,15 @@
 export const VI_EXPR_DECOYS: Record<string, string[]> = {
   "xin chào": [
     "chào xin",
-    "xin hỏi",
-    "xin mời"
+    "xin chảo"
   ],
   "chào anh": [
     "anh chào",
-    "chào của anh",
-    "chào mày"
+    "chào của anh"
   ],
   "chào chị": [
     "chị chào",
-    "chào của chị",
-    "chào cái chị"
+    "chào của chị"
   ],
   "rất vui được gặp": [
     "rất vui bị gặp",
@@ -24,18 +21,15 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "cảm ơn": [
     "ơn cảm",
-    "cảm phục",
-    "cảm nhận"
+    "cảm ớn"
   ],
   "không có gì": [
     "có không gì",
-    "không gì có",
-    "không có ai"
+    "không gì có"
   ],
   "xin lỗi": [
     "lỗi xin",
-    "có lỗi",
-    "xin cảm"
+    "xin lổi"
   ],
   "bao nhiêu tiền": [
     "bao nhiêu cái tiền",
@@ -49,8 +43,7 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "ở đâu": [
     "đâu ở",
-    "ở nào",
-    "ở gì"
+    "ở nào"
   ],
   "tôi không hiểu": [
     "tôi hiểu không",
@@ -59,38 +52,29 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "nói chậm thôi": [
     "nói thôi chậm",
-    "chậm nói thôi",
-    "nói nhanh thôi"
+    "chậm nói thôi"
   ],
-  "vâng": [
-    "đâu",
-    "chẳng",
-    "sai"
-  ],
+  "vâng": [],
   "không sao": [
     "sao không",
-    "không vì",
-    "có sao"
+    "chưa sao"
   ],
   "đắt quá": [
-    "rẻ quá",
     "đắt rất",
-    "đắt hơn quá"
+    "đắt hơn quá",
+    "rất đắt quá"
   ],
   "đợi một chút": [
     "đợi một cái chút",
-    "một chút đợi",
-    "đợi một chiếc"
+    "một chút đợi"
   ],
   "tạm biệt": [
     "biệt tạm",
-    "tạm dừng",
-    "tạm gặp"
+    "tạm biết"
   ],
   "hẹn gặp lại": [
     "gặp hẹn lại",
-    "hẹn lại gặp",
-    "hẹn gặp trước"
+    "hẹn lại gặp"
   ],
   "tôi là người Hàn Quốc": [
     "tôi là Hàn Quốc người",
@@ -103,19 +87,17 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
     "lâu không rồi gặp"
   ],
   "dạo này thế nào": [
-    "dạo này cái nào",
     "dạo này thế gì",
-    "dạo nào thế này"
+    "dạo này cái nào"
   ],
   "ăn cơm chưa": [
-    "ăn cơm đâu",
-    "cơm ăn chưa",
-    "ăn cơm gì"
+    "ăn cơm không",
+    "cơm ăn chưa"
   ],
   "hay quá": [
     "hay rất",
-    "dở quá",
-    "hay lắm quá"
+    "hay lắm quá",
+    "rất hay quá"
   ],
   "thật à": [
     "thật gì",
@@ -124,13 +106,11 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tiếc quá": [
     "tiếc rất",
-    "tiếc lắm quá",
-    "tiếc nhiều"
+    "tiếc lắm quá"
   ],
   "mấy giờ": [
     "mấy cái giờ",
-    "bao giờ",
-    "mấy tiếng"
+    "bao giờ"
   ],
   "ở đâu cũng được": [
     "ở đâu cũng không",
@@ -138,13 +118,11 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
     "ở nào cũng được"
   ],
   "đi cùng nhé": [
-    "đi một mình nhé",
     "đi với nhé",
     "đi cùng chưa"
   ],
   "món gì ngon": [
     "gì món ngon",
-    "món gì rồi ngon",
     "món mấy ngon"
   ],
   "không cay": [
@@ -153,13 +131,11 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
     "không cái cay"
   ],
   "ít đường": [
-    "đường ít",
     "ít cái đường",
     "bé đường"
   ],
   "cho thêm": [
     "thêm cho",
-    "cho bớt",
     "cho nữa"
   ],
   "tính tiền": [
@@ -169,18 +145,15 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "rẽ trái": [
     "trái rẽ",
-    "rẽ trên",
-    "đi trái"
+    "rẽ trên"
   ],
   "rẽ phải": [
     "rẽ đúng",
-    "rẽ dưới",
-    "đi phải"
+    "phải rẽ"
   ],
   "đi thẳng": [
     "thẳng đi",
-    "đi thật",
-    "đi cong"
+    "đi thật"
   ],
   "dừng ở đây": [
     "ở đây dừng",
@@ -199,8 +172,7 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "đúng rồi": [
     "rồi đúng",
-    "đúng chưa",
-    "sai rồi"
+    "đúng chưa"
   ],
   "tôi cũng nghĩ vậy": [
     "cũng tôi nghĩ vậy",
@@ -209,13 +181,11 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "theo tôi": [
     "tôi theo",
-    "theo của tôi",
-    "cho tôi"
+    "theo của tôi"
   ],
   "không hẳn": [
     "hẳn không",
-    "không hết",
-    "không hơn"
+    "không hết"
   ],
   "có lẽ": [
     "lẽ có",
@@ -224,12 +194,10 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "may quá": [
     "may rất",
-    "xui quá",
     "may lắm quá"
   ],
   "chán thật": [
     "chán rất",
-    "vui thật",
     "chán đúng"
   ],
   "có vấn đề": [
@@ -259,22 +227,18 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "sau đó": [
     "đó sau",
-    "sau khi đó",
-    "trước đó"
+    "sau khi đó"
   ],
   "cuối cùng": [
     "cùng cuối",
-    "cuối hết cùng",
-    "đầu cùng"
+    "cuối hết cùng"
   ],
   "thật ra": [
     "ra thật",
-    "thật vào",
-    "thật là"
+    "thật vào"
   ],
   "nói chung": [
     "chung nói",
-    "nói riêng",
     "nói cùng"
   ],
   "cái nào tốt hơn": [
@@ -294,13 +258,11 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tôi hiểu ý anh": [
     "tôi ý hiểu anh",
-    "tôi hiểu nghĩa anh",
-    "tôi biết ý anh"
+    "tôi hiểu nghĩa anh"
   ],
   "nói thẳng ra": [
     "nói ra thẳng",
-    "thẳng nói ra",
-    "nói cong ra"
+    "thẳng nói ra"
   ],
   "về mặt này": [
     "mặt về này",
@@ -309,7 +271,6 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "mặt khác": [
     "khác mặt",
-    "mặt kia",
     "mặt nữa"
   ],
   "điều quan trọng là": [
@@ -323,7 +284,6 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
     "tôi e được"
   ],
   "chưa chắc": [
-    "chắc chưa",
     "chưa chắn",
     "đã chắc"
   ],
@@ -339,8 +299,7 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tóm lại": [
     "lại tóm",
-    "tóm đi",
-    "gom lại"
+    "tóm đi"
   ],
   "để em xác nhận lại": [
     "để xác nhận em lại",
@@ -354,18 +313,15 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "phương án khác": [
     "khác phương án",
-    "phương án cũng",
-    "phương hướng khác"
+    "phương án cũng"
   ],
   "chốt lại": [
     "lại chốt",
-    "chốt ra",
-    "chốt cửa"
+    "chốt ra"
   ],
   "hạn chót": [
     "chót hạn",
-    "hạn chế",
-    "hạn đầu"
+    "hạn chế"
   ],
   "chịu trách nhiệm": [
     "chịu nhiệm trách",
@@ -378,12 +334,10 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
     "giảm được chưa"
   ],
   "hai bên cùng có lợi": [
-    "hai bên cùng có hại",
     "hai bên có cùng lợi",
     "cùng hai bên có lợi"
   ],
   "thôi thì": [
-    "thì thôi",
     "thôi là",
     "thôi nếu"
   ],
@@ -394,8 +348,7 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "nói thật lòng": [
     "nói lòng thật",
-    "nói thật bụng",
-    "nói giả lòng"
+    "nói thật bụng"
   ],
   "biết là thế": [
     "biết thế là",
@@ -424,7 +377,6 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "chuyện nhỏ": [
     "nhỏ chuyện",
-    "chuyện to",
     "chuyện ít"
   ],
   "được cái là": [
@@ -449,28 +401,22 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "một công đôi việc": [
     "một việc đôi công",
-    "hai công một việc",
-    "một công đôi chân"
+    "hai công một việc"
   ],
   "trăm năm hạnh phúc": [
     "năm trăm hạnh phúc",
-    "trăm ngày hạnh phúc",
-    "trăm năm bất hạnh"
+    "trăm ngày hạnh phúc"
   ],
   "nể mặt": [
-    "mặt nể",
-    "nể mũi",
-    "mất mặt"
+    "mặt nể"
   ],
   "ngại quá": [
     "ngại rất",
-    "vui quá",
     "ngại lắm quá"
   ],
   "xin phép được": [
     "được xin phép",
-    "xin phép bị",
-    "cho phép được"
+    "xin phép bị"
   ],
   "thay mặt": [
     "mặt thay",
@@ -479,17 +425,14 @@ export const VI_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "nói vui thôi": [
     "vui nói thôi",
-    "nói thôi vui",
-    "nói buồn thôi"
+    "nói thôi vui"
   ],
   "thôi bỏ đi": [
     "thôi đi bỏ",
-    "thôi bỏ lại",
-    "thôi giữ đi"
+    "thôi bỏ lại"
   ],
   "trời ơi": [
     "trời à",
-    "trời hơi",
-    "mây ơi"
+    "trời hơi"
   ]
 };

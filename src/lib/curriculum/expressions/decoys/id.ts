@@ -20,7 +20,7 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   "apa kabar": [
     "kabar apa",
     "apa berkabar",
-    "apa beritanya"
+    "apa kabaran"
   ],
   "kabar baik": [
     "baik kabar",
@@ -38,34 +38,34 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "sama juga"
   ],
   "maaf": [
-    "kasihan",
-    "silakan",
-    "selamat"
+    "memaafkan",
+    "kemaafan",
+    "kasihan"
   ],
   "permisi": [
     "silakan",
-    "kasihan",
-    "mengizinkan"
+    "mengizinkan",
+    "berpermisi"
   ],
   "nama saya": [
     "saya nama",
     "namaku saya",
-    "nama sendiri"
+    "nama dari saya"
   ],
   "senang bertemu": [
     "bertemu senang",
-    "senang menemui",
-    "senang pertemuan"
+    "senang pertemuan",
+    "senang bertemuan"
   ],
   "berapa harganya": [
     "berapa berharga",
     "berapa hargaan",
-    "berapakah harga"
+    "berapa menghargai"
   ],
   "saya mau ini": [
     "saya ini mau",
-    "saya mau-mau ini",
-    "ini saya mau"
+    "saya kemauan ini",
+    "saya bermau ini"
   ],
   "toiletnya di mana": [
     "toiletnya ke mana",
@@ -84,8 +84,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "pelan-pelan saja": [
     "saja pelan-pelan",
-    "pelan-pelanan saja",
-    "memelankan saja"
+    "memelankan saja",
+    "berpelan-pelan saja"
   ],
   "sekali lagi": [
     "sekalian lagi",
@@ -94,8 +94,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tolong": [
     "menolong",
-    "kasihan",
-    "penolong"
+    "penolong",
+    "ditolong"
   ],
   "sampai jumpa": [
     "jumpa sampai",
@@ -115,12 +115,11 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   "belum": [
     "bukan",
     "jangan",
-    "masih"
+    "tidak sudah"
   ],
   "sudah": [
     "menyudahi",
-    "usai",
-    "tamat"
+    "kesudahan"
   ],
   "ayo": [
     "ajak",
@@ -128,14 +127,13 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "biar"
   ],
   "boleh": [
-    "perlu",
-    "harus",
-    "mesti"
+    "memperbolehkan",
+    "kebolehan",
+    "harus"
   ],
   "jam berapa": [
-    "berapa jam",
     "jam mana",
-    "jam keberapa"
+    "jam kapan"
   ],
   "ketemu di mana": [
     "ketemu ke mana",
@@ -144,18 +142,17 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "oke deh": [
     "deh oke",
-    "oke kah",
-    "oke pun"
+    "oke kah"
   ],
   "nggak pedas ya": [
     "bukan pedas ya",
     "nggak kepedasan ya",
-    "pedas nggak ya"
+    "nggak berpedas ya"
   ],
   "bungkus": [
-    "kemasan",
-    "bingkisan",
-    "sampul"
+    "membungkusi",
+    "bungkusan",
+    "kemasan"
   ],
   "makan di sini": [
     "makan ke sini",
@@ -165,7 +162,7 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   "minta tolong": [
     "minta menolong",
     "tolong minta",
-    "minta ditolong"
+    "minta pertolong"
   ],
   "kiri di sini": [
     "kiri ke sini",
@@ -188,19 +185,17 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "masuk udara"
   ],
   "hati-hati": [
-    "hati sendiri",
-    "hari-hari",
-    "jaga-jaga"
+    "kehati-hatian",
+    "hati-hatian",
+    "menghati-hati"
   ],
   "nanti": [
-    "tadi",
-    "kemarin",
-    "pernah"
+    "menanti",
+    "nantian"
   ],
   "besok": [
-    "tadi",
-    "kemarin",
-    "sudah"
+    "akan",
+    "kebesokan"
   ],
   "seru banget": [
     "banget seru",
@@ -215,7 +210,7 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   "kayaknya": [
     "kayakan",
     "seperti",
-    "macamnya"
+    "berkayak"
   ],
   "sebenarnya": [
     "kebenarannya",
@@ -224,13 +219,12 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "gimana ya": [
     "gimana kah",
-    "kenapa ya",
-    "dimana ya"
+    "gimanaan ya"
   ],
   "terus": [
-    "tetap",
     "terlalu",
-    "terang"
+    "terusan",
+    "meneruskan"
   ],
   "pokoknya": [
     "pokokan",
@@ -268,9 +262,9 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "masalah ada"
   ],
   "bisa dibantu": [
-    "bisa membantu",
     "bisa bantuan",
-    "dibantu bisa"
+    "dibantu bisa",
+    "bisa dibantukan"
   ],
   "sudah saya cek": [
     "sudah saya dicek",
@@ -285,10 +279,9 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   "sama saja": [
     "saja sama",
     "samaan saja",
-    "sama sendiri"
+    "bersama saja"
   ],
   "nggak nyangka": [
-    "nggak menyangkal",
     "bukan nyangka",
     "nyangka nggak"
   ],
@@ -298,9 +291,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "capekan banget"
   ],
   "lumayan": [
-    "lumrah",
-    "layak",
-    "lantaran"
+    "kelumayanan",
+    "selumayan"
   ],
   "masa sih": [
     "masa dong",
@@ -308,14 +300,14 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "masanya sih"
   ],
   "parah": [
-    "pasrah",
-    "marah",
-    "pahit"
+    "keparahan",
+    "parahan",
+    "memperparah"
   ],
   "intinya": [
-    "intisari",
-    "berinti",
-    "keintian"
+    "inti",
+    "keintian",
+    "berinti"
   ],
   "dengan kata lain": [
     "dengan lain kata",
@@ -334,8 +326,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "bagaimana kalau": [
     "kalau bagaimana",
-    "bagaimanakah kalau",
-    "berapa kalau"
+    "mengapa kalau",
+    "bagaimana sehingga"
   ],
   "saya paham maksudnya": [
     "saya paham dimaksudnya",
@@ -348,9 +340,9 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "tapi dimasalahkan"
   ],
   "kita sepakat": [
-    "kami sepakat",
     "kita disepakati",
-    "kita kesepakatan"
+    "kita kesepakatan",
+    "kita sepakatkan"
   ],
   "mohon maaf sebelumnya": [
     "mohon maaf sesudahnya",
@@ -378,9 +370,9 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "saya menindak lanjut"
   ],
   "sejauh ini": [
-    "sejauh itu",
     "sejauhnya ini",
-    "sedekat ini"
+    "sejauh-jauh ini",
+    "kejauhan ini"
   ],
   "secara umum": [
     "dengan umum",
@@ -449,8 +441,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "sungkan": [
     "menyungkan",
-    "sungguh",
-    "senggang"
+    "kesungkanan",
+    "bersungkan"
   ],
   "nggak enak hati": [
     "nggak enakan hati",
@@ -458,9 +450,8 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "nggak hati enak"
   ],
   "basa-basi": [
-    "basi-basi",
-    "bahasa-bahasa",
-    "biasa-biasa"
+    "basa-basian",
+    "kebasa-basian"
   ],
   "bikin baper": [
     "baper bikin",
@@ -473,14 +464,14 @@ export const ID_EXPR_DECOYS: Record<string, string[]> = {
     "kesalahan fokus"
   ],
   "mending": [
-    "pending",
-    "mendung",
-    "menunda"
+    "kemendingan",
+    "dimending",
+    "bermending"
   ],
   "ujung-ujungnya": [
     "berujung-ujung",
     "ujung-ujungan",
-    "pangkal-pangkalnya"
+    "ujungnya-ujungnya"
   ],
   "ada udang di balik batu": [
     "ada ikan di balik batu",

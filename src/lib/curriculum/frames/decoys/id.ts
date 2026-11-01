@@ -24,11 +24,11 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f1-03|Saya": [
     "Ku",
-    "Adalah"
+    "Saya ada"
   ],
   "id-f1-03|saya": [
     "ku",
-    "adalah"
+    "saya ada"
   ],
   "id-f1-04|kerja di": [
     "kerja ke",
@@ -48,22 +48,20 @@ export const ID_DECOYS: Record<string, string[]> = {
   "id-f1-06|Terima kasih": [
     "Kasih terima",
     "Menerima kasih",
-    "Terima sayang"
+    "Terimakan kasih"
   ],
   "id-f1-06|terima kasih": [
     "kasih terima",
     "menerima kasih",
-    "terima sayang"
+    "terimakan kasih"
   ],
   "id-f1-07|berapa": [
     "harga",
-    "kapan",
-    "siapa"
+    "seberapa"
   ],
   "id-f1-07|Berapa": [
     "Harga",
-    "Kapan",
-    "Siapa"
+    "Seberapa"
   ],
   "id-f1-08|di mana": [
     "pada mana",
@@ -71,12 +69,12 @@ export const ID_DECOYS: Record<string, string[]> = {
     "di apa"
   ],
   "id-f1-09|Ada": [
-    "Sudah",
-    "Milik"
+    "Adalah",
+    "Berada"
   ],
   "id-f1-09|ada": [
-    "sudah",
-    "milik"
+    "adalah",
+    "berada"
   ],
   "id-f1-10|Saya mau": [
     "Saya kemauan",
@@ -90,11 +88,13 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f1-11|Tolong": [
     "Menolong",
-    "Mintakan"
+    "Mintakan",
+    "Ditolong"
   ],
   "id-f1-11|tolong": [
     "menolong",
-    "mintakan"
+    "mintakan",
+    "ditolong"
   ],
   "id-f1-12|bukan": [
     "tidak",
@@ -162,26 +162,28 @@ export const ID_DECOYS: Record<string, string[]> = {
     "sampai lihat"
   ],
   "id-f1-19|Maaf": [
+    "Memaafkan",
     "Kasihan",
-    "Sedih",
-    "Menyesal"
+    "Permaafan"
   ],
   "id-f1-19|maaf": [
+    "memaafkan",
     "kasihan",
-    "sedih",
-    "menyesal"
+    "permaafan"
   ],
   "id-f1-20|kilo": [
-    "berat",
-    "timbang"
+    "kiloan",
+    "berat"
   ],
   "id-f2-01|sudah": [
     "setelah",
-    "selama"
+    "sesudah",
+    "menyudahi"
   ],
   "id-f2-01|Sudah": [
     "Setelah",
-    "Selama"
+    "Sesudah",
+    "Menyudahi"
   ],
   "id-f2-02|belum": [
     "bukan",
@@ -194,47 +196,47 @@ export const ID_DECOYS: Record<string, string[]> = {
     "Tidak sudah"
   ],
   "id-f2-03|lagi": [
-    "lagu",
     "sambil",
-    "lain"
+    "lagian"
   ],
   "id-f2-04|Besok": [
-    "Kemarin",
-    "Akan"
+    "Akan",
+    "Kebesokan"
   ],
   "id-f2-04|besok": [
-    "kemarin",
-    "akan"
+    "akan",
+    "kebesokan"
   ],
   "id-f2-05|ingin": [
+    "keinginan",
     "hasrat",
-    "cita-cita"
+    "diingin"
   ],
   "id-f2-06|Ayo": [
-    "Membiarkan",
-    "Mengajak"
+    "Mengajak",
+    "Biarkan"
   ],
   "id-f2-06|ayo": [
-    "membiarkan",
-    "mengajak"
+    "mengajak",
+    "biarkan"
   ],
   "id-f2-06|Yuk": [
-    "Membiarkan",
-    "Mengajak"
+    "Mengajak",
+    "Biarkan"
   ],
   "id-f2-06|yuk": [
-    "membiarkan",
-    "mengajak"
+    "mengajak",
+    "biarkan"
   ],
   "id-f2-07|Boleh": [
-    "Harus",
-    "Supaya",
-    "Ingin"
+    "Diboleh",
+    "Kebolehan",
+    "Supaya"
   ],
   "id-f2-07|boleh": [
-    "harus",
-    "supaya",
-    "ingin"
+    "diboleh",
+    "kebolehan",
+    "supaya"
   ],
   "id-f2-08|Minta tolong": [
     "Minta menolong",
@@ -246,16 +248,17 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f2-08|Tolong": [
     "Menolong",
-    "Mintakan"
+    "Mintakan",
+    "Ditolong"
   ],
   "id-f2-08|tolong": [
     "menolong",
-    "mintakan"
+    "mintakan",
+    "ditolong"
   ],
   "id-f2-09|karena": [
-    "jadi",
-    "supaya",
-    "untuk"
+    "untuk",
+    "oleh"
   ],
   "id-f2-10|pernah": [
     "pengalaman",
@@ -270,9 +273,8 @@ export const ID_DECOYS: Record<string, string[]> = {
     "ditemu"
   ],
   "id-f2-12|jam berapa": [
-    "berapa jam",
-    "jam apa",
-    "jam mana"
+    "jam mana",
+    "jam kapan"
   ],
   "id-f2-13|Saya pesan": [
     "Saya dipesan",
@@ -286,8 +288,8 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f2-14|nggak pedas": [
     "bukan pedas",
-    "pedas nggak",
-    "belum pedas"
+    "belum pedas",
+    "nggak kepedasan"
   ],
   "id-f2-15|di sini": [
     "pada sini",
@@ -297,25 +299,25 @@ export const ID_DECOYS: Record<string, string[]> = {
   "id-f2-16|sakit": [
     "penyakit",
     "menyakit",
-    "rasa"
+    "kesakitan"
   ],
   "id-f2-17|sejak": [
     "untuk",
-    "sudah"
+    "sesudah"
   ],
   "id-f2-17|Sejak": [
     "Untuk",
-    "Sudah"
+    "Sesudah"
   ],
   "id-f2-18|Setiap": [
     "Semua",
     "Masing-masing",
-    "Sering"
+    "Setiapnya"
   ],
   "id-f2-18|setiap": [
     "semua",
     "masing-masing",
-    "sering"
+    "setiapnya"
   ],
   "id-f2-19|seru banget": [
     "banget seru",
@@ -349,13 +351,13 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f3-02|Kayaknya": [
     "Mungkinnya",
-    "Suka",
-    "Sama dengan"
+    "Seperti",
+    "Kayakan"
   ],
   "id-f3-02|kayaknya": [
     "mungkinnya",
-    "suka",
-    "sama dengan"
+    "seperti",
+    "kayakan"
   ],
   "id-f3-03|lebih": [
     "banyak",
@@ -364,7 +366,7 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f3-04|paling": [
     "kebanyakan",
-    "semua"
+    "terpaling"
   ],
   "id-f3-05|Bisa tolong": [
     "Tolong bisa",
@@ -388,11 +390,11 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f3-07|Waktu": [
     "Kapan",
-    "Jam"
+    "Waktunya"
   ],
   "id-f3-07|waktu": [
     "kapan",
-    "jam"
+    "waktunya"
   ],
   "id-f3-08|Kalau": [
     "Apakah",
@@ -407,11 +409,11 @@ export const ID_DECOYS: Record<string, string[]> = {
   "id-f3-09|tertinggal": [
     "meninggal",
     "meninggalkan",
-    "tertinggi"
+    "bertinggal"
   ],
   "id-f3-10|yang": [
     "adalah",
-    "sang"
+    "itu"
   ],
   "id-f3-11|sudah di": [
     "sudah me",
@@ -425,15 +427,18 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f3-13|setuju": [
     "menyetujui",
-    "bersama"
+    "disetujui",
+    "persetujuan"
   ],
   "id-f3-14|Ternyata": [
     "Kenyataan",
-    "Menyatakan"
+    "Menyatakan",
+    "Dinyatakan"
   ],
   "id-f3-14|ternyata": [
     "kenyataan",
-    "menyatakan"
+    "menyatakan",
+    "dinyatakan"
   ],
   "id-f3-15|Untungnya": [
     "Keuntungan",
@@ -455,11 +460,13 @@ export const ID_DECOYS: Record<string, string[]> = {
   ],
   "id-f3-17|Terus": [
     "Selalu",
-    "Tetap"
+    "Terusan",
+    "Meneruskan"
   ],
   "id-f3-17|terus": [
     "selalu",
-    "tetap"
+    "terusan",
+    "meneruskan"
   ],
   "id-f3-18|Menurut kamu": [
     "Menuruti kamu",
@@ -537,9 +544,9 @@ export const ID_DECOYS: Record<string, string[]> = {
     "haruskah"
   ],
   "id-f4-06|bilang bahwa": [
-    "bilang kepada",
     "bilang yang",
-    "bilang apakah"
+    "bilang apakah",
+    "bilang adalah"
   ],
   "id-f4-07|kurang": [
     "kekurangan",
@@ -637,12 +644,10 @@ export const ID_DECOYS: Record<string, string[]> = {
     "berinti"
   ],
   "id-f4-18|Dengan kata lain": [
-    "Dalam kata lain",
     "Dengan lain kata",
     "Pada kata lain"
   ],
   "id-f4-18|dengan kata lain": [
-    "dalam kata lain",
     "dengan lain kata",
     "pada kata lain"
   ],
@@ -819,6 +824,6 @@ export const ID_DECOYS: Record<string, string[]> = {
   "id-f5-19|nggak enak hati": [
     "nggak lezat hati",
     "nggak enak jantung",
-    "nggak enak perasaan"
+    "bukan enak hati"
   ]
 };
