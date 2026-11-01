@@ -40,7 +40,7 @@
               "selamat pagi, saya mau kopi susu",
               "selamat pagi, kopi susu satu",
               "pagi, saya mau kopi susu",
-              "selamat pagi, saya mau es teh"
+              "selamat pagi, saya mau kopi susu satu"
             ]
           },
           {
@@ -243,7 +243,9 @@
               "ini uangnya. terima kasih, mas",
               "terima kasih, mbak",
               "terima kasih, kak",
-              "ini, terima kasih"
+              "ini, terima kasih",
+              "ini uangnya. terima kasih, mbak",
+              "terima kasih, mas"
             ]
           },
           {
@@ -287,7 +289,8 @@
             "match": [
               "sama-sama",
               "sama-sama, mas",
-              "oke, sama-sama"
+              "oke, sama-sama",
+              "sama-sama, mbak"
             ]
           },
           {
@@ -353,10 +356,10 @@
         }
       },
       "menu-easy": {
-        "text": "Kopi, teh, atau jus.",
+        "text": "Ada kopi, teh, dan jus.",
         "gloss": {
-          "en": "Coffee, tea or juice.",
-          "ko": "커피, 차, 아니면 주스요."
+          "en": "There's coffee, tea and juice.",
+          "ko": "커피, 차, 주스가 있어요."
         }
       },
       "hot": {
@@ -367,10 +370,10 @@
         }
       },
       "hot-easy": {
-        "text": "Mau panas? Atau dingin?",
+        "text": "Mau yang panas atau yang dingin?",
         "gloss": {
-          "en": "Do you want it hot? Or cold?",
-          "ko": "뜨거운 거요? 아니면 차가운 거요?"
+          "en": "Do you want the hot one or the cold one?",
+          "ko": "뜨거운 거요, 차가운 거요?"
         }
       },
       "how-many": {
@@ -381,17 +384,17 @@
         }
       },
       "how-many-easy": {
-        "text": "Berapa gelas? Satu?",
+        "text": "Mau berapa gelas? Satu atau dua?",
         "gloss": {
-          "en": "How many glasses? One?",
-          "ko": "몇 잔요? 한 잔?"
+          "en": "How many glasses? One or two?",
+          "ko": "몇 잔요? 한 잔, 두 잔?"
         }
       },
       "price": {
-        "text": "Satu kopi susu dua puluh ribu.",
+        "text": "Satu gelas dua puluh ribu, Kak.",
         "gloss": {
-          "en": "One milk coffee is twenty thousand.",
-          "ko": "커피우유 한 잔에 2만 루피아예요."
+          "en": "One glass is twenty thousand.",
+          "ko": "한 잔에 2만 루피아예요."
         }
       },
       "price-easy": {
@@ -480,7 +483,9 @@
               "permisi, haltenya di mana?",
               "halte di mana?",
               "maaf, halte bus di mana?",
-              "permisi, pak, halte transjakarta di mana?"
+              "permisi, pak, halte transjakarta di mana?",
+              "permisi, bu, haltenya di mana?",
+              "permisi, bu, halte transjakarta di mana?"
             ]
           },
           {
@@ -525,7 +530,8 @@
               "tolong pelan-pelan",
               "tolong pelan-pelan saja",
               "tolong sekali lagi",
-              "maaf, tolong pelan-pelan, pak"
+              "maaf, tolong pelan-pelan, pak",
+              "maaf, tolong pelan-pelan, bu"
             ]
           },
           {
@@ -604,9 +610,9 @@
       "l-more-again": {
         "type": "tutor",
         "id": "l-more-again",
-        "say": "slow-easy",
+        "say": "good-easy",
         "next": "l-more",
-        "easier": "slow-easy"
+        "easier": "good-easy"
       },
       "t-atm": {
         "type": "tutor",
@@ -626,8 +632,8 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank them, adding the polite word for a man.",
-          "ko": "남자 어른을 부르는 말을 붙여 고맙다고 하세요."
+          "en": "Thank them politely, with a polite address word.",
+          "ko": "호칭을 붙여 정중하게 고맙다고 하세요."
         },
         "frame": "id-f1-06",
         "expect": [
@@ -636,8 +642,11 @@
             "go": "t-end",
             "match": [
               "terima kasih, pak",
+              "terima kasih, bu",
               "terima kasih banyak, pak",
-              "oke, terima kasih, pak"
+              "terima kasih banyak, bu",
+              "oke, terima kasih, pak",
+              "oke, terima kasih, bu"
             ]
           },
           {
@@ -655,9 +664,9 @@
       "l-thanks-again": {
         "type": "tutor",
         "id": "l-thanks-again",
-        "say": "nothing-easy",
+        "say": "clear-easy",
         "next": "l-thanks",
-        "easier": "nothing-easy"
+        "easier": "clear-easy"
       },
       "t-end": {
         "type": "tutor",
@@ -668,14 +677,14 @@
     },
     "sentences": {
       "hello": {
-        "text": "Iya, Kak? Ada yang bisa saya bantu?",
+        "text": "Iya, Kak? Ada apa?",
         "gloss": {
-          "en": "Yes? Can I help you?",
-          "ko": "네? 도와드릴까요?"
+          "en": "Yes? What is it?",
+          "ko": "네? 무슨 일이에요?"
         }
       },
       "hello-easy": {
-        "text": "Iya? Kakak cari apa?",
+        "text": "Iya? Cari apa, Kak?",
         "gloss": {
           "en": "Yes? What are you looking for?",
           "ko": "네? 뭐 찾으세요?"
@@ -689,24 +698,24 @@
         }
       },
       "dir-easy": {
-        "text": "Lurus, lalu kiri.",
+        "text": "Jalan lurus, lalu belok kiri.",
         "gloss": {
-          "en": "Straight, then left.",
-          "ko": "직진, 그다음 왼쪽이요."
+          "en": "Go straight, then turn left.",
+          "ko": "직진하다가 왼쪽으로 꺾어요."
         }
       },
       "slow": {
-        "text": "Oh, maaf. Lurus... lalu... belok kiri. Lima menit.",
+        "text": "Oh, maaf. Jalan lurus, lalu belok kiri. Lima menit jalan kaki.",
         "gloss": {
-          "en": "Oh, sorry. Straight... then... turn left. Five minutes.",
-          "ko": "아, 미안해요. 직진… 그다음… 왼쪽. 5분이요."
+          "en": "Oh, sorry. Go straight, then turn left. Five minutes on foot.",
+          "ko": "아, 미안해요. 직진하다가 왼쪽으로 꺾어요. 걸어서 5분이요."
         }
       },
       "slow-easy": {
-        "text": "Lurus. Lalu kiri. Lima menit.",
+        "text": "Lurus, lalu belok kiri. Lima menit.",
         "gloss": {
-          "en": "Straight. Then left. Five minutes.",
-          "ko": "직진. 그다음 왼쪽. 5분."
+          "en": "Straight, then turn left. Five minutes.",
+          "ko": "직진, 그다음 왼쪽. 5분이요."
         }
       },
       "good": {
@@ -717,10 +726,10 @@
         }
       },
       "good-easy": {
-        "text": "Ada lagi? Ya atau tidak?",
+        "text": "Mau tanya apa lagi?",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "또 있어요? 네, 아니요?"
+          "en": "What else do you want to ask?",
+          "ko": "또 뭐 물어볼래요?"
         }
       },
       "atm": {
@@ -731,10 +740,10 @@
         }
       },
       "atm-easy": {
-        "text": "Ada. Di sebelah halte.",
+        "text": "Ada. ATM-nya di sebelah halte.",
         "gloss": {
-          "en": "Yes. Next to the stop.",
-          "ko": "있어요. 정류장 옆이요."
+          "en": "Yes. The ATM is next to the stop.",
+          "ko": "있어요. ATM은 정류장 옆이요."
         }
       },
       "nothing": {
@@ -757,6 +766,13 @@
           "en": "You're welcome!",
           "ko": "천만에요!"
         }
+      },
+      "clear-easy": {
+        "text": "Sudah jelas, Kak?",
+        "gloss": {
+          "en": "Is that clear?",
+          "ko": "이제 알겠어요?"
+        }
       }
     },
     "review": "claude"
@@ -770,7 +786,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small minimarket (warung) near a boarding house in Bandung, late morning. The tutor is the shop assistant. The learner is looking for a phone charger.",
+    "setting": "A small phone-accessory counter (konter HP) near a boarding house in Bandung, late morning. The tutor is the shop assistant. The learner is looking for a phone charger.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -801,7 +817,8 @@
               "ada charger?",
               "permisi, ada charger hp?",
               "mbak, ada charger?",
-              "ada kabel charger?"
+              "ada kabel charger?",
+              "mas, ada charger?"
             ]
           },
           {
@@ -853,7 +870,8 @@
               "bukan, bukan samsung",
               "bukan, hp saya bukan samsung",
               "bukan. ini iphone",
-              "bukan samsung"
+              "bukan samsung",
+              "bukan, iphone"
             ]
           },
           {
@@ -902,9 +920,9 @@
             "meaning": "asks what the thing is",
             "go": "t-thing",
             "match": [
-              "itu barang apa?",
               "ini barang apa?",
-              "maaf, itu kabel apa?",
+              "itu barang apa?",
+              "maaf, ini kabel apa?",
               "ini alat apa?"
             ]
           },
@@ -950,7 +968,8 @@
               "charger berapa?",
               "ini berapa?",
               "harganya berapa, mbak?",
-              "yang ini berapa?"
+              "yang ini berapa?",
+              "harganya berapa, mas?"
             ]
           },
           {
@@ -995,12 +1014,13 @@
               "saya mau ini",
               "oke, saya mau ini",
               "saya mau yang ini, mbak",
-              "oke, saya mau satu"
+              "oke, saya mau satu",
+              "saya mau yang ini, mas"
             ]
           },
           {
             "meaning": "too expensive",
-            "go": "t-bag",
+            "go": "t-cheap",
             "match": [
               "mahal, ya",
               "wah, mahal",
@@ -1013,9 +1033,9 @@
       "l-take-again": {
         "type": "tutor",
         "id": "l-take-again",
-        "say": "price-easy",
+        "say": "next-easy",
         "next": "l-take",
-        "easier": "price-easy"
+        "easier": "next-easy"
       },
       "t-bag": {
         "type": "tutor",
@@ -1047,7 +1067,8 @@
             "match": [
               "ya, boleh",
               "iya, mau",
-              "boleh, mbak"
+              "boleh, mbak",
+              "boleh, mas"
             ]
           }
         ],
@@ -1065,6 +1086,13 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-cheap": {
+        "type": "tutor",
+        "id": "t-cheap",
+        "say": "cheap",
+        "next": "l-take",
+        "easier": "next-easy"
       }
     },
     "sentences": {
@@ -1076,24 +1104,24 @@
         }
       },
       "hello-easy": {
-        "text": "Kakak mau beli apa?",
+        "text": "Mau beli apa, Kak?",
         "gloss": {
           "en": "What do you want to buy?",
           "ko": "뭐 사실래요?"
         }
       },
       "have": {
-        "text": "Ada, Kak. Ini. HP Kakak Samsung?",
+        "text": "Ada, Kak. HP-nya Samsung?",
         "gloss": {
-          "en": "Yes, we do. Here. Is your phone a Samsung?",
-          "ko": "있어요. 여기요. 휴대폰이 삼성이에요?"
+          "en": "Yes, we do. Is your phone a Samsung?",
+          "ko": "있어요. 휴대폰이 삼성이에요?"
         }
       },
       "have-easy": {
-        "text": "Samsung? Ya atau bukan?",
+        "text": "HP-nya Samsung atau bukan?",
         "gloss": {
-          "en": "Samsung? Yes or no?",
-          "ko": "삼성이에요? 맞아요, 아니에요?"
+          "en": "Is the phone a Samsung or not?",
+          "ko": "휴대폰이 삼성이에요, 아니에요?"
         }
       },
       "browse": {
@@ -1132,24 +1160,24 @@
         }
       },
       "thing-easy": {
-        "text": "Kabel. Kabel untuk HP.",
+        "text": "Itu kabel untuk HP.",
         "gloss": {
-          "en": "A cable. A cable for a phone.",
-          "ko": "케이블이요. 휴대폰 케이블."
+          "en": "That's a cable for a phone.",
+          "ko": "그건 휴대폰 케이블이에요."
         }
       },
       "ask-easy": {
-        "text": "Ada yang mau ditanya lagi?",
+        "text": "Mau tanya apa lagi, Kak?",
         "gloss": {
-          "en": "Anything else you want to ask?",
-          "ko": "더 물어볼 거 있어요?"
+          "en": "What else would you like to ask?",
+          "ko": "또 뭐 물어보실래요?"
         }
       },
       "next-easy": {
-        "text": "Mau tanya harganya?",
+        "text": "Mau yang ini, Kak?",
         "gloss": {
-          "en": "Do you want to ask the price?",
-          "ko": "가격 물어보실래요?"
+          "en": "Do you want this one?",
+          "ko": "이걸로 하실래요?"
         }
       },
       "price": {
@@ -1174,10 +1202,10 @@
         }
       },
       "bag-easy": {
-        "text": "Kantong? Mau atau tidak?",
+        "text": "Mau kantong plastik atau tidak?",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉지요? 드려요, 말아요?"
+          "en": "Do you want a plastic bag or not?",
+          "ko": "비닐봉지 드려요, 말아요?"
         }
       },
       "end": {
@@ -1185,6 +1213,13 @@
         "gloss": {
           "en": "OK. Thank you!",
           "ko": "네. 감사합니다!"
+        }
+      },
+      "cheap": {
+        "text": "Sudah pas, Kak. Tidak bisa kurang.",
+        "gloss": {
+          "en": "That's the fixed price. It can't go lower.",
+          "ko": "정가예요. 더 못 깎아요."
         }
       }
     },
@@ -1417,7 +1452,8 @@
             "match": [
               "oke, terima kasih",
               "terima kasih, mbak",
-              "baik, terima kasih banyak"
+              "baik, terima kasih banyak",
+              "terima kasih, mas"
             ]
           }
         ],
@@ -1452,7 +1488,10 @@
             "match": [
               "terima kasih, mbak. selamat malam",
               "terima kasih, mbak",
-              "oke, terima kasih, bu"
+              "oke, terima kasih, bu",
+              "terima kasih, mas. selamat malam",
+              "terima kasih, mas",
+              "oke, terima kasih, pak"
             ]
           },
           {
@@ -1490,9 +1529,9 @@
         }
       },
       "hello-easy": {
-        "text": "Selamat malam. Ada pesanan kamar?",
+        "text": "Selamat malam. Sudah pesan kamar?",
         "gloss": {
-          "en": "Good evening. Do you have a room booking?",
+          "en": "Good evening. Have you booked a room?",
           "ko": "안녕하세요. 방 예약하셨어요?"
         }
       },
@@ -1518,10 +1557,10 @@
         }
       },
       "found-easy": {
-        "text": "Paspor Kakak ada?",
+        "text": "Boleh minta paspornya?",
         "gloss": {
-          "en": "Do you have your passport?",
-          "ko": "여권 있으세요?"
+          "en": "May I have your passport?",
+          "ko": "여권 주시겠어요?"
         }
       },
       "pass": {
@@ -1532,10 +1571,10 @@
         }
       },
       "pass-easy": {
-        "text": "Ini kunci. Kamar dua belas.",
+        "text": "Ini kuncinya. Kamar nomor dua belas.",
         "gloss": {
-          "en": "Here's the key. Room twelve.",
-          "ko": "열쇠요. 12호실."
+          "en": "Here's the key. Room number twelve.",
+          "ko": "열쇠 여기요. 12호실이에요."
         }
       },
       "room": {
@@ -1546,10 +1585,10 @@
         }
       },
       "room-easy": {
-        "text": "Lantai dua. Tangga di kanan.",
+        "text": "Di lantai dua. Tangganya di kanan.",
         "gloss": {
-          "en": "Second floor. Stairs on the right.",
-          "ko": "2층. 계단은 오른쪽."
+          "en": "On the second floor. The stairs are on the right.",
+          "ko": "2층이요. 계단은 오른쪽."
         }
       },
       "breakfast": {
@@ -1713,7 +1752,8 @@
               "saya karyawan",
               "saya pegawai kantor",
               "aku karyawan",
-              "saya kerja kantor"
+              "saya pegawai",
+              "saya karyawan kantor"
             ]
           },
           {
@@ -1791,7 +1831,7 @@
         "type": "learner",
         "id": "l-back",
         "goal": {
-          "en": "Ask her name again — you forgot it.",
+          "en": "Ask their name again — you forgot it.",
           "ko": "이름을 잊었어요. 이름을 다시 물어보세요."
         },
         "frame": "id-f1-16",
@@ -1836,7 +1876,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Say it was nice to meet her and see you.",
+          "en": "Say it was nice to meet them and see you.",
           "ko": "만나서 반갑다고, 또 보자고 하세요."
         },
         "frame": "id-f1-18",
@@ -1886,10 +1926,10 @@
         }
       },
       "hello-easy": {
-        "text": "Halo. Aku Sinta. Kamu?",
+        "text": "Halo. Aku Sinta. Nama kamu siapa?",
         "gloss": {
-          "en": "Hello. I'm Sinta. And you?",
-          "ko": "안녕. 난 신타야. 너는?"
+          "en": "Hello. I'm Sinta. What's your name?",
+          "ko": "안녕. 난 신타야. 이름이 뭐야?"
         }
       },
       "nice": {
@@ -1900,10 +1940,10 @@
         }
       },
       "nice-easy": {
-        "text": "Dari mana? Korea? Jepang?",
+        "text": "Kamu dari mana? Dari Korea?",
         "gloss": {
-          "en": "Where from? Korea? Japan?",
-          "ko": "어디서 왔어? 한국? 일본?"
+          "en": "Where are you from? From Korea?",
+          "ko": "어디서 왔어? 한국?"
         }
       },
       "korea": {
@@ -1935,31 +1975,31 @@
         }
       },
       "ask": {
-        "text": "Oh, dekat sini, ya. Ada pertanyaan buat aku?",
+        "text": "Oke. Sekarang kamu mau tanya apa ke aku?",
         "gloss": {
-          "en": "Oh, that's near here. Any questions for me?",
-          "ko": "아, 여기서 가깝네. 나한테 궁금한 거 있어?"
+          "en": "OK. Now, what do you want to ask me?",
+          "ko": "그래. 이제 나한테 뭐 물어볼래?"
         }
       },
       "ask-easy": {
-        "text": "Mau tanya aku?",
+        "text": "Kamu mau tanya apa?",
         "gloss": {
-          "en": "Do you want to ask me something?",
-          "ko": "나한테 물어볼래?"
+          "en": "What do you want to ask?",
+          "ko": "뭐 물어볼래?"
         }
       },
       "me": {
-        "text": "Aku dari Surabaya. Aku guru bahasa Inggris.",
+        "text": "Sinta. Aku dari Surabaya, dan aku guru bahasa Inggris.",
         "gloss": {
-          "en": "I'm from Surabaya. I'm an English teacher.",
-          "ko": "난 수라바야에서 왔어. 영어 선생님이야."
+          "en": "Sinta. I'm from Surabaya, and I'm an English teacher.",
+          "ko": "신타. 난 수라바야에서 왔고, 영어 선생님이야."
         }
       },
       "me-easy": {
-        "text": "Surabaya. Aku guru.",
+        "text": "Aku Sinta, dari Surabaya.",
         "gloss": {
-          "en": "Surabaya. I'm a teacher.",
-          "ko": "수라바야. 난 선생님이야."
+          "en": "I'm Sinta, from Surabaya.",
+          "ko": "난 신타, 수라바야에서 왔어."
         }
       },
       "end": {
@@ -2045,31 +2085,33 @@
         "type": "learner",
         "id": "l-brother",
         "goal": {
-          "en": "Say no, it isn't your sister — it's your older brother.",
-          "ko": "누나가 아니라 형이라고 하세요."
+          "en": "Say yes — that's your older brother.",
+          "ko": "응, 내 형(오빠)이라고 하세요."
         },
         "expect": [
           {
-            "meaning": "corrects: not a sister",
+            "meaning": "yes, it's their older brother",
             "go": "t-girl",
             "match": [
-              "bukan, bukan kakak perempuan. itu kakak laki-laki saya",
-              "itu bukan kakak perempuan saya",
-              "bukan, itu abang saya",
-              "bukan kakak perempuan"
+              "ya, ini kakak saya",
+              "iya, itu kakak laki-laki saya",
+              "ya, itu abang saya",
+              "ini kakak saya",
+              "iya, kakak saya"
             ]
           },
           {
-            "meaning": "says it's their brother",
+            "meaning": "no, it's a friend",
             "go": "t-girl",
             "match": [
-              "itu kakak saya",
-              "kakak laki-laki saya",
-              "itu abang"
+              "bukan, itu teman saya",
+              "bukan, teman",
+              "bukan kakak, teman saya"
             ]
           }
         ],
-        "onMiss": "l-brother-again"
+        "onMiss": "l-brother-again",
+        "frame": "id-f1-14"
       },
       "l-brother-again": {
         "type": "tutor",
@@ -2134,7 +2176,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your sister's name.",
+          "en": "Tell them your sister's name.",
           "ko": "동생 이름을 말해 주세요."
         },
         "expect": [
@@ -2285,24 +2327,24 @@
         }
       },
       "who": {
-        "text": "Oh, keluarga kamu! Yang tinggi ini siapa?",
+        "text": "Oh, keluarga kamu! Yang tinggi ini kakak kamu, ya?",
         "gloss": {
-          "en": "Oh, your family! Who's this tall one?",
-          "ko": "아, 가족이구나! 이 키 큰 사람은 누구야?"
+          "en": "Oh, your family! This tall one is your older sibling, right?",
+          "ko": "아, 가족이구나! 이 키 큰 사람은 손위 형제지?"
         }
       },
       "who-easy": {
-        "text": "Ini siapa? Kakak kamu?",
+        "text": "Ini kakak kamu?",
         "gloss": {
-          "en": "Who's this? Your older sibling?",
-          "ko": "이 사람 누구야? 형/언니야?"
+          "en": "Is this your older sibling?",
+          "ko": "이 사람 손위 형제야?"
         }
       },
       "girl": {
-        "text": "Oh, ganteng! Terus yang kecil ini?",
+        "text": "Oh, keren! Terus yang kecil ini siapa?",
         "gloss": {
-          "en": "Oh, handsome! And this little one?",
-          "ko": "오, 잘생겼다! 그럼 이 작은 애는?"
+          "en": "Oh, cool! And who's this little one?",
+          "ko": "오, 멋지다! 그럼 이 작은 애는 누구야?"
         }
       },
       "girl-easy": {
@@ -2320,9 +2362,9 @@
         }
       },
       "name-easy": {
-        "text": "Nama adik kamu apa?",
+        "text": "Nama adik kamu siapa?",
         "gloss": {
-          "en": "What's your little sister's name?",
+          "en": "What's your little sibling's name?",
           "ko": "동생 이름이 뭐야?"
         }
       },
@@ -2348,9 +2390,9 @@
         }
       },
       "mine-easy": {
-        "text": "Aku punya kucing. Lihat?",
+        "text": "Aku punya kucing. Mau lihat?",
         "gloss": {
-          "en": "I have a cat. Want to look?",
+          "en": "I have a cat. Want to see?",
           "ko": "나 고양이 있어. 볼래?"
         }
       },
@@ -2442,8 +2484,8 @@
         "type": "learner",
         "id": "l-fav",
         "goal": {
-          "en": "Say you want the satay.",
-          "ko": "사테를 먹고 싶다고 하세요."
+          "en": "Say you want the grilled meat skewers.",
+          "ko": "꼬치구이를 먹고 싶다고 하세요."
         },
         "frame": "id-f1-10",
         "expect": [
@@ -2556,7 +2598,8 @@
               "ada jus alpukat?",
               "di sini ada jus alpukat?",
               "ada jus?",
-              "mas, ada jus alpukat?"
+              "mas, ada jus alpukat?",
+              "mbak, ada jus alpukat?"
             ]
           },
           {
@@ -2682,38 +2725,38 @@
         }
       },
       "hello-easy": {
-        "text": "Makanan Indonesia, suka atau tidak?",
+        "text": "Kamu suka makanan Indonesia atau tidak?",
         "gloss": {
-          "en": "Indonesian food: do you like it or not?",
-          "ko": "인도네시아 음식, 좋아해, 안 좋아해?"
+          "en": "Do you like Indonesian food or not?",
+          "ko": "인도네시아 음식 좋아해, 안 좋아해?"
         }
       },
       "fav": {
-        "text": "Asyik! Paling suka apa? Nasi goreng? Sate?",
+        "text": "Asyik! Sekarang mau makan apa? Nasi goreng atau sate?",
         "gloss": {
-          "en": "Great! What do you like most? Fried rice? Satay?",
-          "ko": "좋다! 뭐 제일 좋아해? 나시고렝? 사테?"
+          "en": "Great! What do you want to eat now? Fried rice or satay?",
+          "ko": "좋다! 지금 뭐 먹을래? 나시고렝, 아니면 사테?"
         }
       },
       "fav-easy": {
-        "text": "Nasi goreng atau sate?",
+        "text": "Mau nasi goreng atau sate?",
         "gloss": {
-          "en": "Fried rice or satay?",
-          "ko": "나시고렝, 아니면 사테?"
+          "en": "Do you want fried rice or satay?",
+          "ko": "나시고렝 먹을래, 사테 먹을래?"
         }
       },
       "spicy": {
-        "text": "Sate di sini enak! Kamu suka pedas?",
+        "text": "Oke! Di sini semuanya enak. Kamu suka pedas?",
         "gloss": {
-          "en": "The satay here is good! Do you like spicy food?",
-          "ko": "여기 사테 맛있어! 매운 거 좋아해?"
+          "en": "OK! Everything here is good. Do you like spicy food?",
+          "ko": "좋아! 여기 다 맛있어. 매운 거 좋아해?"
         }
       },
       "spicy-easy": {
-        "text": "Pedas? Suka atau tidak?",
+        "text": "Kamu suka pedas atau tidak?",
         "gloss": {
-          "en": "Spicy? Do you like it or not?",
-          "ko": "매운 거? 좋아해, 안 좋아해?"
+          "en": "Do you like spicy food or not?",
+          "ko": "매운 거 좋아해, 안 좋아해?"
         }
       },
       "nospicy": {
@@ -2738,45 +2781,45 @@
         }
       },
       "drink-easy": {
-        "text": "Minum? Es teh? Jus?",
+        "text": "Mau es teh lagi atau jus?",
         "gloss": {
-          "en": "A drink? Iced tea? Juice?",
-          "ko": "마실 거? 아이스티? 주스?"
+          "en": "Another iced tea, or juice?",
+          "ko": "아이스티 더 마실래, 주스 마실래?"
         }
       },
       "ask": {
-        "text": "Siap. Kamu mau tanya aku?",
+        "text": "Oke, nanti aku pesan. Kamu mau tanya apa ke aku?",
         "gloss": {
-          "en": "Sure. Do you want to ask me something?",
-          "ko": "알겠어. 나한테 물어볼 거 있어?"
+          "en": "OK, I'll order it later. What do you want to ask me?",
+          "ko": "그래, 이따 내가 주문할게. 나한테 뭐 물어볼래?"
         }
       },
       "ask-easy": {
-        "text": "Tanya aku, ya?",
+        "text": "Kamu mau tanya apa?",
         "gloss": {
-          "en": "Ask me, OK?",
-          "ko": "나한테 물어봐."
+          "en": "What do you want to ask?",
+          "ko": "뭐 물어볼래?"
         }
       },
       "me": {
         "text": "Aku suka sekali bakso!",
         "gloss": {
           "en": "I really like meatball soup!",
-          "ko": "난 박소 엄청 좋아해!"
+          "ko": "난 바소 엄청 좋아해!"
         }
       },
       "me-easy": {
         "text": "Aku suka bakso.",
         "gloss": {
           "en": "I like meatball soup.",
-          "ko": "난 박소 좋아해."
+          "ko": "난 바소 좋아해."
         }
       },
       "end": {
         "text": "Besok kita makan bakso, yuk!",
         "gloss": {
           "en": "Let's have meatball soup tomorrow!",
-          "ko": "내일 박소 먹으러 가자!"
+          "ko": "내일 바소 먹으러 가자!"
         }
       }
     },
@@ -2822,7 +2865,8 @@
               "ya, nama saya ji-woo",
               "iya, pak. nama saya ji-woo",
               "halo, pak joko. nama saya ji-woo",
-              "nama saya ji-woo"
+              "nama saya ji-woo",
+              "iya, bu. nama saya ji-woo"
             ]
           },
           {
@@ -2831,7 +2875,8 @@
             "match": [
               "ya, saya baru",
               "iya, pak",
-              "ya"
+              "ya",
+              "iya, bu"
             ]
           }
         ],
@@ -2912,7 +2957,7 @@
         "expect": [
           {
             "meaning": "can't swim",
-            "go": "t-swim",
+            "go": "t-swim2",
             "match": [
               "saya tidak bisa berenang",
               "tidak, saya tidak bisa",
@@ -2950,7 +2995,7 @@
         "type": "learner",
         "id": "l-same",
         "goal": {
-          "en": "Ask if he can play tennis.",
+          "en": "Ask if they can play tennis.",
           "ko": "테니스는 칠 줄 아는지 물어보세요."
         },
         "expect": [
@@ -3037,7 +3082,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank him politely.",
+          "en": "Thank them politely.",
           "ko": "정중하게 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -3048,7 +3093,9 @@
             "match": [
               "terima kasih, pak",
               "terima kasih banyak, pak joko",
-              "wah, terima kasih, pak"
+              "wah, terima kasih, pak",
+              "terima kasih banyak",
+              "terima kasih, bu"
             ]
           },
           {
@@ -3057,7 +3104,8 @@
             "match": [
               "oke",
               "baik, pak",
-              "siap"
+              "siap",
+              "baik, bu"
             ]
           }
         ],
@@ -3075,21 +3123,28 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-swim2": {
+        "type": "tutor",
+        "id": "t-swim2",
+        "say": "swim2",
+        "next": "l-same",
+        "easier": "swim-easy"
       }
     },
     "sentences": {
       "hello": {
-        "text": "Halo! Anggota baru, ya? Saya Pak Joko.",
+        "text": "Halo! Anggota baru, ya? Saya Joko.",
         "gloss": {
-          "en": "Hello! A new member, right? I'm Pak Joko.",
+          "en": "Hello! A new member, right? I'm Joko.",
           "ko": "안녕하세요! 새 회원이죠? 저는 조코예요."
         }
       },
       "hello-easy": {
-        "text": "Halo. Saya Pak Joko. Kamu baru?",
+        "text": "Halo. Saya Joko. Kamu anggota baru?",
         "gloss": {
-          "en": "Hello. I'm Pak Joko. Are you new?",
-          "ko": "안녕하세요. 조코예요. 처음이에요?"
+          "en": "Hello. I'm Joko. Are you a new member?",
+          "ko": "안녕하세요. 조코예요. 새 회원이에요?"
         }
       },
       "play": {
@@ -3100,10 +3155,10 @@
         }
       },
       "play-easy": {
-        "text": "Bulu tangkis, bisa atau tidak?",
+        "text": "Bisa main bulu tangkis?",
         "gloss": {
-          "en": "Badminton: can you or not?",
-          "ko": "배드민턴, 할 줄 알아요, 몰라요?"
+          "en": "Can you play badminton?",
+          "ko": "배드민턴 칠 줄 알아요?"
         }
       },
       "good": {
@@ -3114,10 +3169,10 @@
         }
       },
       "good-easy": {
-        "text": "Berenang? Bisa?",
+        "text": "Kamu bisa berenang?",
         "gloss": {
-          "en": "Swimming? Can you?",
-          "ko": "수영? 할 줄 알아요?"
+          "en": "Can you swim?",
+          "ko": "수영 할 줄 알아요?"
         }
       },
       "teach": {
@@ -3135,10 +3190,10 @@
         }
       },
       "swim": {
-        "text": "Wah, saya tidak bisa berenang!",
+        "text": "Wah, hebat! Saya tidak bisa berenang.",
         "gloss": {
-          "en": "Wow, I can't swim!",
-          "ko": "와, 저는 수영 못 해요!"
+          "en": "Wow, great! I can't swim.",
+          "ko": "와, 대단해요! 저는 수영 못 해요."
         }
       },
       "swim-easy": {
@@ -3156,10 +3211,10 @@
         }
       },
       "racket-easy": {
-        "text": "Raket? Ada?",
+        "text": "Ada raket?",
         "gloss": {
-          "en": "A racket? Do you have one?",
-          "ko": "라켓? 있어요?"
+          "en": "Do you have a racket?",
+          "ko": "라켓 있어요?"
         }
       },
       "lend": {
@@ -3181,6 +3236,13 @@
         "gloss": {
           "en": "Come on, let's play now!",
           "ko": "자, 지금 쳐요!"
+        }
+      },
+      "swim2": {
+        "text": "Sama, saya juga tidak bisa berenang.",
+        "gloss": {
+          "en": "Same here, I can't swim either.",
+          "ko": "저도요, 저도 수영 못 해요."
         }
       }
     },
@@ -3226,7 +3288,8 @@
               "selamat pagi",
               "selamat pagi, mbak",
               "pagi juga! selamat pagi",
-              "selamat pagi, apa kabar?"
+              "selamat pagi, apa kabar?",
+              "selamat pagi, mas"
             ]
           },
           {
@@ -3450,14 +3513,14 @@
         }
       },
       "fine": {
-        "text": "Baik juga. Tadi bangun jam berapa?",
+        "text": "Pagi! Eh, tadi bangun jam berapa?",
         "gloss": {
-          "en": "I'm fine too. What time did you get up?",
-          "ko": "나도 잘 지내. 아까 몇 시에 일어났어?"
+          "en": "Morning! Hey, what time did you get up?",
+          "ko": "좋은 아침! 어, 아까 몇 시에 일어났어?"
         }
       },
       "fine-easy": {
-        "text": "Bangun jam berapa? Jam enam?",
+        "text": "Kamu bangun jam berapa? Jam enam?",
         "gloss": {
           "en": "What time did you get up? Six?",
           "ko": "몇 시에 일어났어? 6시?"
@@ -3471,10 +3534,10 @@
         }
       },
       "early-easy": {
-        "text": "Rumahnya jauh? Ya atau tidak?",
+        "text": "Rumah kamu jauh atau dekat?",
         "gloss": {
-          "en": "Is your home far? Yes or no?",
-          "ko": "집이 멀어? 응, 아니?"
+          "en": "Is your home far or near?",
+          "ko": "집이 멀어, 가까워?"
         }
       },
       "lunch": {
@@ -3555,7 +3618,9 @@
               "selamat pagi, bu. ya, saya baru",
               "selamat pagi, bu",
               "pagi, bu. iya, baru pindah",
-              "selamat pagi. ya"
+              "selamat pagi. ya",
+              "selamat pagi, pak. ya, saya baru",
+              "selamat pagi, pak"
             ]
           },
           {
@@ -3564,7 +3629,8 @@
             "match": [
               "ya, baru",
               "iya, bu",
-              "betul"
+              "betul",
+              "iya, pak"
             ]
           }
         ],
@@ -3599,7 +3665,8 @@
               "nomor lima",
               "rumah saya nomor lima",
               "yang nomor lima, bu",
-              "itu, nomor lima"
+              "itu, nomor lima",
+              "yang nomor lima, pak"
             ]
           },
           {
@@ -3608,7 +3675,8 @@
             "match": [
               "yang itu",
               "itu, bu",
-              "di sana"
+              "di sana",
+              "itu, pak"
             ]
           }
         ],
@@ -3643,7 +3711,8 @@
               "ya, saya suka. sepi",
               "suka, bu. di sini sepi",
               "iya, enak",
-              "saya suka sekali"
+              "saya suka sekali",
+              "suka, pak. di sini sepi"
             ]
           },
           {
@@ -3652,7 +3721,8 @@
             "match": [
               "belum tahu",
               "lumayan",
-              "saya belum tahu, bu"
+              "saya belum tahu, bu",
+              "saya belum tahu, pak"
             ]
           }
         ],
@@ -3688,7 +3758,9 @@
               "ada pasar dekat sini?",
               "bu, ada pasar di sini?",
               "ada pasar?",
-              "permisi, bu, ada pasar dekat sini?"
+              "permisi, bu, ada pasar dekat sini?",
+              "pak, ada pasar di sini?",
+              "permisi, pak, ada pasar dekat sini?"
             ]
           },
           {
@@ -3697,7 +3769,8 @@
             "match": [
               "pasarnya di mana?",
               "pasar di mana, bu?",
-              "di mana pasar?"
+              "di mana pasar?",
+              "pasar di mana, pak?"
             ]
           }
         ],
@@ -3740,7 +3813,9 @@
             "match": [
               "terima kasih, bu",
               "oke, terima kasih banyak",
-              "baik, makasih, bu"
+              "baik, makasih, bu",
+              "terima kasih, pak",
+              "baik, makasih, pak"
             ]
           }
         ],
@@ -3764,7 +3839,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -3775,7 +3850,10 @@
             "match": [
               "terima kasih, bu",
               "wah, terima kasih banyak, bu",
-              "oke, terima kasih, bu"
+              "oke, terima kasih, bu",
+              "terima kasih, pak",
+              "wah, terima kasih banyak, pak",
+              "oke, terima kasih, pak"
             ]
           },
           {
@@ -3806,7 +3884,7 @@
     },
     "sentences": {
       "hello": {
-        "text": "Pagi, Nak! Baru pindah ke sini, ya?",
+        "text": "Pagi! Baru pindah ke sini, ya?",
         "gloss": {
           "en": "Morning! You've just moved here, haven't you?",
           "ko": "좋은 아침! 여기 막 이사 왔죠?"
@@ -3841,14 +3919,14 @@
         }
       },
       "like-easy": {
-        "text": "Suka di sini?",
+        "text": "Kamu suka di sini?",
         "gloss": {
           "en": "Do you like it here?",
           "ko": "여기 좋아요?"
         }
       },
       "need": {
-        "text": "Kalau perlu apa-apa, tanya Ibu saja.",
+        "text": "Kalau perlu apa-apa, tanya saya saja.",
         "gloss": {
           "en": "If you need anything, just ask me.",
           "ko": "필요한 거 있으면 나한테 물어봐요."
@@ -3869,10 +3947,10 @@
         }
       },
       "market-easy": {
-        "text": "Ada. Dekat masjid.",
+        "text": "Ada. Pasarnya dekat masjid.",
         "gloss": {
-          "en": "Yes. Near the mosque.",
-          "ko": "있어요. 모스크 근처요."
+          "en": "Yes. The market is near the mosque.",
+          "ko": "있어요. 시장은 모스크 근처요."
         }
       },
       "open": {
@@ -3883,14 +3961,14 @@
         }
       },
       "open-easy": {
-        "text": "Jam lima pagi.",
+        "text": "Buka jam lima pagi.",
         "gloss": {
-          "en": "Five in the morning.",
-          "ko": "새벽 5시요."
+          "en": "It opens at five in the morning.",
+          "ko": "새벽 5시에 열어요."
         }
       },
       "end": {
-        "text": "Sama-sama, Nak. Mampir, ya!",
+        "text": "Sama-sama. Mampir, ya!",
         "gloss": {
           "en": "You're welcome. Drop by sometime!",
           "ko": "천만에요. 놀러 와요!"
@@ -3939,7 +4017,8 @@
               "permisi, ini buah apa?",
               "itu buah apa?",
               "bu, ini buah apa?",
-              "maaf, yang merah itu buah apa?"
+              "maaf, yang merah itu buah apa?",
+              "pak, ini buah apa?"
             ]
           },
           {
@@ -3984,7 +4063,8 @@
               "satu kilo berapa?",
               "sekilo berapa, bu?",
               "rambutan berapa?",
-              "berapa sekilo?"
+              "berapa sekilo?",
+              "sekilo berapa, pak?"
             ]
           },
           {
@@ -3993,7 +4073,8 @@
             "match": [
               "boleh coba?",
               "boleh saya coba?",
-              "coba satu, bu"
+              "coba satu, bu",
+              "coba satu, pak"
             ]
           }
         ],
@@ -4029,7 +4110,8 @@
               "saya mau dua kilo",
               "saya mau dua kilo, bu",
               "oke, saya mau dua kilo",
-              "dua kilo, ya"
+              "dua kilo, ya",
+              "saya mau dua kilo, pak"
             ]
           },
           {
@@ -4043,11 +4125,12 @@
           },
           {
             "meaning": "did not catch the price",
-            "go": "l-kilo-again",
+            "go": "t-price-again",
             "match": [
               "maaf, berapa?",
               "sekali lagi, bu?",
-              "tolong pelan-pelan"
+              "tolong pelan-pelan",
+              "sekali lagi, pak?"
             ]
           }
         ],
@@ -4083,7 +4166,9 @@
               "tidak, terima kasih, bu",
               "itu saja. terima kasih, bu",
               "sudah, terima kasih",
-              "tidak usah, terima kasih"
+              "tidak usah, terima kasih",
+              "tidak, terima kasih, pak",
+              "itu saja. terima kasih, pak"
             ]
           },
           {
@@ -4126,7 +4211,9 @@
             "match": [
               "ini uangnya",
               "ini, bu",
-              "ini uangnya, bu"
+              "ini uangnya, bu",
+              "ini, pak",
+              "ini uangnya, pak"
             ]
           },
           {
@@ -4135,7 +4222,8 @@
             "match": [
               "maaf, saya tidak mengerti",
               "berapa, bu?",
-              "sekali lagi?"
+              "sekali lagi?",
+              "berapa, pak?"
             ]
           }
         ],
@@ -4159,7 +4247,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Reply to her thanks and say goodbye.",
+          "en": "Reply to their thanks and say goodbye.",
           "ko": "고맙다는 말에 대답하고 인사하세요."
         },
         "frame": "id-f1-18",
@@ -4170,7 +4258,8 @@
             "match": [
               "sama-sama. sampai jumpa, bu",
               "sampai jumpa lagi",
-              "oke, sampai jumpa minggu depan"
+              "oke, sampai jumpa minggu depan",
+              "sama-sama. sampai jumpa, pak"
             ]
           },
           {
@@ -4179,7 +4268,8 @@
             "match": [
               "sama-sama",
               "sama-sama, bu",
-              "iya, sama-sama"
+              "iya, sama-sama",
+              "sama-sama, pak"
             ]
           }
         ],
@@ -4197,6 +4287,13 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-price-again": {
+        "type": "tutor",
+        "id": "t-price-again",
+        "say": "price-easy",
+        "next": "l-kilo",
+        "easier": "howmuch-easy"
       }
     },
     "sentences": {
@@ -4222,10 +4319,10 @@
         }
       },
       "rambutan-easy": {
-        "text": "Rambutan. Buah manis.",
+        "text": "Itu rambutan. Manis.",
         "gloss": {
-          "en": "Rambutan. A sweet fruit.",
-          "ko": "람부탄. 단 과일이에요."
+          "en": "That's rambutan. Sweet.",
+          "ko": "그건 람부탄이에요. 달아요."
         }
       },
       "price": {
@@ -4236,10 +4333,10 @@
         }
       },
       "price-easy": {
-        "text": "Satu kilo, dua puluh ribu.",
+        "text": "Satu kilo dua puluh ribu.",
         "gloss": {
-          "en": "One kilo, twenty thousand.",
-          "ko": "1킬로, 2만."
+          "en": "One kilo is twenty thousand.",
+          "ko": "1킬로에 2만이요."
         }
       },
       "howmuch": {
@@ -4250,10 +4347,10 @@
         }
       },
       "howmuch-easy": {
-        "text": "Satu kilo? Dua kilo?",
+        "text": "Mau satu kilo atau dua kilo?",
         "gloss": {
-          "en": "One kilo? Two kilos?",
-          "ko": "1킬로? 2킬로?"
+          "en": "Do you want one kilo or two?",
+          "ko": "1킬로요, 2킬로요?"
         }
       },
       "other": {
@@ -4348,7 +4445,8 @@
               "ini roti apa?",
               "itu roti apa?",
               "maaf, yang hijau itu roti apa?",
-              "pagi, pak. ini roti apa?"
+              "pagi, pak. ini roti apa?",
+              "pagi, bu. ini roti apa?"
             ]
           },
           {
@@ -4400,7 +4498,8 @@
               "saya mau roti pandan",
               "saya mau ini",
               "oke, saya mau yang hijau",
-              "saya mau roti pandan, pak"
+              "saya mau roti pandan, pak",
+              "saya mau roti pandan, bu"
             ]
           },
           {
@@ -4409,7 +4508,8 @@
             "match": [
               "roti keju saja",
               "yang keju",
-              "keju, pak"
+              "keju, pak",
+              "keju, bu"
             ]
           }
         ],
@@ -4445,7 +4545,8 @@
               "tiga. berapa?",
               "tiga, semuanya berapa?",
               "tiga, pak. berapa?",
-              "tiga buah. harganya berapa?"
+              "tiga buah. harganya berapa?",
+              "tiga, bu. berapa?"
             ]
           },
           {
@@ -4478,7 +4579,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank him.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -4489,7 +4590,10 @@
             "match": [
               "ini uangnya. terima kasih, pak",
               "terima kasih, pak",
-              "oke, terima kasih banyak, pak"
+              "oke, terima kasih banyak, pak",
+              "ini uangnya. terima kasih, bu",
+              "terima kasih, bu",
+              "oke, terima kasih banyak, bu"
             ]
           },
           {
@@ -4498,7 +4602,8 @@
             "match": [
               "maaf, berapa?",
               "sekali lagi, pak?",
-              "pelan-pelan saja"
+              "pelan-pelan saja",
+              "sekali lagi, bu?"
             ]
           }
         ],
@@ -4527,10 +4632,10 @@
         }
       },
       "hello-easy": {
-        "text": "Pagi. Mau roti?",
+        "text": "Pagi. Mau roti apa?",
         "gloss": {
-          "en": "Morning. Would you like some bread?",
-          "ko": "좋은 아침. 빵 드릴까요?"
+          "en": "Morning. What bread would you like?",
+          "ko": "좋은 아침. 무슨 빵 드릴까요?"
         }
       },
       "pandan": {
@@ -4562,24 +4667,24 @@
         }
       },
       "which-easy": {
-        "text": "Roti pandan atau roti keju?",
+        "text": "Mau roti pandan atau roti keju?",
         "gloss": {
           "en": "Pandan bread or cheese bread?",
-          "ko": "판단 빵, 치즈 빵?"
+          "ko": "판단 빵이요, 치즈 빵이요?"
         }
       },
       "count": {
-        "text": "Berapa, Kak?",
+        "text": "Mau berapa, Kak?",
         "gloss": {
-          "en": "How many?",
-          "ko": "몇 개요?"
+          "en": "How many would you like?",
+          "ko": "몇 개 드릴까요?"
         }
       },
       "count-easy": {
-        "text": "Satu? Dua? Tiga?",
+        "text": "Mau satu, dua, atau tiga?",
         "gloss": {
-          "en": "One? Two? Three?",
-          "ko": "하나? 둘? 셋?"
+          "en": "One, two or three?",
+          "ko": "하나, 둘, 셋 중에요?"
         }
       },
       "price": {
@@ -4597,10 +4702,10 @@
         }
       },
       "end": {
-        "text": "Terima kasih! Selamat pagi!",
+        "text": "Terima kasih! Sampai jumpa lagi, Kak!",
         "gloss": {
-          "en": "Thank you! Have a good morning!",
-          "ko": "감사해요! 좋은 아침 되세요!"
+          "en": "Thank you! See you again!",
+          "ko": "감사해요! 또 봐요!"
         }
       }
     },
@@ -4615,7 +4720,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small Padang-style restaurant (rumah makan) near an office block on Jalan Thamrin, Jakarta, at lunchtime. The tutor is the server.",
+    "setting": "A small casual eatery (warung makan) near an office block on Jalan Thamrin, Jakarta, at lunchtime. The tutor is the server.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4654,7 +4759,8 @@
             "match": [
               "saya mau rendang",
               "rendang satu",
-              "ya, rendang, mbak"
+              "ya, rendang, mbak",
+              "ya, rendang, mas"
             ]
           }
         ],
@@ -4690,7 +4796,8 @@
               "saya mau rendang",
               "saya mau rendang satu",
               "oke, saya mau rendang, mbak",
-              "saya mau yang rendang"
+              "saya mau yang rendang",
+              "oke, saya mau rendang, mas"
             ]
           },
           {
@@ -4699,7 +4806,8 @@
             "match": [
               "ayam goreng saja",
               "ikan bakar, mbak",
-              "ayam goreng satu"
+              "ayam goreng satu",
+              "ikan bakar, mas"
             ]
           }
         ],
@@ -4734,7 +4842,8 @@
               "ya, pakai nasi",
               "iya, nasi juga",
               "ya, boleh",
-              "pakai nasi, mbak"
+              "pakai nasi, mbak",
+              "pakai nasi, mas"
             ]
           },
           {
@@ -4779,7 +4888,8 @@
               "ada es jeruk?",
               "mbak, ada es jeruk?",
               "ada jus jeruk?",
-              "es jeruk ada?"
+              "es jeruk ada?",
+              "mas, ada es jeruk?"
             ]
           },
           {
@@ -4823,7 +4933,8 @@
               "tidak apa-apa. es teh saja",
               "oke, es teh",
               "tidak apa-apa, es teh, mbak",
-              "boleh, es teh"
+              "boleh, es teh",
+              "tidak apa-apa, es teh, mas"
             ]
           },
           {
@@ -4832,7 +4943,8 @@
             "match": [
               "air putih saja",
               "air putih, mbak",
-              "air mineral saja"
+              "air mineral saja",
+              "air putih, mas"
             ]
           }
         ],
@@ -4868,7 +4980,8 @@
               "sudah. semuanya berapa?",
               "tidak, terima kasih. berapa?",
               "semuanya berapa, mbak?",
-              "itu saja. jadi berapa?"
+              "itu saja. jadi berapa?",
+              "semuanya berapa, mas?"
             ]
           },
           {
@@ -4901,7 +5014,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank her.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -4912,7 +5025,10 @@
             "match": [
               "ini uangnya. terima kasih, mbak",
               "terima kasih, mbak",
-              "terima kasih banyak, mbak. enak sekali"
+              "terima kasih banyak, mbak. enak sekali",
+              "ini uangnya. terima kasih, mas",
+              "terima kasih, mas",
+              "terima kasih banyak, mas. enak sekali"
             ]
           },
           {
@@ -4950,7 +5066,7 @@
         }
       },
       "hello-easy": {
-        "text": "Makan di sini atau dibawa pulang?",
+        "text": "Makan di sini atau dibungkus?",
         "gloss": {
           "en": "Eat here or take away?",
           "ko": "여기서 드세요, 포장이에요?"
@@ -4964,10 +5080,10 @@
         }
       },
       "menu-easy": {
-        "text": "Rendang, ayam, atau ikan?",
+        "text": "Mau rendang, ayam, atau ikan?",
         "gloss": {
           "en": "Rendang, chicken or fish?",
-          "ko": "른당, 닭고기, 아니면 생선?"
+          "ko": "른당, 닭고기, 생선 중에요?"
         }
       },
       "rice": {
@@ -4978,10 +5094,10 @@
         }
       },
       "rice-easy": {
-        "text": "Nasi juga? Ya atau tidak?",
+        "text": "Pakai nasi atau tidak?",
         "gloss": {
-          "en": "Rice too? Yes or no?",
-          "ko": "밥도요? 네, 아니요?"
+          "en": "With rice or without?",
+          "ko": "밥 같이요, 아니면 빼요?"
         }
       },
       "drink": {
@@ -5006,10 +5122,10 @@
         }
       },
       "noorange-easy": {
-        "text": "Es jeruk tidak ada. Es teh, mau?",
+        "text": "Es jeruk habis. Mau es teh?",
         "gloss": {
-          "en": "No iced orange. Iced tea, OK?",
-          "ko": "오렌지 주스는 없어요. 아이스티 괜찮아요?"
+          "en": "The iced orange is finished. Iced tea?",
+          "ko": "오렌지 주스는 다 떨어졌어요. 아이스티 괜찮아요?"
         }
       },
       "food": {
@@ -5020,10 +5136,10 @@
         }
       },
       "food-easy": {
-        "text": "Ada lagi? Ya atau tidak?",
+        "text": "Mau pesan lagi?",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Do you want to order anything else?",
+          "ko": "더 주문하실래요?"
         }
       },
       "bill": {
@@ -5041,10 +5157,10 @@
         }
       },
       "end": {
-        "text": "Terima kasih, Kak. Datang lagi, ya!",
+        "text": "Terima kasih, Kak. Sampai jumpa!",
         "gloss": {
-          "en": "Thank you. Come again!",
-          "ko": "감사해요. 또 오세요!"
+          "en": "Thank you. See you!",
+          "ko": "감사해요. 또 봐요!"
         }
       }
     },
@@ -5284,7 +5400,8 @@
             "match": [
               "terima kasih, kak",
               "terima kasih banyak, kak",
-              "oke, terima kasih, mas"
+              "oke, terima kasih, mas",
+              "oke, terima kasih, mbak"
             ]
           },
           {
@@ -5322,10 +5439,10 @@
         }
       },
       "hello-easy": {
-        "text": "Ya? Ada apa?",
+        "text": "Ya, Kak? Mau tanya apa?",
         "gloss": {
-          "en": "Yes? What's up?",
-          "ko": "네? 왜요?"
+          "en": "Yes? What do you want to ask?",
+          "ko": "네? 뭐 물어보실래요?"
         }
       },
       "yes": {
@@ -5336,10 +5453,10 @@
         }
       },
       "yes-easy": {
-        "text": "Iya. Ke alun-alun.",
+        "text": "Iya, ke alun-alun.",
         "gloss": {
-          "en": "Yes. To the town square.",
-          "ko": "네. 알룬알룬이요."
+          "en": "Yes, to the town square.",
+          "ko": "네, 알룬알룬 가요."
         }
       },
       "time": {
@@ -5350,17 +5467,17 @@
         }
       },
       "time-easy": {
-        "text": "Jam lima. Lima lewat sepuluh.",
+        "text": "Jam lima lewat sepuluh. Sepuluh menit lagi.",
         "gloss": {
-          "en": "Five o'clock. Ten past five.",
-          "ko": "5시요. 5시 10분."
+          "en": "Ten past five. In ten minutes.",
+          "ko": "5시 10분이요. 10분 뒤요."
         }
       },
       "slow": {
-        "text": "Jam... lima... lewat... sepuluh. Sepuluh menit lagi.",
+        "text": "Jam lima lewat sepuluh. Sepuluh menit lagi, Kak.",
         "gloss": {
-          "en": "Ten... past... five. In ten minutes.",
-          "ko": "5시… 10분. 10분 뒤예요."
+          "en": "Ten past five. In ten minutes.",
+          "ko": "5시 10분이요. 10분 뒤에요."
         }
       },
       "slow-easy": {
@@ -5378,10 +5495,10 @@
         }
       },
       "ticket-easy": {
-        "text": "Pakai kartu, bukan uang tunai.",
+        "text": "Bayarnya pakai kartu. Tidak bisa pakai uang.",
         "gloss": {
-          "en": "Use a card. Not cash.",
-          "ko": "카드요. 현금 말고."
+          "en": "You pay with a card. You can't use cash.",
+          "ko": "카드로 내요. 현금은 안 돼요."
         }
       },
       "buy": {
@@ -5392,10 +5509,10 @@
         }
       },
       "buy-easy": {
-        "text": "Di toko itu. Di sana.",
+        "text": "Beli di toko itu.",
         "gloss": {
-          "en": "At that shop. Over there.",
-          "ko": "저 가게요. 저기."
+          "en": "Buy it at that shop.",
+          "ko": "저 가게에서 사요."
         }
       },
       "end": {
@@ -5437,8 +5554,8 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Say you want to go to the capital's main station.",
-          "ko": "수도의 큰 역으로 가고 싶다고 하세요."
+          "en": "Say you want to go to Gambir station.",
+          "ko": "감비르역으로 가고 싶다고 하세요."
         },
         "frame": "id-f1-10",
         "expect": [
@@ -5458,7 +5575,8 @@
             "match": [
               "ke gambir",
               "jakarta",
-              "gambir, pak"
+              "gambir, pak",
+              "gambir, bu"
             ]
           }
         ],
@@ -5539,7 +5657,8 @@
               "dua tiket. berapa?",
               "dua. satu tiket berapa?",
               "dua, pak. harganya berapa?",
-              "dua tiket, semuanya berapa?"
+              "dua tiket, semuanya berapa?",
+              "dua, bu. harganya berapa?"
             ]
           },
           {
@@ -5557,7 +5676,8 @@
             "match": [
               "dua",
               "dua tiket",
-              "dua, pak"
+              "dua, pak",
+              "dua, bu"
             ]
           }
         ],
@@ -5581,7 +5701,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "Ask him to say it slowly.",
+          "en": "Ask them to say it slowly.",
           "ko": "천천히 말해 달라고 하세요."
         },
         "frame": "id-f1-11",
@@ -5593,7 +5713,9 @@
               "tolong pelan-pelan",
               "maaf, tolong pelan-pelan saja",
               "tolong sekali lagi, pak",
-              "tolong pelan-pelan, pak"
+              "tolong pelan-pelan, pak",
+              "tolong sekali lagi, bu",
+              "tolong pelan-pelan, bu"
             ]
           },
           {
@@ -5602,7 +5724,8 @@
             "match": [
               "oke, dua tiket",
               "dua, pak",
-              "oke, dua"
+              "oke, dua",
+              "dua, bu"
             ]
           }
         ],
@@ -5637,7 +5760,8 @@
             "match": [
               "saya mau dua",
               "oke, saya mau dua tiket",
-              "saya mau dua, pak"
+              "saya mau dua, pak",
+              "saya mau dua, bu"
             ]
           },
           {
@@ -5646,7 +5770,8 @@
             "match": [
               "satu saja",
               "satu tiket",
-              "satu, pak"
+              "satu, pak",
+              "satu, bu"
             ]
           }
         ],
@@ -5682,7 +5807,8 @@
               "ini uangnya. keretanya di mana?",
               "keretanya di mana, pak?",
               "oke. jalurnya di mana?",
-              "ini. kereta di mana?"
+              "ini. kereta di mana?",
+              "keretanya di mana, bu?"
             ]
           },
           {
@@ -5691,7 +5817,8 @@
             "match": [
               "ini uangnya",
               "ini, pak",
-              "oke, ini"
+              "oke, ini",
+              "ini, bu"
             ]
           }
         ],
@@ -5715,7 +5842,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank him.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -5725,8 +5852,11 @@
             "go": "t-end",
             "match": [
               "terima kasih, pak",
+              "terima kasih, bu",
               "oke, terima kasih banyak, pak",
-              "jalur dua. terima kasih, pak"
+              "jalur dua. terima kasih, pak",
+              "oke, terima kasih banyak, bu",
+              "jalur dua. terima kasih, bu"
             ]
           },
           {
@@ -5757,10 +5887,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Selamat pagi. Tujuan ke mana?",
+        "text": "Selamat pagi. Tujuannya ke mana?",
         "gloss": {
-          "en": "Good morning. Where are you going?",
-          "ko": "안녕하세요. 어디 가세요?"
+          "en": "Good morning. Where are you headed?",
+          "ko": "안녕하세요. 어디로 가세요?"
         }
       },
       "hello-easy": {
@@ -5771,31 +5901,31 @@
         }
       },
       "when": {
-        "text": "Ke Gambir. Berangkat jam berapa?",
+        "text": "Ke Gambir, ya. Mau berangkat jam berapa?",
         "gloss": {
           "en": "To Gambir. What time do you want to leave?",
-          "ko": "감비르요. 몇 시 출발이요?"
+          "ko": "감비르요. 몇 시에 출발하실래요?"
         }
       },
       "when-easy": {
-        "text": "Jam sembilan? Jam sebelas?",
+        "text": "Mau jam sembilan atau jam sebelas?",
         "gloss": {
-          "en": "Nine o'clock? Eleven?",
-          "ko": "9시요? 11시요?"
+          "en": "Nine o'clock or eleven?",
+          "ko": "9시요, 11시요?"
         }
       },
       "how": {
-        "text": "Ada. Berapa tiket?",
+        "text": "Ada. Mau berapa tiket?",
         "gloss": {
           "en": "Yes, there is. How many tickets?",
           "ko": "있어요. 몇 장이요?"
         }
       },
       "how-easy": {
-        "text": "Satu tiket? Dua?",
+        "text": "Satu tiket atau dua?",
         "gloss": {
-          "en": "One ticket? Two?",
-          "ko": "한 장? 두 장?"
+          "en": "One ticket or two?",
+          "ko": "한 장이요, 두 장이요?"
         }
       },
       "price": {
@@ -5813,10 +5943,10 @@
         }
       },
       "slow": {
-        "text": "Seratus... lima puluh... ribu.",
+        "text": "Seratus lima puluh ribu, Kak. Satu tiket.",
         "gloss": {
-          "en": "A hundred... and fifty... thousand.",
-          "ko": "십오… 만… 루피아."
+          "en": "A hundred and fifty thousand. One ticket.",
+          "ko": "15만 루피아예요. 한 장에요."
         }
       },
       "slow-easy": {
@@ -5848,10 +5978,10 @@
         }
       },
       "platform-easy": {
-        "text": "Jalur dua. Nomor dua.",
+        "text": "Keretanya di jalur dua.",
         "gloss": {
-          "en": "Platform two. Number two.",
-          "ko": "2번 선로. 2번이요."
+          "en": "The train is on platform two.",
+          "ko": "기차는 2번 선로예요."
         }
       },
       "end": {
@@ -5905,7 +6035,9 @@
               "saya mau ke blok m",
               "malam, pak. saya mau ke blok m",
               "saya mau ke blok m, pak",
-              "ke blok m, saya mau ke sana"
+              "ke blok m, saya mau ke sana",
+              "malam, bu. saya mau ke blok m",
+              "saya mau ke blok m, bu"
             ]
           },
           {
@@ -5914,7 +6046,8 @@
             "match": [
               "blok m",
               "ke blok m",
-              "blok m, pak"
+              "blok m, pak",
+              "blok m, bu"
             ]
           }
         ],
@@ -5950,7 +6083,9 @@
               "bukan, saya bukan orang jepang",
               "saya bukan orang jepang",
               "bukan, pak. saya bukan dari jepang",
-              "saya bukan orang jepang, pak"
+              "saya bukan orang jepang, pak",
+              "bukan, bu. saya bukan dari jepang",
+              "saya bukan orang jepang, bu"
             ]
           },
           {
@@ -5959,7 +6094,8 @@
             "match": [
               "saya dari korea",
               "saya orang korea",
-              "korea, pak"
+              "korea, pak",
+              "korea, bu"
             ]
           }
         ],
@@ -5995,16 +6131,18 @@
               "saya dari korea",
               "saya dari korea, pak",
               "dari korea selatan",
-              "saya dari seoul"
+              "saya dari seoul",
+              "saya dari korea, bu"
             ]
           },
           {
             "meaning": "says it's fine",
-            "go": "t-korea",
+            "go": "l-from-again",
             "match": [
               "tidak apa-apa",
               "tidak apa-apa, pak",
-              "oke, tidak apa-apa"
+              "oke, tidak apa-apa",
+              "tidak apa-apa, bu"
             ]
           }
         ],
@@ -6085,7 +6223,9 @@
               "berapa, pak?",
               "semuanya berapa?",
               "ongkosnya berapa?",
-              "jadi berapa, pak?"
+              "jadi berapa, pak?",
+              "berapa, bu?",
+              "jadi berapa, bu?"
             ]
           },
           {
@@ -6094,7 +6234,8 @@
             "match": [
               "oke, terima kasih",
               "makasih, pak",
-              "oh, sudah sampai"
+              "oh, sudah sampai",
+              "makasih, bu"
             ]
           }
         ],
@@ -6118,7 +6259,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank him.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -6129,7 +6270,10 @@
             "match": [
               "ini uangnya. terima kasih, pak",
               "terima kasih, pak",
-              "terima kasih banyak, pak"
+              "terima kasih banyak, pak",
+              "ini uangnya. terima kasih, bu",
+              "terima kasih, bu",
+              "terima kasih banyak, bu"
             ]
           },
           {
@@ -6138,7 +6282,8 @@
             "match": [
               "maaf, berapa?",
               "sekali lagi?",
-              "pelan-pelan saja, pak"
+              "pelan-pelan saja, pak",
+              "pelan-pelan saja, bu"
             ]
           }
         ],
@@ -6216,9 +6361,9 @@
         }
       },
       "arrive": {
-        "text": "Oke, kita sudah sampai Blok M.",
+        "text": "Nah, sudah sampai Blok M, Kak.",
         "gloss": {
-          "en": "OK, we've arrived at Blok M.",
+          "en": "There, we've arrived at Blok M.",
           "ko": "자, 블록엠 도착했어요."
         }
       },
@@ -6293,7 +6438,8 @@
               "ada obat sakit kepala?",
               "malam, bu. ada obat sakit kepala?",
               "permisi, ada obat pusing?",
-              "ada obat untuk sakit kepala?"
+              "ada obat untuk sakit kepala?",
+              "malam, pak. ada obat sakit kepala?"
             ]
           },
           {
@@ -6302,7 +6448,8 @@
             "match": [
               "saya sakit kepala",
               "kepala saya sakit",
-              "pusing, bu"
+              "pusing, bu",
+              "pusing, pak"
             ]
           }
         ],
@@ -6336,7 +6483,8 @@
             "match": [
               "dari kemarin",
               "kemarin",
-              "sejak kemarin, bu"
+              "sejak kemarin, bu",
+              "sejak kemarin, pak"
             ]
           },
           {
@@ -6381,7 +6529,9 @@
               "tidak, saya tidak demam",
               "saya tidak demam",
               "tidak, bu. tidak demam",
-              "saya tidak panas"
+              "tidak demam, bu",
+              "tidak, pak. tidak demam",
+              "tidak demam, pak"
             ]
           },
           {
@@ -6390,7 +6540,8 @@
             "match": [
               "ya, sedikit",
               "iya, demam sedikit",
-              "sedikit, bu"
+              "sedikit, bu",
+              "sedikit, pak"
             ]
           }
         ],
@@ -6426,7 +6577,8 @@
               "maaf, saya tidak mengerti",
               "maaf, sekali lagi?",
               "maaf, berapa kali?",
-              "maaf, bu, pelan-pelan saja"
+              "maaf, bu, pelan-pelan saja",
+              "maaf, pak, pelan-pelan saja"
             ]
           },
           {
@@ -6435,7 +6587,8 @@
             "match": [
               "oke, tiga kali",
               "tiga kali sehari",
-              "baik, bu"
+              "baik, bu",
+              "baik, pak"
             ]
           }
         ],
@@ -6452,14 +6605,15 @@
         "type": "tutor",
         "id": "t-slow",
         "say": "slow",
-        "next": "t-price-ask"
+        "next": "l-price",
+        "easier": "give-easy"
       },
       "t-price-ask": {
         "type": "tutor",
         "id": "t-price-ask",
-        "say": "give-easy",
+        "say": "more",
         "next": "l-price",
-        "easier": "give-easy"
+        "easier": "more-easy"
       },
       "l-price": {
         "type": "learner",
@@ -6477,7 +6631,8 @@
               "obatnya berapa?",
               "ini berapa, bu?",
               "berapa harganya?",
-              "semuanya berapa?"
+              "semuanya berapa?",
+              "ini berapa, pak?"
             ]
           },
           {
@@ -6486,7 +6641,8 @@
             "match": [
               "oke, terima kasih",
               "baik, bu",
-              "makasih"
+              "makasih",
+              "baik, pak"
             ]
           }
         ],
@@ -6495,9 +6651,9 @@
       "l-price-again": {
         "type": "tutor",
         "id": "l-price-again",
-        "say": "give-easy",
+        "say": "more-easy",
         "next": "l-price",
-        "easier": "give-easy"
+        "easier": "more-easy"
       },
       "t-price": {
         "type": "tutor",
@@ -6510,7 +6666,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank her.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -6521,7 +6677,10 @@
             "match": [
               "terima kasih, bu",
               "ini uangnya. terima kasih, bu",
-              "terima kasih banyak, bu"
+              "terima kasih banyak, bu",
+              "terima kasih, pak",
+              "ini uangnya. terima kasih, pak",
+              "terima kasih banyak, pak"
             ]
           },
           {
@@ -6530,7 +6689,8 @@
             "match": [
               "maaf, berapa?",
               "sekali lagi, bu?",
-              "dua puluh?"
+              "dua puluh?",
+              "sekali lagi, pak?"
             ]
           }
         ],
@@ -6559,24 +6719,24 @@
         }
       },
       "hello-easy": {
-        "text": "Kakak cari obat apa?",
+        "text": "Cari obat apa, Kak?",
         "gloss": {
           "en": "What medicine are you looking for?",
           "ko": "어떤 약 찾으세요?"
         }
       },
       "since": {
-        "text": "Ada. Sakit kepala dari kapan?",
+        "text": "Ada. Sakitnya dari kapan?",
         "gloss": {
-          "en": "Yes, we do. Since when have you had the headache?",
-          "ko": "있어요. 언제부터 머리가 아팠어요?"
+          "en": "Yes, we do. Since when has it hurt?",
+          "ko": "있어요. 언제부터 아팠어요?"
         }
       },
       "since-easy": {
-        "text": "Sakit dari kapan? Hari ini? Kemarin?",
+        "text": "Dari hari ini atau dari kemarin?",
         "gloss": {
-          "en": "Since when? Today? Yesterday?",
-          "ko": "언제부터요? 오늘? 어제?"
+          "en": "Since today or since yesterday?",
+          "ko": "오늘부터요, 어제부터요?"
         }
       },
       "fever": {
@@ -6587,10 +6747,10 @@
         }
       },
       "fever-easy": {
-        "text": "Panas badan? Ya atau tidak?",
+        "text": "Badannya panas atau tidak?",
         "gloss": {
-          "en": "Is your body hot? Yes or no?",
-          "ko": "몸이 뜨거워요? 네, 아니요?"
+          "en": "Is your body hot or not?",
+          "ko": "몸에 열이 있어요, 없어요?"
         }
       },
       "give": {
@@ -6601,10 +6761,10 @@
         }
       },
       "give-easy": {
-        "text": "Satu hari, tiga kali.",
+        "text": "Minumnya tiga kali sehari.",
         "gloss": {
-          "en": "Three times a day.",
-          "ko": "하루에 세 번이요."
+          "en": "Take it three times a day.",
+          "ko": "하루에 세 번 드세요."
         }
       },
       "slow": {
@@ -6640,6 +6800,20 @@
         "gloss": {
           "en": "You're welcome. Get well soon!",
           "ko": "천만에요. 빨리 나으세요!"
+        }
+      },
+      "more": {
+        "text": "Oke. Ada lagi, Kak?",
+        "gloss": {
+          "en": "OK. Anything else?",
+          "ko": "네. 더 필요한 거 있어요?"
+        }
+      },
+      "more-easy": {
+        "text": "Ada lagi?",
+        "gloss": {
+          "en": "Anything else?",
+          "ko": "더 있어요?"
         }
       }
     },
@@ -6685,7 +6859,9 @@
               "ada baju batik?",
               "siang, mbak. ada kemeja batik?",
               "ada batik?",
-              "mbak, ada baju batik?"
+              "mbak, ada baju batik?",
+              "siang, mas. ada kemeja batik?",
+              "mas, ada baju batik?"
             ]
           },
           {
@@ -6694,7 +6870,8 @@
             "match": [
               "lihat-lihat dulu",
               "mau lihat saja",
-              "lihat saja, mbak"
+              "lihat saja, mbak",
+              "lihat saja, mas"
             ]
           }
         ],
@@ -6739,7 +6916,8 @@
             "match": [
               "yang hitam",
               "hitam saja",
-              "hitam, mbak"
+              "hitam, mbak",
+              "hitam, mas"
             ]
           }
         ],
@@ -6775,7 +6953,8 @@
               "saya tidak suka. ada warna lain?",
               "maaf, saya tidak suka",
               "saya tidak suka yang ini",
-              "tidak suka, mbak. ada yang lain?"
+              "tidak suka, mbak. ada yang lain?",
+              "tidak suka, mas. ada yang lain?"
             ]
           },
           {
@@ -6819,7 +6998,8 @@
               "ya, saya suka ini",
               "suka, bagus",
               "bagus sekali, mbak",
-              "ini bagus"
+              "ini bagus",
+              "bagus sekali, mas"
             ]
           },
           {
@@ -6864,7 +7044,8 @@
               "ada ukuran l?",
               "ada yang l?",
               "mbak, ada l?",
-              "ada yang lebih besar?"
+              "ada yang lebih besar?",
+              "mas, ada l?"
             ]
           },
           {
@@ -6896,9 +7077,9 @@
       "t-price-q": {
         "type": "tutor",
         "id": "t-price-q",
-        "say": "big-easy",
+        "say": "mfine",
         "next": "l-price",
-        "easier": "big-easy"
+        "easier": "mfine-easy"
       },
       "l-price": {
         "type": "learner",
@@ -6916,7 +7097,8 @@
               "ini berapa? saya mau ini",
               "berapa, mbak?",
               "harganya berapa?",
-              "baju ini berapa?"
+              "baju ini berapa?",
+              "berapa, mas?"
             ]
           },
           {
@@ -6934,9 +7116,9 @@
       "l-price-again": {
         "type": "tutor",
         "id": "l-price-again",
-        "say": "big-easy",
+        "say": "take-easy",
         "next": "l-price",
-        "easier": "big-easy"
+        "easier": "take-easy"
       },
       "t-price": {
         "type": "tutor",
@@ -6949,7 +7131,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank her.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -6960,12 +7142,14 @@
             "match": [
               "terima kasih, mbak",
               "ini uangnya. terima kasih, mbak",
-              "oke, terima kasih banyak"
+              "oke, terima kasih banyak",
+              "terima kasih, mas",
+              "ini uangnya. terima kasih, mas"
             ]
           },
           {
             "meaning": "too expensive",
-            "go": "t-end",
+            "go": "t-fixed",
             "match": [
               "mahal, ya",
               "wah, mahal sekali",
@@ -6987,6 +7171,13 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-fixed": {
+        "type": "tutor",
+        "id": "t-fixed",
+        "say": "fixed",
+        "next": "l-pay",
+        "easier": "price-easy"
       }
     },
     "sentences": {
@@ -6998,7 +7189,7 @@
         }
       },
       "hello-easy": {
-        "text": "Kakak cari apa?",
+        "text": "Cari apa, Kak?",
         "gloss": {
           "en": "What are you looking for?",
           "ko": "뭐 찾으세요?"
@@ -7012,10 +7203,10 @@
         }
       },
       "color-easy": {
-        "text": "Biru? Merah? Hitam?",
+        "text": "Mau biru, merah, atau hitam?",
         "gloss": {
-          "en": "Blue? Red? Black?",
-          "ko": "파랑? 빨강? 검정?"
+          "en": "Blue, red or black?",
+          "ko": "파랑, 빨강, 검정 중에요?"
         }
       },
       "blue": {
@@ -7026,10 +7217,10 @@
         }
       },
       "blue-easy": {
-        "text": "Bagus? Suka?",
+        "text": "Kakak suka yang ini?",
         "gloss": {
-          "en": "Nice? Do you like it?",
-          "ko": "예뻐요? 마음에 들어요?"
+          "en": "Do you like this one?",
+          "ko": "이거 마음에 들어요?"
         }
       },
       "other": {
@@ -7040,10 +7231,10 @@
         }
       },
       "other-easy": {
-        "text": "Yang hitam. Suka?",
+        "text": "Ini yang hitam. Suka?",
         "gloss": {
-          "en": "The black one. Do you like it?",
-          "ko": "검은 거요. 마음에 들어요?"
+          "en": "Here's the black one. Like it?",
+          "ko": "이게 검은 거예요. 마음에 들어요?"
         }
       },
       "size": {
@@ -7054,10 +7245,10 @@
         }
       },
       "size-easy": {
-        "text": "Ukuran M. Coba?",
+        "text": "Ini ukuran M. Mau coba?",
         "gloss": {
-          "en": "Size M. Try it?",
-          "ko": "M 사이즈. 입어 볼래요?"
+          "en": "This is size M. Want to try it?",
+          "ko": "M 사이즈예요. 입어 볼래요?"
         }
       },
       "big": {
@@ -7068,9 +7259,9 @@
         }
       },
       "big-easy": {
-        "text": "Ukuran L ada. Ini.",
+        "text": "Ada ukuran L. Ini.",
         "gloss": {
-          "en": "There's an L. Here.",
+          "en": "There's a size L. Here.",
           "ko": "L 있어요. 여기요."
         }
       },
@@ -7093,6 +7284,34 @@
         "gloss": {
           "en": "Thank you! It really suits you!",
           "ko": "감사해요! 정말 잘 어울려요!"
+        }
+      },
+      "mfine": {
+        "text": "Oke, yang M, ya.",
+        "gloss": {
+          "en": "OK, the M then.",
+          "ko": "네, M으로요."
+        }
+      },
+      "mfine-easy": {
+        "text": "Ukuran M, ya.",
+        "gloss": {
+          "en": "Size M, then.",
+          "ko": "M 사이즈요."
+        }
+      },
+      "take-easy": {
+        "text": "Mau yang ini, Kak?",
+        "gloss": {
+          "en": "Do you want this one?",
+          "ko": "이걸로 하실래요?"
+        }
+      },
+      "fixed": {
+        "text": "Maaf, harganya pas, Kak.",
+        "gloss": {
+          "en": "Sorry, that's the fixed price.",
+          "ko": "죄송해요, 정가예요."
         }
       }
     },
@@ -7137,7 +7356,8 @@
               "ya, tas saya hilang",
               "iya, pak. tas saya hilang",
               "tas saya hilang di kereta",
-              "saya cari tas saya"
+              "saya cari tas saya",
+              "iya, bu. tas saya hilang"
             ]
           },
           {
@@ -7146,7 +7366,8 @@
             "match": [
               "maaf, saya tidak mengerti",
               "sekali lagi?",
-              "pelan-pelan, pak"
+              "pelan-pelan, pak",
+              "pelan-pelan, bu"
             ]
           }
         ],
@@ -7181,7 +7402,8 @@
               "hitam",
               "warna hitam",
               "tasnya hitam",
-              "hitam, pak, kecil"
+              "hitam, pak, kecil",
+              "hitam, bu, kecil"
             ]
           },
           {
@@ -7225,7 +7447,8 @@
               "tadi pagi",
               "tadi pagi, di kereta",
               "pagi ini, pak",
-              "tadi pagi jam delapan"
+              "tadi pagi jam delapan",
+              "pagi ini, bu"
             ]
           },
           {
@@ -7268,7 +7491,8 @@
             "match": [
               "bukan. itu bukan tas saya",
               "bukan, pak. bukan punya saya",
-              "bukan yang itu"
+              "bukan yang itu",
+              "bukan, bu. bukan punya saya"
             ]
           },
           {
@@ -7313,7 +7537,8 @@
               "ya, ini tas saya",
               "betul, ini tas saya",
               "iya, pak, ini tas saya",
-              "nah, ini tas saya!"
+              "nah, ini tas saya!",
+              "iya, bu, ini tas saya"
             ]
           },
           {
@@ -7322,7 +7547,8 @@
             "match": [
               "bukan juga",
               "bukan, pak",
-              "tidak, bukan"
+              "tidak, bukan",
+              "bukan, bu"
             ]
           }
         ],
@@ -7346,7 +7572,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Say OK and thank him a lot.",
+          "en": "Say OK and thank them a lot.",
           "ko": "알겠다고 하고 정말 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -7357,7 +7583,10 @@
             "match": [
               "oke. terima kasih banyak, pak",
               "terima kasih, pak",
-              "baik, terima kasih, pak"
+              "baik, terima kasih, pak",
+              "oke. terima kasih banyak, bu",
+              "terima kasih, bu",
+              "baik, terima kasih, bu"
             ]
           },
           {
@@ -7388,17 +7617,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Siang. Ada barang yang hilang?",
+        "text": "Siang, Kak. Ada yang hilang?",
         "gloss": {
           "en": "Good afternoon. Have you lost something?",
           "ko": "안녕하세요. 뭐 잃어버리셨어요?"
         }
       },
       "hello-easy": {
-        "text": "Kakak cari barang?",
+        "text": "Apa yang hilang, Kak?",
         "gloss": {
-          "en": "Are you looking for something?",
-          "ko": "물건 찾으세요?"
+          "en": "What have you lost?",
+          "ko": "뭘 잃어버리셨어요?"
         }
       },
       "color": {
@@ -7409,24 +7638,24 @@
         }
       },
       "color-easy": {
-        "text": "Hitam? Merah? Biru?",
+        "text": "Warnanya hitam, merah, atau biru?",
         "gloss": {
-          "en": "Black? Red? Blue?",
-          "ko": "검정? 빨강? 파랑?"
+          "en": "Is it black, red or blue?",
+          "ko": "검정, 빨강, 파랑 중 무슨 색이에요?"
         }
       },
       "when": {
-        "text": "Hilang kapan, Kak?",
+        "text": "Hilangnya kapan, Kak?",
         "gloss": {
           "en": "When did you lose it?",
           "ko": "언제 잃어버렸어요?"
         }
       },
       "when-easy": {
-        "text": "Tadi pagi? Kemarin?",
+        "text": "Tadi pagi atau kemarin?",
         "gloss": {
-          "en": "This morning? Yesterday?",
-          "ko": "오늘 아침? 어제?"
+          "en": "This morning or yesterday?",
+          "ko": "오늘 아침이요, 어제요?"
         }
       },
       "this": {
@@ -7465,10 +7694,10 @@
         }
       },
       "sign-easy": {
-        "text": "Tulis nama Kakak, ya.",
+        "text": "Tulis nama di sini, ya.",
         "gloss": {
-          "en": "Write your name, please.",
-          "ko": "이름 써 주세요."
+          "en": "Write your name here, please.",
+          "ko": "여기 이름 써 주세요."
         }
       },
       "end": {
@@ -7521,7 +7750,8 @@
               "ada peta?",
               "halo. ada peta, mbak?",
               "permisi, ada peta kota tua?",
-              "ada peta di sini?"
+              "ada peta di sini?",
+              "halo. ada peta, mas?"
             ]
           },
           {
@@ -7708,7 +7938,8 @@
             "match": [
               "oke, terima kasih",
               "terima kasih, mbak",
-              "baik, terima kasih banyak"
+              "baik, terima kasih banyak",
+              "terima kasih, mas"
             ]
           }
         ],
@@ -7732,7 +7963,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -7743,7 +7974,9 @@
             "match": [
               "terima kasih, mbak",
               "murah! terima kasih, mbak",
-              "terima kasih banyak, kak"
+              "terima kasih banyak, kak",
+              "terima kasih, mas",
+              "murah! terima kasih, mas"
             ]
           },
           {
@@ -7788,17 +8021,17 @@
         }
       },
       "see": {
-        "text": "Ada museum, kafe tua, dan sepeda warna-warni.",
+        "text": "Ini petanya. Ada museum, kafe tua, dan sepeda.",
         "gloss": {
-          "en": "There are museums, old cafés and colourful bicycles.",
-          "ko": "박물관, 오래된 카페, 알록달록한 자전거가 있어요."
+          "en": "Here's the map. There are museums, old cafés and bicycles.",
+          "ko": "지도 여기요. 박물관, 오래된 카페, 자전거가 있어요."
         }
       },
       "see-easy": {
-        "text": "Ada museum dan sepeda.",
+        "text": "Ini peta. Ada museum dan kafe.",
         "gloss": {
-          "en": "There are museums and bicycles.",
-          "ko": "박물관이랑 자전거가 있어요."
+          "en": "Here's a map. There are museums and cafés.",
+          "ko": "지도요. 박물관이랑 카페가 있어요."
         }
       },
       "museum": {
@@ -7809,10 +8042,10 @@
         }
       },
       "museum-easy": {
-        "text": "Museum sejarah. Museum lama.",
+        "text": "Itu museum sejarah.",
         "gloss": {
-          "en": "A history museum. An old museum.",
-          "ko": "역사 박물관. 오래된 박물관이에요."
+          "en": "That's a history museum.",
+          "ko": "역사 박물관이에요."
         }
       },
       "where": {
@@ -7823,10 +8056,10 @@
         }
       },
       "where-easy": {
-        "text": "Di depan. Dekat sini.",
+        "text": "Di depan, dekat sini.",
         "gloss": {
-          "en": "Just ahead. Close by.",
-          "ko": "바로 앞이요. 가까워요."
+          "en": "Just ahead, close by.",
+          "ko": "바로 앞, 가까워요."
         }
       },
       "open": {
@@ -7896,7 +8129,7 @@
         "type": "learner",
         "id": "l-yes",
         "goal": {
-          "en": "Greet her for the afternoon and say yes.",
+          "en": "Greet them for the afternoon and say yes.",
           "ko": "오후 인사를 하고 네라고 하세요."
         },
         "frame": "id-f1-05",
@@ -7908,7 +8141,9 @@
               "selamat siang, bu. ya, saya mau",
               "selamat siang. iya",
               "selamat siang, saya mau kartu",
-              "selamat siang, mbak"
+              "selamat siang, mbak",
+              "selamat siang, pak. ya, saya mau",
+              "selamat siang, mas"
             ]
           },
           {
@@ -7917,7 +8152,8 @@
             "match": [
               "ya, mau",
               "iya, bu",
-              "boleh"
+              "boleh",
+              "iya, pak"
             ]
           }
         ],
@@ -7953,7 +8189,8 @@
               "nama saya ji-woo",
               "nama saya ji-woo kim",
               "ji-woo, nama saya ji-woo",
-              "nama saya kim ji-woo, bu"
+              "nama saya kim ji-woo, bu",
+              "nama saya kim ji-woo, pak"
             ]
           },
           {
@@ -7986,19 +8223,19 @@
         "type": "learner",
         "id": "l-spell",
         "goal": {
-          "en": "Ask her to write it down, please.",
-          "ko": "써 달라고 부탁하세요."
+          "en": "Show your passport and ask them to look at it.",
+          "ko": "여권을 보여 주며 봐 달라고 하세요."
         },
         "frame": "id-f1-11",
         "expect": [
           {
-            "meaning": "asks to write / says slowly",
+            "meaning": "shows the passport and asks them to look",
             "go": "t-live",
             "match": [
-              "tolong tulis di sini",
-              "tolong, ini nama saya",
               "tolong lihat paspor saya",
-              "tolong tulis, bu"
+              "tolong lihat ini",
+              "ini paspor saya. tolong lihat",
+              "tolong, ini nama saya"
             ]
           },
           {
@@ -8087,7 +8324,8 @@
               "oke",
               "baik, bu",
               "siap",
-              "oke, di sini?"
+              "oke, di sini?",
+              "baik, pak"
             ]
           },
           {
@@ -8120,7 +8358,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -8131,7 +8369,10 @@
             "match": [
               "terima kasih, bu",
               "terima kasih banyak, bu",
-              "oke, dua minggu. terima kasih, bu"
+              "oke, dua minggu. terima kasih, bu",
+              "terima kasih, pak",
+              "terima kasih banyak, pak",
+              "oke, dua minggu. terima kasih, pak"
             ]
           },
           {
@@ -8169,10 +8410,10 @@
         }
       },
       "hello-easy": {
-        "text": "Mau kartu perpustakaan?",
+        "text": "Mau bikin kartu?",
         "gloss": {
-          "en": "Do you want a library card?",
-          "ko": "도서관 카드 원하세요?"
+          "en": "Do you want to make a card?",
+          "ko": "카드 만드실래요?"
         }
       },
       "name": {
@@ -8197,10 +8438,10 @@
         }
       },
       "spell-easy": {
-        "text": "Nama Anda? Sekali lagi.",
+        "text": "Sekali lagi, nama Anda siapa?",
         "gloss": {
-          "en": "Your name? Once more.",
-          "ko": "이름이요? 다시 한 번요."
+          "en": "Once more, what's your name?",
+          "ko": "다시 한 번, 이름이 뭐예요?"
         }
       },
       "live": {
@@ -8232,17 +8473,17 @@
         }
       },
       "card": {
-        "text": "Sudah. Ini kartunya. Pinjam buku dua minggu.",
+        "text": "Sudah. Ini kartunya. Pinjam buku bisa dua minggu.",
         "gloss": {
           "en": "Done. Here's your card. You can borrow books for two weeks.",
           "ko": "됐어요. 카드 여기요. 책은 2주 빌릴 수 있어요."
         }
       },
       "card-easy": {
-        "text": "Dua minggu. Empat belas hari.",
+        "text": "Pinjam bukunya dua minggu.",
         "gloss": {
-          "en": "Two weeks. Fourteen days.",
-          "ko": "2주요. 14일."
+          "en": "You borrow the books for two weeks.",
+          "ko": "책은 2주 빌려요."
         }
       },
       "end": {
@@ -8295,7 +8536,8 @@
               "ya. sebulan berapa?",
               "iya, satu bulan berapa?",
               "mau. harganya berapa?",
-              "sore. sebulan berapa, mbak?"
+              "sore. sebulan berapa, mbak?",
+              "sore. sebulan berapa, mas?"
             ]
           },
           {
@@ -8340,12 +8582,13 @@
               "oke, saya mau daftar",
               "saya mau satu bulan",
               "boleh, saya mau",
-              "saya mau daftar, mbak"
+              "saya mau daftar, mbak",
+              "saya mau daftar, mas"
             ]
           },
           {
             "meaning": "too expensive",
-            "go": "t-do",
+            "go": "t-cheap",
             "match": [
               "mahal, ya",
               "wah, mahal",
@@ -8399,7 +8642,7 @@
           },
           {
             "meaning": "can't do much",
-            "go": "t-yoga",
+            "go": "l-do-again",
             "match": [
               "saya tidak bisa yoga",
               "saya belum bisa",
@@ -8437,7 +8680,8 @@
             "match": [
               "buka jam berapa?",
               "gym buka jam berapa?",
-              "jam berapa buka, mbak?"
+              "jam berapa buka, mbak?",
+              "jam berapa buka, mas?"
             ]
           },
           {
@@ -8446,7 +8690,8 @@
             "match": [
               "oke, jam tujuh",
               "baik",
-              "oke, mbak"
+              "oke, mbak",
+              "oke, mas"
             ]
           }
         ],
@@ -8470,7 +8715,7 @@
         "type": "learner",
         "id": "l-form",
         "goal": {
-          "en": "Say OK and thank her.",
+          "en": "Say OK and thank them.",
           "ko": "알겠다고 하고 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -8481,7 +8726,9 @@
             "match": [
               "oke, terima kasih, mbak",
               "terima kasih, mbak",
-              "baik, terima kasih banyak"
+              "baik, terima kasih banyak",
+              "oke, terima kasih, mas",
+              "terima kasih, mas"
             ]
           },
           {
@@ -8514,7 +8761,7 @@
         "type": "learner",
         "id": "l-write",
         "goal": {
-          "en": "Say sorry, ask her to help — you can't read it.",
+          "en": "Say sorry, ask them to help — you can't read it.",
           "ko": "미안하지만 읽을 수 없으니 도와 달라고 하세요."
         },
         "frame": "id-f1-11",
@@ -8526,7 +8773,8 @@
               "maaf, tolong bantu saya",
               "tolong bantu, mbak",
               "tolong, saya tidak bisa baca",
-              "tolong bantu, ya"
+              "tolong bantu, ya",
+              "tolong bantu, mas"
             ]
           },
           {
@@ -8535,7 +8783,8 @@
             "match": [
               "oke",
               "baik, mbak",
-              "siap"
+              "siap",
+              "baik, mas"
             ]
           }
         ],
@@ -8553,6 +8802,13 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-cheap": {
+        "type": "tutor",
+        "id": "t-cheap",
+        "say": "cheap",
+        "next": "l-ok",
+        "easier": "price-easy"
       }
     },
     "sentences": {
@@ -8578,10 +8834,10 @@
         }
       },
       "price-easy": {
-        "text": "Satu bulan, tiga ratus ribu.",
+        "text": "Satu bulan tiga ratus ribu.",
         "gloss": {
-          "en": "One month, three hundred thousand.",
-          "ko": "한 달, 30만."
+          "en": "One month is three hundred thousand.",
+          "ko": "한 달에 30만이요."
         }
       },
       "do": {
@@ -8592,10 +8848,10 @@
         }
       },
       "do-easy": {
-        "text": "Yoga? Renang?",
+        "text": "Mau yoga atau renang?",
         "gloss": {
-          "en": "Yoga? Swimming?",
-          "ko": "요가? 수영?"
+          "en": "Yoga or swimming?",
+          "ko": "요가요, 수영이요?"
         }
       },
       "yoga": {
@@ -8606,10 +8862,10 @@
         }
       },
       "yoga-easy": {
-        "text": "Yoga jam tujuh.",
+        "text": "Yoga jam tujuh malam.",
         "gloss": {
-          "en": "Yoga at seven.",
-          "ko": "요가 7시."
+          "en": "Yoga is at seven in the evening.",
+          "ko": "요가는 저녁 7시예요."
         }
       },
       "open": {
@@ -8620,10 +8876,10 @@
         }
       },
       "open-easy": {
-        "text": "Jam enam sampai jam sepuluh.",
+        "text": "Buka jam enam sampai jam sepuluh.",
         "gloss": {
-          "en": "Six to ten.",
-          "ko": "6시부터 10시까지요."
+          "en": "Open from six to ten.",
+          "ko": "6시부터 10시까지 열어요."
         }
       },
       "form": {
@@ -8645,6 +8901,13 @@
         "gloss": {
           "en": "Welcome aboard!",
           "ko": "가입 환영해요!"
+        }
+      },
+      "cheap": {
+        "text": "Sudah murah, Kak. Semua kelas gratis.",
+        "gloss": {
+          "en": "That's already cheap. All classes are free.",
+          "ko": "이미 싼 거예요. 수업은 전부 무료예요."
         }
       }
     },
@@ -8690,7 +8953,8 @@
               "belum, pertama kali",
               "tidak, ini pertama kali",
               "belum pernah",
-              "pertama kali, mbak"
+              "pertama kali, mbak",
+              "pertama kali, mas"
             ]
           },
           {
@@ -8735,7 +8999,8 @@
               "nama saya ji-woo",
               "nama saya ji-woo kim",
               "ji-woo. nama saya ji-woo",
-              "nama saya ji-woo, mbak"
+              "nama saya ji-woo, mbak",
+              "nama saya ji-woo, mas"
             ]
           },
           {
@@ -8789,7 +9054,8 @@
             "match": [
               "oke",
               "baik",
-              "oke, mbak"
+              "oke, mbak",
+              "oke, mas"
             ]
           }
         ],
@@ -8834,7 +9100,8 @@
             "match": [
               "ini paspor saya",
               "lihat paspor, ya",
-              "ini, mbak"
+              "ini, mbak",
+              "ini, mas"
             ]
           }
         ],
@@ -8869,7 +9136,8 @@
               "tenggorokan saya sakit",
               "sakit tenggorokan",
               "tenggorokan, mbak",
-              "ini sakit"
+              "ini sakit",
+              "tenggorokan, mas"
             ]
           },
           {
@@ -8902,7 +9170,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -8913,7 +9181,9 @@
             "match": [
               "terima kasih, mbak",
               "oke, terima kasih banyak",
-              "baik, terima kasih, mbak"
+              "baik, terima kasih, mbak",
+              "terima kasih, mas",
+              "baik, terima kasih, mas"
             ]
           },
           {
@@ -8979,9 +9249,9 @@
         }
       },
       "form-easy": {
-        "text": "Ini kertas. Tulis, ya.",
+        "text": "Tolong tulis di kertas ini.",
         "gloss": {
-          "en": "Here's a paper. Write on it, please.",
+          "en": "Please write on this paper.",
           "ko": "이 종이에 써 주세요."
         }
       },
@@ -8993,10 +9263,10 @@
         }
       },
       "help-easy": {
-        "text": "Lahir kapan? Tahun berapa?",
+        "text": "Kakak lahir tahun berapa?",
         "gloss": {
-          "en": "When were you born? What year?",
-          "ko": "언제 태어났어요? 몇 년도요?"
+          "en": "What year were you born?",
+          "ko": "몇 년도에 태어났어요?"
         }
       },
       "sick": {
@@ -9014,10 +9284,10 @@
         }
       },
       "wait": {
-        "text": "Silakan tunggu. Dokter panggil sepuluh menit lagi.",
+        "text": "Silakan tunggu, ya. Sepuluh menit lagi.",
         "gloss": {
-          "en": "Please wait. The doctor will call you in ten minutes.",
-          "ko": "기다려 주세요. 10분 뒤에 의사 선생님이 불러요."
+          "en": "Please wait. About ten minutes.",
+          "ko": "기다려 주세요. 10분 뒤에요."
         }
       },
       "wait-easy": {
@@ -9065,7 +9335,7 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet him for the evening and say yes.",
+          "en": "Greet them for the evening and say yes.",
           "ko": "저녁 인사를 하고 네라고 하세요."
         },
         "frame": "id-f1-05",
@@ -9077,7 +9347,9 @@
               "selamat malam, pak. ya, saya baru",
               "selamat malam, pak",
               "selamat malam. iya, baru",
-              "selamat malam, iya"
+              "selamat malam, iya",
+              "selamat malam, bu. ya, saya baru",
+              "selamat malam, bu"
             ]
           },
           {
@@ -9086,7 +9358,8 @@
             "match": [
               "ya, baru",
               "iya, pak",
-              "betul"
+              "betul",
+              "iya, bu"
             ]
           }
         ],
@@ -9122,7 +9395,9 @@
               "nama saya ji-woo",
               "nama saya ji-woo, pak",
               "senang bertemu, pak. nama saya ji-woo",
-              "halo, nama saya ji-woo"
+              "halo, nama saya ji-woo",
+              "nama saya ji-woo, bu",
+              "senang bertemu, bu. nama saya ji-woo"
             ]
           },
           {
@@ -9131,7 +9406,8 @@
             "match": [
               "maaf?",
               "sekali lagi, pak?",
-              "saya tidak mengerti"
+              "saya tidak mengerti",
+              "sekali lagi, bu?"
             ]
           }
         ],
@@ -9167,7 +9443,8 @@
               "saya di lantai delapan",
               "di lantai delapan, pak",
               "saya tinggal di lantai delapan",
-              "saya di lantai delapan juga"
+              "saya di lantai delapan juga",
+              "di lantai delapan, bu"
             ]
           },
           {
@@ -9200,8 +9477,8 @@
         "type": "learner",
         "id": "l-room",
         "goal": {
-          "en": "Say room eight-oh-five, and ask his.",
-          "ko": "805호라고 하고 그의 호수를 물어보세요."
+          "en": "Say unit eight-oh-five, and ask which one is theirs.",
+          "ko": "805호라고 하고 상대 호수를 물어보세요."
         },
         "expect": [
           {
@@ -9237,8 +9514,7 @@
         "type": "tutor",
         "id": "t-lift",
         "say": "lift",
-        "next": "t-bye",
-        "easier": "bye-easy"
+        "next": "t-bye"
       },
       "t-bye": {
         "type": "tutor",
@@ -9263,7 +9539,9 @@
               "selamat malam, pak. sampai jumpa besok",
               "sampai jumpa besok",
               "sampai jumpa lagi, pak",
-              "oke, sampai jumpa"
+              "oke, sampai jumpa",
+              "selamat malam, bu. sampai jumpa besok",
+              "sampai jumpa lagi, bu"
             ]
           },
           {
@@ -9272,7 +9550,8 @@
             "match": [
               "selamat malam",
               "malam, pak",
-              "selamat malam, pak hendra"
+              "selamat malam, pak hendra",
+              "malam, bu"
             ]
           }
         ],
@@ -9301,16 +9580,16 @@
         }
       },
       "hello-easy": {
-        "text": "Baru tinggal di sini?",
+        "text": "Kamu baru pindah ke sini?",
         "gloss": {
-          "en": "Have you just moved in here?",
-          "ko": "여기 새로 사세요?"
+          "en": "Have you just moved here?",
+          "ko": "여기 새로 이사 왔어요?"
         }
       },
       "me": {
-        "text": "Saya Pak Hendra. Namanya siapa?",
+        "text": "Saya Hendra. Namanya siapa?",
         "gloss": {
-          "en": "I'm Pak Hendra. What's your name?",
+          "en": "I'm Hendra. What's your name?",
           "ko": "저는 헨드라예요. 이름이 뭐예요?"
         }
       },
@@ -9329,10 +9608,10 @@
         }
       },
       "floor-easy": {
-        "text": "Lantai berapa? Lima? Enam?",
+        "text": "Kamu tinggal di lantai berapa?",
         "gloss": {
-          "en": "Which floor? Five? Six?",
-          "ko": "몇 층이요? 5층? 6층?"
+          "en": "Which floor do you live on?",
+          "ko": "몇 층 살아요?"
         }
       },
       "same": {
@@ -9343,17 +9622,17 @@
         }
       },
       "same-easy": {
-        "text": "Kamar nomor berapa?",
+        "text": "Unitnya nomor berapa?",
         "gloss": {
-          "en": "What room number?",
+          "en": "What's your unit number?",
           "ko": "몇 호예요?"
         }
       },
       "lift": {
-        "text": "Oh, liftnya sudah datang. Ayo!",
+        "text": "Saya delapan nol dua. Eh, liftnya sudah datang. Ayo!",
         "gloss": {
-          "en": "Oh, the lift is here. Let's go!",
-          "ko": "아, 엘리베이터 왔네요. 가요!"
+          "en": "I'm eight-oh-two. Oh, the lift is here. Let's go!",
+          "ko": "저는 802호예요. 아, 엘리베이터 왔네요. 가요!"
         }
       },
       "lift-easy": {
@@ -9467,28 +9746,28 @@
         "type": "learner",
         "id": "l-lang",
         "goal": {
-          "en": "Say you speak Korean and English, but not Japanese.",
-          "ko": "한국어랑 영어는 하는데 일본어는 못 한다고 하세요."
+          "en": "Say no — you speak Korean and English, not Japanese.",
+          "ko": "아니라고, 한국어랑 영어는 하는데 일본어는 못 한다고 하세요."
         },
         "frame": "id-f1-13",
         "expect": [
           {
-            "meaning": "can't speak Japanese",
+            "meaning": "can't speak Japanese (and says what they can)",
             "go": "t-indo",
             "match": [
-              "saya bisa bahasa korea dan inggris. saya tidak bisa bahasa jepang",
               "saya tidak bisa bahasa jepang",
-              "korea, inggris. tapi saya tidak bisa jepang",
+              "tidak, saya tidak bisa bahasa jepang. saya bisa bahasa korea dan inggris",
+              "saya tidak bisa jepang. korea dan inggris",
               "aku tidak bisa bahasa jepang"
             ]
           },
           {
-            "meaning": "lists what they can",
+            "meaning": "can speak a little Japanese",
             "go": "t-indo",
             "match": [
-              "bahasa korea dan bahasa inggris",
-              "saya bisa bahasa korea",
-              "korea dan inggris"
+              "bisa, sedikit",
+              "sedikit",
+              "ya, bisa sedikit"
             ]
           }
         ],
@@ -9512,7 +9791,7 @@
         "type": "learner",
         "id": "l-indo",
         "goal": {
-          "en": "Thank him and say not yet — only a little.",
+          "en": "Thank them and say not yet — only a little.",
           "ko": "고맙다고 하고 아직 조금밖에 못 한다고 하세요."
         },
         "frame": "id-f1-06",
@@ -9557,8 +9836,8 @@
         "type": "learner",
         "id": "l-learn",
         "goal": {
-          "en": "Say you want to learn Indonesian slang.",
-          "ko": "인도네시아어 일상 표현을 배우고 싶다고 하세요."
+          "en": "Say you want to learn everyday Indonesian.",
+          "ko": "일상 인도네시아어를 배우고 싶다고 하세요."
         },
         "frame": "id-f1-10",
         "expect": [
@@ -9566,10 +9845,10 @@
             "meaning": "wants to learn",
             "go": "t-teach",
             "match": [
-              "saya mau belajar bahasa gaul",
               "saya mau belajar bahasa indonesia",
-              "aku mau belajar bahasa gaul",
-              "saya mau belajar bahasa sehari-hari"
+              "saya mau belajar bahasa sehari-hari",
+              "aku mau belajar bahasa indonesia",
+              "saya mau belajar bahasa indonesia sehari-hari"
             ]
           },
           {
@@ -9658,24 +9937,24 @@
         }
       },
       "hello-easy": {
-        "text": "Halo! Aku Dimas. Kamu siapa?",
+        "text": "Halo! Aku Dimas. Nama kamu siapa?",
         "gloss": {
-          "en": "Hello! I'm Dimas. Who are you?",
-          "ko": "안녕! 난 디마스야. 너는?"
+          "en": "Hello! I'm Dimas. What's your name?",
+          "ko": "안녕! 난 디마스야. 이름이 뭐야?"
         }
       },
       "lang": {
-        "text": "Senang bertemu! Kamu bisa bahasa apa saja?",
+        "text": "Senang bertemu! Kamu bisa bahasa Jepang?",
         "gloss": {
-          "en": "Nice to meet you! What languages can you speak?",
-          "ko": "반가워! 무슨 언어 할 줄 알아?"
+          "en": "Nice to meet you! Can you speak Japanese?",
+          "ko": "반가워! 일본어 할 줄 알아?"
         }
       },
       "lang-easy": {
-        "text": "Bisa bahasa Inggris? Bahasa Korea?",
+        "text": "Bisa bahasa Jepang atau tidak?",
         "gloss": {
-          "en": "Can you speak English? Korean?",
-          "ko": "영어 할 줄 알아? 한국어?"
+          "en": "Can you speak Japanese or not?",
+          "ko": "일본어 할 줄 알아, 몰라?"
         }
       },
       "indo": {
@@ -9707,10 +9986,10 @@
         }
       },
       "teach": {
-        "text": "Oke! Aku ajari bahasa Jawa sedikit, ya.",
+        "text": "Oke! Nanti aku ajari, ya.",
         "gloss": {
-          "en": "OK! I'll teach you a little Javanese.",
-          "ko": "좋아! 자와어 조금 가르쳐 줄게."
+          "en": "OK! I'll teach you.",
+          "ko": "좋아! 내가 가르쳐 줄게."
         }
       },
       "teach-easy": {
@@ -9728,10 +10007,10 @@
         }
       },
       "number-easy": {
-        "text": "Minggu depan, jam tiga. Bisa?",
+        "text": "Minggu depan jam tiga, bisa?",
         "gloss": {
-          "en": "Next week, three o'clock. Can you?",
-          "ko": "다음 주 3시. 돼?"
+          "en": "Next week at three, can you?",
+          "ko": "다음 주 3시, 돼?"
         }
       },
       "end": {
@@ -9827,7 +10106,7 @@
             "match": [
               "terima kasih, ya",
               "wah, terima kasih",
-              "terima kasih, teman",
+              "terima kasih banyak, ya",
               "terima kasih banyak"
             ]
           },
@@ -10065,17 +10344,17 @@
         }
       },
       "paper": {
-        "text": "Kertas juga perlu?",
+        "text": "Perlu kertas juga?",
         "gloss": {
           "en": "Do you need paper too?",
           "ko": "종이도 필요해?"
         }
       },
       "paper-easy": {
-        "text": "Kertas? Mau atau tidak?",
+        "text": "Mau kertas juga?",
         "gloss": {
-          "en": "Paper? Yes or no?",
-          "ko": "종이? 필요해, 안 필요해?"
+          "en": "Want paper too?",
+          "ko": "종이도 줄까?"
         }
       },
       "book": {
@@ -10114,9 +10393,9 @@
         }
       },
       "back-easy": {
-        "text": "Pulpennya, sudah selesai?",
+        "text": "Pulpennya sudah selesai?",
         "gloss": {
-          "en": "The pen: are you finished?",
+          "en": "Are you done with the pen?",
           "ko": "펜 다 썼어?"
         }
       },
@@ -10445,10 +10724,10 @@
         }
       },
       "see-easy": {
-        "text": "Ada toko? Ada patung?",
+        "text": "Di sana ada toko atau patung?",
         "gloss": {
-          "en": "Is there a shop? A statue?",
-          "ko": "가게 있어? 동상 있어?"
+          "en": "Is there a shop or a statue there?",
+          "ko": "거기 가게 있어, 동상 있어?"
         }
       },
       "noise": {
@@ -10473,23 +10752,23 @@
         }
       },
       "me-easy": {
-        "text": "Aku di pintu dua.",
+        "text": "Aku di pintu keluar dua.",
         "gloss": {
-          "en": "I'm at door two.",
-          "ko": "난 2번 출구."
+          "en": "I'm at exit two.",
+          "ko": "난 2번 출구야."
         }
       },
       "slow": {
-        "text": "Pintu... keluar... dua. Dekat kafe.",
+        "text": "Pintu keluar dua, dekat kafe.",
         "gloss": {
-          "en": "Exit... number... two. Near the café.",
-          "ko": "2번… 출구야. 카페 근처."
+          "en": "Exit two, near the café.",
+          "ko": "2번 출구, 카페 근처야."
         }
       },
       "slow-easy": {
-        "text": "Pintu dua.",
+        "text": "Pintu keluar nomor dua.",
         "gloss": {
-          "en": "Door two.",
+          "en": "Exit number two.",
           "ko": "2번 출구."
         }
       },
@@ -10545,7 +10824,7 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet her for the morning.",
+          "en": "Greet them for the morning.",
           "ko": "아침 인사를 하세요."
         },
         "frame": "id-f1-05",
@@ -10557,7 +10836,8 @@
               "selamat pagi",
               "selamat pagi, mbak",
               "pagi! selamat pagi",
-              "selamat pagi. iya, hujan"
+              "selamat pagi. iya, hujan",
+              "selamat pagi, mas"
             ]
           },
           {
@@ -10793,10 +11073,10 @@
         }
       },
       "how-easy": {
-        "text": "Kamu capek? Ya atau tidak?",
+        "text": "Kamu capek atau tidak?",
         "gloss": {
-          "en": "Are you tired? Yes or no?",
-          "ko": "피곤해? 응, 아니?"
+          "en": "Are you tired or not?",
+          "ko": "피곤해, 안 피곤해?"
         }
       },
       "coffee": {
@@ -10807,10 +11087,10 @@
         }
       },
       "coffee-easy": {
-        "text": "Kopi? Mau?",
+        "text": "Mau kopi?",
         "gloss": {
-          "en": "Coffee? Want some?",
-          "ko": "커피? 마실래?"
+          "en": "Want a coffee?",
+          "ko": "커피 마실래?"
         }
       },
       "lunch": {
@@ -10821,10 +11101,10 @@
         }
       },
       "lunch-easy": {
-        "text": "Makan siang jam dua belas? Jam satu?",
+        "text": "Makan siang jam dua belas atau jam satu?",
         "gloss": {
-          "en": "Lunch at twelve? At one?",
-          "ko": "점심 12시? 1시?"
+          "en": "Lunch at twelve or at one?",
+          "ko": "점심 12시야, 1시야?"
         }
       },
       "meeting": {
@@ -10835,10 +11115,10 @@
         }
       },
       "meeting-easy": {
-        "text": "Jam satu, rapat.",
+        "text": "Jam satu ada rapat.",
         "gloss": {
-          "en": "At one, a meeting.",
-          "ko": "1시에 회의야."
+          "en": "There's a meeting at one.",
+          "ko": "1시에 회의 있어."
         }
       },
       "end": {
@@ -10898,7 +11178,8 @@
               "maaf, saya tidak mengerti mesin ini",
               "saya tidak mengerti",
               "maaf, pak, saya tidak tahu",
-              "saya tidak bisa pakai mesin ini"
+              "saya tidak bisa pakai mesin ini",
+              "maaf, bu, saya tidak tahu"
             ]
           },
           {
@@ -10907,7 +11188,8 @@
             "match": [
               "kartu saya",
               "ini kartu saya",
-              "kartunya, pak"
+              "kartunya, pak",
+              "kartunya, bu"
             ]
           }
         ],
@@ -10931,7 +11213,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "Ask him to speak slowly.",
+          "en": "Ask them to speak slowly.",
           "ko": "천천히 말해 달라고 하세요."
         },
         "frame": "id-f1-11",
@@ -10943,7 +11225,8 @@
               "tolong pelan-pelan",
               "tolong pelan-pelan saja, pak",
               "maaf, tolong sekali lagi",
-              "tolong pelan-pelan, ya"
+              "tolong pelan-pelan, ya",
+              "tolong pelan-pelan saja, bu"
             ]
           },
           {
@@ -10976,7 +11259,7 @@
         "type": "learner",
         "id": "l-help",
         "goal": {
-          "en": "Ask him to do it for you.",
+          "en": "Ask them to do it for you.",
           "ko": "대신 해 달라고 부탁하세요."
         },
         "frame": "id-f1-11",
@@ -10988,7 +11271,9 @@
               "tolong bantu saya",
               "tolong, pak",
               "tolong isi kartu saya",
-              "tolong bantu, pak"
+              "tolong bantu, pak",
+              "tolong, bu",
+              "tolong bantu, bu"
             ]
           },
           {
@@ -11032,7 +11317,8 @@
               "lima puluh ribu",
               "lima puluh ribu saja",
               "ya, lima puluh ribu",
-              "lima puluh, pak"
+              "lima puluh, pak",
+              "lima puluh, bu"
             ]
           },
           {
@@ -11065,7 +11351,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank him a lot.",
+          "en": "Thank them a lot.",
           "ko": "정말 고맙다고 하세요."
         },
         "frame": "id-f1-06",
@@ -11076,7 +11362,10 @@
             "match": [
               "terima kasih banyak, pak",
               "terima kasih, pak",
-              "wah, terima kasih, pak"
+              "wah, terima kasih, pak",
+              "terima kasih banyak, bu",
+              "terima kasih, bu",
+              "wah, terima kasih, bu"
             ]
           },
           {
@@ -11121,45 +11410,45 @@
         }
       },
       "what": {
-        "text": "Mau isi saldo kartu, ya? Tekan tombol hijau, lalu masukkan uang.",
+        "text": "Mau isi saldo? Tekan tombol hijau, lalu masukkan uang.",
         "gloss": {
-          "en": "You want to top up your card? Press the green button, then put in the money.",
-          "ko": "카드 충전하시려고요? 초록 버튼 누르고 돈 넣으세요."
+          "en": "Topping up? Press the green button, then put in the money.",
+          "ko": "충전하시려고요? 초록 버튼 누르고 돈 넣으세요."
         }
       },
       "what-easy": {
-        "text": "Tekan tombol hijau.",
+        "text": "Tekan tombol hijau ini.",
         "gloss": {
-          "en": "Press the green button.",
-          "ko": "초록 버튼 누르세요."
+          "en": "Press this green button.",
+          "ko": "이 초록 버튼 누르세요."
         }
       },
       "slow": {
-        "text": "Tombol... hijau. Ini. Lalu... uang.",
+        "text": "Tekan tombol hijau ini. Lalu masukkan uang.",
         "gloss": {
-          "en": "The green... button. This one. Then... money.",
-          "ko": "초록… 버튼. 이거요. 그다음… 돈."
+          "en": "Press this green button. Then put in the money.",
+          "ko": "이 초록 버튼 누르세요. 그다음 돈 넣으세요."
         }
       },
       "slow-easy": {
-        "text": "Ini tombolnya. Hijau.",
+        "text": "Ini tombolnya, yang hijau.",
         "gloss": {
-          "en": "This is the button. Green.",
-          "ko": "이 버튼이요. 초록색."
+          "en": "This is the button, the green one.",
+          "ko": "이 버튼이요, 초록색."
         }
       },
       "do": {
-        "text": "Oke, saya bantu. Berapa? Lima puluh ribu?",
+        "text": "Oke, saya bantu. Mau isi berapa? Lima puluh ribu?",
         "gloss": {
-          "en": "OK, I'll help. How much? Fifty thousand?",
-          "ko": "네, 도와드릴게요. 얼마요? 5만?"
+          "en": "OK, I'll help. How much do you want to top up? Fifty thousand?",
+          "ko": "네, 도와드릴게요. 얼마 충전해요? 5만?"
         }
       },
       "do-easy": {
-        "text": "Lima puluh ribu? Atau dua puluh ribu?",
+        "text": "Lima puluh ribu atau dua puluh ribu?",
         "gloss": {
-          "en": "Fifty thousand? Or twenty thousand?",
-          "ko": "5만? 아니면 2만?"
+          "en": "Fifty thousand or twenty thousand?",
+          "ko": "5만이요, 2만이요?"
         }
       },
       "done": {
@@ -11170,10 +11459,10 @@
         }
       },
       "done-easy": {
-        "text": "Sudah. Kartunya oke.",
+        "text": "Sudah. Kartunya bisa dipakai.",
         "gloss": {
-          "en": "Done. The card is OK.",
-          "ko": "됐어요. 카드 괜찮아요."
+          "en": "Done. The card can be used.",
+          "ko": "됐어요. 카드 쓸 수 있어요."
         }
       },
       "end": {
@@ -11456,10 +11745,10 @@
         }
       },
       "library": {
-        "text": "Oh, ke perpustakaan. Aku ke kantin. Lapar!",
+        "text": "Oh, oke. Aku ke kantin. Lapar!",
         "gloss": {
-          "en": "Oh, to the library. I'm going to the canteen. I'm hungry!",
-          "ko": "아, 도서관. 난 매점 가. 배고파!"
+          "en": "Oh, OK. I'm going to the canteen. I'm hungry!",
+          "ko": "아, 그래. 난 매점 가. 배고파!"
         }
       },
       "library-easy": {
@@ -11477,10 +11766,10 @@
         }
       },
       "next-easy": {
-        "text": "Kelas lagi kapan? Besok?",
+        "text": "Kelas berikutnya besok?",
         "gloss": {
-          "en": "When's class again? Tomorrow?",
-          "ko": "다음 수업 언제? 내일?"
+          "en": "Is the next class tomorrow?",
+          "ko": "다음 수업 내일이야?"
         }
       },
       "where": {
@@ -11498,10 +11787,10 @@
         }
       },
       "room": {
-        "text": "Di ruang dua puluh satu, lantai dua.",
+        "text": "Oh, aku ingat. Ruang dua puluh satu, lantai dua.",
         "gloss": {
-          "en": "In room twenty-one, second floor.",
-          "ko": "21호실, 2층이야."
+          "en": "Oh, I remember. Room twenty-one, second floor.",
+          "ko": "아, 기억났다. 21호실, 2층이야."
         }
       },
       "room-easy": {
@@ -11526,10 +11815,10 @@
         }
       },
       "end": {
-        "text": "Dah! Sampai besok!",
+        "text": "Dah! Sampai Kamis!",
         "gloss": {
-          "en": "Bye! See you tomorrow!",
-          "ko": "안녕! 내일 봐!"
+          "en": "Bye! See you Thursday!",
+          "ko": "안녕! 목요일에 봐!"
         }
       }
     },

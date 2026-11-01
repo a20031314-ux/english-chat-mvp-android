@@ -327,10 +327,10 @@
         }
       },
       "price-easy": {
-        "text": "四百八十円です。ここを見てください。",
+        "text": "もう一度言いますね。四百八十円です。",
         "gloss": {
-          "en": "480 yen. Please look here.",
-          "ko": "480엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 480 yen.",
+          "ko": "다시 말할게요. 480엔이에요."
         }
       },
       "ready": {
@@ -1001,10 +1001,10 @@
         }
       },
       "price-easy": {
-        "text": "七百円です。ここを見てください。",
+        "text": "もう一度言いますね。七百円です。",
         "gloss": {
-          "en": "700 yen. Please look here.",
-          "ko": "700엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 700 yen.",
+          "ko": "다시 말할게요. 700엔이에요."
         }
       },
       "bag": {
@@ -4049,10 +4049,10 @@
         }
       },
       "price-easy": {
-        "text": "一つ百八十円です。ここを見てください。",
+        "text": "もう一度言いますね。一つ百八十円です。",
         "gloss": {
-          "en": "180 yen each. Please look here.",
-          "ko": "한 개 180엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 180 yen each.",
+          "ko": "다시 말할게요. 한 개 180엔이에요."
         }
       },
       "total": {
@@ -5192,10 +5192,10 @@
         }
       },
       "price-easy": {
-        "text": "一万四千円です。ここを見てください。",
+        "text": "もう一度言いますね。一万四千円です。",
         "gloss": {
-          "en": "14,000 yen. Please look here.",
-          "ko": "14,000엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 14,000 yen.",
+          "ko": "다시 말할게요. 14,000엔이에요."
         }
       },
       "nine": {
@@ -5528,10 +5528,10 @@
         }
       },
       "arrive-easy": {
-        "text": "千八百円です。ここを見てください。",
+        "text": "もう一度言いますね。千八百円です。",
         "gloss": {
-          "en": "1,800 yen. Please look here.",
-          "ko": "1,800엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 1,800 yen.",
+          "ko": "다시 말할게요. 1,800엔이에요."
         }
       },
       "card": {
@@ -5893,10 +5893,10 @@
         }
       },
       "price-easy": {
-        "text": "九百八十円です。ここを見てください。",
+        "text": "もう一度言いますね。九百八十円です。",
         "gloss": {
-          "en": "980 yen. Please look here.",
-          "ko": "980엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 980 yen.",
+          "ko": "다시 말할게요. 980엔이에요."
         }
       },
       "cheap": {
@@ -6317,10 +6317,10 @@
         }
       },
       "price-easy": {
-        "text": "三千九百円です。ここを見てください。",
+        "text": "もう一度言いますね。三千九百円です。",
         "gloss": {
-          "en": "3,900 yen. Please look here.",
-          "ko": "3,900엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 3,900 yen.",
+          "ko": "다시 말할게요. 3,900엔이에요."
         }
       },
       "end": {
@@ -7647,10 +7647,10 @@
         }
       },
       "price-easy": {
-        "text": "一か月、八千円です。ここを見てください。",
+        "text": "もう一度言いますね。一か月、八千円です。",
         "gloss": {
-          "en": "8,000 yen a month. Please look here.",
-          "ko": "한 달에 8,000엔이에요. 여기를 보세요."
+          "en": "I'll say it again. 8,000 yen a month.",
+          "ko": "다시 말할게요. 한 달에 8,000엔이에요."
         }
       },
       "student": {
