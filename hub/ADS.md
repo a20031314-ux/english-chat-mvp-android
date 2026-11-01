@@ -83,6 +83,7 @@
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `results` | `recall-end` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/RecallPlayer.tsx` |
+| `results` | `script-end` | 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 "1,2 반영" — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/StageScripts.tsx` |
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
@@ -96,7 +97,7 @@
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 28개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 
@@ -146,7 +147,7 @@
 
 출처: 한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18. AdMob 실제 eCPM이 쌓이면 `ads.ts` `AD_REVENUE_USD`를 고친다.
 
-가상 사용자 손익(`hub/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **+34,231원** · 중간 **+715,973원** · 높음 **+1,397,716원**.
-무료 한 사람 한 달: 원가 519원, 광고 1,223원(중간) → +704원.
+가상 사용자 손익(`hub/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **+53,538원** · 중간 **+762,758원** · 높음 **+1,471,977원**.
+무료 한 사람 한 달: 원가 519원, 광고 1,271원(중간) → +753원.
 
 <!-- 자동 끝 -->

@@ -253,6 +253,24 @@
       "perActiveDay": 0.05,
       "when": "my",
       "what": "📈 내 진척·실력 기록 끝(sheets, 익힌 것이 있을 때만)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.8,
+      "when": "my",
+      "what": "My 대본(ScriptPlayer) 끝 화면 버튼 아래(results script-end, 2026-11-02 — 오늘 할 것 맨 끝 대본 장면 + 단계 화면에서 연 대본, 보수적 어림)"
+    },
+    {
+      "format": "interstitial",
+      "perActiveDay": 0.05,
+      "when": "any",
+      "what": "videoLeave — 영상을 2분 넘게 보고 나올 때 전면(2026-11-02 손익에 넣음, 2.76~ 무료는 영상 대부분 잠김이라 쓰는 날 0.05번 어림)"
+    },
+    {
+      "format": "interstitial",
+      "perActiveDay": 0.03,
+      "when": "any",
+      "what": "callEnd — 무료가 포인트로 한 AI 통화가 끝날 때 전면(2026-11-02 손익에 넣음, 2.76~ 무료는 자유 통화가 없어 쓰는 날 0.03번 어림)"
     }
   ]
 }

@@ -1,5 +1,7 @@
 ## 재구성 제안 (변경 감시, 자동)
 
+> **2026-11-02 반영(사용자 "1,2 반영해줘"):** 아래 표 1번(대본 끝 네이티브 `script-end`, 앱 빌드)·2·3번(`videoLeave`·`callEnd` 손익에 넣음) — 손익 +762,758원. 남은 줄은 권하지 않는 안(기록용).
+>
 > 기능이 바뀐 범위 62bbc58d460391bfea7fda9fad202c1ea6b863e3..c06d66e6c922bee993696684abfc9dd68c503498를 보고 광고 자리를 원칙(위쪽)과 다시 맞춘 안. 2026-11-01 · `scripts/watch/ads.mjs` + 검토 에이전트(`scripts/watch/ADS-REVIEW.md`). 바꾸는 것은 사용자가 "바꿔줘" 한 뒤 — 설정은 Vercel `ADS_*`(바로), 자리는 앱 빌드.
 
 - **손익 계산에 안 들어간 전면 순간:** `callEnd` · `videoLeave` — `hub/economics.md`의 광고 수익이 이 순간들을 세지 않음(`economics.mjs` simulate·MODELED_MOMENTS).

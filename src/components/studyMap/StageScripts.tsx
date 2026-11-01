@@ -7,6 +7,7 @@ import { noteDayResult } from "@/lib/curriculum/dayLog";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
@@ -745,6 +746,8 @@ function ScriptPlayer({
                 {ui.billingClose}
               </button>
             </div>
+            {/* 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 "1,2 반영" — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. */}
+            {Object.keys(results).length ? <NativeAdSlot feedId="results" slotKey="script-end" spaced /> : null}
           </li>
         ) : null}
         <div ref={bottom} />

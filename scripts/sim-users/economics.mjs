@@ -41,8 +41,9 @@ const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "
  * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
  * My 끝 순간(2026-11-01 광고 자리 넣음): 오늘 할 것을 다 끝냄·단계 화면에서 연 수업 끝(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) ·
  * Quizbank 10문제 묶음 경계(quizBreak) · 단계 올라감(stageUp) — economics.json "my". 빈 공간 네이티브는 economics.json "extraAds".
+ * 영상 보고 나옴(videoLeave)·AI 통화 끝(callEnd)은 2026-11-02부터 extraAds의 interstitial 줄로 셈(쓰는 날 어림).
  */
-export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd", "quizBreak", "stageUp"];
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd", "quizBreak", "stageUp", "videoLeave", "callEnd"];
 
 export const PLANS = [
   // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
