@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small café on Hàng Bạc street in Hanoi's Old Quarter, mid-morning, not busy. The tutor is a young barista who speaks politely (ạ) and drops the pronoun for the customer. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "A small café on Hàng Bạc street in Hanoi's Old Quarter, mid-morning, not busy. The tutor is a young barista who speaks politely (ạ) and addresses the customer as 'mình' (common friendly service speech in Hanoi cafés), so the customer's gender and age stay open. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn. 'Nâu đá' is Hanoi slang for iced milk coffee.",
     "tutorRole": "barista",
     "canDo": [
       0,
@@ -39,8 +39,8 @@
             "match": [
               "chào em, cho tôi một cà phê sữa đá",
               "chào anh, cho tôi cà phê sữa đá",
-              "chào chị, một nâu đá",
-              "chào em, cho chị một cốc cà phê"
+              "chào chị, cho tôi một nâu đá",
+              "chào em, cho tôi một cốc cà phê sữa đá"
             ]
           },
           {
@@ -304,10 +304,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Xin chào ạ! Uống gì ạ?",
+        "text": "Xin chào! Mình uống gì ạ?",
         "gloss": {
           "en": "Hello! What would you like to drink?",
-          "ko": "안녕하세요! 뭐 드릴까요?"
+          "ko": "안녕하세요! 뭐 드시겠어요?"
         }
       },
       "hello-easy": {
@@ -318,10 +318,10 @@
         }
       },
       "what": {
-        "text": "Dạ, mình uống gì ạ?",
+        "text": "Dạ vâng. Mình uống gì ạ?",
         "gloss": {
-          "en": "Yes, what will you have?",
-          "ko": "네, 뭐 드시겠어요?"
+          "en": "Yes. What will you have?",
+          "ko": "네. 뭐 드시겠어요?"
         }
       },
       "what-easy": {
@@ -332,17 +332,17 @@
         }
       },
       "menu": {
-        "text": "Có cà phê đen, nâu đá và trà chanh ạ.",
+        "text": "Có cà phê đen, cà phê sữa và trà chanh ạ.",
         "gloss": {
-          "en": "There's black coffee, iced milk coffee and lemon tea.",
-          "ko": "블랙커피, 아이스 밀크커피, 레몬차가 있어요."
+          "en": "There's black coffee, milk coffee and lemon tea.",
+          "ko": "블랙커피, 밀크커피, 레몬차가 있어요."
         }
       },
       "menu-easy": {
-        "text": "Cà phê hoặc trà chanh ạ.",
+        "text": "Có cà phê và trà chanh ạ.",
         "gloss": {
-          "en": "Coffee or lemon tea.",
-          "ko": "커피나 레몬차요."
+          "en": "There's coffee and lemon tea.",
+          "ko": "커피랑 레몬차가 있어요."
         }
       },
       "where": {
@@ -353,10 +353,10 @@
         }
       },
       "where-easy": {
-        "text": "Ngồi đây, hay mang đi ạ?",
+        "text": "Ở đây hay mang về ạ?",
         "gloss": {
-          "en": "Sit here, or take it with you?",
-          "ko": "여기 앉아요, 가져가요?"
+          "en": "Here or to take away?",
+          "ko": "여기서요, 가져가세요?"
         }
       },
       "more": {
@@ -388,7 +388,7 @@
         }
       },
       "bye": {
-        "text": "Cà phê đây ạ. Chúc một ngày vui vẻ!",
+        "text": "Cà phê đây ạ. Chúc một ngày vui vẻ ạ!",
         "gloss": {
           "en": "Here's your coffee. Have a nice day!",
           "ko": "커피 나왔어요. 좋은 하루 보내세요!"
@@ -402,10 +402,10 @@
         }
       },
       "end": {
-        "text": "Dạ, chào ạ!",
+        "text": "Dạ vâng, chào ạ!",
         "gloss": {
           "en": "Bye!",
-          "ko": "안녕히 가세요!"
+          "ko": "네, 안녕히 가세요!"
         }
       }
     },
@@ -641,10 +641,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Vâng? Có việc gì thế?",
+        "text": "Ơ, có việc gì thế?",
         "gloss": {
-          "en": "Yes? What is it?",
-          "ko": "네? 무슨 일이에요?"
+          "en": "Oh, what is it?",
+          "ko": "어, 무슨 일이에요?"
         }
       },
       "hello-easy": {
@@ -683,10 +683,10 @@
         }
       },
       "sure": {
-        "text": "Đúng rồi, gần lắm. Còn gì nữa không?",
+        "text": "Ừ, gần lắm. Hỏi gì nữa không?",
         "gloss": {
-          "en": "That's right, it's very close. Anything else?",
-          "ko": "맞아요, 아주 가까워요. 또 필요한 거 있어요?"
+          "en": "Yes, it's very close. Anything else you want to ask?",
+          "ko": "네, 아주 가까워요. 또 물어볼 거 있어요?"
         }
       },
       "sure-easy": {
@@ -885,7 +885,7 @@
             "match": [
               "đắt không?",
               "có đắt không ạ?",
-              "có rẻ không?"
+              "có đắt lắm không?"
             ]
           }
         ],
@@ -1030,10 +1030,10 @@
         }
       },
       "browse": {
-        "text": "Vâng, cứ xem đi ạ. Khăn lụa màu đỏ này có được không ạ?",
+        "text": "Vâng, cứ xem thoải mái ạ. Khăn màu đỏ này được không ạ?",
         "gloss": {
-          "en": "Sure, take a look. How about this red silk scarf?",
-          "ko": "네, 구경하세요. 이 빨간 실크 스카프 괜찮으세요?"
+          "en": "Sure, take your time. How about this red scarf?",
+          "ko": "네, 편하게 보세요. 이 빨간 스카프 괜찮으세요?"
         }
       },
       "nice": {
@@ -1125,7 +1125,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hotel on Hàng Bè street in Hanoi, early evening. The tutor is the receptionist, polite (ạ), referring to themselves as em. The learner has a booking for two nights. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The front desk of a small hotel on Hàng Bè street in Hanoi, early evening. The tutor is the receptionist, polite (ạ), referring to themselves as em and to the guest as 'mình' (friendly service speech) so the guest's gender and age stay open. The learner has a booking for two nights. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1416,14 +1416,14 @@
     },
     "sentences": {
       "hello": {
-        "text": "Xin chào ạ. Đã đặt phòng trước chưa ạ?",
+        "text": "Em chào ạ. Mình đã đặt phòng chưa ạ?",
         "gloss": {
           "en": "Hello. Have you booked a room?",
           "ko": "안녕하세요. 방 예약하셨어요?"
         }
       },
       "hello-easy": {
-        "text": "Có đặt phòng không ạ?",
+        "text": "Mình có đặt phòng không ạ?",
         "gloss": {
           "en": "Did you book a room?",
           "ko": "방 예약했어요?"
@@ -1437,9 +1437,9 @@
         }
       },
       "name-easy": {
-        "text": "Tên là gì ạ?",
+        "text": "Mình tên là gì ạ?",
         "gloss": {
-          "en": "What's the name?",
+          "en": "What's your name?",
           "ko": "이름이 뭐예요?"
         }
       },
@@ -1458,14 +1458,14 @@
         }
       },
       "room": {
-        "text": "Phòng ở tầng bốn, số bốn lẻ hai ạ.",
+        "text": "Phòng bốn không hai, ở tầng bốn ạ.",
         "gloss": {
-          "en": "The room is on the fourth floor, number four-oh-two.",
-          "ko": "방은 4층 402호예요."
+          "en": "Room four-oh-two, on the fourth floor.",
+          "ko": "402호, 4층이에요."
         }
       },
       "room-easy": {
-        "text": "Tầng bốn ạ. Phòng bốn lẻ hai.",
+        "text": "Tầng bốn ạ. Phòng bốn không hai.",
         "gloss": {
           "en": "Fourth floor. Room four-oh-two.",
           "ko": "4층이요. 402호."
@@ -1507,7 +1507,7 @@
         }
       },
       "end": {
-        "text": "Không có gì ạ. Chúc ngủ ngon!",
+        "text": "Dạ không có gì. Chúc ngủ ngon ạ!",
         "gloss": {
           "en": "You're welcome. Sleep well!",
           "ko": "천만에요. 안녕히 주무세요!"
@@ -1897,10 +1897,10 @@
         }
       },
       "nice-easy": {
-        "text": "Rất vui nhé.",
+        "text": "Vui được gặp bạn!",
         "gloss": {
-          "en": "Nice to meet you.",
-          "ko": "반가워."
+          "en": "Nice to meet you!",
+          "ko": "반가워!"
         }
       },
       "minh": {
@@ -1946,10 +1946,10 @@
         }
       },
       "minhjob": {
-        "text": "Mình là sinh viên năm hai. Thôi, vào lớp rồi!",
+        "text": "Mình là sinh viên năm hai. Thôi, vào lớp thôi!",
         "gloss": {
-          "en": "I'm a second-year student. Oh, class is starting!",
-          "ko": "나는 대학 2학년이야. 자, 수업 시작한다!"
+          "en": "I'm a second-year student. Come on, let's go in!",
+          "ko": "나는 대학 2학년이야. 자, 들어가자!"
         }
       },
       "minhjob-easy": {
@@ -2290,7 +2290,7 @@
         }
       },
       "who": {
-        "text": "Người này là ai?",
+        "text": "Đây là ai thế?",
         "gloss": {
           "en": "Who is this?",
           "ko": "이 사람은 누구야?"
@@ -2997,10 +2997,10 @@
         }
       },
       "sport": {
-        "text": "Ở đây chơi cầu lông. Bạn có biết chơi cầu lông không?",
+        "text": "Bọn mình chơi cầu lông. Bạn có biết chơi cầu lông không?",
         "gloss": {
-          "en": "We play badminton here. Can you play badminton?",
-          "ko": "여기선 배드민턴 쳐. 배드민턴 칠 줄 알아?"
+          "en": "We play badminton. Can you play badminton?",
+          "ko": "우리는 배드민턴 쳐. 배드민턴 칠 줄 알아?"
         }
       },
       "sport-easy": {
@@ -3789,21 +3789,21 @@
       "market": {
         "text": "Có, siêu thị ở đầu ngõ, gần lắm.",
         "gloss": {
-          "en": "Yes, there's a supermarket at the end of the lane, very close.",
+          "en": "Yes, there's a supermarket at the entrance of the lane, very close.",
           "ko": "있어요, 골목 입구에 슈퍼가 있어요, 아주 가까워요."
         }
       },
       "market-easy": {
         "text": "Có, ở đầu ngõ.",
         "gloss": {
-          "en": "Yes, at the end of the lane.",
-          "ko": "있어요, 골목 입구에."
+          "en": "Yes, at the entrance of the lane.",
+          "ko": "있어요, 골목 입구에요."
         }
       },
       "tip": {
         "text": "Đầu ngõ có siêu thị đấy, tiện lắm.",
         "gloss": {
-          "en": "There's a supermarket at the end of the lane, very handy.",
+          "en": "There's a supermarket at the entrance of the lane, very handy.",
           "ko": "골목 입구에 슈퍼 있어요, 아주 편해요."
         }
       },
@@ -4392,7 +4392,7 @@
     },
     "sentences": {
       "hello": {
-        "text": "Bánh mì nóng đây! Ăn gì ạ?",
+        "text": "Bánh mì nóng đây! Mua gì ạ?",
         "gloss": {
           "en": "Hot bánh mì here! What would you like?",
           "ko": "따끈한 반미 있어요! 뭐 드릴까요?"
@@ -4568,7 +4568,7 @@
             "match": [
               "cho tôi một suất bún chả",
               "cho tôi bún chả",
-              "cho em một bát phở",
+              "cho em một suất nem rán",
               "cho tôi cái này"
             ]
           },
@@ -4647,7 +4647,7 @@
         "id": "t-tea",
         "say": "tea",
         "next": "l-more",
-        "easier": "food-easy"
+        "easier": "tea-easy"
       },
       "t-food": {
         "type": "tutor",
@@ -4705,7 +4705,7 @@
         "id": "t-eat",
         "say": "eat",
         "next": "l-bill",
-        "easier": "more-easy"
+        "easier": "eat-easy"
       },
       "l-bill": {
         "type": "learner",
@@ -4819,10 +4819,10 @@
         }
       },
       "order-easy": {
-        "text": "Bún chả hay phở ạ?",
+        "text": "Bún chả hay nem rán ạ?",
         "gloss": {
-          "en": "Bun cha or pho?",
-          "ko": "분짜요, 쌀국수요?"
+          "en": "Bun cha or fried spring rolls?",
+          "ko": "분짜요, 튀김 스프링롤이요?"
         }
       },
       "menu": {
@@ -4847,9 +4847,9 @@
         }
       },
       "drink-easy": {
-        "text": "Có uống nước không ạ?",
+        "text": "Có uống gì không ạ?",
         "gloss": {
-          "en": "Would you like a drink?",
+          "en": "Would you like something to drink?",
           "ko": "마실 거 드릴까요?"
         }
       },
@@ -4915,6 +4915,20 @@
           "en": "Thank you, come again!",
           "ko": "감사합니다, 또 오세요!"
         }
+      },
+      "tea-easy": {
+        "text": "Có trà đá ạ.",
+        "gloss": {
+          "en": "Yes, we have iced tea.",
+          "ko": "아이스티 있어요."
+        }
+      },
+      "eat-easy": {
+        "text": "Mời ăn ạ.",
+        "gloss": {
+          "en": "Please, enjoy.",
+          "ko": "드세요."
+        }
       }
     },
     "review": "claude"
@@ -4928,7 +4942,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on Tràng Thi street in Hanoi on a hot afternoon. The tutor is a friendly local waiting for a bus; casual. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "A bus stop on Tràng Thi street in Hanoi on a hot afternoon. The tutor is a friendly local waiting for a bus; casual. The bus number in the script is illustrative, not a real route. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5044,7 +5058,7 @@
             "go": "t-stop",
             "match": [
               "xe số hai mươi ba ở đâu?",
-              "bến xe hai mươi ba ở đâu?",
+              "xe hai mươi ba dừng ở đâu?",
               "điểm dừng ở đâu ạ?",
               "xe đó đỗ ở đâu?"
             ]
@@ -5462,7 +5476,7 @@
         "id": "t-two",
         "say": "two",
         "next": "l-price",
-        "easier": "nine-easy"
+        "easier": "two-easy"
       },
       "l-price": {
         "type": "learner",
@@ -5583,7 +5597,7 @@
         }
       },
       "oneway-easy": {
-        "text": "Một chiều, hay đi và về ạ?",
+        "text": "Một chiều hay cả đi cả về ạ?",
         "gloss": {
           "en": "One way, or there and back?",
           "ko": "편도요, 갔다 오는 거요?"
@@ -5667,10 +5681,17 @@
         }
       },
       "end": {
-        "text": "Vé đây ạ. Chúc đi vui vẻ!",
+        "text": "Vé đây ạ. Chúc đi vui vẻ ạ!",
         "gloss": {
           "en": "Here's your ticket. Have a good trip!",
           "ko": "표 여기 있어요. 즐거운 여행 되세요!"
+        }
+      },
+      "two-easy": {
+        "text": "Hai giờ, được ạ.",
+        "gloss": {
+          "en": "Two o'clock, fine.",
+          "ko": "2시, 좋아요."
         }
       }
     },
@@ -6268,7 +6289,7 @@
         "id": "t-bag",
         "say": "bag",
         "next": "l-thanks",
-        "easier": "price-easy"
+        "easier": "bag-easy"
       },
       "t-end": {
         "type": "tutor",
@@ -6293,7 +6314,7 @@
         }
       },
       "fever": {
-        "text": "Có. Có bị sốt không?",
+        "text": "Có ạ. Có bị sốt không?",
         "gloss": {
           "en": "Yes. Do you have a fever?",
           "ko": "있어요. 열 나요?"
@@ -6360,6 +6381,13 @@
         "gloss": {
           "en": "Get lots of rest, get well soon!",
           "ko": "푹 쉬어요, 빨리 나으세요!"
+        }
+      },
+      "bag-easy": {
+        "text": "Túi đây ạ.",
+        "gloss": {
+          "en": "Here's a bag.",
+          "ko": "봉투 여기요."
         }
       }
     },
@@ -7045,10 +7073,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Quầy đồ thất lạc đây. Mất gì thế?",
+        "text": "Đây là quầy đồ thất lạc. Bạn mất gì thế?",
         "gloss": {
-          "en": "This is lost property. What did you lose?",
-          "ko": "분실물 센터예요. 뭘 잃어버렸어요?"
+          "en": "This is the lost-property desk. What did you lose?",
+          "ko": "여기는 분실물 센터예요. 뭘 잃어버렸어요?"
         }
       },
       "hello-easy": {
@@ -8553,7 +8581,7 @@
         }
       },
       "name": {
-        "text": "Cho mình xin họ tên nhé.",
+        "text": "Cho em xin họ tên ạ.",
         "gloss": {
           "en": "Can I have your full name, please?",
           "ko": "성함 알려 주세요."
@@ -8655,7 +8683,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The lift lobby of an apartment building in Hoàng Mai, Hanoi, morning. The tutor is an elderly neighbour who calls the learner cháu and refers to themselves as bác (gender-neutral). The learner should answer politely (dạ, ạ). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The lift lobby of an apartment building in Hoàng Mai, Hanoi, morning. The tutor is an elderly neighbour who calls the learner cháu and refers to themselves as bác (gender-neutral) — the normal way an older person in Hanoi speaks to a young adult. The learner answers politely (dạ, ạ, cháu/bác). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as bác, cô or chú.",
     "tutorRole": "neighbour",
     "canDo": [
       0
@@ -8899,7 +8927,7 @@
         "text": "Cháu cũng ở toà này à?",
         "gloss": {
           "en": "Do you live in this building too?",
-          "ko": "학생도 이 건물에 살아요?"
+          "ko": "이 건물에 살아요?"
         }
       },
       "hello-easy": {
@@ -9271,9 +9299,9 @@
         }
       },
       "hello-easy": {
-        "text": "Bạn đến học ngôn ngữ à?",
+        "text": "Bạn đến đây học tiếng à?",
         "gloss": {
-          "en": "Are you here to learn languages?",
+          "en": "Are you here to learn a language?",
           "ko": "언어 배우러 왔어?"
         }
       },
@@ -9285,10 +9313,10 @@
         }
       },
       "sit-easy": {
-        "text": "Bạn ở nước nào?",
+        "text": "Bạn là người Hàn Quốc à?",
         "gloss": {
-          "en": "Which country are you from?",
-          "ko": "어느 나라에서 왔어?"
+          "en": "Are you Korean?",
+          "ko": "한국 사람이야?"
         }
       },
       "lang": {
@@ -9313,10 +9341,10 @@
         }
       },
       "chinese-easy": {
-        "text": "Tiếng Trung thì sao?",
+        "text": "Bạn biết tiếng Trung không?",
         "gloss": {
-          "en": "What about Chinese?",
-          "ko": "중국어는?"
+          "en": "Do you know Chinese?",
+          "ko": "중국어 알아?"
         }
       },
       "job": {
@@ -10774,7 +10802,7 @@
         "id": "t-up",
         "say": "up",
         "next": "l-thanks",
-        "easier": "card-easy"
+        "easier": "up-easy"
       },
       "t-end": {
         "type": "tutor",
@@ -10887,6 +10915,13 @@
         "gloss": {
           "en": "You're welcome. Enjoy the ride!",
           "ko": "천만에요. 잘 다녀오세요!"
+        }
+      },
+      "up-easy": {
+        "text": "Lên tầng trên nhé.",
+        "gloss": {
+          "en": "Go upstairs.",
+          "ko": "위층으로 올라가요."
         }
       }
     },
