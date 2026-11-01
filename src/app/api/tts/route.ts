@@ -6,7 +6,8 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
-import { realtimeTtsModel, speechTtsModel, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
+import { voxtralConfigured, voxtralSpeech, voxtralVoices } from "@/lib/server/voxtralSpeech";
+import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
   speechLangPrefix,
@@ -107,6 +108,16 @@ async function synthesize(
     : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), serverTutorGender(coerceLanguageCode(speechLangPrefix(lang)), rawTutor));
   const delivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
   const shared = mayBeShared(request, rawVoice);
+
+  // 목소리 후보 Voxtral(점검 사용자만, 2026-11-01 — 통화 원가 낮추기 비교): x-tts-engine: voxtral, 목소리는 x-tts-voxtral-voice(slug·id),
+  // x-tts-voxtral-voices: 1이면 목록만. 결과는 점검 보고 모양(JSON, wav base64)으로만 — 앱 재생 경로에는 붙이지 않았다.
+  if (trialValue(request, "x-tts-engine") === "voxtral") {
+    if (!voxtralConfigured()) return jsonWithCors(request, { error: "MISSING_MISTRAL_KEY" }, { status: 503 });
+    if (trialValue(request, "x-tts-voxtral-voices") === "1") return jsonWithCors(request, await voxtralVoices());
+    const made = await voxtralSpeech({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), model: trialValue(request, "x-tts-voxtral-model") });
+    if (!made.ok) return jsonWithCors(request, { engine: "voxtral", status: made.status, error: made.error }, { status: 502 });
+    return jsonWithCors(request, { engine: "voxtral", spoken, ms: made.ms, wavBase64: made.wav.toString("base64") });
+  }
 
   if (ttsEngine(request) === "realtime") {
     const started = Date.now();

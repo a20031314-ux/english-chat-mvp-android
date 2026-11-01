@@ -29,6 +29,11 @@ function trialHeader(request: NextRequest | undefined, name: string): string {
   return simUser ? value : "";
 }
 
+/** 점검 사용자만 보낼 수 있는 머리글 값(아니면 ""). */
+export function trialValue(request: NextRequest, name: string): string {
+  return trialHeader(request, name);
+}
+
 /** 점검이 결과 자세히(시간·확신도·원문)를 달라고 했나. */
 export function wantsTrialReport(request: NextRequest): boolean {
   return trialHeader(request, "x-speech-trial-report") === "1";
