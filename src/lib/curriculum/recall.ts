@@ -84,10 +84,17 @@ export function recallFromScripts(language: string, frame: Frame, locale: string
   return out;
 }
 
-/** 묶음 RECALL_SIZE문제: 묶음(set)마다 하나씩 돌아가며, 이미 낸 문장은 빼고. */
+/** 한 묶음에서 한 틀을 쓰는 문제 수 상한(가상 사용자 2026-11-01 — 익힌 틀이 하나뿐이면 다섯 문제 중 넷이 My name is). */
+export const RECALL_PER_FRAME = 2;
+
+/**
+ * 묶음 RECALL_SIZE문제: 묶음(set)마다 하나씩 돌아가며, 이미 낸 문장은 빼고. 한 틀은 RECALL_PER_FRAME문제까지 —
+ * 익힌 틀이 적으면 묶음이 짧아진다(같은 틀만 다섯 번 묻지 않는다).
+ */
 export function recallBundle(sets: readonly string[], prompts: Readonly<Record<string, readonly RecallPrompt[]>>, size = RECALL_SIZE, seed = 0): RecallPrompt[] {
   const out: RecallPrompt[] = [];
   const used = new Set<string>();
+  const perFrame = new Map<string, number>();
   for (let round = 0; out.length < size && round < 6; round += 1) {
     for (const set of sets) {
       if (out.length >= size) break;
@@ -95,7 +102,9 @@ export function recallBundle(sets: readonly string[], prompts: Readonly<Record<s
       if (!list.length) continue;
       const pick = list[(seed + round) % list.length]!;
       if (used.has(pick.text)) continue;
+      if (pick.frames.some((id) => (perFrame.get(id) ?? 0) >= RECALL_PER_FRAME)) continue;
       used.add(pick.text);
+      for (const id of pick.frames) perFrame.set(id, (perFrame.get(id) ?? 0) + 1);
       out.push(pick);
     }
   }

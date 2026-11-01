@@ -35,6 +35,8 @@ export type QuizSource = {
   wordGloss?: string;
   /** 빈도 단어: 품사 묶음(noun·verb·adj·adv·function) — 보기를 같은 품사로만(2026-10-30). */
   pos?: string;
+  /** 빈도 단어: 주제(목록의 topic) — 보기를 같은 주제에서 먼저(2026-11-01). */
+  topic?: string;
   /** piece가 이 문장구조의 고정 부분(문법 칸 g|·문장구조 f| 재료) — 틀린 곳 고치기의 오답을 고른다. */
   frame?: string;
 };
@@ -205,8 +207,54 @@ export function moreExamples(language: string, key: string, current: string, n =
   return picked;
 }
 
-/** 답한 뒤 예문으로 보여 준 문장을 뒤로(다른 문장이 있으면 그쪽부터 빈칸으로). */
+/**
+ * 그 열쇠로 최근에 낸 문장(이 폰, 열쇠마다 ASKED_KEEP개) — 다음에 같은 열쇠를 낼 때 뒤로 민다
+ * (가상 사용자 2026-11-01: 단어 시험·다시 보기가 몇 분 전·1일째와 같은 문장이라 문장을 외워 맞힘). 다른 문장이 없으면 그대로 쓴다.
+ */
+const ASKED = "quizAsked.v1";
+const ASKED_KEEP = 4;
+const ASKED_KEYS = 600;
+const askedMemory = new Map<string, Record<string, string[]>>();
+
+function askedOf(language: string): Record<string, string[]> {
+  const have = askedMemory.get(language);
+  if (have) return have;
+  let read: Record<string, string[]> = {};
+  try {
+    if (typeof localStorage !== "undefined") read = (JSON.parse(localStorage.getItem(`${ASKED}.${language}`) ?? "null") as Record<string, string[]> | null) ?? {};
+  } catch {
+    read = {};
+  }
+  askedMemory.set(language, read);
+  return read;
+}
+
+/** 이 문장을 그 열쇠로 냈다(문제를 화면에 올리는 쪽이 부름 — 묶음 퀴즈·수업 퀴즈). */
+export function noteAsked(language: string, key: string, text: string): void {
+  if (!key || !text) return;
+  const all = askedOf(language);
+  all[key] = [text, ...(all[key] ?? []).filter((one) => one !== text)].slice(0, ASKED_KEEP);
+  const keys = Object.keys(all);
+  if (keys.length > ASKED_KEYS) for (const old of keys.slice(0, keys.length - ASKED_KEYS)) delete all[old];
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(`${ASKED}.${language}`, JSON.stringify(all));
+  } catch {
+    // 메모리에는 남음.
+  }
+}
+
+/** 최근에 낸 문장(오래된 것이 뒤). */
+export function askedTexts(language: string, key: string): readonly string[] {
+  return askedOf(language)[key] ?? [];
+}
+
+/** 답한 뒤 예문으로 보여 준 문장·최근에 낸 문장을 뒤로(다른 문장이 있으면 그쪽부터 빈칸으로). 최근에 낸 것은 오래된 것부터 다시. */
 function shownLast(language: string, key: string, list: QuizSource[], later?: ReadonlySet<string>): QuizSource[] {
+  const asked = askedTexts(language, key);
+  if (asked.length) {
+    const rank = (text: string) => asked.indexOf(text);
+    list = [...list.filter((source) => rank(source.text) < 0), ...list.filter((source) => rank(source.text) >= 0).sort((a, b) => rank(b.text) - rank(a.text))];
+  }
   const kept = SHOWN_EXAMPLES.get(`${language}|${key}`);
   const shown = later?.size ? new Set([...(kept ?? []), ...later]) : kept;
   if (!shown?.size) return list;
@@ -323,14 +371,11 @@ function decoys(language: string, key: string, stage: number, pos?: string): str
     // 빈도 단어: 같이 받아 둔 다른 낱말의 쓴 꼴 — **같은 품사만**(사용자 2026-10-30 "선지가 다수일 시 다 같은 품사로").
     // 품사를 모르면(옛 카드) 보기를 만들지 않는다 — 다른 품사가 섞여 한눈에 지워지는 보기보다 문제를 안 내는 쪽.
     if (!pos) return [];
-    return [
-      ...new Set(
-        [...(GAP_SOURCES.get(language)?.entries() ?? [])]
-          .filter(([k, sources]) => k !== key && k.startsWith("w|") && sources[0]?.pos === pos)
-          .map(([, sources]) => sources[0]?.piece ?? "")
-          .filter(Boolean),
-      ),
-    ];
+    const samePos = [...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k, sources]) => k !== key && k.startsWith("w|") && sources[0]?.pos === pos);
+    // 같은 주제 낱말이 둘 넘으면 그 안에서만(가상 사용자 2026-11-01 crimen/cisne/consejo·tamaño/taza/hombro — 철자만 닮은 다른 주제 낱말은 뜻으로 바로 지워짐).
+    const topic = GAP_SOURCES.get(language)?.get(key)?.[0]?.topic;
+    const sameTopic = topic && topic !== "function" ? samePos.filter(([, sources]) => sources[0]?.topic === topic) : [];
+    return [...new Set((sameTopic.length >= 2 ? sameTopic : samePos).map(([, sources]) => sources[0]?.piece ?? "").filter(Boolean))];
   }
   if (key.startsWith("u|")) {
     const others = [...(GAP_SOURCES.get(language)?.entries() ?? [])].filter(([k]) => k !== key).map(([, sources]) => sources[0]?.piece ?? "").filter(Boolean);
@@ -447,13 +492,19 @@ export function chooseOf(language: string, key: string, source: QuizSource, rand
   const nearKey = key.startsWith("g|") && source.frame ? `f|${source.frame}` : key;
   const near = nearOf(language, nearKey, piece);
   const fits = (one: string) => Boolean(one) && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece));
-  const nearFit = near.filter(fits);
+  // 낱말(w|)의 실수 꼴은 정답을 품거나 정답에 들 수 있다(you → your, totally → total) — 문장에 낱말로 따로 있지만 않으면 된다
+  // (가상 사용자 2026-11-01: WORD_DECOYS가 이 규칙에 걸러져 생김새만 닮은 다른 낱말 crimen/cisne/consejo가 나옴).
+  const wordFits = (one: string) => (isSpaceless(piece) ? fits(one) : Boolean(one) && !same(one, piece) && pieceAt(lower(source.text), lower(one), language) < 0);
+  // 낱말은 손으로 정한 실수 꼴(wordDecoys.ts)이 있으면 그것만 — 문제은행 오답(nearby·I처럼 문장에 맞는 말이 섞였던 것)보다 앞선다.
+  const own = key.startsWith("w|") ? wordNearMisses(language, piece).filter(wordFits) : [];
+  const nearFit = own.length ? own : near.filter(key.startsWith("w|") ? wordFits : fits);
   // 문장구조·표현·문법은 그 정답의 실수 꼴(데이터·문제은행)만 — 다른 문제의 조각은 품사·자리가 안 맞아 한눈에 지워지거나 거꾸로 문장에 맞아 답이 둘
   // (2026-11-01 퀴즈 전수 점검 ko 4~5단계 13문제). 모자라면 고르기를 안 만들고 빈칸 쓰기·순서로 넘어간다.
   // 낱말(w|)·사용자 표현(u|)만 남의 조각 중 생김새가 가장 닮은 것으로 채운다(같은 품사 안에서 — 2026-10-30 사용자).
   const ownOnly = key.startsWith("f|") || key.startsWith("e|") || key.startsWith("g|");
   if (ownOnly && nearFit.length < 2) return null;
-  const pool = nearFit.length >= 2 ? nearFit : mostAlike(piece, decoys(language, key, source.stage, source.pos).filter(fits), 5);
+  // 낱말: 실수 꼴이 하나뿐이면 같은 품사의 닮은 낱말로 하나 채운다(실수 꼴 먼저).
+  const pool = nearFit.length >= 2 ? nearFit : [...nearFit, ...mostAlike(piece, decoys(language, key, source.stage, source.pos).filter(fits), nearFit.length ? 1 : 5)];
   // 대소문자만 다른 같은 말("cuánto cuesta"·"Cuánto cuesta")은 보기에 한 번만(2026-10-30 화면 확인).
   // 보기 첫 글자를 정답에 맞춘다(문장 가운데 빈칸에 "Our·Who"처럼 대문자 보기가 섞여 한눈에 지워짐 — 가상 사용자 2026-10-31).
   const caseLike = (one: string) => {
@@ -462,7 +513,8 @@ export function chooseOf(language: string, key: string, source: QuizSource, rand
     const head = one[0] ?? "";
     return (first === first.toLocaleLowerCase() ? head.toLocaleLowerCase() : head.toLocaleUpperCase()) + one.slice(1);
   };
-  const wrong = [...new Map(shuffled(pool, random).map((one) => caseLike(one)).filter((one) => !same(one, piece) && !lower(source.text).includes(lower(one))).map((one) => [lower(one), one])).values()].slice(0, 2);
+  const ordered = nearFit.length ? [...shuffled(nearFit, random), ...pool.filter((one) => !nearFit.includes(one))] : shuffled(pool, random);
+  const wrong = [...new Map(ordered.map((one) => caseLike(one)).filter((one) => !same(one, piece) && (isSpaceless(piece) ? !lower(source.text).includes(lower(one)) : pieceAt(lower(source.text), lower(one), language) < 0)).map((one) => [lower(one), one])).values()].slice(0, 2);
   if (wrong.length < 2) return null;
   const options = shuffled([piece, ...wrong], random);
   return {
@@ -639,9 +691,14 @@ export function orderTiles(text: string, language: string): string[] {
   return out;
 }
 
-export function orderOf(language: string, source: QuizSource, random: () => number): QuizQuestion | null {
-  const words = orderTiles(source.text, language);
-  if (words.length < 3 || words.length > 10) return null;
+/** 퀴즈 순서 문제 낱말 수 상한(낱말 하나 = 조각 하나). */
+export const ORDER_MAX = 12;
+
+export function orderOf(language: string, source: QuizSource, random: () => number, options: { least?: number } = {}): QuizQuestion | null {
+  // 퀴즈 순서 문제는 낱말 하나가 조각 하나(가상 사용자 2026-11-01 "My name / is Rosa." — 이웃 낱말을 묶으면 틀째로 붙어 베끼기가 됨).
+  // ORDER_MAX 낱말이 넘는 줄은 내지 않는다(이웃 낱말을 묶는 orderTiles는 오늘 할 것 대본 카드 미리 보기만).
+  const words = tilesOf(source.text, language);
+  if (words.length < (options.least ?? 3) || words.length > ORDER_MAX) return null;
   const indices = words.map((_, i) => i);
   let tiles = shuffled(indices, random);
   for (let tries = 0; tries < 4 && tiles.every((value, i) => words[value] === words[i]); tries += 1) tiles = shuffled(indices, random);
@@ -1052,6 +1109,43 @@ export function buildQuiz(
   if (secondSay) questions.push({ kind: "say", text: secondSay.text, gloss: secondSay.gloss, from: secondSay.from });
   if (sayFrom) questions.push({ kind: "say", text: sayFrom.text, gloss: sayFrom.gloss, from: sayFrom.from });
   return questions.length >= 2 ? { key, questions } : null;
+}
+
+/**
+ * 문장구조 수업 퀴즈 세 문제(가상 사용자 2026-11-01 U25 — 쓰기 → 같은 조각 고르기 → 순서가 한 틀의 같은 답을 세 번 물음):
+ * 문제마다 다른 것을, 다른 문장으로 묻는다.
+ * ① 빈칸 쓰기 — 틀 조각을 떠올려 친다(대본 줄·문제은행 예문 먼저, 설명에서 보여 준 예문은 뒤로).
+ * ② 틀린 곳 찾아 고치기 — 그 틀의 확실히 틀린 꼴(frames/decoys/plain)이 든 문장에서 틀린 낱말을 찾아 바른 꼴로. 못 만들면 뜻 고르기.
+ * ③ 낱말 순서 — 낱말 넷 이상인 다른 문장(긴 것부터), 낱말 하나가 조각 하나. 못 만들면 뜻 고르기·고르기.
+ * 같은 조각을 고르는 문제(고르기)는 다른 모양을 못 만들 때만.
+ */
+export function lessonQuiz(language: string, key: string, options: { seed?: string; stage?: number; later?: ReadonlySet<string> } = {}): QuizQuestion[] {
+  const random = rng(`${key}|${options.seed ?? ""}|lesson`);
+  const stage = options.stage;
+  const all = quizSources(language, key).filter((source) => source.who !== "them");
+  const inside = stage ? all.filter((source) => source.stage === 0 || source.stage <= stage + 1) : all;
+  const sources = shownLast(language, key, shuffled(inside.length ? inside : all, random), options.later);
+  const used = new Set<string>();
+  const out: QuizQuestion[] = [];
+  const take = (make: (source: QuizSource) => QuizQuestion | null, list: readonly QuizSource[] = sources): boolean => {
+    for (const source of list) {
+      if (used.has(source.text)) continue;
+      const made = make(source);
+      if (made) {
+        used.add(source.text);
+        out.push(made);
+        return true;
+      }
+    }
+    return false;
+  };
+  if (!take((source) => typeOf(language, source, key))) take((source) => chooseOf(language, key, source, random));
+  if (!take((source) => spotOf(language, key, source, random))) take((source) => meaningOf(language, source, random));
+  const longest = [...sources].sort((a, b) => tilesOf(b.text, language).length - tilesOf(a.text, language).length);
+  if (!take((source) => orderOf(language, source, random, { least: 4 }), longest)) {
+    if (!take((source) => meaningOf(language, source, random))) take((source) => chooseOf(language, key, source, random));
+  }
+  return out.length >= 2 ? out : [];
 }
 
 /** 같은 단계 근처의 다른 줄(뜻 고르기 오답). */

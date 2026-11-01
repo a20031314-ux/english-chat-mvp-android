@@ -10,6 +10,8 @@ import { getOpenAIClient } from "./openai.ts";
 import { translated } from "./stageCopy.ts";
 import { glossFor } from "../curriculum/stageScripts.ts";
 import { recallFits } from "../curriculum/recall.ts";
+import { loadBank } from "../curriculum/vocabBank.ts";
+import { tooEarlyWords } from "../curriculum/lessonWords.ts";
 import type { Frame } from "../curriculum/frames.ts";
 import type { FrameLesson, LessonPart, LessonTurn } from "../curriculum/frameLesson.ts";
 import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
@@ -32,7 +34,7 @@ M|<what the pattern means / what it lets you say, one short line>
 P|<one fixed part of the pattern, copied exactly in ${name}>|<what this part does, under 12 words>
 (one P line per fixed part, in the order they appear, and one P line for ___ saying what goes there)
 U|<when to use it, one short line>
-Then write three short, natural exchanges in ${name}: another person says one line, and the learner answers with ONE sentence that uses the pattern (keep its fixed part exactly as written, change only the ___ part, simple everyday words). Do not repeat the practice sentences given. No names of real people, brands or places, nothing rude.
+Then write three short, natural exchanges in ${name}: another person says one line, and the learner answers with ONE sentence that uses the pattern (keep its fixed part exactly as written, change only the ___ part). This is stage ${frame.stage} of 5 (1 = first week): use only the most basic, high-frequency words a learner at this stage already knows — as plain as the practice sentences, no specific or rare nouns. Do not repeat the practice sentences given. No names of real people, brands or places, nothing rude.
 T|<other person's line in ${name}>|<its English translation>|<learner's answer in ${name}>|<its English translation>
 Answer with exactly these lines (one M, two to four P, one U, three T) and nothing else. Translations are plain translations of the line itself, not descriptions of it.`,
       },
@@ -58,8 +60,15 @@ Answer with exactly these lines (one M, two to four P, one U, three T) and nothi
       turns.push({ them, themGloss, me, meGloss });
     }
   }
-  if (!meaning || !parts.length || turns.length < 2) return null;
-  return { explain: [], meaning, parts, usage, turns: turns.slice(0, 3) };
+  const fit = await stageFit(language, frame, turns);
+  if (!meaning || !parts.length || fit.length < 2) return null;
+  return { explain: [], meaning, parts, usage, turns: fit.slice(0, 3) };
+}
+
+/** 그 단계보다 한참 위 낱말이 든 차례는 버린다(curriculum/lessonWords.ts, 가상 사용자 2026-11-01 — 1단계 대화에 緑茶). */
+async function stageFit(language: string, frame: Frame, turns: readonly LessonTurn[]): Promise<LessonTurn[]> {
+  const bank = await loadBank(language).catch(() => [] as const);
+  return turns.filter((turn) => !tooEarlyWords(language, `${turn.them} ${turn.me}`, frame.stage, bank).length);
 }
 
 /** 틀 하나의 수업. 앱 언어가 영어가 아니면 설명·뜻을 그 말로. */
@@ -67,6 +76,14 @@ export async function frameLesson(language: string, frame: Frame, ui: string, ui
   // v2(2026-10-30): 뜻이 설명("…를 묻습니다")으로 나오던 것을 그대로 옮긴 말로. v3: 설명이 영어("I am")에 빗대던 것을 학습 언어 조각으로. v4: 설명 글을 학습 언어로 쓰던 것(스페인어)을 영어로 — 앱 언어로 옮김. v5(사용자 "이 표현은 이런 뜻이고 왜 이런 구조고 예문은 이런 게 있다 식으로"): 뜻·구조(조각마다 하는 일)·쓰임으로 나눔.
   const key = `framelesson:v5:${language}:${frame.id}`;
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
+  // 저장된 수업도 단계 밖 낱말이 든 차례는 빼고, 둘 안 남으면 새로 만든다(2026-11-01 — 이미 모두가 받던 수업).
+  if (lesson?.turns?.length) {
+    const fit = await stageFit(language, frame, lesson.turns);
+    if (fit.length < lesson.turns.length) {
+      lesson = fit.length >= 2 ? { ...lesson, turns: fit } : null;
+      if (lesson) await kvSetJson(key, lesson, TTL_SECONDS).catch(() => undefined);
+    }
+  }
   if (!lesson?.turns?.length) {
     onMake?.();
     lesson = await makeLesson(language, frame).catch(() => null);
@@ -76,7 +93,9 @@ export async function frameLesson(language: string, frame: Frame, ui: string, ui
   if (ui === "en") return lesson;
   const parts = lesson.parts ?? [];
   const source = [lesson.meaning ?? "", lesson.usage ?? "", ...parts.map((part) => part.role), ...lesson.explain, ...lesson.turns.flatMap((turn) => [turn.themGloss, turn.meGloss])];
-  const moved = await translated(source, ui, uiName, `${key}:${ui}`, onMake);
+  // 옮긴 것 저장 열쇠에 대화 줄을 넣는다 — 위에서 차례를 빼거나 새로 만들면 예전 옮김(줄 수가 같으면 그대로 쓰임)이 엇갈리지 않게.
+  const turnsId = lesson.turns.map((turn) => turn.me).join("|");
+  const moved = await translated(source, ui, uiName, `${key}:${ui}:${hashText(turnsId)}`, onMake);
   if (!moved) return lesson;
   let at = 0;
   const take = () => moved[at++] ?? "";
@@ -86,4 +105,13 @@ export async function frameLesson(language: string, frame: Frame, ui: string, ui
   const explain = lesson.explain.map((line) => take() || line);
   const turns = lesson.turns.map((turn) => ({ ...turn, themGloss: take() || turn.themGloss, meGloss: take() || turn.meGloss }));
   return { explain, meaning: meaning || lesson.meaning, usage: usage || lesson.usage, parts: movedParts, turns };
+}
+
+function hashText(text: string): string {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i += 1) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return (h >>> 0).toString(36);
 }

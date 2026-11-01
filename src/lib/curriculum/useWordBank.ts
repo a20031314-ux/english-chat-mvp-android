@@ -34,9 +34,9 @@ function readCached(language: string, ui: string, chunk: number | string): Card[
   }
 }
 
-function sourcesOf(card: Card, pos: string | undefined): QuizSource[] {
-  // 품사(목록의 pos → 묶음 noun·verb·adj·adv·function) — 빈칸 보기를 같은 품사로만(quiz.ts decoys, 사용자 2026-10-30).
-  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss, ...(pos ? { pos: quizPos(pos) } : {}) }];
+function sourcesOf(card: Card, pos: string | undefined, topic?: string): QuizSource[] {
+  // 품사(목록의 pos → 묶음 noun·verb·adj·adv·function) — 빈칸 보기를 같은 품사로만(quiz.ts decoys, 사용자 2026-10-30), 주제가 같은 낱말 먼저(2026-11-01).
+  return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss, ...(pos ? { pos: quizPos(pos) } : {}), ...(topic ? { topic } : {}) }];
 }
 
 /** 순위 index의 카드 묶음: 빈도 목록은 "b<n>", 그 뒤 찾아서 더한 낱말은 "x<n>". */
@@ -267,8 +267,8 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     ).then((groups) => {
       if (!alive) return;
       const cards = groups.flat();
-      const posOf = new Map([...(peekBank(language) ?? []), ...extras].map((word) => [word.w, word.pos]));
-      registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card, posOf.get(card.w)) })));
+      const listed = new Map([...(peekBank(language) ?? []), ...extras].map((word) => [word.w, word]));
+      registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card, listed.get(card.w)?.pos, listed.get(card.w)?.topic) })));
       for (const card of cards) glossOf.set(`${language}|${card.w}`, card.gloss);
       setReady((current) => new Set([...current, ...cards.map((card) => wordKey(card.w))]));
     });

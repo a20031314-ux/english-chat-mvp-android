@@ -10,7 +10,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, fixedRight, joinWords, moreExamples, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -218,6 +218,8 @@ export function QuestionView({
   bankKey,
   showExamples = true,
   explainLink = false,
+  autoAdvance = true,
+  glossFirst = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -232,6 +234,10 @@ export function QuestionView({
   showExamples?: boolean;
   /** 틀리면 "설명"으로 Stagebank 그 소재 수업을 연다(2026-11-01 설계 — 설명은 Stagebank 한 곳, 문제는 Quizbank). 시험 중엔 끔. */
   explainLink?: boolean;
+  /** 맞힌 고르기·쓰기를 잠깐 뒤 저절로 넘김(문장구조 수업은 끔 — 결과를 보고 "다음"). */
+  autoAdvance?: boolean;
+  /** 빈칸 쓰기의 뜻 줄을 답하기 전에도(문장구조 수업 — 배운 틀을 뜻을 보고 떠올림). 낱말 문제는 늘 답한 뒤에만(2026-10-31). */
+  glossFirst?: boolean;
 }) {
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
   const question: QuizQuestion = useMemo(
@@ -256,11 +262,15 @@ export function QuestionView({
   // Blank questions with a key show more examples after the answer, so they wait for 다음 (user, 2026-10-31).
   // 문법 칸(g|)은 같은 문법을 쓴 아무 대본 줄이라 문제와 상관없어 보임(가상 사용자 2026-11-01 "정답 뒤 예문이 늘 Me llamo/Soy de") — 빼기.
   const examples = showExamples && Boolean(bankKey) && !bankKey?.startsWith("g|") && (question.kind === "choose" || question.kind === "type");
-  const autoNext = Boolean(answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
+  const autoNext = Boolean(autoAdvance && answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
   });
+  // 낸 문장을 그 열쇠에 남긴다 — 다음에 같은 열쇠는 다른 문장부터(quiz.ts noteAsked, 가상 사용자 2026-11-01 "단어 시험이 1일째와 같은 문장").
+  useEffect(() => {
+    if (bankKey && "text" in given && given.text) noteAsked(language, bankKey, given.text);
+  }, [bankKey, given, language]);
   useEffect(() => {
     if (!autoNext) return;
     const timer = window.setTimeout(() => nextRef.current(), 900);
@@ -276,7 +286,7 @@ export function QuestionView({
     >
       {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30). Checks read data-kind. */}
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} /> : null}
+      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -569,6 +579,7 @@ function TypeView({
   onAnswer,
   tag,
   strict = false,
+  glossFirst = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -577,24 +588,35 @@ function TypeView({
   answered: Answer | null;
   onAnswer: (answer: Answer) => void;
   tag: string;
-  /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 틀림(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
+  /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 맞음으로 세지 않는다(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
   strict?: boolean;
+  /** 뜻 줄을 답하기 전에도(문장구조 수업). */
+  glossFirst?: boolean;
 }) {
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
   const [hint, setHint] = useState(0);
+  // 낱말 문제에 문장에 맞는 다른 낱말을 침 — 틀림도 맞음도 아니고 다시 치게(가상 사용자 2026-11-01 #9 "really도 맞는데 틀림").
+  const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
+  const gloss = quizGloss(question.gloss, locale, language);
   const submit = async (typed: string) => {
     const local = typedRight(question.answer, typed, { language, near: question.near });
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
-    const final = await grade(local, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.answer, typed: typed.trim(), open: !strict }, plainWrong);
+    const sentence = `${question.before}___${question.after}`;
+    // 낱말 문제는 문장에 맞는지(open)로 물어 맞으면 "그 낱말을" 다시 치게, 뜻 줄을 먼저 보인 수업은 같은 뜻인지(Pienso que = Creo que), 그 밖은 문장에 맞으면 맞음.
+    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim(), open: strict || !(glossFirst && gloss) }, plainWrong);
+    if (strict && final === "also") {
+      setOtherWord(true);
+      return;
+    }
     setResult(final);
     onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
   };
   return (
     <div className="flex flex-col gap-3">
-      {/* Meaning line only after answering (2026-10-31, user: it gave the answer away). */}
-      {answered ? (
+      {/* Meaning line only after answering (2026-10-31, user: it gave the answer away) — a pattern lesson shows it first (glossFirst). */}
+      {answered || (glossFirst && gloss) ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
@@ -616,12 +638,20 @@ function TypeView({
         busy={checking}
         hint={hint}
         onHint={() => setHint((n) => n + 1)}
-        onSubmit={(typed) => void submit(typed)}
+        onSubmit={(typed) => {
+          setOtherWord(false);
+          void submit(typed);
+        }}
         onGiveUp={() => {
           setResult(false);
           onAnswer({ correct: false, assisted: true });
         }}
       />
+      {otherWord && !answered ? (
+        <p data-quiz-other-word className="text-caption text-slate-300">
+          {ui.quizOtherWord}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -858,6 +888,8 @@ function ChooseView({
   const [picked, setPicked] = useState<number | null>(null);
   // 뜻 줄 없이 내니 다른 보기도 문장에 맞을 수 있다(Su/El agua) — 틀린 보기를 고르면 서버가 한 번 더 보고, 맞으면 맞음(2026-10-31).
   const [alsoOk, setAlsoOk] = useState(false);
+  /** 낱말 문제에서 고른 보기가 문장에도 맞았던 것(끄고 다시 고르게). */
+  const [fitting, setFitting] = useState<number[]>([]);
   const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
   return (
@@ -886,13 +918,15 @@ function ChooseView({
                   ? "border-good/60 text-ink"
                   : "border-warn text-warn line-through"
                 : "border-line text-slate-500"
-            : "border-line text-slate-100 hover:bg-white/5";
+            : fitting.includes(i)
+              ? "border-line text-slate-500"
+              : "border-line text-slate-100 hover:bg-white/5";
           return (
             <button
               key={i}
               type="button"
               dir="auto"
-              disabled={Boolean(answered) || checking}
+              disabled={Boolean(answered) || checking || fitting.includes(i)}
               onClick={async () => {
                 setPicked(i);
                 if (isRight) {
@@ -900,6 +934,12 @@ function ChooseView({
                   return;
                 }
                 if (strict) {
+                  // 낱말 문제: 고른 보기도 문장에 맞으면(뜻 줄 없이 냄 — You/I, nearby/naked) 틀림으로 세지 않고 그 보기만 끄고 다시 고르게(2026-11-01 체감 점검 #6·#7).
+                  const fits = await grade(false, { kind: "blank", sentence: `${question.before}___${question.after}`, answer: question.options[question.answer]!, typed: option, open: true }, false);
+                  if (fits) {
+                    setFitting((current) => [...current, i]);
+                    return;
+                  }
                   onAnswer({ correct: false, picked: option });
                   return;
                 }
@@ -915,6 +955,11 @@ function ChooseView({
         })}
       </div>
       {answered && alsoOk ? <AlsoRight ui={ui} answer={question.options[question.answer]!} /> : null}
+      {fitting.length && !answered ? (
+        <p data-quiz-other-word className="text-caption text-slate-300">
+          {ui.quizOtherWord}
+        </p>
+      ) : null}
     </div>
   );
 }

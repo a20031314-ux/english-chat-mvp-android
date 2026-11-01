@@ -620,7 +620,7 @@ export function GuideButton({
                     </div>
                   );
                 })}
-                {/* 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·"이 화면으로 가기"와 떨어짐). 쓸 기능 고르기에는 없음. */}
+                {/* 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·‘이 화면으로 가기’와 떨어짐). 쓸 기능 고르기에는 없음. */}
                 {!choosing ? <NativeAdSlot feedId="sheets" slotKey="guide-end" spaced /> : null}
               </div>
             ) : oldPage ? (

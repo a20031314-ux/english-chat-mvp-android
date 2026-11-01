@@ -1356,7 +1356,7 @@ function StageFrame({
         <div className="mt-1">{nodeRows(inStage(shown))}</div>
       )}
 
-      {/* 단계 화면 "이 단계에선 이런 대화가 돼요" 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. */}
+      {/* 단계 화면 ‘이 단계에선 이런 대화가 돼요’ 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. */}
       {sample ? <NativeAdSlot feedId="my-full" slotKey="stagebank-stage" spaced layerOnly /> : null}
       {sample}
     </div>

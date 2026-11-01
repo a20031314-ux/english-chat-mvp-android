@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { framesFor } from "./frames.ts";
 import { applyKnown, confirmDue, type KnownMap } from "./known.ts";
-import { recallBundle, recallFits, recallFromScripts, recallKey, recallSets, stageFrameTally, RECALL_SIZE } from "./recall.ts";
+import { recallBundle, recallFits, recallFromScripts, recallKey, recallSets, stageFrameTally, RECALL_PER_FRAME, RECALL_SIZE } from "./recall.ts";
 
 const NOW = Date.UTC(2026, 9, 30, 3);
 
@@ -59,3 +59,11 @@ for (const language of ["ja", "es", "th"]) {
     assert.equal(new Set(bundle.map((prompt) => prompt.text)).size, bundle.length);
   });
 }
+
+test("꺼내 쓰기 묶음: 한 틀은 두 문제까지 — 익힌 틀이 하나면 묶음이 짧아짐(체감 점검 2026-11-01 #11)", () => {
+  const one = (text: string, frames: string[]) => ({ text, gloss: `g ${text}`, frames });
+  const bundle = recallBundle(["en-f1-01"], { "en-f1-01": ["a", "b", "c", "d", "e"].map((t) => one(t, ["en-f1-01"])) });
+  assert.equal(bundle.length, RECALL_PER_FRAME);
+  const mixed = recallBundle(["x", "y", "x+y"], { x: ["a", "b", "c"].map((t) => one(t, ["x"])), y: ["d", "e", "f"].map((t) => one(t, ["y"])), "x+y": [one("g", ["x", "y"])] });
+  for (const id of ["x", "y"]) assert.ok(mixed.filter((p) => p.frames.includes(id)).length <= RECALL_PER_FRAME);
+});

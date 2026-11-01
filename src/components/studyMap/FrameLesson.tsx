@@ -14,7 +14,7 @@ import { fallbackTurns, lessonPassed, type FrameLesson as Lesson, type LessonSte
 import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
-import { buildQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { notePool } from "@/lib/curriculum/exam";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { growBank } from "@/lib/curriculum/qbank";
@@ -127,8 +127,8 @@ export function FrameLesson({
     // 표현·문법 칸은 퀴즈 칸 없이 설명 › 대화(문제는 Quizbank 시험·다시 보기, 2026-11-01 설계).
     if (!frame) return [];
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
-    const quiz = buildQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
-    return (quiz?.questions ?? []).filter((question) => question.kind !== "say").slice(0, 3);
+    // 세 문제가 같은 답을 세 번 묻지 않게: 빈칸 쓰기 · 틀린 곳 고치기 · 낱말 순서, 문제마다 다른 문장(quiz.ts lessonQuiz, 2026-11-01 U25).
+    return lessonQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
   }, [language, frame, seed, shownExamples, grown]);
   const [qIndex, setQIndex] = useState(0);
   // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
@@ -441,6 +441,9 @@ export function FrameLesson({
               }}
               bankKey={key}
               showExamples={false}
+              // 수업 퀴즈는 답한 뒤 맞음/틀림을 보고 "다음"으로 넘어간다(가상 사용자 2026-11-01 — 쓰기 답이 표시 없이 넘어감), 빈칸 쓰기는 뜻 줄을 먼저(틀을 떠올릴 단서 — 틀은 이미 배움).
+              autoAdvance={false}
+              glossFirst
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);
@@ -452,7 +455,7 @@ export function FrameLesson({
                 }
               }}
             />
-            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
+            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 ‘수업 퀴즈 단계에도’) — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
             <NativeAdSlot feedId="quiz-inline" slotKey={`lesson-${itemId}-${adRound}`} spaced />
           </div>
         ) : null}

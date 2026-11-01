@@ -433,3 +433,83 @@ test("문장 → 소재 열쇠: 표현은 따로 선 낱말로만, 표현 그 �
   assert.ok(!expressionKeysIn("th", "ไม่ใช่ครับ").includes("e|ใช่"));
   assert.equal(pieceIn("en", "e|nice to meet you", "Hi, nice to meet you."), "nice to meet you");
 });
+
+test("수업 퀴즈(lessonQuiz): 세 문제가 다른 모양·다른 문장, 같은 조각 고르기로 답을 세 번 묻지 않음 — en·es·ja·th(체감 점검 2026-11-01 U25)", async () => {
+  const { lessonQuiz } = await import("./quiz.ts");
+  for (const [language, id, stage] of [["en", "en-f1-01", 1], ["en", "en-f1-02", 1], ["es", "es-f3-01", 3], ["es", "es-f3-02", 3], ["ja", "ja-f1-05", 1], ["th", "th-f1-01", 1]] as const) {
+    const list = lessonQuiz(language, `f|${id}`, { seed: "t", stage });
+    assert.ok(list.length >= 2, `${id} ${list.length}`);
+    const kinds = list.map((q) => q.kind);
+    assert.equal(new Set(kinds).size, kinds.length, `${id} 모양이 겹침 ${kinds}`);
+    assert.ok(kinds.filter((kind) => kind === "choose").length <= 1, `${id} ${kinds}`);
+    const texts = list.map((q) => ("right" in q && q.kind === "spot" ? q.right : "text" in q ? q.text : ""));
+    assert.equal(new Set(texts).size, texts.length, `${id} 같은 문장 ${texts}`);
+    for (const q of list) if (q.kind === "order") assert.ok(q.words.length >= 4 && q.words.every((word) => !/\s/.test(word.trim())), `${id} 순서 조각 ${q.words}`);
+  }
+});
+
+test("순서 문제는 낱말 하나가 조각 하나, 일본어 ください·ございます는 가르지 않음(wordSegments) — en·ja·es", async () => {
+  const { orderOf, tilesOf } = await import("./quiz.ts");
+  const source = (text: string) => ({ text, gloss: { en: "" }, from: "t", stage: 1 });
+  const en = orderOf("en", source("Good morning. My name is Rosa. I have a sore arm."), fixed);
+  assert.ok(en?.kind === "order" && en.words.every((word) => !word.includes(" ")), JSON.stringify(en));
+  assert.deepEqual(tilesOf("このパンをください。", "ja"), ["この", "パン", "を", "ください"]);
+  assert.deepEqual(segmentWords("おはようございます。", "ja"), ["おはよう", "ございます"]);
+  assert.deepEqual(segmentWords("ちょっと待ってください。", "ja").slice(-1), ["ください"]);
+  const es = orderOf("es", source("Creo que dejé las llaves en el coche."), fixed);
+  assert.ok(es?.kind === "order" && es.words.length === 8);
+  // 태국어 모음 부호(\p{M})는 그대로.
+  assert.ok(segmentWords("ผมชื่อแดนครับ", "th").join("").includes("ื"));
+});
+
+test("낱말 오답: 손으로 정한 실수 꼴(you → your, crimen → crímenes)이 먼저, 문장에 맞는 대안·다른 주제 낱말은 안 섞임 — en·es·ja", async () => {
+  const { chooseOf, registerQuizSources, rng: seeded } = await import("./quiz.ts");
+  const add = (language: string, piece: string, text: string, pos: string, topic: string) =>
+    registerQuizSources(language, [{ key: `w|${piece}`, sources: [{ text, gloss: { en: "", raw: "x" }, from: `w|${piece}`, stage: 0, piece, who: "me", pos, topic }] }]);
+  add("en", "you", "Do you want some coffee now?", "pron", "function");
+  add("en", "I", "I am tired after work today.", "pron", "function");
+  add("en", "he", "He is here.", "pron", "function");
+  const you = chooseOf("en", "w|you", { text: "Do you want some coffee now?", gloss: { en: "" }, from: "", stage: 0, piece: "you", pos: "pron" }, seeded("a"));
+  assert.ok(you?.kind === "choose");
+  assert.deepEqual(new Set(you.options), new Set(["you", "your", "yours"]));
+  const i = chooseOf("en", "w|I", { text: "I am tired after work today.", gloss: { en: "" }, from: "", stage: 0, piece: "I", pos: "pron" }, seeded("a"));
+  assert.ok(i?.kind === "choose" && !i.options.some((one) => /^(your|he)$/i.test(one)), JSON.stringify(i));
+  add("es", "crimen", "El crimen ocurrió en la noche del viernes.", "noun", "society");
+  add("es", "cisne", "El cisne nada.", "noun", "nature");
+  add("es", "consejo", "Un buen consejo.", "noun", "feelings");
+  const crimen = chooseOf("es", "w|crimen", { text: "El crimen ocurrió en la noche del viernes.", gloss: { en: "" }, from: "", stage: 0, piece: "crimen", pos: "noun" }, seeded("a"));
+  assert.ok(crimen?.kind === "choose" && !crimen.options.includes("cisne") && !crimen.options.includes("consejo"), JSON.stringify(crimen));
+  // 주제가 같은 낱말이 둘 넘으면 그 안에서(실수 꼴이 없는 낱말).
+  add("es", "zzmesa", "La zzmesa es grande.", "noun", "home");
+  add("es", "zzsilla", "La zzsilla es nueva.", "noun", "home");
+  add("es", "zzcama", "La zzcama es blanda.", "noun", "home");
+  add("es", "zzmeta", "La zzmeta es lejos.", "noun", "sport");
+  const mesa = chooseOf("es", "w|zzmesa", { text: "La zzmesa es grande.", gloss: { en: "" }, from: "", stage: 0, piece: "zzmesa", pos: "noun" }, seeded("a"));
+  assert.ok(mesa?.kind === "choose" && !mesa.options.includes("zzmeta"), JSON.stringify(mesa));
+  // 띄어쓰기 없는 말(일본어 ない)은 예전처럼 조각을 품은 꼴만 거름.
+  add("ja", "ない", "時間がない。", "adj", "function");
+  const nai = chooseOf("ja", "w|ない", { text: "時間がない。", gloss: { en: "" }, from: "", stage: 0, piece: "ない", pos: "adj" }, seeded("a"));
+  assert.ok(!nai || nai.kind !== "choose" || nai.options.includes("ない"));
+});
+
+test("최근에 낸 문장은 같은 열쇠의 다음 문제에서 뒤로(noteAsked) — es·zh", async () => {
+  const { noteAsked, quizSources, wordQuiz, registerQuizSources, buildQuiz } = await import("./quiz.ts");
+  registerQuizSources("es", [{ key: "w|zzperro2", sources: [
+    { text: "El zzperro2 come.", gloss: { en: "", raw: "x" }, from: "w|zzperro2", stage: 0, piece: "zzperro2", who: "me", pos: "noun" },
+    { text: "Mi zzperro2 duerme mucho.", gloss: { en: "", raw: "y" }, from: "w|zzperro2", stage: 0, piece: "zzperro2", who: "me", pos: "noun" },
+  ] }]);
+  const first = wordQuiz("es", "w|zzperro2")!.questions[0] as { text: string };
+  noteAsked("es", "w|zzperro2", first.text);
+  const second = wordQuiz("es", "w|zzperro2")!.questions[0] as { text: string };
+  assert.notEqual(second.text, first.text);
+  const key = "f|zh-f1-01";
+  const all = quizSources("zh", key);
+  if (all.length >= 2) {
+    const q1 = buildQuiz("zh", key, { seed: "z", stage: 1 })!.questions[0] as { text?: string };
+    if (q1.text) {
+      noteAsked("zh", key, q1.text);
+      const q2 = buildQuiz("zh", key, { seed: "z", stage: 1 })!.questions[0] as { text?: string };
+      assert.notEqual(q2.text, q1.text);
+    }
+  }
+});

@@ -6,8 +6,9 @@
  */
 export const WORD_DECOYS: Record<string, Record<string, string[]>> = {
   // 2026-11-01 가상 사용자 표시(hub/drafts/ux-marks-2026-11-01.md): 보기가 한눈에 지워지거나 맞는 대안이던 것.
-  en: { totally: ["total", "totaled"] },
-  es: { el: ["la", "los", "las"], ello: ["lo", "le"] },
+  // 2026-11-01 체감 점검(hub/drafts/ux-check-2026-11-01.md 바로 고칠 것 #3~#7): 대명사는 격·소유 꼴, 명사는 수·성·품사 꼴.
+  en: { totally: ["total", "totaled"], i: ["me", "my", "mine"], you: ["your", "yours"], naked: ["nakedness", "nakedly"] },
+  es: { el: ["la", "los", "las"], ello: ["lo", "le"], crimen: ["crímenes", "criminales"], tamaño: ["tamaños", "grande", "mediano"] },
   ja: { ない: ["なく", "なくて", "なかっ"], する: ["して", "すれ"] },
 };
 

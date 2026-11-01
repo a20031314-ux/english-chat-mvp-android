@@ -131,6 +131,8 @@ export function ScriptSheet({
   const [at, setAt] = useState(0);
   const [right, setRight] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
+  // 틀린 글자(끝 화면에 읽는 법과 함께 — 가상 사용자 2026-11-01 "n/10 아직이에요만, 기준·틀린 글자 없음").
+  const [missed, setMissed] = useState<ItemView[]>([]);
   const group = course.groups.find((entry) => entry.id === groupId) ?? null;
   const passed = useMemo(() => new Set(data.passed), [data.passed]);
 
@@ -143,6 +145,7 @@ export function ScriptSheet({
     setAt(0);
     setRight(0);
     setPicked(null);
+    setMissed([]);
     setPhase("quiz");
     if (list[0]?.kind === "listen") say(list[0].item.say);
   };
@@ -154,8 +157,13 @@ export function ScriptSheet({
     const ok = question.options[index] === question.item;
     const nextRight = right + (ok ? 1 : 0);
     if (ok) setRight(nextRight);
-    window.setTimeout(() => {
-      if (at + 1 < quiz.length) {
+    else setMissed((current) => (current.includes(question.item) ? current : [...current, question.item]));
+    // 맞으면 잠깐 ✓ 뒤 다음, 틀리면 바른 답을 보고 "다음"을 눌러 넘어간다.
+    if (ok) window.setTimeout(() => advance(nextRight), 700);
+  };
+
+  const advance = (nextRight: number) => {
+    if (at + 1 < quiz.length) {
         setAt(at + 1);
         setPicked(null);
         if (quiz[at + 1]?.kind === "listen") say(quiz[at + 1]!.item.say);
@@ -172,9 +180,8 @@ export function ScriptSheet({
               if (body?.passed && body.progress) onPassed({ ...data, passed: body.passed, progress: body.progress });
             })
             .catch(() => undefined);
-        }
       }
-    }, ok ? 500 : 1100);
+    }
   };
 
   const question = quiz[at];
@@ -245,14 +252,30 @@ export function ScriptSheet({
               <div className="grid grid-cols-2 gap-2">
                 {question.options.map((option, index) => {
                   const isAnswer = option === question.item;
-                  const state = picked === null ? "" : isAnswer ? "border-good/60 bg-good/15" : picked === index ? "border-bad/60 bg-bad/15" : "opacity-60";
+                  const state = picked === null ? "border-line" : isAnswer ? "border-good bg-good/15" : picked === index ? "border-bad bg-bad/15 line-through" : "border-line opacity-60";
                   return (
-                    <button key={index} type="button" onClick={() => answer(index)} className={`rounded-xl border border-line px-3 py-3 text-body text-ink ${state}`}>
+                    <button key={index} type="button" disabled={picked !== null} onClick={() => answer(index)} className={`rounded-xl border px-3 py-3 text-body text-ink ${state}`}>
                       <span dir={question.kind === "listen" ? "auto" : "ltr"}>{question.kind === "listen" ? option.char : option.reading}</span>
                     </button>
                   );
                 })}
               </div>
+              {picked !== null ? (
+                <div data-letters-feedback className="flex items-center justify-between gap-2">
+                  {question.options[picked] === question.item ? (
+                    <span className="text-note font-semibold text-good">✓ {ui.quizRight}</span>
+                  ) : (
+                    <>
+                      <span className="min-w-0 text-note font-semibold text-warn">
+                        {ui.quizWrong} · <bdi dir="auto">{question.item.char}</bdi> = <bdi dir="ltr">{question.item.reading}</bdi>
+                      </span>
+                      <button type="button" data-letters-next onClick={() => advance(right)} className="shrink-0 rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+                        {ui.scriptNext}
+                      </button>
+                    </>
+                  )}
+                </div>
+              ) : null}
             </div>
           ) : (
             <div className="mt-3 flex flex-col gap-3">
@@ -260,6 +283,20 @@ export function ScriptSheet({
                 {right} / {quiz.length}
               </p>
               <p className="text-note text-slate-300">{share >= PASS_SHARE ? ui.scriptPassed : ui.scriptAgain}</p>
+              <p data-letters-pass className="text-caption text-slate-400">
+                {ui.letterPassNeed.replace("{n}", String(Math.ceil(quiz.length * PASS_SHARE))).replace("{m}", String(quiz.length))}
+              </p>
+              {missed.length ? (
+                <ul data-letters-missed className="flex flex-wrap gap-2">
+                  {missed.map((item, index) => (
+                    <li key={index} className="flex items-center gap-1.5 rounded-xl border border-warn/50 px-2.5 py-1.5">
+                      <span dir="auto" className="text-body font-semibold text-ink">{item.char}</span>
+                      <span dir="ltr" className="text-caption text-slate-300">{item.reading}</span>
+                      <TTSButton text={item.say} lang={speech} />
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="flex gap-2">
                 <button type="button" onClick={start} className="rounded-lg border border-line px-3 py-2 text-note text-slate-200 hover:bg-white/5">
                   {ui.scriptRetry}

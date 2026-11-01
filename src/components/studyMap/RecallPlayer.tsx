@@ -82,6 +82,10 @@ export function RecallPlayer({
   const items = useMemo(() => (prompts ? recallBundle(sets, prompts, undefined, seed) : []), [prompts, sets, seed]);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<number, Result>>({});
+  const [hinted, setHinted] = useState<Record<number, boolean>>({});
+  // 듣는 도중 💡를 눌러도 그 차례 결과에 들어가게(say는 누르기 전 값을 쥐고 있음).
+  const hintedRef = useRef<Record<number, boolean>>({});
+  hintedRef.current = hinted;
   const [listening, setListening] = useState(false);
   const [limited, setLimited] = useState(false);
   const hearing = useHearing();
@@ -143,7 +147,8 @@ export function RecallPlayer({
     });
     setListening(false);
     const stuck = hearing.takeStuck();
-    setResults((current) => ({ ...current, [index]: { heard, practice, good: Boolean(heard) && practice?.good === true && !stuck } }));
+    // 💡로 틀을 본 차례는 맞혀도 꺼내 쓴 것으로 세지 않는다(퀴즈 💡와 같음).
+    setResults((current) => ({ ...current, [index]: { heard, practice, good: Boolean(heard) && practice?.good === true && !stuck && !hintedRef.current[index] } }));
   };
 
   // 문제가 보이면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음" — 문제마다 한 번, 다시는 버튼).
@@ -209,9 +214,16 @@ export function RecallPlayer({
                       )
                     : item.gloss}
                 </p>
-                <p dir="auto" className="mt-1 text-meta text-slate-500">
-                  {patterns.join(" · ")}
-                </p>
+                {/* The pattern is the answer's skeleton — only after 💡 or answering (virtual user 2026-11-01: "My name is ___." under the meaning left nothing to recall). */}
+                {result || hinted[i] ? (
+                  <p dir="auto" className="mt-1 text-meta text-slate-500">
+                    {patterns.join(" · ")}
+                  </p>
+                ) : current && !limited ? (
+                  <button type="button" data-recall-hint onClick={() => setHinted((current2) => ({ ...current2, [i]: true }))} className="mt-1 rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+                    💡 {ui.missionHint}
+                  </button>
+                ) : null}
                 {result ? (
                   <>
                     <div className="mt-1 flex items-start gap-2">
