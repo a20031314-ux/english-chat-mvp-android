@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "6599e2718f73419cf3a7d6b12f1bc3654df26813",
- "at": "2026-11-01T02:31:01.398Z",
- "screensFiredAt": "",
+ "last": "6350742bf48c99c478e2ff35946445799397c029",
+ "at": "2026-11-01T04:24:45.241Z",
+ "screensFiredAt": "2026-11-01T04:25:53.813Z",
  "metrics": {
-  "commit": "bd51eba",
+  "commit": "6350742",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -345,6 +345,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordAdd · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordAdd · 값 매기는 법": "claude-haiku-5-5 300/120 토큰 (기능 translate)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordAdd · 근거": "가정",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankOffer · 한 번": "0.1원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankOffer · 모델 호출": "1",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankOffer · 값 매기는 법": "claude-haiku-5-5 300/60 토큰 (기능 translate)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankOffer · 근거": "가정",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · iconUpload · 한 번": "0.1원",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · iconUpload · 모델 호출": "3",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · iconUpload · 값 매기는 법": "한 번 고정값",
@@ -667,13 +671,11 @@
    },
    "ads": {
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `callEnd` · 언제": "AI 통화가 끝나고 돌아보기로 넘어갈 때",
-    "전면 광고 (건너뛰기는 AdMob이 붙임) · `callEnd` · 부르는 곳": "AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx`",
+    "전면 광고 (건너뛰기는 AdMob이 붙임) · `callEnd` · 부르는 곳": "AI 통화 (어디서나 뜨는 층 CallHost `call` · `RoleplayScreen.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `chatLeave` · 언제": "AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `chatLeave` · 부르는 곳": "앱 틀 `shell` · `AppHome.tsx` ／ AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `checkupEnd` · 언제": "My 이번 주 확인을 끝까지 풀고 결과를 닫을 때",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `checkupEnd` · 부르는 곳": "My 탭 `my` · `studyMap/CheckupPlayer.tsx` ／ My 탭 `my` · `studyMap/TodayPlan.tsx`",
-    "전면 광고 (건너뛰기는 AdMob이 붙임) · `packEnd` · 언제": "오늘의 팩을 끝까지 마쳤을 때",
-    "전면 광고 (건너뛰기는 AdMob이 붙임) · `packEnd` · 부르는 곳": "AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `quizEnd` · 언제": "My 퀴즈를 끝까지 풀고 닫을 때",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `quizEnd` · 부르는 곳": "My 탭 `my` · `studyMap/QuizPlayer.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `roomLeave` · 언제": "공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외",
@@ -747,11 +749,10 @@
   },
   "quiz": {
    "causes": {
-    "뜻 줄에 답 — 앱 언어 = 학습 언어": 1046,
-    "같은 날 같은 문장": 680,
-    "며칠 안 다른 열쇠로 같은 문장": 781,
-    "맞혀서 쉬는 열쇠가 다시": 376,
-    "같은 열쇠 연달아": 102,
+    "같은 날 같은 문장": 670,
+    "며칠 안 다른 열쇠로 같은 문장": 779,
+    "맞혀서 쉬는 열쇠가 다시": 380,
+    "같은 열쇠 연달아": 111,
     "split-word": 19,
     "hard-level": 3
    }
