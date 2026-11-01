@@ -49,7 +49,8 @@ import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/
 import { samePosRounds } from "@/lib/curriculum/wordRounds";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
-import { keyPart, nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { keyPart, nextStudy, recordQuiz, restUntil, streakOf, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import { multiOf, spotsOf } from "@/lib/curriculum/multiQuiz";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
@@ -228,6 +229,8 @@ export function TodayPlan({
   const [log, setLog] = useState<QuizLog>({});
   const [asked, setAsked] = useState<Set<string>>(new Set());
   const askedWrong = useRef<Set<string>>(new Set());
+  // 이번에 낸 복합 문제 문장(curriculum/multiQuiz.ts) — 한 바퀴 돌면 비운다.
+  const multiShown = useRef<Set<string>>(new Set());
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
@@ -603,8 +606,52 @@ export function TodayPlan({
     const grammarTab = which === "learn" && studyFocus === "grammar";
     const spots = which === "review" ? { cards: spotCards, anyCard: true } : grammarTab ? { cards: spotCards, dialog: round % 2 === 0 } : undefined;
     const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, ...(spots ? { spots } : {}) });
+    // 복합 퀴즈(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개", curriculum/multiQuiz.ts): 문법·표현 탭에서
+    // 세 묶음에 한 번 끝에 하나, 낼 것이 다 떨어지면(맞힌 것은 쉬는 중) 복합 문제만으로 — 소재가 한정돼도 탭이 비지 않게.
+    const multiTab = which === "learn" && (studyFocus === "grammar" || studyFocus === "expression") ? studyFocus : null;
+    if (multiTab && made.questions.length >= 2) {
+      if (round % 3 === 2) {
+        const one = multiFor(multiTab, made.questions.map((q) => ("text" in q ? q.text : "")));
+        if (one) {
+          made.questions.push(one.question);
+          made.keys.push(one.keys[0]!);
+        }
+      }
+      return made;
+    }
+    if (multiTab) {
+      const multi: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
+      for (let i = 0; i < 3; i += 1) {
+        const one = multiFor(multiTab, [], i);
+        if (!one) break;
+        multi.questions.push(one.question);
+        multi.keys.push(one.keys[0]!);
+      }
+      if (multi.questions.length) return multi;
+    }
     // 틀린 것 탭은 한 문제만 남아도 낸다.
     return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
+  };
+  // 복합 문제 하나: 이미 맞힌 소재(이 폰 연속 맞힘 1 이상·서버 익힘)만 비우고, 잊을 때가 가까운 소재가 든 문장부터. 문법 탭은 복합 틀린 곳을 번갈아.
+  const multiFor = (tab: "grammar" | "expression", avoidTexts: readonly string[], offset = 0) => {
+    const options = {
+      stage,
+      seed: `${day}-${round}-${offset}`,
+      learned: (key: string) => streakOf(log[key]) >= 1 || knownState(known, key) === "known",
+      wants: (key: string) => (tab === "grammar" ? keyPart(language, key) === "grammar" : keyPart(language, key) !== "grammar"),
+      rank: (key: string) => restUntil(log[key]),
+      avoid: new Set([...multiShown.current, ...avoidTexts]),
+    };
+    const make = () => (tab === "grammar" && (round + offset) % 2 === 0 ? spotsOf(language, options) : null) ?? multiOf(language, options) ?? (tab === "grammar" ? spotsOf(language, options) : null);
+    let made = make();
+    // 한 바퀴 다 냈으면 처음부터 다시(문장 수는 한정 — 다른 날 다른 소재 조합으로).
+    if (!made && multiShown.current.size) {
+      multiShown.current = new Set();
+      options.avoid = new Set(avoidTexts);
+      made = make();
+    }
+    if (made) multiShown.current.add(made.question.kind === "spots" ? made.question.right : made.question.text);
+    return made;
   };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane, wordKeys?: readonly string[]) => {
     setLane(which);
@@ -1310,6 +1357,12 @@ export function TodayPlan({
         make={keepMake}
         retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}`}
         onResult={recordOne}
+        onParts={(parts) => {
+          // 복합 문제: 소재마다 한 번에(따로 부르면 기록이 서로 덮임).
+          if (wrongTab) for (const part of parts) askedWrong.current.add(part.key);
+          else setAsked((current) => new Set([...current, ...parts.map((part) => part.key)]));
+          finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined })));
+        }}
         empty={
           vocabPaused ? null : !wrongTab && keepFocus === "vocab" && (!bank || !circleOrder.length) ? (
             <p className="px-1 py-2 text-caption text-slate-400">…</p>

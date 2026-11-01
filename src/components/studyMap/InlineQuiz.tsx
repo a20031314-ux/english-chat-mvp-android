@@ -21,6 +21,7 @@ export function InlineQuiz({
   make,
   retryKey,
   onResult,
+  onParts,
   empty,
 }: {
   ui: UICopy;
@@ -32,6 +33,8 @@ export function InlineQuiz({
   /** Changes when the material behind make() arrives (e.g. word cards): an empty quiz tries make() again. */
   retryKey?: string;
   onResult: (result: { key: string; correct: boolean; skipped: boolean }) => void;
+  /** 복합 문제(소재 여럿)의 결과를 한 번에 — 없으면 소재마다 onResult. */
+  onParts?: (parts: { key: string; correct: boolean }[]) => void;
   empty: React.ReactNode;
 }) {
   const [batch, setBatch] = useState<QuizBatch | null>(null);
@@ -90,7 +93,12 @@ export function InlineQuiz({
         onAnswer={(value) => {
           if (answered) return;
           setAnswered(value);
-          onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped) });
+          // 복합 문제는 소재(열쇠)마다 따로 기록(curriculum/multiQuiz.ts).
+          if (value.parts?.length) {
+            if (onParts) onParts(value.parts);
+            else for (const part of value.parts) onResult({ key: part.key, correct: part.correct, skipped: false });
+          }
+          else onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped) });
         }}
         onNext={next}
         bankKey={batch.keys[index]}

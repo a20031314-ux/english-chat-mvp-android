@@ -14,6 +14,7 @@ import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
 import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { multiBlankRight, spotsFixRight, type MultiQuestion, type SpotsQuestion } from "@/lib/curriculum/multiQuiz";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { noteBankResult } from "@/lib/curriculum/qbank";
@@ -31,6 +32,8 @@ import { stopTts } from "@/lib/ttsPlayer";
 export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string;
   /** 💡 힌트·모르겠어요로 답을 본 차례 — 맞게 쳤어도 맞음으로 세지 않는다(correct false), 화면엔 ✓ 대신 💡. */
   assisted?: boolean;
+  /** 복합 문제(multi·spots): 소재(열쇠)마다 맞음/틀림 — 부르는 쪽이 열쇠마다 따로 기록한다. */
+  parts?: { key: string; correct: boolean }[];
 };
 
 export function QuizPlayer({
@@ -257,6 +260,8 @@ export function QuestionView({
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
@@ -876,6 +881,256 @@ function ChooseView({
         })}
       </div>
       {answered && alsoOk ? <AlsoRight ui={ui} answer={question.options[question.answer]!} /> : null}
+    </div>
+  );
+}
+
+const CIRCLED = ["①", "②", "③", "④"];
+
+/**
+ * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개", curriculum/multiQuiz.ts): 한 문장에 이미 맞힌 소재 자리 둘·셋이 비어 있다.
+ * 빈칸마다 직접 치거나(한자가 든 조각은 고르기) — 확인 한 번에 빈칸마다 채점(빈칸 쓰기와 같은 기준 + 서버 다시 보기), 결과는 빈칸마다 그 열쇠에.
+ * 뜻 줄은 답한 뒤에만(빈칸 쓰기와 같음).
+ */
+function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: MultiQuestion; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const [typed, setTyped] = useState<string[]>(() => question.blanks.map(() => ""));
+  const [results, setResults] = useState<Graded[] | null>(null);
+  const { checking, grade } = useTypedGrade(language);
+  const ready = question.blanks.every((_, i) => typed[i]?.trim());
+  const finish = (graded: Graded[]) => {
+    setResults(graded);
+    const parts = question.blanks.map((blank, i) => ({ key: blank.key, correct: Boolean(graded[i]) }));
+    onAnswer({ correct: parts.every((one) => one.correct), parts });
+  };
+  const submit = async () => {
+    if (!ready || checking || answered) return;
+    const graded = await Promise.all(
+      question.blanks.map(async (blank, i) => {
+        const mine = typed[i]!.trim();
+        if (blank.options) return (mine === blank.answer ? "exact" : false) as Graded;
+        const local = multiBlankRight(blank, mine, language);
+        const plainWrong = Boolean(blank.near?.some((one) => typedRight(one, mine, { language }) === "exact"));
+        // 다른 빈칸은 정답으로 채운 문장에서 이 빈칸만 다시 본다(같은 뜻의 다른 꼴만 — 이 소재를 썼는지 보는 문제라 open 아님).
+        const sentence = question.chunks.map((chunk, k) => chunk + (k < question.blanks.length ? (k === i ? "___" : question.blanks[k]!.answer) : "")).join("");
+        return grade(local, { kind: "blank", sentence, answer: blank.answer, typed: mine }, plainWrong);
+      }),
+    );
+    finish(graded);
+  };
+  return (
+    <div className="flex flex-col gap-3" data-multi>
+      {answered ? (
+        <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
+          {quizGloss(question.gloss, locale, language) ?? ""}
+        </p>
+      ) : null}
+      <div className="flex items-start gap-2">
+        <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+          {question.chunks.map((chunk, k) => (
+            <span key={k}>
+              {chunk}
+              {k < question.blanks.length ? (
+                answered ? (
+                  <strong className={`font-semibold ${results?.[k] ? "text-good" : "text-warn underline decoration-dotted"}`}>{question.blanks[k]!.answer}</strong>
+                ) : (
+                  <strong className="font-semibold text-amber-200">＿{CIRCLED[k]}＿</strong>
+                )
+              ) : null}
+            </span>
+          ))}
+        </p>
+        {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
+      </div>
+      <div className="flex flex-col gap-2">
+        {question.blanks.map((blank, i) => {
+          const result = results?.[i];
+          return (
+            <div key={i} className="flex flex-col gap-1">
+              <div className="flex items-center gap-2">
+                <span aria-hidden className="w-5 shrink-0 text-center text-caption text-amber-200">
+                  {CIRCLED[i]}
+                </span>
+                {blank.options ? (
+                  <div className="flex min-w-0 flex-1 flex-wrap gap-1.5">
+                    {blank.options.map((option) => {
+                      const on = typed[i] === option;
+                      const style = answered ? (option === blank.answer ? "border-good bg-good/10 text-ink" : on ? "border-warn text-warn line-through" : "border-line text-slate-500") : on ? "border-amber-300/70 bg-amber-300/10 text-amber-100" : "border-line text-slate-100 hover:bg-white/5";
+                      return (
+                        <button key={option} type="button" dir="auto" disabled={Boolean(answered)} onClick={() => setTyped((list) => list.map((one, k) => (k === i ? option : one)))} className={`rounded-lg border px-2.5 py-1 text-chat ${style}`}>
+                          {option}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <input
+                    dir="auto"
+                    lang={tag}
+                    value={typed[i] ?? ""}
+                    disabled={Boolean(answered)}
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    autoComplete="off"
+                    spellCheck={false}
+                    onChange={(event) => setTyped((list) => list.map((one, k) => (k === i ? event.target.value : one)))}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" && !event.nativeEvent.isComposing) void submit();
+                    }}
+                    className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
+                  />
+                )}
+              </div>
+              {answered && !blank.options ? (
+                result === "also" ? (
+                  <div className="ps-7">
+                    <AlsoRight ui={ui} answer={blank.answer} />
+                  </div>
+                ) : result === "loose" || !result ? (
+                  <p dir="auto" className="ps-7 text-caption text-slate-300">
+                    → <bdi className="font-semibold text-status-learned">{blank.answer}</bdi>
+                  </p>
+                ) : null
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
+      {answered ? null : (
+        <div className="flex items-center gap-2">
+          <button type="button" data-multi-check onClick={() => void submit()} disabled={!ready || checking} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
+            {checking ? "…" : ui.quizCheck}
+          </button>
+          <button type="button" data-quiz-giveup onClick={() => finish(question.blanks.map(() => false))} className="rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10">
+            {ui.markUnknown}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * 복합 틀린 곳(같은 날, curriculum/multiQuiz.ts spotsOf): 한 문장에 확실히 틀린 꼴이 둘·셋 — 낱말을 눌러 틀린 곳을 찾고 그 자리마다 바른 꼴을 친다.
+ * 틀린 곳이 아닌 낱말을 두 번 누르면 끝(못 찾은 곳은 틀림). 머리의 ✎ n/m = 찾은 곳 / 틀린 곳 수. 결과는 틀린 곳마다 그 열쇠에.
+ */
+function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: SpotsQuestion; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const [done, setDone] = useState<(Graded | null)[]>(() => question.errors.map(() => null));
+  const [active, setActive] = useState<number | null>(null);
+  const [misses, setMisses] = useState<number[]>([]);
+  const [hint, setHint] = useState(0);
+  const glue = isSpaceless(question.text) ? "" : " ";
+  const errorAt = (word: number) => question.errors.findIndex((error) => error.bad.includes(word));
+  const finish = (graded: (Graded | null)[]) => {
+    setActive(null);
+    const parts = question.errors.map((error, i) => ({ key: error.key, correct: Boolean(graded[i]) }));
+    onAnswer({ correct: parts.every((one) => one.correct), parts });
+  };
+  const resolve = (index: number, result: Graded) => {
+    const next = done.map((one, i) => (i === index ? result : one));
+    setDone(next);
+    setActive(null);
+    setHint(0);
+    if (next.every((one) => one !== null)) finish(next);
+  };
+  const found = done.filter((one) => one !== null).length;
+  const gloss = quizGloss(question.gloss, locale, language);
+  return (
+    <div className="flex flex-col gap-3" data-spots>
+      <div className="flex items-start justify-between gap-2">
+        {gloss ? (
+          <p dir="auto" className="min-w-0 flex-1 text-note text-slate-400">
+            {gloss}
+          </p>
+        ) : (
+          <span />
+        )}
+        <span aria-hidden className="shrink-0 rounded-full border border-line px-2 py-0.5 text-caption text-slate-300">
+          ✎ {found}/{question.errors.length}
+        </span>
+      </div>
+      <p dir="auto" className={`flex flex-wrap ${glue ? "gap-1.5" : "gap-0.5"}`} data-spot-words>
+        {question.words.map((word, i) => {
+          const e = errorAt(i);
+          const style = answered
+            ? e >= 0
+              ? done[e]
+                ? "border-good/60 bg-good/10 text-ink"
+                : "border-warn bg-warn/15 text-warn"
+              : misses.includes(i)
+                ? "border-line text-slate-500 line-through"
+                : "border-transparent text-slate-200"
+            : e >= 0 && done[e] !== null
+              ? done[e]
+                ? "border-good/60 bg-good/10 text-ink"
+                : "border-warn bg-warn/15 text-warn"
+              : e >= 0 && active === e
+                ? "border-amber-300/70 bg-amber-300/10 text-amber-100"
+                : misses.includes(i)
+                  ? "border-line text-slate-500 line-through"
+                  : "border-line text-slate-100 hover:bg-white/10";
+          return (
+            <button
+              key={i}
+              type="button"
+              disabled={Boolean(answered) || misses.includes(i) || (e >= 0 && done[e] !== null)}
+              onClick={() => {
+                if (e >= 0) {
+                  setActive(e);
+                  setHint(0);
+                  return;
+                }
+                const next = [...misses, i];
+                setMisses(next);
+                // 틀린 곳이 아닌 낱말을 두 번 누르면 끝 — 못 찾은 곳은 틀림.
+                if (next.length >= 2) finish(done);
+              }}
+              className={`rounded-lg border px-2 py-1 text-chat ${style}`}
+            >
+              {word}
+            </button>
+          );
+        })}
+      </p>
+      {active !== null && !answered ? (
+        <TypeBox
+          key={active}
+          ui={ui}
+          tag={tag}
+          answer={question.errors[active]!.want}
+          done={false}
+          result={null}
+          busy={false}
+          hint={hint}
+          onHint={() => setHint((n) => n + 1)}
+          onSubmit={(typed) => {
+            const right = spotsFixRight(question.errors[active]!, typed, language);
+            // 💡로 답을 본 자리는 맞게 쳐도 맞음으로 세지 않는다.
+            resolve(active, hint ? false : right);
+          }}
+          onGiveUp={() => resolve(active, false)}
+        />
+      ) : null}
+      {!answered && active === null ? (
+        <button type="button" data-quiz-giveup onClick={() => finish(done)} className="self-start rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10">
+          {ui.markUnknown}
+        </button>
+      ) : null}
+      {answered ? (
+        <div className="flex flex-col gap-1">
+          {question.errors.map((error, i) => (
+            <p key={i} dir="auto" className="text-caption text-slate-300">
+              <span aria-hidden>{done[i] ? "✓ " : "✗ "}</span>
+              <bdi className="text-slate-500 line-through">{error.near[0]}</bdi> → <bdi className="font-semibold text-status-learned">{error.want}</bdi>
+            </p>
+          ))}
+          <div className="mt-1 flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">
+            <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
+              {question.right}
+            </p>
+            <TTSButton text={question.right} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

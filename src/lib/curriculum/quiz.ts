@@ -54,6 +54,13 @@ export type QuizQuestion =
   | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean }
   /** 대화에서 틀린 줄(2026-10-30): 짧은 대화 몇 줄 중 한 줄만 틀림 — 그 줄을 고른 뒤 틀린 곳을 고친다. */
   | { kind: "dialog"; lines: { who: "me" | "them"; text: string; gloss: ScriptGloss }[]; at: number; spot: SpotQuestion; from: string }
+  /**
+   * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
+   * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
+   */
+  | { kind: "multi"; text: string; chunks: string[]; blanks: { key: string; answer: string; near?: string[]; /** 칠 수 없는 조각(한자가 든 일본어·중국어)은 고르기. */ options?: string[] }[]; gloss: ScriptGloss; from: string }
+  /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
+  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
 
@@ -75,7 +82,7 @@ export function quizPassed(correct: number, total: number): boolean {
   return total > 0 && correct >= Math.min(total, 2);
 }
 
-function hash(text: string): number {
+export function hash(text: string): number {
   let h = 2166136261;
   for (let i = 0; i < text.length; i += 1) {
     h ^= text.charCodeAt(i);
@@ -85,7 +92,7 @@ function hash(text: string): number {
 }
 
 /** 같은 열쇠·같은 날이면 같은 문제(다시 열어도 바뀌지 않게). */
-function rng(seed: string): () => number {
+export function rng(seed: string): () => number {
   let a = hash(seed) || 1;
   return () => {
     a = (a + 0x6d2b79f5) | 0;
@@ -95,7 +102,7 @@ function rng(seed: string): () => number {
   };
 }
 
-function shuffled<T>(list: readonly T[], random: () => number): T[] {
+export function shuffled<T>(list: readonly T[], random: () => number): T[] {
   const out = [...list];
   for (let i = out.length - 1; i > 0; i -= 1) {
     const j = Math.floor(random() * (i + 1));
@@ -310,7 +317,7 @@ export function expressionNearMisses(language: string, expression: string, piece
 }
 
 /** 열쇠에 맞는 헷갈리는 오답(문장구조·표현은 미리 만든 데이터, 문제은행이 더한 것도 — curriculum/qbank). */
-function nearOf(language: string, key: string, piece: string): string[] {
+export function nearOf(language: string, key: string, piece: string): string[] {
   const made = key.startsWith("f|") ? nearMisses(language, key.slice(2), piece) : key.startsWith("e|") ? expressionNearMisses(language, key.slice(2), piece) : key.startsWith("w|") ? wordNearMisses(language, piece) : [];
   // 낱말(w|)의 문제은행 오답 중 철자 실수 꼴·운만 맞춘 낱말(totaly·aera·tank — 가상 사용자 2026-11-01 "철자 고르기")은 뺀다. 활용·성수 꼴(perra·perros)은 둔다.
   const grown = grownDecoys(language, key, piece).filter((one) => !key.startsWith("w|") || isSpaceless(piece) || !spellingOnly(one, piece));
