@@ -30,7 +30,7 @@ function useTutorAbout(targetLanguage: string, fallback: string): string {
  * AI 튜터도 사람 중 하나(2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합해줘. 프로필 탭에 가면 AI 튜터가 있고 대화를 걸 수 있는 흐름으로").
  * 사람 탭 목록 맨 위에 사람 카드처럼 한 줄, 누르면 프로필 시트 — 💬 메시지(AI 대화) · 📞 통화 · 통화 기록.
  * 이름·국기는 학습 언어별 튜터(lib/chatPartner.ts — AI 대화 머리와 같은 사람). 로그인 없이도 보인다(AI 기능은 로그인 없이).
- * 소개 글 `aiTutorBio` — 사람이 아니라 AI 튜터임과 할 수 있는 것(사용자가 이 화면에 넣으라고 함, DESIGN.md "안내 글" 예외).
+ * 소개 글은 튜터 자기소개만(lib/tutorAbout.ts) — 실제 사람 프로필처럼, AI라는 표시는 이름 아래 "AI 튜터" 칩 하나(사용자 2026-11-02 "그냥 실제 캐릭터처럼 쓰고 AI 표시만"). 예전 설명 글 `aiTutorBio`는 소개가 없을 때만.
  */
 /**
  * AI 튜터 그림(2026-10-27 사용자 "AI 아이콘으로 이미지와 프로필을 만들어 넣어줘. 사람처럼 만들 필요는 없고"):
@@ -160,8 +160,6 @@ export function AiTutorSheet({
             </button>
           </div>
           <p className="mt-4 text-body leading-relaxed text-slate-200">{about}</p>
-          {/* AI라는 것·할 수 있는 것(사용자가 이 화면에 넣으라고 한 글) — 자기소개 아래 작게 */}
-          <p className="mt-2 text-note leading-relaxed text-slate-400">{ui.aiTutorBio}</p>
           <div className="mt-5 flex flex-col gap-2">
             {canCall ? (
               <button type="button" onClick={go(() => sendAppIntent("startCall", {}))} className="rounded-xl border border-white/20 px-3 py-2.5 text-body text-slate-100">
