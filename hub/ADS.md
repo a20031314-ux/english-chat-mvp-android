@@ -70,13 +70,13 @@
 | `chat-locked` | `chat-locked` | AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. | AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
 | `my-full` | `exam-wait` | 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. | My 탭 `my` · `studyMap/TodayPlan.tsx` |
 | `my-full` | `logbank-list` | Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움. | My 탭 `my` · `studyMap/Logbank.tsx` |
-| `my-full` | `stagebank-stage` | 단계 화면 "이 단계에선 이런 대화가 돼요" 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
+| `my-full` | `stagebank-stage` | 단계 화면 ‘이 단계에선 이런 대화가 돼요’ 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `my-full` | `stagebank-today` | Stagebank 전체 화면: 오늘 할 것 카드·단계 줄 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `people-tab` | `board-after-3` | 세 번째 글 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). 글을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/BoardView.tsx` |
 | `people-tab` | `people-after-4` | 네 번째 사람 뒤에 네이티브 광고 하나(무료·안드로이드만). 프로필을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/RoomPeople.tsx` |
 | `people-tab` | `people-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. | 사람 탭 `people` · `rooms/PeopleTab.tsx` |
 | `quiz-inline` | `${adKey}-${adRound}` | Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
-| `quiz-inline` | `lesson-${itemId}-${adRound}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
+| `quiz-inline` | `lesson-${itemId}-${adRound}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 ‘수업 퀴즈 단계에도’) — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `call-end` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `RoleplayScreen.tsx` |
 | `results` | `checkup-end` | 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
@@ -86,7 +86,7 @@
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `sheets` | `bank-help-${bank}` | 시트 맨 끝(그림·영상 아래) 네이티브 하나(2026-11-01 — 읽는 안내 시트, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/BankHelp.tsx` |
-| `sheets` | `guide-end` | 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·"이 화면으로 가기"와 떨어짐). 쓸 기능 고르기에는 없음. | 앱 틀 `shell` · `GuideSheet.tsx` |
+| `sheets` | `guide-end` | 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·‘이 화면으로 가기’와 떨어짐). 쓸 기능 고르기에는 없음. | 앱 틀 `shell` · `GuideSheet.tsx` |
 | `sheets` | `my-progress-end` | 익힌 것 목록 끝 네이티브 하나(2026-11-01 — ✓ 칩만 읽는 곳, 토글은 맨 위). 익힌 것이 없으면(새 사용자 — 토글 한 줄뿐) 두지 않음. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `sheets` | `scope-end` | 시트 맨 끝 네이티브 하나(2026-11-01 — 읽기만 하는 시트, 누를 것은 ✕뿐, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/ContentScope.tsx` |
 | `sheets` | `skill-record-end` | 기록 끝 네이티브 하나(2026-11-01 — 읽는 기록 화면, 결과가 있을 때만, 한 장을 열면 없음). 줄과 띄움. | My 탭 `my` · `studyMap/SkillRecord.tsx` |
