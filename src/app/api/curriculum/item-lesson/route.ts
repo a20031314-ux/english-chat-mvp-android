@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { itemLesson, type LessonItem } from "@/lib/server/itemLesson";
+import { itemLesson, lastLessonRaw, type LessonItem } from "@/lib/server/itemLesson";
 import { ladderFor } from "@/lib/curriculum/stages/index";
 import { quizSources } from "@/lib/curriculum/quiz";
 
@@ -47,5 +47,5 @@ export async function GET(request: NextRequest) {
     metered += 1;
     if (metered <= 2) void meterRequest(request, "frameLesson");
   });
-  return jsonWithCors(request, { lesson });
+  return jsonWithCors(request, { lesson, ...(!lesson && request.headers.get("x-lesson-debug") === "1" ? { raw: lastLessonRaw } : {}) });
 }

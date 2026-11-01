@@ -19,6 +19,9 @@ export type LessonItem = { key: string; kind: "expression" | "grammar"; name: st
 /** 수업 + 앱 언어 이름(문법 칸 이름은 옮김, 표현은 그대로). */
 export type ItemLessonView = FrameLesson & { title: string };
 
+/** 점검용: 마지막으로 받은 모델 글(운영 확인 — 저장 안 함). */
+export let lastLessonRaw = "";
+
 async function makeLesson(language: string, item: LessonItem): Promise<FrameLesson | null> {
   const client = getOpenAIClient();
   if (!client) return null;
@@ -53,6 +56,7 @@ Answer with exactly these lines (one M, one U, two E, three T) and nothing else.
     ],
   });
   const raw = String(completion.choices[0]?.message?.content ?? "");
+  lastLessonRaw = raw.slice(0, 2000);
   let meaning = "";
   let usage = "";
   const explain: string[] = [];
