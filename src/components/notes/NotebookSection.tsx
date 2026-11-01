@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -246,29 +246,14 @@ export function NotebookSection({
   const [jump, setJump] = useState<{ stage: number; id: string; at: number; today?: boolean } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
-  // My 큰 칸(n단계 · Quizbank · 복습) 중 접은 것(기본은 모두 펼침, 2026-10-31). 이 화면에만.
-  const [closed, setClosed] = useState<ReadonlySet<MyLayer>>(() => new Set());
   // 지금 보는 탭(위 칸 이름 줄, 2026-11-02) — 하루 첫 화면은 Stagebank, 오늘 할 것을 다 하면 그날 한 번 Quizbank(AutoQuiz).
   const [tab, setTab] = useState<MyLayer>("stage");
   /** 그 탭으로 바꾸고 펴기(밖에서 문장구조·상황을 열 때, 오늘 할 것이 끝났을 때). */
   const openLayer = (next: MyLayer | null) => {
     if (!next) return;
-    setClosed((current) => {
-      if (!current.has(next)) return current;
-      const copy = new Set(current);
-      copy.delete(next);
-      return copy;
-    });
     setTab(next);
     scrollToTabs();
   };
-  const toggleLayer = (id: MyLayer) =>
-    setClosed((current) => {
-      const copy = new Set(current);
-      if (copy.has(id)) copy.delete(id);
-      else copy.add(id);
-      return copy;
-    });
   // 사다리에서 아무 단계나 "이 단계로 정하기"(2026-10-29) — 조건·시험 없이 지금 단계를 바꾼다.
   const setStageTo = (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -555,10 +540,8 @@ export function NotebookSection({
         <MyLayers
           ui={ui}
           language={language}
-          closed={closed}
           tab={tab}
           onOpen={openLayer}
-          onToggle={toggleLayer}
           today={
             lettersOn ? (
               { summary: null, body: <LettersPlan ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={() => setLetters(false)} /> }
@@ -2265,10 +2248,8 @@ function MyLayers({
   ui,
   language,
   locale,
-  closed,
   tab,
   onOpen,
-  onToggle,
   today,
   plan,
   stage,
@@ -2278,13 +2259,10 @@ function MyLayers({
   ui: UICopy;
   language: string;
   locale: string;
-  /** 접은 칸(기본 없음 = 모두 펼침). */
-  closed: ReadonlySet<MyLayer>;
   /** 지금 보는 탭(위 칸 이름 줄). */
   tab: MyLayer;
   /** 그 탭으로(칸 이름 줄·오늘 할 것이 끝났을 때). */
   onOpen: (layer: MyLayer | null) => void;
-  onToggle: (layer: MyLayer) => void;
   /** 0단계 글자 묶음일 때 오늘 할 것 자리(TodayPlan 없음). */
   today: LayerPart | null;
   plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
@@ -2298,10 +2276,17 @@ function MyLayers({
   const review = useReviewNotes(language, notes);
   // Quizbank가 없을 때(0단계 글자 묶음) Quizbank 탭이 남아 있으면 Stagebank를 보인다.
   let shown: MyLayer = tab;
-  // 탭을 누르면 그 칸이 바로 전체 화면(2026-11-02 사용자 "My 탭의 탭들은 클릭하면 전체 화면으로 학습") — 전체 화면 안에서 누르면 칸만 바뀜, ✕로 돌아옴.
+  // 탭을 누르면 그 칸이 제자리에 작게, 그 칸을 누르면 전체 화면(2026-11-02 사용자 "위쪽버튼을 누르면 작은화면 > 그 화면을 누를시 큰화면").
+  // 전체 화면 안에서 탭을 누르면 칸만 바뀜, ✕로 제자리.
   const [full, setFull] = useState(false);
   const pressTab = (id: MyLayer) => {
     if (id !== shown) onOpen(id);
+  };
+  /** 작은 칸 안을 누르면 전체 화면 — 버튼·입력칸 같은 조작은 그대로, 칸 밖 층(시트)에서 올라온 누름은 빼고. */
+  const enlargeOnTap = (event: MouseEvent<HTMLElement>) => {
+    const target = event.target as Element | null;
+    if (!target || !event.currentTarget.contains(target)) return;
+    if (target.closest("button, a, input, textarea, select, label, summary, [role=button], [role=tab], [role=radio], [role=checkbox], [role=switch], [contenteditable=true], [data-no-enlarge]")) return;
     setFull(true);
   };
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
@@ -2311,21 +2296,19 @@ function MyLayers({
     const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
     // 전체 화면이면 칸 안만 전체 화면 층에(머리는 위 이름 줄이 대신).
     if (full) return <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{toned}</div>;
-    // Stagebank는 접지 않는다(2026-11-02) — 머리를 눌러도 그대로.
-    const fixed = id === "stage";
-    const on = fixed || !closed.has(id);
+    // 칸은 접지 않는다 — 머리나 칸 안을 누르면 전체 화면(2026-11-02).
     return (
-      <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
+      <section key={id} data-my-layer={id} onClick={enlargeOnTap} className={`mt-3 scroll-mt-14 rounded-2xl border ${LAYER_TONE[id].box}`}>
         <div className="flex items-center gap-2 pe-3">
-          <button type="button" aria-expanded={on} onClick={fixed ? undefined : () => onToggle(id)} className="flex min-w-0 flex-1 items-center gap-2 py-3 ps-3 text-start">
-            <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${on ? LAYER_TONE[id].title : "text-ink"}`}>{title}</h3>
+          <button type="button" data-my-enlarge aria-label={`${title} · ${ui.videoLearnFullscreen}`} onClick={() => setFull(true)} className="flex min-w-0 flex-1 items-center gap-2 py-3 ps-3 text-start">
+            <h3 className={`min-w-0 flex-1 truncate text-note font-semibold ${LAYER_TONE[id].title}`}>{title}</h3>
             {summary ? <span className="shrink-0 text-caption text-slate-400">{summary}</span> : null}
-            {fixed ? null : <span aria-hidden className={`shrink-0 text-caption text-slate-500 transition-transform ${on ? "rotate-90" : "rtl:rotate-180"}`}>›</span>}
+            <span aria-hidden className="shrink-0 text-caption text-slate-500">⤢</span>
           </button>
           {/* 칸마다 "?" — 배울 수 있는 것·이렇게 공부해요(2026-10-31). */}
           <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} />
         </div>
-        {on ? <div className="px-3 pb-3">{toned}</div> : null}
+        <div className="px-3 pb-3">{toned}</div>
       </section>
     );
   };

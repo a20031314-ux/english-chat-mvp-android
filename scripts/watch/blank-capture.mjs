@@ -128,6 +128,9 @@ async function openBank(page, wait, title, ui) {
   const jump = page.locator("[data-my-jump] button", { hasText: title }).first();
   await jump.waitFor({ state: "visible", timeout: 8000 });
   await jump.click();
+  await wait(1000);
+  // 탭은 제자리 작은 칸, 칸 머리를 누르면 전체 화면(2026-11-02) — 빈 공간 광고는 전체 화면에만.
+  await page.locator("[data-my-enlarge]").first().click().catch(() => undefined);
   await wait(2500);
 }
 /** 칸 안 문제 하나에 답한다: 쓰는 칸이면 틀린 낱말을 쓰고 Enter, 고르기면 첫 보기. */
