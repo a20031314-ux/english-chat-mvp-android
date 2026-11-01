@@ -86,7 +86,8 @@
               "queria um café, por favor",
               "um café, por favor",
               "me vê um galão, por favor",
-              "dá-me um café, por favor"
+              "dá-me um café, por favor",
+              "um café, se faz favor"
             ]
           },
           {
@@ -191,7 +192,8 @@
             "match": [
               "não, obrigado",
               "só isso",
-              "é só isso"
+              "é só isso",
+              "não, obrigada"
             ]
           }
         ],
@@ -234,7 +236,7 @@
             "go": "l-pay-again",
             "match": [
               "pode repetir, por favor?",
-              "desculpe, quanto?",
+              "desculpe, quanto é?",
               "não entendi",
               "mais devagar, por favor"
             ]
@@ -265,24 +267,24 @@
         }
       },
       "t-hi_e": {
-        "text": "Bom dia! Está bom?",
+        "text": "Bom dia! Está tudo bem?",
         "gloss": {
-          "en": "Good morning! Are you well?",
-          "ko": "좋은 아침이에요! 괜찮으세요?"
+          "en": "Good morning! Is everything okay?",
+          "ko": "좋은 아침이에요! 잘 지내세요?"
         }
       },
       "t-order": {
-        "text": "Tudo ótimo, obrigada. O que vai ser?",
+        "text": "Tudo bem, obrigada. O que vai ser?",
         "gloss": {
-          "en": "All great, thanks. What will it be?",
-          "ko": "아주 좋아요, 고마워요. 뭐 드릴까요?"
+          "en": "Fine, thanks. What will it be?",
+          "ko": "잘 지내요, 고마워요. 뭐 드릴까요?"
         }
       },
       "t-order_e": {
-        "text": "O que quer? Um café?",
+        "text": "Quer um café?",
         "gloss": {
-          "en": "What do you want? A coffee?",
-          "ko": "뭐 드릴까요? 커피?"
+          "en": "Do you want a coffee?",
+          "ko": "커피 드릴까요?"
         }
       },
       "t-menu": {
@@ -293,10 +295,10 @@
         }
       },
       "t-menu_e": {
-        "text": "Café, chá ou sumo.",
+        "text": "Temos café, chá e sumo.",
         "gloss": {
-          "en": "Coffee, tea or juice.",
-          "ko": "커피, 차, 아니면 주스요."
+          "en": "We have coffee, tea and juice.",
+          "ko": "커피, 차, 주스가 있어요."
         }
       },
       "t-count": {
@@ -307,10 +309,10 @@
         }
       },
       "t-count_e": {
-        "text": "Um? Ou dois?",
+        "text": "Quer um ou dois?",
         "gloss": {
-          "en": "One? Or two?",
-          "ko": "한 잔? 아니면 두 잔?"
+          "en": "Do you want one or two?",
+          "ko": "한 잔이요, 두 잔이요?"
         }
       },
       "t-more": {
@@ -321,24 +323,24 @@
         }
       },
       "t-more_e": {
-        "text": "Mais alguma coisa? Sim ou não?",
+        "text": "Quer mais alguma coisa?",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있으세요?"
         }
       },
       "t-price": {
-        "text": "São um euro e vinte.",
+        "text": "É um euro e vinte.",
         "gloss": {
-          "en": "That's one euro twenty.",
+          "en": "It's one euro twenty.",
           "ko": "1유로 20센트예요."
         }
       },
       "t-price_e": {
-        "text": "Um euro... e vinte cêntimos.",
+        "text": "Um euro e vinte cêntimos.",
         "gloss": {
-          "en": "One euro... and twenty cents.",
-          "ko": "1유로… 그리고 20센트요."
+          "en": "One euro and twenty cents.",
+          "ko": "1유로 20센트요."
         }
       },
       "t-bye": {
@@ -392,7 +394,8 @@
               "com licença, onde fica o metro?",
               "onde fica o metro?",
               "desculpe, onde fica a estação de metro?",
-              "sim, onde fica o metro?"
+              "sim, onde fica o metro?",
+              "desculpe, onde fica o metro?"
             ]
           },
           {
@@ -604,24 +607,24 @@
         }
       },
       "t-dir_e": {
-        "text": "Em frente. Depois, à esquerda.",
+        "text": "Vai em frente. Depois vira à esquerda.",
         "gloss": {
-          "en": "Straight on. Then left.",
-          "ko": "앞으로. 그다음 왼쪽."
+          "en": "Go straight on. Then turn left.",
+          "ko": "쭉 가세요. 그다음 왼쪽으로 도세요."
         }
       },
       "t-slow": {
-        "text": "Claro. Em frente... e depois à esquerda.",
+        "text": "Claro. Vai em frente... e depois vira à esquerda.",
         "gloss": {
-          "en": "Sure. Straight on... and then left.",
-          "ko": "물론이죠. 앞으로… 그다음 왼쪽으로."
+          "en": "Sure. Go straight on... and then turn left.",
+          "ko": "물론이죠. 쭉 가서… 그다음 왼쪽으로 도세요."
         }
       },
       "t-slow_e": {
-        "text": "Em frente. Esquerda.",
+        "text": "Em frente, e depois à esquerda.",
         "gloss": {
-          "en": "Straight. Left.",
-          "ko": "앞으로. 왼쪽."
+          "en": "Straight on, and then left.",
+          "ko": "쭉 가서, 그다음 왼쪽이요."
         }
       },
       "t-yes": {
@@ -702,7 +705,8 @@
               "você tem pilhas?",
               "boa tarde, tem pilhas?",
               "vocês têm pilhas?",
-              "tem pilhas, por favor?"
+              "tem pilhas, por favor?",
+              "desculpe, tem pilhas?"
             ]
           },
           {
@@ -841,7 +845,7 @@
               "o que é isso?",
               "o que é rebuçado?",
               "desculpe, o que é isso?",
-              "o que é rebuçados?"
+              "o que são rebuçados?"
             ]
           },
           {
@@ -945,7 +949,7 @@
             "go": "l-pay-again",
             "match": [
               "pode repetir, por favor?",
-              "desculpe, quanto?",
+              "desculpe, quanto é?",
               "não entendi"
             ]
           }
@@ -1003,10 +1007,10 @@
         }
       },
       "t-size_e": {
-        "text": "Pequenas? Ou grandes?",
+        "text": "Quer pequenas ou grandes?",
         "gloss": {
-          "en": "Small? Or big?",
-          "ko": "작은 거? 아니면 큰 거?"
+          "en": "Do you want small or big ones?",
+          "ko": "작은 거 드릴까요, 큰 거 드릴까요?"
         }
       },
       "t-pack": {
@@ -1017,10 +1021,10 @@
         }
       },
       "t-pack_e": {
-        "text": "Quatro pilhas. Quer?",
+        "text": "Quer quatro pilhas?",
         "gloss": {
-          "en": "Four batteries. Do you want them?",
-          "ko": "건전지 네 개. 드릴까요?"
+          "en": "Do you want four batteries?",
+          "ko": "건전지 네 개 드릴까요?"
         }
       },
       "t-other": {
@@ -1031,10 +1035,10 @@
         }
       },
       "t-other_e": {
-        "text": "Rebuçados. Quer?",
+        "text": "Quer rebuçados?",
         "gloss": {
-          "en": "Sweets. Do you want some?",
-          "ko": "사탕이요. 드릴까요?"
+          "en": "Do you want some sweets?",
+          "ko": "사탕 드릴까요?"
         }
       },
       "t-candy": {
@@ -1045,10 +1049,10 @@
         }
       },
       "t-candy_e": {
-        "text": "É um doce.",
+        "text": "São doces.",
         "gloss": {
-          "en": "It's a sweet.",
-          "ko": "단 거예요."
+          "en": "They're sweets.",
+          "ko": "사탕이에요."
         }
       },
       "t-fine": {
@@ -1394,17 +1398,17 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Boa noite, bem-vindo! Tem reserva?",
+        "text": "Boa noite! Tem reserva?",
         "gloss": {
-          "en": "Good evening, welcome! Do you have a booking?",
-          "ko": "안녕하세요, 어서 오세요! 예약하셨어요?"
+          "en": "Good evening! Do you have a booking?",
+          "ko": "안녕하세요! 예약하셨어요?"
         }
       },
       "t-hi_e": {
-        "text": "Tem reserva? Sim ou não?",
+        "text": "Tem uma reserva?",
         "gloss": {
-          "en": "Do you have a booking? Yes or no?",
-          "ko": "예약 있으세요? 네, 아니요?"
+          "en": "Do you have a booking?",
+          "ko": "예약 있으세요?"
         }
       },
       "t-name": {
@@ -1429,24 +1433,24 @@
         }
       },
       "t-spell_e": {
-        "text": "Letra a letra, por favor.",
+        "text": "Pode dizer letra a letra?",
         "gloss": {
-          "en": "Letter by letter, please.",
-          "ko": "한 글자씩 부탁해요."
+          "en": "Can you say it letter by letter?",
+          "ko": "한 글자씩 말해 주시겠어요?"
         }
       },
       "t-spell2": {
-        "text": "As letras do nome, uma a uma.",
+        "text": "Diga as letras do nome, uma a uma.",
         "gloss": {
-          "en": "The letters of the name, one by one.",
-          "ko": "이름 글자를 하나씩요."
+          "en": "Say the letters of the name, one by one.",
+          "ko": "이름 글자를 하나씩 말해 주세요."
         }
       },
       "t-spell2_e": {
-        "text": "As letras, por favor.",
+        "text": "Diga as letras, por favor.",
         "gloss": {
-          "en": "The letters, please.",
-          "ko": "글자요."
+          "en": "Say the letters, please.",
+          "ko": "글자를 말해 주세요."
         }
       },
       "t-found": {
@@ -1457,10 +1461,10 @@
         }
       },
       "t-found_e": {
-        "text": "Quarto doze. Doze.",
+        "text": "O quarto é o doze.",
         "gloss": {
-          "en": "Room twelve. Twelve.",
-          "ko": "12호실이요. 12."
+          "en": "The room is number twelve.",
+          "ko": "방은 12호예요."
         }
       },
       "t-twelve": {
@@ -1471,24 +1475,24 @@
         }
       },
       "t-twelve_e": {
-        "text": "Doze. A chave.",
+        "text": "Sim, doze. Esta é a chave.",
         "gloss": {
-          "en": "Twelve. The key.",
-          "ko": "12호. 열쇠요."
+          "en": "Yes, twelve. This is the key.",
+          "ko": "네, 12호요. 이게 열쇠예요."
         }
       },
       "t-lift": {
         "text": "Fica no primeiro andar. O elevador é ali à direita.",
         "gloss": {
           "en": "It's on the first floor. The lift is there on the right.",
-          "ko": "1층(한국식 2층)이에요. 엘리베이터는 저기 오른쪽이에요."
+          "ko": "1층(지상층 바로 위)이에요. 엘리베이터는 저기 오른쪽이에요."
         }
       },
       "t-lift_e": {
-        "text": "Primeiro andar. Elevador à direita.",
+        "text": "É no primeiro andar. O elevador é à direita.",
         "gloss": {
-          "en": "First floor. Lift on the right.",
-          "ko": "1층. 엘리베이터는 오른쪽."
+          "en": "It's on the first floor. The lift is on the right.",
+          "ko": "1층(지상층 바로 위)이요. 엘리베이터는 오른쪽이에요."
         }
       },
       "t-time": {
@@ -1499,10 +1503,10 @@
         }
       },
       "t-time_e": {
-        "text": "Das sete às dez. Sete, dez.",
+        "text": "É das sete às dez.",
         "gloss": {
-          "en": "From seven to ten. Seven, ten.",
-          "ko": "7시부터 10시. 7, 10."
+          "en": "It's from seven to ten.",
+          "ko": "7시부터 10시까지예요."
         }
       },
       "t-end": {
@@ -1554,7 +1558,7 @@
             "match": [
               "sim! olá, tudo bem?",
               "olá, tudo bem?",
-              "sou, sim. tudo bem?",
+              "é, sim. tudo bem?",
               "oi, tudo bem?"
             ]
           },
@@ -1563,8 +1567,8 @@
             "go": "t-name",
             "match": [
               "sim",
-              "sou, sim",
-              "sim, sou novo"
+              "é, sim",
+              "sim, é a primeira"
             ]
           }
         ],
@@ -1777,17 +1781,17 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Olá! Também és novo aqui?",
+        "text": "Olá! Também é a tua primeira aula?",
         "gloss": {
-          "en": "Hi! Are you new here too?",
-          "ko": "안녕! 너도 여기 처음이야?"
+          "en": "Hi! Is it your first class too?",
+          "ko": "안녕! 너도 첫 수업이야?"
         }
       },
       "t-hi_e": {
-        "text": "Olá! És novo?",
+        "text": "Olá! É a primeira aula?",
         "gloss": {
-          "en": "Hi! Are you new?",
-          "ko": "안녕! 처음이야?"
+          "en": "Hi! Is it the first class?",
+          "ko": "안녕! 첫 수업이야?"
         }
       },
       "t-name": {
@@ -1833,17 +1837,17 @@
         }
       },
       "t-back": {
-        "text": "Ah, muito bem! Não me perguntas nada?",
+        "text": "Ah, muito bem! E não me perguntas nada?",
         "gloss": {
-          "en": "Oh, very good! Aren't you going to ask me anything?",
+          "en": "Oh, very good! And aren't you going to ask me anything?",
           "ko": "오, 좋네! 나한테는 안 물어봐?"
         }
       },
       "t-back_e": {
-        "text": "E eu? Pergunta!",
+        "text": "E eu? Pergunta-me também!",
         "gloss": {
-          "en": "And me? Ask!",
-          "ko": "나는? 물어봐!"
+          "en": "And me? Ask me too!",
+          "ko": "나는? 나한테도 물어봐!"
         }
       },
       "t-me": {
@@ -1963,7 +1967,8 @@
             "match": [
               "não tenho",
               "não, não tenho irmãos",
-              "sou filho único"
+              "sou filho único",
+              "sou filha única"
             ]
           }
         ],
@@ -2120,10 +2125,10 @@
         }
       },
       "t-only": {
-        "text": "Ah, és filho único! E tens animais?",
+        "text": "Ah, não tens irmãos! E tens animais?",
         "gloss": {
-          "en": "Ah, you're an only child! And do you have pets?",
-          "ko": "아, 외동이구나! 반려동물은 있어?"
+          "en": "Ah, no brothers or sisters! And do you have pets?",
+          "ko": "아, 형제가 없구나! 반려동물은 있어?"
         }
       },
       "t-only_e": {
@@ -2141,10 +2146,10 @@
         }
       },
       "t-names_e": {
-        "text": "Moram na Coreia? Sim ou não?",
+        "text": "Eles moram na Coreia?",
         "gloss": {
-          "en": "Do they live in Korea? Yes or no?",
-          "ko": "한국에 살아? 응, 아니?"
+          "en": "Do they live in Korea?",
+          "ko": "그분들은 한국에 살아?"
         }
       },
       "t-pet": {
@@ -2412,10 +2417,10 @@
         }
       },
       "t-food_e": {
-        "text": "Gostas? Sim ou não?",
+        "text": "Gostas da comida daqui?",
         "gloss": {
-          "en": "Do you like it? Yes or no?",
-          "ko": "좋아해? 응, 아니?"
+          "en": "Do you like the food here?",
+          "ko": "여기 음식 좋아해?"
         }
       },
       "t-fav": {
@@ -2426,10 +2431,10 @@
         }
       },
       "t-fav_e": {
-        "text": "Bacalhau. É peixe. Gostas?",
+        "text": "O bacalhau é um peixe. Gostas?",
         "gloss": {
-          "en": "Bacalhau. It's fish. Do you like it?",
-          "ko": "바칼랴우. 생선이야. 좋아해?"
+          "en": "Bacalhau is a fish. Do you like it?",
+          "ko": "바칼랴우는 생선이야. 좋아해?"
         }
       },
       "t-cod": {
@@ -2440,9 +2445,9 @@
         }
       },
       "t-cod_e": {
-        "text": "É peixe.",
+        "text": "É um peixe.",
         "gloss": {
-          "en": "It's fish.",
+          "en": "It's a fish.",
           "ko": "생선이야."
         }
       },
@@ -2454,10 +2459,10 @@
         }
       },
       "t-sardines_e": {
-        "text": "Sardinhas. Queres?",
+        "text": "Queres sardinhas?",
         "gloss": {
-          "en": "Sardines. Do you want some?",
-          "ko": "정어리. 먹을래?"
+          "en": "Do you want sardines?",
+          "ko": "정어리 먹을래?"
         }
       },
       "t-drink": {
@@ -2468,10 +2473,10 @@
         }
       },
       "t-drink_e": {
-        "text": "E tu? Vinho? Água?",
+        "text": "E tu, queres vinho ou água?",
         "gloss": {
-          "en": "And you? Wine? Water?",
-          "ko": "넌? 와인? 물?"
+          "en": "And you, do you want wine or water?",
+          "ko": "넌 와인 마실래, 물 마실래?"
         }
       },
       "t-end": {
@@ -2751,17 +2756,17 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Bem-vindo ao clube! Falas bem português!",
+        "text": "Olá! Falas muito bem português!",
         "gloss": {
-          "en": "Welcome to the club! You speak Portuguese well!",
-          "ko": "클럽에 온 걸 환영해! 포르투갈어 잘한다!"
+          "en": "Hi! You speak Portuguese very well!",
+          "ko": "안녕! 포르투갈어 정말 잘한다!"
         }
       },
       "t-hi_e": {
-        "text": "Falas bem!",
+        "text": "Falas bem português!",
         "gloss": {
-          "en": "You speak well!",
-          "ko": "말 잘한다!"
+          "en": "You speak Portuguese well!",
+          "ko": "포르투갈어 잘한다!"
         }
       },
       "t-langs": {
@@ -2800,31 +2805,31 @@
         }
       },
       "t-cook_e": {
-        "text": "Cozinhas? Sim ou não?",
+        "text": "Sabes cozinhar bem?",
         "gloss": {
-          "en": "Do you cook? Yes or no?",
-          "ko": "요리해? 응, 아니?"
+          "en": "Can you cook well?",
+          "ko": "요리 잘해?"
         }
       },
       "t-askback": {
-        "text": "Eu também não, ha! Queres perguntar alguma coisa?",
+        "text": "Eu também não! Queres perguntar-me alguma coisa?",
         "gloss": {
-          "en": "Me neither, ha! Do you want to ask anything?",
-          "ko": "나도 못해, 하하! 뭐 물어볼 거 있어?"
+          "en": "Me neither! Do you want to ask me anything?",
+          "ko": "나도 못해! 나한테 뭐 물어볼 거 있어?"
         }
       },
       "t-askback_e": {
-        "text": "Tens perguntas?",
+        "text": "Tens alguma pergunta?",
         "gloss": {
-          "en": "Any questions?",
+          "en": "Do you have any question?",
           "ko": "질문 있어?"
         }
       },
       "t-end": {
-        "text": "Não, só sei dizer \"annyeong\"! Vamos andar?",
+        "text": "Não, só sei dizer olá em coreano! Vamos andar?",
         "gloss": {
-          "en": "No, I can only say \"annyeong\"! Shall we walk?",
-          "ko": "아니, \"안녕\"밖에 못 해! 걸을까?"
+          "en": "No, I can only say hello in Korean! Shall we walk?",
+          "ko": "아니, 한국어로 '안녕'밖에 못 해! 걸을까?"
         }
       },
       "t-end2": {
@@ -3098,10 +3103,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Estás bem? Ou cansado?",
+        "text": "Estás bem hoje?",
         "gloss": {
-          "en": "Are you well? Or tired?",
-          "ko": "괜찮아? 아니면 피곤해?"
+          "en": "Are you well today?",
+          "ko": "오늘 괜찮아?"
         }
       },
       "t-wake": {
@@ -3112,10 +3117,10 @@
         }
       },
       "t-wake_e": {
-        "text": "Acordas às seis? Às sete?",
+        "text": "Acordas às seis ou às sete?",
         "gloss": {
-          "en": "Do you get up at six? At seven?",
-          "ko": "6시에 일어나? 7시?"
+          "en": "Do you get up at six or at seven?",
+          "ko": "6시에 일어나, 7시에 일어나?"
         }
       },
       "t-where": {
@@ -3126,10 +3131,10 @@
         }
       },
       "t-where_e": {
-        "text": "Estás aqui? Ou em casa?",
+        "text": "Estás no escritório ou em casa?",
         "gloss": {
-          "en": "Are you here? Or at home?",
-          "ko": "여기? 아니면 집?"
+          "en": "Are you at the office or at home?",
+          "ko": "사무실이야, 집이야?"
         }
       },
       "t-lunch": {
@@ -3140,10 +3145,10 @@
         }
       },
       "t-lunch_e": {
-        "text": "Almoço: meio-dia? Uma?",
+        "text": "Almoças ao meio-dia ou à uma?",
         "gloss": {
-          "en": "Lunch: noon? One?",
-          "ko": "점심: 12시? 1시?"
+          "en": "Do you have lunch at noon or at one?",
+          "ko": "점심은 12시에 먹어, 1시에 먹어?"
         }
       },
       "t-together": {
@@ -3154,10 +3159,10 @@
         }
       },
       "t-together_e": {
-        "text": "Almoço juntos? Sim?",
+        "text": "Queres almoçar comigo?",
         "gloss": {
-          "en": "Lunch together? Yes?",
-          "ko": "같이 점심? 응?"
+          "en": "Do you want to have lunch with me?",
+          "ko": "나랑 점심 먹을래?"
         }
       },
       "t-end": {
@@ -3215,7 +3220,7 @@
             "go": "t-live",
             "match": [
               "sim! olá, tudo bem?",
-              "sou, sim. tudo bem?",
+              "moro, sim. tudo bem?",
               "olá, tudo bem?",
               "sim, boa tarde, tudo bem?"
             ]
@@ -3225,8 +3230,8 @@
             "go": "t-live",
             "match": [
               "sim",
-              "sou, sim",
-              "sim, sou eu"
+              "moro, sim",
+              "sim, moro aqui"
             ]
           }
         ],
@@ -3430,31 +3435,31 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Olá! És o vizinho novo?",
+        "text": "Olá! Moras aqui no prédio?",
         "gloss": {
-          "en": "Hi! Are you the new neighbour?",
-          "ko": "안녕! 새로 온 이웃이야?"
+          "en": "Hi! Do you live here in the building?",
+          "ko": "안녕! 이 건물에 살아?"
         }
       },
       "t-hi_e": {
-        "text": "És novo aqui?",
+        "text": "Moras aqui?",
         "gloss": {
-          "en": "Are you new here?",
-          "ko": "여기 새로 왔어?"
+          "en": "Do you live here?",
+          "ko": "여기 살아?"
         }
       },
       "t-live": {
-        "text": "Tudo! Moras em que andar?",
+        "text": "Tudo bem! Moras em que andar?",
         "gloss": {
           "en": "All good! Which floor do you live on?",
           "ko": "잘 지내! 몇 층에 살아?"
         }
       },
       "t-live_e": {
-        "text": "Que andar? Primeiro? Segundo?",
+        "text": "No primeiro andar ou no segundo?",
         "gloss": {
-          "en": "Which floor? First? Second?",
-          "ko": "몇 층? 1층? 2층?"
+          "en": "On the first floor or the second?",
+          "ko": "1층이야, 2층이야?"
         }
       },
       "t-before": {
@@ -3465,10 +3470,10 @@
         }
       },
       "t-before_e": {
-        "text": "Antes? Em Lisboa? Na Coreia?",
+        "text": "Antes moravas em Lisboa ou na Coreia?",
         "gloss": {
-          "en": "Before? In Lisbon? In Korea?",
-          "ko": "전에? 리스본? 한국?"
+          "en": "Before, did you live in Lisbon or in Korea?",
+          "ko": "전에는 리스본에 살았어, 한국에 살았어?"
         }
       },
       "t-near": {
@@ -3479,9 +3484,9 @@
         }
       },
       "t-near_e": {
-        "text": "Precisas de algo?",
+        "text": "Precisas de alguma coisa?",
         "gloss": {
-          "en": "Need anything?",
+          "en": "Do you need anything?",
           "ko": "필요한 거 있어?"
         }
       },
@@ -3493,10 +3498,10 @@
         }
       },
       "t-super_e": {
-        "text": "Ao fundo da rua. É perto.",
+        "text": "É ao fundo da rua. É perto.",
         "gloss": {
-          "en": "At the end of the street. It's close.",
-          "ko": "길 끝에. 가까워."
+          "en": "It's at the end of the street. It's close.",
+          "ko": "길 끝에 있어. 가까워."
         }
       },
       "t-ok": {
@@ -3560,10 +3565,10 @@
             "meaning": "asks the price",
             "go": "t-price",
             "match": [
-              "quanto custa as laranjas?",
+              "quanto custam as laranjas?",
               "quanto custa o quilo de laranjas?",
               "bom dia, quanto custam as laranjas?",
-              "quanto custa a laranja?"
+              "quanto custa um quilo de laranjas?"
             ]
           },
           {
@@ -3776,45 +3781,45 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Bom dia, meu querido! O que vai levar?",
+        "text": "Bom dia! Então, o que vai levar?",
         "gloss": {
-          "en": "Good morning, dear! What will you take?",
-          "ko": "좋은 아침이에요! 뭐 가져가실래요?"
+          "en": "Good morning! So, what will you take?",
+          "ko": "좋은 아침이에요! 뭐 드릴까요?"
         }
       },
       "t-hi_e": {
-        "text": "O que quer? Maçãs? Laranjas?",
+        "text": "Quer maçãs ou laranjas?",
         "gloss": {
-          "en": "What do you want? Apples? Oranges?",
-          "ko": "뭐 드릴까요? 사과? 오렌지?"
+          "en": "Do you want apples or oranges?",
+          "ko": "사과 드릴까요, 오렌지 드릴까요?"
         }
       },
       "t-price": {
-        "text": "As laranjas são dois euros o quilo.",
+        "text": "As laranjas estão a dois euros o quilo.",
         "gloss": {
           "en": "The oranges are two euros a kilo.",
           "ko": "오렌지는 1킬로에 2유로예요."
         }
       },
       "t-price_e": {
-        "text": "Dois euros. Um quilo.",
+        "text": "Um quilo custa dois euros.",
         "gloss": {
-          "en": "Two euros. One kilo.",
-          "ko": "2유로. 1킬로."
+          "en": "One kilo costs two euros.",
+          "ko": "1킬로에 2유로예요."
         }
       },
       "t-howmany": {
-        "text": "Quantas? Um quilo?",
+        "text": "Quantas quer? Um quilo?",
         "gloss": {
-          "en": "How many? A kilo?",
-          "ko": "얼마나요? 1킬로?"
+          "en": "How many do you want? A kilo?",
+          "ko": "얼마나 드릴까요? 1킬로?"
         }
       },
       "t-howmany_e": {
-        "text": "Um quilo? Dois?",
+        "text": "Quer um quilo ou dois?",
         "gloss": {
-          "en": "One kilo? Two?",
-          "ko": "1킬로? 2킬로?"
+          "en": "Do you want one kilo or two?",
+          "ko": "1킬로요, 2킬로요?"
         }
       },
       "t-more": {
@@ -3825,10 +3830,10 @@
         }
       },
       "t-more_e": {
-        "text": "Mais alguma coisa? Cerejas?",
+        "text": "Quer mais alguma coisa? Cerejas?",
         "gloss": {
-          "en": "Anything else? Cherries?",
-          "ko": "더 있어요? 체리?"
+          "en": "Do you want anything else? Cherries?",
+          "ko": "더 필요한 거 있어요? 체리?"
         }
       },
       "t-cherry": {
@@ -3839,10 +3844,10 @@
         }
       },
       "t-cherry_e": {
-        "text": "Cerejas: três euros.",
+        "text": "As cerejas são três euros.",
         "gloss": {
-          "en": "Cherries: three euros.",
-          "ko": "체리: 3유로."
+          "en": "The cherries are three euros.",
+          "ko": "체리는 3유로예요."
         }
       },
       "t-total": {
@@ -3860,9 +3865,9 @@
         }
       },
       "t-end": {
-        "text": "Obrigada, querido. Volte sempre!",
+        "text": "Obrigada. Volte sempre!",
         "gloss": {
-          "en": "Thank you, dear. Come back anytime!",
+          "en": "Thank you. Come back anytime!",
           "ko": "고마워요. 또 오세요!"
         }
       }
@@ -4058,7 +4063,8 @@
             "match": [
               "mais nada, obrigado",
               "não, obrigado",
-              "só isso"
+              "só isso",
+              "não, obrigada"
             ]
           }
         ],
@@ -4172,10 +4178,10 @@
         }
       },
       "t-howmany_e": {
-        "text": "Um? Dois?",
+        "text": "Quer um ou dois?",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "하나? 둘?"
+          "en": "Do you want one or two?",
+          "ko": "하나요, 둘이요?"
         }
       },
       "t-price-ask": {
@@ -4186,10 +4192,10 @@
         }
       },
       "t-price-ask_e": {
-        "text": "Mais nada? Sim ou não?",
+        "text": "Quer mais alguma coisa?",
         "gloss": {
-          "en": "Nothing else? Yes or no?",
-          "ko": "더 없어요? 네, 아니요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있으세요?"
         }
       },
       "t-total": {
@@ -4200,10 +4206,10 @@
         }
       },
       "t-total_e": {
-        "text": "Dois euros... e quarenta.",
+        "text": "Dois euros e quarenta cêntimos.",
         "gloss": {
-          "en": "Two euros... and forty.",
-          "ko": "2유로… 40센트."
+          "en": "Two euros and forty cents.",
+          "ko": "2유로 40센트요."
         }
       },
       "t-end": {
@@ -4308,7 +4314,8 @@
               "me vê um sumo de laranja, por favor",
               "me vê um suco de laranja, por favor",
               "um sumo de laranja, por favor",
-              "queria um sumo de laranja, por favor"
+              "queria um sumo de laranja, por favor",
+              "um sumo de laranja, se faz favor"
             ]
           },
           {
@@ -4403,7 +4410,8 @@
             "match": [
               "não, obrigado. a conta, por favor",
               "a conta, por favor",
-              "pode trazer a conta?"
+              "pode trazer a conta?",
+              "a conta, se faz favor"
             ]
           },
           {
@@ -4533,10 +4541,10 @@
         }
       },
       "t-gas_e": {
-        "text": "Gelo? Sim ou não?",
+        "text": "Quer gelo?",
         "gloss": {
-          "en": "Ice? Yes or no?",
-          "ko": "얼음? 네, 아니요?"
+          "en": "Do you want ice?",
+          "ko": "얼음 넣을까요?"
         }
       },
       "t-later": {
@@ -4547,10 +4555,10 @@
         }
       },
       "t-later_e": {
-        "text": "Café? Ou não?",
+        "text": "Quer um café?",
         "gloss": {
-          "en": "Coffee? Or not?",
-          "ko": "커피? 아니면?"
+          "en": "Do you want a coffee?",
+          "ko": "커피 드릴까요?"
         }
       },
       "t-coffee": {
@@ -4568,16 +4576,16 @@
         }
       },
       "t-total": {
-        "text": "São nove euros e meio.",
+        "text": "São nove euros e cinquenta.",
         "gloss": {
-          "en": "That's nine and a half euros.",
+          "en": "That's nine euros fifty.",
           "ko": "9유로 50센트예요."
         }
       },
       "t-total_e": {
-        "text": "Nove euros e cinquenta.",
+        "text": "Nove euros e cinquenta cêntimos.",
         "gloss": {
-          "en": "Nine euros fifty.",
+          "en": "Nine euros and fifty cents.",
           "ko": "9유로 50센트요."
         }
       },
@@ -4631,8 +4639,8 @@
             "match": [
               "sim. onde fica a paragem para belém?",
               "onde fica o ponto para belém?",
-              "sim. onde fica o autocarro para belém?",
-              "onde fica o ônibus para belém?"
+              "sim. onde fica a paragem do autocarro para belém?",
+              "onde fica o ponto de ônibus para belém?"
             ]
           },
           {
@@ -4852,10 +4860,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Espera o autocarro?",
+        "text": "Vai apanhar o autocarro?",
         "gloss": {
-          "en": "Waiting for the bus?",
-          "ko": "버스 기다려요?"
+          "en": "Are you going to catch the bus?",
+          "ko": "버스 타세요?"
         }
       },
       "t-where": {
@@ -4866,10 +4874,10 @@
         }
       },
       "t-where_e": {
-        "text": "Vai para onde? Belém?",
+        "text": "Vai para Belém?",
         "gloss": {
-          "en": "Going where? Belém?",
-          "ko": "어디요? 벨렝?"
+          "en": "Are you going to Belém?",
+          "ko": "벨렝 가세요?"
         }
       },
       "t-here": {
@@ -4880,24 +4888,24 @@
         }
       },
       "t-here_e": {
-        "text": "Aqui. Sete, dois, oito.",
+        "text": "É aqui. O autocarro é o sete, dois, oito.",
         "gloss": {
-          "en": "Here. Seven, two, eight.",
-          "ko": "여기요. 7, 2, 8."
+          "en": "It's here. The bus is the seven, two, eight.",
+          "ko": "여기예요. 버스는 7, 2, 8이에요."
         }
       },
       "t-slow": {
-        "text": "Sete... dois... oito.",
+        "text": "É o sete... dois... oito.",
         "gloss": {
-          "en": "Seven... two... eight.",
-          "ko": "7… 2… 8."
+          "en": "It's the seven... two... eight.",
+          "ko": "7… 2… 8이에요."
         }
       },
       "t-slow_e": {
-        "text": "Sete, dois, oito.",
+        "text": "O número é sete, dois, oito.",
         "gloss": {
-          "en": "Seven, two, eight.",
-          "ko": "7, 2, 8."
+          "en": "The number is seven, two, eight.",
+          "ko": "번호는 7, 2, 8이에요."
         }
       },
       "t-when-ask": {
@@ -4922,10 +4930,10 @@
         }
       },
       "t-time_e": {
-        "text": "Cinco minutos.",
+        "text": "Vem em cinco minutos.",
         "gloss": {
-          "en": "Five minutes.",
-          "ko": "5분이요."
+          "en": "It comes in five minutes.",
+          "ko": "5분 뒤에 와요."
         }
       },
       "t-end": {
@@ -4966,8 +4974,8 @@
         "type": "learner",
         "id": "l-dest",
         "goal": {
-          "en": "Ask for a ticket to Portugal's second city, please.",
-          "ko": "포르투갈 제2의 도시로 가는 표를 달라고 하세요."
+          "en": "Say you want a ticket to the city you're going to, please.",
+          "ko": "가려는 도시로 가는 표를 달라고 하세요."
         },
         "frame": "pt-f1-08",
         "expect": [
@@ -5206,10 +5214,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Vai para onde? Porto? Coimbra?",
+        "text": "Vai para o Porto ou para Coimbra?",
         "gloss": {
-          "en": "Where are you going? Porto? Coimbra?",
-          "ko": "어디 가세요? 포르투? 코임브라?"
+          "en": "Are you going to Porto or to Coimbra?",
+          "ko": "포르투 가세요, 코임브라 가세요?"
         }
       },
       "t-count": {
@@ -5220,10 +5228,10 @@
         }
       },
       "t-count_e": {
-        "text": "Um? Dois?",
+        "text": "Quer um ou dois?",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "한 장? 두 장?"
+          "en": "Do you want one or two?",
+          "ko": "한 장이요, 두 장이요?"
         }
       },
       "t-way": {
@@ -5234,10 +5242,10 @@
         }
       },
       "t-way_e": {
-        "text": "Só ida? Ou volta também?",
+        "text": "Quer só ida, ou também volta?",
         "gloss": {
-          "en": "Only going? Or coming back too?",
-          "ko": "가는 것만? 아니면 오는 것도?"
+          "en": "Do you want one way only, or return too?",
+          "ko": "편도만요, 아니면 왕복이요?"
         }
       },
       "t-price-ask": {
@@ -5248,10 +5256,10 @@
         }
       },
       "t-price-ask_e": {
-        "text": "Comboio às três e meia.",
+        "text": "O comboio sai às três e meia.",
         "gloss": {
-          "en": "Train at half past three.",
-          "ko": "기차 3시 반."
+          "en": "The train leaves at half past three.",
+          "ko": "기차는 3시 반에 떠나요."
         }
       },
       "t-time": {
@@ -5262,10 +5270,10 @@
         }
       },
       "t-time_e": {
-        "text": "Três e meia. Linha dois.",
+        "text": "Às três e meia, na linha dois.",
         "gloss": {
-          "en": "Half past three. Platform two.",
-          "ko": "3시 반. 2번."
+          "en": "At half past three, on platform two.",
+          "ko": "3시 반, 2번 승강장이요."
         }
       },
       "t-total": {
@@ -5276,10 +5284,10 @@
         }
       },
       "t-total_e": {
-        "text": "Vinte e cinco euros.",
+        "text": "Custa vinte e cinco euros.",
         "gloss": {
-          "en": "Twenty-five euros.",
-          "ko": "25유로요."
+          "en": "It costs twenty-five euros.",
+          "ko": "25유로예요."
         }
       },
       "t-end": {
@@ -5562,10 +5570,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Para onde? Qual é a morada?",
+        "text": "Para onde vai?",
         "gloss": {
-          "en": "Where to? What's the address?",
-          "ko": "어디요? 주소가 뭐예요?"
+          "en": "Where are you going?",
+          "ko": "어디로 가세요?"
         }
       },
       "t-bags": {
@@ -5576,10 +5584,10 @@
         }
       },
       "t-bags_e": {
-        "text": "Malas? Sim ou não?",
+        "text": "Tem alguma mala?",
         "gloss": {
-          "en": "Suitcases? Yes or no?",
-          "ko": "가방? 네, 아니요?"
+          "en": "Do you have any suitcase?",
+          "ko": "가방 있으세요?"
         }
       },
       "t-first": {
@@ -5590,24 +5598,24 @@
         }
       },
       "t-first_e": {
-        "text": "Primeira vez aqui?",
+        "text": "É a primeira vez aqui?",
         "gloss": {
-          "en": "First time here?",
-          "ko": "여기 처음이에요?"
+          "en": "Is it your first time here?",
+          "ko": "여기 처음이세요?"
         }
       },
       "t-arrive": {
-        "text": "Bem-vindo! Chegamos em vinte minutos.",
+        "text": "Ah, que bom! Chegamos em vinte minutos.",
         "gloss": {
-          "en": "Welcome! We'll arrive in twenty minutes.",
-          "ko": "환영해요! 20분이면 도착해요."
+          "en": "Oh, nice! We'll arrive in twenty minutes.",
+          "ko": "아, 좋네요! 20분이면 도착해요."
         }
       },
       "t-arrive_e": {
-        "text": "Vinte minutos.",
+        "text": "São vinte minutos.",
         "gloss": {
-          "en": "Twenty minutes.",
-          "ko": "20분이요."
+          "en": "It's twenty minutes.",
+          "ko": "20분 걸려요."
         }
       },
       "t-quiet": {
@@ -5827,8 +5835,8 @@
             "match": [
               "você tem uma caixa pequena?",
               "tem uma caixa pequena?",
-              "tem mais pequeno?",
-              "você tem em comprimidos?"
+              "tem uma caixa mais pequena?",
+              "você tem uma caixa menor?"
             ]
           },
           {
@@ -5968,10 +5976,10 @@
         }
       },
       "t-since_e": {
-        "text": "Desde hoje? Ou ontem?",
+        "text": "É desde hoje ou desde ontem?",
         "gloss": {
-          "en": "Since today? Or yesterday?",
-          "ko": "오늘부터? 어제부터?"
+          "en": "Is it since today or since yesterday?",
+          "ko": "오늘부터예요, 어제부터예요?"
         }
       },
       "t-fever": {
@@ -5982,10 +5990,10 @@
         }
       },
       "t-fever_e": {
-        "text": "Febre? Está quente?",
+        "text": "Está com febre?",
         "gloss": {
-          "en": "Fever? Are you hot?",
-          "ko": "열? 뜨거워요?"
+          "en": "Do you have a fever?",
+          "ko": "열이 있으세요?"
         }
       },
       "t-offer": {
@@ -5996,10 +6004,10 @@
         }
       },
       "t-offer_e": {
-        "text": "Paracetamol. Para a dor.",
+        "text": "É paracetamol, para a dor.",
         "gloss": {
-          "en": "Paracetamol. For the pain.",
-          "ko": "파라세타몰. 통증에요."
+          "en": "It's paracetamol, for the pain.",
+          "ko": "파라세타몰이에요, 통증에 먹는 거요."
         }
       },
       "t-small": {
@@ -6010,24 +6018,24 @@
         }
       },
       "t-small_e": {
-        "text": "Sim. Dez comprimidos.",
+        "text": "Sim. Esta tem dez comprimidos.",
         "gloss": {
-          "en": "Yes. Ten tablets.",
-          "ko": "네. 열 알이요."
+          "en": "Yes. This one has ten tablets.",
+          "ko": "네. 이건 열 알이에요."
         }
       },
       "t-total": {
-        "text": "São três euros. Uma de oito em oito horas.",
+        "text": "São três euros. Tome um de oito em oito horas.",
         "gloss": {
-          "en": "That's three euros. One every eight hours.",
-          "ko": "3유로예요. 8시간마다 한 알이요."
+          "en": "That's three euros. Take one every eight hours.",
+          "ko": "3유로예요. 8시간마다 한 알 드세요."
         }
       },
       "t-total_e": {
-        "text": "Três euros. Um comprimido, oito horas.",
+        "text": "Três euros. Um comprimido a cada oito horas.",
         "gloss": {
-          "en": "Three euros. One tablet, eight hours.",
-          "ko": "3유로. 한 알, 8시간."
+          "en": "Three euros. One tablet every eight hours.",
+          "ko": "3유로. 8시간마다 한 알이요."
         }
       },
       "t-end": {
@@ -6313,10 +6321,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Gosta? Sim?",
+        "text": "Gosta da camisola?",
         "gloss": {
-          "en": "Do you like it? Yes?",
-          "ko": "마음에 들어요? 네?"
+          "en": "Do you like the jumper?",
+          "ko": "스웨터 마음에 들어요?"
         }
       },
       "t-price": {
@@ -6327,10 +6335,10 @@
         }
       },
       "t-price_e": {
-        "text": "Trinta euros.",
+        "text": "São trinta euros.",
         "gloss": {
-          "en": "Thirty euros.",
-          "ko": "30유로요."
+          "en": "It's thirty euros.",
+          "ko": "30유로예요."
         }
       },
       "t-size": {
@@ -6341,10 +6349,10 @@
         }
       },
       "t-size_e": {
-        "text": "Tamanho: S, M ou L?",
+        "text": "Veste S, M ou L?",
         "gloss": {
-          "en": "Size: S, M or L?",
-          "ko": "사이즈: S, M, L?"
+          "en": "Do you wear S, M or L?",
+          "ko": "S, M, L 중 뭐 입으세요?"
         }
       },
       "t-colour": {
@@ -6355,10 +6363,10 @@
         }
       },
       "t-colour_e": {
-        "text": "Azul? Ou preto?",
+        "text": "Quer azul ou preto?",
         "gloss": {
-          "en": "Blue? Or black?",
-          "ko": "파란색? 검은색?"
+          "en": "Do you want blue or black?",
+          "ko": "파란색이요, 검은색이요?"
         }
       },
       "t-try2": {
@@ -6369,10 +6377,10 @@
         }
       },
       "t-try2_e": {
-        "text": "Verde. Gosta?",
+        "text": "Gosta de verde?",
         "gloss": {
-          "en": "Green. Do you like it?",
-          "ko": "초록. 좋아요?"
+          "en": "Do you like green?",
+          "ko": "초록색은 어때요?"
         }
       },
       "t-try": {
@@ -6383,10 +6391,10 @@
         }
       },
       "t-try_e": {
-        "text": "Experimentar? Sim?",
+        "text": "Quer experimentar?",
         "gloss": {
-          "en": "Try it on? Yes?",
-          "ko": "입어 볼래요? 네?"
+          "en": "Do you want to try it on?",
+          "ko": "입어 보실래요?"
         }
       },
       "t-fits": {
@@ -6397,10 +6405,10 @@
         }
       },
       "t-fits_e": {
-        "text": "Está bem? Gosta?",
+        "text": "Serve bem? Gosta?",
         "gloss": {
-          "en": "Is it good? Do you like it?",
-          "ko": "괜찮아요? 마음에 들어요?"
+          "en": "Does it fit well? Do you like it?",
+          "ko": "잘 맞아요? 마음에 들어요?"
         }
       },
       "t-pay": {
@@ -6545,7 +6553,7 @@
             "match": [
               "é preta. eu tenho um livro dentro",
               "eu tenho um livro na mochila",
-              "é preta, eu tenho um livro lá",
+              "é preta, eu tenho um livro lá dentro",
               "eu tenho um caderno dentro"
             ]
           },
@@ -6734,10 +6742,10 @@
         }
       },
       "t-when_e": {
-        "text": "Hoje? No comboio?",
+        "text": "Foi hoje? No comboio?",
         "gloss": {
-          "en": "Today? On the train?",
-          "ko": "오늘? 기차에서?"
+          "en": "Was it today? On the train?",
+          "ko": "오늘이었어요? 기차에서요?"
         }
       },
       "t-colour": {
@@ -6748,10 +6756,10 @@
         }
       },
       "t-colour_e": {
-        "text": "Preta? Azul?",
+        "text": "É preta ou azul?",
         "gloss": {
-          "en": "Black? Blue?",
-          "ko": "검은색? 파란색?"
+          "en": "Is it black or blue?",
+          "ko": "검은색이에요, 파란색이에요?"
         }
       },
       "t-this": {
@@ -6776,10 +6784,10 @@
         }
       },
       "t-none_e": {
-        "text": "Amanhã. À tarde.",
+        "text": "Volte amanhã à tarde.",
         "gloss": {
-          "en": "Tomorrow. In the afternoon.",
-          "ko": "내일. 오후에."
+          "en": "Come back tomorrow afternoon.",
+          "ko": "내일 오후에 다시 오세요."
         }
       },
       "t-sign": {
@@ -6790,10 +6798,10 @@
         }
       },
       "t-sign_e": {
-        "text": "Aqui, o seu nome.",
+        "text": "Escreva o seu nome aqui.",
         "gloss": {
-          "en": "Here, your name.",
-          "ko": "여기, 이름이요."
+          "en": "Write your name here.",
+          "ko": "여기 이름을 쓰세요."
         }
       },
       "t-end": {
@@ -7065,17 +7073,17 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Olá, bem-vinda a Lisboa! Precisa de um mapa?",
+        "text": "Olá! Precisa de um mapa de Lisboa?",
         "gloss": {
-          "en": "Hello, welcome to Lisbon! Do you need a map?",
-          "ko": "안녕하세요, 리스본에 오신 걸 환영해요! 지도 필요하세요?"
+          "en": "Hello! Do you need a map of Lisbon?",
+          "ko": "안녕하세요! 리스본 지도 필요하세요?"
         }
       },
       "t-hi_e": {
-        "text": "Um mapa? Quer?",
+        "text": "Quer um mapa?",
         "gloss": {
-          "en": "A map? Do you want one?",
-          "ko": "지도? 드릴까요?"
+          "en": "Do you want a map?",
+          "ko": "지도 드릴까요?"
         }
       },
       "t-see": {
@@ -7086,10 +7094,10 @@
         }
       },
       "t-see_e": {
-        "text": "Santa Justa. É um elevador.",
+        "text": "Vá ao Elevador de Santa Justa.",
         "gloss": {
-          "en": "Santa Justa. It's a lift.",
-          "ko": "산타 주스타. 엘리베이터예요."
+          "en": "Go to the Santa Justa Lift.",
+          "ko": "산타 주스타 엘리베이터에 가 보세요."
         }
       },
       "t-explain": {
@@ -7128,10 +7136,10 @@
         }
       },
       "t-where_e": {
-        "text": "Perto. Dez minutos.",
+        "text": "É perto. São dez minutos a pé.",
         "gloss": {
-          "en": "Close. Ten minutes.",
-          "ko": "가까워요. 10분."
+          "en": "It's close. It's ten minutes on foot.",
+          "ko": "가까워요. 걸어서 10분이에요."
         }
       },
       "t-hours": {
@@ -7142,10 +7150,10 @@
         }
       },
       "t-hours_e": {
-        "text": "Das sete às onze.",
+        "text": "Está aberto das sete às onze.",
         "gloss": {
-          "en": "From seven to eleven.",
-          "ko": "7시부터 11시까지요."
+          "en": "It's open from seven to eleven.",
+          "ko": "7시부터 11시까지 열어요."
         }
       },
       "t-end": {
@@ -7417,10 +7425,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Quer um cartão? Para livros?",
+        "text": "Quer um cartão para levar livros?",
         "gloss": {
-          "en": "Do you want a card? For books?",
-          "ko": "카드 원하세요? 책 빌리는 거요?"
+          "en": "Do you want a card to borrow books?",
+          "ko": "책 빌리는 카드 만드실래요?"
         }
       },
       "t-name": {
@@ -7459,10 +7467,10 @@
         }
       },
       "t-books_e": {
-        "text": "Três livros.",
+        "text": "São três livros.",
         "gloss": {
-          "en": "Three books.",
-          "ko": "책 세 권이요."
+          "en": "It's three books.",
+          "ko": "책 세 권이에요."
         }
       },
       "t-weeks": {
@@ -7473,17 +7481,17 @@
         }
       },
       "t-weeks_e": {
-        "text": "Duas semanas. Catorze dias.",
+        "text": "São duas semanas.",
         "gloss": {
-          "en": "Two weeks. Fourteen days.",
-          "ko": "2주. 14일이요."
+          "en": "It's two weeks.",
+          "ko": "2주예요."
         }
       },
       "t-renew": {
-        "text": "Duas semanas. Depois, mais duas.",
+        "text": "São duas semanas. Depois, pode pedir mais duas.",
         "gloss": {
-          "en": "Two weeks. Then, two more.",
-          "ko": "2주. 그다음 2주 더요."
+          "en": "It's two weeks. Then you can ask for two more.",
+          "ko": "2주예요. 그다음 2주 더 신청할 수 있어요."
         }
       },
       "t-end": {
@@ -7536,7 +7544,8 @@
               "eu quero fazer a inscrição, por favor",
               "eu quero me inscrever, por favor",
               "sim, eu quero entrar no ginásio, por favor",
-              "queria inscrever-me"
+              "queria inscrever-me",
+              "quero inscrever-me, por favor"
             ]
           },
           {
@@ -7784,10 +7793,10 @@
         }
       },
       "t-what_e": {
-        "text": "Yoga? Natação?",
+        "text": "Gosta de yoga ou de natação?",
         "gloss": {
-          "en": "Yoga? Swimming?",
-          "ko": "요가? 수영?"
+          "en": "Do you like yoga or swimming?",
+          "ko": "요가 좋아하세요, 수영 좋아하세요?"
         }
       },
       "t-pool": {
@@ -7798,10 +7807,10 @@
         }
       },
       "t-pool_e": {
-        "text": "Piscina, sim. Aulas, sim.",
+        "text": "Temos piscina. E temos aulas.",
         "gloss": {
-          "en": "Pool, yes. Classes, yes.",
-          "ko": "수영장 있어요. 수업도요."
+          "en": "We have a pool. And we have classes.",
+          "ko": "수영장 있어요. 수업도 있어요."
         }
       },
       "t-hours": {
@@ -7812,10 +7821,10 @@
         }
       },
       "t-hours_e": {
-        "text": "Sete da manhã, dez da noite.",
+        "text": "Das sete da manhã às dez da noite.",
         "gloss": {
-          "en": "Seven in the morning, ten at night.",
-          "ko": "아침 7시, 밤 10시."
+          "en": "From seven in the morning to ten at night.",
+          "ko": "아침 7시부터 밤 10시까지요."
         }
       },
       "t-month": {
@@ -7826,10 +7835,10 @@
         }
       },
       "t-month_e": {
-        "text": "Trinta e cinco euros. Um mês.",
+        "text": "Um mês custa trinta e cinco euros.",
         "gloss": {
-          "en": "Thirty-five euros. One month.",
-          "ko": "35유로. 한 달."
+          "en": "One month costs thirty-five euros.",
+          "ko": "한 달에 35유로예요."
         }
       },
       "t-form": {
@@ -7854,10 +7863,10 @@
         }
       },
       "t-end": {
-        "text": "Bem-vindo ao ginásio!",
+        "text": "Obrigada! Até breve!",
         "gloss": {
-          "en": "Welcome to the gym!",
-          "ko": "헬스장에 오신 걸 환영해요!"
+          "en": "Thank you! See you soon!",
+          "ko": "고마워요! 또 봬요!"
         }
       }
     },
@@ -8127,10 +8136,10 @@
         }
       },
       "t-hi_e": {
-        "text": "Tem consulta? Hoje?",
+        "text": "Tem consulta hoje?",
         "gloss": {
-          "en": "Do you have an appointment? Today?",
-          "ko": "예약 있어요? 오늘?"
+          "en": "Do you have an appointment today?",
+          "ko": "오늘 예약 있으세요?"
         }
       },
       "t-name": {
@@ -8155,10 +8164,10 @@
         }
       },
       "t-first_e": {
-        "text": "Primeira vez aqui? Sim ou não?",
+        "text": "É a primeira vez aqui?",
         "gloss": {
-          "en": "First time here? Yes or no?",
-          "ko": "여기 처음이에요? 네, 아니요?"
+          "en": "Is it your first time here?",
+          "ko": "여기 처음이세요?"
         }
       },
       "t-easy": {
@@ -8169,10 +8178,10 @@
         }
       },
       "t-easy_e": {
-        "text": "Primeira vez? Sim?",
+        "text": "É a primeira vez?",
         "gloss": {
-          "en": "First time? Yes?",
-          "ko": "처음이에요? 네?"
+          "en": "Is it the first time?",
+          "ko": "처음이세요?"
         }
       },
       "t-form": {
@@ -8183,10 +8192,10 @@
         }
       },
       "t-form_e": {
-        "text": "Escreva aqui. Depois, espere.",
+        "text": "Escreva aqui e depois espere ali.",
         "gloss": {
-          "en": "Write here. Then wait.",
-          "ko": "여기 쓰세요. 그다음 기다리세요."
+          "en": "Write here and then wait over there.",
+          "ko": "여기 쓰고 저기서 기다리세요."
         }
       },
       "t-wait": {
@@ -8204,10 +8213,10 @@
         }
       },
       "t-end": {
-        "text": "O médico chama daqui a pouco.",
+        "text": "O médico vem chamar daqui a pouco.",
         "gloss": {
-          "en": "The doctor will call you shortly.",
-          "ko": "곧 의사 선생님이 부르실 거예요."
+          "en": "The doctor will come and call you shortly.",
+          "ko": "곧 의사 선생님이 부르러 오실 거예요."
         }
       }
     },
@@ -8430,7 +8439,7 @@
               "tchau, até amanhã!",
               "tchau, até logo!",
               "boa noite. tchau, até amanhã",
-              "xau, até amanhã"
+              "adeus, até amanhã"
             ]
           },
           {
@@ -8496,10 +8505,10 @@
         }
       },
       "t-floor_e": {
-        "text": "Que andar? Primeiro? Terceiro?",
+        "text": "Mora no primeiro ou no terceiro?",
         "gloss": {
-          "en": "Which floor? First? Third?",
-          "ko": "몇 층? 1층? 3층?"
+          "en": "Do you live on the first or the third?",
+          "ko": "1층이에요, 3층이에요?"
         }
       },
       "t-me": {
@@ -8517,10 +8526,10 @@
         }
       },
       "t-late": {
-        "text": "Bem, já é tarde. Vou subir.",
+        "text": "Bem, já é tarde. Vou entrar.",
         "gloss": {
-          "en": "Well, it's late already. I'm going up.",
-          "ko": "자, 벌써 늦었네요. 올라갈게요."
+          "en": "Well, it's late already. I'm going in.",
+          "ko": "자, 벌써 늦었네요. 들어갈게요."
         }
       },
       "t-late_e": {
@@ -8590,7 +8599,8 @@
             "match": [
               "sim",
               "sou, sim",
-              "sim, sou coreano"
+              "sim, sou coreano",
+              "sim, sou coreana"
             ]
           }
         ],
@@ -8759,10 +8769,10 @@
         }
       },
       "t-hi_e": {
-        "text": "És coreano? Ou coreana?",
+        "text": "És da Coreia?",
         "gloss": {
-          "en": "Are you Korean?",
-          "ko": "한국 사람이야?"
+          "en": "Are you from Korea?",
+          "ko": "한국에서 왔어?"
         }
       },
       "t-langs": {
@@ -8801,10 +8811,10 @@
         }
       },
       "t-learn_e": {
-        "text": "Queres aprender o quê? Palavras? Frases?",
+        "text": "Queres aprender palavras ou frases?",
         "gloss": {
-          "en": "What do you want to learn? Words? Sentences?",
-          "ko": "뭘 배우고 싶어? 단어? 문장?"
+          "en": "Do you want to learn words or sentences?",
+          "ko": "단어 배우고 싶어, 문장 배우고 싶어?"
         }
       },
       "t-me": {
@@ -8867,7 +8877,7 @@
             "meaning": "asks for a pen",
             "go": "t-here",
             "match": [
-              "desculpa, você tem uma caneta?",
+              "desculpa, tens uma caneta a mais?",
               "você tem uma caneta?",
               "tens uma caneta?",
               "desculpa, tens uma caneta?"
@@ -9036,17 +9046,17 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Psst! Estás bem? Procuras alguma coisa?",
+        "text": "Então, está tudo bem? Precisas de alguma coisa?",
         "gloss": {
-          "en": "Psst! Are you okay? Looking for something?",
-          "ko": "쉿! 괜찮아? 뭐 찾아?"
+          "en": "So, is everything okay? Do you need something?",
+          "ko": "왜, 괜찮아? 뭐 필요해?"
         }
       },
       "t-hi_e": {
-        "text": "Precisas de alguma coisa?",
+        "text": "Precisas de uma caneta?",
         "gloss": {
-          "en": "Do you need something?",
-          "ko": "뭐 필요해?"
+          "en": "Do you need a pen?",
+          "ko": "펜 필요해?"
         }
       },
       "t-here": {
@@ -9085,10 +9095,10 @@
         }
       },
       "t-after_e": {
-        "text": "Foi bem? Sim?",
+        "text": "O teste foi bom?",
         "gloss": {
-          "en": "Did it go well? Yes?",
-          "ko": "잘 봤어? 응?"
+          "en": "Was the test good?",
+          "ko": "시험 잘 봤어?"
         }
       },
       "t-sorry": {
@@ -9279,7 +9289,8 @@
             "match": [
               "vejo um café",
               "um café",
-              "tem um café aqui"
+              "tem um café aqui",
+              "há um café aqui"
             ]
           },
           {
@@ -9376,24 +9387,24 @@
         }
       },
       "t-which_e": {
-        "text": "À frente? Ou atrás?",
+        "text": "Estás à frente da estação?",
         "gloss": {
-          "en": "In front? Or behind?",
-          "ko": "앞? 아니면 뒤?"
+          "en": "Are you in front of the station?",
+          "ko": "역 앞이야?"
         }
       },
       "t-slow": {
-        "text": "À frente... ou... atrás da estação?",
+        "text": "Estás à frente... ou atrás... da estação?",
         "gloss": {
-          "en": "In front... or... behind the station?",
-          "ko": "역 앞…이야… 뒤야?"
+          "en": "Are you in front... or behind... the station?",
+          "ko": "역 앞이야… 아니면… 뒤야?"
         }
       },
       "t-slow_e": {
-        "text": "Frente? Atrás?",
+        "text": "Estás à frente ou atrás?",
         "gloss": {
-          "en": "Front? Back?",
-          "ko": "앞? 뒤?"
+          "en": "Are you in front or behind?",
+          "ko": "앞이야, 뒤야?"
         }
       },
       "t-see": {
@@ -9418,10 +9429,10 @@
         }
       },
       "t-meet_e": {
-        "text": "Café. Cinco minutos.",
+        "text": "Vamos ao café. Cinco minutos.",
         "gloss": {
-          "en": "Café. Five minutes.",
-          "ko": "카페. 5분."
+          "en": "Let's go to the café. Five minutes.",
+          "ko": "카페로 가자. 5분."
         }
       },
       "t-end": {
@@ -9565,7 +9576,7 @@
               "não, eu trabalho em vendas",
               "eu trabalho em marketing",
               "trabalho em informática",
-              "eu trabalho em ti"
+              "eu trabalho em recursos humanos"
             ]
           },
           {
@@ -9712,17 +9723,17 @@
         }
       },
       "t-feel_e": {
-        "text": "Estás bem? Cansado?",
+        "text": "Estás bem hoje?",
         "gloss": {
-          "en": "Are you well? Tired?",
-          "ko": "괜찮아? 피곤해?"
+          "en": "Are you well today?",
+          "ko": "오늘 괜찮아?"
         }
       },
       "t-job": {
-        "text": "Ah, a nova estagiária perguntou onde trabalhas. No marketing, não é?",
+        "text": "Ah, tu trabalhas no marketing, não é?",
         "gloss": {
-          "en": "Ah, the new intern asked where you work. Marketing, right?",
-          "ko": "아, 새 인턴이 너 어디서 일하냐고 물었어. 마케팅 맞지?"
+          "en": "Ah, you work in marketing, right?",
+          "ko": "아, 너 마케팅에서 일하지?"
         }
       },
       "t-job_e": {
@@ -9740,10 +9751,10 @@
         }
       },
       "t-lunch_e": {
-        "text": "Almoço: meio-dia ou uma?",
+        "text": "Almoças ao meio-dia ou à uma?",
         "gloss": {
-          "en": "Lunch: noon or one?",
-          "ko": "점심: 12시 아니면 1시?"
+          "en": "Do you have lunch at noon or at one?",
+          "ko": "점심은 12시에 먹어, 1시에 먹어?"
         }
       },
       "t-where": {
@@ -9754,10 +9765,10 @@
         }
       },
       "t-where_e": {
-        "text": "Tasca? Ou outro sítio?",
+        "text": "Queres ir à tasca?",
         "gloss": {
-          "en": "The tasca? Or somewhere else?",
-          "ko": "타스카? 아니면 다른 데?"
+          "en": "Do you want to go to the tasca?",
+          "ko": "타스카 갈래?"
         }
       },
       "t-no": {
@@ -10106,24 +10117,24 @@
         }
       },
       "t-card_e": {
-        "text": "Tem um cartão? Verde?",
+        "text": "Tem um cartão verde?",
         "gloss": {
-          "en": "Do you have a card? A green one?",
-          "ko": "카드 있어요? 초록색?"
+          "en": "Do you have a green card?",
+          "ko": "초록색 카드 있으세요?"
         }
       },
       "t-new": {
-        "text": "Então primeiro compra um cartão. Custa cinquenta cêntimos.",
+        "text": "Então primeiro tem de comprar um cartão. Custa cinquenta cêntimos.",
         "gloss": {
-          "en": "Then first you buy a card. It costs fifty cents.",
-          "ko": "그럼 먼저 카드를 사세요. 50센트예요."
+          "en": "Then first you have to buy a card. It costs fifty cents.",
+          "ko": "그럼 먼저 카드를 사셔야 해요. 50센트예요."
         }
       },
       "t-new_e": {
-        "text": "Um cartão novo. Cinquenta cêntimos.",
+        "text": "Precisa de um cartão novo. São cinquenta cêntimos.",
         "gloss": {
-          "en": "A new card. Fifty cents.",
-          "ko": "새 카드. 50센트."
+          "en": "You need a new card. It's fifty cents.",
+          "ko": "새 카드가 필요해요. 50센트예요."
         }
       },
       "t-put": {
@@ -10134,10 +10145,10 @@
         }
       },
       "t-put_e": {
-        "text": "Cartão aqui. Depois, carregar.",
+        "text": "Ponha o cartão aqui. Depois carregue.",
         "gloss": {
-          "en": "Card here. Then, top up.",
-          "ko": "카드 여기. 그다음 충전."
+          "en": "Put the card here. Then top up.",
+          "ko": "카드를 여기 대세요. 그다음 충전하세요."
         }
       },
       "t-show": {
@@ -10176,10 +10187,10 @@
         }
       },
       "t-price_e": {
-        "text": "Um euro e oitenta.",
+        "text": "É um euro e oitenta.",
         "gloss": {
-          "en": "One euro eighty.",
-          "ko": "1유로 80."
+          "en": "It's one euro eighty.",
+          "ko": "1유로 80센트예요."
         }
       },
       "t-end": {
@@ -10406,7 +10417,7 @@
               "tchau, até quinta!",
               "tchau, até logo!",
               "ok, tchau, até quinta",
-              "xau, até quinta"
+              "adeus, até quinta"
             ]
           },
           {
@@ -10415,7 +10426,7 @@
             "match": [
               "adeus",
               "boa noite",
-              "adeus, boa viagem"
+              "adeus, boa noite"
             ]
           }
         ],
@@ -10472,10 +10483,10 @@
         }
       },
       "t-next_e": {
-        "text": "A próxima aula: quinta?",
+        "text": "A próxima aula é na quinta?",
         "gloss": {
-          "en": "The next class: Thursday?",
-          "ko": "다음 수업: 목요일?"
+          "en": "Is the next class on Thursday?",
+          "ko": "다음 수업은 목요일이야?"
         }
       },
       "t-time": {
@@ -10486,10 +10497,10 @@
         }
       },
       "t-time_e": {
-        "text": "Às sete?",
+        "text": "É às sete?",
         "gloss": {
-          "en": "At seven?",
-          "ko": "7시?"
+          "en": "Is it at seven?",
+          "ko": "7시야?"
         }
       },
       "t-bye": {
