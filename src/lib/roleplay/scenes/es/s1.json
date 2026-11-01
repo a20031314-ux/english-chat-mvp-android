@@ -222,6 +222,7 @@
             "meaning": "pays and thanks",
             "go": "t-bye",
             "match": [
+              "aquí tienes, gracias",
               "aquí tiene, gracias",
               "gracias",
               "muchas gracias",
@@ -309,10 +310,10 @@
         }
       },
       "hello-easy": {
-        "text": "Hola. ¿Qué quieres?",
+        "text": "Hola. ¿Qué quieres tomar?",
         "gloss": {
-          "en": "Hi. What do you want?",
-          "ko": "안녕하세요. 뭐 드려요?"
+          "en": "Hi. What would you like to drink?",
+          "ko": "안녕하세요. 뭐 마실래요?"
         }
       },
       "what": {
@@ -452,7 +453,7 @@
             "match": [
               "¿hay metro por aquí?",
               "perdón, ¿hay un metro por aquí?",
-              "sí, el metro, por favor"
+              "¿hay una estación de metro por aquí?"
             ]
           }
         ],
@@ -662,10 +663,10 @@
         }
       },
       "slow": {
-        "text": "Claro. Todo... recto. Y luego... a la derecha. Cinco minutos.",
+        "text": "Claro. Todo recto, y luego a la derecha. Son cinco minutos.",
         "gloss": {
-          "en": "Sure. Straight... on. And then... right. Five minutes.",
-          "ko": "그럼요. 쭉… 가서요. 그다음… 오른쪽. 5분이요."
+          "en": "Sure. Straight on, and then to the right. It's five minutes.",
+          "ko": "그럼요. 쭉 가다가 오른쪽이요. 5분이에요."
         }
       },
       "slow-easy": {
@@ -1079,7 +1080,7 @@
         }
       },
       "browse": {
-        "text": "Vale, tranquilo. Mira, aquí hay postales y esto, muy típico.",
+        "text": "Vale, sin problema. Mira, aquí hay postales y esto, muy típico.",
         "gloss": {
           "en": "OK, no problem. Look, here are postcards and this, very typical.",
           "ko": "네, 천천히 보세요. 여기 엽서가 있고, 이건 아주 전통적인 거예요."
@@ -1469,10 +1470,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Buenas tardes, bienvenido. ¿Tiene reserva?",
+        "text": "Buenas tardes. ¿Tiene reserva?",
         "gloss": {
-          "en": "Good evening, welcome. Do you have a booking?",
-          "ko": "안녕하세요, 어서 오세요. 예약하셨어요?"
+          "en": "Good evening. Do you have a booking?",
+          "ko": "안녕하세요. 예약하셨어요?"
         }
       },
       "hello-easy": {
@@ -1590,7 +1591,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Greet her and say your name.",
+          "en": "Greet them and say your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "es-f1-01",
@@ -1771,7 +1772,7 @@
         "type": "learner",
         "id": "l-askback",
         "goal": {
-          "en": "Now ask her the same question.",
+          "en": "Now ask them the same question.",
           "ko": "이번엔 상대에게 같은 걸 물어보세요."
         },
         "expect": [
@@ -1872,7 +1873,7 @@
         }
       },
       "from": {
-        "text": "Encantada. ¿Y de dónde eres?",
+        "text": "Mucho gusto. ¿Y de dónde eres?",
         "gloss": {
           "en": "Nice to meet you. And where are you from?",
           "ko": "반가워. 어디서 왔어?"
@@ -1893,10 +1894,10 @@
         }
       },
       "job-easy": {
-        "text": "¿Trabajas? ¿Cuál es tu trabajo?",
+        "text": "¿Trabajas? ¿En qué trabajas?",
         "gloss": {
-          "en": "Do you work? What's your job?",
-          "ko": "일해? 무슨 일이야?"
+          "en": "Do you work? What do you do?",
+          "ko": "일해? 무슨 일 해?"
         }
       },
       "where": {
@@ -1928,17 +1929,17 @@
         }
       },
       "lucia": {
-        "text": "Yo soy estudiante. Estudio Medicina. Bueno, empieza la clase.",
+        "text": "Yo soy estudiante. Estudio Medicina. Bueno, voy a por un café. ¡Nos vemos luego!",
         "gloss": {
-          "en": "I'm a student. I study medicine. Well, the class is starting.",
-          "ko": "나는 학생이야. 의학 공부해. 자, 수업 시작한다."
+          "en": "I'm a student. I study medicine. Well, I'm going to get a coffee. See you later!",
+          "ko": "나는 학생이야. 의학 공부해. 자, 커피 가지러 갈게. 이따 봐!"
         }
       },
       "lucia-easy": {
-        "text": "Soy estudiante. Ahora tenemos clase.",
+        "text": "Soy estudiante. ¡Nos vemos luego!",
         "gloss": {
-          "en": "I'm a student. Now we have class.",
-          "ko": "나는 학생이야. 이제 수업이야."
+          "en": "I'm a student. See you later!",
+          "ko": "나는 학생이야. 이따 봐!"
         }
       },
       "end": {
@@ -2561,10 +2562,10 @@
         }
       },
       "start-easy": {
-        "text": "¿Comemos algo? ¿Sí?",
+        "text": "¿Comemos algo?",
         "gloss": {
-          "en": "Shall we eat something? Yes?",
-          "ko": "뭐 좀 먹을까? 응?"
+          "en": "Shall we eat something?",
+          "ko": "뭐 좀 먹을까?"
         }
       },
       "pulpo": {
@@ -3024,16 +3025,16 @@
     },
     "sentences": {
       "hello": {
-        "text": "¡Hola! Bienvenido al club. ¿Eres nuevo?",
+        "text": "¡Hola! ¿Es tu primera vez en el club?",
         "gloss": {
-          "en": "Hi! Welcome to the club. Are you new?",
-          "ko": "안녕! 클럽에 온 걸 환영해. 처음이야?"
+          "en": "Hi! Is it your first time at the club?",
+          "ko": "안녕! 클럽은 처음이야?"
         }
       },
       "hello-easy": {
-        "text": "¿Primera vez aquí?",
+        "text": "¿Es tu primera vez aquí?",
         "gloss": {
-          "en": "First time here?",
+          "en": "Is it your first time here?",
           "ko": "여기 처음이야?"
         }
       },
@@ -3115,10 +3116,10 @@
         }
       },
       "slower": {
-        "text": "Claro. Los jueves... a las ocho... hablamos idiomas.",
+        "text": "Claro. Los jueves, a las ocho, hablamos idiomas en el bar.",
         "gloss": {
-          "en": "Sure. On Thursdays... at eight... we speak languages.",
-          "ko": "그럼. 목요일… 8시에… 언어 연습해."
+          "en": "Sure. On Thursdays, at eight, we speak languages at the bar.",
+          "ko": "그럼. 목요일 8시에 바에서 언어 연습해."
         }
       },
       "join": {
@@ -3542,7 +3543,8 @@
             "match": [
               "sí",
               "hola, sí",
-              "sí, soy nuevo"
+              "sí, soy nuevo",
+              "sí, soy nueva"
             ]
           }
         ],
@@ -3781,10 +3783,10 @@
         }
       },
       "barrio-easy": {
-        "text": "El barrio, ¿te gusta? ¿Sí?",
+        "text": "¿Te gusta el barrio?",
         "gloss": {
-          "en": "The neighbourhood, do you like it? Yes?",
-          "ko": "동네, 좋아요? 네?"
+          "en": "Do you like the neighbourhood?",
+          "ko": "동네 마음에 들어요?"
         }
       },
       "need": {
@@ -3858,10 +3860,10 @@
         }
       },
       "end": {
-        "text": "¡De nada, vecino! ¡Adiós!",
+        "text": "¡De nada! ¡Adiós!",
         "gloss": {
-          "en": "You're welcome, neighbour! Bye!",
-          "ko": "천만에요, 이웃님! 안녕!"
+          "en": "You're welcome! Bye!",
+          "ko": "천만에요! 안녕!"
         }
       }
     },
@@ -3897,7 +3899,7 @@
         "type": "learner",
         "id": "l-price",
         "goal": {
-          "en": "Greet her and ask how much the strawberries are.",
+          "en": "Greet them and ask how much the strawberries are.",
           "ko": "인사하고 딸기가 얼마인지 물어보세요."
         },
         "frame": "es-f1-08",
@@ -4138,7 +4140,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank her.",
+          "en": "Pay and thank them.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "expect": [
@@ -4330,7 +4332,7 @@
         "type": "learner",
         "id": "l-bread",
         "goal": {
-          "en": "Greet him and ask for a loaf of bread.",
+          "en": "Greet them and ask for a loaf of bread.",
           "ko": "인사하고 빵 하나를 달라고 하세요."
         },
         "frame": "es-f1-11",
@@ -4399,7 +4401,7 @@
           },
           {
             "meaning": "nothing else, asks the price",
-            "go": "t-total",
+            "go": "t-total-again",
             "match": [
               "no, nada más. ¿cuánto es?",
               "no, gracias. ¿cuánto cuesta?",
@@ -4444,7 +4446,7 @@
           },
           {
             "meaning": "declines",
-            "go": "t-total",
+            "go": "t-total-again",
             "match": [
               "no, gracias",
               "hoy no, gracias",
@@ -4509,14 +4511,14 @@
         "id": "t-total",
         "say": "total",
         "next": "l-pay",
-        "easier": "total-easy"
+        "easier": "bread-easy"
       },
       "l-pay": {
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Ask how much it is in total.",
-          "ko": "다 해서 얼마인지 물어보세요."
+          "en": "Say that's all and ask how much it is.",
+          "ko": "그거면 된다고 하고 얼마인지 물어보세요."
         },
         "frame": "es-f1-08",
         "expect": [
@@ -4524,18 +4526,20 @@
             "meaning": "asks how much it costs",
             "go": "t-total-again",
             "match": [
+              "no, nada más. ¿cuánto cuesta?",
               "¿cuánto cuesta todo?",
-              "perdón, ¿cuánto cuesta?",
-              "¿cuánto cuesta en total?"
+              "nada más, gracias. ¿cuánto cuesta?",
+              "¿cuánto es?"
             ]
           },
           {
-            "meaning": "pays and thanks",
-            "go": "t-end",
+            "meaning": "says that's all, without asking the price",
+            "go": "t-total-again",
             "match": [
-              "aquí tiene, gracias",
-              "vale, gracias",
-              "muchas gracias"
+              "no, nada más",
+              "nada más, gracias",
+              "no, gracias",
+              "eso es todo"
             ]
           }
         ],
@@ -4544,9 +4548,9 @@
       "l-pay-again": {
         "type": "tutor",
         "id": "l-pay-again",
-        "say": "total-easy",
+        "say": "bread-easy",
         "next": "l-pay",
-        "easier": "total-easy"
+        "easier": "bread-easy"
       },
       "t-total-again": {
         "type": "tutor",
@@ -4618,7 +4622,7 @@
       "bread": {
         "text": "Muy bien, una barra. ¿Algo más?",
         "gloss": {
-          "en": "Very good, one baguette. Anything else?",
+          "en": "Very good, one loaf. Anything else?",
           "ko": "좋아요, 바게트 하나요. 더 필요한 거 있어요?"
         }
       },
@@ -4672,10 +4676,10 @@
         }
       },
       "total": {
-        "text": "Son tres euros con veinte.",
+        "text": "Muy bien. ¿Algo más?",
         "gloss": {
-          "en": "That's three euros twenty.",
-          "ko": "3유로 20센트예요."
+          "en": "Very good. Anything else?",
+          "ko": "좋아요. 더 필요한 거 있어요?"
         }
       },
       "total-easy": {
@@ -4789,7 +4793,7 @@
               "una coca-cola, por favor",
               "una cerveza, por favor",
               "un zumo de naranja, por favor",
-              "un vino tinto"
+              "un vino tinto, por favor"
             ]
           }
         ],
@@ -5007,7 +5011,7 @@
         }
       },
       "drink": {
-        "text": "Muy bien. ¿Qué quieres para beber?",
+        "text": "Muy bien. ¿Qué quieres beber?",
         "gloss": {
           "en": "Very good. What do you want to drink?",
           "ko": "좋아요. 마실 건 뭐로 할래요?"
@@ -5254,7 +5258,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "You didn't catch the time. Ask her to say it slowly.",
+          "en": "You didn't catch the time. Ask them to say it slowly.",
           "ko": "시간을 못 알아들었어요. 천천히 말해 달라고 하세요."
         },
         "frame": "es-f1-18",
@@ -5274,7 +5278,7 @@
             "go": "t-ticket",
             "match": [
               "¿hay billetes en el autobús?",
-              "¿dónde está el billete?",
+              "¿dónde compro el billete?",
               "¿el billete, en el autobús?"
             ]
           }
@@ -5309,7 +5313,8 @@
             "match": [
               "¿el billete, en el autobús?",
               "¿hay billetes en el autobús?",
-              "¿y el billete?"
+              "¿y el billete?",
+              "¿dónde compro el billete?"
             ]
           },
           {
@@ -5349,7 +5354,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for her help.",
+          "en": "Thank them for their help.",
           "ko": "도와줘서 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -5433,10 +5438,10 @@
         }
       },
       "when": {
-        "text": "Viene cada diez minutos.",
+        "text": "El siguiente viene en diez minutos.",
         "gloss": {
-          "en": "It comes every ten minutes.",
-          "ko": "10분마다 와요."
+          "en": "The next one comes in ten minutes.",
+          "ko": "다음 버스는 10분 뒤에 와요."
         }
       },
       "when-easy": {
@@ -5447,10 +5452,10 @@
         }
       },
       "slow": {
-        "text": "En diez... minutos. Diez.",
+        "text": "Viene en diez minutos. Diez minutos.",
         "gloss": {
-          "en": "In ten... minutes. Ten.",
-          "ko": "10… 분 뒤에요. 10분."
+          "en": "It comes in ten minutes. Ten minutes.",
+          "ko": "10분 뒤에 와요. 10분이요."
         }
       },
       "ticket": {
@@ -5701,14 +5706,14 @@
         "id": "t-price",
         "say": "price",
         "next": "l-price",
-        "easier": "price-easy"
+        "easier": "price-confirm"
       },
       "l-price": {
         "type": "learner",
         "id": "l-price",
         "goal": {
-          "en": "Check the price: ask how much it costs.",
-          "ko": "얼마인지 다시 확인하세요."
+          "en": "Ask how much the ticket costs.",
+          "ko": "표가 얼마인지 물어보세요."
         },
         "frame": "es-f1-08",
         "expect": [
@@ -5722,12 +5727,13 @@
             ]
           },
           {
-            "meaning": "pays and thanks",
-            "go": "t-end",
+            "meaning": "says nothing else, without asking the price",
+            "go": "t-price-again",
             "match": [
-              "vale, aquí tiene",
-              "aquí tiene, gracias",
-              "muchas gracias"
+              "no, nada más",
+              "no, gracias",
+              "nada más",
+              "no"
             ]
           }
         ],
@@ -5736,9 +5742,9 @@
       "l-price-again": {
         "type": "tutor",
         "id": "l-price-again",
-        "say": "price-easy",
+        "say": "price-confirm",
         "next": "l-price",
-        "easier": "price-easy"
+        "easier": "price-confirm"
       },
       "t-price-again": {
         "type": "tutor",
@@ -5848,10 +5854,10 @@
         }
       },
       "price": {
-        "text": "Son quince euros.",
+        "text": "Muy bien. Un billete a Segovia. ¿Algo más?",
         "gloss": {
-          "en": "That's fifteen euros.",
-          "ko": "15유로예요."
+          "en": "Very good. One ticket to Segovia. Anything else?",
+          "ko": "좋아요. 세고비아 표요. 더 필요한 거 있어요?"
         }
       },
       "price-easy": {
@@ -5866,6 +5872,13 @@
         "gloss": {
           "en": "Here you are. Platform four. Have a good trip!",
           "ko": "여기요. 4번 승강장이에요. 좋은 여행 되세요!"
+        }
+      },
+      "price-confirm": {
+        "text": "¿Quiere algo más?",
+        "gloss": {
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       }
     },
@@ -5900,7 +5913,7 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Greet him and ask him to take you to your hotel.",
+          "en": "Greet them and ask them to take you to your hotel.",
           "ko": "인사하고 호텔로 가 달라고 하세요."
         },
         "frame": "es-f1-11",
@@ -6105,7 +6118,7 @@
             "match": [
               "¿con tarjeta?",
               "¿puedo pagar con tarjeta?",
-              "¿tarjeta, por favor?"
+              "con tarjeta, por favor"
             ]
           }
         ],
@@ -6129,7 +6142,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay, thank him, and say goodbye.",
+          "en": "Pay, thank them, and say goodbye.",
           "ko": "돈을 내고 고맙다고 인사하세요."
         },
         "expect": [
@@ -6227,10 +6240,10 @@
         }
       },
       "where-from": {
-        "text": "¡Bienvenido! ¿Y de dónde es?",
+        "text": "¡Qué bien! ¿Y de dónde es?",
         "gloss": {
-          "en": "Welcome! And where are you from?",
-          "ko": "환영해요! 어디서 오셨어요?"
+          "en": "Great! And where are you from?",
+          "ko": "좋네요! 어디서 오셨어요?"
         }
       },
       "where-from-easy": {
@@ -6319,7 +6332,7 @@
               "tengo dolor de cabeza",
               "hola, tengo dolor de cabeza",
               "buenas tardes. tengo dolor de cabeza",
-              "me duele la cabeza. tengo dolor de cabeza"
+              "me duele la cabeza"
             ]
           },
           {
@@ -6455,7 +6468,7 @@
         "type": "learner",
         "id": "l-repeat",
         "goal": {
-          "en": "Ask her to repeat that slowly.",
+          "en": "Ask them to repeat that slowly.",
           "ko": "그 말을 천천히 다시 해 달라고 하세요."
         },
         "frame": "es-f1-18",
@@ -6551,7 +6564,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Pay and thank her for the help.",
+          "en": "Pay and thank them for the help.",
           "ko": "돈을 내고 도와줘서 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -6628,10 +6641,10 @@
         }
       },
       "fever-easy": {
-        "text": "¿Tiene calor? ¿Fiebre?",
+        "text": "¿Tiene fiebre? ¿Sí o no?",
         "gloss": {
-          "en": "Do you feel hot? A fever?",
-          "ko": "몸이 뜨거워요? 열 있어요?"
+          "en": "Do you have a fever? Yes or no?",
+          "ko": "열 있어요? 있어요, 없어요?"
         }
       },
       "give": {
@@ -6642,10 +6655,10 @@
         }
       },
       "give-easy": {
-        "text": "Una pastilla por la mañana y otra por la noche.",
+        "text": "Una pastilla cada ocho horas. Tres al día.",
         "gloss": {
-          "en": "One tablet in the morning and one at night.",
-          "ko": "아침에 한 알, 밤에 한 알이요."
+          "en": "One tablet every eight hours. Three a day.",
+          "ko": "8시간마다 한 알이요. 하루 세 알."
         }
       },
       "doctor": {
@@ -7339,6 +7352,7 @@
             "go": "t-sign",
             "match": [
               "un libro y un pasaporte",
+              "hay un libro y mi pasaporte",
               "un libro",
               "mi pasaporte y un libro"
             ]
@@ -7364,7 +7378,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Sign and thank him for everything.",
+          "en": "Sign and thank them for everything.",
           "ko": "서명하고 모두 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -7542,7 +7556,7 @@
         "type": "learner",
         "id": "l-map",
         "goal": {
-          "en": "Greet her and ask for a city map.",
+          "en": "Greet them and ask for a city map.",
           "ko": "인사하고 시내 지도를 달라고 하세요."
         },
         "frame": "es-f1-11",
@@ -7563,7 +7577,7 @@
             "match": [
               "¿qué hay para ver?",
               "hola, ¿qué hay en toledo?",
-              "¿qué visito?"
+              "¿qué puedo ver?"
             ]
           }
         ],
@@ -7587,7 +7601,7 @@
         "type": "learner",
         "id": "l-see",
         "goal": {
-          "en": "Thank her and ask what there is to see.",
+          "en": "Thank them and ask what there is to see.",
           "ko": "고맙다고 하고 뭘 볼 수 있는지 물어보세요."
         },
         "expect": [
@@ -7597,7 +7611,7 @@
             "match": [
               "gracias. ¿qué hay para ver?",
               "¿qué hay para visitar?",
-              "gracias. ¿qué visito?"
+              "gracias. ¿qué puedo ver?"
             ]
           },
           {
@@ -7763,7 +7777,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for her help and say goodbye.",
+          "en": "Thank them for their help and say goodbye.",
           "ko": "도와줘서 고맙다고 하고 인사하세요."
         },
         "frame": "es-f1-07",
@@ -7806,10 +7820,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "¡Hola, bienvenido a Toledo! ¿En qué le puedo ayudar?",
+        "text": "¡Hola, buenos días! ¿En qué le puedo ayudar?",
         "gloss": {
-          "en": "Hi, welcome to Toledo! How can I help you?",
-          "ko": "안녕하세요, 톨레도에 오신 걸 환영해요! 뭘 도와드릴까요?"
+          "en": "Hi, good morning! How can I help you?",
+          "ko": "안녕하세요! 뭘 도와드릴까요?"
         }
       },
       "hello-easy": {
@@ -7834,10 +7848,10 @@
         }
       },
       "see": {
-        "text": "Hay la catedral, el Alcázar y el puente de San Martín.",
+        "text": "Puede ver la catedral, el Alcázar y el puente de San Martín.",
         "gloss": {
-          "en": "There's the cathedral, the Alcázar and the San Martín bridge.",
-          "ko": "대성당, 알카사르, 산마르틴 다리가 있어요."
+          "en": "You can see the cathedral, the Alcázar and the San Martín bridge.",
+          "ko": "대성당, 알카사르, 산마르틴 다리를 볼 수 있어요."
         }
       },
       "see-easy": {
@@ -7973,7 +7987,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "es-f1-01",
@@ -8240,7 +8254,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for everything.",
+          "en": "Thank them for everything.",
           "ko": "모두 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -8324,10 +8338,10 @@
         }
       },
       "live": {
-        "text": "Gracias. ¿Y dónde vive?",
+        "text": "Gracias. ¿Y dónde vive ahora?",
         "gloss": {
-          "en": "Thank you. And where do you live?",
-          "ko": "감사합니다. 어디 사세요?"
+          "en": "Thank you. And where do you live now?",
+          "ko": "감사합니다. 지금 어디 사세요?"
         }
       },
       "live-easy": {
@@ -8438,7 +8452,8 @@
             "match": [
               "sí",
               "sí, primera vez",
-              "sí, soy nuevo"
+              "sí, soy nuevo",
+              "sí, soy nueva"
             ]
           }
         ],
@@ -8506,7 +8521,7 @@
         "type": "tutor",
         "id": "t-open",
         "say": "open",
-        "next": "l-do",
+        "next": "t-do",
         "easier": "open-easy"
       },
       "t-do": {
@@ -8559,9 +8574,9 @@
       "l-do-again": {
         "type": "tutor",
         "id": "l-do-again",
-        "say": "open-easy",
+        "say": "do-easy",
         "next": "l-do",
-        "easier": "open-easy"
+        "easier": "do-easy"
       },
       "t-yoga": {
         "type": "tutor",
@@ -8763,10 +8778,10 @@
         }
       },
       "end-yes": {
-        "text": "¡Muy bien! Bienvenido al gimnasio.",
+        "text": "¡Muy bien! Pues empezamos hoy. ¡Hasta luego!",
         "gloss": {
-          "en": "Very good! Welcome to the gym.",
-          "ko": "좋아요! 헬스장에 온 걸 환영해요."
+          "en": "Very good! So we start today. See you!",
+          "ko": "좋아요! 그럼 오늘부터 시작해요. 또 봐요!"
         }
       },
       "end-no": {
@@ -8809,7 +8824,7 @@
         "type": "learner",
         "id": "l-appt",
         "goal": {
-          "en": "Greet her and say you have an appointment.",
+          "en": "Greet them and say you have an appointment.",
           "ko": "인사하고 예약이 있다고 하세요."
         },
         "frame": "es-f1-13",
@@ -8854,7 +8869,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "es-f1-01",
@@ -8996,7 +9011,7 @@
         "type": "learner",
         "id": "l-form-ok",
         "goal": {
-          "en": "Say OK, and ask if she has a pen.",
+          "en": "Say OK, and ask if they have a pen.",
           "ko": "알았다고 하고 펜이 있는지 물어보세요."
         },
         "expect": [
@@ -9084,7 +9099,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Say OK and thank her.",
+          "en": "Say OK and thank them.",
           "ko": "알았다고 하고 고맙다고 하세요."
         },
         "expect": [
@@ -9254,7 +9269,7 @@
         "type": "learner",
         "id": "l-hello",
         "goal": {
-          "en": "Greet him and say yes.",
+          "en": "Greet them and say yes.",
           "ko": "인사하고 맞다고 하세요."
         },
         "expect": [
@@ -9298,7 +9313,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say your name and that you're pleased to meet him.",
+          "en": "Say your name and that you're pleased to meet them.",
           "ko": "이름을 말하고 반갑다고 하세요."
         },
         "frame": "es-f1-01",
@@ -9432,7 +9447,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank him and say see you later.",
+          "en": "Thank them and say see you later.",
           "ko": "고맙다고 하고 또 보자고 인사하세요."
         },
         "frame": "es-f1-06",
@@ -9475,10 +9490,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "Buenos días. Usted es nuevo en el edificio, ¿verdad?",
+        "text": "Buenos días. ¿Usted vive aquí, en el edificio?",
         "gloss": {
-          "en": "Good morning. You're new in the building, aren't you?",
-          "ko": "안녕하세요. 이 건물에 새로 오셨죠?"
+          "en": "Good morning. Do you live here, in the building?",
+          "ko": "안녕하세요. 이 건물에 사세요?"
         }
       },
       "hello-easy": {
@@ -9489,10 +9504,10 @@
         }
       },
       "name": {
-        "text": "¡Bienvenido! Yo soy Antonio, del tercero. ¿Cómo se llama usted?",
+        "text": "¡Ah, qué bien! Yo soy Antonio, del tercero. ¿Cómo se llama usted?",
         "gloss": {
-          "en": "Welcome! I'm Antonio, from the third floor. What's your name?",
-          "ko": "환영해요! 저는 3층 안토니오예요. 성함이 어떻게 되세요?"
+          "en": "Oh, great! I'm Antonio, from the third floor. What's your name?",
+          "ko": "아, 좋네요! 저는 3층 안토니오예요. 성함이 어떻게 되세요?"
         }
       },
       "name-easy": {
@@ -9503,7 +9518,7 @@
         }
       },
       "floor": {
-        "text": "Encantado. ¿Y en qué piso vive?",
+        "text": "Mucho gusto. ¿Y en qué piso vive?",
         "gloss": {
           "en": "Pleased to meet you. And which floor do you live on?",
           "ko": "반가워요. 몇 층에 사세요?"
@@ -9583,7 +9598,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say yes and tell him your name.",
+          "en": "Say yes and tell them your name.",
           "ko": "맞다고 하고 이름을 말하세요."
         },
         "frame": "es-f1-01",
@@ -9762,7 +9777,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "It was too fast. Ask him to say it again.",
+          "en": "It was too fast. Ask them to say it again.",
           "ko": "너무 빨랐어요. 다시 말해 달라고 하세요."
         },
         "frame": "es-f1-18",
@@ -9920,10 +9935,10 @@
         }
       },
       "slow": {
-        "text": "Claro. Los martes... aquí... a las siete y media.",
+        "text": "Claro. Los martes y los jueves, aquí, a las siete y media.",
         "gloss": {
-          "en": "Sure. On Tuesdays... here... at half past seven.",
-          "ko": "그럼. 화요일에… 여기서… 7시 반에."
+          "en": "Sure. Tuesdays and Thursdays, here, at half past seven.",
+          "ko": "그럼. 화요일이랑 목요일, 여기서, 7시 반에."
         }
       },
       "end": {
@@ -9963,7 +9978,7 @@
         "type": "learner",
         "id": "l-pen",
         "goal": {
-          "en": "Say sorry, you don't have a pen, and ask if she has one.",
+          "en": "Say sorry, you don't have a pen, and ask if they have one.",
           "ko": "미안하다고, 펜이 없다고 하고 있는지 물어보세요."
         },
         "expect": [
@@ -10052,7 +10067,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the pen.",
+          "en": "Thank them for the pen.",
           "ko": "펜 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -10097,7 +10112,7 @@
         "type": "learner",
         "id": "l-thanks2",
         "goal": {
-          "en": "Thank her again.",
+          "en": "Thank them again.",
           "ko": "다시 고맙다고 하세요."
         },
         "expect": [
@@ -10191,7 +10206,7 @@
         "type": "learner",
         "id": "l-return",
         "goal": {
-          "en": "Give it back, say sorry, and thank her.",
+          "en": "Give it back, say sorry, and thank them.",
           "ko": "돌려주면서 미안하다고 하고 고맙다고 하세요."
         },
         "expect": [
@@ -10296,10 +10311,10 @@
         }
       },
       "after": {
-        "text": "Bueno, la clase termina. ¿Es tuyo este libro?",
+        "text": "Bueno, se acaba la clase. ¿Es tuyo este libro?",
         "gloss": {
           "en": "Well, the class is ending. Is this book yours?",
-          "ko": "자, 수업 끝났다. 이 책 네 거야?"
+          "ko": "자, 수업 끝난다. 이 책 네 거야?"
         }
       },
       "after-easy": {
@@ -10451,7 +10466,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "It's noisy. Ask him to repeat it slowly.",
+          "en": "It's noisy. Ask them to repeat it slowly.",
           "ko": "시끄러워요. 천천히 다시 말해 달라고 하세요."
         },
         "frame": "es-f1-18",
@@ -10620,10 +10635,10 @@
         }
       },
       "me": {
-        "text": "Ah, ya sé. Yo estoy en la otra puerta, al lado del café.",
+        "text": "Ah, ya sé. Yo estoy en la otra salida, al lado del café.",
         "gloss": {
-          "en": "Ah, I know. I'm at the other gate, next to the café.",
-          "ko": "아, 알겠다. 나는 반대편 입구, 카페 옆에 있어."
+          "en": "Ah, I know. I'm at the other exit, next to the café.",
+          "ko": "아, 알겠다. 나는 반대편 출구, 카페 옆에 있어."
         }
       },
       "me-easy": {
@@ -10634,10 +10649,10 @@
         }
       },
       "slow": {
-        "text": "Al lado... del café. El café... Central.",
+        "text": "Al lado del café. El café Central.",
         "gloss": {
-          "en": "Next to... the café. The café... Central.",
-          "ko": "카페… 옆이야. 카페… 센트럴."
+          "en": "Next to the café. The café Central.",
+          "ko": "카페 옆이야. 카페 센트럴."
         }
       },
       "meet": {
@@ -10942,10 +10957,10 @@
         }
       },
       "tired": {
-        "text": "Uf, yo estoy un poco cansada. ¿Quieres un café?",
+        "text": "Uf, tengo sueño. ¿Quieres un café?",
         "gloss": {
-          "en": "Phew, I'm a bit tired. Do you want a coffee?",
-          "ko": "휴, 나 좀 피곤해. 커피 마실래?"
+          "en": "Phew, I'm sleepy. Do you want a coffee?",
+          "ko": "휴, 졸려. 커피 마실래?"
         }
       },
       "tired-easy": {
@@ -11087,7 +11102,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "Ask her to speak more slowly.",
+          "en": "Ask them to speak more slowly.",
           "ko": "더 천천히 말해 달라고 하세요."
         },
         "frame": "es-f1-18",
@@ -11270,7 +11285,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for her help.",
+          "en": "Thank them for their help.",
           "ko": "도와줘서 고맙다고 하세요."
         },
         "frame": "es-f1-07",
@@ -11340,10 +11355,10 @@
         }
       },
       "slow": {
-        "text": "Claro. Pulse... aquí. ¿Ve? Este botón.",
+        "text": "Claro. Pulse aquí, en este botón. ¿Ve?",
         "gloss": {
-          "en": "Sure. Press... here. See? This button.",
-          "ko": "그럼요. 여기를… 누르세요. 보여요? 이 버튼이요."
+          "en": "Sure. Press here, on this button. See?",
+          "ko": "그럼요. 여기 이 버튼을 누르세요. 보여요?"
         }
       },
       "dest": {
@@ -11523,7 +11538,7 @@
         "type": "learner",
         "id": "l-next",
         "goal": {
-          "en": "Say you're not sure and ask him.",
+          "en": "Say you're not sure and ask them.",
           "ko": "잘 모르겠다고 하고 물어보세요."
         },
         "expect": [
@@ -11573,7 +11588,7 @@
         "type": "learner",
         "id": "l-book",
         "goal": {
-          "en": "Say yes, it's yours, and thank him.",
+          "en": "Say yes, it's yours, and thank them.",
           "ko": "네, 내 거라고 하고 고맙다고 하세요."
         },
         "frame": "es-f1-19",
@@ -11675,10 +11690,10 @@
         }
       },
       "now": {
-        "text": "Ah, vale. ¿Y dónde estás viviendo? ¿Cerca?",
+        "text": "Ah, vale. ¿Y dónde vives ahora? ¿Cerca?",
         "gloss": {
-          "en": "Ah, OK. And where are you living? Close by?",
-          "ko": "아, 그렇구나. 어디 살아? 가까워?"
+          "en": "Ah, OK. And where do you live now? Close by?",
+          "ko": "아, 그렇구나. 지금 어디 살아? 가까워?"
         }
       },
       "now-easy": {
