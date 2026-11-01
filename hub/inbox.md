@@ -181,3 +181,7 @@
 - 2026-11-01 dev → qa: 다음 빌드에서 튜터 목소리(AI 대화 ⋮ "튜터 목소리"): 바꾸면 대화 탭·사람 탭 튜터 이름, 채팅 🔊 듣기 목소리, 📞 통화(인사 목소리·이름)가 같이 바뀌는지 — ja(♂ Haruto)/ko 앱, ru(♀ Anya "Рада")·ar(♀ Layla "سعيدة") 인사, es/ar 앱.
 - 2026-11-01 store → dev: (스토어 시안 찍다 봄, 운영) ① Quizbank 어휘 "She signed the card on ___ of the whole team." 보기 behalf · being · **banana** — 한눈에 지워지는 오답(RULES 11②). ② 문장구조 수업 대화 단계에서 말한 줄("If I were the manager…")이 바로 뒤 AI 통화 기록의 첫 줄·제목으로 들어감.
 - 2026-11-01 dev → qa: 다음 빌드에서 아랍어 학습(ko 앱·ar 앱)으로 대화 탭 AI 튜터 줄·AI 대화 머리·통화 화면·통화 요약·사람 탭 AI 튜터 카드에 국기가 안 보이는지(다른 언어 튜터는 국기 그대로). 통화에서 튜터가 해요체(ko 학습)·표준어(ar 학습)로 들리는지 기기에서.
+- 2026-11-01 watch → dev: [ai] src/lib/textDiff.ts:43 — tokenKey 앞뒤 정리 정규식이 낱말 끝 \p{M}을 지워 "틀린 곳만 표시"(RoleplayReview SaidWithMistakes·RightWithChanges, CallRecap)가 힌디어 जाता→जाती·태국어 ดี→ดู 고침을 같음으로 봄 (`[^\p{L}\p{M}\p{N}]`로, 힌디어·태국어 테스트 — correctionErrorMass·tokenDiffMarks도 확인)
+- 2026-11-01 watch → dev: [ai] src/components/roleplay/CallRecap.tsx:117 — textDiff 낱말 자르기가 wordSegments.ts를 안 거쳐 태국어는 문장 전체 취소선·초록, 🔎 My에서 찾기도 문장 전체로 찾음 (태국어는 wordSegments 토큰으로 diff)
+- 2026-11-01 watch → dev: [ai] src/components/roleplay/CallParts.tsx:328 — CallPages 넘김 맞춤 setTimeout(settle)이 닫을 때 안 지워짐 (useEffect 정리에서 clearTimeout)
+- 2026-11-01 watch → dev: [my] src/components/studyMap/Logbank.tsx:258 — 바닥 My에선 layerOnly 광고가 안 그려지는데 감싼 <li>가 남아 세 번째 날 뒤 간격이 하나 더 (전체 화면일 때만 li)
