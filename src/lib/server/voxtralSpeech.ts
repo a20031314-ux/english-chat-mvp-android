@@ -7,7 +7,8 @@ const BASE = "https://api.mistral.ai/v1/audio";
 export const VOXTRAL_TTS_MODEL = process.env.MISTRAL_TTS_MODEL?.trim() || "voxtral-mini-tts-3-0";
 
 function key(): string {
-  return process.env.MISTRAL_API_KEY?.trim() ?? "";
+  // 붙여 넣을 때 딸려 온 따옴표·"Bearer "는 뗀다.
+  return (process.env.MISTRAL_API_KEY ?? "").trim().replace(/^["']|["']$/g, "").replace(/^Bearer\s+/i, "").trim();
 }
 
 export function voxtralConfigured(): boolean {
