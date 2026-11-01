@@ -16,6 +16,7 @@
 2. `npm run build:capacitor`로 지금 main을 빌드. 무엇을 볼지는 `PRODUCT.md`의 기능·대표 장면 기준.
 
 ## 도구
+- **퀴즈 전수 점검** `npm run quiz:sweep -- --net` → 판정 표본(`scripts/quiz-sweep/JUDGE.md`, 언어마다 에이전트) → `npm run quiz:report`(2026-11-01): 196 조합 × 단계 1~5 규칙 검사 + 하루 흐름 + 판정. 퀴즈를 바꾼 커밋 뒤·버전 자르기 전. 방법 `hub/QUIZ.md` 10절.
 - 언어 조합 자동 점검: `npm run check:browser-languages`
   (PLAYWRIGHT_MODULE, CHROMIUM, LANGUAGE_PASS_USER, API_BASE 환경변수).
 - 문구 누락: `npm run check:strings`, `npm run check:languages`.
