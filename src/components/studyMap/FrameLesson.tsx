@@ -17,7 +17,7 @@ import { buildQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curric
 import { notePool } from "@/lib/curriculum/exam";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
-import { glossFor, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
+import { glossFor, quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -365,9 +365,12 @@ export function FrameLesson({
                         example.text
                       )}
                     </span>
-                    <span dir="auto" className="mt-0.5 block text-meta text-slate-400">
-                      {glossFor(example.gloss, locale)}
-                    </span>
+                    {/* No meaning line when it would just repeat the sentence (English learners with an untranslated app language). */}
+                    {quizGloss(example.gloss, locale, language) ? (
+                      <span dir="auto" className="mt-0.5 block text-meta text-slate-400">
+                        {quizGloss(example.gloss, locale, language)}
+                      </span>
+                    ) : null}
                   </span>
                   <TTSButton text={example.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
                 </li>
