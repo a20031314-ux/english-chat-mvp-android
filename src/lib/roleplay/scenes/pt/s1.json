@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small pastelaria-café in Lisbon's Baixa at mid-morning, not busy. The tutor, Rita, is behind the counter; the learner has just come in to order a coffee to drink at the counter.",
+    "setting": "The AI tutor plays the barista. A small pastelaria-café in Lisbon's Baixa at mid-morning, not busy. The tutor is behind the counter; the learner has just come in to order a coffee to drink at the counter.",
     "tutorRole": "barista",
     "canDo": [
       0,
@@ -278,6 +278,11 @@
         "gloss": {
           "en": "Fine, thanks. What will it be?",
           "ko": "잘 지내요, 고마워요. 뭐 드릴까요?"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Tudo bem, obrigado. O que vai ser?"
+          }
         }
       },
       "t-order_e": {
@@ -348,6 +353,11 @@
         "gloss": {
           "en": "Thank you. Have a good day!",
           "ko": "제가 고맙죠. 좋은 하루 보내세요!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Obrigado eu. Bom dia!"
+          }
         }
       }
     },
@@ -362,7 +372,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street next to Rossio station in Lisbon. The learner stops a friendly passer-by, João, to ask where the metro is. João speaks quickly at first.",
+    "setting": "The AI tutor plays a friendly passer-by. A busy street next to Rossio station in Lisbon. The learner stops the tutor to ask where the metro is. The tutor speaks quickly at first.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -674,7 +684,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small minimercado (corner shop) in Porto in the afternoon. The tutor, Marta, works at the till. The learner needs batteries for a camera.",
+    "setting": "The AI tutor plays the shop assistant. A small minimercado (corner shop) in Porto in the afternoon. The tutor works at the till. The learner needs batteries for a camera.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1088,6 +1098,11 @@
         "gloss": {
           "en": "Thank you. Good afternoon!",
           "ko": "고마워요. 좋은 오후 보내세요!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Obrigado. Boa tarde!"
+          }
         }
       }
     },
@@ -1102,7 +1117,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small guesthouse in Alfama, Lisbon, in the evening. The tutor, Tiago, is the receptionist. The learner has a booking for two nights.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small guesthouse in Alfama, Lisbon, in the evening. The learner has a booking for two nights.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1528,7 +1543,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람"
     },
-    "setting": "The first evening of a Portuguese class at a language school in Lisbon. The tutor, Inês, a friendly classmate, sits next to the learner and starts chatting before class. Classmates use 'tu'.",
+    "setting": "The AI tutor plays a friendly classmate. The first evening of a Portuguese class at a language school in Lisbon. The tutor sits next to the learner and starts chatting before class. Classmates use 'tu'.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1795,17 +1810,17 @@
         }
       },
       "t-name": {
-        "text": "Tudo bem! Eu sou a Inês. E tu, como te chamas?",
+        "text": "Tudo bem! Chamo-me {tutor}. E tu, como te chamas?",
         "gloss": {
-          "en": "All good! I'm Inês. And you, what's your name?",
-          "ko": "잘 지내! 난 이네스야. 넌 이름이 뭐야?"
+          "en": "All good! My name is {tutor}. And you, what's your name?",
+          "ko": "잘 지내! 내 이름은 {tutor}. 넌 이름이 뭐야?"
         }
       },
       "t-name_e": {
-        "text": "Eu sou a Inês. E o teu nome?",
+        "text": "Chamo-me {tutor}. E o teu nome?",
         "gloss": {
-          "en": "I'm Inês. And your name?",
-          "ko": "난 이네스. 네 이름은?"
+          "en": "My name is {tutor}. And your name?",
+          "ko": "내 이름은 {tutor}. 네 이름은?"
         }
       },
       "t-from": {
@@ -1855,6 +1870,11 @@
         "gloss": {
           "en": "I'm a nurse. I work in a hospital.",
           "ko": "난 간호사야. 병원에서 일해."
+        },
+        "byTutor": {
+          "m": {
+            "text": "Eu sou enfermeiro. Trabalho num hospital."
+          }
         }
       },
       "t-me2": {
@@ -1883,7 +1903,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A café terrace in Braga. The tutor, Rui, a friend, is looking at a family photo on the learner's phone and asks who is in it. Friends use 'tu'.",
+    "setting": "The AI tutor plays a friend. A café terrace in Braga. The tutor is looking at a family photo on the learner's phone and asks who is in it. Friends use 'tu'.",
     "tutorRole": "friend",
     "canDo": [
       1,
@@ -2185,6 +2205,11 @@
         "gloss": {
           "en": "Thanks for showing me. You have a lovely family!",
           "ko": "보여 줘서 고마워. 가족이 정말 멋지다!"
+        },
+        "byTutor": {
+          "f": {
+            "text": "Obrigada por mostrares. Tens uma família muito gira!"
+          }
         }
       }
     },
@@ -2199,7 +2224,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "A tasca (small traditional restaurant) in Lisbon. Two new friends share petiscos (small plates). The tutor, Sofia, asks the learner about Portuguese food. Friends use 'tu'.",
+    "setting": "The AI tutor plays a new friend. A tasca (small traditional restaurant) in Lisbon. The tutor and the learner share petiscos (small plates), and the tutor asks the learner about Portuguese food. Friends use 'tu'.",
     "tutorRole": "new friend",
     "canDo": [
       2,
@@ -2498,7 +2523,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend walking club meeting in Sintra. The tutor, Pedro, a club member, chats with the learner, who has just joined, about languages and sports. Members use 'tu'.",
+    "setting": "The AI tutor plays a club member. A weekend walking club meeting in Sintra. The tutor chats with the learner, who has just joined, about languages and sports. Members use 'tu'.",
     "tutorRole": "club member",
     "canDo": [
       1,
@@ -2851,7 +2876,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "A small office in Porto at 9 a.m. The tutor, Catarina, a colleague, chats with the learner by the coffee machine about their day. Colleagues use 'tu'.",
+    "setting": "The AI tutor plays a colleague. A small office in Porto at 9 a.m. The tutor chats with the learner by the coffee machine about their day. Colleagues use 'tu'.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -3191,7 +3216,7 @@
       "en": "Where I live",
       "ko": "사는 곳"
     },
-    "setting": "The courtyard of a small apartment block in Coimbra. The tutor, Miguel, a new neighbour, chats with the learner about where they live and what is nearby. He uses 'tu' because they are about the same age.",
+    "setting": "The AI tutor plays a new neighbour. The courtyard of a small apartment block in Coimbra. The tutor chats with the learner about where they live and what is nearby, using 'tu' because they are about the same age.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -3537,7 +3562,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "A fruit stall at the Mercado do Bolhão in Porto on a Saturday morning. The tutor, Dona Teresa, is the stall owner and talks warmly but fast.",
+    "setting": "The AI tutor plays the stall owner. A fruit stall at the Mercado do Bolhão in Porto on a Saturday morning. The tutor talks warmly but fast.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -3869,6 +3894,11 @@
         "gloss": {
           "en": "Thank you. Come back anytime!",
           "ko": "고마워요. 또 오세요!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Obrigado. Volte sempre!"
+          }
         }
       }
     },
@@ -3883,7 +3913,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A neighbourhood padaria in Lisbon early in the morning. The tutor, Duarte, is the baker at the counter. There are pastries the learner does not know.",
+    "setting": "The AI tutor plays the baker. A neighbourhood padaria in Lisbon early in the morning. The tutor is at the counter. There are pastries the learner does not know.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4217,6 +4247,11 @@
         "gloss": {
           "en": "Thank you! Enjoy.",
           "ko": "고맙습니다! 맛있게 드세요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "Obrigada! Bom apetite."
+          }
         }
       }
     },
@@ -4231,7 +4266,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small busy restaurant in Lisbon at lunchtime with a 'prato do dia' (dish of the day) board. The tutor, Nuno, is the waiter.",
+    "setting": "The AI tutor plays the waiter. A small busy restaurant in Lisbon at lunchtime with a 'prato do dia' (dish of the day) board.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4594,6 +4629,11 @@
         "gloss": {
           "en": "Of course. Thank you and good afternoon!",
           "ko": "그럼요. 감사합니다, 좋은 오후 보내세요!"
+        },
+        "byTutor": {
+          "f": {
+            "text": "Claro. Obrigada e boa tarde!"
+          }
         }
       }
     },
@@ -4608,7 +4648,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A Carris bus stop in Lisbon near Cais do Sodré. The tutor, Beatriz, is a woman waiting for the bus. The learner wants to go to Belém.",
+    "setting": "The AI tutor plays a person waiting for the bus. A Carris bus stop in Lisbon near Cais do Sodré. The learner wants to go to Belém.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -4955,7 +4995,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket window at Santa Apolónia station in Lisbon. The tutor, Filipa, is the CP ticket clerk. The learner wants to go to Porto.",
+    "setting": "The AI tutor plays the CP ticket clerk. The ticket window at Santa Apolónia station in Lisbon. The learner wants to go to Porto.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5309,7 +5349,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A taxi rank outside Lisbon airport. The tutor, Sr. Francisco, is the taxi driver. The learner is going to a hotel in the Chiado.",
+    "setting": "The AI tutor plays the taxi driver. A taxi rank outside Lisbon airport. The learner is going to a hotel in the Chiado.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -5665,7 +5705,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A farmácia (pharmacy) in Faro in the afternoon. The tutor, Dra. Leonor, is the pharmacist. The learner has a headache.",
+    "setting": "The AI tutor plays the pharmacist. A farmácia (pharmacy) in Faro in the afternoon. The learner has a headache.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6057,7 +6097,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop on Rua de Santa Catarina in Porto. The tutor, Mariana, is the shop assistant. The learner likes a jumper on display.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop on Rua de Santa Catarina in Porto. The learner likes a jumper on display.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -6416,6 +6456,11 @@
         "gloss": {
           "en": "Great. You can pay at the till. Thank you!",
           "ko": "좋아요. 계산대에서 계산하시면 돼요. 감사합니다!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Ótimo. Pode pagar na caixa. Obrigado!"
+          }
         }
       },
       "t-end2": {
@@ -6423,6 +6468,11 @@
         "gloss": {
           "en": "No problem. Thanks anyway!",
           "ko": "괜찮아요. 그래도 감사해요!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Não faz mal. Obrigado na mesma!"
+          }
         }
       }
     },
@@ -6437,7 +6487,7 @@
       "en": "Lost and found",
       "ko": "분실물 찾기"
     },
-    "setting": "The lost-property office (Perdidos e Achados) at Oriente station in Lisbon. The tutor, Hugo, is the clerk. The learner lost a black backpack on the train this morning.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property office (Perdidos e Achados) at Oriente station in Lisbon. The learner lost a black backpack on the train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -6830,7 +6880,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The tourist information office (Posto de Turismo) on Praça do Comércio in Lisbon. The tutor, Carolina, works at the desk and gives maps.",
+    "setting": "The AI tutor plays the tourist-office staff member. The tourist information office (Posto de Turismo) on Praça do Comércio in Lisbon. The tutor works at the desk and gives maps.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7175,7 +7225,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a municipal library (biblioteca municipal) in Lisbon. The tutor, Sr. Luís, is the librarian. The learner wants a library card.",
+    "setting": "The AI tutor plays the librarian. The front desk of a municipal library (biblioteca municipal) in Lisbon. The learner wants a library card.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7513,7 +7563,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a neighbourhood gym (ginásio) in Porto. The tutor, Joana, works at reception and uses 'você' politely but warmly.",
+    "setting": "The AI tutor plays the gym receptionist. The reception of a neighbourhood gym (ginásio) in Porto. The tutor uses 'você' politely but warmly.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -7867,6 +7917,11 @@
         "gloss": {
           "en": "Thank you! See you soon!",
           "ko": "고마워요! 또 봬요!"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Obrigado! Até breve!"
+          }
         }
       }
     },
@@ -7881,7 +7936,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수"
     },
-    "setting": "The reception desk of a health centre (centro de saúde) in Lisbon in the morning. The tutor, Sara, is the receptionist and talks quickly.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a health centre (centro de saúde) in Lisbon in the morning. The tutor talks quickly.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -8231,7 +8286,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The entrance hall of an old apartment building in Campo de Ourique, Lisbon, in the evening. The tutor, Dona Helena, an older neighbour, meets the learner at the letterboxes. She uses polite 'o senhor/a senhora' style.",
+    "setting": "The AI tutor plays an older neighbour. The entrance hall of an old apartment building in Campo de Ourique, Lisbon, in the evening. The tutor meets the learner at the letterboxes and uses the polite 'o senhor/a senhora' style.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8295,7 +8350,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say your name and that it's nice to meet her.",
+          "en": "Say your name and that it's nice to meet them.",
           "ko": "이름을 말하고 반갑다고 하세요."
         },
         "frame": "pt-f1-01",
@@ -8384,7 +8439,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "expect": [
@@ -8484,17 +8539,22 @@
         }
       },
       "t-name": {
-        "text": "Tudo bem, obrigada. Eu sou a Helena. E o seu nome?",
+        "text": "Tudo bem, obrigada. Chamo-me {tutor}. E o seu nome?",
         "gloss": {
-          "en": "Fine, thank you. I'm Helena. And your name?",
-          "ko": "잘 지내요, 고마워요. 저는 엘레나예요. 성함은요?"
+          "en": "Fine, thank you. My name is {tutor}. And your name?",
+          "ko": "잘 지내요, 고마워요. 제 이름은 {tutor}. 성함은요?"
+        },
+        "byTutor": {
+          "m": {
+            "text": "Tudo bem, obrigado. Chamo-me {tutor}. E o seu nome?"
+          }
         }
       },
       "t-name_e": {
-        "text": "Eu sou a Helena. E você?",
+        "text": "Chamo-me {tutor}. E você?",
         "gloss": {
-          "en": "I'm Helena. And you?",
-          "ko": "저는 엘레나예요. 그쪽은요?"
+          "en": "My name is {tutor}. And you?",
+          "ko": "제 이름은 {tutor}. 그쪽은요?"
         }
       },
       "t-floor": {
@@ -8558,7 +8618,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange evening in a café in Bairro Alto, Lisbon. The tutor, André, is a Portuguese student who wants to learn Korean. They use 'tu'.",
+    "setting": "The AI tutor plays a Portuguese student who wants to learn Korean. A language-exchange evening in a café in Bairro Alto, Lisbon. They use 'tu'.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -8762,10 +8822,10 @@
     },
     "sentences": {
       "t-hi": {
-        "text": "Olá! Sou o André. És da Coreia, não és?",
+        "text": "Olá! Chamo-me {tutor}. És da Coreia, não és?",
         "gloss": {
-          "en": "Hi! I'm André. You're from Korea, aren't you?",
-          "ko": "안녕! 난 안드레야. 한국에서 왔지?"
+          "en": "Hi! My name is {tutor}. You're from Korea, aren't you?",
+          "ko": "안녕! 내 이름은 {tutor}. 한국에서 왔지?"
         }
       },
       "t-hi_e": {
@@ -8850,7 +8910,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Portuguese class at a university in Coimbra. The test is starting and the learner has no pen. The tutor, Gonçalo, is the classmate sitting next to them. They use 'tu'.",
+    "setting": "The AI tutor plays a classmate. A Portuguese class at a university in Coimbra. The test is starting and the learner has no pen; the tutor is sitting next to them. They use 'tu'.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -9127,7 +9187,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "A phone call outside Campanhã station in Porto. The tutor, Bruno, a friend, is somewhere near the station but cannot find the learner. Noise from traffic. They use 'tu'.",
+    "setting": "The AI tutor plays a friend on the phone. A phone call outside Campanhã station in Porto. The tutor is somewhere near the station but cannot find the learner. Noise from traffic. They use 'tu'.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -9454,7 +9514,7 @@
       "en": "Morning at work",
       "ko": "아침 출근"
     },
-    "setting": "An open-plan office in Lisbon at 9 a.m. on a Monday. The tutor, Vasco, a colleague, greets the learner as they arrive. They use 'tu'.",
+    "setting": "The AI tutor plays a colleague. An open-plan office in Lisbon at 9 a.m. on a Monday. The tutor greets the learner as they arrive. They use 'tu'.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -9797,7 +9857,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A Metro de Lisboa station with a ticket machine. The learner cannot top up their Viva Viagem card. The tutor, Sr. Fernando, a station staff member, comes over.",
+    "setting": "The AI tutor plays a station staff member. A Metro de Lisboa station with a ticket machine. The learner cannot top up their Viva Viagem card, and the tutor comes over.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -10212,7 +10272,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "Outside a language school in Porto after an evening class. The tutor, Diogo, a classmate, walks out with the learner and chats for a minute. They use 'tu'.",
+    "setting": "The AI tutor plays a classmate. Outside a language school in Porto after an evening class. The tutor walks out with the learner and chats for a minute. They use 'tu'.",
     "tutorRole": "classmate",
     "canDo": [
       0,

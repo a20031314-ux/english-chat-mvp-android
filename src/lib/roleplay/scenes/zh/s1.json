@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small neighbourhood café in Shanghai on a weekday morning, not busy. The tutor is the barista at the counter; the learner has just walked in.",
+    "setting": "The AI tutor plays the barista. A small neighbourhood café in Shanghai on a weekday morning, not busy. The learner has just walked in and comes to the counter.",
     "tutorRole": "barista",
     "canDo": [
       2,
@@ -423,7 +423,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street just outside Beijing West Railway Station in the afternoon. The learner stops a friendly local passer-by to ask where the subway entrance is.",
+    "setting": "The AI tutor plays a friendly local passer-by. A busy street just outside Beijing West Railway Station in the afternoon. The learner stops them to ask where the subway entrance is.",
     "tutorRole": "passer-by",
     "canDo": [
       4,
@@ -777,7 +777,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small convenience store near a university in Hangzhou in the evening. The learner is looking for an umbrella because it has started to rain.",
+    "setting": "The AI tutor plays the shop assistant. A small convenience store near a university in Hangzhou in the evening. The learner is looking for an umbrella because it has started to rain.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1184,7 +1184,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hostel in Chengdu in the late afternoon. The learner, Ji-woo, has a booking for two nights.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small hostel in Chengdu in the late afternoon. The learner, Ji-woo, has a booking for two nights.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1591,7 +1591,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람"
     },
-    "setting": "The first day of a Chinese language class at a university in Beijing. A friendly classmate, Liu Jia, sits down next to the learner and starts the chat.",
+    "setting": "The AI tutor plays a friendly classmate. The first day of a Chinese language class at a university in Beijing. The classmate sits down next to the learner and starts the chat.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1610,7 +1610,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Greet her and say your name.",
+          "en": "Greet them and say your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "zh-f1-02",
@@ -1709,13 +1709,13 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask her if she is a teacher.",
-          "ko": "그녀가 선생님인지 물어보세요."
+          "en": "Ask if they are a teacher.",
+          "ko": "상대가 선생님인지 물어보세요."
         },
         "frame": "zh-f1-04",
         "expect": [
           {
-            "meaning": "asks if she is a teacher",
+            "meaning": "asks if the tutor is a teacher",
             "go": "t-teacher",
             "match": [
               "你是老师吗",
@@ -1855,7 +1855,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Say it's nice to meet her too.",
+          "en": "Say it's nice to meet them too.",
           "ko": "나도 만나서 반갑다고 하세요."
         },
         "expect": [
@@ -1942,17 +1942,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "嗨，你好！我是刘佳。",
+        "text": "嗨，你好！我是{tutor}。",
         "gloss": {
-          "en": "Hi, hello! I'm Liu Jia.",
-          "ko": "안녕! 나는 류자야."
+          "en": "Hi, hello! I'm {tutor}.",
+          "ko": "안녕! 나 {tutor}."
         }
       },
       "hello-easy": {
-        "text": "你好！我叫刘佳。你呢？",
+        "text": "你好！我叫{tutor}。你呢？",
         "gloss": {
-          "en": "Hello! My name is Liu Jia. And you?",
-          "ko": "안녕! 내 이름은 류자야. 너는?"
+          "en": "Hello! My name is {tutor}. And you?",
+          "ko": "안녕! 내 이름은 {tutor}. 너는?"
         }
       },
       "from": {
@@ -2086,7 +2086,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend, Xiao Yu, is having milk tea with the learner in a café in Nanjing and looks at a family photo on the learner's phone.",
+    "setting": "The AI tutor plays a friend. They are having milk tea with the learner in a café in Nanjing and look at a family photo on the learner's phone.",
     "tutorRole": "friend",
     "canDo": [
       1,
@@ -2469,7 +2469,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "Two new friends sit in a hotpot restaurant in Chongqing. The tutor, Chen Chen, asks what the learner likes to eat and drink.",
+    "setting": "The AI tutor plays a new friend. Two new friends sit in a hotpot restaurant in Chongqing; the tutor asks what the learner likes to eat and drink.",
     "tutorRole": "new friend",
     "canDo": [
       1
@@ -2673,8 +2673,8 @@
         "type": "learner",
         "id": "l-fruit",
         "goal": {
-          "en": "Say which fruit you like and ask what she likes.",
-          "ko": "좋아하는 과일을 말하고 그녀는 뭘 좋아하는지 물어보세요."
+          "en": "Say which fruit you like and ask what they like.",
+          "ko": "좋아하는 과일을 말하고 상대는 뭘 좋아하는지 물어보세요."
         },
         "frame": "zh-f1-15",
         "expect": [
@@ -2818,7 +2818,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend activity club at a community centre in Shenzhen. An older member, Lao Zhou, welcomes the learner and asks what they can do and like.",
+    "setting": "The AI tutor plays an older club member. A weekend activity club at a community centre in Shenzhen. The member welcomes the learner and asks what they can do and like.",
     "tutorRole": "club member",
     "canDo": [
       0,
@@ -2837,7 +2837,7 @@
         "type": "learner",
         "id": "l-new",
         "goal": {
-          "en": "Say yes and greet him.",
+          "en": "Say yes and greet them.",
           "ko": "네라고 하고 인사하세요."
         },
         "frame": "zh-f1-01",
@@ -2882,7 +2882,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell him your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "zh-f1-02",
@@ -3113,10 +3113,10 @@
         }
       },
       "name": {
-        "text": "好！我是老周。你叫什么？",
+        "text": "好！我是{tutor}。你叫什么？",
         "gloss": {
-          "en": "Great! I'm Lao Zhou. What's your name?",
-          "ko": "좋아요! 난 라오저우예요. 이름이 뭐예요?"
+          "en": "Great! I'm {tutor}. What's your name?",
+          "ko": "좋아요! 저는 {tutor}입니다. 이름이 뭐예요?"
         }
       },
       "name-easy": {
@@ -3201,7 +3201,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "A small office in Guangzhou at 9 a.m. A colleague, Zhang Wei, chats by the water dispenser about the learner's daily routine.",
+    "setting": "The AI tutor plays a colleague. A small office in Guangzhou at 9 a.m. The colleague chats by the water dispenser about the learner's daily routine.",
     "tutorRole": "colleague",
     "canDo": [
       3
@@ -3229,7 +3229,7 @@
             "go": "t-up",
             "match": [
               "早上好",
-              "早上好张伟",
+              "早上好{tutor}",
               "你也早",
               "早"
             ]
@@ -3526,7 +3526,7 @@
       "en": "Where I live",
       "ko": "사는 곳"
     },
-    "setting": "The courtyard of an apartment complex in Wuhan in the evening. A friendly older neighbour, Auntie Zhao, chats with the learner, who moved in last week.",
+    "setting": "The AI tutor plays a friendly older neighbour. The courtyard of an apartment complex in Wuhan in the evening. The neighbour chats with the learner, who moved in last week.",
     "tutorRole": "neighbour",
     "canDo": [
       4
@@ -3697,7 +3697,7 @@
             "go": "t-park",
             "match": [
               "谢谢",
-              "谢谢阿姨",
+              "谢谢您",
               "好的谢谢"
             ]
           }
@@ -3722,7 +3722,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank her and say goodbye.",
+          "en": "Thank them and say goodbye.",
           "ko": "고맙다고 하고 인사하세요."
         },
         "frame": "zh-f1-20",
@@ -3731,7 +3731,7 @@
             "meaning": "says goodbye",
             "go": "t-end",
             "match": [
-              "谢谢阿姨再见",
+              "谢谢您再见",
               "再见",
               "明天见",
               "谢谢再见"
@@ -3743,7 +3743,7 @@
             "match": [
               "谢谢",
               "谢谢你",
-              "谢谢阿姨"
+              "谢谢您"
             ]
           }
         ],
@@ -3853,7 +3853,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall at a wet market in Xiamen in the morning. Prices are per jin (500 g), written on small cardboard signs.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall at a wet market in Xiamen in the morning. Prices are per jin (500 g), written on small cardboard signs.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -4180,7 +4180,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small bakery in a residential street in Tianjin at 8 a.m. Fresh buns and bread are on trays behind glass.",
+    "setting": "The AI tutor plays the baker. A small bakery in a residential street in Tianjin at 8 a.m. Fresh buns and bread are on trays behind glass.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4506,7 +4506,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A busy little noodle restaurant near an office building in Xi'an at lunchtime. The server comes to the table with a menu.",
+    "setting": "The AI tutor plays the server. A busy little noodle restaurant near an office building in Xi'an at lunchtime. The server comes to the table with a menu.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4917,7 +4917,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on a main road in Suzhou. The learner wants to go to the old town and asks a person waiting next to them.",
+    "setting": "The AI tutor plays a person waiting at the stop. A bus stop on a main road in Suzhou. The learner wants to go to the old town and asks the person waiting next to them.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5287,7 +5287,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "A ticket window at Shanghai Hongqiao Railway Station. The learner wants to go to Hangzhou today.",
+    "setting": "The AI tutor plays the ticket clerk. A ticket window at Shanghai Hongqiao Railway Station. The learner wants to go to Hangzhou today.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5737,7 +5737,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "Getting into a taxi outside a hotel in Beijing in the evening. The learner wants to go to Beijing Railway Station.",
+    "setting": "The AI tutor plays the taxi driver. Getting into a taxi outside a hotel in Beijing in the evening. The learner wants to go to Beijing Railway Station.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -5756,7 +5756,7 @@
         "type": "learner",
         "id": "l-dest",
         "goal": {
-          "en": "Ask him to take you to Beijing Station.",
+          "en": "Ask the driver to take you to Beijing Station.",
           "ko": "베이징역으로 가 달라고 하세요."
         },
         "frame": "zh-f1-13",
@@ -5934,7 +5934,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay, thank him and say goodbye.",
+          "en": "Pay, say thank you and say goodbye.",
           "ko": "돈을 내고 고맙다고 인사하세요."
         },
         "expect": [
@@ -6063,7 +6063,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A small pharmacy on a street corner in Qingdao. The learner has a headache and comes in.",
+    "setting": "The AI tutor plays the pharmacist. A small pharmacy on a street corner in Qingdao. The learner has a headache and comes in.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6444,7 +6444,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop in a shopping street in Harbin. The learner is looking at T-shirts.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop in a shopping street in Harbin. The learner is looking at T-shirts.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -6828,7 +6828,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-and-found desk at Guangzhou South Railway Station. The learner left a black backpack on the train this morning.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-and-found desk at Guangzhou South Railway Station. The learner left a black backpack on the train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       4
@@ -7267,7 +7267,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "A tourist information desk near the Bell Tower in Xi'an. The learner wants to know what to see.",
+    "setting": "The AI tutor plays the tourist-office staff member. A tourist information desk near the Bell Tower in Xi'an. The learner wants to know what to see.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       4
@@ -7590,7 +7590,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library in Shenyang. The learner, Ji-woo, wants a library card.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library in Shenyang. The learner, Ji-woo, wants a library card.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -8031,7 +8031,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception desk of a neighbourhood gym in Hangzhou on a weekday evening.",
+    "setting": "The AI tutor plays the gym staff member. The reception desk of a neighbourhood gym in Hangzhou on a weekday evening.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -8356,7 +8356,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수"
     },
-    "setting": "The registration desk of a community health clinic in Nanjing in the morning. The learner, Ji-woo, has a sore throat.",
+    "setting": "The AI tutor plays the receptionist. The registration desk of a community health clinic in Nanjing in the morning. The learner, Ji-woo, has a sore throat.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -8746,7 +8746,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The lift lobby of an apartment building in Dalian in the morning. A young neighbour, Sun Lei, meets the learner for the first time.",
+    "setting": "The AI tutor plays a young neighbour. The lift lobby of an apartment building in Dalian in the morning. The neighbour meets the learner for the first time.",
     "tutorRole": "neighbour",
     "canDo": [
       0
@@ -8764,7 +8764,7 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet him and say yes.",
+          "en": "Greet them and say yes.",
           "ko": "인사하고 네라고 하세요."
         },
         "frame": "zh-f1-01",
@@ -8809,7 +8809,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell him your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "zh-f1-02",
@@ -9042,17 +9042,17 @@
         }
       },
       "me": {
-        "text": "我叫孙磊，住八楼。你呢？",
+        "text": "我叫{tutor}，住八楼。你呢？",
         "gloss": {
-          "en": "I'm Sun Lei, I live on the eighth floor. And you?",
-          "ko": "난 쑨레이예요, 8층 살아요. 당신은요?"
+          "en": "I'm {tutor}, I live on the eighth floor. And you?",
+          "ko": "저는 {tutor}입니다. 8층 살아요. 당신은요?"
         }
       },
       "me-easy": {
-        "text": "我是孙磊。你叫什么？",
+        "text": "我是{tutor}。你叫什么？",
         "gloss": {
-          "en": "I'm Sun Lei. What's your name?",
-          "ko": "난 쑨레이예요. 이름이 뭐예요?"
+          "en": "I'm {tutor}. What's your name?",
+          "ko": "저는 {tutor}입니다. 이름이 뭐예요?"
         }
       },
       "floor": {
@@ -9130,7 +9130,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange meetup in a café in Shanghai on a Saturday afternoon. The learner, Ji-woo, sits with a partner, Lin Xiaomei, who is learning Korean.",
+    "setting": "The AI tutor plays a language-exchange partner who is learning Korean. A meetup in a café in Shanghai on a Saturday afternoon. The learner, Ji-woo, sits with them.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -9149,7 +9149,7 @@
         "type": "learner",
         "id": "l-yes",
         "goal": {
-          "en": "Say yes and greet her.",
+          "en": "Say yes and greet them.",
           "ko": "네라고 하고 인사하세요."
         },
         "frame": "zh-f1-01",
@@ -9194,7 +9194,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "zh-f1-02",
@@ -9426,10 +9426,10 @@
         }
       },
       "me": {
-        "text": "我叫林小美。你叫什么？",
+        "text": "我叫{tutor}。你叫什么？",
         "gloss": {
-          "en": "My name is Lin Xiaomei. What's yours?",
-          "ko": "나는 린샤오메이야. 너는 이름이 뭐야?"
+          "en": "My name is {tutor}. What's yours?",
+          "ko": "나 {tutor}. 너는 이름이 뭐야?"
         }
       },
       "me-easy": {
@@ -9514,7 +9514,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Chinese class at a language school in Beijing. The teacher has just given a short quiz and the learner has no pen. The tutor is the classmate in the next seat, Wang Hao.",
+    "setting": "The AI tutor plays the classmate in the next seat. A Chinese class at a language school in Beijing. The teacher has just given a short quiz and the learner has no pen.",
     "tutorRole": "classmate",
     "canDo": [
       5
@@ -9576,7 +9576,7 @@
         "type": "learner",
         "id": "l-thx",
         "goal": {
-          "en": "Thank him.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "expect": [
@@ -9663,13 +9663,13 @@
         "type": "learner",
         "id": "l-whose",
         "goal": {
-          "en": "It's not yours. Say it's his.",
-          "ko": "내 게 아니에요. 그의 것이라고 하세요."
+          "en": "It's not yours. Say it's theirs.",
+          "ko": "내 게 아니에요. 상대의 것이라고 하세요."
         },
         "frame": "zh-f1-18",
         "expect": [
           {
-            "meaning": "says it is his",
+            "meaning": "says it is the tutor's",
             "go": "t-mine",
             "match": [
               "这是你的",
@@ -9707,7 +9707,7 @@
         "type": "learner",
         "id": "l-wait",
         "goal": {
-          "en": "Ask him to wait a moment, you're still writing.",
+          "en": "Ask them to wait a moment, you're still writing.",
           "ko": "아직 쓰는 중이니 잠깐 기다려 달라고 하세요."
         },
         "frame": "zh-f1-13",
@@ -9752,7 +9752,7 @@
         "type": "learner",
         "id": "l-return",
         "goal": {
-          "en": "Give the pen back and thank him.",
+          "en": "Give the pen back and thank them.",
           "ko": "펜을 돌려주며 고맙다고 하세요."
         },
         "expect": [
@@ -9896,7 +9896,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "A phone call. The learner and a friend, A Jie, are meeting near Chunxi Road subway station in Chengdu but can't find each other.",
+    "setting": "The AI tutor plays a friend on the phone. The learner and the friend are meeting near Chunxi Road subway station in Chengdu but can't find each other.",
     "tutorRole": "friend on the phone",
     "canDo": [
       4,
@@ -9967,8 +9967,8 @@
         "type": "learner",
         "id": "l-exit",
         "goal": {
-          "en": "Say which exit you're at and ask where he is.",
-          "ko": "몇 번 출구인지 말하고 그는 어디 있는지 물어보세요."
+          "en": "Say which exit you're at and ask where they are.",
+          "ko": "몇 번 출구인지 말하고 상대는 어디 있는지 물어보세요."
         },
         "frame": "zh-f1-08",
         "expect": [
@@ -10011,7 +10011,7 @@
         "type": "learner",
         "id": "l-repeat",
         "goal": {
-          "en": "It was too fast. Ask him to say it again.",
+          "en": "It was too fast. Ask them to say it again.",
           "ko": "너무 빨랐어요. 다시 말해 달라고 하세요."
         },
         "frame": "zh-f1-13",
@@ -10309,7 +10309,7 @@
       "en": "Morning at work",
       "ko": "아침 출근"
     },
-    "setting": "The open-plan office of a small company in Beijing at 8:50 a.m. A friendly colleague, Li Na, greets the learner at the next desk.",
+    "setting": "The AI tutor plays a friendly colleague. The open-plan office of a small company in Beijing at 8:50 a.m. The colleague greets the learner at the next desk.",
     "tutorRole": "colleague",
     "canDo": [
       1
@@ -10647,7 +10647,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A Shanghai Metro station. The learner can't work out the ticket machine and asks a station staff member for help.",
+    "setting": "The AI tutor plays the station staff member. A Shanghai Metro station. The learner can't work out the ticket machine and asks for help.",
     "tutorRole": "station staff",
     "canDo": [
       5
@@ -11109,7 +11109,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The corridor outside a classroom at a university in Wuhan, just after a Chinese class. A classmate, Zhou Ting, walks out with the learner.",
+    "setting": "The AI tutor plays a classmate. The corridor outside a classroom at a university in Wuhan, just after a Chinese class. The classmate walks out with the learner.",
     "tutorRole": "classmate",
     "canDo": [
       1

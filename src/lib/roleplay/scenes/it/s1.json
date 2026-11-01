@@ -8,7 +8,7 @@
       "en": "Ordering at the bar",
       "ko": "바에서 주문하기"
     },
-    "setting": "A small Italian bar (café counter) near Piazza Navona in Rome, mid-morning, not busy. The tutor is the barista behind the counter; the learner has just walked in and is ordering for themselves and a friend.",
+    "setting": "The AI tutor plays the barista. A small Italian bar (café counter) near Piazza Navona in Rome, mid-morning, not busy. The barista is behind the counter; the learner has just walked in and is ordering for themselves and a friend.",
     "tutorRole": "barista",
     "canDo": [
       2,
@@ -419,7 +419,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "Piazza Duca d'Aosta, just outside Milano Centrale station, early afternoon. The learner has stopped a friendly local passer-by to ask the way to the metro.",
+    "setting": "The AI tutor plays a friendly local passer-by. Piazza Duca d'Aosta, just outside Milano Centrale station, early afternoon. The learner has stopped them to ask the way to the metro.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -742,7 +742,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small souvenir and leather shop near Ponte Vecchio in Florence, late morning. The tutor is the shop assistant. The learner wants a postcard and notices a small leather item next to the postcards.",
+    "setting": "The AI tutor plays the shop assistant. A small souvenir and leather shop near Ponte Vecchio in Florence, late morning. The learner wants a postcard and notices a small leather item next to the postcards.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1194,7 +1194,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small family-run hotel near the Rialto in Venice, early evening. The tutor is the receptionist. The learner has a booking for two nights under the name Kim.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small family-run hotel near the Rialto in Venice, early evening. The learner has a booking for two nights under the name Kim.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1628,7 +1628,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람과 인사"
     },
-    "setting": "The first evening of an Italian course for foreigners in Bologna, in the break before class starts. The tutor is Chiara, a friendly classmate from Naples who works as a museum guide.",
+    "setting": "The AI tutor plays a friendly classmate from Naples who works as a museum guide. The first evening of an Italian course for foreigners in Bologna, in the break before class starts.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1647,7 +1647,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say hello and tell her your name.",
+          "en": "Say hello and tell them your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "it-f1-01",
@@ -1658,7 +1658,7 @@
             "match": [
               "ciao, mi chiamo Minji",
               "mi chiamo Minji",
-              "ciao Chiara, mi chiamo Minji",
+              "ciao {tutor}, mi chiamo Minji",
               "piacere, mi chiamo Minji"
             ]
           },
@@ -1796,12 +1796,12 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask her the same question back.",
+          "en": "Ask them the same question back.",
           "ko": "그 사람에게도 같은 걸 되물어 보세요."
         },
         "expect": [
           {
-            "meaning": "asks what she does",
+            "meaning": "asks what they do",
             "go": "t-me",
             "match": [
               "e tu, cosa fai?",
@@ -1810,7 +1810,7 @@
             ]
           },
           {
-            "meaning": "asks where she is from",
+            "meaning": "asks where they are from",
             "go": "t-from-me",
             "match": [
               "e tu, di dove sei?",
@@ -1846,7 +1846,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Say it was nice to meet her.",
+          "en": "Say it was nice to meet them.",
           "ko": "만나서 반가웠다고 하세요."
         },
         "expect": [
@@ -1887,17 +1887,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Ciao! Io sono Chiara. E tu come ti chiami?",
+        "text": "Ciao! Io sono {tutor}. E tu come ti chiami?",
         "gloss": {
-          "en": "Hi! I'm Chiara. And what's your name?",
-          "ko": "안녕! 나는 키아라야. 너는 이름이 뭐야?"
+          "en": "Hi! I'm {tutor}. And what's your name?",
+          "ko": "안녕! 나는 {tutor}야. 너는 이름이 뭐야?"
         }
       },
       "hello-easy": {
-        "text": "Io sono Chiara. E tu?",
+        "text": "Io sono {tutor}. E tu?",
         "gloss": {
-          "en": "I'm Chiara. And you?",
-          "ko": "나는 키아라야. 너는?"
+          "en": "I'm {tutor}. And you?",
+          "ko": "나는 {tutor}야. 너는?"
         }
       },
       "from": {
@@ -2003,7 +2003,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend's flat in Turin on a Sunday afternoon. The tutor is Giulia, a friend, who is looking at a photo on the learner's phone: the learner's younger sister and a dog.",
+    "setting": "The AI tutor plays the learner's friend. A friend's flat in Turin on a Sunday afternoon. The friend is looking at a photo on the learner's phone: the learner's younger sister and a dog.",
     "tutorRole": "friend",
     "canDo": [],
     "start": "t-hello",
@@ -2175,7 +2175,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her the dog's name.",
+          "en": "Tell your friend the dog's name.",
           "ko": "개 이름을 알려 주세요."
         },
         "expect": [
@@ -2376,7 +2376,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "An aperitivo at a bar in the Navigli area of Milan, early evening. The tutor is Davide, a new friend from the learner's course. Small snacks come with the drinks.",
+    "setting": "The AI tutor plays a new friend from the learner's course. An aperitivo at a bar in the Navigli area of Milan, early evening. Small snacks come with the drinks.",
     "tutorRole": "new friend",
     "canDo": [],
     "start": "t-hello",
@@ -2769,7 +2769,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend outdoor club meeting at a lakeside park in Desenzano on Lake Garda, Saturday morning. The tutor is Paolo, a club member, who welcomes the learner on their first day.",
+    "setting": "The AI tutor plays a club member who welcomes the learner on their first day. A weekend outdoor club meeting at a lakeside park in Desenzano on Lake Garda, Saturday morning.",
     "tutorRole": "club member",
     "canDo": [
       0,
@@ -2788,7 +2788,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say hi and tell him your name.",
+          "en": "Say hi and tell them your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "it-f1-01",
@@ -2800,7 +2800,7 @@
               "ciao, mi chiamo Minji",
               "mi chiamo Minji",
               "sì, mi chiamo Minji",
-              "ciao Paolo, mi chiamo Minji"
+              "ciao {tutor}, mi chiamo Minji"
             ]
           },
           {
@@ -3042,17 +3042,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Ciao! È la prima volta nel gruppo? Io sono Paolo.",
+        "text": "Ciao! È la prima volta nel gruppo? Io sono {tutor}.",
         "gloss": {
-          "en": "Hi! Is it your first time in the group? I'm Paolo.",
-          "ko": "안녕! 모임에 처음 왔어? 나는 파올로야."
+          "en": "Hi! Is it your first time in the group? I'm {tutor}.",
+          "ko": "안녕! 모임에 처음 왔어? 나는 {tutor}야."
         }
       },
       "hello-easy": {
-        "text": "Io sono Paolo. E tu come ti chiami?",
+        "text": "Io sono {tutor}. E tu come ti chiami?",
         "gloss": {
-          "en": "I'm Paolo. And what's your name?",
-          "ko": "나는 파올로야. 너는 이름이 뭐야?"
+          "en": "I'm {tutor}. And what's your name?",
+          "ko": "나는 {tutor}야. 너는 이름이 뭐야?"
         }
       },
       "name": {
@@ -3165,7 +3165,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "The coffee machine in a small office in Milan at 8:45 a.m. The tutor is Sara, a colleague, chatting before work starts.",
+    "setting": "The AI tutor plays a colleague. The coffee machine in a small office in Milan at 8:45 a.m., chatting before work starts.",
     "tutorRole": "colleague",
     "canDo": [
       4
@@ -3496,7 +3496,7 @@
       "en": "Where I live",
       "ko": "사는 동네"
     },
-    "setting": "The entrance hall of an apartment building in Padua, early evening. The tutor is Signora Bruni, an older neighbour who meets the learner for the first time by the letterboxes.",
+    "setting": "The AI tutor plays an older neighbour meeting the learner for the first time by the letterboxes. The entrance hall of an apartment building in Padua, early evening.",
     "tutorRole": "neighbour",
     "canDo": [
       1,
@@ -3516,19 +3516,21 @@
         "type": "learner",
         "id": "l-hello",
         "goal": {
-          "en": "Greet her politely and say yes.",
+          "en": "Greet your neighbour politely and say yes.",
           "ko": "정중하게 인사하고 그렇다고 하세요."
         },
         "frame": "it-f1-18",
         "expect": [
           {
-            "meaning": "greets her politely",
+            "meaning": "greets politely",
             "go": "t-work",
             "match": [
               "buonasera, signora!",
+              "buonasera, signore!",
               "sì, buonasera, signora",
-              "buonasera, signora, sì",
-              "salve, signora"
+              "sì, buonasera, signore",
+              "buonasera!",
+              "salve"
             ]
           },
           {
@@ -3717,23 +3719,23 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the information.",
+          "en": "Thank them for the information.",
           "ko": "알려 줘서 고맙다고 하세요."
         },
         "frame": "it-f1-14",
         "expect": [
           {
-            "meaning": "thanks her for the help",
+            "meaning": "thanks them for the help",
             "go": "t-end",
             "match": [
               "grazie per l'aiuto",
               "grazie per le informazioni",
               "grazie mille per l'aiuto",
-              "grazie per tutto, signora"
+              "grazie per tutto"
             ]
           },
           {
-            "meaning": "asks her to repeat",
+            "meaning": "asks them to repeat",
             "go": "l-thanks-again",
             "match": [
               "può ripetere, per favore?",
@@ -3774,10 +3776,10 @@
         }
       },
       "work": {
-        "text": "Piacere, io sono la signora Bruni. Lei lavora qui a Padova?",
+        "text": "Piacere, io sono {tutor}. Lei lavora qui a Padova?",
         "gloss": {
-          "en": "Nice to meet you, I'm Mrs Bruni. Do you work here in Padua?",
-          "ko": "반가워요, 나는 브루니예요. 여기 파도바에서 일해요?"
+          "en": "Nice to meet you, I'm {tutor}. Do you work here in Padua?",
+          "ko": "반가워요, 나는 {tutor}예요. 여기 파도바에서 일해요?"
         }
       },
       "work-easy": {
@@ -3876,7 +3878,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "A fruit stall at the Ballarò street market in Palermo, late morning. The tutor is the stall owner, calling out to customers; the learner wants oranges.",
+    "setting": "The AI tutor plays the stall owner, calling out to customers. A fruit stall at the Ballarò street market in Palermo, late morning. The learner wants oranges.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -4218,7 +4220,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small bakery (panificio) in the centre of Genoa at 8 a.m. Focaccia is in the window and canestrelli biscuits are on the counter. The tutor is the baker.",
+    "setting": "The AI tutor plays the baker. A small bakery (panificio) in the centre of Genoa at 8 a.m. Focaccia is in the window and canestrelli biscuits are on the counter.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4591,7 +4593,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A busy trattoria in Trastevere, Rome, at 1 p.m. The tutor is the waiter. The learner sits at a small table and orders a quick lunch.",
+    "setting": "The AI tutor plays the server. A busy trattoria in Trastevere, Rome, at 1 p.m. The learner sits at a small table and orders a quick lunch.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -5076,7 +5078,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on Corso Vittorio Emanuele in Naples, late afternoon. The tutor is a local woman waiting for the bus. The learner wants to go to the Museo Archeologico.",
+    "setting": "The AI tutor plays a local waiting for the bus. A bus stop on Corso Vittorio Emanuele in Naples, late afternoon. The learner wants to go to the Museo Archeologico.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5116,6 +5118,7 @@
             "match": [
               "scusi",
               "scusi, signora",
+              "scusi, signore",
               "mi scusi"
             ]
           }
@@ -5147,7 +5150,7 @@
         "type": "learner",
         "id": "l-number",
         "goal": {
-          "en": "You didn't catch the number. Ask her to repeat it.",
+          "en": "You didn't catch the number. Ask them to repeat it.",
           "ko": "번호를 못 들었어요. 번호를 다시 말해 달라고 하세요."
         },
         "frame": "it-f1-13",
@@ -5333,18 +5336,18 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the help.",
+          "en": "Thank them for the help.",
           "ko": "도와줘서 고맙다고 하세요."
         },
         "frame": "it-f1-14",
         "expect": [
           {
-            "meaning": "thanks her for the help",
+            "meaning": "thanks them for the help",
             "go": "t-end",
             "match": [
               "grazie per l'aiuto",
               "grazie mille per l'aiuto",
-              "grazie per l'aiuto, signora",
+              "grazie per l'aiuto, molto gentile",
               "grazie di tutto"
             ]
           },
@@ -5471,7 +5474,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket window at Firenze Santa Maria Novella station, mid-morning. The tutor is the ticket clerk. The learner wants to go to Pisa for the day.",
+    "setting": "The AI tutor plays the ticket clerk. The ticket window at Firenze Santa Maria Novella station, mid-morning. The learner wants to go to Pisa for the day.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5858,7 +5861,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A white taxi outside Napoli Centrale station, evening. The tutor is a chatty Neapolitan taxi driver. The learner is going to Hotel Santa Lucia on the seafront.",
+    "setting": "The AI tutor plays a chatty Neapolitan taxi driver. A white taxi outside Napoli Centrale station, evening. The learner is going to Hotel Santa Lucia on the seafront.",
     "tutorRole": "taxi driver",
     "canDo": [
       0,
@@ -6268,7 +6271,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A pharmacy with a green cross in the centre of Verona, morning. The tutor is the pharmacist. The learner has had a headache since yesterday.",
+    "setting": "The AI tutor plays the pharmacist. A pharmacy with a green cross in the centre of Verona, morning. The learner has had a headache since yesterday.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6669,7 +6672,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop on Via del Corso in Rome, Saturday afternoon. The tutor is the shop assistant. The learner is looking at a blue jumper in the window.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop on Via del Corso in Rome, Saturday afternoon. The learner is looking at a blue jumper in the window.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -7088,7 +7091,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-property office (Oggetti smarriti) at Roma Termini station, afternoon. The tutor is the clerk behind the counter. The learner left a black backpack on a train this morning.",
+    "setting": "The AI tutor plays the lost-property clerk behind the counter. The lost-property office (Oggetti smarriti) at Roma Termini station, afternoon. The learner left a black backpack on a train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       4,
@@ -7494,7 +7497,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The tourist information office on Piazza del Campo in Siena, morning. The tutor is the friendly staff member behind the desk with maps.",
+    "setting": "The AI tutor plays a friendly tourist-office staff member behind the desk with maps. The tourist information office on Piazza del Campo in Siena, morning.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7823,7 +7826,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of the Biblioteca Sala Borsa, the public library in Bologna, afternoon. The tutor is the librarian who registers the learner for a free card.",
+    "setting": "The AI tutor plays the librarian who registers the learner for a free card. The front desk of the Biblioteca Sala Borsa, the public library in Bologna, afternoon.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7895,7 +7898,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your full name.",
+          "en": "Tell them your full name.",
           "ko": "이름을 성까지 말하세요."
         },
         "frame": "it-f1-01",
@@ -8073,7 +8076,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the card.",
+          "en": "Thank them for the card.",
           "ko": "카드 고맙다고 하세요."
         },
         "frame": "it-f1-14",
@@ -8225,7 +8228,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a neighbourhood gym in Turin, early evening. The tutor is Marco, a young staff member who uses tu with customers.",
+    "setting": "The AI tutor plays a young gym staff member who uses tu with customers. The reception of a neighbourhood gym in Turin, early evening.",
     "tutorRole": "gym staff",
     "canDo": [
       1,
@@ -8576,7 +8579,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "The reception desk of a small medical clinic (poliambulatorio) in Bari, morning. The tutor is the receptionist. The learner has an appointment and it is their first visit.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a small medical clinic (poliambulatorio) in Bari, morning. The learner has an appointment and it is their first visit.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -9015,7 +9018,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃과 인사"
     },
-    "setting": "The staircase of an old apartment building in Trieste, Sunday morning. The tutor is Signor Rossi, an elderly neighbour coming down with his newspaper.",
+    "setting": "The AI tutor plays an elderly neighbour from the first floor, coming down with a newspaper. The staircase of an old apartment building in Trieste, Sunday morning.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -9034,7 +9037,7 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet him politely: it's morning.",
+          "en": "Greet your neighbour politely: it's morning.",
           "ko": "아침이니까 정중하게 인사하세요."
         },
         "expect": [
@@ -9044,6 +9047,7 @@
             "match": [
               "buongiorno",
               "buongiorno, signore",
+              "buongiorno, signora",
               "salve, buongiorno",
               "buongiorno, no"
             ]
@@ -9078,7 +9082,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell him your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말하세요."
         },
         "frame": "it-f1-01",
@@ -9224,7 +9228,7 @@
               "arrivederci, a presto!",
               "grazie, a presto!",
               "buona giornata, a presto",
-              "a presto, signor Rossi"
+              "a presto, {tutor}"
             ]
           },
           {
@@ -9262,17 +9266,17 @@
         }
       },
       "hello-easy": {
-        "text": "Lei abita qui? Io sono il signor Rossi.",
+        "text": "Lei abita qui? Io sono {tutor}.",
         "gloss": {
-          "en": "Do you live here? I'm Mr Rossi.",
-          "ko": "여기 사세요? 나는 로시예요."
+          "en": "Do you live here? I'm {tutor}.",
+          "ko": "여기 사세요? 나는 {tutor}예요."
         }
       },
       "name": {
-        "text": "Io sono Rossi, del primo piano. Lei come si chiama?",
+        "text": "Io sono {tutor}, del primo piano. Lei come si chiama?",
         "gloss": {
-          "en": "I'm Rossi, from the first floor. What's your name?",
-          "ko": "나는 1층 로시예요. 이름이 어떻게 돼요?"
+          "en": "I'm {tutor}, from the first floor. What's your name?",
+          "ko": "나는 1층 사는 {tutor}예요. 이름이 어떻게 돼요?"
         }
       },
       "name-easy": {
@@ -9343,7 +9347,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange evening in a café in Perugia, near the University for Foreigners. The tutor is Luca, an Italian student who wants to learn Korean.",
+    "setting": "The AI tutor plays an Italian student who wants to learn Korean. A language-exchange evening in a café in Perugia, near the University for Foreigners.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -9363,7 +9367,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say yes and tell him your name.",
+          "en": "Say yes and tell them your name.",
           "ko": "네라고 하고 이름을 말하세요."
         },
         "frame": "it-f1-01",
@@ -9373,7 +9377,7 @@
             "go": "t-langs",
             "match": [
               "sì! mi chiamo Minji",
-              "ciao Luca, mi chiamo Minji",
+              "ciao {tutor}, mi chiamo Minji",
               "mi chiamo Minji, piacere",
               "mi chiamo Minji"
             ]
@@ -9586,7 +9590,7 @@
         "type": "learner",
         "id": "l-teach",
         "goal": {
-          "en": "Teach him the Korean word.",
+          "en": "Teach them the Korean word.",
           "ko": "한국어 단어를 알려 주세요."
         },
         "expect": [
@@ -9601,7 +9605,7 @@
             ]
           },
           {
-            "meaning": "asks him to repeat",
+            "meaning": "asks them to repeat",
             "go": "l-teach-again",
             "match": [
               "puoi ripetere?",
@@ -9628,17 +9632,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Ciao! Sei qui per lo scambio linguistico? Io sono Luca.",
+        "text": "Ciao! Sei qui per lo scambio linguistico? Io sono {tutor}.",
         "gloss": {
-          "en": "Hi! Are you here for the language exchange? I'm Luca.",
-          "ko": "안녕! 언어 교환하러 왔어? 나는 루카야."
+          "en": "Hi! Are you here for the language exchange? I'm {tutor}.",
+          "ko": "안녕! 언어 교환하러 왔어? 나는 {tutor}야."
         }
       },
       "hello-easy": {
-        "text": "Ciao, sono Luca. Tu come ti chiami?",
+        "text": "Ciao, sono {tutor}. Tu come ti chiami?",
         "gloss": {
-          "en": "Hi, I'm Luca. What's your name?",
-          "ko": "안녕, 나는 루카야. 너는 이름이 뭐야?"
+          "en": "Hi, I'm {tutor}. What's your name?",
+          "ko": "안녕, 나는 {tutor}야. 너는 이름이 뭐야?"
         }
       },
       "langs": {
@@ -9730,7 +9734,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "An Italian language class at a school in Florence, mid-lesson. The tutor is Elena, the classmate sitting next to the learner. The learner's pen has run out.",
+    "setting": "The AI tutor plays the classmate sitting next to the learner. An Italian language class at a school in Florence, mid-lesson. The learner's pen has run out.",
     "tutorRole": "classmate",
     "canDo": [
       4,
@@ -9801,7 +9805,7 @@
         "type": "learner",
         "id": "l-ok",
         "goal": {
-          "en": "Say yes, that's fine, and thank her.",
+          "en": "Say yes, that's fine, and thank them.",
           "ko": "괜찮다고 하고 고맙다고 하세요."
         },
         "frame": "it-f1-14",
@@ -9935,7 +9939,7 @@
         "type": "learner",
         "id": "l-return",
         "goal": {
-          "en": "Give it back: say no, thanks, here's her pen.",
+          "en": "Give it back: say no, thanks, here's your pen.",
           "ko": "돌려주세요. 됐다고, 여기 네 펜이라고 하세요."
         },
         "expect": [
@@ -9997,7 +10001,7 @@
             "match": [
               "ciao, a presto!",
               "grazie, a presto!",
-              "ciao Elena, a presto",
+              "ciao {tutor}, a presto",
               "a presto!"
             ]
           },
@@ -10124,7 +10128,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Outside Bologna Centrale station, early evening. The learner is meeting their friend Matteo but they can't find each other, so Matteo calls on the phone. It is noisy with traffic.",
+    "setting": "The AI tutor plays the learner's friend, calling on the phone. Outside Bologna Centrale station, early evening. They are meeting but can't find each other. It is noisy with traffic.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -10239,7 +10243,7 @@
         "type": "learner",
         "id": "l-repeat",
         "goal": {
-          "en": "It's noisy: ask him to repeat, please.",
+          "en": "It's noisy: ask them to repeat, please.",
           "ko": "시끄러워요. 다시 말해 달라고 부탁하세요."
         },
         "frame": "it-f1-13",
@@ -10466,7 +10470,7 @@
       "en": "Morning at work",
       "ko": "아침 출근길"
     },
-    "setting": "The entrance of a design office in Milan at 9 a.m. The tutor is Federico, a friendly colleague arriving at the same time. They use tu.",
+    "setting": "The AI tutor plays a friendly colleague arriving at the same time. The entrance of a design office in Milan at 9 a.m. They use tu.",
     "tutorRole": "colleague",
     "canDo": [
       4
@@ -10484,8 +10488,8 @@
         "type": "learner",
         "id": "l-how",
         "goal": {
-          "en": "Say you're fine, and ask how he is.",
-          "ko": "잘 지낸다고 하고 그는 어떤지 물어보세요."
+          "en": "Say you're fine, and ask how they are.",
+          "ko": "잘 지낸다고 하고 상대는 어떤지 물어보세요."
         },
         "expect": [
           {
@@ -10702,6 +10706,14 @@
         "gloss": {
           "en": "Good! I'm a bit tired, there was the match last night.",
           "ko": "다행이다! 나는 좀 피곤해, 어제 저녁에 경기가 있었거든."
+        },
+        "byTutor": {
+          "f": {
+            "text": "Bene! Io sono un po' stanca, ieri sera c'era la partita."
+          },
+          "m": {
+            "text": "Bene! Io sono un po' stanco, ieri sera c'era la partita."
+          }
         }
       },
       "tired": {
@@ -10709,6 +10721,14 @@
         "gloss": {
           "en": "I'm tired too! There was the match last night.",
           "ko": "나도 피곤해! 어제 저녁에 경기가 있었거든."
+        },
+        "byTutor": {
+          "f": {
+            "text": "Anch'io sono stanca! Ieri sera c'era la partita."
+          },
+          "m": {
+            "text": "Anch'io sono stanco! Ieri sera c'era la partita."
+          }
         }
       },
       "coffee": {
@@ -10786,7 +10806,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A ticket machine in the hall of Venezia Santa Lucia station, morning. The screen is in Italian and the learner can't buy a ticket. The tutor is a railway staff member in uniform.",
+    "setting": "The AI tutor plays a railway staff member in uniform. A ticket machine in the hall of Venezia Santa Lucia station, morning. The screen is in Italian and the learner can't buy a ticket.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -11166,7 +11186,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The front steps of a language school in Rome after the Thursday evening Italian class. The tutor is Andrea, a classmate from Spain, who chats for a minute before leaving. They use tu.",
+    "setting": "The AI tutor plays a classmate from Spain who chats for a minute before leaving. The front steps of a language school in Rome after the Thursday evening Italian class. They use tu.",
     "tutorRole": "classmate",
     "canDo": [
       0,
@@ -11386,7 +11406,7 @@
             "go": "t-end",
             "match": [
               "ciao, a presto!",
-              "ciao Andrea, a presto!",
+              "ciao {tutor}, a presto!",
               "va bene, a presto!",
               "a presto!"
             ]

@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small independent coffee shop in Seattle, mid-morning, not busy. The tutor is the barista; the learner has just walked up to the counter. US English, prices in dollars.",
+    "setting": "The AI tutor plays the barista. A small independent coffee shop in Seattle, mid-morning, not busy; the learner has just walked up to the counter. US English, prices in dollars.",
     "tutorRole": "barista",
     "canDo": [
       2
@@ -365,7 +365,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street outside King's Cross in London, early afternoon. The learner stops a friendly passer-by to ask the way to the British Library. UK English.",
+    "setting": "The AI tutor plays a friendly passer-by. A busy street outside King's Cross in London, early afternoon; the learner stops the tutor to ask the way to the British Library. UK English.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -711,7 +711,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small stationery and gift shop in San Francisco, quiet afternoon. The tutor is the shop assistant. The learner wants a notebook. US English, dollars.",
+    "setting": "The AI tutor plays the shop assistant. A small stationery and gift shop in San Francisco, quiet afternoon. The learner wants a notebook. US English, dollars.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -1128,7 +1128,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hotel in Edinburgh, early evening. The tutor is the receptionist. The learner has a booking for two nights. UK English.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small hotel in Edinburgh, early evening. The learner has a booking for two nights. UK English.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1535,7 +1535,7 @@
       "en": "Meeting someone new",
       "ko": "새로운 사람 만나기"
     },
-    "setting": "The first evening of an English conversation class at a community college in Chicago. The tutor, Emma, is a friendly classmate sitting next to the learner. US English, casual.",
+    "setting": "The AI tutor plays a friendly classmate. The first evening of an English conversation class at a community college in Chicago; the tutor sits next to the learner. US English, casual.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1566,7 +1566,7 @@
               "my name is Ji-woo",
               "hi, my name is Ji-woo. nice to meet you",
               "yes! my name is Ji-woo",
-              "hi Emma, my name is Ji-woo"
+              "hi {tutor}, my name is Ji-woo"
             ]
           },
           {
@@ -1643,7 +1643,7 @@
         "type": "learner",
         "id": "l-from",
         "goal": {
-          "en": "Say your home country and ask hers.",
+          "en": "Say your home country and ask theirs.",
           "ko": "어느 나라 사람인지 말하고 상대에게도 물어보세요."
         },
         "frame": "en-f1-02",
@@ -1688,12 +1688,12 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask her the same question.",
+          "en": "Ask them the same question.",
           "ko": "상대에게 같은 걸 물어보세요."
         },
         "expect": [
           {
-            "meaning": "asks where she is from",
+            "meaning": "asks where they are from",
             "go": "t-me-canada",
             "match": [
               "where are you from?",
@@ -1784,7 +1784,7 @@
         "type": "learner",
         "id": "l-work",
         "goal": {
-          "en": "Say where you work, then ask what she does.",
+          "en": "Say where you work, then ask what they do.",
           "ko": "어디서 일하는지 말하고 상대 직업을 물어보세요."
         },
         "frame": "en-f1-04",
@@ -1840,7 +1840,7 @@
             "match": [
               "see you later",
               "okay, see you later",
-              "cool. see you later, Emma"
+              "cool. see you later, {tutor}"
             ]
           },
           {
@@ -1871,17 +1871,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Hi! I'm Emma. Is this your first class too?",
+        "text": "Hi! I'm {tutor}. Is this your first class too?",
         "gloss": {
-          "en": "Hi! I'm Emma. Is this your first class too?",
-          "ko": "안녕! 난 에마야. 너도 첫 수업이야?"
+          "en": "Hi! I'm {tutor}. Is this your first class too?",
+          "ko": "안녕! 내 이름은 {tutor}야. 너도 첫 수업이야?"
         }
       },
       "hello-easy": {
-        "text": "Hi! I'm Emma. And you?",
+        "text": "Hi! I'm {tutor}. And you?",
         "gloss": {
-          "en": "Hi! I'm Emma. And you?",
-          "ko": "안녕! 난 에마. 너는?"
+          "en": "Hi! I'm {tutor}. And you?",
+          "ko": "안녕! 내 이름은 {tutor}야. 너는?"
         }
       },
       "where": {
@@ -1994,7 +1994,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A student café in Manchester. The tutor, Olivia, is a friend looking at a family photo on the learner's phone. UK English, casual.",
+    "setting": "The AI tutor plays a friend. A student café in Manchester; the tutor is looking at a family photo on the learner's phone. UK English, casual.",
     "tutorRole": "friend",
     "canDo": [
       1
@@ -2012,7 +2012,7 @@
         "type": "learner",
         "id": "l-who",
         "goal": {
-          "en": "Tell her who he is.",
+          "en": "Say who the man in the photo is.",
           "ko": "이 남자는 아빠라고 하세요."
         },
         "expect": [
@@ -2056,7 +2056,7 @@
         "type": "learner",
         "id": "l-have",
         "goal": {
-          "en": "Say how many siblings you have, then ask hers.",
+          "en": "Say how many siblings you have, then ask theirs.",
           "ko": "형제자매가 몇 명인지 말하고 상대에게도 물어보세요."
         },
         "frame": "en-f1-18",
@@ -2168,7 +2168,7 @@
         "type": "learner",
         "id": "l-pet",
         "goal": {
-          "en": "Tell her whose dog it is.",
+          "en": "Say whose dog it is.",
           "ko": "그 개는 엄마 개라고 하세요."
         },
         "expect": [
@@ -2364,7 +2364,7 @@
       "en": "What I like",
       "ko": "내가 좋아하는 것"
     },
-    "setting": "A taco place in Austin, two new friends sharing chips and drinks after a meetup. The tutor, Jake, is friendly and chatty. US English, casual.",
+    "setting": "The AI tutor plays a new friend, friendly and chatty. A taco place in Austin, two new friends sharing chips and drinks after a meetup. US English, casual.",
     "tutorRole": "new friend",
     "canDo": [
       1
@@ -2562,12 +2562,12 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask what he enjoys doing.",
+          "en": "Ask what they enjoy doing.",
           "ko": "상대는 뭘 좋아하는지 물어보세요."
         },
         "expect": [
           {
-            "meaning": "asks what he likes",
+            "meaning": "asks what they like",
             "go": "t-you",
             "match": [
               "what do you like?",
@@ -2606,7 +2606,7 @@
         "type": "learner",
         "id": "l-end",
         "goal": {
-          "en": "Agree that you share one of his interests.",
+          "en": "Agree that you share one of their interests.",
           "ko": "동의하며 자기도 영화 좋아한다고 하세요."
         },
         "expect": [
@@ -2749,7 +2749,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend community sports and hobby club in Bristol, sign-up day. The tutor, Sam, is a club member chatting with the learner. UK English, friendly.",
+    "setting": "The AI tutor plays a club member chatting with the learner. A weekend community sports and hobby club in Bristol, sign-up day. UK English, friendly.",
     "tutorRole": "club member",
     "canDo": [
       4,
@@ -2864,7 +2864,7 @@
         "type": "learner",
         "id": "l-cook",
         "goal": {
-          "en": "Say yes, you're able to, then ask about him.",
+          "en": "Say yes, you're able to, then ask about them.",
           "ko": "요리할 줄 안다고 하고 상대에게도 물어보세요."
         },
         "frame": "en-f1-11",
@@ -3039,7 +3039,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "The kitchen area of an office in Boston, 8:45 a.m. The tutor, Rachel, is a colleague making tea and chatting. US English, friendly.",
+    "setting": "The AI tutor plays a colleague making tea and chatting. The kitchen area of an office in Boston, 8:45 a.m. US English, friendly.",
     "tutorRole": "colleague",
     "canDo": [
       4
@@ -3068,7 +3068,7 @@
               "good morning",
               "morning! how are you?",
               "hi, good morning",
-              "good morning, Rachel"
+              "good morning, {tutor}"
             ]
           },
           {
@@ -3101,7 +3101,7 @@
         "type": "learner",
         "id": "l-up",
         "goal": {
-          "en": "Tell her your usual wake-up time.",
+          "en": "Tell them your usual wake-up time.",
           "ko": "보통 몇 시에 일어나는지 말하세요."
         },
         "frame": "en-f1-14",
@@ -3358,7 +3358,7 @@
       "en": "Where I live",
       "ko": "내가 사는 곳"
     },
-    "setting": "The front steps of a block of flats in Leeds on a Saturday morning. The tutor, Margaret, is an older neighbour who has just moved in downstairs. UK English, warm.",
+    "setting": "The AI tutor plays a neighbour who has just moved in downstairs. The front steps of a block of flats in Leeds on a Saturday morning. UK English, warm.",
     "tutorRole": "neighbour",
     "canDo": [
       3
@@ -3420,7 +3420,7 @@
         "type": "learner",
         "id": "l-shop",
         "goal": {
-          "en": "Tell her where the shop is, using a landmark nearby.",
+          "en": "Tell them where the shop is, using a landmark nearby.",
           "ko": "은행을 기준으로 가게 위치를 알려 주세요."
         },
         "frame": "en-f1-08",
@@ -3684,7 +3684,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor farmers' market in Portland, Oregon, on a sunny Saturday. The tutor is the stall owner selling oranges and apples. US English, dollars.",
+    "setting": "The AI tutor plays the stall owner selling oranges and apples. An outdoor farmers' market in Portland, Oregon, on a sunny Saturday. US English, dollars.",
     "tutorRole": "stall owner",
     "canDo": [
       2
@@ -3975,7 +3975,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small family bakery in York, early morning, the smell of fresh bread. The tutor is the baker behind the counter. UK English, pounds.",
+    "setting": "The AI tutor plays the baker behind the counter. A small family bakery in York, early morning, the smell of fresh bread. UK English, pounds.",
     "tutorRole": "baker",
     "canDo": [
       2
@@ -4314,7 +4314,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small diner in Philadelphia at lunchtime, a booth by the window. The tutor is the server. US English, dollars.",
+    "setting": "The AI tutor plays the server. A small diner in Philadelphia at lunchtime, a booth by the window. US English, dollars.",
     "tutorRole": "server",
     "canDo": [
       2
@@ -4559,7 +4559,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay and thank her.",
+          "en": "Pay and say thank you.",
           "ko": "돈을 내고 고맙다고 하세요."
         },
         "expect": [
@@ -4723,7 +4723,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on a high street in Brighton, cloudy morning. The tutor is a local person waiting for the bus. UK English.",
+    "setting": "The AI tutor plays a local person waiting for the bus. A bus stop on a high street in Brighton, cloudy morning. UK English.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5059,7 +5059,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket office at London Paddington station, mid-morning. The tutor is the ticket clerk behind the window. UK English, pounds.",
+    "setting": "The AI tutor plays the ticket clerk behind the window. The ticket office at London Paddington station, mid-morning. UK English, pounds.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2
@@ -5447,7 +5447,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "Getting into a yellow taxi outside a hotel in New York City, late afternoon. The tutor is the taxi driver. US English, dollars.",
+    "setting": "The AI tutor plays the taxi driver. Getting into a yellow taxi outside a hotel in New York City, late afternoon. US English, dollars.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -5597,7 +5597,7 @@
         "type": "learner",
         "id": "l-from",
         "goal": {
-          "en": "Say your home country and ask about his.",
+          "en": "Say your home country and ask about theirs.",
           "ko": "어느 나라에서 왔는지 말하고 기사에게도 물어보세요."
         },
         "frame": "en-f1-02",
@@ -5828,7 +5828,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A high-street pharmacy in Cardiff, late morning. The tutor is the pharmacist at the counter. The learner has had a headache since yesterday. UK English, pounds.",
+    "setting": "The AI tutor plays the pharmacist at the counter. A high-street pharmacy in Cardiff, late morning. The learner has had a headache since yesterday. UK English, pounds.",
     "tutorRole": "pharmacist",
     "canDo": [
       2
@@ -6159,7 +6159,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothing store in a Los Angeles shopping mall, Saturday afternoon. The tutor is a shop assistant. US English, dollars.",
+    "setting": "The AI tutor plays a shop assistant. A clothing store in a Los Angeles shopping mall, Saturday afternoon. US English, dollars.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -6529,7 +6529,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost property office at Manchester Piccadilly station, afternoon. The tutor is the clerk behind the desk. The learner left a bag on a train this morning. UK English.",
+    "setting": "The AI tutor plays the lost-property clerk behind the desk. The lost property office at Manchester Piccadilly station, afternoon. The learner left a bag on a train this morning. UK English.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3
@@ -6912,7 +6912,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The visitor information center in Washington, D.C., near the National Mall, morning. The tutor is the staff member at the desk. US English.",
+    "setting": "The AI tutor plays the staff member at the desk. The visitor information center in Washington, D.C., near the National Mall, morning. US English.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3
@@ -7193,7 +7193,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library in Glasgow, quiet weekday afternoon. The tutor is the librarian. UK English, polite and calm.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library in Glasgow, quiet weekday afternoon. UK English, polite and calm.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7300,7 +7300,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "That was fast. Ask her to slow down.",
+          "en": "That was fast. Ask them to slow down.",
           "ko": "너무 빨랐어요. 천천히 말해 달라고 하세요."
         },
         "frame": "en-f1-13",
@@ -7583,7 +7583,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception desk of a neighbourhood gym in Denver, early evening. The tutor is the gym staff member. US English, dollars.",
+    "setting": "The AI tutor plays the gym staff member. The reception desk of a neighbourhood gym in Denver, early evening. US English, dollars.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -7943,7 +7943,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "The reception desk of a GP surgery (local doctor's clinic) in Birmingham, morning. The tutor is the receptionist. UK English.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a GP surgery (local doctor's clinic) in Birmingham, morning. UK English.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -8101,7 +8101,7 @@
         "type": "learner",
         "id": "l-form",
         "goal": {
-          "en": "You didn't follow. Ask her to repeat it.",
+          "en": "You didn't follow. Ask them to repeat it.",
           "ko": "못 알아들었어요. 다시 말해 달라고 하세요."
         },
         "frame": "en-f1-13",
@@ -8190,7 +8190,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank her.",
+          "en": "Say thank you.",
           "ko": "고맙다고 하세요."
         },
         "expect": [
@@ -8333,7 +8333,7 @@
       "en": "Meeting a neighbor",
       "ko": "이웃 만나기"
     },
-    "setting": "The lobby of an apartment building in Minneapolis, waiting for the elevator in the evening. The tutor, Dave, is a neighbor who has never met the learner. US English, friendly.",
+    "setting": "The AI tutor plays a neighbor who has never met the learner. The lobby of an apartment building in Minneapolis, waiting for the elevator in the evening. US English, friendly.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8364,7 +8364,7 @@
             "match": [
               "hi, my name is Ji-woo",
               "my name is Ji-woo. nice to meet you",
-              "hi Dave, my name is Ji-woo",
+              "hi {tutor}, my name is Ji-woo",
               "nice to meet you. my name is Ji-woo"
             ]
           },
@@ -8374,7 +8374,7 @@
             "match": [
               "hi",
               "nice to meet you",
-              "hello, Dave"
+              "hello, {tutor}"
             ]
           }
         ],
@@ -8449,7 +8449,7 @@
         "type": "learner",
         "id": "l-from",
         "goal": {
-          "en": "Say your home country, then ask him the same.",
+          "en": "Say your home country, then ask them the same.",
           "ko": "어느 나라에서 왔는지 말하고 상대에게도 같은 걸 물어보세요."
         },
         "frame": "en-f1-02",
@@ -8554,7 +8554,7 @@
             "match": [
               "see you later",
               "you too. see you",
-              "see you tomorrow, Dave",
+              "see you tomorrow, {tutor}",
               "good night. see you later"
             ]
           },
@@ -8586,17 +8586,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Hey, I don't think we've met. I'm Dave, from 5B.",
+        "text": "Hey, I don't think we've met. I'm {tutor}, from 5B.",
         "gloss": {
-          "en": "Hey, I don't think we've met. I'm Dave, from 5B.",
-          "ko": "안녕하세요, 처음 뵙는 것 같네요. 5B 사는 데이브예요."
+          "en": "Hey, I don't think we've met. I'm {tutor}, from 5B.",
+          "ko": "안녕하세요, 처음 뵙는 것 같네요. 5B 살아요, 제 이름은 {tutor}예요."
         }
       },
       "hello-easy": {
-        "text": "Hi! I'm Dave. What's your name?",
+        "text": "Hi! I'm {tutor}. What's your name?",
         "gloss": {
-          "en": "Hi! I'm Dave. What's your name?",
-          "ko": "안녕하세요! 전 데이브예요. 이름이 뭐예요?"
+          "en": "Hi! I'm {tutor}. What's your name?",
+          "ko": "안녕하세요! 제 이름은 {tutor}예요. 이름이 뭐예요?"
         }
       },
       "floor": {
@@ -8688,7 +8688,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A café language-exchange evening in Cambridge. The tutor, Charlotte, is a British exchange partner who is learning Korean. UK English, friendly.",
+    "setting": "The AI tutor plays a British exchange partner who is learning Korean. A café language-exchange evening in Cambridge. UK English, friendly.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -8752,7 +8752,7 @@
         "type": "learner",
         "id": "l-job",
         "goal": {
-          "en": "Say what your job is, then ask about hers.",
+          "en": "Say what your job is, then ask about theirs.",
           "ko": "직업을 말하고 상대 직업도 물어보세요."
         },
         "frame": "en-f1-03",
@@ -8942,17 +8942,17 @@
         }
       },
       "me": {
-        "text": "Brilliant! I'm Charlotte. What do you do?",
+        "text": "Brilliant! I'm {tutor}. What do you do?",
         "gloss": {
-          "en": "Brilliant! I'm Charlotte. What do you do?",
-          "ko": "좋아요! 전 샬럿이에요. 무슨 일 해요?"
+          "en": "Brilliant! I'm {tutor}. What do you do?",
+          "ko": "좋아요! 제 이름은 {tutor}예요. 무슨 일 해요?"
         }
       },
       "me-easy": {
-        "text": "I'm Charlotte. What's your job?",
+        "text": "I'm {tutor}. What's your job?",
         "gloss": {
-          "en": "I'm Charlotte. What's your job?",
-          "ko": "전 샬럿이에요. 직업이 뭐예요?"
+          "en": "I'm {tutor}. What's your job?",
+          "ko": "제 이름은 {tutor}예요. 직업이 뭐예요?"
         }
       },
       "langs-easy": {
@@ -9016,7 +9016,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A community college classroom in Phoenix, just before a quiz. The tutor, Marcus, is the classmate in the next seat. US English, casual.",
+    "setting": "The AI tutor plays the classmate in the next seat. A community college classroom in Phoenix, just before a quiz. US English, casual.",
     "tutorRole": "classmate",
     "canDo": [
       2
@@ -9050,7 +9050,7 @@
             ]
           },
           {
-            "meaning": "asks if he has a pen",
+            "meaning": "asks if they have a pen",
             "go": "t-which",
             "match": [
               "do you have a pen?",
@@ -9283,7 +9283,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Outside Waterloo Station in London on a busy evening. The tutor, Tom, is a friend on the phone; they planned to meet but can't find each other. UK English, casual, a bit noisy.",
+    "setting": "The AI tutor plays a friend on the phone; they planned to meet but can't find each other. Outside Waterloo Station in London on a busy evening. UK English, casual, a bit noisy.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -9302,7 +9302,7 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Tell him where you are.",
+          "en": "Tell them where you are.",
           "ko": "역 밖, 카페 옆에 있다고 하세요."
         },
         "expect": [
@@ -9317,11 +9317,11 @@
             ]
           },
           {
-            "meaning": "asks where Tom is",
+            "meaning": "asks where the other person is",
             "go": "t-noisy",
             "match": [
               "where are you?",
-              "where are you, Tom?",
+              "where are you, {tutor}?",
               "and you? where?"
             ]
           }
@@ -9435,7 +9435,7 @@
         "type": "learner",
         "id": "l-clock",
         "goal": {
-          "en": "Ask him to slow down — you missed that.",
+          "en": "Ask them to slow down — you missed that.",
           "ko": "못 들었어요. 천천히 말해 달라고 하세요."
         },
         "frame": "en-f1-13",
@@ -9624,7 +9624,7 @@
       "en": "Morning at work",
       "ko": "회사의 아침"
     },
-    "setting": "Arriving at a small tech company office in Atlanta at nine a.m. The tutor, Mike, is a friendly colleague at the next desk. US English.",
+    "setting": "The AI tutor plays a friendly colleague at the next desk. Arriving at a small tech company office in Atlanta at nine a.m. US English.",
     "tutorRole": "colleague",
     "canDo": [
       4
@@ -9974,7 +9974,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A ticket machine at a London Underground station, morning. The learner can't buy a ticket; the tutor is a station staff member. UK English, pounds.",
+    "setting": "The AI tutor plays a station staff member. A ticket machine at a London Underground station, morning; the learner can't buy a ticket. UK English, pounds.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -10038,7 +10038,7 @@
         "type": "learner",
         "id": "l-card",
         "goal": {
-          "en": "Ask him to slow down; that was too quick.",
+          "en": "Ask them to slow down; that was too quick.",
           "ko": "너무 빨라요. 천천히 말해 달라고 하세요."
         },
         "frame": "en-f1-13",
@@ -10126,13 +10126,13 @@
         "type": "learner",
         "id": "l-do",
         "goal": {
-          "en": "Ask him to do it for you.",
+          "en": "Ask them to do it for you.",
           "ko": "대신 해 달라고 부탁하세요."
         },
         "frame": "en-f1-13",
         "expect": [
           {
-            "meaning": "asks him to do it",
+            "meaning": "asks them to do it",
             "go": "t-done",
             "match": [
               "can you do it, please?",
@@ -10170,7 +10170,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank him warmly.",
+          "en": "Thank them warmly.",
           "ko": "따뜻하게 고마움을 전하세요."
         },
         "expect": [
@@ -10292,7 +10292,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "Leaving an evening English class at a language school in San Diego. The tutor, Sofia, is a classmate packing up her bag. US English, casual.",
+    "setting": "The AI tutor plays a classmate packing up their bag. Leaving an evening English class at a language school in San Diego. US English, casual.",
     "tutorRole": "classmate",
     "canDo": [
       3
@@ -10360,7 +10360,7 @@
         "type": "learner",
         "id": "l-next",
         "goal": {
-          "en": "Say you're not sure, and ask her.",
+          "en": "Say you're not sure, and ask them.",
           "ko": "잘 모르겠다고 하고 상대에게 물어보세요."
         },
         "frame": "en-f1-19",
@@ -10468,7 +10468,7 @@
             "go": "t-end",
             "match": [
               "bye",
-              "bye, Sofia",
+              "bye, {tutor}",
               "good night"
             ]
           }

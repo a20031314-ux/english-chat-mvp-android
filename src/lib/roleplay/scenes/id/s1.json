@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small coffee shop (kedai kopi) in Kemang, South Jakarta, mid-morning, not busy. The tutor is the barista; the learner has just come up to the counter.",
+    "setting": "The AI tutor plays the barista. A small coffee shop (kedai kopi) in Kemang, South Jakarta, mid-morning, not busy. The learner has just come up to the counter.",
     "tutorRole": "barista",
     "canDo": [
       0,
@@ -451,7 +451,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy pavement outside Gambir station in Central Jakarta, early afternoon. The learner stops a friendly passer-by to ask where the TransJakarta bus stop (halte) is.",
+    "setting": "The AI tutor plays a friendly passer-by. A busy pavement outside Gambir station in Central Jakarta, early afternoon. The learner stops them to ask where the TransJakarta bus stop (halte) is.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -786,7 +786,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small phone-accessory counter (konter HP) near a boarding house in Bandung, late morning. The tutor is the shop assistant. The learner is looking for a phone charger.",
+    "setting": "The AI tutor plays the shop assistant. A small phone-accessory counter (konter HP) near a boarding house in Bandung, late morning. The learner is looking for a phone charger.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1234,7 +1234,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small guesthouse in Braga, central Bandung, early evening. The learner has a booking for two nights. The tutor is the receptionist.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small guesthouse in Braga, central Bandung, early evening. The learner has a booking for two nights.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1624,7 +1624,7 @@
       "en": "Meeting someone new",
       "ko": "새 친구 만나기"
     },
-    "setting": "The first evening of an Indonesian conversation class at a language centre in Menteng, Central Jakarta. A friendly classmate sitting next to the learner starts the chat.",
+    "setting": "The AI tutor plays a friendly classmate. The first evening of an Indonesian conversation class at a language centre in Menteng, Central Jakarta. The classmate sits next to the learner and starts the chat.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1837,7 +1837,7 @@
         "frame": "id-f1-16",
         "expect": [
           {
-            "meaning": "asks her name",
+            "meaning": "asks their name",
             "go": "t-me",
             "match": [
               "nama kamu siapa?",
@@ -1847,7 +1847,7 @@
             ]
           },
           {
-            "meaning": "asks where she is from",
+            "meaning": "asks where they are from",
             "go": "t-me",
             "match": [
               "kamu dari mana?",
@@ -1919,17 +1919,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Hai! Kamu baru di kelas ini, ya? Aku Sinta.",
+        "text": "Hai! Kamu baru di kelas ini, ya? Aku {tutor}.",
         "gloss": {
-          "en": "Hi! You're new in this class, right? I'm Sinta.",
-          "ko": "안녕! 이 반 처음이지? 난 신타야."
+          "en": "Hi! You're new in this class, right? I'm {tutor}.",
+          "ko": "안녕! 이 반 처음이지? 내 이름은 {tutor}."
         }
       },
       "hello-easy": {
-        "text": "Halo. Aku Sinta. Nama kamu siapa?",
+        "text": "Halo. Aku {tutor}. Nama kamu siapa?",
         "gloss": {
-          "en": "Hello. I'm Sinta. What's your name?",
-          "ko": "안녕. 난 신타야. 이름이 뭐야?"
+          "en": "Hello. I'm {tutor}. What's your name?",
+          "ko": "안녕. 내 이름은 {tutor}. 이름이 뭐야?"
         }
       },
       "nice": {
@@ -1989,17 +1989,17 @@
         }
       },
       "me": {
-        "text": "Sinta. Aku dari Surabaya, dan aku guru bahasa Inggris.",
+        "text": "{tutor}. Aku dari Surabaya, dan aku guru bahasa Inggris.",
         "gloss": {
-          "en": "Sinta. I'm from Surabaya, and I'm an English teacher.",
-          "ko": "신타. 난 수라바야에서 왔고, 영어 선생님이야."
+          "en": "{tutor}. I'm from Surabaya, and I'm an English teacher.",
+          "ko": "{tutor}. 난 수라바야에서 왔고, 영어 선생님이야."
         }
       },
       "me-easy": {
-        "text": "Aku Sinta, dari Surabaya.",
+        "text": "Aku {tutor}, dari Surabaya.",
         "gloss": {
-          "en": "I'm Sinta, from Surabaya.",
-          "ko": "난 신타, 수라바야에서 왔어."
+          "en": "I'm {tutor}, from Surabaya.",
+          "ko": "내 이름은 {tutor}, 수라바야에서 왔어."
         }
       },
       "end": {
@@ -2021,7 +2021,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend's boarding house in Depok during a study break. The friend is looking at a family photo on the learner's phone and asks who is in it.",
+    "setting": "The AI tutor plays a friend. A friend's boarding house in Depok during a study break. The friend is looking at a family photo on the learner's phone and asks who is in it.",
     "tutorRole": "friend",
     "canDo": [
       1,
@@ -2422,7 +2422,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "A street food stall (warung tenda) in Bandung in the evening. Two new friends sit with iced tea and chat about food they like.",
+    "setting": "The AI tutor plays a new friend. A street food stall (warung tenda) in Bandung in the evening. The two new friends sit with iced tea and chat about food they like.",
     "tutorRole": "new friend",
     "canDo": [
       4
@@ -2834,7 +2834,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend badminton club at a sports hall in Bekasi, near Jakarta. A club member chats with the learner, who has just joined.",
+    "setting": "The AI tutor plays a club member. A weekend badminton club at a sports hall in Bekasi, near Jakarta. The club member chats with the learner, who has just joined.",
     "tutorRole": "club member",
     "canDo": [
       1,
@@ -3088,7 +3088,7 @@
         "frame": "id-f1-06",
         "expect": [
           {
-            "meaning": "thanks him",
+            "meaning": "thanks them",
             "go": "t-end",
             "match": [
               "terima kasih, pak",
@@ -3134,17 +3134,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Halo! Anggota baru, ya? Saya Joko.",
+        "text": "Halo! Anggota baru, ya? Saya {tutor}.",
         "gloss": {
-          "en": "Hello! A new member, right? I'm Joko.",
-          "ko": "안녕하세요! 새 회원이죠? 저는 조코예요."
+          "en": "Hello! A new member, right? I'm {tutor}.",
+          "ko": "안녕하세요! 새 회원이죠? 제 이름은 {tutor}예요."
         }
       },
       "hello-easy": {
-        "text": "Halo. Saya Joko. Kamu anggota baru?",
+        "text": "Halo. Saya {tutor}. Kamu anggota baru?",
         "gloss": {
-          "en": "Hello. I'm Joko. Are you a new member?",
-          "ko": "안녕하세요. 조코예요. 새 회원이에요?"
+          "en": "Hello. I'm {tutor}. Are you a new member?",
+          "ko": "안녕하세요. 제 이름은 {tutor}예요. 새 회원이에요?"
         }
       },
       "play": {
@@ -3257,7 +3257,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "A coworking office in BSD, Tangerang, at 9 a.m. A colleague who arrived early chats with the learner by the coffee machine.",
+    "setting": "The AI tutor plays a colleague. A coworking office in BSD, Tangerang, at 9 a.m. The colleague arrived early and chats with the learner by the coffee machine.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -3587,7 +3587,7 @@
       "en": "Where I live",
       "ko": "사는 동네"
     },
-    "setting": "The front gate of a housing complex in Cibubur, East Jakarta, Sunday morning. A new neighbour, an older woman watering plants, chats with the learner.",
+    "setting": "The AI tutor plays a neighbour. The front gate of a housing complex in Cibubur, East Jakarta, Sunday morning. The neighbour, watering plants, chats with the learner, who has just moved in.",
     "tutorRole": "neighbour",
     "canDo": [
       3,
@@ -3845,7 +3845,7 @@
         "frame": "id-f1-06",
         "expect": [
           {
-            "meaning": "thanks her",
+            "meaning": "thanks them",
             "go": "t-end",
             "match": [
               "terima kasih, bu",
@@ -3986,7 +3986,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall at Pasar Kosambi, a traditional market in Bandung, Saturday morning. The tutor is the stall owner, a cheerful woman.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall at Pasar Kosambi, a traditional market in Bandung, Saturday morning. The stall owner is cheerful.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -4414,7 +4414,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small neighbourhood bakery on Jalan Sabang, Central Jakarta, at 7 a.m. The baker is behind the glass counter.",
+    "setting": "The AI tutor plays the baker. A small neighbourhood bakery on Jalan Sabang, Central Jakarta, at 7 a.m. The baker is behind the glass counter.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4720,7 +4720,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small casual eatery (warung makan) near an office block on Jalan Thamrin, Jakarta, at lunchtime. The tutor is the server.",
+    "setting": "The AI tutor plays the server. A small casual eatery (warung makan) near an office block on Jalan Thamrin, Jakarta, at lunchtime.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -5175,7 +5175,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A city bus stop on Jalan Dago, Bandung, late afternoon. The learner asks a student waiting there about the next bus.",
+    "setting": "The AI tutor plays a student waiting at the stop. A city bus stop on Jalan Dago, Bandung, late afternoon. The learner asks them about the next bus.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5534,7 +5534,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket counter at Bandung station on a weekday morning. The learner wants to go to Jakarta (Gambir). The tutor is the ticket clerk.",
+    "setting": "The AI tutor plays the ticket clerk. The ticket counter at Bandung station on a weekday morning. The learner wants to go to Jakarta (Gambir).",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -6003,7 +6003,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "Inside a metered taxi (Bluebird) leaving a hotel in Sudirman, Jakarta, in the evening. The tutor is the driver.",
+    "setting": "The AI tutor plays the taxi driver. Inside a metered taxi (Bluebird) leaving a hotel in Sudirman, Jakarta, in the evening.",
     "tutorRole": "taxi driver",
     "canDo": [
       1,
@@ -6407,7 +6407,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A pharmacy (apotek) on Jalan Riau, Bandung, in the evening. The learner has a headache. The tutor is the pharmacist.",
+    "setting": "The AI tutor plays the pharmacist. A pharmacy (apotek) on Jalan Riau, Bandung, in the evening. The learner has a headache.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6828,7 +6828,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A batik clothes shop at Pasar Baru, Bandung, early afternoon. The tutor is the shop assistant.",
+    "setting": "The AI tutor plays the shop assistant. A batik clothes shop at Pasar Baru, Bandung, early afternoon.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -7326,7 +7326,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-property desk at Manggarai commuter-line station, Jakarta, mid-afternoon. The learner left a bag on the train this morning. The tutor is the clerk.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property desk at Manggarai commuter-line station, Jakarta, mid-afternoon. The learner left a bag on the train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -7719,7 +7719,7 @@
       "en": "At the tourist office",
       "ko": "관광안내소에서"
     },
-    "setting": "A tourist information desk in the Kota Tua (Old Town) area of Jakarta, late morning. The tutor works at the desk.",
+    "setting": "The AI tutor plays the tourist-office staff member. A tourist information desk in the Kota Tua (Old Town) area of Jakarta, late morning.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -8109,7 +8109,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library on Jalan Medan Merdeka, Jakarta, on a weekday afternoon. The tutor is the librarian.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library on Jalan Medan Merdeka, Jakarta, on a weekday afternoon.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -8505,7 +8505,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a fitness centre in a mall in Kelapa Gading, North Jakarta, early evening. The tutor is the gym staff member.",
+    "setting": "The AI tutor plays the gym staff member. The reception of a fitness centre in a mall in Kelapa Gading, North Jakarta, early evening.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -8922,7 +8922,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "The reception desk of a small clinic (klinik) in Cihampelas, Bandung, morning. The learner has a sore throat. The tutor is the receptionist.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a small clinic (klinik) in Cihampelas, Bandung, morning. The learner has a sore throat.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -9316,7 +9316,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The lobby of an apartment building in Kalibata, South Jakarta, in the evening. The learner meets a neighbour, a man in his forties, by the lift.",
+    "setting": "The AI tutor plays a neighbour. The lobby of an apartment building in Kalibata, South Jakarta, in the evening. The learner meets the neighbour by the lift.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -9587,10 +9587,10 @@
         }
       },
       "me": {
-        "text": "Saya Hendra. Namanya siapa?",
+        "text": "Saya {tutor}. Namanya siapa?",
         "gloss": {
-          "en": "I'm Hendra. What's your name?",
-          "ko": "저는 헨드라예요. 이름이 뭐예요?"
+          "en": "I'm {tutor}. What's your name?",
+          "ko": "제 이름은 {tutor}예요. 이름이 뭐예요?"
         }
       },
       "me-easy": {
@@ -9675,7 +9675,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange meetup in a café in Cikini, Central Jakarta, on a Saturday afternoon. The tutor is a university student who wants to practise Korean.",
+    "setting": "The AI tutor plays an exchange partner. A language-exchange meetup in a café in Cikini, Central Jakarta, on a Saturday afternoon. The exchange partner is a university student who wants to practise Korean.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -9797,7 +9797,7 @@
         "frame": "id-f1-06",
         "expect": [
           {
-            "meaning": "thanks him",
+            "meaning": "thanks them",
             "go": "t-learn",
             "match": [
               "terima kasih, dimas. sedikit saja",
@@ -9930,17 +9930,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Hai! Kamu ikut tukar bahasa juga? Aku Dimas.",
+        "text": "Hai! Kamu ikut tukar bahasa juga? Aku {tutor}.",
         "gloss": {
-          "en": "Hi! Are you here for the language exchange too? I'm Dimas.",
-          "ko": "안녕! 너도 언어 교환하러 왔어? 난 디마스야."
+          "en": "Hi! Are you here for the language exchange too? I'm {tutor}.",
+          "ko": "안녕! 너도 언어 교환하러 왔어? 내 이름은 {tutor}."
         }
       },
       "hello-easy": {
-        "text": "Halo! Aku Dimas. Nama kamu siapa?",
+        "text": "Halo! Aku {tutor}. Nama kamu siapa?",
         "gloss": {
-          "en": "Hello! I'm Dimas. What's your name?",
-          "ko": "안녕! 난 디마스야. 이름이 뭐야?"
+          "en": "Hello! I'm {tutor}. What's your name?",
+          "ko": "안녕! 내 이름은 {tutor}. 이름이 뭐야?"
         }
       },
       "lang": {
@@ -10032,7 +10032,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "An Indonesian class at a university language centre in Bandung, morning. The learner's pen has stopped working; the classmate sits next to them.",
+    "setting": "The AI tutor plays a classmate. An Indonesian class at a university language centre in Bandung, morning. The learner's pen has stopped working; the classmate sits next to them.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -10418,7 +10418,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Near the MRT Bundaran HI station exits in Central Jakarta, Sunday morning (car-free day). The learner and a friend can't find each other and talk on the phone.",
+    "setting": "The AI tutor plays a friend on the phone. Near the MRT Bundaran HI station exits in Central Jakarta, Sunday morning (car-free day). The learner and the friend can't find each other and talk on the phone.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -10805,7 +10805,7 @@
       "en": "Morning at work",
       "ko": "아침 출근길"
     },
-    "setting": "An office on the tenth floor of a building in Kuningan, South Jakarta, at 8:30 a.m. A colleague arrives at the next desk.",
+    "setting": "The AI tutor plays a colleague. An office on the tenth floor of a building in Kuningan, South Jakarta, at 8:30 a.m. The colleague arrives at the next desk.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -11147,7 +11147,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A KRL commuter-line station in Bogor, at the ticket vending machine, mid-morning. The learner can't top up their card. The tutor is a station staff member.",
+    "setting": "The AI tutor plays a station staff member. A KRL commuter-line station in Bogor, at the ticket vending machine, mid-morning. The learner can't top up their card.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -11265,7 +11265,7 @@
         "frame": "id-f1-11",
         "expect": [
           {
-            "meaning": "asks him to do it",
+            "meaning": "asks them to do it",
             "go": "t-do",
             "match": [
               "tolong bantu saya",
@@ -11484,7 +11484,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "Outside a classroom at a university in Jatinangor, near Bandung, after the afternoon class. A classmate chats for a minute while packing up.",
+    "setting": "The AI tutor plays a classmate. Outside a classroom at a university in Jatinangor, near Bandung, after the afternoon class. The classmate chats for a minute while packing up.",
     "tutorRole": "classmate",
     "canDo": [
       0,

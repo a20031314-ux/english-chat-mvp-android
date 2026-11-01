@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small café in an Arab city at mid-morning, not busy. The tutor is the barista; the learner has just walked up to the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the barista. A small café in an Arab city at mid-morning, not busy. The learner has just walked up to the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "barista",
     "canDo": [
       0,
@@ -441,7 +441,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street near a metro station in an Arab city, early afternoon. The learner stops a friendly passer-by to ask the way to the metro. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the passer-by. A busy street near a metro station in an Arab city, early afternoon. The learner stops them to ask the way to the metro. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -796,7 +796,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small general shop in an Arab city. The learner is looking for a phone charger and asks the shop assistant. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the shop assistant. A small general shop in an Arab city. The learner is looking for a phone charger and asks the shop assistant. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1208,7 +1208,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hotel in an Arab city, evening. The learner has a booking for two nights. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small hotel in an Arab city, evening. The learner has a booking for two nights. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1620,7 +1620,7 @@
       "en": "Meeting someone new",
       "ko": "새 친구 만나기"
     },
-    "setting": "The first day of an Arabic language class in an Arab city. A friendly classmate named Sara starts the chat before the lesson. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the friendly classmate. The first day of an Arabic language class in an Arab city. The classmate starts the chat before the lesson. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1639,7 +1639,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say your name and that you are pleased to meet her.",
+          "en": "Say your name and that you are pleased to meet them.",
           "ko": "이름을 말하고 반갑다고 하세요."
         },
         "frame": "ar-f1-01",
@@ -1651,11 +1651,11 @@
               "اسمي جي وو",
               "مرحبا، اسمي جي وو. تشرفنا",
               "اسمي جي وو، تشرفنا",
-              "أهلا يا سارة، اسمي مين جون"
+              "أهلا يا {tutor}، اسمي مين جون"
             ]
           },
           {
-            "meaning": "did not catch her name",
+            "meaning": "did not catch the tutor's name",
             "go": "t-again",
             "match": [
               "آسف، ما اسمك؟",
@@ -1691,7 +1691,7 @@
         "type": "learner",
         "id": "l-from",
         "goal": {
-          "en": "Say where you are from and ask her back.",
+          "en": "Say where you are from and ask them back.",
           "ko": "어디서 왔는지 말하고 되물어보세요."
         },
         "frame": "ar-f1-02",
@@ -1794,13 +1794,13 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask her a question about herself.",
-          "ko": "그녀에게 질문 하나를 해 보세요."
+          "en": "Ask them a question about themselves.",
+          "ko": "상대에게 질문 하나를 해 보세요."
         },
         "frame": "ar-f1-09",
         "expect": [
           {
-            "meaning": "asks something about her",
+            "meaning": "asks something about the tutor",
             "go": "t-end",
             "match": [
               "ما عملك؟",
@@ -1814,7 +1814,7 @@
             "go": "t-end",
             "match": [
               "تشرفنا",
-              "تشرفنا يا سارة",
+              "تشرفنا يا {tutor}",
               "شكرا، تشرفنا"
             ]
           }
@@ -1837,17 +1837,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "مرحبا! أنا سارة. وأنت، ما اسمك؟",
+        "text": "مرحبا! أنا {tutor}. وأنت، ما اسمك؟",
         "gloss": {
-          "en": "Hi! I'm Sara. And you, what's your name?",
-          "ko": "안녕! 나는 사라야. 너는 이름이 뭐야?"
+          "en": "Hi! I'm {tutor}. And you, what's your name?",
+          "ko": "안녕! 내 이름은 {tutor}. 너는 이름이 뭐야?"
         }
       },
       "hello-easy": {
-        "text": "أنا سارة. ما اسمك؟",
+        "text": "أنا {tutor}. ما اسمك؟",
         "gloss": {
-          "en": "I'm Sara. What's your name?",
-          "ko": "나는 사라야. 이름이 뭐야?"
+          "en": "I'm {tutor}. What's your name?",
+          "ko": "내 이름은 {tutor}. 네 이름은 뭐야?"
         }
       },
       "from": {
@@ -1890,6 +1890,11 @@
         "gloss": {
           "en": "I'm a student here. I study medicine.",
           "ko": "나는 여기 학생이야. 의학 공부해."
+        },
+        "byTutor": {
+          "m": {
+            "text": "أنا طالب هنا. أدرس الطب."
+          }
         }
       },
       "ask-back": {
@@ -1907,10 +1912,10 @@
         }
       },
       "again": {
-        "text": "سارة. اسمي سارة.",
+        "text": "{tutor}. اسمي {tutor}.",
         "gloss": {
-          "en": "Sara. My name is Sara.",
-          "ko": "사라. 내 이름은 사라야."
+          "en": "{tutor}. My name is {tutor}.",
+          "ko": "{tutor}. 내 이름은 {tutor}."
         }
       },
       "end": {
@@ -1932,7 +1937,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "At a café in an Arab city, a friend named Omar looks at a family photo on the learner's phone and asks who is in it. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the friend. At a café in an Arab city, the friend looks at a family photo on the learner's phone and asks who is in it. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "friend",
     "canDo": [
       1
@@ -2271,7 +2276,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "Two new friends sit at a juice bar in an Arab city and chat about food and things they like. The tutor plays Huda, the new friend. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the new friend. Two new friends sit at a juice bar in an Arab city and chat about food and things they like. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "new friend",
     "canDo": [
       4
@@ -2435,8 +2440,8 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask her if she likes kunafa.",
-          "ko": "그녀가 쿠나파를 좋아하는지 물어보세요."
+          "en": "Ask them if they like kunafa.",
+          "ko": "상대가 쿠나파를 좋아하는지 물어보세요."
         },
         "expect": [
           {
@@ -2446,16 +2451,18 @@
               "هل تحبين الكنافة؟",
               "تحبين الكنافة؟",
               "والكنافة؟",
-              "هل تحبين البقلاوة؟"
+              "هل تحبين البقلاوة؟",
+              "هل تحب الكنافة؟"
             ]
           },
           {
-            "meaning": "asks what she likes",
+            "meaning": "asks what the tutor likes",
             "go": "t-answer",
             "match": [
               "ماذا تحبين؟",
               "وأنت، ماذا تحبين؟",
-              "ما الحلويات هنا؟"
+              "ما الحلويات هنا؟",
+              "وأنت، ماذا تحب؟"
             ]
           }
         ],
@@ -2629,7 +2636,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend sports and hobby club in an Arab city. A club member named Khalil welcomes the learner and asks what they can do. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the club member. A weekend sports and hobby club in an Arab city. The club member welcomes the learner and asks what they can do. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "club member",
     "canDo": [
       1,
@@ -2959,7 +2966,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "An office in an Arab city at 9 a.m. A colleague named Samir arrives and chats with the learner on the phone because the learner is not at the desk yet. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the colleague. An office in an Arab city at 9 a.m. The colleague arrives and calls the learner, who is not at the desk yet. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "colleague",
     "canDo": [
       0
@@ -2977,18 +2984,19 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet Samir by name and ask how he is.",
-          "ko": "사미르 이름을 부르며 인사하고 잘 지내는지 물어보세요."
+          "en": "Greet them by name and ask how they are.",
+          "ko": "이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "ar-f1-10",
         "expect": [
           {
-            "meaning": "greets by name and asks how he is",
+            "meaning": "greets by name and asks how they are",
             "go": "t-fine",
             "match": [
-              "مرحبا يا سمير، كيف حالك؟",
-              "صباح الخير، مرحبا يا سمير، كيف حالك؟",
-              "مرحبا يا سمير، كيف الحال؟"
+              "مرحبا يا {tutor}، كيف حالك؟",
+              "صباح الخير، مرحبا يا {tutor}، كيف حالك؟",
+              "مرحبا يا {tutor}، كيف الحال؟",
+              "مرحبا، كيف حالك؟"
             ]
           },
           {
@@ -2997,7 +3005,7 @@
             "match": [
               "صباح الخير",
               "صباح النور",
-              "صباح الخير يا سمير"
+              "صباح الخير يا {tutor}"
             ]
           }
         ],
@@ -3176,7 +3184,7 @@
             "meaning": "thanks",
             "go": "t-end",
             "match": [
-              "شكرا يا سمير",
+              "شكرا يا {tutor}",
               "شكرا جزيلا",
               "شكرا"
             ]
@@ -3200,17 +3208,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "ألو؟ صباح الخير! أنا سمير.",
+        "text": "ألو؟ صباح الخير! أنا {tutor}.",
         "gloss": {
-          "en": "Hello? Good morning! It's Samir.",
-          "ko": "여보세요? 좋은 아침! 나 사미르야."
+          "en": "Hello? Good morning! It's {tutor}.",
+          "ko": "여보세요? 좋은 아침! 나, {tutor}."
         }
       },
       "hello-easy": {
-        "text": "صباح الخير. أنا سمير، من العمل.",
+        "text": "صباح الخير. أنا {tutor}، من العمل.",
         "gloss": {
-          "en": "Good morning. It's Samir, from work.",
-          "ko": "좋은 아침. 나 사미르야, 회사."
+          "en": "Good morning. It's {tutor}, from work.",
+          "ko": "좋은 아침. 나, {tutor}. 회사 동료."
         }
       },
       "fine": {
@@ -3281,7 +3289,7 @@
       "en": "Where I live",
       "ko": "내가 사는 곳"
     },
-    "setting": "The lobby of an apartment building in an Arab city. A new neighbour named Nadia meets the learner and asks about the area. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the neighbour. The lobby of an apartment building in an Arab city. The new neighbour meets the learner and asks about the area. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "neighbour",
     "canDo": [
       3
@@ -3299,7 +3307,7 @@
         "type": "learner",
         "id": "l-new",
         "goal": {
-          "en": "Greet her and say yes, you are new here.",
+          "en": "Greet them and say yes, you are new here.",
           "ko": "인사하고, 네, 새로 왔다고 하세요."
         },
         "expect": [
@@ -3476,7 +3484,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the help and say good night.",
+          "en": "Thank them for the help and say good night.",
           "ko": "도와줘서 고맙다고 하고 밤 인사를 하세요."
         },
         "frame": "ar-f1-11",
@@ -3487,7 +3495,8 @@
             "match": [
               "شكرا على المساعدة",
               "شكرا على المساعدة، تصبحين على خير",
-              "شكرا جزيلا على المساعدة"
+              "شكرا جزيلا على المساعدة",
+              "شكرا على المساعدة، تصبح على خير"
             ]
           },
           {
@@ -3495,7 +3504,7 @@
             "go": "t-end",
             "match": [
               "شكرا",
-              "شكرا جزيلا يا نادية",
+              "شكرا جزيلا يا {tutor}",
               "شكرا، مع السلامة"
             ]
           }
@@ -3532,10 +3541,10 @@
         }
       },
       "floor": {
-        "text": "أهلا وسهلا! أنا نادية. أنا في الطابق الثاني. وأنت؟",
+        "text": "أهلا وسهلا! أنا {tutor}. أنا في الطابق الثاني. وأنت؟",
         "gloss": {
-          "en": "Welcome! I'm Nadia. I'm on the second floor. And you?",
-          "ko": "환영해요! 저는 나디아예요. 저는 2층이에요. 당신은요?"
+          "en": "Welcome! I'm {tutor}. I'm on the second floor. And you?",
+          "ko": "환영해요! 제 이름은 {tutor}. 저는 2층이에요. 당신은요?"
         }
       },
       "floor-easy": {
@@ -3606,7 +3615,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall in a market in an Arab city, morning. The stall owner sells apples, bananas and oranges, priced by the kilo in dinars. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall in a market in an Arab city, morning. The stall owner sells apples, bananas and oranges, priced by the kilo in dinars. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -3968,7 +3977,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small bakery in an Arab city early in the morning, warm bread and sweet pastries on the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the baker. A small bakery in an Arab city early in the morning, warm bread and sweet pastries on the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "baker",
     "canDo": [
       2
@@ -4307,7 +4316,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small, casual restaurant in an Arab city at lunchtime. The server comes to the learner's table. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the server. A small, casual restaurant in an Arab city at lunchtime. The server comes to the learner's table. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4706,7 +4715,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on a main road in an Arab city, late afternoon. The learner asks a person waiting about the bus to the university. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the person waiting. A bus stop on a main road in an Arab city, late afternoon. The learner asks a person waiting about the bus to the university. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5061,7 +5070,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "A ticket window at the main train station of an Arab city, morning. The learner wants tickets to the capital. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the ticket clerk. A ticket window at the main train station of an Arab city, morning. The learner wants tickets to the capital. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2
@@ -5465,7 +5474,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "Getting into a taxi on a street in an Arab city, evening. The learner wants to go to their hotel. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the taxi driver. Getting into a taxi on a street in an Arab city, evening. The learner wants to go to their hotel. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -5856,7 +5865,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A neighbourhood pharmacy in an Arab city, evening. The learner has a headache and asks the pharmacist for medicine. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the pharmacist. A neighbourhood pharmacy in an Arab city, evening. The learner has a headache and asks the pharmacist for medicine. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "pharmacist",
     "canDo": [
       2
@@ -6202,7 +6211,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop in a mall in an Arab city, afternoon. The learner is looking for a shirt. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop in a mall in an Arab city, afternoon. The learner is looking for a shirt. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -6585,7 +6594,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-property desk at the main train station of an Arab city. The learner lost a small black bag on the train this morning. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property desk at the main train station of an Arab city. The learner lost a small black bag on the train this morning. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3
@@ -7017,7 +7026,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "A tourist information desk in the old town of an Arab city, morning. Maps and brochures on the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the tourist-office staff. A tourist information desk in the old town of an Arab city, morning. Maps and brochures on the counter. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7384,7 +7393,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library in an Arab city. The learner wants a library card. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library in an Arab city. The learner wants a library card. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "librarian",
     "canDo": [
       1
@@ -7823,7 +7832,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a gym in an Arab city, evening. The learner wants to join and asks about prices and hours. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the gym staff. The reception of a gym in an Arab city, evening. The learner wants to join and asks about prices and hours. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "gym staff",
     "canDo": [
       2
@@ -8170,7 +8179,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "A clinic reception desk in an Arab city, morning. The learner has an appointment and it is their first visit. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the receptionist. A clinic reception desk in an Arab city, morning. The learner has an appointment and it is their first visit. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "receptionist",
     "canDo": [
       1,
@@ -8578,7 +8587,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The entrance hall of an apartment building in an Arab city, Friday morning. The learner meets an older neighbour named Mr. Hassan, whom they have met once before. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the neighbour. The entrance hall of an apartment building in an Arab city, Friday morning. The learner meets an older neighbour whom they have met once before. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8597,7 +8606,7 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet him by name and ask how he is.",
+          "en": "Greet them by name and ask how they are.",
           "ko": "이름을 부르며 인사하고 잘 지내시는지 물어보세요."
         },
         "frame": "ar-f1-10",
@@ -8606,9 +8615,9 @@
             "meaning": "greets by name and asks",
             "go": "t-fine",
             "match": [
-              "مرحبا يا حسن، كيف حالك؟",
-              "نعم! مرحبا يا حسن، كيف حالك؟",
-              "صباح الخير، مرحبا يا أستاذ حسن، كيف حالك؟"
+              "مرحبا يا {tutor}، كيف حالك؟",
+              "نعم! مرحبا يا {tutor}، كيف حالك؟",
+              "صباح الخير، مرحبا يا {tutor}، كيف حالك؟"
             ]
           },
           {
@@ -8616,7 +8625,7 @@
             "go": "t-fine",
             "match": [
               "صباح النور",
-              "صباح الخير يا حسن",
+              "صباح الخير يا {tutor}",
               "نعم، أهلا"
             ]
           }
@@ -8738,17 +8747,18 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank him kindly.",
+          "en": "Thank them kindly.",
           "ko": "친절하게 고맙다고 하세요."
         },
         "expect": [
           {
-            "meaning": "thanks him",
+            "meaning": "thanks the tutor",
             "go": "t-go",
             "match": [
               "شكرا جزيلا",
-              "شكرا يا حسن",
-              "شكرا، أنت لطيف"
+              "شكرا يا {tutor}",
+              "شكرا، أنت لطيف",
+              "شكرا، أنت لطيفة"
             ]
           },
           {
@@ -8756,7 +8766,7 @@
             "go": "t-go",
             "match": [
               "تشرفنا",
-              "تشرفنا يا حسن",
+              "تشرفنا يا {tutor}",
               "أهلا وسهلا"
             ]
           }
@@ -8790,7 +8800,7 @@
             "go": "t-end",
             "match": [
               "مع السلامة",
-              "مع السلامة يا حسن",
+              "مع السلامة يا {tutor}",
               "إلى اللقاء"
             ]
           },
@@ -8822,17 +8832,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "صباح الخير يا جاري! هل تذكرني؟ أنا حسن.",
+        "text": "صباح الخير يا جاري! هل تذكرني؟ أنا {tutor}.",
         "gloss": {
-          "en": "Good morning, neighbour! Do you remember me? I'm Hassan.",
-          "ko": "좋은 아침이에요, 이웃님! 저 기억해요? 하산이에요."
+          "en": "Good morning, neighbour! Do you remember me? I'm {tutor}.",
+          "ko": "좋은 아침이에요, 이웃님! 저 기억해요? 제 이름은 {tutor}."
         }
       },
       "hello-easy": {
-        "text": "أنا حسن، جارك.",
+        "text": "أنا {tutor}، جارك.",
         "gloss": {
-          "en": "I'm Hassan, your neighbour.",
-          "ko": "저 하산이에요, 이웃이요."
+          "en": "I'm {tutor}, your neighbour.",
+          "ko": "제 이름은 {tutor}. 이웃이에요."
         }
       },
       "fine": {
@@ -8840,6 +8850,11 @@
         "gloss": {
           "en": "Fine, thank God. Sorry, I forgot your name.",
           "ko": "잘 지내요. 미안해요, 이름을 잊어버렸어요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "بخير والحمد لله. آسفة، نسيت اسمك."
+          }
         }
       },
       "fine-easy": {
@@ -8882,6 +8897,11 @@
         "gloss": {
           "en": "I'm going to the mosque now.",
           "ko": "저는 지금 모스크에 가요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "أنا ذاهبة إلى المسجد الآن."
+          }
         }
       },
       "go-easy": {
@@ -8910,7 +8930,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange meetup in a café in an Arab city. The tutor plays Rami, who speaks Arabic and wants to learn Korean. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the exchange partner. A language-exchange meetup in a café in an Arab city. The partner speaks Arabic and wants to learn Korean. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "exchange partner",
     "canDo": [
       1
@@ -8928,7 +8948,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say yes and tell him your name.",
+          "en": "Say yes and tell them your name.",
           "ko": "네라고 하고 이름을 말하세요."
         },
         "frame": "ar-f1-01",
@@ -8939,7 +8959,7 @@
             "match": [
               "نعم، اسمي جي وو",
               "اسمي جي وو. تشرفنا",
-              "أهلا يا رامي، اسمي جي وو",
+              "أهلا يا {tutor}، اسمي جي وو",
               "اسمي سو مين"
             ]
           },
@@ -9160,17 +9180,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "أهلا! هل هذا مكان التبادل اللغوي؟ أنا رامي.",
+        "text": "أهلا! هل هذا مكان التبادل اللغوي؟ أنا {tutor}.",
         "gloss": {
-          "en": "Hi! Is this the language exchange? I'm Rami.",
-          "ko": "안녕! 여기가 언어 교환 모임이야? 나는 라미야."
+          "en": "Hi! Is this the language exchange? I'm {tutor}.",
+          "ko": "안녕! 여기가 언어 교환 모임이야? 내 이름은 {tutor}."
         }
       },
       "hello-easy": {
-        "text": "أنا رامي. وأنت؟",
+        "text": "أنا {tutor}. وأنت؟",
         "gloss": {
-          "en": "I'm Rami. And you?",
-          "ko": "나는 라미야. 너는?"
+          "en": "I'm {tutor}. And you?",
+          "ko": "내 이름은 {tutor}. 너는?"
         }
       },
       "langs": {
@@ -9220,6 +9240,11 @@
         "gloss": {
           "en": "I want Korean! I'm a university student.",
           "ko": "나는 한국어 배우고 싶어! 대학생이야."
+        },
+        "byTutor": {
+          "f": {
+            "text": "أنا أريد الكورية! أنا طالبة في الجامعة."
+          }
         }
       },
       "job-q": {
@@ -9255,7 +9280,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "An Arabic class in a language school in an Arab city. The teacher just asked everyone to write; the learner has no pen. The tutor plays Mona, a classmate. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the classmate. An Arabic class in a language school in an Arab city. The teacher just asked everyone to write; the learner has no pen and turns to the classmate. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -9273,7 +9298,7 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask if she has a pen.",
+          "en": "Ask if they have a pen.",
           "ko": "펜이 있는지 물어보세요."
         },
         "frame": "ar-f1-08",
@@ -9285,7 +9310,7 @@
               "عندك قلم؟",
               "آسف، عندك قلم؟",
               "هل عندك قلم، من فضلك؟",
-              "يا منى، عندك قلم؟"
+              "يا {tutor}، عندك قلم؟"
             ]
           },
           {
@@ -9318,7 +9343,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the pen.",
+          "en": "Thank them for the pen.",
           "ko": "펜 고맙다고 하세요."
         },
         "frame": "ar-f1-11",
@@ -9338,7 +9363,7 @@
             "match": [
               "شكرا",
               "شكرا جزيلا",
-              "شكرا يا منى"
+              "شكرا يا {tutor}"
             ]
           }
         ],
@@ -9407,7 +9432,7 @@
         "type": "learner",
         "id": "l-give",
         "goal": {
-          "en": "Give the pen back: say yes, this is her pen, and apologise for keeping it.",
+          "en": "Give the pen back: say yes, this is their pen, and apologise for keeping it.",
           "ko": "펜을 돌려주세요: 네, 이거 네 펜이라고 하고 늦게 줘서 미안하다고 하세요."
         },
         "frame": "ar-f1-14",
@@ -9584,7 +9609,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Outside a busy metro station in an Arab city. The learner and a friend named Yasmin are supposed to meet but cannot find each other, so they talk on the phone. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the friend on the phone. Outside a busy metro station in an Arab city. The learner and the friend are supposed to meet but cannot find each other, so they talk on the phone. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -9603,8 +9628,8 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet Yasmin by name and ask how she is.",
-          "ko": "야스민 이름을 부르며 인사하고 잘 지내는지 물어보세요."
+          "en": "Greet them by name and ask how they are.",
+          "ko": "이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "ar-f1-10",
         "expect": [
@@ -9612,9 +9637,10 @@
             "meaning": "greets by name",
             "go": "t-fine",
             "match": [
-              "مرحبا يا ياسمين، كيف حالك؟",
-              "ألو، مرحبا يا ياسمين، كيف حالك؟",
-              "أهلا، مرحبا يا ياسمين، كيف الحال؟"
+              "مرحبا يا {tutor}، كيف حالك؟",
+              "ألو، مرحبا يا {tutor}، كيف حالك؟",
+              "أهلا، مرحبا يا {tutor}، كيف الحال؟",
+              "مرحبا، كيف حالك؟"
             ]
           },
           {
@@ -9692,13 +9718,13 @@
         "type": "learner",
         "id": "l-see",
         "goal": {
-          "en": "Say yes, you see the café, and ask where she is.",
-          "ko": "네, 카페가 보인다고 하고 그녀가 어디 있는지 물어보세요."
+          "en": "Say yes, you see the café, and ask where they are.",
+          "ko": "네, 카페가 보인다고 하고 상대가 어디 있는지 물어보세요."
         },
         "frame": "ar-f1-04",
         "expect": [
           {
-            "meaning": "asks where she is",
+            "meaning": "asks where the tutor is",
             "go": "t-meet",
             "match": [
               "نعم. أين أنت؟",
@@ -9736,7 +9762,7 @@
         "type": "learner",
         "id": "l-repeat",
         "goal": {
-          "en": "The line is bad. Ask her to say it again, slowly.",
+          "en": "The line is bad. Ask them to say it again, slowly.",
           "ko": "잘 안 들려요. 천천히 다시 말해 달라고 하세요."
         },
         "frame": "ar-f1-13",
@@ -9828,17 +9854,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "ألو؟ أنا ياسمين! أنا عند المحطة.",
+        "text": "ألو؟ أنا {tutor}! أنا عند المحطة.",
         "gloss": {
-          "en": "Hello? It's Yasmin! I'm at the station.",
-          "ko": "여보세요? 나 야스민이야! 나 역에 있어."
+          "en": "Hello? It's {tutor}! I'm at the station.",
+          "ko": "여보세요? 나, {tutor}! 나 역에 있어."
         }
       },
       "hello-easy": {
-        "text": "ألو؟ أنا ياسمين.",
+        "text": "ألو؟ أنا {tutor}.",
         "gloss": {
-          "en": "Hello? It's Yasmin.",
-          "ko": "여보세요? 나 야스민이야."
+          "en": "Hello? It's {tutor}.",
+          "ko": "여보세요? 나, {tutor}."
         }
       },
       "fine": {
@@ -9930,7 +9956,7 @@
       "en": "Morning at work",
       "ko": "출근한 아침"
     },
-    "setting": "Arriving at an office in an Arab city at 8:30 a.m. The tutor plays Laila, a friendly colleague at the next desk. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the colleague. Arriving at an office in an Arab city at 8:30 a.m. The colleague sits at the next desk and is friendly. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -9949,8 +9975,8 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet Laila by name and ask how she is.",
-          "ko": "라일라 이름을 부르며 인사하고 잘 지내는지 물어보세요."
+          "en": "Greet them by name and ask how they are.",
+          "ko": "이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "ar-f1-10",
         "expect": [
@@ -9958,9 +9984,10 @@
             "meaning": "greets by name",
             "go": "t-fine",
             "match": [
-              "مرحبا يا ليلى، كيف حالك؟",
-              "صباح النور! مرحبا يا ليلى، كيف حالك؟",
-              "مرحبا يا ليلى، كيف الحال اليوم؟"
+              "مرحبا يا {tutor}، كيف حالك؟",
+              "صباح النور! مرحبا يا {tutor}، كيف حالك؟",
+              "مرحبا يا {tutor}، كيف الحال اليوم؟",
+              "مرحبا، كيف حالك اليوم؟"
             ]
           },
           {
@@ -10089,7 +10116,7 @@
         "type": "learner",
         "id": "l-lunch",
         "goal": {
-          "en": "Thank her for the coffee and say lunch is at one.",
+          "en": "Thank them for the coffee and say lunch is at one.",
           "ko": "커피 고맙다고 하고 점심은 1시라고 하세요."
         },
         "frame": "ar-f1-11",
@@ -10192,6 +10219,11 @@
         "gloss": {
           "en": "Thank God. I'm a little tired. Will you have a coffee?",
           "ko": "괜찮아. 나는 좀 피곤해. 커피 마실래?"
+        },
+        "byTutor": {
+          "m": {
+            "text": "الحمد لله. أنا متعب قليلا. هل تشرب قهوة؟"
+          }
         }
       },
       "fine-easy": {
@@ -10262,7 +10294,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A ticket machine in a metro station of an Arab city. The learner cannot work the machine and a staff member comes over. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the staff member. A ticket machine in a metro station of an Arab city. The learner cannot work the machine and a staff member comes over. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -10588,7 +10620,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "Leaving an Arabic class at a language school in an Arab city, early evening. The tutor plays Tariq, a classmate, who chats for a minute at the door. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "The AI tutor plays the classmate. Leaving an Arabic class at a language school in an Arab city, early evening. The classmate chats for a minute at the door. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "classmate",
     "canDo": [
       0,
@@ -10810,6 +10842,11 @@
         "gloss": {
           "en": "I'm going to the library.",
           "ko": "나는 도서관 가."
+        },
+        "byTutor": {
+          "f": {
+            "text": "أنا ذاهبة إلى المكتبة."
+          }
         }
       },
       "next": {

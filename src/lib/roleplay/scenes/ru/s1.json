@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small coffee shop in central Moscow at mid-morning, not busy. The tutor is the barista; the learner has just come up to the counter.",
+    "setting": "The AI tutor plays the barista. A small coffee shop in central Moscow at mid-morning, not busy; the learner has just come up to the counter.",
     "tutorRole": "barista",
     "canDo": [
       2,
@@ -416,7 +416,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A street near Kurskaya station in Moscow. The learner has stopped a friendly passer-by to ask for the metro.",
+    "setting": "The AI tutor plays a friendly passer-by. A street near Kurskaya station in Moscow; the learner has stopped them to ask for the metro.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -758,7 +758,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small souvenir shop on Arbat Street in Moscow. The learner is looking for fridge magnets.",
+    "setting": "The AI tutor plays the shop assistant. A small souvenir shop on Arbat Street in Moscow; the learner is looking for fridge magnets.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1136,7 +1136,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hotel on Nevsky Prospekt in St Petersburg, in the evening. The learner has a booking for two nights. The receptionist's name badge says Olga.",
+    "setting": "The AI tutor plays the receptionist and introduces themselves by name. The front desk of a small hotel on Nevsky Prospekt in St Petersburg, in the evening; the learner has a booking for two nights.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1155,18 +1155,18 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet her by name and say you have a booking.",
+          "en": "Greet the receptionist by name and say you have a booking.",
           "ko": "이름을 불러 인사하고 예약했다고 하세요."
         },
         "frame": "ru-f1-16",
         "expect": [
           {
-            "meaning": "greets her by name",
+            "meaning": "greets the tutor by name",
             "go": "t-name",
             "match": [
-              "здравствуйте, ольга! у меня бронь",
-              "здравствуйте, ольга",
-              "добрый вечер, ольга. у меня бронь",
+              "здравствуйте, {tutor}! у меня бронь",
+              "здравствуйте, {tutor}",
+              "добрый вечер, {tutor}. у меня бронь",
               "здравствуйте, у меня бронь"
             ]
           },
@@ -1413,17 +1413,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Добрый вечер! Меня зовут Ольга. Чем могу помочь?",
+        "text": "Добрый вечер! Меня зовут {tutor}. Чем могу помочь?",
         "gloss": {
-          "en": "Good evening! My name is Olga. How can I help?",
-          "ko": "안녕하세요! 저는 올가예요. 무엇을 도와드릴까요?"
+          "en": "Good evening! My name is {tutor}. How can I help?",
+          "ko": "안녕하세요! 저는 {tutor}입니다. 무엇을 도와드릴까요?"
         }
       },
       "hello-easy": {
-        "text": "Здравствуйте! Я Ольга. У вас есть бронь?",
+        "text": "Здравствуйте! Я {tutor}. У вас есть бронь?",
         "gloss": {
-          "en": "Hello! I'm Olga. Do you have a booking?",
-          "ko": "안녕하세요! 저는 올가예요. 예약하셨어요?"
+          "en": "Hello! I'm {tutor}. Do you have a booking?",
+          "ko": "안녕하세요! 저는 {tutor}입니다. 예약하셨어요?"
         }
       },
       "name": {
@@ -1536,7 +1536,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람과"
     },
-    "setting": "A language-exchange evening at a café in Kazan. The tutor is Dasha, a friendly university student who starts the chat with the learner.",
+    "setting": "The AI tutor plays a friendly university student who starts the chat. A language-exchange evening at a café in Kazan.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1555,7 +1555,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Greet her and say your name.",
+          "en": "Greet them and say your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "ru-f1-01",
@@ -1566,7 +1566,7 @@
             "match": [
               "привет, меня зовут минсу",
               "меня зовут минсу",
-              "привет, даша! меня зовут минсу",
+              "привет, {tutor}! меня зовут минсу",
               "да, меня зовут минсу"
             ]
           },
@@ -1575,7 +1575,7 @@
             "go": "t-askname",
             "match": [
               "привет",
-              "привет, даша",
+              "привет, {tutor}",
               "да, привет"
             ]
           }
@@ -1708,7 +1708,7 @@
         "type": "learner",
         "id": "l-back",
         "goal": {
-          "en": "Ask her the same question back.",
+          "en": "Ask them the same question back.",
           "ko": "같은 질문을 되물어 보세요."
         },
         "expect": [
@@ -1794,17 +1794,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Привет! Ты тоже на языковой обмен? Я Даша.",
+        "text": "Привет! Ты тоже на языковой обмен? Я {tutor}.",
         "gloss": {
-          "en": "Hi! Are you here for the language exchange too? I'm Dasha.",
-          "ko": "안녕! 너도 언어 교환하러 왔어? 난 다샤야."
+          "en": "Hi! Are you here for the language exchange too? I'm {tutor}.",
+          "ko": "안녕! 너도 언어 교환하러 왔어? 내 이름은 {tutor}."
         }
       },
       "hi-easy": {
-        "text": "Привет! Я Даша. А ты?",
+        "text": "Привет! Я {tutor}. А ты?",
         "gloss": {
-          "en": "Hi! I'm Dasha. And you?",
-          "ko": "안녕! 난 다샤야. 너는?"
+          "en": "Hi! I'm {tutor}. And you?",
+          "ko": "안녕! 내 이름은 {tutor}. 너는?"
         }
       },
       "askname": {
@@ -1896,7 +1896,7 @@
       "en": "My family",
       "ko": "가족 이야기"
     },
-    "setting": "A friend's flat in Novosibirsk. The tutor, a friend called Kostya, is looking at a family photo on the learner's phone.",
+    "setting": "The AI tutor plays a friend looking at a family photo on the learner's phone. A friend's flat in Novosibirsk.",
     "tutorRole": "friend",
     "canDo": [
       1
@@ -2239,6 +2239,11 @@
         "gloss": {
           "en": "Ah, I see. I'm an only child too.",
           "ko": "아, 그렇구나. 나도 외동이야."
+        },
+        "byTutor": {
+          "f": {
+            "text": "А, понятно. Я тоже одна в семье."
+          }
         }
       },
       "alone-easy": {
@@ -2316,7 +2321,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "A small café in Yekaterinburg. Two new friends chat over tea about food. The tutor is Lena, a new friend.",
+    "setting": "The AI tutor plays a new friend. A small café in Yekaterinburg; two new friends chat over tea about food.",
     "tutorRole": "new friend",
     "canDo": [
       4
@@ -2550,7 +2555,7 @@
             ]
           },
           {
-            "meaning": "asks her back",
+            "meaning": "asks them back",
             "go": "t-borsch",
             "match": [
               "а ты?",
@@ -2730,7 +2735,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend sports club in a park in St Petersburg. The tutor, Igor, is a club member welcoming the learner on their first visit.",
+    "setting": "The AI tutor plays a club member welcoming the learner on their first visit. A weekend sports club in a park in St Petersburg.",
     "tutorRole": "club member",
     "canDo": [
       0,
@@ -2749,19 +2754,19 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Greet him by name and say yours.",
-          "ko": "그의 이름을 불러 인사하고 내 이름을 말하세요."
+          "en": "Greet them by name and say yours.",
+          "ko": "상대 이름을 불러 인사하고 내 이름을 말하세요."
         },
         "frame": "ru-f1-16",
         "expect": [
           {
-            "meaning": "greets Igor by name",
+            "meaning": "greets the tutor by name",
             "go": "t-swim",
             "match": [
-              "привет, игорь! меня зовут минсу",
-              "привет, игорь",
-              "привет, игорь! я минсу",
-              "здравствуйте, игорь"
+              "привет, {tutor}! меня зовут минсу",
+              "привет, {tutor}",
+              "привет, {tutor}! я минсу",
+              "здравствуйте, {tutor}"
             ]
           },
           {
@@ -2955,12 +2960,12 @@
         "type": "learner",
         "id": "l-back",
         "goal": {
-          "en": "Ask him back what he does here.",
-          "ko": "그는 여기서 뭘 하는지 되물어 보세요."
+          "en": "Ask them back what they do here.",
+          "ko": "상대는 여기서 뭘 하는지 되물어 보세요."
         },
         "expect": [
           {
-            "meaning": "asks him back",
+            "meaning": "asks them back",
             "go": "t-me",
             "match": [
               "а ты?",
@@ -3003,17 +3008,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Привет! Ты первый раз у нас? Я Игорь.",
+        "text": "Привет! Ты первый раз у нас? Я {tutor}.",
         "gloss": {
-          "en": "Hi! Is it your first time here? I’m Igor.",
-          "ko": "안녕! 여기 처음이야? 난 이고르야."
+          "en": "Hi! Is it your first time here? I’m {tutor}.",
+          "ko": "안녕! 여기 처음이야? 내 이름은 {tutor}."
         }
       },
       "hi-easy": {
-        "text": "Привет! Я Игорь. А ты?",
+        "text": "Привет! Я {tutor}. А ты?",
         "gloss": {
-          "en": "Hi! I’m Igor. And you?",
-          "ko": "안녕! 난 이고르야. 너는?"
+          "en": "Hi! I’m {tutor}. And you?",
+          "ko": "안녕! 내 이름은 {tutor}. 너는?"
         }
       },
       "askname": {
@@ -3147,7 +3152,7 @@
       "en": "My day",
       "ko": "하루 일과"
     },
-    "setting": "An office kitchen in Moscow at 9 a.m. The tutor, Marina, is a colleague making tea and chatting about the learner's daily routine.",
+    "setting": "The AI tutor plays a colleague making tea and chatting about the learner's daily routine. An office kitchen in Moscow at 9 a.m.",
     "tutorRole": "colleague",
     "canDo": [
       0
@@ -3185,7 +3190,7 @@
             "match": [
               "доброе утро",
               "привет",
-              "привет, марина"
+              "привет, {tutor}"
             ]
           }
         ],
@@ -3512,7 +3517,7 @@
       "en": "Where I live",
       "ko": "사는 곳"
     },
-    "setting": "The courtyard of an apartment block in Kazan. The tutor, Tatyana, is a new neighbour asking where the learner lives and what is nearby.",
+    "setting": "The AI tutor plays a new neighbour asking where the learner lives and what is nearby. The courtyard of an apartment block in Kazan.",
     "tutorRole": "neighbour",
     "canDo": [
       0
@@ -3530,7 +3535,7 @@
         "type": "learner",
         "id": "l-hi",
         "goal": {
-          "en": "Say yes, and tell her your name.",
+          "en": "Say yes, and tell them your name.",
           "ko": "네라고 하고 이름을 말하세요."
         },
         "frame": "ru-f1-01",
@@ -3770,10 +3775,10 @@
         }
       },
       "which": {
-        "text": "Очень приятно! Я Татьяна. А вы в какой квартире?",
+        "text": "Очень приятно! Я {tutor}. А вы в какой квартире?",
         "gloss": {
-          "en": "Nice to meet you! I’m Tatyana. Which flat are you in?",
-          "ko": "반가워요! 저는 타티야나예요. 몇 호에 사세요?"
+          "en": "Nice to meet you! I’m {tutor}. Which flat are you in?",
+          "ko": "반가워요! 저는 {tutor}입니다. 몇 호에 사세요?"
         }
       },
       "which-easy": {
@@ -3858,7 +3863,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall at Danilovsky Market in Moscow on a Saturday morning.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall at Danilovsky Market in Moscow on a Saturday morning.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -4271,7 +4276,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small neighbourhood bakery in St Petersburg early in the morning, with pastries in the window.",
+    "setting": "The AI tutor plays the baker. A small neighbourhood bakery in St Petersburg early in the morning, with pastries in the window.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4646,7 +4651,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small Russian canteen-style café (stolovaya) in Yekaterinburg at lunchtime. The tutor is the server at the table.",
+    "setting": "The AI tutor plays the server at the table. A small Russian canteen-style café (stolovaya) in Yekaterinburg at lunchtime.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -5114,7 +5119,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on a wide street in Kazan in the afternoon. The learner asks someone waiting about the bus to the Kremlin.",
+    "setting": "The AI tutor plays a person waiting at the stop. A bus stop on a wide street in Kazan in the afternoon; the learner asks about the bus to the Kremlin.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5479,7 +5484,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "A ticket window at Leningradsky station in Moscow. The learner wants to go to St Petersburg on the Sapsan train.",
+    "setting": "The AI tutor plays the ticket clerk. A ticket window at Leningradsky station in Moscow; the learner wants to go to St Petersburg on the Sapsan train.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5915,7 +5920,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A taxi ordered through an app, picking the learner up outside Pulkovo airport in St Petersburg. The tutor is the driver.",
+    "setting": "The AI tutor plays the taxi driver. A taxi ordered through an app, picking the learner up outside Pulkovo airport in St Petersburg.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -6317,7 +6322,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A chain pharmacy (apteka) near a metro station in Moscow in the evening. The learner has a headache.",
+    "setting": "The AI tutor plays the pharmacist. A chain pharmacy (apteka) near a metro station in Moscow in the evening; the learner has a headache.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6673,7 +6678,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop in a shopping centre in Nizhny Novgorod. The learner is looking for a warm scarf before winter.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop in a shopping centre in Nizhny Novgorod; the learner is looking for a warm scarf before winter.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -7092,7 +7097,7 @@
       "en": "Lost and found",
       "ko": "분실물 찾기"
     },
-    "setting": "The lost-property office (byuro nakhodok) at Kazansky station in Moscow. The learner left a backpack on a train this morning.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property office (byuro nakhodok) at Kazansky station in Moscow; the learner left a backpack on a train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -7555,7 +7560,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "A tourist information centre in the centre of Kazan. The tutor helps visitors plan what to see.",
+    "setting": "The AI tutor plays the tourist-office staff member helping visitors plan what to see. A tourist information centre in the centre of Kazan.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7946,7 +7951,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a city library in Tomsk. The learner wants a library card to borrow books.",
+    "setting": "The AI tutor plays the librarian. The front desk of a city library in Tomsk; the learner wants a library card to borrow books.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -8388,7 +8393,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a fitness club in a business district of Moscow. The learner is thinking of joining.",
+    "setting": "The AI tutor plays the gym staff member. The reception of a fitness club in a business district of Moscow; the learner is thinking of joining.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -8757,7 +8762,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수하기"
     },
-    "setting": "The reception desk of a private medical clinic in St Petersburg. The learner has an appointment and is asked to fill in a form.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a private medical clinic in St Petersburg; the learner has an appointment and is asked to fill in a form.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -9172,7 +9177,7 @@
       "en": "Meeting a neighbour",
       "ko": "새 이웃과 인사"
     },
-    "setting": "The entrance hall of a Soviet-era apartment block in Novosibirsk, by the lift. The tutor is Nina Petrovna, an elderly neighbour.",
+    "setting": "The AI tutor plays an older neighbour who introduces themselves by name. The entrance hall of a Soviet-era apartment block in Novosibirsk, by the lift.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -9191,18 +9196,18 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet her by name.",
-          "ko": "그녀의 이름을 불러 인사하세요."
+          "en": "Greet your neighbour by name.",
+          "ko": "이웃의 이름을 불러 인사하세요."
         },
         "frame": "ru-f1-16",
         "expect": [
           {
-            "meaning": "greets her by name",
+            "meaning": "greets the tutor by name",
             "go": "t-name",
             "match": [
-              "здравствуйте, нина петровна",
-              "здравствуйте, нина петровна! очень приятно",
-              "добрый день, нина петровна"
+              "здравствуйте, {tutor}",
+              "здравствуйте, {tutor}! очень приятно",
+              "добрый день, {tutor}"
             ]
           },
           {
@@ -9376,7 +9381,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank her and say goodbye politely.",
+          "en": "Thank them and say goodbye politely.",
           "ko": "고맙다고 하고 정중하게 작별 인사하세요."
         },
         "expect": [
@@ -9386,7 +9391,7 @@
             "match": [
               "спасибо! до свидания",
               "спасибо большое, до свидания",
-              "до свидания, нина петровна"
+              "до свидания, {tutor}"
             ]
           },
           {
@@ -9417,17 +9422,22 @@
     },
     "sentences": {
       "hi": {
-        "text": "Ой, здравствуйте! Я Нина Петровна, ваша соседка.",
+        "text": "Ой, здравствуйте! Я {tutor}, ваша соседка.",
         "gloss": {
-          "en": "Oh, hello! I'm Nina Petrovna, your neighbour.",
-          "ko": "어머, 안녕하세요! 나는 니나 페트로브나예요, 이웃이에요."
+          "en": "Oh, hello! I'm {tutor}, your neighbour.",
+          "ko": "어머, 안녕하세요! 저는 {tutor}입니다, 이웃이에요."
+        },
+        "byTutor": {
+          "m": {
+            "text": "Ой, здравствуйте! Я {tutor}, ваш сосед."
+          }
         }
       },
       "hi-easy": {
-        "text": "Здравствуйте! Я Нина Петровна. Я живу здесь.",
+        "text": "Здравствуйте! Я {tutor}. Я живу здесь.",
         "gloss": {
-          "en": "Hello! I'm Nina Petrovna. I live here.",
-          "ko": "안녕하세요! 나는 니나 페트로브나예요. 여기 살아요."
+          "en": "Hello! I'm {tutor}. I live here.",
+          "ko": "안녕하세요! 저는 {tutor}입니다. 여기 살아요."
         }
       },
       "name": {
@@ -9505,7 +9515,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange meetup in an anti-café in Moscow. The tutor is Artyom, who wants to learn Korean.",
+    "setting": "The AI tutor plays a language-exchange partner who wants to learn Korean. A language-exchange meetup in an anti-café in Moscow.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -9525,18 +9535,18 @@
         "type": "learner",
         "id": "l-hi",
         "goal": {
-          "en": "Greet him by name and say yes, you're from Korea.",
-          "ko": "그의 이름을 불러 인사하고, 응 한국에서 왔다고 하세요."
+          "en": "Greet them by name and say yes, you're from Korea.",
+          "ko": "상대 이름을 불러 인사하고, 응 한국에서 왔다고 하세요."
         },
         "frame": "ru-f1-16",
         "expect": [
           {
-            "meaning": "greets Artyom by name",
+            "meaning": "greets the tutor by name",
             "go": "t-lang",
             "match": [
-              "привет, артём! да, я из кореи",
-              "привет, артём",
-              "привет, артём! да"
+              "привет, {tutor}! да, я из кореи",
+              "привет, {tutor}",
+              "привет, {tutor}! да"
             ]
           },
           {
@@ -9613,7 +9623,7 @@
         "type": "learner",
         "id": "l-other",
         "goal": {
-          "en": "Ask him to speak more slowly.",
+          "en": "Ask them to speak more slowly.",
           "ko": "더 천천히 말해 달라고 하세요."
         },
         "expect": [
@@ -9793,10 +9803,10 @@
     },
     "sentences": {
       "hi": {
-        "text": "Привет! Я Артём. Ты из Кореи, да?",
+        "text": "Привет! Я {tutor}. Ты из Кореи, да?",
         "gloss": {
-          "en": "Hi! I'm Artyom. You're from Korea, right?",
-          "ko": "안녕! 난 아르툠이야. 너 한국에서 왔지?"
+          "en": "Hi! I'm {tutor}. You're from Korea, right?",
+          "ko": "안녕! 내 이름은 {tutor}. 너 한국에서 왔지?"
         }
       },
       "hi-easy": {
@@ -9895,7 +9905,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Russian language class at a university in Moscow. The teacher has just given a short test; the learner has no pen. The tutor is Sveta, a classmate at the next desk.",
+    "setting": "The AI tutor plays a classmate at the next desk. A Russian language class at a university in Moscow; the teacher has just given a short test and the learner has no pen.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -9929,7 +9939,7 @@
             ]
           },
           {
-            "meaning": "asks if she has a pen",
+            "meaning": "asks if they have a pen",
             "go": "t-which",
             "match": [
               "у тебя есть ручка",
@@ -10001,7 +10011,7 @@
         "type": "learner",
         "id": "l-thank",
         "goal": {
-          "en": "Thank her and say you'll give it back after class.",
+          "en": "Thank them and say you'll give it back after class.",
           "ko": "고맙다고 하고 수업 끝나고 돌려주겠다고 하세요."
         },
         "expect": [
@@ -10146,7 +10156,7 @@
         "type": "learner",
         "id": "l-thanks2",
         "goal": {
-          "en": "Thank her for everything.",
+          "en": "Thank them for everything.",
           "ko": "모든 것에 대해 고맙다고 하세요."
         },
         "frame": "ru-f1-15",
@@ -10290,7 +10300,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "The learner is outside Mayakovskaya metro station in Moscow, on the phone with a friend, Vanya, who is nearby but can't find them.",
+    "setting": "The AI tutor plays a friend on the phone who is nearby but can't find the learner. The learner is outside Mayakovskaya metro station in Moscow.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -10309,13 +10319,13 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Say you're at the metro exit, then ask where he is.",
-          "ko": "지하철 출구에 있다고 하고, 그는 어디 있는지 물어보세요."
+          "en": "Say you're at the metro exit, then ask where your friend is.",
+          "ko": "지하철 출구에 있다고 하고, 친구는 어디 있는지 물어보세요."
         },
         "frame": "ru-f1-17",
         "expect": [
           {
-            "meaning": "says where they are and asks where he is",
+            "meaning": "says where they are and asks where the friend is",
             "go": "t-see",
             "match": [
               "я у метро. а ты где?",
@@ -10407,7 +10417,7 @@
         "type": "learner",
         "id": "l-fast",
         "goal": {
-          "en": "Ask him to speak more slowly.",
+          "en": "Ask them to speak more slowly.",
           "ko": "더 천천히 말해 달라고 하세요."
         },
         "expect": [
@@ -10416,7 +10426,7 @@
             "go": "t-slow",
             "match": [
               "говори медленнее, пожалуйста",
-              "ваня, говори медленнее, пожалуйста",
+              "{tutor}, говори медленнее, пожалуйста",
               "медленнее, пожалуйста"
             ]
           },
@@ -10493,7 +10503,7 @@
         "type": "learner",
         "id": "l-when",
         "goal": {
-          "en": "Ask when he'll be there.",
+          "en": "Ask when they'll be there.",
           "ko": "언제 오는지 물어보세요."
         },
         "expect": [
@@ -10638,6 +10648,11 @@
         "gloss": {
           "en": "Got it! I'm close. Stay there, I'm coming.",
           "ko": "알겠다! 나 근처야. 거기 있어, 갈게."
+        },
+        "byTutor": {
+          "f": {
+            "text": "Поняла! Я рядом. Стой там, я иду."
+          }
         }
       },
       "got-easy": {
@@ -10680,7 +10695,7 @@
       "en": "Morning at work",
       "ko": "회사 아침 인사"
     },
-    "setting": "An open-plan office in an IT company in Kazan, 9 a.m. The tutor, Anton, is a colleague arriving at the next desk.",
+    "setting": "The AI tutor plays a colleague arriving at the next desk. An open-plan office in an IT company in Kazan, 9 a.m.",
     "tutorRole": "colleague",
     "canDo": [
       0,
@@ -10699,18 +10714,18 @@
         "type": "learner",
         "id": "l-hi",
         "goal": {
-          "en": "Greet Anton by name and say things are fine.",
-          "ko": "안톤의 이름을 불러 인사하고 잘 지낸다고 하세요."
+          "en": "Greet your colleague by name and say things are fine.",
+          "ko": "동료 이름을 불러 인사하고 잘 지낸다고 하세요."
         },
         "frame": "ru-f1-16",
         "expect": [
           {
-            "meaning": "greets Anton by name",
+            "meaning": "greets the tutor by name",
             "go": "t-new",
             "match": [
-              "привет, антон! всё хорошо",
-              "привет, антон",
-              "привет, антон! хорошо, а у тебя?"
+              "привет, {tutor}! всё хорошо",
+              "привет, {tutor}",
+              "привет, {tutor}! хорошо, а у тебя?"
             ]
           },
           {
@@ -11020,7 +11035,7 @@
       "en": "Asking for help",
       "ko": "도와 달라고 하기"
     },
-    "setting": "A metro station in St Petersburg. The learner can't work the ticket machine to top up a Podorozhnik transport card. The tutor is a station staff member.",
+    "setting": "The AI tutor plays a station staff member. A metro station in St Petersburg; the learner can't work the ticket machine to top up a Podorozhnik transport card.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -11412,7 +11427,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The corridor of a language school in Moscow, right after the evening class. The tutor, Kirill, is a classmate walking out with the learner.",
+    "setting": "The AI tutor plays a classmate walking out with the learner. The corridor of a language school in Moscow, right after the evening class.",
     "tutorRole": "classmate",
     "canDo": [
       0,
@@ -11665,7 +11680,7 @@
             "match": [
               "пока",
               "пока, до среды",
-              "пока, кирилл",
+              "пока, {tutor}",
               "до среды"
             ]
           },

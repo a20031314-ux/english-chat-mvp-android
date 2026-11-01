@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small café near Place Bellecour in Lyon, mid-morning, not busy. The tutor is the barista behind the counter; the learner has just come in and orders at the counter.",
+    "setting": "The AI tutor plays the barista. A small café near Place Bellecour in Lyon, mid-morning, not busy. The barista is behind the counter; the learner has just come in and orders at the counter.",
     "tutorRole": "barista",
     "canDo": [
       2,
@@ -368,7 +368,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street just outside Gare de l'Est in Paris. The learner stops a friendly passer-by to ask the way to the metro; the directions are a little fast the first time.",
+    "setting": "The AI tutor plays a friendly passer-by. A busy street just outside Gare de l'Est in Paris. The learner stops the passer-by to ask the way to the metro; the directions are a little fast the first time.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -661,7 +661,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small stationery shop (papeterie) in the old town of Bordeaux. The tutor is the shop assistant; the learner needs a notebook for class.",
+    "setting": "The AI tutor plays the shop assistant. A small stationery shop (papeterie) in the old town of Bordeaux; the learner needs a notebook for class.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1029,7 +1029,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small family-run hotel near the Promenade des Anglais in Nice, in the evening. The learner has a booking under the name Kim.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small family-run hotel near the Promenade des Anglais in Nice, in the evening. The learner has a booking under the name Kim.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1389,7 +1389,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람과 인사"
     },
-    "setting": "The first evening of a French class for foreigners at a language school in Strasbourg. A friendly classmate, Inès, sits next to the learner and starts chatting before the lesson.",
+    "setting": "The AI tutor plays a friendly classmate. The first evening of a French class for foreigners at a language school in Strasbourg. The classmate sits next to the learner and starts chatting before the lesson.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1408,7 +1408,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Tell her your name.",
+          "en": "Tell them your name.",
           "ko": "이름을 말해 주세요."
         },
         "frame": "fr-f1-01",
@@ -1519,7 +1519,7 @@
         "type": "learner",
         "id": "l-job",
         "goal": {
-          "en": "Say you are a student and ask her back.",
+          "en": "Say you are a student and ask them back.",
           "ko": "학생이라고 하고 상대에게도 물어보세요."
         },
         "frame": "fr-f1-03",
@@ -1672,17 +1672,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Salut ! Moi, c'est Inès. Et toi, tu t'appelles comment ?",
+        "text": "Salut ! Moi, c'est {tutor}. Et toi, tu t'appelles comment ?",
         "gloss": {
-          "en": "Hi! I'm Inès. And you, what's your name?",
-          "ko": "안녕! 난 이네스야. 넌 이름이 뭐야?"
+          "en": "Hi! I'm {tutor}. And you, what's your name?",
+          "ko": "안녕! 나는 {tutor}. 넌 이름이 뭐야?"
         }
       },
       "hi-e": {
-        "text": "Je m'appelle Inès. Et toi ?",
+        "text": "Je m'appelle {tutor}. Et toi ?",
         "gloss": {
-          "en": "My name is Inès. And you?",
-          "ko": "내 이름은 이네스야. 너는?"
+          "en": "My name is {tutor}. And you?",
+          "ko": "내 이름은 {tutor}. 너는?"
         }
       },
       "origin": {
@@ -1690,6 +1690,14 @@
         "gloss": {
           "en": "Nice to meet you! Where are you from?",
           "ko": "반가워! 어디서 왔어?"
+        },
+        "byTutor": {
+          "f": {
+            "text": "Enchantée ! Tu viens d'où ?"
+          },
+          "m": {
+            "text": "Enchanté ! Tu viens d'où ?"
+          }
         }
       },
       "origin-e": {
@@ -1718,6 +1726,14 @@
         "gloss": {
           "en": "I'm a nurse. And you, where do you work?",
           "ko": "난 간호사야. 넌 어디서 일해?"
+        },
+        "byTutor": {
+          "f": {
+            "text": "Moi, je suis infirmière. Et toi, tu travailles où ?"
+          },
+          "m": {
+            "text": "Moi, je suis infirmier. Et toi, tu travailles où ?"
+          }
         }
       },
       "mine-e": {
@@ -1760,7 +1776,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend's kitchen in Marseille. The friend, Mathis, is looking at a family photo on the learner's phone and asks who is in it.",
+    "setting": "The AI tutor plays a friend. A friend's kitchen in Marseille. The friend is looking at a family photo on the learner's phone and asks who is in it.",
     "tutorRole": "friend",
     "canDo": [],
     "start": "t-photo",
@@ -2055,7 +2071,7 @@
       "en": "What I like",
       "ko": "좋아하는 것"
     },
-    "setting": "A café terrace on Place du Capitole in Toulouse. Two new friends chat over a drink about food and music; the tutor is the friend, Hugo.",
+    "setting": "The AI tutor plays a new friend. A café terrace on Place du Capitole in Toulouse. Two new friends chat over a drink about food and music.",
     "tutorRole": "new friend",
     "canDo": [],
     "start": "t-food",
@@ -2372,7 +2388,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "An international weekend sports club in Nantes. A friendly member, Zoé, welcomes the learner on their first Saturday and asks what they play and which languages they speak.",
+    "setting": "The AI tutor plays a club member. An international weekend sports club in Nantes. A friendly member welcomes the learner on their first Saturday and asks what they play and which languages they speak.",
     "tutorRole": "club member",
     "canDo": [],
     "start": "t-hi",
@@ -2668,7 +2684,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "An open-plan office in La Défense, near Paris, at 8:30 in the morning. A colleague, Hugo, arrives and chats by the coffee machine about the learner's day.",
+    "setting": "The AI tutor plays a colleague. An open-plan office in La Défense, near Paris, at 8:30 in the morning. The colleague arrives and chats by the coffee machine about the learner's day.",
     "tutorRole": "colleague",
     "canDo": [],
     "start": "t-hi",
@@ -2684,19 +2700,19 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet your colleague by name and ask how he is.",
+          "en": "Greet your colleague by name and ask how they are.",
           "ko": "동료 이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "fr-f1-14",
         "expect": [
           {
-            "meaning": "greets by name and asks how he is",
+            "meaning": "greets by name and asks how they are",
             "go": "t-up",
             "match": [
-              "salut, hugo ! ça va ?",
-              "salut hugo, ça va ?",
+              "salut, {tutor} ! ça va ?",
+              "salut {tutor}, ça va ?",
               "salut ! ça va ?",
-              "bonjour hugo, ça va ?"
+              "bonjour {tutor}, ça va ?"
             ]
           },
           {
@@ -2967,7 +2983,7 @@
       "en": "Where I live",
       "ko": "사는 곳"
     },
-    "setting": "A quiet street in the Écusson, the old town of Montpellier. An older neighbour, Monsieur Garnier, stops the learner outside the building and chats about the neighbourhood.",
+    "setting": "The AI tutor plays a neighbour. A quiet street in the Écusson, the old town of Montpellier. An older neighbour stops the learner outside the building and chats about the neighbourhood.",
     "tutorRole": "neighbour",
     "canDo": [
       4
@@ -3209,7 +3225,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank him and wish him a good day.",
+          "en": "Thank them and wish them a good day.",
           "ko": "고맙다고 하고 좋은 하루 보내라고 하세요."
         },
         "frame": "fr-f1-19",
@@ -3353,7 +3369,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "A Saturday morning outdoor market on the Cours Mirabeau in Aix-en-Provence. The tutor runs a fruit and vegetable stall and calls out to customers.",
+    "setting": "The AI tutor plays the stall owner. A Saturday morning outdoor market on the Cours Mirabeau in Aix-en-Provence. The stall owner runs a fruit and vegetable stall and calls out to customers.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -3719,7 +3735,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small neighbourhood boulangerie in the 11th arrondissement of Paris at 8 a.m. The tutor is the baker behind the counter; the learner wants bread and is curious about a pastry they don't know.",
+    "setting": "The AI tutor plays the baker. A small neighbourhood boulangerie in the 11th arrondissement of Paris at 8 a.m. The baker is behind the counter; the learner wants bread and is curious about a pastry they don't know.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4157,7 +4173,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small bistro in Vieux Lyon at lunchtime on a weekday. The tutor is the server; the menu on the board has a dish of the day.",
+    "setting": "The AI tutor plays the server. A small bistro in Vieux Lyon at lunchtime on a weekday; the menu on the board has a dish of the day.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4669,7 +4685,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on the Cours de l'Intendance in Bordeaux. The learner asks a woman waiting there about bus line 9 to the city centre.",
+    "setting": "The AI tutor plays a person waiting at the stop. A bus stop on the Cours de l'Intendance in Bordeaux. The learner asks them about bus line 9 to the city centre.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -4788,7 +4804,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the information.",
+          "en": "Thank them for the information.",
           "ko": "알려 줘서 고맙다고 하세요."
         },
         "frame": "fr-f1-15",
@@ -4967,7 +4983,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The SNCF ticket window at Paris Gare de Lyon. The learner wants one ticket to Lyon today; the clerk is efficient and speaks a little fast.",
+    "setting": "The AI tutor plays the ticket clerk. The SNCF ticket window at Paris Gare de Lyon. The learner wants one ticket to Lyon today; the clerk is efficient and speaks a little fast.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5325,7 +5341,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A taxi rank at Paris Charles-de-Gaulle airport. The learner gets into a taxi to go to the Hôtel Lumière near the Eiffel Tower; the driver is chatty.",
+    "setting": "The AI tutor plays the taxi driver. A taxi rank at Paris Charles-de-Gaulle airport. The learner gets into a taxi to go to the Hôtel Lumière near the Eiffel Tower; the driver is chatty.",
     "tutorRole": "taxi driver",
     "canDo": [
       4
@@ -5680,7 +5696,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A pharmacy with a green cross on Rue d'Alsace-Lorraine in Toulouse. The learner has had a headache since the morning; the tutor is the pharmacist.",
+    "setting": "The AI tutor plays the pharmacist. A pharmacy with a green cross on Rue d'Alsace-Lorraine in Toulouse. The learner has had a headache since the morning.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6026,7 +6042,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A clothes shop on Rue Neuve in Lille, on a Saturday afternoon. The learner wants a sweater they saw in the window; the tutor is the shop assistant.",
+    "setting": "The AI tutor plays the shop assistant. A clothes shop on Rue Neuve in Lille, on a Saturday afternoon. The learner wants a sweater they saw in the window.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -6515,7 +6531,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-property desk at Paris Montparnasse station. The learner left a black bag on a train this morning; the tutor is the clerk.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property desk at Paris Montparnasse station. The learner left a black bag on a train this morning.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -6900,7 +6916,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The tourist information office in Avignon, near the Palais des Papes, on a spring morning. The tutor works at the desk.",
+    "setting": "The AI tutor plays the tourist-office staff. The tourist information office in Avignon, near the Palais des Papes, on a spring morning.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -6939,7 +6955,8 @@
             "match": [
               "bonjour",
               "bonjour, merci",
-              "bonjour, madame"
+              "bonjour, madame",
+              "bonjour, monsieur"
             ]
           }
         ],
@@ -7238,7 +7255,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of the public library (médiathèque) in Rennes. The learner wants a library card; the librarian fills in a form on the computer.",
+    "setting": "The AI tutor plays the librarian. The front desk of the public library (médiathèque) in Rennes. The learner wants a library card; the librarian fills in a form on the computer.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7680,7 +7697,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a neighbourhood gym in Grenoble on a weekday evening. The learner wants to know the price and the opening hours; the tutor is the receptionist.",
+    "setting": "The AI tutor plays the gym receptionist. The reception of a neighbourhood gym in Grenoble on a weekday evening. The learner wants to know the price and the opening hours.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -7996,7 +8013,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "The reception desk of a GP practice (cabinet médical) in the 11th arrondissement of Paris. The learner has a 10 o'clock appointment and is there for the first time.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a GP practice (cabinet médical) in the 11th arrondissement of Paris. The learner has a 10 o'clock appointment and is there for the first time.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -8303,7 +8320,8 @@
             "match": [
               "merci beaucoup",
               "d'accord, merci",
-              "merci, madame"
+              "merci, madame",
+              "merci, monsieur"
             ]
           },
           {
@@ -8451,7 +8469,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The entrance hall of an apartment building in the Croix-Rousse area of Lyon. An older neighbour, Martine, meets the learner by the letterboxes.",
+    "setting": "The AI tutor plays a neighbour. The entrance hall of an apartment building in the Croix-Rousse area of Lyon. An older neighbour meets the learner by the letterboxes.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8492,7 +8510,8 @@
               "bonjour, enchanté",
               "enchanté",
               "enchantée",
-              "bonjour, madame"
+              "bonjour, madame",
+              "bonjour, monsieur"
             ]
           },
           {
@@ -8641,7 +8660,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Wish her a good day too.",
+          "en": "Wish them a good day too.",
           "ko": "상대에게도 좋은 하루 보내라고 하세요."
         },
         "frame": "fr-f1-19",
@@ -8652,7 +8671,8 @@
             "match": [
               "merci, bonne journée !",
               "bonne journée, madame",
-              "vous aussi, bonne journée !"
+              "vous aussi, bonne journée !",
+              "bonne journée, monsieur"
             ]
           },
           {
@@ -8661,7 +8681,8 @@
             "match": [
               "au revoir",
               "au revoir, madame",
-              "à bientôt"
+              "à bientôt",
+              "au revoir, monsieur"
             ]
           }
         ],
@@ -8683,17 +8704,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Oh, bonjour ! Je m'appelle Martine, j'habite au troisième.",
+        "text": "Oh, bonjour ! Je m'appelle {tutor}, j'habite au troisième.",
         "gloss": {
-          "en": "Oh, hello! My name is Martine, I live on the third floor.",
-          "ko": "어머, 안녕하세요! 저는 마르틴이에요, 3층(우리식 4층)에 살아요."
+          "en": "Oh, hello! My name is {tutor}, I live on the third floor.",
+          "ko": "어머, 안녕하세요! 이름은 {tutor}, 3층(우리식 4층)에 살아요."
         }
       },
       "hi-e": {
-        "text": "Bonjour. Moi, c'est Martine. Et vous ?",
+        "text": "Bonjour. Moi, c'est {tutor}. Et vous ?",
         "gloss": {
-          "en": "Hello. I'm Martine. And you?",
-          "ko": "안녕하세요. 저는 마르틴이에요. 그쪽은요?"
+          "en": "Hello. I'm {tutor}. And you?",
+          "ko": "안녕하세요. 이름은 {tutor}. 그쪽은요?"
         }
       },
       "name": {
@@ -8715,6 +8736,14 @@
         "gloss": {
           "en": "Nice to meet you! Which floor do you live on?",
           "ko": "반가워요! 몇 층 사세요?"
+        },
+        "byTutor": {
+          "f": {
+            "text": "Enchantée ! Vous habitez à quel étage ?"
+          },
+          "m": {
+            "text": "Enchanté ! Vous habitez à quel étage ?"
+          }
         }
       },
       "floor-e": {
@@ -8771,7 +8800,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange evening in a bar near Canal Saint-Martin in Paris. The tutor, Lucas, is a regular and talks to the learner, who has just arrived.",
+    "setting": "The AI tutor plays an exchange partner. A language-exchange evening in a bar near Canal Saint-Martin in Paris. The partner is a regular and talks to the learner, who has just arrived.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -9060,10 +9089,10 @@
         }
       },
       "origin": {
-        "text": "Moi, c'est Lucas. Tu viens d'où ?",
+        "text": "Moi, c'est {tutor}. Tu viens d'où ?",
         "gloss": {
-          "en": "I'm Lucas. Where are you from?",
-          "ko": "난 뤼카야. 어디서 왔어?"
+          "en": "I'm {tutor}. Where are you from?",
+          "ko": "나는 {tutor}. 어디서 왔어?"
         }
       },
       "origin-e": {
@@ -9134,7 +9163,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A French class at a language school in Dijon. The learner has forgotten their pen; the classmate next to them, Emma, notices.",
+    "setting": "The AI tutor plays a classmate. A French class at a language school in Dijon. The learner has forgotten their pen; the classmate next to them notices.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -9152,7 +9181,7 @@
         "type": "learner",
         "id": "l-ask",
         "goal": {
-          "en": "Ask if she has a pen.",
+          "en": "Ask if they have a pen.",
           "ko": "펜 있냐고 물어보세요."
         },
         "expect": [
@@ -9250,7 +9279,7 @@
         "type": "learner",
         "id": "l-return",
         "goal": {
-          "en": "Give it back and thank her for the pen.",
+          "en": "Give it back and thank them for the pen.",
           "ko": "돌려주면서 펜 고맙다고 하세요."
         },
         "frame": "fr-f1-15",
@@ -9442,7 +9471,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Bordeaux Saint-Jean station at 6 p.m. The learner and their friend Clara are both in the station but cannot find each other, so Clara calls.",
+    "setting": "The AI tutor plays a friend on the phone. Bordeaux Saint-Jean station at 6 p.m. The learner and their friend are both in the station but cannot find each other, so the friend calls.",
     "tutorRole": "friend on the phone",
     "canDo": [
       5
@@ -9460,18 +9489,18 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet your friend by name and ask how she is.",
+          "en": "Greet your friend by name and ask how they are.",
           "ko": "친구 이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "fr-f1-14",
         "expect": [
           {
-            "meaning": "greets by name and asks how she is",
+            "meaning": "greets by name and asks how they are",
             "go": "t-where",
             "match": [
-              "salut, clara ! ça va ?",
-              "salut clara, ça va ?",
-              "allô, salut clara ! ça va ?",
+              "salut, {tutor} ! ça va ?",
+              "salut {tutor}, ça va ?",
+              "allô, salut {tutor} ! ça va ?",
               "salut ! ça va ?"
             ]
           },
@@ -9480,7 +9509,7 @@
             "go": "t-where",
             "match": [
               "allô ?",
-              "allô, clara ?",
+              "allô, {tutor} ?",
               "oui, allô"
             ]
           }
@@ -9551,7 +9580,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "Ask her to speak more slowly.",
+          "en": "Ask them to speak more slowly.",
           "ko": "더 천천히 말해 달라고 하세요."
         },
         "expect": [
@@ -9663,7 +9692,7 @@
             ]
           },
           {
-            "meaning": "can see her",
+            "meaning": "can see them",
             "go": "t-end",
             "match": [
               "je te vois !",
@@ -9706,17 +9735,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Allô ? C'est moi, Clara !",
+        "text": "Allô ? C'est moi, {tutor} !",
         "gloss": {
-          "en": "Hello? It's me, Clara!",
-          "ko": "여보세요? 나야, 클라라!"
+          "en": "Hello? It's me, {tutor}!",
+          "ko": "여보세요? 나야, {tutor}!"
         }
       },
       "hi-e": {
-        "text": "Allô ? C'est Clara.",
+        "text": "Allô ? C'est {tutor}.",
         "gloss": {
-          "en": "Hello? It's Clara.",
-          "ko": "여보세요? 클라라야."
+          "en": "Hello? It's {tutor}.",
+          "ko": "여보세요? 나, {tutor}."
         }
       },
       "where": {
@@ -9801,7 +9830,7 @@
       "en": "Morning at work",
       "ko": "아침 출근"
     },
-    "setting": "A Monday morning in an open-plan office of a start-up in Toulouse. A colleague, Sophie, arrives at the next desk.",
+    "setting": "The AI tutor plays a colleague. A Monday morning in an open-plan office of a start-up in Toulouse. The colleague arrives at the next desk.",
     "tutorRole": "colleague",
     "canDo": [
       1
@@ -9819,19 +9848,19 @@
         "type": "learner",
         "id": "l-greet",
         "goal": {
-          "en": "Greet her by name and ask how she is.",
+          "en": "Greet them by name and ask how they are.",
           "ko": "이름을 부르며 인사하고 잘 지내는지 물어보세요."
         },
         "frame": "fr-f1-14",
         "expect": [
           {
-            "meaning": "greets by name and asks how she is",
+            "meaning": "greets by name and asks how they are",
             "go": "t-fine",
             "match": [
-              "salut, sophie ! ça va ?",
-              "salut sophie, ça va ?",
+              "salut, {tutor} ! ça va ?",
+              "salut {tutor}, ça va ?",
               "salut ! ça va ?",
-              "oui, super ! salut sophie, ça va ?"
+              "oui, super ! salut {tutor}, ça va ?"
             ]
           },
           {
@@ -10135,7 +10164,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A ticket machine in a metro station in Lille. The learner cannot work out the machine; a member of staff in a uniform comes over to help.",
+    "setting": "The AI tutor plays the staff member. A ticket machine in a metro station in Lille. The learner cannot work out the machine; a member of staff in a uniform comes over to help.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -10434,7 +10463,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The corridor of a language school in Grenoble just after the evening class. A classmate, Théo, walks out with the learner and chats for a minute.",
+    "setting": "The AI tutor plays a classmate. The corridor of a language school in Grenoble just after the evening class. The classmate walks out with the learner and chats for a minute.",
     "tutorRole": "classmate",
     "canDo": [],
     "start": "t-hi",
@@ -10611,7 +10640,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Wish him a good evening too.",
+          "en": "Wish them a good evening too.",
           "ko": "상대에게도 좋은 저녁 보내라고 하세요."
         },
         "frame": "fr-f1-19",

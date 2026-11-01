@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A chain café near a station in Tokyo, mid-morning. The tutor is the counter staff; the learner has just come up to the register.",
+    "setting": "The AI tutor plays the café counter staff. A chain café near a station in Tokyo, mid-morning; the learner has just come up to the register.",
     "tutorRole": "café counter staff",
     "canDo": [
       2,
@@ -373,7 +373,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street just outside Shibuya Station in Tokyo. The learner stops a friendly office worker on the pavement.",
+    "setting": "The AI tutor plays a friendly office worker passing by. A busy street just outside Shibuya Station in Tokyo; the learner stops them on the pavement.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -663,7 +663,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small variety shop near a station in Osaka on a rainy afternoon. The learner wants an umbrella; the tutor is the shop assistant.",
+    "setting": "The AI tutor plays the shop assistant. A small variety shop near a station in Osaka on a rainy afternoon; the learner wants an umbrella.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1047,7 +1047,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small business hotel in Kyoto in the evening. The learner has a booking under the name Kim Ji-woo.",
+    "setting": "The AI tutor plays the hotel receptionist. The front desk of a small business hotel in Kyoto in the evening; the learner has a booking under the name Kim Ji-woo.",
     "tutorRole": "hotel receptionist",
     "canDo": [
       0,
@@ -1418,7 +1418,7 @@
       "en": "Meeting someone new",
       "ko": "새 친구 만나기"
     },
-    "setting": "The first day of a Japanese class at a language school in Tokyo. A classmate sitting next to the learner starts the chat before the lesson.",
+    "setting": "The AI tutor plays a friendly classmate. The first day of a Japanese class at a language school in Tokyo; the classmate sitting next to the learner starts the chat before the lesson.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1589,8 +1589,8 @@
             "go": "t-me",
             "match": [
               "お仕事は何ですか",
-              "山本さんのお仕事は何ですか",
-              "山本さんは？",
+              "{tutor}さんのお仕事は何ですか",
+              "{tutor}さんは？",
               "お仕事は？"
             ]
           },
@@ -1672,17 +1672,17 @@
     },
     "sentences": {
       "start": {
-        "text": "はじめまして。山本です。よろしくお願いします。",
+        "text": "はじめまして。{tutor}です。よろしくお願いします。",
         "gloss": {
-          "en": "Nice to meet you. I'm Yamamoto. Pleased to meet you.",
-          "ko": "처음 뵙겠습니다. 야마모토예요. 잘 부탁해요."
+          "en": "Nice to meet you. I'm {tutor}. Pleased to meet you.",
+          "ko": "처음 뵙겠습니다. {tutor}입니다. 잘 부탁해요."
         }
       },
       "start-easy": {
-        "text": "はじめまして。わたしは山本です。",
+        "text": "はじめまして。わたしは{tutor}です。",
         "gloss": {
-          "en": "Nice to meet you. I'm Yamamoto.",
-          "ko": "처음 뵙겠습니다. 저는 야마모토예요."
+          "en": "Nice to meet you. I'm {tutor}.",
+          "ko": "처음 뵙겠습니다. 저는 {tutor}입니다."
         }
       },
       "ask-name": {
@@ -1788,7 +1788,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A break at a language school in Fukuoka. A Japanese friend is looking at a family photo on the learner's phone.",
+    "setting": "The AI tutor plays a Japanese friend. A break at a language school in Fukuoka; the friend is looking at a family photo on the learner's phone.",
     "tutorRole": "friend",
     "canDo": [],
     "start": "t-start",
@@ -2148,7 +2148,7 @@
       "en": "What I like",
       "ko": "내가 좋아하는 것"
     },
-    "setting": "An izakaya in Tokyo on a Friday evening. Two new friends from the same office are chatting over a drink about food.",
+    "setting": "The AI tutor plays a new friend from the learner's office. An izakaya in Tokyo on a Friday evening; the two are chatting over a drink about food.",
     "tutorRole": "new friend",
     "canDo": [],
     "start": "t-start",
@@ -2449,7 +2449,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend tennis club at a public court in Yokohama. A friendly member welcomes the learner on their first day.",
+    "setting": "The AI tutor plays a friendly club member. A weekend tennis club at a public court in Yokohama; the member welcomes the learner on their first day.",
     "tutorRole": "club member",
     "canDo": [],
     "start": "t-start",
@@ -2620,8 +2620,8 @@
             "go": "t-me",
             "match": [
               "何ができますか",
-              "小林さんは何ができますか",
-              "小林さんは？"
+              "{tutor}さんは何ができますか",
+              "{tutor}さんは？"
             ]
           },
           {
@@ -2695,10 +2695,10 @@
     },
     "sentences": {
       "start": {
-        "text": "ようこそ！小林です。テニスはできますか。",
+        "text": "ようこそ！{tutor}です。テニスはできますか。",
         "gloss": {
-          "en": "Welcome! I'm Kobayashi. Can you play tennis?",
-          "ko": "환영해요! 고바야시예요. 테니스 칠 줄 알아요?"
+          "en": "Welcome! I'm {tutor}. Can you play tennis?",
+          "ko": "환영해요! {tutor}입니다. 테니스 칠 줄 알아요?"
         }
       },
       "start-easy": {
@@ -2811,7 +2811,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "A weekday morning in Tokyo. A colleague phones the learner, who is on the way to the office by train.",
+    "setting": "The AI tutor plays a colleague on the phone. A weekday morning in Tokyo; the colleague phones the learner, who is on the way to the office by train.",
     "tutorRole": "colleague on the phone",
     "canDo": [
       4
@@ -3058,17 +3058,17 @@
     },
     "sentences": {
       "start": {
-        "text": "もしもし、ジウさん？高橋です。おはようございます。",
+        "text": "もしもし、ジウさん？{tutor}です。おはようございます。",
         "gloss": {
-          "en": "Hello, Ji-woo? It's Takahashi. Good morning.",
-          "ko": "여보세요, 지우 씨? 다카하시예요. 좋은 아침이에요."
+          "en": "Hello, Ji-woo? It's {tutor}. Good morning.",
+          "ko": "여보세요, 지우 씨? {tutor}입니다. 좋은 아침이에요."
         }
       },
       "start-easy": {
-        "text": "もしもし、高橋です。",
+        "text": "もしもし、{tutor}です。",
         "gloss": {
-          "en": "Hello, it's Takahashi.",
-          "ko": "여보세요, 다카하시예요."
+          "en": "Hello, it's {tutor}.",
+          "ko": "여보세요, {tutor}입니다."
         }
       },
       "where": {
@@ -3167,7 +3167,7 @@
       "en": "Where I live",
       "ko": "사는 동네"
     },
-    "setting": "A small park in a residential area of Sapporo on a Sunday. A neighbour walking a dog stops to chat with the learner.",
+    "setting": "The AI tutor plays a neighbour. A small park in a residential area of Sapporo on a Sunday; the neighbour, walking a dog, stops to chat with the learner.",
     "tutorRole": "neighbour",
     "canDo": [
       4
@@ -3455,7 +3455,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit and vegetable stall in a shopping street in Osaka. The cheerful stall owner calls out to people passing.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit and vegetable stall in a shopping street in Osaka; the cheerful stall owner calls out to people passing.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -3779,7 +3779,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small neighbourhood bakery in Kobe early in the morning. Fresh bread is on trays; the baker is behind the counter.",
+    "setting": "The AI tutor plays the baker. A small neighbourhood bakery in Kobe early in the morning; fresh bread is on trays and the baker is behind the counter.",
     "tutorRole": "baker",
     "canDo": [
       2
@@ -4102,7 +4102,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A small set-meal restaurant (teishoku-ya) near an office area in Tokyo at lunchtime. The tutor is the server.",
+    "setting": "The AI tutor plays the server. A small set-meal restaurant (teishoku-ya) near an office area in Tokyo at lunchtime.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4532,7 +4532,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A city bus stop in front of Kyoto's Shijo-Kawaramachi on a cold morning. An older woman is waiting next to the learner.",
+    "setting": "The AI tutor plays a local person waiting for the bus. A city bus stop in front of Kyoto's Shijo-Kawaramachi on a cold morning; they are waiting next to the learner.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -4863,7 +4863,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket office (midori no madoguchi) at Tokyo Station. The learner wants a shinkansen ticket for the next day; the tutor is the clerk.",
+    "setting": "The AI tutor plays the ticket clerk. The ticket office (midori no madoguchi) at Tokyo Station; the learner wants a shinkansen ticket for the next day.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5231,7 +5231,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A taxi rank outside Sapporo Station in the evening. The learner gets into a taxi to go to their hotel.",
+    "setting": "The AI tutor plays the taxi driver. A taxi rank outside Sapporo Station in the evening; the learner gets into the taxi to go to their hotel.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -5588,7 +5588,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A drugstore pharmacy counter in Nagoya. The learner has had a headache since morning; the tutor is the pharmacist.",
+    "setting": "The AI tutor plays the pharmacist. A drugstore pharmacy counter in Nagoya; the learner has had a headache since morning.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -5932,7 +5932,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A casual clothes shop in Harajuku, Tokyo. The learner has a shirt in hand; the tutor is the shop assistant.",
+    "setting": "The AI tutor plays the shop assistant. A casual clothes shop in Harajuku, Tokyo; the learner has a shirt in hand.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -6342,7 +6342,7 @@
       "en": "Lost and found",
       "ko": "분실물 찾기"
     },
-    "setting": "The lost-property office at Shinjuku Station in the afternoon. The learner left a black bag on a train around three o'clock.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property office at Shinjuku Station in the afternoon; the learner left a black bag on a train around three o'clock.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -6706,7 +6706,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The tourist information centre at Kyoto Station. The learner plans a day trip to Nara tomorrow.",
+    "setting": "The AI tutor plays the tourist-office staff. The tourist information centre at Kyoto Station; the learner plans a day trip to Nara tomorrow.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7016,7 +7016,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library in Nakano, Tokyo, on a weekday afternoon. The learner wants to borrow books.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library in Nakano, Tokyo, on a weekday afternoon; the learner wants to borrow books.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7387,7 +7387,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a fitness club near Umeda, Osaka. The learner walks in to ask about joining.",
+    "setting": "The AI tutor plays the gym staff. The reception of a fitness club near Umeda, Osaka; the learner walks in to ask about joining.",
     "tutorRole": "gym staff",
     "canDo": [
       2
@@ -7742,7 +7742,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수"
     },
-    "setting": "The reception desk of a small neighbourhood clinic in Sendai. The learner has a fever and has come for the first time.",
+    "setting": "The AI tutor plays the clinic receptionist. The reception desk of a small neighbourhood clinic in Sendai; the learner has a fever and has come for the first time.",
     "tutorRole": "clinic receptionist",
     "canDo": [
       0,
@@ -8066,7 +8066,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃과 인사하기"
     },
-    "setting": "The entrance hall of a small apartment building in Saitama. The learner moved in last week and meets a neighbour by the mailboxes.",
+    "setting": "The AI tutor plays a neighbour. The entrance hall of a small apartment building in Saitama; the learner moved in last week and meets the neighbour by the mailboxes.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8301,10 +8301,10 @@
         }
       },
       "floor": {
-        "text": "わたしは二階の中村です。ジウさんは何階ですか。",
+        "text": "わたしは二階の{tutor}です。ジウさんは何階ですか。",
         "gloss": {
-          "en": "I'm Nakamura from the second floor. Which floor are you on, Ji-woo?",
-          "ko": "저는 2층 나카무라예요. 지우 씨는 몇 층이에요?"
+          "en": "I'm {tutor} from the second floor. Which floor are you on, Ji-woo?",
+          "ko": "저는 2층 사는 {tutor}입니다. 지우 씨는 몇 층이에요?"
         }
       },
       "floor-easy": {
@@ -8375,7 +8375,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A café in Shimokitazawa, Tokyo, where a language-exchange partner is meeting the learner for the first time.",
+    "setting": "The AI tutor plays a language-exchange partner. A café in Shimokitazawa, Tokyo, where the partner is meeting the learner for the first time.",
     "tutorRole": "exchange partner",
     "canDo": [
       0
@@ -8573,17 +8573,17 @@
     },
     "sentences": {
       "start": {
-        "text": "こんにちは！ジウさんですか。わたし、鈴木です。",
+        "text": "こんにちは！ジウさんですか。わたし、{tutor}です。",
         "gloss": {
-          "en": "Hi! Are you Ji-woo? I'm Suzuki.",
-          "ko": "안녕하세요! 지우 씨예요? 저 스즈키예요."
+          "en": "Hi! Are you Ji-woo? I'm {tutor}.",
+          "ko": "안녕하세요! 지우 씨예요? 저 {tutor}입니다."
         }
       },
       "start-easy": {
-        "text": "ジウさんですか。わたしは鈴木です。",
+        "text": "ジウさんですか。わたしは{tutor}です。",
         "gloss": {
-          "en": "Are you Ji-woo? I'm Suzuki.",
-          "ko": "지우 씨예요? 저는 스즈키예요."
+          "en": "Are you Ji-woo? I'm {tutor}.",
+          "ko": "지우 씨예요? 저는 {tutor}입니다."
         }
       },
       "sit": {
@@ -8654,7 +8654,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Japanese class at a university in Fukuoka. The learner forgot a pen; a classmate sitting next to them notices.",
+    "setting": "The AI tutor plays a classmate. A Japanese class at a university in Fukuoka; the learner forgot a pen and the classmate sitting next to them notices.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -8990,7 +8990,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Shinjuku Station, Tokyo, on a Saturday. The learner and a friend planned to meet but cannot find each other in the crowd and talk on the phone.",
+    "setting": "The AI tutor plays a friend on the phone. Shinjuku Station, Tokyo, on a Saturday; the learner and the friend planned to meet but cannot find each other in the crowd and talk on the phone.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -9279,7 +9279,7 @@
       "en": "Morning at work",
       "ko": "회사의 아침"
     },
-    "setting": "An office in Shinagawa, Tokyo, at 8:50 a.m. A colleague at the next desk chats as the learner arrives.",
+    "setting": "The AI tutor plays a colleague. An office in Shinagawa, Tokyo, at 8:50 a.m.; the colleague at the next desk chats as the learner arrives.",
     "tutorRole": "colleague",
     "canDo": [
       4
@@ -9606,7 +9606,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "The ticket machines at a JR station in Tokyo. The learner is stuck at a machine; a station staff member comes over.",
+    "setting": "The AI tutor plays the station staff. The ticket machines at a JR station in Tokyo; the learner is stuck at a machine and the staff member comes over.",
     "tutorRole": "station staff",
     "canDo": [
       4,
@@ -9993,7 +9993,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The corridor of a language school in Tokyo after an evening class. A classmate walks out with the learner.",
+    "setting": "The AI tutor plays a classmate. The corridor of a language school in Tokyo after an evening class; the classmate walks out with the learner.",
     "tutorRole": "classmate",
     "canDo": [
       4

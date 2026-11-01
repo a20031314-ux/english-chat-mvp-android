@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small café on Hàng Bạc street in Hanoi's Old Quarter, mid-morning, not busy. The tutor is a young barista who speaks politely (ạ) and addresses the customer as 'mình' (common friendly service speech in Hanoi cafés), so the customer's gender and age stay open. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn. 'Nâu đá' is Hanoi slang for iced milk coffee.",
+    "setting": "The AI tutor plays the barista. A small café on Hàng Bạc street in Hanoi's Old Quarter, mid-morning, not busy. The tutor is a young barista who speaks politely (ạ) and addresses the customer as 'mình' (common friendly service speech in Hanoi cafés), so the customer's gender and age stay open. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn. 'Nâu đá' is Hanoi slang for iced milk coffee.",
     "tutorRole": "barista",
     "canDo": [
       0,
@@ -420,7 +420,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy street near Long Biên station in Hanoi, early afternoon. The learner stops a friendly local passer-by to ask the way to Đồng Xuân market. The passer-by first answers fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the passer-by. A busy street near Long Biên station in Hanoi, early afternoon. The learner stops a friendly local passer-by to ask the way to Đồng Xuân market. The passer-by first answers fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -743,7 +743,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small silk shop on Hàng Gai street in Hanoi's Old Quarter, late morning. The tutor is the shop assistant, polite (ạ). The learner wants a silk scarf as a gift. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the shop assistant. A small silk shop on Hàng Gai street in Hanoi's Old Quarter, late morning. The tutor is the shop assistant, polite (ạ). The learner wants a silk scarf as a gift. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -1125,7 +1125,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small hotel on Hàng Bè street in Hanoi, early evening. The tutor is the receptionist, polite (ạ), referring to themselves as em and to the guest as 'mình' (friendly service speech) so the guest's gender and age stay open. The learner has a booking for two nights. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small hotel on Hàng Bè street in Hanoi, early evening. The tutor is the receptionist, polite (ạ), referring to themselves as em and to the guest as 'mình' (friendly service speech) so the guest's gender and age stay open. The learner has a booking for two nights. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1525,7 +1525,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람과 인사"
     },
-    "setting": "The first day of a Vietnamese class at a language centre in Cầu Giấy, Hanoi. The tutor is Minh, a friendly Vietnamese student of the same age who joins the class as a helper; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the friendly classmate. The first day of a Vietnamese class at a language centre in Cầu Giấy, Hanoi. The tutor is a friendly Vietnamese student of the same age who joins the class as a helper; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1904,10 +1904,10 @@
         }
       },
       "minh": {
-        "text": "Mình là Minh. Bạn là người nước nào?",
+        "text": "Mình là {tutor}. Bạn là người nước nào?",
         "gloss": {
-          "en": "I'm Minh. Where are you from?",
-          "ko": "나는 민이야. 어느 나라 사람이야?"
+          "en": "I'm {tutor}. Where are you from?",
+          "ko": "내 이름은 {tutor}! 너는 어느 나라 사람이야?"
         }
       },
       "minh-easy": {
@@ -1985,7 +1985,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend's flat in Hanoi in the evening. The tutor is a Vietnamese friend of the same age looking at a family photo on the learner's phone; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the friend. A friend's flat in Hanoi in the evening. The tutor is a Vietnamese friend of the same age looking at a family photo on the learner's phone; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "friend",
     "canDo": [],
     "start": "t-hello",
@@ -2399,7 +2399,7 @@
       "en": "What I like",
       "ko": "내가 좋아하는 것"
     },
-    "setting": "A lemon-tea stall by St Joseph's Cathedral (Nhà Thờ street) in Hanoi, evening. Two new friends of the same age sit on low plastic stools; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the new friend. A lemon-tea stall by St Joseph's Cathedral (Nhà Thờ street) in Hanoi, evening. Two new friends of the same age sit on low plastic stools; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "new friend",
     "canDo": [],
     "start": "t-hello",
@@ -2734,7 +2734,7 @@
       "en": "What I can do",
       "ko": "할 수 있는 것"
     },
-    "setting": "A weekend badminton club in a sports hall in Tây Hồ, Hanoi, Saturday morning. The tutor is a friendly club member of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the club member. A weekend badminton club in a sports hall in Tây Hồ, Hanoi, Saturday morning. The tutor is a friendly club member of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "club member",
     "canDo": [],
     "start": "t-hello",
@@ -3092,7 +3092,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "A small office in Ba Đình, Hanoi, early morning, by the water dispenser. The tutor is a friendly colleague of about the same age; casual but polite. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the colleague. A small office in Ba Đình, Hanoi, early morning, by the water dispenser. The tutor is a friendly colleague of about the same age; casual but polite. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "colleague",
     "canDo": [
       0
@@ -3486,7 +3486,7 @@
       "en": "Where I live",
       "ko": "내가 사는 곳"
     },
-    "setting": "The gate of a small apartment block in a lane (ngõ) in Đống Đa, Hanoi, Sunday morning. The tutor is an older neighbour who calls the learner em and avoids gendered self-reference. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the neighbour. The gate of a small apartment block in a lane (ngõ) in Đống Đa, Hanoi, Sunday morning. The tutor is an older neighbour who calls the learner em and avoids gendered self-reference. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "neighbour",
     "canDo": [
       1,
@@ -3826,7 +3826,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall at Chợ Hôm market in Hanoi, morning. The tutor is an older stall owner who calls the learner em, haggles a little and avoids gendered self-reference. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall at Chợ Hôm market in Hanoi, morning. The tutor is an older stall owner who calls the learner em, haggles a little and avoids gendered self-reference. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -4145,7 +4145,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small bánh mì bakery stall on Hàng Cá street in Hanoi, early morning, with warm baguettes and fillings on display. The tutor is the baker, polite (ạ). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the baker. A small bánh mì bakery stall on Hàng Cá street in Hanoi, early morning, with warm baguettes and fillings on display. The tutor is the baker, polite (ạ). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4494,7 +4494,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A busy bún chả restaurant on Hàng Mành street in Hanoi at lunchtime, with low tables. The tutor is the server, quick but polite (ạ). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the server. A busy bún chả restaurant on Hàng Mành street in Hanoi at lunchtime, with low tables. The tutor is the server, quick but polite (ạ). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4942,7 +4942,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A bus stop on Tràng Thi street in Hanoi on a hot afternoon. The tutor is a friendly local waiting for a bus; casual. The bus number in the script is illustrative, not a real route. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the person waiting. A bus stop on Tràng Thi street in Hanoi on a hot afternoon. The tutor is a friendly local waiting for a bus; casual. The bus number in the script is illustrative, not a real route. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -5280,7 +5280,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "The ticket window at Hanoi Railway Station (Ga Hà Nội), morning. The tutor is the ticket clerk, polite (ạ) and a little fast. The learner wants to go to Haiphong. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the ticket clerk. The ticket window at Hanoi Railway Station (Ga Hà Nội), morning. The tutor is the ticket clerk, polite (ạ) and a little fast. The learner wants to go to Haiphong. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5706,7 +5706,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "A taxi from Nội Bài airport into central Hanoi, late afternoon. The tutor is a chatty taxi driver, casual. The learner is staying at a small hotel on Hàng Bạc street near Hoàn Kiếm Lake. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the taxi driver. A taxi from Nội Bài airport into central Hanoi, late afternoon. The tutor is a chatty taxi driver, casual. The learner is staying at a small hotel on Hàng Bạc street near Hoàn Kiếm Lake. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "taxi driver",
     "canDo": [
       2,
@@ -6055,7 +6055,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A small pharmacy (nhà thuốc) on Phố Huế in Hanoi, afternoon. The tutor is the pharmacist, kind and brief. The learner has a headache. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the pharmacist. A small pharmacy (nhà thuốc) on Phố Huế in Hanoi, afternoon. The tutor is the pharmacist, kind and brief. The learner has a headache. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -6402,7 +6402,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A small clothes shop on Hàng Đào street in Hanoi, evening. The tutor is the shop assistant, polite (ạ), referring to themselves as em. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the shop assistant. A small clothes shop on Hàng Đào street in Hanoi, evening. The tutor is the shop assistant, polite (ạ), referring to themselves as em. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "shop assistant",
     "canDo": [
       2
@@ -6784,7 +6784,7 @@
       "en": "Lost and found",
       "ko": "분실물 찾기"
     },
-    "setting": "The lost-property desk at Hanoi Railway Station, morning. The tutor is the clerk, calm and brief, casual-polite. The learner left a small black bag on the train. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property desk at Hanoi Railway Station, morning. The tutor is the clerk, calm and brief, casual-polite. The learner left a small black bag on the train. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       4,
@@ -7189,7 +7189,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "The tourist information centre on Đinh Tiên Hoàng street by Hoàn Kiếm Lake, Hanoi, morning. The tutor is the staff member, friendly and polite. The learner wants to visit the Temple of Literature (Văn Miếu). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the tourist-office staff. The tourist information centre on Đinh Tiên Hoàng street by Hoàn Kiếm Lake, Hanoi, morning. The tutor is the staff member, friendly and polite. The learner wants to visit the Temple of Literature (Văn Miếu). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -7507,7 +7507,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of the National Library on Tràng Thi street, Hanoi, weekday afternoon. The tutor is the librarian, friendly, casual-polite, and explains the rules a bit fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the librarian. The front desk of the National Library on Tràng Thi street, Hanoi, weekday afternoon. The tutor is the librarian, friendly, casual-polite, and explains the rules a bit fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7892,7 +7892,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a neighbourhood gym in Ba Đình, Hanoi, evening. The tutor is the gym staff member, friendly, casual-polite. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the gym staff. The reception of a neighbourhood gym in Ba Đình, Hanoi, evening. The tutor is the gym staff member, friendly, casual-polite. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "gym staff",
     "canDo": [
       2
@@ -8276,7 +8276,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수처에서"
     },
-    "setting": "The reception desk of a private clinic in Tây Hồ, Hanoi, morning. The tutor is the receptionist, polite but a little fast when explaining the form. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a private clinic in Tây Hồ, Hanoi, morning. The tutor is the receptionist, polite but a little fast when explaining the form. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -8683,7 +8683,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃 만나기"
     },
-    "setting": "The lift lobby of an apartment building in Hoàng Mai, Hanoi, morning. The tutor is an elderly neighbour who calls the learner cháu and refers to themselves as bác (gender-neutral) — the normal way an older person in Hanoi speaks to a young adult. The learner answers politely (dạ, ạ, cháu/bác). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as bác, cô or chú.",
+    "setting": "The AI tutor plays the neighbour. The lift lobby of an apartment building in Hoàng Mai, Hanoi, morning. The tutor is an elderly neighbour who calls the learner cháu and refers to themselves as bác (gender-neutral) — the normal way an older person in Hanoi speaks to a young adult. The learner answers politely (dạ, ạ, cháu/bác). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as bác, cô or chú.",
     "tutorRole": "neighbour",
     "canDo": [
       0
@@ -8966,10 +8966,10 @@
         }
       },
       "hoa": {
-        "text": "Bác tên là Hòa. Cháu ở tầng mấy?",
+        "text": "Bác tên là {tutor}. Cháu ở tầng mấy?",
         "gloss": {
-          "en": "My name is Hòa. Which floor are you on?",
-          "ko": "나는 화예요. 몇 층에 살아요?"
+          "en": "My name is {tutor}. Which floor are you on?",
+          "ko": "내 이름은 {tutor}. 몇 층에 살아요?"
         }
       },
       "hoa-easy": {
@@ -9012,7 +9012,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange evening in a café on Tạ Hiện street, Hanoi. The tutor is a friendly Vietnamese exchange partner of about the same age, from Hanoi; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the exchange partner. A language-exchange evening in a café on Tạ Hiện street, Hanoi. The tutor is a friendly Vietnamese exchange partner of about the same age, from Hanoi; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "exchange partner",
     "canDo": [
       1
@@ -9394,7 +9394,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Vietnamese class at a university language centre in Hanoi; the learner has forgotten a pen. The tutor is the classmate in the next seat, same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the classmate. A Vietnamese class at a university language centre in Hanoi; the learner has forgotten a pen. The tutor is the classmate in the next seat, same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "classmate",
     "canDo": [
       4
@@ -9752,7 +9752,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "A phone call outside the Hanoi Opera House (Nhà hát Lớn), early evening. The tutor is the learner's friend, already there and talking a bit fast; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the friend on the phone. A phone call outside the Hanoi Opera House (Nhà hát Lớn), early evening. The tutor is the learner's friend, already there and talking a bit fast; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -10111,7 +10111,7 @@
       "en": "Morning at work",
       "ko": "아침 출근"
     },
-    "setting": "An open-plan office in Cầu Giấy, Hanoi, Monday morning at the desks. The tutor is a friendly colleague of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the colleague. An open-plan office in Cầu Giấy, Hanoi, Monday morning at the desks. The tutor is a friendly colleague of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "colleague",
     "canDo": [
       0
@@ -10554,7 +10554,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "The ticket machines at Cát Linh station on Hanoi Metro Line 2A, afternoon. The tutor is a station staff member, helpful, casual-polite, who first explains too fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the staff member. The ticket machines at Cát Linh station on Hanoi Metro Line 2A, afternoon. The tutor is a station staff member, helpful, casual-polite, who first explains too fast. The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -10936,7 +10936,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "Leaving an evening Vietnamese class at a language school in Ba Đình, Hanoi. The tutor is a classmate of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
+    "setting": "The AI tutor plays the classmate. Leaving an evening Vietnamese class at a language school in Ba Đình, Hanoi. The tutor is a classmate of about the same age; casual (mình / bạn). The tutor's gender follows the voice the learner chose, so the scripted lines avoid gendered self-reference; the learner may address the tutor as anh, chị, em or bạn.",
     "tutorRole": "classmate",
     "canDo": [
       0,

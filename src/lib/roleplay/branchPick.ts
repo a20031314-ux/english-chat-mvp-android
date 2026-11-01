@@ -43,7 +43,8 @@ export function learnerNode(scene: CallScene, nodeId: string): SceneLearnerNode 
 export const BRANCH_SYSTEM = `You route one spoken reply in a language-learning phone role-play.
 The learner is a beginner and the text is an automatic transcript, so expect grammar mistakes, missing or wrong word endings, wrong particles, and mis-heard words.
 Choose the numbered option whose meaning the reply expresses in this moment of the conversation — judge the meaning, not the exact words. A reply that expresses an option's meaning with errors still counts.
-Answer none when the reply does not express any option: it says something else, asks something the options do not cover, is unintelligible, or is entirely in another language than the one being learned.
+Answer none when the reply does not express any option: it says something else, asks something the options do not cover, or is unintelligible.
+Also answer none when the reply is wholly or mostly in another language than the one being learned (for example English or the learner's own language), even if its meaning matches an option — the learner has to say it in the language being learned. A single borrowed word or a name inside a reply in the learned language is fine.
 If two options both fit, choose the earlier one.
 Reply with JSON only: {"pick": <option number>} or {"pick": null}.`;
 
