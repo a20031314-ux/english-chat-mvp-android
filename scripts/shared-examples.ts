@@ -87,7 +87,8 @@ if (mode === "check") {
         const piece = wants[0]!.piece;
         const kind = key.startsWith("f|") ? allFramesFor(language).find((f) => `f|${f.id}` === key)?.core.find((core) => core && one.text.includes(core)) : pieceOf(one.text, key.slice(2)) || undefined;
         if (!one.text || !one.en || !one.ko || !one.replaces) problems.push(`칸 빔 ${key} ${one.text}`);
-        else if (!kind || pieceAt(one.text, kind, language) < 0 || pieceTwice(one.text, kind, language)) problems.push(`조각 "${kind ?? piece}" 자리 ${key}: ${one.text}`);
+        // 조각이 낱말 줄기라(it "te la cav") 원래 문장에서도 따로 선 자리가 없으면 자리 검사는 건너뜀 — 그런 열쇠는 빈칸을 원래도 못 만듦.
+        else if (!kind || (pieceAt(one.text, kind, language) < 0 && wants.some((want) => pieceAt(want.text, want.piece, language) >= 0)) || pieceTwice(one.text, kind, language)) problems.push(`조각 "${kind ?? piece}" 자리 ${key}: ${one.text}`);
         if (existing.has(one.text)) problems.push(`원래 있는 문장 ${key}: ${one.text}`);
         if (seen.has(one.text)) problems.push(`겹침 ${key}: ${one.text}`);
         if (/\d/.test(one.text)) problems.push(`숫자 ${key}: ${one.text}`);

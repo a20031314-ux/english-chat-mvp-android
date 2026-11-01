@@ -1,0 +1,1168 @@
+{
+ "f|es-f1-01": [
+  {
+   "text": "Me llamo Lucía. ¿Y tú?",
+   "en": "My name is Lucía. And you?",
+   "ko": "제 이름은 루시아예요. 당신은요?",
+   "replaces": "Hola, Sofía. Me llamo Ji-woo. Mucho gusto."
+  },
+  {
+   "text": "Me llamo Tomás, como mi abuelo.",
+   "en": "My name is Tomás, like my grandfather.",
+   "ko": "제 이름은 토마스예요, 할아버지랑 같아요.",
+   "replaces": "Hola, buenas tardes. Sí, me llamo Daniel Kim."
+  },
+  {
+   "text": "Me llamo Pablo, pero todos me dicen Pablito.",
+   "en": "My name is Pablo, but everyone calls me Pablito.",
+   "ko": "제 이름은 파블로인데, 다들 파블리토라고 불러요.",
+   "replaces": "Buenos días. Me llamo Andrea Park y he trabajado cuatro años en marketing digital."
+  }
+ ],
+ "e|hola": [
+  {
+   "text": "¡Hola, mamá! Ya estoy en casa.",
+   "en": "Hi, Mom! I'm home now.",
+   "ko": "엄마, 안녕! 이제 집에 왔어요.",
+   "replaces": "Hola, Sofía. Me llamo Ji-woo. Mucho gusto."
+  },
+  {
+   "text": "Hola, ¿está Marta?",
+   "en": "Hi, is Marta there?",
+   "ko": "안녕하세요, 마르타 있어요?",
+   "replaces": "Hola, buenas tardes. Sí, me llamo Daniel Kim."
+  },
+  {
+   "text": "Hola, chicos. ¿Empezamos?",
+   "en": "Hi, guys. Shall we start?",
+   "ko": "안녕, 얘들아. 시작할까요?",
+   "replaces": "Sí. Hola, ¿qué tal?"
+  }
+ ],
+ "e|me llamo": [
+  {
+   "text": "Me llamo Ana. ¿Cómo te llamas tú?",
+   "en": "My name is Ana. What's your name?",
+   "ko": "제 이름은 아나예요. 당신 이름은 뭐예요?",
+   "replaces": "Hola, Sofía. Me llamo Ji-woo. Mucho gusto."
+  },
+  {
+   "text": "Sí, me llamo Javier, con jota.",
+   "en": "Yes, my name is Javier, with a J.",
+   "ko": "네, 제 이름은 하비에르예요, J로 써요.",
+   "replaces": "Hola, buenas tardes. Sí, me llamo Daniel Kim."
+  },
+  {
+   "text": "Mi hermano se llama Luis y yo me llamo Marta.",
+   "en": "My brother's name is Luis and my name is Marta.",
+   "ko": "제 동생 이름은 루이스고 제 이름은 마르타예요.",
+   "replaces": "Buenos días. Me llamo Andrea Park y he trabajado cuatro años en marketing digital."
+  }
+ ],
+ "f|es-f1-02": [
+  {
+   "text": "Soy de México, pero vivo en Madrid.",
+   "en": "I'm from Mexico, but I live in Madrid.",
+   "ko": "저는 멕시코 출신인데 마드리드에 살아요.",
+   "replaces": "Soy de Corea, de Busan. ¿Y tú?"
+  }
+ ],
+ "f|es-f1-03": [
+  {
+   "text": "Soy profesora de inglés en un colegio.",
+   "en": "I'm an English teacher at a school.",
+   "ko": "저는 학교에서 영어 선생님이에요.",
+   "replaces": "No, trabajo en un hotel. Soy recepcionista."
+  },
+  {
+   "text": "Soy estudiante, todavía no trabajo.",
+   "en": "I'm a student; I don't work yet.",
+   "ko": "저는 학생이라 아직 일은 안 해요.",
+   "replaces": "Lo siento, no sé. Soy nuevo en el barrio."
+  }
+ ],
+ "f|es-f1-06": [
+  {
+   "text": "¡Hasta mañana, Luis!",
+   "en": "See you tomorrow, Luis!",
+   "ko": "루이스, 내일 봐요!",
+   "replaces": "De nada. ¡Hasta luego!"
+  }
+ ],
+ "e|de nada": [
+  {
+   "text": "De nada, para eso estamos.",
+   "en": "You're welcome, that's what we're here for.",
+   "ko": "천만에요, 그러라고 있는 거예요.",
+   "replaces": "De nada. ¡Hasta luego!"
+  }
+ ],
+ "f|es-f1-08": [
+  {
+   "text": "Perdone, ¿cuánto cuesta este libro?",
+   "en": "Excuse me, how much is this book?",
+   "ko": "실례지만, 이 책 얼마예요?",
+   "replaces": "Buenos días. ¿Cuánto cuestan las manzanas?"
+  },
+  {
+   "text": "¿Cuánto cuesta el billete de autobús?",
+   "en": "How much is the bus ticket?",
+   "ko": "버스표가 얼마예요?",
+   "replaces": "Sí. ¿Cuánto cuesta la noche?"
+  }
+ ],
+ "e|buenos días": [
+  {
+   "text": "Buenos días, ¿ya está abierto?",
+   "en": "Good morning, are you open yet?",
+   "ko": "안녕하세요, 벌써 문 열었어요?",
+   "replaces": "Buenos días. ¿Cuánto cuestan las manzanas?"
+  }
+ ],
+ "e|por favor": [
+  {
+   "text": "Un momento, por favor.",
+   "en": "One moment, please.",
+   "ko": "잠시만요.",
+   "replaces": "Sí, por favor. ¿Dónde está el metro?"
+  },
+  {
+   "text": "Cierra la puerta, por favor.",
+   "en": "Close the door, please.",
+   "ko": "문 좀 닫아 주세요.",
+   "replaces": "Para mí, la sopa y el pescado, por favor."
+  },
+  {
+   "text": "Por favor, habla más bajo, que el bebé duerme.",
+   "en": "Please speak more quietly; the baby's sleeping.",
+   "ko": "좀 조용히 말해 주세요, 아기가 자고 있어요.",
+   "replaces": "Agua sin gas, por favor. Ah, ¿el pescado es picante? No me gusta mucho el picante."
+  },
+  {
+   "text": "¿Me ayudas con esta caja, por favor?",
+   "en": "Can you help me with this box, please?",
+   "ko": "이 상자 좀 도와줄래요?",
+   "replaces": "Todo muy rico, gracias. Un café y la cuenta, por favor."
+  },
+  {
+   "text": "Por favor, no toques eso.",
+   "en": "Please don't touch that.",
+   "ko": "그거 만지지 마세요.",
+   "replaces": "Ay, sí, por favor, aunque sea un poquito. Está riquísimo, de verdad. ¿Cuál es el secreto?"
+  },
+  {
+   "text": "Espera aquí, por favor.",
+   "en": "Wait here, please.",
+   "ko": "여기서 기다려 주세요.",
+   "replaces": "Perdón, no entiendo. Más despacio, por favor."
+  },
+  {
+   "text": "Por favor, apaga la luz.",
+   "en": "Please turn off the light.",
+   "ko": "불 좀 꺼 주세요.",
+   "replaces": "Perdón, otra vez, por favor."
+  }
+ ],
+ "f|es-f1-09": [
+  {
+   "text": "Perdone, ¿dónde está la estación?",
+   "en": "Excuse me, where is the station?",
+   "ko": "실례지만, 역이 어디예요?",
+   "replaces": "Vale, gracias. ¿Y dónde está el baño?"
+  }
+ ],
+ "e|gracias": [
+  {
+   "text": "Gracias por la cena, estaba todo buenísimo.",
+   "en": "Thanks for dinner, everything was delicious.",
+   "ko": "저녁 고마워요, 전부 정말 맛있었어요.",
+   "replaces": "Vale, gracias. ¿Y dónde está el baño?"
+  },
+  {
+   "text": "Muchas gracias por tu ayuda.",
+   "en": "Thank you so much for your help.",
+   "ko": "도와줘서 정말 고마워요.",
+   "replaces": "Gracias. ¿Hay un supermercado por aquí?"
+  },
+  {
+   "text": "Gracias, eres muy amable.",
+   "en": "Thanks, you're very kind.",
+   "ko": "고마워요, 정말 친절하시네요.",
+   "replaces": "Todo muy rico, gracias. Un café y la cuenta, por favor."
+  },
+  {
+   "text": "No, gracias. Estoy bien así.",
+   "en": "No, thanks. I'm fine like this.",
+   "ko": "아뇨, 괜찮아요. 이대로 좋아요.",
+   "replaces": "Sí, gracias. Tengo un hermano y una hermana."
+  },
+  {
+   "text": "¡Gracias por venir!",
+   "en": "Thanks for coming!",
+   "ko": "와 줘서 고마워요!",
+   "replaces": "Muy bien, gracias. El sábado fui a la playa con unos amigos."
+  },
+  {
+   "text": "Gracias por el regalo, me encanta.",
+   "en": "Thanks for the present, I love it.",
+   "ko": "선물 고마워요, 정말 마음에 들어요.",
+   "replaces": "Vale, gracias. Un kilo de naranjas también."
+  },
+  {
+   "text": "Mil gracias, de verdad.",
+   "en": "Thanks a million, really.",
+   "ko": "정말 너무 고마워요.",
+   "replaces": "Muchas gracias. ¡Adiós!"
+  },
+  {
+   "text": "Gracias por llamar, hablamos luego.",
+   "en": "Thanks for calling, talk to you later.",
+   "ko": "전화해 줘서 고마워요, 나중에 얘기해요.",
+   "replaces": "Muchas gracias. Menos mal que tenían una libre."
+  }
+ ],
+ "e|vale": [
+  {
+   "text": "Vale, te espero aquí.",
+   "en": "OK, I'll wait for you here.",
+   "ko": "알았어요, 여기서 기다릴게요.",
+   "replaces": "Vale, gracias. ¿Y dónde está el baño?"
+  },
+  {
+   "text": "Vale, mañana lo hablamos.",
+   "en": "OK, we'll talk about it tomorrow.",
+   "ko": "알았어요, 내일 얘기해요.",
+   "replaces": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal."
+  },
+  {
+   "text": "¿A las seis? Vale.",
+   "en": "At six? OK.",
+   "ko": "여섯 시요? 좋아요.",
+   "replaces": "En resumen: la idea vale la pena, pero solo funcionará si hay alternativas reales al coche."
+  },
+  {
+   "text": "Vale, pero solo un ratito.",
+   "en": "OK, but just for a little while.",
+   "ko": "알았어요, 그런데 잠깐만이에요.",
+   "replaces": "Vale. Entonces, ¿qué te parece si el jueves te mando un resumen con los datos principales y el viernes la versión completa?"
+  },
+  {
+   "text": "Vale, entonces pido una pizza.",
+   "en": "OK, then I'll order a pizza.",
+   "ko": "좋아요, 그럼 피자 시킬게요.",
+   "replaces": "Vale. Un momento, guardo esto y voy."
+  }
+ ],
+ "f|es-f1-11": [
+  {
+   "text": "Dos barras de pan, por favor.",
+   "en": "Two baguettes, please.",
+   "ko": "바게트 두 개 주세요.",
+   "replaces": "Un kilo, por favor. ¿Y las naranjas?"
+  },
+  {
+   "text": "Un té con leche, por favor.",
+   "en": "A tea with milk, please.",
+   "ko": "밀크티 하나 주세요.",
+   "replaces": "Para mí, la sopa y el pescado, por favor."
+  },
+  {
+   "text": "La sal, por favor.",
+   "en": "The salt, please.",
+   "ko": "소금 좀 주세요.",
+   "replaces": "Agua sin gas, por favor. Ah, ¿el pescado es picante? No me gusta mucho el picante."
+  },
+  {
+   "text": "Medio kilo de tomates, por favor.",
+   "en": "Half a kilo of tomatoes, please.",
+   "ko": "토마토 반 킬로 주세요.",
+   "replaces": "Todo muy rico, gracias. Un café y la cuenta, por favor."
+  }
+ ],
+ "f|es-f2-15": [
+  {
+   "text": "Para mí, el pollo con arroz, por favor.",
+   "en": "For me, the chicken with rice, please.",
+   "ko": "저는 닭고기 덮밥으로 주세요.",
+   "replaces": "Para mí, la sopa y el pescado, por favor."
+  }
+ ],
+ "f|es-f2-07": [
+  {
+   "text": "No me gusta el café sin azúcar.",
+   "en": "I don't like coffee without sugar.",
+   "ko": "저는 설탕 없는 커피는 안 좋아해요.",
+   "replaces": "Agua sin gas, por favor. Ah, ¿el pescado es picante? No me gusta mucho el picante."
+  }
+ ],
+ "e|me gusta mucho": [
+  {
+   "text": "Me gusta mucho tu camiseta nueva.",
+   "en": "I really like your new T-shirt.",
+   "ko": "새 티셔츠 정말 마음에 들어요.",
+   "replaces": "Agua sin gas, por favor. Ah, ¿el pescado es picante? No me gusta mucho el picante."
+  },
+  {
+   "text": "Este barrio me gusta mucho, es muy tranquilo.",
+   "en": "I really like this neighborhood; it's very quiet.",
+   "ko": "이 동네가 정말 좋아요, 아주 조용해요.",
+   "replaces": "¡Qué buena idea! Me gusta mucho la música en vivo. ¿A qué hora es?"
+  },
+  {
+   "text": "Me gusta mucho cocinar los domingos.",
+   "en": "I really like cooking on Sundays.",
+   "ko": "일요일마다 요리하는 걸 정말 좋아해요.",
+   "replaces": "¡Qué pena! Me gusta mucho el azul. Bueno, me pruebo el negro."
+  }
+ ],
+ "f|es-f1-13": [
+  {
+   "text": "Tengo dos hermanos y un perro.",
+   "en": "I have two brothers and a dog.",
+   "ko": "저는 형제가 두 명 있고 개도 한 마리 있어요.",
+   "replaces": "Sí, tengo fiebre, pero no mucha. Esta mañana tuve treinta y siete y medio."
+  }
+ ],
+ "f|es-f2-03": [
+  {
+   "text": "El año pasado tuve un accidente con la bici.",
+   "en": "Last year I had an accident on my bike.",
+   "ko": "작년에 자전거 사고가 났어요.",
+   "replaces": "Sí, tengo fiebre, pero no mucha. Esta mañana tuve treinta y siete y medio."
+  }
+ ],
+ "f|es-f1-14": [
+  {
+   "text": "Mi hermana pequeña tiene cinco años.",
+   "en": "My little sister is five years old.",
+   "ko": "제 여동생은 다섯 살이에요.",
+   "replaces": "Sí, claro. Se llama Toto y tiene tres años."
+  }
+ ],
+ "f|es-f2-01": [
+  {
+   "text": "Ayer comí con mis padres.",
+   "en": "Yesterday I had lunch with my parents.",
+   "ko": "어제 부모님이랑 점심을 먹었어요.",
+   "replaces": "Bien. Ayer fui al cine nuevo del centro. ¡Es muy bonito!"
+  }
+ ],
+ "f|es-f2-02": [
+  {
+   "text": "El domingo fui al mercado con mi madre.",
+   "en": "On Sunday I went to the market with my mom.",
+   "ko": "일요일에 엄마랑 시장에 갔어요.",
+   "replaces": "Bien. Ayer fui al cine nuevo del centro. ¡Es muy bonito!"
+  }
+ ],
+ "f|es-f2-05": [
+  {
+   "text": "¿Vas a cenar en casa esta noche?",
+   "en": "Are you going to have dinner at home tonight?",
+   "ko": "오늘 저녁 집에서 먹을 거예요?",
+   "replaces": "Uf, lo siento. ¿Y este fin de semana vas a descansar?"
+  }
+ ],
+ "e|lo siento": [
+  {
+   "text": "Lo siento, llego tarde.",
+   "en": "Sorry, I'm late.",
+   "ko": "미안해요, 늦었어요.",
+   "replaces": "Uf, lo siento. ¿Y este fin de semana vas a descansar?"
+  }
+ ],
+ "f|es-f2-06": [
+  {
+   "text": "Me gusta leer antes de dormir.",
+   "en": "I like reading before bed.",
+   "ko": "자기 전에 책 읽는 걸 좋아해요.",
+   "replaces": "¡Qué buena idea! Me gusta mucho la música en vivo. ¿A qué hora es?"
+  },
+  {
+   "text": "Me gusta el pan de esta panadería.",
+   "en": "I like the bread from this bakery.",
+   "ko": "이 빵집 빵을 좋아해요.",
+   "replaces": "Me gusta mi trabajo, pero me gustaría tener más responsabilidad, y creo que aquí podría crecer."
+  },
+  {
+   "text": "Me gusta caminar por la playa en invierno.",
+   "en": "I like walking on the beach in winter.",
+   "ko": "겨울에 해변을 걷는 걸 좋아해요.",
+   "replaces": "¡Qué pena! Me gusta mucho el azul. Bueno, me pruebo el negro."
+  }
+ ],
+ "e|qué buena idea": [
+  {
+   "text": "¿Un picnic en el parque? ¡Qué buena idea!",
+   "en": "A picnic in the park? What a great idea!",
+   "ko": "공원에서 소풍이요? 정말 좋은 생각이에요!",
+   "replaces": "¡Qué buena idea! Me gusta mucho la música en vivo. ¿A qué hora es?"
+  }
+ ],
+ "f|es-f3-01": [
+  {
+   "text": "Creo que el museo cierra los lunes.",
+   "en": "I think the museum closes on Mondays.",
+   "ko": "박물관은 월요일에 문을 닫는 것 같아요.",
+   "replaces": "Me gusta mi trabajo, pero me gustaría tener más responsabilidad, y creo que aquí podría crecer."
+  },
+  {
+   "text": "Creo que dejé las llaves en el coche.",
+   "en": "I think I left the keys in the car.",
+   "ko": "열쇠를 차에 두고 온 것 같아요.",
+   "replaces": "En mi opinión, está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera."
+  },
+  {
+   "text": "Creo que Laura tiene razón.",
+   "en": "I think Laura is right.",
+   "ko": "라우라 말이 맞는 것 같아요.",
+   "replaces": "Pues yo no creo que sea tan buena como parece. Creo que esconde algo."
+  }
+ ],
+ "e|creo que": [
+  {
+   "text": "Creo que ya es hora de irnos.",
+   "en": "I think it's time for us to go.",
+   "ko": "이제 가야 할 시간인 것 같아요.",
+   "replaces": "Me gusta mi trabajo, pero me gustaría tener más responsabilidad, y creo que aquí podría crecer."
+  },
+  {
+   "text": "Creo que me equivoqué de calle.",
+   "en": "I think I took the wrong street.",
+   "ko": "길을 잘못 든 것 같아요.",
+   "replaces": "Buenos días. Creo que tengo un resfriado. Me duele la garganta y tengo tos."
+  },
+  {
+   "text": "Creo que el jefe está de vacaciones.",
+   "en": "I think the boss is on vacation.",
+   "ko": "사장님은 휴가 중인 것 같아요.",
+   "replaces": "En mi opinión, está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera."
+  },
+  {
+   "text": "Creo que necesito un café.",
+   "en": "I think I need a coffee.",
+   "ko": "커피가 필요한 것 같아요.",
+   "replaces": "Pues yo no creo que sea tan buena como parece. Creo que esconde algo."
+  },
+  {
+   "text": "Creo que este pantalón me queda grande.",
+   "en": "I think these trousers are too big for me.",
+   "ko": "이 바지는 저한테 큰 것 같아요.",
+   "replaces": "Lo entiendo. Pero aunque trabaje hasta tarde, no creo que pueda terminarlo bien para el jueves."
+  },
+  {
+   "text": "Creo que el tren sale a las nueve.",
+   "en": "I think the train leaves at nine.",
+   "ko": "기차는 아홉 시에 출발하는 것 같아요.",
+   "replaces": "¿Ves? Por eso no creo que la solución sea todo en casa o todo en la oficina."
+  },
+  {
+   "text": "Sí, creo que es buena idea.",
+   "en": "Yes, I think it's a good idea.",
+   "ko": "네, 좋은 생각인 것 같아요.",
+   "replaces": "Sinceramente, no creo que esas ayudas sean suficientes. En cambio, si mejoraran el transporte público, la gente seguiría yendo al centro."
+  },
+  {
+   "text": "Creo que mi teléfono se ha quedado sin batería.",
+   "en": "I think my phone has run out of battery.",
+   "ko": "제 휴대폰 배터리가 다 된 것 같아요.",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  }
+ ],
+ "f|es-f2-10": [
+  {
+   "text": "¿Quieres dar un paseo después de comer?",
+   "en": "Do you want to go for a walk after lunch?",
+   "ko": "점심 먹고 산책할래요?",
+   "replaces": "Una comedia española. Esta noche hay otra. ¿Quieres venir conmigo?"
+  }
+ ],
+ "f|es-f2-13": [
+  {
+   "text": "Mañana tengo que levantarme muy temprano.",
+   "en": "Tomorrow I have to get up very early.",
+   "ko": "내일은 아주 일찍 일어나야 해요.",
+   "replaces": "No sé todavía. El sábado por la mañana tengo que trabajar."
+  },
+  {
+   "text": "Tengo que llamar a mi madre esta noche.",
+   "en": "I have to call my mom tonight.",
+   "ko": "오늘 밤에 엄마한테 전화해야 해요.",
+   "replaces": "¿Cuántas veces al día lo tengo que tomar?"
+  }
+ ],
+ "f|es-f2-14": [
+  {
+   "text": "Me duele mucho la espalda.",
+   "en": "My back hurts a lot.",
+   "ko": "허리가 많이 아파요.",
+   "replaces": "Buenos días. Creo que tengo un resfriado. Me duele la garganta y tengo tos."
+  },
+  {
+   "text": "Me duele el estómago después de comer.",
+   "en": "My stomach hurts after eating.",
+   "ko": "밥 먹고 나면 배가 아파요.",
+   "replaces": "No mucho. Me duele la cabeza desde esta mañana."
+  }
+ ],
+ "f|es-f2-17": [
+  {
+   "text": "¿Qué vino me recomienda con la carne?",
+   "en": "Which wine do you recommend with the meat?",
+   "ko": "고기에는 어떤 와인을 추천하세요?",
+   "replaces": "Todavía no. ¿Qué me recomienda?"
+  }
+ ],
+ "f|es-f2-19": [
+  {
+   "text": "Nos vemos mañana en clase.",
+   "en": "See you tomorrow in class.",
+   "ko": "내일 수업에서 봐요.",
+   "replaces": "Genial. Nos vemos el sábado."
+  },
+  {
+   "text": "Perfecto, nos vemos en la plaza.",
+   "en": "Perfect, let's meet in the square.",
+   "ko": "좋아요, 광장에서 만나요.",
+   "replaces": "¡Claro que sí! Nos vemos a las ocho en la entrada."
+  }
+ ],
+ "e|nos vemos": [
+  {
+   "text": "Bueno, me voy. ¡Nos vemos!",
+   "en": "Well, I'm off. See you!",
+   "ko": "그럼 갈게요. 또 봐요!",
+   "replaces": "¡Claro que sí! Nos vemos a las ocho en la entrada."
+  },
+  {
+   "text": "¿Nos vemos el viernes después del trabajo?",
+   "en": "Shall we meet on Friday after work?",
+   "ko": "금요일 퇴근 후에 만날까요?",
+   "replaces": "Me viene bien. ¿Dónde nos vemos?"
+  }
+ ],
+ "f|es-f2-20": [
+  {
+   "text": "¿Se puede probar este queso?",
+   "en": "Is it OK to try this cheese?",
+   "ko": "이 치즈 맛봐도 돼요?",
+   "replaces": "Depende. ¿Se puede salir antes hoy?"
+  }
+ ],
+ "e|se puede": [
+  {
+   "text": "Aquí no se puede aparcar.",
+   "en": "You can't park here.",
+   "ko": "여기는 주차하면 안 돼요.",
+   "replaces": "Depende. ¿Se puede salir antes hoy?"
+  }
+ ],
+ "f|es-f3-03": [
+  {
+   "text": "En mi opinión, el libro es mejor que la película.",
+   "en": "In my opinion, the book is better than the movie.",
+   "ko": "제 생각에는 책이 영화보다 나아요.",
+   "replaces": "En mi opinión, está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera."
+  }
+ ],
+ "f|es-f3-14": [
+  {
+   "text": "Mi piso nuevo es más grande que el anterior.",
+   "en": "My new flat is bigger than the previous one.",
+   "ko": "새 집이 전에 살던 집보다 더 커요.",
+   "replaces": "En mi opinión, está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera."
+  }
+ ],
+ "f|es-f3-02": [
+  {
+   "text": "No creo que llueva hoy.",
+   "en": "I don't think it'll rain today.",
+   "ko": "오늘은 비가 안 올 것 같아요.",
+   "replaces": "Pues yo no creo que sea tan buena como parece. Creo que esconde algo."
+  },
+  {
+   "text": "No creo que Marta venga a la fiesta.",
+   "en": "I don't think Marta will come to the party.",
+   "ko": "마르타는 파티에 안 올 것 같아요.",
+   "replaces": "Lo entiendo. Pero aunque trabaje hasta tarde, no creo que pueda terminarlo bien para el jueves."
+  },
+  {
+   "text": "No creo que ese restaurante esté abierto a estas horas.",
+   "en": "I don't think that restaurant is open at this hour.",
+   "ko": "그 식당은 이 시간에 안 열었을 것 같아요.",
+   "replaces": "¿Ves? Por eso no creo que la solución sea todo en casa o todo en la oficina."
+  },
+  {
+   "text": "Pues no creo que sea tan difícil.",
+   "en": "Well, I don't think it's that hard.",
+   "ko": "글쎄요, 그렇게 어렵지는 않을 것 같아요.",
+   "replaces": "Sinceramente, no creo que esas ayudas sean suficientes. En cambio, si mejoraran el transporte público, la gente seguiría yendo al centro."
+  },
+  {
+   "text": "No creo que tengamos tiempo para todo.",
+   "en": "I don't think we'll have time for everything.",
+   "ko": "전부 할 시간은 없을 것 같아요.",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  }
+ ],
+ "f|es-f4-06": [
+  {
+   "text": "Aunque esté cansada, iré al gimnasio.",
+   "en": "Even if I'm tired, I'll go to the gym.",
+   "ko": "피곤하더라도 헬스장에 갈 거예요.",
+   "replaces": "Lo entiendo. Pero aunque trabaje hasta tarde, no creo que pueda terminarlo bien para el jueves."
+  },
+  {
+   "text": "Aunque no hablo bien alemán, me entiendo con la gente.",
+   "en": "Although I don't speak German well, I get by with people.",
+   "ko": "독일어를 잘하진 못하지만 사람들과 말은 통해요.",
+   "replaces": "Puede ser, pero aunque tengas disciplina, cuando vives solo es muy fácil aislarte."
+  },
+  {
+   "text": "Salimos a pasear aunque hacía frío.",
+   "en": "We went out for a walk even though it was cold.",
+   "ko": "추웠지만 우리는 산책하러 나갔어요.",
+   "replaces": "Es verdad. El alcalde dijo que habría ayudas para las tiendas durante el primer año, aunque no explicó de cuánto dinero."
+  },
+  {
+   "text": "Aunque me lo pidas mil veces, no pienso cantar.",
+   "en": "Even if you ask me a thousand times, I'm not going to sing.",
+   "ko": "천 번을 부탁해도 노래는 안 할 거예요.",
+   "replaces": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal."
+  },
+  {
+   "text": "Aunque la cocina es pequeña, cocinamos muy a gusto.",
+   "en": "Although the kitchen is small, we really enjoy cooking in it.",
+   "ko": "부엌은 작지만 요리하기는 아주 편해요.",
+   "replaces": "Ay, sí, por favor, aunque sea un poquito. Está riquísimo, de verdad. ¿Cuál es el secreto?"
+  }
+ ],
+ "e|aunque": [
+  {
+   "text": "Me encanta este trabajo, aunque a veces es agotador.",
+   "en": "I love this job, although it's exhausting sometimes.",
+   "ko": "이 일이 정말 좋아요, 가끔 너무 힘들긴 하지만요.",
+   "replaces": "Lo entiendo. Pero aunque trabaje hasta tarde, no creo que pueda terminarlo bien para el jueves."
+  },
+  {
+   "text": "Iré a la boda aunque no conozca a casi nadie.",
+   "en": "I'll go to the wedding even if I hardly know anyone.",
+   "ko": "아는 사람이 거의 없더라도 결혼식에 갈 거예요.",
+   "replaces": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal."
+  },
+  {
+   "text": "Aunque parezca mentira, mi abuela usa el móvil mejor que yo.",
+   "en": "Unbelievable as it may seem, my grandmother uses her phone better than I do.",
+   "ko": "믿기지 않겠지만 우리 할머니가 저보다 휴대폰을 더 잘 써요.",
+   "replaces": "Aguantar. Me pidió perdón por el ruido y le dije que no pasaba nada... aunque sí que pasa."
+  }
+ ],
+ "f|es-f4-15": [
+  {
+   "text": "Mi hermano odia madrugar. Yo, en cambio, me levanto feliz a las seis.",
+   "en": "My brother hates getting up early. I, on the other hand, happily get up at six.",
+   "ko": "제 동생은 일찍 일어나는 걸 싫어해요. 반면에 저는 여섯 시에 기분 좋게 일어나요.",
+   "replaces": "Sinceramente, no creo que esas ayudas sean suficientes. En cambio, si mejoraran el transporte público, la gente seguiría yendo al centro."
+  }
+ ],
+ "e|no creo que": [
+  {
+   "text": "No creo que el problema sea el precio, sino la calidad.",
+   "en": "I don't think the problem is the price, but the quality.",
+   "ko": "문제는 가격이 아니라 품질인 것 같아요.",
+   "replaces": "Sinceramente, no creo que esas ayudas sean suficientes. En cambio, si mejoraran el transporte público, la gente seguiría yendo al centro."
+  },
+  {
+   "text": "Sinceramente, no creo que nos devuelvan el dinero.",
+   "en": "Honestly, I don't think they'll give us our money back.",
+   "ko": "솔직히 돈을 돌려줄 것 같지 않아요.",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  }
+ ],
+ "f|es-f5-14": [
+  {
+   "text": "O sea, que no vienes esta noche, ¿no?",
+   "en": "So you're not coming tonight, right?",
+   "ko": "그러니까 오늘 밤에 안 온다는 거죠?",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  },
+  {
+   "text": "Llega el martes. O sea, que tenemos dos días para prepararlo todo.",
+   "en": "It arrives on Tuesday. So we have two days to get everything ready.",
+   "ko": "화요일에 도착해요. 그러니까 다 준비할 시간이 이틀 있는 거예요.",
+   "replaces": "O sea, con lo de los vídeos con creadores has dado en el clavo, pero lo que me preocupa un poquito es que se come casi la mitad del presupuesto."
+  },
+  {
+   "text": "No me contestó en toda la semana. O sea, pasa de mí.",
+   "en": "He didn't answer me all week. I mean, he couldn't care less about me.",
+   "ko": "일주일 내내 답이 없었어요. 그러니까 저한테 관심이 없는 거죠.",
+   "replaces": "Sí, pero entre los que me han escrito no hay ni uno que pueda pagar a tiempo. O sea, un desastre."
+  }
+ ],
+ "f|es-f5-19": [
+  {
+   "text": "A lo mejor está en un atasco y por eso no contesta.",
+   "en": "Maybe he's stuck in traffic and that's why he isn't answering.",
+   "ko": "아마 차가 막혀서 전화를 안 받는 걸 거예요.",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  },
+  {
+   "text": "No sé, a lo mejor nos mudamos al campo el año que viene.",
+   "en": "I don't know, maybe we'll move to the countryside next year.",
+   "ko": "모르겠어요, 내년에 시골로 이사할지도 몰라요.",
+   "replaces": "No me cabe duda. Yo diría que, a lo mejor, podríamos probar primero con dos o tres creadores y ver cómo responde la gente antes de ir con todo."
+  },
+  {
+   "text": "A lo mejor la tienda ha cerrado antes por las fiestas.",
+   "en": "Maybe the shop has closed early for the holidays.",
+   "ko": "명절이라 가게가 일찍 닫았을지도 몰라요.",
+   "replaces": "Uf, esa lectura también tiene sentido, la verdad. A lo mejor la gracia está en que se puede leer de las dos maneras."
+  }
+ ],
+ "e|o sea": [
+  {
+   "text": "Es mi cuñada, o sea, la mujer de mi hermano.",
+   "en": "She's my sister-in-law, I mean, my brother's wife.",
+   "ko": "제 올케예요, 그러니까 오빠의 아내요.",
+   "replaces": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia."
+  },
+  {
+   "text": "Cobra por horas, o sea, si no trabaja, no gana nada.",
+   "en": "She's paid by the hour, so if she doesn't work, she earns nothing.",
+   "ko": "시급으로 받아요, 그러니까 일을 안 하면 한 푼도 못 벌어요.",
+   "replaces": "Claro, y lo va a tener. Dicho sea de paso, la parte del análisis de público es lo mejor que he visto en meses. Eso yo lo dejaría tal cual."
+  }
+ ],
+ "f|es-f3-04": [
+  {
+   "text": "Me parece que este autobús no para aquí.",
+   "en": "It seems to me this bus doesn't stop here.",
+   "ko": "이 버스는 여기 안 서는 것 같아요.",
+   "replaces": "Me parece que eso es un poco tarde. ¿Podría cambiarme de habitación esta noche?"
+  }
+ ],
+ "f|es-f3-12": [
+  {
+   "text": "¿Podría hablar un poco más despacio?",
+   "en": "Could you speak a little more slowly?",
+   "ko": "조금 더 천천히 말씀해 주실 수 있을까요?",
+   "replaces": "Me parece que eso es un poco tarde. ¿Podría cambiarme de habitación esta noche?"
+  },
+  {
+   "text": "¿Podría traernos otra botella de agua?",
+   "en": "Could you bring us another bottle of water?",
+   "ko": "물 한 병 더 갖다주실 수 있을까요?",
+   "replaces": "Compré este abrigo la semana pasada, pero me queda pequeño. ¿Podría cambiarlo por una talla más grande?"
+  }
+ ],
+ "f|es-f3-05": [
+  {
+   "text": "¿Alguna vez has probado la comida peruana?",
+   "en": "Have you ever tried Peruvian food?",
+   "ko": "페루 음식 먹어 본 적 있어요?",
+   "replaces": "¡Qué bien! ¿Has estado alguna vez allí?"
+  }
+ ],
+ "f|es-f3-06": [
+  {
+   "text": "Nunca he subido a una montaña tan alta.",
+   "en": "I've never climbed such a high mountain.",
+   "ko": "이렇게 높은 산에 올라 본 적이 없어요.",
+   "replaces": "No, nunca he estado. Pero la próxima vez me encantaría ir... con maleta, a ser posible."
+  }
+ ],
+ "e|nunca he estado": [
+  {
+   "text": "Nunca he estado en Japón, pero me encantaría.",
+   "en": "I've never been to Japan, but I'd love to.",
+   "ko": "일본에 가 본 적은 없지만 꼭 가 보고 싶어요.",
+   "replaces": "No, nunca he estado. Pero la próxima vez me encantaría ir... con maleta, a ser posible."
+  }
+ ],
+ "f|es-f3-09": [
+  {
+   "text": "Al final, la fiesta fue un éxito.",
+   "en": "In the end, the party was a success.",
+   "ko": "결국 파티는 대성공이었어요.",
+   "replaces": "Uf, al final fue un desastre. Bueno, casi."
+  }
+ ],
+ "f|es-f3-11": [
+  {
+   "text": "¿Te acuerdas de aquel verano en la playa?",
+   "en": "Do you remember that summer at the beach?",
+   "ko": "그 바닷가에서의 여름 기억나요?",
+   "replaces": "Bueno, no estoy seguro. Por cierto, ¿te acuerdas de la abogada nueva, la del pelo corto?"
+  }
+ ],
+ "e|por cierto": [
+  {
+   "text": "Por cierto, mañana no hay clase.",
+   "en": "By the way, there's no class tomorrow.",
+   "ko": "그런데 내일은 수업이 없어요.",
+   "replaces": "Bueno, no estoy seguro. Por cierto, ¿te acuerdas de la abogada nueva, la del pelo corto?"
+  }
+ ],
+ "e|te acuerdas de": [
+  {
+   "text": "Oye, ¿te acuerdas de dónde aparcamos?",
+   "en": "Hey, do you remember where we parked?",
+   "ko": "저기, 우리 어디에 주차했는지 기억나요?",
+   "replaces": "Bueno, no estoy seguro. Por cierto, ¿te acuerdas de la abogada nueva, la del pelo corto?"
+  }
+ ],
+ "e|a ver": [
+  {
+   "text": "A ver, ¿qué pone aquí?",
+   "en": "Let's see, what does it say here?",
+   "ko": "어디 보자, 여기 뭐라고 쓰여 있어요?",
+   "replaces": "No sé. Me gustaría ver algo más ligero, como una comedia. ¿Me recomiendas alguna?"
+  },
+  {
+   "text": "A ver si mañana hace mejor tiempo.",
+   "en": "Let's hope the weather is better tomorrow.",
+   "ko": "내일은 날씨가 좀 좋으면 좋겠네요.",
+   "replaces": "Para eso están los amigos. Decidas lo que decidas, ojalá te salga genial. ¡Y si te vas, voy a verte!"
+  },
+  {
+   "text": "A ver, déjame pensar un momento.",
+   "en": "Let me see, let me think for a moment.",
+   "ko": "어디 보자, 잠깐 생각 좀 해 볼게요.",
+   "replaces": "Vale. Entonces, ¿qué te parece si el jueves te mando un resumen con los datos principales y el viernes la versión completa?"
+  },
+  {
+   "text": "A ver, enséñame la foto.",
+   "en": "Let's see, show me the photo.",
+   "ko": "어디 봐요, 사진 보여 줘요.",
+   "replaces": "Uf, esa lectura también tiene sentido, la verdad. A lo mejor la gracia está en que se puede leer de las dos maneras."
+  },
+  {
+   "text": "A ver cuándo quedamos para cenar.",
+   "en": "Let's get together for dinner sometime soon.",
+   "ko": "언제 한번 저녁 먹어요.",
+   "replaces": "Al principio fue duro, la verdad. Me di cuenta de que necesitaba crear rutinas: el gimnasio, un grupo de intercambio, cosas así."
+  },
+  {
+   "text": "A ver, chicos, un poco de silencio.",
+   "en": "Right, guys, a little quiet, please.",
+   "ko": "자, 얘들아, 좀 조용히 하자.",
+   "replaces": "Sí, sí, anoche la leí con calma. A grandes rasgos, me parece muy buena, la verdad."
+  }
+ ],
+ "f|es-f3-16": [
+  {
+   "text": "Hola, tengo un problema con mi factura de la luz.",
+   "en": "Hi, I have a problem with my electricity bill.",
+   "ko": "안녕하세요, 전기 요금 고지서에 문제가 있어요.",
+   "replaces": "Buenas noches. Tengo un problema con mi habitación, la trescientos doce."
+  }
+ ],
+ "f|es-f3-17": [
+  {
+   "text": "La impresora de la oficina no funciona otra vez.",
+   "en": "The office printer isn't working again.",
+   "ko": "사무실 프린터가 또 안 돼요.",
+   "replaces": "El aire acondicionado no funciona. Lo he intentado todo, pero sigue haciendo muchísimo calor."
+  }
+ ],
+ "f|es-f3-18": [
+  {
+   "text": "Me encantaría ir, lo que pasa es que el sábado trabajo.",
+   "en": "I'd love to go; the thing is, I work on Saturday.",
+   "ko": "정말 가고 싶은데, 사실 토요일에 일해요.",
+   "replaces": "Sí, ya lo he probado. Y lo que pasa es que la ducha tampoco tiene agua caliente."
+  },
+  {
+   "text": "No estoy enfadado. Lo que pasa es que hoy he dormido muy poco.",
+   "en": "I'm not angry. The thing is, I slept very little today.",
+   "ko": "화난 거 아니에요. 사실 오늘 잠을 거의 못 잤어요.",
+   "replaces": "Compré una camiseta, pero lo que pasa es que al día siguiente empezó a llover y no tenía chaqueta."
+  },
+  {
+   "text": "El coche está bien; lo que pasa es que hace un ruido raro al frenar.",
+   "en": "The car is fine; the thing is, it makes a weird noise when braking.",
+   "ko": "차는 괜찮아요. 다만 브레이크를 밟으면 이상한 소리가 나요.",
+   "replaces": "Al contrario, me ha encantado. Lo que pasa es que todavía le estoy dando vueltas al final."
+  }
+ ],
+ "e|lo que pasa es que": [
+  {
+   "text": "Lo que pasa es que nadie me avisó del cambio de hora.",
+   "en": "The thing is, nobody told me about the time change.",
+   "ko": "사실은 아무도 시간이 바뀐다고 알려 주지 않았어요.",
+   "replaces": "Al contrario, me ha encantado. Lo que pasa es que todavía le estoy dando vueltas al final."
+  }
+ ],
+ "f|es-f3-19": [
+  {
+   "text": "Estoy de acuerdo contigo, es demasiado caro.",
+   "en": "I agree with you, it's too expensive.",
+   "ko": "당신 말에 동의해요, 너무 비싸요.",
+   "replaces": "Estoy de acuerdo con él. Yo estuve hace dos años y no tuve tiempo para todo."
+  }
+ ],
+ "f|es-f4-02": [
+  {
+   "text": "Ojalá el vuelo no salga con retraso.",
+   "en": "I really hope the flight isn't delayed.",
+   "ko": "비행기가 지연되지 않으면 정말 좋겠어요.",
+   "replaces": "Te lo prometo. Ojalá el cliente no cambie nada más..."
+  },
+  {
+   "text": "Ojalá encuentres pronto un trabajo que te guste.",
+   "en": "I really hope you find a job you like soon.",
+   "ko": "마음에 드는 일을 곧 찾으면 정말 좋겠어요.",
+   "replaces": "Para eso están los amigos. Decidas lo que decidas, ojalá te salga genial. ¡Y si te vas, voy a verte!"
+  }
+ ],
+ "e|voy a": [
+  {
+   "text": "Esta tarde voy a limpiar la cocina.",
+   "en": "This afternoon I'm going to clean the kitchen.",
+   "ko": "오늘 오후에 부엌을 청소할 거예요.",
+   "replaces": "Para eso están los amigos. Decidas lo que decidas, ojalá te salga genial. ¡Y si te vas, voy a verte!"
+  },
+  {
+   "text": "Voy a preguntar al camarero.",
+   "en": "I'm going to ask the waiter.",
+   "ko": "종업원한테 물어볼게요.",
+   "replaces": "Bien, bien. Mira, voy a ir al grano, que sé que tienes poco tiempo: este sábado me mudo."
+  }
+ ],
+ "f|es-f4-03": [
+  {
+   "text": "Si yo fuera tú, pediría una segunda opinión al médico.",
+   "en": "If I were you, I'd ask the doctor for a second opinion.",
+   "ko": "제가 당신이라면 다른 의사 의견도 들어 보겠어요.",
+   "replaces": "Bueno, cuando llegues, puedes inscribirte en clases. Si yo fuera tú, empezaría ya con una aplicación."
+  }
+ ],
+ "f|es-f4-04": [
+  {
+   "text": "Si pudiera vivir en cualquier ciudad, elegiría una con mar.",
+   "en": "If I could live in any city, I'd choose one by the sea.",
+   "ko": "어느 도시에서든 살 수 있다면 바다가 있는 곳을 고를 거예요.",
+   "replaces": "Si pudiera elegir, iría a la oficina dos días por semana. Lo bueno es que así ves a la gente sin perder toda la semana en el metro."
+  }
+ ],
+ "f|es-f4-17": [
+  {
+   "text": "Vale la pena levantarse temprano para ver el amanecer.",
+   "en": "It's worth getting up early to see the sunrise.",
+   "ko": "일출을 보려고 일찍 일어날 만한 가치가 있어요.",
+   "replaces": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal."
+  },
+  {
+   "text": "No vale la pena discutir por eso.",
+   "en": "It's not worth arguing about that.",
+   "ko": "그걸로 다툴 필요는 없어요.",
+   "replaces": "En resumen: la idea vale la pena, pero solo funcionará si hay alternativas reales al coche."
+  }
+ ],
+ "e|vale la pena": [
+  {
+   "text": "Ese museo vale la pena, de verdad.",
+   "en": "That museum is really worth it.",
+   "ko": "그 박물관은 정말 가 볼 만해요.",
+   "replaces": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal."
+  },
+  {
+   "text": "¿Crees que vale la pena pagar más por el vuelo directo?",
+   "en": "Do you think it's worth paying more for the direct flight?",
+   "ko": "직항에 돈을 더 낼 만한 가치가 있다고 생각해요?",
+   "replaces": "En resumen: la idea vale la pena, pero solo funcionará si hay alternativas reales al coche."
+  }
+ ],
+ "f|es-f4-07": [
+  {
+   "text": "A pesar de la lluvia, el partido siguió.",
+   "en": "Despite the rain, the match went on.",
+   "ko": "비가 왔는데도 경기는 계속됐어요.",
+   "replaces": "Pues a pesar de eso, seguro que la presentación salió bien. ¿Qué te dijeron los demás?"
+  }
+ ],
+ "f|es-f4-13": [
+  {
+   "text": "Por un lado, el piso está muy bien situado; por otra parte, es bastante caro.",
+   "en": "On the one hand, the flat is very well located; on the other, it's quite expensive.",
+   "ko": "한편으로는 집 위치가 아주 좋고, 다른 한편으로는 꽤 비싸요.",
+   "replaces": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro lado, Ana lleva unos días enferma y me toca hacer su parte."
+  },
+  {
+   "text": "Por un lado, me apetece viajar sola, pero también me da un poco de miedo.",
+   "en": "On the one hand, I feel like traveling alone, but it also scares me a little.",
+   "ko": "한편으로는 혼자 여행하고 싶지만, 조금 무섭기도 해요.",
+   "replaces": "Bueno, depende. Por un lado, no pierdes tiempo en el transporte. Por otro, a mí me cuesta desconectar."
+  }
+ ],
+ "f|es-f4-14": [
+  {
+   "text": "El curso es caro. Por otro lado, los profesores son excelentes.",
+   "en": "The course is expensive. On the other hand, the teachers are excellent.",
+   "ko": "강좌가 비싸요. 하지만 다른 한편으로 선생님들이 훌륭해요.",
+   "replaces": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro lado, Ana lleva unos días enferma y me toca hacer su parte."
+  }
+ ],
+ "e|por un lado": [
+  {
+   "text": "Por un lado entiendo a mi hermana, pero tampoco puedo darle la razón.",
+   "en": "On the one hand I understand my sister, but I can't say she's right either.",
+   "ko": "한편으로는 언니를 이해하지만, 그렇다고 언니가 옳다고 할 수도 없어요.",
+   "replaces": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro lado, Ana lleva unos días enferma y me toca hacer su parte."
+  },
+  {
+   "text": "Trabajar de noche, por un lado, paga mejor; por otra parte, cansa muchísimo.",
+   "en": "Working nights, on the one hand, pays better; on the other, it's exhausting.",
+   "ko": "밤에 일하는 건 한편으로는 돈을 더 받지만, 다른 한편으로는 정말 피곤해요.",
+   "replaces": "Bueno, depende. Por un lado, no pierdes tiempo en el transporte. Por otro, a mí me cuesta desconectar."
+  }
+ ],
+ "f|es-f4-16": [
+  {
+   "text": "Mañana hay huelga de metro. Por lo tanto, saldré de casa antes.",
+   "en": "There's a metro strike tomorrow. Therefore, I'll leave home earlier.",
+   "ko": "내일 지하철 파업이 있어요. 그래서 집에서 더 일찍 나갈 거예요.",
+   "replaces": "La calefacción eléctrica es lo que más gasta. Por lo tanto, deberíamos usarla solo por la noche."
+  }
+ ],
+ "f|es-f4-18": [
+  {
+   "text": "Habría que poner más bancos en este parque.",
+   "en": "They should put more benches in this park.",
+   "ko": "이 공원에는 벤치를 더 놓아야 할 것 같아요.",
+   "replaces": "Sí, a no ser que lo hagan de golpe. Habría que hacerlo poco a poco y escuchar a los vecinos."
+  }
+ ],
+ "e|habría que": [
+  {
+   "text": "Para el viaje habría que reservar el hotel cuanto antes.",
+   "en": "For the trip, we'd need to book the hotel as soon as possible.",
+   "ko": "여행 가려면 호텔을 최대한 빨리 예약해야 할 것 같아요.",
+   "replaces": "Sí, a no ser que lo hagan de golpe. Habría que hacerlo poco a poco y escuchar a los vecinos."
+  }
+ ],
+ "f|es-f5-04": [
+  {
+   "text": "Yo diría que el problema no es el dinero, sino el tiempo.",
+   "en": "I'd say the problem isn't money but time.",
+   "ko": "제가 보기엔 문제는 돈이 아니라 시간이에요.",
+   "replaces": "No me cabe duda. Yo diría que, a lo mejor, podríamos probar primero con dos o tres creadores y ver cómo responde la gente antes de ir con todo."
+  }
+ ],
+ "e|a lo mejor": [
+  {
+   "text": "A lo mejor me paso por tu casa esta tarde.",
+   "en": "Maybe I'll drop by your place this afternoon.",
+   "ko": "오늘 오후에 너희 집에 들를지도 몰라요.",
+   "replaces": "No me cabe duda. Yo diría que, a lo mejor, podríamos probar primero con dos o tres creadores y ver cómo responde la gente antes de ir con todo."
+  },
+  {
+   "text": "Si no contesta, a lo mejor sigue dormido.",
+   "en": "If he doesn't answer, maybe he's still asleep.",
+   "ko": "전화를 안 받으면 아마 아직 자고 있을 거예요.",
+   "replaces": "Uf, esa lectura también tiene sentido, la verdad. A lo mejor la gracia está en que se puede leer de las dos maneras."
+  }
+ ],
+ "f|es-f5-05": [
+  {
+   "text": "Lo que me preocupa es que el niño no quiere comer.",
+   "en": "What worries me is that the child doesn't want to eat.",
+   "ko": "제가 걱정되는 건 아이가 밥을 안 먹으려 한다는 거예요.",
+   "replaces": "O sea, con lo de los vídeos con creadores has dado en el clavo, pero lo que me preocupa un poquito es que se come casi la mitad del presupuesto."
+  }
+ ],
+ "f|es-f5-07": [
+  {
+   "text": "Busco a alguien que me ayude con la mudanza este fin de semana.",
+   "en": "I'm looking for someone to help me with the move this weekend.",
+   "ko": "이번 주말에 이사를 도와줄 사람을 찾고 있어요.",
+   "replaces": "Qué va. Busco a alguien que sea ordenado y que no fume, y parece que es mucho pedir."
+  }
+ ],
+ "f|es-f5-10": [
+  {
+   "text": "Le agradecería que me enviara la factura por correo.",
+   "en": "I would be grateful if you sent me the invoice by mail.",
+   "ko": "청구서를 우편으로 보내 주시면 감사하겠습니다.",
+   "replaces": "Entiendo. En ese caso, le agradecería que me indicara cómo puedo enviarlo de nuevo para que no vuelva a pasar."
+  }
+ ],
+ "f|es-f5-13": [
+  {
+   "text": "No llores, es un golpecito de nada.",
+   "en": "Don't cry, it's just a tiny bump.",
+   "ko": "울지 마, 그냥 살짝 부딪힌 거야.",
+   "replaces": "Una horita de nada... Bueno, dos. Es que estaba en las nubes, escuchando un pódcast."
+  }
+ ],
+ "f|es-f5-17": [
+  {
+   "text": "A fin de cuentas, lo importante es que estamos todos bien.",
+   "en": "At the end of the day, what matters is that we're all fine.",
+   "ko": "결국 중요한 건 우리 모두 무사하다는 거예요.",
+   "replaces": "¡Ni de broma! Digamos que los dos tenemos un poco de razón. A fin de cuentas, una buena película es la que te deja discutiendo en la puerta del cine."
+  }
+ ],
+ "e|ni de broma": [
+  {
+   "text": "¿Saltar en paracaídas? ¡Ni de broma!",
+   "en": "Skydiving? No way!",
+   "ko": "스카이다이빙이요? 절대 안 해요!",
+   "replaces": "¡Ni de broma! Digamos que los dos tenemos un poco de razón. A fin de cuentas, una buena película es la que te deja discutiendo en la puerta del cine."
+  }
+ ],
+ "f|es-f5-18": [
+  {
+   "text": "Que la gente hable por teléfono en el cine me saca de quicio.",
+   "en": "People talking on the phone at the cinema drives me up the wall.",
+   "ko": "영화관에서 사람들이 통화하는 게 정말 짜증 나요.",
+   "replaces": "El vecino de arriba. Lleva una semana haciendo obras a las siete de la mañana y me saca de quicio."
+  }
+ ],
+ "e|tiene sentido": [
+  {
+   "text": "Lo que dices tiene sentido, pero necesito pensarlo.",
+   "en": "What you're saying makes sense, but I need to think about it.",
+   "ko": "네 말이 일리가 있지만 생각해 볼 시간이 필요해요.",
+   "replaces": "Uf, esa lectura también tiene sentido, la verdad. A lo mejor la gracia está en que se puede leer de las dos maneras."
+  }
+ ],
+ "e|sí, claro": [
+  {
+   "text": "Sí, claro, siéntate aquí.",
+   "en": "Yes, of course, sit here.",
+   "ko": "네, 물론이죠, 여기 앉으세요.",
+   "replaces": "Sí, claro. Me llamo Hye-jin Choi, y el número es dos, cuatro, siete, ocho, uno."
+  }
+ ],
+ "e|perdón": [
+  {
+   "text": "¡Perdón! ¿Es tu asiento?",
+   "en": "Sorry! Is this your seat?",
+   "ko": "미안해요! 당신 자리예요?",
+   "replaces": "Perdón, no entiendo. Más despacio, por favor."
+  },
+  {
+   "text": "Perdón, ¿esta silla está libre?",
+   "en": "Excuse me, is this chair free?",
+   "ko": "실례지만, 이 의자 비어 있어요?",
+   "replaces": "Perdón, otra vez, por favor."
+  }
+ ],
+ "e|no entiendo": [
+  {
+   "text": "No entiendo esta palabra. ¿Qué significa?",
+   "en": "I don't understand this word. What does it mean?",
+   "ko": "이 단어를 모르겠어요. 무슨 뜻이에요?",
+   "replaces": "Perdón, no entiendo. Más despacio, por favor."
+  }
+ ],
+ "e|al final": [
+  {
+   "text": "Estuvimos dudando mucho, pero al final compramos el sofá gris.",
+   "en": "We hesitated a lot, but in the end we bought the grey sofa.",
+   "ko": "한참 고민했지만 결국 회색 소파를 샀어요.",
+   "replaces": "Puede ser, ¿eh? Pero dudo que una directora tan cuidadosa deje algo así al azar. Sin ir más lejos, fíjate en los colores: toda la película es gris y al final sale el sol."
+  }
+ ]
+}

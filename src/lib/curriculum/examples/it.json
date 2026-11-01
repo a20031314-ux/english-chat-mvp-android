@@ -1,0 +1,1018 @@
+{
+ "f|it-f1-01": [
+  {
+   "text": "Mi chiamo Paolo, e tu?",
+   "en": "My name is Paolo, and you?",
+   "ko": "제 이름은 파올로예요, 당신은요?",
+   "replaces": "Ciao, Luca! Mi chiamo Minji. Piacere!"
+  }
+ ],
+ "e|piacere": [
+  {
+   "text": "Piacere, io sono Marta.",
+   "en": "Nice to meet you, I'm Marta.",
+   "ko": "반가워요, 저는 마르타예요.",
+   "replaces": "Ciao, Luca! Mi chiamo Minji. Piacere!"
+  },
+  {
+   "text": "Piacere di conoscerla, signora.",
+   "en": "Pleased to meet you, ma'am.",
+   "ko": "만나서 반갑습니다, 부인.",
+   "replaces": "Davvero? Che bello! Mi piacerebbe venire."
+  }
+ ],
+ "e|ciao": [
+  {
+   "text": "Ciao, mamma! Arrivo tra poco.",
+   "en": "Hi, Mom! I'll be there soon.",
+   "ko": "엄마, 안녕! 곧 도착해요.",
+   "replaces": "Ciao, Luca! Mi chiamo Minji. Piacere!"
+  },
+  {
+   "text": "Ciao a tutti, come va?",
+   "en": "Hi everyone, how's it going?",
+   "ko": "다들 안녕하세요, 잘 지내요?",
+   "replaces": "Ciao Giulia! Tutto bene, grazie. E tu come stai?"
+  }
+ ],
+ "f|it-f1-02": [
+  {
+   "text": "Io? Sono di Milano.",
+   "en": "Me? I'm from Milan.",
+   "ko": "저요? 저는 밀라노 출신이에요.",
+   "replaces": "Sono di Seul. Sono coreana."
+  },
+  {
+   "text": "Sono di Torino, ma vivo a Firenze.",
+   "en": "I'm from Turin, but I live in Florence.",
+   "ko": "저는 토리노 출신인데 피렌체에 살아요.",
+   "replaces": "No, sono di Busan, in Corea."
+  }
+ ],
+ "f|it-f1-03": [
+  {
+   "text": "Sono avvocato, lavoro in centro.",
+   "en": "I'm a lawyer, I work downtown.",
+   "ko": "저는 변호사이고 시내에서 일해요.",
+   "replaces": "Sono di Seul. Sono coreana."
+  }
+ ],
+ "f|it-f1-06": [
+  {
+   "text": "Vorrei una bottiglia d'acqua.",
+   "en": "I'd like a bottle of water.",
+   "ko": "물 한 병 주세요.",
+   "replaces": "Buongiorno. Vorrei un biglietto dell'autobus, per favore."
+  },
+  {
+   "text": "Vorrei prenotare un tavolo.",
+   "en": "I'd like to book a table.",
+   "ko": "테이블을 예약하고 싶어요.",
+   "replaces": "Va bene, lo prendo. Vorrei anche un melone."
+  }
+ ],
+ "e|per favore": [
+  {
+   "text": "Un bicchiere d'acqua, per favore.",
+   "en": "A glass of water, please.",
+   "ko": "물 한 잔 주세요.",
+   "replaces": "Buongiorno. Vorrei un biglietto dell'autobus, per favore."
+  },
+  {
+   "text": "Mi passi il sale, per favore?",
+   "en": "Can you pass me the salt, please?",
+   "ko": "소금 좀 건네줄래요?",
+   "replaces": "Scusi, non capisco. Può ripetere, per favore?"
+  },
+  {
+   "text": "Chiudi la porta, per favore.",
+   "en": "Close the door, please.",
+   "ko": "문 좀 닫아 줘요.",
+   "replaces": "Sì, ho mangiato benissimo. Il conto, per favore."
+  }
+ ],
+ "e|va bene": [
+  {
+   "text": "Va bene, ti aspetto qui.",
+   "en": "Okay, I'll wait for you here.",
+   "ko": "좋아요, 여기서 기다릴게요.",
+   "replaces": "Va bene, lo prendo. Vorrei anche un melone."
+  },
+  {
+   "text": "Le otto? Va bene.",
+   "en": "Eight o'clock? Okay.",
+   "ko": "여덟 시요? 좋아요.",
+   "replaces": "Va bene, ci provo io, anche se, a dirla tutta, non me la sento molto di parlare in pubblico."
+  },
+  {
+   "text": "Va bene, oggi cucino io.",
+   "en": "Okay, I'll cook today.",
+   "ko": "좋아요, 오늘은 제가 요리할게요.",
+   "replaces": "Va bene, grazie mille. Arrivederci!"
+  }
+ ],
+ "f|it-f1-07": [
+  {
+   "text": "Quanto costa questo cappello?",
+   "en": "How much is this hat?",
+   "ko": "이 모자는 얼마예요?",
+   "replaces": "Quanto costa il biglietto?"
+  },
+  {
+   "text": "Quanto costa un gelato?",
+   "en": "How much is an ice cream?",
+   "ko": "아이스크림 하나에 얼마예요?",
+   "replaces": "Buonasera. Quanto costa un chilo di pomodori?"
+  }
+ ],
+ "e|quanto costa": [
+  {
+   "text": "E questo, quanto costa?",
+   "en": "And this one, how much is it?",
+   "ko": "그럼 이건 얼마예요?",
+   "replaces": "Buonasera. Quanto costa un chilo di pomodori?"
+  }
+ ],
+ "f|it-f1-08": [
+  {
+   "text": "E il museo, dov'è?",
+   "en": "And the museum, where is it?",
+   "ko": "그럼 박물관은 어디에 있어요?",
+   "replaces": "Scusi, dov'è la stazione?"
+  },
+  {
+   "text": "Mamma, dov'è il mio telefono?",
+   "en": "Mom, where's my phone?",
+   "ko": "엄마, 제 휴대폰 어디 있어요?",
+   "replaces": "Grazie! Scusi, dov'è il bagno?"
+  }
+ ],
+ "e|grazie": [
+  {
+   "text": "Grazie per il regalo!",
+   "en": "Thanks for the gift!",
+   "ko": "선물 고마워요!",
+   "replaces": "Grazie! Scusi, dov'è il bagno?"
+  },
+  {
+   "text": "Grazie, sei molto gentile.",
+   "en": "Thanks, you're very kind.",
+   "ko": "고마워요, 정말 친절하네요.",
+   "replaces": "No, grazie. Ho tutto."
+  },
+  {
+   "text": "Grazie dell'aiuto!",
+   "en": "Thanks for the help!",
+   "ko": "도와줘서 고마워요!",
+   "replaces": "Grazie, ma non parlo ancora bene."
+  },
+  {
+   "text": "Grazie, il pranzo era buonissimo.",
+   "en": "Thank you, lunch was delicious.",
+   "ko": "고마워요, 점심 정말 맛있었어요.",
+   "replaces": "Un attimo... ecco a lei. Grazie, a presto!"
+  },
+  {
+   "text": "Grazie, ma non ho fame.",
+   "en": "Thanks, but I'm not hungry.",
+   "ko": "고맙지만 배가 안 고파요.",
+   "replaces": "D'accordo, grazie. Domani resto a casa e mi riposo."
+  },
+  {
+   "text": "Grazie per avermi aspettato.",
+   "en": "Thanks for waiting for me.",
+   "ko": "기다려 줘서 고마워요.",
+   "replaces": "Grazie. Cosa mi consiglia stasera?"
+  },
+  {
+   "text": "Grazie della pazienza.",
+   "en": "Thank you for your patience.",
+   "ko": "기다려 주셔서 감사해요.",
+   "replaces": "Grazie, ma ci penso io stasera. Non ti preoccupare."
+  },
+  {
+   "text": "Grazie, dottore.",
+   "en": "Thank you, doctor.",
+   "ko": "고맙습니다, 선생님.",
+   "replaces": "Grazie mille! Se ti va, dopo ti offro un caffè."
+  },
+  {
+   "text": "Grazie per la cena, era tutto perfetto.",
+   "en": "Thanks for dinner, everything was perfect.",
+   "ko": "저녁 고마워요, 다 완벽했어요.",
+   "replaces": "Sì, grazie. Volevo chiederle se fosse possibile lavorare da casa due giorni alla settimana."
+  },
+  {
+   "text": "Grazie, ci vado subito.",
+   "en": "Thanks, I'll go there right away.",
+   "ko": "고마워요, 바로 가 볼게요.",
+   "replaces": "Ciao Giulia! Tutto bene, grazie. E tu come stai?"
+  },
+  {
+   "text": "Grazie per il passaggio!",
+   "en": "Thanks for the ride!",
+   "ko": "태워 줘서 고마워요!",
+   "replaces": "Va bene, grazie mille. Arrivederci!"
+  },
+  {
+   "text": "Grazie, prendo solo un'acqua.",
+   "en": "Thanks, I'll just have a water.",
+   "ko": "고마워요, 저는 물만 마실게요.",
+   "replaces": "Grazie mille. Ne approfitto: a che ora è la colazione?"
+  },
+  {
+   "text": "Grazie a te per la bella serata!",
+   "en": "Thank you for the lovely evening!",
+   "ko": "멋진 저녁 보내게 해 줘서 고마워요!",
+   "replaces": "Io, grazie. E tu, Marco, se non sbaglio hai appena cambiato lavoro?"
+  },
+  {
+   "text": "Grazie del consiglio, lo provo stasera.",
+   "en": "Thanks for the tip, I'll try it tonight.",
+   "ko": "알려 줘서 고마워요, 오늘 밤에 해 볼게요.",
+   "replaces": "Ci mancherebbe, grazie a lei per l'ascolto. Allora aspetto sue notizie."
+  }
+ ],
+ "e|scusi": [
+  {
+   "text": "Scusi, che ore sono?",
+   "en": "Excuse me, what time is it?",
+   "ko": "실례지만 몇 시예요?",
+   "replaces": "Grazie! Scusi, dov'è il bagno?"
+  },
+  {
+   "text": "Scusi, è libero questo posto?",
+   "en": "Excuse me, is this seat free?",
+   "ko": "실례지만 이 자리 비었어요?",
+   "replaces": "Scusi, non capisco. Può ripetere, per favore?"
+  }
+ ],
+ "f|it-f1-09": [
+  {
+   "text": "Senta, c'è una farmacia qui vicino?",
+   "en": "Excuse me, is there a pharmacy near here?",
+   "ko": "저기요, 이 근처에 약국 있어요?",
+   "replaces": "Ecco. Scusi, c'è una fermata qui vicino?"
+  }
+ ],
+ "f|it-f1-12": [
+  {
+   "text": "Ehm, non capisco questa parola.",
+   "en": "Um, I don't understand this word.",
+   "ko": "음, 이 단어를 모르겠어요.",
+   "replaces": "Scusi, non capisco. Può ripetere, per favore?"
+  }
+ ],
+ "f|it-f1-13": [
+  {
+   "text": "Può ripetere il numero della camera?",
+   "en": "Could you repeat the room number?",
+   "ko": "방 번호를 다시 말해 주시겠어요?",
+   "replaces": "Scusi, non capisco. Può ripetere, per favore?"
+  }
+ ],
+ "e|può ripetere": [
+  {
+   "text": "Può ripetere il suo nome?",
+   "en": "Could you repeat your name?",
+   "ko": "성함을 다시 말씀해 주시겠어요?",
+   "replaces": "Scusi, non capisco. Può ripetere, per favore?"
+  }
+ ],
+ "f|it-f1-16": [
+  {
+   "text": "Bacioni, a presto!",
+   "en": "Lots of kisses, see you soon!",
+   "ko": "사랑해요, 또 봐요!",
+   "replaces": "Un attimo... ecco a lei. Grazie, a presto!"
+  }
+ ],
+ "e|un attimo": [
+  {
+   "text": "Un attimo, arrivo subito!",
+   "en": "Just a moment, I'm coming right away!",
+   "ko": "잠깐만요, 금방 갈게요!",
+   "replaces": "Un attimo... ecco a lei. Grazie, a presto!"
+  }
+ ],
+ "f|it-f2-01": [
+  {
+   "text": "Ieri ho visto un bel film.",
+   "en": "Yesterday I watched a good movie.",
+   "ko": "어제 좋은 영화를 봤어요.",
+   "replaces": "No, non ancora. Ieri sera ho lavorato fino a tardi."
+  }
+ ],
+ "f|it-f2-17": [
+  {
+   "text": "E per me una pizza margherita.",
+   "en": "And a margherita pizza for me.",
+   "ko": "저는 마르게리타 피자로 할게요.",
+   "replaces": "Perfetto, per me le tagliatelle. Mi piacciono molto."
+  }
+ ],
+ "f|it-f2-07": [
+  {
+   "text": "Posso usare il tuo caricabatterie?",
+   "en": "Can I use your charger?",
+   "ko": "네 충전기 써도 돼요?",
+   "replaces": "Che profumo! Posso fare una foto prima di mangiare?"
+  },
+  {
+   "text": "Posso portare anche il mio cane?",
+   "en": "Can I bring my dog too?",
+   "ko": "제 강아지도 데려가도 돼요?",
+   "replaces": "Va bene. Posso bere il caffè?"
+  }
+ ],
+ "f|it-f2-09": [
+  {
+   "text": "Domani vado al mare con mia sorella.",
+   "en": "Tomorrow I'm going to the beach with my sister.",
+   "ko": "내일 여동생이랑 바다에 가요.",
+   "replaces": "D'accordo, grazie. Domani resto a casa e mi riposo."
+  }
+ ],
+ "f|it-f2-10": [
+  {
+   "text": "Ti va di mangiare una pizza stasera?",
+   "en": "Do you feel like having a pizza tonight?",
+   "ko": "오늘 저녁에 피자 먹을래요?",
+   "replaces": "C'è un concerto al parco. Ti va di venire?"
+  }
+ ],
+ "f|it-f2-12": [
+  {
+   "text": "Che peccato, stasera devo lavorare.",
+   "en": "What a shame, I have to work tonight.",
+   "ko": "아쉽네요, 오늘 밤엔 일해야 해요.",
+   "replaces": "Che peccato! Allora la prossima volta."
+  }
+ ],
+ "e|allora": [
+  {
+   "text": "Allora, cosa mangiamo stasera?",
+   "en": "So, what are we eating tonight?",
+   "ko": "그럼 오늘 저녁엔 뭐 먹을까요?",
+   "replaces": "Che peccato! Allora la prossima volta."
+  },
+  {
+   "text": "Piove forte. Allora prendo un taxi.",
+   "en": "It's raining hard. So I'll take a taxi.",
+   "ko": "비가 많이 와요. 그럼 택시 탈게요.",
+   "replaces": "Allora andiamo subito. Per fortuna la sala è qui vicino."
+  },
+  {
+   "text": "Allora, com'è andato l'esame?",
+   "en": "So, how did the exam go?",
+   "ko": "그래서 시험은 어떻게 됐어요?",
+   "replaces": "Allora si torna indietro, purché le decisioni vengano prese in base ai dati."
+  },
+  {
+   "text": "Sei stanco? Allora vai a letto presto.",
+   "en": "Are you tired? Then go to bed early.",
+   "ko": "피곤해요? 그럼 일찍 자요.",
+   "replaces": "Allora facciamo seicentottanta, a meno che lei non preferisca aspettare ancora."
+  },
+  {
+   "text": "Il negozio è chiuso. Allora torno lunedì.",
+   "en": "The shop is closed. Then I'll come back on Monday.",
+   "ko": "가게가 문을 닫았네요. 그럼 월요일에 다시 올게요.",
+   "replaces": "Ci mancherebbe, grazie a lei per l'ascolto. Allora aspetto sue notizie."
+  },
+  {
+   "text": "Allora, chi vuole un altro pezzo di torta?",
+   "en": "So, who wants another piece of cake?",
+   "ko": "자, 케이크 한 조각 더 먹을 사람?",
+   "replaces": "Ah, va bene. Allora non è lontano."
+  }
+ ],
+ "f|it-f2-13": [
+  {
+   "text": "Sabato ci vediamo in piazza.",
+   "en": "See you in the square on Saturday.",
+   "ko": "토요일에 광장에서 만나요.",
+   "replaces": "Perfetto, ci vediamo alla stazione alle tre. A sabato!"
+  }
+ ],
+ "f|it-f2-14": [
+  {
+   "text": "A che ora apre la farmacia?",
+   "en": "What time does the pharmacy open?",
+   "ko": "약국은 몇 시에 문을 열어요?",
+   "replaces": "D'accordo. A che ora partite?"
+  },
+  {
+   "text": "A che ora finisce la lezione?",
+   "en": "What time does the class end?",
+   "ko": "수업은 몇 시에 끝나요?",
+   "replaces": "Volentieri. A che ora? Io arrivo in ufficio alle nove."
+  }
+ ],
+ "e|d'accordo": [
+  {
+   "text": "D'accordo, porto io il vino.",
+   "en": "All right, I'll bring the wine.",
+   "ko": "좋아요, 와인은 제가 가져갈게요.",
+   "replaces": "D'accordo. A che ora partite?"
+  },
+  {
+   "text": "Sei d'accordo con me?",
+   "en": "Do you agree with me?",
+   "ko": "제 말에 동의해요?",
+   "replaces": "Non sono d'accordo. Da quando c'è la linea nuova, va molto meglio."
+  },
+  {
+   "text": "D'accordo, ne parliamo domenica.",
+   "en": "All right, we'll talk about it on Sunday.",
+   "ko": "좋아요, 일요일에 얘기해요.",
+   "replaces": "D'accordo. A proposito, chi viene stasera da Luca?"
+  }
+ ],
+ "e|volentieri": [
+  {
+   "text": "Un caffè? Volentieri!",
+   "en": "A coffee? Gladly!",
+   "ko": "커피요? 좋죠!",
+   "replaces": "Volentieri. A che ora? Io arrivo in ufficio alle nove."
+  },
+  {
+   "text": "Volentieri, ti aiuto con il trasloco.",
+   "en": "Gladly, I'll help you with the move.",
+   "ko": "기꺼이 이사 도와줄게요.",
+   "replaces": "Volentieri. Su una cosa non ci piove: è un film che fa discutere, ed è già tanto."
+  }
+ ],
+ "f|it-f2-15": [
+  {
+   "text": "Cosa mi consiglia per un regalo a mia madre?",
+   "en": "What do you recommend as a gift for my mother?",
+   "ko": "어머니 선물로 뭘 추천하세요?",
+   "replaces": "Grazie. Cosa mi consiglia stasera?"
+  }
+ ],
+ "f|it-f2-16": [
+  {
+   "text": "Mi fa male la schiena.",
+   "en": "My back hurts.",
+   "ko": "허리가 아파요.",
+   "replaces": "Buongiorno. Mi fa male la testa da ieri."
+  }
+ ],
+ "e|buongiorno": [
+  {
+   "text": "Buongiorno, un cappuccino e un cornetto.",
+   "en": "Good morning, a cappuccino and a croissant.",
+   "ko": "안녕하세요, 카푸치노 한 잔이랑 크루아상 하나 주세요.",
+   "replaces": "Buongiorno. Mi fa male la testa da ieri."
+  }
+ ],
+ "f|it-f2-18": [
+  {
+   "text": "Ho già comprato il pane per stasera.",
+   "en": "I've already bought bread for tonight.",
+   "ko": "오늘 저녁에 먹을 빵은 벌써 샀어요.",
+   "replaces": "Ho già finito il report, ieri sera."
+  }
+ ],
+ "f|it-f3-02": [
+  {
+   "text": "Mentre cucinavo, è suonato il campanello.",
+   "en": "While I was cooking, the doorbell rang.",
+   "ko": "요리하고 있는데 초인종이 울렸어요.",
+   "replaces": "Sì, che casino. Mentre aspettavo, ho provato a chiamarti, ma non rispondevi."
+  }
+ ],
+ "f|it-f3-03": [
+  {
+   "text": "Qualcuno bussa. Sarà il postino.",
+   "en": "Someone's knocking. It must be the mailman.",
+   "ko": "누가 문을 두드려요. 우체부일 거예요.",
+   "replaces": "Boh, non l'ho ancora capita. Sarà lei la colpevole?"
+  }
+ ],
+ "f|it-f3-07": [
+  {
+   "text": "Potrebbe parlare un po' più piano?",
+   "en": "Could you speak a little more slowly?",
+   "ko": "조금 더 천천히 말씀해 주시겠어요?",
+   "replaces": "Insomma, stanotte dormo al caldo? Potrebbe cambiarmi la camera?"
+  }
+ ],
+ "f|it-f3-09": [
+  {
+   "text": "Penso che questo ristorante sia un po' caro.",
+   "en": "I think this restaurant is a bit expensive.",
+   "ko": "이 식당은 좀 비싼 것 같아요.",
+   "replaces": "Non fa niente, la prendo. Penso che sia meglio del caldo."
+  }
+ ],
+ "f|it-f4-02": [
+  {
+   "text": "Non credo che sia aperto la domenica.",
+   "en": "I don't think it's open on Sundays.",
+   "ko": "일요일에는 문을 안 열 것 같아요.",
+   "replaces": "Non credo che sia una buona idea."
+  },
+  {
+   "text": "Non credo che sia così semplice.",
+   "en": "I don't think it's that simple.",
+   "ko": "그렇게 간단하지는 않을 것 같아요.",
+   "replaces": "A dire il vero, non credo che sia realistico. Mancano ancora tutti i test."
+  }
+ ],
+ "f|it-f3-10": [
+  {
+   "text": "Purtroppo non credo che lui venga stasera.",
+   "en": "Unfortunately I don't think he's coming tonight.",
+   "ko": "아쉽지만 그 사람은 오늘 밤에 안 올 것 같아요.",
+   "replaces": "A dire il vero, non credo che sia realistico. Mancano ancora tutti i test."
+  }
+ ],
+ "f|it-f3-11": [
+  {
+   "text": "Su, dimmi la verità.",
+   "en": "Come on, tell me the truth.",
+   "ko": "자, 사실대로 말해 봐.",
+   "replaces": "Dai, dimmi solo una cosa: finisce bene?"
+  }
+ ],
+ "f|it-f3-13": [
+  {
+   "text": "Scusa il ritardo, non trovavo parcheggio.",
+   "en": "Sorry I'm late, I couldn't find parking.",
+   "ko": "늦어서 미안해요, 주차할 데를 못 찾았어요.",
+   "replaces": "Scusa il ritardo! Il treno era fermo e non partiva più."
+  }
+ ],
+ "f|it-f3-14": [
+  {
+   "text": "Non ti preoccupare, ti presto io l'ombrello.",
+   "en": "Don't worry, I'll lend you my umbrella.",
+   "ko": "걱정 마요, 제 우산 빌려줄게요.",
+   "replaces": "Grazie, ma ci penso io stasera. Non ti preoccupare."
+  }
+ ],
+ "e|non ti preoccupare": [
+  {
+   "text": "Non ti preoccupare, è solo un graffio.",
+   "en": "Don't worry, it's just a scratch.",
+   "ko": "걱정 마요, 그냥 긁힌 거예요.",
+   "replaces": "Grazie, ma ci penso io stasera. Non ti preoccupare."
+  }
+ ],
+ "f|it-f3-15": [
+  {
+   "text": "Se ti va, sabato andiamo al lago.",
+   "en": "If you like, we can go to the lake on Saturday.",
+   "ko": "괜찮으면 토요일에 호수에 가요.",
+   "replaces": "Grazie mille! Se ti va, dopo ti offro un caffè."
+  }
+ ],
+ "f|it-f3-16": [
+  {
+   "text": "Non vedo l'ora di andare in vacanza.",
+   "en": "I can't wait to go on vacation.",
+   "ko": "빨리 휴가 가고 싶어요.",
+   "replaces": "Non vedo l'ora! Magari la guardiamo insieme?"
+  }
+ ],
+ "f|it-f3-20": [
+  {
+   "text": "Magari ci fosse il sole domenica!",
+   "en": "If only it were sunny on Sunday!",
+   "ko": "일요일에 해가 나면 정말 좋겠어요!",
+   "replaces": "Non vedo l'ora! Magari la guardiamo insieme?"
+  }
+ ],
+ "e|magari": [
+  {
+   "text": "Magari stasera ordiniamo una pizza.",
+   "en": "Maybe we'll order a pizza tonight.",
+   "ko": "오늘 밤엔 피자를 시킬까 봐요.",
+   "replaces": "Non vedo l'ora! Magari la guardiamo insieme?"
+  }
+ ],
+ "f|it-f3-17": [
+  {
+   "text": "Purtroppo la lavatrice non funziona da ieri.",
+   "en": "Unfortunately the washing machine hasn't been working since yesterday.",
+   "ko": "아쉽게도 세탁기가 어제부터 안 돼요.",
+   "replaces": "Buonasera, chiamo dalla camera trecentododici. Purtroppo l'aria condizionata non funziona."
+  }
+ ],
+ "e|buonasera": [
+  {
+   "text": "Buonasera, avete un tavolo per due?",
+   "en": "Good evening, do you have a table for two?",
+   "ko": "안녕하세요, 두 명 자리 있어요?",
+   "replaces": "Buonasera, chiamo dalla camera trecentododici. Purtroppo l'aria condizionata non funziona."
+  }
+ ],
+ "f|it-f3-18": [
+  {
+   "text": "Sul serio? Hai visto un cervo nel bosco?",
+   "en": "Seriously? You saw a deer in the woods?",
+   "ko": "진짜요? 숲에서 사슴을 봤어요?",
+   "replaces": "Sul serio? Ma se gli piaceva tanto il suo lavoro!"
+  }
+ ],
+ "f|it-f3-19": [
+  {
+   "text": "Per fortuna ho preso l'ombrello.",
+   "en": "Luckily I brought my umbrella.",
+   "ko": "다행히 우산을 챙겼어요.",
+   "replaces": "Allora andiamo subito. Per fortuna la sala è qui vicino."
+  }
+ ],
+ "f|it-f4-01": [
+  {
+   "text": "Con questo traffico, sarebbe meglio prendere la metro.",
+   "en": "With this traffic, it would be better to take the subway.",
+   "ko": "이렇게 막히면 지하철을 타는 게 낫겠어요.",
+   "replaces": "Secondo me sarebbe meglio consegnare venerdì solo le funzioni principali."
+  }
+ ],
+ "e|secondo me": [
+  {
+   "text": "Secondo me questo colore ti sta benissimo.",
+   "en": "In my opinion this color looks great on you.",
+   "ko": "제 생각엔 이 색이 정말 잘 어울려요.",
+   "replaces": "Secondo me sarebbe meglio consegnare venerdì solo le funzioni principali."
+  }
+ ],
+ "e|davvero": [
+  {
+   "text": "Questa torta è davvero buona.",
+   "en": "This cake is really good.",
+   "ko": "이 케이크 정말 맛있어요.",
+   "replaces": "Sì, l'ho letto. Spero che lo facciano davvero, questa volta."
+  },
+  {
+   "text": "Davvero? Non lo sapevo!",
+   "en": "Really? I didn't know that!",
+   "ko": "정말요? 몰랐어요!",
+   "replaces": "Ecco, Elena è l'unica persona che l'abbia mai capita davvero."
+  },
+  {
+   "text": "Sei stato davvero gentile.",
+   "en": "You were really kind.",
+   "ko": "정말 친절했어요.",
+   "replaces": "Davvero? Che bello! Mi piacerebbe venire."
+  },
+  {
+   "text": "Ti piace davvero il mio vestito?",
+   "en": "Do you really like my dress?",
+   "ko": "제 원피스가 정말 마음에 들어요?",
+   "replaces": "Davvero? In bocca al lupo! E adesso buon appetito!"
+  },
+  {
+   "text": "Oggi fa davvero freddo.",
+   "en": "It's really cold today.",
+   "ko": "오늘 정말 추워요.",
+   "replaces": "Mi dispiace davvero. Dai, il caffè dopo lo offro io."
+  }
+ ],
+ "f|it-f4-05": [
+  {
+   "text": "Per la cena avrei preferito un posto più tranquillo.",
+   "en": "For dinner I would have preferred a quieter place.",
+   "ko": "저녁은 좀 더 조용한 곳이었으면 더 좋았을 거예요.",
+   "replaces": "Ne parliamo con calma. A dire il vero, avrei preferito un contratto più breve."
+  }
+ ],
+ "e|a dire il vero": [
+  {
+   "text": "A dire il vero, non ho mai visto il mare d'inverno.",
+   "en": "To tell the truth, I've never seen the sea in winter.",
+   "ko": "사실 겨울 바다는 한 번도 본 적이 없어요.",
+   "replaces": "Ne parliamo con calma. A dire il vero, avrei preferito un contratto più breve."
+  }
+ ],
+ "f|it-f4-06": [
+  {
+   "text": "Scusa, avrei dovuto chiamarti prima.",
+   "en": "Sorry, I should have called you earlier.",
+   "ko": "미안해요, 먼저 전화했어야 했는데요.",
+   "replaces": "Mi dispiace, avrei dovuto dirlo subito. Tra l'altro, me l'ha confermato anche per email."
+  }
+ ],
+ "e|tra l'altro": [
+  {
+   "text": "Il ristorante è buono e, tra l'altro, costa poco.",
+   "en": "The restaurant is good and, besides, it's cheap.",
+   "ko": "그 식당은 맛있고 게다가 싸요.",
+   "replaces": "Mi dispiace, avrei dovuto dirlo subito. Tra l'altro, me l'ha confermato anche per email."
+  },
+  {
+   "text": "Abita vicino a me. Tra l'altro, lavoriamo nello stesso palazzo.",
+   "en": "She lives near me. What's more, we work in the same building.",
+   "ko": "그 사람은 우리 집 근처에 살아요. 게다가 같은 건물에서 일해요.",
+   "replaces": "Senza dubbio è giusto coinvolgerle. Tra l'altro, secondo i colleghi, una nuova policy arriverebbe già a gennaio."
+  }
+ ],
+ "f|it-f4-07": [
+  {
+   "text": "Paola mi ha detto che il negozio chiude a luglio.",
+   "en": "Paola told me that the shop is closing in July.",
+   "ko": "파올라가 가게가 칠월에 문을 닫는다고 했어요.",
+   "replaces": "Capisco. La signora con cui ho parlato ieri mi ha detto che l'appartamento era libero da mesi."
+  }
+ ],
+ "f|it-f4-08": [
+  {
+   "text": "Puoi usare la mia macchina, purché tu faccia benzina.",
+   "en": "You can use my car, as long as you fill it up.",
+   "ko": "기름만 넣어 주면 제 차를 써도 돼요.",
+   "replaces": "Sì, purché il piano dei test venga approvato da Laura. Ti faccio sapere entro stasera."
+  }
+ ],
+ "f|it-f4-15": [
+  {
+   "text": "Da un lato vorrei cambiare casa, però mi piace molto il quartiere.",
+   "en": "On the one hand I'd like to move, but I really like the neighborhood.",
+   "ko": "한편으로는 이사하고 싶지만 이 동네가 정말 좋아요.",
+   "replaces": "Da un lato sarebbe utile, dall'altro dovremmo spiegare tutto da capo."
+  }
+ ],
+ "e|dall'altro": [
+  {
+   "text": "Il centro è caro; dall'altro canto, è comodissimo.",
+   "en": "The city center is expensive; on the other hand, it's very convenient.",
+   "ko": "시내는 비싸요. 반면에 아주 편리해요.",
+   "replaces": "Da un lato sarebbe utile, dall'altro dovremmo spiegare tutto da capo."
+  }
+ ],
+ "f|it-f4-16": [
+  {
+   "text": "Mi piace l'idea, ma il punto è che non abbiamo tempo.",
+   "en": "I like the idea, but the point is that we don't have time.",
+   "ko": "아이디어는 좋은데 문제는 시간이 없다는 거예요.",
+   "replaces": "Hai ragione, ma il punto è che i test vengono fatti da due persone sole."
+  }
+ ],
+ "f|it-f4-17": [
+  {
+   "text": "Hai ragione, ma ormai è troppo tardi.",
+   "en": "You're right, but by now it's too late.",
+   "ko": "맞는 말이지만 이제는 너무 늦었어요.",
+   "replaces": "Hai ragione, ma il punto è che i test vengono fatti da due persone sole."
+  }
+ ],
+ "e|il punto è": [
+  {
+   "text": "Sì, ma il punto è un altro.",
+   "en": "Yes, but that's not the point.",
+   "ko": "네, 그런데 요점은 그게 아니에요.",
+   "replaces": "Hai ragione, ma il punto è che i test vengono fatti da due persone sole."
+  }
+ ],
+ "f|it-f4-18": [
+  {
+   "text": "Questo prezzo non mi sembra giusto.",
+   "en": "This price doesn't seem fair to me.",
+   "ko": "이 가격은 적당하지 않은 것 같아요.",
+   "replaces": "Esatto. In realtà di solito pago circa ottanta euro, quindi non mi sembra possibile."
+  }
+ ],
+ "e|non mi sembra": [
+  {
+   "text": "Sinceramente non mi sembra una cattiva idea.",
+   "en": "Honestly, it doesn't seem like a bad idea to me.",
+   "ko": "솔직히 나쁜 생각 같지는 않아요.",
+   "replaces": "Esatto. In realtà di solito pago circa ottanta euro, quindi non mi sembra possibile."
+  }
+ ],
+ "f|it-f4-19": [
+  {
+   "text": "Il viaggio è lungo, ma vale la pena vedere quel paesaggio.",
+   "en": "The trip is long, but it's worth seeing that landscape.",
+   "ko": "여행은 길지만 그 경치는 볼 만해요.",
+   "replaces": "Mi spiego: non dico che sia una soluzione perfetta, ma vale la pena provarci."
+  }
+ ],
+ "e|vale la pena": [
+  {
+   "text": "Quel museo? Sì, vale la pena.",
+   "en": "That museum? Yes, it's worth it.",
+   "ko": "그 박물관요? 네, 가 볼 만해요.",
+   "replaces": "Mi spiego: non dico che sia una soluzione perfetta, ma vale la pena provarci."
+  }
+ ],
+ "f|it-f4-20": [
+  {
+   "text": "Per quanto riguarda l'hotel, ci penso io.",
+   "en": "As for the hotel, I'll take care of it.",
+   "ko": "호텔은 제가 알아볼게요.",
+   "replaces": "Per quanto riguarda il pagamento, devo pagare comunque entro il quindici?"
+  }
+ ],
+ "e|comunque": [
+  {
+   "text": "Non mi piace molto, ma lo mangio comunque.",
+   "en": "I don't like it much, but I'll eat it anyway.",
+   "ko": "별로 안 좋아하지만 그래도 먹을게요.",
+   "replaces": "Per quanto riguarda il pagamento, devo pagare comunque entro il quindici?"
+  }
+ ],
+ "f|it-f5-01": [
+  {
+   "text": "Se avessi accettato quel lavoro a Milano, adesso vivrei lì.",
+   "en": "If I had accepted that job in Milan, I would be living there now.",
+   "ko": "그때 밀라노 일을 받아들였다면 지금 거기 살고 있을 거예요.",
+   "replaces": "Chi l'avrebbe detto! Se avessi accettato quell'offerta due anni fa, adesso saresti già direttore."
+  }
+ ],
+ "f|it-f5-02": [
+  {
+   "text": "Per il trasloco serve una soluzione che non ci faccia perdere un giorno di lavoro.",
+   "en": "For the move we need a solution that doesn't make us lose a day of work.",
+   "ko": "이사할 때 하루 일을 빼지 않아도 되는 방법이 필요해요.",
+   "replaces": "Capisco il problema. Cerco solo una soluzione che funzioni per tutti, magari in prova."
+  }
+ ],
+ "f|it-f5-07": [
+  {
+   "text": "Non avere paura dell'esame, te la caverai.",
+   "en": "Don't be afraid of the exam, you'll manage.",
+   "ko": "시험 걱정하지 마요, 잘 해낼 거예요.",
+   "replaces": "Figurati, tu te la cavi sempre, anche nelle situazioni più assurde."
+  },
+  {
+   "text": "Tranquillo, con l'inglese te la cavi bene.",
+   "en": "Relax, you get by fine in English.",
+   "ko": "걱정 마요, 영어 꽤 잘하잖아요.",
+   "replaces": "Senza dubbio te la caverai benissimo anche lì, Elena. Alzate i bicchieri: a Elena!"
+  }
+ ],
+ "f|it-f5-08": [
+  {
+   "text": "Il treno, a quanto pare, è in ritardo di un'ora.",
+   "en": "Apparently the train is an hour late.",
+   "ko": "기차가 한 시간 늦는다나 봐요.",
+   "replaces": "Per carità, nessuno pensa che tu l'abbia fatto apposta. Però a quanto pare l'argomento è ancora delicato."
+  },
+  {
+   "text": "Luca, a quanto pare, si sposa a giugno.",
+   "en": "Apparently Luca is getting married in June.",
+   "ko": "루카가 유월에 결혼한다나 봐요.",
+   "replaces": "Sì! A quanto pare il film sarebbe nato da un sogno che aveva fatto da ragazzo."
+  },
+  {
+   "text": "La pizzeria sotto casa, a quanto pare, ha cambiato proprietario.",
+   "en": "Apparently the pizzeria downstairs has a new owner.",
+   "ko": "아래층 피자집 주인이 바뀌었다나 봐요.",
+   "replaces": "Sì, e a quanto pare la nuova azienda avrebbe già grandi progetti per lei."
+  }
+ ],
+ "e|a quanto pare": [
+  {
+   "text": "Hanno rimandato la partita, a quanto pare per la pioggia.",
+   "en": "They postponed the match, apparently because of the rain.",
+   "ko": "비 때문에 경기가 미뤄졌다나 봐요.",
+   "replaces": "Per carità, nessuno pensa che tu l'abbia fatto apposta. Però a quanto pare l'argomento è ancora delicato."
+  }
+ ],
+ "f|it-f5-11": [
+  {
+   "text": "Risparmio molto tempo lavorando da casa.",
+   "en": "I save a lot of time working from home.",
+   "ko": "재택근무를 하니까 시간이 많이 절약돼요.",
+   "replaces": "Con tutto il rispetto, il mese scorso, lavorando da casa durante lo sciopero, ho chiuso due progetti in anticipo."
+  }
+ ],
+ "f|it-f5-16": [
+  {
+   "text": "Scusa, non è che hai un caricabatterie?",
+   "en": "Sorry, you wouldn't happen to have a charger?",
+   "ko": "미안한데, 혹시 충전기 있어요?",
+   "replaces": "Marco, mettiamola così: non è che sia proprio la serata giusta per parlarne."
+  }
+ ],
+ "f|it-f5-17": [
+  {
+   "text": "Il film? Beh, mettiamola così: non lo rivedrei.",
+   "en": "The movie? Well, let's put it this way: I wouldn't watch it again.",
+   "ko": "그 영화요? 음, 이렇게 말할게요. 다시 보진 않을 거예요.",
+   "replaces": "Marco, mettiamola così: non è che sia proprio la serata giusta per parlarne."
+  }
+ ],
+ "e|non è che": [
+  {
+   "text": "Il cibo era buono, ma non è che fosse eccezionale.",
+   "en": "The food was good, but it's not like it was amazing.",
+   "ko": "음식은 괜찮았지만 아주 훌륭했던 건 아니에요.",
+   "replaces": "Marco, mettiamola così: non è che sia proprio la serata giusta per parlarne."
+  }
+ ],
+ "f|it-f5-18": [
+  {
+   "text": "Mi sa che ho perso le chiavi.",
+   "en": "I have a feeling I've lost my keys.",
+   "ko": "열쇠를 잃어버린 것 같아요.",
+   "replaces": "Mi sa che non conosciamo tutta la storia, quindi lasciamo perdere."
+  }
+ ],
+ "e|mi sa che": [
+  {
+   "text": "Mi sa che stasera resto a casa.",
+   "en": "I think I'll stay home tonight.",
+   "ko": "오늘 밤엔 집에 있을 것 같아요.",
+   "replaces": "Mi sa che non conosciamo tutta la storia, quindi lasciamo perdere."
+  }
+ ],
+ "f|it-f5-19": [
+  {
+   "text": "La vacanza è stata breve, ma tutto sommato ci siamo divertiti.",
+   "en": "The vacation was short, but all things considered we had fun.",
+   "ko": "휴가는 짧았지만 그래도 재미있게 보냈어요.",
+   "replaces": "Dai, tutto sommato è stata una bella serata. Brindiamo al nuovo lavoro di Marco!"
+  }
+ ],
+ "e|dai": [
+  {
+   "text": "Dai, vieni con noi!",
+   "en": "Come on, come with us!",
+   "ko": "에이, 우리랑 같이 가요!",
+   "replaces": "Dai, tutto sommato è stata una bella serata. Brindiamo al nuovo lavoro di Marco!"
+  },
+  {
+   "text": "Dai, non piangere, si sistema tutto.",
+   "en": "Come on, don't cry, it'll all work out.",
+   "ko": "자, 울지 마요, 다 잘될 거예요.",
+   "replaces": "Mi dispiace davvero. Dai, il caffè dopo lo offro io."
+  }
+ ],
+ "f|it-f5-20": [
+  {
+   "text": "Stasera non me la sento di uscire.",
+   "en": "I don't feel up to going out tonight.",
+   "ko": "오늘 밤엔 나갈 기분이 아니에요.",
+   "replaces": "Va bene, ci provo io, anche se, a dirla tutta, non me la sento molto di parlare in pubblico."
+  }
+ ],
+ "e|a dirla tutta": [
+  {
+   "text": "A dirla tutta, il libro era meglio del film.",
+   "en": "To be honest, the book was better than the movie.",
+   "ko": "솔직히 말하면 책이 영화보다 나았어요.",
+   "replaces": "Va bene, ci provo io, anche se, a dirla tutta, non me la sento molto di parlare in pubblico."
+  }
+ ],
+ "e|mi piacerebbe": [
+  {
+   "text": "Mi piacerebbe imparare a suonare la chitarra.",
+   "en": "I'd like to learn to play the guitar.",
+   "ko": "기타 치는 법을 배우고 싶어요.",
+   "replaces": "Davvero? Che bello! Mi piacerebbe venire."
+  }
+ ],
+ "e|tutto bene": [
+  {
+   "text": "Tutto bene? Ti vedo stanco.",
+   "en": "Everything okay? You look tired.",
+   "ko": "괜찮아요? 피곤해 보여요.",
+   "replaces": "Ciao Giulia! Tutto bene, grazie. E tu come stai?"
+  }
+ ],
+ "e|certo": [
+  {
+   "text": "Ma certo, ti aiuto io.",
+   "en": "Of course, I'll help you.",
+   "ko": "물론이죠, 제가 도와줄게요.",
+   "replaces": "Sì, certo. Prego!"
+  }
+ ],
+ "e|in bocca al lupo": [
+  {
+   "text": "Hai l'esame? In bocca al lupo!",
+   "en": "You have the exam? Good luck!",
+   "ko": "시험 있어요? 행운을 빌어요!",
+   "replaces": "Davvero? In bocca al lupo! E adesso buon appetito!"
+  }
+ ],
+ "e|insomma": [
+  {
+   "text": "Il film era lungo e noioso, insomma, non mi è piaciuto.",
+   "en": "The movie was long and boring; in short, I didn't like it.",
+   "ko": "영화가 길고 지루했어요. 한마디로 별로였어요.",
+   "replaces": "In quattro e quattr'otto, insomma! Chi l'avrebbe detto."
+  }
+ ],
+ "e|chi l'avrebbe detto": [
+  {
+   "text": "Si sono sposati dopo un mese. Chi l'avrebbe detto!",
+   "en": "They got married after a month. Who would have thought!",
+   "ko": "한 달 만에 결혼했대요. 누가 알았겠어요!",
+   "replaces": "In quattro e quattr'otto, insomma! Chi l'avrebbe detto."
+  }
+ ],
+ "e|ho capito": [
+  {
+   "text": "Ho capito, ti richiamo dopo.",
+   "en": "Got it, I'll call you back later.",
+   "ko": "알겠어요, 이따 다시 전화할게요.",
+   "replaces": "Ho capito, scendo tra cinque minuti. Meno male!"
+  }
+ ]
+}

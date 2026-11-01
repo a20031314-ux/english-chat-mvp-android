@@ -6,7 +6,9 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const DIR = path.join(process.cwd(), "src/lib/curriculum/examples");
-const langs = readdirSync(DIR).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort();
+// 언어를 주면 그 언어만(다른 언어 JSON을 쓰는 중일 때).
+const only = process.argv.slice(2);
+const langs = readdirSync(DIR).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).filter((lang) => !only.length || only.includes(lang)).sort();
 for (const lang of langs) {
   const data = JSON.parse(readFileSync(path.join(DIR, `${lang}.json`), "utf8"));
   writeFileSync(path.join(DIR, `${lang}.ts`), `/** ${lang} 새 예문(scripts/extra-examples.mjs가 ${lang}.json에서 만듦). */\nimport type { ExtraExample } from "./types.ts";\n\nexport const ${lang.toUpperCase()}_EXTRA: Record<string, ExtraExample[]> = ${JSON.stringify(data, null, 1)};\n`);

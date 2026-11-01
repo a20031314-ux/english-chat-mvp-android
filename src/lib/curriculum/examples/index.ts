@@ -5,9 +5,16 @@
  */
 export type { ExtraExample } from "./types.ts";
 import type { ExtraExample } from "./types.ts";
+import { AR_EXTRA } from "./ar.ts";
+import { ES_EXTRA } from "./es.ts";
+import { HI_EXTRA } from "./hi.ts";
+import { IT_EXTRA } from "./it.ts";
+import { KO_EXTRA } from "./ko.ts";
+import { PT_EXTRA } from "./pt.ts";
+import { RU_EXTRA } from "./ru.ts";
+import { ZH_EXTRA } from "./zh.ts";
 
-
-export const EXTRA_EXAMPLES: Partial<Record<string, Record<string, ExtraExample[]>>> = {  };
+export const EXTRA_EXAMPLES: Partial<Record<string, Record<string, ExtraExample[]>>> = { ar: AR_EXTRA, es: ES_EXTRA, hi: HI_EXTRA, it: IT_EXTRA, ko: KO_EXTRA, pt: PT_EXTRA, ru: RU_EXTRA, zh: ZH_EXTRA };
 
 /** 점검 스크립트가 새 예문을 넣기 전 상태를 셀 때만 언어를 넣는다. */
 export const SHARED_EXAMPLES_OFF = new Set<string>();

@@ -1,0 +1,912 @@
+{
+ "f|zh-f1-01": [
+  {
+   "text": "阿姨好！小明在家吗？",
+   "en": "Hello, auntie! Is Xiaoming home?",
+   "ko": "아주머니, 안녕하세요! 샤오밍 집에 있어요?",
+   "replaces": "你好，我叫智宇。认识你很高兴。"
+  },
+  {
+   "text": "大家好，我叫小林。",
+   "en": "Hello, everyone. I'm Xiaolin.",
+   "ko": "여러분 안녕하세요, 저는 샤오린이에요.",
+   "replaces": "你好。这个是什么？"
+  },
+  {
+   "text": "晚上好，欢迎光临。",
+   "en": "Good evening, welcome.",
+   "ko": "안녕하세요, 어서 오세요.",
+   "replaces": "早上好。没关系。"
+  }
+ ],
+ "e|你好": [
+  {
+   "text": "你好，我想买一张地图。",
+   "en": "Hi, I'd like to buy a map.",
+   "ko": "안녕하세요, 지도 한 장 사고 싶어요.",
+   "replaces": "你好，我叫智宇。认识你很高兴。"
+  },
+  {
+   "text": "你好，我叫安娜。",
+   "en": "Hi, I'm Anna.",
+   "ko": "안녕하세요, 저는 안나예요.",
+   "replaces": "你好。这个是什么？"
+  },
+  {
+   "text": "你好，这个座位有人吗？",
+   "en": "Hi, is this seat taken?",
+   "ko": "안녕하세요, 이 자리에 사람 있어요?",
+   "replaces": "你好。请问，洗手间在哪儿？"
+  },
+  {
+   "text": "你好，我找王先生。",
+   "en": "Hi, I'm looking for Mr. Wang.",
+   "ko": "안녕하세요, 왕 선생님을 찾는데요.",
+   "replaces": "你好，请问，这儿可以拍照吗？"
+  },
+  {
+   "text": "你好，我来取快递。",
+   "en": "Hi, I'm here to pick up a package.",
+   "ko": "안녕하세요, 택배 찾으러 왔어요.",
+   "replaces": "你好，我是八零六的客人。不好意思，房间的空调坏了。"
+  }
+ ],
+ "e|没关系": [
+  {
+   "text": "没关系，我再等一会儿。",
+   "en": "That's OK, I'll wait a little longer.",
+   "ko": "괜찮아요, 조금 더 기다릴게요.",
+   "replaces": "早上好。没关系。"
+  }
+ ],
+ "f|zh-f1-02": [
+  {
+   "text": "我是学生，在北京学中文。",
+   "en": "I'm a student, studying Chinese in Beijing.",
+   "ko": "저는 학생이고 베이징에서 중국어를 배워요.",
+   "replaces": "不是，我是韩国人。你呢？"
+  }
+ ],
+ "e|不是": [
+  {
+   "text": "这不是我的包。",
+   "en": "This isn't my bag.",
+   "ko": "이건 제 가방이 아니에요.",
+   "replaces": "不是，我是韩国人。你呢？"
+  },
+  {
+   "text": "他不是老师，是医生。",
+   "en": "He isn't a teacher; he's a doctor.",
+   "ko": "그는 선생님이 아니라 의사예요.",
+   "replaces": "说到底，我要的不是优惠券，是我的东西。"
+  },
+  {
+   "text": "今天不是星期五吗？",
+   "en": "Isn't today Friday?",
+   "ko": "오늘 금요일 아니에요?",
+   "replaces": "你太高看我了。法律合同我心里没底，翻错了可不是闹着玩的。"
+  }
+ ],
+ "e|我是韩国人": [
+  {
+   "text": "我是韩国人，住在首尔。",
+   "en": "I'm Korean, and I live in Seoul.",
+   "ko": "저는 한국 사람이고 서울에 살아요.",
+   "replaces": "不是，我是韩国人。你呢？"
+  }
+ ],
+ "f|zh-f1-04": [
+  {
+   "text": "你是这儿的老板吗？",
+   "en": "Are you the owner here?",
+   "ko": "여기 사장님이세요?",
+   "replaces": "不客气。你是新同学吗？"
+  }
+ ],
+ "f|zh-f1-08": [
+  {
+   "text": "我的眼镜在哪儿？",
+   "en": "Where are my glasses?",
+   "ko": "제 안경 어디 있어요?",
+   "replaces": "你好。请问，洗手间在哪儿？"
+  }
+ ],
+ "e|请问": [
+  {
+   "text": "请问，现在几点了？",
+   "en": "Excuse me, what time is it now?",
+   "ko": "실례지만, 지금 몇 시예요?",
+   "replaces": "你好。请问，洗手间在哪儿？"
+  },
+  {
+   "text": "请问，这是去机场的车吗？",
+   "en": "Excuse me, is this the bus to the airport?",
+   "ko": "실례지만, 이거 공항 가는 차예요?",
+   "replaces": "你好，请问，这儿可以拍照吗？"
+  }
+ ],
+ "f|zh-f1-09": [
+  {
+   "text": "这件衣服多少钱？",
+   "en": "How much is this piece of clothing?",
+   "ko": "이 옷 얼마예요?",
+   "replaces": "芒果多少钱？"
+  }
+ ],
+ "f|zh-f1-10": [
+  {
+   "text": "这儿有热水吗？",
+   "en": "Is there hot water here?",
+   "ko": "여기 뜨거운 물 있어요?",
+   "replaces": "太贵了。这儿有苹果吗？"
+  }
+ ],
+ "e|谢谢": [
+  {
+   "text": "谢谢你的帮助。",
+   "en": "Thank you for your help.",
+   "ko": "도와줘서 고마워요.",
+   "replaces": "好的，谢谢。这儿有咖啡店吗？"
+  },
+  {
+   "text": "谢谢，我自己来吧。",
+   "en": "Thanks, I'll do it myself.",
+   "ko": "고마워요, 제가 할게요.",
+   "replaces": "好的，我要这个。谢谢！"
+  },
+  {
+   "text": "不用了，谢谢。",
+   "en": "No need, thanks.",
+   "ko": "괜찮아요, 고마워요.",
+   "replaces": "对，这是我的。谢谢！"
+  },
+  {
+   "text": "谢谢老师！",
+   "en": "Thank you, teacher!",
+   "ko": "선생님, 감사합니다!",
+   "replaces": "好的，谢谢你。再见！"
+  },
+  {
+   "text": "谢谢你来接我。",
+   "en": "Thanks for coming to pick me up.",
+   "ko": "데리러 와 줘서 고마워요.",
+   "replaces": "好的，谢谢。附近有医院吗？怎么走？"
+  },
+  {
+   "text": "谢谢，菜很好吃。",
+   "en": "Thanks, the food was delicious.",
+   "ko": "고마워요, 음식이 정말 맛있었어요.",
+   "replaces": "总的来说，我希望以后不再发生这种事。谢谢。"
+  },
+  {
+   "text": "谢谢你的礼物，我很喜欢。",
+   "en": "Thanks for the gift, I really like it.",
+   "ko": "선물 고마워요, 정말 마음에 들어요.",
+   "replaces": "不用，谢谢。等一下，这个手机是你的吗？"
+  },
+  {
+   "text": "真的谢谢你，帮了我大忙。",
+   "en": "Really, thank you. You helped me a lot.",
+   "ko": "정말 고마워요, 큰 도움이 됐어요.",
+   "replaces": "太好了，谢谢。我拿完行李就下去。"
+  },
+  {
+   "text": "谢谢大家今天来参加。",
+   "en": "Thank you all for coming today.",
+   "ko": "오늘 와 주신 여러분 모두 감사합니다.",
+   "replaces": "谢谢王总款待，改天再约！"
+  }
+ ],
+ "e|好的": [
+  {
+   "text": "好的，我马上来。",
+   "en": "OK, I'll be right there.",
+   "ko": "네, 바로 갈게요.",
+   "replaces": "好的，谢谢。这儿有咖啡店吗？"
+  },
+  {
+   "text": "好的，没问题。",
+   "en": "OK, no problem.",
+   "ko": "네, 문제없어요.",
+   "replaces": "好的，我要这个。谢谢！"
+  },
+  {
+   "text": "好的，我知道了。",
+   "en": "OK, got it.",
+   "ko": "네, 알겠어요.",
+   "replaces": "好的，谢谢你。再见！"
+  },
+  {
+   "text": "好的，那我们七点出发。",
+   "en": "OK, then we'll leave at seven.",
+   "ko": "좋아요, 그럼 일곱 시에 출발해요.",
+   "replaces": "好的，周日见！"
+  },
+  {
+   "text": "好的，我等你电话。",
+   "en": "OK, I'll wait for your call.",
+   "ko": "네, 전화 기다릴게요.",
+   "replaces": "好的。我能在这儿喝水吗？"
+  },
+  {
+   "text": "好的，就要这个吧。",
+   "en": "OK, I'll take this one then.",
+   "ko": "좋아요, 이걸로 할게요.",
+   "replaces": "好的，谢谢。附近有医院吗？怎么走？"
+  },
+  {
+   "text": "好的，我去问问。",
+   "en": "OK, I'll go and ask.",
+   "ko": "네, 가서 물어볼게요.",
+   "replaces": "好的，麻烦你了。我现在下去，请把新房卡给我。"
+  },
+  {
+   "text": "好的，你先走吧。",
+   "en": "OK, you go first.",
+   "ko": "네, 먼저 가세요.",
+   "replaces": "有道理。关键是公司要有好的管理制度。"
+  }
+ ],
+ "f|zh-f1-12": [
+  {
+   "text": "我要一杯热茶。",
+   "en": "I'd like a cup of hot tea.",
+   "ko": "뜨거운 차 한 잔 주세요.",
+   "replaces": "好的，我要这个。谢谢！"
+  },
+  {
+   "text": "我要两个包子。",
+   "en": "I'd like two steamed buns.",
+   "ko": "찐빵 두 개 주세요.",
+   "replaces": "我要小碗的。不要辣，我不能吃辣。"
+  }
+ ],
+ "f|zh-f1-13": [
+  {
+   "text": "请进，外面冷。",
+   "en": "Please come in, it's cold outside.",
+   "ko": "들어오세요, 밖이 추워요.",
+   "replaces": "对不起，我听不懂。请再说一遍。"
+  }
+ ],
+ "f|zh-f1-17": [
+  {
+   "text": "他说得太快，我听不懂。",
+   "en": "He speaks too fast; I can't understand.",
+   "ko": "그가 너무 빨리 말해서 못 알아듣겠어요.",
+   "replaces": "对不起，我听不懂。请再说一遍。"
+  }
+ ],
+ "e|对不起": [
+  {
+   "text": "对不起，我来晚了。",
+   "en": "Sorry, I'm late.",
+   "ko": "미안해요, 늦었어요.",
+   "replaces": "对不起，我听不懂。请再说一遍。"
+  },
+  {
+   "text": "对不起，我打错电话了。",
+   "en": "Sorry, I dialed the wrong number.",
+   "ko": "죄송해요, 전화를 잘못 걸었어요.",
+   "replaces": "对不起，请慢点儿说。"
+  }
+ ],
+ "e|请再说一遍": [
+  {
+   "text": "声音太小了，请再说一遍。",
+   "en": "It was too quiet. Please say it again.",
+   "ko": "소리가 너무 작아요, 한 번 더 말해 주세요.",
+   "replaces": "对不起，我听不懂。请再说一遍。"
+  }
+ ],
+ "f|zh-f1-20": [
+  {
+   "text": "那我们周六见！",
+   "en": "Then see you on Saturday!",
+   "ko": "그럼 토요일에 봐요!",
+   "replaces": "好的，谢谢你。再见！"
+  }
+ ],
+ "f|zh-f2-01": [
+  {
+   "text": "我昨天去了超市，买了很多水果。",
+   "en": "Yesterday I went to the supermarket and bought lots of fruit.",
+   "ko": "어제 마트에 가서 과일을 많이 샀어요.",
+   "replaces": "我昨天去了博物馆，有点儿累。你周末有空吗？"
+  }
+ ],
+ "f|zh-f2-19": [
+  {
+   "text": "我有点儿冷，你冷不冷？",
+   "en": "I'm a bit cold. Are you cold?",
+   "ko": "저 좀 추운데, 당신은 안 추워요?",
+   "replaces": "我昨天去了博物馆，有点儿累。你周末有空吗？"
+  },
+  {
+   "text": "今天我有点儿紧张。",
+   "en": "I'm a bit nervous today.",
+   "ko": "오늘 좀 긴장돼요.",
+   "replaces": "我头疼，还有点儿发烧。"
+  },
+  {
+   "text": "我有点儿饿了，我们吃饭吧。",
+   "en": "I'm a bit hungry. Let's eat.",
+   "ko": "좀 배고파요, 밥 먹어요.",
+   "replaces": "太好了。我今天坐了三个小时的飞机，有点儿累。"
+  }
+ ],
+ "e|有点儿累": [
+  {
+   "text": "爬了一上午的山，我有点儿累。",
+   "en": "After climbing the mountain all morning, I'm a bit tired.",
+   "ko": "오전 내내 산을 탔더니 좀 피곤해요.",
+   "replaces": "我昨天去了博物馆，有点儿累。你周末有空吗？"
+  }
+ ],
+ "f|zh-f2-03": [
+  {
+   "text": "周末我想去公园跑步。",
+   "en": "This weekend I want to go running in the park.",
+   "ko": "주말에 공원에 달리기하러 가고 싶어요.",
+   "replaces": "我想去看电影。一起去吧！"
+  }
+ ],
+ "f|zh-f2-10": [
+  {
+   "text": "这儿可以充电吗？",
+   "en": "Can I charge my phone here?",
+   "ko": "여기서 충전해도 돼요?",
+   "replaces": "很好吃！服务员，买单。剩下的面可以打包吗？"
+  },
+  {
+   "text": "我可以坐这儿吗？",
+   "en": "Can I sit here?",
+   "ko": "여기 앉아도 돼요?",
+   "replaces": "到了！师傅，可以用手机付吗？"
+  },
+  {
+   "text": "这儿可以带狗进去吗？",
+   "en": "Can I bring a dog in here?",
+   "ko": "여기 개 데리고 들어가도 돼요?",
+   "replaces": "你好，请问，这儿可以拍照吗？"
+  }
+ ],
+ "e|打包": [
+  {
+   "text": "这个菜吃不完，我们打包吧。",
+   "en": "We can't finish this dish. Let's take it to go.",
+   "ko": "이 요리는 다 못 먹겠어요, 포장해 가요.",
+   "replaces": "很好吃！服务员，买单。剩下的面可以打包吗？"
+  }
+ ],
+ "e|师傅": [
+  {
+   "text": "师傅，前面路口停一下。",
+   "en": "Driver, please stop at the next intersection.",
+   "ko": "기사님, 앞 교차로에서 세워 주세요.",
+   "replaces": "到了！师傅，可以用手机付吗？"
+  }
+ ],
+ "f|zh-f2-14": [
+  {
+   "text": "我们坐出租车去吧，快一点儿。",
+   "en": "Let's take a taxi; it's a bit faster.",
+   "ko": "택시 타고 가요, 좀 더 빨라요.",
+   "replaces": "我们坐地铁去吧。几点见？"
+  }
+ ],
+ "f|zh-f2-17": [
+  {
+   "text": "去你家怎么走？我第一次来。",
+   "en": "How do I get to your place? It's my first time here.",
+   "ko": "너희 집에 어떻게 가요? 처음 와 봐요.",
+   "replaces": "好的，谢谢。附近有医院吗？怎么走？"
+  }
+ ],
+ "f|zh-f2-18": [
+  {
+   "text": "我牙疼，晚上睡不好。",
+   "en": "My tooth hurts, and I can't sleep well at night.",
+   "ko": "이가 아파서 밤에 잠을 잘 못 자요.",
+   "replaces": "我头疼，还有点儿发烧。"
+  }
+ ],
+ "e|太好了": [
+  {
+   "text": "明天放假？太好了！",
+   "en": "We're off tomorrow? Great!",
+   "ko": "내일 쉬어요? 너무 좋아요!",
+   "replaces": "太好了。我今天坐了三个小时的飞机，有点儿累。"
+  },
+  {
+   "text": "太好了，终于下雨了。",
+   "en": "Great, it's finally raining.",
+   "ko": "잘됐어요, 드디어 비가 와요.",
+   "replaces": "真的吗？太好了！你坐飞机去还是坐高铁去？"
+  }
+ ],
+ "f|zh-f3-01": [
+  {
+   "text": "我去过西安，那儿的面特别好吃。",
+   "en": "I've been to Xi'an; the noodles there are really delicious.",
+   "ko": "시안에 가 봤는데, 거기 국수가 정말 맛있어요.",
+   "replaces": "特别漂亮。我去过丽江和大理，大理比丽江安静多了。"
+  }
+ ],
+ "f|zh-f3-03": [
+  {
+   "text": "今天比昨天冷。",
+   "en": "Today is colder than yesterday.",
+   "ko": "오늘이 어제보다 추워요.",
+   "replaces": "特别漂亮。我去过丽江和大理，大理比丽江安静多了。"
+  },
+  {
+   "text": "坐地铁比打车快多了。",
+   "en": "Taking the subway is much faster than taking a taxi.",
+   "ko": "지하철이 택시보다 훨씬 빨라요.",
+   "replaces": "九十八的比这个便宜，可是流量是不是没有那么多？"
+  }
+ ],
+ "f|zh-f3-04": [
+  {
+   "text": "我的房间没有你的那么大。",
+   "en": "My room isn't as big as yours.",
+   "ko": "제 방은 당신 방만큼 크지 않아요.",
+   "replaces": "九十八的比这个便宜，可是流量是不是没有那么多？"
+  },
+  {
+   "text": "今年夏天没有去年那么热。",
+   "en": "This summer isn't as hot as last year.",
+   "ko": "올여름은 작년만큼 덥지 않아요.",
+   "replaces": "那倒也是。那我们点清汤锅吧，没有那么辣。"
+  }
+ ],
+ "f|zh-f3-05": [
+  {
+   "text": "这本书我还没看完。",
+   "en": "I haven't finished reading this book yet.",
+   "ko": "이 책은 아직 다 못 읽었어요.",
+   "replaces": "拍了很多，可是我还没整理完。对了，我给你们带了点心。"
+  }
+ ],
+ "f|zh-f3-10": [
+  {
+   "text": "请把盐给我。",
+   "en": "Please pass me the salt.",
+   "ko": "소금 좀 건네주세요.",
+   "replaces": "好的，麻烦你了。我现在下去，请把新房卡给我。"
+  }
+ ],
+ "f|zh-f3-12": [
+  {
+   "text": "电影七点开始，现在出发还来得及吗？",
+   "en": "The movie starts at seven. Is there still time if we leave now?",
+   "ko": "영화가 일곱 시에 시작하는데, 지금 출발해도 늦지 않을까요?",
+   "replaces": "那太好了。我们现在跑过去，还来得及吗？"
+  }
+ ],
+ "f|zh-f3-15": [
+  {
+   "text": "说实话，我觉得这家店的菜很一般。",
+   "en": "To be honest, I think the food at this place is pretty ordinary.",
+   "ko": "솔직히 이 가게 음식은 그저 그런 것 같아요.",
+   "replaces": "试过了，没用。说实话，我热得睡不着。"
+  }
+ ],
+ "f|zh-f3-16": [
+  {
+   "text": "你说得对，我们应该早点儿出发。",
+   "en": "You're right, we should leave a bit earlier.",
+   "ko": "당신 말이 맞아요, 좀 더 일찍 출발해야 해요.",
+   "replaces": "你说得对，她哭得我也想哭。"
+  }
+ ],
+ "f|zh-f3-17": [
+  {
+   "text": "听说那家新开的咖啡馆很不错。",
+   "en": "I heard that newly opened café is quite good.",
+   "ko": "새로 생긴 그 카페가 꽤 괜찮대요.",
+   "replaces": "挺好看的。听说下周就是最后一集了。"
+  }
+ ],
+ "f|zh-f3-18": [
+  {
+   "text": "天气越来越冷了。",
+   "en": "The weather is getting colder and colder.",
+   "ko": "날씨가 점점 추워져요.",
+   "replaces": "一开始吃不惯，后来越来越喜欢了。"
+  }
+ ],
+ "f|zh-f4-01": [
+  {
+   "text": "虽然这份工作很累，但是我学到了很多。",
+   "en": "Although this job is tiring, I've learned a lot.",
+   "ko": "이 일은 힘들지만 많이 배웠어요.",
+   "replaces": "我能理解大家的压力。虽然时间很紧，但是质量不能不管。"
+  }
+ ],
+ "f|zh-f4-04": [
+  {
+   "text": "只要每天练习半小时，就能进步。",
+   "en": "As long as you practice for half an hour every day, you'll improve.",
+   "ko": "매일 30분씩만 연습하면 실력이 늘어요.",
+   "replaces": "那值得一试。只要大家都习惯了，就能看出效果。"
+  }
+ ],
+ "f|zh-f4-05": [
+  {
+   "text": "只有提前预订，才能拿到便宜的票。",
+   "en": "Only by booking in advance can you get cheap tickets.",
+   "ko": "미리 예약해야만 싼 표를 구할 수 있어요.",
+   "replaces": "只有再加两个测试人员，我们才能按新的时间完成。你看怎么样？"
+  },
+  {
+   "text": "只有大家一起努力，我们才能按时完成。",
+   "en": "Only if everyone works together can we finish on time.",
+   "ko": "모두 함께 노력해야만 제때 끝낼 수 있어요.",
+   "replaces": "只有这样的事多被宣传，社会风气才会越来越好。"
+  }
+ ],
+ "f|zh-f4-15": [
+  {
+   "text": "我们下周三再开一次会，你看怎么样？",
+   "en": "Let's have another meeting next Wednesday. How does that sound?",
+   "ko": "다음 주 수요일에 회의를 한 번 더 하면 어때요?",
+   "replaces": "只有再加两个测试人员，我们才能按新的时间完成。你看怎么样？"
+  }
+ ],
+ "f|zh-f4-06": [
+  {
+   "text": "难道你没看到我发的消息吗？",
+   "en": "Don't tell me you didn't see the message I sent?",
+   "ko": "설마 제가 보낸 메시지 못 봤어요?",
+   "replaces": "被送到别的城市？这不合理。难道你们没有检查地址吗？"
+  }
+ ],
+ "f|zh-f4-09": [
+  {
+   "text": "既然已经买了票，就别想那么多了。",
+   "en": "Since we've already bought the tickets, don't overthink it.",
+   "ko": "이미 표를 샀으니 너무 많이 생각하지 마세요.",
+   "replaces": "这倒是。既然大家都不确定，就别急着下结论。"
+  }
+ ],
+ "f|zh-f4-10": [
+  {
+   "text": "我不太同意，孩子玩手机也不全是坏处。",
+   "en": "I don't quite agree; kids using phones isn't all bad.",
+   "ko": "저는 별로 동의하지 않아요, 아이가 휴대폰을 쓰는 게 다 나쁜 건 아니에요.",
+   "replaces": "我不太同意。在家工作不见得效率更高。"
+  }
+ ],
+ "f|zh-f4-13": [
+  {
+   "text": "网上买的不见得更便宜。",
+   "en": "Buying online isn't necessarily cheaper.",
+   "ko": "인터넷에서 사는 게 꼭 더 싼 건 아니에요.",
+   "replaces": "我不太同意。在家工作不见得效率更高。"
+  },
+  {
+   "text": "他说明天会下雨，那可不见得。",
+   "en": "He says it'll rain tomorrow, but that's not necessarily so.",
+   "ko": "그는 내일 비가 온다는데, 꼭 그렇지는 않을 거예요.",
+   "replaces": "不见得吧。据我所知，当地警察已经证实了。"
+  }
+ ],
+ "e|不见得": [
+  {
+   "text": "年纪大的人不见得都不会用电脑。",
+   "en": "Older people aren't necessarily all unable to use computers.",
+   "ko": "나이 든 사람이라고 다 컴퓨터를 못 쓰는 건 아니에요.",
+   "replaces": "我不太同意。在家工作不见得效率更高。"
+  }
+ ],
+ "f|zh-f4-11": [
+  {
+   "text": "这个计划很完美。话虽如此，我们还是要准备第二方案。",
+   "en": "This plan is perfect. That said, we still need a backup plan.",
+   "ko": "이 계획은 완벽해요. 그렇긴 해도 두 번째 안은 준비해야 해요.",
+   "replaces": "话虽如此，那个小哥还是真了不起。"
+  },
+  {
+   "text": "房租确实贵。话虽如此，从这儿上班很方便。",
+   "en": "The rent really is expensive. That said, commuting from here is very convenient.",
+   "ko": "월세가 확실히 비싸요. 그렇긴 해도 여기서 출근하기는 아주 편해요.",
+   "replaces": "话虽如此，可是在家很容易分心。另一方面，跟同事沟通也不方便。"
+  }
+ ],
+ "e|话虽如此": [
+  {
+   "text": "他经常迟到。话虽如此，他的工作做得很认真。",
+   "en": "He's often late. That said, he does his work very carefully.",
+   "ko": "그는 자주 지각해요. 그렇긴 해도 일은 아주 성실하게 해요.",
+   "replaces": "话虽如此，可是在家很容易分心。另一方面，跟同事沟通也不方便。"
+  }
+ ],
+ "f|zh-f4-12": [
+  {
+   "text": "问题在于，我们的预算不够。",
+   "en": "The problem is that our budget isn't enough.",
+   "ko": "문제는 우리 예산이 부족하다는 거예요.",
+   "replaces": "问题在于，测试的时候发现了很多bug，而且设计稿被客户改了三次。"
+  }
+ ],
+ "f|zh-f4-14": [
+  {
+   "text": "据我所知，这家店周一不开门。",
+   "en": "As far as I know, this shop isn't open on Mondays.",
+   "ko": "제가 알기로는 이 가게는 월요일에 문을 안 열어요.",
+   "replaces": "不见得吧。据我所知，当地警察已经证实了。"
+  },
+  {
+   "text": "据我所知，他已经搬到上海了。",
+   "en": "As far as I know, he has already moved to Shanghai.",
+   "ko": "제가 알기로는 그는 이미 상하이로 이사했어요.",
+   "replaces": "据我所知，隔壁组下个月就有两个人空出来。"
+  }
+ ],
+ "e|据我所知": [
+  {
+   "text": "据我所知，报名明天就截止了。",
+   "en": "As far as I know, registration closes tomorrow.",
+   "ko": "제가 알기로는 신청이 내일 마감돼요.",
+   "replaces": "不见得吧。据我所知，当地警察已经证实了。"
+  }
+ ],
+ "f|zh-f4-16": [
+  {
+   "text": "学语言不难，关键是要坚持。",
+   "en": "Learning a language isn't hard; the key is to keep at it.",
+   "ko": "언어 배우기는 어렵지 않아요, 중요한 건 꾸준히 하는 거예요.",
+   "replaces": "有道理。关键是公司要有好的管理制度。"
+  }
+ ],
+ "e|有道理": [
+  {
+   "text": "你这么说也有道理。",
+   "en": "What you're saying makes sense too.",
+   "ko": "그렇게 말하니 일리가 있네요.",
+   "replaces": "有道理。关键是公司要有好的管理制度。"
+  }
+ ],
+ "f|zh-f4-17": [
+  {
+   "text": "总的来说，这次旅行很愉快。",
+   "en": "All in all, this trip was very pleasant.",
+   "ko": "전체적으로 이번 여행은 아주 즐거웠어요.",
+   "replaces": "总的来说，我希望以后不再发生这种事。谢谢。"
+  }
+ ],
+ "f|zh-f4-18": [
+  {
+   "text": "按理说，这个时间路上不会堵车。",
+   "en": "By rights, there shouldn't be any traffic at this time.",
+   "ko": "원래대로라면 이 시간에는 길이 안 막혀야 해요.",
+   "replaces": "订单号我发在聊天框里了。按理说三天就应该到了。"
+  }
+ ],
+ "e|到了": [
+  {
+   "text": "我们到了，下车吧。",
+   "en": "We're here. Let's get off.",
+   "ko": "다 왔어요, 내려요.",
+   "replaces": "订单号我发在聊天框里了。按理说三天就应该到了。"
+  }
+ ],
+ "f|zh-f4-19": [
+  {
+   "text": "他一直不回消息。换句话说，他不想去。",
+   "en": "He keeps not replying. In other words, he doesn't want to go.",
+   "ko": "그는 계속 답장이 없어요. 다시 말해 가기 싫은 거예요.",
+   "replaces": "换句话说，问题不在地点，而在管理。"
+  }
+ ],
+ "f|zh-f4-20": [
+  {
+   "text": "说到底，钱不是最重要的。",
+   "en": "When it comes down to it, money isn't the most important thing.",
+   "ko": "결국 돈이 제일 중요한 건 아니에요.",
+   "replaces": "说到底，我要的不是优惠券，是我的东西。"
+  }
+ ],
+ "f|zh-f5-01": [
+  {
+   "text": "鉴于天气原因，比赛推迟到下周举行。",
+   "en": "In view of the weather, the match has been postponed to next week.",
+   "ko": "날씨 때문에 경기는 다음 주로 연기됐어요.",
+   "replaces": "鉴于双方都很有诚意，我建议下周先让技术团队碰个头，以便尽快确定细节。"
+  },
+  {
+   "text": "鉴于大家的反馈，我们决定修改方案。",
+   "en": "In view of everyone's feedback, we've decided to revise the plan.",
+   "ko": "여러분의 의견을 고려해 안을 수정하기로 했어요.",
+   "replaces": "质量确实没得说。鉴于我们是第一次合作，能不能先签一年，从而降低双方的风险？"
+  }
+ ],
+ "f|zh-f5-03": [
+  {
+   "text": "公司增加了培训，从而提高了员工的效率。",
+   "en": "The company added more training, thereby raising staff efficiency.",
+   "ko": "회사가 교육을 늘려서 직원들의 효율을 높였어요.",
+   "replaces": "质量确实没得说。鉴于我们是第一次合作，能不能先签一年，从而降低双方的风险？"
+  }
+ ],
+ "f|zh-f5-04": [
+  {
+   "text": "即使明天下雨，我们也要按时出发。",
+   "en": "Even if it rains tomorrow, we'll still leave on time.",
+   "ko": "내일 비가 오더라도 제시간에 출발할 거예요.",
+   "replaces": "不是我不想帮。即使我每天熬夜，也未必能翻完。"
+  }
+ ],
+ "f|zh-f5-10": [
+  {
+   "text": "换个工作环境未必是坏事。",
+   "en": "A change of work environment isn't necessarily a bad thing.",
+   "ko": "일하는 환경을 바꾸는 게 꼭 나쁜 일은 아니에요.",
+   "replaces": "不是我不想帮。即使我每天熬夜，也未必能翻完。"
+  }
+ ],
+ "f|zh-f5-06": [
+  {
+   "text": "他最近太忙，连周末都要加班。",
+   "en": "He's so busy lately that he has to work overtime even on weekends.",
+   "ko": "그는 요즘 너무 바빠서 주말에도 야근해야 해요.",
+   "replaces": "你不妨找个专业的翻译公司，他们连法律术语都很熟。"
+  },
+  {
+   "text": "这道题太难了，连老师都想了半天。",
+   "en": "This question is so hard that even the teacher had to think for ages.",
+   "ko": "이 문제는 너무 어려워서 선생님도 한참 고민했어요.",
+   "replaces": "一言难尽啊。连煮个面都差点儿把厨房烧了。"
+  }
+ ],
+ "f|zh-f5-07": [
+  {
+   "text": "这个蛋糕是我女儿自己做出来的。",
+   "en": "This cake was made by my daughter all by herself.",
+   "ko": "이 케이크는 제 딸이 혼자 만든 거예요.",
+   "replaces": "哪里哪里，不敢当。方案是整个团队熬了好几个通宵才做出来的。"
+  }
+ ],
+ "e|哪里哪里": [
+  {
+   "text": "哪里哪里，我的中文还差得远呢。",
+   "en": "Oh, not at all. My Chinese still has a long way to go.",
+   "ko": "아니에요, 제 중국어는 아직 멀었어요.",
+   "replaces": "哪里哪里，不敢当。方案是整个团队熬了好几个通宵才做出来的。"
+  }
+ ],
+ "f|zh-f5-15": [
+  {
+   "text": "说白了，他就是不想负责任。",
+   "en": "To put it bluntly, he just doesn't want to take responsibility.",
+   "ko": "솔직히 말해서 그는 그냥 책임지기 싫은 거예요.",
+   "replaces": "五十页？周五前？说白了，这事儿不好办啊。"
+  }
+ ],
+ "f|zh-f5-16": [
+  {
+   "text": "预算只剩一半了，这事儿不好办。",
+   "en": "Only half the budget is left. This is a tricky one.",
+   "ko": "예산이 반밖에 안 남았어요, 이건 곤란하네요.",
+   "replaces": "五十页？周五前？说白了，这事儿不好办啊。"
+  }
+ ],
+ "e|这事儿不好办": [
+  {
+   "text": "领导不同意，客户又着急，这事儿不好办啊。",
+   "en": "The boss doesn't agree and the client is in a hurry. This is a tricky one.",
+   "ko": "상사는 반대하고 고객은 급하고, 이 일은 참 곤란하네요.",
+   "replaces": "五十页？周五前？说白了，这事儿不好办啊。"
+  }
+ ],
+ "f|zh-f5-17": [
+  {
+   "text": "一个人带孩子出国旅行，我心里没底。",
+   "en": "When it comes to traveling abroad alone with the kids, I don't feel confident.",
+   "ko": "혼자 아이를 데리고 해외여행 가는 건 자신이 없어요.",
+   "replaces": "你太高看我了。法律合同我心里没底，翻错了可不是闹着玩的。"
+  },
+  {
+   "text": "这个价格能不能谈下来，我心里没底。",
+   "en": "I'm not sure whether we can negotiate this price down.",
+   "ko": "이 가격을 깎을 수 있을지 자신이 없어요.",
+   "replaces": "三年的话，我们心里没底。不如先签一年，走一步看一步。"
+  }
+ ],
+ "f|zh-f5-18": [
+  {
+   "text": "现在还不知道结果，先走一步看一步吧。",
+   "en": "We don't know the result yet, so let's take it one step at a time.",
+   "ko": "아직 결과를 모르니 일단 상황을 보면서 해요.",
+   "replaces": "三年的话，我们心里没底。不如先签一年，走一步看一步。"
+  },
+  {
+   "text": "刚到新城市，工作的事走一步看一步吧。",
+   "en": "I've just arrived in a new city; as for work, I'll take it one step at a time.",
+   "ko": "새 도시에 막 왔으니 일은 차근차근 보면서 정할게요.",
+   "replaces": "那就走一步看一步，周五再定。"
+  }
+ ],
+ "e|走一步看一步": [
+  {
+   "text": "计划赶不上变化，我们只能走一步看一步。",
+   "en": "Plans can't keep up with changes, so we can only take it one step at a time.",
+   "ko": "계획은 변화를 따라가지 못하니 한 걸음씩 볼 수밖에 없어요.",
+   "replaces": "三年的话，我们心里没底。不如先签一年，走一步看一步。"
+  }
+ ],
+ "f|zh-f5-19": [
+  {
+   "text": "打个比方，学外语就像学游泳，光看书是不够的。",
+   "en": "To give an analogy, learning a foreign language is like learning to swim: just reading books isn't enough.",
+   "ko": "비유하자면 외국어를 배우는 건 수영을 배우는 것과 같아서 책만 봐서는 부족해요.",
+   "replaces": "打个比方吧，你会让一个刚拿驾照的人帮你开长途吗？"
+  }
+ ],
+ "f|zh-f5-20": [
+  {
+   "text": "考试没考好也没什么大不了的，下次再努力。",
+   "en": "Not doing well on an exam is no big deal; just try harder next time.",
+   "ko": "시험을 잘 못 봐도 별일 아니에요, 다음에 더 열심히 하면 돼요.",
+   "replaces": "有什么不敢的？吃坏了肚子也没什么大不了的嘛。开个玩笑。"
+  }
+ ],
+ "e|开个玩笑": [
+  {
+   "text": "别生气，我只是开个玩笑。",
+   "en": "Don't be angry, I was only joking.",
+   "ko": "화내지 마세요, 그냥 농담한 거예요.",
+   "replaces": "有什么不敢的？吃坏了肚子也没什么大不了的嘛。开个玩笑。"
+  }
+ ],
+ "e|等一下": [
+  {
+   "text": "等一下，我马上就好。",
+   "en": "Wait a moment, I'll be ready right away.",
+   "ko": "잠깐만요, 금방 끝나요.",
+   "replaces": "我同意。请等一下，我把护照拿出来。"
+  }
+ ],
+ "e|没空": [
+  {
+   "text": "这周我一直没空，下周再聚吧。",
+   "en": "I've had no free time all week; let's get together next week.",
+   "ko": "이번 주는 계속 시간이 없어서, 다음 주에 만나요.",
+   "replaces": "今天晚上没空，下次吧。"
+  }
+ ],
+ "e|还行": [
+  {
+   "text": "新工作怎么样？还行，同事都挺好。",
+   "en": "How's the new job? It's OK; the colleagues are all nice.",
+   "ko": "새 직장 어때요? 괜찮아요, 동료들이 다 좋아요.",
+   "replaces": "还行，差不多每天八点下班。"
+  }
+ ],
+ "e|看情况": [
+  {
+   "text": "周末去不去爬山？看情况吧，天气好就去。",
+   "en": "Hiking this weekend? It depends. If the weather's good, we'll go.",
+   "ko": "주말에 등산 갈래요? 상황 봐서요, 날씨 좋으면 가요.",
+   "replaces": "看情况吧。我的意思是，如果不加班，我就去。"
+  }
+ ],
+ "e|辛苦大家了": [
+  {
+   "text": "这个项目终于完成了，辛苦大家了！",
+   "en": "The project is finally done. Thanks for all your hard work, everyone!",
+   "ko": "이 프로젝트가 드디어 끝났어요, 모두 수고 많으셨어요!",
+   "replaces": "好，先这样吧。辛苦大家了！"
+  }
+ ],
+ "e|拿不准": [
+  {
+   "text": "这件衣服适不适合我，我也拿不准。",
+   "en": "I'm not sure whether this outfit suits me.",
+   "ko": "이 옷이 저한테 어울리는지 저도 잘 모르겠어요.",
+   "replaces": "不过我只能晚上看，能看多少我也拿不准，我尽量吧。"
+  }
+ ]
+}
