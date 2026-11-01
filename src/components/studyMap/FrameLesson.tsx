@@ -19,6 +19,7 @@ import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
 import { glossFor, quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
+import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
@@ -65,6 +66,8 @@ export function FrameLesson({
   const key = frame ? `f|${frame.id}` : subject!.key;
   const itemId = frame?.id ?? key;
   const stageOf = frame?.stage ?? subject?.stage ?? 1;
+  // 예문 뜻을 앱 언어로(영어·한국어 밖 앱 언어는 서버가 옮긴 표 — 받으면 다시 그림).
+  useAllStageGlosses(language, locale);
   const [step, setStep] = useState<LessonStep>("explain");
   const [lesson, setLesson] = useState<(Lesson & { title?: string }) | null | undefined>(undefined);
   useEffect(() => {
@@ -108,7 +111,8 @@ export function FrameLesson({
     return quizSources(language, key)
       .filter((source) => source.who !== "them" && source.piece && (source.stage === 0 || source.stage <= stageOf + 1))
       .slice(0, 4)
-      .map((source) => ({ text: source.text, gloss: source.gloss, slot: key.startsWith("e|") ? (pieceOf(source.text, key.slice(2)) ?? undefined) : source.piece }));
+      // 표현은 그 표현을 칠하고, 문법 칸은 칠하지 않는다(재료의 조각은 다른 문장구조 조각이라 엉뚱한 곳이 칠해짐).
+      .map((source) => ({ text: source.text, gloss: source.gloss, slot: key.startsWith("e|") ? (pieceOf(source.text, key.slice(2)) ?? undefined) : undefined }));
   }, [frame, language, key, stageOf]);
   const questions = useMemo<QuizQuestion[]>(() => {
     void grown;
