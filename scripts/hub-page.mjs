@@ -95,6 +95,14 @@ try {
 let ads = "";
 try {
   ads = read("ADS.md");
+  // 변경 감시가 낸 광고 재구성 안(hub/ads-plan.md, scripts/watch/ads.mjs)을 원칙 바로 아래(자동 부분 앞)에.
+  try {
+    const plan = read("ads-plan.md");
+    const at = ads.indexOf("<!-- 자동");
+    ads = at >= 0 ? `${ads.slice(0, at)}${plan}\n${ads.slice(at)}` : `${ads}\n\n${plan}`;
+  } catch {
+    // 아직 안 없으면 ADS.md만.
+  }
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }

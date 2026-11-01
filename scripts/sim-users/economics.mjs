@@ -34,6 +34,13 @@ const pct = (n) => `${Math.round(n * 1000) / 10}%`;
 /** 하루 한도(plans.ts dailyAiHelp)에 들어가는 기능(server/aiHelp.ts를 거치는 것). */
 const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "analysisElement", "expressionInsight", "vocabGloss"];
 
+/**
+ * 이 계산이 세는 전면 광고 순간(hub/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
+ * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
+ * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움, 계산은 남음.)
+ */
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave"];
+
 export const PLANS = [
   { id: "free", name: "무료(+광고)", terms: termsFor("free") },
   { id: "lite", name: "라이트 3,900원", terms: termsFor("lite") },

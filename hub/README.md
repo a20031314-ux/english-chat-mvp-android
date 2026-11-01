@@ -101,5 +101,6 @@ Artifact 도구로 **위 주소(url)에** 다시 올린다. 칸·설명·이어�
 - **잼(모델 없음, 약 1분):** 비용표(`plan-cost`)·손익(`sim:economics`)·광고 지도(`ads:map`)의 모든 표 칸, 퀴즈 전수 점검 원인별 수 → 기준값(`hub/watch.json`)과 비교.
 - **제3자 리뷰:** 코드를 쓰지 않은 에이전트가 바뀐 부분만 `scripts/watch/REVIEW.md`(답 노출·오답·14개 언어·화면 규칙·돈·데이터·영역 경계·명백한 버그)로 — 큰 것은 다른 에이전트가 한 번 더 확인.
 - **화면 점검:** 화면 코드가 바뀌었으면 "가상 사용자 화면 점검"을 바로 돌림(하루 한 번까지).
+- **광고 구조 맞추기**(`scripts/watch/ads.mjs`·`ADS-REVIEW.md`, 2026-11-01): 화면·흐름·광고 코드가 바뀌면 에이전트가 광고 자리를 원칙(`ADS.md` 위쪽)과 새 흐름에 다시 맞춘 안을 냄 — 넣을 곳·뺄 곳·옮길 곳·`ADS_*` 값·손익 계산에 빠진 순간, 안마다 1,000명당 월 수익(`ads.mjs estimate`·`settings`로 계산). 결과 `hub/ads-plan.md`(허브 페이지 광고 칸 원칙 아래). 원칙 위반이나 ±20,000원 넘는 안은 폰 알림. 바꾸는 것은 "바꿔줘" 뒤.
 - **보내는 곳:** 고칠 것은 `inbox.md`(`watch → dev`, 줄 이름 붙여), 숫자 변화·리뷰 요약은 `reports.md`. **폰 알림은 알아야 할 것만** — 요금제·유형별 손익이 500원 넘게 바뀜, 광고 순간·자리가 생기거나 없어짐, 퀴즈 원인이 새로 생기거나 20건 넘게 늚, 두 번 확인한 큰 리뷰 지적. 나머지는 아침 일일 보고에 묶임.
 - 손으로 돌리기: `node scripts/watch/watch.mjs plan && node scripts/watch/watch.mjs measure && node scripts/watch/watch.mjs compare` → `tmp/watch/summary.md`.
