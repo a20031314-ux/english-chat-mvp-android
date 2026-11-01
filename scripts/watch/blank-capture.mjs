@@ -193,11 +193,13 @@ const SCENES = [
     await scrollBy(page, 650);
     await wait(900);
     await shot("scroll2");
-    // 맨 아래 Logbank 칸까지.
+    // Logbank 탭(2026-11-02 칸 이름 줄이 탭).
+    await page.locator('[data-my-jump-to="log"]').first().click().catch(() => undefined);
+    await wait(1500);
     await page.locator('[data-my-layer]').last().evaluate((el) => el.scrollIntoView({ block: "start" })).catch(() => undefined);
     await wait(900);
   } },
-  { id: "stagebank-full", label: "Stagebank 전체 화면(오늘 할 것 카드)", run: async ({ page, wait, ui }) => openBank(page, wait, ui.stagebankTitle, ui) },
+  { id: "stagebank-full", label: "Stagebank 탭(오늘 할 것 카드)", run: async ({ page, wait, ui }) => openBank(page, wait, ui.stagebankTitle, ui) },
   { id: "stage-screen", label: "Stagebank — n단계 화면(오늘 할 것 아래 n단계 ›)", run: async ({ page, wait, ui }) => {
     await openBank(page, wait, ui.stagebankTitle, ui);
     const more = page.getByRole("button", { name: /\d+\s*(단계|stage)|›/i }).last();
@@ -328,7 +330,7 @@ const SCENES = [
     await scrollBy(page, 900);
     await wait(900);
     await shot("mid");
-    await page.locator("[data-my-full] .overflow-y-auto, [data-my-full]").last().evaluate((el) => {
+    await page.locator("[data-my-layer]").last().evaluate((el) => {
       const box = el.closest(".overflow-y-auto") ?? el;
       box.scrollTo(0, 99999);
     }).catch(() => undefined);
@@ -350,7 +352,7 @@ const SCENES = [
   } },
   { id: "way-sheet", label: "연습 방식 고르기 시트", run: async ({ page, wait, ui }) => {
     await openStage(page, wait, ui);
-    await page.locator('[data-my-full] button[aria-haspopup="dialog"]').first().click();
+    await page.locator('[data-my-layer] button[aria-haspopup="dialog"]').first().click();
     await wait(2500);
   } },
   { id: "bank-help", label: "칸 ? 설명 시트(Stagebank)", run: async ({ page, wait, ui, shot }) => {

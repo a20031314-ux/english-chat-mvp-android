@@ -81,6 +81,9 @@ for (const locale of locales) {
   await page.locator("[data-back-today]").first().click().catch(() => {});
   await wait(1000);
   // Quizbank: 문제 → 답한 뒤(뜻·예문·다음) → ⚙.
+  // 칸 이름 줄이 탭(2026-11-02) — 그 칸을 누른 뒤에만 그려진다.
+  await page.locator('[data-my-jump-to="keep"]').first().click().catch(() => {});
+  await wait(1500);
   const keep = page.locator('[data-my-layer="keep"]').first();
   await keep.scrollIntoViewIfNeeded();
   for (let i = 0; i < 30 && !(await keep.locator("section[data-kind]").count()); i += 1) await wait(500);
@@ -102,6 +105,8 @@ for (const locale of locales) {
   // Logbank: 문장구조 둘·상황 하나 통과로 기록을 만든 뒤 다시 연다.
   for (const id of [`${learn}-f1-01`, `${learn}-f1-02`, `${learn}-1-1`]) await api("/api/curriculum/scripts", { language: learn, id });
   await page.reload({ waitUntil: "domcontentloaded" });
+  for (let i = 0; i < 40 && !(await page.locator('[data-my-jump-to="log"]').count()); i += 1) await wait(500);
+  await page.locator('[data-my-jump-to="log"]').first().click().catch(() => {});
   for (let i = 0; i < 40 && !(await page.locator("[data-log-week]").count()); i += 1) await wait(500);
   await wait(1500);
   const log = page.locator('[data-my-layer="log"]').first();

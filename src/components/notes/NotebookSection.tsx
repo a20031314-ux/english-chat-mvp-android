@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
-import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { adLayerDepth, maybeShowInterstitial, noteTodayFinished } from "@/lib/ads";
 import { BankToneProvider } from "@/components/studyMap/bankTone";
@@ -97,12 +97,15 @@ const CURRICULUM_ONLY = true;
 // 복습 칸은 Logbank로(2026-10-31 사용자 "복습 탭은 단계 학습 안으로, 그 자리는 날마다·주마다 배운 것 정리 — 이름은 ~bank로").
 type MyLayer = "stage" | "keep" | "log";
 // 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도").
-// 큰 칸은 모두 펼친 채로 시작하고, 위 칸 이름 줄을 누르면 그 칸으로 이동(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동").
+// 위 칸 이름 줄이 탭 — 누른 칸 하나만 그 아래 제자리에 보인다(2026-11-02 사용자 "위에 있는 버튼을 기준으로 탭을 분할해줘" — 예전 모두 펼침·전체 화면은 뺌).
 const AUTO_KEEP_KEY = "myLayer.autoKeep";
 
-/** 그 큰 칸으로 스크롤(칸 이름 줄 아래에 머리가 오게). */
-function scrollToLayer(id: MyLayer) {
-  window.setTimeout(() => document.querySelector(`[data-my-layer="${id}"]`)?.scrollIntoView({ block: "start", behavior: "smooth" }), 60);
+/** 탭을 바꾸면 이름 줄이 보이게 My 맨 위로(긴 칸을 내려 본 채 바꿨을 때). */
+function scrollToTabs() {
+  window.setTimeout(() => {
+    const bar = document.querySelector("[data-my-jump]");
+    if (bar && bar.getBoundingClientRect().top < 0) bar.scrollIntoView({ block: "start", behavior: "smooth" });
+  }, 30);
 }
 
 /**
@@ -242,9 +245,9 @@ export function NotebookSection({
   const [closed, setClosed] = useState<ReadonlySet<MyLayer>>(() => new Set());
   // 오늘 할 것이 안 끝났을 때 단계 화면을 먼저 보는 중인지(n단계 › 또는 밖에서 문장구조·상황을 열 때).
   const [stagePeek, setStagePeek] = useState(false);
-  // 칸 이름 줄을 누르면 그 칸을 전체 화면으로(2026-10-31 사용자 "탭을 누르면 전체 화면으로 학습할 수 있게, 위쪽 버튼 구조는 그대로").
-  const [full, setFull] = useState<MyLayer | null>(null);
-  /** 그 칸을 펴고 그리로(전체 화면 중이면 그 칸을 전체 화면으로). */
+  // 지금 보는 탭(위 칸 이름 줄, 2026-11-02) — 하루 첫 화면은 Stagebank, 오늘 할 것을 다 하면 그날 한 번 Quizbank(AutoQuiz).
+  const [tab, setTab] = useState<MyLayer>("stage");
+  /** 그 탭으로 바꾸고 펴기(밖에서 문장구조·상황을 열 때, 오늘 할 것이 끝났을 때). */
   const openLayer = (next: MyLayer | null) => {
     if (!next) return;
     setClosed((current) => {
@@ -253,8 +256,8 @@ export function NotebookSection({
       copy.delete(next);
       return copy;
     });
-    if (full) setFull(next);
-    else scrollToLayer(next);
+    setTab(next);
+    scrollToTabs();
   };
   const toggleLayer = (id: MyLayer) =>
     setClosed((current) => {
@@ -554,12 +557,7 @@ export function NotebookSection({
           peek={stagePeek}
           onPeek={setStagePeek}
           closed={closed}
-          full={full}
-          onFull={(id) => {
-            if (id) setClosed((current) => (current.has(id) ? new Set([...current].filter((one) => one !== id)) : current));
-            if (!id && full) scrollToLayer(full);
-            setFull(id);
-          }}
+          tab={tab}
           onOpen={openLayer}
           onToggle={toggleLayer}
           today={
@@ -2214,65 +2212,25 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
 };
 
 /**
- * 큰 칸 이름 줄(2026-10-31 사용자 "각 탭은 기본적으로 펼쳐져 있게, 클릭하면 해당 탭으로 이동"): 칸이 모두 펼쳐져 길어서,
- * 위에 붙어 있는 이름을 누르면 그 칸으로 이동. 지금 보이는 칸은 그 칸 색.
+ * 큰 칸 이름 줄 = 탭(2026-11-02 사용자 "위에 있는 버튼을 기준으로 탭을 분할해줘"): 누르면 그 칸 하나만 아래에. 지금 탭은 그 칸 색.
  */
-function LayerJump({
-  items,
-  onJump,
-  active = null,
-  onClose,
-  closeLabel,
-  help,
-}: {
-  items: { id: MyLayer; title: string }[];
-  onJump: (id: MyLayer) => void;
-  /** 전체 화면이면 그 칸(스크롤로 고르지 않음). */
-  active?: MyLayer | null;
-  onClose?: () => void;
-  closeLabel?: string;
-  /** 전체 화면에서 그 칸의 "?"(2026-10-31). */
-  help?: ReactNode;
-}) {
-  const [seenNow, setCurrent] = useState<MyLayer | null>(null);
-  const current = active ?? seenNow;
-  const order = items.map((one) => one.id).join(",");
-  useEffect(() => {
-    const ids = order.split(",") as MyLayer[];
-    const look = () => {
-      let seen: MyLayer | null = null;
-      // 이름 줄 바로 아래까지 올라온 칸 중 마지막 = 지금 보는 칸.
-      const line = (document.querySelector("[data-my-jump]")?.getBoundingClientRect().bottom ?? 120) + 32;
-      for (const id of ids) {
-        const box = document.querySelector(`[data-my-layer="${id}"]`)?.getBoundingClientRect();
-        if (box && box.top <= line) seen = id;
-      }
-      setCurrent(seen ?? ids[0] ?? null);
-    };
-    look();
-    document.addEventListener("scroll", look, true);
-    return () => document.removeEventListener("scroll", look, true);
-  }, [order]);
+function LayerJump({ items, onJump, active }: { items: { id: MyLayer; title: string }[]; onJump: (id: MyLayer) => void; active: MyLayer }) {
   return (
-    <nav data-my-jump className={active ? "flex shrink-0 gap-1.5 border-b border-line px-3 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))]" : "sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3"}>
+    <nav data-my-jump role="tablist" className="sticky -top-4 z-10 -mx-1 flex gap-1.5 bg-surface px-1 pb-2 pt-3">
       {items.map((one) => (
         <button
           key={one.id}
           type="button"
+          role="tab"
           data-my-jump-to={one.id}
-          aria-current={current === one.id ? "true" : undefined}
+          aria-selected={active === one.id}
+          aria-current={active === one.id ? "true" : undefined}
           onClick={() => onJump(one.id)}
-          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${current === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : "border-line text-slate-300"}`}
+          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : "border-line text-slate-300"}`}
         >
           {one.title}
         </button>
       ))}
-      {help ? <div className="flex shrink-0 items-center">{help}</div> : null}
-      {onClose ? (
-        <button type="button" data-my-full-close aria-label={closeLabel} title={closeLabel} onClick={onClose} className="shrink-0 rounded-full px-2 py-1.5 text-caption text-slate-400 hover:bg-white/10">
-          ✕
-        </button>
-      ) : null}
     </nav>
   );
 }
@@ -2282,8 +2240,7 @@ function MyLayers({
   language,
   locale,
   closed,
-  full,
-  onFull,
+  tab,
   onOpen,
   onToggle,
   today,
@@ -2299,10 +2256,9 @@ function MyLayers({
   locale: string;
   /** 접은 칸(기본 없음 = 모두 펼침). */
   closed: ReadonlySet<MyLayer>;
-  /** 전체 화면으로 연 칸(칸 이름 줄을 눌렀을 때), 없으면 null. */
-  full: MyLayer | null;
-  onFull: (layer: MyLayer | null) => void;
-  /** 칸을 펴고 그리로 이동(칸 이름 줄·오늘 할 것이 끝났을 때). */
+  /** 지금 보는 탭(위 칸 이름 줄). */
+  tab: MyLayer;
+  /** 그 탭으로(칸 이름 줄·오늘 할 것이 끝났을 때). */
   onOpen: (layer: MyLayer | null) => void;
   onToggle: (layer: MyLayer) => void;
   /** 0단계 글자 묶음일 때 오늘 할 것 자리(TodayPlan 없음). */
@@ -2319,11 +2275,13 @@ function MyLayers({
 }) {
   // 오늘 할 것이 안 끝났으면 칸 안은 오늘 할 것, 끝나면 단계 화면.
   const review = useReviewNotes(language, notes);
+  // Quizbank가 없을 때(0단계 글자 묶음) Quizbank 탭이 남아 있으면 Stagebank를 보인다.
+  let shown: MyLayer = tab;
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
-    // 전체 화면이면 그 칸 안만 전체 화면 층에(같은 것을 두 곳에 그리지 않게 제자리에는 안 그림).
+    // 탭으로 고른 칸만 그린다(2026-11-02).
     // 칸 안의 강조색도 그 칸 색(studyMap/bankTone.tsx, 2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘").
+    if (shown !== id) return null;
     const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
-    if (full) return full === id ? <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{toned}</div> : null;
     const on = !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
@@ -2341,6 +2299,7 @@ function MyLayers({
     );
   };
   const draw = (parts?: PlanParts) => {
+    shown = tab === "keep" && !parts ? "stage" : tab;
     const first = parts?.today ?? today;
     const todayDone = !first || (parts?.today.done ?? false);
     const stageView = todayDone || peek;
@@ -2387,38 +2346,16 @@ function MyLayers({
         )
       : null;
     const reviewCard = card("log", ui.logbankTitle, null, logbank(parts?.review.body ?? null));
-    const jumpItems = [
-      ...(todayDone && parts ? (["keep", "stage"] as const) : parts ? (["stage", "keep"] as const) : (["stage"] as const)),
-      "log" as const,
-    ].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.logbankTitle }));
+    // 탭 순서는 늘 같게(Stagebank · Quizbank · Logbank) — 오늘 할 것이 끝나면 순서 대신 Quizbank 탭으로 바뀜(AutoQuiz).
+    const jumpItems = [...(parts ? (["stage", "keep"] as const) : (["stage"] as const)), "log" as const].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.logbankTitle }));
     return (
       <>
-        {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
-        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
-        {full ? (
-          <FullScreenLayer>
-            <LayerJump
-              items={jumpItems}
-              onJump={onFull}
-              active={full}
-              onClose={() => onFull(null)}
-              closeLabel={ui.billingClose}
-              help={<BankHelpButton ui={ui} locale={locale} language={language} bank={full} title={jumpItems.find((one) => one.id === full)?.title ?? ""} />}
-            />
-            <div className="min-h-0 flex-1 overflow-y-auto">
-              {stageCard}
-              {keepCard}
-              {reviewCard}
-            </div>
-          </FullScreenLayer>
-        ) : (
-          <>
-            <LayerJump items={jumpItems} onJump={onFull} />
-            {todayDone && keepCard ? keepCard : stageCard}
-            {todayDone && keepCard ? stageCard : keepCard}
-            {reviewCard}
-          </>
-        )}
+        {/* 오늘 할 것이 끝나면 그날 한 번 Quizbank 탭으로(2026-10-31, 탭 2026-11-02). */}
+        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={0} /> : null}
+        <LayerJump items={jumpItems} onJump={onOpen} active={shown} />
+        {stageCard}
+        {keepCard}
+        {reviewCard}
         {parts?.overlays}
       </>
     );

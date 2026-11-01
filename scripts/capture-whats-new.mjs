@@ -1533,6 +1533,7 @@ const STEPS = {
   async "my-banks"({ page, wait, target }) {
     // 2.79: My 큰 칸 셋 — 위 칸 이름 줄 [Stagebank | Quizbank | Logbank], Stagebank(오늘 할 것 하나 + n단계 ›), Quizbank 첫 문제.
     await myFresh(page, target, { focus: "vocab" });
+    await page.locator('[data-my-jump-to="keep"]').first().click().catch(() => undefined);
     await page.locator('[data-my-layer="keep"] section[data-kind]').first().waitFor({ timeout: 30_000 }).catch(() => undefined);
     await page.locator("[data-my-jump]").first().evaluate((el) => el.scrollIntoView({ block: "start" }));
     await page.mouse.wheel(0, -60);
@@ -1559,6 +1560,7 @@ const STEPS = {
       localStorage.setItem(`examPool.v1.${t}`, JSON.stringify(pool));
     }, [target, keys]);
     await myFresh(page, target, { focus: "vocab" });
+    await page.locator('[data-my-jump-to="keep"]').first().click().catch(() => undefined);
     const keep = page.locator('[data-my-layer="keep"]').first();
     // 시험 탭은 저장된 설정으로 열리지 않는다(readSettings가 exam을 모름) — 탭을 누른다.
     await keep.locator('[data-focus="exam"]').first().click();

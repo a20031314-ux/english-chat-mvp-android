@@ -200,7 +200,9 @@ for (const locale of locales) {
     await firstItem.scrollIntoViewIfNeeded();
     await page.evaluate(() => window.scrollBy(0, -60));
   } else {
-    // 칸 머리가 화면 위쪽에 오게.
+    // 칸 이름 줄이 탭(2026-11-02) — 그 칸을 누르고, 칸 머리가 화면 위쪽에 오게.
+    await page.locator(`[data-my-jump-to="${clipName === "bank-keep" ? "keep" : "stage"}"]`).first().click().catch(() => {});
+    await wait(1000);
     await page.locator(clipName === "bank-keep" ? '[data-my-layer="keep"]' : '[data-my-layer="stage"]').first().evaluate((el) => el.scrollIntoView({ block: "start" })).catch(() => {});
     await page.evaluate(() => window.scrollBy(0, -70));
     await wait(clipName === "bank-keep" ? 6000 : 1500);
