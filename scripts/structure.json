@@ -4,7 +4,8 @@
     "shell": "앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법",
     "talk": "대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀",
     "chat": "AI 채팅 (대화 → AI 튜터 줄)",
-    "call": "AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩",
+    "call": "AI 통화 (어디서나 뜨는 층 CallHost — 대화·사람 탭 📞)",
+    "speech": "말해 보기 공용 부품 — 한 줄 말하고 들린 대로 보기 (AI 통화·My가 같이 씀)",
     "sheet": "문장분석·표현 시트 (여러 화면에서 열림)",
     "learner": "학습 기록 공통 — 오늘 해볼 것·표현 장부 (여러 화면이 같이 씀)",
     "video": "영상 학습 탭",
@@ -64,9 +65,9 @@
     "components/RoleplayReview": "call",
     "components/RoleplayOwnLine": "call",
     "components/roleplay/": "call",
-    "components/PackCard": "call",
     "api/roleplay/": "call",
     "api/pack/": "call",
+    "components/speech/": "speech",
 
     "components/EnglishAnalysisProvider": "sheet",
     "components/EnglishAnalysisViewer": "sheet",
@@ -172,6 +173,8 @@
     "components/SuspendedNotice": "people"
   },
   "external": {
+    "api/pack/today": "옛 앱 2.48~2.75가 오늘의 팩에 씀 — 2.76부터 새 앱에서 뺌(2026-11-01 화면 코드 PackCard 지움), 최소 지원 버전을 2.76 이상으로 올리면 지움",
+    "api/pack/finish": "옛 앱 2.48~2.75가 오늘의 팩 끝(회고)에 씀 — 2.76부터 새 앱에서 뺌, 최소 지원 버전을 2.76 이상으로 올리면 지움",
     "api/curriculum/pick": "옛 앱 2.48~2.74가 문장분석 \"지도에 넣기\"에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움",
     "api/curriculum/progress": "옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움",
     "api/curriculum/mission-check": "옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움",

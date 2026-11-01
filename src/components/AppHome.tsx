@@ -53,6 +53,10 @@ import {
 /** 방 입장 코드는 이 기기의 저장값이라 바뀌었다고 알려 주는 곳이 없다. */
 const noSubscribe = () => () => {};
 
+/**
+ * 화면 id. `roleplay`(통화)는 2026-10-23부터 탭이 아니다 — 여기 남은 것은 옛 링크(`?screen=roleplay`)·사용법 장·
+ * 쓸 기능 고르기의 이름이라서다. `openTab("roleplay")`는 탭을 바꾸지 않고 `startCall`을 보내고, 통화는 `CallHost`가 띄운다.
+ */
 export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk" | "random";
 
 const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk", "random"];
@@ -325,7 +329,12 @@ function AppHomeInner({
     : aiTabItems;
   // 창구가 아니면 쓸 기능 고르기의 하단 탭(lib/features.ts bottomTabs — 구조도 미리보기와 같은 계산)을 따른다.
   const featureTabs = bottomTabs(featureOff, { social: socialOn });
-  const allItems = [...socialTabItems, ...aiTabItems.filter((item) => item.id === "chat" || item.id === "roleplay"), { id: "roleplay" as const, label: ui.homeTabCall }];
+  // bottomTabs가 고른 id → 이름. 통화(roleplay)는 사람 기능을 끈 하단에만 있고, 누르면 탭 대신 통화를 띄운다(openTab).
+  const allItems: { id: AppTab; label: string }[] = [
+    ...socialTabItems,
+    { id: "chat", label: ui.homeTabChat },
+    { id: "roleplay", label: ui.homeTabCall },
+  ];
   const shownItems = door
     ? tabItems
     : featureTabs.map((id) => allItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item));

@@ -1,65 +1,43 @@
 "use client";
 
-import { tutorIsBilingual } from "@/lib/tutorLanguage";
-import { CallRecap } from "@/components/roleplay/CallRecap";
-import { buildRecap, recapReviewKeys } from "@/lib/roleplay/recap";
-import { handOffFrame } from "@/lib/notes/locateHandoff";
-import { sendAppIntent } from "@/lib/appIntents";
-import { enterScene } from "@/lib/notes/sceneShots";
-import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
-import { turnDiagnosticsEnabled } from "@/lib/platform";
-import { sayLine } from "@/components/RoleplayOwnLine";
-import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
-import {
-  RoleplayLine,
-  RoleplayReviewPanel,
-  type TranscriptLine,
-} from "@/components/RoleplayReview";
+import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
+import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
+import { CallFooter, CallHeader, LearnerComposing } from "@/components/roleplay/CallParts";
+import { CallRecap } from "@/components/roleplay/CallRecap";
+import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
+import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
-import { entitlementHeaders } from "@/lib/billing/billingService";
-import { apiUrl } from "@/lib/apiBase";
-import {
-  learningLanguageSpeechTag,
-  type LearningLanguageCode,
-} from "@/lib/learningLanguages";
+import { maybeShowInterstitial } from "@/lib/ads";
+import { sendAppIntent } from "@/lib/appIntents";
+import type { UICopy } from "@/lib/copy";
+import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
+import { saidPhrase } from "@/lib/learner/practice";
+import type { LearningLanguageCode } from "@/lib/learningLanguages";
+import { handOffFrame } from "@/lib/notes/locateHandoff";
+import { captureSceneSoon, enterScene } from "@/lib/notes/sceneShots";
+import { turnDiagnosticsEnabled } from "@/lib/platform";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
-import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import { BANK_GLOSS_LANGUAGE } from "@/lib/roleplay/justTalk";
-import { soundsUnfinished } from "@/lib/roleplay/unfinished";
+import { playTutorLine, warmLine, warmNextLine } from "@/lib/roleplay/linePlayer";
 import { learnerLineView } from "@/lib/roleplay/lineView";
-import {
-  resumeFrom,
-  titleFor,
-  type SavedConversation,
-} from "@/lib/roleplay/saved";
 import {
   fetchContext,
   fetchDirection,
   fetchPractice,
   fetchReview,
+  heardUnsure,
   isOutOfPoints,
   listenForTurn,
   listenOnce,
   primeMicrophone,
-  reportTutorDiag,
   type Recorder,
-  heardUnsure,
 } from "@/lib/roleplay/listen";
-import {
-  EMPTY_MEMORY,
-  foldDue,
-  rawLines,
-  type ConversationMemory,
-} from "@/lib/roleplay/memory";
-import {
-  REVIEW_LINES,
-  type Review,
-  type StuckTurn,
-} from "@/lib/roleplay/review";
+import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
+import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
+import { resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
 import {
   afterSaying,
   applyDirection,
@@ -71,62 +49,33 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { playTts, prefetchTts, stopTts, ttsContextState } from "@/lib/ttsPlayer";
+import { markAboutTheirLine, markStuck, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { soundsUnfinished } from "@/lib/roleplay/unfinished";
+import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
-import type { UICopy } from "@/lib/copy";
-import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
-import { PackRetroSheet } from "@/components/PackCard";
-import { finishPack } from "@/lib/pack/client";
-import { maybeShowInterstitial } from "@/lib/ads";
-import type { Retro } from "@/lib/pack/pack";
-import { PACK_ITEMS } from "@/lib/pack/pack";
-import { saidPhrase } from "@/lib/learner/practice";
+import { tutorIsBilingual } from "@/lib/tutorLanguage";
+
+/** How long to wait for the rest of a sentence the pause cut off. */
+const REST_OF_SENTENCE_MS = 3500;
 
 /**
- * Fetch a line the scene is about to say, before it has to be said.
- *
- * Only for lines that have no recording in the app. A repertoire line is one:
- * scripts/build-roleplay-audio.mjs records `sentenceIdsUsed`, which is the
- * scene's nodes and not its repertoire, on purpose — sixty kilobytes a line is
- * what kept the bank small. Warming a line that does ship as a file would buy
- * nothing and pay for a synthesis to do it.
+ * 내 차례에 이만큼 말이 없으면 💡 힌트 버튼을 띄운다(말하다 끊겨 나머지를 기다리는 중이면 바로).
+ * 첫마디를 기다리는 12초(listen.ts) 안에 누를 수 있게.
  */
-function warmLine(scenario: RoleplayScenario, bank: SentenceBank, text: string): void {
-  const spokenOnly = new Set(
-    (scenario.repertoire ?? []).map((id) => bank[id]?.text).filter(Boolean),
-  );
-  if (!spokenOnly.has(text)) return;
-  prefetchTts(text, learningLanguageSpeechTag(scenario.language), scenario.voice);
-}
+const HELP_AFTER_MS = 4000;
 
-/**
- * The rest of the turn, fetched while the first half is still being said.
- *
- * A turn is two lines now — a reaction, then the question after it — and they
- * were played strictly one after the other: the second line's audio was not
- * asked for until the first had finished, so the learner heard a gap the length
- * of a round trip in the middle of one sentence-and-a-half. The first line
- * takes a second or so to say and nothing used that second, which is exactly
- * long enough to have fetched the other one.
- */
-function warmNextLine(scenario: RoleplayScenario, state: SessionState): void {
-  // The line being said now is queue[0]; afterSaying drops it when it ends.
-  const next = state.queue[1];
-  // Any line with no file is synthesised, and that includes the written line
-  // behind a reaction (reactions.ts), which takes longest to arrive: start it
-  // while the reaction, usually already in the cache, is being said. A line
-  // that ships as a file has nothing to fetch.
-  if (next && !next.audioPath) {
-    prefetchTts(next.text, learningLanguageSpeechTag(scenario.language), scenario.voice);
-  }
-}
+const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
+/** 통화 중 내 말: 기본은 고칠 곳이 있는 줄만(2026-10-27 사용자 "오류가 없을 시 안 띄우는 걸 기본으로"), 켜면 전부. */
+const SHOW_MY_LINES_KEY = "roleplayShowMyLines";
 
 /**
  * Playing a roleplay.
  *
  * All the deciding happens in session.ts; this does the things that cannot be
- * pure — play a line, record a turn, and ask the director when the script
- * cannot take one. Every branch it takes is one the state machine asked for.
+ * pure — play a line (lib/roleplay/linePlayer.ts), record a turn, and ask the
+ * director when the script cannot take one. Every branch it takes is one the
+ * state machine asked for. 곁가지 상태는 roleplay/callHooks.ts, 머리·바닥은
+ * roleplay/CallParts.tsx, 대본 표시는 lib/roleplay/transcriptMarks.ts(2026-11-01 통화 구조 정리).
  *
  * Nothing interrupts the conversation. When the script runs out the character
  * simply answers, in the same voice and the same bubble, and the scene carries
@@ -144,76 +93,6 @@ function warmNextLine(scenario: RoleplayScenario, state: SessionState): void {
  */
 
 type Spoken = TranscriptLine;
-
-/**
- * Mark the turn they just struggled on, once the tutor has said so.
- *
- * The learner's line is already in the transcript by then — it went up the
- * moment they stopped speaking — so the evidence is attached to it afterwards
- * rather than held back until the answer arrives.
- */
-/**
- * Put what was said about their sentence under their sentence.
- *
- * Either field, because the character uses whichever it reaches for: a rewrite
- * of what they said, a word about it in their own language, or both. What
- * matters is that it lands under the words it is about, where they are looking
- * in the seconds before they are answered.
- */
-function markAboutTheirLine(
-  lines: Spoken[],
-  about: { better?: string; meant?: string; about?: string },
-): Spoken[] {
-  const index = lines.map((line) => line.who).lastIndexOf("learner");
-  if (index < 0) return lines;
-  const marked = [...lines];
-  marked[index] = { ...marked[index]!, ...about };
-  return marked;
-}
-
-function markStuck(lines: Spoken[], turn: Omit<StuckTurn, "asked">): Spoken[] {
-  const index = lines.map((line) => line.who).lastIndexOf("learner");
-  if (index < 0) return lines;
-  const asked =
-    lines
-      .slice(0, index)
-      .reverse()
-      .find((line) => line.who === "tutor")?.text ?? "";
-  const marked = [...lines];
-  marked[index] = { ...marked[index], stuck: { ...turn, asked } };
-  return marked;
-}
-
-/**
- * How long to wait for a line that has not started playing before carrying on
- * without it. Long enough for a slow connection, short enough that a stall does
- * not read as the app having hung.
- */
-const STALLED_AUDIO_MS = 8000;
-/** 타이머가 이만큼 넘게 늦게 깨면 화면이 멈춰 있었던 것 — 한 번 더 기다린다. */
-const LATE_TIMER_MS = 1500;
-const STALL_GRACE_MS = 4000;
-
-/** How long to wait for the rest of a sentence the pause cut off. */
-const REST_OF_SENTENCE_MS = 3500;
-
-/**
- * 내 차례에 이만큼 말이 없으면 💡 힌트 버튼을 띄운다(말하다 끊겨 나머지를 기다리는 중이면 바로).
- * 첫마디를 기다리는 12초(listen.ts) 안에 누를 수 있게.
- */
-const HELP_AFTER_MS = 4000;
-
-/**
- * The same, for a line synthesised on the spot. It streams, so it starts before
- * it has fully arrived, but the whole of it has to play before the turn passes.
- */
-const GENERATED_AUDIO_MS = 30000;
-
-const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
-/** 통화 중 내 말: 기본은 고칠 곳이 있는 줄만(2026-10-27 사용자 "오류가 없을 시 안 띄우는 걸 기본으로"), 켜면 전부. */
-const SHOW_MY_LINES_KEY = "roleplayShowMyLines";
-
-
 
 export function RoleplayScreen({
   scenarioId,
@@ -250,34 +129,7 @@ export function RoleplayScreen({
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("call"), []);
   const { isPremium } = usePremium();
-  // 남은 통화 시간: 예전 통화 첫 화면의 줄 → 통화 머리의 상태 한 줄(2026-10-23, conversation-unify 3단계). 서버가 답을 못 하면 뺀다.
-  const [timeLine, setTimeLine] = useState<string | null>(null);
-  useEffect(() => {
-    let live = true;
-    void fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(isPremium) })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data: { callPointsLeft?: unknown; callCarrySeconds?: unknown; callPointSeconds?: unknown; callTodayLeftSeconds?: unknown; callDailyMinutes?: unknown } | null) => {
-        if (!live || !data) return;
-        if (typeof data.callTodayLeftSeconds === "number" && typeof data.callDailyMinutes === "number") {
-          setTimeLine(
-            ui.roleplayTodayLeft
-              .replace("{minutes}", String(Math.ceil(data.callTodayLeftSeconds / 60)))
-              .replace("{daily}", String(data.callDailyMinutes)),
-          );
-          return;
-        }
-        if (typeof data.callPointsLeft === "number" && typeof data.callPointSeconds === "number") {
-          const carry = typeof data.callCarrySeconds === "number" ? data.callCarrySeconds : 0;
-          setTimeLine(ui.roleplayTimeLeft.replace("{minutes}", String(Math.floor((data.callPointsLeft * data.callPointSeconds + carry) / 60))));
-        }
-      })
-      .catch(() => undefined);
-    return () => {
-      live = false;
-    };
-    // 통화를 열 때 한 번.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const timeLine = useCallTimeLine(ui, isPremium);
   const scenario = findScenario(scenarioId);
   const analysis = useEnglishAnalysisOptional();
   const [state, setState] = useState<SessionState | null>(null);
@@ -285,10 +137,6 @@ export function RoleplayScreen({
   const [said, setSaid] = useState<Spoken[]>([]);
   const [practiceStopped, setPracticeStopped] = useState(false);
   const practice = practiceStopped ? null : (practiceRequest ?? null);
-  // Today's pack, when this conversation plays one (pack/pack.ts). Stopping
-  // the practice band does not stop the pack: the server still runs it.
-  const packDay = practiceRequest?.goal.pack ?? null;
-  const [packRetro, setPackRetro] = useState<{ retro: Retro | null; open: boolean } | null>(null);
   const practiceSaid = useMemo(() => {
     const done = new Set<string>();
     if (!scenario) return done;
@@ -302,40 +150,8 @@ export function RoleplayScreen({
   // The character's translations: folded by default, each one a tap away, or
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
-  const [showTranslations, setShowTranslations] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem(SHOW_TRANSLATIONS_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const [showMyLines, setShowMyLines] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem(SHOW_MY_LINES_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const toggleMyLines = () => {
-    setShowMyLines((on) => {
-      try {
-        localStorage.setItem(SHOW_MY_LINES_KEY, on ? "0" : "1");
-      } catch {
-        // Not kept, still switched for this conversation.
-      }
-      return !on;
-    });
-  };
-  const toggleTranslations = () => {
-    setShowTranslations((on) => {
-      try {
-        localStorage.setItem(SHOW_TRANSLATIONS_KEY, on ? "0" : "1");
-      } catch {
-        // Not kept, still switched for this conversation.
-      }
-      return !on;
-    });
-  };
+  const [showTranslations, toggleTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
+  const [showMyLines, toggleMyLines] = useStoredToggle(SHOW_MY_LINES_KEY);
   const [recording, setRecording] = useState(false);
   // Bumped when the microphone decides a turn has ended. An effect does the
   // sending rather than the callback itself: the callback is created once, at
@@ -389,9 +205,6 @@ export function RoleplayScreen({
   // going quiet, which is what a dropped turn looks like and is not this.
   // "daily" when a plan's free talk for today is what ran out (billing/plans.ts).
   const [outOfPoints, setOutOfPoints] = useState<false | "points" | "daily">(false);
-  // The pack's own count from the server, once a turn has brought one: a
-  // follow-up the tutor asked is a line said but not a pack question.
-  const [packCount, setPackCount] = useState<{ answered: number; total: number } | null>(null);
   // Bumped per session, so a fold that comes back after the scene changed is
   // dropped rather than applied to the wrong conversation.
   const sessionRef = useRef(0);
@@ -473,7 +286,7 @@ export function RoleplayScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [said, state, memory]);
 
-  // 통화(또는 오늘의 팩)가 끝까지 끝났을 때 한 번: 무료 사용자에게 전면 광고를 띄울 수 있는
+  // 통화가 끝까지 끝났을 때 한 번: 무료 사용자에게 전면 광고를 띄울 수 있는
   // 자연스러운 끝(lib/ads.ts). 작별 인사가 끝난 뒤로 조금 미룬다. 중간에 끊고 나간 통화에는 띄우지 않는다.
   const adShownForCall = useRef(false);
   useEffect(() => {
@@ -484,25 +297,13 @@ export function RoleplayScreen({
     }
     if (adShownForCall.current) return;
     adShownForCall.current = true;
-    window.setTimeout(() => void maybeShowInterstitial(packDay ? "packEnd" : "callEnd"), 1500);
+    window.setTimeout(() => void maybeShowInterstitial("callEnd"), 1500);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state?.finished, instruction?.do]);
-
-  // The pack's end: the retro and what was added to My, once per conversation.
-  useEffect(() => {
-    if (!packDay || !scenario || packRetro) return;
-    if (!(state?.finished || instruction?.do === "finish")) return;
-    setPackRetro({ retro: null, open: true });
-    void finishPack(scenario.language, packDay, isPremium).then((retro) =>
-      setPackRetro((current) => ({ retro, open: current?.open ?? true })),
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state?.finished, instruction?.do, packDay]);
 
   /** Play the current line, then hand control back to the state machine. */
   useEffect(() => {
     if (!scenario || !state || instruction?.do !== "say") return;
-    let cancelled = false;
     /**
      * The gloss that ships with a recorded line, if it is any use to this
      * learner.
@@ -527,175 +328,33 @@ export function RoleplayScreen({
     ]);
     // Nothing waits on this: it is the next line being fetched behind this one.
     warmNextLine(scenario, state);
-    let advanced = false;
-    let watchdog = 0;
-    /**
-     * 기다림 타이머. 화면이 멈춰 있던 동안(무거운 일 — 예: 고친 줄의 화면 찍기) 늦게 깨면 한 번 더 기다린다.
-     * 늦게 깬 타이머가 막 도착한 소리보다 먼저 돌아 줄을 소리 없이 넘기던 것(2026-10-27 사용자: "고칠 곳이 있어요"가
-     * 뜰 때 간헐적으로 튜터 말이 안 들리고 글만 올라옴).
-     */
-    const arm = (ms: number, why: "stall" | "long", retried = false) => {
-      window.clearTimeout(watchdog);
-      const due = Date.now() + ms;
-      watchdog = window.setTimeout(() => {
-        if (!retried && Date.now() - due > LATE_TIMER_MS) {
-          arm(STALL_GRACE_MS, why, true);
-          return;
-        }
-        advance(why);
-      }, ms);
-    };
-    // 진단(iOS TestFlight): 이 줄이 파일로/합성으로 나왔는지, 소리가 시작됐는지, 무엇으로 끝났는지.
-    const lineStartedAt = Date.now();
-    let lineSource: "file" | "tts" = instruction.audioPath ? "file" : "tts";
-    let lineStarted = false;
-    const advance = (why?: unknown) => {
-      if (cancelled || advanced) return;
-      advanced = true;
-      reportTutorDiag({
-        source: lineSource,
-        ctx: ttsContextState(),
-        started: lineStarted,
-        end: typeof why === "string" ? why : why instanceof Error ? `err:${why.name}` : "done",
-        ms: Date.now() - lineStartedAt,
-      });
-      window.clearTimeout(watchdog);
-      // Now that it has been said, ask what it meant.
-      //
-      // The gloss was taken out of the director's answer because it was half of
-      // what came back and none of it was ever spoken, so the sound could not
-      // start until words nobody had asked to read had finished being written.
-      // Fetching it here costs that nothing: the line has already been said.
-      //
-      // It was left to a tap, and the tap was invisible — reported from a
-      // Japanese conversation, where the bank has no lines to lend their own
-      // glosses and so every line after the greeting had none. Asking for it
-      // is about three per cent of what a minute costs, which is not a reason
-      // to make somebody press something to find out what they just heard.
-      if (!gloss) translateLine(instruction.text);
-      // 고친 줄의 화면은 튜터 말이 끝난 뒤에 찍는다(찍는 동안 화면이 멈춰 소리가 밀림).
-      const shot = sceneShotRef.current;
-      sceneShotRef.current = null;
-      if (shot) captureSceneSoon(shot.language, shot.heard);
-      const moved = afterSaying(scenario, bank, state, Date.now());
-      setState(moved.state);
-      setInstruction(moved.instruction);
-    };
-
-    /**
-     * Say it in the scene's voice, because no file says it.
-     *
-     * Two lines end up here. One the character wrote just now, which never had
-     * a file. And one the bank holds as words alone — a sentence can be added
-     * to the bank without shipping sixty kilobytes of audio with it, and the
-     * edge cache means only the first person to reach it waits (scripts/
-     * warm-roleplay-speech.mjs warms them before a release so that nobody
-     * does).
-     */
-    /**
-     * Once, however many ways the file failed.
-     *
-     * A line the bank holds as words alone has an audioPath that resolves to
-     * nothing, and a missing file announces itself twice: the element fires
-     * `error` and `play()` rejects. Both used to reach here, and the second
-     * call's `stopTts` ended the first one's playback — whose promise then
-     * resolved, called `advance`, and moved the scene on before the second
-     * synthesis had arrived. The line passed in silence.
-     *
-     * Which is every repertoire line, since those are exactly the ones with no
-     * file, and until this week none had ever played on a phone.
-     */
-    let speaking = false;
-    const speak = () => {
-      if (speaking) return;
-      speaking = true;
-      /**
-       * Two waits, because they are two different questions.
-       *
-       * The first is whether anything is coming: speech is fetched from a
-       * server that is usually quick and is sometimes not — measured against
-       * the deployed one, the same request took under a second four times and
-       * then nineteen, nine, and longer than five minutes. The second is how
-       * long a line takes to say, which is a few seconds.
-       *
-       * One timer had to cover both, so it was set to the longest line anyone
-       * might play and a conversation could sit still for half a minute with
-       * the words on screen and nothing happening. That is not slow, that reads
-       * as broken. Now a line that has not begun in eight seconds is given up
-       * on and the scene moves, and one that has begun is allowed to finish.
-       */
-      lineSource = "tts";
-      arm(STALLED_AUDIO_MS, "stall");
-      void playTts(
-        instruction.text,
-        learningLanguageSpeechTag(scenario.language),
-        instruction.voice,
-        () => {
-          lineStarted = true;
-          window.clearTimeout(watchdog);
-          arm(GENERATED_AUDIO_MS, "long");
-        },
-      ).then(() => advance("ended"), advance);
-    };
-
-    if (!instruction.audioPath) {
-      speak();
-      return () => {
-        cancelled = true;
-        window.clearTimeout(watchdog);
-        stopTts();
-      };
-    }
-
-    const audio = new Audio(instruction.audioPath);
-    audioRef.current = audio;
-    /**
-     * Audio that never finishes must not take the scenario with it.
-     *
-     * `error` covers a file that is missing, but a load that stalls raises
-     * nothing at all — it simply never ends, and the line stays on screen with
-     * no way forward. The text has already been shown by this point, so going
-     * on without the voice is a worse lesson but not a dead one.
-     */
-    arm(STALLED_AUDIO_MS, "stall");
-    audio.addEventListener("playing", () => {
-      lineStarted = true;
-    }, { once: true });
-    audio.addEventListener(
-      "loadedmetadata",
-      () => {
-        if (!Number.isFinite(audio.duration)) return;
-        window.clearTimeout(watchdog);
-        // Its own length plus a moment, once that length is actually known.
-        arm(audio.duration * 1000 + 2000, "long");
+    return playTutorLine({
+      text: instruction.text,
+      audioPath: instruction.audioPath,
+      language: scenario.language,
+      voice: instruction.voice,
+      onAudio: (audio) => {
+        audioRef.current = audio;
       },
-      { once: true },
-    );
-    audio.addEventListener("ended", () => advance("ended"), { once: true });
-    // A file that is not there is a sentence the bank holds as words alone, not
-    // a broken line: it is spoken instead of skipped. The failure is local and
-    // immediate — the recordings ship inside the app — so this costs nothing
-    // when the file does exist.
-    audio.addEventListener(
-      "error",
-      () => {
-        if (cancelled || advanced) return;
-        window.clearTimeout(watchdog);
-        speak();
+      onDone: () => {
+        // Now that it has been said, ask what it meant.
+        //
+        // The gloss was taken out of the director's answer because it was half of
+        // what came back and none of it was ever spoken, so the sound could not
+        // start until words nobody had asked to read had finished being written.
+        // Fetching it here costs that nothing: the line has already been said —
+        // about three per cent of what a minute costs, which is not a reason
+        // to make somebody press something to find out what they just heard.
+        if (!gloss) translateLine(instruction.text);
+        // 고친 줄의 화면은 튜터 말이 끝난 뒤에 찍는다(찍는 동안 화면이 멈춰 소리가 밀림).
+        const shot = sceneShotRef.current;
+        sceneShotRef.current = null;
+        if (shot) captureSceneSoon(shot.language, shot.heard);
+        const moved = afterSaying(scenario, bank, state, Date.now());
+        setState(moved.state);
+        setInstruction(moved.instruction);
       },
-      { once: true },
-    );
-    void audio.play().catch(() => {
-      if (cancelled || advanced) return;
-      window.clearTimeout(watchdog);
-      speak();
     });
-    return () => {
-      cancelled = true;
-      window.clearTimeout(watchdog);
-      audio.pause();
-      stopTts();
-    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instruction]);
 
@@ -741,7 +400,6 @@ export function RoleplayScreen({
         return;
       }
       const direction = answer;
-      if (direction?.progress) setPackCount(direction.progress);
       // The tutor's own reading of the turn is what marks it: it is the one
       // judgement in the scene that looked at what they meant, not at whether
       // a recorded phrase happened to match.
@@ -895,13 +553,7 @@ export function RoleplayScreen({
       })
         .then((translated) => {
           if (!translated) return;
-          setSaid((current) =>
-            current.map((line) =>
-              line.who === "tutor" && line.text === text && !line.translation
-                ? { ...line, translation: translated }
-                : line,
-            ),
-          );
+          setSaid((current) => withTranslation(current, text, translated));
         })
         .catch(() => {
           // Nothing to show and nothing to say about it: the line is still
@@ -964,13 +616,7 @@ export function RoleplayScreen({
     const hinted = reviewing?.turn.live && reviewing.review?.say ? reviewing.review : null;
     if (hinted) {
       const tip = hinted.meaning ? `${hinted.say} — ${hinted.meaning}` : hinted.say;
-      setSaid((current) => {
-        const index = current.map((line) => line.who).lastIndexOf("tutor");
-        if (index < 0 || current[index]!.tip) return current;
-        const marked = [...current];
-        marked[index] = { ...marked[index]!, tip };
-        return marked;
-      });
+      setSaid((current) => tipOnLastTutorLine(current, tip));
     }
     setReviewing(null);
     if (!scenario || !state) return;
@@ -1120,29 +766,12 @@ export function RoleplayScreen({
   }, []);
 
   const callOver = Boolean(state?.finished || instruction?.do === "finish");
-  // 통화 정리(roleplay/recap.ts): 끝나면 고친 줄·도움말·뜻 본 튜터 줄 → 문장구조를 찾아 다시 볼 것에 자동으로(숙지는 그대로, from "call").
-  const recap = useMemo(() => (callOver && scenario ? buildRecap(scenario.language, said) : []), [callOver, scenario, said]);
-  const [recapSaved, setRecapSaved] = useState(false);
-  const recapSentRef = useRef("");
-  useEffect(() => {
-    if (!callOver || !scenario) return;
-    const keys = recapReviewKeys(recap);
-    const sig = keys.join(",");
-    if (!keys.length || recapSentRef.current === sig) return;
-    recapSentRef.current = sig;
-    void fetch(apiUrl("/api/curriculum/scripts"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language: scenario.language, from: "call", check: Object.fromEntries(keys.map((key) => [key, false])) }),
-    })
-      .then((response) => setRecapSaved(response.ok))
-      .catch(() => undefined);
-  }, [callOver, scenario, recap, isPremium]);
+  const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
   if (!scenario) return null;
 
   // Lines open in the sentence sheet once the scene is over and the
   // microphone is shut for good; while it is going they stay as they are.
-  const sceneOver = Boolean(state?.finished || instruction?.do === "finish");
+  const sceneOver = callOver;
   const analyzeLine = (text: string) =>
     analysis?.open({
       selectedText: text,
@@ -1155,74 +784,23 @@ export function RoleplayScreen({
   return (
     <FullScreenLayer>
       {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
-      <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
-        <div>
-          <h2 className="text-sm font-semibold text-white">{scenario.title}</h2>
-          <p className="text-[11px] text-neutral-500">{timeLine ?? scenario.tutorRole}</p>
-        </div>
-        {/* A conversation that is still going is put down, not shut. It is
-            written down as it happens, so leaving here loses nothing and the
-            door offers to carry on with it. Once it has ended there is nothing
-            to come back to and the button says so. */}
-        <div className="flex items-center gap-2">
-        {sceneOver ? null : (
-          <button
-            type="button"
-            onClick={toggleMyLines}
-            aria-pressed={showMyLines}
-            className={`rounded-lg border px-3 py-1.5 text-caption transition ${
-              showMyLines
-                ? "border-white/40 bg-white/15 text-slate-100"
-                : "border-white/15 text-slate-400 hover:bg-white/10"
-            }`}
-          >
-            {ui.roleplayMyLines}
-          </button>
-        )}
-        <button
-          type="button"
-          onClick={toggleTranslations}
-          aria-pressed={showTranslations}
-          className={`rounded-lg border px-3 py-1.5 text-[12px] transition ${
-            showTranslations
-              ? "border-white/40 bg-white/15 text-neutral-100"
-              : "border-white/15 text-neutral-400 hover:bg-white/10"
-          }`}
-        >
-          {ui.roleplayTranslations}
-        </button>
-        <button
-          type="button"
-          onClick={onClose}
-          className="rounded-lg border border-white/15 px-3 py-1.5 text-[12px] text-neutral-300 hover:bg-white/10"
-        >
-          {state?.finished || instruction?.do === "finish"
-            ? ui.billingClose
-            : ui.roleplayPause}
-        </button>
-        </div>
-      </header>
+      <CallHeader
+        ui={ui}
+        title={scenario.title}
+        subtitle={timeLine ?? scenario.tutorRole}
+        over={sceneOver}
+        showMyLines={showMyLines}
+        onToggleMyLines={toggleMyLines}
+        showTranslations={showTranslations}
+        onToggleTranslations={toggleTranslations}
+        onClose={onClose}
+      />
 
       {practice ? (
         <div className="shrink-0 border-b border-white/10 px-3 py-2">
           <PracticeBanner
             ui={ui}
-            request={
-              packDay
-                ? {
-                    ...practice,
-                    title: ui.packProgress
-                      .replace(
-                        "{n}",
-                        String(
-                          packCount?.answered ??
-                            Math.min(PACK_ITEMS, (practice.packAnswered ?? 0) + Math.max(0, said.filter((line) => line.who === "learner").length - 1)),
-                        ),
-                      )
-                      .replace("{total}", String(packCount?.total ?? PACK_ITEMS)),
-                  }
-                : practice
-            }
+            request={practice}
             said={practiceSaid}
             targetLanguage={scenario.language}
             onStop={() => setPracticeStopped(true)}
@@ -1233,19 +811,7 @@ export function RoleplayScreen({
         {said.map((line, index) => {
           const view = learnerLineView(said, index, { showAll: showMyLines, over: sceneOver });
           if (view === "hidden") return null;
-          if (view === "waiting") {
-            return (
-              <li key={index} className="mb-2 flex justify-end" aria-hidden>
-                <div className="rounded-2xl bg-white/[0.07] px-3 py-2 text-chat text-slate-400">
-                  <span className="composing-dots inline-flex gap-1">
-                    <span>•</span>
-                    <span>•</span>
-                    <span>•</span>
-                  </span>
-                </div>
-              </li>
-            );
-          }
+          if (view === "waiting") return <LearnerComposing key={index} />;
           return (
           <RoleplayLine
             key={index}
@@ -1292,17 +858,7 @@ export function RoleplayScreen({
           </li>
         ) : null}
         {/* 학습자가 말하는 중이거나 받아쓰는 중: 학습자 쪽 "…"(글이 오면 그 줄로 바뀐다). */}
-        {learnerTalking && !pending ? (
-          <li className="mb-2 flex justify-end" aria-hidden>
-            <div className="rounded-2xl bg-white/[0.07] px-3 py-2 text-chat text-slate-400">
-              <span className="composing-dots inline-flex gap-1">
-                <span>•</span>
-                <span>•</span>
-                <span>•</span>
-              </span>
-            </div>
-          </li>
-        ) : null}
+        {learnerTalking && !pending ? <LearnerComposing /> : null}
         {(directing || (thinking && !learnerTalking)) && !pending ? (
           <li className="mb-2 flex justify-start">
             <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
@@ -1312,68 +868,14 @@ export function RoleplayScreen({
         ) : null}
       </ol>
 
-      <footer className="shrink-0 border-t border-white/10 p-3 pb-[env(safe-area-inset-bottom)]">
-        {instruction?.do === "listen" ? (
-          <div className="flex flex-col gap-2">
-            {/* A scripted step carries its own goal, written with the scene.
-                An open conversation has no task, so what it says is interface
-                text and comes from the copy, which has fourteen languages —
-                written into the scene it reached every learner in Korean. */}
-            {/* 열린 대화의 목표 안내 글은 뺐다(화면 속 설명 금지, 2026-10-23). 대본 장면의 할 일만. */}
-            {instruction.goal ? (
-              <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
-            ) : null}
-            {instruction.hint ? (
-              <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
-            ) : null}
-            {/* 💡 힌트: 말이 없거나 말하다 끊겼을 때만. 누르면 대화가 멈추고 힌트 패널 → roleplayResume로 같은 턴. */}
-            {!reviewing && !thinking && (pending || (helpReady && !learnerTalking)) ? (
-              <button
-                type="button"
-                onClick={openHelp}
-                className="self-center rounded-full border border-line px-4 py-1.5 text-meta text-title hover:bg-white/10"
-              >
-                💡 {ui.missionHint}
-              </button>
-            ) : null}
-          </div>
-        ) : null}
-
-        {instruction?.do === "finish" && outOfPoints ? (
-          <p className="mb-2 text-[13px] leading-relaxed text-neutral-300">
-            {outOfPoints === "daily" ? ui.roleplayOutOfToday : ui.roleplayOutOfPoints}
-          </p>
-        ) : null}
-
-        {instruction?.do === "finish" && packRetro ? (
-          <button
-            type="button"
-            onClick={() => setPackRetro((current) => (current ? { ...current, open: true } : current))}
-            className="mb-2 w-full rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100"
-          >
-            {ui.packSeeRetro}
-          </button>
-        ) : null}
-
-        {instruction?.do === "finish" ? (
-          <button
-            type="button"
-            onClick={onClose}
-            className="w-full rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
-          >
-            {ui.billingClose}
-          </button>
-        ) : null}
-      </footer>
-
-      {packRetro?.open ? (
-        <PackRetroSheet
-          ui={ui}
-          retro={packRetro.retro}
-          targetLanguage={scenario.language}
-          onClose={() => setPackRetro((current) => (current ? { ...current, open: false } : current))}
-        />
-      ) : null}
+      <CallFooter
+        ui={ui}
+        instruction={instruction}
+        showHelp={!reviewing && !thinking && Boolean(pending || (helpReady && !learnerTalking))}
+        onHelp={openHelp}
+        outOfPoints={outOfPoints}
+        onClose={onClose}
+      />
 
       {reviewing ? (
         <RoleplayReviewPanel

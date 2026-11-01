@@ -29,8 +29,6 @@ export type AppIntents = {
     title?: string;
     /** The mistake as the learner's map names it, in the interface language. */
     mistakeLabel?: string;
-    /** For today's pack: questions already answered in an earlier call, so its count carries on. */
-    packAnswered?: number;
   };
   /**
    * AI 튜터와 통화(2026-10-23, conversation-unify 3단계 — 통화 첫 화면 없이 📞로 바로). `resumeId`면 멈춘 그 통화를 이어서.

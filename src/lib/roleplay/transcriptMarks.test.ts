@@ -1,0 +1,46 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { markAboutTheirLine, markStuck, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import type { TranscriptLine } from "./review.ts";
+
+const ja: TranscriptLine[] = [
+  { who: "tutor", text: "週末は何をしましたか？" },
+  { who: "learner", text: "昨日友達を会いました" },
+];
+const es: TranscriptLine[] = [
+  { who: "tutor", text: "¿Qué hiciste ayer?" },
+  { who: "learner", text: "Yo ir al parque." },
+  { who: "tutor", text: "¿Con quién fuiste?" },
+];
+
+test("고친 말은 마지막 내 줄 아래에(일본어)", () => {
+  const out = markAboutTheirLine(ja, { better: "昨日友達に会いました" });
+  assert.equal(out[1]!.better, "昨日友達に会いました");
+  assert.equal(ja[1]!.better, undefined, "받은 배열은 그대로");
+});
+
+test("막힌 차례는 바로 앞 튜터 줄을 질문으로(스페인어 — 마지막 튜터 줄이 아니라 내 줄 앞)", () => {
+  const out = markStuck(es, { heard: "Yo ir al parque.", attempts: 2, hesitationMs: 900, history: [] });
+  assert.equal(out[1]!.stuck?.asked, "¿Qué hiciste ayer?");
+  assert.equal(out[1]!.stuck?.attempts, 2);
+});
+
+test("내 줄이 없으면 그대로", () => {
+  const only: TranscriptLine[] = [{ who: "tutor", text: "Hello" }];
+  assert.equal(markAboutTheirLine(only, { meant: "x" }), only);
+  assert.equal(markStuck(only, { heard: "", attempts: 1, hesitationMs: 0, history: [] }), only);
+});
+
+test("힌트 문장은 마지막 튜터 줄에 한 번만", () => {
+  const once = tipOnLastTutorLine(es, "Fui con mi hermana — 여동생이랑 갔어");
+  assert.equal(once[2]!.tip, "Fui con mi hermana — 여동생이랑 갔어");
+  assert.equal(tipOnLastTutorLine(once, "다른 것"), once);
+});
+
+test("번역은 같은 글의 번역 없는 튜터 줄에만", () => {
+  const lines: TranscriptLine[] = [...ja, { who: "tutor", text: "週末は何をしましたか？", translation: "이미 있음" }];
+  const out = withTranslation(lines, "週末は何をしましたか？", "주말에 뭐 했어요?");
+  assert.equal(out[0]!.translation, "주말에 뭐 했어요?");
+  assert.equal(out[2]!.translation, "이미 있음");
+  assert.equal(out[1]!.translation, undefined);
+});

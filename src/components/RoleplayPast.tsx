@@ -10,7 +10,7 @@ import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
-import { sayLine } from "@/components/RoleplayOwnLine";
+import { sayLine } from "@/lib/speech/sayLine";
 import { coerceLanguageCode, type LearningLanguageCode } from "@/lib/learningLanguages";
 
 /**

@@ -30,7 +30,6 @@ const PLACES_ONLY = process.argv.includes("--places-only");
 /** 전면 광고 순간 → 사람이 읽는 설명. 새 순간을 코드에 더하면 여기에도 한 줄(없으면 --check 실패). */
 const MOMENTS = {
   callEnd: "AI 통화가 끝나고 돌아보기로 넘어갈 때",
-  packEnd: "오늘의 팩을 끝까지 마쳤을 때",
   missionDone: "미션 하나를 마치고 \"다음\"을 눌렀을 때",
   chatLeave: "AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때",
   roomLeave: "공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외",
