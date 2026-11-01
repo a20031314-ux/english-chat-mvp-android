@@ -231,7 +231,8 @@ function checkQuestion(language: string, stage: number, { key, q }: Seen) {
       // 뜻 줄이 실제로 어느 말로 보이나 — 학습 언어와 같은 말일 때만 답이 새는 것(스페인어 "me"가 영어 뜻 줄의 "me"에 걸리는 건 아님).
       const shownIn = one.gloss.raw !== undefined ? (ui === language ? ui : "?") : ui === "en" ? "en" : ui === "ko" ? (one.gloss.ko ? "ko" : "en") : shown && shown !== one.gloss.en ? ui : "en";
       if (shown === null) {
-        if (NET && language === "en" && (q.kind === "say" || q.kind === "order")) add("no-meaning", `${INTERFACE_LANGUAGE_LABELS[ui]} 앱: 뜻 줄이 비어 있음`, ui);
+        // 앱 언어 = 학습 언어면 뜻 줄 대신 🔊 듣기(2026-11-01) — 비어 있는 게 맞음.
+        if (NET && language === "en" && ui !== language && (q.kind === "say" || q.kind === "order")) add("no-meaning", `${INTERFACE_LANGUAGE_LABELS[ui]} 앱: 뜻 줄이 비어 있음`, ui);
         continue;
       }
       const want = norm(one.answer);

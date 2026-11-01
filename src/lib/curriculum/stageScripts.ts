@@ -297,11 +297,13 @@ export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
  * (2026-10-29 가상 사용자, 아랍어 앱 처음 시험). 다른 학습 언어는 영어 뜻이라도 보인다.
  */
 export function quizGloss(gloss: ScriptGloss, uiLanguage: string, learning: string): string | null {
+  // 앱 언어 = 학습 언어면 뜻 줄이 곧 그 문장(2026-11-01 퀴즈 전수 점검 4,517문제) — 뜻 줄 없음, 화면은 🔊 듣기로.
+  if (uiLanguage === learning) return null;
   if (gloss.raw !== undefined) return gloss.raw || null;
-  if (uiLanguage === "ko" || uiLanguage === "en") return glossFor(gloss, uiLanguage);
-  const translated = TRANSLATED.get(uiLanguage)?.get(gloss.en.trim());
-  if (translated) return translated;
-  return learning === "en" ? null : gloss.en;
+  const shown = uiLanguage === "ko" || uiLanguage === "en" ? glossFor(gloss, uiLanguage) : TRANSLATED.get(uiLanguage)?.get(gloss.en.trim()) ?? gloss.en;
+  // 영어를 배우는데 보일 뜻이 영어 뜻풀이 그대로(옮김 없음·옮긴 표에 영어가 그대로 저장됨) — 정답이라 숨긴다.
+  if (learning === "en" && shown.trim() === gloss.en.trim()) return null;
+  return shown;
 }
 
 /**

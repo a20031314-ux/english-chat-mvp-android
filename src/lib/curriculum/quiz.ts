@@ -376,10 +376,16 @@ function chooseOf(language: string, key: string, source: QuizSource, random: () 
   if (!piece) return null;
   const at = pieceAt(source.text, piece, language);
   if (at < 0 || pieceTwice(source.text, piece, language)) return null;
-  const near = nearOf(language, key, piece);
-  // 헷갈리는 오답이 없으면 남의 조각 중 생김새가 가장 닮은 것부터(같은 갈래·품사 안에서, 랜덤 나열 대신 — 2026-10-30 사용자).
+  // 문법 칸(g|) 조각은 그 줄의 문장구조 조각이라 그 문장구조의 헷갈리는 오답을 쓴다.
+  const nearKey = key.startsWith("g|") && source.frame ? `f|${source.frame}` : key;
+  const near = nearOf(language, nearKey, piece);
   const fits = (one: string) => Boolean(one) && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece));
   const nearFit = near.filter(fits);
+  // 문장구조·표현·문법은 그 정답의 실수 꼴(데이터·문제은행)만 — 다른 문제의 조각은 품사·자리가 안 맞아 한눈에 지워지거나 거꾸로 문장에 맞아 답이 둘
+  // (2026-11-01 퀴즈 전수 점검 ko 4~5단계 13문제). 모자라면 고르기를 안 만들고 빈칸 쓰기·순서로 넘어간다.
+  // 낱말(w|)·사용자 표현(u|)만 남의 조각 중 생김새가 가장 닮은 것으로 채운다(같은 품사 안에서 — 2026-10-30 사용자).
+  const ownOnly = key.startsWith("f|") || key.startsWith("e|") || key.startsWith("g|");
+  if (ownOnly && nearFit.length < 2) return null;
   const pool = nearFit.length >= 2 ? nearFit : mostAlike(piece, decoys(language, key, source.stage, source.pos).filter(fits), 5);
   // 대소문자만 다른 같은 말("cuánto cuesta"·"Cuánto cuesta")은 보기에 한 번만(2026-10-30 화면 확인).
   // 보기 첫 글자를 정답에 맞춘다(문장 가운데 빈칸에 "Our·Who"처럼 대문자 보기가 섞여 한눈에 지워짐 — 가상 사용자 2026-10-31).

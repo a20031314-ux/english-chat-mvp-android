@@ -349,3 +349,31 @@ test("낱말 오답에서 철자 실수 꼴·운 맞춤만 빼기 — 영어·�
   assert.equal(spellingOnly("perros", "perro"), false);
   assert.equal(spellingOnly("totals", "totally"), false);
 });
+
+test("뜻 줄: 앱 언어 = 학습 언어면 없음(문장 그대로라 답이 됨), 영어 학습에 영어 뜻 그대로도 없음 — ja·es·en (2026-11-01 퀴즈 전수 점검)", async () => {
+  const { quizGloss, rememberGlosses } = await import("./stageScripts.ts");
+  const gloss = { en: "Nice to meet you.", ko: "만나서 반가워요." };
+  assert.equal(quizGloss(gloss, "ja", "ja"), null);
+  assert.equal(quizGloss(gloss, "es", "es"), null);
+  assert.equal(quizGloss(gloss, "en", "en"), null);
+  assert.equal(quizGloss(gloss, "ko", "es"), "만나서 반가워요.");
+  assert.equal(quizGloss(gloss, "en", "es"), "Nice to meet you.");
+  // 영어 학습·베트남어 앱인데 옮긴 표에 영어가 그대로 저장됨 → 숨김.
+  rememberGlosses("vi", { "Nice to meet you.": "Nice to meet you." });
+  assert.equal(quizGloss(gloss, "vi", "en"), null);
+  assert.equal(quizGloss({ en: "Hello." }, "ko", "en"), null);
+});
+
+test("고르기: 문장구조·표현 오답은 그 정답의 실수 꼴만 — 다른 문제 조각으로 채우지 않음 (ko·es·ja)", () => {
+  for (const language of ["ko", "es", "ja"]) {
+    for (const frame of allFramesFor(language).slice(0, 40)) {
+      const quiz = buildQuiz(language, `f|${frame.id}`, { stage: frame.stage, seed: "decoy" });
+      for (const q of quiz?.questions ?? []) {
+        if (q.kind !== "choose") continue;
+        const others = new Set(allFramesFor(language).filter((one) => one.id !== frame.id).flatMap((one) => one.core.map((core) => core.toLocaleLowerCase())));
+        const piece = q.options[q.answer]!;
+        for (const option of q.options) if (option !== piece) assert.ok(!others.has(option.toLocaleLowerCase()) || option.length < 2, `${language} ${frame.id}: ${option}`);
+      }
+    }
+  }
+});

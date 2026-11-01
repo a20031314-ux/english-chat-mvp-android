@@ -203,7 +203,7 @@ export function QuestionView({
   ui,
   locale,
   language,
-  question,
+  question: given,
   answered,
   onAnswer: giveAnswer,
   onNext,
@@ -222,6 +222,11 @@ export function QuestionView({
   /** 답한 뒤 다른 예문 둘(문장구조 수업은 끔 — 설명에 예문이 있고 다음 문제가 미리 정해져 있어, 보여 준 예문이 바로 다음 문제로 나옴, 가상 사용자 2026-11-01). */
   showExamples?: boolean;
 }) {
+  // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
+  const question: QuizQuestion =
+    given.kind === "meaning" && quizGloss(given.options[given.answer]!, locale, language) === null
+      ? { kind: "say", text: given.text, gloss: given.gloss, from: given.from, ...(given.mark ? { mark: given.mark } : {}) }
+      : given;
   const onAnswer = (value: Answer) => {
     // 문제은행 셈은 그 열쇠의 빈칸 문제만(틀린 곳 고치기의 문장은 일부러 틀린 문장이라 셈에 넣지 않음).
     if (bankKey && !answered && !value.skipped && (question.kind === "type" || question.kind === "choose")) {
@@ -1264,9 +1269,14 @@ function OrderView({
   const full = placed.length === question.words.length;
   return (
     <div className="flex flex-col gap-3">
-      <p dir="auto" className="text-note text-slate-400">
-        {quizGloss(question.gloss, locale, language) ?? "…"}
-      </p>
+      {/* 뜻 줄이 없으면(앱 언어 = 학습 언어) 듣고 맞추기. */}
+      {quizGloss(question.gloss, locale, language) === null ? (
+        <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" />
+      ) : (
+        <p dir="auto" className="text-note text-slate-400">
+          {quizGloss(question.gloss, locale, language)}
+        </p>
+      )}
       <div dir="auto" className="flex min-h-11 flex-wrap gap-1.5 rounded-xl border border-dashed border-line px-2 py-2">
         {placed.map((tile, i) => (
           <button
@@ -1456,9 +1466,14 @@ function SayView({
   const result = last ?? answered;
   return (
     <div className="flex flex-col gap-3">
-      <p dir="auto" className="text-chat text-slate-100">
-        {quizGloss(question.gloss, locale, language) ?? "…"}
-      </p>
+      {/* 뜻 줄이 없으면(앱 언어 = 학습 언어) 듣고 말하기. */}
+      {quizGloss(question.gloss, locale, language) === null ? (
+        <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" />
+      ) : (
+        <p dir="auto" className="text-chat text-slate-100">
+          {quizGloss(question.gloss, locale, language)}
+        </p>
+      )}
       {question.mark ? (
         <span dir="auto" data-say-word className={`self-start rounded-full border px-3 py-1 text-note text-ink underline underline-offset-4 ${tone.on} ${tone.mark}`}>
           {question.mark}
