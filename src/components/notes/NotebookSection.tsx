@@ -2213,7 +2213,7 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
 
 /**
  * 큰 칸 이름 줄 = 탭(2026-11-02 사용자 "위에 있는 버튼을 기준으로 탭을 분할해줘"): 누르면 그 칸 하나만 아래에. 지금 탭은 그 칸 색.
- * 지금 탭을 한 번 더 누르면 그 칸이 전체 화면(2026-11-02 사용자 "전체 화면은 해당 탭을 클릭하면 열리게") — 전체 화면 위에도 같은 줄 + ✕.
+ * 누르면 그 칸이 바로 전체 화면(2026-11-02 사용자 "클릭하면 전체 화면으로 학습") — 전체 화면 위에도 같은 줄 + ✕.
  */
 function LayerJump({
   items,
@@ -2304,11 +2304,11 @@ function MyLayers({
   const review = useReviewNotes(language, notes);
   // Quizbank가 없을 때(0단계 글자 묶음) Quizbank 탭이 남아 있으면 Stagebank를 보인다.
   let shown: MyLayer = tab;
-  // 지금 탭을 한 번 더 누르면 그 칸이 전체 화면(2026-11-02).
+  // 탭을 누르면 그 칸이 바로 전체 화면(2026-11-02 사용자 "My 탭의 탭들은 클릭하면 전체 화면으로 학습") — 전체 화면 안에서 누르면 칸만 바뀜, ✕로 돌아옴.
   const [full, setFull] = useState(false);
   const pressTab = (id: MyLayer) => {
-    if (id === shown && !full) setFull(true);
-    else onOpen(id);
+    if (id !== shown) onOpen(id);
+    setFull(true);
   };
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
     // 탭으로 고른 칸만 그린다(2026-11-02).
