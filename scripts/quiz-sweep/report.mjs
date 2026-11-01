@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { NAMES, pieceOf, target } from "../ux-check/marks.mjs";
+import { CAUSES, distinctMarks } from "./causes.mjs";
 
 const ROOT = process.cwd();
 const date = process.argv[2] ?? new Date().toISOString().slice(0, 10);
@@ -49,14 +50,7 @@ const all = [...marks, ...judged.problems];
 const langs = Object.keys(stats.languages);
 const reasons = [...new Set(all.map((row) => row.reason))].sort((a, b) => all.filter((r) => r.reason === b).length - all.filter((r) => r.reason === a).length);
 // 앱 언어마다 다른 표시(뜻 줄)는 문제 하나로 센다.
-const questionId = (row) => `${row.learn}|${row.reason}|${row.questions[0]?.key}|${row.questions[0]?.kind}|${row.questions[0]?.text}|${row.note.replace(/^.*?앱: /, "")}`;
-const distinct = new Map();
-for (const row of all) {
-  const id = questionId(row);
-  const have = distinct.get(id);
-  if (have) have.uis.add(row.ui);
-  else distinct.set(id, { ...row, uis: new Set([row.ui]) });
-}
+const distinct = distinctMarks(all);
 const rowsOf = (reason, learn) => [...distinct.values()].filter((row) => row.reason === reason && (!learn || row.learn === learn));
 
 const out = [];
@@ -74,19 +68,10 @@ out.push(
 );
 
 // ---------- 원인별 요약(같은 원인 수천 건이 다른 문제를 덮지 않게) ----------
-const groups = [
-  ["뜻 줄에 답 — 앱 언어 = 학습 언어", (r) => r.reason === "easy-leak" && !r.uis.has("*") && [...r.uis].every((ui) => ui === r.learn), "답하기 전 뜻 줄이 학습 언어 그대로라 문장이 보임. 한 곳(뜻 줄 고르는 quizGloss)에서 앱 언어 = 학습 언어면 뜻 줄을 답한 뒤로."],
-  ["뜻 줄에 답 — 다른 앱 언어", (r) => r.reason === "easy-leak" && !r.uis.has("*") && [...r.uis].some((ui) => ui !== r.learn), "그 앱 언어 뜻풀이 옮김이 학습 언어(영어) 그대로 저장됐거나 옮김이 없어 영어로 나옴 — 서버 옮긴 표(server/stageCopy.ts) 다시 옮기기·quizGloss가 영어 학습에 영어 뜻을 안 보이게."],
-  ["빈칸 밖에 답", (r) => r.reason === "easy-leak" && r.uis.has("*"), ""],
-  ["같은 날 같은 문장", (r) => r.reason === "easy-repeat" && r.note.includes("같은 날 같은 문장"), "다른 열쇠가 같은 대본 줄을 재료로 나눠 씀(같은 문장 여러 열쇠) — 묶음·하루 단위로 문장 겹침 빼기."],
-  ["며칠 안 다른 열쇠로 같은 문장", (r) => r.reason === "easy-repeat" && r.note.includes("다른 열쇠"), ""],
-  ["맞혀서 쉬는 열쇠가 다시", (r) => r.reason === "easy-repeat" && r.note.includes("쉬어야"), "대화 속 틀린 줄(quiz.ts dialogOf)이 쉬는 중인 열쇠를 가리지 않고 고름."],
-  ["같은 열쇠 연달아", (r) => r.reason === "easy-repeat" && r.note.includes("연달아") || (r.reason === "easy-repeat" && r.note.includes("모양만")), ""],
-];
 out.push("## 원인별 요약", "");
 out.push("| 원인 | 문제 수 | 학습 언어 | 무엇을 고치면 되나 |", "|---|---|---|---|");
 const grouped = new Set();
-for (const [name, test, fix] of groups) {
+for (const [name, test, fix] of CAUSES) {
   const list = [...distinct.values()].filter(test);
   list.forEach((row) => grouped.add(row));
   if (list.length) out.push(`| ${name} | ${list.length} | ${[...new Set(list.map((r) => r.learn))].join(" ")} | ${fix} |`);

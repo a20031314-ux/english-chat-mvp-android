@@ -16,6 +16,7 @@
 2. `npm run build:capacitor`로 지금 main을 빌드. 무엇을 볼지는 `PRODUCT.md`의 기능·대표 장면 기준.
 
 ## 도구
+- **변경 감시**(예약 작업 2시간마다, `scripts/watch/`, hub/README.md "변경 감시", 2026-11-01): 코드 변경마다 비용·손익·광고·퀴즈 숫자 비교 + 제3자 리뷰 + 화면 점검 부르기. 기준값 `hub/watch.json`. 알림 기준을 바꾸려면 `watch.mjs` MONEY_ALERT·QUIZ_ALERT.
 - **퀴즈 전수 점검** `npm run quiz:sweep -- --net` → 판정 표본(`scripts/quiz-sweep/JUDGE.md`, 언어마다 에이전트) → `npm run quiz:report`(2026-11-01): 196 조합 × 단계 1~5 규칙 검사 + 하루 흐름 + 판정. 퀴즈를 바꾼 커밋 뒤·버전 자르기 전. 방법 `hub/QUIZ.md` 10절.
 - 언어 조합 자동 점검: `npm run check:browser-languages`
   (PLAYWRIGHT_MODULE, CHROMIUM, LANGUAGE_PASS_USER, API_BASE 환경변수).
