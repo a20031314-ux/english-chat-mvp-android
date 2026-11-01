@@ -3,7 +3,7 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 탭 번호(`hub/tabs.md` — 1 메인·2 My·3 AI·4 사람·5 점검·6 스토어): "N번 받기" → `hub/handoff/N.md`부터, 길어지면 `/pass N`으로 양도. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-11-01(2.79 새로워진 점·사용법).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-11-02(2.79 자르기 끝 — 출시 노트 PR #29).
 
 ## 버전
 
@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 안 나감, 2.78 내용 + 그 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.75 → 2.79. 새로워진 점 4장(my-banks·lesson·quizbank·real-call, 14개 언어 그림 — 2.76~2.78 카드는 비움)·사용법(My·통화·채팅 메뉴 14개 언어, 2.78 이하는 예전 글 `r283`) 넣음(2026-11-01). 출시 노트 93은 store 채팅. PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
+| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 안 나감, 2.78 내용 + 그 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.75 → 2.79. 새로워진 점 4장(my-banks·lesson·quizbank·real-call, 14개 언어 그림 — 2.76~2.78 카드는 비움)·사용법(My·통화·채팅 메뉴 14개 언어, 2.78 이하는 예전 글 `r283`) 넣음(2026-11-01). 체감 점검(`hub/drafts/ux-check-2026-11-01.md`)·난이도 표시 17/18 고침(baeec1e). **출시 노트 93 = PR #29(사람이 머지)** → PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
 | iOS | **85.14(2.71) 심사 취소하고 갈아타기(사용자 2026-10-31)** — iOS 1차 = 다음 안드로이드 출시와 같은 커밋(사람·통화·포인트 끔, 대본 플랜 추가). 순서·사람 일: `hub/drafts/ios-launch.md` "출시 범위 다시 정함 2". 앱 ID 6824542951 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
