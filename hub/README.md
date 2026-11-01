@@ -88,6 +88,13 @@ Artifact 도구로 **위 주소(url)에** 다시 올린다. 칸·설명·이어�
   GitHub Actions(`structure`)가 자동 부분을 다시 만들어 커밋합니다.
 - 커밋 없이 끝난 채팅(질문·점검만)은 강제하지 않습니다. 남길 게 있으면 채팅이 직접 남깁니다.
 
+## 자동 작업 멈추기 (2026-11-02)
+
+예약 작업(변경 감시·가상 사용자 점검·일일 보고·의견함 정리 등 11개)은 **자동 작업 페이지**(https://claude.ai/artifact/XoBjsNomv6XhUaP2TLtmMs)에서 하나씩 또는 "모두 멈춤/모두 재개"로 끄고 켭니다(Claude Code Remote `update_trigger` enabled, 처음 한 번 허락). 채팅에서 "변경 감시 멈춰"라고 해도 됩니다.
+- 페이지 소스 `scripts/automation/index.html` — 예약 작업을 새로 만들거나 지우면 `KNOWN`(id·이름·주기·묶음)을 고쳐 같은 주소에 다시 올립니다(capabilities는 넘기지 않으면 그대로). 목록에 없는 반복 작업도 "그 밖"으로 저절로 보입니다.
+- 끄는 동안 지금 도는 실행은 끝까지 가고, 건너뛴 시간은 다시 켜도 몰아서 돌지 않습니다.
+- Vercel이 직접 도는 일(문제은행 미리 채우기·지운 계정 정리·사진 정리, `vercel.json`)은 여기 없음 — 문제은행은 Vercel `QBANK_FROZEN=1`, 나머지는 사람이 Vercel에서.
+
 ## 모델 교체 (예약 작업 "AI 모델 살피기", `scripts/models/`, 2026-11-01)
 
 매주 월요일 새 모델·종료 공지·가격을 찾아(`hub/MODELS.md` "새 소식") 바꿀 만한 것을 **후보**로 `hub/model-candidates.json`에 적고,

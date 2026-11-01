@@ -1,0 +1,160 @@
+<title>자동 작업</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d1c1a;--mute:#6b6862;--line:#e3e0d8;--on:#2f7d4f;--off:#b4512e;--accent:#2b5fab;--chip:#efece4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171716;--card:#21201e;--ink:#eceae4;--mute:#a19d94;--line:#34322e;--on:#5cbf85;--off:#e0825e;--accent:#7ea8ec;--chip:#2c2b28}}
+:root[data-theme="dark"]{--bg:#171716;--card:#21201e;--ink:#eceae4;--mute:#a19d94;--line:#34322e;--on:#5cbf85;--off:#e0825e;--accent:#7ea8ec;--chip:#2c2b28}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;margin:0}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:4px 0 2px}
+.sub{color:var(--mute);font-size:13px;margin:0 0 16px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px;align-items:center}
+button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+button.stop{border-color:var(--off);color:var(--off)}
+button.go{border-color:var(--on);color:var(--on)}
+.status{font-size:13px;color:var(--mute);margin-left:auto}
+.group{font-size:12px;color:var(--mute);margin:18px 2px 6px;letter-spacing:.02em}
+.row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 8px}
+.row.paused{opacity:.72}
+.info{flex:1;min-width:0}
+.name{font-weight:600}
+.meta{font-size:13px;color:var(--mute)}
+.meta b{font-weight:500;color:var(--ink)}
+.tag{display:inline-block;font-size:11px;background:var(--chip);border-radius:6px;padding:1px 6px;margin-left:6px;color:var(--mute);vertical-align:1px}
+.sw{position:relative;width:52px;height:30px;border-radius:15px;border:0;padding:0;background:var(--line);flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .15s}
+.sw.on{background:var(--on)}
+.sw.on::after{left:25px}
+.note{font-size:13px;color:var(--mute);border-top:1px solid var(--line);margin-top:22px;padding-top:12px}
+.note p{margin:6px 0}
+.err{color:var(--off)}
+</style>
+<main>
+<h1>자동 작업</h1>
+<p class="sub">스위치를 끄면 그 작업은 다음 시간부터 돌지 않습니다. 다시 켜면 다음 시간부터 돌아요.</p>
+<div class="bar">
+  <button class="stop" id="allOff" disabled>모두 멈춤</button>
+  <button class="go" id="allOn" disabled>모두 재개</button>
+  <span class="status" id="status">불러오는 중…</span>
+</div>
+<div id="list"></div>
+<div class="note">
+  <p>지금 돌고 있는 실행은 끄더라도 끝까지 갑니다. 끈 동안 건너뛴 시간은 다시 켜도 몰아서 돌지 않아요.</p>
+  <p>채팅에서 "변경 감시 멈춰", "자동 작업 모두 재개"처럼 말해도 됩니다.</p>
+  <p>서버(Vercel)가 직접 도는 일 세 가지는 여기 없습니다: 문제은행 미리 채우기(2시간마다, Vercel <code>QBANK_FROZEN=1</code>이면 멈춤), 지운 계정 정리, 사진 정리.</p>
+</div>
+</main>
+<script>
+const SERVER = "Claude Code Remote";
+// 이 페이지가 알고 있는 작업(목록을 못 불러올 때도 보이게) — 이름·주기·묶음만, 프롬프트는 담지 않음
+const KNOWN = [
+  {id:"trig_01UdPdWL5JEthNLbwqsRVLGu", name:"변경 감시", when:"2시간마다", group:"코드 감시", cost:"모델"},
+  {id:"trig_01UPuLBjTyHHci2w79spADPs", name:"AI 모델 살피기", when:"월요일 09:37", group:"코드 감시", cost:"시험 1회 약 $2"},
+  {id:"trig_01CmuDovVNvVx1dHZDfw8eDT", name:"가상 사용자 기능 점검", when:"6시간마다", group:"가상 사용자 점검"},
+  {id:"trig_01FouVx14GksLSwevUfXGXPT", name:"가상 사용자 채팅 점검", when:"매일 02:48 · 14:48", group:"가상 사용자 점검", cost:"1회 약 $3~5"},
+  {id:"trig_01823JUGuQv9tyh4UaXaJ43q", name:"가상 사용자 화면 점검", when:"매일 03:48", group:"가상 사용자 점검"},
+  {id:"trig_01F8a34tXKWqTYeSFPp4ZkyS", name:"가상 사용자 일일 보고", when:"매일 08:07", group:"알림·보고"},
+  {id:"trig_01TBDCYtxZS7tqKrFD6rKVQ5", name:"잊힌 일 알림", when:"매일 08:23", group:"알림·보고"},
+  {id:"trig_019KHxss71WmtfpmEu7ikS3D", name:"의견함 정리", when:"매일 08:53", group:"알림·보고"},
+  {id:"trig_019GyC8VxDfmiqabUmu8qUAa", name:"서비스 지도 갱신", when:"매일 06:52", group:"페이지 갱신"},
+  {id:"trig_01QVci6FZSTDyAfBUkC68kdY", name:"주간 회고 마감", when:"월요일 07:52", group:"페이지 갱신"},
+  {id:"trig_01MsV1tw6oMDjsMQzmNibaCP", name:"월간 회고 마감", when:"매월 1일 08:10", group:"페이지 갱신"},
+];
+const GROUPS = ["코드 감시","가상 사용자 점검","알림·보고","페이지 갱신","그 밖"];
+let rows = KNOWN.map(k => ({...k, enabled:null, next:null, busy:false}));
+let mcp = null;
+const $ = id => document.getElementById(id);
+const kst = iso => { if(!iso) return ""; const d=new Date(iso); return d.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}); };
+function setStatus(t, err){ const s=$("status"); s.textContent=t; s.className="status"+(err?" err":""); }
+
+function render(){
+  const list=$("list"); list.textContent="";
+  for(const g of GROUPS){
+    const items=rows.filter(r=>(r.group||"그 밖")===g); if(!items.length) continue;
+    const h=document.createElement("div"); h.className="group"; h.textContent=g; list.append(h);
+    for(const r of items){
+      const row=document.createElement("div"); row.className="row"+(r.enabled===false?" paused":"");
+      const info=document.createElement("div"); info.className="info";
+      const n=document.createElement("div"); n.className="name"; n.textContent=r.name;
+      if(r.cost){const t=document.createElement("span"); t.className="tag"; t.textContent=r.cost; n.append(t);}
+      const m=document.createElement("div"); m.className="meta";
+      const state = r.enabled===null ? "상태 모름" : r.enabled ? "켜짐" : "멈춤";
+      m.textContent = (r.when||"") + " · " + state + (r.enabled && r.next ? " · 다음 " + kst(r.next) : "");
+      info.append(n,m);
+      const sw=document.createElement("button"); sw.className="sw"+(r.enabled?" on":"");
+      sw.setAttribute("role","switch"); sw.setAttribute("aria-checked", String(!!r.enabled));
+      sw.setAttribute("aria-label", r.name + (r.enabled?" 멈추기":" 켜기"));
+      sw.disabled = !mcp || r.enabled===null || r.busy;
+      sw.onclick=()=>toggle(r, !r.enabled);
+      row.append(info,sw); list.append(row);
+    }
+  }
+  const ready = mcp && rows.some(r=>r.enabled!==null);
+  $("allOff").disabled = !ready || !rows.some(r=>r.enabled===true) || rows.some(r=>r.busy);
+  $("allOn").disabled = !ready || !rows.some(r=>r.enabled===false) || rows.some(r=>r.busy);
+}
+
+function absorb(payload){
+  const arr = Array.isArray(payload) ? payload : (payload && (payload.data || payload.triggers)) || [];
+  for(const t of arr){
+    if(!t || !t.id) continue;
+    // 한 번 쓰는 알림(send_later)·이미 끝난 작업은 빼고 반복 작업만
+    if(!t.cron_expression || t.ended_reason) continue;
+    let r = rows.find(x=>x.id===t.id);
+    if(!r){ r={id:t.id, name:t.name||t.id, when:t.cron_expression, group:"그 밖"}; rows.push(r); }
+    r.name = t.name || r.name; r.enabled = !!t.enabled; r.next = t.next_run_at || null;
+    r.held = t.suspension_reason || "";
+  }
+}
+
+function explain(e){
+  switch(e && e.code){
+    case "needs_reauth": return "Claude Code Remote 연결이 끊겼어요 — claude.ai 설정 → 커넥터에서 다시 연결";
+    case "server_not_connected": return "Claude Code Remote가 연결돼 있지 않아요 — claude.ai 설정 → 커넥터";
+    case "not_in_manifest": case "approval_required": case "consent_required": return "이 페이지에 Claude Code Remote 허락이 필요해요 — 다시 열면 물어봐요";
+    case "server_unavailable": return "잠깐 연결이 안 돼요 — 조금 뒤 새로고침";
+    case "tool_error": return "바꾸지 못했어요: " + (e.message||"").slice(0,120);
+    default: return "불러오지 못했어요" + (e && e.code ? " (" + e.code + ")" : "");
+  }
+}
+
+async function refresh(){
+  try{
+    const res = await mcp.callTool(SERVER, "list_triggers", {limit:100}, {cache:false});
+    absorb(res.payload); setStatus("방금 확인 " + kst(new Date().toISOString()));
+  }catch(e){ setStatus(explain(e), true); }
+  render();
+}
+
+async function toggle(r, on){
+  r.busy=true; render(); setStatus((on?"켜는 중: ":"멈추는 중: ")+r.name);
+  try{
+    await mcp.callTool(SERVER, "update_trigger", {trigger_id:r.id, enabled:on}, {cache:false});
+    r.enabled=on; setStatus(r.name + (on?" 켬":" 멈춤"));
+  }catch(e){ setStatus(explain(e), true); }
+  r.busy=false; render();
+}
+
+async function setAll(on){
+  const targets = rows.filter(r=>r.enabled===!on);
+  targets.forEach(r=>r.busy=true); render();
+  let done=0, fail=0;
+  for(const r of targets){
+    setStatus((on?"켜는 중 ":"멈추는 중 ") + (done+fail+1) + "/" + targets.length);
+    try{ await mcp.callTool(SERVER, "update_trigger", {trigger_id:r.id, enabled:on}, {cache:false}); r.enabled=on; done++; }
+    catch(e){ fail++; }
+    r.busy=false; render();
+  }
+  if(fail) setStatus(`${done}개 ${on?"켬":"멈춤"}, ${fail}개 실패 — 새로고침 후 다시`, true);
+  else await refresh();
+}
+
+$("allOff").onclick=()=>setAll(false);
+$("allOn").onclick=()=>setAll(true);
+render();
+(async()=>{
+  mcp = window.claude ? await window.claude.use("mcp").catch(()=>null) : null;
+  if(!mcp){ setStatus("여기서는 스위치를 쓸 수 없어요 — claude.ai에서 열거나 채팅으로 \"○○ 멈춰\"", true); render(); return; }
+  render(); refresh();
+})();
+</script>
