@@ -7,6 +7,7 @@ import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/compon
 import { CallControls, CallFooter, CallHeader, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
+import { CALL_CAPTIONS_KEY } from "@/components/speech/CallKit";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -64,7 +65,7 @@ const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
  * 통화 중 자막(튜터가 마지막에 한 말 한 줄): 기본은 꺼짐 — 실제 통화처럼 듣고 말하기(사용자 2026-11-01 "기본은 가리고 선택적으로",
  * 0~1단계도 똑같이 끔). 켜면 이 기기에 남는다. 내 말·고친 말은 통화 중에 안 보이고 끝난 뒤 대본에서.
  */
-const SHOW_CAPTIONS_KEY = "roleplayCaptions";
+const SHOW_CAPTIONS_KEY = CALL_CAPTIONS_KEY;
 
 /**
  * Playing a roleplay.

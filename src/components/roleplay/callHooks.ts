@@ -45,27 +45,7 @@ export function useCallTimeLine(ui: UICopy, isPremium: boolean): string | null {
   return timeLine;
 }
 
-/** 이 기기에 남는 켬/끔(통화 머리의 "번역"·"내 말"). 저장이 안 되면 이번 통화에만 바뀐다. */
-export function useStoredToggle(key: string): [boolean, () => void] {
-  const [on, setOn] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem(key) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const toggle = () => {
-    setOn((current) => {
-      try {
-        localStorage.setItem(key, current ? "0" : "1");
-      } catch {
-        // Not kept, still switched for this conversation.
-      }
-      return !current;
-    });
-  };
-  return [on, toggle];
-}
+export { useStoredToggle } from "@/components/speech/CallKit";
 
 /**
  * 통화 정리(roleplay/recap.ts): 끝나면 고친 줄·도움말·뜻 본 튜터 줄 → 문장구조를 찾아

@@ -1,5 +1,6 @@
 "use client";
 
+import { ChatFaceSlot } from "@/components/speech/CallKit";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { SayItBack } from "@/components/speech/Attempt";
@@ -94,7 +95,7 @@ export function RoleplayLine({
   const canSayAgain = Boolean(onSayAgain && line.who === "learner" && sayTarget && sayTarget !== "…");
   return (
     <li className={`mb-2 flex items-end gap-2 ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
-      {line.who !== "learner" && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
+      {line.who !== "learner" && face ? <ChatFaceSlot>{face}</ChatFaceSlot> : null}
       <div
         role="button"
         tabIndex={0}
@@ -270,7 +271,7 @@ export function RoleplayLine({
           </div>
         ) : null}
       </div>
-      {line.who === "learner" && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
+      {line.who === "learner" && face ? <ChatFaceSlot>{face}</ChatFaceSlot> : null}
     </li>
   );
 }

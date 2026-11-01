@@ -6,9 +6,9 @@
  * 통화 중 = 튜터 얼굴·이름·통화 시간·누가 말하는지 + 자막 한 줄(켰을 때만) + 아래 버튼 넷.
  * 끝나면 = 머리(제목·번역·닫기) + 전체 대본 + 통화 정리 + 바닥(닫기).
  */
-import { useEffect, useState } from "react";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
+import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
 import type { UICopy } from "@/lib/copy";
 import type { Instruction } from "@/lib/roleplay/session";
@@ -28,34 +28,7 @@ export function LearnerComposing() {
   );
 }
 
-/** 통화를 연 뒤로 흐른 시간 m:ss — 실제 통화 화면처럼(1초마다). */
-function useCallClock(): string {
-  const [startedAt] = useState(() => Date.now());
-  const [now, setNow] = useState(startedAt);
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => window.clearInterval(timer);
-  }, []);
-  const seconds = Math.max(0, Math.floor((now - startedAt) / 1000));
-  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
-}
-
 export type CallSpeaker = "tutor" | "learner" | "thinking" | "listening" | null;
-
-/** 나(학습자) 쪽 얼굴 — 내 프로필 사진(없으면 첫 글자·사람 모양). 말할 때 둘레가 초록. */
-function LearnerFace({ talking, listening }: { talking: boolean; listening: boolean }) {
-  return (
-    <div className="relative flex items-center justify-center">
-      <span
-        aria-hidden
-        className={`absolute inset-[-12px] rounded-full border-2 transition-opacity ${
-          talking ? "animate-pulse border-good/60 opacity-100" : listening ? "border-white/15 opacity-100" : "opacity-0"
-        }`}
-      />
-      <MyAvatarFace size={96} />
-    </div>
-  );
-}
 
 /**
  * 통화 중 화면 — 영상 통화처럼 위는 AI 튜터, 아래는 나(사용자 2026-11-01 "위는 ai튜터, 아래는 사용자 화면 구조로").
@@ -89,15 +62,9 @@ export function CallStage({
 
       {/* 위: AI 튜터 */}
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-tutor>
-        <div className="relative flex items-center justify-center">
-          <span
-            aria-hidden
-            className={`absolute inset-[-12px] rounded-full border-2 border-info/50 transition-opacity ${
-              speaker === "tutor" ? "animate-pulse opacity-100" : "opacity-0"
-            }`}
-          />
+        <SpeakingRing speaking={speaker === "tutor"}>
           <AiAvatar size={96} />
-        </div>
+        </SpeakingRing>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -111,12 +78,7 @@ export function CallStage({
               <span>•</span>
             </span>
           ) : caption ? (
-            <div className="w-full rounded-2xl bg-black/40 px-4 py-2" data-call-caption>
-              <p dir="auto" className="text-chat leading-snug text-slate-100">
-                {caption.text}
-              </p>
-              {caption.meaning ? <p className="mt-0.5 text-meta text-slate-400">{caption.meaning}</p> : null}
-            </div>
+            <CallCaption text={caption.text} meaning={caption.meaning} />
           ) : null}
         </div>
       </section>
@@ -125,61 +87,19 @@ export function CallStage({
 
       {/* 아래: 나 */}
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-me>
-        <LearnerFace talking={speaker === "learner"} listening={speaker === "listening"} />
-        <div className="flex h-6 items-end justify-center gap-1" aria-hidden>
-          {speaker === "learner"
-            ? [0, 1, 2, 3, 4].map((bar) => (
-                <span key={bar} className="w-1 animate-pulse rounded-full bg-good" style={{ height: `${8 + ((bar * 7) % 16)}px`, animationDelay: `${bar * 110}ms` }} />
-              ))
-            : speaker === "listening"
-              ? <span className="text-title opacity-60">🎙</span>
-              : null}
-        </div>
+        <SpeakingRing speaking={speaker === "learner"} waiting={speaker === "listening"} tone="good">
+          <MyAvatarFace size={96} />
+        </SpeakingRing>
+        {speaker === "listening" ? (
+          <div className="flex h-6 items-end justify-center" aria-hidden>
+            <span className="text-title opacity-60">🎙</span>
+          </div>
+        ) : (
+          <TalkingBars on={speaker === "learner"} />
+        )}
         {goal ? <p className="max-w-md text-meta text-slate-400">{goal}</p> : null}
       </section>
     </div>
-  );
-}
-
-function ControlButton({
-  icon,
-  label,
-  onClick,
-  disabled,
-  pressed,
-  tone = "plain",
-}: {
-  icon: string;
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-  pressed?: boolean;
-  tone?: "plain" | "end";
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      aria-pressed={pressed}
-      aria-label={label}
-      title={label}
-      className="flex w-[4.5rem] flex-col items-center gap-1.5 disabled:opacity-40"
-    >
-      <span
-        aria-hidden
-        className={`flex h-14 w-14 items-center justify-center rounded-full text-title transition ${
-          tone === "end"
-            ? "bg-bad text-white"
-            : pressed
-              ? "bg-white text-slate-900"
-              : "bg-white/10 text-slate-100 hover:bg-white/20"
-        }`}
-      >
-        {icon}
-      </span>
-      <span className="text-caption leading-tight text-slate-300">{label}</span>
-    </button>
   );
 }
 
@@ -206,14 +126,12 @@ export function CallControls({
   onEnd: () => void;
 }) {
   return (
-    <footer className="shrink-0 px-3 pb-[calc(1.25rem+env(safe-area-inset-bottom))] pt-3" data-call-controls>
-      <div className="mx-auto flex max-w-md items-start justify-between">
-        <ControlButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
-        <ControlButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
-        <ControlButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
-        <ControlButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" />
-      </div>
-    </footer>
+    <CallButtonRow>
+      <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
+      <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
+      <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
+      <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" />
+    </CallButtonRow>
   );
 }
 
@@ -304,7 +222,7 @@ export function CallSummary({
   tally: { fixed: number; hints: number; missed: number };
 }) {
   const partner = chatPartnerForLanguage(language);
-  const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+  const time = formatCallTime(seconds);
   const chips = [
     { icon: "✎", n: tally.fixed, label: ui.roleplayBetter },
     { icon: "💡", n: tally.hints, label: ui.missionHint },
@@ -334,8 +252,8 @@ export function CallSummary({
 
 /** 대본 줄 옆 얼굴 — 튜터·나(채팅과 같은 크기). */
 export function TutorFace() {
-  return <AiAvatar size={28} />;
+  return <AiAvatar size={CHAT_FACE_SIZE} />;
 }
 export function MeFace() {
-  return <MyAvatarFace size={28} />;
+  return <MyAvatarFace size={CHAT_FACE_SIZE} />;
 }

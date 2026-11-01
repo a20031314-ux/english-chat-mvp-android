@@ -1,5 +1,7 @@
 "use client";
 
+import { MyAvatarFace } from "@/components/account/AccountCard";
+import { CHAT_FACE_SIZE, ChatFaceSlot } from "@/components/speech/CallKit";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -329,10 +331,12 @@ export function DmThreadView({
                   }
                 }}
               >
-              <Bubble
+              <DmBubble
                 t={t}
                 message={message}
                 mine={message.from === me}
+                otherId={other}
+                otherName={name}
                 seen={message.seq === seenSeq}
                 me={me}
                 locale={locale}
@@ -443,7 +447,7 @@ export function DmThreadView({
   );
 }
 
-function Bubble({
+export function DmBubble({
   t,
   message,
   mine,
@@ -458,8 +462,13 @@ function Bubble({
   onQuote,
   thankThreadId,
   seen = false,
+  otherId,
+  otherName = "",
 }: {
   t: RoomCopy;
+  /** 상대 — 말풍선 옆 얼굴(AI 대화와 같게, 2026-11-01). */
+  otherId?: string;
+  otherName?: string;
   ended: boolean;
   /** 상대가 읽은 내 말 중 가장 마지막 줄 — 시간 옆에 "읽음". */
   seen?: boolean;
@@ -550,7 +559,12 @@ function Bubble({
   }
 
   return (
-    <div className={`flex ${mine ? "justify-end" : "justify-start"}`}>
+    <div className={`flex items-end gap-2 ${mine ? "justify-end" : "justify-start"}`}>
+      {!mine && otherId ? (
+        <ChatFaceSlot>
+          <Face accountId={otherId} name={otherName} size={CHAT_FACE_SIZE} />
+        </ChatFaceSlot>
+      ) : null}
       <div className="max-w-[80%]">
         {!mine && message.ask && message.quote?.accountId === me ? (
           <p className="mb-0.5 px-1 text-[11px] text-amber-200" dir="auto">
@@ -613,6 +627,11 @@ function Bubble({
           {asked > 0 ? ` · ❓ ${asked}` : ""}
         </p>
       </div>
+      {mine ? (
+        <ChatFaceSlot>
+          <MyAvatarFace size={CHAT_FACE_SIZE} />
+        </ChatFaceSlot>
+      ) : null}
     </div>
   );
 }

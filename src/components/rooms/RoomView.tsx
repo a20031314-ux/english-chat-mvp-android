@@ -56,6 +56,10 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair, type RoomLineFix } from "./RoomParts";
 import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
+import { RoomCallStage, type CallPerson } from "./RoomCall";
+import { CALL_CAPTIONS_KEY, CallButton, CallButtonRow, useStoredToggle } from "@/components/speech/CallKit";
+import { useUiCopy } from "@/hooks/useUiCopy";
+import { isLocale } from "@/lib/copy";
 import { GamePanel, GameStartSheet, type GameStart } from "./RoomGame";
 import type { LiarView } from "@/lib/rooms/liarGame";
 import type { MafiaView } from "@/lib/rooms/mafiaGame";
@@ -87,6 +91,9 @@ type Notice =
   | "cameraDenied"
   | "cameraPaused"
   | "audioFull";
+
+/** 🙉 못 알아들었어요 — 사람 통화에서 이 한 글자 댓글을 보내면 상대 얼굴에 🙉(AI 통화의 같은 버튼과 짝). */
+const MISSED_MARK = "🙉";
 
 export function RoomView({
   t,
@@ -919,6 +926,29 @@ export function RoomView({
   const videoOtherStream = videoOther && !videoOtherBlocked ? remoteVideo[videoOther.peerId] ?? null : null;
   const videoOtherLine = videoOther ? spoken.filter((line) => line.peerId === videoOther.peerId).at(-1) ?? null : null;
 
+  // 사람끼리 통화(1:1 대화·단체방 📞 → 비공개 방)는 AI 통화와 같은 화면(RoomCall, 2026-11-01 사용자 "AI 대화와 사용자 간 대화는 연동해서 같게").
+  // 공개 방·랜덤(Spin)은 예전 방 화면 그대로.
+  const callMode = Boolean((room.private || ("groupId" in room && room.groupId)) && !room.random);
+  const ui = useUiCopy(isLocale(locale) ? locale : "en");
+  const [callCaptions, toggleCallCaptions] = useStoredToggle(CALL_CAPTIONS_KEY);
+  const sendMissed = async () => {
+    if (!joined) return;
+    try {
+      addMine(
+        await postLine({
+          roomId: room.id,
+          peerId,
+          kind: "text",
+          text: MISSED_MARK,
+          startedAt: Date.now() + offsetRef.current,
+          endedAt: Date.now() + offsetRef.current,
+        }),
+      );
+    } catch {
+      // 못 보냈으면 그대로 — 다시 누르면 된다.
+    }
+  };
+
   // 랜덤 영상(창구 Spin)의 AI 화면 검사: 3초마다 내 화면과 상대 화면을 번갈아 한 장씩(작게, 서버는 검사 뒤 버림).
   // 내 화면이 걸리면 나는 24시간 랜덤 정지, 상대 화면이 걸리면 통화를 끝내고 자동 신고 — 둘 다 그 자리에서 끊는다.
   const otherStreamRef = useRef<MediaStream | null>(null);
@@ -963,8 +993,82 @@ export function RoomView({
       </div>
     );
   }
+  const others: CallPerson[] = callMode
+    ? members
+        .filter((member) => member.peerId !== peerId && !(member.accountId && blocked.includes(member.accountId)))
+        .map((member) => {
+          const last = timeline(shownLines).filter((line) => line.peerId === member.peerId).at(-1);
+          return { peerId: member.peerId, accountId: member.accountId ?? null, nickname: member.nickname, speaking: isSpeaking(member), missed: last?.kind === "text" && last.text === MISSED_MARK };
+        })
+    : [];
+  const lastOtherLine = callMode
+    ? timeline(shownLines)
+        .filter((line) => line.peerId !== peerId && line.text.trim() && line.text !== MISSED_MARK && !(line.accountId && blocked.includes(line.accountId)))
+        .at(-1) ?? null
+    : null;
+  const callView = callMode ? (
+    <div className="relative flex min-h-0 flex-1 flex-col" data-room-call>
+      {onMinimize ? (
+        <button
+          type="button"
+          onClick={onMinimize}
+          className="absolute end-3 top-3 z-10 rounded-lg border border-white/20 px-3 py-1.5 text-sm text-slate-200"
+        >
+          {t.minimize}
+        </button>
+      ) : null}
+      {notice ? (
+        <button type="button" onClick={() => setNotice("")} className="shrink-0 bg-amber-400/10 px-4 py-2 text-start text-sm text-amber-200" dir="auto">
+          {t[notice]}
+        </button>
+      ) : null}
+      <RoomCallStage
+        others={others}
+        me={{ speaking, muted }}
+        caption={callCaptions && lastOtherLine ? { text: lastOtherLine.text, ...(others.length > 1 ? { name: lastOtherLine.nickname } : {}) } : null}
+        status={!joined ? t.connecting : undefined}
+        stage={
+          videoRoom ? (
+            <VideoStage
+              t={t}
+              other={videoOther}
+              remote={videoOtherStream}
+              local={camera}
+              hidden={videoHidden || videoOtherBlocked}
+              onToggleHidden={() => setVideoHidden((value) => !value)}
+              lastLine={null}
+              otherSpeaking={videoOther ? isSpeaking(videoOther) : false}
+              self={{ accountId: self?.accountId ?? null, nickname: self?.nickname ?? nickname }}
+              selfSpeaking={speaking}
+              selfBig={selfBig}
+              onToggleSelfBig={() => setSelfBig(!selfBig)}
+              blurUntilTap={Boolean(room.random)}
+              onPerson={openPerson}
+            />
+          ) : undefined
+        }
+        onPerson={openPerson}
+      />
+      <CallButtonRow>
+        <CallButton icon="🙉" label={ui.roleplayMissed} onClick={() => void sendMissed()} disabled={!joined} />
+        <CallButton icon="💬" label={ui.roleplayCaptions} onClick={toggleCallCaptions} pressed={callCaptions} />
+        {role === "speaker" ? (
+          <CallButton icon={muted ? "🔇" : "🎙"} label={muted ? t.unmute : t.mute} onClick={() => setMuted((value) => !value)} pressed={muted} />
+        ) : (
+          <CallButton icon="🎙" label={t.toSpeaker} onClick={() => void askRole("speaker")} disabled={!joined} />
+        )}
+        {videoRoom ? (
+          <CallButton icon="📷" label={camera ? t.cameraOff : t.cameraOn} onClick={() => (camera ? stopCamera() : void startCamera())} pressed={Boolean(camera)} />
+        ) : null}
+        <CallButton icon="📞" label={t.leave} onClick={onLeave} tone="end" />
+      </CallButtonRow>
+    </div>
+  ) : null;
+
   return (
     <>
+      {callView ?? (
+      <>
       <header className="shrink-0 border-b border-white/10 px-4 pb-2 pt-3">
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0">
@@ -1452,6 +1556,8 @@ export function RoomView({
           )}
         </div>
       </footer>
+      </>
+      )}
 
       {seatPick ? (
         <BodyLayer>

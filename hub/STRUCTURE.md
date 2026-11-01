@@ -24,6 +24,7 @@
 │           │                      └ 통화가 끝난 화면·돌아보기 맨 아래 통화 정리(roleplay/CallRecap, lib/roleplay/recap.ts, 2026-10-30): 고친 말·💡 힌트·뜻을 본 말 → 🧩 문장구조 → My n단계 그 수업(locateHandoff handOffFrame → NotebookSection openScript), 틀이 없으면 🔎 My에서 찾기. 찾은 틀은 다시 볼 것에(/api/curriculum/scripts from "call", 숙지 그대로)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
+│              1:1·단체방 말풍선 옆 얼굴(상대 왼쪽·내 프로필 사진 오른쪽, AI 대화와 같은 자리·크기 speech/CallKit ChatFaceSlot) · 📞 비공개 방 = AI 통화와 같은 통화 화면(rooms/RoomCall RoomCallStage: 위 상대 — 1명 크게·여럿 격자·🙉 누른 사람 얼굴에 🙉 · 자막 한 줄은 💬 켰을 때만, AI 통화와 같은 켬/끔 · 아래 나 · 버튼 🙉 못 알아들었어요(🙉 한 글자 댓글) · 💬 자막 · 🎙 마이크 · 📷(영상 방) · 📞 나가기, 영상 방이면 위·아래 대신 VideoStage), 공개 Room·랜덤은 예전 방 화면(2026-11-01)
 ├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
 ├ 사람 people ─ 맨 위 AI 튜터(사람 카드처럼, 로그인 없이도 — AiTutorProfile: 프로필 시트 📞 통화 · 통화 기록 — 💬 메시지(대화 탭으로 옮기기만)는 2026-10-30에 뺌, 2026-10-27 "AI 튜터를 사람들과 통합") · 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고 — 사진 모서리 국기 = 국적만, 언어 칩은 국기 없이 이름, ProfileFacts CountryMark, 2026-10-31) · 로그인한 채 처음 들어오면 "나를 소개해요"(국적·모국어·할 수 있는 언어 여러 개·관심사·대화 방식 — 배우는 언어 칸 없음, 처음 실행에서 고른 것, 건너뛰기, AccountCard PeopleFactsAsk, 2026-10-31) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
@@ -117,9 +118,9 @@
 - API: `pack/finish` · `pack/today` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
 - 다른 영역이 씀: `CallHost` ← 앱 틀
 
-### 말해 보기 공용 부품 — 한 줄 말하고 들린 대로 보기 (AI 통화·My가 같이 씀) `speech`
-- 화면: `speech/Attempt`
-- 다른 영역이 씀: `speech/Attempt` ← AI 통화, My 탭
+### 말하기·통화 공용 부품 — 한 줄 말해 보기, 통화 화면 조각·말풍선 얼굴 자리 (AI 통화·사람 통화·채팅·My가 같이 씀) `speech`
+- 화면: `speech/Attempt` · `speech/CallKit`
+- 다른 영역이 씀: `speech/Attempt` ← AI 통화, My 탭 · `speech/CallKit` ← 대화 탭, AI 채팅, AI 통화, Room 탭
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
 - 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
@@ -142,7 +143,7 @@
 - 다른 영역이 씀: `AiTutorProfile` ← 대화 탭, AI 채팅, AI 통화 · `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
-- 화면: `rooms/RoomGame` · `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
+- 화면: `rooms/RoomCall` · `rooms/RoomGame` · `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
 - API: `rooms/fix`(대화 탭, 사람 탭, 계정·로그인) · `rooms/game`(대화 탭, 사람 탭, 계정·로그인) · `rooms`(대화 탭, 사람 탭, 계정·로그인)
 - 다른 영역이 씀: `rooms/RoomParts` ← 대화 탭, 사람 탭 · `rooms/RoomsScreen` ← 앱 틀
 
@@ -185,7 +186,7 @@
 
 ### 예약 작업·점검·개발용 (앱 화면 아님) `ops`
 - API: `account/purge` · `curriculum/qbank/seed` · `media/sweep` · `ops/reports` · `simcheck/forget`
-- 웹 페이지: `/dev/roleplay-review` · `/dev/update-notice` · `/ops`
+- 웹 페이지: `/dev/call-preview` · `/dev/roleplay-review` · `/dev/update-notice` · `/ops`
 
 ## 자동: 화면끼리 부르는 신호 (`src/lib/appIntents.ts`)
 

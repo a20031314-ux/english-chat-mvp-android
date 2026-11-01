@@ -1,5 +1,6 @@
 "use client";
 
+import { ChatFaceSlot } from "@/components/speech/CallKit";
 import { useState, type ReactNode } from "react";
 import { SelectableEnglishText } from "./SelectableEnglishText";
 import { AnalyzableEnglish } from "./AnalyzableEnglish";
@@ -119,7 +120,7 @@ export function MessageBubble({
 
   return (
     <div className={`flex w-full items-end gap-2 ${isUser ? "justify-end" : "justify-start"}`}>
-      {!isUser && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
+      {!isUser && face ? <ChatFaceSlot>{face}</ChatFaceSlot> : null}
       <div
         role="button"
         tabIndex={0}
@@ -269,7 +270,7 @@ export function MessageBubble({
           />
         ) : null}
       </div>
-      {isUser && face ? <span className="mb-0.5 shrink-0">{face}</span> : null}
+      {isUser && face ? <ChatFaceSlot>{face}</ChatFaceSlot> : null}
     </div>
   );
 }

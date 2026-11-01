@@ -171,3 +171,4 @@
 - 2026-11-01 watch → dev: [my] src/lib/server/qbank.ts:241 — offers 판정 한도가 전체 하루 300번 하나뿐, 사람마다 한도 없어 한 사용자가 그날 판정 예산을 다 쓸 수 있음 (x-rc-user별 하루 판정 수 5~10으로 세어 넘으면 offers 버리기, wordExtras처럼)
 - 2026-11-01 watch → dev: [my] src/lib/curriculum/vocabLevel.ts:97 — feelDue가 feltAt을 버튼을 눌러야만 바꿔 쉬워요·적당해요·어려워요 줄이 누를 때까지 계속 남음("10개마다 한 줄"과 다름) (보여 준 때를 기억해 다음 10개 뒤 다시, 또는 묶음이 끝나면 feltAt을 newSeen으로)
 - 2026-11-01 watch → dev: [ai] src/components/RoleplayScreen.tsx:835 — 통화 요약 ⏱이 (끝난 때 − startedAt)라 이어서 한 통화는 끝내기~이어서 하기 사이 쉰 시간까지 통화 시간으로 보임(RoleplayPast·Logbank도 같은 셈) (저장 줄에 실제 통화 시간을 쌓아 CallSummary·RoleplayPast·Logbank가 그 값을 쓰게)
+- 2026-11-01 dev → qa: 다음 빌드에서 사람 통화·대화(계정 둘, 폰 둘): 1:1 📞 → 위 상대·아래 나 통화 화면, 💬 자막 켜면 상대 마지막 말 한 줄(AI 통화와 켬/끔 같이 바뀜), 🙉 누르면 상대 화면 내 얼굴에 🙉, 🎙 끄기/켜기, 📷(영상 방), 📞 나가기 → 대화에 통화 기록. 단체방 📞(셋 이상) 격자. 1:1·단체방 말풍선 옆 얼굴(상대 왼쪽·내 사진 오른쪽). ko/ja, ar 앱.

@@ -1,5 +1,7 @@
 "use client";
 
+import { MyAvatarFace } from "@/components/account/AccountCard";
+import { CHAT_FACE_SIZE, ChatFaceSlot } from "@/components/speech/CallKit";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -427,7 +429,7 @@ function CallLogLine({
   );
 }
 
-function GroupBubble({
+export function GroupBubble({
   t,
   me,
   message,
@@ -471,10 +473,10 @@ function GroupBubble({
   };
   const time = new Date(message.at).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
   return (
-    <div className={`flex gap-2 ${mine ? "justify-end" : "justify-start"}`}>
+    <div className={`flex items-end gap-2 ${mine ? "justify-end" : "justify-start"}`}>
       {mine ? null : (
-        <button type="button" onClick={() => onProfile?.(message.from)} aria-label={name} className="shrink-0 self-start rounded-full">
-          <Face accountId={message.from} name={name} size={30} />
+        <button type="button" onClick={() => onProfile?.(message.from)} aria-label={name} className="mb-0.5 shrink-0 rounded-full">
+          <Face accountId={message.from} name={name} size={CHAT_FACE_SIZE} />
         </button>
       )}
       <div className="max-w-[78%]">
@@ -540,6 +542,11 @@ function GroupBubble({
           {asked > 0 ? ` · ❓ ${asked}` : ""}
         </p>
       </div>
+      {mine ? (
+        <ChatFaceSlot>
+          <MyAvatarFace size={CHAT_FACE_SIZE} />
+        </ChatFaceSlot>
+      ) : null}
     </div>
   );
 }
