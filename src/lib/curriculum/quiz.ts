@@ -438,7 +438,7 @@ export function pieceTwice(text: string, piece: string, language = ""): boolean 
   return pieceAt(rest.toLocaleLowerCase(), lowered, language) >= 0;
 }
 
-function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
+export function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
   const piece = source.piece;
   if (!piece) return null;
   const at = pieceAt(source.text, piece, language);
@@ -505,7 +505,7 @@ export function mostAlike(piece: string, candidates: readonly string[], n: numbe
 }
 
 /** 빈칸 쓰기 문제: 비울 조각이 짧을 때만(세 낱말·띄어쓰기 없는 말은 여덟 글자까지) — 길면 치기 힘들어 학습보다 타자가 된다. */
-function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | null {
+export function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | null {
   const piece = source.piece?.trim();
   if (!piece) return null;
   // 한자가 든 답: 읽기가 있으면 병음·히라가나(로마자)로 쳐도 맞음(2026-11-01 사용자 "입력으로"), 없으면 치지 않게 — 고르기로

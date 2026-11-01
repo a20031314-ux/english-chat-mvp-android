@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import { FindInMy } from "@/components/FindInMy";
 import { openLesson } from "@/lib/appIntents";
 import { notePool } from "@/lib/curriculum/exam";
-import { pieceOf } from "@/lib/curriculum/quiz";
-import { ladderFor } from "@/lib/curriculum/stages/index";
+import { expressionKeysIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import type { UICopy } from "@/lib/copy";
 import type { RecapFrame, RecapItem } from "@/lib/roleplay/recap";
 
@@ -34,12 +33,15 @@ export function CallRecap({
   onLeave: () => void;
 }) {
   // 고친 말·힌트·못 알아들은 말의 문장구조·표현은 정기 시험 재료로(curriculum/exam.ts, 2026-11-01).
+  // 그 문장도 같이(시험에서 그 문장을 먼저 문제로, 2026-11-01).
   useEffect(() => {
     for (const item of items) {
-      for (const frame of item.frames) notePool(language, `f|${frame.id}`, "stuck");
-      for (const key of expressionKeys(language, item.line)) notePool(language, key, "stuck");
+      const scene = sceneOf(item);
+      for (const frame of item.frames) notePool(language, `f|${frame.id}`, "stuck", Date.now(), scene);
+      for (const key of expressionKeysIn(language, item.line)) notePool(language, key, "stuck", Date.now(), scene);
     }
   }, [items, language]);
+  void onOpenFrame;
   if (!items.length) return null;
   const label = (item: RecapItem) =>
     item.kind === "fix"
@@ -68,10 +70,10 @@ export function CallRecap({
               {item.line}
             </p>
             {item.meaning ? <p className="mt-0.5 text-meta text-slate-400">{item.meaning}</p> : null}
-            {item.frames.length || expressionKeys(language, item.line).length ? (
+            {item.frames.length || expressionKeysIn(language, item.line).length ? (
               <div className="mt-1.5 flex flex-wrap gap-1.5">
-                {expressionKeys(language, item.line).map((key) => (
-                  <button key={key} type="button" data-recap-expression onClick={() => openLesson({ language, key })} className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10">
+                {expressionKeysIn(language, item.line).map((key) => (
+                  <button key={key} type="button" data-recap-expression onClick={() => openLesson({ language, key, scene: sceneOf(item) })} className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10">
                     <span aria-hidden>🔤</span>
                     <bdi dir="auto">{key.slice(2)}</bdi>
                   </button>
@@ -80,7 +82,8 @@ export function CallRecap({
                   <button
                     key={frame.id}
                     type="button"
-                    onClick={() => onOpenFrame(frame)}
+                    // 그 문장을 들고 그 수업으로(수업 맨 위 "통화에서" 카드) — 통화 화면 위에 열려 닫으면 여기로 돌아온다.
+                    onClick={() => openLesson({ language, key: `f|${frame.id}`, scene: sceneOf(item) })}
                     className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10"
                   >
                     <span aria-hidden>🧩</span>
@@ -90,7 +93,7 @@ export function CallRecap({
                 ))}
               </div>
             ) : (
-              <FindInMy ui={ui} text={item.line} sentence={item.line} language={language} locale={locale} onDone={onLeave} />
+              <FindInMy ui={ui} text={item.line} sentence={item.line} language={language} locale={locale} onDone={onLeave} lessonScene={sceneOf(item)} />
             )}
           </li>
         ))}
@@ -99,9 +102,7 @@ export function CallRecap({
   );
 }
 
-/** 그 줄에 든 단계 핵심 표현(Stagebank 표현 수업으로) — 셋까지. */
-function expressionKeys(language: string, line: string): string[] {
-  const out: string[] = [];
-  for (const stage of ladderFor(language)?.stages ?? []) for (const expression of stage.expressions) if (out.length < 3 && pieceOf(line, expression)) out.push(`e|${expression}`);
-  return out;
+/** 통화 정리 한 줄 → 수업·시험에 들고 갈 장면(이 폰에만). */
+function sceneOf(item: RecapItem): LessonScene {
+  return { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}), ...(item.meaning ? { meaning: item.meaning } : {}) };
 }

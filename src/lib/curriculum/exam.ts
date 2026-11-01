@@ -13,7 +13,8 @@
  */
 import { DAY_MS } from "./dailyPlan.ts";
 import { restUntil, streakOf, type QuizLog } from "./nextStudy.ts";
-import { buildQuiz, hash, quizSources, rng, shuffled, spotOf, type QuizQuestion, type QuizSource } from "./quiz.ts";
+import { buildQuiz, chooseOf, hash, orderOf, quizSources, rng, shuffled, spotFromCard, spotOf, typeOf, type QuizQuestion, type QuizSource } from "./quiz.ts";
+import { pieceIn, type LessonScene } from "./lessonKey.ts";
 import { multiOf } from "./multiQuiz.ts";
 import { allScriptsFor, type ScriptGloss } from "./stageScripts.ts";
 import type { CheckResult, Tally } from "./checkup.ts";
@@ -28,7 +29,9 @@ const DIALOG_COUNT = 2;
 const POOL_KEEP_MS = 45 * DAY_MS;
 
 export type PoolReason = "wrong" | "stuck" | "opened" | "claimed";
-export type PoolEntry = { at: number; r: PoolReason[] };
+/** s = 그 소재가 나온 내 장면(통화의 고친 말 등, 2026-11-01) — 시험에서 그 문장을 먼저 문제로. 셋까지, 이 폰에만. */
+export type PoolEntry = { at: number; r: PoolReason[]; s?: LessonScene[] };
+const SCENES_MAX = 3;
 export type ExamPool = Record<string, PoolEntry>;
 /** 열쇠 → 다음에 낼 칸(1~4). 없으면 1(알요로 넘긴 것은 3). */
 export type ExamLadder = Record<string, number>;
@@ -69,11 +72,12 @@ export function readPool(language: string, now = Date.now()): ExamPool {
 }
 
 /** 걸린 소재를 모은다(문장구조·표현·문법 칸만 — 낱말은 단어 시험). */
-export function notePool(language: string, key: string, reason: PoolReason, now = Date.now()): void {
+export function notePool(language: string, key: string, reason: PoolReason, now = Date.now(), scene?: LessonScene): void {
   if (!/^[efg]\|/.test(key)) return;
   const pool = readPool(language, now);
   const entry = pool[key] ?? { at: now, r: [] };
-  pool[key] = { at: now, r: entry.r.includes(reason) ? entry.r : [...entry.r, reason] };
+  const scenes = scene?.line ? [scene, ...(entry.s ?? []).filter((one) => one.line !== scene.line)].slice(0, SCENES_MAX) : entry.s;
+  pool[key] = { at: now, r: entry.r.includes(reason) ? entry.r : [...entry.r, reason], ...(scenes?.length ? { s: scenes } : {}) };
   writeJson(poolKey(language), pool);
   if (reason === "claimed") {
     // 알아요로 넘긴 것은 떠올리기(3칸)부터 확인.
@@ -93,13 +97,38 @@ export function examDue(pool: ExamPool): boolean {
 // ---------- 문제 ----------
 
 /** 소재 하나·칸 하나의 문제(그 칸을 못 만들면 위 칸으로, 4칸도 없으면 아래 칸으로). */
-export function rungQuestion(language: string, key: string, rung: number, options: { stage: number; seed: string; avoid?: ReadonlySet<string> }): { rung: number; question: QuizQuestion } | null {
+export function rungQuestion(
+  language: string,
+  key: string,
+  rung: number,
+  options: { stage: number; seed: string; avoid?: ReadonlySet<string>; own?: readonly LessonScene[] },
+): { rung: number; question: QuizQuestion } | null {
   const order = [rung, ...[1, 2, 3, 4].filter((n) => n > rung), ...[1, 2, 3, 4].filter((n) => n < rung).reverse()];
+  // 내 장면(통화에서 고친 문장)이 있으면 그 문장으로 먼저 — 4칸은 내가 실제로 한 틀린 말 그대로(2026-11-01 사용자 "그 문장을 문제 소재로").
+  for (const scene of options.own ?? []) {
+    if (options.avoid?.has(scene.line)) continue;
+    for (const n of order) {
+      const question = sceneQuestion(language, key, n, scene, options.seed);
+      if (question) return { rung: n, question };
+    }
+  }
   for (const n of order) {
     const question = n === 4 ? spotFor(language, key, options) : buildQuiz(language, key, { kinds: [RUNG_KIND[n]!], stage: options.stage, seed: `${options.seed}|${n}` })?.questions.find((q) => q.kind === RUNG_KIND[n] && !(options.avoid && "text" in q && options.avoid.has(q.text)));
     if (question) return { rung: n, question };
   }
   return null;
+}
+
+function sceneQuestion(language: string, key: string, rung: number, scene: LessonScene, seed: string): QuizQuestion | null {
+  const random = rng(`${key}|${seed}|scene|${rung}`);
+  if (rung === 4 && scene.said && scene.said.trim() !== scene.line.trim()) return spotFromCard(language, { wrong: scene.said, right: scene.line });
+  const piece = pieceIn(language, key, scene.line);
+  if (!piece) return null;
+  const source: QuizSource = { text: scene.line, gloss: { en: "", raw: scene.meaning ?? "" }, from: "call", stage: 1, piece, who: "me", ...(key.startsWith("f|") ? { frame: key.slice(2) } : {}) };
+  if (rung === 1) return chooseOf(language, key, source, random);
+  if (rung === 2) return orderOf(language, source, random);
+  if (rung === 3) return typeOf(language, source, key);
+  return spotOf(language, key, source, random);
 }
 
 function spotFor(language: string, key: string, options: { stage: number; seed: string; avoid?: ReadonlySet<string> }): QuizQuestion | null {
@@ -221,7 +250,7 @@ export function buildExam(input: {
   for (const key of chosen) {
     if (used.has(key)) continue;
     const want = Math.min(4, Math.max(1, input.ladder[key] ?? 1));
-    const made = rungQuestion(input.language, key, want, { stage: input.stage, seed, avoid: texts });
+    const made = rungQuestion(input.language, key, want, { stage: input.stage, seed, avoid: texts, ...(input.pool[key]?.s?.length ? { own: input.pool[key]!.s } : {}) });
     if (!made) continue;
     used.add(key);
     texts.add(textOf(made.question));
@@ -286,7 +315,8 @@ export function finishExam(input: {
         if (item.claimed && one.key.startsWith("f|")) confirmed.push(one.key.slice(2));
       } else {
         ladder[one.key] = Math.max(1, (item.rung ?? ladder[one.key] ?? 1) - 1);
-        pool[one.key] = { at: now, r: [...new Set([...(pool[one.key]?.r ?? []).filter((r) => r !== "claimed"), "wrong" as const])] };
+        const kept = pool[one.key]?.s;
+        pool[one.key] = { at: now, r: [...new Set([...(pool[one.key]?.r ?? []).filter((r) => r !== "claimed"), "wrong" as const])], ...(kept?.length ? { s: kept } : {}) };
         if (!wrong.includes(one.key)) wrong.push(one.key);
       }
     }

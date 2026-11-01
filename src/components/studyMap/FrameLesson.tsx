@@ -15,6 +15,7 @@ import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { buildQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { notePool } from "@/lib/curriculum/exam";
+import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
 import { glossFor, quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
@@ -47,6 +48,7 @@ export function FrameLesson({
   language,
   frame,
   subject,
+  scene,
   passed,
   onPassed,
   onClose,
@@ -57,6 +59,8 @@ export function FrameLesson({
   /** 문장구조 하나 — 또는 subject(표현·문법 칸). */
   frame?: Frame;
   subject?: LessonSubject;
+  /** 통화 등에서 들고 온 그 문장 — 설명 맨 위 카드(2026-11-01 사용자 "그 문장을 두고 단계 학습으로 이동해서 소재를 설명"). */
+  scene?: LessonScene;
   passed: boolean;
   onPassed?: (id: string) => void;
   onClose: () => void;
@@ -309,6 +313,7 @@ export function FrameLesson({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
         {step === "explain" ? (
           <div data-lesson-explain className="flex flex-col gap-3">
+            {scene ? <SceneCard scene={scene} piece={pieceIn(language, key, scene.line)} tag={tag} /> : null}
             {lesson === undefined ? <p className="text-caption text-slate-400">…</p> : null}
             {/* Structured explanation (2026-10-30, user): meaning → structure (each fixed part and what it does) → usage → examples. */}
             <section data-lesson-meaning>
@@ -545,5 +550,44 @@ export function FrameLesson({
         ) : null}
       </div>
     </FullScreenLayer>
+  );
+}
+
+/** 수업 맨 위 "통화에서" 카드: 앞 튜터 줄 · 내가 한 말(지움) → 고친 문장(이 소재 칠함) · 🔊. 글 설명 없이 📞만. */
+function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: string | null; tag: string }) {
+  const at = piece ? scene.line.indexOf(piece) : -1;
+  return (
+    <section data-lesson-scene className="flex flex-col gap-1 rounded-xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-2.5">
+      <span aria-hidden className="text-caption">📞</span>
+      {scene.before ? (
+        <p dir="auto" className="text-meta text-slate-400">
+          {scene.before}
+        </p>
+      ) : null}
+      {scene.said && scene.said.trim() !== scene.line.trim() ? (
+        <p dir="auto" className="text-note text-slate-500 line-through">
+          {scene.said}
+        </p>
+      ) : null}
+      <div className="flex items-start gap-2">
+        <p dir="auto" className="min-w-0 flex-1 text-chat text-ink">
+          {at >= 0 && piece ? (
+            <>
+              {scene.line.slice(0, at)}
+              <span className="rounded-lg bg-status-learned/25 px-0.5">{piece}</span>
+              {scene.line.slice(at + piece.length)}
+            </>
+          ) : (
+            scene.line
+          )}
+        </p>
+        <TTSButton text={scene.line} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+      </div>
+      {scene.meaning ? (
+        <p dir="auto" className="text-meta text-slate-400">
+          {scene.meaning}
+        </p>
+      ) : null}
+    </section>
   );
 }

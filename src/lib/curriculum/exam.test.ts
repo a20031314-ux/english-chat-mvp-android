@@ -82,3 +82,27 @@ test("대화 응답: 상대 줄 → 그 소재가 든 다음 내 줄, 오답 둘
     for (const q of made) if (q?.kind === "reply") assert.equal(q.options.length, 3);
   }
 });
+
+test("통화에서 고친 문장: 모인 소재에 장면으로 남고, 시험은 그 문장을 먼저 — 4칸은 내가 한 틀린 말 그대로 (en·es·ja)", async () => {
+  const { allFramesFor: frames } = await import("./frames.ts");
+  const cases: [string, string, string, string][] = [
+    ["en", "f|en-f1-01", "My name is Mina.", "My name are Mina."],
+    ["es", "f|es-f1-01", "Me llamo Ana.", "Me llamas Ana."],
+  ];
+  const ja = frames("ja").find((frame) => frame.core.some((core) => core === "から来ました"));
+  if (ja) cases.push(["ja", `f|${ja.id}`, "わたしは韓国から来ました。", "わたしは韓国に来ました。"]);
+  for (const [language, key, line, said] of cases) {
+    store.clear();
+    notePool(language, key, "stuck", Date.now(), { line, said });
+    const entry = readPool(language)[key]!;
+    assert.equal(entry.s?.[0]?.line, line, language);
+    const spot = rungQuestion(language, key, 4, { stage: 3, seed: "c", own: entry.s });
+    assert.equal(spot?.rung, 4, language);
+    assert.ok(spot?.question.kind === "spot" && spot.question.text === said && spot.question.right === line, `${language} ${JSON.stringify(spot?.question)}`);
+    const typed = rungQuestion(language, key, 3, { stage: 3, seed: "c", own: entry.s });
+    assert.ok(typed && "text" in typed.question && typed.question.text === line, `${language} 3칸 ${JSON.stringify(typed?.question)}`);
+    // 틀리면 장면이 남는다.
+    const out = finishExam({ items: [{ key, section: "recall", rung: 3, question: typed!.question }], answers: [false], stage: 1, pool: readPool(language), ladder: {} });
+    assert.equal(out.pool[key]?.s?.[0]?.line, line);
+  }
+});

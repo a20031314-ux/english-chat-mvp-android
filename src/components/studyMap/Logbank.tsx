@@ -13,8 +13,7 @@ import { clearQuizDay, dayValue, readQuizDays, weekOf, type QuizDays } from "@/l
 import { clearDayResults, DAY_LOG_EVENT, readDayResults, removeDayResult, type DayResult } from "@/lib/curriculum/dayLog";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { openLesson, sendAppIntent } from "@/lib/appIntents";
-import { ladderFor } from "@/lib/curriculum/stages/index";
-import { grammarNodeId } from "@/lib/notes/notebook";
+import { expressionKeyOf, expressionKeysIn, grammarKeyOfNode } from "@/lib/curriculum/lessonKey";
 import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { buildRecap } from "@/lib/roleplay/recap";
 import type { SavedConversation } from "@/lib/roleplay/saved";
@@ -293,16 +292,31 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
                   {fixes.length ? <span className="shrink-0 tabular-nums text-warn">{`✎ ${fixes.length}`}</span> : null}
                   {hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${hints}`}</span> : null}
                 </span>
-                {fixes.slice(0, 2).map((item, i) => (
-                  <span key={i} className="text-meta">
-                    {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
-                    {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
-                    <span dir="auto" className="text-slate-200">{item.line}</span>
-                  </span>
-                ))}
               </button>
               {remove(call.title, () => setAsking(call.id), "call")}
             </div>
+            {/* Each corrected line opens its Stagebank lesson carrying the sentence (or the call review when no topic is found). */}
+            {fixes.slice(0, 2).map((item, i) => {
+              const key = item.frames[0] ? `f|${item.frames[0].id}` : expressionKeysIn(language, item.line, 1)[0];
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  data-day-call-fix
+                  onClick={() =>
+                    key
+                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
+                      : sendAppIntent("openCall", { id: call.id })
+                  }
+                  className="text-start text-meta hover:opacity-80"
+                >
+                  {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
+                  {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
+                  <span dir="auto" className="text-slate-200">{item.line}</span>
+                  {key ? <span aria-hidden className="ms-1 text-slate-500">{key.startsWith("f|") ? "🧩" : "🔤"}</span> : null}
+                </button>
+              );
+            })}
             {asking === call.id ? (
               <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); setAsking(null); }} onNo={() => setAsking(null)} />
             ) : null}
@@ -388,17 +402,8 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
   );
 }
 
-/** Logbank 칩 → Stagebank 소재 열쇠: 문법 칸(노트 칸 id → 단계 문법 번호) · 그 단계 핵심 표현. 없으면 null. */
+/** Logbank 칩 → Stagebank 소재 열쇠: 문법 칸(노트 칸 id) · 그 단계 핵심 표현. 없으면 null. */
 function lessonKeyOf(language: string, item: LogItem): string | null {
-  const stages = ladderFor(language)?.stages ?? [];
-  if (item.part === "grammar" && item.node) {
-    for (const stage of stages) {
-      const index = stage.grammar.findIndex((grammar) => grammarNodeId(stage.order, grammar) === item.node);
-      if (index >= 0) return `g|${stage.order}:${index}`;
-    }
-    return null;
-  }
-  const text = item.text.toLocaleLowerCase().replace(/[\p{P}]+/gu, " ").trim();
-  for (const stage of stages) for (const expression of stage.expressions) if (expression.toLocaleLowerCase() === text) return `e|${expression}`;
-  return null;
+  if (item.part === "grammar") return grammarKeyOfNode(language, item.node);
+  return expressionKeyOf(language, item.text);
 }

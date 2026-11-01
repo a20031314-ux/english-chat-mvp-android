@@ -26,6 +26,8 @@ export type RecapItem = {
   said?: string;
   /** 앱 언어 뜻(missed·looked, 있으면). */
   meaning?: string;
+  /** 바로 앞 튜터 줄(fix·hint — 그 장면을 수업에서 다시 보일 때). */
+  before?: string;
   /** 이 문장이 쓰는 문장구조 — 높은 단계부터 둘까지. */
   frames: RecapFrame[];
 };
@@ -56,13 +58,15 @@ export function buildRecap(language: string, lines: TranscriptLine[]): RecapItem
     seen.add(key);
     items.push({ ...item, frames: framesInLine(language, item.line, pool) });
   };
+  let lastTutor = "";
   for (const line of lines) {
     if (line.who === "learner") {
       const right = (line.meant || line.better || "").trim();
-      if (right && right !== line.text.trim()) push({ kind: "fix", line: right, said: line.text });
+      if (right && right !== line.text.trim()) push({ kind: "fix", line: right, said: line.text, ...(lastTutor ? { before: lastTutor } : {}) });
       continue;
     }
-    if (line.tip) push({ kind: "hint", line: line.tip });
+    lastTutor = line.text;
+    if (line.tip) push({ kind: "hint", line: line.tip, before: line.text });
     const meaning = line.translation ? { meaning: line.translation } : {};
     if (line.missed) push({ kind: "missed", line: line.text, ...meaning });
     else if (line.looked) push({ kind: "looked", line: line.text, ...meaning });

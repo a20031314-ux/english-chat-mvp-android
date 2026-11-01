@@ -419,3 +419,11 @@ test("한자가 든 답을 읽기로: 중국어 병음(성조 부호·숫자·�
   assert.equal(typedRight("に行きます", "ni ikimasu", { language: "ja" }), "loose");
   assert.equal(typedRight("に行きます", "にきます", { language: "ja" }), false);
 });
+
+test("문장 → 소재 열쇠: 표현은 따로 선 낱말로만, 표현 그 자체는 e| (en·es·th)", async () => {
+  const { expressionKeysIn, expressionKeyOf, pieceIn } = await import("./lessonKey.ts");
+  assert.ok(expressionKeysIn("en", "Nice to meet you, I'm Sam.").includes("e|nice to meet you"));
+  assert.equal(expressionKeyOf("es", "¡Hola!"), "e|hola");
+  assert.ok(!expressionKeysIn("th", "ไม่ใช่ครับ").includes("e|ใช่"));
+  assert.equal(pieceIn("en", "e|nice to meet you", "Hi, nice to meet you."), "nice to meet you");
+});

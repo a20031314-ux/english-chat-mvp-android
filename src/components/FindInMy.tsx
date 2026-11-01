@@ -1,5 +1,7 @@
 "use client";
 
+import { openLesson } from "@/lib/appIntents";
+import { expressionKeyOf, grammarKeyOfNode, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { apiUrl } from "@/lib/apiBase";
@@ -21,6 +23,7 @@ export function FindInMy({
   language,
   locale,
   onDone,
+  lessonScene,
 }: {
   ui: UICopy;
   text: string;
@@ -28,6 +31,8 @@ export function FindInMy({
   language: string;
   locale: string;
   onDone: () => void;
+  /** 통화 정리에서: 찾은 칸이 Stagebank 소재(문법 칸)면 My로 가지 않고 그 문장을 들고 그 수업을 연다(2026-11-01). */
+  lessonScene?: LessonScene;
 }) {
   const [state, setState] = useState<"idle" | "busy" | "failed">("idle");
   const find = async () => {
@@ -42,6 +47,12 @@ export function FindInMy({
       });
       const found = (await response.json().catch(() => null)) as { node?: string | null; stage?: number; note?: string } | null;
       if (!response.ok || !found) return setState("failed");
+      const lessonKey = lessonScene ? (grammarKeyOfNode(language, found.node) ?? expressionKeyOf(language, text)) : null;
+      if (lessonKey && lessonScene) {
+        openLesson({ language, key: lessonKey, scene: lessonScene });
+        setState("idle");
+        return;
+      }
       const social = scene === "dm" || scene === "room";
       handOffLocate({
         language,

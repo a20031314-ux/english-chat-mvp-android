@@ -20,7 +20,7 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   const [open, setOpen] = useState<AppIntents["openLesson"] | null>(() => takeAppIntent("openLesson"));
   useEffect(() => onAppIntent("openLesson", setOpen), []);
   useEffect(() => {
-    if (open) notePool(open.language, open.key, "opened");
+    if (open) notePool(open.language, open.key, "opened", Date.now(), open.scene);
   }, [open]);
   if (!open) return null;
   const { language, key } = open;
@@ -28,7 +28,7 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   const close = () => setOpen(null);
   if (key.startsWith("f|")) {
     const frame = frameById(language, key.slice(2));
-    return frame ? <FrameLesson key={key} ui={ui} locale={locale} language={language} frame={frame} passed={passed} onClose={close} /> : null;
+    return frame ? <FrameLesson key={key} ui={ui} locale={locale} language={language} frame={frame} scene={open.scene} passed={passed} onClose={close} /> : null;
   }
   const stage = key.startsWith("g|")
     ? Number(key.slice(2).split(":")[0]) || 1
@@ -37,5 +37,5 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   // 문법 칸 이름(앱 언어 — 수업이 오기 전 머리에).
   const grammar = key.startsWith("g|") ? ladderFor(language)?.stages.find((one) => one.order === stage)?.grammar[Number(key.split(":")[1])] : undefined;
   const title = grammar ? glossFor(grammar.name, locale) : undefined;
-  return <FrameLesson key={key} ui={ui} locale={locale} language={language} subject={{ key, kind: key.startsWith("e|") ? "expression" : "grammar", stage, ...(title ? { title } : {}) }} passed={passed} onClose={close} />;
+  return <FrameLesson key={key} ui={ui} locale={locale} language={language} subject={{ key, kind: key.startsWith("e|") ? "expression" : "grammar", stage, ...(title ? { title } : {}) }} scene={open.scene} passed={passed} onClose={close} />;
 }
