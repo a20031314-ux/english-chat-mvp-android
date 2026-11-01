@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { FindInMy } from "@/components/FindInMy";
+import { RightWithChanges, SaidWithMistakes } from "@/components/RoleplayReview";
 import { openLesson } from "@/lib/appIntents";
 import { correctionReplacementSnippet } from "@/lib/textDiff";
 import { notePool } from "@/lib/curriculum/exam";
@@ -62,13 +63,14 @@ export function CallRecap({
         {items.map((item, index) => (
           <li key={`${item.kind}-${index}`} className="rounded-xl bg-white/[0.04] px-3 py-2">
             <p className="text-caption text-slate-400">{label(item)}</p>
+            {/* 고친 말: 내가 한 말은 틀린 곳만 표시, 고친 문장은 바뀐 곳만 초록(사용자 2026-11-01). */}
             {item.said ? (
-              <p dir="auto" className="mt-0.5 text-meta text-slate-500 line-through">
-                {item.said}
+              <p className="mt-0.5 text-meta text-slate-400">
+                <SaidWithMistakes said={item.said} right={item.line} />
               </p>
             ) : null}
-            <p dir="auto" className="mt-0.5 text-note text-slate-100">
-              {item.line}
+            <p className="mt-0.5 text-note text-slate-100">
+              {item.said ? <RightWithChanges said={item.said} right={item.line} /> : <bdi dir="auto">{item.line}</bdi>}
             </p>
             {item.meaning ? <p className="mt-0.5 text-meta text-slate-400">{item.meaning}</p> : null}
             {item.frames.length || expressionKeysIn(language, item.line).length ? (

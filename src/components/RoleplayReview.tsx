@@ -11,6 +11,62 @@ import { rememberFix } from "@/lib/curriculum/gaps";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
 import type { UICopy } from "@/lib/copy";
+import { correctedHighlightParts, originalHighlightParts } from "@/lib/textDiff";
+
+/**
+ * 내가 한 말 — 틀린 곳만 표시(사용자 2026-11-01 "사용자 문장을 모두 지우지 말고 틀린 부분만 표시하고, 정답 문장도 그렇게").
+ * 틀린 낱말·글자는 빨간 취소선, 빠진 말 자리는 ‸. 나머지는 그대로.
+ */
+export function SaidWithMistakes({ said, right, className = "" }: { said: string; right: string; className?: string }) {
+  // ‸는 정말 빠진 말 자리에만: 바로 앞이 틀린 곳이면 바꿔 쓴 것(취소선이 이미 보여 줌), 문장부호만 빠진 것도 표시하지 않는다.
+  const parts = originalHighlightParts(said, right).filter(
+    (part, index, all) => !part.missingHint || (/[\p{L}\p{N}]/u.test(part.missingHint) && !lastWordWasWrong(all, index)),
+  );
+  return (
+    <span dir="auto" className={className} data-fix-said>
+      {parts.map((part, index) =>
+        part.missingHint ? (
+          <span key={index} aria-hidden className="mx-px font-semibold text-bad">
+            ‸
+          </span>
+        ) : part.error ? (
+          <span key={index} className="text-bad line-through decoration-bad">
+            {part.text}
+          </span>
+        ) : (
+          <span key={index}>{part.text}</span>
+        ),
+      )}
+    </span>
+  );
+}
+
+function lastWordWasWrong(parts: ReturnType<typeof originalHighlightParts>, index: number): boolean {
+  for (let at = index - 1; at >= 0; at -= 1) {
+    const part = parts[at]!;
+    if (!part.text.trim()) continue;
+    return part.error;
+  }
+  return false;
+}
+
+/** 고친 문장 — 바뀐·새로 들어간 곳만 초록 굵게, 나머지는 보통 글자. */
+export function RightWithChanges({ said, right, className = "" }: { said: string; right: string; className?: string }) {
+  const parts = correctedHighlightParts(said, right);
+  return (
+    <span dir="auto" className={className} data-fix-right>
+      {parts.map((part, index) =>
+        part.added && /[\p{L}\p{N}]/u.test(part.text) ? (
+          <span key={index} className="font-semibold text-good">
+            {part.text}
+          </span>
+        ) : (
+          <span key={index}>{part.text}</span>
+        ),
+      )}
+    </span>
+  );
+}
 
 /**
  * Looking back at a turn: the button that offers it, and the panel it opens.
@@ -146,7 +202,11 @@ export function RoleplayLine({
               : ""
           }`}
         >
-          {line.text}
+          {line.who === "learner" && fixOpen && line.better && line.better.trim() !== line.text.trim() ? (
+            <SaidWithMistakes said={line.text} right={line.better} />
+          ) : (
+            line.text
+          )}
           {/* 받아쓰기가 확신이 낮은 내 말: 끝에 "?" 하나, 누르면 한 줄 설명. */}
           {line.who === "learner" && line.unsure ? <UnsureMark text={ui.heardUnsure} /> : null}
         </p>
@@ -190,8 +250,8 @@ export function RoleplayLine({
                 <p className="text-[10px] uppercase tracking-wide text-neutral-500">
                   {ui.roleplayBetter}
                 </p>
-                <p dir="auto" className="mt-0.5 text-[13px] leading-snug text-emerald-200">
-                  {line.better}
+                <p dir="auto" className="mt-0.5 text-[13px] leading-snug text-slate-100">
+                  <RightWithChanges said={line.text} right={line.better} />
                 </p>
               </>
             ) : null}
