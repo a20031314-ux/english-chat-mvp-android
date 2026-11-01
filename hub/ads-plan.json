@@ -63,7 +63,8 @@
    ]
   },
   "per1000Mid": 60337,
-  "freePersonMid": 62
+  "freePersonMid": 62,
+  "alt": "학습 화면 광고"
  },
  {
   "kind": "add",
@@ -230,5 +231,26 @@
   "appBuild": false,
   "basis": "넣을 자리 아님 — 기록용",
   "severity": "report"
+ },
+ {
+  "kind": "add",
+  "what": "퀴즈 아래 빈 공간에 네이티브 광고 하나 — 문제·입력칸·버튼과 한 줄 넘게 띄우고 '광고' 표시, 키보드가 올라오면 숨김, 10문제 묶음마다 새 광고",
+  "where": "My 탭 `my` · studyMap/InlineQuiz.tsx 아래(data-inline-quiz 뒤) · components/NativeAdSlot(전체 화면 층 안에서도 멈추지 않게 — 지금은 FullScreenLayer가 열리면 멈춤) · lib/ads.ts 피드 하나 더(한 피드 3개·동시 2피드 한도)",
+  "why": "푸는 화면이지만 버튼과 떨어진 빈 자리라 AdMob 잘못 누름 정책(버튼 옆 금지)에 맞출 수 있음. 키보드가 올라오면 입력칸 바로 아래로 붙으므로 숨김 필수. 하단 배너와 같은 화면이면 광고 둘이라 '펼친 학습 화면 배너'와 택1",
+  "alt": "학습 화면 광고",
+  "appBuild": true,
+  "basis": "대본을 쓰는 날 Quizbank·오늘 할 것 퀴즈 화면에서 새 광고 약 2번(묶음마다 교체) 어림",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 2,
+     "when": "my"
+    }
+   ]
+  },
+  "per1000Mid": 92826,
+  "freePersonMid": 95
  }
 ]
