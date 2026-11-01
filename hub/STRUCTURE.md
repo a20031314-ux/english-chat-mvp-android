@@ -158,7 +158,7 @@
 ### 계정·로그인 `account`
 - 화면: `account/AccountCard` · `account/ProfileFacts`
 - API: `account/config`(친구 초대·보상) · `account/delete`(친구 초대·보상) · `account/email/start`(친구 초대·보상) · `account/email/verify`(친구 초대·보상) · `account/google`(친구 초대·보상) · `account/me`(친구 초대·보상) · `account/password/change`(친구 초대·보상) · `account/password/login`(친구 초대·보상) · `account/password/signup`(친구 초대·보상) · `account/profile`(친구 초대·보상)
-- 다른 영역이 씀: `account/AccountCard` ← 여러 영역 7곳 · `account/ProfileFacts` ← 대화 탭, 사람 탭, Room 탭
+- 다른 영역이 씀: `account/AccountCard` ← 여러 영역 8곳 · `account/ProfileFacts` ← 대화 탭, 사람 탭, Room 탭
 
 ### 요금·포인트·광고 `billing`
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`
