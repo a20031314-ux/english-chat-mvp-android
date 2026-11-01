@@ -28,3 +28,20 @@ export function plainPinyin(text: string): string {
     .replace(/[\d\s'’·\p{P}]+/gu, "")
     .replace(/v/g, "u");
 }
+
+const TONE = /[\u0300\u0301\u0304\u030C]/u;
+
+/**
+ * 성조 부호를 쓴 병음이면 성조까지 비교(2026-11-01 변경 감시 리뷰 "성조가 틀려도 맞음"). 부호 없이·숫자로 친 것은 null(성조 안 봄).
+ * 不·一는 뒤 글자에 따라 성조가 바뀌어(bú shì·yí gè) 그 둘의 성조는 보지 않는다.
+ */
+export function tonedPinyinMatch(reading: string, typed: string): boolean | null {
+  if (!TONE.test(typed.normalize("NFD"))) return null;
+  const toned = (text: string) =>
+    text
+      .normalize("NFD")
+      .toLocaleLowerCase()
+      .replace(/[\d\s'’·\p{P}]+/gu, "")
+      .replace(/([by])([iu])[\u0300\u0301\u0304\u030C]/gu, "$1$2");
+  return toned(reading) === toned(typed);
+}

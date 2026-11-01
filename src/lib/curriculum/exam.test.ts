@@ -75,11 +75,23 @@ test("결과: 맞히면 칸 올림·모인 소재에서 빠짐, 틀리면 칸 �
   assert.deepEqual(out.result.wrong, [b]);
 });
 
-test("대화 응답: 상대 줄 → 그 소재가 든 다음 내 줄, 오답 둘 (es·ko)", () => {
-  for (const language of ["es", "ko"]) {
+test("대화 응답: 상대 줄 → 그 소재가 든 다음 내 줄, 오답은 같은 줄의 소재 자리만 다름 (es·ko·ja)", () => {
+  for (const language of ["es", "ko", "ja"]) {
     const made = poolOf(language, 40).map((key) => replyQuestion(language, key, { stage: 3, seed: "r" })).filter(Boolean);
     assert.ok(made.length >= 5, `${language} ${made.length}`);
-    for (const q of made) if (q?.kind === "reply") assert.equal(q.options.length, 3);
+    for (const q of made) {
+      if (q?.kind !== "reply") continue;
+      assert.equal(q.options.length, 3);
+      assert.equal(q.options[q.answer], q.text);
+      // 다른 대본 줄이 아니라 정답 줄의 앞뒤를 그대로 둔 실수 꼴.
+      for (const option of q.options) {
+        let head = 0;
+        while (head < option.length && option[head] === q.text[head]) head += 1;
+        let tail = 0;
+        while (tail < option.length - head && option[option.length - 1 - tail] === q.text[q.text.length - 1 - tail]) tail += 1;
+        assert.ok(head + tail >= Math.min(option.length, q.text.length) * 0.4, `${language} ${q.text} / ${option}`);
+      }
+    }
   }
 });
 
@@ -105,4 +117,16 @@ test("통화에서 고친 문장: 모인 소재에 장면으로 남고, 시험�
     const out = finishExam({ items: [{ key, section: "recall", rung: 3, question: typed!.question }], answers: [false], stage: 1, pool: readPool(language), ladder: {} });
     assert.equal(out.pool[key]?.s?.[0]?.line, line);
   }
+});
+
+test("같은 통화 장면은 한 번만 — 시험 뒤 빠진 소재가 통화 기록을 다시 봐도 안 들어옴 (pt)", () => {
+  const key = "f|pt-test";
+  const scene = { line: "Eu moro em Lisboa.", said: "Eu mora em Lisboa." };
+  notePool("pt", key, "stuck", Date.now(), scene);
+  assert.ok(readPool("pt")[key]);
+  store.set("examPool.v1.pt", JSON.stringify({}));
+  notePool("pt", key, "stuck", Date.now(), scene);
+  assert.equal(readPool("pt")[key], undefined);
+  notePool("pt", key, "stuck", Date.now(), { line: "Eu moro no Porto." });
+  assert.ok(readPool("pt")[key]);
 });

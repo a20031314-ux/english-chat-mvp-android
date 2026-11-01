@@ -5,7 +5,7 @@
  * 설명·대화 재료는 서버가 틀마다 한 번 만들어 같이 씀(server/frameLesson.ts, /api/curriculum/frame-lesson). 못 받으면 대화는 틀 예문으로.
  */
 import type { Frame } from "./frames.ts";
-import { glossFor } from "./stageScripts.ts";
+import { quizGloss } from "./stageScripts.ts";
 
 /** 대화 한 차례: 상대 줄(학습 언어)·그 뜻(앱 언어), 내가 할 대답(학습 언어)·그 뜻(앱 언어). */
 export type LessonTurn = { them: string; themGloss: string; me: string; meGloss: string };
@@ -17,8 +17,9 @@ export type FrameLesson = { explain: string[]; meaning?: string; parts?: LessonP
 export type LessonStep = "explain" | "quiz" | "talk" | "done";
 
 /** 서버 수업이 없을 때의 대화: 틀 예문을 내 대답으로(상대 줄 없이 뜻만). */
-export function fallbackTurns(frame: Frame, locale: string): LessonTurn[] {
-  return frame.examples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: glossFor(example.gloss, locale) }));
+export function fallbackTurns(frame: Frame, locale: string, learning: string): LessonTurn[] {
+  // 뜻 줄이 곧 정답이면(앱 언어 = 학습 언어, 옮김 없는 영어 뜻) 비워 둔다 — 화면은 🔊 듣고 말하기(RULES 11①).
+  return frame.examples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: quizGloss(example.gloss, locale, learning) ?? "" }));
 }
 
 /** 대화 차례를 모두 원문을 보지 않고 맞혔으면 통과. */

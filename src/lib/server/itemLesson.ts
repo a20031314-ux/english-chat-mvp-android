@@ -13,6 +13,7 @@ import type { FrameLesson, LessonTurn } from "../curriculum/frameLesson.ts";
 import { INTERFACE_LANGUAGE_LABELS } from "../learningLanguages.ts";
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
+const FAIL_SECONDS = 10 * 60;
 
 /** 표현(e|) 또는 문법 칸(g|) 하나 — 이름(영어)과 그 단계 예문 한두 개. */
 export type LessonItem = { key: string; kind: "expression" | "grammar"; name: string; examples: string[] };
@@ -85,16 +86,24 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
   const key = `itemlesson:v1:${language}:${item.key}`;
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
   if (!lesson?.turns?.length) {
-    onMake?.();
+    // 세 번 다 실패한 소재는 10분 동안 다시 만들지 않는다 — 열 때마다 모델을 세 번 부르지 않게(2026-11-01 변경 감시 리뷰).
+    const failKey = `itemlesson:v1:fail:${language}:${item.key}`;
+    if (await kvGetJson<number>(failKey).catch(() => null)) return null;
     // 처음 만들 때 모델이 한 번 실패하거나 형식을 안 지키는 일이 있어(2026-11-01 운영 확인) 한 번 더.
     lastLessonRaw = "";
-    const once = () =>
-      makeLesson(language, item).catch((error: unknown) => {
+    // 실패한 시도도 모델을 부른 것이라 시도마다 센다(2026-11-01 변경 감시 리뷰).
+    const once = () => {
+      onMake?.();
+      return makeLesson(language, item).catch((error: unknown) => {
         lastLessonRaw += `\n---\nERR ${error instanceof Error ? error.message : String(error)}`.slice(0, 300);
         return null;
       });
+    };
     lesson = (await once()) ?? (await once()) ?? (await once());
-    if (!lesson) return null;
+    if (!lesson) {
+      await kvSetJson(failKey, Date.now(), FAIL_SECONDS).catch(() => undefined);
+      return null;
+    }
     await kvSetJson(key, lesson, TTL_SECONDS).catch(() => undefined);
   }
   if (ui === "en") return { ...lesson, title: item.name };

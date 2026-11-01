@@ -47,6 +47,9 @@ export const RUNG_KIND: Record<number, QuizQuestion["kind"]> = { 1: "choose", 2:
 
 const poolKey = (language: string) => `examPool.v1.${language}`;
 const ladderKey = (language: string) => `examLadder.v1.${language}`;
+/** 장면으로 이미 넣은 (소재·문장) — 통화 기록을 다시 볼 때마다 시험 뒤 빠진 소재가 다시 들어오지 않게(2026-11-01 변경 감시 리뷰). */
+const notedKey = (language: string) => `examNoted.v1.${language}`;
+const NOTED_MAX = 400;
 
 function readJson<T>(key: string, fallback: T): T {
   try {
@@ -74,6 +77,12 @@ export function readPool(language: string, now = Date.now()): ExamPool {
 /** 걸린 소재를 모은다(문장구조·표현·문법 칸만 — 낱말은 단어 시험). */
 export function notePool(language: string, key: string, reason: PoolReason, now = Date.now(), scene?: LessonScene): void {
   if (!/^[efg]\|/.test(key)) return;
+  if (scene?.line) {
+    const mark = `${key}\n${scene.line}`;
+    const noted = readJson<string[]>(notedKey(language), []);
+    if (noted.includes(mark)) return;
+    writeJson(notedKey(language), [...noted, mark].slice(-NOTED_MAX));
+  }
   const pool = readPool(language, now);
   const entry = pool[key] ?? { at: now, r: [] };
   const scenes = scene?.line ? [scene, ...(entry.s ?? []).filter((one) => one.line !== scene.line)].slice(0, SCENES_MAX) : entry.s;
@@ -143,27 +152,25 @@ function spotFor(language: string, key: string, options: { stage: number; seed: 
 }
 
 /**
- * 대화 응답 한 문제: 대본의 상대 줄 → 바로 다음 내 줄(그 소재가 든)을 고른다. 오답은 같은 단계 다른 대본의 내 줄(길이가 비슷한 것).
+ * 대화 응답 한 문제: 대본의 상대 줄 → 바로 다음 내 줄(그 소재가 든)을 고른다. 오답은 같은 내 줄에서 그 소재 자리만 흔한 실수 꼴로 바꾼 것
+ * (고르기 문제와 같은 오답 — 다른 대본의 아무 줄은 질문과 상관없어 한눈에 지워졌다, 2026-11-01 변경 감시 리뷰, RULES 11②).
  * 상대 줄은 듣고(🔊) 고르며 글은 답한 뒤에(QuizPlayer ReplyView).
  */
 export function replyQuestion(language: string, key: string, options: { stage: number; seed: string; avoid?: ReadonlySet<string> }): QuizQuestion | null {
   const random = rng(`${key}|${options.seed}|reply`);
-  const mine = new Set(quizSources(language, key).filter((source) => source.who !== "them").map((source) => source.text));
+  const mine = new Map(quizSources(language, key).filter((source) => source.who !== "them" && source.piece).map((source) => [source.text, source] as const));
   const scripts = allScriptsFor(language).filter((script) => script.stage <= options.stage + 1);
   for (const script of shuffled(scripts, random)) {
     for (let i = 1; i < script.lines.length; i += 1) {
       const me = script.lines[i]!;
       const them = script.lines[i - 1]!;
-      if (me.who !== "me" || them.who === "me" || !mine.has(me.text) || options.avoid?.has(me.text)) continue;
-      const pool = scripts
-        .filter((other) => other.id !== script.id && Math.abs(other.stage - script.stage) <= 1)
-        .flatMap((other) => other.lines.filter((line) => line.who === "me" && line.text !== me.text))
-        .map((line) => line.text);
-      const near = [...new Set(pool)].sort((a, b) => Math.abs(a.length - me.text.length) - Math.abs(b.length - me.text.length)).slice(0, 12);
-      const wrong = shuffled(near, random).slice(0, 2);
-      if (wrong.length < 2) continue;
-      const choices = shuffled([me.text, ...wrong], random);
-      return { kind: "reply", them: them.text, themGloss: them.gloss as ScriptGloss, text: me.text, options: choices, answer: choices.indexOf(me.text), gloss: me.gloss as ScriptGloss, from: script.id };
+      const source = mine.get(me.text);
+      if (me.who !== "me" || them.who === "me" || !source || options.avoid?.has(me.text)) continue;
+      const choose = chooseOf(language, key, source, random);
+      if (choose?.kind !== "choose") continue;
+      const lines = choose.options.map((option) => `${choose.before}${option}${choose.after}`);
+      if (new Set(lines).size < 3) continue;
+      return { kind: "reply", them: them.text, themGloss: them.gloss as ScriptGloss, text: me.text, options: lines, answer: choose.answer, gloss: me.gloss as ScriptGloss, from: script.id };
     }
   }
   return null;

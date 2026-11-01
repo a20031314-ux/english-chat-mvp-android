@@ -7,7 +7,7 @@ import { recallFits } from "./recall.ts";
 for (const language of ["ja", "es", "th"]) {
   test(`${language}: 서버 수업이 없을 때 대화는 틀 예문으로, 뜻은 앱 언어`, () => {
     const frame = framesFor(language, 1)[0]!;
-    const turns = fallbackTurns(frame, "ko");
+    const turns = fallbackTurns(frame, "ko", language);
     assert.ok(turns.length >= 2);
     for (const turn of turns) {
       assert.ok(turn.meGloss && turn.meGloss !== turn.me);
@@ -15,6 +15,13 @@ for (const language of ["ja", "es", "th"]) {
     }
   });
 }
+
+test("서버 수업이 없을 때 뜻 줄이 곧 정답이면 비움(영어 학습·영어 앱, 일본어 학습·일본어 앱)", () => {
+  for (const [language, ui] of [["en", "en"], ["ja", "ja"]] as const) {
+    const frame = framesFor(language, 1)[0]!;
+    for (const turn of fallbackTurns(frame, ui, language)) assert.equal(turn.meGloss, "");
+  }
+});
 
 test("대화 통과: 차례를 모두 원문 안 보고 맞혀야", () => {
   assert.equal(lessonPassed([], 3), false);

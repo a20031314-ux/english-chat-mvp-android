@@ -16,7 +16,7 @@ import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
 import { EXTRA_EXAMPLES, SHARED_EXAMPLES_OFF } from "./examples/index.ts";
-import { plainPinyin, readingOf } from "./readings/index.ts";
+import { plainPinyin, readingOf, tonedPinyinMatch } from "./readings/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
@@ -545,7 +545,7 @@ export function typedRight(answer: string, typed: string, options: { language?: 
   const sound = (text: string) => text.replace(/は/g, "わ").replace(/へ/g, "え").replace(/を/g, "お");
   // 한자가 든 답을 읽기로 침(2026-11-01): 중국어 병음(성조 부호·숫자·없음 모두), 일본어 히라가나·가타카나·로마자.
   const reading = /\p{Script=Han}/u.test(answer) && (options.language === "zh" || options.language === "ja") ? readingOf(options.language, answer.trim()) : null;
-  if (reading && options.language === "zh" && hasLatin(typed) && plainPinyin(reading) === plainPinyin(typed)) return "loose";
+  if (reading && options.language === "zh" && hasLatin(typed) && plainPinyin(reading) === plainPinyin(typed)) return tonedPinyinMatch(reading, typed) === false ? false : "loose";
   if (reading && options.language === "ja") {
     const kana = hasLatin(typed) ? romajiToHiragana(typed).replace(/\s+/g, "") : typed.replace(/\s+/g, "");
     if (sameKana(sound(reading), sound(kana))) return "loose";

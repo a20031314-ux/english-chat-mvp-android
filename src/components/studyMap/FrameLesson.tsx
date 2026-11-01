@@ -137,10 +137,16 @@ export function FrameLesson({
       lesson?.turns?.length
         ? lesson.turns
         : frame
-          ? fallbackTurns(frame, locale)
-          : shownExamples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: glossFor(example.gloss, locale) })),
-    [lesson, frame, locale, shownExamples],
+          ? fallbackTurns(frame, locale, language)
+          : shownExamples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: quizGloss(example.gloss, locale, language) ?? "" })),
+    [lesson, frame, locale, language, shownExamples],
   );
+  // Meaning line that would show the answer itself (app language = learning language, or an untranslated English gloss) → listen and say instead (RULES 11①, 2026-11-01 review).
+  const turnGloss = (one: LessonTurn | undefined) => {
+    if (!one?.meGloss || locale === language) return "";
+    const plain = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]+/gu, "");
+    return plain(one.meGloss) === plain(one.me) ? "" : one.meGloss;
+  };
   const [tIndex, setTIndex] = useState(0);
   const [results, setResults] = useState<TalkResult[]>([]);
   const [listening, setListening] = useState(false);
@@ -224,7 +230,7 @@ export function FrameLesson({
       isPremium,
       scriptId: itemId,
       mode: "recall",
-      meaning: turn.meGloss,
+      ...(turnGloss(turn) ? { meaning: turnGloss(turn) } : {}),
       ...(turn.them ? { before: turn.them } : {}),
       onLimit: () => setLimited(true),
       ...hearing.options,
@@ -261,7 +267,7 @@ export function FrameLesson({
   // "이름 말하기: 제 이름은 ___예요." → "이름 말하기" — 뒤쪽은 틀을 그대로 담고 있어 답이 된다.
   const meaningText = frame ? glossFor(frame.meaning, locale) : (lesson?.meaning ?? "");
   const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
-  // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름).
+  // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름). 퀴즈·대화 단계에서 뜻이 없으면 표현 이름은 숨김(답이라서).
   const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : subject?.title || lesson?.title || "");
 
   return (
@@ -270,7 +276,7 @@ export function FrameLesson({
         <div className="min-w-0 flex-1">
           {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
-            {hideFrame ? meaningHead || titleText : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
+            {hideFrame ? meaningHead || (key.startsWith("e|") ? "" : titleText) : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>
           {hideFrame || !meaningText ? null : (
             <p dir="auto" className="mt-0.5 text-caption text-slate-400">
@@ -459,18 +465,20 @@ export function FrameLesson({
               </div>
             ) : null}
             <div className="flex flex-col gap-1 self-end rounded-2xl border border-amber-300/40 bg-amber-300/[0.06] px-3 py-2 sm:max-w-[85%]">
+              {!turnGloss(turn) ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" /> : (
               <p dir="auto" className="text-note text-slate-200">
                 {ui.scriptSayPrompt.split("{line}").map((part, k) =>
                   k === 0 ? (
                     part
                   ) : (
                     <span key={k}>
-                      <bdi dir="auto">{turn.meGloss}</bdi>
+                      <bdi dir="auto">{turnGloss(turn)}</bdi>
                       {part}
                     </span>
                   ),
                 )}
               </p>
+              )}
               {result?.heard ? (
                 <p dir="auto" className="text-chat text-slate-100">
                   {result.heard}

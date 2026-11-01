@@ -176,9 +176,3 @@
 - 2026-11-01 모델 살피기 → dev: [ops] scripts/models/whatif.mjs trial — sim:users를 앱 2.78로 돌려 무료 점검 사용자가 첫 줄 뒤 /api/chat 403(대본만 무료)이라 평가 0줄. 이번엔 tmp 사본에 `--app-version 2.75.0`을 붙여 돌림 (trial 인자에 --app-version 2.75.0을 넣거나 점검 사용자에게 유료 플랜을 주는 길로)
 - 2026-11-01 dev → qa: 다음 빌드 기기에서 통화 한 번 → 끝난 화면 통화 정리의 🧩·🔤 칩을 누르면 그 수업이 통화 화면 **위로** 뜨는지(맨 위 📞 카드에 내가 한 말 → 고친 말), 닫으면 통화 결과로 돌아오는지, Logbank 통화 카드의 고친 말도. ja/ko·en/ja·es/ar.
 - 2026-11-01 dev → qa: 다음 빌드에서 튜터 목소리(AI 대화 ⋮ "튜터 목소리"): 바꾸면 대화 탭·사람 탭 튜터 이름, 채팅 🔊 듣기 목소리, 📞 통화(인사 목소리·이름)가 같이 바뀌는지 — ja(♂ Haruto)/ko 앱, ru(♀ Anya "Рада")·ar(♀ Layla "سعيدة") 인사, es/ar 앱.
-- 2026-11-01 watch → dev: [my] src/lib/curriculum/exam.ts:162 — 정기 시험 "대화 응답" 오답이 다른 대본의 아무 내 줄이라 한눈에 지워지고 소재도 안 갈림 (정답 줄 소재 자리의 실수 꼴/decoys로 오답 만들기, 못 만들면 그 문제 안 내기)
-- 2026-11-01 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:141·273 — item-lesson 없을 때 대체 줄 뜻이 glossFor라 앱 언어 = 학습 언어 등에서 "말해 보세요"에 정답, 대화 단계 제목도 표현 그대로 (quizGloss가 null인 예문은 빼고, 뜻 없으면 제목 비우기)
-- 2026-11-01 watch → dev: [my] src/components/roleplay/CallRecap.tsx:37 — 통화 기록 돌아보기(RoleplayPast)도 notePool에 넣어 시험에서 맞힌 소재가 되살아나고 45일 만료가 안 됨 (끝난 화면에서만 넣게 prop)
-- 2026-11-01 watch → dev: [my] src/lib/curriculum/quiz.ts:548 — 병음 입력이 성조 부호·숫자를 지우고 비교해 성조가 틀려도 맞음 (성조를 쓴 입력은 성조까지 비교)
-- 2026-11-01 watch → dev: [my] src/app/api/curriculum/item-lesson/route.ts:48 — 실패하는 소재는 열 때마다 모델 6~8번인데 meter 2번, 실패 캐시 없음 (시도마다 셈, 실패는 짧게 캐시)
-- 2026-11-01 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:514 — placeholder "pīnyīn"·"ひらがな" 하드코딩 (copy.ts + overlays로)

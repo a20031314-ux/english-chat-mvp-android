@@ -413,6 +413,12 @@ test("한자가 든 답을 읽기로: 중국어 병음(성조 부호·숫자·�
   assert.equal(typedRight("我是", "wǒ shì", { language: "zh" }), "loose");
   assert.equal(typedRight("我是", "wo3shi4", { language: "zh" }), "loose");
   assert.equal(typedRight("我是", "ni shi", { language: "zh" }), false);
+  // 성조 부호를 썼으면 성조까지(변경 감시 리뷰 2026-11-01), 不·一 변조는 봐줌.
+  assert.equal(typedRight("我是", "wó shī", { language: "zh" }), false);
+  const { tonedPinyinMatch } = await import("./readings/index.ts");
+  assert.equal(tonedPinyinMatch("bù shì", "búshì"), true);
+  assert.equal(tonedPinyinMatch("yī gè", "yí gè"), true);
+  assert.equal(tonedPinyinMatch("hǎo", "hao"), null);
   const ja = readingOf("ja", "に行きます");
   assert.equal(ja, "にいきます");
   assert.equal(typedRight("に行きます", "にいきます", { language: "ja" }), "loose");

@@ -45,7 +45,8 @@ export async function GET(request: NextRequest) {
   let metered = 0;
   const lesson = await itemLesson(language, item, ui, INTERFACE_LANGUAGE_LABELS[ui] ?? "English", () => {
     metered += 1;
-    if (metered <= 2) void meterRequest(request, "frameLesson");
+    // 만들기 최대 세 번 + 옮기기 한 번.
+    if (metered <= 4) void meterRequest(request, "frameLesson");
   });
   return jsonWithCors(request, { lesson, ...(!lesson && request.headers.get("x-lesson-debug") === "1" ? { raw: lastLessonRaw } : {}) });
 }
