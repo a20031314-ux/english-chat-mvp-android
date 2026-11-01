@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
-import { CallControls, CallFooter, CallHeader, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { CALL_CAPTIONS_KEY } from "@/components/speech/CallKit";
@@ -854,7 +854,7 @@ export function RoleplayScreen({
           />
         </div>
       ) : null}
-      <ol className="min-h-0 flex-1 overflow-y-auto p-3">
+      <CallPages ui={ui}>
         {said.map((line, index) => {
           const view = learnerLineView(said, index, { showAll: true, over: true });
           if (view === "hidden") return null;
@@ -894,7 +894,7 @@ export function RoleplayScreen({
             />
           </li>
         ) : null}
-      </ol>
+      </CallPages>
         <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={onClose} />
       </FullScreenLayer>
     );

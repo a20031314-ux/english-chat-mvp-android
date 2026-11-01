@@ -6,6 +6,7 @@
  * 통화 중 = 튜터 얼굴·이름·통화 시간·누가 말하는지 + 자막 한 줄(켰을 때만) + 아래 버튼 넷.
  * 끝나면 = 머리(제목·번역·닫기) + 전체 대본 + 통화 정리 + 바닥(닫기).
  */
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
 import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
@@ -264,4 +265,108 @@ export function TutorFace() {
 }
 export function MeFace() {
   return <MyAvatarFace size={CHAT_FACE_SIZE} />;
+}
+
+/**
+ * 끝난 통화의 대본·통화 정리를 화면 높이만큼 끊어 옆으로 넘겨 보기(사용자 2026-11-01 "결과를 화면 기준으로 끊어서 넘겨 가면서, 너무 길어질 때를 대비").
+ * 줄을 세로로 길게 늘어놓지 않고 CSS 단(column) 한 칸 = 화면 한 장으로 흘린다 — 줄을 눌러 도구가 펼쳐져 길이가 바뀌어도 브라우저가 다시 나눈다.
+ * 줄 하나는 장 사이에서 잘리지 않는다(break-inside: avoid, 한 장보다 긴 줄만 잘림). 손가락으로 옆으로 밀면 넘어가고, 놓으면 가까운 장에 맞춘다.
+ * 장이 둘 이상이면 아래에 ‹ n / m ›(처음 장 = 대본 처음부터). ‹ › 는 오른쪽에서 왼쪽 화면에서 글자가 저절로 뒤집힌다(bidi mirroring) — 돌리지 않는다.
+ */
+export function CallPages({ ui, children }: { ui: UICopy; children: ReactNode }) {
+  const ref = useRef<HTMLOListElement>(null);
+  const [width, setWidth] = useState(0);
+  const [page, setPage] = useState(0);
+  const [pages, setPages] = useState(1);
+  const settle = useRef<number | null>(null);
+
+  const measure = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    const w = el.clientWidth;
+    setWidth(w);
+    if (w > 0) {
+      setPages(Math.max(1, Math.round(el.scrollWidth / w)));
+      setPage(Math.min(Math.round(Math.abs(el.scrollLeft) / w), Math.max(0, Math.round(el.scrollWidth / w) - 1)));
+    }
+  }, []);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    measure();
+    const resize = new ResizeObserver(measure);
+    resize.observe(el);
+    // 줄이 펼쳐지거나 번역·통화 정리가 늦게 와도 장 수를 다시 센다.
+    const mutate = new MutationObserver(() => window.requestAnimationFrame(measure));
+    mutate.observe(el, { childList: true, subtree: true, characterData: true, attributes: true });
+    return () => {
+      resize.disconnect();
+      mutate.disconnect();
+    };
+  }, [measure]);
+
+  // 아랍어 등 오른쪽에서 왼쪽 화면은 scrollLeft가 0에서 음수로 간다.
+  const rtl = () => (ref.current ? getComputedStyle(ref.current).direction === "rtl" : false);
+  const go = (to: number) => {
+    const el = ref.current;
+    if (!el || !width) return;
+    const next = Math.max(0, Math.min(pages - 1, to));
+    el.scrollTo({ left: (rtl() ? -1 : 1) * next * width, behavior: "smooth" });
+    setPage(next);
+  };
+  const onScroll = () => {
+    const el = ref.current;
+    if (!el || !width) return;
+    setPage(Math.round(Math.abs(el.scrollLeft) / width));
+    if (settle.current) window.clearTimeout(settle.current);
+    // 밀다가 놓으면 가까운 장에 맞춘다(단은 scroll-snap 대상이 아니라서).
+    settle.current = window.setTimeout(() => {
+      const at = Math.round(Math.abs(el.scrollLeft) / width);
+      const target = (rtl() ? -1 : 1) * at * width;
+      if (Math.abs(el.scrollLeft - target) > 2) el.scrollTo({ left: target, behavior: "smooth" });
+    }, 120);
+  };
+
+  return (
+    <div className="flex min-h-0 flex-1 flex-col" data-call-pages>
+      <div className="min-h-0 flex-1 px-3 pt-3">
+        <ol
+          ref={ref}
+          onScroll={onScroll}
+          className="h-full overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>*]:break-inside-avoid"
+          style={{ columnWidth: width ? `${width}px` : undefined, columnGap: 0, columnFill: "auto" }}
+        >
+          {children}
+        </ol>
+      </div>
+      {pages > 1 ? (
+        <nav className="flex shrink-0 items-center justify-center gap-4 py-1.5 text-meta tabular-nums text-slate-400" aria-label={`${page + 1} / ${pages}`}>
+          <button
+            type="button"
+            onClick={() => go(page - 1)}
+            disabled={page === 0}
+            aria-label={ui.studyChapterPrev}
+            title={ui.studyChapterPrev}
+            className="rounded-full px-3 py-1 text-title text-slate-200 disabled:opacity-30"
+          >
+            ‹
+          </button>
+          <span data-call-page>
+            {page + 1} / {pages}
+          </span>
+          <button
+            type="button"
+            onClick={() => go(page + 1)}
+            disabled={page >= pages - 1}
+            aria-label={ui.studyChapterNext}
+            title={ui.studyChapterNext}
+            className="rounded-full px-3 py-1 text-title text-slate-200 disabled:opacity-30"
+          >
+            ›
+          </button>
+        </nav>
+      ) : null}
+    </div>
+  );
 }

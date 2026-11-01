@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { CallRecap } from "@/components/roleplay/CallRecap";
-import { CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
+import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
 import { handOffFrame } from "@/lib/notes/locateHandoff";
@@ -82,7 +82,7 @@ export function RoleplayPast({
         tally={tallyCall(saved.said)}
       />
 
-      <ol className="min-h-0 flex-1 overflow-y-auto p-3">
+      <CallPages ui={ui}>
         {saved.said.map((line, index) => (
           <RoleplayLine
             key={index}
@@ -116,7 +116,7 @@ export function RoleplayPast({
             />
           </li>
         ) : null}
-      </ol>
+      </CallPages>
     </FullScreenLayer>
   );
 }
