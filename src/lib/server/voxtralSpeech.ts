@@ -44,6 +44,9 @@ const VOICE_GENDER: Record<string, "f" | "m"> = {
  */
 export function voxtralReference(language: string, voice: string): string | null {
   if (!speaksWithVoxtral(language)) return null;
+  // 언어별로 예전 목소리로 되돌리기: Vercel `VOXTRAL_TTS_OFF=ko,ja`(사용자 2026-11-02 "한국어가 영어를 번역한 말투").
+  const off = (process.env.VOXTRAL_TTS_OFF ?? "").split(",").map((code) => code.trim().toLowerCase());
+  if (off.includes(language)) return null;
   const gender = VOICE_GENDER[voice];
   if (!gender) return null;
   return VOICE_REFS[`${language}-${gender}`] ?? null;
