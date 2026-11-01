@@ -173,7 +173,7 @@ export function Logbank({
   const tally = (c: ReturnType<typeof counts>, q: { n: number; right: number } | null) => (
     <span className="flex flex-wrap gap-x-3 text-caption tabular-nums text-slate-400">
       {c.mastered ? <span className="text-status-mastered">{`${ui.itemsMastered} +${c.mastered}`}</span> : null}
-      {c.learned ? <span className="text-status-learned">{`${ui.itemsLearned} +${c.learned}`}</span> : null}
+      {c.learned ? <span className="text-info">{`${ui.itemsLearned} +${c.learned}`}</span> : null}
       {c.fixed ? <span className="text-warn">{`${ui.partFixed} ${c.fixed}`}</span> : null}
       {q ? <span>{`${ui.keepTitle} ${ui.quizScore.replace("{n}", String(q.right)).replace("{m}", String(q.n))}`}</span> : null}
     </span>
@@ -217,7 +217,7 @@ export function Logbank({
                               type="button"
                               dir="auto"
                               onClick={() => (part === "grammar" ? undefined : insight?.open({ sentence: item.text, selected: item.text }))}
-                              className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-status-learned/15 text-status-learned"}`}
+                              className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
                             >
                               {label(item)}
                             </button>

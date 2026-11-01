@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
+import { BankToneProvider } from "@/components/studyMap/bankTone";
 import { ContentScopeButton } from "@/components/studyMap/ContentScope";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -2287,7 +2288,9 @@ function MyLayers({
   const review = useReviewNotes(language, notes);
   const card = (id: MyLayer, title: string, summary: ReactNode, body: ReactNode) => {
     // 전체 화면이면 그 칸 안만 전체 화면 층에(같은 것을 두 곳에 그리지 않게 제자리에는 안 그림).
-    if (full) return full === id ? <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{body}</div> : null;
+    // 칸 안의 강조색도 그 칸 색(studyMap/bankTone.tsx, 2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘").
+    const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
+    if (full) return full === id ? <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">{toned}</div> : null;
     const on = !closed.has(id);
     return (
       <section key={id} data-my-layer={id} className={`mt-3 scroll-mt-14 rounded-2xl border ${on ? LAYER_TONE[id].box : "border-line"}`}>
@@ -2300,7 +2303,7 @@ function MyLayers({
           {/* 칸마다 "?" — 배울 수 있는 것·이렇게 공부해요(2026-10-31). */}
           <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} />
         </div>
-        {on ? <div className="px-3 pb-3">{body}</div> : null}
+        {on ? <div className="px-3 pb-3">{toned}</div> : null}
       </section>
     );
   };

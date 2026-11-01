@@ -14,6 +14,7 @@ import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
 import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { useBankTone } from "@/components/studyMap/bankTone";
 import { multiBlankRight, spotsFixRight, type MultiQuestion, type SpotsQuestion } from "@/lib/curriculum/multiQuiz";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
@@ -295,6 +296,7 @@ const chip = "rounded-xl border px-3 py-2 text-chat";
  * 예문이 없으면(문제은행이 아직 안 자람) 아무것도 안 그린다. 보여 준 문장은 그 열쇠의 다음 빈칸에서 뒤로(quiz.ts moreExamples).
  */
 function MoreExamples({ locale, language, bankKey, current, tag }: { locale: string; language: string; bankKey: string; current: string; tag: string }) {
+  const tone = useBankTone();
   const [list] = useState(() => moreExamples(language, bankKey, current));
   if (!list.length) return null;
   return (
@@ -310,7 +312,7 @@ function MoreExamples({ locale, language, bankKey, current, tag }: { locale: str
                 {at >= 0 ? (
                   <>
                     {source.text.slice(0, at)}
-                    <strong className="font-semibold text-status-learned">{piece}</strong>
+                    <strong className={`font-semibold ${tone.accent}`}>{piece}</strong>
                     {source.text.slice(at + piece.length)}
                   </>
                 ) : (
@@ -414,9 +416,10 @@ type Graded = "exact" | "loose" | "also" | false;
 
 /** 원래 정답과 다른데 맞음으로 본 답 아래 한 줄: "이 답도 맞아요. 원래 정답: X". */
 function AlsoRight({ ui, answer }: { ui: UICopy; answer: string }) {
+  const tone = useBankTone();
   return (
     <p dir="auto" data-quiz-also className="text-caption text-slate-300">
-      ✓ {ui.quizAlsoRight} <bdi className="font-semibold text-status-learned">{answer}</bdi>
+      ✓ {ui.quizAlsoRight} <bdi className={`font-semibold ${tone.accent}`}>{answer}</bdi>
     </p>
   );
 }
@@ -462,6 +465,7 @@ function TypeBox({
   onHint: () => void;
   autoFocus?: boolean;
 }) {
+  const tone = useBankTone();
   const [typed, setTyped] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -493,7 +497,7 @@ function TypeBox({
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
           }}
-          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none placeholder:text-amber-200/70 ${done ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
+          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${tone.hint} ${done ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : `border-line text-slate-100 ${tone.focus}`}`}
         />
         {done ? null : (
           <button type="button" onClick={submit} disabled={!typed.trim() || busy} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
@@ -506,7 +510,7 @@ function TypeBox({
           <AlsoRight ui={ui} answer={answer} />
         ) : result === "loose" || !result ? (
           <p dir="auto" className="text-caption text-slate-300">
-            → <bdi className="font-semibold text-status-learned">{answer}</bdi>
+            → <bdi className={`font-semibold ${tone.accent}`}>{answer}</bdi>
           </p>
         ) : null
       ) : (
@@ -550,6 +554,7 @@ function TypeView({
   /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 틀림(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
   strict?: boolean;
 }) {
+  const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
   const [hint, setHint] = useState(0);
   const { checking, grade } = useTypedGrade(language);
@@ -571,7 +576,7 @@ function TypeView({
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
-          <strong className={`font-semibold ${answered ? "text-status-learned" : "text-amber-200"}`}>{answered ? question.answer : "＿＿＿"}</strong>
+          <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
           {question.after}
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
@@ -619,6 +624,7 @@ function SpotView({
   /** 대화 안: 뜻 줄·"틀린 곳 없음" 없이(그 줄이 틀린 줄인 걸 이미 앎). */
   bare?: boolean;
 }) {
+  const tone = useBankTone();
   const [tapped, setTapped] = useState<number | null>(null);
   const [said, setSaid] = useState<"none" | null>(null);
   const [result, setResult] = useState<Graded | null>(null);
@@ -656,7 +662,7 @@ function SpotView({
                 ? "border-line text-slate-500 line-through"
                 : "border-transparent text-slate-200"
             : tapped === i
-              ? "border-amber-300/70 bg-amber-300/10 text-amber-100"
+              ? tone.pick
               : "border-line text-slate-100 hover:bg-white/10";
           return (
             <button
@@ -751,6 +757,7 @@ function DialogView({
   onAnswer: (answer: Answer) => void;
   tag: string;
 }) {
+  const tone = useBankTone();
   const [picked, setPicked] = useState<number | null>(null);
   const right = picked === question.at;
   return (
@@ -764,7 +771,7 @@ function DialogView({
             : shown
               ? "border-warn bg-warn/10 text-warn"
               : right && i === question.at
-                ? "border-amber-300/70 bg-amber-300/10 text-amber-50"
+                ? tone.pick
                 : "border-line text-slate-100 hover:bg-white/5";
         return (
           <div key={i} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
@@ -821,6 +828,7 @@ function ChooseView({
   /** 낱말 문제(w|): 그 낱말을 골랐는지만 본다 — 다른 보기를 서버에 다시 묻지 않음(단어 시험에서 일부러 틀린 보기가 맞음으로 기록됨, 2026-11-01). */
   strict?: boolean;
 }) {
+  const tone = useBankTone();
   const [picked, setPicked] = useState<number | null>(null);
   // 뜻 줄 없이 내니 다른 보기도 문장에 맞을 수 있다(Su/El agua) — 틀린 보기를 고르면 서버가 한 번 더 보고, 맞으면 맞음(2026-10-31).
   const [alsoOk, setAlsoOk] = useState(false);
@@ -836,7 +844,7 @@ function ChooseView({
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
-          <strong className={`font-semibold ${answered ? "text-status-learned" : "text-amber-200"}`}>{shown}</strong>
+          <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{shown}</strong>
           {question.after}
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
@@ -893,6 +901,7 @@ const CIRCLED = ["①", "②", "③", "④"];
  * 뜻 줄은 답한 뒤에만(빈칸 쓰기와 같음).
  */
 function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: MultiQuestion; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const tone = useBankTone();
   const [typed, setTyped] = useState<string[]>(() => question.blanks.map(() => ""));
   const [results, setResults] = useState<Graded[] | null>(null);
   const { checking, grade } = useTypedGrade(language);
@@ -933,7 +942,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
                 answered ? (
                   <strong className={`font-semibold ${results?.[k] ? "text-good" : "text-warn underline decoration-dotted"}`}>{question.blanks[k]!.answer}</strong>
                 ) : (
-                  <strong className="font-semibold text-amber-200">＿{CIRCLED[k]}＿</strong>
+                  <strong className={`font-semibold ${tone.blank}`}>＿{CIRCLED[k]}＿</strong>
                 )
               ) : null}
             </span>
@@ -947,14 +956,14 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
           return (
             <div key={i} className="flex flex-col gap-1">
               <div className="flex items-center gap-2">
-                <span aria-hidden className="w-5 shrink-0 text-center text-caption text-amber-200">
+                <span aria-hidden className={`w-5 shrink-0 text-center text-caption ${tone.blank}`}>
                   {CIRCLED[i]}
                 </span>
                 {blank.options ? (
                   <div className="flex min-w-0 flex-1 flex-wrap gap-1.5">
                     {blank.options.map((option) => {
                       const on = typed[i] === option;
-                      const style = answered ? (option === blank.answer ? "border-good bg-good/10 text-ink" : on ? "border-warn text-warn line-through" : "border-line text-slate-500") : on ? "border-amber-300/70 bg-amber-300/10 text-amber-100" : "border-line text-slate-100 hover:bg-white/5";
+                      const style = answered ? (option === blank.answer ? "border-good bg-good/10 text-ink" : on ? "border-warn text-warn line-through" : "border-line text-slate-500") : on ? tone.pick : "border-line text-slate-100 hover:bg-white/5";
                       return (
                         <button key={option} type="button" dir="auto" disabled={Boolean(answered)} onClick={() => setTyped((list) => list.map((one, k) => (k === i ? option : one)))} className={`rounded-lg border px-2.5 py-1 text-chat ${style}`}>
                           {option}
@@ -976,7 +985,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
                     onKeyDown={(event) => {
                       if (event.key === "Enter" && !event.nativeEvent.isComposing) void submit();
                     }}
-                    className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : "border-line text-slate-100 focus:border-amber-300/60"}`}
+                    className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : `border-line text-slate-100 ${tone.focus}`}`}
                   />
                 )}
               </div>
@@ -987,7 +996,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
                   </div>
                 ) : result === "loose" || !result ? (
                   <p dir="auto" className="ps-7 text-caption text-slate-300">
-                    → <bdi className="font-semibold text-status-learned">{blank.answer}</bdi>
+                    → <bdi className={`font-semibold ${tone.accent}`}>{blank.answer}</bdi>
                   </p>
                 ) : null
               ) : null}
@@ -1014,6 +1023,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
  * 틀린 곳이 아닌 낱말을 두 번 누르면 끝(못 찾은 곳은 틀림). 머리의 ✎ n/m = 찾은 곳 / 틀린 곳 수. 결과는 틀린 곳마다 그 열쇠에.
  */
 function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: SpotsQuestion; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const tone = useBankTone();
   const [done, setDone] = useState<(Graded | null)[]>(() => question.errors.map(() => null));
   const [active, setActive] = useState<number | null>(null);
   const [misses, setMisses] = useState<number[]>([]);
@@ -1064,7 +1074,7 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
                 ? "border-good/60 bg-good/10 text-ink"
                 : "border-warn bg-warn/15 text-warn"
               : e >= 0 && active === e
-                ? "border-amber-300/70 bg-amber-300/10 text-amber-100"
+                ? tone.pick
                 : misses.includes(i)
                   ? "border-line text-slate-500 line-through"
                   : "border-line text-slate-100 hover:bg-white/10";
@@ -1120,7 +1130,7 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
           {question.errors.map((error, i) => (
             <p key={i} dir="auto" className="text-caption text-slate-300">
               <span aria-hidden>{done[i] ? "✓ " : "✗ "}</span>
-              <bdi className="text-slate-500 line-through">{error.near[0]}</bdi> → <bdi className="font-semibold text-status-learned">{error.want}</bdi>
+              <bdi className="text-slate-500 line-through">{error.near[0]}</bdi> → <bdi className={`font-semibold ${tone.accent}`}>{error.want}</bdi>
             </p>
           ))}
           <div className="mt-1 flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">
@@ -1281,12 +1291,13 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
 
 /** 단어 퀴즈: 문장 속 그 낱말에 밑줄(처음 나온 곳 하나). */
 function Marked({ text, mark }: { text: string; mark?: string }) {
+  const tone = useBankTone();
   const at = mark ? text.indexOf(mark) : -1;
   if (!mark || at < 0) return <>{text}</>;
   return (
     <>
       {text.slice(0, at)}
-      <span data-word-mark className="underline decoration-status-learned decoration-2 underline-offset-4">{mark}</span>
+      <span data-word-mark className={`underline ${tone.mark} decoration-2 underline-offset-4`}>{mark}</span>
       {text.slice(at + mark.length)}
     </>
   );
@@ -1309,6 +1320,7 @@ function SayView({
   onAnswer: (answer: Answer) => void;
   tag: string;
 }) {
+  const tone = useBankTone();
   const { isPremium } = usePremium();
   const [listening, setListening] = useState(false);
   const [limited, setLimited] = useState(false);
@@ -1351,7 +1363,7 @@ function SayView({
         {quizGloss(question.gloss, locale, language) ?? "…"}
       </p>
       {question.mark ? (
-        <span dir="auto" data-say-word className="self-start rounded-full border border-status-learned/50 px-3 py-1 text-note text-ink underline decoration-status-learned underline-offset-4">
+        <span dir="auto" data-say-word className={`self-start rounded-full border px-3 py-1 text-note text-ink underline underline-offset-4 ${tone.on} ${tone.mark}`}>
           {question.mark}
         </span>
       ) : null}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useBankTone } from "@/components/studyMap/bankTone";
 import { useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -50,6 +51,7 @@ export function WordbookCard({
   /** 퀴즈 칸 머리의 아이콘(📖)만 — 누르면 같은 시트. */
   icon?: boolean;
 }) {
+  const tone = useBankTone();
   const [view, setView] = useState<View>(readView);
   const [open, setOpen] = useState(false);
   const [now] = useState(() => Date.now());
@@ -150,7 +152,7 @@ export function WordbookCard({
                     setQuery(event.target.value);
                     setMiss(false);
                   }}
-                  className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${miss ? "border-warn text-warn" : "border-line text-slate-100 focus:border-amber-300/60"}`}
+                  className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${miss ? "border-warn text-warn" : `border-line text-slate-100 ${tone.focus}`}`}
                 />
                 <button type="submit" aria-label={ui.wordSearch} title={ui.wordSearch} disabled={!query.trim() || searching} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/90 text-slate-900 disabled:opacity-50">
                   <span aria-hidden>{searching ? "…" : "🔎"}</span>

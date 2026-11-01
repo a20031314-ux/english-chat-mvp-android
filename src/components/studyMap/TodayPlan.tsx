@@ -52,6 +52,7 @@ import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
 import { keyPart, nextStudy, recordQuiz, restUntil, streakOf, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import { multiOf, spotsOf } from "@/lib/curriculum/multiQuiz";
+import { bankTone, BankToneProvider } from "@/components/studyMap/bankTone";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
@@ -288,6 +289,10 @@ export function TodayPlan({
   const circleOrder = useMemo(() => (bank ? bank.orderKeys.filter((key) => bank.ready.has(key)) : []), [bank]);
   // 수준 맞추기(curriculum/vocabLevel.ts, 2026-11-01 사용자 "처음엔 모든 단계를 섞어서, 점점 가늠해 가며 사용자별로"): 어휘 칸을 따로 안 골랐을 때.
   const levelOn = !vocabPick || (vocabPick.by === "stage" && !vocabPick.value);
+  // Quizbank 몸통은 여기서 만들어 칸 밖에서 넘기므로 칸 색을 직접(studyMap/bankTone.tsx).
+  const keepTone = bankTone("keep");
+  // ⚙ 시트는 Quizbank에서만 열린다.
+  const sheetTone = keepTone;
   const cuts = stageCuts(language);
   const level = levelOf(circle, stage, cuts);
   const ranked = useMemo(() => bank?.ranked ?? [], [bank]);
@@ -1076,6 +1081,8 @@ export function TodayPlan({
         />
       ) : null}
       {wordTestQ ? (
+        // 단어 시험은 Quizbank에서 여는 화면 — 그 칸 색으로.
+        <BankToneProvider tone="keep">
         <QuizPlayer
           key={`wordtest-${round}`}
           ui={ui}
@@ -1100,6 +1107,7 @@ export function TodayPlan({
           onDone={() => undefined}
           onClose={() => setWordTestQ(null)}
         />
+        </BankToneProvider>
       ) : null}
       {bundle ? (
         <QuizPlayer
@@ -1258,7 +1266,7 @@ export function TodayPlan({
           data-way={one.id}
           aria-label={one.label}
           onClick={() => onPick(one.id)}
-          className={`flex min-w-0 flex-col gap-2 rounded-xl border p-2 text-start ${value === one.id ? "border-status-learned bg-status-learned/10" : "border-line hover:bg-white/5"}`}
+          className={`flex min-w-0 flex-col gap-2 rounded-xl border p-2 text-start ${value === one.id ? sheetTone.on : "border-line hover:bg-white/5"}`}
         >
           <MiniDialogue bubbles={one.bubbles} />
           <span className="text-caption font-semibold text-ink">{one.label}</span>
@@ -1315,7 +1323,7 @@ export function TodayPlan({
                       saveCircle({ ...circleRef.current, lv: pickLevel(levelOf(circleRef.current, stage, cuts), row.start) });
                       setSettingsOpen(null);
                     }}
-                    className={`flex items-baseline gap-2 rounded-xl border px-3 py-2 text-start ${on ? "border-status-learned/60 bg-status-learned/10" : "border-line hover:bg-white/10"}`}
+                    className={`flex items-baseline gap-2 rounded-xl border px-3 py-2 text-start ${on ? keepTone.on : "border-line hover:bg-white/10"}`}
                   >
                     <span className="w-16 shrink-0 text-caption text-slate-400">{ui.stageNumber.replace("{n}", row.stage > 5 ? "\u20665+\u2069" : String(row.stage))}</span>
                     <span dir="auto" className="min-w-0 flex-1 text-chat text-ink">
@@ -1336,7 +1344,7 @@ export function TodayPlan({
                     type="button"
                     aria-pressed={on}
                     onClick={() => save({ ...settings, vocab: { by: settings.vocab!.by, value: group.id } })}
-                    className={`rounded-full border px-3 py-1 text-caption ${on ? "border-status-learned/60 bg-status-learned/10 text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
+                    className={`rounded-full border px-3 py-1 text-caption ${on ? `${keepTone.on} text-ink` : "border-line text-slate-300 hover:bg-white/10"}`}
                   >
                     {vocabGroupName(ui, settings.vocab!.by, group.id)}
                   </button>
@@ -1410,7 +1418,7 @@ export function TodayPlan({
             setRound((n) => n + 1);
             setWordTestQ(made);
           }}
-          className="mt-2 flex w-full items-center gap-2 rounded-xl border border-status-learned/50 bg-status-learned/[0.06] px-3 py-2 text-start text-chat font-semibold text-ink hover:bg-status-learned/10"
+          className={`mt-2 flex w-full items-center gap-2 rounded-xl border ${keepTone.soft} px-3 py-2 text-start text-chat font-semibold text-ink`}
         >
           <span aria-hidden>📝</span>
           <span className="min-w-0 flex-1">{ui.wordTestTitle}</span>
@@ -1447,7 +1455,7 @@ export function TodayPlan({
               type="button"
               data-feel={feel}
               onClick={() => saveCircle({ ...circleRef.current, lv: feelLevel(levelOf(circleRef.current, stage, cuts), feel, circleRef.current.newSeen ?? 0) })}
-              className={`rounded-full border px-3 py-1 text-caption ${feel === "easy" && (level.run ?? 0) >= 10 ? "border-status-learned/60 bg-status-learned/10 text-ink" : "border-line text-slate-300 hover:bg-white/10"}`}
+              className={`rounded-full border px-3 py-1 text-caption ${feel === "easy" && (level.run ?? 0) >= 10 ? `${keepTone.on} text-ink` : "border-line text-slate-300 hover:bg-white/10"}`}
             >
               {{ easy: `😴 ${ui.vocabFeelEasy}`, ok: `👌 ${ui.vocabFeelOk}`, hard: `😵 ${ui.vocabFeelHard}` }[feel]}
             </button>
