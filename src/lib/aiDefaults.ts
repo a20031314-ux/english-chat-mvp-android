@@ -32,6 +32,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   roleplayTutor: "gpt-6-luna",
   roleplayPractice: "gpt-6-luna",
   scriptJudge: "gpt-6-luna",
+  roleplayBranch: "gpt-6-luna",
   scriptRecheck: "gpt-6-luna",
   scriptChoices: "gpt-6-luna",
   ask: "gpt-6-luna",
@@ -83,6 +84,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   // 근거: 가상 사용자 72번 — Haiku는 틀린 줄을 통과시킨 적 없고 틀림 쪽으로만 엄함, 이렇게 하면 통과/틀림 69/72(Sonnet만 쓸 때와 같음).
   // 따라 말하기·통화 다시 말해보기는 낱말 대조라 roleplayPractice(Haiku).
   scriptJudge: HAIKU,
+  // 장면 통화 가지 고르기(2026-11-02): 규칙이 못 받은 말만, 가지 뜻 중 하나 또는 없음 — 시범에서 Haiku로 51% → 90%, 틀린 가지 0.
+  roleplayBranch: HAIKU,
   scriptRecheck: SONNET,
   // 대본 고르기 오답(2026-10-29): 대본마다 한 번 만들어 모두가 같이 쓰므로(호출 수가 대본 수로 끝남) 더 나은 모델로.
   scriptChoices: SONNET,

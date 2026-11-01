@@ -9,6 +9,10 @@
  * - 학습자 차례의 해낼 일은 앱 언어 뜻(en·ko, 다른 앱 언어는 서버가 옮김), 겨냥 틀 `frame`.
  * - 가지마다 뜻 한 줄 `meaning`(영어) — 가지 고르기 모델이 읽는다.
  * - 튜터 줄마다 쉬운 말 `easier` — 🙉 못 알아들었어요(지금은 그때 생성).
+ * - **캐릭터 없음(사용자 2026-11-02 "캐릭터는 빼고 그냥 AI 튜터로"):** 말하는 사람은 늘 그 언어의 AI 튜터(chatPartner.ts — 고른 성별의 이름·얼굴·목소리)가
+ *   그 장면의 역할(점원·이웃…)을 맡는 것. 장면만의 이름을 만들지 않는다 — 튜터가 자기 이름을 말할 땐 `{tutor}`, 받는 문구에 튜터 이름이 들어가도 `{tutor}`.
+ *   튜터가 자기를 말하는 꼴이 성별로 갈리는 줄(hi "आ रही हूँ", es "cansada/cansado" 등)은 문장에 `byTutor: { f, m }`.
+ * - 자유 통화(Just talk)와 별개 — 장면은 따로 고르는 통화다.
  *
  * 순수 모듈 — 화면·서버·검사 도구(scripts/call-scenes.ts)가 같이 쓴다. 모델을 부르지 않는다.
  */
@@ -25,7 +29,20 @@ import { judge } from "./session.ts";
 /** 앱 언어 뜻. ko는 학습 언어가 한국어면 빠질 수 있다. */
 export type SceneGloss = { en: string; ko?: string };
 
-export type SceneSentence = { text: string; gloss: SceneGloss };
+/** 튜터 이름 자리(그 언어 AI 튜터의 이름으로 바뀜). */
+export const TUTOR_SLOT = "{tutor}";
+
+export type SceneSentence = {
+  text: string;
+  gloss: SceneGloss;
+  /** 튜터가 자기를 말하는 꼴이 성별로 갈릴 때 — 고른 튜터의 꼴로 바꿔 읽는다(없는 쪽은 text·gloss 그대로). */
+  byTutor?: { f?: { text: string; gloss?: SceneGloss }; m?: { text: string; gloss?: SceneGloss } };
+};
+
+/** 그 언어 AI 튜터 — 이름 자리와 성별 꼴을 채운다. */
+export type SceneTutor = { name: string; gender: "f" | "m" };
+
+const fill = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.name) : text);
 
 export type SceneBranch = Branch & {
   /** 이 가지가 뜻하는 것, 영어 한 줄 — 가지 고르기 모델이 읽는다. */
@@ -87,6 +104,7 @@ export function toScenario(
   scene: CallScene,
   voice: string,
   uiLang: "en" | "ko" = "en",
+  tutor?: SceneTutor,
 ): { scenario: RoleplayScenario; bank: SentenceBank } {
   const nodes: Record<string, ScriptNode> = {};
   for (const [id, node] of Object.entries(scene.nodes)) {
@@ -95,7 +113,7 @@ export function toScenario(
           type: "learner",
           id: node.id,
           goal: node.goal[uiLang] ?? node.goal.en,
-          expect: node.expect.map(({ match, go, inOrder }) => ({ match, go, ...(inOrder ? { inOrder } : {}) })),
+          expect: node.expect.map(({ match, go, inOrder }) => ({ match: match.map((m) => fill(m, tutor)), go, ...(inOrder ? { inOrder } : {}) })),
           ...(node.onMiss ? { onMiss: node.onMiss } : {}),
           ...(node.correction ? { correction: node.correction } : {}),
         }
@@ -103,7 +121,10 @@ export function toScenario(
   }
   const bank: SentenceBank = {};
   for (const [id, sentence] of Object.entries(scene.sentences)) {
-    bank[id] = { text: sentence.text, translation: sentence.gloss[uiLang] ?? sentence.gloss.en, source: "grown" };
+    const own = tutor ? sentence.byTutor?.[tutor.gender] : undefined;
+    const text = own?.text ?? sentence.text;
+    const gloss = own?.gloss ?? sentence.gloss;
+    bank[id] = { text: fill(text, tutor), translation: fill(gloss[uiLang] ?? gloss.en, tutor), source: "grown" };
   }
   return {
     scenario: {
@@ -147,8 +168,8 @@ export function checkScene(scene: CallScene, ctx: SceneContext): string[] {
     at(`canDo 번호는 0~${ctx.canDoCount - 1}`);
   }
 
-  // 그래프 — script.ts 검사를 그대로(목소리는 아무것이나).
-  const { scenario } = toScenario(scene, "alloy");
+  // 그래프 — script.ts 검사를 그대로(목소리는 아무것이나, 튜터 이름은 견본).
+  const { scenario } = toScenario(scene, "alloy", "en", { name: "Alex", gender: "f" });
   for (const id of danglingTargets(scenario)) at(`없는 마디로 감: ${id}`);
   for (const id of unreachableNodes(scenario)) at(`닿지 않는 마디: ${id}`);
   for (const pair of learnerFollowedByLearner(scenario)) at(`학습자 다음 바로 학습자: ${pair}`);
@@ -184,7 +205,8 @@ export function checkScene(scene: CallScene, ctx: SceneContext): string[] {
       if (branch.match.length < 3) at(`${node.id}→${branch.go}: match ${branch.match.length}개 — 3개 이상`);
       // 받을 문구는 그 가지로 실제로 맞아야(앞 가지에 먹히지 않게) — 지금 맞추기(session.judge)로.
       for (const phrase of branch.match) {
-        const got = judge(scenario.nodes[node.id] as never, phrase, SCENE_CHECK_STRICTNESS);
+        const heard = fill(phrase, { name: "Alex", gender: "f" });
+        const got = judge(scenario.nodes[node.id] as never, heard, SCENE_CHECK_STRICTNESS);
         if (!got) at(`${node.id}: "${phrase}"가 어느 가지에도 안 맞음`);
         else if (got.go !== branch.go && !node.expect.some((b) => b.go === got.go && b.match.includes(phrase))) {
           at(`${node.id}: "${phrase}"(→${branch.go})가 앞 가지 →${got.go}로 감`);
@@ -207,7 +229,12 @@ export function checkScene(scene: CallScene, ctx: SceneContext): string[] {
       }
     }
   }
+  const slots = /\{(?!tutor\})[^}]*\}/;
   for (const [id, sentence] of Object.entries(scene.sentences)) {
+    for (const variant of [sentence.byTutor?.f, sentence.byTutor?.m]) {
+      if (variant && !variant.text?.trim()) at(`문장 ${id}: byTutor 글 없음`);
+    }
+    if (slots.test(sentence.text)) at(`문장 ${id}: 모르는 자리 ${sentence.text.match(slots)?.[0]}`);
     if (!sentence.text?.trim()) at(`문장 ${id}: 글 없음`);
     if (!sentence.gloss?.en) at(`문장 ${id}: gloss.en 없음`);
     if (ctx.needsKo && !sentence.gloss?.ko) at(`문장 ${id}: gloss.ko 없음`);

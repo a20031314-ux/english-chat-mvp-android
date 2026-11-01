@@ -165,6 +165,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   scriptRecheck: 1,
   // 퀴즈에서 친 답이 정해진 꼴과 글자로 다를 때만 다시 보기(빈칸 쓰기·틀린 곳 고치기, 2026-10-30) — 맞는 다른 꼴을 틀림으로 세지 않게.
   quizTypedCheck: 1,
+  // 장면 통화에서 규칙 맞추기가 못 받은 말만 가지 고르기(2026-11-02) — 규칙으로 맞으면 부르지 않음.
+  roleplayBranch: 1,
   // 대본 고르기 오답 — 대본마다 한 번(공유 저장), 사용자 수와 상관없음. 만들기 + 확인 = 2.
   scriptChoices: 2,
   // Not model calls — both are zero — but counted here so the ledger can answer

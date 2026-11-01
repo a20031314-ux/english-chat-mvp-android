@@ -118,7 +118,7 @@
 
 ### AI 통화 (어디서나 뜨는 층 CallHost — 대화·사람 탭 📞) `call`
 - 화면: `CallHost` · `CallList` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/CallParts` · `roleplay/CallRecap` · `roleplay/TurnDiagBox` · `roleplay/callHooks`
-- API: `pack/finish` · `pack/today` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
+- API: `pack/finish` · `pack/today` · `roleplay/branch` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
 - 다른 영역이 씀: `CallHost` ← 앱 틀
 
 ### 말하기·통화 공용 부품 — 한 줄 말해 보기, 통화 화면 조각·말풍선 얼굴 자리 (AI 통화·사람 통화·채팅·My가 같이 씀) `speech`
@@ -209,7 +209,7 @@
 ## 자동: 쓰지 않는 것 (지울지 확인)
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
-- 앱·스크립트 어디서도 안 부르는 API: 없음
+- 앱·스크립트 어디서도 안 부르는 API: `roleplay/branch`
 - 밖에서 부르는 API: `curriculum/choices` My 대본 고르기 방식(2026-10-29~)이 씀 — 2026-11-01 대본이 따라 말하기 하나가 되며 새 앱에서 뺌. Play에 나간 앱(2.75)은 이 방식이 없어 아무도 안 부름 — 다음 정리 때 지움(op scriptChoices도) · `pack/today` 옛 앱 2.48~2.75가 오늘의 팩에 씀 — 2.76부터 새 앱에서 뺌(2026-11-01 화면 코드 PackCard 지움), 최소 지원 버전을 2.76 이상으로 올리면 지움 · `pack/finish` 옛 앱 2.48~2.75가 오늘의 팩 끝(회고)에 씀 — 2.76부터 새 앱에서 뺌, 최소 지원 버전을 2.76 이상으로 올리면 지움 · `curriculum/pick` 옛 앱 2.48~2.74가 문장분석 "지도에 넣기"에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/progress` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-check` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-seen` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/missions` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/review` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/ask` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `notes/place` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/profile` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `curriculum/qbank/seed` Vercel 예약 작업(vercel.json) — 출시 초반 문제은행 미리 채우기 · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
 
 <!-- 자동 끝 -->

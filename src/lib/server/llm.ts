@@ -56,6 +56,7 @@ export const TASKS = {
   roleplayPractice: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.roleplayPractice, about: "통화 다시 말해보기·대본 따라 말하기 비교" },
   scriptChoices: { tier: "high", openai: () => D.scriptChoices, about: "대본 고르기 오답(문법·어휘로 헷갈리는 것, 대본마다 한 번·공유)" },
   scriptRecheck: { tier: "high", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.scriptRecheck, about: "대본 판단 다시 보기(Haiku가 틀림이라 할 때만)" },
+  roleplayBranch: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.roleplayBranch, about: "장면 통화 가지 고르기(규칙이 못 받은 말만)" },
   scriptJudge: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.scriptJudge, about: "대본 떠올려 말하기·내 말로·문장구조 판단(뜻끼리 맞춤)" },
   ask: { tier: "high", openai: () => env("OPENAI_ASK_MODEL") ?? D.ask, about: "표현 묻기(빠른·직접 질문)" },
   mission: { tier: "high", openai: () => env("OPENAI_MISSION_MODEL") ?? D.mission, about: "지도 미션 확인" },
