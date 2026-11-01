@@ -13,10 +13,11 @@ import { fallbackTurns, lessonPassed, type FrameLesson as Lesson, type LessonSte
 import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
-import { buildQuiz, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { notePool } from "@/lib/curriculum/exam";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
-import { glossFor, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { glossFor, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -35,11 +36,16 @@ const partAt = (pattern: string, piece: string) => (pattern.indexOf(piece) < 0 ?
 
 type TalkResult = { heard: string; practice: Practice | null; good: boolean; revealed: boolean };
 
+/** Stagebank 표현·문법 칸 하나(2026-11-01 설계 — 문장구조 수업과 같은 화면, 퀴즈 칸 없이 설명 › 대화). */
+export type LessonSubject = { key: string; kind: "expression" | "grammar"; stage: number; title?: string };
+type Example = { text: string; gloss: ScriptGloss; slot?: string };
+
 export function FrameLesson({
   ui,
   locale,
   language,
   frame,
+  subject,
   passed,
   onPassed,
   onClose,
@@ -47,23 +53,30 @@ export function FrameLesson({
   ui: UICopy;
   locale: string;
   language: string;
-  frame: Frame;
+  /** 문장구조 하나 — 또는 subject(표현·문법 칸). */
+  frame?: Frame;
+  subject?: LessonSubject;
   passed: boolean;
   onPassed?: (id: string) => void;
   onClose: () => void;
 }) {
   const { isPremium } = usePremium();
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  const key = frame ? `f|${frame.id}` : subject!.key;
+  const itemId = frame?.id ?? key;
+  const stageOf = frame?.stage ?? subject?.stage ?? 1;
   const [step, setStep] = useState<LessonStep>("explain");
-  const [lesson, setLesson] = useState<Lesson | null | undefined>(undefined);
+  const [lesson, setLesson] = useState<(Lesson & { title?: string }) | null | undefined>(undefined);
   useEffect(() => {
     let alive = true;
-    const url = apiUrl(`/api/curriculum/frame-lesson?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&frame=${encodeURIComponent(frame.id)}`);
+    const url = frame
+      ? apiUrl(`/api/curriculum/frame-lesson?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&frame=${encodeURIComponent(frame.id)}`)
+      : apiUrl(`/api/curriculum/item-lesson?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&key=${encodeURIComponent(key)}`);
     const get = () =>
       fetch(url, { headers: entitlementHeaders(isPremium) })
         .then((response) => (response.ok ? response.json() : null))
         .catch(() => null)
-        .then((body: { lesson?: Lesson | null } | null) => body?.lesson ?? null);
+        .then((body: { lesson?: (Lesson & { title?: string }) | null } | null) => body?.lesson ?? null);
     // 처음 만드는 틀은 모델이 한 번 실패할 수 있어 한 번만 다시 묻는다(만든 뒤엔 저장된 것이 바로 옴).
     void get()
       .then((first) => first ?? new Promise<Lesson | null>((resolve) => window.setTimeout(() => void get().then(resolve), 1500)))
@@ -73,7 +86,7 @@ export function FrameLesson({
     return () => {
       alive = false;
     };
-  }, [language, locale, frame.id, isPremium]);
+  }, [language, locale, frame, key, isPremium]);
   useEffect(() => () => stopTts(), []);
 
   // ② 퀴즈: 그 틀 열쇠로 세 문제(말하기 문제는 ③이 하니 뺌).
@@ -82,27 +95,44 @@ export function FrameLesson({
   const [grown, setGrown] = useState(0);
   const onExplain = useRef(true);
   useEffect(() => {
-    void growBank(language, locale, [{ key: `f|${frame.id}`, stage: frame.stage }], (count) => {
+    void growBank(language, locale, [{ key, stage: stageOf }], (count) => {
       if (count && onExplain.current) setGrown((n) => n + 1);
     });
-  }, [language, locale, frame.id, frame.stage]);
+  }, [language, locale, key, stageOf]);
   useEffect(() => {
     onExplain.current = step === "explain";
   }, [step]);
-  const shownExamples = frame.examples;
+  // 표현·문법 칸 예문: 그 소재 재료 중 내 줄 넷(소재 자리 칠함) — 문장구조는 틀 예문 넷.
+  const shownExamples = useMemo<Example[]>(() => {
+    if (frame) return frame.examples;
+    return quizSources(language, key)
+      .filter((source) => source.who !== "them" && source.piece && (source.stage === 0 || source.stage <= stageOf + 1))
+      .slice(0, 4)
+      .map((source) => ({ text: source.text, gloss: source.gloss, slot: key.startsWith("e|") ? (pieceOf(source.text, key.slice(2)) ?? undefined) : source.piece }));
+  }, [frame, language, key, stageOf]);
   const questions = useMemo<QuizQuestion[]>(() => {
     void grown;
+    // 표현·문법 칸은 퀴즈 칸 없이 설명 › 대화(문제는 Quizbank 시험·다시 보기, 2026-11-01 설계).
+    if (!frame) return [];
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
     const quiz = buildQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
     return (quiz?.questions ?? []).filter((question) => question.kind !== "say").slice(0, 3);
-  }, [language, frame.id, frame.stage, seed, shownExamples, grown]);
+  }, [language, frame, seed, shownExamples, grown]);
   const [qIndex, setQIndex] = useState(0);
   const [answered, setAnswered] = useState<Answer | null>(null);
   /** 수업 퀴즈 답(맞음) — 끝나면 퀴즈 기록(quizLog)에 한 번(모두 맞히면 익힘, 2026-11-01). */
   const quizRight = useRef<boolean[]>([]);
 
   // ③ 대화
-  const turns: LessonTurn[] = useMemo(() => (lesson?.turns?.length ? lesson.turns : fallbackTurns(frame, locale)), [lesson, frame, locale]);
+  const turns: LessonTurn[] = useMemo(
+    () =>
+      lesson?.turns?.length
+        ? lesson.turns
+        : frame
+          ? fallbackTurns(frame, locale)
+          : shownExamples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: glossFor(example.gloss, locale) })),
+    [lesson, frame, locale, shownExamples],
+  );
   const [tIndex, setTIndex] = useState(0);
   const [results, setResults] = useState<TalkResult[]>([]);
   const [listening, setListening] = useState(false);
@@ -138,21 +168,31 @@ export function FrameLesson({
   const logged = useRef(false);
   useEffect(() => {
     if (!finished) return;
-    markPracticed(language, frame.id);
+    markPracticed(language, itemId);
+    const good = lessonPassed(results, turns.length);
     if (!logged.current) {
       logged.current = true;
+      // 대화에서 막힌 소재는 정기 시험 재료로(curriculum/exam.ts).
+      if (!good) notePool(language, key, "stuck");
       noteDayResult(language, {
         kind: "lesson",
-        item: frame.id,
-        title: frame.pattern,
+        item: itemId,
+        title: frame?.pattern ?? lesson?.title ?? subject?.title ?? key.slice(2),
         right: results.filter((one) => one?.good).length,
         total: turns.length,
         passed: lessonPassed(results, turns.length),
         said: results.map((one) => ({ text: one?.heard ?? "", good: Boolean(one?.good) })),
       });
     }
-    if (sent.current || !lessonPassed(results, turns.length)) return;
+    if (sent.current || !good) return;
     sent.current = true;
+    // 표현·문법 칸: 대화를 모두 맞히면 퀴즈 기록에 맞음(익힘 — 잊을 때 시험에 다시). 서버 통과 기록은 문장구조만.
+    if (!frame) {
+      noteQuizLog(language, key, true);
+      setJustPassed(true);
+      onPassed?.(key);
+      return;
+    }
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
@@ -164,7 +204,7 @@ export function FrameLesson({
         onPassed?.(frame.id);
       })
       .catch(() => undefined);
-  }, [finished, results, turns.length, language, frame.id, frame.pattern, isPremium, onPassed]);
+  }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed]);
 
   const say = async () => {
     if (!turn || listening) return;
@@ -174,7 +214,7 @@ export function FrameLesson({
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
-      scriptId: frame.id,
+      scriptId: itemId,
       mode: "recall",
       meaning: turn.meGloss,
       ...(turn.them ? { before: turn.them } : {}),
@@ -211,7 +251,10 @@ export function FrameLesson({
   const ok = lessonPassed(results, turns.length);
   const hideFrame = step === "quiz" || step === "talk";
   // "이름 말하기: 제 이름은 ___예요." → "이름 말하기" — 뒤쪽은 틀을 그대로 담고 있어 답이 된다.
-  const meaningHead = glossFor(frame.meaning, locale).split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
+  const meaningText = frame ? glossFor(frame.meaning, locale) : (lesson?.meaning ?? "");
+  const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
+  // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름).
+  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : lesson?.title || subject?.title || "");
 
   return (
     <FullScreenLayer>
@@ -219,11 +262,11 @@ export function FrameLesson({
         <div className="min-w-0 flex-1">
           {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
-            {hideFrame ? meaningHead : frame.pattern} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
+            {hideFrame ? meaningHead || titleText : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>
-          {hideFrame ? null : (
+          {hideFrame || !meaningText ? null : (
             <p dir="auto" className="mt-0.5 text-caption text-slate-400">
-              {glossFor(frame.meaning, locale)}
+              {meaningText}
             </p>
           )}
         </div>
@@ -267,7 +310,7 @@ export function FrameLesson({
             <section data-lesson-meaning>
               <h3 className="text-meta font-semibold text-slate-400">{ui.aboutMeaning}</h3>
               <p dir="auto" className="mt-0.5 text-note text-ink">
-                {lesson?.meaning || glossFor(frame.meaning, locale)}
+                {lesson?.meaning || meaningText}
               </p>
             </section>
             {lesson?.parts?.length ? (
@@ -276,7 +319,7 @@ export function FrameLesson({
                 <ul className="mt-1 flex flex-col gap-1.5">
                   {/* In the order the parts appear in the pattern (the model sometimes lists the blank last). */}
                   {[...lesson.parts]
-                    .sort((a, b) => partAt(frame.pattern, a.piece) - partAt(frame.pattern, b.piece))
+                    .sort((a, b) => partAt(frame?.pattern ?? "", a.piece) - partAt(frame?.pattern ?? "", b.piece))
                     .map((part, index) => (
                     <li key={index} className="flex items-baseline gap-2">
                       <span dir="auto" className={`shrink-0 rounded-lg px-1.5 py-0.5 text-chat ${part.piece.includes("___") ? "border border-dashed border-status-learned/60 text-status-learned" : "bg-white/10 text-ink"}`}>
@@ -308,7 +351,7 @@ export function FrameLesson({
             ) : null}
             <h3 className="-mb-1 text-meta font-semibold text-slate-400">{ui.example}</h3>
             <ul className="flex flex-col gap-2">
-              {frame.examples.map((example, index) => (
+              {shownExamples.map((example, index) => (
                 <li key={index} className="flex items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block text-chat text-ink">
@@ -330,9 +373,25 @@ export function FrameLesson({
                 </li>
               ))}
             </ul>
-            <button type="button" data-lesson-next onClick={goNext} className="self-end rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
-              {ui.scriptNext}
-            </button>
+            <div className="flex items-center justify-end gap-2">
+              {/* The first screen shows what this lesson teaches, so a learner who knows it can skip — the next test checks it (user, 2026-11-01). */}
+              {!passed && !justPassed ? (
+                <button
+                  type="button"
+                  data-lesson-known
+                  onClick={() => {
+                    notePool(language, key, "claimed");
+                    onClose();
+                  }}
+                  className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
+                >
+                  {ui.checkKnown}
+                </button>
+              ) : null}
+              <button type="button" data-lesson-next onClick={goNext} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
+                {ui.scriptNext}
+              </button>
+            </div>
           </div>
         ) : null}
 
@@ -353,14 +412,14 @@ export function FrameLesson({
                 setAnswered(value);
                 quizRight.current[qIndex] = value.correct && !value.skipped;
               }}
-              bankKey={`f|${frame.id}`}
+              bankKey={key}
               showExamples={false}
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);
                 else {
                   const rights = quizRight.current.slice(0, questions.length);
-                  if (rights.length) noteQuizLog(language, `f|${frame.id}`, rights.length === questions.length && rights.every(Boolean));
+                  if (rights.length) noteQuizLog(language, key, rights.length === questions.length && rights.every(Boolean));
                   quizRight.current = [];
                   goNext();
                 }

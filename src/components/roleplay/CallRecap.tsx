@@ -1,6 +1,11 @@
 "use client";
 
+import { useEffect } from "react";
 import { FindInMy } from "@/components/FindInMy";
+import { openLesson } from "@/lib/appIntents";
+import { notePool } from "@/lib/curriculum/exam";
+import { pieceOf } from "@/lib/curriculum/quiz";
+import { ladderFor } from "@/lib/curriculum/stages/index";
 import type { UICopy } from "@/lib/copy";
 import type { RecapFrame, RecapItem } from "@/lib/roleplay/recap";
 
@@ -28,6 +33,13 @@ export function CallRecap({
   /** My로 가기 전에 통화 화면을 닫는다(🔎 My에서 찾기). */
   onLeave: () => void;
 }) {
+  // 고친 말·힌트·못 알아들은 말의 문장구조·표현은 정기 시험 재료로(curriculum/exam.ts, 2026-11-01).
+  useEffect(() => {
+    for (const item of items) {
+      for (const frame of item.frames) notePool(language, `f|${frame.id}`, "stuck");
+      for (const key of expressionKeys(language, item.line)) notePool(language, key, "stuck");
+    }
+  }, [items, language]);
   if (!items.length) return null;
   const label = (item: RecapItem) =>
     item.kind === "fix"
@@ -56,8 +68,14 @@ export function CallRecap({
               {item.line}
             </p>
             {item.meaning ? <p className="mt-0.5 text-meta text-slate-400">{item.meaning}</p> : null}
-            {item.frames.length ? (
+            {item.frames.length || expressionKeys(language, item.line).length ? (
               <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {expressionKeys(language, item.line).map((key) => (
+                  <button key={key} type="button" data-recap-expression onClick={() => openLesson({ language, key })} className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10">
+                    <span aria-hidden>🔤</span>
+                    <bdi dir="auto">{key.slice(2)}</bdi>
+                  </button>
+                ))}
                 {item.frames.map((frame) => (
                   <button
                     key={frame.id}
@@ -79,4 +97,11 @@ export function CallRecap({
       </ol>
     </section>
   );
+}
+
+/** 그 줄에 든 단계 핵심 표현(Stagebank 표현 수업으로) — 셋까지. */
+function expressionKeys(language: string, line: string): string[] {
+  const out: string[] = [];
+  for (const stage of ladderFor(language)?.stages ?? []) for (const expression of stage.expressions) if (out.length < 3 && pieceOf(line, expression)) out.push(`e|${expression}`);
+  return out;
 }

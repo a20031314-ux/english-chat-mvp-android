@@ -21,7 +21,8 @@ import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { noteBankResult } from "@/lib/curriculum/qbank";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
-import { stopTts } from "@/lib/ttsPlayer";
+import { playTts, stopTts } from "@/lib/ttsPlayer";
+import { openLesson } from "@/lib/appIntents";
 
 /**
  * 약한 곳 퀴즈(lib/curriculum/quiz.ts, 2026-10-28 사용자 "틀린 부분을 퀴즈로"): 오늘 할 것의 "퀴즈" 칸을 누르면 열린다.
@@ -209,6 +210,7 @@ export function QuestionView({
   onNext,
   bankKey,
   showExamples = true,
+  explainLink = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -221,12 +223,17 @@ export function QuestionView({
   bankKey?: string;
   /** 답한 뒤 다른 예문 둘(문장구조 수업은 끔 — 설명에 예문이 있고 다음 문제가 미리 정해져 있어, 보여 준 예문이 바로 다음 문제로 나옴, 가상 사용자 2026-11-01). */
   showExamples?: boolean;
+  /** 틀리면 "설명"으로 Stagebank 그 소재 수업을 연다(2026-11-01 설계 — 설명은 Stagebank 한 곳, 문제는 Quizbank). 시험 중엔 끔. */
+  explainLink?: boolean;
 }) {
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
-  const question: QuizQuestion =
-    given.kind === "meaning" && quizGloss(given.options[given.answer]!, locale, language) === null
-      ? { kind: "say", text: given.text, gloss: given.gloss, from: given.from, ...(given.mark ? { mark: given.mark } : {}) }
-      : given;
+  const question: QuizQuestion = useMemo(
+    () =>
+      given.kind === "meaning" && quizGloss(given.options[given.answer]!, locale, language) === null
+        ? { kind: "say", text: given.text, gloss: given.gloss, from: given.from, ...(given.mark ? { mark: given.mark } : {}) }
+        : given,
+    [given, locale, language],
+  );
   const onAnswer = (value: Answer) => {
     // 문제은행 셈은 그 열쇠의 빈칸 문제만(틀린 곳 고치기의 문장은 일부러 틀린 문장이라 셈에 넣지 않음).
     if (bankKey && !answered && !value.skipped && (question.kind === "type" || question.kind === "choose")) {
@@ -274,12 +281,18 @@ export function QuestionView({
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "reply" ? <ReplyView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {answered && examples && bankKey && "text" in question ? <MoreExamples key={question.text} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-warn"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
+          {explainLink && !answered.correct && bankKey && /^[efg]\|/.test(bankKey) ? (
+            <button type="button" data-quiz-explain onClick={() => openLesson({ language, key: bankKey })} className="ms-auto rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+              {ui.explanation}
+            </button>
+          ) : null}
           <button type="button" onClick={onNext} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
             {ui.scriptNext}
           </button>
@@ -498,7 +511,7 @@ function TypeBox({
           autoCorrect="off"
           autoComplete="off"
           spellCheck={false}
-          placeholder={hintText || undefined}
+          placeholder={hintText || (/\p{Script=Han}/u.test(answer) ? (tag.startsWith("zh") ? "pīnyīn" : tag.startsWith("ja") ? "ひらがな" : undefined) : undefined)}
           onChange={(event) => setTyped(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
@@ -1407,6 +1420,77 @@ function Marked({ text, mark }: { text: string; mark?: string }) {
       <span data-word-mark className={`underline ${tone.mark} decoration-2 underline-offset-4`}>{mark}</span>
       {text.slice(at + mark.length)}
     </>
+  );
+}
+
+/** 대화 응답(정기 시험): 상대 줄을 먼저 들려주고(🔊 다시), 보기 셋에서 내 대답을 고른다. 상대 줄 글·뜻은 답한 뒤에. */
+function ReplyView({
+  locale,
+  language,
+  question,
+  answered,
+  onAnswer,
+  tag,
+}: {
+  locale: string;
+  language: string;
+  question: Extract<QuizQuestion, { kind: "reply" }>;
+  answered: Answer | null;
+  onAnswer: (answer: Answer) => void;
+  tag: string;
+}) {
+  const tone = useBankTone();
+  const [picked, setPicked] = useState<number | null>(null);
+  useEffect(() => {
+    void playTts(question.them, tag, SCRIPT_VOICES.them);
+  }, [question.them, tag]);
+  return (
+    <div className="flex flex-col gap-3" data-reply>
+      <div className="flex items-start gap-2 self-start rounded-2xl bg-white/10 px-3 py-2">
+        <TTSButton text={question.them} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
+        {answered ? (
+          <span className="min-w-0">
+            <span dir="auto" className="block text-chat text-slate-100">
+              {question.them}
+            </span>
+            <span dir="auto" className="mt-0.5 block text-meta text-slate-400">
+              {quizGloss(question.themGloss, locale, language) ?? ""}
+            </span>
+          </span>
+        ) : (
+          <span aria-hidden className="self-center text-chat text-slate-500">…</span>
+        )}
+      </div>
+      <div className="flex flex-col gap-2">
+        {question.options.map((option, i) => {
+          const isRight = i === question.answer;
+          const style = answered
+            ? isRight
+              ? "border-good bg-good/10 text-ink"
+              : picked === i
+                ? "border-warn text-warn line-through"
+                : "border-line text-slate-500"
+            : picked === i
+              ? tone.pick
+              : "border-line text-slate-100 hover:bg-white/5";
+          return (
+            <button
+              key={i}
+              type="button"
+              dir="auto"
+              disabled={Boolean(answered)}
+              onClick={() => {
+                setPicked(i);
+                onAnswer({ correct: isRight, picked: option });
+              }}
+              className={`${chip} text-start ${style}`}
+            >
+              {option}
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

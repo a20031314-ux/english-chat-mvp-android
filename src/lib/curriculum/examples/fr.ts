@@ -961,5 +961,13 @@ export const FR_EXTRA: Record<string, ExtraExample[]> = {
    "ko": "날씨에 따라 달라요.",
    "replaces": "Aucune idée. Ça dépend des scénaristes, je suppose."
   }
+ ],
+ "e|Salut": [
+  {
+   "text": "Salut, tu viens au café ce soir ?",
+   "en": "Hi, are you coming to the café tonight?",
+   "ko": "안녕, 오늘 저녁에 카페 올래?",
+   "replaces": "Salut ! Ça va bien, merci. Et toi ?"
+  }
  ]
 };

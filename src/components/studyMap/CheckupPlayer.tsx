@@ -49,7 +49,7 @@ export function CheckupPlayer({
   /** 머리 이름(없으면 이번 주 확인). */
   title?: string;
   /** 답(첫 답만, 건너뛴 말하기 null)으로 결과를 만드는 법 — 없으면 이번 주 확인 summarize. */
-  finishWith?: (answers: (boolean | null)[]) => CheckResult;
+  finishWith?: (answers: (boolean | null)[], full: (Answer | undefined)[]) => CheckResult;
   /** 결과 맨 위 한 줄·아래 버튼(결과마다). */
   heading?: (result: CheckResult) => string | undefined;
   actions?: (result: CheckResult) => ReactNode;
@@ -94,7 +94,7 @@ export function CheckupPlayer({
               if (next >= items.length) {
                 // 마지막 문제 다음: 첫 답만으로 결과(말하기를 못 한 것은 빼고).
                 const given = items.map((_, i) => (answers[i]?.skipped ? null : (answers[i]?.correct ?? false)));
-                const finished = finishWith ? finishWith(given) : summarize(items as readonly CheckItem[], given, stage);
+                const finished = finishWith ? finishWith(given, items.map((_, i) => answers[i])) : summarize(items as readonly CheckItem[], given, stage);
                 setResult(finished);
                 // 문제 통계(모두의 난이도)는 열쇠가 있는 문제만 — 결과와 함께 보내고 서버는 결과에 남기지 않음.
                 const keyed = items.flatMap((item, i) => (item.key ? [{ item: { key: item.key, question: item.question }, answer: given[i] ?? null }] : []));
@@ -114,6 +114,10 @@ export function CheckupPlayer({
 
 function partName(ui: UICopy, part: PartId): string {
   return { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation }[part];
+}
+
+function sectionName(ui: UICopy, section: "vocab" | "recognize" | "recall" | "reply" | "dialog"): string {
+  return { vocab: ui.partVocab, recognize: ui.examRecognize, recall: ui.examRecall, reply: ui.examReply, dialog: ui.examDialog }[section];
 }
 
 function originName(ui: UICopy, origin: CheckOrigin): string {
@@ -153,8 +157,30 @@ export function CheckupResult({
           ))}
         </ul>
       ) : null}
+      {result.sections && Object.keys(result.sections).length ? (
+        <ul data-exam-sections className="flex flex-col gap-1.5">
+          {(["vocab", "recognize", "recall", "reply", "dialog"] as const).filter((one) => result.sections![one]).map((one) => {
+            const [right, total] = result.sections![one]!;
+            const before = previous?.sections?.[one];
+            const diff = before && before[1] ? Math.round((right / total - before[0] / before[1]) * 100) : null;
+            return (
+              <li key={one} data-section={one} className="flex items-center gap-2">
+                <span className="min-w-0 flex-1 text-note text-ink">{sectionName(ui, one)}</span>
+                {diff !== null && diff !== 0 ? (
+                  <span className={`text-caption tabular-nums ${diff > 0 ? "text-good" : "text-warn"}`}>
+                    {ui.checkupPrev} {diff > 0 ? "▲" : "▼"}
+                  </span>
+                ) : null}
+                <span className="text-caption tabular-nums text-slate-300">
+                  {right}/{total}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
       <ul className="flex flex-col gap-2">
-        {PART_IDS.filter((part) => result.parts[part]).map((part) => {
+        {PART_IDS.filter((part) => !result.sections && result.parts[part]).map((part) => {
           const [right, total] = result.parts[part]!;
           const now = rateOf(result.parts[part])!;
           const before = rateOf(previous?.parts[part]);

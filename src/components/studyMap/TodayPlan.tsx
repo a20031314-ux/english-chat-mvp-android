@@ -54,6 +54,8 @@ import { keyPart, nextStudy, recordQuiz, restUntil, streakOf, type QuizLog, type
 import { multiOf, spotsOf } from "@/lib/curriculum/multiQuiz";
 import { commonWords, hitsIn, readTalks, shareable, talkOf, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { bankTone, BankToneProvider } from "@/components/studyMap/bankTone";
+import { buildExam, EXAM_POOL_MIN, examDue, finishExam, notePool, readLadder, readPool, saveExamState, type ExamItem } from "@/lib/curriculum/exam";
+import { openLesson } from "@/lib/appIntents";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
@@ -94,7 +96,7 @@ function saveQuizDone(day: string, keys: Set<string>) {
   }
 }
 
-type StudyFocus = "review" | "auto" | PartId;
+type StudyFocus = "review" | "auto" | "exam" | PartId;
 /** 지속 학습의 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘" → "알아서·어휘·문법·표현·발음을 복습과 같은 층위로"). */
 type StudyLane = "review" | "learn";
 /** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
@@ -195,7 +197,9 @@ export function TodayPlan({
   const [review, setReview] = useState<ReviewMap>(initialReview);
   // 복습은 지속 학습 아래 따로 칸(2026-10-30 사용자 "복습탭은 따로 독립된 탭으로, 지속학습 아래에") — 지속 학습 탭에는 복습이 없다(예전 설정의 review는 랜덤으로).
   // 지속 학습 탭은 어휘 · 문법 · 표현(2026-10-30 사용자 "지속 학습 > 단어 > 학습 방식" — 랜덤은 탭이 아니라 방식). 저장된 랜덤·복습은 어휘로.
-  const keepFocus: PartId = settings.focus === "review" || settings.focus === "auto" ? "vocab" : settings.focus;
+  // Quizbank 탭 셋(2026-11-01 사용자 "셋으로 줄여줘"): 어휘 · 시험 · 다시 보기 — 예전 문법·표현 탭을 골라 둔 사람은 어휘로.
+  const keepFocus = "vocab" as PartId;
+  const examTab = settings.focus === "exam";
   const studyFocus: PartId | null = keepFocus;
   // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
   const firstPick = (picks: readonly StudyPick[], lane: StudyLane = "learn"): StudyPick | undefined =>
@@ -342,7 +346,10 @@ export function TodayPlan({
     if (offers.length) void offerBank(language, offers.slice(-12));
   }, [language, stage, bankReady]);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | null>(null);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | "exam" | null>(null);
+  /** 정기 시험(curriculum/exam.ts) — 연 동안 문제 고정. */
+  const [examItems, setExamItems] = useState<ExamItem[] | null>(null);
+  const [examSeen, setExamSeen] = useState(0);
   // 큰 시험을 한 번도 안 본 사람: 이 폰에서 오늘 할 것을 처음 본 때(3일 뒤 단계 시험을 권함, curriculum/stageTest.ts bigTestDue).
   const [firstSeen, setFirstSeen] = useState(0);
   useEffect(() => {
@@ -506,6 +513,8 @@ export function TodayPlan({
     let nextTally = tally;
     for (const { key, correct } of results) {
       noteQuizDay(language, localDay(), correct, key);
+      // 틀린 문장구조·표현·문법은 정기 시험 재료로(curriculum/exam.ts).
+      if (!correct) notePool(language, key, "wrong");
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
       if (correct && logged[key] && !logged[key]!.last) nextTally = addTally(nextTally, { fixed: key });
       logged = recordQuiz(logged, key, correct);
@@ -613,7 +622,9 @@ export function TodayPlan({
   const placementOffer = !lastBig && (passedSet.size > 0 || practiced.size > 0);
   // 새로 배우기 버튼의 시험(실력 확인 → 단계 시험 → 단계 미리 확인), 복습 버튼의 시험(이번 주 확인).
   const learnTest: "placement" | "stage" | "entry" | null = placementOffer ? "placement" : stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : null;
-  const reviewTest: "take" | null = checkupOffer ? "take" : null;
+  // 이번 주 확인은 정기 시험(Quizbank 시험 탭)으로 바뀜(2026-11-01) — Logbank에는 📈 실력 기록만.
+  void checkupOffer;
+  const reviewTest: "take" | null = null;
   const itemsOf = (test: "placement" | "stage" | "entry" | "take") => (test === "placement" ? [] : test === "stage" ? stageTestItems : test === "entry" ? entryItems : checkupItems);
   const studyItem = (pick: StudyPick): PlanItem => {
     const practice = itemForKey(language, pick.key);
@@ -1072,6 +1083,37 @@ export function TodayPlan({
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
+      {checkupOpen === "exam" && examItems ? (
+        <BankToneProvider tone="keep">
+          <CheckupPlayer
+            ui={ui}
+            locale={locale}
+            language={language}
+            stage={stage}
+            items={examItems}
+            previous={[...checkups].reverse().find((r) => r.kind === "exam") ?? null}
+            title={ui.examTitle}
+            finishWith={(answers, full) => {
+              const outcome = finishExam({ items: examItems, answers, parts: full.map((one) => one?.parts), stage, pool: readPool(language), ladder: readLadder(language) });
+              saveExamState(language, outcome);
+              finishMany(outcome.answers.map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })));
+              // 알아요로 넘긴 문장구조를 시험에서 맞힘 → 익힘(서버 통과 기록).
+              for (const id of outcome.confirmed) {
+                void fetch(apiUrl("/api/curriculum/scripts"), { method: "POST", headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) }, body: JSON.stringify({ language, id }) }).catch(() => undefined);
+              }
+              return outcome.result;
+            }}
+            labelOf={(key) => keyLabel(language, key, grammarName)}
+            actions={() => resultActions}
+            onFinish={finishCheckup}
+            onClose={() => {
+              setCheckupOpen(null);
+              setExamItems(null);
+              setExamSeen((n) => n + 1);
+            }}
+          />
+        </BankToneProvider>
+      ) : null}
       {checkupOpen === "take" ? (
         <CheckupPlayer
           ui={ui}
@@ -1251,6 +1293,7 @@ export function TodayPlan({
   };
   // 어휘 짝 맞추기: 짝 다섯 → 그 낱말들 예문 빈칸 한 묶음 → 다시 짝(served = 이미 낸 묶음).
   const keepMake = (): QuizBatch | null => {
+    if (examTab) return null;
     if (wrongTab) return takeBatch(bundleFor("review"));
     if (keepFocus === "vocab" && circleOn && bank && (levelOn ? ranked.length : circleOrder.length)) {
       const paused = newPaused(circleRef.current, (key) => bank.ready.has(key));
@@ -1422,14 +1465,63 @@ export function TodayPlan({
   // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
   const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
-  const keepTabs: readonly (PartId | "review")[] = ["vocab", "grammar", "expression", "review"];
+  const keepTabs: readonly ("vocab" | "exam" | "review")[] = ["vocab", "exam", "review"];
+  // 시험 탭: 모인 소재가 EXAM_POOL_MIN개면 시험(2026-11-01 사용자 "주기는 모인 소재로"), 그 전엔 모인 수와 모인 소재(누르면 Stagebank 수업).
+  void examSeen;
+  const pool = examTab ? readPool(language) : {};
+  const poolKeys = Object.keys(pool);
+  const startExam = () => {
+    const circleNow = circleRef.current;
+    const usable = (key: string) => Boolean(bank?.ready.has(key));
+    const words = bank ? wordTest(circleNow, { now: Date.now(), usable }).slice(0, 5) : [];
+    const items = buildExam({
+      language,
+      stage,
+      pool: readPool(language),
+      ladder: readLadder(language),
+      log,
+      words,
+      wordQuestion: (key) => bundleQuiz(language, [key], { seed: `${day}-exam-${key}`, stage, style: "type", fallback: "choose", strict: true }).questions[0] ?? null,
+    });
+    // 짧은 대화 파트에 이 폰 대화 조각 하나(있으면).
+    const talk = talkFor("expression");
+    if (talk && !items.some((item) => item.key === talk.key)) items.push({ key: talk.key, section: "dialog", question: talk.question });
+    if (!items.length) return;
+    void growBank(language, locale, items.filter((item) => !item.key.startsWith("w|")).map((item) => ({ key: item.key, stage })));
+    setExamItems(items);
+    setCheckupOpen("exam");
+  };
+  const examBody = (
+    <div data-exam className="mt-2 flex flex-col gap-2">
+      {examDue(pool) ? (
+        <button type="button" data-exam-start onClick={startExam} className={`flex w-full items-center gap-2 rounded-xl border ${keepTone.soft} px-3 py-2.5 text-start text-chat font-semibold text-ink`}>
+          <span aria-hidden>📝</span>
+          <span className="min-w-0 flex-1">{ui.examTitle}</span>
+          <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
+        </button>
+      ) : (
+        <p data-exam-pool className="px-1 text-caption tabular-nums text-slate-400">
+          {ui.examPool.replace("{n}", String(poolKeys.length)).replace("{m}", String(EXAM_POOL_MIN))}
+        </p>
+      )}
+      {poolKeys.length ? (
+        <div className="flex flex-wrap gap-1.5">
+          {poolKeys.slice(0, 30).map((key) => (
+            <button key={key} type="button" data-exam-pool-item={key} onClick={() => openLesson({ language, key })} dir="auto" className="rounded-full border border-line px-2.5 py-0.5 text-caption text-slate-200 hover:bg-white/10">
+              {keyLabel(language, key, grammarName)}
+            </button>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
   const keepBody = (
     <div data-keep-learning>
       <div className="flex items-center gap-1">
         {/* 무엇을 = 탭(사용자 2026-10-30): 어휘 · 문법 · 표현 · 지난번에 틀린 것 — 틀린 것 다시 풀기는 이 탭에서만(nextStudy review 줄). */}
         <div role="tablist" data-study-focus className="flex min-w-0 flex-1 flex-wrap gap-1.5">
           {keepTabs.map((tab) => {
-            const on = tab === "review" ? wrongTab : !wrongTab && keepFocus === tab;
+            const on = tab === "review" ? wrongTab : tab === "exam" ? examTab : !wrongTab && !examTab;
             return (
               <button
                 key={tab}
@@ -1440,14 +1532,14 @@ export function TodayPlan({
                 onClick={() => save({ ...settings, focus: tab })}
                 className={`rounded-full px-3 py-1 text-caption ${on ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
               >
-                {tab === "review" ? ui.weakTitle : partName(ui, tab)}
+                {tab === "review" ? ui.weakTitle : tab === "exam" ? ui.examTitle : partName(ui, tab)}
               </button>
             );
           })}
         </div>
-        {!wrongTab && keepFocus === "vocab" ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
+        {!wrongTab && !examTab ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
         {learnTest ? testIcon(learnTest) : null}
-        {!wrongTab && keepFocus === "vocab" && bank ? settingsIcon("keep") : null}
+        {!wrongTab && !examTab && bank ? settingsIcon("keep") : null}
       </div>
       {testDue ? (
         <button
@@ -1479,10 +1571,12 @@ export function TodayPlan({
           <span aria-hidden className="text-slate-400">›</span>
         </button>
       ) : null}
-      <InlineQuiz
+      {examTab ? examBody : null}
+      {examTab ? null : <InlineQuiz
         ui={ui}
         locale={locale}
         language={language}
+        explainLink={wrongTab}
         resetKey={keepResetKey}
         make={keepMake}
         retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}`}
@@ -1500,7 +1594,7 @@ export function TodayPlan({
             <p className="px-1 py-2 text-caption text-slate-400">✓ {wrongTab ? ui.studyReviewNone : ui.planAllDone}</p>
           )
         }
-      />
+      />}
       {feelOn ? (
         <div role="group" data-vocab-feel className="mt-2 flex flex-wrap items-center gap-1.5">
           {(["easy", "ok", "hard"] as const).map((feel) => (

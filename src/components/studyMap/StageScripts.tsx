@@ -10,6 +10,11 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
+import { FrameLesson, type LessonSubject } from "@/components/studyMap/FrameLesson";
+import { readPool } from "@/lib/curriculum/exam";
+import { streakOf } from "@/lib/curriculum/nextStudy";
+import { readQuizLog } from "@/lib/curriculum/quizLogStore";
+import { ladderFor } from "@/lib/curriculum/stages/index";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { allFramesFor, framesFor, framesOfScript, type Frame } from "@/lib/curriculum/frames";
@@ -67,10 +72,10 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 
 const MODE_KEY = "stageScriptMode";
 
-type Method = "frame" | "recall" | "situation" | "expression";
+type Method = "frame" | "recall" | "situation" | "expression" | "grammar";
 
 /** 단계 연습 방식 아이콘(2026-10-30 사용자 "아이콘으로 구분해줘") — 이름은 읽어 주기(name)로만. */
-const METHOD_ICON: Record<Method, string> = { frame: "🧩", recall: "🎯", situation: "🎭", expression: "🔤" };
+const METHOD_ICON: Record<Method, string> = { frame: "🧩", recall: "🎯", situation: "🎭", expression: "🔤", grammar: "📐" };
 
 
 /** 오늘의 대본(서버가 고름): 문법 이름은 앱 언어, 표현은 학습 언어. */
@@ -110,6 +115,11 @@ export function expressionBubbles(script: StageScript, expression = script.expre
   const start = expression ? lower(mine.text).indexOf(lower(expression)) : -1;
   const mark = start >= 0 && expression ? mine.text.slice(start, start + expression.length) : undefined;
   return [...(before ? [{ side: before.who, text: before.text }] : []), { side: "me" as const, text: mine.text, mark }];
+}
+
+/** 문법 칸 = 그 문법이 든 예문 한 줄. */
+export function grammarBubbles(example: string): Bubble[] {
+  return example ? [{ side: "me" as const, text: example }] : [];
 }
 
 /** 문장구조 = 같은 틀에 빈칸만 바뀜: 예문 셋, 바뀐 곳은 칠함. */
@@ -172,6 +182,9 @@ export function StageScripts({
   const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
   const [method, setMethod] = useState<Method>("frame");
   const [recalling, setRecalling] = useState(false);
+  /** 표현·문법 칸 수업(2026-11-01 설계 — 설명은 Stagebank 한 곳). */
+  const [lesson, setLesson] = useState<LessonSubject | null>(null);
+  const [lessonSeen, setLessonSeen] = useState(0);
   const { known } = useCheckups(language);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
@@ -189,6 +202,9 @@ export function StageScripts({
   const situations = scripts.filter(isSituationScript);
   const extras = scripts.filter((script) => !isSituationScript(script));
   const frames = framesFor(language, stage);
+  const stageRow = ladderFor(language)?.stages.find((one) => one.order === stage);
+  const stageExpressions = stageRow?.expressions ?? [];
+  const stageGrammar = stageRow?.grammar ?? [];
   // 문장구조 중심(2026-10-30, hub/drafts/frames-first-2026-10-30.md): 문장구조 → 꺼내 쓰기가 단계의 길, 상황·표현은 고를 수 있는 연습.
   const learnedOrder = framesFor(language, stage).filter((frame) => passed.includes(frame.id)).map((frame) => frame.id);
   const methods = [
@@ -196,8 +212,33 @@ export function StageScripts({
     ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, bubbles: frameBubbles(frames[0]!) }] : []),
     ...(frames.length ? [{ id: "recall" as const, name: ui.recallTitle, bubbles: recallBubbles(frames[0]!, locale) }] : []),
     { id: "situation" as const, name: ui.stageScriptsTitle, bubbles: situationBubbles(situations[0]) },
-    ...(extras.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: expressionBubbles(extras[0]!) }] : []),
+    ...(extras.length || stageExpressions.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: extras.length ? expressionBubbles(extras[0]!) : [] }] : []),
+    ...(stageGrammar.length ? [{ id: "grammar" as const, name: ui.partGrammar, count: "", bubbles: grammarBubbles(stageGrammar[0]!.example) }] : []),
   ].map((one) => ({ ...one, label: METHOD_ICON[one.id] }));
+  // 표현·문법 칸 목록: ✓ = 대화로 익힘(퀴즈 기록), 앎 = "알아요"로 넘김(다음 정기 시험에서 확인).
+  void lessonSeen;
+  const quizLog = readQuizLog(language);
+  const pool = readPool(language);
+  const itemRow = (subject: LessonSubject, label: string, sub?: string) => {
+    const ok = streakOf(quizLog[subject.key]) > 0;
+    const claimed = pool[subject.key]?.r.includes("claimed");
+    return (
+      <button key={subject.key} type="button" data-lesson-item={subject.key} onClick={() => setLesson(subject)} className="flex items-center justify-between gap-2 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5">
+        <span className="min-w-0 flex-1">
+          <span dir="auto" className="block text-note text-slate-100">
+            {label}
+          </span>
+          {sub ? (
+            <span dir="auto" className="mt-0.5 block truncate text-meta text-slate-400">
+              {sub}
+            </span>
+          ) : null}
+        </span>
+        {ok ? <span className="shrink-0 text-caption text-good">✓</span> : claimed ? <span className="shrink-0 rounded-full border border-good/50 px-2 py-0.5 text-meta text-good">{ui.knownTag}</span> : null}
+        <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
+      </button>
+    );
+  };
   const dot = (state: LedgerState | null | undefined) =>
     state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const row = (script: StageScript) => {
@@ -292,7 +333,25 @@ export function StageScripts({
       ) : null}
       {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}
       {method === "situation" ? situations.map(row) : null}
+      {method === "expression" ? stageExpressions.map((expression) => itemRow({ key: `e|${expression}`, kind: "expression", stage }, expression)) : null}
       {method === "expression" ? extras.map(row) : null}
+      {method === "grammar"
+        ? stageGrammar.map((grammar, index) => itemRow({ key: `g|${stage}:${index}`, kind: "grammar", stage, title: glossFor(grammar.name, locale) }, glossFor(grammar.name, locale), grammar.example))
+        : null}
+      {lesson ? (
+        <FrameLesson
+          key={lesson.key}
+          ui={ui}
+          locale={locale}
+          language={language}
+          subject={lesson}
+          passed={streakOf(quizLog[lesson.key]) > 0}
+          onClose={() => {
+            setLesson(null);
+            setLessonSeen((n) => n + 1);
+          }}
+        />
+      ) : null}
       <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} listHidden={method !== "frame"} />
       {open ? (
         <ScriptPlayer

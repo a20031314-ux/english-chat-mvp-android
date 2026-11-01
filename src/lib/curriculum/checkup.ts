@@ -38,7 +38,9 @@ export type CheckResult = {
    * stage = 단계 시험(curriculum/stageTest.ts) — stage가 본 단계, passed가 넘었는지.
    * entry = 단계 미리 확인(curriculum/stageTest.ts buildEntryCheck) — 그 단계에서 이미 아는 것 거르기(맞힌 것 → 확인 중, curriculum/known.ts).
    */
-  kind?: "weekly" | "placement" | "stage" | "entry";
+  kind?: "weekly" | "placement" | "stage" | "entry" | "exam";
+  /** 정기 시험(curriculum/exam.ts): 파트마다 [맞힘, 낸 수] — 어휘·알아보기·떠올리기·대화 응답·짧은 대화. */
+  sections?: Partial<Record<"vocab" | "recognize" | "recall" | "reply" | "dialog", Tally>>;
   /** 처음 시험·단계 시험: 단계마다 [맞힘, 낸 수]. */
   stages?: Partial<Record<StageKey, Tally>>;
   /** 단계 시험: 그 단계를 넘었는지. */
@@ -268,6 +270,9 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
   }
   if (value.kind === "entry") {
     return { at: now, stage, parts, origins, wrong: [], kind: "entry", stages: pick(value.stages, STAGE_KEYS) };
+  }
+  if (value.kind === "exam") {
+    return { at: now, stage, parts, origins: {}, wrong, kind: "exam", sections: pick(value.sections, ["vocab", "recognize", "recall", "reply", "dialog"] as const) };
   }
   if (value.kind === "stage") {
     return { at: now, stage, parts, origins, wrong, kind: "stage", stages: pick(value.stages, STAGE_KEYS), passed: value.passed === true };

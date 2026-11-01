@@ -1336,6 +1336,12 @@ export const TH_EXTRA: Record<string, ExtraExample[]> = {
    "en": "The later it gets, the cooler the air.",
    "ko": "밤이 깊을수록 공기가 시원해져요.",
    "replaces": "ขอเสริมนิดนึงครับ ยิ่งเราเลื่อนออกไปนาน ลูกค้ายิ่งไม่มั่นใจครับ"
+  },
+  {
+   "text": "ยิ่งดึก ถนนก็เงียบลงครับ",
+   "en": "The later it gets, the quieter the road becomes.",
+   "ko": "밤이 깊을수록 길이 조용해져요.",
+   "replaces": "ยิ่งรอนาน ผมก็ยิ่งเสี่ยงจะเสียห้องนี้ไปใช่ไหมครับ"
   }
  ],
  "f|th-f2-11": [

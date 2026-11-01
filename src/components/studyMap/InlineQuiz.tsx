@@ -23,6 +23,7 @@ export function InlineQuiz({
   onResult,
   onParts,
   empty,
+  explainLink = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -36,6 +37,8 @@ export function InlineQuiz({
   /** 복합 문제(소재 여럿)의 결과를 한 번에 — 없으면 소재마다 onResult. */
   onParts?: (parts: { key: string; correct: boolean }[]) => void;
   empty: React.ReactNode;
+  /** 틀리면 "설명"으로 Stagebank 그 소재 수업(다시 보기 탭). */
+  explainLink?: boolean;
 }) {
   const [batch, setBatch] = useState<QuizBatch | null>(null);
   const [index, setIndex] = useState(0);
@@ -102,6 +105,7 @@ export function InlineQuiz({
         }}
         onNext={next}
         bankKey={batch.keys[index]}
+        explainLink={explainLink}
       />
     </div>
   );

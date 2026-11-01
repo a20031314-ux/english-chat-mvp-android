@@ -16,6 +16,7 @@ import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { EXPR_DECOYS } from "./expressions/decoys/index.ts";
 import { EXTRA_EXAMPLES, SHARED_EXAMPLES_OFF } from "./examples/index.ts";
+import { plainPinyin, readingOf } from "./readings/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
@@ -46,6 +47,8 @@ export type QuizQuestion =
   | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
+  /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
+  | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
   | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[] }
   /**
@@ -120,9 +123,41 @@ export function shuffled<T>(list: readonly T[], random: () => number): T[] {
 /** 문장 안에서 표현을 대소문자 구별 없이 찾아, 문장에 적힌 그대로의 조각을 돌려준다. */
 export function pieceOf(text: string, expression: string): string | null {
   if (!expression) return null;
-  const at = text.toLocaleLowerCase().indexOf(expression.toLocaleLowerCase());
-  if (at < 0 || text.toLocaleLowerCase().length !== text.length) return text.includes(expression) ? expression : null;
-  return text.slice(at, at + expression.length);
+  const lowerText = text.toLocaleLowerCase();
+  const lowerExpr = expression.toLocaleLowerCase();
+  if (lowerText.length !== text.length) return text.includes(expression) && standsAlone(text, text.indexOf(expression), expression) ? expression : null;
+  // 낱말 속은 아님(2026-11-01 퀴즈 예문 작업에서 찾음: ar يلا ⊂ قليلا, hi हाँ ⊂ यहाँ, es "a ver" ⊂ "gustaría ver", th ใช่ ⊂ ไม่ใช่).
+  for (let at = lowerText.indexOf(lowerExpr); at >= 0; at = lowerText.indexOf(lowerExpr, at + 1)) {
+    if (standsAlone(text, at, expression)) return text.slice(at, at + expression.length);
+  }
+  return null;
+}
+
+const LETTER = /[\p{L}\p{M}\p{Nd}]/u;
+const THAI = /\p{Script=Thai}/u;
+/** text[at..]의 조각이 따로 선 낱말(들)인가: 띄어 쓰는 말은 앞뒤가 글자가 아님, 태국어는 낱말 자르기 경계, 한자·가나는 그대로(한 글자 낱말이 흔함). */
+function standsAlone(text: string, at: number, piece: string): boolean {
+  if (at < 0) return false;
+  const end = at + piece.length;
+  if (THAI.test(piece)) {
+    const words = segmentWords(text, "th");
+    let from = 0;
+    const edges = new Set<number>([0]);
+    for (const word of words) {
+      const i = text.indexOf(word, from);
+      if (i < 0) continue;
+      edges.add(i);
+      edges.add(i + word.length);
+      from = i + word.length;
+    }
+    return edges.has(at) && edges.has(end);
+  }
+  if (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(piece)) return true;
+  const before = at > 0 ? text[at - 1]! : "";
+  const after = text[end] ?? "";
+  const startOk = !before || !LETTER.test(before) || !LETTER.test(piece[0]!);
+  const endOk = !after || !LETTER.test(after) || !LETTER.test(piece[piece.length - 1]!);
+  return startOk && endOk;
 }
 
 function frameOf(language: string, id: string) {
@@ -473,8 +508,9 @@ export function mostAlike(piece: string, candidates: readonly string[], n: numbe
 function typeOf(language: string, source: QuizSource, key = ""): QuizQuestion | null {
   const piece = source.piece?.trim();
   if (!piece) return null;
-  // 한자가 든 답은 치지 않게(가나·한자 입력기가 없으면 칠 수 없음 — 가상 사용자 준호가 人·日을 2주 내내 못 침): 고르기로.
-  if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece)) return null;
+  // 한자가 든 답: 읽기가 있으면 병음·히라가나(로마자)로 쳐도 맞음(2026-11-01 사용자 "입력으로"), 없으면 치지 않게 — 고르기로
+  // (가나·한자 입력기가 없으면 칠 수 없음 — 가상 사용자 준호가 人·日을 2주 내내 못 침).
+  if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece) && !readingOf(language, piece)) return null;
   const at = pieceAt(source.text, piece, language);
   if (at < 0 || pieceTwice(source.text, piece, language)) return null;
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
@@ -507,6 +543,13 @@ export function typedRight(answer: string, typed: string, options: { language?: 
   if (options.near?.some((one) => norm(one) === b || latin(norm(one)) === latin(b))) return false;
   // 조사 は·へ·を는 소리대로(wa·e·o) 치니 비교할 때만 소리로 맞춘다.
   const sound = (text: string) => text.replace(/は/g, "わ").replace(/へ/g, "え").replace(/を/g, "お");
+  // 한자가 든 답을 읽기로 침(2026-11-01): 중국어 병음(성조 부호·숫자·없음 모두), 일본어 히라가나·가타카나·로마자.
+  const reading = /\p{Script=Han}/u.test(answer) && (options.language === "zh" || options.language === "ja") ? readingOf(options.language, answer.trim()) : null;
+  if (reading && options.language === "zh" && hasLatin(typed) && plainPinyin(reading) === plainPinyin(typed)) return "loose";
+  if (reading && options.language === "ja") {
+    const kana = hasLatin(typed) ? romajiToHiragana(typed).replace(/\s+/g, "") : typed.replace(/\s+/g, "");
+    if (sameKana(sound(reading), sound(kana))) return "loose";
+  }
   if (options.language === "ja" && hasLatin(typed) && !/[一-鿿]/u.test(answer) && sameKana(sound(a), sound(romajiToHiragana(b).replace(/\s+/g, "")))) return "loose";
   if (typoOk(a, b, options.language)) return "loose";
   return false;
@@ -677,10 +720,13 @@ export function plainMisses(language: string, frameId: string, piece: string): s
 export function spotOf(language: string, key: string, source: QuizSource, random: () => number, clean = false): SpotQuestion | null {
   const piece = source.piece;
   const frameId = key.startsWith("f|") ? key.slice(2) : source.frame;
-  if (!piece || !frameId) return null;
+  // 표현(e|)도(2026-11-01 정기 시험 4칸): 오답 표 정리 뒤 표현 오답은 모두 그 표현의 실수 꼴(맞는 대안·다른 품사는 뺌)이라 그대로 틀린 꼴로 쓴다.
+  const expression = key.startsWith("e|") ? key.slice(2) : "";
+  if (!piece || (!frameId && !expression)) return null;
   const at = pieceAt(source.text, piece, language);
   if (at < 0) return null;
-  const misses = plainMisses(language, frameId, piece).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)));
+  const plain = frameId ? plainMisses(language, frameId, piece) : expressionNearMisses(language, expression, piece);
+  const misses = plain.filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)));
   if (!misses.length) return null;
   const words = segmentWords(source.text, language);
   if (words.length < 3 || words.length > 14) return null;

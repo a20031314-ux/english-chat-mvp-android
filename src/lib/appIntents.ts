@@ -47,6 +47,11 @@ export type AppIntents = {
    * `chapter`는 묶음으로, `hidden`은 숨긴 기능으로 가려다 온 것(그 장 위에 안내), `manage`는 My "기능 고르기"(묶음 버튼 보임).
    */
   openGuide: { section?: string; chapter?: string; hidden?: boolean; manage?: boolean };
+  /**
+   * Stagebank의 소재 수업(문장구조·표현·문법 칸)을 연다 — "모를 때 이동해서 확인"(2026-11-01 설계, hub/drafts/quiz-pages-2026-11-01.md).
+   * 통화 정리·대본 틀린 줄·Logbank 칩·Quizbank 틀린 문제가 보내고 LessonHost(앱 어디서나 뜨는 층)가 받는다. 열어 본 소재는 정기 시험 재료로 모인다.
+   */
+  openLesson: { language: string; key: string };
 };
 
 const PREFIX = "talkbank:";
@@ -94,4 +99,9 @@ export function onAppIntent<K extends keyof AppIntents>(
   const listener = (event: Event) => handle((event as CustomEvent<AppIntents[K]>).detail);
   window.addEventListener(`${PREFIX}${name}`, listener);
   return () => window.removeEventListener(`${PREFIX}${name}`, listener);
+}
+
+/** 소재 수업 열기(openLesson 신호) — 부르는 곳이 많아 한 줄로. */
+export function openLesson(detail: AppIntents["openLesson"]): void {
+  sendAppIntent("openLesson", detail);
 }

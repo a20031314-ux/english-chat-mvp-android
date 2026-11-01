@@ -1090,6 +1090,12 @@ export const AR_EXTRA: Record<string, ExtraExample[]> = {
    "en": "Okay, it's a deal — see you tomorrow morning.",
    "ko": "좋아요, 그렇게 해요. 내일 아침에 봐요.",
    "replaces": "خلاص اتفقنا. باختصار: نؤجل بعض المهام، ونسلم الباقي في الوقت."
+  },
+  {
+   "text": "خلاص اتفقنا، نلتقي بعد الدوام.",
+   "en": "Okay, it's settled — we'll meet after work.",
+   "ko": "좋아, 정했어. 퇴근하고 만나자.",
+   "replaces": "خلاص اتفقنا. على كل حال، ما عندي مانع من نوم أطول!"
   }
  ],
  "f|ar-f5-01": [

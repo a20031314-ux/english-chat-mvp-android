@@ -392,3 +392,30 @@ test("여러 소재가 같이 쓰던 문장: 새 예문이 있으면 그 열쇠�
     }
   }
 });
+
+test("표현 찾기는 낱말 속을 맞추지 않음 — ar يلا⊂قليلا · hi हाँ⊂यहाँ · es a ver⊂gustaría ver · th ใช่⊂ไม่ใช่, 한자·가나는 그대로", async () => {
+  const { pieceOf } = await import("./quiz.ts");
+  assert.equal(pieceOf("أريد قليلا من الماء", "يلا"), null);
+  assert.equal(pieceOf("يلا، نروح", "يلا"), "يلا");
+  assert.equal(pieceOf("मैं यहाँ हूँ", "हाँ"), null);
+  assert.equal(pieceOf("Me gustaría ver eso", "a ver"), null);
+  assert.equal(pieceOf("A ver, dime", "a ver"), "A ver");
+  assert.equal(pieceOf("ไม่ใช่ครับ", "ใช่"), null);
+  assert.equal(pieceOf("ใช่ครับ", "ใช่"), "ใช่");
+  assert.equal(pieceOf("よろしくお願いします", "お願いします"), "お願いします");
+});
+
+test("한자가 든 답을 읽기로: 중국어 병음(성조 부호·숫자·없음) · 일본어 히라가나·로마자, 틀린 읽기는 틀림", async () => {
+  const { typedRight } = await import("./quiz.ts");
+  const { readingOf } = await import("./readings/index.ts");
+  assert.ok(readingOf("zh", "我是"));
+  assert.equal(typedRight("我是", "wo shi", { language: "zh" }), "loose");
+  assert.equal(typedRight("我是", "wǒ shì", { language: "zh" }), "loose");
+  assert.equal(typedRight("我是", "wo3shi4", { language: "zh" }), "loose");
+  assert.equal(typedRight("我是", "ni shi", { language: "zh" }), false);
+  const ja = readingOf("ja", "に行きます");
+  assert.equal(ja, "にいきます");
+  assert.equal(typedRight("に行きます", "にいきます", { language: "ja" }), "loose");
+  assert.equal(typedRight("に行きます", "ni ikimasu", { language: "ja" }), "loose");
+  assert.equal(typedRight("に行きます", "にきます", { language: "ja" }), false);
+});

@@ -14,6 +14,7 @@ import { deviceUiLocale, languagePickPending, subscribeLanguagePick } from "@/li
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { CallHost, hasRoleplay } from "@/components/CallHost";
+import { LessonHost } from "@/components/studyMap/LessonHost";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
 import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
@@ -532,6 +533,8 @@ function AppHomeInner({
               {socialOn ? (
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
+              {/* Stagebank item lessons, opened from anywhere when the learner is unsure (openLesson). */}
+              <LessonHost ui={ui} locale={locale} />
               {/* AI 튜터와 통화: 어디서나 떠 있는 층(📞·오늘의 팩·지도의 말로 하기). */}
               <CallHost
                 targetLanguage={targetLanguage}

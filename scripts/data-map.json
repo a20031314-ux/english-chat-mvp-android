@@ -73,6 +73,7 @@
     "readings:v1": { "feature": "단계 학습 읽는 법", "scope": "shared", "onAccountDelete": "해당 없음", "what": "글자가 다른 학습 언어의 단계 학습 줄 읽는 법(가나·병음·로마자), 단계마다 한 번 모델이 만든 것 — 학습자 글 없음" },
     "wordsextra:v1": { "feature": "My 단어장 찾아서 늘어나는 단어 은행", "scope": "shared", "onAccountDelete": "해당 없음(누가 찾았는지 없음)", "what": "사용자가 찾은 낱말 중 빈도 목록에 없던 것 — 사전형·품사·주제·읽기·예문·뜻(모델이 만듦) 50개 묶음과 개수·찾은 꼴 → 묶음 번호, 앱 언어로 옮긴 뜻(gloss), 하루 더하기 한도 셈(rate, 사용자 id로 하루 뒤 사라짐)" },
     "qbank:v1": { "feature": "My 퀴즈 자라는 문제은행", "scope": "shared", "onAccountDelete": "해당 없음", "what": "열쇠(표현·문장구조·낱말)마다 모델이 만든 새 예문(학습 언어 + 영어 뜻)과 헷갈리는 오답, 예문·오답마다 풀린 수·맞힌 수·고른 수, 하루 성장 예산(budget), 앱 언어로 옮긴 뜻(gloss), 출시 초반 미리 채우기 커서(seed:cursor), 대화에서 온 튜터 줄(앱이 흔한 낱말만인지 거르고 모델이 개인 정보·민감한 내용·문맥 의존을 판정해 통과한 것만 — 누가 보냈는지 없음, o: talk) · 하루 판정 수(offer) — 학습자가 친 글·누가 풀었는지 없음" },
+    "itemlesson:v1": { "feature": "My Stagebank 표현·문법 칸 수업", "scope": "shared", "onAccountDelete": "해당 없음", "what": "단계 핵심 표현·문법 칸마다 모델이 만든 뜻·쓰임·짧은 설명 줄과 주고받기 세 번(학습 언어 줄과 뜻), 앱 언어로 옮긴 설명·뜻·문법 칸 이름 — 학습자 글 없음" },
     "framelesson:v5": { "feature": "My 문장구조 수업", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조마다 모델이 만든 뜻·구조(조각마다 하는 일)·쓰임 설명과 주고받기 세 번(학습 언어 줄과 뜻), 앱 언어로 옮긴 설명·뜻 — 학습자 글 없음" },
     "recall:v1": { "feature": "My 꺼내 쓰기", "scope": "shared", "onAccountDelete": "해당 없음", "what": "문장구조 하나·둘마다 모델이 만든 말할 문장과 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
     "words:v1": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 50개 묶음마다 모델이 만든 예문·쓴 꼴·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },

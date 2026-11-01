@@ -124,6 +124,8 @@ export function hasBank(language: string): boolean {
 
 export const wordKey = (word: string) => `w|${word}`;
 
+import { registerReadings } from "./readings/index.ts";
+
 const loaded = new Map<string, readonly BankWord[]>();
 /** 읽기 칸이 있는 언어(일본어 가나·중국어 병음). */
 const READING = new Set(["ja", "zh"]);
@@ -144,6 +146,8 @@ export async function loadBank(language: string): Promise<readonly BankWord[]> {
   if (have) return have;
   const list = fromRows((await load()).WORDS, language);
   loaded.set(language, list);
+  // 중국어·일본어 낱말을 읽기로 쳐도 맞게(curriculum/readings, 2026-11-01).
+  if (READING.has(language)) registerReadings(language, list.flatMap((word) => (word.reading && word.reading !== word.w ? [[word.w, word.reading] as const] : [])));
   return list;
 }
 

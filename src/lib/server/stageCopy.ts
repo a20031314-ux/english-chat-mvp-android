@@ -291,6 +291,8 @@ export function scriptGlossTexts(language: string, stage: number): string[] {
   const extra = EXTRA_EXAMPLES[language] ?? {};
   const keys = [...framesFor(language, stage).map((frame) => `f|${frame.id}`), ...(ladderFor(language)?.stages.find((one) => one.order === stage)?.expressions ?? []).map((e) => `e|${e}`)];
   for (const key of keys) for (const one of extra[key] ?? []) add({ en: one.en });
+  // Stagebank 문법 칸 목록 이름(2026-11-01) — 맨 뒤에.
+  for (const grammar of ladderFor(language)?.stages.find((one) => one.order === stage)?.grammar ?? []) add(grammar.name);
   return out;
 }
 

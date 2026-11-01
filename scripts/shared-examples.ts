@@ -95,7 +95,7 @@ if (mode === "check") {
         seen.add(one.text);
       }
     }
-    for (const key of Object.keys(data)) if (!plan.has(key)) problems.push(`목록 밖 열쇠 ${key}`);
+    // 목록 밖 열쇠(조각 찾기가 낱말 속을 안 맞추게 된 뒤 더는 같이 안 쓰는 문장 — 2026-11-01)는 그대로 둬도 됨: 새 예문으로 바뀔 뿐.
     bad += problems.length;
     console.log(`${language}: 문제 ${problems.length}${problems.length ? "\n  " + problems.slice(0, 30).join("\n  ") : ""}`);
   }

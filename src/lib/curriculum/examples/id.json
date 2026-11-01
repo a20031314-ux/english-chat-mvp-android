@@ -1422,5 +1422,13 @@
    "ko": "나 내일 아침에 시험 있어.",
    "replaces": "Siap, Pak. Besok pagi-pagi saya temui dia. Sekali lagi, terima kasih atas pengertiannya."
   }
+ ],
+ "f|id-f2-10": [
+  {
+   "text": "Kamu pernah naik kereta malam?",
+   "en": "Have you ever taken a night train?",
+   "ko": "야간 기차 타 본 적 있어요?",
+   "replaces": "Es teh manis. Saya belum pernah coba es cendol. Enak?"
+  }
  ]
 }

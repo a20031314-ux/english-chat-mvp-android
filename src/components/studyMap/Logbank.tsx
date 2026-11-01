@@ -12,7 +12,9 @@ import type { UICopy } from "@/lib/copy";
 import { clearQuizDay, dayValue, readQuizDays, weekOf, type QuizDays } from "@/lib/curriculum/quizDays";
 import { clearDayResults, DAY_LOG_EVENT, readDayResults, removeDayResult, type DayResult } from "@/lib/curriculum/dayLog";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
-import { sendAppIntent } from "@/lib/appIntents";
+import { openLesson, sendAppIntent } from "@/lib/appIntents";
+import { ladderFor } from "@/lib/curriculum/stages/index";
+import { grammarNodeId } from "@/lib/notes/notebook";
 import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { buildRecap } from "@/lib/roleplay/recap";
 import type { SavedConversation } from "@/lib/roleplay/saved";
@@ -216,7 +218,12 @@ export function Logbank({
                               key={`${item.text}-${i}`}
                               type="button"
                               dir="auto"
-                              onClick={() => (part === "grammar" ? undefined : insight?.open({ sentence: item.text, selected: item.text }))}
+                              onClick={() => {
+                                // 그 소재가 Stagebank에 있으면 그 수업(설명은 Stagebank 한 곳, 2026-11-01), 아니면 표현 자세히.
+                                const key = lessonKeyOf(language, item);
+                                if (key) openLesson({ language, key });
+                                else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
+                              }}
                               className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
                             >
                               {label(item)}
@@ -379,4 +386,19 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
       ) : null}
     </>
   );
+}
+
+/** Logbank 칩 → Stagebank 소재 열쇠: 문법 칸(노트 칸 id → 단계 문법 번호) · 그 단계 핵심 표현. 없으면 null. */
+function lessonKeyOf(language: string, item: LogItem): string | null {
+  const stages = ladderFor(language)?.stages ?? [];
+  if (item.part === "grammar" && item.node) {
+    for (const stage of stages) {
+      const index = stage.grammar.findIndex((grammar) => grammarNodeId(stage.order, grammar) === item.node);
+      if (index >= 0) return `g|${stage.order}:${index}`;
+    }
+    return null;
+  }
+  const text = item.text.toLocaleLowerCase().replace(/[\p{P}]+/gu, " ").trim();
+  for (const stage of stages) for (const expression of stage.expressions) if (expression.toLocaleLowerCase() === text) return `e|${expression}`;
+  return null;
 }
