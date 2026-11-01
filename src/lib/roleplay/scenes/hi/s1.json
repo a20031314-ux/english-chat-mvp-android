@@ -48,7 +48,7 @@
             "match": [
               "आपके पास क्या क्या है",
               "मेन्यू में क्या है",
-              "कौन सी ड्रिंक्स हैं"
+              "पीने के लिए क्या है"
             ]
           }
         ],
@@ -170,7 +170,7 @@
             "match": [
               "यह कितने का है",
               "नहीं, बस। यह कितने का है",
-              "कुल कितने का है",
+              "कुल कितना हुआ",
               "कितने का है"
             ]
           },
@@ -224,7 +224,7 @@
             "go": "l-pay-again",
             "match": [
               "फिर से बोलिए",
-              "माफ़ कीजिए, कितने",
+              "माफ़ कीजिए, कितने रुपये",
               "मुझे समझ नहीं आया"
             ]
           }
@@ -297,10 +297,10 @@
         }
       },
       "hello-easy": {
-        "text": "नमस्ते। चाय या कॉफ़ी?",
+        "text": "नमस्ते। चाय लेंगे या कॉफ़ी?",
         "gloss": {
-          "en": "Hello. Tea or coffee?",
-          "ko": "안녕하세요. 차요, 커피요?"
+          "en": "Hello. Will you have tea or coffee?",
+          "ko": "안녕하세요. 차 드실래요, 커피 드실래요?"
         }
       },
       "menu": {
@@ -311,10 +311,10 @@
         }
       },
       "menu-easy": {
-        "text": "चाय, कॉफ़ी, या लस्सी।",
+        "text": "चाय, कॉफ़ी या लस्सी — क्या लेंगे?",
         "gloss": {
-          "en": "Tea, coffee, or lassi.",
-          "ko": "차, 커피, 아니면 라씨요."
+          "en": "Tea, coffee or lassi — what will you have?",
+          "ko": "차, 커피, 라씨 중에 뭐 드실래요?"
         }
       },
       "how-many": {
@@ -325,10 +325,10 @@
         }
       },
       "how-many-easy": {
-        "text": "एक कप? या दो कप?",
+        "text": "एक कप लेंगे या दो?",
         "gloss": {
-          "en": "One cup? Or two cups?",
-          "ko": "한 잔요? 아니면 두 잔요?"
+          "en": "Will you have one cup or two?",
+          "ko": "한 잔 드릴까요, 두 잔요?"
         }
       },
       "more": {
@@ -339,10 +339,10 @@
         }
       },
       "more-easy": {
-        "text": "और कुछ? हाँ या नहीं?",
+        "text": "और कुछ लेंगे?",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Will you have anything else?",
+          "ko": "더 드실 거 있어요?"
         }
       },
       "price": {
@@ -353,24 +353,24 @@
         }
       },
       "price-easy": {
-        "text": "अस्सी रुपये। आठ-शून्य, अस्सी।",
+        "text": "अस्सी रुपये हुए।",
         "gloss": {
-          "en": "Eighty rupees. Eight-zero, eighty.",
-          "ko": "80루피요. 팔-영, 80이요."
+          "en": "It comes to eighty rupees.",
+          "ko": "80루피예요."
         }
       },
       "bye": {
-        "text": "यह लीजिए। आपका दिन अच्छा हो!",
+        "text": "यह लीजिए। धन्यवाद!",
         "gloss": {
-          "en": "Here you go. Have a nice day!",
-          "ko": "여기 있어요. 좋은 하루 보내세요!"
+          "en": "Here you go. Thank you!",
+          "ko": "여기 있어요. 고마워요!"
         }
       },
       "end": {
-        "text": "शुक्रिया! फिर आइए।",
+        "text": "जी, फिर आइएगा!",
         "gloss": {
-          "en": "Thank you! Come again.",
-          "ko": "고마워요! 또 오세요."
+          "en": "Yes, do come again!",
+          "ko": "네, 또 오세요!"
         }
       }
     },
@@ -424,7 +424,7 @@
             "meaning": "only says metro",
             "go": "t-dir",
             "match": [
-              "मेट्रो प्लीज़",
+              "मेट्रो किधर है",
               "मेट्रो स्टेशन?",
               "जी, मेट्रो"
             ]
@@ -471,7 +471,7 @@
             "match": [
               "अच्छा, समझ गया",
               "अच्छा, समझ गई",
-              "ओके, सीधे और दाएँ"
+              "अच्छा, सीधे फिर दाएँ"
             ]
           }
         ],
@@ -515,7 +515,7 @@
             "match": [
               "दाएँ क्या है",
               "दाएँ मतलब?",
-              "यह क्या मतलब"
+              "इसका क्या मतलब है"
             ]
           },
           {
@@ -641,94 +641,94 @@
     },
     "sentences": {
       "hello": {
-        "text": "हाँ जी? कुछ ढूँढ रहे हैं?",
+        "text": "हाँ जी? कुछ पूछना है?",
         "gloss": {
-          "en": "Yes? Are you looking for something?",
-          "ko": "네? 뭐 찾으세요?"
+          "en": "Yes? Do you want to ask something?",
+          "ko": "네? 뭐 물어보실 거 있어요?"
         }
       },
       "hello-easy": {
-        "text": "हाँ? क्या मदद चाहिए?",
+        "text": "जी, क्या मदद चाहिए?",
         "gloss": {
-          "en": "Yes? Do you need help?",
-          "ko": "네? 도움이 필요해요?"
+          "en": "Yes, what help do you need?",
+          "ko": "네, 어떤 도움이 필요해요?"
         }
       },
       "dir": {
-        "text": "मेट्रो पास में है। सीधे जाइए, फिर दूसरी गली में दाएँ।",
+        "text": "मेट्रो पास में है। सीधे जाइए, फिर दूसरी गली पर दाएँ मुड़िए।",
         "gloss": {
-          "en": "The metro is nearby. Go straight, then right at the second lane.",
-          "ko": "지하철은 가까워요. 쭉 가서 두 번째 골목에서 오른쪽이요."
+          "en": "The metro is nearby. Go straight, then turn right at the second lane.",
+          "ko": "지하철은 가까워요. 쭉 가서 두 번째 골목에서 오른쪽으로 도세요."
         }
       },
       "dir-easy": {
-        "text": "सीधे जाइए। फिर दाएँ।",
+        "text": "सीधे जाइए, फिर दाएँ मुड़िए।",
         "gloss": {
-          "en": "Go straight. Then right.",
-          "ko": "쭉 가세요. 그다음 오른쪽이요."
+          "en": "Go straight, then turn right.",
+          "ko": "쭉 가서 오른쪽으로 도세요."
         }
       },
       "slow": {
-        "text": "ज़रूर। सीधे... फिर दाएँ। पाँच मिनट।",
+        "text": "ज़रूर। सीधे जाइए, फिर दाएँ मुड़िए। बस पाँच मिनट।",
         "gloss": {
-          "en": "Sure. Straight... then right. Five minutes.",
-          "ko": "그럼요. 쭉… 그다음 오른쪽. 5분이요."
+          "en": "Sure. Go straight, then turn right. Just five minutes.",
+          "ko": "그럼요. 쭉 가서 오른쪽으로 도세요. 5분이면 돼요."
         }
       },
       "slow-easy": {
-        "text": "सीधे। फिर दाएँ। बस।",
+        "text": "सीधे जाइए, फिर दाएँ। बस इतना ही।",
         "gloss": {
-          "en": "Straight. Then right. That's it.",
-          "ko": "직진. 그다음 오른쪽. 끝이에요."
+          "en": "Go straight, then right. That is all.",
+          "ko": "쭉 가서 오른쪽이요. 그게 다예요."
         }
       },
       "word": {
-        "text": "दाएँ मतलब राइट। इस तरफ़।",
+        "text": "दाएँ मतलब राइट, इस तरफ़।",
         "gloss": {
-          "en": "'Daayen' means right. This side.",
-          "ko": "'다엔'은 오른쪽이라는 뜻이에요. 이쪽이요."
+          "en": "\"Daayen\" means right, this side.",
+          "ko": "\"다엔\"은 오른쪽이라는 뜻이에요, 이쪽이요."
         }
       },
       "word-easy": {
-        "text": "दाएँ... राइट। राइट साइड।",
+        "text": "दाएँ का मतलब राइट है।",
         "gloss": {
-          "en": "Daayen... right. Right side.",
-          "ko": "다엔… 오른쪽. 오른쪽이요."
+          "en": "\"Daayen\" means right.",
+          "ko": "\"다엔\"은 오른쪽이에요."
         }
       },
       "more": {
-        "text": "हाँ, बिल्कुल ठीक। और कुछ?",
+        "text": "हाँ, सही है। और कुछ पूछना है?",
         "gloss": {
-          "en": "Yes, exactly right. Anything else?",
-          "ko": "네, 맞아요. 또 있어요?"
+          "en": "Yes, that is right. Anything else to ask?",
+          "ko": "네, 맞아요. 또 물어볼 거 있어요?"
         }
       },
       "more-easy": {
-        "text": "और कुछ पूछना है?",
+        "text": "और कुछ चाहिए?",
         "gloss": {
-          "en": "Anything else to ask?",
-          "ko": "또 물어볼 거 있어요?"
+          "en": "Do you need anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "toilet": {
-        "text": "टॉयलेट मेट्रो के अंदर है।",
+        "text": "टॉयलेट मेट्रो स्टेशन के अंदर है।",
         "gloss": {
           "en": "The toilet is inside the metro station.",
           "ko": "화장실은 지하철역 안에 있어요."
         }
       },
       "toilet-easy": {
-        "text": "मेट्रो के अंदर।",
+        "text": "टॉयलेट अंदर है।",
         "gloss": {
-          "en": "Inside the metro.",
-          "ko": "지하철 안이요."
+          "en": "The toilet is inside.",
+          "ko": "화장실은 안에 있어요."
         }
       },
       "end": {
-        "text": "कोई बात नहीं! आपका सफ़र अच्छा हो।",
+        "text": "कोई बात नहीं! आराम से जाइए।",
         "gloss": {
-          "en": "No problem! Have a good trip.",
-          "ko": "천만에요! 좋은 여행 되세요."
+          "en": "No problem! Take it easy.",
+          "ko": "천만에요! 조심히 가세요."
         }
       }
     },
@@ -869,7 +869,7 @@
             "match": [
               "सस्ता वाला दिखाइए",
               "कोई सस्ता है",
-              "सस्ता चार्जर"
+              "कोई सस्ता चार्जर है"
             ]
           }
         ],
@@ -949,7 +949,7 @@
             "match": [
               "एक पैकेट दीजिए",
               "यह भी दीजिए",
-              "एक नमकीन दीजिए"
+              "यह नमकीन दीजिए"
             ]
           },
           {
@@ -1058,10 +1058,10 @@
         }
       },
       "this-easy": {
-        "text": "यह लीजिए। देखिए।",
+        "text": "यह देखिए, अच्छा है।",
         "gloss": {
-          "en": "Here, take a look.",
-          "ko": "여기요. 보세요."
+          "en": "Look at this, it is good.",
+          "ko": "이거 보세요, 좋아요."
         }
       },
       "price": {
@@ -1072,10 +1072,10 @@
         }
       },
       "price-easy": {
-        "text": "दो सौ। दो सौ रुपये।",
+        "text": "दो सौ रुपये का है।",
         "gloss": {
-          "en": "Two hundred. Two hundred rupees.",
-          "ko": "200이요. 200루피요."
+          "en": "It is two hundred rupees.",
+          "ko": "200루피예요."
         }
       },
       "snack": {
@@ -1086,10 +1086,10 @@
         }
       },
       "snack-easy": {
-        "text": "नमकीन। खाने की चीज़।",
+        "text": "यह नमकीन है, खाने की चीज़।",
         "gloss": {
-          "en": "Namkeen. Something to eat.",
-          "ko": "남킨이요. 먹는 거예요."
+          "en": "This is namkeen, something to eat.",
+          "ko": "이건 남킨이에요, 먹는 거요."
         }
       },
       "bag": {
@@ -1100,16 +1100,16 @@
         }
       },
       "bag-easy": {
-        "text": "थैली? हाँ या नहीं?",
+        "text": "थैली लेंगे?",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉투요? 네, 아니요?"
+          "en": "Will you take a bag?",
+          "ko": "봉투 드릴까요?"
         }
       },
       "end": {
-        "text": "यह लीजिए। धन्यवाद, फिर आइए!",
+        "text": "यह लीजिए। धन्यवाद, फिर आइएगा!",
         "gloss": {
-          "en": "Here you go. Thanks, come again!",
+          "en": "Here you go. Thanks, do come again!",
           "ko": "여기요. 고마워요, 또 오세요!"
         }
       }
@@ -1439,31 +1439,31 @@
         }
       },
       "found": {
-        "text": "हाँ, मिल गया। आपका पासपोर्ट दीजिए।",
+        "text": "हाँ, मिल गई। पासपोर्ट दीजिए।",
         "gloss": {
           "en": "Yes, found it. Please give me your passport.",
           "ko": "네, 찾았어요. 여권 주세요."
         }
       },
       "found-easy": {
-        "text": "पासपोर्ट दीजिए, प्लीज़।",
+        "text": "अपना पासपोर्ट दीजिए।",
         "gloss": {
-          "en": "Passport, please.",
-          "ko": "여권 주세요."
+          "en": "Please give me your passport.",
+          "ko": "여권을 주세요."
         }
       },
       "room": {
-        "text": "धन्यवाद। आपका कमरा बारह नंबर है।",
+        "text": "धन्यवाद। आपका कमरा नंबर बारह है।",
         "gloss": {
           "en": "Thank you. Your room is number twelve.",
           "ko": "고마워요. 방은 12호예요."
         }
       },
       "room-easy": {
-        "text": "कमरा बारह। एक-दो।",
+        "text": "कमरा बारह नंबर है।",
         "gloss": {
-          "en": "Room twelve. One-two.",
-          "ko": "12호요. 일-이."
+          "en": "The room is number twelve.",
+          "ko": "12호 방이에요."
         }
       },
       "lift": {
@@ -1474,10 +1474,10 @@
         }
       },
       "lift-easy": {
-        "text": "वहाँ, बाएँ।",
+        "text": "लिफ़्ट वहाँ बाएँ है।",
         "gloss": {
-          "en": "Over there, left.",
-          "ko": "저기, 왼쪽이요."
+          "en": "The lift is over there, left.",
+          "ko": "엘리베이터는 저기 왼쪽이에요."
         }
       },
       "breakfast": {
@@ -1488,10 +1488,10 @@
         }
       },
       "breakfast-easy": {
-        "text": "नाश्ता सात बजे।",
+        "text": "नाश्ता सात बजे से है।",
         "gloss": {
-          "en": "Breakfast is at seven.",
-          "ko": "아침은 7시예요."
+          "en": "Breakfast is from seven.",
+          "ko": "아침 식사는 7시부터예요."
         }
       },
       "end": {
@@ -1674,7 +1674,7 @@
             "meaning": "asks if she is a student",
             "go": "t-ask2",
             "match": [
-              "क्या आप छात्र हैं",
+              "क्या आप छात्रा हैं",
               "क्या आप भी छात्रा हैं",
               "क्या आप भी स्टूडेंट हैं"
             ]
@@ -1778,7 +1778,7 @@
             "match": [
               "थोड़ा थका हूँ",
               "थोड़ी थकी हूँ",
-              "थोड़ा नर्वस"
+              "थोड़ा नर्वस हूँ"
             ]
           }
         ],
@@ -1878,17 +1878,17 @@
         }
       },
       "job-easy": {
-        "text": "आप छात्र हैं? या नौकरी करते हैं?",
+        "text": "आप छात्र हैं या नौकरी में हैं?",
         "gloss": {
-          "en": "Are you a student? Or do you work?",
-          "ko": "학생이에요? 아니면 일해요?"
+          "en": "Are you a student or do you have a job?",
+          "ko": "학생이에요, 아니면 직장인이에요?"
         }
       },
       "me": {
-        "text": "मैं पुणे से हूँ। यहीं रहती हूँ।",
+        "text": "मैं पुणे से हूँ। मेरा घर यहीं है।",
         "gloss": {
-          "en": "I'm from Pune. I live right here.",
-          "ko": "저는 푸네 출신이에요. 여기 살아요."
+          "en": "I am from Pune. My home is right here.",
+          "ko": "저는 푸네 출신이에요. 집이 바로 여기예요."
         }
       },
       "me-easy": {
@@ -1920,10 +1920,10 @@
         }
       },
       "class-easy": {
-        "text": "चलिए, क्लास शुरू।",
+        "text": "चलिए, क्लास शुरू हो गई।",
         "gloss": {
-          "en": "Let's go, class is starting.",
-          "ko": "자, 수업 시작이에요."
+          "en": "Come on, class has started.",
+          "ko": "자, 수업 시작했어요."
         }
       },
       "end": {
@@ -1934,10 +1934,10 @@
         }
       },
       "ask2": {
-        "text": "नहीं, मैं डॉक्टर हूँ। पर हिंदी क्लास में छात्रा हूँ!",
+        "text": "नहीं, मैं डॉक्टर हूँ। पर यहाँ तो मैं भी स्टूडेंट हूँ!",
         "gloss": {
-          "en": "No, I'm a doctor. But in Hindi class I'm a student!",
-          "ko": "아니요, 저는 의사예요. 하지만 힌디어 수업에선 학생이죠!"
+          "en": "No, I am a doctor. But here I am a student too!",
+          "ko": "아니요, 저는 의사예요. 하지만 여기선 저도 학생이죠!"
         }
       },
       "ask2-easy": {
@@ -2089,7 +2089,7 @@
             "go": "t-mine",
             "match": [
               "एक भाई और एक बहन",
-              "मेरे एक भाई और एक बहन है",
+              "मेरे एक भाई और एक बहन हैं",
               "दो, एक भाई एक बहन"
             ]
           },
@@ -2099,7 +2099,8 @@
             "match": [
               "कोई नहीं",
               "मेरे भाई-बहन नहीं हैं",
-              "मैं अकेला हूँ"
+              "मैं अकेला हूँ",
+              "मैं अकेली हूँ"
             ]
           }
         ],
@@ -2123,7 +2124,7 @@
         "type": "learner",
         "id": "l-who",
         "goal": {
-          "en": "Point at a person in his photo and ask who she is.",
+          "en": "Point at a person in your friend's photo and ask who she is.",
           "ko": "친구 사진 속 사람을 가리키며 누구인지 물어보세요."
         },
         "frame": "hi-f1-17",
@@ -2167,7 +2168,7 @@
         "type": "learner",
         "id": "l-end",
         "goal": {
-          "en": "Say she looks nice and thank him for showing you.",
+          "en": "Say she looks nice and thank them for showing you.",
           "ko": "멋지다고 하고 보여 줘서 고맙다고 하세요."
         },
         "expect": [
@@ -2243,45 +2244,45 @@
         }
       },
       "how-many-easy": {
-        "text": "भाई कितने? बहन कितनी?",
+        "text": "तुम्हारे कितने भाई हैं? कितनी बहनें?",
         "gloss": {
-          "en": "How many brothers? How many sisters?",
-          "ko": "남자 형제 몇? 여자 형제 몇?"
+          "en": "How many brothers do you have? How many sisters?",
+          "ko": "남자 형제 몇 명이야? 여자 형제는?"
         }
       },
       "mine": {
-        "text": "मेरी एक बहन है। यह देखो, यह मेरी फ़ोटो है।",
+        "text": "मेरी भी एक बहन है। यह देखो, मेरे फ़ोन में।",
         "gloss": {
-          "en": "I have one sister. Look, this is my photo.",
-          "ko": "나는 여동생 하나 있어. 봐, 이게 내 사진이야."
+          "en": "I have a sister too. Look, on my phone.",
+          "ko": "나도 여동생 하나 있어. 봐, 내 폰에."
         }
       },
       "mine-easy": {
-        "text": "यह देखो। मेरी फ़ोटो।",
+        "text": "यह मेरी फ़ोटो देखो।",
         "gloss": {
-          "en": "Look. My photo.",
-          "ko": "봐. 내 사진."
+          "en": "Look at my photo.",
+          "ko": "내 사진 봐."
         }
       },
       "who": {
-        "text": "वह मेरी बहन, नेहा है।",
+        "text": "वह मेरी बहन है, नेहा।",
         "gloss": {
-          "en": "That's my sister, Neha.",
-          "ko": "그건 내 여동생 네하야."
+          "en": "That is my sister, Neha.",
+          "ko": "그건 내 여동생이야, 네하."
         }
       },
       "who-easy": {
-        "text": "वह नेहा है। मेरी बहन।",
+        "text": "वह मेरी बहन नेहा है।",
         "gloss": {
-          "en": "That's Neha. My sister.",
-          "ko": "그건 네하야. 내 여동생."
+          "en": "That is my sister Neha.",
+          "ko": "그건 내 여동생 네하야."
         }
       },
       "end": {
-        "text": "हाँ! अगली बार सबको मिलना।",
+        "text": "हाँ! अगली बार सबसे मिलवाना।",
         "gloss": {
-          "en": "Yes! Meet everyone next time.",
-          "ko": "응! 다음엔 다들 만나 봐."
+          "en": "Yes! Introduce me to everyone next time.",
+          "ko": "응! 다음엔 다들 소개해 줘."
         }
       }
     },
@@ -2446,8 +2447,8 @@
         "type": "learner",
         "id": "l-sweet",
         "goal": {
-          "en": "Say yes, and ask what she likes.",
-          "ko": "좋다고 하고 그녀는 뭘 좋아하는지 물어보세요."
+          "en": "Say yes, and ask what they like.",
+          "ko": "좋다고 하고 친구는 뭘 좋아하는지 물어보세요."
         },
         "expect": [
           {
@@ -2456,7 +2457,7 @@
             "match": [
               "हाँ! तुम्हें क्या पसंद है",
               "तुम्हें क्या पसंद है",
-              "और आपको क्या पसंद है"
+              "और तुम्हें क्या पसंद है"
             ]
           },
           {
@@ -2537,10 +2538,10 @@
         }
       },
       "hello-easy": {
-        "text": "लस्सी पसंद है? हाँ या नहीं?",
+        "text": "लस्सी अच्छी लगी?",
         "gloss": {
-          "en": "Do you like lassi? Yes or no?",
-          "ko": "라씨 좋아해? 응, 아니?"
+          "en": "Did you like the lassi?",
+          "ko": "라씨 맛있었어?"
         }
       },
       "spicy": {
@@ -2551,24 +2552,24 @@
         }
       },
       "spicy-easy": {
-        "text": "तीखा? मिर्च? पसंद है?",
+        "text": "मिर्च वाला खाना पसंद है?",
         "gloss": {
-          "en": "Spicy? Chilli? Do you like it?",
-          "ko": "매운 거? 고추? 좋아해?"
+          "en": "Do you like food with chilli?",
+          "ko": "매운 음식 좋아해?"
         }
       },
       "fav": {
-        "text": "मुझे पराठे बहुत पसंद हैं! तुम्हें क्या चाहिए, कुछ और खाना है?",
+        "text": "मुझे पराठे बहुत पसंद हैं! तुम्हें कुछ और चाहिए?",
         "gloss": {
-          "en": "I love parathas! What do you want, something else to eat?",
-          "ko": "난 파라타 정말 좋아해! 넌 뭐 원해? 다른 거 먹을래?"
+          "en": "I love parathas! Do you need anything else?",
+          "ko": "난 파라타 정말 좋아해! 넌 더 필요한 거 있어?"
         }
       },
       "fav-easy": {
-        "text": "कुछ और खाना है? पराठा?",
+        "text": "कुछ और चाहिए? पानी? पराठा?",
         "gloss": {
-          "en": "Want something more to eat? Paratha?",
-          "ko": "더 먹을래? 파라타?"
+          "en": "Need anything else? Water? Paratha?",
+          "ko": "더 필요한 거 있어? 물? 파라타?"
         }
       },
       "sweet": {
@@ -2579,10 +2580,10 @@
         }
       },
       "sweet-easy": {
-        "text": "मीठा? हाँ या नहीं?",
+        "text": "मीठा खाना पसंद है?",
         "gloss": {
-          "en": "Sweet things? Yes or no?",
-          "ko": "단 거? 응, 아니?"
+          "en": "Do you like sweet things?",
+          "ko": "단 거 좋아해?"
         }
       },
       "you": {
@@ -2655,8 +2656,8 @@
             "meaning": "only says yes",
             "go": "t-swim",
             "match": [
-              "हाँ, मैं नया हूँ",
-              "जी, मैं नई हूँ",
+              "हाँ, पहला दिन है",
+              "जी, आज पहला दिन है",
               "जी हाँ"
             ]
           }
@@ -2851,73 +2852,73 @@
     },
     "sentences": {
       "hello": {
-        "text": "स्वागत है! आप नए हैं? मैं विक्रम हूँ।",
+        "text": "स्वागत है! आज आपका पहला दिन है? मैं विक्रम हूँ।",
         "gloss": {
-          "en": "Welcome! Are you new? I'm Vikram.",
-          "ko": "환영해요! 새로 왔어요? 저는 비크람이에요."
+          "en": "Welcome! Is today your first day? I am Vikram.",
+          "ko": "환영해요! 오늘 처음이에요? 저는 비크람이에요."
         }
       },
       "hello-easy": {
-        "text": "आप नए हैं? हाँ?",
+        "text": "आज आपका पहला दिन है?",
         "gloss": {
-          "en": "You're new? Yes?",
-          "ko": "새로 오셨어요? 네?"
+          "en": "Is today your first day?",
+          "ko": "오늘 처음이에요?"
         }
       },
       "swim": {
-        "text": "बढ़िया! क्या आप तैर सकते हैं?",
+        "text": "बढ़िया! आपको तैरना आता है?",
         "gloss": {
-          "en": "Great! Can you swim?",
-          "ko": "좋아요! 수영할 수 있어요?"
+          "en": "Great! Do you know how to swim?",
+          "ko": "좋아요! 수영할 줄 알아요?"
         }
       },
       "swim-easy": {
-        "text": "तैरना? स्विमिंग? आता है?",
+        "text": "स्विमिंग आती है?",
         "gloss": {
-          "en": "Swimming? Do you know how?",
-          "ko": "수영? 할 줄 알아요?"
+          "en": "Can you swim?",
+          "ko": "수영 할 줄 알아요?"
         }
       },
       "cricket": {
-        "text": "और क्रिकेट? क्रिकेट खेलते हैं?",
+        "text": "और क्रिकेट? क्रिकेट आता है?",
         "gloss": {
-          "en": "And cricket? Do you play cricket?",
-          "ko": "크리켓은요? 크리켓 해요?"
+          "en": "And cricket? Do you know how to play cricket?",
+          "ko": "크리켓은요? 크리켓 할 줄 알아요?"
         }
       },
       "cricket-easy": {
-        "text": "क्रिकेट? हाँ या नहीं?",
+        "text": "क्रिकेट खेलना आता है?",
         "gloss": {
-          "en": "Cricket? Yes or no?",
-          "ko": "크리켓이요? 네, 아니요?"
+          "en": "Do you know how to play cricket?",
+          "ko": "크리켓 할 줄 알아요?"
         }
       },
       "teach": {
-        "text": "कोई बात नहीं, हम सिखाएँगे! आप क्या कर सकते हैं?",
+        "text": "कोई बात नहीं, हम सिखाएँगे! आपको और क्या आता है?",
         "gloss": {
-          "en": "No problem, we'll teach you! What can you do?",
-          "ko": "괜찮아요, 우리가 가르쳐 줄게요! 뭘 할 수 있어요?"
+          "en": "No problem, we will teach you! What else can you do?",
+          "ko": "괜찮아요, 우리가 가르쳐 줄게요! 또 뭘 할 수 있어요?"
         }
       },
       "teach-easy": {
-        "text": "आप क्या कर सकते हैं? खाना बनाना? गाना?",
+        "text": "आपको क्या आता है? खाना बनाना? गाना?",
         "gloss": {
           "en": "What can you do? Cooking? Singing?",
           "ko": "뭘 할 수 있어요? 요리? 노래?"
         }
       },
       "me": {
-        "text": "मैं? मैं अच्छा खाना बना सकता हूँ!",
+        "text": "मैं? मुझे अच्छा खाना बनाना आता है!",
         "gloss": {
           "en": "Me? I can cook well!",
           "ko": "저요? 저는 요리를 잘해요!"
         }
       },
       "me-easy": {
-        "text": "मैं खाना बनाता हूँ।",
+        "text": "मुझे खाना बनाना आता है।",
         "gloss": {
-          "en": "I cook.",
-          "ko": "저는 요리해요."
+          "en": "I can cook.",
+          "ko": "저는 요리할 줄 알아요."
         }
       },
       "end": {
@@ -2977,6 +2978,7 @@
             "go": "t-hello-again2",
             "match": [
               "मैं ठीक हूँ",
+              "ठीक हूँ, और तुम",
               "ठीक हूँ, और आप",
               "बढ़िया"
             ]
@@ -3150,44 +3152,44 @@
     },
     "sentences": {
       "hello": {
-        "text": "गुड मॉर्निंग! कैसे हो? कहाँ हो अभी?",
+        "text": "गुड मॉर्निंग! क्या हाल है? अभी कहाँ हो?",
         "gloss": {
-          "en": "Good morning! How are you? Where are you now?",
+          "en": "Good morning! How are things? Where are you now?",
           "ko": "좋은 아침! 잘 지내? 지금 어디야?"
         }
       },
       "hello-easy": {
-        "text": "आप अभी कहाँ हैं? घर में?",
+        "text": "अभी कहाँ हो? घर पर?",
         "gloss": {
           "en": "Where are you now? At home?",
-          "ko": "지금 어디예요? 집이에요?"
+          "ko": "지금 어디야? 집이야?"
         }
       },
       "wake": {
-        "text": "अच्छा! आज कितने बजे उठे?",
+        "text": "अच्छा! आज कितने बजे नींद खुली?",
         "gloss": {
-          "en": "Okay! What time did you get up today?",
+          "en": "Okay! What time did you wake up today?",
           "ko": "그렇구나! 오늘 몇 시에 일어났어?"
         }
       },
       "wake-easy": {
-        "text": "आप कितने बजे उठे? सात बजे?",
+        "text": "नींद कितने बजे खुली? सात बजे?",
         "gloss": {
-          "en": "What time did you get up? Seven?",
-          "ko": "몇 시에 일어났어요? 7시?"
+          "en": "What time did you wake up? Seven?",
+          "ko": "몇 시에 일어났어? 7시?"
         }
       },
       "early": {
-        "text": "वाह, जल्दी! मैं तो आठ बजे उठा।",
+        "text": "वाह, जल्दी! मेरी तो आठ बजे नींद खुली।",
         "gloss": {
-          "en": "Wow, early! I got up at eight.",
+          "en": "Wow, early! I only woke up at eight.",
           "ko": "와, 일찍이네! 난 8시에 일어났어."
         }
       },
       "early-easy": {
-        "text": "मैं आठ बजे उठा।",
+        "text": "मेरी नींद आठ बजे खुली।",
         "gloss": {
-          "en": "I got up at eight.",
+          "en": "I woke up at eight.",
           "ko": "나는 8시에 일어났어."
         }
       },
@@ -3199,10 +3201,10 @@
         }
       },
       "lunch-easy": {
-        "text": "लंच कब? एक बजे? दो बजे?",
+        "text": "लंच एक बजे करें या दो बजे?",
         "gloss": {
-          "en": "Lunch when? One o'clock? Two?",
-          "ko": "점심 언제? 1시? 2시?"
+          "en": "Shall we have lunch at one or at two?",
+          "ko": "점심 1시에 먹을까, 2시에 먹을까?"
         }
       },
       "ok": {
@@ -3213,10 +3215,10 @@
         }
       },
       "ok-easy": {
-        "text": "एक बजे, कैंटीन में।",
+        "text": "एक बजे कैंटीन में मिलते हैं।",
         "gloss": {
-          "en": "At one, in the canteen.",
-          "ko": "1시에 구내식당에서."
+          "en": "See you in the canteen at one.",
+          "ko": "1시에 구내식당에서 봐."
         }
       },
       "end": {
@@ -3369,9 +3371,9 @@
             "meaning": "asks if there is a pharmacy",
             "go": "t-market",
             "match": [
-              "दवाई की दुकान",
+              "दवाई की दुकान कहाँ है",
               "मेडिकल स्टोर?",
-              "केमिस्ट पास में?"
+              "केमिस्ट पास में है"
             ]
           }
         ],
@@ -3458,7 +3460,8 @@
             "match": [
               "वाह, अच्छा",
               "बहुत बढ़िया",
-              "अच्छा, सुबह जाऊँगा"
+              "अच्छा, सुबह जाऊँगा",
+              "अच्छा, सुबह जाऊँगी"
             ]
           }
         ],
@@ -3480,17 +3483,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "नमस्ते बेटा! आप इसी सोसाइटी में रहते हैं?",
+        "text": "नमस्ते बेटा! आपका घर इसी सोसाइटी में है?",
         "gloss": {
-          "en": "Hello dear! Do you live in this society?",
+          "en": "Hello dear! Is your home in this society?",
           "ko": "안녕하세요! 이 단지에 살아요?"
         }
       },
       "hello-easy": {
-        "text": "आप यहाँ रहते हैं? हाँ?",
+        "text": "आपका घर यहीं है?",
         "gloss": {
-          "en": "Do you live here? Yes?",
-          "ko": "여기 살아요? 네?"
+          "en": "Is your home right here?",
+          "ko": "집이 여기예요?"
         }
       },
       "like": {
@@ -3501,10 +3504,10 @@
         }
       },
       "like-easy": {
-        "text": "यह जगह अच्छी है? पसंद है?",
+        "text": "यह जगह पसंद है?",
         "gloss": {
-          "en": "Is this place good? Do you like it?",
-          "ko": "여기 좋아요? 마음에 들어요?"
+          "en": "Do you like this place?",
+          "ko": "여기 마음에 들어요?"
         }
       },
       "need": {
@@ -3515,10 +3518,10 @@
         }
       },
       "need-easy": {
-        "text": "कुछ चाहिए? पूछिए।",
+        "text": "कुछ चाहिए?",
         "gloss": {
-          "en": "Need anything? Ask.",
-          "ko": "필요한 거 있어요? 물어봐요."
+          "en": "Do you need anything?",
+          "ko": "필요한 거 있어요?"
         }
       },
       "market": {
@@ -3529,10 +3532,10 @@
         }
       },
       "market-easy": {
-        "text": "गेट के पास। दाएँ।",
+        "text": "सुपरमार्केट गेट के पास है।",
         "gloss": {
-          "en": "Near the gate. Right.",
-          "ko": "정문 근처요. 오른쪽."
+          "en": "The supermarket is near the gate.",
+          "ko": "슈퍼마켓은 정문 근처예요."
         }
       },
       "park": {
@@ -3543,10 +3546,10 @@
         }
       },
       "park-easy": {
-        "text": "पीछे पार्क है। बड़ा पार्क।",
+        "text": "पीछे एक बड़ा पार्क है।",
         "gloss": {
-          "en": "There's a park behind. A big park.",
-          "ko": "뒤에 공원이 있어요. 큰 공원."
+          "en": "There is a big park behind.",
+          "ko": "뒤에 큰 공원이 있어요."
         }
       },
       "end": {
@@ -3608,7 +3611,7 @@
             "go": "t-price",
             "match": [
               "आम दिखाइए",
-              "आम कैसे दिए",
+              "आम कैसे दिए हैं",
               "आम चाहिए"
             ]
           }
@@ -3772,7 +3775,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Hand over the money and thank him.",
+          "en": "Hand over the money and thank them.",
           "ko": "돈을 건네며 고맙다고 하세요."
         },
         "expect": [
@@ -3791,7 +3794,7 @@
             "match": [
               "छुट्टा नहीं है",
               "सौ रुपये का नोट है",
-              "यह सौ रुपये"
+              "यह लीजिए सौ रुपये"
             ]
           }
         ],
@@ -3820,10 +3823,10 @@
         }
       },
       "hello-easy": {
-        "text": "आम? केले? क्या चाहिए?",
+        "text": "आम लेंगे या केले?",
         "gloss": {
-          "en": "Mangoes? Bananas? What do you need?",
-          "ko": "망고? 바나나? 뭐 필요해요?"
+          "en": "Will you take mangoes or bananas?",
+          "ko": "망고 드릴까요, 바나나요?"
         }
       },
       "price": {
@@ -3834,24 +3837,24 @@
         }
       },
       "price-easy": {
-        "text": "पचास रुपये। बारह केले, पचास रुपये।",
+        "text": "एक दर्जन के पचास रुपये।",
         "gloss": {
-          "en": "Fifty rupees. Twelve bananas, fifty rupees.",
-          "ko": "50루피요. 바나나 12개에 50루피."
+          "en": "Fifty rupees for one dozen.",
+          "ko": "한 다스에 50루피요."
         }
       },
       "slow": {
-        "text": "प-चा-स। पचास रुपये, एक दर्जन।",
+        "text": "पचास रुपये, एक दर्जन के।",
         "gloss": {
-          "en": "Fif-ty. Fifty rupees, one dozen.",
-          "ko": "오-십. 50루피, 한 다스요."
+          "en": "Fifty rupees, for one dozen.",
+          "ko": "50루피요, 한 다스에."
         }
       },
       "slow-easy": {
-        "text": "पचास। पाँच-शून्य।",
+        "text": "बस पचास रुपये।",
         "gloss": {
-          "en": "Fifty. Five-zero.",
-          "ko": "50이요. 오-영."
+          "en": "Just fifty rupees.",
+          "ko": "50루피면 돼요."
         }
       },
       "how-many": {
@@ -3862,10 +3865,10 @@
         }
       },
       "how-many-easy": {
-        "text": "एक दर्जन या आधा दर्जन?",
+        "text": "एक दर्जन दूँ या आधा?",
         "gloss": {
-          "en": "One dozen or half a dozen?",
-          "ko": "한 다스요, 반 다스요?"
+          "en": "Shall I give one dozen or half?",
+          "ko": "한 다스 드릴까요, 반 다스요?"
         }
       },
       "more": {
@@ -3876,10 +3879,10 @@
         }
       },
       "more-easy": {
-        "text": "आम चाहिए? हाँ या नहीं?",
+        "text": "आम लेंगे?",
         "gloss": {
-          "en": "Want mangoes? Yes or no?",
-          "ko": "망고 필요해요? 네, 아니요?"
+          "en": "Will you take mangoes?",
+          "ko": "망고도 드릴까요?"
         }
       },
       "total": {
@@ -3890,17 +3893,17 @@
         }
       },
       "total-easy": {
-        "text": "पचास रुपये, प्लीज़।",
+        "text": "पचास रुपये हुए।",
         "gloss": {
-          "en": "Fifty rupees, please.",
-          "ko": "50루피요."
+          "en": "It comes to fifty rupees.",
+          "ko": "50루피예요."
         }
       },
       "end": {
-        "text": "धन्यवाद! फिर आना।",
+        "text": "धन्यवाद! फिर आइएगा।",
         "gloss": {
-          "en": "Thanks! Come again.",
-          "ko": "고마워요! 또 와요."
+          "en": "Thanks! Do come again.",
+          "ko": "고마워요! 또 오세요."
         }
       }
     },
@@ -4043,7 +4046,7 @@
             "meaning": "wants two",
             "go": "t-bun",
             "match": [
-              "दो बस",
+              "बस दो",
               "सिर्फ़ दो",
               "दो"
             ]
@@ -4117,17 +4120,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "सुप्रभात! गरम-गरम बन तैयार हैं।",
+        "text": "नमस्ते जी! गरम-गरम बन अभी निकले हैं।",
         "gloss": {
-          "en": "Good morning! Hot buns are ready.",
-          "ko": "좋은 아침이에요! 따끈한 번이 나왔어요."
+          "en": "Hello! Hot buns have just come out.",
+          "ko": "안녕하세요! 따끈한 번이 방금 나왔어요."
         }
       },
       "hello-easy": {
-        "text": "नमस्ते। बन चाहिए? ब्रेड?",
+        "text": "बन लेंगे या ब्रेड?",
         "gloss": {
-          "en": "Hello. Want a bun? Bread?",
-          "ko": "안녕하세요. 번 드려요? 빵?"
+          "en": "Will you take a bun or bread?",
+          "ko": "번 드릴까요, 빵요?"
         }
       },
       "what": {
@@ -4138,10 +4141,10 @@
         }
       },
       "what-easy": {
-        "text": "मीठा बिस्किट है।",
+        "text": "यह मीठा बिस्किट है।",
         "gloss": {
-          "en": "It's a sweet biscuit.",
-          "ko": "단 비스킷이에요."
+          "en": "This is a sweet biscuit.",
+          "ko": "이건 단 비스킷이에요."
         }
       },
       "price": {
@@ -4152,10 +4155,10 @@
         }
       },
       "price-easy": {
-        "text": "एक, दस रुपये।",
+        "text": "एक दस रुपये का है।",
         "gloss": {
-          "en": "One, ten rupees.",
-          "ko": "하나에 10루피."
+          "en": "One is ten rupees.",
+          "ko": "하나에 10루피예요."
         }
       },
       "how-many": {
@@ -4166,10 +4169,10 @@
         }
       },
       "how-many-easy": {
-        "text": "एक? दो? चार?",
+        "text": "कितने दूँ, दो या चार?",
         "gloss": {
-          "en": "One? Two? Four?",
-          "ko": "하나? 둘? 넷?"
+          "en": "How many shall I give, two or four?",
+          "ko": "몇 개 드릴까요, 둘? 넷?"
         }
       },
       "bun": {
@@ -4180,16 +4183,16 @@
         }
       },
       "bun-easy": {
-        "text": "बन मस्का? हाँ या नहीं?",
+        "text": "बन मस्का लेंगे?",
         "gloss": {
-          "en": "Bun maska? Yes or no?",
-          "ko": "번 마스카요? 네, 아니요?"
+          "en": "Will you take a bun maska?",
+          "ko": "번 마스카도 드릴까요?"
         }
       },
       "end": {
-        "text": "यह लीजिए। धन्यवाद, कल फिर आइए!",
+        "text": "यह लीजिए। धन्यवाद, कल फिर आइएगा!",
         "gloss": {
-          "en": "Here you go. Thanks, come again tomorrow!",
+          "en": "Here you go. Thanks, do come again tomorrow!",
           "ko": "여기요. 고마워요, 내일 또 오세요!"
         }
       }
@@ -4461,7 +4464,7 @@
             "go": "l-pay-again",
             "match": [
               "फिर से बोलिए",
-              "कितना",
+              "कितने रुपये",
               "धीरे बोलिए"
             ]
           }
@@ -4491,10 +4494,10 @@
         }
       },
       "hello-easy": {
-        "text": "क्या खाएँगे? डोसा? थाली?",
+        "text": "डोसा लेंगे या थाली?",
         "gloss": {
-          "en": "What will you eat? Dosa? Thali?",
-          "ko": "뭐 드실래요? 도사? 탈리?"
+          "en": "Will you have dosa or thali?",
+          "ko": "도사 드릴까요, 탈리요?"
         }
       },
       "thali": {
@@ -4505,10 +4508,10 @@
         }
       },
       "thali-easy": {
-        "text": "चावल, दाल, रोटी। सब एक प्लेट में।",
+        "text": "चावल, दाल, रोटी — सब एक प्लेट में।",
         "gloss": {
-          "en": "Rice, dal, roti. All on one plate.",
-          "ko": "밥, 달, 로티. 한 접시에 다 있어요."
+          "en": "Rice, dal, roti — all on one plate.",
+          "ko": "밥, 달, 로티가 한 접시에 다 있어요."
         }
       },
       "drink": {
@@ -4519,10 +4522,10 @@
         }
       },
       "drink-easy": {
-        "text": "पानी? चाय? लस्सी?",
+        "text": "पानी लेंगे या लस्सी?",
         "gloss": {
-          "en": "Water? Tea? Lassi?",
-          "ko": "물? 차? 라씨?"
+          "en": "Will you have water or lassi?",
+          "ko": "물 드릴까요, 라씨요?"
         }
       },
       "spicy": {
@@ -4533,10 +4536,10 @@
         }
       },
       "spicy-easy": {
-        "text": "मिर्च ठीक है? हाँ या नहीं?",
+        "text": "ज़्यादा मिर्च चलेगी?",
         "gloss": {
-          "en": "Chilli okay? Yes or no?",
-          "ko": "고추 괜찮아요? 네, 아니요?"
+          "en": "Is a lot of chilli okay?",
+          "ko": "많이 매워도 괜찮아요?"
         }
       },
       "food": {
@@ -4547,10 +4550,10 @@
         }
       },
       "food-easy": {
-        "text": "और कुछ? हाँ या नहीं?",
+        "text": "और कुछ लेंगे?",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Will you have anything else?",
+          "ko": "더 드실 거 있어요?"
         }
       },
       "bill": {
@@ -4561,10 +4564,10 @@
         }
       },
       "bill-easy": {
-        "text": "एक सौ अस्सी। एक-आठ-शून्य।",
+        "text": "एक सौ अस्सी रुपये हुए।",
         "gloss": {
-          "en": "One hundred eighty. One-eight-zero.",
-          "ko": "180이요. 일-팔-영."
+          "en": "It comes to one hundred eighty rupees.",
+          "ko": "180루피예요."
         }
       },
       "end": {
@@ -4616,7 +4619,7 @@
             "match": [
               "एम्स जाना है",
               "मुझे एम्स जाना है",
-              "एम्स के लिए बस"
+              "एम्स की बस?"
             ]
           },
           {
@@ -4625,7 +4628,7 @@
             "match": [
               "एम्स की बस कौन सी है",
               "कौन सी बस एम्स जाती है",
-              "एम्स बस नंबर"
+              "एम्स के लिए कौन सी बस"
             ]
           }
         ],
@@ -4764,7 +4767,7 @@
             "match": [
               "टिकट काउंटर कहाँ है",
               "टिकट कहाँ है",
-              "टिकट घर कहाँ है"
+              "टिकट खिड़की कहाँ है"
             ]
           },
           {
@@ -4839,10 +4842,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "हाँ, बोलिए? आप किस बस का इंतज़ार कर रहे हैं?",
+        "text": "हाँ, बोलिए? कौन सी बस चाहिए?",
         "gloss": {
-          "en": "Yes? Which bus are you waiting for?",
-          "ko": "네? 어떤 버스 기다려요?"
+          "en": "Yes? Which bus do you need?",
+          "ko": "네? 어떤 버스 필요해요?"
         }
       },
       "hello-easy": {
@@ -4860,24 +4863,24 @@
         }
       },
       "bus-easy": {
-        "text": "बस नंबर पाँच-दो-दो।",
+        "text": "पाँच सौ बाईस नंबर की बस।",
         "gloss": {
-          "en": "Bus number five-two-two.",
-          "ko": "5-2-2번 버스요."
+          "en": "The number five twenty-two bus.",
+          "ko": "522번 버스요."
         }
       },
       "slow": {
-        "text": "पाँच... दो... दो। पाँच सौ बाईस।",
+        "text": "बस नंबर पाँच सौ बाईस — पाँच, दो, दो।",
         "gloss": {
-          "en": "Five... two... two. Five twenty-two.",
-          "ko": "5… 2… 2. 522번이요."
+          "en": "Bus number five twenty-two — five, two, two.",
+          "ko": "버스 번호 522 — 5, 2, 2요."
         }
       },
       "slow-easy": {
-        "text": "पाँच, दो, दो।",
+        "text": "बस का नंबर पाँच, दो, दो है।",
         "gloss": {
-          "en": "Five, two, two.",
-          "ko": "5, 2, 2."
+          "en": "The bus number is five, two, two.",
+          "ko": "버스 번호는 5, 2, 2예요."
         }
       },
       "when": {
@@ -4888,10 +4891,10 @@
         }
       },
       "when-easy": {
-        "text": "दस मिनट में।",
+        "text": "दस मिनट में आ जाएगी।",
         "gloss": {
-          "en": "In ten minutes.",
-          "ko": "10분 뒤에요."
+          "en": "It will come in ten minutes.",
+          "ko": "10분 뒤에 와요."
         }
       },
       "ticket": {
@@ -4902,10 +4905,10 @@
         }
       },
       "ticket-easy": {
-        "text": "बस के अंदर। कंडक्टर से।",
+        "text": "टिकट बस में मिलेगा।",
         "gloss": {
-          "en": "Inside the bus. From the conductor.",
-          "ko": "버스 안에서요. 차장한테."
+          "en": "You get the ticket on the bus.",
+          "ko": "표는 버스 안에서 사요."
         }
       },
       "end": {
@@ -5016,7 +5019,7 @@
             "match": [
               "एक टिकट, कितने का है",
               "टिकट कितने का है",
-              "एक, यह कितने का है"
+              "एक। कितने का है"
             ]
           },
           {
@@ -5068,7 +5071,7 @@
             "match": [
               "यह लीजिए",
               "ठीक है, लीजिए",
-              "हाँ, यह पैसे"
+              "यह लीजिए पैसे"
             ]
           }
         ],
@@ -5200,10 +5203,10 @@
         }
       },
       "count-easy": {
-        "text": "एक टिकट? दो टिकट?",
+        "text": "एक टिकट या दो?",
         "gloss": {
-          "en": "One ticket? Two tickets?",
-          "ko": "한 장? 두 장?"
+          "en": "One ticket or two?",
+          "ko": "한 장요, 두 장요?"
         }
       },
       "price": {
@@ -5214,10 +5217,10 @@
         }
       },
       "price-easy": {
-        "text": "तीन सौ पचास। तीन-पाँच-शून्य।",
+        "text": "स्लीपर का तीन सौ पचास रुपये है।",
         "gloss": {
-          "en": "Three hundred fifty. Three-five-zero.",
-          "ko": "350이요. 삼-오-영."
+          "en": "Sleeper is three hundred fifty rupees.",
+          "ko": "슬리퍼석은 350루피예요."
         }
       },
       "time": {
@@ -5228,24 +5231,24 @@
         }
       },
       "time-easy": {
-        "text": "छह बजे। प्लेटफ़ॉर्म चार।",
+        "text": "ट्रेन छह बजे है, प्लेटफ़ॉर्म चार से।",
         "gloss": {
-          "en": "Six o'clock. Platform four.",
-          "ko": "6시요. 4번 승강장."
+          "en": "The train is at six, from platform four.",
+          "ko": "기차는 6시, 4번 승강장에서요."
         }
       },
       "again": {
-        "text": "शाम... छह बजे। प्लेटफ़ॉर्म... चार।",
+        "text": "शाम छह बजे। प्लेटफ़ॉर्म नंबर चार।",
         "gloss": {
-          "en": "Evening... six o'clock. Platform... four.",
-          "ko": "저녁… 6시. 승강장… 4번."
+          "en": "Six in the evening. Platform number four.",
+          "ko": "저녁 6시요. 4번 승강장."
         }
       },
       "again-easy": {
-        "text": "छह बजे, चार नंबर।",
+        "text": "छह बजे, प्लेटफ़ॉर्म चार।",
         "gloss": {
-          "en": "Six o'clock, number four.",
-          "ko": "6시, 4번이요."
+          "en": "Six o'clock, platform four.",
+          "ko": "6시, 4번 승강장요."
         }
       },
       "end": {
@@ -5494,10 +5497,10 @@
         }
       },
       "price-easy": {
-        "text": "एक सौ पचास रुपये।",
+        "text": "एक सौ पचास रुपये लगेंगे।",
         "gloss": {
-          "en": "One hundred fifty rupees.",
-          "ko": "150루피요."
+          "en": "It will be one hundred fifty rupees.",
+          "ko": "150루피예요."
         }
       },
       "meter": {
@@ -5508,17 +5511,17 @@
         }
       },
       "meter-easy": {
-        "text": "ठीक है, मीटर।",
+        "text": "चलिए, मीटर से।",
         "gloss": {
-          "en": "Okay, meter.",
-          "ko": "네, 미터기요."
+          "en": "Fine, by the meter.",
+          "ko": "좋아요, 미터기로요."
         }
       },
       "from": {
-        "text": "आप कहाँ से हैं? हिंदी अच्छी है!",
+        "text": "आपकी हिंदी अच्छी है! आप कहाँ से हैं?",
         "gloss": {
-          "en": "Where are you from? Your Hindi is good!",
-          "ko": "어디서 왔어요? 힌디어 잘하네요!"
+          "en": "Your Hindi is good! Where are you from?",
+          "ko": "힌디어 잘하네요! 어디서 왔어요?"
         }
       },
       "from-easy": {
@@ -5536,17 +5539,17 @@
         }
       },
       "arrive-easy": {
-        "text": "आ गए। सौ रुपये।",
+        "text": "इंडिया गेट आ गया। सौ रुपये।",
         "gloss": {
-          "en": "We're here. One hundred rupees.",
-          "ko": "도착했어요. 100루피요."
+          "en": "India Gate is here. One hundred rupees.",
+          "ko": "인디아 게이트 도착. 100루피요."
         }
       },
       "end": {
-        "text": "धन्यवाद! घूमिए, मज़े कीजिए।",
+        "text": "धन्यवाद! अच्छे से घूमिए।",
         "gloss": {
-          "en": "Thank you! Look around, enjoy yourself.",
-          "ko": "고마워요! 구경 잘하고 즐기세요."
+          "en": "Thank you! Enjoy looking around.",
+          "ko": "고마워요! 구경 잘하세요."
         }
       }
     },
@@ -5780,7 +5783,7 @@
             "match": [
               "पानी भी दीजिए",
               "एक पानी की बोतल भी",
-              "पानी है"
+              "पानी की बोतल है"
             ]
           }
         ],
@@ -5823,10 +5826,10 @@
         }
       },
       "since-easy": {
-        "text": "आज? या कल?",
+        "text": "आज से या कल से?",
         "gloss": {
-          "en": "Today? Or yesterday?",
-          "ko": "오늘요? 아니면 어제요?"
+          "en": "Since today or since yesterday?",
+          "ko": "오늘부터요, 어제부터요?"
         }
       },
       "fever": {
@@ -5837,10 +5840,10 @@
         }
       },
       "fever-easy": {
-        "text": "बुखार? हाँ या नहीं?",
+        "text": "बुखार है?",
         "gloss": {
-          "en": "Fever? Yes or no?",
-          "ko": "열이요? 네, 아니요?"
+          "en": "Do you have a fever?",
+          "ko": "열 있어요?"
         }
       },
       "pill": {
@@ -5851,24 +5854,24 @@
         }
       },
       "pill-easy": {
-        "text": "यह गोली। सुबह एक, रात एक।",
+        "text": "यह गोली लीजिए, सुबह एक और रात एक।",
         "gloss": {
-          "en": "This tablet. One in the morning, one at night.",
-          "ko": "이 알약이요. 아침에 하나, 밤에 하나."
+          "en": "Take this tablet, one in the morning and one at night.",
+          "ko": "이 알약 드세요, 아침에 하나 밤에 하나."
         }
       },
       "price": {
-        "text": "तीस रुपये।",
+        "text": "तीस रुपये हुए।",
         "gloss": {
-          "en": "Thirty rupees.",
-          "ko": "30루피요."
+          "en": "It comes to thirty rupees.",
+          "ko": "30루피예요."
         }
       },
       "price-easy": {
-        "text": "तीस। तीन-शून्य।",
+        "text": "सिर्फ़ तीस रुपये।",
         "gloss": {
-          "en": "Thirty. Three-zero.",
-          "ko": "30이요. 삼-영."
+          "en": "Just thirty rupees.",
+          "ko": "30루피만요."
         }
       },
       "end": {
@@ -6131,10 +6134,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "आइए दीदी, आइए भैया! नए कुर्ते आए हैं।",
+        "text": "नमस्ते जी! नए कुर्ते आए हैं, देख लीजिए।",
         "gloss": {
-          "en": "Come in! New kurtas have arrived.",
-          "ko": "어서 오세요! 새 쿠르타가 들어왔어요."
+          "en": "Hello! New kurtas have arrived, take a look.",
+          "ko": "안녕하세요! 새 쿠르타가 들어왔어요, 보세요."
         }
       },
       "hello-easy": {
@@ -6152,10 +6155,10 @@
         }
       },
       "colour-easy": {
-        "text": "नीला? सफ़ेद?",
+        "text": "नीला लेंगे या सफ़ेद?",
         "gloss": {
-          "en": "Blue? White?",
-          "ko": "파랑? 하양?"
+          "en": "Will you take blue or white?",
+          "ko": "파랑 드릴까요, 하양요?"
         }
       },
       "size": {
@@ -6166,10 +6169,10 @@
         }
       },
       "size-easy": {
-        "text": "छोटा, मीडियम, या बड़ा?",
+        "text": "स्मॉल, मीडियम या लार्ज?",
         "gloss": {
-          "en": "Small, medium, or large?",
-          "ko": "작은 거, 미디엄, 큰 거?"
+          "en": "Small, medium or large?",
+          "ko": "스몰, 미디엄, 라지?"
         }
       },
       "like": {
@@ -6180,10 +6183,10 @@
         }
       },
       "like-easy": {
-        "text": "अच्छा है? पसंद है?",
+        "text": "यह अच्छा लगा?",
         "gloss": {
-          "en": "Is it good? Do you like it?",
-          "ko": "좋아요? 마음에 들어요?"
+          "en": "Did you like this?",
+          "ko": "이거 마음에 들어요?"
         }
       },
       "price": {
@@ -6194,17 +6197,17 @@
         }
       },
       "price-easy": {
-        "text": "चार सौ। चार-शून्य-शून्य।",
+        "text": "चार सौ रुपये का है।",
         "gloss": {
-          "en": "Four hundred. Four-zero-zero.",
-          "ko": "400이요. 사-영-영."
+          "en": "It is four hundred rupees.",
+          "ko": "400루피예요."
         }
       },
       "end": {
-        "text": "ठीक है, साढ़े तीन सौ। आपके लिए!",
+        "text": "ठीक है, आपके लिए साढ़े तीन सौ।",
         "gloss": {
-          "en": "Okay, three fifty. Just for you!",
-          "ko": "좋아요, 350. 특별히요!"
+          "en": "Okay, three fifty for you.",
+          "ko": "좋아요, 손님한테는 350이요."
         }
       }
     },
@@ -6256,7 +6259,7 @@
             "go": "t-colour",
             "match": [
               "मेरा बैग कहाँ है",
-              "बैग यहाँ है",
+              "क्या मेरा बैग यहाँ है",
               "मेरा बैग?"
             ]
           }
@@ -6344,7 +6347,7 @@
             "match": [
               "नहीं, यह मेरा नहीं",
               "नहीं, मेरा बैग छोटा है",
-              "यह नहीं"
+              "नहीं, यह वाला नहीं"
             ]
           }
         ],
@@ -6395,7 +6398,7 @@
             "match": [
               "नहीं, यह मेरी नहीं",
               "पता नहीं",
-              "यह किताब नहीं"
+              "नहीं, किताब मेरी नहीं है"
             ]
           }
         ],
@@ -6512,10 +6515,10 @@
         }
       },
       "hello-easy": {
-        "text": "क्या खोया? बैग? फ़ोन?",
+        "text": "बैग खोया है या फ़ोन?",
         "gloss": {
-          "en": "What did you lose? Bag? Phone?",
-          "ko": "뭘 잃어버렸어요? 가방? 폰?"
+          "en": "Did you lose a bag or a phone?",
+          "ko": "가방을 잃어버렸어요, 폰이에요?"
         }
       },
       "colour": {
@@ -6526,10 +6529,10 @@
         }
       },
       "colour-easy": {
-        "text": "काला? लाल?",
+        "text": "काला है या लाल?",
         "gloss": {
-          "en": "Black? Red?",
-          "ko": "검정? 빨강?"
+          "en": "Is it black or red?",
+          "ko": "검정이에요, 빨강이에요?"
         }
       },
       "this": {
@@ -6554,10 +6557,10 @@
         }
       },
       "book-easy": {
-        "text": "और यह किताब?",
+        "text": "यह किताब आपकी है?",
         "gloss": {
-          "en": "And this book?",
-          "ko": "그리고 이 책은요?"
+          "en": "Is this book yours?",
+          "ko": "이 책 당신 거예요?"
         }
       },
       "sign": {
@@ -6582,10 +6585,10 @@
         }
       },
       "pen-easy": {
-        "text": "वहाँ, टेबल पर।",
+        "text": "पेन वहाँ टेबल पर है।",
         "gloss": {
-          "en": "There, on the table.",
-          "ko": "저기, 탁자 위요."
+          "en": "The pen is there, on the table.",
+          "ko": "펜은 저기 탁자 위에 있어요."
         }
       },
       "end": {
@@ -6807,7 +6810,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the map.",
+          "en": "Thank them for the map.",
           "ko": "지도 고맙다고 하세요."
         },
         "frame": "hi-f1-18",
@@ -6849,10 +6852,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "पधारो सा! जयपुर में स्वागत है।",
+        "text": "नमस्ते! जयपुर में आपका स्वागत है।",
         "gloss": {
-          "en": "Welcome! Welcome to Jaipur.",
-          "ko": "어서 오세요! 자이푸르에 오신 걸 환영해요."
+          "en": "Hello! Welcome to Jaipur.",
+          "ko": "안녕하세요! 자이푸르에 오신 걸 환영해요."
         }
       },
       "hello-easy": {
@@ -6870,10 +6873,10 @@
         }
       },
       "map-easy": {
-        "text": "यह नक्शा है। मैप।",
+        "text": "यह शहर का नक्शा है।",
         "gloss": {
-          "en": "This is a map. A map.",
-          "ko": "이건 지도예요. 맵."
+          "en": "This is a map of the city.",
+          "ko": "이건 시내 지도예요."
         }
       },
       "fort": {
@@ -6884,17 +6887,17 @@
         }
       },
       "fort-easy": {
-        "text": "आमेर क़िला। बड़ा क़िला।",
+        "text": "आमेर का क़िला बहुत अच्छा है।",
         "gloss": {
-          "en": "Amer Fort. A big fort.",
-          "ko": "암베르 성이요. 큰 성."
+          "en": "Amer Fort is very good.",
+          "ko": "암베르 성이 아주 좋아요."
         }
       },
       "where": {
-        "text": "शहर से ग्यारह किलोमीटर दूर। बस जाती है।",
+        "text": "शहर से ग्यारह किलोमीटर दूर है। वहाँ बस जाती है।",
         "gloss": {
-          "en": "Eleven kilometres from the city. A bus goes there.",
-          "ko": "시내에서 11킬로미터요. 버스가 가요."
+          "en": "It is eleven kilometres from the city. A bus goes there.",
+          "ko": "시내에서 11킬로미터예요. 버스가 가요."
         }
       },
       "where-easy": {
@@ -6905,23 +6908,23 @@
         }
       },
       "open": {
-        "text": "सुबह आठ बजे से शाम छह बजे तक।",
+        "text": "क़िला सुबह आठ से शाम छह बजे तक खुला रहता है।",
         "gloss": {
-          "en": "From eight in the morning to six in the evening.",
-          "ko": "아침 8시부터 저녁 6시까지요."
+          "en": "The fort is open from eight in the morning to six in the evening.",
+          "ko": "성은 아침 8시부터 저녁 6시까지 열어요."
         }
       },
       "open-easy": {
-        "text": "आठ से छह।",
+        "text": "आठ बजे खुलता है, छह बजे बंद।",
         "gloss": {
-          "en": "Eight to six.",
-          "ko": "8시부터 6시까지요."
+          "en": "It opens at eight, closes at six.",
+          "ko": "8시에 열고 6시에 닫아요."
         }
       },
       "end": {
-        "text": "आपका स्वागत है। जयपुर में मज़े कीजिए!",
+        "text": "कोई बात नहीं। जयपुर में मज़े कीजिए!",
         "gloss": {
-          "en": "You're welcome. Enjoy Jaipur!",
+          "en": "No problem. Enjoy Jaipur!",
           "ko": "천만에요. 자이푸르 즐기세요!"
         }
       }
@@ -7183,7 +7186,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "expect": [
@@ -7252,17 +7255,17 @@
         }
       },
       "live": {
-        "text": "आप अभी कहाँ रहते हैं?",
+        "text": "आपका घर कहाँ है?",
         "gloss": {
-          "en": "Where do you live now?",
-          "ko": "지금 어디 살아요?"
+          "en": "Where is your home?",
+          "ko": "집이 어디예요?"
         }
       },
       "live-easy": {
-        "text": "लखनऊ में? किस जगह?",
+        "text": "लखनऊ में कहाँ?",
         "gloss": {
-          "en": "In Lucknow? Which place?",
-          "ko": "러크나우요? 어디요?"
+          "en": "Where in Lucknow?",
+          "ko": "러크나우 어디요?"
         }
       },
       "photo": {
@@ -7273,10 +7276,10 @@
         }
       },
       "photo-easy": {
-        "text": "फ़ोटो दीजिए। छोटी फ़ोटो।",
+        "text": "एक छोटी फ़ोटो दीजिए।",
         "gloss": {
-          "en": "Give a photo. A small photo.",
-          "ko": "사진 주세요. 작은 사진."
+          "en": "Give me a small photo.",
+          "ko": "작은 사진 하나 주세요."
         }
       },
       "days": {
@@ -7287,10 +7290,10 @@
         }
       },
       "days-easy": {
-        "text": "किताब दो हफ़्ते। चौदह दिन।",
+        "text": "किताब दो हफ़्ते के लिए मिलेगी।",
         "gloss": {
-          "en": "A book for two weeks. Fourteen days.",
-          "ko": "책은 2주요. 14일."
+          "en": "You get a book for two weeks.",
+          "ko": "책은 2주 동안 빌려요."
         }
       },
       "end": {
@@ -7341,8 +7344,8 @@
             "go": "t-fee",
             "match": [
               "हाँ, एक महीना कितने का है",
-              "फ़ीस कितने की है",
-              "एक महीने का कितने का है",
+              "फ़ीस कितनी है",
+              "एक महीने का कितना है",
               "यह कितने का है"
             ]
           },
@@ -7386,7 +7389,7 @@
             "match": [
               "ठीक है, जिम कब खुलता है",
               "कितने बजे खुलता है",
-              "टाइम क्या है"
+              "टाइमिंग क्या है"
             ]
           },
           {
@@ -7428,18 +7431,18 @@
             "meaning": "wants yoga",
             "go": "t-yoga",
             "match": [
-              "मुझे योगा चाहिए",
               "मुझे योगा क्लास चाहिए",
-              "योगा, मुझे योगा चाहिए"
+              "मुझे योगा करना है",
+              "योगा"
             ]
           },
           {
             "meaning": "wants weights",
             "go": "t-end",
             "match": [
-              "वज़न",
-              "मुझे वज़न करना है",
-              "जिम, वज़न"
+              "वेट्स",
+              "मुझे वेट्स करने हैं",
+              "वेट ट्रेनिंग"
             ]
           }
         ],
@@ -7463,7 +7466,7 @@
         "type": "learner",
         "id": "l-ok",
         "goal": {
-          "en": "Say okay and thank him.",
+          "en": "Say okay and thank them.",
           "ko": "알았다고 하고 고맙다고 하세요."
         },
         "expect": [
@@ -7511,10 +7514,10 @@
         }
       },
       "hello-easy": {
-        "text": "आप जिम के लिए आए हैं?",
+        "text": "जिम की मेंबरशिप चाहिए?",
         "gloss": {
-          "en": "Have you come for the gym?",
-          "ko": "헬스장 때문에 오셨어요?"
+          "en": "Do you want a gym membership?",
+          "ko": "헬스장 회원권 필요해요?"
         }
       },
       "fee": {
@@ -7539,24 +7542,24 @@
         }
       },
       "time-easy": {
-        "text": "सुबह छह से रात दस।",
+        "text": "सुबह छह से रात दस बजे तक।",
         "gloss": {
-          "en": "Six a.m. to ten p.m.",
+          "en": "From six in the morning to ten at night.",
           "ko": "아침 6시부터 밤 10시까지요."
         }
       },
       "do": {
-        "text": "आप क्या करना चाहते हैं? योगा या वज़न?",
+        "text": "आपको क्या करना है? योगा या वेट्स?",
         "gloss": {
           "en": "What do you want to do? Yoga or weights?",
           "ko": "뭘 하고 싶어요? 요가요, 웨이트요?"
         }
       },
       "do-easy": {
-        "text": "योगा? या वज़न?",
+        "text": "योगा करना है या वेट्स?",
         "gloss": {
-          "en": "Yoga? Or weights?",
-          "ko": "요가? 아니면 웨이트?"
+          "en": "Do you want to do yoga or weights?",
+          "ko": "요가 할래요, 웨이트 할래요?"
         }
       },
       "yoga": {
@@ -7567,10 +7570,10 @@
         }
       },
       "yoga-easy": {
-        "text": "योगा, सुबह सात बजे।",
+        "text": "योगा सुबह सात बजे है।",
         "gloss": {
-          "en": "Yoga, seven in the morning.",
-          "ko": "요가요, 아침 7시."
+          "en": "Yoga is at seven in the morning.",
+          "ko": "요가는 아침 7시예요."
         }
       },
       "end": {
@@ -7710,7 +7713,7 @@
             "go": "t-age",
             "match": [
               "मुझे यह शब्द समझ नहीं आया",
-              "मुझे उम्र समझ नहीं आया",
+              "मुझे उम्र का मतलब समझ नहीं आया",
               "माफ़ कीजिए, मुझे समझ नहीं आया"
             ]
           },
@@ -7842,7 +7845,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her.",
+          "en": "Thank them.",
           "ko": "고맙다고 하세요."
         },
         "expect": [
@@ -7883,17 +7886,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "नमस्ते। पहली बार आए हैं?",
+        "text": "नमस्ते। यहाँ पहली बार है?",
         "gloss": {
-          "en": "Hello. Is this your first visit?",
-          "ko": "안녕하세요. 처음 오셨어요?"
+          "en": "Hello. Is it your first time here?",
+          "ko": "안녕하세요. 여기 처음이에요?"
         }
       },
       "hello-easy": {
-        "text": "पहली बार? हाँ या नहीं?",
+        "text": "पहली बार है?",
         "gloss": {
-          "en": "First time? Yes or no?",
-          "ko": "처음요? 네, 아니요?"
+          "en": "First time?",
+          "ko": "처음이에요?"
         }
       },
       "name": {
@@ -7904,9 +7907,9 @@
         }
       },
       "name-easy": {
-        "text": "नाम क्या है?",
+        "text": "आपका नाम क्या है?",
         "gloss": {
-          "en": "What's the name?",
+          "en": "What is your name?",
           "ko": "이름이 뭐예요?"
         }
       },
@@ -7918,24 +7921,24 @@
         }
       },
       "form-easy": {
-        "text": "यह फ़ॉर्म। उम्र लिखिए।",
+        "text": "यह फ़ॉर्म भरिए।",
         "gloss": {
-          "en": "This form. Write your age.",
-          "ko": "이 양식요. 나이 쓰세요."
+          "en": "Fill in this form.",
+          "ko": "이 양식 작성하세요."
         }
       },
       "age": {
-        "text": "उम्र मतलब आप कितने साल के हैं। जैसे पच्चीस।",
+        "text": "उम्र मतलब एज — जैसे बीस साल, पच्चीस साल।",
         "gloss": {
-          "en": "Age means how many years old you are. Like twenty-five.",
-          "ko": "나이는 몇 살인지예요. 예를 들어 25."
+          "en": "\"Umr\" means age — like twenty years, twenty-five years.",
+          "ko": "\"움르\"는 나이예요 — 예를 들어 20살, 25살."
         }
       },
       "age-easy": {
-        "text": "उम्र... एज। साल।",
+        "text": "उम्र मतलब एज।",
         "gloss": {
-          "en": "Umr... age. Years.",
-          "ko": "움르… 나이요. 살."
+          "en": "\"Umr\" means age.",
+          "ko": "\"움르\"는 나이예요."
         }
       },
       "wait": {
@@ -7946,24 +7949,24 @@
         }
       },
       "wait-easy": {
-        "text": "दस मिनट। बैठिए।",
+        "text": "दस मिनट बैठिए।",
         "gloss": {
-          "en": "Ten minutes. Have a seat.",
-          "ko": "10분요. 앉으세요."
+          "en": "Have a seat for ten minutes.",
+          "ko": "10분만 앉아 계세요."
         }
       },
       "doctor": {
-        "text": "जी, डॉक्टर शर्मा।",
+        "text": "आज डॉक्टर शर्मा हैं।",
         "gloss": {
-          "en": "Yes, Doctor Sharma.",
-          "ko": "네, 샤르마 선생님이요."
+          "en": "Today it is Doctor Sharma.",
+          "ko": "오늘은 샤르마 선생님이에요."
         }
       },
       "doctor-easy": {
-        "text": "डॉक्टर शर्मा।",
+        "text": "डॉक्टर शर्मा हैं।",
         "gloss": {
-          "en": "Doctor Sharma.",
-          "ko": "샤르마 선생님요."
+          "en": "It is Doctor Sharma.",
+          "ko": "샤르마 선생님이에요."
         }
       },
       "end": {
@@ -8025,7 +8028,8 @@
             "match": [
               "जी हाँ",
               "हाँ, मैं नया हूँ",
-              "जी, मैं नई हूँ"
+              "जी, मैं नई हूँ",
+              "हाँ, इसी बिल्डिंग में"
             ]
           }
         ],
@@ -8153,7 +8157,7 @@
             "go": "t-bags",
             "match": [
               "कौन सा फ़्लैट",
-              "आपका फ़्लैट नंबर",
+              "आपका फ़्लैट नंबर क्या है",
               "फ़्लैट नंबर?"
             ]
           }
@@ -8219,17 +8223,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "अरे, नमस्ते! आप नए आए हैं ना?",
+        "text": "अरे, नमस्ते! आपसे पहली बार मिल रही हूँ।",
         "gloss": {
-          "en": "Oh, hello! You've just moved in, right?",
-          "ko": "어머, 안녕하세요! 새로 이사 오셨죠?"
+          "en": "Oh, hello! I am meeting you for the first time.",
+          "ko": "어머, 안녕하세요! 처음 뵙네요."
         }
       },
       "hello-easy": {
-        "text": "आप नए हैं? हाँ?",
+        "text": "नमस्ते! आप इसी बिल्डिंग में हैं?",
         "gloss": {
-          "en": "You're new? Yes?",
-          "ko": "새로 오셨어요? 네?"
+          "en": "Hello! Are you in this building?",
+          "ko": "안녕하세요! 이 건물에 살아요?"
         }
       },
       "me": {
@@ -8240,9 +8244,9 @@
         }
       },
       "me-easy": {
-        "text": "मैं सुनीता। आप ठीक हैं?",
+        "text": "मैं सुनीता हूँ। आप ठीक हैं?",
         "gloss": {
-          "en": "I'm Sunita. Are you well?",
+          "en": "I am Sunita. Are you well?",
           "ko": "저는 수니타예요. 잘 지내요?"
         }
       },
@@ -8254,10 +8258,10 @@
         }
       },
       "floor-easy": {
-        "text": "पहला? दूसरा? तीसरा फ़्लोर?",
+        "text": "पहले फ़्लोर पर या दूसरे?",
         "gloss": {
-          "en": "First? Second? Third floor?",
-          "ko": "1층? 2층? 3층?"
+          "en": "On the first floor or the second?",
+          "ko": "1층이에요, 2층이에요?"
         }
       },
       "same": {
@@ -8268,28 +8272,28 @@
         }
       },
       "same-easy": {
-        "text": "मैं भी तीसरे पर।",
+        "text": "मैं भी तीसरे फ़्लोर पर हूँ।",
         "gloss": {
-          "en": "Me too, on the third.",
-          "ko": "저도 3층이요."
+          "en": "I am on the third floor too.",
+          "ko": "저도 3층이에요."
         }
       },
       "bags": {
-        "text": "माफ़ कीजिए, थैले भारी हैं। मैं ऊपर जाती हूँ।",
+        "text": "माफ़ कीजिए, थैले भारी हैं। मुझे ऊपर जाना है।",
         "gloss": {
-          "en": "Sorry, the bags are heavy. I'll go up.",
-          "ko": "미안해요, 짐이 무거워서요. 올라갈게요."
+          "en": "Sorry, the bags are heavy. I have to go up.",
+          "ko": "미안해요, 짐이 무거워서요. 올라가야 해요."
         }
       },
       "bags-easy": {
-        "text": "थैले भारी हैं। मैं जाती हूँ।",
+        "text": "थैले भारी हैं। मुझे जाना है।",
         "gloss": {
-          "en": "The bags are heavy. I'm going.",
-          "ko": "짐이 무거워요. 갈게요."
+          "en": "The bags are heavy. I have to go.",
+          "ko": "짐이 무거워요. 가야 해요."
         }
       },
       "end": {
-        "text": "फिर मिलेंगे! शुभ रात्रि।",
+        "text": "फिर मिलेंगे! गुड नाइट।",
         "gloss": {
           "en": "See you! Good night.",
           "ko": "또 봐요! 안녕히 주무세요."
@@ -8337,17 +8341,17 @@
             "go": "t-name",
             "match": [
               "मैं कोरिया से हूँ",
-              "हाय, मैं कोरिया से हूँ, कोरियन",
+              "नमस्ते, मैं कोरिया से हूँ",
               "मैं साउथ कोरिया से हूँ"
             ]
           },
           {
-            "meaning": "says Korean",
+            "meaning": "names the country only",
             "go": "t-name",
             "match": [
-              "कोरियन",
-              "कोरियन भाषा",
-              "हाँ, कोरियन"
+              "कोरिया",
+              "साउथ कोरिया",
+              "कोरिया से"
             ]
           }
         ],
@@ -8551,17 +8555,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "हाय! मैं रोहन। आप कौन सी भाषा सिखाते हैं?",
+        "text": "हाय! मैं रोहन। आप कहाँ से हैं?",
         "gloss": {
-          "en": "Hi! I'm Rohan. Which language do you teach?",
-          "ko": "안녕하세요! 저는 로한이에요. 어떤 언어 가르쳐요?"
+          "en": "Hi! I am Rohan. Where are you from?",
+          "ko": "안녕하세요! 저는 로한이에요. 어디서 왔어요?"
         }
       },
       "hello-easy": {
-        "text": "आप कोरियन बोलते हैं?",
+        "text": "आप किस देश से हैं?",
         "gloss": {
-          "en": "Do you speak Korean?",
-          "ko": "한국어 해요?"
+          "en": "Which country are you from?",
+          "ko": "어느 나라에서 왔어요?"
         }
       },
       "name": {
@@ -8572,17 +8576,17 @@
         }
       },
       "name-easy": {
-        "text": "आपका नाम?",
+        "text": "आपका नाम क्या है?",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름은요?"
+          "en": "What is your name?",
+          "ko": "이름이 뭐예요?"
         }
       },
       "hindi": {
-        "text": "आप हिंदी कितनी बोल सकते हैं?",
+        "text": "आपको हिंदी कितनी आती है?",
         "gloss": {
-          "en": "How much Hindi can you speak?",
-          "ko": "힌디어 얼마나 할 수 있어요?"
+          "en": "How much Hindi do you know?",
+          "ko": "힌디어 얼마나 알아요?"
         }
       },
       "hindi-easy": {
@@ -8593,14 +8597,14 @@
         }
       },
       "fast": {
-        "text": "कोई बात नहीं, आपकी हिंदी अच्छी है! मैं कोरियन सीखना चाहता हूँ, के-ड्रामा के लिए।",
+        "text": "कोई बात नहीं, आपकी हिंदी अच्छी है! मुझे कोरियन सीखनी है, के-ड्रामा के लिए।",
         "gloss": {
           "en": "No problem, your Hindi is good! I want to learn Korean, for K-dramas.",
           "ko": "괜찮아요, 힌디어 잘하네요! 저는 K드라마 때문에 한국어 배우고 싶어요."
         }
       },
       "fast-easy": {
-        "text": "मैं कोरियन सीखना चाहता हूँ।",
+        "text": "मुझे कोरियन सीखनी है।",
         "gloss": {
           "en": "I want to learn Korean.",
           "ko": "저는 한국어 배우고 싶어요."
@@ -8614,10 +8618,10 @@
         }
       },
       "start-easy": {
-        "text": "चलिए, शुरू।",
+        "text": "चलिए, शुरू करें।",
         "gloss": {
-          "en": "Let's start.",
-          "ko": "시작해요."
+          "en": "Come on, let us start.",
+          "ko": "자, 시작해요."
         }
       },
       "end": {
@@ -8672,7 +8676,7 @@
         "type": "learner",
         "id": "l-have",
         "goal": {
-          "en": "Ask if she has a pen.",
+          "en": "Ask if they have a pen.",
           "ko": "펜이 있는지 물어보세요."
         },
         "frame": "hi-f1-07",
@@ -8716,7 +8720,7 @@
         "type": "learner",
         "id": "l-thanks",
         "goal": {
-          "en": "Thank her for the pen.",
+          "en": "Thank them for the pen.",
           "ko": "펜 고맙다고 하세요."
         },
         "frame": "hi-f1-18",
@@ -8814,7 +8818,7 @@
             "match": [
               "माफ़ कीजिए, समझ नहीं आया",
               "सॉरी, फिर से बोलो",
-              "क्या?"
+              "क्या बोला?"
             ]
           },
           {
@@ -8894,17 +8898,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "क्या हुआ? कुछ ढूँढ रहे हो?",
+        "text": "क्या हुआ? कुछ चाहिए?",
         "gloss": {
-          "en": "What happened? Looking for something?",
-          "ko": "왜 그래? 뭐 찾아?"
+          "en": "What happened? Do you need something?",
+          "ko": "왜 그래? 뭐 필요해?"
         }
       },
       "hello-easy": {
-        "text": "क्या चाहिए?",
+        "text": "पेन चाहिए?",
         "gloss": {
-          "en": "What do you need?",
-          "ko": "뭐 필요해?"
+          "en": "Do you need a pen?",
+          "ko": "펜 필요해?"
         }
       },
       "give": {
@@ -8950,17 +8954,17 @@
         }
       },
       "back": {
-        "text": "क्लास ख़त्म! पेन वापस दोगे?",
+        "text": "क्लास ख़त्म! मेरा पेन वापस मिलेगा?",
         "gloss": {
-          "en": "Class is over! Will you give the pen back?",
-          "ko": "수업 끝! 펜 돌려줄래?"
+          "en": "Class is over! Can I have my pen back?",
+          "ko": "수업 끝! 내 펜 돌려줄래?"
         }
       },
       "back-easy": {
-        "text": "मेरा पेन?",
+        "text": "मेरा पेन दे दो।",
         "gloss": {
-          "en": "My pen?",
-          "ko": "내 펜?"
+          "en": "Give me my pen.",
+          "ko": "내 펜 줘."
         }
       },
       "end": {
@@ -9045,7 +9049,7 @@
         "type": "learner",
         "id": "l-slow",
         "goal": {
-          "en": "It's noisy. Ask her to say it again.",
+          "en": "It's noisy. Ask them to say it again.",
           "ko": "시끄러워요. 다시 말해 달라고 하세요."
         },
         "frame": "hi-f1-08",
@@ -9181,10 +9185,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "हैलो? मैं पहुँच गई। तुम कहाँ हो?",
+        "text": "हैलो? मैं स्टेशन पर हूँ। तुम कहाँ हो?",
         "gloss": {
-          "en": "Hello? I've arrived. Where are you?",
-          "ko": "여보세요? 나 도착했어. 너 어디야?"
+          "en": "Hello? I am at the station. Where are you?",
+          "ko": "여보세요? 나 역에 있어. 너 어디야?"
         }
       },
       "hello-easy": {
@@ -9209,17 +9213,17 @@
         }
       },
       "slow": {
-        "text": "गेट... सात। सात नंबर।",
+        "text": "गेट नंबर सात पर हूँ। सेवन।",
         "gloss": {
-          "en": "Gate... seven. Number seven.",
-          "ko": "출구… 7. 7번."
+          "en": "I am at gate number seven. Seven.",
+          "ko": "7번 출구에 있어. 세븐."
         }
       },
       "slow-easy": {
-        "text": "सात। सेवन।",
+        "text": "गेट सेवन पर।",
         "gloss": {
-          "en": "Seven. Seven.",
-          "ko": "7. 세븐."
+          "en": "At gate seven.",
+          "ko": "7번 출구야."
         }
       },
       "see": {
@@ -9230,10 +9234,10 @@
         }
       },
       "see-easy": {
-        "text": "कॉफ़ी शॉप? हाँ या नहीं?",
+        "text": "कोई कॉफ़ी शॉप दिख रही है?",
         "gloss": {
-          "en": "Coffee shop? Yes or no?",
-          "ko": "커피숍? 응, 아니?"
+          "en": "Can you see a coffee shop?",
+          "ko": "커피숍 보여?"
         }
       },
       "meet": {
@@ -9244,17 +9248,17 @@
         }
       },
       "meet-easy": {
-        "text": "कॉफ़ी शॉप के सामने। पाँच मिनट।",
+        "text": "कॉफ़ी शॉप के सामने मिलते हैं।",
         "gloss": {
-          "en": "In front of the coffee shop. Five minutes.",
-          "ko": "커피숍 앞. 5분."
+          "en": "Let us meet in front of the coffee shop.",
+          "ko": "커피숍 앞에서 만나."
         }
       },
       "end": {
-        "text": "हाँ, आ रही हूँ!",
+        "text": "हाँ, ठीक है! वहीं मिलते हैं।",
         "gloss": {
-          "en": "Yes, I'm coming!",
-          "ko": "응, 갈게!"
+          "en": "Yes, okay! See you there.",
+          "ko": "응, 좋아! 거기서 봐."
         }
       }
     },
@@ -9332,8 +9336,8 @@
         "type": "learner",
         "id": "l-how",
         "goal": {
-          "en": "Say you're fine but a bit tired, and ask how he is.",
-          "ko": "괜찮지만 좀 피곤하다고 하고 그는 어떤지 물어보세요."
+          "en": "Say you're fine but a bit tired, and ask how they are.",
+          "ko": "괜찮지만 좀 피곤하다고 하고 동료는 어떤지 물어보세요."
         },
         "expect": [
           {
@@ -9471,38 +9475,38 @@
     },
     "sentences": {
       "hello": {
-        "text": "गुड मॉर्निंग! चाय पियोगे?",
+        "text": "गुड मॉर्निंग! चाय चलेगी?",
         "gloss": {
-          "en": "Good morning! Will you have some tea?",
+          "en": "Good morning! Fancy some tea?",
           "ko": "좋은 아침! 차 마실래?"
         }
       },
       "hello-easy": {
-        "text": "चाय? हाँ या नहीं?",
+        "text": "चाय लोगे?",
         "gloss": {
-          "en": "Tea? Yes or no?",
-          "ko": "차? 응, 아니?"
+          "en": "Will you have tea?",
+          "ko": "차 마실래?"
         }
       },
       "how": {
-        "text": "यह लो। और, कैसे हो आज?",
+        "text": "यह लो। और, क्या हाल है आज?",
         "gloss": {
-          "en": "Here you go. So, how are you today?",
+          "en": "Here you go. So, how are things today?",
           "ko": "여기. 그래, 오늘 어때?"
         }
       },
       "how-easy": {
-        "text": "आप कैसे हैं?",
+        "text": "सब ठीक है?",
         "gloss": {
-          "en": "How are you?",
-          "ko": "잘 지내요?"
+          "en": "Is everything okay?",
+          "ko": "다 괜찮아?"
         }
       },
       "tired": {
-        "text": "मैं भी थोड़ा थका हूँ। बहुत काम है।",
+        "text": "मेरा भी यही हाल है। बहुत काम है।",
         "gloss": {
-          "en": "I'm a bit tired too. There's a lot of work.",
-          "ko": "나도 좀 피곤해. 일이 많아."
+          "en": "Same here. There is a lot of work.",
+          "ko": "나도 마찬가지야. 일이 많아."
         }
       },
       "tired-easy": {
@@ -9513,10 +9517,10 @@
         }
       },
       "lunch": {
-        "text": "आज लंच कब करोगे? साथ चलें?",
+        "text": "आज लंच कब है? साथ चलें?",
         "gloss": {
-          "en": "When will you have lunch today? Shall we go together?",
-          "ko": "오늘 점심 언제 먹어? 같이 갈래?"
+          "en": "When is lunch today? Shall we go together?",
+          "ko": "오늘 점심 언제야? 같이 갈래?"
         }
       },
       "lunch-easy": {
@@ -9816,45 +9820,45 @@
         }
       },
       "how": {
-        "text": "कार्ड यहाँ रखिए, फिर रकम चुनिए, फिर पैसे डालिए।",
+        "text": "कार्ड यहाँ रखिए, फिर अमाउंट चुनिए, फिर पैसे डालिए।",
         "gloss": {
           "en": "Put the card here, then choose the amount, then insert the money.",
           "ko": "카드를 여기 놓고, 금액을 고르고, 돈을 넣으세요."
         }
       },
       "how-easy": {
-        "text": "पहले कार्ड, यहाँ।",
+        "text": "पहले कार्ड यहाँ रखिए।",
         "gloss": {
-          "en": "First the card, here.",
-          "ko": "먼저 카드요, 여기."
+          "en": "First put the card here.",
+          "ko": "먼저 카드를 여기 놓으세요."
         }
       },
       "slow": {
-        "text": "ठीक है। पहले... कार्ड... यहाँ रखिए।",
+        "text": "ठीक है। पहले कार्ड यहाँ रखिए।",
         "gloss": {
-          "en": "Okay. First... put the card... here.",
-          "ko": "네. 먼저… 카드를… 여기 놓으세요."
+          "en": "Okay. First put the card here.",
+          "ko": "네. 먼저 카드를 여기 놓으세요."
         }
       },
       "slow-easy": {
-        "text": "कार्ड यहाँ।",
+        "text": "कार्ड यहाँ रखिए।",
         "gloss": {
-          "en": "Card here.",
-          "ko": "카드 여기요."
+          "en": "Put the card here.",
+          "ko": "카드 여기 놓으세요."
         }
       },
       "amount": {
-        "text": "अब रकम चुनिए। कितने का रिचार्ज?",
+        "text": "अब अमाउंट चुनिए। कितने का रिचार्ज करना है?",
         "gloss": {
-          "en": "Now choose the amount. How much to recharge?",
-          "ko": "이제 금액 고르세요. 얼마 충전해요?"
+          "en": "Now choose the amount. How much do you want to recharge?",
+          "ko": "이제 금액 고르세요. 얼마 충전할 거예요?"
         }
       },
       "amount-easy": {
-        "text": "सौ? दो सौ?",
+        "text": "सौ का या दो सौ का?",
         "gloss": {
-          "en": "A hundred? Two hundred?",
-          "ko": "100? 200?"
+          "en": "A hundred or two hundred?",
+          "ko": "100이요, 200이요?"
         }
       },
       "money": {
@@ -9998,8 +10002,8 @@
         "type": "learner",
         "id": "l-next",
         "goal": {
-          "en": "Say no, and ask her.",
-          "ko": "모른다고 하고 그녀에게 물어보세요."
+          "en": "Say no, and ask them.",
+          "ko": "모른다고 하고 친구에게 물어보세요."
         },
         "expect": [
           {
@@ -10089,17 +10093,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "उफ़, क्लास लंबी थी! अब कहाँ जा रहे हो?",
+        "text": "उफ़, क्लास लंबी थी! अब कहाँ जाना है?",
         "gloss": {
-          "en": "Phew, class was long! Where are you going now?",
+          "en": "Phew, class was long! Where are you off to now?",
           "ko": "휴, 수업 길었다! 이제 어디 가?"
         }
       },
       "hello-easy": {
-        "text": "अब कहाँ? घर?",
+        "text": "अब घर जाना है?",
         "gloss": {
-          "en": "Where now? Home?",
-          "ko": "이제 어디? 집?"
+          "en": "Going home now?",
+          "ko": "이제 집에 가?"
         }
       },
       "who": {
@@ -10110,10 +10114,10 @@
         }
       },
       "who-easy": {
-        "text": "वह लड़का? कौन?",
+        "text": "वह लड़का कौन है?",
         "gloss": {
-          "en": "That boy? Who?",
-          "ko": "저 남자애? 누구?"
+          "en": "Who is that boy?",
+          "ko": "저 남자애 누구야?"
         }
       },
       "next": {
@@ -10138,10 +10142,10 @@
         }
       },
       "monday-easy": {
-        "text": "सोमवार, पाँच बजे।",
+        "text": "सोमवार को पाँच बजे।",
         "gloss": {
-          "en": "Monday, five o'clock.",
-          "ko": "월요일, 5시."
+          "en": "On Monday at five.",
+          "ko": "월요일 5시야."
         }
       },
       "end": {

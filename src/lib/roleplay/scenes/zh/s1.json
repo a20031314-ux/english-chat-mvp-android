@@ -40,6 +40,7 @@
               "我要咖啡",
               "我要一杯茶",
               "我要拿铁",
+              "我要一杯拿铁",
               "一杯咖啡"
             ]
           },
@@ -355,10 +356,10 @@
         }
       },
       "hot-easy": {
-        "text": "热的？冰的？",
+        "text": "热的，还是冰的？",
         "gloss": {
-          "en": "Hot? Iced?",
-          "ko": "따뜻한 거? 차가운 거?"
+          "en": "Hot, or iced?",
+          "ko": "따뜻한 거요, 아니면 차가운 거요?"
         }
       },
       "more": {
@@ -390,17 +391,17 @@
         }
       },
       "bye": {
-        "text": "这是你的咖啡。慢走！",
+        "text": "好了，这是你的咖啡。",
         "gloss": {
-          "en": "Here's your coffee. Take care!",
-          "ko": "여기 커피요. 안녕히 가세요!"
+          "en": "Here you go, your coffee.",
+          "ko": "여기요, 커피 나왔어요."
         }
       },
       "bye-easy": {
-        "text": "给你。再见！",
+        "text": "你的咖啡，给你。",
         "gloss": {
-          "en": "Here you go. Bye!",
-          "ko": "여기요. 안녕히 가세요!"
+          "en": "Your coffee, here you go.",
+          "ko": "커피요, 여기요."
         }
       },
       "end": {
@@ -688,31 +689,31 @@
         }
       },
       "dir": {
-        "text": "地铁站啊，往前走，在第二个路口右边。",
+        "text": "地铁站啊，往前走，第二个路口右边就是。",
         "gloss": {
-          "en": "The subway? Go straight, it's on the right at the second crossing.",
+          "en": "The subway? Go straight; it's on the right at the second crossing.",
           "ko": "지하철역이요? 앞으로 가서 두 번째 길목 오른쪽이에요."
         }
       },
       "dir-easy": {
-        "text": "往前走，然后右边。",
+        "text": "往前走，然后往右。",
         "gloss": {
-          "en": "Go straight, then on the right.",
-          "ko": "앞으로 가요, 그다음 오른쪽이에요."
+          "en": "Go straight, then turn right.",
+          "ko": "앞으로 가서, 그다음 오른쪽이요."
         }
       },
       "slow": {
-        "text": "好。往前走……右边……五分钟。",
+        "text": "好，往前走，然后往右，五分钟就到。",
         "gloss": {
-          "en": "OK. Go straight... on the right... five minutes.",
-          "ko": "네. 앞으로 가서… 오른쪽… 5분이요."
+          "en": "OK, go straight, then right; five minutes and you're there.",
+          "ko": "네, 앞으로 가서 오른쪽, 5분이면 도착해요."
         }
       },
       "slow-easy": {
-        "text": "前面，右边。很近。",
+        "text": "在前面右边，很近。",
         "gloss": {
-          "en": "Ahead, on the right. Very close.",
-          "ko": "앞쪽, 오른쪽. 아주 가까워요."
+          "en": "It's ahead on the right, very close.",
+          "ko": "앞쪽 오른쪽이에요, 아주 가까워요."
         }
       },
       "got": {
@@ -1001,7 +1002,7 @@
             "match": [
               "太贵了",
               "有点贵",
-              "贵了"
+              "有点儿贵"
             ]
           }
         ],
@@ -1067,10 +1068,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "欢迎光临！你找什么？",
+        "text": "欢迎光临！要买点儿什么？",
         "gloss": {
-          "en": "Welcome! What are you looking for?",
-          "ko": "어서 오세요! 뭐 찾으세요?"
+          "en": "Welcome! What would you like to buy?",
+          "ko": "어서 오세요! 뭐 사시게요?"
         }
       },
       "hello-easy": {
@@ -1081,10 +1082,10 @@
         }
       },
       "have": {
-        "text": "有，在那儿。这个是新的。",
+        "text": "有，在那儿。你看看。",
         "gloss": {
-          "en": "Yes, over there. This one is new.",
-          "ko": "있어요, 저기요. 이건 새로 나온 거예요."
+          "en": "Yes, over there. Have a look.",
+          "ko": "있어요, 저기요. 한번 보세요."
         }
       },
       "have-easy": {
@@ -1095,17 +1096,17 @@
         }
       },
       "what-ans": {
-        "text": "这是雨伞，小的。",
+        "text": "这也是雨伞，小的。",
         "gloss": {
-          "en": "This is an umbrella, a small one.",
-          "ko": "이건 우산이에요, 작은 거요."
+          "en": "This is also an umbrella, a small one.",
+          "ko": "이것도 우산이에요, 작은 거요."
         }
       },
       "what-ans-easy": {
-        "text": "雨伞。小雨伞。",
+        "text": "这是小雨伞。",
         "gloss": {
-          "en": "An umbrella. A small umbrella.",
-          "ko": "우산이요. 작은 우산."
+          "en": "This is a small umbrella.",
+          "ko": "이건 작은 우산이에요."
         }
       },
       "color": {
@@ -1130,10 +1131,10 @@
         }
       },
       "price-easy": {
-        "text": "三十五。三、五。",
+        "text": "三十五块钱。",
         "gloss": {
-          "en": "Thirty-five. Three, five.",
-          "ko": "35요. 삼, 오."
+          "en": "Thirty-five kuai.",
+          "ko": "35위안이요."
         }
       },
       "bag": {
@@ -1144,10 +1145,10 @@
         }
       },
       "bag-easy": {
-        "text": "袋子，要不要？",
+        "text": "要不要袋子？",
         "gloss": {
-          "en": "A bag, yes or no?",
-          "ko": "봉투, 필요해요 안 필요해요?"
+          "en": "Do you want a bag?",
+          "ko": "봉투 필요해요?"
         }
       },
       "end": {
@@ -1495,10 +1496,10 @@
         }
       },
       "name-easy": {
-        "text": "您的名字是？",
+        "text": "您叫什么？",
         "gloss": {
-          "en": "Your name is?",
-          "ko": "이름이요?"
+          "en": "What's your name?",
+          "ko": "성함이요?"
         }
       },
       "passport": {
@@ -1509,9 +1510,9 @@
         }
       },
       "passport-easy": {
-        "text": "护照，请给我。",
+        "text": "请给我护照。",
         "gloss": {
-          "en": "Your passport, please.",
+          "en": "Please give me your passport.",
           "ko": "여권 주세요."
         }
       },
@@ -1523,10 +1524,10 @@
         }
       },
       "room-easy": {
-        "text": "三〇五。三、〇、五。",
+        "text": "房间号是三〇五。",
         "gloss": {
-          "en": "Three-oh-five. Three, zero, five.",
-          "ko": "305호요. 삼, 공, 오."
+          "en": "The room number is 305.",
+          "ko": "방 번호는 305예요."
         }
       },
       "lift": {
@@ -1551,17 +1552,17 @@
         }
       },
       "bkf-easy": {
-        "text": "一楼。七点。",
+        "text": "在一楼，七点开始。",
         "gloss": {
-          "en": "First floor. Seven o'clock.",
-          "ko": "1층이요. 7시."
+          "en": "On the first floor, from seven.",
+          "ko": "1층이요, 7시부터요."
         }
       },
       "key": {
-        "text": "这是您的房卡吗？在桌子上。",
+        "text": "给您房卡。对了，这个手机是您的吗？",
         "gloss": {
-          "en": "Is this your key card? It's on the desk.",
-          "ko": "이거 손님 카드키예요? 책상 위에 있네요."
+          "en": "Here's your key card. By the way, is this phone yours?",
+          "ko": "카드키요. 참, 이 휴대폰 손님 거예요?"
         }
       },
       "key-easy": {
@@ -1854,25 +1855,26 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Say it's nice to meet her.",
-          "ko": "만나서 반갑다고 하세요."
+          "en": "Say it's nice to meet her too.",
+          "ko": "나도 만나서 반갑다고 하세요."
         },
         "expect": [
           {
-            "meaning": "says nice to meet you",
+            "meaning": "says nice to meet you too",
             "go": "t-who",
             "match": [
+              "我也很高兴",
               "认识你很高兴",
               "很高兴认识你",
-              "很高兴"
+              "我也是"
             ]
           },
           {
-            "meaning": "agrees, says OK",
+            "meaning": "just agrees",
             "go": "t-who",
             "match": [
-              "是吗",
               "好的",
+              "嗯",
               "太好了"
             ]
           }
@@ -1897,27 +1899,28 @@
         "type": "learner",
         "id": "l-end",
         "goal": {
-          "en": "Say see you tomorrow.",
-          "ko": "내일 보자고 하세요."
+          "en": "Say OK, see you after class.",
+          "ko": "알았다고 하고 수업 끝나고 보자고 하세요."
         },
         "frame": "zh-f1-20",
         "expect": [
           {
-            "meaning": "says see you tomorrow",
+            "meaning": "says see you after class / in a bit",
             "go": "t-end",
             "match": [
-              "明天见",
-              "好明天见",
-              "明天见刘佳"
+              "下课见",
+              "一会儿见",
+              "好的一会儿见",
+              "好下课见"
             ]
           },
           {
-            "meaning": "says bye",
+            "meaning": "just says OK",
             "go": "t-end",
             "match": [
-              "再见",
-              "拜拜",
-              "好再见"
+              "好的",
+              "好",
+              "嗯"
             ]
           }
         ],
@@ -1953,10 +1956,10 @@
         }
       },
       "from": {
-        "text": "认识你很高兴！你从哪儿来？",
+        "text": "你从哪儿来？",
         "gloss": {
-          "en": "Nice to meet you! Where are you from?",
-          "ko": "만나서 반가워! 어디서 왔어?"
+          "en": "Where are you from?",
+          "ko": "어디서 왔어?"
         }
       },
       "from-easy": {
@@ -1995,31 +1998,31 @@
         }
       },
       "student": {
-        "text": "我也是学生。",
+        "text": "我也是学生！认识你很高兴！",
         "gloss": {
-          "en": "I'm a student too.",
-          "ko": "나도 학생이야."
+          "en": "I'm a student too! Nice to meet you!",
+          "ko": "나도 학생이야! 만나서 반가워!"
         }
       },
       "student-easy": {
-        "text": "我也是。",
+        "text": "认识你很高兴！",
         "gloss": {
-          "en": "Me too.",
-          "ko": "나도."
+          "en": "Nice to meet you!",
+          "ko": "만나서 반가워!"
         }
       },
       "worker": {
-        "text": "哦，你工作了。我是学生。",
+        "text": "哦，你工作了啊。认识你很高兴！",
         "gloss": {
-          "en": "Oh, you work. I'm a student.",
-          "ko": "아, 일하는구나. 나는 학생이야."
+          "en": "Oh, you work. Nice to meet you!",
+          "ko": "아, 일하는구나. 만나서 반가워!"
         }
       },
       "worker-easy": {
-        "text": "我是学生。",
+        "text": "认识你很高兴！",
         "gloss": {
-          "en": "I'm a student.",
-          "ko": "나는 학생이야."
+          "en": "Nice to meet you!",
+          "ko": "만나서 반가워!"
         }
       },
       "teacher-no": {
@@ -2037,24 +2040,24 @@
         }
       },
       "who": {
-        "text": "老师来了！明天见！",
+        "text": "老师来了！下课再聊！",
         "gloss": {
-          "en": "The teacher is here! See you tomorrow!",
-          "ko": "선생님 오셨다! 내일 봐!"
+          "en": "The teacher's here! Let's talk after class!",
+          "ko": "선생님 오셨다! 수업 끝나고 다시 얘기하자!"
         }
       },
       "who-easy": {
-        "text": "老师来了。再见！",
+        "text": "老师来了。一会儿见！",
         "gloss": {
-          "en": "The teacher is here. Bye!",
-          "ko": "선생님 오셨어. 안녕!"
+          "en": "The teacher's here. See you in a bit!",
+          "ko": "선생님 오셨어. 이따 봐!"
         }
       },
       "end": {
-        "text": "好，明天见！",
+        "text": "好，一会儿见！",
         "gloss": {
-          "en": "OK, see you tomorrow!",
-          "ko": "응, 내일 봐!"
+          "en": "OK, see you in a bit!",
+          "ko": "응, 이따 봐!"
         }
       },
       "ask-back": {
@@ -2110,10 +2113,11 @@
             "meaning": "says it is their family",
             "go": "t-whos",
             "match": [
-              "这是我的家",
-              "这是我家",
-              "是我的家人",
-              "我的家"
+              "这是我家人",
+              "这是我的家人",
+              "是我家人",
+              "我的家人",
+              "对是我家人"
             ]
           },
           {
@@ -2370,10 +2374,10 @@
         }
       },
       "hello-easy": {
-        "text": "这是你的照片吗？",
+        "text": "这是你家人吗？",
         "gloss": {
-          "en": "Is this your photo?",
-          "ko": "이거 네 사진이야?"
+          "en": "Is this your family?",
+          "ko": "이거 네 가족이야?"
         }
       },
       "whos": {
@@ -2398,10 +2402,10 @@
         }
       },
       "dad-easy": {
-        "text": "她呢？她是谁？",
+        "text": "她是谁？",
         "gloss": {
-          "en": "And her? Who is she?",
-          "ko": "이분은? 누구야?"
+          "en": "Who is she?",
+          "ko": "이분은 누구야?"
         }
       },
       "sib": {
@@ -2412,10 +2416,10 @@
         }
       },
       "sib-easy": {
-        "text": "哥哥，有没有？",
+        "text": "你有没有哥哥？",
         "gloss": {
-          "en": "Older brother — yes or no?",
-          "ko": "형이나 오빠, 있어 없어?"
+          "en": "Do you have an older brother?",
+          "ko": "형이나 오빠 있어?"
         }
       },
       "sis": {
@@ -2426,10 +2430,10 @@
         }
       },
       "sis-easy": {
-        "text": "小狗，是你的吗？",
+        "text": "这只小狗是你的吗？",
         "gloss": {
-          "en": "The little dog — is it yours?",
-          "ko": "강아지, 네 거야?"
+          "en": "Is this little dog yours?",
+          "ko": "이 강아지 네 거야?"
         }
       },
       "cute": {
@@ -2440,17 +2444,17 @@
         }
       },
       "cute-easy": {
-        "text": "很可爱！",
+        "text": "真可爱！",
         "gloss": {
-          "en": "Very cute!",
-          "ko": "귀엽다!"
+          "en": "So cute!",
+          "ko": "진짜 귀엽다!"
         }
       },
       "end": {
-        "text": "下次给我看更多照片吧！",
+        "text": "下次再给我看别的照片！",
         "gloss": {
-          "en": "Show me more photos next time!",
-          "ko": "다음에 사진 더 보여 줘!"
+          "en": "Show me other photos next time!",
+          "ko": "다음에 다른 사진도 보여 줘!"
         }
       }
     },
@@ -2645,7 +2649,7 @@
             "match": [
               "我不喜欢可乐",
               "不喜欢可乐",
-              "可乐不好"
+              "我不喜欢喝可乐"
             ]
           }
         ],
@@ -2719,10 +2723,10 @@
         }
       },
       "hello-easy": {
-        "text": "火锅，你喜欢吗？",
+        "text": "你喜欢火锅吗？",
         "gloss": {
-          "en": "Hotpot — do you like it?",
-          "ko": "훠궈, 좋아해?"
+          "en": "Do you like hotpot?",
+          "ko": "훠궈 좋아해?"
         }
       },
       "spicy": {
@@ -2733,17 +2737,17 @@
         }
       },
       "spicy-easy": {
-        "text": "辣的，喜欢吗？",
+        "text": "你喜欢辣的吗？",
         "gloss": {
-          "en": "Spicy — do you like it?",
-          "ko": "매운 거, 좋아해?"
+          "en": "Do you like spicy food?",
+          "ko": "매운 거 좋아해?"
         }
       },
       "nospicy": {
-        "text": "没关系，我们点不辣的。",
+        "text": "没关系，那我们点不辣的。",
         "gloss": {
-          "en": "No problem, we'll order a non-spicy one.",
-          "ko": "괜찮아, 안 매운 걸로 시키자."
+          "en": "No problem, then we'll order a non-spicy one.",
+          "ko": "괜찮아, 그럼 안 매운 걸로 시키자."
         }
       },
       "nospicy-easy": {
@@ -2754,7 +2758,7 @@
         }
       },
       "taste": {
-        "text": "你吃这个吧。怎么样？",
+        "text": "你尝尝这个。怎么样？",
         "gloss": {
           "en": "Try this. How is it?",
           "ko": "이거 먹어 봐. 어때?"
@@ -2775,17 +2779,17 @@
         }
       },
       "drink-easy": {
-        "text": "可乐？茶？",
+        "text": "你喜欢可乐还是茶？",
         "gloss": {
-          "en": "Cola? Tea?",
-          "ko": "콜라? 차?"
+          "en": "Do you like cola or tea?",
+          "ko": "콜라 좋아해, 아니면 차?"
         }
       },
       "me": {
-        "text": "我也喜欢。你呢，喜欢什么水果？",
+        "text": "我也喜欢。那你喜欢什么水果？",
         "gloss": {
-          "en": "Me too. And you, what fruit do you like?",
-          "ko": "나도 좋아해. 너는 무슨 과일 좋아해?"
+          "en": "Me too. Then what fruit do you like?",
+          "ko": "나도 좋아해. 그럼 무슨 과일 좋아해?"
         }
       },
       "me-easy": {
@@ -3102,10 +3106,10 @@
         }
       },
       "hello-easy": {
-        "text": "你是新人吗？",
+        "text": "你第一次来吗？",
         "gloss": {
-          "en": "Are you new?",
-          "ko": "새로 온 사람이에요?"
+          "en": "Is this your first time here?",
+          "ko": "처음 왔어요?"
         }
       },
       "name": {
@@ -3116,7 +3120,7 @@
         }
       },
       "name-easy": {
-        "text": "你的名字是什么？",
+        "text": "你叫什么名字？",
         "gloss": {
           "en": "What's your name?",
           "ko": "이름이 뭐예요?"
@@ -3130,10 +3134,10 @@
         }
       },
       "swim-easy": {
-        "text": "游泳，会不会？",
+        "text": "你会不会游泳？",
         "gloss": {
-          "en": "Swimming — can you or not?",
-          "ko": "수영, 할 줄 알아요 몰라요?"
+          "en": "Can you swim or not?",
+          "ko": "수영 할 줄 알아요?"
         }
       },
       "cook": {
@@ -3144,10 +3148,10 @@
         }
       },
       "cook-easy": {
-        "text": "做饭，会吗？",
+        "text": "你会做饭吗？",
         "gloss": {
-          "en": "Cooking — can you?",
-          "ko": "요리, 할 줄 알아요?"
+          "en": "Can you cook?",
+          "ko": "요리할 줄 알아요?"
         }
       },
       "like": {
@@ -3158,30 +3162,30 @@
         }
       },
       "like-easy": {
-        "text": "跑步？打球？你喜欢什么？",
+        "text": "你喜欢跑步还是打球？",
         "gloss": {
-          "en": "Running? Ball games? What do you like?",
-          "ko": "달리기? 공놀이? 뭐 좋아해요?"
+          "en": "Do you like running or ball games?",
+          "ko": "달리기 좋아해요, 아니면 공놀이?"
         }
       },
       "teacher": {
-        "text": "好啊！你是老师吗？",
+        "text": "好啊！对了，你是老师吗？",
         "gloss": {
-          "en": "Nice! Are you a teacher?",
-          "ko": "좋네요! 선생님이에요?"
+          "en": "Nice! By the way, are you a teacher?",
+          "ko": "좋네요! 참, 선생님이에요?"
         }
       },
       "teacher-easy": {
-        "text": "你是老师，对不对？",
+        "text": "你是不是老师？",
         "gloss": {
-          "en": "You're a teacher, right?",
-          "ko": "선생님이죠, 맞죠?"
+          "en": "Are you a teacher?",
+          "ko": "선생님이에요?"
         }
       },
       "end": {
-        "text": "没问题，星期六见！",
+        "text": "好，星期六见！",
         "gloss": {
-          "en": "No problem, see you Saturday!",
+          "en": "OK, see you Saturday!",
           "ko": "좋아요, 토요일에 봐요!"
         }
       }
@@ -3298,7 +3302,7 @@
         "id": "t-early",
         "say": "early",
         "next": "l-lunch",
-        "easier": "early-easy"
+        "easier": "lunch-easy"
       },
       "l-lunch": {
         "type": "learner",
@@ -3391,28 +3395,28 @@
         "type": "learner",
         "id": "l-now",
         "goal": {
-          "en": "Say where you are right now.",
-          "ko": "지금 어디에 있는지 말하세요."
+          "en": "Say which floor you're on.",
+          "ko": "몇 층에 있는지 말하세요."
         },
         "frame": "zh-f1-19",
         "expect": [
           {
-            "meaning": "says where they are",
+            "meaning": "says which floor they are on",
             "go": "t-end",
             "match": [
-              "我在办公室",
-              "我在公司",
               "我在三楼",
-              "我在会议室"
+              "我在五楼",
+              "我在二楼",
+              "三楼"
             ]
           },
           {
-            "meaning": "says they are at their desk",
+            "meaning": "says they are in the office / here",
             "go": "t-end",
             "match": [
-              "在座位上",
-              "在我的座位",
-              "在这儿"
+              "我在办公室",
+              "我在这儿",
+              "我在公司"
             ]
           }
         ],
@@ -3455,24 +3459,17 @@
         }
       },
       "up-easy": {
-        "text": "起床，几点？六点？七点？",
+        "text": "你六点起床，还是七点？",
         "gloss": {
-          "en": "Getting up — what time? Six? Seven?",
-          "ko": "일어나는 거, 몇 시? 6시? 7시?"
+          "en": "Do you get up at six, or seven?",
+          "ko": "6시에 일어나요, 아니면 7시?"
         }
       },
       "early": {
-        "text": "这么早！我八点才起床。",
+        "text": "这么早！对了，午饭你在哪儿吃？",
         "gloss": {
-          "en": "So early! I only get up at eight.",
-          "ko": "그렇게 일찍! 난 8시에야 일어나."
-        }
-      },
-      "early-easy": {
-        "text": "很早！我八点。",
-        "gloss": {
-          "en": "Very early! I'm eight o'clock.",
-          "ko": "일찍이네! 난 8시야."
+          "en": "So early! By the way, where do you have lunch?",
+          "ko": "그렇게 일찍! 참, 점심은 어디서 먹어?"
         }
       },
       "lunch-easy": {
@@ -3483,31 +3480,31 @@
         }
       },
       "canteen": {
-        "text": "食堂很好。几点去？",
+        "text": "食堂不错。你几点去？",
         "gloss": {
-          "en": "The canteen is good. What time are you going?",
-          "ko": "구내식당 좋지. 몇 시에 가?"
+          "en": "The canteen's good. What time do you go?",
+          "ko": "구내식당 괜찮지. 몇 시에 가?"
         }
       },
       "canteen-easy": {
-        "text": "几点去？十二点？",
+        "text": "你十二点去吗？",
         "gloss": {
-          "en": "What time? Twelve?",
-          "ko": "몇 시에 가? 12시?"
+          "en": "Do you go at twelve?",
+          "ko": "12시에 가?"
         }
       },
       "now": {
-        "text": "好。你现在在哪儿？我找你。",
+        "text": "好，十二点我去找你。你在几楼？",
         "gloss": {
-          "en": "OK. Where are you now? I'll come find you.",
-          "ko": "그래. 너 지금 어디야? 내가 찾으러 갈게."
+          "en": "OK, I'll come find you at twelve. Which floor are you on?",
+          "ko": "그래, 12시에 내가 찾으러 갈게. 몇 층에 있어?"
         }
       },
       "now-easy": {
-        "text": "你现在在哪儿？",
+        "text": "你在几楼？",
         "gloss": {
-          "en": "Where are you now?",
-          "ko": "지금 어디야?"
+          "en": "Which floor are you on?",
+          "ko": "몇 층에 있어?"
         }
       },
       "end": {
@@ -3789,24 +3786,24 @@
         }
       },
       "like-easy": {
-        "text": "喜欢这儿吗？",
+        "text": "你喜欢这儿吗？",
         "gloss": {
           "en": "Do you like it here?",
           "ko": "여기 좋아요?"
         }
       },
       "near": {
-        "text": "旁边有很多饭馆。",
+        "text": "这儿旁边有很多饭馆。",
         "gloss": {
-          "en": "There are lots of restaurants nearby.",
-          "ko": "근처에 식당이 많아요."
+          "en": "There are lots of restaurants near here.",
+          "ko": "여기 근처에 식당이 많아요."
         }
       },
       "near-easy": {
-        "text": "这儿有饭馆。很多。",
+        "text": "这儿有很多饭馆。",
         "gloss": {
-          "en": "There are restaurants here. Lots.",
-          "ko": "여기 식당 있어요. 많이요."
+          "en": "There are lots of restaurants here.",
+          "ko": "여기 식당 많아요."
         }
       },
       "market": {
@@ -3817,10 +3814,10 @@
         }
       },
       "market-easy": {
-        "text": "有。东门，旁边。",
+        "text": "有，在东门旁边。",
         "gloss": {
-          "en": "Yes. The east gate, beside it.",
-          "ko": "있어요. 동문, 옆이요."
+          "en": "Yes, next to the east gate.",
+          "ko": "있어요, 동문 옆이요."
         }
       },
       "park": {
@@ -3831,16 +3828,16 @@
         }
       },
       "park-easy": {
-        "text": "有公园。很好。",
+        "text": "有，有公园。",
         "gloss": {
-          "en": "There's a park. Very nice.",
-          "ko": "공원 있어요. 좋아요."
+          "en": "Yes, there's a park.",
+          "ko": "있어요, 공원 있어요."
         }
       },
       "end": {
-        "text": "好，有事找我！再见！",
+        "text": "好，有事来找我！再见！",
         "gloss": {
-          "en": "OK, come to me if you need anything! Bye!",
+          "en": "OK, come find me if you need anything! Bye!",
           "ko": "그래요, 무슨 일 있으면 찾아와요! 잘 가요!"
         }
       }
@@ -4020,7 +4017,7 @@
               "两斤",
               "要两斤",
               "我要两斤",
-              "二斤"
+              "来两斤"
             ]
           },
           {
@@ -4116,10 +4113,10 @@
         }
       },
       "apple-easy": {
-        "text": "八块。一斤八块。",
+        "text": "一斤八块。",
         "gloss": {
-          "en": "Eight kuai. Eight kuai a jin.",
-          "ko": "8위안이요. 한 근에 8위안."
+          "en": "Eight kuai a jin.",
+          "ko": "한 근에 8위안이요."
         }
       },
       "cheap": {
@@ -4144,10 +4141,10 @@
         }
       },
       "how-easy": {
-        "text": "一斤？两斤？",
+        "text": "要一斤还是两斤？",
         "gloss": {
-          "en": "One jin? Two jin?",
-          "ko": "한 근? 두 근?"
+          "en": "One jin or two?",
+          "ko": "한 근이요, 두 근이요?"
         }
       },
       "total": {
@@ -4428,10 +4425,10 @@
         }
       },
       "hello-easy": {
-        "text": "早上好！你要面包吗？",
+        "text": "早上好！要买面包吗？",
         "gloss": {
-          "en": "Good morning! Do you want bread?",
-          "ko": "좋은 아침이에요! 빵 드려요?"
+          "en": "Good morning! Want to buy some bread?",
+          "ko": "좋은 아침이에요! 빵 사시게요?"
         }
       },
       "bun": {
@@ -4442,10 +4439,10 @@
         }
       },
       "bun-easy": {
-        "text": "豆沙包。甜的。",
+        "text": "这是豆沙包，甜的。",
         "gloss": {
-          "en": "Red-bean bun. Sweet.",
-          "ko": "팥빵이요. 단 거요."
+          "en": "This is a red-bean bun, a sweet one.",
+          "ko": "이건 팥빵이에요, 단 거요."
         }
       },
       "many": {
@@ -4456,24 +4453,24 @@
         }
       },
       "many-easy": {
-        "text": "一个？两个？",
+        "text": "要一个还是两个？",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "하나? 둘?"
+          "en": "One or two?",
+          "ko": "하나요, 둘이요?"
         }
       },
       "taste": {
-        "text": "你尝一下这个，免费的。",
+        "text": "你尝尝这个，免费的。",
         "gloss": {
           "en": "Try this one, it's free.",
           "ko": "이거 맛보세요, 공짜예요."
         }
       },
       "taste-easy": {
-        "text": "吃一个吧。",
+        "text": "尝一个吧。",
         "gloss": {
-          "en": "Have one.",
-          "ko": "하나 드셔 보세요."
+          "en": "Have a taste.",
+          "ko": "하나 맛보세요."
         }
       },
       "price": {
@@ -4634,10 +4631,10 @@
             "meaning": "not spicy",
             "go": "t-drink",
             "match": [
-              "不要辣",
-              "不辣",
               "不要辣的",
-              "我不喜欢辣"
+              "不辣",
+              "不要辣",
+              "不辣的"
             ]
           },
           {
@@ -4645,8 +4642,8 @@
             "go": "t-drink",
             "match": [
               "要辣的",
-              "一点辣",
-              "微辣"
+              "微辣",
+              "一点点辣"
             ]
           }
         ],
@@ -4818,17 +4815,17 @@
         }
       },
       "hello-easy": {
-        "text": "你吃什么？",
+        "text": "你想吃什么？",
         "gloss": {
-          "en": "What will you eat?",
-          "ko": "뭐 드실래요?"
+          "en": "What would you like to eat?",
+          "ko": "뭐 드시고 싶으세요?"
         }
       },
       "wait": {
-        "text": "好，你慢慢看。好了叫我。",
+        "text": "好，你慢慢看，想好了叫我。",
         "gloss": {
-          "en": "OK, take your time. Call me when you're ready.",
-          "ko": "네, 천천히 보세요. 정하면 불러 주세요."
+          "en": "OK, take your time; call me when you've decided.",
+          "ko": "네, 천천히 보시고 정하면 불러 주세요."
         }
       },
       "ready": {
@@ -4846,21 +4843,21 @@
         }
       },
       "noodle": {
-        "text": "牛肉面，好的。要辣的吗？",
+        "text": "好的，一碗牛肉面。要辣的吗？",
         "gloss": {
-          "en": "Beef noodles, OK. Do you want it spicy?",
-          "ko": "소고기면, 네. 맵게 해 드릴까요?"
+          "en": "OK, one beef noodles. Do you want it spicy?",
+          "ko": "네, 소고기면 하나. 맵게 해 드릴까요?"
         }
       },
       "noodle-easy": {
-        "text": "辣的？不辣的？",
+        "text": "要辣的还是不辣的？",
         "gloss": {
-          "en": "Spicy? Not spicy?",
-          "ko": "매운 거? 안 매운 거?"
+          "en": "Spicy or not spicy?",
+          "ko": "매운 거요, 안 매운 거요?"
         }
       },
       "drink": {
-        "text": "喝什么吗？",
+        "text": "喝点儿什么吗？",
         "gloss": {
           "en": "Anything to drink?",
           "ko": "음료는요?"
@@ -4874,9 +4871,9 @@
         }
       },
       "later": {
-        "text": "好，马上来。",
+        "text": "好，马上就好。",
         "gloss": {
-          "en": "OK, coming right up.",
+          "en": "OK, it'll be ready soon.",
           "ko": "네, 곧 나와요."
         }
       },
@@ -4895,10 +4892,10 @@
         }
       },
       "bill-easy": {
-        "text": "二十五块。扫码？现金？",
+        "text": "二十五块。你扫码还是给现金？",
         "gloss": {
-          "en": "Twenty-five kuai. QR? Cash?",
-          "ko": "25위안. QR? 현금?"
+          "en": "Twenty-five kuai. Scan or cash?",
+          "ko": "25위안이요. QR이요, 현금이요?"
         }
       },
       "end": {
@@ -5181,10 +5178,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "你好，你要坐几路？",
+        "text": "嗯？你要去哪儿？",
         "gloss": {
-          "en": "Hi, which bus number are you taking?",
-          "ko": "안녕하세요, 몇 번 버스 타세요?"
+          "en": "Hm? Where do you want to go?",
+          "ko": "네? 어디 가세요?"
         }
       },
       "hello-easy": {
@@ -5202,10 +5199,10 @@
         }
       },
       "bus-easy": {
-        "text": "二路。二。",
+        "text": "坐二路车。",
         "gloss": {
-          "en": "Number two. Two.",
-          "ko": "2번이요. 이."
+          "en": "Take the number 2 bus.",
+          "ko": "2번 버스 타세요."
         }
       },
       "slow": {
@@ -5216,7 +5213,7 @@
         }
       },
       "when": {
-        "text": "差不多十分钟。",
+        "text": "大概十分钟。",
         "gloss": {
           "en": "About ten minutes.",
           "ko": "10분쯤이요."
@@ -5237,10 +5234,10 @@
         }
       },
       "stop-easy": {
-        "text": "那儿。对面。",
+        "text": "在马路对面。",
         "gloss": {
-          "en": "There. Opposite.",
-          "ko": "저기요. 건너편."
+          "en": "Across the road.",
+          "ko": "길 건너편이에요."
         }
       },
       "mind": {
@@ -5251,10 +5248,10 @@
         }
       },
       "mind-easy": {
-        "text": "这儿。",
+        "text": "就是这儿。",
         "gloss": {
-          "en": "Here.",
-          "ko": "여기요."
+          "en": "It's right here.",
+          "ko": "바로 여기예요."
         }
       },
       "end": {
@@ -5645,10 +5642,10 @@
         }
       },
       "many-easy": {
-        "text": "一张？两张？",
+        "text": "要一张还是两张？",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "한 장? 두 장?"
+          "en": "One ticket or two?",
+          "ko": "한 장이요, 두 장이요?"
         }
       },
       "time": {
@@ -5659,10 +5656,10 @@
         }
       },
       "time-easy": {
-        "text": "两点，好吗？",
+        "text": "下午两点，行吗？",
         "gloss": {
-          "en": "Two o'clock, OK?",
-          "ko": "2시, 괜찮아요?"
+          "en": "Two p.m., is that OK?",
+          "ko": "오후 2시, 괜찮아요?"
         }
       },
       "later": {
@@ -5673,10 +5670,10 @@
         }
       },
       "later-easy": {
-        "text": "三点半？",
+        "text": "三点半的，行吗？",
         "gloss": {
-          "en": "Three thirty?",
-          "ko": "3시 반?"
+          "en": "The 3:30 one, OK?",
+          "ko": "3시 반 거, 괜찮아요?"
         }
       },
       "price": {
@@ -5687,10 +5684,10 @@
         }
       },
       "price-easy": {
-        "text": "七十三。七、三。",
+        "text": "一张七十三块。",
         "gloss": {
-          "en": "Seventy-three. Seven, three.",
-          "ko": "73이요. 칠, 삼."
+          "en": "Seventy-three kuai a ticket.",
+          "ko": "한 장에 73위안이요."
         }
       },
       "again": {
@@ -5715,9 +5712,9 @@
         }
       },
       "pp-easy": {
-        "text": "护照，请给我。",
+        "text": "请给我护照。",
         "gloss": {
-          "en": "Passport, please.",
+          "en": "Please give me your passport.",
           "ko": "여권 주세요."
         }
       },
@@ -5780,6 +5777,7 @@
             "match": [
               "北京站",
               "去北京站",
+              "师傅去北京站",
               "我去北京站"
             ]
           }
@@ -5998,10 +5996,10 @@
         }
       },
       "ok-easy": {
-        "text": "你来旅游吗？",
+        "text": "你是游客吗？",
         "gloss": {
-          "en": "Are you travelling?",
-          "ko": "여행 왔어요?"
+          "en": "Are you a tourist?",
+          "ko": "여행객이에요?"
         }
       },
       "from": {
@@ -6047,10 +6045,10 @@
         }
       },
       "end": {
-        "text": "谢谢！慢点儿走！",
+        "text": "谢谢，慢走啊！",
         "gloss": {
-          "en": "Thanks! Take care!",
-          "ko": "고마워요! 조심히 가요!"
+          "en": "Thanks, take care!",
+          "ko": "고마워요, 조심히 가요!"
         }
       }
     },
@@ -6234,7 +6232,7 @@
             "match": [
               "我要药",
               "我要头疼药",
-              "给我药"
+              "我要买药"
             ]
           }
         ],
@@ -6365,10 +6363,10 @@
         }
       },
       "since-easy": {
-        "text": "今天？昨天？",
+        "text": "今天开始的，还是昨天？",
         "gloss": {
-          "en": "Today? Yesterday?",
-          "ko": "오늘? 어제?"
+          "en": "Since today, or yesterday?",
+          "ko": "오늘부터요, 아니면 어제?"
         }
       },
       "fever": {
@@ -6379,24 +6377,24 @@
         }
       },
       "fever-easy": {
-        "text": "发烧，有没有？",
+        "text": "有没有发烧？",
         "gloss": {
-          "en": "A fever — yes or no?",
-          "ko": "열, 있어요 없어요?"
+          "en": "Do you have a fever?",
+          "ko": "열 있어요?"
         }
       },
       "med": {
-        "text": "有，这个很好。一天两次。",
+        "text": "有，这个很好，一天吃两次。",
         "gloss": {
-          "en": "Yes, this one is good. Twice a day.",
-          "ko": "있어요, 이거 좋아요. 하루 두 번이요."
+          "en": "Yes, this one's good; take it twice a day.",
+          "ko": "있어요, 이거 좋아요, 하루 두 번 드세요."
         }
       },
       "med-easy": {
-        "text": "有。这个。",
+        "text": "这个，一天吃两次。",
         "gloss": {
-          "en": "Yes. This one.",
-          "ko": "있어요. 이거요."
+          "en": "This one, twice a day.",
+          "ko": "이거요, 하루 두 번."
         }
       },
       "price": {
@@ -6407,10 +6405,10 @@
         }
       },
       "price-easy": {
-        "text": "二十八。",
+        "text": "二十八块。",
         "gloss": {
-          "en": "Twenty-eight.",
-          "ko": "28이요."
+          "en": "Twenty-eight kuai.",
+          "ko": "28위안이요."
         }
       },
       "end": {
@@ -6421,17 +6419,17 @@
         }
       },
       "ask": {
-        "text": "好的。我看看。",
+        "text": "好的，不严重。",
         "gloss": {
-          "en": "OK. Let me see.",
-          "ko": "네. 볼게요."
+          "en": "OK, it's not serious.",
+          "ko": "네, 심하진 않네요."
         }
       },
       "ask-easy": {
-        "text": "好。",
+        "text": "不严重。",
         "gloss": {
-          "en": "OK.",
-          "ko": "네."
+          "en": "It's not serious.",
+          "ko": "심하지 않아요."
         }
       }
     },
@@ -6663,12 +6661,12 @@
             ]
           },
           {
-            "meaning": "asks where to try it on",
+            "meaning": "says they will try it on",
             "go": "t-fit",
             "match": [
-              "在哪儿试",
-              "试衣间在哪儿",
-              "在哪儿"
+              "好的我试试",
+              "我试一下",
+              "试试"
             ]
           }
         ],
@@ -6735,10 +6733,10 @@
         }
       },
       "hello-easy": {
-        "text": "你好！你看什么？",
+        "text": "你好！你想买什么？",
         "gloss": {
-          "en": "Hi! What are you looking at?",
-          "ko": "안녕하세요! 뭐 보세요?"
+          "en": "Hi! What would you like to buy?",
+          "ko": "안녕하세요! 뭐 사시려고요?"
         }
       },
       "color": {
@@ -6749,10 +6747,10 @@
         }
       },
       "color-easy": {
-        "text": "红的，喜欢吗？",
+        "text": "你喜欢红的吗？",
         "gloss": {
-          "en": "Red — do you like it?",
-          "ko": "빨간 거, 좋아요?"
+          "en": "Do you like the red one?",
+          "ko": "빨간 거 좋아요?"
         }
       },
       "blue": {
@@ -6763,24 +6761,24 @@
         }
       },
       "blue-easy": {
-        "text": "蓝的，给你。",
+        "text": "这件是蓝的。",
         "gloss": {
-          "en": "Blue, here.",
-          "ko": "파란 거, 여기요."
+          "en": "This one is blue.",
+          "ko": "이건 파란 거예요."
         }
       },
       "size": {
-        "text": "你要什么号？",
+        "text": "你要什么号的？",
         "gloss": {
           "en": "What size do you want?",
-          "ko": "사이즈 뭐 드려요?"
+          "ko": "사이즈 뭐로 드려요?"
         }
       },
       "size-easy": {
-        "text": "大号？中号？",
+        "text": "大号还是中号？",
         "gloss": {
-          "en": "Large? Medium?",
-          "ko": "라지? 미디엄?"
+          "en": "Large or medium?",
+          "ko": "라지요, 미디엄이요?"
         }
       },
       "has": {
@@ -6805,10 +6803,10 @@
         }
       },
       "fit-easy": {
-        "text": "好不好？",
+        "text": "合适吗？",
         "gloss": {
-          "en": "Good or not?",
-          "ko": "괜찮아요?"
+          "en": "Does it fit?",
+          "ko": "맞아요?"
         }
       },
       "end": {
@@ -6856,19 +6854,19 @@
             "meaning": "lost a bag",
             "go": "t-when",
             "match": [
-              "我的包没了",
               "我的包丢了",
               "包丢了",
-              "我丢了包"
+              "我的包没了",
+              "我丢了一个包"
             ]
           },
           {
-            "meaning": "asks if this is lost and found",
+            "meaning": "only says yes",
             "go": "l-lost-again",
             "match": [
-              "这儿是失物招领吗",
-              "是吗",
-              "对"
+              "是",
+              "对",
+              "是的"
             ]
           }
         ],
@@ -6997,9 +6995,9 @@
             "meaning": "says it is not theirs either",
             "go": "t-tomorrow",
             "match": [
-              "也不对",
-              "这个也不对",
-              "都不对"
+              "也不是",
+              "这个也不是",
+              "都不是"
             ]
           }
         ],
@@ -7167,17 +7165,17 @@
         }
       },
       "when": {
-        "text": "什么时候？",
+        "text": "什么时候丢的？",
         "gloss": {
-          "en": "When?",
-          "ko": "언제요?"
+          "en": "When did you lose it?",
+          "ko": "언제 잃어버렸어요?"
         }
       },
       "when-easy": {
-        "text": "今天？昨天？",
+        "text": "今天还是昨天？",
         "gloss": {
-          "en": "Today? Yesterday?",
-          "ko": "오늘? 어제?"
+          "en": "Today or yesterday?",
+          "ko": "오늘이요, 어제요?"
         }
       },
       "look": {
@@ -7195,17 +7193,17 @@
         }
       },
       "other": {
-        "text": "那这个呢？黑的。",
+        "text": "那这个黑的呢？",
         "gloss": {
-          "en": "Then this one? The black one.",
-          "ko": "그럼 이건요? 검은 거."
+          "en": "Then what about this black one?",
+          "ko": "그럼 이 검은 건요?"
         }
       },
       "other-easy": {
-        "text": "这个黑的呢？",
+        "text": "这个黑的是你的吗？",
         "gloss": {
-          "en": "And this black one?",
-          "ko": "이 검은 건요?"
+          "en": "Is this black one yours?",
+          "ko": "이 검은 거 손님 거예요?"
         }
       },
       "pp": {
@@ -7216,10 +7214,10 @@
         }
       },
       "pp-easy": {
-        "text": "护照，有吗？",
+        "text": "有护照吗？",
         "gloss": {
-          "en": "Passport — do you have it?",
-          "ko": "여권, 있어요?"
+          "en": "Do you have your passport?",
+          "ko": "여권 있어요?"
         }
       },
       "tomorrow": {
@@ -7230,10 +7228,10 @@
         }
       },
       "tomorrow-easy": {
-        "text": "明天来，带护照。",
+        "text": "明天带护照来。",
         "gloss": {
-          "en": "Come tomorrow, with your passport.",
-          "ko": "내일 오세요, 여권 가지고."
+          "en": "Bring your passport tomorrow.",
+          "ko": "내일 여권 가지고 오세요."
         }
       },
       "here": {
@@ -7244,10 +7242,10 @@
         }
       },
       "here-easy": {
-        "text": "这儿。八点。",
+        "text": "就在这儿，八点。",
         "gloss": {
-          "en": "Here. Eight o'clock.",
-          "ko": "여기요. 8시."
+          "en": "Right here, at eight.",
+          "ko": "바로 여기요, 8시."
         }
       },
       "end": {
@@ -7387,7 +7385,7 @@
               "城墙在哪儿",
               "在哪儿",
               "请问城墙在哪儿",
-              "它在哪儿"
+              "在哪里"
             ]
           },
           {
@@ -7539,10 +7537,10 @@
         }
       },
       "this-easy": {
-        "text": "城墙。很好看。",
+        "text": "是城墙，很好看。",
         "gloss": {
-          "en": "The City Wall. Very nice.",
-          "ko": "성벽이요. 멋있어요."
+          "en": "It's the City Wall; it's beautiful.",
+          "ko": "성벽이에요, 멋있어요."
         }
       },
       "near": {
@@ -7553,10 +7551,10 @@
         }
       },
       "near-easy": {
-        "text": "南门。很近。",
+        "text": "在南门，很近。",
         "gloss": {
-          "en": "The South Gate. Very close.",
-          "ko": "남문이요. 가까워요."
+          "en": "At the South Gate, very close.",
+          "ko": "남문이요, 가까워요."
         }
       },
       "open": {
@@ -7567,10 +7565,10 @@
         }
       },
       "open-easy": {
-        "text": "八点。早上八点。",
+        "text": "早上八点。",
         "gloss": {
-          "en": "Eight. Eight in the morning.",
-          "ko": "8시. 아침 8시요."
+          "en": "Eight in the morning.",
+          "ko": "아침 8시요."
         }
       },
       "end": {
@@ -7710,7 +7708,7 @@
             "go": "t-phone",
             "match": [
               "我在大学",
-              "我在大学学习",
+              "我在大学上学",
               "我在辽宁大学",
               "我在学校"
             ]
@@ -7938,21 +7936,21 @@
         }
       },
       "name-easy": {
-        "text": "名字是什么？",
+        "text": "你叫什么？",
         "gloss": {
-          "en": "What's the name?",
+          "en": "What's your name?",
           "ko": "이름이요?"
         }
       },
       "where": {
-        "text": "你在哪儿工作？还是学习？",
+        "text": "你在哪儿工作，还是在上学？",
         "gloss": {
-          "en": "Where do you work? Or do you study?",
-          "ko": "어디서 일해요? 아니면 공부해요?"
+          "en": "Where do you work, or are you studying?",
+          "ko": "어디서 일해요, 아니면 학교 다녀요?"
         }
       },
       "where-easy": {
-        "text": "你在哪儿学习？",
+        "text": "你在哪儿上学？",
         "gloss": {
           "en": "Where do you study?",
           "ko": "어디서 공부해요?"
@@ -7966,10 +7964,10 @@
         }
       },
       "phone-easy": {
-        "text": "电话号码，请说一下。",
+        "text": "请说一下电话号码。",
         "gloss": {
-          "en": "Your phone number, please.",
-          "ko": "전화번호, 말해 주세요."
+          "en": "Please tell me your phone number.",
+          "ko": "전화번호 말해 주세요."
         }
       },
       "wait": {
@@ -7994,24 +7992,24 @@
         }
       },
       "done-easy": {
-        "text": "给你。",
+        "text": "好了，给你。",
         "gloss": {
-          "en": "Here you go.",
-          "ko": "여기요."
+          "en": "Done, here you go.",
+          "ko": "됐어요, 여기요."
         }
       },
       "weeks": {
-        "text": "一次可以借五本，借一个月。",
+        "text": "一次可以借五本，可以借一个月。",
         "gloss": {
           "en": "You can borrow five books at a time, for one month.",
           "ko": "한 번에 다섯 권, 한 달 동안 빌릴 수 있어요."
         }
       },
       "weeks-easy": {
-        "text": "五本。一个月。",
+        "text": "五本，一个月。",
         "gloss": {
-          "en": "Five books. One month.",
-          "ko": "다섯 권. 한 달."
+          "en": "Five books, one month.",
+          "ko": "다섯 권, 한 달이요."
         }
       },
       "end": {
@@ -8305,10 +8303,10 @@
         }
       },
       "like-easy": {
-        "text": "跑步？游泳？",
+        "text": "你喜欢跑步还是游泳？",
         "gloss": {
-          "en": "Running? Swimming?",
-          "ko": "달리기? 수영?"
+          "en": "Do you like running or swimming?",
+          "ko": "달리기 좋아해요, 아니면 수영?"
         }
       },
       "pool": {
@@ -8319,10 +8317,10 @@
         }
       },
       "pool-easy": {
-        "text": "有游泳池。有跑步机。",
+        "text": "有游泳池，有跑步机。",
         "gloss": {
-          "en": "There's a pool. There are treadmills.",
-          "ko": "수영장 있어요. 러닝머신 있어요."
+          "en": "There's a pool, there are treadmills.",
+          "ko": "수영장 있고, 러닝머신 있어요."
         }
       },
       "hours": {
@@ -8653,7 +8651,7 @@
         }
       },
       "hello-easy": {
-        "text": "你看病吗？",
+        "text": "你是来看病的吗？",
         "gloss": {
           "en": "Are you here to see a doctor?",
           "ko": "진료 보러 오셨어요?"
@@ -8667,10 +8665,10 @@
         }
       },
       "first-easy": {
-        "text": "你来过吗？",
+        "text": "你以前来过吗？",
         "gloss": {
           "en": "Have you been here before?",
-          "ko": "와 본 적 있어요?"
+          "ko": "전에 와 본 적 있어요?"
         }
       },
       "name": {
@@ -8681,9 +8679,9 @@
         }
       },
       "name-easy": {
-        "text": "名字？",
+        "text": "你叫什么？",
         "gloss": {
-          "en": "Name?",
+          "en": "What's your name?",
           "ko": "이름이요?"
         }
       },
@@ -8695,38 +8693,38 @@
         }
       },
       "form-easy": {
-        "text": "写这儿。生日，电话。",
+        "text": "在这儿写生日和电话。",
         "gloss": {
-          "en": "Write here. Birthday, phone.",
-          "ko": "여기 쓰세요. 생일, 전화."
+          "en": "Write your birthday and phone number here.",
+          "ko": "여기에 생일이랑 전화번호 쓰세요."
         }
       },
       "slow": {
-        "text": "这儿。写生日。写电话。",
+        "text": "在这儿，写生日，写电话。",
         "gloss": {
-          "en": "Here. Write your birthday. Write your phone number.",
-          "ko": "여기요. 생일 쓰고. 전화번호 쓰고."
+          "en": "Here: write your birthday, write your phone number.",
+          "ko": "여기요, 생일 쓰고, 전화번호 쓰세요."
         }
       },
       "slow-easy": {
-        "text": "写这儿。",
+        "text": "在这儿写。",
         "gloss": {
           "en": "Write here.",
           "ko": "여기 쓰세요."
         }
       },
       "doc": {
-        "text": "好了。你是老师吗？还是学生？",
+        "text": "好了。你是老师吗？",
         "gloss": {
-          "en": "Done. Are you a teacher? Or a student?",
-          "ko": "됐어요. 선생님이세요? 아니면 학생?"
+          "en": "Done. Are you a teacher?",
+          "ko": "됐어요. 선생님이세요?"
         }
       },
       "doc-easy": {
-        "text": "你是学生吗？",
+        "text": "你是老师，还是学生？",
         "gloss": {
-          "en": "Are you a student?",
-          "ko": "학생이세요?"
+          "en": "Are you a teacher, or a student?",
+          "ko": "선생님이세요, 아니면 학생?"
         }
       },
       "end": {
@@ -8997,9 +8995,9 @@
             "go": "t-end",
             "match": [
               "再见",
-              "晚上见",
               "明天见",
-              "好再见"
+              "好再见",
+              "回头见"
             ]
           },
           {
@@ -9114,10 +9112,10 @@
         }
       },
       "end": {
-        "text": "回见！",
+        "text": "好，再见！",
         "gloss": {
-          "en": "See you!",
-          "ko": "또 봐요!"
+          "en": "OK, bye!",
+          "ko": "네, 또 봐요!"
         }
       }
     },
@@ -9477,10 +9475,10 @@
         }
       },
       "hard-easy": {
-        "text": "难不难？",
+        "text": "中文难不难？",
         "gloss": {
-          "en": "Hard or not?",
-          "ko": "어려워 안 어려워?"
+          "en": "Is Chinese hard or not?",
+          "ko": "중국어 어려워, 안 어려워?"
         }
       },
       "end": {
@@ -9725,12 +9723,12 @@
             ]
           },
           {
-            "meaning": "says OK",
+            "meaning": "says they are done and hands it back",
             "go": "t-back",
             "match": [
-              "好的",
-              "好",
-              "没关系"
+              "用完了",
+              "好的给你",
+              "用完了给你"
             ]
           }
         ],
@@ -9810,10 +9808,10 @@
         }
       },
       "give": {
-        "text": "我有两支。给你！",
+        "text": "我有两支，给你一支！",
         "gloss": {
-          "en": "I have two. Here you go!",
-          "ko": "나 두 개 있어. 여기!"
+          "en": "I have two; here's one for you!",
+          "ko": "나 두 개 있어, 하나 줄게!"
         }
       },
       "give-easy": {
@@ -9831,10 +9829,10 @@
         }
       },
       "color-easy": {
-        "text": "黑的？蓝的？",
+        "text": "黑的还是蓝的？",
         "gloss": {
-          "en": "Black? Blue?",
-          "ko": "검은 거? 파란 거?"
+          "en": "Black or blue?",
+          "ko": "검은 거, 파란 거?"
         }
       },
       "whose": {
@@ -9845,24 +9843,24 @@
         }
       },
       "whose-easy": {
-        "text": "书，是你的吗？",
+        "text": "这本书，是你的吗？",
         "gloss": {
-          "en": "The book — is it yours?",
-          "ko": "책, 네 거야?"
+          "en": "This book, is it yours?",
+          "ko": "이 책, 네 거야?"
         }
       },
       "mine": {
-        "text": "哦，对，这是我的。谢谢！",
+        "text": "哦，对，是我的。谢谢！笔用完了吗？",
         "gloss": {
-          "en": "Oh, right, it's mine. Thanks!",
-          "ko": "아, 맞다, 내 거야. 고마워!"
+          "en": "Oh, right, it's mine. Thanks! Are you done with the pen?",
+          "ko": "아, 맞다, 내 거야. 고마워! 펜 다 썼어?"
         }
       },
       "mine-easy": {
-        "text": "是我的。谢谢！",
+        "text": "笔用完了吗？",
         "gloss": {
-          "en": "It's mine. Thanks!",
-          "ko": "내 거야. 고마워!"
+          "en": "Are you done with the pen?",
+          "ko": "펜 다 썼어?"
         }
       },
       "back": {
@@ -10209,17 +10207,17 @@
         }
       },
       "where": {
-        "text": "我也到了。你在几号口？",
+        "text": "我也到了。你在哪个口？",
         "gloss": {
           "en": "I'm here too. Which exit are you at?",
-          "ko": "나도 왔어. 몇 번 출구야?"
+          "ko": "나도 왔어. 어느 출구야?"
         }
       },
       "where-easy": {
-        "text": "几号出口？",
+        "text": "你在哪个出口？",
         "gloss": {
-          "en": "Which exit number?",
-          "ko": "몇 번 출구?"
+          "en": "Which exit are you at?",
+          "ko": "어느 출구에 있어?"
         }
       },
       "fast": {
@@ -10237,17 +10235,17 @@
         }
       },
       "slow": {
-        "text": "B……口。麦当劳……对面。",
+        "text": "我在B口，麦当劳对面。",
         "gloss": {
-          "en": "Exit... B. Opposite... McDonald's.",
-          "ko": "B… 출구. 맥도날드… 맞은편."
+          "en": "I'm at exit B, opposite McDonald's.",
+          "ko": "나 B출구, 맥도날드 맞은편이야."
         }
       },
       "slow-easy": {
-        "text": "B口。",
+        "text": "我在B口。",
         "gloss": {
-          "en": "Exit B.",
-          "ko": "B출구."
+          "en": "I'm at exit B.",
+          "ko": "나 B출구야."
         }
       },
       "see": {
@@ -10258,10 +10256,10 @@
         }
       },
       "see-easy": {
-        "text": "麦当劳，看到了吗？",
+        "text": "看到麦当劳了吗？",
         "gloss": {
-          "en": "McDonald's — can you see it?",
-          "ko": "맥도날드, 보여?"
+          "en": "Can you see the McDonald's?",
+          "ko": "맥도날드 보여?"
         }
       },
       "wait": {
@@ -10482,7 +10480,7 @@
             ]
           },
           {
-            "meaning": "asks if the manager is Chinese",
+            "meaning": "asks if he is Chinese",
             "go": "t-lunch",
             "match": [
               "他是中国人吗",
@@ -10561,10 +10559,10 @@
         }
       },
       "hello-easy": {
-        "text": "你好吗？",
+        "text": "早！你好吗？",
         "gloss": {
-          "en": "How are you?",
-          "ko": "잘 지내?"
+          "en": "Morning! How are you?",
+          "ko": "좋은 아침! 잘 지내?"
         }
       },
       "good": {
@@ -10575,10 +10573,10 @@
         }
       },
       "good-easy": {
-        "text": "早饭，吃了吗？",
+        "text": "早饭吃了吗？",
         "gloss": {
-          "en": "Breakfast — have you eaten?",
-          "ko": "아침, 먹었어?"
+          "en": "Have you had breakfast?",
+          "ko": "아침 먹었어?"
         }
       },
       "tired": {
@@ -10596,24 +10594,24 @@
         }
       },
       "new-easy": {
-        "text": "那个人，新的。",
+        "text": "那是新同事。",
         "gloss": {
-          "en": "That person — new.",
-          "ko": "저 사람, 새로 왔어."
+          "en": "That's a new colleague.",
+          "ko": "저 사람 새 동료야."
         }
       },
       "who": {
-        "text": "他叫小李，是我们的经理。",
+        "text": "他叫小李，坐我们旁边。",
         "gloss": {
-          "en": "He's called Xiao Li; he's our manager.",
-          "ko": "샤오리라고, 우리 매니저야."
+          "en": "He's Xiao Li; he sits next to us.",
+          "ko": "샤오리라고, 우리 옆자리야."
         }
       },
       "who-easy": {
-        "text": "他是经理。",
+        "text": "他叫小李。",
         "gloss": {
-          "en": "He's the manager.",
-          "ko": "매니저야."
+          "en": "His name is Xiao Li.",
+          "ko": "샤오리야."
         }
       },
       "lunch": {
@@ -10624,10 +10622,10 @@
         }
       },
       "lunch-easy": {
-        "text": "十二点，一起吃饭？",
+        "text": "十二点一起吃饭，好吗？",
         "gloss": {
-          "en": "Twelve o'clock, eat together?",
-          "ko": "12시, 같이 먹을래?"
+          "en": "Lunch together at twelve, OK?",
+          "ko": "12시에 같이 밥 먹을래?"
         }
       },
       "end": {
@@ -10988,10 +10986,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "你好，有什么问题吗？",
+        "text": "你好，怎么了？",
         "gloss": {
-          "en": "Hello, is there a problem?",
-          "ko": "안녕하세요, 무슨 문제 있어요?"
+          "en": "Hello, what's the matter?",
+          "ko": "안녕하세요, 무슨 일이세요?"
         }
       },
       "hello-easy": {
@@ -11009,10 +11007,10 @@
         }
       },
       "explain-easy": {
-        "text": "先选站。再付钱。",
+        "text": "先选站，再付钱。",
         "gloss": {
-          "en": "Choose the station first. Then pay.",
-          "ko": "먼저 역 고르고. 그다음 돈 내요."
+          "en": "Choose the station first, then pay.",
+          "ko": "먼저 역 고르고, 그다음 돈 내요."
         }
       },
       "slow": {
@@ -11037,10 +11035,10 @@
         }
       },
       "this-easy": {
-        "text": "二维码。用手机。",
+        "text": "用手机扫二维码。",
         "gloss": {
-          "en": "QR code. With your phone.",
-          "ko": "QR코드요. 휴대폰으로."
+          "en": "Scan the QR code with your phone.",
+          "ko": "휴대폰으로 QR코드를 찍어요."
         }
       },
       "cash": {
@@ -11051,10 +11049,10 @@
         }
       },
       "cash-easy": {
-        "text": "用钱也可以。",
+        "text": "用现金也可以。",
         "gloss": {
-          "en": "Money is fine too.",
-          "ko": "돈으로도 돼요."
+          "en": "Cash is fine too.",
+          "ko": "현금도 돼요."
         }
       },
       "done": {
@@ -11065,17 +11063,17 @@
         }
       },
       "done-easy": {
-        "text": "给你，票。",
+        "text": "票给你。",
         "gloss": {
-          "en": "Here, the ticket.",
-          "ko": "여기, 표요."
+          "en": "Here's your ticket.",
+          "ko": "표 여기요."
         }
       },
       "end": {
-        "text": "不客气，一路顺风！",
+        "text": "不客气，再见！",
         "gloss": {
-          "en": "You're welcome, have a good trip!",
-          "ko": "천만에요, 잘 가요!"
+          "en": "You're welcome, bye!",
+          "ko": "천만에요, 안녕히 가세요!"
         }
       },
       "dest0": {
@@ -11271,8 +11269,8 @@
             "go": "t-next",
             "match": [
               "她很好",
-              "她很漂亮",
-              "很好"
+              "很好",
+              "看起来很好"
             ]
           },
           {
@@ -11375,21 +11373,21 @@
         }
       },
       "who": {
-        "text": "你看，那是谁？",
+        "text": "你看，那个人！",
         "gloss": {
-          "en": "Look, who's that?",
-          "ko": "봐, 저 사람 누구야?"
+          "en": "Look, that person!",
+          "ko": "봐, 저 사람!"
         }
       },
       "who-easy": {
-        "text": "那个人，你认识吗？",
+        "text": "你看那个人。",
         "gloss": {
-          "en": "That person — do you know them?",
-          "ko": "저 사람, 알아?"
+          "en": "Look at that person.",
+          "ko": "저 사람 봐."
         }
       },
       "teacher": {
-        "text": "她是新的口语老师。",
+        "text": "她是新来的口语老师。",
         "gloss": {
           "en": "She's the new speaking teacher.",
           "ko": "새로 온 회화 선생님이야."
