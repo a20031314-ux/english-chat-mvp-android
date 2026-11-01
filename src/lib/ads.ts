@@ -5,13 +5,15 @@ import { adsAvailable } from "@/lib/platform";
 /**
  * 광고(AdMob) — 무료 사용자에게만, 안드로이드 앱에서만(hub/drafts/ads-rewarded.md, 서버 billing/ads.ts).
  *
- * - 전면 광고: 자연스러운 끝(통화·오늘의 팩·미션이 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때,
- *   공개 말하는 방에 몇 분 있다 나올 때, 영상을 몇 분 보고 나올 때)에만,
+ * - 전면 광고: 자연스러운 끝(통화가 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때,
+ *   공개 말하는 방에 몇 분 있다 나올 때, 영상을 몇 분 보고 나올 때, My 오늘 할 것을 다 끝냈을 때·단계 화면에서 연 수업 끝,
+ *   Quizbank 10문제 묶음 경계, 시험 끝, 단계가 올라갈 때)에만,
  *   서버가 정한 최소 간격을 두고. 학습 도중(쓰는 중·답 기다리는 중·통화 중)과 앱을 열자마자는 띄우지 않는다.
  * - 보상형 광고: 채팅 한도 안내의 "광고 보고 채팅 더". 보상은 앱이 아니라 서버가 AdMob 콜백으로 확인해서 준다.
  * - 앱 오프닝 광고: 앱을 새로 켤 때·오래(서버 값, 30분) 떠났다 돌아올 때. 설치 며칠 뒤부터, 몇 시간에 한 번까지.
  *   통화·말하는 방에 있을 때와 시트가 열려 있을 때는 띄우지 않는다.
  * - 배너: 둘러보는 화면(My·영상·대화 목록) 아래, 하단 탭 바로 위. 시트가 열리거나 글을 쓰는 동안은 숨긴다.
+ * - 네이티브: 목록 사이·빈 공간(아래 "네이티브 광고"). 한 화면에 하나, 맨 위 층 안의 자리만, 키보드가 올라오면 숨김.
  *
  * 어떤 실패도 학습을 막지 않는다 — 광고가 없으면 그냥 지나간다. 구독자는 서버가 enabled=false로 답한다.
  */
@@ -28,7 +30,17 @@ type AdsConfig = {
   rewarded: { enabled: boolean; chats: number; dailyMax: number; left: number; token: string | null };
 };
 
-export type InterstitialMoment = "callEnd" | "missionDone" | "chatLeave" | "roomLeave" | "videoLeave" | "scriptEnd" | "quizEnd" | "checkupEnd";
+export type InterstitialMoment =
+  | "callEnd"
+  | "missionDone"
+  | "chatLeave"
+  | "roomLeave"
+  | "videoLeave"
+  | "scriptEnd"
+  | "quizEnd"
+  | "checkupEnd"
+  | "quizBreak"
+  | "stageUp";
 
 /** Google 데모 광고 단위(개발·내부 테스트용). `NEXT_PUBLIC_ADS_TEST=1`로 빌드하면 실제 광고 대신 이것. */
 const TEST_UNITS = {
@@ -177,6 +189,33 @@ export async function maybeShowInterstitial(moment: InterstitialMoment, stayedSe
   } catch {
     interstitialReady = false;
   }
+}
+
+// ─── 오늘 할 것을 다 끝낸 순간(2026-11-01 사용자 "흑자가 되는 구조로") ─────────────────────
+//
+// 오늘 할 것의 항목(수업·대본·꺼내 쓰기) 사이에서는 전면 광고를 띄우지 않고, 그날 마지막 항목을 끝낸 뒤 한 번만(scriptEnd).
+// My(AutoQuiz)가 끝난 순간을 알리면: 그 위에 연 화면(마지막 수업의 끝 화면)이 있으면 그것을 닫을 때(fireTodayEnd),
+// 없으면(칸 안 퀴즈로 끝남) 바로. 30분 안에 닫지 않으면 잊는다(다음 날 다른 항목을 닫을 때 뜨지 않게).
+
+const TODAY_END_WAIT_MS = 30 * 60 * 1000;
+let todayEndArmedAt = 0;
+
+/** 오늘 할 것을 다 끝냈다(그날 한 번). overlayOpen = 마지막 항목 화면이 아직 떠 있는지. */
+export function noteTodayFinished(overlayOpen: boolean) {
+  if (overlayOpen) {
+    todayEndArmedAt = Date.now();
+    return;
+  }
+  todayEndArmedAt = 0;
+  void maybeShowInterstitial("scriptEnd");
+}
+
+/** 오늘 할 것에서 연 화면을 닫을 때 부른다 — 그날 마지막 항목이었을 때만 전면(scriptEnd), 아니면 아무것도 안 함. */
+export function fireTodayEnd() {
+  if (!todayEndArmedAt) return;
+  const fresh = Date.now() - todayEndArmedAt < TODAY_END_WAIT_MS;
+  todayEndArmedAt = 0;
+  if (fresh) void maybeShowInterstitial("scriptEnd");
 }
 
 export type RewardOffer = { chats: number; left: number };
@@ -356,6 +395,40 @@ export function watchAppLifecycle(): () => void {
 
 /** 화면을 덮는 시트·전체 화면 수(FullScreenLayer·BodyLayer가 셈). 하나라도 있으면 배너를 숨긴다. */
 let layersOpen = 0;
+/**
+ * 열린 층의 순서(먼저 연 것부터, 층 id). 네이티브 광고는 맨 위 층(없으면 바닥 화면 0) 안의 자리만 보인다 —
+ * 전체 화면 층 안의 광고는 그 층이 맨 위일 때 보이고, 그 위에 다른 층이 덮이면 멈춘다(2026-11-01).
+ */
+const layerStack: number[] = [];
+let layerSeq = 0;
+const layerListeners = new Set<() => void>();
+
+/** 새 층 id(FullScreenLayer·BodyLayer가 그릴 때 한 번 받는다). 0은 바닥 화면. */
+export function nextAdLayerId(): number {
+  layerSeq += 1;
+  return layerSeq;
+}
+
+/** 지금 맨 위 층 id(층이 없으면 0). */
+export function topAdLayer(): number {
+  return layerStack.length ? layerStack[layerStack.length - 1]! : 0;
+}
+
+/** 열린 층 수(오늘 할 것이 끝난 순간에 마지막 항목 화면이 떠 있는지 볼 때). */
+export function adLayerDepth(): number {
+  return layerStack.length;
+}
+
+export function subscribeAdLayers(listener: () => void): () => void {
+  layerListeners.add(listener);
+  return () => {
+    layerListeners.delete(listener);
+  };
+}
+
+function notifyLayers() {
+  for (const listener of layerListeners) listener();
+}
 let bannerWanted = false;
 let bannerBottomMargin = 0;
 let typing = false;
@@ -373,14 +446,19 @@ function publishBannerSpace(px: number) {
   }
 }
 
-export function noteLayerOpened(): () => void {
+export function noteLayerOpened(id: number = nextAdLayerId()): () => void {
   layersOpen += 1;
+  layerStack.push(id);
   queueBannerSync();
   syncNativeFeeds();
+  notifyLayers();
   return () => {
     layersOpen = Math.max(0, layersOpen - 1);
+    const at = layerStack.lastIndexOf(id);
+    if (at >= 0) layerStack.splice(at, 1);
     queueBannerSync();
     syncNativeFeeds();
+    notifyLayers();
   };
 }
 
@@ -479,9 +557,11 @@ async function syncBanner(): Promise<void> {
 // ─── 네이티브 광고(목록 사이, 앱 카드 모양) ─────────────────────────────────────
 //
 // 플러그인의 NativeAdFeed(미리보기 기능): 웹 화면에 자리(높이 고정 div)를 두면 그 위치를 따라 네이티브 광고 보기를 얹는다.
-// 웹 화면 위에 떠 있어서 시트·전체 화면이 열리거나 탭이 숨으면 멈춰야 한다(layersOpen·active).
-// 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지(플러그인 한도). 그래서 자리는 보이는 동안에만 붙이고(NativeAdSlot의 active),
-// 화면을 떠나면 그 화면의 광고를 치운다 — 새 화면의 광고는 앞 화면을 다 치운 뒤에 만든다.
+// 웹 화면 위에 떠 있어서 그 자리 위에 다른 층이 덮이거나 탭이 숨으면 멈춰야 한다(맨 위 층·active).
+// 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지(플러그인 한도). 그래서 자리는 보이는 동안에만 붙이고(NativeAdSlot의 active·
+// 맨 위 층), 화면을 떠나면 그 화면의 광고를 치운다 — 새 화면의 광고는 앞 화면을 다 치운 뒤에 만든다.
+// 피드 이름은 화면 단위: talk-list · video-library · people-tab · room-lobby(둘러보는 목록), my-full(My 칸 전체 화면),
+// quiz-inline(Quizbank·수업 퀴즈 아래), results(끝 화면 점수 아래), chat-locked(AI 채팅 잠김 화면).
 
 /** 네이티브 광고 자리 높이(작은 틀, 플러그인 최소 120px). */
 export const NATIVE_SLOT_HEIGHT = 120;
@@ -509,7 +589,8 @@ type NativeFeedHandle = {
   destroy(): Promise<void>;
 };
 
-type FeedEntry = { feed: Promise<NativeFeedHandle | null>; refs: number; active: boolean; paused: boolean };
+/** layers: 붙은 자리마다 그 자리가 든 층(맨 위 층에 든 자리가 하나라도 있으면 보인다). */
+type FeedEntry = { feed: Promise<NativeFeedHandle | null>; refs: number; active: boolean; paused: boolean; layers: Map<HTMLElement, number> };
 const nativeFeeds = new Map<string, FeedEntry>();
 /** 치우는 중인 화면들 — 다 끝난 뒤에 새 화면을 만들어 동시에 2개 한도를 넘지 않게. */
 let nativeDestroying: Promise<unknown> = Promise.resolve();
@@ -550,8 +631,9 @@ function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
 }
 
 function syncNativeFeeds() {
+  const top = topAdLayer();
   for (const entry of nativeFeeds.values()) {
-    const show = entry.active && layersOpen === 0;
+    const show = entry.active && [...entry.layers.values()].includes(top);
     void entry.feed.then((feed) => {
       if (!feed) return;
       if (show && entry.paused) {
@@ -565,21 +647,25 @@ function syncNativeFeeds() {
   }
 }
 
-/** 자리 하나를 광고에 붙인다. 돌려준 함수로 뗀다(마지막 자리가 떨어지면 그 화면의 광고를 모두 치움). */
-export function attachNativeSlot(feedId: string, slotKey: string, element: HTMLElement): () => void {
+/**
+ * 자리 하나를 광고에 붙인다(layer = 그 자리가 든 층, 바닥 화면 0). 돌려준 함수로 뗀다(마지막 자리가 떨어지면 그 화면의 광고를 모두 치움).
+ */
+export function attachNativeSlot(feedId: string, slotKey: string, element: HTMLElement, layer = 0): () => void {
   let entry = nativeFeeds.get(feedId);
   if (!entry) {
-    entry = { feed: createFeed(feedId), refs: 0, active: true, paused: false };
+    entry = { feed: createFeed(feedId), refs: 0, active: true, paused: false, layers: new Map() };
     nativeFeeds.set(feedId, entry);
   }
   const current = entry;
   current.refs += 1;
+  current.layers.set(element, layer);
   void current.feed.then((feed) => {
     feed?.attach(slotKey, element);
     syncNativeFeeds();
   });
   return () => {
     void current.feed.then((feed) => feed?.detach(element));
+    current.layers.delete(element);
     current.refs -= 1;
     if (current.refs <= 0) {
       nativeFeeds.delete(feedId);

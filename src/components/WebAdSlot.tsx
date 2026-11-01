@@ -7,7 +7,7 @@ import { ADSENSE_CLIENT, ADSENSE_SLOT_FEED, fillAdSlot, loadAdSense, webAdsEnabl
  * 웹의 목록 사이 광고(AdSense, `lib/webAds.ts`). 앱의 NativeAdSlot과 같은 자리에서 불린다.
  * 안 보이는 화면(active=false)에서는 그리지 않고, 다시 보이면 새로 붙인다. 못 채운 자리는 CSS가 숨긴다(globals.css).
  */
-export function WebAdSlot({ active = true }: { active?: boolean }) {
+export function WebAdSlot({ active = true, spaced = false }: { active?: boolean; spaced?: boolean }) {
   const [enabled, setEnabled] = useState(false);
   const ref = useRef<HTMLModElement>(null);
 
@@ -30,7 +30,8 @@ export function WebAdSlot({ active = true }: { active?: boolean }) {
   if (!enabled || !active) return null;
   // AdSense 반응형 디스플레이 광고 단위 하나를 모든 목록 자리에 쓴다.
   return (
-    <div className="w-full overflow-hidden">
+    // spaced: 빈 공간 자리 — 버튼·입력칸과 한 줄 넘게 띄운다(광고가 없으면 자리째 없음).
+    <div className={spaced ? "my-6 w-full overflow-hidden" : "w-full overflow-hidden"}>
       <ins
         ref={ref}
         className="adsbygoogle block w-full"

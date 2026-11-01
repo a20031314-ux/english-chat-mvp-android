@@ -72,19 +72,24 @@ export function StageFrames({
   listHidden?: boolean;
   /** 다시 권하는 틀(/api/notebook redo) — 목록에 ◐. */
   redo?: readonly RedoItem[];
-  /** 밖(문법 칸)에서 고른 문장구조를 연다(at = 누른 때). */
-  openFor?: { id: string; at: number } | null;
+  /** 밖(문법 칸)에서 고른 문장구조를 연다(at = 누른 때, today = 오늘 할 것에서 연 것). */
+  openFor?: { id: string; at: number; today?: boolean } | null;
   onPassed?: (id: string) => void;
   /** 예전 끝 화면의 "이 틀이 나온 대본"으로 가던 것 — 수업(FrameLesson)에는 없어 쓰지 않는다(부르는 쪽 호환으로 남김). */
   onOpenScript?: (script: StageScript) => void;
 }) {
   const frames = framesFor(language, stage);
   const [open, setOpen] = useState<Frame | null>(null);
+  // 오늘 할 것에서 연 수업이면 닫을 때 전면 광고를 항목 사이에 띄우지 않는다(FrameLesson fromToday).
+  const [openToday, setOpenToday] = useState(false);
   const [handled, setHandled] = useState(0);
   if (openFor && openFor.at !== handled) {
     setHandled(openFor.at);
     const found = frames.find((frame) => frame.id === openFor.id);
-    if (found) setOpen(found);
+    if (found) {
+      setOpen(found);
+      setOpenToday(Boolean(openFor.today));
+    }
   }
   if (!frames.length) return null;
   const again = new Set(redo.map((item) => item.frame));
@@ -99,7 +104,10 @@ export function StageFrames({
             <li key={frame.id}>
               <button
                 type="button"
-                onClick={() => setOpen(frame)}
+                onClick={() => {
+                  setOpen(frame);
+                  setOpenToday(false);
+                }}
                 className={`flex h-full w-full flex-col items-start gap-0.5 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${redoing ? "border-warn/60" : ok ? "border-status-mastered/50" : "border-line"}`}
               >
                 <span dir="auto" className="text-note text-slate-100">
@@ -116,7 +124,7 @@ export function StageFrames({
       </ul>
       )}
       {/* A pattern opens as a lesson: explanation → quiz → talk (2026-10-30, user). The redo cards below keep the old player. */}
-      {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} onClose={() => setOpen(null)} /> : null}
+      {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} fromToday={openToday} onClose={() => setOpen(null)} /> : null}
     </section>
   );
 }

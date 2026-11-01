@@ -156,6 +156,8 @@ export function RoomsScreen({
           <div className="space-y-3">
             {/* My 탭의 계정 카드 그대로 — 누르면 로그인 시트(z-85). */}
             <AccountCard ui={ui} locale={locale} />
+            {/* 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. */}
+            <NativeAdSlot feedId="room-lobby" slotKey="room-lobby-login" spaced />
           </div>
         )}
       </div>
@@ -464,6 +466,12 @@ function Lobby({
             {index === 2 ? (
               <li>
                 <NativeAdSlot feedId="room-lobby" slotKey="room-lobby-after-2" />
+              </li>
+            ) : null}
+            {/* 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). */}
+            {index === 5 ? (
+              <li>
+                <NativeAdSlot feedId="room-lobby" slotKey="room-lobby-after-5" />
               </li>
             ) : null}
             <li>

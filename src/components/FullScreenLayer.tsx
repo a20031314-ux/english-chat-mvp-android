@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useSyncExternalStore, type ReactNode } from "react";
-import { noteLayerOpened } from "@/lib/ads";
+import { createContext, useContext, useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
+import { nextAdLayerId, noteLayerOpened } from "@/lib/ads";
 import { createPortal } from "react-dom";
 
 /**
@@ -25,6 +25,22 @@ import { createPortal } from "react-dom";
 /** Never fires: this store's value is fixed per environment. */
 const subscribe = () => () => {};
 
+/**
+ * 이 자리가 든 층 id(바닥 화면 0) — 네이티브 광고 자리(NativeAdSlot)는 자기 층이 맨 위일 때만 보인다(lib/ads.ts).
+ */
+const AdLayerContext = createContext(0);
+
+export function useAdLayer(): number {
+  return useContext(AdLayerContext);
+}
+
+/** 층 하나: id를 한 번 받아 열린 동안 맨 위 층 목록에 올린다(배너·앱 오프닝은 층이 하나라도 있으면 숨김). */
+function useLayer(): number {
+  const [id] = useState(nextAdLayerId);
+  useEffect(() => noteLayerOpened(id), [id]);
+  return id;
+}
+
 export function FullScreenLayer({ children }: { children: ReactNode }) {
   // False while rendering on the server, true once on the client, without a
   // state write in an effect and without a hydration mismatch.
@@ -34,10 +50,12 @@ export function FullScreenLayer({ children }: { children: ReactNode }) {
     () => false,
   );
   // 광고 배너(네이티브라 웹 화면 위에 뜸)가 이 층을 가리지 않게, 열려 있는 동안 숨긴다(lib/ads.ts).
-  useEffect(() => noteLayerOpened(), []);
+  const layer = useLayer();
   if (!onClient) return null;
   return createPortal(
-    <div className="fixed inset-0 z-[70] flex flex-col bg-[#050505]">{children}</div>,
+    <AdLayerContext.Provider value={layer}>
+      <div className="fixed inset-0 z-[70] flex flex-col bg-[#050505]">{children}</div>
+    </AdLayerContext.Provider>,
     document.body,
   );
 }
@@ -54,7 +72,7 @@ export function BodyLayer({ children }: { children: ReactNode }) {
     () => true,
     () => false,
   );
-  useEffect(() => noteLayerOpened(), []);
+  const layer = useLayer();
   if (!onClient) return null;
-  return createPortal(children, document.body);
+  return createPortal(<AdLayerContext.Provider value={layer}>{children}</AdLayerContext.Provider>, document.body);
 }

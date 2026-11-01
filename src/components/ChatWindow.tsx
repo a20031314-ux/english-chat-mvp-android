@@ -30,6 +30,7 @@ import { roomCopy } from "@/lib/rooms/copy";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { useBillingUi } from "./BillingScreen";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { usePremium } from "@/contexts/PremiumContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { Capacitor } from "@capacitor/core";
@@ -716,6 +717,8 @@ type ChatWindowProps = {
   callLabel?: string;
   /** ⋮ 메뉴에 더할 것(내 문장 말해보기 등). */
   menuItems?: { label: string; onSelect: () => void }[];
+  /** 이 화면이 지금 보이는지(탭은 숨겨도 그려져 있어서) — 잠김 화면 네이티브 광고를 숨은 동안 떼어 둔다. */
+  visible?: boolean;
 };
 
 export function ChatWindow({
@@ -725,6 +728,7 @@ export function ChatWindow({
   onCall = null,
   callLabel,
   menuItems = [],
+  visible = true,
 }: ChatWindowProps) {
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("chat"), []);
@@ -2090,6 +2094,8 @@ export function ChatWindow({
               </article>
             );
           })}
+          {/* AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. */}
+          {isChatInputBlocked ? <NativeAdSlot feedId="chat-locked" slotKey="chat-locked" active={visible} spaced /> : null}
           <div ref={bottomRef} />
         </div>
 

@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { adLayerDepth, maybeShowInterstitial, noteTodayFinished } from "@/lib/ads";
 import { BankToneProvider } from "@/components/studyMap/bankTone";
 import { ContentScopeButton } from "@/components/studyMap/ContentScope";
 import { apiUrl } from "@/lib/apiBase";
@@ -103,20 +105,34 @@ function scrollToLayer(id: MyLayer) {
   window.setTimeout(() => document.querySelector(`[data-my-layer="${id}"]`)?.scrollIntoView({ block: "start", behavior: "smooth" }), 60);
 }
 
-/** 오늘 할 것을 다 하면 그날 한 번 퀴즈 칸을 펴고 맨 위로(그 뒤 다른 칸을 고르면 그대로). */
-function AutoQuiz({ done, onOpen }: { done: boolean; onOpen: (layer: MyLayer) => void }) {
+/**
+ * 오늘 할 것을 다 하면 그날 한 번 퀴즈 칸을 펴고 맨 위로(그 뒤 다른 칸을 고르면 그대로).
+ * 같은 순간 전면 광고 한 번(2026-11-01 — 항목 사이에는 없음): 이 화면에서 끝냈을 때만(열 때 이미 끝나 있으면 없음 — 앱을 열자마자 금지),
+ * 마지막 항목 화면(수업 끝 화면 등)이 떠 있으면 그것을 닫을 때(lib/ads.ts noteTodayFinished·fireTodayEnd).
+ * baseDepth = 오늘 할 것이 그려진 층 수(칸 전체 화면이면 1).
+ */
+function AutoQuiz({ done, onOpen, baseDepth }: { done: boolean; onOpen: (layer: MyLayer) => void; baseDepth: number }) {
   const openRef = useRef(onOpen);
   useEffect(() => {
     openRef.current = onOpen;
   });
+  const sawUndone = useRef(false);
+  const depthRef = useRef(baseDepth);
   useEffect(() => {
-    if (!done) return;
+    depthRef.current = baseDepth;
+  });
+  useEffect(() => {
+    if (!done) {
+      sawUndone.current = true;
+      return;
+    }
     try {
       if (localStorage.getItem(AUTO_KEEP_KEY) === localDay()) return;
       localStorage.setItem(AUTO_KEEP_KEY, localDay());
     } catch {
       // 이 폰에 못 남기면 이번에만.
     }
+    if (sawUndone.current) noteTodayFinished(adLayerDepth() > depthRef.current);
     openRef.current("keep");
   }, [done]);
   return null;
@@ -219,7 +235,7 @@ export function NotebookSection({
   const [question, setQuestion] = useState<LocateHandoff | null>(null);
   const [focusStage, setFocusStage] = useState<number | null>(null);
   // 문법 칸 → 그 문법의 대본·문장구조 열기(CURRICULUM_ONLY).
-  const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
+  const [jump, setJump] = useState<{ stage: number; id: string; at: number; today?: boolean } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
   // My 큰 칸(n단계 · Quizbank · 복습) 중 접은 것(기본은 모두 펼침, 2026-10-31). 이 화면에만.
@@ -440,10 +456,11 @@ export function NotebookSection({
     return node ? nameOf(node.id) : "";
   };
   /** 오늘 할 것·틀린 줄·문법 칸에서 고른 상황·문장구조 → 단계 칸을 펼치고 연다. */
-  const openScript = (stage: number, id: string) => {
+  // from "today" = 오늘 할 것의 지금 항목(닫을 때 전면 광고를 항목 사이에 띄우지 않게, lib/ads.ts fireTodayEnd).
+  const openScript = (stage: number, id: string, from?: "today") => {
     openLayer("stage");
     setStagePeek(true);
-    setJump({ stage, id, at: Date.now() });
+    setJump({ stage, id, at: Date.now(), ...(from === "today" ? { today: true } : {}) });
   };
   // 다음 단계 조건 = 문장구조 익힘 70% + 꺼내 씀 70%(2026-10-30 사용자, curriculum/recall.ts) — 틀이 있는 단계만, 없으면 예전 네 갈래.
   const frameTally = (order: number) => {
@@ -1102,11 +1119,11 @@ function StageFrame({
   /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
   focusPart?: PartId | null;
   /** 그 단계 대본(맨 위, 2026-10-27 "My탭도 대본에 맞추고"). openFor = 표현 연습으로 열 대본. */
-  scripts?: (order: number, row: StageParts | null, openFor: { id: string; at: number } | null) => ReactNode;
+  scripts?: (order: number, row: StageParts | null, openFor: { id: string; at: number; today?: boolean } | null) => ReactNode;
   /** 아직 배우지 않은 표현이 든 대본 id(표현 갈래 연습 → 그 대본, 2026-10-28 "표현연결"). */
   scriptFor?: (order: number, open: string[]) => string | null;
   /** 밖(문법 칸)에서 고른 대본·문장구조 — 그 단계로 옮겨 연다. */
-  jump?: { stage: number; id: string; at: number } | null;
+  jump?: { stage: number; id: string; at: number; today?: boolean } | null;
   /** 연 뒤 밖의 jump를 비운다 — 칸을 접었다 펴면(다시 그려지면) 같은 대본이 또 열리던 것(2026-10-30 사용자 화면). */
   onJumped?: () => void;
   /** 단계 이름 줄 끝에 붙는 것(내 진척 아이콘). */
@@ -1130,13 +1147,13 @@ function StageFrame({
   const stageParts = parts.find((row) => row.order === shown) ?? null;
   // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
   const [picked, setPicked] = useState<PartId | null>(focusPart);
-  const [openScript, setOpenScript] = useState<{ id: string; at: number } | null>(null);
+  const [openScript, setOpenScript] = useState<{ id: string; at: number; today?: boolean } | null>(null);
   const [jumped, setJumped] = useState(0);
   if (jump && jump.at !== jumped) {
     // 렌더 중 한 번(같은 at은 다시 안 함) — 그 단계를 보이고 대본·문장구조를 연다.
     setJumped(jump.at);
     setShown(jump.stage);
-    setOpenScript({ id: jump.id, at: jump.at });
+    setOpenScript({ id: jump.id, at: jump.at, ...(jump.today ? { today: true } : {}) });
   }
   useEffect(() => {
     if (jump && jump.at === jumped) onJumped?.();
@@ -2050,9 +2067,19 @@ function StageTestGate({
       title={`${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}`}
       finishWith={(answers) => stageTestResult(items, answers, stage)}
       heading={(result) => (result.passed ? ui.stageTestPassed.replace("{n}", String(result.stage)) : undefined)}
+      stageUp={(result) => Boolean(result.passed)}
       actions={(result) =>
         result.passed ? (
-          <button type="button" data-stage-next onClick={onNext} className="self-center rounded-full bg-status-learned px-5 py-1.5 text-caption font-semibold text-black">
+          <button
+            type="button"
+            data-stage-next
+            onClick={() => {
+              // 단계가 올라가는 순간 — 전면 한 번(2026-11-01, 3분 간격·미리 받아 둔 것만).
+              void maybeShowInterstitial("stageUp");
+              onNext();
+            }}
+            className="self-center rounded-full bg-status-learned px-5 py-1.5 text-caption font-semibold text-black"
+          >
             {ui.partReady} ›
           </button>
         ) : undefined
@@ -2332,6 +2359,8 @@ function MyLayers({
                 <span>{stage.title}</span>
                 <span className="tabular-nums text-slate-400">{stage.summary} <span aria-hidden className="rtl:rotate-180">›</span></span>
               </button>
+              {/* Stagebank 전체 화면: 오늘 할 것 카드·단계 줄 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만), 줄과 띄움. */}
+              <NativeAdSlot feedId="my-full" slotKey="stagebank-today" spaced layerOnly />
             </>
           ),
         );
@@ -2359,7 +2388,7 @@ function MyLayers({
     return (
       <>
         {/* 오늘 할 것이 끝나면 퀴즈 칸이 맨 위(2026-10-31). */}
-        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} /> : null}
+        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
         {full ? (
           <FullScreenLayer>
             <LayerJump

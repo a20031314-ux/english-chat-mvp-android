@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { maybeShowInterstitial } from "@/lib/ads";
+import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
@@ -37,6 +38,7 @@ export function RecallPlayer({
   learned,
   known,
   onClose,
+  fromToday = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -45,6 +47,8 @@ export function RecallPlayer({
   learned: readonly string[];
   known: KnownMap;
   onClose: () => void;
+  /** 오늘 할 것에서 연 꺼내 쓰기 — 닫을 때 전면 광고는 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
+  fromToday?: boolean;
 }) {
   const { isPremium } = usePremium();
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
@@ -159,6 +163,12 @@ export function RecallPlayer({
   useEffect(() => () => hearing.saidAll(), []);
 
   const right = Object.values(results).filter((result) => result.good).length;
+  // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 했으면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
+  const close = () => {
+    if (fromToday) fireTodayEnd();
+    else if (done) void maybeShowInterstitial("scriptEnd");
+    onClose();
+  };
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
@@ -168,10 +178,7 @@ export function RecallPlayer({
         </span>
         <button
           type="button"
-          onClick={() => {
-            if (done) void maybeShowInterstitial("scriptEnd");
-            onClose();
-          }}
+          onClick={close}
           aria-label={ui.billingClose}
           className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10"
         >
@@ -249,9 +256,11 @@ export function RecallPlayer({
             <p className="text-note text-slate-200">
               {items.length ? `${right}/${items.length}` : ui.recallNone}
             </p>
-            <button type="button" onClick={onClose} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+            <button type="button" onClick={close} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
               {ui.billingClose}
             </button>
+            {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
+            {items.length ? <NativeAdSlot feedId="results" slotKey="recall-end" spaced /> : null}
           </li>
         ) : null}
       </ol>

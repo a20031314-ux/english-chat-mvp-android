@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { maybeShowInterstitial } from "@/lib/ads";
 import type { UICopy } from "@/lib/copy";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
 import { stopTts } from "@/lib/ttsPlayer";
@@ -12,6 +14,9 @@ import { stopTts } from "@/lib/ttsPlayer";
  * 결과는 문제마다 바로 onResult(부르는 쪽이 기록·다시 볼 것에 넣음). make()가 null이면 onEmpty를 그린다.
  */
 export type QuizBatch = { questions: QuizQuestion[]; keys: string[] };
+
+/** 광고 한 묶음 = 문제 10개(2026-11-01): 넘긴 뒤 다음 묶음으로 갈 때 전면 한 번(quizBreak), 아래 네이티브도 새것으로. */
+const AD_ROUND = 10;
 
 export function InlineQuiz({
   ui,
@@ -24,6 +29,7 @@ export function InlineQuiz({
   onParts,
   empty,
   explainLink = false,
+  adKey,
 }: {
   ui: UICopy;
   locale: string;
@@ -39,12 +45,20 @@ export function InlineQuiz({
   empty: React.ReactNode;
   /** 틀리면 "설명"으로 Stagebank 그 소재 수업(다시 보기 탭). */
   explainLink?: boolean;
+  /**
+   * Quizbank에서 이어 푸는 퀴즈(있으면): 문제 아래 네이티브(Quizbank 전체 화면에서만, 10문제마다 새 광고)와
+   * 10문제를 넘긴 뒤 묶음 경계의 전면(quizBreak). 오늘 할 것의 한 문제에는 없음(항목 사이 광고 없음).
+   */
+  adKey?: string;
 }) {
   const [batch, setBatch] = useState<QuizBatch | null>(null);
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState<Answer | null>(null);
   // 묶음마다 번호 — 다음 묶음 첫 문제가 같은 열쇠여도 고른 답이 남지 않게.
   const [serial, setSerial] = useState(0);
+  // 지난 쉼 뒤 답한 문제 수와 광고 묶음 번호(네이티브 자리 이름 — 10문제마다 새 광고).
+  const sinceBreak = useRef(0);
+  const [adRound, setAdRound] = useState(0);
   const makeRef = useRef(make);
   useEffect(() => {
     makeRef.current = make;
@@ -80,6 +94,12 @@ export function InlineQuiz({
       setIndex(index + 1);
       return;
     }
+    // 묶음 경계: 10문제를 넘겼으면 쉼 — 전면은 다음 묶음을 받는 이 순간에만(문제 도중·답 보기 중에는 없음, 3분 간격은 lib/ads.ts).
+    if (adKey && sinceBreak.current >= AD_ROUND) {
+      sinceBreak.current = 0;
+      setAdRound((n) => n + 1);
+      void maybeShowInterstitial("quizBreak");
+    }
     setBatch(makeRef.current());
     setIndex(0);
     setSerial((n) => n + 1);
@@ -96,6 +116,7 @@ export function InlineQuiz({
         onAnswer={(value) => {
           if (answered) return;
           setAnswered(value);
+          sinceBreak.current += 1;
           // 복합 문제는 소재(열쇠)마다 따로 기록(curriculum/multiQuiz.ts).
           if (value.parts?.length) {
             if (onParts) onParts(value.parts);
@@ -107,6 +128,8 @@ export function InlineQuiz({
         bankKey={batch.keys[index]}
         explainLink={explainLink}
       />
+      {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 10문제마다 새 광고. */}
+      {adKey ? <NativeAdSlot feedId="quiz-inline" slotKey={`${adKey}-${adRound}`} spaced layerOnly /> : null}
     </div>
   );
 }

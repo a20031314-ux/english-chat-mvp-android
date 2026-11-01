@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import type { UICopy } from "@/lib/copy";
 import { CHECK_ORIGINS, rateOf, STAGE_KEYS, summarize, type CheckItem, type CheckOrigin, type CheckResult } from "@/lib/curriculum/checkup";
@@ -31,6 +32,7 @@ export function CheckupPlayer({
   finishWith,
   heading,
   actions,
+  stageUp,
 }: {
   ui: UICopy;
   locale: string;
@@ -53,6 +55,8 @@ export function CheckupPlayer({
   /** 결과 맨 위 한 줄·아래 버튼(결과마다). */
   heading?: (result: CheckResult) => string | undefined;
   actions?: (result: CheckResult) => ReactNode;
+  /** 단계 시험을 통과해 단계가 올라가는 결과인지 — 그러면 닫을 때 전면 광고는 stageUp(2026-11-01). */
+  stageUp?: (result: CheckResult) => boolean;
 }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
@@ -60,7 +64,8 @@ export function CheckupPlayer({
   useEffect(() => () => stopTts(), []);
   const done = Boolean(result) || index >= items.length;
   const close = () => {
-    if (done && !shown) void maybeShowInterstitial("checkupEnd");
+    const climbed = Boolean(result && stageUp?.(result));
+    if (done && !shown) void maybeShowInterstitial(climbed ? "stageUp" : "checkupEnd");
     onClose();
   };
   const question = items[index]?.question;
@@ -107,6 +112,8 @@ export function CheckupPlayer({
         {done && result ? (
           <CheckupResult ui={ui} result={result} previous={previous} labelOf={labelOf} onClose={close} heading={heading?.(result)} actions={actions?.(result)} />
         ) : null}
+        {/* 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. */}
+        {done && result && !shown ? <NativeAdSlot feedId="results" slotKey="checkup-end" spaced /> : null}
       </div>
     </FullScreenLayer>
   );

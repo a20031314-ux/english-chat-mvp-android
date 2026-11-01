@@ -1,5 +1,6 @@
 "use client";
 
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { InviteRewardsCard } from "@/components/invite/InviteRewards";
 import { GroupTitle, groupIcon } from "./RoomGroups";
 import { teamCopy } from "@/lib/rooms/teamCopy";
@@ -139,6 +140,8 @@ export function PeopleTab({
             {/* AI 튜터는 로그인 없이도(AI 기능은 로그인 없이). */}
             <AiTutorPerson ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={t.message} />
             <AccountCard ui={ui} locale={locale} />
+            {/* 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. */}
+            <NativeAdSlot feedId="people-tab" slotKey="people-login" spaced />
           </div>
         )}
       </div>

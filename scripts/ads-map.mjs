@@ -34,9 +34,12 @@ const MOMENTS = {
   chatLeave: "AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때",
   roomLeave: "공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외",
   videoLeave: "영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때",
-  scriptEnd: "My 대본·문장구조를 끝까지 하고 닫을 때(중간에 닫으면 없음, 통화로 넘어갈 때도 없음 — 2026-10-29 무료 대본 판단 원가)",
-  quizEnd: "My 퀴즈를 끝까지 풀고 닫을 때",
-  checkupEnd: "My 이번 주 확인을 끝까지 풀고 결과를 닫을 때",
+  scriptEnd:
+    "My 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(✕·끝 화면 닫기, 중간에 닫으면 없음). 오늘 할 것에서 연 것은 항목 사이에 없고, 그날 오늘 할 것을 다 끝낸 순간 한 번(`lib/ads.ts` noteTodayFinished·fireTodayEnd, 2026-11-01)",
+  quizEnd: "My 퀴즈(묶음 퀴즈·단어 시험)를 끝까지 풀고 닫을 때 — 오늘 할 것에서 연 묶음은 오늘 할 것 끝에 한 번",
+  checkupEnd: "정기 시험(Quizbank 시험 탭)·단계 시험(통과 못 함)·단계 미리 확인을 끝까지 풀고 결과를 닫을 때",
+  quizBreak: "Quizbank 칸 안에서 이어 푸는 퀴즈(InlineQuiz)가 10문제를 넘긴 뒤 다음 묶음으로 넘어갈 때 — 문제 도중·답 보기 중에는 없음(2026-11-01)",
+  stageUp: "단계 시험을 통과해 단계가 올라갈 때(통과 화면을 닫거나 다음 단계로 넘어갈 때, 2026-11-01)",
 };
 
 /** 탭 id → 화면 이름(hub/STRUCTURE.md "안에서 쓰는 이름"). */
@@ -84,8 +87,9 @@ for (const file of walk(path.join(SRC, "components"))) {
   const text = fs.readFileSync(file, "utf8");
   const lines = text.split("\n");
   lines.forEach((line, index) => {
-    const slot = line.match(/<NativeAdSlot\s+feedId="([^"]+)"\s+slotKey="([^"]+)"/);
-    if (slot) native.push({ feed: slot[1], slot: slot[2], file, note: commentAbove(lines, index) });
+    // 자리 이름이 묶음·화면마다 바뀌면(slotKey={`…-${n}`}) 틀 그대로 적는다.
+    const slot = line.match(/<NativeAdSlot\s+feedId="([^"]+)"\s+slotKey=(?:"([^"]+)"|\{`([^`]+)`\})/);
+    if (slot) native.push({ feed: slot[1], slot: slot[2] ?? slot[3], file, note: commentAbove(lines, index) });
     for (const m of line.matchAll(/maybeShowInterstitial\(\s*(?:"([^"]+)"|([^,)]+))/g)) {
       const moments = m[1] ? [m[1]] : [...m[2].matchAll(/"([^"]+)"/g)].map((x) => x[1]);
       for (const moment of moments) interstitial.push({ moment, file });
@@ -129,12 +133,12 @@ for (const [moment, files] of [...byMoment].sort(([a], [b]) => a.localeCompare(b
 }
 out.push("", `모든 전면 광고는 서로 ${DEFAULT_ADS_SETTINGS.interstitialMinGapSeconds / 60}분(설정 \`interstitialMinGapSeconds\`) 안에 다시 뜨지 않고, 미리 받아 둔 광고가 있을 때만 뜬다.`, "");
 
-out.push("### 네이티브 광고 (목록 사이 앱 카드 모양)", "", "| 화면(피드) | 자리 | 설명 | 영역 · 파일 |", "|---|---|---|---|");
+out.push("### 네이티브 광고 (목록 사이·빈 공간, 앱 카드 모양)", "", "| 화면(피드) | 자리 | 설명 | 영역 · 파일 |", "|---|---|---|---|");
 for (const n of [...native].sort((a, b) => a.feed.localeCompare(b.feed) || a.slot.localeCompare(b.slot))) {
   out.push(`| \`${n.feed}\` | \`${n.slot}\` | ${esc(n.note) || "—"} | ${where(n.file)} · \`${rel(n.file).replace(/^src\/components\//, "")}\` |`);
 }
 const feeds = new Set(native.map((n) => n.feed));
-out.push("", `피드 ${feeds.size}개, 자리 ${native.length}개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭에서만 붙인다(\`NativeAdSlot\` \`active\`).`, "");
+out.push("", `피드 ${feeds.size}개, 자리 ${native.length}개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(\`NativeAdSlot\` \`active\`·층).`, "");
 
 out.push("### 배너 · 앱 오프닝 · 보상형", "");
 out.push(`- **배너**(하단 탭 바로 위): ${bannerTabs.map((t) => `${TAB_NAMES[t] ?? t} \`${t}\``).join(" · ")} 탭에서만 (\`AppHome.tsx\` \`BANNER_TABS\`). 시트가 열리거나 글을 쓰는 동안 숨김.`);

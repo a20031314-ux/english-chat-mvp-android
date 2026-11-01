@@ -6,7 +6,8 @@
  * 재료: 서버 logItems(/api/notebook — 지금 단계까지 모든 단계 최근 14일, notes/stageParts.ts LogItem) + 이 폰 퀴즈 수(curriculum/quizDays.ts).
  * 낱말·표현을 누르면 표현 자세히. 머리 아이콘(📈 실력 기록·📝 이번 주 확인)은 TodayPlan이 준다(head).
  */
-import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { Fragment, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
 import { clearQuizDay, dayValue, readQuizDays, weekOf, type QuizDays } from "@/lib/curriculum/quizDays";
@@ -180,6 +181,12 @@ export function Logbank({
     </span>
   );
 
+  // 네이티브 광고 자리(Logbank 전체 화면에서만): 세 번째 날 뒤, 날이 셋보다 적으면 목록 끝.
+  const adAfterDay = days.length >= 3 ? days[2]!.day : null;
+  const logAd = (
+    // Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움.
+    <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
+  );
   return (
     <div data-logbank className="flex flex-col gap-3">
       {head}
@@ -199,7 +206,8 @@ export function Logbank({
               {list.map((one) => {
                 const fixed = one.items.filter((item) => item.kind === "fixed");
                 return (
-                  <li key={one.day} data-log-day={one.day} className="border-t border-line pt-2">
+                  <Fragment key={one.day}>
+                  <li data-log-day={one.day} className="border-t border-line pt-2">
                     <div className="flex flex-wrap items-baseline gap-x-2">
                       <span className="text-caption font-semibold text-slate-200">{dateFormat.format(asDate(one.day))}</span>
                       {tally(counts(one.items), one.quiz)}
@@ -247,12 +255,15 @@ export function Logbank({
                       </ul>
                     ) : null}
                   </li>
+                  {one.day === adAfterDay ? <li>{logAd}</li> : null}
+                  </Fragment>
                 );
               })}
             </ol>
           </section>
         );
       })}
+      {adAfterDay ? null : logAd}
     </div>
   );
 }

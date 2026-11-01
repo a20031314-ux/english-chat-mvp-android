@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { maybeShowInterstitial } from "@/lib/ads";
+import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -52,10 +53,13 @@ export function FrameLesson({
   passed,
   onPassed,
   onClose,
+  fromToday = false,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
+  /** 오늘 할 것에서 연 수업 — 닫을 때 전면 광고는 항목 사이에 없고 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
+  fromToday?: boolean;
   /** 문장구조 하나 — 또는 subject(표현·문법 칸). */
   frame?: Frame;
   subject?: LessonSubject;
@@ -269,6 +273,12 @@ export function FrameLesson({
   const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
   // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름). 퀴즈·대화 단계에서 뜻이 없으면 표현 이름은 숨김(답이라서).
   const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : subject?.title || lesson?.title || "");
+  // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 한 수업이면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
+  const close = () => {
+    if (fromToday) fireTodayEnd();
+    else if (finished) void maybeShowInterstitial("scriptEnd");
+    onClose();
+  };
 
   return (
     <FullScreenLayer>
@@ -286,10 +296,7 @@ export function FrameLesson({
         </div>
         <button
           type="button"
-          onClick={() => {
-            if (finished) void maybeShowInterstitial("scriptEnd");
-            onClose();
-          }}
+          onClick={close}
           aria-label={ui.billingClose}
           className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10"
         >
@@ -443,6 +450,8 @@ export function FrameLesson({
                 }
               }}
             />
+            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김. */}
+            <NativeAdSlot feedId="quiz-inline" slotKey={`lesson-${itemId}`} spaced />
           </div>
         ) : null}
 
@@ -550,10 +559,12 @@ export function FrameLesson({
                   {ui.scriptRestart}
                 </button>
               ) : null}
-              <button type="button" onClick={onClose} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
+              <button type="button" onClick={close} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
                 {ui.billingClose}
               </button>
             </div>
+            {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
+            <NativeAdSlot feedId="results" slotKey={`lesson-end-${itemId}`} spaced />
           </div>
         ) : null}
       </div>

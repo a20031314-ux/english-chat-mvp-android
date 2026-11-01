@@ -6,29 +6,60 @@ import {
   attachNativeSlot,
   nativeAdsEnabled,
   nativeSlotFailed,
-  setNativeFeedActive,
+  subscribeAdLayers,
+  topAdLayer,
   watchNativeFailures,
 } from "@/lib/ads";
+import { useAdLayer } from "@/components/FullScreenLayer";
 import { adsAvailable } from "@/lib/platform";
 import { webAdsAvailable } from "@/lib/webAds";
 import { WebAdSlot } from "@/components/WebAdSlot";
 
 /**
- * 목록 사이 네이티브 광고 자리(무료·안드로이드만, `lib/ads.ts`). 광고는 앱 카드 모양으로 Google SDK가 그리고
+ * 네이티브 광고 자리(무료·안드로이드만, `lib/ads.ts`) — 목록 사이와 학습 화면의 빈 공간. 광고는 앱 카드 모양으로 Google SDK가 그리고
  * ("광고" 표시·AdChoices 포함), 이 div는 그 자리만 잡는다. 구독자·웹·iOS·광고 꺼짐이면 아무것도 그리지 않는다.
  * `active`: 이 화면이 지금 보이는지. 안 보이면 자리를 떼어(마지막 자리면 그 화면 광고를 치움) 숨은 탭의 광고가
  * 다른 화면 위에 뜨지 않고, 플러그인의 동시 화면 한도(2개)도 넘지 않는다. 다시 보이면 새 광고를 받는다.
+ * 그 밖에 저절로 떼는 때: 이 자리가 든 층(FullScreenLayer·BodyLayer, 바닥 화면 0) 위에 다른 층이 덮였을 때,
+ * 키보드가 올라왔을 때(입력칸 바로 아래로 붙지 않게).
+ * `spaced`: 누르는 버튼·입력칸과 한 줄 넘게 띄운다(빈 공간 자리, AdMob 잘못 누름 정책).
+ * `layerOnly`: 전체 화면 층 안에서만(My 칸처럼 같은 내용이 바닥 화면에도 그려질 때 — 바닥 화면은 배너가 있어 광고 하나).
  */
 const noSubscribe = () => () => undefined;
 
-export function NativeAdSlot(props: { feedId: string; slotKey: string; active?: boolean }) {
+type SlotProps = { feedId: string; slotKey: string; active?: boolean; spaced?: boolean; layerOnly?: boolean };
+
+export function NativeAdSlot(props: SlotProps) {
   // 웹은 같은 자리에 AdSense(WebAdSlot). 판정은 처음 한 번 — 웹/앱은 실행 중에 바뀌지 않는다.
   const web = useSyncExternalStore(noSubscribe, webAdsAvailable, () => false);
-  if (web) return <WebAdSlot active={props.active} />;
-  return <AppAdSlot {...props} />;
+  const layer = useAdLayer();
+  const top = useSyncExternalStore(subscribeAdLayers, topAdLayer, () => 0);
+  const keyboard = useKeyboardOpen();
+  if (props.layerOnly && layer === 0) return null;
+  const visible = (props.active ?? true) && top === layer && !keyboard;
+  if (web) return <WebAdSlot active={visible} spaced={props.spaced} />;
+  return <AppAdSlot feedId={props.feedId} slotKey={props.slotKey} active={visible} layer={layer} spaced={props.spaced} />;
 }
 
-function AppAdSlot({ feedId, slotKey, active = true }: { feedId: string; slotKey: string; active?: boolean }) {
+/** 키보드가 올라왔는지(보이는 화면 높이가 가장 컸을 때보다 많이 줄면). */
+function useKeyboardOpen(): boolean {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const view = typeof window === "undefined" ? null : window.visualViewport;
+    if (!view) return;
+    let tallest = Math.max(view.height, window.innerHeight);
+    const check = () => {
+      tallest = Math.max(tallest, view.height);
+      setOpen(view.height < tallest * 0.8);
+    };
+    check();
+    view.addEventListener("resize", check);
+    return () => view.removeEventListener("resize", check);
+  }, []);
+  return open;
+}
+
+function AppAdSlot({ feedId, slotKey, active, layer, spaced = false }: { feedId: string; slotKey: string; active: boolean; layer: number; spaced?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const [enabled, setEnabled] = useState(false);
   const failed = useSyncExternalStore(
@@ -51,13 +82,9 @@ function AppAdSlot({ feedId, slotKey, active = true }: { feedId: string; slotKey
   useEffect(() => {
     const element = ref.current;
     if (!enabled || failed || !active || !element) return;
-    return attachNativeSlot(feedId, slotKey, element);
-  }, [enabled, failed, active, feedId, slotKey]);
-
-  useEffect(() => {
-    setNativeFeedActive(feedId, active);
-  }, [feedId, active, enabled]);
+    return attachNativeSlot(feedId, slotKey, element, layer);
+  }, [enabled, failed, active, feedId, slotKey, layer]);
 
   if (!enabled || failed) return null;
-  return <div ref={ref} aria-hidden className="w-full" style={{ height: NATIVE_SLOT_HEIGHT }} />;
+  return <div ref={ref} aria-hidden className={spaced ? "my-6 w-full" : "w-full"} style={{ height: NATIVE_SLOT_HEIGHT }} />;
 }

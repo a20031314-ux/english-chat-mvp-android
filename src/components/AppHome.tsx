@@ -452,6 +452,7 @@ function AppHomeInner({
               >
                 <ChatWindow
                   tabMode
+                  visible={shownTab === "chat"}
                   locale={locale}
                   back={insideTalk ? { label: ui.homeTabTalk, unread: messagesUnread, onBack: () => openTab("talk") } : null}
                   onCall={callOn ? () => openTab("roleplay") : null}

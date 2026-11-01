@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { maybeShowInterstitial } from "@/lib/ads";
+import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/speech/Attempt";
 import { sayLine } from "@/lib/speech/sayLine";
@@ -59,6 +60,7 @@ export function QuizPlayer({
   unit,
   bundleKeys,
   onBundle,
+  fromToday = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -92,6 +94,8 @@ export function QuizPlayer({
   /** 묶음 퀴즈(curriculum/quiz.ts bundleQuiz): unit 문제마다의 열쇠 — 끝나면 onBundle로 열쇠마다 결과. */
   bundleKeys?: readonly string[];
   onBundle?: (results: { key: string; correct: boolean; skipped: boolean }[]) => void;
+  /** 오늘 할 것에서 연 묶음(대본 하나 문제) — 닫을 때 전면 광고는 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
+  fromToday?: boolean;
 }) {
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
@@ -108,7 +112,8 @@ export function QuizPlayer({
   const done = index >= questions.length;
   // 끝까지 푼 퀴즈를 닫을 때만 전면 광고(무료·안드로이드, 간격은 lib/ads.ts).
   const closeQuiz = () => {
-    if (done && questions.length) void maybeShowInterstitial("quizEnd");
+    if (fromToday) fireTodayEnd();
+    else if (done && questions.length) void maybeShowInterstitial("quizEnd");
     onClose();
   };
   const correct = Object.values(answers).filter((answer) => answer.correct).length;
@@ -193,6 +198,8 @@ export function QuizPlayer({
                 {ui.billingClose}
               </button>
             </div>
+            {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
+            <NativeAdSlot feedId="results" slotKey={`quiz-end-${seed}`} spaced />
           </div>
         ) : null}
       </div>

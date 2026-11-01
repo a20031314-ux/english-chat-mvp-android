@@ -27,6 +27,7 @@ import { buildQuiz, buildUnit, bundleQuiz, orderTiles, QUIZ_SIZE, registerQuizSo
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
@@ -173,7 +174,8 @@ export function TodayPlan({
   redo?: readonly { frame: string; card: QuizCard }[];
   /** 서버가 고른 오늘의 대본(내 기록에 맞춰). */
   recommended: string | null;
-  onOpen: (stage: number, id: string) => void;
+  /** from "today" = 오늘 할 것의 지금 항목을 연 것(닫을 때 전면 광고는 그날 끝에 한 번, lib/ads.ts fireTodayEnd). */
+  onOpen: (stage: number, id: string, from?: "today") => void;
   /** 문법 칸 이름(단계·번호 → 앱 언어, NotebookSection의 노트 칸). */
   grammarName: (stage: number, index: number) => string;
   /** 지금 단계에서 가장 모자란 갈래(stageParts weakest) — 계속 공부가 여기부터. */
@@ -877,7 +879,7 @@ export function TodayPlan({
   // 나머지는 점으로만. 퀴즈면 칸 안에서 바로 한 문제, 상황·문장구조·꺼내 쓰기면 첫 줄이 보이는 카드 하나(누르면 시작).
   const currentAt = items.findIndex((item) => !doneOf(item));
   const current = currentAt >= 0 ? items[currentAt]! : null;
-  const openItem = (item: PlanItem) => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id));
+  const openItem = (item: PlanItem) => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id, "today"));
   const todayMake = (): QuizBatch | null => {
     if (!current || current.kind !== "quiz") return null;
     const served = todayServed.current;
@@ -1035,7 +1037,7 @@ export function TodayPlan({
   );
   const overlays = (
     <>
-      {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={recallLearned} known={known} onClose={() => setRecalling(false)} /> : null}
+      {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={recallLearned} known={known} fromToday onClose={() => setRecalling(false)} /> : null}
       {matching && vocabPairs.length >= 3 ? (
         <WordMatch
           ui={ui}
@@ -1061,6 +1063,7 @@ export function TodayPlan({
           title={`${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}`}
           finishWith={(answers) => stageTestResult(stageTestItems, answers, stage)}
           heading={(result) => (result.passed ? ui.stageTestPassed.replace("{n}", String(result.stage)) : undefined)}
+          stageUp={(result) => Boolean(result.passed)}
           labelOf={(key) => keyLabel(language, key, grammarName)}
           actions={(result) => (result.passed ? undefined : resultActions)}
           onFinish={finishCheckup}
@@ -1159,6 +1162,7 @@ export function TodayPlan({
           title={labelOf(unitItem)}
           seed={day}
           unit={unitQuestions}
+          fromToday
           onDone={(passedUnit) => {
             markPracticed(language, unitItem.id);
             if (!passedUnit) return;
@@ -1513,6 +1517,8 @@ export function TodayPlan({
           ))}
         </div>
       ) : null}
+      {/* 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. */}
+      {examDue(pool) ? null : <NativeAdSlot feedId="my-full" slotKey="exam-wait" spaced layerOnly />}
     </div>
   );
   const keepBody = (
@@ -1579,6 +1585,7 @@ export function TodayPlan({
         explainLink={wrongTab}
         resetKey={keepResetKey}
         make={keepMake}
+        adKey={wrongTab ? "review" : "keep"}
         retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}`}
         onResult={recordOne}
         onParts={(parts) => {

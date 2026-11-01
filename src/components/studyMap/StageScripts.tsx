@@ -5,7 +5,7 @@ import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { noteDayResult } from "@/lib/curriculum/dayLog";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
-import { maybeShowInterstitial } from "@/lib/ads";
+import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
@@ -162,8 +162,8 @@ export function StageScripts({
   onPassed?: (id: string) => void;
   /** 그 단계 핵심 표현의 장부 상태(/api/notebook parts[].expressions) — 대본마다 붙은 표현 칩의 점. */
   expressionStates?: Record<string, LedgerState | null>;
-  /** "다음 단계까지: 표현" 연습 → 이 대본을 연다(at = 누른 때, 같은 대본을 다시 열 수 있게). */
-  openFor?: { id: string; at: number } | null;
+  /** "다음 단계까지: 표현" 연습 → 이 대본을 연다(at = 누른 때, 같은 대본을 다시 열 수 있게). today = 오늘 할 것에서 연 것(전면 광고는 그날 끝에 한 번). */
+  openFor?: { id: string; at: number; today?: boolean } | null;
   /** 이 단계의 오늘의 대본(맨 위 카드). */
   recommended?: ScriptRecommend | null;
   /** 틀린 틀 다시 연습(/api/notebook redo, 지금 단계에서만 넘김). */
@@ -179,7 +179,9 @@ export function StageScripts({
   // 같은 대본이면 같은 객체(재생 effect가 다시 돌지 않게).
   const shown = useMemo(() => (open ? personalize(open, language, nickname) : null), [open, language, nickname]);
   const [handled, setHandled] = useState(0);
-  const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
+  const [frameFor, setFrameFor] = useState<{ id: string; at: number; today?: boolean } | null>(null);
+  // 지금 연 대본이 오늘 할 것에서 온 것인지(닫을 때 전면 광고를 항목 사이에 띄우지 않게).
+  const [openToday, setOpenToday] = useState(false);
   const [method, setMethod] = useState<Method>("frame");
   const [recalling, setRecalling] = useState(false);
   /** 표현·문법 칸 수업(2026-11-01 설계 — 설명은 Stagebank 한 곳). */
@@ -193,6 +195,7 @@ export function StageScripts({
     const banked = scriptById(language, openFor.id);
     const target = scripts.find((script) => script.id === openFor.id) ?? (banked?.bank ? banked : undefined);
     setOpen(target ?? null);
+    setOpenToday(Boolean(openFor.today));
     // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
     setFrameFor(target ? null : openFor);
     // 연 것이 있는 방식 칩으로 옮겨 둔다(닫은 뒤 목록이 그 자리에).
@@ -362,7 +365,11 @@ export function StageScripts({
           learnerName={open.name ? usableName(nickname) : null}
           passed={passed.includes(open.id)}
           onPassed={onPassed}
-          onClose={() => setOpen(null)}
+          fromToday={openToday}
+          onClose={() => {
+            setOpen(null);
+            setOpenToday(false);
+          }}
         />
       ) : null}
     </section>
@@ -378,10 +385,13 @@ function ScriptPlayer({
   onPassed,
   onClose,
   learnerName = null,
+  fromToday = false,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
+  /** 오늘 할 것에서 연 대본 — 닫을 때 전면 광고는 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
+  fromToday?: boolean;
   script: StageScript;
   /** 대본에 넣은 사용자 이름 — 받아쓰기가 이름을 다르게 적어도 그 낱말은 셈에서 뺀다. */
   learnerName?: string | null;
@@ -639,8 +649,10 @@ function ScriptPlayer({
     setIndex(toRedo[0]!);
   };
   // 끝까지 한 대본을 닫을 때만 전면 광고(무료·안드로이드, lib/ads.ts가 간격·요금을 본다 — 2026-10-29 사용자 "무료 사용자 대상 광고").
+  // 오늘 할 것에서 연 대본은 항목 사이에 띄우지 않고, 그날 오늘 할 것을 다 끝낸 뒤 한 번(2026-11-01).
   const closeScript = () => {
-    if (done) void maybeShowInterstitial("scriptEnd");
+    if (fromToday) fireTodayEnd();
+    else if (done) void maybeShowInterstitial("scriptEnd");
     onClose();
   };
   const restart = () => {

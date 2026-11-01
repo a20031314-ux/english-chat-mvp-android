@@ -157,9 +157,66 @@
     "value": 0
   },
   "my": {
-    "_설명": "My 끝 전면 광고 어림(2026-11-01, 변경 감시 광고 검토 hub/ads-plan.md): 수업·대본 하나 = 내 줄 linesPerLesson개, 끝까지 하고 닫을 때 scriptEnd 한 번(지금 코드는 오늘 할 것 항목 사이에도 뜸), 쓰는 날 퀴즈 끝 quizEndsPerDay번, 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
-    "linesPerLesson": 8,
+    "_설명": "My 끝 전면 광고 어림(2026-11-01 광고 자리 넣음 — hub/ADS.md·hub/ads-plan.json econ 값): 오늘 할 것 항목 사이에는 없고 그날 다 끝낸 순간 한 번(todayEndsPerDay — ads-plan '옮김' 안 값 1), 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(stageScriptEndsPerDay, ✕·끝 화면 닫기 — 닷새에 한 번 어림 0.2), 쓰는 날 퀴즈 끝 quizEndsPerDay번, Quizbank 10문제 묶음 경계 quizBreaksPerDay번(0.8), 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번, 단계 올라감 한 달 stageUpsPerMonth번(0.5). linesPerLesson은 예전 계산(수업마다 scriptEnd)용 — 0이면 안 셈. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
+    "linesPerLesson": 0,
+    "todayEndsPerDay": 1,
+    "stageScriptEndsPerDay": 0.2,
     "quizEndsPerDay": 0.3,
-    "checkupEndsPerMonth": 2
-  }
+    "quizBreaksPerDay": 0.8,
+    "checkupEndsPerMonth": 2,
+    "stageUpsPerMonth": 0.5
+  },
+  "extraAds": [
+    {
+      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): 수업 퀴즈 단계 아래, AI 채팅 잠김 화면."
+    },
+    {
+      "format": "native",
+      "perActiveDay": 2,
+      "when": "my",
+      "what": "Quizbank 문제 아래(quiz-inline, 10문제마다 새 광고)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 1.5,
+      "when": "my",
+      "what": "결과 화면 점수 아래(results)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 1.5,
+      "when": "my",
+      "what": "Stagebank 전체 화면 오늘 할 것 아래(my-full)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.3,
+      "when": "my",
+      "what": "Quizbank 시험 탭 대기 줄 아래(my-full)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.4,
+      "when": "my",
+      "what": "Logbank 세 번째 날 뒤·짧으면 목록 끝(my-full)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.2,
+      "when": "any",
+      "what": "Room 로비 로그인 카드 아래(room-lobby)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.3,
+      "when": "any",
+      "what": "사람 탭 로그인 카드 아래(people-tab)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.5,
+      "when": "room",
+      "what": "Room 로비 다섯 번째 방 뒤(room-lobby)"
+    }
+  ]
 }

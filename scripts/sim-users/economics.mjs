@@ -39,9 +39,10 @@ const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "
  * 이 계산이 세는 전면 광고 순간(hub/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
  * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
  * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
- * My 끝 순간(2026-11-01, 변경 감시 광고 안 1·2): 대본·수업을 끝까지 하고 닫음(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) — economics.json "my".
+ * My 끝 순간(2026-11-01 광고 자리 넣음): 오늘 할 것을 다 끝냄·단계 화면에서 연 수업 끝(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) ·
+ * Quizbank 10문제 묶음 경계(quizBreak) · 단계 올라감(stageUp) — economics.json "my". 빈 공간 네이티브는 economics.json "extraAds".
  */
-export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd"];
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd", "quizBreak", "stageUp"];
 
 export const PLANS = [
   // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
@@ -122,16 +123,29 @@ export function simulate(type, terms, o) {
     // packDaysPerWeek 0(대본 앱 무료·대본 플랜)은 팩 없음, null은 매일 1번 + 추가.
     const packCap = typeof terms.packDaysPerWeek === "number" ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
     n.packs += Math.min(type.packs, packCap);
-    // My 대본 내 줄(모든 요금, 하루 한도 dailyScriptLines) + 끝 순간 전면(무료만): 수업 하나 = 내 줄 linesPerLesson개, 끝까지 하고 닫을 때 한 번.
+    // My 대본 내 줄(모든 요금, 하루 한도 dailyScriptLines) + 끝 순간 전면(무료만, economics.json "my"):
+    // 오늘 할 것 끝 한 번 · 단계 화면에서 연 수업 끝 · 퀴즈 끝 · Quizbank 묶음 경계 · 시험 끝·단계 올라감(한 달 몇 번을 쓰는 날로 나눔).
+    // linesPerLesson > 0이면 예전 계산(수업마다 scriptEnd)도 더한다(민감도용).
     const lines = Math.min(type.scriptLines ?? 0, terms.dailyScriptLines ?? 0);
     n.scriptLines += lines;
     if (ads && lines > 0) {
       const my = o.assume.my;
-      n.interstitial += lines / my.linesPerLesson + my.quizEndsPerDay + my.checkupEndsPerMonth / 30 * (30 / Math.max(1, type.days));
+      n.interstitial +=
+        (my.linesPerLesson > 0 ? lines / my.linesPerLesson : 0) +
+        (my.todayEndsPerDay ?? 0) +
+        (my.stageScriptEndsPerDay ?? 0) +
+        my.quizEndsPerDay +
+        (my.quizBreaksPerDay ?? 0) +
+        // 한 달 n번 → 쓰는 날 하루 n / days번
+        (my.checkupEndsPerMonth + (my.stageUpsPerMonth ?? 0)) / Math.max(1, type.days);
       lastInter = d * 1440 + 9 * 60; // 그날 첫 세션 전에 My를 한 것으로 — 채팅 나갈 때 전면과 간격
     }
     // 광고 안(새 자리·옮김)으로 더하거나 빼는 노출 — 무료만, 없으면 0.
-    if (ads) for (const extra of o.assume.extraAds ?? []) if ((extra.when !== "my" || lines > 0) && (extra.when !== "room" || type.roomMinutes > 0)) n[extra.format] = Math.max(0, n[extra.format] + extra.perActiveDay);
+    // 설명 줄(format 없음)은 건너뛰고, 네이티브를 끈 설정이면 네이티브 자리도 뺀다.
+    if (ads)
+      for (const extra of o.assume.extraAds ?? [])
+        if (extra.format && (extra.format !== "native" || o.ads.nativeEnabled) && (extra.when !== "my" || lines > 0) && (extra.when !== "room" || type.roomMinutes > 0))
+          n[extra.format] = Math.max(0, n[extra.format] + extra.perActiveDay);
     // 방 자막은 하루 줄 수 한도(한 줄 ≈ 6초 → 분당 10줄).
     n.roomMinutes += terms.dailyCaptionLines ? Math.min(type.roomMinutes, terms.dailyCaptionLines / 10) : type.roomMinutes;
     // 누를 때만 도는 AI 도움은 하루 한도(plans.ts dailyAiHelp)까지 — 넘는 만큼은 같은 비율로 줄인다.
@@ -332,8 +346,10 @@ export function render(o) {
     ["네이티브 끔", { ads: { ...o.ads, nativeEnabled: false } }],
     ["방 퇴장 전면 끔", { ads: { ...o.ads, roomLeaveMinutes: 0 } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
-    // My 끝 전면을 오늘 할 것 사이가 아니라 하루 한 번으로(hub/ads-plan.md 안 3) — 수업마다 대신 쓰는 날 1번.
-    ["대본 끝 전면을 하루 한 번으로", { assume: { ...o.assume, my: { ...o.assume.my, linesPerLesson: 1e9, quizEndsPerDay: o.assume.my.quizEndsPerDay + 1 } } }],
+    // 오늘 할 것을 다 끝내는 날이 열흘 중 여섯 날뿐이면(오늘 할 것 끝 전면 1 → 0.6, hub/ads-plan.json 근거의 어림).
+    ["오늘 할 것 끝 전면이 쓰는 날 60%", { assume: { ...o.assume, my: { ...o.assume.my, todayEndsPerDay: (o.assume.my.todayEndsPerDay ?? 0) * 0.6 } } }],
+    // 2026-11-01 넣은 빈 공간 네이티브(economics.json extraAds)를 빼면.
+    ["빈 공간 네이티브 없음", { assume: { ...o.assume, extraAds: [] } }],
     ["무료가 대본을 두 배로 씀", { assume: { ...o.assume, types: Object.fromEntries(Object.entries(o.assume.types).map(([k, t]) => [k, typeof t === "object" ? { ...t, scriptLines: (t.scriptLines ?? 0) * 2 } : t])) } }],
   ];
   for (const [name, change] of variants) {
