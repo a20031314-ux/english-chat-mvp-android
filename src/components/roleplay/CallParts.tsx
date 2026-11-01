@@ -73,8 +73,10 @@ export function CallStage({
         </SpeakingRing>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
+          {partner.flagCountry ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
+          ) : null}
         </p>
         <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start" aria-live="polite">
           {speaker === "thinking" ? (
@@ -243,8 +245,10 @@ export function CallSummary({
       <div className="min-w-0 flex-1">
         <p className="flex items-center gap-1.5 text-body font-semibold text-ink">
           <bdi className="truncate">{partner.givenName}</bdi>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+          {partner.flagCountry ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+          ) : null}
         </p>
         <p className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
           <span>⏱ {time}</span>

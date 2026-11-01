@@ -1701,8 +1701,10 @@ export function ChatWindow({
             </button>
           ) : null}
           <span className="flex min-w-0 flex-1 items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 shrink-0 rounded-[2px] object-cover" />
+            {partner.flagCountry ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 shrink-0 rounded-[2px] object-cover" />
+            ) : null}
             <span className="truncate text-body font-semibold text-ink">{partner.givenName}</span>
           </span>
           {onCall ? (

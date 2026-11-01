@@ -61,8 +61,10 @@ function TutorName({ targetLanguage, className = "" }: { targetLanguage: string;
   return (
     <span className={`flex min-w-0 items-center gap-1.5 ${className}`}>
       <bdi className="truncate">{partner.givenName}</bdi>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+      {partner.flagCountry ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+      ) : null}
     </span>
   );
 }

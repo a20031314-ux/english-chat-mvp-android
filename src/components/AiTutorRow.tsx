@@ -32,8 +32,10 @@ export function AiTutorRow({
         <span className="min-w-0">
           <span className="flex items-center gap-1.5 text-body font-semibold text-ink">
             <bdi className="truncate">{partner.givenName}</bdi>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+            {partner.flagCountry ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+            ) : null}
           </span>
           <span className="block truncate text-meta text-info">{ui.talkAiTutor}</span>
         </span>

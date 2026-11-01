@@ -95,3 +95,16 @@ test("a woman tutor greets in the woman's form where the language marks it (ru, 
   assert.match(hello("ar", "f")!.text, /سعيدة/);
   assert.ok(hello("ar", "m")!.audioPath, "Omar keeps the recording");
 });
+
+test("the Arabic tutor is from no one country — no country in the brief, no flag by the name", () => {
+  // 사용자 2026-11-01 "아랍어는 출신을 특정 나라로 두지 않는 걸로" — 사우디 사람이면 걸프 방언으로 끌렸다.
+  for (const gender of ["f", "m"] as const) {
+    const arabic = chatPartnerForLanguage("ar", gender);
+    assert.equal(arabic.countryEn, "");
+    assert.equal(arabic.flagCountry, "");
+    const brief = conversationPartnerIdentity("ar", gender);
+    assert.doesNotMatch(brief, / from /);
+    assert.match(brief, /Modern Standard Arabic/);
+  }
+  assert.match(conversationPartnerIdentity("ja", "f"), / from Japan/);
+});

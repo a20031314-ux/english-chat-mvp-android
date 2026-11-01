@@ -8,7 +8,9 @@ export type TutorGender = "f" | "m";
 
 export type ChatPartner = {
   givenName: string;
+  /** 출신 나라(영어 이름). 빈 문자열 = 특정 나라로 두지 않음(아랍어, 사용자 2026-11-01). */
   countryEn: string;
+  /** 이름 옆 국기(public/flags). 빈 문자열이면 국기를 안 띄움 — 출신 나라가 없는 튜터. */
   flagCountry: string;
   languageCode: LearningLanguageCode;
   gender: TutorGender;
@@ -23,6 +25,7 @@ type Person = { givenName: string; voice: string };
 /**
  * 튜터는 언어마다 여자·남자 한 사람씩(사용자 2026-11-01 "음성을 언어별로 남, 녀" → A: 사용자가 고름).
  * `default`는 고르기 전의 사람(사용자 2026-11-01 "그림 속 사람을 기본 튜터로" — 처음 받은 그림이 언어마다 한 사람이라 그 사람).
+ * 아랍어 튜터는 특정 나라 출신으로 두지 않는다(countryEn "", 이름 옆 국기 없음) — 나라를 주면 그 나라 방언으로 끌려 표준어 통일이 깨짐(사용자 2026-11-01).
  * 프로필 그림은 28명 모두 `public/tutors/<언어>-<f|m>.webp`(사용자 2026-11-01 "성별별로 만들었어").
  * `legacy`는 예전 기본(Alex·Minjun·Yuki…) — 튜터를 고르는 칸이 없는 옛 앱(`tutor`·`tutorGender`를 안 보냄)에 서버가 쓴다(`serverTutorGender`). 옛 앱 화면의 이름과 말투·목소리가 맞게.
  * 목소리는 Realtime이 받는 것으로(server/realtimeSpeech.ts — nova·onyx·fable은 가까운 목소리로 바뀜).
@@ -39,7 +42,7 @@ const PARTNERS: Record<LearningLanguageCode, { countryEn: string; default: Tutor
   it: { countryEn: "Italy", default: "m", legacy: "m", f: { givenName: "Giulia", voice: "coral" }, m: { givenName: "Luca", voice: "cedar" } },
   pt: { countryEn: "Portugal", default: "f", legacy: "f", f: { givenName: "Maria", voice: "alloy" }, m: { givenName: "João", voice: "echo" } },
   ru: { countryEn: "Russia", default: "m", legacy: "f", f: { givenName: "Anya", voice: "sage" }, m: { givenName: "Dima", voice: "ash" } },
-  ar: { countryEn: "Saudi Arabia", default: "f", legacy: "m", f: { givenName: "Layla", voice: "shimmer" }, m: { givenName: "Omar", voice: "onyx" } },
+  ar: { countryEn: "", default: "f", legacy: "m", f: { givenName: "Layla", voice: "shimmer" }, m: { givenName: "Omar", voice: "onyx" } },
   id: { countryEn: "Indonesia", default: "m", legacy: "m", f: { givenName: "Putri", voice: "coral" }, m: { givenName: "Raka", voice: "echo" } },
   vi: { countryEn: "Vietnam", default: "f", legacy: "f", f: { givenName: "Linh", voice: "marin" }, m: { givenName: "Minh", voice: "verse" } },
   th: { countryEn: "Thailand", default: "m", legacy: "m", f: { givenName: "Ploy", voice: "coral" }, m: { givenName: "Niran", voice: "cedar" } },
@@ -83,7 +86,7 @@ export function chatPartnerForLanguage(
   return {
     givenName: profile[who].givenName,
     countryEn: profile.countryEn,
-    flagCountry: lang.flagCountry,
+    flagCountry: profile.countryEn ? lang.flagCountry : "",
     languageCode: lang.code,
     gender: who,
     voice: profile[who].voice,
@@ -99,5 +102,5 @@ export function conversationPartnerIdentity(
   const partner = chatPartnerForLanguage(targetLanguage, gender);
   const language = learningLanguageName(partner.languageCode);
   // 성별을 말해 둔다 — 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt 등)에서 이름·목소리와 맞게.
-  return `You are ${partner.givenName}, a native ${language} speaker from ${partner.countryEn}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " With learners you write only Modern Standard Arabic (الفصحى), never your local dialect." : ""}`;
+  return `You are ${partner.givenName}, a native ${language} speaker${partner.countryEn ? ` from ${partner.countryEn}` : ""}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " You speak and write Modern Standard Arabic (الفصحى), not any one country's dialect." : ""}`;
 }
