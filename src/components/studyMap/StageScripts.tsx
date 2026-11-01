@@ -20,8 +20,6 @@ import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { allFramesFor, framesFor, framesOfScript, type Frame } from "@/lib/curriculum/frames";
 import { frameUsed } from "@/lib/curriculum/scriptBank";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
-import { Attempt } from "@/components/speech/Attempt";
-import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
@@ -36,7 +34,6 @@ import {
   glossFor,
   isSituationScript,
   passOutcome,
-  hintOf,
   modesFor,
   personalize,
   runPasses,
@@ -52,7 +49,7 @@ import {
 } from "@/lib/curriculum/stageScripts";
 import type { LedgerState } from "@/lib/learner/ledger";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
-import { compareToTarget, shadowPasses, type Practice } from "@/lib/roleplay/practice";
+import { typedMatches, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { weakKeysOfScript } from "@/lib/curriculum/quiz";
@@ -61,8 +58,8 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 
 /**
  * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
- * 채팅처럼 상대 줄은 소리로 나오고 내 줄에서 멈춘다. 방식은 따라 말하기 하나(2026-11-01 사용자 "채팅 > 따라 말하기로, 정해진 답과 단순 대조"):
- * 내 줄을 먼저 들려주고 🎤 → 낱말 대조만(roleplay/practice.ts shadowPasses, 모델 없음 — 서버는 한도·기록만). 내 줄을 모두 맞히면
+ * 채팅처럼 상대 줄은 소리로 나오고 내 줄에서 멈춘다. 내 줄은 뜻을 보고 아래 입력칸에 직접 써서 보냄(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로 학습"):
+ * 대본 줄과 낱말 대조만(roleplay/practice.ts typedMatches — 마이크·모델·서버 없음, 원가 0), 맞히면 그 줄을 들려준다. 내 줄을 모두 맞히면
  * /api/curriculum/scripts에 통과를 남기고 그 대본의 핵심 표현이 장부에 오른다(표현 갈래). 다음 단계 = 네 갈래 70% + 그 단계 상황 대본 모두 통과.
  * 상황 대본에 안 나온 핵심 표현은 짧은 표현 대본(situation 없음)으로 — 목록 아래 따로.
  * 3~4단계 상대 줄은 판마다 바뀐다(alt). 5단계는 goal과 "통화로 해 보기"(그 상황으로 AI 통화).
@@ -259,7 +256,7 @@ export function StageScripts({
             {ui.knownTag}
           </span>
         ) : (
-          <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} 🎤</span>
+          <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} ✎</span>
         )}
         <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
       </button>
@@ -384,8 +381,10 @@ function ScriptPlayer({
   onClose: () => void;
 }) {
   const { isPremium } = usePremium();
-  // 따라 말하기 하나(2026-11-01) — 대본 은행 장면도 같다(예전 은행은 뜻만 보고 말하기).
+  // 채팅으로 내 줄 쓰기 하나(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로") — 대본 은행 장면도 같다.
   const mode: ScriptMode = modesFor(script.stage)[0]!;
+  // 입력칸(채팅처럼 화면 아래).
+  const [draft, setDraft] = useState("");
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<number, Result>>({});
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
@@ -393,18 +392,14 @@ function ScriptPlayer({
   const [misses, setMisses] = useState<Record<number, number>>({});
   // 3~4단계 상대 줄: 판마다 고른 말(원래 줄 또는 alt).
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
-  const [listening, setListening] = useState(false);
-  const hearing = useHearing();
   const [justPassed, setJustPassed] = useState(false);
   // 끝까지 했는데 통과 못 한 줄만 다시(2026-10-29 사용자 "무슨 기준으로 완료되는지") — 그 줄들만 차례로, 상대 줄은 건너뜀.
   const [retrying, setRetrying] = useState(false);
   // 이어서 하기(lib/curriculum/resume.ts): 오늘 중간까지 한 것이 있으면 먼저 "이어서 하기 / 처음부터".
   const resumeId = resumeKey("script", language, script.id);
   const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
-  // 지난번에 🎤로 틀린 줄(이 폰, curriculum/scriptMisses.ts) — 열 때 한 번 읽어 그 줄에 ◐.
+  // 지난번에 틀린 줄(이 폰, curriculum/scriptMisses.ts) — 열 때 한 번 읽어 그 줄에 ◐.
   const [missed] = useState<Set<number>>(() => missedLines(language, script.id));
-  // 오늘 대본 말하기 한도(plans.ts dailyScriptLines)에 닿으면 🎤를 닫는다.
-  const [limited, setLimited] = useState(false);
   // 통과 기준은 말하기(고르기·맞추기 방식이 없어져 고르는 칩도 뺌, 2026-11-01).
   const passRule = "speak" as const;
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
@@ -429,7 +424,7 @@ function ScriptPlayer({
     return line.who === "them" ? variantOf(line, picks[i] ?? 0).text : line.text;
   };
 
-  // 상대 줄은 들려주고 다음으로, 내 줄은 멈춘다(따라 말하기면 내 줄도 먼저 들려준다).
+  // 상대 줄은 들려주고 다음으로, 내 줄은 멈춘다(내 줄은 쓰고 맞힌 뒤에 들려준다).
   useEffect(() => {
     if (offer) return;
     const line = script.lines[index];
@@ -439,8 +434,6 @@ function ScriptPlayer({
       void playTts(textAt(index), tag, scriptVoice("them", textAt(index), learnerName)).finally(() => {
         if (run.current === token) setIndex((current) => (current === index ? current + 1 : current));
       });
-    } else if (mode === "shadow") {
-      void playTts(line.text, tag, scriptVoice("me", line.text, learnerName));
     }
     bottom.current?.scrollIntoView({ block: "end", behavior: "smooth" });
     // textAt은 picks로 정해진다 — picks가 바뀌는 건 처음부터 다시 할 때뿐.
@@ -512,55 +505,24 @@ function ScriptPlayer({
       .catch(() => undefined);
   }, [passes, outcome, language, script.id, isPremium, onPassed]);
 
-  const say = async () => {
+  // 내 줄을 써서 보냄 → 대본 줄과 낱말 대조(typedMatches, 모델·서버 없음 — 원가 0). 맞히면 그 줄을 들려준다.
+  const submit = () => {
     const line = script.lines[index];
-    if (!line || listening) return;
+    const typed = draft.trim();
+    if (!line || line.who !== "me" || !typed) return;
     stopTts();
-    setListening(true);
-    const { heard, practice, unclear, pauses } = await sayLine(line.text, {
-      targetLanguage: language as LearningLanguageCode,
-      nativeLanguage: locale as LearningLanguageCode,
-      isPremium,
-      scriptId: script.id,
-      mode,
-      // 판단 모델 없이 낱말 대조만(2026-11-01) — 서버는 하루 한도·공부 기록만.
-      compareOnly: true,
-      onLimit: () => setLimited(true),
-      ...hearing.options,
-    });
-    setListening(false);
-    // 잘 모르겠어요: 들린 데까지 짚고 원문을 연다 — 그 줄은 이번 판 통과로 안 셈(revealed).
-    const stuck = hearing.takeStuck();
-    if (stuck) setRevealed((r) => ({ ...r, [index]: true }));
-    // 낱말 대조: 다 맞거나(이름은 셈에서 뺌), 긴 줄은 한 낱말쯤 받아쓰기 차이(はじめ ↔ 初め)까지 봐줌(shadowPasses).
-    const compared = compareToTarget(line.text, heard);
+    const compared = typedMatches(line.text, typed, readings[line.text]);
     const named = Boolean(learnerName) && line.text.includes(learnerName!);
-    const exact = compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName));
-    const clean = Boolean(heard) && (exact || shadowPasses(line.text, heard, compared));
-    setResults((current) => ({ ...current, [index]: { heard, practice, clean: clean && !stuck, mode, unclear, pauses, stuck } }));
-    if ((heard && !clean) || stuck) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
+    const clean = compared.matched || (named && cleanBesidesName(compared.outcomes, learnerName));
+    setResults((current) => ({ ...current, [index]: { heard: typed, practice: null, clean, mode } }));
+    if (!clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
     // 틀린 줄을 이 폰에 남긴다(맞히면 지움) — 다음에 열면 ◐, My "지난번에 틀린 것"(curriculum/scriptMisses.ts).
-    if (heard) noteLine(language, script.id, index, !clean);
+    noteLine(language, script.id, index, !clean);
+    if (clean) {
+      setDraft("");
+      void playTts(line.text, tag, scriptVoice("me", line.text, learnerName));
+    }
   };
-
-  // 내 줄이 되면 바로 듣는다(2026-10-30 사용자 "말하기 버튼 없이 바로 녹음") — 따라 말하기는 내 줄을 먼저 들려주니 빼고, 고르기·맞추기는 마이크 없음.
-  // 줄마다 한 번만(다시 말하기는 버튼).
-  const autoHeard = useRef<number>(-1);
-  useEffect(() => {
-    if (offer || done || limited || listening) return;
-    if (mode === "shadow" || isTapMode(mode)) return;
-    if (script.lines[index]?.who !== "me" || results[index] || autoHeard.current === index) return;
-    const timer = window.setTimeout(() => {
-      autoHeard.current = index;
-      void say();
-    }, 250);
-    return () => window.clearTimeout(timer);
-    // say는 매번 새로 만들어진다 — 줄·방식이 바뀔 때만 다시 본다.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, mode, offer, done, limited, listening, results]);
-  // 닫으면 듣던 것도 끝낸다.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => () => hearing.saidAll(), []);
 
   const next = () =>
     setIndex((current) => (retrying ? (toRedo.find((i) => i > current) ?? script.lines.length) : current + 1));
@@ -593,18 +555,10 @@ function ScriptPlayer({
     setRevealed({});
     setMisses({});
     setPicks(freshPicks(script));
-    autoHeard.current = -1;
+    setDraft("");
     setIndex(0);
   };
 
-  const modeLabel: Record<ScriptMode, string> = {
-    shadow: ui.scriptModeShadow,
-    hint: ui.scriptModeHint,
-    hide: ui.scriptModeHide,
-    own: ui.scriptModeOwn,
-    choose: ui.scriptModeChoose,
-    order: ui.scriptModeOrder,
-  };
 
 
   return (
@@ -697,24 +651,16 @@ function ScriptPlayer({
           }
           const current = i === index;
           const result = results[i];
-          const show = !current || mode === "shadow" || revealed[i] || Boolean(result);
-          const ownResult = result?.mode === "own";
-          // 맞았지만 대본과 낱말이 다른 줄(바꿔 말함·어색함): 내가 한 말을 그대로 보이고 대본 줄로 덮지 않는다(2026-10-29 사용자 "내 발화도 치환시켜서 띄워").
-          const heardDiffers = (() => {
-            if (!result?.clean || !result.heard) return false;
-            const compared = compareToTarget(line.text, result.heard);
-            const named = Boolean(learnerName) && line.text.includes(learnerName!);
-            return !(compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName)));
-          })();
-          const betterShown = heardDiffers && result?.practice?.verdict === "awkward" && Boolean(result.practice.better);
+          // 원문은 맞힌 뒤·지난 줄·원문 보기를 눌렀을 때만(쓰기 전에는 뜻만 — 답이 새지 않게).
+          const show = !current || revealed[i] || Boolean(result?.clean);
           return (
             <li key={i} className="mb-2 flex justify-end">
               <div className={`max-w-[88%] rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.09]"}`}>
-                {/* The line to say now: its meaning framed as an instruction (scriptSayPrompt, user request 2026-10-28). */}
-                {current && !result ? (
+                {/* The line to write now: its meaning as an instruction (scriptWritePrompt, chat input 2026-11-01). */}
+                {current && !result?.clean ? (
                   <p dir="auto" className="text-note text-slate-200">
                     {missed.has(i) ? <span className="text-warn">◐ </span> : null}
-                    {ui.scriptSayPrompt.split("{line}").map((part, k) =>
+                    {ui.scriptWritePrompt.split("{line}").map((part, k) =>
                       k === 0 ? (
                         part
                       ) : (
@@ -731,68 +677,31 @@ function ScriptPlayer({
                     {glossFor(line.gloss, locale)}
                   </p>
                 )}
-                {heardDiffers ? (
-                  <div className="mt-2 rounded-xl bg-white/5 p-2.5">
-                    <p className="text-meta text-slate-500">{ui.roleplayPracticeHeard}</p>
-                    <p dir="auto" className="mt-1 text-chat text-slate-100">
-                      {result!.heard}
-                    </p>
-                  </div>
-                ) : show || mode === "hint" ? (
+                {show ? (
                   <div className="mt-1 flex items-start gap-2">
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-                      {show ? line.text : hintOf(line.text, language)}
+                      {line.text}
                     </p>
-                    {show ? <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" /> : null}
+                    <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
                   </div>
                 ) : null}
-                {show && !heardDiffers ? readingOf(line.text) : null}
-                {result ? (
-                  result.clean ? (
-                    <>
-                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} pauses={result.pauses ?? []} />
-                    {/* 대본 줄은 내 말 아래에(어색함이면 더 자연스러운 말이 이미 위에 있음). */}
-                    {heardDiffers && !betterShown ? (
-                      <div className="mt-1 flex items-start gap-2">
-                        <p dir="auto" className="min-w-0 flex-1 text-note text-slate-400">
-                          {line.text}
-                        </p>
-                        <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
-                      </div>
-                    ) : null}
-                    {countsForPass(script.stage, result.mode, passRule) && !revealed[i] ? null : <span className="text-caption text-slate-500">{modeLabel[result.mode]}</span>}
-                    {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름)·흐릿했던 낱말: 한마디(2026-10-28). */}
-                    {result.practice?.note && ((result.mode !== "shadow" && !compareToTarget(line.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
-                      <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
-                    ) : null}
-                    </>
-                  ) : ownResult ? (
-                    <>
-                      <div className="mt-3 rounded-xl bg-white/5 p-3">
-                        <p className="text-meta text-slate-500">{ui.roleplayPracticeHeard}</p>
-                        <p dir="auto" className="mt-1 text-note text-amber-300">
-                          {result.heard || "…"}
-                        </p>
-                      </div>
-                      {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
-                      {result.practice?.verdict === "wrong" && result.practice.better ? (
-                        <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
-                      ) : null}
-                    </>
-                  ) : (
-                    <>
-                      <Attempt outcomes={compareToTarget(line.text, result.heard).outcomes} ui={ui} pauses={result.pauses} />
-                      <PauseChips ui={ui} pauses={result.pauses ?? []} />
-                      {result.practice?.note ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
-                      {result.practice?.verdict === "wrong" && result.practice.better ? (
-                        <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
-                      ) : null}
-                    </>
-                  )
+                {show ? readingOf(line.text) : null}
+                {result && !result.clean ? (
+                  // 틀린 줄: 내가 쓴 그대로 + 다시(아래 입력칸에 고쳐 쓰면 된다).
+                  <div className="mt-2 rounded-xl bg-white/5 p-2.5">
+                    <p dir="auto" className="text-note text-amber-300">
+                      {result.heard}
+                    </p>
+                    <p className="mt-1 text-caption text-warn">{ui.quizWrong}</p>
+                  </div>
                 ) : null}
-                {result?.clean && ownResult && result.practice ? <p className="mt-1 text-caption text-slate-400">{result.practice.note}</p> : null}
-                {current && limited ? <p className="mt-2 text-caption text-warn">{ui.scriptLimit}</p> : null}
-                {current && !limited ? (
+                {result?.clean ? (
+                  <p className="mt-1 text-caption text-good">
+                    ✓ {ui.quizRight}
+                    {revealed[i] ? <span className="text-slate-500"> · {ui.scriptReveal}</span> : null}
+                  </p>
+                ) : null}
+                {current ? (
                   <div className="mt-2 flex flex-wrap justify-end gap-1.5">
                     {!show ? (
                       <button type="button" onClick={() => setRevealed((r) => ({ ...r, [i]: true }))} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-300 hover:bg-white/10">
@@ -800,25 +709,10 @@ function ScriptPlayer({
                       </button>
                     ) : null}
                     {result ? (
-                      <>
-                        {!result.clean && listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
-                        {!result.clean ? (
-                          <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10 disabled:opacity-50">
-                            {listening ? ui.roleplayPracticeListening : ui.roleplayPracticeRetry}
-                          </button>
-                        ) : null}
-                        <button type="button" onClick={next} className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900">
-                          {ui.scriptNext}
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        {listening ? <HearingButtons ui={ui} hearing={hearing} /> : null}
-                        <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
-                          {listening ? ui.roleplayPracticeListening : ui.scriptSay}
-                        </button>
-                      </>
-                    )}
+                      <button type="button" onClick={next} className="rounded-full bg-white/90 px-3 py-1.5 text-caption font-semibold text-slate-900">
+                        {ui.scriptNext}
+                      </button>
+                    ) : null}
                   </div>
                 ) : null}
               </div>
@@ -850,6 +744,32 @@ function ScriptPlayer({
         ) : null}
         <div ref={bottom} />
       </ol>
+      {/* 채팅 입력칸(2026-11-01): 내 줄 차례일 때만, 맞히기 전까지. Enter로 보냄. */}
+      {!offer && !done && script.lines[index]?.who === "me" && !results[index]?.clean ? (
+        <form
+          data-script-input
+          onSubmit={(event) => {
+            event.preventDefault();
+            submit();
+          }}
+          className="flex shrink-0 items-center gap-2 border-t border-line px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2"
+        >
+          <input
+            dir="auto"
+            value={draft}
+            onChange={(event) => setDraft(event.target.value)}
+            lang={tag}
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            aria-label={ui.scriptWritePrompt.replace("{line}", glossFor(script.lines[index]!.gloss, locale))}
+            className="min-w-0 flex-1 rounded-full border border-line bg-white/5 px-4 py-2 text-chat text-ink outline-none focus:border-slate-400"
+          />
+          <button type="submit" disabled={!draft.trim()} className="rounded-full bg-white/90 px-4 py-2 text-caption font-semibold text-slate-900 disabled:opacity-50">
+            {ui.send}
+          </button>
+        </form>
+      ) : null}
     </FullScreenLayer>
   );
 }

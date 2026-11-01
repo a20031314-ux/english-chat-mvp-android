@@ -68,7 +68,7 @@ export type StageScript = {
 };
 
 /** 말하기 넷(🎤) + 고르기·맞추기(2026-10-29, 마이크 없이 — curriculum/scriptChoice.ts). */
-export type ScriptMode = "shadow" | "hint" | "hide" | "own" | "choose" | "order";
+export type ScriptMode = "type" | "shadow" | "hint" | "hide" | "own" | "choose" | "order";
 
 /** 마이크 없이 푸는 방식. */
 export function isTapMode(mode: ScriptMode): boolean {
@@ -134,13 +134,13 @@ export function registerScripts(language: string, scripts: unknown): boolean {
 }
 
 /**
- * My 대본을 하는 방식 — 따라 말하기 하나(2026-11-01 사용자 "My 대본은 채팅 > 따라 말하기로, 정해진 답과 단순 대조",
- * 판단 모델 원가를 없앰). 예전 방식(첫 글자만·가리기·내 말로·고르기·맞추기)은 이 폰에 남은 지난 결과를 읽을 때만 쓰인다.
- * 떠올려 말하기는 꺼내 쓰기·문장구조 수업 대화에 있고, 대본을 통화 탭으로 옮기는 설계는 따로(hub/drafts).
+ * My 대본을 하는 방식 — 채팅처럼 내 줄을 직접 쓰기 하나(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로 학습", 마이크·판단 모델 없음 — 원가 0).
+ * 그날 앞서(같은 날 오전) 따라 말하기 하나였고, 예전 방식(따라 말하기·첫 글자만·가리기·내 말로·고르기·맞추기)은
+ * 이 폰에 남은 지난 결과를 읽을 때만 쓰인다. 떠올려 말하기는 꺼내 쓰기·문장구조 수업 대화에, 말하는 대본은 통화 탭(다음 설계)에.
  */
 export function modesFor(stage: number): ScriptMode[] {
   void stage;
-  return ["shadow"];
+  return ["type"];
 }
 
 /**
@@ -150,7 +150,7 @@ export function modesFor(stage: number): ScriptMode[] {
 export function countsForPass(stage: number, mode: ScriptMode, rule: "speak" | "any" = "speak"): boolean {
   if (isTapMode(mode)) return rule === "any";
   // 내 말로(뜻만 보고 말하기)는 어느 단계든 통과로 — 1~2단계 상황 대본에는 이 방식이 없고, 은행 대본은 이 방식뿐(2026-10-30).
-  if (mode === "own" || mode === "shadow") return true;
+  if (mode === "type" || mode === "own" || mode === "shadow") return true;
   return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide";
 }
 

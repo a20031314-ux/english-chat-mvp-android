@@ -5,6 +5,7 @@ import {
   parsePractice,
   practicePrompt,
   shadowPasses,
+  typedMatches,
   troubleWords,
   type WordOutcome,
 } from "./practice.ts";
@@ -239,4 +240,17 @@ test("따라 말하기 통과는 모델 없이 낱말 대조만(2026-11-01) — 
   assert.equal(shadowPasses("コーヒーをください。", "お茶をください"), false);
   // 태국어 모음 부호(\p{M})가 다르면 다른 낱말.
   assert.equal(shadowPasses("ขอกาแฟ", "ขอกาแฟ"), true);
+});
+
+test("채팅으로 쓴 대본 줄(2026-11-01): 낱말이 다 같으면 맞음, 읽는 법으로 써도 맞음", () => {
+  // 스페인어: 문장부호·대소문자는 봐주고 낱말 하나라도 다르면 다시.
+  assert.equal(typedMatches("Un café, por favor.", "un cafe por favor").matched, false, "악센트는 다른 글자");
+  assert.equal(typedMatches("Un café, por favor.", "un café por favor").matched, true);
+  assert.equal(typedMatches("Un café, por favor.", "").matched, false);
+  // 일본어: 한자로 써도, 읽는 법(히라가나)으로 써도.
+  assert.equal(typedMatches("初めまして。", "初めまして").matched, true);
+  assert.equal(typedMatches("初めまして。", "はじめまして", "はじめまして。").matched, true);
+  assert.equal(typedMatches("初めまして。", "こんにちは", "はじめまして。").matched, false);
+  // 영어 줄임말.
+  assert.equal(typedMatches("I'm fine.", "I am fine").matched, true);
 });

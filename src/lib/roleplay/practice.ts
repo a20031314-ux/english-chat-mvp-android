@@ -216,6 +216,21 @@ export function compareToTarget(target: string, heard: string): Comparison {
 }
 
 /**
+ * My 대본 채팅(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로 — 내 줄은 직접 입력"): 쓴 줄이 대본 줄과 낱말이 다 같으면 맞음.
+ * 문장부호·대소문자·줄임말(I'm ↔ I am)은 compareToTarget이 봐준다. 글자가 다른 학습 언어는 읽는 법(はじめまして ↔ 初めまして,
+ * 병음·로마자 등 useStageReadings)으로 써도 맞음. 모델은 부르지 않는다.
+ */
+export function typedMatches(target: string, typed: string, reading?: string): Comparison & { matched: boolean } {
+  const compared = compareToTarget(target, typed);
+  if (!typed.trim()) return { ...compared, matched: false };
+  if (compared.clean) return { ...compared, matched: true };
+  if (reading && reading.trim() && compareToTarget(reading, typed).clean) {
+    return { outcomes: compared.outcomes.map((outcome) => ({ ...outcome, kind: "kept" as const })) as WordOutcome[], added: [], clean: true, matched: true };
+  }
+  return { ...compared, matched: false };
+}
+
+/**
  * My 대본 따라 말하기의 통과(2026-11-01 사용자 "채팅 > 따라 말하기로, 정해진 답과 단순 대조" — 모델 판단 없이).
  * 낱말이 다 맞으면 통과. 긴 줄(낱말 5개 이상)은 받아쓰기가 같은 소리를 다른 글자로 적는 것(はじめ ↔ 初め)을 봐줘
  * 80% 넘게 맞고 덧붙은 말이 하나 이하면 통과. 짧은 줄은 낱말 하나만 달라도 다시.

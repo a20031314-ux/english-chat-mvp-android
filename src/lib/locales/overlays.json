@@ -883,7 +883,8 @@
     "whatsNewQuizbankTitle": "書いて解くクイズとテスト",
     "whatsNewQuizbankBody": "空欄を書き、間違いを直す。項目が20個たまるとテスト、間違えたものはまた出ます。",
     "whatsNewRealCallTitle": "本物の通話のようなAI通話",
-    "whatsNewRealCallBody": "上にチューター、下に自分。顔と声を選べて、終わったら自分の文でレッスン。"
+    "whatsNewRealCallBody": "上にチューター、下に自分。顔と声を選べて、終わったら自分の文でレッスン。",
+    "scriptWritePrompt": "「{line}」と書いてみましょう。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1769,7 +1770,8 @@
     "whatsNewQuizbankTitle": "自己写答案的小测和考试",
     "whatsNewQuizbankBody": "写出空格、改正错误；攒够20个内容就考试，错的会再出现。",
     "whatsNewRealCallTitle": "像真通话一样的AI通话",
-    "whatsNewRealCallBody": "上面是老师，下面是你。可选老师的脸和声音，结束后用你的句子上课。"
+    "whatsNewRealCallBody": "上面是老师，下面是你。可选老师的脸和声音，结束后用你的句子上课。",
+    "scriptWritePrompt": "写一写：“{line}”"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2658,7 +2660,8 @@
     "whatsNewQuizbankTitle": "Câu đố tự gõ đáp án và bài kiểm tra",
     "whatsNewQuizbankBody": "Gõ chỗ trống, sửa lỗi sai; đủ 20 mục là có bài kiểm tra, câu sai sẽ quay lại.",
     "whatsNewRealCallTitle": "Gọi AI như gọi thật",
-    "whatsNewRealCallBody": "Gia sư ở trên, bạn ở dưới. Chọn khuôn mặt và giọng, gọi xong học bằng chính câu của bạn."
+    "whatsNewRealCallBody": "Gia sư ở trên, bạn ở dưới. Chọn khuôn mặt và giọng, gọi xong học bằng chính câu của bạn.",
+    "scriptWritePrompt": "Hãy viết: “{line}”"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3552,7 +3555,8 @@
     "whatsNewQuizbankTitle": "Quiz à écrire et examens",
     "whatsNewQuizbankBody": "Écris les trous et corrige les fautes ; à 20 éléments, un examen, et les erreurs reviennent.",
     "whatsNewRealCallTitle": "Des appels IA comme de vrais appels",
-    "whatsNewRealCallBody": "Le tuteur en haut, toi en bas. Choisis son visage et sa voix ; après, une leçon sur ta phrase."
+    "whatsNewRealCallBody": "Le tuteur en haut, toi en bas. Choisis son visage et sa voix ; après, une leçon sur ta phrase.",
+    "scriptWritePrompt": "Écrivez : « {line} »"
   },
   "it": {
     "archive": "Report",
@@ -4637,7 +4641,8 @@
     "whatsNewQuizbankTitle": "Quiz da scrivere ed esami",
     "whatsNewQuizbankBody": "Scrivi gli spazi e correggi gli errori; con 20 elementi c’è l’esame e gli errori tornano.",
     "whatsNewRealCallTitle": "Chiamate IA come quelle vere",
-    "whatsNewRealCallBody": "Il tutor sopra, tu sotto. Scegli volto e voce; alla fine, una lezione sulla tua frase."
+    "whatsNewRealCallBody": "Il tutor sopra, tu sotto. Scegli volto e voce; alla fine, una lezione sulla tua frase.",
+    "scriptWritePrompt": "Scrivi: «{line}»"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5534,7 +5539,8 @@
     "whatsNewQuizbankTitle": "Quizzes para digitar e provas",
     "whatsNewQuizbankBody": "Digite as lacunas e corrija erros; com 20 itens vem a prova, e os erros voltam.",
     "whatsNewRealCallTitle": "Chamadas com IA como as de verdade",
-    "whatsNewRealCallBody": "O tutor em cima, você embaixo. Escolha rosto e voz; no fim, uma aula com a sua frase."
+    "whatsNewRealCallBody": "O tutor em cima, você embaixo. Escolha rosto e voz; no fim, uma aula com a sua frase.",
+    "scriptWritePrompt": "Escreva: “{line}”"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6617,7 +6623,8 @@
     "whatsNewQuizbankTitle": "Тесты с вводом ответа и экзамены",
     "whatsNewQuizbankBody": "Впиши пропуски и исправь ошибки; набралось 20 тем — экзамен, ошибки вернутся.",
     "whatsNewRealCallTitle": "ИИ-звонки как настоящие",
-    "whatsNewRealCallBody": "Сверху репетитор, снизу ты. Выбери лицо и голос; после звонка — урок по твоей фразе."
+    "whatsNewRealCallBody": "Сверху репетитор, снизу ты. Выбери лицо и голос; после звонка — урок по твоей фразе.",
+    "scriptWritePrompt": "Напишите: «{line}»"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7510,7 +7517,8 @@
     "whatsNewQuizbankTitle": "Kuis ketik jawaban dan ujian",
     "whatsNewQuizbankBody": "Ketik bagian kosong dan perbaiki kesalahan; 20 materi jadi ujian, yang salah muncul lagi.",
     "whatsNewRealCallTitle": "Telepon AI seperti telepon sungguhan",
-    "whatsNewRealCallBody": "Tutor di atas, kamu di bawah. Pilih wajah dan suaranya; setelahnya, belajar dari kalimatmu."
+    "whatsNewRealCallBody": "Tutor di atas, kamu di bawah. Pilih wajah dan suaranya; setelahnya, belajar dari kalimatmu.",
+    "scriptWritePrompt": "Tulis: “{line}”"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8396,7 +8404,8 @@
     "whatsNewQuizbankTitle": "اختبارات تكتب فيها الإجابة وامتحانات",
     "whatsNewQuizbankBody": "اكتب الفراغات وصحّح الأخطاء؛ عند 20 مادة يأتي امتحان، وما أخطأت فيه يعود.",
     "whatsNewRealCallTitle": "مكالمات ذكاء اصطناعي كالمكالمات الحقيقية",
-    "whatsNewRealCallBody": "المعلّم في الأعلى وأنت في الأسفل. اختر وجهه وصوته، وبعد المكالمة درس من جملتك."
+    "whatsNewRealCallBody": "المعلّم في الأعلى وأنت في الأسفل. اختر وجهه وصوته، وبعد المكالمة درس من جملتك.",
+    "scriptWritePrompt": "اكتب: «{line}»"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9282,7 +9291,8 @@
     "whatsNewQuizbankTitle": "แบบทดสอบพิมพ์คำตอบและการสอบ",
     "whatsNewQuizbankBody": "พิมพ์ช่องว่างและแก้จุดผิด ครบ 20 เรื่องก็มีสอบ ข้อที่ผิดจะกลับมาอีก",
     "whatsNewRealCallTitle": "โทรกับ AI เหมือนโทรจริง",
-    "whatsNewRealCallBody": "ติวเตอร์อยู่บน คุณอยู่ล่าง เลือกหน้าและเสียงได้ จบแล้วเรียนจากประโยคของคุณเอง"
+    "whatsNewRealCallBody": "ติวเตอร์อยู่บน คุณอยู่ล่าง เลือกหน้าและเสียงได้ จบแล้วเรียนจากประโยคของคุณเอง",
+    "scriptWritePrompt": "ลองเขียน: “{line}”"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -10168,6 +10178,7 @@
     "whatsNewQuizbankTitle": "लिखकर हल करने वाले क्विज़ और परीक्षा",
     "whatsNewQuizbankBody": "खाली जगह लिखें, गलती सुधारें; 20 विषय जमा होने पर परीक्षा, गलत वाले फिर आते हैं।",
     "whatsNewRealCallTitle": "असली कॉल जैसी AI कॉल",
-    "whatsNewRealCallBody": "ऊपर ट्यूटर, नीचे आप। चेहरा और आवाज़ चुनें; कॉल के बाद आपके वाक्य पर पाठ।"
+    "whatsNewRealCallBody": "ऊपर ट्यूटर, नीचे आप। चेहरा और आवाज़ चुनें; कॉल के बाद आपके वाक्य पर पाठ।",
+    "scriptWritePrompt": "लिखिए: “{line}”"
   }
 }
