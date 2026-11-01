@@ -34,6 +34,11 @@ export function isSimCaller(dataUserId: string): boolean {
   return dataUserId.startsWith(`rc:${SIM_USER_MARK}`);
 }
 
+/** 요청이 점검 사용자인가 — 로그인 토큰 없이 x-rc-user가 simcheck-로 시작(speechModels와 같은 판단). 공용 데이터(문제은행 등)를 키우거나 셈에 넣지 않을 때. */
+export function isSimRequest(request: { headers: { get(name: string): string | null } }): boolean {
+  return !request.headers.get("x-auth-token") && (request.headers.get("x-rc-user") ?? "").startsWith(SIM_USER_MARK);
+}
+
 export type SimForgetResult =
   | { ok: true; pattern: string; found: number; deleted: number; dryRun: boolean; sample: string[] }
   | { ok: false; error: "BAD_PREFIX" | "LIMIT" };

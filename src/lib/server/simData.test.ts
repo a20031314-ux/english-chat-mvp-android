@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { kvGetJson, kvSetJson } from "./kv.ts";
-import { SIM_FORGET_DAILY_MAX, forgetSimData, isSimCaller, simForgetPattern } from "./simData.ts";
+import { SIM_FORGET_DAILY_MAX, forgetSimData, isSimCaller, isSimRequest, simForgetPattern } from "./simData.ts";
 
 test("패턴은 점검 데이터 안으로만: 잘못된 접두어·패턴 글자는 거절", () => {
   assert.equal(simForgetPattern({ prefix: "regress2-20261020-" }), "*simcheck-regress2-20261020-*");
@@ -14,6 +14,14 @@ test("점검 사용자만 부를 수 있다", () => {
   assert.ok(isSimCaller("rc:simcheck-run1-p001"));
   assert.ok(!isSimCaller("rc:$RCAnonymousID:abc"));
   assert.ok(!isSimCaller("acct:simcheck-x"));
+});
+
+test("점검 요청: 로그인 없이 simcheck- 사용자만(문제은행 성장·셈에서 뺌)", () => {
+  const req = (h: Record<string, string>) => ({ headers: new Headers(h) });
+  assert.ok(isSimRequest(req({ "x-rc-user": "simcheck-quizsweep-ja-ko" })));
+  assert.ok(!isSimRequest(req({ "x-rc-user": "$RCAnonymousID:abc" })));
+  assert.ok(!isSimRequest(req({ "x-rc-user": "simcheck-x", "x-auth-token": "t" })));
+  assert.ok(!isSimRequest(req({})));
 });
 
 test("그 실행의 점검 데이터만 지우고 실제 사용자·다른 실행은 남긴다", async () => {
