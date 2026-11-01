@@ -450,7 +450,7 @@ export function FrameLesson({
                 }
               }}
             />
-            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김. */}
+            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01, 수업 퀴즈 단계에도) — 버튼과 띄우고, 키보드가 올라오면 숨김. */}
             <NativeAdSlot feedId="quiz-inline" slotKey={`lesson-${itemId}`} spaced />
           </div>
         ) : null}

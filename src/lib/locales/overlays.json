@@ -875,7 +875,15 @@
     "examRecall": "思い出す",
     "examReply": "会話の返事",
     "examDialog": "短い会話",
-    "tutorVoice": "チューターの声"
+    "tutorVoice": "チューターの声",
+    "whatsNewBanksTitle": "MyはStagebank・Quizbank・Logbankに",
+    "whatsNewBanksBody": "今日やることと段階はStagebank、問題はQuizbank、毎日の学習はLogbankに。",
+    "whatsNewLessonTitle": "文型レッスンと「使ってみる」",
+    "whatsNewLessonBody": "説明 → クイズ → 短い会話で身につけ、意味だけ見て言ってみる。",
+    "whatsNewQuizbankTitle": "書いて解くクイズとテスト",
+    "whatsNewQuizbankBody": "空欄を書き、間違いを直す。項目が20個たまるとテスト、間違えたものはまた出ます。",
+    "whatsNewRealCallTitle": "本物の通話のようなAI通話",
+    "whatsNewRealCallBody": "上にチューター、下に自分。顔と声を選べて、終わったら自分の文でレッスン。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1753,7 +1761,15 @@
     "examRecall": "回想",
     "examReply": "对话应答",
     "examDialog": "短对话",
-    "tutorVoice": "导师的声音"
+    "tutorVoice": "导师的声音",
+    "whatsNewBanksTitle": "My 变成 Stagebank·Quizbank·Logbank",
+    "whatsNewBanksBody": "今天要做的和阶段在 Stagebank，题目在 Quizbank，每天的学习在 Logbank。",
+    "whatsNewLessonTitle": "句型课和“用起来”",
+    "whatsNewLessonBody": "通过讲解 → 小测 → 简短对话来掌握，再只看意思说出来。",
+    "whatsNewQuizbankTitle": "自己写答案的小测和考试",
+    "whatsNewQuizbankBody": "写出空格、改正错误；攒够20个内容就考试，错的会再出现。",
+    "whatsNewRealCallTitle": "像真通话一样的AI通话",
+    "whatsNewRealCallBody": "上面是老师，下面是你。可选老师的脸和声音，结束后用你的句子上课。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2634,7 +2650,15 @@
     "examRecall": "Nhớ lại",
     "examReply": "Trả lời",
     "examDialog": "Hội thoại ngắn",
-    "tutorVoice": "Giọng gia sư"
+    "tutorVoice": "Giọng gia sư",
+    "whatsNewBanksTitle": "My giờ là Stagebank, Quizbank và Logbank",
+    "whatsNewBanksBody": "Việc hôm nay và giai đoạn ở Stagebank, câu hỏi ở Quizbank, việc học mỗi ngày ở Logbank.",
+    "whatsNewLessonTitle": "Bài học mẫu câu và Dùng thử",
+    "whatsNewLessonBody": "Học qua giải thích → câu đố → hội thoại ngắn, rồi nói ra chỉ từ nghĩa.",
+    "whatsNewQuizbankTitle": "Câu đố tự gõ đáp án và bài kiểm tra",
+    "whatsNewQuizbankBody": "Gõ chỗ trống, sửa lỗi sai; đủ 20 mục là có bài kiểm tra, câu sai sẽ quay lại.",
+    "whatsNewRealCallTitle": "Gọi AI như gọi thật",
+    "whatsNewRealCallBody": "Gia sư ở trên, bạn ở dưới. Chọn khuôn mặt và giọng, gọi xong học bằng chính câu của bạn."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3520,7 +3544,15 @@
     "examRecall": "Se rappeler",
     "examReply": "Réponses",
     "examDialog": "Dialogues courts",
-    "tutorVoice": "Voix du tuteur"
+    "tutorVoice": "Voix du tuteur",
+    "whatsNewBanksTitle": "My devient Stagebank, Quizbank et Logbank",
+    "whatsNewBanksBody": "Le travail du jour et les étapes dans Stagebank, les quiz dans Quizbank, chaque jour dans Logbank.",
+    "whatsNewLessonTitle": "Leçons de structures et Réutiliser",
+    "whatsNewLessonBody": "Apprends avec une explication, un quiz et un court dialogue, puis dis-le à partir du sens.",
+    "whatsNewQuizbankTitle": "Quiz à écrire et examens",
+    "whatsNewQuizbankBody": "Écris les trous et corrige les fautes ; à 20 éléments, un examen, et les erreurs reviennent.",
+    "whatsNewRealCallTitle": "Des appels IA comme de vrais appels",
+    "whatsNewRealCallBody": "Le tuteur en haut, toi en bas. Choisis son visage et sa voix ; après, une leçon sur ta phrase."
   },
   "it": {
     "archive": "Report",
@@ -4597,7 +4629,15 @@
     "examRecall": "Ricordare",
     "examReply": "Risposte",
     "examDialog": "Dialoghi brevi",
-    "tutorVoice": "Voce del tutor"
+    "tutorVoice": "Voce del tutor",
+    "whatsNewBanksTitle": "My ora è Stagebank, Quizbank e Logbank",
+    "whatsNewBanksBody": "Il lavoro di oggi e i livelli in Stagebank, i quiz in Quizbank, ogni giorno in Logbank.",
+    "whatsNewLessonTitle": "Lezioni sulle strutture e Usalo",
+    "whatsNewLessonBody": "Impara con spiegazione, quiz e breve dialogo, poi dillo partendo dal significato.",
+    "whatsNewQuizbankTitle": "Quiz da scrivere ed esami",
+    "whatsNewQuizbankBody": "Scrivi gli spazi e correggi gli errori; con 20 elementi c’è l’esame e gli errori tornano.",
+    "whatsNewRealCallTitle": "Chiamate IA come quelle vere",
+    "whatsNewRealCallBody": "Il tutor sopra, tu sotto. Scegli volto e voce; alla fine, una lezione sulla tua frase."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5486,7 +5526,15 @@
     "examRecall": "Lembrar",
     "examReply": "Respostas",
     "examDialog": "Diálogos curtos",
-    "tutorVoice": "Voz do tutor"
+    "tutorVoice": "Voz do tutor",
+    "whatsNewBanksTitle": "My agora é Stagebank, Quizbank e Logbank",
+    "whatsNewBanksBody": "O de hoje e as etapas no Stagebank, os quizzes no Quizbank, cada dia no Logbank.",
+    "whatsNewLessonTitle": "Aulas de estruturas e Use você",
+    "whatsNewLessonBody": "Aprenda com explicação, quiz e diálogo curto, depois diga a partir do significado.",
+    "whatsNewQuizbankTitle": "Quizzes para digitar e provas",
+    "whatsNewQuizbankBody": "Digite as lacunas e corrija erros; com 20 itens vem a prova, e os erros voltam.",
+    "whatsNewRealCallTitle": "Chamadas com IA como as de verdade",
+    "whatsNewRealCallBody": "O tutor em cima, você embaixo. Escolha rosto e voz; no fim, uma aula com a sua frase."
   },
   "ru": {
     "archive": "Отчёты",
@@ -6561,7 +6609,15 @@
     "examRecall": "Вспомнить",
     "examReply": "Ответы",
     "examDialog": "Короткие диалоги",
-    "tutorVoice": "Голос репетитора"
+    "tutorVoice": "Голос репетитора",
+    "whatsNewBanksTitle": "My теперь Stagebank, Quizbank и Logbank",
+    "whatsNewBanksBody": "Задания на сегодня и этапы — в Stagebank, вопросы — в Quizbank, каждый день — в Logbank.",
+    "whatsNewLessonTitle": "Уроки конструкций и «Применить»",
+    "whatsNewLessonBody": "Объяснение → тест → короткий диалог, потом скажи сам по значению.",
+    "whatsNewQuizbankTitle": "Тесты с вводом ответа и экзамены",
+    "whatsNewQuizbankBody": "Впиши пропуски и исправь ошибки; набралось 20 тем — экзамен, ошибки вернутся.",
+    "whatsNewRealCallTitle": "ИИ-звонки как настоящие",
+    "whatsNewRealCallBody": "Сверху репетитор, снизу ты. Выбери лицо и голос; после звонка — урок по твоей фразе."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7446,7 +7502,15 @@
     "examRecall": "Mengingat",
     "examReply": "Jawaban",
     "examDialog": "Dialog pendek",
-    "tutorVoice": "Suara tutor"
+    "tutorVoice": "Suara tutor",
+    "whatsNewBanksTitle": "My kini Stagebank, Quizbank, dan Logbank",
+    "whatsNewBanksBody": "Tugas hari ini dan tahap di Stagebank, soal di Quizbank, belajar tiap hari di Logbank.",
+    "whatsNewLessonTitle": "Pelajaran pola kalimat dan Pakai",
+    "whatsNewLessonBody": "Pelajari lewat penjelasan → kuis → obrolan singkat, lalu ucapkan dari artinya saja.",
+    "whatsNewQuizbankTitle": "Kuis ketik jawaban dan ujian",
+    "whatsNewQuizbankBody": "Ketik bagian kosong dan perbaiki kesalahan; 20 materi jadi ujian, yang salah muncul lagi.",
+    "whatsNewRealCallTitle": "Telepon AI seperti telepon sungguhan",
+    "whatsNewRealCallBody": "Tutor di atas, kamu di bawah. Pilih wajah dan suaranya; setelahnya, belajar dari kalimatmu."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8324,7 +8388,15 @@
     "examRecall": "التذكّر",
     "examReply": "الردود",
     "examDialog": "حوارات قصيرة",
-    "tutorVoice": "صوت المعلّم"
+    "tutorVoice": "صوت المعلّم",
+    "whatsNewBanksTitle": "My صار Stagebank وQuizbank وLogbank",
+    "whatsNewBanksBody": "مهام اليوم والمراحل في Stagebank، والأسئلة في Quizbank، وتعلّم كل يوم في Logbank.",
+    "whatsNewLessonTitle": "دروس التراكيب و«استخدمها»",
+    "whatsNewLessonBody": "تعلّم بشرح ثم اختبار ثم حوار قصير، ثم قلها من المعنى وحده.",
+    "whatsNewQuizbankTitle": "اختبارات تكتب فيها الإجابة وامتحانات",
+    "whatsNewQuizbankBody": "اكتب الفراغات وصحّح الأخطاء؛ عند 20 مادة يأتي امتحان، وما أخطأت فيه يعود.",
+    "whatsNewRealCallTitle": "مكالمات ذكاء اصطناعي كالمكالمات الحقيقية",
+    "whatsNewRealCallBody": "المعلّم في الأعلى وأنت في الأسفل. اختر وجهه وصوته، وبعد المكالمة درس من جملتك."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9202,7 +9274,15 @@
     "examRecall": "นึกออก",
     "examReply": "การตอบ",
     "examDialog": "บทสนทนาสั้น",
-    "tutorVoice": "เสียงติวเตอร์"
+    "tutorVoice": "เสียงติวเตอร์",
+    "whatsNewBanksTitle": "My เป็น Stagebank·Quizbank·Logbank แล้ว",
+    "whatsNewBanksBody": "สิ่งที่ต้องทำวันนี้และขั้นอยู่ใน Stagebank โจทย์อยู่ใน Quizbank การเรียนแต่ละวันอยู่ใน Logbank",
+    "whatsNewLessonTitle": "บทเรียนรูปประโยคและลองใช้",
+    "whatsNewLessonBody": "เรียนผ่านคำอธิบาย → แบบทดสอบ → บทสนทนาสั้น แล้วพูดจากความหมายอย่างเดียว",
+    "whatsNewQuizbankTitle": "แบบทดสอบพิมพ์คำตอบและการสอบ",
+    "whatsNewQuizbankBody": "พิมพ์ช่องว่างและแก้จุดผิด ครบ 20 เรื่องก็มีสอบ ข้อที่ผิดจะกลับมาอีก",
+    "whatsNewRealCallTitle": "โทรกับ AI เหมือนโทรจริง",
+    "whatsNewRealCallBody": "ติวเตอร์อยู่บน คุณอยู่ล่าง เลือกหน้าและเสียงได้ จบแล้วเรียนจากประโยคของคุณเอง"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -10080,6 +10160,14 @@
     "examRecall": "याद करना",
     "examReply": "जवाब",
     "examDialog": "छोटी बातचीत",
-    "tutorVoice": "ट्यूटर की आवाज़"
+    "tutorVoice": "ट्यूटर की आवाज़",
+    "whatsNewBanksTitle": "My अब Stagebank, Quizbank और Logbank",
+    "whatsNewBanksBody": "आज का काम और चरण Stagebank में, सवाल Quizbank में, हर दिन की पढ़ाई Logbank में।",
+    "whatsNewLessonTitle": "वाक्य-ढाँचे के पाठ और इस्तेमाल करो",
+    "whatsNewLessonBody": "समझाना → क्विज़ → छोटी बातचीत से सीखें, फिर सिर्फ़ अर्थ देखकर बोलें।",
+    "whatsNewQuizbankTitle": "लिखकर हल करने वाले क्विज़ और परीक्षा",
+    "whatsNewQuizbankBody": "खाली जगह लिखें, गलती सुधारें; 20 विषय जमा होने पर परीक्षा, गलत वाले फिर आते हैं।",
+    "whatsNewRealCallTitle": "असली कॉल जैसी AI कॉल",
+    "whatsNewRealCallBody": "ऊपर ट्यूटर, नीचे आप। चेहरा और आवाज़ चुनें; कॉल के बाद आपके वाक्य पर पाठ।"
   }
 }

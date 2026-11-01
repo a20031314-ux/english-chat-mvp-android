@@ -44,35 +44,37 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
-    // 2.78(92): My 지속 학습(복습·랜덤·어휘·문법·표현, 묶음 퀴즈·단어 퀴즈·단어장 그래프/망), 0단계 글자·소리 + 단계 학습 읽는 법.
-    // 첫 고르기 간소화·단계대로/자유롭게·이 단계로 정하기·일일 학습 이름·익힌 것 묶기·퀴즈 제목 없앰·쓸 기능 고르기 사용법 창은 사용법·출시 노트에만.
+    // 2.79(93): Play는 2.75 → 2.79(2.76~2.78은 Play에 안 나감). My 큰 칸 셋(Stagebank·Quizbank·Logbank), 문장구조 수업(설명 › 퀴즈 › 대화)·꺼내 쓰기,
+    // Quizbank 직접 쓰기·틀린 곳 고치기·정기 시험(모인 소재 20개)·다시 보기, 실제 통화 화면(위 튜터·아래 나, 💬·💡·🙉)·튜터 그림·목소리 남녀·통화 정리 → 그 문장으로 수업.
+    // 단어 시험·어휘 수준 맞추기·배울 수 있는 것·칸 ? 설명·대화 말풍선 얼굴·사람 대화 통화 화면은 사용법·출시 노트에만.
+    version: "2.79",
+    code: 93,
+    items: [
+      { id: "my-banks", title: "whatsNewBanksTitle", body: "whatsNewBanksBody", shot: "my-banks", tab: "map", guide: "my.start" },
+      { id: "lesson", title: "whatsNewLessonTitle", body: "whatsNewLessonBody", shot: "lesson", tab: "map", guide: "my.map" },
+      { id: "quizbank", title: "whatsNewQuizbankTitle", body: "whatsNewQuizbankBody", shot: "quizbank", tab: "map", guide: "my.next" },
+      { id: "real-call", title: "whatsNewRealCallTitle", body: "whatsNewRealCallBody", shot: "real-call", tab: "talk", guide: "call.talk" },
+    ],
+  },
+  {
+    // 2.78(92): Play에 안 나감 — 사용자는 2.75 → 2.79로 바로 온다. 이 카드들이 그리던 화면(지속 학습 카드·묶음 퀴즈 버튼 줄)은 2.79에 없어 비움.
+    // version·code는 남긴다(versionForCode·업데이트 배너가 code로 버전을 찾음).
+    // 예전 카드: keep-learning(지속 학습 — 복습·랜덤·어휘·문법·표현), letters-reading(0단계 글자·읽는 법).
     version: "2.78",
     code: 92,
-    items: [
-      { id: "keep-learning", title: "whatsNewKeepTitle", body: "whatsNewKeepBody", shot: "keep-learning", tab: "map", guide: "my.map" },
-      { id: "letters-reading", title: "whatsNewLettersTitle", body: "whatsNewLettersBody", shot: "letters-reading", tab: "map", guide: "my.map" },
-    ],
+    items: [],
   },
   {
-    // 2.77(91): My 오늘 할 것(분량·n일 완성·순서, 헷갈린 곳 퀴즈, 오늘 배운 것·직접 묻기), 지난번에 틀린 것 + 아침 알림(새 로컬 알림 플러그인).
-    // 첫 화면 My·처음 설치 기능 한 장씩·대본 평가(★·더 자연스러운 말)·이어서 하기·채팅에서 다시 쓰기·1:1 읽음·팔로우 목록은 사용법·출시 노트에만.
+    // 2.77(91): Play에 안 나감, 화면도 2.79에 없어 비움(예전 카드: today-plan 오늘 할 것 목록, weak-strip 지난번에 틀린 것 띠).
     version: "2.77",
     code: 91,
-    items: [
-      { id: "today-plan", title: "whatsNewTodayTitle", body: "whatsNewTodayBody", shot: "today-plan", tab: "map", guide: "my.map" },
-      { id: "weak-strip", title: "whatsNewMissedTitle", body: "whatsNewMissedBody", shot: "weak-strip", tab: "map", guide: "my.map" },
-    ],
+    items: [],
   },
   {
-    // 2.76(90): My 단계 대본(상황마다, 통과해야 다음 단계)·오늘의 대본, 틀 바꿔 말하기(ko·ja·es 1~3, 3단계 내 말로)·틀린 틀 다시 연습,
-    // AI 튜터를 사람 탭으로(프로필 시트 메시지·통화·통화 기록). 무료 = 대본·대본 플랜·팩 뺌, 통화 기록을 채팅과 따로, My 예전 기능 뺌은 사용법·출시 노트에만.
+    // 2.76(90): Play에 안 나감, 화면도 2.79에 없어 비움(예전 카드: stage-scripts 단계 대본 목록, frames 틀 바꿔 말하기, ai-tutor 사람 탭 AI 튜터 — 사람 탭 맨 위 튜터는 사용법 people.find에 남음).
     version: "2.76",
     code: 90,
-    items: [
-      { id: "stage-scripts", title: "whatsNewScriptsTitle", body: "whatsNewScriptsBody", shot: "stage-scripts", tab: "map", guide: "my.map" },
-      { id: "frames", title: "whatsNewFramesTitle", body: "whatsNewFramesBody", shot: "frames-redo", tab: "map", guide: "my.map" },
-      { id: "ai-tutor", title: "whatsNewAiTutorTitle", body: "whatsNewAiTutorBody", shot: "ai-tutor", tab: "people", guide: "people.find" },
-    ],
+    items: [],
   },
   {
     // 2.75(89): My 네 갈래(어휘·문법·표현·발음, 70%면 다음 단계, 단계별 대화 예시) — 망·그래프·단계 세 보기가 같은 네 갈래. 게시판 주제 칩·글 속 들어가기·참여하기.

@@ -173,7 +173,10 @@ const GUIDE_PARTS = VERSION === "guide-parts";
 // `guide-overview`(2026-10-29): 사용법 큰 그림(lib/guide/overview.ts) — 학습 흐름 첫 그림(오늘 할 것)·내 진척 시트·영상 목록(지금 화면).
 const GUIDE_OVERVIEW = VERSION === "guide-overview";
 const GUIDE_OVERVIEW_ITEMS = [{ shot: "ov-today", step: "today-plan" }, { shot: "ov-progress", step: "my-progress" }, { shot: "video-library" }];
-const GUIDE = VERSION === "guide" || GUIDE_OVERVIEW || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+// `guide-279`(2.79): 사용법 새 그림 — 연습 방식 고르기(my.map)·실제 통화 화면(call.talk)·튜터 고르기(call.pause 자리). 나머지 My 칸은 Bank 설명 그림(capture-bank-guide.mjs)을 같이 쓴다.
+const GUIDE_279 = VERSION === "guide-279";
+const GUIDE_279_ITEMS = [{ shot: "stage-ways" }, { shot: "tutor-pick" }, { shot: "call-recap" }, { shot: "real-call" }];
+const GUIDE = VERSION === "guide" || GUIDE_279 || GUIDE_OVERVIEW || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
@@ -340,6 +343,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_MORE_ITEMS }
   : GUIDE_PARTS
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
+  : GUIDE_279
+  ? { version: "guide", items: GUIDE_279_ITEMS }
   : GUIDE_OVERVIEW
   ? { version: "guide", items: GUIDE_OVERVIEW_ITEMS }
   : GUIDE_CALLS
@@ -1044,6 +1049,19 @@ async function pickStageOne(page, target) {
   }, target);
 }
 
+/** 2.79 My(큰 칸 셋): 1단계로 정하고 오늘 목록을 새로, Quizbank 탭(focus)을 정해 My를 연다 — Stagebank 오늘 할 것 카드가 뜰 때까지. */
+async function myFresh(page, target, { focus }) {
+  await page.evaluate((f) => {
+    localStorage.removeItem("dailyPlan.today.v1");
+    localStorage.setItem("dailyPlan.v1", JSON.stringify({ pace: 10, order: "curriculum", mix: "auto", focus: f }));
+  }, focus);
+  await pickStageOne(page, target);
+  await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+  const today = page.locator("[data-today-current]").first();
+  for (let i = 0; i < 60 && !(await today.count()); i++) await page.waitForTimeout(500);
+  await page.waitForTimeout(2500);
+}
+
 const REDO_CARDS = {
   en: { frame: "en-f2-01", wrong: "Last night I watch a movie with my sister.", right: "Last night I watched a movie with my sister." },
   es: { frame: "es-f2-20", wrong: "¿Se puede pago con tarjeta?", right: "¿Se puede pagar con tarjeta?" },
@@ -1510,6 +1528,98 @@ const STEPS = {
     for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
     await wait(2500);
     await card.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await wait(1500);
+  },
+  async "my-banks"({ page, wait, target }) {
+    // 2.79: My 큰 칸 셋 — 위 칸 이름 줄 [Stagebank | Quizbank | Logbank], Stagebank(오늘 할 것 하나 + n단계 ›), Quizbank 첫 문제.
+    await myFresh(page, target, { focus: "vocab" });
+    await page.locator('[data-my-layer="keep"] section[data-kind]').first().waitFor({ timeout: 30_000 }).catch(() => undefined);
+    await page.locator("[data-my-jump]").first().evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -60);
+    await wait(2000);
+  },
+  async lesson({ page, wait, target }) {
+    // 2.79: Stagebank 오늘 할 것의 문장구조 카드 ▶ → 수업 [설명 › 퀴즈 › 대화] 첫 장(뜻·구조·쓰임·예문).
+    await myFresh(page, target, { focus: "vocab" });
+    const card = page.locator('[data-today-current="frame"]').first();
+    for (let i = 0; i < 20 && !(await card.count()); i++) await wait(500);
+    await card.click();
+    // 설명은 /api/curriculum/frame-lesson(공유 캐시) — 예문 🔊이 뜰 때까지.
+    for (let i = 0; i < 60 && (await page.getByText("🔊").count()) < 2; i++) await wait(500);
+    await wait(2000);
+  },
+  async quizbank({ page, ui, wait, target }) {
+    // 2.79: Quizbank 시험 탭 — 모인 소재 20개(이 폰 examPool, 1·2단계 문장구조를 끼움)면 📝 시험 줄 + 소재 칩.
+    const { framesFor } = await import(`file://${path.join(ROOT, "src/lib/curriculum/frames.ts").replace(/\\/g, "/")}`);
+    const keys = [...framesFor(target, 1), ...framesFor(target, 2)].slice(0, 22).map((frame) => `f|${frame.id}`);
+    await page.evaluate(([t, list]) => {
+      const now = Date.now();
+      const pool = {};
+      list.forEach((key, i) => (pool[key] = { at: now - i * 3_600_000, r: [i % 3 === 0 ? "wrong" : i % 3 === 1 ? "stuck" : "opened"] }));
+      localStorage.setItem(`examPool.v1.${t}`, JSON.stringify(pool));
+    }, [target, keys]);
+    await myFresh(page, target, { focus: "vocab" });
+    const keep = page.locator('[data-my-layer="keep"]').first();
+    // 시험 탭은 저장된 설정으로 열리지 않는다(readSettings가 exam을 모름) — 탭을 누른다.
+    await keep.locator('[data-focus="exam"]').first().click();
+    const start = keep.locator("[data-exam-start]").first();
+    for (let i = 0; i < 40 && !(await start.count()); i++) await wait(500);
+    if (!(await start.count())) throw new Error(`no exam row (${ui.examTitle})`);
+    await keep.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -70);
+    await wait(1500);
+  },
+  async "real-call"({ page, wait }) {
+    // 2.79: AI 통화 = 실제 통화 화면(위 튜터 그림·💬 자막 한 줄, 아래 나, 🙉·💬·💡·끝내기). 무료는 통화가 없어 이 장면만 플러스로 보이게(앱이 받는 답만).
+    await page.route("**/api/entitlement*", async (route) => {
+      const response = await route.fetch().catch(() => null);
+      if (!response) return route.fallback();
+      const body = await response.json();
+      const terms = body.plans?.plus ?? {};
+      Object.assign(body, { plan: "plus", tier: "plus", isPremium: true, dailyLimit: terms.dailyChat ?? 50, callDailyMinutes: 10, callTodayLeftSeconds: 600 });
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
+    });
+    await page.evaluate(() => localStorage.setItem("roleplayCaptions", "1"));
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    const call = page.locator('button:has(span:text-is("📞"))').first();
+    for (let i = 0; i < 40 && !(await call.count()); i++) await wait(500);
+    await wait(2000);
+    await call.click();
+    await page.locator("[data-call-stage]").first().waitFor({ timeout: 30_000 });
+    // 튜터 첫 줄이 자막에 뜰 때까지(가짜 마이크 소리가 내 차례로 들리기 전에).
+    await wait(9000);
+  },
+  async "stage-ways"({ page, wait, target }) {
+    // 2.79 사용법 my.map: Stagebank 단계 화면(n단계 ›) → 연습 방식 버튼 → 그림 고르기 시트(🧩·🎯·🎭·🔤·📐).
+    await myFresh(page, target, { focus: "vocab" });
+    await page.locator("[data-peek-stage]").first().click();
+    const way = page.locator("[data-script-method]").first();
+    for (let i = 0; i < 40 && !(await way.count()); i++) await wait(500);
+    await way.click();
+    await page.locator('[data-way-sheet="script-method"]').first().waitFor({ timeout: 15_000 });
+    await wait(2500);
+  },
+  async "call-recap"({ page, ui, wait, target }) {
+    // 2.79 사용법 call.review: 통화 기록 → 돌아보기 → 넘겨서 맨 뒤 통화 정리(🧩·🔤 → 내 문장으로 수업). 지난 통화는 끼움(PAST_CALL).
+    await STEPS.meant({ page, ui, wait, target });
+    const recap = page.locator("[data-call-recap]").first();
+    const next = page.locator(`[data-call-pages] button[aria-label="${ui.studyChapterNext}"]`).last();
+    for (let i = 0; i < 12 && (await next.count()) && (await next.isEnabled().catch(() => false)); i++) {
+      await next.click();
+      await wait(700);
+    }
+    for (let i = 0; i < 20 && !(await recap.count()); i++) await wait(500);
+    if (!(await recap.count())) throw new Error("no call recap");
+    await wait(1500);
+  },
+  async "tutor-pick"({ page, ui, wait }) {
+    // 2.79 사용법 call.pause 자리(튜터 고르기): AI 대화 ⋮ — 튜터 목소리 [그림 이름 | 그림 이름].
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    const menu = page.getByRole("button", { name: exactly(ui.sessionMenu) }).first();
+    for (let i = 0; i < 40 && !(await menu.count()); i++) await wait(500);
+    await wait(2500);
+    await menu.click();
+    await page.getByRole("group", { name: ui.tutorVoice }).first().waitFor({ timeout: 10_000 });
     await wait(1500);
   },
   async "keep-quiz"(ctx) {
@@ -2511,10 +2621,12 @@ async function save(png, locale, shot) {
     .toFile(path.join(dir, `${shot}.webp`));
 }
 
+// 2.79 real-call: 통화는 마이크를 연다 — 가짜 마이크가 없으면 통화가 바로 닫혀 채팅 화면이 찍힌다.
+const FAKE_MIC = GUIDE_CALL || Boolean(process.env.CAPTURE_MIC_WAV) || note.items.some((item) => item.shot === "real-call");
 const browser = await chromium.launch({
   ...(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}),
   // The call opens the microphone; a fake one answers the permission prompt.
-  ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV
+  ...(FAKE_MIC
     ? { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required", ...(process.env.CAPTURE_MIC_WAV ? [`--use-file-for-fake-audio-capture=${process.env.CAPTURE_MIC_WAV}`] : [])] }
     : {}),
 });
@@ -2527,13 +2639,23 @@ for (const locale of only ?? Object.keys(copy)) {
   // tmp/store-raw-ios/<locale>/. 앱 모드라 API를 운영 주소로 바로 부르므로 그 요청을 받아 CORS를 붙여 돌려준다.
   const IOS = process.env.CAPTURE_IOS === "1";
   const captureUser = `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}${TARGET_OVERRIDE ? `-${TARGET_OVERRIDE}` : ""}`;
-  const context = await browser.newContext({ viewport: IOS ? { width: 440, height: 956 } : { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: IOS ? 3 : 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV ? { permissions: ["microphone"] } : {}) });
+  const context = await browser.newContext({ viewport: IOS ? { width: 440, height: 956 } : { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: IOS ? 3 : 2, isMobile: true, hasTouch: true, ...(FAKE_MIC ? { permissions: ["microphone"] } : {}) });
   if (IOS) {
     await context.addInitScript(() => {
       window.CapacitorCustomPlatform = { name: "ios", plugins: {} };
       try { localStorage.setItem("aiDataConsent", "capture"); } catch {}
     });
   }
+  // 2026-10-31부터 처음 설치(저장소 비었을 때)는 앱 언어를 기기 언어로 정해 적는다 — 첫 화면이 뜨기 전에 언어를 넣어 둔다.
+  await context.addInitScript(([target, uiLocale]) => {
+    try {
+      if (!localStorage.getItem("appUiLocale")) {
+        localStorage.setItem("appTargetLanguage", target);
+        localStorage.setItem("appUiLocale", uiLocale);
+        localStorage.setItem("whatsNewSeenVersion", "999");
+      }
+    } catch {}
+  }, [TARGET_FOR(locale), locale]);
   const page = await context.newPage();
   await page.route("**/api/**", (route) => {
     const headers = { ...route.request().headers(), "x-rc-user": captureUser };
