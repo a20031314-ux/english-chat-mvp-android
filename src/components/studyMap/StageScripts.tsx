@@ -53,6 +53,7 @@ import { typedMatches, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { weakKeysOfScript } from "@/lib/curriculum/quiz";
+import { blankFor, fillBlank } from "@/lib/curriculum/scriptChoice";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 
@@ -506,15 +507,26 @@ function ScriptPlayer({
   }, [passes, outcome, language, script.id, isPremium, onPassed]);
 
   // 내 줄을 써서 보냄 → 대본 줄과 낱말 대조(typedMatches, 모델·서버 없음 — 원가 0). 맞히면 그 줄을 들려준다.
+  // 쓸 곳은 그 줄의 핵심 조각만(2026-11-01 사용자 "문장을 다 적어야 해?" → 핵심만 빈칸): 핵심 표현 → 문장구조 조각 → 가장 긴 낱말
+  // (scriptChoice.ts blankFor). 이름이 걸리거나 조각을 못 고르면 줄 전체.
+  const blankOf = (i: number): string | null => {
+    const piece = blankFor(language, script, i);
+    return piece && !(learnerName && piece.includes(learnerName)) ? piece : null;
+  };
+  const blanked = (text: string, piece: string | null) => (piece ? text.replace(piece, "____") : "");
   const submit = () => {
     const line = script.lines[index];
     const typed = draft.trim();
     if (!line || line.who !== "me" || !typed) return;
     stopTts();
-    const compared = typedMatches(line.text, typed, readings[line.text]);
+    const piece = blankOf(index);
+    // 빈칸에 넣어 줄 전체로 맞춰 본다(빈칸 조각만 따로 대조하면 문장부호·띄어쓰기가 걸림). 줄 전체를 써도 맞음.
+    const filled = piece ? fillBlank(line.text, piece, typed) : typed;
+    const compared = typedMatches(line.text, filled, readings[line.text]);
+    const whole = piece ? typedMatches(line.text, typed, readings[line.text]) : compared;
     const named = Boolean(learnerName) && line.text.includes(learnerName!);
-    const clean = compared.matched || (named && cleanBesidesName(compared.outcomes, learnerName));
-    setResults((current) => ({ ...current, [index]: { heard: typed, practice: null, clean, mode } }));
+    const clean = compared.matched || whole.matched || (named && cleanBesidesName(compared.outcomes, learnerName));
+    setResults((current) => ({ ...current, [index]: { heard: piece ? filled : typed, practice: null, clean, mode } }));
     if (!clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
     // 틀린 줄을 이 폰에 남긴다(맞히면 지움) — 다음에 열면 ◐, My "지난번에 틀린 것"(curriculum/scriptMisses.ts).
     noteLine(language, script.id, index, !clean);
@@ -677,6 +689,12 @@ function ScriptPlayer({
                     {glossFor(line.gloss, locale)}
                   </p>
                 )}
+                {!show && blankOf(i) ? (
+                  // 쓰기 전: 줄은 보이고 핵심 조각만 빈칸(답은 그 조각뿐 — 새지 않게). 조각이 없으면 뜻만(줄 전체를 씀).
+                  <p dir="auto" className="mt-1 text-chat text-slate-100">
+                    {blanked(line.text, blankOf(i))}
+                  </p>
+                ) : null}
                 {show ? (
                   <div className="mt-1 flex items-start gap-2">
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">

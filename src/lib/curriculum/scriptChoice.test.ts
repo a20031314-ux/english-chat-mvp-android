@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allScriptsFor } from "./stageScripts.ts";
-import { blankFor, choiceForLine, parseChoices, ruleChoice, choicesInput, WRONG_COUNT } from "./scriptChoice.ts";
+import { blankFor, fillBlank, choiceForLine, parseChoices, ruleChoice, choicesInput, WRONG_COUNT } from "./scriptChoice.ts";
 
 const LANGS = ["ko", "ja", "es", "zh", "en", "id", "vi", "th", "fr", "it", "pt", "ru", "ar", "hi"];
 
@@ -84,4 +84,18 @@ test("오답 확인: 원어민이 받아들일 오답은 빼고, 둘 아래로 �
   assert.deepEqual(out[a!.i]!.wrong.map((w) => w.text), ["x1", "x3"]);
   assert.equal(out[b!.i], undefined, "둘 아래면 뺌");
   assert.deepEqual(applyCheck(choices, "nope"), choices, "확인 실패면 그대로");
+});
+
+test("채팅 빈칸(2026-11-01): 쓴 조각을 줄에 넣어 줄 전체로 대조 — 띄어쓰기 없는 언어는 붙이고", async () => {
+  const { typedMatches } = await import("../roleplay/practice.ts");
+  // 스페인어
+  const es = "Quiero un café con leche, por favor.";
+  assert.equal(typedMatches(es, fillBlank(es, "café con leche", "café con leche")).matched, true);
+  assert.equal(typedMatches(es, fillBlank(es, "café con leche", "té")).matched, false);
+  assert.equal(fillBlank("Hola, Sofía.", "Sofía", "Sofía"), "Hola, Sofía.");
+  // 일본어(띄어쓰기 없음)
+  const ja = "コーヒーをください。";
+  assert.equal(fillBlank(ja, "ください", "ください"), ja);
+  assert.equal(typedMatches(ja, fillBlank(ja, "ください", "ください")).matched, true);
+  assert.equal(typedMatches(ja, fillBlank(ja, "ください", "くださる")).matched, false);
 });

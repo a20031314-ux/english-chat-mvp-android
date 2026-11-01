@@ -43,6 +43,18 @@ export function blankFor(language: string, script: StageScript, index: number): 
   return [...words].sort((a, b) => [...b].length - [...a].length)[0]!;
 }
 
+/**
+ * My 대본 채팅의 빈칸에 쓴 말을 줄에 넣는다(2026-11-01, 핵심만 빈칸) — 그 줄 전체로 대조하려고.
+ * 띄어쓰기 없는 언어(ja·zh·th)는 그대로 붙이고, 그 밖엔 앞뒤 띄어쓰기를 맞춘다.
+ */
+export function fillBlank(text: string, piece: string, typed: string): string {
+  const at = text.indexOf(piece);
+  if (at < 0) return typed;
+  const word = typed.trim();
+  if (isSpaceless(text)) return text.slice(0, at) + word + text.slice(at + piece.length);
+  return `${text.slice(0, at)} ${word} ${text.slice(at + piece.length)}`.replace(/\s+/g, " ").replace(/\s+([,.!?;:])/g, "$1").trim();
+}
+
 /* ---------- 규칙 오답(모델 없이) ---------- */
 
 /** 언어마다 서로 헷갈리는 기능어 묶음(조사·관사·전치사·조동사·어미). 꼴을 바꿔 "문법" 오답을 만든다. */
