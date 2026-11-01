@@ -346,10 +346,10 @@
         }
       },
       "what-easy": {
-        "text": "ما طلبك؟ قهوة؟ شاي؟ عصير؟",
+        "text": "هل تريد قهوة أم شايا أم عصيرا؟",
         "gloss": {
-          "en": "Your order? Coffee? Tea? Juice?",
-          "ko": "뭐 드려요? 커피? 차? 주스?"
+          "en": "Do you want coffee, tea or juice?",
+          "ko": "커피요, 차요, 아니면 주스요?"
         }
       },
       "menu": {
@@ -360,10 +360,10 @@
         }
       },
       "menu-easy": {
-        "text": "قهوة، شاي، أو عصير.",
+        "text": "عندنا قهوة وشاي وعصير.",
         "gloss": {
-          "en": "Coffee, tea or juice.",
-          "ko": "커피, 차, 아니면 주스요."
+          "en": "We have coffee, tea and juice.",
+          "ko": "커피, 차, 주스가 있어요."
         }
       },
       "how-many": {
@@ -374,10 +374,10 @@
         }
       },
       "how-many-easy": {
-        "text": "واحد؟ اثنان؟",
+        "text": "كوب واحد أم اثنان؟",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "하나요? 둘이요?"
+          "en": "One cup or two?",
+          "ko": "한 잔이요, 두 잔이요?"
         }
       },
       "more": {
@@ -388,24 +388,24 @@
         }
       },
       "more-easy": {
-        "text": "شيء آخر؟ نعم أم لا؟",
+        "text": "هل تريد شيئا آخر؟",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "price": {
-        "text": "ديناران، من فضلك.",
+        "text": "الحساب اثنان فقط.",
         "gloss": {
-          "en": "Two dinars, please.",
-          "ko": "2디나르입니다."
+          "en": "That's just two.",
+          "ko": "2만 내시면 돼요."
         }
       },
       "price-easy": {
-        "text": "اثنان... ديناران.",
+        "text": "اثنان فقط.",
         "gloss": {
-          "en": "Two... two dinars.",
-          "ko": "둘… 2디나르요."
+          "en": "Just two.",
+          "ko": "2예요."
         }
       },
       "bye": {
@@ -715,38 +715,38 @@
         }
       },
       "dir-easy": {
-        "text": "إلى الأمام. ثم يمين.",
+        "text": "امش إلى الأمام، ثم إلى اليمين.",
         "gloss": {
-          "en": "Straight ahead. Then right.",
-          "ko": "앞으로요. 그다음 오른쪽."
+          "en": "Walk straight ahead, then to the right.",
+          "ko": "앞으로 가다가 오른쪽으로요."
         }
       },
       "which": {
-        "text": "أي كلمة؟ إلى الأمام، ثم يمين.",
+        "text": "أي كلمة؟ إلى الأمام، ثم إلى اليمين.",
         "gloss": {
-          "en": "Which word? Straight ahead, then right.",
+          "en": "Which word? Straight ahead, then to the right.",
           "ko": "어느 말이요? 앞으로, 그다음 오른쪽이요."
         }
       },
       "which-easy": {
-        "text": "أمام... ثم يمين.",
+        "text": "إلى الأمام، ثم إلى اليمين.",
         "gloss": {
-          "en": "Ahead... then right.",
-          "ko": "앞… 그다음 오른쪽."
+          "en": "Straight ahead, then to the right.",
+          "ko": "앞으로, 그다음 오른쪽이요."
         }
       },
       "slow": {
-        "text": "طبعا. إلى... الأمام. ثم... يمين. خمس دقائق.",
+        "text": "طبعا. إلى الأمام، ثم إلى اليمين. خمس دقائق فقط.",
         "gloss": {
-          "en": "Of course. Straight... ahead. Then... right. Five minutes.",
-          "ko": "그럼요. 앞으로… 가서. 그다음… 오른쪽. 5분이에요."
+          "en": "Of course. Straight ahead, then to the right. Just five minutes.",
+          "ko": "그럼요. 앞으로 가다가 오른쪽이요. 5분이면 돼요."
         }
       },
       "slow-easy": {
-        "text": "أمام. يمين. خمس دقائق.",
+        "text": "إلى الأمام ثم إلى اليمين، خمس دقائق.",
         "gloss": {
-          "en": "Ahead. Right. Five minutes.",
-          "ko": "앞. 오른쪽. 5분."
+          "en": "Straight ahead then right, five minutes.",
+          "ko": "앞으로 갔다가 오른쪽, 5분이요."
         }
       },
       "good": {
@@ -1025,9 +1025,9 @@
             "meaning": "says it's expensive",
             "go": "t-expensive",
             "match": [
-              "غالي",
-              "هذا غالي",
-              "آسف، هذا غالي"
+              "غال",
+              "هذا غال",
+              "آسف، هذا غال جدا"
             ]
           }
         ],
@@ -1120,10 +1120,10 @@
         }
       },
       "yes-easy": {
-        "text": "أيفون؟ نعم أم لا؟",
+        "text": "هل هاتفك أيفون؟",
         "gloss": {
-          "en": "iPhone? Yes or no?",
-          "ko": "아이폰이요? 네, 아니요?"
+          "en": "Is your phone an iPhone?",
+          "ko": "휴대폰이 아이폰이에요?"
         }
       },
       "look": {
@@ -1148,24 +1148,24 @@
         }
       },
       "this-easy": {
-        "text": "الأبيض أم الأسود؟",
+        "text": "هل تريد الأبيض أم الأسود؟",
         "gloss": {
-          "en": "The white one or the black one?",
+          "en": "Do you want the white one or the black one?",
           "ko": "흰 거요, 검은 거요?"
         }
       },
       "price": {
-        "text": "سبعة دنانير.",
+        "text": "السعر سبعة.",
         "gloss": {
-          "en": "Seven dinars.",
-          "ko": "7디나르예요."
+          "en": "The price is seven.",
+          "ko": "7이에요."
         }
       },
       "price-easy": {
-        "text": "سبعة. سبعة دنانير.",
+        "text": "سبعة فقط.",
         "gloss": {
-          "en": "Seven. Seven dinars.",
-          "ko": "7이요. 7디나르."
+          "en": "Just seven.",
+          "ko": "7이요."
         }
       },
       "bag": {
@@ -1176,10 +1176,10 @@
         }
       },
       "bag-easy": {
-        "text": "كيس؟ نعم أم لا؟",
+        "text": "هل تريد كيسا؟",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉투요? 네, 아니요?"
+          "en": "Do you want a bag?",
+          "ko": "봉투 드릴까요?"
         }
       },
       "expensive": {
@@ -1525,10 +1525,10 @@
         }
       },
       "booking-easy": {
-        "text": "حجز؟ نعم أم لا؟",
+        "text": "هل عندك حجز، نعم أم لا؟",
         "gloss": {
-          "en": "A booking? Yes or no?",
-          "ko": "예약이요? 네, 아니요?"
+          "en": "Do you have a booking, yes or no?",
+          "ko": "예약 있으세요, 네, 아니요?"
         }
       },
       "name": {
@@ -1539,10 +1539,10 @@
         }
       },
       "name-easy": {
-        "text": "اسمك؟",
+        "text": "ما اسمك؟",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름이요?"
+          "en": "What is your name?",
+          "ko": "이름이 뭐예요?"
         }
       },
       "found": {
@@ -1553,10 +1553,10 @@
         }
       },
       "found-easy": {
-        "text": "الطابق الثالث. هذا المفتاح.",
+        "text": "غرفتك في الطابق الثالث، وهذا المفتاح.",
         "gloss": {
-          "en": "Third floor. This is the key.",
-          "ko": "3층이에요. 이게 열쇠예요."
+          "en": "Your room is on the third floor, and this is the key.",
+          "ko": "방은 3층이고, 이게 열쇠예요."
         }
       },
       "lift": {
@@ -1567,10 +1567,10 @@
         }
       },
       "lift-easy": {
-        "text": "هناك. يمين.",
+        "text": "المصعد على اليمين.",
         "gloss": {
-          "en": "There. Right.",
-          "ko": "저기요. 오른쪽."
+          "en": "The lift is on the right.",
+          "ko": "엘리베이터는 오른쪽이에요."
         }
       },
       "breakfast": {
@@ -1581,10 +1581,10 @@
         }
       },
       "breakfast-easy": {
-        "text": "الفطور: سبعة... إلى عشرة.",
+        "text": "الفطور في الساعة السابعة.",
         "gloss": {
-          "en": "Breakfast: seven... to ten.",
-          "ko": "아침: 7시… 부터 10시까지요."
+          "en": "Breakfast is at seven.",
+          "ko": "아침 식사는 7시예요."
         }
       },
       "anything": {
@@ -1602,7 +1602,7 @@
         }
       },
       "end": {
-        "text": "أهلا وسهلا. تصبح على خير!",
+        "text": "عفوا. تصبح على خير!",
         "gloss": {
           "en": "You're welcome. Good night!",
           "ko": "천만에요. 안녕히 주무세요!"
@@ -1879,10 +1879,10 @@
         }
       },
       "job-easy": {
-        "text": "طالب؟ أم موظف؟",
+        "text": "هل أنت طالب أم موظف؟",
         "gloss": {
-          "en": "A student? Or an employee?",
-          "ko": "학생이야? 아니면 회사원?"
+          "en": "Are you a student or an employee?",
+          "ko": "학생이야, 아니면 회사원이야?"
         }
       },
       "me-job": {
@@ -1900,10 +1900,10 @@
         }
       },
       "ask-back-easy": {
-        "text": "اسألني! من أين أنا؟",
+        "text": "اسألني سؤالا. مثلا: من أين أنا؟",
         "gloss": {
-          "en": "Ask me! Where am I from?",
-          "ko": "나한테 물어봐! 나는 어디서 왔을까?"
+          "en": "Ask me a question. For example: where am I from?",
+          "ko": "나한테 질문해 봐. 예를 들면: 나는 어디서 왔을까?"
         }
       },
       "again": {
@@ -2060,7 +2060,7 @@
             "go": "t-me",
             "match": [
               "لا، ليس عندي",
-              "لا، أنا وحدي",
+              "لا، ليس عندي إخوة",
               "لا"
             ]
           }
@@ -2197,10 +2197,10 @@
         }
       },
       "job-easy": {
-        "text": "عمله؟ طبيب؟ مدرس؟",
+        "text": "هل هو طبيب أم مدرس؟",
         "gloss": {
-          "en": "His job? A doctor? A teacher?",
-          "ko": "직업이? 의사? 선생님?"
+          "en": "Is he a doctor or a teacher?",
+          "ko": "의사야, 선생님이야?"
         }
       },
       "brothers": {
@@ -2211,10 +2211,10 @@
         }
       },
       "brothers-easy": {
-        "text": "كم أخ عندك؟ واحد؟ اثنان؟",
+        "text": "كم أخا عندك؟ واحد أم اثنان؟",
         "gloss": {
-          "en": "How many brothers? One? Two?",
-          "ko": "형제 몇 명이야? 한 명? 두 명?"
+          "en": "How many brothers do you have? One or two?",
+          "ko": "형제가 몇 명이야? 한 명, 두 명?"
         }
       },
       "me": {
@@ -2232,10 +2232,10 @@
         }
       },
       "dog-easy": {
-        "text": "كلبك؟ نعم أم لا؟",
+        "text": "هل هذا كلبك؟",
         "gloss": {
-          "en": "Your dog? Yes or no?",
-          "ko": "네 개야? 응, 아니?"
+          "en": "Is this your dog?",
+          "ko": "이거 네 개야?"
         }
       },
       "like": {
@@ -2548,10 +2548,10 @@
         }
       },
       "order-easy": {
-        "text": "فلافل؟ نعم أم لا؟",
+        "text": "هل تحب الفلافل؟",
         "gloss": {
-          "en": "Falafel? Yes or no?",
-          "ko": "팔라펠? 응, 아니?"
+          "en": "Do you like falafel?",
+          "ko": "팔라펠 좋아해?"
         }
       },
       "spicy": {
@@ -2562,10 +2562,10 @@
         }
       },
       "spicy-easy": {
-        "text": "الأكل الحار؟ تحبه؟",
+        "text": "هل تحب الأكل الحار؟",
         "gloss": {
-          "en": "Spicy food? Do you like it?",
-          "ko": "매운 거? 좋아해?"
+          "en": "Do you like spicy food?",
+          "ko": "매운 음식 좋아해?"
         }
       },
       "me": {
@@ -2597,10 +2597,10 @@
         }
       },
       "answer-easy": {
-        "text": "كنافة؟ نعم أم لا؟",
+        "text": "هل تريد كنافة؟",
         "gloss": {
-          "en": "Kunafa? Yes or no?",
-          "ko": "쿠나파? 응, 아니?"
+          "en": "Do you want kunafa?",
+          "ko": "쿠나파 먹을래?"
         }
       },
       "end": {
@@ -2878,10 +2878,10 @@
         }
       },
       "hello-easy": {
-        "text": "السباحة؟ نعم أم لا؟",
+        "text": "هل تستطيع السباحة؟",
         "gloss": {
-          "en": "Swimming? Yes or no?",
-          "ko": "수영이요? 네, 아니요?"
+          "en": "Can you swim?",
+          "ko": "수영할 수 있어요?"
         }
       },
       "football": {
@@ -2892,10 +2892,10 @@
         }
       },
       "football-easy": {
-        "text": "كرة القدم؟ نعم أم لا؟",
+        "text": "هل تلعب كرة القدم؟",
         "gloss": {
-          "en": "Football? Yes or no?",
-          "ko": "축구요? 네, 아니요?"
+          "en": "Do you play football?",
+          "ko": "축구해요?"
         }
       },
       "cook": {
@@ -2906,10 +2906,10 @@
         }
       },
       "cook-easy": {
-        "text": "الطبخ؟ يمكنك أم لا؟",
+        "text": "هل تستطيع الطبخ؟",
         "gloss": {
-          "en": "Cooking? Can you or not?",
-          "ko": "요리요? 할 수 있어요, 없어요?"
+          "en": "Can you cook?",
+          "ko": "요리할 수 있어요?"
         }
       },
       "lesson": {
@@ -3030,8 +3030,8 @@
             "meaning": "says where they are",
             "go": "t-late",
             "match": [
-              "أنا في الباص",
-              "أنا في الباص الآن",
+              "أنا في الحافلة",
+              "أنا في الحافلة الآن",
               "أنا في البيت",
               "أنا في المترو"
             ]
@@ -3119,7 +3119,7 @@
             "match": [
               "الساعة الواحدة",
               "في الواحدة",
-              "أتغدى الساعة الواحدة"
+              "أتناول الغداء في الساعة الواحدة"
             ]
           },
           {
@@ -3221,10 +3221,10 @@
         }
       },
       "fine-easy": {
-        "text": "أين أنت؟ في البيت؟ في الباص؟",
+        "text": "أين أنت الآن؟ في البيت أم في الحافلة؟",
         "gloss": {
-          "en": "Where are you? At home? On the bus?",
-          "ko": "어디야? 집? 버스?"
+          "en": "Where are you now? At home or on the bus?",
+          "ko": "지금 어디야? 집이야, 버스야?"
         }
       },
       "late": {
@@ -3235,28 +3235,28 @@
         }
       },
       "late-easy": {
-        "text": "متى؟ الساعة التاسعة؟ العاشرة؟",
+        "text": "متى تصل؟ في التاسعة أم في العاشرة؟",
         "gloss": {
-          "en": "When? Nine o'clock? Ten?",
-          "ko": "언제? 9시? 10시?"
+          "en": "When will you arrive? At nine or at ten?",
+          "ko": "언제 도착해? 9시, 10시?"
         }
       },
       "lunch": {
-        "text": "حسنا. والغداء؟ متى تتغدى عادة؟",
+        "text": "حسنا. والغداء؟ متى تتناول الغداء عادة؟",
         "gloss": {
           "en": "OK. And lunch? When do you usually have lunch?",
           "ko": "알겠어. 점심은? 보통 언제 먹어?"
         }
       },
       "lunch-easy": {
-        "text": "الغداء: الساعة الواحدة؟ الثانية؟",
+        "text": "الغداء في الواحدة أم في الثانية؟",
         "gloss": {
-          "en": "Lunch: at one? At two?",
-          "ko": "점심: 1시? 2시?"
+          "en": "Is lunch at one or at two?",
+          "ko": "점심은 1시야, 2시야?"
         }
       },
       "together": {
-        "text": "ممتاز، نتغدى معا اليوم!",
+        "text": "ممتاز، نتناول الغداء معا اليوم!",
         "gloss": {
           "en": "Great, let's have lunch together today!",
           "ko": "좋아, 오늘 같이 점심 먹자!"
@@ -3406,7 +3406,8 @@
             "match": [
               "لا أعرف بعد",
               "قليلا",
-              "ما زلت جديدا"
+              "ما زلت جديدا",
+              "ما زلت جديدة"
             ]
           }
         ],
@@ -3524,10 +3525,10 @@
         }
       },
       "hello-easy": {
-        "text": "أنت جديد هنا؟ نعم أم لا؟",
+        "text": "هل أنت جديد هنا؟",
         "gloss": {
-          "en": "Are you new here? Yes or no?",
-          "ko": "여기 새로 오셨어요? 네, 아니요?"
+          "en": "Are you new here?",
+          "ko": "여기 새로 오셨어요?"
         }
       },
       "floor": {
@@ -3538,10 +3539,10 @@
         }
       },
       "floor-easy": {
-        "text": "أي طابق؟ الأول؟ الثالث؟",
+        "text": "في أي طابق أنت؟",
         "gloss": {
-          "en": "Which floor? First? Third?",
-          "ko": "몇 층이요? 1층? 3층?"
+          "en": "Which floor are you on?",
+          "ko": "몇 층이에요?"
         }
       },
       "area": {
@@ -3566,10 +3567,10 @@
         }
       },
       "need-easy": {
-        "text": "تحتاج شيئا؟ سوق؟ صيدلية؟",
+        "text": "هل تحتاج إلى شيء؟ السوق أم الصيدلية؟",
         "gloss": {
-          "en": "Need anything? A market? A pharmacy?",
-          "ko": "필요한 거 있어요? 시장? 약국?"
+          "en": "Do you need anything? The market or the pharmacy?",
+          "ko": "필요한 거 있어요? 시장이요, 약국이요?"
         }
       },
       "market": {
@@ -3872,30 +3873,30 @@
         }
       },
       "price": {
-        "text": "الكيلو بدينار ونصف.",
+        "text": "الكيلو بواحد ونصف.",
         "gloss": {
-          "en": "A dinar and a half per kilo.",
-          "ko": "1킬로에 1디나르 반이에요."
+          "en": "A kilo is one and a half.",
+          "ko": "1킬로에 1.5예요."
         }
       },
       "price-easy": {
-        "text": "الكيلو... دينار... ونصف.",
+        "text": "الكيلو بواحد ونصف فقط.",
         "gloss": {
-          "en": "The kilo... one dinar... and a half.",
-          "ko": "1킬로… 1디나르… 반이요."
+          "en": "A kilo is just one and a half.",
+          "ko": "1킬로에 1.5요."
         }
       },
       "slow": {
-        "text": "طبعا. دينار ونصف. واحد ونصف.",
+        "text": "طبعا. الكيلو بواحد ونصف. واحد ونصف.",
         "gloss": {
-          "en": "Of course. A dinar and a half. One and a half.",
-          "ko": "그럼요. 1디나르 반. 하나 반이요."
+          "en": "Of course. A kilo is one and a half. One and a half.",
+          "ko": "그럼요. 1킬로에 1.5. 하나 반이요."
         }
       },
       "slow-easy": {
-        "text": "واحد ونصف.",
+        "text": "واحد ونصف فقط.",
         "gloss": {
-          "en": "One and a half.",
+          "en": "Just one and a half.",
           "ko": "하나 반이요."
         }
       },
@@ -3907,10 +3908,10 @@
         }
       },
       "how-much-easy": {
-        "text": "كيلو؟ اثنان؟",
+        "text": "كيلو واحد أم كيلوان؟",
         "gloss": {
-          "en": "One kilo? Two?",
-          "ko": "1킬로? 2킬로?"
+          "en": "One kilo or two?",
+          "ko": "1킬로요, 2킬로요?"
         }
       },
       "more": {
@@ -3921,38 +3922,38 @@
         }
       },
       "more-easy": {
-        "text": "شيء آخر؟ موز؟ برتقال؟",
+        "text": "هل تريد شيئا آخر؟ موزا أم برتقالا؟",
         "gloss": {
-          "en": "Anything else? Bananas? Oranges?",
-          "ko": "또요? 바나나? 오렌지?"
+          "en": "Do you want anything else? Bananas or oranges?",
+          "ko": "더 필요한 거 있어요? 바나나요, 오렌지요?"
         }
       },
       "total": {
-        "text": "المجموع ثلاثة دنانير.",
+        "text": "المجموع ثلاثة.",
         "gloss": {
-          "en": "That's three dinars altogether.",
-          "ko": "모두 3디나르예요."
+          "en": "That's three altogether.",
+          "ko": "모두 3이에요."
         }
       },
       "total-easy": {
-        "text": "ثلاثة. ثلاثة دنانير.",
+        "text": "ثلاثة فقط.",
         "gloss": {
-          "en": "Three. Three dinars.",
-          "ko": "3이요. 3디나르."
+          "en": "Just three.",
+          "ko": "3이요."
         }
       },
       "bananas": {
-        "text": "الموز بدينار. كيلو؟",
+        "text": "الموز بواحد. هل تريد كيلو؟",
         "gloss": {
-          "en": "Bananas are one dinar. A kilo?",
-          "ko": "바나나는 1디나르예요. 1킬로요?"
+          "en": "Bananas are one. Do you want a kilo?",
+          "ko": "바나나는 1이에요. 1킬로 드릴까요?"
         }
       },
       "end": {
-        "text": "الله يعطيك العافية. مع السلامة!",
+        "text": "بارك الله فيك. مع السلامة!",
         "gloss": {
-          "en": "May God give you health. Goodbye!",
-          "ko": "수고하세요. 안녕히 가세요!"
+          "en": "God bless you. Goodbye!",
+          "ko": "고마워요. 안녕히 가세요!"
         }
       }
     },
@@ -4039,9 +4040,9 @@
             "meaning": "chooses one",
             "go": "t-how-many",
             "match": [
-              "أريد كعك، من فضلك",
+              "أريد كعكا، من فضلك",
               "أريد الكعك بالسمسم، من فضلك",
-              "أريد معمول، من فضلك",
+              "أريد معمولا، من فضلك",
               "أريد هذا، من فضلك"
             ]
           },
@@ -4218,17 +4219,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "صباح النور! الخبز ساخن الآن.",
+        "text": "صباح الخير! الخبز ساخن الآن.",
         "gloss": {
           "en": "Good morning! The bread is hot right now.",
           "ko": "좋은 아침이에요! 지금 빵 따끈해요."
         }
       },
       "hello-easy": {
-        "text": "صباح الخير. ماذا تطلب؟ خبز؟",
+        "text": "صباح الخير. هل تريد خبزا؟",
         "gloss": {
-          "en": "Good morning. What will you have? Bread?",
-          "ko": "좋은 아침이에요. 뭐 드려요? 빵?"
+          "en": "Good morning. Do you want bread?",
+          "ko": "좋은 아침이에요. 빵 드릴까요?"
         }
       },
       "what-is": {
@@ -4239,10 +4240,10 @@
         }
       },
       "what-is-easy": {
-        "text": "هذا كعك. هذا معمول.",
+        "text": "هذا كعك، وهذا معمول.",
         "gloss": {
-          "en": "This is ka'ak. This is ma'moul.",
-          "ko": "이건 카악. 이건 마아물."
+          "en": "This is ka'ak, and this is ma'moul.",
+          "ko": "이건 카악이고, 이건 마아물이에요."
         }
       },
       "how-many": {
@@ -4253,10 +4254,10 @@
         }
       },
       "how-many-easy": {
-        "text": "كم؟ واحدة؟ اثنتان؟",
+        "text": "قطعة واحدة أم قطعتان؟",
         "gloss": {
-          "en": "How many? One? Two?",
-          "ko": "몇 개요? 하나? 둘?"
+          "en": "One piece or two?",
+          "ko": "한 개요, 두 개요?"
         }
       },
       "bread": {
@@ -4267,28 +4268,28 @@
         }
       },
       "bread-easy": {
-        "text": "خبز؟ نعم أم لا؟",
+        "text": "هل تريد خبزا؟",
         "gloss": {
-          "en": "Bread? Yes or no?",
-          "ko": "빵이요? 네, 아니요?"
+          "en": "Do you want bread?",
+          "ko": "빵 드릴까요?"
         }
       },
       "price": {
-        "text": "المجموع دينار وربع.",
+        "text": "المجموع واحد وربع.",
         "gloss": {
-          "en": "That's a dinar and a quarter altogether.",
-          "ko": "모두 1디나르 25예요."
+          "en": "That's one and a quarter altogether.",
+          "ko": "모두 1.25예요."
         }
       },
       "price-easy": {
-        "text": "دينار... وربع.",
+        "text": "واحد وربع فقط.",
         "gloss": {
-          "en": "One dinar... and a quarter.",
-          "ko": "1디나르… 하고 4분의 1이요."
+          "en": "Just one and a quarter.",
+          "ko": "1.25요."
         }
       },
       "end": {
-        "text": "تفضل. صحة وهنا!",
+        "text": "تفضل. بالهناء والشفاء!",
         "gloss": {
           "en": "Here you go. Enjoy!",
           "ko": "여기요. 맛있게 드세요!"
@@ -4610,24 +4611,24 @@
         }
       },
       "hello-easy": {
-        "text": "دجاج أم لحم؟",
+        "text": "هل تريد دجاجا أم لحما؟",
         "gloss": {
-          "en": "Chicken or meat?",
+          "en": "Do you want chicken or meat?",
           "ko": "닭고기요, 고기요?"
         }
       },
       "dish": {
-        "text": "اليوم عندنا مقلوبة، رز مع دجاج.",
+        "text": "اليوم عندنا مقلوبة، أرز مع دجاج.",
         "gloss": {
           "en": "Today we have maqluba, rice with chicken.",
           "ko": "오늘은 마클루바가 있어요, 닭고기 밥이요."
         }
       },
       "dish-easy": {
-        "text": "مقلوبة: رز ودجاج.",
+        "text": "المقلوبة أرز مع دجاج.",
         "gloss": {
-          "en": "Maqluba: rice and chicken.",
-          "ko": "마클루바: 밥이랑 닭고기요."
+          "en": "Maqluba is rice with chicken.",
+          "ko": "마클루바는 닭고기 밥이에요."
         }
       },
       "drink": {
@@ -4638,10 +4639,10 @@
         }
       },
       "drink-easy": {
-        "text": "ماء؟ عصير؟ شاي؟",
+        "text": "ماء أم عصير أم شاي؟",
         "gloss": {
-          "en": "Water? Juice? Tea?",
-          "ko": "물? 주스? 차?"
+          "en": "Water, juice or tea?",
+          "ko": "물이요, 주스요, 차요?"
         }
       },
       "more": {
@@ -4652,10 +4653,10 @@
         }
       },
       "more-easy": {
-        "text": "شيء آخر؟ نعم أم لا؟",
+        "text": "هل تريد شيئا آخر؟",
         "gloss": {
-          "en": "Anything else? Yes or no?",
-          "ko": "더요? 네, 아니요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "toilet": {
@@ -4673,17 +4674,17 @@
         }
       },
       "later-easy": {
-        "text": "كل شيء جيد؟",
+        "text": "هل كل شيء جيد؟",
         "gloss": {
           "en": "Is everything good?",
           "ko": "다 괜찮으세요?"
         }
       },
       "bill": {
-        "text": "حاضر. الحساب خمسة دنانير.",
+        "text": "حاضر. الحساب خمسة.",
         "gloss": {
-          "en": "Certainly. The bill is five dinars.",
-          "ko": "네. 계산은 5디나르예요."
+          "en": "Certainly. The bill is five.",
+          "ko": "네. 계산은 5예요."
         }
       },
       "end": {
@@ -4734,18 +4735,18 @@
             "meaning": "asks where the bus is",
             "go": "t-number",
             "match": [
-              "أين الباص إلى الجامعة؟",
-              "السلام عليكم، أين الباص إلى الجامعة؟",
-              "أين باص الجامعة، من فضلك؟"
+              "أين الحافلة إلى الجامعة؟",
+              "السلام عليكم، أين الحافلة إلى الجامعة؟",
+              "أين حافلة الجامعة، من فضلك؟"
             ]
           },
           {
             "meaning": "asks which bus goes there",
             "go": "t-number",
             "match": [
-              "أي باص إلى الجامعة؟",
-              "الباص إلى الجامعة؟",
-              "ما رقم الباص؟"
+              "أي حافلة إلى الجامعة؟",
+              "الحافلة إلى الجامعة؟",
+              "ما رقم الحافلة؟"
             ]
           }
         ],
@@ -4798,7 +4799,7 @@
             "go": "t-when-q",
             "match": [
               "اثنا عشر؟ شكرا",
-              "رقم اثني عشر",
+              "الرقم اثنا عشر",
               "حسنا، فهمت"
             ]
           }
@@ -4837,9 +4838,9 @@
             "meaning": "asks when",
             "go": "t-when",
             "match": [
-              "متى يأتي الباص؟",
-              "متى الباص؟",
-              "الباص يأتي متى؟"
+              "متى تأتي الحافلة؟",
+              "متى الحافلة؟",
+              "متى تصل الحافلة؟"
             ]
           },
           {
@@ -4848,7 +4849,7 @@
             "match": [
               "بكم التذكرة؟",
               "كم التذكرة؟",
-              "بكم الباص؟"
+              "بكم الحافلة؟"
             ]
           }
         ],
@@ -4883,7 +4884,7 @@
             "match": [
               "بكم التذكرة؟",
               "حسنا، بكم التذكرة؟",
-              "بكم الباص؟",
+              "بكم الحافلة؟",
               "بكم التذكرة، من فضلك؟"
             ]
           },
@@ -4979,45 +4980,45 @@
         }
       },
       "number": {
-        "text": "الباص رقم اثني عشر يذهب إلى الجامعة.",
+        "text": "الحافلة رقم اثني عشر تذهب إلى الجامعة.",
         "gloss": {
           "en": "Bus number twelve goes to the university.",
           "ko": "12번 버스가 대학교에 가요."
         }
       },
       "number-easy": {
-        "text": "رقم اثني عشر. واحد، اثنان: اثنا عشر.",
+        "text": "الرقم اثنا عشر.",
         "gloss": {
-          "en": "Number twelve. One, two: twelve.",
-          "ko": "12번이요. 1, 2: 12."
+          "en": "The number is twelve.",
+          "ko": "12번이요."
         }
       },
       "when": {
-        "text": "يأتي كل عشر دقائق.",
+        "text": "تأتي كل عشر دقائق.",
         "gloss": {
           "en": "It comes every ten minutes.",
           "ko": "10분마다 와요."
         }
       },
       "when-easy": {
-        "text": "عشر دقائق.",
+        "text": "كل عشر دقائق.",
         "gloss": {
-          "en": "Ten minutes.",
-          "ko": "10분이요."
+          "en": "Every ten minutes.",
+          "ko": "10분마다요."
         }
       },
       "ticket": {
-        "text": "التذكرة بنصف دينار. ادفع للسائق.",
+        "text": "التذكرة بواحد. ادفع للسائق.",
         "gloss": {
-          "en": "The ticket is half a dinar. Pay the driver.",
-          "ko": "표는 반 디나르예요. 기사님께 내요."
+          "en": "The ticket is one. Pay the driver.",
+          "ko": "표는 1이에요. 기사님께 내요."
         }
       },
       "ticket-easy": {
-        "text": "نصف دينار. للسائق.",
+        "text": "السعر واحد. ادفع للسائق.",
         "gloss": {
-          "en": "Half a dinar. To the driver.",
-          "ko": "반 디나르. 기사님께요."
+          "en": "The price is one. Pay the driver.",
+          "ko": "1이에요. 기사님께요."
         }
       },
       "ask-more": {
@@ -5028,14 +5029,14 @@
         }
       },
       "ask-more-easy": {
-        "text": "سؤال آخر؟ متى؟ بكم؟",
+        "text": "هل عندك سؤال آخر؟ متى أم بكم؟",
         "gloss": {
-          "en": "Another question? When? How much?",
-          "ko": "또요? 언제? 얼마?"
+          "en": "Do you have another question? When, or how much?",
+          "ko": "또 질문 있어요? 언제, 아니면 얼마?"
         }
       },
       "there": {
-        "text": "آه، هذا هو الباص الآن!",
+        "text": "آه، هذه هي الحافلة الآن!",
         "gloss": {
           "en": "Oh, here's the bus now!",
           "ko": "아, 지금 버스 왔어요!"
@@ -5060,7 +5061,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "A ticket window at the main train station of an Arab city, morning. The learner wants tickets to another city. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
+    "setting": "A ticket window at the main train station of an Arab city, morning. The learner wants tickets to the capital. The tutor speaks Modern Standard Arabic (fusha) only, never a dialect, and keeps the learner's gender neutral where possible.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2
@@ -5078,8 +5079,8 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Say you'd like a ticket to Aqaba, please.",
-          "ko": "아카바 가는 표를 달라고 하세요."
+          "en": "Say you'd like a ticket to the capital, please.",
+          "ko": "수도로 가는 표를 달라고 하세요."
         },
         "frame": "ar-f1-06",
         "expect": [
@@ -5087,19 +5088,19 @@
             "meaning": "asks for a ticket to a city",
             "go": "t-how-many",
             "match": [
-              "أريد تذكرة إلى العقبة، من فضلك",
-              "إلى العقبة، من فضلك",
-              "أريد تذكرة إلى إربد، من فضلك",
-              "صباح الخير، أريد تذكرة، من فضلك"
+              "أريد تذكرة إلى العاصمة، من فضلك",
+              "إلى العاصمة، من فضلك",
+              "أريد تذكرة، من فضلك",
+              "صباح الخير، أريد تذكرة إلى العاصمة، من فضلك"
             ]
           },
           {
             "meaning": "just names the city",
             "go": "t-how-many",
             "match": [
-              "العقبة",
-              "إلى العقبة",
-              "العقبة لو سمحت"
+              "العاصمة",
+              "إلى العاصمة",
+              "العاصمة لو سمحت"
             ]
           }
         ],
@@ -5333,7 +5334,7 @@
             "match": [
               "أي رصيف؟",
               "مرة ثانية، من فضلك",
-              "الرصيف كم؟"
+              "من أي رصيف؟"
             ]
           }
         ],
@@ -5383,10 +5384,10 @@
         }
       },
       "how-many-easy": {
-        "text": "تذكرة واحدة؟ اثنتان؟",
+        "text": "تذكرة واحدة أم تذكرتان؟",
         "gloss": {
-          "en": "One ticket? Two?",
-          "ko": "한 장? 두 장?"
+          "en": "One ticket or two?",
+          "ko": "한 장이요, 두 장이요?"
         }
       },
       "type": {
@@ -5397,10 +5398,10 @@
         }
       },
       "type-easy": {
-        "text": "ذهاب فقط؟ نعم أم لا؟",
+        "text": "هل تريد ذهابا فقط؟",
         "gloss": {
-          "en": "Only one way? Yes or no?",
-          "ko": "편도만요? 네, 아니요?"
+          "en": "Do you want one way only?",
+          "ko": "편도만이에요?"
         }
       },
       "ready": {
@@ -5411,24 +5412,24 @@
         }
       },
       "ready-easy": {
-        "text": "سؤال؟ السعر؟ الوقت؟",
+        "text": "هل تسأل عن السعر أم عن الوقت؟",
         "gloss": {
-          "en": "A question? The price? The time?",
-          "ko": "질문이요? 가격? 시간?"
+          "en": "Are you asking about the price or the time?",
+          "ko": "가격이요, 시간이요?"
         }
       },
       "price": {
-        "text": "التذكرتان بثمانية دنانير.",
+        "text": "التذكرتان بثمانية.",
         "gloss": {
-          "en": "The two tickets are eight dinars.",
-          "ko": "두 장에 8디나르예요."
+          "en": "The two tickets are eight.",
+          "ko": "두 장에 8이에요."
         }
       },
       "price-easy": {
-        "text": "ثمانية. ثمانية دنانير.",
+        "text": "ثمانية فقط.",
         "gloss": {
-          "en": "Eight. Eight dinars.",
-          "ko": "8이요. 8디나르."
+          "en": "Just eight.",
+          "ko": "8이요."
         }
       },
       "time": {
@@ -5439,10 +5440,10 @@
         }
       },
       "time-easy": {
-        "text": "الساعة العاشرة. الرصيف اثنان.",
+        "text": "في الساعة العاشرة، من الرصيف الثاني.",
         "gloss": {
-          "en": "Ten o'clock. Platform two.",
-          "ko": "10시요. 2번 승강장."
+          "en": "At ten o'clock, from platform two.",
+          "ko": "10시, 2번 승강장이요."
         }
       },
       "end": {
@@ -5571,8 +5572,8 @@
         "type": "learner",
         "id": "l-now",
         "goal": {
-          "en": "Say yes, you are on University Street.",
-          "ko": "네, 대학로에 있다고 하세요."
+          "en": "Say yes, you are staying on University Street.",
+          "ko": "네, 대학로에 묵고 있다고 하세요."
         },
         "frame": "ar-f1-16",
         "expect": [
@@ -5760,10 +5761,10 @@
         }
       },
       "hello-easy": {
-        "text": "أين؟ الفندق؟ المطار؟",
+        "text": "إلى الفندق أم إلى المطار؟",
         "gloss": {
-          "en": "Where? A hotel? The airport?",
-          "ko": "어디요? 호텔? 공항?"
+          "en": "To the hotel or to the airport?",
+          "ko": "호텔이요, 공항이요?"
         }
       },
       "which": {
@@ -5774,24 +5775,24 @@
         }
       },
       "which-easy": {
-        "text": "اسم الفندق؟",
+        "text": "ما اسم الفندق؟",
         "gloss": {
-          "en": "The name of the hotel?",
-          "ko": "호텔 이름이요?"
+          "en": "What is the name of the hotel?",
+          "ko": "호텔 이름이 뭐예요?"
         }
       },
       "where-now": {
-        "text": "حسنا. أين نحن الآن؟ هل أنت في شارع الجامعة؟",
+        "text": "حسنا. هل تسكن في شارع الجامعة؟",
         "gloss": {
-          "en": "OK. Where are we now? Are you on University Street?",
-          "ko": "알겠어요. 지금 어디예요? 대학로에 계신 거예요?"
+          "en": "OK. Are you staying on University Street?",
+          "ko": "알겠어요. 대학로에 묵으세요?"
         }
       },
       "where-now-easy": {
-        "text": "أين أنت الآن؟",
+        "text": "هل فندقك في شارع الجامعة؟",
         "gloss": {
-          "en": "Where are you now?",
-          "ko": "지금 어디 계세요?"
+          "en": "Is your hotel on University Street?",
+          "ko": "호텔이 대학로에 있어요?"
         }
       },
       "tourist": {
@@ -5802,10 +5803,10 @@
         }
       },
       "tourist-easy": {
-        "text": "سائح؟ أم طالب؟",
+        "text": "هل أنت سائح أم طالب؟",
         "gloss": {
-          "en": "A tourist? Or a student?",
-          "ko": "관광객이에요? 아니면 학생?"
+          "en": "Are you a tourist or a student?",
+          "ko": "관광객이에요, 학생이에요?"
         }
       },
       "arrived": {
@@ -5823,16 +5824,16 @@
         }
       },
       "price": {
-        "text": "أربعة دنانير.",
+        "text": "الأجرة أربعة.",
         "gloss": {
-          "en": "Four dinars.",
-          "ko": "4디나르예요."
+          "en": "The fare is four.",
+          "ko": "요금은 4예요."
         }
       },
       "price-easy": {
-        "text": "أربعة.",
+        "text": "أربعة فقط.",
         "gloss": {
-          "en": "Four.",
+          "en": "Just four.",
           "ko": "4요."
         }
       },
@@ -5926,7 +5927,7 @@
             "meaning": "today",
             "go": "t-fever",
             "match": [
-              "من اليوم",
+              "منذ اليوم",
               "نعم، اليوم",
               "اليوم صباحا"
             ]
@@ -5935,7 +5936,7 @@
             "meaning": "yesterday",
             "go": "t-fever",
             "match": [
-              "من أمس",
+              "منذ أمس",
               "أمس",
               "منذ يومين"
             ]
@@ -5988,7 +5989,7 @@
             "go": "t-fever-again2",
             "match": [
               "لا أفهم",
-              "ما حرارة؟",
+              "ما معنى حرارة؟",
               "مرة ثانية، من فضلك"
             ]
           }
@@ -6134,10 +6135,10 @@
         }
       },
       "since-easy": {
-        "text": "اليوم؟ أم أمس؟",
+        "text": "منذ اليوم أم منذ أمس؟",
         "gloss": {
-          "en": "Today? Or yesterday?",
-          "ko": "오늘이요? 어제요?"
+          "en": "Since today or since yesterday?",
+          "ko": "오늘부터요, 어제부터요?"
         }
       },
       "fever": {
@@ -6148,10 +6149,10 @@
         }
       },
       "fever-easy": {
-        "text": "حرارة؟ نعم أم لا؟",
+        "text": "هل عندك حرارة؟",
         "gloss": {
-          "en": "A fever? Yes or no?",
-          "ko": "열이요? 네, 아니요?"
+          "en": "Do you have a fever?",
+          "ko": "열 있어요?"
         }
       },
       "this": {
@@ -6162,24 +6163,24 @@
         }
       },
       "this-easy": {
-        "text": "هذا الدواء. حبة واحدة.",
+        "text": "خذ هذا الدواء، حبة واحدة.",
         "gloss": {
-          "en": "This medicine. One tablet.",
-          "ko": "이 약이요. 한 알."
+          "en": "Take this medicine, one tablet.",
+          "ko": "이 약 드세요, 한 알이요."
         }
       },
       "price": {
-        "text": "ثلاثة دنانير.",
+        "text": "السعر ثلاثة.",
         "gloss": {
-          "en": "Three dinars.",
-          "ko": "3디나르예요."
+          "en": "The price is three.",
+          "ko": "3이에요."
         }
       },
       "price-easy": {
-        "text": "ثلاثة. ثلاثة دنانير.",
+        "text": "ثلاثة فقط.",
         "gloss": {
-          "en": "Three. Three dinars.",
-          "ko": "3이요. 3디나르."
+          "en": "Just three.",
+          "ko": "3이요."
         }
       },
       "end": {
@@ -6465,9 +6466,9 @@
             "meaning": "too expensive",
             "go": "t-end",
             "match": [
-              "غالي",
-              "آسف، هذا غالي",
-              "هذا غالي قليلا"
+              "غال",
+              "آسف، هذا غال",
+              "هذا غال قليلا"
             ]
           }
         ],
@@ -6496,10 +6497,10 @@
         }
       },
       "hello-easy": {
-        "text": "ماذا تطلب؟ قميص؟ بنطلون؟",
+        "text": "هل تريد قميصا أم بنطالا؟",
         "gloss": {
-          "en": "What are you looking for? A shirt? Trousers?",
-          "ko": "뭐 찾으세요? 셔츠? 바지?"
+          "en": "Do you want a shirt or trousers?",
+          "ko": "셔츠요, 바지요?"
         }
       },
       "color": {
@@ -6510,10 +6511,10 @@
         }
       },
       "color-easy": {
-        "text": "أبيض؟ أزرق؟",
+        "text": "هل تريد الأبيض أم الأزرق؟",
         "gloss": {
-          "en": "White? Blue?",
-          "ko": "흰색? 파란색?"
+          "en": "Do you want the white one or the blue one?",
+          "ko": "흰색이요, 파란색이요?"
         }
       },
       "size": {
@@ -6524,10 +6525,10 @@
         }
       },
       "size-easy": {
-        "text": "وسط؟ كبير؟",
+        "text": "هل تريد مقاس وسط أم كبير؟",
         "gloss": {
-          "en": "Medium? Large?",
-          "ko": "미디엄? 라지?"
+          "en": "Do you want medium or large?",
+          "ko": "미디엄이요, 라지요?"
         }
       },
       "try": {
@@ -6538,10 +6539,10 @@
         }
       },
       "try-easy": {
-        "text": "جميل؟ نعم أم لا؟",
+        "text": "هل يعجبك؟",
         "gloss": {
-          "en": "Nice? Yes or no?",
-          "ko": "예뻐요? 네, 아니요?"
+          "en": "Do you like it?",
+          "ko": "마음에 드세요?"
         }
       },
       "other": {
@@ -6552,24 +6553,24 @@
         }
       },
       "price": {
-        "text": "خمسة عشر دينارا.",
+        "text": "السعر خمسة عشر.",
         "gloss": {
-          "en": "Fifteen dinars.",
-          "ko": "15디나르예요."
+          "en": "The price is fifteen.",
+          "ko": "15예요."
         }
       },
       "price-easy": {
-        "text": "خمسة عشر. واحد، خمسة.",
+        "text": "خمسة عشر فقط.",
         "gloss": {
-          "en": "Fifteen. One, five.",
-          "ko": "15요. 1, 5."
+          "en": "Just fifteen.",
+          "ko": "15요."
         }
       },
       "end": {
-        "text": "شكرا لك. استعمله بالهناء!",
+        "text": "شكرا لك. نراك مرة أخرى!",
         "gloss": {
-          "en": "Thank you. Enjoy wearing it!",
-          "ko": "감사합니다. 잘 입으세요!"
+          "en": "Thank you. See you again!",
+          "ko": "감사합니다. 또 오세요!"
         }
       }
     },
@@ -6655,7 +6656,7 @@
             "match": [
               "سوداء",
               "حقيبة سوداء صغيرة",
-              "أسود"
+              "لونها أسود"
             ]
           },
           {
@@ -6788,7 +6789,7 @@
               "عندي كتاب وهاتف",
               "فيها كتاب وهاتف",
               "كتاب وهاتف",
-              "عندي هاتف فيها"
+              "فيها هاتف وكتاب"
             ]
           },
           {
@@ -6928,10 +6929,10 @@
         }
       },
       "what-easy": {
-        "text": "اللون؟ أسود؟ أحمر؟",
+        "text": "هل هي سوداء أم حمراء؟",
         "gloss": {
-          "en": "The colour? Black? Red?",
-          "ko": "색이요? 검은색? 빨간색?"
+          "en": "Is it black or red?",
+          "ko": "검은색이에요, 빨간색이에요?"
         }
       },
       "when": {
@@ -6956,10 +6957,10 @@
         }
       },
       "look-easy": {
-        "text": "حقيبتك؟ نعم أم لا؟",
+        "text": "هل هذه حقيبتك؟",
         "gloss": {
-          "en": "Your bag? Yes or no?",
-          "ko": "당신 가방이에요? 네, 아니요?"
+          "en": "Is this your bag?",
+          "ko": "이게 당신 가방이에요?"
         }
       },
       "inside": {
@@ -6970,10 +6971,10 @@
         }
       },
       "inside-easy": {
-        "text": "في الحقيبة: كتاب؟ هاتف؟",
+        "text": "هل في الحقيبة كتاب أم هاتف؟",
         "gloss": {
-          "en": "In the bag: a book? A phone?",
-          "ko": "가방 안에: 책? 휴대폰?"
+          "en": "Is there a book or a phone in the bag?",
+          "ko": "가방 안에 책이 있어요, 휴대폰이 있어요?"
         }
       },
       "ok": {
@@ -6991,10 +6992,10 @@
         }
       },
       "no-easy": {
-        "text": "غدا. الساعة العاشرة. هنا.",
+        "text": "تعال غدا في الساعة العاشرة.",
         "gloss": {
-          "en": "Tomorrow. Ten o'clock. Here.",
-          "ko": "내일요. 10시. 여기로요."
+          "en": "Come tomorrow at ten.",
+          "ko": "내일 10시에 오세요."
         }
       },
       "end": {
@@ -7047,7 +7048,7 @@
               "ما الأماكن الجميلة هنا؟",
               "صباح الخير، ما الأماكن المهمة هنا؟",
               "ما المكان الجميل هنا؟",
-              "ما هنا للزيارة؟"
+              "ما أجمل مكان هنا؟"
             ]
           },
           {
@@ -7288,10 +7289,10 @@
         }
       },
       "see-easy": {
-        "text": "القلعة، المتحف، السوق.",
+        "text": "هنا القلعة والمتحف والسوق.",
         "gloss": {
-          "en": "The citadel, the museum, the market.",
-          "ko": "성채, 박물관, 시장이요."
+          "en": "Here there's the citadel, the museum and the market.",
+          "ko": "여기엔 성채, 박물관, 시장이 있어요."
         }
       },
       "map": {
@@ -7316,10 +7317,10 @@
         }
       },
       "open-easy": {
-        "text": "تسعة... إلى خمسة.",
+        "text": "من التاسعة إلى الخامسة.",
         "gloss": {
-          "en": "Nine... to five.",
-          "ko": "9시… 부터 5시까지요."
+          "en": "From nine to five.",
+          "ko": "9시부터 5시까지요."
         }
       },
       "more": {
@@ -7330,10 +7331,10 @@
         }
       },
       "more-easy": {
-        "text": "شيء آخر؟",
+        "text": "هل تريد شيئا آخر؟",
         "gloss": {
-          "en": "Anything else?",
-          "ko": "또요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "end": {
@@ -7344,28 +7345,28 @@
         }
       },
       "ticket": {
-        "text": "الدخول بثلاثة دنانير.",
+        "text": "الدخول بثلاثة.",
         "gloss": {
-          "en": "Entry is three dinars.",
-          "ko": "입장료는 3디나르예요."
+          "en": "Entry is three.",
+          "ko": "입장료는 3이에요."
         }
       },
       "ticket-easy": {
-        "text": "ثلاثة دنانير.",
+        "text": "ثلاثة فقط.",
         "gloss": {
-          "en": "Three dinars.",
-          "ko": "3디나르요."
+          "en": "Just three.",
+          "ko": "3이요."
         }
       },
       "thanks": {
-        "text": "أهلا وسهلا. هل الخريطة مفيدة؟",
+        "text": "عفوا. هل الخريطة مفيدة؟",
         "gloss": {
           "en": "You're welcome. Is the map useful?",
           "ko": "천만에요. 지도 도움이 돼요?"
         }
       },
       "thanks-easy": {
-        "text": "الخريطة جيدة؟",
+        "text": "هل الخريطة جيدة؟",
         "gloss": {
           "en": "Is the map good?",
           "ko": "지도 괜찮아요?"
@@ -7636,9 +7637,9 @@
             "meaning": "asks how long",
             "go": "t-weeks",
             "match": [
-              "كم أسبوع؟",
+              "كم أسبوعا؟",
               "إلى متى؟",
-              "كم يوما الكتاب؟"
+              "كم يوما؟"
             ]
           },
           {
@@ -7720,10 +7721,10 @@
         }
       },
       "hello-easy": {
-        "text": "بطاقة؟ نعم أم لا؟",
+        "text": "هل تريد بطاقة؟",
         "gloss": {
-          "en": "A card? Yes or no?",
-          "ko": "카드요? 네, 아니요?"
+          "en": "Do you want a card?",
+          "ko": "카드 만드실 거예요?"
         }
       },
       "name": {
@@ -7734,10 +7735,10 @@
         }
       },
       "name-easy": {
-        "text": "اسمك، من فضلك؟",
+        "text": "ما اسمك، من فضلك؟",
         "gloss": {
-          "en": "Your name, please?",
-          "ko": "이름이요?"
+          "en": "What is your name, please?",
+          "ko": "이름이 뭐예요?"
         }
       },
       "spell": {
@@ -7762,7 +7763,7 @@
         }
       },
       "live-easy": {
-        "text": "بيتك أين؟",
+        "text": "أين بيتك؟",
         "gloss": {
           "en": "Where is your home?",
           "ko": "집이 어디예요?"
@@ -7776,10 +7777,10 @@
         }
       },
       "phone-easy": {
-        "text": "رقم الهاتف؟",
+        "text": "ما رقم هاتفك؟",
         "gloss": {
-          "en": "Phone number?",
-          "ko": "전화번호요?"
+          "en": "What is your phone number?",
+          "ko": "전화번호가 뭐예요?"
         }
       },
       "card": {
@@ -7790,21 +7791,21 @@
         }
       },
       "card-easy": {
-        "text": "هذه البطاقة. ثلاثة كتب.",
+        "text": "هذه بطاقتك. خذ ثلاثة كتب.",
         "gloss": {
-          "en": "This is the card. Three books.",
-          "ko": "카드예요. 책 세 권이요."
+          "en": "This is your card. Take three books.",
+          "ko": "카드예요. 책 세 권 빌려 가세요."
         }
       },
       "weeks": {
-        "text": "أسبوعين.",
+        "text": "لمدة أسبوعين.",
         "gloss": {
-          "en": "Two weeks.",
-          "ko": "2주요."
+          "en": "For two weeks.",
+          "ko": "2주 동안이요."
         }
       },
       "end": {
-        "text": "أهلا وسهلا. قراءة ممتعة!",
+        "text": "عفوا. قراءة ممتعة!",
         "gloss": {
           "en": "You're welcome. Happy reading!",
           "ko": "천만에요. 즐거운 독서 되세요!"
@@ -7895,15 +7896,15 @@
             "match": [
               "متى تفتحون؟",
               "حسنا، متى يفتح النادي؟",
-              "ما الساعات؟"
+              "ما ساعات العمل؟"
             ]
           },
           {
             "meaning": "says it's expensive",
             "go": "t-hours",
             "match": [
-              "غالي قليلا",
-              "هذا غالي",
+              "غال قليلا",
+              "هذا غال",
               "عندك سعر أرخص؟"
             ]
           }
@@ -8074,24 +8075,24 @@
         }
       },
       "hello-easy": {
-        "text": "جديد؟ نعم أم لا؟",
+        "text": "هل أنت جديد هنا؟",
         "gloss": {
-          "en": "New? Yes or no?",
-          "ko": "처음이에요? 네, 아니요?"
+          "en": "Are you new here?",
+          "ko": "처음 오셨어요?"
         }
       },
       "price": {
-        "text": "الاشتراك بعشرين دينارا في الشهر.",
+        "text": "الاشتراك بعشرين في الشهر.",
         "gloss": {
-          "en": "Membership is twenty dinars a month.",
-          "ko": "회원권은 한 달에 20디나르예요."
+          "en": "Membership is twenty a month.",
+          "ko": "회원권은 한 달에 20이에요."
         }
       },
       "price-easy": {
-        "text": "عشرون دينارا. كل شهر.",
+        "text": "عشرون في الشهر.",
         "gloss": {
-          "en": "Twenty dinars. Every month.",
-          "ko": "20디나르요. 매달."
+          "en": "Twenty a month.",
+          "ko": "한 달에 20이요."
         }
       },
       "hours": {
@@ -8116,9 +8117,9 @@
         }
       },
       "do-easy": {
-        "text": "الجري أم السباحة؟",
+        "text": "هل تريد الجري أم السباحة؟",
         "gloss": {
-          "en": "Running or swimming?",
+          "en": "Do you want running or swimming?",
           "ko": "달리기요, 수영이요?"
         }
       },
@@ -8130,10 +8131,10 @@
         }
       },
       "can-easy": {
-        "text": "السباحة؟ يمكنك؟",
+        "text": "هل تستطيع السباحة؟",
         "gloss": {
-          "en": "Swimming? Can you?",
-          "ko": "수영이요? 할 수 있어요?"
+          "en": "Can you swim?",
+          "ko": "수영할 수 있어요?"
         }
       },
       "form": {
@@ -8144,10 +8145,10 @@
         }
       },
       "form-easy": {
-        "text": "هذه ورقة. اكتب اسمك.",
+        "text": "هذه الاستمارة. اكتب اسمك هنا.",
         "gloss": {
-          "en": "This is a paper. Write your name.",
-          "ko": "이 종이예요. 이름 쓰세요."
+          "en": "This is the form. Write your name here.",
+          "ko": "신청서예요. 여기에 이름 쓰세요."
         }
       },
       "end": {
@@ -8209,7 +8210,8 @@
             "match": [
               "لا، ليس عندي موعد",
               "لا",
-              "لا، آسف"
+              "لا، آسف",
+              "لا، آسفة"
             ]
           }
         ],
@@ -8254,7 +8256,7 @@
             "match": [
               "لا أفهم",
               "مرة ثانية، من فضلك",
-              "ما الكامل؟"
+              "ما معنى الكامل؟"
             ]
           }
         ],
@@ -8304,7 +8306,7 @@
             "match": [
               "لا، المرة الثانية",
               "لا",
-              "لا، كنت هنا قبل"
+              "لا، كنت هنا من قبل"
             ]
           }
         ],
@@ -8481,10 +8483,10 @@
         }
       },
       "hello-easy": {
-        "text": "موعد؟ نعم أم لا؟",
+        "text": "هل عندك موعد اليوم؟",
         "gloss": {
-          "en": "An appointment? Yes or no?",
-          "ko": "예약이요? 네, 아니요?"
+          "en": "Do you have an appointment today?",
+          "ko": "오늘 예약 있으세요?"
         }
       },
       "name": {
@@ -8495,10 +8497,10 @@
         }
       },
       "name-easy": {
-        "text": "اسمك؟",
+        "text": "ما اسمك؟",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름이요?"
+          "en": "What is your name?",
+          "ko": "이름이 뭐예요?"
         }
       },
       "first": {
@@ -8509,10 +8511,10 @@
         }
       },
       "first-easy": {
-        "text": "أول مرة؟ نعم أم لا؟",
+        "text": "هل هذه أول مرة؟",
         "gloss": {
-          "en": "First time? Yes or no?",
-          "ko": "처음이에요? 네, 아니요?"
+          "en": "Is this the first time?",
+          "ko": "처음이에요?"
         }
       },
       "form": {
@@ -8523,10 +8525,10 @@
         }
       },
       "form-easy": {
-        "text": "هذه ورقة. اكتب هنا اسمك.",
+        "text": "اكتب اسمك هنا، من فضلك.",
         "gloss": {
-          "en": "This is a paper. Write your name here.",
-          "ko": "이 종이예요. 여기에 이름 쓰세요."
+          "en": "Write your name here, please.",
+          "ko": "여기에 이름 써 주세요."
         }
       },
       "explain": {
@@ -8537,10 +8539,10 @@
         }
       },
       "explain-easy": {
-        "text": "يوم. شهر. سنة.",
+        "text": "اكتب اليوم والشهر والسنة.",
         "gloss": {
-          "en": "Day. Month. Year.",
-          "ko": "일. 월. 년."
+          "en": "Write the day, the month and the year.",
+          "ko": "일, 월, 연도를 쓰세요."
         }
       },
       "wait": {
@@ -8551,10 +8553,10 @@
         }
       },
       "wait-easy": {
-        "text": "اجلس هناك. عشر دقائق.",
+        "text": "اجلس هناك عشر دقائق.",
         "gloss": {
-          "en": "Sit there. Ten minutes.",
-          "ko": "저기 앉으세요. 10분이요."
+          "en": "Sit there for ten minutes.",
+          "ko": "저기 10분 앉아 계세요."
         }
       },
       "end": {
@@ -8820,9 +8822,9 @@
     },
     "sentences": {
       "hello": {
-        "text": "صباح الخير يا جاري! تذكرني؟ أنا حسن.",
+        "text": "صباح الخير يا جاري! هل تذكرني؟ أنا حسن.",
         "gloss": {
-          "en": "Good morning, neighbour! Remember me? I'm Hassan.",
+          "en": "Good morning, neighbour! Do you remember me? I'm Hassan.",
           "ko": "좋은 아침이에요, 이웃님! 저 기억해요? 하산이에요."
         }
       },
@@ -8841,7 +8843,7 @@
         }
       },
       "fine-easy": {
-        "text": "ما اسمك مرة ثانية؟",
+        "text": "ما اسمك مرة أخرى؟",
         "gloss": {
           "en": "What's your name again?",
           "ko": "이름이 뭐였죠?"
@@ -8855,10 +8857,10 @@
         }
       },
       "floor-easy": {
-        "text": "طابقك؟ الأول؟ الثاني؟",
+        "text": "في أي طابق أنت؟",
         "gloss": {
-          "en": "Your floor? First? Second?",
-          "ko": "몇 층이요? 1층? 2층?"
+          "en": "Which floor are you on?",
+          "ko": "몇 층이에요?"
         }
       },
       "me": {
@@ -8890,7 +8892,7 @@
         }
       },
       "end": {
-        "text": "مع السلامة! يوم جمعة مبارك.",
+        "text": "مع السلامة! جمعة مباركة.",
         "gloss": {
           "en": "Goodbye! Have a blessed Friday.",
           "ko": "안녕히 가요! 좋은 금요일 보내요."
@@ -8988,7 +8990,7 @@
             "match": [
               "الكورية والإنجليزية",
               "أتكلم الكورية والإنجليزية قليلا",
-              "الكورية، وقليلا الإنجليزية"
+              "الكورية، والإنجليزية قليلا"
             ]
           },
           {
@@ -9179,10 +9181,10 @@
         }
       },
       "langs-easy": {
-        "text": "الكورية؟ الإنجليزية؟",
+        "text": "هل تتكلم الكورية أم الإنجليزية؟",
         "gloss": {
-          "en": "Korean? English?",
-          "ko": "한국어? 영어?"
+          "en": "Do you speak Korean or English?",
+          "ko": "한국어 해, 영어 해?"
         }
       },
       "french": {
@@ -9193,10 +9195,10 @@
         }
       },
       "french-easy": {
-        "text": "الفرنسية؟ نعم أم لا؟",
+        "text": "هل تتكلم الفرنسية؟",
         "gloss": {
-          "en": "French? Yes or no?",
-          "ko": "프랑스어? 응, 아니?"
+          "en": "Do you speak French?",
+          "ko": "프랑스어 해?"
         }
       },
       "learn": {
@@ -9207,10 +9209,10 @@
         }
       },
       "learn-easy": {
-        "text": "العربية؟ الكلام؟ الكتابة؟",
+        "text": "هل تريد الكلام أم الكتابة؟",
         "gloss": {
-          "en": "Arabic? Speaking? Writing?",
-          "ko": "아랍어? 말하기? 쓰기?"
+          "en": "Do you want speaking or writing?",
+          "ko": "말하기야, 쓰기야?"
         }
       },
       "me": {
@@ -9228,10 +9230,10 @@
         }
       },
       "job-q-easy": {
-        "text": "طالب؟ موظف؟",
+        "text": "هل أنت طالب أم موظف؟",
         "gloss": {
-          "en": "Student? Employee?",
-          "ko": "학생? 회사원?"
+          "en": "Are you a student or an employee?",
+          "ko": "학생이야, 회사원이야?"
         }
       },
       "end": {
@@ -9283,7 +9285,7 @@
               "عندك قلم؟",
               "آسف، عندك قلم؟",
               "هل عندك قلم، من فضلك؟",
-              "منى، عندك قلم؟"
+              "يا منى، عندك قلم؟"
             ]
           },
           {
@@ -9380,7 +9382,8 @@
             "match": [
               "لا، ليس عندي",
               "لا، آسف",
-              "لا، عندك ورقة؟"
+              "لا، عندك ورقة؟",
+              "لا، آسفة"
             ]
           }
         ],
@@ -9416,7 +9419,8 @@
               "نعم، هذا قلمك",
               "تفضل، هذا قلمك",
               "هذا قلمك، آسف",
-              "نعم، هذا قلمك، شكرا"
+              "نعم، هذا قلمك، شكرا",
+              "هذا قلمك، آسفة"
             ]
           },
           {
@@ -9527,10 +9531,10 @@
         }
       },
       "paper-easy": {
-        "text": "ورقة؟ نعم أم لا؟",
+        "text": "هل عندك ورقة؟",
         "gloss": {
-          "en": "Paper? Yes or no?",
-          "ko": "종이? 응, 아니?"
+          "en": "Do you have paper?",
+          "ko": "종이 있어?"
         }
       },
       "after": {
@@ -9541,10 +9545,10 @@
         }
       },
       "after-easy": {
-        "text": "قلمي؟ أين هو؟",
+        "text": "أين قلمي؟",
         "gloss": {
-          "en": "My pen? Where is it?",
-          "ko": "내 펜? 어디 있어?"
+          "en": "Where is my pen?",
+          "ko": "내 펜 어디 있어?"
         }
       },
       "book": {
@@ -9555,10 +9559,10 @@
         }
       },
       "book-easy": {
-        "text": "كتابك؟ نعم أم لا؟",
+        "text": "هل هذا كتابك؟",
         "gloss": {
-          "en": "Your book? Yes or no?",
-          "ko": "네 책이야? 응, 아니?"
+          "en": "Is this your book?",
+          "ko": "이거 네 책이야?"
         }
       },
       "end": {
@@ -9793,7 +9797,7 @@
             "match": [
               "خمس دقائق",
               "بعد خمس دقائق",
-              "دقيقتين"
+              "بعد دقيقتين"
             ]
           },
           {
@@ -9866,31 +9870,31 @@
         }
       },
       "meet": {
-        "text": "طيب. أنا الآن عند الباب الثاني، بجانب البنك الأخضر.",
+        "text": "حسنا. أنا الآن عند الباب الثاني، بجانب البنك الأخضر.",
         "gloss": {
           "en": "OK. I'm now at the second exit, next to the green bank.",
           "ko": "알았어. 나 지금 두 번째 출구, 초록색 은행 옆이야."
         }
       },
       "meet-easy": {
-        "text": "الباب الثاني. البنك.",
+        "text": "أنا عند الباب الثاني، بجانب البنك.",
         "gloss": {
-          "en": "The second exit. The bank.",
-          "ko": "두 번째 출구. 은행."
+          "en": "I'm at the second exit, next to the bank.",
+          "ko": "나 두 번째 출구, 은행 옆이야."
         }
       },
       "slow": {
-        "text": "الباب... الثاني. بجانب... البنك.",
+        "text": "حسنا. أنا عند الباب الثاني. بجانب البنك الأخضر.",
         "gloss": {
-          "en": "The exit... second. Next to... the bank.",
-          "ko": "출구… 두 번째. 옆에… 은행."
+          "en": "OK. I'm at the second exit. Next to the green bank.",
+          "ko": "알았어. 나 두 번째 출구야. 초록색 은행 옆."
         }
       },
       "slow-easy": {
-        "text": "الباب الثاني.",
+        "text": "أنا عند الباب الثاني.",
         "gloss": {
-          "en": "The second exit.",
-          "ko": "두 번째 출구."
+          "en": "I'm at the second exit.",
+          "ko": "나 두 번째 출구야."
         }
       },
       "when": {
@@ -9901,10 +9905,10 @@
         }
       },
       "when-easy": {
-        "text": "دقيقة؟ خمس دقائق؟",
+        "text": "بعد دقيقة أم بعد خمس دقائق؟",
         "gloss": {
-          "en": "One minute? Five minutes?",
-          "ko": "1분? 5분?"
+          "en": "In one minute or in five minutes?",
+          "ko": "1분 뒤? 5분 뒤?"
         }
       },
       "end": {
@@ -10191,10 +10195,10 @@
         }
       },
       "fine-easy": {
-        "text": "قهوة؟ نعم أم لا؟",
+        "text": "هل تريد قهوة؟",
         "gloss": {
-          "en": "Coffee? Yes or no?",
-          "ko": "커피? 응, 아니?"
+          "en": "Do you want a coffee?",
+          "ko": "커피 마실래?"
         }
       },
       "sugar": {
@@ -10205,10 +10209,10 @@
         }
       },
       "sugar-easy": {
-        "text": "سكر؟ نعم أم لا؟",
+        "text": "هل تريد سكرا؟",
         "gloss": {
-          "en": "Sugar? Yes or no?",
-          "ko": "설탕? 응, 아니?"
+          "en": "Do you want sugar?",
+          "ko": "설탕 넣을까?"
         }
       },
       "lunch": {
@@ -10219,10 +10223,10 @@
         }
       },
       "lunch-easy": {
-        "text": "الغداء: الساعة الواحدة؟ الثانية؟",
+        "text": "الغداء في الواحدة أم في الثانية؟",
         "gloss": {
-          "en": "Lunch: at one? At two?",
-          "ko": "점심: 1시? 2시?"
+          "en": "Is lunch at one or at two?",
+          "ko": "점심은 1시야, 2시야?"
         }
       },
       "together": {
@@ -10233,10 +10237,10 @@
         }
       },
       "together-easy": {
-        "text": "معا؟ نعم أم لا؟",
+        "text": "هل نذهب معا؟",
         "gloss": {
-          "en": "Together? Yes or no?",
-          "ko": "같이? 응, 아니?"
+          "en": "Shall we go together?",
+          "ko": "같이 갈까?"
         }
       },
       "end": {
@@ -10377,7 +10381,7 @@
             "match": [
               "هل يمكنك أن تفعل هذا؟",
               "افعل أنت، من فضلك",
-              "أنت، من فضلك"
+              "ساعدني أنت، من فضلك"
             ]
           },
           {
@@ -10503,10 +10507,10 @@
         }
       },
       "hello-easy": {
-        "text": "مشكلة؟ أساعدك؟",
+        "text": "هل أساعدك؟",
         "gloss": {
-          "en": "A problem? Shall I help you?",
-          "ko": "문제 있어요? 도와드릴까요?"
+          "en": "Shall I help you?",
+          "ko": "도와드릴까요?"
         }
       },
       "explain": {
@@ -10517,23 +10521,23 @@
         }
       },
       "explain-easy": {
-        "text": "هنا. ثم المحطة. ثم المال.",
+        "text": "اضغط هنا، ثم ادفع.",
         "gloss": {
-          "en": "Here. Then the station. Then the money.",
-          "ko": "여기. 그다음 역. 그다음 돈."
+          "en": "Press here, then pay.",
+          "ko": "여기를 누르고, 그다음 돈을 내요."
         }
       },
       "slow": {
-        "text": "طبعا. أولا... هنا. ثانيا... المحطة. ثالثا... ادفع.",
+        "text": "طبعا. أولا اضغط هنا. ثانيا اختر المحطة. ثالثا ادفع.",
         "gloss": {
-          "en": "Of course. First... here. Second... the station. Third... pay.",
-          "ko": "그럼요. 첫째… 여기. 둘째… 역. 셋째… 내요."
+          "en": "Of course. First press here. Second choose the station. Third pay.",
+          "ko": "그럼요. 첫째, 여기를 눌러요. 둘째, 역을 골라요. 셋째, 돈을 내요."
         }
       },
       "slow-easy": {
-        "text": "هنا، ثم المحطة، ثم ادفع.",
+        "text": "اضغط هنا، ثم المحطة، ثم ادفع.",
         "gloss": {
-          "en": "Here, then the station, then pay.",
+          "en": "Press here, then the station, then pay.",
           "ko": "여기, 그다음 역, 그다음 돈 내요."
         }
       },
@@ -10545,17 +10549,17 @@
         }
       },
       "station-easy": {
-        "text": "المحطة؟ ما اسمها؟",
+        "text": "ما اسم المحطة؟",
         "gloss": {
-          "en": "The station? What's its name?",
-          "ko": "역이요? 이름이 뭐예요?"
+          "en": "What is the name of the station?",
+          "ko": "역 이름이 뭐예요?"
         }
       },
       "done": {
-        "text": "ها هي التذكرة. نصف دينار.",
+        "text": "ها هي التذكرة. السعر واحد.",
         "gloss": {
-          "en": "Here's the ticket. Half a dinar.",
-          "ko": "표 나왔어요. 반 디나르예요."
+          "en": "Here's the ticket. The price is one.",
+          "ko": "표 나왔어요. 1이에요."
         }
       },
       "done-easy": {
@@ -10757,7 +10761,7 @@
               "آسف، أنا مستعجل",
               "آسفة، أنا مستعجلة",
               "آسف، أنا متأخر",
-              "آسفة، عندي باص الآن"
+              "آسفة، عندي حافلة الآن"
             ]
           },
           {
@@ -10795,10 +10799,10 @@
         }
       },
       "hello-easy": {
-        "text": "أين تذهب الآن؟ البيت؟",
+        "text": "هل تذهب إلى البيت الآن؟",
         "gloss": {
-          "en": "Where are you going now? Home?",
-          "ko": "지금 어디 가? 집?"
+          "en": "Are you going home now?",
+          "ko": "지금 집에 가?"
         }
       },
       "me": {
@@ -10816,10 +10820,10 @@
         }
       },
       "next-easy": {
-        "text": "الدرس القادم: الأحد؟ الاثنين؟",
+        "text": "الدرس القادم يوم الأحد أم الاثنين؟",
         "gloss": {
-          "en": "Next lesson: Sunday? Monday?",
-          "ko": "다음 수업: 일요일? 월요일?"
+          "en": "Is the next lesson on Sunday or Monday?",
+          "ko": "다음 수업은 일요일이야, 월요일이야?"
         }
       },
       "time": {
@@ -10830,10 +10834,10 @@
         }
       },
       "time-easy": {
-        "text": "الساعة؟ خمسة؟ ستة؟",
+        "text": "في الخامسة أم في السادسة؟",
         "gloss": {
-          "en": "The time? Five? Six?",
-          "ko": "몇 시? 5시? 6시?"
+          "en": "At five or at six?",
+          "ko": "5시야, 6시야?"
         }
       },
       "ok": {
