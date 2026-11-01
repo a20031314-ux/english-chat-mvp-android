@@ -93,6 +93,9 @@ const en: Section[] = [
     body: [
       "We use the following providers to run languagebank. They process information only to provide their service to us:",
       "• OpenAI (United States) — generating replies, corrections and explanations; transcribing speech; generating speech; translation.",
+      "• Anthropic (United States) — generating replies, corrections, explanations, translations and learning materials from the text you send.",
+      "• ElevenLabs (United States) — transcribing speech: your recorded turns in calls, voice-room captions, and the audio of videos without captions.",
+      "• Cloudflare (United States) — relaying voice and video calls between members when a direct connection is not possible. The call passes through encrypted and is not stored.",
       "• Mistral AI (France) — generating speech: the text to be read aloud (the tutor's lines and any sentence you tap to hear).",
       "• Vercel (United States) — hosting the app's web pages and server, including server logs.",
       "• Upstash (via Vercel) — storing usage counts, points and the conversation records described above.",
@@ -102,7 +105,7 @@ const en: Section[] = [
       "• Brave Search — web search when finding learning content.",
       "• Google AdMob (United States) — showing ads in the Android app to people without a subscription (see “Advertising”).",
       "• Google AdSense (United States) — showing ads on the website to people without a subscription (see “Advertising”).",
-      "Under its API terms, OpenAI does not use data sent through its API to train its models by default, and may keep it for a limited period to monitor for abuse.",
+      "Under their API terms, OpenAI and Anthropic do not use data sent through their APIs to train their models by default, and may keep it for a limited period to monitor for abuse.",
     ],
   },
   {
@@ -228,6 +231,9 @@ const ko: Section[] = [
     body: [
       "서비스 운영을 위해 아래 업체에 정보 처리를 맡기며, 이 과정에서 정보가 국외로 이전됩니다. 이전은 이용자가 해당 기능을 사용할 때 네트워크를 통해 이루어집니다.",
       "• OpenAI (미국): 채팅·통화·영상 내용, 통화 음성(글자 변환용), 분석 요청 문장 / 답변·교정·설명 생성, 음성 인식, 음성 합성, 번역 / 처리 후 OpenAI 정책에 따라 남용 감시를 위해 제한된 기간 보관",
+      "• Anthropic (미국): 채팅·통화·영상 내용, 분석 요청 문장 / 답변·교정·설명·번역·학습 자료 생성 / Anthropic 정책에 따라 남용 감시를 위해 제한된 기간 보관",
+      "• ElevenLabs (미국): 통화의 녹음된 발화, 말하는 방 음성, 자막 없는 영상의 소리 / 음성 인식(글자 변환) / 각 서비스 정책에 따름",
+      "• Cloudflare (미국): 회원 사이 음성·영상 통화 / 직접 연결이 안 될 때 통화 중계(암호화된 채 지나가며 보관하지 않음) / 보관하지 않음",
       "• Mistral AI (프랑스): 소리로 읽을 글(튜터의 말, 듣기를 누른 문장) / 음성 합성 / 각 서비스 정책에 따름",
       "• Vercel (미국): 요청 내용과 서버 로그 / 앱 웹페이지와 서버 호스팅 / 호스팅 제공자가 정한 기간",
       "• Upstash (Vercel을 통해 이용): 익명 앱 식별자, 이용 횟수, 포인트, “보관하는 대화 내용”의 기록과 대화 정보 / 데이터 저장 / 이 방침의 보관 기간",
@@ -237,7 +243,7 @@ const ko: Section[] = [
       "• Brave Search (미국): 검색어 / 학습 콘텐츠 검색 / 각 서비스 정책에 따름",
       "• Google AdMob (미국): 광고 ID, IP 주소, 기기·앱 정보, 광고 반응 / 구독하지 않은 이용자에게 안드로이드 앱 광고 표시·측정 / Google 정책에 따름",
       "• Google AdSense (미국): 쿠키 등 브라우저 식별 정보, IP 주소, 브라우저 정보, 광고 반응 / 구독하지 않은 이용자에게 웹 광고 표시·측정 / Google 정책에 따름",
-      "OpenAI는 API 약관에 따라 API로 전송된 데이터를 기본적으로 모델 학습에 사용하지 않습니다.",
+      "OpenAI와 Anthropic은 API 약관에 따라 API로 전송된 데이터를 기본적으로 모델 학습에 사용하지 않습니다.",
       "국외 이전을 원하지 않으면 해당 기능을 사용하지 않거나 서비스 이용을 중단할 수 있습니다. 다만 이 경우 채팅·통화·영상 학습 등 핵심 기능을 이용할 수 없습니다.",
     ],
   },
