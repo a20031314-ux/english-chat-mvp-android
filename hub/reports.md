@@ -36,6 +36,15 @@
 
 ## 새 보고
 
+### 2026-11-01 · 변경 감시 · 돈·광고 그대로 · 리뷰 major 2(정기 시험 "대화 응답" 오답이 한눈에 지워짐, 표현·문법 수업 대체 줄에 답이 보임)
+- 무엇을: main 2c55ea4..475b7db 커밋 25개(줄 my·ai·공통·people, 코드 파일 74개 +3,139/−324줄) — 비용표·손익·광고 지도 모든 칸, 퀴즈 전수 점검 원인별 수 비교 + 제3자 리뷰(major는 다른 에이전트가 코드 원문으로 다시 확인).
+- 결과: 비용표·손익·광고 지도 바뀐 칸 0. 퀴즈 원인 — 며칠 안 다른 열쇠로 같은 문장 375 → 350, split-word 21 → 17, hard-level 3 → 6(+3), 같은 날 같은 문장 244 → 245, 쉬는 열쇠 다시 365 → 364, 같은 열쇠 연달아 101 → 102. 알림 기준(돈 500원·광고·퀴즈 새 원인/20건) 넘은 것 0.
+  리뷰: major 2 · minor 4 (둘 다 eb847b2, 두 번 확인 맞음)
+  - `src/lib/curriculum/exam.ts:162` 정기 시험 "대화 응답" 오답이 다른 대본의 아무 내 줄(길이만 비슷) — 예: "Excuse me, do you have a pen?" → 보기 "Me too! See you later, Emma." 소재도 오답에서 안 갈림(RULES 11②).
+  - `src/components/studyMap/FrameLesson.tsx:141·273` 표현·문법 수업이 item-lesson 없을 때 대체 줄 뜻을 `glossFor`로 — 앱 언어 = 학습 언어·영어 학습+옮김 없는 앱 언어면 "‘…’라고 말해 보세요"에 정답 문장, 대화 단계 제목도 표현 그 자체(RULES 11①).
+  - minor: 통화 기록 돌아보기가 시험 소재를 되살림(CallRecap), 병음 성조 틀려도 맞음, item-lesson 실패 시 모델 호출 셈 누락, QuizPlayer placeholder 하드코딩. 화면 점검은 오늘 이미 돌아서 건너뜀.
+- 제안: my 줄 dev가 major 둘 먼저(앱 빌드 필요, 2.78 자른 뒤라 다음 빌드 또는 2.78 다시 자르기 전 판단은 사용자). minor는 inbox.
+
 ### 2026-11-01 · AI 모델 살피기 · 권함: Sonnet 5.5 기능 → gpt-6.1-terra, 많이 쓰는 사람 한 달 +529원, 품질 같음 이상(대리 지표)
 - 무엇을: OpenAI·Anthropic 종료 목록, 새 모델·가격(OpenAI·Claude·Gemini·ElevenLabs) 조사 → 후보 2개 `hub/model-candidates.json` → `whatif.mjs cost` → gpt-6.1-terra 운영 품질 시험(점검 사용자 28명 × 지금/후보, 이름 가린 평가 178줄).
 - 결과: 종료일 바뀐 것 없음(가장 급한 것: 통화 돌아보기 대비 gpt-5-mini 12-11 — 이미 gpt-5.6-terra로 바꿈, 목소리 대비 gpt-4o-mini-tts 01-06, 대체 없음). Haiku 5.5·Sonnet 5.5 Active.
