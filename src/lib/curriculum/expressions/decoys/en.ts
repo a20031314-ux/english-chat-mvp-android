@@ -19,13 +19,12 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "how about you": [
     "how about to you",
-    "how is about you",
-    "how about for you"
+    "how is about you"
   ],
   "me too": [
     "me also",
     "my too",
-    "me so"
+    "also me"
   ],
   "see you later": [
     "see you after",
@@ -44,7 +43,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "no problem": [
     "not problem",
-    "none problem",
+    "no any problem",
     "no the problem"
   ],
   "how much is this": [
@@ -70,7 +69,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   "on the left": [
     "in the left",
     "on left",
-    "at the left side of"
+    "at left"
   ],
   "next to the bank": [
     "next the bank",
@@ -89,8 +88,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "good morning": [
     "goods morning",
-    "good the morning",
-    "well morning"
+    "good the morning"
   ],
   "have a nice day": [
     "have nice day",
@@ -133,9 +131,9 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
     "sounds a good"
   ],
   "let's meet at": [
-    "let's meet in",
     "let's meeting at",
-    "let's to meet at"
+    "let's to meet at",
+    "let meet at"
   ],
   "see you then": [
     "see you after",
@@ -144,13 +142,12 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "maybe next time": [
     "maybe in next time",
-    "maybe last time",
-    "maybe a next time"
+    "maybe a next time",
+    "maybe next times"
   ],
   "a bit expensive": [
     "a bit of expensive",
-    "a bits expensive",
-    "a bite expensive"
+    "a bits expensive"
   ],
   "a little cheaper": [
     "a little more cheaper",
@@ -174,8 +171,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "by the way": [
     "by a way",
-    "in the way",
-    "by the road"
+    "in the way"
   ],
   "how long does it take": [
     "how long it takes",
@@ -189,13 +185,12 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "last night": [
     "yesterday night",
-    "the past night",
-    "lasted night"
+    "in last night",
+    "the last night"
   ],
   "next weekend": [
-    "nexts weekend",
-    "last weekend",
-    "the next week end"
+    "in next weekend",
+    "at next weekend"
   ],
   "what happened": [
     "what did happened",
@@ -204,8 +199,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "that's too bad": [
     "that's too worse",
-    "that's a too bad",
-    "that's so bads"
+    "that's a too bad"
   ],
   "let me check": [
     "let me to check",
@@ -244,23 +238,21 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "no wonder": [
     "not wonder",
-    "none wonder",
-    "any wonder"
+    "no wonders"
   ],
   "make sure": [
     "do sure",
-    "make for sure of",
-    "makes the sure"
+    "makes the sure",
+    "make surely"
   ],
   "figure it out": [
     "figure out it",
-    "figure it up",
-    "figuring it out"
+    "figure it up"
   ],
   "run out of": [
     "run out from",
-    "ran out of",
-    "run of out"
+    "run of out",
+    "run out"
   ],
   "on time": [
     "at time",
@@ -294,13 +286,11 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "sort it out": [
     "sort out it",
-    "sort it off",
-    "sorting it out"
+    "sort it off"
   ],
   "so far": [
     "until far",
-    "by far",
-    "so long"
+    "as far"
   ],
   "just in case": [
     "just in the case",
@@ -325,7 +315,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   "that's a good point": [
     "that's good point",
     "that's a well point",
-    "that's a good spot"
+    "that's a good points"
   ],
   "on the other hand": [
     "in the other hand",
@@ -364,8 +354,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "in the long run": [
     "on the long run",
-    "in a long run",
-    "in the long ran"
+    "in a long run"
   ],
   "when it comes to": [
     "when it comes for",
@@ -373,9 +362,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
     "when comes to"
   ],
   "no way": [
-    "not way",
-    "none way",
-    "no road"
+    "not way"
   ],
   "it must have been": [
     "it must has been",
@@ -404,8 +391,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "whether or not": [
     "whether and not",
-    "if or not",
-    "whether or none"
+    "if or not"
   ],
   "to some extent": [
     "to some extend",
@@ -438,9 +424,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
     "it seems me"
   ],
   "arguably": [
-    "arguing",
-    "arguable",
-    "argumently"
+    "arguable"
   ],
   "by and large": [
     "by the large",
@@ -478,14 +462,12 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
     "being that as it may"
   ],
   "for the record": [
-    "on the record",
     "for a record",
     "in the record"
   ],
   "a grey area": [
     "a grey place",
-    "an grey area",
-    "the grey areas"
+    "an grey area"
   ],
   "in hindsight": [
     "on hindsight",
@@ -504,8 +486,7 @@ export const EN_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "the bottom line": [
     "the down line",
-    "a bottom line",
-    "the bottom lane"
+    "the bottom lines"
   ],
   "not to mention": [
     "not mention",

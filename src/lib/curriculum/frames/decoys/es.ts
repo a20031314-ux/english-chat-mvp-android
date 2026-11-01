@@ -23,12 +23,12 @@ export const ES_DECOYS: Record<string, string[]> = {
     "soy a"
   ],
   "es-f1-03|Soy": [
-    "Son",
+    "Estoy",
     "Yo es",
     "Somos"
   ],
   "es-f1-03|soy": [
-    "son",
+    "estoy",
     "yo es",
     "somos"
   ],
@@ -184,13 +184,11 @@ export const ES_DECOYS: Record<string, string[]> = {
   ],
   "es-f2-01|Ayer": [
     "Mañana",
-    "Pasado mañana",
-    "Dentro de poco"
+    "Pasado mañana"
   ],
   "es-f2-01|ayer": [
     "mañana",
-    "pasado mañana",
-    "dentro de poco"
+    "pasado mañana"
   ],
   "es-f2-02|fui": [
     "ido",
@@ -200,12 +198,12 @@ export const ES_DECOYS: Record<string, string[]> = {
   "es-f2-03|Tuve": [
     "Tení",
     "Tenido",
-    "Tenó"
+    "Tuvo"
   ],
   "es-f2-03|tuve": [
     "tení",
     "tenido",
-    "tenó"
+    "tuvo"
   ],
   "es-f2-04|Voy a": [
     "Voy de",
@@ -429,17 +427,17 @@ export const ES_DECOYS: Record<string, string[]> = {
   "es-f3-07|cuando": [
     "cuanto",
     "cual",
-    "quando"
+    "como"
   ],
   "es-f3-08|Antes": [
-    "Antiguo",
-    "Mañana",
-    "Hace"
+    "Antes de",
+    "Hace",
+    "Ante"
   ],
   "es-f3-08|antes": [
-    "antiguo",
-    "mañana",
-    "hace"
+    "antes de",
+    "hace",
+    "ante"
   ],
   "es-f3-09|Al final": [
     "En el final",
@@ -578,13 +576,11 @@ export const ES_DECOYS: Record<string, string[]> = {
   ],
   "es-f4-02|Ojalá": [
     "Ojalá de",
-    "Ojalá si",
-    "Hojalá"
+    "Ojalá si"
   ],
   "es-f4-02|ojalá": [
     "ojalá de",
-    "ojalá si",
-    "hojalá"
+    "ojalá si"
   ],
   "es-f4-03|Si yo fuera tú": [
     "Si yo sería tú",
@@ -689,12 +685,12 @@ export const ES_DECOYS: Record<string, string[]> = {
   "es-f4-13|Por un lado": [
     "Por una lado",
     "Para un lado",
-    "Por un lada"
+    "Por uno lado"
   ],
   "es-f4-13|por un lado": [
     "por una lado",
     "para un lado",
-    "por un lada"
+    "por uno lado"
   ],
   "es-f4-14|Por otro lado": [
     "Por otra lado",
@@ -728,13 +724,11 @@ export const ES_DECOYS: Record<string, string[]> = {
   ],
   "es-f4-17|Vale la pena": [
     "Vale el pena",
-    "Vale pena",
-    "Vala la pena"
+    "Vale pena"
   ],
   "es-f4-17|vale la pena": [
     "vale el pena",
-    "vale pena",
-    "vala la pena"
+    "vale pena"
   ],
   "es-f4-18|Habría que": [
     "Habrían que",
@@ -866,13 +860,11 @@ export const ES_DECOYS: Record<string, string[]> = {
   ],
   "es-f5-11|Sería posible que": [
     "Sería posible de que",
-    "Sería posibles que",
-    "Fuera posible que"
+    "Sería posibles que"
   ],
   "es-f5-11|sería posible que": [
     "sería posible de que",
-    "sería posibles que",
-    "fuera posible que"
+    "sería posibles que"
   ],
   "es-f5-12|Le importaría": [
     "Lo importaría",
@@ -920,12 +912,10 @@ export const ES_DECOYS: Record<string, string[]> = {
     "por definitiva"
   ],
   "es-f5-17|A fin de cuentas": [
-    "Al fin de cuentas",
     "A fin de cuenta",
     "A fines de cuentas"
   ],
   "es-f5-17|a fin de cuentas": [
-    "al fin de cuentas",
     "a fin de cuenta",
     "a fines de cuentas"
   ],
@@ -936,13 +926,11 @@ export const ES_DECOYS: Record<string, string[]> = {
   ],
   "es-f5-19|A lo mejor": [
     "A lo mejor que",
-    "Al mejor",
-    "A la mejor"
+    "Al mejor"
   ],
   "es-f5-19|a lo mejor": [
     "a lo mejor que",
-    "al mejor",
-    "a la mejor"
+    "al mejor"
   ],
   "es-f5-20|Me echas una mano con": [
     "Me echas un mano con",

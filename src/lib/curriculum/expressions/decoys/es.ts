@@ -2,20 +2,16 @@
  * es 단계 핵심 표현마다 헷갈리는 오답(2026-10-30, scripts/expr-decoys.ts) — 표현 → 살짝 틀린 꼴. Claude가 씀, 원어민 확인 전.
  */
 export const ES_EXPR_DECOYS: Record<string, string[]> = {
-  "hola": [
-    "hole",
-    "holo",
-    "olá"
-  ],
+  "hola": [],
   "buenos días": [
     "buenas días",
     "bueno días",
-    "buenos el día"
+    "buenos día"
   ],
   "buenas tardes": [
     "buenos tardes",
     "buena tardes",
-    "buenas tardas"
+    "buenas tarde"
   ],
   "qué tal": [
     "qué tan",
@@ -38,25 +34,19 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
     "soy a Corea"
   ],
   "gracias": [
-    "gracies",
-    "graciosa",
-    "grato"
+    "gracia"
   ],
   "de nada": [
     "en nada",
-    "de nado",
-    "a nada"
+    "a nada",
+    "de nadie"
   ],
   "por favor": [
     "para favor",
     "de favor",
     "con favor"
   ],
-  "perdón": [
-    "perdí",
-    "pardón",
-    "perder"
-  ],
+  "perdón": [],
   "lo siento": [
     "la siento",
     "lo sientes",
@@ -89,24 +79,13 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "sí, claro": [
     "sí, clara",
-    "sí, aclaro",
     "sí, lo claro"
   ],
-  "vale": [
-    "vala",
-    "valo",
-    "valió"
-  ],
+  "vale": [],
   "hasta luego": [
-    "hasta lejos",
-    "hasta luega",
-    "hasta lugar"
+    "hasta luega"
   ],
-  "adiós": [
-    "a dios",
-    "adiosa",
-    "al dios"
-  ],
+  "adiós": [],
   "este fin de semana": [
     "esta fin de semana",
     "este fin de la semana",
@@ -134,8 +113,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "qué buena idea": [
     "qué bueno idea",
-    "qué buen idea",
-    "qué buena ida"
+    "qué buen idea"
   ],
   "me viene bien": [
     "me viene buen",
@@ -174,8 +152,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "la cuenta": [
     "el cuenta",
-    "la cuento",
-    "la conta"
+    "la cuento"
   ],
   "me duele la cabeza": [
     "me duele el cabeza",
@@ -184,7 +161,6 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tengo fiebre": [
     "estoy fiebre",
-    "tengo fiebro",
     "soy fiebre"
   ],
   "se puede": [
@@ -194,7 +170,6 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "un momento": [
     "una momento",
-    "un momente",
     "uno momento"
   ],
   "estoy cansado": [
@@ -210,7 +185,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   "claro que sí": [
     "clara que sí",
     "claro de sí",
-    "claro que no"
+    "claro sí"
   ],
   "creo que": [
     "creo de",
@@ -234,7 +209,6 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "no estoy seguro": [
     "no soy seguro",
-    "no estoy seguir",
     "no tengo seguro"
   ],
   "alguna vez": [
@@ -263,9 +237,9 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
     "no está funciona"
   ],
   "podría cambiarlo": [
-    "podría cambiarla",
     "podría lo cambiar",
-    "podría cambiándolo"
+    "podría cambiándolo",
+    "podría cambiar lo"
   ],
   "me encantaría": [
     "yo encantaría",
@@ -273,14 +247,11 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
     "me encantara"
   ],
   "qué pena": [
-    "cuál pena",
-    "qué apena",
-    "qué peña"
+    "cuál pena"
   ],
   "menos mal": [
     "más mal",
-    "meno mal",
-    "pocos mal"
+    "menos malo"
   ],
   "por cierto": [
     "por cierta",
@@ -289,18 +260,16 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "a ver": [
     "a vez",
-    "haber",
-    "a mirar"
+    "haber"
   ],
   "de hecho": [
     "de hecha",
-    "de hacho",
-    "del hecho"
+    "del hecho",
+    "de echo"
   ],
   "sin embargo": [
     "sin embarga",
-    "con embargo",
-    "sin embargue"
+    "con embargo"
   ],
   "te acuerdas de": [
     "tú acuerdas de",
@@ -324,8 +293,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "aunque": [
     "aún que",
-    "porque",
-    "ya que"
+    "aunque que"
   ],
   "a pesar de": [
     "a pesar que",
@@ -339,8 +307,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "por otro lado": [
     "por otra lado",
-    "en otro lado",
-    "por otro lada"
+    "en otro lado"
   ],
   "en cambio": [
     "en cambiar",
@@ -354,8 +321,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "vale la pena": [
     "vale el pena",
-    "vale una pena",
-    "valen la pena"
+    "vale una pena"
   ],
   "no es para tanto": [
     "no está para tanto",
@@ -367,11 +333,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
     "mi da igual",
     "me da lo igual"
   ],
-  "ojalá": [
-    "ojalé",
-    "olalá",
-    "ojalí"
-  ],
+  "ojalá": [],
   "en cuanto a": [
     "en cuanto de",
     "en cuánto a",
@@ -399,8 +361,7 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "estaría bien": [
     "sería bien",
-    "estaría buen",
-    "estoy bien"
+    "estaría buen"
   ],
   "me di cuenta de": [
     "me dio cuenta de",
@@ -409,22 +370,19 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "en resumen": [
     "en resumir",
-    "a resumen",
-    "en resumo"
+    "a resumen"
   ],
   "a fin de cuentas": [
-    "al fin de cuentas",
-    "a fin de cuentos",
-    "en fin de cuentas"
+    "a fin de cuenta",
+    "a fines de cuentas"
   ],
   "dar en el clavo": [
-    "dar en la clava",
+    "dar en clavo",
     "dar al clavo",
     "dar sobre el clavo"
   ],
   "ir al grano": [
     "ir a la grano",
-    "ir al grana",
     "ir en el grano"
   ],
   "me saca de quicio": [
@@ -434,13 +392,10 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "ni de broma": [
     "no de broma",
-    "ni de bromo",
     "ni con broma"
   ],
   "qué va": [
-    "qué ve",
-    "qué voy",
-    "qué ir"
+    "qué voy"
   ],
   "a lo mejor": [
     "al lo mejor",
@@ -449,17 +404,13 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "en todo caso": [
     "en toda caso",
-    "en todo casa",
     "a todo caso"
   ],
   "o sea": [
-    "o será",
-    "o fuera",
-    "u sea"
+    "osea"
   ],
   "cabe destacar": [
     "cabe destacado",
-    "cabo destacar",
     "cabe de destacar"
   ],
   "le agradecería que": [
@@ -473,33 +424,27 @@ export const ES_EXPR_DECOYS: Record<string, string[]> = {
     "dicho sea del paso"
   ],
   "sin ir más lejos": [
-    "sin ir más lejas",
     "sin va más lejos",
-    "sin ir más cerca"
+    "sin ir lo más lejos"
   ],
   "a grandes rasgos": [
     "a grande rasgos",
-    "a grandes rasgas",
     "de grandes rasgos"
   ],
   "no me cabe duda": [
     "no me cabo duda",
-    "no mi cabe duda",
-    "no me cabe dura"
+    "no mi cabe duda"
   ],
   "tomar el pelo": [
     "tomar la pelo",
-    "tomar el pela",
     "tomar del pelo"
   ],
   "echar una mano": [
     "echar un mano",
-    "echar una mana",
     "echar la mano"
   ],
   "quedarse de piedra": [
     "quedarse en piedra",
-    "quedarse de piedro",
     "quedarse a piedra"
   ],
   "estar en las nubes": [
