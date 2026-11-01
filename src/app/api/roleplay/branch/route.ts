@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { serverTutorGender, tutorChoices } from "@/lib/chatPartner";
 import { BRANCH_SYSTEM, branchPrompt, learnerNode, otherScript, readPick, ruleBranch, type BranchPick } from "@/lib/roleplay/branchPick";
+import { sceneTutor } from "@/lib/roleplay/callScene";
 import { findScene } from "@/lib/roleplay/sceneStore";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { completeChat } from "@/lib/server/llm";
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest) {
   if (!heard) return jsonWithCors(request, NONE);
 
   const gender = serverTutorGender(scene.language, body.tutorGender);
-  const tutor = { name: tutorChoices(scene.language)[gender], gender };
+  const tutor = sceneTutor(scene.language, gender, tutorChoices(scene.language)[gender]);
   const raw = typeof body.strictness === "number" && Number.isFinite(body.strictness) ? body.strictness : 0.6;
   const strictness = Math.min(0.9, Math.max(0.3, raw));
 

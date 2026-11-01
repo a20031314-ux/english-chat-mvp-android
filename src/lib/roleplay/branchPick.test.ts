@@ -60,3 +60,15 @@ test("학습 언어 글자가 하나도 없는 말은 다른 언어 — 라틴 �
   assert.equal(otherScript("es", "hello I want coffee"), false);
   assert.equal(otherScript("ja", "123"), false);
 });
+
+test("튜터 이름: 학습 언어 문장·받는 문구엔 그 언어 글자, 뜻엔 앱 이름", async () => {
+  const { sceneTutor, toScenario } = await import("./callScene.ts");
+  const tutor = sceneTutor("th", "f", "Ploy");
+  assert.equal(tutor.native, "พลอย");
+  const scene = scenes("th").find((s) => Object.values(s.sentences).some((x) => x.text.includes("{tutor}")))!;
+  const { bank } = toScenario(scene, "alloy", "en", tutor);
+  const line = Object.values(bank).find((x) => x.text.includes("พลอย"));
+  assert.ok(line, "태국어 글자 이름");
+  assert.ok(!Object.values(bank).some((x) => x.text.includes("Ploy")));
+  assert.equal(sceneTutor("es", "m", "Mateo").native, "Mateo");
+});

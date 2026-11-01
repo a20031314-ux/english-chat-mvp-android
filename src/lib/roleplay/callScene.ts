@@ -39,10 +39,31 @@ export type SceneSentence = {
   byTutor?: { f?: { text: string; gloss?: SceneGloss }; m?: { text: string; gloss?: SceneGloss } };
 };
 
-/** 그 언어 AI 튜터 — 이름 자리와 성별 꼴을 채운다. */
-export type SceneTutor = { name: string; gender: "f" | "m" };
+/**
+ * 그 언어 AI 튜터 — 이름 자리와 성별 꼴을 채운다.
+ * `name`은 앱 화면의 이름(라틴 글자, chatPartner.ts), `native`는 학습 언어 글자로 쓴 같은 이름 — 학습 언어 문장·받는 문구에는 native,
+ * 앱 언어 뜻(gloss)에는 name(2026-11-02: 태국어 문장에 "ฉันชื่อPloyค่ะ"처럼 라틴 글자가 섞임).
+ */
+export type SceneTutor = { name: string; gender: "f" | "m"; native?: string };
 
-const fill = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.name) : text);
+/** 라틴 글자가 아닌 학습 언어의 튜터 이름(chatPartner.ts PARTNERS와 같은 사람). 없으면 name 그대로. */
+export const TUTOR_NATIVE_NAMES: Record<string, { f: string; m: string }> = {
+  ko: { f: "서연", m: "민준" },
+  ja: { f: "ゆき", m: "はると" },
+  zh: { f: "小美", m: "阿晨" },
+  ru: { f: "Аня", m: "Дима" },
+  ar: { f: "ليلى", m: "عمر" },
+  hi: { f: "प्रिया", m: "अर्जुन" },
+  th: { f: "พลอย", m: "นิรันดร์" },
+};
+
+/** 장면에 쓸 튜터 — 앱 이름과 학습 언어 글자 이름. */
+export function sceneTutor(language: string, gender: "f" | "m", name: string): SceneTutor {
+  return { name, gender, native: TUTOR_NATIVE_NAMES[language]?.[gender] ?? name };
+}
+
+const fill = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.native ?? tutor.name) : text);
+const fillGloss = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.name) : text);
 
 export type SceneBranch = Branch & {
   /** 이 가지가 뜻하는 것, 영어 한 줄 — 가지 고르기 모델이 읽는다. */
@@ -124,7 +145,7 @@ export function toScenario(
     const own = tutor ? sentence.byTutor?.[tutor.gender] : undefined;
     const text = own?.text ?? sentence.text;
     const gloss = own?.gloss ?? sentence.gloss;
-    bank[id] = { text: fill(text, tutor), translation: fill(gloss[uiLang] ?? gloss.en, tutor), source: "grown" };
+    bank[id] = { text: fill(text, tutor), translation: fillGloss(gloss[uiLang] ?? gloss.en, tutor), source: "grown" };
   }
   return {
     scenario: {

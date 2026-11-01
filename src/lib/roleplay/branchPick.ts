@@ -67,7 +67,7 @@ Reply with JSON only: {"pick": <option number>} or {"pick": null}.`;
 
 /** 모델에 줄 사용자 글. 학습자 말은 그대로(따옴표 안), 저장하지 않는다. */
 export function branchPrompt(scene: CallScene, node: SceneLearnerNode, heard: string, tutor?: SceneTutor): string {
-  const fill = (text: string) => (tutor ? text.split("{tutor}").join(tutor.name) : text);
+  const fill = (text: string) => (tutor ? text.split("{tutor}").join(tutor.native ?? tutor.name) : text);
   const options = node.expect
     .map((branch, i) => {
       const examples = branch.match.slice(0, EXAMPLES).map((m) => `"${fill(m)}"`).join(" / ");
