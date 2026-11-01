@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import type { CallScene } from "./callScene.ts";
-import { branchPrompt, learnerNode, promptLineFor, readPick, ruleBranch } from "./branchPick.ts";
+import { branchPrompt, learnerNode, otherScript, promptLineFor, readPick, ruleBranch } from "./branchPick.ts";
 import { parseSceneId } from "./sceneStore.ts";
 
 const scenes = (language: string) =>
@@ -49,4 +49,14 @@ test("모델에 주는 글: 앞 튜터 줄·해낼 일·가지 뜻과 예시·�
   assert.ok(!prompt.includes("{tutor}"));
   const line = promptLineFor(scene, node.id);
   if (line) assert.ok(prompt.includes(line.split("{tutor}").join("Mateo")));
+});
+
+test("학습 언어 글자가 하나도 없는 말은 다른 언어 — 라틴 학습 언어는 모델에 맡김", () => {
+  assert.equal(otherScript("ko", "hi latte please"), true);
+  assert.equal(otherScript("ko", "라떼 please"), false);
+  assert.equal(otherScript("th", "coffee krap"), true);
+  assert.equal(otherScript("th", "กาแฟครับ"), false);
+  assert.equal(otherScript("hi", "चाय दीजिए"), false);
+  assert.equal(otherScript("es", "hello I want coffee"), false);
+  assert.equal(otherScript("ja", "123"), false);
 });

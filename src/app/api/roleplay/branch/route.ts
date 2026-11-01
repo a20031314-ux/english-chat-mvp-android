@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { serverTutorGender, tutorChoices } from "@/lib/chatPartner";
-import { BRANCH_SYSTEM, branchPrompt, learnerNode, readPick, ruleBranch, type BranchPick } from "@/lib/roleplay/branchPick";
+import { BRANCH_SYSTEM, branchPrompt, learnerNode, otherScript, readPick, ruleBranch, type BranchPick } from "@/lib/roleplay/branchPick";
 import { findScene } from "@/lib/roleplay/sceneStore";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { completeChat } from "@/lib/server/llm";
@@ -46,6 +46,9 @@ export async function POST(request: NextRequest) {
   const byRule = ruleBranch(scene, nodeId, heard, strictness, tutor);
   if (byRule) return jsonWithCors(request, byRule);
 
+  // 학습 언어 글자가 하나도 없는 말(한국어 장면에 영어로)은 모델 없이 없음 — 튜터가 받는다.
+  if (otherScript(scene.language, heard)) return jsonWithCors(request, NONE);
+
   const client = getOpenAIClient();
   if (!client) return jsonWithCors(request, NONE);
   await meterRequest(request, "roleplayBranch");
@@ -65,6 +68,6 @@ export async function POST(request: NextRequest) {
   const pick = readPick(reply, node.expect.length);
   const result: BranchPick = pick === null ? NONE : { go: node.expect[pick]!.go, branch: pick, by: "model" };
   // 점검용: 머리 x-branch-debug면 모델 답(학습자 말은 없음)을 같이.
-  const debug = request.headers.get("x-branch-debug") === "1" ? { reply: reply.slice(0, 200), failure } : {};
+  const debug = request.headers.get("x-branch-debug") === "1" ? { reply: reply.slice(0, 200), failure, rev: "b2" } : {};
   return jsonWithCors(request, { ...result, ...debug });
 }

@@ -24,6 +24,23 @@ export function promptLineFor(scene: CallScene, nodeId: string): string {
   return "";
 }
 
+/** 그 언어의 글자(띄어쓰기·라틴 밖 언어만). 이 글자가 하나도 없는 말은 다른 언어로 한 말이다. */
+const SCRIPT: Record<string, RegExp> = {
+  ko: /\p{Script=Hangul}/u,
+  ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
+  zh: /\p{Script=Han}/u,
+  th: /\p{Script=Thai}/u,
+  ar: /\p{Script=Arabic}/u,
+  hi: /\p{Script=Devanagari}/u,
+  ru: /\p{Script=Cyrillic}/u,
+};
+
+/** 학습 언어 글자가 하나도 없이 다른 글자(라틴 등)만 있는 말 — 모델 없이 "없음"(운영 2026-11-02: 영어 대답을 받아 줌). */
+export function otherScript(language: string, heard: string): boolean {
+  const own = SCRIPT[language];
+  return Boolean(own) && !own!.test(heard) && /\p{L}/u.test(heard);
+}
+
 /** 규칙 맞추기 먼저 — 맞으면 모델을 부르지 않는다(무료). */
 export function ruleBranch(scene: CallScene, nodeId: string, heard: string, strictness: number, tutor?: SceneTutor): BranchPick | null {
   const { scenario } = toScenario(scene, "alloy", "en", tutor);
