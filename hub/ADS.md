@@ -80,6 +80,7 @@
 | `quiz-inline` | `lesson-${itemId}-${adRound}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 ‘수업 퀴즈 단계에도’) — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `call-end` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `RoleplayScreen.tsx` |
 | `results` | `checkup-end` | 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
+| `results` | `frames-skip-${skipped.join(",")}` | — | My 탭 `my` · `studyMap/StageFrames.tsx` |
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `results` | `recall-end` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/RecallPlayer.tsx` |
@@ -97,7 +98,7 @@
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 30개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 

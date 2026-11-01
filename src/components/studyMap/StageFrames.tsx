@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { Attempt } from "@/components/speech/Attempt";
 import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
@@ -33,7 +34,7 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { FrameLesson } from "@/components/studyMap/FrameLesson";
-import { notePool, readPool } from "@/lib/curriculum/exam";
+import { readPool } from "@/lib/curriculum/exam";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -86,6 +87,9 @@ export function StageFrames({
   const [handled, setHandled] = useState(0);
   /** 고르는 중이면 고른 틀 id들(☑ 눌렀을 때), 아니면 null. */
   const [picking, setPicking] = useState<Set<string> | null>(null);
+  /** 방금 스킵한 문장구조 id — 학습 완료 화면에 보인다. */
+  const [skipped, setSkipped] = useState<string[] | null>(null);
+  const { isPremium } = usePremium();
   /** 알아요로 넘긴 틀(이 폰 시험 재료 — 다시 읽을 때마다 하나 올림). */
   const [claimRound, setClaimRound] = useState(0);
   const claimed = useMemo(
@@ -104,17 +108,31 @@ export function StageFrames({
   if (!frames.length) return null;
   const again = new Set(redo.map((item) => item.frame));
   const pickedCount = picking ? picking.size : 0;
+  // 이 단계 스킵(사용자 2026-11-02 "알아요 버튼은 이 단계 스킵으로, 선택한 것은 스킵, 똑같이 학습 완료"): 고른 문장구조를
+  // 수업을 끝낸 것과 같이 익힘(서버 통과 기록 — FrameLesson과 같은 POST) → 수업 끝과 같은 "통과했어요" 화면 한 번.
   const confirmPicked = () => {
-    for (const id of picking ?? []) notePool(language, `f|${id}`, "claimed");
+    const ids = [...(picking ?? [])];
     setPicking(null);
-    setClaimRound((n) => n + 1);
+    if (!ids.length) return;
+    setSkipped(ids);
+    for (const id of ids) {
+      void fetch(apiUrl("/api/curriculum/scripts"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+        body: JSON.stringify({ language, id }),
+      })
+        .then((response) => {
+          if (response.ok) onPassed?.(id);
+        })
+        .catch(() => undefined);
+    }
   };
   return (
     <section className={listHidden ? "contents" : "flex flex-col gap-2"}>
       {listHidden ? null : (
       <>
-      {/* 이미 아는 틀을 한꺼번에 "알아요"(사용자 2026-11-02 "이미 아는 부분은 한번에 선택해서 표시"): ☑ → 카드를 눌러 고르고 → 알아요 (n).
-          수업 첫 화면의 "알아요"와 같은 뜻 — 정기 시험이 떠올리기부터 확인한다(curriculum/exam.ts notePool claimed). 고른 틀은 점선 테두리 + 흐린 ✓. */}
+      {/* 이미 아는 틀을 한꺼번에 스킵(사용자 2026-11-02): ☑ → 카드를 눌러 고르고 → 이 단계 스킵 (n) → 익힘(초록 ✓) + 학습 완료 화면.
+          점선 테두리 + 흐린 ✓는 수업 첫 화면 알아요(checkKnown)로 넘긴 틀(정기 시험이 확인, curriculum/exam.ts notePool claimed). */}
       <div className="flex items-center justify-end gap-2" data-frames-pick>
         {picking ? (
           <>
@@ -127,7 +145,7 @@ export function StageFrames({
               onClick={confirmPicked}
               className="rounded-full bg-white/90 px-3 py-1 text-caption font-semibold text-slate-900 disabled:opacity-50"
             >
-              {ui.checkKnown}
+              {ui.framesSkip}
               {pickedCount ? ` (${pickedCount})` : ""}
             </button>
           </>
@@ -135,8 +153,8 @@ export function StageFrames({
           <button
             type="button"
             onClick={() => setPicking(new Set())}
-            aria-label={ui.checkKnown}
-            title={ui.checkKnown}
+            aria-label={ui.framesSkip}
+            title={ui.framesSkip}
             className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10"
           >
             ☑
@@ -186,6 +204,40 @@ export function StageFrames({
       </ul>
       </>
       )}
+      {skipped ? (
+        <FullScreenLayer>
+          <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
+            <h2 className="min-w-0 flex-1 text-body font-semibold text-ink">{ui.framesSkip}</h2>
+            <button type="button" onClick={() => setSkipped(null)} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+              ✕
+            </button>
+          </header>
+          <div data-frames-skipped className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+            <ul className="flex flex-col gap-2">
+              {skipped.map((id) => {
+                const frame = frames.find((one) => one.id === id);
+                if (!frame) return null;
+                return (
+                  <li key={id} className="rounded-xl border border-status-mastered/50 px-3 py-2">
+                    <p dir="auto" className="text-note text-slate-100">
+                      {frame.pattern} <span className="text-caption text-good">✓</span>
+                    </p>
+                    <p dir="auto" className="text-meta text-slate-400">{glossFor(frame.meaning, locale)}</p>
+                  </li>
+                );
+              })}
+            </ul>
+            {/* 수업 끝 화면과 같은 한 줄·버튼(FrameLesson data-lesson-done). */}
+            <div className="mt-4 flex flex-col items-center gap-3">
+              <p className="text-note text-slate-200">✓ {ui.scriptPassed}</p>
+              <button type="button" onClick={() => setSkipped(null)} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
+                {ui.billingClose}
+              </button>
+              <NativeAdSlot feedId="results" slotKey={`frames-skip-${skipped.join(",")}`} spaced />
+            </div>
+          </div>
+        </FullScreenLayer>
+      ) : null}
       {/* A pattern opens as a lesson: explanation → quiz → talk (2026-10-30, user). The redo cards below keep the old player. */}
       {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} fromToday={openToday} onClose={() => {
             setOpen(null);
