@@ -9,11 +9,11 @@
 
 | 항목 | 값 | 어디서 바꾸나 |
 |---|---|---|
-| Play에 올라간 앱 | 2.75 (versionCode 89) — 사용자 폰 Play 앱 정보 "2.75, 2026.10.25 업데이트"(2026-10-27 화면) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
+| Play에 올라간 앱 | **2.78 (versionCode 92)** — 사용자 확인 2026-11-02 "Play에는 2.78이 올라가있어". 허브는 2.75로 남아 있었고 2.79 올림(fe46330)이 "2.78은 Play에 안 나감"으로 잘못 적음 → 바로잡음. 빌드한 커밋·공개일은 아직 모름(PR #27 머지 2026-10-30 03시 KST 뒤 main) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 안 나감, 2.78 내용 + 그 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.75 → 2.79. 새로워진 점 4장(my-banks·lesson·quizbank·real-call, 14개 언어 그림 — 2.76~2.78 카드는 비움)·사용법(My·통화·채팅 메뉴 14개 언어, 2.78 이하는 예전 글 `r283`) 넣음(2026-11-01). 체감 점검(`hub/drafts/ux-check-2026-11-01.md`)·난이도 표시 17/18 고침(baeec1e). **출시 노트 93 = PR #29(사람이 머지)** → PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
+| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 나감(2026-11-02 바로잡음 — 위 줄), 2.79 = 2.78 빌드 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.78 → 2.79(출시 노트 93·새로워진 점은 2.75 → 2.79 기준으로 쓰여 있어 다시 봐야 함). 새로워진 점 4장(my-banks·lesson·quizbank·real-call, 14개 언어 그림 — 2.76~2.78 카드는 비움)·사용법(My·통화·채팅 메뉴 14개 언어, 2.78 이하는 예전 글 `r283`) 넣음(2026-11-01). 체감 점검(`hub/drafts/ux-check-2026-11-01.md`)·난이도 표시 17/18 고침(baeec1e). **출시 노트 93 = PR #29(사람이 머지)** → PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
 | iOS | **85.14(2.71) 심사 취소하고 갈아타기(사용자 2026-10-31)** — iOS 1차 = 다음 안드로이드 출시와 같은 커밋(사람·통화·포인트 끔, 대본 플랜 추가). 순서·사람 일: `hub/drafts/ios-launch.md` "출시 범위 다시 정함 2". 앱 ID 6824542951 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
