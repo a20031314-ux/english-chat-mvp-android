@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | **2.78 (versionCode 92) 자름(2026-10-29)** — 2.77(91)까지의 내용 + 지속 학습(복습·랜덤·어휘·문법·표현 묶음 퀴즈·단어 퀴즈·단어장)·0단계 글자·읽는 법·단계대로/자유롭게·첫 고르기 간소화. 출시 노트 92는 PR(store/release-notes-92). 2.77이 Play에 안 나갔으면 2.75 → 2.78. PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
+| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 안 나감, 2.78 내용 + 그 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.75 → 2.79. 새로워진 점·사용법·출시 노트 93은 아직(사용자 답 대기). PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
 | iOS | **85.14(2.71) 심사 취소하고 갈아타기(사용자 2026-10-31)** — iOS 1차 = 다음 안드로이드 출시와 같은 커밋(사람·통화·포인트 끔, 대본 플랜 추가). 순서·사람 일: `hub/drafts/ios-launch.md` "출시 범위 다시 정함 2". 앱 ID 6824542951 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
