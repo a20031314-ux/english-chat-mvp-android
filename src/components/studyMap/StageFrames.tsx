@@ -33,6 +33,7 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { FrameLesson } from "@/components/studyMap/FrameLesson";
+import { notePool, readPool } from "@/lib/curriculum/exam";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -83,6 +84,15 @@ export function StageFrames({
   // 오늘 할 것에서 연 수업이면 닫을 때 전면 광고를 항목 사이에 띄우지 않는다(FrameLesson fromToday).
   const [openToday, setOpenToday] = useState(false);
   const [handled, setHandled] = useState(0);
+  /** 고르는 중이면 고른 틀 id들(☑ 눌렀을 때), 아니면 null. */
+  const [picking, setPicking] = useState<Set<string> | null>(null);
+  /** 알아요로 넘긴 틀(이 폰 시험 재료 — 다시 읽을 때마다 하나 올림). */
+  const [claimRound, setClaimRound] = useState(0);
+  const claimed = useMemo(
+    () => new Set(Object.entries(readPool(language)).filter(([key, entry]) => key.startsWith("f|") && entry.r.includes("claimed")).map(([key]) => key.slice(2))),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [language, claimRound],
+  );
   if (openFor && openFor.at !== handled) {
     setHandled(openFor.at);
     const found = frames.find((frame) => frame.id === openFor.id);
@@ -93,26 +103,78 @@ export function StageFrames({
   }
   if (!frames.length) return null;
   const again = new Set(redo.map((item) => item.frame));
+  const pickedCount = picking ? picking.size : 0;
+  const confirmPicked = () => {
+    for (const id of picking ?? []) notePool(language, `f|${id}`, "claimed");
+    setPicking(null);
+    setClaimRound((n) => n + 1);
+  };
   return (
     <section className={listHidden ? "contents" : "flex flex-col gap-2"}>
       {listHidden ? null : (
+      <>
+      {/* 이미 아는 틀을 한꺼번에 "알아요"(사용자 2026-11-02 "이미 아는 부분은 한번에 선택해서 표시"): ☑ → 카드를 눌러 고르고 → 알아요 (n).
+          수업 첫 화면의 "알아요"와 같은 뜻 — 정기 시험이 떠올리기부터 확인한다(curriculum/exam.ts notePool claimed). 고른 틀은 점선 테두리 + 흐린 ✓. */}
+      <div className="flex items-center justify-end gap-2" data-frames-pick>
+        {picking ? (
+          <>
+            <button type="button" onClick={() => setPicking(null)} className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+              {ui.accountCancel}
+            </button>
+            <button
+              type="button"
+              disabled={!pickedCount}
+              onClick={confirmPicked}
+              className="rounded-full bg-white/90 px-3 py-1 text-caption font-semibold text-slate-900 disabled:opacity-50"
+            >
+              {ui.checkKnown}
+              {pickedCount ? ` (${pickedCount})` : ""}
+            </button>
+          </>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setPicking(new Set())}
+            aria-label={ui.checkKnown}
+            title={ui.checkKnown}
+            className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10"
+          >
+            ☑
+          </button>
+        )}
+      </div>
       <ul className="grid grid-cols-2 gap-2">
         {frames.map((frame) => {
           const ok = passed.includes(frame.id);
           const redoing = again.has(frame.id);
+          const claimedNow = !ok && claimed.has(frame.id);
+          const chosen = Boolean(picking?.has(frame.id));
+          const canPick = Boolean(picking) && !ok;
           return (
             <li key={frame.id}>
               <button
                 type="button"
+                aria-pressed={picking ? chosen : undefined}
                 onClick={() => {
+                  if (picking) {
+                    if (!canPick) return;
+                    setPicking((current) => {
+                      const next = new Set(current);
+                      if (next.has(frame.id)) next.delete(frame.id);
+                      else next.add(frame.id);
+                      return next;
+                    });
+                    return;
+                  }
                   setOpen(frame);
                   setOpenToday(false);
                 }}
-                className={`flex h-full w-full flex-col items-start gap-0.5 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${redoing ? "border-warn/60" : ok ? "border-status-mastered/50" : "border-line"}`}
+                className={`flex h-full w-full flex-col items-start gap-0.5 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${chosen ? "border-good bg-good/10" : picking && ok ? "border-line opacity-50" : redoing ? "border-warn/60" : ok ? "border-status-mastered/50" : claimedNow ? "border-dashed border-line" : "border-line"}`}
               >
                 <span dir="auto" className="text-note text-slate-100">
+                  {picking && !ok ? <span className={`me-1 text-caption ${chosen ? "text-good" : "text-slate-500"}`}>{chosen ? "☑" : "☐"}</span> : null}
                   {frame.pattern}{" "}
-                  {redoing ? <span className="text-caption text-warn">◐</span> : ok ? <span className="text-caption text-good">✓</span> : null}
+                  {redoing ? <span className="text-caption text-warn">◐</span> : ok ? <span className="text-caption text-good">✓</span> : claimedNow ? <span className="text-caption text-slate-500">✓</span> : null}
                 </span>
                 <span dir="auto" className="text-meta text-slate-400">
                   {glossFor(frame.meaning, locale)}
@@ -122,9 +184,14 @@ export function StageFrames({
           );
         })}
       </ul>
+      </>
       )}
       {/* A pattern opens as a lesson: explanation → quiz → talk (2026-10-30, user). The redo cards below keep the old player. */}
-      {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} fromToday={openToday} onClose={() => setOpen(null)} /> : null}
+      {open ? <FrameLesson ui={ui} locale={locale} language={language} frame={open} passed={passed.includes(open.id)} onPassed={onPassed} fromToday={openToday} onClose={() => {
+            setOpen(null);
+            // 수업 첫 화면 "알아요"로 닫았으면 카드에 바로 보이게(사용자 2026-11-02 "알아요를 눌러도 바뀌는 게 없어").
+            setClaimRound((n) => n + 1);
+          }} /> : null}
     </section>
   );
 }
