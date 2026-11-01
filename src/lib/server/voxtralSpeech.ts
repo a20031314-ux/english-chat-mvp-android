@@ -16,8 +16,8 @@ export function voxtralConfigured(): boolean {
 }
 
 /** 미리 정해 둔 목소리 목록(slug·id·언어 등 Mistral이 주는 그대로). */
-export async function voxtralVoices(): Promise<unknown> {
-  const response = await fetch(`${BASE}/voices?limit=200&offset=0`, { headers: { Authorization: `Bearer ${key()}` } });
+export async function voxtralVoices(offset = 0): Promise<unknown> {
+  const response = await fetch(`${BASE}/voices?limit=100&offset=${offset}`, { headers: { Authorization: `Bearer ${key()}` } });
   const body = await response.json().catch(() => null);
   return { status: response.status, body };
 }

@@ -113,7 +113,7 @@ async function synthesize(
   // x-tts-voxtral-voices: 1이면 목록만. 결과는 점검 보고 모양(JSON, wav base64)으로만 — 앱 재생 경로에는 붙이지 않았다.
   if (trialValue(request, "x-tts-engine") === "voxtral") {
     if (!voxtralConfigured()) return jsonWithCors(request, { error: "MISSING_MISTRAL_KEY" }, { status: 503 });
-    if (trialValue(request, "x-tts-voxtral-voices") === "1") return jsonWithCors(request, await voxtralVoices());
+    if (trialValue(request, "x-tts-voxtral-voices") === "1") return jsonWithCors(request, await voxtralVoices(Number(trialValue(request, "x-tts-voxtral-offset")) || 0));
     const made = await voxtralSpeech({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), model: trialValue(request, "x-tts-voxtral-model") });
     if (!made.ok) return jsonWithCors(request, { engine: "voxtral", status: made.status, error: made.error }, { status: 502 });
     return jsonWithCors(request, { engine: "voxtral", spoken, ms: made.ms, wavBase64: made.wav.toString("base64") });
