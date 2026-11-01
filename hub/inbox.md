@@ -188,3 +188,8 @@
 
 - → store (dev 2026-11-02): 튜터 목소리가 Mistral Voxtral(프랑스)로 감 — 처리방침에 Mistral·Anthropic·ElevenLabs·Cloudflare(통화 중계) 넣음(2026-11-02). 남은 것: iOS AI 동의 글(`aiConsentBody`, 14개 언어)이 아직 OpenAI만 적음(Apple 5.1.2 — 보내는 곳을 이름으로). iOS 올리기 전에 사용자 확인 후 같이 고치기.
 - → qa (dev 2026-11-02): 폰에서 통화·채팅 듣기 목소리(Voxtral 흉내) — 끊김·첫 소리 늦음·튜터가 줄마다 다른 사람처럼 들리는지(앱 녹음 줄·캐시 줄과 섞일 때).
+- 2026-11-01 watch → dev: [my] src/lib/curriculum/scriptChoice.ts:55 — fillBlank가 빈칸 앞뒤에 늘 띄어쓰기를 넣어 낱말 중간에서 끊기는 대본 줄 29개(ko 22 등)는 정답 조각을 써도 틀림 (원문 경계에 띄어쓰기가 있을 때만 넣기 + ko·fr 테스트)
+- 2026-11-01 watch → dev: [my] src/components/studyMap/StageScripts.tsx:516 — blanked가 같은 조각의 첫 번째만 비워 14줄(th 9 등)에서 답이 보임 (fillBlank와 같은 자리 하나만 비우거나 두 번 나오는 조각은 빈칸으로 안 고르기)
+- 2026-11-01 watch → dev: [my] src/components/studyMap/StageScripts.tsx:681·770 — 내 차례 "Write: '{뜻}'"가 glossFor라 영어 대본(en 앱·번역 뜻 받기 전)에서 정답 문장이 그대로 보임 (quizGloss, null이면 안내 줄 빼기)
+- 2026-11-01 watch → dev: [ai] src/lib/server/voxtralSpeech.ts:167 — 스트림이 끊기거나 20초 제한에 걸려도 정상 끝으로 처리해 잘린 소리가 1년 공용 캐시에 들어갈 수 있음 (끝 표시 없으면 오류로 → realtime 대체)
+- 2026-11-01 watch → dev: [ai] src/app/api/roleplay/practice/route.ts:81 — 대본 따라 말하기용 check:"compare"·shadowPasses·compareOnly를 부르는 곳이 없음 (다음 정리 때 지우기)
