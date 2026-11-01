@@ -52,10 +52,14 @@ export function buildRecap(language: string, lines: TranscriptLine[]): RecapItem
   const pool = allFramesFor(language);
   const items: RecapItem[] = [];
   const seen = new Set<string>();
+  // 같은 문장은 한 장만(2026-11-01 store → dev "같은 줄 두 번 말하면 통화 정리 카드도 둘"): 대소문자·띄어쓰기·문장부호만 다른 것도 같은 줄,
+  // 고친 말은 고친 문장이 같거나 내가 한 말이 같으면 같은 카드(같은 실수를 두 번 하면 고친 문장이 조금씩 달라도 한 장).
   const push = (item: Omit<RecapItem, "frames">) => {
-    const key = `${item.kind}|${item.line.trim().toLowerCase()}`;
-    if (!item.line.trim() || seen.has(key)) return;
-    seen.add(key);
+    const line = sameLine(item.line);
+    if (!line) return;
+    const keys = [`${item.kind}|${line}`, ...(item.said && sameLine(item.said) ? [`said|${sameLine(item.said)}`] : [])];
+    if (keys.some((key) => seen.has(key))) return;
+    for (const key of keys) seen.add(key);
     items.push({ ...item, frames: framesInLine(language, item.line, pool) });
   };
   let lastTutor = "";
@@ -72,6 +76,13 @@ export function buildRecap(language: string, lines: TranscriptLine[]): RecapItem
     else if (line.looked) push({ kind: "looked", line: line.text, ...meaning });
   }
   return items.slice(0, RECAP_MAX);
+}
+
+/**
+ * 같은 줄인지 볼 때의 꼴: 소문자, 문장부호·기호·띄어쓰기 뺌. 모음 부호(\p{M} — 태국어·힌디어)는 글자의 일부라 남긴다.
+ */
+export function sameLine(text: string): string {
+  return text.toLowerCase().replace(/[\p{P}\p{S}\s]+/gu, "").trim();
 }
 
 /** 다시 볼 것에 넣을 열쇠(f|틀 id) — 정리에 나온 틀, 한 번에 12개까지(서버 saveChecks 한도). */

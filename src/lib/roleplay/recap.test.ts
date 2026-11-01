@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildRecap, framesInLine, recapReviewKeys } from "./recap.ts";
+import { sameLine, buildRecap, framesInLine, recapReviewKeys } from "./recap.ts";
 import type { TranscriptLine } from "./review.ts";
 
 test("고친 줄·도움말·뜻 본 튜터 줄이 정리에 들어가고, 문장구조를 찾는다", () => {
@@ -47,4 +47,31 @@ test("못 알아들은 튜터 줄은 뜻과 함께 정리에 — 뜻을 본 줄�
   const recap = buildRecap("ja", lines);
   assert.deepEqual(recap.map((item) => item.kind), ["missed"]);
   assert.equal(recap[0]!.meaning, "주말에 뭐 했어요?");
+});
+
+test("같은 문장을 두 번 말해도 정리 카드는 한 장 — 문장부호·띄어쓰기만 다르거나 같은 말을 고친 것(중국어·스페인어·태국어)", () => {
+  const twice = buildRecap("zh", [
+    { who: "tutor", text: "你去了长城吗？" },
+    { who: "learner", text: "我没有看见长城，因为天气太冷了的", better: "我没有去长城，因为天气太冷了。" },
+    { who: "tutor", text: "啊，太冷了。" },
+    { who: "learner", text: "我没有看见长城，因为天气太冷了的", better: "我没有去长城，因为天气太冷了" },
+  ]);
+  assert.equal(twice.filter((item) => item.kind === "fix").length, 1);
+  const es = buildRecap("es", [
+    { who: "learner", text: "yo trabajar diez horas", better: "Trabajé diez horas." },
+    { who: "learner", text: "Yo trabajar diez horas.", better: "Trabajé diez horas hoy." },
+  ]);
+  assert.equal(es.length, 1, "같은 말을 두 번 — 고친 문장이 조금 달라도 한 장");
+  const th = buildRecap("th", [
+    { who: "tutor", text: "ไปไหนมา", missed: true },
+    { who: "tutor", text: "ไปไหนมา?", missed: true },
+  ]);
+  assert.equal(th.length, 1);
+  // 다른 문장은 그대로 둘.
+  assert.equal(buildRecap("es", [
+    { who: "learner", text: "yo ir", better: "Fui." },
+    { who: "learner", text: "yo comer", better: "Comí." },
+  ]).length, 2);
+  // 태국어 모음 부호는 지우지 않는다(다른 낱말은 다른 줄).
+  assert.notEqual(sameLine("ใช่"), sameLine("ใช"));
 });

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { FindInMy } from "@/components/FindInMy";
 import { openLesson } from "@/lib/appIntents";
+import { correctionReplacementSnippet } from "@/lib/textDiff";
 import { notePool } from "@/lib/curriculum/exam";
 import { expressionKeysIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import type { UICopy } from "@/lib/copy";
@@ -93,7 +94,7 @@ export function CallRecap({
                 ))}
               </div>
             ) : (
-              <FindInMy ui={ui} text={item.line} sentence={item.line} language={language} locale={locale} onDone={onLeave} lessonScene={sceneOf(item)} />
+              <FindInMy ui={ui} text={findText(item)} sentence={item.line} language={language} locale={locale} onDone={onLeave} lessonScene={sceneOf(item)} />
             )}
           </li>
         ))}
@@ -105,4 +106,19 @@ export function CallRecap({
 /** 통화 정리 한 줄 → 수업·시험에 들고 갈 장면(이 폰에만). */
 function sceneOf(item: RecapItem): LessonScene {
   return { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}), ...(item.meaning ? { meaning: item.meaning } : {}) };
+}
+
+/**
+ * 🔎 My에서 찾기가 찾을 것 — 고친 말이면 고친 곳만(문장 전체가 아니라), 나머지는 그 줄.
+ * 2026-11-01 store → dev: "我…没有看见长城…的 → 没有去长城"이 문장 전체로 찾아 "不로 부정하기"(문장에 있는 부정)를 열었음 — 고친 곳은 看见→去.
+ */
+function findText(item: RecapItem): string {
+  if (item.kind !== "fix" || !item.said) return item.line;
+  // 문장부호만인 조각은 빼고, 남은 글자가 두 자도 안 되면(일본어 활용 "き"처럼) 그 줄 전체로 — 한 글자로는 찾을 칸이 정해지지 않는다.
+  const changed = correctionReplacementSnippet(item.said, item.line)
+    .split(" · ")
+    .map((piece) => piece.trim())
+    .filter((piece) => /[\p{L}\p{N}]/u.test(piece))
+    .join(" · ");
+  return [...changed.replace(/[^\p{L}\p{M}\p{N}]/gu, "")].length >= 2 ? changed : item.line;
 }
