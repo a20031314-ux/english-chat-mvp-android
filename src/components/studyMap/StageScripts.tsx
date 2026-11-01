@@ -1,5 +1,6 @@
 "use client";
 
+import { noteSpot } from "@/lib/resumeSpot";
 import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -386,6 +387,11 @@ function ScriptPlayer({
   // 채팅으로 내 줄 쓰기 하나(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로") — 대본 은행 장면도 같다.
   const mode: ScriptMode = modesFor(script.stage)[0]!;
   // 입력칸(채팅처럼 화면 아래).
+  // 앱을 나갔다 다시 켜면 이 대본을 다시 연다(lib/resumeSpot.ts, 2026-11-02 — 줄 진행은 "이어서 하기"가 맡음), 닫으면 지움.
+  useEffect(() => {
+    noteSpot({ item: { language, stage: script.stage, id: script.id } });
+    return () => noteSpot({ item: undefined });
+  }, [language, script.stage, script.id]);
   const [draft, setDraft] = useState("");
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<number, Result>>({});

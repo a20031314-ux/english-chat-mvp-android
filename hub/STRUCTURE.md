@@ -77,6 +77,7 @@
 - **창구(웹, `src/lib/doors.ts`, `hub/drafts/doors.md`):** 겉은 다른 서비스(이름·색·소개 글·검색어), 속은 같은 앱. `call.languagebank.net` = Moyeo(단체통화, 첫 화면 Room), `talk.languagebank.net` = Pingo(1:1 대화, 첫 화면 사람 "🟢 지금 접속 중").
   `spin.languagebank.net` = Spin(랜덤 채팅·랜덤 영상통화, 성인인증한 사람끼리만, 첫 화면 🎲 랜덤 탭 `random` — 이 창구에만 보이는 탭, 웹만·앱에는 없음, 서버 스위치 `RANDOM_ENABLED`가 꺼져 있으면 "준비 중"). Pingo 사람 탭 위에 Spin으로 가는 줄(켜졌을 때만).
   창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`, next.config.ts rewrites), `?screen=`이 붙으면 같은 앱이 **창구 모드**(첫 화면·하단 탭만 그 창구 것, 상단에 창구 이름). 계정·구독·기록은 하나.
+- **다시 켤 때 하던 자리로**(2026-11-02 사용자 "학습하다 나갔다 들어오면 첫 화면으로 가", `lib/resumeSpot.ts` resumeSpot.v1 이 폰): 하단 탭(AppHome)·My 칸과 전체 화면(NotebookSection MyLayers)·열어 둔 문장구조 수업·대본(FrameLesson·ScriptPlayer → 다시 켜면 jump로 다시 엶)·소재 수업(LessonHost)을 남겨, 앱이 처음부터 다시 뜨면(뒤로 가기로 나감·폰이 정리) 1시간 안이면 그 자리로. 주소 ?screen·창구가 앞선다. 대본 줄 진행은 원래 "이어서 하기", 수업 안 단계(설명·퀴즈·대화)는 처음부터.
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
 - **운영자 신고함 `/ops`(웹만, 앱 빌드에서 빠짐):** 운영자 키로 열고 `/api/ops/reports`. 여기서 누른 "사람 기능 정지"는 대화·사람·Room·게시판·사진·랜덤 API의 쓰기를 403 `SUSPENDED`로 막고(`server/suspension.ts`),
   앱은 그 답을 `lib/rooms/suspended.ts`에 남겨 앱 틀의 `SuspendedNotice`가 한 줄 띄운다 — 사람 기능 API에 쓰기 동작을 새로 만들면 그 라우트의 정지 목록에도 넣는다.

@@ -1,5 +1,6 @@
 "use client";
 
+import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
@@ -294,6 +295,13 @@ export function NotebookSection({
       if (handed.node) setNodeOpen(handed.node);
     };
     take();
+    // 앱을 나갔다 다시 켜면 열어 두었던 문장구조 수업·대본을 다시 연다(lib/resumeSpot.ts, 2026-11-02).
+    const item = takeSpotPart("item");
+    if (item && item.language === language) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- 다시 켤 때 한 번(takeSpotPart)
+      openLayer("stage");
+      setJump({ stage: item.stage, id: item.id, at: Date.now() });
+    }
     return onLocate(take);
   }, [loaded, language]);
 
@@ -2279,6 +2287,17 @@ function MyLayers({
   // 탭을 누르면 그 칸이 제자리에 작게, 그 칸을 누르면 전체 화면(2026-11-02 사용자 "위쪽버튼을 누르면 작은화면 > 그 화면을 누를시 큰화면").
   // 전체 화면 안에서 탭을 누르면 칸만 바뀜, ✕로 제자리.
   const [full, setFull] = useState(false);
+  // 앱을 나갔다 다시 켜면 마지막 칸·전체 화면으로(lib/resumeSpot.ts, 2026-11-02), 바뀔 때마다 이 폰에 남긴다.
+  useEffect(() => {
+    const my = takeSpotPart("my");
+    if (!my) return;
+    if (my.bank === "stage" || my.bank === "keep" || my.bank === "log") onOpen(my.bank);
+    if (my.full) setFull(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    noteSpot({ my: { bank: tab, full } });
+  }, [tab, full]);
   const pressTab = (id: MyLayer) => {
     if (id !== shown) onOpen(id);
   };

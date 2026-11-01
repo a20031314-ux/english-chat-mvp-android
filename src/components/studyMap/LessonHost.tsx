@@ -1,5 +1,6 @@
 "use client";
 
+import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
 import { useEffect, useState } from "react";
 import { FrameLesson } from "@/components/studyMap/FrameLesson";
 import { onAppIntent, takeAppIntent, type AppIntents } from "@/lib/appIntents";
@@ -19,6 +20,15 @@ import { glossFor } from "@/lib/curriculum/stageScripts";
 export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   const [open, setOpen] = useState<AppIntents["openLesson"] | null>(() => takeAppIntent("openLesson"));
   useEffect(() => onAppIntent("openLesson", setOpen), []);
+  // 앱을 나갔다 다시 켜면 열어 두었던 소재 수업을 다시(lib/resumeSpot.ts, 2026-11-02), 열고 닫을 때 이 폰에 남긴다.
+  useEffect(() => {
+    const lesson = takeSpotPart("lesson");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- 다시 켤 때 한 번(takeSpotPart)
+    if (lesson) setOpen((current) => current ?? lesson);
+  }, []);
+  useEffect(() => {
+    noteSpot({ lesson: open ? { language: open.language, key: open.key } : undefined });
+  }, [open]);
   useEffect(() => {
     if (open) notePool(open.language, open.key, "opened", Date.now(), open.scene);
   }, [open]);

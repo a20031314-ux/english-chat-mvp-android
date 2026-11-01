@@ -1,5 +1,6 @@
 "use client";
 
+import { noteSpot, takeSpotPart, touchSpot } from "@/lib/resumeSpot";
 import { AiConsentGate } from "@/components/AiConsentGate";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBannerPlacement, warmUpAds, watchAppLifecycle } from "@/lib/ads";
@@ -213,6 +214,17 @@ function AppHomeInner({
     document.documentElement.dir = learningLanguageTextDir(locale);
   }, [locale]);
 
+  // 지금 하단 탭을 이 폰에 남기고, 다른 앱으로 갈 때 시각을 새로(다시 켤 때 오래 떠났는지 재려고, lib/resumeSpot.ts).
+  useEffect(() => {
+    noteSpot({ tab });
+  }, [tab]);
+  useEffect(() => {
+    const onHide = () => {
+      if (document.visibilityState === "hidden") touchSpot();
+    };
+    document.addEventListener("visibilitychange", onHide);
+    return () => document.removeEventListener("visibilitychange", onHide);
+  }, []);
   // 아침 알림을 눌러 열면 My(lib/morningNotify.ts).
   useEffect(() => onMorningTap(() => sendAppIntent("openTab", { tab: "map" })), []);
 
@@ -221,7 +233,11 @@ function AppHomeInner({
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get("screen") ?? params.get("tab");
       // 창구(lib/doors.ts)로 들어오면 그 창구의 첫 화면.
-      const initial = fromQuery ? resolveTab(fromQuery) : (readEntryDoor()?.start ?? resolveTab(null));
+      // 앱을 나갔다 다시 켜면 마지막 하단 탭(lib/resumeSpot.ts, 2026-11-02) — 주소·창구가 정한 첫 화면이 앞선다.
+      const resumeTab = takeSpotPart("tab");
+      const initial = fromQuery
+        ? resolveTab(fromQuery)
+        : (readEntryDoor()?.start ?? resolveTab(resumeTab ?? null));
       // 예전 단어장 탭 링크: My로 와서 노트의 단어장을 연다.
       if (fromQuery === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(initial);

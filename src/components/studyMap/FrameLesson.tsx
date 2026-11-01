@@ -1,5 +1,6 @@
 "use client";
 
+import { noteSpot } from "@/lib/resumeSpot";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -99,6 +100,12 @@ export function FrameLesson({
     };
   }, [language, locale, frame, key, isPremium]);
   useEffect(() => () => stopTts(), []);
+  // 앱을 나갔다 다시 켜면 이 문장구조 수업을 다시 연다(lib/resumeSpot.ts) — 닫으면 지움.
+  useEffect(() => {
+    if (!frame) return;
+    noteSpot({ item: { language, stage: frame.stage, id: frame.id } });
+    return () => noteSpot({ item: undefined });
+  }, [language, frame]);
 
   // ② 퀴즈: 그 틀 열쇠로 세 문제(말하기 문제는 ③이 하니 뺌).
   const [seed] = useState(() => String(Date.now() % 1000));
