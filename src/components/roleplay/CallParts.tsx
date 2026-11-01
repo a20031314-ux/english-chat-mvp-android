@@ -8,6 +8,7 @@
  */
 import { useEffect, useState } from "react";
 import { AiAvatar } from "@/components/AiTutorProfile";
+import { MyAvatarFace } from "@/components/account/AccountCard";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
 import type { UICopy } from "@/lib/copy";
 import type { Instruction } from "@/lib/roleplay/session";
@@ -41,7 +42,7 @@ function useCallClock(): string {
 
 export type CallSpeaker = "tutor" | "learner" | "thinking" | "listening" | null;
 
-/** 나(학습자) 쪽 얼굴 — 사람 모양. 말할 때 둘레가 초록. */
+/** 나(학습자) 쪽 얼굴 — 내 프로필 사진(없으면 첫 글자·사람 모양). 말할 때 둘레가 초록. */
 function LearnerFace({ talking, listening }: { talking: boolean; listening: boolean }) {
   return (
     <div className="relative flex items-center justify-center">
@@ -51,12 +52,7 @@ function LearnerFace({ talking, listening }: { talking: boolean; listening: bool
           talking ? "animate-pulse border-good/60 opacity-100" : listening ? "border-white/15 opacity-100" : "opacity-0"
         }`}
       />
-      <span aria-hidden className="flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-slate-300">
-        <svg viewBox="0 0 48 48" width={52} height={52} fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="24" cy="17" r="7.5" />
-          <path d="M10 40c1.8-7.5 7.4-11.5 14-11.5S36.2 32.5 38 40" />
-        </svg>
-      </span>
+      <MyAvatarFace size={96} />
     </div>
   );
 }

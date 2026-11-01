@@ -202,6 +202,11 @@ function Avatar({ account, size, locale }: { account: PublicAccount | null; size
   );
 }
 
+/** 내 프로필 사진(없으면 첫 글자, 로그인 안 했으면 사람 모양) — 통화 화면 아래 칸 "나"(2026-11-01). */
+export function MyAvatarFace({ size }: { size: number }) {
+  return <AvatarFace account={useAccount()} size={size} />;
+}
+
 function AvatarFace({ account, size }: { account: PublicAccount | null; size: number }) {
   const photo = account?.profile.photo;
   const letter = Array.from(account?.profile.nickname || account?.username || account?.email || "?")[0]?.toUpperCase() ?? "?";
