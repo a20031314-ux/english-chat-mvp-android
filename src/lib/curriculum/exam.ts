@@ -214,7 +214,8 @@ export function buildExam(input: {
   }
 
   // 모인 소재(알아요 → 틀림 → 막힘 → 열어 봄 순, 같으면 오래된 것) + 잊을 때 된 것.
-  const weight = (entry: PoolEntry) => (entry.r.includes("claimed") ? 0 : entry.r.includes("wrong") ? 1 : entry.r.includes("stuck") ? 2 : 3);
+  // 내 장면(통화에서 고친 문장)이 붙은 소재가 맨 앞 — 그 문장을 문제로 내는 게 이 시험에서 가장 값지다(2026-11-01).
+  const weight = (entry: PoolEntry) => (entry.s?.length ? 0 : entry.r.includes("claimed") ? 1 : entry.r.includes("wrong") ? 2 : entry.r.includes("stuck") ? 3 : 4);
   const pooled = Object.entries(input.pool)
     .sort((a, b) => weight(a[1]) - weight(b[1]) || a[1].at - b[1].at)
     .map(([key]) => key);
