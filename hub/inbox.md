@@ -176,3 +176,4 @@
 - 2026-11-01 모델 살피기 → dev: [ops] scripts/models/whatif.mjs trial — sim:users를 앱 2.78로 돌려 무료 점검 사용자가 첫 줄 뒤 /api/chat 403(대본만 무료)이라 평가 0줄. 이번엔 tmp 사본에 `--app-version 2.75.0`을 붙여 돌림 (trial 인자에 --app-version 2.75.0을 넣거나 점검 사용자에게 유료 플랜을 주는 길로)
 - 2026-11-01 dev → qa: 다음 빌드 기기에서 통화 한 번 → 끝난 화면 통화 정리의 🧩·🔤 칩을 누르면 그 수업이 통화 화면 **위로** 뜨는지(맨 위 📞 카드에 내가 한 말 → 고친 말), 닫으면 통화 결과로 돌아오는지, Logbank 통화 카드의 고친 말도. ja/ko·en/ja·es/ar.
 - 2026-11-01 dev → qa: 다음 빌드에서 튜터 목소리(AI 대화 ⋮ "튜터 목소리"): 바꾸면 대화 탭·사람 탭 튜터 이름, 채팅 🔊 듣기 목소리, 📞 통화(인사 목소리·이름)가 같이 바뀌는지 — ja(♂ Haruto)/ko 앱, ru(♀ Anya "Рада")·ar(♀ Layla "سعيدة") 인사, es/ar 앱.
+- 2026-11-01 store → dev: (스토어 시안 찍다 봄, 운영) ① Quizbank 어휘 "She signed the card on ___ of the whole team." 보기 behalf · being · **banana** — 한눈에 지워지는 오답(RULES 11②). ② 문장구조 수업 대화 단계에서 말한 줄("If I were the manager…")이 바로 뒤 AI 통화 기록의 첫 줄·제목으로 들어감.
