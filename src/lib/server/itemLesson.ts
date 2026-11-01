@@ -85,7 +85,13 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
   if (!lesson?.turns?.length) {
     onMake?.();
-    lesson = await makeLesson(language, item).catch(() => null);
+    // 처음 만들 때 모델이 한 번 실패하거나 형식을 안 지키는 일이 있어(2026-11-01 운영 확인) 한 번 더.
+    const once = () =>
+      makeLesson(language, item).catch((error: unknown) => {
+        lastLessonRaw = `ERR ${error instanceof Error ? error.message : String(error)}`.slice(0, 300);
+        return null;
+      });
+    lesson = (await once()) ?? (await once());
     if (!lesson) return null;
     await kvSetJson(key, lesson, TTL_SECONDS).catch(() => undefined);
   }

@@ -9,6 +9,7 @@ import { frameById } from "@/lib/curriculum/frames";
 import { streakOf } from "@/lib/curriculum/nextStudy";
 import { readQuizLog } from "@/lib/curriculum/quizLogStore";
 import { ladderFor } from "@/lib/curriculum/stages/index";
+import { glossFor } from "@/lib/curriculum/stageScripts";
 
 /**
  * Stagebank 소재 수업을 앱 어디서나 띄우는 층(2026-11-01 설계 "모를 때 이동해서 확인", hub/drafts/quiz-pages-2026-11-01.md 3절).
@@ -33,5 +34,8 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
     ? Number(key.slice(2).split(":")[0]) || 1
     : (ladderFor(language)?.stages.find((one) => one.expressions.includes(key.slice(2)))?.order ?? 1);
   if (!key.startsWith("e|") && !key.startsWith("g|")) return null;
-  return <FrameLesson key={key} ui={ui} locale={locale} language={language} subject={{ key, kind: key.startsWith("e|") ? "expression" : "grammar", stage }} passed={passed} onClose={close} />;
+  // 문법 칸 이름(앱 언어 — 수업이 오기 전 머리에).
+  const grammar = key.startsWith("g|") ? ladderFor(language)?.stages.find((one) => one.order === stage)?.grammar[Number(key.split(":")[1])] : undefined;
+  const title = grammar ? glossFor(grammar.name, locale) : undefined;
+  return <FrameLesson key={key} ui={ui} locale={locale} language={language} subject={{ key, kind: key.startsWith("e|") ? "expression" : "grammar", stage, ...(title ? { title } : {}) }} passed={passed} onClose={close} />;
 }

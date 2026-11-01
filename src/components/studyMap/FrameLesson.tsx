@@ -254,7 +254,7 @@ export function FrameLesson({
   const meaningText = frame ? glossFor(frame.meaning, locale) : (lesson?.meaning ?? "");
   const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
   // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름).
-  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : lesson?.title || subject?.title || "");
+  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : subject?.title || lesson?.title || "");
 
   return (
     <FullScreenLayer>
