@@ -298,38 +298,38 @@
         }
       },
       "hot-easy": {
-        "text": "Hot? Or cold, with ice?",
+        "text": "Do you want it hot or iced?",
         "gloss": {
-          "en": "Hot? Or cold, with ice?",
-          "ko": "뜨거운 거요? 아니면 얼음 넣은 차가운 거?"
+          "en": "Do you want it hot or iced?",
+          "ko": "뜨거운 걸로요, 아이스로요?"
         }
       },
       "many": {
-        "text": "Just one, or one for a friend too?",
+        "text": "Just one coffee today?",
         "gloss": {
-          "en": "Just one, or one for a friend too?",
-          "ko": "하나만요, 친구 것도요?"
+          "en": "Just one coffee today?",
+          "ko": "커피 한 잔만이죠?"
         }
       },
       "many-easy": {
-        "text": "One or two?",
+        "text": "Do you want one or two?",
         "gloss": {
-          "en": "One or two?",
-          "ko": "하나요, 둘이요?"
+          "en": "Do you want one or two?",
+          "ko": "한 잔이요, 두 잔이요?"
         }
       },
       "ready": {
-        "text": "Okay, coming right up.",
+        "text": "Sure, coming right up. Anything else?",
         "gloss": {
-          "en": "Okay, coming right up.",
-          "ko": "네, 바로 나와요."
+          "en": "Sure, coming right up. Anything else?",
+          "ko": "네, 바로 준비할게요. 더 필요한 거 있어요?"
         }
       },
       "ready-easy": {
-        "text": "Okay. Anything else?",
+        "text": "Do you want anything else?",
         "gloss": {
-          "en": "Okay. Anything else?",
-          "ko": "네. 더 필요한 거 있어요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "price": {
@@ -340,10 +340,10 @@
         }
       },
       "price-easy": {
-        "text": "Four dollars and fifty cents.",
+        "text": "It's four dollars and fifty cents.",
         "gloss": {
-          "en": "Four dollars and fifty cents.",
-          "ko": "4달러 50센트요."
+          "en": "It's four dollars and fifty cents.",
+          "ko": "4달러 50센트예요."
         }
       },
       "bye": {
@@ -616,10 +616,10 @@
         }
       },
       "hi-easy": {
-        "text": "Do you need help?",
+        "text": "Do you need some help?",
         "gloss": {
-          "en": "Do you need help?",
-          "ko": "도움 필요해요?"
+          "en": "Do you need some help?",
+          "ko": "도움이 필요하세요?"
         }
       },
       "dir": {
@@ -630,24 +630,24 @@
         }
       },
       "dir-easy": {
-        "text": "Go straight. Then left. It's next to the station.",
+        "text": "Go straight on. It's on the left, next to the station.",
         "gloss": {
-          "en": "Go straight. Then left. It's next to the station.",
-          "ko": "쭉 가요. 그다음 왼쪽. 역 옆이에요."
+          "en": "Go straight on. It's on the left, next to the station.",
+          "ko": "쭉 가세요. 왼쪽에, 역 옆에 있어요."
         }
       },
       "slow": {
-        "text": "Sure. Go straight. It's on the left. Next to the station.",
+        "text": "Sure. Go straight on. It's on the left, next to the station.",
         "gloss": {
-          "en": "Sure. Go straight. It's on the left. Next to the station.",
-          "ko": "그럼요. 쭉 가요. 왼쪽이에요. 역 옆이요."
+          "en": "Sure. Go straight on. It's on the left, next to the station.",
+          "ko": "그럼요. 쭉 가세요. 왼쪽에, 역 옆에 있어요."
         }
       },
       "slow-easy": {
-        "text": "Straight on. Then left.",
+        "text": "Go straight on, and it's on the left.",
         "gloss": {
-          "en": "Straight on. Then left.",
-          "ko": "쭉 가요. 그다음 왼쪽."
+          "en": "Go straight on, and it's on the left.",
+          "ko": "쭉 가면 왼쪽에 있어요."
         }
       },
       "check": {
@@ -658,10 +658,10 @@
         }
       },
       "check-easy": {
-        "text": "Yes. Okay?",
+        "text": "Yes, that's right. Is that okay?",
         "gloss": {
-          "en": "Yes. Okay?",
-          "ko": "네. 괜찮아요?"
+          "en": "Yes, that's right. Is that okay?",
+          "ko": "네, 맞아요. 괜찮겠어요?"
         }
       },
       "far": {
@@ -672,10 +672,10 @@
         }
       },
       "far-easy": {
-        "text": "Not far. Five minutes.",
+        "text": "No, it's not far. It's five minutes.",
         "gloss": {
-          "en": "Not far. Five minutes.",
-          "ko": "안 멀어요. 5분요."
+          "en": "No, it's not far. It's five minutes.",
+          "ko": "아니요, 안 멀어요. 5분이에요."
         }
       },
       "bye": {
@@ -825,7 +825,7 @@
         "type": "learner",
         "id": "l-like",
         "goal": {
-          "en": "Say whether the colour suits you.",
+          "en": "Say whether the color suits you.",
           "ko": "그 색이 마음에 드는지 말하세요."
         },
         "expect": [
@@ -1040,10 +1040,10 @@
         }
       },
       "look-easy": {
-        "text": "Okay. What do you need?",
+        "text": "Okay, take your time. Do you need anything?",
         "gloss": {
-          "en": "Okay. What do you need?",
-          "ko": "네. 뭐 필요해요?"
+          "en": "Okay, take your time. Do you need anything?",
+          "ko": "네, 천천히 보세요. 필요한 거 있어요?"
         }
       },
       "color": {
@@ -1054,10 +1054,10 @@
         }
       },
       "color-easy": {
-        "text": "This one. Blue. Is it okay?",
+        "text": "It's blue. Is that okay?",
         "gloss": {
-          "en": "This one. Blue. Is it okay?",
-          "ko": "이거요. 파란색. 괜찮아요?"
+          "en": "It's blue. Is that okay?",
+          "ko": "파란색이에요. 괜찮아요?"
         }
       },
       "red": {
@@ -1075,10 +1075,10 @@
         }
       },
       "price-easy": {
-        "text": "Six. Six dollars.",
+        "text": "It's six dollars.",
         "gloss": {
-          "en": "Six. Six dollars.",
-          "ko": "6. 6달러요."
+          "en": "It's six dollars.",
+          "ko": "6달러예요."
         }
       },
       "bag": {
@@ -1089,10 +1089,10 @@
         }
       },
       "bag-easy": {
-        "text": "A bag? Yes or no?",
+        "text": "Do you want a bag?",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉투요? 네, 아니요?"
+          "en": "Do you want a bag?",
+          "ko": "봉투 드릴까요?"
         }
       },
       "bye": {
@@ -1110,10 +1110,10 @@
         }
       },
       "ok-easy": {
-        "text": "Okay. Good.",
+        "text": "Okay, good.",
         "gloss": {
-          "en": "Okay. Good.",
-          "ko": "네. 좋아요."
+          "en": "Okay, good.",
+          "ko": "네, 좋아요."
         }
       }
     },
@@ -1426,10 +1426,10 @@
         }
       },
       "hello-easy": {
-        "text": "Hello. Do you have a room here?",
+        "text": "Hello. Did you book a room?",
         "gloss": {
-          "en": "Hello. Do you have a room here?",
-          "ko": "안녕하세요. 여기 방 예약했어요?"
+          "en": "Hello. Did you book a room?",
+          "ko": "안녕하세요. 방 예약하셨어요?"
         }
       },
       "name": {
@@ -1454,38 +1454,38 @@
         }
       },
       "spell-easy": {
-        "text": "The letters, please. J... ?",
+        "text": "How do you spell your name?",
         "gloss": {
-          "en": "The letters, please. J... ?",
-          "ko": "글자로요. J…?"
+          "en": "How do you spell your name?",
+          "ko": "이름 철자가 어떻게 돼요?"
         }
       },
       "room": {
-        "text": "Perfect. You're in room twelve, two nights.",
+        "text": "Perfect. You're in room twelve, for two nights.",
         "gloss": {
-          "en": "Perfect. You're in room twelve, two nights.",
-          "ko": "완벽해요. 12호실, 2박이에요."
+          "en": "Perfect. You're in room twelve, for two nights.",
+          "ko": "좋아요. 12호실, 2박이에요."
         }
       },
       "room-easy": {
-        "text": "Room twelve. Two nights. Okay?",
+        "text": "Your room is room twelve.",
         "gloss": {
-          "en": "Room twelve. Two nights. Okay?",
-          "ko": "12호실. 2박. 괜찮죠?"
+          "en": "Your room is room twelve.",
+          "ko": "방은 12호실이에요."
         }
       },
       "lift": {
-        "text": "It's on the first floor, next to the lift.",
+        "text": "It's upstairs, next to the lift.",
         "gloss": {
-          "en": "It's on the first floor, next to the lift.",
-          "ko": "1층(한 층 위), 엘리베이터 옆이에요."
+          "en": "It's upstairs, next to the lift.",
+          "ko": "위층이에요, 엘리베이터 옆이요."
         }
       },
       "lift-easy": {
-        "text": "Upstairs. Next to the lift.",
+        "text": "Go upstairs. It's next to the lift.",
         "gloss": {
-          "en": "Upstairs. Next to the lift.",
-          "ko": "위층이요. 엘리베이터 옆."
+          "en": "Go upstairs. It's next to the lift.",
+          "ko": "위층으로 가세요. 엘리베이터 옆이에요."
         }
       },
       "breakfast": {
@@ -1496,10 +1496,10 @@
         }
       },
       "breakfast-easy": {
-        "text": "Seven o'clock. Until ten.",
+        "text": "Breakfast is at seven. It ends at ten.",
         "gloss": {
-          "en": "Seven o'clock. Until ten.",
-          "ko": "7시요. 10시까지."
+          "en": "Breakfast is at seven. It ends at ten.",
+          "ko": "아침은 7시예요. 10시에 끝나요."
         }
       },
       "more": {
@@ -1927,17 +1927,17 @@
         }
       },
       "work-easy": {
-        "text": "Your work. Where is it?",
+        "text": "Where do you work? At a school, or a hospital?",
         "gloss": {
-          "en": "Your work. Where is it?",
-          "ko": "일하는 곳. 어디야?"
+          "en": "Where do you work? At a school, or a hospital?",
+          "ko": "어디서 일해? 학교, 아니면 병원?"
         }
       },
       "teacher": {
-        "text": "Cool. Me? I'm a teacher, at a high school.",
+        "text": "Cool. I'm a teacher at a high school.",
         "gloss": {
-          "en": "Cool. Me? I'm a teacher, at a high school.",
-          "ko": "멋지다. 나? 난 고등학교 선생님이야."
+          "en": "Cool. I'm a teacher at a high school.",
+          "ko": "멋지다. 난 고등학교 선생님이야."
         }
       },
       "teacher-easy": {
@@ -1962,24 +1962,24 @@
         }
       },
       "hname-easy": {
-        "text": "Your name? What is it?",
+        "text": "What is your name?",
         "gloss": {
-          "en": "Your name? What is it?",
-          "ko": "네 이름? 뭐야?"
+          "en": "What is your name?",
+          "ko": "이름이 뭐야?"
         }
       },
       "askme": {
-        "text": "Korea, nice! Do you want to know where I'm from?",
+        "text": "Oh, Korea! Nice. Guess where I'm from.",
         "gloss": {
-          "en": "Korea, nice! Do you want to know where I'm from?",
-          "ko": "한국, 좋다! 내가 어디서 왔는지 궁금해?"
+          "en": "Oh, Korea! Nice. Guess where I'm from.",
+          "ko": "오, 한국! 좋다. 내가 어디서 왔게?"
         }
       },
       "askme-easy": {
-        "text": "Ask me! Where am I from?",
+        "text": "Ask me where I'm from.",
         "gloss": {
-          "en": "Ask me! Where am I from?",
-          "ko": "나한테 물어봐! 난 어디서 왔게?"
+          "en": "Ask me where I'm from.",
+          "ko": "내가 어디서 왔는지 물어봐."
         }
       }
     },
@@ -2262,10 +2262,10 @@
         }
       },
       "photo-easy": {
-        "text": "This man here. Who is he?",
+        "text": "Who is this man?",
         "gloss": {
-          "en": "This man here. Who is he?",
-          "ko": "여기 이 남자. 누구야?"
+          "en": "Who is this man?",
+          "ko": "이 남자는 누구야?"
         }
       },
       "sibs": {
@@ -2276,24 +2276,24 @@
         }
       },
       "sibs-easy": {
-        "text": "Brothers? Sisters? How many?",
+        "text": "How many brothers and sisters do you have?",
         "gloss": {
-          "en": "Brothers? Sisters? How many?",
-          "ko": "형제? 자매? 몇 명?"
+          "en": "How many brothers and sisters do you have?",
+          "ko": "형제자매가 몇 명이야?"
         }
       },
       "only": {
-        "text": "Oh, just you! Me, I have three brothers. It's very loud!",
+        "text": "Oh, just you! I have three brothers. It's very loud at home!",
         "gloss": {
-          "en": "Oh, just you! Me, I have three brothers. It's very loud!",
-          "ko": "아, 너 혼자구나! 난 남동생이 셋이야. 엄청 시끄러워!"
+          "en": "Oh, just you! I have three brothers. It's very loud at home!",
+          "ko": "아, 너 혼자구나! 난 남자 형제가 셋이야. 집이 엄청 시끄러워!"
         }
       },
       "only-easy": {
-        "text": "Me? Three brothers. Loud!",
+        "text": "I have three brothers.",
         "gloss": {
-          "en": "Me? Three brothers. Loud!",
-          "ko": "나? 남자 형제 셋. 시끄러워!"
+          "en": "I have three brothers.",
+          "ko": "난 남자 형제가 셋이야."
         }
       },
       "me": {
@@ -2304,10 +2304,10 @@
         }
       },
       "me-easy": {
-        "text": "Your family. Do you see them often?",
+        "text": "Do you see your family often?",
         "gloss": {
-          "en": "Your family. Do you see them often?",
-          "ko": "가족. 자주 봐?"
+          "en": "Do you see your family often?",
+          "ko": "가족 자주 봐?"
         }
       },
       "pet": {
@@ -2318,10 +2318,10 @@
         }
       },
       "pet-easy": {
-        "text": "The dog. Is it your dog?",
+        "text": "Is this your dog?",
         "gloss": {
-          "en": "The dog. Is it your dog?",
-          "ko": "개. 너희 개야?"
+          "en": "Is this your dog?",
+          "ko": "이거 네 개야?"
         }
       },
       "pets": {
@@ -2332,10 +2332,10 @@
         }
       },
       "pets-easy": {
-        "text": "Animals. Do you like them?",
+        "text": "Do you like dogs or cats?",
         "gloss": {
-          "en": "Animals. Do you like them?",
-          "ko": "동물. 좋아해?"
+          "en": "Do you like dogs or cats?",
+          "ko": "개나 고양이 좋아해?"
         }
       },
       "end": {
@@ -2654,10 +2654,10 @@
         }
       },
       "hello-easy": {
-        "text": "Tacos. Do you like them?",
+        "text": "Do you like tacos?",
         "gloss": {
-          "en": "Tacos. Do you like them?",
-          "ko": "타코. 좋아해?"
+          "en": "Do you like tacos?",
+          "ko": "타코 좋아해?"
         }
       },
       "spicy": {
@@ -2668,10 +2668,10 @@
         }
       },
       "spicy-easy": {
-        "text": "Spicy food. Hot! Do you like it?",
+        "text": "Do you like spicy food?",
         "gloss": {
-          "en": "Spicy food. Hot! Do you like it?",
-          "ko": "매운 음식. 맵다! 좋아해?"
+          "en": "Do you like spicy food?",
+          "ko": "매운 음식 좋아해?"
         }
       },
       "other": {
@@ -2689,31 +2689,31 @@
         }
       },
       "drink": {
-        "text": "Ha, nice. And what do you drink? Coffee?",
+        "text": "Nice. And do you drink coffee?",
         "gloss": {
-          "en": "Ha, nice. And what do you drink? Coffee?",
-          "ko": "하하, 좋다. 그리고 뭐 마셔? 커피?"
+          "en": "Nice. And do you drink coffee?",
+          "ko": "좋다. 그리고 커피 마셔?"
         }
       },
       "drink-easy": {
-        "text": "Coffee. Do you drink it?",
+        "text": "Do you like coffee?",
         "gloss": {
-          "en": "Coffee. Do you drink it?",
-          "ko": "커피. 마셔?"
+          "en": "Do you like coffee?",
+          "ko": "커피 좋아해?"
         }
       },
       "me": {
-        "text": "Really? I love coffee. I drink three a day!",
+        "text": "Really? I love coffee. I drink three cups a day!",
         "gloss": {
-          "en": "Really? I love coffee. I drink three a day!",
+          "en": "Really? I love coffee. I drink three cups a day!",
           "ko": "정말? 난 커피 엄청 좋아해. 하루에 세 잔 마셔!"
         }
       },
       "me-easy": {
-        "text": "Me? Coffee. Three a day!",
+        "text": "I drink three cups of coffee a day.",
         "gloss": {
-          "en": "Me? Coffee. Three a day!",
-          "ko": "나? 커피. 하루 세 잔!"
+          "en": "I drink three cups of coffee a day.",
+          "ko": "난 하루에 커피 세 잔 마셔."
         }
       },
       "you": {
@@ -2724,10 +2724,10 @@
         }
       },
       "you-easy": {
-        "text": "Movies. Soccer. I like them.",
+        "text": "I like movies. And I like soccer.",
         "gloss": {
-          "en": "Movies. Soccer. I like them.",
-          "ko": "영화. 축구. 좋아해."
+          "en": "I like movies. And I like soccer.",
+          "ko": "난 영화 좋아해. 축구도 좋아해."
         }
       },
       "end": {
@@ -2813,7 +2813,7 @@
         "type": "learner",
         "id": "l-swim",
         "goal": {
-          "en": "Say the water isn't for you — you never learned.",
+          "en": "Say no, you never learned.",
           "ko": "수영을 못 한다고 하세요."
         },
         "frame": "en-f1-12",
@@ -2958,10 +2958,10 @@
         }
       },
       "hello-easy": {
-        "text": "Sports. Football? Tennis? What can you do?",
+        "text": "Can you play football or tennis?",
         "gloss": {
-          "en": "Sports. Football? Tennis? What can you do?",
-          "ko": "운동. 축구? 테니스? 뭐 할 수 있어요?"
+          "en": "Can you play football or tennis?",
+          "ko": "축구나 테니스 할 줄 알아요?"
         }
       },
       "swim": {
@@ -2972,10 +2972,10 @@
         }
       },
       "swim-easy": {
-        "text": "Swimming. Can you swim? Yes or no?",
+        "text": "Can you swim?",
         "gloss": {
-          "en": "Swimming. Can you swim? Yes or no?",
-          "ko": "수영. 할 줄 알아요? 네, 아니요?"
+          "en": "Can you swim?",
+          "ko": "수영할 줄 알아요?"
         }
       },
       "lesson": {
@@ -3000,10 +3000,10 @@
         }
       },
       "cook-easy": {
-        "text": "Cooking. Can you cook?",
+        "text": "Can you cook at home?",
         "gloss": {
-          "en": "Cooking. Can you cook?",
-          "ko": "요리. 할 줄 알아요?"
+          "en": "Can you cook at home?",
+          "ko": "집에서 요리해요?"
         }
       },
       "me": {
@@ -3014,10 +3014,10 @@
         }
       },
       "me-easy": {
-        "text": "Me? No cooking. Guitar, yes.",
+        "text": "I can't cook. But I can play the guitar.",
         "gloss": {
-          "en": "Me? No cooking. Guitar, yes.",
-          "ko": "저요? 요리는 못 해요. 기타는 해요."
+          "en": "I can't cook. But I can play the guitar.",
+          "ko": "저는 요리 못 해요. 대신 기타는 쳐요."
         }
       },
       "end": {
@@ -3191,7 +3191,7 @@
         "type": "tutor",
         "id": "t-ten",
         "say": "ten",
-        "next": "l-lunch",
+        "next": "t-lunch-ask",
         "easier": "ten-easy"
       },
       "l-lunch": {
@@ -3245,6 +3245,13 @@
         "id": "t-end",
         "say": "end",
         "next": null
+      },
+      "t-lunch-ask": {
+        "type": "tutor",
+        "id": "t-lunch-ask",
+        "say": "lunch",
+        "next": "l-lunch",
+        "easier": "lunch-easy"
       }
     },
     "sentences": {
@@ -3270,10 +3277,10 @@
         }
       },
       "up-easy": {
-        "text": "In the morning. What time do you get up?",
+        "text": "What time do you get up in the morning?",
         "gloss": {
-          "en": "In the morning. What time do you get up?",
-          "ko": "아침에. 몇 시에 일어나?"
+          "en": "What time do you get up in the morning?",
+          "ko": "아침에 몇 시에 일어나?"
         }
       },
       "early": {
@@ -3284,10 +3291,10 @@
         }
       },
       "early-easy": {
-        "text": "Early! Me? Eight.",
+        "text": "That's early. I get up at eight.",
         "gloss": {
-          "en": "Early! Me? Eight.",
-          "ko": "일찍이네! 나? 8시."
+          "en": "That's early. I get up at eight.",
+          "ko": "일찍이네. 난 8시에 일어나."
         }
       },
       "meeting": {
@@ -3298,10 +3305,10 @@
         }
       },
       "meeting-easy": {
-        "text": "A meeting. This morning.",
+        "text": "There's a meeting this morning.",
         "gloss": {
-          "en": "A meeting. This morning.",
-          "ko": "회의. 오늘 아침에."
+          "en": "There's a meeting this morning.",
+          "ko": "오늘 아침에 회의 있어."
         }
       },
       "ten": {
@@ -3312,24 +3319,24 @@
         }
       },
       "ten-easy": {
-        "text": "Ten o'clock. Room B.",
+        "text": "It's at ten o'clock, in room B.",
         "gloss": {
-          "en": "Ten o'clock. Room B.",
-          "ko": "10시. B실."
+          "en": "It's at ten o'clock, in room B.",
+          "ko": "10시에, B 회의실에서."
         }
       },
       "lunch": {
-        "text": "And lunch after? Let's go at twelve.",
+        "text": "And do you want lunch after? Let's go at twelve.",
         "gloss": {
-          "en": "And lunch after? Let's go at twelve.",
-          "ko": "끝나고 점심? 12시에 가자."
+          "en": "And do you want lunch after? Let's go at twelve.",
+          "ko": "끝나고 점심 먹을래? 12시에 가자."
         }
       },
       "lunch-easy": {
-        "text": "Lunch. Twelve o'clock. Okay?",
+        "text": "Let's have lunch at twelve. Okay?",
         "gloss": {
-          "en": "Lunch. Twelve o'clock. Okay?",
-          "ko": "점심. 12시. 괜찮아?"
+          "en": "Let's have lunch at twelve. Okay?",
+          "ko": "12시에 점심 먹자. 괜찮아?"
         }
       },
       "end": {
@@ -3589,17 +3596,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "Morning, love! Do you live in this building too?",
+        "text": "Morning! Do you live in this building too?",
         "gloss": {
-          "en": "Morning, love! Do you live in this building too?",
+          "en": "Morning! Do you live in this building too?",
           "ko": "좋은 아침이에요! 이 건물에 살아요?"
         }
       },
       "hello-easy": {
-        "text": "Is your home here? In this building?",
+        "text": "Do you live here, in this building?",
         "gloss": {
-          "en": "Is your home here? In this building?",
-          "ko": "집이 여기예요? 이 건물?"
+          "en": "Do you live here, in this building?",
+          "ko": "여기, 이 건물에 살아요?"
         }
       },
       "new": {
@@ -3610,10 +3617,10 @@
         }
       },
       "new-easy": {
-        "text": "A shop. Near here? Where?",
+        "text": "Where is the nearest shop?",
         "gloss": {
-          "en": "A shop. Near here? Where?",
-          "ko": "가게. 근처에? 어디?"
+          "en": "Where is the nearest shop?",
+          "ko": "가장 가까운 가게가 어디예요?"
         }
       },
       "which": {
@@ -3624,10 +3631,10 @@
         }
       },
       "which-easy": {
-        "text": "Where? Next to what?",
+        "text": "Where is it? What is it next to?",
         "gloss": {
-          "en": "Where? Next to what?",
-          "ko": "어디요? 뭐 옆이요?"
+          "en": "Where is it? What is it next to?",
+          "ko": "어디예요? 뭐 옆이에요?"
         }
       },
       "thanks": {
@@ -3638,10 +3645,10 @@
         }
       },
       "thanks-easy": {
-        "text": "This area. Do you like it?",
+        "text": "Do you like living here?",
         "gloss": {
-          "en": "This area. Do you like it?",
-          "ko": "이 동네. 좋아요?"
+          "en": "Do you like living here?",
+          "ko": "여기 사는 거 좋아요?"
         }
       },
       "park": {
@@ -3652,17 +3659,17 @@
         }
       },
       "end": {
-        "text": "Well, see you around, love!",
+        "text": "Well, see you around!",
         "gloss": {
-          "en": "Well, see you around, love!",
+          "en": "Well, see you around!",
           "ko": "그럼, 또 봐요!"
         }
       },
       "park-easy": {
-        "text": "The park. It's nice, yes?",
+        "text": "The park is nice, isn't it?",
         "gloss": {
-          "en": "The park. It's nice, yes?",
-          "ko": "공원. 좋죠?"
+          "en": "The park is nice, isn't it?",
+          "ko": "공원 좋죠?"
         }
       }
     },
@@ -3707,7 +3714,7 @@
               "excuse me, how much is this?",
               "how much is an orange?",
               "how much is it?",
-              "how much is five?"
+              "how much for five?"
             ]
           },
           {
@@ -3887,10 +3894,10 @@
         }
       },
       "hello-easy": {
-        "text": "Hi! Oranges? Apples?",
+        "text": "Hi! Do you want some oranges?",
         "gloss": {
-          "en": "Hi! Oranges? Apples?",
-          "ko": "안녕하세요! 오렌지? 사과?"
+          "en": "Hi! Do you want some oranges?",
+          "ko": "안녕하세요! 오렌지 좀 드릴까요?"
         }
       },
       "price": {
@@ -3901,10 +3908,10 @@
         }
       },
       "price-easy": {
-        "text": "Five oranges, two dollars.",
+        "text": "It's two dollars for five oranges.",
         "gloss": {
-          "en": "Five oranges, two dollars.",
-          "ko": "오렌지 다섯 개, 2달러요."
+          "en": "It's two dollars for five oranges.",
+          "ko": "오렌지 다섯 개에 2달러예요."
         }
       },
       "many": {
@@ -3929,10 +3936,10 @@
         }
       },
       "bag-easy": {
-        "text": "A bag? Yes or no?",
+        "text": "Do you want a bag?",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉투요? 네, 아니요?"
+          "en": "Do you want a bag?",
+          "ko": "봉투 드릴까요?"
         }
       },
       "total": {
@@ -4233,10 +4240,10 @@
         }
       },
       "what-easy": {
-        "text": "A scone. With cheese.",
+        "text": "It's a cheese scone.",
         "gloss": {
-          "en": "A scone. With cheese.",
-          "ko": "스콘이요. 치즈 들어간."
+          "en": "It's a cheese scone.",
+          "ko": "치즈 스콘이에요."
         }
       },
       "many": {
@@ -4247,10 +4254,10 @@
         }
       },
       "many-easy": {
-        "text": "One? Two?",
+        "text": "Do you want one or two?",
         "gloss": {
-          "en": "One? Two?",
-          "ko": "하나? 둘?"
+          "en": "Do you want one or two?",
+          "ko": "하나요, 둘이요?"
         }
       },
       "else": {
@@ -4261,10 +4268,10 @@
         }
       },
       "else-easy": {
-        "text": "Anything more? Bread?",
+        "text": "Do you want anything else?",
         "gloss": {
-          "en": "Anything more? Bread?",
-          "ko": "더 있어요? 빵?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "price": {
@@ -4275,10 +4282,10 @@
         }
       },
       "price-easy": {
-        "text": "Three pounds. And twenty pence.",
+        "text": "It's three pounds and twenty pence.",
         "gloss": {
-          "en": "Three pounds. And twenty pence.",
-          "ko": "3파운드. 그리고 20펜스."
+          "en": "It's three pounds and twenty pence.",
+          "ko": "3파운드 20펜스예요."
         }
       },
       "bye": {
@@ -4537,9 +4544,9 @@
       "l-bill-again": {
         "type": "tutor",
         "id": "l-bill-again",
-        "say": "bill-easy",
+        "say": "done",
         "next": "l-bill",
-        "easier": "bill-easy"
+        "easier": "done"
       },
       "t-bill": {
         "type": "tutor",
@@ -4600,10 +4607,10 @@
         }
       },
       "hello-easy": {
-        "text": "What do you want to eat?",
+        "text": "What would you like to eat?",
         "gloss": {
-          "en": "What do you want to eat?",
-          "ko": "뭐 드실래요?"
+          "en": "What would you like to eat?",
+          "ko": "뭐 드시겠어요?"
         }
       },
       "menu": {
@@ -4614,10 +4621,10 @@
         }
       },
       "menu-easy": {
-        "text": "Burger? Salad? Chicken?",
+        "text": "Do you want a burger, a salad, or chicken?",
         "gloss": {
-          "en": "Burger? Salad? Chicken?",
-          "ko": "버거? 샐러드? 치킨?"
+          "en": "Do you want a burger, a salad, or chicken?",
+          "ko": "버거, 샐러드, 치킨 중에 뭘로 할래요?"
         }
       },
       "side": {
@@ -4628,10 +4635,10 @@
         }
       },
       "side-easy": {
-        "text": "Fries? Or salad?",
+        "text": "Do you want fries or salad?",
         "gloss": {
-          "en": "Fries? Or salad?",
-          "ko": "감자튀김? 샐러드?"
+          "en": "Do you want fries or salad?",
+          "ko": "감자튀김이요, 샐러드요?"
         }
       },
       "drink": {
@@ -4642,10 +4649,10 @@
         }
       },
       "drink-easy": {
-        "text": "A drink? Water? Soda?",
+        "text": "What do you want to drink? Water or soda?",
         "gloss": {
-          "en": "A drink? Water? Soda?",
-          "ko": "음료요? 물? 탄산?"
+          "en": "What do you want to drink? Water or soda?",
+          "ko": "뭐 마실래요? 물, 탄산?"
         }
       },
       "else": {
@@ -4656,10 +4663,10 @@
         }
       },
       "else-easy": {
-        "text": "More? Yes or no?",
+        "text": "Do you want anything else?",
         "gloss": {
-          "en": "More? Yes or no?",
-          "ko": "더요? 네, 아니요?"
+          "en": "Do you want anything else?",
+          "ko": "더 필요한 거 있어요?"
         }
       },
       "food": {
@@ -4677,10 +4684,10 @@
         }
       },
       "bill-easy": {
-        "text": "Twelve. Twelve dollars.",
+        "text": "It's twelve dollars.",
         "gloss": {
-          "en": "Twelve. Twelve dollars.",
-          "ko": "12. 12달러요."
+          "en": "It's twelve dollars.",
+          "ko": "12달러예요."
         }
       },
       "end": {
@@ -4691,10 +4698,17 @@
         }
       },
       "food-easy": {
-        "text": "Here's your food.",
+        "text": "Here is your food.",
         "gloss": {
-          "en": "Here's your food.",
+          "en": "Here is your food.",
           "ko": "음식 나왔어요."
+        }
+      },
+      "done": {
+        "text": "Are you all done here?",
+        "gloss": {
+          "en": "Are you all done here?",
+          "ko": "다 드셨어요?"
         }
       }
     },
@@ -4964,10 +4978,10 @@
         }
       },
       "hello-easy": {
-        "text": "The bus. Number seven. Are you waiting?",
+        "text": "Are you waiting for the number seven bus?",
         "gloss": {
-          "en": "The bus. Number seven. Are you waiting?",
-          "ko": "버스. 7번. 기다려요?"
+          "en": "Are you waiting for the number seven bus?",
+          "ko": "7번 버스 기다려요?"
         }
       },
       "goes": {
@@ -4978,10 +4992,10 @@
         }
       },
       "goes-easy": {
-        "text": "Yes. Seven. To the station.",
+        "text": "Yes, this bus goes to the station.",
         "gloss": {
-          "en": "Yes. Seven. To the station.",
-          "ko": "네. 7번. 역으로."
+          "en": "Yes, this bus goes to the station.",
+          "ko": "네, 이 버스는 역으로 가요."
         }
       },
       "when": {
@@ -4992,10 +5006,10 @@
         }
       },
       "when-easy": {
-        "text": "Nine ten. Nine, one, zero.",
+        "text": "It comes at nine ten.",
         "gloss": {
-          "en": "Nine ten. Nine, one, zero.",
-          "ko": "9시 10분. 9, 1, 0."
+          "en": "It comes at nine ten.",
+          "ko": "9시 10분에 와요."
         }
       },
       "time": {
@@ -5006,10 +5020,10 @@
         }
       },
       "time-easy": {
-        "text": "Now? Nine o five.",
+        "text": "It's nine o five now.",
         "gloss": {
-          "en": "Now? Nine o five.",
-          "ko": "지금요? 9시 5분."
+          "en": "It's nine o five now.",
+          "ko": "지금 9시 5분이에요."
         }
       },
       "end": {
@@ -5020,17 +5034,17 @@
         }
       },
       "again": {
-        "text": "Sure. Ten past nine. Nine ten.",
+        "text": "Sure. It comes at ten past nine. Nine ten.",
         "gloss": {
-          "en": "Sure. Ten past nine. Nine ten.",
-          "ko": "그럼요. 9시 10분. 9시 10분요."
+          "en": "Sure. It comes at ten past nine. Nine ten.",
+          "ko": "그럼요. 9시 10분에 와요. 9시 10분요."
         }
       },
       "again-easy": {
-        "text": "Nine ten.",
+        "text": "It comes at nine ten.",
         "gloss": {
-          "en": "Nine ten.",
-          "ko": "9시 10분."
+          "en": "It comes at nine ten.",
+          "ko": "9시 10분에 와요."
         }
       }
     },
@@ -5352,10 +5366,10 @@
         }
       },
       "how-easy": {
-        "text": "One ticket? Two tickets?",
+        "text": "Do you want one ticket or two?",
         "gloss": {
-          "en": "One ticket? Two tickets?",
-          "ko": "한 장? 두 장?"
+          "en": "Do you want one ticket or two?",
+          "ko": "표 한 장이요, 두 장이요?"
         }
       },
       "way": {
@@ -5366,10 +5380,10 @@
         }
       },
       "way-easy": {
-        "text": "One way? Or there and back?",
+        "text": "Is that one way, or are you coming back?",
         "gloss": {
-          "en": "One way? Or there and back?",
-          "ko": "편도? 아니면 갔다 오는 거?"
+          "en": "Is that one way, or are you coming back?",
+          "ko": "편도예요, 아니면 돌아올 거예요?"
         }
       },
       "price": {
@@ -5380,10 +5394,10 @@
         }
       },
       "price-easy": {
-        "text": "Twenty-eight. Two, eight. Pounds.",
+        "text": "It's twenty-eight pounds.",
         "gloss": {
-          "en": "Twenty-eight. Two, eight. Pounds.",
-          "ko": "28. 2, 8. 파운드요."
+          "en": "It's twenty-eight pounds.",
+          "ko": "28파운드예요."
         }
       },
       "ok": {
@@ -5394,10 +5408,10 @@
         }
       },
       "ok-easy": {
-        "text": "Your tickets. Here.",
+        "text": "Here are your tickets.",
         "gloss": {
-          "en": "Your tickets. Here.",
-          "ko": "표요. 여기."
+          "en": "Here are your tickets.",
+          "ko": "표 여기 있어요."
         }
       },
       "train": {
@@ -5408,10 +5422,10 @@
         }
       },
       "train-easy": {
-        "text": "Eleven fifteen. Platform four.",
+        "text": "The train is at eleven fifteen, from platform four.",
         "gloss": {
-          "en": "Eleven fifteen. Platform four.",
-          "ko": "11시 15분. 4번 승강장."
+          "en": "The train is at eleven fifteen, from platform four.",
+          "ko": "기차는 11시 15분, 4번 승강장이에요."
         }
       },
       "end": {
@@ -5726,17 +5740,17 @@
         }
       },
       "where": {
-        "text": "The Museum of Modern Art? Sure. Is that okay with traffic, like twenty minutes?",
+        "text": "MoMA? Sure. It's about twenty minutes with traffic, okay?",
         "gloss": {
-          "en": "The Museum of Modern Art? Sure. Is that okay with traffic, like twenty minutes?",
-          "ko": "현대미술관요? 네. 차가 막혀서 20분쯤 걸리는데 괜찮아요?"
+          "en": "MoMA? Sure. It's about twenty minutes with traffic, okay?",
+          "ko": "모마요? 네. 차가 막혀서 20분쯤 걸리는데 괜찮아요?"
         }
       },
       "where-easy": {
-        "text": "Twenty minutes. Okay?",
+        "text": "It takes twenty minutes. Is that okay?",
         "gloss": {
-          "en": "Twenty minutes. Okay?",
-          "ko": "20분이요. 괜찮아요?"
+          "en": "It takes twenty minutes. Is that okay?",
+          "ko": "20분 걸려요. 괜찮아요?"
         }
       },
       "first": {
@@ -5761,10 +5775,10 @@
         }
       },
       "from-easy": {
-        "text": "Your country. What is it?",
+        "text": "What country are you from?",
         "gloss": {
-          "en": "Your country. What is it?",
-          "ko": "나라가 어디예요?"
+          "en": "What country are you from?",
+          "ko": "어느 나라에서 왔어요?"
         }
       },
       "here-easy": {
@@ -5782,10 +5796,10 @@
         }
       },
       "price-easy": {
-        "text": "Twenty-two. Two, two.",
+        "text": "It's twenty-two dollars.",
         "gloss": {
-          "en": "Twenty-two. Two, two.",
-          "ko": "22. 2, 2."
+          "en": "It's twenty-two dollars.",
+          "ko": "22달러예요."
         }
       },
       "end": {
@@ -6064,10 +6078,10 @@
         }
       },
       "hello-easy": {
-        "text": "Hello. What's the problem?",
+        "text": "Hello. What do you need?",
         "gloss": {
-          "en": "Hello. What's the problem?",
-          "ko": "안녕하세요. 어디가 안 좋아요?"
+          "en": "Hello. What do you need?",
+          "ko": "안녕하세요. 뭐가 필요하세요?"
         }
       },
       "since": {
@@ -6078,10 +6092,10 @@
         }
       },
       "since-easy": {
-        "text": "Today? Or yesterday?",
+        "text": "Did it start today, or yesterday?",
         "gloss": {
-          "en": "Today? Or yesterday?",
-          "ko": "오늘요? 아니면 어제?"
+          "en": "Did it start today, or yesterday?",
+          "ko": "오늘 시작됐어요, 어제요?"
         }
       },
       "other": {
@@ -6092,10 +6106,10 @@
         }
       },
       "other-easy": {
-        "text": "Are you hot? A fever?",
+        "text": "Do you have a fever?",
         "gloss": {
-          "en": "Are you hot? A fever?",
-          "ko": "몸이 뜨거워요? 열?"
+          "en": "Do you have a fever?",
+          "ko": "열 있어요?"
         }
       },
       "pills": {
@@ -6106,10 +6120,10 @@
         }
       },
       "pills-easy": {
-        "text": "Two pills. Every four hours.",
+        "text": "Take two pills every four hours.",
         "gloss": {
-          "en": "Two pills. Every four hours.",
-          "ko": "두 알. 네 시간마다."
+          "en": "Take two pills every four hours.",
+          "ko": "네 시간마다 두 알 드세요."
         }
       },
       "price": {
@@ -6120,10 +6134,10 @@
         }
       },
       "price-easy": {
-        "text": "Four pounds.",
+        "text": "It's four pounds.",
         "gloss": {
-          "en": "Four pounds.",
-          "ko": "4파운드요."
+          "en": "It's four pounds.",
+          "ko": "4파운드예요."
         }
       },
       "end": {
@@ -6427,10 +6441,10 @@
         }
       },
       "size-easy": {
-        "text": "Small? Medium? Large?",
+        "text": "Do you want small, medium, or large?",
         "gloss": {
-          "en": "Small? Medium? Large?",
-          "ko": "S? M? L?"
+          "en": "Do you want small, medium, or large?",
+          "ko": "S, M, L 중 뭘로요?"
         }
       },
       "color": {
@@ -6441,10 +6455,10 @@
         }
       },
       "color-easy": {
-        "text": "Green. Do you like it?",
+        "text": "This one is green. Do you like it?",
         "gloss": {
-          "en": "Green. Do you like it?",
-          "ko": "초록색. 마음에 들어요?"
+          "en": "This one is green. Do you like it?",
+          "ko": "이건 초록색이에요. 마음에 들어요?"
         }
       },
       "black": {
@@ -6455,10 +6469,10 @@
         }
       },
       "black-easy": {
-        "text": "This one is black. Okay?",
+        "text": "This one is black. Do you like it?",
         "gloss": {
-          "en": "This one is black. Okay?",
-          "ko": "이건 검은색. 괜찮아요?"
+          "en": "This one is black. Do you like it?",
+          "ko": "이건 검은색이에요. 마음에 들어요?"
         }
       },
       "price": {
@@ -6469,10 +6483,10 @@
         }
       },
       "price-easy": {
-        "text": "Thirty dollars.",
+        "text": "It's thirty dollars.",
         "gloss": {
-          "en": "Thirty dollars.",
-          "ko": "30달러요."
+          "en": "It's thirty dollars.",
+          "ko": "30달러예요."
         }
       },
       "end": {
@@ -6497,10 +6511,10 @@
         }
       },
       "take-easy": {
-        "text": "This one? Yes?",
+        "text": "Do you want this one?",
         "gloss": {
-          "en": "This one? Yes?",
-          "ko": "이거요? 네?"
+          "en": "Do you want this one?",
+          "ko": "이걸로 할래요?"
         }
       }
     },
@@ -6718,9 +6732,10 @@
             "meaning": "asks the opening time",
             "go": "t-open",
             "match": [
-              "what time is it open?",
-              "okay. what time is the office open?",
-              "what time is it open tomorrow?"
+              "what time is the office open?",
+              "what time do you open?",
+              "okay. what time do you open tomorrow?",
+              "what time are you open tomorrow?"
             ]
           },
           {
@@ -6809,9 +6824,9 @@
         }
       },
       "what": {
-        "text": "Okay. What's it like?",
+        "text": "Okay. What does it look like?",
         "gloss": {
-          "en": "Okay. What's it like?",
+          "en": "Okay. What does it look like?",
           "ko": "네. 어떻게 생겼어요?"
         }
       },
@@ -6830,10 +6845,10 @@
         }
       },
       "when-easy": {
-        "text": "Today? This morning?",
+        "text": "Was it today, or yesterday?",
         "gloss": {
-          "en": "Today? This morning?",
-          "ko": "오늘요? 오늘 아침?"
+          "en": "Was it today, or yesterday?",
+          "ko": "오늘이었어요, 어제였어요?"
         }
       },
       "inside": {
@@ -6844,10 +6859,10 @@
         }
       },
       "inside-easy": {
-        "text": "In the bag. What is there?",
+        "text": "What do you have in the bag?",
         "gloss": {
-          "en": "In the bag. What is there?",
-          "ko": "가방 안에. 뭐 있어요?"
+          "en": "What do you have in the bag?",
+          "ko": "가방 안에 뭐가 있어요?"
         }
       },
       "back": {
@@ -6858,10 +6873,10 @@
         }
       },
       "back-easy": {
-        "text": "Not here now. Tomorrow, okay?",
+        "text": "We don't have it. Please come back tomorrow.",
         "gloss": {
-          "en": "Not here now. Tomorrow, okay?",
-          "ko": "지금은 없어요. 내일요, 알겠죠?"
+          "en": "We don't have it. Please come back tomorrow.",
+          "ko": "지금은 없어요. 내일 다시 오세요."
         }
       },
       "open": {
@@ -6872,10 +6887,10 @@
         }
       },
       "open-easy": {
-        "text": "Eight o'clock.",
+        "text": "We open at eight o'clock.",
         "gloss": {
-          "en": "Eight o'clock.",
-          "ko": "8시요."
+          "en": "We open at eight o'clock.",
+          "ko": "8시에 열어요."
         }
       },
       "end": {
@@ -7020,8 +7035,9 @@
             "meaning": "asks the opening time",
             "go": "t-open",
             "match": [
-              "what time is it open?",
-              "okay. what time is the museum open?",
+              "what time is the museum open?",
+              "what time does it open?",
+              "okay. what time does the museum open?",
               "what time is it open, please?"
             ]
           },
@@ -7117,10 +7133,10 @@
         }
       },
       "see-easy": {
-        "text": "The museums. They're free.",
+        "text": "The museums are free. Go to the Air and Space Museum.",
         "gloss": {
-          "en": "The museums. They're free.",
-          "ko": "박물관요. 무료예요."
+          "en": "The museums are free. Go to the Air and Space Museum.",
+          "ko": "박물관은 무료예요. 항공우주박물관에 가 보세요."
         }
       },
       "map": {
@@ -7131,17 +7147,17 @@
         }
       },
       "where": {
-        "text": "It's on the Mall, next to the castle. Ten minutes on foot.",
+        "text": "It's on the Mall, next to the Castle. It's ten minutes on foot.",
         "gloss": {
-          "en": "It's on the Mall, next to the castle. Ten minutes on foot.",
-          "ko": "내셔널 몰에 있어요, 성 옆이요. 걸어서 10분요."
+          "en": "It's on the Mall, next to the Castle. It's ten minutes on foot.",
+          "ko": "내셔널 몰에 있어요, 캐슬 옆이요. 걸어서 10분이에요."
         }
       },
       "where-easy": {
-        "text": "Next to the castle. Ten minutes.",
+        "text": "It's next to the Castle. It's a ten-minute walk.",
         "gloss": {
-          "en": "Next to the castle. Ten minutes.",
-          "ko": "성 옆이요. 10분."
+          "en": "It's next to the Castle. It's a ten-minute walk.",
+          "ko": "캐슬 옆이에요. 걸어서 10분이에요."
         }
       },
       "open": {
@@ -7152,10 +7168,10 @@
         }
       },
       "open-easy": {
-        "text": "Ten o'clock.",
+        "text": "It opens at ten o'clock.",
         "gloss": {
-          "en": "Ten o'clock.",
-          "ko": "10시요."
+          "en": "It opens at ten o'clock.",
+          "ko": "10시에 열어요."
         }
       },
       "end": {
@@ -7472,10 +7488,10 @@
         }
       },
       "hello-easy": {
-        "text": "A card for the library. Yes?",
+        "text": "Do you want a library card?",
         "gloss": {
-          "en": "A card for the library. Yes?",
-          "ko": "도서관 카드요. 만들까요?"
+          "en": "Do you want a library card?",
+          "ko": "도서관 카드 만들래요?"
         }
       },
       "name": {
@@ -7486,10 +7502,10 @@
         }
       },
       "name-easy": {
-        "text": "Your name, please.",
+        "text": "What's your name?",
         "gloss": {
-          "en": "Your name, please.",
-          "ko": "이름 말씀해 주세요."
+          "en": "What's your name?",
+          "ko": "이름이 뭐예요?"
         }
       },
       "address": {
@@ -7500,17 +7516,17 @@
         }
       },
       "address-easy": {
-        "text": "Where do you live? The street?",
+        "text": "Where do you live?",
         "gloss": {
-          "en": "Where do you live? The street?",
-          "ko": "어디 살아요? 길 이름?"
+          "en": "Where do you live?",
+          "ko": "어디 살아요?"
         }
       },
       "slow": {
-        "text": "Of course. Where. Do you. Live?",
+        "text": "Of course. Where do you live in Glasgow?",
         "gloss": {
-          "en": "Of course. Where. Do you. Live?",
-          "ko": "그럼요. 어디에. 사세요?"
+          "en": "Of course. Where do you live in Glasgow?",
+          "ko": "그럼요. 글래스고 어디에 사세요?"
         }
       },
       "done": {
@@ -7521,10 +7537,10 @@
         }
       },
       "done-easy": {
-        "text": "Your card. Five books.",
+        "text": "Here is your card.",
         "gloss": {
-          "en": "Your card. Five books.",
-          "ko": "카드요. 책 다섯 권."
+          "en": "Here is your card.",
+          "ko": "카드 여기 있어요."
         }
       },
       "weeks": {
@@ -7535,10 +7551,10 @@
         }
       },
       "weeks-easy": {
-        "text": "Three weeks. Twenty-one days.",
+        "text": "You can keep them for three weeks.",
         "gloss": {
-          "en": "Three weeks. Twenty-one days.",
-          "ko": "3주. 21일요."
+          "en": "You can keep them for three weeks.",
+          "ko": "3주 동안 빌릴 수 있어요."
         }
       },
       "end": {
@@ -7690,9 +7706,10 @@
             "meaning": "asks the time",
             "go": "t-hours",
             "match": [
-              "what time is it open?",
-              "okay. what time is the gym open?",
-              "what time is it open in the morning?"
+              "what time is the gym open?",
+              "what time do you open?",
+              "okay. what time are you open?",
+              "what time do you open in the morning?"
             ]
           },
           {
@@ -7831,9 +7848,9 @@
         }
       },
       "join": {
-        "text": "Cool. Want to join?",
+        "text": "Cool. Do you want to join?",
         "gloss": {
-          "en": "Cool. Want to join?",
+          "en": "Cool. Do you want to join?",
           "ko": "좋아요. 가입하실래요?"
         }
       },
@@ -7852,10 +7869,10 @@
         }
       },
       "price-easy": {
-        "text": "Forty dollars. One month.",
+        "text": "It costs forty dollars for one month.",
         "gloss": {
-          "en": "Forty dollars. One month.",
-          "ko": "40달러. 한 달요."
+          "en": "It costs forty dollars for one month.",
+          "ko": "한 달에 40달러예요."
         }
       },
       "hours": {
@@ -7866,10 +7883,10 @@
         }
       },
       "hours-easy": {
-        "text": "Six in the morning. Ten at night.",
+        "text": "We open at six in the morning and close at ten at night.",
         "gloss": {
-          "en": "Six in the morning. Ten at night.",
-          "ko": "아침 6시. 밤 10시."
+          "en": "We open at six in the morning and close at ten at night.",
+          "ko": "아침 6시에 열고 밤 10시에 닫아요."
         }
       },
       "do": {
@@ -7880,10 +7897,10 @@
         }
       },
       "do-easy": {
-        "text": "Running? Yoga? Swimming?",
+        "text": "Do you want to run, do yoga, or swim?",
         "gloss": {
-          "en": "Running? Yoga? Swimming?",
-          "ko": "달리기? 요가? 수영?"
+          "en": "Do you want to run, do yoga, or swim?",
+          "ko": "달리기, 요가, 수영 중에 뭘 하고 싶어요?"
         }
       },
       "class": {
@@ -7908,10 +7925,10 @@
         }
       },
       "class-easy": {
-        "text": "Classes for beginners. Okay?",
+        "text": "We have classes for beginners.",
         "gloss": {
-          "en": "Classes for beginners. Okay?",
-          "ko": "초보자 수업이요. 괜찮아요?"
+          "en": "We have classes for beginners.",
+          "ko": "초보자 수업이 있어요."
         }
       }
     },
@@ -8138,8 +8155,8 @@
             "meaning": "asks the time",
             "go": "t-wait",
             "match": [
-              "what time is the doctor?",
-              "okay. what time is my appointment?",
+              "what time is my appointment?",
+              "okay. what time can I see the doctor?",
               "what time is it?"
             ]
           },
@@ -8158,9 +8175,9 @@
       "l-when-again": {
         "type": "tutor",
         "id": "l-when-again",
-        "say": "form-easy",
+        "say": "seat",
         "next": "l-when",
-        "easier": "form-easy"
+        "easier": "seat"
       },
       "t-wait": {
         "type": "tutor",
@@ -8221,10 +8238,10 @@
         }
       },
       "hello-easy": {
-        "text": "Do you have a time with the doctor?",
+        "text": "Do you have an appointment today?",
         "gloss": {
-          "en": "Do you have a time with the doctor?",
-          "ko": "의사 선생님과 시간 잡았어요?"
+          "en": "Do you have an appointment today?",
+          "ko": "오늘 예약하셨어요?"
         }
       },
       "name": {
@@ -8249,10 +8266,10 @@
         }
       },
       "first-easy": {
-        "text": "First time? Yes or no?",
+        "text": "Is this your first time here?",
         "gloss": {
-          "en": "First time? Yes or no?",
-          "ko": "처음이에요? 네, 아니요?"
+          "en": "Is this your first time here?",
+          "ko": "여기 처음이에요?"
         }
       },
       "form": {
@@ -8263,10 +8280,10 @@
         }
       },
       "form-easy": {
-        "text": "Write on this paper. Then sit down.",
+        "text": "Please write on this form, then sit down.",
         "gloss": {
-          "en": "Write on this paper. Then sit down.",
-          "ko": "이 종이에 쓰세요. 그다음 앉으세요."
+          "en": "Please write on this form, then sit down.",
+          "ko": "이 서류에 쓰시고 앉아 계세요."
         }
       },
       "slow": {
@@ -8284,10 +8301,10 @@
         }
       },
       "wait-easy": {
-        "text": "Ten o'clock.",
+        "text": "It's at ten o'clock.",
         "gloss": {
-          "en": "Ten o'clock.",
-          "ko": "10시요."
+          "en": "It's at ten o'clock.",
+          "ko": "10시예요."
         }
       },
       "end": {
@@ -8295,6 +8312,13 @@
         "gloss": {
           "en": "You're welcome.",
           "ko": "천만에요."
+        }
+      },
+      "seat": {
+        "text": "Please sit down and wait.",
+        "gloss": {
+          "en": "Please sit down and wait.",
+          "ko": "앉아서 기다려 주세요."
         }
       }
     },
@@ -8583,10 +8607,10 @@
         }
       },
       "floor-easy": {
-        "text": "Your apartment. What floor?",
+        "text": "What floor do you live on?",
         "gloss": {
-          "en": "Your apartment. What floor?",
-          "ko": "집이요. 몇 층?"
+          "en": "What floor do you live on?",
+          "ko": "몇 층에 살아요?"
         }
       },
       "from": {
@@ -8597,10 +8621,10 @@
         }
       },
       "from-easy": {
-        "text": "Your country? What is it?",
+        "text": "What country are you from?",
         "gloss": {
-          "en": "Your country? What is it?",
-          "ko": "나라가 어디예요?"
+          "en": "What country are you from?",
+          "ko": "어느 나라에서 왔어요?"
         }
       },
       "korea": {
@@ -8611,10 +8635,10 @@
         }
       },
       "korea-easy": {
-        "text": "Korean food. I love it.",
+        "text": "I love Korean food.",
         "gloss": {
-          "en": "Korean food. I love it.",
-          "ko": "한국 음식. 정말 좋아해요."
+          "en": "I love Korean food.",
+          "ko": "저 한국 음식 정말 좋아해요."
         }
       },
       "elevator": {
@@ -8625,9 +8649,9 @@
         }
       },
       "elevator-easy": {
-        "text": "Elevator's here. Good night!",
+        "text": "The elevator is here. Good night!",
         "gloss": {
-          "en": "Elevator's here. Good night!",
+          "en": "The elevator is here. Good night!",
           "ko": "엘리베이터 왔어요. 잘 자요!"
         }
       },
@@ -8911,10 +8935,10 @@
         }
       },
       "hello-easy": {
-        "text": "Language exchange. Is it you?",
+        "text": "Are you here for the language meetup?",
         "gloss": {
-          "en": "Language exchange. Is it you?",
-          "ko": "언어 교환. 맞아요?"
+          "en": "Are you here for the language meetup?",
+          "ko": "언어 모임 하러 왔어요?"
         }
       },
       "me": {
@@ -8925,17 +8949,17 @@
         }
       },
       "me-easy": {
-        "text": "I'm Charlotte. Your job?",
+        "text": "I'm Charlotte. What's your job?",
         "gloss": {
-          "en": "I'm Charlotte. Your job?",
-          "ko": "전 샬럿. 직업은요?"
+          "en": "I'm Charlotte. What's your job?",
+          "ko": "전 샬럿이에요. 직업이 뭐예요?"
         }
       },
       "langs-easy": {
-        "text": "Korean? English? Chinese?",
+        "text": "What languages do you speak? Korean? English?",
         "gloss": {
-          "en": "Korean? English? Chinese?",
-          "ko": "한국어? 영어? 중국어?"
+          "en": "What languages do you speak? Korean? English?",
+          "ko": "무슨 언어 해요? 한국어? 영어?"
         }
       },
       "french": {
@@ -8946,10 +8970,10 @@
         }
       },
       "french-easy": {
-        "text": "French. Can you speak it?",
+        "text": "Do you speak French?",
         "gloss": {
-          "en": "French. Can you speak it?",
-          "ko": "프랑스어. 할 줄 알아요?"
+          "en": "Do you speak French?",
+          "ko": "프랑스어 해요?"
         }
       },
       "learn": {
@@ -8960,10 +8984,10 @@
         }
       },
       "learn-easy": {
-        "text": "Korean. Can you help me?",
+        "text": "Can you help me with my Korean?",
         "gloss": {
-          "en": "Korean. Can you help me?",
-          "ko": "한국어. 도와줄래요?"
+          "en": "Can you help me with my Korean?",
+          "ko": "제 한국어 좀 도와줄 수 있어요?"
         }
       },
       "end": {
@@ -9192,17 +9216,17 @@
         }
       },
       "hello-easy": {
-        "text": "The quiz. Are you ready?",
+        "text": "Are you ready for the quiz?",
         "gloss": {
-          "en": "The quiz. Are you ready?",
-          "ko": "퀴즈. 준비됐어?"
+          "en": "Are you ready for the quiz?",
+          "ko": "퀴즈 준비됐어?"
         }
       },
       "which-easy": {
-        "text": "Blue or black?",
+        "text": "Do you want the blue one or the black one?",
         "gloss": {
-          "en": "Blue or black?",
-          "ko": "파란 거, 검은 거?"
+          "en": "Do you want the blue one or the black one?",
+          "ko": "파란 거, 검은 거 중 뭐 줄까?"
         }
       },
       "paper": {
@@ -9213,10 +9237,10 @@
         }
       },
       "paper-easy": {
-        "text": "Paper? Yes or no?",
+        "text": "Do you need some paper?",
         "gloss": {
-          "en": "Paper? Yes or no?",
-          "ko": "종이? 응, 아니?"
+          "en": "Do you need some paper?",
+          "ko": "종이 필요해?"
         }
       },
       "after": {
@@ -9227,10 +9251,10 @@
         }
       },
       "after-easy": {
-        "text": "The pen. Is it mine?",
+        "text": "Is that my pen?",
         "gloss": {
-          "en": "The pen. Is it mine?",
-          "ko": "펜. 내 거야?"
+          "en": "Is that my pen?",
+          "ko": "그거 내 펜이야?"
         }
       },
       "end": {
@@ -9526,10 +9550,10 @@
         }
       },
       "noisy-easy": {
-        "text": "Sorry? Again, please.",
+        "text": "Sorry, can you say that again?",
         "gloss": {
-          "en": "Sorry? Again, please.",
-          "ko": "뭐라고? 다시 말해 줘."
+          "en": "Sorry, can you say that again?",
+          "ko": "미안, 다시 말해 줄래?"
         }
       },
       "see": {
@@ -9540,10 +9564,10 @@
         }
       },
       "see-easy": {
-        "text": "Near you. What is there?",
+        "text": "What is next to you?",
         "gloss": {
-          "en": "Near you. What is there?",
-          "ko": "네 옆에. 뭐 있어?"
+          "en": "What is next to you?",
+          "ko": "네 옆에 뭐가 있어?"
         }
       },
       "found": {
@@ -9554,17 +9578,17 @@
         }
       },
       "found-easy": {
-        "text": "The clock. Can you see it?",
+        "text": "Can you see the big clock?",
         "gloss": {
-          "en": "The clock. Can you see it?",
-          "ko": "시계. 보여?"
+          "en": "Can you see the big clock?",
+          "ko": "큰 시계 보여?"
         }
       },
       "slow-ok": {
-        "text": "Sure. Meet. At. The clock. Five minutes.",
+        "text": "Sure. Go to the big clock. I'll see you there in five minutes.",
         "gloss": {
-          "en": "Sure. Meet. At. The clock. Five minutes.",
-          "ko": "그래. 만나자. 시계. 앞에서. 5분 뒤."
+          "en": "Sure. Go to the big clock. I'll see you there in five minutes.",
+          "ko": "그래. 큰 시계로 가. 5분 뒤에 거기서 봐."
         }
       },
       "meet": {
@@ -9575,10 +9599,10 @@
         }
       },
       "meet-easy": {
-        "text": "The clock. Five minutes. Okay?",
+        "text": "Let's meet at the clock in five minutes. Okay?",
         "gloss": {
-          "en": "The clock. Five minutes. Okay?",
-          "ko": "시계. 5분. 알았지?"
+          "en": "Let's meet at the clock in five minutes. Okay?",
+          "ko": "5분 뒤에 시계 앞에서 만나자. 알았지?"
         }
       },
       "end": {
@@ -9862,10 +9886,10 @@
         }
       },
       "tired": {
-        "text": "Ha, me too. Long week! What time did you get up?",
+        "text": "Ha, me too. Long week! What time do you get up?",
         "gloss": {
-          "en": "Ha, me too. Long week! What time did you get up?",
-          "ko": "하하, 나도. 긴 한 주야! 몇 시에 일어났어?"
+          "en": "Ha, me too. Long week! What time do you get up?",
+          "ko": "하하, 나도. 긴 한 주야! 몇 시에 일어나?"
         }
       },
       "good": {
@@ -9876,9 +9900,9 @@
         }
       },
       "up-easy": {
-        "text": "You get up at... what time?",
+        "text": "What time do you get up?",
         "gloss": {
-          "en": "You get up at... what time?",
+          "en": "What time do you get up?",
           "ko": "몇 시에 일어나?"
         }
       },
@@ -9890,10 +9914,10 @@
         }
       },
       "lunch-easy": {
-        "text": "Lunch today. With us. Yes?",
+        "text": "Do you want to have lunch with us today?",
         "gloss": {
-          "en": "Lunch today. With us. Yes?",
-          "ko": "오늘 점심. 우리랑. 갈래?"
+          "en": "Do you want to have lunch with us today?",
+          "ko": "오늘 우리랑 점심 먹을래?"
         }
       },
       "place": {
@@ -9904,10 +9928,10 @@
         }
       },
       "place-easy": {
-        "text": "Pizza or sushi?",
+        "text": "Do you want pizza or sushi?",
         "gloss": {
-          "en": "Pizza or sushi?",
-          "ko": "피자, 초밥?"
+          "en": "Do you want pizza or sushi?",
+          "ko": "피자 먹을래, 초밥 먹을래?"
         }
       },
       "time": {
@@ -9918,10 +9942,10 @@
         }
       },
       "time-easy": {
-        "text": "Twelve thirty. Okay?",
+        "text": "Is twelve thirty okay?",
         "gloss": {
-          "en": "Twelve thirty. Okay?",
-          "ko": "12시 반. 괜찮아?"
+          "en": "Is twelve thirty okay?",
+          "ko": "12시 반 괜찮아?"
         }
       },
       "end": {
@@ -10194,10 +10218,10 @@
         }
       },
       "hello-easy": {
-        "text": "The machine. Is it a problem?",
+        "text": "Do you need help with the machine?",
         "gloss": {
-          "en": "The machine. Is it a problem?",
-          "ko": "기계요. 문제 있어요?"
+          "en": "Do you need help with the machine?",
+          "ko": "기계 쓰는 거 도와드릴까요?"
         }
       },
       "card": {
@@ -10208,17 +10232,17 @@
         }
       },
       "card-easy": {
-        "text": "A card? Or a paper ticket?",
+        "text": "Do you want a card or a paper ticket?",
         "gloss": {
-          "en": "A card? Or a paper ticket?",
-          "ko": "카드? 아니면 종이표?"
+          "en": "Do you want a card or a paper ticket?",
+          "ko": "카드로 할래요, 종이표로 할래요?"
         }
       },
       "slow": {
-        "text": "Sure. A card, like this. Or paper, like this.",
+        "text": "Sure. You can get a card, like this one. Or a paper ticket, like this one.",
         "gloss": {
-          "en": "Sure. A card, like this. Or paper, like this.",
-          "ko": "그럼요. 이런 카드요. 아니면 이런 종이표요."
+          "en": "Sure. You can get a card, like this one. Or a paper ticket, like this one.",
+          "ko": "그럼요. 이런 카드로 할 수도 있고, 이런 종이표로 할 수도 있어요."
         }
       },
       "press": {
@@ -10229,10 +10253,10 @@
         }
       },
       "press-easy": {
-        "text": "Press here. Then ten pounds.",
+        "text": "Press here. Then put in ten pounds.",
         "gloss": {
-          "en": "Press here. Then ten pounds.",
-          "ko": "여기 누르세요. 그다음 10파운드."
+          "en": "Press here. Then put in ten pounds.",
+          "ko": "여기 누르세요. 그다음 10파운드 넣으세요."
         }
       },
       "done": {
@@ -10243,10 +10267,10 @@
         }
       },
       "done-easy": {
-        "text": "Done!",
+        "text": "It's all done.",
         "gloss": {
-          "en": "Done!",
-          "ko": "끝!"
+          "en": "It's all done.",
+          "ko": "다 됐어요."
         }
       },
       "end": {
@@ -10474,24 +10498,24 @@
         }
       },
       "hello-easy": {
-        "text": "Now. Where are you going?",
+        "text": "Where are you going now?",
         "gloss": {
-          "en": "Now. Where are you going?",
-          "ko": "지금. 어디 가?"
+          "en": "Where are you going now?",
+          "ko": "지금 어디 가?"
         }
       },
       "home": {
-        "text": "Oh, nice. Me, I'm going to the gym.",
+        "text": "Oh, nice. I'm going to the gym.",
         "gloss": {
-          "en": "Oh, nice. Me, I'm going to the gym.",
+          "en": "Oh, nice. I'm going to the gym.",
           "ko": "오, 좋다. 난 헬스장 가."
         }
       },
       "home-easy": {
-        "text": "Me? The gym.",
+        "text": "I'm going to the gym.",
         "gloss": {
-          "en": "Me? The gym.",
-          "ko": "나? 헬스장."
+          "en": "I'm going to the gym.",
+          "ko": "난 헬스장 가."
         }
       },
       "next": {
@@ -10502,10 +10526,10 @@
         }
       },
       "next-easy": {
-        "text": "The next class. When is it?",
+        "text": "When is the next class?",
         "gloss": {
-          "en": "The next class. When is it?",
-          "ko": "다음 수업. 언제야?"
+          "en": "When is the next class?",
+          "ko": "다음 수업 언제야?"
         }
       },
       "thurs": {
@@ -10516,10 +10540,10 @@
         }
       },
       "thurs-easy": {
-        "text": "Thursday. Seven o'clock.",
+        "text": "It's on Thursday at seven o'clock.",
         "gloss": {
-          "en": "Thursday. Seven o'clock.",
-          "ko": "목요일. 7시."
+          "en": "It's on Thursday at seven o'clock.",
+          "ko": "목요일 7시야."
         }
       },
       "bus": {
@@ -10530,10 +10554,10 @@
         }
       },
       "bus-easy": {
-        "text": "My bus! I'm going.",
+        "text": "My bus is here. I have to go.",
         "gloss": {
-          "en": "My bus! I'm going.",
-          "ko": "내 버스! 갈게."
+          "en": "My bus is here. I have to go.",
+          "ko": "내 버스 왔어. 가야 돼."
         }
       },
       "end": {
