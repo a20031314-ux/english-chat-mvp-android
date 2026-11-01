@@ -1,4 +1,4 @@
-import { isTutorGender } from "@/lib/chatPartner";
+import { serverTutorGender } from "@/lib/chatPartner";
 import { fastestEffort, isReasoningModel } from "@/lib/server/llm";
 import { openaiModel } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
@@ -179,8 +179,8 @@ export async function POST(request: NextRequest) {
     ...(body.bilingual === true ? { bilingual: true } : {}),
     // 🙉 못 알아들었어요(2026-11-01 새 통화 화면) — 바로 앞 말을 더 쉽게 다시.
     ...(body.missed === true ? { missed: true } : {}),
-    // 고른 튜터(여자·남자, lib/tutorGender.ts) — 그냥 대화의 이름·성별.
-    ...(isTutorGender(body.tutorGender) ? { tutorGender: body.tutorGender } : {}),
+    // 고른 튜터(여자·남자, lib/tutorGender.ts) — 그냥 대화의 이름·성별. 옛 앱은 예전 기본.
+    tutorGender: serverTutorGender(scenario.language, body.tutorGender),
   };
 
   const bank = sentencesFor(scenario.language);

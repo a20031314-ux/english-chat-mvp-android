@@ -4,7 +4,8 @@ import { useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
-import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useTutorGender } from "@/lib/tutorGender";
 
 /**
@@ -16,8 +17,28 @@ import { useTutorGender } from "@/lib/tutorGender";
 /**
  * AI 튜터 그림(2026-10-27 사용자 "AI 아이콘으로 이미지와 프로필을 만들어 넣어줘. 사람처럼 만들 필요는 없고"):
  * 사람 얼굴 대신 말풍선 + 반짝임. 색은 토큰(info)에서 — currentColor.
+ * 2026-11-01 사용자 "이걸로 국가별로 튜터 프로필에 넣어줘": 그 언어 튜터에게 그림이 있으면 그 그림(public/tutors, chatPartner.ts `photo`),
+ * 없으면(그림 없는 성의 튜터) 이 아이콘. 언어를 안 주면 지금 학습 언어, 성을 안 주면 고른 튜터.
  */
-export function AiAvatar({ size = 60 }: { size?: number }) {
+export function AiAvatar({ size = 60, language, gender }: { size?: number; language?: string; gender?: TutorGender }) {
+  const learning = useLearningLanguageOptional();
+  const lang = language ?? learning?.targetLanguage ?? null;
+  const chosen = useTutorGender(lang);
+  const photo = lang ? chatPartnerForLanguage(lang, gender ?? chosen).photo : undefined;
+  if (photo) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={photo}
+        alt=""
+        aria-hidden
+        width={size}
+        height={size}
+        style={{ width: size, height: size }}
+        className="shrink-0 rounded-full border border-info/40 object-cover"
+      />
+    );
+  }
   return (
     <span
       aria-hidden
@@ -55,7 +76,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall }: { ui: UICopy; tar
     <>
       <div className="flex gap-3 border-b border-white/[0.07] pb-3">
         <button type="button" onClick={() => setOpen(true)} className="shrink-0 self-start" aria-label={ui.talkAiTutor}>
-          <AiAvatar />
+          <AiAvatar language={targetLanguage} />
         </button>
         <div className="min-w-0 flex-1">
           <button type="button" onClick={() => setOpen(true)} className="block w-full text-start">
@@ -107,7 +128,7 @@ export function AiTutorSheet({
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex items-center gap-4">
-            <AiAvatar size={72} />
+            <AiAvatar size={72} language={targetLanguage} />
             <div className="min-w-0">
               <TutorName targetLanguage={targetLanguage} className="text-title font-semibold text-white" />
               <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>

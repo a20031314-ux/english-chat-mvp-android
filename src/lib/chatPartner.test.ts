@@ -11,7 +11,7 @@ test("partner follows the target language country", () => {
   assert.equal(english.flagCountry, "us");
 
   const japanese = chatPartnerForLanguage("ja");
-  assert.equal(japanese.givenName, "Yuki");
+  assert.equal(japanese.givenName, "Haruto");
   assert.equal(japanese.flagCountry, "jp");
 });
 
@@ -22,16 +22,23 @@ test("prompt identity is a native speaker, not a tutor", () => {
   assert.match(identity, /not a language teacher/);
 });
 
-test("every language has a woman and a man tutor, and the default keeps the old name", async () => {
+test("every language has a woman and a man tutor; the default is the pictured one, old apps keep the old name", async () => {
   const { TTS_VOICES } = await import("./roleplay/voices.ts");
   const { SUPPORTED_LEARNING_LANGUAGES: LEARNING_LANGUAGES } = await import("./learningLanguages.ts");
-  const { tutorChoices, defaultTutorGender, tutorVoice } = await import("./chatPartner.ts");
+  const { tutorChoices, defaultTutorGender, tutorVoice, serverTutorGender } = await import("./chatPartner.ts");
+  const fs = await import("node:fs");
   const before: Record<string, string> = { en: "Alex", ko: "Minjun", ja: "Yuki", zh: "Chen", es: "Sofía", fr: "Camille", it: "Luca", pt: "Maria", ru: "Anya", ar: "Omar", id: "Raka", vi: "Linh", th: "Niran", hi: "Arjun" };
   for (const { code } of LEARNING_LANGUAGES) {
     const names = tutorChoices(code);
     assert.notEqual(names.f, names.m, code);
-    assert.equal(chatPartnerForLanguage(code).givenName, before[code], `${code} default unchanged`);
-    assert.equal(chatPartnerForLanguage(code).gender, defaultTutorGender(code));
+    // 옛 앱(튜터를 안 보냄)에 서버가 쓰는 튜터는 예전 이름 그대로.
+    assert.equal(chatPartnerForLanguage(code, serverTutorGender(code, undefined)).givenName, before[code], `${code} old apps unchanged`);
+    assert.equal(serverTutorGender(code, "f"), "f");
+    // 기본 튜터는 그림이 있는 사람이고, 그 그림 파일이 있다.
+    const pictured = chatPartnerForLanguage(code);
+    assert.equal(pictured.gender, defaultTutorGender(code));
+    assert.ok(pictured.photo, `${code} default has a photo`);
+    assert.ok(fs.existsSync(`public${pictured.photo}`), pictured.photo);
     // 두 목소리는 서로 다르고, 둘 다 목소리 목록에 있다.
     assert.notEqual(tutorVoice(code, "f"), tutorVoice(code, "m"), code);
     for (const g of ["f", "m"] as const) assert.ok((TTS_VOICES as readonly string[]).includes(tutorVoice(code, g)), `${code} ${g}`);
@@ -45,7 +52,8 @@ test("chosen gender changes name, voice and the identity line (ja spaceless, es 
   const es = conversationPartnerIdentity("es", "m");
   assert.match(es, /Mateo/);
   assert.match(es, /a man/);
-  assert.match(conversationPartnerIdentity("es"), /Sofía.*a woman/);
+  assert.match(conversationPartnerIdentity("es", "f"), /Sofía.*a woman/);
+  assert.equal(chatPartnerForLanguage("es", "f").photo, undefined, "no picture yet: icon");
 });
 
 test("just talk takes the chosen tutor's voice; a recorded voice it no longer matches is synthesised", async () => {

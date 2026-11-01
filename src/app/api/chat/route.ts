@@ -46,7 +46,7 @@ import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
 } from "@/lib/conversationVoice";
-import { conversationPartnerIdentity, isTutorGender, type TutorGender } from "@/lib/chatPartner";
+import { conversationPartnerIdentity, serverTutorGender, type TutorGender } from "@/lib/chatPartner";
 import {
   isConversationMode,
   type ConversationMode,
@@ -1091,7 +1091,7 @@ export async function POST(request: NextRequest) {
     }
     try {
       void meterRequest(request, "chatStart");
-      const data = await runStart(openai, recent, langs, practice, isTutorGender(body.tutorGender) ? body.tutorGender : null);
+      const data = await runStart(openai, recent, langs, practice, serverTutorGender(langs.targetLanguage, body.tutorGender));
       return jsonWithCors(request, data);
     } catch (error) {
       console.error("[chat-start]", error);
@@ -1316,7 +1316,8 @@ export async function POST(request: NextRequest) {
       imageDataUrl,
       ownLanguage: body.ownLanguage === true,
       bilingual: body.bilingual === true && langs.interfaceLanguage !== langs.targetLanguage,
-      ...(isTutorGender(body.tutorGender) ? { tutorGender: body.tutorGender } : {}),
+      // 옛 앱(튜터 고르기 없음)은 예전 기본 튜터 — 그 화면의 이름과 맞게.
+      tutorGender: serverTutorGender(langs.targetLanguage, body.tutorGender),
       brief,
       practice,
     };

@@ -2038,7 +2038,7 @@ export function ChatWindow({
                   !turn.correctionResult && (
                     <MessageBubble
                       role="assistant"
-                      face={<AiAvatar size={CHAT_FACE_SIZE} />}
+                      face={<AiAvatar size={CHAT_FACE_SIZE} language={sessionLanguageCode} gender={tutorGender} />}
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
@@ -2056,7 +2056,7 @@ export function ChatWindow({
                   turn.assistantMessage && (
                     <MessageBubble
                       role="assistant"
-                      face={<AiAvatar size={CHAT_FACE_SIZE} />}
+                      face={<AiAvatar size={CHAT_FACE_SIZE} language={sessionLanguageCode} gender={tutorGender} />}
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
@@ -2073,7 +2073,7 @@ export function ChatWindow({
                 {turn.mode === "how_to_say" && turn.assistantMessage ? (
                   <MessageBubble
                     role="assistant"
-                    face={<AiAvatar size={CHAT_FACE_SIZE} />}
+                    face={<AiAvatar size={CHAT_FACE_SIZE} language={sessionLanguageCode} gender={tutorGender} />}
                     message={turn.assistantMessage}
                     reading={assistantReading}
                     labels={assistantLabels}

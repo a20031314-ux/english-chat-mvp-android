@@ -3,7 +3,7 @@ import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/c
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
-import { isTutorGender, tutorVoice } from "@/lib/chatPartner";
+import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { realtimeTtsModel, speechTtsModel, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
@@ -104,7 +104,7 @@ async function synthesize(
   // 장면 목소리가 없으면 그 언어 튜터의 목소리 — 고른 여자·남자(`tutor` f|m, lib/tutorGender.ts), 안 보낸 예전 앱은 그 언어의 예전 튜터(2026-11-01).
   const voice = isTtsVoice(rawVoice)
     ? rawVoice
-    : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), isTutorGender(rawTutor) ? rawTutor : null);
+    : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), serverTutorGender(coerceLanguageCode(speechLangPrefix(lang)), rawTutor));
   const delivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
   const shared = mayBeShared(request, rawVoice);
 

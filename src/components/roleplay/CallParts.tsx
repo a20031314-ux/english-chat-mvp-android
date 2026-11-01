@@ -68,7 +68,7 @@ export function CallStage({
       {/* 위: AI 튜터 */}
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-tutor>
         <SpeakingRing speaking={speaker === "tutor"}>
-          <AiAvatar size={96} />
+          <AiAvatar size={96} language={language} gender={partner.gender} />
         </SpeakingRing>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
@@ -238,7 +238,7 @@ export function CallSummary({
   ].filter((chip) => chip.n > 0);
   return (
     <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 py-3" data-call-summary>
-      <AiAvatar size={40} />
+      <AiAvatar size={40} language={language} gender={partner.gender} />
       <div className="min-w-0 flex-1">
         <p className="flex items-center gap-1.5 text-body font-semibold text-ink">
           <bdi className="truncate">{partner.givenName}</bdi>

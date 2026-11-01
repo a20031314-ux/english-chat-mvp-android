@@ -28,7 +28,7 @@ export function AiTutorRow({
   return (
     <div className="flex items-center gap-2 rounded-xl border border-line bg-surface p-2">
       <button type="button" onClick={onChat} className="flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 text-start hover:bg-white/5">
-        <AiAvatar size={44} />
+        <AiAvatar size={44} language={targetLanguage} />
         <span className="min-w-0">
           <span className="flex items-center gap-1.5 text-body font-semibold text-ink">
             <bdi className="truncate">{partner.givenName}</bdi>
