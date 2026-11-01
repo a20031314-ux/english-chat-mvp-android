@@ -379,15 +379,7 @@ export function FrameLesson({
                 <li key={index} className="flex items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block text-chat text-ink">
-                      {example.slot && example.text.includes(example.slot) ? (
-                        <>
-                          {example.text.slice(0, example.text.indexOf(example.slot))}
-                          <span className="rounded-lg bg-status-learned/25 px-0.5">{example.slot}</span>
-                          {example.text.slice(example.text.indexOf(example.slot) + example.slot.length)}
-                        </>
-                      ) : (
-                        example.text
-                      )}
+                      <ExampleMarks text={example.text} slot={example.slot} core={frame?.core} />
                     </span>
                     {/* No meaning line when it would just repeat the sentence (English learners with an untranslated app language). */}
                     {quizGloss(example.gloss, locale, language) ? (
@@ -614,4 +606,48 @@ function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: string | 
       ) : null}
     </section>
   );
+}
+
+/**
+ * 예문 칠하기: 배우는 부분을 칠한다. 문장구조는 빈칸에 들어간 말(slot)이 아니라 틀의 핵심 조각(core)을,
+ * 표현 칸은 그 표현(slot)을 칠한다(사용자 2026-11-02 "강조가 학습 부분이 아니라 다른 부분에").
+ * 틀 조각이 문장에 없으면(활용형 등) 빈칸 밖 전체를 칠한다.
+ */
+function ExampleMarks({ text, slot, core }: { text: string; slot?: string; core?: string[] }) {
+  const hole = slot ? text.indexOf(slot) : -1;
+  const ranges: Array<[number, number]> = [];
+  if (core) {
+    // 긴 조각부터, 빈칸 자리와 겹치지 않고 앞서 고른 것과도 겹치지 않는 곳만.
+    for (const piece of [...core].filter(Boolean).sort((a, b) => b.length - a.length)) {
+      for (let at = text.indexOf(piece); at >= 0; at = text.indexOf(piece, at + piece.length)) {
+        const end = at + piece.length;
+        const inHole = hole >= 0 && at < hole + (slot?.length ?? 0) && end > hole;
+        if (!inHole && !ranges.some(([a, b]) => at < b && end > a)) ranges.push([at, end]);
+      }
+    }
+    if (!ranges.length && slot && hole >= 0) {
+      ranges.push([0, hole], [hole + slot.length, text.length]);
+    }
+  } else if (slot && hole >= 0) {
+    ranges.push([hole, hole + slot.length]);
+  }
+  if (!ranges.length) return <>{text}</>;
+  ranges.sort((a, b) => a[0] - b[0]);
+  const parts: React.ReactNode[] = [];
+  let cursor = 0;
+  ranges.forEach(([from, to], index) => {
+    // 칠하는 조각의 앞뒤 빈칸은 칠하지 않는다.
+    while (from < to && /\s/.test(text[from])) from += 1;
+    while (to > from && /\s/.test(text[to - 1])) to -= 1;
+    if (from >= to) return;
+    parts.push(text.slice(cursor, from));
+    parts.push(
+      <span key={index} className="rounded-lg bg-status-learned/25 px-0.5">
+        {text.slice(from, to)}
+      </span>,
+    );
+    cursor = to;
+  });
+  parts.push(text.slice(cursor));
+  return <>{parts}</>;
 }
