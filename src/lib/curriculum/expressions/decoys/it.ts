@@ -2,55 +2,37 @@
  * it 단계 핵심 표현마다 헷갈리는 오답(2026-10-30, scripts/expr-decoys.ts) — 표현 → 살짝 틀린 꼴. Claude가 씀, 원어민 확인 전.
  */
 export const IT_EXPR_DECOYS: Record<string, string[]> = {
-  "piacere": [
-    "piaciuto",
-    "piacio",
-    "piacevole"
-  ],
-  "ciao": [
-    "chiao",
-    "ciau",
-    "chao"
-  ],
+  "piacere": [],
+  "ciao": [],
   "buongiorno": [
     "buona giorno",
-    "bongiorno",
+    "buono giorno",
     "buon giornata"
   ],
   "buonasera": [
     "buono sera",
-    "buon sera",
-    "buonanotte"
+    "buon sera"
   ],
   "arrivederci": [
-    "arrivedere",
-    "arrividerci",
-    "arrivederi"
+    "arrivedere"
   ],
   "a presto": [
     "al presto",
-    "in presto",
-    "a pronto"
+    "in presto"
   ],
   "grazie": [
-    "grazia",
-    "grazio",
-    "grezie"
+    "grazia"
   ],
   "prego": [
-    "prega",
-    "preco",
-    "pregio"
+    "prega"
   ],
   "scusi": [
     "scuso",
-    "scusare",
-    "scusati"
+    "scusare"
   ],
   "per favore": [
     "per favori",
-    "da favore",
-    "a favore"
+    "da favore"
   ],
   "mi chiamo": [
     "mi chiama",
@@ -59,8 +41,7 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "sono di": [
     "sono da",
-    "sono a",
-    "ho di"
+    "sono a"
   ],
   "quanto costa": [
     "quanto costo",
@@ -89,22 +70,15 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "un attimo": [
     "una attimo",
-    "un atimo",
+    "un'attimo",
     "in attimo"
   ],
   "va bene": [
-    "va buono",
-    "è bene",
-    "va bena"
+    "va buono"
   ],
-  "certo": [
-    "certa",
-    "cierto",
-    "certi"
-  ],
+  "certo": [],
   "come stai": [
     "come sei",
-    "come stati",
     "come stare"
   ],
   "tutto bene": [
@@ -128,44 +102,35 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "alle che ora"
   ],
   "volentieri": [
-    "volentiere",
-    "volenteri",
-    "volentiero"
+    "volentiere"
   ],
   "che peccato": [
-    "che pecato",
     "che peccata",
     "quale peccato"
   ],
   "davvero": [
     "da vero",
-    "davero",
     "di vero"
   ],
   "che bello": [
-    "che belli",
     "come bello",
-    "che buono"
+    "che bene"
   ],
   "mi piacerebbe": [
     "mi piacerei",
-    "mi piacevebbe",
     "io piacerebbe"
   ],
   "cosa mi consiglia": [
     "cosa mi consiglio",
-    "cosa me consiglia",
-    "cosa ti consiglia"
+    "cosa me consiglia"
   ],
   "il conto": [
     "la conto",
-    "il conte",
     "lo conto"
   ],
   "posso fare una foto": [
     "posso fare un foto",
-    "posso faccio una foto",
-    "posso fare una fota"
+    "posso faccio una foto"
   ],
   "mi fa male la testa": [
     "mi fa male il testa",
@@ -179,8 +144,7 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "non ancora": [
     "non già",
-    "no ancora",
-    "non più"
+    "no ancora"
   ],
   "ho già finito": [
     "sono già finito",
@@ -189,7 +153,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "buon appetito": [
     "buono appetito",
-    "buon appetite",
     "buona appetito"
   ],
   "in bocca al lupo": [
@@ -199,63 +162,34 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "a domani": [
     "al domani",
-    "in domani",
-    "a domano"
+    "in domani"
   ],
   "d'accordo": [
     "di accordo",
-    "d'accorda",
-    "in accordo"
+    "d'accorda"
   ],
   "insomma": [
-    "in somma",
-    "insommo",
-    "insoma"
+    "in somma"
   ],
   "infatti": [
-    "in fatti",
-    "infatto",
-    "infatte"
+    "in fatti"
   ],
-  "comunque": [
-    "comunche",
-    "como que",
-    "comunqua"
-  ],
+  "comunque": [],
   "allora": [
-    "alora",
-    "allore",
     "all'ora"
   ],
-  "magari": [
-    "magare",
-    "maggari",
-    "magri"
-  ],
+  "magari": [],
   "per fortuna": [
     "per fortune",
     "con fortuna",
     "da fortuna"
   ],
   "purtroppo": [
-    "purtropo",
-    "per troppo",
-    "purtroppi"
+    "per troppo"
   ],
-  "pazienza": [
-    "pazienzia",
-    "paziente",
-    "pacienza"
-  ],
-  "dai": [
-    "dei",
-    "dato",
-    "vai"
-  ],
-  "boh": [
-    "boo",
-    "buh"
-  ],
+  "pazienza": [],
+  "dai": [],
+  "boh": [],
   "scusa il ritardo": [
     "scusa la ritardo",
     "scuso il ritardo",
@@ -267,7 +201,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "no ti preoccupare"
   ],
   "non fa niente": [
-    "non fa niento",
     "non fai niente",
     "no fa niente"
   ],
@@ -277,13 +210,11 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "se tu va"
   ],
   "ci penso": [
-    "ne penso",
     "ci pensa",
-    "lo penso"
+    "ne penso"
   ],
   "meno male": [
     "meno malo",
-    "più male",
     "meno mala"
   ],
   "che casino": [
@@ -317,7 +248,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "secondo io"
   ],
   "dipende": [
-    "depende",
     "dipendo",
     "dipenda"
   ],
@@ -332,7 +262,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "non sono d'accorda"
   ],
   "in realtà": [
-    "in realità",
     "a realtà",
     "in reale"
   ],
@@ -397,7 +326,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
     "da quanto riguarda"
   ],
   "ti faccio sapere": [
-    "ti faccio sapare",
     "ti fai sapere",
     "ti faccio di sapere"
   ],
@@ -418,7 +346,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "figurati": [
     "figurate",
-    "figuratti",
     "figurato"
   ],
   "non è che": [
@@ -433,13 +360,10 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tutto sommato": [
     "tutto sommata",
-    "tutti sommato",
-    "tutto somato"
+    "tutti sommato"
   ],
   "per carità": [
-    "per caritate",
-    "con carità",
-    "per caro"
+    "con carità"
   ],
   "mettiamola così": [
     "mettiamolo così",
@@ -503,7 +427,6 @@ export const IT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "senza dubbio": [
     "senza il dubbio",
-    "senza dubio",
     "senza dubbia"
   ],
   "fammi capire": [

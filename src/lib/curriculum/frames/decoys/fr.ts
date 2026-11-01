@@ -174,13 +174,11 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f1-15|Merci pour": [
     "Merci à",
-    "Merci par",
-    "Merci en"
+    "Merci par"
   ],
   "fr-f1-15|merci pour": [
     "merci à",
-    "merci par",
-    "merci en"
+    "merci par"
   ],
   "fr-f1-15|Merci beaucoup pour": [
     "Merci très pour",
@@ -223,14 +221,14 @@ export const FR_DECOYS: Record<string, string[]> = {
     "je comprends ne pas"
   ],
   "fr-f1-19|Bonne": [
+    "Bon",
     "Bien",
-    "Beau",
-    "Bons"
+    "Bonnes"
   ],
   "fr-f1-19|bonne": [
+    "bon",
     "bien",
-    "beau",
-    "bons"
+    "bonnes"
   ],
   "fr-f2-01|J'ai": [
     "Je ai",
@@ -344,13 +342,12 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f2-10|parce que": [
     "à cause de",
-    "pourquoi",
-    "parce qui"
+    "parce qui",
+    "par ce que"
   ],
   "fr-f2-10|parce qu'": [
     "à cause d'",
-    "pourquoi",
-    "parce qui"
+    "par ce qu'"
   ],
   "fr-f2-11|On se retrouve": [
     "On se retrouvons",
@@ -425,12 +422,12 @@ export const FR_DECOYS: Record<string, string[]> = {
   "fr-f2-18|Je me suis": [
     "Je m'ai",
     "Je me est",
-    "Me je suis"
+    "Je me ai"
   ],
   "fr-f2-18|je me suis": [
     "je m'ai",
     "je me est",
-    "me je suis"
+    "je me ai"
   ],
   "fr-f2-19|je ne peux pas": [
     "je ne peut pas",
@@ -494,37 +491,32 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f3-04|quand": [
     "pendant",
-    "quoi",
-    "que"
+    "lors"
   ],
   "fr-f3-05|Avant, je": [
     "Avant, me",
-    "Avant, nous",
-    "Avant de je"
+    "Avant de je",
+    "Avant que je"
   ],
   "fr-f3-05|avant, je": [
     "avant, me",
-    "avant, nous",
-    "avant de je"
+    "avant de je",
+    "avant que je"
   ],
   "fr-f3-05|Avant, j'": [
-    "Avant, m'",
-    "Avant, nous",
-    "Avant, moi"
+    "Avant, je",
+    "Avant, m'"
   ],
   "fr-f3-05|avant, j'": [
-    "avant, m'",
-    "avant, nous",
-    "avant, moi"
+    "avant, je",
+    "avant, m'"
   ],
   "fr-f3-06|En fait": [
     "Dans fait",
-    "En fact",
     "À fait"
   ],
   "fr-f3-06|en fait": [
     "dans fait",
-    "en fact",
     "à fait"
   ],
   "fr-f3-07|pourrais": [
@@ -664,8 +656,7 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f4-01|D'un côté": [
     "D'une côté",
-    "De un côté",
-    "Du côté"
+    "De un côté"
   ],
   "fr-f4-02|Cela dit": [
     "Cela dite",
@@ -674,8 +665,7 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f4-03|En revanche": [
     "Au revanche",
-    "En revanches",
-    "En revenche"
+    "En revanches"
   ],
   "fr-f4-04|Par contre": [
     "Pour contre",
@@ -724,8 +714,7 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f4-11|Il faudrait": [
     "Il faudrais",
-    "Ils faudraient",
-    "Il fallait"
+    "Ils faudraient"
   ],
   "fr-f4-12|C'est dommage que": [
     "C'est dommage de que",
@@ -789,13 +778,11 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f4-19|Ça vaut le coup": [
     "Ça vaut la coup",
-    "Ça vaux le coup",
-    "Ça vaut le coût"
+    "Ça vaux le coup"
   ],
   "fr-f4-19|ça vaut le coup": [
     "ça vaut la coup",
-    "ça vaux le coup",
-    "ça vaut le coût"
+    "ça vaux le coup"
   ],
   "fr-f4-20|Pour résumer": [
     "Pour résumé",
@@ -809,23 +796,19 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f5-02|Je dirais plutôt": [
     "Je dirait plutôt",
-    "Je dirais plus tôt",
-    "Je disais plutôt"
+    "Je dirais plus tôt"
   ],
   "fr-f5-02|je dirais plutôt": [
     "je dirait plutôt",
-    "je dirais plus tôt",
-    "je disais plutôt"
+    "je dirais plus tôt"
   ],
   "fr-f5-03|Je n'irais pas jusque-là": [
     "Je n'irais pas jusqu'à là",
-    "Je ne irais pas jusque-là",
-    "Je n'allais pas jusque-là"
+    "Je ne irais pas jusque-là"
   ],
   "fr-f5-03|je n'irais pas jusque-là": [
     "je n'irais pas jusqu'à là",
-    "je ne irais pas jusque-là",
-    "je n'allais pas jusque-là"
+    "je ne irais pas jusque-là"
   ],
   "fr-f5-04|Ce qui me gêne, c'est": [
     "Ce que me gêne, c'est",
@@ -859,12 +842,12 @@ export const FR_DECOYS: Record<string, string[]> = {
   ],
   "fr-f5-08|J'aurais dû": [
     "J'aurai dû",
-    "J'avais dû",
-    "Je serais dû"
+    "Je serais dû",
+    "J'aurais du"
   ],
   "fr-f5-09|Il aurait pu": [
     "Il aurait peut",
-    "Il avait pu",
+    "Il serait pu",
     "Il aurait pouvoir"
   ],
   "fr-f5-10|Je suis désolé que": [

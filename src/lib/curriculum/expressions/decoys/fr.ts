@@ -9,23 +9,17 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Bonsoir": [
     "Bonne soir",
-    "Bon soire",
-    "Bons soirs"
+    "Bon soir"
   ],
-  "Salut": [
-    "Salue",
-    "Saluez",
-    "Sallut"
-  ],
+  "Salut": [],
   "Enchanté": [
     "Enchanter",
-    "Enchantant",
     "Enchantez"
   ],
   "Je m'appelle": [
     "Je me appelle",
     "Je appelle",
-    "Je m'appelons"
+    "Je m'appele"
   ],
   "Je viens de Corée": [
     "Je viens du Corée",
@@ -39,12 +33,10 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Merci beaucoup": [
     "Merci très beaucoup",
-    "Merci de beaucoup",
-    "Mercis beaucoup"
+    "Merci de beaucoup"
   ],
   "De rien": [
     "Du rien",
-    "Des riens",
     "Pour rien"
   ],
   "S'il vous plaît": [
@@ -57,11 +49,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
     "Excuser-moi",
     "Excusez-vous"
   ],
-  "Pardon": [
-    "Perdon",
-    "Excuse",
-    "Pardi"
-  ],
+  "Pardon": [],
   "Combien ça coûte": [
     "Combien que ça coûte",
     "Combien de ça coûte",
@@ -89,17 +77,15 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Plus lentement": [
     "Plus lents",
-    "Plus de lentement",
-    "Plus lentment"
+    "Plus de lentement"
   ],
   "D'accord": [
     "De accord",
-    "Des accords",
-    "Un accord"
+    "Du accord"
   ],
   "Bien sûr": [
     "Bon sûr",
-    "Bien assuré",
+    "Bien sure",
     "Bien de sûr"
   ],
   "Au revoir": [
@@ -110,7 +96,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   "Bonne journée": [
     "Bon journée",
     "Bonnes journée",
-    "Bonne la journée"
+    "Bonne jour"
   ],
   "Ça te dit": [
     "Ça te dis",
@@ -119,8 +105,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Avec plaisir": [
     "Avec le plaisir",
-    "De plaisir",
-    "Avec plaisant"
+    "De plaisir"
   ],
   "Bonne idée": [
     "Bon idée",
@@ -149,8 +134,8 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Quel dommage": [
     "Quelle dommage",
-    "Quel le dommage",
-    "Quels dommage"
+    "Quels dommage",
+    "Quel un dommage"
   ],
   "Je suis désolé": [
     "Je suis désoler",
@@ -179,7 +164,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Je me suis perdu": [
     "Je m'ai perdu",
-    "J'ai perdu moi",
+    "Je me ai perdu",
     "Je me suis perdre"
   ],
   "Pas encore": [
@@ -204,8 +189,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Un peu": [
     "Une peu",
-    "Un petit",
-    "Des peu"
+    "Un petit"
   ],
   "Bon week-end": [
     "Bonne week-end",
@@ -230,7 +214,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   "Qu'est-ce qui s'est passé": [
     "Qu'est-ce que s'est passé",
     "Qu'est-ce qui s'a passé",
-    "Qu'est-ce qui est passé"
+    "Qu'est-ce qui s'est passer"
   ],
   "Il y a un souci": [
     "Il y a une souci",
@@ -258,14 +242,13 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
     "À ma avis"
   ],
   "Peut-être": [
-    "Peux-être",
-    "Peut-était",
-    "Pouvoir-être"
+    "Peut être",
+    "Peux-être"
   ],
   "Ça dépend": [
     "Ça se dépend",
     "Ça est dépend",
-    "Ça dépent"
+    "Ça dépende"
   ],
   "Aucune idée": [
     "Aucun idée",
@@ -293,9 +276,8 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
     "Des coups"
   ],
   "Franchement": [
-    "Franchise",
-    "Francement",
-    "Franchant"
+    "Franc",
+    "Franche"
   ],
   "Ça m'est égal": [
     "Ça me est égal",
@@ -329,8 +311,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "D'un côté": [
     "De un côté",
-    "D'une côté",
-    "Du côté"
+    "D'une côté"
   ],
   "De l'autre": [
     "De la autre",
@@ -374,8 +355,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Il faudrait": [
     "Il faudrais",
-    "Il faudrions",
-    "Il est faudrait"
+    "Il faudrions"
   ],
   "Ce qui compte": [
     "Ce que compte",
@@ -394,8 +374,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Ça vaut le coup": [
     "Ça vaut la coup",
-    "Ça vaux le coup",
-    "Ça vaut le coût"
+    "Ça vaux le coup"
   ],
   "Je n'y avais pas pensé": [
     "Je n'en avais pas pensé",
@@ -509,8 +488,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "La goutte d'eau": [
     "Le goutte d'eau",
-    "La goutte de eau",
-    "La goutte d'huile"
+    "La goutte de eau"
   ],
   "Ça ne me dit rien": [
     "Ça ne me dis rien",
@@ -524,8 +502,7 @@ export const FR_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "Bref": [
     "Brève",
-    "Court",
-    "En court"
+    "Brèf"
   ],
   "Si je puis dire": [
     "Si je puisse dire",
