@@ -8,7 +8,7 @@
       "en": "Ordering a drink",
       "ko": "음료 주문하기"
     },
-    "setting": "A small chai-and-coffee café in Connaught Place, New Delhi, mid-morning, not busy. The tutor is the counter staff; the learner has just walked up to the counter.",
+    "setting": "The AI tutor plays the counter staff. A small chai-and-coffee café in Connaught Place, New Delhi, mid-morning, not busy. The learner has just walked up to the counter.",
     "tutorRole": "counter staff",
     "canDo": [
       2,
@@ -385,7 +385,7 @@
       "en": "Asking the way",
       "ko": "길 묻기"
     },
-    "setting": "A busy pavement outside New Delhi railway station, early afternoon. The learner stops a friendly passer-by to ask the way to the metro.",
+    "setting": "The AI tutor plays a friendly passer-by. A busy pavement outside New Delhi railway station, early afternoon. The learner stops them to ask the way to the metro.",
     "tutorRole": "passer-by",
     "canDo": [
       3,
@@ -743,7 +743,7 @@
       "en": "Do you have this?",
       "ko": "이거 있어요?"
     },
-    "setting": "A small general store (kirana shop) in a Mumbai neighbourhood, evening. The learner needs a phone charger and some snacks.",
+    "setting": "The AI tutor plays the shop assistant. A small general store (kirana shop) in a Mumbai neighbourhood, evening. The learner needs a phone charger and some snacks.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -1125,7 +1125,7 @@
       "en": "Checking in",
       "ko": "체크인하기"
     },
-    "setting": "The front desk of a small guesthouse in Jaipur's old city, early evening. The learner has a booking under their name.",
+    "setting": "The AI tutor plays the receptionist. The front desk of a small guesthouse in Jaipur's old city, early evening. The learner has a booking under their name.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -1513,7 +1513,7 @@
       "en": "Meeting someone new",
       "ko": "처음 만난 사람과 인사"
     },
-    "setting": "The first evening of a Hindi conversation class at a language centre in Pune. A friendly classmate sits next to the learner and starts chatting.",
+    "setting": "The AI tutor plays a friendly classmate. The first evening of a Hindi conversation class at a language centre in Pune. The classmate sits next to the learner and starts chatting.",
     "tutorRole": "friendly classmate",
     "canDo": [
       0,
@@ -1532,7 +1532,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Greet her and say your name.",
+          "en": "Greet them and say your name.",
           "ko": "인사하고 이름을 말하세요."
         },
         "frame": "hi-f1-01",
@@ -1665,22 +1665,23 @@
         "type": "learner",
         "id": "l-askback",
         "goal": {
-          "en": "Ask whether she is a student too.",
-          "ko": "그녀도 학생인지 물어보세요."
+          "en": "Ask whether they are a student too.",
+          "ko": "상대도 학생인지 물어보세요."
         },
         "frame": "hi-f1-15",
         "expect": [
           {
-            "meaning": "asks if she is a student",
+            "meaning": "asks if they are a student",
             "go": "t-ask2",
             "match": [
               "क्या आप छात्रा हैं",
               "क्या आप भी छात्रा हैं",
-              "क्या आप भी स्टूडेंट हैं"
+              "क्या आप भी स्टूडेंट हैं",
+              "क्या आप भी छात्र हैं"
             ]
           },
           {
-            "meaning": "asks how she is",
+            "meaning": "asks how they are",
             "go": "t-fine",
             "match": [
               "आप कैसी हैं",
@@ -1716,12 +1717,12 @@
         "type": "learner",
         "id": "l-how",
         "goal": {
-          "en": "Say that's nice, and ask how she is.",
+          "en": "Say that's nice, and ask how they are.",
           "ko": "멋지다고 하고 잘 지내는지 물어보세요."
         },
         "expect": [
           {
-            "meaning": "asks how she is",
+            "meaning": "asks how they are",
             "go": "t-howme",
             "match": [
               "अच्छा! आप कैसी हैं",
@@ -1843,17 +1844,17 @@
     },
     "sentences": {
       "hello": {
-        "text": "हाय! मैं अनन्या हूँ। आपका नाम क्या है?",
+        "text": "हाय! मैं {tutor} हूँ। आपका नाम क्या है?",
         "gloss": {
-          "en": "Hi! I'm Ananya. What's your name?",
-          "ko": "안녕하세요! 저는 아난야예요. 이름이 뭐예요?"
+          "en": "Hi! I'm {tutor}. What's your name?",
+          "ko": "안녕하세요! 저는 {tutor}입니다. 이름이 뭐예요?"
         }
       },
       "hello-easy": {
-        "text": "मेरा नाम अनन्या है। और आपका?",
+        "text": "मेरा नाम {tutor} है। और आपका?",
         "gloss": {
-          "en": "My name is Ananya. And yours?",
-          "ko": "제 이름은 아난야예요. 당신은요?"
+          "en": "My name is {tutor}. And yours?",
+          "ko": "저는 {tutor}입니다. 당신은요?"
         }
       },
       "from": {
@@ -1973,7 +1974,7 @@
       "en": "My family",
       "ko": "우리 가족"
     },
-    "setting": "A friend's flat in Bengaluru, evening tea. The friend is looking at a family photo on the learner's phone and asks about it.",
+    "setting": "The AI tutor plays a friend. A friend's flat in Bengaluru, evening tea. The friend is looking at a family photo on the learner's phone and asks about it.",
     "tutorRole": "friend",
     "canDo": [
       1,
@@ -2297,7 +2298,7 @@
       "en": "What I like",
       "ko": "내가 좋아하는 것"
     },
-    "setting": "A small dhaba-style restaurant in Chandigarh. Two new friends sit over glasses of lassi and chat about food.",
+    "setting": "The AI tutor plays a new friend. A small dhaba-style restaurant in Chandigarh. Two new friends sit over glasses of lassi and chat about food.",
     "tutorRole": "new friend",
     "canDo": [
       1,
@@ -2619,7 +2620,7 @@
       "en": "What I can do",
       "ko": "내가 할 수 있는 것"
     },
-    "setting": "A weekend sports and hobby club in a Hyderabad community centre. A friendly member welcomes the learner and asks what they can do.",
+    "setting": "The AI tutor plays a club member. A weekend sports and hobby club in a Hyderabad community centre. The member welcomes the learner and asks what they can do.",
     "tutorRole": "club member",
     "canDo": [
       0,
@@ -2638,7 +2639,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say yes, and tell him your name.",
+          "en": "Say yes, and tell them your name.",
           "ko": "그렇다고 하고 이름을 말하세요."
         },
         "frame": "hi-f1-01",
@@ -2768,8 +2769,8 @@
         "type": "learner",
         "id": "l-can",
         "goal": {
-          "en": "Say you can cook, and ask what he can do.",
-          "ko": "요리를 할 수 있다고 하고 그는 뭘 할 수 있는지 물어보세요."
+          "en": "Say you can cook, and ask what they can do.",
+          "ko": "요리를 할 수 있다고 하고 상대는 뭘 할 수 있는지 물어보세요."
         },
         "expect": [
           {
@@ -2852,10 +2853,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "स्वागत है! आज आपका पहला दिन है? मैं विक्रम हूँ।",
+        "text": "स्वागत है! आज आपका पहला दिन है? मैं {tutor} हूँ।",
         "gloss": {
-          "en": "Welcome! Is today your first day? I am Vikram.",
-          "ko": "환영해요! 오늘 처음이에요? 저는 비크람이에요."
+          "en": "Welcome! Is today your first day? I am {tutor}.",
+          "ko": "환영해요! 오늘 처음이에요? 저는 {tutor}입니다."
         }
       },
       "hello-easy": {
@@ -2940,7 +2941,7 @@
       "en": "My day",
       "ko": "나의 하루"
     },
-    "setting": "Morning at a small software office in Gurugram. A colleague calls the learner on the phone at nine to chat about the day.",
+    "setting": "The AI tutor plays a colleague. Morning at a small software office in Gurugram. The colleague calls the learner on the phone at nine to chat about the day.",
     "tutorRole": "colleague",
     "canDo": [
       1
@@ -3247,7 +3248,7 @@
       "en": "Where I live",
       "ko": "내가 사는 곳"
     },
-    "setting": "The courtyard of a housing society in Noida. A new neighbour, an older man, chats with the learner about the area.",
+    "setting": "The AI tutor plays a neighbour. The courtyard of a housing society in Noida. The neighbour, who has lived there for years, chats with the learner about the area.",
     "tutorRole": "neighbour",
     "canDo": [
       3,
@@ -3440,7 +3441,7 @@
         "type": "learner",
         "id": "l-bye",
         "goal": {
-          "en": "Thank him for the help.",
+          "en": "Thank them for the help.",
           "ko": "도와줘서 고맙다고 하세요."
         },
         "frame": "hi-f1-18",
@@ -3483,9 +3484,9 @@
     },
     "sentences": {
       "hello": {
-        "text": "नमस्ते बेटा! आपका घर इसी सोसाइटी में है?",
+        "text": "नमस्ते! आपका घर इसी सोसाइटी में है?",
         "gloss": {
-          "en": "Hello dear! Is your home in this society?",
+          "en": "Hello! Is your home in this society?",
           "ko": "안녕하세요! 이 단지에 살아요?"
         }
       },
@@ -3553,9 +3554,9 @@
         }
       },
       "end": {
-        "text": "कोई बात नहीं बेटा। फिर मिलेंगे!",
+        "text": "कोई बात नहीं। फिर मिलेंगे!",
         "gloss": {
-          "en": "No problem, dear. See you!",
+          "en": "No problem. See you!",
           "ko": "별말씀을요. 또 봐요!"
         }
       }
@@ -3571,7 +3572,7 @@
       "en": "Buying fruit at a market",
       "ko": "시장에서 과일 사기"
     },
-    "setting": "An outdoor fruit stall at Crawford Market in Mumbai, late morning. The stall owner calls out to passing shoppers.",
+    "setting": "The AI tutor plays the stall owner. An outdoor fruit stall at Crawford Market in Mumbai, late morning. The stall owner calls out to passing shoppers.",
     "tutorRole": "stall owner",
     "canDo": [
       2,
@@ -3918,7 +3919,7 @@
       "en": "At the bakery",
       "ko": "빵집에서"
     },
-    "setting": "A small Irani-style bakery in Pune in the early morning; trays of bread, buns and biscuits on the counter.",
+    "setting": "The AI tutor plays the baker. A small Irani-style bakery in Pune in the early morning; trays of bread, buns and biscuits on the counter.",
     "tutorRole": "baker",
     "canDo": [
       2,
@@ -4208,7 +4209,7 @@
       "en": "Ordering lunch",
       "ko": "점심 주문하기"
     },
-    "setting": "A busy, casual South Indian lunch place in Chennai at one o'clock. The server comes to the learner's table.",
+    "setting": "The AI tutor plays the server. A busy, casual South Indian lunch place in Chennai at one o'clock. The server comes to the learner's table.",
     "tutorRole": "server",
     "canDo": [
       2,
@@ -4589,7 +4590,7 @@
       "en": "At the bus stop",
       "ko": "버스 정류장에서"
     },
-    "setting": "A crowded DTC bus stop near Lajpat Nagar in Delhi, late afternoon. A college student is also waiting.",
+    "setting": "The AI tutor plays a person waiting at the stop. A crowded DTC bus stop near Lajpat Nagar in Delhi, late afternoon. They are a college student also waiting for a bus.",
     "tutorRole": "person waiting",
     "canDo": [
       3,
@@ -4944,7 +4945,7 @@
       "en": "Buying a train ticket",
       "ko": "기차표 사기"
     },
-    "setting": "A ticket counter at Varanasi Junction railway station, morning. A short queue; the clerk speaks through the window.",
+    "setting": "The AI tutor plays the ticket clerk. A ticket counter at Varanasi Junction railway station, morning. A short queue; the clerk speaks through the window.",
     "tutorRole": "ticket clerk",
     "canDo": [
       2,
@@ -5270,7 +5271,7 @@
       "en": "Taking a taxi",
       "ko": "택시 타기"
     },
-    "setting": "An auto-rickshaw stand outside Delhi's Rajiv Chowk metro station, afternoon. The learner gets into an auto.",
+    "setting": "The AI tutor plays the driver. An auto-rickshaw stand outside Delhi's Rajiv Chowk metro station, afternoon. The learner gets into an auto.",
     "tutorRole": "taxi driver",
     "canDo": [
       0,
@@ -5334,7 +5335,7 @@
         "type": "learner",
         "id": "l-meter",
         "goal": {
-          "en": "Say it's too much and ask him to go by the meter.",
+          "en": "Say it's too much and ask the driver to go by the meter.",
           "ko": "너무 비싸다고 하고 미터기로 가 달라고 하세요."
         },
         "frame": "hi-f1-09",
@@ -5435,7 +5436,7 @@
         "type": "learner",
         "id": "l-pay",
         "goal": {
-          "en": "Pay, thank him and say goodbye.",
+          "en": "Pay, thank the driver and say goodbye.",
           "ko": "돈을 내고 고맙다고, 잘 가라고 하세요."
         },
         "expect": [
@@ -5564,7 +5565,7 @@
       "en": "At the pharmacy",
       "ko": "약국에서"
     },
-    "setting": "A neighbourhood chemist shop in Kolkata, evening. The learner has a headache.",
+    "setting": "The AI tutor plays the pharmacist. A neighbourhood chemist shop in Kolkata, evening. The learner has a headache.",
     "tutorRole": "pharmacist",
     "canDo": [
       2,
@@ -5893,7 +5894,7 @@
       "en": "Buying clothes",
       "ko": "옷 사기"
     },
-    "setting": "A kurta shop in Sarojini Nagar market, Delhi, on a weekend afternoon. The assistant shows kurtas on the rack.",
+    "setting": "The AI tutor plays the shop assistant. A kurta shop in Sarojini Nagar market, Delhi, on a weekend afternoon. The assistant shows kurtas on the rack.",
     "tutorRole": "shop assistant",
     "canDo": [
       2,
@@ -6222,7 +6223,7 @@
       "en": "Lost and found",
       "ko": "분실물 센터"
     },
-    "setting": "The lost-property office at Chhatrapati Shivaji Maharaj Terminus in Mumbai. The learner left a bag on a local train.",
+    "setting": "The AI tutor plays the lost-property clerk. The lost-property office at Chhatrapati Shivaji Maharaj Terminus in Mumbai. The learner left a bag on a local train.",
     "tutorRole": "lost-property clerk",
     "canDo": [
       3,
@@ -6610,7 +6611,7 @@
       "en": "At the tourist office",
       "ko": "관광 안내소에서"
     },
-    "setting": "A government tourist information desk near Hawa Mahal in Jaipur, morning.",
+    "setting": "The AI tutor plays the tourist-office staff. A government tourist information desk near Hawa Mahal in Jaipur, morning.",
     "tutorRole": "tourist-office staff",
     "canDo": [
       3,
@@ -6940,7 +6941,7 @@
       "en": "Getting a library card",
       "ko": "도서관 카드 만들기"
     },
-    "setting": "The front desk of a public library in Lucknow, quiet afternoon. The learner wants a library card.",
+    "setting": "The AI tutor plays the librarian. The front desk of a public library in Lucknow, quiet afternoon. The learner wants a library card.",
     "tutorRole": "librarian",
     "canDo": [
       0,
@@ -7315,7 +7316,7 @@
       "en": "Joining a gym",
       "ko": "헬스장 등록하기"
     },
-    "setting": "The reception of a neighbourhood gym in Indore, evening. A trainer at the desk greets the learner.",
+    "setting": "The AI tutor plays the gym staff. The reception of a neighbourhood gym in Indore, evening. A trainer at the desk greets the learner.",
     "tutorRole": "gym staff",
     "canDo": [
       2,
@@ -7595,7 +7596,7 @@
       "en": "At the clinic reception",
       "ko": "병원 접수"
     },
-    "setting": "The reception desk of a small private clinic in Ahmedabad, morning. The learner has come to see a doctor for the first time.",
+    "setting": "The AI tutor plays the receptionist. The reception desk of a small private clinic in Ahmedabad, morning. The learner has come to see a doctor for the first time.",
     "tutorRole": "receptionist",
     "canDo": [
       0,
@@ -7988,7 +7989,7 @@
       "en": "Meeting a neighbour",
       "ko": "이웃과 인사"
     },
-    "setting": "The ground-floor entrance of an apartment building in Bhopal, evening. A neighbour coming back from the market stops to chat.",
+    "setting": "The AI tutor plays a neighbour. The ground-floor entrance of an apartment building in Bhopal, evening. The neighbour, coming back from the market, stops to chat.",
     "tutorRole": "neighbour",
     "canDo": [
       0,
@@ -8008,7 +8009,7 @@
         "type": "learner",
         "id": "l-name",
         "goal": {
-          "en": "Say yes and tell her your name.",
+          "en": "Say yes and tell them your name.",
           "ko": "네라고 하고 이름을 말하세요."
         },
         "frame": "hi-f1-01",
@@ -8053,8 +8054,8 @@
         "type": "learner",
         "id": "l-fine",
         "goal": {
-          "en": "Say you're fine and ask how she is.",
-          "ko": "잘 지낸다고 하고 그녀는 어떤지 물어보세요."
+          "en": "Say you're fine and ask how they are.",
+          "ko": "잘 지낸다고 하고 상대는 어떤지 물어보세요."
         },
         "expect": [
           {
@@ -8063,7 +8064,8 @@
             "match": [
               "मैं ठीक हूँ, आप कैसी हैं",
               "ठीक हूँ, और आप",
-              "मैं ठीक हूँ। आप कैसी हैं"
+              "मैं ठीक हूँ। आप कैसी हैं",
+              "मैं ठीक हूँ, आप कैसे हैं"
             ]
           },
           {
@@ -8226,7 +8228,15 @@
         "text": "अरे, नमस्ते! आपसे पहली बार मिल रही हूँ।",
         "gloss": {
           "en": "Oh, hello! I am meeting you for the first time.",
-          "ko": "어머, 안녕하세요! 처음 뵙네요."
+          "ko": "아, 안녕하세요! 처음 뵙네요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "अरे, नमस्ते! आपसे पहली बार मिल रही हूँ।"
+          },
+          "m": {
+            "text": "अरे, नमस्ते! आपसे पहली बार मिल रहा हूँ।"
+          }
         }
       },
       "hello-easy": {
@@ -8237,17 +8247,17 @@
         }
       },
       "me": {
-        "text": "मेरा नाम सुनीता है। आप कैसे हैं?",
+        "text": "मेरा नाम {tutor} है। आप कैसे हैं?",
         "gloss": {
-          "en": "My name is Sunita. How are you?",
-          "ko": "제 이름은 수니타예요. 잘 지내요?"
+          "en": "My name is {tutor}. How are you?",
+          "ko": "저는 {tutor}입니다. 잘 지내요?"
         }
       },
       "me-easy": {
-        "text": "मैं सुनीता हूँ। आप ठीक हैं?",
+        "text": "मैं {tutor} हूँ। आप ठीक हैं?",
         "gloss": {
-          "en": "I am Sunita. Are you well?",
-          "ko": "저는 수니타예요. 잘 지내요?"
+          "en": "I am {tutor}. Are you well?",
+          "ko": "저는 {tutor}입니다. 잘 지내요?"
         }
       },
       "floor": {
@@ -8311,7 +8321,7 @@
       "en": "Language exchange",
       "ko": "언어 교환"
     },
-    "setting": "A language-exchange meetup in a café in Hauz Khas, Delhi, Saturday afternoon. A Delhi student who wants to learn Korean sits down.",
+    "setting": "The AI tutor plays the exchange partner. A language-exchange meetup in a café in Hauz Khas, Delhi, Saturday afternoon. The partner is a Delhi student who wants to learn Korean.",
     "tutorRole": "exchange partner",
     "canDo": [
       0,
@@ -8385,7 +8395,7 @@
             "go": "t-hindi",
             "match": [
               "मेरा नाम जीवू है",
-              "हाय रोहन, मेरा नाम जीवू है",
+              "हाय {tutor}, मेरा नाम जीवू है",
               "जी, मेरा नाम जीवू है"
             ]
           },
@@ -8419,7 +8429,7 @@
         "type": "learner",
         "id": "l-hindi",
         "goal": {
-          "en": "Say only a little, and ask him to speak slowly.",
+          "en": "Say only a little, and ask them to speak slowly.",
           "ko": "조금만 한다고, 천천히 말해 달라고 하세요."
         },
         "frame": "hi-f1-08",
@@ -8463,18 +8473,19 @@
         "type": "learner",
         "id": "l-want",
         "goal": {
-          "en": "Ask whether he is a student.",
+          "en": "Ask whether they are a student.",
           "ko": "학생인지 물어보세요."
         },
         "frame": "hi-f1-15",
         "expect": [
           {
-            "meaning": "asks if he is a student",
+            "meaning": "asks if they are a student",
             "go": "t-start",
             "match": [
               "क्या आप छात्र हैं",
               "क्या आप स्टूडेंट हैं",
-              "अच्छा, क्या आप छात्र हैं"
+              "अच्छा, क्या आप छात्र हैं",
+              "क्या आप छात्रा हैं"
             ]
           },
           {
@@ -8555,10 +8566,10 @@
     },
     "sentences": {
       "hello": {
-        "text": "हाय! मैं रोहन। आप कहाँ से हैं?",
+        "text": "हाय! मैं {tutor}। आप कहाँ से हैं?",
         "gloss": {
-          "en": "Hi! I am Rohan. Where are you from?",
-          "ko": "안녕하세요! 저는 로한이에요. 어디서 왔어요?"
+          "en": "Hi! I am {tutor}. Where are you from?",
+          "ko": "안녕하세요! 저는 {tutor}입니다. 어디서 왔어요?"
         }
       },
       "hello-easy": {
@@ -8636,6 +8647,14 @@
         "gloss": {
           "en": "Yes, I'm a student. At Delhi University.",
           "ko": "네, 학생이에요. 델리 대학교요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "हाँ, मैं छात्रा हूँ। दिल्ली यूनिवर्सिटी में।"
+          },
+          "m": {
+            "text": "हाँ, मैं छात्र हूँ। दिल्ली यूनिवर्सिटी में।"
+          }
         }
       },
       "student-easy": {
@@ -8643,6 +8662,14 @@
         "gloss": {
           "en": "Yes, I'm a student.",
           "ko": "네, 학생이에요."
+        },
+        "byTutor": {
+          "f": {
+            "text": "हाँ, छात्रा हूँ।"
+          },
+          "m": {
+            "text": "हाँ, छात्र हूँ।"
+          }
         }
       }
     },
@@ -8657,7 +8684,7 @@
       "en": "Borrowing a pen",
       "ko": "펜 빌리기"
     },
-    "setting": "A Hindi class at a university in Varanasi, during a short writing task. The classmate sitting next to the learner has extra pens.",
+    "setting": "The AI tutor plays a classmate. A Hindi class at a university in Varanasi, during a short writing task. The classmate sitting next to the learner has extra pens.",
     "tutorRole": "classmate",
     "canDo": [
       4,
@@ -8986,7 +9013,7 @@
       "en": "Finding a friend by phone",
       "ko": "전화로 친구 찾기"
     },
-    "setting": "Outside Rajiv Chowk metro station in Delhi, evening rush. The learner and a friend are trying to meet and talk on the phone.",
+    "setting": "The AI tutor plays a friend on the phone. Outside Rajiv Chowk metro station in Delhi, evening rush. The learner and the friend are trying to meet and talk on the phone.",
     "tutorRole": "friend on the phone",
     "canDo": [
       3,
@@ -9273,7 +9300,7 @@
       "en": "Morning at work",
       "ko": "아침 출근"
     },
-    "setting": "The pantry of an IT office in Bengaluru, nine-thirty in the morning. A colleague is making tea.",
+    "setting": "The AI tutor plays a colleague. The pantry of an IT office in Bengaluru, nine-thirty in the morning. The colleague is making tea.",
     "tutorRole": "colleague",
     "canDo": [
       1,
@@ -9563,7 +9590,7 @@
       "en": "Asking for help",
       "ko": "도움 요청하기"
     },
-    "setting": "A metro smart-card recharge machine at Bengaluru's MG Road metro station. A station staff member is nearby.",
+    "setting": "The AI tutor plays a station staff member. A metro smart-card recharge machine at Bengaluru's MG Road metro station. The staff member is nearby.",
     "tutorRole": "staff member",
     "canDo": [
       4,
@@ -9894,7 +9921,7 @@
       "en": "After class",
       "ko": "수업 끝나고"
     },
-    "setting": "The corridor outside a Hindi classroom at a language institute in Mysuru, after the evening class.",
+    "setting": "The AI tutor plays a classmate. The corridor outside a Hindi classroom at a language institute in Mysuru, after the evening class.",
     "tutorRole": "classmate",
     "canDo": [
       1,
