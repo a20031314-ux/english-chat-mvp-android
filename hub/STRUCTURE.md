@@ -19,7 +19,7 @@
 │
 ├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼, 오늘의 팩 카드는 2.76에서 뺌) ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
 │           │                      ├ 📞 → AI 통화 call(탭 아님 — 어디서나 떠 있는 층 CallHost)
-│           │                      │   통화 중 = 실제 통화 화면(roleplay/CallParts CallStage: 튜터 얼굴·시간·자막 한 줄은 💬 켰을 때만 · CallControls: 🙉 못 알아들었어요 → 튜터가 쉽게 다시(session.missedLine, 두 번째면 그 줄 자막) · 💬 자막 · 💡 힌트 · 끝내기) → 끝나면 전체 대본 + 통화 정리(2026-11-01)
+│           │                      │   통화 중 = 실제 통화 화면(roleplay/CallParts CallStage: 위 칸 AI 튜터 얼굴·자막 한 줄은 💬 켰을 때만 · 아래 칸 나 얼굴·말할 때 막대, 맨 위 통화 시간 · CallControls: 🙉 못 알아들었어요 → 튜터가 쉽게 다시(session.missedLine, 두 번째면 그 줄 자막) · 💬 자막 · 💡 힌트 · 끝내기) → 끝나면 전체 대본 + 통화 정리(2026-11-01)
 │           │                      └ AI 튜터 프로필·AI 대화 ⋮ "통화 기록" → CallList(채팅과 따로, 2026-10-27: 이어서 하기·돌아보기·×, 이 폰에만)
 │           │                      └ 통화가 끝난 화면·돌아보기 맨 아래 통화 정리(roleplay/CallRecap, lib/roleplay/recap.ts, 2026-10-30): 고친 말·💡 힌트·뜻을 본 말 → 🧩 문장구조 → My n단계 그 수업(locateHandoff handOffFrame → NotebookSection openScript), 틀이 없으면 🔎 My에서 찾기. 찾은 틀은 다시 볼 것에(/api/curriculum/scripts from "call", 숙지 그대로)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)

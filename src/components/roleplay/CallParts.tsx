@@ -41,9 +41,31 @@ function useCallClock(): string {
 
 export type CallSpeaker = "tutor" | "learner" | "thinking" | "listening" | null;
 
+/** 나(학습자) 쪽 얼굴 — 사람 모양. 말할 때 둘레가 초록. */
+function LearnerFace({ talking, listening }: { talking: boolean; listening: boolean }) {
+  return (
+    <div className="relative flex items-center justify-center">
+      <span
+        aria-hidden
+        className={`absolute inset-[-12px] rounded-full border-2 transition-opacity ${
+          talking ? "animate-pulse border-good/60 opacity-100" : listening ? "border-white/15 opacity-100" : "opacity-0"
+        }`}
+      />
+      <span aria-hidden className="flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-slate-300">
+        <svg viewBox="0 0 48 48" width={52} height={52} fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="24" cy="17" r="7.5" />
+          <path d="M10 40c1.8-7.5 7.4-11.5 14-11.5S36.2 32.5 38 40" />
+        </svg>
+      </span>
+    </div>
+  );
+}
+
 /**
- * 통화 중 화면 가운데 — 튜터 얼굴(말할 때 둘레가 숨 쉬듯), 이름·국기, 통화 시간·남은 시간,
- * 그 아래 자막 한 줄(튜터가 마지막에 한 말 — 자막을 켰거나 두 번 못 알아들었을 때만).
+ * 통화 중 화면 — 영상 통화처럼 위는 AI 튜터, 아래는 나(사용자 2026-11-01 "위는 ai튜터, 아래는 사용자 화면 구조로").
+ * 맨 위 한 줄: 통화 시간 · 오늘 남은 시간.
+ * 위 칸: 튜터 얼굴(말할 때 둘레)·이름·국기·생각 중 점 셋·자막 한 줄(자막을 켰거나 두 번 못 알아들었을 때만).
+ * 아래 칸: 내 얼굴(내가 말할 때 둘레·막대, 내 차례면 옅은 둘레)·대본 장면이면 지금 할 일. 내 말 글은 통화 중에 없다.
  */
 export function CallStage({
   language,
@@ -63,56 +85,62 @@ export function CallStage({
   const partner = chatPartnerForLanguage(language);
   const clock = useCallClock();
   return (
-    <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 px-6 text-center" data-call-stage>
-      <div className="relative flex items-center justify-center">
-        <span
-          aria-hidden
-          className={`absolute inset-[-14px] rounded-full border-2 border-info/50 transition-opacity ${
-            speaker === "tutor" ? "animate-pulse opacity-100" : "opacity-0"
-          }`}
-        />
-        <AiAvatar size={112} />
-      </div>
-      <div className="flex flex-col items-center gap-1">
+    <div className="flex min-h-0 flex-1 flex-col" data-call-stage>
+      <p className="shrink-0 px-4 pt-3 text-center text-meta tabular-nums text-slate-400">
+        {clock}
+        {timeLeft ? <span className="text-slate-500"> · {timeLeft}</span> : null}
+      </p>
+
+      {/* 위: AI 튜터 */}
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-tutor>
+        <div className="relative flex items-center justify-center">
+          <span
+            aria-hidden
+            className={`absolute inset-[-12px] rounded-full border-2 border-info/50 transition-opacity ${
+              speaker === "tutor" ? "animate-pulse opacity-100" : "opacity-0"
+            }`}
+          />
+          <AiAvatar size={96} />
+        </div>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
         </p>
-        <p className="text-meta tabular-nums text-slate-400">
-          {clock}
-          {timeLeft ? <span className="text-slate-500"> · {timeLeft}</span> : null}
-        </p>
-      </div>
-      {/* 누가 말하는지: 튜터 = 둘레, 나 = 마이크 막대, 생각 중 = 점 셋. 글은 없음. */}
-      <div className="flex h-6 items-center justify-center" aria-hidden>
-        {speaker === "learner" ? (
-          <span className="flex items-end gap-1">
-            {[0, 1, 2, 3].map((bar) => (
-              <span key={bar} className="w-1 animate-pulse rounded-full bg-good" style={{ height: `${8 + ((bar * 5) % 14)}px`, animationDelay: `${bar * 120}ms` }} />
-            ))}
-          </span>
-        ) : speaker === "thinking" ? (
-          <span className="composing-dots inline-flex gap-1 text-slate-400">
-            <span>•</span>
-            <span>•</span>
-            <span>•</span>
-          </span>
-        ) : speaker === "listening" ? (
-          <span className="text-title">🎙</span>
-        ) : null}
-      </div>
-      <div className="min-h-[4.5rem] w-full max-w-md" aria-live="polite">
-        {caption ? (
-          <div className="rounded-2xl bg-black/40 px-4 py-2" data-call-caption>
-            <p dir="auto" className="text-chat leading-snug text-slate-100">
-              {caption.text}
-            </p>
-            {caption.meaning ? <p className="mt-0.5 text-meta text-slate-400">{caption.meaning}</p> : null}
-          </div>
-        ) : null}
-        {goal ? <p className="mt-2 text-meta text-slate-400">{goal}</p> : null}
-      </div>
+        <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start" aria-live="polite">
+          {speaker === "thinking" ? (
+            <span aria-hidden className="composing-dots inline-flex gap-1 text-slate-400">
+              <span>•</span>
+              <span>•</span>
+              <span>•</span>
+            </span>
+          ) : caption ? (
+            <div className="w-full rounded-2xl bg-black/40 px-4 py-2" data-call-caption>
+              <p dir="auto" className="text-chat leading-snug text-slate-100">
+                {caption.text}
+              </p>
+              {caption.meaning ? <p className="mt-0.5 text-meta text-slate-400">{caption.meaning}</p> : null}
+            </div>
+          ) : null}
+        </div>
+      </section>
+
+      <div aria-hidden className="mx-6 shrink-0 border-t border-white/10" />
+
+      {/* 아래: 나 */}
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-me>
+        <LearnerFace talking={speaker === "learner"} listening={speaker === "listening"} />
+        <div className="flex h-6 items-end justify-center gap-1" aria-hidden>
+          {speaker === "learner"
+            ? [0, 1, 2, 3, 4].map((bar) => (
+                <span key={bar} className="w-1 animate-pulse rounded-full bg-good" style={{ height: `${8 + ((bar * 7) % 16)}px`, animationDelay: `${bar * 110}ms` }} />
+              ))
+            : speaker === "listening"
+              ? <span className="text-title opacity-60">🎙</span>
+              : null}
+        </div>
+        {goal ? <p className="max-w-md text-meta text-slate-400">{goal}</p> : null}
+      </section>
     </div>
   );
 }
