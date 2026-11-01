@@ -90,6 +90,7 @@
             "go": "t-here",
             "match": [
               "Lでお願いします",
+              "Lサイズでお願いします",
               "大きいサイズでお願いします",
               "大きいのでお願いします",
               "Mでお願いします",
@@ -136,6 +137,7 @@
             "match": [
               "はい、ここで",
               "はい、店内で",
+              "店内でお願いします",
               "はい、お願いします",
               "ここで飲みます"
             ]
@@ -145,6 +147,7 @@
             "go": "t-price",
             "match": [
               "持ち帰りで",
+              "持ち帰りです",
               "テイクアウトで",
               "いいえ、持ち帰りです"
             ]
@@ -310,10 +313,10 @@
         }
       },
       "here-easy": {
-        "text": "ここで飲みますか。",
+        "text": "ここで飲みますか。持ち帰りですか。",
         "gloss": {
-          "en": "Will you drink it here?",
-          "ko": "여기서 마셔요?"
+          "en": "Will you drink it here? Or take it away?",
+          "ko": "여기서 마셔요? 아니면 가져가요?"
         }
       },
       "price": {
@@ -324,10 +327,10 @@
         }
       },
       "price-easy": {
-        "text": "よんひゃく、はちじゅう円です。",
+        "text": "四百八十円です。ここを見てください。",
         "gloss": {
-          "en": "Four hundred... eighty yen.",
-          "ko": "사백… 팔십 엔이에요."
+          "en": "480 yen. Please look here.",
+          "ko": "480엔이에요. 여기를 보세요."
         }
       },
       "ready": {
@@ -607,10 +610,10 @@
         }
       },
       "slow-easy": {
-        "text": "信号を二つ。そして、右です。",
+        "text": "信号が二つあります。そこを右です。",
         "gloss": {
-          "en": "Two traffic lights. And then right.",
-          "ko": "신호등 두 개. 그리고 오른쪽이에요."
+          "en": "There are two traffic lights. Turn right there.",
+          "ko": "신호등이 두 개 있어요. 거기서 오른쪽이에요."
         }
       },
       "far": {
@@ -998,10 +1001,10 @@
         }
       },
       "price-easy": {
-        "text": "ななひゃく円です。",
+        "text": "七百円です。ここを見てください。",
         "gloss": {
-          "en": "Seven hundred yen.",
-          "ko": "칠백 엔이에요."
+          "en": "700 yen. Please look here.",
+          "ko": "700엔이에요. 여기를 보세요."
         }
       },
       "bag": {
@@ -1362,10 +1365,10 @@
         }
       },
       "room-easy": {
-        "text": "お部屋は、さんまるごです。鍵です。",
+        "text": "お部屋は三階です。番号はさんまるごです。",
         "gloss": {
-          "en": "Your room is three-oh-five. Here's the key.",
-          "ko": "방은 삼공오예요. 열쇠예요."
+          "en": "Your room is on the third floor. The number is three-oh-five.",
+          "ko": "방은 3층이에요. 번호는 삼공오예요."
         }
       },
       "time": {
@@ -1760,10 +1763,10 @@
         }
       },
       "me-easy": {
-        "text": "わたしは銀行の仕事です。よろしく。",
+        "text": "わたしは銀行員です。よろしくお願いします。",
         "gloss": {
-          "en": "My job is at a bank. Nice to meet you.",
-          "ko": "저는 은행 일을 해요. 잘 부탁해요."
+          "en": "I'm a bank employee. Pleased to meet you.",
+          "ko": "저는 은행원이에요. 잘 부탁해요."
         }
       },
       "end": {
@@ -1811,6 +1814,7 @@
             "go": "t-sib",
             "match": [
               "これはわたしの姉です",
+              "この人はわたしの姉です",
               "わたしの姉です",
               "姉です",
               "わたしの妹です",
@@ -2268,8 +2272,8 @@
             "match": [
               "好きな食べ物は何ですか",
               "何が好きですか",
-              "田中さんは何が好きですか",
-              "田中さんは？"
+              "日本の食べ物は何が好きですか",
+              "何の食べ物が好きですか"
             ]
           },
           {
@@ -2378,10 +2382,10 @@
         }
       },
       "haha": {
-        "text": "あはは、そうですか。外国の人はよくそう言いますね。",
+        "text": "あはは、そうですか。納豆は苦手な人が多いですよね。",
         "gloss": {
-          "en": "Haha, I see. People from abroad often say that.",
-          "ko": "하하, 그렇군요. 외국 사람들이 자주 그렇게 말해요."
+          "en": "Haha, I see. A lot of people don't like natto.",
+          "ko": "하하, 그렇군요. 낫토는 못 먹는 사람이 많죠."
         }
       },
       "haha-easy": {
@@ -2406,24 +2410,24 @@
         }
       },
       "sweets": {
-        "text": "わたしはケーキが大好きです。今度、一緒に行きませんか。",
+        "text": "わたしはケーキが大好きです。今度、一緒に食べに行きませんか。",
         "gloss": {
-          "en": "I love cake. Shall we go together sometime?",
-          "ko": "저는 케이크를 정말 좋아해요. 다음에 같이 갈래요?"
+          "en": "I love cake. Shall we go and have some together sometime?",
+          "ko": "저는 케이크를 정말 좋아해요. 다음에 같이 먹으러 갈래요?"
         }
       },
       "sweets-easy": {
-        "text": "ケーキの店に、一緒に行きますか。",
+        "text": "今度、一緒にケーキを食べませんか。",
         "gloss": {
-          "en": "Will you come with me to a cake shop?",
-          "ko": "케이크 가게에 같이 갈래요?"
+          "en": "Shall we have cake together sometime?",
+          "ko": "다음에 같이 케이크 먹을래요?"
         }
       },
       "other": {
-        "text": "そうですか。じゃあ、コーヒーの店に行きましょう。",
+        "text": "そうですか。じゃあ、コーヒーを飲みに行きましょう。",
         "gloss": {
-          "en": "I see. Then let's go to a coffee place.",
-          "ko": "그렇군요. 그럼 커피 가게에 가요."
+          "en": "I see. Then let's go for a coffee.",
+          "ko": "그렇군요. 그럼 커피 마시러 가요."
         }
       },
       "end": {
@@ -2531,8 +2535,8 @@
             "go": "t-cook",
             "match": [
               "まあまあです",
-              "あまり",
-              "ちょっと好きです"
+              "あまり好きじゃないです",
+              "まあまあ好きです"
             ]
           }
         ],
@@ -2567,7 +2571,7 @@
               "いいえ、できません",
               "料理はできません",
               "できません",
-              "ちょっとできません"
+              "あまりできません"
             ]
           },
           {
@@ -2691,10 +2695,10 @@
     },
     "sentences": {
       "start": {
-        "text": "ようこそ！テニスはできますか。",
+        "text": "ようこそ！小林です。テニスはできますか。",
         "gloss": {
-          "en": "Welcome! Can you play tennis?",
-          "ko": "환영해요! 테니스 칠 줄 알아요?"
+          "en": "Welcome! I'm Kobayashi. Can you play tennis?",
+          "ko": "환영해요! 고바야시예요. 테니스 칠 줄 알아요?"
         }
       },
       "start-easy": {
@@ -2775,10 +2779,10 @@
         }
       },
       "me": {
-        "text": "わたしは歌ができます。カラオケが好きです。",
+        "text": "わたしはカラオケが得意です。歌が好きです。",
         "gloss": {
-          "en": "I can sing. I like karaoke.",
-          "ko": "저는 노래를 할 수 있어요. 노래방을 좋아해요."
+          "en": "I'm good at karaoke. I like singing.",
+          "ko": "저는 노래방을 잘해요. 노래를 좋아해요."
         }
       },
       "me-easy": {
@@ -3089,10 +3093,10 @@
         }
       },
       "time-easy": {
-        "text": "会社は、何時ですか。九時ですか。",
+        "text": "何時に着きますか。九時ですか。",
         "gloss": {
-          "en": "The office, what time? Nine?",
-          "ko": "회사는 몇 시예요? 9시예요?"
+          "en": "What time will you arrive? Nine?",
+          "ko": "몇 시에 도착해요? 9시예요?"
         }
       },
       "late": {
@@ -3634,7 +3638,8 @@
             "match": [
               "はい、どうぞ",
               "ありがとうございます",
-              "はい、千円です"
+              "千円でお願いします",
+              "はい、三百円です"
             ]
           },
           {
@@ -3700,10 +3705,10 @@
         }
       },
       "price-easy": {
-        "text": "五つ、さんびゃく円です。",
+        "text": "五つで三百円です。",
         "gloss": {
-          "en": "Five for three hundred yen.",
-          "ko": "다섯 개, 삼백 엔이에요."
+          "en": "Five for 300 yen.",
+          "ko": "다섯 개에 300엔이에요."
         }
       },
       "five": {
@@ -3749,17 +3754,17 @@
         }
       },
       "total-easy": {
-        "text": "さんびゃく円です。",
+        "text": "三百円です。",
         "gloss": {
-          "en": "Three hundred yen.",
-          "ko": "삼백 엔이에요."
+          "en": "300 yen.",
+          "ko": "300엔이에요."
         }
       },
       "end": {
-        "text": "まいど！また来てね。",
+        "text": "はい、ありがとう！また来てね。",
         "gloss": {
-          "en": "Thanks a lot! Come again.",
-          "ko": "고마워요! 또 와요."
+          "en": "Thanks! Come again.",
+          "ko": "네, 고마워요! 또 와요."
         }
       }
     },
@@ -3893,6 +3898,7 @@
             "match": [
               "二つ、メロンパンをください",
               "メロンパンを二つください",
+              "メロンパン、二つください",
               "これを二つください",
               "二つください",
               "二つお願いします"
@@ -3972,7 +3978,7 @@
             "match": [
               "はい、どうぞ",
               "はい、これで",
-              "千円でいいですか"
+              "千円でお願いします"
             ]
           }
         ],
@@ -4043,10 +4049,10 @@
         }
       },
       "price-easy": {
-        "text": "ひとつ、ひゃくはちじゅう円です。",
+        "text": "一つ百八十円です。ここを見てください。",
         "gloss": {
-          "en": "One is a hundred and eighty yen.",
-          "ko": "한 개 백팔십 엔이에요."
+          "en": "180 yen each. Please look here.",
+          "ko": "한 개 180엔이에요. 여기를 보세요."
         }
       },
       "total": {
@@ -4410,17 +4416,17 @@
         }
       },
       "seat": {
-        "text": "こちらの席へどうぞ。ご注文は？",
+        "text": "こちらの席へどうぞ。ご注文はお決まりですか。",
         "gloss": {
-          "en": "This seat, please. What would you like?",
-          "ko": "이쪽 자리로 오세요. 주문은요?"
+          "en": "This seat, please. Have you decided on your order?",
+          "ko": "이쪽 자리로 오세요. 주문 정하셨어요?"
         }
       },
       "seat-easy": {
-        "text": "何を食べますか。",
+        "text": "何にしますか。",
         "gloss": {
-          "en": "What will you eat?",
-          "ko": "뭐 드실래요?"
+          "en": "What will you have?",
+          "ko": "뭘로 하시겠어요?"
         }
       },
       "reco": {
@@ -4445,17 +4451,17 @@
         }
       },
       "rice-easy": {
-        "text": "ご飯は、普通と大きいのがあります。",
+        "text": "ご飯は普通ですか。大盛りですか。",
         "gloss": {
-          "en": "The rice comes regular or large.",
-          "ko": "밥은 보통과 큰 게 있어요."
+          "en": "Regular rice? Or a large portion?",
+          "ko": "밥은 보통이에요? 곱빼기예요?"
         }
       },
       "shrimp": {
-        "text": "サラダにえびが入っていますが、大丈夫ですか。",
+        "text": "定食のサラダにえびが入っています。大丈夫ですか。",
         "gloss": {
-          "en": "The salad has shrimp in it. Is that okay?",
-          "ko": "샐러드에 새우가 들어 있는데 괜찮으세요?"
+          "en": "The salad in the set has shrimp in it. Is that okay?",
+          "ko": "정식 샐러드에 새우가 들어 있어요. 괜찮으세요?"
         }
       },
       "shrimp-easy": {
@@ -4480,17 +4486,17 @@
         }
       },
       "served-easy": {
-        "text": "ご飯です。どうぞ。",
+        "text": "からあげ定食です。どうぞ。",
         "gloss": {
-          "en": "Here's your meal.",
-          "ko": "식사 나왔어요. 드세요."
+          "en": "Here's the fried chicken set.",
+          "ko": "가라아게 정식이에요. 드세요."
         }
       },
       "after": {
-        "text": "お食事はいかがでしたか。",
+        "text": "お皿、お下げしますね。お食事はいかがでしたか。",
         "gloss": {
-          "en": "How was your meal?",
-          "ko": "식사는 어떠셨어요?"
+          "en": "I'll clear your plates. How was your meal?",
+          "ko": "접시 치울게요. 식사는 어떠셨어요?"
         }
       },
       "after-easy": {
@@ -4501,10 +4507,10 @@
         }
       },
       "bill": {
-        "text": "ありがとうございます。九百円です。レジでお願いします。",
+        "text": "ありがとうございます。お会計は九百円です。レジでお願いします。",
         "gloss": {
-          "en": "Thank you. That's 900 yen. Please pay at the register.",
-          "ko": "감사합니다. 900엔입니다. 계산대에서 부탁드려요."
+          "en": "Thank you. The bill is 900 yen. Please pay at the register.",
+          "ko": "감사합니다. 계산은 900엔입니다. 계산대에서 부탁드려요."
         }
       },
       "glad": {
@@ -4769,7 +4775,7 @@
         }
       },
       "num": {
-        "text": "二〇六番のバスですよ。",
+        "text": "二百六番のバスですよ。",
         "gloss": {
           "en": "It's the number 206 bus.",
           "ko": "206번 버스예요."
@@ -4783,17 +4789,17 @@
         }
       },
       "slow": {
-        "text": "に、ひゃく、ろく。二百六番です。",
+        "text": "二百六番です。二、〇、六ですよ。",
         "gloss": {
-          "en": "Two, hundred, six. Number 206.",
-          "ko": "이, 백, 육. 206번이에요."
+          "en": "Number 206. Two, zero, six.",
+          "ko": "206번이에요. 이, 공, 육이에요."
         }
       },
       "slow-easy": {
-        "text": "にひゃくろくばん、です。",
+        "text": "二百六番のバスです。",
         "gloss": {
-          "en": "Number two hundred six.",
-          "ko": "이백육 번이에요."
+          "en": "The number 206 bus.",
+          "ko": "206번 버스예요."
         }
       },
       "yes": {
@@ -5186,10 +5192,10 @@
         }
       },
       "price-easy": {
-        "text": "いちまん、よんせん円です。",
+        "text": "一万四千円です。ここを見てください。",
         "gloss": {
-          "en": "Ten thousand... four thousand yen.",
-          "ko": "만 사천 엔이에요."
+          "en": "14,000 yen. Please look here.",
+          "ko": "14,000엔이에요. 여기를 보세요."
         }
       },
       "nine": {
@@ -5393,8 +5399,9 @@
             "go": "t-change",
             "match": [
               "はい、どうぞ",
-              "二千円です",
-              "はい、これで"
+              "二千円でお願いします",
+              "はい、これで",
+              "現金でお願いします"
             ]
           }
         ],
@@ -5493,10 +5500,10 @@
         }
       },
       "belt-easy": {
-        "text": "ベルトをしてください。",
+        "text": "シートベルトをしてください。",
         "gloss": {
-          "en": "Please put on your belt.",
-          "ko": "벨트를 매 주세요."
+          "en": "Please put on your seat belt.",
+          "ko": "안전벨트를 매 주세요."
         }
       },
       "chat": {
@@ -5521,10 +5528,10 @@
         }
       },
       "arrive-easy": {
-        "text": "せん、はっぴゃく円です。",
+        "text": "千八百円です。ここを見てください。",
         "gloss": {
-          "en": "One thousand... eight hundred yen.",
-          "ko": "천팔백 엔이에요."
+          "en": "1,800 yen. Please look here.",
+          "ko": "1,800엔이에요. 여기를 보세요."
         }
       },
       "card": {
@@ -5872,10 +5879,10 @@
         }
       },
       "this-easy": {
-        "text": "朝と夜、飲みます。",
+        "text": "朝と夜に飲んでください。",
         "gloss": {
-          "en": "You take it morning and night.",
-          "ko": "아침과 밤에 먹어요."
+          "en": "Take it in the morning and at night.",
+          "ko": "아침과 밤에 드세요."
         }
       },
       "price": {
@@ -5886,10 +5893,10 @@
         }
       },
       "price-easy": {
-        "text": "きゅうひゃく、はちじゅう円です。",
+        "text": "九百八十円です。ここを見てください。",
         "gloss": {
-          "en": "Nine hundred... eighty yen.",
-          "ko": "구백팔십 엔이에요."
+          "en": "980 yen. Please look here.",
+          "ko": "980엔이에요. 여기를 보세요."
         }
       },
       "cheap": {
@@ -5900,10 +5907,10 @@
         }
       },
       "cheap-easy": {
-        "text": "これは、ろっぴゃく円です。",
+        "text": "これは六百円です。",
         "gloss": {
-          "en": "This one is six hundred yen.",
-          "ko": "이건 육백 엔이에요."
+          "en": "This one is 600 yen.",
+          "ko": "이건 600엔이에요."
         }
       },
       "end": {
@@ -6240,10 +6247,10 @@
         }
       },
       "try-easy": {
-        "text": "着ますか。どうぞ。",
+        "text": "着てみますか。試着室はあちらです。",
         "gloss": {
-          "en": "Will you put it on? Go ahead.",
-          "ko": "입어 볼래요? 그러세요."
+          "en": "Would you like to try it on? The fitting room is over there.",
+          "ko": "입어 볼래요? 탈의실은 저쪽이에요."
         }
       },
       "fit": {
@@ -6310,10 +6317,10 @@
         }
       },
       "price-easy": {
-        "text": "さんぜん、きゅうひゃく円です。",
+        "text": "三千九百円です。ここを見てください。",
         "gloss": {
-          "en": "Three thousand nine hundred yen.",
-          "ko": "삼천구백 엔이에요."
+          "en": "3,900 yen. Please look here.",
+          "ko": "3,900엔이에요. 여기를 보세요."
         }
       },
       "end": {
@@ -6590,10 +6597,10 @@
     },
     "sentences": {
       "start": {
-        "text": "はい、忘れ物センターです。",
+        "text": "こんにちは。お忘れ物センターです。どうされましたか。",
         "gloss": {
-          "en": "Hello, this is the lost-property office.",
-          "ko": "네, 분실물 센터입니다."
+          "en": "Hello, this is the lost-property office. How can I help?",
+          "ko": "안녕하세요. 분실물 센터입니다. 무슨 일이세요?"
         }
       },
       "start-easy": {
@@ -6639,10 +6646,10 @@
         }
       },
       "inside": {
-        "text": "中に何がありますか。",
+        "text": "中に何が入っていますか。",
         "gloss": {
           "en": "What's inside it?",
-          "ko": "안에 뭐가 있어요?"
+          "ko": "안에 뭐가 들어 있어요?"
         }
       },
       "inside-easy": {
@@ -6667,10 +6674,10 @@
         }
       },
       "sorry": {
-        "text": "すみません。明日、また来てください。",
+        "text": "すみません、今日はありません。明日、また来てください。",
         "gloss": {
-          "en": "Sorry. Please come again tomorrow.",
-          "ko": "죄송해요. 내일 다시 와 주세요."
+          "en": "Sorry, there's nothing today. Please come again tomorrow.",
+          "ko": "죄송해요, 오늘은 없어요. 내일 다시 와 주세요."
         }
       },
       "exit": {
@@ -6730,7 +6737,7 @@
               "明日、奈良に行きます",
               "明日奈良に行きます",
               "奈良に行きます",
-              "明日、京都に行きます"
+              "明日、奈良です"
             ]
           },
           {
@@ -6814,8 +6821,8 @@
         "type": "learner",
         "id": "l-where",
         "goal": {
-          "en": "Ask where the bus stop is.",
-          "ko": "버스 정류장이 어디인지 물어보세요."
+          "en": "Ask where the train to Nara is.",
+          "ko": "나라에 가는 전철이 어디인지 물어보세요."
         },
         "frame": "ja-f1-06",
         "expect": [
@@ -6823,9 +6830,10 @@
             "meaning": "asks where",
             "go": "t-bus",
             "match": [
-              "バス停はどこですか",
-              "すみません、バス停はどこですか",
-              "駅はどこですか"
+              "奈良行きの電車はどこですか",
+              "奈良の電車はどこですか",
+              "電車はどこですか",
+              "すみません、電車はどこですか"
             ]
           },
           {
@@ -6882,7 +6890,7 @@
             "meaning": "asks them to say it again",
             "go": "l-thanks-again",
             "match": [
-              "駅の前ですか",
+              "あちらですか",
               "もう一度お願いします",
               "地図のどこですか"
             ]
@@ -6948,10 +6956,10 @@
         }
       },
       "temple": {
-        "text": "大きいお寺です。大きい仏様がいます。",
+        "text": "大きいお寺です。大きい大仏がありますよ。",
         "gloss": {
-          "en": "It's a big temple. There's a big Buddha.",
-          "ko": "큰 절이에요. 큰 불상이 있어요."
+          "en": "It's a big temple. There's a big Buddha statue.",
+          "ko": "큰 절이에요. 큰 대불이 있어요."
         }
       },
       "temple-easy": {
@@ -6976,17 +6984,17 @@
         }
       },
       "bus": {
-        "text": "バス停は駅の前です。地図のここです。",
+        "text": "JRの奈良線です。改札はあちらです。地図のここですよ。",
         "gloss": {
-          "en": "The bus stop is in front of the station. It's here on the map.",
-          "ko": "버스 정류장은 역 앞이에요. 지도의 여기예요."
+          "en": "It's the JR Nara line. The ticket gates are over there. It's here on the map.",
+          "ko": "JR 나라선이에요. 개찰구는 저쪽이에요. 지도의 여기예요."
         }
       },
       "bus-easy": {
-        "text": "駅の前です。ここです。",
+        "text": "電車はあちらです。地図のここです。",
         "gloss": {
-          "en": "In front of the station. Here.",
-          "ko": "역 앞이에요. 여기예요."
+          "en": "The train is over there. It's here on the map.",
+          "ko": "전철은 저쪽이에요. 지도의 여기예요."
         }
       },
       "end": {
@@ -7354,10 +7362,10 @@
         }
       },
       "done-easy": {
-        "text": "本は、十四日です。",
+        "text": "本は二週間です。",
         "gloss": {
-          "en": "Books are for fourteen days.",
-          "ko": "책은 14일이에요."
+          "en": "Books are for two weeks.",
+          "ko": "책은 2주예요."
         }
       },
       "end": {
@@ -7639,10 +7647,10 @@
         }
       },
       "price-easy": {
-        "text": "ひと月、はっせん円です。",
+        "text": "一か月、八千円です。ここを見てください。",
         "gloss": {
-          "en": "Eight thousand yen a month.",
-          "ko": "한 달 팔천 엔이에요."
+          "en": "8,000 yen a month. Please look here.",
+          "ko": "한 달에 8,000엔이에요. 여기를 보세요."
         }
       },
       "student": {
@@ -7653,10 +7661,10 @@
         }
       },
       "student-easy": {
-        "text": "学生は、ろくせん円です。",
+        "text": "学生は六千円です。",
         "gloss": {
-          "en": "Students pay six thousand yen.",
-          "ko": "학생은 육천 엔이에요."
+          "en": "Students pay 6,000 yen.",
+          "ko": "학생은 6,000엔이에요."
         }
       },
       "hours": {
@@ -8019,10 +8027,10 @@
         }
       },
       "explain-easy": {
-        "text": "家のところです。",
+        "text": "家の場所です。",
         "gloss": {
           "en": "Where your home is.",
-          "ko": "집 있는 곳이에요."
+          "ko": "집이 있는 곳이에요."
         }
       },
       "how": {
@@ -8342,10 +8350,10 @@
         }
       },
       "gomi-easy": {
-        "text": "ゴミは、下の外です。",
+        "text": "ゴミは一階の外です。",
         "gloss": {
-          "en": "The rubbish goes outside downstairs.",
-          "ko": "쓰레기는 아래 밖이에요."
+          "en": "The rubbish goes outside on the ground floor.",
+          "ko": "쓰레기는 1층 밖이에요."
         }
       },
       "end": {
@@ -9225,17 +9233,17 @@
         }
       },
       "slow": {
-        "text": "み、な、み、ぐ、ち。南口だよ。",
+        "text": "南口だよ。南の出口。",
         "gloss": {
-          "en": "Mi-na-mi-gu-chi. The south exit.",
-          "ko": "미, 나, 미, 구, 치. 남쪽 출구야."
+          "en": "The south exit. The exit on the south side.",
+          "ko": "남쪽 출구야. 남쪽에 있는 출구."
         }
       },
       "slow-easy": {
-        "text": "南口。みなみぐち、だよ。",
+        "text": "南の出口だよ。",
         "gloss": {
-          "en": "South exit. Minamiguchi.",
-          "ko": "남쪽 출구. 미나미구치야."
+          "en": "It's the exit on the south side.",
+          "ko": "남쪽에 있는 출구야."
         }
       },
       "dir": {
@@ -9246,9 +9254,9 @@
         }
       },
       "dir-easy": {
-        "text": "右に、まっすぐ来て。",
+        "text": "右にまっすぐ来て。",
         "gloss": {
-          "en": "Come straight, to the right.",
+          "en": "Come straight ahead, to the right.",
           "ko": "오른쪽으로 쭉 와."
         }
       },
@@ -9308,8 +9316,8 @@
             "go": "t-how2",
             "match": [
               "おはようございます",
-              "おはようございます、林さん",
-              "あ、おはようございます"
+              "あ、おはようございます",
+              "おはよう"
             ]
           }
         ],
@@ -9408,7 +9416,8 @@
               "十二時ごろです",
               "十二時です",
               "12時に行きます",
-              "十二時に行きます"
+              "十二時に行きます",
+              "一時ごろです"
             ]
           },
           {
@@ -9417,7 +9426,7 @@
             "match": [
               "まだわかりません",
               "今日はちょっと忙しいです",
-              "一時ごろです"
+              "わかりません"
             ]
           }
         ],
@@ -9509,10 +9518,10 @@
         }
       },
       "how2-easy": {
-        "text": "元気？疲れた？",
+        "text": "元気ですか。疲れていますか。",
         "gloss": {
-          "en": "Fine? Tired?",
-          "ko": "괜찮아요? 피곤해요?"
+          "en": "Are you well? Are you tired?",
+          "ko": "잘 지내요? 피곤해요?"
         }
       },
       "week": {
@@ -9763,8 +9772,10 @@
             "go": "t-done",
             "match": [
               "やってください",
-              "すみません、やってくれませんか",
-              "お願いします"
+              "すみません、やってください",
+              "お願いします",
+              "すみません、お願いします",
+              "できません"
             ]
           },
           {
@@ -10293,10 +10304,10 @@
         }
       },
       "check-easy": {
-        "text": "木曜日です。",
+        "text": "木曜日だよ。",
         "gloss": {
           "en": "It's Thursday.",
-          "ko": "목요일이에요."
+          "ko": "목요일이야."
         }
       },
       "end": {
