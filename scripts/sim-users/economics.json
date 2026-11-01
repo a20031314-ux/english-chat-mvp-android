@@ -168,13 +168,13 @@
   },
   "extraAds": [
     {
-      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): 수업 퀴즈 단계 아래, AI 채팅 잠김 화면."
+      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): AI 채팅 잠김 화면. 2026-11-01 23시 학습과 떨어진 자리 6곳(hub/drafts/ads-passive-2026-11-01.md)도 ads-plan econ 값 그대로 더함."
     },
     {
       "format": "native",
-      "perActiveDay": 2,
+      "perActiveDay": 5,
       "when": "my",
-      "what": "Quizbank 문제 아래(quiz-inline, 10문제마다 새 광고)"
+      "what": "Quizbank·수업 퀴즈 문제 아래(quiz-inline) — 문제가 바뀔 때 60초 넘었으면 새 광고(2026-11-01). 퀴즈를 쓰는 날 약 5분 → 5번(어림)"
     },
     {
       "format": "native",
@@ -217,6 +217,42 @@
       "perActiveDay": 0.5,
       "when": "room",
       "what": "Room 로비 다섯 번째 방 뒤(room-lobby)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.4,
+      "when": "my",
+      "what": "Stagebank 단계 화면 대화 예시 앞(my-full stagebank-stage)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.1,
+      "when": "any",
+      "what": "영상 목록 여덟 번째 뒤(video-library 두 번째)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "my",
+      "what": "📖 배울 수 있는 것 시트 끝(sheets)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "my",
+      "what": "칸 ? 설명 시트 끝(sheets)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "any",
+      "what": "사용법(?) 창 끝(sheets)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "my",
+      "what": "📈 내 진척·실력 기록 끝(sheets, 익힌 것이 있을 때만)"
     }
   ]
 }

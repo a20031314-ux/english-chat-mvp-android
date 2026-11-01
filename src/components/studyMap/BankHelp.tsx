@@ -7,6 +7,7 @@
  */
 import { useEffect, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { apiUrl } from "@/lib/apiBase";
 import type { UICopy } from "@/lib/copy";
 import { contentScope } from "@/lib/curriculum/contentScope";
@@ -127,6 +128,8 @@ function BankHelpSheet({ ui, locale, language, bank, title, onClose }: { ui: UIC
           ) : guide ? null : (
             <p className="text-note text-slate-500">…</p>
           )}
+          {/* 시트 맨 끝(그림·영상 아래) 네이티브 하나(2026-11-01 — 읽는 안내 시트, 시트가 맨 위 층일 때만). */}
+          <NativeAdSlot feedId="sheets" slotKey={`bank-help-${bank}`} spaced />
         </div>
       </div>
     </BodyLayer>

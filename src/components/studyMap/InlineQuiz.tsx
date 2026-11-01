@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
-import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
 import { maybeShowInterstitial } from "@/lib/ads";
 import type { UICopy } from "@/lib/copy";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
@@ -15,7 +15,7 @@ import { stopTts } from "@/lib/ttsPlayer";
  */
 export type QuizBatch = { questions: QuizQuestion[]; keys: string[] };
 
-/** 광고 한 묶음 = 문제 10개(2026-11-01): 넘긴 뒤 다음 묶음으로 갈 때 전면 한 번(quizBreak), 아래 네이티브도 새것으로. */
+/** 광고 한 묶음 = 문제 10개(2026-11-01): 넘긴 뒤 다음 묶음으로 갈 때 전면 한 번(quizBreak). 아래 네이티브는 문제가 바뀔 때 60초마다(useNativeRefresh). */
 const AD_ROUND = 10;
 
 export function InlineQuiz({
@@ -46,7 +46,7 @@ export function InlineQuiz({
   /** 틀리면 "설명"으로 Stagebank 그 소재 수업(다시 보기 탭). */
   explainLink?: boolean;
   /**
-   * Quizbank에서 이어 푸는 퀴즈(있으면): 문제 아래 네이티브(Quizbank 전체 화면에서만, 10문제마다 새 광고)와
+   * Quizbank에서 이어 푸는 퀴즈(있으면): 문제 아래 네이티브(Quizbank 전체 화면에서만, 문제가 바뀔 때 60초 넘었으면 새 광고)와
    * 10문제를 넘긴 뒤 묶음 경계의 전면(quizBreak). 오늘 할 것의 한 문제에는 없음(항목 사이 광고 없음).
    */
   adKey?: string;
@@ -56,9 +56,10 @@ export function InlineQuiz({
   const [answered, setAnswered] = useState<Answer | null>(null);
   // 묶음마다 번호 — 다음 묶음 첫 문제가 같은 열쇠여도 고른 답이 남지 않게.
   const [serial, setSerial] = useState(0);
-  // 지난 쉼 뒤 답한 문제 수와 광고 묶음 번호(네이티브 자리 이름 — 10문제마다 새 광고).
+  // 지난 쉼 뒤 답한 문제 수(전면 묶음 경계).
   const sinceBreak = useRef(0);
-  const [adRound, setAdRound] = useState(0);
+  // 문제 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈).
+  const adRound = useNativeRefresh(`${serial}-${index}`);
   const makeRef = useRef(make);
   useEffect(() => {
     makeRef.current = make;
@@ -97,7 +98,6 @@ export function InlineQuiz({
     // 묶음 경계: 10문제를 넘겼으면 쉼 — 전면은 다음 묶음을 받는 이 순간에만(문제 도중·답 보기 중에는 없음, 3분 간격은 lib/ads.ts).
     if (adKey && sinceBreak.current >= AD_ROUND) {
       sinceBreak.current = 0;
-      setAdRound((n) => n + 1);
       void maybeShowInterstitial("quizBreak");
     }
     setBatch(makeRef.current());
@@ -128,7 +128,7 @@ export function InlineQuiz({
         bankKey={batch.keys[index]}
         explainLink={explainLink}
       />
-      {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 10문제마다 새 광고. */}
+      {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
       {adKey ? <NativeAdSlot feedId="quiz-inline" slotKey={`${adKey}-${adRound}`} spaced layerOnly /> : null}
     </div>
   );

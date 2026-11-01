@@ -60,111 +60,6 @@
   "severity": "report"
  },
  {
-  "kind": "add",
-  "what": "Stagebank 단계 화면(오늘 끝 뒤·'n단계 ›') — '이 단계에선 이런 대화가 돼요' 대화 예시 앞 네이티브(전체 화면만, layerOnly, feed my-full)",
-  "where": "My 탭 `my` · notes/NotebookSection.tsx stageView · studyMap/StageFrames.tsx",
-  "why": "읽기만 하는 대화 예시 묶음 앞 — 문장구조 카드·'다음 단계까지'·단어장 줄과 24px 넘게 띄움. 지금 stagebank-today는 오늘 할 것 상태에만 있어 단계 화면(오늘 끝 뒤 포함)은 광고 없음. 바닥 My는 배너라 전체 화면에서만(한 화면 하나)",
-  "appBuild": true,
-  "basis": "사용자 2026-11-01 23시 '학습에 영향을 주지 않는 자리' 점검(hub/drafts/ads-passive-2026-11-01.md) — tmp/ads-passive/en-ko/stage-bottom-mid.png. 무료가 쓰는 날 전체 화면 단계 화면을 열어 대화 예시까지 내리는 것 0.4번(오늘 끝 뒤 자동으로 단계 화면 + 가끔 'n단계 ›') 보수적 어림",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "native",
-     "perActiveDay": 0.4,
-     "when": "my"
-    }
-   ]
-  },
-  "per1000Mid": 18565,
-  "freePersonMid": 19
- },
- {
-  "kind": "add",
-  "what": "영상 목록 두 번째 네이티브 — 여덟 번째 영상 뒤(같은 피드 video-library, 피드 3개 한도 안)",
-  "where": "영상 학습 탭 `video` · videoLearning/CatalogLibrary.tsx",
-  "why": "둘러보는 목록 사이, 첫 광고(세 번째 뒤)와 한 화면에 같이 안 보임. 링크 입력칸·불러오기 버튼은 목록 끝이라 떨어짐. 배너가 있는 탭이지만 목록 네이티브를 하나 더 두는 것(배너를 늘리는 게 아님)",
-  "appBuild": true,
-  "basis": "사용자 2026-11-01 23시 '학습에 영향을 주지 않는 자리' 점검(hub/drafts/ads-passive-2026-11-01.md) — tmp/ads-passive/en-ko/video-deep-1400.png(목록 9개 넘음). 무료는 영상 대부분 잠김이라 끝까지 내리는 날 0.1번",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "native",
-     "perActiveDay": 0.1,
-     "when": "any"
-    }
-   ]
-  },
-  "per1000Mid": 4641,
-  "freePersonMid": 4
- },
- {
-  "kind": "add",
-  "what": "📖 배울 수 있는 것 시트·칸 ? 설명 시트(BankHelp) 맨 끝 네이티브 — 각 시트가 맨 위일 때만(BodyLayer)",
-  "where": "My 탭 `my` · studyMap/ContentScope.tsx · studyMap/BankHelp.tsx",
-  "why": "둘 다 숫자·문법 이름·'이렇게 공부해요'만 읽는 시트, 누를 것은 ✕(BankHelp는 영상 재생도) — 끝에 띄움. 아래 칸 광고는 시트가 덮어 멈춤(한 화면 하나)",
-  "appBuild": true,
-  "basis": "지난 안 둘(같은 모양)을 하나로 합침 — 사용자 2026-11-01 23시 '학습에 영향을 주지 않는 자리' 점검(hub/drafts/ads-passive-2026-11-01.md, tmp/ads-passive/en-ko/scope-sheet.png·bank-help.png). 가끔 여는 시트라 각각 쓰는 날 0.05번. 62bbc58까지 코드에 없음(ads-facts native 목록)",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "native",
-     "perActiveDay": 0.05,
-     "when": "my"
-    },
-    {
-     "format": "native",
-     "perActiveDay": 0.05,
-     "when": "my"
-    }
-   ]
-  },
-  "per1000Mid": 4641,
-  "freePersonMid": 4
- },
- {
-  "kind": "add",
-  "what": "사용법(?) 창 맨 끝 네이티브 — 마지막 장 세부 기능 아래(FullScreenLayer)",
-  "where": "앱 틀 `shell` · GuideSheet.tsx",
-  "why": "읽는 안내 화면 끝, '사용함/사용안함'·'이 화면으로 가기'는 장 머리에 있어 끝 줄과 떨어짐. '쓸 기능 고르기' 탭(스위치만)에는 두지 않음",
-  "appBuild": true,
-  "basis": "사용자 2026-11-01 23시 '학습에 영향을 주지 않는 자리' 점검(hub/drafts/ads-passive-2026-11-01.md) — tmp/ads-passive/en-ko/guide-bottom.png. 가끔 여는 창 0.05번",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "native",
-     "perActiveDay": 0.05,
-     "when": "any"
-    }
-   ]
-  },
-  "per1000Mid": 2321,
-  "freePersonMid": 2
- },
- {
-  "kind": "add",
-  "what": "📈 내 진척 시트·Logbank 실력 기록 — 익힌 것 목록 끝 네이티브(익힌 것이 있을 때만)",
-  "where": "My 탭 `my` · notes/NotebookSection.tsx MyProgress · studyMap/SkillRecord.tsx",
-  "why": "✓ 칩만 읽는 기록 화면, [단계대로|자유롭게]는 맨 위라 목록 끝과 떨어짐. 익힌 것이 없으면(새 사용자 — 시트가 토글 한 줄) 두지 않음",
-  "appBuild": true,
-  "basis": "사용자 2026-11-01 23시 '학습에 영향을 주지 않는 자리' 점검(hub/drafts/ads-passive-2026-11-01.md) — tmp/ads-passive/en-ko/progress-sheet.png(새 사용자라 짧음, 익힌 것 있는 모습은 기기 확인). 쓰는 날 0.05번",
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "native",
-     "perActiveDay": 0.05,
-     "when": "my"
-    }
-   ]
-  },
-  "per1000Mid": 2321,
-  "freePersonMid": 2
- },
- {
   "kind": "model",
   "what": "callEnd(AI 통화 끝 전면)를 손익 계산에 넣기 — 무료가 포인트(첫 달 20P·구매)로 통화할 때",
   "where": "AI 통화 `call` · RoleplayScreen.tsx (끝난 뒤 1.5초) · scripts/sim-users/economics.mjs",
@@ -202,7 +97,7 @@
     }
    ]
   },
-  "per1000Mid": 1392,
+  "per1000Mid": 1393,
   "freePersonMid": 1
  }
 ]

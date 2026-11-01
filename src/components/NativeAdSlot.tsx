@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
+  NATIVE_REFRESH_MS,
   NATIVE_SLOT_HEIGHT,
   attachNativeSlot,
   nativeAdsEnabled,
@@ -39,6 +40,36 @@ export function NativeAdSlot(props: SlotProps) {
   const visible = (props.active ?? true) && top === layer && !keyboard;
   if (web) return <WebAdSlot active={visible} spaced={props.spaced} />;
   return <AppAdSlot feedId={props.feedId} slotKey={props.slotKey} active={visible} layer={layer} spaced={props.spaced} />;
+}
+
+/** 다음 문제가 그려지고 이만큼 뒤에 새 광고 — "다음"을 누른 손가락이 떨어진 뒤 바뀌게. */
+const REFRESH_AFTER_DRAW_MS = 500;
+
+/**
+ * 문제 아래 광고의 교체 번호(slotKey 끝에 붙임, 2026-11-01): questionKey(문제 하나의 id)가 바뀔 때, 앞 광고를 붙인 지
+ * NATIVE_REFRESH_MS(60초)가 지났으면 하나 올린다(showing = 자리가 보이는 단계 — 보이기 시작한 때부터 잼). 같은 문제 안에서는 바꾸지 않는다. 번호는 새 문제가 그려진 뒤(effect)
+ * 한 박자 더 두고 올려, 누른 자리에 새 광고가 바로 뜨지 않게 한다. 자리 높이는 고정(NATIVE_SLOT_HEIGHT)이라 레이아웃은 그대로.
+ */
+export function useNativeRefresh(questionKey: string, showing = true): number {
+  const [round, setRound] = useState(0);
+  // 지금 광고를 붙인 때(자리가 보이기 시작한 때·마지막 교체) — 안 보이면 비움.
+  const since = useRef<number | null>(null);
+  const last = useRef(questionKey);
+  useEffect(() => {
+    if (!showing) since.current = null;
+    else if (since.current === null) since.current = Date.now();
+  }, [showing]);
+  useEffect(() => {
+    if (last.current === questionKey) return;
+    last.current = questionKey;
+    if (since.current === null || Date.now() - since.current < NATIVE_REFRESH_MS) return;
+    const timer = window.setTimeout(() => {
+      since.current = Date.now();
+      setRound((n) => n + 1);
+    }, REFRESH_AFTER_DRAW_MS);
+    return () => window.clearTimeout(timer);
+  }, [questionKey]);
+  return round;
 }
 
 /** 키보드가 올라왔는지(보이는 화면 높이가 가장 컸을 때보다 많이 줄면). */

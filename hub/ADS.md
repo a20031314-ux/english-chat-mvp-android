@@ -15,6 +15,8 @@
 - **새 화면마다 광고 자리를 본다**(사용자 2026-11-01): 기능이 더해지면 변경 감시(`scripts/watch/ADS-REVIEW.md`)가 새 UI의 끝 화면·목록·전체 화면 층마다 배너·네이티브·전면을 넣을 수 있는지 보고, 넣는 안은 손익(`economics.mjs --scenario`)까지 계산해 아래 "재구성 제안"에 남긴다. 푸는 중·입력칸·버튼 옆은 안 됨(AdMob 잘못 누름 정책).
 - **한 화면에 광고 하나, 맨 위 층만**(2026-11-01 넣음): 네이티브는 그 자리가 든 층(`FullScreenLayer`·`BodyLayer`, 바닥 화면 0)이 맨 위일 때만 붙고, 위에 다른 층이 덮이거나 키보드가 올라오면 뗀다(`NativeAdSlot`·`lib/ads.ts` 층 목록). 피드 이름은 화면 단위(`my-full`·`quiz-inline`·`results`·`chat-locked`·목록 피드) — 동시에 피드 2개 한도.
 - **학습 사이·빈 공간을 늘 찾는다**(사용자 2026-11-01): 넘어가는 시점(문제 묶음 경계·항목 사이·단계 올라감)과 화면의 큰 빈 공간(`scripts/watch/blank.py` — 캡처에서 화면 15% 넘는 빈 띠)을 광고 자리 후보로 본다. 빈 공간은 버튼·입력칸과 띄우고, 키보드가 올라오면 숨기고, 한 화면에 광고 하나.
+- **문제 아래 네이티브는 문제가 바뀔 때 60초 넘었으면 교체, 문제 도중에는 안 바꿈**(사용자 2026-11-01 "퀴즈광고 60초 교체"): Quizbank·수업 퀴즈(`quiz-inline`) — 간격은 `lib/ads.ts` `NATIVE_REFRESH_MS`, 새 광고는 다음 문제가 그려지고 0.5초 뒤 붙임(`NativeAdSlot` `useNativeRefresh`, 자리 높이 고정이라 레이아웃 그대로).
+- **학습과 떨어진 읽기 화면 끝**(2026-11-01 23시 넣음, `hub/drafts/ads-passive-2026-11-01.md`): Stagebank 단계 화면 대화 예시 앞(`my-full`)·영상 목록 여덟 번째 뒤·📖 배울 수 있는 것·칸 ?·사용법 창·📈 내 진척/실력 기록 끝 — 시트·안내 창 광고는 피드 하나 `sheets`(동시 2피드 한도).
 - **손익이 기준.** 자리·값을 바꾸면 `npm run sim:economics -- --write`로 다시 계산하고, 1,000명당 손익이 단가 중간에서 양수인지 본다.
 
 ## 넣지 않는 곳 (손으로 씀)
@@ -67,12 +69,13 @@
 | `chat-locked` | `chat-locked` | AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. | AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
 | `my-full` | `exam-wait` | 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. | My 탭 `my` · `studyMap/TodayPlan.tsx` |
 | `my-full` | `logbank-list` | Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움. | My 탭 `my` · `studyMap/Logbank.tsx` |
+| `my-full` | `stagebank-stage` | 단계 화면 "이 단계에선 이런 대화가 돼요" 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `my-full` | `stagebank-today` | Stagebank 전체 화면: 오늘 할 것 카드·단계 줄 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `people-tab` | `board-after-3` | 세 번째 글 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). 글을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/BoardView.tsx` |
 | `people-tab` | `people-after-4` | 네 번째 사람 뒤에 네이티브 광고 하나(무료·안드로이드만). 프로필을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/RoomPeople.tsx` |
 | `people-tab` | `people-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. | 사람 탭 `people` · `rooms/PeopleTab.tsx` |
-| `quiz-inline` | `${adKey}-${adRound}` | Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 10문제마다 새 광고. | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
-| `quiz-inline` | `lesson-${itemId}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01, 수업 퀴즈 단계에도) — 버튼과 띄우고, 키보드가 올라오면 숨김. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
+| `quiz-inline` | `${adKey}-${adRound}` | Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
+| `quiz-inline` | `lesson-${itemId}-${adRound}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `checkup-end` | 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
@@ -80,11 +83,17 @@
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
+| `sheets` | `bank-help-${bank}` | 시트 맨 끝(그림·영상 아래) 네이티브 하나(2026-11-01 — 읽는 안내 시트, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/BankHelp.tsx` |
+| `sheets` | `guide-end` | 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·"이 화면으로 가기"와 떨어짐). 쓸 기능 고르기에는 없음. | 앱 틀 `shell` · `GuideSheet.tsx` |
+| `sheets` | `my-progress-end` | 익힌 것 목록 끝 네이티브 하나(2026-11-01 — ✓ 칩만 읽는 곳, 토글은 맨 위). 익힌 것이 없으면(새 사용자 — 토글 한 줄뿐) 두지 않음. | My 탭 `my` · `notes/NotebookSection.tsx` |
+| `sheets` | `scope-end` | 시트 맨 끝 네이티브 하나(2026-11-01 — 읽기만 하는 시트, 누를 것은 ✕뿐, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/ContentScope.tsx` |
+| `sheets` | `skill-record-end` | 기록 끝 네이티브 하나(2026-11-01 — 읽는 기록 화면, 결과가 있을 때만, 한 장을 열면 없음). 줄과 띄움. | My 탭 `my` · `studyMap/SkillRecord.tsx` |
 | `talk-list` | `talk-after-account` | 로그인 전이면 계정 카드 아래에 네이티브 광고 하나(무료·안드로이드만). | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
 | `talk-list` | `talk-between-lists` | 목록 사이 네이티브 광고(무료·안드로이드만). 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
+| `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 8개, 자리 19개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 9개, 자리 26개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 
@@ -134,7 +143,7 @@
 
 출처: 한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18. AdMob 실제 eCPM이 쌓이면 `ads.ts` `AD_REVENUE_USD`를 고친다.
 
-가상 사용자 손익(`hub/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **−490,075원** · 중간 **+88,631원** · 높음 **+667,337원**.
-무료 한 사람 한 달: 원가 933원, 광고 1,046원(중간) → +113원.
+가상 사용자 손익(`hub/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **−421,383원** · 중간 **+260,359원** · 높음 **+942,102원**.
+무료 한 사람 한 달: 원가 933원, 광고 1,223원(중간) → +290원.
 
 <!-- 자동 끝 -->

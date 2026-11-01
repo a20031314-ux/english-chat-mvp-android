@@ -1218,6 +1218,8 @@ function StageFrame({
   };
   const practiceLabel = () => ui.stageScriptsTitle;
   const canPractice = (id: PartId) => id === "expression" && Boolean(expressionScript);
+  // 이 단계 대화 예시(StageExamples) — 있을 때만 그 앞에 광고 자리.
+  const sample = detail?.(shown) ?? null;
 
   return (
     <div className="mt-3">
@@ -1354,7 +1356,9 @@ function StageFrame({
         <div className="mt-1">{nodeRows(inStage(shown))}</div>
       )}
 
-      {detail?.(shown)}
+      {/* 단계 화면 "이 단계에선 이런 대화가 돼요" 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. */}
+      {sample ? <NativeAdSlot feedId="my-full" slotKey="stagebank-stage" spaced layerOnly /> : null}
+      {sample}
     </div>
   );
 }
@@ -2181,6 +2185,8 @@ function SkeletonProgress({
         </div>
       ))}
     </div>
+              {/* 익힌 것 목록 끝 네이티브 하나(2026-11-01 — ✓ 칩만 읽는 곳, 토글은 맨 위). 익힌 것이 없으면(새 사용자 — 토글 한 줄뿐) 두지 않음. */}
+              {learned.some((group) => group.items.length) ? <NativeAdSlot feedId="sheets" slotKey="my-progress-end" spaced /> : null}
               {extra}
             </div>
           </div>

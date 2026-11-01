@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
-import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
 import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -131,6 +131,8 @@ export function FrameLesson({
     return (quiz?.questions ?? []).filter((question) => question.kind !== "say").slice(0, 3);
   }, [language, frame, seed, shownExamples, grown]);
   const [qIndex, setQIndex] = useState(0);
+  // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
+  const adRound = useNativeRefresh(`q${qIndex}`, step === "quiz");
   const [answered, setAnswered] = useState<Answer | null>(null);
   /** 수업 퀴즈 답(맞음) — 끝나면 퀴즈 기록(quizLog)에 한 번(모두 맞히면 익힘, 2026-11-01). */
   const quizRight = useRef<boolean[]>([]);
@@ -450,8 +452,8 @@ export function FrameLesson({
                 }
               }}
             />
-            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01, 수업 퀴즈 단계에도) — 버튼과 띄우고, 키보드가 올라오면 숨김. */}
-            <NativeAdSlot feedId="quiz-inline" slotKey={`lesson-${itemId}`} spaced />
+            {/* 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
+            <NativeAdSlot feedId="quiz-inline" slotKey={`lesson-${itemId}-${adRound}`} spaced />
           </div>
         ) : null}
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CheckupResult } from "@/components/studyMap/CheckupPlayer";
 import type { UICopy } from "@/lib/copy";
 import { rateOf, type CheckResult } from "@/lib/curriculum/checkup";
@@ -115,6 +116,8 @@ export function SkillRecord({
                   })}
               </ul>
             )}
+            {/* 기록 끝 네이티브 하나(2026-11-01 — 읽는 기록 화면, 결과가 있을 때만, 한 장을 열면 없음). 줄과 띄움. */}
+            {results.length ? <NativeAdSlot feedId="sheets" slotKey="skill-record-end" spaced /> : null}
           </div>
         )}
       </div>

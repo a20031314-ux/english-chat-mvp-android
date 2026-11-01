@@ -90,6 +90,12 @@ export function CatalogLibrary({
                 <NativeAdSlot feedId="video-library" slotKey="video-library-after-3" active={adsActive} />
               </li>
             ) : null}
+            {/* 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). */}
+            {index === 8 ? (
+              <li>
+                <NativeAdSlot feedId="video-library" slotKey="video-library-after-8" active={adsActive} />
+              </li>
+            ) : null}
             <li className="relative">
               <button
                 type="button"

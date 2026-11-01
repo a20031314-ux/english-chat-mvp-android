@@ -7,6 +7,7 @@
  */
 import { useEffect, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { apiUrl } from "@/lib/apiBase";
 import type { UICopy } from "@/lib/copy";
 import { contentScope, type StageScope } from "@/lib/curriculum/contentScope";
@@ -124,6 +125,8 @@ export function ContentScopeButton({ ui, locale, language }: { ui: UICopy; local
                   );
                 })}
               </ol>
+              {/* 시트 맨 끝 네이티브 하나(2026-11-01 — 읽기만 하는 시트, 누를 것은 ✕뿐, 시트가 맨 위 층일 때만). */}
+              <NativeAdSlot feedId="sheets" slotKey="scope-end" spaced />
             </div>
           </div>
         </BodyLayer>
