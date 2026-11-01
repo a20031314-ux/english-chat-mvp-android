@@ -130,7 +130,8 @@
    ]
   },
   "per1000Mid": 13924,
-  "freePersonMid": 14
+  "freePersonMid": 14,
+  "alt": "Logbank 광고"
  },
  {
   "kind": "add",
@@ -252,5 +253,108 @@
   },
   "per1000Mid": 92826,
   "freePersonMid": 95
+ },
+ {
+  "kind": "add",
+  "what": "Stagebank 전체 화면 — 오늘 할 것 카드·'Stagebank n단계 ›' 줄 아래 빈 공간에 네이티브 하나('광고' 표시, 줄과 한 줄 넘게 띄움)",
+  "where": "My 탭 `my` · studyMap/TodayPlan.tsx(data-today-plan 아래, 칸 전체 화면일 때만) · notes/NotebookSection.tsx(FullScreenLayer 안 칸) · components/NativeAdSlot(전체 화면 층 안에서도 멈추지 않게) · lib/ads.ts 피드",
+  "why": "빈 공간(ADS.md 원칙 '학습 사이·빈 공간') — 오늘 할 것 카드는 ▶ 하나만 누르는 쉬는 화면이고 입력칸이 없음. 항목 하나를 끝내고 돌아올 때마다 보는 자리라 전면 대신 붙어 있는 광고. 버튼과 띄우고 한 화면 하나(배너 안과는 같은 화면이라 같은 alt)",
+  "appBuild": true,
+  "basis": "그림 tmp/ads-blank/en-ko/stagebank-full.png·tmp/ads-blank/ja-ko/stagebank-full.png — blank.py 띠 26%~90%(화면 63%), 카드·단계 줄 아래 전부 빔(390×844). 오늘 할 것 항목이 6개 안팎이라 대본을 쓰는 날 이 화면으로 돌아오는 것 여러 번 — 새 광고를 받는 것(60초 새로고침·피드 3개 한도)으로 하루 1.5번 어림. 웹 캡처라 안드로이드 위에 뜨는 광고 층은 그림에 없음.",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 1.5,
+     "when": "my"
+    }
+   ]
+  },
+  "alt": "학습 화면 광고",
+  "per1000Mid": 69620,
+  "freePersonMid": 71
+ },
+ {
+  "kind": "add",
+  "what": "Quizbank 시험 탭 — 소재가 모이는 중('모인 소재 n/20')일 때 그 줄 아래 네이티브 하나",
+  "where": "My 탭 `my` · studyMap/TodayPlan.tsx keepBody(examTab, 시험을 아직 못 열 때) · components/NativeAdSlot",
+  "why": "빈 공간 — 기다리는 상태 한 줄만 있고 누를 것이 없어 잘못 누름 위험이 낮음. 시험을 열 수 있게 되면(문제가 시작되면) 빼고 시험 끝은 기존 checkupEnd 전면 그대로",
+  "appBuild": true,
+  "basis": "그림 tmp/ads-blank/en-ko/quiz-exam.png·tmp/ads-blank/ja-ko/quiz-exam.png — 띠 14%~90%(화면 76%), '모인 소재 0/20' 한 줄 아래 전부 빔. 새 사용자는 소재 20개까지(며칠) 이 화면. 대본을 쓰는 날 시험 탭을 눌러 보는 것 0.3번 어림.",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.3,
+     "when": "my"
+    }
+   ]
+  },
+  "alt": "학습 화면 광고",
+  "per1000Mid": 13924,
+  "freePersonMid": 14
+ },
+ {
+  "kind": "add",
+  "what": "Logbank 전체 화면 — 날짜가 셋보다 적을 때(처음 며칠·빈 기록 '—')는 목록 끝에 네이티브 하나(셋 넘으면 기존 안대로 세 번째 날 뒤)",
+  "where": "My 탭 `my` · studyMap/Logbank.tsx · components/NativeAdSlot",
+  "why": "빈 공간 — 기록이 없거나 짧은 Logbank는 화면 대부분이 빔. 둘러보는 목록이라 목록 광고 규칙과 같음. 기존 'Logbank 세 번째 날 뒤' 안을 넓히는 것이라 같은 alt",
+  "appBuild": true,
+  "basis": "그림 tmp/ads-blank/en-ko/logbank-full.png·tmp/ads-blank/ja-ko/logbank-full.png — 띠 9%~90%(화면 81%), 새 사용자는 '—'만. 출시 초반 무료 사용자 대부분이 기록 3일 미만이라 기존 안(세 번째 날 뒤)이 안 보이는 기간을 메움. 여는 횟수는 기존 안과 같은 0.3번 + 짧은 목록 기간 보정 0.1.",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.4,
+     "when": "my"
+    }
+   ]
+  },
+  "alt": "Logbank 광고",
+  "per1000Mid": 18565,
+  "freePersonMid": 19
+ },
+ {
+  "kind": "add",
+  "what": "Room 로비 — 로그인 전이면 로그인 카드 아래 네이티브 하나(대화 탭 talk-after-account와 같은 모양)",
+  "where": "Room 탭 `room` · rooms/RoomsScreen.tsx(로그인 카드 아래) · NativeAdSlot feed room-lobby",
+  "why": "빈 공간 — 로그인 전 Room은 로그인 카드 하나뿐(방에 들어가기 전이라 소리·마이크 없음, '넣지 않는 곳'인 방 안이 아님). 같은 피드 room-lobby-after-2는 로그인 뒤 목록에만 보여 겹치지 않음",
+  "appBuild": true,
+  "basis": "그림 tmp/ads-blank/en-ko/rooms.png·tmp/ads-blank/ja-ko/rooms.png — 띠 22%~90%(화면 68%). 2.76~ 무료는 로그인 없이 My만 쓰는 사람이 많아 Room 탭을 눌러 보는 것 하루 0.2번 어림(쓰는 날 아무 때나).",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.2,
+     "when": "any"
+    }
+   ]
+  },
+  "per1000Mid": 9283,
+  "freePersonMid": 9
+ },
+ {
+  "kind": "add",
+  "what": "사람 탭 — 로그인 전이면 AI 튜터 카드·로그인 카드 아래 네이티브 하나",
+  "where": "사람 탭 `people` · rooms/PeopleTab.tsx(로그인 카드 아래) · NativeAdSlot feed people-tab",
+  "why": "빈 공간 — 로그인 전 사람 탭은 AI 튜터 줄과 로그인 카드뿐. 둘러보는 화면이라 목록 광고 규칙과 같음, 📞 통화 버튼·로그인 버튼과 한 줄 넘게 띄움. people-after-4·board-after-3은 로그인 뒤에만 보여 겹치지 않음",
+  "appBuild": true,
+  "basis": "그림 tmp/ads-blank/en-ko/people.png·tmp/ads-blank/ja-ko/people.png — 띠 40%~90%(화면 50%). 로그인 전 무료 사용자가 사람 탭을 보는 것 하루 0.3번 어림(AI 튜터 통화 입구라 Room보다 조금 많음).",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.3,
+     "when": "any"
+    }
+   ]
+  },
+  "per1000Mid": 13924,
+  "freePersonMid": 14
  }
 ]
