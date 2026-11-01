@@ -12,6 +12,8 @@
  *            structure (hub/STRUCTURE.md, scripts/structure.json) or said
  *            "구조: 변화 없음" in its handoff, and the structure map must
  *            still cover every screen file, API route and page.
+ *            A chat whose conversation was compacted is asked, once, to hand
+ *            its tab over (hub/tabs.md, /pass N) at the next stopping point.
  *
  * Hooks read JSON on stdin; for SessionStart, stdout becomes context. Any
  * failure here stays silent and lets the chat carry on: a broken hook must
@@ -131,6 +133,7 @@ function commitsSince(base, startedAt) {
       work: files.some((f) => !f.startsWith("hub/")),
       log,
       src: files.some((f) => f.startsWith("src/")),
+      handoff: files.some((f) => f.startsWith("hub/handoff/")),
       structure: files.some((f) => f === "hub/STRUCTURE.md" || f === "scripts/structure.json") || structureNote,
     });
   }
@@ -159,11 +162,19 @@ if (mode === "start" || mode === "compact") {
   if (!existing && head) {
     fs.writeFileSync(stateFile(input.session_id), JSON.stringify({ base: head, startedAt: new Date().toISOString() }));
   }
+  if (mode === "compact" && existing) {
+    // 압축 횟수 — 끝내기 훅이 양도를 권하는 신호(hub/tabs.md "언제 양도하나").
+    existing.compactions = (existing.compactions ?? 0) + 1;
+    fs.writeFileSync(stateFile(input.session_id), JSON.stringify(existing));
+  }
 
   const parts = [];
   if (mode === "compact") {
     parts.push(
       "[허브] 대화가 압축되어 세부 내용이 줄었다. 이어가기 전에 이 채팅이 맡은 역할의 `hub/roles/<역할>.md`를 다시 읽어라.",
+    );
+    parts.push(
+      "[허브] 채팅이 길어졌다 — 지금 하던 일 단위를 마치면 이 탭을 양도한다(hub/tabs.md, `/pass N` → 사용자에게 \"새 채팅에서 'N번 받기'\"). 일 중간에는 끊지 않는다.",
     );
     const mine = commitsSince(existing?.base, existing?.startedAt);
     if (mine.length) {
@@ -178,7 +189,8 @@ if (mode === "start" || mode === "compact") {
   } else {
     parts.push(
       "[허브] 이 저장소는 채팅을 역할(dev/qa/store)로 나누고 기억은 hub/에 둔다. 요청에 맞는 `hub/roles/<역할>.md`를 읽고 시작하고, 끝날 때 역할 파일과 hub/log에 남겨라 (hub/README.md). " +
-        "코드를 고치기 전에 hub/STRUCTURE.md(앱 전체구조, CLAUDE.md가 불러옴)에서 영역과 영향 범위를 보고, 고친 커밋에서 구조도 고친다.",
+        "코드를 고치기 전에 hub/STRUCTURE.md(앱 전체구조, CLAUDE.md가 불러옴)에서 영역과 영향 범위를 보고, 고친 커밋에서 구조도 고친다. " +
+        "채팅은 번호 붙은 탭으로 일한다(hub/tabs.md — 1 메인·2 My·3 AI·4 사람·5 점검·6 스토어): 사용자가 \"N번 받기\"라고 하면 `/take N`, 길어지면 `/pass N`으로 양도.",
     );
   }
   const inbox = inboxLines();
@@ -224,7 +236,17 @@ if (mode === "stop") {
   const missing = unrecorded(commits);
   const unchecked = structureUnchecked(commits);
   const mapProblems = commits.some((c) => c.src) ? structureMapProblems() : "";
-  if (missing.length === 0 && unchecked.length === 0 && !mapProblems) process.exit(0);
+  // 압축된 채팅은 한 번 양도를 권한다(이미 hub/handoff/에 남겼으면 안 함).
+  const askPass = Boolean(state && (state.compactions ?? 0) >= 1 && !state.passAsked && !commits.some((c) => c.handoff));
+  if (askPass) {
+    state.passAsked = new Date().toISOString();
+    try {
+      fs.writeFileSync(stateFile(input.session_id), JSON.stringify(state));
+    } catch {
+      // 못 적으면 다음 끝에 한 번 더 권할 뿐.
+    }
+  }
+  if (missing.length === 0 && unchecked.length === 0 && !mapProblems && !askPass) process.exit(0);
 
   const reasons = [];
   if (missing.length) {
@@ -247,6 +269,13 @@ if (mode === "stop") {
   }
   if (mapProblems) {
     reasons.push("전체구조 자리표가 코드와 어긋난다 (CI structure도 실패한다):\n" + mapProblems);
+  }
+  if (askPass) {
+    reasons.push(
+      "이 채팅은 대화가 압축될 만큼 길어졌다(hub/tabs.md \"언제 양도하나\"). 지금 일 단위가 끝났으면 `/pass N`(.claude/skills/pass/SKILL.md)으로 " +
+        "hub/handoff/N.md를 쓰고 커밋·push한 뒤 사용자에게 \"N번 양도함 — 새 채팅에서 'N번 받기'\"라고 알려라. " +
+        "아직 일 중간이거나 사용자가 이 채팅에서 계속하길 원하면, 사용자에게 한 줄로 양도를 권하기만 하고 하던 일을 마쳐라(이 알림은 한 번만).",
+    );
   }
   process.stdout.write(JSON.stringify({ decision: "block", reason: reasons.join("\n\n") }));
   process.exit(0);
