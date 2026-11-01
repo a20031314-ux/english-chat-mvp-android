@@ -108,5 +108,6 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
   const usage = take();
   const explain = lesson.explain.map((line) => take() || line);
   const turns = lesson.turns.map((turn) => ({ ...turn, themGloss: take() || turn.themGloss, meGloss: take() || turn.meGloss }));
-  return { explain, meaning: meaning || lesson.meaning, usage: usage || lesson.usage, turns, title: item.kind === "grammar" ? title || item.name : item.name };
+  const kept = (moved: string, original: string | undefined) => (moved && moved.trim() !== "-" && original ? moved : original);
+  return { explain, meaning: kept(meaning, lesson.meaning), usage: kept(usage, lesson.usage), turns, title: grammarTitle ? title || item.name : item.name };
 }
