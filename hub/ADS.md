@@ -72,7 +72,7 @@
 | `people-tab` | `people-after-4` | 네 번째 사람 뒤에 네이티브 광고 하나(무료·안드로이드만). 프로필을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/RoomPeople.tsx` |
 | `people-tab` | `people-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. | 사람 탭 `people` · `rooms/PeopleTab.tsx` |
 | `quiz-inline` | `${adKey}-${adRound}` | Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 10문제마다 새 광고. | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
-| `quiz-inline` | `lesson-${itemId}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 "수업 퀴즈 단계에도") — 버튼과 띄우고, 키보드가 올라오면 숨김. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
+| `quiz-inline` | `lesson-${itemId}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01, 수업 퀴즈 단계에도) — 버튼과 띄우고, 키보드가 올라오면 숨김. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `checkup-end` | 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
