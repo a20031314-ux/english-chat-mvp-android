@@ -14,83 +14,81 @@ export const PT_DECOYS: Record<string, string[]> = {
   ],
   "pt-f1-02|Sou de": [
     "Estou de",
-    "Sou em",
-    "Sou a"
+    "Sou em"
   ],
   "pt-f1-02|sou de": [
     "estou de",
-    "sou em",
-    "sou a"
+    "sou em"
   ],
   "pt-f1-03|trabalho em": [
-    "trabalho no",
     "trabalho a",
-    "trabalhos em"
+    "trabalhos em",
+    "trabalhar em"
   ],
   "pt-f1-03|Trabalho em": [
-    "Trabalho no",
     "Trabalho a",
-    "Trabalhos em"
+    "Trabalhos em",
+    "Trabalhar em"
   ],
   "pt-f1-04|Estou em": [
     "Sou em",
-    "Estou no",
-    "Estou a"
+    "Estou a",
+    "Estar em"
   ],
   "pt-f1-04|estou em": [
     "sou em",
-    "estou no",
-    "estou a"
+    "estou a",
+    "estar em"
   ],
   "pt-f1-05|Estou": [
+    "Sou",
     "Tenho",
-    "Estoy",
     "Estar"
   ],
   "pt-f1-05|estou": [
+    "sou",
     "tenho",
-    "estoy",
     "estar"
   ],
   "pt-f1-06|Onde fica": [
     "Onde fico",
     "Onde fique",
-    "Onde faz"
+    "Aonde fica"
   ],
   "pt-f1-06|onde fica": [
     "onde fico",
     "onde fique",
-    "onde faz"
+    "aonde fica"
   ],
   "pt-f1-07|Quanto custa": [
     "Quanto custo",
     "Quantos custa",
-    "Quanto costa"
+    "Quanta custa"
   ],
   "pt-f1-07|quanto custa": [
     "quanto custo",
     "quantos custa",
-    "quanto costa"
+    "quanta custa"
   ],
   "pt-f1-08|quero": [
-    "quiero",
-    "queiro",
-    "querer"
+    "querer",
+    "quer",
+    "queiro"
   ],
   "pt-f1-08|Quero": [
-    "Quiero",
-    "Queiro",
-    "Querer"
+    "Querer",
+    "Quer",
+    "Queiro"
   ],
   "pt-f1-09|Me vê um": [
     "Mim vê um",
     "Me ver um",
-    "Me vê a"
+    "Me vejo um"
   ],
   "pt-f1-09|me vê um": [
     "mim vê um",
     "me ver um",
-    "me vê a"
+    "me vejo um"
   ],
   "pt-f1-10|Você tem": [
     "Você tenho",
@@ -103,119 +101,101 @@ export const PT_DECOYS: Record<string, string[]> = {
     "você está"
   ],
   "pt-f1-11|tenho": [
-    "tengo",
     "estou",
-    "hei"
+    "tem",
+    "ter"
   ],
   "pt-f1-11|Tenho": [
-    "Tengo",
     "Estou",
-    "Hei"
+    "Tem",
+    "Ter"
   ],
   "pt-f1-12|não falo": [
-    "falo não",
     "não digo",
-    "não falar"
+    "não falar",
+    "não fala"
   ],
   "pt-f1-12|Não falo": [
-    "Falo não",
     "Não digo",
-    "Não falar"
+    "Não falar",
+    "Não fala"
   ],
   "pt-f1-13|moro em": [
     "moro a",
     "moro de",
-    "morro em"
+    "mora em"
   ],
   "pt-f1-13|Moro em": [
     "Moro a",
     "Moro de",
-    "Morro em"
+    "Mora em"
   ],
   "pt-f1-13|moro no": [
     "moro o",
     "moro do",
-    "morro no"
+    "moro em o"
   ],
   "pt-f1-13|moro na": [
     "moro à",
     "moro da",
-    "morro na"
+    "moro em a"
   ],
   "pt-f1-14|O que é": [
     "O que está",
-    "O qual é",
-    "O que são"
+    "O qual é"
   ],
   "pt-f1-14|o que é": [
     "o que está",
-    "o qual é",
-    "o que são"
+    "o qual é"
   ],
   "pt-f1-15|Pode": [
-    "Puede",
-    "Pede",
-    "Posso"
+    "Posso",
+    "Poder"
   ],
   "pt-f1-15|pode": [
-    "puede",
-    "pede",
-    "posso"
+    "posso",
+    "poder"
   ],
   "pt-f1-16|tudo bem": [
     "todo bem",
-    "tudo é bem",
-    "tudo bens"
+    "tudo é bem"
   ],
   "pt-f1-16|Tudo bem": [
     "Todo bem",
-    "Tudo é bem",
-    "Tudo bens"
+    "Tudo é bem"
   ],
   "pt-f1-17|é muito boa": [
     "é muito bom",
     "é muita boa",
     "é muito bem"
   ],
-  "pt-f1-18|Tchau": [
-    "Oi",
-    "Olá",
-    "Chao"
-  ],
-  "pt-f1-18|tchau": [
-    "oi",
-    "olá",
-    "chao"
-  ],
+  "pt-f1-18|Tchau": [],
+  "pt-f1-18|tchau": [],
   "pt-f2-01|Ontem eu": [
-    "Amanhã eu",
     "Ontem me",
     "Ontem mim"
   ],
   "pt-f2-01|ontem eu": [
-    "amanhã eu",
     "ontem me",
     "ontem mim"
   ],
   "pt-f2-02|fui": [
     "foi",
     "fiz",
-    "fue"
+    "vou"
   ],
   "pt-f2-02|Fui": [
     "Foi",
     "Fiz",
-    "Fue"
+    "Vou"
   ],
   "pt-f2-03|Vou": [
-    "Voy",
-    "Voo",
-    "Estou"
+    "Vai",
+    "Ir"
   ],
   "pt-f2-03|vou": [
-    "voy",
-    "voo",
-    "estou"
+    "vai",
+    "ir"
   ],
   "pt-f2-04|Estou": [
     "Sou",
@@ -230,12 +210,12 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f2-05|gosto de": [
     "gosto a",
     "gosto em",
-    "gusto de"
+    "gosto"
   ],
   "pt-f2-05|Gosto de": [
     "Gosto a",
     "Gosto em",
-    "Gusto de"
+    "Gosto"
   ],
   "pt-f2-05|gosto muito de": [
     "gosto muito a",
@@ -253,14 +233,14 @@ export const PT_DECOYS: Record<string, string[]> = {
     "gosto mais em"
   ],
   "pt-f2-06|Não gosto": [
-    "Gosto não",
     "Não me gosto",
-    "Não gusto"
+    "Não gosta",
+    "Não gostar"
   ],
   "pt-f2-06|não gosto": [
-    "gosto não",
     "não me gosto",
-    "não gusto"
+    "não gosta",
+    "não gostar"
   ],
   "pt-f2-07|mais": [
     "mas",
@@ -269,22 +249,21 @@ export const PT_DECOYS: Record<string, string[]> = {
   ],
   "pt-f2-07|do que": [
     "de que",
-    "como",
-    "que do"
+    "como"
   ],
   "pt-f2-08|faz": [
     "desde",
     "faço",
-    "fez"
+    "fazem"
   ],
   "pt-f2-08|Faz": [
     "Desde",
     "Faço",
-    "Fez"
+    "Fazem"
   ],
   "pt-f2-09|há": [
     "à",
-    "atrás",
+    "a",
     "desde"
   ],
   "pt-f2-10|Estou com dor de": [
@@ -328,14 +307,12 @@ export const PT_DECOYS: Record<string, string[]> = {
     "quanto tempo toma"
   ],
   "pt-f2-14|Vamos": [
-    "Somos",
-    "Estamos",
-    "Ir"
+    "Ir",
+    "Imos"
   ],
   "pt-f2-14|vamos": [
-    "somos",
-    "estamos",
-    "ir"
+    "ir",
+    "imos"
   ],
   "pt-f2-15|Pode ser": [
     "Posso ser",
@@ -390,12 +367,12 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f3-02|Na minha opinião": [
     "Na meu opinião",
     "Para minha opinião",
-    "Na mi opinião"
+    "No minha opinião"
   ],
   "pt-f3-02|na minha opinião": [
     "na meu opinião",
     "para minha opinião",
-    "na mi opinião"
+    "no minha opinião"
   ],
   "pt-f3-03|Quando eu era criança": [
     "Quando eu fui criança",
@@ -420,17 +397,17 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f3-04|estava": [
     "era",
     "estou",
-    "estaba"
+    "estavam"
   ],
   "pt-f3-05|Espero que": [
     "Espero de",
     "Espero o que",
-    "Esperança que"
+    "Espero se"
   ],
   "pt-f3-05|espero que": [
     "espero de",
     "espero o que",
-    "esperança que"
+    "espero se"
   ],
   "pt-f3-06|É importante que": [
     "Está importante que",
@@ -445,12 +422,12 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f3-07|poderia": [
     "puderia",
     "pudesse",
-    "podría"
+    "poderá"
   ],
   "pt-f3-07|Poderia": [
     "Puderia",
     "Pudesse",
-    "Podría"
+    "Poderá"
   ],
   "pt-f3-08|Seria possível": [
     "Estaria possível",
@@ -475,32 +452,30 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f3-10|me indica": [
     "mim indica",
     "me indico",
-    "te indica"
+    "me indicar"
   ],
   "pt-f3-11|A gente": [
     "O gente",
-    "As gentes",
-    "Nos"
+    "As gentes"
   ],
   "pt-f3-11|a gente": [
     "o gente",
-    "as gentes",
-    "nos"
+    "as gentes"
   ],
   "pt-f3-12|onde": [
+    "aonde",
     "qual",
-    "quem",
-    "cujo"
+    "quem"
   ],
   "pt-f3-13|Vale a pena": [
     "Vale o pena",
     "Vale pena",
-    "Vala a pena"
+    "Valem a pena"
   ],
   "pt-f3-13|vale a pena": [
     "vale o pena",
     "vale pena",
-    "vala a pena"
+    "valem a pena"
   ],
   "pt-f3-14|não está funcionando": [
     "não é funcionando",
@@ -520,22 +495,22 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f3-16|Concordo": [
     "Acordo",
     "Concordar",
-    "Concuerdo"
+    "Concorda"
   ],
   "pt-f3-16|concordo": [
     "acordo",
     "concordar",
-    "concuerdo"
+    "concorda"
   ],
   "pt-f3-17|Não é bem assim": [
     "É não bem assim",
-    "Não é bem así",
-    "Não é bem tão"
+    "Não está bem assim",
+    "Não é bom assim"
   ],
   "pt-f3-17|não é bem assim": [
     "é não bem assim",
-    "não é bem así",
-    "não é bem tão"
+    "não está bem assim",
+    "não é bom assim"
   ],
   "pt-f3-18|Fiquei sabendo que": [
     "Fiquei saber que",
@@ -629,8 +604,7 @@ export const PT_DECOYS: Record<string, string[]> = {
   ],
   "pt-f4-09|disse que": [
     "dizeu que",
-    "disse de que",
-    "disse se"
+    "disse de que"
   ],
   "pt-f4-09|disseram que": [
     "dizeram que",
@@ -638,14 +612,14 @@ export const PT_DECOYS: Record<string, string[]> = {
     "disseram de que"
   ],
   "pt-f4-10|Fala-se muito": [
-    "Falam-se muito",
     "Fala-se muita",
-    "Fala-me muito"
+    "Falar-se muito",
+    "Falam-se muito"
   ],
   "pt-f4-10|fala-se muito": [
-    "falam-se muito",
     "fala-se muita",
-    "fala-me muito"
+    "falar-se muito",
+    "falam-se muito"
   ],
   "pt-f4-11|Por um lado": [
     "Pelo um lado",
@@ -668,34 +642,32 @@ export const PT_DECOYS: Record<string, string[]> = {
     "para outro lado"
   ],
   "pt-f4-13|Entendo seu ponto": [
-    "Entendo seu ponta",
     "Entendo sua ponto",
-    "Entendo seu pontos"
+    "Entendo seu pontos",
+    "Entende seu ponto"
   ],
   "pt-f4-13|entendo seu ponto": [
-    "entendo seu ponta",
     "entendo sua ponto",
-    "entendo seu pontos"
+    "entendo seu pontos",
+    "entende seu ponto"
   ],
   "pt-f4-14|A questão é que": [
     "A questão é de",
     "A questão está que",
-    "A questão é se"
+    "O questão é que"
   ],
   "pt-f4-14|a questão é que": [
     "a questão é de",
     "a questão está que",
-    "a questão é se"
+    "o questão é que"
   ],
   "pt-f4-15|Tem como": [
-    "Tem com",
     "Tem como de",
-    "Tem que"
+    "Tenho como"
   ],
   "pt-f4-15|tem como": [
-    "tem com",
     "tem como de",
-    "tem que"
+    "tenho como"
   ],
   "pt-f4-16|Levando em conta": [
     "Levando em contas",
@@ -738,14 +710,14 @@ export const PT_DECOYS: Record<string, string[]> = {
     "por resumo"
   ],
   "pt-f4-20|Se não me engano": [
-    "Se não me enganho",
     "Se não engano",
-    "Se não me engane"
+    "Se não me engane",
+    "Se não mim engano"
   ],
   "pt-f4-20|se não me engano": [
-    "se não me enganho",
     "se não engano",
-    "se não me engane"
+    "se não me engane",
+    "se não mim engano"
   ],
   "pt-f5-01|já tinha": [
     "já tenho",
@@ -800,7 +772,7 @@ export const PT_DECOYS: Record<string, string[]> = {
   "pt-f5-06|uma coisinha": [
     "um coisinha",
     "uma coisinho",
-    "uma coisita"
+    "umas coisinha"
   ],
   "pt-f5-07|O que me incomoda é": [
     "O que me incomodo é",
@@ -819,43 +791,37 @@ export const PT_DECOYS: Record<string, string[]> = {
   ],
   "pt-f5-09|Venho por meio deste": [
     "Venho para meio deste",
-    "Venho por meio desse",
-    "Venho em meio deste"
+    "Venho em meio deste",
+    "Venho por meio de este"
   ],
   "pt-f5-09|venho por meio deste": [
     "venho para meio deste",
-    "venho por meio desse",
-    "venho em meio deste"
+    "venho em meio deste",
+    "venho por meio de este"
   ],
   "pt-f5-10|Agradecemos desde já": [
     "Agradecemos de já",
-    "Agradecimos desde já",
-    "Agradecemos desde agora"
+    "Agradecimos desde já"
   ],
   "pt-f5-10|agradecemos desde já": [
     "agradecemos de já",
-    "agradecimos desde já",
-    "agradecemos desde agora"
+    "agradecimos desde já"
   ],
   "pt-f5-11|Informamos que": [
     "Informemos que",
-    "Informamos a que",
-    "Informamo que"
+    "Informamos a que"
   ],
   "pt-f5-11|informamos que": [
     "informemos que",
-    "informamos a que",
-    "informamo que"
+    "informamos a que"
   ],
   "pt-f5-12|Tu é": [
     "Tu são",
-    "Ti é",
-    "Tu está"
+    "Ti é"
   ],
   "pt-f5-12|tu é": [
     "tu são",
-    "ti é",
-    "tu está"
+    "ti é"
   ],
   "pt-f5-13|pelo contrário": [
     "por contrário",
@@ -867,25 +833,15 @@ export const PT_DECOYS: Record<string, string[]> = {
     "Pelo contrária",
     "No contrário"
   ],
-  "pt-f5-14|Aliás": [
-    "Aliás de",
-    "Além",
-    "Ali"
-  ],
-  "pt-f5-14|aliás": [
-    "aliás de",
-    "além",
-    "ali"
-  ],
+  "pt-f5-14|Aliás": [],
+  "pt-f5-14|aliás": [],
   "pt-f5-15|Inclusive": [
     "Incluso",
-    "Inclusivo",
-    "Incluindo"
+    "Inclusivo"
   ],
   "pt-f5-15|inclusive": [
     "incluso",
-    "inclusivo",
-    "incluindo"
+    "inclusivo"
   ],
   "pt-f5-16|Com todo respeito": [
     "Com toda respeito",

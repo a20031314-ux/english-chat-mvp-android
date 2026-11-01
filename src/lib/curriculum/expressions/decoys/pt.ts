@@ -4,38 +4,28 @@
 export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "tudo bem": [
     "todo bem",
-    "tudos bem",
-    "tudo bens"
+    "tudos bem"
   ],
   "bom dia": [
     "boa dia",
-    "bons dia",
-    "buen dia"
+    "bons dia"
   ],
   "boa tarde": [
     "bom tarde",
-    "boas tarde",
-    "buena tarde"
+    "boas tarde"
   ],
   "boa noite": [
     "bom noite",
-    "boas noite",
-    "buena noite"
+    "boas noite"
   ],
-  "prazer": [
-    "prazo",
-    "agrado",
-    "contento"
-  ],
+  "prazer": [],
   "obrigado": [
     "obrigando",
-    "obrigação",
-    "obligado"
+    "obrigar"
   ],
   "obrigada": [
     "obrigando",
-    "obrigação",
-    "obligada"
+    "obrigar"
   ],
   "de nada": [
     "da nada",
@@ -43,13 +33,11 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "em nada"
   ],
   "com licença": [
-    "con licença",
     "de licença",
-    "com licencia"
+    "com licenças"
   ],
   "desculpa": [
     "desculpo",
-    "disculpa",
     "desculpei"
   ],
   "quanto custa": [
@@ -65,12 +53,11 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "onde fica": [
     "onde fico",
     "onde fiquei",
-    "quem fica"
+    "aonde fica"
   ],
   "não entendi": [
     "não entendeu",
-    "não entenderam",
-    "sem entendi"
+    "não entendido"
   ],
   "pode repetir": [
     "posso repetir",
@@ -78,9 +65,7 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "pode repetiu"
   ],
   "mais devagar": [
-    "mas devagar",
-    "menos devagar",
-    "mais rápido"
+    "mas devagar"
   ],
   "não sei": [
     "não sabo",
@@ -92,29 +77,15 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "eu vê um",
     "me ver um"
   ],
-  "tchau": [
-    "chao",
-    "adiós",
-    "olá"
-  ],
+  "tchau": [],
   "até logo": [
-    "até luego",
-    "até longe",
-    "em logo"
+    "em logo",
+    "até o logo"
   ],
-  "e aí": [
-    "e lá",
-    "e aqui",
-    "e onde"
-  ],
-  "beleza": [
-    "bonito",
-    "belo",
-    "lindo"
-  ],
+  "e aí": [],
+  "beleza": [],
   "fim de semana": [
     "fim do semana",
-    "fins de semana",
     "fim em semana"
   ],
   "que horas são": [
@@ -134,22 +105,19 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "vamos sim": [
     "vão sim",
-    "vamo-nos sim",
-    "vamos não"
+    "vamo-nos sim"
   ],
   "pode ser": [
     "pode estar",
     "posso ser",
-    "pode é"
+    "pode seja"
   ],
   "combinado": [
     "combinando",
-    "combinada",
-    "combinação"
+    "combinada"
   ],
   "que pena": [
     "qual pena",
-    "que pene",
     "de pena"
   ],
   "fica pra próxima": [
@@ -170,27 +138,25 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "quanto tempo leva": [
     "quanto tempo levo",
     "quantos tempo leva",
-    "quanto tempo lava"
+    "quanta tempo leva"
   ],
   "ida e volta": [
     "vai e volta",
-    "ida ou volta",
-    "ida e vinda"
+    "ido e volta",
+    "ida e voltar"
   ],
   "que legal": [
     "qual legal",
-    "como legal",
-    "de legal"
+    "como legal"
   ],
   "nossa": [
     "nosso",
-    "nossos",
-    "nós"
+    "nossos"
   ],
   "ontem à noite": [
     "ontem na noite",
     "ontem em noite",
-    "amanhã à noite"
+    "ontem às noite"
   ],
   "de vez em quando": [
     "de vez a quando",
@@ -198,9 +164,9 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "em vez de quando"
   ],
   "tanto faz": [
-    "tanto fez",
     "tanto faço",
-    "tanta faz"
+    "tanta faz",
+    "tanto fazem"
   ],
   "até amanhã": [
     "até manhã",
@@ -224,18 +190,15 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "com certeza": [
     "com certo",
-    "por certeza",
-    "sem certeza"
+    "por certeza"
   ],
   "concordo": [
     "concorda",
-    "concordar",
-    "acordo"
+    "concordar"
   ],
   "não é bem assim": [
     "não é bom assim",
-    "não está bem assim",
-    "não é bem assado"
+    "não está bem assim"
   ],
   "depende": [
     "dependo",
@@ -273,9 +236,7 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "valem a pena"
   ],
   "sem spoiler": [
-    "com spoiler",
-    "sem spoilar",
-    "no spoiler"
+    "sem spoilar"
   ],
   "de repente": [
     "do repente",
@@ -304,7 +265,6 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "tomara": [
     "tomará",
-    "tomou",
     "tomasse"
   ],
   "fazer o quê": [
@@ -325,7 +285,7 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "por outro lado": [
     "por outra lado",
     "para outro lado",
-    "por outro lada"
+    "pelo outro lado"
   ],
   "faz sentido": [
     "faz sentindo",
@@ -334,13 +294,11 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "entendo seu ponto": [
     "entendo sua ponto",
-    "entende seu ponto",
-    "entendo seu ponta"
+    "entende seu ponto"
   ],
   "só que": [
     "só de",
-    "só qual",
-    "sozinho que"
+    "só qual"
   ],
   "a questão é": [
     "o questão é",
@@ -359,8 +317,7 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "dar um retorno": [
     "dar uma retorno",
-    "dar um retornar",
-    "dá um retorno"
+    "dar um retornar"
   ],
   "tem como": [
     "tem quanto",
@@ -409,8 +366,8 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   ],
   "se não me engano": [
     "se não me engana",
-    "se não me enganho",
-    "se não mim engano"
+    "se não mim engano",
+    "se eu não engano"
   ],
   "deixa eu ver": [
     "deixo eu ver",
@@ -425,16 +382,15 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "pisar na bola": [
     "pisar no bola",
     "pisar a bola",
-    "pisar na pelota"
+    "pisar em bola"
   ],
   "dar um jeitinho": [
     "dar uma jeitinho",
-    "dá um jeitinho",
-    "dar um jeitado"
+    "dar um jeitado",
+    "fazer um jeitinho"
   ],
   "encher linguiça": [
     "encher salsicha",
-    "enchendo linguiça",
     "inchar linguiça"
   ],
   "vou ver e te falo": [
@@ -450,17 +406,15 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "caiu a ficha": [
     "caiu o ficha",
     "caí a ficha",
-    "caiu a fecha"
+    "caiu-se a ficha"
   ],
   "chutar o balde": [
     "chutar a balde",
-    "chutando o balde",
-    "pisar o balde"
+    "chutar os balde"
   ],
   "ficar de boa": [
     "ficar de bom",
-    "ficar do boa",
-    "ficando de boa"
+    "ficar do boa"
   ],
   "sem querer ser chato": [
     "sem quero ser chato",
@@ -472,14 +426,9 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "por contrário",
     "pelo contrária"
   ],
-  "aliás": [
-    "além",
-    "aliado",
-    "ainda"
-  ],
+  "aliás": [],
   "inclusive": [
     "inclusivo",
-    "incluso",
     "inclusiva"
   ],
   "deu ruim": [
@@ -488,9 +437,8 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
     "deu ruins"
   ],
   "pagar mico": [
-    "pagar macaco",
-    "pagando mico",
-    "pagar mica"
+    "pagar mica",
+    "pagar micos"
   ],
   "tirar de letra": [
     "tirar da letra",
@@ -515,7 +463,7 @@ export const PT_EXPR_DECOYS: Record<string, string[]> = {
   "conversa fiada": [
     "conversa fiado",
     "conversação fiada",
-    "conversa fiadora"
+    "conversas fiada"
   ],
   "na real": [
     "no real",
