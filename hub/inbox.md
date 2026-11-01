@@ -171,6 +171,9 @@
 - 2026-11-01 watch → dev: [my] src/lib/server/qbank.ts:241 — offers 판정 한도가 전체 하루 300번 하나뿐, 사람마다 한도 없어 한 사용자가 그날 판정 예산을 다 쓸 수 있음 (x-rc-user별 하루 판정 수 5~10으로 세어 넘으면 offers 버리기, wordExtras처럼)
 - 2026-11-01 watch → dev: [my] src/lib/curriculum/vocabLevel.ts:97 — feelDue가 feltAt을 버튼을 눌러야만 바꿔 쉬워요·적당해요·어려워요 줄이 누를 때까지 계속 남음("10개마다 한 줄"과 다름) (보여 준 때를 기억해 다음 10개 뒤 다시, 또는 묶음이 끝나면 feltAt을 newSeen으로)
 - 2026-11-01 watch → dev: [ai] src/components/RoleplayScreen.tsx:835 — 통화 요약 ⏱이 (끝난 때 − startedAt)라 이어서 한 통화는 끝내기~이어서 하기 사이 쉰 시간까지 통화 시간으로 보임(RoleplayPast·Logbank도 같은 셈) (저장 줄에 실제 통화 시간을 쌓아 CallSummary·RoleplayPast·Logbank가 그 값을 쓰게)
+- 2026-11-01 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:468 — 뜻 줄이 비면(앱 언어=학습 언어·영어 뜻 옮김 없음) 대화 차례가 정답 줄을 🔊로 들려주는데 결과는 revealed=false라 따라 말하기만으로 익힘(RULES 11④) (뜻이 빈 차례는 revealed:true로 남기거나 통과 셈에서 빼기)
+- 2026-11-01 watch → dev: [my] src/lib/curriculum/readings/index.ts:444 — 不·一 변조 봐주기 정규식이 음절 자리를 안 봐 bi·bu·yi·yu로 시작하는 모든 음절(比·必·语·雨·以·意)의 성조가 틀려도 맞음 (원문이 不/一인 자리만 성조 빼기)
+- 2026-11-01 watch → dev: [ai] src/app/api/chat/route.ts:328 — 아랍어 standardVarietyTail('assistantMessage는 표준어로만')이 맨 끝에 붙어 '내 말도 하는 튜터' 앱 언어 한 문장 규칙과 부딪칠 수 있음(347·370도) (bilingual일 때는 아랍어 부분에만 걸리게 문구 바꾸기)
 - 2026-11-01 dev → qa: 다음 빌드에서 사람 통화·대화(계정 둘, 폰 둘): 1:1 📞 → 위 상대·아래 나 통화 화면, 💬 자막 켜면 상대 마지막 말 한 줄(AI 통화와 켬/끔 같이 바뀜), 🙉 누르면 상대 화면 내 얼굴에 🙉, 🎙 끄기/켜기, 📷(영상 방), 📞 나가기 → 대화에 통화 기록. 단체방 📞(셋 이상) 격자. 1:1·단체방 말풍선 옆 얼굴(상대 왼쪽·내 사진 오른쪽). ko/ja, ar 앱.
 - 2026-11-01 dev → qa: Quizbank가 [어휘 | 시험 | 다시 보기]로, Stagebank에 표현·문법 칸 수업(알아요), 정기 시험(모인 소재 20개) — 처음 쓰는 흐름이 바뀌어 사용자 체감 점검(가상 사용자, RULES) 한 번: 1일째·14일째에 시험이 언제 뜨는지·할 일이 명확한지, 퀴즈 전수 점검 판정 표본(대화 응답 오답이 한눈에 지워지는지 포함). ja/ko·en/ja·es/ar.
 - 2026-11-01 모델 살피기 → dev: [ops] scripts/models/whatif.mjs trial — sim:users를 앱 2.78로 돌려 무료 점검 사용자가 첫 줄 뒤 /api/chat 403(대본만 무료)이라 평가 0줄. 이번엔 tmp 사본에 `--app-version 2.75.0`을 붙여 돌림 (trial 인자에 --app-version 2.75.0을 넣거나 점검 사용자에게 유료 플랜을 주는 길로)
