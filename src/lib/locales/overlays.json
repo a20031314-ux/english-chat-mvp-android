@@ -865,7 +865,9 @@
     "vocabFeelEasy": "簡単",
     "vocabFeelOk": "ちょうどいい",
     "vocabFeelHard": "難しい",
-    "vocabStartFrom": "どこから"
+    "vocabStartFrom": "どこから",
+    "roleplayMissed": "聞き取れなかった",
+    "roleplayCaptions": "字幕"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1733,7 +1735,9 @@
     "vocabFeelEasy": "太简单",
     "vocabFeelOk": "刚好",
     "vocabFeelHard": "太难",
-    "vocabStartFrom": "从哪里开始"
+    "vocabStartFrom": "从哪里开始",
+    "roleplayMissed": "没听清",
+    "roleplayCaptions": "字幕"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2604,7 +2608,9 @@
     "vocabFeelEasy": "Dễ",
     "vocabFeelOk": "Vừa sức",
     "vocabFeelHard": "Khó",
-    "vocabStartFrom": "Bắt đầu từ"
+    "vocabStartFrom": "Bắt đầu từ",
+    "roleplayMissed": "Mình chưa nghe rõ",
+    "roleplayCaptions": "Phụ đề"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3480,7 +3486,9 @@
     "vocabFeelEasy": "Facile",
     "vocabFeelOk": "Juste bien",
     "vocabFeelHard": "Difficile",
-    "vocabStartFrom": "Commencer à"
+    "vocabStartFrom": "Commencer à",
+    "roleplayMissed": "Je n'ai pas compris",
+    "roleplayCaptions": "Sous-titres"
   },
   "it": {
     "archive": "Report",
@@ -4547,7 +4555,9 @@
     "vocabFeelEasy": "Facile",
     "vocabFeelOk": "Giusto",
     "vocabFeelHard": "Difficile",
-    "vocabStartFrom": "Inizia da"
+    "vocabStartFrom": "Inizia da",
+    "roleplayMissed": "Non ho capito",
+    "roleplayCaptions": "Sottotitoli"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5426,7 +5436,9 @@
     "vocabFeelEasy": "Fácil",
     "vocabFeelOk": "Na medida",
     "vocabFeelHard": "Difícil",
-    "vocabStartFrom": "Começar de"
+    "vocabStartFrom": "Começar de",
+    "roleplayMissed": "Não entendi",
+    "roleplayCaptions": "Legendas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6491,7 +6503,9 @@
     "vocabFeelEasy": "Легко",
     "vocabFeelOk": "В самый раз",
     "vocabFeelHard": "Сложно",
-    "vocabStartFrom": "Начать с"
+    "vocabStartFrom": "Начать с",
+    "roleplayMissed": "Не расслышал",
+    "roleplayCaptions": "Субтитры"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7366,7 +7380,9 @@
     "vocabFeelEasy": "Mudah",
     "vocabFeelOk": "Pas",
     "vocabFeelHard": "Sulit",
-    "vocabStartFrom": "Mulai dari"
+    "vocabStartFrom": "Mulai dari",
+    "roleplayMissed": "Aku belum dengar jelas",
+    "roleplayCaptions": "Subtitle"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8234,7 +8250,9 @@
     "vocabFeelEasy": "سهل",
     "vocabFeelOk": "مناسب",
     "vocabFeelHard": "صعب",
-    "vocabStartFrom": "ابدأ من"
+    "vocabStartFrom": "ابدأ من",
+    "roleplayMissed": "لم أفهم",
+    "roleplayCaptions": "الترجمة المصاحبة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9102,7 +9120,9 @@
     "vocabFeelEasy": "ง่าย",
     "vocabFeelOk": "พอดี",
     "vocabFeelHard": "ยาก",
-    "vocabStartFrom": "เริ่มจาก"
+    "vocabStartFrom": "เริ่มจาก",
+    "roleplayMissed": "ฟังไม่ทัน",
+    "roleplayCaptions": "คำบรรยาย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -9970,6 +9990,8 @@
     "vocabFeelEasy": "आसान",
     "vocabFeelOk": "ठीक है",
     "vocabFeelHard": "कठिन",
-    "vocabStartFrom": "कहाँ से शुरू"
+    "vocabStartFrom": "कहाँ से शुरू",
+    "roleplayMissed": "समझ नहीं आया",
+    "roleplayCaptions": "सबटाइटल"
   }
 }

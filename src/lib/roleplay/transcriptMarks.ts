@@ -52,6 +52,15 @@ export function tipOnLastTutorLine(lines: TranscriptLine[], tip: string): Transc
   return marked;
 }
 
+/** 🙉 못 알아들었어요를 누른 튜터 줄 — 통화 정리의 "못 알아들은 말"(recap.ts). 튜터 줄이 아니면 그대로. */
+export function markMissed(lines: TranscriptLine[], index: number): TranscriptLine[] {
+  const line = lines[index];
+  if (!line || line.who !== "tutor" || line.missed) return lines;
+  const marked = [...lines];
+  marked[index] = { ...line, missed: true };
+  return marked;
+}
+
 /** 번역을 받아 온 튜터 줄에 붙인다 — 같은 글의 튜터 줄 중 아직 번역이 없는 것 모두. */
 export function withTranslation(lines: TranscriptLine[], text: string, translation: string): TranscriptLine[] {
   return lines.map((line) =>

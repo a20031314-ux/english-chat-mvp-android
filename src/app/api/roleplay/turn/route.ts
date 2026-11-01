@@ -176,6 +176,8 @@ export async function POST(request: NextRequest) {
     nativeLanguage: coerceLanguageCode(body.nativeLanguage),
     // 내 말도 하는 튜터(lib/tutorLanguage.ts, AI 대화 ⋮).
     ...(body.bilingual === true ? { bilingual: true } : {}),
+    // 🙉 못 알아들었어요(2026-11-01 새 통화 화면) — 바로 앞 말을 더 쉽게 다시.
+    ...(body.missed === true ? { missed: true } : {}),
   };
 
   const bank = sentencesFor(scenario.language);

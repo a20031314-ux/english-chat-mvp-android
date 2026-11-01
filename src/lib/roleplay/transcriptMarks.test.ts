@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { markAboutTheirLine, markStuck, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { markAboutTheirLine, markMissed, markStuck, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -43,4 +43,11 @@ test("번역은 같은 글의 번역 없는 튜터 줄에만", () => {
   assert.equal(out[0]!.translation, "주말에 뭐 했어요?");
   assert.equal(out[2]!.translation, "이미 있음");
   assert.equal(out[1]!.translation, undefined);
+});
+
+test("못 알아들은 표시는 튜터 줄에만, 한 번만", () => {
+  const out = markMissed(es, 2);
+  assert.equal(out[2]!.missed, true);
+  assert.equal(markMissed(out, 2), out);
+  assert.equal(markMissed(es, 1), es, "내 줄에는 안 붙임");
 });

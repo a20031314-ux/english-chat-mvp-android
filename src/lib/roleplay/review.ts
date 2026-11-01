@@ -44,6 +44,10 @@ export type TranscriptLine = {
   unsure?: boolean;
   /** 튜터 줄: 번역이 접힌 채 눌러서 뜻을 봤음 — 통화 정리의 "뜻을 본 말"(recap.ts). */
   looked?: boolean;
+  /** 튜터 줄: 통화 중 🙉 못 알아들었어요를 눌렀던 줄 — 통화 정리의 "못 알아들은 말"(recap.ts, 2026-11-01). */
+  missed?: boolean;
+  /** 튜터 줄: 못 알아들었다고 해서 튜터가 쉽게 다시 한 말 — 또 못 알아들으면 그 줄을 자막으로 보여 준다. */
+  again?: boolean;
 };
 
 export type StuckTurn = {

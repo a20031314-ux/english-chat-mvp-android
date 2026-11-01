@@ -128,6 +128,11 @@ export type DirectorRequest = {
    * 학습자가 자기 말로 말하거나 막히면 그 말로 한 문장까지 소리 내어 받아 줄 수 있다.
    */
   bilingual?: boolean;
+  /**
+   * 학습자가 통화 화면의 🙉 못 알아들었어요를 눌렀다(2026-11-01): 바로 앞 튜터 말을 더 쉽게 다시 말한다.
+   * 이때 `heard`는 비어 있고, 학습자 줄도 없다.
+   */
+  missed?: boolean;
 };
 
 /** What the character says: a recorded line by id, or one written now. */
@@ -643,6 +648,9 @@ Get back to your list as soon as it feels natural.`
       ? `What you remember from earlier in this conversation:
 ${request.context.trim()}`
       : "",
+    request.missed
+      ? `They did not catch your last line and pressed "I didn't catch that". Say the same thing again, more simply: shorter, more common words, one idea — the way a person repeats themselves on a bad phone line. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was. Leave "note", "better" and "meant" empty, and give "stuck" as the assessment.`
+      : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
       : "",
@@ -675,7 +683,9 @@ export function tutorMessages(
   }));
   messages.push({
     role: "user",
-    content: request.heard.trim() || "(silence — they have not said anything)",
+    content: request.missed
+      ? "(they did not catch what you just said)"
+      : request.heard.trim() || "(silence — they have not said anything)",
   });
   return messages;
 }

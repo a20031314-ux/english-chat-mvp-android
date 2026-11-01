@@ -6,6 +6,7 @@
  * - fix: 튜터가 고친 내 줄(better·meant) — 서버가 이미 복습 카드로 보냄(notes/notebook.ts fileFix).
  * - hint: 막혔을 때 받은 도움(튜터 줄의 tip — 튜터 도움말이나 💡 힌트로 받은 문장).
  * - looked: 번역이 접힌 채 눌러서 뜻을 본 튜터 줄(TranscriptLine.looked).
+ * - missed: 통화 중 🙉 못 알아들었어요를 누른 튜터 줄(TranscriptLine.missed, 2026-11-01) — 뜻을 본 줄보다 먼저.
  * 줄마다 그 문장이 쓰는 문장구조(My 단계의 틀)를 찾는다 — 틀의 고정 부분이 모두 들었는지(scriptBank.ts frameUsed), 모델 호출 없음.
  * 찾은 틀은 다시 볼 것(f|틀 id)에 넣는다 — 숙지 숫자는 건드리지 않는다(학습 흐름 세 층, 적용 층 기록).
  */
@@ -13,7 +14,7 @@ import { allFramesFor, type Frame } from "../curriculum/frames.ts";
 import { frameUsed } from "../curriculum/scriptBank.ts";
 import type { TranscriptLine } from "./review.ts";
 
-export type RecapKind = "fix" | "hint" | "looked";
+export type RecapKind = "fix" | "hint" | "missed" | "looked";
 
 export type RecapFrame = { id: string; stage: number; pattern: string };
 
@@ -23,7 +24,7 @@ export type RecapItem = {
   line: string;
   /** 내가 처음 한 말(fix만). */
   said?: string;
-  /** 앱 언어 뜻(looked만, 있으면). */
+  /** 앱 언어 뜻(missed·looked, 있으면). */
   meaning?: string;
   /** 이 문장이 쓰는 문장구조 — 높은 단계부터 둘까지. */
   frames: RecapFrame[];
@@ -62,7 +63,9 @@ export function buildRecap(language: string, lines: TranscriptLine[]): RecapItem
       continue;
     }
     if (line.tip) push({ kind: "hint", line: line.tip });
-    if (line.looked) push({ kind: "looked", line: line.text, ...(line.translation ? { meaning: line.translation } : {}) });
+    const meaning = line.translation ? { meaning: line.translation } : {};
+    if (line.missed) push({ kind: "missed", line: line.text, ...meaning });
+    else if (line.looked) push({ kind: "looked", line: line.text, ...meaning });
   }
   return items.slice(0, RECAP_MAX);
 }

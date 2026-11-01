@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
-import { CallFooter, CallHeader, LearnerComposing } from "@/components/roleplay/CallParts";
+import { CallControls, CallFooter, CallHeader, CallStage, LearnerComposing, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
@@ -43,13 +43,14 @@ import {
   applyDirection,
   currentInstruction,
   directionFailed,
+  missedLine,
   resumeListening,
   startSession,
   submitSpeech,
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { markAboutTheirLine, markStuck, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { markAboutTheirLine, markMissed, markStuck, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -58,15 +59,12 @@ import { tutorIsBilingual } from "@/lib/tutorLanguage";
 /** How long to wait for the rest of a sentence the pause cut off. */
 const REST_OF_SENTENCE_MS = 3500;
 
-/**
- * 내 차례에 이만큼 말이 없으면 💡 힌트 버튼을 띄운다(말하다 끊겨 나머지를 기다리는 중이면 바로).
- * 첫마디를 기다리는 12초(listen.ts) 안에 누를 수 있게.
- */
-const HELP_AFTER_MS = 4000;
-
 const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
-/** 통화 중 내 말: 기본은 고칠 곳이 있는 줄만(2026-10-27 사용자 "오류가 없을 시 안 띄우는 걸 기본으로"), 켜면 전부. */
-const SHOW_MY_LINES_KEY = "roleplayShowMyLines";
+/**
+ * 통화 중 자막(튜터가 마지막에 한 말 한 줄): 기본은 꺼짐 — 실제 통화처럼 듣고 말하기(사용자 2026-11-01 "기본은 가리고 선택적으로",
+ * 0~1단계도 똑같이 끔). 켜면 이 기기에 남는다. 내 말·고친 말은 통화 중에 안 보이고 끝난 뒤 대본에서.
+ */
+const SHOW_CAPTIONS_KEY = "roleplayCaptions";
 
 /**
  * Playing a roleplay.
@@ -151,7 +149,11 @@ export function RoleplayScreen({
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
   const [showTranslations, toggleTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
-  const [showMyLines, toggleMyLines] = useStoredToggle(SHOW_MY_LINES_KEY);
+  const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
+  /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
+  const [forcedCaption, setForcedCaption] = useState(-1);
+  /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
+  const rephrasingRef = useRef(false);
   const [recording, setRecording] = useState(false);
   // Bumped when the microphone decides a turn has ended. An effect does the
   // sending rather than the callback itself: the callback is created once, at
@@ -164,8 +166,6 @@ export function RoleplayScreen({
   const [thinking, setThinking] = useState(false);
   /** What they have said of a sentence the pause cut off, while the rest is awaited. */
   const [pending, setPending] = useState("");
-  /** 내 차례가 HELP_AFTER_MS 넘게 조용했다 — 💡 힌트를 띄울 때. 차례가 바뀌면 다시 센다. */
-  const [helpReady, setHelpReady] = useState(false);
   /**
    * 학습자가 말을 시작했다 — 받아쓴 글이 올 때까지 학습자 쪽에 "…" 말풍선(말하는 방과 같은 방식).
    * 예전에는 말하는 동안 화면에 아무것도 없다가, 다 끝난 뒤에야 튜터 쪽 "…"가 떴다.
@@ -324,6 +324,7 @@ export function RoleplayScreen({
         text: instruction.text,
         translation: gloss,
         ...(instruction.tip ? { tip: instruction.tip } : {}),
+        ...(rephrasingRef.current ? { again: true } : {}),
       },
     ]);
     // Nothing waits on this: it is the next line being fetched behind this one.
@@ -407,9 +408,11 @@ export function RoleplayScreen({
       // under the character's answer. A note only rides with the character's
       // line when they were stuck, where it is help for getting through rather
       // than a word about something they managed to say.
-      const better = direction?.better ?? "";
-      const meant = direction?.meant ?? "";
-      const about = direction && direction.assessment !== "stuck" ? direction.note : "";
+      // 못 알아들었어요로 부른 차례: 학습자 줄이 없으니 고친 말·막힘 표시를 붙이지 않는다.
+      const missedTurn = Boolean(instruction.request.missed);
+      const better = missedTurn ? "" : (direction?.better ?? "");
+      const meant = missedTurn ? "" : (direction?.meant ?? "");
+      const about = !missedTurn && direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
       if (better || meant || about) {
@@ -421,7 +424,7 @@ export function RoleplayScreen({
           }),
         );
       }
-      if (direction?.assessment === "stuck") {
+      if (direction?.assessment === "stuck" && !missedTurn) {
         const pending = state.pending;
         setSaid((current) =>
           markStuck(current, {
@@ -611,6 +614,37 @@ export function RoleplayScreen({
     });
   }, [state, pending, openReview]);
 
+  /**
+   * 🙉 못 알아들었어요(2026-11-01) — 실제 통화처럼 "다시 말해 줄래?". 마이크를 닫고 그 튜터 줄에 표시를 남긴 뒤
+   * 감독에게 같은 말을 더 쉽게 다시 해 달라고 한다(session.missedLine → 감독 한 차례, 통화 시간 안).
+   * 쉽게 다시 한 줄을 또 못 알아들으면 감독을 부르지 않고 그 줄을 뜻과 함께 자막으로 보여 주고 내 차례로 돌아온다.
+   */
+  const missLine = useCallback(() => {
+    if (!scenario || !state || instruction?.do !== "listen" || reviewing) return;
+    const tutorAt = said.map((line) => line.who).lastIndexOf("tutor");
+    if (tutorAt < 0) return;
+    recorderRef.current?.cancel();
+    recorderRef.current = null;
+    releaseRestRef.current();
+    setRecording(false);
+    setLearnerTalking(false);
+    setPending("");
+    setSaid((current) => markMissed(current, tutorAt));
+    if (said[tutorAt]!.again) {
+      setForcedCaption(tutorAt);
+      if (!said[tutorAt]!.translation) translateLine(said[tutorAt]!.text);
+      const back = resumeListening(scenario, bank, state, Date.now());
+      setState(back.state);
+      setInstruction(back.instruction);
+      return;
+    }
+    const asking = missedLine(scenario, bank, state);
+    rephrasingRef.current = true;
+    setState(asking.state);
+    setInstruction(asking.instruction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scenario, state, instruction, reviewing, said, translateLine]);
+
   const closeReview = useCallback(() => {
     // 통화 중 힌트로 받은 문장은 그 질문(튜터 줄) 아래 도움말로 남긴다 — 끝난 뒤 돌아보기에서도 보이게.
     const hinted = reviewing?.turn.live && reviewing.review?.say ? reviewing.review : null;
@@ -735,12 +769,10 @@ export function RoleplayScreen({
    * step left in a mode meant to read as a conversation that carries on. The
    * turn is still one transcription, so this costs nothing.
    */
+  // 다시 말해 준 줄(들)이 끝나고 내 차례가 오면 "다시 말하는 중"도 끝.
   useEffect(() => {
-    setHelpReady(false);
-    if (instruction?.do !== "listen" || reviewing) return;
-    const timer = window.setTimeout(() => setHelpReady(true), HELP_AFTER_MS);
-    return () => window.clearTimeout(timer);
-  }, [instruction, reviewing]);
+    if (instruction?.do === "listen") rephrasingRef.current = false;
+  }, [instruction]);
 
   useEffect(() => {
     if (instruction?.do !== "listen" || reviewing) return;
@@ -781,21 +813,19 @@ export function RoleplayScreen({
       intent: "sentence",
     });
 
-  return (
-    <FullScreenLayer>
-      {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
-      <CallHeader
-        ui={ui}
-        title={scenario.title}
-        subtitle={timeLine ?? scenario.tutorRole}
-        over={sceneOver}
-        showMyLines={showMyLines}
-        onToggleMyLines={toggleMyLines}
-        showTranslations={showTranslations}
-        onToggleTranslations={toggleTranslations}
-        onClose={onClose}
-      />
-
+  if (sceneOver) {
+    // 끝난 뒤: 전체 대본(튜터 말·번역·내 말·고친 말)을 한눈에 + 통화 정리.
+    return (
+      <FullScreenLayer>
+        {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
+        <CallHeader
+          ui={ui}
+          title={scenario.title}
+          subtitle={timeLine ?? scenario.tutorRole}
+          showTranslations={showTranslations}
+          onToggleTranslations={toggleTranslations}
+          onClose={onClose}
+        />
       {practice ? (
         <div className="shrink-0 border-b border-white/10 px-3 py-2">
           <PracticeBanner
@@ -809,7 +839,7 @@ export function RoleplayScreen({
       ) : null}
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
         {said.map((line, index) => {
-          const view = learnerLineView(said, index, { showAll: showMyLines, over: sceneOver });
+          const view = learnerLineView(said, index, { showAll: true, over: true });
           if (view === "hidden") return null;
           if (view === "waiting") return <LearnerComposing key={index} />;
           return (
@@ -824,16 +854,12 @@ export function RoleplayScreen({
             onLooked={() =>
               setSaid((current) => current.map((one, at) => (at === index ? { ...one, looked: true } : one)))
             }
-            onAnalyze={sceneOver ? analyzeLine : undefined}
-            onSayAgain={
-              sceneOver
-                ? (target) => sayLine(target, { targetLanguage: scenario.language, nativeLanguage, isPremium })
-                : undefined
-            }
+            onAnalyze={analyzeLine}
+            onSayAgain={(target) => sayLine(target, { targetLanguage: scenario.language, nativeLanguage, isPremium })}
           />
           );
         })}
-        {sceneOver && recap.length ? (
+        {recap.length ? (
           <li>
             <CallRecap
               ui={ui}
@@ -850,31 +876,61 @@ export function RoleplayScreen({
             />
           </li>
         ) : null}
-        {pending ? (
-          <li className="mb-2 flex justify-end">
-            <div className="max-w-[80%] rounded-2xl border border-dashed border-white/20 px-3 py-2 text-[14px] leading-snug text-neutral-400">
-              {pending} …
-            </div>
-          </li>
-        ) : null}
-        {/* 학습자가 말하는 중이거나 받아쓰는 중: 학습자 쪽 "…"(글이 오면 그 줄로 바뀐다). */}
-        {learnerTalking && !pending ? <LearnerComposing /> : null}
-        {(directing || (thinking && !learnerTalking)) && !pending ? (
-          <li className="mb-2 flex justify-start">
-            <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
-              …
-            </div>
-          </li>
-        ) : null}
       </ol>
+        <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={onClose} />
+      </FullScreenLayer>
+    );
+  }
 
-      <CallFooter
+  // 통화 중: 실제 통화처럼 — 얼굴·시간·누가 말하는지, 자막은 켰을 때만 한 줄.
+  const lastTutorAt = said.map((line) => line.who).lastIndexOf("tutor");
+  const lastTutor = lastTutorAt >= 0 ? said[lastTutorAt]! : null;
+  const forced = lastTutorAt >= 0 && forcedCaption === lastTutorAt;
+  const caption =
+    lastTutor && (showCaptions || forced)
+      ? { text: lastTutor.text, ...(forced && lastTutor.translation ? { meaning: lastTutor.translation } : {}) }
+      : null;
+  const speaker: CallSpeaker =
+    instruction?.do === "say"
+      ? "tutor"
+      : learnerTalking || pending
+        ? "learner"
+        : directing || thinking
+          ? "thinking"
+          : recording
+            ? "listening"
+            : null;
+  const canAnswer = instruction?.do === "listen" && !reviewing && !thinking;
+
+  return (
+    <FullScreenLayer>
+      {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
+      {practice ? (
+        <div className="shrink-0 border-b border-white/10 px-3 py-2">
+          <PracticeBanner
+            ui={ui}
+            request={practice}
+            said={practiceSaid}
+            targetLanguage={scenario.language}
+            onStop={() => setPracticeStopped(true)}
+          />
+        </div>
+      ) : null}
+      <CallStage
+        language={scenario.language}
+        speaker={speaker}
+        timeLeft={timeLine}
+        caption={caption}
+        goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
+      />
+      <CallControls
         ui={ui}
-        instruction={instruction}
-        showHelp={!reviewing && !thinking && Boolean(pending || (helpReady && !learnerTalking))}
-        onHelp={openHelp}
-        outOfPoints={outOfPoints}
-        onClose={onClose}
+        canAnswer={canAnswer}
+        captions={showCaptions}
+        onMissed={missLine}
+        onToggleCaptions={toggleCaptions}
+        onHint={openHelp}
+        onEnd={onClose}
       />
 
       {reviewing ? (

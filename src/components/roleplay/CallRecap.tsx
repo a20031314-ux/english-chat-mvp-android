@@ -6,7 +6,7 @@ import type { RecapFrame, RecapItem } from "@/lib/roleplay/recap";
 
 /**
  * 통화 정리 카드 — 통화가 끝난 화면 맨 아래와 통화 기록 돌아보기(2026-10-30 사용자 "통화 기록을 학습자료로, My 해당 부분으로 연결").
- * 줄마다: 무엇인지(고친 말·힌트·뜻을 본 말) · 학습 언어 문장 · 그 문장의 문장구조 🧩(누르면 My n단계 그 수업) — 틀이 없으면 🔎 My에서 찾기.
+ * 줄마다: 무엇인지(고친 말·힌트·못 알아들은 말·뜻을 본 말) · 학습 언어 문장 · 그 문장의 문장구조 🧩(누르면 My n단계 그 수업) — 틀이 없으면 🔎 My에서 찾기.
  * 설명 글은 없음(화면 속 부연설명 금지) — 이름·상태만.
  */
 export function CallRecap({
@@ -30,7 +30,13 @@ export function CallRecap({
 }) {
   if (!items.length) return null;
   const label = (item: RecapItem) =>
-    item.kind === "fix" ? ui.roleplayBetter : item.kind === "hint" ? `💡 ${ui.missionHint}` : ui.callRecapLooked;
+    item.kind === "fix"
+      ? ui.roleplayBetter
+      : item.kind === "hint"
+        ? `💡 ${ui.missionHint}`
+        : item.kind === "missed"
+          ? `🙉 ${ui.roleplayMissed}`
+          : ui.callRecapLooked;
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white/[0.03] p-3" data-call-recap>
       <header className="flex items-center justify-between gap-2">

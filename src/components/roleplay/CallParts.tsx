@@ -1,12 +1,18 @@
 "use client";
 
 /**
- * AI 통화 화면(RoleplayScreen)의 그리기 조각 — 머리·내 쪽 "…"·바닥(2026-11-01 통화 구조 정리, 모양 그대로 옮김).
+ * AI 통화 화면(RoleplayScreen)의 그리기 조각.
+ * 2026-11-01 사용자 "ui를 실제 통화처럼, 튜터 말도 기본은 가리고 선택적으로 보거나 끝나고 한눈에":
+ * 통화 중 = 튜터 얼굴·이름·통화 시간·누가 말하는지 + 자막 한 줄(켰을 때만) + 아래 버튼 넷.
+ * 끝나면 = 머리(제목·번역·닫기) + 전체 대본 + 통화 정리 + 바닥(닫기).
  */
+import { useEffect, useState } from "react";
+import { AiAvatar } from "@/components/AiTutorProfile";
+import { chatPartnerForLanguage } from "@/lib/chatPartner";
 import type { UICopy } from "@/lib/copy";
 import type { Instruction } from "@/lib/roleplay/session";
 
-/** 학습자 쪽 "…" 말풍선 — 말하는 중·받아쓰는 중, 또는 튜터가 아직 판단하지 않은 내 줄. */
+/** 학습자 쪽 "…" 말풍선 — 끝난 대본에서 아직 판단 전이던 내 줄. */
 export function LearnerComposing() {
   return (
     <li className="mb-2 flex justify-end" aria-hidden>
@@ -21,13 +27,177 @@ export function LearnerComposing() {
   );
 }
 
+/** 통화를 연 뒤로 흐른 시간 m:ss — 실제 통화 화면처럼(1초마다). */
+function useCallClock(): string {
+  const [startedAt] = useState(() => Date.now());
+  const [now, setNow] = useState(startedAt);
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const seconds = Math.max(0, Math.floor((now - startedAt) / 1000));
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+}
+
+export type CallSpeaker = "tutor" | "learner" | "thinking" | "listening" | null;
+
+/**
+ * 통화 중 화면 가운데 — 튜터 얼굴(말할 때 둘레가 숨 쉬듯), 이름·국기, 통화 시간·남은 시간,
+ * 그 아래 자막 한 줄(튜터가 마지막에 한 말 — 자막을 켰거나 두 번 못 알아들었을 때만).
+ */
+export function CallStage({
+  language,
+  speaker,
+  timeLeft,
+  caption,
+  goal,
+}: {
+  language: string;
+  speaker: CallSpeaker;
+  /** 오늘 남은 통화 시간 한 줄(서버가 답을 못 하면 null). */
+  timeLeft: string | null;
+  caption: { text: string; meaning?: string } | null;
+  /** 대본 장면이면 지금 할 일(열린 대화에는 없음). */
+  goal?: string;
+}) {
+  const partner = chatPartnerForLanguage(language);
+  const clock = useCallClock();
+  return (
+    <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 px-6 text-center" data-call-stage>
+      <div className="relative flex items-center justify-center">
+        <span
+          aria-hidden
+          className={`absolute inset-[-14px] rounded-full border-2 border-info/50 transition-opacity ${
+            speaker === "tutor" ? "animate-pulse opacity-100" : "opacity-0"
+          }`}
+        />
+        <AiAvatar size={112} />
+      </div>
+      <div className="flex flex-col items-center gap-1">
+        <p className="flex items-center gap-2 text-title font-semibold text-ink">
+          <bdi>{partner.givenName}</bdi>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
+        </p>
+        <p className="text-meta tabular-nums text-slate-400">
+          {clock}
+          {timeLeft ? <span className="text-slate-500"> · {timeLeft}</span> : null}
+        </p>
+      </div>
+      {/* 누가 말하는지: 튜터 = 둘레, 나 = 마이크 막대, 생각 중 = 점 셋. 글은 없음. */}
+      <div className="flex h-6 items-center justify-center" aria-hidden>
+        {speaker === "learner" ? (
+          <span className="flex items-end gap-1">
+            {[0, 1, 2, 3].map((bar) => (
+              <span key={bar} className="w-1 animate-pulse rounded-full bg-good" style={{ height: `${8 + ((bar * 5) % 14)}px`, animationDelay: `${bar * 120}ms` }} />
+            ))}
+          </span>
+        ) : speaker === "thinking" ? (
+          <span className="composing-dots inline-flex gap-1 text-slate-400">
+            <span>•</span>
+            <span>•</span>
+            <span>•</span>
+          </span>
+        ) : speaker === "listening" ? (
+          <span className="text-title">🎙</span>
+        ) : null}
+      </div>
+      <div className="min-h-[4.5rem] w-full max-w-md" aria-live="polite">
+        {caption ? (
+          <div className="rounded-2xl bg-black/40 px-4 py-2" data-call-caption>
+            <p dir="auto" className="text-chat leading-snug text-slate-100">
+              {caption.text}
+            </p>
+            {caption.meaning ? <p className="mt-0.5 text-meta text-slate-400">{caption.meaning}</p> : null}
+          </div>
+        ) : null}
+        {goal ? <p className="mt-2 text-meta text-slate-400">{goal}</p> : null}
+      </div>
+    </div>
+  );
+}
+
+function ControlButton({
+  icon,
+  label,
+  onClick,
+  disabled,
+  pressed,
+  tone = "plain",
+}: {
+  icon: string;
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+  pressed?: boolean;
+  tone?: "plain" | "end";
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      aria-pressed={pressed}
+      aria-label={label}
+      title={label}
+      className="flex w-[4.5rem] flex-col items-center gap-1.5 disabled:opacity-40"
+    >
+      <span
+        aria-hidden
+        className={`flex h-14 w-14 items-center justify-center rounded-full text-title transition ${
+          tone === "end"
+            ? "bg-bad text-white"
+            : pressed
+              ? "bg-white text-slate-900"
+              : "bg-white/10 text-slate-100 hover:bg-white/20"
+        }`}
+      >
+        {icon}
+      </span>
+      <span className="text-caption leading-tight text-slate-300">{label}</span>
+    </button>
+  );
+}
+
+/**
+ * 통화 중 아래 버튼 넷: 🙉 못 알아들었어요 · 💬 자막 · 💡 힌트 · 끝내기(빨강).
+ * 끝내기는 통화를 내려놓는 것 — 기록에 남아 통화 기록에서 이어서 할 수 있다(예전 "중단").
+ */
+export function CallControls({
+  ui,
+  canAnswer,
+  captions,
+  onMissed,
+  onToggleCaptions,
+  onHint,
+  onEnd,
+}: {
+  ui: UICopy;
+  /** 내 차례라 못 알아들었어요·힌트를 누를 수 있다. */
+  canAnswer: boolean;
+  captions: boolean;
+  onMissed: () => void;
+  onToggleCaptions: () => void;
+  onHint: () => void;
+  onEnd: () => void;
+}) {
+  return (
+    <footer className="shrink-0 px-3 pb-[calc(1.25rem+env(safe-area-inset-bottom))] pt-3" data-call-controls>
+      <div className="mx-auto flex max-w-md items-start justify-between">
+        <ControlButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
+        <ControlButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
+        <ControlButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
+        <ControlButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" />
+      </div>
+    </footer>
+  );
+}
+
+/** 끝난 뒤 머리: 제목 · 번역 켬/끔 · 닫기. */
 export function CallHeader({
   ui,
   title,
   subtitle,
-  over,
-  showMyLines,
-  onToggleMyLines,
   showTranslations,
   onToggleTranslations,
   onClose,
@@ -35,9 +205,6 @@ export function CallHeader({
   ui: UICopy;
   title: string;
   subtitle: string;
-  over: boolean;
-  showMyLines: boolean;
-  onToggleMyLines: () => void;
   showTranslations: boolean;
   onToggleTranslations: () => void;
   onClose: () => void;
@@ -48,23 +215,7 @@ export function CallHeader({
         <h2 className="text-sm font-semibold text-white">{title}</h2>
         <p className="text-[11px] text-neutral-500">{subtitle}</p>
       </div>
-      {/* A conversation that is still going is put down, not shut. It is
-          written down as it happens, so leaving here loses nothing and the
-          door offers to carry on with it. Once it has ended there is nothing
-          to come back to and the button says so. */}
       <div className="flex items-center gap-2">
-        {over ? null : (
-          <button
-            type="button"
-            onClick={onToggleMyLines}
-            aria-pressed={showMyLines}
-            className={`rounded-lg border px-3 py-1.5 text-caption transition ${
-              showMyLines ? "border-white/40 bg-white/15 text-slate-100" : "border-white/15 text-slate-400 hover:bg-white/10"
-            }`}
-          >
-            {ui.roleplayMyLines}
-          </button>
-        )}
         <button
           type="button"
           onClick={onToggleTranslations}
@@ -80,59 +231,35 @@ export function CallHeader({
           onClick={onClose}
           className="rounded-lg border border-white/15 px-3 py-1.5 text-[12px] text-neutral-300 hover:bg-white/10"
         >
-          {over ? ui.billingClose : ui.roleplayPause}
+          {ui.billingClose}
         </button>
       </div>
     </header>
   );
 }
 
+/** 끝난 뒤 바닥: 시간이 떨어졌으면 한 줄 + 닫기. */
 export function CallFooter({
   ui,
   instruction,
-  showHelp,
-  onHelp,
   outOfPoints,
   onClose,
 }: {
   ui: UICopy;
   instruction: Instruction | null;
-  /** 💡 힌트: 말이 없거나 말하다 끊겼을 때만. 누르면 대화가 멈추고 힌트 패널 → 같은 턴으로 돌아온다. */
-  showHelp: boolean;
-  onHelp: () => void;
   outOfPoints: false | "points" | "daily";
   onClose: () => void;
 }) {
   return (
     <footer className="shrink-0 border-t border-white/10 p-3 pb-[env(safe-area-inset-bottom)]">
-      {instruction?.do === "listen" ? (
-        <div className="flex flex-col gap-2">
-          {/* 열린 대화의 목표 안내 글은 뺐다(화면 속 설명 금지, 2026-10-23). 대본 장면의 할 일만. */}
-          {instruction.goal ? <p className="text-[13px] text-neutral-300">{instruction.goal}</p> : null}
-          {instruction.hint ? <p className="text-[12px] text-neutral-500">{instruction.hint}</p> : null}
-          {showHelp ? (
-            <button
-              type="button"
-              onClick={onHelp}
-              className="self-center rounded-full border border-line px-4 py-1.5 text-meta text-title hover:bg-white/10"
-            >
-              💡 {ui.missionHint}
-            </button>
-          ) : null}
-        </div>
-      ) : null}
-
       {instruction?.do === "finish" && outOfPoints ? (
         <p className="mb-2 text-[13px] leading-relaxed text-neutral-300">
           {outOfPoints === "daily" ? ui.roleplayOutOfToday : ui.roleplayOutOfPoints}
         </p>
       ) : null}
-
-      {instruction?.do === "finish" ? (
-        <button type="button" onClick={onClose} className="w-full rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100">
-          {ui.billingClose}
-        </button>
-      ) : null}
+      <button type="button" onClick={onClose} className="w-full rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100">
+        {ui.billingClose}
+      </button>
     </footer>
   );
 }

@@ -1218,3 +1218,16 @@ test("두 언어 튜터의 앱 언어 한 문장은 학습자의 말에 대해�
   const { bilingualCharacterRule } = await import("./director.ts");
   assert.match(bilingualCharacterRule("Japanese", "Arabic"), /only ever about their words/);
 });
+
+test("못 알아들었어요: 같은 말을 더 쉽게 다시, 학습자 말 대신 못 들었다는 표시(스페인어 장면도)", () => {
+  const messages = tutorMessages(request({ heard: "", missed: true }));
+  assert.equal(messages.at(-1)?.content, "(they did not catch what you just said)");
+  const prompt = tutorSystemPrompt({ scenario: cafe, bank: sentencesFor("en"), recorded: [], request: request({ heard: "", missed: true }) });
+  assert.match(prompt, /did not catch your last line/);
+  assert.doesNotMatch(tutorSystemPrompt({ scenario: cafe, bank: sentencesFor("en"), recorded: [], request: request() }), /did not catch your last line/);
+  const es = SCENARIOS.find((one) => one.language === "es");
+  if (es) {
+    const esPrompt = tutorSystemPrompt({ scenario: es, bank: sentencesFor("es"), recorded: [], request: request({ scenarioId: es.id, heard: "", missed: true, targetLanguage: "es" }) });
+    assert.match(esPrompt, /did not catch your last line/);
+  }
+});

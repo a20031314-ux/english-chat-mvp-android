@@ -38,3 +38,13 @@ test("고칠 게 없는 줄과 빈 통화는 정리할 것이 없다", () => {
   assert.deepEqual(buildRecap("en", [{ who: "learner", text: "Hi", better: "Hi" }]), []);
   assert.deepEqual(buildRecap("en", []), []);
 });
+
+test("못 알아들은 튜터 줄은 뜻과 함께 정리에 — 뜻을 본 줄로 두 번 나오지 않는다(일본어)", () => {
+  const lines: TranscriptLine[] = [
+    { who: "tutor", text: "週末は何をしましたか？", missed: true, looked: true, translation: "주말에 뭐 했어요?" },
+    { who: "tutor", text: "週末、何した？", again: true },
+  ];
+  const recap = buildRecap("ja", lines);
+  assert.deepEqual(recap.map((item) => item.kind), ["missed"]);
+  assert.equal(recap[0]!.meaning, "주말에 뭐 했어요?");
+});

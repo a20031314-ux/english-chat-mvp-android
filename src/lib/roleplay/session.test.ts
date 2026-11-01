@@ -10,6 +10,7 @@ import {
   directionFailed,
   isMumble,
   judge,
+  missedLine,
   phraseScore,
   startSession,
   submitSpeech,
@@ -654,4 +655,21 @@ test("leaving counts only with its words in order: a sentence that shares them d
   assert.equal(orderedPhraseScore("이제 가볼게", "나 이제 진짜 가볼게요"), 1);
   assert.equal(orderedPhraseScore("そろそろ行くね", "じゃあ、そろそろ行くね"), 1);
   assert.equal(orderedPhraseScore("我该走了", "我该走了，再见"), 1);
+});
+
+test("못 알아들었어요: 들은 말 없이 감독에게 같은 단계에서 쉽게 다시 말해 달라고 한다", () => {
+  const listening = runToListen(startSession(scenario));
+  const { state, instruction } = missedLine(scenario, bank, listening);
+  assert.equal(instruction.do, "direct");
+  assert.equal(instruction.do === "direct" ? instruction.request.missed : false, true);
+  assert.equal(instruction.do === "direct" ? instruction.request.heard : "x", "");
+  assert.equal(state.nodeId, listening.nodeId);
+  assert.equal(state.attempts, listening.attempts);
+  assert.equal(state.history.length, listening.history.length, "학습자 줄을 남기지 않는다");
+});
+
+test("못 알아들었어요: 내 차례가 아니면 그대로", () => {
+  const opening = startSession(scenario);
+  const { state } = missedLine(scenario, bank, opening);
+  assert.equal(state, opening);
 });
