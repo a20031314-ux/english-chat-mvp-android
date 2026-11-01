@@ -116,7 +116,7 @@
             "match": [
               "а какая разница",
               "не знаю",
-              "какая цена"
+              "а сколько стоит?"
             ]
           }
         ],
@@ -254,7 +254,8 @@
             "match": [
               "до свидания",
               "спасибо, до свидания",
-              "и вам тоже"
+              "и вам тоже",
+              "и вам"
             ]
           },
           {
@@ -292,10 +293,10 @@
         }
       },
       "hello-easy": {
-        "text": "Здравствуйте. Кофе? Чай?",
+        "text": "Здравствуйте. Вам кофе или чай?",
         "gloss": {
-          "en": "Hello. Coffee? Tea?",
-          "ko": "안녕하세요. 커피요? 차요?"
+          "en": "Hello. Coffee or tea for you?",
+          "ko": "안녕하세요. 커피요, 차요?"
         }
       },
       "what": {
@@ -320,10 +321,10 @@
         }
       },
       "menu-easy": {
-        "text": "Кофе, чай или какао.",
+        "text": "Есть кофе, чай или какао.",
         "gloss": {
-          "en": "Coffee, tea or cocoa.",
-          "ko": "커피, 차, 아니면 코코아요."
+          "en": "There is coffee, tea or cocoa.",
+          "ko": "커피, 차, 아니면 코코아가 있어요."
         }
       },
       "size": {
@@ -334,10 +335,10 @@
         }
       },
       "size-easy": {
-        "text": "Маленький? Или большой?",
+        "text": "Вам маленький или большой?",
         "gloss": {
-          "en": "Small? Or large?",
-          "ko": "작은 거요? 큰 거요?"
+          "en": "Small or large for you?",
+          "ko": "작은 거요, 큰 거요?"
         }
       },
       "sizes": {
@@ -362,10 +363,10 @@
         }
       },
       "more-easy": {
-        "text": "Ещё что-то? Да или нет?",
+        "text": "Это всё?",
         "gloss": {
-          "en": "Something else? Yes or no?",
-          "ko": "더 있어요? 네, 아니요?"
+          "en": "Is that all?",
+          "ko": "그게 다예요?"
         }
       },
       "price": {
@@ -648,10 +649,10 @@
         }
       },
       "help-easy": {
-        "text": "Вам помочь? Да?",
+        "text": "Вам помочь?",
         "gloss": {
-          "en": "Do you need help? Yes?",
-          "ko": "도와드릴까요? 네?"
+          "en": "Do you need help?",
+          "ko": "도와드릴까요?"
         }
       },
       "what": {
@@ -683,17 +684,17 @@
         }
       },
       "fast": {
-        "text": "Ой, извините. Я говорю быстро?",
+        "text": "Ой, извините. Я быстро говорю, да?",
         "gloss": {
-          "en": "Oh, sorry. Am I speaking fast?",
-          "ko": "아, 죄송해요. 제가 빨리 말하나요?"
+          "en": "Oh, sorry. I’m speaking fast, am I?",
+          "ko": "아, 죄송해요. 제가 빨리 말하죠?"
         }
       },
       "fast-easy": {
-        "text": "Я говорю быстро? Да?",
+        "text": "Я быстро говорю?",
         "gloss": {
-          "en": "Am I speaking fast? Yes?",
-          "ko": "제가 빨리 말해요? 그래요?"
+          "en": "Am I speaking fast?",
+          "ko": "제가 빨리 말해요?"
         }
       },
       "slow": {
@@ -732,9 +733,9 @@
         }
       },
       "toilet-easy": {
-        "text": "Туалет — в метро.",
+        "text": "Туалет есть в метро.",
         "gloss": {
-          "en": "The toilet is in the metro.",
+          "en": "There is a toilet in the metro.",
           "ko": "화장실은 지하철역에 있어요."
         }
       },
@@ -840,7 +841,7 @@
               "что такое пряник",
               "извините, что такое пряник?",
               "а что такое пряники?",
-              "что такое тульский пряник"
+              "а это что?"
             ]
           },
           {
@@ -1019,9 +1020,9 @@
     },
     "sentences": {
       "hello": {
-        "text": "Добрый день! Ищете что-нибудь?",
+        "text": "Добрый день! Вы что-то ищете?",
         "gloss": {
-          "en": "Good afternoon! Looking for something?",
+          "en": "Good afternoon! Are you looking for something?",
           "ko": "안녕하세요! 뭐 찾으세요?"
         }
       },
@@ -1047,24 +1048,24 @@
         }
       },
       "yes": {
-        "text": "Да, вот магниты. А вот тульские пряники.",
+        "text": "Да, вот магниты. А это пряники.",
         "gloss": {
-          "en": "Yes, here are the magnets. And here are Tula gingerbreads.",
-          "ko": "네, 자석 여기 있어요. 그리고 이건 툴라 프랴니크예요."
+          "en": "Yes, here are the magnets. And these are pryaniki.",
+          "ko": "네, 자석 여기 있어요. 그리고 이건 프랴니크예요."
         }
       },
       "yes-easy": {
-        "text": "Вот магниты. И вот пряники.",
+        "text": "Вот магниты. А вот пряники.",
         "gloss": {
           "en": "Here are magnets. And here are pryaniki.",
           "ko": "자석 여기요. 그리고 프랴니크 여기요."
         }
       },
       "pryanik": {
-        "text": "Это такое сладкое печенье. Очень вкусно!",
+        "text": "Это сладкое печенье с мёдом. Очень вкусно!",
         "gloss": {
-          "en": "It's a kind of sweet biscuit. Very tasty!",
-          "ko": "달콤한 과자 같은 거예요. 아주 맛있어요!"
+          "en": "It’s a sweet honey biscuit. Very tasty!",
+          "ko": "꿀이 든 달콤한 과자예요. 아주 맛있어요!"
         }
       },
       "pryanik-easy": {
@@ -1075,10 +1076,10 @@
         }
       },
       "price": {
-        "text": "Магнит — сто пятьдесят рублей.",
+        "text": "Магнит — сто пятьдесят рублей, пряник — сто.",
         "gloss": {
-          "en": "A magnet is 150 roubles.",
-          "ko": "자석은 150루블이에요."
+          "en": "A magnet is 150 roubles, a pryanik is 100.",
+          "ko": "자석은 150루블, 프랴니크는 100루블이에요."
         }
       },
       "price-easy": {
@@ -1110,10 +1111,10 @@
         }
       },
       "bag-easy": {
-        "text": "Пакет? Да или нет?",
+        "text": "Вам нужен пакет?",
         "gloss": {
-          "en": "A bag? Yes or no?",
-          "ko": "봉투요? 네, 아니요?"
+          "en": "Do you need a bag?",
+          "ko": "봉투 필요하세요?"
         }
       },
       "end": {
@@ -1433,16 +1434,16 @@
         }
       },
       "name-easy": {
-        "text": "Ваше имя, пожалуйста?",
+        "text": "Как ваше имя?",
         "gloss": {
-          "en": "Your name, please?",
-          "ko": "이름이요?"
+          "en": "What is your name?",
+          "ko": "이름이 어떻게 되세요?"
         }
       },
       "found": {
-        "text": "Да, вот. Две ночи. Ваш паспорт, пожалуйста.",
+        "text": "Да, вижу. Две ночи. Ваш паспорт, пожалуйста.",
         "gloss": {
-          "en": "Yes, here it is. Two nights. Your passport, please.",
+          "en": "Yes, I see it. Two nights. Your passport, please.",
           "ko": "네, 있네요. 2박이요. 여권 주세요."
         }
       },
@@ -1718,7 +1719,7 @@
               "а ты?",
               "а ты студентка?",
               "а ты работаешь?",
-              "а ты кто?"
+              "а ты где работаешь?"
             ]
           },
           {
@@ -1863,10 +1864,10 @@
         }
       },
       "me": {
-        "text": "А я учусь в университете, изучаю английский. А ты что здесь изучаешь?",
+        "text": "А я учусь в университете. А ты что изучаешь?",
         "gloss": {
-          "en": "I'm at university, studying English. And what are you studying here?",
-          "ko": "난 대학에서 영어 공부해. 너는 여기서 뭐 공부해?"
+          "en": "I’m at university. And what are you studying?",
+          "ko": "난 대학에 다녀. 너는 뭐 공부해?"
         }
       },
       "me-easy": {
@@ -2206,31 +2207,31 @@
         }
       },
       "sibs": {
-        "text": "Красивая! А у тебя есть брат или сестра?",
+        "text": "Здорово! А брат или сестра у тебя есть?",
         "gloss": {
-          "en": "Beautiful! And do you have a brother or sister?",
-          "ko": "예쁘시다! 너 형제나 자매 있어?"
+          "en": "Great! And do you have a brother or sister?",
+          "ko": "좋다! 형제나 자매 있어?"
         }
       },
       "sibs-easy": {
-        "text": "У тебя есть брат? Сестра?",
+        "text": "У тебя есть брат? А сестра?",
         "gloss": {
-          "en": "Do you have a brother? A sister?",
-          "ko": "형제 있어? 자매 있어?"
+          "en": "Do you have a brother? And a sister?",
+          "ko": "형제 있어? 자매는?"
         }
       },
       "how": {
-        "text": "Здорово! А сколько?",
+        "text": "Здорово! А сколько? Один?",
         "gloss": {
-          "en": "Great! How many?",
-          "ko": "좋다! 몇 명이야?"
+          "en": "Great! How many? One?",
+          "ko": "좋다! 몇 명이야? 한 명?"
         }
       },
       "how-easy": {
-        "text": "Один брат? Два брата?",
+        "text": "Один брат или два?",
         "gloss": {
-          "en": "One brother? Two brothers?",
-          "ko": "형제 하나? 둘?"
+          "en": "One brother or two?",
+          "ko": "형제 하나야, 둘이야?"
         }
       },
       "alone": {
@@ -2283,10 +2284,10 @@
         }
       },
       "like-easy": {
-        "text": "Ты любишь собак? Да или нет?",
+        "text": "Ты любишь собак?",
         "gloss": {
-          "en": "Do you like dogs? Yes or no?",
-          "ko": "강아지 좋아해? 응, 아니?"
+          "en": "Do you like dogs?",
+          "ko": "강아지 좋아해?"
         }
       },
       "end": {
@@ -2510,7 +2511,7 @@
             "match": [
               "и чай, и кофе",
               "всё люблю",
-              "оба"
+              "и то, и другое"
             ]
           }
         ],
@@ -2620,31 +2621,31 @@
     },
     "sentences": {
       "order": {
-        "text": "Слушай, ты голодный? Хочешь блины?",
+        "text": "Слушай, хочешь есть? Здесь вкусные блины.",
         "gloss": {
-          "en": "Listen, are you hungry? Want some bliny?",
-          "ko": "있잖아, 배고파? 블리니 먹을래?"
+          "en": "Listen, are you hungry? The bliny here are good.",
+          "ko": "있잖아, 배고파? 여기 블리니 맛있어."
         }
       },
       "order-easy": {
-        "text": "Ты хочешь блины? Да или нет?",
+        "text": "Хочешь блины?",
         "gloss": {
-          "en": "Do you want bliny? Yes or no?",
-          "ko": "블리니 먹을래? 응, 아니?"
+          "en": "Do you want bliny?",
+          "ko": "블리니 먹을래?"
         }
       },
       "bliny": {
-        "text": "Это такие тонкие блинчики. Очень вкусные!",
+        "text": "Это как тонкие крепы. Очень вкусно!",
         "gloss": {
-          "en": "They're thin pancakes. Very tasty!",
-          "ko": "얇은 팬케이크 같은 거야. 진짜 맛있어!"
+          "en": "They’re like thin crêpes. Very tasty!",
+          "ko": "얇은 크레페 같은 거야. 진짜 맛있어!"
         }
       },
       "bliny-easy": {
-        "text": "Блины — это тонкие блинчики.",
+        "text": "Блины — это как тонкие крепы.",
         "gloss": {
-          "en": "Bliny are thin pancakes.",
-          "ko": "블리니는 얇은 팬케이크야."
+          "en": "Bliny are like thin crêpes.",
+          "ko": "블리니는 얇은 크레페 같은 거야."
         }
       },
       "filling": {
@@ -2655,17 +2656,17 @@
         }
       },
       "filling-easy": {
-        "text": "Мясо или сметана?",
+        "text": "С мясом или со сметаной?",
         "gloss": {
-          "en": "Meat or sour cream?",
+          "en": "With meat or with sour cream?",
           "ko": "고기, 아니면 스메타나?"
         }
       },
       "smetana": {
-        "text": "Сметана — это как густой белый йогурт.",
+        "text": "Сметана — это как густой йогурт, но не сладкий.",
         "gloss": {
-          "en": "Smetana is like thick white yoghurt.",
-          "ko": "스메타나는 걸쭉한 하얀 요구르트 같은 거야."
+          "en": "Smetana is like thick yoghurt, but not sweet.",
+          "ko": "스메타나는 걸쭉한 요구르트 같은데 달지 않아."
         }
       },
       "tea": {
@@ -2683,10 +2684,10 @@
         }
       },
       "korea": {
-        "text": "А в Корее ты что любишь есть?",
+        "text": "А что ты любишь есть? Что-нибудь корейское?",
         "gloss": {
-          "en": "And in Korea, what do you like to eat?",
-          "ko": "그럼 한국에선 뭐 먹는 거 좋아해?"
+          "en": "And what do you like to eat? Something Korean?",
+          "ko": "넌 뭐 먹는 거 좋아해? 한국 음식은?"
         }
       },
       "korea-easy": {
@@ -2704,10 +2705,10 @@
         }
       },
       "borsch-easy": {
-        "text": "Борщ? Любишь или нет?",
+        "text": "Ты любишь борщ?",
         "gloss": {
-          "en": "Borsch? Do you like it or not?",
-          "ko": "보르시? 좋아해, 안 좋아해?"
+          "en": "Do you like borsch?",
+          "ko": "보르시 좋아해?"
         }
       },
       "end": {
@@ -2963,7 +2964,7 @@
             "go": "t-me",
             "match": [
               "а ты?",
-              "а ты что играешь?",
+              "а ты во что играешь?",
               "а ты умеешь плавать?",
               "а ты играешь в футбол?"
             ]
@@ -3002,31 +3003,31 @@
     },
     "sentences": {
       "hi": {
-        "text": "Привет! Ты новенький? Я Игорь.",
+        "text": "Привет! Ты первый раз у нас? Я Игорь.",
         "gloss": {
-          "en": "Hi! Are you new? I'm Igor.",
-          "ko": "안녕! 새로 왔어? 난 이고르야."
+          "en": "Hi! Is it your first time here? I’m Igor.",
+          "ko": "안녕! 여기 처음이야? 난 이고르야."
         }
       },
       "hi-easy": {
-        "text": "Привет! Я Игорь. Ты кто?",
+        "text": "Привет! Я Игорь. А ты?",
         "gloss": {
-          "en": "Hi! I'm Igor. Who are you?",
-          "ko": "안녕! 난 이고르야. 넌 누구야?"
+          "en": "Hi! I’m Igor. And you?",
+          "ko": "안녕! 난 이고르야. 너는?"
         }
       },
       "askname": {
-        "text": "Привет! Как тебя зовут?",
+        "text": "Привет! А тебя как зовут?",
         "gloss": {
-          "en": "Hi! What's your name?",
+          "en": "Hi! And what’s your name?",
           "ko": "안녕! 이름이 뭐야?"
         }
       },
       "askname-easy": {
-        "text": "Твоё имя?",
+        "text": "Как тебя зовут?",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름은?"
+          "en": "What’s your name?",
+          "ko": "이름이 뭐야?"
         }
       },
       "swim": {
@@ -3037,10 +3038,10 @@
         }
       },
       "swim-easy": {
-        "text": "Плавать — умеешь? Да или нет?",
+        "text": "Ты умеешь плавать?",
         "gloss": {
-          "en": "Swimming — can you? Yes or no?",
-          "ko": "수영 — 할 줄 알아? 응, 아니?"
+          "en": "Can you swim?",
+          "ko": "수영할 줄 알아?"
         }
       },
       "ball": {
@@ -3051,10 +3052,10 @@
         }
       },
       "ball-easy": {
-        "text": "Футбол? Да или нет?",
+        "text": "Ты играешь в футбол?",
         "gloss": {
-          "en": "Football? Yes or no?",
-          "ko": "축구? 응, 아니?"
+          "en": "Do you play football?",
+          "ko": "축구 해?"
         }
       },
       "ok": {
@@ -3107,9 +3108,9 @@
         }
       },
       "ask-easy": {
-        "text": "Есть вопрос?",
+        "text": "У тебя есть вопрос?",
         "gloss": {
-          "en": "Any questions?",
+          "en": "Do you have a question?",
           "ko": "질문 있어?"
         }
       },
@@ -3219,7 +3220,7 @@
               "в шесть",
               "я встаю в шесть",
               "в шесть часов",
-              "в полшестого"
+              "в шесть утра"
             ]
           },
           {
@@ -3409,10 +3410,10 @@
         }
       },
       "hi-easy": {
-        "text": "Привет! Как ты? Хорошо?",
+        "text": "Привет! Как дела? Всё хорошо?",
         "gloss": {
-          "en": "Hi! How are you? Good?",
-          "ko": "안녕! 잘 지내? 좋아?"
+          "en": "Hi! How are you? All good?",
+          "ko": "안녕! 잘 지내? 다 괜찮아?"
         }
       },
       "up": {
@@ -3423,10 +3424,10 @@
         }
       },
       "up-easy": {
-        "text": "Ты встаёшь в семь? В восемь?",
+        "text": "Ты встаёшь в семь или в восемь?",
         "gloss": {
-          "en": "Do you get up at seven? At eight?",
-          "ko": "7시에 일어나? 8시?"
+          "en": "Do you get up at seven or at eight?",
+          "ko": "7시에 일어나, 8시에 일어나?"
         }
       },
       "early": {
@@ -3451,10 +3452,10 @@
         }
       },
       "now-easy": {
-        "text": "Ты живёшь в Москве? Далеко?",
+        "text": "Где ты живёшь? Далеко?",
         "gloss": {
-          "en": "Do you live in Moscow? Far away?",
-          "ko": "모스크바에 살아? 멀어?"
+          "en": "Where do you live? Far away?",
+          "ko": "어디 살아? 멀어?"
         }
       },
       "far": {
@@ -3465,10 +3466,10 @@
         }
       },
       "far-easy": {
-        "text": "Метро? Да или нет?",
+        "text": "Ты ездишь на метро?",
         "gloss": {
-          "en": "The metro? Yes or no?",
-          "ko": "지하철? 응, 아니?"
+          "en": "Do you take the metro?",
+          "ko": "지하철 타고 다녀?"
         }
       },
       "lunch": {
@@ -3479,10 +3480,10 @@
         }
       },
       "lunch-easy": {
-        "text": "Обед в час. Вместе?",
+        "text": "Обед в час, хорошо?",
         "gloss": {
-          "en": "Lunch at one. Together?",
-          "ko": "점심 1시에. 같이?"
+          "en": "Lunch at one, OK?",
+          "ko": "점심 1시에, 괜찮아?"
         }
       },
       "end": {
@@ -3573,27 +3574,28 @@
         "type": "learner",
         "id": "l-which",
         "goal": {
-          "en": "Say entrance two, flat ten.",
-          "ko": "2번 현관, 10호라고 하세요."
+          "en": "Say flat ten.",
+          "ko": "10호라고 하세요."
         },
         "expect": [
           {
-            "meaning": "says entrance / flat number",
+            "meaning": "says the flat number",
             "go": "t-me",
             "match": [
-              "во втором",
-              "второй подъезд",
-              "второй подъезд, десятая квартира",
-              "квартира десять"
+              "квартира десять",
+              "десятая квартира",
+              "я в десятой",
+              "квартира номер десять",
+              "второй подъезд, квартира десять"
             ]
           },
           {
-            "meaning": "didn't understand the word",
+            "meaning": "did not understand the question",
             "go": "l-which-again",
             "match": [
-              "что такое подъезд",
               "я не понимаю",
-              "извините, ещё раз"
+              "извините, ещё раз",
+              "что?"
             ]
           }
         ],
@@ -3673,7 +3675,7 @@
               "а где здесь аптека",
               "где здесь аптека?",
               "извините, где здесь аптека?",
-              "а где здесь банк"
+              "аптека есть?"
             ]
           },
           {
@@ -3754,38 +3756,38 @@
     },
     "sentences": {
       "hi": {
-        "text": "Здравствуйте! Вы новый сосед?",
+        "text": "Здравствуйте! Вы тоже здесь живёте?",
         "gloss": {
-          "en": "Hello! Are you the new neighbour?",
-          "ko": "안녕하세요! 새로 이사 온 이웃이세요?"
+          "en": "Hello! Do you live here too?",
+          "ko": "안녕하세요! 여기 사세요?"
         }
       },
       "hi-easy": {
-        "text": "Вы здесь живёте? Да?",
+        "text": "Вы живёте в этом доме?",
         "gloss": {
-          "en": "Do you live here? Yes?",
-          "ko": "여기 사세요? 그래요?"
+          "en": "Do you live in this building?",
+          "ko": "이 건물에 사세요?"
         }
       },
       "which": {
-        "text": "Очень приятно! Я Татьяна. В каком подъезде?",
+        "text": "Очень приятно! Я Татьяна. А вы в какой квартире?",
         "gloss": {
-          "en": "Nice to meet you! I'm Tatyana. Which entrance?",
-          "ko": "반가워요! 저는 타티야나예요. 몇 번 현관이에요?"
+          "en": "Nice to meet you! I’m Tatyana. Which flat are you in?",
+          "ko": "반가워요! 저는 타티야나예요. 몇 호에 사세요?"
         }
       },
       "which-easy": {
-        "text": "Подъезд один? Два?",
+        "text": "Какой номер квартиры?",
         "gloss": {
-          "en": "Entrance one? Two?",
-          "ko": "1번 현관이에요? 2번이에요?"
+          "en": "What is the flat number?",
+          "ko": "몇 호예요?"
         }
       },
       "me": {
-        "text": "Я тоже! Удобно здесь?",
+        "text": "А я в пятой! Вам здесь удобно?",
         "gloss": {
-          "en": "Me too! Is it convenient here?",
-          "ko": "저도요! 여기 편해요?"
+          "en": "I’m in number five! Is it convenient for you here?",
+          "ko": "저는 5호예요! 여기 편해요?"
         }
       },
       "me-easy": {
@@ -3796,10 +3798,10 @@
         }
       },
       "shop": {
-        "text": "Если что, магазин прямо за домом.",
+        "text": "Кстати, магазин прямо за домом.",
         "gloss": {
-          "en": "By the way, there's a shop right behind the building.",
-          "ko": "참고로 가게가 바로 건물 뒤에 있어요."
+          "en": "By the way, the shop is right behind the building.",
+          "ko": "참, 가게는 바로 건물 뒤에 있어요."
         }
       },
       "shop-easy": {
@@ -3831,17 +3833,17 @@
         }
       },
       "park-easy": {
-        "text": "Гулять в парке — любите?",
+        "text": "Вы любите гулять?",
         "gloss": {
-          "en": "Walking in the park — do you like it?",
-          "ko": "공원 산책 — 좋아하세요?"
+          "en": "Do you like walking?",
+          "ko": "산책 좋아하세요?"
         }
       },
       "end": {
-        "text": "Ну, если что, я в пятой квартире. До встречи!",
+        "text": "Ну, если что, заходите. До встречи!",
         "gloss": {
-          "en": "Well, if you need anything, I'm in flat five. See you!",
-          "ko": "필요하면 저는 5호에 있어요. 또 봬요!"
+          "en": "Well, if you need anything, come by. See you!",
+          "ko": "필요하면 들르세요. 또 봬요!"
         }
       }
     },
@@ -4035,8 +4037,8 @@
             "match": [
               "у вас есть груши",
               "а груши у вас есть?",
-              "у вас есть бананы",
-              "есть груши?"
+              "есть груши?",
+              "а груши есть?"
             ]
           },
           {
@@ -4167,7 +4169,7 @@
         }
       },
       "apples": {
-        "text": "Яблоки — сто двадцать рублей килограмм.",
+        "text": "Яблоки — сто двадцать рублей за килограмм.",
         "gloss": {
           "en": "Apples are 120 roubles a kilo.",
           "ko": "사과는 1킬로에 120루블이에요."
@@ -4202,10 +4204,10 @@
         }
       },
       "kilo-easy": {
-        "text": "Один килограмм? Два?",
+        "text": "Один килограмм или два?",
         "gloss": {
-          "en": "One kilo? Two?",
-          "ko": "1킬로요? 2킬로요?"
+          "en": "One kilo or two?",
+          "ko": "1킬로요, 2킬로요?"
         }
       },
       "more": {
@@ -4216,10 +4218,10 @@
         }
       },
       "more-easy": {
-        "text": "Ещё что-нибудь? Да или нет?",
+        "text": "Это всё?",
         "gloss": {
-          "en": "Anything more? Yes or no?",
-          "ko": "더요? 네, 아니요?"
+          "en": "Is that all?",
+          "ko": "그게 다예요?"
         }
       },
       "pears": {
@@ -4244,10 +4246,10 @@
         }
       },
       "total-easy": {
-        "text": "Двести сорок. Два, четыре, ноль.",
+        "text": "Двести сорок рублей. Вот, смотрите.",
         "gloss": {
-          "en": "240. Two, four, zero.",
-          "ko": "240이요. 2, 4, 0."
+          "en": "240 roubles. Here, look.",
+          "ko": "240루블이요. 여기 보세요."
         }
       },
       "end": {
@@ -4300,7 +4302,7 @@
               "что такое пончик",
               "извините, что это?",
               "а что это?",
-              "что такое это"
+              "что это такое?"
             ]
           },
           {
@@ -4462,7 +4464,7 @@
             "go": "t-total",
             "match": [
               "да, хлеб, пожалуйста",
-              "да, один хлеб",
+              "да, и хлеб, пожалуйста",
               "да, чёрный хлеб"
             ]
           }
@@ -4563,10 +4565,10 @@
         }
       },
       "pirozhok-easy": {
-        "text": "Пирожок. С капустой.",
+        "text": "Это пирожок. Внутри капуста.",
         "gloss": {
-          "en": "A pirozhok. With cabbage.",
-          "ko": "피로시키요. 양배추 들었어요."
+          "en": "It’s a pirozhok. There’s cabbage inside.",
+          "ko": "피로시키예요. 안에 양배추가 있어요."
         }
       },
       "howmany": {
@@ -4577,10 +4579,10 @@
         }
       },
       "howmany-easy": {
-        "text": "Один? Два? Три?",
+        "text": "Вам один или два?",
         "gloss": {
-          "en": "One? Two? Three?",
-          "ko": "하나요? 둘? 셋?"
+          "en": "One or two for you?",
+          "ko": "하나요, 둘이요?"
         }
       },
       "bread": {
@@ -4591,10 +4593,10 @@
         }
       },
       "bread-easy": {
-        "text": "Хлеб? Да или нет?",
+        "text": "Хлеб нужен?",
         "gloss": {
-          "en": "Bread? Yes or no?",
-          "ko": "빵이요? 네, 아니요?"
+          "en": "Do you need bread?",
+          "ko": "빵 필요하세요?"
         }
       },
       "price": {
@@ -4619,10 +4621,10 @@
         }
       },
       "total-easy": {
-        "text": "Сто рублей. Сто.",
+        "text": "Сто рублей. Вот, смотрите.",
         "gloss": {
-          "en": "100 roubles. A hundred.",
-          "ko": "100루블이요. 백."
+          "en": "100 roubles. Here, look.",
+          "ko": "100루블이요. 여기 보세요."
         }
       },
       "end": {
@@ -4813,8 +4815,8 @@
             "match": [
               "у вас есть квас",
               "а квас у вас есть?",
-              "у вас есть сок",
-              "есть квас?"
+              "есть квас?",
+              "а квас есть?"
             ]
           },
           {
@@ -5003,10 +5005,10 @@
         }
       },
       "soup-easy": {
-        "text": "Борщ или суп?",
+        "text": "Борщ или куриный суп?",
         "gloss": {
-          "en": "Borsch or soup?",
-          "ko": "보르시요, 수프요?"
+          "en": "Borsch or chicken soup?",
+          "ko": "보르시요, 닭고기 수프요?"
         }
       },
       "bread": {
@@ -5017,10 +5019,10 @@
         }
       },
       "bread-easy": {
-        "text": "Хлеб? Да или нет?",
+        "text": "Хлеб нужен?",
         "gloss": {
-          "en": "Bread? Yes or no?",
-          "ko": "빵이요? 네, 아니요?"
+          "en": "Do you need bread?",
+          "ko": "빵 필요하세요?"
         }
       },
       "drink": {
@@ -5031,10 +5033,10 @@
         }
       },
       "drink-easy": {
-        "text": "Чай? Сок? Вода?",
+        "text": "Чай, сок или вода?",
         "gloss": {
-          "en": "Tea? Juice? Water?",
-          "ko": "차요? 주스? 물?"
+          "en": "Tea, juice or water?",
+          "ko": "차요, 주스요, 물이요?"
         }
       },
       "kvas": {
@@ -5052,10 +5054,10 @@
         }
       },
       "mors": {
-        "text": "Морс — это ягодный напиток.",
+        "text": "Морс — это сладкий напиток из ягод.",
         "gloss": {
-          "en": "Mors is a berry drink.",
-          "ko": "모르스는 베리 음료예요."
+          "en": "Mors is a sweet drink made from berries.",
+          "ko": "모르스는 베리로 만든 달콤한 음료예요."
         }
       },
       "mors-easy": {
@@ -5073,10 +5075,10 @@
         }
       },
       "else-easy": {
-        "text": "Ещё что-то? Да или нет?",
+        "text": "Это всё?",
         "gloss": {
-          "en": "Something more? Yes or no?",
-          "ko": "더요? 네, 아니요?"
+          "en": "Is that all?",
+          "ko": "그게 다예요?"
         }
       },
       "bill": {
@@ -5141,9 +5143,9 @@
             "meaning": "asks where the bus to the Kremlin is",
             "go": "t-bus",
             "match": [
-              "извините, где автобус в кремль?",
-              "где автобус в кремль",
-              "где автобус до кремля?",
+              "извините, где автобус до кремля?",
+              "где автобус до кремля",
+              "где здесь автобус до кремля?",
               "извините, где кремль?"
             ]
           },
@@ -5151,9 +5153,9 @@
             "meaning": "asks which bus",
             "go": "t-bus",
             "match": [
-              "какой автобус в кремль",
-              "какой автобус до кремля?",
-              "автобус в кремль?"
+              "какой автобус до кремля",
+              "какой автобус идёт до кремля?",
+              "какой автобус?"
             ]
           }
         ],
@@ -5297,10 +5299,10 @@
             "meaning": "asks where the ticket is",
             "go": "t-ticket",
             "match": [
-              "а где билет?",
-              "где билет",
               "где купить билет?",
-              "извините, где касса?"
+              "где билет",
+              "извините, где касса?",
+              "где касса?"
             ]
           },
           {
@@ -5382,10 +5384,10 @@
         }
       },
       "hi-easy": {
-        "text": "Да? Что такое?",
+        "text": "Да? Вам помочь?",
         "gloss": {
-          "en": "Yes? What is it?",
-          "ko": "네? 무슨 일이세요?"
+          "en": "Yes? Can I help you?",
+          "ko": "네? 도와드릴까요?"
         }
       },
       "bus": {
@@ -5396,24 +5398,24 @@
         }
       },
       "bus-easy": {
-        "text": "Автобус шесть. Номер шесть.",
+        "text": "Вам нужен автобус шесть.",
         "gloss": {
-          "en": "Bus six. Number six.",
-          "ko": "6번 버스요. 6번."
+          "en": "You need bus six.",
+          "ko": "6번 버스 타시면 돼요."
         }
       },
       "six": {
-        "text": "Шесть. Один, два, три, четыре, пять, шесть.",
+        "text": "Шесть. Автобус номер шесть.",
         "gloss": {
-          "en": "Six. One, two, three, four, five, six.",
-          "ko": "6이요. 1, 2, 3, 4, 5, 6."
+          "en": "Six. Bus number six.",
+          "ko": "6이요. 6번 버스요."
         }
       },
       "six-easy": {
-        "text": "Номер шесть. Вот так, шесть.",
+        "text": "Шестой автобус. Номер шесть.",
         "gloss": {
-          "en": "Number six. Like this, six.",
-          "ko": "6번이요. 이렇게, 6."
+          "en": "The number six bus. Number six.",
+          "ko": "6번 버스요. 번호 6."
         }
       },
       "when": {
@@ -5424,10 +5426,10 @@
         }
       },
       "when-easy": {
-        "text": "Десять минут. Автобус через десять минут.",
+        "text": "Автобус будет через десять минут.",
         "gloss": {
-          "en": "Ten minutes. The bus is in ten minutes.",
-          "ko": "10분이요. 버스는 10분 뒤에 와요."
+          "en": "The bus will come in ten minutes.",
+          "ko": "버스는 10분 뒤에 와요."
         }
       },
       "stop": {
@@ -5438,24 +5440,24 @@
         }
       },
       "stop-easy": {
-        "text": "Здесь. Автобус здесь.",
+        "text": "Остановка здесь.",
         "gloss": {
-          "en": "Here. The bus is here.",
-          "ko": "여기요. 버스는 여기요."
+          "en": "The stop is here.",
+          "ko": "정류장은 여기예요."
         }
       },
       "ticket": {
-        "text": "Билет у водителя или картой.",
+        "text": "Платите водителю или картой.",
         "gloss": {
-          "en": "Pay the driver or use a card.",
-          "ko": "표는 기사님한테 사거나 카드로 내요."
+          "en": "Pay the driver or pay by card.",
+          "ko": "기사님한테 내거나 카드로 내세요."
         }
       },
       "ticket-easy": {
-        "text": "Можно картой. В автобусе.",
+        "text": "Платите в автобусе, картой.",
         "gloss": {
-          "en": "You can pay by card. On the bus.",
-          "ko": "카드로 돼요. 버스 안에서요."
+          "en": "Pay on the bus, by card.",
+          "ko": "버스 안에서 카드로 내세요."
         }
       },
       "end": {
@@ -5804,9 +5806,9 @@
     },
     "sentences": {
       "hi": {
-        "text": "Здравствуйте. Куда едем?",
+        "text": "Здравствуйте. Куда вам?",
         "gloss": {
-          "en": "Hello. Where are we going?",
+          "en": "Hello. Where to?",
           "ko": "안녕하세요. 어디 가세요?"
         }
       },
@@ -5860,10 +5862,10 @@
         }
       },
       "how-easy": {
-        "text": "Один билет? Два?",
+        "text": "Один билет или два?",
         "gloss": {
-          "en": "One ticket? Two?",
-          "ko": "한 장이요? 두 장이요?"
+          "en": "One ticket or two?",
+          "ko": "한 장이요, 두 장이요?"
         }
       },
       "price": {
@@ -5874,10 +5876,10 @@
         }
       },
       "price-easy": {
-        "text": "Три тысячи. Три, ноль, ноль, ноль.",
+        "text": "Три тысячи рублей. Вот, на экране.",
         "gloss": {
-          "en": "Three thousand. Three, zero, zero, zero.",
-          "ko": "3,000이요. 3, 0, 0, 0."
+          "en": "Three thousand roubles. Here, on the screen.",
+          "ko": "3,000루블이요. 여기 화면에 있어요."
         }
       },
       "pass": {
@@ -6199,17 +6201,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Добрый день! Это вы заказывали такси?",
+        "text": "Добрый день! Вы заказывали такси?",
         "gloss": {
-          "en": "Good afternoon! Did you order the taxi?",
-          "ko": "안녕하세요! 택시 부르셨죠?"
+          "en": "Good afternoon! Did you order a taxi?",
+          "ko": "안녕하세요! 택시 부르셨어요?"
         }
       },
       "hi-easy": {
-        "text": "Такси? Это вы?",
+        "text": "Вы ждёте такси?",
         "gloss": {
-          "en": "Taxi? Is it you?",
-          "ko": "택시요? 손님 맞으세요?"
+          "en": "Are you waiting for a taxi?",
+          "ko": "택시 기다리세요?"
         }
       },
       "where": {
@@ -6220,10 +6222,10 @@
         }
       },
       "where-easy": {
-        "text": "Куда? Какой адрес?",
+        "text": "Какой адрес?",
         "gloss": {
-          "en": "Where to? What address?",
-          "ko": "어디요? 주소가 어떻게 돼요?"
+          "en": "What’s the address?",
+          "ko": "주소가 어떻게 돼요?"
         }
       },
       "bag": {
@@ -6234,10 +6236,10 @@
         }
       },
       "bag-easy": {
-        "text": "Это ваша сумка? Да?",
+        "text": "Это ваша сумка?",
         "gloss": {
-          "en": "Is this your bag? Yes?",
-          "ko": "이거 손님 가방이에요? 네?"
+          "en": "Is this your bag?",
+          "ko": "이거 손님 가방이에요?"
         }
       },
       "first": {
@@ -6248,10 +6250,10 @@
         }
       },
       "first-easy": {
-        "text": "Первый раз здесь? Да или нет?",
+        "text": "Вы здесь первый раз?",
         "gloss": {
-          "en": "First time here? Yes or no?",
-          "ko": "여기 처음이세요? 네, 아니요?"
+          "en": "Is it your first time here?",
+          "ko": "여기 처음이세요?"
         }
       },
       "nice": {
@@ -6276,9 +6278,9 @@
         }
       },
       "here-easy": {
-        "text": "Мы здесь. Это ваш адрес.",
+        "text": "Приехали. Это ваш адрес.",
         "gloss": {
-          "en": "We're here. This is your address.",
+          "en": "We’re here. This is your address.",
           "ko": "도착했어요. 여기가 주소예요."
         }
       },
@@ -6290,10 +6292,10 @@
         }
       },
       "price-easy": {
-        "text": "Восемьсот. Восемь, ноль, ноль.",
+        "text": "Восемьсот рублей. Вот, на экране.",
         "gloss": {
-          "en": "Eight hundred. Eight, zero, zero.",
-          "ko": "800이요. 8, 0, 0."
+          "en": "800 roubles. Here, on the screen.",
+          "ko": "800루블이요. 여기 화면에 있어요."
         }
       },
       "end": {
@@ -6398,7 +6400,7 @@
             "go": "t-fever",
             "match": [
               "вчера",
-              "со вчера",
+              "уже два дня",
               "два дня"
             ]
           }
@@ -6583,10 +6585,10 @@
         }
       },
       "since": {
-        "text": "Понятно. Голова болит давно?",
+        "text": "Понятно. Давно болит?",
         "gloss": {
-          "en": "I see. Has your head hurt for long?",
-          "ko": "그렇군요. 머리 아픈 지 오래됐어요?"
+          "en": "I see. Has it hurt for long?",
+          "ko": "그렇군요. 아픈 지 오래됐어요?"
         }
       },
       "since-easy": {
@@ -6604,10 +6606,10 @@
         }
       },
       "fever-easy": {
-        "text": "Температура? Да или нет?",
+        "text": "У вас есть температура?",
         "gloss": {
-          "en": "A temperature? Yes or no?",
-          "ko": "열이요? 네, 아니요?"
+          "en": "Do you have a temperature?",
+          "ko": "열 있어요?"
         }
       },
       "pills": {
@@ -6952,7 +6954,7 @@
             "match": [
               "где касса",
               "а где касса?",
-              "там?"
+              "касса там?"
             ]
           }
         ],
@@ -6988,17 +6990,17 @@
         }
       },
       "color": {
-        "text": "Есть. Какой цвет: чёрный, серый, красный?",
+        "text": "Есть. Какой цвет: чёрный, серый или красный?",
         "gloss": {
-          "en": "We have them. What colour: black, grey, red?",
-          "ko": "있어요. 무슨 색이요? 검정, 회색, 빨강?"
+          "en": "We do. What colour: black, grey or red?",
+          "ko": "있어요. 무슨 색이요? 검정, 회색, 아니면 빨강?"
         }
       },
       "color-easy": {
-        "text": "Чёрный? Серый? Красный?",
+        "text": "Чёрный, серый или красный?",
         "gloss": {
-          "en": "Black? Grey? Red?",
-          "ko": "검정이요? 회색? 빨강?"
+          "en": "Black, grey or red?",
+          "ko": "검정이요, 회색이요, 빨강이요?"
         }
       },
       "this": {
@@ -7009,10 +7011,10 @@
         }
       },
       "this-easy": {
-        "text": "Вот шарф. Нравится? Да или нет?",
+        "text": "Вот шарф. Нравится?",
         "gloss": {
-          "en": "Here's a scarf. Do you like it? Yes or no?",
-          "ko": "목도리 여기요. 마음에 들어요? 네, 아니요?"
+          "en": "Here’s a scarf. Do you like it?",
+          "ko": "목도리 여기요. 마음에 들어요?"
         }
       },
       "other": {
@@ -7037,10 +7039,10 @@
         }
       },
       "price-easy": {
-        "text": "Тысяча двести. Один, два, ноль, ноль.",
+        "text": "Тысяча двести рублей. Вот, на ценнике.",
         "gloss": {
-          "en": "One thousand two hundred. One, two, zero, zero.",
-          "ko": "1,200이요. 1, 2, 0, 0."
+          "en": "1,200 roubles. Here, on the price tag.",
+          "ko": "1,200루블이요. 여기 가격표에 있어요."
         }
       },
       "pay": {
@@ -7120,7 +7122,7 @@
               "я потерял рюкзак",
               "я потеряла рюкзак",
               "здравствуйте, я потерял рюкзак",
-              "мой рюкзак... я потеряла"
+              "здравствуйте, я потеряла рюкзак"
             ]
           },
           {
@@ -7340,8 +7342,8 @@
             "match": [
               "где бюро",
               "а где бюро находок?",
-              "куда? где?",
-              "где вы завтра"
+              "где? здесь?",
+              "завтра где?"
             ]
           },
           {
@@ -7423,10 +7425,10 @@
     },
     "sentences": {
       "hi": {
-        "text": "Бюро находок. Что у вас случилось?",
+        "text": "Бюро находок, здравствуйте. Что вы потеряли?",
         "gloss": {
-          "en": "Lost property. What happened?",
-          "ko": "분실물 센터예요. 무슨 일이세요?"
+          "en": "Lost property, hello. What have you lost?",
+          "ko": "분실물 센터예요, 안녕하세요. 뭘 잃어버리셨어요?"
         }
       },
       "hi-easy": {
@@ -7444,38 +7446,38 @@
         }
       },
       "what-easy": {
-        "text": "Рюкзак чёрный? Синий?",
+        "text": "Рюкзак чёрный или синий?",
         "gloss": {
-          "en": "Is the backpack black? Blue?",
-          "ko": "배낭이 검정이에요? 파랑?"
+          "en": "Is the backpack black or blue?",
+          "ko": "배낭이 검정이에요, 파랑이에요?"
         }
       },
       "when": {
-        "text": "А когда? Сегодня?",
+        "text": "А когда потеряли? Сегодня?",
         "gloss": {
-          "en": "And when? Today?",
-          "ko": "언제요? 오늘요?"
+          "en": "And when did you lose it? Today?",
+          "ko": "언제 잃어버리셨어요? 오늘요?"
         }
       },
       "when-easy": {
-        "text": "Сегодня? Утром?",
+        "text": "Сегодня или вчера?",
         "gloss": {
-          "en": "Today? In the morning?",
-          "ko": "오늘이요? 아침에?"
+          "en": "Today or yesterday?",
+          "ko": "오늘이요, 어제요?"
         }
       },
       "inside": {
-        "text": "Что внутри?",
+        "text": "А что внутри?",
         "gloss": {
-          "en": "What's inside?",
+          "en": "And what’s inside?",
           "ko": "안에 뭐가 들었어요?"
         }
       },
       "inside-easy": {
-        "text": "В рюкзаке что? Книги? Телефон?",
+        "text": "Что в рюкзаке? Книги, телефон?",
         "gloss": {
-          "en": "What's in the backpack? Books? A phone?",
-          "ko": "배낭 안에 뭐요? 책? 전화기?"
+          "en": "What’s in the backpack? Books, a phone?",
+          "ko": "배낭 안에 뭐 있어요? 책, 전화기?"
         }
       },
       "found": {
@@ -7486,10 +7488,10 @@
         }
       },
       "found-easy": {
-        "text": "Это ваш рюкзак? Да?",
+        "text": "Это ваш рюкзак?",
         "gloss": {
-          "en": "Is this your backpack? Yes?",
-          "ko": "이거 손님 배낭이에요? 네?"
+          "en": "Is this your backpack?",
+          "ko": "이거 손님 배낭이에요?"
         }
       },
       "notyet": {
@@ -7500,9 +7502,9 @@
         }
       },
       "notyet-easy": {
-        "text": "Нет. Завтра, пожалуйста.",
+        "text": "Нет. Приходите завтра.",
         "gloss": {
-          "en": "No. Tomorrow, please.",
+          "en": "No. Come back tomorrow.",
           "ko": "없어요. 내일 오세요."
         }
       },
@@ -7514,10 +7516,10 @@
         }
       },
       "sign-easy": {
-        "text": "Паспорт. И подпись, вот здесь.",
+        "text": "Дайте паспорт. И подпишите здесь.",
         "gloss": {
-          "en": "Passport. And a signature, right here.",
-          "ko": "여권이요. 그리고 여기 서명이요."
+          "en": "Give me your passport. And sign here.",
+          "ko": "여권 주세요. 그리고 여기 서명하세요."
         }
       },
       "office": {
@@ -7528,10 +7530,10 @@
         }
       },
       "office-easy": {
-        "text": "Здесь. Это окно. До семи.",
+        "text": "Сюда, в это окно. До семи часов.",
         "gloss": {
-          "en": "Here. This window. Until seven.",
-          "ko": "여기요. 이 창구요. 7시까지요."
+          "en": "Here, to this window. Until seven o’clock.",
+          "ko": "여기, 이 창구로요. 7시까지요."
         }
       },
       "end": {
@@ -7583,7 +7585,7 @@
               "что здесь посмотреть",
               "что можно посмотреть?",
               "здравствуйте, что посмотреть в казани?",
-              "что интересно"
+              "что здесь интересного?"
             ]
           },
           {
@@ -7863,10 +7865,10 @@
         }
       },
       "see-easy": {
-        "text": "Кремль. И улица Баумана.",
+        "text": "Посмотрите Кремль и улицу Баумана.",
         "gloss": {
-          "en": "The Kremlin. And Bauman Street.",
-          "ko": "크렘린이요. 그리고 바우만 거리요."
+          "en": "See the Kremlin and Bauman Street.",
+          "ko": "크렘린이랑 바우만 거리를 보세요."
         }
       },
       "bauman": {
@@ -7877,10 +7879,10 @@
         }
       },
       "bauman-easy": {
-        "text": "Это улица. Там кафе, магазины.",
+        "text": "Это улица, там кафе и магазины.",
         "gloss": {
-          "en": "It's a street. There are cafés and shops.",
-          "ko": "거리예요. 카페, 가게가 있어요."
+          "en": "It’s a street, with cafés and shops.",
+          "ko": "거리예요, 카페랑 가게가 있어요."
         }
       },
       "map": {
@@ -7891,9 +7893,9 @@
         }
       },
       "map-easy": {
-        "text": "Вот, на карте. Близко.",
+        "text": "Вот здесь, на карте. Это близко.",
         "gloss": {
-          "en": "Here, on the map. It's close.",
+          "en": "Right here, on the map. It’s close.",
           "ko": "여기, 지도에요. 가까워요."
         }
       },
@@ -7919,16 +7921,16 @@
         }
       },
       "slow-easy": {
-        "text": "Восемь — десять.",
+        "text": "С восьми до десяти.",
         "gloss": {
-          "en": "Eight to ten.",
-          "ko": "8시에서 10시요."
+          "en": "From eight to ten.",
+          "ko": "8시부터 10시까지요."
         }
       },
       "end": {
-        "text": "Пожалуйста! Хорошо вам погулять!",
+        "text": "Пожалуйста! Хорошей прогулки!",
         "gloss": {
-          "en": "You're welcome! Enjoy your walk!",
+          "en": "You’re welcome! Enjoy your walk!",
           "ko": "천만에요! 즐겁게 구경하세요!"
         }
       }
@@ -8277,10 +8279,10 @@
         }
       },
       "hi-easy": {
-        "text": "Первый раз здесь? Да?",
+        "text": "Вы здесь первый раз?",
         "gloss": {
-          "en": "First time here? Yes?",
-          "ko": "여기 처음이세요? 네?"
+          "en": "Is it your first time here?",
+          "ko": "여기 처음이세요?"
         }
       },
       "card": {
@@ -8291,10 +8293,10 @@
         }
       },
       "card-easy": {
-        "text": "Ваше имя?",
+        "text": "Как ваше имя?",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름이요?"
+          "en": "What is your name?",
+          "ko": "이름이 어떻게 되세요?"
         }
       },
       "spell": {
@@ -8305,10 +8307,10 @@
         }
       },
       "spell-easy": {
-        "text": "Ещё раз, пожалуйста. Ваше имя?",
+        "text": "Ещё раз, пожалуйста. Как ваше имя?",
         "gloss": {
-          "en": "Once more, please. Your name?",
-          "ko": "한 번 더요. 이름이요?"
+          "en": "Once more, please. What is your name?",
+          "ko": "한 번 더요. 이름이 어떻게 되세요?"
         }
       },
       "live": {
@@ -8319,10 +8321,10 @@
         }
       },
       "live-easy": {
-        "text": "Ваш адрес? Улица?",
+        "text": "Какой у вас адрес?",
         "gloss": {
-          "en": "Your address? Street?",
-          "ko": "주소요? 거리 이름이요?"
+          "en": "What is your address?",
+          "ko": "주소가 어떻게 돼요?"
         }
       },
       "job": {
@@ -8347,10 +8349,10 @@
         }
       },
       "ready-easy": {
-        "text": "Вот билет. Три книги.",
+        "text": "Вот ваш билет. Можно три книги.",
         "gloss": {
-          "en": "Here's the card. Three books.",
-          "ko": "카드 여기요. 책 세 권이요."
+          "en": "Here’s your card. Three books are allowed.",
+          "ko": "카드 여기요. 책 세 권까지요."
         }
       },
       "weeks": {
@@ -8505,8 +8507,8 @@
             "match": [
               "у вас есть бассейн",
               "а бассейн у вас есть?",
-              "у вас есть йога",
-              "есть бассейн?"
+              "есть бассейн?",
+              "а бассейн есть?"
             ]
           },
           {
@@ -8646,17 +8648,17 @@
     },
     "sentences": {
       "hi": {
-        "text": "Привет! Добро пожаловать в наш фитнес-клуб!",
+        "text": "Здравствуйте! Добро пожаловать в наш клуб!",
         "gloss": {
-          "en": "Hi! Welcome to our fitness club!",
-          "ko": "안녕하세요! 저희 피트니스 클럽에 오신 걸 환영해요!"
+          "en": "Hello! Welcome to our club!",
+          "ko": "안녕하세요! 저희 클럽에 오신 걸 환영해요!"
         }
       },
       "hi-easy": {
-        "text": "Здравствуйте! Вы хотите заниматься?",
+        "text": "Вы хотите заниматься у нас?",
         "gloss": {
-          "en": "Hello! Do you want to work out?",
-          "ko": "안녕하세요! 운동하시려고요?"
+          "en": "Do you want to train here?",
+          "ko": "여기서 운동하시려고요?"
         }
       },
       "month": {
@@ -8667,10 +8669,10 @@
         }
       },
       "month-easy": {
-        "text": "Один месяц — три тысячи.",
+        "text": "Один месяц стоит три тысячи рублей.",
         "gloss": {
-          "en": "One month — three thousand.",
-          "ko": "한 달에 3,000이요."
+          "en": "One month costs three thousand roubles.",
+          "ko": "한 달에 3,000루블이에요."
         }
       },
       "hours": {
@@ -8695,10 +8697,10 @@
         }
       },
       "what-easy": {
-        "text": "Зал? Бассейн? Йога?",
+        "text": "Зал, бассейн или йога?",
         "gloss": {
-          "en": "Gym? Pool? Yoga?",
-          "ko": "헬스요? 수영장? 요가?"
+          "en": "Gym, pool or yoga?",
+          "ko": "헬스요, 수영장이요, 요가요?"
         }
       },
       "pool": {
@@ -9061,10 +9063,10 @@
         }
       },
       "hi-easy": {
-        "text": "Вы на приём? Да?",
+        "text": "Вы записаны на приём?",
         "gloss": {
-          "en": "Are you here for an appointment? Yes?",
-          "ko": "진료 보러 오셨어요? 네?"
+          "en": "Do you have an appointment?",
+          "ko": "진료 예약하셨어요?"
         }
       },
       "name": {
@@ -9075,10 +9077,10 @@
         }
       },
       "name-easy": {
-        "text": "Ваше имя?",
+        "text": "Как ваше имя?",
         "gloss": {
-          "en": "Your name?",
-          "ko": "이름이요?"
+          "en": "What is your name?",
+          "ko": "이름이 어떻게 되세요?"
         }
       },
       "first": {
@@ -9089,10 +9091,10 @@
         }
       },
       "first-easy": {
-        "text": "Первый раз здесь? Да или нет?",
+        "text": "Вы здесь первый раз?",
         "gloss": {
-          "en": "First time here? Yes or no?",
-          "ko": "여기 처음이세요? 네, 아니요?"
+          "en": "Is it your first time here?",
+          "ko": "여기 처음이세요?"
         }
       },
       "form": {
@@ -9103,10 +9105,10 @@
         }
       },
       "form-easy": {
-        "text": "Вот анкета. Пишите здесь.",
+        "text": "Вот анкета. Напишите здесь, пожалуйста.",
         "gloss": {
-          "en": "Here's a form. Write here.",
-          "ko": "문진표 여기요. 여기에 쓰세요."
+          "en": "Here’s a form. Please write here.",
+          "ko": "문진표 여기요. 여기에 써 주세요."
         }
       },
       "help": {
@@ -9117,10 +9119,10 @@
         }
       },
       "help-easy": {
-        "text": "Ваша работа? Где?",
+        "text": "Где вы работаете?",
         "gloss": {
-          "en": "Your work? Where?",
-          "ko": "직장이요? 어디요?"
+          "en": "Where do you work?",
+          "ko": "어디서 일하세요?"
         }
       },
       "slow": {
@@ -9131,10 +9133,10 @@
         }
       },
       "slow-easy": {
-        "text": "Работа. Где?",
+        "text": "Где ваша работа?",
         "gloss": {
-          "en": "Work. Where?",
-          "ko": "일이요. 어디서요?"
+          "en": "Where is your work?",
+          "ko": "직장이 어디예요?"
         }
       },
       "wait": {
@@ -9145,10 +9147,10 @@
         }
       },
       "wait-easy": {
-        "text": "Доктор в три. Ждите здесь.",
+        "text": "Доктор — в три часа. Подождите здесь.",
         "gloss": {
-          "en": "The doctor at three. Wait here.",
-          "ko": "3시에 진료예요. 여기서 기다리세요."
+          "en": "The doctor is at three. Please wait here.",
+          "ko": "진료는 3시예요. 여기서 기다려 주세요."
         }
       },
       "end": {
@@ -9443,45 +9445,45 @@
         }
       },
       "floor": {
-        "text": "Какое красивое имя! На каком этаже живёте?",
+        "text": "Какое красивое имя! На каком этаже вы живёте?",
         "gloss": {
           "en": "What a lovely name! Which floor do you live on?",
           "ko": "이름 예쁘네요! 몇 층에 살아요?"
         }
       },
       "floor-easy": {
-        "text": "Ваш этаж? Третий? Пятый?",
+        "text": "Какой у вас этаж?",
         "gloss": {
-          "en": "Your floor? Third? Fifth?",
-          "ko": "몇 층이요? 3층? 5층?"
+          "en": "Which floor are you on?",
+          "ko": "몇 층이에요?"
         }
       },
       "from": {
-        "text": "А я на втором. Вы откуда к нам?",
+        "text": "А я на втором. А вы откуда?",
         "gloss": {
-          "en": "I'm on the second. Where have you come to us from?",
+          "en": "I’m on the second. And where are you from?",
           "ko": "나는 2층이에요. 어디서 왔어요?"
         }
       },
       "from-easy": {
-        "text": "Вы откуда? Какая страна?",
+        "text": "Из какой вы страны?",
         "gloss": {
-          "en": "Where are you from? Which country?",
-          "ko": "어디서 왔어요? 어느 나라요?"
+          "en": "Which country are you from?",
+          "ko": "어느 나라에서 왔어요?"
         }
       },
       "korea": {
-        "text": "Из Кореи! Как интересно. Если что нужно — звоните мне.",
+        "text": "Из Кореи! Как интересно. Ну, добро пожаловать!",
         "gloss": {
-          "en": "From Korea! How interesting. If you need anything, call me.",
-          "ko": "한국에서! 재밌네요. 필요한 거 있으면 연락해요."
+          "en": "From Korea! How interesting. Well, welcome!",
+          "ko": "한국에서! 재밌네요. 환영해요!"
         }
       },
       "korea-easy": {
-        "text": "Интересно! Я помогу, если что.",
+        "text": "Интересно! Добро пожаловать!",
         "gloss": {
-          "en": "Interesting! I'll help if needed.",
-          "ko": "재밌네요! 필요하면 도와줄게요."
+          "en": "Interesting! Welcome!",
+          "ko": "재밌네요! 환영해요!"
         }
       },
       "end": {
@@ -9826,10 +9828,10 @@
         }
       },
       "other-easy": {
-        "text": "Английский? Да или нет?",
+        "text": "Ты знаешь английский?",
         "gloss": {
-          "en": "English? Yes or no?",
-          "ko": "영어? 응, 아니?"
+          "en": "Do you know English?",
+          "ko": "영어 알아?"
         }
       },
       "fast": {
@@ -9840,10 +9842,10 @@
         }
       },
       "fast-easy": {
-        "text": "Я говорю быстро?",
+        "text": "Я быстро говорю, да?",
         "gloss": {
-          "en": "Am I talking fast?",
-          "ko": "내가 빨리 말해?"
+          "en": "I’m talking fast, right?",
+          "ko": "내가 빨리 말하지?"
         }
       },
       "slow": {
@@ -9854,10 +9856,10 @@
         }
       },
       "slow-easy": {
-        "text": "Английский — да? Нет?",
+        "text": "Ты говоришь по-английски?",
         "gloss": {
-          "en": "English — yes? No?",
-          "ko": "영어 — 응? 아니?"
+          "en": "Do you speak English?",
+          "ko": "영어 해?"
         }
       },
       "plan": {
@@ -10207,10 +10209,10 @@
         }
       },
       "which-easy": {
-        "text": "Синяя? Чёрная?",
+        "text": "Синюю или чёрную ручку?",
         "gloss": {
-          "en": "Blue? Black?",
-          "ko": "파란 거? 검은 거?"
+          "en": "A blue or a black pen?",
+          "ko": "파란 펜, 검은 펜?"
         }
       },
       "here": {
@@ -10235,10 +10237,10 @@
         }
       },
       "paper-easy": {
-        "text": "Бумага есть? Да или нет?",
+        "text": "У тебя есть бумага?",
         "gloss": {
-          "en": "Do you have paper? Yes or no?",
-          "ko": "종이 있어? 응, 아니?"
+          "en": "Do you have paper?",
+          "ko": "종이 있어?"
         }
       },
       "sheet": {
@@ -10249,17 +10251,17 @@
         }
       },
       "later": {
-        "text": "После урока. А чей это телефон на полу? Твой?",
+        "text": "Хорошо. А чей это телефон на полу? Твой?",
         "gloss": {
-          "en": "After class. And whose phone is that on the floor? Yours?",
-          "ko": "수업 끝나고. 근데 바닥에 있는 전화기 누구 거야? 네 거야?"
+          "en": "OK. And whose phone is that on the floor? Yours?",
+          "ko": "알았어. 근데 바닥에 있는 전화기 누구 거야? 네 거야?"
         }
       },
       "later-easy": {
-        "text": "Это твой телефон? Да?",
+        "text": "Это твой телефон?",
         "gloss": {
-          "en": "Is this your phone? Yes?",
-          "ko": "이거 네 전화기야? 그래?"
+          "en": "Is this your phone?",
+          "ko": "이거 네 전화기야?"
         }
       },
       "ok": {
@@ -10597,10 +10599,10 @@
         }
       },
       "see-easy": {
-        "text": "Что там? Кафе? Магазин?",
+        "text": "Что рядом? Кафе или магазин?",
         "gloss": {
-          "en": "What's there? A café? A shop?",
-          "ko": "거기 뭐 있어? 카페? 가게?"
+          "en": "What’s nearby? A café or a shop?",
+          "ko": "근처에 뭐 있어? 카페, 가게?"
         }
       },
       "fast": {
@@ -10611,10 +10613,10 @@
         }
       },
       "fast-easy": {
-        "text": "Там есть памятник? Да или нет?",
+        "text": "Там есть памятник?",
         "gloss": {
-          "en": "Is there a monument? Yes or no?",
-          "ko": "거기 동상 있어? 응, 아니?"
+          "en": "Is there a monument there?",
+          "ko": "거기 동상 있어?"
         }
       },
       "slow": {
@@ -10625,10 +10627,10 @@
         }
       },
       "slow-easy": {
-        "text": "Памятник. Да? Нет?",
+        "text": "Ты видишь памятник?",
         "gloss": {
-          "en": "A monument. Yes? No?",
-          "ko": "동상. 응? 아니?"
+          "en": "Can you see a monument?",
+          "ko": "동상 보여?"
         }
       },
       "got": {
@@ -10646,17 +10648,17 @@
         }
       },
       "time": {
-        "text": "Минуты через две.",
+        "text": "Через две минуты.",
         "gloss": {
-          "en": "In about two minutes.",
-          "ko": "한 2분 뒤에."
+          "en": "In two minutes.",
+          "ko": "2분 뒤에."
         }
       },
       "time-easy": {
-        "text": "Две минуты.",
+        "text": "Я буду через две минуты.",
         "gloss": {
-          "en": "Two minutes.",
-          "ko": "2분."
+          "en": "I’ll be there in two minutes.",
+          "ko": "2분 뒤에 갈게."
         }
       },
       "end": {
@@ -10951,10 +10953,10 @@
         }
       },
       "tired-easy": {
-        "text": "Кофе? Хочешь?",
+        "text": "Хочешь кофе?",
         "gloss": {
-          "en": "Coffee? Want one?",
-          "ko": "커피? 마실래?"
+          "en": "Do you want coffee?",
+          "ko": "커피 마실래?"
         }
       },
       "new": {
@@ -10965,10 +10967,10 @@
         }
       },
       "new-easy": {
-        "text": "Это твой ноутбук? Да?",
+        "text": "Это твой ноутбук?",
         "gloss": {
-          "en": "Is this your laptop? Yes?",
-          "ko": "이거 네 노트북이야? 그래?"
+          "en": "Is this your laptop?",
+          "ko": "이거 네 노트북이야?"
         }
       },
       "cool": {
@@ -10979,10 +10981,10 @@
         }
       },
       "cool-easy": {
-        "text": "Ты здесь весь день? Да или нет?",
+        "text": "Ты здесь весь день?",
         "gloss": {
-          "en": "Are you here all day? Yes or no?",
-          "ko": "하루 종일 여기 있어? 응, 아니?"
+          "en": "Are you here all day?",
+          "ko": "하루 종일 여기 있어?"
         }
       },
       "lunch": {
@@ -11145,7 +11147,7 @@
             "go": "t-sum",
             "match": [
               "помогите, пожалуйста",
-              "можете вы?",
+              "сделайте вы, пожалуйста",
               "сделайте, пожалуйста"
             ]
           },
@@ -11308,7 +11310,7 @@
     },
     "sentences": {
       "hi": {
-        "text": "Молодой человек, вам помочь?",
+        "text": "Извините, вам помочь?",
         "gloss": {
           "en": "Excuse me, do you need help?",
           "ko": "저기요, 도와드릴까요?"
@@ -11322,17 +11324,17 @@
         }
       },
       "card": {
-        "text": "Это ваша карта «Подорожник»? Пополнить?",
+        "text": "Это ваша карта? Хотите пополнить?",
         "gloss": {
-          "en": "Is that your Podorozhnik card? Top it up?",
-          "ko": "그거 포도로즈니크 카드예요? 충전하시게요?"
+          "en": "Is that your card? Do you want to top it up?",
+          "ko": "그거 손님 카드예요? 충전하시게요?"
         }
       },
       "card-easy": {
-        "text": "Карта. Деньги на карту? Да?",
+        "text": "Вы хотите положить деньги на карту?",
         "gloss": {
-          "en": "The card. Money onto the card? Yes?",
-          "ko": "카드요. 카드에 돈 넣으세요? 네?"
+          "en": "Do you want to put money on the card?",
+          "ko": "카드에 돈 넣으시려고요?"
         }
       },
       "press": {
@@ -11343,10 +11345,10 @@
         }
       },
       "press-easy": {
-        "text": "Сюда. Потом карту — сюда.",
+        "text": "Нажмите сюда. Потом положите карту сюда.",
         "gloss": {
-          "en": "Here. Then the card — here.",
-          "ko": "여기요. 그다음 카드를 여기요."
+          "en": "Press here. Then put the card here.",
+          "ko": "여기 누르세요. 그다음 카드를 여기 놓으세요."
         }
       },
       "slow": {
@@ -11357,24 +11359,24 @@
         }
       },
       "slow-easy": {
-        "text": "Нажмите. Потом карта.",
+        "text": "Сначала нажмите. Потом карту сюда.",
         "gloss": {
-          "en": "Press. Then the card.",
-          "ko": "누르세요. 그다음 카드요."
+          "en": "First press. Then the card here.",
+          "ko": "먼저 누르세요. 그다음 카드를 여기요."
         }
       },
       "sum": {
-        "text": "Сколько денег? Пятьсот? Тысяча?",
+        "text": "Сколько положить? Пятьсот или тысячу?",
         "gloss": {
-          "en": "How much money? Five hundred? A thousand?",
-          "ko": "얼마요? 500? 1,000?"
+          "en": "How much to put on? Five hundred or a thousand?",
+          "ko": "얼마 넣을까요? 500이요, 1,000이요?"
         }
       },
       "sum-easy": {
-        "text": "Пятьсот или тысяча?",
+        "text": "Пятьсот или тысячу рублей?",
         "gloss": {
-          "en": "Five hundred or a thousand?",
-          "ko": "500이요, 1,000이요?"
+          "en": "Five hundred or a thousand roubles?",
+          "ko": "500루블이요, 1,000루블이요?"
         }
       },
       "done": {
@@ -11716,10 +11718,10 @@
         }
       },
       "metro-easy": {
-        "text": "Вместе? Да?",
+        "text": "Пойдём вместе?",
         "gloss": {
-          "en": "Together? Yes?",
-          "ko": "같이? 응?"
+          "en": "Shall we go together?",
+          "ko": "같이 갈래?"
         }
       },
       "next": {
@@ -11751,17 +11753,17 @@
         }
       },
       "hw": {
-        "text": "Ой, а домашнее задание ты понял?",
+        "text": "Ой, а домашнее задание понятно?",
         "gloss": {
-          "en": "Oh, and did you understand the homework?",
-          "ko": "아, 근데 숙제는 이해했어?"
+          "en": "Oh, and is the homework clear?",
+          "ko": "아, 근데 숙제는 알겠어?"
         }
       },
       "hw-easy": {
-        "text": "Задание понятно? Да или нет?",
+        "text": "Ты понимаешь задание?",
         "gloss": {
-          "en": "Is the homework clear? Yes or no?",
-          "ko": "숙제 알겠어? 응, 아니?"
+          "en": "Do you understand the homework?",
+          "ko": "숙제 이해돼?"
         }
       },
       "hw-help": {
