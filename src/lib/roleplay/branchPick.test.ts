@@ -72,3 +72,11 @@ test("튜터 이름: 학습 언어 문장·받는 문구엔 그 언어 글자, �
   assert.ok(!Object.values(bank).some((x) => x.text.includes("Ploy")));
   assert.equal(sceneTutor("es", "m", "Mateo").native, "Mateo");
 });
+
+test("짧은 문구가 긴 말을 삼키면 규칙을 믿지 않는다(모델에 넘김)", () => {
+  const scene = scenes("th").find((s) => s.id === "th-s1-01")!;
+  const node = Object.values(scene.nodes).find((n) => n.type === "learner")!;
+  // 인사 + 주문인데 인사 문구 하나에 걸리는 말 — 규칙 결과 없음.
+  const picked = ruleBranch(scene, node.id, "สวัสดีค่ะ เอากาแฟหนึ่งแก้ว", 0.6);
+  assert.notEqual(picked?.go, node.type === "learner" ? node.expect[1]!.go : "", "인사만 가지로 보내지 않음");
+});

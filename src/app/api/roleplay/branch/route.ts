@@ -69,6 +69,6 @@ export async function POST(request: NextRequest) {
   const pick = readPick(reply, node.expect.length);
   const result: BranchPick = pick === null ? NONE : { go: node.expect[pick]!.go, branch: pick, by: "model" };
   // 점검용: 머리 x-branch-debug면 모델 답(학습자 말은 없음)을 같이.
-  const debug = request.headers.get("x-branch-debug") === "1" ? { reply: reply.slice(0, 200), failure, rev: "b2" } : {};
+  const debug = request.headers.get("x-branch-debug") === "1" ? { reply: reply.slice(0, 200), failure, rev: "b3" } : {};
   return jsonWithCors(request, { ...result, ...debug });
 }

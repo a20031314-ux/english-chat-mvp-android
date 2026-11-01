@@ -9,7 +9,8 @@
  */
 import { learningLanguageName } from "../learningLanguages.ts";
 import { isSceneLearner, toScenario, type CallScene, type SceneLearnerNode, type SceneTutor } from "./callScene.ts";
-import { judge } from "./session.ts";
+import { judge, orderedPhraseScore, phraseScore } from "./session.ts";
+import { segmentWords } from "../wordSegments.ts";
 
 /** 가지마다 모델에 보여 줄 예시 수. 다 보여 주면 글자 겹침으로 고르는 버릇이 생긴다. */
 const EXAMPLES = 3;
@@ -49,8 +50,18 @@ export function ruleBranch(scene: CallScene, nodeId: string, heard: string, stri
   const got = judge(node, heard, strictness);
   if (!got) return null;
   const branch = node.expect.findIndex((one) => one.go === got.go);
+  // 짧은 문구가 긴 말을 삼킨 경우(인사 "hola"가 "hola, un coffee por favor"를 "인사만"으로) — 규칙을 믿지 않고 모델에(운영 2026-11-02).
+  const heardWords = segmentWords(heard, scene.language).length;
+  const matched = node.expect[branch]!.match.filter((phrase) =>
+    (node.expect[branch]!.inOrder ? orderedPhraseScore(phrase, heard) : phraseScore(phrase, heard)) >= strictness,
+  );
+  const covered = Math.max(0, ...matched.map((phrase) => segmentWords(phrase, scene.language).length));
+  if (heardWords >= 3 && covered / heardWords < RULE_COVER) return null;
   return { go: got.go, branch, by: "rule" };
 }
+
+/** 규칙으로 맞은 문구가 들은 말의 이만큼은 덮어야 규칙을 믿는다. */
+export const RULE_COVER = 0.5;
 
 export function learnerNode(scene: CallScene, nodeId: string): SceneLearnerNode | null {
   const node = scene.nodes[nodeId];
