@@ -649,7 +649,7 @@ Get back to your list as soon as it feels natural.`
 ${request.context.trim()}`
       : "",
     request.missed
-      ? `They did not catch your last line and pressed "I didn't catch that". Say the same thing again, more simply: shorter, more common words, one idea — the way a person repeats themselves on a bad phone line. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was. Leave "note", "better" and "meant" empty, and give "stuck" as the assessment.`
+      ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty. Leave "note", "better" and "meant" empty, and give "stuck" as the assessment.`
       : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
