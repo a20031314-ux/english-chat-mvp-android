@@ -42,7 +42,8 @@ E|<how the form changes, one short line (or "-")>
 E|<one common learner mistake and the right form, one short line>`;
   const completion = await completeChat(client, "translate", {
     temperature: 0.5,
-    max_tokens: 1200,
+    // 모델이 먼저 생각하면 그 몫도 여기서 나가 글이 잘렸다(운영 2026-11-01: 줄 중간에서 끊기거나 빈 답) — 넉넉히.
+    max_tokens: 4000,
     messages: [
       {
         role: "system",
