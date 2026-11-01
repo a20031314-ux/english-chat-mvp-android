@@ -22,13 +22,36 @@ export async function voxtralVoices(offset = 0): Promise<unknown> {
   return { status: response.status, body };
 }
 
-/** 글을 읽은 소리(wav). 실패하면 status와 Mistral의 답을 그대로. */
-export async function voxtralSpeech(input: { text: string; voice: string; model?: string }): Promise<{ ok: true; wav: Buffer; ms: number } | { ok: false; status: number; error: unknown }> {
+/** 점검: 흘려 받기(stream) 답의 앞부분을 글 그대로 — 사건 이름·자료 모양을 보려고. */
+export async function voxtralRawStream(input: { text: string; voice?: string; refAudio?: string; format?: string }): Promise<{ status: number; contentType: string | null; head: string; bytes: number; firstMs: number; ms: number }> {
+  const started = Date.now();
+  const response = await fetch(`${BASE}/speech`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json", Accept: "text/event-stream" },
+    body: JSON.stringify({ model: VOXTRAL_TTS_MODEL, input: input.text, ...(input.refAudio ? { ref_audio: input.refAudio } : { voice_id: input.voice }), response_format: input.format || "pcm", stream: true }),
+  });
+  let head = "";
+  let bytes = 0;
+  let firstMs = 0;
+  const reader = response.body?.getReader();
+  const decoder = new TextDecoder();
+  while (reader) {
+    const next = await reader.read();
+    if (next.done) break;
+    if (!firstMs) firstMs = Date.now() - started;
+    bytes += next.value.byteLength;
+    if (head.length < 3000) head += decoder.decode(next.value, { stream: true });
+  }
+  return { status: response.status, contentType: response.headers.get("content-type"), head: head.slice(0, 3000), bytes, firstMs, ms: Date.now() - started };
+}
+
+/** 글을 읽은 소리(wav). 실패하면 status와 Mistral의 답을 그대로. `refAudio`(mp3·wav base64)면 그 목소리를 흉내 냄(저장 안 함). */
+export async function voxtralSpeech(input: { text: string; voice: string; model?: string; refAudio?: string }): Promise<{ ok: true; wav: Buffer; ms: number } | { ok: false; status: number; error: unknown }> {
   const started = Date.now();
   const response = await fetch(`${BASE}/speech`, {
     method: "POST",
     headers: { Authorization: `Bearer ${key()}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: input.model || VOXTRAL_TTS_MODEL, input: input.text, voice_id: input.voice, response_format: "wav" }),
+    body: JSON.stringify({ model: input.model || VOXTRAL_TTS_MODEL, input: input.text, ...(input.refAudio ? { ref_audio: input.refAudio } : { voice_id: input.voice }), response_format: "wav" }),
   });
   const body = (await response.json().catch(() => null)) as { audio_data?: unknown } | null;
   if (!response.ok || !body || typeof body.audio_data !== "string") return { ok: false, status: response.status, error: body };

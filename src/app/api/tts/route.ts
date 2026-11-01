@@ -6,7 +6,7 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
-import { voxtralConfigured, voxtralSpeech, voxtralVoices } from "@/lib/server/voxtralSpeech";
+import { voxtralConfigured, voxtralRawStream, voxtralSpeech, voxtralVoices } from "@/lib/server/voxtralSpeech";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
@@ -78,6 +78,7 @@ async function synthesize(
   rawLang: string,
   rawVoice?: unknown,
   rawTutor?: unknown,
+  trialRef?: unknown,
 ) {
   const client = getOpenAIClient();
   if (!client) {
@@ -114,7 +115,11 @@ async function synthesize(
   if (trialValue(request, "x-tts-engine") === "voxtral") {
     if (!voxtralConfigured()) return jsonWithCors(request, { error: "MISSING_MISTRAL_KEY" }, { status: 503 });
     if (trialValue(request, "x-tts-voxtral-voices") === "1") return jsonWithCors(request, await voxtralVoices(Number(trialValue(request, "x-tts-voxtral-offset")) || 0));
-    const made = await voxtralSpeech({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), model: trialValue(request, "x-tts-voxtral-model") });
+    const refAudio = typeof trialRef === "string" && trialRef ? trialRef : undefined;
+    if (trialValue(request, "x-tts-voxtral-stream")) {
+      return jsonWithCors(request, await voxtralRawStream({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), refAudio, format: trialValue(request, "x-tts-voxtral-stream") }));
+    }
+    const made = await voxtralSpeech({ text: spoken, voice: trialValue(request, "x-tts-voxtral-voice"), model: trialValue(request, "x-tts-voxtral-model"), refAudio });
     if (!made.ok) return jsonWithCors(request, { engine: "voxtral", status: made.status, error: made.error }, { status: 502 });
     return jsonWithCors(request, { engine: "voxtral", spoken, ms: made.ms, wavBase64: made.wav.toString("base64") });
   }
@@ -232,7 +237,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  let body: { text?: unknown; lang?: unknown; voice?: unknown; tutor?: unknown };
+  let body: { text?: unknown; lang?: unknown; voice?: unknown; tutor?: unknown; refAudio?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -241,5 +246,6 @@ export async function POST(request: NextRequest) {
 
   const text = typeof body.text === "string" ? body.text : "";
   const lang = typeof body.lang === "string" ? body.lang : "en-US";
-  return synthesize(request, text, lang, body.voice, body.tutor);
+  // refAudio: 점검 사용자만(x-tts-engine: voxtral일 때만 읽음) — 목소리 흉내 비교.
+  return synthesize(request, text, lang, body.voice, body.tutor, body.refAudio);
 }
