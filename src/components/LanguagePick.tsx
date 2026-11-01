@@ -12,12 +12,14 @@ import {
   SUPPORTED_LEARNING_LANGUAGES,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
+import { readMyLanguages, saveMyLanguages, toggleMyLanguage } from "@/lib/myLanguages";
 
 /**
  * 배울 언어·앱 언어 고르기(사용자 2026-10-31).
- * - 처음 설치: 배울 언어 국기만(`FirstLanguagePick`). 앱 언어는 묻지 않고 기기 언어로(lib/firstLanguage.ts).
+ * - 처음 설치: 배울 언어 국기만(`FirstLanguagePick`) — 여러 개 눌러 고르고 "시작"(2026-11-02 여러 개). 앱 언어는 묻지 않고 기기 언어로(lib/firstLanguage.ts).
  * - 그 뒤: 상단바의 지금 배우는 언어 국기 하나 → 언어 설정 시트(`LanguageSettingsButton`).
- *   배울 언어는 바꾸기 전에 한 번 확인, 앱 언어는 바로. 바꾸는 횟수 제한 없음, 학습 기록은 언어마다 따로 남아 돌아오면 이어진다.
+ *   맨 위 줄 = 내 언어(누르면 그 언어로 바로), 아래 국기 모음 = 내 언어에 더하기·빼기(✓), 앱 언어는 바로.
+ *   목록은 lib/myLanguages.ts(이 폰). 학습 기록은 언어마다 따로 남아 돌아오면 이어진다.
  */
 
 /** 앱 언어와 같은 언어는 맨 뒤로(배울 언어로 고르는 일이 드묾). */
@@ -30,11 +32,14 @@ function LanguageGrid({
   locale,
   codes,
   current,
+  checked,
   onPick,
 }: {
   locale: string;
   codes: LearningLanguageCode[];
   current: string | null;
+  /** 여러 개 고르기: 고른 언어에 ✓. */
+  checked?: readonly string[];
   onPick: (code: LearningLanguageCode) => void;
 }) {
   return (
@@ -42,7 +47,8 @@ function LanguageGrid({
       {codes.map((code) => {
         const lang = getLearningLanguage(code);
         const local = learningLanguageUiLabel(code, locale);
-        const on = current === code;
+        const ticked = checked?.includes(code) ?? false;
+        const on = current === code || ticked;
         return (
           <li key={code}>
             <button
@@ -50,10 +56,15 @@ function LanguageGrid({
               onClick={() => onPick(code)}
               aria-pressed={on}
               data-lang-pick={code}
-              className={`flex w-full flex-col items-center gap-1.5 rounded-xl border px-1 py-3 transition ${
+              className={`relative flex w-full flex-col items-center gap-1.5 rounded-xl border px-1 py-3 transition ${
                 on ? "border-platinum bg-white/10" : "border-line bg-surface hover:bg-white/5"
               }`}
             >
+              {ticked ? (
+                <span aria-hidden className="absolute end-1.5 top-1.5 rounded-full bg-platinum px-1.5 text-meta font-semibold text-canvas">
+                  ✓
+                </span>
+              ) : null}
               <LearningLanguageFlag language={lang} big />
               <span className="text-note font-medium text-ink" dir={learningLanguageTextDir(code)}>
                 {lang.nativeLabel}
@@ -67,7 +78,7 @@ function LanguageGrid({
   );
 }
 
-/** 처음 설치에 한 번: 배울 언어 국기를 누르면 바로 그 언어로 시작. */
+/** 처음 설치에 한 번: 배울 언어 국기를 여러 개 눌러 고르고 시작 — 처음 누른 언어로 시작. */
 export function FirstLanguagePick({
   ui,
   locale,
@@ -78,6 +89,7 @@ export function FirstLanguagePick({
   onPicked: () => void;
 }) {
   const { setTargetLanguage } = useLearningLanguage();
+  const [picked, setPicked] = useState<LearningLanguageCode[]>([]);
   return (
     <BodyLayer>
       <div
@@ -88,7 +100,7 @@ export function FirstLanguagePick({
         aria-labelledby="first-language-title"
         data-first-language
       >
-        <div className="mx-auto w-full max-w-md px-4 pb-10 pt-12">
+        <div className="mx-auto w-full max-w-md px-4 pb-28 pt-12">
           <h1 id="first-language-title" className="mb-6 text-center text-heading font-semibold text-ink">
             {ui.learnPickTitle}
           </h1>
@@ -96,11 +108,31 @@ export function FirstLanguagePick({
             locale={locale}
             codes={ordered(locale)}
             current={null}
-            onPick={(code) => {
-              setTargetLanguage(code);
+            checked={picked}
+            onPick={(code) =>
+              setPicked((list) => (list.includes(code) ? list.filter((item) => item !== code) : [...list, code]))
+            }
+          />
+        </div>
+        <div className="fixed inset-x-0 bottom-0 border-t border-line bg-canvas px-4 py-3">
+          <button
+            type="button"
+            disabled={!picked.length}
+            data-first-language-start
+            onClick={() => {
+              const [first] = picked;
+              if (!first) return;
+              saveMyLanguages(picked);
+              setTargetLanguage(first);
               onPicked();
             }}
-          />
+            className="mx-auto flex w-full max-w-md items-center justify-center gap-1.5 rounded-xl bg-platinum px-3 py-3 text-body font-semibold text-canvas hover:bg-platinum-hover disabled:opacity-40"
+          >
+            {picked.map((code) => (
+              <LearningLanguageFlag key={code} language={getLearningLanguage(code)} />
+            ))}
+            <span className="ms-1">{ui.packStart}</span>
+          </button>
         </div>
       </div>
     </BodyLayer>
@@ -119,16 +151,21 @@ export function LanguageSettingsButton({
 }) {
   const { targetLanguage, targetLanguageInfo, setTargetLanguage } = useLearningLanguage();
   const [open, setOpen] = useState(false);
-  const [asking, setAsking] = useState<LearningLanguageCode | null>(null);
-  const close = () => {
-    setOpen(false);
-    setAsking(null);
+  const [mine, setMine] = useState<LearningLanguageCode[]>([]);
+  const close = () => setOpen(false);
+  const toggle = (code: LearningLanguageCode) => {
+    const next = toggleMyLanguage(mine, code, targetLanguage);
+    setMine(next);
+    saveMyLanguages(next);
   };
   return (
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setMine(readMyLanguages(targetLanguage));
+          setOpen(true);
+        }}
         aria-label={ui.languageSettings}
         title={ui.languageSettings}
         data-language-settings
@@ -153,39 +190,31 @@ export function LanguageSettingsButton({
                   {ui.accountClose}
                 </button>
               </div>
-              {asking ? (
-                <div className="mb-3 rounded-xl border border-line bg-surface-sunk p-3" data-language-confirm>
-                  <p className="flex items-center gap-2 text-body text-ink">
-                    <LearningLanguageFlag language={getLearningLanguage(asking)} />
-                    {ui.learnSwitchAsk.replace("{lang}", learningLanguageUiLabel(asking, locale))}
-                  </p>
-                  <div className="mt-3 flex gap-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setTargetLanguage(asking);
-                        close();
-                      }}
-                      className="flex-1 rounded-xl bg-platinum px-3 py-2 text-body font-medium text-canvas hover:bg-platinum-hover"
-                    >
-                      {ui.learnSwitchYes}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setAsking(null)}
-                      className="flex-1 rounded-xl border border-line px-3 py-2 text-body text-slate-200 hover:bg-white/5"
-                    >
-                      {ui.accountCancel}
-                    </button>
-                  </div>
-                </div>
-              ) : null}
-              <LanguageGrid
-                locale={locale}
-                codes={ordered(locale)}
-                current={asking ?? targetLanguage}
-                onPick={(code) => setAsking(code === targetLanguage ? null : code)}
-              />
+              <ul className="mb-4 flex flex-wrap gap-2" data-my-languages>
+                {mine.map((code) => {
+                  const active = code === targetLanguage;
+                  return (
+                    <li key={code}>
+                      <button
+                        type="button"
+                        aria-pressed={active}
+                        data-my-language={code}
+                        onClick={() => {
+                          if (!active) setTargetLanguage(code);
+                          close();
+                        }}
+                        className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-2 text-body ${
+                          active ? "border-platinum bg-white/10 font-semibold text-ink" : "border-line text-slate-300 hover:bg-white/5"
+                        }`}
+                      >
+                        <LearningLanguageFlag language={getLearningLanguage(code)} />
+                        <span dir={learningLanguageTextDir(code)}>{getLearningLanguage(code).nativeLabel}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+              <LanguageGrid locale={locale} codes={ordered(locale)} current={null} checked={mine} onPick={toggle} />
               <h2 className="mb-3 mt-6 text-title font-semibold text-ink">{ui.uiLanguageLabel}</h2>
               <LanguageGrid
                 locale={locale}
