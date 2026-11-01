@@ -134,6 +134,7 @@
 | qbankOffer | 0.1원 | 1 | claude-haiku-5-5 300/60 토큰 (기능 translate) | 가정 |
 | iconUpload | 0.1원 | 3 | 한 번 고정값 | 가정 |
 | mediaUpload | 0.1원 | 1 | 한 번 고정값 | 가정 |
+| roleplayBranch | 0.1원 | 1 | claude-haiku-5-5 450/10 토큰 (기능 roleplayBranch) | 가정 |
 | roomGameJudge | 0원 | 1 | claude-haiku-5-5 220/20 토큰 (기능 roomGame) | 가정 |
 | quizTypedCheck | 0원 | 1 | claude-haiku-5-5 250/10 토큰 (기능 scriptJudge) | 가정 |
 | randomFrame | 0원 | 1 | 한 번 고정값 | 가정 |
@@ -168,6 +169,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | roleplayTutor | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
 | roleplayPractice | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | scriptJudge | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
+| roleplayBranch | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | scriptRecheck | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | scriptChoices | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | ask | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
@@ -194,14 +196,14 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 48개 중 48개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 49개 중 49개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.0131 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 64개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, qbankGrow, qbankSeed, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 65개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, qbankGrow, qbankSeed, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, roleplayBranch, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 
