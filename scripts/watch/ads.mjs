@@ -126,7 +126,8 @@ function scenario() {
   }
   // 모두 넣으면: 같은 alt(서로 바꿔 끼우는 안) 중에는 1,000명당이 가장 좋은 것 하나만.
   const chosen = new Map();
-  for (const p of plan.filter((x) => x.econ)) {
+  // risky(정책·원칙상 권하지 않음 — 숫자만 보여 줌)는 합계에 넣지 않는다.
+  for (const p of plan.filter((x) => x.econ && !x.risky)) {
     const id = p.alt ?? p.what;
     if (!chosen.has(id) || p.per1000Mid > chosen.get(id).per1000Mid) chosen.set(id, p);
   }
@@ -166,7 +167,7 @@ function render() {
     lines.push("| 무엇 | 어디 | 왜(원칙) | 1,000명당 월(중간) | 무료 한 사람 | 바로/빌드 | 근거 |", "|---|---|---|---|---|---|---|");
     for (const p of plan) {
       const money = typeof p.per1000Mid === "number" ? won(p.per1000Mid) : "—";
-      lines.push(`| ${p.severity === "notify" ? "**" : ""}${p.kind}: ${p.what}${p.severity === "notify" ? "**" : ""} | ${p.where ?? "—"} | ${p.why ?? "—"} | ${money}${p.alt ? ` (택1: ${p.alt})` : ""} | ${typeof p.freePersonMid === "number" ? won(p.freePersonMid) : "—"} | ${p.appBuild ? "앱 빌드" : "서버 바로"} | ${p.basis ?? "—"} |`);
+      lines.push(`| ${p.severity === "notify" ? "**" : ""}${p.kind}: ${p.what}${p.severity === "notify" ? "**" : ""} | ${p.where ?? "—"} | ${p.why ?? "—"} | ${money}${p.alt ? ` (택1: ${p.alt})` : ""}${p.risky ? " (권하지 않음 — 합계 제외)" : ""} | ${typeof p.freePersonMid === "number" ? won(p.freePersonMid) : "—"} | ${p.appBuild ? "앱 빌드" : "서버 바로"} | ${p.basis ?? "—"} |`);
       if (p.severity === "notify" || (typeof p.per1000Mid === "number" && Math.abs(p.per1000Mid) >= ADS_ALERT_PER_1000)) notify.push(`${p.kind}: ${p.what}${typeof p.per1000Mid === "number" ? ` (1,000명당 월 ${won(p.per1000Mid)})` : ""}`);
     }
   }

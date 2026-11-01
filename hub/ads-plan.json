@@ -130,5 +130,105 @@
   },
   "per1000Mid": 13924,
   "freePersonMid": 14
+ },
+ {
+  "kind": "add",
+  "what": "Quizbank 문제 사이 — 연속 10문제(한 묶음)를 푼 뒤 '다음'을 누를 때 전면 한 번(3분 간격, 문제 도중·답 보기 중엔 없음)",
+  "where": "My 탭 `my` · studyMap/InlineQuiz.tsx(묶음 경계 — 다음 묶음을 받을 때) · lib/ads.ts 새 순간 quizBreak · scripts/ads-map.mjs MOMENTS",
+  "why": "AdMob 권장 '콘텐츠 사이의 논리적 쉼(단계·레벨)' — Quizbank는 끝없이 이어지는 문제라 묶음 경계가 그 쉼. 매 문제마다는 '사용자 행동마다' 금지에 걸림(두 번 행동에 한 번까지)",
+  "appBuild": true,
+  "basis": "대본을 쓰는 날 Quizbank 묶음 경계를 넘는 것 약 0.8번 어림(퀴즈 끝 0.3번과 별개)",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "interstitial",
+     "perActiveDay": 0.8,
+     "when": "my"
+    }
+   ]
+  },
+  "per1000Mid": 96539,
+  "freePersonMid": 99
+ },
+ {
+  "kind": "add",
+  "what": "단계가 올라갈 때(단계 시험 통과 축하 화면을 닫을 때) 전면 한 번",
+  "where": "My 탭 `my` · studyMap/CheckupPlayer(kind stage 통과)·StageCheck",
+  "why": "가장 뚜렷한 '레벨' 쉼 — 드묾(한 달 0~1번)이라 수입은 작음",
+  "appBuild": true,
+  "basis": "한 달 0~1번 — 계산 생략",
+  "severity": "report"
+ },
+ {
+  "kind": "add",
+  "what": "하단 탭을 열 때 전면 — 탭 전환 세 번에 한 번, 3분 간격",
+  "where": "앱 틀 `shell` · AppHome.tsx 탭 바꿀 때",
+  "why": "AdMob: 클릭할 때마다 금지, '두 번 행동에 한 번까지'는 허용이지만 탭은 내비게이션이라 '핵심 콘텐츠 이동을 막는 광고'로 볼 위험 + 체감 나쁨. 같은 수입은 탭 목록의 네이티브·앱 오프닝(돌아올 때)이 원칙에 맞음",
+  "risky": true,
+  "appBuild": true,
+  "basis": "쓰는 날 탭 전환으로 광고 1번 어림",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "interstitial",
+     "perActiveDay": 1,
+     "when": "any"
+    }
+   ]
+  },
+  "per1000Mid": 120674,
+  "freePersonMid": 124
+ },
+ {
+  "kind": "add",
+  "what": "보이스룸(공개 Room)에 들어갈 때 전면",
+  "where": "Room 탭 `room` · rooms/RoomsScreen.tsx 방 들어가기",
+  "why": "권하지 않음 — AdMob '콘텐츠가 열린 직후·과제에 집중할 때 뜨는 광고' 금지에 가깝고, 실시간 음성 방이라 광고 소리·마이크가 겹침, 다른 사람과 대화가 이미 시작됨. 대신 나올 때 전면(roomLeave, 있음)·로비 네이티브(있음)",
+  "risky": true,
+  "appBuild": true,
+  "basis": "방을 쓰는 날 들어갈 때 1번",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "interstitial",
+     "perActiveDay": 1,
+     "when": "room"
+    }
+   ]
+  },
+  "per1000Mid": 30506,
+  "freePersonMid": 31
+ },
+ {
+  "kind": "add",
+  "what": "보이스룸 로비 → 방 목록을 새로 고칠 때 네이티브 하나 더(두 번째 방 뒤에 이어 다섯 번째 뒤)",
+  "where": "Room 탭 `room` · rooms/RoomsScreen.tsx",
+  "why": "들어가기 전 둘러보는 목록 — 원칙에 맞는 '방 들어가기 타이밍' 광고",
+  "appBuild": true,
+  "basis": "방을 쓰는 날 로비 목록 0.5번 더",
+  "severity": "report",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.5,
+     "when": "room"
+    }
+   ]
+  },
+  "per1000Mid": 5867,
+  "freePersonMid": 6
+ },
+ {
+  "kind": "remove",
+  "what": "(검토만) 수업 안 단계 사이(설명 → 퀴즈 → 대화)·단어 시험·정기 시험 시작 전·통화 정리 → 수업으로 넘어갈 때는 넣지 않음",
+  "where": "studyMap/FrameLesson.tsx 단계 · CheckupPlayer 시작 · roleplay/CallRecap",
+  "why": "수업 도중(과제에 집중) · 콘텐츠 시작 직전 · 통화 끝 전면 바로 뒤(연속 전면 금지) — AdMob 금지 항목",
+  "appBuild": false,
+  "basis": "넣을 자리 아님 — 기록용",
+  "severity": "report"
  }
 ]
