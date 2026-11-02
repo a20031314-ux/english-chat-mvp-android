@@ -1,6 +1,6 @@
 /**
  * 표현 카드(2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 1번 어휘 탭에 섞기"): 단계마다 그 단계 핵심 표현(stages expressions)에
- * 낱말 카드(server/wordCards.ts)와 같은 꼴 — 예문 한 줄·그 표현 꼴·뜻·예문 뜻 — 을 한 번 만들어 모두가 같이 쓴다(`exprcards:v1`).
+ * 낱말 카드(server/wordCards.ts)와 같은 꼴 — 예문 한 줄·그 표현 꼴·뜻·예문 뜻 — 을 한 번 만들어 모두가 같이 쓴다(`exprcards:v2`).
  * 앱 언어가 영어가 아니면 뜻 둘을 옮겨 둔다. 학습자 글 없음.
  * 검사: 예문에 표현이 그대로(낱말 속이 아니게, quiz.ts pieceOf) 들고, 짧고, 뜻이 비어 있지 않고 표현을 그대로 베끼지 않은 줄만. 못 지킨 표현은 카드 없이 빠진다.
  */
@@ -38,7 +38,7 @@ async function makeCards(language: string, expressions: readonly string[]): Prom
     messages: [
       {
         role: "system",
-        content: `You write flashcards for a learner of ${name}. Each numbered item is a fixed ${name} expression that people say as a whole. For each one, write one short, natural sentence a person would really say in everyday conversation (4 to 12 words) that contains the expression exactly as given, letter for letter (capital letters may differ). Use simple, common words around it. No names of real people, brands or places, nothing rude. Then give the English meaning of the expression as people use it (2 to 8 words, the sense in conversation, not a word-by-word gloss) and an English translation of the sentence.
+        content: `You write flashcards for a learner of ${name}. Each numbered item is a fixed ${name} expression that people say as a whole. For each one, write what ONE person says in ONE turn of an everyday conversation (4 to 12 words) that contains the expression exactly as given, letter for letter (capital letters may differ). Never put two speakers in it: if the expression is normally a reply (like thanks, agreeing or answering), write only that reply, starting with the expression and adding a few words after it. The words around the expression must fit it naturally. Use simple, common words around it. No names of real people, brands or places, nothing rude. Then give the English meaning of the expression as people use it (2 to 8 words, the sense in conversation, not a word-by-word gloss) and a faithful, natural English translation of the sentence that keeps its meaning.
 Answer with exactly one line per item, in the same order, as <number>|<sentence>|<English meaning of the expression>|<English translation of the sentence>, and nothing else.`,
       },
       { role: "user", content: expressions.map((text, index) => `${index + 1}|${text}`).join("\n") },
@@ -70,12 +70,12 @@ export async function expressionCards(language: string, stage: number, ui: strin
     .filter((one) => one.stage === stage)
     .map((one) => one.text);
   if (!wanted.length) return [];
-  const key = `exprcards:v1:${language}:${stage}`;
+  const key = `exprcards:v2:${language}:${stage}`;
   let cards = await kvGetJson<WordCard[]>(key).catch(() => null);
   const have = new Set((cards ?? []).map((card) => card.w));
   const missing = wanted.filter((text) => !have.has(text));
   // 처음이거나, 빠진 표현이 남았으면(검사에서 버려진 것) 그것만 하루 한 번 다시.
-  const retryKey = `exprcards:v1:retry:${language}:${stage}`;
+  const retryKey = `exprcards:v2:retry:${language}:${stage}`;
   const retried = missing.length && cards?.length ? await kvGetJson<number>(retryKey).catch(() => null) : null;
   if (!cards?.length || (missing.length && !retried)) {
     onMake?.();
@@ -95,7 +95,7 @@ export async function expressionCards(language: string, stage: number, ui: strin
   cards = cards.filter((card) => order.has(card.w)).sort((a, b) => order.get(a.w)! - order.get(b.w)!);
   if (ui === "en") return cards;
   const lines = cards.flatMap((card) => [card.gloss, card.exampleGloss]);
-  const moved = await translated(lines, ui, uiName, `exprcards:v1:${language}:${stage}:${ui}:${textsFingerprint(lines)}`, onMake);
+  const moved = await translated(lines, ui, uiName, `exprcards:v2:${language}:${stage}:${ui}:${textsFingerprint(lines)}`, onMake);
   if (!moved) return cards;
   return cards.map((card, index) => ({ ...card, gloss: moved[index * 2]!, exampleGloss: moved[index * 2 + 1]! }));
 }

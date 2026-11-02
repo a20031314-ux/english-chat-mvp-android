@@ -11,7 +11,7 @@ import { deckExpressions } from "@/lib/curriculum/expressionDeck";
 import { registerQuizSources, type QuizSource } from "@/lib/curriculum/quiz";
 
 type Card = { w: string; piece: string; example: string; gloss: string; exampleGloss: string };
-const CACHE = "exprCards.v1";
+const CACHE = "exprCards.v2";
 
 function readCached(language: string, ui: string, stage: number): Card[] | null {
   try {
