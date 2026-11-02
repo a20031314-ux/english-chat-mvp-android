@@ -89,7 +89,7 @@
 | gpt-4o-mini (지금) | $0.15 / $0.60 | 비교 기준 |
 | **gpt-6-luna** (2026-09-22 출시) | $0.10 / $0.50 | OpenAI 공식 대체이고 지금보다 쌉니다. 교정 품질은 아직 시험하지 않았습니다. |
 | gpt-5.6-luna | $0.20 / $1.20 | gpt-4.1-nano의 대체 |
-| **gpt-6.1-terra** (2026-10-26 출시) | $1 / $5 (제3자 기준) | Sonnet 5.5($2/$10) 자리 후보 — 2026-11-01 "권함"(`hub/model-swap.md`). gpt-5.6-terra($2/$12)보다도 쌈 |
+| **gpt-6.1-terra** (2026-10-26 출시) | $1 / $5 (제3자 기준) | Sonnet 5.5($2/$10) 자리 후보 — 2026-11-01 "권함" → 11-02 "지켜봄"(대본 원가가 줄어 +265원, `hub/model-swap.md`). gpt-5.6-terra($2/$12)보다도 쌈 |
 | Gemini 3.8 Flash (2026-09-02) | $0.75 / $3.75 → 2027-01-01부터 $1.50 / $7.50 | 운영 길 없음(키 없음) — 시험 불가 |
 | Claude Haiku 5.5 | 한 턴 약 0.49원(지금 0.67원) | 10-21 시험에서 교정 큰 문제 영어 1·한국어 2(지금은 2·6). **10-22 실제 API·196명 14개 언어: 큰 문제 9/630(1.4%) vs 지금 52/630(8.3%)**, 대신 섞은 낱말 안 바꿈·응답 2.8배 느림(`hub/drafts/haiku-live-2026-10-22.md`). |
 | Gemini 2.5 Flash-Lite / 3.1 Flash-Lite | $0.10/$0.40 · $0.25/$1.50 | 품질은 시험하지 않았습니다(키 없음). 3.6·3.7 Flash는 2027-01-01부터 가격이 두 배가 됩니다. 2026-10-08 3.7·3.5 Flash 종료 → 3.8 Flash로 자동 연결(가격 확인 못 함). |
@@ -123,6 +123,8 @@
 | Next.js | 웹·API 틀 | — | `next` |
 
 ## 3. 새 소식 (예약 작업이 위에 더함)
+
+- 2026-11-02 · 종료일·가격 바뀐 것 없음, **gpt-6.1-terra 권함 → 지켜봄**: 대본 줄이 채팅 입력이 되며(11-01) Sonnet 다시 보기 원가가 줄어, Sonnet 6개 기능 → gpt-6.1-terra가 많이 쓰는 사람 한 달 +529 → +265원(500원 기준 아래), 가입자 1,000명당 월 +123,007원. 품질 시험 결과(11-01)는 그대로. 새로 쓰기 시작한 목소리 Voxtral Mini TTS 3(11-02)은 종료·가격 공지 없음. 그 밖: OpenAI 10월 공지(10-01 gpt-5.1·5.4-nano 2027-04-01, 10-14 gpt-4o/4.1 2027-01-14) 안 바뀜, Claude 마지막 공지 09-30(Sonnet 4.5 11-30, 안 씀), AssemblyAI Universal-3.6 Pro 실시간 분당 약 $0.0075(Scribe v2 $0.0036보다 비쌈), GPT-6.1 Luna 가격 미공개 — [Claude 종료](https://platform.claude.com/docs/en/about-claude/model-deprecations) · [OpenAI 종료 정리(제3자, 10-26)](https://www.layer3labs.io/guides/openai-deprecated-models) · [GPT-6.1 등급(제3자, 10-28)](https://www.truefoundry.com/blog/gpt-6-1-sol-terra-luna) · [AssemblyAI 3.6](https://www.usagepricing.com/blueprint/activity/assemblyai-2026-10-25-universal-3-6-pro-realtime)
 
 - 2026-11-01 · 권함 1: Sonnet 5.5 기능(교정 확인·대본 다시 보기·고르기 오답·통화 돌아보기·지도 그리기) → **gpt-6.1-terra**(10-26 출시, $1/$5 — Sonnet의 절반, 제3자 기준), 많이 쓰는 사람 요금마다 한 달 +529원. 운영 시험 28명(채팅 교정 대리 지표): 큰 문제 4.5% vs 지금 12.4%, 응답 2.6 vs 2.3초 — Sonnet이 맡은 기능 자체(대본 판단 등)는 시험 안 함. 종료일 바뀐 것 없음(OpenAI 마지막 공지 10-14, Haiku 5.5·Sonnet 5.5 Active — 2027-10·09 전엔 안 끝남). 그 밖: Claude Sonnet 4.5 11-30 종료(안 씀), Gemini 3.8 Flash $0.75/$3.75 → 2027-01-01부터 $1.50/$7.50, ElevenLabs TTS 20% 인하·Eleven v4(Flash $0.04/1천 글자 — 분당 환산 지금 목소리보다 비쌈). 시험 스크립트가 2.76+ 무료(채팅 없음)에 막혀 앱 버전 2.75로 돌림(inbox dev) — [OpenAI 종료](https://developers.openai.com/api/docs/deprecations) · [Claude 종료](https://platform.claude.com/docs/en/about-claude/model-deprecations) · [GPT-6.1 Terra](https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol) · [Gemini 3.8 Flash](https://tech-insider.org/gemini-3-8-flash-launch-pricing-2026/) · [ElevenLabs v4](https://www.usagepricing.com/blueprint/activity/elevenlabs-2026-10-05-v4-launch-tts-price-cut)
 

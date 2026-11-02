@@ -19,45 +19,81 @@
   "replaces": "claude-sonnet-5-5",
   "deadline": null,
   "why": "2026-10-26 출시, Sonnet 5.5($2/$10)의 절반 값 — 지금 Sonnet이 맡은 기능(교정 확인·대본 다시 보기·고르기 오답·통화 돌아보기·지도 그리기) 대신. 통화 돌아보기 대비 gpt-5.6-terra($2/$12)보다도 쌈",
-  "source": "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol (제3자 기준 — OpenAI 출시 글 인용)",
-  "checked": "2026-11-01",
+  "source": "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol (제3자 기준 — OpenAI 출시 글 인용) · truefoundry.com/blog/gpt-6-1-sol-terra-luna 10-28 같은 값(제3자 기준)",
+  "checked": "2026-11-02",
   "cost": {
-   "at": "2026-11-01",
-   "commit": "7075fd4e",
-   "changed": 61,
+   "at": "2026-11-02",
+   "commit": "9c3bb189",
+   "changed": 175,
    "head": [
     {
      "what": "대본 플랜 2,900원 많이 쓰는 사람",
-     "before": 210,
-     "after": 739,
-     "diff": 529
+     "before": 1229,
+     "after": 1493,
+     "diff": 264
     },
     {
      "what": "라이트 3,900원 많이 쓰는 사람",
-     "before": -2113,
-     "after": -1584,
-     "diff": 529
+     "before": 142,
+     "after": 407,
+     "diff": 265
     },
     {
      "what": "플러스 5,500원 많이 쓰는 사람",
-     "before": -798,
-     "after": -269,
-     "diff": 529
+     "before": 1476,
+     "after": 1741,
+     "diff": 265
     },
     {
      "what": "프리미엄 9,900원 (지금, 월 80포인트) 많이 쓰는 사람",
-     "before": 2942,
-     "after": 3471,
-     "diff": 529
+     "before": 5216,
+     "after": 5481,
+     "diff": 265
     },
     {
      "what": "프리미엄 8,900원 (전환 후) 많이 쓰는 사람",
-     "before": 2092,
-     "after": 2621,
-     "diff": 529
+     "before": 4366,
+     "after": 4631,
+     "diff": 265
+    },
+    {
+     "what": "대본 플랜 2,900원 한 사람",
+     "before": 344,
+     "after": 592,
+     "diff": 248
+    },
+    {
+     "what": "라이트 3,900원 한 사람",
+     "before": -7,
+     "after": 241,
+     "diff": 248
+    },
+    {
+     "what": "플러스 5,500원 한 사람",
+     "before": 907,
+     "after": 1155,
+     "diff": 248
+    },
+    {
+     "what": "프리미엄 9,900원(지금) 한 사람",
+     "before": 4107,
+     "after": 4371,
+     "diff": 264
+    },
+    {
+     "what": "프리미엄 8,900원(전환 후) 한 사람",
+     "before": 3259,
+     "after": 3523,
+     "diff": 264
+    },
+    {
+     "what": "가입자 1,000명당(광고 중간·전환 2%)",
+     "before": 759383,
+     "after": 882390,
+     "diff": 123007
     }
    ],
-   "best": 529,
+   "best": 265,
    "worst": 0
   },
   "trial": {
@@ -111,10 +147,10 @@
   "deadline": null,
   "why": "Haiku 5.5와 같은 값($0.10/$0.50)의 OpenAI 작은 모델 — 이미 대비 모델·통화 튜터로 씀. 값이 같아 손익 차이가 생길 때만 시험",
   "source": "https://letsdatascience.com/news/openai-and-anthropic-release-lower-cost-ai-models-bae08745 (제3자 기준 — 업체 발표 가격)",
-  "checked": "2026-11-01",
+  "checked": "2026-11-02",
   "cost": {
-   "at": "2026-11-01",
-   "commit": "7075fd4e",
+   "at": "2026-11-02",
+   "commit": "9c3bb189",
    "changed": 83,
    "head": [],
    "best": 0,
