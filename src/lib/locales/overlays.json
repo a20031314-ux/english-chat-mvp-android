@@ -890,7 +890,13 @@
     "whatsNewRealCallBody": "上にチューター、下に自分。顔と声を選べて、終わったら自分の文でレッスン。",
     "scriptWritePrompt": "「{line}」と書いてみましょう。",
     "quizOtherWord": "文には合いますが、ここに入る単語は別です。もう一度書いてみましょう。",
-    "letterPassNeed": "合格: {m}問中{n}問"
+    "letterPassNeed": "合格: {m}問中{n}問",
+    "lessonPiece": "部品",
+    "lessonRole": "はたらき",
+    "lessonOrder": "語順",
+    "lessonReply": "答え方",
+    "lessonMistakes": "よくある間違い",
+    "stageReview": "ふり返る"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1783,7 +1789,13 @@
     "whatsNewRealCallBody": "上面是老师，下面是你。可选老师的脸和声音，结束后用你的句子上课。",
     "scriptWritePrompt": "写一写：“{line}”",
     "quizOtherWord": "句子也通，但这里要填的是另一个词。再写一次吧。",
-    "letterPassNeed": "通过：{m}题答对{n}题"
+    "letterPassNeed": "通过：{m}题答对{n}题",
+    "lessonPiece": "成分",
+    "lessonRole": "作用",
+    "lessonOrder": "语序",
+    "lessonReply": "回答",
+    "lessonMistakes": "常见错误",
+    "stageReview": "回顾"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2679,7 +2691,13 @@
     "whatsNewRealCallBody": "Gia sư ở trên, bạn ở dưới. Chọn khuôn mặt và giọng, gọi xong học bằng chính câu của bạn.",
     "scriptWritePrompt": "Hãy viết: “{line}”",
     "quizOtherWord": "Câu vẫn đúng, nhưng chỗ trống này cần một từ khác. Hãy viết lại.",
-    "letterPassNeed": "Đạt: đúng {n}/{m}"
+    "letterPassNeed": "Đạt: đúng {n}/{m}",
+    "lessonPiece": "thành phần",
+    "lessonRole": "chức năng",
+    "lessonOrder": "trật tự từ",
+    "lessonReply": "cách trả lời",
+    "lessonMistakes": "lỗi thường gặp",
+    "stageReview": "Xem lại"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3580,7 +3598,13 @@
     "whatsNewRealCallBody": "Le tuteur en haut, toi en bas. Choisis son visage et sa voix ; après, une leçon sur ta phrase.",
     "scriptWritePrompt": "Écrivez : « {line} »",
     "quizOtherWord": "Ça marche aussi, mais il faut un autre mot ici. Réessaie.",
-    "letterPassNeed": "Réussi : {n} sur {m}"
+    "letterPassNeed": "Réussi : {n} sur {m}",
+    "lessonPiece": "élément",
+    "lessonRole": "rôle",
+    "lessonOrder": "ordre des mots",
+    "lessonReply": "répondre",
+    "lessonMistakes": "erreurs fréquentes",
+    "stageReview": "Revoir"
   },
   "it": {
     "archive": "Report",
@@ -4672,7 +4696,13 @@
     "whatsNewRealCallBody": "Il tutor sopra, tu sotto. Scegli volto e voce; alla fine, una lezione sulla tua frase.",
     "scriptWritePrompt": "Scrivi: «{line}»",
     "quizOtherWord": "Va bene nella frase, ma qui serve un’altra parola. Riprova.",
-    "letterPassNeed": "Superato: {n} su {m}"
+    "letterPassNeed": "Superato: {n} su {m}",
+    "lessonPiece": "pezzo",
+    "lessonRole": "a cosa serve",
+    "lessonOrder": "ordine delle parole",
+    "lessonReply": "come rispondere",
+    "lessonMistakes": "errori comuni",
+    "stageReview": "Ripassa"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5576,7 +5606,13 @@
     "whatsNewRealCallBody": "O tutor em cima, você embaixo. Escolha rosto e voz; no fim, uma aula com a sua frase.",
     "scriptWritePrompt": "Escreva: “{line}”",
     "quizOtherWord": "Também encaixa, mas aqui vai outra palavra. Tente de novo.",
-    "letterPassNeed": "Para passar: {n} de {m}"
+    "letterPassNeed": "Para passar: {n} de {m}",
+    "lessonPiece": "peça",
+    "lessonRole": "função",
+    "lessonOrder": "ordem das palavras",
+    "lessonReply": "como responder",
+    "lessonMistakes": "erros comuns",
+    "stageReview": "Rever"
   },
   "ru": {
     "archive": "Отчёты",
@@ -6666,7 +6702,13 @@
     "whatsNewRealCallBody": "Сверху репетитор, снизу ты. Выбери лицо и голос; после звонка — урок по твоей фразе.",
     "scriptWritePrompt": "Напишите: «{line}»",
     "quizOtherWord": "Так тоже можно, но здесь нужно другое слово. Попробуй ещё раз.",
-    "letterPassNeed": "Зачёт: {n} из {m}"
+    "letterPassNeed": "Зачёт: {n} из {m}",
+    "lessonPiece": "часть",
+    "lessonRole": "что делает",
+    "lessonOrder": "порядок слов",
+    "lessonReply": "как ответить",
+    "lessonMistakes": "частые ошибки",
+    "stageReview": "Повторить"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7566,7 +7608,13 @@
     "whatsNewRealCallBody": "Tutor di atas, kamu di bawah. Pilih wajah dan suaranya; setelahnya, belajar dari kalimatmu.",
     "scriptWritePrompt": "Tulis: “{line}”",
     "quizOtherWord": "Itu juga cocok, tapi di sini perlu kata lain. Coba lagi.",
-    "letterPassNeed": "Lulus: benar {n} dari {m}"
+    "letterPassNeed": "Lulus: benar {n} dari {m}",
+    "lessonPiece": "bagian",
+    "lessonRole": "fungsinya",
+    "lessonOrder": "urutan kata",
+    "lessonReply": "cara menjawab",
+    "lessonMistakes": "kesalahan umum",
+    "stageReview": "Tinjau"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8459,7 +8507,13 @@
     "whatsNewRealCallBody": "المعلّم في الأعلى وأنت في الأسفل. اختر وجهه وصوته، وبعد المكالمة درس من جملتك.",
     "scriptWritePrompt": "اكتب: «{line}»",
     "quizOtherWord": "هذه تناسب الجملة أيضًا، لكن الفراغ يحتاج كلمة أخرى. جرّب مرة أخرى.",
-    "letterPassNeed": "النجاح: {n} من {m}"
+    "letterPassNeed": "النجاح: {n} من {m}",
+    "lessonPiece": "الجزء",
+    "lessonRole": "وظيفته",
+    "lessonOrder": "ترتيب الكلمات",
+    "lessonReply": "الرد",
+    "lessonMistakes": "أخطاء شائعة",
+    "stageReview": "مراجعة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9352,7 +9406,13 @@
     "whatsNewRealCallBody": "ติวเตอร์อยู่บน คุณอยู่ล่าง เลือกหน้าและเสียงได้ จบแล้วเรียนจากประโยคของคุณเอง",
     "scriptWritePrompt": "ลองเขียน: “{line}”",
     "quizOtherWord": "ใส่ได้เหมือนกัน แต่ช่องนี้ต้องใช้คำอื่น ลองเขียนอีกครั้ง",
-    "letterPassNeed": "ผ่าน: ถูก {n} จาก {m}"
+    "letterPassNeed": "ผ่าน: ถูก {n} จาก {m}",
+    "lessonPiece": "ส่วน",
+    "lessonRole": "หน้าที่",
+    "lessonOrder": "ลำดับคำ",
+    "lessonReply": "การตอบ",
+    "lessonMistakes": "ข้อผิดพลาดที่พบบ่อย",
+    "stageReview": "ทบทวน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -10245,6 +10305,12 @@
     "whatsNewRealCallBody": "ऊपर ट्यूटर, नीचे आप। चेहरा और आवाज़ चुनें; कॉल के बाद आपके वाक्य पर पाठ।",
     "scriptWritePrompt": "लिखिए: “{line}”",
     "quizOtherWord": "यह भी वाक्य में ठीक है, पर यहाँ कोई दूसरा शब्द चाहिए। फिर से लिखें।",
-    "letterPassNeed": "पास: {m} में से {n} सही"
+    "letterPassNeed": "पास: {m} में से {n} सही",
+    "lessonPiece": "हिस्सा",
+    "lessonRole": "काम",
+    "lessonOrder": "शब्द क्रम",
+    "lessonReply": "जवाब",
+    "lessonMistakes": "आम गलतियाँ",
+    "stageReview": "दोहराएँ"
   }
 }

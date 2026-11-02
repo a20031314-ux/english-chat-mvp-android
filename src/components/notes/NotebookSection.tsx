@@ -31,6 +31,7 @@ import { frontierStage, useStudyMode, type StudyMode } from "@/lib/curriculum/st
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { LettersPlan, ScriptEntry } from "@/components/studyMap/ScriptPractice";
 import { ladderFor } from "@/lib/curriculum/stages";
+import { StageReview } from "@/components/studyMap/StageReview";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
 import { stageFrameTally } from "@/lib/curriculum/recall";
 import { peekItemStats, useItemStats } from "@/lib/curriculum/useItemStats";
@@ -633,6 +634,7 @@ export function NotebookSection({
                   jump={jump}
                   onJumped={() => setJump(null)}
                   frameTally={frameTally}
+                  review={(order, passed, close) => <StageReview ui={ui} locale={locale} language={language} stage={order} passed={passed} onClose={close} />}
           headExtra={book.parts?.some((row) => row.scripts) ? (
             <>
             <ContentScopeButton ui={ui} locale={locale} language={language} />
@@ -997,7 +999,7 @@ function PartsOverview({
                       className="flex h-full min-w-0 flex-1 items-end hover:bg-white/5"
                     >
                       <span
-                        className={`block w-full rounded-sm ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
+                        className={`block w-full rounded-lg ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
                         style={{ height: `${value ? Math.max(12, Math.round((value / top) * 100)) : 8}%` }}
                       />
                     </button>
@@ -1100,6 +1102,7 @@ function StageFrame({
   onSetStage,
   letters,
   frameTally,
+  review,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -1140,6 +1143,8 @@ function StageFrame({
   letters?: { on: boolean; panel: ReactNode; onPick: () => void };
   /** 그 단계 문장구조 익힘·꺼내 씀(curriculum/recall.ts) — 있으면 다음 단계 조건이 이것. */
   frameTally?: (order: number) => { total: number; learned: number; recalled: number; ready: boolean; need: number } | null;
+  /** 지나온 단계 돌아보기(studyMap/StageReview, 2026-11-02) — 지금보다 아래 단계를 볼 때 머리에 버튼. */
+  review?: (order: number, passed: string[], close: () => void) => ReactNode;
 }) {
   const now = letters?.on ? 0 : Math.max(1, Math.min(current, stages.length));
   const ladder = letters ? [{ order: 0, title: "" }, ...stages] : stages;
@@ -1153,6 +1158,7 @@ function StageFrame({
   const [picked, setPicked] = useState<PartId | null>(focusPart);
   const [openScript, setOpenScript] = useState<{ id: string; at: number; today?: boolean } | null>(null);
   const [jumped, setJumped] = useState(0);
+  const [reviewing, setReviewing] = useState<number | null>(null);
   if (jump && jump.at !== jumped) {
     // 렌더 중 한 번(같은 at은 다시 안 함) — 그 단계를 보이고 대본·문장구조를 연다.
     setJumped(jump.at);
@@ -1269,8 +1275,19 @@ function StageFrame({
             {ui.setStageHere}
           </button>
         ) : null}
+        {review && shown >= 1 && shown < now ? (
+          <button
+            type="button"
+            data-stage-review
+            onClick={() => setReviewing(shown)}
+            className="shrink-0 rounded-full border border-status-learned/50 px-3 py-1 text-caption text-status-learned hover:bg-white/10"
+          >
+            {ui.stageReview}
+          </button>
+        ) : null}
         {headExtra}
       </div>
+      {review && reviewing !== null ? review(reviewing, parts.find((row) => row.order === reviewing)?.scripts?.passed ?? [], () => setReviewing(null)) : null}
       {shown === 0 && letters ? <div className="mt-2">{letters.panel}</div> : scripts?.(shown, stageParts, openScript)}
 
       {stageParts ? (

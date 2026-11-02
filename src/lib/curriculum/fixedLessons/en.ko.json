@@ -1446,10 +1446,10 @@
         },
         {
           "kind": "fix",
-          "wrong": "See you in tomorrow.",
-          "bad": "in",
+          "wrong": "See you at tonight.",
+          "bad": "at",
           "right": "(빼기)",
-          "cue": "내일 봐요."
+          "cue": "오늘 밤에 봐요."
         }
       ],
       "turns": [

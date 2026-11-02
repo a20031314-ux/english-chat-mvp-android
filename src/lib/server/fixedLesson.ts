@@ -14,7 +14,7 @@
 import { kvGetJson, kvGetJsonMany, kvHashGetAll, kvHashIncrMany, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
-import { allFramesFor, type Frame } from "../curriculum/frames.ts";
+import { allFramesFor, framesFor, type Frame } from "../curriculum/frames.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
 import { glossFor } from "../curriculum/stageScripts.ts";
 import { loadBank } from "../curriculum/vocabBank.ts";
@@ -126,6 +126,29 @@ export async function makeFixedLesson(language: string, ui: string, frame: Frame
 /** 저장소 원고 → 서버 저장. 없으면 null. */
 export async function storedFixedLesson(language: string, ui: string, id: string): Promise<FixedLesson | null> {
   return staticFixedLesson(language, ui, id) ?? (await kvGetJson<FixedLesson>(keyOf(language, ui, id)).catch(() => null));
+}
+
+/**
+ * 한 단계의 고정 수업을 한 번에(만들지 않음) — Stagebank 단계 돌아보기(studyMap/StageReview, 2026-11-02 사용자
+ * "학습완료한 단계, 스킵한 단계는 쭉 펼쳐서 결과를 보게"). 저장소 원고 먼저, 나머지는 서버 저장을 한 번에 읽는다.
+ */
+export async function fixedLessonsForStage(language: string, ui: string, stage: number): Promise<Record<string, FixedLesson>> {
+  const frames = framesFor(language, stage);
+  const out: Record<string, FixedLesson> = {};
+  const rest: string[] = [];
+  for (const frame of frames) {
+    const local = staticFixedLesson(language, ui, frame.id);
+    if (local) out[frame.id] = local;
+    else rest.push(frame.id);
+  }
+  if (rest.length) {
+    const rows = await kvGetJsonMany<FixedLesson>(rest.map((id) => keyOf(language, ui, id))).catch(() => rest.map(() => null));
+    rest.forEach((id, index) => {
+      const row = rows[index];
+      if (row) out[id] = row;
+    });
+  }
+  return out;
 }
 
 async function makeAndStore(language: string, ui: string, frame: Frame, onMake?: () => void): Promise<boolean> {

@@ -75,6 +75,9 @@ export function checkLesson(lesson: FixedLesson, frame: Frame | undefined, tooEa
     } else {
       if (!has(q.wrong, q.bad)) err(`고치기 문장에 틀린 곳이 없음: ${q.bad}`);
       if (q.bad.trim() === q.right.trim()) err("고치기 틀린 곳과 바른 꼴이 같음");
+      // 설명의 흔한 실수를 그대로 내면 베끼기(RULES 11①) — 다른 문장으로.
+      const same = (one: string) => one.toLowerCase().replace(/[\s.!?。！？]+$/u, "").trim();
+      if (lesson.mistakes.some((one) => same(one.wrong) === same(q.wrong))) err(`고치기 문장이 흔한 실수 예와 같음: ${q.wrong}`);
     }
   }
   // 대화 세 번: 내 줄은 틀을 담고, 예문을 그대로 베끼지 않음. 상대 줄이 틀을 써 버리면 경고(따라 말하기가 됨).

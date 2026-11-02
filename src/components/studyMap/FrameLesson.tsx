@@ -17,6 +17,9 @@ import { fallbackTurns, lessonPassed, type FrameLesson as Lesson, type LessonSte
 import { noteDayResult } from "@/lib/curriculum/dayLog";
 import type { Frame } from "@/lib/curriculum/frames";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
+import type { FixedLesson as Fixed } from "@/lib/curriculum/fixedLessons/check";
+import { fixedQuizQuestions } from "@/lib/curriculum/fixedLessons/toQuiz";
+import { FixedExplain } from "@/components/studyMap/FixedExplain";
 import { lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { notePool } from "@/lib/curriculum/exam";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
@@ -81,6 +84,8 @@ export function FrameLesson({
   useAllStageGlosses(language, locale);
   const [step, setStep] = useState<LessonStep>("explain");
   const [lesson, setLesson] = useState<(Lesson & { title?: string }) | null | undefined>(undefined);
+  /** 고정 수업(fixedLessons — 조각 대응 표·어순·흔한 실수·퀴즈 셋, 2026-11-02) — 있으면 설명·퀴즈가 이것으로. */
+  const [fixed, setFixed] = useState<Fixed | null>(null);
   useEffect(() => {
     let alive = true;
     const url = frame
@@ -90,7 +95,10 @@ export function FrameLesson({
       fetch(url, { headers: entitlementHeaders(isPremium) })
         .then((response) => (response.ok ? response.json() : null))
         .catch(() => null)
-        .then((body: { lesson?: (Lesson & { title?: string }) | null } | null) => body?.lesson ?? null);
+        .then((body: { lesson?: (Lesson & { title?: string }) | null; fixed?: Fixed | null } | null) => {
+          if (alive && body?.fixed) setFixed(body.fixed);
+          return body?.lesson ?? null;
+        });
     // 처음 만드는 틀은 모델이 한 번 실패할 수 있어 한 번만 다시 묻는다(만든 뒤엔 저장된 것이 바로 옴).
     void get()
       .then((first) => first ?? new Promise<Lesson | null>((resolve) => window.setTimeout(() => void get().then(resolve), 1500)))
@@ -137,8 +145,11 @@ export function FrameLesson({
     if (!frame) return [];
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
     // 세 문제가 같은 답을 세 번 묻지 않게: 빈칸 쓰기 · 틀린 곳 고치기 · 낱말 순서, 문제마다 다른 문장(quiz.ts lessonQuiz, 2026-11-01 U25).
-    return lessonQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
-  }, [language, frame, seed, shownExamples, grown]);
+    const made = lessonQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
+    // 고정 수업이 있으면 그 세 문제(쓰기 · 고르기 · 고치기)가 먼저, 모자라면 만든 문제로 채움.
+    const set = fixed?.quiz?.length ? fixedQuizQuestions(language, fixed.quiz, `f|${frame.id}`) : [];
+    return set.length >= 3 ? set : [...set, ...made].slice(0, Math.max(3, set.length));
+  }, [language, frame, seed, shownExamples, grown, fixed]);
   const [qIndex, setQIndex] = useState(0);
   // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
   const adRound = useNativeRefresh(`q${qIndex}`, step === "quiz");
@@ -340,7 +351,9 @@ export function FrameLesson({
                 {lesson?.meaning || meaningText}
               </p>
             </section>
-            {lesson?.parts?.length ? (
+            {fixed ? (
+              <FixedExplain fixed={fixed} ui={ui} tag={tag} />
+            ) : lesson?.parts?.length ? (
               <section data-lesson-parts>
                 <h3 className="text-meta font-semibold text-slate-400">{ui.insightPattern}</h3>
                 <ul className="mt-1 flex flex-col gap-1.5">
@@ -368,7 +381,7 @@ export function FrameLesson({
                 ))}
               </ul>
             ) : null}
-            {lesson?.usage ? (
+            {lesson?.usage && !fixed ? (
               <section data-lesson-usage>
                 <h3 className="text-meta font-semibold text-slate-400">{ui.aboutUsage}</h3>
                 <p dir="auto" className="mt-0.5 text-note text-slate-200">
@@ -681,3 +694,4 @@ function ExampleMarks({ text, slot, core }: { text: string; slot?: string; core?
   parts.push(text.slice(cursor));
   return <>{parts}</>;
 }
+
