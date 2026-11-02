@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
@@ -15,9 +15,18 @@ import { buildRecap } from "@/lib/roleplay/recap";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
 import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type Period, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
-import { BASES, bars, ESTIMATE, partRows, resultMinutes, totals, type Bar, type Basis, type LogInputs, type PartRow } from "@/lib/curriculum/logbankData";
+import { bars, ESTIMATE, partRows, resultMinutes, totals, type Bar, type Basis, type LogInputs, type PartRow } from "@/lib/curriculum/logbankData";
 import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
+import type { KnownMap } from "@/lib/curriculum/known";
+import type { CheckResult } from "@/lib/curriculum/checkup";
+import { computeFill, fillCatalog, keysInCell, type Axis, type BankAxis, type FillCell, type FillEvent} from "@/lib/curriculum/fill";
+import { callTurnsOf, fillEvents } from "@/lib/curriculum/fillInputs";
+import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
+import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
+import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
+import { segmentWords } from "@/lib/wordSegments";
+import { AxisDetail, axisName, CellDetail, cellName, SkillHexagon, type CellPlan } from "@/components/studyMap/SkillHexagon";
 
 function localDay(at: number): string {
   const d = new Date(at);
@@ -139,7 +148,6 @@ function useCallDays(language: string): Record<string, CallDay> {
 }
 
 const PERIOD_KEY = "logbankPeriod.v1";
-const BASIS_KEY = "logbankBasis.v1";
 function readPeriodKind(): PeriodKind {
   try {
     return localStorage.getItem(PERIOD_KEY) === "month" ? "month" : "week";
@@ -147,17 +155,8 @@ function readPeriodKind(): PeriodKind {
     return "week";
   }
 }
-function readBasis(): Basis {
-  try {
-    const raw = localStorage.getItem(BASIS_KEY);
-    return BASES.includes(raw as Basis) ? (raw as Basis) : "time";
-  } catch {
-    return "time";
-  }
-}
 
 const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"];
-const BASIS_ICON: Record<Basis, string> = { time: "⏱", grammar: "📐", vocab: "🔤", expression: "💬" };
 /** 어디서 했는지 → 아이콘(LogItem where · 수업 결과 종류 · 퀴즈). */
 const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", map: "🧩", mission: "🎭", review: "📝", lesson: "🧩", recall: "🎯", script: "🎭", quiz: "📝" };
 
@@ -173,6 +172,10 @@ export function Logbank({
   language,
   items,
   nodeName,
+  grammarName = () => "",
+  known = {},
+  checkups = [],
+  stage = 1,
   head,
 }: {
   ui: UICopy;
@@ -180,6 +183,12 @@ export function Logbank({
   language: string;
   items: readonly LogItem[];
   nodeName: (id: string) => string;
+  /** 단계·문법 칸 번호 → 이름(육각형 세부 칸 "문법"). */
+  grammarName?: (stage: number, index: number) => string;
+  /** 익힘 기록(맞힌 날) · 시험 결과 · 지금 단계 — 육각형 재료(curriculum/fillInputs.ts). */
+  known?: KnownMap;
+  checkups?: readonly CheckResult[];
+  stage?: number;
   head?: ReactNode;
 }) {
   const insight = useExpressionInsightOptional();
@@ -202,16 +211,64 @@ export function Logbank({
   // 오늘은 이 칸을 처음 그릴 때 한 번(그리는 동안 시계를 읽지 않게).
   const [today] = useState(() => localDay(Date.now()));
   const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
-  const [basis, setBasis] = useState<Basis>(() => readBasis());
+  // 육각형 아래 ⏱ 한 줄을 누르면 학습 시간 막대(예전 기준 탭 ⏱ 자리, 2026-11-02 기준 탭은 육각형 꼭짓점으로).
+  const [showTime, setShowTime] = useState(false);
+  const [openAxis, setOpenAxis] = useState<Axis | null>(null);
+  const [openCell, setOpenCell] = useState<FillCell | null>(null);
   const [back, setBack] = useState(0);
   const [openDay, setOpenDay] = useState<string | null>(null);
   const [openRow, setOpenRow] = useState<string | null>(null);
   const period = useMemo(() => shiftPeriod(periodOf(kind, today), -back), [kind, today, back]);
   const input: LogInputs = useMemo(() => ({ language, items, results, quiz, calls: callRows, dayOf: localDay }), [language, items, results, quiz, callRows]);
   const summary = useMemo(() => summarize({ period, items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
-  const chart = useMemo(() => bars(period, basis, input), [period, basis, input]);
-  const rows = useMemo(() => (basis === "time" ? [] : partRows(period, basis, input)), [period, basis, input]);
-  const sum = useMemo(() => totals(period, basis, input), [period, basis, input]);
+  const chart = useMemo(() => bars(period, "time", input), [period, input]);
+  const sum = useMemo(() => totals(period, "time", input), [period, input]);
+  const partLists = useMemo(
+    () => ({ grammar: partRows(period, "grammar", input), vocab: partRows(period, "vocab", input), expression: partRows(period, "expression", input) }),
+    [period, input],
+  );
+  const rowsOf = (one: Exclude<Basis, "time">) => partLists[one];
+  // 언어능력 육각형(curriculum/fill.ts): 낱말 은행을 받으면 어휘 분모가 찬다.
+  const [words, setWords] = useState(() => peekBank(language));
+  useEffect(() => {
+    let live = true;
+    void loadBank(language).then((list) => {
+      if (live) setWords(list);
+    });
+    return () => {
+      live = false;
+    };
+  }, [language]);
+  const check = useSyncExternalStore(
+    (callback) => {
+      window.addEventListener(FILL_CHECK_EVENT, callback);
+      window.addEventListener("storage", callback);
+      return () => {
+        window.removeEventListener(FILL_CHECK_EVENT, callback);
+        window.removeEventListener("storage", callback);
+      };
+    },
+    () => readFillCheck(language),
+    () => null,
+  );
+  const catalog = useMemo(() => fillCatalog(language, words), [language, words]);
+  const events = useMemo(
+    () => fillEvents({ language, known, quiz, results, items, checkups, segment: (text) => segmentWords(text, language) }),
+    [language, known, quiz, results, items, checkups],
+  );
+  const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
+  const [nowAt] = useState(() => Date.now());
+  const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
+  // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
+  useEffect(() => {
+    if (words) saveFillFocus(language, fillDirection(fill, catalog, events));
+  }, [language, words, fill, catalog, events]);
+  // 흐린 선 = 고른 기간이 시작할 때(그 전 기록만).
+  const before = useMemo(() => {
+    const start = dayValue(period.start) - 9 * 3_600_000;
+    if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
+    return computeFill({ catalog, check, stage, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
+  }, [catalog, check, stage, events, callTurns, period.start]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -237,33 +294,109 @@ export function Logbank({
       // 이번에만.
     }
   };
-  const chooseBasis = (next: Basis) => {
-    setBasis(next);
-    try {
-      localStorage.setItem(BASIS_KEY, next);
-    } catch {
-      // 이번에만.
-    }
-  };
-  const basisName = (one: Basis) => (one === "time" ? ui.logStudyTime : one === "grammar" ? ui.partGrammar : one === "vocab" ? ui.partVocab : ui.partExpression);
   const rowLabel = (row: PartRow) => (row.node ? nodeName(row.node) || row.text : row.key ? reviewLabel(language, row.key) || row.text : row.text);
   const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "bg-ink text-surface" : "border border-line text-slate-300"}`;
-  const legend: { cls: string; icon: string; title: string }[] =
-    basis === "time"
-      ? [
-          { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
-          { cls: "fill-status-mastered text-status-mastered", icon: "🧩", title: ui.framesTitle },
-          { cls: "fill-warn text-warn", icon: "📝", title: ui.keepTitle },
-        ]
-      : [
-          { cls: "fill-status-mastered text-status-mastered", icon: "✓", title: ui.itemsMastered },
-          { cls: "fill-info text-info", icon: "•", title: ui.itemsLearned },
-          { cls: "fill-warn text-warn", icon: "✗", title: ui.partFixed },
-        ];
+  const timeLegend: { cls: string; icon: string; title: string }[] = [
+    { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
+    { cls: "fill-status-mastered text-status-mastered", icon: "🧩", title: ui.framesTitle },
+    { cls: "fill-warn text-warn", icon: "📝", title: ui.keepTitle },
+  ];
+  const partLegend: { cls: string; icon: string; title: string }[] = [
+    { cls: "fill-status-mastered text-status-mastered", icon: "✓", title: ui.itemsMastered },
+    { cls: "fill-info text-info", icon: "•", title: ui.itemsLearned },
+    { cls: "fill-warn text-warn", icon: "✗", title: ui.partFixed },
+  ];
   const dayDetail = openDay ? allDays.find((one) => one.day === openDay) ?? null : null;
-  const rowDetail = openRow ? rows.find((row) => row.id === openRow) ?? null : null;
+  const rowDetail = openRow ? (["grammar", "vocab", "expression"] as const).flatMap((one) => rowsOf(one)).find((row) => row.id === openRow) ?? null : null;
+  const dateLabel = (day: string) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()));
+  const rowList = (list: readonly PartRow[]) =>
+    list.length ? (
+      <ol data-log-rows className="flex flex-col gap-1">
+        {list.map((row) => (
+          <li key={row.id}>
+            <button
+              type="button"
+              data-log-row={row.status}
+              onClick={() => setOpenRow(row.id)}
+              className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
+            >
+              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-status-mastered" : row.status === "missed" ? "text-warn" : "text-info"}`}>
+                {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
+              </span>
+              <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
+              <span aria-hidden className="shrink-0 text-meta">{[...new Set(row.events.map((one) => WHERE_ICON[one.where] ?? ""))].filter(Boolean).slice(0, 4).join("")}</span>
+              <span className="shrink-0 text-meta tabular-nums text-slate-500">{row.events.length}</span>
+            </button>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p className="text-note text-slate-500">—</p>
+    );
+  /** 📎 기록: 지금 Logbank의 그 갈래 막대·목록(꼭짓점 몫) — 어휘는 어휘, 문장은 문법 + 덩어리 표현, 듣기·실전 대화는 그 기간 통화. */
+  const recordsFor = (axis: Axis): ReactNode => {
+    if (axis === "talk" || axis === "listen") {
+      const callDaysIn = allDays.filter((one) => one.calls.length && inPeriod(period, one.day));
+      return callDaysIn.length ? (
+        <ol data-log-calls className="flex flex-col gap-1">
+          {callDaysIn.map((one) => (
+            <li key={one.day}>
+              <button type="button" onClick={() => setOpenDay(one.day)} className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5">
+                <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
+                <span className="shrink-0 text-meta tabular-nums text-slate-400">{`📞 ${one.calls.length} · ${Math.max(1, Math.round(one.calls.reduce((n, call) => n + callSeconds(call), 0) / 60))}′`}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p className="text-note text-slate-500">—</p>
+      );
+    }
+    const basisOf: Exclude<Basis, "time"> = axis.startsWith("vocab") ? "vocab" : "grammar";
+    const list = basisOf === "vocab" ? rowsOf("vocab") : [...rowsOf("grammar"), ...rowsOf("expression")];
+    return (
+      <div className="flex flex-col gap-3">
+        <LogChart bars={bars(period, basisOf, input)} kind={kind} legend={partLegend} unit="" dateLabel={dateLabel} onDay={(day) => setOpenDay(day)} />
+        {rowList(list)}
+      </div>
+    );
+  };
+  const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
+  const openKey = (key: string) => {
+    if (key.startsWith("w|")) insight?.open({ sentence: key.slice(2), selected: key.slice(2) });
+    else openLesson({ language, key });
+  };
+  /** 3층: 그 칸의 부족한 것(마지막이 틀림)·공부할 것(맞힌 적 없음, 은행 순서)·추천 하나. */
+  const planFor = (axis: Axis, cell: FillCell): CellPlan => {
+    if (axis === "talk" || axis === "listen") {
+      return { short: [], study: [], recommend: { icon: "📞", label: axisName(ui, axis), go: () => sendAppIntent("startCall", {}) } };
+    }
+    const bank = axis as BankAxis;
+    const use = bank.endsWith("Use");
+    const items = bank.startsWith("vocab") ? catalog.vocab : catalog.sent;
+    const mine = (one: FillEvent) => one.use === use && items.has(one.key);
+    const latest = new Map<string, FillEvent>();
+    const right = new Set<string>();
+    for (const one of [...events].sort((a, b) => a.at - b.at)) {
+      if (!mine(one)) continue;
+      latest.set(one.key, one);
+      if (one.correct) right.add(one.key);
+    }
+    const inCell = cell.id.startsWith("miss:")
+      ? [...latest.values()].filter((one) => !one.correct && one.miss === cell.id.slice(5)).map((one) => one.key)
+      : keysInCell(catalog, bank, cell.id);
+    const short = inCell.filter((key) => latest.get(key) && !latest.get(key)!.correct).slice(0, 8);
+    const study = inCell.filter((key) => !right.has(key) && !short.includes(key)).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1)).slice(0, 6);
+    const first = short[0] ?? study[0];
+    const recommend = bank.startsWith("vocab")
+      ? { icon: "📖", label: cellName(ui, cell.id, grammarName), go: () => sendAppIntent("openNotes", { section: "words" }) }
+      : first
+        ? { icon: "🧩", label: keyLabel(first), go: () => openKey(first) }
+        : null;
+    return { short: short.map((key) => ({ key, label: keyLabel(key) })), study: study.map((key) => ({ key, label: keyLabel(key) })), recommend };
+  };
   return (
-    <div data-logbank data-log-basis={basis} className="flex flex-col gap-3">
+    <div data-logbank className="flex flex-col gap-3">
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -277,73 +410,44 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
-        <div role="tablist" className="grid grid-cols-4 gap-1">
-          {BASES.map((one) => (
-            <button
-              key={one}
-              type="button"
-              role="tab"
-              data-log-basis-tab={one}
-              aria-selected={basis === one}
-              onClick={() => chooseBasis(one)}
-              className={`flex min-w-0 flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-meta ${basis === one ? "bg-white/10 font-semibold text-ink" : "text-slate-400 hover:bg-white/5"}`}
-            >
-              <span aria-hidden className="text-body">{BASIS_ICON[one]}</span>
-              <span className="w-full truncate text-center">{basisName(one)}</span>
-            </button>
-          ))}
-        </div>
-        <p data-log-total className="flex flex-wrap items-baseline gap-x-3 text-note tabular-nums text-slate-200">
-          {basis === "time" ? (
-            <>
-              <span className="text-title font-semibold text-ink">{`${sum.minutes ?? 0}′`}</span>
-              <span title={ui.logStudyDays} aria-label={`${ui.logStudyDays} ${summary.activeDays}`}>{`📅 ${summary.activeDays}`}</span>
-            </>
-          ) : (
-            <>
-              <span className="text-title font-semibold text-ink">{sum.rows ?? 0}</span>
-              {sum.mastered ? <span className="text-status-mastered" title={ui.itemsMastered}>{`✓ ${sum.mastered}`}</span> : null}
-              {sum.missed ? <span className="text-warn" title={ui.partFixed}>{`✗ ${sum.missed}`}</span> : null}
-            </>
-          )}
-        </p>
-        <LogChart bars={chart} kind={kind} legend={legend} unit={basis === "time" ? "′" : ""} dateLabel={(day) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()))} onDay={(day) => setOpenDay(day)} />
-        <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
-          {legend.map((one) => (
-            <span key={one.icon} title={one.title} className="inline-flex items-center gap-1">
-              <svg aria-hidden width="8" height="8" className={one.cls}><rect width="8" height="8" rx="2" /></svg>
-              {`${one.icon} ${one.title}`}
-            </span>
-          ))}
-        </div>
-      </section>
-      {basis === "time" ? (
-        <TimeSources ui={ui} summary={summary} input={input} period={period} />
-      ) : rows.length ? (
-        <ol data-log-rows className="flex flex-col gap-1">
-          {rows.map((row) => (
-            <li key={row.id}>
-              <button
-                type="button"
-                data-log-row={row.status}
-                onClick={() => setOpenRow(row.id)}
-                className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
-              >
-                <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-status-mastered" : row.status === "missed" ? "text-warn" : "text-info"}`}>
-                  {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
+        <SkillHexagon ui={ui} result={fill} before={before} onAxis={setOpenAxis} />
+        <button
+          type="button"
+          data-log-time
+          aria-expanded={showTime}
+          onClick={() => setShowTime((open) => !open)}
+          className="flex items-center gap-3 self-start rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5"
+        >
+          <span title={ui.logStudyTime}>{`⏱ ${sum.minutes ?? 0}′`}</span>
+          <span title={ui.logStudyDays} aria-label={`${ui.logStudyDays} ${summary.activeDays}`}>{`📅 ${summary.activeDays}`}</span>
+        </button>
+        {showTime ? (
+          <>
+            <LogChart bars={chart} kind={kind} legend={timeLegend} unit="′" dateLabel={dateLabel} onDay={(day) => setOpenDay(day)} />
+            <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
+              {timeLegend.map((one) => (
+                <span key={one.icon} title={one.title} className="inline-flex items-center gap-1">
+                  <svg aria-hidden width="8" height="8" className={one.cls}><rect width="8" height="8" rx="2" /></svg>
+                  {`${one.icon} ${one.title}`}
                 </span>
-                <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
-                <span aria-hidden className="shrink-0 text-meta">{[...new Set(row.events.map((one) => WHERE_ICON[one.where] ?? ""))].filter(Boolean).slice(0, 4).join("")}</span>
-                <span className="shrink-0 text-meta tabular-nums text-slate-500">{row.events.length}</span>
-              </button>
-            </li>
-          ))}
-        </ol>
-      ) : (
-        <p className="text-note text-slate-500">—</p>
-      )}
+              ))}
+            </div>
+          </>
+        ) : null}
+      </section>
+      {showTime ? <TimeSources ui={ui} summary={summary} input={input} period={period} /> : null}
       {/* Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. */}
       <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
+      {openAxis ? (
+        <LogSheet title={axisName(ui, openAxis)} ui={ui} onClose={() => setOpenAxis(null)}>
+          <AxisDetail ui={ui} axis={openAxis} fill={fill.axes[openAxis]} grammarName={grammarName} records={recordsFor(openAxis)} onCell={setOpenCell} />
+        </LogSheet>
+      ) : null}
+      {openAxis && openCell ? (
+        <LogSheet title={`${axisName(ui, openAxis)} · ${cellName(ui, openCell.id, grammarName)}`} ui={ui} onClose={() => setOpenCell(null)}>
+          <CellDetail ui={ui} cell={openCell} plan={planFor(openAxis, openCell)} onKey={openKey} />
+        </LogSheet>
+      ) : null}
       {dayDetail ? (
         <LogSheet title={dayFormat(locale, dayDetail.day)} ui={ui} onClose={() => setOpenDay(null)}>
           <DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />

@@ -674,7 +674,7 @@ export function NotebookSection({
           }}
           locale={locale}
           notes={weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review: book.review ?? NO_REVIEW, grammarName, limit: 40 })}
-          logbank={(head) => <Logbank ui={ui} locale={locale} language={language} items={book.logItems ?? []} nodeName={nameOf} head={head} />}
+          logbank={(head) => <Logbank ui={ui} locale={locale} language={language} items={book.logItems ?? []} nodeName={nameOf} grammarName={grammarName} known={known} checkups={checkups} stage={book.stage} head={head} />}
         />
       ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) && !CURRICULUM_ONLY ? (

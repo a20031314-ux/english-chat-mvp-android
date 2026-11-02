@@ -68,6 +68,7 @@ import { WordbookCard } from "@/components/studyMap/Wordbook";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { LedgerState } from "@/lib/learner/ledger";
+import { mixProbes, readFillFocus } from "@/lib/curriculum/fillFocus";
 
 /**
  * 오늘 할 것(lib/curriculum/dailyPlan.ts, 2026-10-28 사용자 "매일 학습할 걸 정해 주는 흐름"):
@@ -458,7 +459,9 @@ export function TodayPlan({
       // 하루의 끝 대화 한 칸: 대본 은행에서 지금 단계 이하 장면 하나(2026-10-30 사용자 A).
       const sceneScript = pickBankScript({ language, stage, passed: planPassed, seed: localDay(new Date(now)) });
       const scene = sceneScript ? { id: sceneScript.id, stage: sceneScript.stage } : null;
-      return todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, fill, scene, now });
+      // Logbank 육각형의 방향(curriculum/fillFocus.ts): 약점 열쇠는 내 기록에 맞춰일 때 다시 볼 것 다음에, 아직 모름 칸은 채우기 다섯에 하나.
+      const direction = readFillFocus(language);
+      return todayPlan({ language, stage, passed: planPassed, review, pace: settings.pace, order: settings.order, recommended, redo, fill: mixProbes(fill, direction?.probe ?? []), focus: direction?.weak, scene, now });
     },
     // 오늘 목록은 분량·순서·언어가 바뀔 때만 새로(하나 끝냈다고 바꾸지 않는다) — passed·review는 처음 계산에만.
     // eslint-disable-next-line react-hooks/exhaustive-deps

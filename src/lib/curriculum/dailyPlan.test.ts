@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { applyCheck, curriculumItems, daysToFinish, reviewKeysOf, todayPlan, DAY_MS, type ReviewMap } from "./dailyPlan.ts";
 import { scriptsFor } from "./stageScripts.ts";
+import { allFramesFor } from "./frames.ts";
 
 const NOW = Date.UTC(2026, 9, 28);
 
@@ -123,4 +124,12 @@ test("오늘 할 것 안의 채우기: 분량 5·10·20분에 1·2·4개 퀴즈 
     const none = plan({ language, stage: 1, passed: new Set(), review: {}, pace: 10, order: "curriculum", now: Date.UTC(2026, 9, 29) });
     assert.equal(none.filter((item) => item.kind === "quiz").length, 0);
   }
+});
+
+test("내 기록에 맞춰: 육각형 약점 열쇠가 다시 볼 것 다음에, 커리큘럼 순서면 안 들어감(2026-11-02)", () => {
+  const key = "f|" + allFramesFor("es").find((frame) => frame.stage === 1)!.id;
+  const record = todayPlan({ language: "es", stage: 2, passed: new Set(), review: {}, pace: 10, order: "record", focus: [key], now: NOW });
+  assert.equal(record[0]!.id, key);
+  const plain = todayPlan({ language: "es", stage: 2, passed: new Set(), review: {}, pace: 10, order: "curriculum", focus: [key], now: NOW });
+  assert.ok(!plain.some((item) => item.id === key));
 });

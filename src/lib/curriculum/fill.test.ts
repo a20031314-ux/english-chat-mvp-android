@@ -130,3 +130,48 @@ test("틀린 꼴: 어순·빠짐·기능어·꼴·철자·다른 낱말(es·ja·
   assert.equal(missKindOf(cut("水を飲みます", "ja").filter((one) => one !== "を"), cut("水を飲みます", "ja")), "missing");
   assert.equal(missKindOf(cut("ฉันกินข้าว", "th").reverse(), cut("ฉันกินข้าว", "th")), "order");
 });
+
+test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 하나)·수업·튜터 고침·채팅에서 스스로 씀(es·ja)", async () => {
+  const { fillEvents, callTurnsOf } = await import("./fillInputs.ts");
+  const day = "2026-11-2";
+  const utc = Math.floor(Date.UTC(2026, 10, 2) / DAY);
+  const events = fillEvents({
+    language: "es",
+    known: { "w|agua": { days: [utc, utc - 3], at: NOW } },
+    quiz: { [day]: { n: 3, right: 2, okc: ["w|agua"], okt: ["w|casa"], wrong: ["f|es-f1-01"], wt: ["f|es-f1-01"], miss: { "f|es-f1-01": "form" } } },
+    results: [{ kind: "recall", item: "recall", title: "t", right: 4, total: 5, said: [], at: NOW, day, key: "f|es-f1-02" }],
+    items: [
+      { at: NOW, kind: "fixed", text: "yo es estudiante", right: "yo soy estudiante", part: "grammar", stage: 1, where: "chat" },
+      { at: NOW, kind: "mastered", text: "Gracias", part: "vocab", stage: 1, where: "call" },
+      { at: NOW, kind: "learned", text: "perro", part: "vocab", stage: 1, where: "review" },
+    ],
+    checkups: [],
+    segment: (text) => segmentWords(text, "es"),
+  });
+  const agua = events.filter((one) => one.key === "w|agua");
+  assert.equal(agua.length, 2, "같은 날 익힘·고르기는 하나");
+  assert.ok(events.some((one) => one.key === "w|casa" && one.use && one.correct));
+  assert.ok(events.some((one) => one.key === "f|es-f1-01" && one.use && !one.correct && one.miss === "form"));
+  assert.ok(events.some((one) => one.key === "f|es-f1-02" && one.source === "recall" && one.correct));
+  assert.ok(events.some((one) => one.key === "w|soy" && one.source === "fix" && one.miss === "word"));
+  assert.ok(events.some((one) => one.key === "w|gracias" && one.source === "free"));
+  assert.ok(!events.some((one) => one.key === "w|perro"), "복습에서 배운 것은 스스로 씀이 아님");
+  assert.equal(callTurnsOf([{ day, at: NOW, seconds: 60, fixed: 0, redone: 0 }]).length, 0);
+});
+
+test("학습 방향: 부족한 칸 열쇠·아직 모름 칸 열쇠, 채우기 다섯에 하나 섞기", async () => {
+  const { fillDirection, mixProbes } = await import("./fillFocus.ts");
+  const catalog = fillCatalog("es", await wordsOf("es"));
+  const easy = [...catalog.vocab.values()].filter((item) => item.d < 0.15);
+  const verbs = easy.filter((item) => item.cells.includes("pos:verb")).slice(0, 12);
+  const nouns = easy.filter((item) => item.cells.includes("pos:noun")).slice(0, 30);
+  const events: FillEvent[] = [
+    ...nouns.map((item, i) => ({ at: NOW - DAY + i, key: item.key, correct: true, source: "quiz" as const, use: true })),
+    ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true })),
+  ];
+  const result = computeFill({ catalog, check: "mid", stage: 2, events, calls: [], now: NOW });
+  const focus = fillDirection(result, catalog, events, NOW);
+  assert.ok(focus.weak.length > 0 && focus.weak.every((key) => verbs.some((item) => item.key === key)), focus.weak.join());
+  assert.ok(focus.probe.length > 0);
+  assert.deepEqual(mixProbes(["a", "b", "c", "d", "e", "f"], ["P"]), ["a", "b", "c", "d", "P", "e", "f"]);
+});

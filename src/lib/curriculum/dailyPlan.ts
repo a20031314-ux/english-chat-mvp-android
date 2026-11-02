@@ -188,6 +188,11 @@ export function todayPlan(input: {
   fill?: readonly string[];
   /** 대본 은행에서 고른 오늘의 장면(curriculum/scriptBank.ts) — 하루의 끝(설명·문제 다음 대화)에 한 칸, 2026-10-30. */
   scene?: { id: string; stage: number } | null;
+  /**
+   * 내 기록에 맞춰일 때만: Logbank 육각형이 고른 이번 주 약점 열쇠(curriculum/fillFocus.ts — 부족한 세부 칸, 2026-11-02).
+   * 다시 볼 것 다음, 약한 곳 몫(분량의 절반) 안에서.
+   */
+  focus?: readonly string[];
   now?: number;
 }): PlanItem[] {
   const now = input.now ?? Date.now();
@@ -228,6 +233,7 @@ export function todayPlan(input: {
     const key = `f|${redo.frame}`;
     if (!out.some((item) => item.id === key)) weak(key, redo.card);
   }
+  if (input.order === "record") for (const key of input.focus ?? []) if (!out.some((item) => item.id === key)) weak(key);
   // 채우기 자리는 미리 비워 둔다(새 대본이 분량을 다 채우지 않게).
   const fillKeys = (input.fill ?? []).filter((key) => !out.some((item) => item.id === key) && canQuiz(input.language, key)).slice(0, fillCount(input.pace));
   // 꺼내 쓰기 자리도 미리(틀이 있는 단계면 하루 한 칸) — 문장구조 다음에 둔다.

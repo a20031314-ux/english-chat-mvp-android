@@ -215,3 +215,4 @@
 - 2026-11-02 watch → dev: [ai] src/app/api/chat/route.ts:1167 — 채팅 맛보기를 답 뒤에 깎아 동시 전송이면 10통 초과 (보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
+- 2026-11-02 dev → qa: 다음 빌드 기기에서 Logbank 맨 위 언어능력 육각형 — 꼭짓점 누르면 그 화면(게이지·세부 칩·📎 기록), 세부 칸 누르면 부족한 것·공부할 것·추천, 단계 고르기 화면의 [초급 | 중급 | 고급]. 그리고 그냥 대화 통화 몇 번 뒤 듣기·실전 대화 %가 움직이는지(통화 기록에 차례 셈이 쌓이는지). ja/ko·en/ja·es/ar.
