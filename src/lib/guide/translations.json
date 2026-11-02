@@ -6,14 +6,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Empieza algo de «{ui:planTitle}» con ▶; al terminar, la pantalla de la etapa."
+            "Empieza con ▶ lo de arriba, ‘{ui:planTitle}’; debajo, las estructuras de esta etapa."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}»: escribe tus respuestas."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — escribe cada respuesta en el hueco."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -27,14 +27,14 @@
         {
           "heading": "4. Lecciones de estructuras",
           "body": [
-            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», y luego «{ui:recallTitle}»."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — en la charla solo escribes el hueco."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. A la siguiente etapa",
           "body": [
-            "Estructuras aprendidas 70% + «{ui:recallTitle}» 70% abren el examen de etapa."
+            "Cuando se llena la línea bajo la lista (estructuras · ‘{ui:recallTitle}’), haz el examen de etapa."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -48,14 +48,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "En la pantalla de la etapa, elige cómo practicar mirando dibujos."
+            "Botón sobre la lista → 🧩 estructuras · 🎭 situaciones · 📐 gramática, eligiendo por imágenes."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Frases corregidas",
           "body": [
-            "Lo que corrigió el tutor va solo a «{ui:weakTitle}»."
+            "Las frases que corrigió el tutor van solas a {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -147,14 +147,21 @@
         {
           "heading": "La pantalla de llamada",
           "body": [
-            "Arriba el tutor, abajo tú. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
+            "Tutor arriba, tú abajo. 💬 ‘{ui:roleplayCaptions}’ (toca la línea para traducirla) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Actívalo y el tutor señala solo los errores grandes y te pide repetir. Las correcciones salen en una tarjeta bajo tu cara."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Al terminar la llamada",
           "body": [
-            "Toca 🧩 o 🔤 en «{ui:callRecapTitle}» para una lección con tu frase."
+            "Pasa la transcripción (con traducción del tutor) y al final usa 🧩 o 🔤 en ‘{ui:callRecapTitle}’ para una lección con tu frase."
           ],
           "shot": "call-recap"
         },
@@ -378,7 +385,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "ja": {
     "map": {
@@ -387,14 +394,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "「{ui:planTitle}」を▶で1つずつ。終わったら段階の画面。"
+            "いちばん上の「{ui:planTitle}」を▶で始め、下は今の段階の文型リスト。"
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "「{ui:partVocab}」・「{ui:examTitle}」・「{ui:weakTitle}」 — 自分で書いて解く。"
+            "「{ui:partVocab}」 · 「{ui:examTitle}」 · 「{ui:weakTitle}」 — 空欄に自分で書いて解きます。"
           ],
           "shot": "bank-keep-quiz"
         },
@@ -408,14 +415,14 @@
         {
           "heading": "4. 文型レッスン",
           "body": [
-            "「{ui:explanation}」 › 「{ui:quizTag}」 › 「{ui:homeTabTalk}」、次に「{ui:recallTitle}」。"
+            "「{ui:explanation}」 › 「{ui:quizTag}」 › 「{ui:homeTabTalk}」 — 会話では空欄だけ書きます。"
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. 次の段階へ",
           "body": [
-            "文型の習得70% + 「{ui:recallTitle}」70%で段階テスト。"
+            "リストの下の行（文型 · 「{ui:recallTitle}」）が満ちたら段階テスト。"
           ],
           "shot": "bank-stage-ladder"
         },
@@ -429,14 +436,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "段階の画面で、絵を見て練習のしかたを選ぶ。"
+            "リストの上のボタン → 🧩 文型 · 🎭 場面 · 📐 文法、絵を見て選びます。"
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. 直された文",
           "body": [
-            "チューターが直した文は自動で「{ui:weakTitle}」へ。"
+            "チューターが直した文は{ui:keepTitle}の「{ui:weakTitle}」に自動で入ります。"
           ],
           "shot": "bank-log-day"
         },
@@ -528,14 +535,21 @@
         {
           "heading": "通話画面",
           "body": [
-            "上にチューター、下に自分。💬「{ui:roleplayCaptions}」・💡「{ui:missionHint}」・🙉「{ui:roleplayMissed}」。"
+            "上がチューター、下が自分。💬 「{ui:roleplayCaptions}」（行をタップで訳） · 💡 「{ui:missionHint}」 · 🙉 「{ui:roleplayMissed}」。"
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "オンにすると大きなミスだけ指摘し、言い直させます。直した文は自分の顔の下にカードで。"
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "通話が終わったら",
           "body": [
-            "「{ui:callRecapTitle}」の🧩・🔤で自分の文のレッスンへ。"
+            "会話文を横にめくり（チューターの行は訳つき）、最後の「{ui:callRecapTitle}」の🧩・🔤で自分の文のレッスン。"
           ],
           "shot": "call-recap"
         },
@@ -759,7 +773,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "zh": {
     "map": {
@@ -768,14 +782,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "用▶逐个开始“{ui:planTitle}”，做完进入阶段画面。"
+            "用▶开始最上面的“{ui:planTitle}”，下面是本阶段的句型列表。"
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "“{ui:partVocab}”·“{ui:examTitle}”·“{ui:weakTitle}” —— 自己写答案。"
+            "“{ui:partVocab}” · “{ui:examTitle}” · “{ui:weakTitle}” — 在空格里自己写答案。"
           ],
           "shot": "bank-keep-quiz"
         },
@@ -789,14 +803,14 @@
         {
           "heading": "4. 句型课",
           "body": [
-            "“{ui:explanation}” › “{ui:quizTag}” › “{ui:homeTabTalk}”，然后“{ui:recallTitle}”。"
+            "“{ui:explanation}” › “{ui:quizTag}” › “{ui:homeTabTalk}” — 对话里只写空格部分。"
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. 进入下一阶段",
           "body": [
-            "句型掌握70% + “{ui:recallTitle}”70%，就能参加阶段考试。"
+            "列表下面那行（句型 · “{ui:recallTitle}”）满了就参加阶段测试。"
           ],
           "shot": "bank-stage-ladder"
         },
@@ -810,14 +824,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "在阶段画面看图选择练习方式。"
+            "列表上方的按钮 → 🧩 句型 · 🎭 情景 · 📐 语法，看图选择。"
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. 被改过的句子",
           "body": [
-            "老师改过的句子会自动进入“{ui:weakTitle}”。"
+            "导师改过的句子会自动进入{ui:keepTitle}的“{ui:weakTitle}”。"
           ],
           "shot": "bank-log-day"
         },
@@ -909,14 +923,21 @@
         {
           "heading": "通话画面",
           "body": [
-            "上面是老师，下面是你。💬“{ui:roleplayCaptions}”·💡“{ui:missionHint}”·🙉“{ui:roleplayMissed}”。"
+            "上面是导师，下面是你。💬 “{ui:roleplayCaptions}”（点一行看翻译） · 💡 “{ui:missionHint}” · 🙉 “{ui:roleplayMissed}”。"
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "打开后，导师只指出大错误并让你再说一遍。改正会以卡片显示在你的头像下方。"
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "通话结束后",
           "body": [
-            "点“{ui:callRecapTitle}”里的🧩或🔤，用你的句子上课。"
+            "左右翻看对话稿（导师的话带翻译），最后在“{ui:callRecapTitle}”点🧩或🔤，用你的句子上课。"
           ],
           "shot": "call-recap"
         },
@@ -1140,7 +1161,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "vi": {
     "map": {
@@ -1149,14 +1170,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Bắt đầu từng mục ‘{ui:planTitle}’ bằng ▶; xong thì sang màn hình giai đoạn."
+            "Bắt đầu mục trên cùng ‘{ui:planTitle}’ bằng ▶; bên dưới là các cấu trúc câu của chặng này."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — tự gõ đáp án."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — tự gõ đáp án vào chỗ trống."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -1170,14 +1191,14 @@
         {
           "heading": "4. Bài học mẫu câu",
           "body": [
-            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, rồi ‘{ui:recallTitle}’."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — khi trò chuyện chỉ gõ phần trống."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Sang giai đoạn tiếp theo",
           "body": [
-            "Thuộc mẫu câu 70% + ‘{ui:recallTitle}’ 70% là mở bài kiểm tra giai đoạn."
+            "Khi dòng dưới danh sách (cấu trúc · ‘{ui:recallTitle}’) đầy, làm bài kiểm tra chặng."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -1191,14 +1212,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "Ở màn hình giai đoạn, xem hình để chọn cách luyện."
+            "Nút trên danh sách → 🧩 cấu trúc · 🎭 tình huống · 📐 ngữ pháp, chọn theo hình."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Câu được sửa",
           "body": [
-            "Câu gia sư đã sửa tự vào ‘{ui:weakTitle}’."
+            "Câu gia sư đã sửa tự vào {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -1290,14 +1311,21 @@
         {
           "heading": "Màn hình cuộc gọi",
           "body": [
-            "Gia sư ở trên, bạn ở dưới. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
+            "Gia sư ở trên, bạn ở dưới. 💬 ‘{ui:roleplayCaptions}’ (chạm dòng để xem dịch) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Bật lên thì gia sư chỉ nhắc lỗi lớn và bảo bạn nói lại. Câu sửa hiện thành thẻ dưới ảnh của bạn."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Khi cuộc gọi kết thúc",
           "body": [
-            "Chạm 🧩 hoặc 🔤 trong ‘{ui:callRecapTitle}’ để học bằng câu của bạn."
+            "Lướt xem bản ghi (lời gia sư có dịch), cuối cùng bấm 🧩 hoặc 🔤 ở ‘{ui:callRecapTitle}’ để học với câu của bạn."
           ],
           "shot": "call-recap"
         },
@@ -1521,7 +1549,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "fr": {
     "map": {
@@ -1530,14 +1558,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Lance une chose de « {ui:planTitle} » avec ▶ ; ensuite, l’écran de l’étape."
+            "Lance l’élément du haut, ‘{ui:planTitle}’, avec ▶ ; dessous, les structures de cette étape."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "« {ui:partVocab} » · « {ui:examTitle} » · « {ui:weakTitle} » — tape tes réponses."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — écris chaque réponse dans le blanc."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -1551,14 +1579,14 @@
         {
           "heading": "4. Leçons de structures",
           "body": [
-            "« {ui:explanation} » › « {ui:quizTag} » › « {ui:homeTabTalk} », puis « {ui:recallTitle} »."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — dans l’échange, tu n’écris que le blanc."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Vers l’étape suivante",
           "body": [
-            "Structures acquises 70 % + « {ui:recallTitle} » 70 % ouvrent l’examen d’étape."
+            "Quand la ligne sous la liste (structures · ‘{ui:recallTitle}’) est pleine, passe le test d’étape."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -1572,14 +1600,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "Sur l’écran de l’étape, choisis comment t’entraîner en images."
+            "Bouton au-dessus de la liste → 🧩 structures · 🎭 situations · 📐 grammaire, choisis d’après l’image."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Phrases corrigées",
           "body": [
-            "Ce que le tuteur a corrigé va tout seul dans « {ui:weakTitle} »."
+            "Les phrases corrigées par le tuteur vont seules dans {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -1671,14 +1699,21 @@
         {
           "heading": "L’écran d’appel",
           "body": [
-            "Le tuteur en haut, toi en bas. 💬 « {ui:roleplayCaptions} » · 💡 « {ui:missionHint} » · 🙉 « {ui:roleplayMissed} »."
+            "Le tuteur en haut, toi en bas. 💬 ‘{ui:roleplayCaptions}’ (touche la ligne pour la traduction) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Activé, le tuteur ne relève que les grosses erreurs et te fait répéter. Les corrections s’affichent en carte sous ton visage."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Après l’appel",
           "body": [
-            "Touche 🧩 ou 🔤 dans « {ui:callRecapTitle} » pour une leçon sur ta phrase."
+            "Fais défiler la transcription (lignes du tuteur traduites), puis 🧩 ou 🔤 dans ‘{ui:callRecapTitle}’ pour une leçon sur ta phrase."
           ],
           "shot": "call-recap"
         },
@@ -1902,7 +1937,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "it": {
     "map": {
@@ -1911,14 +1946,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Avvia una cosa di «{ui:planTitle}» con ▶; finito, la schermata del livello."
+            "Avvia con ▶ la voce in alto, ‘{ui:planTitle}’; sotto, le strutture di questa tappa."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — scrivi tu le risposte."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — scrivi ogni risposta nello spazio vuoto."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -1932,14 +1967,14 @@
         {
           "heading": "4. Lezioni sulle strutture",
           "body": [
-            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», poi «{ui:recallTitle}»."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — nel dialogo scrivi solo lo spazio vuoto."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Alla fase successiva",
           "body": [
-            "Strutture imparate 70% + «{ui:recallTitle}» 70% aprono l’esame di livello."
+            "Quando la riga sotto l’elenco (strutture · ‘{ui:recallTitle}’) è piena, fai il test di tappa."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -1953,14 +1988,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "Nella schermata del livello scegli come esercitarti dalle immagini."
+            "Pulsante sopra l’elenco → 🧩 strutture · 🎭 situazioni · 📐 grammatica, scegli dalle immagini."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Frasi corrette",
           "body": [
-            "Ciò che il tutor ha corretto va da solo in «{ui:weakTitle}»."
+            "Le frasi corrette dal tutor finiscono da sole in {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -2052,14 +2087,21 @@
         {
           "heading": "La schermata di chiamata",
           "body": [
-            "Il tutor sopra, tu sotto. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
+            "Tutor sopra, tu sotto. 💬 ‘{ui:roleplayCaptions}’ (tocca la riga per la traduzione) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Attivalo e il tutor segnala solo gli errori grossi e ti fa ripetere. Le correzioni appaiono in una scheda sotto il tuo volto."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Dopo la chiamata",
           "body": [
-            "Tocca 🧩 o 🔤 in «{ui:callRecapTitle}» per una lezione sulla tua frase."
+            "Scorri la trascrizione (righe del tutor tradotte), poi 🧩 o 🔤 in ‘{ui:callRecapTitle}’ per una lezione sulla tua frase."
           ],
           "shot": "call-recap"
         },
@@ -2283,7 +2325,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "pt": {
     "map": {
@@ -2292,14 +2334,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Comece algo de ‘{ui:planTitle}’ com ▶; ao terminar, a tela da etapa."
+            "Comece o item do topo, ‘{ui:planTitle}’, com ▶; abaixo, as estruturas desta etapa."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — digite as respostas."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — digite cada resposta na lacuna."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -2313,14 +2355,14 @@
         {
           "heading": "4. Aulas de estruturas",
           "body": [
-            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, depois ‘{ui:recallTitle}’."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — na conversa você digita só a lacuna."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Para a próxima etapa",
           "body": [
-            "Estruturas aprendidas 70% + ‘{ui:recallTitle}’ 70% liberam a prova da etapa."
+            "Quando a linha sob a lista (estruturas · ‘{ui:recallTitle}’) enche, faça a prova da etapa."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -2334,14 +2376,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "Na tela da etapa, escolha como praticar pelas imagens."
+            "Botão acima da lista → 🧩 estruturas · 🎭 situações · 📐 gramática, escolha pelas imagens."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Frases corrigidas",
           "body": [
-            "O que o tutor corrigiu vai sozinho para ‘{ui:weakTitle}’."
+            "Frases que o tutor corrigiu vão sozinhas para {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -2433,14 +2475,21 @@
         {
           "heading": "A tela da chamada",
           "body": [
-            "O tutor em cima, você embaixo. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
+            "Tutor em cima, você embaixo. 💬 ‘{ui:roleplayCaptions}’ (toque na linha para traduzir) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Ligado, o tutor aponta só os erros grandes e pede para você repetir. As correções aparecem num cartão abaixo do seu rosto."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Depois da chamada",
           "body": [
-            "Toque 🧩 ou 🔤 em ‘{ui:callRecapTitle}’ para uma aula com a sua frase."
+            "Passe a transcrição (falas do tutor traduzidas) e, no fim, 🧩 ou 🔤 em ‘{ui:callRecapTitle}’ para uma aula com a sua frase."
           ],
           "shot": "call-recap"
         },
@@ -2664,7 +2713,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "ru": {
     "map": {
@@ -2673,14 +2722,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Запускайте пункты «{ui:planTitle}» кнопкой ▶; потом — экран этапа."
+            "Начните верхний пункт ‘{ui:planTitle}’ кнопкой ▶; ниже — структуры этого этапа."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — ответы вводите сами."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — впишите ответ в пропуск."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -2694,14 +2743,14 @@
         {
           "heading": "4. Уроки конструкций",
           "body": [
-            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}», затем «{ui:recallTitle}»."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — в диалоге пишете только пропуск."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. К следующему этапу",
           "body": [
-            "Конструкции 70% + «{ui:recallTitle}» 70% — и открывается тест этапа."
+            "Когда строка под списком (структуры · ‘{ui:recallTitle}’) заполнится — тест этапа."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -2715,14 +2764,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "На экране этапа выберите способ практики по картинкам."
+            "Кнопка над списком → 🧩 структуры · 🎭 ситуации · 📐 грамматика, выбор по картинкам."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Исправленные фразы",
           "body": [
-            "Что исправил репетитор, само попадает в «{ui:weakTitle}»."
+            "Фразы, исправленные репетитором, сами попадают в {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -2814,14 +2863,21 @@
         {
           "heading": "Экран звонка",
           "body": [
-            "Сверху репетитор, снизу вы. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
+            "Репетитор сверху, вы снизу. 💬 ‘{ui:roleplayCaptions}’ (нажмите строку — перевод) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Если включить, репетитор отмечает только крупные ошибки и просит сказать снова. Исправления — карточкой под вашим лицом."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "После звонка",
           "body": [
-            "Нажмите 🧩 или 🔤 в «{ui:callRecapTitle}» — урок по вашей фразе."
+            "Листайте расшифровку (реплики репетитора с переводом), а в конце 🧩 или 🔤 в ‘{ui:callRecapTitle}’ — урок по вашей фразе."
           ],
           "shot": "call-recap"
         },
@@ -3045,7 +3101,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "id": {
     "map": {
@@ -3054,14 +3110,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "Mulai satu per satu ‘{ui:planTitle}’ dengan ▶; selesai, layar tahap."
+            "Mulai butir teratas ‘{ui:planTitle}’ dengan ▶; di bawahnya struktur kalimat tahap ini."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — ketik sendiri jawabannya."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — ketik jawaban di bagian kosong."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -3075,14 +3131,14 @@
         {
           "heading": "4. Pelajaran pola kalimat",
           "body": [
-            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, lalu ‘{ui:recallTitle}’."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — di percakapan cukup ketik bagian kosong."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. Ke tahap berikutnya",
           "body": [
-            "Pola dikuasai 70% + ‘{ui:recallTitle}’ 70% membuka ujian tahap."
+            "Saat baris di bawah daftar (struktur · ‘{ui:recallTitle}’) penuh, ikuti tes tahap."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -3096,14 +3152,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "Di layar tahap, pilih cara latihan dari gambar."
+            "Tombol di atas daftar → 🧩 struktur · 🎭 situasi · 📐 tata bahasa, pilih dari gambar."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. Kalimat yang diperbaiki",
           "body": [
-            "Yang diperbaiki tutor otomatis masuk ke ‘{ui:weakTitle}’."
+            "Kalimat yang dikoreksi tutor otomatis masuk ke {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -3195,14 +3251,21 @@
         {
           "heading": "Layar panggilan",
           "body": [
-            "Tutor di atas, kamu di bawah. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
+            "Tutor di atas, kamu di bawah. 💬 ‘{ui:roleplayCaptions}’ (ketuk baris untuk terjemahan) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "Jika dinyalakan, tutor hanya menunjuk kesalahan besar dan memintamu mengulang. Koreksi muncul sebagai kartu di bawah wajahmu."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "Setelah panggilan",
           "body": [
-            "Ketuk 🧩 atau 🔤 di ‘{ui:callRecapTitle}’ untuk belajar dari kalimatmu."
+            "Geser transkrip (ucapan tutor diterjemahkan), lalu di akhir 🧩 atau 🔤 di ‘{ui:callRecapTitle}’ untuk pelajaran dengan kalimatmu."
           ],
           "shot": "call-recap"
         },
@@ -3426,7 +3489,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "ar": {
     "map": {
@@ -3435,14 +3498,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "ابدأ مهام «{ui:planTitle}» واحدة واحدة بـ▶، وبعدها شاشة المرحلة."
+            "ابدأ البند العلوي ‘{ui:planTitle}’ بـ ▶؛ وتحته تراكيب هذه المرحلة."
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "«{ui:partVocab}» · «{ui:examTitle}» · «{ui:weakTitle}» — اكتب إجاباتك بنفسك."
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — اكتب كل إجابة في الفراغ."
           ],
           "shot": "bank-keep-quiz"
         },
@@ -3456,14 +3519,14 @@
         {
           "heading": "4. دروس التراكيب",
           "body": [
-            "«{ui:explanation}» › «{ui:quizTag}» › «{ui:homeTabTalk}»، ثم «{ui:recallTitle}»."
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — في المحادثة تكتب الفراغ فقط."
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. إلى المرحلة التالية",
           "body": [
-            "إتقان التراكيب 70% + «{ui:recallTitle}» 70% يفتحان امتحان المرحلة."
+            "عندما يمتلئ السطر تحت القائمة (التراكيب · ‘{ui:recallTitle}’) خذ اختبار المرحلة."
           ],
           "shot": "bank-stage-ladder"
         },
@@ -3477,14 +3540,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "في شاشة المرحلة اختر طريقة التدريب من الصور."
+            "الزر فوق القائمة ← 🧩 تراكيب · 🎭 مواقف · 📐 قواعد، اختر من الصور."
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. الجمل المصحّحة",
           "body": [
-            "ما صحّحه المعلّم يذهب وحده إلى «{ui:weakTitle}»."
+            "الجمل التي صححها المعلم تذهب وحدها إلى {ui:keepTitle} ‘{ui:weakTitle}’."
           ],
           "shot": "bank-log-day"
         },
@@ -3576,14 +3639,21 @@
         {
           "heading": "شاشة المكالمة",
           "body": [
-            "المعلّم في الأعلى وأنت في الأسفل. 💬 «{ui:roleplayCaptions}» · 💡 «{ui:missionHint}» · 🙉 «{ui:roleplayMissed}»."
+            "المعلم في الأعلى وأنت في الأسفل. 💬 ‘{ui:roleplayCaptions}’ (المس السطر للترجمة) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "عند تشغيله ينبّه المعلم إلى الأخطاء الكبيرة فقط ويطلب منك الإعادة. تظهر التصحيحات في بطاقة تحت صورتك."
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "بعد المكالمة",
           "body": [
-            "اضغط 🧩 أو 🔤 في «{ui:callRecapTitle}» لدرس من جملتك."
+            "تصفّح النص جانبيًا (جمل المعلم مترجمة)، وفي النهاية 🧩 أو 🔤 في ‘{ui:callRecapTitle}’ لدرس بجملتك."
           ],
           "shot": "call-recap"
         },
@@ -3807,7 +3877,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "th": {
     "map": {
@@ -3816,14 +3886,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "เริ่ม ‘{ui:planTitle}’ ทีละอย่างด้วย ▶ ทำเสร็จแล้วไปหน้าขั้น"
+            "เริ่มรายการบนสุด ‘{ui:planTitle}’ ด้วย ▶ ด้านล่างคือโครงสร้างประโยคของขั้นนี้"
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — พิมพ์คำตอบเอง"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — พิมพ์คำตอบลงในช่องว่างเอง"
           ],
           "shot": "bank-keep-quiz"
         },
@@ -3837,14 +3907,14 @@
         {
           "heading": "4. บทเรียนรูปประโยค",
           "body": [
-            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ แล้วต่อด้วย ‘{ui:recallTitle}’"
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — ตอนคุยพิมพ์แค่ช่องว่าง"
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. ไปขั้นถัดไป",
           "body": [
-            "รูปประโยคที่จำได้ 70% + ‘{ui:recallTitle}’ 70% จะเปิดสอบประจำขั้น"
+            "เมื่อบรรทัดใต้รายการ (โครงสร้าง · ‘{ui:recallTitle}’) เต็ม ทำแบบทดสอบขั้น"
           ],
           "shot": "bank-stage-ladder"
         },
@@ -3858,14 +3928,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "ในหน้าขั้น ดูรูปแล้วเลือกวิธีฝึก"
+            "ปุ่มเหนือรายการ → 🧩 โครงสร้าง · 🎭 สถานการณ์ · 📐 ไวยากรณ์ เลือกจากภาพ"
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. ประโยคที่ถูกแก้",
           "body": [
-            "ประโยคที่ติวเตอร์แก้จะเข้าไปใน ‘{ui:weakTitle}’ เอง"
+            "ประโยคที่ติวเตอร์แก้จะเข้าไปที่ {ui:keepTitle} ‘{ui:weakTitle}’ เอง"
           ],
           "shot": "bank-log-day"
         },
@@ -3957,14 +4027,21 @@
         {
           "heading": "หน้าจอโทร",
           "body": [
-            "ติวเตอร์อยู่บน คุณอยู่ล่าง 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’"
+            "ติวเตอร์อยู่บน คุณอยู่ล่าง 💬 ‘{ui:roleplayCaptions}’ (แตะบรรทัดเพื่อดูคำแปล) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’"
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "เปิดแล้วติวเตอร์จะชี้เฉพาะข้อผิดใหญ่และให้พูดใหม่ ประโยคที่แก้แสดงเป็นการ์ดใต้หน้าคุณ"
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "เมื่อโทรจบ",
           "body": [
-            "แตะ 🧩 หรือ 🔤 ใน ‘{ui:callRecapTitle}’ เพื่อเรียนจากประโยคของคุณ"
+            "เลื่อนดูบทสนทนา (ประโยคติวเตอร์มีคำแปล) แล้วท้ายสุดกด 🧩 หรือ 🔤 ใน ‘{ui:callRecapTitle}’ เพื่อเรียนด้วยประโยคของคุณ"
           ],
           "shot": "call-recap"
         },
@@ -4188,7 +4265,7 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   },
   "hi": {
     "map": {
@@ -4197,14 +4274,14 @@
         {
           "heading": "1. {ui:stagebankTitle}",
           "body": [
-            "‘{ui:planTitle}’ को ▶ से एक-एक करके शुरू करें; खत्म होने पर चरण स्क्रीन।"
+            "सबसे ऊपर ‘{ui:planTitle}’ को ▶ से शुरू करें; नीचे इस चरण की वाक्य-संरचनाएँ।"
           ],
           "shot": "bank-stage-today"
         },
         {
           "heading": "2. {ui:keepTitle}",
           "body": [
-            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — जवाब खुद लिखें।"
+            "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — खाली जगह में ख़ुद उत्तर लिखें।"
           ],
           "shot": "bank-keep-quiz"
         },
@@ -4218,14 +4295,14 @@
         {
           "heading": "4. वाक्य-ढाँचे के पाठ",
           "body": [
-            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, फिर ‘{ui:recallTitle}’।"
+            "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — बातचीत में सिर्फ़ खाली जगह लिखें।"
           ],
           "shot": "bank-stage-lesson"
         },
         {
           "heading": "5. अगले चरण की ओर",
           "body": [
-            "ढाँचे 70% + ‘{ui:recallTitle}’ 70% पर चरण परीक्षा खुलती है।"
+            "सूची के नीचे की पंक्ति (संरचनाएँ · ‘{ui:recallTitle}’) भर जाए तो चरण परीक्षा।"
           ],
           "shot": "bank-stage-ladder"
         },
@@ -4239,14 +4316,14 @@
         {
           "heading": "6. {ui:practiceWay}",
           "body": [
-            "चरण स्क्रीन पर चित्र देखकर अभ्यास का तरीका चुनें।"
+            "सूची के ऊपर बटन → 🧩 संरचना · 🎭 स्थिति · 📐 व्याकरण, चित्र देखकर चुनें।"
           ],
           "shot": "stage-ways"
         },
         {
           "heading": "7. सुधारे गए वाक्य",
           "body": [
-            "ट्यूटर ने जो सुधारा, वह अपने आप ‘{ui:weakTitle}’ में जाता है।"
+            "ट्यूटर के सुधारे वाक्य अपने-आप {ui:keepTitle} ‘{ui:weakTitle}’ में जाते हैं।"
           ],
           "shot": "bank-log-day"
         },
@@ -4338,14 +4415,21 @@
         {
           "heading": "कॉल स्क्रीन",
           "body": [
-            "ऊपर ट्यूटर, नीचे आप। 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’।"
+            "ऊपर ट्यूटर, नीचे आप। 💬 ‘{ui:roleplayCaptions}’ (पंक्ति छूएँ तो अनुवाद) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’।"
           ],
           "shot": "real-call"
         },
         {
+          "heading": "🎓 {ui:callCoach}",
+          "body": [
+            "चालू करने पर ट्यूटर सिर्फ़ बड़ी गलतियाँ बताता है और दोबारा बुलवाता है। सुधार आपके चेहरे के नीचे कार्ड में।"
+          ],
+          "shot": "call-coach"
+        },
+        {
           "heading": "कॉल के बाद",
           "body": [
-            "‘{ui:callRecapTitle}’ में 🧩 या 🔤 दबाएँ — आपके वाक्य पर पाठ।"
+            "ट्रांसक्रिप्ट आगे पलटें (ट्यूटर की पंक्तियाँ अनुवाद सहित), फिर अंत में ‘{ui:callRecapTitle}’ में 🧩 या 🔤 से अपने वाक्य पर पाठ।"
           ],
           "shot": "call-recap"
         },
@@ -4569,6 +4653,6 @@
         }
       ]
     },
-    "_version": "2026-11-01a"
+    "_version": "2026-11-03a"
   }
 }

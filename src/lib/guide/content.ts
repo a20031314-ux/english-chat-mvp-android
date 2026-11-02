@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-11-01a";
+export const GUIDE_VERSION = "2026-11-03a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -49,7 +49,7 @@ export type Guide = Record<GuideTabId, GuideTab>;
 export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
   map: ["my.start", "my.next", "my.growth", "my.graph", "my.element", "my.ask", "my.map", "my.notes", "my.more"],
   chat: ["chat.next", "chat.talk", "chat.stuck", "chat.meaning", "chat.analyse", "chat.words", "chat.menu", "chat.history", "chat.more"],
-  roleplay: ["call.pack", "call.talk", "call.review", "call.ownline", "call.pause", "call.time"],
+  roleplay: ["call.pack", "call.talk", "call.coach", "call.review", "call.ownline", "call.pause", "call.time"],
   video: ["video.library", "video.subtitles", "video.bar", "video.ask", "video.import", "video.edit"],
   vocab: ["words.find", "words.saved", "words.learn", "words.script"],
   rooms: [
@@ -100,16 +100,11 @@ export type GuideChapter = { id: string; title: string; go: GuideGo; sections: (
 export const GUIDE_CLIPS: Record<string, string> = {
   "chat.analyse": "chat-ask",
   "video.ask": "video-ask",
-  // 2.79(2026-11-01): My 칸은 Bank 설명 영상(scripts/guide-clips.mjs bank-stage·bank-keep, 14개 언어)으로 — 예전 my.map "my-today"(대본 목록)는 화면이 없어짐.
-  "my.start": "bank-stage",
-  "my.next": "bank-keep",
+  // My 칸 영상(bank-stage·bank-keep)은 2026-11-03에 뺌 — 11-02 화면(네 갈래 칸·모두 펼침)이라, 지금 화면 그림으로(사용자 "일단 스크린샷으로"). 새 영상을 찍으면 다시.
 };
 
 /** 그 화면이 있는 빌드만 받는 영상: 칸 id → 빌드가 /api/guide에 보내는 표시(없으면 영상을 빼고 그림만). */
-export const GUIDE_CLIPS_SINCE: Record<string, string> = {
-  "my.start": "r283",
-  "my.next": "r283",
-};
+export const GUIDE_CLIPS_SINCE: Record<string, string> = {};
 
 /** 한 언어의 글에서 칸 하나(없으면 null). */
 export function guideSection(guide: Guide, id: string): (GuideSection & { id: string }) | null {
@@ -138,14 +133,14 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "1. {ui:stagebankTitle}",
         "body": [
-          "‘{ui:planTitle}’ 하나를 ▶로 시작, 다 하면 n단계 화면."
+          "맨 위 ‘{ui:planTitle}’ 하나를 ▶로, 아래는 지금 단계의 문장구조 목록."
         ],
         "shot": "bank-stage-today"
       },
       {
         "heading": "2. {ui:keepTitle}",
         "body": [
-          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — 직접 써서 풀어요."
+          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — 빈칸에 직접 써서 풀어요."
         ],
         "shot": "bank-keep-quiz"
       },
@@ -159,14 +154,14 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "4. 문장구조 수업",
         "body": [
-          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, 그다음 ‘{ui:recallTitle}’."
+          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — 대화에선 빈칸 자리만 써요."
         ],
         "shot": "bank-stage-lesson"
       },
       {
         "heading": "5. 다음 단계로",
         "body": [
-          "문장구조 익힘 70% + ‘{ui:recallTitle}’ 70%면 단계 시험."
+          "단계 목록 아래 줄(문장구조 · ‘{ui:recallTitle}’)이 다 차면 단계 시험."
         ],
         "shot": "bank-stage-ladder"
       },
@@ -180,14 +175,14 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "6. {ui:practiceWay}",
         "body": [
-          "n단계 화면에서 그림을 보고 연습 방식을 골라요."
+          "목록 위 버튼 → 🧩 문장구조 · 🎭 상황 · 📐 문법, 그림을 보고 골라요."
         ],
         "shot": "stage-ways"
       },
       {
         "heading": "7. 고친 줄",
         "body": [
-          "튜터가 고친 줄은 ‘{ui:weakTitle}’에 저절로 들어가요."
+          "튜터가 고친 줄은 {ui:keepTitle} ‘{ui:weakTitle}’에 저절로 들어가요."
         ],
         "shot": "bank-log-day"
       },
@@ -279,14 +274,21 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "통화 화면",
         "body": [
-          "위엔 튜터, 아래엔 나. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
+          "위엔 튜터, 아래엔 나. 💬 ‘{ui:roleplayCaptions}’(줄을 누르면 해석) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
         ],
         "shot": "real-call"
       },
       {
+        "heading": "🎓 {ui:callCoach}",
+        "body": [
+          "켜면 튜터가 큰 실수만 짚고 다시 말해 보게 해요. 고친 말은 내 얼굴 아래 카드로."
+        ],
+        "shot": "call-coach"
+      },
+      {
         "heading": "통화가 끝나면",
         "body": [
-          "‘{ui:callRecapTitle}’의 🧩·🔤를 누르면 내 문장으로 수업해요."
+          "대본을 옆으로 넘겨 보고(튜터 줄 해석 포함), 맨 끝 ‘{ui:callRecapTitle}’의 🧩·🔤로 내 문장 수업."
         ],
         "shot": "call-recap"
       },
@@ -519,14 +521,14 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "1. {ui:stagebankTitle}",
         "body": [
-          "Start one thing in ‘{ui:planTitle}’ with ▶; when done, the stage screen."
+          "Start the one thing at the top, ‘{ui:planTitle}’, with ▶; below it, this stage’s sentence structures."
         ],
         "shot": "bank-stage-today"
       },
       {
         "heading": "2. {ui:keepTitle}",
         "body": [
-          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — type your answers."
+          "‘{ui:partVocab}’ · ‘{ui:examTitle}’ · ‘{ui:weakTitle}’ — type each answer in the blank."
         ],
         "shot": "bank-keep-quiz"
       },
@@ -540,14 +542,14 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "4. Sentence-pattern lessons",
         "body": [
-          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’, then ‘{ui:recallTitle}’."
+          "‘{ui:explanation}’ › ‘{ui:quizTag}’ › ‘{ui:homeTabTalk}’ — in the talk you type only the blank."
         ],
         "shot": "bank-stage-lesson"
       },
       {
         "heading": "5. Next stage",
         "body": [
-          "Patterns learned 70% + ‘{ui:recallTitle}’ 70% unlock the stage test."
+          "When the line under the stage list (structures · ‘{ui:recallTitle}’) fills up, take the stage test."
         ],
         "shot": "bank-stage-ladder"
       },
@@ -561,14 +563,14 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "6. {ui:practiceWay}",
         "body": [
-          "On the stage screen, pick how to practise from pictures."
+          "Button above the list → 🧩 structures · 🎭 situations · 📐 grammar, picked from pictures."
         ],
         "shot": "stage-ways"
       },
       {
         "heading": "7. Fixed lines",
         "body": [
-          "Lines the tutor fixed go to ‘{ui:weakTitle}’ by themselves."
+          "Lines the tutor fixed go to {ui:keepTitle} ‘{ui:weakTitle}’ by themselves."
         ],
         "shot": "bank-log-day"
       },
@@ -660,14 +662,21 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "The call screen",
         "body": [
-          "Tutor above, you below. 💬 ‘{ui:roleplayCaptions}’ · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
+          "Tutor above, you below. 💬 ‘{ui:roleplayCaptions}’ (tap the line for a translation) · 💡 ‘{ui:missionHint}’ · 🙉 ‘{ui:roleplayMissed}’."
         ],
         "shot": "real-call"
       },
       {
+        "heading": "🎓 {ui:callCoach}",
+        "body": [
+          "Turn it on and the tutor points out only big mistakes and has you say it again. Fixes show as a card under your face."
+        ],
+        "shot": "call-coach"
+      },
+      {
         "heading": "After the call",
         "body": [
-          "Tap 🧩 or 🔤 in ‘{ui:callRecapTitle}’ for a lesson on your own sentence."
+          "Swipe through the transcript (tutor lines translated), then 🧩 or 🔤 in ‘{ui:callRecapTitle}’ at the end for a lesson on your sentence."
         ],
         "shot": "call-recap"
       },

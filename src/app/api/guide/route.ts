@@ -34,6 +34,8 @@ const RETIRED_MY_SECTIONS = ["my.next", "my.ask"];
 const RETIRED_MY_SECTIONS_283 = ["my.ask"];
 /** 오늘의 팩을 뺀 빌드(`r279=1`, 2.76 — 무료는 대본만·대본 플랜, 2026-10-28)에는 팩 칸을 뺀다. */
 const RETIRED_PACK_SECTIONS = ["call.pack"];
+/** 🎓 튜터 수업(2026-11-02)은 2.79(`r283=1`)부터 — 그 전 빌드엔 칸째 뺀다(칸 순서로 이름을 붙이는 옛 빌드가 어긋나지 않게 tabs에서도). */
+const COACH_SECTIONS = ["call.coach"];
 /** 아이콘 묶음(2026-10-23) — 그 화면이 있는 빌드(`icons=1`)만. */
 const ICON_SECTIONS = ["people.icons"];
 
@@ -187,11 +189,15 @@ export async function GET(request: NextRequest) {
   const withIcons = request.nextUrl.searchParams.get("icons") === "1";
   const hiddenIds = [...(withGame ? [] : GAME_SECTIONS), ...(withIcons ? [] : ICON_SECTIONS)];
   // 묶음(chapters)에서만 뺀다 — `tabs`는 칸 순서가 옛 빌드와 같아야 해서 그대로 둔다.
-  const chapterHidden = [...hiddenIds, ...(r283 ? RETIRED_MY_SECTIONS_283 : r278 ? RETIRED_MY_SECTIONS : []), ...(r279 ? RETIRED_PACK_SECTIONS : [])];
+  const chapterHidden = [...hiddenIds, ...(r283 ? RETIRED_MY_SECTIONS_283 : r278 ? RETIRED_MY_SECTIONS : []), ...(r279 ? RETIRED_PACK_SECTIONS : []), ...(r283 ? [] : COACH_SECTIONS)];
   const hiddenAt = hiddenIds.map((id) => GUIDE_SECTION_IDS.rooms.indexOf(id)).filter((index) => index >= 0);
-  const current: Guide = hiddenAt.length
+  const coachAt = r283 ? -1 : GUIDE_SECTION_IDS.roleplay.indexOf("call.coach");
+  const withRooms: Guide = hiddenAt.length
     ? { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => !hiddenAt.includes(index)) } }
     : full;
+  const current: Guide = coachAt >= 0
+    ? { ...withRooms, roleplay: { ...withRooms.roleplay, sections: withRooms.roleplay.sections.filter((_, index) => index !== coachAt) } }
+    : withRooms;
   const language = asked === "ko" || asked === "en" || translated ? asked : "en";
   // 2.68 이하는 탭이 "사람·말하는 방"이고 단체방·자유 대화·참여 방식이 없다: `rooms=269`를
   // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.

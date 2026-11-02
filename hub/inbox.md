@@ -220,9 +220,6 @@
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:308 — 통화 끝난 뒤 끝 화면에서 저장될 때마다 activeSecs가 늘어남 (finished면 끝난 순간 값 고정).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:276 — openNotes를 화면이 떠 있을 때만 받아 My가 뜨기 전에 온 신호(?screen=vocab)를 놓침 (뜰 때 takeAppIntent("openNotes")면 focusQuizbankWords·setTab("keep")).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:195 — 표현·문법 수업(frame 없음)은 퀴즈가 없어 대화 줄도 없으면 설명 → 바로 끝 화면, dayLog 0/0 → 카드에 ↻ 0/0 (turns·questions 둘 다 없으면 결과 안 남기고 닫기, lastResultFor는 total 0 건너뛰기).
-- 2026-11-02 watch → dev: [my] src/lib/curriculum/fixedLessons/toQuiz.ts:34 — spaceAround가 한국어(낱말에 붙는 조사·어미 조각)에도 빈칸 앞뒤 한 칸 → "커피 를 마셔요" (앞뒤가 붙는 조각이면 띄우지 않기, ko 테스트 추가). major
-- 2026-11-02 watch → dev: [my] src/lib/server/expressionCards.ts:80 — 첫 생성 실패 시 아무것도 안 남겨 요청마다 6,000토큰 모델 재호출·동시 잠금 없음 (실패 표시·하루 한 번 재시도·잠금). major
-- 2026-11-02 watch → dev: [my] src/app/api/curriculum/option-notes/route.ts:76 — 고르기 문장(노트 고친 줄·통화 내 줄 포함 가능)을 공유 KV quiznotes:v1에 180일 저장 → 학습자 문장 저장 규칙 위반 (u|·장면 문장은 보내지 않거나 저장 안 함). major
 - 2026-11-02 watch → dev: [my] src/app/api/curriculum/option-notes/route.ts:65 — 아무 입력이나 모델 호출 + 공유 저장, 하루 한도·실제 문제 확인 없음 (한도·검증).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:253 — 해석 버튼은 뺐는데 저장된 켬 값을 계속 읽어 통화 중 줄마다 번역 호출, 끌 방법 없음 (예전 값 무시).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayPast.tsx:53 — 돌아보기 열 때마다 튜터 줄 다시 번역, 저장 안 함 (받은 번역 저장).

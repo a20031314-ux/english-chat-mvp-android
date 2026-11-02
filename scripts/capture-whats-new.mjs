@@ -176,7 +176,10 @@ const GUIDE_OVERVIEW_ITEMS = [{ shot: "ov-today", step: "today-plan" }, { shot: 
 // `guide-279`(2.79): 사용법 새 그림 — 연습 방식 고르기(my.map)·실제 통화 화면(call.talk)·튜터 고르기(call.pause 자리). 나머지 My 칸은 Bank 설명 그림(capture-bank-guide.mjs)을 같이 쓴다.
 const GUIDE_279 = VERSION === "guide-279";
 const GUIDE_279_ITEMS = [{ shot: "stage-ways" }, { shot: "tutor-pick" }, { shot: "call-recap" }, { shot: "real-call" }];
-const GUIDE = VERSION === "guide" || GUIDE_279 || GUIDE_OVERVIEW || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+// 2026-11-03 통화·My 사용법 다시(🎓 튜터 수업 칸 call-coach, 자막 누르면 해석, My 탭 나눔).
+const GUIDE_1103 = VERSION === "guide-1103";
+const GUIDE_1103_ITEMS = [{ shot: "real-call" }, { shot: "call-coach" }, { shot: "call-recap" }, { shot: "stage-ways" }];
+const GUIDE = VERSION === "guide" || GUIDE_279 || GUIDE_1103 || GUIDE_OVERVIEW || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
@@ -345,6 +348,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
   : GUIDE_279
   ? { version: "guide", items: GUIDE_279_ITEMS }
+  : GUIDE_1103
+  ? { version: "guide", items: GUIDE_1103_ITEMS }
   : GUIDE_OVERVIEW
   ? { version: "guide", items: GUIDE_OVERVIEW_ITEMS }
   : GUIDE_CALLS
@@ -1571,7 +1576,7 @@ const STEPS = {
     await page.mouse.wheel(0, -70);
     await wait(1500);
   },
-  async "real-call"({ page, wait }) {
+  async "real-call"({ page, wait, coach }) {
     // 2.79: AI 통화 = 실제 통화 화면(위 튜터 그림·💬 자막 한 줄, 아래 나, 🙉·💬·💡·끝내기). 무료는 통화가 없어 이 장면만 플러스로 보이게(앱이 받는 답만).
     await page.route("**/api/entitlement*", async (route) => {
       const response = await route.fetch().catch(() => null);
@@ -1581,7 +1586,10 @@ const STEPS = {
       Object.assign(body, { plan: "plus", tier: "plus", isPremium: true, dailyLimit: terms.dailyChat ?? 50, callDailyMinutes: 10, callTodayLeftSeconds: 600 });
       return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
     });
-    await page.evaluate(() => localStorage.setItem("roleplayCaptions", "1"));
+    await page.evaluate((coach) => {
+      localStorage.setItem("roleplayCaptions", "1");
+      localStorage.setItem("callCoach.v1", coach ? "1" : "0");
+    }, Boolean(coach));
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     const call = page.locator('button:has(span:text-is("📞"))').first();
     for (let i = 0; i < 40 && !(await call.count()); i++) await wait(500);
@@ -1590,6 +1598,10 @@ const STEPS = {
     await page.locator("[data-call-stage]").first().waitFor({ timeout: 30_000 });
     // 튜터 첫 줄이 자막에 뜰 때까지(가짜 마이크 소리가 내 차례로 들리기 전에).
     await wait(9000);
+  },
+  async "call-coach"(args) {
+    // 🎓 튜터 수업을 켠 통화 화면(버튼이 켜진 채) — 고친 말 카드는 실제 실수가 있어야 떠서 그림엔 버튼만.
+    await STEPS["real-call"]({ ...args, coach: true });
   },
   async "stage-ways"({ page, wait, target }) {
     // 2.79 사용법 my.map: Stagebank 단계 화면(n단계 ›) → 연습 방식 버튼 → 그림 고르기 시트(🧩·🎯·🎭·🔤·📐).
