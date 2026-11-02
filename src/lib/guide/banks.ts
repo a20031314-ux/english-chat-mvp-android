@@ -7,7 +7,13 @@
  */
 export type BankId = "stage" | "keep" | "log";
 export type BankStep = { text: string; shot: string };
-export type BankGuide = { can: string[]; how: BankStep[]; clip?: string; shot?: string };
+/**
+ * 칸마다 정해진 순서로 그리는 조각(2026-11-02 사용자 "배울 수 있는 것·이렇게 공부해요처럼 구조를 정해 두지 말고 탭별로 핵심 기능 > 세부 기능,
+ * 1. 2. 같은 틀도 고정하지 말고 사용자가 뭔지 직관적으로"): 첫 조각(lead)이 그 칸의 핵심 — 큰 글 + 그림·영상, 그 뒤는 세부 — 한 줄 + 작은 그림.
+ * 제목·번호 없이 순서만. numbers = 그 학습 언어의 실제 분량(앱이 채움). can·how는 옛 앱(2.79 이하 BankHelp)이 그대로 읽는다.
+ */
+export type BankBlock = { text: string; lead?: boolean; shot?: string; clip?: string; numbers?: boolean };
+export type BankGuide = { can: string[]; how: BankStep[]; clip?: string; shot?: string; blocks?: BankBlock[] };
 
 const SHOTS: Record<BankId, string[]> = {
   stage: ["bank-stage-today", "bank-stage-lesson", "bank-stage-ladder"],
@@ -15,6 +21,32 @@ const SHOTS: Record<BankId, string[]> = {
   log: ["bank-log-week", "bank-log-axis", "bank-log-day"],
 };
 const CLIPS: Partial<Record<BankId, string>> = { stage: "bank-stage", keep: "bank-keep" };
+
+/** 칸마다 핵심 → 세부 순서(can/how 몇 번째 줄을 어떤 그림과). 겹치는 줄은 뺌(stage how[2]는 can[2]와, keep how[0]은 can[0]과 같은 말). */
+type Pick = { from: "can" | "how"; i: number; lead?: boolean; shot?: string; clip?: boolean; numbers?: boolean };
+const ORDER: Record<BankId, Pick[]> = {
+  stage: [
+    { from: "how", i: 0, lead: true, shot: "bank-stage-today", clip: true },
+    { from: "can", i: 0, numbers: true },
+    { from: "how", i: 1, shot: "bank-stage-lesson" },
+    { from: "can", i: 1 },
+    { from: "can", i: 2, shot: "bank-stage-ladder" },
+  ],
+  keep: [
+    { from: "can", i: 0, lead: true, shot: "bank-keep-quiz", clip: true, numbers: true },
+    { from: "how", i: 1, shot: "bank-keep-answer" },
+    { from: "can", i: 1 },
+    { from: "how", i: 2 },
+    { from: "how", i: 3, shot: "bank-keep-settings" },
+  ],
+  log: [
+    { from: "can", i: 0, lead: true, shot: "bank-log-week" },
+    { from: "how", i: 0, shot: "bank-log-axis" },
+    { from: "how", i: 1 },
+    { from: "can", i: 1, shot: "bank-log-day" },
+    { from: "how", i: 2 },
+  ],
+};
 
 type Lines = Record<BankId, { can: string[]; how: string[] }>;
 
@@ -246,6 +278,19 @@ export function bankGuides(language: string): Record<BankId, BankGuide> {
       can: lines[id].can,
       how: lines[id].how.map((text, i) => ({ text, shot: shots[i] ?? shots[0]! })),
       ...(CLIPS[id] ? { clip: CLIPS[id], shot: shots[0] } : {}),
+      blocks: ORDER[id]
+        .map((pick): BankBlock | null => {
+          const text = lines[id][pick.from][pick.i];
+          if (!text) return null;
+          return {
+            text,
+            ...(pick.lead ? { lead: true } : {}),
+            ...(pick.shot ? { shot: pick.shot } : {}),
+            ...(pick.clip && CLIPS[id] ? { clip: CLIPS[id] } : {}),
+            ...(pick.numbers ? { numbers: true } : {}),
+          };
+        })
+        .filter((one): one is BankBlock => Boolean(one)),
     };
   }
   return out;

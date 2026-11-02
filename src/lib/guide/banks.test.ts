@@ -24,3 +24,18 @@ test("My 큰 칸 ? 설명: 14개 언어 모두 같은 줄 수, {ui:키}는 copy�
   // 없는 언어는 영어.
   assert.deepEqual(bankGuides("xx"), bankGuides("en"));
 });
+
+test("칸 설명은 핵심 하나(lead)를 맨 앞에, 그 뒤 세부 — 14개 언어 모두 같은 순서·빈 줄 없음", async () => {
+  const { bankGuides, BANK_LANGUAGES } = await import("./banks.ts");
+  for (const language of BANK_LANGUAGES) {
+    const guides = bankGuides(language);
+    for (const [bank, guide] of Object.entries(guides)) {
+      const blocks = guide.blocks ?? [];
+      assert.ok(blocks.length >= 4, `${language} ${bank}`);
+      assert.equal(blocks[0]!.lead, true, `${language} ${bank} 첫 조각이 핵심`);
+      assert.equal(blocks.filter((one) => one.lead).length, 1, `${language} ${bank} 핵심은 하나`);
+      assert.ok(blocks.every((one) => one.text.trim()), `${language} ${bank}`);
+      assert.equal(new Set(blocks.map((one) => one.text)).size, blocks.length, `${language} ${bank} 같은 줄 두 번 없음`);
+    }
+  }
+});
