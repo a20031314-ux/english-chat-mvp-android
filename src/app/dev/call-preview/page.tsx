@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -33,7 +33,14 @@ function Preview() {
     en: { said: "yesterday I go to beach", right: "Yesterday I went to the beach.", why: "昨日のことなので go ではなく went。", native: "週末に映画を見た", offer: "I caught a movie over the weekend." },
     es: { said: "ayer yo ir a la playa", right: "Ayer fui a la playa.", why: "مع «ayer» نستخدم الماضي: «fui».", native: "شاهدت فيلمًا في عطلة نهاية الأسبوع", offer: "Vi una peli el finde." },
   };
-  const sample = samples[learn] ?? samples.en;
+  // 스토어 스크린샷(store-shots/layers)이 앱 언어마다 고친 말 카드 문구를 넘긴다: &said=&right=&why=
+  const base = samples[learn] ?? samples.en;
+  const sample = {
+    ...base,
+    said: params.get("said") ?? base.said,
+    right: params.get("right") ?? base.right,
+    why: params.get("why") ?? base.why,
+  };
   const coachCard =
     cardKind === "meant"
       ? { kind: "meant" as const, said: sample.native, right: sample.offer, why: "" }
