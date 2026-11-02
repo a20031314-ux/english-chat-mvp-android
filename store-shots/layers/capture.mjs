@@ -14,6 +14,9 @@ const WEB = "https://english-chat-mvp.vercel.app";
 const server = await serve(PORT);
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 const run = `simcheck-store-${Date.now().toString(36)}`;
+const { loadCopy: loadAllCopy } = await import("../../scripts/ux-check/lib.mjs");
+const C = (await loadAllCopy())[ui];
+const esc = (text) => String(text).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const done = [];
 
 async function context(learn, stage) {
@@ -97,7 +100,7 @@ async function quizbank(learn, stage, prefix, wrongFirst = false, pick = null) {
     await wait(page, 3500);
   };
   const next = async () => {
-    const button = keep.getByRole("button", { name: /다음|Next|Siguiente|次へ|التالي/ }).last();
+    const button = keep.getByRole("button", { name: new RegExp(`^(${esc(C.scriptNext)}|${esc(C.quizNext)})`) }).last();
     await button.click({ timeout: 2000 }).catch(() => {});
     await wait(page, 2000);
   };
@@ -106,7 +109,7 @@ async function quizbank(learn, stage, prefix, wrongFirst = false, pick = null) {
     for (let i = 0; i < 8; i += 1) {
       const kind = await keep.locator("section[data-kind]").first().getAttribute("data-kind").catch(() => null);
       if (kind === "choose") break;
-      await keep.getByRole("button", { name: /모르겠어요|I don.t know/ }).first().click({ timeout: 1500 }).catch(() => {});
+      await keep.getByRole("button", { name: C.markUnknown, exact: true }).first().click({ timeout: 1500 }).catch(() => {});
       await wait(page, 1500);
       await next();
     }
@@ -121,8 +124,8 @@ async function quizbank(learn, stage, prefix, wrongFirst = false, pick = null) {
     }
     await page.locator('[data-study-focus] [data-focus="review"]').first().click().catch(() => {});
     await wait(page, 4000);
-    await shot(`${prefix}-review-q`, keep.locator("section[data-kind]").first());
-    await shot(`${prefix}-review-layer`, keep);
+    await shot(`${prefix}-q`, keep.locator("section[data-kind]").first());
+    await shot(`${prefix}-layer`, keep);
   }
   await ctx.close();
   return correct;
@@ -186,26 +189,42 @@ const PAST_EN = [
   { who: "tutor", text: "Good coffee is worth the wait!" },
 ];
 
+const PAST_JA = [
+  { who: "tutor", text: "やあ！週末はどうだった？" },
+  { who: "learner", text: "昨日カフェ行くとコーヒーたくさん飲むした", meant: "昨日カフェに行って、コーヒーをたくさん飲んだ。" },
+  { who: "tutor", text: "いいね！どのカフェに行ったの？" },
+  { who: "learner", text: "会社の近くの新しいところ。" },
+  { who: "tutor", text: "そこ、評判いいよね。混んでた？" },
+  { who: "learner", text: "はい、とても混む。長い待った", better: "うん、すごく混んでた。長く待ったよ。" },
+  { who: "tutor", text: "おいしいコーヒーのためならしかたないね！" },
+];
+const PAST = { en: PAST_EN, ja: PAST_JA };
+
+// 장마다 그림 속 학습 언어(strings.mjs ROLES — 앱 언어와 겹치지 않게), 조각 이름은 역할 이름(lesson1-…·quiz-…·review-…·past-…·call-…).
+const { rolesFor, COACH, COACH_WHY } = await import("./strings.mjs");
+const R = rolesFor(ui);
 // ONLY=quiz,call 처럼 일부만 다시 찍기(lesson·quiz·review·call·preview).
 const only = (process.env.ONLY ?? "").split(",").filter(Boolean);
 const want = (part) => !only.length || only.includes(part);
 try {
-  if (want("lesson")) await lesson("ja", 4, 0, "ja-lesson");
-  if (want("lesson")) await lesson("en", 3, 1, "en-lesson");
+  if (want("lesson")) await lesson(R.lesson2, 4, 0, "lesson2");
+  if (want("lesson")) await lesson(R.lesson1, 3, 1, "lesson1");
   // 첫 판은 정답을 알아내고, 둘째 판(같은 사용자 — 문제가 같음)에서 정답을 골라 찍는다.
   if (want("quiz")) {
-    const right = await quizbank("es", 4, "es-quiz-probe");
+    const right = await quizbank(R.quiz, 4, "quiz-probe");
     console.log("정답:", right);
-    await quizbank("es", 4, "es-quiz", false, right);
+    await quizbank(R.quiz, 4, "quiz", false, right);
   }
-  if (want("review")) await quizbank("fr", 3, "fr", true);
-  if (want("call")) await pastCall("en", "en-call", PAST_EN);
-  if (want("preview")) await preview("call-live-ja", `v=ai&lang=${ui}&learn=ja&card=fix`);
-  if (want("preview")) await preview("call-end", `v=ai-end&lang=${ui}&learn=ja`);
+  if (want("review")) await quizbank(R.review, 3, "review", true);
+  if (want("call")) await pastCall(R.past, "past", PAST[R.past] ?? PAST_EN);
+  const coach = COACH[R.call] ?? COACH.ja;
+  const card = new URLSearchParams({ said: coach.said, right: coach.right, why: COACH_WHY[ui] ?? COACH_WHY.en }).toString();
+  if (want("preview")) await preview("call-live", `v=ai&lang=${ui}&learn=${R.call}&card=fix&${card}`);
+  if (want("preview")) await preview("call-end", `v=ai-end&lang=${ui}&learn=${R.past}`);
   if (want("preview")) await preview("people-call", `v=call3&lang=${ui}&learn=ja`);
   if (want("preview")) await preview("people-group", `v=group&lang=${ui}&learn=ja`);
 } finally {
-  for (const learn of ["ja", "en", "es", "fr"]) await api("/api/simcheck/forget", { prefix: `${run}-${learn}` }).catch(() => {});
+  for (const learn of new Set(Object.values(R))) await api("/api/simcheck/forget", { prefix: `${run}-${learn}` }).catch(() => {});
   await browser.close();
   server.close();
   console.log(`${ui}: ${done.length}장 ${done.join(" ")}`);
