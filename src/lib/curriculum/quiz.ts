@@ -1125,10 +1125,18 @@ export function buildQuiz(
  * ③ 낱말 순서 — 낱말 넷 이상인 다른 문장(긴 것부터), 낱말 하나가 조각 하나. 못 만들면 뜻 고르기·고르기.
  * 같은 조각을 고르는 문제(고르기)는 다른 모양을 못 만들 때만.
  */
-export function lessonQuiz(language: string, key: string, options: { seed?: string; stage?: number; later?: ReadonlySet<string> } = {}): QuizQuestion[] {
+/**
+ * them: 상대 줄 예문도 재료로(표현 — 내 줄에 한 번만 나오는 표현이 많아 문제가 안 만들어지던 것, 2026-11-02 사용자 "다른 방식은 문제밖에/설명만").
+ * min: 이만큼 만들어지면 냄(기본 2). avoid: 이 문장은 쓰지 않음(대본 앞 수업 — 곧 할 대화의 내 줄이 답이 되지 않게).
+ */
+export function lessonQuiz(
+  language: string,
+  key: string,
+  options: { seed?: string; stage?: number; later?: ReadonlySet<string>; them?: boolean; min?: number; avoid?: ReadonlySet<string> } = {},
+): QuizQuestion[] {
   const random = rng(`${key}|${options.seed ?? ""}|lesson`);
   const stage = options.stage;
-  const all = quizSources(language, key).filter((source) => source.who !== "them");
+  const all = quizSources(language, key).filter((source) => (options.them || source.who !== "them") && !options.avoid?.has(source.text));
   const inside = stage ? all.filter((source) => source.stage === 0 || source.stage <= stage + 1) : all;
   const sources = shownLast(language, key, shuffled(inside.length ? inside : all, random), options.later);
   const used = new Set<string>();
@@ -1151,7 +1159,7 @@ export function lessonQuiz(language: string, key: string, options: { seed?: stri
   if (!take((source) => orderOf(language, source, random, { least: 4 }), longest)) {
     if (!take((source) => meaningOf(language, source, random))) take((source) => chooseOf(language, key, source, random));
   }
-  return out.length >= 2 ? out : [];
+  return out.length >= (options.min ?? 2) ? out : [];
 }
 
 /** 같은 단계 근처의 다른 줄(뜻 고르기 오답). */
