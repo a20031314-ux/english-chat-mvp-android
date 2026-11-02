@@ -1394,3 +1394,14 @@ test("a correct sentence said more naturally rides as smoother, never next to a 
   );
   assert.equal(same?.smoother, undefined);
 });
+
+test("튜터 수업: 표현 건네기(offer)는 고친 말 ask에서만, 지시에도 들어감", () => {
+  const heard = "i watched a movie on the weekend";
+  const offered = parse({ say: "You can also say: I caught a movie over the weekend. Try it?", better: "I caught a movie over the weekend.", retry: "ask", offer: true, assessment: "on_track", next: "free" }, { coach: true, heard, nodeId: "talk" }, open);
+  assert.equal(offered?.offer, true);
+  const meantNoOffer = parse({ say: "I watched a movie. Say it?", meant: "I watched a movie.", retry: "ask", offer: true, assessment: "on_track", next: "free" }, { coach: true, heard: "영화 봤어", nodeId: "talk" }, open);
+  assert.equal(meantNoOffer?.offer, undefined);
+  const talk = parse({ say: "Nice!", better: "I caught a movie.", retry: "ask", offer: true, assessment: "on_track", next: "free" }, { heard, nodeId: "talk" }, open);
+  assert.equal(talk?.offer, undefined);
+  assert.match(coachBrief({ coach: true }), /"offer" set to true/);
+});

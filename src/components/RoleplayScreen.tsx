@@ -52,7 +52,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { markAboutTheirLine, markMissed, markStuck, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -162,6 +162,8 @@ export function RoleplayScreen({
   /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. tries = 그 문장을 말해 보라고 한 횟수. */
   const [redo, setRedo] = useState<{ line: string; tries: number }>({ line: "", tries: 0 });
   const redoLine = redo.line;
+  /** 튜터 수업 카드 — 고친 말·건넨 표현을 통화 화면에 띄움(lib/roleplay/transcriptMarks.ts nextCoachCard). */
+  const [coachCard, setCoachCard] = useState<CoachCard | null>(null);
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
   /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
@@ -445,7 +447,21 @@ export function RoleplayScreen({
           }),
         );
       }
-      if (!missedTurn) setRedo((current) => nextRedo(current, retry, meant || better));
+      if (!missedTurn) {
+        const waitNext = nextRedo(redo, retry, meant || better);
+        setRedo(waitNext);
+        setCoachCard((current) =>
+          nextCoachCard(current, {
+            retry,
+            better,
+            meant,
+            note: direction?.note,
+            offer: direction?.offer,
+            heard: instruction.request.heard,
+            gaveUp: retry === "miss" && !waitNext.line,
+          }),
+        );
+      }
       if (direction?.assessment === "stuck" && !missedTurn) {
         const pending = state.pending;
         setSaid((current) =>
@@ -962,7 +978,7 @@ export function RoleplayScreen({
         timeLeft={timeLine}
         caption={caption}
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
-        redo={redoLine}
+        coach={coachCard}
       />
       <CallControls
         ui={ui}

@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·🔁)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -26,11 +26,24 @@ function Preview() {
   const ui = resolveUiCopy(isLocale(lang) ? lang : "en", (params.get("learn") ?? "ja") as Parameters<typeof resolveUiCopy>[1]);
   const noop = () => undefined;
   const learn = params.get("learn") ?? "ja";
-  const redoText: Record<string, string> = { ja: "昨日友達に会いました。", en: "Yesterday I went to the beach.", es: "Ayer fui a la playa." };
+  // 튜터 수업 카드 미리 보기: &card=fix|meant|offer|passed
+  const cardKind = params.get("card") ?? "fix";
+  const samples: Record<string, { said: string; right: string; why: string; native: string; offer: string }> = {
+    ja: { said: "昨日友達を会いました", right: "昨日友達に会いました。", why: "会う는 を가 아니라 に를 써요.", native: "주말에 영화 봤어", offer: "週末に映画を見ました。" },
+    en: { said: "yesterday I go to beach", right: "Yesterday I went to the beach.", why: "昨日のことなので go ではなく went。", native: "週末に映画を見た", offer: "I caught a movie over the weekend." },
+    es: { said: "ayer yo ir a la playa", right: "Ayer fui a la playa.", why: "مع «ayer» نستخدم الماضي: «fui».", native: "شاهدت فيلمًا في عطلة نهاية الأسبوع", offer: "Vi una peli el finde." },
+  };
+  const sample = samples[learn] ?? samples.en;
+  const coachCard =
+    cardKind === "meant"
+      ? { kind: "meant" as const, said: sample.native, right: sample.offer, why: "" }
+      : cardKind === "offer"
+        ? { kind: "offer" as const, said: "", right: sample.offer, why: "" }
+        : { kind: "fix" as const, said: sample.said, right: sample.right, why: sample.why, passed: cardKind === "passed" };
   if (v === "ai") {
     return (
       <div className="flex h-dvh flex-col bg-black" dir={lang === "ar" ? "rtl" : "ltr"}>
-        <CallStage language={learn} speaker="listening" timeLeft={null} caption={null} redo={redoText[learn] ?? redoText.en} />
+        <CallStage language={learn} speaker="listening" timeLeft={null} caption={null} coach={coachCard} />
         <CallControls ui={ui} canAnswer captions={false} coach onToggleCoach={noop} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} />
       </div>
     );

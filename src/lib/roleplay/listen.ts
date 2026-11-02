@@ -618,6 +618,7 @@ function shapeDirection(raw: unknown): Direction | null {
       : {}),
     ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
     ...(body.retry === "ask" || body.retry === "pass" || body.retry === "miss" ? { retry: body.retry } : {}),
+    ...(body.offer === true ? { offer: true } : {}),
     ...(body.progress && typeof body.progress.answered === "number" && typeof body.progress.total === "number"
       ? { progress: { answered: body.progress.answered, total: body.progress.total } }
       : {}),

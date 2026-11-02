@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { markAboutTheirLine, markMissed, markStuck, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -89,4 +89,23 @@ test("튜터 수업 기다림: ask → miss → miss면 넘어감, pass면 끝, 
   assert.deepEqual(nextRedo(asked, "ask", "カフェに行きました。"), { line: "カフェに行きました。", tries: 1 });
   assert.deepEqual(nextRedo(none, "miss", "x"), none, "기다리는 것 없이 온 miss는 무시");
   assert.deepEqual(nextRedo(asked, undefined, ""), none, "다른 말을 하면 기다림 끝");
+});
+
+test("튜터 수업 카드: 고침 → 아직 → 맞힘 → 다음 차례에 사라짐, 내 말 문장·표현은 종류가 다름(일본어·스페인어)", () => {
+  const heard = "昨日友達を会いました";
+  const fixed = nextCoachCard(null, { retry: "ask", better: "昨日友達に会いました。", note: "会う는 に", heard, gaveUp: false });
+  assert.deepEqual(fixed, { kind: "fix", said: heard, right: "昨日友達に会いました。", why: "会う는 に" });
+  const missed = nextCoachCard(fixed, { retry: "miss", better: "昨日友達に会いました。", heard: "昨日友達が会いました", gaveUp: false });
+  assert.equal(missed?.said, heard, "처음 틀린 말을 그대로 둠");
+  assert.equal(missed?.why, "会う는 に", "새 까닭이 없으면 앞 까닭");
+  const passed = nextCoachCard(missed, { retry: "pass", heard: "昨日友達に会いました", gaveUp: false });
+  assert.equal(passed?.passed, true);
+  assert.equal(nextCoachCard(passed, { heard: "カフェに行きました", gaveUp: false }), null);
+  assert.equal(nextCoachCard(missed, { retry: "miss", heard: "x", gaveUp: true }), null, "두 번 틀려 넘어가면 사라짐");
+
+  const meant = nextCoachCard(null, { retry: "ask", meant: "Vi una película el fin de semana.", heard: "vi película 주말에", gaveUp: false });
+  assert.equal(meant?.kind, "meant");
+  const offer = nextCoachCard(null, { retry: "ask", better: "Vi una peli el finde.", offer: true, note: "더 구어체", heard: "Vi una película el fin de semana", gaveUp: false });
+  assert.deepEqual(offer, { kind: "offer", said: "Vi una película el fin de semana", right: "Vi una peli el finde.", why: "" });
+  assert.equal(nextCoachCard(null, { retry: "pass", heard: "x", gaveUp: false }), null, "기다리는 카드 없이 온 pass는 무시");
 });

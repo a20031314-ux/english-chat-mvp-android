@@ -15,6 +15,8 @@ import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useTutorGender } from "@/lib/tutorGender";
 import type { UICopy } from "@/lib/copy";
 import type { Instruction } from "@/lib/roleplay/session";
+import type { CoachCard } from "@/lib/roleplay/transcriptMarks";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 /** 학습자 쪽 "…" 말풍선 — 끝난 대본에서 아직 판단 전이던 내 줄. */
 export function LearnerComposing() {
@@ -45,7 +47,7 @@ export function CallStage({
   timeLeft,
   caption,
   goal,
-  redo,
+  coach,
   gender,
 }: {
   language: string;
@@ -57,8 +59,8 @@ export function CallStage({
   caption: { text: string; meaning?: string } | null;
   /** 대본 장면이면 지금 할 일(열린 대화에는 없음). */
   goal?: string;
-  /** 튜터 수업: 튜터가 다시 말해 보라고 한 문장(학습 언어) — 내 얼굴 아래 🔁 한 줄. */
-  redo?: string;
+  /** 튜터 수업: 고친 말·건넨 표현 카드 — 내 얼굴 아래(없으면 대본 장면의 할 일). */
+  coach?: CoachCard | null;
 }) {
   const chosen = useTutorGender(language);
   const partner = chatPartnerForLanguage(language, gender ?? chosen);
@@ -109,15 +111,35 @@ export function CallStage({
         ) : (
           <TalkingBars on={speaker === "learner"} />
         )}
-        {redo ? (
-          <p className="flex max-w-md items-start gap-1.5 text-body text-ink" data-call-redo>
-            <span aria-hidden>🔁</span>
-            <bdi dir="auto">{redo}</bdi>
-          </p>
+        {coach ? (
+          <CoachCardView card={coach} />
         ) : goal ? (
           <p className="max-w-md text-meta text-slate-400">{goal}</p>
         ) : null}
       </section>
+    </div>
+  );
+}
+
+/**
+ * 튜터 수업 카드(2026-11-02): ✎ 고친 말이면 내 말(틀린 곳 빨간 취소선) → 고친 문장, 💬 내 말·부서진 말이면 흐리게 내 말 → 학습 언어 문장,
+ * 💡 표현이면 건넨 표현만. 고친 문장 앞 🔁(다시 말할 차례) / ✓(맞힘). 까닭 한 줄은 앱 언어, 작게. 화면 속 설명 글 없이 아이콘만.
+ */
+function CoachCardView({ card }: { card: CoachCard }) {
+  const icon = card.kind === "offer" ? "💡" : card.kind === "meant" ? "💬" : "✎";
+  return (
+    <div className="w-full max-w-md rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-start" data-call-coach={card.kind}>
+      {card.kind !== "offer" && card.said ? (
+        <p className="flex items-start gap-1.5 text-meta text-slate-400">
+          <span aria-hidden>{icon}</span>
+          {card.kind === "fix" ? <SaidWithMistakes said={card.said} right={card.right} /> : <bdi dir="auto">{card.said}</bdi>}
+        </p>
+      ) : null}
+      <p className={`flex items-start gap-1.5 text-body font-medium ${card.passed ? "text-good" : "text-ink"} ${card.kind !== "offer" && card.said ? "mt-1" : ""}`} data-call-redo>
+        <span aria-hidden>{card.kind === "offer" && !card.passed ? "💡" : card.passed ? "✓" : "🔁"}</span>
+        <bdi dir="auto">{card.right}</bdi>
+      </p>
+      {card.why ? <p className="mt-1 text-meta text-slate-400" dir="auto">{card.why}</p> : null}
     </div>
   );
 }

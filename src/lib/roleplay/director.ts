@@ -224,6 +224,8 @@ export type Direction = {
   progress?: { answered: number; total: number };
   /** 튜터 수업에서만(DirectorRequest.coach): 다시 말해 보기의 어디쯤인가. ask면 `better`나 `meant`가 다시 말할 문장. */
   retry?: Retry;
+  /** 튜터 수업: 이번 ask는 고친 게 아니라 더 자연스러운 표현을 건넨 것(말한 건 맞았음) — 화면 카드가 💡로(2026-11-02). */
+  offer?: boolean;
 };
 
 /**
@@ -369,7 +371,7 @@ export function coachRules(target: string, native: string, bilingual: boolean): 
 - On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can — and ask once more. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
 - When they say a whole sentence in ${native}: a few words to show you understood, then the ${target} sentence for exactly what they said, and have them say it ("meant", "retry": "ask") — even when you understood it perfectly. Checking back with a question is only for when you truly cannot tell what they meant.
 - When they say they do not know, or cannot say it: do not make up an answer for them. Make it easier — ask again in fewer words, offer two choices to pick from, or give the start of a sentence they can finish. Only when they asked how to say something in particular, hand them that sentence to say.
-- Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask".
+- Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask" and "offer" set to true (it is not a correction: what they said was fine).
 - ${
     bilingual
       ? `You may say up to one short sentence in ${native} in a turn — comfort, or what the correction is about — never small talk or a question in ${native}.`
@@ -676,7 +678,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 - If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
 ${
   coaching
     ? `
@@ -920,6 +922,7 @@ export function parseDirection(
     smoother?: unknown;
     next?: unknown;
     retry?: unknown;
+    offer?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -1304,5 +1307,7 @@ export function parseDirection(
     // 다시 말해 보라고 한 차례에는 다음 질문을 얹지 않는다 — 고친 문장을 말할 차례다.
     ...(chosenFollow && retry !== "ask" && !(retry === "miss" && !givingUp) ? { follow: chosenFollow } : {}),
     ...(retry ? { retry } : {}),
+    // 표현 건네기는 고친 말(better)로 온 ask에서만 — 내 말 문장을 바꿔 준 것(meant)은 건네기가 아니다.
+    ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
   };
 }

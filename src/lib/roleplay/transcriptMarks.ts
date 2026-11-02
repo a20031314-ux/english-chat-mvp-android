@@ -107,3 +107,29 @@ export function nextRedo(current: RedoWait, retry: "ask" | "pass" | "miss" | und
   }
   return done;
 }
+
+/**
+ * 튜터 수업 통화 중 내 얼굴 아래 카드(사용자 2026-11-02 "튜터가 표현을 알려 주거나 내 말을 고쳐 줄 때 화면에 표시").
+ * fix = 내 말을 고침(틀린 곳 표시 → 고친 문장) · meant = 내 말(앱 언어)·부서진 말을 학습 언어 문장으로 · offer = 맞게 말했는데 더 자연스러운 표현.
+ * why = 고친 까닭 한 줄(앱 언어), passed = 다시 말해서 맞힘(다음 보통 차례에 사라짐).
+ */
+export type CoachCard = { kind: "fix" | "meant" | "offer"; said: string; right: string; why: string; passed?: boolean };
+
+export function nextCoachCard(
+  current: CoachCard | null,
+  turn: { retry?: "ask" | "pass" | "miss"; better?: string; meant?: string; note?: string; offer?: boolean; heard: string; gaveUp: boolean },
+): CoachCard | null {
+  const right = (turn.meant || turn.better || "").trim();
+  const why = (turn.note ?? "").trim();
+  if (turn.retry === "ask") {
+    if (!right) return current;
+    return { kind: turn.offer ? "offer" : turn.meant ? "meant" : "fix", said: turn.heard.trim(), right, why: turn.offer ? "" : why };
+  }
+  if (turn.retry === "miss") {
+    if (!current || turn.gaveUp) return null;
+    // 처음 틀린 말은 그대로 두고(무엇을 고쳤는지), 고친 문장·까닭만 새것으로.
+    return { ...current, right: right || current.right, why: why || current.why, passed: false };
+  }
+  if (turn.retry === "pass") return current ? { ...current, passed: true } : null;
+  return null;
+}
