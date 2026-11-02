@@ -98,7 +98,7 @@ test("only a plan with the library open gets every library video; imports use bo
   assert.equal(evaluateVideoAccess({ ...base, purchasedPoints: 0 }).ok, true);
 });
 
-test("대본 플랜(2,900원): 사흘마다 통화 5분·채팅 20, 무료는 대본 앱(2.76~)에서 채팅·통화 없음", () => {
+test("대본 플랜(2,900원): 사흘마다 통화 5분·채팅 20, 무료는 대본 앱(2.76~)에서 채팅 없음·통화 맛보기 10분만", () => {
   const script = termsFor("script", Date.parse("2026-10-28T00:00:00Z"));
   assert.equal(script.priceKrw, 2900);
   assert.equal(script.dailyCallMinutes, 5);
@@ -112,7 +112,7 @@ test("대본 플랜(2,900원): 사흘마다 통화 5분·채팅 20, 무료는 �
   assert.ok(oldFree.freeTrialPoints > 0);
   const newFree = termsFor("free", Date.now(), null, { scriptsApp: true });
   assert.equal(newFree.dailyChat, 0);
-  assert.equal(newFree.freeTrialPoints, 0);
+  assert.equal(newFree.freeTrialPoints, 2); // 통화 맛보기 처음 한 번 10분(2026-11-02)
   assert.equal(newFree.packDaysPerWeek, 0);
   // 사흘 칸: 같은 칸의 날은 같은 첫날, 칸이 바뀌면 다음 첫날
   const days = ["2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31"].map((day) => callWindowStart(day, 3));

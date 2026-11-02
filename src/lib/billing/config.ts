@@ -163,6 +163,11 @@ export const ROLEPLAY_POINT_SECONDS = 5 * 60;
  * renews for everyone who never pays, and reinstalling renews it sooner.
  */
 export const FREE_LIFETIME_ROLEPLAY_POINTS = 10;
+/**
+ * 대본 앱(2.76~) 무료의 통화 맛보기: 처음 한 번 2포인트 = 10분(사용자 2026-11-02 "무료 사용자가 통화를 맛보기라도", 안 ② —
+ * 한 사람 원가 약 87원, 한 번만). 평생 체험 기록(usage:rptrial)을 예전 10포인트와 같이 써서, 이미 체험을 쓴 사람은 더 받지 않는다.
+ */
+export const FREE_SCRIPTS_APP_TRIAL_POINTS = 2;
 
 /**
  * Sent by a build that understands being told it has run out.

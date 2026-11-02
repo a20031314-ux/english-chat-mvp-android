@@ -28,6 +28,7 @@
 import {
   FREE_DAILY_CHAT_LIMIT,
   FREE_LIFETIME_ROLEPLAY_POINTS,
+  FREE_SCRIPTS_APP_TRIAL_POINTS,
   FREE_PACK_DAYS_PER_WEEK,
   PREMIUM_ENTITLEMENT_ID,
   PREMIUM_MONTHLY_IMPORT_POINTS,
@@ -133,7 +134,7 @@ export function termsFor(tier: PlanTier, now = Date.now(), from: string | null =
         : { tier, dailyCallMinutes: null, ...daily, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900, ...HELP_LIMITS.premium, packDaysPerWeek: null };
     default:
       return options.scriptsApp
-        ? { tier: "free", dailyCallMinutes: null, callWindowDays: 1, freeTrialPoints: 0, monthlyGrantPoints: 0, dailyChat: 0, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: 0 }
+        ? { tier: "free", dailyCallMinutes: null, callWindowDays: 1, freeTrialPoints: FREE_SCRIPTS_APP_TRIAL_POINTS, monthlyGrantPoints: 0, dailyChat: 0, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: 0 }
         : { tier: "free", dailyCallMinutes: null, callWindowDays: 1, freeTrialPoints: FREE_LIFETIME_ROLEPLAY_POINTS, monthlyGrantPoints: 0, dailyChat: FREE_DAILY_CHAT_LIMIT, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: FREE_PACK_DAYS_PER_WEEK };
   }
 }
