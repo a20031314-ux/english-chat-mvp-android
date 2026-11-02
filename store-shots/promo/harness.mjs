@@ -29,7 +29,7 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", "
  * 녹화 하나. scene(page, { tap, mark, events })에서 앱을 조작한다.
  * 결과: <out>/raw.mp4, events.json(장면 시각은 녹화 시작부터 초), final.png.
  */
-export async function record({ root, out, user, locale, target, port = 4292, scene, micWav, routes }) {
+export async function record({ root, out, user, locale, target, port = 4292, scene, micWav, routes, path: startPath = "/?screen=chat" }) {
   const api = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
   const www = path.join(root, "www");
   const server = http.createServer(async (req, res) => {
@@ -117,7 +117,7 @@ export async function record({ root, out, user, locale, target, port = 4292, sce
   };
   const startScreencast = () => cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: 824, maxHeight: 1830, everyNthFrame: 1 });
   try {
-    await page.goto(`${base}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${base}${startPath}`, { waitUntil: "domcontentloaded" });
     await scene(page, { tap, mark, events, startScreencast });
     mark("end");
     await page.screenshot({ path: path.join(out, "final.png") });

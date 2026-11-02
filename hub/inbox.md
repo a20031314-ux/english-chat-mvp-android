@@ -228,3 +228,4 @@
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2335 — AutoFull이 resumeSpot 복원보다 먼저 돌아 저장된 full:false를 덮음(작은 Logbank에서 나갔다 오면 전체 화면) (my 자리 복원이 있으면 AutoFull 건너뛰기).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:322 — 익힘 표시 status-mastered → info로 익힘·배움이 같은 하늘색, DESIGN.md "익힘 색 그대로"와 어긋남, SkillHexagon도 (되돌리거나 DESIGN.md에 Logbank 예외 한 줄).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2136 — AutoFull 하루 키 toDateString(), AutoQuiz는 localDay() — 날짜 기준 둘 (localDay()로 통일).
+- 2026-11-03 store → dev: [my] Logbank 꼭짓점 세부 칸(문장 활용 · 1단계)에 "29"·"1:0 1:1 1:2…" 칩이 이름 없이 보임(en 앱·es 학습, 이 폰 기록만 있는 사용자) — 열쇠가 그대로 나오는지 확인. 앱 빌드.

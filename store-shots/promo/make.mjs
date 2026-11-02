@@ -147,6 +147,18 @@ COPY.analyze2 = {
   ko: { hook: "이 일본어 문장,\n무슨 뜻일까?", tap: "줄을 누르면\n문장을 뜯어봐요", pick: "궁금한 부분만\n끌어서 골라요", ask: "궁금한 걸\n그대로 물어보세요", answer: "한국어로\n바로 답해줘요", my: "My의 제자리에\n쏙 담겨요", endTitle: "읽는 문장마다\n이해하며 배워요", endSub: "AI와 대화하며 배우는 언어 앱" },
 };
 
+// Logbank 편(record-logbank.mjs, 사용자 2026-11-03): 언어 이름 없이 — 언어 학습 앱이 핵심.
+COPY.logbank = {
+  en: {
+    hook: "How much have you\nreally learned?",
+    six: "Six skills, from words\nto real conversation",
+    detail: "Tap one: how full\nevery stage is",
+    records: "Every day logged —\nwhat you got right and wrong",
+    day: "Tap a day:\nwhat you did, what to fix",
+    endTitle: "Watch your\nlanguage grow",
+    endSub: "Learn languages by talking with AI",
+  },
+};
 // 통화 편 자막(배우는 언어 이름을 넣는다). 장면은 PROMO_PARTS로 고른다(여러 언어를 이어 붙일 때 첫 편만 hook).
 const LANG_NAME = { en: { ko: "Korean", es: "Spanish", ja: "Japanese", fr: "French", zh: "Chinese", en: "English" } };
 {
@@ -373,6 +385,15 @@ STORIES.analyze = () => ev.pickStart != null ? {
 });
 
 // 통화: 📞 → 튜터가 먼저 인사 → 틀리게 말함 → ✎ → "이렇게 말해도 돼요" → 한 마디 더(녹화: record-call.mjs).
+STORIES.logbank = () => ({
+  segs: [
+    [ev.my + 0.2, ev.hexagon + 0.9, 1, "hook"],
+    [ev.hexagon + 0.9, ev.axisTap - 0.1, 1, "six", { by: 0.28, x: 0.5, y: 0.3 }],
+    [ev.axisTap - 0.1, ev.records - 0.1, 1, "detail"],
+    [ev.records - 0.1, ev.barTap, 1, "records"],
+    [ev.barTap, ev.end - 0.2, 1, "day"],
+  ],
+});
 // 실사용 장면(사용자 2026-11-03 "실사용 장면도, 음성합성으로 학습하는 화자를 만들어도"): 튜터 줄은 앱의 튜터 목소리, 내 말은 학습자 목소리(다른 성별)로.
 // 말하는 구간은 그 목소리 길이에 맞춰 속도를 정한다. 튜터 줄 글은 events(record-call.mjs가 남김) — 없으면 목소리 없이.
 STORIES.call = () => {
