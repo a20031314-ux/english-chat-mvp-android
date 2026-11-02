@@ -166,7 +166,6 @@
 - 2026-11-01 watch → dev: [my] src/components/studyMap/TodayPlan.tsx:337 — 튜터 줄을 모두의 문제은행으로 보낼 때 shareable()에 내 프로필·자기소개 낱말(mine)을 안 넘겨 talkQuiz.ts 주석의 "내 프로필 낱말 없음" 거르기가 빠짐 (프로필 낱말 Set을 shareable(language, line, words, mine)로 넘기거나 주석·처리방침을 지금 동작에 맞추기)
 - 2026-11-01 watch → dev: [my] src/lib/server/qbank.ts:241 — offers 판정 한도가 전체 하루 300번 하나뿐, 사람마다 한도 없어 한 사용자가 그날 판정 예산을 다 쓸 수 있음 (x-rc-user별 하루 판정 수 5~10으로 세어 넘으면 offers 버리기, wordExtras처럼)
 - 2026-11-01 watch → dev: [my] src/lib/curriculum/vocabLevel.ts:97 — feelDue가 feltAt을 버튼을 눌러야만 바꿔 쉬워요·적당해요·어려워요 줄이 누를 때까지 계속 남음("10개마다 한 줄"과 다름) (보여 준 때를 기억해 다음 10개 뒤 다시, 또는 묶음이 끝나면 feltAt을 newSeen으로)
-- 2026-11-01 watch → dev: [ai] src/components/RoleplayScreen.tsx:835 — 통화 요약 ⏱이 (끝난 때 − startedAt)라 이어서 한 통화는 끝내기~이어서 하기 사이 쉰 시간까지 통화 시간으로 보임(RoleplayPast·Logbank도 같은 셈) (저장 줄에 실제 통화 시간을 쌓아 CallSummary·RoleplayPast·Logbank가 그 값을 쓰게)
 - 2026-11-01 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:468 — 뜻 줄이 비면(앱 언어=학습 언어·영어 뜻 옮김 없음) 대화 차례가 정답 줄을 🔊로 들려주는데 결과는 revealed=false라 따라 말하기만으로 익힘(RULES 11④) (뜻이 빈 차례는 revealed:true로 남기거나 통과 셈에서 빼기)
 - 2026-11-01 watch → dev: [my] src/lib/curriculum/readings/index.ts:444 — 不·一 변조 봐주기 정규식이 음절 자리를 안 봐 bi·bu·yi·yu로 시작하는 모든 음절(比·必·语·雨·以·意)의 성조가 틀려도 맞음 (원문이 不/一인 자리만 성조 빼기)
 - 2026-11-01 watch → dev: [ai] src/app/api/chat/route.ts:328 — 아랍어 standardVarietyTail('assistantMessage는 표준어로만')이 맨 끝에 붙어 '내 말도 하는 튜터' 앱 언어 한 문장 규칙과 부딪칠 수 있음(347·370도) (bilingual일 때는 아랍어 부분에만 걸리게 문구 바꾸기)
@@ -216,4 +215,3 @@
 - 2026-11-02 watch → dev: [ai] src/app/api/chat/route.ts:1167 — 채팅 맛보기를 답 뒤에 깎아 동시 전송이면 10통 초과 (보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
-- 2026-11-02 watch → dev: [my] src/lib/curriculum/logbankData.ts:1298 — partRows가 기간 안 익힘 기록이 한 번이면 그 뒤 Quizbank 틀림·튜터 고침이 있어도 ✓ 익힘으로 묶음 (가장 최근 사건이 틀림·고침·미통과면 다시 볼 것을 앞세우고 테스트 한 줄).

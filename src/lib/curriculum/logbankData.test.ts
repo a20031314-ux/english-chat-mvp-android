@@ -70,3 +70,21 @@ test("갈래 목록: 서버 기록·수업 결과·퀴즈 틀림을 소재 하�
   assert.deepEqual(b[1]!.parts, [1, 0, 0]);
   assert.deepEqual(totals(week, "grammar", input), { rows: 2, mastered: 0, missed: 2 });
 });
+
+test("익힌 뒤 더 최근에 틀리면 다시 볼 것(가장 최근 사건 우선 — es·th)", () => {
+  const input: LogInputs = {
+    language: "th",
+    items: [
+      { at: at("2026-11-2"), kind: "mastered", text: "กิน", part: "vocab", stage: 1, where: "quiz" },
+      { at: at("2026-11-2"), kind: "mastered", text: "agua", part: "vocab", stage: 1, where: "quiz" },
+    ],
+    results: [],
+    quiz: { "2026-11-5": { n: 2, right: 0, wrong: ["w|กิน"] } },
+    calls: [],
+    dayOf,
+  };
+  const rows = partRows(week, "vocab", input);
+  assert.equal(rows.find((row) => row.text === "กิน")?.status, "missed");
+  assert.equal(rows.find((row) => row.text === "agua")?.status, "mastered");
+  assert.equal(rows[0]!.text, "กิน");
+});

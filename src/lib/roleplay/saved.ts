@@ -54,10 +54,22 @@ export type SavedConversation = {
    * which is the difference between "carry on" and "read it again".
    */
   finishedAt?: number;
+  /**
+   * Seconds actually spent in the call, summed over each time it was opened —
+   * so a call put down and carried on the next day does not count the night in
+   * between (2026-11-02). Older rows have none; callSeconds() falls back.
+   */
+  activeSecs?: number;
   state: SessionState;
   said: TranscriptLine[];
   memory: ConversationMemory;
 };
+
+/** How long the call ran: the measured time when there is one, else first start to last word. */
+export function callSeconds(saved: Pick<SavedConversation, "startedAt" | "updatedAt" | "finishedAt" | "activeSecs">): number {
+  if (typeof saved.activeSecs === "number") return Math.max(0, Math.round(saved.activeSecs));
+  return Math.max(0, Math.round(((saved.finishedAt ?? saved.updatedAt) - saved.startedAt) / 1000));
+}
 
 /** Whether this one can be carried on rather than only read. */
 export function isUnfinished(saved: SavedConversation): boolean {
@@ -114,6 +126,7 @@ export function normalizeSaved(raw: unknown): SavedConversation | null {
     startedAt: row.startedAt,
     updatedAt: row.updatedAt,
     ...(typeof row.finishedAt === "number" ? { finishedAt: row.finishedAt } : {}),
+    ...(typeof row.activeSecs === "number" && row.activeSecs >= 0 ? { activeSecs: row.activeSecs } : {}),
     state,
     said: row.said as TranscriptLine[],
     memory:

@@ -40,7 +40,7 @@ import {
 import { correctionOf, offeredOf } from "@/lib/roleplay/director";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
-import { resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
+import { callSeconds, resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
 import {
   afterSaying,
   applyDirection,
@@ -233,6 +233,9 @@ export function RoleplayScreen({
   // same row instead of leaving a trail of one row per turn.
   const savedId = useRef("");
   const startedAt = useRef(0);
+  // 실제 통화 시간(2026-11-02, inbox): 이번에 연 때부터 + 예전에 연 동안 쌓인 초 — 끝내기~이어서 하기 사이 쉰 시간은 안 셈.
+  const openedAt = useRef(0);
+  const activeBefore = useRef(0);
 
   useEffect(() => {
     if (!scenario) return;
@@ -260,6 +263,8 @@ export function RoleplayScreen({
       globalThis.crypto?.randomUUID?.() ??
       `${Date.now()}-${Math.random()}`;
     startedAt.current = carrying?.startedAt ?? Date.now();
+    openedAt.current = Date.now();
+    activeBefore.current = carrying ? callSeconds(carrying) : 0;
     setReviewing(null);
     setOutOfPoints(false);
     translating.current = new Set();
@@ -297,6 +302,7 @@ export function RoleplayScreen({
       startedAt: startedAt.current || now,
       updatedAt: now,
       ...(state.finished ? { finishedAt: now } : {}),
+      activeSecs: activeBefore.current + Math.max(0, Math.round((now - (openedAt.current || now)) / 1000)),
       state,
       said,
       memory,
@@ -892,7 +898,7 @@ export function RoleplayScreen({
           gender={tutorGender}
           ui={ui}
           language={scenario.language}
-          seconds={Math.max(0, Math.round(((overAt || startedAt.current) - startedAt.current) / 1000))}
+          seconds={activeBefore.current + Math.max(0, Math.round(((overAt || openedAt.current) - openedAt.current) / 1000))}
           tally={tallyCall(said)}
         />
       {practice ? (

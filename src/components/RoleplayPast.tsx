@@ -10,7 +10,7 @@ import { handOffFrame } from "@/lib/notes/locateHandoff";
 import { sendAppIntent } from "@/lib/appIntents";
 import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
-import type { SavedConversation } from "@/lib/roleplay/saved";
+import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
 import { sayLine } from "@/lib/speech/sayLine";
 import { coerceLanguageCode, type LearningLanguageCode } from "@/lib/learningLanguages";
@@ -78,7 +78,7 @@ export function RoleplayPast({
       <CallSummary
         ui={ui}
         language={saved.language}
-        seconds={Math.max(0, Math.round(((saved.finishedAt ?? saved.updatedAt) - saved.startedAt) / 1000))}
+        seconds={callSeconds(saved)}
         tally={tallyCall(saved.said)}
       />
 

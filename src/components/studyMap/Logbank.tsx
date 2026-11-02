@@ -16,7 +16,7 @@ import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
 import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type Period, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
 import { BASES, bars, ESTIMATE, partRows, resultMinutes, totals, type Bar, type Basis, type LogInputs, type PartRow } from "@/lib/curriculum/logbankData";
-import type { SavedConversation } from "@/lib/roleplay/saved";
+import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
 
 function localDay(at: number): string {
@@ -624,7 +624,7 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
         const hints = recap.filter((item) => item.kind === "hint").length;
         // 튜터 수업에서 다시 말해 맞힌 줄 수 — 통화 끝 요약의 🔁와 같은 셈(2026-11-02 사용자 "학습결과창에도").
         const redone = tallyCall(call.said).redone;
-        const minutes = Math.max(1, Math.round(((call.finishedAt ?? call.updatedAt) - call.startedAt) / 60000));
+        const minutes = Math.max(1, Math.round(callSeconds(call) / 60));
         return (
           <div key={call.id} data-day-call className={card}>
             <div className="flex items-start gap-2">

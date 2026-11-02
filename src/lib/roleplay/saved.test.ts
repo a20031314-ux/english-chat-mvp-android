@@ -5,6 +5,7 @@ import { afterSaying, currentInstruction, startSession } from "./session.ts";
 import type { SessionState } from "./session.ts";
 import type { TranscriptLine } from "./review.ts";
 import {
+  callSeconds,
   MAX_SAVED_CONVERSATIONS,
   isUnfinished,
   normalizeSaved,
@@ -221,4 +222,10 @@ test("a conversation that got past the greeting resumes where it stood", () => {
   const resumed = resumeFrom(conversation({ state, said }), scenario, bank, 1000);
   assert.equal(resumed.state.nodeId, state.nodeId);
   assert.deepEqual(resumed.state.history, state.history, "nothing added twice");
+});
+
+test("통화 시간: 잰 초가 있으면 그것(이어서 한 통화의 쉰 시간 빼기), 없으면 처음~끝", () => {
+  const day = 24 * 60 * 60 * 1000;
+  assert.equal(callSeconds({ startedAt: 0, updatedAt: day, finishedAt: day, activeSecs: 420 }), 420);
+  assert.equal(callSeconds({ startedAt: 0, updatedAt: 90_000 }), 90);
 });

@@ -4,7 +4,7 @@
  * 이 폰에 따로 남긴다(언어마다, 최근 1년). 문장은 없다 — 숫자만. 같은 통화를 다시 저장하면(이어서 하기) 그 줄을 덮어쓴다.
  */
 import { tallyCall } from "./transcriptMarks.ts";
-import type { SavedConversation } from "./saved.ts";
+import { callSeconds, type SavedConversation } from "./saved.ts";
 
 const KEY = "callDays.v1";
 const KEEP_DAYS = 366;
@@ -28,11 +28,10 @@ export function readCallDays(language: string): CallDays {
 }
 
 /** 통화 하나의 숫자 줄(순수). 내가 한 말이 없는 통화는 없음. */
-export function callDayOf(call: Pick<SavedConversation, "said" | "startedAt" | "updatedAt" | "finishedAt">): CallDay | null {
+export function callDayOf(call: Pick<SavedConversation, "said" | "startedAt" | "updatedAt" | "finishedAt" | "activeSecs">): CallDay | null {
   if (!call.said.some((line) => line.who === "learner")) return null;
   const tally = tallyCall(call.said);
-  const end = call.finishedAt ?? call.updatedAt;
-  return { day: localDay(call.startedAt), at: call.startedAt, seconds: Math.max(0, Math.round((end - call.startedAt) / 1000)), fixed: tally.fixed, redone: tally.redone };
+  return { day: localDay(call.startedAt), at: call.startedAt, seconds: callSeconds(call), fixed: tally.fixed, redone: tally.redone };
 }
 
 /** 넣고 1년 넘은 것을 뺀다(순수). */

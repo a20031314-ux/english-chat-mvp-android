@@ -115,6 +115,11 @@ export type PartRow = {
   lastAt: number;
 };
 
+/** 틀림 쪽 사건: 튜터 고침 · Quizbank 틀림 · 통과 못 한 수업 결과. */
+export function isMiss(event: Pick<LogEvent, "kind" | "result">): boolean {
+  return event.kind === "fixed" || event.kind === "quizWrong" || (event.kind === "result" && !event.result?.passed);
+}
+
 export function partRows(period: Period, part: PartBasis, input: LogInputs): PartRow[] {
   const rows = new Map<string, PartRow>();
   const rowOf = (id: string, seed: Omit<PartRow, "id" | "events" | "status" | "lastAt">): PartRow => {
@@ -157,11 +162,12 @@ export function partRows(period: Period, part: PartBasis, input: LogInputs): Par
   }
   for (const row of rows.values()) {
     row.events.sort((a, b) => b.at - a.at);
+    // 가장 최근 사건이 틀림·고침·미통과면 다시 볼 것 — 그 전에 익힌 적이 있어도(2026-11-02 변경 감시 minor, inbox).
     const latest = row.events[0];
-    row.status = row.events.some((one) => one.kind === "mastered") || row.events.some((one) => one.kind === "result" && one.result?.passed)
-      ? "mastered"
-      : latest && (latest.kind === "fixed" || latest.kind === "quizWrong" || (latest.kind === "result" && !latest.result?.passed))
-        ? "missed"
+    row.status = latest && isMiss(latest)
+      ? "missed"
+      : row.events.some((one) => one.kind === "mastered" || (one.kind === "result" && one.result?.passed))
+        ? "mastered"
         : "learned";
   }
   const rank = { missed: 0, learned: 1, mastered: 2 } as const;
