@@ -113,10 +113,10 @@ const PLANS = [
   { name: "무료(2.75 이하 앱)", terms: termsFor("free") },
   { name: "무료(2.76~ 대본 앱)", terms: termsFor("free", Date.now(), undefined, { scriptsApp: true }) },
   { name: "대본 플랜 2,900원", terms: termsFor("script") },
-  { name: "라이트 3,900원", terms: termsFor("lite") },
-  { name: "플러스 5,500원", terms: termsFor("plus") },
-  { name: "프리미엄 9,900원 (지금, 월 80포인트)", terms: termsFor("premium", Date.now(), null) },
-  { name: "프리미엄 8,900원 (전환 후)", terms: termsFor("premium", Date.UTC(2100, 1, 1), "2100-01-01") },
+  { name: "라이트 4,900원", terms: termsFor("lite") },
+  { name: "플러스 6,500원", terms: termsFor("plus") },
+  { name: "프리미엄 옛 조건 9,900원 (월 80포인트)", terms: termsFor("premium", Date.now(), null) },
+  { name: "프리미엄 12,900원 (하루 30분)", terms: termsFor("premium", Date.UTC(2100, 1, 1), "2100-01-01") },
 ];
 
 function limitsLine(terms) {

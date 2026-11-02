@@ -306,7 +306,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "통화 시간",
         "body": [
-          "자유 통화: {ui:planScriptName} 사흘마다 5분 · 매일 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 프리미엄 15분."
+          "자유 통화: {ui:planScriptName} 사흘마다 5분 · 매일 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 프리미엄 30분."
         ]
       }
     ]
@@ -687,7 +687,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Call time",
         "body": [
-          "Free calls: {ui:planScriptName} 5 min every 3 days · daily {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 min."
+          "Free calls: {ui:planScriptName} 5 min every 3 days · daily {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
         ]
       }
     ]

@@ -174,7 +174,7 @@
         {
           "heading": "Tiempo de llamada",
           "body": [
-            "Llamadas libres: {ui:planScriptName} 5 min cada 3 días · al día {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 min."
+            "Llamadas libres: {ui:planScriptName} 5 min cada 3 días · al día {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -555,7 +555,7 @@
         {
           "heading": "通話時間",
           "body": [
-            "自由通話：{ui:planScriptName} 3日ごとに5分・毎日 {ui:planLiteName} 7・{ui:planPlusName} 10・プレミアム 15分。"
+            "自由通話：{ui:planScriptName} 3日ごとに5分・毎日 {ui:planLiteName} 7・{ui:planPlusName} 10・プレミアム 30分。"
           ]
         }
       ]
@@ -936,7 +936,7 @@
         {
           "heading": "通话时间",
           "body": [
-            "自由通话：{ui:planScriptName} 每 3 天 5 分钟 · 每天 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 高级 15 分钟。"
+            "自由通话：{ui:planScriptName} 每 3 天 5 分钟 · 每天 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 高级 30 分钟。"
           ]
         }
       ]
@@ -1317,7 +1317,7 @@
         {
           "heading": "Thời gian gọi",
           "body": [
-            "Gọi tự do: {ui:planScriptName} 5 phút mỗi 3 ngày · mỗi ngày {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 phút."
+            "Gọi tự do: {ui:planScriptName} 5 phút mỗi 3 ngày · mỗi ngày {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 phút."
           ]
         }
       ]
@@ -1698,7 +1698,7 @@
         {
           "heading": "Temps d’appel",
           "body": [
-            "Appels libres : {ui:planScriptName} 5 min tous les 3 jours · par jour {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 min."
+            "Appels libres : {ui:planScriptName} 5 min tous les 3 jours · par jour {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2079,7 +2079,7 @@
         {
           "heading": "Tempo di chiamata",
           "body": [
-            "Chiamate libere: {ui:planScriptName} 5 min ogni 3 giorni · al giorno {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 min."
+            "Chiamate libere: {ui:planScriptName} 5 min ogni 3 giorni · al giorno {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2460,7 +2460,7 @@
         {
           "heading": "Tempo de chamada",
           "body": [
-            "Chamadas livres: {ui:planScriptName} 5 min a cada 3 dias · por dia {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 min."
+            "Chamadas livres: {ui:planScriptName} 5 min a cada 3 dias · por dia {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2841,7 +2841,7 @@
         {
           "heading": "Время звонков",
           "body": [
-            "Свободные звонки: {ui:planScriptName} 5 мин раз в 3 дня · в день {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 мин."
+            "Свободные звонки: {ui:planScriptName} 5 мин раз в 3 дня · в день {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 мин."
           ]
         }
       ]
@@ -3222,7 +3222,7 @@
         {
           "heading": "Waktu panggilan",
           "body": [
-            "Panggilan bebas: {ui:planScriptName} 5 menit tiap 3 hari · per hari {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 menit."
+            "Panggilan bebas: {ui:planScriptName} 5 menit tiap 3 hari · per hari {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 menit."
           ]
         }
       ]
@@ -3603,7 +3603,7 @@
         {
           "heading": "وقت المكالمات",
           "body": [
-            "المكالمات الحرّة: {ui:planScriptName} 5 دقائق كل 3 أيام · يوميًا {ui:planLiteName} 7 · {ui:planPlusName} 10 · بريميوم 15 دقيقة."
+            "المكالمات الحرّة: {ui:planScriptName} 5 دقائق كل 3 أيام · يوميًا {ui:planLiteName} 7 · {ui:planPlusName} 10 · بريميوم 30 دقيقة."
           ]
         }
       ]
@@ -3984,7 +3984,7 @@
         {
           "heading": "เวลาโทร",
           "body": [
-            "โทรอิสระ: {ui:planScriptName} 5 นาทีทุก 3 วัน · ต่อวัน {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 15 นาที"
+            "โทรอิสระ: {ui:planScriptName} 5 นาทีทุก 3 วัน · ต่อวัน {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 นาที"
           ]
         }
       ]
@@ -4365,7 +4365,7 @@
         {
           "heading": "कॉल का समय",
           "body": [
-            "फ्री कॉल: {ui:planScriptName} हर 3 दिन 5 मिनट · रोज़ {ui:planLiteName} 7 · {ui:planPlusName} 10 · प्रीमियम 15 मिनट।"
+            "फ्री कॉल: {ui:planScriptName} हर 3 दिन 5 मिनट · रोज़ {ui:planLiteName} 7 · {ui:planPlusName} 10 · प्रीमियम 30 मिनट।"
           ]
         }
       ]

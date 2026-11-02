@@ -8,9 +8,13 @@
  * can cost known in advance.
  *
  *   2,900 won  script_monthly   5 minutes every 3 days   20 chats   (stage scripts are free for everyone)
- *   3,900 won  lite_monthly     7 minutes a day   30 chats   library trial
- *   5,500 won  plus_monthly    10 minutes a day   50 chats   library trial
- *   8,900 won  premium_monthly 15 minutes a day  100 chats   whole library, 2 extra packs
+ *   4,900 won  lite_monthly     7 minutes a day   30 chats   library trial
+ *   6,500 won  plus_monthly    10 minutes a day   50 chats   library trial
+ *  12,900 won  premium_monthly 30 minutes a day  100 chats   whole library, 2 extra packs
+ *
+ * 2026-11-02 사용자 결정: 라이트·플러스는 시간 그대로 가격만 +1,000원, 프리미엄은 12,900원·하루 30분
+ * (그 사이는 구매 포인트가 메움). 화면의 가격은 스토어 값이라 Play·App Store 가격은 사람이 바꾼다 —
+ * 한도(분)는 이 표가 정해 서버에 바로 반영된다.
  *
  * premium_monthly is the plan that already exists at 9,900 won with 80 points
  * a month. Its price is changed in Play by a person, on a day this server
@@ -120,12 +124,12 @@ export function termsFor(tier: PlanTier, now = Date.now(), from: string | null =
     case "script":
       return { tier, dailyCallMinutes: 5, callWindowDays: 3, freeTrialPoints: 0, monthlyGrantPoints: 0, dailyChat: 20, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 2900, ...HELP_LIMITS.script, packDaysPerWeek: 0 };
     case "lite":
-      return { tier, dailyCallMinutes: 7, ...daily, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 3900, ...HELP_LIMITS.lite, packDaysPerWeek: null };
+      return { tier, dailyCallMinutes: 7, ...daily, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 4900, ...HELP_LIMITS.lite, packDaysPerWeek: null };
     case "plus":
-      return { tier, dailyCallMinutes: 10, ...daily, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 5500, ...HELP_LIMITS.plus, packDaysPerWeek: null };
+      return { tier, dailyCallMinutes: 10, ...daily, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 6500, ...HELP_LIMITS.plus, packDaysPerWeek: null };
     case "premium":
       return premium.daily
-        ? { tier, dailyCallMinutes: 15, ...daily, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 8900, ...HELP_LIMITS.premium, packDaysPerWeek: null }
+        ? { tier, dailyCallMinutes: 30, ...daily, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 12900, ...HELP_LIMITS.premium, packDaysPerWeek: null }
         : { tier, dailyCallMinutes: null, ...daily, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900, ...HELP_LIMITS.premium, packDaysPerWeek: null };
     default:
       return options.scriptsApp

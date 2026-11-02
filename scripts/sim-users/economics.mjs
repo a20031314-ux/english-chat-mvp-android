@@ -49,10 +49,10 @@ export const PLANS = [
   // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
   { id: "free", name: "무료(+광고)", terms: termsFor("free", Date.now(), undefined, { scriptsApp: true }) },
   { id: "script", name: "대본 플랜 2,900원", terms: termsFor("script") },
-  { id: "lite", name: "라이트 3,900원", terms: termsFor("lite") },
-  { id: "plus", name: "플러스 5,500원", terms: termsFor("plus") },
-  { id: "premium", name: "프리미엄 9,900원(지금)", terms: termsFor("premium", Date.now(), null) },
-  { id: "premiumNew", name: "프리미엄 8,900원(전환 후)", terms: termsFor("premium", Date.UTC(2100, 1, 1), "2100-01-01") },
+  { id: "lite", name: "라이트 4,900원", terms: termsFor("lite") },
+  { id: "plus", name: "플러스 6,500원", terms: termsFor("plus") },
+  { id: "premium", name: "프리미엄 옛 조건 9,900원", terms: termsFor("premium", Date.now(), null) },
+  { id: "premiumNew", name: "프리미엄 12,900원", terms: termsFor("premium", Date.UTC(2100, 1, 1), "2100-01-01") },
 ];
 
 /** 실행 옵션: 가정 파일 + 명령줄로 덮어쓰기. */

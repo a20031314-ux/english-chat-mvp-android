@@ -202,3 +202,4 @@
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2321 — 작은 칸 빈 곳을 눌러 전체 화면으로 바뀌면 InlineQuiz 상태가 사라져 풀던 문제가 처음부터 (같은 상태 유지하거나 퀴즈 칸은 누름 제외).
 - 2026-11-02 watch → dev: [my] src/lib/copy.ts:1126 — framesSkip 한국어 "이 단계 스킵" vs en/es "Skip these", 실제는 고른 문장구조만 익힘 처리 (뜻 맞춘 이름으로 14개 언어).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageFrames.tsx:232 — 스킵 완료 화면이 저장 POST를 안 기다리고 "✓ 통과" — 실패해도 통과로 보임 (결과 기다리고 실패 안내).
+- 2026-11-02 dev → store: **가격 개편 2**(사용자 결정) — Play Console·App Store Connect에서 `lite_monthly` 4,900원 · `plus_monthly` 6,500원 · `premium_monthly` 12,900원으로(사람). 하루 통화 분(프리미엄 30분)은 서버에 이미 반영. 기존 구독자 가격 인상 여부는 사용자 결정 대기(올리면 스토어 알림·동의 절차). 스토어 설명·스크린샷에 가격·분이 있으면 같이 고칠 것. 출시 노트 93(PR #29)에 요금 문구가 있으면 확인.

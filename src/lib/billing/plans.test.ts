@@ -39,7 +39,7 @@ test("premium keeps its old terms until the switch day, and the grant for that m
   const switchMonth = termsFor("premium", Date.parse("2026-10-21T00:00:00Z"), "2026-10-20");
   assert.deepEqual(
     [switchMonth.dailyCallMinutes, switchMonth.monthlyGrantPoints, switchMonth.dailyChat, switchMonth.extraPacks],
-    [15, 80, 100, 2],
+    [30, 80, 100, 2],
   );
   const next = termsFor("premium", Date.parse("2026-11-02T00:00:00Z"), "2026-10-20");
   assert.equal(next.monthlyGrantPoints, 0);
