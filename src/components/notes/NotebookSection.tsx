@@ -17,7 +17,7 @@ import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/n
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeFrame, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type LogItem, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
-import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
+import { onAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
@@ -46,7 +46,7 @@ import { allMisses } from "@/lib/curriculum/scriptMisses";
 import { weakSpots, wordsToShow, type WeakSpot } from "@/lib/curriculum/weakSpots";
 import { morningDays } from "@/lib/curriculum/morningDigest";
 import { onMorningChange, readMorning, scheduleMorning } from "@/lib/morningNotify";
-import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
+import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { allFramesFor, frameById } from "@/lib/curriculum/frames";
 
 /**
@@ -222,7 +222,6 @@ export function NotebookSection({
   onNextStage,
   canSpeak = false,
   view,
-  part: focusPart = null,
   onPart,
 }: {
   ui: UICopy;
@@ -618,7 +617,6 @@ export function NotebookSection({
                   stages={book.stages}
                   current={book.stage}
                   nodes={book.nodes.filter((node) => node.chapter === "grammar")}
-                  allNodes={book.nodes.filter((node) => !node.ahead)}
                   counts={counts}
                   fill={fill}
                   nameOf={nameOf}
@@ -627,8 +625,6 @@ export function NotebookSection({
                   masteredOf={masteredOf}
                   focus={focusStage}
                   parts={book.parts ?? []}
-                  words={book.words ?? []}
-                  pronunciationNotes={book.pronunciationNotes ?? {}}
                   onTry={onTry}
                   onNextStage={onNextStage && studyMode !== "free" ? (order) => setStageTestFor(order) : undefined}
                   free={studyMode === "free"}
@@ -639,7 +635,6 @@ export function NotebookSection({
                       : undefined
                   }
                   canSpeak={canSpeak}
-                  focusPart={focusPart}
                   jump={jump}
                   onJumped={() => setJump(null)}
                   frameTally={frameTally}
@@ -676,7 +671,6 @@ export function NotebookSection({
                       }}
                     />
                   )}
-                  scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}
                 />
               </>
             ),
@@ -695,7 +689,6 @@ export function NotebookSection({
           stages={book.stages}
           current={book.stage}
           nodes={book.nodes.filter((node) => node.chapter === "grammar")}
-          allNodes={book.nodes.filter((node) => !node.ahead)}
           counts={counts}
           fill={fill}
           nameOf={nameOf}
@@ -704,8 +697,6 @@ export function NotebookSection({
           masteredOf={masteredOf}
           focus={focusStage}
           parts={book.parts ?? []}
-          words={book.words ?? []}
-          pronunciationNotes={book.pronunciationNotes ?? {}}
           onTry={onTry}
           onNextStage={onNextStage && studyMode !== "free" ? (order) => setStageTestFor(order) : undefined}
           free={studyMode === "free"}
@@ -716,7 +707,6 @@ export function NotebookSection({
               : undefined
           }
           canSpeak={canSpeak}
-          focusPart={focusPart}
           jump={jump}
           onJumped={() => setJump(null)}
           frameTally={frameTally}
@@ -739,7 +729,6 @@ export function NotebookSection({
               }}
             />
           )}
-          scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}
         />
       ) : null}
       {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
@@ -1071,14 +1060,6 @@ function PartsOverview({
   );
 }
 
-/** 갈래마다 노트 고정 칸(그 갈래를 열면 아래에 칸 줄로). 문법은 단계 칸, 발음은 글자·소리 칸. */
-const PART_NODES: Record<PartId, readonly string[]> = {
-  vocab: ["d-word", "d-spelling"],
-  grammar: [],
-  expression: ["i-idiom", "i-together", "i-set", "d-register", "d-nuance"],
-  pronunciation: [],
-};
-
 /**
  * 수준별 틀(2026-10-25 사용자 "어휘, 문법, 표현, 발음 이런 식으로 나눠서 … 발음이 부족하면 발음을 향상해서 다음 단계로"):
  * 단계 사다리 → 그 단계의 네 갈래(막대) → 가장 모자란 갈래 "다음 단계까지" + 연습 → 고른 갈래의 칸·목록 → 이 단계 목표(접힘).
@@ -1089,7 +1070,6 @@ function StageFrame({
   stages,
   current,
   nodes,
-  allNodes,
   counts,
   fill,
   nameOf,
@@ -1098,12 +1078,8 @@ function StageFrame({
   masteredOf,
   focus,
   parts,
-  words,
-  pronunciationNotes,
   onNextStage,
-  focusPart = null,
   scripts,
-  scriptFor,
   jump = null,
   onJumped,
   headExtra,
@@ -1117,7 +1093,6 @@ function StageFrame({
   stages: { order: number; title: string }[];
   current: number;
   nodes: NodeView[];
-  allNodes: NodeView[];
   counts: Record<string, number>;
   fill: Record<string, "mastered" | "learned">;
   nameOf: (id: string) => string;
@@ -1127,17 +1102,13 @@ function StageFrame({
   /** 이 단계를 펼쳐 보인다("My에서 찾기"로 온 칸의 단계). */
   focus?: number | null;
   parts: StageParts[];
-  words: { text: string; state: "met" | "learned" | "mastered" }[];
-  pronunciationNotes: Record<string, string>;
   onTry?: (stage: number, index: number) => void;
   onNextStage?: (order: number) => void;
   canSpeak: boolean;
   /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
-  focusPart?: PartId | null;
   /** 그 단계 대본(맨 위, 2026-10-27 "My탭도 대본에 맞추고"). openFor = 표현 연습으로 열 대본. */
   scripts?: (order: number, row: StageParts | null, openFor: { id: string; at: number; today?: boolean } | null) => ReactNode;
   /** 아직 배우지 않은 표현이 든 대본 id(표현 갈래 연습 → 그 대본, 2026-10-28 "표현연결"). */
-  scriptFor?: (order: number, open: string[]) => string | null;
   /** 밖(문법 칸)에서 고른 대본·문장구조 — 그 단계로 옮겨 연다. */
   jump?: { stage: number; id: string; at: number; today?: boolean } | null;
   /** 연 뒤 밖의 jump를 비운다 — 칸을 접었다 펴면(다시 그려지면) 같은 대본이 또 열리던 것(2026-10-30 사용자 화면). */
@@ -1164,7 +1135,6 @@ function StageFrame({
   }, [focus]);
   const stageParts = parts.find((row) => row.order === shown) ?? null;
   // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
-  const [picked, setPicked] = useState<PartId | null>(focusPart);
   const [openScript, setOpenScript] = useState<{ id: string; at: number; today?: boolean } | null>(null);
   const [jumped, setJumped] = useState(0);
   const [reviewing, setReviewing] = useState<number | null>(null);
@@ -1177,7 +1147,6 @@ function StageFrame({
   useEffect(() => {
     if (jump && jump.at === jumped) onJumped?.();
   }, [jump, jumped, onJumped]);
-  const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
   const filledIn = (order: number) => inStage(order).filter(filledOf).length;
@@ -1192,8 +1161,6 @@ function StageFrame({
         : (counts[node.id] ?? 0)
           ? "bg-status-pending"
           : "border border-line";
-  const stateDot = (state: "met" | "learned" | "mastered" | null) =>
-    state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
   const nodeRows = (list: NodeView[]) => (
     <ul className="divide-y divide-white/5">
       {list.map((node) => {
@@ -1218,25 +1185,6 @@ function StageFrame({
       })}
     </ul>
   );
-  const chips = (list: { text: string; state: "met" | "learned" | "mastered" | null }[]) => (
-    <ul className="flex flex-wrap gap-1.5 py-2">
-      {list.map((item) => (
-        <li key={item.text} className="flex items-center gap-1.5 rounded-lg bg-white/[0.04] px-2 py-1 text-caption text-slate-200">
-          <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${stateDot(item.state)}`} />
-          <span dir="auto">{item.text}</span>
-        </li>
-      ))}
-    </ul>
-  );
-
-  const openExpressions = (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered" && item.state !== "learned").map((item) => item.text);
-  const expressionScript = scriptFor && openExpressions.length ? scriptFor(shown, openExpressions) : null;
-  /** 그 갈래 연습: 아직인 표현이 든 대본을 연다 — 그런 대본이 있을 때만(채팅·통화로 보내던 "채팅으로"·"통화로"는 뺌, 2026-10-29 사용자 "이동만 하고 할 게 안 보이는 버튼 삭제"). */
-  const practice = (id: PartId) => {
-    if (id === "expression" && expressionScript) setOpenScript((current) => ({ id: expressionScript, at: (current?.at ?? 0) + 1 }));
-  };
-  const practiceLabel = () => ui.stageScriptsTitle;
-  const canPractice = (id: PartId) => id === "expression" && Boolean(expressionScript);
   // 이 단계 대화 예시(StageExamples) — 있을 때만 그 앞에 광고 자리.
   const sample = detail?.(shown) ?? null;
 
@@ -1256,7 +1204,6 @@ function StageFrame({
                 aria-label={ui.stageNumber.replace("{n}", String(stage.order))}
                 onClick={() => {
                   setShown(stage.order);
-                  setPicked(null);
                 }}
                 className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption tabular-nums ${
                   here ? "bg-status-learned font-semibold text-black" : done ? "bg-status-learned/30 text-ink" : "border border-line text-slate-500"
@@ -1301,7 +1248,8 @@ function StageFrame({
 
       {stageParts ? (
         <>
-          {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 가장 모자란 갈래 + 연습. */}
+          {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 문장구조 익힘·꺼내 쓰기 수(단계 = 문장구조 → 꺼내 쓰기, 2026-10-30).
+              예전 네 갈래(어휘·문법·표현·발음) 고르기·칸·"다음 단계까지: 어휘"는 뺌(2026-11-02 사용자 "정리해줘" — 단계 조건과 어긋나고 Quizbank·Logbank와 겹침). */}
           {shown === now && !free ? (
             readyOf(shown) && onNextStage && shown < stages.length ? (
               <button
@@ -1311,75 +1259,18 @@ function StageFrame({
               >
                 {ui.partReady} ›
               </button>
-            ) : stageParts.weakest ? (
-              <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
-                <span className="min-w-0 flex-1 text-note text-ink">{ui.partToNext.replace("{part}", label[stageParts.weakest])}</span>
-                {canPractice(stageParts.weakest) ? (
-                  <button
-                    type="button"
-                    onClick={() => practice(stageParts.weakest!)}
-                    className="shrink-0 rounded-lg bg-platinum px-3 py-1.5 text-caption font-semibold text-black"
-                  >
-                    {practiceLabel()}
-                  </button>
-                ) : null}
-              </div>
-            ) : null
+            ) : (() => {
+              const tally = frameTally?.(shown);
+              const text = tally
+                ? ui.framesToNext.replace("{a}", String(tally.learned)).replace("{b}", String(tally.recalled)).replace(/\{n\}/g, String(tally.need))
+                : stageParts.weakest
+                  ? ui.partToNext.replace("{part}", label[stageParts.weakest])
+                  : "";
+              return text ? (
+                <p data-stage-next className="mt-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2 text-note tabular-nums text-ink">{text}</p>
+              ) : null;
+            })()
           ) : null}
-
-          <ul className="mt-2 space-y-1" role="group">
-            {stageParts.parts.map((row) => {
-              const on = row.id === part;
-              const weakest = shown === now && row.id === stageParts.weakest;
-              return (
-                <li key={row.id}>
-                  <button
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => setPicked(row.id)}
-                    className={`flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start ${on ? "bg-white/10" : "hover:bg-white/5"}`}
-                  >
-                    <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[row.id]}</span>
-                    {/* 갈래 막대·n/m은 뺌(진척 숫자 삭제, 2026-10-30) — 누르면 아래에 그 갈래의 칸·익힌 것. */}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* 고른 갈래의 칸·목록. */}
-          <div className="mt-2 rounded-xl bg-surface-sunk px-3 py-1">
-            {part === "grammar" ? nodeRows(inStage(shown)) : null}
-            {part === "expression" ? (
-              <>
-                {chips(stageParts.expressions)}
-                {nodeRows(allNodes.filter((node) => PART_NODES.expression.includes(node.id)))}
-              </>
-            ) : null}
-            {part === "vocab" ? (
-              <>
-                {words.length ? chips(words) : null}
-                <button type="button" onClick={() => sendAppIntent("openNotes", { section: "words" })} className="flex w-full items-center justify-between py-2 text-start text-note text-ink">
-                  <span>{ui.homeTabVocab}</span>
-                  <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
-                </button>
-                {nodeRows(allNodes.filter((node) => PART_NODES.vocab.includes(node.id)))}
-              </>
-            ) : null}
-            {part === "pronunciation" ? (
-              <>
-                {pronunciationNotes[String(shown)] ? <p dir="auto" className="py-2 text-note text-slate-200">{pronunciationNotes[String(shown)]}</p> : null}
-                {nodeRows(allNodes.filter((node) => node.chapter === "script"))}
-              </>
-            ) : null}
-            {canPractice(part) ? (
-              <div className="flex justify-end py-2">
-                <button type="button" onClick={() => practice(part)} className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10">
-                  {practiceLabel()}
-                </button>
-              </div>
-            ) : null}
-          </div>
         </>
       ) : (
         // 옛 서버: 문법 칸만(예전 틀).
