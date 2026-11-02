@@ -847,7 +847,6 @@ export function TodayPlan({
   const unitMix = unitItem ? unitMixOf(unitItem) : null;
   // 같은 날·같은 조합이면 같은 문제(씨앗) — 다시 그려도 바뀌지 않는다.
   const unitQuestions = unitItem && unitMix ? buildUnit(language, unitItem.id, unitMix, day) : [];
-  const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
   // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
   const pairs = matchPairs([
@@ -916,7 +915,8 @@ export function TodayPlan({
     const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "type", "choose"] : ["auto", "type", "choose", "order", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
-  const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planMinutes.replace("{n}", String(minutes))}</span>;
+  // 칸 머리에 학습 시간(n분)은 안 띄움(2026-11-03 사용자 "stagebank에서 학습시간 표시는 지우고") — 끝났을 때만 ✓. 분량은 ⚙ 안에.
+  const todaySummary = finished ? <span>{`✓ ${ui.planAllDone}`}</span> : null;
   // 오늘 할 것(2026-10-30 사용자 "퀴즈랑 똑같이 첫 화면으로 — 다 안 보여 줘도 되니까 뭘 할지 명확히"): 목록 대신 지금 할 것 하나를 크게,
   // 나머지는 점으로만. 퀴즈면 칸 안에서 바로 한 문제, 상황·문장구조·꺼내 쓰기면 첫 줄이 보이는 카드 하나(누르면 시작).
   const currentAt = items.findIndex((item) => !doneOf(item));

@@ -78,12 +78,12 @@ export function SkillHexagon({
           return <line key={i} x1={CX} y1={CY} x2={x} y2={y} className="stroke-white/10" strokeWidth="0.8" />;
         })}
         {then ? <path data-skill-before d={path(then)} className="fill-none stroke-slate-400" strokeWidth="1.2" strokeDasharray="4 3" opacity="0.7" /> : null}
-        <path data-skill-now d={path(now)} className="fill-status-mastered stroke-status-mastered" fillOpacity="0.22" strokeWidth="2.2" strokeLinejoin="round" />
+        <path data-skill-now d={path(now)} className="fill-info stroke-info" fillOpacity="0.22" strokeWidth="2.2" strokeLinejoin="round" />
         {AXES.map((axis, i) => {
           const one = result.axes[axis];
           const [lx, ly] = point(i, one.low);
           const [hx, hy] = point(i, one.high);
-          return one.converged ? null : <line key={`r-${axis}`} x1={lx} y1={ly} x2={hx} y2={hy} className="stroke-status-mastered" strokeWidth="6" strokeLinecap="round" opacity="0.25" />;
+          return one.converged ? null : <line key={`r-${axis}`} x1={lx} y1={ly} x2={hx} y2={hy} className="stroke-info" strokeWidth="6" strokeLinecap="round" opacity="0.25" />;
         })}
         {AXES.map((axis, i) => {
           const one = result.axes[axis];
@@ -105,7 +105,7 @@ export function SkillHexagon({
               }}
               className="cursor-pointer outline-none"
             >
-              <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : "fill-status-mastered"} />
+              <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : "fill-info"} />
               <text x={tx} y={ty - 6} textAnchor={anchor} className="fill-ink text-caption font-semibold">
                 {labelLines(axisName(ui, axis)).map((line, n, all) => (
                   <tspan key={n} x={tx} dy={n === 0 ? -(all.length - 1) * 15 : 15}>{line}</tspan>
@@ -113,7 +113,7 @@ export function SkillHexagon({
               </text>
               <text x={tx} y={ty + 10} textAnchor={anchor} className="fill-slate-300 text-meta tabular-nums">
                 {pct(one)}
-                {delta > 0 ? <tspan className="fill-status-mastered">{` ▲${delta}`}</tspan> : null}
+                {delta > 0 ? <tspan className="fill-info">{` ▲${delta}`}</tspan> : null}
               </text>
               <circle cx={tx} cy={ty} r="26" className="fill-transparent" />
             </g>
@@ -205,7 +205,7 @@ export function AxisDetail({
   const parts = axis === "talk" ? fill.cells.filter((cell) => cell.id.startsWith("part:")) : [];
   const bar = (value: number, weak: boolean) => (
     <span className="relative h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-white/10">
-      <span className={`absolute inset-y-0 start-0 rounded-full ${weak ? "bg-warn" : "bg-status-mastered"}`} style={{ width: `${Math.round(Math.min(1, Math.max(0, value)) * 100)}%` }} />
+      <span className={`absolute inset-y-0 start-0 rounded-full ${weak ? "bg-warn" : "bg-info"}`} style={{ width: `${Math.round(Math.min(1, Math.max(0, value)) * 100)}%` }} />
     </span>
   );
   return (
@@ -219,7 +219,7 @@ export function AxisDetail({
         {Array.from({ length: STAGES }, (_, i) => (
           <div key={i} className="flex flex-col items-center gap-1">
             <div className="relative h-16 w-full overflow-hidden rounded-lg bg-white/10">
-              <div className="absolute inset-x-0 bottom-0 bg-status-mastered/70" style={{ height: `${Math.round((fill.stages[i] ?? 0) * 100)}%` }} />
+              <div className="absolute inset-x-0 bottom-0 bg-info/70" style={{ height: `${Math.round((fill.stages[i] ?? 0) * 100)}%` }} />
             </div>
             <span className="text-meta tabular-nums text-slate-400">{i + 1}</span>
           </div>
@@ -241,7 +241,7 @@ export function AxisDetail({
             aria-selected={tab === one.id}
             data-skill-tab={one.id}
             onClick={() => setTab(one.id)}
-            className={`rounded-full px-3 py-1 text-caption ${tab === one.id ? "bg-ink text-surface" : "border border-line text-slate-300"}`}
+            className={`rounded-full px-3 py-1 text-caption ${tab === one.id ? "border border-info/40 bg-info/10 text-info" : "border border-line text-slate-300"}`}
           >
             {one.title}
           </button>

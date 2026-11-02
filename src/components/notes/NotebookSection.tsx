@@ -2123,6 +2123,29 @@ type LayerPart = { summary: ReactNode; body: ReactNode };
 type PlanParts = { today: LayerPart & { done: boolean }; keep: LayerPart & { wrong: boolean }; review: LayerPart; overlays: ReactNode };
 
 /**
+ * 하루 처음 My를 열었을 때 오늘 할 것이 남았으면 Stagebank를 펼친 채(전체 화면)로 시작(2026-11-03 사용자 "첫화면엔 오늘의 학습이
+ * 학습 첫화면부터 펼쳐진 상태가 되도록, 오늘의 학습이 끝날시 다시 다른 탭으로 학습 유도"). 하루 한 번(이 폰) — ✕로 접으면 그날은 그대로.
+ */
+const AUTO_FULL_KEY = "myLayer.autoFull";
+function AutoFull({ onFull }: { onFull: () => void }) {
+  const fullRef = useRef(onFull);
+  useEffect(() => {
+    fullRef.current = onFull;
+  });
+  useEffect(() => {
+    const day = new Date().toDateString();
+    try {
+      if (localStorage.getItem(AUTO_FULL_KEY) === day) return;
+      localStorage.setItem(AUTO_FULL_KEY, day);
+    } catch {
+      // 저장이 안 되면 열 때마다 펼친다.
+    }
+    fullRef.current();
+  }, []);
+  return null;
+}
+
+/**
  * My 큰 칸 셋(2026-10-30 사용자 "큰 층위 하나만 보이게 하고 나머지는 그 층위 아래로 — 모든 기능이 같은 층위로 나열된 게 문제"):
  * 오늘 할 것(오늘 목록, 설정은 접힘) · n단계(내 진척, 사다리, 방식 칩 [상황 | 표현·문법 | 문장구조], 다음 단계 조건) · 복습(계속 공부·단어장·시험·틀린 줄).
  * 한 번에 하나만 펼친다. 퀴즈·시험 화면(overlays)은 칸이 접혀도 떠 있어야 해서 따로.
@@ -2271,7 +2294,7 @@ function MyLayers({
     const stageCard = card(
       "stage",
       stage.title,
-      todayDone ? stage.summary : first.summary,
+      todayDone ? stage.summary : (first.summary ?? stage.summary),
       <>
         {first ? (
           <div data-stage-today data-today-done={todayDone ? "" : undefined} className="mb-3">
@@ -2308,6 +2331,8 @@ function MyLayers({
       <>
         {/* 오늘 할 것이 끝나면 그날 한 번 Quizbank 탭으로(2026-10-31, 탭 2026-11-02). */}
         {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
+        {/* 오늘 할 것이 남았으면 My를 처음 열 때 Stagebank를 펼친 채(전체 화면)로 — 끝나면 AutoQuiz가 Quizbank로 넘김(2026-11-03). */}
+        {parts && !todayDone && shown === "stage" && !full ? <AutoFull onFull={() => setFull(true)} /> : null}
         {full ? (
           <FullScreenLayer>
             <LayerJump

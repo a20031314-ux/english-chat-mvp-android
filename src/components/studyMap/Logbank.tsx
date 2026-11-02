@@ -297,15 +297,15 @@ export function Logbank({
     }
   };
   const rowLabel = (row: PartRow) => (row.node ? nodeName(row.node) || row.text : row.key ? reviewLabel(language, row.key) || row.text : row.text);
-  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "bg-ink text-surface" : "border border-line text-slate-300"}`;
+  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "border border-info/40 bg-info/10 text-info" : "border border-line text-slate-300"}`;
   const timeLegend: { cls: string; icon: string; title: string }[] = [
     { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
-    { cls: "fill-status-mastered text-status-mastered", icon: "🧩", title: ui.framesTitle },
-    { cls: "fill-warn text-warn", icon: "📝", title: ui.keepTitle },
+    { cls: "fill-info/55 text-info/70", icon: "🧩", title: ui.framesTitle },
+    { cls: "fill-slate-400 text-slate-400", icon: "📝", title: ui.keepTitle },
   ];
   const partLegend: { cls: string; icon: string; title: string }[] = [
-    { cls: "fill-status-mastered text-status-mastered", icon: "✓", title: ui.itemsMastered },
-    { cls: "fill-info text-info", icon: "•", title: ui.itemsLearned },
+    { cls: "fill-info text-info", icon: "✓", title: ui.itemsMastered },
+    { cls: "fill-info/45 text-info/60", icon: "•", title: ui.itemsLearned },
     { cls: "fill-warn text-warn", icon: "✗", title: ui.partFixed },
   ];
   const dayDetail = openDay ? allDays.find((one) => one.day === openDay) ?? null : null;
@@ -322,7 +322,7 @@ export function Logbank({
               onClick={() => setOpenRow(row.id)}
               className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
             >
-              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-status-mastered" : row.status === "missed" ? "text-warn" : "text-info"}`}>
+              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-info" : row.status === "missed" ? "text-warn" : "text-info/60"}`}>
                 {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
               </span>
               <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
@@ -637,7 +637,7 @@ function DayBody({
                   if (key) openLesson({ language, key });
                   else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
                 }}
-                className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
+                className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-info/20 text-info" : "bg-info/10 text-info/70"}`}
               >
                 {label(item)}
               </button>
@@ -672,7 +672,7 @@ function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; la
   return (
     <div data-log-row-detail className="flex flex-col gap-2">
       {key ? (
-        <button type="button" data-log-row-open onClick={() => openLesson({ language, key })} className="self-start rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+        <button type="button" data-log-row-open onClick={() => openLesson({ language, key })} className="self-start rounded-full bg-info px-4 py-1.5 text-caption font-semibold text-slate-900">
           ▶
         </button>
       ) : null}
@@ -682,7 +682,7 @@ function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; la
             <span className="flex items-center gap-2 text-caption">
               <span aria-hidden>{WHERE_ICON[event.where] ?? "·"}</span>
               <span className="min-w-0 flex-1 tabular-nums text-slate-400">{dayFormat(locale, event.day)}</span>
-              {event.kind === "mastered" ? <span className="text-status-mastered">{`✓ ${ui.itemsMastered}`}</span> : null}
+              {event.kind === "mastered" ? <span className="text-info">{`✓ ${ui.itemsMastered}`}</span> : null}
               {event.kind === "learned" ? <span className="text-info">{ui.itemsLearned}</span> : null}
               {event.kind === "quizWrong" ? <span className="text-warn">{`✗ ${ui.keepTitle}`}</span> : null}
               {event.kind === "fixed" ? <span className="text-warn">{`✎ ${ui.partFixed}`}</span> : null}
