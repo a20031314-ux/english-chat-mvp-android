@@ -6,6 +6,7 @@
  * 이 폰의 내 결과를 겹쳐서: 익힘 ✓ · 알아요로 넘김 · 아직, 수업 퀴즈 맞음/틀림, 대화에서 내가 쓴 줄 ✓✗.
  * 수업 내용은 /api/curriculum/fixed-lesson?stage=n(만들지 않고 있는 것만), 결과는 이 폰(dayLog·quizLog·exam pool)과 서버 통과 목록.
  * ▶ 누르면 그 수업을 다시(openLesson).
+ * 아직 안 익힌 틀(○·↷)은 퀴즈 정답·대화 내 줄을 가린다 — ▶로 연 수업이 같은 퀴즈·대화를 내서, 보고 베끼면 익힘으로 셈(2026-11-02 보고함 major).
  */
 import { useEffect, useMemo, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -75,6 +76,7 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
             const fixed = lessons?.[frame.id];
             const quizLog = mine.quiz[`f|${frame.id}`];
             const said = mine.days.filter((one) => one.item === frame.id).sort((a, b) => b.at - a.at)[0]?.said ?? [];
+            const reveal = status === "learned";
             return (
               <li key={frame.id} data-review-frame={frame.id} data-review-status={status} className="flex flex-col gap-3 border-b border-line pb-6 last:border-0">
                 <div className="flex items-start gap-2">
@@ -108,7 +110,7 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
                       </h3>
                       <ul className="mt-1 flex flex-col gap-1.5">
                         {fixed.quiz.map((q, at) => (
-                          <QuizSolved key={at} q={q} />
+                          <QuizSolved key={at} q={q} reveal={reveal} />
                         ))}
                       </ul>
                     </section>
@@ -124,14 +126,20 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
                               </span>
                               <span className="flex items-start gap-2">
                                 <span className="min-w-0 flex-1">
-                                  <span dir="auto" className="block text-chat text-ink">
-                                    {turn.me}
-                                  </span>
+                                  {reveal ? (
+                                    <span dir="auto" className="block text-chat text-ink">
+                                      {turn.me}
+                                    </span>
+                                  ) : (
+                                    <span data-review-hidden className="block text-chat text-slate-500">
+                                      ___
+                                    </span>
+                                  )}
                                   <span dir="auto" className="block text-meta text-slate-500">
                                     {turn.meGloss}
                                   </span>
                                 </span>
-                                <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+                                {reveal ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
                               </span>
                               {mineLine?.text ? (
                                 <span data-review-said dir="auto" className={`text-caption ${mineLine.good ? "text-good" : "text-warn"}`}>
@@ -173,12 +181,12 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
   );
 }
 
-/** 퀴즈 한 문제를 푼 꼴로: 빈칸에 정답을 칠해 넣고, 고치기는 틀린 곳 → 바른 꼴. */
-function QuizSolved({ q }: { q: FixedQuiz }) {
+/** 퀴즈 한 문제를 푼 꼴로: 빈칸에 정답을 칠해 넣고, 고치기는 틀린 곳 → 바른 꼴. reveal이 아니면(안 익힌 틀) 빈칸·틀린 문장만. */
+function QuizSolved({ q, reveal }: { q: FixedQuiz; reveal: boolean }) {
   const filled = (before: string, answer: string, after: string) => (
     <>
       {before}
-      <span className="rounded-lg bg-status-learned/20 px-1 text-status-learned">{answer}</span>
+      {reveal ? <span className="rounded-lg bg-status-learned/20 px-1 text-status-learned">{answer}</span> : <span data-review-hidden className="px-1 text-slate-500">___</span>}
       {after}
     </>
   );
@@ -189,6 +197,8 @@ function QuizSolved({ q }: { q: FixedQuiz }) {
           filled(q.before, q.answer, q.after)
         ) : q.kind === "choose" ? (
           filled(q.before, q.options[q.answer] ?? "", q.after)
+        ) : !reveal ? (
+          <span>{q.wrong}</span>
         ) : (
           <>
             <span className="text-warn line-through">{q.bad}</span>

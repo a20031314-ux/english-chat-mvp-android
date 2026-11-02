@@ -627,7 +627,7 @@ function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
         style: NATIVE_STYLE,
         ...(testAds() ? { isTesting: true } : { adId: cfg.units.native }),
       });
-      // 광고가 실제로 들어온 자리만 높이를 편다(그 전엔 접어 둠 — 2026-11-02 사용자 "채팅 기록이 중간에 떠": 대화 목록 단체방과 1:1 사이 빈칸).
+      // 광고가 실제로 들어온 자리만 바깥 여백을 편다(자리 높이는 늘 120px — 플러그인이 그보다 작은 자리는 안 불러옴).
       void feed.addListener(NativeAdPluginEvents.Loaded, (event) => {
         loadedSlots.add(`${feedId}:${event.slotKey}`);
         for (const listener of failListeners) listener();
@@ -697,7 +697,7 @@ export function setNativeFeedActive(feedId: string, active: boolean) {
   syncNativeFeeds();
 }
 
-/** 그 자리에 광고가 들어왔는지(Loaded) — 들어오기 전엔 자리를 접어 둔다. */
+/** 그 자리에 광고가 들어왔는지(Loaded) — 들어온 자리만 바깥 여백(spaced)을 편다. */
 export function nativeSlotLoaded(feedId: string, slotKey: string): boolean {
   return loadedSlots.has(`${feedId}:${slotKey}`);
 }

@@ -61,8 +61,6 @@ export function MessagesTab({
         {account ? (
           <div className="space-y-5">
             <GroupList t={t} me={account.id} locale={locale} groups={groups} onOpen={setOpenGroup} onCreate={() => setCreating(true)} onChanged={onGroupsChanged} />
-            {/* 목록 사이 네이티브 광고(무료·안드로이드만). 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. */}
-            <NativeAdSlot feedId="talk-list" slotKey="talk-between-lists" active={!openGroup && !creating} />
             <DmList
               t={t}
               threads={threads}
@@ -76,6 +74,9 @@ export function MessagesTab({
                 onThreadsChanged?.();
               }}
             />
+            {/* 목록 끝 네이티브 광고(무료·안드로이드만) — 단체방과 1:1 사이에 두면 광고가 오기 전 빈칸이 대화 기록을 가운데서 벌려(2026-11-02) 끝으로.
+                자리 이름은 광고 지도·감시 기록과 맞추려 그대로. 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. */}
+            <NativeAdSlot feedId="talk-list" slotKey="talk-between-lists" active={!openGroup && !creating} />
           </div>
         ) : (
           <div className="space-y-3">

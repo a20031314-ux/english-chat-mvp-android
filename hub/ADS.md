@@ -94,7 +94,7 @@
 | `sheets` | `scope-end` | 시트 맨 끝 네이티브 하나(2026-11-01 — 읽기만 하는 시트, 누를 것은 ✕뿐, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/ContentScope.tsx` |
 | `sheets` | `skill-record-end` | 기록 끝 네이티브 하나(2026-11-01 — 읽는 기록 화면, 결과가 있을 때만, 한 장을 열면 없음). 줄과 띄움. | My 탭 `my` · `studyMap/SkillRecord.tsx` |
 | `talk-list` | `talk-after-account` | 로그인 전이면 계정 카드 아래에 네이티브 광고 하나(무료·안드로이드만). | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
-| `talk-list` | `talk-between-lists` | 목록 사이 네이티브 광고(무료·안드로이드만). 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
+| `talk-list` | `talk-between-lists` | — | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 

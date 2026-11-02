@@ -123,6 +123,7 @@ function AppAdSlot({ feedId, slotKey, active, layer, spaced = false }: { feedId:
     () => false,
   );
   if (!enabled || failed) return null;
-  // 광고가 들어오기 전엔 1px로 접어 둔다(붙일 자리는 남겨 광고를 불러오게) — 빈 120px 칸이 목록 가운데를 벌리지 않게(2026-11-02).
-  return <div ref={ref} aria-hidden className={spaced && loaded ? "my-6 w-full" : "w-full"} style={{ height: loaded ? NATIVE_SLOT_HEIGHT : 1 }} />;
+  // 자리 높이는 늘 120px — 플러그인(admob native-ad-feed isSupportedSize)이 120px 미만 자리에는 광고를 아예 불러오지 않아
+  // 1px로 접어 두면 Loaded가 영영 오지 않는다(2026-11-02 1px 접기 되돌림, 보고함 major). 들어오기 전엔 바깥 여백만 뺀다.
+  return <div ref={ref} aria-hidden className={spaced && loaded ? "my-6 w-full" : "w-full"} style={{ height: NATIVE_SLOT_HEIGHT }} />;
 }

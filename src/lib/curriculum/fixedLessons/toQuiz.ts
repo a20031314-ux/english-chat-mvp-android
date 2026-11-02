@@ -10,6 +10,23 @@ import type { FixedQuiz } from "./check.ts";
 /** 바른 말이 "빼기"인 고치기(예: I can to drive → to를 뺌). */
 const REMOVE = /^\((빼기|remove|削除|삭제)\)$|^$/i;
 
+/**
+ * 고르기 보기 섞기 — 원고는 정답이 늘 0번이라(생성 예시도 0) 그대로 내면 첫 보기만 누르면 맞는다(2026-11-02 보고함 major).
+ * 문장으로 정한 고정 난수라 같은 문제는 늘 같은 자리(다시 열어도 그대로, 문제마다 다름).
+ */
+export function shuffleOptions(options: readonly string[], answer: number, seed: string): { options: string[]; answer: number } {
+  let h = 2166136261;
+  for (const ch of seed) h = Math.imul(h ^ ch.codePointAt(0)!, 16777619) >>> 0;
+  const order = options.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i -= 1) {
+    h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0;
+    h = Math.imul(h ^ (h >>> 13), 3266489909) >>> 0;
+    const j = h % (i + 1);
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return { options: order.map((i) => options[i]), answer: order.indexOf(answer) };
+}
+
 export function fixedQuizQuestions(language: string, quiz: readonly FixedQuiz[], from: string): QuizQuestion[] {
   const out: QuizQuestion[] = [];
   for (const q of quiz) {
@@ -19,7 +36,8 @@ export function fixedQuizQuestions(language: string, quiz: readonly FixedQuiz[],
     } else if (q.kind === "choose") {
       const right = q.options[q.answer];
       if (!right) continue;
-      out.push({ kind: "choose", text: `${q.before}${right}${q.after}`, before: q.before, after: q.after, options: [...q.options], answer: q.answer, gloss, from });
+      const mixed = shuffleOptions(q.options, q.answer, `${q.before}|${q.after}|${q.options.join("|")}`);
+      out.push({ kind: "choose", text: `${q.before}${right}${q.after}`, before: q.before, after: q.after, options: mixed.options, answer: mixed.answer, gloss, from });
     } else {
       const at = q.wrong.indexOf(q.bad);
       if (at < 0) continue;

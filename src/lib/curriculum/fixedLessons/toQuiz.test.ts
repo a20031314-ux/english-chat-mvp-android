@@ -25,3 +25,16 @@ test("고정 퀴즈 → 문제: 19개 수업 모두 세 문제(쓰기·고르기
     assert.equal(spot.want, "works");
   }
 });
+
+test("고르기 보기는 섞이고(정답이 늘 첫 보기가 아님) 같은 문제는 늘 같은 자리", async () => {
+  const { shuffleOptions } = await import("./toQuiz.ts");
+  const seen = new Set<number>();
+  for (const seed of ["a", "b", "c", "d", "e", "f", "g", "h", "私は", "ฉัน", "él"]) {
+    const one = shuffleOptions(["right", "w1", "w2", "w3"], 0, seed);
+    assert.equal(one.options[one.answer], "right");
+    assert.deepEqual(shuffleOptions(["right", "w1", "w2", "w3"], 0, seed), one);
+    assert.equal([...one.options].sort().join(), "right,w1,w2,w3");
+    seen.add(one.answer);
+  }
+  assert.ok(seen.size >= 3);
+});
