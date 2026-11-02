@@ -62,12 +62,15 @@ export function FrameLesson({
   onPassed,
   onClose,
   fromToday = false,
+  noAd = false,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   /** 오늘 할 것에서 연 수업 — 닫을 때 전면 광고는 항목 사이에 없고 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
   fromToday?: boolean;
+  /** 어디서나 여는 층(LessonHost — Quizbank 다시 보기의 "설명"·통화 정리 등)에서 연 수업: 닫을 때 전면 광고 없음(그 뒤 퀴즈·통화로 돌아가는 도중이라, 2026-11-02 변경 감시). */
+  noAd?: boolean;
   /** 문장구조 하나 — 또는 subject(표현·문법 칸). */
   frame?: Frame;
   subject?: LessonSubject;
@@ -323,7 +326,7 @@ export function FrameLesson({
   // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 한 수업이면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
   const close = () => {
     if (fromToday) fireTodayEnd();
-    else if (finished && !goingToNextStudy()) void maybeShowInterstitial("scriptEnd");
+    else if (finished && !noAd && !goingToNextStudy()) void maybeShowInterstitial("scriptEnd");
     // 닫으면 My 아래에 다음 추천 줄(lib/curriculum/upNext.ts, 2026-11-02).
     offerUpNext(itemId);
     onClose();
