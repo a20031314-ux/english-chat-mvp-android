@@ -38,3 +38,11 @@ test("고르기 보기는 섞이고(정답이 늘 첫 보기가 아님) 같은 �
   }
   assert.ok(seen.size >= 3);
 });
+
+test("빈칸 앞뒤 띄어쓰기: 띄어 쓰는 말은 한 칸, 문장부호·띄어 쓰지 않는 말은 그대로(en·es·ja)", async () => {
+  const { spaceAround } = await import("./toQuiz.ts");
+  assert.deepEqual(spaceAround("en", "Last night I", "a movie."), { before: "Last night I ", after: " a movie." });
+  assert.deepEqual(spaceAround("en", "I ", "."), { before: "I ", after: "." });
+  assert.deepEqual(spaceAround("es", "¿", " vas?"), { before: "¿", after: " vas?" });
+  assert.deepEqual(spaceAround("ja", "昨日", "ました。"), { before: "昨日", after: "ました。" });
+});

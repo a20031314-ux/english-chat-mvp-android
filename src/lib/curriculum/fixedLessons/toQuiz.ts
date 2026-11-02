@@ -4,7 +4,7 @@
  * 뜻(cue)은 이미 앱 언어라 gloss.raw로(quizGloss가 그대로 씀, 앱 언어 = 학습 언어면 숨김).
  */
 import { diffSpan, type QuizQuestion } from "../quiz.ts";
-import { segmentWords } from "../../wordSegments.ts";
+import { isSpaceless, segmentWords } from "../../wordSegments.ts";
 import type { FixedQuiz } from "./check.ts";
 
 /** 바른 말이 "빼기"인 고치기(예: I can to drive → to를 뺌). */
@@ -27,9 +27,21 @@ export function shuffleOptions(options: readonly string[], answer: number, seed:
   return { options: order.map((i) => options[i]), answer: order.indexOf(answer) };
 }
 
+/**
+ * 빈칸 앞뒤 띄어쓰기(띄어 쓰는 말만): 모델이 "Last night I" + "a movie."처럼 띄어쓰기 없이 주면 문장이 붙어 보였다(2026-11-03 문법 한 장).
+ * 앞 글 끝·뒤 글 처음에 한 칸 — 뒤 글이 문장부호로 시작하면 그대로.
+ */
+export function spaceAround(language: string, before: string, after: string): { before: string; after: string } {
+  if (["ja", "zh", "th"].includes(language) || isSpaceless(`${before}${after}`)) return { before, after };
+  const b = before && !/\s$/.test(before) && !/[¿¡(«"'"']$/u.test(before) ? `${before} ` : before;
+  const a = after && !/^\s/.test(after) && !/^[\p{P}]/u.test(after) ? ` ${after}` : after;
+  return { before: b, after: a };
+}
+
 export function fixedQuizQuestions(language: string, quiz: readonly FixedQuiz[], from: string): QuizQuestion[] {
   const out: QuizQuestion[] = [];
-  for (const q of quiz) {
+  for (const raw of quiz) {
+    const q = raw.kind === "fix" ? raw : { ...raw, ...spaceAround(language, raw.before, raw.after) };
     const gloss = { en: q.cue, raw: q.cue };
     if (q.kind === "type") {
       out.push({ kind: "type", text: `${q.before}${q.answer}${q.after}`, before: q.before, after: q.after, answer: q.answer, gloss, from });
