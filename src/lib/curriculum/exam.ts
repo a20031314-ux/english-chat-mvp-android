@@ -133,7 +133,7 @@ function sceneQuestion(language: string, key: string, rung: number, scene: Lesso
   if (rung === 4 && scene.said && scene.said.trim() !== scene.line.trim()) return spotFromCard(language, { wrong: scene.said, right: scene.line });
   const piece = pieceIn(language, key, scene.line);
   if (!piece) return null;
-  const source: QuizSource = { text: scene.line, gloss: { en: "", raw: scene.meaning ?? "" }, from: "call", stage: 1, piece, who: "me", ...(key.startsWith("f|") ? { frame: key.slice(2) } : {}) };
+  const source: QuizSource = { text: scene.line, gloss: { en: "", raw: scene.meaning ?? "" }, from: "call", stage: 1, piece, who: "me", own: true, ...(key.startsWith("f|") ? { frame: key.slice(2) } : {}) };
   if (rung === 1) return chooseOf(language, key, source, random);
   if (rung === 2) return orderOf(language, source, random);
   if (rung === 3) return typeOf(language, source, key);

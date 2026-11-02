@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
  *
  * 고르기 문제를 답한 뒤 보기마다 뜻(앱 언어 — 품사 + 뜻 한 줄)과, 틀린 보기면 이 자리에 왜 안 맞는지 한 줄
  * (2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지가 안 떠"). 문제(문장·보기·정답·앱 언어)마다 한 번 만들어
- * 모두가 같이 쓴다(quiznotes:v1, 180일) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
+ * 모두가 같이 쓴다(quiznotes:v1, 180일 — 학습자 자신의 줄로 만든 문제(mine)는 저장 안 함) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
  * 기능은 vocab(Haiku) — 단가는 op quizOptionNotes.
  */
 const TTL = 180 * 24 * 60 * 60;
@@ -32,11 +32,13 @@ export async function POST(request: NextRequest) {
   const sentence = text(body.sentence, 240);
   const options = Array.isArray(body.options) ? body.options.map((one) => text(one, 80)).filter(Boolean).slice(0, 6) : [];
   const answer = typeof body.answer === "number" ? body.answer : -1;
+  // 학습자 자신의 줄(고친 줄·통화 줄)로 만든 문제는 저장하지 않는다 — 학습자 문장은 서버에 남기지 않음(2026-11-03 변경 감시 major).
+  const mine = body.mine === true;
   if (!language || !sentence || options.length < 2 || answer < 0 || answer >= options.length) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
   const key = `quiznotes:v1:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
-  const cached = await kvGetJson<Note[]>(key).catch(() => null);
+  const cached = mine ? null : await kvGetJson<Note[]>(key).catch(() => null);
   if (cached?.length === options.length) return jsonWithCors(request, { notes: cached, cached: true });
 
   const client = getOpenAIClient();
@@ -71,7 +73,7 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
     if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
   }
   if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [] });
-  await kvSetJson(key, notes, TTL).catch(() => undefined);
+  if (!mine) await kvSetJson(key, notes, TTL).catch(() => undefined);
   return jsonWithCors(request, { notes });
 
   function parseNotes(reply: string): Note[] {

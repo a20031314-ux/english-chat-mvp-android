@@ -41,6 +41,8 @@ export type QuizSource = {
   frame?: string;
   /** 낱말(w|) 문제은행 예문: 이 문장 빈칸에 안 맞는 같은 낱말의 다른 꼴(qbankRules BankItem.w) — 고르기 오답으로 맨 먼저(2026-11-02). */
   wrong?: string[];
+  /** 학습자 자신의 줄(튜터가 고친 줄·통화에서 한 말) — 서버 공유 저장에 넣지 않는다(학습자 문장 저장 안 함, 2026-11-03 변경 감시). */
+  own?: boolean;
 };
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
@@ -48,7 +50,7 @@ export type QuizCard = { wrong: string; right: string; note?: string };
 
 export type QuizQuestion =
   | { kind: "fix"; wrong: string; right: string; note?: string; words: string[]; bad: number[]; options?: string[]; answer?: number }
-  | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
+  | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; mine?: boolean }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
@@ -544,6 +546,7 @@ export function chooseOf(language: string, key: string, source: QuizSource, rand
     answer: options.indexOf(piece),
     gloss: source.gloss,
     from: source.from,
+    ...(source.own ? { mine: true } : {}),
   };
 }
 

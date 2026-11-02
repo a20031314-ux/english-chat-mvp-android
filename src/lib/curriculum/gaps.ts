@@ -95,7 +95,7 @@ export function gapsFromCards(
 /** 퀴즈 재료(curriculum/quiz.ts registerQuizSources로 넘김). 문장에 그 말이 그대로 있어야 빈칸이 된다. */
 export function gapSources(gap: GapItem): QuizSource[] {
   if (!gap.sample.includes(gap.text)) return [];
-  return [{ text: gap.sample, gloss: { en: gap.meaning ?? "", raw: gap.meaning }, from: gap.key, stage: 0, piece: gap.text, who: gap.meaning ? "me" : "them" }];
+  return [{ text: gap.sample, gloss: { en: gap.meaning ?? "", raw: gap.meaning }, from: gap.key, stage: 0, piece: gap.text, who: gap.meaning ? "me" : "them", own: true }];
 }
 
 /** 이 폰에 남긴 "표현 보기" 막힌 것(학습 언어마다). */

@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "../apiBase.ts";
 
 export type OptionNote = { meaning: string; why: string };
-export type OptionNotesAsk = { sentence: string; options: readonly string[]; answer: number };
+/** mine: 학습자 자신의 줄로 만든 문제 — 서버가 답만 주고 저장하지 않는다. */
+export type OptionNotesAsk = { sentence: string; options: readonly string[]; answer: number; mine?: boolean };
 
 const memory = new Map<string, OptionNote[]>();
 
@@ -24,7 +25,7 @@ export function useOptionNotes(ask: OptionNotesAsk | null, language: string, ui:
     void fetch(apiUrl("/api/curriculum/option-notes"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ language, ui, sentence: ask.sentence, options: ask.options, answer: ask.answer }),
+      body: JSON.stringify({ language, ui, sentence: ask.sentence, options: ask.options, answer: ask.answer, ...(ask.mine ? { mine: true } : {}) }),
     })
       .then((response) => (response.ok ? response.json() : null))
       .catch(() => null)

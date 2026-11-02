@@ -903,7 +903,7 @@ function ChooseView({
   const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
   // 답한 뒤 보기마다 뜻(품사 + 뜻)·틀린 까닭 한 줄(2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지").
-  const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer } : null, language, locale);
+  const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
       {answered ? (

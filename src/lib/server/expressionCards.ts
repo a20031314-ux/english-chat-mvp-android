@@ -74,13 +74,14 @@ export async function expressionCards(language: string, stage: number, ui: strin
   let cards = await kvGetJson<WordCard[]>(key).catch(() => null);
   const have = new Set((cards ?? []).map((card) => card.w));
   const missing = wanted.filter((text) => !have.has(text));
-  // 처음이거나, 빠진 표현이 남았으면(검사에서 버려진 것) 그것만 하루 한 번 다시.
+  // 처음이거나, 빠진 표현이 남았으면(검사에서 버려진 것) 그것만 하루 한 번 다시. 처음 만들기가 실패해도 표시를 남겨
+  // 요청마다 모델을 다시 부르지 않는다(실패면 30분 뒤 — 2026-11-03 변경 감시 major).
   const retryKey = `exprcards:v2:retry:${language}:${stage}`;
-  const retried = missing.length && cards?.length ? await kvGetJson<number>(retryKey).catch(() => null) : null;
-  if (!cards?.length || (missing.length && !retried)) {
+  const retried = missing.length ? await kvGetJson<number>(retryKey).catch(() => null) : null;
+  if (!retried && (!cards?.length || missing.length)) {
+    await kvSetJson(retryKey, 1, cards?.length ? 24 * 60 * 60 : 30 * 60).catch(() => undefined);
     onMake?.();
     const made = await makeCards(language, cards?.length ? missing : wanted).catch(() => null);
-    if (cards?.length) await kvSetJson(retryKey, 1, 24 * 60 * 60).catch(() => undefined);
     if (made?.length) {
       // 같은 단계를 두 요청이 함께 만들면 먼저 저장된 것을 쓴다.
       const raced = await kvGetJson<WordCard[]>(key).catch(() => null);

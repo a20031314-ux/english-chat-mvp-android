@@ -45,4 +45,5 @@ test("빈칸 앞뒤 띄어쓰기: 띄어 쓰는 말은 한 칸, 문장부호·�
   assert.deepEqual(spaceAround("en", "I ", "."), { before: "I ", after: "." });
   assert.deepEqual(spaceAround("es", "¿", " vas?"), { before: "¿", after: " vas?" });
   assert.deepEqual(spaceAround("ja", "昨日", "ました。"), { before: "昨日", after: "ました。" });
+  assert.deepEqual(spaceAround("ko", "커피", "마셔요."), { before: "커피", after: "마셔요." });
 });

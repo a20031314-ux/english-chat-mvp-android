@@ -32,7 +32,8 @@ export function shuffleOptions(options: readonly string[], answer: number, seed:
  * 앞 글 끝·뒤 글 처음에 한 칸 — 뒤 글이 문장부호로 시작하면 그대로.
  */
 export function spaceAround(language: string, before: string, after: string): { before: string; after: string } {
-  if (["ja", "zh", "th"].includes(language) || isSpaceless(`${before}${after}`)) return { before, after };
+  // 한국어는 조사·어미가 앞말에 붙어 빈칸이 "커피|를"처럼 낱말 안에 있을 수 있다 — 모델이 준 그대로(2026-11-03 변경 감시 major).
+  if (["ja", "zh", "th", "ko"].includes(language) || isSpaceless(`${before}${after}`)) return { before, after };
   const b = before && !/\s$/.test(before) && !/[¿¡(«"'"']$/u.test(before) ? `${before} ` : before;
   const a = after && !/^\s/.test(after) && !/^[\p{P}]/u.test(after) ? ` ${after}` : after;
   return { before: b, after: a };
