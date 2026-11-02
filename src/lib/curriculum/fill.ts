@@ -129,9 +129,9 @@ export function fillCatalog(language: string, words: readonly BankWord[] | null)
 /* ───────── 아는 확률 ───────── */
 
 /** 항목 자리 눈금의 흐림(작을수록 경계가 또렷). 시뮬레이션(scripts/fill-sim.ts)으로 정함. */
-export const SIGMA = 0.08;
+export const SIGMA = 0.1;
 /** 정보 셈에 쓰는 흐림 — 실제 답에는 실수·찍기·받아쓰기 탓이 섞여 SIGMA보다 넉넉히(수렴이 너무 빠르지 않게). */
-export const INFO_SIGMA = 0.15;
+export const INFO_SIGMA = 0.28;
 
 const softplus = (x: number) => (x > 30 ? x : Math.log1p(Math.exp(x)));
 
@@ -325,7 +325,7 @@ export function computeFill(input: FillInput): FillResult {
       const p = knowChance(theta, item.d);
       const expect = g + (1 - g) * p;
       const y = event.correct ? 1 : 0;
-      const k = Math.max(0.02, 0.25 / (1 + weightSum / 8));
+      const k = Math.max(0.01, 0.25 / (1 + weightSum / 8));
       theta = Math.min(1.3, Math.max(-0.3, theta + k * w * (y - expect)));
       const pi = knowChance(theta, item.d, INFO_SIGMA);
       precision += w * (1 - g) * (1 - g) * pi * (1 - pi) / (INFO_SIGMA * INFO_SIGMA);
@@ -394,7 +394,7 @@ export function computeFill(input: FillInput): FillResult {
       if (have) have.value = stages[s - 1] ?? 0;
       else out.push({ axis, id: `stage:${s}`, value: stages[s - 1] ?? 0, n: 0, gap: 0, state: "unknown" });
     }
-    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: half <= CONVERGED_RANGE * 1.2 && highFill - lowFill <= CONVERGED_RANGE * 2, n, stages, cells: sortCells(out) };
+    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, cells: sortCells(out) };
   }
 
   axes.talk = talkFill(input.calls, prior.fill * PRIOR_SHARE.talk, prior.range);
