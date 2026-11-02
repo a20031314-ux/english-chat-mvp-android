@@ -59,6 +59,19 @@ test("처음 체크만: 이해는 체크 어림, 활용 0.6배, 듣기·실전 �
   assert.equal(result.startStage, 4);
 });
 
+test("체크 없이(1단계 바로 시작): 0에서 시작하지 않고 지금 단계로 어림, 단계가 높으면 더, 0단계만 0(es·ja)", async () => {
+  for (const language of ["es", "ja"]) {
+    const catalog = fillCatalog(language, await wordsOf(language));
+    const at = (stage: number) => computeFill({ catalog, check: null, stage, events: [], calls: [], now: NOW });
+    const one = at(1);
+    assert.ok(one.axes.vocabRead.fill >= 0.09, `${language} ${one.axes.vocabRead.fill}`);
+    assert.ok(one.axes.talk.fill > 0 && one.axes.sentUse.fill > 0, language);
+    assert.ok(at(3).axes.sentRead.fill > one.axes.sentRead.fill + 0.1, language);
+    assert.ok(!one.axes.vocabRead.converged, language);
+    assert.equal(at(0).axes.vocabRead.fill < 0.02, true, language);
+  }
+});
+
 /** 참 실력 trueFill인 사람이 고르기·쓰기로 n문제(경계 근처에서) — 정해진 씨앗. */
 function simulate(catalogKeys: { key: string; d: number }[], trueFill: number, n: number, use: boolean, seed = 7): FillEvent[] {
   let s = seed;

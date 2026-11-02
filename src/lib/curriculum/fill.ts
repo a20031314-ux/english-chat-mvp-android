@@ -267,13 +267,20 @@ function stageEdges(counts: readonly number[]): [number, number][] {
   });
 }
 
-/** 기존 사용자(체크 없음): 지금 단계 아래 문장 은행 몫을 시작 어림으로. */
+/**
+ * 체크가 없을 때(처음 체크를 건너뛰고 1단계로 바로 시작한 사용자·기존 사용자): 0에서 시작하지 않고 지금 단계로 어림한다
+ * (2026-11-03 사용자 "처음에 위치를 추정하고 그래프가 차 있는 상태로 점점 조정 — 0부터 시작하는 것 같아").
+ * 어림 = 지금 단계 아래 문장 은행 몫 + 지금 단계의 절반, 그리고 초급 체크 어림보다 낮지 않게. 0단계(글자부터)만 0.
+ */
 export function priorFill(check: Check | null, stage: number, catalog: FillCatalog): { fill: number; range: number } {
   if (check) return CHECK_PRIOR[check];
+  if (stage <= 0) return CHECK_PRIOR.letters;
   const counts = catalog.stageCounts.sent;
   const total = counts.reduce((a, b) => a + b, 0) || 1;
-  const below = counts.slice(0, Math.max(0, Math.min(STAGES, stage - 1))).reduce((a, b) => a + b, 0);
-  return { fill: below / total, range: 0.2 };
+  const at = Math.min(STAGES, stage);
+  const below = counts.slice(0, at - 1).reduce((a, b) => a + b, 0);
+  const here = (counts[at - 1] ?? 0) / 2;
+  return { fill: Math.max(CHECK_PRIOR.beginner.fill, (below + here) / total), range: Math.max(CHECK_PRIOR.beginner.range, 0.2) };
 }
 
 function cellState(cell: Cell): CellState {
