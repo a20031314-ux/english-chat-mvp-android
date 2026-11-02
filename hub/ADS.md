@@ -84,7 +84,7 @@
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `results` | `recall-end` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/RecallPlayer.tsx` |
-| `results` | `script-end` | 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 "1,2 반영" — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/StageScripts.tsx` |
+| `results` | `script-end` | 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 제안 1·2 — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/StageScripts.tsx` |
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
