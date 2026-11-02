@@ -36,7 +36,8 @@ import { InviteWelcome } from "@/components/invite/InviteWelcome";
 import { InviteNewsSheet } from "@/components/invite/InviteRewards";
 import { requestGroup } from "@/lib/rooms/openDm";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
-import { AiTutorRow } from "@/components/AiTutorRow";
+import { AiTutorRows } from "@/components/AiTutorRow";
+import { writeTutorGender } from "@/lib/tutorGender";
 import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
@@ -521,11 +522,17 @@ function AppHomeInner({
                   title={ui.homeTabTalk}
                   top={
                     <>
-                      <AiTutorRow
+                      <AiTutorRows
                         ui={ui}
                         canCall={callOn}
-                        onChat={() => openTab("chat")}
-                        onCall={() => openTab("roleplay")}
+                        onChat={(gender) => {
+                          writeTutorGender(targetLanguage, gender);
+                          openTab("chat");
+                        }}
+                        onCall={(gender) => {
+                          writeTutorGender(targetLanguage, gender);
+                          openTab("roleplay");
+                        }}
                         targetLanguage={targetLanguage}
                       />
                     </>

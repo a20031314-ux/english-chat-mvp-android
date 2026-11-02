@@ -9,6 +9,8 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import { useTutorGender, writeTutorGender } from "@/lib/tutorGender";
 import { APP_LOCALE_STORAGE_KEY } from "@/lib/copy";
 import { tutorAbout } from "@/lib/tutorAbout";
+import { setTutorFollow, useFollowedTutors } from "@/lib/tutorFollows";
+import { roomCopy } from "@/lib/rooms/copy";
 
 /** 지금 앱 언어(AppHome이 저장) — 바뀌면 ui가 바뀌어 이 화면도 다시 그려져 새 값을 읽는다. */
 function appLocale(): string {
@@ -89,7 +91,14 @@ function TutorName({ targetLanguage, gender, className = "" }: { targetLanguage:
   );
 }
 
-// 💬 "메시지"(대화 탭으로 옮기기만)는 뺐다 — 기능 없이 다른 탭으로만 가는 버튼 정리(사용자 2026-10-30). AI 대화는 대화 탭의 AI 튜터 줄에서.
+/**
+ * 그 튜터와 채팅(사용자 2026-11-02 "튜터프로필도 아예 사람처럼 팔로우, 채팅걸기까지"): 그 튜터로 정하고(튜터별 대화방 — 그 튜터와 하던 대화가 열림)
+ * AI 대화를 연다. 예전 💬(대화 탭으로 옮기기만, 2026-10-30에 뺌)과 달리 바로 그 사람과의 대화로 간다.
+ */
+export function chatWithTutor(targetLanguage: string, gender: TutorGender | undefined) {
+  if (gender) writeTutorGender(targetLanguage, gender);
+  sendAppIntent("openTab", { tab: "chat" });
+}
 
 /** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 통화를 연다. */
 function callTutor(targetLanguage: string, gender: TutorGender | undefined) {
@@ -129,6 +138,13 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{about}</p>
           </button>
           <div className="mt-1.5 flex items-center justify-end gap-2">
+            <button
+              type="button"
+              onClick={() => chatWithTutor(targetLanguage, gender)}
+              className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100"
+            >
+              💬 {roomCopy(appLocale()).message}
+            </button>
             {canCall ? (
               <button
                 type="button"
@@ -164,7 +180,11 @@ export function AiTutorSheet({
 }) {
   const about = useTutorAbout(targetLanguage, ui.aiTutorBio, gender);
   const chosen = useTutorGender(targetLanguage);
-  const name = chatPartnerForLanguage(targetLanguage, gender ?? chosen).givenName;
+  const who = gender ?? chosen;
+  const name = chatPartnerForLanguage(targetLanguage, who).givenName;
+  // 사람 프로필과 같은 버튼 이름(rooms/copy — 14개 언어 이미 있음).
+  const t = roomCopy(appLocale());
+  const following = useFollowedTutors(targetLanguage).includes(who);
   const go = (action: () => void) => () => {
     onClose();
     action();
@@ -183,9 +203,23 @@ export function AiTutorSheet({
         </p>
       }
     >
+      {/* 사람 프로필처럼: 팔로우(대화 탭에 그 튜터 줄) · 💬 메시지(그 튜터와의 AI 대화) — 차단·신고는 기본 튜터라 없음. */}
+      <div className="mt-3 flex gap-2">
+        <button
+          type="button"
+          aria-pressed={following}
+          onClick={() => setTutorFollow(targetLanguage, who, !following)}
+          className={`flex-1 rounded-xl px-3 py-2 text-sm font-medium ${following ? "border border-white/25 text-slate-100" : "bg-violet-500 text-white"}`}
+        >
+          {following ? `✓ ${t.following}` : `+ ${t.follow}`}
+        </button>
+      </div>
+      <button type="button" onClick={go(() => chatWithTutor(targetLanguage, who))} className={PROFILE_WIDE_BUTTON}>
+        💬 {t.message}
+      </button>
       {canCall ? (
         <>
-          <button type="button" onClick={go(() => callTutor(targetLanguage, gender))} className={`${PROFILE_WIDE_BUTTON} mt-3`}>
+          <button type="button" onClick={go(() => callTutor(targetLanguage, gender))} className={PROFILE_WIDE_BUTTON}>
             📞 {ui.homeTabCall}
           </button>
           <button type="button" onClick={go(() => sendAppIntent("openCall", {}))} className={PROFILE_WIDE_BUTTON}>

@@ -8,8 +8,10 @@ import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ARCHIVE_STORAGE_KEY,
+  CONVERSATION_SESSIONS_KEY,
   ChatMessage,
   ConversationSession,
+  resumableFor,
   normalizeConversationSession,
   normalizeSavedItem,
   SavedItem,
@@ -52,7 +54,7 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { chatPartnerForLanguage, tutorChoices, type TutorGender } from "@/lib/chatPartner";
-import { useTutorGender, writeTutorGender } from "@/lib/tutorGender";
+import { readTutorGender, useTutorGender, writeTutorGender } from "@/lib/tutorGender";
 import { TUTOR_SPEEDS, useTutorSpeed, writeTutorSpeed } from "@/lib/tutorSpeed";
 import {
   detectConversationMode,
@@ -160,7 +162,8 @@ const SESSION_MESSAGE_LIMIT = FREE_DAILY_CHAT_LIMIT;
 function premiumRequestHeaders(isPremium: boolean): HeadersInit {
   return entitlementHeaders(isPremium);
 }
-const CONVERSATION_SESSIONS_KEY = "conversationSessions";
+/** 튜터마다 열어 둔 대화(언어:f|m → 대화 id, 2026-11-02 튜터별 대화방). 언어별 예전 키는 옛 빌드를 위해 같이 쓴다. */
+const ACTIVE_TUTOR_ROOMS_KEY = "activeTutorRooms.v1";
 /** Legacy single active-id key (migrated into per-language map). */
 const ACTIVE_CONVERSATION_ID_KEY = "activeConversationSessionId";
 const ACTIVE_CONVERSATION_IDS_KEY = "activeConversationSessionIds";
@@ -349,6 +352,14 @@ function loadConversationSessions(): ConversationSession[] {
     const sessions = parsed
       .map(normalizeConversationSession)
       .filter((item): item is ConversationSession => item !== null);
+    // 튜터별 대화방(2026-11-02) 전의 기록: 그때 고른 튜터의 방으로 한 번 붙여 둔다.
+    if (sessions.some((session) => !session.tutorGender)) {
+      const tagged = sessions.map((session) =>
+        session.tutorGender ? session : { ...session, tutorGender: readTutorGender(sessionLanguageOf(session)) },
+      );
+      window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify(tagged));
+      return tagged;
+    }
     return sessions;
   } catch {
     return [];
@@ -411,11 +422,35 @@ function loadActiveConversationId(
   return loadActiveConversationIds()[languageCode] ?? null;
 }
 
+function loadActiveTutorRooms(): Record<string, string> {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(ACTIVE_TUTOR_ROOMS_KEY) ?? "{}") as unknown;
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+      ? Object.fromEntries(Object.entries(parsed as Record<string, unknown>).filter(([, value]) => typeof value === "string")) as Record<string, string>
+      : {};
+  } catch {
+    return {};
+  }
+}
+
+function tutorRoomKey(languageCode: LearningLanguageCode, gender: TutorGender): string {
+  return `${languageCode}:${gender}`;
+}
+
 function persistActiveConversationId(
   languageCode: LearningLanguageCode,
   id: string | null,
+  gender: TutorGender = readTutorGender(languageCode),
 ) {
   if (typeof window === "undefined") return;
+  try {
+    const rooms = loadActiveTutorRooms();
+    if (id) rooms[tutorRoomKey(languageCode, gender)] = id;
+    else delete rooms[tutorRoomKey(languageCode, gender)];
+    window.localStorage.setItem(ACTIVE_TUTOR_ROOMS_KEY, JSON.stringify(rooms));
+  } catch {
+    // ignore
+  }
   try {
     const current = loadActiveConversationIds();
     if (!id) {
@@ -446,28 +481,14 @@ function sessionLanguageOf(
   return session.languageCode || DEFAULT_LEARNING_LANGUAGE_CODE;
 }
 
+/** 이 언어·튜터의 이어 할 대화(튜터별 대화방, chatArchive resumableFor). */
 function findResumableSession(
   sessions: ConversationSession[],
   languageCode: LearningLanguageCode,
+  gender: TutorGender = readTutorGender(languageCode),
 ): ConversationSession | null {
-  const forLanguage = sessions.filter(
-    (session) => sessionLanguageOf(session) === languageCode,
-  );
-  const activeId = loadActiveConversationId(languageCode);
-  if (activeId) {
-    const active = forLanguage.find(
-      (session) =>
-        session.id === activeId &&
-        !session.endedAt &&
-        session.messages?.length,
-    );
-    if (active) return active;
-  }
-  return (
-    forLanguage.find(
-      (session) => !session.endedAt && (session.messages?.length || 0) > 0,
-    ) ?? null
-  );
+  const activeId = (typeof window === "undefined" ? undefined : loadActiveTutorRooms()[tutorRoomKey(languageCode, gender)]) ?? loadActiveConversationId(languageCode);
+  return resumableFor(sessions, languageCode, gender, activeId, gender);
 }
 
 function deleteConversationSession(id: string) {
@@ -758,6 +779,10 @@ export function ChatWindow({
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [sessionLanguageCode, setSessionLanguageCode] =
     useState<LearningLanguageCode>(targetLanguage);
+  // 지금 보이는 대화의 튜터(튜터별 대화방, 2026-11-02). 튜터를 바꾸면(⋮ 튜터 목소리·프로필 💬·대화 탭 줄) 그 튜터의 대화로 갈아탄다.
+  // 바로 읽어야 해서 ref — 저장은 늘 이 튜터의 방으로.
+  const sessionTutorRef = useRef<TutorGender | null>(null);
+  if (sessionTutorRef.current === null) sessionTutorRef.current = readTutorGender(targetLanguage);
   const [localeState] = useState<Locale>(() => {
     if (typeof window === "undefined") {
       return "ko";
@@ -1021,11 +1046,12 @@ export function ChatWindow({
       messageCount: turns.length,
       messages: toSessionMessages(turns),
       languageCode: sessionLanguageCode,
+      tutorGender: sessionTutorRef.current ?? undefined,
     };
 
     saveConversationSession(session);
     if (!session.endedAt) {
-      persistActiveConversationId(sessionLanguageCode, session.id);
+      persistActiveConversationId(sessionLanguageCode, session.id, sessionTutorRef.current ?? undefined);
     }
     setConversationSessions(loadConversationSessions());
   }, [
@@ -1055,13 +1081,15 @@ export function ChatWindow({
         messageCount: turns.length,
         messages: toSessionMessages(turns),
         languageCode: previousLanguage,
+        tutorGender: sessionTutorRef.current ?? undefined,
       });
       if (!sessionEnded) {
-        persistActiveConversationId(previousLanguage, currentSessionId);
+        persistActiveConversationId(previousLanguage, currentSessionId, sessionTutorRef.current ?? undefined);
       } else {
-        persistActiveConversationId(previousLanguage, null);
+        persistActiveConversationId(previousLanguage, null, sessionTutorRef.current ?? undefined);
       }
     }
+    sessionTutorRef.current = readTutorGender(targetLanguage);
 
     const sessions = loadConversationSessions();
     setConversationSessions(sessions);
@@ -1087,6 +1115,46 @@ export function ChatWindow({
     // current render values at the moment of the switch.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [targetLanguage]);
+
+  // 튜터별 대화방(사용자 2026-11-02 "튜터프로필도 사람처럼 팔로우, 채팅걸기"): 튜터를 바꾸면(⋮ 튜터 목소리·프로필 💬·대화 탭 줄)
+  // 지금 대화를 그 전 튜터의 방에 두고, 새 튜터와 하던 대화를 연다(없으면 새 대화).
+  useEffect(() => {
+    const previous = sessionTutorRef.current;
+    if (!previous || previous === tutorGender || sessionLanguageCode !== targetLanguage) return;
+    if (turns.length > 0) {
+      saveConversationSession({
+        id: currentSessionId,
+        title: sessionTitleFromTurns(turns),
+        createdAt: currentSessionCreatedAt,
+        endedAt: sessionEnded ? Date.now() : undefined,
+        messageCount: turns.length,
+        messages: toSessionMessages(turns),
+        languageCode: sessionLanguageCode,
+        tutorGender: previous,
+      });
+      persistActiveConversationId(sessionLanguageCode, sessionEnded ? null : currentSessionId, previous);
+    }
+    sessionTutorRef.current = tutorGender;
+    const sessions = loadConversationSessions();
+    setConversationSessions(sessions);
+    const resumable = findResumableSession(sessions, sessionLanguageCode, tutorGender);
+    setPractice(null);
+    setInput("");
+    setIsChatHistoryOpen(false);
+    setSessionEnded(false);
+    if (resumable) {
+      setCurrentSessionId(resumable.id);
+      setCurrentSessionCreatedAt(resumable.createdAt);
+      setTurns(fromSessionMessages(resumable.messages));
+      persistActiveConversationId(sessionLanguageCode, resumable.id, tutorGender);
+    } else {
+      setTurns([]);
+      setCurrentSessionId(makeSessionId());
+      setCurrentSessionCreatedAt(Date.now());
+    }
+    // 튜터가 바뀔 때만 — 그 순간의 대화를 그대로 옮겨 둔다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tutorGender]);
 
   // 한도를 다 쓴 것만으로는 결제 화면을 띄우지 않는다: 채팅 창은 다른 탭에서도
   // 붙어 있어서, 앱을 열거나 탭을 바꿀 때마다 결제 화면이 다른 기능을 가렸다
@@ -1453,6 +1521,7 @@ export function ChatWindow({
     setCurrentSessionId(makeSessionId());
     setCurrentSessionCreatedAt(Date.now());
     setSessionLanguageCode(targetLanguage);
+    sessionTutorRef.current = readTutorGender(targetLanguage);
     persistActiveConversationId(targetLanguage, null);
     requestAnimationFrame(() => inputRef.current?.focus());
   };
@@ -1469,6 +1538,7 @@ export function ChatWindow({
       messageCount: turns.length,
       messages: toSessionMessages(turns),
       languageCode: sessionLanguageCode,
+      tutorGender: sessionTutorRef.current ?? undefined,
     });
     persistActiveConversationId(sessionLanguageCode, currentSessionId);
     setConversationSessions(loadConversationSessions());
@@ -1480,6 +1550,10 @@ export function ChatWindow({
     }
 
     const language = sessionLanguageOf(session);
+    // 지난 대화를 열면 그 대화의 튜터로(튜터별 대화방) — 튜터 바뀜 처리가 다시 갈아타지 않게 ref를 먼저.
+    const tutor = session.tutorGender ?? sessionTutorRef.current ?? readTutorGender(language);
+    sessionTutorRef.current = tutor;
+    if (readTutorGender(language) !== tutor) writeTutorGender(language, tutor);
 
     // Ended sessions stay in history — continue as a new session id.
     if (session.endedAt) {
@@ -1518,6 +1592,7 @@ export function ChatWindow({
       messageCount: turns.length,
       messages,
       languageCode: sessionLanguageCode,
+      tutorGender: sessionTutorRef.current ?? undefined,
     });
     persistActiveConversationId(sessionLanguageCode, null);
     setConversationSessions(loadConversationSessions());
@@ -1600,6 +1675,7 @@ export function ChatWindow({
         messageCount: turns.length,
         messages: toSessionMessages(turns),
         languageCode: sessionLanguageCode,
+        tutorGender: sessionTutorRef.current ?? undefined,
       });
       setConversationSessions(loadConversationSessions());
     }
