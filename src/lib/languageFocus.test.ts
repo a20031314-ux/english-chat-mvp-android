@@ -91,3 +91,11 @@ test("Arabic is Modern Standard throughout, in the call and in corrections", () 
   assert.match(targetLanguageFocusHints("ar"), /Modern Standard Arabic/);
   assert.doesNotMatch(tutorSpeechRules("es"), /Arabic/);
 });
+
+test("한국어 통화 튜터는 번역투(그렇군요·-지요)를 피하게 한다", () => {
+  // 사용자 2026-11-02 "그렇군요. 피곤할 때는 푹 쉬는 게 제일이지요 — 영어를 번역한 말투". 예전 규칙이 해요체 예로 -군요를 먼저 들어 매 답이 "-시군요"로 시작.
+  const ko = tutorSpeechRules("ko");
+  assert.match(ko, /not like English put into Korean/);
+  assert.match(ko, /never as the opener/);
+  assert.doesNotMatch(ko, /: -군요, -네요/);
+});

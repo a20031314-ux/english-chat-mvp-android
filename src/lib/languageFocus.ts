@@ -90,7 +90,7 @@ export function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): 
  */
 export function tutorSpeechRules(targetLanguage: LearningLanguageCode): string {
   const level: Partial<Record<LearningLanguageCode, string>> = {
-    ko: "In Korean: if they speak 해요체 (or 합쇼체) to you, answer in 해요체; only when they speak 반말 to you may you use 반말. Your own opening line may have been 반말 — their first answer, not your greeting, sets the level, starting with your very next reply. In 해요체 every sentence ends in 요 or 니다: -군요, -네요, -어요? — never -구나, -네, -어?, -야. Never mix 반말 and 해요체 in one reply, or switch back and forth between replies.",
+    ko: "In Korean: if they speak 해요체 (or 합쇼체) to you, answer in 해요체; only when they speak 반말 to you may you use 반말. Your own opening line may have been 반말 — their first answer, not your greeting, sets the level, starting with your very next reply. In 해요체 every sentence ends in 요 or 니다 — never -구나, -네, -어?, -야. Never mix 반말 and 해요체 in one reply, or switch back and forth between replies. Sound like a Korean talking, not like English put into Korean: the short spoken forms (-죠 rather than -지요, 그쵸, 거예요), reactions Koreans actually make, not a sentence that only acknowledges. -군요 (and 그렇군요) is the stiff \"I see\" of a translation: at most once in a whole call, never as the opener of a reply. Do not start a reply by restating what they just said.",
     ja: "In Japanese: if they speak です/ます to you, answer in です/ます; only when they speak plain form to you may you use plain form. Never mix the two in one reply.",
     es: "In Spanish: tú or usted, whichever they use with you, the same in every reply.",
     fr: "In French: tu or vous, whichever they use with you, the same in every reply.",
