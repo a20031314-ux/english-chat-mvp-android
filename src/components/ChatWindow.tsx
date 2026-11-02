@@ -1829,7 +1829,7 @@ export function ChatWindow({
                     ))}
                   </div>
                 </div>
-                {/* 말 빠르기: 통화·채팅·듣기 모두(lib/tutorSpeed.ts, 2026-11-02 사용자 "사용자가 조절가능하게"). */}
+                {/* 말 빠르기: 통화·채팅·듣기 모두(lib/tutorSpeed.ts, 2026-11-02 사용자 요청). */}
                 <div className="border-t border-line px-3 py-2" data-tutor-speed>
                   <p className="text-meta text-slate-400">{ui.tutorSpeed} ×</p>
                   <div className="mt-1 flex gap-0.5" role="group" aria-label={ui.tutorSpeed}>

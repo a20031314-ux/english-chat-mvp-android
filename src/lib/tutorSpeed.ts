@@ -4,20 +4,10 @@
  * 서버가 높이는 그대로 빠르기만 바꾸고(server/timeStretch.ts), 앱에 녹음된 줄은 재생 속도로(linePlayer).
  */
 import { useSyncExternalStore } from "react";
+import { parseTutorSpeed, type TutorSpeed } from "./tutorSpeedValue";
+export { TUTOR_SPEEDS, isTutorSpeed, parseTutorSpeed, type TutorSpeed } from "./tutorSpeedValue";
 
 export const TUTOR_SPEED_KEY = "tutorSpeed.v1";
-export const TUTOR_SPEEDS = [0.8, 0.9, 1, 1.1, 1.2] as const;
-export type TutorSpeed = (typeof TUTOR_SPEEDS)[number];
-
-export function isTutorSpeed(value: unknown): value is TutorSpeed {
-  return TUTOR_SPEEDS.includes(value as TutorSpeed);
-}
-
-/** 문자열(주소·저장 값)을 고를 수 있는 빠르기로. 아니면 1. */
-export function parseTutorSpeed(raw: unknown): TutorSpeed {
-  const value = typeof raw === "number" ? raw : Number(raw);
-  return isTutorSpeed(value) ? value : 1;
-}
 
 const listeners = new Set<() => void>();
 let chosenNow: TutorSpeed | null = null;

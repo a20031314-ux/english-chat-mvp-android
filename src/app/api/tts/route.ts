@@ -8,7 +8,7 @@ import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralSpeed, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
 import { stretchStream } from "@/lib/server/timeStretch";
-import { parseTutorSpeed } from "@/lib/tutorSpeed";
+import { parseTutorSpeed } from "@/lib/tutorSpeedValue";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,

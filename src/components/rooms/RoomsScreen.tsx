@@ -320,7 +320,7 @@ function Lobby({
       <section className="space-y-2">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-slate-300">{t.rooms}</h2>
-          {/* 내 프로필 줄은 뺌(2026-11-02 사용자 "프로필 아이콘이 중첩") — 내 얼굴·이름은 사람 탭·방 자리에서 보인다. */}
+          {/* 내 프로필 줄은 뺌(2026-11-02 사용자 — 프로필 아이콘 중첩) — 내 얼굴·이름은 사람 탭·방 자리에서 보인다. */}
           <div className="flex items-center gap-3">
             <button type="button" onClick={() => void refresh()} className="text-xs text-slate-400 hover:text-white">
               {t.refresh}

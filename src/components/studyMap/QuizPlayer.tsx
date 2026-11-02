@@ -708,8 +708,8 @@ function SpotView({
           {gloss}
         </p>
       ) : null}
-      {/* 2026-11-02 사용자 "순서 문제랑 틀린 것 찾기가 섞여 보임": 낱말 칸(테두리) 대신 한 줄 문장처럼 — 낱말마다 점선 밑줄만, 누르면 칠함.
-          순서 문제(OrderView)는 빈칸 자리 + 테두리 없는 낱말 조각이라 모양이 다르다. 앞의 🔍는 "찾기" 표시(이름 글 없이). */}
+      {/* 2026-11-02 사용자 — 순서 문제와 틀린 곳 찾기가 섞여 보임: 낱말 칸(테두리) 대신 한 줄 문장처럼 — 낱말마다 점선 밑줄만, 누르면 칠함.
+          순서 문제(OrderView)는 빈칸 자리 + 테두리 없는 낱말 조각이라 모양이 다르다. 앞의 🔍는 찾기 표시(이름 글 없이). */}
       <p dir="auto" className="text-chat leading-loose text-slate-100" data-spot-words>
         {!bare ? (
           <span aria-hidden className="me-1.5 select-none text-caption opacity-70">
@@ -1351,7 +1351,7 @@ function OrderView({
           {quizGloss(question.gloss, locale, language)}
         </p>
       )}
-      {/* 2026-11-02: 맞출 자리를 낱말 수만큼 빈칸으로 보여 줘서 "순서대로 채우기"가 한눈에(틀린 곳 찾기와 다른 모양). 🔀 = 순서. */}
+      {/* 2026-11-02: 맞출 자리를 낱말 수만큼 빈칸으로 보여 줘서 순서대로 채우기가 한눈에(틀린 곳 찾기와 다른 모양). 🔀 = 순서. */}
       <div dir="auto" className="flex min-h-11 flex-wrap items-center gap-1.5" data-order-slots>
         <span aria-hidden className="select-none text-caption opacity-70">
           🔀
