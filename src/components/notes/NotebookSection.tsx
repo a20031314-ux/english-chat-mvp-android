@@ -2271,11 +2271,9 @@ function MyLayers({
     if (shown !== id) return null;
     const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
     // 전체 화면이면 칸 안만 전체 화면 층에(머리는 위 이름 줄이 대신).
-    // Stagebank 전체 화면에도 머리 요약(오늘 학습할 분량 n분 · 끝나면 ✓, 2026-11-03 사용자 "표시를 해줘, 오늘 학습할 분량이라고").
     if (full)
       return (
         <div key={id} data-my-layer={id} data-my-full className="px-3 pb-6 pt-3">
-          {id === "stage" && summary ? <p data-stage-amount className={`mb-2 text-caption font-semibold ${LAYER_TONE[id].title}`}>{summary}</p> : null}
           {toned}
         </div>
       );

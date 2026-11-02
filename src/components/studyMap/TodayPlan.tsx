@@ -915,8 +915,9 @@ export function TodayPlan({
     const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "type", "choose"] : ["auto", "type", "choose", "order", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
-  // 칸 머리: "오늘 학습할 분량 n분"(2026-11-03 사용자 — 숫자만 있던 n분을 지웠다가 "표시를 해줘, 오늘 학습할 분량이라고"), 끝나면 ✓.
-  const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planTodayAmount.replace("{n}", String(items.reduce((sum, item) => sum + item.minutes, 0)))}</span>;
+  // "오늘 학습할 분량 n분"은 칸 머리가 아니라 지금 할 것 카드 바로 위(점 줄)에(2026-11-03 사용자 "My name is 부분이 학습할 분량 — 거기 표시"). 머리는 끝났을 때 ✓만.
+  const todaySummary = finished ? <span>{`✓ ${ui.planAllDone}`}</span> : null;
+  const todayAmount = ui.planTodayAmount.replace("{n}", String(items.reduce((sum, item) => sum + item.minutes, 0)));
   // 오늘 할 것(2026-10-30 사용자 "퀴즈랑 똑같이 첫 화면으로 — 다 안 보여 줘도 되니까 뭘 할지 명확히"): 목록 대신 지금 할 것 하나를 크게,
   // 나머지는 점으로만. 퀴즈면 칸 안에서 바로 한 문제, 상황·문장구조·꺼내 쓰기면 첫 줄이 보이는 카드 하나(누르면 시작).
   const currentAt = items.findIndex((item) => !doneOf(item));
@@ -972,6 +973,11 @@ export function TodayPlan({
   const todayBody = (
     <div data-today-plan>
       <div className="flex items-center gap-2">
+        {!finished ? (
+          <span data-today-amount className="shrink-0 text-caption font-semibold tabular-nums text-status-learned">
+            {todayAmount}
+          </span>
+        ) : null}
         {/* 오늘 몇 개 중 어디까지 — 점만(이름 목록은 안 보임). */}
         <span role="img" aria-label={`${Math.max(0, currentAt < 0 ? items.length : currentAt)}/${items.length}`} data-today-dots className="flex min-w-0 flex-1 flex-wrap items-center gap-1">
           {items.map((item, i) => (
