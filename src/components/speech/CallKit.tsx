@@ -66,9 +66,13 @@ export function TalkingBars({ on }: { on: boolean }) {
 }
 
 /** 자막 한 줄(상대가 마지막에 한 말). 여럿이면 앞에 이름. */
-export function CallCaption({ text, meaning, name }: { text: string; meaning?: string; name?: string }) {
+export function CallCaption({ text, meaning, name, onTap }: { text: string; meaning?: string; name?: string; /** 누르면 해석을 펴고 접음(AI 통화, 2026-11-03). */ onTap?: () => void }) {
   return (
-    <div className="w-full rounded-2xl bg-black/40 px-4 py-2" data-call-caption>
+    <div
+      className={`w-full rounded-2xl bg-black/40 px-4 py-2 ${onTap ? "cursor-pointer hover:bg-black/50" : ""}`}
+      data-call-caption
+      {...(onTap ? { role: "button", tabIndex: 0, "aria-expanded": Boolean(meaning), onClick: onTap, onKeyDown: (event: React.KeyboardEvent) => (event.key === "Enter" || event.key === " ") && (event.preventDefault(), onTap()) } : {})}
+    >
       <p dir="auto" className="text-chat leading-snug text-slate-100">
         {name ? <bdi className="me-1.5 text-meta text-slate-400">{name}</bdi> : null}
         {text}

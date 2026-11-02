@@ -49,7 +49,10 @@ export function CallStage({
   goal,
   coach,
   gender,
+  onCaptionTap,
 }: {
+  /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
+  onCaptionTap?: () => void;
   language: string;
   /** 이 통화의 튜터(통화를 열 때 고정). 없으면 지금 고른 튜터. */
   gender?: TutorGender;
@@ -92,7 +95,7 @@ export function CallStage({
               <span>•</span>
             </span>
           ) : caption ? (
-            <CallCaption text={caption.text} meaning={caption.meaning} />
+            <CallCaption text={caption.text} meaning={caption.meaning} onTap={onCaptionTap} />
           ) : null}
         </div>
       </section>
@@ -197,8 +200,9 @@ export function CallHeader({
   ui: UICopy;
   title: string;
   subtitle: string;
-  showTranslations: boolean;
-  onToggleTranslations: () => void;
+  /** 없으면 해석 버튼을 안 보임(끝난 화면 — 해석이 늘 붙어 있음, 2026-11-03). */
+  showTranslations?: boolean;
+  onToggleTranslations?: () => void;
   onClose: () => void;
 }) {
   return (
@@ -208,16 +212,18 @@ export function CallHeader({
         <p className="text-[11px] text-neutral-500">{subtitle}</p>
       </div>
       <div className="flex items-center gap-2">
+        {onToggleTranslations ? (
         <button
           type="button"
           onClick={onToggleTranslations}
-          aria-pressed={showTranslations}
+          aria-pressed={Boolean(showTranslations)}
           className={`rounded-lg border px-3 py-1.5 text-[12px] transition ${
             showTranslations ? "border-white/40 bg-white/15 text-neutral-100" : "border-white/15 text-neutral-400 hover:bg-white/10"
           }`}
         >
           {ui.roleplayTranslations}
         </button>
+        ) : null}
         <button
           type="button"
           onClick={onClose}

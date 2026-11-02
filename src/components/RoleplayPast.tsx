@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { translateUtterance } from "@/lib/translateUtterance";
+import { withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
@@ -47,6 +49,24 @@ export function RoleplayPast({
   const sayAgain = (target: string) =>
     sayLine(target, { targetLanguage: coerceLanguageCode(saved.language), nativeLanguage, isPremium });
   const recap = useMemo(() => buildRecap(saved.language, saved.said), [saved]);
+  // 결과창에는 튜터 줄 해석을 붙인다(2026-11-03 사용자) — 그때 안 받아 둔 줄은 열 때 한 번 받는다(이 화면에서만, 저장은 그대로).
+  const [glosses, setGlosses] = useState<Record<string, string>>({});
+  const lines = useMemo(() => Object.entries(glosses).reduce((current, [text, translated]) => withTranslation(current, text, translated), saved.said), [saved, glosses]);
+  useEffect(() => {
+    if (saved.language === nativeLanguage) return;
+    let alive = true;
+    const missing = [...new Set(saved.said.filter((line) => line.who === "tutor" && !line.translation && line.text.trim()).map((line) => line.text))];
+    for (const text of missing) {
+      void translateUtterance({ text, locale: nativeLanguage, interfaceLanguage: nativeLanguage, targetLanguage: coerceLanguageCode(saved.language), sourceType: "conversation" })
+        .then((translated) => {
+          if (alive && translated) setGlosses((current) => ({ ...current, [text]: translated }));
+        })
+        .catch(() => undefined);
+    }
+    return () => {
+      alive = false;
+    };
+  }, [saved, nativeLanguage]);
   const analysis = useEnglishAnalysisOptional();
   const analyze = analysis
     ? (text: string) =>
@@ -83,7 +103,7 @@ export function RoleplayPast({
       />
 
       <CallPages ui={ui}>
-        {saved.said.map((line, index) => (
+        {lines.map((line, index) => (
           <RoleplayLine
             key={index}
             // Nothing here asks the model anything, so the line is drawn

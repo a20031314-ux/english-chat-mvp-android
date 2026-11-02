@@ -157,7 +157,7 @@ export function RoleplayScreen({
   // The character's translations: folded by default, each one a tap away, or
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
-  const [showTranslations, toggleTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
+  const [showTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
   // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
   const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
@@ -168,6 +168,8 @@ export function RoleplayScreen({
   const [coachCard, setCoachCard] = useState<CoachCard | null>(null);
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
+  /** 자막 줄을 눌러 뜻을 편 튜터 줄(글) — 💬 자막은 원문만, 누르면 해석(2026-11-03 사용자 "2번"). 다음 줄이 오면 접힘. */
+  const [captionOpen, setCaptionOpen] = useState("");
   /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
   const rephrasingRef = useRef(false);
   const [recording, setRecording] = useState(false);
@@ -643,11 +645,13 @@ export function RoleplayScreen({
   // With translations on show, a line the character wrote just now is
   // translated as it appears — after it is said, so the voice never waits.
   useEffect(() => {
-    if (!showTranslations) return;
+    // 끝난 화면(결과)은 늘 해석을 붙인다(2026-11-03 사용자 "결과창에는 해석을 붙여줘") — callOver는 아래에서 정해져 여기선 같은 조건을 다시.
+    const over = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
+    if (!showTranslations && !over) return;
     for (const line of said) {
       if (line.who === "tutor" && !line.translation && line.text.trim()) translateLine(line.text);
     }
-  }, [showTranslations, said, translateLine]);
+  }, [showTranslations, state?.finished, instruction?.do, hungUp, said, translateLine]);
 
   const sayItBack = useCallback(
     async (target: string) => {
@@ -912,8 +916,6 @@ export function RoleplayScreen({
           ui={ui}
           title={scenario.title}
           subtitle={timeLine ?? scenario.tutorRole}
-          showTranslations={showTranslations}
-          onToggleTranslations={toggleTranslations}
           onClose={onClose}
         />
         <CallSummary
@@ -948,7 +950,7 @@ export function RoleplayScreen({
             flat
             onReview={openReview}
             onTranslate={translateLine}
-            showTranslation={showTranslations}
+            showTranslation
             ledgerLanguage={scenario.language}
             onLooked={() =>
               setSaid((current) => current.map((one, at) => (at === index ? { ...one, looked: true } : one)))
@@ -992,7 +994,7 @@ export function RoleplayScreen({
   const forced = lastTutorAt >= 0 && forcedCaption === lastTutorAt;
   const caption =
     lastTutor && (showCaptions || forced)
-      ? { text: lastTutor.text, ...(forced && lastTutor.translation ? { meaning: lastTutor.translation } : {}) }
+      ? { text: lastTutor.text, ...((forced || captionOpen === lastTutor.text) && lastTutor.translation ? { meaning: lastTutor.translation } : {}) }
       : null;
   const speaker: CallSpeaker =
     instruction?.do === "say"
@@ -1026,6 +1028,14 @@ export function RoleplayScreen({
         speaker={speaker}
         timeLeft={timeLine}
         caption={caption}
+        onCaptionTap={
+          lastTutor
+            ? () => {
+                setCaptionOpen((open) => (open === lastTutor.text ? "" : lastTutor.text));
+                if (!lastTutor.translation) translateLine(lastTutor.text);
+              }
+            : undefined
+        }
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
         coach={coachCard}
       />
