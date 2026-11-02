@@ -204,3 +204,7 @@
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageFrames.tsx:232 — 스킵 완료 화면이 저장 POST를 안 기다리고 "✓ 통과" — 실패해도 통과로 보임 (결과 기다리고 실패 안내).
 - 2026-11-02 dev → store: **가격 개편 2**(사용자 결정) — Play Console·App Store Connect에서 `lite_monthly` 4,900원 · `plus_monthly` 6,500원 · `premium_monthly` 12,900원으로(사람). 하루 통화 분(프리미엄 30분)은 서버에 이미 반영. 기존 구독자 가격 인상 여부는 사용자 결정 대기(올리면 스토어 알림·동의 절차). 스토어 설명·스크린샷에 가격·분이 있으면 같이 고칠 것. 출시 노트 93(PR #29)에 요금 문구가 있으면 확인.
 - 2026-11-02 dev → qa: 다음 빌드(2.80) AI 통화 🎓 튜터 수업 켜고 en/ko·ja/ko·es/ar에서 일부러 틀리게(때·낱말·내 말 한 문장 섞기). 튜터가 고친 문장을 소리로 말하고 내 얼굴 아래 🔁 한 줄이 뜨는지, 다시 말하면 칭찬하고 넘어가는지, 두 번 틀리면 넘어가는지, 관사 빠짐 같은 작은 건 안 짚는지, 끝 요약 🔁 n·맞힌 줄 🔁✓. 내 얼굴 아래 카드(✎ 틀린 곳 취소선 → 🔁 고친 문장 → 까닭 / 💬 내 말 → 학습 언어 / 💡 표현, 맞히면 ✓)가 고친 소리와 같은 때 뜨는지, 마이크 막대·카드가 작은 폰에서 겹치지 않는지. 앱 언어 섞인 튜터 말을 목소리가 어떻게 읽는지. 통화 중 🎓를 꺼도 다음 차례부터 그냥 대화로.
+- 2026-11-02 watch → dev: [공통] src/components/NativeAdSlot.tsx:127 — 광고 오기 전 인라인 height:1 때문에 플러그인 크기 검사(120px 미만 안 불러옴)에 걸려 앱 네이티브 광고가 전부 안 뜸, 2.79 빌드 전에 (1637d5f 되돌리고 대화 목록 빈칸은 그 자리만 따로, 기기 확인).
+- 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:442 · src/app/api/roleplay/turn/route.ts:316 — 튜터 수업 offer(맞는 말에 표현 건넴)가 better로 붙어 취소선·고친 수·통화 정리·fileFix·약점 기록에 틀린 줄로 (offer면 앱은 smoother로, 서버는 corrected 비움).
+- 2026-11-02 watch → dev: [my] src/lib/curriculum/qbankRules.ts:110 — 꼴 오답 예문 둘 미만이면 40개까지 계속 키워, 활용 없는 언어(zh·th·vi·id) 낱말이 하루 3번씩 헛성장·전체 400 예산 잠식 (꼴 칸을 비워 온 성장이 있으면 forms 재성장 멈춤).
+- 2026-11-02 watch → dev: [공통] src/lib/ads.ts:606 — loadedSlots가 피드 destroy 때 안 지워져 다시 연 화면에서 광고 전에 120px 빈칸 (정리 때 그 feedId 항목 지우기).

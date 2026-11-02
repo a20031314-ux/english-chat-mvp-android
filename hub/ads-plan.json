@@ -1,36 +1,29 @@
 [
  {
   "kind": "move",
-  "what": "다음 추천: 끝 화면 '다음 추천 ▶' 버튼으로 넘어갈 때는 scriptEnd 전면을 띄우지 않기(다음이 Quizbank·오늘 끝일 때만)",
-  "where": "My 탭 `my` · lib/curriculum/upNext.ts 69줄 goUpNext · studyMap/FrameLesson.tsx 280줄 close · RecallPlayer.tsx 174줄 · StageScripts.tsx 561줄 closeScript · studyMap/UpNext.tsx 41줄",
-  "why": "원칙 위반(이번 324b1da 새 화면, 두 번 확인 맞음): UpNextButton은 goUpNext(next, close)로 끝 화면의 close를 그대로 불러, 단계 화면에서 직접 연 수업(fromToday 아님)을 끝내고 버튼을 누르면 close가 maybeShowInterstitial('scriptEnd')를 부르고 0ms 뒤 next.open() — 전면이 async라 다음 수업이 열린 뒤 그 위에 뜸(다음 할 것으로 이어지는 흐름 한가운데). 참고(독립 확인): UpNextBar는 BodyLayer라 떠 있는 15초 동안 하단 배너가 숨음 — 겹침은 없고 배너가 깜빡이며 그동안 노출이 빠짐",
+  "what": "네이티브 자리 1px 접기(1637d5f)를 되돌리기 — 플러그인이 120px 미만 자리에는 광고를 아예 안 불러와서 Loaded가 오지 않아, 다음 빌드(2.79)부터 앱의 네이티브 광고가 모두 0이 됨. 대화 목록 빈칸은 그 자리(talk-between-lists)만 따로(아래에 1:1 줄이 있을 때만 그리거나 목록 끝으로)",
+  "where": "billing `billing` · NativeAdSlot.tsx 124~126줄(AppAdSlot height loaded ? 120 : 1) · lib/ads.ts 631줄 Loaded 리스너·nativeSlotLoaded · 대화 탭 `talk` · rooms/MessagesTab.tsx talk-between-lists",
+  "why": "원칙(광고 구조) 위반이 아니라 고장: node_modules/@capacitor-community/admob 8.2.1 native-ad-feed.js — evaluate()는 getVisibleStates()가 고른 자리만 loadState하고, getVisibleStates는 isSupportedSize(Small 템플릿 높이 120px 이상·너비 120px 이상)를 통과한 자리만 고름. 이번 변경은 Loaded 전엔 높이 1px이라 이 검사를 영영 못 넘고 → 불러오지 않음 → Loaded 없음 → 계속 1px. 모든 AppAdSlot(목록 사이·끝 화면·문제 아래·통화 칸·시트 끝)이 같은 컴포넌트라 전부 해당. 로그(hub/log 2026-11 '네이티브 광고 자리 — 접어 둠')도 '1px 자리에서도 불러와지는지 기기 확인, 안 되면 되돌림'으로 남겨 둔 것",
   "appBuild": true,
   "severity": "notify",
-  "basis": "코드 확인: upNext.ts goUpNext는 leaving 표시만 하고 close를 부름 — offerUpNext만 막고 전면은 안 막음. 고치는 법: goUpNext 중이면 close가 전면을 건너뛰고(다음이 fallback Quizbank = 오늘 끝일 때만 그대로). 손익: stageScriptEndsPerDay 0.2(단계 화면에서 직접 연 수업 끝) 중 절반이 버튼으로 이어 간다고 어림 → 0.1. 오늘 할 것에서 연 수업은 fireTodayEnd라 원래 항목 사이 전면 없음(그대로).",
-  "econ": {
-   "my": {
-    "stageScriptEndsPerDay": 0.1
-   }
-  },
-  "per1000Mid": -12068,
-  "freePersonMid": -13
+  "basis": "코드 확인(플러그인 소스): loadState를 부르는 곳은 evaluate(보이는 자리만)와 reload(ads.ts에서 안 씀) 둘뿐. 인라인 style height:1이 플러그인 기본 CSS(:where(...small) 120px)를 이김. 걸린 돈: 계산이 이 고장을 못 셈(손익은 네이티브가 붙는다고 가정) — 같은 효과인 `ads.mjs settings --ads-native=0`(네이티브 전부 끔) 1,000명당 월 단가 중간·전환 3% −653,159원. 고치는 법: 자리는 120px로 두고(예전대로) 빈칸이 문제였던 talk-between-lists만 아래 1:1 줄이 있을 때 그리기, 또는 접는 높이를 120px 바깥 여백(spaced my-6)만 빼는 것으로. 2.79 빌드 전에 고쳐야 함(지금 Play 2.78은 예전 코드라 영향 없음). 기기 확인 필요"
  },
  {
   "kind": "move",
   "what": "callEnd 전면을 '통화가 진짜 끝나고(state.finished) 끝 화면을 닫을 때' 한 번으로 — 포인트 없음·마이크 거부로 끝난 통화에는 안 띄움",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx 299~309줄(callEnd effect) · 408·687줄 setInstruction finish · 끝 화면 call-end 네이티브",
-  "why": "원칙 위반 둘(지난번부터 그대로): ① effect가 `instruction?.do === \"finish\"`에도 걸려, 새 앱 무료가 📞를 누르고 첫 차례에 포인트 없음(408줄)·마이크 거부(687줄)로 닫힐 때도 1.5초 뒤 전면 — 콘텐츠가 열린 직후·거절된 직후(AdMob '갑자기 뜨는 광고'). ② 끝 화면에 들어서 1.5초 뒤 뜨므로 같은 화면의 call-end 네이티브 위에 전면이 겹침",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 306~316줄(callEnd effect) · setInstruction finish · 933줄 끝 화면 call-end 네이티브",
+  "why": "원칙 위반 둘(지난번부터 그대로): ① effect가 `instruction?.do === \"finish\"`에도 걸려, 새 앱 무료가 📞를 누르고 첫 차례에 포인트 없음·마이크 거부로 닫힐 때도 1.5초 뒤 전면 — 콘텐츠가 열린 직후·거절된 직후(AdMob '갑자기 뜨는 광고'). 이번 6a17dde(무료 통화 맛보기 처음 한 번 10분)로 무료가 📞를 누르는 일이 늘어 해당 경우도 늘어남. ② 끝 화면에 들어서 1.5초 뒤 뜨므로 같은 화면의 call-end 네이티브 위에 전면이 겹침",
   "appBuild": true,
-  "basis": "지난 안 그대로 — 이번 범위(…499bea7)에서도 RoleplayScreen.tsx 301줄 `if (!(state?.finished || instruction?.do === \"finish\"))`가 남아 있음(반영 안 됨). 손익은 callEnd를 포인트로 통화한 무료만 쓰는 날 0.03번으로 셈 → 옮겨도 계산 값은 그대로",
+  "basis": "지난 안 그대로 — 이번 범위(499bea7..90096e5)에서도 RoleplayScreen.tsx 308줄 `if (!(state?.finished || instruction?.do === \"finish\"))`가 남아 있음(반영 안 됨). 손익은 callEnd를 쓰는 날 0.03번(economics.json extraAds)으로 셈 → 옮겨도 계산 값은 그대로",
   "severity": "notify"
  },
  {
   "kind": "model",
-  "what": "My 칸 탭 나누기 뒤 Quizbank·Logbank 빈 공간 네이티브(layerOnly) 노출을 손익에서 줄이기",
-  "where": "My 탭 `my` · notes/NotebookSection.tsx(pressTab·AutoQuiz) · studyMap/InlineQuiz.tsx 132줄 · studyMap/TodayPlan.tsx 1521줄 · studyMap/Logbank.tsx 188줄 · scripts/sim-users/economics.json extraAds",
-  "why": "a8313f8·24d8665로 칸 이름을 한 번 누르면 바닥 화면(층 0)에 그 칸만 보이고, 전체 화면은 지금 탭을 한 번 더 눌러야 열림. 예전엔 Quizbank 이름을 누르면 바로 전체 화면이었음. quiz-inline(Quizbank)·exam-wait·logbank-list는 layerOnly라 바닥 화면에서는 안 붙음 — 오늘 할 것이 끝나 Quizbank로 바뀔 때(AutoQuiz)도 바닥 화면이라 광고 없음. 그런데 손익은 아직 예전처럼 셈(quiz-inline 쓰는 날 5번 등)",
+  "what": "손익 계산을 지금 코드에 맞추기: ① My 칸 탭 나누기 뒤 Quizbank·Logbank 빈 공간 네이티브(layerOnly)는 전체 화면에서만 붙으니 노출을 줄이고 ② 다음 추천 버튼으로 넘어갈 때 scriptEnd 전면을 건너뛰게 된 것(9c3bb18)을 stageScriptEndsPerDay에 반영",
+  "where": "My 탭 `my` · NativeAdSlot.tsx 40줄 layerOnly · studyMap/InlineQuiz.tsx 132줄 · TodayPlan.tsx 1568줄 exam-wait · Logbank.tsx 188줄 · lib/curriculum/upNext.ts goingToNextStudy · FrameLesson·RecallPlayer·StageScripts close · scripts/sim-users/economics.json extraAds·my",
+  "why": "① 칸 이름을 한 번 누르면 바닥 화면(층 0)에 그 칸만 — quiz-inline(Quizbank)·exam-wait·logbank-list는 layerOnly라 바닥에서는 안 붙는데 손익은 예전처럼 셈(quiz-inline 쓰는 날 5번 등, 그대로). ② 지난 안 '다음 추천 버튼 전면 건너뜀'은 코드에 반영됨(9c3bb18 — 세 끝 화면이 goingToNextStudy()면 scriptEnd 안 띄움), 그런데 economics.json my.stageScriptEndsPerDay는 0.2 그대로",
   "appBuild": false,
-  "basis": "코드 확인: NativeAdSlot 39줄 `if (props.layerOnly && layer === 0) return null`, NotebookSection pressTab은 `id === shown && !full`일 때만 전체 화면. 전체 화면까지 가는 사람을 절반으로 어림. quiz-inline 5번 중 수업 퀴즈(FrameLesson은 자기 FullScreenLayer라 그대로) 약 1번을 빼고 Quizbank 약 4번의 절반 −2, exam-wait 0.3의 절반 −0.15, logbank-list 0.4의 절반 −0.2 → 쓰는 날 네이티브 −2.35. Stagebank(stagebank-today·stagebank-stage)는 예전에도 이름을 한 번 눌러 전체 화면이라 그대로. 절반은 어림 — 실측(전체 화면 여는 비율) 필요 · 이번 e11b8a5('탭은 제자리 작은 칸, 칸을 누르면 전체 화면')·0a08fc6 뒤에도 그대로: 탭을 누르면 바닥 화면(층 0) 작은 칸이라 layerOnly 자리 안 붙음, economics.json extraAds quiz-inline 5·exam-wait 0.3·logbank-list 0.4 그대로(반영 안 됨)",
+  "basis": "코드 확인. ① 전체 화면까지 가는 사람을 절반으로 어림: quiz-inline 5 중 수업 퀴즈(FrameLesson 자기 층) 약 1을 빼고 Quizbank 약 4의 절반 −2, exam-wait 0.3의 절반 −0.15, logbank-list 0.4의 절반 −0.2 → 쓰는 날 네이티브 −2.35(지난 안 econ 그대로, 실측 필요). ② 단계 화면에서 직접 연 수업 끝 0.2 중 절반이 버튼으로 이어 간다고 어림 → 0.1(지난 안 econ 그대로). 손익 줄만 고침(서버·앱 빌드 없음)",
   "severity": "report",
   "econ": {
    "extraAds": [
@@ -39,19 +32,22 @@
      "perActiveDay": -2.35,
      "when": "my"
     }
-   ]
+   ],
+   "my": {
+    "stageScriptEndsPerDay": 0.1
+   }
   },
-  "freePersonMid": -113,
-  "per1000Mid": -109071
+  "per1000Mid": -121138,
+  "freePersonMid": -125
  },
  {
   "kind": "move",
   "what": "Quizbank·Logbank 탭을 바닥 화면에서 볼 때도 문제 아래·목록 네이티브를 붙이고, 그 탭에서는 My 하단 배너를 숨기기 — 같이 Stagebank 전체 화면은 오늘 할 것이 남았을 때 stagebank-today 하나만(stagebank-stage는 오늘 끝난 뒤)",
   "where": "My 탭 `my` · studyMap/InlineQuiz.tsx·TodayPlan.tsx(exam-wait)·Logbank.tsx의 layerOnly · AppHome.tsx 배너(setBannerPlacement) · notes/NotebookSection.tsx 2365줄 stagebank-today · 1364줄 stagebank-stage",
-  "why": "탭으로 나뉘어 바닥 화면에도 칸 하나만 보이므로, 그 칸의 네이티브와 배너가 겹치지 않게 배너를 빼면 '한 화면에 광고 하나'를 지키면서 위 안의 손실을 되찾음. 네이티브 단가(중간 $2.5/천)가 배너($0.65/천)의 약 4배 새로(0a08fc6 'Stagebank 늘 펼침'): 오늘 할 것 아래 stagebank-today와 단계 화면 대화 예시 앞 stagebank-stage가 이제 같은 Stagebank 전체 화면 한 스크롤에 함께 그려짐(1363줄 주석 '한 화면에 안 겹침'이 더는 맞지 않음, 같은 피드 my-full 두 자리) — 한 화면에 광고 하나",
+  "why": "탭으로 나뉘어 바닥 화면에도 칸 하나만 보이므로, 그 칸의 네이티브와 배너가 겹치지 않게 배너를 빼면 '한 화면에 광고 하나'를 지키면서 위 model 안의 손실을 되찾음(네이티브 중간 단가가 배너의 약 4배). Stagebank 늘 펼침(0a08fc6) 뒤 stagebank-today와 stagebank-stage가 같은 전체 화면 한 스크롤에 함께 그려짐(같은 피드 my-full 두 자리) — 한 화면에 광고 하나",
   "appBuild": true,
   "severity": "report",
-  "basis": "위 model 안이 반영된 뒤(실제 지금 노출) 기준의 차이: 잃은 네이티브 +2.35 되찾음, Quizbank·Logbank 바닥 화면에 머무는 약 2~3분 동안 배너(60초 새로고침, 글 쓰는 동안 숨김) −2로 어림. Stagebank 탭은 바꾸지 않음(stagebank-today는 바닥 화면 배너 그대로). ADS.md '바닥 My 화면은 배너' 결정을 바꾸는 안이라 사용자 확인 필요. 캡처 없음 — 바닥 화면 Quizbank 문제 아래 빈 높이는 확인 필요 · Stagebank: 오늘 할 것이 남은 날 단계 화면 끝까지 내려가 stagebank-stage를 보는 몫을 절반(쓰는 날 0.4 중 −0.2)으로 어림",
+  "basis": "지난 안 그대로(반영 안 됨 — layerOnly 다섯 곳·NotebookSection 두 자리 그대로). 위 model 안이 반영된 뒤 기준의 차이: 잃은 네이티브 +2.35 되찾음, Quizbank·Logbank 바닥 화면에 머무는 약 2~3분 배너 −2, stagebank-stage 절반 −0.2. ADS.md '바닥 My 화면은 배너' 결정을 바꾸는 안이라 사용자 확인 필요. 맨 위 안(1px 접기)이 고쳐지지 않으면 이 안의 네이티브도 0. 캡처 없음 — 바닥 화면 Quizbank 문제 아래 빈 높이는 확인 필요",
   "econ": {
    "extraAds": [
     {
@@ -77,11 +73,11 @@
  {
   "kind": "model",
   "what": "작은 결과 자리: 통화 끝 화면(results call-end)·통화 중 칸(call call-live)을 손익에 넣기 + 0단계 글자 퀴즈(ScriptPractice) 끝 화면 네이티브 넣기",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx 끝 화면 · roleplay/CallParts.tsx CallAdStrip · My 탭 `my` · studyMap/ScriptPractice.tsx 끝 화면 · scripts/sim-users/economics.json extraAds",
-  "why": "지난 두 안을 하나로: call-end·call-live는 넣었지만 economics.json extraAds에 없어 0으로 셈(지금도 callEnd 전면 줄만). ScriptPractice 끝 화면만 다른 끝 화면(quiz-end·lesson-end·recall-end·script-end·이번 frames-skip)과 달리 광고 없음(BodyLayer라 배너 숨음, 한 화면 하나)",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 933줄 끝 화면 · roleplay/CallParts.tsx 427줄 CallAdStrip · My 탭 `my` · studyMap/ScriptPractice.tsx 끝 화면 · scripts/sim-users/economics.json extraAds",
+  "why": "call-end·call-live는 넣었지만 economics.json extraAds에 없어 0으로 셈(callEnd 전면 줄만 있음). 이번 6a17dde 무료 통화 맛보기(처음 한 번 10분)로 무료가 실제 통화 화면·끝 화면에 닿는 일이 생김. ScriptPractice 끝 화면만 다른 끝 화면(quiz-end·lesson-end·recall-end·script-end·frames-skip)과 달리 광고 없음(BodyLayer라 배너 숨음, 한 화면 하나)",
   "appBuild": true,
   "severity": "report",
-  "basis": "지난 안 그대로(둘 다 반영 안 됨 — ScriptPractice.tsx NativeAdSlot 0개). call-end 쓰는 날 0.05·call-live 0.03(포인트 통화 무료만, 680px 미만 제외), 글자 퀴즈 끝 대본 쓰는 날 0.1(0단계만). 손익 줄 넣기는 서버 바로, ScriptPractice 자리는 앱 빌드. 캡처 없음 — 버튼 아래 빈 높이 확인 필요",
+  "basis": "지난 안 그대로(둘 다 반영 안 됨 — economics.json에 call-end·call-live 줄 없음, ScriptPractice.tsx NativeAdSlot 0개). call-end 쓰는 날 0.05·call-live 0.03(포인트·맛보기 통화 무료만, 680px 미만 제외), 글자 퀴즈 끝 대본 쓰는 날 0.1(0단계만). 손익 줄 넣기는 서버 바로, ScriptPractice 자리는 앱 빌드. 캡처 없음 — 버튼 아래 빈 높이 확인 필요",
   "econ": {
    "extraAds": [
     {
@@ -106,12 +102,12 @@
  },
  {
   "kind": "add",
-  "what": "(넣지 않음) 탭을 열 때·보이스룸에 들어갈 때 전면, 이번 새 화면(다음 추천 줄·버튼, 다시 켤 때 하던 자리로, 사람·Room 정리, 이 단계 스킵 화면)의 추가 자리",
-  "where": "앱 틀 `shell` · AppHome.tsx 탭 바꿀 때 · Room 탭 `room` · rooms/RoomsScreen.tsx 방 들어가기 · LanguagePick.tsx · ProfileFrame.tsx·AiTutorProfile.tsx · studyMap/StageFrames.tsx · studyMap/FrameLesson.tsx 대화 단계 · TabIcons.tsx · studyMap/UpNext.tsx · lib/resumeSpot.ts · studyMap/StageFrames.tsx 이 단계 스킵 화면 · rooms/BoardView.tsx·PeopleTab.tsx·RoomsScreen.tsx",
-  "why": "권하지 않음 — 탭 열기는 행동마다·내비게이션을 막는 광고, 보이스룸 들어가기는 콘텐츠가 열린 직후 + 실시간 음성(hub/ADS.md 넣지 않는 곳). 이번 새 화면: 다음 추천 줄(UpNextBar)·버튼은 그 자체가 누르는 버튼이라 옆에 광고 안 됨(끝 화면엔 이미 results 네이티브, 버튼과 my-6 띄움). 다시 켤 때 하던 자리로(00a61c0)는 앱을 켤 때라 전면 안 되고 앱 오프닝 몫 — 수업을 다시 열어 주는 경우 앱 오프닝 뒤 곧바로 수업이 열려 '과제 도중'처럼 보일 수 있어 기기 확인만(자리 안 늘림). 이 단계 스킵 완료 화면(82f2eb4)은 이미 results frames-skip 네이티브가 있음(손익은 results 1.5에 포함, 드묾). 사람 칩·게시판 보이스룸 주제 빼기·Room 로비 내 프로필 줄 빼기(80f5aad)는 목록 네이티브 자리(people-after-4·board-after-3·room-lobby-after-2/5)를 그대로 두고 위치만 위로 — 더할 자리 없음",
+  "what": "(넣지 않음) 탭을 열 때·보이스룸에 들어갈 때 전면, 이번 새 화면(통화 튜터 수업 카드·🎓 버튼, 통화·채팅 💡 더 자연스럽게, 어휘 다시 쓰기, 말 빠르기 메뉴, 가격 개편)의 추가 자리",
+  "where": "앱 틀 `shell` · AppHome.tsx 탭 바꿀 때 · Room 탭 `room` · rooms/RoomsScreen.tsx 방 들어가기 · AI 통화 `call` · roleplay/CallParts.tsx CoachCardView·CallControls 🎓 · RoleplayScreen.tsx 끝 화면 대본 💡 smoother · AI 채팅 `chat` · ChatWindow.tsx·MessageBubble.tsx naturalNote · My 탭 `my` · studyMap/TodayPlan.tsx retype · lib/billing/plans.ts",
+  "why": "권하지 않음 — 탭 열기는 행동마다·내비게이션을 막는 광고, 보이스룸 들어가기는 콘텐츠가 열린 직후 + 실시간 음성(hub/ADS.md 넣지 않는 곳). 이번 새 화면 하나씩: ① 튜터 수업 카드(내 얼굴 아래 🔁 다시 말할 문장)·🎓 버튼은 통화 중 말하는 자리·버튼 줄이라 안 됨 — 이미 버튼 아래 call-live 칸이 있음. 다만 680px 이상 화면에서 call-live 칸(120px+여백)이 세로를 먹어 새 카드(세 줄)가 내 얼굴 칸에서 눌리는지 확인 필요(카드가 잘리면 '광고가 학습 화면을 가림'). ② 통화 끝 대본의 💡 smoother는 끝 화면 장 안 줄이라 기존 call-end 네이티브로 충분, 더할 자리 없음. ③ 채팅 💡 naturalNote는 대화 말풍선 안(넣지 않는 곳). ④ 어휘 다시 쓰기(묶음 끝 빈칸 쓰기 최대 2문제)는 기존 quiz-inline·quizBreak 그대로 — 문제 수가 조금 늘어 10문제 경계에 조금 빨리 닿을 뿐, 새 자리 없음. ⑤ AI 대화 ⋮ 말 빠르기는 메뉴(버튼 옆) — 안 됨. ⑥ 가격 개편(라이트 4,900·플러스 6,500·프리미엄 12,900)은 구독자 광고 없음·결제 화면에 광고 안 둠이라 자리 변화 없음(손익의 전환 몫은 economics.md가 이미 셈)",
   "risky": true,
   "appBuild": true,
-  "basis": "기록용(지난 안 이어 씀). 숫자는 지난 어림 그대로: 쓰는 날 탭 전환 전면 1번, 방을 쓰는 날 들어갈 때 1번",
+  "basis": "기록용(지난 안 이어 씀, 이번 새 화면 판정 더함). 숫자는 지난 어림 그대로: 쓰는 날 탭 전환 전면 1번, 방을 쓰는 날 들어갈 때 1번. 캡처 없음(tmp/sim-users·tmp/ads-blank 없음, build:capacitor 안 돌림) — 통화 화면 세로 공간은 확인 필요",
   "severity": "report",
   "econ": {
    "extraAds": [
@@ -127,7 +123,7 @@
     }
    ]
   },
-  "freePersonMid": 155,
-  "per1000Mid": 151180
+  "per1000Mid": 151180,
+  "freePersonMid": 155
  }
 ]
