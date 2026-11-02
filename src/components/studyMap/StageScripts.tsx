@@ -1,6 +1,8 @@
 "use client";
 
 import { noteSpot } from "@/lib/resumeSpot";
+import { offerUpNext } from "@/lib/curriculum/upNext";
+import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -559,6 +561,7 @@ function ScriptPlayer({
   const closeScript = () => {
     if (fromToday) fireTodayEnd();
     else if (done) void maybeShowInterstitial("scriptEnd");
+    offerUpNext(script.id);
     onClose();
   };
   const restart = () => {
@@ -752,6 +755,7 @@ function ScriptPlayer({
                 {ui.billingClose}
               </button>
             </div>
+            <UpNextButton ui={ui} own={script.id} close={closeScript} />
             {/* 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 "1,2 반영" — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. */}
             {Object.keys(results).length ? <NativeAdSlot feedId="results" slotKey="script-end" spaced /> : null}
           </li>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { ladderFor } from "@/lib/curriculum/stages";
@@ -214,6 +215,11 @@ export function TodayPlan({
   const [picked, setPicked] = useState<string | null>(null);
   // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
+  const upNextRef = useRef<UpNext[]>([]);
+  useEffect(() => {
+    publishUpNext(upNextRef.current);
+  });
+  useEffect(() => () => publishUpNext([]), []);
   const [bundle, setBundle] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   /** 단어 시험(2026-11-01 사용자 "주기적으로 단어 모음 시험 — 틀린 단어·맞힌 단어를 섞어서"). */
   const [wordTestQ, setWordTestQ] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
@@ -487,6 +493,8 @@ export function TodayPlan({
     }
   };
 
+  // 다음 추천(lib/curriculum/upNext.ts): 남은 항목을 차례대로 — 수업 끝 화면·닫은 뒤 줄이 그 첫 항목으로 간다.
+  upNextRef.current = [];
   if (!now || !items.length) return null;
   const scripts = allScriptsFor(language);
   const frames = allFramesFor(language);
@@ -880,6 +888,7 @@ export function TodayPlan({
   const currentAt = items.findIndex((item) => !doneOf(item));
   const current = currentAt >= 0 ? items[currentAt]! : null;
   const openItem = (item: PlanItem) => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id, "today"));
+  upNextRef.current = items.filter((item) => !doneOf(item)).map((item) => ({ id: item.id, label: labelOf(item), open: () => openItem(item) }));
   const todayMake = (): QuizBatch | null => {
     if (!current || current.kind !== "quiz") return null;
     const served = todayServed.current;

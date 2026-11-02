@@ -1,6 +1,8 @@
 "use client";
 
 import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
+import { setUpNextFallback } from "@/lib/curriculum/upNext";
+import { UpNextBar } from "@/components/studyMap/UpNext";
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { localDay } from "@/lib/curriculum/resume";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
@@ -145,6 +147,19 @@ function AutoQuiz({ done, onOpen, baseDepth }: { done: boolean; onOpen: (layer: 
     openRef.current("keep");
   }, [done]);
   return null;
+}
+
+/** 다음 추천(lib/curriculum/upNext.ts): 오늘 할 것을 다 했으면 Quizbank로, 수업을 닫은 뒤 My 아래 줄(UpNextBar). */
+function UpNextHost({ ui, onKeep }: { ui: UICopy; onKeep: () => void }) {
+  const keepRef = useRef(onKeep);
+  useEffect(() => {
+    keepRef.current = onKeep;
+  });
+  useEffect(() => {
+    setUpNextFallback({ id: "keep", label: ui.keepTitle, open: () => keepRef.current() });
+    return () => setUpNextFallback(null);
+  }, [ui.keepTitle]);
+  return <UpNextBar ui={ui} />;
 }
 
 type RelatedItem = { id: string; stage: number; kind: "script" | "frame"; label: string; passed: boolean };
@@ -544,6 +559,7 @@ export function NotebookSection({
           onClose={() => setStageTestFor(null)}
         />
       ) : null}
+      {frame && CURRICULUM_ONLY && book.stages.length ? <UpNextHost ui={ui} onKeep={() => openLayer("keep")} /> : null}
       {frame && CURRICULUM_ONLY && book.stages.length ? (
         <MyLayers
           ui={ui}

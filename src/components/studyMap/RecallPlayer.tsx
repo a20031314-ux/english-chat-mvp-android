@@ -1,5 +1,7 @@
 "use client";
 
+import { offerUpNext } from "@/lib/curriculum/upNext";
+import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -172,6 +174,7 @@ export function RecallPlayer({
   const close = () => {
     if (fromToday) fireTodayEnd();
     else if (done) void maybeShowInterstitial("scriptEnd");
+    offerUpNext(RECALL_ITEM);
     onClose();
   };
   return (
@@ -271,6 +274,7 @@ export function RecallPlayer({
             <button type="button" onClick={close} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
               {ui.billingClose}
             </button>
+            <UpNextButton ui={ui} own={RECALL_ITEM} close={close} />
             {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
             {items.length ? <NativeAdSlot feedId="results" slotKey="recall-end" spaced /> : null}
           </li>

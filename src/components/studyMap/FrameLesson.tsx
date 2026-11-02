@@ -1,6 +1,8 @@
 "use client";
 
 import { noteSpot } from "@/lib/resumeSpot";
+import { offerUpNext } from "@/lib/curriculum/upNext";
+import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -278,6 +280,8 @@ export function FrameLesson({
   const close = () => {
     if (fromToday) fireTodayEnd();
     else if (finished) void maybeShowInterstitial("scriptEnd");
+    // 닫으면 My 아래에 다음 추천 줄(lib/curriculum/upNext.ts, 2026-11-02).
+    offerUpNext(itemId);
     onClose();
   };
 
@@ -584,6 +588,8 @@ export function FrameLesson({
                 {ui.billingClose}
               </button>
             </div>
+            {/* 다음 추천: 오늘 할 것의 다음 항목(다 했으면 Quizbank)으로 바로(2026-11-02 사용자 요청 — 권장 학습 흐름으로 다른 학습으로 이동). */}
+            <UpNextButton ui={ui} own={itemId} close={close} />
             {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
             <NativeAdSlot feedId="results" slotKey={`lesson-end-${itemId}`} spaced />
           </div>
