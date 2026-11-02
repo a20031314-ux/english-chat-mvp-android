@@ -218,3 +218,4 @@
 - 2026-11-02 dev → qa: 다음 빌드 기기에서 Logbank 맨 위 언어능력 육각형 — 꼭짓점 누르면 그 화면(게이지·세부 칩·📎 기록), 세부 칸 누르면 부족한 것·공부할 것·추천, 단계 고르기 화면의 [초급 | 중급 | 고급]. 그리고 그냥 대화 통화 몇 번 뒤 듣기·실전 대화 %가 움직이는지(통화 기록에 차례 셈이 쌓이는지). ja/ko·en/ja·es/ar.
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/missKind.ts:68 — 대화 조각 빈칸을 보기로 푼 것도 쓰기로 셈 (talk에 options 있으면 choose).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:308 — 통화 끝난 뒤 끝 화면에서 저장될 때마다 activeSecs가 늘어남 (finished면 끝난 순간 값 고정).
+- 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:276 — openNotes를 화면이 떠 있을 때만 받아 My가 뜨기 전에 온 신호(?screen=vocab)를 놓침 (뜰 때 takeAppIntent("openNotes")면 focusQuizbankWords·setTab("keep")).
