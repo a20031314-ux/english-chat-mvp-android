@@ -1,6 +1,7 @@
 import { speechLangPrefix, spokenFormForTts } from "@/lib/speech";
 import { apiUrl } from "@/lib/apiBase";
 import { readTutorGender } from "@/lib/tutorGender";
+import { readTutorSpeed } from "@/lib/tutorSpeed";
 
 const PCM_RATE = 24_000;
 const MAX_CACHE = 64;
@@ -32,8 +33,15 @@ function tutorOf(lang: string, voice?: string): string | undefined {
   return voice ? undefined : readTutorGender(speechLangPrefix(lang));
 }
 
+/** 고른 말 빠르기(lib/tutorSpeed.ts) — 1이면 보내지 않아 예전 주소·캐시 그대로. */
+function speedParam(): { speed?: string } {
+  const speed = readTutorSpeed();
+  return speed === 1 ? {} : { speed: String(speed) };
+}
+
 function cacheKey(lang: string, spoken: string, voice?: string): string {
-  return voice ? `${lang}:${voice}:${spoken}` : `${lang}:${tutorOf(lang)}:${spoken}`;
+  const speed = readTutorSpeed();
+  return voice ? `${lang}:${voice}:${speed}:${spoken}` : `${lang}:${tutorOf(lang)}:${speed}:${spoken}`;
 }
 
 function notify(state: StreamState) {
@@ -196,7 +204,7 @@ function ttsUrl(
   voice?: string,
 ): { url: string; init: RequestInit } {
   const tutor = tutorOf(lang, voice);
-  const params = new URLSearchParams({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}) });
+  const params = new URLSearchParams({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}), ...speedParam() });
   const query = params.toString();
   if (query.length < GET_QUERY_LIMIT) {
     return { url: apiUrl(`/api/tts?${query}`), init: { method: "GET" } };
@@ -206,7 +214,7 @@ function ttsUrl(
     init: {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}) }),
+      body: JSON.stringify({ text: spoken, lang, ...(voice ? { voice } : {}), ...(tutor ? { tutor } : {}), ...speedParam() }),
     },
   };
 }

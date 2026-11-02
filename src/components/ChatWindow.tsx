@@ -53,6 +53,7 @@ import {
 } from "@/lib/learningLanguages";
 import { chatPartnerForLanguage, tutorChoices, type TutorGender } from "@/lib/chatPartner";
 import { useTutorGender, writeTutorGender } from "@/lib/tutorGender";
+import { TUTOR_SPEEDS, useTutorSpeed, writeTutorSpeed } from "@/lib/tutorSpeed";
 import {
   detectConversationMode,
   type ConversationMode,
@@ -821,6 +822,7 @@ export function ChatWindow({
   const [reportTarget, setReportTarget] = useState<ReportTarget | null>(null);
   // 고른 튜터(여자·남자, AI 대화 ⋮ "튜터 목소리" — lib/tutorGender.ts): 이름·답의 말투·듣기 목소리.
   const tutorGender = useTutorGender(sessionLanguageCode);
+  const tutorSpeed = useTutorSpeed();
   const partner = chatPartnerForLanguage(sessionLanguageCode, tutorGender);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
@@ -1823,6 +1825,25 @@ export function ChatWindow({
                       >
                         <AiAvatar size={24} language={sessionLanguageCode} gender={gender} />
                         <bdi className="truncate">{tutorChoices(sessionLanguageCode)[gender]}</bdi>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* 말 빠르기: 통화·채팅·듣기 모두(lib/tutorSpeed.ts, 2026-11-02 사용자 "사용자가 조절가능하게"). */}
+                <div className="border-t border-line px-3 py-2" data-tutor-speed>
+                  <p className="text-meta text-slate-400">{ui.tutorSpeed} ×</p>
+                  <div className="mt-1 flex gap-0.5" role="group" aria-label={ui.tutorSpeed}>
+                    {TUTOR_SPEEDS.map((speed) => (
+                      <button
+                        key={speed}
+                        type="button"
+                        aria-pressed={tutorSpeed === speed}
+                        onClick={() => writeTutorSpeed(speed)}
+                        className={`min-w-0 flex-1 rounded-lg py-1 text-xs tabular-nums ${
+                          tutorSpeed === speed ? "bg-platinum text-slate-900" : "text-slate-200 hover:bg-white/10"
+                        }`}
+                      >
+                        {speed}
                       </button>
                     ))}
                   </div>

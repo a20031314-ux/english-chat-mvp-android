@@ -11,10 +11,11 @@ import { speaksWithVoxtral } from "./voxtralLanguages.ts";
 import { TimeStretch } from "./timeStretch.ts";
 
 /**
- * 말 빠르기(1 = 그대로, 0.9 = 10% 느리게 — 높이는 그대로, timeStretch.ts). 사용자 2026-11-02 "voxtral 발음이 좀 빠른데 살짝 느리게".
- * Vercel `VOXTRAL_TTS_SPEED`로 바꿈(0.7~1.2).
+ * 말 빠르기(1 = 그대로, 0.9 = 10% 느리게 — 높이는 그대로, timeStretch.ts). 2026-11-02 아침 0.9로 늦췄다가
+ * 같은 날 사용자 "그대로 돌려줘, 사용자가 조절" → 기본 1, 사람마다는 앱의 "말 빠르기"(lib/tutorSpeed.ts → /api/tts `speed`).
+ * Vercel `VOXTRAL_TTS_SPEED`로 기본을 바꿈(0.7~1.2).
  */
-export const VOXTRAL_DEFAULT_SPEED = 0.9;
+export const VOXTRAL_DEFAULT_SPEED = 1;
 export function voxtralSpeed(override?: string): number {
   const raw = Number(override || process.env.VOXTRAL_TTS_SPEED);
   return Number.isFinite(raw) && raw >= 0.7 && raw <= 1.2 ? raw : VOXTRAL_DEFAULT_SPEED;

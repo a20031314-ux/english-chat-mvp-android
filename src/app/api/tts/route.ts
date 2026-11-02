@@ -7,6 +7,8 @@ import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralSpeed, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
+import { stretchStream } from "@/lib/server/timeStretch";
+import { parseTutorSpeed } from "@/lib/tutorSpeed";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
@@ -79,7 +81,10 @@ async function synthesize(
   rawVoice?: unknown,
   rawTutor?: unknown,
   trialRef?: unknown,
+  rawSpeed?: unknown,
 ) {
+  // 사람마다 고른 말 빠르기(lib/tutorSpeed.ts, 0.8~1.2 — 1이면 안 보냄). 주소에 들어가 캐시도 빠르기별로 따로.
+  const speed = parseTutorSpeed(rawSpeed);
   const client = getOpenAIClient();
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
@@ -133,7 +138,7 @@ async function synthesize(
     const started = Date.now();
     try {
       // 점검 사용자는 x-tts-voxtral-speed로 빠르기를 견줘 볼 수 있다.
-      const audio = await voxtralStream({ text: spoken, refAudio: reference, speed: voxtralSpeed(trialValue(request, "x-tts-voxtral-speed")) });
+      const audio = await voxtralStream({ text: spoken, refAudio: reference, speed: voxtralSpeed(trialValue(request, "x-tts-voxtral-speed") || (speed !== 1 ? String(speed) : undefined)) });
       if (wantsTrialReport(request)) {
         const chunks: Uint8Array[] = [];
         const reader = audio.getReader();
@@ -191,7 +196,7 @@ async function synthesize(
           void reader.cancel();
         },
       });
-      return new NextResponse(body, { status: 200, headers: streamHeaders(request, lang, shared) });
+      return new NextResponse(stretchStream(body, speed), { status: 200, headers: streamHeaders(request, lang, shared) });
     } catch (error) {
       console.error("[tts] realtime failed, falling back:", error);
     }
@@ -236,8 +241,12 @@ async function synthesize(
       return jsonWithCors(request, { engine: "speech", model: MODEL, voice, spoken, audioSeconds: pcm.byteLength / 48000, pcmBase64: pcm.toString("base64") });
     }
     const body = speech.body;
-    if (!body) {
+    if (!body || speed !== 1) {
       const bytes = Buffer.from(await speech.arrayBuffer());
+      if (speed !== 1) {
+        const stretched = new Response(stretchStream(new Blob([bytes]).stream(), speed));
+        return new NextResponse(stretched.body, { status: 200, headers: streamHeaders(request, lang, shared) });
+      }
       return new NextResponse(bytes, {
         status: 200,
         headers: streamHeaders(request, lang, shared),
@@ -260,11 +269,11 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const text = request.nextUrl.searchParams.get("text") ?? "";
   const lang = request.nextUrl.searchParams.get("lang") ?? "en-US";
-  return synthesize(request, text, lang, request.nextUrl.searchParams.get("voice"), request.nextUrl.searchParams.get("tutor"));
+  return synthesize(request, text, lang, request.nextUrl.searchParams.get("voice"), request.nextUrl.searchParams.get("tutor"), undefined, request.nextUrl.searchParams.get("speed"));
 }
 
 export async function POST(request: NextRequest) {
-  let body: { text?: unknown; lang?: unknown; voice?: unknown; tutor?: unknown; refAudio?: unknown };
+  let body: { text?: unknown; lang?: unknown; voice?: unknown; tutor?: unknown; refAudio?: unknown; speed?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -274,5 +283,5 @@ export async function POST(request: NextRequest) {
   const text = typeof body.text === "string" ? body.text : "";
   const lang = typeof body.lang === "string" ? body.lang : "en-US";
   // refAudio: 점검 사용자만(x-tts-engine: voxtral일 때만 읽음) — 목소리 흉내 비교.
-  return synthesize(request, text, lang, body.voice, body.tutor, body.refAudio);
+  return synthesize(request, text, lang, body.voice, body.tutor, body.refAudio, body.speed);
 }

@@ -118,3 +118,21 @@ export class TimeStretch {
     return bytes;
   }
 }
+
+/** 흘러가는 s16le 24kHz 소리를 빠르기만 바꿔 흘려 보낸다(rate 1이면 그대로). Voxtral 밖 예전 엔진(id·th 등)용. */
+export function stretchStream(stream: ReadableStream<Uint8Array>, rate: number): ReadableStream<Uint8Array> {
+  if (rate === 1) return stream;
+  const stretch = new TimeStretch(rate);
+  return stream.pipeThrough(
+    new TransformStream<Uint8Array, Uint8Array>({
+      transform(chunk, controller) {
+        const out = stretch.push(chunk);
+        if (out.byteLength) controller.enqueue(out);
+      },
+      flush(controller) {
+        const out = stretch.flush();
+        if (out.byteLength) controller.enqueue(out);
+      },
+    }),
+  );
+}

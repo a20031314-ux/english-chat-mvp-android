@@ -6,6 +6,7 @@ import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { reportTutorDiag } from "@/lib/roleplay/listen";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import type { SessionState } from "@/lib/roleplay/session";
+import { readTutorSpeed } from "@/lib/tutorSpeed";
 import { playTts, prefetchTts, stopTts, ttsContextState } from "@/lib/ttsPlayer";
 
 /**
@@ -157,6 +158,8 @@ export function playTutorLine(line: {
   }
 
   const audio = new Audio(line.audioPath);
+  // 고른 말 빠르기(높이는 브라우저가 그대로 둠 — preservesPitch 기본).
+  audio.playbackRate = readTutorSpeed();
   line.onAudio?.(audio);
   /**
    * Audio that never finishes must not take the scenario with it.
