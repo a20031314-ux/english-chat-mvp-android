@@ -7,6 +7,7 @@ import {
   attachNativeSlot,
   nativeAdsEnabled,
   nativeSlotFailed,
+  nativeSlotLoaded,
   subscribeAdLayers,
   topAdLayer,
   watchNativeFailures,
@@ -116,6 +117,12 @@ function AppAdSlot({ feedId, slotKey, active, layer, spaced = false }: { feedId:
     return attachNativeSlot(feedId, slotKey, element, layer);
   }, [enabled, failed, active, feedId, slotKey, layer]);
 
+  const loaded = useSyncExternalStore(
+    watchNativeFailures,
+    () => nativeSlotLoaded(feedId, slotKey),
+    () => false,
+  );
   if (!enabled || failed) return null;
-  return <div ref={ref} aria-hidden className={spaced ? "my-6 w-full" : "w-full"} style={{ height: NATIVE_SLOT_HEIGHT }} />;
+  // 광고가 들어오기 전엔 1px로 접어 둔다(붙일 자리는 남겨 광고를 불러오게) — 빈 120px 칸이 목록 가운데를 벌리지 않게(2026-11-02).
+  return <div ref={ref} aria-hidden className={spaced && loaded ? "my-6 w-full" : "w-full"} style={{ height: loaded ? NATIVE_SLOT_HEIGHT : 1 }} />;
 }

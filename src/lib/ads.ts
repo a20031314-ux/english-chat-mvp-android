@@ -603,6 +603,7 @@ const nativeFeeds = new Map<string, FeedEntry>();
 /** 치우는 중인 화면들 — 다 끝난 뒤에 새 화면을 만들어 동시에 2개 한도를 넘지 않게. */
 let nativeDestroying: Promise<unknown> = Promise.resolve();
 const failedSlots = new Set<string>();
+const loadedSlots = new Set<string>();
 const failListeners = new Set<() => void>();
 
 /** 이 사용자에게 네이티브 광고를 둘지(안드로이드·무료·서버 설정). */
@@ -625,6 +626,11 @@ function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
         template: NativeAdTemplate.Small,
         style: NATIVE_STYLE,
         ...(testAds() ? { isTesting: true } : { adId: cfg.units.native }),
+      });
+      // 광고가 실제로 들어온 자리만 높이를 편다(그 전엔 접어 둠 — 2026-11-02 사용자 "채팅 기록이 중간에 떠": 대화 목록 단체방과 1:1 사이 빈칸).
+      void feed.addListener(NativeAdPluginEvents.Loaded, (event) => {
+        loadedSlots.add(`${feedId}:${event.slotKey}`);
+        for (const listener of failListeners) listener();
       });
       // 채우지 못한 자리는 빈칸으로 남기지 않고 접는다.
       void feed.addListener(NativeAdPluginEvents.FailedToLoad, (event) => {
@@ -689,6 +695,11 @@ export function setNativeFeedActive(feedId: string, active: boolean) {
   if (!entry) return;
   entry.active = active;
   syncNativeFeeds();
+}
+
+/** 그 자리에 광고가 들어왔는지(Loaded) — 들어오기 전엔 자리를 접어 둔다. */
+export function nativeSlotLoaded(feedId: string, slotKey: string): boolean {
+  return loadedSlots.has(`${feedId}:${slotKey}`);
 }
 
 export function nativeSlotFailed(feedId: string, slotKey: string): boolean {
