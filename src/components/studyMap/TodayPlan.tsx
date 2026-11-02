@@ -103,6 +103,9 @@ type StudyFocus = "review" | "auto" | "exam" | PartId;
 type StudyLane = "review" | "learn";
 /** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
 type Style = "auto" | QuizStyle | "match";
+/** 어휘 탭 다시 쓰기: 한 묶음에 몇 낱말까지, 고르기 문제와 몇 문제 떨어뜨릴지(2026-11-02). */
+const RETYPE_MAX = 2;
+const RETYPE_GAP = 2;
 const STYLES: readonly Style[] = ["auto", "type", "choose", "order", "say", "meaning", "match"];
 type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick; styles?: Partial<Record<StudyFocus, Style>> };
 // 듣기 위주는 뺌(2026-10-30 사용자 "듣기 문제는 삭제") — 저장된 듣기는 랜덤으로.
@@ -295,6 +298,10 @@ export function TodayPlan({
     }
   };
   const lastCircle = useRef<Set<string>>(new Set());
+  // 어휘 탭 다시 쓰기(2026-11-02 사용자 "어휘퀴즈에 빈칸 타이핑유형을 추가"): 이 묶음에서 고르기로 처음 본 낱말을 묶음 끝에 빈칸 쓰기로 한 번 더.
+  // 두 번째 답은 원 기록을 올리지 않고(한 번 맞히면 익힘 그대로), 틀리면 틀림으로만.
+  const retypeKeys = useRef<Set<string>>(new Set());
+  const retypeSeen = useRef<Set<string>>(new Set());
   const [circleNeed, setCircleNeed] = useState<string[]>([]);
   const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords, circleOn ? circleNeed : undefined);
   const knownWord = (key: string) => knownState(known, key) === "known";
@@ -1276,6 +1283,9 @@ export function TodayPlan({
   // 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 … 풀면 다음 문제로, 설명이나 옵션은 그 내부에"):
   // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
   const recordOne = (one: { key: string; correct: boolean; skipped: boolean }) => {
+    // 다시 쓰기(이 묶음 두 번째 답): 맞으면 원 기록 그대로, 틀리면 틀림으로만 — 경계·익힘을 두 번 세지 않는다.
+    const retype = Boolean(one.key) && retypeKeys.current.has(one.key) && retypeSeen.current.has(one.key);
+    if (one.key && retypeKeys.current.has(one.key)) retypeSeen.current.add(one.key);
     // "모르겠어요"·답 보기는 원에서는 틀림으로(다시 나오게), 다른 기록에는 그대로 안 셈.
     if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
       saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, false, Date.now()), circleOrder, knownWord)));
@@ -1283,7 +1293,9 @@ export function TodayPlan({
     if (one.skipped || !one.key) return;
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
-    if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
+    if (retype && !wrongTab && keepFocus === "vocab" && circleOn && bank) {
+      if (!one.correct) saveCircle(trimCircle(noteAnswer(circleRef.current, one.key, false, Date.now())));
+    } else if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
       const before = circleRef.current;
       const rank = rankOf.get(one.key);
       if (levelOn && rank !== undefined) {
@@ -1332,7 +1344,33 @@ export function TodayPlan({
           used.push(key);
         }
       }
-      return questions.length ? takeBatch({ keys: used, questions }) : null;
+      // 처음 본 낱말 둘까지 묶음 끝에 빈칸 쓰기로 다시 — 두 문제 넘게 뒤에, 고르기와 다른 예문으로(같은 낱말을 모양만 바꿔 연달아 내지 않게).
+      const retype: QuizQuestion[] = [];
+      const retyped = new Set<string>();
+      used.forEach((key, index) => {
+        if (retype.length >= RETYPE_MAX || used.length - index < RETYPE_GAP) return;
+        const first = questions[index];
+        if (first?.kind !== "choose") return;
+        // 다른 예문이 있으면 그것(문제은행이 자라면 생김), 없으면 같은 예문이라도 — 사이에 다른 문제가 있어 떠올려 쓰는 차례가 된다.
+        let same: QuizQuestion | null = null;
+        for (let tryAt = 0; tryAt < 3; tryAt += 1) {
+          const again = bundleQuiz(language, [key], { seed: `${day}-${round}-${key}-retype${tryAt}`, stage, style: "type", strict: true }).questions[0];
+          if (again?.kind !== "type") continue;
+          if (again.text !== first.text) {
+            retype.push(again);
+            retyped.add(key);
+            return;
+          }
+          same ??= again;
+        }
+        if (same) {
+          retype.push(same);
+          retyped.add(key);
+        }
+      });
+      retypeKeys.current = retyped;
+      retypeSeen.current = new Set();
+      return questions.length ? takeBatch({ keys: [...used, ...used.filter((key) => retyped.has(key))], questions: [...questions, ...retype] }) : null;
     }
     if (keepFocus === "vocab") {
       const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
