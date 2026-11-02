@@ -948,6 +948,27 @@ export function TodayPlan({
     if (item.kind === "frame") return frames.find((one) => one.id === item.id)?.examples[0]?.text ?? "";
     return "";
   };
+  const iconButton = "flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink";
+  const testIcon = (test: "placement" | "stage" | "entry" | "take") => {
+    const testList = itemsOf(test);
+    const name =
+      test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle;
+    return (
+      <button
+        type="button"
+        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : { "data-checkup-offer": "" })}
+        aria-label={name}
+        title={name}
+        onClick={() => {
+          if (test !== "placement") setFrozenItems(testList);
+          setCheckupOpen(test);
+        }}
+        className={iconButton}
+      >
+        <span aria-hidden>📝</span>
+      </button>
+    );
+  };
   const todayBody = (
     <div data-today-plan>
       <div className="flex items-center gap-2">
@@ -961,6 +982,8 @@ export function TodayPlan({
             />
           ))}
         </span>
+        {/* 실력 확인·단계 시험·단계 미리 확인은 단계를 정하는 시험이라 Stagebank에(2026-11-03 사용자 — 예전 Quizbank 머리 줄은 정기 시험 탭과 겹침). */}
+        {learnTest ? testIcon(learnTest) : null}
         <button
           type="button"
           data-plan-settings
@@ -1410,27 +1433,6 @@ export function TodayPlan({
     }
     return takeBatch(bundleFor("learn"));
   };
-  const iconButton = "flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink";
-  const testIcon = (test: "placement" | "stage" | "entry" | "take") => {
-    const testList = itemsOf(test);
-    const name =
-      test === "placement" ? ui.placementTitle : test === "stage" ? `${ui.placementTitle} · ${ui.stageNumber.replace("{n}", String(stage))}` : test === "entry" ? ui.entryCheckTitle.replace("{n}", String(stage)) : ui.checkupTitle;
-    return (
-      <button
-        type="button"
-        {...(test === "placement" ? { "data-placement-offer": "" } : test === "stage" ? { "data-stage-test-offer": "" } : test === "entry" ? { "data-entry-offer": "" } : { "data-checkup-offer": "" })}
-        aria-label={name}
-        title={name}
-        onClick={() => {
-          if (test !== "placement") setFrozenItems(testList);
-          setCheckupOpen(test);
-        }}
-        className={iconButton}
-      >
-        <span aria-hidden>📝</span>
-      </button>
-    );
-  };
   const settingsIcon = (which: "keep" | "review") => (
     <button type="button" data-quiz-settings={which} aria-label={ui.planSettings} title={ui.planSettings} onClick={() => setSettingsOpen(which)} className={iconButton}>
       <span aria-hidden>⚙</span>
@@ -1623,7 +1625,6 @@ export function TodayPlan({
           })}
         </div>
         {!wrongTab && !examTab ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
-        {learnTest ? testIcon(learnTest) : null}
         {!wrongTab && !examTab && bank ? settingsIcon("keep") : null}
       </div>
       {testDue ? (
