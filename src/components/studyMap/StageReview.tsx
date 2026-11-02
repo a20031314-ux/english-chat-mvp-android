@@ -106,7 +106,7 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
                     <FixedExplain fixed={fixed} ui={ui} tag={tag} />
                     <section data-review-quiz>
                       <h3 className="text-meta font-semibold text-slate-400">
-                        {ui.quizTag} {quizLog ? quizLog.last ? <span className="text-good">✓</span> : <span className="text-warn">✗</span> : null}
+                        {ui.quizTag} {quizLog ? quizLog.last ? <span className="text-good">✓</span> : <span className="text-bad">✗</span> : null}
                       </h3>
                       <ul className="mt-1 flex flex-col gap-1.5">
                         {fixed.quiz.map((q, at) => (
@@ -142,7 +142,7 @@ export function StageReview({ ui, locale, language, stage, passed, onClose }: { 
                                 {reveal ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
                               </span>
                               {mineLine?.text ? (
-                                <span data-review-said dir="auto" className={`text-caption ${mineLine.good ? "text-good" : "text-warn"}`}>
+                                <span data-review-said dir="auto" className={`text-caption ${mineLine.good ? "text-good" : "text-bad"}`}>
                                   {mineLine.good ? "✓" : "✗"} {mineLine.text}
                                 </span>
                               ) : null}
@@ -201,7 +201,7 @@ function QuizSolved({ q, reveal }: { q: FixedQuiz; reveal: boolean }) {
           <span>{q.wrong}</span>
         ) : (
           <>
-            <span className="text-warn line-through">{q.bad}</span>
+            <span className="text-bad line-through">{q.bad}</span>
             <span className="mx-1 text-slate-500">→</span>
             <span className="text-status-learned">{/^\((빼기|remove|削除|삭제)\)$/i.test(q.right.trim()) ? "∅" : q.right}</span>
             <span className="ms-2 text-slate-400">{q.wrong}</span>

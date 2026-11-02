@@ -303,7 +303,7 @@ export function QuestionView({
       {answered && examples && bankKey && "text" in question ? <MoreExamples key={question.text} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
-          <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-warn"}`}>
+          <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
           {explainLink && !answered.correct && bankKey && /^[efg]\|/.test(bankKey) ? (
@@ -405,7 +405,7 @@ function FixView({
           const bad = question.bad.includes(i);
           const style = answered
             ? bad
-              ? "border-warn bg-warn/15 text-warn"
+              ? "border-bad bg-bad/15 text-bad"
               : tapped === i
                 ? "border-line text-slate-500 line-through"
                 : "border-transparent text-slate-200"
@@ -534,7 +534,7 @@ function TypeBox({
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
           }}
-          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${tone.hint} ${done ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : `border-line text-slate-100 ${tone.focus}`}`}
+          className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${tone.hint} ${done ? (result ? "border-good text-ink" : "border-bad text-bad line-through") : `border-line text-slate-100 ${tone.focus}`}`}
         />
         {done ? null : (
           <button type="button" onClick={submit} disabled={!typed.trim() || busy} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50">
@@ -721,7 +721,7 @@ function SpotView({
           const bad = question.bad.includes(i);
           const style = answered
             ? bad
-              ? "bg-warn/15 text-warn"
+              ? "bg-bad/15 text-bad"
               : tapped === i
                 ? "text-slate-500 line-through"
                 : "text-slate-200"
@@ -833,9 +833,9 @@ function DialogView({
         const shown = answered && !right && i === question.at;
         const style =
           picked === i && !right
-            ? "border-warn/70 text-slate-400 line-through"
+            ? "border-bad/70 text-slate-400 line-through"
             : shown
-              ? "border-warn bg-warn/10 text-warn"
+              ? "border-bad bg-bad/10 text-bad"
               : right && i === question.at
                 ? tone.pick
                 : "border-line text-slate-100 hover:bg-white/5";
@@ -928,7 +928,7 @@ function ChooseView({
               : picked === i
                 ? alsoOk
                   ? "border-good/60 text-ink"
-                  : "border-warn text-warn"
+                  : "border-bad text-bad"
                 : "border-line text-slate-500"
             : fitting.includes(i)
               ? "border-line text-slate-500"
@@ -968,7 +968,7 @@ function ChooseView({
                 </span>
               ) : null}
               {answered && !isRight && notes[i]?.why ? (
-                <span data-option-why dir="auto" className="mt-0.5 block text-meta text-warn">
+                <span data-option-why dir="auto" className="mt-0.5 block text-meta text-bad">
                   {notes[i]!.why}
                 </span>
               ) : null}
@@ -1043,7 +1043,7 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
       {question.options ? (
         <div className="flex flex-wrap gap-1.5">
           {question.options.map((option) => {
-            const style = answered ? (option === question.answer ? "border-good bg-good/10 text-ink" : picked === option ? "border-warn text-warn line-through" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
+            const style = answered ? (option === question.answer ? "border-good bg-good/10 text-ink" : picked === option ? "border-bad text-bad line-through" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
             return (
               <button
                 key={option}
@@ -1129,7 +1129,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
               {chunk}
               {k < question.blanks.length ? (
                 answered ? (
-                  <strong className={`font-semibold ${results?.[k] ? "text-good" : "text-warn underline decoration-dotted"}`}>{question.blanks[k]!.answer}</strong>
+                  <strong className={`font-semibold ${results?.[k] ? "text-good" : "text-bad underline decoration-dotted"}`}>{question.blanks[k]!.answer}</strong>
                 ) : (
                   <strong className={`font-semibold ${tone.blank}`}>＿{CIRCLED[k]}＿</strong>
                 )
@@ -1152,7 +1152,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
                   <div className="flex min-w-0 flex-1 flex-wrap gap-1.5">
                     {blank.options.map((option) => {
                       const on = typed[i] === option;
-                      const style = answered ? (option === blank.answer ? "border-good bg-good/10 text-ink" : on ? "border-warn text-warn line-through" : "border-line text-slate-500") : on ? tone.pick : "border-line text-slate-100 hover:bg-white/5";
+                      const style = answered ? (option === blank.answer ? "border-good bg-good/10 text-ink" : on ? "border-bad text-bad line-through" : "border-line text-slate-500") : on ? tone.pick : "border-line text-slate-100 hover:bg-white/5";
                       return (
                         <button key={option} type="button" dir="auto" disabled={Boolean(answered)} onClick={() => setTyped((list) => list.map((one, k) => (k === i ? option : one)))} className={`rounded-lg border px-2.5 py-1 text-chat ${style}`}>
                           {option}
@@ -1174,7 +1174,7 @@ function MultiView({ ui, locale, language, question, answered, onAnswer, tag }: 
                     onKeyDown={(event) => {
                       if (event.key === "Enter" && !event.nativeEvent.isComposing) void submit();
                     }}
-                    className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (result ? "border-good text-ink" : "border-warn text-warn line-through") : `border-line text-slate-100 ${tone.focus}`}`}
+                    className={`min-w-0 flex-1 rounded-xl border bg-transparent px-3 py-2 text-chat outline-none ${answered ? (result ? "border-good text-ink" : "border-bad text-bad line-through") : `border-line text-slate-100 ${tone.focus}`}`}
                   />
                 )}
               </div>
@@ -1254,14 +1254,14 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
             ? e >= 0
               ? done[e]
                 ? "border-good/60 bg-good/10 text-ink"
-                : "border-warn bg-warn/15 text-warn"
+                : "border-bad bg-bad/15 text-bad"
               : misses.includes(i)
                 ? "border-line text-slate-500 line-through"
                 : "border-transparent text-slate-200"
             : e >= 0 && done[e] !== null
               ? done[e]
                 ? "border-good/60 bg-good/10 text-ink"
-                : "border-warn bg-warn/15 text-warn"
+                : "border-bad bg-bad/15 text-bad"
               : e >= 0 && active === e
                 ? tone.pick
                 : misses.includes(i)
@@ -1318,7 +1318,7 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
         <div className="flex flex-col gap-1">
           {question.errors.map((error, i) => (
             <p key={i} dir="auto" className="text-caption text-slate-300">
-              <span aria-hidden>{done[i] ? "✓ " : "✗ "}</span>
+              <span aria-hidden className={done[i] ? "text-good" : "text-bad"}>{done[i] ? "✓ " : "✗ "}</span>
               <bdi className="text-slate-500 line-through">{error.near[0]}</bdi> → <bdi className={`font-semibold ${tone.accent}`}>{error.want}</bdi>
             </p>
           ))}
@@ -1450,7 +1450,7 @@ function PickView({
             ? isRight
               ? "border-good bg-good/10 text-ink"
               : picked === i
-                ? "border-warn text-warn line-through"
+                ? "border-bad text-bad line-through"
                 : "border-line text-slate-500"
             : "border-line text-slate-100 hover:bg-white/5";
           return (
@@ -1551,7 +1551,7 @@ function ReplyView({
             ? isRight
               ? "border-good bg-good/10 text-ink"
               : picked === i
-                ? "border-warn text-warn line-through"
+                ? "border-bad text-bad line-through"
                 : "border-line text-slate-500"
             : picked === i
               ? tone.pick

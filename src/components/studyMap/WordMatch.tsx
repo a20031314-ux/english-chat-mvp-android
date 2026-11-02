@@ -119,7 +119,7 @@ export function WordMatch({
                   disabled={done.has(i)}
                   onClick={() => pickRight(i)}
                   className={`${cell} ${
-                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : miss === i ? "border-warn bg-warn/10 text-ink" : "border-line text-slate-200 hover:bg-white/5"
+                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : miss === i ? "border-bad bg-bad/10 text-ink" : "border-line text-slate-200 hover:bg-white/5"
                   }`}
                 >
                   {set.picked[i]!.meaning}
@@ -171,7 +171,7 @@ export function WordMatch({
                   disabled={done.has(i)}
                   onClick={() => pickRight(i)}
                   className={`${cell} ${
-                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : miss === i ? "border-warn bg-warn/10 text-ink" : "border-line text-slate-200 hover:bg-white/5"
+                    done.has(i) ? "border-good/40 bg-good/10 text-slate-500" : miss === i ? "border-bad bg-bad/10 text-ink" : "border-line text-slate-200 hover:bg-white/5"
                   }`}
                 >
                   {set.picked[i]!.meaning}

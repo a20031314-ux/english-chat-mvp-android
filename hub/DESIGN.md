@@ -52,7 +52,7 @@
 | violet | 말하는 방·사람·지도에서 고른 것에만(지금 쓰는 그대로) |
 
 바탕에 깔 때는 투명도로: `bg-good/15 border-good/30 text-good`. 
-**My 큰 칸 색**(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고"): 펼친 칸의 테두리·바탕·제목만 칸마다 — Stagebank(오늘 할 것과 한 칸, 2026-10-30) `status-learned` · Quizbank `good` · Logbank `info`(2026-10-31, 예전 복습 `bad`)(`NotebookSection` `LAYER_TONE`). **칸 안의 강조도 칸 색**(2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘", `studyMap/bankTone.tsx` — 빈칸·고른 낱말·답한 뒤 정답·입력칸 포커스·시험 줄·체크 줄·⚙ 고른 줄·Logbank 배움 칩): 칸이 `BankToneProvider`로 감싸고 안에서 `useBankTone()`, 칸 밖에서 그 칸 화면을 만드는 곳은 `bankTone(id)`. 맞음 `good`·틀림 `warn`·익힘 `status-mastered`는 칸과 상관없이 그대로(Quizbank에선 강조와 맞음이 같은 초록). 감싸지 않은 화면(수업·시험·오늘 할 것 퀴즈)은 Stagebank 색.
+**My 큰 칸 색**(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고"): 펼친 칸의 테두리·바탕·제목만 칸마다 — Stagebank(오늘 할 것과 한 칸, 2026-10-30) `status-learned` · Quizbank `good` · Logbank `info`(2026-10-31, 예전 복습 `bad`)(`NotebookSection` `LAYER_TONE`). **칸 안의 강조도 칸 색**(2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘", `studyMap/bankTone.tsx` — 빈칸·고른 낱말·답한 뒤 정답·입력칸 포커스·시험 줄·체크 줄·⚙ 고른 줄·Logbank 배움 칩): 칸이 `BankToneProvider`로 감싸고 안에서 `useBankTone()`, 칸 밖에서 그 칸 화면을 만드는 곳은 `bankTone(id)`. 맞음 `good`·**틀림 `bad`(빨강 — 2026-11-03 사용자 "오답 표시는 빨간색", 예전 `warn`)**·익힘 `status-mastered`는 칸과 상관없이 그대로(Quizbank에선 강조와 맞음이 같은 초록). **위 칸 이름 버튼도 칸 색**(고르지 않은 것은 흐리게, `LAYER_TONE` dim), 칸 안 고른 탭·토글 칩은 `bankTone().chip`(위 버튼과 같은 모양 — 흰 칩 안 씀), Logbank 육각형·게이지는 하늘(`fill`·`bar`), 2026-11-03. 감싸지 않은 화면(수업·시험·오늘 할 것 퀴즈)은 Stagebank 색.
 **표현의 세 상태**는 정해진 색: `bg-status-mastered`(숙지) · `bg-status-learned`(배운 것) · `bg-status-pending`(알아야 할 것·만난 것). 지도 막대·점·장부 모두 이것만.
 
 **글자 크기** (줄 높이는 물려받음)

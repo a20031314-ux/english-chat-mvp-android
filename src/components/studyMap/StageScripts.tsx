@@ -727,7 +727,7 @@ function ScriptPlayer({
                 ) : null}
                 {result && !result.clean ? (
                   // 오답: 내가 쓴 그대로(아래에 정답 줄).
-                  <p dir="auto" className="mt-1 text-note text-warn line-through decoration-warn/60">
+                  <p dir="auto" className="mt-1 text-note text-bad line-through decoration-bad/60">
                     {result.heard}
                   </p>
                 ) : null}
@@ -741,7 +741,7 @@ function ScriptPlayer({
                 ) : null}
                 {answered ? readingOf(line.text) : null}
                 {answered ? (
-                  <p className={`mt-1 text-caption ${result!.clean ? "text-good" : "text-warn"}`}>{result!.clean ? `✓ ${ui.quizRight}` : `✗ ${ui.quizWrong}`}</p>
+                  <p className={`mt-1 text-caption ${result!.clean ? "text-good" : "text-bad"}`}>{result!.clean ? `✓ ${ui.quizRight}` : `✗ ${ui.quizWrong}`}</p>
                 ) : null}
                 {current && answered ? (
                   <div className="mt-2 flex justify-end">

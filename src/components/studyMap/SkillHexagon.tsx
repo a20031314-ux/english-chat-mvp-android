@@ -1,8 +1,12 @@
 "use client";
 
+import { bankTone } from "@/components/studyMap/bankTone";
 import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { AXES, STAGES, type Axis, type AxisFill, type FillCell, type FillResult } from "@/lib/curriculum/fill";
+
+/** Logbank 칸 색(하늘) — 위 칸 이름 버튼과 같게(2026-11-03). */
+const LOG = bankTone("log");
 
 /**
  * Logbank 맨 위 언어능력 육각형(2026-11-02 사용자 그림 "언어능력 지도" — 꼭짓점을 누르면 그 변수의 게이지, 빈 곳을 누르면 부족한 것·공부할 것·추천,
@@ -78,7 +82,7 @@ export function SkillHexagon({
           return <line key={i} x1={CX} y1={CY} x2={x} y2={y} className="stroke-white/10" strokeWidth="0.8" />;
         })}
         {then ? <path data-skill-before d={path(then)} className="fill-none stroke-slate-400" strokeWidth="1.2" strokeDasharray="4 3" opacity="0.7" /> : null}
-        <path data-skill-now d={path(now)} className="fill-info stroke-info" fillOpacity="0.22" strokeWidth="2.2" strokeLinejoin="round" />
+        <path data-skill-now d={path(now)} className={`${LOG.fill} ${LOG.stroke}`} fillOpacity="0.22" strokeWidth="2.2" strokeLinejoin="round" />
         {AXES.map((axis, i) => {
           const one = result.axes[axis];
           const [lx, ly] = point(i, one.low);
@@ -105,7 +109,7 @@ export function SkillHexagon({
               }}
               className="cursor-pointer outline-none"
             >
-              <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : "fill-info"} />
+              <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : LOG.fill} />
               <text x={tx} y={ty - 6} textAnchor={anchor} className="fill-ink text-caption font-semibold">
                 {labelLines(axisName(ui, axis)).map((line, n, all) => (
                   <tspan key={n} x={tx} dy={n === 0 ? -(all.length - 1) * 15 : 15}>{line}</tspan>
@@ -205,7 +209,7 @@ export function AxisDetail({
   const parts = axis === "talk" ? fill.cells.filter((cell) => cell.id.startsWith("part:")) : [];
   const bar = (value: number, weak: boolean) => (
     <span className="relative h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-white/10">
-      <span className={`absolute inset-y-0 start-0 rounded-full ${weak ? "bg-warn" : "bg-info"}`} style={{ width: `${Math.round(Math.min(1, Math.max(0, value)) * 100)}%` }} />
+      <span className={`absolute inset-y-0 start-0 rounded-full ${weak ? "bg-warn" : LOG.bar}`} style={{ width: `${Math.round(Math.min(1, Math.max(0, value)) * 100)}%` }} />
     </span>
   );
   return (
@@ -241,7 +245,7 @@ export function AxisDetail({
             aria-selected={tab === one.id}
             data-skill-tab={one.id}
             onClick={() => setTab(one.id)}
-            className={`rounded-full px-3 py-1 text-caption ${tab === one.id ? "border border-info/40 bg-info/10 text-info" : "border border-line text-slate-300"}`}
+            className={`rounded-full px-3 py-1 text-caption ${tab === one.id ? LOG.chip : "border border-line text-slate-300"}`}
           >
             {one.title}
           </button>

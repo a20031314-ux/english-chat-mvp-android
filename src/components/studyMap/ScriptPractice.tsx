@@ -266,7 +266,7 @@ export function ScriptSheet({
                     <span className="text-note font-semibold text-good">✓ {ui.quizRight}</span>
                   ) : (
                     <>
-                      <span className="min-w-0 text-note font-semibold text-warn">
+                      <span className="min-w-0 text-note font-semibold text-bad">
                         {ui.quizWrong} · <bdi dir="auto">{question.item.char}</bdi> = <bdi dir="ltr">{question.item.reading}</bdi>
                       </span>
                       <button type="button" data-letters-next onClick={() => advance(right)} className="shrink-0 rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
@@ -289,7 +289,7 @@ export function ScriptSheet({
               {missed.length ? (
                 <ul data-letters-missed className="flex flex-wrap gap-2">
                   {missed.map((item, index) => (
-                    <li key={index} className="flex items-center gap-1.5 rounded-xl border border-warn/50 px-2.5 py-1.5">
+                    <li key={index} className="flex items-center gap-1.5 rounded-xl border border-bad/50 px-2.5 py-1.5">
                       <span dir="auto" className="text-body font-semibold text-ink">{item.char}</span>
                       <span dir="ltr" className="text-caption text-slate-300">{item.reading}</span>
                       <TTSButton text={item.say} lang={speech} />

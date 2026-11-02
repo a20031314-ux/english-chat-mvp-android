@@ -58,7 +58,7 @@ export function GrammarExplain({ page, ui, language }: { page: GrammarLesson; ui
             {page.mistakes.map((one, at) => (
               <li key={at} className="rounded-xl bg-white/[0.06] px-3 py-2">
                 <span dir="auto" className="block text-chat">
-                  <span className="text-warn line-through">{one.wrong}</span>
+                  <span className="text-bad line-through">{one.wrong}</span>
                   <span className="mx-1.5 text-slate-500">→</span>
                   <span className="text-status-learned">{one.right}</span>
                 </span>

@@ -585,7 +585,7 @@ export function FrameLesson({
                 </p>
               ) : null}
               {result?.heard ? (
-                <p dir="auto" className="text-chat text-slate-100">
+                <p dir="auto" className={`text-chat ${result.good ? "text-slate-100" : "text-bad line-through decoration-bad/60"}`}>
                   {result.heard}
                 </p>
               ) : null}

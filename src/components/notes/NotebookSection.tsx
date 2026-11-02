@@ -1625,7 +1625,7 @@ function FixCardRow({
       ) : (
         <>
           <p dir="auto" className="flex gap-1.5 text-note text-slate-400">
-            <span aria-hidden className="shrink-0 text-rose-300">✗</span>
+            <span aria-hidden className="shrink-0 text-bad">✗</span>
             <span className="min-w-0 line-through decoration-rose-300/60">{card.wrong}</span>
           </p>
           <p dir="auto" className="mt-0.5 flex gap-1.5 text-note text-ink">
@@ -2151,10 +2151,11 @@ function AutoFull({ onFull }: { onFull: () => void }) {
  * 한 번에 하나만 펼친다. 퀴즈·시험 화면(overlays)은 칸이 접혀도 떠 있어야 해서 따로.
  */
 /** 큰 칸마다 다른 색(2026-10-30 사용자 "탭별로 구분되게 노란색으로 통일하지 말고") — 펼친 칸의 테두리·바탕·제목. hub/DESIGN.md "My 큰 칸 색". */
-const LAYER_TONE: Record<MyLayer, { box: string; title: string }> = {
-  stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned" },
-  keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good" },
-  log: { box: "border-info/40 bg-info/[0.04]", title: "text-info" },
+// dim = 고르지 않은 위 칸 이름 버튼도 그 칸 색(2026-11-03 사용자 "탭별로 색을 구분해서 상단 버튼에 맞춰줘").
+const LAYER_TONE: Record<MyLayer, { box: string; title: string; dim: string }> = {
+  stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned", dim: "border-status-learned/20 text-status-learned/70" },
+  keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good", dim: "border-good/20 text-good/70" },
+  log: { box: "border-info/40 bg-info/[0.04]", title: "text-info", dim: "border-info/20 text-info/70" },
 };
 
 /**
@@ -2193,7 +2194,7 @@ function LayerJump({
           aria-selected={active === one.id}
           aria-current={active === one.id ? "true" : undefined}
           onClick={() => onJump(one.id)}
-          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : "border-line text-slate-300"}`}
+          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : `${LAYER_TONE[one.id].dim} hover:bg-white/5`}`}
         >
           {one.title}
         </button>

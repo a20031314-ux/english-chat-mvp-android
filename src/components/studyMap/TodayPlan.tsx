@@ -1061,7 +1061,7 @@ export function TodayPlan({
               type="button"
               aria-pressed={on}
               onClick={() => save({ ...settings, pace })}
-              className={`rounded-full px-3 py-1 text-caption ${on ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+              className={`rounded-full px-3 py-1 text-caption ${on ? bankTone("stage").chip : "border border-line text-slate-300 hover:bg-white/10"}`}
             >
               {ui.planMinutes.replace("{n}", String(pace))}
               {days ? <span className={on ? "text-slate-600" : "text-slate-500"}> · {ui.planDays.replace("{n}", String(days))}</span> : null}
@@ -1617,7 +1617,7 @@ export function TodayPlan({
                 aria-selected={on}
                 data-focus={tab}
                 onClick={() => save({ ...settings, focus: tab })}
-                className={`rounded-full px-3 py-1 text-caption ${on ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+                className={`rounded-full px-3 py-1 text-caption ${on ? keepTone.chip : "border border-line text-slate-300 hover:bg-white/10"}`}
               >
                 {tab === "review" ? ui.weakTitle : tab === "exam" ? ui.examTitle : partName(ui, tab)}
               </button>
@@ -2014,7 +2014,7 @@ export function SelfCheck({ ui, language, id, weak = [] }: { ui: UICopy; languag
             type="button"
             aria-pressed={marks[key] === false}
             onClick={() => mark(key, false)}
-            className={`shrink-0 rounded-full px-2.5 py-1 text-caption ${marks[key] === false ? "bg-warn text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
+            className={`shrink-0 rounded-full px-2.5 py-1 text-caption ${marks[key] === false ? "bg-bad text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
           >
             {ui.checkUnsure}
           </button>

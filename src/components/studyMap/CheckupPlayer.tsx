@@ -174,7 +174,7 @@ export function CheckupResult({
               <li key={one} data-section={one} className="flex items-center gap-2">
                 <span className="min-w-0 flex-1 text-note text-ink">{sectionName(ui, one)}</span>
                 {diff !== null && diff !== 0 ? (
-                  <span className={`text-caption tabular-nums ${diff > 0 ? "text-good" : "text-warn"}`}>
+                  <span className={`text-caption tabular-nums ${diff > 0 ? "text-good" : "text-bad"}`}>
                     {ui.checkupPrev} {diff > 0 ? "▲" : "▼"}
                   </span>
                 ) : null}
@@ -197,7 +197,7 @@ export function CheckupResult({
               <div className="flex items-center gap-2">
                 <span className="min-w-0 flex-1 text-note text-ink">{partName(ui, part)}</span>
                 {diff !== null && diff !== 0 ? (
-                  <span className={`text-caption tabular-nums ${diff > 0 ? "text-good" : "text-warn"}`}>
+                  <span className={`text-caption tabular-nums ${diff > 0 ? "text-good" : "text-bad"}`}>
                     {ui.checkupPrev} {diff > 0 ? "▲" : "▼"}
                   </span>
                 ) : null}
@@ -227,10 +227,10 @@ export function CheckupResult({
       ) : null}
       {result.wrong.length ? (
         <div className="flex flex-col gap-1.5 border-t border-line pt-3">
-          <h3 className="text-caption font-semibold text-warn">{ui.checkupWrong}</h3>
+          <h3 className="text-caption font-semibold text-bad">{ui.checkupWrong}</h3>
           <div className="flex flex-wrap gap-1.5">
             {result.wrong.map((key) => (
-              <span key={key} dir="auto" className="rounded-full border border-warn/40 px-2.5 py-0.5 text-caption text-slate-200">
+              <span key={key} dir="auto" className="rounded-full border border-bad/40 px-2.5 py-0.5 text-caption text-slate-200">
                 {labelOf(key)}
               </span>
             ))}
