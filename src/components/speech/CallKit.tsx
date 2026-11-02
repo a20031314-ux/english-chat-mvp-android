@@ -102,7 +102,7 @@ export function CallButton({
       aria-pressed={pressed}
       aria-label={label}
       title={label}
-      className="flex w-[4.5rem] flex-col items-center gap-1.5 disabled:opacity-40"
+      className="flex min-w-0 max-w-[4.5rem] flex-1 flex-col items-center gap-1.5 disabled:opacity-40"
     >
       <span
         aria-hidden
@@ -118,7 +118,7 @@ export function CallButton({
       >
         {icon}
       </span>
-      <span className="text-caption leading-tight text-slate-300">{label}</span>
+      <span className="text-center text-caption leading-tight text-slate-300">{label}</span>
     </button>
   );
 }
@@ -159,6 +159,9 @@ export function useStoredToggle(key: string): [boolean, () => void] {
   };
   return [on, toggle];
 }
+
+/** AI 통화 튜터 수업 켬/끔(🎓, 2026-11-02) — 이 기기에 기억, 그냥 대화에서만. */
+export const CALL_COACH_KEY = "callCoach.v1";
 
 /** 통화 자막 켬/끔 — AI 통화와 사람 통화가 같은 값(한쪽에서 켜면 다른 쪽도, 2026-11-01). */
 export const CALL_CAPTIONS_KEY = "roleplayCaptions";

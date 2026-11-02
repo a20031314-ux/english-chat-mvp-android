@@ -181,6 +181,8 @@ export async function POST(request: NextRequest) {
     ...(body.missed === true ? { missed: true } : {}),
     // 고른 튜터(여자·남자, lib/tutorGender.ts) — 그냥 대화의 이름·성별. 옛 앱은 예전 기본.
     tutorGender: serverTutorGender(scenario.language, body.tutorGender),
+    // 튜터 수업(통화 화면 🎓, lib/callStyle.ts) — 큰 실수만 소리로 짚고 다시 말해 보기(director.ts coachRules).
+    ...(body.coach === true ? { coach: true } : {}),
   };
 
   const bank = sentencesFor(scenario.language);

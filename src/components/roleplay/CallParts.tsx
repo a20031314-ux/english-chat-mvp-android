@@ -45,6 +45,7 @@ export function CallStage({
   timeLeft,
   caption,
   goal,
+  redo,
   gender,
 }: {
   language: string;
@@ -56,6 +57,8 @@ export function CallStage({
   caption: { text: string; meaning?: string } | null;
   /** 대본 장면이면 지금 할 일(열린 대화에는 없음). */
   goal?: string;
+  /** 튜터 수업: 튜터가 다시 말해 보라고 한 문장(학습 언어) — 내 얼굴 아래 🔁 한 줄. */
+  redo?: string;
 }) {
   const chosen = useTutorGender(language);
   const partner = chatPartnerForLanguage(language, gender ?? chosen);
@@ -106,7 +109,14 @@ export function CallStage({
         ) : (
           <TalkingBars on={speaker === "learner"} />
         )}
-        {goal ? <p className="max-w-md text-meta text-slate-400">{goal}</p> : null}
+        {redo ? (
+          <p className="flex max-w-md items-start gap-1.5 text-body text-ink" data-call-redo>
+            <span aria-hidden>🔁</span>
+            <bdi dir="auto">{redo}</bdi>
+          </p>
+        ) : goal ? (
+          <p className="max-w-md text-meta text-slate-400">{goal}</p>
+        ) : null}
       </section>
     </div>
   );
@@ -114,6 +124,7 @@ export function CallStage({
 
 /**
  * 통화 중 아래 버튼 넷: 🙉 못 알아들었어요 · 💬 자막 · 💡 힌트 · 끝내기(빨강).
+ * 그냥 대화면 💬 옆에 🎓 튜터 수업(켬/끔, 2026-11-02) — 큰 실수만 소리로 짚고 다시 말해 보기.
  * 끝내기는 통화를 내려놓는 것 — 기록에 남아 통화 기록에서 이어서 할 수 있다(예전 "중단").
  */
 export function CallControls({
@@ -122,6 +133,8 @@ export function CallControls({
   captions,
   onMissed,
   onToggleCaptions,
+  coach,
+  onToggleCoach,
   onHint,
   onEnd,
 }: {
@@ -131,6 +144,9 @@ export function CallControls({
   captions: boolean;
   onMissed: () => void;
   onToggleCaptions: () => void;
+  /** 튜터 수업 켬/끔 — undefined면 버튼 없음(대본 장면). */
+  coach?: boolean;
+  onToggleCoach?: () => void;
   onHint: () => void;
   onEnd: () => void;
 }) {
@@ -138,6 +154,9 @@ export function CallControls({
     <CallButtonRow>
       <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
       <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
+      {coach !== undefined && onToggleCoach ? (
+        <CallButton icon="🎓" label={ui.callCoach} onClick={onToggleCoach} pressed={coach} />
+      ) : null}
       <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
       <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" />
     </CallButtonRow>
@@ -216,7 +235,7 @@ export function CallFooter({
 }
 
 /**
- * 끝난 화면 맨 위 통화 요약 한 줄(사용자 2026-11-01 "통화 요약 한 줄"): 튜터 얼굴·이름 · ⏱ 통화 시간 · ✎ 고친 말 · 💡 힌트 · 🙉 못 알아들은 말.
+ * 끝난 화면 맨 위 통화 요약 한 줄(사용자 2026-11-01 "통화 요약 한 줄"): 튜터 얼굴·이름 · ⏱ 통화 시간 · ✎ 고친 말 · 💡 힌트 · 🙉 못 알아들은 말 · 🔁 튜터 수업에서 다시 말해 맞힌 수.
  * 0인 칸은 뺀다. 이름은 아이콘의 title·aria-label로(화면 속 설명 글 없음).
  */
 export function CallSummary({
@@ -230,7 +249,7 @@ export function CallSummary({
   language: string;
   gender?: TutorGender;
   seconds: number;
-  tally: { fixed: number; hints: number; missed: number };
+  tally: { fixed: number; hints: number; missed: number; redone?: number };
 }) {
   const chosen = useTutorGender(language);
   const partner = chatPartnerForLanguage(language, gender ?? chosen);
@@ -239,6 +258,7 @@ export function CallSummary({
     { icon: "✎", n: tally.fixed, label: ui.roleplayBetter },
     { icon: "💡", n: tally.hints, label: ui.missionHint },
     { icon: "🙉", n: tally.missed, label: ui.roleplayMissed },
+    { icon: "🔁", n: tally.redone ?? 0, label: ui.roleplaySayAgain },
   ].filter((chip) => chip.n > 0);
   return (
     <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 py-3" data-call-summary>

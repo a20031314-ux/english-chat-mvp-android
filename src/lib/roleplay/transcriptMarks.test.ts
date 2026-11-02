@@ -60,5 +60,20 @@ test("통화 요약 수: 고친 말·힌트·못 알아들은 말(일본어·스
     { who: "learner", text: "Yo ir al parque", meant: "Fui al parque" },
     { who: "learner", text: "Sí." },
   ];
-  assert.deepEqual(tallyCall(lines), { fixed: 2, hints: 1, missed: 1 });
+  assert.deepEqual(tallyCall(lines), { fixed: 2, hints: 1, missed: 1, redone: 0 });
+});
+
+test("튜터 수업: 다시 말해 맞힌 줄(🔁)을 세고, 맨 마지막 내 줄에 맞힘/아직을 붙인다(일본어·스페인어)", () => {
+  const lines: TranscriptLine[] = [
+    { who: "tutor", text: "昨日友達に会いました。もう一回言ってみて？" },
+    { who: "learner", text: "昨日友達に会いました" },
+  ];
+  const marked = markAboutTheirLine(lines, { redo: "pass" });
+  assert.equal(marked[1]!.redo, "pass");
+  const es: TranscriptLine[] = [
+    ...marked,
+    { who: "tutor", text: "Casi. Fui al parque. ¿Otra vez?" },
+    { who: "learner", text: "Yo fui parque", redo: "miss" },
+  ];
+  assert.deepEqual(tallyCall(es), { fixed: 0, hints: 0, missed: 0, redone: 1 });
 });

@@ -209,6 +209,12 @@ export function RoleplayLine({
           )}
           {/* 받아쓰기가 확신이 낮은 내 말: 끝에 "?" 하나, 누르면 한 줄 설명. */}
           {line.who === "learner" && line.unsure ? <UnsureMark text={ui.heardUnsure} /> : null}
+          {/* 튜터 수업에서 다시 말해 맞힌 줄: 끝에 🔁✓(이름은 title — 화면 글 없이, 2026-11-02). */}
+          {line.who === "learner" && line.redo === "pass" ? (
+            <span className="ms-1.5 text-meta text-good" title={ui.roleplaySayAgain} aria-label={ui.roleplaySayAgain}>
+              🔁✓
+            </span>
+          ) : null}
         </p>
         {line.translation && translationShown ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>

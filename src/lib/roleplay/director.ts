@@ -139,7 +139,20 @@ export type DirectorRequest = {
    * 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt)에서 자기를 말하는 꼴이 맞게. 없으면 그 언어의 예전 튜터.
    */
   tutorGender?: TutorGender;
+  /**
+   * 튜터 수업(2026-11-02 사용자 "진짜 튜터 역할로 표현·발화 교정·피드백에 집중한 모드") — "그냥 대화"에서만.
+   * 큰 실수만 소리로 짚고(고친 문장 → 다시 말해 보기), 내 말(앱 언어)을 알아듣고, 짧은 내 말 한마디를 섞는다.
+   * 통화 화면 🎓로 켜고 끔(lib/callStyle.ts) — 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
+   */
+  coach?: boolean;
 };
+
+/**
+ * 튜터 수업에서 이 차례가 "다시 말해 보기"의 어디쯤인가.
+ * ask = 고친 문장(또는 더 자연스러운 표현)을 들려주고 다시 말해 보라고 함 · pass = 다시 말한 게 맞음 · miss = 아직 틀림.
+ */
+export type Retry = "ask" | "pass" | "miss";
+const RETRIES: readonly Retry[] = ["ask", "pass", "miss"];
 
 /** What the character says: a recorded line by id, or one written now. */
 /**
@@ -194,6 +207,8 @@ export type Direction = {
    * counted as a pack question (pack/pack.ts PACK_FOLLOWS).
    */
   progress?: { answered: number; total: number };
+  /** 튜터 수업에서만(DirectorRequest.coach): 다시 말해 보기의 어디쯤인가. ask면 `better`나 `meant`가 다시 말할 문장. */
+  retry?: Retry;
 };
 
 /**
@@ -308,6 +323,34 @@ export function givesThemWords(
  */
 export function bilingualCharacterRule(target: string, native: string): string {
   return `- They chose to talk with someone who also speaks ${native}: you have lived among ${native} speakers for a while and speak ${native} fairly well, with an accent. Keep talking in ${target}. When they speak ${native}, mix ${native} into a ${target} sentence, or are stuck, you may start "say" with ONE short sentence in ${native}, said out loud, that hands them the ${target} words for the main thing they were trying to say (their point, never fillers or hesitation words) — then go straight back to ${target} in the same turn. That ${native} sentence is only ever about their words: never ask a question, make small talk or move the conversation on in ${native}. Never more than one short ${native} sentence in a turn, never a whole turn in ${native}, and none at all while they are managing in ${target}. This is the one exception to keeping teaching out of what you say; "note", "better" and "meant" work as before.
+`;
+}
+
+/**
+ * 튜터 수업(DirectorRequest.coach)의 지시 — "그냥 대화"의 "가르치는 말은 소리로 하지 않는다"를 뒤집는다.
+ * 큰 실수만 짚고(사용자 2026-11-02 "강도는 큰 것만"), 앱 언어를 알아듣고, 짧은 앱 언어 한마디를 섞는다("잘 모르겠어 → 괜찮아",
+ * "중간에 짧게 괜찮아, 다시 해 봐"). 다시 말해 보기는 같은 문장에 두 번까지. 베낄 수 있는 예문은 넣지 않는다(RULES).
+ */
+/** 튜터 수업은 "그냥 대화"(열린 장면)에서만 — 대본 장면은 할 일이 정해져 있어 예전 그대로. */
+export function isCoaching(request: Pick<DirectorRequest, "coach">, scenario: Pick<RoleplayScenario, "openEnded">): boolean {
+  return Boolean(request.coach && scenario.openEnded);
+}
+
+export function coachRules(target: string, native: string, bilingual: boolean): string {
+  return `How you tutor:
+- They speak ${native} and you understand it completely. They may say anything in ${native}, or mix it into ${target}, at any time.
+- Pick up only big mistakes: the ones that change or blur what they mean, or that any listener would notice at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation. A turn without a big mistake is just conversation.
+- A turn with a big mistake is the correction and nothing else: if you like, a very short word of encouragement; then their whole sentence said right, once, simply; then ask them to say it again. Ask no new question in that turn. Put the right sentence in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask".
+- On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can — and ask once more. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
+- When they speak ${native}, or say they do not know: show them you understood, then hand them the ${target} sentence for what they meant and have them say it ("meant", "retry": "ask"). If they are lost, make it easier — fewer words, or two choices to pick from.
+- Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask".
+- ${
+    bilingual
+      ? `You may say up to one short sentence in ${native} in a turn — comfort, or what the correction is about — never small talk or a question in ${native}.`
+      : `You may mix in a few words of ${native} at a time — comfort, "try again", "almost" — never a whole sentence of conversation in ${native}.`
+  } Everything else is ${target}.
+- Explanations stay out loud only as a few words. "note" is the reason for a correction in one short line in ${native}, shown on screen and never said aloud; empty when there was no correction.
+- "better" and "meant" are only for a correction or an offer, never for anything you let go.
 `;
 }
 
@@ -563,13 +606,18 @@ export function tutorSystemPrompt(input: {
   const steps = scriptSteps(scenario);
   const quote = (id?: string) => (id && bank[id] ? `"${bank[id]!.text}"` : "");
 
+  const coaching = isCoaching(request, scenario);
   const partner = scenario.openEnded ? chatPartnerForLanguage(scenario.language, request.tutorGender) : null;
   const who = partner
     ? `You are ${partner.givenName}, the ${role} — a ${partner.gender === "f" ? "woman" : "man"}; when you speak about yourself, use the forms a ${partner.gender === "f" ? "woman" : "man"} uses.`
     : `You are the ${role}.`;
   const fixed = `${who} ${scenario.setting}
 
-You are talking out loud with someone who is learning ${target}. Everything said on your side of this conversation so far was you, and you carry on as yourself. Never mention a tutor, practice, mistakes, lessons or a script, and never step out of the scene.
+${
+  coaching
+    ? `You are talking out loud with someone who is learning ${target}, and they asked you to be their tutor for this call: a real conversation about their own life, in which you pick up their big mistakes and have them say it right. Everything said on your side of this conversation so far was you, and you carry on as yourself.`
+    : `You are talking out loud with someone who is learning ${target}. Everything said on your side of this conversation so far was you, and you carry on as yourself. Never mention a tutor, practice, mistakes, lessons or a script, and never step out of the scene.`
+}
 
 ${
   scenario.openEnded
@@ -589,26 +637,36 @@ How to answer them:
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
 ${tutorSpeechRules(request.targetLanguage)}
-- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
+${
+  coaching
+    ? `- One or two short sentences.
+${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage))}`
+    : `- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.
 ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bilingualCharacterRule(target, native)}
-` : ""}- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
+` : ""}`
+}- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
-
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+${
+  coaching
+    ? `
+"retry" follows "How you tutor": "ask" when this turn has them say a sentence again, "pass" or "miss" on the turn they tried it, empty otherwise.`
+    : `
 "better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
 
 Leave it empty when:
 - they were understandable and simply informal, or answered in a fragment, which is how people talk
 - the only thing you would change is a small ending or article, which is as likely to be the speech recogniser's doing as theirs
 - nothing is wrong with it
-Correcting something they said correctly costs more than saying nothing.${
+Correcting something they said correctly costs more than saying nothing.`
+}${
     focus
       ? `
 
-What goes wrong in ${target} in particular, which is what to look at before deciding there is nothing to fix:
+What goes wrong in ${target} in particular, which is what to look at before deciding ${coaching ? "a sentence has no big mistake" : "there is nothing to fix"}:
 ${focus}`
       : ""
   }
@@ -826,6 +884,7 @@ export function parseDirection(
     better?: unknown;
     meant?: unknown;
     next?: unknown;
+    retry?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -939,6 +998,7 @@ export function parseDirection(
   // character was about to ask, shown under the learner's sentence.
   const spoken = [text, bank[openId]?.text ?? "", bank[followId]?.text ?? "", bank[id]?.text ?? ""].filter(Boolean);
   // When they were stuck the note may well repeat the character's choices ("Card, or cash?") — that is the help.
+  const coaching = isCoaching(request, scenario);
   const note = givesThemWords(written, request) && (assessment === "stuck" || !quotesOwnLine(written, spoken, request.heard)) ? written : "";
 
   // Learner steps in the order the scene walks them.
@@ -1154,13 +1214,30 @@ export function parseDirection(
   const chosenFollow =
     (repeats || theyAsked || reactedTwice ? "" : followId) || follow;
 
+  // 튜터 수업: 다시 말해 보기의 어디쯤인가. ask는 다시 말할 문장(better·meant)이 있을 때만 — 없으면 앱이 보여 줄 게 없다.
+  const named = typeof record.retry === "string" ? (record.retry.trim().toLowerCase() as Retry) : "";
+  const retry: Retry | "" =
+    !coaching || !named || !RETRIES.includes(named) || !request.heard.trim()
+      ? ""
+      : named === "ask" && !(better || meant)
+        ? ""
+        : named;
+  // 튜터 수업의 note는 고친 까닭 한 줄(앱 언어) — 고친 말과 같이 보이고, 고친 문장을 따와도 된다.
+  // 학습 언어로만 쓴 설명은 못 읽을 수 있어 뺀다(givesThemWords와 같은 까닭).
+  const coachNote =
+    coaching && (better || meant) && written && !explanationInLearningLanguage(written, request.nativeLanguage, request.targetLanguage)
+      ? written
+      : "";
+
   return {
     assessment,
     say,
-    note: better || meant ? "" : note,
+    note: coachNote || (better || meant ? "" : note),
     next,
     ...(better ? { better } : {}),
     ...(meant ? { meant } : {}),
-    ...(chosenFollow ? { follow: chosenFollow } : {}),
+    // 다시 말해 보라고 한 차례에는 다음 질문을 얹지 않는다 — 고친 문장을 말할 차례다.
+    ...(chosenFollow && retry !== "ask" && retry !== "miss" ? { follow: chosenFollow } : {}),
+    ...(retry ? { retry } : {}),
   };
 }

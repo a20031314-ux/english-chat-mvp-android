@@ -8,7 +8,7 @@ import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
-import { CALL_CAPTIONS_KEY } from "@/components/speech/CallKit";
+import { CALL_CAPTIONS_KEY, CALL_COACH_KEY } from "@/components/speech/CallKit";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -157,6 +157,10 @@ export function RoleplayScreen({
   // a translation either way; this is about what is on screen.
   const [showTranslations, toggleTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
+  // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
+  const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
+  /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. */
+  const [redoLine, setRedoLine] = useState("");
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
   /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
@@ -384,6 +388,7 @@ export function RoleplayScreen({
         context: memory.text,
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
+        ...(scenario.openEnded && coachOn ? { coach: true } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -423,15 +428,20 @@ export function RoleplayScreen({
       const about = !missedTurn && direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
-      if (better || meant || about) {
+      // 튜터 수업: 다시 말해 보라고 했으면(ask) 그 문장을 띄우고, 다시 말한 줄에는 맞힘/아직(pass·miss)을 붙인다.
+      const retry = missedTurn ? undefined : direction?.retry;
+      const redo = retry === "pass" || retry === "miss" ? retry : undefined;
+      if (better || meant || about || redo) {
         setSaid((current) =>
           markAboutTheirLine(current, {
             ...(better ? { better } : {}),
             ...(meant ? { meant } : {}),
             ...(about ? { about } : {}),
+            ...(redo ? { redo } : {}),
           }),
         );
       }
+      if (!missedTurn) setRedoLine(retry === "ask" || retry === "miss" ? meant || better || "" : "");
       if (direction?.assessment === "stuck" && !missedTurn) {
         const pending = state.pending;
         setSaid((current) =>
@@ -948,6 +958,7 @@ export function RoleplayScreen({
         timeLeft={timeLine}
         caption={caption}
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
+        redo={redoLine}
       />
       <CallControls
         ui={ui}
@@ -955,6 +966,8 @@ export function RoleplayScreen({
         captions={showCaptions}
         onMissed={missLine}
         onToggleCaptions={toggleCaptions}
+        coach={scenario.openEnded ? coachOn : undefined}
+        onToggleCoach={toggleCoach}
         onHint={openHelp}
         onEnd={onClose}
       />

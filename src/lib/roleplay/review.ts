@@ -48,6 +48,8 @@ export type TranscriptLine = {
   missed?: boolean;
   /** 튜터 줄: 못 알아들었다고 해서 튜터가 쉽게 다시 한 말 — 또 못 알아들으면 그 줄을 자막으로 보여 준다. */
   again?: boolean;
+  /** 학습자 줄: 튜터 수업에서 다시 말해 보라고 한 문장을 다시 말한 줄 — 맞힘(pass)·아직(miss) (2026-11-02). */
+  redo?: "pass" | "miss";
 };
 
 export type StuckTurn = {

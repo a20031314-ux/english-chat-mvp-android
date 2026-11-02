@@ -1241,3 +1241,88 @@ test("못 알아들었어요: 같은 말을 더 쉽게 다시, 학습자 말 대
     assert.match(esPrompt, /did not catch your last line/);
   }
 });
+
+// 튜터 수업(2026-11-02) — 큰 실수만 소리로 짚고 다시 말해 보기, 앱 언어를 알아듣고 짧게 섞는다.
+function coachBrief(partial: Partial<DirectorRequest> = {}): string {
+  return tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", ...partial }),
+  });
+}
+
+test("튜터 수업: 그냥 대화의 '실수·튜터 말 금지'를 뒤집고 다시 말해 보기를 시킨다", () => {
+  const talk = coachBrief();
+  assert.match(talk, /Never mention a tutor/);
+  assert.doesNotMatch(talk, /"retry"/);
+
+  const coach = coachBrief({ coach: true });
+  assert.doesNotMatch(coach, /Never mention a tutor/);
+  assert.doesNotMatch(coach, /Teaching never goes in what you say out loud/);
+  assert.match(coach, /Pick up only big mistakes/);
+  assert.match(coach, /"retry": "ask" \| "pass" \| "miss"/);
+  assert.match(coach, /Never ask a third time/);
+  // 앱 언어(한국어)를 알아듣고, 몇 낱말씩 섞는다 — 이름은 그 언어 이름으로.
+  assert.match(coach, /They speak Korean and you understand it completely/);
+  assert.match(coach, /a few words of Korean at a time/);
+  // 내 말도 하는 튜터를 켰으면 한 문장까지.
+  assert.match(coachBrief({ coach: true, bilingual: true }), /up to one short sentence in Korean/);
+});
+
+test("튜터 수업은 그냥 대화에서만 — 대본 장면은 예전 그대로", () => {
+  const scripted = tutorSystemPrompt({
+    scenario: cafe,
+    bank,
+    recorded: recordedLines(cafe, SCENARIOS, bank),
+    request: request({ coach: true }),
+  });
+  assert.match(scripted, /Never mention a tutor/);
+  assert.doesNotMatch(scripted, /"retry"/);
+});
+
+test("튜터 수업 다른 언어 조합: 일본어 학습·아랍어 앱도 그 언어 이름으로", () => {
+  const ja = findScenario("open-talk-ja")!;
+  const brief = tutorSystemPrompt({
+    scenario: ja,
+    bank: sentencesFor("ja"),
+    recorded: recordedLines(ja, SCENARIOS, sentencesFor("ja")),
+    request: request({ scenarioId: ja.id, nodeId: "talk", coach: true, targetLanguage: "ja", nativeLanguage: "ar" }),
+  });
+  assert.match(brief, /learning Japanese, and they asked you to be their tutor/);
+  assert.match(brief, /They speak Arabic/);
+});
+
+test("튜터 수업: retry를 읽고, 고친 문장 없는 ask·대본 장면의 retry는 버린다", () => {
+  const heard = "yesterday i go to the beach";
+  const asked = parse(
+    { say: "Almost! Yesterday I went to the beach. Say it again?", better: "Yesterday I went to the beach.", note: "어제 일이라 went", retry: "ask", assessment: "on_track", next: "free" },
+    { coach: true, heard, nodeId: "talk" },
+    open,
+  );
+  assert.equal(asked?.retry, "ask");
+  assert.equal(asked?.better, "Yesterday I went to the beach.");
+  // 튜터 수업의 note는 고친 까닭 — 고친 말과 같이 남는다(그냥 대화는 비움).
+  assert.equal(asked?.note, "어제 일이라 went");
+
+  const noSentence = parse({ say: "Say it again?", retry: "ask", assessment: "on_track", next: "free" }, { coach: true, heard, nodeId: "talk" }, open);
+  assert.equal(noSentence?.retry, undefined);
+
+  const passed = parse({ say: "Perfect! What did you do there?", retry: "pass", assessment: "on_track", next: "free" }, { coach: true, heard: "yesterday i went to the beach", nodeId: "talk" }, open);
+  assert.equal(passed?.retry, "pass");
+
+  const notCoaching = parse(
+    { say: "Nice. What did you do there?", better: "Yesterday I went to the beach.", note: "어제 일이라 went", retry: "ask", assessment: "on_track", next: "free" },
+    { heard, nodeId: "talk" },
+    open,
+  );
+  assert.equal(notCoaching?.retry, undefined);
+  assert.equal(notCoaching?.note, "", "그냥 대화는 고친 말이 있으면 note를 비운다(예전 그대로)");
+});
+
+test("튜터 수업: 다시 말해 보라고 한 차례에는 다음 질문(follow)을 얹지 않는다", () => {
+  const heard = "yesterday i go to the beach";
+  const raw = { open: "", follow: "talk.there-what", say: "Yesterday I went to the beach. Say it again?", better: "Yesterday I went to the beach.", retry: "ask", assessment: "on_track", next: "free" };
+  const coached = parse(raw, { coach: true, heard, nodeId: "talk" }, withBank);
+  assert.equal(coached?.follow, undefined);
+});
