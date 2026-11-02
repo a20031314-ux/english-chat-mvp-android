@@ -178,7 +178,13 @@ export function registerQuizSources(language: string, entries: readonly { key: s
   const map = GAP_SOURCES.get(language) ?? new Map<string, QuizSource[]>();
   for (const entry of entries) if ((entry.key.startsWith("u|") || entry.key.startsWith("w|")) && entry.sources.length) map.set(entry.key, entry.sources);
   GAP_SOURCES.set(language, map);
+  // 표현 카드(server/expressionCards.ts, 2026-11-03 Quizbank 어휘 탭에 표현): 대본 줄 앞에 — 처음 보는 표현은 카드 예문으로 먼저.
+  const cards = EXPRESSION_CARDS.get(language) ?? new Map<string, QuizSource[]>();
+  for (const entry of entries) if (entry.key.startsWith("e|") && entry.sources.length) cards.set(entry.key, entry.sources);
+  EXPRESSION_CARDS.set(language, cards);
 }
+
+const EXPRESSION_CARDS = new Map<string, Map<string, QuizSource[]>>();
 
 /** 열쇠가 가리키는 문장들(문제 재료) — 그 조각(piece)이 문장에 그대로 든 것엔 piece를 붙인다. */
 export function quizSources(language: string, key: string): QuizSource[] {
@@ -320,6 +326,7 @@ function rawSources(language: string, key: string): QuizSource[] {
     const expression = key.slice(2);
     // 그 표현을 핵심으로 둔 대본 먼저, 그다음 다른 대본에 그 표현이 그대로 나온 줄(상대 줄 포함) — 같은 표현을 다른 상황에서 다시
     // (2026-10-29 사용자 "지속학습에서 계속 던져주는 식으로 노출 수를").
+    for (const card of EXPRESSION_CARDS.get(language)?.get(key) ?? []) add(card);
     const ordered = [...scripts.filter((s) => s.expressions.includes(expression)), ...scripts.filter((s) => !s.expressions.includes(expression))];
     for (const script of ordered) {
       for (const line of script.lines) {
@@ -1125,10 +1132,18 @@ export function buildQuiz(
  * ③ 낱말 순서 — 낱말 넷 이상인 다른 문장(긴 것부터), 낱말 하나가 조각 하나. 못 만들면 뜻 고르기·고르기.
  * 같은 조각을 고르는 문제(고르기)는 다른 모양을 못 만들 때만.
  */
-export function lessonQuiz(language: string, key: string, options: { seed?: string; stage?: number; later?: ReadonlySet<string> } = {}): QuizQuestion[] {
+/**
+ * them: 상대 줄 예문도 재료로(표현 — 내 줄에 한 번만 나오는 표현이 많아 문제가 안 만들어지던 것, 2026-11-02 사용자 "다른 방식은 문제밖에/설명만").
+ * min: 이만큼 만들어지면 냄(기본 2). avoid: 이 문장은 쓰지 않음(대본 앞 수업 — 곧 할 대화의 내 줄이 답이 되지 않게).
+ */
+export function lessonQuiz(
+  language: string,
+  key: string,
+  options: { seed?: string; stage?: number; later?: ReadonlySet<string>; them?: boolean; min?: number; avoid?: ReadonlySet<string> } = {},
+): QuizQuestion[] {
   const random = rng(`${key}|${options.seed ?? ""}|lesson`);
   const stage = options.stage;
-  const all = quizSources(language, key).filter((source) => source.who !== "them");
+  const all = quizSources(language, key).filter((source) => (options.them || source.who !== "them") && !options.avoid?.has(source.text));
   const inside = stage ? all.filter((source) => source.stage === 0 || source.stage <= stage + 1) : all;
   const sources = shownLast(language, key, shuffled(inside.length ? inside : all, random), options.later);
   const used = new Set<string>();
@@ -1151,7 +1166,7 @@ export function lessonQuiz(language: string, key: string, options: { seed?: stri
   if (!take((source) => orderOf(language, source, random, { least: 4 }), longest)) {
     if (!take((source) => meaningOf(language, source, random))) take((source) => chooseOf(language, key, source, random));
   }
-  return out.length >= 2 ? out : [];
+  return out.length >= (options.min ?? 2) ? out : [];
 }
 
 /** 같은 단계 근처의 다른 줄(뜻 고르기 오답). */

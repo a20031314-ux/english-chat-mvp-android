@@ -36,6 +36,8 @@ import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
 import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
+import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
+import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { peekBank, quizPos, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { feelDue, feelLevel, levelOf, noteLevel, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
@@ -318,6 +320,11 @@ export function TodayPlan({
   const [circleNeed, setCircleNeed] = useState<string[]>([]);
   const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords, circleOn ? circleNeed : undefined);
   const knownWord = (key: string) => knownState(known, key) === "known";
+  // 어휘 탭에 섞는 덩어리 표현(curriculum/expressionDeck.ts, 2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기"): 1~지금 단계, 문장구조와 같은 표현은 빠짐.
+  const exprCards = useExpressionCards(language, locale, stage);
+  // 원(circle.ts)이 다루는 열쇠 — 카드가 온 낱말과 표현(단어 시험·틀림 셈·새 것 쉬기에 같이).
+  const usableKey = (key: string) => Boolean(bank?.ready.has(key)) || exprCards.ready.has(key);
+  const isDeckKey = (key: string) => key.startsWith("w|") || key.startsWith("e|");
   // 원 안인데 아직 카드가 없는 낱말(앞에서 열둘) — 그 묶음을 받아 오게.
   // 원은 카드가 온 낱말로만 센다(카드 없는 낱말이 원 안에 남으면 익힘 몫이 70%에 못 닿아 원이 안 커짐 — 가상 사용자 2026-10-31: 2주에 10개).
   const circleOrder = useMemo(() => (bank ? bank.orderKeys.filter((key) => bank.ready.has(key)) : []), [bank]);
@@ -1307,7 +1314,7 @@ export function TodayPlan({
     const retype = Boolean(one.key) && retypeKeys.current.has(one.key) && retypeSeen.current.has(one.key);
     if (one.key && retypeKeys.current.has(one.key)) retypeSeen.current.add(one.key);
     // "모르겠어요"·답 보기는 원에서는 틀림으로(다시 나오게), 다른 기록에는 그대로 안 셈.
-    if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
+    if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
       saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, false, Date.now()), circleOrder, knownWord)));
     }
     if (one.skipped || !one.key) return;
@@ -1315,7 +1322,7 @@ export function TodayPlan({
     else setAsked((current) => new Set([...current, one.key]));
     if (retype && !wrongTab && keepFocus === "vocab" && circleOn && bank) {
       if (!one.correct) saveCircle(trimCircle(noteAnswer(circleRef.current, one.key, false, Date.now())));
-    } else if (!wrongTab && keepFocus === "vocab" && circleOn && bank && one.key.startsWith("w|")) {
+    } else if (!wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
       const before = circleRef.current;
       const rank = rankOf.get(one.key);
       if (levelOn && rank !== undefined) {
@@ -1341,17 +1348,22 @@ export function TodayPlan({
     if (examTab) return null;
     if (wrongTab) return takeBatch(bundleFor("review"));
     if (keepFocus === "vocab" && circleOn && bank && (levelOn ? ranked.length : circleOrder.length)) {
-      const paused = newPaused(circleRef.current, (key) => bank.ready.has(key));
+      const paused = newPaused(circleRef.current, usableKey);
       const keys = levelOn
         ? paused
           ? []
           : levelPick(QUIZ_SIZE + 1, { skip: lastCircle.current })
-        : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: lastCircle.current });
+        : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: usableKey, known: knownWord, skip: lastCircle.current });
+      // 낱말 묶음마다 아직 안 본 표현 하나를 둘째 자리에(새 낱말을 쉬는 중이면 표현도 쉼).
+      if (!paused) {
+        const more = nextExpressions(exprCards.deck, { seen: (key) => Boolean(circleRef.current.items[key]) || knownWord(key), ready: (key) => exprCards.ready.has(key), skip: lastCircle.current });
+        keys.splice(Math.min(1, keys.length), 0, ...more);
+      }
       lastCircle.current = new Set(keys);
       if (!keys.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));
       // 다음 묶음에 나올 새 낱말도 미리(문제은행 미리 받기, 2026-11-01).
-      const ahead = levelOn ? levelPick(8, { skip: new Set(keys) }) : pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: (key) => bank.ready.has(key), known: knownWord, skip: new Set(keys) });
+      const ahead = levelOn ? levelPick(8, { skip: new Set(keys) }) : pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: usableKey, known: knownWord, skip: new Set(keys) });
       void growBank(language, locale, ahead.map((key) => ({ key, stage })));
       // 처음 보는 낱말은 고르기, 다시 나온 낱말은 쓰기(처음부터 쓰게 하면 첫날 정답률이 30%대 — 시뮬레이션).
       const questions: QuizQuestion[] = [];
@@ -1530,9 +1542,9 @@ export function TodayPlan({
       </div>
     </BodyLayer>
   ) : null;
-  const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: (key) => bank.ready.has(key) }));
+  const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: usableKey }));
   // 틀린 낱말이 많으면 새 낱말을 쉬고 시험부터(circle.ts WRONG_PAUSE) — 탭에는 📝 줄만, "다 했어요"를 띄우지 않는다.
-  const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, (key) => bank.ready.has(key)));
+  const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, usableKey));
   // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
   const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
@@ -1620,7 +1632,7 @@ export function TodayPlan({
           data-word-test
           onClick={() => {
             if (!bank) return;
-            const keys = wordTest(circleRef.current, { now: Date.now(), usable: (key) => bank.ready.has(key) });
+            const keys = wordTest(circleRef.current, { now: Date.now(), usable: usableKey });
             // 수준 맞추기: 경계보다 한참 아래라 "아마 앎"으로 건너뛴 낱말도 둘 섞어 확인(틀리면 경계가 내려감).
             if (levelOn) keys.push(...presumedWords(circleRef.current, level, { ranked, usable: (key) => bank.ready.has(key), known: knownWord, seed: circle.answered ?? 0 }).filter((key) => !keys.includes(key)));
             void growBank(language, locale, keys.map((key) => ({ key, stage })));

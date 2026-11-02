@@ -3,6 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { wordCards } from "@/lib/server/wordCards";
+import { expressionCards } from "@/lib/server/expressionCards";
 import { BANK_CHUNK, hasBank } from "@/lib/curriculum/vocabBank";
 import { cardsInUi, extraChunk, extraCount, searchWord } from "@/lib/server/wordExtras";
 import { requestUserId } from "@/lib/server/premiumRequest";
@@ -36,6 +37,18 @@ export async function GET(request: NextRequest) {
     if (!Number.isInteger(chunk) || chunk < 0 || chunk * BANK_CHUNK >= total) return jsonWithCors(request, { cards: [], total, size: BANK_CHUNK });
     const cards = await cardsInUi(language, await extraChunk(language, chunk), ui, () => void meterRequest(request, "wordCards"));
     return jsonWithCors(request, { cards, total, size: BANK_CHUNK });
+  }
+  // ?expr=<단계>: 그 단계 덩어리 표현 카드(server/expressionCards.ts, 2026-11-03 — Quizbank 어휘 탭에 표현을 섞음). 처음만 모델(같은 op).
+  const exprStage = Number(params.get("expr"));
+  if (params.has("expr")) {
+    if (!Number.isInteger(exprStage) || exprStage < 1 || exprStage > 9) return jsonWithCors(request, { cards: [] });
+    let made = false;
+    const cards = await expressionCards(language, exprStage, ui, INTERFACE_LANGUAGE_LABELS[ui] ?? "English", () => {
+      if (made) return;
+      made = true;
+      void meterRequest(request, "wordCards");
+    });
+    return jsonWithCors(request, { cards });
   }
   if (!hasBank(language) || !Number.isInteger(chunk) || chunk < 0 || chunk > 200) return jsonWithCors(request, { cards: [], size: BANK_CHUNK });
   let metered = false;

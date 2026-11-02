@@ -109,7 +109,13 @@ export async function POST(request: NextRequest) {
     const checks = Object.fromEntries(Object.entries(body.check as Record<string, unknown>).filter(([, value]) => typeof value === "boolean")) as Record<string, boolean>;
     // quiz: true = 퀴즈 답(확인 중 열쇠를 다른 날 맞히면 이미 앎으로, curriculum/known.ts).
     // from "call": 통화 정리(roleplay/recap.ts)가 찾은 문장구조 — 다시 볼 것에만(숙지는 그대로).
-    return jsonWithCors(request, await saveChecks(userId, language, checks, Date.now(), body.quiz === true, body.from === "call"));
+    const saved = await saveChecks(userId, language, checks, Date.now(), body.quiz === true, body.from === "call");
+    // 퀴즈에서 맞힌 표현(e|)은 표현 장부에도 "배움"(2026-11-03 — Quizbank 어휘 탭에 섞은 표현이 내 진척·Logbank에서 따로 놀지 않게, 문장구조 통과와 같은 셈).
+    const rightExpressions = body.quiz === true && body.from !== "call" ? Object.entries(checks).filter(([check, ok]) => ok && check.startsWith("e|")).map(([check]) => check.slice(2)).slice(0, 12) : [];
+    if (rightExpressions.length) {
+      await updateLedger(userId, language, (ledger) => rightExpressions.reduce((next, expression) => applyMissionResult(next, expression, "helped", "mission", undefined), ledger)).catch(() => undefined);
+    }
+    return jsonWithCors(request, saved);
   }
   const id = typeof body.id === "string" ? body.id : "";
   // 대본 또는 틀 바꿔 말하기의 틀(curriculum/frames.ts, id "ja-f1-01") — 통과 기록은 같은 곳.

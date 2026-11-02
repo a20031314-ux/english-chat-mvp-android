@@ -141,15 +141,16 @@ export function FrameLesson({
   }, [frame, language, key, stageOf]);
   const questions = useMemo<QuizQuestion[]>(() => {
     void grown;
-    // 표현·문법 칸은 퀴즈 칸 없이 설명 › 대화(문제는 Quizbank 시험·다시 보기, 2026-11-01 설계).
-    if (!frame) return [];
+    // 표현·문법 칸도 설명 › 퀴즈 › 대화(2026-11-02 사용자 "기본 연습방식은 설명>문제>적용인데 다른 것들은…") — 표현은 상대 줄 예문도 재료로,
+    // 한 문제만 만들어져도 냄(문제은행이 예문을 더하면 grown으로 다시 만듦). 못 만들면 예전처럼 설명 › 대화.
+    if (!frame) return lessonQuiz(language, key, { seed, stage: stageOf, later: new Set(shownExamples.map((example) => example.text)), them: key.startsWith("e|"), min: 1 });
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
     // 세 문제가 같은 답을 세 번 묻지 않게: 빈칸 쓰기 · 틀린 곳 고치기 · 낱말 순서, 문제마다 다른 문장(quiz.ts lessonQuiz, 2026-11-01 U25).
     const made = lessonQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
     // 고정 수업이 있으면 그 세 문제(쓰기 · 고르기 · 고치기)가 먼저, 모자라면 만든 문제로 채움.
     const set = fixed?.quiz?.length ? fixedQuizQuestions(language, fixed.quiz, `f|${frame.id}`) : [];
     return set.length >= 3 ? set : [...set, ...made].slice(0, Math.max(3, set.length));
-  }, [language, frame, seed, shownExamples, grown, fixed]);
+  }, [language, frame, key, stageOf, seed, shownExamples, grown, fixed]);
   const [qIndex, setQIndex] = useState(0);
   // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
   const adRound = useNativeRefresh(`q${qIndex}`, step === "quiz");

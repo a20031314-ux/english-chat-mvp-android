@@ -73,6 +73,8 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 type Method = "frame" | "recall" | "situation" | "expression" | "grammar";
 
 /** 단계 연습 방식 아이콘(2026-10-30 사용자 "아이콘으로 구분해줘") — 이름은 읽어 주기(name)로만. */
+const SHOW_RECALL_WAY = false;
+const SHOW_EXPRESSION_WAY = false;
 const METHOD_ICON: Record<Method, string> = { frame: "🧩", recall: "🎯", situation: "🎭", expression: "🔤", grammar: "📐" };
 
 
@@ -185,7 +187,7 @@ export function StageScripts({
     // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
     setFrameFor(target ? null : openFor);
     // 연 것이 있는 방식 칩으로 옮겨 둔다(닫은 뒤 목록이 그 자리에).
-    setMethod(!target ? "frame" : isSituationScript(target) ? "situation" : "expression");
+    setMethod(!target ? "frame" : isSituationScript(target) || !SHOW_EXPRESSION_WAY ? "situation" : "expression");
   }
   if (!scripts.length) return null;
   const situations = scripts.filter(isSituationScript);
@@ -199,9 +201,11 @@ export function StageScripts({
   const methods = [
     // 방식 옆 n/m은 뺌(진척 숫자 삭제, 사용자 2026-10-30).
     ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, bubbles: frameBubbles(frames[0]!) }] : []),
-    ...(frames.length ? [{ id: "recall" as const, name: ui.recallTitle, bubbles: recallBubbles(frames[0]!, locale) }] : []),
+    // 🎯 꺼내 쓰기는 고르기에서 숨김(2026-11-02 사용자 "꺼내쓰기는 일단 숨기고") — 오늘 할 것의 꺼내 쓰기 칸·단계 조건은 그대로.
+    ...(frames.length && SHOW_RECALL_WAY ? [{ id: "recall" as const, name: ui.recallTitle, bubbles: recallBubbles(frames[0]!, locale) }] : []),
     { id: "situation" as const, name: ui.stageScriptsTitle, bubbles: situationBubbles(situations[0]) },
-    ...(extras.length || stageExpressions.length ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: extras.length ? expressionBubbles(extras[0]!) : [] }] : []),
+    // 🔤 표현은 Quizbank 어휘 탭으로 옮김(2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기") — 표현 대본은 🎭 상황 목록 끝에.
+    ...(SHOW_EXPRESSION_WAY && (extras.length || stageExpressions.length) ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: extras.length ? expressionBubbles(extras[0]!) : [] }] : []),
     ...(stageGrammar.length ? [{ id: "grammar" as const, name: ui.partGrammar, count: "", bubbles: grammarBubbles(stageGrammar[0]!.example) }] : []),
   ].map((one) => ({ ...one, label: METHOD_ICON[one.id] }));
   // 표현·문법 칸 목록: ✓ = 대화로 익힘(퀴즈 기록), 앎 = "알아요"로 넘김(다음 정기 시험에서 확인).
@@ -334,7 +338,7 @@ export function StageScripts({
         </button>
       ) : null}
       {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}
-      {method === "situation" ? situations.map(row) : null}
+      {method === "situation" ? [...situations, ...(SHOW_EXPRESSION_WAY ? [] : extras)].map(row) : null}
       {method === "expression" ? stageExpressions.map((expression) => itemRow({ key: `e|${expression}`, kind: "expression", stage }, expression)) : null}
       {method === "expression" ? extras.map(row) : null}
       {method === "grammar"

@@ -1249,7 +1249,7 @@ function StageFrame({
       {stageParts ? (
         <>
           {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 문장구조 익힘·꺼내 쓰기 수(단계 = 문장구조 → 꺼내 쓰기, 2026-10-30).
-              예전 네 갈래(어휘·문법·표현·발음) 고르기·칸·"다음 단계까지: 어휘"는 뺌(2026-11-02 사용자 "정리해줘" — 단계 조건과 어긋나고 Quizbank·Logbank와 겹침). */}
+              예전 네 갈래(어휘·문법·표현·발음) 고르기·칸·다음 단계까지 줄은 뺌(2026-11-02 사용자 요청 — 단계 조건과 어긋나고 Quizbank·Logbank와 겹침). */}
           {shown === now && !free ? (
             readyOf(shown) && onNextStage && shown < stages.length ? (
               <button
