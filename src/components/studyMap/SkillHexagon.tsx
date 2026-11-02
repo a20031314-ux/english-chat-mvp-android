@@ -32,6 +32,15 @@ export function weakAxis(result: FillResult, axis: Axis): boolean {
   return one.converged && one.fill < mean - 0.15;
 }
 
+/** 긴 꼭짓점 이름(영어·스페인어 등 "Sentence understanding")은 가운데 가까운 띄어쓰기에서 두 줄로 — 그림 옆으로 잘리지 않게. */
+export function labelLines(name: string, max = 14): string[] {
+  if ([...name].length <= max || !name.includes(" ")) return [name];
+  const mid = name.length / 2;
+  let cut = -1;
+  for (let i = 0; i < name.length; i += 1) if (name[i] === " " && (cut < 0 || Math.abs(i - mid) < Math.abs(cut - mid))) cut = i;
+  return [name.slice(0, cut), name.slice(cut + 1)];
+}
+
 const W = 400;
 const H = 300;
 const CX = W / 2;
@@ -97,7 +106,11 @@ export function SkillHexagon({
               className="cursor-pointer outline-none"
             >
               <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : "fill-status-mastered"} />
-              <text x={tx} y={ty - 6} textAnchor={anchor} className="fill-ink text-caption font-semibold">{axisName(ui, axis)}</text>
+              <text x={tx} y={ty - 6} textAnchor={anchor} className="fill-ink text-caption font-semibold">
+                {labelLines(axisName(ui, axis)).map((line, n, all) => (
+                  <tspan key={n} x={tx} dy={n === 0 ? -(all.length - 1) * 15 : 15}>{line}</tspan>
+                ))}
+              </text>
               <text x={tx} y={ty + 10} textAnchor={anchor} className="fill-slate-300 text-meta tabular-nums">
                 {pct(one)}
                 {delta > 0 ? <tspan className="fill-status-mastered">{` ▲${delta}`}</tspan> : null}

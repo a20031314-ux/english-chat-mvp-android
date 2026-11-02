@@ -110,6 +110,7 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   (필요한 장면만: `CAPTURE_SHOTS=today-plan,keep-learning,keep-quiz,script-play,chat-correct,chat-fix-open,chat-expression,chat-ask,meant,video-study,groups,group-pick,freetalk,quote`)
   → `node --experimental-strip-types store-shots/flow/compose.mjs`(`FLOW_ONLY=ko,ko-ja`로 일부만) → `store-shots/out/flow/<등록정보>/1~8-*.png`. 장면·자르는 위치·글은 `store-shots/flow/strings.mjs`.
   6개 기본 언어는 PR로 `phoneScreenshots`(`01-overview` … `08-together`), 맞춤 등록정보 11개(나라·배우는 언어)는 Console에서 사람이 폴더째.
+  **4장 = Logbank 언어능력 육각형(2026-11-02, 사용자 "04 지속 학습 자리 교체"):** 위 단계 막대 대신 Logbank, 육각형 전체 화면 위에 꼭짓점 화면 카드. 화면만 따로: `node store-shots/flow/capture-logbank.mjs [ko,en,…]` → `FLOW_ONLY=… compose.mjs` → `4-logbank.png` → `phoneScreenshots/04-logbank.png`(예전 `04-keep.png` 지움).
 - **스토어 7장 학습 흐름 세트 (2.77 세트, 위 8장으로 바뀜 — 2.77~, 사용자 2026-10-29 "핵심기능, 학습흐름 중심")**: 오늘 할 것 → 대본으로 말하기 → 다시 보기(지난번에 틀린 것·퀴즈) → 채팅 → 통화 → 영상 → Room.
   `npm run build:capacitor` 뒤 `CAPTURE_RUN=<새 이름> [CAPTURE_TARGET=<학습 언어>] node --experimental-strip-types scripts/capture-whats-new.mjs store-flow --only <UI 언어>`
   (이 모드는 `x-app-version`을 빼서 무료 테스트 사용자도 채팅이 됨) → `node store-shots/combo/compose.mjs`(`COMBO_ONLY=ko`로 하나만). 장면·문구는 `strings.mjs` `SHOTS`·`FLOW`.

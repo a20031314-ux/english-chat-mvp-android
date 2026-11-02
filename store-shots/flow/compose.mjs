@@ -105,7 +105,7 @@ function stepHtml(L, shot, copy, names, files) {
     body{padding:84px 0 0}
     .float{position:absolute;left:50%;bottom:70px;transform:translateX(-50%);border:4px solid;border-radius:36px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.75),0 0 0 14px rgba(20,21,26,.9)}
   </style></head><body>
-    <div class="bar">${pills}</div>
+    ${shot.kind === "single" ? `<div class="kicker">${esc(shot.kicker ?? "")}</div>` : `<div class="bar">${pills}</div>`}
     <h1 style="margin-top:56px">${esc(title)}</h1>
     <p class="sub">${esc(sub)}</p>
     <div class="phone" data-follow style="top:620px">${screen(files[shot.scene], W, 1500, shot.crop)}</div>
@@ -153,14 +153,14 @@ for (const L of targets) {
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
   for (const [i, shot] of SHOTS.entries()) {
-    const scenes = shot.kind === "overview" ? shot.rows.map(([s]) => s) : shot.kind === "step" ? [shot.scene, ...(shot.float ? [shot.float[0]] : [])] : shot.scenes.map(([s]) => s);
+    const scenes = shot.kind === "overview" ? shot.rows.map(([s]) => s) : shot.kind === "step" || shot.kind === "single" ? [shot.scene, ...(shot.float ? [shot.float[0]] : [])] : shot.scenes.map(([s]) => s);
     const missing = scenes.filter((s) => !existsSync(path.join(raw, L.locale, `${s}.png`)));
     if (missing.length) {
       problems.push(`${L.locale}/${shot.id}: 화면 없음 ${missing.join(", ")}`);
       continue;
     }
     const files = Object.fromEntries(scenes.map((s) => [s, uri(path.join(raw, L.locale, `${s}.png`))]));
-    const html = shot.kind === "overview" ? overviewHtml(L, shot, copy, names, files) : shot.kind === "step" ? stepHtml(L, shot, copy, names, files) : detailHtml(L, shot, copy, files);
+    const html = shot.kind === "overview" ? overviewHtml(L, shot, copy, names, files) : shot.kind === "step" ? stepHtml(L, shot, copy, names, files) : shot.kind === "single" ? stepHtml(L, { ...shot, kicker: (ui[base] ?? ui.en).logbankTitle }, copy, names, files) : detailHtml(L, shot, copy, files);
     await page.setContent(html, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     // 긴 말: 제목 두 줄·설명 두 줄·단계 막대 한 줄·1장 설명 두 줄 안에 맞게 줄인다.
@@ -200,7 +200,7 @@ for (const L of targets) {
     });
     if (over.bar) problems.push(`${L.locale}/${shot.id}: 단계 막대가 넘침`);
     if (over.rows > 1880) problems.push(`${L.locale}/${shot.id}: 흐름 칸이 ${Math.round(over.rows)}px까지`);
-    if (shot.kind === "step" && over.sub > 640) problems.push(`${L.locale}/${shot.id}: 글이 길어 화면이 작아짐(${Math.round(over.sub)}px)`);
+    if ((shot.kind === "step" || shot.kind === "single") && over.sub > 640) problems.push(`${L.locale}/${shot.id}: 글이 길어 화면이 작아짐(${Math.round(over.sub)}px)`);
     await page.screenshot({ path: path.join(dir, `${i + 1}-${shot.id}.png`) });
   }
 }
