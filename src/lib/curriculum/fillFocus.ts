@@ -15,7 +15,8 @@ export const PROBE_EVERY = 5;
 export type FillFocus = { weak: string[]; probe: string[]; at: number };
 
 /** 부족한 칸(앞 셋)에서 마지막이 틀린 열쇠 → 맞힌 적 없는 열쇠 순, 아직 모름 칸마다 은행 앞쪽 열쇠 하나. */
-export function fillDirection(result: FillResult, catalog: FillCatalog, events: readonly FillEvent[], at = Date.now()): FillFocus {
+/** stage = 지금 My 단계 — 그 위 단계 소재는 고르지 않는다(배운 적 없는 틀·낱말로 재지 않게, 2026-11-02 변경 감시). */
+export function fillDirection(result: FillResult, catalog: FillCatalog, events: readonly FillEvent[], stage = 5, at = Date.now()): FillFocus {
   const latest = new Map<string, boolean>();
   for (const one of [...events].sort((a, b) => a.at - b.at)) latest.set(`${one.use ? "u" : "r"}|${one.key}`, one.correct);
   const weak: string[] = [];
@@ -23,8 +24,8 @@ export function fillDirection(result: FillResult, catalog: FillCatalog, events: 
   for (const cell of bankCells) {
     const axis = cell.axis as BankAxis;
     const tag = axis.endsWith("Use") ? "u" : "r";
-    const keys = keysInCell(catalog, axis, cell.id);
     const items = axis.startsWith("vocab") ? catalog.vocab : catalog.sent;
+    const keys = keysInCell(catalog, axis, cell.id).filter((key) => (items.get(key)?.stage ?? 1) <= Math.max(1, stage));
     const ordered = [...keys.filter((key) => latest.get(`${tag}|${key}`) === false), ...keys.filter((key) => !latest.has(`${tag}|${key}`)).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1))];
     for (const key of ordered.slice(0, 2)) if (!weak.includes(key)) weak.push(key);
   }
@@ -33,7 +34,7 @@ export function fillDirection(result: FillResult, catalog: FillCatalog, events: 
     if (probe.length >= PROBE_KEYS) break;
     const axis = cell.axis as BankAxis;
     const items = axis.startsWith("vocab") ? catalog.vocab : catalog.sent;
-    const first = keysInCell(catalog, axis, cell.id).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1)).find((key) => !probe.includes(key) && !weak.includes(key));
+    const first = keysInCell(catalog, axis, cell.id).filter((key) => (items.get(key)?.stage ?? 1) <= Math.max(1, stage)).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1)).find((key) => !probe.includes(key) && !weak.includes(key));
     if (first) probe.push(first);
   }
   return { weak: weak.slice(0, WEAK_KEYS), probe, at };

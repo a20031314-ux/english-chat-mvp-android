@@ -216,9 +216,5 @@
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
 - 2026-11-02 dev → qa: 다음 빌드 기기에서 Logbank 맨 위 언어능력 육각형 — 꼭짓점 누르면 그 화면(게이지·세부 칩·📎 기록), 세부 칸 누르면 부족한 것·공부할 것·추천, 단계 고르기 화면의 [초급 | 중급 | 고급]. 그리고 그냥 대화 통화 몇 번 뒤 듣기·실전 대화 %가 움직이는지(통화 기록에 차례 셈이 쌓이는지). ja/ko·en/ja·es/ar.
-- 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:392 — 어휘 세부 칸 추천 📖이 openNotes를 보내지만 새 앱엔 받는 곳(NotesPanel)이 없어 무반응, NotebookSection.tsx:1353도 같은 신호 (Quizbank 어휘 탭·단어장 여는 신호로 바꾸기).
-- 2026-11-02 watch → dev: [my] src/lib/curriculum/fillFocus.ts:32 — 아직 모름 칸 재기 문제가 지금 단계 위에서도 골라짐 (item.stage <= 지금 단계만).
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/missKind.ts:68 — 대화 조각 빈칸을 보기로 푼 것도 쓰기로 셈 (talk에 options 있으면 choose).
-- 2026-11-02 watch → dev: [my] src/lib/curriculum/fillInputs.ts:50 — 같은 날 틀렸다 맞힌 열쇠가 틀림으로 남음 (같은 날이면 맞힘을 뒤로).
-- 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:268 — 흐린 선 기간 경계를 UTC+9로 고정 (폰 지역 자정으로).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:308 — 통화 끝난 뒤 끝 화면에서 저장될 때마다 activeSecs가 늘어남 (finished면 끝난 순간 값 고정).

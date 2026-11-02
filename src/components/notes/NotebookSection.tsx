@@ -17,13 +17,13 @@ import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/n
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeFrame, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type LogItem, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
-import { sendAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import { reviewLabel, type ReviewMap } from "@/lib/curriculum/dailyPlan";
-import { TodayPlan } from "@/components/studyMap/TodayPlan";
+import { focusQuizbankWords, TodayPlan } from "@/components/studyMap/TodayPlan";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { skippedIds } from "@/lib/curriculum/known";
@@ -271,6 +271,15 @@ export function NotebookSection({
     setTab(next);
     scrollToTabs();
   };
+  // 단어장 열기 신호(openNotes words — Logbank 어휘 칸 📖 추천·단계 화면 낱말 줄·?screen=vocab): 새 앱엔 노트 화면이 없어 Quizbank 어휘 탭으로(2026-11-02 변경 감시 major).
+  useEffect(
+    () =>
+      onAppIntent("openNotes", () => {
+        focusQuizbankWords();
+        setTab("keep");
+      }),
+    [],
+  );
   // 사다리에서 아무 단계나 "이 단계로 정하기"(2026-10-29) — 조건·시험 없이 지금 단계를 바꾼다.
   const setStageTo = (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;

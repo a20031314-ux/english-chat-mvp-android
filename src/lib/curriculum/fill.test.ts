@@ -170,8 +170,25 @@ test("학습 방향: 부족한 칸 열쇠·아직 모름 칸 열쇠, 채우기 �
     ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true })),
   ];
   const result = computeFill({ catalog, check: "mid", stage: 2, events, calls: [], now: NOW });
-  const focus = fillDirection(result, catalog, events, NOW);
+  const focus = fillDirection(result, catalog, events, 5, NOW);
+  // 1단계 사람에겐 1단계 소재만.
+  const low = fillDirection(result, catalog, events, 1, NOW);
+  assert.ok([...low.weak, ...low.probe].every((key) => ((catalog.vocab.get(key) ?? catalog.sent.get(key))?.stage ?? 1) <= 1), [...low.weak, ...low.probe].join());
   assert.ok(focus.weak.length > 0 && focus.weak.every((key) => verbs.some((item) => item.key === key)), focus.weak.join());
   assert.ok(focus.probe.length > 0);
   assert.deepEqual(mixProbes(["a", "b", "c", "d", "e", "f"], ["P"]), ["a", "b", "c", "d", "P", "e", "f"]);
+});
+
+test("같은 날 틀렸다가 맞힌 열쇠는 맞힘이 나중(ja)", async () => {
+  const { fillEvents } = await import("./fillInputs.ts");
+  const events = fillEvents({
+    language: "ja",
+    known: {},
+    quiz: { "2026-11-2": { n: 2, right: 1, wrong: ["w|水"], okt: ["w|水"] } },
+    results: [],
+    items: [],
+    checkups: [],
+    segment: (text) => segmentWords(text, "ja"),
+  }).filter((one) => one.key === "w|水").sort((a, b) => a.at - b.at);
+  assert.equal(events.at(-1)?.correct, true);
 });

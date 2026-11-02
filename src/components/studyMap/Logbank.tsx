@@ -261,11 +261,13 @@ export function Logbank({
   const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
   // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
   useEffect(() => {
-    if (words) saveFillFocus(language, fillDirection(fill, catalog, events));
-  }, [language, words, fill, catalog, events]);
+    if (words) saveFillFocus(language, fillDirection(fill, catalog, events, stage));
+  }, [language, words, fill, catalog, events, stage]);
   // 흐린 선 = 고른 기간이 시작할 때(그 전 기록만).
   const before = useMemo(() => {
-    const start = dayValue(period.start) - 9 * 3_600_000;
+    // 이 폰 지역의 그날 0시(예전엔 UTC+9로 고정 — 2026-11-02 변경 감시).
+    const [y, m, d] = period.start.split("-").map(Number);
+    const start = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
     if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
     return computeFill({ catalog, check, stage, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
   }, [catalog, check, stage, events, callTurns, period.start]);
@@ -389,7 +391,16 @@ export function Logbank({
     const study = inCell.filter((key) => !right.has(key) && !short.includes(key)).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1)).slice(0, 6);
     const first = short[0] ?? study[0];
     const recommend = bank.startsWith("vocab")
-      ? { icon: "📖", label: cellName(ui, cell.id, grammarName), go: () => sendAppIntent("openNotes", { section: "words" }) }
+      ? {
+          icon: "📖",
+          label: cellName(ui, cell.id, grammarName),
+          // 시트를 닫고 Quizbank 어휘 탭으로(NotebookSection이 openNotes를 받음).
+          go: () => {
+            setOpenCell(null);
+            setOpenAxis(null);
+            sendAppIntent("openNotes", { section: "words" });
+          },
+        }
       : first
         ? { icon: "🧩", label: keyLabel(first), go: () => openKey(first) }
         : null;

@@ -38,18 +38,19 @@ export function fillEvents(input: FillSources): FillEvent[] {
   for (const [day, one] of Object.entries(input.quiz)) {
     const at = dayValue(day) + NOON;
     const utcDay = Math.floor(dayValue(day) / DAY);
-    for (const key of one.okc ?? []) {
-      add({ at, key, correct: true, source: "quiz", use: false, choose: true });
-      seen.add(`${key}@${utcDay}`);
-    }
-    for (const key of one.okt ?? []) {
-      add({ at, key, correct: true, source: "quiz", use: true });
-      seen.add(`${key}@${utcDay}`);
-    }
+    // 같은 날 틀렸다가 맞힌 것은 맞힘이 나중(그날 끝 상태 = 맞힘, 2026-11-02 변경 감시) — 틀림을 먼저, 맞힘은 1밀리초 뒤.
     const typedWrong = new Set(one.wt ?? []);
     for (const key of one.wrong ?? []) {
       const miss = asMiss(one.miss?.[key]);
       add({ at, key, correct: false, source: "quiz", use: typedWrong.has(key), choose: !typedWrong.has(key), ...(miss ? { miss } : {}) });
+    }
+    for (const key of one.okc ?? []) {
+      add({ at: at + 1, key, correct: true, source: "quiz", use: false, choose: true });
+      seen.add(`${key}@${utcDay}`);
+    }
+    for (const key of one.okt ?? []) {
+      add({ at: at + 1, key, correct: true, source: "quiz", use: true });
+      seen.add(`${key}@${utcDay}`);
     }
   }
 

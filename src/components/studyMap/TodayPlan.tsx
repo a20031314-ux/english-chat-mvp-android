@@ -116,6 +116,18 @@ const MIXES: readonly QuizMix[] = ["auto", "speak", "read"];
 const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
+/** Quizbank 어휘 탭을 열 때(신호 openNotes words — Logbank 어휘 칸 📖 추천·단계 화면 낱말 줄, 2026-11-02): 저장된 탭을 어휘로 바꾸고 알린다. */
+const KEEP_WORDS_EVENT = "lb-keep-words";
+export function focusQuizbankWords(): void {
+  try {
+    const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null") as Partial<Settings> | null;
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify({ ...(raw ?? {}), focus: "vocab" }));
+  } catch {
+    // 이번에만.
+  }
+  window.dispatchEvent(new Event(KEEP_WORDS_EVENT));
+}
+
 function readSettings(): Settings {
   try {
     const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null") as Partial<Settings> | null;
@@ -494,6 +506,11 @@ export function TodayPlan({
     if (!script || isSituationScript(script)) return null;
     return "read";
   };
+  useEffect(() => {
+    const again = () => setSettings(readSettings());
+    window.addEventListener(KEEP_WORDS_EVENT, again);
+    return () => window.removeEventListener(KEEP_WORDS_EVENT, again);
+  }, []);
   const save = (next: Settings) => {
     setSettings(next);
     try {
