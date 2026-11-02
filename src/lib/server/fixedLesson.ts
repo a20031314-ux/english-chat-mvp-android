@@ -168,7 +168,7 @@ export function asFrameLesson(lesson: FixedLesson, frame: Frame): FrameLesson {
     const piece = fixedPiece ?? "___";
     const last = parts[parts.length - 1];
     if (last && last.piece === "___" && piece === "___") last.role = `${last.role} · ${row.ui}`;
-    else parts.push({ piece, role: piece === "___" ? `${row.ui} — ${row.role}` : `${row.role} (${row.ui})` });
+    else parts.push({ piece, role: piece === "___" ? `${row.ui} — ${row.role}` : /^[(（]/.test(row.ui.trim()) ? `${row.role} ${row.ui.trim()}` : `${row.role} (${row.ui})` });
   }
   return { explain: [], meaning: lesson.meaning, parts, usage: lesson.slot, turns: lesson.turns };
 }
