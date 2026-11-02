@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { markAboutTheirLine, markMissed, markStuck, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { markAboutTheirLine, markMissed, markStuck, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -76,4 +76,17 @@ test("튜터 수업: 다시 말해 맞힌 줄(🔁)을 세고, 맨 마지막 내
     { who: "learner", text: "Yo fui parque", redo: "miss" },
   ];
   assert.deepEqual(tallyCall(es), { fixed: 0, hints: 0, missed: 0, redone: 1 });
+});
+
+test("튜터 수업 기다림: ask → miss → miss면 넘어감, pass면 끝, 다른 문장 ask는 처음부터(일본어)", () => {
+  const none = { line: "", tries: 0 };
+  const asked = nextRedo(none, "ask", "昨日友達に会いました。");
+  assert.deepEqual(asked, { line: "昨日友達に会いました。", tries: 1 });
+  const again = nextRedo(asked, "miss", "昨日友達に会いました。");
+  assert.deepEqual(again, { line: "昨日友達に会いました。", tries: 2 });
+  assert.deepEqual(nextRedo(again, "miss", ""), none, "두 번 묻고 또 틀리면 넘어감");
+  assert.deepEqual(nextRedo(asked, "pass", undefined), none);
+  assert.deepEqual(nextRedo(asked, "ask", "カフェに行きました。"), { line: "カフェに行きました。", tries: 1 });
+  assert.deepEqual(nextRedo(none, "miss", "x"), none, "기다리는 것 없이 온 miss는 무시");
+  assert.deepEqual(nextRedo(asked, undefined, ""), none, "다른 말을 하면 기다림 끝");
 });

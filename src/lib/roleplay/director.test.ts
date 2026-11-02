@@ -1308,8 +1308,11 @@ test("튜터 수업: retry를 읽고, 고친 문장 없는 ask·대본 장면의
   const noSentence = parse({ say: "Say it again?", retry: "ask", assessment: "on_track", next: "free" }, { coach: true, heard, nodeId: "talk" }, open);
   assert.equal(noSentence?.retry, undefined);
 
-  const passed = parse({ say: "Perfect! What did you do there?", retry: "pass", assessment: "on_track", next: "free" }, { coach: true, heard: "yesterday i went to the beach", nodeId: "talk" }, open);
+  const passed = parse({ say: "Perfect! What did you do there?", retry: "pass", assessment: "on_track", next: "free" }, { coach: true, heard: "yesterday i went to the beach", nodeId: "talk", redo: "Yesterday I went to the beach.", redoTries: 1 }, open);
   assert.equal(passed?.retry, "pass");
+  // 기다리는 문장 없이 온 pass·miss는 버린다(운영 2026-11-02 es/ar).
+  const strayPass = parse({ say: "¡Qué rico! ¿Dónde comieron?", retry: "pass", assessment: "on_track", next: "free" }, { coach: true, heard: "comimos pescado muy rico", nodeId: "talk" }, open);
+  assert.equal(strayPass?.retry, undefined);
 
   const notCoaching = parse(
     { say: "Nice. What did you do there?", better: "Yesterday I went to the beach.", note: "어제 일이라 went", retry: "ask", assessment: "on_track", next: "free" },
@@ -1325,4 +1328,48 @@ test("튜터 수업: 다시 말해 보라고 한 차례에는 다음 질문(foll
   const raw = { open: "", follow: "talk.there-what", say: "Yesterday I went to the beach. Say it again?", better: "Yesterday I went to the beach.", retry: "ask", assessment: "on_track", next: "free" };
   const coached = parse(raw, { coach: true, heard, nodeId: "talk" }, withBank);
   assert.equal(coached?.follow, undefined);
+});
+
+test("튜터 수업: 고친 문장을 말하지 않은 차례엔 뒤에 붙인다(운영 es/ar), 띄어쓰기 없는 일본어도 들어 있으면 그대로", () => {
+  const es = findScenario("open-talk-es")!;
+  const esBank = sentencesFor("es");
+  const out = parseDirection(JSON.stringify({ say: "¡Qué bien!", better: "Ayer fui a la playa con mi hermano.", retry: "ask", assessment: "on_track", next: "free" }), {
+    scenario: es,
+    bank: esBank,
+    recordedIds: new Set(recordedLines(es, SCENARIOS, esBank).map((line) => line.id)),
+    request: request({ scenarioId: es.id, nodeId: "talk", coach: true, heard: "ayer yo ir a la playa con mi hermano", targetLanguage: "es", nativeLanguage: "ar" }),
+  });
+  assert.ok(out && "text" in out.say);
+  assert.equal(out && "text" in out.say ? out.say.text : "", "¡Qué bien! Ayer fui a la playa con mi hermano.");
+
+  const ja = findScenario("open-talk-ja")!;
+  const jaBank = sentencesFor("ja");
+  const kept = parseDirection(JSON.stringify({ say: "「昨日、友達に会いました」。もう一度どうぞ。", better: "昨日友達に会いました。", retry: "ask", assessment: "on_track", next: "free" }), {
+    scenario: ja,
+    bank: jaBank,
+    recordedIds: new Set(recordedLines(ja, SCENARIOS, jaBank).map((line) => line.id)),
+    request: request({ scenarioId: ja.id, nodeId: "talk", coach: true, heard: "昨日友達を会いました", targetLanguage: "ja", nativeLanguage: "ko" }),
+  });
+  assert.equal(kept && "text" in kept.say ? kept.say.text : "", "「昨日、友達に会いました」。もう一度どうぞ。");
+});
+
+test("튜터 수업: 같은 문장은 두 번까지 — 마지막 시도에서 또 묻는 ask는 miss(넘어감), 그때는 다음 질문을 얹어도 된다", () => {
+  const last = { coach: true, heard: "i watch a movie weekend", nodeId: "talk", redo: "I watched a movie over the weekend.", redoTries: 2 } as const;
+  const again = parse({ say: "I watched a movie over the weekend. Once more?", better: "I watched a movie over the weekend.", retry: "ask", assessment: "on_track", next: "free" }, last, withBank);
+  assert.equal(again?.retry, "miss");
+  const moveOn = parse({ say: "That's fine.", follow: "talk.there-what", retry: "miss", assessment: "on_track", next: "free" }, last, withBank);
+  assert.equal(moveOn?.retry, "miss");
+  assert.equal(moveOn?.follow, "talk.there-what", "넘어가는 차례는 대화를 잇는다");
+  // 마지막이 아니면 miss 차례도 다시 말할 차례 — 고친 문장을 붙이고 다음 질문은 안 얹음.
+  const once = parse({ say: "Almost.", follow: "talk.there-what", retry: "miss", assessment: "on_track", next: "free" }, { ...last, redoTries: 1 }, withBank);
+  assert.equal(once?.follow, undefined);
+  assert.ok(once && "text" in once.say && once.say.text.includes("I watched a movie over the weekend."));
+});
+
+test("튜터 수업 지시: 기다리는 문장이 있으면 그 문장을, 마지막이면 다시 묻지 말라고", () => {
+  assert.match(coachBrief({ coach: true }), /Nothing is waiting to be repeated/);
+  assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 1 }), /You asked them to say "I went home\." again/);
+  assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 2 }), /their last try[\s\S]*Do not ask them to say it again/);
+  assert.match(coachBrief({ coach: true }), /do not make up an answer for them/);
+  assert.doesNotMatch(coachBrief({ redo: "I went home.", redoTries: 1 }), /I went home/, "그냥 대화는 기다리는 문장을 안 씀");
 });

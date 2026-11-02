@@ -183,6 +183,10 @@ export async function POST(request: NextRequest) {
     tutorGender: serverTutorGender(scenario.language, body.tutorGender),
     // 튜터 수업(통화 화면 🎓, lib/callStyle.ts) — 큰 실수만 소리로 짚고 다시 말해 보기(director.ts coachRules).
     ...(body.coach === true ? { coach: true } : {}),
+    // 튜터 수업에서 다시 말해 보라고 해 둔 문장과 몇 번째인지(앱이 들고 있다가 실음).
+    ...(body.coach === true && typeof body.redo === "string" && body.redo.trim()
+      ? { redo: body.redo.trim().slice(0, 200), redoTries: Math.min(5, Math.max(1, readCount(body.redoTries) || 1)) }
+      : {}),
   };
 
   const bank = sentencesFor(scenario.language);

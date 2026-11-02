@@ -145,7 +145,17 @@ export type DirectorRequest = {
    * 통화 화면 🎓로 켜고 끔(lib/callStyle.ts) — 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
    */
   coach?: boolean;
+  /**
+   * 튜터 수업: 튜터가 다시 말해 보라고 해서 기다리는 문장(앱이 들고 있다가 다음 차례에 실음). 비면 기다리는 것 없음 —
+   * 그때는 pass·miss가 올 수 없다(운영 2026-11-02: 기다리는 것 없이 "pass"가 와서 아무 줄에 ✓가 붙을 뻔함).
+   */
+  redo?: string;
+  /** 그 문장을 지금까지 몇 번 말해 보라고 했나(1·2). 2면 이번이 마지막 — 또 틀려도 다시 묻지 않고 넘어간다. */
+  redoTries?: number;
 };
+
+/** 같은 문장을 다시 말해 보라고 하는 최대 횟수(사용자 결정 없음, 설계 2026-11-02: 두 번까지). */
+export const REDO_MAX_TRIES = 2;
 
 /**
  * 튜터 수업에서 이 차례가 "다시 말해 보기"의 어디쯤인가.
@@ -331,6 +341,16 @@ export function bilingualCharacterRule(target: string, native: string): string {
  * 큰 실수만 짚고(사용자 2026-11-02 "강도는 큰 것만"), 앱 언어를 알아듣고, 짧은 앱 언어 한마디를 섞는다("잘 모르겠어 → 괜찮아",
  * "중간에 짧게 괜찮아, 다시 해 봐"). 다시 말해 보기는 같은 문장에 두 번까지. 베낄 수 있는 예문은 넣지 않는다(RULES).
  */
+/** 같은 문장을 이미 두 번 말해 보라고 했다 — 이번이 마지막 시도. */
+function lastRedoTry(request: Pick<DirectorRequest, "redo" | "redoTries">): boolean {
+  return Boolean(request.redo?.trim()) && (request.redoTries ?? 1) >= REDO_MAX_TRIES;
+}
+
+/** 글자만(소문자, 띄어쓰기·문장부호 없이) — 띄어쓰기 없는 언어도 같은 방식으로 "이 말이 들어 있나"를 본다. 표시(\p{M})는 지우지 않는다. */
+function lettersOf(text: string): string {
+  return text.toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "");
+}
+
 /** 튜터 수업은 "그냥 대화"(열린 장면)에서만 — 대본 장면은 할 일이 정해져 있어 예전 그대로. */
 export function isCoaching(request: Pick<DirectorRequest, "coach">, scenario: Pick<RoleplayScenario, "openEnded">): boolean {
   return Boolean(request.coach && scenario.openEnded);
@@ -342,7 +362,8 @@ export function coachRules(target: string, native: string, bilingual: boolean): 
 - Pick up only big mistakes: the ones that change or blur what they mean, or that any listener would notice at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation. A turn without a big mistake is just conversation.
 - A turn with a big mistake is the correction and nothing else: if you like, a very short word of encouragement; then their whole sentence said right, once, simply; then ask them to say it again. Ask no new question in that turn. Put the right sentence in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask".
 - On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can — and ask once more. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
-- When they speak ${native}, or say they do not know: show them you understood, then hand them the ${target} sentence for what they meant and have them say it ("meant", "retry": "ask"). If they are lost, make it easier — fewer words, or two choices to pick from.
+- When they say a whole sentence in ${native}: a few words to show you understood, then the ${target} sentence for exactly what they said, and have them say it ("meant", "retry": "ask") — even when you understood it perfectly. Checking back with a question is only for when you truly cannot tell what they meant.
+- When they say they do not know, or cannot say it: do not make up an answer for them. Make it easier — ask again in fewer words, offer two choices to pick from, or give the start of a sentence they can finish. Only when they asked how to say something in particular, hand them that sentence to say.
 - Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask".
 - ${
     bilingual
@@ -716,6 +737,13 @@ Get back to your list as soon as it feels natural.`
     request.context?.trim()
       ? `What you remember from earlier in this conversation:
 ${request.context.trim()}`
+      : "",
+    coaching
+      ? request.redo
+        ? (request.redoTries ?? 1) >= REDO_MAX_TRIES
+          ? `You have asked them twice to say "${request.redo}". This turn is their last try: "pass" if they said it right; otherwise "miss" — tell them it is fine in a few words and carry the conversation on with a question. Do not ask them to say it again.`
+          : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
+        : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
       : "",
     request.missed
       ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty. Leave "note", "better" and "meant" empty, and give "stuck" as the assessment.`
@@ -1216,12 +1244,28 @@ export function parseDirection(
 
   // 튜터 수업: 다시 말해 보기의 어디쯤인가. ask는 다시 말할 문장(better·meant)이 있을 때만 — 없으면 앱이 보여 줄 게 없다.
   const named = typeof record.retry === "string" ? (record.retry.trim().toLowerCase() as Retry) : "";
+  const waiting = Boolean(request.redo?.trim());
   const retry: Retry | "" =
     !coaching || !named || !RETRIES.includes(named) || !request.heard.trim()
       ? ""
       : named === "ask" && !(better || meant)
         ? ""
-        : named;
+        : // pass·miss는 기다리는 문장이 있을 때만. 마지막 시도에서 다시 묻는 ask는 miss(넘어감)로.
+          (named === "pass" || named === "miss") && !waiting
+          ? ""
+          : named === "ask" && waiting && lastRedoTry(request) && sameWords(better || meant, request.redo ?? "")
+            ? "miss"
+            : named;
+  const givingUp = retry === "miss" && lastRedoTry(request);
+  // 다시 말해 보라는 차례(ask·마지막 아닌 miss)에는 소리 내는 말에 그 문장이 들어 있어야 한다 — 운영(es/ar 2026-11-02)에서
+  // "¡Qué bien!"만 하고 고친 문장을 말하지 않은 차례가 있었다. 없으면 뒤에 붙인다.
+  const repeatThis = (retry === "ask" || (retry === "miss" && !givingUp)) ? meant || better || request.redo || "" : "";
+  if (repeatThis) {
+    const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
+    if (!lettersOf(spokenNow).includes(lettersOf(repeatThis))) {
+      say = { text: [spokenNow, repeatThis].filter(Boolean).join(" ") };
+    }
+  }
   // 튜터 수업의 note는 고친 까닭 한 줄(앱 언어) — 고친 말과 같이 보이고, 고친 문장을 따와도 된다.
   // 학습 언어로만 쓴 설명은 못 읽을 수 있어 뺀다(givesThemWords와 같은 까닭).
   const coachNote =
@@ -1237,7 +1281,7 @@ export function parseDirection(
     ...(better ? { better } : {}),
     ...(meant ? { meant } : {}),
     // 다시 말해 보라고 한 차례에는 다음 질문을 얹지 않는다 — 고친 문장을 말할 차례다.
-    ...(chosenFollow && retry !== "ask" && retry !== "miss" ? { follow: chosenFollow } : {}),
+    ...(chosenFollow && retry !== "ask" && !(retry === "miss" && !givingUp) ? { follow: chosenFollow } : {}),
     ...(retry ? { retry } : {}),
   };
 }

@@ -52,7 +52,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { markAboutTheirLine, markMissed, markStuck, tallyCall, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { markAboutTheirLine, markMissed, markStuck, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -159,8 +159,9 @@ export function RoleplayScreen({
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
   // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
   const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
-  /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. */
-  const [redoLine, setRedoLine] = useState("");
+  /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. tries = 그 문장을 말해 보라고 한 횟수. */
+  const [redo, setRedo] = useState<{ line: string; tries: number }>({ line: "", tries: 0 });
+  const redoLine = redo.line;
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
   /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
@@ -388,7 +389,7 @@ export function RoleplayScreen({
         context: memory.text,
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
-        ...(scenario.openEnded && coachOn ? { coach: true } : {}),
+        ...(scenario.openEnded && coachOn ? { coach: true, ...(redo.line ? { redo: redo.line, redoTries: redo.tries } : {}) } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -430,18 +431,19 @@ export function RoleplayScreen({
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
       // 튜터 수업: 다시 말해 보라고 했으면(ask) 그 문장을 띄우고, 다시 말한 줄에는 맞힘/아직(pass·miss)을 붙인다.
       const retry = missedTurn ? undefined : direction?.retry;
-      const redo = retry === "pass" || retry === "miss" ? retry : undefined;
-      if (better || meant || about || redo) {
+      // 맞힘/아직은 기다리던 문장이 있을 때만(서버도 같은 규칙).
+      const redoMark = redoLine && (retry === "pass" || retry === "miss") ? retry : undefined;
+      if (better || meant || about || redoMark) {
         setSaid((current) =>
           markAboutTheirLine(current, {
             ...(better ? { better } : {}),
             ...(meant ? { meant } : {}),
             ...(about ? { about } : {}),
-            ...(redo ? { redo } : {}),
+            ...(redoMark ? { redo: redoMark } : {}),
           }),
         );
       }
-      if (!missedTurn) setRedoLine(retry === "ask" || retry === "miss" ? meant || better || "" : "");
+      if (!missedTurn) setRedo((current) => nextRedo(current, retry, meant || better));
       if (direction?.assessment === "stuck" && !missedTurn) {
         const pending = state.pending;
         setSaid((current) =>

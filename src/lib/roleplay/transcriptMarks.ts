@@ -3,6 +3,7 @@
  * 모두 새 배열을 돌려주고, 붙일 줄이 없으면 받은 배열을 그대로 돌려준다.
  */
 import type { StuckTurn, TranscriptLine } from "./review.ts";
+import { REDO_MAX_TRIES } from "./director.ts";
 
 /**
  * Put what was said about their sentence under their sentence.
@@ -84,4 +85,25 @@ export function tallyCall(lines: TranscriptLine[]): { fixed: number; hints: numb
     }
   }
   return { fixed, hints, missed, redone };
+}
+
+/** 튜터 수업에서 기다리는 "다시 말해 보기" — 문장과 그 문장을 말해 보라고 한 횟수. */
+export type RedoWait = { line: string; tries: number };
+
+/**
+ * 감독 답의 retry로 다음 기다림을 정한다(2026-11-02). ask = 새 문장(같은 문장이면 횟수 +1), miss = 한 번 더(이미 마지막이었으면 넘어감),
+ * pass·그 밖 = 끝. 서버도 같은 규칙으로 pass·miss를 거르지만(director.ts) 앱이 들고 있는 값이 다음 차례에 실리니 여기서도 지킨다.
+ */
+export function nextRedo(current: RedoWait, retry: "ask" | "pass" | "miss" | undefined, sentence: string | undefined): RedoWait {
+  const done = { line: "", tries: 0 };
+  const said = (sentence ?? "").trim();
+  if (retry === "ask") {
+    if (!said) return current.line ? current : done;
+    return { line: said, tries: current.line && current.line === said ? current.tries + 1 : 1 };
+  }
+  if (retry === "miss") {
+    if (!current.line || current.tries >= REDO_MAX_TRIES) return done;
+    return { line: said || current.line, tries: current.tries + 1 };
+  }
+  return done;
 }
