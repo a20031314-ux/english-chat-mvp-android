@@ -276,6 +276,9 @@ export const PART_LOG_MAX = 60;
 /** Logbank 한 줄: 낱낱 + 갈래·단계(2026-10-31, 모든 단계 최근 14일). */
 export type LogItem = PartLogItem & { part: PartId; stage: number };
 export const LOG_MAX = 200;
+/** Logbank 주·월 정리용(logDays를 길게 받을 때): 1년 기록 한도와 그때의 줄 수 한도. 소재 수(단계마다 수십)·고친 카드(400)로 묶여 이 안에 든다. */
+export const LOG_DAYS_MAX = 366;
+export const LOG_MAX_LONG = 2000;
 
 /**
  * 지금 단계 네 갈래의 최근 기록(partHistory와 같은 셈의 낱낱 + 튜터가 고친 줄), 새것부터, 갈래마다 60개까지.
@@ -289,6 +292,8 @@ export function partLog(input: {
   cards: readonly FixCard[];
   now: number;
   days?: number;
+  /** 갈래마다 몇 개까지(기본 PART_LOG_MAX). Logbank 1년 정리는 더 많이. */
+  limit?: number;
 }): Record<PartId, PartLogItem[]> {
   const since = input.now - (input.days ?? HISTORY_DAYS) * 24 * 60 * 60 * 1000;
   const out: Record<PartId, PartLogItem[]> = { vocab: [], grammar: [], expression: [], pronunciation: [] };
@@ -321,6 +326,6 @@ export function partLog(input: {
       push(part, { at: card.at, kind: "fixed", text: card.wrong, right: card.right, where: card.where, ...(node ? { node } : {}) });
     }
   }
-  for (const part of PART_IDS) out[part] = out[part].sort((a, b) => b.at - a.at).slice(0, PART_LOG_MAX);
+  for (const part of PART_IDS) out[part] = out[part].sort((a, b) => b.at - a.at).slice(0, input.limit ?? PART_LOG_MAX);
   return out;
 }

@@ -1,9 +1,9 @@
 /**
  * 날마다 푼 퀴즈 수·맞힌 수(2026-10-31 Logbank — 사용자 "복습 칸 자리에 날마다·주마다 배운 것 정리, AI 없이 목록만").
- * 이 폰에만, 언어마다, 최근 60일. 수와 그날 틀린 열쇠(낱말·표현·틀 이름 — 학습자 문장 아님)만.
+ * 이 폰에만, 언어마다, 최근 1년(2026-11-02 Logbank 주·월 정리 — 예전 60일). 수와 그날 틀린 열쇠(낱말·표현·틀 이름 — 학습자 문장 아님)만.
  */
 const KEY = "quizDays.v1";
-const KEEP_DAYS = 60;
+const KEEP_DAYS = 366;
 
 /** wrong: 그날 틀린 열쇠(w|·e|·f|…, 서른 개까지) — Logbank 그날 칸에 "틀린 것"으로(2026-11-01). */
 export type QuizDays = Record<string, { n: number; right: number; wrong?: string[] }>;

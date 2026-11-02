@@ -323,7 +323,7 @@ export function NotebookSection({
 
   useEffect(() => {
     let cancelled = false;
-    fetch(apiUrl(`/api/notebook?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&scripts=1`), {
+    fetch(apiUrl(`/api/notebook?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&scripts=1&logDays=366`), {
       headers: entitlementHeaders(isPremium),
     })
       .then((response) => (response.ok ? response.json() : null))

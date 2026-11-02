@@ -2,13 +2,13 @@
  * 날마다 한 공부의 결과(2026-11-01 사용자 "Logbank는 결과 샷(통화면 학습 결과 창)으로 첨부해서 기록 — 폰에만, 일일 총학습으로").
  * 문장구조 수업·꺼내 쓰기·상황 대본이 끝날 때 결과(맞힌 수·내가 말한 줄)를 이 폰에 남기고, Logbank가 그날 칸에 결과 카드로 그린다.
  * 통화는 따로 남기지 않는다 — 이미 폰에 있는 통화 기록(roleplay/callStore)으로 통화 정리 카드를 그린다. Quizbank는 curriculum/quizDays.ts.
- * 서버에 보내지 않는다(학습자 문장 — hub/RULES "데이터·보안"). 언어마다 최근 60일, 300개까지.
+ * 서버에 보내지 않는다(학습자 문장 — hub/RULES "데이터·보안"). 언어마다 최근 1년, 1,500개까지(2026-11-02 Logbank 주·월 정리 — 예전 60일·300개).
  */
 import { localDay } from "./resume.ts";
 
 const KEY = "dayLog.v1";
-const KEEP_DAYS = 60;
-const MAX = 300;
+const KEEP_DAYS = 366;
+const MAX = 1500;
 const SAID_MAX = 5;
 export const DAY_LOG_EVENT = "lb-daylog";
 

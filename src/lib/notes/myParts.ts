@@ -111,9 +111,10 @@ export function myPartHistory(input: { language: string; order: number; passed: 
 }
 
 /** 망·그래프를 누르면 보이는 낱낱(My 안: 배움 = 대본 통과·시험에서 맞힘, 숙지 = 이미 앎) — 고친 줄(fixed)은 부르는 쪽이 붙인다. */
-export function myPartLog(input: { language: string; stage: Stage; passed: Passed; known: KnownMap; now: number }): Record<PartId, PartLogItem[]> {
+export function myPartLog(input: { language: string; stage: Stage; passed: Passed; known: KnownMap; now: number; days?: number }): Record<PartId, PartLogItem[]> {
   const order = input.stage.order;
-  const since = input.now - HISTORY_DAYS * DAY_MS;
+  // days: Logbank 주·월 정리는 1년(2026-11-02 사용자 "월별·주별로 얼마나, 뭘 학습했는지" → 보관 1년), 그래프·낱낱은 14일 그대로.
+  const since = input.now - (input.days ?? HISTORY_DAYS) * DAY_MS;
   const out: Record<PartId, PartLogItem[]> = { vocab: [], grammar: [], expression: [], pronunciation: [] };
   for (const [key, row] of stageKeyMap(input.language, order)) {
     const credit = creditOf(key, row.from, input.passed, input.known);

@@ -3,7 +3,9 @@
 /**
  * Logbank(2026-10-31 사용자 "복습 칸 자리에 데이터로 — 공부한 날·분은 프로필에 있으니, 날마다·주마다 학습한 걸 요약·정리" → 목록만, AI 없이):
  * 주마다 묶고(머리에 그 주 합), 날마다 배운 것·익힌 것(문장구조·낱말·표현·문법)·튜터가 고친 줄·푼 퀴즈 수.
- * 재료: 서버 logItems(/api/notebook — 지금 단계까지 모든 단계 최근 14일, notes/stageParts.ts LogItem) + 이 폰 퀴즈 수(curriculum/quizDays.ts).
+ * 재료: 서버 logItems(/api/notebook logDays=366 — 지금 단계까지 모든 단계 최근 1년, notes/stageParts.ts LogItem) + 이 폰 퀴즈 수(curriculum/quizDays.ts).
+ * 맨 위 [주 | 월] 정리 카드(2026-11-02 사용자 "월별·주별로 얼마나, 뭘 학습했는지", "Logbank에만"): ‹ › 로 기간을 넘기고 — 공부한 날·통화·수업·퀴즈·고친 말·
+ * 다시 말해 맞힘(지난 기간 대비) + 배우고 익힌 소재 칩(curriculum/periodSummary.ts). 그 아래 날마다 목록도 고른 기간만.
  * 낱말·표현을 누르면 표현 자세히. 머리 아이콘(📈 실력 기록·📝 이번 주 확인)은 TodayPlan이 준다(head).
  */
 import { Fragment, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
@@ -18,6 +20,8 @@ import { expressionKeyOf, expressionKeysIn, grammarKeyOfNode } from "@/lib/curri
 import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { buildRecap } from "@/lib/roleplay/recap";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
+import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
+import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
 
@@ -115,6 +119,40 @@ export function logDays(items: readonly LogItem[], quiz: QuizDays, results: read
     .sort((a, b) => dayValue(b.day) - dayValue(a.day));
 }
 
+function useCallDays(language: string): Record<string, CallDay> {
+  const raw = useSyncExternalStore(
+    (callback) => {
+      window.addEventListener(CALL_DAYS_EVENT, callback);
+      window.addEventListener("storage", callback);
+      return () => {
+        window.removeEventListener(CALL_DAYS_EVENT, callback);
+        window.removeEventListener("storage", callback);
+      };
+    },
+    () => {
+      try {
+        return localStorage.getItem(`callDays.v1.${language}`) ?? "{}";
+      } catch {
+        return "{}";
+      }
+    },
+    () => "{}",
+  );
+  return useMemo(() => {
+    void raw;
+    return readCallDays(language);
+  }, [raw, language]);
+}
+
+const PERIOD_KEY = "logbankPeriod.v1";
+function readPeriodKind(): PeriodKind {
+  try {
+    return localStorage.getItem(PERIOD_KEY) === "month" ? "month" : "week";
+  } catch {
+    return "week";
+  }
+}
+
 const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"];
 
 export function Logbank({
@@ -137,7 +175,27 @@ export function Logbank({
   const results = useDayResults(language);
   const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
   const calls = useMemo(() => allCalls.filter((call) => call.language === language), [allCalls, language]);
-  const days = useMemo(() => logDays(items, quiz, results, calls), [items, quiz, results, calls]);
+  const allDays = useMemo(() => logDays(items, quiz, results, calls), [items, quiz, results, calls]);
+  const callDays = useCallDays(language);
+  // 정리용 통화 숫자: 따로 남긴 줄(callDays, 1년) + 그 전에 저장돼 줄이 없는 통화 기록.
+  const callRows = useMemo(() => {
+    const rows: CallDay[] = Object.values(callDays);
+    for (const call of calls) {
+      if (callDays[call.id]) continue;
+      const row = callDayOf(call);
+      if (row) rows.push(row);
+    }
+    return rows;
+  }, [callDays, calls]);
+  // 오늘은 이 칸을 처음 그릴 때 한 번(그리는 동안 시계를 읽지 않게).
+  const [today] = useState(() => localDay(Date.now()));
+  const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
+  const [back, setBack] = useState(0);
+  const period = useMemo(() => shiftPeriod(periodOf(kind, today), -back), [kind, today, back]);
+  const summary = useMemo(() => summarize({ period, items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
+  const before = useMemo(() => summarize({ period: shiftPeriod(period, -1), items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
+  // 아래 날마다 목록도 고른 기간만(1년 치를 한꺼번에 늘어놓지 않게).
+  const days = useMemo(() => allDays.filter((one) => inPeriod(period, one.day)), [allDays, period]);
   const weeks = useMemo(() => {
     const out: { week: string; days: Day[] }[] = [];
     for (const day of days) {
@@ -188,9 +246,45 @@ export function Logbank({
     // Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움.
     <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
   );
+  const monthFormat = (() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { year: "numeric", month: "long" });
+    } catch {
+      return new Intl.DateTimeFormat(undefined, { year: "numeric", month: "long" });
+    }
+  })();
+  const periodLabel =
+    period.kind === "month" ? monthFormat.format(asDate(period.start)) : `${rangeFormat.format(asDate(period.start))} – ${rangeFormat.format(asDate(periodLastDay(period)))}`;
+  const chooseKind = (next: PeriodKind) => {
+    setKind(next);
+    setBack(0);
+    try {
+      localStorage.setItem(PERIOD_KEY, next);
+    } catch {
+      // 이번에만.
+    }
+  };
+  const openItem = (item: LogItem) => {
+    const key = lessonKeyOf(language, item);
+    if (key) openLesson({ language, key });
+    else if (item.part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
+  };
   return (
     <div data-logbank className="flex flex-col gap-3">
       {head}
+      <PeriodCard
+        ui={ui}
+        kind={kind}
+        label={periodLabel}
+        canForward={back > 0}
+        summary={summary}
+        before={before}
+        itemLabel={label}
+        onKind={chooseKind}
+        onBack={() => setBack((n) => n + 1)}
+        onForward={() => setBack((n) => Math.max(0, n - 1))}
+        onItem={openItem}
+      />
       {weeks.length ? null : <p className="text-note text-slate-500">—</p>}
       {weeks.map(({ week, days: list }) => {
         const all = list.flatMap((one) => one.items);
@@ -199,16 +293,19 @@ export function Logbank({
         const end = new Date(start.getTime() + 6 * 24 * 60 * 60 * 1000);
         return (
           <section key={week} data-log-week={week} className="rounded-xl border border-line p-3">
-            <div className="flex flex-col gap-1">
-              <h4 className="text-note font-semibold text-ink">{`${rangeFormat.format(start)} – ${rangeFormat.format(end)}`}</h4>
-              {tally(counts(all), quizWeek)}
-            </div>
-            <ol className="mt-2 flex flex-col gap-3">
+            {/* 주 정리를 보는 중이면 위 카드가 같은 주 머리를 이미 보여 줌 — 달 정리일 때만 주 머리. */}
+            {kind === "month" ? (
+              <div className="mb-2 flex flex-col gap-1">
+                <h4 className="text-note font-semibold text-ink">{`${rangeFormat.format(start)} – ${rangeFormat.format(end)}`}</h4>
+                {tally(counts(all), quizWeek)}
+              </div>
+            ) : null}
+            <ol className="flex flex-col gap-3">
               {list.map((one) => {
                 const fixed = one.items.filter((item) => item.kind === "fixed");
                 return (
                   <Fragment key={one.day}>
-                  <li data-log-day={one.day} className="border-t border-line pt-2">
+                  <li data-log-day={one.day} className="border-t border-line pt-2 first:border-t-0 first:pt-0">
                     <div className="flex flex-wrap items-baseline gap-x-2">
                       <span className="text-caption font-semibold text-slate-200">{dateFormat.format(asDate(one.day))}</span>
                       {tally(counts(one.items), one.quiz)}
@@ -270,6 +367,110 @@ export function Logbank({
 }
 
 const RESULT_ICON: Record<DayResult["kind"], string> = { lesson: "🧩", recall: "🎯", script: "🎭" };
+
+/** 지난 기간보다 늘었으면 ▲n, 줄었으면 ▼n(같으면 없음). */
+function Delta({ now, before }: { now: number; before: number }) {
+  const diff = now - before;
+  if (!diff) return null;
+  return <span className={`ms-0.5 text-caption ${diff > 0 ? "text-good" : "text-slate-500"}`}>{diff > 0 ? `▲${diff}` : `▼${-diff}`}</span>;
+}
+
+const CHIP_SHOWN = 12;
+
+/**
+ * 주·월 정리 카드(2026-11-02): [주 | 월] · ‹ 기간 › · 숫자 줄(아이콘 + 수, 이름은 title — 화면 속 설명 글 없이) · 배우고 익힌 소재 칩(익힘 먼저, 12개 + 펼치기).
+ */
+function PeriodCard({
+  ui,
+  kind,
+  label,
+  canForward,
+  summary,
+  before,
+  itemLabel,
+  onKind,
+  onBack,
+  onForward,
+  onItem,
+}: {
+  ui: UICopy;
+  kind: PeriodKind;
+  label: string;
+  canForward: boolean;
+  summary: PeriodSummary;
+  before: PeriodSummary;
+  itemLabel: (item: LogItem) => string;
+  onKind: (kind: PeriodKind) => void;
+  onBack: () => void;
+  onForward: () => void;
+  onItem: (item: LogItem) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const stats: { icon: string; title: string; value: string; show: boolean; now?: number; before?: number }[] = [
+    { icon: "📅", title: ui.logStudyDays, value: String(summary.activeDays), show: true, now: summary.activeDays, before: before.activeDays },
+    { icon: "📞", title: ui.callRecordsTitle, value: `${summary.calls} · ${summary.callMinutes}′`, show: summary.calls > 0, now: summary.callMinutes, before: before.callMinutes },
+    { icon: "🧩", title: ui.framesTitle, value: String(summary.lessons), show: summary.lessons > 0 },
+    { icon: "🎯", title: ui.recallTitle, value: String(summary.recalls), show: summary.recalls > 0 },
+    { icon: "🎭", title: ui.stageScriptsTitle, value: String(summary.scripts), show: summary.scripts > 0 },
+    { icon: "📝", title: ui.keepTitle, value: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), show: summary.quizN > 0, now: summary.quizN, before: before.quizN },
+    { icon: "✎", title: ui.partFixed, value: String(summary.fixed), show: summary.fixed > 0 },
+    { icon: "🔁", title: ui.roleplaySayAgain, value: String(summary.redone), show: summary.redone > 0 },
+  ];
+  const mastered = summary.learned.filter((item) => item.kind === "mastered").length;
+  const shown = open ? summary.learned : summary.learned.slice(0, CHIP_SHOWN);
+  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "bg-ink text-surface" : "border border-line text-slate-300"}`;
+  return (
+    <section data-log-period={kind} className="rounded-xl border border-line p-3">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex gap-1" role="group">
+          <button type="button" aria-pressed={kind === "week"} onClick={() => onKind("week")} className={chip(kind === "week")}>{ui.logWeek}</button>
+          <button type="button" aria-pressed={kind === "month"} onClick={() => onKind("month")} className={chip(kind === "month")}>{ui.logMonth}</button>
+        </div>
+        <div className="flex items-center gap-1">
+          <button type="button" onClick={onBack} aria-label="‹" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10">‹</button>
+          <span data-log-period-label className="min-w-0 text-note font-semibold tabular-nums text-ink">{label}</span>
+          <button type="button" onClick={onForward} disabled={!canForward} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30">›</button>
+        </div>
+      </div>
+      <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-note tabular-nums text-slate-200">
+        {stats.filter((one) => one.show).map((one) => (
+          <span key={one.icon} title={one.title} aria-label={`${one.title} ${one.value}`} className="inline-flex items-center gap-1">
+            <span aria-hidden>{one.icon}</span>
+            {one.value}
+            {one.now !== undefined && one.before !== undefined ? <Delta now={one.now} before={one.before} /> : null}
+          </span>
+        ))}
+      </p>
+      {summary.learned.length ? (
+        <div className="mt-2 flex flex-col gap-1.5">
+          <p className="flex flex-wrap gap-x-3 text-caption tabular-nums text-slate-400">
+            {mastered ? <span className="text-status-mastered">{`${ui.itemsMastered} ${mastered}`}</span> : null}
+            {summary.learned.length - mastered ? <span className="text-info">{`${ui.itemsLearned} ${summary.learned.length - mastered}`}</span> : null}
+            <Delta now={summary.learned.length} before={before.learned.length} />
+          </p>
+          <div className="flex flex-wrap gap-1">
+            {shown.map((item, i) => (
+              <button
+                key={`${item.part}-${item.text}-${i}`}
+                type="button"
+                dir="auto"
+                onClick={() => onItem(item)}
+                className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
+              >
+                {itemLabel(item)}
+              </button>
+            ))}
+            {summary.learned.length > CHIP_SHOWN ? (
+              <button type="button" onClick={() => setOpen((v) => !v)} className="rounded-full px-2 py-0.5 text-meta text-slate-400 hover:bg-white/10">
+                {open ? "−" : `+${summary.learned.length - CHIP_SHOWN}`}
+              </button>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
 
 /**
  * 그날 결과 카드(2026-11-01 사용자 "결과 샷 — 통화면 학습 결과 창"): 수업·꺼내 쓰기·상황은 끝 화면의 맞힌 수와 내가 말한 줄,

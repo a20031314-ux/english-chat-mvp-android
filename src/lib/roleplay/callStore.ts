@@ -4,6 +4,7 @@
  * 저장 자체는 예전 그대로(`roleplayConversations`, saved.ts) — 바뀐 것은 바뀌었다고 알리는 것뿐.
  */
 import { readSaved, removeSaved, upsertSaved, writeSaved, type SavedConversation } from "./saved.ts";
+import { forgetCallDay, noteCallDay } from "./callDays.ts";
 
 const EMPTY: SavedConversation[] = [];
 let cache: SavedConversation[] | null = null;
@@ -42,8 +43,12 @@ function write(next: SavedConversation[]) {
 
 export function keepCall(conversation: SavedConversation): void {
   write(upsertSaved(readCalls(), conversation));
+  // Logbank 주·월 정리용 숫자 한 줄(통화 기록은 20개만 남음 — callDays.ts).
+  noteCallDay(conversation);
 }
 
 export function discardCall(id: string): void {
+  const gone = readCalls().find((row) => row.id === id);
   write(removeSaved(readCalls(), id));
+  if (gone) forgetCallDay(gone.language, id);
 }
