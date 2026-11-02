@@ -82,6 +82,7 @@
 | chatVerify | 5.3원 | 1 | claude-sonnet-5-5 900/200 토큰 (기능 chatVerify) | 가정 |
 | stageCopy | 3.6원 | 1 | claude-haiku-5-5 3500/4500 토큰 (기능 translate) | 가정 |
 | analysisInput | 2.5원 | 5 | claude-haiku-5-5 2000/300 토큰 (기능 analysis) | 가정 |
+| qbankGrow | 2.3원 | 2 | claude-haiku-5-5 700/1500 토큰 (기능 translate) | 가정 |
 | tts | 1.8원 | 1 | 음성 합성 6초 voxtral-mini-tts-3-0 | 가정 |
 | contentDiscovery | 1.5원 | 3 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
 | videoPrepare | 1.5원 | 3 | 자막 단계 claude-haiku-5-5 | 가정 |
@@ -90,7 +91,6 @@
 | notebookPhrases | 1원 | 1 | claude-haiku-5-5 2700/900 토큰 (기능 notes) | 가정 |
 | videoGloss | 1원 | 2 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
 | recallPrompts | 0.9원 | 2 | claude-haiku-5-5 600/500 토큰 (기능 translate) | 가정 |
-| qbankGrow | 0.7원 | 2 | claude-haiku-5-5 500/400 토큰 (기능 translate) | 가정 |
 | roleplayListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
 | roomFixListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
 | roomListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
