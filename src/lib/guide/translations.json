@@ -20,7 +20,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Lo que hiciste y cómo te fue, por día y por semana."
+            "Un hexágono con cuánto llevas de las etapas 1–5 (%): toca un vértice para ver puntos débiles y registros."
           ],
           "shot": "bank-log-week"
         },
@@ -401,7 +401,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "毎日・毎週の学習と結果がたまる。"
+            "1〜5段階をどれだけ埋めたかを六角形で（%）。頂点を押すと弱いところと記録。"
           ],
           "shot": "bank-log-week"
         },
@@ -782,7 +782,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "每天、每周学了什么和结果都在这里。"
+            "用六边形显示1~5阶段填满了多少（%），点顶点看薄弱处和记录。"
           ],
           "shot": "bank-log-week"
         },
@@ -1163,7 +1163,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Việc đã học và kết quả theo ngày, theo tuần."
+            "Hình lục giác cho thấy đã lấp bao nhiêu % cấp 1–5 — chạm một đỉnh để xem chỗ yếu và ghi chép."
           ],
           "shot": "bank-log-week"
         },
@@ -1544,7 +1544,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Ce que tu as fait et le résultat, par jour et par semaine."
+            "Un hexagone de ce que tu as rempli des étapes 1–5 (%) — touche un sommet pour les points faibles et l’historique."
           ],
           "shot": "bank-log-week"
         },
@@ -1925,7 +1925,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Cosa hai fatto e com’è andata, per giorno e per settimana."
+            "Un esagono di quanto hai riempito delle tappe 1–5 (%): tocca un vertice per i punti deboli e il registro."
           ],
           "shot": "bank-log-week"
         },
@@ -2306,7 +2306,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "O que você fez e como foi, por dia e por semana."
+            "Um hexágono com quanto das etapas 1–5 você já preencheu (%) — toque num vértice para ver pontos fracos e registros."
           ],
           "shot": "bank-log-week"
         },
@@ -2687,7 +2687,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Что вы делали и как прошло — по дням и неделям."
+            "Шестиугольник: сколько % этапов 1–5 заполнено — нажми на вершину, чтобы увидеть слабые места и записи."
           ],
           "shot": "bank-log-week"
         },
@@ -3068,7 +3068,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "Yang kamu pelajari dan hasilnya, per hari dan per minggu."
+            "Segi enam berapa % tahap 1–5 sudah terisi — ketuk sudut untuk titik lemah dan catatan."
           ],
           "shot": "bank-log-week"
         },
@@ -3449,7 +3449,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "ما تعلّمته ونتيجته، يومًا بيوم وأسبوعًا بأسبوع."
+            "شكل سداسي يبيّن كم ملأت من المراحل 1–5 (٪) — اضغط على رأس لترى نقاط الضعف والسجلات."
           ],
           "shot": "bank-log-week"
         },
@@ -3830,7 +3830,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "สิ่งที่เรียนและผลลัพธ์ รายวันและรายสัปดาห์"
+            "หกเหลี่ยมบอกว่าเติมระดับ 1–5 ไปกี่ % — แตะมุมเพื่อดูจุดอ่อนและบันทึก"
           ],
           "shot": "bank-log-week"
         },
@@ -4211,7 +4211,7 @@
         {
           "heading": "3. {ui:logbankTitle}",
           "body": [
-            "रोज़ और हर हफ़्ते की पढ़ाई और नतीजे।"
+            "षट्भुज में चरण 1–5 कितने % भरे — कोने पर टैप करें, कमज़ोर जगहें और रिकॉर्ड दिखेंगे।"
           ],
           "shot": "bank-log-week"
         },

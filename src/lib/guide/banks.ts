@@ -12,7 +12,7 @@ export type BankGuide = { can: string[]; how: BankStep[]; clip?: string; shot?: 
 const SHOTS: Record<BankId, string[]> = {
   stage: ["bank-stage-today", "bank-stage-lesson", "bank-stage-ladder"],
   keep: ["bank-keep-quiz", "bank-keep-answer", "bank-keep-answer", "bank-keep-settings"],
-  log: ["bank-log-week", "bank-log-day"],
+  log: ["bank-log-week", "bank-log-axis", "bank-log-day"],
 };
 const CLIPS: Partial<Record<BankId, string>> = { stage: "bank-stage", keep: "bank-keep" };
 
@@ -46,8 +46,8 @@ const TEXT: Record<string, Lines> = {
       how: ["탭을 고르고 빈칸을 채워요", `답하면 뜻과 다른 예문 → 「${N}」`, `어휘는 처음 보는 낱말만 — 본 낱말은 📝 「${WT}」에서`, `⚙ ${VB}: 어떤 낱말`],
     },
     log: {
-      can: ["주마다·날마다 배운 말과 튜터가 고친 줄", `📈 「${SR}」 · 📝 「${C}」`],
-      how: [`주 머리: 익힘 · 배움 · 고침 · ${K} 맞힌 수`, "말을 누르면 뜻과 예문"],
+      can: ["육각형: 어휘·문장 이해·활용, 듣기, 실전 대화 — 1~5단계 채운 %", "📎 「{ui:fillRecords}」: 날마다 한 공부와 튜터가 고친 줄"],
+      how: ["꼭짓점을 누르면 단계 게이지와 세부 칸", "▼ 「{ui:fillWeak}」 칸을 누르면 「{ui:fillToStudy}」 · 「{ui:fillRecommend}」", "⏱ 막대를 누르면 그날 한 공부"],
     },
   },
   en: {
@@ -60,8 +60,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Pick a tab and fill the gap", `After you answer: the meaning and more examples → “${N}”`, `Vocabulary: only new words — seen ones come back in 📝 “${WT}”`, `⚙ ${VB}: which words`],
     },
     log: {
-      can: ["What you learned and lines the tutor fixed, by week and day", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`Each week: known · learned · fixed · ${K} right answers`, "Tap a word for its meaning and examples"],
+      can: ["Hexagon: words, sentences, listening, talk — % of stages 1–5 filled", "📎 “{ui:fillRecords}”: what you did each day and lines the tutor fixed"],
+      how: ["Tap a corner for its stage gauge and detail rows", "Tap a ▼ “{ui:fillWeak}” row for “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Tap a bar for that day’s study"],
     },
   },
   es: {
@@ -74,8 +74,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Elige una pestaña y completa el hueco", `Al responder: el significado y más ejemplos → «${N}»`, `Vocabulario: solo palabras nuevas — las vistas vuelven en 📝 «${WT}»`, `⚙ ${VB}: qué palabras`],
     },
     log: {
-      can: ["Lo que aprendiste y lo que corrigió el tutor, por semana y día", `📈 «${SR}» · 📝 «${C}»`],
-      how: [`Cada semana: dominado · aprendido · corregido · aciertos en ${K}`, "Toca una palabra para ver su significado y ejemplos"],
+      can: ["Hexágono: palabras, frases, escucha, charla — % de etapas 1–5", "📎 «{ui:fillRecords}»: lo que hiciste cada día y las frases que corrigió el tutor"],
+      how: ["Toca un vértice para ver su medidor por etapas y los detalles", "Toca una fila ▼ «{ui:fillWeak}» para ver «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Toca una barra para ver lo que estudiaste ese día"],
     },
   },
   ja: {
@@ -88,8 +88,8 @@ const TEXT: Record<string, Lines> = {
       how: ["タブを選んで空欄を埋める", `答えると意味とほかの例文 →「${N}」`, `単語は初めての言葉だけ — 見た言葉は📝「${WT}」で`, `⚙ ${VB}：どの言葉`],
     },
     log: {
-      can: ["週ごと・日ごとに覚えた言葉とチューターが直した文", `📈「${SR}」・📝「${C}」`],
-      how: [`週の見出し：定着・学習・修正・${K}の正解数`, "言葉を押すと意味と例文"],
+      can: ["六角形：語彙・文・リスニング・会話 — 1〜5段階を埋めた％", "📎「{ui:fillRecords}」：毎日の学習とチューターが直した文"],
+      how: ["頂点を押すと段階ゲージと細かい項目", "▼「{ui:fillWeak}」の項目を押すと「{ui:fillToStudy}」・「{ui:fillRecommend}」", "⏱ 棒を押すとその日の学習"],
     },
   },
   zh: {
@@ -102,8 +102,8 @@ const TEXT: Record<string, Lines> = {
       how: ["选一个标签，填空", `答完显示意思和更多例句 →「${N}」`, `词汇只出新词——见过的词在📝「${WT}」里再出`, `⚙ ${VB}：哪些词`],
     },
     log: {
-      can: ["按周、按天列出学到的话和导师纠正的句子", `📈「${SR}」 · 📝「${C}」`],
-      how: [`每周标题：掌握 · 学过 · 纠正 · ${K}答对数`, "点一个词看意思和例句"],
+      can: ["六边形：词汇、句子、听力、对话 — 1~5阶段填满的％", "📎「{ui:fillRecords}」：每天学了什么和导师纠正的句子"],
+      how: ["点顶点看阶段进度条和细项", "点 ▼「{ui:fillWeak}」的细项看「{ui:fillToStudy}」·「{ui:fillRecommend}」", "⏱ 点柱子看那天的学习"],
     },
   },
   th: {
@@ -116,8 +116,8 @@ const TEXT: Record<string, Lines> = {
       how: ["เลือกแท็บแล้วเติมช่องว่าง", `ตอบแล้วเห็นความหมายและตัวอย่างอื่น → “${N}”`, `คำศัพท์: เฉพาะคำใหม่ — คำที่เคยเห็นกลับมาใน 📝 “${WT}”`, `⚙ ${VB}: คำไหน`],
     },
     log: {
-      can: ["สิ่งที่เรียนและประโยคที่ติวเตอร์แก้ แยกตามสัปดาห์และวัน", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`หัวสัปดาห์: จำได้ · เรียนแล้ว · แก้แล้ว · ตอบถูกใน ${K}`, "แตะคำเพื่อดูความหมายและตัวอย่าง"],
+      can: ["หกเหลี่ยม: คำ ประโยค การฟัง สนทนา — เติมระดับ 1–5 กี่ %", "📎 “{ui:fillRecords}”: เรียนอะไรในแต่ละวันและประโยคที่ติวเตอร์แก้"],
+      how: ["แตะมุมเพื่อดูเกจรายระดับและรายละเอียด", "แตะแถว ▼ “{ui:fillWeak}” เพื่อดู “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ แตะแท่งเพื่อดูสิ่งที่เรียนวันนั้น"],
     },
   },
   vi: {
@@ -130,8 +130,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Chọn một thẻ rồi điền chỗ trống", `Trả lời xong thấy nghĩa và thêm ví dụ → “${N}”`, `Từ vựng: chỉ từ mới — từ đã gặp quay lại trong 📝 “${WT}”`, `⚙ ${VB}: từ nào`],
     },
     log: {
-      can: ["Những gì bạn đã học và câu gia sư đã sửa, theo tuần và ngày", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`Đầu tuần: đã thuộc · đã học · đã sửa · câu đúng ở ${K}`, "Chạm vào một từ để xem nghĩa và ví dụ"],
+      can: ["Lục giác: từ, câu, nghe, hội thoại — % cấp 1–5 đã lấp", "📎 “{ui:fillRecords}”: mỗi ngày đã học gì và câu gia sư sửa"],
+      how: ["Chạm một đỉnh để xem thanh đo theo cấp và các mục chi tiết", "Chạm mục ▼ “{ui:fillWeak}” để xem “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Chạm một cột để xem hôm đó đã học gì"],
     },
   },
   id: {
@@ -144,8 +144,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Pilih tab lalu isi titik kosong", `Setelah menjawab: arti dan contoh lain → “${N}”`, `Kosakata: hanya kata baru — yang sudah dilihat muncul di 📝 “${WT}”`, `⚙ ${VB}: kata yang mana`],
     },
     log: {
-      can: ["Yang kamu pelajari dan kalimat yang dikoreksi tutor, per minggu dan hari", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`Judul minggu: dikuasai · dipelajari · dikoreksi · benar di ${K}`, "Ketuk kata untuk melihat arti dan contoh"],
+      can: ["Segi enam: kata, kalimat, dengar, bicara — % tahap 1–5 terisi", "📎 “{ui:fillRecords}”: yang kamu pelajari tiap hari dan kalimat yang dikoreksi tutor"],
+      how: ["Ketuk sudut untuk melihat pengukur per tahap dan rinciannya", "Ketuk baris ▼ “{ui:fillWeak}” untuk “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Ketuk batang untuk melihat belajar hari itu"],
     },
   },
   hi: {
@@ -158,8 +158,8 @@ const TEXT: Record<string, Lines> = {
       how: ["टैब चुनें और खाली जगह भरें", `जवाब के बाद अर्थ और और उदाहरण → “${N}”`, `शब्द: सिर्फ़ नए — देखे हुए 📝 “${WT}” में फिर`, `⚙ ${VB}: कौन-से शब्द`],
     },
     log: {
-      can: ["हफ़्ते और दिन के हिसाब से सीखी बातें और ट्यूटर के सुधारे वाक्य", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`हफ़्ते का शीर्षक: पक्का · सीखा · सुधारा · ${K} में सही`, "शब्द पर टैप करें — अर्थ और उदाहरण"],
+      can: ["षट्भुज: शब्द, वाक्य, सुनना, बातचीत — चरण 1–5 कितने % भरे", "📎 “{ui:fillRecords}”: हर दिन क्या पढ़ा और ट्यूटर ने कौन-से वाक्य सुधारे"],
+      how: ["कोने पर टैप करें — चरण वाला गेज और ब्योरे", "▼ “{ui:fillWeak}” वाली पंक्ति पर टैप करें — “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ किसी बार पर टैप करें — उस दिन की पढ़ाई"],
     },
   },
   ar: {
@@ -172,8 +172,8 @@ const TEXT: Record<string, Lines> = {
       how: ["اختر تبويبًا واملأ الفراغ", `بعد الإجابة: المعنى وأمثلة أخرى ← «${N}»`, `المفردات: كلمات جديدة فقط — ما رأيته يعود في 📝 «${WT}»`, `⚙ ${VB}: أي كلمات`],
     },
     log: {
-      can: ["ما تعلّمته والجمل التي صحّحها المعلّم، حسب الأسبوع واليوم", `📈 «${SR}» · 📝 «${C}»`],
-      how: [`رأس الأسبوع: أتقنته · تعلّمته · صُحّح · إجابات صحيحة في ${K}`, "اضغط على كلمة لترى معناها وأمثلة"],
+      can: ["السداسي: مفردات، جمل، استماع، محادثة — ٪ المراحل 1–5", "📎 «{ui:fillRecords}»: ما درسته كل يوم والجمل التي صحّحها المعلّم"],
+      how: ["اضغط على رأس لترى مقياس المراحل والتفاصيل", "اضغط على صف ▼ «{ui:fillWeak}» لترى «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ اضغط على عمود لترى ما درسته ذلك اليوم"],
     },
   },
   fr: {
@@ -186,8 +186,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Choisissez un onglet et complétez le trou", `Après la réponse : le sens et d’autres exemples → « ${N} »`, `Vocabulaire : seulement des mots nouveaux — les autres dans 📝 « ${WT} »`, `⚙ ${VB} : quels mots`],
     },
     log: {
-      can: ["Ce que vous avez appris et les phrases corrigées, par semaine et par jour", `📈 « ${SR} » · 📝 « ${C} »`],
-      how: [`En tête de semaine : acquis · appris · corrigé · bonnes réponses ${K}`, "Touchez un mot pour son sens et des exemples"],
+      can: ["Hexagone : mots, phrases, écoute, oral — % des étapes 1–5", "📎 « {ui:fillRecords} » : ton travail du jour et les phrases corrigées"],
+      how: ["Touche un sommet pour sa jauge par étape et le détail", "Touche une ligne ▼ « {ui:fillWeak} » pour « {ui:fillToStudy} » · « {ui:fillRecommend} »", "⏱ Touche une barre pour ce que tu as étudié ce jour-là"],
     },
   },
   it: {
@@ -200,8 +200,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Scegli una scheda e riempi il vuoto", `Dopo la risposta: il significato e altri esempi → «${N}»`, `Vocaboli: solo parole nuove — quelle viste tornano in 📝 «${WT}»`, `⚙ ${VB}: quali parole`],
     },
     log: {
-      can: ["Ciò che hai imparato e le frasi corrette dal tutor, per settimana e giorno", `📈 «${SR}» · 📝 «${C}»`],
-      how: [`Ogni settimana: acquisito · imparato · corretto · giuste in ${K}`, "Tocca una parola per significato ed esempi"],
+      can: ["Esagono: parole, frasi, ascolto, dialogo — % delle tappe 1–5", "📎 «{ui:fillRecords}»: cosa hai fatto ogni giorno e le frasi corrette dal tutor"],
+      how: ["Tocca un vertice per l’indicatore per tappa e i dettagli", "Tocca una riga ▼ «{ui:fillWeak}» per «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Tocca una barra per lo studio di quel giorno"],
     },
   },
   pt: {
@@ -214,8 +214,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Escolha uma aba e preencha a lacuna", `Depois de responder: o sentido e mais exemplos → “${N}”`, `Vocabulário: só palavras novas — as vistas voltam no 📝 “${WT}”`, `⚙ ${VB}: quais palavras`],
     },
     log: {
-      can: ["O que você aprendeu e as frases corrigidas pelo tutor, por semana e dia", `📈 “${SR}” · 📝 “${C}”`],
-      how: [`Cabeçalho da semana: dominado · aprendido · corrigido · acertos no ${K}`, "Toque numa palavra para ver o sentido e exemplos"],
+      can: ["Hexágono: palavras, frases, escuta, conversa — % das etapas 1–5", "📎 “{ui:fillRecords}”: o que você fez a cada dia e as frases que o tutor corrigiu"],
+      how: ["Toque num vértice para ver o medidor por etapa e os detalhes", "Toque numa linha ▼ “{ui:fillWeak}” para ver “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Toque numa barra para ver o estudo daquele dia"],
     },
   },
   ru: {
@@ -228,8 +228,8 @@ const TEXT: Record<string, Lines> = {
       how: ["Выберите вкладку и заполните пропуск", `После ответа — значение и другие примеры → «${N}»`, `Слова: только новые — знакомые вернутся в 📝 «${WT}»`, `⚙ ${VB}: какие слова`],
     },
     log: {
-      can: ["Что вы выучили и что исправил репетитор — по неделям и дням", `📈 «${SR}» · 📝 «${C}»`],
-      how: [`Заголовок недели: освоено · выучено · исправлено · верно в ${K}`, "Нажмите на слово — значение и примеры"],
+      can: ["Шестиугольник: слова, фразы, слух, речь — % этапов 1–5", "📎 «{ui:fillRecords}»: что ты делал каждый день и фразы, исправленные репетитором"],
+      how: ["Нажми на вершину — шкала по этапам и подробности", "Нажми на строку ▼ «{ui:fillWeak}» — «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Нажми на столбик — занятия за тот день"],
     },
   },
 };

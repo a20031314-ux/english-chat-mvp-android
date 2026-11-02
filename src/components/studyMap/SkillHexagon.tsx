@@ -185,7 +185,10 @@ export function AxisDetail({
   const groups = cellGroups(ui, axis);
   const [tab, setTab] = useState<string>(() => groups.find((group) => fill.cells.some((cell) => group.match(cell) && cell.state === "weak"))?.id ?? groups[0]!.id);
   const group = groups.find((one) => one.id === tab);
-  const cells = group ? fill.cells.filter(group.match) : [];
+  const ordered = (list: FillCell[]) =>
+    // 단계 칸은 1 → 5 차례대로(부족·아직 모름 먼저가 아니라).
+    group && (group.id === "stage" || group.id === "band") ? [...list].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : list;
+  const cells = group ? ordered(fill.cells.filter(group.match)) : [];
   const parts = axis === "talk" ? fill.cells.filter((cell) => cell.id.startsWith("part:")) : [];
   const bar = (value: number, weak: boolean) => (
     <span className="relative h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-white/10">
@@ -238,6 +241,8 @@ export function AxisDetail({
           {cells.map((cell) => {
             const weak = cell.state === "weak";
             const counted = cell.id.startsWith("miss:") || cell.id.startsWith("why:") || cell.id.startsWith("lead:") || (axis === "talk" && cell.id.startsWith("fn:"));
+            // 단계 칸 값은 채운 몫(어림 포함)이라 답이 적어도 % 로.
+            const staged = cell.id.startsWith("stage:") || cell.id.startsWith("band:");
             return (
               <li key={cell.id}>
                 <button
@@ -247,10 +252,10 @@ export function AxisDetail({
                   onClick={() => onCell(cell)}
                   className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
                 >
-                  <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${weak ? "text-warn" : "text-slate-500"}`}>{weak ? "▼" : cell.state === "unknown" ? "?" : cell.state === "strong" ? "▲" : "·"}</span>
+                  <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${weak ? "text-warn" : "text-slate-500"}`}>{weak ? "▼" : cell.state === "unknown" && !staged ? "?" : cell.state === "strong" ? "▲" : "·"}</span>
                   <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{cellName(ui, cell.id, grammarName)}</span>
                   {counted ? null : bar(cell.value, weak)}
-                  <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">{counted ? cell.n : cell.state === "unknown" ? "?" : `${Math.round(cell.value * 100)}%`}</span>
+                  <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">{counted ? cell.n : cell.state === "unknown" && !staged ? "?" : `${Math.round(cell.value * 100)}%`}</span>
                 </button>
               </li>
             );

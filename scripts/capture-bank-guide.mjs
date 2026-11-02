@@ -1,6 +1,8 @@
 // My 큰 칸 "?" 설명 그림(2026-10-31, lib/guide/banks.ts SHOTS): 앱 언어마다 실제 화면을 찍어 public/guide/<앱 언어>/bank-*.webp.
 // 순서(저장소 맨 위에서): npm run build:capacitor → node scripts/capture-bank-guide.mjs [ko,en,ja…]
 // /api는 운영으로(시험 사용자 simcheck-bankshot-…, 끝나면 지움). 학습 언어는 영어(영어 앱이면 스페인어).
+// ONLY=log node scripts/capture-bank-guide.mjs → Logbank 그림만(육각형 bank-log-week · 꼭짓점 bank-log-axis · 그날 bank-log-day, 2026-11-02 육각형 개편).
+// Logbank 그림은 이 폰 기록(Quizbank 날마다·통화 차례 셈)을 넣어 육각형이 비지 않게 한다 — 서버 기록은 문장구조 둘·상황 하나 통과.
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
@@ -10,6 +12,7 @@ const LOCALES = ["ko", "en", "es", "ja", "zh", "th", "vi", "id", "hi", "ar", "fr
 const locales = process.argv[2] ? process.argv[2].split(",") : LOCALES;
 const learnFor = (locale) => (locale === "en" ? "es" : "en");
 const PORT = Number(process.env.PORT || 4560);
+const ONLY = process.env.ONLY || "";
 const server = await serve(PORT);
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 const work = path.join(ROOT, "tmp", "bank-shots");
@@ -65,6 +68,7 @@ for (const locale of locales) {
   await page.goto(`http://localhost:${PORT}/?screen=map`, { waitUntil: "domcontentloaded" });
   for (let i = 0; i < 40 && !(await page.locator("[data-today-current]").count()); i += 1) await wait(500);
   await wait(3000);
+  if (ONLY !== "log") {
   const stage = page.locator('[data-my-layer="stage"]').first();
   await stage.scrollIntoViewIfNeeded();
   // Stagebank = 맨 위 오늘 할 것 + 그 아래 단계 화면이 늘 펼쳐 있음(2026-11-02) — 칸 머리부터 오늘 할 것까지만.
@@ -109,18 +113,56 @@ for (const locale of locales) {
   await wait(1500);
   // ⚙는 아래에서 올라오는 시트라 화면 아래쪽.
   await save("bank-keep-settings", null, { x: 0, y: 844 - 470, width: 390, height: 470 });
-  // Logbank: 문장구조 둘·상황 하나 통과로 기록을 만든 뒤 다시 연다.
+  }
+  // Logbank(2026-11-02 육각형): 서버 기록(문장구조 둘·상황 하나 통과) + 이 폰 기록(Quizbank 열흘·통화 둘)을 넣고 다시 연다.
   for (const id of [`${learn}-f1-01`, `${learn}-f1-02`, `${learn}-1-1`]) await api("/api/curriculum/scripts", { language: learn, id });
+  await page.evaluate(([learn]) => {
+    const now = Date.now();
+    const day = (n) => { const d = new Date(now - n * 86400000); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; };
+    const words = learn === "es" ? ["agua", "casa", "comer", "hablar", "grande", "tiempo", "libro", "perro", "noche", "trabajo"] : ["water", "house", "eat", "speak", "big", "time", "book", "dog", "night", "work"];
+    const quiz = {};
+    for (let i = 0; i < 10; i += 1) {
+      const pick = (a, n) => Array.from({ length: n }, (_, k) => `w|${words[(i + a + k) % words.length]}`);
+      quiz[day(i)] = { n: 14, right: 10, okc: pick(0, 4), okt: pick(3, 3), wrong: pick(7, 2), wt: pick(8, 1), miss: { [pick(8, 1)[0]]: "form" } };
+    }
+    const turns = (stage, smooth, snag, stuck) => ({ stage, turns: smooth + snag + stuck, smooth, snag, stuck, lead: 3, follow: smooth - 2, min: 2, asked: smooth + snag, heardYes: smooth, heardAfter: 1, why: { slow: snag, hint: stuck }, leadHow: { ask: 2, extend: 1 }, fn: { self: 4, time: 2 } });
+    const calls = {
+      a: { day: day(1), at: now - 86400000, seconds: 480, fixed: 2, redone: 1, turns: turns(2, 14, 4, 2) },
+      b: { day: day(4), at: now - 4 * 86400000, seconds: 360, fixed: 1, redone: 0, turns: turns(1, 9, 3, 2) },
+    };
+    localStorage.setItem(`quizDays.v1.${learn}`, JSON.stringify(quiz));
+    localStorage.setItem(`callDays.v1.${learn}`, JSON.stringify(calls));
+    localStorage.setItem("fillCheck.v1", JSON.stringify({ [learn]: "beginner" }));
+  }, [learn]);
   await page.reload({ waitUntil: "domcontentloaded" });
   for (let i = 0; i < 40 && !(await page.locator('[data-my-jump-to="log"]').count()); i += 1) await wait(500);
   await page.locator('[data-my-jump-to="log"]').first().click().catch(() => {});
-  for (let i = 0; i < 40 && !(await page.locator("[data-log-week]").count()); i += 1) await wait(500);
-  await wait(1500);
+  for (let i = 0; i < 40 && !(await page.locator("[data-skill-hexagon]").count()); i += 1) await wait(500);
+  await wait(2500);
   const log = page.locator('[data-my-layer="log"]').first();
   await log.scrollIntoViewIfNeeded();
   await save("bank-log-week", log);
-  await save("bank-log-day", page.locator("[data-log-day]").first());
-  console.log(`${locale}: ${done.length}/8 ${done.join(" ")}`);
+  // 꼭짓점(어휘 활용) → 게이지·세부 칸 [품사] 칩(▼ 부족이 보이게).
+  await page.locator('[data-skill-axis="vocabUse"]').first().dispatchEvent("click").catch(() => {});
+  for (let i = 0; i < 20 && !(await page.locator("[data-skill-detail]").count()); i += 1) await wait(300);
+  await page.locator('[data-skill-tab="pos"]').first().click({ timeout: 3000 }).catch(() => {});
+  await wait(1500);
+  await save("bank-log-axis");
+  await close();
+  // ⏱ 한 줄 → 학습 시간 막대 → 오늘 막대 → 그날 세부.
+  await page.locator("[data-log-time]").first().click().catch(() => {});
+  await wait(800);
+  const bars = page.locator("[data-log-bar]");
+  const count = await bars.count();
+  for (let i = count - 1; i >= 0; i -= 1) {
+    const label = (await bars.nth(i).getAttribute("aria-label")) ?? "";
+    if (/ [1-9]/.test(label)) { await bars.nth(i).click().catch(() => {}); break; }
+  }
+  for (let i = 0; i < 20 && !(await page.locator("[data-log-sheet]").count()); i += 1) await wait(300);
+  await wait(1500);
+  await save("bank-log-day");
+  await close();
+  console.log(`${locale}: ${done.length}/${ONLY === "log" ? 3 : 9} ${done.join(" ")}`);
   await api("/api/simcheck/forget", { prefix: state.uid });
   await ctx.close();
 }

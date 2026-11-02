@@ -152,7 +152,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "3. {ui:logbankTitle}",
         "body": [
-          "날마다·주마다 한 공부와 결과가 모여요."
+          "육각형에 1~5단계를 얼마나 채웠는지(%), 꼭짓점을 누르면 부족한 칸과 기록."
         ],
         "shot": "bank-log-week"
       },
@@ -533,7 +533,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "3. {ui:logbankTitle}",
         "body": [
-          "What you did and how it went, by day and by week."
+          "A hexagon of how much of stages 1–5 you’ve filled (%) — tap a corner for weak spots and records."
         ],
         "shot": "bank-log-week"
       },
