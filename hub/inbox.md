@@ -224,3 +224,7 @@
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:253 — 해석 버튼은 뺐는데 저장된 켬 값을 계속 읽어 통화 중 줄마다 번역 호출, 끌 방법 없음 (예전 값 무시).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayPast.tsx:53 — 돌아보기 열 때마다 튜터 줄 다시 번역, 저장 안 함 (받은 번역 저장).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/GrammarExplain.tsx:19 — 규칙 칸 제목 "뜻"(aboutMeaning)·꼴 표 "구조"(insightPattern)를 다른 뜻으로 씀 (이름 맞추기).
+- 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2335 — AutoFull이 stage 탭일 때만 하루 키를 남겨, Quizbank·Logbank로 연 날 나중에 Stagebank를 누르면 갑자기 전체 화면 (첫 마운트에 한 번만 판단, stage 아니면 키만 남김).
+- 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2335 — AutoFull이 resumeSpot 복원보다 먼저 돌아 저장된 full:false를 덮음(작은 Logbank에서 나갔다 오면 전체 화면) (my 자리 복원이 있으면 AutoFull 건너뛰기).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:322 — 익힘 표시 status-mastered → info로 익힘·배움이 같은 하늘색, DESIGN.md "익힘 색 그대로"와 어긋남, SkillHexagon도 (되돌리거나 DESIGN.md에 Logbank 예외 한 줄).
+- 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2136 — AutoFull 하루 키 toDateString(), AutoQuiz는 localDay() — 날짜 기준 둘 (localDay()로 통일).
