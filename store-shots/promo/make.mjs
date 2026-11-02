@@ -151,18 +151,18 @@ COPY.analyze2 = {
 const LANG_NAME = { en: { ko: "Korean", es: "Spanish", ja: "Japanese", fr: "French", zh: "Chinese", en: "English" } };
 {
   const n = LANG_NAME[locale]?.[CALL_TARGET] ?? CALL_TARGET;
-  // 2026-11-03 새 통화 화면(🎓 튜터 수업 카드) — record-call.mjs가 같은 날 다시 씀.
+  // 2026-11-03 새 통화 화면(🎓 튜터 수업 카드) — record-call.mjs가 같은 날 다시 씀. 언어 학습 앱이 핵심이라 훅·끝 화면은 언어 이름 없이(사용자 2026-11-03).
   COPY.call = {
     en: {
-      hook: `Too shy to speak\n${n} out loud?`,
+      hook: "Too shy to speak\na new language?",
       caption: "Call your AI tutor.\nTap a line for English",
       say: "Just say it —\nmistakes and all",
       fix: "Big mistakes only.\nThe fix, right under you",
       again: "Say it again…",
       pass: "✓ Got it",
       recap: "Every call ends with\nwhat to practise next",
-      endTitle: `Speak ${n}\nout loud`,
-      endSub: "Your AI tutor, one call away",
+      endTitle: "Speak any language\nout loud",
+      endSub: "Learn languages by talking with AI",
     },
   };
 }
