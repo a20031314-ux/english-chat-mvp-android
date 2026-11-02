@@ -346,3 +346,18 @@ test("lite has no monthly points; premium before its switch keeps 80", async () 
   assert.equal(await roleplayPointsLeft("rc:prem-80", termsFor("premium", Date.now(), null)), 80);
   assert.equal(await dailyCallLeftMs("rc:prem-80", termsFor("premium", Date.now(), null), "2026-10-16"), null);
 });
+
+test("채팅 맛보기: 대본 앱 무료만 평생 10통, 쓰면 줄고 다른 요금·익명에는 없다", async () => {
+  const { chatTrialLeft, spendChatTrial } = await import("./entitlementStore.ts");
+  const newFree = termsFor("free", Date.now(), undefined, { scriptsApp: true });
+  const oldFree = termsFor("free");
+  assert.equal(newFree.dailyChat, 0);
+  assert.equal(await chatTrialLeft("chat-trial", newFree), 10);
+  assert.equal(await chatTrialLeft("chat-trial", oldFree), 0);
+  assert.equal(await chatTrialLeft("chat-trial", termsFor("lite")), 0);
+  assert.equal(await chatTrialLeft(SHARED_ANONYMOUS_ID, newFree), 0);
+  for (let i = 0; i < 3; i += 1) await spendChatTrial("chat-trial");
+  assert.equal(await chatTrialLeft("chat-trial", newFree), 7);
+  for (let i = 0; i < 9; i += 1) await spendChatTrial("chat-trial");
+  assert.equal(await chatTrialLeft("chat-trial", newFree), 0);
+});

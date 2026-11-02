@@ -37,6 +37,8 @@ import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/
 import {
   getDailyUsed,
   incrementDailyUsed,
+  chatTrialLeft,
+  spendChatTrial,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
@@ -1155,13 +1157,22 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  // 오늘 한도를 넘었어도 대본 앱 무료의 채팅 맛보기(평생 10통)가 남았으면 그것으로 보낸다.
+  let usingChatTrial = false;
   if (
     (mode === "chat" || mode === "how_to_say") &&
     chatLimit !== null &&
     (await getDailyUsed(userId)) >= chatLimit + (await chatBonusToday(userId, tier))
   ) {
-    return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
+    if ((await chatTrialLeft(userId, terms)) <= 0) {
+      return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
+    }
+    usingChatTrial = true;
   }
+  const countChat = async () => {
+    await incrementDailyUsed(userId);
+    if (usingChatTrial) await spendChatTrial(userId);
+  };
 
   // 답이 나간 뒤의 기록들(문장은 저장하지 않고 표현·지표만). 옛 앱은 답 뒤에, 새 앱은 교정까지 보낸 뒤에.
   const chatBookkeeping = async (data: ChatPayload) => {
@@ -1301,7 +1312,7 @@ export async function POST(request: NextRequest) {
         langs,
         isPremium,
       );
-      await incrementDailyUsed(userId);
+      await countChat();
       return jsonWithCors(request, data);
     }
 
@@ -1385,7 +1396,7 @@ export async function POST(request: NextRequest) {
             finish(null);
             return;
           }
-          await incrementDailyUsed(userId);
+          await countChat();
           send({ type: "reply", ...reply });
           const corrected = await correctionSafe;
           const correction = ownLanguage
@@ -1414,7 +1425,7 @@ export async function POST(request: NextRequest) {
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );
-    await incrementDailyUsed(userId);
+    await countChat();
     after(() => chatBookkeeping(data));
     const reused = turnOptions.ownLanguage ? [] : await markReused(data.correction?.corrected);
     return jsonWithCors(request, reused.length ? { ...data, reused } : data);

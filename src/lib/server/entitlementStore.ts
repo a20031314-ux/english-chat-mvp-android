@@ -30,6 +30,7 @@ import {
 import { contentHash } from "../roleplay/script.ts";
 import {
   FREE_LIFETIME_ROLEPLAY_POINTS,
+  FREE_SCRIPTS_APP_CHAT_TRIAL,
   ROLEPLAY_POINT_SECONDS,
 } from "../billing/config.ts";
 import {
@@ -277,6 +278,24 @@ export async function takeScriptLine(userId: string, limit: number, day: string)
   if ((await kvGetNumber(key)) >= limit) return false;
   await kvIncrBy(key, 1, DAILY_TTL_SECONDS);
   return true;
+}
+
+function chatTrialKey(userId: string) {
+  return `usage:chattrial:${userId}`;
+}
+
+/**
+ * 채팅 맛보기가 남은 통 수(대본 앱 무료만 — 하루 채팅이 0인 요금, config FREE_SCRIPTS_APP_CHAT_TRIAL). 평생, 만료 없음.
+ * 누군지 모르는 요청(공유 익명 id)에는 주지 않는다.
+ */
+export async function chatTrialLeft(userId: string, terms: { tier: string; dailyChat: number | null }): Promise<number> {
+  if (terms.tier !== "free" || terms.dailyChat !== 0 || !isIdentified(userId)) return 0;
+  return Math.max(0, FREE_SCRIPTS_APP_CHAT_TRIAL - (await kvGetNumber(chatTrialKey(userId))));
+}
+
+/** 맛보기 한 통을 썼다. */
+export async function spendChatTrial(userId: string): Promise<void> {
+  await kvIncrBy(chatTrialKey(userId), 1);
 }
 
 export async function getDailyUsed(userId: string): Promise<number> {

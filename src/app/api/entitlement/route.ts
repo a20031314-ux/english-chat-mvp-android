@@ -15,6 +15,7 @@ import {
   dailyCallLeftMs,
   roleplayCarryMs,
   roleplayPointsLeft,
+  chatTrialLeft,
 } from "@/lib/server/entitlementStore";
 import { isIdentified } from "@/lib/server/identity";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
@@ -32,6 +33,9 @@ export async function GET(request: NextRequest) {
   // 보상형 광고로 오늘 늘어난 채팅(무료만, billing/ads.ts). 옛 빌드도 한도 숫자로 그대로 받는다.
   const adChatBonus = await chatBonusToday(userId, tier);
   const identified = isIdentified(userId);
+  // 채팅 맛보기(대본 앱 무료, 평생 10통) — 남은 만큼 오늘 한도에 얹어 앱이 입력칸을 연다(앱 빌드 없이).
+  const chatTrial = await chatTrialLeft(userId, terms);
+  const baseChatLimit = terms.dailyChat === null ? null : terms.dailyChat + adChatBonus;
   const todayLeftMs = identified
     ? await dailyCallLeftMs(
         userId,
@@ -46,7 +50,8 @@ export async function GET(request: NextRequest) {
     // Which plan (billing/plans.ts), and what it gives.
     tier,
     dailyUsed,
-    dailyLimit: terms.dailyChat === null ? null : terms.dailyChat + adChatBonus,
+    dailyLimit: baseChatLimit === null ? null : chatTrial > 0 ? Math.max(baseChatLimit, dailyUsed) + chatTrial : baseChatLimit,
+    chatTrialLeft: chatTrial,
     adChatBonus,
     // Free talk a day on this plan, and what is left of today's. Null on a plan
     // without daily minutes (free, and premium before its switch).

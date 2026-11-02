@@ -168,6 +168,11 @@ export const FREE_LIFETIME_ROLEPLAY_POINTS = 10;
  * 한 사람 원가 약 87원, 한 번만). 평생 체험 기록(usage:rptrial)을 예전 10포인트와 같이 써서, 이미 체험을 쓴 사람은 더 받지 않는다.
  */
 export const FREE_SCRIPTS_APP_TRIAL_POINTS = 2;
+/**
+ * 대본 앱(2.76~) 무료의 채팅 맛보기: 평생 한 번 10통(사용자 2026-11-02 "채팅도 맛보기로" — 채팅 한 통 1~1.5원, 한 사람 약 15원).
+ * 하루 한도(0)와 따로 세고(usage:chattrial), 남아 있는 동안만 오늘 한도에 더해 준다(server/entitlementStore chatTrialLeft).
+ */
+export const FREE_SCRIPTS_APP_CHAT_TRIAL = 10;
 
 /**
  * Sent by a build that understands being told it has run out.
