@@ -198,3 +198,7 @@
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/wordDecoys.ts:11 — 명사 tamaño 오답에 형용사 grande·mediano(품사 거르기 안 거침) (수·성 실수 꼴만 남김).
 - 2026-11-02 watch → dev: [my] src/lib/speech/sayLine.ts:69 — typedLine이 쓴 글을 음성 인식 결과로 판단받아(practice.ts recallPrompt·ownWordsPrompt) 동음 철자 실수·문장부호 빠짐이 good=true(익힘) (요청에 typed 표시, 라우트에서 인식기 예외 없는 쓴 글 판단 지시). 두 번 확인함.
 - 2026-11-02 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:220 — 뜻 줄이 비면 meaning 없이 가서 practice 라우트가 recordPronunciation — 쓴 줄이 발음 기록에 쌓임 (typed면 발음 기록 건너뜀).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:108 — LessonHost가 f| 열쇠로 연 수업이 다시 켤 자리에 item·lesson 둘 다 남아 다시 켜면 같은 수업이 두 겹 (한쪽만 남김).
+- 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2321 — 작은 칸 빈 곳을 눌러 전체 화면으로 바뀌면 InlineQuiz 상태가 사라져 풀던 문제가 처음부터 (같은 상태 유지하거나 퀴즈 칸은 누름 제외).
+- 2026-11-02 watch → dev: [my] src/lib/copy.ts:1126 — framesSkip 한국어 "이 단계 스킵" vs en/es "Skip these", 실제는 고른 문장구조만 익힘 처리 (뜻 맞춘 이름으로 14개 언어).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/StageFrames.tsx:232 — 스킵 완료 화면이 저장 POST를 안 기다리고 "✓ 통과" — 실패해도 통과로 보임 (결과 기다리고 실패 안내).
