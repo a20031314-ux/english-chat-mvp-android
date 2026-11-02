@@ -940,7 +940,8 @@
     "fillToStudy": "勉強すること",
     "fillShort": "足りないところ",
     "fillRecommend": "おすすめ",
-    "fillRecords": "記録"
+    "fillRecords": "記録",
+    "planTodayAmount": "今日の学習量 {n}分"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1883,7 +1884,8 @@
     "fillToStudy": "要学的",
     "fillShort": "不足之处",
     "fillRecommend": "推荐",
-    "fillRecords": "记录"
+    "fillRecords": "记录",
+    "planTodayAmount": "今日学习量 {n}分钟"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2829,7 +2831,8 @@
     "fillToStudy": "Cần học",
     "fillShort": "Còn thiếu",
     "fillRecommend": "Gợi ý học",
-    "fillRecords": "Ghi chép"
+    "fillRecords": "Ghi chép",
+    "planTodayAmount": "Lượng học hôm nay: {n} phút"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3780,7 +3783,8 @@
     "fillToStudy": "À étudier",
     "fillShort": "Ce qui manque",
     "fillRecommend": "À essayer",
-    "fillRecords": "Historique"
+    "fillRecords": "Historique",
+    "planTodayAmount": "À étudier aujourd’hui : {n} min"
   },
   "it": {
     "archive": "Report",
@@ -4922,7 +4926,8 @@
     "fillToStudy": "Da studiare",
     "fillShort": "Cosa manca",
     "fillRecommend": "Prova questo",
-    "fillRecords": "Registro"
+    "fillRecords": "Registro",
+    "planTodayAmount": "Studio di oggi: {n} min"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -5876,7 +5881,8 @@
     "fillToStudy": "Para estudar",
     "fillShort": "O que falta",
     "fillRecommend": "Experimente",
-    "fillRecords": "Registros"
+    "fillRecords": "Registros",
+    "planTodayAmount": "Estudo de hoje: {n} min"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7016,7 +7022,8 @@
     "fillToStudy": "Что изучить",
     "fillShort": "Чего не хватает",
     "fillRecommend": "Попробуйте",
-    "fillRecords": "Записи"
+    "fillRecords": "Записи",
+    "planTodayAmount": "Сегодня учить: {n} мин"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -7966,7 +7973,8 @@
     "fillToStudy": "Untuk dipelajari",
     "fillShort": "Yang kurang",
     "fillRecommend": "Coba ini",
-    "fillRecords": "Catatan"
+    "fillRecords": "Catatan",
+    "planTodayAmount": "Belajar hari ini: {n} mnt"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -8909,7 +8917,8 @@
     "fillToStudy": "للدراسة",
     "fillShort": "ما ينقصك",
     "fillRecommend": "جرّب هذا",
-    "fillRecords": "السجلات"
+    "fillRecords": "السجلات",
+    "planTodayAmount": "دراسة اليوم: {n} د"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -9852,7 +9861,8 @@
     "fillToStudy": "สิ่งที่ต้องเรียน",
     "fillShort": "สิ่งที่ยังขาด",
     "fillRecommend": "แนะนำ",
-    "fillRecords": "บันทึก"
+    "fillRecords": "บันทึก",
+    "planTodayAmount": "ปริมาณเรียนวันนี้ {n} นาที"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -10795,6 +10805,7 @@
     "fillToStudy": "पढ़ने के लिए",
     "fillShort": "क्या कम है",
     "fillRecommend": "यह आज़माएँ",
-    "fillRecords": "रिकॉर्ड"
+    "fillRecords": "रिकॉर्ड",
+    "planTodayAmount": "आज की पढ़ाई: {n} मिनट"
   }
 }

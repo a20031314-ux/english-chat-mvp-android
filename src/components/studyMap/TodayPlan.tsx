@@ -915,8 +915,8 @@ export function TodayPlan({
     const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "type", "choose"] : ["auto", "type", "choose", "order", "say"];
     return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
   };
-  // 칸 머리에 학습 시간(n분)은 안 띄움(2026-11-03 사용자 "stagebank에서 학습시간 표시는 지우고") — 끝났을 때만 ✓. 분량은 ⚙ 안에.
-  const todaySummary = finished ? <span>{`✓ ${ui.planAllDone}`}</span> : null;
+  // 칸 머리: "오늘 학습할 분량 n분"(2026-11-03 사용자 — 숫자만 있던 n분을 지웠다가 "표시를 해줘, 오늘 학습할 분량이라고"), 끝나면 ✓.
+  const todaySummary = <span className="tabular-nums">{finished ? `✓ ${ui.planAllDone}` : ui.planTodayAmount.replace("{n}", String(items.reduce((sum, item) => sum + item.minutes, 0)))}</span>;
   // 오늘 할 것(2026-10-30 사용자 "퀴즈랑 똑같이 첫 화면으로 — 다 안 보여 줘도 되니까 뭘 할지 명확히"): 목록 대신 지금 할 것 하나를 크게,
   // 나머지는 점으로만. 퀴즈면 칸 안에서 바로 한 문제, 상황·문장구조·꺼내 쓰기면 첫 줄이 보이는 카드 하나(누르면 시작).
   const currentAt = items.findIndex((item) => !doneOf(item));
