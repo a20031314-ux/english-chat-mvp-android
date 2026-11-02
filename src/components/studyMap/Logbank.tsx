@@ -298,26 +298,16 @@ export function Logbank({
     }
   };
   const rowLabel = (row: PartRow) => (row.node ? nodeName(row.node) || row.text : row.key ? reviewLabel(language, row.key) || row.text : row.text);
-<<<<<<< HEAD
-  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "border border-info/40 bg-info/10 text-info" : "border border-line text-slate-300"}`;
-=======
   const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? bankTone("log").chip : "border border-line text-slate-300"}`;
->>>>>>> b4c72c6 (오답 표시 빨강(bad), My 칸 안 고른 칩·위 칸 이름 버튼을 칸 색으로)
   const timeLegend: { cls: string; icon: string; title: string }[] = [
     { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
     { cls: "fill-info/55 text-info/70", icon: "🧩", title: ui.framesTitle },
     { cls: "fill-slate-400 text-slate-400", icon: "📝", title: ui.keepTitle },
   ];
   const partLegend: { cls: string; icon: string; title: string }[] = [
-<<<<<<< HEAD
     { cls: "fill-info text-info", icon: "✓", title: ui.itemsMastered },
     { cls: "fill-info/45 text-info/60", icon: "•", title: ui.itemsLearned },
-    { cls: "fill-warn text-warn", icon: "✗", title: ui.partFixed },
-=======
-    { cls: "fill-status-mastered text-status-mastered", icon: "✓", title: ui.itemsMastered },
-    { cls: "fill-info text-info", icon: "•", title: ui.itemsLearned },
     { cls: "fill-bad text-bad", icon: "✗", title: ui.partFixed },
->>>>>>> b4c72c6 (오답 표시 빨강(bad), My 칸 안 고른 칩·위 칸 이름 버튼을 칸 색으로)
   ];
   const dayDetail = openDay ? allDays.find((one) => one.day === openDay) ?? null : null;
   const rowDetail = openRow ? (["grammar", "vocab", "expression"] as const).flatMap((one) => rowsOf(one)).find((row) => row.id === openRow) ?? null : null;
@@ -333,11 +323,7 @@ export function Logbank({
               onClick={() => setOpenRow(row.id)}
               className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
             >
-<<<<<<< HEAD
-              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-info" : row.status === "missed" ? "text-warn" : "text-info/60"}`}>
-=======
-              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-status-mastered" : row.status === "missed" ? "text-bad" : "text-info"}`}>
->>>>>>> b4c72c6 (오답 표시 빨강(bad), My 칸 안 고른 칩·위 칸 이름 버튼을 칸 색으로)
+              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-info" : row.status === "missed" ? "text-bad" : "text-info/60"}`}>
                 {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
               </span>
               <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
