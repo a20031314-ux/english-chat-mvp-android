@@ -216,3 +216,4 @@
 - 2026-11-02 watch → dev: [ai] src/app/api/chat/route.ts:1167 — 채팅 맛보기를 답 뒤에 깎아 동시 전송이면 10통 초과 (보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
+- 2026-11-02 watch → dev: [my] src/lib/curriculum/logbankData.ts:1298 — partRows가 기간 안 익힘 기록이 한 번이면 그 뒤 Quizbank 틀림·튜터 고침이 있어도 ✓ 익힘으로 묶음 (가장 최근 사건이 틀림·고침·미통과면 다시 볼 것을 앞세우고 테스트 한 줄).
