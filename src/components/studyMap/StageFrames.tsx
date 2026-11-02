@@ -35,6 +35,7 @@ import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { FrameLesson } from "@/components/studyMap/FrameLesson";
 import { readPool } from "@/lib/curriculum/exam";
+import { lastResultFor, readDayResults } from "@/lib/curriculum/dayLog";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -85,6 +86,8 @@ export function StageFrames({
   // 오늘 할 것에서 연 수업이면 닫을 때 전면 광고를 항목 사이에 띄우지 않는다(FrameLesson fromToday).
   const [openToday, setOpenToday] = useState(false);
   const [handled, setHandled] = useState(0);
+  // 끝까지 한 마지막 결과(이 폰 dayLog) — 카드에 ↻ n/m.
+  const dayResults = readDayResults(language);
   /** 고르는 중이면 고른 틀 id들(☑ 눌렀을 때), 아니면 null. */
   const [picking, setPicking] = useState<Set<string> | null>(null);
   /** 방금 스킵한 문장구조 id — 학습 완료 화면에 보인다. */
@@ -164,6 +167,8 @@ export function StageFrames({
       <ul className="grid grid-cols-2 gap-2">
         {frames.map((frame) => {
           const ok = passed.includes(frame.id);
+          // 끝까지 했지만 익힘이 아니면 마지막 대화 n/m(2026-11-02 사용자 "완료 표시가 안 떠").
+          const last = ok ? null : lastResultFor(dayResults, frame.id);
           const redoing = again.has(frame.id);
           const claimedNow = !ok && claimed.has(frame.id);
           const chosen = Boolean(picking?.has(frame.id));
@@ -192,7 +197,7 @@ export function StageFrames({
                 <span dir="auto" className="text-note text-slate-100">
                   {picking && !ok ? <span className={`me-1 text-caption ${chosen ? "text-good" : "text-slate-500"}`}>{chosen ? "☑" : "☐"}</span> : null}
                   {frame.pattern}{" "}
-                  {redoing ? <span className="text-caption text-warn">◐</span> : ok ? <span className="text-caption text-good">✓</span> : claimedNow ? <span className="text-caption text-slate-500">✓</span> : null}
+                  {redoing ? <span className="text-caption text-warn">◐</span> : ok ? <span className="text-caption text-good">✓</span> : claimedNow ? <span className="text-caption text-slate-500">✓</span> : last ? <span data-last-try className="text-meta tabular-nums text-warn" title={ui.scriptDone}>{`↻ ${last.right}/${last.total}`}</span> : null}
                 </span>
                 <span dir="auto" className="text-meta text-slate-400">
                   {glossFor(frame.meaning, locale)}

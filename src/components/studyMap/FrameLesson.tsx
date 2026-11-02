@@ -190,6 +190,9 @@ export function FrameLesson({
   }, [step, turn, tag, tIndex]);
 
   const finished = step === "done";
+  // 대화 줄이 없는 수업(표현·문법 칸 예문이 모자랄 때)은 퀴즈가 끝이자 통과 기준 — 예전엔 빈 "대화" 단계에서 멈춤(2026-11-02 사용자 "아무것도 안 뜨는 것도").
+  const [quizScore, setQuizScore] = useState<{ right: number; total: number } | null>(null);
+  const passedNow = turns.length ? lessonPassed(results, turns.length) : Boolean(quizScore && quizScore.total > 0 && quizScore.right === quizScore.total);
   // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01).
   // 연 때 — 끝날 때 걸린 시간을 Logbank 학습 시간으로(dayLog secs).
   const [openedAt] = useState(() => Date.now());
@@ -197,7 +200,7 @@ export function FrameLesson({
   useEffect(() => {
     if (!finished) return;
     markPracticed(language, itemId);
-    const good = lessonPassed(results, turns.length);
+    const good = passedNow;
     if (!logged.current) {
       logged.current = true;
       // 대화에서 막힌 소재는 정기 시험 재료로(curriculum/exam.ts).
@@ -208,9 +211,9 @@ export function FrameLesson({
         key,
         startedAt: openedAt,
         title: frame?.pattern ?? lesson?.title ?? subject?.title ?? key.slice(2),
-        right: results.filter((one) => one?.good).length,
-        total: turns.length,
-        passed: lessonPassed(results, turns.length),
+        right: turns.length ? results.filter((one) => one?.good).length : (quizScore?.right ?? 0),
+        total: turns.length || (quizScore?.total ?? 0),
+        passed: passedNow,
         said: results.map((one) => ({ text: one?.heard ?? "", good: Boolean(one?.good) })),
       });
     }
@@ -235,7 +238,7 @@ export function FrameLesson({
         onPassed?.(frame.id);
       })
       .catch(() => undefined);
-  }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed, openedAt]);
+  }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed, openedAt, passedNow, quizScore]);
 
   const send = async () => {
     if (!turn || listening || !draft.trim()) return;
@@ -276,7 +279,7 @@ export function FrameLesson({
   const steps: { id: Exclude<LessonStep, "done">; label: string }[] = [
     { id: "explain", label: ui.explanation },
     ...(questions.length ? [{ id: "quiz" as const, label: ui.quizTag }] : []),
-    { id: "talk", label: ui.homeTabTalk },
+    ...(turns.length ? [{ id: "talk" as const, label: ui.homeTabTalk }] : []),
   ];
   const at = finished ? steps.length : steps.findIndex((one) => one.id === step);
   const goNext = () => {
@@ -284,7 +287,7 @@ export function FrameLesson({
     setStep(nextStep);
   };
   const result = results[tIndex];
-  const ok = lessonPassed(results, turns.length);
+  const ok = passedNow;
   const hideFrame = step === "quiz" || step === "talk";
   // "이름 말하기: 제 이름은 ___예요." → "이름 말하기" — 뒤쪽은 틀을 그대로 담고 있어 답이 된다.
   const meaningText = frame ? glossFor(frame.meaning, locale) : (lesson?.meaning ?? "");
@@ -462,6 +465,7 @@ export function FrameLesson({
                 else {
                   const rights = quizRight.current.slice(0, questions.length);
                   if (rights.length) noteQuizLog(language, key, rights.length === questions.length && rights.every(Boolean));
+                  setQuizScore({ right: rights.filter(Boolean).length, total: questions.length });
                   quizRight.current = [];
                   goNext();
                 }
@@ -594,7 +598,12 @@ export function FrameLesson({
                     setResults([]);
                     logged.current = false;
                     setTIndex(0);
-                    setStep("talk");
+                    if (turns.length) setStep("talk");
+                    else {
+                      setQIndex(0);
+                      setQuizScore(null);
+                      setStep(questions.length ? "quiz" : "explain");
+                    }
                   }}
                   className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
                 >

@@ -6,7 +6,7 @@ import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { noteDayResult } from "@/lib/curriculum/dayLog";
+import { lastResultFor, noteDayResult, readDayResults } from "@/lib/curriculum/dayLog";
 import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -208,6 +208,16 @@ export function StageScripts({
   void lessonSeen;
   const quizLog = readQuizLog(language);
   const pool = readPool(language);
+  // 끝까지 했지만 통과 못 한 것: 카드에 마지막 n/m(이 폰 dayLog — 끝냈는데 아무 표시가 없던 것, 2026-11-02).
+  const dayResults = readDayResults(language);
+  const tried = (id: string) => {
+    const last = lastResultFor(dayResults, id);
+    return last ? (
+      <span data-last-try className="shrink-0 text-meta tabular-nums text-warn" title={ui.scriptDone}>
+        {`↻ ${last.right}/${last.total}`}
+      </span>
+    ) : null;
+  };
   const itemRow = (subject: LessonSubject, label: string, sub?: string) => {
     const ok = streakOf(quizLog[subject.key]) > 0;
     const claimed = pool[subject.key]?.r.includes("claimed");
@@ -223,7 +233,7 @@ export function StageScripts({
             </span>
           ) : null}
         </span>
-        {ok ? <span className="shrink-0 text-caption text-good">✓</span> : claimed ? <span className="shrink-0 rounded-full border border-good/50 px-2 py-0.5 text-meta text-good">{ui.knownTag}</span> : null}
+        {ok ? <span className="shrink-0 text-caption text-good">✓</span> : claimed ? <span className="shrink-0 rounded-full border border-good/50 px-2 py-0.5 text-meta text-good">{ui.knownTag}</span> : tried(subject.key)}
         <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
       </button>
     );
@@ -261,7 +271,7 @@ export function StageScripts({
             {ui.knownTag}
           </span>
         ) : (
-          <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} ✎</span>
+          tried(script.id) ?? <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} ✎</span>
         )}
         <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
       </button>
@@ -312,12 +322,15 @@ export function StageScripts({
         <button
           type="button"
           data-recall-start
-          disabled={!learnedOrder.length}
-          onClick={() => setRecalling(true)}
-          className="flex items-center gap-3 rounded-xl border border-dashed border-line px-3 py-3 text-start hover:bg-white/5 disabled:opacity-50"
+          // 익힌 문장구조가 없으면 꺼내 쓸 것이 없다 — 눌러도 아무 일 없던 것(2026-11-02 사용자 "아예 아무것도 안 뜨는 것도") 대신 🧩 문장구조로 보낸다.
+          onClick={() => (learnedOrder.length ? setRecalling(true) : setMethod("frame"))}
+          className="flex items-center gap-3 rounded-xl border border-dashed border-line px-3 py-3 text-start hover:bg-white/5"
         >
-          <span aria-hidden className="text-body text-ink">▶</span>
+          <span aria-hidden className="text-body text-ink">{learnedOrder.length ? "▶" : "🔒"}</span>
           <span className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.recallTitle}</span>
+          {learnedOrder.length ? null : (
+            <span className="shrink-0 text-caption tabular-nums text-slate-400" title={ui.framesTitle}>{`🧩 0 ›`}</span>
+          )}
         </button>
       ) : null}
       {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}
