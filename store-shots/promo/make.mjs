@@ -429,6 +429,9 @@ STORIES.call = () => {
   };
 };
 const plan = STORIES[story]();
+// 화면 속도(사용자 2026-11-03 "화면 흐름이 너무 빨라, 0.8배속 정도"): 통화·Logbank 편은 모든 장면을 0.8배로. PROMO_PACE로 바꿈(1이면 예전).
+const PACE = Number(process.env.PROMO_PACE || (story === "call" || story === "logbank" ? 0.8 : 1));
+if (PACE !== 1) plan.segs = plan.segs.map((seg) => [seg[0], seg[1], seg[2] * PACE, ...seg.slice(3)]);
 // 목소리는 기본으로 뺀다(사용자 2026-10-26 "목소리는 빼고 자막과 음악") — 넣으려면 PROMO_VOICE=1.
 // 통화 편은 대화 소리가 곧 장면이라 늘 켬(PROMO_VOICE=0이면 끔).
 const VOICE_ON = process.env.PROMO_VOICE === "1" || (story === "call" && process.env.PROMO_VOICE !== "0");
