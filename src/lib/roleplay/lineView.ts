@@ -8,6 +8,6 @@ import type { TranscriptLine } from "./review.ts";
 export function learnerLineView(lines: TranscriptLine[], index: number, options: { showAll: boolean; over: boolean }): "show" | "waiting" | "hidden" {
   const line = lines[index]!;
   if (line.who !== "learner" || options.showAll || options.over) return "show";
-  if (line.better || line.meant || line.about || line.stuck) return "show";
+  if (line.better || line.meant || line.smoother || line.about || line.stuck) return "show";
   return index === lines.length - 1 ? "waiting" : "hidden";
 }

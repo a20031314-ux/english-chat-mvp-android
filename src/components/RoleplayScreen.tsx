@@ -426,6 +426,7 @@ export function RoleplayScreen({
       const missedTurn = Boolean(instruction.request.missed);
       const better = missedTurn ? "" : (direction?.better ?? "");
       const meant = missedTurn ? "" : (direction?.meant ?? "");
+      const smoother = missedTurn ? "" : (direction?.smoother ?? "");
       const about = !missedTurn && direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
@@ -433,11 +434,12 @@ export function RoleplayScreen({
       const retry = missedTurn ? undefined : direction?.retry;
       // 맞힘/아직은 기다리던 문장이 있을 때만(서버도 같은 규칙).
       const redoMark = redoLine && (retry === "pass" || retry === "miss") ? retry : undefined;
-      if (better || meant || about || redoMark) {
+      if (better || meant || smoother || about || redoMark) {
         setSaid((current) =>
           markAboutTheirLine(current, {
             ...(better ? { better } : {}),
             ...(meant ? { meant } : {}),
+            ...(smoother ? { smoother } : {}),
             ...(about ? { about } : {}),
             ...(redoMark ? { redo: redoMark } : {}),
           }),

@@ -157,7 +157,9 @@ export function RoleplayLine({
   };
   const [sayingAgain, setSayingAgain] = useState(false);
   const againRef = useRef<HTMLDivElement>(null);
-  const sayTarget = (line.meant || line.better || line.text).trim();
+  const sayTarget = (line.meant || line.better || line.smoother || line.text).trim();
+  // 맞게 말한 줄의 더 자연스러운 말(💡, 2026-11-02) — 고친 말이 없을 때만, 보는 방식은 고친 말과 같은 설정.
+  const smoother = line.who === "learner" && !line.better && !line.meant ? (line.smoother ?? "").trim() : "";
   const canSayAgain = Boolean(onSayAgain && line.who === "learner" && sayTarget && sayTarget !== "…");
   return (
     <li className={`mb-2 flex items-end gap-2 ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
@@ -230,6 +232,31 @@ export function RoleplayLine({
         {/* Read in the seconds after they stop talking, while they wait to be
             answered — the one moment in a spoken turn when their eyes are free.
             Never said aloud; the character does not know it is here. */}
+        {smoother && !fixOpen ? (
+          <button
+            type="button"
+            data-natural-chip
+            onClick={(event) => {
+              event.stopPropagation();
+              setFixOpen(true);
+            }}
+            className="mt-2 inline-flex items-center gap-1 rounded-full border border-good/50 bg-good/15 px-2.5 py-0.5 text-caption text-emerald-100"
+          >
+            <span aria-hidden="true">💡</span>
+            {ui.chatNaturalChip}
+          </button>
+        ) : null}
+        {smoother && fixOpen ? (
+          <div data-natural-tip onClick={(event) => event.stopPropagation()} className="mt-1.5 border-t border-white/10 pt-1.5">
+            <p className="text-meta text-slate-400">💡 {ui.chatNaturalChip}</p>
+            <div className="mt-0.5 flex items-start gap-2">
+              <p dir="auto" className="min-w-0 flex-1 text-note leading-snug text-emerald-200">
+                {smoother}
+              </p>
+              <TTSButton text={smoother} className="shrink-0" />
+            </div>
+          </div>
+        ) : null}
         {hasFix && !fixOpen ? (
           <CorrectionChip label={ui.chatCorrectionChip} onOpen={() => setFixOpen(true)} tone="dark" />
         ) : null}

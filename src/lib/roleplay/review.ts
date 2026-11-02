@@ -38,6 +38,8 @@ export type TranscriptLine = {
   better?: string;
   /** What they were trying to say, rebuilt from a broken sentence. Shown under it, never spoken. */
   meant?: string;
+  /** 맞게 말한 줄의 더 자연스러운 말(💡, 고친 말 아님 — 고친 수·복습에 안 셈). */
+  smoother?: string;
   /** A word about that sentence, in their own language. Also never spoken. */
   about?: string;
   /** 학습자 줄: 받아쓰기가 확신이 낮았음 — 줄 끝에 "?"(speechConfidence.ts). */

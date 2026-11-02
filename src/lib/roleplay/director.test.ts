@@ -1375,3 +1375,22 @@ test("튜터 수업 지시: 기다리는 문장이 있으면 그 문장을, 마�
   assert.match(coachBrief({ coach: true }), /do not make up an answer for them/);
   assert.doesNotMatch(coachBrief({ redo: "I went home.", redoTries: 1 }), /I went home/, "그냥 대화는 기다리는 문장을 안 씀");
 });
+
+test("a correct sentence said more naturally rides as smoother, never next to a fix", () => {
+  const natural = parse(
+    { assessment: "on_track", say: { text: "Oh, what do you teach?" }, smoother: "I'm a teacher.", next: "free" },
+    { heard: "My job is a teacher" },
+  );
+  assert.equal(natural?.smoother, "I'm a teacher.");
+  assert.equal(natural?.better, undefined);
+  const withFix = parse(
+    { assessment: "on_track", say: { text: "Nice!" }, better: "I went to the gym yesterday.", smoother: "I hit the gym yesterday.", next: "free" },
+    { heard: "I go to gym yesterday" },
+  );
+  assert.equal(withFix?.smoother, undefined);
+  const same = parse(
+    { assessment: "on_track", say: { text: "Nice!" }, smoother: "I went to the gym yesterday", next: "free" },
+    { heard: "I went to the gym yesterday" },
+  );
+  assert.equal(same?.smoother, undefined);
+});

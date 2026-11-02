@@ -199,6 +199,11 @@ export type Direction = {
    * bubble as "is this what you meant?". Never alongside `better`.
    */
   meant?: string;
+  /**
+   * 맞게 말했지만 원어민이 더 자연스럽게 말하는 꼴(사용자 2026-11-02 "통화에도"). 고친 말이 아니라서 고친 수·복습 카드·
+   * 통화 정리에는 안 들어가고, 그 줄 아래 💡로만. `better`·`meant`와 함께 오지 않는다.
+   */
+  smoother?: string;
   next: DirectionNext;
   /**
    * A recorded line to say straight after, when the conversation had to be
@@ -667,10 +672,11 @@ ${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.
 ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bilingualCharacterRule(target, native)}
 ` : ""}`
-}- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
+}- "smoother" is only for a sentence that is already correct and that you leave alone: when someone who grew up with ${target} would clearly say the same thing another way here (a more idiomatic phrase, the usual spoken form), write that way; otherwise leave it empty. Another word for the same thing that is no better is not a reason. Never with "better" or "meant".
+- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
 ${
   coaching
     ? `
@@ -746,7 +752,7 @@ ${request.context.trim()}`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
       : "",
     request.missed
-      ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty. Leave "note", "better" and "meant" empty, and give "stuck" as the assessment.`
+      ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty. Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
       : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
@@ -911,6 +917,7 @@ export function parseDirection(
     note?: unknown;
     better?: unknown;
     meant?: unknown;
+    smoother?: unknown;
     next?: unknown;
     retry?: unknown;
   };
@@ -1203,6 +1210,18 @@ export function parseDirection(
   // Both filled, which the prompt rules out: the rebuilt one is the one that
   // says what they were after, so it wins.
   const better = meant ? "" : better0;
+  // 맞는 줄의 더 자연스러운 말: 고친 말이 없을 때만, 들은 말을 바꿔 쓴 것이고 학습 언어일 때만.
+  const smoothed = typeof record.smoother === "string" ? record.smoother.trim().slice(0, 200) : "";
+  const smoother =
+    smoothed &&
+    !better &&
+    !meant &&
+    request.heard.trim() &&
+    !sameWords(smoothed, request.heard) &&
+    rewritesThis(smoothed, request.heard) &&
+    inTargetLanguage(smoothed, request)
+      ? smoothed
+      : "";
 
   // The ready question the model asked for, unless the turn already asks it.
   // Naming the same line twice is caught above, but the same question can
@@ -1281,6 +1300,7 @@ export function parseDirection(
     next,
     ...(better ? { better } : {}),
     ...(meant ? { meant } : {}),
+    ...(smoother ? { smoother } : {}),
     // 다시 말해 보라고 한 차례에는 다음 질문을 얹지 않는다 — 고친 문장을 말할 차례다.
     ...(chosenFollow && retry !== "ask" && !(retry === "miss" && !givingUp) ? { follow: chosenFollow } : {}),
     ...(retry ? { retry } : {}),

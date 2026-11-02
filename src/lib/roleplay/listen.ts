@@ -613,6 +613,9 @@ function shapeDirection(raw: unknown): Direction | null {
     ...(typeof body.meant === "string" && body.meant.trim()
       ? { meant: body.meant.trim() }
       : {}),
+    ...(typeof body.smoother === "string" && body.smoother.trim()
+      ? { smoother: body.smoother.trim() }
+      : {}),
     ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
     ...(body.retry === "ask" || body.retry === "pass" || body.retry === "miss" ? { retry: body.retry } : {}),
     ...(body.progress && typeof body.progress.answered === "number" && typeof body.progress.total === "number"

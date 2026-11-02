@@ -15,7 +15,7 @@ import { REDO_MAX_TRIES } from "./director.ts";
  */
 export function markAboutTheirLine(
   lines: TranscriptLine[],
-  about: { better?: string; meant?: string; about?: string; redo?: "pass" | "miss" },
+  about: { better?: string; meant?: string; smoother?: string; about?: string; redo?: "pass" | "miss" },
 ): TranscriptLine[] {
   const index = lines.map((line) => line.who).lastIndexOf("learner");
   if (index < 0) return lines;
