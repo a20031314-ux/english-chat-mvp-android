@@ -82,7 +82,7 @@ Answer with exactly four S lines and three D lines, nothing else.`,
       { role: "user", content: `Sentences already used (do not repeat): ${have.join(" / ") || "(none)"}\nWrong options already used: ${decoysHave.join(" / ") || "(none)"}` },
     ],
   });
-  const raw = String(completion.choices[0]?.message?.content ?? "");
+  const raw = String(completion.choices[0]?.message?.content ?? "") || `(empty answer: ${String(completion.choices[0]?.finish_reason ?? "?")})`;
   const items: { t: string; p: string; g: string; w?: string[] }[] = [];
   const decoys: string[] = [];
   const existing = new Set([...have, ...inApp]);
