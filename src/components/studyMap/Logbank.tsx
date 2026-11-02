@@ -422,8 +422,7 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
-        {/* 처음 위치 어림(2026-11-03 사용자 "처음에 위치를 추정하고 차 있는 상태로 점점 조정"): 체크 없이 시작한 사람은 지금 단계로 어림해 두고,
-            기록이 적을 때만 [초급 | 중급 | 고급]으로 고쳐 잡게 — 고르면 사라짐(단계는 그대로). 설명 글 없이 버튼만(RULES 4). */}
+        {/* Starting estimate (user 2026-11-03): without a level check the hexagon starts from the current stage; while there is little data, [beginner | mid | advanced] lets the learner reset it. Buttons only (RULES 4). */}
         {!check && events.length < 20 ? (
           <div role="radiogroup" aria-label={ui.mapLevelLabel} data-log-fill-check className="flex flex-wrap justify-center gap-1.5">
             {(["beginner", "mid", "advanced"] as const).map((level) => (
