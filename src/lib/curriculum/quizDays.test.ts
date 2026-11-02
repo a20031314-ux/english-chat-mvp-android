@@ -37,3 +37,13 @@ test("Logbank 결과 카드(이 폰): 말한 줄 다섯까지·빈 줄 빼기, 1
   assert.equal(kept.length, 2, "90일 전 것은 남음");
   assert.ok(list[0]!.said.every((one) => one.text));
 });
+
+test("문제 모양: 고르기·쓰기로 맞힌 열쇠와 쓰기로 틀린 열쇠·틀린 꼴(2026-11-02)", () => {
+  let days = addQuizDay({}, "2026-11-2", true, "w|水", "c");
+  days = addQuizDay(days, "2026-11-2", true, "w|agua", "t");
+  days = addQuizDay(days, "2026-11-2", false, "f|es-f1-01", "t", "form");
+  const one = days["2026-11-2"]!;
+  assert.deepEqual([one.okc, one.okt, one.wt, one.wrong], [["w|水"], ["w|agua"], ["f|es-f1-01"], ["f|es-f1-01"]]);
+  assert.equal(one.miss?.["f|es-f1-01"], "form");
+  assert.equal(one.n, 3);
+});

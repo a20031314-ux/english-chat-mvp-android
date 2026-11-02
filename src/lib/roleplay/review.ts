@@ -1,4 +1,5 @@
 import type { SpokenLine } from "./director.ts";
+import type { TurnMark } from "./turnTally.ts";
 
 /**
  * Looking back at the moment they got stuck, after the conversation moved on.
@@ -27,6 +28,7 @@ import type { SpokenLine } from "./director.ts";
  * beside the component that draws it because a saved conversation is a list of
  * these, and a library module cannot reach into a component for its shape.
  */
+
 export type TranscriptLine = {
   who: "tutor" | "learner";
   text: string;
@@ -52,6 +54,8 @@ export type TranscriptLine = {
   again?: boolean;
   /** 학습자 줄: 튜터 수업에서 다시 말해 보라고 한 문장을 다시 말한 줄 — 맞힘(pass)·아직(miss) (2026-11-02). */
   redo?: "pass" | "miss";
+  /** 학습자 줄: 차례 재기(Logbank 육각형 듣기·실전 대화, turnTally.ts — 숫자·낱말 몇 개, 2026-11-02). */
+  turn?: TurnMark;
 };
 
 export type StuckTurn = {

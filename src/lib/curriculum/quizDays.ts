@@ -5,8 +5,15 @@
 const KEY = "quizDays.v1";
 const KEEP_DAYS = 366;
 
-/** wrong: 그날 틀린 열쇠(w|·e|·f|…, 서른 개까지) — Logbank 그날 칸에 "틀린 것"으로(2026-11-01). */
-export type QuizDays = Record<string, { n: number; right: number; wrong?: string[] }>;
+/**
+ * wrong: 그날 틀린 열쇠(w|·e|·f|…, 서른 개까지) — Logbank 그날 칸에 "틀린 것"으로(2026-11-01).
+ * 2026-11-02부터(Logbank 육각형 — 알아봄/만들어 냄 가르기, curriculum/fill.ts): okc·okt = 고르기·쓰기로 맞힌 열쇠, wt = 틀린 것 중 쓰기,
+ * miss = 틀린 열쇠의 틀린 꼴(고른 오답과 정답 차이). 예전 날엔 없다(맞힌 것은 익힘 기록 known에서, 고르기로 어림).
+ */
+export type QuizShape = "c" | "t";
+export type QuizDay = { n: number; right: number; wrong?: string[]; okc?: string[]; okt?: string[]; wt?: string[]; miss?: Record<string, string> };
+export type QuizDays = Record<string, QuizDay>;
+const DAY_KEYS_MAX = 200;
 
 export function readQuizDays(language: string): QuizDays {
   try {
@@ -18,10 +25,26 @@ export function readQuizDays(language: string): QuizDays {
 }
 
 /** 하루 칸에 한 문제를 더한다(오래된 날은 지움). 순수 — 저장은 saveQuizDays. */
-export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: string): QuizDays {
+export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string): QuizDays {
   const one = days[day] ?? { n: 0, right: 0 };
   const wrong = !correct && key && !(one.wrong ?? []).includes(key) ? [...(one.wrong ?? []), key].slice(-30) : one.wrong;
-  const next: QuizDays = { ...days, [day]: { n: one.n + 1, right: one.right + (correct ? 1 : 0), ...(wrong?.length ? { wrong } : {}) } };
+  const push = (list: string[] | undefined, yes: boolean) => (yes && key && !(list ?? []).includes(key) ? [...(list ?? []), key].slice(-DAY_KEYS_MAX) : list);
+  const okc = push(one.okc, correct && shape === "c");
+  const okt = push(one.okt, correct && shape === "t");
+  const wt = push(one.wt, !correct && shape === "t");
+  const misses = !correct && key && miss ? { ...(one.miss ?? {}), [key]: miss } : one.miss;
+  const next: QuizDays = {
+    ...days,
+    [day]: {
+      n: one.n + 1,
+      right: one.right + (correct ? 1 : 0),
+      ...(wrong?.length ? { wrong } : {}),
+      ...(okc?.length ? { okc } : {}),
+      ...(okt?.length ? { okt } : {}),
+      ...(wt?.length ? { wt } : {}),
+      ...(misses && Object.keys(misses).length ? { miss: misses } : {}),
+    },
+  };
   const keys = Object.keys(next);
   if (keys.length <= KEEP_DAYS) return next;
   const order = keys.sort((a, b) => dayValue(a) - dayValue(b));
@@ -29,9 +52,9 @@ export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: 
   return next;
 }
 
-export function noteQuizDay(language: string, day: string, correct: boolean, key?: string): void {
+export function noteQuizDay(language: string, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string): void {
   try {
-    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct, key)));
+    localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct, key, shape, miss)));
     window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));
   } catch {
     // 이번에만.
@@ -58,7 +81,11 @@ export function clearQuizDay(language: string, day: string, wrongOnly = false): 
     const days = readQuizDays(language);
     if (!days[day]) return;
     if (wrongOnly) {
-      days[day] = { n: days[day]!.n, right: days[day]!.right };
+      const rest = { ...days[day]! };
+      delete rest.wrong;
+      delete rest.wt;
+      delete rest.miss;
+      days[day] = rest;
     } else delete days[day];
     localStorage.setItem(`${KEY}.${language}`, JSON.stringify(days));
     window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));

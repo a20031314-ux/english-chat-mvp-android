@@ -524,12 +524,12 @@ export function TodayPlan({
           ? false
           : passedSet.has(item.id) || practiced.has(item.id);
   // 퀴즈 결과를 열쇠마다(묶음 퀴즈는 여럿을 한 번에 — 상태를 한 번에 고쳐 덮어쓰지 않게).
-  const finishMany = (results: readonly { key: string; correct: boolean; review?: string }[]) => {
+  const finishMany = (results: readonly { key: string; correct: boolean; review?: string; shape?: "c" | "t"; miss?: string }[]) => {
     if (!results.length) return;
     let logged = log;
     let nextTally = tally;
-    for (const { key, correct } of results) {
-      noteQuizDay(language, localDay(), correct, key);
+    for (const { key, correct, shape, miss } of results) {
+      noteQuizDay(language, localDay(), correct, key, shape, miss);
       // 틀린 문장구조·표현·문법은 정기 시험 재료로(curriculum/exam.ts).
       if (!correct) notePool(language, key, "wrong");
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
@@ -1282,7 +1282,7 @@ export function TodayPlan({
   );
   // 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 … 풀면 다음 문제로, 설명이나 옵션은 그 내부에"):
   // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
-  const recordOne = (one: { key: string; correct: boolean; skipped: boolean }) => {
+  const recordOne = (one: { key: string; correct: boolean; skipped: boolean; shape?: "c" | "t"; miss?: string }) => {
     // 다시 쓰기(이 묶음 두 번째 답): 맞으면 원 기록 그대로, 틀리면 틀림으로만 — 경계·익힘을 두 번 세지 않는다.
     const retype = Boolean(one.key) && retypeKeys.current.has(one.key) && retypeSeen.current.has(one.key);
     if (one.key && retypeKeys.current.has(one.key)) retypeSeen.current.add(one.key);
@@ -1307,7 +1307,7 @@ export function TodayPlan({
         saveCircle(trimCircle({ ...next, lv: noteLevel(lv, rank, one.correct, { choose: fresh, total: ranked.length, fresh }) }));
       } else saveCircle(trimCircle(growCircle(noteAnswer(before, one.key, one.correct, Date.now()), circleOrder, knownWord)));
     }
-    finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined }]);
+    finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined, shape: one.shape, miss: one.miss }]);
   };
   const takeBatch = (made: { keys: string[]; questions: QuizQuestion[] } | null): QuizBatch | null => {
     if (!made) return null;

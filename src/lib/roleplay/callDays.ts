@@ -4,13 +4,22 @@
  * 이 폰에 따로 남긴다(언어마다, 최근 1년). 문장은 없다 — 숫자만. 같은 통화를 다시 저장하면(이어서 하기) 그 줄을 덮어쓴다.
  */
 import { tallyCall } from "./transcriptMarks.ts";
+import { tallyTurns, type TurnTally } from "./turnTally.ts";
 import { callSeconds, type SavedConversation } from "./saved.ts";
 
 const KEY = "callDays.v1";
 const KEEP_DAYS = 366;
 export const CALL_DAYS_EVENT = "lb-calldays";
 
-export type CallDay = { day: string; at: number; seconds: number; fixed: number; redone: number };
+export type CallDay = {
+  day: string;
+  at: number;
+  seconds: number;
+  fixed: number;
+  redone: number;
+  /** 차례 셈(Logbank 육각형 듣기·실전 대화 — turnTally.ts, 2026-11-02부터의 통화만, 숫자만). */
+  turns?: TurnTally;
+};
 export type CallDays = Record<string, CallDay>;
 
 function localDay(at: number): string {
@@ -31,7 +40,8 @@ export function readCallDays(language: string): CallDays {
 export function callDayOf(call: Pick<SavedConversation, "said" | "startedAt" | "updatedAt" | "finishedAt" | "activeSecs">): CallDay | null {
   if (!call.said.some((line) => line.who === "learner")) return null;
   const tally = tallyCall(call.said);
-  return { day: localDay(call.startedAt), at: call.startedAt, seconds: callSeconds(call), fixed: tally.fixed, redone: tally.redone };
+  const turns = tallyTurns(call.said.map((line) => (line.who === "learner" ? line.turn : undefined)));
+  return { day: localDay(call.startedAt), at: call.startedAt, seconds: callSeconds(call), fixed: tally.fixed, redone: tally.redone, ...(turns ? { turns } : {}) };
 }
 
 /** 넣고 1년 넘은 것을 뺀다(순수). */

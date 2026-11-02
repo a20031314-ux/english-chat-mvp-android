@@ -4,6 +4,7 @@
  */
 import type { StuckTurn, TranscriptLine } from "./review.ts";
 import { REDO_MAX_TRIES } from "./director.ts";
+import type { TurnMark } from "./turnTally.ts";
 
 /**
  * Put what was said about their sentence under their sentence.
@@ -15,13 +16,20 @@ import { REDO_MAX_TRIES } from "./director.ts";
  */
 export function markAboutTheirLine(
   lines: TranscriptLine[],
-  about: { better?: string; meant?: string; smoother?: string; about?: string; redo?: "pass" | "miss" },
+  about: { better?: string; meant?: string; smoother?: string; about?: string; redo?: "pass" | "miss"; turn?: TurnMark },
 ): TranscriptLine[] {
   const index = lines.map((line) => line.who).lastIndexOf("learner");
   if (index < 0) return lines;
   const marked = [...lines];
   marked[index] = { ...marked[index]!, ...about };
   return marked;
+}
+
+/** 마지막 학습자 줄 바로 앞 튜터 줄이 🙉로 쉽게 다시 한 말인가(차례 재기 — 다시 들은 뒤 알아들음). */
+export function answeredAfterMissed(lines: readonly TranscriptLine[]): boolean {
+  const index = lines.map((line) => line.who).lastIndexOf("learner");
+  for (let i = index - 1; i >= 0; i -= 1) if (lines[i]!.who === "tutor") return Boolean(lines[i]!.again);
+  return false;
 }
 
 /**

@@ -22,6 +22,7 @@ import { fnGroupOf, type FnGroup } from "./fnGroups.ts";
 import { posGroup, stageCuts, type BankWord } from "./vocabBank.ts";
 import { stageKeyMap } from "../notes/myParts.ts";
 import { isWordish } from "../notes/stageParts.ts";
+import type { LeadHow, TalkWhy } from "../roleplay/turnTally.ts";
 
 export const AXES = ["vocabRead", "vocabUse", "sentRead", "sentUse", "listen", "talk"] as const;
 export type Axis = (typeof AXES)[number];
@@ -163,9 +164,8 @@ export function thetaForFill(fill: number, sigma = SIGMA): number {
 export type FillSource = "test" | "quiz" | "lesson" | "recall" | "fix" | "skip" | "free";
 export const SOURCE_WEIGHT: Record<FillSource, number> = { test: 1, quiz: 1, lesson: 0.7, recall: 0.8, fix: 0.5, skip: 0.3, free: 1 };
 
-/** 틀린 꼴(활용 꼭짓점 세부 칸 — 철자·꼴·다른 낱말 / 문장: 꼴·기능어·어순·빠짐). */
-export const MISS_KINDS = ["spell", "form", "word", "particle", "order", "missing"] as const;
-export type MissKind = (typeof MISS_KINDS)[number];
+export { MISS_KINDS, type MissKind } from "./missKind.ts";
+import type { MissKind } from "./missKind.ts";
 
 export type FillEvent = {
   at: number;
@@ -209,10 +209,7 @@ export type CallTurns = {
   /** 해낸 일 묶음(감독 fn → fnGroups). */
   fn?: Partial<Record<FnGroup, number>>;
 };
-export const TALK_WHY = ["slow", "hint", "native", "fix", "minimal"] as const;
-export type TalkWhy = (typeof TALK_WHY)[number];
-export const LEAD_HOW = ["ask", "topic", "extend"] as const;
-export type LeadHow = (typeof LEAD_HOW)[number];
+export { TALK_WHY, LEAD_HOW } from "../roleplay/turnTally.ts";
 
 /** 튜터 말 단계 무게(사용자 2026-11-02 "난이도도 봐줘") — 쉬운 대화만이면 60%가 상한. */
 export const TALK_STAGE_WEIGHT = [0.6, 0.7, 0.8, 0.9, 1] as const;
@@ -519,54 +516,4 @@ export function keysInCell(catalog: FillCatalog, axis: BankAxis, cellId: string)
   return out;
 }
 
-/* ───────── 틀린 꼴 가르기(모델 없음) ───────── */
-
-/**
- * 쓴 답·고른 오답과 정답의 차이로 틀린 꼴을 가른다. tokens = 낱말로 자른 것(wordSegments — 부르는 쪽이 자름, ja·zh·th 포함).
- * 같은 낱말이 순서만 다름 = 어순 · 정답 낱말이 빠짐 = 빠짐 · 기능어만 바뀜 = 기능어 · 앞이 같고 끝이 다름 = 꼴 · 한두 글자 = 철자 · 그 밖 = 다른 낱말.
- */
-export function missKindOf(given: readonly string[], right: readonly string[], functionWords: ReadonlySet<string> = new Set()): MissKind {
-  const norm = (list: readonly string[]) => list.map((one) => one.toLocaleLowerCase()).filter((one) => /[\p{L}\p{N}]/u.test(one));
-  const a = norm(given);
-  const b = norm(right);
-  if (a.length === b.length && a.length > 1 && [...a].sort().join("\u0000") === [...b].sort().join("\u0000") && a.join() !== b.join()) return "order";
-  const extra = a.filter((one) => !b.includes(one));
-  const lacking = b.filter((one) => !a.includes(one));
-  if (lacking.length && !extra.length) return "missing";
-  if (extra.length && lacking.length && [...extra, ...lacking].every((one) => functionWords.has(one))) return "particle";
-  if (extra.length === 1 && lacking.length === 1) return wordMiss(extra[0]!, lacking[0]!);
-  return "word";
-}
-
-/** 낱말 하나끼리: 줄기(앞 글자들)가 같고 끝만 다름 = 꼴(활용·성수), 안쪽 한두 글자 = 철자, 그 밖 = 다른 낱말. */
-function wordMiss(given: string, right: string): MissKind {
-  const shorter = Math.min([...given].length, [...right].length);
-  const prefix = sharedPrefix(given, right);
-  if (shorter >= 3 && prefix >= Math.max(2, shorter - 3) && prefix < Math.max([...given].length, [...right].length)) return "form";
-  if (editDistance(given, right) <= (shorter <= 4 ? 1 : 2)) return "spell";
-  return "word";
-}
-
-function sharedPrefix(a: string, b: string): number {
-  const x = [...a];
-  const y = [...b];
-  let i = 0;
-  while (i < x.length && i < y.length && x[i] === y[i]) i += 1;
-  return i;
-}
-
-function editDistance(a: string, b: string): number {
-  const x = [...a];
-  const y = [...b];
-  const row = Array.from({ length: y.length + 1 }, (_, i) => i);
-  for (let i = 1; i <= x.length; i += 1) {
-    let prev = row[0]!;
-    row[0] = i;
-    for (let j = 1; j <= y.length; j += 1) {
-      const here = row[j]!;
-      row[j] = Math.min(row[j]! + 1, row[j - 1]! + 1, prev + (x[i - 1] === y[j - 1] ? 0 : 1));
-      prev = here;
-    }
-  }
-  return row[y.length]!;
-}
+export { missKindOf } from "./missKind.ts";

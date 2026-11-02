@@ -53,7 +53,8 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { answeredAfterMissed, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { markTurn } from "@/lib/roleplay/turnTally";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -235,6 +236,8 @@ export function RoleplayScreen({
   const startedAt = useRef(0);
   // 실제 통화 시간(2026-11-02, inbox): 이번에 연 때부터 + 예전에 연 동안 쌓인 초 — 끝내기~이어서 하기 사이 쉰 시간은 안 셈.
   const openedAt = useRef(0);
+  // 이번 차례에 💡 힌트를 열었나(차례 재기 — 실전 대화 막힌 까닭).
+  const hintedRef = useRef(false);
   const activeBefore = useRef(0);
 
   useEffect(() => {
@@ -461,6 +464,24 @@ export function RoleplayScreen({
           }),
         );
       }
+      // 차례 재기(Logbank 육각형 듣기·실전 대화, 2026-11-02): 학습자 줄에 숫자·낱말 몇 개만.
+      if (!missedTurn && instruction.request.heard.trim() && direction) {
+        const signals = {
+          assessment: direction.assessment,
+          heard: direction.heard,
+          lead: direction.lead,
+          leadHow: direction.leadHow,
+          fnGroup: direction.fnGroup,
+          native: direction.native,
+          bigFix: Boolean(meant) || (retry === "ask" && !direction.offer),
+          hesitationMs: state.pending?.hesitationMs ?? 0,
+          usedHint: hintedRef.current,
+          captions: showCaptions,
+          level: instruction.request.level,
+        };
+        setSaid((current) => markAboutTheirLine(current, { turn: markTurn({ ...signals, afterMissed: answeredAfterMissed(current) }) }));
+      }
+      if (!missedTurn) hintedRef.current = false;
       if (!missedTurn) {
         const waitNext = nextRedo(redo, retry, meant || better || offered);
         setRedo(waitNext);
@@ -654,6 +675,7 @@ export function RoleplayScreen({
    */
   const openHelp = useCallback(() => {
     if (!state) return;
+    hintedRef.current = true;
     const started = pending.trim();
     const asked = [...state.history].reverse().find((line) => line.who === "tutor")?.text ?? "";
     openReview({

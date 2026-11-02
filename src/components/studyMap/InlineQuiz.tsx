@@ -7,6 +7,8 @@ import { maybeShowInterstitial } from "@/lib/ads";
 import type { UICopy } from "@/lib/copy";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
 import { stopTts } from "@/lib/ttsPlayer";
+import { quizShapeOf } from "@/lib/curriculum/missKind";
+import { segmentWords } from "@/lib/wordSegments";
 
 /**
  * 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 클릭을 유도하고 풀면 다음 문제로 — 설명이나 옵션은 그 내부에"):
@@ -39,7 +41,7 @@ export function InlineQuiz({
   make: () => QuizBatch | null;
   /** Changes when the material behind make() arrives (e.g. word cards): an empty quiz tries make() again. */
   retryKey?: string;
-  onResult: (result: { key: string; correct: boolean; skipped: boolean }) => void;
+  onResult: (result: { key: string; correct: boolean; skipped: boolean; shape?: "c" | "t"; miss?: string }) => void;
   /** 복합 문제(소재 여럿)의 결과를 한 번에 — 없으면 소재마다 onResult. */
   onParts?: (parts: { key: string; correct: boolean }[]) => void;
   empty: React.ReactNode;
@@ -122,7 +124,7 @@ export function InlineQuiz({
             if (onParts) onParts(value.parts);
             else for (const part of value.parts) onResult({ key: part.key, correct: part.correct, skipped: false });
           }
-          else onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped) });
+          else onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped), ...quizShapeOf(question, value, (text) => segmentWords(text, language)) });
         }}
         onNext={next}
         bankKey={batch.keys[index]}

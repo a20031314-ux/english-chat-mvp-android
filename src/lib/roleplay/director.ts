@@ -12,6 +12,8 @@ import { languageEvidence } from "../inputLanguage.ts";
 import { explanationInLearningLanguage } from "../languageLearningAnalysis.ts";
 import { targetLanguageFocusHints, tutorSpeechRules } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
+import { FN_GROUPS, type FnGroup } from "../curriculum/fnGroups.ts";
+import { LEAD_HOW, type Heard, type Lead, type LeadHow } from "./turnTally.ts";
 import {
   isLearnerNode,
   isTutorNode,
@@ -155,6 +157,17 @@ export type DirectorRequest = {
   redoTries?: number;
 };
 
+/**
+ * 차례 재기 칸의 뜻(같은 호출, 화면엔 안 보임 — Logbank 육각형 듣기·실전 대화, 2026-11-02). 짧게: 출력 몇 토큰.
+ */
+function MEASURE_RULES(openEnded: boolean, target: string, native: string): string {
+  return `These last fields only record how their turn went; they change nothing you say.
+"heard": only when your previous line asked them something or waited for an answer — "yes" when what they said answers it, "off" when it answers something else (they seem to have misheard), "vague" when it would fit any question ("yes yes", "I think so", "okay") and dodges this one; empty when you had not asked, or when the transcript is too broken to tell.${openEnded ? `
+"lead": "lead" when they bring in something you did not ask for — a question back, a new topic, or their own detail or reason that widens the talk ("how": "ask", "topic" or "extend"); "follow" when they answer what you asked, fully enough; "min" when they give only enough to get by (a word or two, "yes", repeating your words).` : ""}
+"fn": what their turn was doing — self (about themselves or people), ask (asking or checking), request (asking for, offering, inviting, ordering), time (when, past, plans, sequence), reason (why, if, must, can), compare (comparing, amounts, describing things), mind (feelings, opinions, reactions), daily (thanks, sorry, problems, directions, getting things done); empty if nothing.
+"native": true when all or most of their turn was in ${native} rather than ${target}.`;
+}
+
 /** 같은 문장을 다시 말해 보라고 하는 최대 횟수(사용자 결정 없음, 설계 2026-11-02: 두 번까지). */
 export const REDO_MAX_TRIES = 2;
 
@@ -227,7 +240,24 @@ export type Direction = {
   retry?: Retry;
   /** 튜터 수업: 이번 ask는 고친 게 아니라 더 자연스러운 표현을 건넨 것(말한 건 맞았음) — 화면 카드가 💡로(2026-11-02). */
   offer?: boolean;
+  /**
+   * 차례 재기(Logbank 육각형 듣기·실전 대화, 2026-11-02 hub/drafts/fill-gauge-2026-11-02.md 9절) — 같은 호출에서 판단, 화면엔 안 보임.
+   * heard: 튜터가 바로 앞에서 물었을 때 그 말에 맞게 답했나(yes)·엉뚱한 답(off)·아무 질문에나 맞는 얼버무림(vague).
+   */
+  heard?: Heard;
+  /** 그냥 대화에서: 묻지 않은 걸 스스로 꺼냄(lead) · 물은 것에 충분히(follow) · 살아남을 만큼만(min). */
+  lead?: Lead;
+  /** lead일 때 어떻게 — 되묻기·새 화제·덧붙여 넓힘. */
+  leadHow?: LeadHow;
+  /** 이 차례가 한 말의 일 묶음(curriculum/fnGroups). */
+  fnGroup?: FnGroup;
+  /** 차례 전부(또는 거의)를 앱 언어로 말함. */
+  native?: boolean;
 };
+
+export type { Heard, Lead, LeadHow };
+const HEARDS: readonly Heard[] = ["yes", "off", "vague"];
+const LEADS: readonly Lead[] = ["lead", "follow", "min"];
 
 /**
  * 이 차례에 학습자 줄을 실제로 고쳤나 — 고친 문장(meant·better), 없으면 "".
@@ -681,7 +711,7 @@ How to answer them:
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
-${tutorSpeechRules(request.targetLanguage, partner?.gender)}
+${scenario.openEnded && !coaching ? `- Now and then — about one turn in three, when they are managing, never two in a row and never right after a correction — end on a reaction or a short remark of your own instead of a question, and leave them room to take the conversation where they want.\n` : ""}${tutorSpeechRules(request.targetLanguage, partner?.gender)}
 ${
   coaching
     ? `- One or two short sentences.
@@ -695,7 +725,8 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 - If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
+${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
     ? `
@@ -940,6 +971,11 @@ export function parseDirection(
     next?: unknown;
     retry?: unknown;
     offer?: unknown;
+    heard?: unknown;
+    lead?: unknown;
+    how?: unknown;
+    fn?: unknown;
+    native?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -1326,5 +1362,29 @@ export function parseDirection(
     ...(retry ? { retry } : {}),
     // 표현 건네기는 고친 말(better)로 온 ask에서만 — 내 말 문장을 바꿔 준 것(meant)은 건네기가 아니다.
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
+    ...turnMeasure(record, request, scenario),
+  };
+}
+
+/**
+ * 차례 재기 칸 읽기(2026-11-02). 학습자 말이 없는 차례(🙉 다시·빈 말)에는 없음. 이끌어 감은 그냥 대화에서만,
+ * 모르는 값은 버린다(빈 값 = 판단 못 함).
+ */
+export function turnMeasure(
+  record: { heard?: unknown; lead?: unknown; how?: unknown; fn?: unknown; native?: unknown },
+  request: Pick<DirectorRequest, "heard" | "missed">,
+  scenario: Pick<RoleplayScenario, "openEnded">,
+): Pick<Direction, "heard" | "lead" | "leadHow" | "fnGroup" | "native"> {
+  if (request.missed || !request.heard.trim()) return {};
+  const heard = HEARDS.includes(record.heard as Heard) ? (record.heard as Heard) : undefined;
+  const lead = scenario.openEnded && LEADS.includes(record.lead as Lead) ? (record.lead as Lead) : undefined;
+  const leadHow = lead === "lead" && LEAD_HOW.includes(record.how as LeadHow) ? (record.how as LeadHow) : undefined;
+  const fnGroup = FN_GROUPS.includes(record.fn as FnGroup) ? (record.fn as FnGroup) : undefined;
+  return {
+    ...(heard ? { heard } : {}),
+    ...(lead ? { lead } : {}),
+    ...(leadHow ? { leadHow } : {}),
+    ...(fnGroup ? { fnGroup } : {}),
+    ...(record.native === true ? { native: true } : {}),
   };
 }
