@@ -219,3 +219,4 @@
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/missKind.ts:68 — 대화 조각 빈칸을 보기로 푼 것도 쓰기로 셈 (talk에 options 있으면 choose).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:308 — 통화 끝난 뒤 끝 화면에서 저장될 때마다 activeSecs가 늘어남 (finished면 끝난 순간 값 고정).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:276 — openNotes를 화면이 떠 있을 때만 받아 My가 뜨기 전에 온 신호(?screen=vocab)를 놓침 (뜰 때 takeAppIntent("openNotes")면 focusQuizbankWords·setTab("keep")).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:195 — 표현·문법 수업(frame 없음)은 퀴즈가 없어 대화 줄도 없으면 설명 → 바로 끝 화면, dayLog 0/0 → 카드에 ↻ 0/0 (turns·questions 둘 다 없으면 결과 안 남기고 닫기, lastResultFor는 total 0 건너뛰기).
