@@ -210,3 +210,9 @@
 - 2026-11-02 dev → qa: AI 튜터 사람처럼 ①(운영 웹 바로, 다음 빌드) — 사람 탭 튜터 프로필 팔로우·💬 메시지 → 그 튜터와의 대화, 대화 탭 튜터 줄(고른·팔로우·대화한 튜터, 마지막 말), ⋮ 튜터 목소리로 바꾸면 대화가 튜터마다 따로 이어지는지. 기기에서 예전 AI 대화가 그대로 남는지(처음 연 뒤 그 튜터 방). ja/ko, en/ja, es/ar.
 - 2026-11-02 watch → dev: [공통] src/lib/billing/billingService.ts:201 — rememberCustomerInfo가 isPremium || readStaffGrant()라 앱에서 ec_staff_grant가 한 번 남으면 refreshStaffGrant를 다시 안 불러, 로그아웃·STAFF_PREMIUM에서 빠져도 계속 프리미엄 (isPremium만 돌려주고 refreshStaffGrant를 늘 불러 합치기, 로그아웃 때 지우기).
 - 2026-11-02 watch → dev: [ai] src/lib/roleplay/director.ts:698 — better 설명 "틀린 게 없으면 비움"이 튜터 수업 offer 규칙(391행 better에 문장)과 어긋나 parse(1328행)가 offer를 버릴 수 있음 (설명에 offer 경우 덧붙이거나 칸 분리).
+- 2026-11-02 watch → dev: [my] src/lib/curriculum/fixedLessons/toQuiz.ts:22 — 고정 수업 고르기 보기를 원고 순서대로 내서 정답이 늘 0번(en.ko 19/19, 생성 예시도 answer 0) (틀 id 고정 난수로 섞고 answer 맞추기, check.ts가 0번 몰림 막기).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:111 — 돌아보기가 안 익힌(○·↷) 틀의 퀴즈 정답·대화 내 줄을 다 보이고 ▶ 수업이 같은 문제를 내 베껴 익힘 가능 (익힘 아닌 틀은 답 접기 또는 본 틀은 통과로 안 셈).
+- 2026-11-02 watch → dev: [my] src/lib/server/fixedLesson.ts:61 — 고치기 "빼기" 표기 지시 없음, 다른 앱 언어 표시가 정답 문장에 낄 수 있음 (지시에 right 빈 문자열, check.ts가 괄호 right 거부).
+- 2026-11-02 watch → dev: [ai] src/app/api/chat/route.ts:1167 — 채팅 맛보기를 답 뒤에 깎아 동시 전송이면 10통 초과 (보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기).
+- 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
+- 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
