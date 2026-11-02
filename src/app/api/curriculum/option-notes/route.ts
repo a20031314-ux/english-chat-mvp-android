@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
   if (!language || !sentence || options.length < 2 || answer < 0 || answer >= options.length) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
-  const key = `quiznotes:v1:c:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
+  const key = `quiznotes:v1:d:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
   const cached = await kvGetJson<Note[]>(key).catch(() => null);
   if (cached?.length === options.length) return jsonWithCors(request, { notes: cached, cached: true });
 
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
         content: `A learner of ${target} has just answered a multiple-choice blank. For every option, in order, write in ${native}:
 - "meaning": its part of speech and its usual meaning — at most 8 words, no example, no usage notes (for a phrase, what it means as a whole).
 - "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
-Write only in ${native}, except the ${target} words themselves. Reply with JSON only: {"notes":[{"meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
+Write only in ${native}, except the ${target} words themselves. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
       },
       {
         role: "user",
@@ -66,8 +66,13 @@ Write only in ${native}, except the ${target} words themselves. Reply with JSON 
   try {
     const parsed = JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1)) as { notes?: unknown };
     if (Array.isArray(parsed.notes)) {
-      notes = parsed.notes.map((one, i) => {
-        const row = (one ?? {}) as Record<string, unknown>;
+      // 모델이 정답을 앞으로 옮겨 쓰는 일이 있었다(운영 2026-11-03 es: 뜻이 한 칸씩 밀림) — 보기 글로 짝을 맞추고, 못 맞추면 순서대로.
+      const rows = parsed.notes.map((one) => (one ?? {}) as Record<string, unknown>);
+      const norm = (value: unknown) => (typeof value === "string" ? value.trim().toLocaleLowerCase() : "");
+      const byText = options.map((option) => rows.find((row) => norm(row.option) === option.trim().toLocaleLowerCase()));
+      const matched = byText.every(Boolean);
+      notes = options.map((_, i) => {
+        const row = (matched ? byText[i] : rows[i]) ?? {};
         return { meaning: text(row.meaning, 120), why: i === answer ? "" : text(row.why, 200) };
       });
     }
