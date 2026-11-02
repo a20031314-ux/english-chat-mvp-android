@@ -499,7 +499,9 @@ export function chooseOf(language: string, key: string, source: QuizSource, rand
   const wordFits = (one: string) => (isSpaceless(piece) ? fits(one) : Boolean(one) && !same(one, piece) && pieceAt(lower(source.text), lower(one), language) < 0);
   // 낱말은 손으로 정한 실수 꼴(wordDecoys.ts)이 있으면 그것만 — 문제은행 오답(nearby·I처럼 문장에 맞는 말이 섞였던 것)보다 앞선다.
   // 문제은행이 이 문장에 맞춰 만든 같은 낱말의 다른 꼴(be → is·was·been, 2026-11-02 사용자 "형태만 달라진 같은 단어로 선지")이 둘 이상이면 그것만 — 문장마다 "여기선 틀림"을 본 것이라 표보다 앞선다.
-  const forms = key.startsWith("w|") ? (source.wrong ?? []).filter(wordFits) : [];
+  // 꼴은 같은 낱말이라 정답을 품어도 된다(喝 → 喝了·食べ → 食べた) — 그 문장에 이미 들어 있지만 않으면.
+  const formFits = (one: string) => Boolean(one) && !same(one, piece) && (isSpaceless(piece) ? !lower(source.text).includes(lower(one)) : pieceAt(lower(source.text), lower(one), language) < 0);
+  const forms = key.startsWith("w|") ? (source.wrong ?? []).filter(formFits) : [];
   const own = forms.length >= 2 ? forms : key.startsWith("w|") ? wordNearMisses(language, piece).filter(wordFits) : [];
   const nearFit = own.length ? own : near.filter(key.startsWith("w|") ? wordFits : fits);
   // 문장구조·표현·문법은 그 정답의 실수 꼴(데이터·문제은행)만 — 다른 문제의 조각은 품사·자리가 안 맞아 한눈에 지워지거나 거꾸로 문장에 맞아 답이 둘

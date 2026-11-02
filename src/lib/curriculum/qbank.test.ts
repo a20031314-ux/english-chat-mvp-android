@@ -152,3 +152,11 @@ test("낱말 꼴 오답(2026-11-02): 예문마다 같은 낱말의 다른 꼴을
     assert.ok(choose.options.filter((o) => o !== "was").every((o) => ["is", "be", "been"].includes(o)), JSON.stringify(choose.options));
   }
 });
+
+test("띄어쓰기 없는 말의 꼴 오답은 정답을 품어도 보기로(중국어 喝 → 喝了·喝着)", () => {
+  registerGrown("zh", "w|zz喝", { items: [{ text: "我每天早上都喝牛奶。", piece: "喝", stage: 1, gloss: { en: "" }, wrong: ["喝了", "喝着"] }], decoys: {} });
+  const quiz = wordQuiz("zh", "w|zz喝", "s");
+  const choose = quiz?.questions.find((q) => q.kind === "choose");
+  assert.ok(choose && choose.kind === "choose", JSON.stringify(quiz));
+  if (choose?.kind === "choose") assert.deepEqual([...choose.options].sort(), ["喝", "喝了", "喝着"].sort());
+});
