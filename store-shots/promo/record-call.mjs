@@ -39,8 +39,11 @@ if (!fs.existsSync(mic)) {
 const ui = (await loadCopy(ROOT))[locale];
 const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
 let said = 0;
+let coachRight = "";
 const heardAt = [];
 
+// 2026-11-03 새 통화 화면(위 튜터 얼굴·자막 한 줄, 아래 내 얼굴, 🎓 튜터 수업 카드)으로 다시 씀:
+// 📞 → 튜터 인사(자막) → 자막을 눌러 해석 → 틀리게 말함 → 🎓 카드(✎ 틀린 곳 → 🔁 고친 문장) → 고친 문장을 다시 말함 → ✓ → 끝내기 → 통화 요약·정리.
 const events = await record({
   root: ROOT,
   out: OUT,
@@ -50,9 +53,27 @@ const events = await record({
   port: 4294,
   micWav: mic,
   routes: async (context) => {
+    // 통화는 유료 기능 — 이 장면만 플러스로 보이게(앱이 받는 답만).
+    await context.route("**/api/entitlement*", async (route) => {
+      const response = await route.fetch().catch(() => null);
+      if (!response) return route.fallback();
+      const body = await response.json();
+      const terms = body.plans?.plus ?? {};
+      Object.assign(body, { plan: "plus", tier: "plus", isPremium: true, dailyLimit: terms.dailyChat ?? 50, callDailyMinutes: 10, callTodayLeftSeconds: 600 });
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
+    });
+    await context.addInitScript(() => {
+      localStorage.setItem("roleplayCaptions", "1");
+      localStorage.setItem("callCoach.v1", "1");
+    });
     await context.route("**/api/roleplay/listen", async (route) => {
-      // 정해 둔 줄을 차례로, 다 하면 빈 말(아무 말 안 함).
-      const text = said < lines.length ? lines[said] : "";
+      // 첫 줄은 틀린 말, 둘째는 카드가 고쳐 준 문장 그대로(다시 말하기), 그다음은 둘째 준비 줄.
+      let text = "";
+      if (said === 0) text = lines[0];
+      else if (said === 1) {
+        for (let i = 0; i < 60 && !coachRight; i++) await new Promise((r) => setTimeout(r, 500));
+        text = coachRight || lines[1];
+      } else if (said === 2) text = lines[1];
       if (text) {
         said += 1;
         heardAt.push(Date.now() / 1000);
@@ -64,52 +85,44 @@ const events = await record({
     await page.locator("textarea:visible").first().waitFor();
     await page.waitForTimeout(2500);
     await startScreencast();
-    await page.waitForTimeout(1200);
-    const call = page.locator("button", { hasText: "📞" }).first();
-    await tap(call);
+    await page.waitForTimeout(1000);
+    await tap(page.locator("button", { hasText: "📞" }).first());
     mark("callTap");
-    // 튜터 말에 번역을 켠다(영어 시청자가 따라오게).
-    const trans = page.getByRole("button", { name: new RegExp(`^${ui.roleplayTranslations}$`) }).first();
-    await trans.waitFor({ timeout: 30000 });
-    await page.waitForTimeout(600);
-    await tap(trans);
-    mark("transTap");
-    // 튜터의 첫 인사.
-    const tutorLines = page.locator("main, body").locator("div").filter({ hasText: /\S/ });
-    await page.waitForFunction((t) => !document.body.innerText.includes(t) && document.querySelectorAll("button").length > 0, "\u0000");
-    // 내 첫 줄이 보일 때까지.
-    await page.getByText(lines[0], { exact: false }).first().waitFor({ timeout: 90000 });
-    mark("said1");
-    const chip = page.getByRole("button", { name: new RegExp(ui.chatCorrectionChip) }).filter({ visible: true }).last();
-    await chip.waitFor({ timeout: 60000 });
-    mark("chip");
-    // 튜터 답이 다 올라온 뒤에 누른다(줄이 다시 그려지면 열린 게 닫힘). 열린 걸 "이렇게 말하려던 거죠?/이렇게 말해도 돼요" 글로 확인, 안 열리면 다시.
-    const opened = () => page.evaluate(([a, b]) => document.body.innerText.toUpperCase().includes(a.toUpperCase()) || document.body.innerText.toUpperCase().includes(b.toUpperCase()), [ui.roleplayMeant, ui.roleplayBetter]);
+    await page.locator("[data-call-stage]").first().waitFor({ timeout: 30000 });
+    mark("stage");
+    // 튜터 첫 인사가 자막에 뜨면 눌러 해석.
+    const caption = page.locator("[data-call-caption]").first();
+    await caption.waitFor({ timeout: 60000 });
+    await page.waitForFunction(() => (document.querySelector("[data-call-caption]")?.textContent ?? "").trim().length > 3, null, { timeout: 60000 });
+    await page.waitForTimeout(1800);
+    mark("greet");
+    await tap(caption);
+    mark("captionTap");
+    await page.waitForTimeout(2600);
+    events.caption = await caption.innerText().catch(() => "");
+    // 틀린 말 → 🎓 카드.
+    await page.locator("[data-call-coach]").first().waitFor({ timeout: 120000 });
+    mark("coach");
+    await page.waitForTimeout(800);
+    coachRight = ((await page.locator("[data-call-redo]").first().innerText()) || "").replace(/^[🔁✓💡]\s*/u, "").trim();
+    events.coachRight = coachRight;
+    events.coachCard = await page.locator("[data-call-coach]").first().innerText();
+    // 다시 말해 맞히면 ✓.
+    await page.waitForFunction(() => /^\s*✓/.test(document.querySelector("[data-call-redo]")?.textContent ?? ""), null, { timeout: 120000 }).catch(() => {});
+    mark("pass");
+    events.passCard = await page.locator("[data-call-coach]").first().innerText().catch(() => "");
+    await page.waitForTimeout(4500);
+    mark("afterPass");
+    // 끝내기 → 요약·정리.
+    await tap(page.getByRole("button", { name: ui.roleplayPause }).last());
+    mark("endTap");
+    await page.locator("[data-call-summary]").first().waitFor({ timeout: 60000 });
+    mark("summary");
     await page.waitForTimeout(3500);
-    for (let k = 0; k < 4 && !(await opened()); k++) {
-      if (k === 0) mark("chipTap");
-      await tap(page.getByRole("button", { name: new RegExp(ui.chatCorrectionChip) }).filter({ visible: true }).last()).catch(() => {});
-      await page.waitForTimeout(1500);
-    }
-    mark("open");
-    events.opened = await opened();
-    events.fixText = (await page.locator("body").innerText()).slice(0, 1500);
-    // 둘째 줄과 튜터의 다음 말.
-    await page.getByText(lines[1], { exact: false }).first().waitFor({ timeout: 90000 });
-    mark("said2");
-    let last = "";
-    let steady = 0;
-    for (let i = 0; i < 40 && steady < 5; i++) {
-      await page.waitForTimeout(600);
-      const now = await page.locator("body").innerText();
-      steady = now === last ? steady + 1 : 0;
-      last = now;
-    }
-    mark("reply2");
-    events.finalText = last.slice(0, 1500);
-    await page.waitForTimeout(1500);
+    events.summaryText = (await page.locator("body").innerText()).slice(0, 1500);
     events.heard = said;
   },
 });
 events.heardAt = heardAt.map((t) => +(t - (events.start ?? 0)).toFixed(3));
+fs.writeFileSync(path.join(OUT, "events.json"), JSON.stringify(events, null, 2));
 console.log(JSON.stringify(events, null, 2));

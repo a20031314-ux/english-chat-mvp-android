@@ -151,8 +151,19 @@ COPY.analyze2 = {
 const LANG_NAME = { en: { ko: "Korean", es: "Spanish", ja: "Japanese", fr: "French", zh: "Chinese", en: "English" } };
 {
   const n = LANG_NAME[locale]?.[CALL_TARGET] ?? CALL_TARGET;
+  // 2026-11-03 새 통화 화면(🎓 튜터 수업 카드) — record-call.mjs가 같은 날 다시 씀.
   COPY.call = {
-    en: { hook: "Speak out loud\nwith an AI friend", say: `${n}\nSay it, mistakes and all`, fix: `${n}\nIt shows what you could say`, more: `${n}\nAnd the talk keeps going`, endTitle: "Speak out loud,\nin any language", endSub: "Learn languages by talking with AI" },
+    en: {
+      hook: `Too shy to speak\n${n} out loud?`,
+      caption: "Call your AI tutor.\nTap a line for English",
+      say: "Just say it —\nmistakes and all",
+      fix: "Big mistakes only.\nThe fix, right under you",
+      again: "Say it again…",
+      pass: "✓ Got it",
+      recap: "Every call ends with\nwhat to practise next",
+      endTitle: `Speak ${n}\nout loud`,
+      endSub: "Your AI tutor, one call away",
+    },
   };
 }
 const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
@@ -360,25 +371,17 @@ STORIES.analyze = () => ev.pickStart != null ? {
 });
 
 // 통화: 📞 → 튜터가 먼저 인사 → 틀리게 말함 → ✎ → "이렇게 말해도 돼요" → 한 마디 더(녹화: record-call.mjs).
-STORIES.call = () => {
-  const parts = (process.env.PROMO_PARTS || "hook,say,fix,more").split(",");
-  const segs = [];
-  // 통화 화면만(사용자 2026-10-26 "통화기능만") — 채팅에서 📞 누르는 장면은 빼고, 첫 편은 튜터 인사 위에 hook.
-  if (parts.includes("hook")) segs.push([ev.transTap + 0.6, ev.said1 - 0.3, Math.max(1, (ev.said1 - ev.transTap) / 3.5), "hook"]);
-  if (parts.includes("say")) {
-    if (!parts.includes("hook")) segs.push([Math.max(ev.transTap + 0.6, ev.said1 - 4), ev.said1 - 0.3, 2, "say"]);
-    segs.push([ev.said1 - 0.3, ev.chip + 0.6, 1, "say"]);
-  }
-  if (parts.includes("fix")) {
-    segs.push([ev.chip + 0.6, ev.chipTap - 0.2, Math.max(1, (ev.chipTap - ev.chip) / 1.2), "fix"]);
-    segs.push([ev.chipTap - 0.2, ev.open + 2.4, 1, "fix"]);
-  }
-  if (parts.includes("more")) {
-    segs.push([ev.open + 2.4, ev.said2 + 0.2, Math.max(1, (ev.said2 - ev.open) / 4), "more"]);
-    segs.push([ev.said2 + 0.2, ev.reply2 + 0.4, Math.max(1, (ev.reply2 - ev.said2) / 2), "more"]);
-  }
-  return { segs };
-};
+STORIES.call = () => ({
+  segs: [
+    [ev.stage + 0.3, ev.captionTap - 0.3, 1, "hook"],
+    [ev.captionTap - 0.3, ev.captionTap + 2.6, 1, "caption"],
+    [ev.captionTap + 2.6, ev.coach - 0.4, Math.max(1, (ev.coach - ev.captionTap - 3) / 2.2), "say"],
+    [ev.coach - 0.4, ev.coach + 4.2, 1, "fix", { by: 0.22, x: 0.5, y: 0.74 }],
+    [ev.coach + 4.2, ev.pass - 0.4, Math.max(1, (ev.pass - ev.coach - 4.6) / 2), "again", { by: 0.22, x: 0.5, y: 0.74 }],
+    [ev.pass - 0.4, ev.pass + 2.6, 1, "pass", { by: 0.22, x: 0.5, y: 0.74 }],
+    [ev.summary + 0.4, ev.end - 0.2, 1, "recap"],
+  ],
+});
 const plan = STORIES[story]();
 // 목소리는 기본으로 뺀다(사용자 2026-10-26 "목소리는 빼고 자막과 음악") — 넣으려면 PROMO_VOICE=1.
 const VOICE_ON = process.env.PROMO_VOICE === "1";
