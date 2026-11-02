@@ -25,7 +25,10 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 /** 일부러 기록하지 않는 경로와 이유. */
-export const UNMETERED = {};
+export const UNMETERED = {
+  // 읽기만(저장된 고정 수업·만든 수) — 같은 파일의 만들기 함수를 가져올 뿐 이 경로는 모델을 부르지 않는다(만들기는 seed·frame-lesson이 세어 기록).
+  "src/app/api/curriculum/fixed-lesson/route.ts": "고정 수업 읽기 전용 — 모델 호출 없음",
+};
 
 const IMPORT = /(?:import|export)\s+([^"';]*?)\s*from\s*["']([^"']+)["']|import\(\s*["']([^"']+)["']\s*\)/g;
 const MODEL_CALL = /getOpenAIClient\(|api\.openai\.com/;

@@ -11,7 +11,7 @@
  *     · 그 밖의 앱 언어는 누가 처음 열 때 뒤에서 만든다(그동안은 예전 수업)
  * 학습자 글은 받지 않는다. 멈추기: Vercel `FIXED_LESSON_SEED=off`(미리 만들기만) · `FIXED_LESSON_MAKE=off`(새로 만들기 전부).
  */
-import { kvGetJson, kvSetJson } from "./kv.ts";
+import { kvGetJson, kvGetJsonMany, kvHashGetAll, kvHashIncrMany, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
 import { allFramesFor, type Frame } from "../curriculum/frames.ts";
@@ -138,9 +138,11 @@ async function makeAndStore(language: string, ui: string, frame: Frame, onMake?:
     const { lesson } = await makeFixedLesson(language, ui, frame, onMake).catch(() => ({ lesson: null }));
     if (!lesson) {
       await kvSetJson(failKeyOf(language, ui, frame.id), fails + 1).catch(() => undefined);
+      if (fails + 1 >= MAX_FAILS) await kvHashIncrMany(COUNT_KEY, { [`${language}.${ui}:failed`]: 1 }).catch(() => undefined);
       return false;
     }
     await kvSetJson(keyOf(language, ui, frame.id), lesson).catch(() => undefined);
+    await kvHashIncrMany(COUNT_KEY, { [`${language}.${ui}`]: 1 }).catch(() => undefined);
     return true;
   } finally {
     making.delete(id);
@@ -171,39 +173,73 @@ export function asFrameLesson(lesson: FixedLesson, frame: Frame): FrameLesson {
   return { explain: [], meaning: lesson.meaning, parts, usage: lesson.slot, turns: lesson.turns };
 }
 
-export type SeedResult = { made: number; failed: number; left: number; done: number; total: number; off?: boolean };
+export type SeedResult = { made: number; failed: number; at: number; total: number; pass: number; off?: boolean };
 
-/** 예약 작업: 미리 만드는 앱 언어 × 14개 학습 언어 × 1~5단계 틀 중 아직 없는 것을 한 번에 batch개(넷씩 나란히). */
-export async function seedFixedLessons(batch = 16, onMake?: () => void): Promise<SeedResult> {
-  const todo: { language: string; ui: string; frame: Frame }[] = [];
-  let total = 0;
+type SeedItem = { language: string; ui: string; frame: Frame };
+
+/** 미리 만들 차례: 단계(1 → 5) · 앱 언어(ko → en) · 학습 언어 · 틀 순서. 앱 언어와 같은 학습 언어는 뺌. */
+export function seedOrder(): SeedItem[] {
+  const out: SeedItem[] = [];
   for (const stage of [1, 2, 3, 4, 5]) {
     for (const ui of SEED_UIS) {
       for (const { code } of SUPPORTED_LEARNING_LANGUAGES) {
         if (code === ui) continue;
-        for (const frame of allFramesFor(code).filter((one) => one.stage === stage)) {
-          total += 1;
-          todo.push({ language: code, ui, frame });
-        }
+        for (const frame of allFramesFor(code).filter((one) => one.stage === stage)) out.push({ language: code, ui, frame });
       }
     }
   }
-  const missing: typeof todo = [];
-  for (const one of todo) {
-    if (staticFixedLesson(one.language, one.ui, one.frame.id)) continue;
-    const stored = await kvGetJson<FixedLesson>(keyOf(one.language, one.ui, one.frame.id)).catch(() => null);
-    if (stored) continue;
-    const fails = (await kvGetJson<number>(failKeyOf(one.language, one.ui, one.frame.id)).catch(() => 0)) ?? 0;
-    if (fails < MAX_FAILS) missing.push(one);
+  return out;
+}
+
+const CURSOR_KEY = "fixedlesson:v1:seed:cursor";
+
+/**
+ * 예약 작업: 차례표를 커서로 앞에서부터 — 저장된 것·원고가 있는 것은 넘기고 없는 것을 한 번에 batch개(넷씩 나란히) 만든다.
+ * KV를 매번 다 훑지 않게 커서(at)와 몇 바퀴 돌았는지(pass)만 남긴다. 실패가 MAX_FAILS 넘은 것은 사람이 볼 때까지 건너뜀, 두 바퀴 돌면 멈춤.
+ */
+export async function seedFixedLessons(batch = 16, onMake?: () => void): Promise<SeedResult> {
+  const order = seedOrder();
+  const cursor = (await kvGetJson<{ at: number; pass: number }>(CURSOR_KEY).catch(() => null)) ?? { at: 0, pass: 0 };
+  if (process.env.FIXED_LESSON_SEED?.trim() === "off" || makeOff() || cursor.pass >= 2) return { made: 0, failed: 0, at: cursor.at, total: order.length, pass: cursor.pass, off: true };
+  const take: SeedItem[] = [];
+  let at = cursor.at;
+  let pass = cursor.pass;
+  while (take.length < batch && pass < 2) {
+    if (at >= order.length) {
+      at = 0;
+      pass += 1;
+      continue;
+    }
+    const window = order.slice(at, at + 40).filter((one) => !staticFixedLesson(one.language, one.ui, one.frame.id));
+    const [stored, fails] = await Promise.all([
+      kvGetJsonMany<unknown>(window.map((one) => keyOf(one.language, one.ui, one.frame.id))).catch(() => window.map(() => null)),
+      kvGetJsonMany<number>(window.map((one) => failKeyOf(one.language, one.ui, one.frame.id))).catch(() => window.map(() => null)),
+    ]);
+    let used = 0;
+    for (let i = 0; i < window.length && take.length < batch; i += 1) {
+      used = i + 1;
+      if (!stored[i] && (fails[i] ?? 0) < MAX_FAILS) take.push(window[i]!);
+    }
+    // 창을 다 봤으면 40칸, 중간에 다 찼으면 거기까지(원고로 뺀 것까지 넉넉히 셈 — 다음에 다시 봐도 저장돼 있어 넘어감).
+    at += take.length >= batch ? Math.max(used, 1) : 40;
   }
-  const done = total - missing.length;
-  if (process.env.FIXED_LESSON_SEED?.trim() === "off" || makeOff()) return { made: 0, failed: 0, left: missing.length, done, total, off: true };
-  const take = missing.slice(0, batch);
   let made = 0;
   let failed = 0;
-  for (let at = 0; at < take.length; at += 4) {
-    const results = await Promise.all(take.slice(at, at + 4).map((one) => makeAndStore(one.language, one.ui, one.frame, onMake)));
-    for (const ok of results) ok ? (made += 1) : (failed += 1);
+  for (let i = 0; i < take.length; i += 4) {
+    const results = await Promise.all(take.slice(i, i + 4).map((one) => makeAndStore(one.language, one.ui, one.frame, onMake)));
+    for (const ok of results) {
+      if (ok) made += 1;
+      else failed += 1;
+    }
   }
-  return { made, failed, left: missing.length - made, done: done + made, total };
+  await kvSetJson(CURSOR_KEY, { at, pass }).catch(() => undefined);
+  return { made, failed, at, total: order.length, pass };
+}
+
+const COUNT_KEY = "fixedlesson:v1:count";
+
+/** 얼마나 됐나(수동 확인용, 해시 하나): 학습.앱 짝마다 만든 수·포기한 수 + 미리 만들 전체. */
+export async function fixedLessonStatus(): Promise<{ total: number; counts: Record<string, number>; cursor: { at: number; pass: number } | null }> {
+  const [counts, cursor] = await Promise.all([kvHashGetAll(COUNT_KEY).catch(() => ({})), kvGetJson<{ at: number; pass: number }>(CURSOR_KEY).catch(() => null)]);
+  return { total: seedOrder().length, counts, cursor };
 }

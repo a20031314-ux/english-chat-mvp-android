@@ -43,6 +43,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   learnerRead: "gpt-6-luna",
   roleplayReview: "gpt-5.6-terra",
   chatVerify: "gpt-6-luna",
+  fixedLesson: "gpt-6-luna",
 } as const;
 
 export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
@@ -89,6 +90,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   scriptRecheck: SONNET,
   // 대본 고르기 오답(2026-10-29): 대본마다 한 번 만들어 모두가 같이 쓰므로(호출 수가 대본 수로 끝남) 더 나은 모델로.
   scriptChoices: SONNET,
+  // Stagebank 고정 수업(2026-11-02, server/fixedLesson.ts): 틀 × 앱 언어마다 한 번 쓰고 모두가 오래 보므로 Sonnet. 초안 Haiku + Sonnet 검수로 바꾸면 약 절반(사용자에게 안내함).
+  fixedLesson: SONNET,
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,

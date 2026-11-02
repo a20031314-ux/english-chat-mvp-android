@@ -12,6 +12,10 @@
     {
       "path": "/api/curriculum/qbank/seed",
       "schedule": "23 */2 * * *"
+    },
+    {
+      "path": "/api/curriculum/fixed-lesson/seed",
+      "schedule": "7,22,37,52 * * * *"
     }
   ]
 }

@@ -71,6 +71,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   recallPrompts: 2,
   // 문장구조 수업(server/frameLesson.ts) — 틀 × 앱 언어마다 한 번(만들기 1 + 옮기기 1), 저장된 뒤엔 0.
   frameLesson: 2,
+  // 고정 수업(server/fixedLesson.ts) — 틀 × 앱 언어마다 한 번(쓰기 1 + 검사에 걸리면 다시 1), 저장된 뒤엔 0. 예약 작업 seed·첫 열기.
+  fixedLesson: 2,
   // 자라는 문제은행(server/qbank.ts) — 열쇠가 모자랄 때만 만들기 1 + 앱 언어 뜻 옮기기 1, 열쇠마다 하루 3번·전체 하루 400번까지.
   qbankGrow: 2,
   // 출시 초반 문제은행 미리 채우기(예약 작업 /api/curriculum/qbank/seed) — 예문 없는 열쇠마다 만들기 1, 한 번에 30개·2시간마다, 다 돌면 0.
