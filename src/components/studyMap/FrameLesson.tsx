@@ -322,7 +322,8 @@ export function FrameLesson({
   const meaningText = frame ? glossFor(frame.meaning, locale) : (lesson?.meaning ?? "");
   const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
   // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름). 퀴즈·대화 단계에서 뜻이 없으면 표현 이름은 숨김(답이라서).
-  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : subject?.title || lesson?.title || "");
+  // 문법 칸 이름은 서버가 앱 언어로 옮긴 것(lesson.title) 먼저 — 데이터에 ko·en만 있어 다른 앱 언어는 영어로 나오던 것(2026-11-03 ar 확인).
+  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : lesson?.title || subject?.title || "");
   // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 한 수업이면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
   const close = () => {
     if (fromToday) fireTodayEnd();
