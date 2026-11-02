@@ -1253,7 +1253,8 @@ export function parseDirection(
         : // pass·miss는 기다리는 문장이 있을 때만. 마지막 시도에서 다시 묻는 ask는 miss(넘어감)로.
           (named === "pass" || named === "miss") && !waiting
           ? ""
-          : named === "ask" && waiting && lastRedoTry(request) && sameWords(better || meant, request.redo ?? "")
+          : // 기다리던 문장을 또 말해 보라는 ask = 아직(miss). 운영에서 같은 문장으로 ask가 온 적 있음.
+            named === "ask" && waiting && sameWords(better || meant, request.redo ?? "")
             ? "miss"
             : named;
   const givingUp = retry === "miss" && lastRedoTry(request);

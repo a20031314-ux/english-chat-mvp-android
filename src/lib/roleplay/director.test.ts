@@ -1360,6 +1360,8 @@ test("튜터 수업: 같은 문장은 두 번까지 — 마지막 시도에서 �
   const moveOn = parse({ say: "That's fine.", follow: "talk.there-what", retry: "miss", assessment: "on_track", next: "free" }, last, withBank);
   assert.equal(moveOn?.retry, "miss");
   assert.equal(moveOn?.follow, "talk.there-what", "넘어가는 차례는 대화를 잇는다");
+  const sameAsk = parse({ say: "I watched a movie over the weekend. Try it.", better: "I watched a movie over the weekend.", retry: "ask", assessment: "on_track", next: "free" }, { ...last, redoTries: 1 }, withBank);
+  assert.equal(sameAsk?.retry, "miss", "기다리던 문장을 또 말해 보라면 miss");
   // 마지막이 아니면 miss 차례도 다시 말할 차례 — 고친 문장을 붙이고 다음 질문은 안 얹음.
   const once = parse({ say: "Almost.", follow: "talk.there-what", retry: "miss", assessment: "on_track", next: "free" }, { ...last, redoTries: 1 }, withBank);
   assert.equal(once?.follow, undefined);
