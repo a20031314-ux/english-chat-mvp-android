@@ -204,6 +204,9 @@ export function RoleplayScreen({
   // The turn being looked back at, if any. `review` is null while it is being
   // put together, and `failed` says the attempt came back with nothing — the
   // button stays where it was either way.
+  // 통화 중 "중단": 한 마디라도 했으면 끝 화면(요약·대본·통화 정리)으로, 기록은 그대로 남아 통화 기록에서 이어서 하기(2026-11-02 사용자 "중단을 눌렀는데 통화가 그냥 꺼져").
+  const [hungUp, setHungUp] = useState(false);
+  const hungUpRef = useRef(false);
   const [reviewing, setReviewing] = useState<{
     turn: StuckTurn;
     review: Review | null;
@@ -351,6 +354,8 @@ export function RoleplayScreen({
       voice: instruction.voice,
       onAudio: (audio) => {
         audioRef.current = audio;
+        // 중단한 뒤 늦게 온 튜터 줄은 소리 내지 않는다.
+        if (hungUpRef.current) audio.pause();
       },
       onDone: () => {
         // Now that it has been said, ask what it meant.
@@ -816,10 +821,10 @@ export function RoleplayScreen({
   }, [instruction]);
 
   useEffect(() => {
-    if (instruction?.do !== "listen" || reviewing) return;
+    if (instruction?.do !== "listen" || reviewing || hungUp) return;
     void startRecording();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [instruction, reviewing]);
+  }, [instruction, reviewing, hungUp]);
 
   // Sent from here, where the closure is this render's, rather than from the
   // callback that was made when the turn began.
@@ -838,7 +843,20 @@ export function RoleplayScreen({
     };
   }, []);
 
-  const callOver = Boolean(state?.finished || instruction?.do === "finish");
+  const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
+  /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
+  const hangUp = () => {
+    if (!said.some((line) => line.who === "learner")) {
+      onClose();
+      return;
+    }
+    hungUpRef.current = true;
+    recorderRef.current?.cancel();
+    recorderRef.current = null;
+    releaseRestRef.current();
+    audioRef.current?.pause();
+    setHungUp(true);
+  };
   const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
   // 통화가 끝난 때 — 끝난 화면 요약 한 줄의 통화 시간(이어서 한 통화는 처음 시작부터, 통화 기록과 같은 셈).
   const [overAt, setOverAt] = useState(0);
@@ -992,7 +1010,7 @@ export function RoleplayScreen({
         coach={scenario.openEnded ? coachOn : undefined}
         onToggleCoach={toggleCoach}
         onHint={openHelp}
-        onEnd={onClose}
+        onEnd={hangUp}
       />
       <CallAdStrip />
 
