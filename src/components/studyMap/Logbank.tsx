@@ -1,18 +1,11 @@
 "use client";
 
-/**
- * Logbank(2026-10-31 사용자 "복습 칸 자리에 데이터로 — 공부한 날·분은 프로필에 있으니, 날마다·주마다 학습한 걸 요약·정리" → 목록만, AI 없이):
- * 주마다 묶고(머리에 그 주 합), 날마다 배운 것·익힌 것(문장구조·낱말·표현·문법)·튜터가 고친 줄·푼 퀴즈 수.
- * 재료: 서버 logItems(/api/notebook logDays=366 — 지금 단계까지 모든 단계 최근 1년, notes/stageParts.ts LogItem) + 이 폰 퀴즈 수(curriculum/quizDays.ts).
- * 맨 위 [주 | 월] 정리 카드(2026-11-02 사용자 "월별·주별로 얼마나, 뭘 학습했는지", "Logbank에만"): ‹ › 로 기간을 넘기고 — 공부한 날·통화·수업·퀴즈·고친 말·
- * 다시 말해 맞힘(지난 기간 대비) + 배우고 익힌 소재 칩(curriculum/periodSummary.ts). 그 아래 날마다 목록도 고른 기간만.
- * 낱말·표현을 누르면 표현 자세히. 머리 아이콘(📈 실력 기록·📝 이번 주 확인)은 TodayPlan이 준다(head).
- */
-import { Fragment, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
-import { clearQuizDay, dayValue, readQuizDays, weekOf, type QuizDays } from "@/lib/curriculum/quizDays";
+import { clearQuizDay, dayValue, readQuizDays, type QuizDays } from "@/lib/curriculum/quizDays";
 import { clearDayResults, DAY_LOG_EVENT, readDayResults, removeDayResult, type DayResult } from "@/lib/curriculum/dayLog";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { openLesson, sendAppIntent } from "@/lib/appIntents";
@@ -21,7 +14,8 @@ import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore
 import { buildRecap } from "@/lib/roleplay/recap";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
-import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
+import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type Period, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
+import { BASES, bars, ESTIMATE, partRows, resultMinutes, totals, type Bar, type Basis, type LogInputs, type PartRow } from "@/lib/curriculum/logbankData";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
 
@@ -145,6 +139,7 @@ function useCallDays(language: string): Record<string, CallDay> {
 }
 
 const PERIOD_KEY = "logbankPeriod.v1";
+const BASIS_KEY = "logbankBasis.v1";
 function readPeriodKind(): PeriodKind {
   try {
     return localStorage.getItem(PERIOD_KEY) === "month" ? "month" : "week";
@@ -152,9 +147,26 @@ function readPeriodKind(): PeriodKind {
     return "week";
   }
 }
+function readBasis(): Basis {
+  try {
+    const raw = localStorage.getItem(BASIS_KEY);
+    return BASES.includes(raw as Basis) ? (raw as Basis) : "time";
+  } catch {
+    return "time";
+  }
+}
 
 const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"];
+const BASIS_ICON: Record<Basis, string> = { time: "⏱", grammar: "📐", vocab: "🔤", expression: "💬" };
+/** 어디서 했는지 → 아이콘(LogItem where · 수업 결과 종류 · 퀴즈). */
+const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", map: "🧩", mission: "🎭", review: "📝", lesson: "🧩", recall: "🎯", script: "🎭", quiz: "📝" };
 
+/**
+ * Logbank(2026-11-02 사용자 "층위가 모호해서 난잡 — 기준을 하나로, 각 탭에서 학습한 걸 모은 자료, 누르면 세부(스크린샷·학습 내용)"):
+ * [주 | 월] ‹기간› → 기준 탭 [⏱ 학습 시간 | 📐 문법 | 🔤 어휘 | 💬 표현] → 그 기간 날마다 막대(누르면 그날 세부 — 결과 카드·배운 것·고친 줄)
+ * → 그 기준으로 모은 목록(시간이면 어디서 얼마나, 갈래면 소재 — 누르면 그 소재 세부: 수업 결과 카드·고친 줄·퀴즈 틀림, ▶ 그 수업).
+ * 재료·자료 셈은 curriculum/logbankData.ts(순수).
+ */
 export function Logbank({
   ui,
   locale,
@@ -190,29 +202,16 @@ export function Logbank({
   // 오늘은 이 칸을 처음 그릴 때 한 번(그리는 동안 시계를 읽지 않게).
   const [today] = useState(() => localDay(Date.now()));
   const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
+  const [basis, setBasis] = useState<Basis>(() => readBasis());
   const [back, setBack] = useState(0);
+  const [openDay, setOpenDay] = useState<string | null>(null);
+  const [openRow, setOpenRow] = useState<string | null>(null);
   const period = useMemo(() => shiftPeriod(periodOf(kind, today), -back), [kind, today, back]);
+  const input: LogInputs = useMemo(() => ({ language, items, results, quiz, calls: callRows, dayOf: localDay }), [language, items, results, quiz, callRows]);
   const summary = useMemo(() => summarize({ period, items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
-  const before = useMemo(() => summarize({ period: shiftPeriod(period, -1), items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
-  // 아래 날마다 목록도 고른 기간만(1년 치를 한꺼번에 늘어놓지 않게).
-  const days = useMemo(() => allDays.filter((one) => inPeriod(period, one.day)), [allDays, period]);
-  const weeks = useMemo(() => {
-    const out: { week: string; days: Day[] }[] = [];
-    for (const day of days) {
-      const week = weekOf(day.day);
-      const last = out[out.length - 1];
-      if (last && last.week === week) last.days.push(day);
-      else out.push({ week, days: [day] });
-    }
-    return out;
-  }, [days]);
-  const dateFormat = useMemo(() => {
-    try {
-      return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric", weekday: "short" });
-    } catch {
-      return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
-    }
-  }, [locale]);
+  const chart = useMemo(() => bars(period, basis, input), [period, basis, input]);
+  const rows = useMemo(() => (basis === "time" ? [] : partRows(period, basis, input)), [period, basis, input]);
+  const sum = useMemo(() => totals(period, basis, input), [period, basis, input]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -220,39 +219,13 @@ export function Logbank({
       return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
     }
   }, [locale]);
-  const asDate = (day: string) => {
-    const [y, m, d] = day.split("-").map(Number);
-    return new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1);
-  };
-  const partName = (part: PartId) => (part === "grammar" ? ui.partGrammar : part === "vocab" ? ui.partVocab : part === "expression" ? ui.partExpression : ui.partPronunciation);
-  const label = (item: LogItem) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text);
-  const counts = (list: readonly LogItem[]) => ({
-    learned: list.filter((item) => item.kind === "learned").length,
-    mastered: list.filter((item) => item.kind === "mastered").length,
-    fixed: list.filter((item) => item.kind === "fixed").length,
-  });
-  const tally = (c: ReturnType<typeof counts>, q: { n: number; right: number } | null) => (
-    <span className="flex flex-wrap gap-x-3 text-caption tabular-nums text-slate-400">
-      {c.mastered ? <span className="text-status-mastered">{`${ui.itemsMastered} +${c.mastered}`}</span> : null}
-      {c.learned ? <span className="text-info">{`${ui.itemsLearned} +${c.learned}`}</span> : null}
-      {c.fixed ? <span className="text-warn">{`${ui.partFixed} ${c.fixed}`}</span> : null}
-      {q ? <span>{`${ui.keepTitle} ${ui.quizScore.replace("{n}", String(q.right)).replace("{m}", String(q.n))}`}</span> : null}
-    </span>
-  );
-
-  // 네이티브 광고 자리(Logbank 전체 화면에서만): 세 번째 날 뒤, 날이 셋보다 적으면 목록 끝.
-  const adAfterDay = days.length >= 3 ? days[2]!.day : null;
-  const logAd = (
-    // Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움.
-    <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
-  );
-  const monthFormat = (() => {
+  const monthFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { year: "numeric", month: "long" });
     } catch {
       return new Intl.DateTimeFormat(undefined, { year: "numeric", month: "long" });
     }
-  })();
+  }, [locale]);
   const periodLabel =
     period.kind === "month" ? monthFormat.format(asDate(period.start)) : `${rangeFormat.format(asDate(period.start))} – ${rangeFormat.format(asDate(periodLastDay(period)))}`;
   const chooseKind = (next: PeriodKind) => {
@@ -264,213 +237,369 @@ export function Logbank({
       // 이번에만.
     }
   };
-  const openItem = (item: LogItem) => {
-    const key = lessonKeyOf(language, item);
-    if (key) openLesson({ language, key });
-    else if (item.part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
+  const chooseBasis = (next: Basis) => {
+    setBasis(next);
+    try {
+      localStorage.setItem(BASIS_KEY, next);
+    } catch {
+      // 이번에만.
+    }
   };
+  const basisName = (one: Basis) => (one === "time" ? ui.logStudyTime : one === "grammar" ? ui.partGrammar : one === "vocab" ? ui.partVocab : ui.partExpression);
+  const rowLabel = (row: PartRow) => (row.node ? nodeName(row.node) || row.text : row.key ? reviewLabel(language, row.key) || row.text : row.text);
+  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "bg-ink text-surface" : "border border-line text-slate-300"}`;
+  const legend: { cls: string; icon: string; title: string }[] =
+    basis === "time"
+      ? [
+          { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
+          { cls: "fill-status-mastered text-status-mastered", icon: "🧩", title: ui.framesTitle },
+          { cls: "fill-warn text-warn", icon: "📝", title: ui.keepTitle },
+        ]
+      : [
+          { cls: "fill-status-mastered text-status-mastered", icon: "✓", title: ui.itemsMastered },
+          { cls: "fill-info text-info", icon: "•", title: ui.itemsLearned },
+          { cls: "fill-warn text-warn", icon: "✗", title: ui.partFixed },
+        ];
+  const dayDetail = openDay ? allDays.find((one) => one.day === openDay) ?? null : null;
+  const rowDetail = openRow ? rows.find((row) => row.id === openRow) ?? null : null;
   return (
-    <div data-logbank className="flex flex-col gap-3">
+    <div data-logbank data-log-basis={basis} className="flex flex-col gap-3">
       {head}
-      <PeriodCard
-        ui={ui}
-        kind={kind}
-        label={periodLabel}
-        canForward={back > 0}
-        summary={summary}
-        before={before}
-        itemLabel={label}
-        onKind={chooseKind}
-        onBack={() => setBack((n) => n + 1)}
-        onForward={() => setBack((n) => Math.max(0, n - 1))}
-        onItem={openItem}
-      />
-      {weeks.length ? null : <p className="text-note text-slate-500">—</p>}
-      {weeks.map(({ week, days: list }) => {
-        const all = list.flatMap((one) => one.items);
-        const quizWeek = list.reduce<{ n: number; right: number } | null>((sum, one) => (one.quiz ? { n: (sum?.n ?? 0) + one.quiz.n, right: (sum?.right ?? 0) + one.quiz.right } : sum), null);
-        const start = asDate(week);
-        const end = new Date(start.getTime() + 6 * 24 * 60 * 60 * 1000);
+      <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex gap-1" role="group">
+            <button type="button" aria-pressed={kind === "week"} onClick={() => chooseKind("week")} className={chip(kind === "week")}>{ui.logWeek}</button>
+            <button type="button" aria-pressed={kind === "month"} onClick={() => chooseKind("month")} className={chip(kind === "month")}>{ui.logMonth}</button>
+          </div>
+          <div className="flex items-center gap-1">
+            <button type="button" onClick={() => setBack((n) => n + 1)} aria-label="‹" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 rtl:rotate-180">‹</button>
+            <span data-log-period-label className="min-w-0 text-note font-semibold tabular-nums text-ink">{periodLabel}</span>
+            <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
+          </div>
+        </div>
+        <div role="tablist" className="grid grid-cols-4 gap-1">
+          {BASES.map((one) => (
+            <button
+              key={one}
+              type="button"
+              role="tab"
+              data-log-basis-tab={one}
+              aria-selected={basis === one}
+              onClick={() => chooseBasis(one)}
+              className={`flex min-w-0 flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-meta ${basis === one ? "bg-white/10 font-semibold text-ink" : "text-slate-400 hover:bg-white/5"}`}
+            >
+              <span aria-hidden className="text-body">{BASIS_ICON[one]}</span>
+              <span className="w-full truncate text-center">{basisName(one)}</span>
+            </button>
+          ))}
+        </div>
+        <p data-log-total className="flex flex-wrap items-baseline gap-x-3 text-note tabular-nums text-slate-200">
+          {basis === "time" ? (
+            <>
+              <span className="text-title font-semibold text-ink">{`${sum.minutes ?? 0}′`}</span>
+              <span title={ui.logStudyDays} aria-label={`${ui.logStudyDays} ${summary.activeDays}`}>{`📅 ${summary.activeDays}`}</span>
+            </>
+          ) : (
+            <>
+              <span className="text-title font-semibold text-ink">{sum.rows ?? 0}</span>
+              {sum.mastered ? <span className="text-status-mastered" title={ui.itemsMastered}>{`✓ ${sum.mastered}`}</span> : null}
+              {sum.missed ? <span className="text-warn" title={ui.partFixed}>{`✗ ${sum.missed}`}</span> : null}
+            </>
+          )}
+        </p>
+        <LogChart bars={chart} kind={kind} legend={legend} unit={basis === "time" ? "′" : ""} dateLabel={(day) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()))} onDay={(day) => setOpenDay(day)} />
+        <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
+          {legend.map((one) => (
+            <span key={one.icon} title={one.title} className="inline-flex items-center gap-1">
+              <svg aria-hidden width="8" height="8" className={one.cls}><rect width="8" height="8" rx="2" /></svg>
+              {`${one.icon} ${one.title}`}
+            </span>
+          ))}
+        </div>
+      </section>
+      {basis === "time" ? (
+        <TimeSources ui={ui} summary={summary} input={input} period={period} />
+      ) : rows.length ? (
+        <ol data-log-rows className="flex flex-col gap-1">
+          {rows.map((row) => (
+            <li key={row.id}>
+              <button
+                type="button"
+                data-log-row={row.status}
+                onClick={() => setOpenRow(row.id)}
+                className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
+              >
+                <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-status-mastered" : row.status === "missed" ? "text-warn" : "text-info"}`}>
+                  {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
+                </span>
+                <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
+                <span aria-hidden className="shrink-0 text-meta">{[...new Set(row.events.map((one) => WHERE_ICON[one.where] ?? ""))].filter(Boolean).slice(0, 4).join("")}</span>
+                <span className="shrink-0 text-meta tabular-nums text-slate-500">{row.events.length}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p className="text-note text-slate-500">—</p>
+      )}
+      {/* Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. */}
+      <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
+      {dayDetail ? (
+        <LogSheet title={dayFormat(locale, dayDetail.day)} ui={ui} onClose={() => setOpenDay(null)}>
+          <DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />
+        </LogSheet>
+      ) : openDay ? (
+        <LogSheet title={dayFormat(locale, openDay)} ui={ui} onClose={() => setOpenDay(null)}>
+          <p className="text-note text-slate-500">—</p>
+        </LogSheet>
+      ) : null}
+      {rowDetail ? (
+        <LogSheet title={rowLabel(rowDetail)} ui={ui} onClose={() => setOpenRow(null)}>
+          <RowBody ui={ui} locale={locale} language={language} row={rowDetail} />
+        </LogSheet>
+      ) : null}
+    </div>
+  );
+}
+
+function asDate(day: string): Date {
+  const [y, m, d] = day.split("-").map(Number);
+  return new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1);
+}
+
+function weekdayLabel(locale: string, day: string): string {
+  try {
+    return new Intl.DateTimeFormat(locale, { weekday: "narrow" }).format(asDate(day));
+  } catch {
+    return String(asDate(day).getDate());
+  }
+}
+
+function dayFormat(locale: string, day: string): string {
+  try {
+    return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric", weekday: "short" }).format(asDate(day));
+  } catch {
+    return day;
+  }
+}
+
+/** 날마다 막대(쌓음) — 누르면 그날 세부. 칸 셋의 색은 legend 순서. 막대 위 합(0이면 없음). */
+function LogChart({
+  bars: list,
+  kind,
+  legend,
+  unit,
+  dateLabel,
+  onDay,
+}: {
+  bars: Bar[];
+  kind: PeriodKind;
+  legend: { cls: string }[];
+  unit: string;
+  dateLabel: (day: string) => string;
+  onDay: (day: string) => void;
+}) {
+  const max = Math.max(1, ...list.map((bar) => bar.parts[0] + bar.parts[1] + bar.parts[2]));
+  const height = 120;
+  return (
+    <div data-log-chart className="flex h-[156px] items-end gap-[3px]">
+      {list.map((bar, i) => {
+        const total = bar.parts[0] + bar.parts[1] + bar.parts[2];
+        const showLabel = kind === "week" || i % 5 === 0 || i === list.length - 1;
+        let y = height;
         return (
-          <section key={week} data-log-week={week} className="rounded-xl border border-line p-3">
-            {/* 주 정리를 보는 중이면 위 카드가 같은 주 머리를 이미 보여 줌 — 달 정리일 때만 주 머리. */}
-            {kind === "month" ? (
-              <div className="mb-2 flex flex-col gap-1">
-                <h4 className="text-note font-semibold text-ink">{`${rangeFormat.format(start)} – ${rangeFormat.format(end)}`}</h4>
-                {tally(counts(all), quizWeek)}
-              </div>
-            ) : null}
-            <ol className="flex flex-col gap-3">
-              {list.map((one) => {
-                const fixed = one.items.filter((item) => item.kind === "fixed");
-                return (
-                  <Fragment key={one.day}>
-                  <li data-log-day={one.day} className="border-t border-line pt-2 first:border-t-0 first:pt-0">
-                    <div className="flex flex-wrap items-baseline gap-x-2">
-                      <span className="text-caption font-semibold text-slate-200">{dateFormat.format(asDate(one.day))}</span>
-                      {tally(counts(one.items), one.quiz)}
-                      <ClearDay ui={ui} language={language} day={one} />
-                    </div>
-                    <DayResults ui={ui} language={language} day={one} />
-                    {PART_ORDER.map((part) => {
-                      const got = one.items.filter((item) => item.part === part && item.kind !== "fixed");
-                      if (!got.length) return null;
-                      return (
-                        <div key={part} className="mt-1.5 flex flex-wrap items-center gap-1">
-                          <span className="me-1 text-meta text-slate-500">{partName(part)}</span>
-                          {got.map((item, i) => (
-                            <button
-                              key={`${item.text}-${i}`}
-                              type="button"
-                              dir="auto"
-                              onClick={() => {
-                                // 그 소재가 Stagebank에 있으면 그 수업(설명은 Stagebank 한 곳, 2026-11-01), 아니면 표현 자세히.
-                                const key = lessonKeyOf(language, item);
-                                if (key) openLesson({ language, key });
-                                else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
-                              }}
-                              className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
-                            >
-                              {label(item)}
-                            </button>
-                          ))}
-                        </div>
-                      );
-                    })}
-                    {fixed.length ? (
-                      <ul className="mt-1.5 flex flex-col gap-1">
-                        {fixed.slice(0, 5).map((item, i) => (
-                          <li key={`${item.at}-${i}`} className="text-meta">
-                            <span dir="auto" className="text-slate-500 line-through">{item.text}</span>
-                            {item.right ? (
-                              <>
-                                <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
-                                <span dir="auto" className="text-slate-200">{item.right}</span>
-                              </>
-                            ) : null}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </li>
-                  {one.day === adAfterDay ? <li>{logAd}</li> : null}
-                  </Fragment>
-                );
+          <button
+            key={bar.day}
+            type="button"
+            data-log-bar={bar.day}
+            aria-label={`${bar.day} ${Math.round(total)}${unit}`}
+            onClick={() => onDay(bar.day)}
+            className="flex min-w-0 flex-1 flex-col items-center gap-1 rounded-lg hover:bg-white/5"
+          >
+            <span className="h-4 text-meta tabular-nums text-slate-400">{total && kind === "week" ? `${Math.round(total)}${unit}` : ""}</span>
+            <svg viewBox={`0 0 10 ${height}`} preserveAspectRatio="none" className="h-[120px] w-full max-w-[28px]">
+              {bar.parts.map((n, slot) => {
+                if (!n) return null;
+                const h = Math.max(2, (n / max) * height);
+                y -= h;
+                return <rect key={slot} x="0" y={y} width="10" height={h} rx="1.5" className={legend[slot]?.cls ?? ""} />;
               })}
-            </ol>
-          </section>
+              {total ? null : <rect x="0" y={height - 2} width="10" height="2" className="fill-white/10" />}
+            </svg>
+            <span className="h-4 text-meta tabular-nums text-slate-500">{showLabel ? dateLabel(bar.day) : ""}</span>
+          </button>
         );
       })}
-      {adAfterDay ? null : logAd}
+    </div>
+  );
+}
+
+/** ⏱ 학습 시간 기준의 목록: 어디서 얼마나(그 기간 합). */
+function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: PeriodSummary; input: LogInputs; period: Period }) {
+  const results = input.results.filter((one) => inPeriod(period, one.day));
+  const minutesOf = (kind: DayResult["kind"]) => Math.round(results.filter((one) => one.kind === kind).reduce((n, one) => n + resultMinutes(one), 0));
+  const rows: { icon: string; title: string; count: string; minutes: number; show: boolean }[] = [
+    { icon: "📞", title: ui.callRecordsTitle, count: String(summary.calls), minutes: summary.callMinutes, show: summary.calls > 0 },
+    { icon: "🧩", title: ui.framesTitle, count: String(summary.lessons), minutes: minutesOf("lesson"), show: summary.lessons > 0 },
+    { icon: "🎯", title: ui.recallTitle, count: String(summary.recalls), minutes: minutesOf("recall"), show: summary.recalls > 0 },
+    { icon: "🎭", title: ui.stageScriptsTitle, count: String(summary.scripts), minutes: minutesOf("script"), show: summary.scripts > 0 },
+    { icon: "📝", title: ui.keepTitle, count: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), minutes: Math.round(summary.quizN * ESTIMATE.quizQuestion), show: summary.quizN > 0 },
+  ];
+  const shown = rows.filter((one) => one.show);
+  if (!shown.length) return <p className="text-note text-slate-500">—</p>;
+  return (
+    <ul data-log-sources className="flex flex-col gap-1">
+      {shown.map((one) => (
+        <li key={one.icon} className="flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-note">
+          <span aria-hidden>{one.icon}</span>
+          <span className="min-w-0 flex-1 truncate text-ink">{one.title}</span>
+          <span className="shrink-0 tabular-nums text-slate-300">{one.count}</span>
+          <span className="w-12 shrink-0 text-end tabular-nums text-slate-400">{`${one.minutes}′`}</span>
+        </li>
+      ))}
+      {summary.fixed || summary.redone ? (
+        <li className="flex gap-3 px-3 pt-1 text-meta tabular-nums text-slate-400">
+          {summary.fixed ? <span title={ui.partFixed}>{`✎ ${summary.fixed}`}</span> : null}
+          {summary.redone ? <span title={ui.roleplaySayAgain}>{`🔁 ${summary.redone}`}</span> : null}
+        </li>
+      ) : null}
+    </ul>
+  );
+}
+
+/** 세부 화면(전체 화면 층 — My 전체 화면 위): 머리 제목 + ✕, 안은 스크롤. */
+function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy; onClose: () => void; children: ReactNode }) {
+  return (
+    <FullScreenLayer>
+      {/* 포털이라도 누름은 React 트리로 올라가 뒤의 My 칸 크게 보기가 받는다 — 여기서 멈춤. */}
+      <div className="contents" onClick={(event) => event.stopPropagation()}>
+        <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
+          <h2 dir="auto" className="min-w-0 flex-1 truncate text-body font-semibold text-ink">{title}</h2>
+          <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">✕</button>
+        </header>
+        <div data-log-sheet className="min-h-0 flex-1 overflow-y-auto px-4 py-3">{children}</div>
+      </div>
+    </FullScreenLayer>
+  );
+}
+
+/** 그날 세부: 결과 카드(수업·통화·Quizbank 틀린 것) + 배운·익힌 소재 칩 + 고친 줄 + 🗑. */
+function DayBody({
+  ui,
+  language,
+  day,
+  label,
+  insight,
+}: {
+  ui: UICopy;
+  language: string;
+  day: Day;
+  label: (item: LogItem) => string;
+  insight: ReturnType<typeof useExpressionInsightOptional>;
+}) {
+  const fixed = day.items.filter((item) => item.kind === "fixed");
+  const partName = (part: PartId) => (part === "grammar" ? ui.partGrammar : part === "vocab" ? ui.partVocab : part === "expression" ? ui.partExpression : ui.partPronunciation);
+  return (
+    <div data-log-day={day.day} className="flex flex-col gap-2">
+      <div className="flex items-center gap-2 text-caption tabular-nums text-slate-400">
+        {day.quiz ? <span>{`📝 ${ui.quizScore.replace("{n}", String(day.quiz.right)).replace("{m}", String(day.quiz.n))}`}</span> : null}
+        <ClearDay ui={ui} language={language} day={day} />
+      </div>
+      <DayResults ui={ui} language={language} day={day} />
+      {PART_ORDER.map((part) => {
+        const got = day.items.filter((item) => item.part === part && item.kind !== "fixed");
+        if (!got.length) return null;
+        return (
+          <div key={part} className="flex flex-wrap items-center gap-1">
+            <span className="me-1 text-meta text-slate-500">{partName(part)}</span>
+            {got.map((item, i) => (
+              <button
+                key={`${item.text}-${i}`}
+                type="button"
+                dir="auto"
+                onClick={() => {
+                  const key = lessonKeyOf(language, item);
+                  if (key) openLesson({ language, key });
+                  else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
+                }}
+                className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
+              >
+                {label(item)}
+              </button>
+            ))}
+          </div>
+        );
+      })}
+      {fixed.length ? (
+        <ul className="flex flex-col gap-1">
+          {fixed.map((item, i) => (
+            <li key={`${item.at}-${i}`} className="text-meta">
+              <span aria-hidden className="me-1">{WHERE_ICON[String(item.where ?? "")] ?? "✎"}</span>
+              <span dir="auto" className="text-slate-500 line-through">{item.text}</span>
+              {item.right ? (
+                <>
+                  <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
+                  <span dir="auto" className="text-slate-200">{item.right}</span>
+                </>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {!day.results.length && !day.calls.length && !day.items.length && !day.quiz ? <p className="text-note text-slate-500">—</p> : null}
+    </div>
+  );
+}
+
+/** 소재 세부: ▶ 그 수업 + 그 기간 나온 일(새것부터) — 수업 결과 카드·고친 줄·퀴즈 틀림·배움/익힘. */
+function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; language: string; row: PartRow }) {
+  const key = row.key ?? (row.node ? grammarKeyOfNode(language, row.node) : expressionKeyOf(language, row.text));
+  return (
+    <div data-log-row-detail className="flex flex-col gap-2">
+      {key ? (
+        <button type="button" data-log-row-open onClick={() => openLesson({ language, key })} className="self-start rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+          ▶
+        </button>
+      ) : null}
+      <ol className="flex flex-col gap-2">
+        {row.events.map((event, i) => (
+          <li key={`${event.at}-${i}`} className="flex flex-col gap-1 rounded-lg border border-line bg-white/[0.02] px-2.5 py-2">
+            <span className="flex items-center gap-2 text-caption">
+              <span aria-hidden>{WHERE_ICON[event.where] ?? "·"}</span>
+              <span className="min-w-0 flex-1 tabular-nums text-slate-400">{dayFormat(locale, event.day)}</span>
+              {event.kind === "mastered" ? <span className="text-status-mastered">{`✓ ${ui.itemsMastered}`}</span> : null}
+              {event.kind === "learned" ? <span className="text-info">{ui.itemsLearned}</span> : null}
+              {event.kind === "quizWrong" ? <span className="text-warn">{`✗ ${ui.keepTitle}`}</span> : null}
+              {event.kind === "fixed" ? <span className="text-warn">{`✎ ${ui.partFixed}`}</span> : null}
+              {event.result ? (
+                <span className={`tabular-nums ${event.result.passed ? "text-good" : "text-slate-400"}`}>{`${event.result.right}/${event.result.total}${event.result.passed ? " ✓" : ""}`}</span>
+              ) : null}
+            </span>
+            {event.kind === "fixed" ? (
+              <span className="text-meta">
+                <span dir="auto" className="text-slate-500 line-through">{event.text}</span>
+                {event.right ? (
+                  <>
+                    <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
+                    <span dir="auto" className="text-slate-200">{event.right}</span>
+                  </>
+                ) : null}
+              </span>
+            ) : null}
+            {event.result?.said.slice(0, 5).map((line, j) => (
+              <span key={j} className="flex items-baseline gap-1.5 text-meta">
+                <span aria-hidden className={line.good ? "text-good" : "text-warn"}>{line.good ? "✓" : "✗"}</span>
+                <span dir="auto" className="min-w-0 text-slate-300">{line.text}</span>
+              </span>
+            ))}
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
 
 const RESULT_ICON: Record<DayResult["kind"], string> = { lesson: "🧩", recall: "🎯", script: "🎭" };
-
-/** 지난 기간보다 늘었으면 ▲n, 줄었으면 ▼n(같으면 없음). */
-function Delta({ now, before }: { now: number; before: number }) {
-  const diff = now - before;
-  if (!diff) return null;
-  return <span className={`ms-0.5 text-caption ${diff > 0 ? "text-good" : "text-slate-500"}`}>{diff > 0 ? `▲${diff}` : `▼${-diff}`}</span>;
-}
-
-const CHIP_SHOWN = 12;
-
-/**
- * 주·월 정리 카드(2026-11-02): [주 | 월] · ‹ 기간 › · 숫자 줄(아이콘 + 수, 이름은 title — 화면 속 설명 글 없이) · 배우고 익힌 소재 칩(익힘 먼저, 12개 + 펼치기).
- */
-function PeriodCard({
-  ui,
-  kind,
-  label,
-  canForward,
-  summary,
-  before,
-  itemLabel,
-  onKind,
-  onBack,
-  onForward,
-  onItem,
-}: {
-  ui: UICopy;
-  kind: PeriodKind;
-  label: string;
-  canForward: boolean;
-  summary: PeriodSummary;
-  before: PeriodSummary;
-  itemLabel: (item: LogItem) => string;
-  onKind: (kind: PeriodKind) => void;
-  onBack: () => void;
-  onForward: () => void;
-  onItem: (item: LogItem) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const stats: { icon: string; title: string; value: string; show: boolean; now?: number; before?: number }[] = [
-    { icon: "📅", title: ui.logStudyDays, value: String(summary.activeDays), show: true, now: summary.activeDays, before: before.activeDays },
-    { icon: "📞", title: ui.callRecordsTitle, value: `${summary.calls} · ${summary.callMinutes}′`, show: summary.calls > 0, now: summary.callMinutes, before: before.callMinutes },
-    { icon: "🧩", title: ui.framesTitle, value: String(summary.lessons), show: summary.lessons > 0 },
-    { icon: "🎯", title: ui.recallTitle, value: String(summary.recalls), show: summary.recalls > 0 },
-    { icon: "🎭", title: ui.stageScriptsTitle, value: String(summary.scripts), show: summary.scripts > 0 },
-    { icon: "📝", title: ui.keepTitle, value: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), show: summary.quizN > 0, now: summary.quizN, before: before.quizN },
-    { icon: "✎", title: ui.partFixed, value: String(summary.fixed), show: summary.fixed > 0 },
-    { icon: "🔁", title: ui.roleplaySayAgain, value: String(summary.redone), show: summary.redone > 0 },
-  ];
-  const mastered = summary.learned.filter((item) => item.kind === "mastered").length;
-  const shown = open ? summary.learned : summary.learned.slice(0, CHIP_SHOWN);
-  const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? "bg-ink text-surface" : "border border-line text-slate-300"}`;
-  return (
-    <section data-log-period={kind} className="rounded-xl border border-line p-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <div className="flex gap-1" role="group">
-          <button type="button" aria-pressed={kind === "week"} onClick={() => onKind("week")} className={chip(kind === "week")}>{ui.logWeek}</button>
-          <button type="button" aria-pressed={kind === "month"} onClick={() => onKind("month")} className={chip(kind === "month")}>{ui.logMonth}</button>
-        </div>
-        <div className="flex items-center gap-1">
-          <button type="button" onClick={onBack} aria-label="‹" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10">‹</button>
-          <span data-log-period-label className="min-w-0 text-note font-semibold tabular-nums text-ink">{label}</span>
-          <button type="button" onClick={onForward} disabled={!canForward} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30">›</button>
-        </div>
-      </div>
-      <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-note tabular-nums text-slate-200">
-        {stats.filter((one) => one.show).map((one) => (
-          <span key={one.icon} title={one.title} aria-label={`${one.title} ${one.value}`} className="inline-flex items-center gap-1">
-            <span aria-hidden>{one.icon}</span>
-            {one.value}
-            {one.now !== undefined && one.before !== undefined ? <Delta now={one.now} before={one.before} /> : null}
-          </span>
-        ))}
-      </p>
-      {summary.learned.length ? (
-        <div className="mt-2 flex flex-col gap-1.5">
-          <p className="flex flex-wrap gap-x-3 text-caption tabular-nums text-slate-400">
-            {mastered ? <span className="text-status-mastered">{`${ui.itemsMastered} ${mastered}`}</span> : null}
-            {summary.learned.length - mastered ? <span className="text-info">{`${ui.itemsLearned} ${summary.learned.length - mastered}`}</span> : null}
-            <Delta now={summary.learned.length} before={before.learned.length} />
-          </p>
-          <div className="flex flex-wrap gap-1">
-            {shown.map((item, i) => (
-              <button
-                key={`${item.part}-${item.text}-${i}`}
-                type="button"
-                dir="auto"
-                onClick={() => onItem(item)}
-                className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-status-mastered/20 text-status-mastered" : "bg-info/15 text-info"}`}
-              >
-                {itemLabel(item)}
-              </button>
-            ))}
-            {summary.learned.length > CHIP_SHOWN ? (
-              <button type="button" onClick={() => setOpen((v) => !v)} className="rounded-full px-2 py-0.5 text-meta text-slate-400 hover:bg-white/10">
-                {open ? "−" : `+${summary.learned.length - CHIP_SHOWN}`}
-              </button>
-            ) : null}
-          </div>
-        </div>
-      ) : null}
-    </section>
-  );
-}
 
 /**
  * 그날 결과 카드(2026-11-01 사용자 "결과 샷 — 통화면 학습 결과 창"): 수업·꺼내 쓰기·상황은 끝 화면의 맞힌 수와 내가 말한 줄,

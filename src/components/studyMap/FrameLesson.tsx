@@ -191,6 +191,8 @@ export function FrameLesson({
 
   const finished = step === "done";
   // Logbank 그날 결과 카드(이 폰에만, curriculum/dayLog.ts, 2026-11-01).
+  // 연 때 — 끝날 때 걸린 시간을 Logbank 학습 시간으로(dayLog secs).
+  const [openedAt] = useState(() => Date.now());
   const logged = useRef(false);
   useEffect(() => {
     if (!finished) return;
@@ -203,6 +205,8 @@ export function FrameLesson({
       noteDayResult(language, {
         kind: "lesson",
         item: itemId,
+        key,
+        startedAt: openedAt,
         title: frame?.pattern ?? lesson?.title ?? subject?.title ?? key.slice(2),
         right: results.filter((one) => one?.good).length,
         total: turns.length,
@@ -231,7 +235,7 @@ export function FrameLesson({
         onPassed?.(frame.id);
       })
       .catch(() => undefined);
-  }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed]);
+  }, [finished, results, turns.length, language, frame, itemId, key, lesson, subject, isPremium, onPassed, openedAt]);
 
   const send = async () => {
     if (!turn || listening || !draft.trim()) return;

@@ -70,7 +70,7 @@
 | `call` | `call-live` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallParts.tsx` |
 | `chat-locked` | `chat-locked` | AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. | AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
 | `my-full` | `exam-wait` | 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. | My 탭 `my` · `studyMap/TodayPlan.tsx` |
-| `my-full` | `logbank-list` | Logbank 날짜 목록 사이 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙, 버튼과 띄움. | My 탭 `my` · `studyMap/Logbank.tsx` |
+| `my-full` | `logbank-list` | Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. | My 탭 `my` · `studyMap/Logbank.tsx` |
 | `my-full` | `stagebank-stage` | 단계 화면 ‘이 단계에선 이런 대화가 돼요’ 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `my-full` | `stagebank-today` | Stagebank 전체 화면: 오늘 할 것 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만). | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `people-tab` | `board-after-3` | 세 번째 글 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). 글을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/BoardView.tsx` |

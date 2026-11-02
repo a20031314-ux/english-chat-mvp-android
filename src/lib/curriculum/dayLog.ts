@@ -26,7 +26,13 @@ export type DayResult = {
   said: { text: string; good: boolean }[];
   at: number;
   day: string;
+  /** 소재 열쇠(f|·e|·g| — Logbank 기준 갈래, 2026-11-02부터). */
+  key?: string;
+  /** 연 때부터 끝날 때까지 초(30분까지 — Logbank 학습 시간, 2026-11-02부터; 예전 결과는 어림). */
+  secs?: number;
 };
+
+const SECS_MAX = 30 * 60;
 
 export function readDayResults(language: string): DayResult[] {
   try {
@@ -43,9 +49,12 @@ export function addDayResult(list: readonly DayResult[], result: DayResult, now 
   return [...list.filter((one) => one.at >= since), { ...result, said: result.said.filter((one) => one.text.trim()).slice(0, SAID_MAX) }].slice(-MAX);
 }
 
-export function noteDayResult(language: string, result: Omit<DayResult, "at" | "day">, now = new Date()): void {
+/** startedAt: 화면을 연 때 — 있으면 걸린 초를 secs로(30분까지, 켜 두고 자리를 뜬 것까지 세지 않게). */
+export function noteDayResult(language: string, input: Omit<DayResult, "at" | "day" | "secs"> & { startedAt?: number }, now = new Date()): void {
   try {
-    const next = addDayResult(readDayResults(language), { ...result, at: now.getTime(), day: localDay(now) }, now.getTime());
+    const { startedAt, ...result } = input;
+    const secs = startedAt ? Math.round(Math.min(SECS_MAX, Math.max(0, (now.getTime() - startedAt) / 1000))) : 0;
+    const next = addDayResult(readDayResults(language), { ...result, ...(secs ? { secs } : {}), at: now.getTime(), day: localDay(now) }, now.getTime());
     localStorage.setItem(`${KEY}.${language}`, JSON.stringify(next));
     window.dispatchEvent(new CustomEvent(DAY_LOG_EVENT, { detail: { language } }));
   } catch {

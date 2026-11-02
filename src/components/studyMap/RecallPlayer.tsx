@@ -92,6 +92,8 @@ export function RecallPlayer({
   const [limited, setLimited] = useState(false);
   const hearing = useHearing();
   const done = prompts !== null && index >= items.length;
+  // 연 때 — 끝날 때 걸린 시간을 Logbank 학습 시간으로(dayLog secs).
+  const [openedAt] = useState(() => Date.now());
   const sent = useRef(false);
   useEffect(() => () => stopTts(), []);
 
@@ -104,6 +106,7 @@ export function RecallPlayer({
     noteDayResult(language, {
       kind: "recall",
       item: RECALL_ITEM,
+      startedAt: openedAt,
       title: [...new Set(items.flatMap((item) => item.frames.map((id) => frameById(language, id)?.pattern ?? "")))].filter(Boolean).slice(0, 3).join(" · "),
       right: items.filter((_, i) => results[i]?.good).length,
       total: items.length,
@@ -130,7 +133,7 @@ export function RecallPlayer({
         if (body?.known) announceKnown(language, body.known);
       })
       .catch(() => undefined);
-  }, [done, items, results, language, isPremium]);
+  }, [done, items, results, language, isPremium, openedAt]);
 
   const say = async () => {
     const item = items[index];
