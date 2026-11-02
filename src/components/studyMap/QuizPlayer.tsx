@@ -24,6 +24,7 @@ import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/lear
 import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { openLesson } from "@/lib/appIntents";
+import { useOptionNotes } from "@/lib/curriculum/optionNotes";
 
 /**
  * 약한 곳 퀴즈(lib/curriculum/quiz.ts, 2026-10-28 사용자 "틀린 부분을 퀴즈로"): 오늘 할 것의 "퀴즈" 칸을 누르면 열린다.
@@ -901,6 +902,8 @@ function ChooseView({
   const [fitting, setFitting] = useState<number[]>([]);
   const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
+  // 답한 뒤 보기마다 뜻(품사 + 뜻)·틀린 까닭 한 줄(2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지").
+  const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
       {answered ? (
@@ -925,7 +928,7 @@ function ChooseView({
               : picked === i
                 ? alsoOk
                   ? "border-good/60 text-ink"
-                  : "border-warn text-warn line-through"
+                  : "border-warn text-warn"
                 : "border-line text-slate-500"
             : fitting.includes(i)
               ? "border-line text-slate-500"
@@ -958,7 +961,17 @@ function ChooseView({
               }}
               className={`${chip} text-start ${style}`}
             >
-              {option}
+              <span className={answered && !isRight && picked === i && !alsoOk ? "line-through" : ""}>{option}</span>
+              {answered && notes[i]?.meaning ? (
+                <span data-option-meaning dir="auto" className="mt-0.5 block text-meta text-slate-400">
+                  {notes[i]!.meaning}
+                </span>
+              ) : null}
+              {answered && !isRight && notes[i]?.why ? (
+                <span data-option-why dir="auto" className="mt-0.5 block text-meta text-warn">
+                  {notes[i]!.why}
+                </span>
+              ) : null}
             </button>
           );
         })}
