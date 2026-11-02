@@ -215,6 +215,8 @@ export function seedOrder(): SeedItem[] {
 }
 
 const CURSOR_KEY = "fixedlesson:v1:seed:cursor";
+const SEED_PARALLEL = 8;
+const SEED_BUDGET_MS = 170_000;
 
 /**
  * 예약 작업: 차례표를 커서로 앞에서부터 — 저장된 것·원고가 있는 것은 넘기고 없는 것을 한 번에 batch개(넷씩 나란히) 만든다.
@@ -224,7 +226,7 @@ export async function seedFixedLessons(batch = 16, onMake?: () => void): Promise
   const order = seedOrder();
   const cursor = (await kvGetJson<{ at: number; pass: number }>(CURSOR_KEY).catch(() => null)) ?? { at: 0, pass: 0 };
   if (process.env.FIXED_LESSON_SEED?.trim() === "off" || makeOff() || cursor.pass >= 2) return { made: 0, failed: 0, at: cursor.at, total: order.length, pass: cursor.pass, off: true };
-  const take: SeedItem[] = [];
+  const take: (SeedItem & { idx: number })[] = [];
   let at = cursor.at;
   let pass = cursor.pass;
   while (take.length < batch && pass < 2) {
@@ -233,7 +235,10 @@ export async function seedFixedLessons(batch = 16, onMake?: () => void): Promise
       pass += 1;
       continue;
     }
-    const window = order.slice(at, at + 40).filter((one) => !staticFixedLesson(one.language, one.ui, one.frame.id));
+    const window = order
+      .slice(at, at + 40)
+      .map((one, k) => ({ ...one, idx: at + k }))
+      .filter((one) => !staticFixedLesson(one.language, one.ui, one.frame.id));
     const [stored, fails] = await Promise.all([
       kvGetJsonMany<unknown>(window.map((one) => keyOf(one.language, one.ui, one.frame.id))).catch(() => window.map(() => null)),
       kvGetJsonMany<number>(window.map((one) => failKeyOf(one.language, one.ui, one.frame.id))).catch(() => window.map(() => null)),
@@ -248,8 +253,17 @@ export async function seedFixedLessons(batch = 16, onMake?: () => void): Promise
   }
   let made = 0;
   let failed = 0;
-  for (let i = 0; i < take.length; i += 4) {
-    const results = await Promise.all(take.slice(i, i + 4).map((one) => makeAndStore(one.language, one.ui, one.frame, onMake)));
+  // 예약 작업 한 번은 300초까지 — 수업 하나가 다시 쓰기까지 하면 1~2분이라, 170초가 지나면 새 묶음을 시작하지 않고
+  // 커서를 그 자리로 되돌려 다음 번에 이어 간다(넘겨 버리면 두 번째 바퀴까지 미뤄짐).
+  const started = Date.now();
+  for (let i = 0; i < take.length; i += SEED_PARALLEL) {
+    if (i > 0 && Date.now() - started > SEED_BUDGET_MS) {
+      at = take[i]!.idx;
+      // 커서 앞쪽 칸이면 차례표를 한 바퀴 넘어 모은 것.
+      pass = at >= cursor.at ? cursor.pass : cursor.pass + 1;
+      break;
+    }
+    const results = await Promise.all(take.slice(i, i + SEED_PARALLEL).map((one) => makeAndStore(one.language, one.ui, one.frame, onMake)));
     for (const ok of results) {
       if (ok) made += 1;
       else failed += 1;
