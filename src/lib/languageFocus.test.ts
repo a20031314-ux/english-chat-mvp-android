@@ -99,3 +99,11 @@ test("한국어 통화 튜터는 번역투(그렇군요·-지요)를 피하게 �
   assert.match(ko, /never as the opener/);
   assert.doesNotMatch(ko, /: -군요, -네요/);
 });
+
+test("통화 튜터: 영어 반응을 옮긴 꼴을 피하고, 태국어 존칭 끝말은 튜터 성별대로", () => {
+  // 사용자 2026-11-02 "다른 언어도 영어 지시 때문에 번역체인지" — 운영 표본: zh 听起来 4/6, ru Понимаю 4/6, ar يبدو أن 3/6, th 여자 튜터가 ครับ.
+  for (const language of ["zh", "es", "ar", "ru", "ja", "th"] as const) assert.match(tutorSpeechRules(language), /not like English put into it/, language);
+  assert.match(tutorSpeechRules("zh"), /听起来/);
+  assert.match(tutorSpeechRules("th", "f"), /you are a woman: ค่ะ/);
+  assert.match(tutorSpeechRules("th", "m"), /you are a man: ครับ/);
+});

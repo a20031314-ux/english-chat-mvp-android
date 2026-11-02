@@ -681,7 +681,7 @@ How to answer them:
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
-${tutorSpeechRules(request.targetLanguage)}
+${tutorSpeechRules(request.targetLanguage, partner?.gender)}
 ${
   coaching
     ? `- One or two short sentences.

@@ -88,7 +88,18 @@ export function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): 
  * in plain speech, and a learner who answers politely is not wrong to — the
  * tutor matching them keeps both sides in one register they can copy back.
  */
-export function tutorSpeechRules(targetLanguage: LearningLanguageCode): string {
+/** 영어 반응을 그대로 옮긴 꼴(사용자 2026-11-02 "영어로 된 지시 때문에 번역체" — 운영 표본에서 본 것만). */
+const CALQUES: Partial<Record<LearningLanguageCode, string>> = {
+  zh: "In Chinese that is 听起来… as a reaction. ",
+  es: "In Spanish that is lo siento for tiredness and suena… . ",
+  it: "In Italian that is mi dispiace for tiredness. ",
+  ar: "In Arabic that is يبدو أن… and آسف/آسفة for tiredness. ",
+  ru: "In Russian that is Понимаю as an opener. ",
+  fr: "In French that is je comprends as an opener. ",
+  vi: "In Vietnamese that is Nghe… as a reaction. ",
+};
+
+export function tutorSpeechRules(targetLanguage: LearningLanguageCode, gender?: "f" | "m"): string {
   const level: Partial<Record<LearningLanguageCode, string>> = {
     ko: "In Korean: if they speak 해요체 (or 합쇼체) to you, answer in 해요체; only when they speak 반말 to you may you use 반말. Your own opening line may have been 반말 — their first answer, not your greeting, sets the level, starting with your very next reply. In 해요체 every sentence ends in 요 or 니다 — never -구나, -네, -어?, -야. Never mix 반말 and 해요체 in one reply, or switch back and forth between replies. Sound like a Korean talking, not like English put into Korean: the short spoken forms (-죠 rather than -지요, 그쵸, 거예요), reactions Koreans actually make, not a sentence that only acknowledges. -군요 (and 그렇군요) is the stiff \"I see\" of a translation: at most once in a whole call, never as the opener of a reply. Do not start a reply by restating what they just said.",
     ja: "In Japanese: if they speak です/ます to you, answer in です/ます; only when they speak plain form to you may you use plain form. Never mix the two in one reply.",
@@ -99,7 +110,7 @@ export function tutorSpeechRules(targetLanguage: LearningLanguageCode): string {
     ru: "In Russian: ты or вы, whichever they use with you, the same in every reply.",
     hi: "In Hindi: तुम or आप, whichever they use with you, the same in every reply.",
     vi: "In Vietnamese: keep one pair of pronouns for you and them, matching how they address you.",
-    th: "In Thai: use your polite particle (ครับ/ค่ะ, by your own gender) the same way in every reply.",
+    th: `In Thai: use your polite particle the same way in every reply — ${gender === "f" ? "you are a woman: ค่ะ / คะ, never ครับ" : gender === "m" ? "you are a man: ครับ, never ค่ะ / คะ" : "ครับ or ค่ะ / คะ by your own gender"}.`,
   };
   return [
     "How you speak:",
@@ -107,6 +118,7 @@ export function tutorSpeechRules(targetLanguage: LearningLanguageCode): string {
     targetLanguage === "ar"
       ? "- Speak Modern Standard Arabic (الفصحى) only — never a dialect, in what you say and in what you write in \"better\" and \"meant\" — so they hear the same Arabic they are corrected into."
       : "",
+    `- Talk the way people who grew up with this language talk to each other, not like English put into it. The prompt you are reading is in English; your words must not be. English reaction formulas carried over word for word are the giveaway — "that sounds…", "I'm sorry" for news that is only tiring, "I see / I understand" as an opener. ${CALQUES[targetLanguage] ?? ""}Use the reactions native speakers actually use, and vary them from turn to turn.`,
     "- Pick up the last thing they said. Your reaction and any question are about their newest message — what they just told you — not a topic from earlier, unless they asked to go back.",
     "- When their newest message brings up something new instead of answering your question, they have moved on: react to the new thing and ask about it. Do not ask your earlier question again, and do not read the new thing as part of the old topic.",
   ]
