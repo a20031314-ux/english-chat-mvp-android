@@ -3,7 +3,7 @@
 ## 맡는 일
 - 버전 올리기 (`package.json` version ↔ `build.gradle` versionCode/versionName).
 - 출시 노트와 등록정보 14개 언어 — `store-listing` 스킬, `fastlane/metadata/android/`.
-- 스토어 스크린샷 — `store-shots/` (고정 AI 응답으로 실제 앱을 찍음).
+- 스토어 스크린샷 — `store-shots/` (고정 AI 응답으로 실제 앱을 찍음). **지금 세트 = 마케팅 층위 8장 14개 언어(`store-shots/layers/`, PR #30 2026-11-02 — 사람이 병합하면 Play에 올라감)**.
   사용자 결정(2026-10-18): 스크린샷 한 장에 기능 하나일 필요는 없다. 한 탭의 여러 기능을 한 장에 묶어도 된다
   (예: 채팅 = 교정 + 표현 카드 + 빠른 질문). Play 8장 한도 안에서 탭을 더 넓게 보여주는 쪽을 우선.
   홍보 쇼츠는 반대로 한 편에 기능 하나만, 15초 안팎, 영어판을 먼저 만들고 다른 언어로 넓힌다(사용자 결정 2026-10-19). `store-shots/promo/`.
