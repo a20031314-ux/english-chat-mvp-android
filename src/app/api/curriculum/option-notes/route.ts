@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
   if (!language || !sentence || options.length < 2 || answer < 0 || answer >= options.length) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
-  const key = `quiznotes:v1:e:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
+  const key = `quiznotes:v1:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
   const cached = await kvGetJson<Note[]>(key).catch(() => null);
   if (cached?.length === options.length) return jsonWithCors(request, { notes: cached, cached: true });
 
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
   await meterRequest(request, "quizOptionNotes");
   const target = INTERFACE_LANGUAGE_LABELS[language] ?? language;
   const native = INTERFACE_LANGUAGE_LABELS[ui] ?? ui;
-  const completion = await completeChat(client, "vocab", {
+  const ask = (strict: boolean) => completeChat(client, "vocab", {
     response_format: { type: "json_object" },
     max_tokens: 600,
     messages: [
@@ -55,13 +55,26 @@ export async function POST(request: NextRequest) {
 - "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
 Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
       },
+      ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),
       {
         role: "user",
-        content: `Sentence: ${sentence}\nOptions:\n${options.map((one, i) => `${i + 1}. ${one}${i === answer ? " (correct)" : ""}`).join("\n")}`,
+        content: `Sentence: ${sentence}\nOptions:\n${options.map((one, i) => `${i + 1}. ${one}${i === answer ? " (correct)" : ""}`).join("\n")}\n\nWrite every "meaning" and "why" in ${native}.`,
       },
     ],
   }).catch(() => null);
-  const reply = completion?.choices[0]?.message?.content ?? "";
+  let notes = parseNotes((await ask(false))?.choices[0]?.message?.content ?? "");
+  // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
+  const script = UI_SCRIPT[ui];
+  if (script && notes.length && notes.some((one) => one.meaning && !script.test(one.meaning))) {
+    await meterRequest(request, "quizOptionNotes");
+    const again = parseNotes((await ask(true))?.choices[0]?.message?.content ?? "");
+    if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
+  }
+  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [] });
+  await kvSetJson(key, notes, TTL).catch(() => undefined);
+  return jsonWithCors(request, { notes });
+
+  function parseNotes(reply: string): Note[] {
   let notes: Note[] = [];
   try {
     const parsed = JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1)) as { notes?: unknown };
@@ -79,7 +92,16 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
   } catch {
     notes = [];
   }
-  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [] });
-  await kvSetJson(key, notes, TTL).catch(() => undefined);
-  return jsonWithCors(request, { notes });
+  return notes;
+  }
 }
+
+const UI_SCRIPT: Record<string, RegExp> = {
+  ar: /\p{Script=Arabic}/u,
+  ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
+  ko: /\p{Script=Hangul}/u,
+  zh: /\p{Script=Han}/u,
+  th: /\p{Script=Thai}/u,
+  hi: /\p{Script=Devanagari}/u,
+  ru: /\p{Script=Cyrillic}/u,
+};
