@@ -5,7 +5,7 @@
  */
 
 export type ChatReply = { assistantMessage: string; spokenReply?: string };
-export type ChatCorrectionPayload = { corrected: string; natural: string; explanation: string };
+export type ChatCorrectionPayload = { corrected: string; natural: string; explanation: string; naturalNote?: string };
 
 export type ChatStreamLine =
   | ({ type: "reply" } & ChatReply)

@@ -70,6 +70,8 @@ type ChatCorrection = {
   corrected: string;
   natural: string;
   explanation: string;
+  /** natural이 corrected와 다를 때 왜 더 자연스러운지 한 줄(앱 언어). 맞게 쓴 줄에도 더 자연스러운 말을 알려 줌(2026-11-02). */
+  naturalNote?: string;
 };
 
 type ChatPayload = {
@@ -183,7 +185,8 @@ function englishCorrectionPolicy(
 - Do not lecture, quiz grammar, or correct them inside assistantMessage.
 3) Fill the rest of correction:
 - corrected: fully corrected English (fix grammar/wording mistakes; keep meaning).
-- natural: a more natural/colloquial native alternative that is DIFFERENT from corrected whenever a more fluent option exists. If corrected is already the most natural, repeat corrected.
+- natural: how a native speaker would most naturally say the same thing in this conversation — also when the user's message is already correct. Make it DIFFERENT from corrected only when a native would clearly say it another way (a more idiomatic phrase, a cleaner structure, a word that fits better, the usual spoken form). Swapping in a synonym that is no better is not an alternative. If corrected is already how a native would say it, repeat corrected.
+- naturalNote: only when natural differs from corrected — ONE short sentence in ${explanationLanguage} on what makes natural sound more natural (name the phrase). Otherwise "".
 - explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation".
 - If corrected differs from the user's message (even slightly), explanation MUST be non-empty.
 - Only if the user's message needs no change at all, set explanation to "".
@@ -226,7 +229,8 @@ function detailedTargetCorrectionPolicy(
 - Do not lecture, quiz grammar, or correct them inside assistantMessage.
 3) Fill the rest of correction carefully and thoroughly:
 - corrected: fully corrected ${targetName}. Fix REAL mistakes — agreement, conjugation/inflection, particles/case markers, function words, word order that breaks the language, wrong tense/aspect/mood, wrong politeness form when the form is ungrammatical for the intended move, wrong collocation that sounds broken.
-- natural: a more natural/colloquial native alternative that is DIFFERENT from corrected whenever a more fluent option exists. If corrected is already the most natural, repeat corrected.
+- natural: how a native speaker would most naturally say the same thing in this conversation — also when the user's message is already correct. Make it DIFFERENT from corrected only when a native would clearly say it another way (a more idiomatic phrase, a cleaner structure, a word that fits better, the usual spoken form). Swapping in a synonym that is no better is not an alternative. If corrected is already how a native would say it, repeat corrected.
+- naturalNote: only when natural differs from corrected — ONE short sentence in ${explanationLanguage} on what makes natural sound more natural (name the phrase). Otherwise "".
 - explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation".
 - If corrected differs from the user's message (even slightly), explanation MUST be non-empty.
 - Only if the user's message needs no change at all, set explanation to "".
@@ -347,7 +351,7 @@ ${spoken}
 ${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
-{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
+{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","naturalNote":"...","explanation":"..."}}`;
   }
 
   return `${commonLanguageInstructions({
@@ -370,7 +374,7 @@ ${spoken}
 ${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
-{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
+{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","naturalNote":"...","explanation":"..."}}`;
 }
 
 function buildHowToSaySystemBase(
@@ -669,6 +673,7 @@ async function runChat(
   let natural = asText(c?.natural) || corrected;
   let explanation =
     asText(c?.explanation) || asText(parsed.explanation);
+  let naturalNote = asText((c as { naturalNote?: unknown } | undefined)?.naturalNote);
   // 모델이 불규칙 활용 실수를 고친 문장에 그대로 두면 바로잡는다.
   if (langs.targetLanguage === "ko" && !options.ownLanguage) {
     // 학습자 문장에서 찾은 것 + 모델이 고친 문장에 새로 만든 틀린 꼴(예: 부루어요 → 부르어요)까지.
@@ -737,10 +742,20 @@ async function runChat(
     }
   }
 
+  // 더 자연스러운 말의 한 줄: natural이 corrected와 같거나, 설명이 앱 언어가 아니면(다시 쓰기 호출은 아끼고) 뺀다.
+  if (
+    normCompare(natural) === normCompare(corrected) ||
+    (naturalNote &&
+      (explanationInLearningLanguage(naturalNote, langs.interfaceLanguage, langs.targetLanguage) ||
+        hangulIsStray(naturalNote, langs.interfaceLanguage, langs.targetLanguage)))
+  ) {
+    naturalNote = "";
+  }
+
   return {
     assistantMessage: withHelper(withoutStrayHangul(reply, langs), (parsed as { helper?: unknown }).helper, langs, options.bilingual),
     spokenReply: withoutStrayHangul(spoken, langs),
-    correction: { corrected, natural, explanation },
+    correction: { corrected, natural, explanation, ...(naturalNote ? { naturalNote } : {}) },
   };
 }
 

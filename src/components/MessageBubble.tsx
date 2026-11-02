@@ -22,6 +22,11 @@ type MessageBubbleProps = {
    * a chip under the line opens it. Ignored while `correction` is shown.
    */
   correctionChip?: { label: string; busyLabel: string; busy: boolean; onOpen: () => void } | null;
+  /**
+   * 맞게 썼지만 더 자연스러운 말(사용자 2026-11-02). 닫혀 있으면 💡 칩, 열리면 그 줄 + 한 줄 이유.
+   * 틀린 줄이면 고친 문장 아래에 이어서.
+   */
+  naturalTip?: { label: string; text: string; note: string; open: boolean; onOpen: () => void } | null;
   /** Conversational reading in the UI language — not a second translation */
   reading?: string;
   pickMode?: boolean;
@@ -88,6 +93,7 @@ export function MessageBubble({
   analyzeUserLine = false,
   correction,
   correctionChip,
+  naturalTip,
   reading,
   pickMode = false,
   isWordSaved,
@@ -228,6 +234,41 @@ export function MessageBubble({
                 isUser ? "text-neutral-800" : ""
               }`}
             />
+          </div>
+        ) : null}
+
+        {naturalTip && !naturalTip.open ? (
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              naturalTip.onOpen();
+            }}
+            data-natural-chip
+            className={`mt-2 inline-flex items-center gap-1 rounded-full border border-good/50 bg-good/15 px-2.5 py-0.5 text-caption ${
+              isUser ? "text-slate-900" : "text-emerald-100"
+            }`}
+          >
+            <span aria-hidden="true">💡</span>
+            {naturalTip.label}
+          </button>
+        ) : null}
+
+        {naturalTip?.open ? (
+          <div
+            data-natural-tip
+            className={`mt-2 border-t pt-2 ${isUser ? "border-slate-600" : "border-white/10"}`}
+          >
+            <p className={`text-meta ${isUser ? "text-slate-600" : "text-slate-400"}`}>💡 {naturalTip.label}</p>
+            <AnalyzableEnglish
+              sentence={naturalTip.text}
+              tone={tone}
+              className={`text-sm leading-relaxed ${isUser ? "text-slate-800" : ""}`}
+              sentenceRail={false}
+            />
+            {naturalTip.note ? (
+              <p className={`mt-1 text-meta leading-snug ${isUser ? "text-slate-600" : "text-slate-400"}`}>{naturalTip.note}</p>
+            ) : null}
           </div>
         ) : null}
 

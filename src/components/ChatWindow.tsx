@@ -92,6 +92,8 @@ type CorrectionResult = {
   natural: string;
   explanation: string;
   hasError: boolean;
+  /** 왜 natural이 더 자연스러운지 한 줄(서버 naturalNote, 2026-11-02). */
+  naturalNote?: string;
 };
 
 type ExpressionResult = HowToSayExpression;
@@ -114,6 +116,8 @@ type ChatTurn = {
   ownLanguage?: boolean;
   /** The folded correction was opened ("눌러서 보기"). */
   correctionOpen?: boolean;
+  /** 더 자연스러운 말을 열어 봄. */
+  naturalOpen?: boolean;
   /** 헷갈렸던 표현·문장구조를 이 줄에서 맞게 다시 씀(서버 curriculum/reuse.ts). */
   reused?: string[];
   /** The check model is looking at this correction right now. */
@@ -137,6 +141,7 @@ type ChatModeApiResponse = {
     corrected: string;
     natural: string;
     explanation: string;
+    naturalNote?: string;
   };
 };
 
@@ -264,7 +269,20 @@ function normalizeCorrectionResult(
           ? explanation
           : "",
     hasError: aligned.hasError,
+    // 맞게 쓴 줄의 더 자연스러운 말(2026-11-02): 서버 한 줄, 없으면 모델이 문체만 바꾸며 쓴 설명.
+    naturalNote:
+      correction?.naturalNote?.trim() || (!aligned.hasError ? explanation : "") || "",
   };
+}
+
+/**
+ * 맞게 썼지만 원어민이 더 자연스럽게 말하는 꼴이 있을 때 그 줄(사용자 2026-11-02 "맞는 말을 했지만 더 자연스럽거나 깔끔한 표현").
+ * 틀린 줄이면 고친 문장과 다를 때만(고친 문장을 연 뒤 함께 보임).
+ */
+function naturalAlternative(original: string, result: CorrectionResult): string | null {
+  const n = substantiveNorm(result.natural);
+  if (!n || n === substantiveNorm(original) || n === substantiveNorm(result.corrected)) return null;
+  return result.natural.trim();
 }
 
 function shouldShowCorrectionCard(
@@ -1972,6 +1990,23 @@ export function ChatWindow({
                 turn.correctionResult.hasError &&
                 shouldShowCorrectionCard(turn.userMessage, turn.correctionResult),
             );
+            const correctionShown = hasCorrection && (correctionView === "auto" || Boolean(turn.correctionOpen));
+            const naturalLine =
+              turn.mode === "chat" && !turn.ownLanguage && !turn.suppressCorrectionCard && turn.correctionResult
+                ? naturalAlternative(turn.userMessage, turn.correctionResult)
+                : null;
+            // 틀린 줄은 고친 문장을 본 뒤에만 함께, 맞는 줄은 그 자체로(보는 방식은 고친 문장과 같은 설정).
+            const naturalTip =
+              naturalLine && (!hasCorrection || correctionShown)
+                ? {
+                    label: ui.chatNaturalChip,
+                    text: naturalLine,
+                    note: turn.correctionResult?.naturalNote || "",
+                    open: correctionView === "auto" || Boolean(turn.naturalOpen) || hasCorrection,
+                    onOpen: () =>
+                      setTurns((previous) => previous.map((t) => (t.id === turn.id ? { ...t, naturalOpen: true } : t))),
+                  }
+                : undefined;
             return (
               <article key={turn.id} className="space-y-1.5 sm:space-y-2">
                 {turn.callEvent?.kind === "ended" ? (
@@ -2009,6 +2044,7 @@ export function ChatWindow({
                           }
                         : undefined
                     }
+                    naturalTip={naturalTip}
                     correctionChip={
                       hasCorrection && correctionView === "tap" && !turn.correctionOpen
                         ? {

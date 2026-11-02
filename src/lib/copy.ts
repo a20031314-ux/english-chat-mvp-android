@@ -38,6 +38,7 @@ const generatedRoleplayOverlay = {
  */
 const generatedChatOverlay = {
   chatCorrectionChip: "Something to fix",
+  chatNaturalChip: "More natural",
   chatCorrectionChecking: "Checking…",
   chatCorrectionView: "Corrections",
   chatCorrectionViewTap: "Tap to see",
@@ -2474,6 +2475,7 @@ export const copy = {
     startNewSession: "새 대화 시작",
     endSession: "세션 종료",
     chatCorrectionChip: "고칠 곳이 있어요",
+    chatNaturalChip: "더 자연스럽게",
     chatCorrectionChecking: "확인하는 중…",
     chatCorrectionView: "고친 문장",
     chatCorrectionViewTap: "눌러서 보기",
@@ -4024,6 +4026,7 @@ export const copy = {
     startNewSession: "Start New Session",
     endSession: "End Session",
     chatCorrectionChip: "Something to fix",
+    chatNaturalChip: "More natural",
     chatCorrectionChecking: "Checking…",
     chatCorrectionView: "Corrections",
     chatCorrectionViewTap: "Tap to see",
@@ -5576,6 +5579,7 @@ export const copy = {
     startNewSession: "Start New Session",
     endSession: "Finalizar sesion",
     chatCorrectionChip: "Hay algo que corregir",
+    chatNaturalChip: "Más natural",
     chatCorrectionChecking: "Revisando…",
     chatCorrectionView: "Correcciones",
     chatCorrectionViewTap: "Tocar para ver",
