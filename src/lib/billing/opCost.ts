@@ -97,7 +97,8 @@ export const OP_COST: Record<string, OpCost> = {
   recallPrompts: estimated("translate", { input: 600, output: 500 }),
   // 문장구조 설명 세 줄 + 주고받기 세 번 만들기 + 뜻 아홉 줄 옮기기(2026-10-30 어림), 틀 × 앱 언어마다 한 번.
   frameLesson: estimated("translate", { input: 700, output: 700 }),
-  qbankGrow: estimated("translate", { input: 500, output: 400 }),
+  // 출력에 Haiku 앞 생각 몫을 얹음(2026-11-02 낱말 꼴 오답 — 운영에서 1600 한도를 생각으로 다 쓴 빈 답 확인).
+  qbankGrow: estimated("translate", { input: 700, output: 1500 }),
   qbankSeed: estimated("translate", { input: 500, output: 400 }),
   qbankOffer: estimated("translate", { input: 300, output: 60 }),
   wordAdd: estimated("translate", { input: 300, output: 120 }),

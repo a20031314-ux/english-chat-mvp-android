@@ -67,7 +67,8 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
   const decoysHave = Object.values(entry.decoys).flat().map((d) => d.d);
   const completion = await completeChat(client, "translate", {
     temperature: 0.8,
-    max_tokens: 1600,
+    // Haiku가 먼저 생각하면 그 몫도 한도에 든다 — 1600이면 낱말 꼴 지시(2026-11-02)에서 빈 답(finish length)이 잦아 넉넉히.
+    max_tokens: 6000,
     messages: [
       {
         role: "system",
