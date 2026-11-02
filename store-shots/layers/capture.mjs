@@ -89,8 +89,26 @@ async function quizbank(learn, stage, prefix, wrongFirst = false, pick = null) {
     if (kind === "choose") {
       const options = q.locator("button.rounded-xl");
       // 같은 사용자·같은 날이면 첫 고르기 문제가 같다 — 앞 판에서 본 정답(pick)을 고른다.
-      const target = pick ? options.filter({ hasText: pick }).first() : options.nth(right ? 0 : 1);
-      await ((await target.count()) ? target : options.first()).click().catch(() => {});
+      // 악센트·대소문자를 빼고 비교(Él·El) — 못 찾으면 고르지 않고 실패로 남긴다(오답 화면을 찍지 않게).
+      const norm = (text) => String(text).normalize("NFD").replace(/\p{M}/gu, "").trim().toLowerCase();
+      let index = right ? 0 : 1;
+      // 문제의 정답은 화면 부품(React)이 들고 있는 question.answer에서 읽는다 — 찍을 때만, 앱은 그대로.
+      const answer = await q.evaluate((el) => {
+        const key = Object.keys(el).find((k) => k.startsWith("__reactFiber$"));
+        for (let f = key ? el[key] : null; f; f = f.return) {
+          const qq = f.memoizedProps?.question;
+          if (qq && Array.isArray(qq.options) && typeof qq.answer === "number") return qq.options[qq.answer];
+        }
+        return null;
+      }).catch(() => null);
+      const want = answer ?? pick;
+      if (want) {
+        const texts = await options.allInnerTexts().catch(() => []);
+        const found = texts.findIndex((text) => norm(text) === norm(want));
+        if (found >= 0) index = right ? found : texts.findIndex((_, i) => i !== found);
+        else console.log(`정답 "${want}"을 보기에서 못 찾음: ${texts.join(" / ")}`);
+      }
+      await options.nth(Math.max(0, index)).click().catch(() => {});
       await wait(page, 600);
       correct = (await q.locator("button.border-good").first().innerText().catch(() => "")).trim() || null;
     } else {
@@ -210,11 +228,7 @@ try {
   if (want("lesson")) await lesson(R.lesson2, 4, 0, "lesson2");
   if (want("lesson")) await lesson(R.lesson1, 3, 1, "lesson1");
   // 첫 판은 정답을 알아내고, 둘째 판(같은 사용자 — 문제가 같음)에서 정답을 골라 찍는다.
-  if (want("quiz")) {
-    const right = await quizbank(R.quiz, 4, "quiz-probe");
-    console.log("정답:", right);
-    await quizbank(R.quiz, 4, "quiz", false, right);
-  }
+  if (want("quiz")) await quizbank(R.quiz, 4, "quiz");
   if (want("review")) await quizbank(R.review, 3, "review", true);
   if (want("call")) await pastCall(R.past, "past", PAST[R.past] ?? PAST_EN);
   const coach = COACH[R.call] ?? COACH.ja;

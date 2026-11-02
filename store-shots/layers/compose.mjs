@@ -28,6 +28,11 @@ function pagesFor(ui) {
   const R = rolesFor(ui);
   const raw = path.join(root, "tmp", "store-layers", ui);
   const uri = (name) => `data:image/png;base64,${fs.readFileSync(path.join(raw, `${name}.png`)).toString("base64")}`;
+  /** 조각 그림을 폭 w로 줄였을 때 높이(PNG 머리에서). */
+  const heightAt = (name, w) => {
+    const head = fs.readFileSync(path.join(raw, `${name}.png`)).subarray(16, 24);
+    return Math.round((head.readUInt32BE(4) * w) / head.readUInt32BE(0));
+  };
   const fill = (text) => text.replace("{n}", String(SCOPE[R.lesson2]?.[0] ?? 96)).replace("{g}", String(SCOPE[R.quiz]?.[1] ?? 37));
   const bar = (on) =>
     `<div class="bar">${["Stagebank", "Quizbank", C.homeTabTalk].map((name, i) => `<span class="${on.includes(i) ? `on t${i}` : ""}">${name}</span>`).join("")}</div>`;
@@ -42,7 +47,7 @@ function pagesFor(ui) {
     // 1 종합: 세 칸 + 되돌아오는 화살표
     () => `${head(0, [0, 1, 2], [R.lesson1, R.quiz, R.call])}
       <div class="rows">
-        <div class="row"><div class="label"><small class="c0">Stagebank</small>${T.rows[0]}</div>${piece("lesson1-explain", 700, 330, 640, 700)}</div>
+        <div class="row"><div class="label"><small class="c0">Stagebank</small>${T.rows[0]}</div>${piece("lesson1-explain", 700, 330, Math.max(0, heightAt("lesson1-explain", 700) - 400), 700)}</div>
         <div class="arrow">↓</div>
         <div class="row"><div class="label"><small class="c1">Quizbank</small>${T.rows[1]}</div>${piece("quiz-q1", 700, 330, 0, 700)}</div>
         <div class="arrow">↓</div>

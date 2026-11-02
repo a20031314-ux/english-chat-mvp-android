@@ -12,12 +12,14 @@ export const PLAY_FOLDER = {
  * 장마다 그림 속 학습 언어(앱 언어와 겹치지 않게): lesson1 = 1장 Stagebank 칸, quiz = 1·3·8장 Quizbank, lesson2 = 2장 수업,
  * call = 4장 통화(미리 보기 — ja·en 문장만 있음), past = 5장 지난 통화, review = 7·8장 다시 보기.
  */
-const DEFAULT_ROLES = { lesson1: "en", quiz: "es", lesson2: "ja", call: "ja", past: "en", review: "fr" };
+// 2장 수업은 그 앱 언어 뜻풀이가 있는 영어로(일본어 수업은 ko·en 밖 앱 언어에서 뜻이 영어로 나옴 — 2026-11-02 확인).
+const DEFAULT_ROLES = { lesson1: "en", quiz: "es", lesson2: "en", call: "ja", past: "en", review: "fr" };
 export const ROLES = {
+  ko: { lesson2: "ja" },
   en: { lesson1: "es", quiz: "es", lesson2: "ja", call: "ja", past: "ja", review: "fr" },
-  es: { lesson1: "en", quiz: "fr", lesson2: "ja", call: "ja", past: "en", review: "it" },
-  ja: { lesson1: "en", quiz: "es", lesson2: "ko", call: "en", past: "en", review: "fr" },
-  fr: { lesson1: "en", quiz: "es", lesson2: "ja", call: "ja", past: "en", review: "it" },
+  es: { lesson1: "en", quiz: "fr", lesson2: "en", call: "ja", past: "en", review: "it" },
+  ja: { lesson1: "en", quiz: "es", lesson2: "en", call: "en", past: "en", review: "fr" },
+  fr: { lesson1: "en", quiz: "es", lesson2: "en", call: "ja", past: "en", review: "it" },
 };
 export const rolesFor = (ui) => ({ ...DEFAULT_ROLES, ...(ROLES[ui] ?? {}) });
 
@@ -75,7 +77,7 @@ export const COPY = {
       ["Practice until\nit sticks", "About 7,000 words · {g} grammar points\nMisses, weak spots and fading words first"],
       ["Talk out loud\nwith an AI tutor", "Only big mistakes get flagged — then say it again"],
       ["After the call,\njust what to fix", "What you meant, as a correct sentence"],
-      ["Learn with people\nstudying the same language", "Group calls · Group chats · Room"],
+      ["Learn with others\nstudying it too", "Group calls · Group chats · Room"],
       ["Mistakes come back\nas quizzes", "Lines fixed in calls → that pattern’s lesson · Review"],
       ["Skip what you know,\npractice what you don’t", "What you need comes first"],
     ],
@@ -159,7 +161,7 @@ export const COPY = {
       ["Maîtrisez les\nstructures de phrase", "{n} structures, une à une"],
       ["Pratiquez jusqu’à\nce que ça reste", "Environ 7 000 mots · {g} points de grammaire\nD’abord vos erreurs et ce que vous oubliez"],
       ["Parlez à voix haute\navec un tuteur IA", "Seules les grosses erreurs sont relevées — redites aussitôt"],
-      ["Après l’appel,\nseulement ce qu’il faut corriger", "Ce que vous vouliez dire, en bonne phrase"],
+      ["Après l’appel,\nl’essentiel à corriger", "Ce que vous vouliez dire, en bonne phrase"],
       ["Avec ceux qui apprennent\nla même langue", "Appels de groupe · Discussions de groupe · Room"],
       ["Vos erreurs reviennent\nen exercices", "Phrases corrigées en appel → leçon de la structure · Révision"],
       ["Passez ce que vous savez,\ntravaillez le reste", "Ce dont vous avez besoin d’abord"],
