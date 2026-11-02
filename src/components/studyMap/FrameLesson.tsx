@@ -1,7 +1,7 @@
 "use client";
 
 import { noteSpot } from "@/lib/resumeSpot";
-import { offerUpNext } from "@/lib/curriculum/upNext";
+import { goingToNextStudy, offerUpNext } from "@/lib/curriculum/upNext";
 import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
@@ -279,7 +279,7 @@ export function FrameLesson({
   // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 한 수업이면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
   const close = () => {
     if (fromToday) fireTodayEnd();
-    else if (finished) void maybeShowInterstitial("scriptEnd");
+    else if (finished && !goingToNextStudy()) void maybeShowInterstitial("scriptEnd");
     // 닫으면 My 아래에 다음 추천 줄(lib/curriculum/upNext.ts, 2026-11-02).
     offerUpNext(itemId);
     onClose();

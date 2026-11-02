@@ -1,6 +1,6 @@
 "use client";
 
-import { offerUpNext } from "@/lib/curriculum/upNext";
+import { goingToNextStudy, offerUpNext } from "@/lib/curriculum/upNext";
 import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
@@ -173,7 +173,7 @@ export function RecallPlayer({
   // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 했으면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
   const close = () => {
     if (fromToday) fireTodayEnd();
-    else if (done) void maybeShowInterstitial("scriptEnd");
+    else if (done && !goingToNextStudy()) void maybeShowInterstitial("scriptEnd");
     offerUpNext(RECALL_ITEM);
     onClose();
   };

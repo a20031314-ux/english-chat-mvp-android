@@ -1,7 +1,7 @@
 "use client";
 
 import { noteSpot } from "@/lib/resumeSpot";
-import { offerUpNext } from "@/lib/curriculum/upNext";
+import { goingToNextStudy, offerUpNext } from "@/lib/curriculum/upNext";
 import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useShowReading, useStageReadings } from "@/lib/curriculum/useStageReadings";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
@@ -560,7 +560,7 @@ function ScriptPlayer({
   // 오늘 할 것에서 연 대본은 항목 사이에 띄우지 않고, 그날 오늘 할 것을 다 끝낸 뒤 한 번(2026-11-01).
   const closeScript = () => {
     if (fromToday) fireTodayEnd();
-    else if (done) void maybeShowInterstitial("scriptEnd");
+    else if (done && !goingToNextStudy()) void maybeShowInterstitial("scriptEnd");
     offerUpNext(script.id);
     onClose();
   };
