@@ -23,6 +23,7 @@
     - 만들어지는 소재(14개 언어 3,298 중): 1칸 2,383 · 2칸 2,855 · 3칸 2,840 · 4칸 2,788.
   - **결과:** 파트별 n/m · 지난번과 비교(CheckResult kind `exam`, sections) — 등급 없음. Logbank "이번 주 확인"은 이것으로 바뀌어 새 앱엔 없음(📈 실력 기록은 그대로).
 - **Stagebank 소재 수업:** 문장구조 수업(FrameLesson)과 같은 화면으로 표현·문법 칸도. 단계 화면 방식 고르기 🔤 표현 · 📐 문법 → 목록 → 하나.
+  - **문법 칸 문제 재료(2026-11-03):** g| 열쇠는 그 문법을 쓰는 같은 단계 문장구조(frame.grammar)의 예문 + 그 틀이 실제로 든 대본 줄만(예전엔 그 문법 표시가 있는 대본의 내 줄 전부 — 과거시제에 "Do you have anything a little cheaper?"). 뒤 단계 대본(earlierGrammar) 줄은 그 단계 틀이 문법 번호를 안 가리켜 빠짐. 문법 한 장(server/grammarLesson.ts gramlesson:v1)이 있으면 수업 퀴즈는 그 세 문제(fixedLessons/toQuiz.ts).
   - 표현·문법 칸은 [설명 › 퀴즈 › 대화](2026-11-03 — 퀴즈는 lessonQuiz, 표현은 상대 줄 예문도 재료, 한 문제만 만들어져도 냄; 예전엔 퀴즈 칸 없음).
 - **표현 → 어휘 탭(2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기"):** Stagebank 🔤 표현 방식은 빠짐. 덩어리 표현(`curriculum/expressionDeck.ts` deckExpressions — 문장구조와 같은 표현 isFrameExpression은 뺌)을 낱말 묶음마다 하나 둘째 자리에(nextExpressions, 새 낱말을 쉬는 중이면 쉼). 원(circle)·단어 시험은 낱말과 같은 셈(열쇠 e|). 재료 = 표현 카드(`server/expressionCards.ts`, GET /api/curriculum/words?expr=단계, 이 폰 exprCards.v2) → quiz.ts registerQuizSources e|(대본 줄보다 앞). 맞히면 서버 known + 표현 장부 "배움"(/api/curriculum/scripts check quiz).
   - 설명은 `/api/curriculum/item-lesson`(`itemlesson:v2` 공유 캐시, op frameLesson): 뜻·쓰임·짧은 설명 줄 둘·주고받기 셋(문법은 내 줄의 학습 조각 piece — 대화 단계 빈칸, 2026-11-03). 예문 넷은 그 소재 재료.

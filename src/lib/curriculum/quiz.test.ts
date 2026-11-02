@@ -123,13 +123,14 @@ test("채우기 퀴즈: 다른 대본 줄까지 재료로, 풀 때마다 다른 
   }
 });
 
-test("문법 칸 퀴즈 재료: 뒤 단계 대본(earlierGrammar)·문장구조 예문까지", async () => {
+test("문법 칸 퀴즈 재료: 그 문법을 쓰는 문장구조 예문 + 그 틀이 든 대본 줄만(2026-11-03 — 표시만 있는 줄은 뺌)", async () => {
   const { quizSources: sourcesOf } = await import("./quiz.ts");
-  const { allScriptsFor } = await import("./stageScripts.ts");
-  const later = allScriptsFor("en").find((script) => (script.earlierGrammar ?? []).length);
-  if (!later) return;
-  const key = `g|${later.earlierGrammar![0]}`;
-  assert.ok(sourcesOf("en", key).some((source) => source.from === later.id));
+  const { allFramesFor } = await import("./frames.ts");
+  const sources = sourcesOf("en", "g|2:0");
+  assert.ok(sources.length >= 3);
+  assert.ok(sources.every((source) => Boolean(source.frame) && Boolean(source.piece)));
+  const linked = new Set(allFramesFor("en").filter((frame) => frame.stage === 2 && (frame.grammar ?? []).includes(0)).map((frame) => frame.id));
+  assert.ok(sources.every((source) => linked.has(source.frame!)));
 });
 
 test("학습 조합: 말하기·읽기 위주로 모양이 바뀌고, 대본 하나를 문제 묶음으로 — 듣고 고르기는 없음(일본어·스페인어·태국어)", async () => {

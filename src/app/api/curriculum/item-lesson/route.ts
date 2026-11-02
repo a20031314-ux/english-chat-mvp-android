@@ -1,13 +1,14 @@
-import { NextRequest } from "next/server";
+import { after, NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { itemLesson, lastLessonRaw, type LessonItem } from "@/lib/server/itemLesson";
+import { grammarLessonFor } from "@/lib/server/grammarLesson";
 import { ladderFor } from "@/lib/curriculum/stages/index";
 import { quizSources } from "@/lib/curriculum/quiz";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 /**
  * GET ?lang=es&ui=ko&key=e|a ver (또는 g|2:1) — Stagebank 표현·문법 칸 수업(설명·주고받기, server/itemLesson.ts).
@@ -48,5 +49,9 @@ export async function GET(request: NextRequest) {
     // 만들기 최대 세 번 + 옮기기 한 번.
     if (metered <= 4) void meterRequest(request, "frameLesson");
   });
-  return jsonWithCors(request, { lesson, ...(!lesson && request.headers.get("x-lesson-debug") === "1" ? { raw: lastLessonRaw } : {}) });
+  // 문법 칸은 검사한 문법 한 장(server/grammarLesson.ts, 2026-11-03)도 — 없으면 응답 뒤에 만들고 이번엔 예전 설명만.
+  const grammar = item.kind === "grammar"
+    ? await grammarLessonFor(language, ui, item.key, (job) => after(job), () => void meterRequest(request, "fixedLesson"))
+    : null;
+  return jsonWithCors(request, { lesson, ...(grammar ? { grammar } : {}), ...(!lesson && request.headers.get("x-lesson-debug") === "1" ? { raw: lastLessonRaw } : {}) });
 }

@@ -351,6 +351,16 @@ function rawSources(language: string, key: string): QuizSource[] {
   }
   if (key.startsWith("g|")) {
     const [stage, index] = key.slice(2).split(":").map(Number);
+    // 그 문법 칸을 쓰는 문장구조(데이터의 frame.grammar) — 문제 재료는 이 틀이 실제로 든 줄만(2026-11-03 사용자 "문법 수업 퀴즈 고쳐":
+    // 대본에 그 문법 표시만 있으면 줄마다 다 넣어 과거시제 수업에 "Do you have anything a little cheaper?"가 나왔다).
+    const linked = allFramesFor(language).filter((frame) => frame.stage === stage && (frame.grammar ?? []).includes(index!));
+    const linkedIds = new Set(linked.map((frame) => frame.id));
+    for (const frame of linked) {
+      for (const example of frame.examples) {
+        const piece = frame.core.find((core) => core && example.text.includes(core));
+        if (piece) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece, frame: frame.id });
+      }
+    }
     for (const script of scripts) {
       // 그 단계에서 그 문법을 쓰는 대본 + 뒤 단계에서 그 문법을 다시 쓰는 대본(earlierGrammar).
       const here = script.stage === stage && (script.grammar ?? []).includes(index!);
@@ -358,16 +368,11 @@ function rawSources(language: string, key: string): QuizSource[] {
       if (!here && !again) continue;
       for (const line of script.lines) {
         if (line.who !== "me") continue;
-        // 문법 칸은 낱말 조각이 없다 — 그 줄의 문장구조 조각이 있으면 고르기 문제에 쓴다.
-        const frameId = (line.frames ?? []).find((id) => frameOf(language, id)?.core.some((core) => core && line.text.includes(core)));
-        const piece = frameId ? frameOf(language, frameId)?.core.find((core) => core && line.text.includes(core)) : undefined;
-        add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece, ...(frameId ? { frame: frameId } : {}) });
+        const frameId = (line.frames ?? []).find((id) => linkedIds.has(id) && frameOf(language, id)?.core.some((core) => core && line.text.includes(core)));
+        if (!frameId) continue;
+        const piece = frameOf(language, frameId)?.core.find((core) => core && line.text.includes(core));
+        add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece, frame: frameId });
       }
-    }
-    // 그 문법 칸을 쓰는 문장구조 예문도.
-    for (const frame of allFramesFor(language)) {
-      if (frame.stage !== stage || !(frame.grammar ?? []).includes(index!)) continue;
-      for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: frame.core.find((core) => core && example.text.includes(core)), frame: frame.id });
     }
     return out;
   }

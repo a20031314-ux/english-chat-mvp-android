@@ -22,6 +22,10 @@ import { markPracticed } from "@/lib/curriculum/practicedToday";
 import type { FixedLesson as Fixed } from "@/lib/curriculum/fixedLessons/check";
 import { fixedQuizQuestions } from "@/lib/curriculum/fixedLessons/toQuiz";
 import { FixedExplain } from "@/components/studyMap/FixedExplain";
+import { GrammarExplain } from "@/components/studyMap/GrammarExplain";
+import type { GrammarLesson } from "@/lib/curriculum/fixedLessons/grammar";
+import { openLesson } from "@/lib/appIntents";
+import { ladderFor } from "@/lib/curriculum/stages/index";
 import { lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { notePool } from "@/lib/curriculum/exam";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
@@ -91,6 +95,8 @@ export function FrameLesson({
   const [lesson, setLesson] = useState<(Lesson & { title?: string }) | null | undefined>(undefined);
   /** 고정 수업(fixedLessons — 조각 대응 표·어순·흔한 실수·퀴즈 셋, 2026-11-02) — 있으면 설명·퀴즈가 이것으로. */
   const [fixed, setFixed] = useState<Fixed | null>(null);
+  /** 문법 칸: 검사한 문법 한 장(server/grammarLesson.ts, 2026-11-03) — 있으면 설명·퀴즈·대화가 이것으로. */
+  const [grammarPage, setGrammarPage] = useState<GrammarLesson | null>(null);
   useEffect(() => {
     let alive = true;
     const url = frame
@@ -100,8 +106,9 @@ export function FrameLesson({
       fetch(url, { headers: entitlementHeaders(isPremium) })
         .then((response) => (response.ok ? response.json() : null))
         .catch(() => null)
-        .then((body: { lesson?: (Lesson & { title?: string }) | null; fixed?: Fixed | null } | null) => {
+        .then((body: { lesson?: (Lesson & { title?: string }) | null; fixed?: Fixed | null; grammar?: GrammarLesson | null } | null) => {
           if (alive && body?.fixed) setFixed(body.fixed);
+          if (alive && body?.grammar) setGrammarPage(body.grammar);
           return body?.lesson ?? null;
         });
     // 처음 만드는 틀은 모델이 한 번 실패할 수 있어 한 번만 다시 묻는다(만든 뒤엔 저장된 것이 바로 옴).
@@ -148,14 +155,21 @@ export function FrameLesson({
     void grown;
     // 표현·문법 칸도 설명 › 퀴즈 › 대화(2026-11-02 사용자 "기본 연습방식은 설명>문제>적용인데 다른 것들은…") — 표현은 상대 줄 예문도 재료로,
     // 한 문제만 만들어져도 냄(문제은행이 예문을 더하면 grown으로 다시 만듦). 못 만들면 예전처럼 설명 › 대화.
-    if (!frame) return lessonQuiz(language, key, { seed, stage: stageOf, later: new Set(shownExamples.map((example) => example.text)), them: key.startsWith("e|"), min: 1 });
+    if (!frame) {
+      // 문법 한 장이 있으면 그 세 문제(그 문법만 묻도록 쓰고 검사한 것).
+      if (grammarPage?.quiz?.length) {
+        const set = fixedQuizQuestions(language, grammarPage.quiz, key);
+        if (set.length) return set;
+      }
+      return lessonQuiz(language, key, { seed, stage: stageOf, later: new Set(shownExamples.map((example) => example.text)), them: key.startsWith("e|"), min: 1 });
+    }
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
     // 세 문제가 같은 답을 세 번 묻지 않게: 빈칸 쓰기 · 틀린 곳 고치기 · 낱말 순서, 문제마다 다른 문장(quiz.ts lessonQuiz, 2026-11-01 U25).
     const made = lessonQuiz(language, `f|${frame.id}`, { seed, stage: frame.stage, later: new Set(shownExamples.map((example) => example.text)) });
     // 고정 수업이 있으면 그 세 문제(쓰기 · 고르기 · 고치기)가 먼저, 모자라면 만든 문제로 채움.
     const set = fixed?.quiz?.length ? fixedQuizQuestions(language, fixed.quiz, `f|${frame.id}`) : [];
     return set.length >= 3 ? set : [...set, ...made].slice(0, Math.max(3, set.length));
-  }, [language, frame, key, stageOf, seed, shownExamples, grown, fixed]);
+  }, [language, frame, key, stageOf, seed, shownExamples, grown, fixed, grammarPage]);
   const [qIndex, setQIndex] = useState(0);
   // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
   const adRound = useNativeRefresh(`q${qIndex}`, step === "quiz");
@@ -166,12 +180,14 @@ export function FrameLesson({
   // ③ 대화
   const turns: LessonTurn[] = useMemo(
     () =>
-      lesson?.turns?.length
+      grammarPage?.turns?.length
+        ? grammarPage.turns
+        : lesson?.turns?.length
         ? lesson.turns
         : frame
           ? fallbackTurns(frame, locale, language)
           : shownExamples.slice(1, 4).map((example) => ({ them: "", themGloss: "", me: example.text, meGloss: quizGloss(example.gloss, locale, language) ?? "" })),
-    [lesson, frame, locale, language, shownExamples],
+    [grammarPage, lesson, frame, locale, language, shownExamples],
   );
   // Meaning line that would show the answer itself (app language = learning language, or an untranslated English gloss) → listen and say instead (RULES 11①, 2026-11-01 review).
   const turnGloss = (one: LessonTurn | undefined) => {
@@ -323,7 +339,13 @@ export function FrameLesson({
   const meaningHead = meaningText.split(/[:：]/)[0]!.replace(/\s*[(（][^)）]*[)）]/g, "").trim();
   // 표현은 표현 그대로, 문법 칸은 서버가 옮긴 이름(없으면 부르는 쪽 이름). 퀴즈·대화 단계에서 뜻이 없으면 표현 이름은 숨김(답이라서).
   // 문법 칸 이름은 서버가 앱 언어로 옮긴 것(lesson.title) 먼저 — 데이터에 ko·en만 있어 다른 앱 언어는 영어로 나오던 것(2026-11-03 ar 확인).
-  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : lesson?.title || subject?.title || "");
+  const frameGrammar = frame
+    ? (frame.grammar ?? []).flatMap((index) => {
+        const one = ladderFor(language)?.stages.find((row) => row.order === frame.stage)?.grammar[index];
+        return one ? [{ key: `g|${frame.stage}:${index}`, name: glossFor(one.name, locale) }] : [];
+      })
+    : [];
+  const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : grammarPage?.name || lesson?.title || subject?.title || "");
   // 닫기(✕·끝 화면 "닫기" 같음): 끝까지 한 수업이면 전면 광고 — 오늘 할 것에서 연 것은 그날 마지막 항목일 때만.
   const close = () => {
     if (fromToday) fireTodayEnd();
@@ -383,13 +405,17 @@ export function FrameLesson({
             {scene ? <SceneCard scene={scene} piece={pieceIn(language, key, scene.line)} tag={tag} /> : null}
             {lesson === undefined ? <p className="text-caption text-slate-400">…</p> : null}
             {/* Structured explanation (2026-10-30, user): meaning → structure (each fixed part and what it does) → usage → examples. */}
+            {grammarPage ? (
+              <GrammarExplain page={grammarPage} ui={ui} language={language} />
+            ) : (
             <section data-lesson-meaning>
               <h3 className="text-meta font-semibold text-slate-400">{ui.aboutMeaning}</h3>
               <p dir="auto" className="mt-0.5 text-note text-ink">
                 {lesson?.meaning || meaningText}
               </p>
             </section>
-            {fixed ? (
+            )}
+            {grammarPage ? null : fixed ? (
               <FixedExplain fixed={fixed} ui={ui} tag={tag} />
             ) : lesson?.parts?.length ? (
               <section data-lesson-parts>
@@ -419,7 +445,17 @@ export function FrameLesson({
                 ))}
               </ul>
             ) : null}
-            {lesson?.usage && !fixed ? (
+            {/* 문장구조 수업에서 그 틀이 쓰는 문법 칸(📐, 누르면 문법 한 장 — 2026-11-03 문법과 문장구조 연결). */}
+            {frame && frameGrammar.length ? (
+              <section data-lesson-grammar className="flex flex-wrap gap-1.5">
+                {frameGrammar.map((one) => (
+                  <button key={one.key} type="button" onClick={() => openLesson({ language, key: one.key })} className="rounded-full border border-line px-3 py-1 text-caption text-slate-200 hover:bg-white/10">
+                    📐 <bdi dir="auto">{one.name}</bdi>
+                  </button>
+                ))}
+              </section>
+            ) : null}
+            {lesson?.usage && !fixed && !grammarPage ? (
               <section data-lesson-usage>
                 <h3 className="text-meta font-semibold text-slate-400">{ui.aboutUsage}</h3>
                 <p dir="auto" className="mt-0.5 text-note text-slate-200">
