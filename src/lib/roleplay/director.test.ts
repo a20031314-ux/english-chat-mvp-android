@@ -5,6 +5,8 @@ import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
 import type { RoleplayScenario } from "./script.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
+  correctionOf,
+  offeredOf,
   DIRECTED_TURN_LIMIT,
   FREE_TURN_LIMIT,
   flattenForOldClients,
@@ -1404,4 +1406,21 @@ test("튜터 수업: 표현 건네기(offer)는 고친 말 ask에서만, 지시�
   const talk = parse({ say: "Nice!", better: "I caught a movie.", retry: "ask", offer: true, assessment: "on_track", next: "free" }, { heard, nodeId: "talk" }, open);
   assert.equal(talk?.offer, undefined);
   assert.match(coachBrief({ coach: true }), /"offer" set to true/);
+});
+
+test("튜터 수업: 건넨 표현(offer)은 고친 말로 세지 않고 💡로 — ja 학습·es 학습도", () => {
+  const heard = "i watched a movie on the weekend";
+  const offered = parse({ say: "You can also say: I caught a movie over the weekend. Try it?", better: "I caught a movie over the weekend.", retry: "ask", offer: true, assessment: "on_track", next: "free" }, { coach: true, heard, nodeId: "talk" }, open);
+  assert.equal(correctionOf(offered), "", "an offered phrase is not a correction");
+  assert.equal(offeredOf(offered), "I caught a movie over the weekend.");
+  const fixed = parse({ say: "I watched a movie. Say it?", better: "I watched a movie.", retry: "ask", assessment: "on_track", next: "free" }, { coach: true, heard: "i watch movie yesterday", nodeId: "talk" }, open);
+  assert.equal(correctionOf(fixed), "I watched a movie.");
+  assert.equal(offeredOf(fixed), "");
+  // 앱 그대로 옮긴 값(서버 파싱을 거치지 않은 꼴)으로도 같은 판단 — 띄어쓰기 없는 언어·영어 아닌 라틴 언어.
+  assert.equal(correctionOf({ better: "週末に映画を見ました。", offer: true }), "");
+  assert.equal(offeredOf({ better: "週末に映画を見ました。", offer: true }), "週末に映画を見ました。");
+  assert.equal(correctionOf({ better: "Fui al cine el fin de semana.", offer: false }), "Fui al cine el fin de semana.");
+  assert.equal(correctionOf({ meant: "Vi una película.", better: "x", offer: true }), "Vi una película.");
+  assert.equal(offeredOf({ meant: "Vi una película.", better: "x", offer: true }), "");
+  assert.equal(correctionOf(null), "");
 });

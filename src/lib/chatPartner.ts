@@ -1,4 +1,5 @@
 import { tutorAbout } from "./tutorAbout.ts";
+import { personaBrief } from "./tutorPersona.ts";
 import {
   getLearningLanguage,
   learningLanguageName,
@@ -72,6 +73,17 @@ export function tutorChoices(code: LearningLanguageCode | string | null | undefi
   return { f: profile.f.givenName, m: profile.m.givenName };
 }
 
+/**
+ * 이 목소리가 그 언어 튜터 중 누구 것인가(여자·남자) — 튜터 목소리가 아니면 null.
+ * /api/tts가 튜터 목소리로 읽을 때 그 사람의 목소리 지시(tutorPersona.ts)를 붙이려고(2026-11-02).
+ */
+export function tutorGenderOfVoice(code: LearningLanguageCode | string | null | undefined, voice: string): TutorGender | null {
+  const profile = PARTNERS[getLearningLanguage(code).code];
+  if (profile.f.voice === voice) return "f";
+  if (profile.m.voice === voice) return "m";
+  return null;
+}
+
 /** 튜터 목소리 — 서버(/api/tts `tutor`)와 통화가 같은 표를 읽는다. */
 export function tutorVoice(code: LearningLanguageCode | string | null | undefined, gender?: TutorGender | null): string {
   return chatPartnerForLanguage(code, gender).voice;
@@ -104,6 +116,8 @@ export function conversationPartnerIdentity(
   const language = learningLanguageName(partner.languageCode);
   // 프로필 소개(lib/tutorAbout.ts, 2026-11-02) — 물으면 같은 이야기를 하게.
   const about = tutorAbout(partner.languageCode, partner.gender, "en");
+  // 성격·말투(lib/tutorPersona.ts, 2026-11-02) — 태도만, 높임·길이·교정 규칙은 그대로.
+  const persona = personaBrief(partner.languageCode, partner.gender);
   // 성별을 말해 둔다 — 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt 등)에서 이름·목소리와 맞게.
-  return `You are ${partner.givenName}, a native ${language} speaker${partner.countryEn ? ` from ${partner.countryEn}` : ""}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " You speak and write Modern Standard Arabic (الفصحى), not any one country's dialect." : ""}${about ? ` Your profile, which the learner can read: "${about}" If they ask about you, keep to it; don't bring it up on your own.` : ""}`;
+  return `You are ${partner.givenName}, a native ${language} speaker${partner.countryEn ? ` from ${partner.countryEn}` : ""}, a ${partner.gender === "f" ? "woman" : "man"} — use the forms a ${partner.gender === "f" ? "woman" : "man"} uses when speaking about yourself. You are the person they are messaging — not a language teacher and not a classroom tutor. Stay in character as ${partner.givenName}.${partner.languageCode === "ar" ? " You speak and write Modern Standard Arabic (الفصحى), not any one country's dialect." : ""}${about ? ` Your profile, which the learner can read: "${about}" If they ask about you, keep to it; don't bring it up on your own.` : ""}${persona ? ` ${persona}` : ""}`;
 }

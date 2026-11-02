@@ -37,6 +37,7 @@ import {
   primeMicrophone,
   type Recorder,
 } from "@/lib/roleplay/listen";
+import { correctionOf, offeredOf } from "@/lib/roleplay/director";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
 import { resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
@@ -426,9 +427,11 @@ export function RoleplayScreen({
       // than a word about something they managed to say.
       // 못 알아들었어요로 부른 차례: 학습자 줄이 없으니 고친 말·막힘 표시를 붙이지 않는다.
       const missedTurn = Boolean(instruction.request.missed);
-      const better = missedTurn ? "" : (direction?.better ?? "");
+      // 튜터 수업의 표현 건네기(offer)는 맞게 말한 줄 — 고친 말(better)이 아니라 💡 더 자연스럽게(smoother)로 붙인다.
       const meant = missedTurn ? "" : (direction?.meant ?? "");
-      const smoother = missedTurn ? "" : (direction?.smoother ?? "");
+      const offered = missedTurn ? "" : offeredOf(direction);
+      const better = missedTurn || meant ? "" : correctionOf(direction);
+      const smoother = missedTurn ? "" : offered || (direction?.smoother ?? "");
       const about = !missedTurn && direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
@@ -448,12 +451,12 @@ export function RoleplayScreen({
         );
       }
       if (!missedTurn) {
-        const waitNext = nextRedo(redo, retry, meant || better);
+        const waitNext = nextRedo(redo, retry, meant || better || offered);
         setRedo(waitNext);
         setCoachCard((current) =>
           nextCoachCard(current, {
             retry,
-            better,
+            better: better || offered,
             meant,
             note: direction?.note,
             offer: direction?.offer,

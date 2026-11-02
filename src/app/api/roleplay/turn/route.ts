@@ -10,6 +10,7 @@ import {
   ROLEPLAY_REACT_CLIENT_HEADER,
   meantForOldClients,
   ROLEPLAY_STREAM_CLIENT_HEADER,
+  correctionOf,
   flattenForOldClients,
   leadFromPartial,
   playableBy,
@@ -220,7 +221,7 @@ export async function POST(request: NextRequest) {
       spoken: true,
       // No direction, no verdict; a direction without a rewrite is a sentence
       // that needed none.
-      corrected: decided ? (decided.meant || decided.better || "") : undefined,
+      corrected: decided ? correctionOf(decided) : undefined,
       responseLatencyMs,
       attempts,
       scenarioId: scenario.id,
@@ -237,7 +238,7 @@ export async function POST(request: NextRequest) {
       try {
         const fresh = await readPack(requestUserId(request), playingPack.language, playingPack.day);
         if (!fresh || fresh.finishedAt) return;
-        const corrected = decided ? Boolean(decided.meant || decided.better) : null;
+        const corrected = decided ? Boolean(correctionOf(decided)) : null;
         const moved = advance(
           fresh,
           {
@@ -264,7 +265,7 @@ export async function POST(request: NextRequest) {
   // Then a mistake of a kind they keep making goes onto the map to learn
   // (curriculum/weakPoints.ts) — after, since both write the map's items.
   after(async () => {
-    const corrected = decided ? (decided.meant || decided.better || "") : "";
+    const corrected = correctionOf(decided);
     await observeMapUse({
       userId: requestUserId(request),
       language: turn.targetLanguage,

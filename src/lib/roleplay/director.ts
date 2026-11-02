@@ -1,5 +1,6 @@
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
+import { personaBrief } from "../tutorPersona.ts";
 import {
   interfaceLanguageName,
   learningLanguageScript,
@@ -227,6 +228,22 @@ export type Direction = {
   /** 튜터 수업: 이번 ask는 고친 게 아니라 더 자연스러운 표현을 건넨 것(말한 건 맞았음) — 화면 카드가 💡로(2026-11-02). */
   offer?: boolean;
 };
+
+/**
+ * 이 차례에 학습자 줄을 실제로 고쳤나 — 고친 문장(meant·better), 없으면 "".
+ * 튜터 수업의 표현 건네기(offer)는 맞게 말한 줄에 건넨 것이라 better에 실려 와도 고친 말이 아니다:
+ * 고친 수·취소선·통화 정리·노트 카드(fileFix)·약점 기록에 들어가지 않는다(점검 2026-11-02).
+ */
+export function correctionOf(direction: Pick<Direction, "better" | "meant" | "offer"> | null | undefined): string {
+  if (!direction) return "";
+  if (direction.meant) return direction.meant;
+  return direction.offer ? "" : (direction.better ?? "");
+}
+
+/** 표현 건네기(offer)로 건넨 문장 — 그 줄 아래 💡 더 자연스럽게(smoother)로 보이고 다시 말해 볼 문장이 된다. */
+export function offeredOf(direction: Pick<Direction, "better" | "meant" | "offer"> | null | undefined): string {
+  return direction?.offer && !direction.meant ? (direction.better ?? "") : "";
+}
 
 /**
  * Says the build can play a turn made of two bank lines.
@@ -637,7 +654,7 @@ export function tutorSystemPrompt(input: {
   const coaching = isCoaching(request, scenario);
   const partner = scenario.openEnded ? chatPartnerForLanguage(scenario.language, request.tutorGender) : null;
   const who = partner
-    ? `You are ${partner.givenName}, the ${role} — a ${partner.gender === "f" ? "woman" : "man"}; when you speak about yourself, use the forms a ${partner.gender === "f" ? "woman" : "man"} uses.`
+    ? `You are ${partner.givenName}, the ${role} — a ${partner.gender === "f" ? "woman" : "man"}; when you speak about yourself, use the forms a ${partner.gender === "f" ? "woman" : "man"} uses. ${personaBrief(partner.languageCode, partner.gender)}`.trim()
     : `You are the ${role}.`;
   const fixed = `${who} ${scenario.setting}
 

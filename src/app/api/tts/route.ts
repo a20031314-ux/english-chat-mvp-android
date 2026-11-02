@@ -3,7 +3,8 @@ import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/c
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
-import { serverTutorGender, tutorVoice } from "@/lib/chatPartner";
+import { serverTutorGender, tutorGenderOfVoice, tutorVoice } from "@/lib/chatPartner";
+import { personaVoice } from "@/lib/tutorPersona";
 import { isTtsVoice } from "@/lib/roleplay/voices";
 import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralSpeed, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
@@ -112,7 +113,13 @@ async function synthesize(
   const voice = isTtsVoice(rawVoice)
     ? rawVoice
     : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), serverTutorGender(coerceLanguageCode(speechLangPrefix(lang)), rawTutor));
-  const delivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
+  // 튜터 목소리면 그 사람의 목소리·어조 지시를 덧붙인다(lib/tutorPersona.ts, 2026-11-02) — 예전 엔진(id·th, Voxtral 실패 때)과
+  // Voxtral 참고 소리 만들기(scripts/voice-refs.mjs)가 같은 사람으로 읽게.
+  const speechLanguage = coerceLanguageCode(speechLangPrefix(lang));
+  const tutorWho = tutorGenderOfVoice(speechLanguage, voice);
+  const character = tutorWho ? personaVoice(speechLanguage, tutorWho) : "";
+  const baseDelivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
+  const delivery = character ? `${baseDelivery}\n\nThe speaker: ${character}` : baseDelivery;
   const shared = mayBeShared(request, rawVoice);
 
   // 목소리 후보 Voxtral(점검 사용자만, 2026-11-01 — 통화 원가 낮추기 비교): x-tts-engine: voxtral, 목소리는 x-tts-voxtral-voice(slug·id),
