@@ -11,7 +11,7 @@ const locales = process.argv[2] ? process.argv[2].split(",") : LOCALES;
 const learnFor = (locale) => (locale === "en" ? "es" : "en");
 const PORT = Number(process.env.PORT || 4560);
 const server = await serve(PORT);
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 const work = path.join(ROOT, "tmp", "bank-shots");
 fs.mkdirSync(work, { recursive: true });
 
@@ -67,19 +67,26 @@ for (const locale of locales) {
   await wait(3000);
   const stage = page.locator('[data-my-layer="stage"]').first();
   await stage.scrollIntoViewIfNeeded();
-  await save("bank-stage-today", stage);
+  // Stagebank = 맨 위 오늘 할 것 + 그 아래 단계 화면이 늘 펼쳐 있음(2026-11-02) — 칸 머리부터 오늘 할 것까지만.
+  const stageBox = await stage.boundingBox();
+  const todayBox = await page.locator("[data-stage-today]").first().boundingBox();
+  if (stageBox && todayBox) await save("bank-stage-today", null, { x: stageBox.x, y: Math.max(0, stageBox.y), width: stageBox.width, height: Math.min(844, todayBox.y + todayBox.height + 12) - Math.max(0, stageBox.y) });
+  else await save("bank-stage-today", stage);
   // 문장구조 수업(설명 › 퀴즈 › 대화) — 화면 전체.
   await page.locator("[data-today-current]").first().click().catch(() => {});
   await wait(6000);
   await save("bank-stage-lesson");
   await close();
-  // 단계 화면(사다리·연습 방식·다음 단계까지).
-  await page.locator("[data-peek-stage]").first().click().catch(() => {});
-  await wait(2500);
-  await stage.scrollIntoViewIfNeeded();
-  await save("bank-stage-ladder", stage);
-  await page.locator("[data-back-today]").first().click().catch(() => {});
-  await wait(1000);
+  // 단계 화면(사다리·연습 방식·문장구조 목록 ☑ 이 단계 스킵) — 오늘 할 것 아래에 늘 펼쳐 있음(2026-11-02, 옛 "n단계 ›" 없음).
+  // 닫으면 아래에 뜨는 다음 추천 줄은 그림에 안 들어가게 거둔다.
+  await page.locator("[data-up-next-bar] button[aria-label]").first().click({ timeout: 1500 }).catch(() => {});
+  const view = page.locator("[data-stage-view]").first();
+  // 위에 붙는 칸 이름 줄(sticky)이 단계 사다리를 가리지 않게 이 그림 동안만 숨긴다.
+  await page.evaluate(() => document.querySelectorAll("[data-my-jump]").forEach((el) => { el.style.visibility = "hidden"; }));
+  await view.scrollIntoViewIfNeeded();
+  await wait(1200);
+  await save("bank-stage-ladder", view);
+  await page.evaluate(() => document.querySelectorAll("[data-my-jump]").forEach((el) => { el.style.visibility = ""; }));
   // Quizbank: 문제 → 답한 뒤(뜻·예문·다음) → ⚙.
   // 칸 이름 줄이 탭(2026-11-02) — 그 칸을 누른 뒤에만 그려진다.
   await page.locator('[data-my-jump-to="keep"]').first().click().catch(() => {});
