@@ -1,0 +1,1752 @@
+{
+  "version": 1,
+  "language": "en",
+  "ui": "ko",
+  "lessons": [
+    {
+      "id": "en-f1-01",
+      "pattern": "My name is ___.",
+      "meaning": "제 이름은 ___예요. (처음 만나서 이름 말하기)",
+      "sample": {
+        "text": "My name is Ji-woo.",
+        "gloss": "제 이름은 지우예요."
+      },
+      "map": [
+        {
+          "piece": "My name",
+          "role": "말하는 주제 — '내 이름'",
+          "ui": "제 이름은"
+        },
+        {
+          "piece": "is",
+          "role": "앞과 뒤를 '=' 로 잇는 말(be동사)",
+          "ui": "…예요 / …이에요"
+        },
+        {
+          "piece": "Ji-woo",
+          "role": "이름",
+          "ui": "지우"
+        }
+      ],
+      "order": "한국어는 '제 이름은 [지우]예요'로 '예요'가 맨 끝에 오지만, 영어는 'is'가 이름 앞에 먼저 와요.",
+      "slot": "___ 자리에는 내 이름만 넣어요(성까지 넣어도 돼요).",
+      "reply": "Nice to meet you. (만나서 반가워요) — 상대가 이름을 말하면 이렇게 받아요.",
+      "mistakes": [
+        {
+          "wrong": "My name Ji-woo.",
+          "right": "My name is Ji-woo.",
+          "why": "한국어 '예요'에 해당하는 is를 빼먹기 쉬워요. 영어는 '=' 로 잇는 말이 꼭 있어야 해요."
+        },
+        {
+          "wrong": "I name is Ji-woo.",
+          "right": "My name is Ji-woo.",
+          "why": "I는 '나는', my는 '나의'예요. '내 이름'이니까 my."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "My name ",
+          "after": " Daniel.",
+          "answer": "is",
+          "cue": "제 이름은 다니엘이에요."
+        },
+        {
+          "kind": "choose",
+          "before": "",
+          "after": " name is Maria.",
+          "options": [
+            "My",
+            "I",
+            "Me",
+            "Mine"
+          ],
+          "answer": 0,
+          "cue": "제 이름은 마리아예요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "My name are Min-ho.",
+          "bad": "are",
+          "right": "is",
+          "cue": "제 이름은 민호예요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Hi! I'm Tom. What's your name?",
+          "themGloss": "안녕하세요! 저는 톰이에요. 이름이 뭐예요?",
+          "me": "My name is Su-jin.",
+          "meGloss": "제 이름은 수진이에요."
+        },
+        {
+          "them": "Welcome to the class. Please tell us your name.",
+          "themGloss": "수업에 오신 걸 환영해요. 이름을 말해 주세요.",
+          "me": "Hello, everyone. My name is Jun.",
+          "meGloss": "안녕하세요, 여러분. 제 이름은 준이에요."
+        },
+        {
+          "them": "Sorry, what's your name again?",
+          "themGloss": "죄송한데, 이름이 뭐라고 하셨죠?",
+          "me": "My name is Ha-na. H-A-N-A.",
+          "meGloss": "제 이름은 하나예요. H-A-N-A."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-02",
+      "pattern": "I'm from ___.",
+      "meaning": "저는 ___에서 왔어요. / ___ 출신이에요.",
+      "sample": {
+        "text": "I'm from Korea.",
+        "gloss": "저는 한국에서 왔어요."
+      },
+      "map": [
+        {
+          "piece": "I'm",
+          "role": "I am을 줄인 말 — '나는 …이다'",
+          "ui": "저는 … 이에요"
+        },
+        {
+          "piece": "from",
+          "role": "출발점 — '…에서(부터)'",
+          "ui": "…에서 (왔어요)"
+        },
+        {
+          "piece": "Korea",
+          "role": "나라·도시",
+          "ui": "한국"
+        }
+      ],
+      "order": "한국어는 '[한국]에서 왔어요'로 장소가 먼저지만, 영어는 'from' 뒤에 장소가 와요.",
+      "slot": "___ 자리에는 나라나 도시 이름을 넣어요. 앞에 the는 붙이지 않아요(I'm from Busan).",
+      "reply": "How about you? / Where are you from? — 상대에게 되물을 때.",
+      "mistakes": [
+        {
+          "wrong": "I from Korea.",
+          "right": "I'm from Korea.",
+          "why": "'왔어요'를 동사로 착각해 am을 빼기 쉬워요. 영어는 '나는 한국 출신인 상태다'라서 am이 필요해요."
+        },
+        {
+          "wrong": "I'm came from Korea.",
+          "right": "I'm from Korea. / I came from Korea.",
+          "why": "'왔어요'를 came으로 옮기며 I'm과 겹쳐 썼어요. 출신을 말할 땐 I'm from 하나면 돼요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I'm ",
+          "after": " Vietnam.",
+          "answer": "from",
+          "cue": "저는 베트남에서 왔어요."
+        },
+        {
+          "kind": "choose",
+          "before": "I'm ",
+          "after": " Canada.",
+          "options": [
+            "from",
+            "in",
+            "at",
+            "to"
+          ],
+          "answer": 0,
+          "cue": "저는 캐나다 출신이에요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I from Japan.",
+          "bad": "I",
+          "right": "I'm",
+          "cue": "저는 일본에서 왔어요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Where are you from?",
+          "themGloss": "어디에서 왔어요?",
+          "me": "I'm from Seoul.",
+          "meGloss": "저는 서울에서 왔어요."
+        },
+        {
+          "them": "My home is in Brazil. How about you?",
+          "themGloss": "저는 브라질 사람이에요. 당신은요?",
+          "me": "I'm from Korea. It's far from Brazil!",
+          "meGloss": "저는 한국에서 왔어요. 브라질에서 멀어요!"
+        },
+        {
+          "them": "Your English is good. Are you from the US?",
+          "themGloss": "영어 잘하시네요. 미국에서 왔어요?",
+          "me": "No, I'm from Japan.",
+          "meGloss": "아니요, 저는 일본에서 왔어요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-03",
+      "pattern": "I'm a ___.",
+      "meaning": "저는 ___예요. (직업·신분 말하기)",
+      "sample": {
+        "text": "I'm a nurse.",
+        "gloss": "저는 간호사예요."
+      },
+      "map": [
+        {
+          "piece": "I'm",
+          "role": "I am — '나는 …이다'",
+          "ui": "저는 … 예요"
+        },
+        {
+          "piece": "a / an",
+          "role": "'한 사람의' — 직업 앞에 꼭 붙는 말",
+          "ui": "(한국어엔 없음)"
+        },
+        {
+          "piece": "nurse",
+          "role": "직업",
+          "ui": "간호사"
+        }
+      ],
+      "order": "한국어는 '간호사예요'로 끝나지만, 영어는 'I'm a' 뒤에 직업이 와요.",
+      "slot": "___ 자리에는 직업 하나. 모음 소리(a, e, i, o, u)로 시작하면 an: an engineer, an artist.",
+      "reply": "What do you do? (무슨 일 해요?) — 이렇게 물으면 I'm a ___. 로 답해요.",
+      "mistakes": [
+        {
+          "wrong": "I'm nurse.",
+          "right": "I'm a nurse.",
+          "why": "한국어엔 a 같은 말이 없어서 빼먹기 쉬워요. 영어는 직업 하나를 말할 때 a/an이 꼭 붙어요."
+        },
+        {
+          "wrong": "I'm a engineer.",
+          "right": "I'm an engineer.",
+          "why": "engineer는 '엔' 모음 소리로 시작해서 a 대신 an을 써요. 소리를 이어 말하기 쉽게 하려는 규칙이에요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I'm ",
+          "after": " student.",
+          "answer": "a",
+          "cue": "저는 학생이에요."
+        },
+        {
+          "kind": "choose",
+          "before": "I'm ",
+          "after": " artist.",
+          "options": [
+            "an",
+            "a",
+            "the",
+            "one"
+          ],
+          "answer": 0,
+          "cue": "저는 화가예요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I'm teacher.",
+          "bad": "teacher",
+          "right": "a teacher",
+          "cue": "저는 선생님이에요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "What do you do?",
+          "themGloss": "무슨 일 하세요?",
+          "me": "I'm a cook.",
+          "meGloss": "저는 요리사예요."
+        },
+        {
+          "them": "Do you work at the hospital?",
+          "themGloss": "병원에서 일하세요?",
+          "me": "Yes, I'm a doctor there.",
+          "meGloss": "네, 저는 거기 의사예요."
+        },
+        {
+          "them": "Are you a student?",
+          "themGloss": "학생이에요?",
+          "me": "No, I'm an office worker.",
+          "meGloss": "아니요, 저는 회사원이에요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-04",
+      "pattern": "I work at ___.",
+      "meaning": "저는 ___에서 일해요.",
+      "sample": {
+        "text": "I work at a bank.",
+        "gloss": "저는 은행에서 일해요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "work",
+          "role": "일한다(지금도 늘 하는 일)",
+          "ui": "일해요"
+        },
+        {
+          "piece": "at",
+          "role": "한 지점 — '…에서'",
+          "ui": "…에서"
+        },
+        {
+          "piece": "a bank",
+          "role": "일하는 곳",
+          "ui": "은행"
+        }
+      ],
+      "order": "한국어는 '[은행]에서 일해요'로 장소가 먼저, 영어는 'I work at' 뒤에 장소가 와요.",
+      "slot": "___ 자리에는 일하는 곳. 보통 a/the를 붙여요(a hospital). 단, home은 그냥 at home.",
+      "reply": "Where do you work? (어디서 일해요?) 하고 되물을 수 있어요.",
+      "mistakes": [
+        {
+          "wrong": "My sister work at a school.",
+          "right": "My sister works at a school.",
+          "why": "나·너가 아닌 한 사람(he/she/my sister)이면 동사 끝에 -s를 붙여요."
+        },
+        {
+          "wrong": "I work in home.",
+          "right": "I work at home.",
+          "why": "'집에서'는 영어로 굳어진 표현 at home이에요. in을 쓰면 '집 안에서'처럼 어색해요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I work ",
+          "after": " a hospital.",
+          "answer": "at",
+          "cue": "저는 병원에서 일해요."
+        },
+        {
+          "kind": "choose",
+          "before": "My brother ",
+          "after": " at a hotel.",
+          "options": [
+            "works",
+            "work",
+            "working",
+            "is work"
+          ],
+          "answer": 0,
+          "cue": "제 남동생은 호텔에서 일해요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "She work at a cafe.",
+          "bad": "work",
+          "right": "works",
+          "cue": "그녀는 카페에서 일해요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Where do you work?",
+          "themGloss": "어디서 일하세요?",
+          "me": "I work at a school.",
+          "meGloss": "저는 학교에서 일해요."
+        },
+        {
+          "them": "Are you a nurse?",
+          "themGloss": "간호사세요?",
+          "me": "Yes, I work at a big hospital.",
+          "meGloss": "네, 큰 병원에서 일해요."
+        },
+        {
+          "them": "Do you go to the office every day?",
+          "themGloss": "매일 사무실에 가세요?",
+          "me": "No, I work at home on Mondays.",
+          "meGloss": "아니요, 월요일엔 집에서 일해요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-05",
+      "pattern": "How much is ___?",
+      "meaning": "___ 얼마예요? (값 묻기)",
+      "sample": {
+        "text": "How much is this?",
+        "gloss": "이거 얼마예요?"
+      },
+      "map": [
+        {
+          "piece": "How much",
+          "role": "'얼마나 많이' — 값·양을 묻는 말",
+          "ui": "얼마"
+        },
+        {
+          "piece": "is",
+          "role": "'…이다'(be동사)",
+          "ui": "…예요"
+        },
+        {
+          "piece": "this",
+          "role": "값을 묻는 물건",
+          "ui": "이거"
+        }
+      ],
+      "order": "한국어는 '[이거] 얼마예요?'로 물건이 먼저, 영어는 'How much is'를 먼저 말하고 물건을 끝에 붙여요.",
+      "slot": "___ 자리에는 물건 하나(this, the blue bag). 여러 개면 is 대신 are: How much are these?",
+      "reply": "It's five dollars. (5달러예요) — 값을 말할 땐 It's ___.",
+      "mistakes": [
+        {
+          "wrong": "How much is these shoes?",
+          "right": "How much are these shoes?",
+          "why": "물건이 여러 개(shoes)면 is가 아니라 are를 써요."
+        },
+        {
+          "wrong": "How many is this?",
+          "right": "How much is this?",
+          "why": "값(돈)은 셀 수 없는 양이라 much를 써요. many는 '몇 개'를 셀 때 써요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "How ",
+          "after": " is the ticket?",
+          "answer": "much",
+          "cue": "표는 얼마예요?"
+        },
+        {
+          "kind": "choose",
+          "before": "How much ",
+          "after": " these apples?",
+          "options": [
+            "are",
+            "is",
+            "do",
+            "does"
+          ],
+          "answer": 0,
+          "cue": "이 사과들 얼마예요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "How many is the coffee?",
+          "bad": "many",
+          "right": "much",
+          "cue": "커피 얼마예요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "Can I help you?",
+          "themGloss": "도와드릴까요?",
+          "me": "Yes, how much is this hat?",
+          "meGloss": "네, 이 모자 얼마예요?"
+        },
+        {
+          "them": "We have tea and coffee.",
+          "themGloss": "차랑 커피가 있어요.",
+          "me": "How much is a tea?",
+          "meGloss": "차 한 잔에 얼마예요?"
+        },
+        {
+          "them": "The bus to the airport leaves at nine.",
+          "themGloss": "공항 가는 버스는 아홉 시에 떠나요.",
+          "me": "Great. How much is the ticket?",
+          "meGloss": "좋아요. 표는 얼마예요?"
+        }
+      ]
+    },
+    {
+      "id": "en-f1-06",
+      "pattern": "Can I have ___, please?",
+      "meaning": "___ 주시겠어요? (가게·식당에서 달라고 하기)",
+      "sample": {
+        "text": "Can I have water, please?",
+        "gloss": "물 좀 주시겠어요?"
+      },
+      "map": [
+        {
+          "piece": "Can I",
+          "role": "'제가 …해도 될까요?' — 허락을 구하는 말",
+          "ui": "…주시겠어요?"
+        },
+        {
+          "piece": "have",
+          "role": "'갖다, 받다'",
+          "ui": "(받다)"
+        },
+        {
+          "piece": "water",
+          "role": "받고 싶은 것",
+          "ui": "물"
+        },
+        {
+          "piece": "please",
+          "role": "부드럽게 만드는 말",
+          "ui": "좀"
+        }
+      ],
+      "order": "한국어는 '[물] 좀 주시겠어요?'로 물건이 먼저, 영어는 'Can I have' 뒤에 물건, 맨 끝에 please.",
+      "slot": "___ 자리에는 받고 싶은 것(water, the menu, two bags).",
+      "reply": "Sure, here you are. (네, 여기요) — 상대가 이렇게 건네줘요.",
+      "mistakes": [
+        {
+          "wrong": "Can you have water, please?",
+          "right": "Can I have water, please?",
+          "why": "한국어 '주시겠어요?'는 상대가 주어 같지만, 영어는 '내가 받아도 될까요?'라서 I를 써요."
+        },
+        {
+          "wrong": "Can I has the menu, please?",
+          "right": "Can I have the menu, please?",
+          "why": "can 뒤에는 동사 원래 꼴이 와요. has로 바꾸지 않아요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "Can I ",
+          "after": " a receipt, please?",
+          "answer": "have",
+          "cue": "영수증 주시겠어요?"
+        },
+        {
+          "kind": "choose",
+          "before": "Can ",
+          "after": " have two bags, please?",
+          "options": [
+            "I",
+            "you",
+            "me",
+            "my"
+          ],
+          "answer": 0,
+          "cue": "봉투 두 개 주시겠어요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "Can I having the menu, please?",
+          "bad": "having",
+          "right": "have",
+          "cue": "메뉴판 좀 주시겠어요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "Hello, what would you like?",
+          "themGloss": "안녕하세요, 뭘 드릴까요?",
+          "me": "Can I have a coffee, please?",
+          "meGloss": "커피 한 잔 주시겠어요?"
+        },
+        {
+          "them": "Here is your food.",
+          "themGloss": "음식 나왔습니다.",
+          "me": "Thank you. Can I have some water, please?",
+          "meGloss": "감사해요. 물 좀 주시겠어요?"
+        },
+        {
+          "them": "That's ten dollars.",
+          "themGloss": "10달러입니다.",
+          "me": "OK. Can I have a bag, please?",
+          "meGloss": "네. 봉투 하나 주시겠어요?"
+        }
+      ]
+    },
+    {
+      "id": "en-f1-07",
+      "pattern": "Where is ___?",
+      "meaning": "___ 어디에 있어요? (위치 묻기)",
+      "sample": {
+        "text": "Where is the station?",
+        "gloss": "역이 어디예요?"
+      },
+      "map": [
+        {
+          "piece": "Where",
+          "role": "'어디'",
+          "ui": "어디"
+        },
+        {
+          "piece": "is",
+          "role": "'있다'(be동사)",
+          "ui": "…에 있어요"
+        },
+        {
+          "piece": "the station",
+          "role": "찾는 곳",
+          "ui": "역"
+        }
+      ],
+      "order": "한국어는 '[역이] 어디예요?'로 장소가 먼저, 영어는 'Where is'를 먼저 말하고 장소를 끝에 붙여요.",
+      "slot": "___ 자리에는 찾는 곳. 서로 아는 그곳이라 보통 the를 붙여요(the bathroom).",
+      "reply": "It's next to ___. / It's over there. — 이렇게 위치를 알려 줘요.",
+      "mistakes": [
+        {
+          "wrong": "Where the station is?",
+          "right": "Where is the station?",
+          "why": "묻는 문장은 is를 앞으로 보내요. 한국어처럼 끝에 두면 질문이 아니라 평서문 순서가 돼요."
+        },
+        {
+          "wrong": "Where is bathroom?",
+          "right": "Where is the bathroom?",
+          "why": "서로 아는 그 장소를 말할 땐 the를 붙여요. 한국어엔 없는 말이라 잘 빠져요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "",
+          "after": " is the bus stop?",
+          "answer": "Where",
+          "cue": "버스 정류장이 어디예요?"
+        },
+        {
+          "kind": "choose",
+          "before": "Where ",
+          "after": " the bank?",
+          "options": [
+            "is",
+            "are",
+            "do",
+            "be"
+          ],
+          "answer": 0,
+          "cue": "은행이 어디예요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "Where the hotel is?",
+          "bad": "the hotel is",
+          "right": "is the hotel",
+          "cue": "호텔이 어디예요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "Can I help you?",
+          "themGloss": "도와드릴까요?",
+          "me": "Yes, where is the train station?",
+          "meGloss": "네, 기차역이 어디예요?"
+        },
+        {
+          "them": "Welcome to the museum.",
+          "themGloss": "박물관에 오신 걸 환영해요.",
+          "me": "Thank you. Where is the cafe?",
+          "meGloss": "감사해요. 카페는 어디 있어요?"
+        },
+        {
+          "them": "I'm new in this town, too.",
+          "themGloss": "저도 이 동네가 처음이에요.",
+          "me": "Oh, then where is the map?",
+          "meGloss": "아, 그럼 지도는 어디 있어요?"
+        }
+      ]
+    },
+    {
+      "id": "en-f1-08",
+      "pattern": "It's next to ___.",
+      "meaning": "___ 옆에 있어요. (위치 알려 주기)",
+      "sample": {
+        "text": "It's next to the bank.",
+        "gloss": "은행 옆에 있어요."
+      },
+      "map": [
+        {
+          "piece": "It's",
+          "role": "It is — '그것은 …에 있다'",
+          "ui": "(그건) …있어요"
+        },
+        {
+          "piece": "next to",
+          "role": "'…의 바로 옆'",
+          "ui": "…옆에"
+        },
+        {
+          "piece": "the bank",
+          "role": "기준이 되는 곳",
+          "ui": "은행"
+        }
+      ],
+      "order": "한국어는 '[은행] 옆에'로 기준이 먼저, 영어는 'next to' 뒤에 기준이 와요.",
+      "slot": "___ 자리에는 기준이 되는 곳(the park, the post office).",
+      "reply": "Thanks! (고마워요) — 길을 알려 주면 이렇게.",
+      "mistakes": [
+        {
+          "wrong": "It's next the bank.",
+          "right": "It's next to the bank.",
+          "why": "next to는 두 낱말이 한 묶음이에요. to를 빼면 '다음'이라는 뜻이 돼 버려요."
+        },
+        {
+          "wrong": "It's the bank next to.",
+          "right": "It's next to the bank.",
+          "why": "한국어 '은행 옆에' 순서대로 쓰면 틀려요. 영어는 next to가 먼저예요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "It's next ",
+          "after": " the park.",
+          "answer": "to",
+          "cue": "공원 옆에 있어요."
+        },
+        {
+          "kind": "choose",
+          "before": "The cafe is ",
+          "after": " the school.",
+          "options": [
+            "next to",
+            "next",
+            "to next",
+            "near of"
+          ],
+          "answer": 0,
+          "cue": "카페는 학교 옆에 있어요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "It's next the hotel.",
+          "bad": "next",
+          "right": "next to",
+          "cue": "호텔 옆에 있어요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Where is the post office?",
+          "themGloss": "우체국이 어디예요?",
+          "me": "It's next to the cafe.",
+          "meGloss": "카페 옆에 있어요."
+        },
+        {
+          "them": "I can't find the bus stop.",
+          "themGloss": "버스 정류장을 못 찾겠어요.",
+          "me": "It's next to that big tree.",
+          "meGloss": "저 큰 나무 옆에 있어요."
+        },
+        {
+          "them": "Is your house near here?",
+          "themGloss": "집이 이 근처예요?",
+          "me": "Yes, it's next to the school.",
+          "meGloss": "네, 학교 옆에 있어요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-09",
+      "pattern": "I like ___.",
+      "meaning": "저는 ___ 좋아해요.",
+      "sample": {
+        "text": "I like coffee.",
+        "gloss": "저는 커피를 좋아해요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "like",
+          "role": "좋아한다",
+          "ui": "좋아해요"
+        },
+        {
+          "piece": "coffee",
+          "role": "좋아하는 것",
+          "ui": "커피를"
+        }
+      ],
+      "order": "한국어는 '[커피를] 좋아해요'로 좋아하는 것이 먼저, 영어는 'like' 뒤에 와요.",
+      "slot": "___ 자리에는 좋아하는 것. 셀 수 있는 건 여러 개 꼴로: I like cats(고양이 전부).",
+      "reply": "Me too! (저도요!) / I don't. (저는 안 좋아해요)",
+      "mistakes": [
+        {
+          "wrong": "I like cat.",
+          "right": "I like cats.",
+          "why": "'고양이(라는 동물)를 좋아해요'처럼 종류 전체를 말할 땐 여러 개 꼴(-s)을 써요."
+        },
+        {
+          "wrong": "I'm like coffee.",
+          "right": "I like coffee.",
+          "why": "'좋아해요'를 '…이에요'처럼 생각해 am을 붙이기 쉬워요. like가 동사라 am이 필요 없어요."
+        },
+        {
+          "wrong": "My brother like books.",
+          "right": "My brother likes books.",
+          "why": "한 사람(he/she/my brother)이 주어면 likes처럼 -s를 붙여요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I ",
+          "after": " Korean food.",
+          "answer": "like",
+          "cue": "저는 한국 음식을 좋아해요."
+        },
+        {
+          "kind": "choose",
+          "before": "I like ",
+          "after": ".",
+          "options": [
+            "dogs",
+            "dog",
+            "a dogs",
+            "doges"
+          ],
+          "answer": 0,
+          "cue": "저는 개를 좋아해요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I'm like music.",
+          "bad": "I'm",
+          "right": "I",
+          "cue": "저는 음악을 좋아해요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Do you want tea or coffee?",
+          "themGloss": "차 드실래요, 커피 드실래요?",
+          "me": "Coffee, please. I like coffee.",
+          "meGloss": "커피요. 저는 커피를 좋아해요."
+        },
+        {
+          "them": "What do you do on weekends?",
+          "themGloss": "주말에 뭐 해요?",
+          "me": "I like movies, so I watch a movie every Saturday.",
+          "meGloss": "영화를 좋아해서 토요일마다 영화를 봐요."
+        },
+        {
+          "them": "This is my cat, Luna.",
+          "themGloss": "얘는 우리 고양이 루나예요.",
+          "me": "She's cute! I like cats.",
+          "meGloss": "귀엽다! 저는 고양이를 좋아해요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-10",
+      "pattern": "I don't ___.",
+      "meaning": "저는 ___ 안 해요. (안 하는 것·싫은 것 말하기)",
+      "sample": {
+        "text": "I don't eat meat.",
+        "gloss": "저는 고기를 안 먹어요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "don't",
+          "role": "do not — '안 …한다'",
+          "ui": "안 …"
+        },
+        {
+          "piece": "eat",
+          "role": "하는 일(동사 원래 꼴)",
+          "ui": "먹어요"
+        },
+        {
+          "piece": "meat",
+          "role": "그 대상",
+          "ui": "고기를"
+        }
+      ],
+      "order": "한국어는 '[고기를] 안 먹어요', 영어는 'don't eat' 다음에 대상이 와요.",
+      "slot": "___ 자리에는 동사 + 나머지(eat meat, work on Sundays). 동사는 늘 원래 꼴.",
+      "reply": "Me neither. (저도 안 해요) — 같이 안 할 때.",
+      "mistakes": [
+        {
+          "wrong": "I not eat meat.",
+          "right": "I don't eat meat.",
+          "why": "영어는 not만 쓰지 않고 do를 데려와 don't로 만들어요."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "why": "한 사람(he/she)이면 don't 대신 doesn't를 써요."
+        },
+        {
+          "wrong": "I don't eats meat.",
+          "right": "I don't eat meat.",
+          "why": "don't 뒤 동사는 늘 원래 꼴이에요. -s를 붙이지 않아요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I ",
+          "after": " work on Sundays.",
+          "answer": "don't",
+          "cue": "저는 일요일에는 일 안 해요."
+        },
+        {
+          "kind": "choose",
+          "before": "He ",
+          "after": " drink coffee.",
+          "options": [
+            "doesn't",
+            "don't",
+            "not",
+            "isn't"
+          ],
+          "answer": 0,
+          "cue": "그는 커피를 안 마셔요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I not like the gym.",
+          "bad": "not",
+          "right": "don't",
+          "cue": "저는 헬스장을 안 좋아해요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Do you want some chicken?",
+          "themGloss": "치킨 좀 먹을래요?",
+          "me": "No, thanks. I don't eat meat.",
+          "meGloss": "괜찮아요. 저는 고기를 안 먹어요."
+        },
+        {
+          "them": "Let's meet on Sunday at the office.",
+          "themGloss": "일요일에 사무실에서 만나요.",
+          "me": "Sorry, I don't work on Sundays.",
+          "meGloss": "죄송해요, 저는 일요일엔 일 안 해요."
+        },
+        {
+          "them": "The movie is in French.",
+          "themGloss": "그 영화는 프랑스어예요.",
+          "me": "Oh no, I don't speak French.",
+          "meGloss": "아이고, 저는 프랑스어를 못 해요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-11",
+      "pattern": "I can ___.",
+      "meaning": "저는 ___ 할 수 있어요.",
+      "sample": {
+        "text": "I can swim.",
+        "gloss": "저는 수영할 수 있어요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "can",
+          "role": "'…할 수 있다'",
+          "ui": "…할 수 있어요"
+        },
+        {
+          "piece": "swim",
+          "role": "할 수 있는 일(동사 원래 꼴)",
+          "ui": "수영"
+        }
+      ],
+      "order": "한국어는 '[수영]할 수 있어요'로 할 일이 먼저, 영어는 'can' 뒤에 할 일이 와요.",
+      "slot": "___ 자리에는 동사 원래 꼴 + 나머지(swim, cook Thai food).",
+      "reply": "Really? Can you ___? — 상대에게 물을 땐 can을 앞으로.",
+      "mistakes": [
+        {
+          "wrong": "I can swims.",
+          "right": "I can swim.",
+          "why": "can 뒤 동사는 늘 원래 꼴이에요. 주어가 he여도 He can swim."
+        },
+        {
+          "wrong": "I can to cook.",
+          "right": "I can cook.",
+          "why": "'…하는 것'을 생각해 to를 넣기 쉽지만, can 바로 뒤엔 to 없이 동사가 와요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I ",
+          "after": " speak a little English.",
+          "answer": "can",
+          "cue": "저는 영어를 조금 할 수 있어요."
+        },
+        {
+          "kind": "choose",
+          "before": "She can ",
+          "after": " a car.",
+          "options": [
+            "drive",
+            "drives",
+            "to drive",
+            "driving"
+          ],
+          "answer": 0,
+          "cue": "그녀는 운전할 수 있어요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I can to drive.",
+          "bad": "to",
+          "right": "(빼기)",
+          "cue": "저는 운전할 수 있어요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "We need someone to cook tonight.",
+          "themGloss": "오늘 밤 요리할 사람이 필요해요.",
+          "me": "I can cook pasta!",
+          "meGloss": "제가 파스타 만들 수 있어요!"
+        },
+        {
+          "them": "This box is very heavy.",
+          "themGloss": "이 상자 정말 무거워요.",
+          "me": "Don't worry. I can help you.",
+          "meGloss": "걱정 마세요. 제가 도와드릴 수 있어요."
+        },
+        {
+          "them": "Do you speak Chinese?",
+          "themGloss": "중국어 하세요?",
+          "me": "Yes, I can speak a little Chinese.",
+          "meGloss": "네, 중국어 조금 할 수 있어요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-12",
+      "pattern": "I can't ___.",
+      "meaning": "저는 ___ 못 해요.",
+      "sample": {
+        "text": "I can't swim.",
+        "gloss": "저는 수영을 못 해요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "can't",
+          "role": "cannot — '…할 수 없다'",
+          "ui": "못 …해요"
+        },
+        {
+          "piece": "swim",
+          "role": "못 하는 일(동사 원래 꼴)",
+          "ui": "수영"
+        }
+      ],
+      "order": "한국어는 '[수영을] 못 해요', 영어는 'can't' 다음에 할 일이 와요.",
+      "slot": "___ 자리에는 동사 원래 꼴 + 나머지(find my phone, hear you).",
+      "reply": "No problem. / I can help. — 못 한다고 하면 이렇게 받아 줘요.",
+      "mistakes": [
+        {
+          "wrong": "I don't can swim.",
+          "right": "I can't swim.",
+          "why": "can은 부정할 때 do를 데려오지 않고 바로 can't가 돼요."
+        },
+        {
+          "wrong": "I can't finds my phone.",
+          "right": "I can't find my phone.",
+          "why": "can't 뒤 동사도 늘 원래 꼴이에요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "Sorry, I ",
+          "after": " hear you.",
+          "answer": "can't",
+          "cue": "죄송해요, 잘 안 들려요."
+        },
+        {
+          "kind": "choose",
+          "before": "I ",
+          "after": " run fast.",
+          "options": [
+            "can't",
+            "don't can",
+            "not can",
+            "can no"
+          ],
+          "answer": 0,
+          "cue": "저는 빨리 못 달려요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I don't can drive.",
+          "bad": "don't can",
+          "right": "can't",
+          "cue": "저는 운전 못 해요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Let's go to the pool!",
+          "themGloss": "수영장 가자!",
+          "me": "Sorry, I can't swim.",
+          "meGloss": "미안, 나 수영 못 해."
+        },
+        {
+          "them": "Where is your phone?",
+          "themGloss": "휴대폰 어디 있어요?",
+          "me": "I don't know. I can't find it.",
+          "meGloss": "모르겠어요. 못 찾겠어요."
+        },
+        {
+          "them": "Can you come to the party on Friday?",
+          "themGloss": "금요일 파티에 올 수 있어요?",
+          "me": "I'm sorry, I can't come.",
+          "meGloss": "미안해요, 못 가요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-13",
+      "pattern": "Can you ___, please?",
+      "meaning": "___ 해 주실 수 있어요? (부탁하기)",
+      "sample": {
+        "text": "Can you help me, please?",
+        "gloss": "좀 도와주실래요?"
+      },
+      "map": [
+        {
+          "piece": "Can you",
+          "role": "'당신이 …할 수 있나요?' — 부탁하는 틀",
+          "ui": "…해 주실 수 있어요?"
+        },
+        {
+          "piece": "help me",
+          "role": "해 달라는 일(동사 원래 꼴)",
+          "ui": "도와"
+        },
+        {
+          "piece": "please",
+          "role": "부드럽게 만드는 말",
+          "ui": "좀"
+        }
+      ],
+      "order": "한국어는 '[도와]주실래요?'로 할 일이 먼저, 영어는 'Can you' 뒤에 할 일, 맨 끝에 please.",
+      "slot": "___ 자리에는 상대가 해 줄 일(say that again, speak slowly).",
+      "reply": "Sure! / Of course. (물론이죠) — 부탁을 들어줄 때.",
+      "mistakes": [
+        {
+          "wrong": "Can I help me, please?",
+          "right": "Can you help me, please?",
+          "why": "상대가 해 주는 일이라 주어는 you예요. Can I는 '내가 해도 될까요?'예요."
+        },
+        {
+          "wrong": "You can help me, please?",
+          "right": "Can you help me, please?",
+          "why": "묻는 문장은 can을 앞으로 보내요. 끝만 올려 말하면 명령처럼 들릴 수 있어요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "Can you ",
+          "after": " slowly, please?",
+          "answer": "speak",
+          "cue": "천천히 말해 주실래요?"
+        },
+        {
+          "kind": "choose",
+          "before": "",
+          "after": " take a photo, please?",
+          "options": [
+            "Can you",
+            "Can I",
+            "You can",
+            "Do you can"
+          ],
+          "answer": 0,
+          "cue": "사진 좀 찍어 주실래요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "Can you says that again, please?",
+          "bad": "says",
+          "right": "say",
+          "cue": "다시 한번 말해 주실래요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "The meeting is at room three-oh-two.",
+          "themGloss": "회의는 302호에서 해요.",
+          "me": "Sorry, can you say that again, please?",
+          "meGloss": "죄송한데, 다시 한번 말해 주실래요?"
+        },
+        {
+          "them": "Hi! Are you OK?",
+          "themGloss": "안녕하세요! 괜찮으세요?",
+          "me": "I'm lost. Can you help me, please?",
+          "meGloss": "길을 잃었어요. 좀 도와주실래요?"
+        },
+        {
+          "them": "Here we are at the beach!",
+          "themGloss": "해변에 도착했어요!",
+          "me": "Can you take a photo of us, please?",
+          "meGloss": "저희 사진 좀 찍어 주실래요?"
+        }
+      ]
+    },
+    {
+      "id": "en-f1-14",
+      "pattern": "I get up at ___.",
+      "meaning": "저는 ___에 일어나요. (하루 시간 말하기)",
+      "sample": {
+        "text": "I get up at six.",
+        "gloss": "저는 여섯 시에 일어나요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "get up",
+          "role": "'일어나다'(두 낱말이 한 동사)",
+          "ui": "일어나요"
+        },
+        {
+          "piece": "at",
+          "role": "시각 앞에 붙는 말 — '…에'",
+          "ui": "…에"
+        },
+        {
+          "piece": "six",
+          "role": "시각",
+          "ui": "여섯 시"
+        }
+      ],
+      "order": "한국어는 '[여섯 시]에 일어나요'로 시각이 먼저, 영어는 'get up at' 뒤에 시각이 와요.",
+      "slot": "___ 자리에는 시각(six, seven thirty). 'o'clock'은 붙여도, 빼도 돼요.",
+      "reply": "That's early! (일찍이네요!) — 일찍 일어난다고 하면.",
+      "mistakes": [
+        {
+          "wrong": "I get up in six.",
+          "right": "I get up at six.",
+          "why": "정확한 시각 앞에는 at을 써요. in은 달·계절(in May), on은 요일(on Monday)."
+        },
+        {
+          "wrong": "My dad get up at five.",
+          "right": "My dad gets up at five.",
+          "why": "한 사람(he/she/my dad)이 주어면 gets처럼 -s를 붙여요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I get up ",
+          "after": " seven.",
+          "answer": "at",
+          "cue": "저는 일곱 시에 일어나요."
+        },
+        {
+          "kind": "choose",
+          "before": "My mom ",
+          "after": " up at five.",
+          "options": [
+            "gets",
+            "get",
+            "getting",
+            "is get"
+          ],
+          "answer": 0,
+          "cue": "우리 엄마는 다섯 시에 일어나요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I get up on six thirty.",
+          "bad": "on",
+          "right": "at",
+          "cue": "저는 여섯 시 반에 일어나요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "What time do you get up?",
+          "themGloss": "몇 시에 일어나요?",
+          "me": "I get up at six thirty.",
+          "meGloss": "저는 여섯 시 반에 일어나요."
+        },
+        {
+          "them": "You look tired today.",
+          "themGloss": "오늘 피곤해 보여요.",
+          "me": "Yes, I get up at five on Mondays.",
+          "meGloss": "네, 월요일엔 다섯 시에 일어나요."
+        },
+        {
+          "them": "Do you get up early on weekends?",
+          "themGloss": "주말에도 일찍 일어나요?",
+          "me": "No, I get up at ten on Sundays.",
+          "meGloss": "아니요, 일요일엔 열 시에 일어나요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-15",
+      "pattern": "Do you have ___?",
+      "meaning": "___ 있어요? (가게에서·사람에게 있는지 묻기)",
+      "sample": {
+        "text": "Do you have a pen?",
+        "gloss": "펜 있어요?"
+      },
+      "map": [
+        {
+          "piece": "Do",
+          "role": "묻는 문장을 여는 말(뜻 없음)",
+          "ui": "(…요?)"
+        },
+        {
+          "piece": "you have",
+          "role": "'당신은 가지고 있다'",
+          "ui": "있어요"
+        },
+        {
+          "piece": "a pen",
+          "role": "있는지 묻는 것",
+          "ui": "펜"
+        }
+      ],
+      "order": "한국어는 '[펜] 있어요?', 영어는 'Do you have' 뒤에 물건이 와요.",
+      "slot": "___ 자리에는 찾는 물건(a pen, water, this in blue).",
+      "reply": "Yes, I do. / No, I don't. — have가 아니라 do로 짧게 답해요.",
+      "mistakes": [
+        {
+          "wrong": "You have a pen?",
+          "right": "Do you have a pen?",
+          "why": "묻는 문장 앞에는 Do를 붙여요. 한국어처럼 끝만 올리면 '펜 있잖아?' 같은 확인이 돼요."
+        },
+        {
+          "wrong": "Do you has a pen?",
+          "right": "Do you have a pen?",
+          "why": "do가 앞에 오면 뒤 동사는 원래 꼴 have예요."
+        },
+        {
+          "wrong": "Are you have water?",
+          "right": "Do you have water?",
+          "why": "'있어요'를 be동사로 옮기기 쉬워요. have는 동사라 do로 물어요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "",
+          "after": " you have postcards?",
+          "answer": "Do",
+          "cue": "엽서 있어요?"
+        },
+        {
+          "kind": "choose",
+          "before": "Do you ",
+          "after": " this in blue?",
+          "options": [
+            "have",
+            "has",
+            "having",
+            "are"
+          ],
+          "answer": 0,
+          "cue": "이거 파란색 있어요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "Are you have a map?",
+          "bad": "Are",
+          "right": "Do",
+          "cue": "지도 있어요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "Please write your name here.",
+          "themGloss": "여기에 이름 써 주세요.",
+          "me": "Sure. Do you have a pen?",
+          "meGloss": "네. 펜 있어요?"
+        },
+        {
+          "them": "Welcome! Can I help you?",
+          "themGloss": "어서 오세요! 도와드릴까요?",
+          "me": "Yes, do you have this bag in black?",
+          "meGloss": "네, 이 가방 검은색 있어요?"
+        },
+        {
+          "them": "Let's eat lunch here.",
+          "themGloss": "여기서 점심 먹어요.",
+          "me": "Good idea. Do you have time now?",
+          "meGloss": "좋아요. 지금 시간 있어요?"
+        }
+      ]
+    },
+    {
+      "id": "en-f1-16",
+      "pattern": "See you ___.",
+      "meaning": "___ 봐요. (헤어질 때 인사)",
+      "sample": {
+        "text": "See you tomorrow.",
+        "gloss": "내일 봐요."
+      },
+      "map": [
+        {
+          "piece": "See you",
+          "role": "'(다시) 너를 보자' — I'll see you를 줄인 말",
+          "ui": "봐요"
+        },
+        {
+          "piece": "tomorrow",
+          "role": "언제(어디서) 볼지",
+          "ui": "내일"
+        }
+      ],
+      "order": "한국어는 '[내일] 봐요'로 때가 먼저, 영어는 'See you' 뒤에 때가 와요.",
+      "slot": "___ 자리에는 때나 장소(later, tomorrow, on Monday, at the station). 요일 앞엔 on, 장소 앞엔 at.",
+      "reply": "See you! / Bye! — 같이 받아 주면 돼요.",
+      "mistakes": [
+        {
+          "wrong": "See you at Monday.",
+          "right": "See you on Monday.",
+          "why": "요일 앞에는 on을 써요(at은 시각·장소 앞). 한국어 '월요일에'의 '에'를 at으로 옮기기 쉬워요."
+        },
+        {
+          "wrong": "See you in tomorrow.",
+          "right": "See you tomorrow.",
+          "why": "tomorrow·later 앞에는 전치사를 붙이지 않아요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "See you ",
+          "after": "!",
+          "answer": "later",
+          "cue": "나중에 봐요!"
+        },
+        {
+          "kind": "choose",
+          "before": "See you ",
+          "after": " Friday.",
+          "options": [
+            "on",
+            "in",
+            "at",
+            "to"
+          ],
+          "answer": 0,
+          "cue": "금요일에 봐요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "See you in tomorrow.",
+          "bad": "in",
+          "right": "(빼기)",
+          "cue": "내일 봐요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "OK, that's all for today. Bye!",
+          "themGloss": "자, 오늘은 여기까지. 안녕!",
+          "me": "Bye! See you tomorrow.",
+          "meGloss": "안녕! 내일 봐요."
+        },
+        {
+          "them": "The next class is on Monday.",
+          "themGloss": "다음 수업은 월요일이에요.",
+          "me": "Great, see you on Monday.",
+          "meGloss": "좋아요, 월요일에 봐요."
+        },
+        {
+          "them": "Let's meet at the station at six.",
+          "themGloss": "여섯 시에 역에서 만나요.",
+          "me": "OK! See you at the station.",
+          "meGloss": "네! 역에서 봐요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-17",
+      "pattern": "I'd like ___, please.",
+      "meaning": "___ 주세요. (원하는 것 공손하게 말하기)",
+      "sample": {
+        "text": "I'd like a coffee, please.",
+        "gloss": "커피 한 잔 주세요."
+      },
+      "map": [
+        {
+          "piece": "I'd like",
+          "role": "I would like — '…를 원합니다'(want보다 공손)",
+          "ui": "…주세요"
+        },
+        {
+          "piece": "a coffee",
+          "role": "원하는 것",
+          "ui": "커피 한 잔"
+        },
+        {
+          "piece": "please",
+          "role": "부드럽게 만드는 말",
+          "ui": "(…요)"
+        }
+      ],
+      "order": "한국어는 '[커피 한 잔] 주세요'로 물건이 먼저, 영어는 'I'd like' 뒤에 물건이 와요.",
+      "slot": "___ 자리에는 원하는 것과 수(a coffee, three apples, two tickets). 여러 개면 -s.",
+      "reply": "Anything else? (더 필요한 거 있으세요?) — 점원이 이어 물어요.",
+      "mistakes": [
+        {
+          "wrong": "I like a coffee, please.",
+          "right": "I'd like a coffee, please.",
+          "why": "'d를 빼면 '나는 커피를 좋아해요'가 돼요. 주문은 I'd like."
+        },
+        {
+          "wrong": "I'd like two ticket, please.",
+          "right": "I'd like two tickets, please.",
+          "why": "두 개 이상이면 -s를 붙여요. 한국어 '표 두 장'엔 복수 표시가 없어서 잘 빠져요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I'd ",
+          "after": " the blue mug, please.",
+          "answer": "like",
+          "cue": "그 파란 머그잔 주세요."
+        },
+        {
+          "kind": "choose",
+          "before": "I'd like three ",
+          "after": ", please.",
+          "options": [
+            "apples",
+            "apple",
+            "an apple",
+            "appless"
+          ],
+          "answer": 0,
+          "cue": "사과 세 개 주세요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I like a tea, please.",
+          "bad": "like",
+          "right": "'d like",
+          "cue": "차 한 잔 주세요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "What would you like?",
+          "themGloss": "뭘 드릴까요?",
+          "me": "I'd like a salad, please.",
+          "meGloss": "샐러드 하나 주세요."
+        },
+        {
+          "them": "How many tickets?",
+          "themGloss": "표 몇 장이요?",
+          "me": "I'd like four tickets, please.",
+          "meGloss": "표 네 장 주세요."
+        },
+        {
+          "them": "We have small and large cups.",
+          "themGloss": "작은 컵이랑 큰 컵이 있어요.",
+          "me": "I'd like a large one, please.",
+          "meGloss": "큰 걸로 주세요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-18",
+      "pattern": "I have ___.",
+      "meaning": "저는 ___ 있어요. (가족·물건·일정 말하기)",
+      "sample": {
+        "text": "I have a cat.",
+        "gloss": "저는 고양이가 한 마리 있어요."
+      },
+      "map": [
+        {
+          "piece": "I",
+          "role": "나는",
+          "ui": "저는"
+        },
+        {
+          "piece": "have",
+          "role": "'가지고 있다'",
+          "ui": "…있어요"
+        },
+        {
+          "piece": "a cat",
+          "role": "가진 것",
+          "ui": "고양이가 (한 마리)"
+        }
+      ],
+      "order": "한국어는 '[고양이가] 있어요'로 가진 것이 먼저, 영어는 'have' 뒤에 와요.",
+      "slot": "___ 자리에는 가진 것과 수(a cat, two brothers, a class at nine).",
+      "reply": "Oh, how old is he? / What's its name? — 이어서 물어보기.",
+      "mistakes": [
+        {
+          "wrong": "I'm have a cat.",
+          "right": "I have a cat.",
+          "why": "'있어요'를 be동사처럼 생각해 am을 붙이기 쉬워요. have가 동사라 am은 빼요."
+        },
+        {
+          "wrong": "She have two kids.",
+          "right": "She has two kids.",
+          "why": "한 사람(he/she)이 주어면 have가 아니라 has예요."
+        },
+        {
+          "wrong": "I have two brother.",
+          "right": "I have two brothers.",
+          "why": "둘 이상이면 -s를 붙여요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "I ",
+          "after": " a class at nine.",
+          "answer": "have",
+          "cue": "아홉 시에 수업이 있어요."
+        },
+        {
+          "kind": "choose",
+          "before": "My sister ",
+          "after": " a dog.",
+          "options": [
+            "has",
+            "have",
+            "is have",
+            "having"
+          ],
+          "answer": 0,
+          "cue": "우리 언니는 개가 있어요."
+        },
+        {
+          "kind": "fix",
+          "wrong": "I'm have three kids.",
+          "bad": "I'm",
+          "right": "I",
+          "cue": "저는 아이가 셋 있어요."
+        }
+      ],
+      "turns": [
+        {
+          "them": "Do you have any pets?",
+          "themGloss": "반려동물 있어요?",
+          "me": "Yes, I have a dog.",
+          "meGloss": "네, 저는 개가 있어요."
+        },
+        {
+          "them": "Tell me about your family.",
+          "themGloss": "가족 이야기 좀 해 주세요.",
+          "me": "I have two sisters and a brother.",
+          "meGloss": "저는 자매가 둘, 남자 형제가 하나 있어요."
+        },
+        {
+          "them": "Let's have lunch at twelve.",
+          "themGloss": "열두 시에 점심 먹어요.",
+          "me": "Sorry, I have a meeting at twelve.",
+          "meGloss": "죄송해요, 열두 시에 회의가 있어요."
+        }
+      ]
+    },
+    {
+      "id": "en-f1-19",
+      "pattern": "What time is ___?",
+      "meaning": "___ 몇 시예요? (시간 묻기)",
+      "sample": {
+        "text": "What time is the class?",
+        "gloss": "수업은 몇 시예요?"
+      },
+      "map": [
+        {
+          "piece": "What time",
+          "role": "'몇 시'",
+          "ui": "몇 시"
+        },
+        {
+          "piece": "is",
+          "role": "'…이다'(be동사)",
+          "ui": "…예요"
+        },
+        {
+          "piece": "the class",
+          "role": "시간을 묻는 일",
+          "ui": "수업은"
+        }
+      ],
+      "order": "한국어는 '[수업은] 몇 시예요?'로 일이 먼저, 영어는 'What time is'를 먼저 말하고 일을 끝에 붙여요.",
+      "slot": "___ 자리에는 시간을 묻는 일(the class, the next bus, lunch). 지금 시각은 it: What time is it?",
+      "reply": "It's at nine. (아홉 시예요) / It's ten thirty. (지금 열 시 반이에요)",
+      "mistakes": [
+        {
+          "wrong": "What time the bus is?",
+          "right": "What time is the bus?",
+          "why": "묻는 문장은 is를 앞으로 보내요."
+        },
+        {
+          "wrong": "What time is now?",
+          "right": "What time is it now?",
+          "why": "'지금 몇 시예요?'의 주어 자리를 it으로 채워야 해요. now만으로는 주어가 없어요."
+        }
+      ],
+      "quiz": [
+        {
+          "kind": "type",
+          "before": "What ",
+          "after": " is the next bus?",
+          "answer": "time",
+          "cue": "다음 버스는 몇 시예요?"
+        },
+        {
+          "kind": "choose",
+          "before": "What time is ",
+          "after": "?",
+          "options": [
+            "it",
+            "now",
+            "this time",
+            "hour"
+          ],
+          "answer": 0,
+          "cue": "지금 몇 시예요?"
+        },
+        {
+          "kind": "fix",
+          "wrong": "What time the movie is?",
+          "bad": "the movie is",
+          "right": "is the movie",
+          "cue": "영화는 몇 시예요?"
+        }
+      ],
+      "turns": [
+        {
+          "them": "We have a meeting tomorrow.",
+          "themGloss": "내일 회의가 있어요.",
+          "me": "OK. What time is the meeting?",
+          "meGloss": "네. 회의는 몇 시예요?"
+        },
+        {
+          "them": "I'm hungry.",
+          "themGloss": "배고파요.",
+          "me": "Me too. What time is lunch?",
+          "meGloss": "저도요. 점심은 몇 시예요?"
+        },
+        {
+          "them": "Oh no, my phone is dead.",
+          "themGloss": "이런, 휴대폰이 꺼졌어요.",
+          "me": "Excuse me, what time is it?",
+          "meGloss": "실례지만, 지금 몇 시예요?"
+        }
+      ]
+    }
+  ]
+}
