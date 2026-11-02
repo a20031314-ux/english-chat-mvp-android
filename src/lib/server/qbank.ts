@@ -73,7 +73,7 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
         role: "system",
         content: `You write quiz material for learners of ${name} at level ${stage} of 5 (1 = absolute beginner). Target: ${target.what}.
 1) Write four NEW short, natural, everyday sentences in ${name} that each contain ${word ? `the word "${target.piece}" — in two of them use it exactly as written, and in the other two (when the word has other forms in ${name}) use a different form of it (another tense, person, number, case, comparative or ending) that the sentence clearly needs` : `"${target.piece}" exactly as written (same letters)`}. Level ${stage}: ${stage <= 1 ? "very short, simple words only" : stage <= 3 ? "short, common words" : "natural everyday length"}. Different situations from each other and from the sentences given. No digits (write numbers as words), no names of real people or brands, nothing rude.
-${word ? `S|<sentence in ${name}>|<plain English translation>|<the form of the word exactly as it appears in the sentence>|<wrong forms>
+${word ? `S|<sentence in ${name}>|<translation into English (always English, whatever the language)>|<the form of the word exactly as it appears in the sentence>|<wrong forms>
 For <wrong forms>: up to three OTHER forms of this same word (same word, different tense/person/number/case/comparative/ending — never a different word, never a misspelling), separated by ";", each grammatically WRONG in this exact sentence. The sentence must give a clear clue (subject, time word, auxiliary, agreement) so that only the form used fits. Leave out any form that would also be correct here. If the word has no other forms in ${name}, leave it empty.` : `S|<sentence in ${name}>|<plain English translation>`}
 2) Write three wrong options for the blank where "${target.piece}" goes: ${key.startsWith("w|") ? `wrong forms a learner might really produce — another form of the same word that does not fit here (conjugation, agreement, part of speech), or a real word of the same kind that is grammatically wrong in this slot. Never a misspelling, a made-up word, or a word that only rhymes or looks alike` : "near misses a learner might plausibly but wrongly use — wrong conjugation, agreement, particle/case/preposition, word order, a look-alike word"}. Each must be wrong in every sentence above. Never an acceptable alternative (no contraction, synonym, politeness variant or spelling variant that is also correct). Must not contain "${target.piece}" and must not be part of it.
 D|<wrong option>
@@ -91,7 +91,9 @@ Answer with exactly four S lines and three D lines, nothing else.`,
     const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());
     // 낱말(w|)은 문장 속 꼴(넷째 칸)이 빈칸 — 다른 꼴로 쓴 문장도 받는다(2026-11-02 사용자 "형태만 달라진 같은 단어로 선지").
     const form = word && cells[3] && cells[3].length <= 40 && cells[1]?.toLocaleLowerCase().includes(cells[3].toLocaleLowerCase()) ? cells[3] : target.piece;
-    if (cells[0] === "S" && cells[1] && cells[2] && acceptItem(entry, cells[1], form, existing)) {
+    // 뜻 칸은 영어여야 한다(2026-11-02 운영 확인 — 낱말 예문 뜻이 러시아어로 온 적 있음): 라틴 글자가 아닌 글자가 섞이면 받지 않는다.
+    const englishGloss = Boolean(cells[2]) && !/[^\p{Script=Latin}\p{P}\p{S}\p{N}\p{Zs}]/u.test(cells[2] ?? "");
+    if (cells[0] === "S" && cells[1] && cells[2] && englishGloss && acceptItem(entry, cells[1], form, existing)) {
       // 조각은 문장 안 그대로의 꼴로(대소문자).
       const at = cells[1].toLocaleLowerCase().indexOf(form.toLocaleLowerCase());
       const piece = cells[1].toLocaleLowerCase().length === cells[1].length ? cells[1].slice(at, at + form.length) : form;
@@ -146,7 +148,7 @@ export async function bankFor(language: string, key: string, stage: number, resu
         for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !entry.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
         entry.decoys[slot] = list.slice(-6);
         // 하나도 못 건졌으면 모델 답을 묶음에 잠깐 남긴다(점검 — 앱에는 안 감, 다음 성장 때 덮임).
-        (entry as BankEntry & { last?: string }).last = !more.items.length || !list.length ? more.raw.slice(0, 800) : "";
+        (entry as BankEntry & { last?: string }).last = !more.items.length || !list.length ? more.raw.slice(0, 2400) : "";
         entry.grownAt = entry.served;
         entry.dayGrows = entry.day === day ? entry.dayGrows + 1 : 1;
         entry.day = day;
