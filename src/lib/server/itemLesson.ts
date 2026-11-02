@@ -2,7 +2,7 @@
  * Stagebank 표현·문법 칸 수업(2026-11-01 설계 "설명은 Stagebank, 문제는 Quizbank", hub/drafts/quiz-pages-2026-11-01.md 2절):
  * 문장구조 수업(server/frameLesson.ts)과 같은 방식 — 소재마다 한 번 Haiku가 ① 뜻·쓰임·짧은 설명 줄(영어)
  * ② 그 소재를 쓰는 주고받기 세 번(상대 줄·내 줄은 학습 언어, 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 옮겨 둔다.
- * 모두가 같이 쓰는 저장(`itemlesson:v1`), 학습자 글 없음. 표현은 내 줄에 그 표현이 그대로 들어야 하고, 연습 예문과 겹치면 안 된다.
+ * 모두가 같이 쓰는 저장(`itemlesson:v2`), 학습자 글 없음. 표현은 내 줄에 그 표현이 그대로 들어야 하고, 연습 예문과 겹치면 안 된다.
  */
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
@@ -51,7 +51,7 @@ E|<one common learner mistake and the right form, one short line>`;
         content: `You teach ${what} to a learner. Explain it in English (only quoted ${name} words in ${name}); no grammar jargon unless needed, do not compare with English grammar:
 ${lines}
 Then write three short, natural exchanges in ${name}: another person says one line, and the learner answers with ONE sentence that uses it${item.kind === "expression" ? ` (the expression written exactly as "${item.name}", once)` : ""}, simple everyday words. Do not repeat the practice sentences given. No names of real people, brands or places, nothing rude.
-T|<other person's line in ${name}>|<its English translation>|<learner's answer in ${name}>|<its English translation>
+T|<other person's line in ${name}>|<its English translation>|<learner's answer in ${name}>|<its English translation>${item.kind === "expression" ? "" : `|<the exact words of the learner's answer, copied letter for letter, that show this grammar point (1 to 3 words, not the whole answer)>`}
 Answer with exactly these lines (one M, one U, two E, three T) and nothing else. Translations are plain translations of the line itself.`,
       },
       { role: "user", content: `${item.kind === "expression" ? "Expression" : "Grammar point"}: ${item.name}\nPractice sentences already used: ${item.examples.join(" / ") || "-"}` },
@@ -70,11 +70,13 @@ Answer with exactly these lines (one M, one U, two E, three T) and nothing else.
     if (cells[0] === "U" && cells[1]) usage = cells[1];
     if (cells[0] === "E" && cells[1] && cells[1] !== "-" && explain.length < 3) explain.push(cells[1]);
     if (cells[0] === "T" && cells.length >= 5 && cells.slice(1, 5).every(Boolean)) {
-      const [, them, themGloss, me, meGloss] = cells as [string, string, string, string, string];
+      const [, them, themGloss, me, meGloss, grammarPiece] = cells as [string, string, string, string, string, string | undefined];
       if (used.has(me)) continue;
       if (item.kind === "expression" && !pieceOf(me, item.name)) continue;
       used.add(me);
-      turns.push({ them, themGloss, me, meGloss });
+      // 대화 단계는 학습 요소만 쓴다(2026-11-03 사용자 "전체 문장을 다 타이핑해야 해 — 학습 요소만"): 표현은 그 표현, 문법은 모델이 짚은 조각(내 줄에 그대로 든 것만).
+      const piece = item.kind === "expression" ? pieceOf(me, item.name) : grammarPiece && grammarPiece !== "-" && me.includes(grammarPiece) && grammarPiece.length < me.length * 0.8 ? grammarPiece : null;
+      turns.push({ them, themGloss, me, meGloss, ...(piece ? { piece } : {}) });
     }
   }
   if (!meaning || turns.length < 2) return null;
@@ -83,11 +85,11 @@ Answer with exactly these lines (one M, one U, two E, three T) and nothing else.
 
 /** 소재 하나의 수업. 앱 언어가 영어가 아니면 설명·뜻을 그 말로. */
 export async function itemLesson(language: string, item: LessonItem, ui: string, uiName: string, onMake?: () => void): Promise<ItemLessonView | null> {
-  const key = `itemlesson:v1:${language}:${item.key}`;
+  const key = `itemlesson:v2:${language}:${item.key}`;
   let lesson = await kvGetJson<FrameLesson>(key).catch(() => null);
   if (!lesson?.turns?.length) {
     // 세 번 다 실패한 소재는 10분 동안 다시 만들지 않는다 — 열 때마다 모델을 세 번 부르지 않게(2026-11-01 변경 감시 리뷰).
-    const failKey = `itemlesson:v1:fail:${language}:${item.key}`;
+    const failKey = `itemlesson:v2:fail:${language}:${item.key}`;
     if (await kvGetJson<number>(failKey).catch(() => null)) return null;
     // 처음 만들 때 모델이 한 번 실패하거나 형식을 안 지키는 일이 있어(2026-11-01 운영 확인) 한 번 더.
     lastLessonRaw = "";

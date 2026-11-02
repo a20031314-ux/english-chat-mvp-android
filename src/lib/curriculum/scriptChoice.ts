@@ -36,11 +36,54 @@ export function blankFor(language: string, script: StageScript, index: number): 
     const core = frames.find((frame) => frame.id === id)?.core.find((piece) => piece && line.text.includes(piece));
     if (core) return core;
   }
+  const names = properNouns(script);
   const words = segmentWords(line.text, language)
     .map((word) => word.replace(/^[\p{P}\p{S}]+|[\p{P}\p{S}]+$/gu, ""))
-    .filter((word) => /[\p{L}]/u.test(word) && line.text.includes(word));
+    .filter((word) => /[\p{L}]/u.test(word) && line.text.includes(word))
+    // 숫자·이름은 배울 조각이 아니다(2026-11-03 사용자 — "Sure, it's ___ seven two four one", 이름 Dana가 빈칸).
+    .filter((word) => !isNumberWord(language, word) && !names.has(word));
   if (!words.length) return null;
   return [...words].sort((a, b) => [...b].length - [...a].length)[0]!;
+}
+
+/** 숫자 낱말(0~10·100·1000, 14개 언어 — 띄어 쓰지 않는 말은 한자·태국 숫자)과 아라비아 숫자가 든 낱말. */
+const NUMBER_WORDS: Record<string, string[]> = {
+  en: ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "hundred", "thousand"],
+  es: ["cero", "uno", "una", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "cien", "mil"],
+  fr: ["zéro", "un", "une", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "cent", "mille"],
+  it: ["zero", "uno", "una", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "cento", "mille"],
+  pt: ["zero", "um", "uma", "dois", "duas", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "cem", "mil"],
+  id: ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "seratus", "seribu"],
+  vi: ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười", "trăm", "nghìn"],
+  ru: ["ноль", "один", "одна", "два", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять", "сто", "тысяча"],
+  ar: ["صفر", "واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة", "عشرة", "مئة", "ألف"],
+  hi: ["शून्य", "एक", "दो", "तीन", "चार", "पाँच", "छह", "सात", "आठ", "नौ", "दस", "सौ", "हज़ार"],
+  ko: ["영", "공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구", "십", "백", "천"],
+};
+const DIGITS = /[\p{Nd}〇一二三四五六七八九十百千万๐-๙]/u;
+export function isNumberWord(language: string, word: string): boolean {
+  if (/\p{Nd}/u.test(word)) return true;
+  // 한자·태국 숫자로만 된 낱말(띄어 쓰지 않는 말).
+  if ([...word].every((char) => DIGITS.test(char))) return true;
+  return (NUMBER_WORDS[language] ?? []).includes(word.toLocaleLowerCase());
+}
+
+/** 대본에 나오는 이름: 학습자 역할 이름 + 문장 처음이 아닌 자리에서 대문자로 시작하는 낱말(대소문자가 있는 글자만). */
+const nounCache = new WeakMap<StageScript, Set<string>>();
+function properNouns(script: StageScript): Set<string> {
+  const have = nounCache.get(script);
+  if (have) return have;
+  const out = new Set<string>(script.name?.text ?? []);
+  for (const line of script.lines) {
+    const tokens = line.text.split(/\s+/);
+    tokens.forEach((token, i) => {
+      const word = token.replace(/^[\p{P}\p{S}]+|[\p{P}\p{S}]+$/gu, "");
+      const sentenceStart = i === 0 || /[.!?¿¡]$/.test(tokens[i - 1] ?? "");
+      if (!sentenceStart && word && /^\p{Lu}/u.test(word) && word !== word.toLocaleUpperCase()) out.add(word);
+    });
+  }
+  nounCache.set(script, out);
+  return out;
 }
 
 /**

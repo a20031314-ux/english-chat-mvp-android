@@ -1,8 +1,11 @@
 "use client";
 
 import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FrameLesson } from "@/components/studyMap/FrameLesson";
+import { ExpressionCard } from "@/components/studyMap/ExpressionCard";
+import { allFramesFor } from "@/lib/curriculum/frames";
+import { isFrameExpression } from "@/lib/curriculum/expressionDeck";
 import { onAppIntent, takeAppIntent, type AppIntents } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { notePool } from "@/lib/curriculum/exam";
@@ -32,13 +35,31 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   useEffect(() => {
     if (open) notePool(open.language, open.key, "opened", Date.now(), open.scene);
   }, [open]);
+  // 표현 카드가 아직 없으면 예전 수업으로(그 표현 열쇠만, 닫으면 다시 카드부터).
+  const [noCard, setNoCard] = useState<string | null>(null);
+  const missing = useCallback(() => setNoCard(open?.key ?? null), [open?.key]);
   if (!open) return null;
   const { language, key } = open;
   const passed = streakOf(readQuizLog(language)[key]) > 0;
-  const close = () => setOpen(null);
+  const close = () => {
+    setOpen(null);
+    setNoCard(null);
+  };
   if (key.startsWith("f|")) {
     const frame = frameById(language, key.slice(2));
     return frame ? <FrameLesson key={key} ui={ui} locale={locale} language={language} frame={frame} scene={open.scene} passed={passed} onClose={close} /> : null;
+  }
+  // 🔤 표현(2026-11-03 사용자 "Abc 칩은 표현 카드로"): 문장구조와 같은 표현이면 그 문장구조 수업, 아니면 표현 카드.
+  if (key.startsWith("e|")) {
+    const expression = key.slice(2);
+    if (isFrameExpression(language, expression)) {
+      const frame = allFramesFor(language).find((one) => one.expressions?.includes(expression));
+      if (frame) return <FrameLesson key={key} ui={ui} locale={locale} language={language} frame={frame} scene={open.scene} passed={passed} onClose={close} />;
+    }
+    if (noCard !== key) {
+      const at = ladderFor(language)?.stages.find((one) => one.expressions.includes(expression))?.order ?? 1;
+      return <ExpressionCard key={key} ui={ui} locale={locale} language={language} expression={expression} stage={at} scene={open.scene} onMissing={missing} onClose={close} />;
+    }
   }
   const stage = key.startsWith("g|")
     ? Number(key.slice(2).split(":")[0]) || 1

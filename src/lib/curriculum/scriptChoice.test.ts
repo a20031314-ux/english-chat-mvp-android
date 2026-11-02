@@ -99,3 +99,23 @@ test("채팅 빈칸(2026-11-01): 쓴 조각을 줄에 넣어 줄 전체로 대�
   assert.equal(typedMatches(ja, fillBlank(ja, "ください", "ください")).matched, true);
   assert.equal(typedMatches(ja, fillBlank(ja, "ください", "くださる")).matched, false);
 });
+
+test("빈칸: 숫자·이름은 고르지 않음(en·es·ja)", async () => {
+  const { isNumberWord } = await import("./scriptChoice.ts");
+  assert.equal(isNumberWord("en", "seven"), true);
+  assert.equal(isNumberWord("es", "Siete"), true);
+  assert.equal(isNumberWord("ja", "三"), true);
+  assert.equal(isNumberWord("en", "calling"), false);
+  for (const language of ["en", "es", "ja"]) {
+    for (const script of allScriptsFor(language)) {
+      script.lines.forEach((line, i) => {
+        const blank = blankFor(language, script, i);
+        if (!blank || line.who !== "me") return;
+        assert.ok(!/^\p{Nd}+$/u.test(blank), `${language} ${script.id}:${i} ${blank}`);
+        assert.ok(!(script.name?.text ?? []).includes(blank), `${language} ${script.id}:${i} 이름 ${blank}`);
+      });
+    }
+  }
+  const en = allScriptsFor("en").flatMap((script) => script.lines.map((line, i) => ({ line, blank: blankFor("en", script, i) }))).find(({ line }) => line.text.startsWith("Sure, it's seven"));
+  if (en) assert.notEqual(en.blank, "seven");
+});

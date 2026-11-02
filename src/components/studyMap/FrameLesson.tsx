@@ -8,6 +8,8 @@ import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
 import { typedLine } from "@/lib/speech/sayLine";
+import { typedMatches } from "@/lib/roleplay/practice";
+import { fillBlank } from "@/lib/curriculum/scriptChoice";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
@@ -183,6 +185,16 @@ export function FrameLesson({
   const sent = useRef(false);
   const [justPassed, setJustPassed] = useState(false);
   const turn = turns[tIndex];
+  // 대화 단계는 학습 요소만 쓴다(2026-11-03 사용자 "해석을 보기 전에도 전체 문장을 다 타이핑해야 해 — 학습 요소만"):
+  // 문장구조 = 틀의 고정 조각, 표현 = 그 표현, 문법 = 서버가 짚은 조각(itemLesson piece). 못 찾으면 예전처럼 문장 전체.
+  const pieceOfTurn = (one: LessonTurn | undefined): string | null => {
+    if (!one) return null;
+    if (one.piece && one.me.includes(one.piece)) return one.piece;
+    if (frame) return frame.core.find((core) => core && one.me.includes(core)) ?? null;
+    if (key.startsWith("e|")) return pieceOf(one.me, key.slice(2));
+    return null;
+  };
+  const piece = pieceOfTurn(turn);
 
   // 대화 차례가 바뀌면 상대 줄을 먼저 들려준다(쓰는 칸은 늘 열려 있음).
   useEffect(() => {
@@ -244,6 +256,19 @@ export function FrameLesson({
   const send = async () => {
     if (!turn || listening || !draft.trim()) return;
     stopTts();
+    // 빈칸이면 줄에 넣어 대본처럼 낱말 대조(모델 없음) — 빈칸만 써도, 줄 전체를 써도 맞음.
+    if (piece) {
+      const filled = fillBlank(turn.me, piece, draft.trim());
+      const good = typedMatches(turn.me, filled).matched || typedMatches(turn.me, draft.trim()).matched;
+      setResults((current) => {
+        const next = [...current];
+        next[tIndex] = { heard: filled, practice: null, good, revealed: Boolean(current[tIndex]?.revealed) };
+        return next;
+      });
+      setDraft("");
+      void playTts(turn.me, tag, SCRIPT_VOICES.me);
+      return;
+    }
     setListening(true);
     const { heard, practice } = await typedLine(turn.me, draft, {
       targetLanguage: language as LearningLanguageCode,
@@ -310,9 +335,10 @@ export function FrameLesson({
         <div className="min-w-0 flex-1">
           {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
-            {hideFrame ? meaningHead || (key.startsWith("e|") ? "" : titleText) : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
+            {/* 문법 칸은 늘 문법 이름(예: 현재완료) — 생성된 설명 첫 줄이 제목 자리에 통째로 올라가던 것(2026-11-03 사용자). */}
+            {hideFrame && !key.startsWith("g|") ? meaningHead || (key.startsWith("e|") ? "" : titleText) : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>
-          {hideFrame || !meaningText ? null : (
+          {hideFrame || !meaningText || key.startsWith("g|") ? null : (
             <p dir="auto" className="mt-0.5 text-caption text-slate-400">
               {meaningText}
             </p>
@@ -496,7 +522,7 @@ export function FrameLesson({
               </div>
             ) : null}
             <div className="flex flex-col gap-1 self-end rounded-2xl border border-amber-300/40 bg-amber-300/[0.06] px-3 py-2 sm:max-w-[85%]">
-              {!turnGloss(turn) ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" /> : (
+              {!turnGloss(turn) && !piece ? <TTSButton text={turn.me} lang={tag} voice={SCRIPT_VOICES.me} className="self-start" /> : !turnGloss(turn) ? null : (
               <p dir="auto" className="text-note text-slate-200">
                 {ui.scriptWritePrompt.split("{line}").map((part, k) =>
                   k === 0 ? (
@@ -510,6 +536,14 @@ export function FrameLesson({
                 )}
               </p>
               )}
+              {/* 빈칸 줄(학습 요소 자리만 비움) — 답하기 전에만. */}
+              {piece && !result ? (
+                <p dir="auto" data-lesson-blank className="text-chat text-ink">
+                  {turn.me.split(piece)[0]}
+                  <span className="mx-0.5 inline-block min-w-12 border-b border-status-learned/70 align-baseline">&nbsp;</span>
+                  {turn.me.split(piece).slice(1).join(piece)}
+                </p>
+              ) : null}
               {result?.heard ? (
                 <p dir="auto" className="text-chat text-slate-100">
                   {result.heard}
@@ -536,12 +570,12 @@ export function FrameLesson({
                       {ui.scriptReveal}
                     </button>
                   ) : null}
-                  {result && !result.good && result.heard ? (
+                  {result && !result.good && result.heard && !result.revealed ? (
                     <button type="button" onClick={retry} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                       {ui.roleplayPracticeRetry}
                     </button>
                   ) : null}
-                  {result && (result.good || result.heard) ? (
+                  {result && (result.good || result.heard || result.revealed) ? (
                     <button
                       type="button"
                       data-lesson-talk-next
@@ -559,7 +593,8 @@ export function FrameLesson({
               ) : null}
             </div>
             {/* 채팅 입력칸(2026-11-02): 아직 안 보냈거나(답 보기 뒤 포함) 다시 쓰기를 눌렀을 때. Enter로 보냄. */}
-            {!limited && (!result || (result.revealed && !result.heard)) ? (
+            {/* 입력칸은 답하기 전에만 — 답 보기를 누른 뒤엔 닫아 정답을 베껴 쓰지 않게(2026-11-03 사용자). */}
+            {!limited && !result ? (
               <form
                 data-lesson-input
                 onSubmit={(event) => {
@@ -577,7 +612,7 @@ export function FrameLesson({
                   autoCorrect="off"
                   spellCheck={false}
                   disabled={listening}
-                  aria-label={ui.scriptWritePrompt.replace("{line}", turnGloss(turn) || turn.me)}
+                  aria-label={ui.scriptWritePrompt.replace("{line}", turnGloss(turn) || ui.send)}
                   className="min-w-0 flex-1 rounded-full border border-line bg-white/5 px-4 py-2 text-chat text-ink outline-none focus:border-slate-400"
                 />
                 <button type="submit" data-lesson-send disabled={!draft.trim() || listening} className="rounded-full bg-white/90 px-4 py-2 text-caption font-semibold text-slate-900 disabled:opacity-50">
@@ -627,7 +662,7 @@ export function FrameLesson({
 }
 
 /** 수업 맨 위 "통화에서" 카드: 앞 튜터 줄 · 내가 한 말(지움) → 고친 문장(이 소재 칠함) · 🔊. 글 설명 없이 📞만. */
-function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: string | null; tag: string }) {
+export function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: string | null; tag: string }) {
   const at = piece ? scene.line.indexOf(piece) : -1;
   return (
     <section data-lesson-scene className="flex flex-col gap-1 rounded-xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-2.5">
