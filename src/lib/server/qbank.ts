@@ -17,7 +17,7 @@ import { textsFingerprint, translated } from "./stageCopy.ts";
 import { INTERFACE_LANGUAGE_LABELS, SUPPORTED_LEARNING_LANGUAGES } from "../learningLanguages.ts";
 import { allFramesFor } from "../curriculum/frames.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
-import { acceptDecoy, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
+import { acceptDecoy, acceptForms, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
 import { allScriptsFor } from "../curriculum/stageScripts.ts";
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
@@ -52,7 +52,7 @@ export function targetOf(language: string, key: string): { piece: string; what: 
   return null;
 }
 
-async function makeMore(language: string, key: string, stage: number, entry: BankEntry): Promise<{ items: { t: string; p: string; g: string }[]; decoys: string[]; raw: string } | null> {
+async function makeMore(language: string, key: string, stage: number, entry: BankEntry): Promise<{ items: { t: string; p: string; g: string; w?: string[] }[]; decoys: string[]; raw: string } | null> {
   const target = targetOf(language, key);
   const client = getOpenAIClient();
   if (!target || !client) return null;
@@ -63,6 +63,7 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
     ...allScriptsFor(language).flatMap((script) => script.lines.map((line) => line.text)).filter((text) => text.toLocaleLowerCase().includes(target.piece.toLocaleLowerCase())),
   ];
   const have = [...entry.items.map((item) => item.t), ...inApp].slice(0, 12);
+  const word = key.startsWith("w|");
   const decoysHave = Object.values(entry.decoys).flat().map((d) => d.d);
   const completion = await completeChat(client, "translate", {
     temperature: 0.8,
@@ -71,8 +72,9 @@ async function makeMore(language: string, key: string, stage: number, entry: Ban
       {
         role: "system",
         content: `You write quiz material for learners of ${name} at level ${stage} of 5 (1 = absolute beginner). Target: ${target.what}.
-1) Write four NEW short, natural, everyday sentences in ${name} that each contain "${target.piece}" exactly as written (same letters). Level ${stage}: ${stage <= 1 ? "very short, simple words only" : stage <= 3 ? "short, common words" : "natural everyday length"}. Different situations from each other and from the sentences given. No digits (write numbers as words), no names of real people or brands, nothing rude.
-S|<sentence in ${name}>|<plain English translation>
+1) Write four NEW short, natural, everyday sentences in ${name} that each contain ${word ? `the word "${target.piece}" — in two of them use it exactly as written, and in the other two (when the word has other forms in ${name}) use a different form of it (another tense, person, number, case, comparative or ending) that the sentence clearly needs` : `"${target.piece}" exactly as written (same letters)`}. Level ${stage}: ${stage <= 1 ? "very short, simple words only" : stage <= 3 ? "short, common words" : "natural everyday length"}. Different situations from each other and from the sentences given. No digits (write numbers as words), no names of real people or brands, nothing rude.
+${word ? `S|<sentence in ${name}>|<plain English translation>|<the form of the word exactly as it appears in the sentence>|<wrong forms>
+For <wrong forms>: up to three OTHER forms of this same word (same word, different tense/person/number/case/comparative/ending — never a different word, never a misspelling), separated by ";", each grammatically WRONG in this exact sentence. The sentence must give a clear clue (subject, time word, auxiliary, agreement) so that only the form used fits. Leave out any form that would also be correct here. If the word has no other forms in ${name}, leave it empty.` : `S|<sentence in ${name}>|<plain English translation>`}
 2) Write three wrong options for the blank where "${target.piece}" goes: ${key.startsWith("w|") ? `wrong forms a learner might really produce — another form of the same word that does not fit here (conjugation, agreement, part of speech), or a real word of the same kind that is grammatically wrong in this slot. Never a misspelling, a made-up word, or a word that only rhymes or looks alike` : "near misses a learner might plausibly but wrongly use — wrong conjugation, agreement, particle/case/preposition, word order, a look-alike word"}. Each must be wrong in every sentence above. Never an acceptable alternative (no contraction, synonym, politeness variant or spelling variant that is also correct). Must not contain "${target.piece}" and must not be part of it.
 D|<wrong option>
 Answer with exactly four S lines and three D lines, nothing else.`,
@@ -81,18 +83,21 @@ Answer with exactly four S lines and three D lines, nothing else.`,
     ],
   });
   const raw = String(completion.choices[0]?.message?.content ?? "");
-  const items: { t: string; p: string; g: string }[] = [];
+  const items: { t: string; p: string; g: string; w?: string[] }[] = [];
   const decoys: string[] = [];
   const existing = new Set([...have, ...inApp]);
   for (const line of raw.split(/\r?\n/)) {
     // "1. S|…", "**S|**…", "- D|…"처럼 앞에 붙은 것은 떼고 읽는다.
     const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());
-    if (cells[0] === "S" && cells[1] && cells[2] && acceptItem(entry, cells[1], target.piece, existing)) {
+    // 낱말(w|)은 문장 속 꼴(넷째 칸)이 빈칸 — 다른 꼴로 쓴 문장도 받는다(2026-11-02 사용자 "형태만 달라진 같은 단어로 선지").
+    const form = word && cells[3] && cells[3].length <= 40 && cells[1]?.toLocaleLowerCase().includes(cells[3].toLocaleLowerCase()) ? cells[3] : target.piece;
+    if (cells[0] === "S" && cells[1] && cells[2] && acceptItem(entry, cells[1], form, existing)) {
       // 조각은 문장 안 그대로의 꼴로(대소문자).
-      const at = cells[1].toLocaleLowerCase().indexOf(target.piece.toLocaleLowerCase());
-      const piece = cells[1].toLocaleLowerCase().length === cells[1].length ? cells[1].slice(at, at + target.piece.length) : target.piece;
+      const at = cells[1].toLocaleLowerCase().indexOf(form.toLocaleLowerCase());
+      const piece = cells[1].toLocaleLowerCase().length === cells[1].length ? cells[1].slice(at, at + form.length) : form;
+      const wrong = word ? acceptForms(cells[1], piece, (cells[4] ?? "").split(";")) : [];
       existing.add(cells[1]);
-      items.push({ t: cells[1], p: piece, g: cells[2] });
+      items.push({ t: cells[1], p: piece, g: cells[2], ...(wrong.length ? { w: wrong } : {}) });
     }
     if (cells[0] === "D" && cells[1]) decoys.push(cells[1]);
   }
@@ -118,7 +123,7 @@ export async function bankFor(language: string, key: string, stage: number, resu
   }
   const day = today();
   // 키우기는 앱이 지금 풀려는 열쇠만(onMake가 있을 때) — 결과만 온 열쇠는 셈만.
-  if (onMake && !bankFrozen() && needGrow(entry, day)) {
+  if (onMake && !bankFrozen() && needGrow(entry, day, { forms: key.startsWith("w|") })) {
     const spent = await kvIncrBy(`qbank:v1:budget:${day}`, 1, 2 * 24 * 60 * 60).catch(() => DAILY_BUDGET + 1);
     if (spent <= DAILY_BUDGET) {
       onMake?.();

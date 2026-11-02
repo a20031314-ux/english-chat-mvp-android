@@ -24,6 +24,11 @@ export type BankItem = {
   /** 풀린 수 · 맞힌 수. */
   n: number;
   r: number;
+  /**
+   * 낱말(w|)만: 이 문장 빈칸에 안 맞는 같은 낱말의 다른 꼴(시제·인칭·수·격·비교·어미 — 2026-11-02 사용자 "문법 문제는 과거형·현재형처럼
+   * 형태만 달라진 같은 단어로 선지를 구성"). 모델이 문장마다 "이 꼴은 여기서 틀림"을 보고 만든 것 — 고르기 오답으로 먼저 쓴다.
+   */
+  w?: string[];
   /** 어디서 왔나: 없음 = 모델이 만듦, "talk" = 대화의 튜터 줄(걸러서, 2026-11-01). */
   o?: "talk";
   /** 빠짐(너무 쉬움 "easy" · 이상함 "odd"). */
@@ -96,12 +101,13 @@ export function applyResults(entry: BankEntry, results: readonly BankResult[], o
   return next;
 }
 
-/** 오늘 더 만들어야 하나(어떤 열쇠의 묶음). */
-export function needGrow(entry: BankEntry, today: string): boolean {
+/** 오늘 더 만들어야 하나(어떤 열쇠의 묶음). forms = 낱말(w|) 열쇠 — 예문마다 꼴 오답이 든 예문이 둘도 안 되면 한 번 더(예전 묶음 채우기). */
+export function needGrow(entry: BankEntry, today: string, options: { forms?: boolean } = {}): boolean {
   const dayGrows = entry.day === today ? entry.dayGrows : 0;
   if (dayGrows >= GROW_PER_DAY) return false;
   const live = liveItems(entry).length;
   if (live === 0) return true;
+  if (options.forms && liveItems(entry).filter((item) => (item.w?.length ?? 0) >= 2).length < 2 && entry.items.length < CAP) return true;
   const thinDecoys = Object.values(entry.decoys).some((list) => list.length < MIN_DECOYS) || Object.keys(entry.decoys).length === 0;
   if (thinDecoys) return true;
   return live < CAP && entry.served - entry.grownAt >= GROW_EVERY;
@@ -126,12 +132,45 @@ export function acceptDecoy(piece: string, decoy: string, have: readonly BankDec
   return !have.some((one) => lower(one.d) === lower(d));
 }
 
-/** 앱에 보낼 모양: 살아 있는 예문(덜 풀린 것 먼저, 열둘까지)과 조각마다 오답. */
-export function publicView(entry: BankEntry): { items: { text: string; piece: string; gloss: string; stage: number }[]; decoys: Record<string, string[]> } {
+const SPACELESS = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u;
+
+/** 문장에 그 말이 따로 선 낱말로 있나(띄어쓰기 없는 말은 들어 있기만 해도). */
+function standsIn(sentence: string, word: string): boolean {
+  const t = lower(sentence);
+  const w = lower(word);
+  if (SPACELESS.test(w) || SPACELESS.test(t)) return t.includes(w);
+  const letter = /[\p{L}\p{M}\p{Nd}]/u;
+  for (let at = t.indexOf(w); at >= 0; at = t.indexOf(w, at + 1)) {
+    const before = at > 0 ? t[at - 1]! : "";
+    const after = t[at + w.length] ?? "";
+    if ((!before || !letter.test(before)) && (!after || !letter.test(after))) return true;
+  }
+  return false;
+}
+
+/**
+ * 예문 하나의 꼴 오답(낱말 w|)을 받을지: 빈칸 꼴과 다르고(대소문자 무시), 그 문장에 낱말로 이미 없고, 숫자·긴 글 아님, 겹치지 않게 셋까지.
+ * 같은 낱말의 꼴이라 빈칸 꼴을 품거나 그 안에 들어도 된다(be → been, work → works).
+ */
+export function acceptForms(sentence: string, piece: string, forms: readonly string[]): string[] {
+  const out: string[] = [];
+  for (const raw of forms) {
+    const form = raw.trim();
+    if (!form || form.length > 40 || /[\p{Nd}|;]/u.test(form)) continue;
+    if (lower(form) === lower(piece) || standsIn(sentence, form)) continue;
+    if (out.some((one) => lower(one) === lower(form))) continue;
+    out.push(form);
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
+/** 앱에 보낼 모양: 살아 있는 예문(덜 풀린 것 먼저, 열둘까지)과 조각마다 오답. 낱말 예문은 그 문장의 꼴 오답(wrong)도. */
+export function publicView(entry: BankEntry): { items: { text: string; piece: string; gloss: string; stage: number; wrong?: string[] }[]; decoys: Record<string, string[]> } {
   const items = liveItems(entry)
     .sort((a, b) => a.n - b.n)
     .slice(0, 12)
-    .map((item) => ({ text: item.t, piece: item.p, gloss: item.g, stage: item.s }));
+    .map((item) => ({ text: item.t, piece: item.p, gloss: item.g, stage: item.s, ...(item.w?.length ? { wrong: item.w } : {}) }));
   const decoys = Object.fromEntries(Object.entries(entry.decoys).map(([piece, list]) => [piece, list.map((d) => d.d)]));
   return { items, decoys };
 }

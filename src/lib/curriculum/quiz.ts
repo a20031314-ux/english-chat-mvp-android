@@ -39,6 +39,8 @@ export type QuizSource = {
   topic?: string;
   /** piece가 이 문장구조의 고정 부분(문법 칸 g|·문장구조 f| 재료) — 틀린 곳 고치기의 오답을 고른다. */
   frame?: string;
+  /** 낱말(w|) 문제은행 예문: 이 문장 빈칸에 안 맞는 같은 낱말의 다른 꼴(qbankRules BankItem.w) — 고르기 오답으로 맨 먼저(2026-11-02). */
+  wrong?: string[];
 };
 
 /** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
@@ -186,7 +188,7 @@ export function quizSources(language: string, key: string): QuizSource[] {
   if (!grown.length) return base;
   const seen = new Set(base.map((source) => source.text));
   const pos = base[0]?.pos;
-  const extra = grown.filter((item) => !seen.has(item.text) && item.text.includes(item.piece)).map((item): QuizSource => ({ text: item.text, gloss: item.gloss, from: "qbank", stage: item.stage, piece: item.piece, who: "me", ...(pos ? { pos } : {}) }));
+  const extra = grown.filter((item) => !seen.has(item.text) && item.text.includes(item.piece)).map((item): QuizSource => ({ text: item.text, gloss: item.gloss, from: "qbank", stage: item.stage, piece: item.piece, who: "me", ...(pos ? { pos } : {}), ...(item.wrong?.length ? { wrong: item.wrong } : {}) }));
   return [...base, ...extra];
 }
 
@@ -496,7 +498,9 @@ export function chooseOf(language: string, key: string, source: QuizSource, rand
   // (가상 사용자 2026-11-01: WORD_DECOYS가 이 규칙에 걸러져 생김새만 닮은 다른 낱말 crimen/cisne/consejo가 나옴).
   const wordFits = (one: string) => (isSpaceless(piece) ? fits(one) : Boolean(one) && !same(one, piece) && pieceAt(lower(source.text), lower(one), language) < 0);
   // 낱말은 손으로 정한 실수 꼴(wordDecoys.ts)이 있으면 그것만 — 문제은행 오답(nearby·I처럼 문장에 맞는 말이 섞였던 것)보다 앞선다.
-  const own = key.startsWith("w|") ? wordNearMisses(language, piece).filter(wordFits) : [];
+  // 문제은행이 이 문장에 맞춰 만든 같은 낱말의 다른 꼴(be → is·was·been, 2026-11-02 사용자 "형태만 달라진 같은 단어로 선지")이 둘 이상이면 그것만 — 문장마다 "여기선 틀림"을 본 것이라 표보다 앞선다.
+  const forms = key.startsWith("w|") ? (source.wrong ?? []).filter(wordFits) : [];
+  const own = forms.length >= 2 ? forms : key.startsWith("w|") ? wordNearMisses(language, piece).filter(wordFits) : [];
   const nearFit = own.length ? own : near.filter(key.startsWith("w|") ? wordFits : fits);
   // 문장구조·표현·문법은 그 정답의 실수 꼴(데이터·문제은행)만 — 다른 문제의 조각은 품사·자리가 안 맞아 한눈에 지워지거나 거꾸로 문장에 맞아 답이 둘
   // (2026-11-01 퀴즈 전수 점검 ko 4~5단계 13문제). 모자라면 고르기를 안 만들고 빈칸 쓰기·순서로 넘어간다.

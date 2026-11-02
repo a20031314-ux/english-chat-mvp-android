@@ -125,3 +125,30 @@ test("고정(frozen)이면 너무 쉬운 예문·안 골리는 오답을 빼지 
   assert.equal(live.items.find((item) => item.t === "easy one")?.off, "easy");
   assert.equal(live.decoys.one?.length, 2);
 });
+
+test("낱말 꼴 오답(2026-11-02): 예문마다 같은 낱말의 다른 꼴을 받고, 고르기 오답으로 먼저 쓴다(영어·스페인어·일본어)", async () => {
+  const { acceptForms } = await import("./qbankRules.ts");
+  // 같은 낱말의 꼴은 빈칸 꼴을 품어도 됨(be → been), 문장에 이미 낱말로 있는 꼴·같은 꼴·숫자는 뺌, 셋까지.
+  assert.deepEqual(acceptForms("She will be late for dinner.", "be", ["is", "was", "been", "be", "Be", "is", "2nd", "being"]), ["is", "was", "been"]);
+  assert.deepEqual(acceptForms("Ayer comimos paella.", "comimos", ["comemos", "comeremos", "comimos"]), ["comemos", "comeremos"]);
+  assert.deepEqual(acceptForms("昨日すしを食べました。", "食べました", ["食べます", "食べて", "食べました"]), ["食べます", "食べて"]);
+  assert.deepEqual(acceptForms("I am here.", "am", ["here", "is"]), ["is"], "문장에 이미 있는 낱말은 오답이 아님");
+
+  // 예문마다 꼴 오답이 든 예문이 둘도 안 되면(예전 묶음) 낱말 열쇠는 한 번 더 키운다.
+  const old: BankEntry = { ...emptyEntry(), items: [{ t: "She will be late.", p: "be", g: "", s: 1, n: 0, r: 0 }], decoys: { be: [{ d: "get", n: 0, k: 0 }, { d: "let", n: 0, k: 0 }] }, day, dayGrows: 1 };
+  assert.equal(needGrow(old, day), false);
+  assert.equal(needGrow(old, day, { forms: true }), true);
+  const withForms: BankEntry = { ...old, items: [...old.items.map((i) => ({ ...i, w: ["is", "was"] })), { t: "He was tired.", p: "was", g: "", s: 1, n: 0, r: 0, w: ["is", "be"] }] };
+  assert.equal(needGrow(withForms, day, { forms: true }), false);
+  assert.deepEqual(publicView(withForms).items[1]?.wrong, ["is", "be"]);
+
+  // 앱: 문장 꼴 오답이 둘 이상이면 그것만 보기로 — 다른 낱말(get·let)은 안 나옴. 다른 꼴(was)을 빈칸으로 쓴 예문도.
+  registerGrown("en", "w|zzbe", { items: [{ text: "Yesterday he was very tired.", piece: "was", stage: 1, gloss: { en: "" }, wrong: ["is", "be", "been"] }], decoys: { be: ["get", "let"] } });
+  const quiz = wordQuiz("en", "w|zzbe", "s");
+  const choose = quiz?.questions.find((q) => q.kind === "choose");
+  assert.ok(choose && choose.kind === "choose", JSON.stringify(quiz));
+  if (choose?.kind === "choose") {
+    assert.equal(choose.options[choose.answer], "was");
+    assert.ok(choose.options.filter((o) => o !== "was").every((o) => ["is", "be", "been"].includes(o)), JSON.stringify(choose.options));
+  }
+});
