@@ -127,7 +127,16 @@ export async function bankFor(language: string, key: string, stage: number, resu
     const spent = await kvIncrBy(`qbank:v1:budget:${day}`, 1, 2 * 24 * 60 * 60).catch(() => DAILY_BUDGET + 1);
     if (spent <= DAILY_BUDGET) {
       onMake?.();
-      const more = await makeMore(language, key, stage, entry).catch(() => null);
+      let failed = "";
+      const more = await makeMore(language, key, stage, entry).catch((error: unknown) => {
+        failed = String(error instanceof Error ? error.message : error).slice(0, 300);
+        return null;
+      });
+      // 모델 호출이 실패하면 그 까닭을 묶음에 잠깐 남긴다(점검 x-qbank-debug — 앱에는 안 감).
+      if (!more && failed) {
+        entry = { ...entry, last: `error: ${failed}` } as BankEntry & { last?: string };
+        changed = true;
+      }
       if (more) {
         entry = { ...entry, items: [...entry.items], decoys: { ...entry.decoys } };
         for (const item of more.items) entry.items.push({ ...item, s: stage, n: 0, r: 0 });
