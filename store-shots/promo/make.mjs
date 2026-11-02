@@ -243,7 +243,9 @@ function tts(text, lang, voice, tempo = 1) {
   const pcm = path.join(DIR, `tts-${key}.pcm`);
   const wav = path.join(DIR, `tts-${key}.wav`);
   if (!fs.existsSync(wav)) {
-    const url = `${API}/api/tts?text=${encodeURIComponent(text)}&lang=${lang}&voice=${voice}`;
+    // voice "tutor:f|m" = 앱의 그 언어 튜터 목소리(통화 편 — 앱에서 듣는 그 사람).
+    const who = String(voice).startsWith("tutor:") ? `&tutor=${String(voice).slice(6)}` : `&voice=${voice}`;
+    const url = `${API}/api/tts?text=${encodeURIComponent(text)}&lang=${lang}${who}`;
     execFileSync("curl", ["-sSf", "-o", pcm, "-H", `x-rc-user: promo-voice-${locale}`, url]);
     execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, "-af", `silenceremove=start_periods=1:start_threshold=-40dB,areverse,silenceremove=start_periods=1:start_threshold=-40dB,areverse${tempo !== 1 ? `,atempo=${tempo}` : ""}`, wav]);
   }
@@ -371,20 +373,44 @@ STORIES.analyze = () => ev.pickStart != null ? {
 });
 
 // 통화: 📞 → 튜터가 먼저 인사 → 틀리게 말함 → ✎ → "이렇게 말해도 돼요" → 한 마디 더(녹화: record-call.mjs).
-STORIES.call = () => ({
-  segs: [
-    [ev.stage + 0.3, ev.captionTap - 0.3, 1, "hook"],
-    [ev.captionTap - 0.3, ev.captionTap + 2.6, 1, "caption"],
-    [ev.captionTap + 2.6, ev.coach - 0.4, Math.max(1, (ev.coach - ev.captionTap - 3) / 2.2), "say"],
-    [ev.coach - 0.4, ev.coach + 4.2, 1, "fix", { by: 0.22, x: 0.5, y: 0.74 }],
-    [ev.coach + 4.2, ev.pass - 0.4, Math.max(1, (ev.pass - ev.coach - 4.6) / 2), "again", { by: 0.22, x: 0.5, y: 0.74 }],
-    [ev.pass - 0.4, ev.pass + 2.6, 1, "pass", { by: 0.22, x: 0.5, y: 0.74 }],
-    [ev.summary + 0.4, ev.end - 0.2, 1, "recap"],
-  ],
-});
+// 실사용 장면(사용자 2026-11-03 "실사용 장면도, 음성합성으로 학습하는 화자를 만들어도"): 튜터 줄은 앱의 튜터 목소리, 내 말은 학습자 목소리(다른 성별)로.
+// 말하는 구간은 그 목소리 길이에 맞춰 속도를 정한다. 튜터 줄 글은 events(record-call.mjs가 남김) — 없으면 목소리 없이.
+STORIES.call = () => {
+  const L = SPEECH[CALL_TARGET] ?? "ko-KR";
+  const tutor = ev.tutorGender === "m" ? "tutor:m" : "tutor:f";
+  const learner = ev.tutorGender === "m" ? "nova" : "ash";
+  const line = (text, voice) => (text ? tts(text, L, voice) : null);
+  const greet = line(String(ev.caption ?? "").split("\n")[0], tutor);
+  const said1 = line(ev.said1Text, learner);
+  const fixLine = line(ev.tutorFix, tutor);
+  const said2 = line(ev.coachRight, learner);
+  const praise = line(ev.tutorPraise, tutor);
+  const fit = (a, b, want) => Math.max(1, (b - a) / want);
+  const sayA = ev.captionTap + 3.1;
+  const fixEnd = ev.coach + Math.max(4.4, (fixLine?.len ?? 0) + 0.5);
+  return {
+    segs: [
+      [ev.stage + 0.3, ev.captionTap - 0.3, 1, "hook"],
+      [ev.captionTap - 0.3, sayA, 1, "caption"],
+      [sayA, ev.coach - 0.4, fit(sayA, ev.coach - 0.4, (said1?.len ?? 2) + 0.7), "say"],
+      [ev.coach - 0.4, fixEnd, 1, "fix", { by: 0.22, x: 0.5, y: 0.74 }],
+      [fixEnd, ev.pass - 0.4, fit(fixEnd, ev.pass - 0.4, (said2?.len ?? 2) + 0.6), "again", { by: 0.22, x: 0.5, y: 0.74 }],
+      [ev.pass - 0.4, ev.pass + Math.max(2.6, (praise?.len ?? 0) + 0.3), 1, "pass", { by: 0.22, x: 0.5, y: 0.74 }],
+      [ev.summary + 0.4, ev.end - 0.2, 1, "recap"],
+    ],
+    voices: [
+      greet && { text: greet.text, lang: L, voice: tutor, src: ev.stage + 0.35 },
+      said1 && { text: said1.text, lang: L, voice: learner, src: sayA + 0.1 },
+      fixLine && { text: fixLine.text, lang: L, voice: tutor, src: ev.coach - 0.2 },
+      said2 && { text: said2.text, lang: L, voice: learner, src: fixEnd + 0.1 },
+      praise && { text: praise.text, lang: L, voice: tutor, src: ev.pass - 0.2 },
+    ].filter(Boolean),
+  };
+};
 const plan = STORIES[story]();
 // 목소리는 기본으로 뺀다(사용자 2026-10-26 "목소리는 빼고 자막과 음악") — 넣으려면 PROMO_VOICE=1.
-const VOICE_ON = process.env.PROMO_VOICE === "1";
+// 통화 편은 대화 소리가 곧 장면이라 늘 켬(PROMO_VOICE=0이면 끔).
+const VOICE_ON = process.env.PROMO_VOICE === "1" || (story === "call" && process.env.PROMO_VOICE !== "0");
 if (!VOICE_ON) {
   plan.voice = null;
   plan.voices = [];

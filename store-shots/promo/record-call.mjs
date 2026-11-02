@@ -107,11 +107,16 @@ const events = await record({
     coachRight = ((await page.locator("[data-call-redo]").first().innerText()) || "").replace(/^[🔁✓💡]\s*/u, "").trim();
     events.coachRight = coachRight;
     events.coachCard = await page.locator("[data-call-coach]").first().innerText();
+    events.said1Text = lines[0];
+    // 튜터가 고쳐 말한 줄(자막) — 영상에 튜터 목소리로 넣는다(make.mjs call).
+    await page.waitForTimeout(1500);
+    events.tutorFix = ((await page.locator("[data-call-caption]").first().innerText().catch(() => "")) || "").split("\n")[0].trim();
     // 다시 말해 맞히면 ✓.
     await page.waitForFunction(() => /^\s*✓/.test(document.querySelector("[data-call-redo]")?.textContent ?? ""), null, { timeout: 120000 }).catch(() => {});
     mark("pass");
     events.passCard = await page.locator("[data-call-coach]").first().innerText().catch(() => "");
     await page.waitForTimeout(4500);
+    events.tutorPraise = ((await page.locator("[data-call-caption]").first().innerText().catch(() => "")) || "").split("\n")[0].trim();
     mark("afterPass");
     // 끝내기 → 요약·정리.
     await tap(page.getByRole("button", { name: ui.roleplayPause }).last());
