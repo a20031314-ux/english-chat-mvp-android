@@ -125,11 +125,22 @@ export function isBillingNativePlatform(): boolean {
   return Capacitor.isNativePlatform();
 }
 
+/** 서버가 운영자·점검 계정이라고 한 이 폰(/api/entitlement grant "staff", 2026-11-02) — RevenueCat이 무료여도 프리미엄. */
+const STAFF_GRANT_STORAGE_KEY = "ec_staff_grant";
+
+function readStaffGrant(): boolean {
+  try {
+    return typeof window !== "undefined" && window.localStorage.getItem(STAFF_GRANT_STORAGE_KEY) === "premium";
+  } catch {
+    return false;
+  }
+}
+
 export function readCachedPremium(): boolean {
   if (typeof window === "undefined") {
     return false;
   }
-  if (isDevPremiumOverrideEnabled()) {
+  if (isDevPremiumOverrideEnabled() || readStaffGrant()) {
     return true;
   }
   try {
@@ -169,6 +180,7 @@ export function tierFromCustomerInfo(customerInfo: CustomerInfo): PlanTier {
 
 /** The plan last seen, for the screens and for the header the server reads when RevenueCat is unreachable. */
 export function readCachedTier(): PlanTier {
+  if (readStaffGrant()) return "premium";
   if (!readCachedPremium()) return "free";
   try {
     const stored = typeof window === "undefined" ? null : window.localStorage.getItem(PLAN_TIER_STORAGE_KEY);
@@ -186,7 +198,34 @@ function rememberCustomerInfo(customerInfo: CustomerInfo): boolean {
   } catch {
     // ignore
   }
-  return isPremium;
+  return isPremium || readStaffGrant();
+}
+
+/**
+ * 로그인한 계정이 운영자·점검 계정인지 서버에 묻고 이 폰에 남긴다(server/staffGrant.ts). 로그아웃하거나 목록에서 빠지면 지움.
+ * 서버 한도는 서버가 따로 지키니, 여기서는 화면(잠금·광고)만 프리미엄으로 맞춘다.
+ */
+export async function refreshStaffGrant(): Promise<boolean> {
+  if (typeof window === "undefined") return false;
+  const clear = () => {
+    try {
+      window.localStorage.removeItem(STAFF_GRANT_STORAGE_KEY);
+    } catch {
+      // ignore
+    }
+    return false;
+  };
+  if (!readAuthToken()) return clear();
+  try {
+    const response = await fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders() });
+    if (!response.ok) return readStaffGrant();
+    const data = (await response.json()) as { grant?: unknown };
+    if (data.grant !== "staff") return clear();
+    window.localStorage.setItem(STAFF_GRANT_STORAGE_KEY, "premium");
+    return true;
+  } catch {
+    return readStaffGrant();
+  }
 }
 
 function getRevenueCatApiKey(): string | null {
@@ -421,7 +460,14 @@ export async function fetchPlanFromServer(): Promise<boolean> {
   }
   const response = await fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders() });
   if (!response.ok) return readCachedPremium();
-  const data = (await response.json()) as { tier?: unknown; premiumSource?: unknown };
+  const data = (await response.json()) as { tier?: unknown; premiumSource?: unknown; grant?: unknown };
+  try {
+    if (data.grant === "staff") window.localStorage.setItem(STAFF_GRANT_STORAGE_KEY, "premium");
+    else window.localStorage.removeItem(STAFF_GRANT_STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+  if (data.grant === "staff") return true;
   if (data.premiumSource !== "revenuecat" || !isPlanTier(data.tier)) return readCachedPremium();
   const isPremium = data.tier !== "free";
   writeCachedPremium(isPremium);
@@ -468,7 +514,8 @@ export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
       plugin.getCustomerInfo(),
       BILLING_FETCH_TIMEOUT_MS,
     );
-    return rememberCustomerInfo(customerInfo);
+    const paid = rememberCustomerInfo(customerInfo);
+    return paid || (await refreshStaffGrant());
   } catch (error) {
     console.error("[billing] getCustomerInfo failed", error);
     return readCachedPremium();

@@ -13,6 +13,7 @@ import {
 import { bestTier, isPlanTier, PREMIUM_DAILY_PLAN_FROM, termsFor, type PlanTerms, type PlanTier } from "@/lib/billing/plans";
 import { isScriptsApp, requestAppVersion } from "@/lib/appVersion";
 import { readInvitePass } from "./inviteRewardStore.ts";
+import { isStaffAccount } from "./staffGrant.ts";
 
 export type RequestEntitlement = {
   /** Whose counters this request spends. */
@@ -24,6 +25,8 @@ export type RequestEntitlement = {
   terms: PlanTerms;
   /** True only when RevenueCat confirmed it, rather than the client claiming it. */
   verified: boolean;
+  /** 운영자·점검 계정이라 프리미엄(server/staffGrant.ts, Vercel STAFF_PREMIUM). */
+  staff?: boolean;
 };
 
 /**
@@ -106,16 +109,18 @@ export async function resolveRequestEntitlement(
   // 친구 초대 단계 보상(플러스 7일·프리미엄 30일)은 RevenueCat 밖에서 연 요금 — 산 요금과 높은 쪽.
   const accountId = requestAuth(request)?.accountId ?? null;
   const pass = accountId ? await readInvitePass(accountId).catch(() => null) : null;
-  const withPass = (tier: PlanTier) => (pass ? bestTier([tier, pass.tier]) : tier);
+  // 운영자·점검 계정(STAFF_PREMIUM)은 프리미엄 — 초대 보상처럼 산 요금과 높은 쪽(2026-11-02).
+  const staff = await isStaffAccount(accountId).catch(() => false);
+  const withPass = (tier: PlanTier) => bestTier([tier, ...(pass ? [pass.tier] : []), ...(staff ? (["premium"] as const) : [])]);
   // 대본 앱(2.76~)의 무료는 대본만(plans.ts termsFor scriptsApp).
   const scriptsApp = isScriptsApp(requestAppVersion(request.headers));
 
   if (appUserId && revenueCatConfigured()) {
     const plan = await planInRevenueCat(appUserId);
-    if (plan !== null) return withTier(userId, withPass(plan), true, scriptsApp);
+    if (plan !== null) return { ...withTier(userId, withPass(plan), true, scriptsApp), staff };
     // RevenueCat could not be reached. Keep the id for counting, but fall
     // through to the claim rather than locking a subscriber out mid-outage.
-    return withTier(userId, withPass(claimedTier(request)), false, scriptsApp);
+    return { ...withTier(userId, withPass(claimedTier(request)), false, scriptsApp), staff };
   }
 
   // 웹(RevenueCat SDK 없음): 로그인한 계정 id로 묻는다. 앱에서 로그인하면 RevenueCat이 이 계정 id로
@@ -123,9 +128,9 @@ export async function resolveRequestEntitlement(
   // 계정 id로 묻을 수 있으면 앱이 보낸 요금 표시는 믿지 않는다(웹에서 머리를 바꿔 유료인 척 못 하게).
   if (accountId && revenueCatConfigured()) {
     const plan = await planInRevenueCat(accountId);
-    if (plan !== null) return withTier(userId, withPass(plan), true, scriptsApp);
-    return withTier(userId, withPass(claimedTier(request)), false, scriptsApp);
+    if (plan !== null) return { ...withTier(userId, withPass(plan), true, scriptsApp), staff };
+    return { ...withTier(userId, withPass(claimedTier(request)), false, scriptsApp), staff };
   }
 
-  return withTier(userId, withPass(claimedTier(request)), false, scriptsApp);
+  return { ...withTier(userId, withPass(claimedTier(request)), false, scriptsApp), staff };
 }

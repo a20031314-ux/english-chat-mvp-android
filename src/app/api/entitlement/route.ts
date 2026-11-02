@@ -27,7 +27,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  const { userId, isPremium, verified, tier, terms } = await resolveRequestEntitlement(request);
+  const { userId, isPremium, verified, tier, terms, staff } = await resolveRequestEntitlement(request);
   const dailyUsed = await getDailyUsed(userId);
   // 보상형 광고로 오늘 늘어난 채팅(무료만, billing/ads.ts). 옛 빌드도 한도 숫자로 그대로 받는다.
   const adChatBonus = await chatBonusToday(userId, tier);
@@ -86,6 +86,8 @@ export async function GET(request: NextRequest) {
     // missing, so say which way they went rather than making someone read
     // the function logs to find out.
     storage: kvConfigured() ? ("kv" as const) : ("memory" as const),
+    // 운영자·점검 계정이라 연 프리미엄(server/staffGrant.ts) — 앱은 RevenueCat이 무료라고 해도 이걸로 프리미엄 화면.
+    grant: staff ? ("staff" as const) : null,
     premiumSource: verified
       ? ("revenuecat" as const)
       : revenueCatConfigured()
