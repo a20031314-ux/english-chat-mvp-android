@@ -6,7 +6,9 @@ name: "Play: build to testing track"
 
 on:
   push:
-    tags: ["v*"]
+    # internal-* is the same build without the store-screenshot workflow,
+    # which also listens for v* tags.
+    tags: ["v*", "internal-*"]
   workflow_dispatch:
     inputs:
       track:
@@ -65,11 +67,24 @@ jobs:
       - uses: ./.github/actions/play-setup
         with:
           play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
-      # `inputs` only exists for workflow_dispatch. A version tag is a push,
-      # and reading `inputs` there fails the step before fastlane starts.
-      - run: bundle exec fastlane android internal
-        env:
-          PLAY_TRACK: ${{ github.event.inputs.track || 'internal' }}
+      # `inputs` exists only on workflow_dispatch. A tag push that reads it
+      # fails this step in about two seconds, before fastlane starts.
+      - name: Testing track
+        run: echo "PLAY_TRACK=internal" >> "$GITHUB_ENV"
+      - name: Testing track from dispatch
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "PLAY_TRACK=${{ inputs.track }}" >> "$GITHUB_ENV"
+      - name: Upload to testing track
+        run: |
+          set +e
+          bundle exec fastlane android internal > "$RUNNER_TEMP/lane.txt" 2>&1
+          code=$?
+          if [ "$code" -ne 0 ]; then
+            tail -n 25 "$RUNNER_TEMP/lane.txt" | sed -E 's/(password|secret|token|key)[^ ]*/\1 ***/Ig' | while IFS= read -r line; do
+              printf '::error title=fastlane::%s\n' "${line:0:180}"
+            done
+          fi
+          exit "$code"
 
       - name: Remove signing files
         if: always()
