@@ -18,8 +18,12 @@ const appCopy = JSON.parse(fs.readFileSync(path.join(root, "tmp", "store-layers"
 const NAMES = ["overview", "patterns", "quizbank", "call", "after-call", "people", "connect", "weak"];
 
 const FONT = {
-  ko: '"Noto Sans CJK KR"', ja: '"Noto Sans CJK JP"', zh: '"Noto Sans CJK SC"', hi: '"Noto Sans Devanagari"',
-  th: '"Noto Sans Thai","Loma"', ar: '"Noto Sans Arabic"',
+  ko: '"Noto Sans KR","Noto Sans CJK KR","Malgun Gothic"',
+  ja: '"Yu Gothic","Noto Sans CJK JP"',
+  zh: '"Microsoft YaHei","Noto Sans CJK SC"',
+  hi: '"Nirmala UI","Noto Sans Devanagari"',
+  th: '"Leelawadee UI","Noto Sans Thai","Loma"',
+  ar: '"Segoe UI","Noto Sans Arabic","Tahoma"',
 };
 
 function pagesFor(ui) {

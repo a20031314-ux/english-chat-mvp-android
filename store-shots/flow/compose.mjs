@@ -138,7 +138,7 @@ function detailHtml(L, shot, copy, files) {
 const only = process.env.FLOW_ONLY?.split(",");
 const targets = LISTINGS.filter((L) => !only || only.includes(L.locale));
 if (!only) rmSync(out, { recursive: true, force: true });
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
 const problems = [];
 for (const L of targets) {
