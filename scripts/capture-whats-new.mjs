@@ -604,6 +604,22 @@ const BASE = `http://127.0.0.1:${PORT}`;
 const escape = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const exactly = (text) => new RegExp(`^${escape(text)}$`);
 
+/** 아이콘 마켓은 사람 탭 칩이 아니라 1:1 입력칸 🙂 → 둘러보기(2026-11-03). */
+async function openIconMarket(page, locale, wait) {
+  const { iconCopy } = await import(`file://${path.join(ROOT, "src/lib/rooms/iconCopy.ts").replace(/\\/g, "/")}`);
+  const icons = iconCopy(locale);
+  const rooms = roomCopyFor(locale);
+  await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
+  await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+  const message = page.getByRole("button", { name: new RegExp(escape(rooms.message)) }).last();
+  for (let i = 0; i < 40 && !(await message.count()); i++) await wait(500);
+  await message.click();
+  await wait(1200);
+  await page.getByRole("button", { name: exactly(icons.tab) }).last().click();
+  await page.getByRole("button", { name: exactly(icons.browse) }).click();
+  await wait(800);
+}
+
 /**
  * How to reach each picture. Keyed by the `shot` names release notes use; a
  * release that needs a new picture adds a step here.
@@ -1804,16 +1820,14 @@ const STEPS = {
     for (let i = 0; i < 60 && !(await add.count()); i++) await wait(500);
     await wait(1200);
   },
-  async "noto-icons"({ page, ui, wait, target }) {
-    // 2.74: 사람 탭 🙂 아이콘 → 기본 묶음 Noto 😀 시트(목록·그림은 운영 — 기본 묶음은 로그인 없이도 첫 쪽 맨 앞).
+  async "noto-icons"({ page, ui, locale, wait, target }) {
+    // 2.74: 1:1 🙂 둘러보기 → 기본 묶음 Noto 😀 시트(목록·그림은 운영 — 기본 묶음은 로그인 없이도 첫 쪽 맨 앞).
     await socialMocks(page, target, ui);
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
-    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await openIconMarket(page, locale, wait);
     const pack = page.getByText("Noto 😀").first();
     for (let i = 0; i < 40 && !(await pack.count()); i++) await wait(500);
     await pack.click();
     await wait(4000);
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
   async "people-lang"({ page, ui, locale, wait, target }) {
     // 2.73: 사람 탭 언어 칩 "배우는 언어·쓰는 말이 같은 사람"을 고른 목록(고정 응답 — 서버가 거른 것처럼 내 모국어를 쓰고 같은 언어를 배우는 사람만).
@@ -1896,8 +1910,8 @@ const STEPS = {
     if (await micNotice.count()) await micNotice.first().click();
     await wait(800);
   },
-  async icons({ page, ui, wait, target }) {
-    // 2.72: 사람 탭 → 아이콘 → 묶음 시트(고정 응답, 그림은 여기서 만든 움직이는 WebP).
+  async icons({ page, ui, locale, wait, target }) {
+    // 2.72: 1:1 🙂 둘러보기 → 묶음 시트(고정 응답, 그림은 여기서 만든 움직이는 WebP).
     await socialMocks(page, target, ui);
     const sharp = (await import("sharp")).default;
     const colors = ["#f59e0b", "#22c55e", "#3b82f6", "#ec4899", "#a855f7", "#14b8a6", "#ef4444", "#eab308"];
@@ -1926,14 +1940,12 @@ const STEPS = {
       if (body.action === "mine") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs: [], own: [] }) });
       return route.fulfill({ status: 200, contentType: "application/json", body: "{}" });
     });
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
-    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
-    await wait(2500);
+    await openIconMarket(page, locale, wait);
+    await wait(1500);
     await page.getByText("Smile 😀").first().click();
     await wait(2000);
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
-  async "icon-sale"({ page, ui, wait, target }) {
+  async "icon-sale"({ page, ui, locale, wait, target }) {
     // 2.74: 판매 묶음 시트(가격·"이 앱에서 산 사람만"·"nP로 사기") — 고정 응답, 그림은 여기서 만든 움직이는 WebP.
     await socialMocks(page, target, ui);
     const sharp = (await import("sharp")).default;
@@ -1961,12 +1973,10 @@ const STEPS = {
       if (body.action === "mine") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs: [], own: [] }) });
       return route.fulfill({ status: 200, contentType: "application/json", body: "{}" });
     });
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
-    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
-    await wait(2500);
+    await openIconMarket(page, locale, wait);
+    await wait(1500);
     await page.getByText("Gatos 🐱").first().click();
     await wait(2000);
-    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
   async invite({ page, wait }) {
     // 초대 링크로 연 것처럼(?invite=) — "Yuki님이 초대했어요" 시트(고정 응답).
@@ -2398,7 +2408,7 @@ const STEPS = {
     await STEPS.calltools({ page, ui, locale, wait, target });
   },
   async "call-ownline"({ page, ui, wait, target }) {
-    // 2026-10-23부터 AI 대화 ⋮ → "내 문장 말해보기"(시트).
+    // 2026-10-23부터 AI 대화 ⋮ → "내 문장 말해보기"(시트). 2026-11-03에 메뉴에서 숨김 — 이 옛 그림은 그 메뉴가 있는 빌드에서만 다시 찍힌다.
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     const menu = page.getByRole("button", { name: exactly(ui.sessionMenu) });
     for (let i = 0; i < 40 && !(await menu.count()); i++) await wait(500);
@@ -2497,10 +2507,11 @@ const STEPS = {
       localStorage.setItem("roleplayConversations", JSON.stringify(saved));
     }, [lines ?? PAST_CALL[target], target, now]);
     // 2026-10-23부터 지난 통화는 AI 대화 ⋮ → 채팅 기록의 "통화" 목록(과 대화 안 🗒 카드).
-    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
     await wait(3000);
-    await page.getByRole("button", { name: exactly(ui.sessionMenu) }).first().click();
-    // 2026-10-27부터 통화 기록은 채팅과 따로(⋮ → 통화 기록 → 돌아보기).
+    // 2026-11-03부터 통화 기록 목록은 채팅 ⋮가 아니라 AI 튜터 프로필.
+    await page.getByRole("button", { name: exactly(ui.talkAiTutor) }).first().click();
+    await wait(800);
     await page.getByRole("button", { name: exactly(ui.callRecordsTitle) }).first().click();
     await wait(800);
     await page.getByRole("button", { name: exactly(ui.packSeeRetro) }).first().click();

@@ -405,6 +405,70 @@ function lettersOf(text: string): string {
   return text.toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "");
 }
 
+/** `needle`의 글자가 `hay` 안에서 시작되는 자리. 문장부호·띄어쓰기는 건너뛴다. */
+function phraseStart(hay: string, needle: string): number {
+  const want = lettersOf(needle);
+  if (!want) return -1;
+  for (let i = 0; i < hay.length; i++) {
+    if (!/[\p{L}\p{M}\p{N}]/u.test(hay[i] ?? "")) continue;
+    if (lettersOf(hay.slice(i)).startsWith(want)) return i;
+  }
+  return -1;
+}
+
+/** 고친 문장을 인용으로 감싼 부호. 예문을 읽듯 소리 나지 않게 그 문장 바로 앞뒤만 걷는다. */
+const CITATION_MARK = /[「」『』“”„«»‹›"]/u;
+const CITATION_PAD = /[\s.。．!！?？,、，]/u;
+
+function unquoteRight(line: string, right: string): string {
+  const at = phraseStart(line, right);
+  const want = lettersOf(right);
+  if (at < 0 || !want) return line;
+  const chars = [...line];
+  let before = at;
+  while (before > 0 && /\s/u.test(chars[before - 1]!)) before--;
+  while (before > 0 && CITATION_MARK.test(chars[before - 1]!)) {
+    chars[before - 1] = "";
+    before--;
+    while (before > 0 && /\s/u.test(chars[before - 1]!)) before--;
+  }
+  let got = "";
+  let i = at;
+  while (i < chars.length && got.length < want.length) {
+    const ch = chars[i] ?? "";
+    if (/[\p{L}\p{M}\p{N}]/u.test(ch)) got += ch;
+    i++;
+  }
+  while (i < chars.length && (CITATION_PAD.test(chars[i]!) || CITATION_MARK.test(chars[i]!))) {
+    if (CITATION_MARK.test(chars[i]!)) chars[i] = "";
+    i++;
+  }
+  return chars.join("").replace(/[ \t]{2,}/g, " ").trim();
+}
+
+/**
+ * 튜터 수업에서 큰 실수를 고쳐 주는 차례에 실제로 소리 내는 줄.
+ *
+ * 맞장구 뒤에 고친 문장을 붙이지 않는다. 순서는 틀린 곳을 짚는 말(앱 언어) → 고친 문장
+ * (그 뒤에 모델이 붙인 "다시"는 남긴다). 문장을 감싼 인용 부호는 걷어, 예문처럼 읽히지 않게.
+ * 짚는 말이 없으면 문장만.
+ */
+export function spokenCoachFix(modelSay: string, point: string, right: string): string {
+  const said = modelSay.trim();
+  if (!right) return said;
+  const atRight = phraseStart(said, right);
+  const tail = atRight >= 0 ? said.slice(atRight).trim() : "";
+  const atPoint = point ? phraseStart(said, point) : -1;
+  let spoken: string;
+  if (tail && atPoint >= 0 && atPoint <= atRight) spoken = said.slice(atPoint).trim();
+  else if (tail && point && atPoint < 0) spoken = `${point} ${tail}`.trim();
+  else if (tail && !point) {
+    const lead = said.slice(0, atRight);
+    spoken = lettersOf(lead) ? tail : said;
+  } else spoken = [point, right].filter(Boolean).join(" ");
+  return unquoteRight(spoken, right);
+}
+
 /** 튜터 수업은 "그냥 대화"(열린 장면)에서만 — 대본 장면은 할 일이 정해져 있어 예전 그대로. */
 export function isCoaching(request: Pick<DirectorRequest, "coach">, scenario: Pick<RoleplayScenario, "openEnded">): boolean {
   return Boolean(request.coach && scenario.openEnded);
@@ -414,8 +478,8 @@ export function coachRules(target: string, native: string, bilingual: boolean): 
   return `How you tutor:
 - They speak ${native} and you understand it completely. They may say anything in ${native}, or mix it into ${target}, at any time.
 - Pick up only big mistakes: the ones that change or blur what they mean, or that any listener would notice at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation. A turn without a big mistake is just conversation.
-- A turn with a big mistake is the correction and nothing else: if you like, a very short word of encouragement; then their whole sentence said right, once, simply; then ask them to say it again. Ask no new question in that turn. Put the right sentence in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask".
-- On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can — and ask once more. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
+- A turn with a big mistake is three spoken beats and nothing else, in this order: (1) point out what was wrong in one short phrase in ${native} — name the mistake (the time, the word, the order, the missing word), the same words as "note", said out loud; (2) their whole sentence said right, once, in ${target}, in your own manner — your rhythm and everyday wording, still at the speech level they use with you — spoken as your own line, never wrapped in quotation marks or read out as a cited example; the words stay their sentence put right, not a different story of yours; (3) ask them to say it again in a few words of ${target}, in that same manner: a short nudge rather than a polite set phrase, and not in ${native}. Ask no new question. Do not react to what they told you, and do not use a ready line. Leave "open" and "follow" empty. Put the right sentence alone in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask". Do not put the corrected sentence in "note".
+- On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can, still in your own manner — and ask once more in a few words of ${target}. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
 - When they say a whole sentence in ${native}: a few words to show you understood, then the ${target} sentence for exactly what they said, and have them say it ("meant", "retry": "ask") — even when you understood it perfectly. Checking back with a question is only for when you truly cannot tell what they meant.
 - When they say they do not know, or cannot say it: do not make up an answer for them. Make it easier — ask again in fewer words, offer two choices to pick from, or give the start of a sentence they can finish. Only when they asked how to say something in particular, hand them that sentence to say.
 - Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask" and "offer" set to true (it is not a correction: what they said was fine).
@@ -424,7 +488,7 @@ export function coachRules(target: string, native: string, bilingual: boolean): 
       ? `You may say up to one short sentence in ${native} in a turn — comfort, or what the correction is about — never small talk or a question in ${native}.`
       : `You may mix in a few words of ${native} at a time — comfort, "try again", "almost" — never a whole sentence of conversation in ${native}.`
   } Everything else is ${target}.
-- Explanations stay out loud only as a few words. "note" is the reason for a correction in one short line in ${native}, shown on screen and never said aloud; empty when there was no correction.
+- "note" is that spoken point-out: one short line in ${native}, the same words you say first. It is also shown on screen. Empty when there was no correction. Do not add a longer explanation.
 - "better" and "meant" are only for a correction or an offer, never for anything you let go.
 `;
 }
@@ -696,7 +760,9 @@ ${
 
 ${
   scenario.openEnded
-    ? `There is nothing to get done: this is just a conversation. Answer, react, ask them something back, and keep your turns short so they do most of the talking.`
+    ? coaching
+      ? `There is nothing to get done: this is a real conversation, and on an ordinary turn you answer, react, and ask them something back, in one or two short sentences. On a turn you correct a big mistake, do not do that: no reaction, no new question, "open" and "follow" empty. That turn is only the three beats in "How you tutor", and you still say them in your own manner — how you talk — not as a teacher reading an example.`
+      : `There is nothing to get done: this is just a conversation. Answer, react, ask them something back, and keep your turns short so they do most of the talking.`
     : `What you are here to get done, in this order:
 ${steps
   .map((step) => `- step:${step.id} — ${step.goal}${quote(step.questionId) ? ` — you ask it with ${quote(step.questionId)}` : ""}`)
@@ -781,7 +847,7 @@ Get back to your list as soon as it feels natural.`
       ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
       : "",
     repertoire.length > 0
-      ? `Lines you already have, ready to play in your own voice. A turn of yours is usually a reaction and then a question, and both halves can come from here — "That sounds great." then "What did you do there?" is a whole turn. Use them when they are what you would have said: answer with "open" for the reaction and "follow" for the question, by their ids. Either may be left out, and when nothing here is what you would have said, write your own line in "say" instead. Whatever you put in "follow" has to move the conversation on: asking them to repeat themselves is a whole turn by itself, never the second half of one. The questions here point back at what they just said rather than naming it, which is why they fit anything:\n${repertoire.join("\n")}`
+      ? `Lines you already have, ready to play in your own voice. A turn of yours is usually a reaction and then a question, and both halves can come from here — "That sounds great." then "What did you do there?" is a whole turn. Use them when they are what you would have said: answer with "open" for the reaction and "follow" for the question, by their ids. Either may be left out, and when nothing here is what you would have said, write your own line in "say" instead. Whatever you put in "follow" has to move the conversation on: asking them to repeat themselves is a whole turn by itself, never the second half of one. The questions here point back at what they just said rather than naming it, which is why they fit anything:${coaching ? ` On a turn you correct a mistake, do not use these lines. Leave "open" and "follow" empty and write the three beats in "say", in your own manner.` : ""}\n${repertoire.join("\n")}`
       : "",
     scenario.openEnded || !current
       ? ""
@@ -1333,21 +1399,27 @@ export function parseDirection(
             ? "miss"
             : named;
   const givingUp = retry === "miss" && lastRedoTry(request);
-  // 다시 말해 보라는 차례(ask·마지막 아닌 miss)에는 소리 내는 말에 그 문장이 들어 있어야 한다 — 운영(es/ar 2026-11-02)에서
-  // "¡Qué bien!"만 하고 고친 문장을 말하지 않은 차례가 있었다. 없으면 뒤에 붙인다.
-  const repeatThis = (retry === "ask" || (retry === "miss" && !givingUp)) ? meant || better || request.redo || "" : "";
-  if (repeatThis) {
-    const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
-    if (!lettersOf(spokenNow).includes(lettersOf(repeatThis))) {
-      say = { text: [spokenNow, repeatThis].filter(Boolean).join(" ") };
-    }
-  }
-  // 튜터 수업의 note는 고친 까닭 한 줄(앱 언어) — 고친 말과 같이 보이고, 고친 문장을 따와도 된다.
+  // 튜터 수업의 note는 틀린 곳을 짚는 한 줄(앱 언어) — 카드에도 보이고, 고쳐 주는 차례에는 그 말을 먼저 소리 낸다.
   // 학습 언어로만 쓴 설명은 못 읽을 수 있어 뺀다(givesThemWords와 같은 까닭).
   const coachNote =
     coaching && (better || meant) && written && !explanationInLearningLanguage(written, request.nativeLanguage, request.targetLanguage)
       ? written
       : "";
+  const offering = retry === "ask" && Boolean(better) && !meant && record.offer === true;
+  // 큰 실수를 고쳐 주는 차례: 맞장구를 버리고, 짚는 말 → 고친 문장(→ 다시)만 소리 낸다.
+  // 건네기(offer)·아직(miss)은 예전처럼, 문장이 빠졌을 때만 뒤에 붙인다.
+  if (retry === "ask" && !offering && (better || meant)) {
+    const spoken = spokenCoachFix(text, coachNote, meant || better);
+    if (spoken) say = { text: spoken };
+  } else {
+    const repeatThis = (retry === "miss" && !givingUp) || offering ? meant || better || request.redo || "" : "";
+    if (repeatThis) {
+      const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
+      if (!lettersOf(spokenNow).includes(lettersOf(repeatThis))) {
+        say = { text: [spokenNow, repeatThis].filter(Boolean).join(" ") };
+      }
+    }
+  }
 
   return {
     assessment,

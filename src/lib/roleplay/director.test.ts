@@ -1263,6 +1263,13 @@ test("튜터 수업: 그냥 대화의 '실수·튜터 말 금지'를 뒤집고 �
   assert.doesNotMatch(coach, /Never mention a tutor/);
   assert.doesNotMatch(coach, /Teaching never goes in what you say out loud/);
   assert.match(coach, /Pick up only big mistakes/);
+  assert.match(coach, /point out what was wrong/);
+  assert.match(coach, /said out loud/);
+  assert.doesNotMatch(coach, /never said aloud/);
+  assert.match(coach, /in your own manner/);
+  assert.match(coach, /never wrapped in quotation marks/);
+  assert.match(coach, /a few words of English, in that same manner/);
+  assert.match(coach, /not in Korean/);
   assert.match(coach, /"retry": "ask" \| "pass" \| "miss"/);
   assert.match(coach, /Never ask a third time/);
   // 앱 언어(한국어)를 알아듣고, 몇 낱말씩 섞는다 — 이름은 그 언어 이름으로.
@@ -1332,17 +1339,26 @@ test("튜터 수업: 다시 말해 보라고 한 차례에는 다음 질문(foll
   assert.equal(coached?.follow, undefined);
 });
 
-test("튜터 수업: 고친 문장을 말하지 않은 차례엔 뒤에 붙인다(운영 es/ar), 띄어쓰기 없는 일본어도 들어 있으면 그대로", () => {
+test("튜터 수업: 고쳐 주는 차례는 맞장구를 버리고 틀린 곳을 먼저 짚는다", () => {
   const es = findScenario("open-talk-es")!;
   const esBank = sentencesFor("es");
-  const out = parseDirection(JSON.stringify({ say: "¡Qué bien!", better: "Ayer fui a la playa con mi hermano.", retry: "ask", assessment: "on_track", next: "free" }), {
+  const heard = "ayer yo ir a la playa con mi hermano";
+  const base = {
     scenario: es,
     bank: esBank,
     recordedIds: new Set(recordedLines(es, SCENARIOS, esBank).map((line) => line.id)),
-    request: request({ scenarioId: es.id, nodeId: "talk", coach: true, heard: "ayer yo ir a la playa con mi hermano", targetLanguage: "es", nativeLanguage: "ar" }),
-  });
-  assert.ok(out && "text" in out.say);
-  assert.equal(out && "text" in out.say ? out.say.text : "", "¡Qué bien! Ayer fui a la playa con mi hermano.");
+  };
+  const ask = request({ scenarioId: es.id, nodeId: "talk", coach: true, heard, targetLanguage: "es", nativeLanguage: "ar" });
+  const dropped = parseDirection(JSON.stringify({ say: "¡Qué bien!", better: "Ayer fui a la playa con mi hermano.", retry: "ask", assessment: "on_track", next: "free" }), { ...base, request: ask });
+  assert.equal(dropped && "text" in dropped.say ? dropped.say.text : "", "Ayer fui a la playa con mi hermano.");
+
+  const pointed = parseDirection(JSON.stringify({ open: "talk.nice", say: "¡Qué bien! ¿Qué hiciste allí?", better: "Ayer fui a la playa con mi hermano.", note: "الماضي", retry: "ask", assessment: "on_track", next: "free" }), { ...base, request: ask });
+  assert.equal(pointed && "text" in pointed.say ? pointed.say.text : "", "الماضي Ayer fui a la playa con mi hermano.");
+  assert.equal(pointed?.note, "الماضي");
+  assert.equal(pointed?.follow, undefined);
+
+  const keptAsk = parseDirection(JSON.stringify({ say: "الماضي. Ayer fui a la playa con mi hermano. ¿Otra vez?", better: "Ayer fui a la playa con mi hermano.", note: "الماضي", retry: "ask", assessment: "on_track", next: "free" }), { ...base, request: ask });
+  assert.equal(keptAsk && "text" in keptAsk.say ? keptAsk.say.text : "", "الماضي. Ayer fui a la playa con mi hermano. ¿Otra vez?");
 
   const ja = findScenario("open-talk-ja")!;
   const jaBank = sentencesFor("ja");
@@ -1352,7 +1368,15 @@ test("튜터 수업: 고친 문장을 말하지 않은 차례엔 뒤에 붙인�
     recordedIds: new Set(recordedLines(ja, SCENARIOS, jaBank).map((line) => line.id)),
     request: request({ scenarioId: ja.id, nodeId: "talk", coach: true, heard: "昨日友達を会いました", targetLanguage: "ja", nativeLanguage: "ko" }),
   });
-  assert.equal(kept && "text" in kept.say ? kept.say.text : "", "「昨日、友達に会いました」。もう一度どうぞ。");
+  assert.equal(kept && "text" in kept.say ? kept.say.text : "", "昨日、友達に会いました。もう一度どうぞ。");
+
+  const quoted = parseDirection(JSON.stringify({ say: '"Yesterday, I went to the beach." Say it again, please.', better: "Yesterday, I went to the beach.", note: "시제가 잘못됐어요", retry: "ask", assessment: "on_track", next: "free" }), {
+    scenario: open,
+    bank,
+    recordedIds: new Set(recordedLines(open, SCENARIOS, bank).map((line) => line.id)),
+    request: request({ scenarioId: open.id, nodeId: "talk", coach: true, heard: "yesterday i go to the beach", targetLanguage: "en", nativeLanguage: "ko" }),
+  });
+  assert.equal(quoted && "text" in quoted.say ? quoted.say.text : "", "시제가 잘못됐어요 Yesterday, I went to the beach. Say it again, please.");
 });
 
 test("튜터 수업: 같은 문장은 두 번까지 — 마지막 시도에서 또 묻는 ask는 miss(넘어감), 그때는 다음 질문을 얹어도 된다", () => {

@@ -478,8 +478,9 @@ function AppHomeInner({
                   onCall={callOn ? () => openTab("roleplay") : null}
                   callLabel={ui.talkAiCall}
                   menuItems={[
-                    ...(callOn ? [{ label: ui.callRecordsTitle, onSelect: () => sendAppIntent("openCall", {}) }] : []),
-                    { label: ui.roleplayOwnLineOpen, onSelect: () => sendAppIntent("sayOwnLine", {}) },
+                    // 통화 기록 목록은 AI 튜터 프로필에만(2026-11-03). 사람 탭이 없으면(iOS·사람 기능 끔) 프로필이 없어 여기서만 연다.
+                    ...(callOn && !socialLayout ? [{ label: ui.callRecordsTitle, onSelect: () => sendAppIntent("openCall", {}) }] : []),
+                    // 내 문장 말해보기는 숨김(2026-11-03). 신호·화면은 남기고 메뉴에서는 열지 않는다.
                   ]}
                 />
               </div>

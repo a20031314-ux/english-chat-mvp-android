@@ -1,6 +1,7 @@
 /**
- * 처음 체크(초급·중급·고급·글자부터) — Logbank 육각형의 시작 어림(curriculum/fill.ts CHECK_PRIOR, 2026-11-02).
- * 학습 언어마다 하나, 이 폰에만. 없으면 육각형은 지금 단계에서 시작한다.
+ * 처음 체크 — Logbank 육각형의 시작 어림(curriculum/fill.ts CHECK_PRIOR, 2026-11-02).
+ * 학습 언어마다 하나, 이 폰에만. 화면 버튼은 글자부터만 남음(2026-11-03). 없으면 육각형은 지금 단계에서 시작한다.
+ * 예전에 고른 초급·중급·고급 값은 그대로 읽는다.
  */
 import { CHECKS, type Check } from "./fill.ts";
 

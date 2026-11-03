@@ -242,7 +242,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "메뉴",
         "body": [
-          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
         ],
         "shot": "tutor-pick"
       },
@@ -494,7 +494,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "아이콘",
         "body": [
-          "묶음을 받으면 🙂에서 보내요. 직접 만들어 올리거나 팔 수도 있어요."
+          "1:1·단체방 입력칸 🙂에서 묶음을 둘러보고 받아 보내요. 직접 만들어 올리거나 팔 수도 있어요."
         ],
         "shot": "people-icons"
       }
@@ -630,7 +630,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Menu",
         "body": [
-          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+          "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
         ],
         "shot": "tutor-pick"
       },
@@ -882,7 +882,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Icons",
         "body": [
-          "Get a pack to send it from 🙂. You can also make, share or sell your own."
+          "Browse, get and send packs from 🙂 in a direct or group chat. You can also make and sell your own."
         ],
         "shot": "people-icons"
       }

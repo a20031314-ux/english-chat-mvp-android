@@ -53,7 +53,7 @@ test("처음 체크만: 이해는 체크 어림, 활용 0.6배, 듣기·실전 �
   const catalog = fillCatalog("es", await wordsOf("es"));
   const result = computeFill({ catalog, check: "advanced", stage: 1, events: [], calls: [], now: NOW });
   assert.ok(Math.abs(result.axes.vocabRead.fill - 0.67) < 0.02, String(result.axes.vocabRead.fill));
-  assert.ok(Math.abs(result.axes.sentUse.fill - 0.67 * 0.6 * 0.6) < 0.05, String(result.axes.sentUse.fill));
+  assert.ok(Math.abs(result.axes.sentUse.fill - 0.67 * 0.6) < 0.05, String(result.axes.sentUse.fill));
   assert.ok(Math.abs(result.axes.talk.fill - 0.335) < 0.01);
   assert.ok(!result.axes.vocabRead.converged && result.axes.vocabRead.high - result.axes.vocabRead.low > 0.2);
   assert.equal(result.startStage, 4);
@@ -131,6 +131,9 @@ test("듣기: 단계 띠 평균 — 1단계만 다 알아들으면 20%", () => {
   const result = listenFill([{ at: NOW, stage: 1, turns: 40, smooth: 0, snag: 0, stuck: 0, asked: 40, heardYes: 40 }], 0, 0.2);
   assert.ok(Math.abs(result.stages[0]! - 1) < 1e-9);
   assert.ok(result.fill > 0.15 && result.fill < 0.21, String(result.fill));
+  assert.ok(result.stages.slice(1).every((band) => band === 0), "어림이 0이면 빈 띠도 0");
+  const estimated = listenFill([], 0.2, 0.2);
+  assert.ok(estimated.stages.every((band) => Math.abs(band - 0.2) < 1e-9), estimated.stages.join());
 });
 
 test("틀린 꼴: 어순·빠짐·기능어·꼴·철자·다른 낱말(es·ja·th)", () => {
@@ -150,7 +153,7 @@ test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 
   const utc = Math.floor(Date.UTC(2026, 10, 2) / DAY);
   const events = fillEvents({
     language: "es",
-    known: { "w|agua": { days: [utc, utc - 3], at: NOW } },
+    known: { "w|agua": { days: [utc, utc - 3], at: NOW }, "r|es-f1-03": { days: [utc], at: NOW } },
     quiz: { [day]: { n: 3, right: 2, okc: ["w|agua"], okt: ["w|casa"], wrong: ["f|es-f1-01"], wt: ["f|es-f1-01"], miss: { "f|es-f1-01": "form" } } },
     results: [{ kind: "recall", item: "recall", title: "t", right: 4, total: 5, said: [], at: NOW, day, key: "f|es-f1-02" }],
     items: [
@@ -166,6 +169,7 @@ test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 
   assert.ok(events.some((one) => one.key === "w|casa" && one.use && one.correct));
   assert.ok(events.some((one) => one.key === "f|es-f1-01" && one.use && !one.correct && one.miss === "form"));
   assert.ok(events.some((one) => one.key === "f|es-f1-02" && one.source === "recall" && one.correct));
+  assert.ok(events.some((one) => one.key === "f|es-f1-03" && one.use && one.source === "recall"), "꺼내 쓰기 r|는 문장 활용");
   assert.ok(events.some((one) => one.key === "w|soy" && one.source === "fix" && one.miss === "word"));
   assert.ok(events.some((one) => one.key === "w|gracias" && one.source === "free"));
   assert.ok(!events.some((one) => one.key === "w|perro"), "복습에서 배운 것은 스스로 씀이 아님");

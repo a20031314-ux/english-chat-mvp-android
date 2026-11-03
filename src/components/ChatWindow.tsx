@@ -755,7 +755,7 @@ type ChatWindowProps = {
   /** 머리의 📞(AI 튜터와 통화). 없으면 두지 않는다(통화 없는 언어·통화를 숨김). */
   onCall?: (() => void) | null;
   callLabel?: string;
-  /** ⋮ 메뉴에 더할 것(내 문장 말해보기 등). */
+  /** ⋮ 메뉴에 더할 것. */
   menuItems?: { label: string; onSelect: () => void }[];
   /** 이 화면이 지금 보이는지(탭은 숨겨도 그려져 있어서) — 잠김 화면 네이티브 광고를 숨은 동안 떼어 둔다. */
   visible?: boolean;
