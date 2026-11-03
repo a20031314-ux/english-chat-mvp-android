@@ -80,7 +80,8 @@ jobs:
           bundle exec fastlane android internal > "$RUNNER_TEMP/lane.txt" 2>&1
           code=$?
           if [ "$code" -ne 0 ]; then
-            tail -n 25 "$RUNNER_TEMP/lane.txt" | sed -E 's/(password|secret|token|key)[^ ]*/\1 ***/Ig' | while IFS= read -r line; do
+            echo "::error title=fastlane::exit ${code}, $(wc -l < "$RUNNER_TEMP/lane.txt") lines"
+            grep -nE '\[!\]|Error|error|Exception|Could not|No such|missing|Invalid|refused' "$RUNNER_TEMP/lane.txt" | head -n 12 | sed -E 's/(password|secret|token)[^ ]*/\1 ***/Ig' | while IFS= read -r line; do
               printf '::error title=fastlane::%s\n' "${line:0:180}"
             done
           fi
