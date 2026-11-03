@@ -65,9 +65,11 @@ jobs:
       - uses: ./.github/actions/play-setup
         with:
           play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      # `inputs` only exists for workflow_dispatch. A version tag is a push,
+      # and reading `inputs` there fails the step before fastlane starts.
       - run: bundle exec fastlane android internal
         env:
-          PLAY_TRACK: ${{ inputs.track || 'internal' }}
+          PLAY_TRACK: ${{ github.event.inputs.track || 'internal' }}
 
       - name: Remove signing files
         if: always()
