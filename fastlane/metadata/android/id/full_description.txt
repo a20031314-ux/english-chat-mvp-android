@@ -1,25 +1,22 @@
-languagebank menentukan apa yang dipelajari setiap hari dan membuatmu mengucapkannya dengan suara. Pelajari salah satu dari 14 bahasa, dengan aplikasi dalam salah satu dari 14 bahasa.
+languagebank menyatukan belajar bahasa: pola kalimat, latihan, dan bicara langsung. Pelajari salah satu dari 14 bahasa, dengan aplikasi dalam salah satu dari 14 bahasa.
 
-ALUR BELAJAR HARIANMU
-1. Mulai dari tahapmu: baca percakapan singkat dan jawab "Bisa", "Hampir", atau "Belum" untuk mulai di tahap yang pas dari lima tahap. Aksara baru? Mulai dari huruf dan bunyi.
-2. Pelajaran harian: pilih 5, 10, atau 20 menit sehari dan lihat berapa hari selesai. "Sesuai urutan" atau "Sesuai riwayatku" menentukan naskah dan struktur kalimat hari itu.
-3. Ucapkan naskah: ucapkan kalimatmu dalam naskah situasi dengan 🎤 — Ulangi, Huruf pertama, Disembunyikan, atau Dengan kata sendiri. Kalimat sempurna dapat ★; benar tapi kaku diberi cara yang lebih wajar, dan kata yang kurang jelas ditandai. Mengucapkannya dengan cara lain yang benar juga lulus, dan di hari yang sama kamu bisa lanjut dari tempat berhenti.
-4. Ganti dalam struktur kalimat: ucapkan satu struktur berkali-kali dengan mengganti katanya saja.
-5. Ulangi: di akhir naskah tandai tiap ungkapan "Sudah tahu" atau "Masih bingung". Yang membingungkan dan kalimat yang salah kembali sebagai kuis singkat setelah 2 dan 7 hari, dan terkumpul di atas tab Saya, di "Yang salah terakhir kali". Nyalakan "Pengingat pagi" agar muncul di layar kunci.
-6. Latihan berkelanjutan: setelah pelajaran harian, pilih Ulangi, Acak, Kosakata, Tata bahasa, atau Ungkapan lalu ketuk ▶ Lanjut belajar untuk kuis singkat yang mencampur isian, urutan kata, mendengar, dan berbicara.
-7. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
+1. Semua untuk belajar bahasa, dalam satu app. Stagebank berisi Hari ini (5, 10, atau 20 menit) dan struktur kalimat. Quizbank adalah latihannya. Percakapan adalah tempat memakainya. Kesalahan kembali jadi latihan.
+2. Kuasai pola kalimat. Struktur kalimat menampilkan halaman tata bahasa yang singkat, lalu kamu hanya mengetik bagian kuncinya.
+3. Latihan sampai benar-benar ingat. Di Quizbank kamu mengisi bagian kosong. Setelah memilih, setiap pilihan menunjukkan artinya dan mengapa yang lain salah.
+4. Bicara langsung dengan tutor AI. Panggilan terlihat seperti telepon. Ketuk takarir untuk terjemahan. Les dengan tutor mengucapkan kesalahan besar agar kamu mengatakannya lagi. «Aku belum dengar jelas» meminta untuk mendengarnya sekali lagi.
+5. Setelah telepon, hanya yang perlu diperbaiki. Yang ingin kamu katakan kembali sebagai kalimat yang benar.
+6. Bersama orang yang belajar bahasa yang sama: telepon grup, obrolan grup, dan Room.
+7. Kesalahan kembali jadi latihan. Kalimat yang dikoreksi saat telepon menjadi pelajaran polanya, lalu ulasan.
+8. Lewati yang sudah tahu. Logbank terbuka di Kemampuan bahasa. Ketuk sebuah sudut, dan yang kamu butuhkan muncul duluan.
 
-PAKAI DALAM PERCAKAPAN
-• Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Kalau kamu memakai sendiri ungkapan yang sudah kamu tandai, kalimatnya diberi tanda "Dipakai lagi".
-• Panggilan AI: bicara dengan suara. Walau berantakan, tutor menemukan maksudmu, dan setelahnya bisa ditinjau.
-• Analisis kalimat: di kalimat mana pun, pilih bagian yang tidak kamu pahami dan tanyakan artinya.
+Juga
+• Buntu di chat? Tulis dalam bahasa Indonesia. Tutor melanjutkan dalam bahasa yang kamu pelajari, dan «Lihat cara mengatakannya» menunjukkan kalimat yang kamu maksud.
+• Analisis kalimat: pilih bagian yang tidak kamu pahami dan tanyakan artinya.
 • Video: video asli dipecah per kalimat untuk diulang dan ditanyakan.
+• Kamu bisa belajar lebih dari satu bahasa. Tutor punya foto dan suara perempuan atau laki-laki.
 
-BELAJAR BERSAMA ORANG
-• Di Ruang, bicara dengan suara bersama yang belajar bahasa yang sama, dengan teks langsung, lalu lanjutkan di grup dan pesan pribadi.
+Tanpa nama tingkat
+• Setiap kalimat ditunjukkan kesalahannya. Kemampuan bahasa menampilkan persen di setiap sudut.
 
-TANPA NILAI LEVEL
-• Setiap kalimat ditunjukkan salah dan kurangnya; riwayatmu menentukan langkah berikutnya.
-
-HARGA
-• Naskah per tahap gratis (dengan iklan). "Paket naskah" menambah panggilan singkat dan chat; Lite, Plus, dan Premium tanpa iklan dengan lebih banyak chat dan waktu panggilan harian.
+Harga
+• Naskah per tahap gratis, dengan iklan. Paket naskah menambah panggilan singkat dan chat. Lite, Plus, dan Premium tanpa iklan, dengan lebih banyak chat dan waktu panggilan harian.

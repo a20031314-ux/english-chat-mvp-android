@@ -1,25 +1,22 @@
-languagebank định ra mỗi ngày học gì và cho bạn nói thành tiếng những gì đã học. Học một trong 14 ngôn ngữ, với ứng dụng bằng một trong 14 ngôn ngữ.
+languagebank gom việc học một ngôn ngữ vào một app: mẫu câu, luyện tập, và nói thành tiếng. Học một trong 14 ngôn ngữ, với app bằng một trong 14 ngôn ngữ.
 
-MỘT NGÀY HỌC
-1. Bắt đầu đúng giai đoạn: đọc một đoạn hội thoại ngắn rồi chọn "Được", "Gần được" hoặc "Chưa được" để bắt đầu ở giai đoạn phù hợp trong năm giai đoạn. Chữ viết mới? Bắt đầu từ chữ cái và âm.
-2. Bài học hằng ngày: chọn 5, 10 hoặc 20 phút mỗi ngày để biết mấy ngày xong. "Theo lộ trình" hoặc "Theo kết quả của tôi" xếp kịch bản và cấu trúc câu cho ngày hôm đó.
-3. Nói theo kịch bản: nói câu của bạn trong kịch bản tình huống bằng 🎤 — Nói theo, Chỉ chữ đầu, Ẩn hoặc Bằng lời của bạn. Câu hoàn hảo được ★; đúng nhưng chưa tự nhiên sẽ có cách nói tự nhiên hơn, và từ nghe chưa rõ được chỉ ra. Nói cách khác mà đúng cũng qua, và trong ngày bạn có thể học tiếp từ chỗ dừng.
-4. Đổi trong cấu trúc câu: nói một cấu trúc nhiều lần, chỉ đổi từ.
-5. Ôn lại: cuối kịch bản đánh dấu từng cách nói "Tôi biết rồi" hoặc "Còn lẫn lộn". Chỗ còn lẫn lộn và câu sai quay lại thành câu đố ngắn sau 2 và 7 ngày, và gom ở trên cùng mục Của tôi, trong "Lần trước sai ở đâu". Bật "Nhắc buổi sáng" để thấy trên màn hình khóa.
-6. Học liên tục: sau bài học hằng ngày, chọn Ôn tập, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt rồi chạm ▶ Học tiếp để làm câu đố ngắn gồm điền chỗ trống, sắp xếp từ, nghe và nói.
-7. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
+1. Mọi thứ để học ngoại ngữ, trong một app. Stagebank có Việc hôm nay (5, 10 hoặc 20 phút) và cấu trúc câu. Quizbank là nơi luyện. Hội thoại là nơi dùng những gì đã học. Câu sai quay lại thành bài tập.
+2. Nắm chắc mẫu câu. Cấu trúc câu cho một trang ngữ pháp ngắn, rồi bạn chỉ gõ phần then chốt.
+3. Luyện nhiều để nhớ lâu. Trong Quizbank bạn điền chỗ trống. Sau khi chọn, mỗi phương án hiện nghĩa và vì sao các phương án kia sai.
+4. Nói thành tiếng với gia sư AI. Cuộc gọi trông như một cuộc điện thoại. Chạm phụ đề để xem bản dịch. Học với gia sư nói to một lỗi lớn để bạn nói lại. «Mình chưa nghe rõ» xin nghe thêm một lần.
+5. Gọi xong, chỉ tóm những câu cần sửa. Điều bạn muốn nói trở thành câu đúng.
+6. Cùng những người học chung một ngôn ngữ: gọi nhóm, trò chuyện nhóm và Room.
+7. Câu nói sai quay lại thành bài tập. Câu đã sửa trong cuộc gọi trở thành bài học của mẫu câu đó, rồi phần ôn.
+8. Bỏ qua cái đã biết. Logbank mở ở Kỹ năng ngôn ngữ. Chạm một góc, cái bạn cần sẽ đến trước.
 
-DÙNG TRONG HỘI THOẠI
-• Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Khi bạn tự dùng cách nói đã đánh dấu, câu đó hiện "Đã dùng lại".
-• Gọi AI: nói thành tiếng. Dù lộn xộn, gia sư vẫn tìm ra ý bạn, và sau đó có thể xem lại.
-• Phân tích câu: ở câu nào cũng được, chọn phần chưa hiểu và hỏi nghĩa.
+Thêm
+• Bí trong chat? Viết bằng tiếng Việt. Gia sư tiếp tục bằng ngôn ngữ bạn đang học, và «Xem cách nói» hiện câu bạn muốn nói.
+• Phân tích câu: chọn phần chưa hiểu và hỏi nghĩa.
 • Video: video thật chia theo câu để nghe lại và hỏi.
+• Bạn có thể học nhiều hơn một ngôn ngữ. Gia sư có ảnh và giọng nữ hoặc giọng nam.
 
-HỌC CÙNG MỌI NGƯỜI
-• Trong Phòng nói, trò chuyện bằng giọng với người học cùng ngôn ngữ, có phụ đề trực tiếp, rồi tiếp tục trong nhóm và tin nhắn riêng.
+Không có tên trình độ
+• Mỗi câu được chỉ ra lỗi. Kỹ năng ngôn ngữ hiện phần trăm ở mỗi góc.
 
-KHÔNG CHẤM ĐIỂM TRÌNH ĐỘ
-• Mỗi câu chỉ ra lỗi và chỗ còn thiếu; lịch sử của bạn quyết định bước tiếp theo.
-
-GIÁ
-• Kịch bản theo giai đoạn miễn phí (có quảng cáo). "Gói kịch bản" thêm cuộc gọi ngắn và trò chuyện; Lite, Plus và Premium không quảng cáo, nhiều chat và thời gian gọi mỗi ngày hơn.
+Giá
+• Kịch bản theo giai đoạn miễn phí, có quảng cáo. Gói kịch bản thêm cuộc gọi ngắn và trò chuyện. Lite, Plus và Premium không quảng cáo, nhiều chat và thời gian gọi mỗi ngày hơn.

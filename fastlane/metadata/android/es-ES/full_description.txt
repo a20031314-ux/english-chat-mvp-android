@@ -1,25 +1,22 @@
-languagebank decide qué estudiar cada día y te hace decirlo en voz alta. Aprende cualquiera de 14 idiomas, con la app en cualquiera de 14 idiomas.
+languagebank reúne el estudio de un idioma: estructuras, práctica y hablar en voz alta. Aprende cualquiera de 14 idiomas, con la app en cualquiera de 14 idiomas.
 
-TU FLUJO DE CADA DÍA
-1. Empieza en tu etapa: lee una conversación corta y responde «Sí, puedo», «Casi» o «Todavía no» para empezar en la etapa adecuada de las cinco. ¿Escritura nueva? Empieza por letras y sonidos.
-2. Lección diaria: elige 5, 10 o 20 minutos al día y verás en cuántos días terminas. «En orden» o «Según mi historial» fija los guiones y estructuras de cada día.
-3. Habla con el guion: di tus líneas en guiones de situaciones con 🎤: Repetir, Primeras letras, Oculto o Con tus palabras. Una línea perfecta recibe ★; si es correcta pero poco natural, te da una forma más natural, y señala las palabras que no se oyeron bien. Decirlo de otra forma correcta también vale, y puedes seguir donde lo dejaste ese mismo día.
-4. Cambia la estructura de la frase: di una estructura muchas veces cambiando solo las palabras.
-5. Repaso: al final de cada guion marca cada expresión «Lo sé» o «Me confunde». Lo que te confundió y las líneas que fallaste vuelven como un quiz corto a los 2 y 7 días, y se reúnen arriba en Mi espacio, en «Lo que fallaste la última vez». Con el «Aviso por la mañana» aparecen en la pantalla de bloqueo.
-6. Práctica continua: después de la lección diaria, elige Repaso, Aleatorio, Vocabulario, Gramática o Expresiones y toca ▶ Seguir estudiando para un quiz corto que mezcla huecos, orden de palabras, escucha y habla.
-7. Lo que aprendiste hoy: las estructuras, la gramática y las palabras del día, cada una con el guion y la frase donde salió.
+1. Todo para aprender idiomas, en una app. Stagebank tiene Hoy (5, 10 o 20 minutos) y las estructuras. Quizbank es la práctica. La conversación es donde lo usas. Los errores vuelven como ejercicios.
+2. Domina las estructuras. Estructuras muestra una página corta de gramática y luego escribes solo la pieza clave.
+3. Practica hasta que se quede. En Quizbank escribes el hueco. Después de elegir, cada opción muestra su significado y por qué las otras no valen.
+4. Habla en voz alta con un tutor IA. La llamada parece una llamada de teléfono. Toca el subtítulo para ver la traducción. Clase con tutor dice en voz alta un error grande para que lo repitas. «No te entendí» pide oírlo otra vez.
+5. Al terminar, solo lo que hay que corregir. Lo que querías decir vuelve como una frase correcta.
+6. Con gente que aprende tu mismo idioma: llamadas en grupo, chats de grupo y Room.
+7. Tus errores vuelven como ejercicios. Una frase corregida en la llamada pasa a la lección de esa estructura y luego al repaso.
+8. Salta lo que sabes. Logbank se abre en Habilidades. Toca una esquina y lo que necesitas sale primero.
 
-ÚSALO EN CONVERSACIÓN
-• Chat con el tutor IA: habla como con un amigo; solo se corrigen los fallos. ¿Te atascas? Escribe en español y el tutor sigue en el idioma que aprendes; «Ver cómo se dice» te muestra la frase que querías. Si usas por tu cuenta una expresión que marcaste, la línea muestra «Lo usaste otra vez».
-• Llamadas con IA: habla en voz alta. Aunque salga mal, el tutor encuentra lo que querías decir, y luego puedes repasarlo.
-• Análisis de frases: en cualquier frase, elige solo la parte que no entiendes y pregunta qué significa.
+También
+• ¿Atascado en el chat? Escribe en español. El tutor sigue en el idioma que aprendes, y «Ver cómo se dice» muestra la frase que querías.
+• Análisis de frases: elige la parte que no entiendes y pregunta qué significa.
 • Vídeo: vídeos reales divididos en frases para repetir y preguntar.
+• Puedes estudiar más de un idioma. El tutor tiene foto y voz de mujer o de hombre.
 
-APRENDE CON PERSONAS
-• En las Salas habla por voz con quien aprende el mismo idioma, con subtítulos en directo, y sigue en grupos y mensajes privados.
+Sin nombres de nivel
+• Cada frase señala sus errores. Habilidades muestra un porcentaje en cada esquina.
 
-SIN PUNTUACIONES DE NIVEL
-• Cada frase recibe sus errores y carencias; tu historial decide lo siguiente.
-
-PRECIOS
-• Los guiones por etapa son gratis (con anuncios). El plan «Guiones» añade llamadas cortas y chat; Lite, Plus y Premium quitan los anuncios y dan más chat y minutos de llamada al día.
+Precio
+• Los guiones por etapa son gratis, con anuncios. El plan Guiones añade llamadas cortas y chat. Lite, Plus y Premium quitan los anuncios y dan más chat y tiempo de llamada al día.

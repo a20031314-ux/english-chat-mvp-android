@@ -1,25 +1,22 @@
-languagebank decide cosa studiare ogni giorno e te lo fa dire ad alta voce. Impara una delle 14 lingue, con l'app in una delle 14 lingue.
+languagebank mette lo studio di una lingua in un'app: strutture, pratica e parlare ad alta voce. Impara una delle 14 lingue, con l'app in una delle 14 lingue.
 
-IL TUO PERCORSO DI OGNI GIORNO
-1. Parti dalla tua fase: leggi una breve conversazione e rispondi «Sì, ci riesco», «Quasi» o «Non ancora» per iniziare dalla fase giusta tra cinque. Scrittura nuova? Parti da lettere e suoni.
-2. Lezione del giorno: scegli 5, 10 o 20 minuti al giorno e vedi in quanti giorni finisci. «In ordine» o «In base ai miei progressi» fissa i copioni e le strutture del giorno.
-3. Parla con il copione: di' le tue battute nei copioni di situazioni con 🎤 — Ripeti, Prime lettere, Nascosto o Con parole tue. Una battuta perfetta riceve ★; se è corretta ma poco naturale ti propone un modo più naturale, e segnala le parole poco chiare. Dirlo in un altro modo corretto vale lo stesso, e puoi riprendere da dove avevi lasciato nello stesso giorno.
-4. Cambia nella struttura della frase: ripeti una struttura più volte cambiando solo le parole.
-5. Ripasso: alla fine del copione segna ogni espressione «Lo so» o «Non sono sicuro». Ciò che non è chiaro e le battute sbagliate tornano come breve quiz dopo 2 e 7 giorni, e si raccolgono in cima a Io, in «Cosa hai sbagliato l'ultima volta». Con il «Promemoria del mattino» compaiono sulla schermata di blocco.
-6. Pratica continua: dopo la lezione del giorno scegli Ripasso, Casuale, Vocabolario, Grammatica o Espressioni e tocca ▶ Continua a studiare per un breve quiz che mescola spazi vuoti, ordine delle parole, ascolto e parlato.
-7. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
+1. Tutto per imparare le lingue, in un'app. Stagebank ha Oggi (5, 10 o 20 minuti) e le strutture. Quizbank è la pratica. La conversazione è dove le usi. Gli errori tornano come esercizi.
+2. Padroneggia le strutture della frase. Strutture mostra una pagina breve di grammatica, poi scrivi solo il pezzo chiave.
+3. Esercitati finché non resta. In Quizbank scrivi lo spazio vuoto. Dopo una scelta, ogni opzione mostra il significato e perché le altre non vanno.
+4. Parla ad alta voce con un tutor IA. La chiamata sembra una telefonata. Tocca i sottotitoli per la traduzione. Lezione col tutor dice ad alta voce un errore grande, così lo ripeti. «Non ho capito» chiede di sentirlo ancora.
+5. Dopo la chiamata, solo cosa correggere. Quello che volevi dire torna nella frase giusta.
+6. Con chi impara la tua stessa lingua: chiamate di gruppo, chat di gruppo e Room.
+7. Gli errori tornano come esercizi. Una frase corretta in chiamata diventa la lezione di quella struttura, poi il ripasso.
+8. Salta ciò che sai. Logbank si apre su Competenze. Tocca un angolo: ciò che ti serve arriva prima.
 
-USALO NELLE CONVERSAZIONI
-• Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Se usi da solo un'espressione che hai segnato, la riga mostra «Usato di nuovo».
-• Chiamate IA: parla ad alta voce. Anche se viene male, il tutor trova cosa volevi dire, e poi puoi rivederla.
-• Analisi della frase: in qualsiasi frase scegli solo la parte che non capisci e chiedi cosa significa.
+Anche
+• Bloccato in chat? Scrivi in italiano. Il tutor continua nella lingua che studi, e «Vedi come si dice» mostra la frase che volevi.
+• Analisi della frase: scegli la parte che non capisci e chiedi cosa significa.
 • Video: video veri divisi in frasi da riascoltare e chiedere.
+• Puoi studiare più di una lingua. Il tutor ha una foto e una voce femminile o maschile.
 
-IMPARA CON ALTRE PERSONE
-• Nelle Stanze parla a voce con chi impara la stessa lingua, con sottotitoli in diretta, e continua in gruppo o in messaggi privati.
+Niente nomi di livello
+• Ogni frase segnala i suoi errori. Competenze mostra una percentuale su ogni angolo.
 
-NIENTE PUNTEGGI DI LIVELLO
-• Ogni frase riceve i suoi errori e le sue lacune; il tuo storico decide cosa viene dopo.
-
-PREZZI
-• I copioni per fase sono gratis (con pubblicità). Il piano «Copioni» aggiunge chiamate brevi e chat; Lite, Plus e Premium tolgono la pubblicità e danno più chat e minuti di chiamata al giorno.
+Prezzo
+• I copioni per fase sono gratis, con pubblicità. Il piano Copioni aggiunge chiamate brevi e chat. Lite, Plus e Premium tolgono la pubblicità e danno più chat e tempo di chiamata al giorno.

@@ -1,25 +1,22 @@
-languagebank sets what to study each day and gets you saying it out loud. Learn any of 14 languages, with the app in any of 14 languages.
+languagebank is one app for learning a language: sentence patterns, practice, and speaking out loud. Learn any of 14 languages, with the app in any of 14 languages.
 
-YOUR DAILY LEARNING FLOW
-1. Start at your stage: read a short conversation and answer "Yes, I can", "Almost" or "Not yet" to start at the right one of five stages. New to a script? Begin with letters and sounds.
-2. Daily lesson: pick 5, 10 or 20 minutes a day and see how many days it takes to finish. "In order" or "From my record" sets the day's scripts and sentence structures.
-3. Speak the script: say your lines in situation scripts with 🎤 — Repeat after, First letters, Hidden or Own words. A perfect line gets ★; a correct but stiff one gets a more natural way to say it, and unclear words are pointed out. Saying it another correct way still passes, and you can pick up where you stopped the same day.
-4. Swap the sentence structure: say one structure many times, changing only the words.
-5. Review: at the end of a script mark each phrase "I know it" or "Not sure". What confused you and lines you missed come back as a short quiz after 2 and 7 days, and gather at the top of My under "What you got wrong last time". Turn on "Morning reminder" to see them on your lock screen.
-6. Ongoing practice: after the daily lesson, pick Review, Random, Vocabulary, Grammar or Phrases and tap ▶ Keep studying for a short quiz that mixes fill-in, word order, listening and speaking.
-7. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
+1. All your language learning in one place. Stagebank holds Today (5, 10, or 20 minutes) and sentence structures. Quizbank is where you practice. Conversation is where you use it. Mistakes come back as quizzes.
+2. Get the sentence patterns down. Sentence structures shows a short grammar page, then you type only the key piece.
+3. Practice until it sticks. In Quizbank you type the blank. After a choice, each option shows its meaning and why the others are wrong.
+4. Talk out loud with an AI tutor. The call looks like a phone call. Tap the caption for a translation. Tutor lesson speaks a big mistake so you can say it again. "I didn't catch that" asks to hear it once more.
+5. After the call, just what to fix. What you meant comes back as a correct sentence.
+6. Learn with others studying the same language: group calls, group chats, and Room.
+7. Mistakes come back as quizzes. A line fixed on a call becomes that pattern's lesson, then review.
+8. Skip what you know. Logbank opens on Language skills. Tap a corner, and what you need comes first.
 
-USE IT IN CONVERSATION
-• AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. Use a phrase you marked on your own and the line shows "Used again".
-• AI calls: speak out loud. Even when it comes out messy, the tutor finds what you meant, and you can look back afterwards.
-• Sentence analysis: pick just the part you don't get in any sentence and ask what it means.
+Also
+• Stuck in chat? Write in your own language. The tutor continues in the one you're learning, and "Show how to say it" shows the line you wanted.
+• Sentence analysis: pick the part you don't get and ask what it means.
 • Video: real videos split into sentences to replay and ask about.
+• You can study more than one language. The tutor has a photo and a female or male voice.
 
-LEARN WITH PEOPLE
-• In Rooms, talk by voice with others learning the same language, with live captions, and carry on in group chats and one-to-one messages.
+No level names
+• Each sentence gets its mistakes pointed out. Language skills shows a percent on each corner.
 
-NO LEVEL SCORES
-• Every sentence gets its mistakes and gaps pointed out; your record decides what comes next.
-
-PRICING
-• Stage scripts are free (with ads). The Scripts plan adds short calls and chat; Lite, Plus and Premium remove ads and add more chat and daily call time.
+Pricing
+• Stage scripts are free, with ads. The Scripts plan adds short calls and chat. Lite, Plus, and Premium remove ads and add more chat and daily call time.

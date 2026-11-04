@@ -1,25 +1,22 @@
-languagebank fixe ce que vous étudiez chaque jour et vous le fait dire à voix haute. Apprenez l'une des 14 langues, avec l'app dans l'une des 14 langues.
+languagebank réunit l'apprentissage d'une langue : les structures, la pratique et parler à voix haute. Apprenez l'une des 14 langues, avec l'appli dans l'une des 14 langues.
 
-VOTRE PARCOURS DU JOUR
-1. Partez de votre étape : lisez une courte conversation et répondez « Oui, je peux », « Presque » ou « Pas encore » pour commencer à la bonne étape sur cinq. Écriture nouvelle ? Commencez par les lettres et les sons.
-2. Leçon du jour : choisissez 5, 10 ou 20 minutes par jour et voyez en combien de jours vous finirez. « Dans l'ordre » ou « Selon mon parcours » fixe les dialogues et structures du jour.
-3. Dites le dialogue : dites vos répliques dans des dialogues de situations avec 🎤 — Répéter, Premières lettres, Masqué ou Avec vos mots. Une réplique parfaite reçoit ★ ; correcte mais peu naturelle, une tournure plus naturelle est proposée, et les mots mal entendus sont signalés. Une autre formulation correcte passe aussi, et vous reprenez où vous en étiez le même jour.
-4. Changer dans la structure de phrase : dites une même structure plusieurs fois en changeant seulement les mots.
-5. Révision : à la fin d'un dialogue, marquez chaque expression « Je sais » ou « Pas sûr ». Ce qui est flou et les répliques ratées reviennent en petit quiz après 2 et 7 jours, et se regroupent en haut de Moi, dans « Ce que tu as raté la dernière fois ». Avec le « Rappel du matin », ils s'affichent sur l'écran verrouillé.
-6. Pratique continue : après la leçon du jour, choisissez Révision, Aléatoire, Vocabulaire, Grammaire ou Expressions et touchez ▶ Continuer pour un quiz court qui mêle textes à trous, ordre des mots, écoute et oral.
-7. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
+1. Tout pour apprendre une langue, en une app. Stagebank contient Aujourd'hui (5, 10 ou 20 minutes) et les structures. Quizbank, c'est la pratique. La conversation, c'est là que vous vous en servez. Les erreurs reviennent en exercices.
+2. Maîtrisez les structures de phrase. Structures montre une courte page de grammaire, puis vous ne tapez que le morceau clé.
+3. Pratiquez jusqu'à ce que ça reste. Dans Quizbank, vous remplissez le trou. Après un choix, chaque option montre son sens et pourquoi les autres ne vont pas.
+4. Parlez à voix haute avec un tuteur IA. L'appel ressemble à un appel téléphonique. Touchez le sous-titre pour la traduction. Cours avec tuteur dit à voix haute une grosse erreur pour que vous la redisiez. « Je n'ai pas compris » demande de l'entendre encore.
+5. Après l'appel, l'essentiel à corriger. Ce que vous vouliez dire revient en bonne phrase.
+6. Avec ceux qui apprennent la même langue : appels de groupe, discussions de groupe et Room.
+7. Vos erreurs reviennent en exercices. Une phrase corrigée pendant l'appel devient la leçon de cette structure, puis la révision.
+8. Passez ce que vous savez. Logbank s'ouvre sur Compétences. Touchez un coin : ce dont vous avez besoin vient d'abord.
 
-UTILISEZ-LE EN CONVERSATION
-• Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Utilisez de vous-même une expression que vous avez marquée et la ligne affiche « Réutilisé ».
-• Appels IA : parlez à voix haute. Même si c'est confus, le tuteur retrouve ce que vous vouliez dire, et vous pouvez revoir l'appel ensuite.
-• Analyse de phrase : dans n'importe quelle phrase, choisissez juste la partie incomprise et demandez ce qu'elle veut dire.
+Aussi
+• Bloqué dans le chat ? Écrivez en français. Le tuteur continue dans la langue apprise, et « Voir comment le dire » montre la phrase voulue.
+• Analyse de phrase : choisissez la partie incomprise et demandez ce qu'elle veut dire.
 • Vidéo : de vraies vidéos découpées en phrases à réécouter et questionner.
+• Vous pouvez étudier plus d'une langue. Le tuteur a une photo et une voix de femme ou d'homme.
 
-APPRENDRE AVEC D'AUTRES
-• Dans les Salons, parlez de vive voix avec ceux qui apprennent la même langue, sous-titres en direct, puis continuez en groupe ou en message privé.
+Pas de noms de niveau
+• Chaque phrase signale ses erreurs. Compétences montre un pourcentage à chaque coin.
 
-PAS DE NOTE DE NIVEAU
-• Chaque phrase reçoit ses erreurs et ses manques ; votre historique décide de la suite.
-
-TARIFS
-• Les dialogues par étape sont gratuits (avec publicité). La formule « Dialogues » ajoute des appels courts et le chat ; Lite, Plus et Premium suppriment la publicité et donnent plus de chat et de minutes d'appel par jour.
+Prix
+• Les dialogues par étape sont gratuits, avec de la publicité. La formule Dialogues ajoute des appels courts et le chat. Lite, Plus et Premium suppriment la publicité et donnent plus de chat et de temps d'appel par jour.

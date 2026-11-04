@@ -1,25 +1,22 @@
-O languagebank define o que estudar em cada dia e põe-te a dizê-lo em voz alta. Aprende qualquer uma de 14 línguas, com a app em qualquer uma de 14 línguas.
+languagebank junta o estudo de uma língua: estruturas, prática e falar em voz alta. Aprende qualquer uma de 14 línguas, com a app em qualquer uma de 14 línguas.
 
-O TEU PERCURSO DE CADA DIA
-1. Começa na tua etapa: lê uma conversa curta e responde «Sim, consigo», «Quase» ou «Ainda não» para começar na etapa certa entre cinco. Escrita nova? Começa pelas letras e sons.
-2. Lição diária: escolhe 5, 10 ou 20 minutos por dia e vê em quantos dias terminas. «Na ordem» ou «Pelo meu histórico» define os roteiros e estruturas do dia.
-3. Fala o roteiro: diz as tuas falas em roteiros de situações com 🎤 — Repetir, Primeiras letras, Oculto ou Com suas palavras. Uma fala perfeita recebe ★; se está certa mas pouco natural, recebes uma forma mais natural, e as palavras pouco claras são assinaladas. Dizer de outra forma correta também passa, e no mesmo dia podes continuar onde paraste.
-4. Troque na estrutura da frase: diz uma estrutura várias vezes trocando só as palavras.
-5. Revisão: no fim do roteiro marca cada expressão «Eu sei» ou «Não tenho certeza». O que ficou confuso e as falas erradas voltam como um quiz curto passados 2 e 7 dias, e juntam-se no topo de Meu espaço, em «O que você errou da última vez». Com o «Lembrete da manhã» aparecem no ecrã de bloqueio.
-6. Prática contínua: depois da lição diária, escolhe Revisão, Aleatório, Vocabulário, Gramática ou Expressões e toca em ▶ Continuar estudando para um quiz curto que mistura lacunas, ordem das palavras, audição e fala.
-7. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
+1. Tudo para aprender línguas, numa só app. Stagebank tem Hoje (5, 10 ou 20 minutos) e as estruturas. Quizbank é a prática. A conversa é onde usas o que aprendeste. Os erros voltam como exercícios.
+2. Domine as estruturas de frase. Estruturas mostra uma página curta de gramática e depois escreves só a peça-chave.
+3. Pratique até ficar. No Quizbank escreves o espaço. Depois de uma escolha, cada opção mostra o significado e porque as outras não servem.
+4. Fale em voz alta com um tutor de IA. A chamada parece uma chamada de telefone. Toca na legenda para a tradução. Aula com tutor diz em voz alta um erro grande para o repetires. «Não entendi» pede para ouvir outra vez.
+5. No fim da chamada, só o que corrigir. O que querias dizer volta numa frase certa.
+6. Com quem aprende a mesma língua: chamadas de grupo, chats de grupo e Room.
+7. Os erros voltam como exercícios. Uma frase corrigida na chamada passa à lição dessa estrutura e depois à revisão.
+8. Salte o que sabe. O Logbank abre em Habilidades. Toca num canto e o que precisas aparece primeiro.
 
-USA EM CONVERSA
-• Chat com o tutor de IA: fala como com um amigo; só os erros são corrigidos. Encravaste? Escreve em português e o tutor continua na língua que aprendes; «Ver como se diz» mostra a frase que querias. Se usares por ti uma expressão que marcaste, a linha mostra «Usou de novo».
-• Chamadas com IA: fala em voz alta. Mesmo que saia confuso, o tutor descobre o que querias dizer, e depois podes rever.
-• Análise de frases: em qualquer frase escolhe só a parte que não percebes e pergunta o que significa.
+Também
+• Encravaste no chat? Escreve em português. O tutor continua na língua que aprendes, e «Ver como se diz» mostra a frase que querias.
+• Análise de frases: escolhe a parte que não percebes e pergunta o que significa.
 • Vídeo: vídeos reais divididos em frases para repetir e perguntar.
+• Podes estudar mais do que uma língua. O tutor tem foto e voz feminina ou masculina.
 
-APRENDE COM PESSOAS
-• Nas Salas fala por voz com quem aprende a mesma língua, com legendas em direto, e continua em grupos e mensagens privadas.
+Sem nomes de nível
+• Cada frase aponta os seus erros. Habilidades mostra uma percentagem em cada canto.
 
-SEM PONTUAÇÃO DE NÍVEL
-• Cada frase recebe os seus erros e falhas; o teu histórico decide o que vem a seguir.
-
-PREÇOS
-• Os roteiros por etapa são grátis (com anúncios). O plano «Roteiros» junta chamadas curtas e chat; Lite, Plus e Premium tiram os anúncios e dão mais chat e minutos de chamada por dia.
+Preço
+• Os roteiros por etapa são grátis, com anúncios. O plano Roteiros junta chamadas curtas e chat. Lite, Plus e Premium tiram os anúncios e dão mais chat e tempo de chamada por dia.
