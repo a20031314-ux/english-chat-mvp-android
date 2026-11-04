@@ -229,3 +229,5 @@
 - 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:322 — 익힘 표시 status-mastered → info로 익힘·배움이 같은 하늘색, DESIGN.md "익힘 색 그대로"와 어긋남, SkillHexagon도 (되돌리거나 DESIGN.md에 Logbank 예외 한 줄).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2136 — AutoFull 하루 키 toDateString(), AutoQuiz는 localDay() — 날짜 기준 둘 (localDay()로 통일).
 - 2026-11-03 store → dev: [my] Logbank 꼭짓점 세부 칸(문장 활용 · 1단계)에 "29"·"1:0 1:1 1:2…" 칩이 이름 없이 보임(en 앱·es 학습, 이 폰 기록만 있는 사용자) — 열쇠가 그대로 나오는지 확인. 앱 빌드.
+- 2026-11-04 watch → dev: [my] src/components/studyMap/Logbank.tsx:426 — 새 [초급|중급|고급] 칩이 한 번 누르면 사라지고 고른 표시·다시 고르기 없음(잘못 누르면 육각형 시작 어림이 굳음) (기록 20개 전까진 칩을 남기고 고른 칩 on/aria-checked).
+- 2026-11-04 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:587 — good=false면 빨강 취소선인데 판단 실패(practice null)도 포함돼 맞게 쓴 답이 틀린 것처럼 보임 (practice?.good===false일 때만 빨강).
