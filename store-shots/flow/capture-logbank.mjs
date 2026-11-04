@@ -13,7 +13,7 @@ const locales = (process.argv[2] ?? "ko,en,ja,zh,es,hi").split(",");
 const learnFor = (locale) => (locale === "en" ? "es" : "en");
 const PORT = Number(process.env.PORT || 4590);
 const server = await serve(PORT);
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
 
 for (const locale of locales) {
   const learn = learnFor(locale);

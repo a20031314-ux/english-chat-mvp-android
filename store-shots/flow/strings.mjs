@@ -168,6 +168,12 @@ export const COPY = {
     callvideo: ["Parlez à voix haute,\napprenez avec de vraies vidéos", ["Appels avec l'IA", "Leçons vidéo"], "Même si c'est maladroit, il retrouve ce que vous vouliez dire"],
     together: ["Pratiquez avec ceux qui\napprennent la même langue", ["Salons vocaux", "Discussions de groupe"], "Parlez avec des sous-titres en direct, ou continuez en groupe"],
   },
+  it: {
+    logbank: ["Vedi a che punto sei\nin un colpo d'occhio", "Parole, frasi, ascolto, conversazione — i punti deboli diventano il prossimo studio"],
+  },
+  ru: {
+    logbank: ["Сразу видно,\nсколько уже вышло", "Слова, фразы, аудирование, разговор — слабые места становятся следующим уроком"],
+  },
 };
 
 /** 배우는 언어별 등록정보(k1~k5): 1장 작은 제목 앞에 배우는 언어. */
