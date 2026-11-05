@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "November 2, 2026";
-const LAST_UPDATED_KO = "2026년 11월 2일";
+const LAST_UPDATED_EN = "November 6, 2026";
+const LAST_UPDATED_KO = "2026년 11월 6일";
 
 type Section = { title: string; body: string[] };
 
@@ -157,6 +157,12 @@ const en: Section[] = [
     title: "Changes to this Policy",
     body: [
       "We may update this policy when the app changes. We will update the date at the top of this page, and tell you in the app when a change is significant.",
+    ],
+  },
+  {
+    title: "Example Sentences From Others",
+    body: [
+      "Some example sentences in the word dictionary and quizzes come from Tatoeba (tatoeba.org) and are used under the Creative Commons Attribution 2.0 France license (CC BY 2.0 FR). Each sentence keeps its Tatoeba number and author; the full list is at https://www.languagebank.net/credits/example-sentences.txt. The Korean translations of those sentences are ours.",
     ],
   },
   {
@@ -295,6 +301,12 @@ const ko: Section[] = [
     title: "방침의 변경",
     body: [
       "앱이 바뀌면 이 방침을 고칠 수 있습니다. 이 페이지 상단의 날짜를 갱신하고, 중요한 변경은 앱 안에서 알립니다.",
+    ],
+  },
+  {
+    title: "다른 곳에서 가져온 예문",
+    body: [
+      "단어 사전과 퀴즈의 예문 일부는 Tatoeba(tatoeba.org)에서 가져와 크리에이티브 커먼즈 저작자표시 2.0 프랑스 라이선스(CC BY 2.0 FR)로 씁니다. 문장마다 Tatoeba 번호와 작성자를 함께 두며, 전체 목록은 https://www.languagebank.net/credits/example-sentences.txt 에 있습니다. 그 문장의 한국어 번역은 저희가 했습니다.",
     ],
   },
   {

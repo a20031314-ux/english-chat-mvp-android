@@ -1,0 +1,2447 @@
+Example sentences from Tatoeba (https://tatoeba.org)
+License: Creative Commons Attribution 2.0 France (CC BY 2.0 FR) — https://creativecommons.org/licenses/by/2.0/fr/
+Each line: language, sentence number and author, English translation number and author, sentence.
+Sentence page: https://tatoeba.org/sentences/show/<number>
+Korean translations by languagebank.
+
+Authors (475): _undertoad, aaugustho, acell, adamtrousers, Adelpa, adiante19, adjusting, adl, Advanced, Aemith, afyodor, Airvian, ajdavidl, ajje, akilez, Akira, akira_ito, al_ex_an_der, AlanF_US, alec, alexmarcelo, alexmaur, alicup, aliene, allenmanbear, alvren, AmarMecheri, Amastan, AMIKEMA, annewate, Anon, anonym, anthrax26, AOCinJAPAN, APagano, ApioDelPueblo, arademaker, araneo, arezoo, ari_diary, arielpolycarpo, arivkai, arnxy20, astyng, asuz, atc, AutoBot, auxitt, avoidingrealwork, azjani, bagonyi, Balamax, bart, beatrixvasc, bekindtoall, belgavox, benavery, benthomas, BHO, BiancaSanti, bill, BlackZ, blay_paul, BlueLagoon, bonney12, Borbie, boston2390, BranTheOliver, Brasiliense, brauliobezerra, BraveSentry, Brunosprak, bufo, candistyx, Cangarejo, Capistrano, carlo, carlosalberto, carloseperola, CarpeLanam, casaniere, caspian, Castro5432, cataphract, CC, CH, Chrikaru, Cinthya, CK, claudiofuzita, Clavain, Clepsydris, CM, CN, cntrational, Conjuice, corvard, coynejeremy, crbk92, cromwellt, croogie, CS, Ctrl_Alt_Del, Cxom, dafp, danepo, DanielDaniel, DanielTzvi, darinmex, Dark, DarkLinkXXXX, DavidDias, davis094, ddnktr, Dejo, deniko, derpapottamus, deyta, dimitris, DiploIago, DiscoNostalgia, DJ_Saidez, djtait, dobleahl, dora98, Dorenda, DostKaplan, DracoKall, dryhay, Duck, dzouras, Eccles17, edson1267camaforte, eirik174, Eldad, elencw, eleutherothentes1, ellasevia, Emersono, EnriCP, Enrike100, Ergulis, erikspen, espjulie, etala, etoile, fabricio5, faraway9911, fcbond, fekundulo, felidad, fengli, FernandoMaiaJr, FeuDRenais, FeuDRenais2, filipe_s, fishda, FishlandicFishy, fjay69, franca, freddy1, gcaplan, gin, gleydin, gone2bacolod, gracefully, gracehero, Grim_fandango, Gulliver, GustaBR, GustavHRV90, Gustavo, Gyuri, HakeemEvrenoglu, hansemannbr, haomakk, hecko, helloroto, helmfer, Henrixion, heo598, hitalos, honestlang, human600, hunzerf, Hybrid, ianna, iart61, Igider, isaacandrade, IsabelleRain, iskander, islandisto, iT4LL, Ivan24, Iwapedro, J_S, Jane_Austen, jathonjet, jberkel, Jesse, Jeve, JFMorais, jgauthier, JGEN, JGGG, jhomel, JimBreen, JNQ, joao7889, JonLDS, Joseph, josivangoncalves, jrom, jshholland, jumarinho, jvlopes91, karloelkebekio, Katabasis, katix824, Katubeltza, kayano, kazenochikara, kebukebu, keira_n, kerbear407, KimiP, kitler, kleberlucas, knnida, kolin2009, koosy, kostas, kremel, Kristinka, krzysiek, laetitiamg, Lars224, Laudemilson, Lazovic, lazymoose, LB, Lebensfreude, leishenki, Lemmy, lenon_perez, Leono, Leonroz, Lepotdeterre, less_tat, LimeGreenTeknii, LinaTamazight, Lindoula, LittleBoy, LoverofEnglish, luca22, lucas, lucasdcs, LucasDePaula, lucasfr, lucasmg123, Luciferous, Luciosp, Luiaard, lukaszpp, Lumi, Lumi_alt, Lyte3000, maaster, MacGyver, madhatter5, mahdiye, mailohilohi, maily, malafaya, mamat, mangodurian, Maralula, marcelostockle, marciom, marcj794, marcoinacio, marcosmilton, marcospcruz, marcusps, markpalmer, marloncori, MarlonX19, Martha, Martka, Matheus, MatheusHDRJ, MatheusPese, MathKay, mccarras, Mecamute, meerkat, megamanenm, Melzar708, mervert1, MessDjaaf, MethodGT, MicheleMaria, migmorais, minshirui, mojeanin, mookeee, mraz, MrJuice, MrShoval, mrtaistoi, Muelisto, MUIRIEL, muitoazul, muriloricci, mymi, newtonlkh, Nicacioh20, NickC, ninefi, nmsalgueiro, NoahAB, Noktuo, nootley, nowasky, Nuel, NurseMeeks, Nylez, Objectivesea, OjisanSeiuchi, oleckramo, omniglotman, oneberto, oneconor, Ooneykcall, Opiejay888, orcrist, OsoHombre, pajunior, panamicua, papabear, patgfisher, patlima, patrickvob, paula_guisard, pauldhunt, PedroAugusto, pedrolima, pedromarques, pguerrajr, phrasemix, pirytm, piterkeo, Ploomich, PoliglotaBrasileiro, potatosoup, professorNilo, puxatudo, PvtMarc, qdii, rafael8243, raissalima, raulguilherme10, rdgscratch, rekoowa, Ricardo14, ritualesatanum, RJH, robbieheslop, RochaAr, rodrigo20, roger_rf, Ronaldonl, roobarb, RoyalBee, ruj, rul, RYutaka, sabretou, sacredceltic, Sadness, saeb, sam_m, Samer, sangelo, satsu, Scott, sergiomelo, Serhiy, sharptoothed, sharris123, shekitten, Shishir, shortiiboy, Shujinko, Sistemas, Sitko, sjaelsamlaren, slampisko, SofiaSilva, Source_VOA, Spamster, speedwell, spockofvulcan, Sprachprofi, SSibelty, StrikerFX, Suelida, sugoi, sundown, superdenden, supermarinete, Swift, swolesuki, szaby78, tanay, Tangobango, terrywallwork, Thais, thalitanjos, Theocracy, tinacalysto, ToinhoAlam, tommg, ToxicFriu, Trailsend, TRANG, tranglich, tresoldi, trieuho, trochal, tulio, tvindy, U2FS, Ueltatoeba2014, ulyssemc1, une_monica, User140029, User72724, User75171, user83158, Ussis, valovski, Verdastelo, victorhugosilvaspbr, victorromero85, VilhelmsPort, Vitie, vodka, voxbubnya, vvv123, vxern, Wagner1994, weihaiping, Welton, WestofEden, whipback, whitefishglobal, williantoshio, witbrock, wittleghoul, Wolgoon, XenoKat, xtofu80, XY, yashar, yinp, Zaghawa, Zifre, zmah47jr, zumley, Zurich899, zvaigzne, zvzuibqx, zWreXczV7J
+
+pt	#406663 brauliobezerra	#56269 CK	Eu não sei o que fazer a partir de agora.
+pt	#9245146 heo598	#6014213 zumley	A partir de amanhã, eu não vou fumar mais.
+pt	#4443045 Ricardo14	#4440516 AlanF_US	Vocês poderiam abaixar a música, por favor?
+pt	#2576165 marcospcruz	#2405817 CK	Eu disse para você se abaixar!
+pt	#2155723 alexmarcelo	#2152274 dryhay	Vocês poderiam traduzir as frases abaixo, por favor?
+pt	#12179882 Advanced	#251777 U2FS	Meu quarto fica logo abaixo.
+pt	#9952886 Ricardo14	#9952795 SSibelty	Nós tivemos que abandonar o carro.
+pt	#904660 alexmarcelo	#903801 CK	Eu acho que é hora de eu abandonar essa ideia.
+pt	#11099247 DiploIago	#4053873 CK	Quando é a abertura do museu?
+pt	#1693420 alexmarcelo	#1693402 DJ_Saidez	Não obstrua nenhuma abertura de ventilação.
+pt	#4811168 Ricardo14	#4808467 AlanF_US	Meu irmão te enviou um abraço caloroso.
+pt	#10000947 Ricardo14	#10000949 Ricardo14	Eu queria poder te dar um abraço.
+pt	#5867831 ianna	#5858618 CK	Eu construí um abrigo.
+pt	#8239493 josivangoncalves	#8238767 AlanF_US	O toldo fornece abrigo contra a chuva.
+pt	#985168 alexmarcelo	#456017 lukaszpp	Sempre faz um tempo tão horrível em abril?
+pt	#1417413 alexmarcelo	#1415557 CK	O colégio começa no dia oito de abril.
+pt	#5877116 sergiomelo	#5874739 mailohilohi	Nos arredores reinava absoluto silêncio.
+pt	#1056098 alexmarcelo	#300667 (unknown)	Ele é um monarca absoluto.
+pt	#999720 alexmarcelo	#999507 szaby78	Isso é completa e totalmente um absurdo!
+pt	#10707126 MrJuice	#8251450 Ergulis	Você não consegue entender o quão absurdo isso é?
+pt	#6097776 bill	#6097714 CK	Você quer ir à academia com a gente?
+pt	#1174661 paula_guisard	#258501 CK	Eu malho na academia duas ou três vezes por semana.
+pt	#5176259 ToinhoAlam	#3358344 CK	Nós precisamos todos nos acalmar.
+pt	#4031496 alexmarcelo	#4016157 CK	Será que dá para você se acalmar, por favor?
+pt	#8566532 JGEN	#8553915 CK	Tivemos todo o acampamento só para nós.
+pt	#418168 brauliobezerra	#2250 RJH	Por um acaso você sabe onde eu pus minhas chaves?
+pt	#7762266 pedrolima	#1009001 CK	Nós estávamos no mesmo trem por acaso.
+pt	#2535047 GustavHRV90	#2550188 erikspen	Há acesso para cadeira de rodas?
+pt	#7589124 Ricardo14	#240794 CK	Eu tenho a sorte de ter acesso a uma excelente biblioteca.
+pt	#5218254 carlosalberto	#5217436 krzysiek	O banheiro era todo de aço inoxidável.
+pt	#6088194 carlosalberto	#2259427 _undertoad	Os soldados usavam capacetes de aço.
+pt	#1326772 alexmarcelo	#1326779 Eldad	Vocês podem me acompanhar até lá, por favor?
+pt	#3210147 carlosalberto	#8159741 lucasmg123	Eu mal conseguia acompanhar o fio da história.
+pt	#1582431 alexmarcelo	#706660 Swift	Eu costumava ficar acordado até tarde.
+pt	#3653246 ajdavidl	#3651434 Hybrid	Eu não sabia que você estava acordado.
+pt	#5192806 alexmarcelo	#5189366 CK	Eu não consigo me acostumar com isto.
+pt	#5192876 alexmarcelo	#5189289 CK	Eu estou tentando me acostumar com isto.
+pt	#8291837 JGEN	#8274139 CK	Eu preciso comprar um pouco de açúcar.
+pt	#11536966 Advanced	#6250327 CK	Eu não sabia quanto açúcar adicionar.
+pt	#729320 lenon_perez	#250099 CK	Não vai adiantar me pedir dinheiro.
+pt	#994489 alexmarcelo	#320051 CK	Queixar-se não vai adiantar nada.
+pt	#7262063 Ricardo14	#3312103 CK	Nós vamos passar adiante.
+pt	#3980206 alexmarcelo	#3738250 CK	Como posso seguir adiante?
+pt	#11284807 Advanced	#4498172 CK	Não é de admirar que as pessoas bebam.
+pt	#11091729 bill	#1818235 Chrikaru	Olhei pela janela para admirar a vista.
+pt	#1920304 alexmarcelo	#1920147 Spamster	O meu filho é um adolescente rebelde.
+pt	#1126019 alexmarcelo	#1126348 CK	Meu filho é só um adolescente.
+pt	#1564620 alexmarcelo	#1563013 Jesse	Obrigado pela adorável surpresa!
+pt	#8428981 JGEN	#2891961 CK	Isso seria adorável, não seria?
+pt	#2151420 BlackZ	#31352 koosy	Agora que sou um adulto, eu penso diferente.
+pt	#6758210 Ricardo14	#5858513 CK	Eu ainda não sou adulto.
+pt	#913733 alexmarcelo	#68975 CK	Você já viajou por transporte aéreo?
+pt	#3713366 Balamax	#3713393 Balamax	Precisamos de apoio aéreo!
+pt	#2553470 Ricardo14	#2553702 erikspen	Quer que eu te busque no aeroporto?
+pt	#8471086 bill	#4132568 CK	Pode levar minha irmã ao aeroporto?
+pt	#2576167 marcospcruz	#2405816 CK	Eu disse para você se afastar!
+pt	#5236959 alexmarcelo	#5195237 CK	Você pode se afastar um pouco, por favor?
+pt	#6074914 carlosalberto	#5849700 CK	Como essa decisão poderá nos afetar?
+pt	#5595138 Ricardo14	#4529504 CK	Isso vai afetar a nossa economia.
+pt	#6937682 Ricardo14	#896133 pauldhunt	Eu trabalho numa agência de turismo.
+pt	#2593239 alexmarcelo	#2544912 CK	Eu trabalho na agência de correios.
+pt	#1558737 alexmarcelo	#1558734 yashar	Onde está a minha agenda telefônica?
+pt	#869505 alexmarcelo	#869504 CK	Eu terei de consultar a minha agenda.
+pt	#2172300 Emersono	#36513 CK	Algumas pessoas são difíceis de agradar.
+pt	#1157920 alexmarcelo	#1455140 marcelostockle	Não é fácil agradar aos meus pais.
+pt	#4771837 KimiP	#36096 AlanF_US	Que viagem agradável nós tivemos!
+pt	#937336 une_monica	#357239 CK	Está agradável lá fora hoje, não está?
+pt	#1749491 franca	#42059 CM	Isso é mais do que eu posso aguentar.
+pt	#1248864 Welton	#285232 CK	Eu não consigo aguentar a atitude dele.
+pt	#11086598 lucasmg123	#10985031 shekitten	Eu não acho que o seu alarme tocou.
+pt	#5436850 ajdavidl	#3826831 CK	Você se lembrou de ligar o alarme?
+pt	#11242825 zWreXczV7J	#10895489 CK	Eu queria alcançar algo grande.
+pt	#8204675 josivangoncalves	#8204684 josivangoncalves	Você consegue alcançar os seus objetivos!
+pt	#8054066 jvlopes91	#59215 CM	Este trabalho está além do meu alcance.
+pt	#9487332 carlosalberto	#9484645 CK	Farei o que estiver ao meu alcance.
+pt	#12608086 laetitiamg	#5365038 Hybrid	Eu não gosto de álcool, porque tem gosto ruim.
+pt	#2427463 marcospcruz	#67310 CK	Você tem alguma bebida sem álcool?
+pt	#11560004 carlosalberto	#11560001 carlosalberto	Venta muito em sua aldeia no outono?
+pt	#3474543 Balamax	#3474525 Balamax	Tem muitos estábulos nesta aldeia?
+pt	#2574272 alexmarcelo	#1122566 Shishir	Por que você está tão alegre hoje?
+pt	#5122294 alexmarcelo	#9756803 Nylez	Eu adoro vê-lo alegre.
+pt	#2668418 carlosalberto	#2118 Zifre	Meu coração transbordava de alegria.
+pt	#11335476 carlosalberto	#11335449 carlosalberto	A minha filha dá-me tanta alegria.
+pt	#2623474 alexmarcelo	#2540939 CK	Eu vou alertar o Tom sobre isso.
+pt	#12140518 carlosalberto	#12140481 CK	Que bela aliança de noivado!
+pt	#748452 brauliobezerra	#498160 FeuDRenais	Me dê uma aliança quando você decidir casar comigo.
+pt	#5624760 Ricardo14	#38050 Zifre	Aliás, de onde vocês são?
+pt	#7342364 carlosalberto	#5179702 Objectivesea	Aliás, eu tenho de dizer mais uma coisa ao senhor.
+pt	#6583167 carlosalberto	#5850535 CK	Eu tenho um álibi.
+pt	#5894419 sergiomelo	#5892609 OsoHombre	Fadil estava construindo um álibi.
+pt	#10919149 Advanced	#5746997 CM	Você é realmente um alienígena?
+pt	#12719391 kleberlucas	#11717870 Amastan	Pietro se aproximou muito do alienígena.
+pt	#1129415 alexmarcelo	#1127835 CK	Eu gosto de alimentar as pombas.
+pt	#5045439 alexmarcelo	#2358977 CK	Eu tenho um distúrbio alimentar.
+pt	#8018595 jvlopes91	#6915174 Eccles17	Onde eu posso encontrar alimento?
+pt	#1140342 alexmarcelo	#1140184 CK	Eu não posso comer este tipo de alimento.
+pt	#9232318 bill	#9312427 Nylez	A que horas vocês costumam almoçar?
+pt	#7901692 piterkeo	#7878092 CK	Vocês dois querem almoçar juntos?
+pt	#6203763 carlosalberto	#4149463 Hybrid	Onde está Sua Alteza Real?
+pt	#13542304 Advanced	#857113 Samer	Recuso-me a ser chamado de outra coisa que não seja “Vossa Alteza”.
+pt	#1247244 alexmarcelo	#1239929 CK	Eu e ele somos quase da mesma altura.
+pt	#8224241 josivangoncalves	#8224295 josivangoncalves	Superei completamente o meu medo de altura.
+pt	#9854988 bill	#5049520 CK	Quanto vocês pagam de aluguel?
+pt	#5129324 Ricardo14	#242007 CK	Eu esqueci de pagar o aluguel este mês.
+pt	#1571822 alexmarcelo	#471424 CK	Pelo que eu sei, ele era um bom aluno.
+pt	#5934691 bill	#253041 CK	Eu fiz amizade com um aluno estrangeiro.
+pt	#2815482 akilez	#258052 CK	Eu sou amado por meus pais.
+pt	#8211882 pedrolima	#5971852 ApioDelPueblo	Eu me sinto seguro e amado quando estou com você.
+pt	#8308677 JGEN	#8257590 CK	Eu acordei um pouco antes do amanhecer.
+pt	#1571651 paula_guisard	#588198 Ploomich	Vamos dançar até o amanhecer!
+pt	#7060618 iart61	#759678 Martha	A minha amante não me ama.
+pt	#4437017 Jeve	#4435363 LB	Meu amigo comprou um carro amarelo.
+pt	#1630244 alexmarcelo	#1627317 Spamster	O pato de borracha do meu filho é amarelo.
+pt	#4825296 Ricardo14	#4823995 whitefishglobal	Eu não vou amarrar seus cadarços para você.
+pt	#5121268 ToinhoAlam	#5121236 crbk92	Na sua idade, eu já sabia amarrar meu sapato.
+pt	#14012289 carlosalberto	#14012326 carlosalberto	A tia do meu pai é uma mulher muito amável.
+pt	#1180581 alexmarcelo	#1179035 (unknown)	Para ser amado, seja amável!
+pt	#2457430 marcospcruz	#1661621 marcelostockle	O homem é um produto de seu ambiente.
+pt	#8548237 bill	#4017252 CK	Vocês já chamaram uma ambulância?
+pt	#10758223 DavidDias	#3201173 CK	Diga a eles que nós precisamos de uma ambulância.
+pt	#4413480 Ricardo14	#9478184 DJ_Saidez	Isso era para ser uma ameaça?
+pt	#13429952 carlosalberto	#13421478 rul	Os sem-teto não representam uma ameaça.
+pt	#3150882 carlosalberto	#3150820 CK	Você pensa realmente que pode comprar minha amizade?
+pt	#1861635 alexmarcelo	#1848923 Spamster	Ele recusou minha solicitação de amizade.
+pt	#7689067 Ricardo14	#306151 CM	Eles me enviaram uma amostra em resposta ao meu pedido.
+pt	#5513112 bill	#3295408 Hybrid	Quer uma amostra grátis?
+pt	#2626893 alexmarcelo	#2011576 CK	Eu quero a sua análise.
+pt	#11541561 carlosalberto	#11541555 carlosalberto	O que a análise mostrou?
+pt	#12297205 Suelida	#12271442 CK	Eu me sinto muito animado hoje.
+pt	#5170665 bill	#906710 CK	Qual é o seu desenho animado favorito?
+pt	#4861241 bill	#2376417 CK	Eu sei o que irá te animar.
+pt	#8073671 Mecamute	#8073125 CK	Eu queria animar o Tom.
+pt	#5180029 Ricardo14	#2537021 CK	Eu estou ansioso para receber a sua carta!
+pt	#8943647 Ricardo14	#12373604 DJ_Saidez	Eu estou muito ansioso para te conhecer.
+pt	#5009508 KimiP	#42727 CC	Eu o havia comprado na semana anterior.
+pt	#902540 brauliobezerra	#254531 CK	Eu o encontrei no dia anterior.
+pt	#5090571 Ricardo14	#1573671 marcelostockle	Eu retiro tudo o que disse anteriormente.
+pt	#5102058 HakeemEvrenoglu	#5101982 Airvian	Anteriormente, eu aprendi alemão na escola.
+pt	#2851231 MarlonX19	#2358983 CK	Eu tenho um anúncio animador.
+pt	#6136036 carlosalberto	#6135463 al_ex_an_der	Este anúncio terminará em dez segundos.
+pt	#9745179 bill	#8440529 CK	Eu acho que esqueci de apagar as luzes.
+pt	#1275671 alexmarcelo	#261909 (unknown)	Eu não me esqueço de apagar a luz.
+pt	#6003947 Ricardo14	#6003943 Ricardo14	Eu estou apaixonado por ti, menina!
+pt	#1048364 brauliobezerra	#953324 CK	Como eu posso saber se estou realmente apaixonado?
+pt	#3389170 Ricardo14	#3330961 CK	Vocês dois têm a mesma aparência.
+pt	#4480979 Ricardo14	#4480269 Hybrid	Não quero ser julgado pela minha aparência.
+pt	#968229 une_monica	#498010 CM	Aparentemente, o ônibus está atrasado.
+pt	#4796154 carlosalberto	#4664676 CK	Aparentemente, não mudou muita coisa.
+pt	#7986667 lucasmg123	#6339085 CK	Eu não sei se devo apertar o botão vermelho ou o azul.
+pt	#3448046 Ricardo14	#3327798 CK	Posso apertar a sua mão?
+pt	#7225904 Ricardo14	#7477533 Ricardo14	Eu vou te apoiar hoje e sempre!
+pt	#376746 brauliobezerra	#284647 CK	Ele tem um ombro forte para você se apoiar.
+pt	#4938016 bill	#4501108 CK	Nós vamos precisar de seu apoio.
+pt	#2613736 alexmarcelo	#2941444 CK	Eu agradeço muito o seu apoio.
+pt	#6330736 anthrax26	#398542 whipback	Posso apontar meu lápis?
+pt	#11367804 bill	#9705452 CK	Preciso apontar meu lápis.
+pt	#5547624 bill	#2856305 Amastan	Você perdeu a aposta, não perdeu?
+pt	#5830943 bill	#5829231 CK	Eu ganhei a aposta.
+pt	#5080971 Ricardo14	#8170400 lucasmg123	É importante saber apreciar o que é belo na vida.
+pt	#7029677 iart61	#61817 CK	Vamos sentar-nos aqui por instantes e apreciar a vista.
+pt	#4487466 ajdavidl	#4487407 AlanF_US	Eu fiz uma pequena apresentação esta manhã.
+pt	#8877140 victorromero85	#3734964 CK	Preciso me preparar para a minha apresentação.
+pt	#993478 alexmarcelo	#705285 Zifre	Eu devo me apressar!
+pt	#1120499 brauliobezerra	#411309 CK	Vocês não precisam se apressar.
+pt	#12340137 piterkeo	#12330818 Objectivesea	O tigre começou a se aproximar de nós.
+pt	#13476790 Aemith	#239142 CK	Fale para ela não se aproximar do cachorro.
+pt	#9473935 jvlopes91	#5739257 CM	Ele entenderam meu apuro.
+pt	#1718437 alexmarcelo	#1717640 Amastan	Vocês já apagaram fogo com areia?
+pt	#4719318 anthrax26	#3579650 Hybrid	Eu podia sentir a areia entre os dedos dos pés.
+pt	#6980888 Ricardo14	#5829185 CK	Eu coloquei uma armadilha.
+pt	#7363209 Ricardo14	#2951894 CK	Como sabemos que isso não é apenas uma armadilha?
+pt	#6369646 Ricardo14	#1898216 CK	O fugitivo está armado e é perigoso.
+pt	#9398667 arademaker	#6708085 OsoHombre	Sami estava armado.
+pt	#7827866 Ricardo14	#3820329 CK	Onde você gostaria de armar a barraca?
+pt	#6875682 lucasmg123	#4828361 Hybrid	Parece um bom lugar para armar a barraca.
+pt	#11989877 carlosalberto	#11989872 carlosalberto	Eu não durmo na cama, mas no armário.
+pt	#9945674 Ricardo14	#2770646 Hybrid	Eu estou limpando o meu armário.
+pt	#8392496 JGEN	#8389129 CK	Eu precisava arrancar um dente.
+pt	#1001339 alexmarcelo	#1529256 erikspen	Ele ameaçou arrancar de mim tudo o que eu possuo.
+pt	#904700 alexmarcelo	#903836 CK	Eu acho que é hora de eu arranjar um emprego.
+pt	#8082574 Mecamute	#2387614 CK	Eu preciso arranjar uma caneta.
+pt	#4992147 Ricardo14	#65892 CK	Vocês vão se arrepender disso!
+pt	#9944307 bill	#3494832 Hybrid	Você não vai se arrepender disso, eu prometo.
+pt	#7262013 Ricardo14	#3619828 CK	Eu não acho que podemos arriscar isso.
+pt	#974276 alexmarcelo	#569163 Scott	Eu não quero arriscar a minha vida.
+pt	#2149177 alexmarcelo	#17151 CM	Vocês comem arroz no seu país?
+pt	#11133267 MrJuice	#9752307 megamanenm	Nós temos arroz suficiente?
+pt	#5908210 sergiomelo	#5907394 OsoHombre	Este medicamento está a arruinar a minha vida.
+pt	#7551029 Ricardo14	#3231265 CK	Isso poderia literalmente arruinar minha vida.
+pt	#2433968 alexmarcelo	#2432231 AlanF_US	Eu fiquei decepcionado com seu artigo.
+pt	#871610 alexmarcelo	#871608 (unknown)	Eu vou lhe passar aquele artigo.
+pt	#961657 alexmarcelo	#45018 CK	A asa do pássaro estava quebrada.
+pt	#6464716 heo598	#3891111 Amastan	O avião perdeu parte de sua asa.
+pt	#1866964 nowasky	#248158 CM	Nós devemos levar em conta cada aspecto do problema.
+pt	#6161251 User75171	#6161188 bill	A comunicação é o aspecto mais importante da linguagem.
+pt	#5887591 sergiomelo	#5886911 OsoHombre	Foi um assalto que não deu certo.
+pt	#13457569 carlosalberto	#11679295 Amastan	Bruno se preparou para o assalto.
+pt	#2769287 Balamax	#283677 CK	Eu li no jornal que ele tinha sido assassinado.
+pt	#7284016 carlosalberto	#1209680 (unknown)	Faça-se de morto, para não ser assassinado!
+pt	#1165165 alexmarcelo	#1331365 CK	Quando o vi, pensei que ia me assassinar.
+pt	#6151669 Iwapedro	#6097511 OsoHombre	Layla tentou assassinar Sami.
+pt	#5475428 ToinhoAlam	#5430661 Hybrid	Eu tentei assegurar que todos se divertissem.
+pt	#5475430 ToinhoAlam	#5430651 Hybrid	Eu sempre tento assegurar que todo mundo se sinta bem-vindo.
+pt	#1235361 alexmarcelo	#251304 CK	Onde está o meu assento?
+pt	#6721763 Ricardo14	#251303 CK	O meu assento fica perto da porta.
+pt	#9475775 bill	#9458306 CK	Alguém falsificou a minha assinatura.
+pt	#10784152 bill	#436899 lukaszpp	Preciso renovar minha assinatura.
+pt	#1579834 elencw	#249315 CK	Nós contratamos ele para assistente.
+pt	#4748851 anthrax26	#3264726 CK	Talvez eu precise de um novo assistente.
+pt	#8904286 JGEN	#8902829 CK	Eu acho que todo mundo está assustado.
+pt	#341082 tinacalysto	#285636 CK	Eu fico assustado só de passar por ele.
+pt	#6994963 Ricardo14	#5102492 CK	Eu sou tão assustador assim?
+pt	#5491164 ajdavidl	#2203318 CK	Tu és assustador.
+pt	#9075513 bill	#9075574 bill	A chuva evaporou-se antes de atingir o solo.
+pt	#2153924 alexmarcelo	#315305 CM	Ela morreu antes de atingir a maioridade.
+pt	#1224478 alexmarcelo	#36142 CM	Que bom atirador!
+pt	#7995752 lucasmg123	#2725971 Hybrid	Ele é um atirador contratado.
+pt	#1825793 gleydin	#285120 CK	Minha atitude em relação a ele mudou.
+pt	#5070830 ToinhoAlam	#2276252 CK	Eu não compreendo a sua atitude.
+pt	#1563335 alexmarcelo	#1564874 (unknown)	Você deve ativar o programa para utilizá-lo novamente.
+pt	#8591981 arademaker	#6684820 Eccles17	Amanhã eu farei uma nova atividade.
+pt	#8075171 jvlopes91	#1829587 marcelostockle	O lugar é uma colmeia de atividade.
+pt	#6970106 carlosalberto	#644091 BraveSentry	Eu não temo a morte, mas o ato de morrer.
+pt	#4945579 bill	#2259459 _undertoad	O terceiro ato está prestes a começar.
+pt	#729701 brauliobezerra	#727740 CK	Eu não acho que ele seja um grande ator.
+pt	#5127044 bill	#3826957 CK	Eu pareço um ator?
+pt	#5386184 ajdavidl	#3826484 CK	Você acha que eu sou atraente?
+pt	#8940378 JGEN	#8927232 CK	Eu acho isso muito atraente.
+pt	#8296502 JGEN	#8294777 CK	Nós não queremos atrair a atenção.
+pt	#7646951 carlosalberto	#7646916 CK	Não façam nada para atrair a atenção para si mesmos.
+pt	#6840217 SofiaSilva	#6833155 CK	Se eu te atrapalhar, diz-me.
+pt	#2968821 carlosalberto	#2968648 Hybrid	Eu não vou atrapalhar.
+pt	#11106294 MrJuice	#2582133 CK	Você se importa se eu chegar um pouco atrasado?
+pt	#8339924 JGEN	#8338544 CK	Eu saí cedo, para não chegar atrasado.
+pt	#2738708 hunzerf	#1152258 belgavox	Por causa do atraso, eu vou para casa.
+pt	#3199105 carlosalberto	#1661959 avoidingrealwork	Peço desculpa a todos por meu atraso.
+pt	#720917 brauliobezerra	#262877 CK	Nós conseguimos atravessar o rio a nado.
+pt	#5052565 Ricardo14	#3209804 (unknown)	Eu consigo atravessar o rio nadando.
+pt	#5307876 carlosalberto	#5306393 (unknown)	Eu sou melhor atriz do que garçonete.
+pt	#871881 alexmarcelo	#254484 CK	Eu falei com a própria atriz.
+pt	#993468 alexmarcelo	#9852562 lucasmg123	Conheci minha namorada atual no ginásio.
+pt	#729157 lenon_perez	#241775 CK	Estou satisfeito com o meu salário atual.
+pt	#380372 brauliobezerra	#242139 CK	Qual é o filme mais popular atualmente?
+pt	#8045407 Ricardo14	#9312276 Nylez	Quanto você ganha por mês atualmente?
+pt	#5959006 sergiomelo	#7126750 CM	Minha audição está piorando.
+pt	#6379133 carlosalberto	#4597493 Hybrid	Você está com algum problema de audição?
+pt	#5399985 bill	#5386961 CK	O clima na sala de audiência estava tenso.
+pt	#3215830 gleydin	#49476 CK	O discurso tocou profundamente a audiência.
+pt	#4997659 bill	#2406679 CK	Eu ainda acho que mereço um aumento.
+pt	#1608170 alexmarcelo	#2230217 jgauthier	Eu não tenho coragem de pedir um aumento.
+pt	#9820596 bill	#1887232 CK	Eu não tenho autoridade para fazer isso.
+pt	#1973885 Matheus	#1110423 Scott	Você está abusando de sua autoridade.
+pt	#7932171 Ricardo14	#3738648 CK	Quem te deu autorização para fazer isso?
+pt	#4134687 mervert1	#2241413 CK	Precisamos de autorização.
+pt	#2847276 MarlonX19	#266816 (unknown)	Sorte e trabalho duro são necessários se você quer avançar na vida.
+pt	#869190 alexmarcelo	#698837 papabear	A rosa é uma flor e a pomba é uma ave.
+pt	#1406515 alexmarcelo	#1406501 Spamster	O pinguim é uma ave que não pode voar.
+pt	#2822113 MarlonX19	#303716 CK	Ele foi viajar em busca de aventura.
+pt	#11348561 carlosalberto	#11348551 carlosalberto	A aventura começa agora!
+pt	#2483050 Matheus	#297831 CK	Ele não prestou atenção ao meu aviso.
+pt	#974391 alexmarcelo	#1586534 Gulliver	Estou visitando minha avó no hospital.
+pt	#8935038 carlosalberto	#8935031 carlosalberto	Minha avó acorda cedo todas as manhãs.
+pt	#2873468 MarlonX19	#895859 pauldhunt	Eu não acredito que gatos pretos causam azar.
+pt	#1175188 paula_guisard	#702387 darinmex	Ele atribui sua pobreza ao azar.
+pt	#9288270 bill	#348621 TRANG	Meu quarto está uma bagunça!
+pt	#8566416 JGEN	#8554094 CK	Eu também vou limpar essa bagunça.
+pt	#8594265 bill	#2290306 CK	Não fui ao meu baile de formatura.
+pt	#13757270 Advanced	#11931304 CK	Como foi o baile de formatura?
+pt	#8621489 bill	#4494199 CK	O bairro em que vocês moram é seguro?
+pt	#6174082 User75171	#6172569 sundown	Vocês conhecem este bairro?
+pt	#8782537 carlosalberto	#8782498 carlosalberto	Vocês vão baixar o novo álbum dele?
+pt	#7319054 carlosalberto	#39221 CK	Tu queres baixar, por favor, o som da televisão?
+pt	#1249566 Welton	#19190 fishda	Prédios altos podem balançar com vento forte.
+pt	#1189946 alexmarcelo	#563200 shekitten	Venha balançar comigo.
+pt	#6324741 mervert1	#611881 CK	A gente deve mudar a bandeira?
+pt	#11182052 carlosalberto	#11182042 carlosalberto	Qual bandeira é branca, vermelha e azul?
+pt	#3663002 Luciosp	#3663000 Luciosp	Ele deu um soco no bandido.
+pt	#1141712 alexmarcelo	#278653 CK	Pegamos o bandido.
+pt	#8801177 RochaAr	#18182 Dejo	Eu vi um bando de pássaros voando no alto.
+pt	#7077028 hansemannbr	#7076052 Eccles17	A gente é um bando de nerds.
+pt	#6558983 heo598	#3914912 CH	Eu ajudei ele a limpar a banheira.
+pt	#11187849 bill	#8395869 CK	Você esvaziou a banheira?
+pt	#7256446 marcoinacio	#570238 CK	Vocês teriam um quarto mais barato?
+pt	#8288564 JGEN	#8282049 CK	Eu acho que vou comprar o mais barato.
+pt	#3461576 piterkeo	#576695 FeuDRenais2	Mamãe, por que eu não tenho um tio com barba?
+pt	#1682974 alexmarcelo	#1679652 Amastan	É a primeira vez que eu faço a barba.
+pt	#8442511 Balamax	#5858417 CK	Eu tenho uma barriga de cerveja.
+pt	#7366545 Ricardo14	#4471276 Hybrid	Minha barriga está doendo.
+pt	#6472385 heo598	#3413244 CK	Eu estava fazendo barulho demais?
+pt	#774701 marloncori	#421970 CK	Eu não consigo suportar esse barulho.
+pt	#1054604 alexmarcelo	#270270 (unknown)	Eu acho que o homem é basicamente bom.
+pt	#8545626 adl	#20647 CK	Basicamente, eu concordo com a sua opinião.
+pt	#5813945 bill	#5813922 Hybrid	Vocês gostam de purê de batata?
+pt	#10712556 MrJuice	#6590457 Eccles17	Eu sou uma batata.
+pt	#5682632 bill	#4496511 CK	Quem roubou o meu carregador de bateria?
+pt	#2462864 alexmarcelo	#2459483 sharptoothed	O meu carro precisa de uma bateria nova.
+pt	#2616825 alexmarcelo	#2176 CK	É um beco sem saída.
+pt	#9945513 Ricardo14	#1444513 Spamster	Há um gato no beco.
+pt	#3494819 piterkeo	#3494805 CK	Por que vocês não estão no time de beisebol?
+pt	#999867 alexmarcelo	#402881 CK	Eu gosto de ir ver jogos de beisebol.
+pt	#1035754 une_monica	#997913 NickC	Fazer as coisas desta maneira traz algum benefício?
+pt	#13260761 Lemmy	#6089105 CK	Acredito ser de benefício mutuo.
+pt	#1825884 gleydin	#1350127 Chrikaru	Não se preocupe com algo tão besta.
+pt	#375219 brauliobezerra	#290582 CK	Ele achou o filme muito besta.
+pt	#5440977 Wagner1994	#5186110 CK	Eu acho que isso é besteira.
+pt	#2453505 alexmarcelo	#2452511 (unknown)	Quem é que está escrevendo esta besteira?
+pt	#951998 brauliobezerra	#909555 CK	Ela passa um tempinho lendo a bíblia todo dia.
+pt	#1011214 une_monica	#272867 CK	O professor leu uma passagem da bíblia para a classe.
+pt	#8548228 bill	#2892669 CK	O que vocês estão fazendo na biblioteca?
+pt	#7265020 carlosalberto	#5888165 mailohilohi	Quando é que tu vais à biblioteca?
+pt	#1437824 alexmarcelo	#1437568 caspian	Tire as suas mãos da minha bicicleta!
+pt	#9370554 bill	#9360241 CK	Posso deixar a minha bicicleta aqui?
+pt	#5300741 ToinhoAlam	#5293404 CK	O que você faria se tivesse um bilhão de dólares?
+pt	#1810575 alexmarcelo	#73452 CN	Um bilhão de pessoas falam inglês.
+pt	#3754187 marcosmilton	#3753826 tanay	Eu gostaria de trocar meu bilhete.
+pt	#3754189 marcosmilton	#3753818 tanay	Eu gostaria de cancelar meu bilhete.
+pt	#5918147 Ricardo14	#1230188 CM	Eu como biscoito todos os dias no café da manhã.
+pt	#4660422 Akira	#4660402 Hybrid	Ponha esse biscoito de volta na caixa!
+pt	#1734900 alexmarcelo	#60261 CK	Será que esse boato é verdadeiro?
+pt	#385171 brauliobezerra	#311087 (unknown)	Ela espalhou o boato para a cidade inteira.
+pt	#3875478 Laudemilson	#3874112 vodka	Que tipo de bobagem você está falando?
+pt	#6536350 heo598	#5178444 CK	Vamos acabar com essa bobagem.
+pt	#2050404 alexmarcelo	#2055256 Dejo	Você acha que eu sou bobo?
+pt	#913120 alexmarcelo	#27848 CK	Eu não gosto de ser feito de bobo.
+pt	#7839384 user83158	#7839190 AlanF_US	Eu levo meu molho de chaves no bolso.
+pt	#8922072 JGEN	#8921993 CK	Vou te mostrar o que está no meu bolso.
+pt	#2569100 alexmarcelo	#2569023 Eldad	Quando eu crescer, quero ser bombeiro.
+pt	#1900199 alexmarcelo	#1898361 CK	Eu nunca quis ser bombeiro.
+pt	#1207143 alicup	#58319 CK	Essa boneca é um presente da minha tia.
+pt	#748988 brauliobezerra	#245554 CK	Minha irmã me fez uma linda boneca.
+pt	#1963224 alexmarcelo	#1963184 CK	Por que vocês ainda não estão a bordo do navio?
+pt	#1682944 alexmarcelo	#1682302 Spamster	O que acontece se eu aperto este botão?
+pt	#6936532 Ricardo14	#29235 CK	Você costuraria um botão na minha camisa?
+pt	#1394545 alexmarcelo	#680408 Source_VOA	Posso botar as coisas numa caixa.
+pt	#1077195 alexmarcelo	#426440 CM	Quer botar pimenta?
+pt	#2748613 carlosalberto	#12972981 rul	Não é preciso brilhar para ter valor.
+pt	#6174424 User75171	#6174423 carlosalberto	Os olhos deles estão a brilhar de alegria.
+pt	#870880 alexmarcelo	#456487 lukaszpp	O meu brinquedo está com defeito.
+pt	#1288507 alexmarcelo	#456487 lukaszpp	Meu brinquedo está quebrado.
+pt	#3804993 muriloricci	#1655366 Spamster	Eu não entendo o humor britânico.
+pt	#2634559 alexmarcelo	#2631684 CN	Por que você comprou um carro britânico?
+pt	#5388698 bill	#5388584 Hybrid	Eu acho que ela é uma bruxa.
+pt	#7536757 joao7889	#2588681 Hybrid	A bruxa está mexendo seu caldeirão.
+pt	#2050403 alexmarcelo	#953224 CK	Você acha que eu sou burro?
+pt	#11632705 carlosalberto	#11632680 carlosalberto	Meu burro é mais rápido que seu carro.
+pt	#8911890 JGEN	#8889558 CK	Eu voltei para a cabine.
+pt	#1861586 alexmarcelo	#955461 sundown	Onde posso encontrar uma cabine telefônica?
+pt	#3115362 carlosalberto	#3115365 Theocracy	A cidade inteira tem televisão por cabo.
+pt	#3207355 carlosalberto	#3839556 mervert1	Eu quase nunca me alimento de caça.
+pt	#1656724 alexmarcelo	#1553518 CK	Você tem uma licença de caça?
+pt	#3598278 mervert1	#2803068 marcelostockle	Meu avô foi um pirata, um caçador de tesouros.
+pt	#6075571 bill	#325816 CK	O caçador seguiu as pegadas do urso.
+pt	#5968191 sergiomelo	#5930447 mailohilohi	Vocês sabem caçar?
+pt	#1571721 alexmarcelo	#954718 CK	Você preferiria ir pescar ou caçar?
+pt	#1588775 alexmarcelo	#1588709 _undertoad	Só por cima do meu cadáver!
+pt	#1920645 alexmarcelo	#1020346 mahdiye	Eu chamei a polícia assim que vi seu cadáver no chão.
+pt	#1775413 alexmarcelo	#1774984 potatosoup	A que horas vocês tomam café da manhã?
+pt	#1710989 alexmarcelo	#401809 CK	O que vocês comeram no café da manhã?
+pt	#6902772 Ricardo14	#6815253 Eccles17	Onde está a minha calça?
+pt	#5541856 bill	#2369625 Hybrid	Minha calça jeans encolheu.
+pt	#6715169 lucasmg123	#6260528 CK	Eu vou fazer isso enquanto está calmo.
+pt	#381605 brauliobezerra	#22215 auxitt	Quando eu vejo o mar eu fico calmo.
+pt	#1058472 brauliobezerra	#1053185 mangodurian	Minha mãe não gosta do calor do verão.
+pt	#1443479 alexmarcelo	#1563780 sam_m	Meu computador pifou por causa do calor.
+pt	#2154024 alexmarcelo	#64933 CK	A minha tia me deu uma câmara.
+pt	#1179289 alexmarcelo	#68716 CK	Que fizeste com essa câmara?
+pt	#10992016 (unknown)	#7432142 Hybrid	Meu caro camarada, estou felicíssimo de te ver.
+pt	#1143249 alexmarcelo	#611575 Clavain	Corra, camarada, o velho mundo está atrás de você!
+pt	#2474084 puxatudo	#242501 CK	Qual é a taxa de câmbio hoje?
+pt	#1658845 alexmarcelo	#464594 lukaszpp	Qual é a taxa de câmbio?
+pt	#2290196 akilez	#247325 CK	Que tal caminhar com a gente?
+pt	#378199 brauliobezerra	#255992 Dejo	Eu costumava caminhar de manhã cedo.
+pt	#968313 une_monica	#49064 CM	Como a empresa gerou sua nova campanha publicitária?
+pt	#1920382 alexmarcelo	#1912002 CK	Você é o campeão, não é?
+pt	#1452972 Emersono	#237773 CK	A multidão aplaudiu o campeão calorosamente.
+pt	#1558935 roger_rf	#40190 CK	Você se incomoda se eu mudar de canal?
+pt	#4745076 Ricardo14	#4744075 CK	Está tudo bem se eu trocar de canal?
+pt	#1277579 alexmarcelo	#266631 CK	Ouvi dizer que meu tio morreu de câncer.
+pt	#2094125 MarlonX19	#1291941 Scott	Perdi meu avô para o câncer este ano.
+pt	#8339952 JGEN	#8338522 CK	O candidato que eu votei a favor perdeu.
+pt	#742891 brauliobezerra	#742057 (unknown)	Quem é o próximo candidato?
+pt	#942511 alexmarcelo	#321461 CK	O que você fez com a minha caneta?
+pt	#1912139 alexmarcelo	#1912228 CM	Você está vendo a minha caneta?
+pt	#13511069 DavidDias	#8673850 ajje	Aquele canhão parece um pouco frágil.
+pt	#3805988 muriloricci	#3554817 Hybrid	Meu sonho é me tornar um cantor famoso.
+pt	#879111 alexmarcelo	#879112 CM	Eu também gosto da voz deste cantor.
+pt	#12977521 Advanced	#12778579 Igider	Podemos encontrar paz no caos?
+pt	#824239 helmfer	#51888 sundown	A greve trouxe caos aos correios.
+pt	#5876759 sergiomelo	#2537634 CK	Escrevi meu nome na capa de todos os meus cadernos.
+pt	#1063534 alexmarcelo	#1040744 CK	Não se pode julgar um livro pela capa.
+pt	#5277616 ToinhoAlam	#5277587 CK	Você teria capacidade de fazer aquilo?
+pt	#1247856 Welton	#260736 CK	Não tenho muita fé na capacidade dele.
+pt	#1694367 alexmarcelo	#1694312 marcelostockle	Todo ano levo minha família à capital.
+pt	#376136 brauliobezerra	#238928 (unknown)	Minha saúde é meu único capital.
+pt	#11487388 carlosalberto	#11486867 carlosalberto	Qual é o título do capítulo?
+pt	#1247956 Welton	#276047 CK	Vamos começar com o primeiro capítulo.
+pt	#12118129 carlosalberto	#12118128 carlosalberto	Os cães não tentam capturar camundongos.
+pt	#2917581 alexmarcelo	#306826 CK	Conseguiram capturar o tigre vivo.
+pt	#2623451 alexmarcelo	#2540955 CK	Eu vou ter um ataque cardíaco.
+pt	#913802 alexmarcelo	#696972 Eldad	Você já teve um ataque cardíaco?
+pt	#5881264 sergiomelo	#5879622 OsoHombre	Meu celular ficou sem carga.
+pt	#1773799 alexmarcelo	#12540205 laetitiamg	Parte da carga do caminhão foi roubada.
+pt	#959632 une_monica	#291159 Zifre	Você acha que ele é adequado para o cargo?
+pt	#2605557 carlosalberto	#17075 Zifre	Que cargo você ocupa?
+pt	#1320429 alexmarcelo	#953188 CK	Você doa à caridade?
+pt	#3135550 carlosalberto	#14014905 haomakk	A caridade é a virtude suprema.
+pt	#4321477 KimiP	#1886106 CK	Vocês precisam de uma carona?
+pt	#4899637 bill	#2387464 CK	Eu preciso de uma carona para a escola.
+pt	#5280118 bill	#4132863 CK	Onde você encontrou a minha carteira?
+pt	#8208430 josivangoncalves	#8208436 josivangoncalves	Você sabe onde coloquei minha carteira?
+pt	#4333119 ajdavidl	#2643451 CK	Por que você está usando o meu casaco?
+pt	#4817099 bill	#58370 CK	O que você acha do meu casaco novo?
+pt	#5409895 ajdavidl	#3826670 CK	Eu não quero mais ser casado com você.
+pt	#2847309 MarlonX19	#1392332 CM	Até onde eu sei, ele não está casado.
+pt	#375125 brauliobezerra	#247626 CK	Nós vimos um castelo na nossa frente.
+pt	#1158988 lazymoose	#1106300 atc	Eu gostaria de viver em um castelo.
+pt	#10661471 rekoowa	#5642556 CK	Eu não quero ser colocado de castigo.
+pt	#1285816 brauliobezerra	#953440 CK	Eu acho que não mereci o castigo que sofri.
+pt	#11576298 carlosalberto	#11576278 carlosalberto	Quem é aquele cavaleiro alto?
+pt	#4609482 KimiP	#2770612 CK	Nós nos escondemos juntos na caverna.
+pt	#8911835 JGEN	#8889754 CK	Eu me senti seguro dentro da caverna.
+pt	#5034273 alexmarcelo	#2545427 CK	Agora, eu estou completamente cego.
+pt	#6593932 bill	#6585131 Hybrid	Pensa que eu sou cego?
+pt	#8423785 bill	#7544549 CK	Tom e John são companheiros de cela.
+pt	#6957537 Ricardo14	#2892229 CK	Não é tempo para celebrar.
+pt	#14015206 haomakk	#10640086 felidad	Meu tio veio celebrar o Natal conosco.
+pt	#10559143 muitoazul	#5424720 CK	O que é uma célula tronco?
+pt	#978946 alexmarcelo	#1423399 marcelostockle	O ovo é uma célula.
+pt	#992282 alexmarcelo	#657985 CK	Vendi meu carro velho por cem dólares.
+pt	#406641 brauliobezerra	#6048 Zifre	Eu enterrei meu cachorro no cemitério de animais.
+pt	#913789 alexmarcelo	#563735 darinmex	Você já andou num cemitério à meia-noite?
+pt	#1179373 lazymoose	#24694 CK	Um centavo pelos teus pensamentos.
+pt	#5892968 sergiomelo	#5892419 OsoHombre	Este livro vale cada centavo.
+pt	#4896396 carlosalberto	#4895597 Hybrid	Mais de uma centena de pessoas ainda estão desaparecidas.
+pt	#1642664 Dark	#253534 (unknown)	Paguei nada menos que uma centena de dólares por esta caneta.
+pt	#1047701 alexmarcelo	#1225256 AlanF_US	As folhas secas formaram um tapete na praça central.
+pt	#10742627 megamanenm	#10742623 megamanenm	A música forma uma parte central de sua cultura.
+pt	#8364308 Mecamute	#8363998 CK	Teria algum problema se eu viesse à cerimônia?
+pt	#7547605 Ricardo14	#7445334 CK	Eu não fui convidado para a cerimônia de abertura.
+pt	#1276819 alexmarcelo	#2658046 Joseph	Suco de laranja ou champanhe?
+pt	#1917312 alexmarcelo	#1886419 CK	A senhora quer champanhe?
+pt	#3245492 alexmarcelo	#2270173 _undertoad	Onde estão meu chapéu e minhas luvas?
+pt	#8208433 josivangoncalves	#8208434 josivangoncalves	Você sabe onde coloquei meu chapéu?
+pt	#13281115 MatheusPese	#3723098 CM	Eu consigo sentir o quão chateado você está.
+pt	#1843639 nowasky	#261302 (unknown)	Eu fiquei bem chateado com os comentários dela.
+pt	#8797892 Ricardo14	#6385715 OsoHombre	Eu realmente não queria te chatear.
+pt	#5391709 bill	#3921157 CK	Eu não quero chatear ninguém.
+pt	#393699 brauliobezerra	#25495 CK	Eu fui realmente chato?
+pt	#6567936 heo598	#1887850 CK	Eu te disse que isso ia ser chato.
+pt	#10810291 DavidDias	#7784712 sharris123	Eu quero checar a veracidade da história.
+pt	#405289 brauliobezerra	#1488 CK	Eu só queria checar o meu e-mail.
+pt	#8855292 carlosalberto	#8345973 Cxom	O chef usa um avental.
+pt	#3219361 gleydin	#3068211 Hybrid	Tom é um chef famoso.
+pt	#4706579 Ricardo14	#47103 CM	O acidente aconteceu antes da minha chegada.
+pt	#8714297 MicheleMaria	#246546 CM	Avise seu pai de minha chegada.
+pt	#5080915 Ricardo14	#2164531 FeuDRenais2	Você sequer sabe como cheirar as flores?
+pt	#3867570 Wolgoon	#2571529 sharptoothed	Nós conseguíamos cheirar o escape.
+pt	#11604334 Advanced	#6890536 CK	Tudo bem se eu pagar em cheque?
+pt	#1510649 alexmarcelo	#1510614 trieuho	Eu gosto de aprender chinês e inglês.
+pt	#382028 brauliobezerra	#339428 Sprachprofi	Eu ainda não escrevo bem em chinês.
+pt	#8570616 Ricardo14	#8577912 CK	Eu acho que comi chocolate demais!
+pt	#406497 brauliobezerra	#1677 Joseph	Nem pense em comer meu chocolate!
+pt	#381632 brauliobezerra	#42105 CK	Foi um grande choque para mim.
+pt	#2069006 MarlonX19	#303286 CK	Ele se recuperou do choque da morte de seu pai.
+pt	#3494811 piterkeo	#2891112 CK	Vocês acham que vai chover hoje à tarde?
+pt	#6401864 bill	#4097127 CK	Vocês acham que vai chover amanhã?
+pt	#10576394 lucasmg123	#3561820 Ooneykcall	Não adianta chutar uma porta aberta.
+pt	#2828952 MarlonX19	#2732340 Amastan	Eu quero me tornar um cidadão.
+pt	#9977328 Ricardo14	#1313352 CC	Eu sou um cidadão do mundo.
+pt	#12714870 DavidDias	#2358809 CK	Eu tenho um teste de ciência pela manhã.
+pt	#5137177 bill	#2546177 CK	Eu era professor de ciência.
+pt	#8137288 lucasmg123	#1456511 CM	Por que eu não estava ciente disso?
+pt	#10736041 ajdavidl	#7737137 CK	Eu não estava ciente desse problema.
+pt	#5197718 Ricardo14	#1423165 marcelostockle	Nós buscamos teorias com fundo científico.
+pt	#1011854 alexmarcelo	#1338143 darinmex	Sua teoria não tem fundo científico.
+pt	#3997165 mervert1	#2542073 CK	Eu pensava que você fosse um cientista.
+pt	#2779091 Ricardo14	#2778432 CK	Eu decidi me tornar um cientista.
+pt	#3692998 carlosalberto	#2258228 _undertoad	Dê-me fogo para acender meu cigarro.
+pt	#3720139 mervert1	#3104558 Hybrid	Nunca fumei nenhum cigarro em toda minha vida.
+pt	#3346219 Ricardo14	#3346226 Theocracy	Vocês pretendem ir ao cinema hoje?
+pt	#7291681 carlosalberto	#7290407 Hybrid	Tu queres ir ao cinema comigo?
+pt	#6543283 heo598	#6264452 CK	Eu não estava usando cinto de segurança.
+pt	#8239966 josivangoncalves	#8089178 AlanF_US	Este cinto é muito apertado para mim.
+pt	#5137220 bill	#456473 lukaszpp	O meu terno é cinza.
+pt	#12129890 carlosalberto	#12129857 carlosalberto	Por que a fumaça é cinza escuro?
+pt	#1007635 alexmarcelo	#1330551 (unknown)	Pedi ao meu pai que me levasse ao circo.
+pt	#381564 brauliobezerra	#321624 AlanF_US	Eu vi um número com animais maravilhoso no circo.
+pt	#5699319 Ricardo14	#4521720 Hybrid	Os estudantes se sentaram em círculo.
+pt	#952929 alexmarcelo	#2154 AlanF_US	A resposta leva-nos a um círculo vicioso.
+pt	#3491484 piterkeo	#2267152 _undertoad	Eu não iria sob nenhuma circunstância.
+pt	#2828475 MarlonX19	#1629432 al_ex_an_der	Mas houve uma circunstância curiosa.
+pt	#3335045 MarlonX19	#434516 lukaszpp	Eu preciso de cirurgia?
+pt	#11507059 carlosalberto	#11507048 carlosalberto	O paciente ainda está na sala de cirurgia?
+pt	#4976936 ToinhoAlam	#2245793 CK	Eu fiquei com ciúme.
+pt	#2871427 brauliobezerra	#2871339 Hybrid	Eu fico com ciúme quando ele conversa com outras garotas.
+pt	#1843343 alexmarcelo	#2960854 AlanF_US	Qual é o seu estado civil?
+pt	#13008371 Advanced	#9199467 CK	Somos trabalhadores da construção civil.
+pt	#1707656 alexmarcelo	#619866 ulyssemc1	Como é que nós podemos ver as coisas tão claramente?
+pt	#5196406 alexmarcelo	#4665786 CK	Eu me lembro claramente desse dia.
+pt	#1319639 alexmaur	#36731 RoyalBee	Eu quero comprar aquele carro clássico a todo custo.
+pt	#1207107 alicup	#1205980 CC	Qual sua música de rock clássico favorita?
+pt	#10336154 heo598	#9819221 CK	Se eu vou ou não vai depender do clima.
+pt	#10786669 DavidDias	#10784792 CK	Eu estou me acostumando com esse clima.
+pt	#11018344 megamanenm	#11018338 megamanenm	Onde fica a clínica mais próxima?
+pt	#3248361 sergiomelo	#3244689 mervert1	Saí da clínica sem pagar ao dentista.
+pt	#6470775 heo598	#5806971 Hybrid	Você gosta de cobertura de chocolate?
+pt	#8157479 carlosalberto	#906843 CK	Qual é tua cobertura de pizza favorita?
+pt	#996316 alexmarcelo	#8993170 Nylez	Como ele pode cobrar tão caro por um serviço de tão má qualidade?
+pt	#7291599 carlosalberto	#7290695 CK	Eu quero fazer uma ligação a cobrar para a Austrália.
+pt	#4270369 KimiP	#3763742 Serhiy	Eu vi um coelho na floresta.
+pt	#10025546 Ricardo14	#10025496 shekitten	Nós temos um coelho.
+pt	#1926615 alexmarcelo	#33375 CK	Eu tenho algumas coisas no cofre do hotel.
+pt	#720924 brauliobezerra	#625902 CK	Eu coloquei o dinheiro no cofre.
+pt	#11197885 omniglotman	#4984717 CK	Eu tenho certeza que era coincidência.
+pt	#4861517 bill	#2361454 CK	Eu não acho que isso é uma coincidência.
+pt	#2102394 Sadness	#1820722 Amastan	Quantos selos tu tens em sua coleção?
+pt	#5371278 bill	#3871280 CK	Quer ver minha coleção de selos?
+pt	#1799466 alexmarcelo	#1799039 Amastan	O que vocês odiavam escrever no colégio?
+pt	#2453761 alexmarcelo	#2451608 CK	Eu estudo francês no colégio.
+pt	#1799747 alexmarcelo	#378809 CM	Quem era o homem que foi morto naquela colina?
+pt	#12597388 Advanced	#12084367 CK	Qual caminho para descer a colina é o mais rápido?
+pt	#2179292 alexmarcelo	#1887359 CK	Eu tenho problemas de coluna.
+pt	#10480056 Ricardo14	#10482661 DJ_Saidez	A minha coluna está doendo.
+pt	#9162169 bill	#4015360 CK	Com licença, vocês trabalham aqui?
+pt	#9417874 bill	#8462472 CK	Com licença, vocês falam francês?
+pt	#1862459 gleydin	#680747 Source_VOA	Médicos sugerem drogas para combater doenças.
+pt	#12021504 Advanced	#307676 CK	Eles combinaram forças para combater o inimigo.
+pt	#4938355 Ricardo14	#4918128 gcaplan	Eu não me recordo da combinação.
+pt	#6489692 bill	#5909799 CK	Qual é a combinação do cofre?
+pt	#377617 brauliobezerra	#266089 (unknown)	Não é fácil combinar hobbies com lucros.
+pt	#9935495 carlosalberto	#9935136 DJ_Saidez	Nem sempre é fácil combinar estudo e trabalho.
+pt	#9307561 bill	#8984143 mccarras	Eu trabalho em um posto de combustível.
+pt	#1120540 brauliobezerra	#33554 CK	Meu carro gasta muito combustível.
+pt	#5561501 bill	#5559083 CK	Nós queríamos comemorar com eles.
+pt	#7855284 Ricardo14	#9345677 Nylez	Hoje nós vamos pedir uma pizza para comemorar.
+pt	#5016198 alexmarcelo	#9531847 Nylez	O meu comentário foi só uma brincadeira.
+pt	#4388432 ajdavidl	#2548508 CK	Nós não temos nenhum comentário.
+pt	#12301340 carlosalberto	#258613 CK	Eu trabalho em uma empresa comercial.
+pt	#10651835 lucasmg123	#56209 CK	Esse é o meu endereço comercial.
+pt	#11245744 Advanced	#10717717 vxern	Nós somos membros da comissão.
+pt	#6961640 Ricardo14	#4915876 CK	Recebo três por cento de comissão de tudo o que eu vendo.
+pt	#405328 brauliobezerra	#1552 kebukebu	Não fui eu, comissário!
+pt	#10852402 bill	#6635270 Hybrid	Tom é comissário de bordo.
+pt	#5180063 Ricardo14	#2163204 Source_VOA	Nós apresentaremos nossa ideia ao comitê.
+pt	#902397 alexmarcelo	#247512 (unknown)	O que nós decidirmos deve ser aprovado pelo comitê.
+pt	#6393658 Ricardo14	#3179785 WestofEden	Se você fosse me comparar a um animal, qual seria?
+pt	#4225432 carloseperola	#2013975 CK	Eu queria compartilhar isso com você.
+pt	#8908910 Brasiliense	#7112826 CM	Eu não gosto de compartilhar coisas.
+pt	#10723712 jrom	#10181376 Lyte3000	Eu vencerei a competição esta semana.
+pt	#9952942 bill	#3738759 CK	Quem foi que ganhou a competição?
+pt	#9935533 carlosalberto	#9935053 DJ_Saidez	Só preciso da máscara para completar minha fantasia.
+pt	#1111739 alexmarcelo	#54095 CM	Vamos completar esta imagem rapidamente.
+pt	#6981119 Ricardo14	#5240983 CK	Eu me sinto um completo idiota.
+pt	#828932 brauliobezerra	#827200 CM	Qual é o seu nome completo?
+pt	#3434032 piterkeo	#3428701 Hybrid	É mais complicado do que eu pensei originalmente.
+pt	#5244792 ajdavidl	#3825617 CK	Por que o amor é tão complicado?
+pt	#2405719 Matheus	#42057 CM	Isso vai complicar o problema ainda mais.
+pt	#999842 une_monica	#250884 (unknown)	Meu comportamento foi muito estranho.
+pt	#10215406 arademaker	#8812121 CK	Eu estou cheio do seu comportamento.
+pt	#8340008 JGEN	#3273324 CM	Eu tenho dificuldade em lhe compreender.
+pt	#7258193 carlosalberto	#7258113 Hybrid	Estou somente procurando compreender vocês.
+pt	#5241236 ajdavidl	#3825641 CK	Infelizmente, eu tenho um compromisso.
+pt	#7345503 Ricardo14	#2387255 CK	Eu devo cancelar o nosso compromisso.
+pt	#2837646 MarlonX19	#241579 (unknown)	Eu estou em comunicação com ela agora.
+pt	#1396981 alexmarcelo	#56408 (unknown)	O que você quer dizer com comunicação?
+pt	#404777 brauliobezerra	#22386 Zifre	A comunidade é formada por indivíduos.
+pt	#5881817 sergiomelo	#5879557 OsoHombre	Fadil vive em uma pequena comunidade.
+pt	#3186244 piterkeo	#39916 piterkeo	O comunista enfim cedeu a seu duro oponente.
+pt	#1920391 alexmarcelo	#1911982 Spamster	Eu estou tendo problemas para me concentrar.
+pt	#4887233 Ricardo14	#2245984 CK	Eu tenho que me concentrar.
+pt	#6795439 Ricardo14	#6795002 CK	Como vocês chegaram a essa conclusão?
+pt	#3453855 piterkeo	#3452880 al_ex_an_der	Essa é a sua conclusão, não a minha.
+pt	#902334 brauliobezerra	#254141 CK	Eu participei do concurso.
+pt	#1277581 alexmarcelo	#1306663 Shishir	Ela venceu o concurso de beleza.
+pt	#770781 brauliobezerra	#37596 CK	Em que portão é a minha conexão?
+pt	#2827664 MarlonX19	#2556533 Hybrid	A conexão da minha internet é muito lenta.
+pt	#2311978 thalitanjos	#1430998 Eldad	A conferência acabou duas horas atrás.
+pt	#8912934 Ricardo14	#8912926 Ricardo14	Devo confessar que eu sou bem maluco.
+pt	#2599223 alexmarcelo	#1476345 Spamster	Eu estou me sentindo bem confiante.
+pt	#5253020 ajdavidl	#3825593 CK	Eu não estou muito confiante.
+pt	#3447962 Ricardo14	#3328471 CK	Vocês poderiam confirmar isso?
+pt	#3754191 marcosmilton	#3753794 tanay	Eu gostaria de confirmar meu bilhete.
+pt	#1018089 alexmarcelo	#238364 CK	A polícia forçou uma confissão dela.
+pt	#6570737 heo598	#6570579 Hybrid	A confissão dela veio como uma surpresa.
+pt	#9828309 bill	#9826335 CK	Qual cadeira vocês acham que é mais confortável?
+pt	#2614155 alexmarcelo	#2613122 Shishir	A minha cama é mais confortável que a sua.
+pt	#1499419 Brunosprak	#619947 ulyssemc1	Nesse ponto, minha confusão foi absoluta.
+pt	#10198001 BranTheOliver	#5726137 CM	Nós precisamos ficar fora dessa confusão.
+pt	#2462930 alexmarcelo	#2458566 CK	Eu acho que você está um pouco confuso.
+pt	#11105823 MrJuice	#7951064 Hybrid	Eu achei isso confuso de primeira.
+pt	#994270 alexmarcelo	#958723 FeuDRenais2	A água vai congelar a zero grau Celsius, certo?
+pt	#910774 alexmarcelo	#251799 (unknown)	Eu não tenho muito conhecimento em física.
+pt	#5456222 Henrixion	#5455783 Zurich899	Eu quero melhorar meu conhecimento de idiomas.
+pt	#8914569 JGEN	#8893265 CK	Eu notei um novo conjunto de pegadas na neve.
+pt	#10646554 Luciferous	#6907457 swolesuki	Um conjunto de úlceras decorava a pele.
+pt	#381634 brauliobezerra	#250624 (unknown)	O meu desejo é conquistar essa montanha.
+pt	#1245220 Welton	#840111 papabear	Eu tentei inefetivamente conquistar o coração dela de volta.
+pt	#14006086 carlosalberto	#9850942 NurseMeeks	Vocês perderam a consciência?
+pt	#5327805 ToinhoAlam	#2387277 CK	Eu devo ter perdido a consciência.
+pt	#3447845 Ricardo14	#3329807 CK	Vocês não podem apenas consertar isso?
+pt	#1792387 alexmarcelo	#1789088 Spamster	Como vocês pretendem consertar isto?
+pt	#8327898 JGEN	#269214 CK	Uma nova estrada está em construção.
+pt	#8841591 RochaAr	#5725479 CM	A construção começou pouco tempo depois.
+pt	#7856890 alexmarcelo	#258809 CK	Eu estou contente com a minha jaqueta nova.
+pt	#1701306 alexmarcelo	#773558 marloncori	Fico contente de que vocês estejam todos aqui.
+pt	#4962496 carlosalberto	#4950781 CK	Eu às vezes não posso me conter.
+pt	#13979808 Castro5432	#295379 Dejo	Ele não conseguiu conter a empolgação.
+pt	#7905016 piterkeo	#6995694 mailohilohi	O que vocês acham do meu conto?
+pt	#5992843 bill	#2763454 sharptoothed	Onde eu posso contratar uma empregada?
+pt	#6310784 carlosalberto	#2984374 CK	Vocês já decidiram quem vão contratar?
+pt	#6794885 StrikerFX	#6794070 Hybrid	Posso convencer você a se juntar a mim?
+pt	#4870082 bill	#3157425 CK	O que posso fazer para te convencer?
+pt	#7309670 Ricardo14	#4665770 CK	Tudo bem se eu levar um convidado?
+pt	#4948626 Ricardo14	#4943630 AlanF_US	Eu raramente sou convidado para festas.
+pt	#9870616 bill	#6261605 CK	Vocês receberam um convite?
+pt	#10790462 megamanenm	#9558486 Adelpa	Eu não aceito o convite!
+pt	#12340126 piterkeo	#12330790 CK	Vocês deveriam ter feito uma cópia.
+pt	#5012475 bill	#2545394 CK	Eu vou precisar de uma cópia.
+pt	#880552 alexmarcelo	#880551 CK	Eu queria um copo de leite, por favor.
+pt	#756830 brauliobezerra	#34840 CK	Eu poderia tomar outro copo de cerveja?
+pt	#5165407 bill	#1895624 CK	Você é mais corajoso do que eu.
+pt	#4810729 bill	#2202626 CK	Eu sou corajoso.
+pt	#4866859 bill	#2751136 CK	Uma corda da minha guitarra quebrou.
+pt	#5775707 Wagner1994	#477697 minshirui	Alguém cortou a corda da minha pipa.
+pt	#1912163 alexmarcelo	#1912247 (unknown)	Estou vendo a minha coroa.
+pt	#1189898 alexmarcelo	#62950 (unknown)	Perdi a minha coroa.
+pt	#959836 alexmarcelo	#11732705 less_tat	Vocês não podem falar no corredor.
+pt	#2779714 carlosalberto	#257652 CK	Eu sou o corredor mais rápido.
+pt	#8948475 JGEN	#8933031 CK	Eu verifiquei minha caixa de correio.
+pt	#1941556 alexmarcelo	#681370 Source_VOA	Uma corrente se compõe de muitos elos.
+pt	#1846858 alexmarcelo	#1138700 candistyx	Gostaria de abrir uma conta corrente.
+pt	#13260773 Lemmy	#12252225 CK	Nós deixamos nosso barco na costa.
+pt	#736174 brauliobezerra	#681551 Source_VOA	A marinha defende nossa costa.
+pt	#6152068 bill	#324362 CK	Meu amigo me chamou de covarde.
+pt	#4989318 bill	#3573743 CK	Você está me chamando de covarde?
+pt	#2039550 MarlonX19	#2039385 Eldad	Tu sabes como cozinhar lagosta?
+pt	#742874 brauliobezerra	#742103 CM	O que eu devo cozinhar para os convidados amanhã?
+pt	#770782 brauliobezerra	#37597 CK	Quais cartões de crédito eu posso usar?
+pt	#2782540 carlosalberto	#2780818 sharptoothed	Vocês vendem a crédito?
+pt	#4825854 bill	#62264 CK	Eu coloquei um pouco de creme no meu café.
+pt	#9960662 bill	#62242 CK	Por favor, coloque bastante creme no meu café.
+pt	#3469702 carlosalberto	#3469698 carlosalberto	A matemática é a mais bela e mais poderosa criação do espírito humano.
+pt	#10712744 ajdavidl	#7736892 CK	Eu fui criado pelos meus avós.
+pt	#405402 brauliobezerra	#325503 CK	O dragão é uma criatura imaginária.
+pt	#3443451 piterkeo	#3442579 Hybrid	Eu não estou passando por uma crise de meia-idade!
+pt	#933811 alexmarcelo	#924409 CK	Sem a tua ajuda, eu não teria superado aquela crise.
+pt	#3143747 ruj	#906717 CK	Qual é o seu hino cristão preferido?
+pt	#11502779 carlosalberto	#11502473 carlosalberto	A vítima está em estado muito crítico.
+pt	#8558782 Capistrano	#2825894 marcelostockle	Ela chegou ao hospital em estado crítico.
+pt	#4445151 alexmarcelo	#4367156 Ooneykcall	Por que é que o mundo é tão cruel comigo?
+pt	#5317564 ianna	#4952262 Hybrid	Eu não quero ser cruel.
+pt	#14016910 haomakk	#2863759 AlanF_US	Eu quero uma cruz dourada.
+pt	#7902938 piterkeo	#6759702 swolesuki	Um sinal de adição lembra uma cruz.
+pt	#1158703 carlo	#29071 CK	Eu tenho um amigo cujo pai é um pianista famoso.
+pt	#1075561 alexmarcelo	#249750 CK	Tenho um amigo cujo pai é veterinário.
+pt	#9071023 JGEN	#9044300 CK	Você acha que eu sou o culpado?
+pt	#956873 une_monica	#254119 Eldad	Eu me sinto culpado a esse respeito.
+pt	#5131353 Ricardo14	#484963 CM	Eu aprendi muito sobre a cultura grega.
+pt	#1622267 alexmarcelo	#1622270 shekitten	Eu admiro a cultura e a educação dos alemães.
+pt	#996118 alexmarcelo	#258743 U2FS	Tenho que cumprir com a minha obrigação.
+pt	#4761331 bill	#2331617 CK	Eu tinha uma promessa a cumprir.
+pt	#3465967 piterkeo	#3334030 CK	Vocês encontraram uma cura?
+pt	#13982032 Castro5432	#12851006 Ussis	Ela encontrou uma cura para a doença.
+pt	#7443410 Ricardo14	#27989 katix824	O médico pode curar seu filho da doença.
+pt	#1308540 satsu	#56629 (unknown)	Esse remédio vai curar você da sua gripe.
+pt	#7011939 Ricardo14	#2064753 CK	Eu estou curioso sobre uma coisa.
+pt	#8292193 JGEN	#8272515 CK	Estou curioso para saber qual de vocês vencerá.
+pt	#2634438 alexmarcelo	#2633248 meerkat	O que eu aprenderei neste curso?
+pt	#10311188 carlosalberto	#10311184 carlosalberto	Eu me matriculei em um curso de línguas online.
+pt	#2847543 MarlonX19	#2213908 Hybrid	Você pareceu curtir aquilo
+pt	#9144309 BiancaSanti	#7112550 CM	Eu tive meu cabelo cortado muito curto.
+pt	#4719483 anthrax26	#2485957 CM	Cortaram meu cabelo muito curto.
+pt	#2687395 carlosalberto	#7893270 shekitten	Isto eu posso vender a preço de custo.
+pt	#380398 brauliobezerra	#24904 CS	Eu devo salvá-la a qualquer custo.
+pt	#1176290 paula_guisard	#238151 CK	A polícia o manteve sob custódia.
+pt	#4850543 Ricardo14	#2273222 CK	Tom está sob custódia.
+pt	#5466293 ToinhoAlam	#5050459 Hybrid	Não se deve deixar uma dama esperando.
+pt	#2627841 alexmarcelo	#2767995 (unknown)	Eu tenho uma dama de copas.
+pt	#3616146 mervert1	#3329821 CK	Você não consegue consertar o dano?
+pt	#4776099 anthrax26	#4774777 Muelisto	Que tipo de dano ele causou?
+pt	#1874726 gleydin	#264249 CK	Nós adiantamos a data da reunião.
+pt	#1718556 alexmarcelo	#1716650 superdenden	Por acaso você sabe a data do exame?
+pt	#8575346 bill	#7886566 Hybrid	Vocês olharam debaixo do sofá?
+pt	#8809561 heo598	#7837701 sharris123	Meu pai está sentado debaixo da árvore.
+pt	#5184918 ajdavidl	#4497246 CK	Nós esperamos ver muito desenvolvimento na próxima década.
+pt	#8862705 heo598	#3551312 Hybrid	Tom passou uma década como aprendiz.
+pt	#904671 alexmarcelo	#903810 CK	Eu acho que é hora de eu comprar um carro decente.
+pt	#5139268 ToinhoAlam	#32512 CM	Por que você não vai morar numa casa decente?
+pt	#1077359 alexmarcelo	#2759066 mervert1	Eu sorri ao ouvir sua declaração de amor.
+pt	#12889973 lucasfr	#1981 CK	Eu gostaria de retirar minha declaração anterior.
+pt	#3862517 muriloricci	#3862322 Amastan	Eu quero muito declarar o meu amor a ela.
+pt	#9446718 Ricardo14	#436683 lukaszpp	Eu não tenho nada a declarar.
+pt	#5981375 sergiomelo	#4133513 CK	Nós tentamos nos defender.
+pt	#8561689 JGEN	#8549509 CK	Eu procurei algo que pudesse usar para me defender.
+pt	#7347462 Ricardo14	#2761592 sharptoothed	Eu quero me deitar por alguns minutos.
+pt	#2462948 alexmarcelo	#2458535 CK	Eu acho que é melhor você se deitar.
+pt	#931844 une_monica	#243721 CK	Onde é a delegacia mais próxima?
+pt	#1555567 alexmarcelo	#240372 CK	Você sabe onde é a delegacia?
+pt	#4620917 carlosalberto	#9456545 Nylez	Um delicado aroma de jasmim preenche o ar.
+pt	#6011721 bill	#5200631 AlanF_US	É um assunto muito delicado.
+pt	#4808986 bill	#402340 CK	Meu pai fez um almoço delicioso para mim.
+pt	#8864176 JGEN	#8860426 AlanF_US	De onde está vindo esse aroma delicioso?
+pt	#6109777 Wagner1994	#6109374 Hybrid	Você não pode me demitir, eu me demito!
+pt	#4883997 Ricardo14	#4703096 CK	Eu vou me demitir no final do mês.
+pt	#1200211 alexmarcelo	#10674261 (unknown)	Tentei acompanhar o seu depoimento.
+pt	#651919 brauliobezerra	#1973 AlanF_US	As testemunhas conseguiram refutar o falso depoimento do suspeito.
+pt	#3779403 victorhugosilvaspbr	#3779391 tanay	Precisa de um depósito?
+pt	#12712889 kleberlucas	#9518819 casaniere	Se você deixar um depósito, eu posso reservar essa câmera para você.
+pt	#7447156 Ricardo14	#1617161 marcelostockle	Eu posso derrotar qualquer jogador de xadrez.
+pt	#5187268 ajdavidl	#5186981 CK	Eu vou derrotar você.
+pt	#10732330 carlosalberto	#8986221 shekitten	O povo quer derrubar o regime.
+pt	#10709617 MrJuice	#9455880 slampisko	Vou derrubar uma árvore.
+pt	#1048307 brauliobezerra	#953503 CK	Eu sei que será desagradável falar sobre o acidente.
+pt	#2977570 carlosalberto	#26722 CK	Você não acha desagradável caminhar na chuva?
+pt	#8063641 jvlopes91	#868498 LittleBoy	Quando retornei, meu carro havia desaparecido.
+pt	#8552062 Ricardo14	#14014998 haomakk	Desculpa eu ter desaparecido.
+pt	#7283505 carlosalberto	#7283261 gcaplan	Vocês são um desastre na cozinha.
+pt	#11878818 ajdavidl	#5350247 Hybrid	Meu encontro foi um desastre.
+pt	#6474096 heo598	#2721902 Hybrid	Acho que eu mereço um descanso agora.
+pt	#7886365 pedrolima	#2033399 CK	Eu quero que você tenha algum descanso.
+pt	#8418826 lucasmg123	#717625 papabear	Ele havia descoberto uma nova estrela.
+pt	#1597484 alexmarcelo	#1573755 trieuho	Nosso segredo foi descoberto pelo governo.
+pt	#1371324 alexmarcelo	#9944403 Nylez	O homem é fascinado pelo desconhecido.
+pt	#11166772 Advanced	#5726638 CM	Estamos em terreno desconhecido aqui.
+pt	#9177432 carlosalberto	#9177415 carlosalberto	Mas meu desenho não era de um chapéu.
+pt	#11211106 carlosalberto	#11211108 carlosalberto	Eu sou a voz do que clama no deserto.
+pt	#4425583 KimiP	#2191541 CM	Vocês moram no deserto?
+pt	#7309759 carlosalberto	#7306642 Hybrid	Vocês não vão me dar um beijo de despedida?
+pt	#2423976 MarlonX19	#249196 CK	Nós vamos dar uma festa de despedida para ele.
+pt	#2554272 alexmarcelo	#1003490 wittleghoul	Eu fui à estação me despedir do meu amigo.
+pt	#8288186 JGEN	#8282291 CK	Eu liguei para a minha mãe para me despedir.
+pt	#11426755 carlosalberto	#11426731 carlosalberto	A destruição do meio ambiente é grande.
+pt	#12299823 DavidDias	#275461 CM	O tufão deixou para trás um rastro de destruição.
+pt	#11083670 MrJuice	#26762 AMIKEMA	O jardim foi destruído depois da chuva.
+pt	#2613786 alexmarcelo	#2941435 CK	O disco rígido foi totalmente destruído.
+pt	#1571740 paula_guisard	#23981 CK	Estou determinado a ser um cientista.
+pt	#7959580 lucasmg123	#6247433 CK	Você parece determinado a fazer isso.
+pt	#2960878 carlosalberto	#2960861 Hybrid	Meu carro não pegou devido ao frio.
+pt	#7746724 MacGyver	#9526290 Nylez	Vocês devem me tratar com o devido respeito.
+pt	#6851200 ToinhoAlam	#2721575 CK	Eu acho que esse diamante não é verdadeiro.
+pt	#1298995 brauliobezerra	#1298860 CK	Esse é um diamante de verdade, não é?
+pt	#11072555 akira_ito	#1318671 CK	Aliás, quantos de vocês usam um diário?
+pt	#5655710 bill	#2376492 CK	Eu sei quem foi que roubou o seu diário.
+pt	#6995264 Ricardo14	#2547834 CK	Eu vou te dar uma dica.
+pt	#9983801 Ricardo14	#1832186 Spamster	Obrigado pela dica!
+pt	#8340004 JGEN	#3273324 CM	Eu tenho dificuldade em compreendê-lo.
+pt	#4849841 bill	#2388124 CK	Eu nunca tenho dificuldade para dormir.
+pt	#5116682 ajdavidl	#4497576 CK	A polícia encontrou alguma impressão digital?
+pt	#1875627 alexmarcelo	#8957205 Nylez	Ele não sabe usar uma câmera digital.
+pt	#12822851 GustaBR	#12822850 GustaBR	Eu estava olhando diretamente para você.
+pt	#2752432 carlosalberto	#2510807 Hybrid	Por que você não pergunta a ele diretamente?
+pt	#5181362 bill	#1440643 CK	O meu disco rígido está quase cheio.
+pt	#1061482 alexmarcelo	#1059659 (unknown)	Esta é a minha faixa favorita no disco inteiro.
+pt	#8444047 bill	#2026349 CK	Quer mesmo que eu faça um discurso?
+pt	#5655694 bill	#2892516 CK	O que você achou do meu discurso?
+pt	#4670367 Ricardo14	#2953840 CK	Nós continuaremos essa discussão depois.
+pt	#2971698 victorhugosilvaspbr	#2971686 AlanF_US	Minha colaboração foi ignorada na discussão.
+pt	#10648577 malafaya	#10637398 CK	Os preços da comida estão a disparar.
+pt	#10723433 Cangarejo	#10723432 Cangarejo	Nós usamos um canhão de doces para disparar guloseimas para o ar.
+pt	#7223795 MacGyver	#3722465 CM	Eu conheço alguém que está disponível.
+pt	#6846951 heo598	#2376160 CK	Eu sei que há um quarto disponível.
+pt	#8621479 bill	#7323426 MessDjaaf	Como é que este dispositivo funciona?
+pt	#6209565 carlosalberto	#6209481 bill	O dispositivo cabe na palma da mão.
+pt	#3227042 Ricardo14	#2541282 CK	Eu estou disposto a correr esse risco.
+pt	#8643615 JGEN	#8597038 CK	Eu não estava disposto a esperar.
+pt	#1179241 lazymoose	#25857 AlanF_US	Nós vimos a luz de um farol distante.
+pt	#7371778 Ricardo14	#770043 marloncori	Ele e eu somos de um país distante.
+pt	#9675817 bill	#7735422 CK	A que horas o parque de diversão abre?
+pt	#8809547 heo598	#2946717 astyng	Eu só leio por diversão.
+pt	#902290 alexmarcelo	#297881 CM	Ele nunca perdoará minha dívida.
+pt	#4317970 ajdavidl	#2358689 CK	Eu tenho uma dívida para pagar.
+pt	#11562652 carlosalberto	#11562639 carlosalberto	Por que não podemos dividir por zero?
+pt	#13509848 DavidDias	#5771413 bonney12	Você quer dividir comigo?
+pt	#1155999 lazymoose	#20868 Eldad	Errar é humano, perdoar, divino.
+pt	#1825885 gleydin	#36128 AlanF_US	Que clima divino!
+pt	#12712838 kleberlucas	#803123 Source_VOA	Ela disse a ele que queria o divórcio.
+pt	#2067212 alexmarcelo	#1839660 CK	A sua mulher vai te pedir o divórcio.
+pt	#4908076 bill	#27048 CK	Eu não consigo dobrar o meu braço direito.
+pt	#1288564 alexmarcelo	#250713 CK	Meu irmão come o dobro do que eu como.
+pt	#1573339 paula_guisard	#16907 gracefully	Seu livro tem o dobro do tamanho do meu.
+pt	#9801881 Ricardo14	#3329701 CK	Eu posso ver um documento?
+pt	#902588 brauliobezerra	#254636 CK	Eu duvido da autenticidade do documento.
+pt	#4985828 Ricardo14	#13486008 rul	A minha cabeça não para de doer.
+pt	#5080748 Ricardo14	#2276553 CK	Não vai doer, eu prometo.
+pt	#7589522 Ricardo14	#7589519 Ricardo14	Eu sou um pouco doido, você sabe disso.
+pt	#10616221 Ricardo14	#14018062 haomakk	Estou doido para começar o meu curso de alemão.
+pt	#1648807 alexmarcelo	#1646972 dimitris	Nenhum dom é mais precioso que a confiança.
+pt	#902615 alexmarcelo	#284745 shekitten	Ele tem um dom para a música.
+pt	#1718361 alexmarcelo	#1717946 Amastan	Vocês já foram trabalhar no domingo?
+pt	#2056779 MarlonX19	#242334 CK	Você não virá para minha casa no próximo domingo?
+pt	#6174721 Mecamute	#5274053 CK	Eu tenho uma dor de cabeça pulsante.
+pt	#7583176 Ricardo14	#2262852 CK	Eu estou com uma dor de cabeça terrível.
+pt	#6397539 pajunior	#5852313 CK	Eu tomei uma dose.
+pt	#381720 brauliobezerra	#278539 CK	Meu irmão pequeno tem doze anos.
+pt	#418234 brauliobezerra	#2085 CK	Eu passei doze horas no trem.
+pt	#8328958 JGEN	#8246198 CK	Eu gostaria que fosse um dragão.
+pt	#4552399 Ricardo14	#13058791 araneo	Eu vi um dragão!
+pt	#3979699 alexmarcelo	#3970806 coynejeremy	Quem é o autor deste drama?
+pt	#6818457 heo598	#3730296 CM	Por que todo o drama?
+pt	#4031510 alexmarcelo	#4016133 CK	Você não vai me oferecer um drinque?
+pt	#1061640 alexmarcelo	#906749 CK	Qual é o seu drinque favorito?
+pt	#3433613 piterkeo	#3431227 CK	Nós quatro saímos em um encontro duplo.
+pt	#3129222 carlosalberto	#12549297 laetitiamg	Suas respostas tinham duplo sentido.
+pt	#10650932 malafaya	#5800850 CK	Como ousas duvidar de mim?!
+pt	#4937996 bill	#3823392 CK	Estou começando a duvidar disso.
+pt	#3832341 Laudemilson	#3832043 CK	Meu apartamento é naquele edifício.
+pt	#4899559 bill	#2546127 CK	Eu trabalho neste edifício.
+pt	#377687 brauliobezerra	#287594 CM	Eu não suporto sua falta de educação.
+pt	#1248880 Welton	#258883 CK	Eu quero dedicar minha vida à educação.
+pt	#6940467 Ricardo14	#4999743 CK	Vocês realmente acham que sou egoísta?
+pt	#6940464 Ricardo14	#4999743 CK	Você realmente acha que eu sou egoísta?
+pt	#1582443 alexmarcelo	#704761 Zifre	Eu estou bem certo de que foi o elefante.
+pt	#5940628 bill	#5850598 CK	Maria é uma mulher muito elegante.
+pt	#13860603 carlosalberto	#13860607 carlosalberto	Ela é inteligente e sempre muito elegante.
+pt	#5052416 ToinhoAlam	#296582 CM	Ele não vai concorrer na próxima eleição.
+pt	#4775070 KimiP	#802951 Source_VOA	Ele ganhou a eleição seguinte.
+pt	#4671430 Ricardo14	#3437500 mervert1	O elemento mercúrio é volátil?
+pt	#2169098 alexmarcelo	#10067788 Nylez	O elemento a que me refiro é o cúrio.
+pt	#6965793 Ricardo14	#3394520 CK	Eu quero um ventilador elétrico.
+pt	#1175346 paula_guisard	#1008901 AOCinJAPAN	Eu deveria ter testado este barbeador elétrico antes de comprá-lo.
+pt	#1048396 brauliobezerra	#953289 CK	Vocês já ficaram presos num elevador?
+pt	#8692828 professorNilo	#6658912 CK	Eu saí do elevador no terceiro andar.
+pt	#1983932 alexmarcelo	#14015015 haomakk	Ao fazer um teste, você deve eliminar primeiro as alternativas absurdas.
+pt	#1656746 alexmarcelo	#1553510 CK	Não tente jogar a culpa toda em cima de mim.
+pt	#14046259 carlosalberto	#14046281 carlosalberto	Eu podia sentir a emoção crescendo no ar.
+pt	#4804338 carlosalberto	#4806558 Objectivesea	Não tenho palavras para exprimir minha emoção.
+pt	#8798731 Brasiliense	#2388213 CK	Eu nunca pensei que seria tão emocionante.
+pt	#1416948 alexmarcelo	#36124 CM	Que jogo mais emocionante!
+pt	#7560374 Ricardo14	#2952599 CK	Eu fui empregado do ano por três anos.
+pt	#2571845 alexmarcelo	#1679959 Amastan	É a primeira vez que eu demito um empregado.
+pt	#2097124 MarlonX19	#2097078 erikspen	Tu podes me emprestar teu carro, por favor?
+pt	#391367 brauliobezerra	#71144 CC	Eu não posso te emprestar esse livro.
+pt	#956084 une_monica	#41126 CK	Tive que empurrar minha bicicleta porque tinha um pneu furado.
+pt	#7775370 pedrolima	#60506 CK	Tudo o que você tem que fazer é empurrar esse botão.
+pt	#1554680 alexmarcelo	#24118 kremel	O tempo estava encantador quando eu saí de casa.
+pt	#1245193 Welton	#813098 papabear	Ele é tão encantador!
+pt	#2102368 MarlonX19	#280564 (unknown)	Eu não posso encarar essa vida sozinho.
+pt	#2064480 alexmarcelo	#2066309 MarlonX19	Vocês deveriam encarar a realidade.
+pt	#381510 brauliobezerra	#20897 Duck	Vamos encerrar o assunto sem uma terceira opinião.
+pt	#11480832 carlosalberto	#11480826 carlosalberto	Espero que meu celular seja logo encontrado.
+pt	#3389322 MarlonX19	#28350 CK	Eu o tinha encontrado uma vez antes.
+pt	#1311991 brauliobezerra	#1200081 CK	Por que você quer ser enfermeiro?
+pt	#1001938 alexmarcelo	#1864720 gleydin	Eu sou enfermeiro.
+pt	#1245154 Welton	#36979 CK	Enfim, eu não gosto.
+pt	#3703726 carlosalberto	#2264703 _undertoad	Enfim, você acertou na mosca!
+pt	#904687 alexmarcelo	#903825 CK	Eu acho que é hora de eu enfrentar aquele problema.
+pt	#3748473 Ricardo14	#11826840 (unknown)	Eu realmente espero não ter de enfrentar engarrafamento.
+pt	#730827 lenon_perez	#246747 (unknown)	Foi ontem que eu quebrei a janela por engano.
+pt	#8197492 josivangoncalves	#8197615 josivangoncalves	Se eu não me engano, acho que já vi por aqui.
+pt	#5112115 jumarinho	#5105296 bagonyi	Não vamos enlouquecer!
+pt	#1252097 satsu	#69507 al_ex_an_der	Você vai me enlouquecer.
+pt	#873844 alexmarcelo	#873843 (unknown)	Você tem alguma opinião sobre meu ensaio?
+pt	#11484378 carlosalberto	#11484368 carlosalberto	Não posso ir ao ensaio sem minha partitura.
+pt	#3433378 piterkeo	#3433368 Hybrid	Eu não fiz isso desde o ensino médio.
+pt	#4897254 bill	#239178 CK	Cachorros costumam enterrar ossos.
+pt	#2064317 alexmarcelo	#1951374 CK	Você não pode enterrar a verdade.
+pt	#6722109 lucasmg123	#3822671 CK	Eu li o flyer que foi entregue a mim.
+pt	#5148814 alexmarcelo	#5150178 Airvian	O carro que eu comprei me foi entregue hoje de manhã.
+pt	#1441618 alexmarcelo	#1441267 Balamax	Entretanto, todos esses dados não foram confirmados.
+pt	#9845306 bill	#6080733 CK	Vocês assistiram à entrevista coletiva?
+pt	#10618678 bill	#8946654 sundown	Vocês leram a entrevista?
+pt	#2682422 MarlonX19	#2185400 Hybrid	Eu não quero me envolver em problema.
+pt	#4877565 bill	#41653 CK	Eu não quero me envolver nesse tipo de coisa.
+pt	#934109 une_monica	#566100 darinmex	Eu tenho permissão para inspecionar este equipamento.
+pt	#10010452 Ricardo14	#4497230 CK	O nosso equipamento foi destruído.
+pt	#7901694 piterkeo	#7876047 CK	Hortelã cresce como erva daninha.
+pt	#12451148 Advanced	#6660543 CK	Eu me machuquei quando caí da escada.
+pt	#959968 aaugustho	#60707 CM	Esta escada é forte o bastante para suportar o meu peso?
+pt	#4394638 carloseperola	#2270157 _undertoad	Qual é a escala desse mapa?
+pt	#11147029 MrJuice	#10291209 ddnktr	O que você achou do filme em uma escala de um a dez?
+pt	#5226573 bill	#249607 CK	Nós queremos esclarecer este problema.
+pt	#8212293 MacGyver	#4666465 CK	Eu gostaria de esclarecer isso.
+pt	#8649578 JGEN	#8594968 CK	É exatamente o que eu teria escolhido.
+pt	#8884256 Ricardo14	#8884186 CK	Eu esperava ter sido escolhido capitão.
+pt	#1546073 sugoi	#1546064 ddnktr	Eu trabalho como um escravo!
+pt	#5991995 bill	#1935175 Spamster	Eu não sou seu escravo.
+pt	#4571010 ajdavidl	#4571006 AlanF_US	Eu vejo você como um grande escritor.
+pt	#2482798 MarlonX19	#256931 CK	Eu sou um escritor ao invés de um professor.
+pt	#11187829 DavidDias	#3680433 Katubeltza	Ele comprou um escudo e uma espada.
+pt	#4704388 Ricardo14	#3680430 Katubeltza	Ele usou o livro como um escudo.
+pt	#8924415 JGEN	#8912807 CK	Eu odeio a escuridão.
+pt	#12375669 heo598	#11703880 Nuel	Os meus olhos se ajustaram à escuridão.
+pt	#378161 brauliobezerra	#257919 CK	Fiz um esforço para terminar meu trabalho.
+pt	#378227 brauliobezerra	#323554 (unknown)	O esforço valeu a pena porque eu passei no teste.
+pt	#4505852 cataphract	#251929 sacredceltic	O meu sonho é viajar num vaivém espacial.
+pt	#14049102 Castro5432	#12951856 Conjuice	Ele foi convidado para a estação espacial.
+pt	#7488957 Ricardo14	#7488958 Ricardo14	Onde está a minha espada?
+pt	#10576376 lucasmg123	#3365836 roobarb	Eu quero ter uma espada!
+pt	#7345406 Ricardo14	#3722036 CM	Eu vou espalhar a palavra.
+pt	#3521853 Ricardo14	#10196938 DJ_Saidez	Não é bom espalhar falsos boatos.
+pt	#1012089 alexmarcelo	#7803161 sharris123	Meu prato espanhol favorito é a paella.
+pt	#12037298 Advanced	#4255422 Eldad	Eu gostaria de melhorar meu espanhol.
+pt	#8051556 lucasmg123	#3738762 CK	Eu deveria ver um especialista?
+pt	#8644406 bill	#6025174 CK	Eu também não sou um especialista.
+pt	#7830038 Ricardo14	#3387693 CK	Deixe eu ser mais específico.
+pt	#9852555 lucasmg123	#6048843 CK	Pode ser um pouco mais específico?
+pt	#4132492 arielpolycarpo	#7925080 adiante19	Eu consigo me ver no espelho.
+pt	#11981836 carlosalberto	#11981838 carlosalberto	Foi o espelho que se quebrou ou foste tu que o partiste?
+pt	#1299001 brauliobezerra	#1298432 alec	Eu fui ver um espetáculo hoje.
+pt	#732378 brauliobezerra	#268292 CK	Quando o espetáculo começa?
+pt	#11024951 bill	#2376649 CK	Eu sei que você é um espião.
+pt	#14060411 carlosalberto	#6849120 CK	Eu seria um péssimo espião.
+pt	#5974904 sergiomelo	#4870633 zvzuibqx	De qual esporte vocês gostam mais?
+pt	#405205 brauliobezerra	#1481754 weihaiping	O futebol é o meu esporte preferido.
+pt	#11118652 MrJuice	#2958420 CK	Tom era um membro do esquadrão antibomba.
+pt	#7251401 carlosalberto	#7222050 CK	Tu és um bocado esquecido, não és?
+pt	#3433074 piterkeo	#2542547 CK	Eu tinha me esquecido completamente disso.
+pt	#4886823 bill	#250893 CK	O meu braço esquerdo está dormente.
+pt	#9058128 Ricardo14	#10294487 DJ_Saidez	Tenho uma cicatriz no meu braço esquerdo.
+pt	#9120014 JGEN	#9120005 CK	A terceira casa da esquina é minha.
+pt	#2998645 carlosalberto	#2998061 AlanF_US	Quando você dobrar a esquina, verá minha casa.
+pt	#5124721 ToinhoAlam	#2641542 CK	Ontem eu tive o sonho mais esquisito.
+pt	#6109864 Wagner1994	#6108901 robbieheslop	Todo mundo diz que eu sou esquisito.
+pt	#4894791 bill	#238481 CK	Há um estacionamento atrás do teatro.
+pt	#5305077 bill	#2540844 CK	O estacionamento estava quase vazio.
+pt	#4738873 Ricardo14	#272777 CM	Eu estou com dor de estômago, doutor.
+pt	#8598201 bill	#8561953 CK	Meu estômago ainda está doendo.
+pt	#1718497 alexmarcelo	#1717605 Amastan	Vocês já fizeram compras num país estrangeiro?
+pt	#994132 alexmarcelo	#992090 CK	Eu morei no estrangeiro por dez anos.
+pt	#4685864 Ricardo14	#3680888 CK	Eu posso te sugerir uma outra estratégia?
+pt	#4981581 bill	#2878256 CK	Nós precisamos de uma estratégia nova.
+pt	#2372509 Matheus	#4546515 Eldad	O cérebro tem uma estrutura complexa.
+pt	#1539833 alexmarcelo	#1540698 erikspen	A estrutura do prédio está comprometida.
+pt	#4926936 carlosalberto	#251514 CK	Meu irmão é estudante do primeiro ano.
+pt	#1131110 alexmarcelo	#21404 CK	Eu jogava tênis quando era estudante.
+pt	#3490401 piterkeo	#2548347 CK	Estarei no meu estúdio.
+pt	#7805133 luca22	#7245688 OsoHombre	Sami está no estúdio trabalhando no projeto.
+pt	#8586456 Ricardo14	#10493011 DJ_Saidez	Eu não tenho ideia de onde será o evento.
+pt	#10686937 Shujinko	#10685636 CK	Muito obrigado por organizar este evento.
+pt	#4923014 ToinhoAlam	#251802 CK	Meu ex-marido não mora mais nesta cidade.
+pt	#5558238 bill	#2645036 CK	Maria é minha ex-namorada.
+pt	#6216443 bill	#5733122 CM	Eu não queria exagerar.
+pt	#7993657 Ricardo14	#308756 CK	Me parece que ela tem uma tendência a exagerar.
+pt	#5159774 Ricardo14	#1472101 kostas	Eu não entendo o significado exato dessa frase.
+pt	#2603653 alexmarcelo	#2542377 CK	Eu não estou com muita fome neste exato momento.
+pt	#965954 une_monica	#300758 (unknown)	Ele ganhou o prêmio pela excelência em todos os itens.
+pt	#936800 une_monica	#319000 CK	Meu pai precisa executar o trabalho.
+pt	#7443423 Ricardo14	#16614 Zifre	Você terá dificuldade em executar o plano.
+pt	#953006 alexmarcelo	#1750007 djtait	Este exercício é mais simples do que eu pensava.
+pt	#1789225 alexmarcelo	#843054 J_S	Andar é uma forma saudável de exercício.
+pt	#1403158 alexmarcelo	#1403175 Eldad	Você não está em condições legais de exigir nada.
+pt	#1544859 roger_rf	#16087 AlanF_US	Você não tem o direito de me exigir coisa alguma.
+pt	#5540492 zvzuibqx	#607741 Samer	Acreditas na existência de fantasmas?
+pt	#11289439 carlosalberto	#11289389 carlosalberto	Será que minha existência é real?
+pt	#6161505 User75171	#6159785 leishenki	Eu poderia experimentar isto?
+pt	#12206287 kleberlucas	#3825568 CK	Eu gostaria de experimentar um desses cookies.
+pt	#1001297 une_monica	#265195 mamat	Os resultados do experimento não foram como nós esperávamos.
+pt	#918215 alexmarcelo	#314318 kebukebu	Temo que ela não aceite minha explicação.
+pt	#4407054 fabricio5	#3734960 CK	Eu não esperei por uma explicação.
+pt	#6030579 bill	#3594731 CK	Eu quero saber o que foi que causou a explosão.
+pt	#4858546 bill	#2360730 CK	Eu ouvi uma explosão.
+pt	#13405600 carlosalberto	#13405662 carlosalberto	Essa obra trata de um assunto explosivo e muitas vezes também doloroso.
+pt	#1644543 alexmarcelo	#278986 marcelostockle	As joias em exposição desapareceram.
+pt	#921851 alexmarcelo	#16577 CK	Você deveria ter visto a exposição.
+pt	#10266413 carlosalberto	#10266404 carlosalberto	Tu conheces essa expressão francesa?
+pt	#2105326 MarlonX19	#1318766 CH	Eu fiquei confuso com a expressão em seu rosto.
+pt	#5464221 ajdavidl	#3826978 CK	Eu sempre sonhei em viver no exterior.
+pt	#4290235 KimiP	#251692 CK	O meu pai às vezes vai para o exterior.
+pt	#5021999 bill	#3360505 CK	Vocês fizeram um trabalho extraordinário.
+pt	#6295070 carlosalberto	#2202822 CK	Tu és extraordinário.
+pt	#7454383 Ricardo14	#6640372 Hybrid	Nós devemos ser extremamente cautelosos.
+pt	#8594585 arademaker	#2046764 CK	Veja, eu estou extremamente ocupado.
+pt	#9945275 Ricardo14	#3594093 CK	Isso é um pouco extremo.
+pt	#6995429 iart61	#2731401 Amastan	Eu gosto do frio extremo do Alasca.
+pt	#1289423 alexmarcelo	#5257469 CarpeLanam	Meu pai e meu irmão trabalham nesta fábrica.
+pt	#5546019 bill	#1725262 belgavox	Minha mãe trabalha numa fábrica.
+pt	#2429613 marcospcruz	#1435885 caspian	Lágrimas escorreram pela minha face.
+pt	#3450663 carlosalberto	#2781397 Leono	Cada face de um poliedro é um polígono.
+pt	#4812882 bill	#3152735 CK	Você pensou que eu iria desistir tão facilmente?
+pt	#1609079 alexmarcelo	#297876 CK	Ele respondeu facilmente à minha questão.
+pt	#5080902 Ricardo14	#2395973 CK	Aquele carro não parece familiar?
+pt	#378231 brauliobezerra	#23087 NoahAB	Nós crescemos dentro do nosso círculo familiar.
+pt	#5046340 bill	#2406789 CK	Eu roubei comida porque estava faminto.
+pt	#1214012 alexmarcelo	#562447 darinmex	Eu estou faminto!
+pt	#11392696 MrJuice	#5553346 CK	O que você acha da minha fantasia?
+pt	#8195668 lucasmg123	#4660304 Hybrid	Você gosta da minha nova fantasia de halloween?
+pt	#8786518 heo598	#7112114 CM	Eu só pensei que era fascinante.
+pt	#1048318 brauliobezerra	#953456 CK	Eu acho o assunto fascinante.
+pt	#8588851 annewate	#8588857 annewate	A adolescência é uma fase complicada.
+pt	#12029475 Advanced	#3070155 al_ex_an_der	A crise está entrando em uma fase perigosa.
+pt	#8460854 bill	#490668 CK	O avião pousou na fazenda do meu pai.
+pt	#404320 brauliobezerra	#251753 (unknown)	Meu pai e minha mãe têm uma grande fazenda lá.
+pt	#8604630 bill	#6769478 CK	Vocês ainda estão com febre?
+pt	#517273 anonym	#9299858 Nylez	Eu tenho bronquite e um pouco de febre.
+pt	#10019256 bill	#4496607 CK	O correio ainda está fechado?
+pt	#12369401 piterkeo	#463350 lukaszpp	Este museu está fechado há cinco anos.
+pt	#1048422 brauliobezerra	#953230 CK	Vocês acham que eu sou feio?
+pt	#2485217 alexmarcelo	#2484257 CK	Esse é o chapéu mais feio que eu já vi.
+pt	#9285523 bill	#9282869 megamanenm	O mago lançou um feitiço sobre as crianças.
+pt	#3466059 piterkeo	#28200 CK	A bruxa má lançou um feitiço maligno no homem e o transformou num inseto.
+pt	#418214 brauliobezerra	#2118 Zifre	Meu coração estava cheio de felicidade.
+pt	#9303318 bill	#3824172 CK	Tudo o que eu quero é a sua felicidade.
+pt	#9376365 carlosalberto	#9418488 DJ_Saidez	Felizmente, ela e eu continuamos amigas.
+pt	#14061621 carlosalberto	#4499893 CK	Felizmente, eu estava errado.
+pt	#11469972 carlosalberto	#11469969 carlosalberto	Eu adoro vôlei feminino.
+pt	#1112728 alexmarcelo	#1112727 CN	Todo nome em português é masculino ou feminino.
+pt	#9524477 Ricardo14	#9501191 CK	A ferida na minha perna está sarando.
+pt	#6464632 heo598	#44391 DanielTzvi	A tragédia deixou uma ferida na minha mente.
+pt	#10576429 lucasmg123	#259276 Eldad	Eu fui ferido por muitas pessoas.
+pt	#2626854 alexmarcelo	#273879 CK	O meu avô foi ferido na guerra.
+pt	#8935319 Ricardo14	#1560205 Grim_fandango	Foi ela quem cuidou do ferimento dele.
+pt	#3370627 carlosalberto	#681679 Source_VOA	O ferimento causou muita dor ao atleta.
+pt	#9090267 JGEN	#9054853 CK	Essa não é a ferramenta que eu usaria.
+pt	#3689881 Ricardo14	#2176433 dafp	Como você quebrou a ferramenta?
+pt	#11526351 carlosalberto	#11526319 carlosalberto	Minha avó tem uma frigideira de ferro.
+pt	#1926705 alexmarcelo	#71921 CK	Eu queimei a mão com um ferro de passar.
+pt	#8205054 MacGyver	#7780527 CK	Eu gostaria de ver o festival.
+pt	#8940295 JGEN	#8927570 CK	Eu estou indo para o festival.
+pt	#5050269 alexmarcelo	#5045407 Hybrid	Tom não tem dinheiro para pagar a fiança.
+pt	#4966407 Ricardo14	#2451121 CK	Eu tenho que preencher essa ficha em francês?
+pt	#6823587 Ricardo14	#2265931 _undertoad	Preencha a ficha de inscrição.
+pt	#374985 brauliobezerra	#261073 CK	Eu a ajudei a pendurar a figura na parede.
+pt	#381729 brauliobezerra	#48979 CK	Eu achei a figura interessante.
+pt	#6958315 Ricardo14	#6040317 CK	Eu tenho que ficar na fila?
+pt	#8629722 JGEN	#8598473 CK	Eu tive que ficar na fila durante horas.
+pt	#8239733 josivangoncalves	#8097841 AlanF_US	O filhote tentou morder minha mão.
+pt	#4574196 carlosalberto	#320901 CM	A mãe elefante banha o filhote no rio.
+pt	#9850619 lucasmg123	#1807619 CM	Pare de filmar.
+pt	#1417439 alexmarcelo	#21296 adjusting	Vocês passaram um bom fim de semana?
+pt	#1784679 alexmarcelo	#1670794 CK	Vocês têm algum plano para o fim de semana?
+pt	#1941612 alexmarcelo	#253523 (unknown)	Eu costurei o vestido com fio de seda.
+pt	#2190248 marciom	#260577 (unknown)	Eu perdi o fio da meada de seu argumento.
+pt	#1320706 alexmarcelo	#1318871 CK	Segurei firme na corda para não cair.
+pt	#11426871 carlosalberto	#11426854 carlosalberto	A senhora idosa não tem mão firme.
+pt	#9779049 Nylez	#9778802 Nylez	Vocês são bons em física?
+pt	#375072 brauliobezerra	#319980 CK	Física é o meu assunto favorito.
+pt	#9710333 Cinthya	#8775011 LinaTamazight	Meu objetivo é me tornar físico.
+pt	#13980271 Castro5432	#10641815 AlanF_US	O exercício físico fortalece os músculos.
+pt	#6404786 carlosalberto	#6402525 mervert1	Tire a fita vermelha do meu cabelo.
+pt	#4819174 Ricardo14	#2387544 CK	Eu preciso daquela fita.
+pt	#918165 alexmarcelo	#239416 kebukebu	Ajusta o foco do microscópio.
+pt	#5988008 islandisto	#5988007 islandisto	O meu gato é fofo!
+pt	#8418910 lucasmg123	#3143792 Hybrid	Você acha que ele é fofo, não acha?
+pt	#7271937 carlosalberto	#243390 CK	Vocês estão de folga esta noite?
+pt	#11068446 alexmarcelo	#2544651 CK	Eu estou tirando um semestre de folga.
+pt	#8642117 Ricardo14	#14014927 haomakk	Eu vou pegar uma folha para anotar isso.
+pt	#5217472 ianna	#5216744 CK	Eu estava tremendo como uma folha.
+pt	#4026737 carlosalberto	#3330949 CK	Vocês não me podem forçar a fazer isso.
+pt	#1175397 alexmarcelo	#69278 CM	Você pode se forçar a dormir?
+pt	#8463451 Ricardo14	#8463450 Ricardo14	Eu vou me formar no ano que vem, espero.
+pt	#2523900 paula_guisard	#309032 (unknown)	Ela ainda não consegue formar frases.
+pt	#3416462 Ricardo14	#3313068 CK	Nós poderíamos ter feito uma fortuna.
+pt	#8026153 Ricardo14	#1204793 Eldad	Eu gostaria de comprar este computador, mas ele custa uma fortuna!
+pt	#7249551 carlosalberto	#3821506 CK	Tu estás nesta fotografia?
+pt	#9192518 carlosalberto	#9192464 CK	Esta é uma fotografia de minha mulher.
+pt	#11967409 (unknown)	#11216504 Amastan	Muito francamente, eu não quero saber.
+pt	#1488169 brauliobezerra	#1308112 CK	Falando francamente, eu não gosto dele.
+pt	#1694020 alexmarcelo	#1690041 Spamster	Vocês conseguem pegar o frango?
+pt	#734693 brauliobezerra	#707435 papabear	Nós comemos pizza e frango ao meio dia.
+pt	#1734888 alexmarcelo	#657212 tranglich	Será que eu posso adicionar uma frase?
+pt	#1673089 alexmarcelo	#1673024 Amastan	Como eu posso mudar esta frase?
+pt	#1683058 alexmarcelo	#1682994 Spamster	Meu avô acredita que a alunissagem foi uma fraude.
+pt	#6169071 carlosalberto	#3986470 Hybrid	O banqueiro foi preso por fraude.
+pt	#9805985 Ricardo14	#9805839 Igider	Com que frequência vocês compram roupas?
+pt	#419143 brauliobezerra	#419075 CK	Eu quero respirar um pouco de ar fresco.
+pt	#4858727 bill	#2217187 Hybrid	Eu preciso de um pouco de ar fresco.
+pt	#6216238 bill	#1308703 CK	Nós moramos perto da fronteira.
+pt	#2599041 alexmarcelo	#2597299 DiscoNostalgia	Na fronteira, pediram-me que mostrasse o meu passaporte.
+pt	#8832726 RochaAr	#25054 CK	Devemos inventar alguns meios de fuga.
+pt	#2728176 carlosalberto	#4652242 jberkel	Sua fuga da prisão foi bem planejada.
+pt	#8298971 JGEN	#8264240 CK	Eu senti o cheiro de fumaça no elevador.
+pt	#12129949 carlosalberto	#12129924 carlosalberto	Está vendo a fumaça preta ali?
+pt	#1180187 lazymoose	#40629 CK	Você se importa se eu fumar?
+pt	#8328813 JGEN	#8248329 CK	Eu parei de fumar há três meses atrás.
+pt	#6936725 Ricardo14	#2991084 CK	Até onde eu sei, essa função não existe.
+pt	#5297292 ToinhoAlam	#1096358 CK	Essa não é a minha função.
+pt	#12272879 MathKay	#12278102 FishlandicFishy	Eu sou um funcionário de uma empresa.
+pt	#2184404 alexmarcelo	#14018092 haomakk	Quem é mesmo o novo funcionário?
+pt	#5151425 bill	#4269246 CK	Eu não fui ao funeral.
+pt	#3494883 piterkeo	#274283 CK	É tradição vestir preto num funeral.
+pt	#404943 brauliobezerra	#1399 human600	Embora ele tenha se desculpado, eu ainda estou furioso.
+pt	#4972464 Ricardo14	#2245795 CK	Eu fiquei furioso.
+pt	#974086 alexmarcelo	#1330906 CK	Você quer jogar futebol com a gente?
+pt	#2144872 MarlonX19	#2144565 oneconor	Vocês conhecem as regras do futebol?
+pt	#8106214 iT4LL	#5828395 OsoHombre	Deixa os documentos no meu gabinete.
+pt	#381673 brauliobezerra	#21661 CK	Todos os membros do gabinete estavam presentes.
+pt	#5119249 Ricardo14	#1126375 Ricardo14	Nós temos dez cabeças de gado.
+pt	#1227825 alexmarcelo	#19486 CK	Eu crio gado.
+pt	#8657983 JGEN	#8649557 CK	Eu realmente não gosto de galinha.
+pt	#13981320 Castro5432	#1686770 Amastan	Esta é a primeira vez que eu depeno uma galinha.
+pt	#5383552 Wagner1994	#67786 CK	Você deve evitar aquela gangue.
+pt	#12540271 laetitiamg	#11633106 CK	Estou em uma gangue agora.
+pt	#8485173 bill	#2647311 CK	O que eu ganho com isso?
+pt	#8914564 JGEN	#8893743 CK	Estacionei meu carro na garagem e saí.
+pt	#5819508 ajdavidl	#3732821 CK	Eu preciso terminar de limpar a garagem.
+pt	#1773788 alexmarcelo	#2133216 marcelostockle	Garçom, há uma mosca no meu café.
+pt	#4796903 carlosalberto	#4665034 CK	O garçom trouxe minha bebida.
+pt	#4892457 bill	#3825039 CK	A minha garganta está um pouco seca.
+pt	#5934684 bill	#1123905 CM	Eu acordei com a garganta inflamada.
+pt	#2603697 alexmarcelo	#2542349 CK	Eu tenho certeza de que desliguei o gás.
+pt	#1560104 alexmarcelo	#63752 (unknown)	Você cozinha com gás ou com eletricidade?
+pt	#2750127 Ricardo14	#38169 CK	Onde eu pago pela gasolina?
+pt	#4896801 ToinhoAlam	#2408504 CK	Eu acho que estamos sem gasolina.
+pt	#14015208 haomakk	#10922992 CM	Eu realmente não posso gastar tanto assim.
+pt	#736207 brauliobezerra	#681507 Source_VOA	Eu fico feliz em gastar dinheiro em livros.
+pt	#5280124 bill	#2283601 CK	Eu não puxei o gatilho.
+pt	#5497320 bill	#3819092 CK	Eu puxei o gatilho.
+pt	#11271741 Advanced	#1103477 benthomas	Por que não há comida na minha geladeira?
+pt	#9751380 Ricardo14	#1725155 Amastan	Eu não posso consertar essa geladeira.
+pt	#2593297 alexmarcelo	#2588677 Hybrid	Por que você está sendo tão generoso?
+pt	#2119445 MarlonX19	#2117558 erikspen	Pelo que eu sei, ele é um homem generoso.
+pt	#5376174 bill	#5243037 Hybrid	Maria é uma cientista genial.
+pt	#3082175 alexmarcelo	#2359406 CK	Tenho uma ideia genial.
+pt	#902620 alexmarcelo	#289296 CM	Ele é o que nós chamamos de gênio musical.
+pt	#902634 alexmarcelo	#301763 sundown	Eu posso seguramente dizer que ele é um gênio.
+pt	#405271 brauliobezerra	#260509 Dorenda	Eu não posso esquecer a gentileza dele.
+pt	#377576 brauliobezerra	#388568 CK	Eu vou sempre me lembrar da sua gentileza.
+pt	#11189117 carlosalberto	#11189094 carlosalberto	Minha avó pertence a outra geração.
+pt	#6470579 heo598	#2276253 CK	Eu não compreendo a sua geração.
+pt	#5119358 Ricardo14	#21795 gin	Eu gosto de comida chinesa em geral.
+pt	#9454903 carlosalberto	#9454961 carlosalberto	Em geral, você prefere listras ou bolinhas?
+pt	#1172957 lazymoose	#953442 CK	Geralmente eu não como carne vermelha.
+pt	#12173841 carlosalberto	#12173832 carlosalberto	Meu cachorro geralmente dorme no chão.
+pt	#7886361 pedrolima	#2033397 CK	Eu quero que você seja o meu gerente.
+pt	#8587844 lucasmg123	#3109417 CK	Eu quero fazer uma queixa ao gerente.
+pt	#5696097 bill	#2722522 Hybrid	Eu tenho um urso panda de pelúcia gigante.
+pt	#978122 alexmarcelo	#27123 CK	A sala começou a girar depois de eu ter bebido tanto.
+pt	#5306709 ToinhoAlam	#2782166 Dejo	É para girar no sentido horário ou anti-horário?
+pt	#6161543 User75171	#6159734 carlosalberto	Nunca esquecer, a vida é uma glória!
+pt	#7104320 carlosalberto	#12925404 rul	Os romanos sempre foram ávidos de glória.
+pt	#5598450 bill	#4012459 CK	Vocês dois jogaram golfe juntos?
+pt	#5583143 bill	#2951771 CK	Vocês ainda jogam golfe?
+pt	#7020669 iart61	#42352 sacredceltic	Foi um golpe duro para nós.
+pt	#10792405 omniglotman	#3824748 CK	Você acha que eu pareço gordo?
+pt	#3536405 mervert1	#3230056 CK	Minha mamãe me disse que eu era gordo.
+pt	#891324 alexmarcelo	#60072 CK	Essa flor tem um cheiro gostoso.
+pt	#11128568 carlosalberto	#11128565 carlosalberto	O suco de maçã é muito gostoso.
+pt	#2817290 MarlonX19	#266327 CK	O governador libertou os prisioneiros.
+pt	#13817747 carlosalberto	#2796808 sharptoothed	O governador perdoou o criminoso.
+pt	#1362904 alexmarcelo	#1362113 CK	Minha mãe me disse que cortasse a grama.
+pt	#4719216 anthrax26	#1289785 CM	Eu adoro andar descalço na grama.
+pt	#11086953 MrJuice	#5748391 CM	Isso vale a grana?
+pt	#3650560 Luciosp	#3650559 Luciosp	Estou com vontade de sair, mas estou sem grana.
+pt	#7583252 Ricardo14	#5293170 mailohilohi	Nós oferecemos frete grátis.
+pt	#1841163 nowasky	#246554 CK	Eu nem posso dizer o quanto sou grato.
+pt	#6951445 Ricardo14	#2711641 sharptoothed	Eu sou grato a você pela sua ajuda.
+pt	#1058498 brauliobezerra	#1048211 CK	Eu não te vejo desde o segundo grau.
+pt	#1155875 alexmarcelo	#1155819 CM	Em minha cidade, a temperatura é de um grau positivo.
+pt	#8461921 bill	#2641163 CK	Esta gravação foi adulterada.
+pt	#13028315 carlosalberto	#13028357 carlosalberto	Resta agora saber se ela vai conseguir ouvir a gravação que lhe mandei.
+pt	#4821410 Vitie	#4817461 mraz	Espero que você planeje gravar mais.
+pt	#5328055 bill	#5099633 jhomel	Esta era a gravata favorita de meu pai.
+pt	#8296361 JGEN	#8264509 CK	Eu não gosto da gravata que você veste.
+pt	#12201750 carlosalberto	#12201726 carlosalberto	Tu te equivocaste, mas isso não é grave.
+pt	#1488751 brauliobezerra	#1199357 CK	Você já teve alguma doença grave?
+pt	#5067404 alexmarcelo	#5066389 CK	Qual é a gravidade da crise?
+pt	#5995946 sergiomelo	#5769082 Hybrid	Como funciona a gravidade?
+pt	#6554509 heo598	#682020 Source_VOA	Eu ouvi um grito e então uma batida.
+pt	#1022827 une_monica	#267189 CK	Eu ouvi um grito de socorro.
+pt	#1252051 satsu	#1252052 satsu	O guerreiro morreu por você, minha doce princesa.
+pt	#4505601 carlosalberto	#1148002 cntrational	Eu derrotei o guerreiro.
+pt	#2741628 Ricardo14	#437017 lukaszpp	Eu quero um guia licenciado que fale inglês.
+pt	#9642665 Ricardo14	#9644698 DJ_Saidez	Eu vou ser o seu guia turístico.
+pt	#2845896 MarlonX19	#253220 CK	Eu quero guiar uma motocicleta.
+pt	#2805712 akilez	#992007 CK	Eu realmente acredito na habilidade dele.
+pt	#1469842 roger_rf	#264774 (unknown)	Confio muito em minha habilidade.
+pt	#1237590 alexmarcelo	#1210447 etoile	Eu tenho o mau hábito de roer as unhas.
+pt	#4289999 carlosalberto	#13097522 rdgscratch	Eu não tenho o hábito de falar mal dos mortos.
+pt	#1782684 alexmarcelo	#1782678 Amastan	Eu sei pilotar um helicóptero.
+pt	#3453834 piterkeo	#33897 CM	Um helicóptero voava em círculos acima de nós.
+pt	#9681688 Ricardo14	#10337230 DJ_Saidez	A minha mãe é uma heroína!
+pt	#11834129 ajdavidl	#1895594 CK	Você é minha heroína.
+pt	#1061606 carlosalberto	#906773 CK	Qual é o seu filme histórico favorito?
+pt	#12251007 Advanced	#256729 CK	Tenho um histórico de problemas no fígado.
+pt	#9850748 lucasmg123	#2358766 CK	Tenho um caso de homicídio a resolver.
+pt	#5887547 sergiomelo	#5886929 OsoHombre	O caso de homicídio foi reaberto.
+pt	#10133453 pedromarques	#10133397 shekitten	Honestamente, eu preferia estar errado.
+pt	#5109480 ajdavidl	#4497551 CK	Eu honestamente não sabia o que esperar.
+pt	#4886963 KimiP	#603450 CK	Como ele era honesto, eu o contratei.
+pt	#1571770 alexmarcelo	#251433 CK	Pelo que eu sei, ele é um homem honesto.
+pt	#8393327 Clepsydris	#1830595 CK	Eu almoço no mesmo horário todo dia.
+pt	#12778262 Advanced	#2267791 _undertoad	Graças a vocês, cheguei no horário.
+pt	#1149302 tulio	#1531068 erikspen	Você é nossa hóspede da semana.
+pt	#12830511 carlosalberto	#12783983 User140029	Ele é um hóspede indesejável.
+pt	#4638055 Ricardo14	#4329429 mervert1	Nós perdemos a fé na humanidade.
+pt	#2554387 alexmarcelo	#4426685 XenoKat	Isso é um crime contra a humanidade!
+pt	#7986710 lucasmg123	#3620171 CK	Eu não estou com humor para isso agora.
+pt	#6484298 bill	#318718 CK	Meu marido está de bom humor hoje.
+pt	#4613181 carlosalberto	#12925392 rul	Eu acho que ela é a mulher ideal para você.
+pt	#1773781 alexmarcelo	#2133222 marcelostockle	Talvez eu não seja a pessoa ideal para esse trabalho.
+pt	#943312 une_monica	#56183 CK	Esta é minha carteira de identidade.
+pt	#6597160 bill	#269800 CK	Esqueci de trazer minha carteira de identidade.
+pt	#8940300 JGEN	#8927542 CK	Estou procurando minha identificação.
+pt	#8940301 JGEN	#8927542 CK	Estou atrás da minha identificação.
+pt	#2634657 alexmarcelo	#2630245 meerkat	Você consegue identificar a causa do problema?
+pt	#1420921 paula_guisard	#1332071 (unknown)	Você pode identificar o homem usando esta foto?
+pt	#5412898 ajdavidl	#3826695 CK	Eu não posso ignorar mais esta situação.
+pt	#6570776 heo598	#3312781 CK	Nós não podemos simplesmente ignorar isso.
+pt	#1322644 alexmarcelo	#17655 Swift	Vocês devem repartir o bolo igualmente.
+pt	#5418304 ToinhoAlam	#4235762 Hybrid	Eu amo cada um dos meus filhos igualmente.
+pt	#8294547 JGEN	#8267237 CK	Eu concordo que deveria ser ilegal.
+pt	#3207566 knnida	#1961363 CK	Eu pensei que fosse ilegal estacionar aqui.
+pt	#5708506 Ricardo14	#5901309 tvindy	A minha imaginação não tem limites.
+pt	#1608056 alexmarcelo	#273982 CK	Eu utilizei a minha imaginação.
+pt	#7043336 iart61	#9713838 Nylez	Para ela, tu não passas de um imbecil.
+pt	#1150823 tulio	#4567831 AlanF_US	Que imbecil você é!
+pt	#2593019 alexmarcelo	#2592906 WestofEden	Eu não posso te responder de imediato.
+pt	#5073823 markpalmer	#5073487 jhomel	Eu fiquei surpreso que ela me reconheceu de imediato.
+pt	#1648922 alexmarcelo	#265338 CK	O impacto da ciência sobre a sociedade é grande.
+pt	#983153 alexmarcelo	#1199191 CK	O carro explodiu poucos instantes depois do impacto.
+pt	#902300 alexmarcelo	#327977 CK	A princesa implorou perdão ao imperador.
+pt	#11576056 carlosalberto	#11576051 carlosalberto	Todos respeitam o imperador.
+pt	#5952238 sjaelsamlaren	#1837631 Scott	O sol nunca se põe em meu império.
+pt	#6039039 bill	#3356357 CK	Você não precisa me implorar.
+pt	#5354849 ajdavidl	#3826268 CK	É inútil implorar.
+pt	#8079682 carlosalberto	#276688 CK	Ninguém deu importância ao que eu falei.
+pt	#1037962 brauliobezerra	#56726 CK	Esse assunto é de suma importância para nós.
+pt	#1622351 alexmarcelo	#319287 (unknown)	Papai está tentando calcular o imposto.
+pt	#7284402 Ricardo14	#5000888 CK	De quanto é o imposto?
+pt	#9845332 bill	#6080733 CK	Vocês assistiram à coletiva de imprensa?
+pt	#9845396 bill	#2015211 CK	Eu quero causar uma boa impressão.
+pt	#421935 brauliobezerra	#416368 phrasemix	Eu não quis dar essa impressão.
+pt	#2847741 MarlonX19	#2407962 CK	Eu acho que isso é muito impressionante.
+pt	#4170948 alexmarcelo	#4014998 CK	É muito impressionante, não é?
+pt	#2427243 marcospcruz	#1837959 CK	Eu não estou tentando impressionar ninguém.
+pt	#2479329 MarlonX19	#1664333 Spamster	Quem você está tentando impressionar?
+pt	#4372248 ajdavidl	#2245887 CK	Eu tenho imunidade.
+pt	#10289306 carlosalberto	#10289309 carlosalberto	As pessoas se vacinam para criar imunidade contra uma doença.
+pt	#11236410 carlosalberto	#5735698 CM	Era absolutamente inacreditável.
+pt	#5864782 ajdavidl	#3396434 CK	Isto é realmente inacreditável.
+pt	#3876609 muriloricci	#3733405 CK	Nós não sabemos o que causou o incêndio.
+pt	#7770670 lucasmg123	#244732 CK	Houve um incêndio no meu bairro ontem à noite.
+pt	#8128139 lucasmg123	#47233 CK	Eu me lembro do incidente muito bem.
+pt	#6467120 heo598	#6466430 fjay69	Eu lhe dei um resumo do incidente.
+pt	#1247185 alexmarcelo	#1243476 CK	Não se esqueça de me incluir na contagem.
+pt	#4480449 carlosalberto	#667884 CK	Todas as generalizações são enganosas, inclusive esta.
+pt	#6065740 sergiomelo	#6065745 sergiomelo	Eu estudo vários idiomas, inclusive minha língua materna, que estou sempre aprendendo.
+pt	#10025399 carlosalberto	#10022462 CK	Eu vi algo muito incomum.
+pt	#9805974 Ricardo14	#9805868 Igider	Qual é a coisa mais incomum que você já comeu?
+pt	#5709251 bill	#5642782 CK	Eu sou uma pessoa muito independente.
+pt	#1288382 alexmarcelo	#681206 Source_VOA	Minha avó é uma pessoa muito independente.
+pt	#9029677 carlosalberto	#9029674 carlosalberto	Ele é indiano e fala Inglês.
+pt	#4812001 carlosalberto	#487594 minshirui	Mumbai é a capital do estado indiano de Maarastra.
+pt	#5236951 alexmarcelo	#5195247 CK	Você pode me indicar o caminho para a academia?
+pt	#390902 brauliobezerra	#271930 CM	O tom da voz pode indicar sentimentos.
+pt	#4714341 carlosalberto	#1887477 CK	Eu conheço um indivíduo que nunca viu neve.
+pt	#10749766 megamanenm	#535566 FeuDRenais	Ele é um indivíduo bastante raro.
+pt	#11804173 ajdavidl	#7831955 AlanF_US	A indústria do carvão está morrendo.
+pt	#2039676 MarlonX19	#454473 FeuDRenais	Ele trabalha na indústria automobilística.
+pt	#1874785 gleydin	#245843 CC	Nós nos conhecemos desde a infância.
+pt	#4966640 tresoldi	#4964738 gcaplan	Lembro com prazer de minha infância.
+pt	#2852466 MarlonX19	#2761819 Trailsend	Esse parque é um pequeno paraíso infantil.
+pt	#3428192 piterkeo	#286453 CM	Sua risada infantil é encantadora.
+pt	#2623530 alexmarcelo	#2540855 CK	Eu sinto muito por você estar tão infeliz.
+pt	#8192076 lucasmg123	#5938155 CK	Eu nunca estive tão infeliz.
+pt	#1148535 alexmarcelo	#460669 blay_paul	Não dirija sob influência do álcool.
+pt	#5200177 Ricardo14	#3911308 CH	Você é uma boa influência para elas.
+pt	#8922150 JGEN	#8921613 CK	Vou te informar meu novo endereço.
+pt	#3964579 carlosalberto	#3312162 CK	Vamos informar a vocês.
+pt	#5129293 bill	#241033 Dejo	Onde eu posso pegar o meu ingresso?
+pt	#9745159 bill	#6354372 CK	Estou procurando o meu ingresso.
+pt	#7589732 Ricardo14	#5726080 CM	Nós ainda estamos no estágio inicial.
+pt	#12950078 jvlopes91	#11123479 newtonlkh	O custo inicial é um obstáculo.
+pt	#5095828 alexmarcelo	#4481289 Hybrid	Eu comi um inseto sem querer.
+pt	#4953857 Noktuo	#4872214 zvzuibqx	Você tem medo de inseto?
+pt	#3491479 piterkeo	#2267140 _undertoad	Fui ao escritório do inspetor pelos documentos.
+pt	#983115 alexmarcelo	#2279272 marcelostockle	Por um instante, eu fiquei sem palavras.
+pt	#2434007 alexmarcelo	#2431100 gone2bacolod	Eu posso conversar por um instante.
+pt	#12276692 Advanced	#8359699 CK	Eu estava agindo por instinto.
+pt	#1705349 alexmarcelo	#1702665 Spamster	Meu instinto estava certo.
+pt	#902517 alexmarcelo	#784841 alvren	Não importa se você recebeu instrução ou não.
+pt	#2550240 alexmarcelo	#5933883 mailohilohi	Eu queria saber tocar algum instrumento.
+pt	#5073515 bill	#5070039 jhomel	Eu não toco nenhum instrumento.
+pt	#4900219 carlosalberto	#38266 CK	Às vezes eu duvido de sua inteligência.
+pt	#4899958 carlosalberto	#2954564 CK	Você insulta minha inteligência.
+pt	#1058089 alexmarcelo	#2271736 CK	Eu não tinha a intenção de fazer isso.
+pt	#1112849 bufo	#914074 Jane_Austen	Eu nunca tive a intenção de te enganar.
+pt	#11364523 Cangarejo	#11364522 Cangarejo	Aquele jogo foi mesmo intenso!
+pt	#3466014 piterkeo	#300650 CM	Ele tinha um ódio intenso de seu professor.
+pt	#4908296 carlosalberto	#3001366 Hybrid	Você não está vendo que eu não estou interessado?
+pt	#2822994 MarlonX19	#45034 CK	Eu estava interessado em ver a cidade.
+pt	#2466697 MarlonX19	#2466034 boston2390	Todo verão eu vou para o interior.
+pt	#10648480 malafaya	#10648320 sundown	Onde fica a piscina interior?
+pt	#12548212 laetitiamg	#669438 Swift	A operação viola a lei internacional.
+pt	#5889408 sergiomelo	#26277 CK	O inglês é uma língua internacional.
+pt	#12341382 piterkeo	#1701383 mookeee	Como vocês acessam a internet?
+pt	#4309068 mervert1	#3093806 Hybrid	A minha conexão de internet está lenta.
+pt	#1469652 roger_rf	#42758 (unknown)	Isso é um assunto interno deste país.
+pt	#9090106 JGEN	#9054966 CK	Isso é projetado para uso interno.
+pt	#4840106 bill	#3178428 CK	Nós temos que interromper esse experimento.
+pt	#2165189 alexmarcelo	#2012628 CK	Eu não quis interromper.
+pt	#11974996 carlosalberto	#11974985 carlosalberto	Nós poríamos o intervalo às cinco horas.
+pt	#11095028 MrJuice	#5666414 CK	Eu precisava de um intervalo, então tirei um.
+pt	#4657455 Ricardo14	#4657445 Lazovic	Eu sou inútil?
+pt	#4818369 Ricardo14	#2326022 CK	Eu me sinto inútil.
+pt	#10735997 rekoowa	#6088830 mailohilohi	O que eu posso fazer para me proteger se alguém tentar invadir a minha casa?
+pt	#10736003 rekoowa	#238253 CK	A polícia foi forçada a invadir o apartamento pela janela.
+pt	#1644477 alexmarcelo	#1022136 CK	Desculpe a invasão.
+pt	#5288522 ToinhoAlam	#402043 CK	Eu senti inveja da casa nova dele.
+pt	#5288511 ToinhoAlam	#2145961 Maralula	Eu não aguento a inveja dela.
+pt	#1917362 alexmarcelo	#1886390 CK	Você acaba de inventar isso, né?
+pt	#8277819 XY	#7494482 CH	Onde que ela foi inventar isso?
+pt	#8616861 bill	#6238542 CK	Vocês já foram à praia no inverno?
+pt	#14019627 carlosalberto	#14019645 carlosalberto	Minha mulher adora esquiar no inverno.
+pt	#947194 une_monica	#696956 darinmex	Por que você ficou do lado dele ao invés do meu?
+pt	#1141670 alexmarcelo	#256636 CK	Eu fiquei em casa ao invés de sair.
+pt	#8415605 JGEN	#8406053 CK	Eu posso investigar isso.
+pt	#6793277 ToinhoAlam	#2953365 CK	A polícia prometeu investigar o caso.
+pt	#1544816 roger_rf	#284865 CM	Eu estava muitíssimo irritado com ele.
+pt	#2634578 alexmarcelo	#2631447 Joseph	Eu sei que você está irritado.
+pt	#6554532 heo598	#2290421 CK	Eu não queria te irritar.
+pt	#4773456 bill	#1930782 CK	Você está começando a me irritar.
+pt	#7488097 Ricardo14	#8170462 lucasmg123	Você viu o meu dicionário de italiano?
+pt	#1061450 alexmarcelo	#33597 CK	Eu conheço um bom restaurante italiano.
+pt	#2456420 MarlonX19	#277660 CK	Eu recebi um item que não encomendei.
+pt	#2613749 alexmarcelo	#12213158 Objectivesea	Não pode faltar um item sequer desta lista.
+pt	#2102571 MarlonX19	#281661 CN	Vocês têm empregados que falam japonês?
+pt	#2576816 alexmarcelo	#281651 CN	Eu posso alugar um guia que fale japonês?
+pt	#4945542 bill	#3598212 Hybrid	Eu posso tirar a minha jaqueta?
+pt	#4796613 bill	#2377301 CK	Deixei minha jaqueta na sala de aula.
+pt	#1731923 alexmarcelo	#1731141 Amastan	É verdade que vocês limparam o jardim?
+pt	#405319 brauliobezerra	#23576 adamtrousers	Se pelo menos nós tivéssemos um jardim!
+pt	#12372380 piterkeo	#12369209 CK	Feri meu joelho jogando futebol.
+pt	#11485782 bill	#3736723 CK	Meu joelho está doendo muito.
+pt	#7239237 Ricardo14	#6254559 CK	Nós fizemos isso como uma jogada de marketing.
+pt	#5412961 ToinhoAlam	#70849 CK	Eu quero ser um bom jogador como você.
+pt	#4823123 carlosalberto	#1539598 madhatter5	Eu sou muito bom jogador de xadrez.
+pt	#1928923 gleydin	#22633 CK	Nós tivemos que andar na última parte da jornada.
+pt	#4822829 Ricardo14	#325513 Zifre	Você está pronto para começar a sua jornada?
+pt	#378398 brauliobezerra	#254038 CM	Eu quero ser um jornalista esportivo.
+pt	#3115329 carlosalberto	#9283197 Nylez	Meu amigo é jornalista de televisão.
+pt	#4452369 carlosalberto	#4452109 shekitten	Eu não sou tão judeu assim.
+pt	#6767278 Ricardo14	#4006901 Amastan	Quem são vocês para me julgar?
+pt	#2429856 Ricardo14	#10123889 DJ_Saidez	Tente viver minha vida antes de me julgar.
+pt	#885487 alexmarcelo	#885486 CN	O meu aniversário é em julho.
+pt	#541470 brauliobezerra	#540162 blay_paul	Este rio é perigoso de nadar em julho.
+pt	#5116924 Ricardo14	#251950 CK	A minha filha vai se casar em junho.
+pt	#7327751 Ricardo14	#619792 ulyssemc1	Eu poderia jurar que algo se mexeu.
+pt	#11844946 Advanced	#2149112 Hybrid	Eu poderia jurar que vi alguém.
+pt	#6144932 carlosalberto	#2251981 MrShoval	Por que não explicamos isso ao júri?
+pt	#7880716 piterkeo	#6325975 OsoHombre	Em quem o júri acreditaria?
+pt	#5170795 ToinhoAlam	#481875 blay_paul	A minha mãe era muito linda, na juventude.
+pt	#920076 alexmarcelo	#265710 (unknown)	Queria ter estudado mais em minha juventude.
+pt	#4981549 bill	#258760 CK	Mordi meu lábio.
+pt	#1003391 alexmarcelo	#9446321 Nylez	Cortou o lábio superior enquanto se barbeava.
+pt	#3834555 muriloricci	#3819137 CK	Você ganhou um laço também?
+pt	#987636 alexmarcelo	#53719 CN	Jane usava um laço amarelo no cabelo.
+pt	#3449509 Ricardo14	#3327642 CK	Eu poderia nadar nesse lago?
+pt	#1517899 alexmarcelo	#56015 CK	Este é o lago mais bonito que eu já vi.
+pt	#3787307 carlosalberto	#3774611 Hybrid	Ela enxugou uma lágrima do rosto.
+pt	#3181383 carlosalberto	#3614794 panamicua	Não chorarei sequer uma lágrima.
+pt	#12312072 carlosalberto	#12312100 carlosalberto	Minha caminhonete ficou presa na lama.
+pt	#4505092 ToinhoAlam	#4505034 AlanF_US	A gente gosta de brincar na lama.
+pt	#12124588 carlosalberto	#12124584 carlosalberto	Quando ocorreu o lançamento do primeiro satélite?
+pt	#12130751 carlosalberto	#12130739 carlosalberto	O lançamento acontecerá amanhã.
+pt	#12204956 kleberlucas	#2799737 CM	Estou pensando em lançar um novo website.
+pt	#8561794 alexmarcelo	#8561454 CK	A multidão irada começou a lançar pedras contra nós.
+pt	#10284486 carlosalberto	#10284485 carlosalberto	Quando vir um bom lance, procure um melhor!
+pt	#14014400 carlosalberto	#14014410 carlosalberto	Meu lar é o lugar onde você estiver.
+pt	#13073771 Advanced	#8505594 CK	Para mim, este é o meu lar.
+pt	#1175102 alexmarcelo	#4296993 dora98	Que tipo de laranja vocês plantam aqui?
+pt	#4938184 bill	#410535 CK	Eu posso comer esta laranja?
+pt	#8866544 heo598	#2826267 CS	Eu abri a lata mas ela estava vazia.
+pt	#6459276 heo598	#6350825 CK	Você pode abrir esta lata para mim?
+pt	#9062294 carlosalberto	#9062289 carlosalberto	Vocês podem nos ajudar a lavar os legumes?
+pt	#999715 alexmarcelo	#999634 CK	Você quer que eu te ajude a lavar os pratos?
+pt	#1853784 luca22	#6780168 luca22	O que entendemos quando falamos de lealdade?
+pt	#3123014 carlosalberto	#9329148 Nylez	A lealdade de um amigo é algo muito belo.
+pt	#1694211 alexmarcelo	#1686609 Amastan	É a primeira vez que eu passo a mão em um leão.
+pt	#972677 alexmarcelo	#29845 Dejo	O leão abriu sua enorme boca e rugiu.
+pt	#10740345 bill	#8886752 dzouras	Onde vocês compraram este leite?
+pt	#10078774 bill	#10061263 ddnktr	Vocês bebem café com leite?
+pt	#1143322 alexmarcelo	#1429541 azjani	A leitura é a minha paixão.
+pt	#455463 lucas	#69738 CK	Você já terminou a leitura recomendada?
+pt	#1061569 bufo	#906811 CK	Qual é a lembrança favorita de sua infância?
+pt	#5262101 carlosalberto	#5198859 Objectivesea	Qual é a sua lembrança mais antiga da infância?
+pt	#5460177 bill	#5463778 carlosalberto	O animal tornou-se uma lenda local.
+pt	#1536951 alexmarcelo	#1226604 CM	Ele é uma verdadeira lenda.
+pt	#8886009 carlosalberto	#8884921 CK	Eu lentamente abri os olhos.
+pt	#4689727 Ricardo14	#255141 CK	Eu abri a porta lentamente.
+pt	#5813942 bill	#5813935 Hybrid	Por que o meu computador está lento?
+pt	#2467016 MarlonX19	#1700085 (unknown)	Eu gosto do ritmo lento dessa música.
+pt	#6985176 Ricardo14	#5752097 CM	Tom sofreu uma pequena lesão.
+pt	#1179180 paula_guisard	#251788 CM	Meu quarto fica virado para o leste.
+pt	#7792079 Mecamute	#2267599 _undertoad	Minha irmã tem uma letra muito bonita.
+pt	#3708376 ajdavidl	#1043830 CK	Eu posso cantar esta canção sem olhar a letra.
+pt	#6574453 heo598	#3668533 speedwell	Eu vou liberar os prisioneiros.
+pt	#3047982 raissalima	#3047853 Dejo	Resolvi liberar todas as minhas frases em inglês, inclusive esta.
+pt	#2059996 alexmarcelo	#1841638 CK	Eu vou te libertar.
+pt	#13077540 Castro5432	#12921088 LoverofEnglish	A verdade vai libertar seu coração.
+pt	#5514110 alexmarcelo	#59705 CK	Esta carne custa quatro dólares a libra.
+pt	#1736946 alexmarcelo	#46498 CK	A encomenda pesa mais de uma libra.
+pt	#2815689 MarlonX19	#2374115 CK	Eu apenas queria te ensinar uma lição.
+pt	#1546855 alexmarcelo	#954184 CK	Meu cachorro comeu minha lição de casa.
+pt	#1850895 luca22	#248668 luca22	Nós alternamos na limpeza do quarto.
+pt	#12548819 laetitiamg	#255357 CK	Eu fiz a limpeza depois da festa.
+pt	#11158052 Advanced	#10853903 CK	Você é bom em ler a linguagem corporal das pessoas?
+pt	#2553763 alexmarcelo	#6688825 deniko	FORTRAN é uma linguagem de programação.
+pt	#5294400 carlosalberto	#3637313 Katabasis	O mar estava liso como um espelho.
+pt	#7910984 arivkai	#7241755 OsoHombre	Layla queria ter cabelo liso.
+pt	#13609470 carlosalberto	#13609590 carlosalberto	Eu traduziria um pouco menos literalmente.
+pt	#8202583 josivangoncalves	#8202579 josivangoncalves	Se eu fosse você, não traduziria literalmente.
+pt	#8328729 JGEN	#8250813 CK	Eu quero me livrar de todas estas coisas.
+pt	#12338794 piterkeo	#275397 Eldad	Preciso livrar minha cozinha das baratas.
+pt	#9831030 bill	#9795887 eleutherothentes1	Eu vi um lobo, uma raposa e um coelho.
+pt	#9625115 Nylez	#241867 gracehero	Vocês já viram um lobo?
+pt	#1485172 alexmarcelo	#1481772 weihaiping	A localização deste quarto é ótima.
+pt	#2064204 alexmarcelo	#311159 CK	Ela perguntou sobre a localização da casa.
+pt	#9847375 Ricardo14	#9847382 DJ_Saidez	Eu odeio prova de raciocínio lógico.
+pt	#14025812 carlosalberto	#5571966 carlosalberto	O turco é um idioma muito regular e lógico.
+pt	#5215084 ianna	#4195851 CK	Fique longe de minha namorada!
+pt	#8422162 bill	#8414110 shekitten	Meu inglês está longe de ser perfeito.
+pt	#11561138 carlosalberto	#11561137 carlosalberto	O objetivo é sempre o lucro máximo.
+pt	#386048 brauliobezerra	#291237 CK	Ele teve lucro de dez mil dólares na venda.
+pt	#6197126 bill	#3822217 CK	Nós estamos de luto.
+pt	#6129918 carlosalberto	#6128534 mailohilohi	Eu não tenho um carro de luxo.
+pt	#7261770 carlosalberto	#7241102 CK	Eu simplesmente não me posso dar o luxo de fazer isso.
+pt	#9771711 Ricardo14	#9119806 CK	Eu posso ganhar uma maçã também?
+pt	#8538480 bill	#7514809 CK	Quando foi a última vez que vocês comeram maçã?
+pt	#2467014 MarlonX19	#2018834 CK	Eu não gostaria de te ver machucado.
+pt	#2966195 alexmarcelo	#2965708 Hybrid	Espero que ninguém tenha se machucado.
+pt	#7926068 JGGG	#7926059 shekitten	Tem um cheiro forte de maconha no ar.
+pt	#8705177 bill	#8701061 shekitten	Tom não fuma maconha.
+pt	#721008 brauliobezerra	#249010 (unknown)	Nós esculpimos estátuas de madeira.
+pt	#3448052 piterkeo	#3447154 CK	Eu gostaria de comprar uma colher de madeira.
+pt	#6564759 heo598	#6563782 OsoHombre	Eu acredito no poder da magia.
+pt	#6803303 mervert1	#6465620 mervert1	Você realmente acredita na magia?
+pt	#2576826 alexmarcelo	#247832 CK	Nós temos um torneio de futebol em maio.
+pt	#879271 alexmarcelo	#254023 CN	De todos os meses, maio é o que eu mais gosto.
+pt	#13033205 carlosalberto	#13033264 carlosalberto	Quem já foi rei não perde nunca a majestade.
+pt	#5050222 alexmarcelo	#5045797 Hybrid	Isto é, ao mesmo tempo, uma bênção e uma maldição.
+pt	#5548435 Melzar708	#3422020 CK	A maldição foi quebrada.
+pt	#2569217 alexmarcelo	#2567709 Hybrid	Por que você está sendo tão malvado comigo?
+pt	#7589946 Ricardo14	#7589944 Ricardo14	Por que você é tão malvado?
+pt	#7346798 alexmarcelo	#5119634 honestlang	Eu comprei legumes, carne e manteiga.
+pt	#735851 lenon_perez	#5077131 Lindoula	Eu só tenho manteiga na geladeira.
+pt	#4927342 ToinhoAlam	#3387496 CK	Você pode me mostrar neste mapa onde eu estou?
+pt	#5170585 rodrigo20	#5170572 mailohilohi	Onde eu posso comprar um mapa?
+pt	#10004088 carlosalberto	#6667020 CK	Eu não uso maquiagem.
+pt	#11471090 bill	#7987248 CK	Por que você usa tanta maquiagem?
+pt	#1394482 carlosalberto	#681018 Source_VOA	Comida fresca é uma maravilha.
+pt	#6172321 carlosalberto	#6172242 sundown	Maravilha! Estou extasiado!
+pt	#11063374 omniglotman	#5788710 Eccles17	Eu não gosto desta marca de ketchup.
+pt	#9865878 carlosalberto	#9865871 carlosalberto	Eu sempre quis comprar essa marca de bolsa.
+pt	#5446832 carlosalberto	#5446084 CK	Tom é biólogo marinho.
+pt	#5973301 Ricardo14	#3070179 Ricardo14	Eu posso usar máscara nesta festa?
+pt	#8190418 lucasmg123	#5852859 CK	Eu estava usando uma máscara.
+pt	#9970961 bill	#2771523 sharptoothed	Onde fica o banheiro masculino?
+pt	#11390312 MrJuice	#8416085 CK	Maria não é um nome masculino.
+pt	#8486649 ToinhoAlam	#1724 Swift	Seria tão massa poder falar dez idiomas!
+pt	#6365738 mervert1	#6365727 mervert1	Eu fritei a massa.
+pt	#961754 bufo	#455999 lukaszpp	Eu costumo estudar matemática à noite.
+pt	#2238551 Matheus	#271018 CK	Matemática é a minha matéria favorita.
+pt	#11979206 ajdavidl	#275391 CK	A álgebra é minha matéria favorita.
+pt	#5974961 raulguilherme10	#2985695 sharptoothed	Aqui está um exemplo do material que eu quero.
+pt	#11546773 carlosalberto	#11546768 carlosalberto	Este material é útil para o nosso projeto?
+pt	#7215873 carlosalberto	#2270151 _undertoad	Em que ano da faculdade de medicina tu estás?
+pt	#1079671 alexmarcelo	#1876646 marcelostockle	Meus pais querem que eu estude medicina.
+pt	#7580808 Ricardo14	#2275939 CK	Eu não tomei nenhuma medida de precaução.
+pt	#14016511 carlosalberto	#14016530 carlosalberto	Repita as palavras à medida que eu as for pronunciando.
+pt	#9971949 bill	#8967482 CK	Eu gostava de francês no ensino médio.
+pt	#4814950 Ricardo14	#3050944 CK	Minha mãe é professora do ensino médio.
+pt	#3998878 carlosalberto	#3311087 CK	Nós ainda estamos em lua de mel.
+pt	#8784376 carlosalberto	#8784160 carlosalberto	Eu como mel em vez de açúcar.
+pt	#5348946 ianna	#3280395 CK	Eu esqueci de mencionar isso?
+pt	#6128188 ianna	#3145311 Hybrid	Há uma coisa que eu esqueci de mencionar.
+pt	#7849875 Ricardo14	#1690405 Spamster	Eu preciso de uma estimulação mental.
+pt	#2462928 alexmarcelo	#2458565 CK	Eu acho que você é um mentiroso.
+pt	#5218258 carlosalberto	#5217325 CK	Eu nunca te chamei de mentiroso.
+pt	#9805994 Ricardo14	#9805742 Igider	Você tem um mentor?
+pt	#12690525 Advanced	#9805655 Igider	Quem é seu mentor?
+pt	#923719 zvaigzne	#2793189 Ricardo14	Eu vou ao mercado, você precisa de algo?
+pt	#5205409 Ricardo14	#261499 sundown	Eu normalmente vou ao mercado às sextas.
+pt	#7899726 MatheusHDRJ	#7899729 shekitten	A minha meta é aprender inglês e francês.
+pt	#999728 alexmarcelo	#998984 ellasevia	Isto é feito de madeira ou de metal?
+pt	#5461259 carlosalberto	#18498 Zifre	O metal se contrai quando é resfriado.
+pt	#6176716 User75171	#6176211 sundown	Onde é que eu posso meter a minha bagagem?
+pt	#6840204 SofiaSilva	#6833232 CK	Eu tentarei não me meter no teu caminho.
+pt	#901060 alexmarcelo	#252150 CK	Eu acredito neste método de ensino.
+pt	#11383315 bill	#8115550 CK	Meu método é melhor do que o seu.
+pt	#2554394 alexmarcelo	#10610394 sangelo	A mídia está se aproveitando da situação.
+pt	#2039705 MarlonX19	#2038554 Chrikaru	A mídia social está crescendo em importância.
+pt	#8439691 bill	#8439690 bill	É um milagre que eu ainda esteja vivo.
+pt	#6937947 Ricardo14	#2649999 Hybrid	Nós esperávamos um milagre.
+pt	#4838117 carlosalberto	#18984 Zifre	A ponte fica uma milha a montante.
+pt	#378381 brauliobezerra	#60807 (unknown)	Vá por essa rua por uma milha.
+pt	#7011494 iart61	#538956 darinmex	Estimamos o dano num milhar de dólares.
+pt	#5464168 ToinhoAlam	#4035885 Hybrid	Estava muito escuro dentro da mina.
+pt	#1701043 alexmarcelo	#1699209 Spamster	Ele está caidinho por esta mina.
+pt	#12004796 carlosalberto	#12004788 carlosalberto	Meu pai é deputado, não ministro.
+pt	#1187969 brauliobezerra	#1187881 Eldad	Falei eu mesmo com o ministro.
+pt	#3299549 MarlonX19	#3004738 Hybrid	Ela deixou minha vida miserável.
+pt	#4930393 Ricardo14	#2248160 CK	Eu não sou miserável.
+pt	#8795848 heo598	#7113372 CM	A gente resolveu o mistério.
+pt	#341092 tinacalysto	#248058 CM	Nós nunca tivemos uma explicação clara do mistério.
+pt	#1012094 alexmarcelo	#9921752 lucasmg123	Eu nunca vi um livro tão misterioso assim.
+pt	#3100544 carlosalberto	#8098892 iT4LL	Neste caso nada há de misterioso.
+pt	#8518812 Capistrano	#2734459 afyodor	Eu gosto de misturar café e cacau.
+pt	#2299143 Matheus	#270764 CK	Não se pode misturar óleo com água.
+pt	#2716794 carlosalberto	#34116 carlosalberto	A moça de casaco azul é minha filha.
+pt	#8495456 bill	#6915567 CK	Quem é aquela moça acenando para você?
+pt	#4508907 Ricardo14	#920834 CM	Moda não é minha especialidade.
+pt	#10127681 lucasmg123	#9728820 Nylez	Eu não sabia que cabelo bagunçado tinha voltado à moda.
+pt	#1068197 alexmarcelo	#1365749 marcelostockle	Felipe comprou um caminhão moderno.
+pt	#11228769 carlosalberto	#11228741 carlosalberto	O grego moderno é belo, é poesia musical.
+pt	#9833562 Ricardo14	#7795908 sharris123	Eu preciso colocar uma moeda primeiro?
+pt	#523977 anonym	#320522 CK	Eu encontrei uma moeda na calçada.
+pt	#8832684 RochaAr	#39688 orcrist	O molho queimou minha língua.
+pt	#1305961 alexmarcelo	#259905 CK	Eu sei montar a cavalo.
+pt	#2720016 carlosalberto	#264076 CM	É bastante difícil montar um relógio.
+pt	#8539334 JGEN	#56458 CK	Você entendeu a moral dessa história?
+pt	#3691550 Ricardo14	#6058622 sergiomelo	Qual é a moral da história?
+pt	#1211711 alexmarcelo	#1005976 darinmex	Desculpa, eu não queria te morder.
+pt	#13762789 carlosalberto	#5852332 CK	Eu não vou te morder.
+pt	#1162360 tulio	#5072695 CarpeLanam	O corpo é mortal, a alma é imortal.
+pt	#1915581 alexmarcelo	#2747574 mervert1	O ser humano é mortal?
+pt	#1503412 roger_rf	#251361 CK	Minha avó sabe pilotar uma moto.
+pt	#4800734 Luciosp	#4799210 CK	Eu gosto muito de andar de moto.
+pt	#8938890 Ricardo14	#251066 CK	Tem algo errado com o motor do meu carro.
+pt	#1683006 alexmarcelo	#1681862 Amastan	É a primeira vez que eu monto um motor.
+pt	#5590898 ajdavidl	#3738336 CK	Aonde foi o meu motorista?
+pt	#11679956 ajdavidl	#2648221 CK	Onde está o meu motorista?
+pt	#2606079 MarlonX19	#258876 CK	Eu perdi ela de vista na multidão.
+pt	#530814 anonym	#258875 (unknown)	Eu avistei a garota na multidão.
+pt	#2594887 alexmarcelo	#820568 BraveSentry	Nós precisamos de uma língua mundial?
+pt	#9850609 lucasmg123	#5640582 CK	Agora, eu sou o campeão mundial.
+pt	#2571917 alexmarcelo	#1679614 Amastan	É a primeira vez que eu construo um muro.
+pt	#1779539 alexmarcelo	#1776740 Amastan	Por que estão construindo um muro aqui?
+pt	#1087831 alexmarcelo	#8754519 Martka	Há um bom museu em minha cidade.
+pt	#1451706 roger_rf	#237893 CK	Meu irmão me levou ao museu.
+pt	#3247460 sergiomelo	#3244235 mervert1	Alguma nação já teve dois reis?
+pt	#2936840 Ricardo14	#2929037 (unknown)	A literatura é o futuro de uma nação.
+pt	#9488373 bill	#7644722 karloelkebekio	Eu cantei o hino nacional.
+pt	#2416156 Matheus	#37521 CK	Todo país tem a sua bandeira nacional.
+pt	#7995722 lucasmg123	#5600189 CK	Tem certeza de que não quer nadar com a gente?
+pt	#847008 brauliobezerra	#16299 brauliobezerra	Vocês sabem nadar, não sabem?
+pt	#9971973 bill	#9969449 ddnktr	Onde está a minha certidão de nascimento?
+pt	#3998845 alexmarcelo	#3730767 CM	Qual é a sua data de nascimento?
+pt	#8194363 MacGyver	#3367316 Hybrid	Meu cabelo é naturalmente encaracolado.
+pt	#5934346 bill	#3579623 Hybrid	Eu tentei agir naturalmente.
+pt	#7805115 Ricardo14	#2908378 Ricardo14	Eu acho que não há necessidade de falar sobre isso.
+pt	#7066773 iart61	#8991335 Nylez	Qual é a necessidade mais básica do ser humano?
+pt	#8291862 JGEN	#8272910 CK	Eu não vou negar que foi difícil.
+pt	#3416431 Ricardo14	#3331044 CK	Vocês não podem negar isso.
+pt	#11560406 carlosalberto	#11560400 carlosalberto	Multiplique por um número negativo aleatório.
+pt	#11843818 ajdavidl	#5736494 CM	O exame de sangue deu negativo.
+pt	#8002499 maily	#5512936 CK	Nós estamos dispostos a negociar.
+pt	#3832365 Laudemilson	#3832035 CK	Meu cliente quer negociar.
+pt	#8137276 lucasmg123	#3919375 CH	Eu queria não ter acreditado neles.
+pt	#11556360 Advanced	#3905097 CH	Eu simplesmente não confio neles.
+pt	#12548729 laetitiamg	#8321651 Amastan	Meu neto fala de você o tempo todo.
+pt	#9551324 carlosalberto	#9551364 carlosalberto	Meu neto tem uma gatinha branca.
+pt	#996235 alexmarcelo	#838694 Scott	Lá onde eu vivo, temos neve em janeiro.
+pt	#2830247 MarlonX19	#57904 sundown	Nós temos bastante neve aqui no inverno.
+pt	#4374550 carloseperola	#2740421 Hybrid	Que nobre coração tem esse bom homem!
+pt	#6178448 Mecamute	#43350 eirik174	O velho homem tinha um nobre semblante.
+pt	#10877277 bill	#8009406 CK	Vocês conhecem os pais da noiva?
+pt	#980308 helmfer	#250117 CK	Minha irmã ficou noiva.
+pt	#8628677 bill	#3824318 CK	Vocês conhecem o noivo?
+pt	#5979344 Ricardo14	#5979342 CK	Eu soube que você ficou noivo.
+pt	#2442688 alexmarcelo	#2439744 Hybrid	Meu companheiro de quarto é tão nojento!
+pt	#2462991 alexmarcelo	#2458469 CK	Eu acho nojento.
+pt	#11742368 carlosalberto	#11742399 carlosalberto	Helena é minha nora preferida.
+pt	#7312993 iart61	#7985453 trochal	Gosto muito da minha nora.
+pt	#1048362 brauliobezerra	#953330 CK	Como é que vocês normalmente decidem o que comer?
+pt	#377648 brauliobezerra	#253119 CK	Normalmente eu vou para casa às cinco.
+pt	#7826365 Ricardo14	#7910135 adiante19	Será que eu tirei uma boa nota?
+pt	#8292207 JGEN	#8272446 CK	Eu acho que não tive uma boa nota no exame.
+pt	#1731921 alexmarcelo	#1731147 Amastan	É verdade que vocês fecharam a loja às nove?
+pt	#10085348 carlosalberto	#18401 CK	Eu gostaria que você viesse às nove.
+pt	#736173 brauliobezerra	#681558 Source_VOA	Esta ideia é uma total novidade para mim.
+pt	#5409877 ajdavidl	#3826655 CK	Isto não é novidade para ninguém.
+pt	#1180625 alexmarcelo	#1020525 CM	Vocês podem vê-lo a olho nu.
+pt	#6146155 bill	#5852592 CK	Eu não estou nu.
+pt	#1707658 alexmarcelo	#619846 ulyssemc1	Você quer dizer uma guerra totalmente nuclear?
+pt	#869363 alexmarcelo	#22976 CN	Estamos na era da energia nuclear.
+pt	#5090749 ToinhoAlam	#427694 witbrock	Uma nuvem branca flutua no céu azul.
+pt	#1734419 alexmarcelo	#25851 AlanF_US	Vista de longe, a ilha parecia uma nuvem.
+pt	#378118 brauliobezerra	#251994 CK	Meu objetivo é me tornar um médico.
+pt	#2385941 Ricardo14	#2375611 ddnktr	Meu objetivo é aprender seu idioma.
+pt	#1491287 alexmarcelo	#1322952 CK	Eu vi um objeto voador não identificado.
+pt	#12941886 Advanced	#7958963 deniko	Esse é o meu objeto favorito.
+pt	#13356863 valovski	#4096861 Lepotdeterre	Na minha opinião, este romance é a sua melhor obra.
+pt	#13267468 Advanced	#9032046 shekitten	A obra deve elogiar o mestre!
+pt	#5127017 bill	#1264738 Scott	Eu adoro observar aves.
+pt	#9771721 Ricardo14	#8541880 CK	Eu vou te observar.
+pt	#5917088 sergiomelo	#9268954 Nylez	Eu quero obter respostas às minhas perguntas.
+pt	#8193086 XY	#255514 CH	Eu rapidamente tentei obter conselhos dele.
+pt	#7330444 Ricardo14	#4133420 CK	Eu pensei que era bem óbvio.
+pt	#397696 brauliobezerra	#1418 Zifre	Eu não sei como demonstrar, já que é tão óbvio!
+pt	#9930805 Ricardo14	#42630 CM	Vamos reservar aquilo para outra ocasião.
+pt	#5889870 sergiomelo	#5886523 OsoHombre	Fadil tinha uns dezessete anos na ocasião.
+pt	#2574371 MarlonX19	#62094 CK	Nós conseguimos ouvir o oceano daqui.
+pt	#3433107 piterkeo	#2542633 CK	Eu costumava morar perto do oceano.
+pt	#873807 alexmarcelo	#873806 CM	Onde você acha que podem ocorrer problemas?
+pt	#3179645 carlosalberto	#12763941 AlanF_US	Um certo problema pode ocorrer.
+pt	#8804394 bill	#33556 CK	O que vocês fizeram com os meus óculos?
+pt	#4956210 Ricardo14	#2222463 Hybrid	Onde eu coloquei os meus óculos?
+pt	#11330017 carlosalberto	#11330035 carlosalberto	Eu prefiro o amor ao ódio.
+pt	#2363064 Gustavo	#1898167 CK	Existe uma fina linha entre amor e ódio.
+pt	#1912476 alexmarcelo	#1912020 Spamster	Eu sou da costa oeste.
+pt	#4812466 muriloricci	#275156 CK	O sol nasce no leste e se põe no oeste.
+pt	#11349693 omniglotman	#7897622 shekitten	Você promete pensar sobre minha oferta?
+pt	#4768758 ianna	#4778512 allenmanbear	Eu aceitei imediatamente a oferta dele.
+pt	#941505 une_monica	#304660 CK	Ele anunciou oficialmente sua candidatura.
+pt	#3545762 VilhelmsPort	#2361118 CK	Não consigo acreditar que nos encontramos oficialmente.
+pt	#6011710 bill	#3734309 CK	Eu deveria ter trocado o óleo.
+pt	#10100975 Ricardo14	#10063743 CK	Quantos litros de óleo você precisa?
+pt	#406560 brauliobezerra	#299203 mamat	Ele colocou sua mão no meu ombro.
+pt	#2199037 hitalos	#321801 CK	Eu olhei por cima do meu ombro.
+pt	#5323116 ToinhoAlam	#5318475 Hybrid	A luz é uma onda ou uma partícula?
+pt	#9146851 bill	#2480041 sharptoothed	Há um erro gramatical naquela oração.
+pt	#1444157 brauliobezerra	#1399611 croogie	Como você vai ordenar os animais?
+pt	#1632072 alexmarcelo	#1632053 Amastan	Hoje cedo, minha orelha estava sangrando.
+pt	#8098856 iT4LL	#8098858 iT4LL	Tira o dedo da orelha!
+pt	#1275082 alexmarcelo	#681912 Source_VOA	Que tipo de pesquisa faz a organização?
+pt	#11639956 carlosalberto	#11639949 carlosalberto	Quantos cientistas trabalham nesta organização?
+pt	#6195093 User75171	#6194964 sundown	Nós temos que organizar as coisas aqui.
+pt	#6758247 Ricardo14	#3563696 mervert1	Eu tenho de organizar os meus pensamentos.
+pt	#1176332 alexmarcelo	#9926486 DJ_Saidez	Se tu doares um órgão, poderás salvar uma vida.
+pt	#7083456 alexmarcelo	#7078320 AmarMecheri	O fígado é um órgão do corpo humano.
+pt	#1664904 alexmarcelo	#69313 CS	Você é o meu orgulho e a minha alegria.
+pt	#2599127 alexmarcelo	#2596385 CM	Eu tenho muito orgulho dos meus pais.
+pt	#381968 brauliobezerra	#254224 CK	Eu não sei qual é a origem do rumor.
+pt	#1608381 alexmarcelo	#2762000 mervert1	Meu nome é de origem hebraica.
+pt	#10810303 DavidDias	#1886963 Spamster	Eu prefiro a versão original à remixada.
+pt	#8821107 carlosalberto	#8821122 carlosalberto	Minha frase é original.
+pt	#1048386 brauliobezerra	#953291 CK	Você já quebrou algum osso?
+pt	#8096194 iT4LL	#7734062 CK	Como tirar um osso de galinha da garganta?
+pt	#1915973 alexmarcelo	#1913264 CM	Se eu tivesse dado ouvido aos meus pais!
+pt	#6310567 carlosalberto	#520133 kebukebu	Eu já tinha ouvido essa música uma vez.
+pt	#9471938 EnriCP	#8858988 CK	Eu quero aprender como tosar uma ovelha.
+pt	#5290487 carlosalberto	#320340 CK	Eu sou a ovelha negra da família.
+pt	#6131958 carlosalberto	#22954 CK	Nós bocejamos quando estamos com pouco oxigênio.
+pt	#3977047 alexmarcelo	#3731194 CM	Você tem oxigênio o suficiente?
+pt	#4258981 JFMorais	#4256507 JFMorais	Minha paciência está chegando ao fim.
+pt	#7561947 Ricardo14	#10750216 DJ_Saidez	Eu preciso aprender a ter mais paciência.
+pt	#5300832 bill	#3825404 CK	Cadê o pacote que você queria que eu entregasse?
+pt	#1394451 alexmarcelo	#681858 Source_VOA	Você recebeu meu pacote?
+pt	#6599165 piterkeo	#5753755 CM	Nós conhecemos o padrão.
+pt	#3562198 carlosalberto	#3560959 Hybrid	Não existe um padrão para a beleza.
+pt	#902684 alexmarcelo	#37575 CK	Que opções de pagamento estão disponíveis?
+pt	#11561108 carlosalberto	#11561098 carlosalberto	Como fazer o pagamento de uma conta online?
+pt	#4840175 bill	#2307997 CK	Eu cliquei no primeiro link da página.
+pt	#4945545 bill	#2270135 _undertoad	Em que página vocês estão?
+pt	#9968432 Ricardo14	#5937651 mailohilohi	Aprender idiomas é a minha paixão.
+pt	#8051196 jvlopes91	#2054015 AlanF_US	Minha profissão é minha paixão.
+pt	#4637490 Ricardo14	#3078333 mervert1	Eu vou te levar ao meu palácio amanhã.
+pt	#3204997 piterkeo	#25614 madhatter5	A família real mora no palácio imperial.
+pt	#6967133 Ricardo14	#953883 CK	Eu sempre quis cantar no palco.
+pt	#1617696 alexmarcelo	#319456 CM	Quem é a garota cantando no palco?
+pt	#8447478 bill	#8438736 CK	Estavam todos fantasiados de palhaço.
+pt	#12270167 MathKay	#5508540 Nicacioh20	O palhaço está com medo do escuro.
+pt	#8534335 JGEN	#8511267 CK	Esse é apenas o meu palpite.
+pt	#7347303 Ricardo14	#2359586 CK	Eu tenho um palpite.
+pt	#4929364 KimiP	#2012438 CK	Eu não quero que você entre em pânico.
+pt	#4982796 alexmarcelo	#2111801 CK	Eu entrei em pânico.
+pt	#11014441 carlosalberto	#10739756 terrywallwork	De que tipo de pão vocês gostam?
+pt	#11656950 carlosalberto	#11656868 carlosalberto	Eu como pão com geleia no café da manhã.
+pt	#9713339 Cinthya	#6129025 OsoHombre	Sami estava batendo papo no meio da noite.
+pt	#8330221 JGEN	#8230229 CK	Eu não disse que isso era o paraíso.
+pt	#13921547 carlosalberto	#13921544 carlosalberto	Segura minha mão, sou um estranho no paraíso.
+pt	#8343289 JGEN	#8341497 CK	Meu trabalho é muito parecido com isso.
+pt	#752778 brauliobezerra	#16930 CK	Seu problema é parecido com o meu.
+pt	#11143033 carlosalberto	#11143031 carlosalberto	Sua mãe é minha parente.
+pt	#5022216 ianna	#11130642 carlosalberto	Você não é meu parente.
+pt	#6769534 Ricardo14	#6767196 CK	Vocês moram perto de um parque?
+pt	#6961658 Ricardo14	#903285 CK	A minha casa fica bem perto do parque.
+pt	#7760244 pedrolima	#1215985 Kristinka	Eu quero participar desta conferência.
+pt	#10610266 bill	#7791957 CK	Nós vamos participar da maratona.
+pt	#6823553 Ricardo14	#2788031 Dejo	Nós ainda podemos vencer essa partida.
+pt	#5335408 carlosalberto	#1747262 belgavox	Nós vamos jogar uma partida de tênis.
+pt	#377663 brauliobezerra	#273748 CM	Eu decidi tomar partido dele contra os outros.
+pt	#5876669 sergiomelo	#5858685 CK	Eu estava de coração partido.
+pt	#961752 bufo	#272672 (unknown)	A última vez foi um parto natural.
+pt	#12386480 piterkeo	#12345833 CK	Muitas mulheres morreram no parto.
+pt	#1488748 brauliobezerra	#1203981 CK	Nenhum passageiro se feriu, felizmente.
+pt	#5346668 ToinhoAlam	#2969007 Hybrid	Isto é só um contratempo passageiro.
+pt	#8656824 bill	#489402 CK	Onde posso retirar minha passagem aérea?
+pt	#1270571 alexmarcelo	#25685 CK	Eu comprei uma passagem de ida e volta.
+pt	#438811 iskander	#275969 CM	Ó não, o meu passaporte desapareceu!
+pt	#5690271 bill	#3738758 CK	Onde você colocou o meu passaporte?
+pt	#6558945 heo598	#3596758 CK	Eu gostaria de dar um passeio.
+pt	#8288537 JGEN	#8282076 CK	Eu dei um passeio no parque.
+pt	#1079693 alexmarcelo	#303775 xtofu80	Ele confessou os pecados ao pastor.
+pt	#5955162 sergiomelo	#5954885 Hybrid	O pastor pregou um sermão.
+pt	#1873945 alexmarcelo	#1864469 Spamster	Eu sou meu próprio patrão.
+pt	#3702112 Ueltatoeba2014	#69205 CK	Você se relaciona bem com seu patrão?
+pt	#2912093 mervert1	#1671734 CM	Sou o chefe da patrulha.
+pt	#5149938 bill	#3719600 Hybrid	Eu posso fazer uma pausa?
+pt	#8339976 JGEN	#8338458 CK	Eu faço uma pausa a cada três horas.
+pt	#2576844 alexmarcelo	#257693 CK	Eu confessei o meu pecado.
+pt	#2485238 alexmarcelo	#2483525 Opiejay888	Defender a própria pátria é agora um pecado?
+pt	#2453456 alexmarcelo	#2453094 CK	Aquela reunião foi uma perda de tempo.
+pt	#2672600 carlosalberto	#10042470 Objectivesea	Sua morte representa uma grande perda.
+pt	#1448585 Balamax	#1201482 CM	Eu sou um perdedor.
+pt	#6285438 bill	#2069353 _undertoad	Ninguém gosta de um mau perdedor.
+pt	#1001787 alexmarcelo	#1000480 CM	Como eu posso me perdoar?
+pt	#8878547 carlosalberto	#8878534 carlosalberto	Eu vou perdoar, mas não vou esquecer.
+pt	#8197576 XY	#6089125 CK	Eu acho que foi gerido perfeitamente.
+pt	#9237062 bill	#70763 CK	Eu entendo perfeitamente como se sente.
+pt	#5172457 bill	#3821511 CK	Eu alterei a minha foto de perfil.
+pt	#3763276 alexmarcelo	#3760979 Eldad	Eu gosto de sua foto de perfil.
+pt	#4815025 Ricardo14	#2821596 CK	Eu tenho um emprego de meio período.
+pt	#8918011 carlosalberto	#8336686 CK	Foi um período difícil para nós.
+pt	#4952147 ToinhoAlam	#255784 CC	Eu vou permanecer mais algumas semanas.
+pt	#4590054 isaacandrade	#21865 Swift	Eu preferia permanecer em casa do que sair.
+pt	#6488164 bill	#3924670 Hybrid	Por que vocês não pediram permissão?
+pt	#6488168 bill	#1886493 CK	Por que você precisa de minha permissão?
+pt	#8984970 Ricardo14	#8995556 lucasmg123	Qual personagem você vai interpretar?
+pt	#5374118 bill	#5373872 Hybrid	Qual é seu personagem favorito de anime?
+pt	#11647331 carlosalberto	#11647393 carlosalberto	Eu gosto desse traço da personalidade dele.
+pt	#8586451 Ricardo14	#10570104 DJ_Saidez	Não tenho uma personalidade extravagante, eu acho.
+pt	#1009103 alexmarcelo	#29194 CK	Tem uma igreja perto de minha casa.
+pt	#1732220 alexmarcelo	#250534 CK	Minha casa é perto de um ponto de ônibus.
+pt	#13754229 carlosalberto	#5568099 Hybrid	Minha avó preparou um peru enorme.
+pt	#6277552 bill	#1804044 Spamster	Eu comi um sanduíche de peru.
+pt	#4278982 ajdavidl	#2331605 CK	Eu tive um pesadelo sobre vampiros.
+pt	#6151928 carlosalberto	#257828 CK	Ontem à noite eu tive um pesadelo.
+pt	#6446902 bill	#5266984 CK	Eu sou muito mais pesado do que você.
+pt	#2441797 nmsalgueiro	#266578 CK	É pesado mas eu consigo aguentar.
+pt	#2699162 Ricardo14	#10123881 DJ_Saidez	É com profundo pesar que anuncio isso.
+pt	#8489476 bill	#5464861 CK	Meu carro está em péssimo estado.
+pt	#3989676 Verdastelo	#2993202 CK	Eu sou péssimo a matemática.
+pt	#7563612 Ricardo14	#14014898 haomakk	Eu preciso te conhecer pessoalmente.
+pt	#4927607 yinp	#4925816 CK	Eu pessoalmente creio que você está certo.
+pt	#6101614 PedroAugusto	#23470 CM	Nós não estamos com pouco petróleo neste país.
+pt	#1843635 nowasky	#1532076 LittleBoy	Em breve não teremos mais petróleo.
+pt	#7285589 carlosalberto	#242233 CK	Tu te exercitaste ao piano hoje de manhã?
+pt	#1926876 alexmarcelo	#1179921 CK	Ele sabe tocar piano melhor do que eu.
+pt	#7589785 Ricardo14	#7589715 DanielDaniel	Tem piedade desta pobre mulher!
+pt	#1236740 alexmarcelo	#1640717 kerbear407	Tenham piedade de mim!
+pt	#4910856 KimiP	#253236 CK	Eu quero ser piloto quando crescer.
+pt	#1030999 brauliobezerra	#249851 CK	Eu tenho um amigo que é piloto.
+pt	#3813266 IsabelleRain	#3812481 corvard	Simplesmente dissolva a pílula em água e beba.
+pt	#5198304 mymi	#5195269 CK	Você pode me ajudar a pintar minha casa?
+pt	#8495445 bill	#7732970 CK	Estou pensando em pintar a minha casa.
+pt	#8880515 carlosalberto	#8880504 carlosalberto	Vocês acham mesmo que esta pintura seja bela?
+pt	#7709730 Ricardo14	#2705530 WestofEden	Eu paguei muito pouco por essa pintura.
+pt	#8630636 Ricardo14	#3728064 CM	Eu não sei o quanto isso pode piorar.
+pt	#4670253 Ricardo14	#259724 CM	Eu me perdi e para piorar, começou a chover.
+pt	#11083703 MrJuice	#9991749 CK	Eu vi um homem vestido como pirata.
+pt	#4824697 Sistemas	#4813020 Hybrid	Este pirata tem um papagaio de estimação.
+pt	#1835945 alexmarcelo	#1740642 (unknown)	Eu reconheço aquela piscina!
+pt	#2594704 alexmarcelo	#2594358 Hybrid	Eu não quero ir à piscina!
+pt	#5181374 bill	#3575401 CK	Ei, vocês querem pedir uma pizza?
+pt	#8538489 bill	#8071456 CK	Quando foi a última vez que vocês comeram pizza?
+pt	#10787148 DavidDias	#8216075 CK	Eu não vi a placa.
+pt	#2342773 Matheus	#499475 blay_paul	O que essa placa quer dizer?
+pt	#6289699 ToinhoAlam	#681738 Source_VOA	Lavanda é a minha planta favorita.
+pt	#2166995 alexmarcelo	#2167412 (unknown)	Eu só trago uma planta.
+pt	#5368805 ajdavidl	#3826385 CK	Eu raramente uso sacos de plástico.
+pt	#994219 alexmarcelo	#958848 CM	Eu tenho um copo de plástico.
+pt	#1120460 brauliobezerra	#33555 CK	Minha bicicleta está com um pneu furado.
+pt	#5881742 sergiomelo	#5879595 OsoHombre	Eu acho que meu pneu está furado.
+pt	#1926702 alexmarcelo	#253706 CK	Eu consegui este aspirador de pó a preço de banana.
+pt	#1554672 alexmarcelo	#24106 mamat	Todos os móveis estavam cobertos de pó.
+pt	#10133816 pedromarques	#10133802 CK	Eu vou pegar um pouco de água do poço.
+pt	#1718433 alexmarcelo	#1717649 Amastan	Vocês já caíram num poço?
+pt	#1795565 alexmarcelo	#28922 CK	Todos nós aprendemos o poema de cor.
+pt	#2571842 alexmarcelo	#1679963 Amastan	É a primeira vez que eu memorizo um poema.
+pt	#13015327 carlosalberto	#2663125 CK	Pois é, ainda temos um problema.
+pt	#9065240 Ricardo14	#9065236 CK	Eu não gosto de falar sobre política.
+pt	#5116883 bill	#4665793 CK	Eu não me importo com política.
+pt	#4951518 Ricardo14	#2267022 _undertoad	Eu gosto de caneta de ponta fina.
+pt	#6472355 heo598	#2129937 freddy1	Eu estava com a palavra na ponta da língua.
+pt	#6034658 bill	#6034657 bill	Nós ainda estamos muito longe da ponte.
+pt	#11085125 MrJuice	#6242260 CK	Eu não sabia que a ponte estava fechada.
+pt	#11241280 carlosalberto	#11241272 carlosalberto	Qual é a população do país?
+pt	#1176188 alexmarcelo	#1344632 CM	A população dessa ilha vive da pesca.
+pt	#12080590 FishlandicFishy	#11211621 CK	Eu quero ouvir a música popular.
+pt	#7705829 Ricardo14	#4471293 Hybrid	Eu só queria ser popular.
+pt	#12548674 laetitiamg	#8677870 ajje	Foi por causa de algo que eu disse?
+pt	#6473424 heo598	#3911739 CK	Eu estou aqui por causa de você.
+pt	#8634054 JGEN	#8598130 CK	Meu porão não tem nada disso.
+pt	#5870364 bill	#5860541 CK	Eu me escondi no porão.
+pt	#3215743 gleydin	#2291828 CK	Eu sempre como porcaria quando estou deprimido.
+pt	#1357369 alexmarcelo	#1357237 sacredceltic	Fecha essa porcaria de porta!
+pt	#8629494 JGEN	#8598557 CK	Eu costumava roncar, porém não mais.
+pt	#8491647 alexmarcelo	#278567 CK	O meu irmão é pequeno, porém forte.
+pt	#6311928 carlosalberto	#5509812 Adelpa	Eu traduzo, portanto, existo.
+pt	#2775696 migmorais	#952257 (unknown)	Eu sou porque tu és, portanto nós somos.
+pt	#8451647 bill	#8305716 CK	Estacionei meu carro perto do portão.
+pt	#9705894 Cinthya	#8855603 Hybrid	Nós passamos pelo pequeno portão para o jardim.
+pt	#4250001 Ricardo14	#931491 CM	Vocês poderiam me mostrar o caminho para o porto?
+pt	#2429649 marcospcruz	#263018 CK	Nós vimos muitos navios no porto.
+pt	#10162279 Ricardo14	#10162276 ddnktr	A posse de armas é legal no seu país?
+pt	#5006161 alexmarcelo	#4987280 CK	Eu acho que isso é uma possibilidade.
+pt	#2613758 alexmarcelo	#8647523 CK	Eu nem sequer pensei nessa possibilidade.
+pt	#8202063 josivangoncalves	#8202065 josivangoncalves	O que possivelmente poderia te ajudar?
+pt	#2828527 MarlonX19	#1898037 CK	O que eles, possivelmente, poderiam nos contar que nós já não saibamos?
+pt	#944164 alexmarcelo	#855282 dobleahl	Os mentirosos devem possuir uma boa memória.
+pt	#2624848 carlosalberto	#9630888 Nylez	É muito útil possuir um carro.
+pt	#1934987 alexmarcelo	#1934833 CK	Eu só queria apontar alguns problemas em potencial.
+pt	#6405943 bill	#2254998 CK	Vocês têm potencial.
+pt	#2453771 alexmarcelo	#2451595 CK	Eu tenho poucos livros em francês.
+pt	#4689489 Ricardo14	#32411 CC	Nós decolaremos em poucos minutos.
+pt	#6737487 carlosalberto	#48831 (unknown)	A função da máquina é poupar trabalho.
+pt	#1188805 alexmarcelo	#71386 CK	Sua ajuda vai nos poupar muito trabalho.
+pt	#4761838 Ricardo14	#3442345 CK	Você se importaria se eu olhasse um pouquinho?
+pt	#868807 alexmarcelo	#31234 CK	Eu quero dormir mais um pouquinho.
+pt	#3607935 carlosalberto	#3608020 panamicua	Eu não quero nem teu ouro nem tua prata.
+pt	#4925628 carlosalberto	#278558 CK	Meu irmão poliu a prata.
+pt	#4834389 claudiofuzita	#4834104 derpapottamus	Eu praticamente o consegui de graça.
+pt	#5080777 Ricardo14	#4498210 CK	Meu cachorro come praticamente tudo.
+pt	#4256049 ajdavidl	#4253109 Lepotdeterre	Eu quero praticar basquetebol com ele.
+pt	#5352162 bill	#664252 BlueLagoon	Eu preciso praticar um pouco mais.
+pt	#2824224 Sitko	#54746 CK	É prático morar bem perto da estação.
+pt	#1558898 roger_rf	#474217 FeuDRenais	O transporte nesta cidade é muito prático.
+pt	#9226600 bill	#6025427 mailohilohi	Nós temos que entregá-lo antes do prazo.
+pt	#6039911 KimiP	#4011727 CK	Você está com um prazo apertado, não é?
+pt	#3802191 Ricardo14	#2953949 CK	Estamos desperdiçando tempo precioso.
+pt	#4543617 ajdavidl	#477701 minshirui	Nossa saúde é o nosso bem mais precioso.
+pt	#1396591 alexmarcelo	#436539 lukaszpp	Eu não conheço o prefeito, mas gostaria de conhecê-lo.
+pt	#1700966 alexmarcelo	#1700548 Amastan	Estamos fazendo perguntas ao prefeito.
+pt	#1683030 alexmarcelo	#1680327 Amastan	É a primeira vez que eu ganho um prêmio.
+pt	#4344721 ajdavidl	#1886695 CK	Qual é o meu prêmio?
+pt	#5384378 bill	#1777728 Spamster	Eu compreendo a sua preocupação.
+pt	#10584255 Advanced	#5751954 CM	Eu estava doente de preocupação.
+pt	#4825161 Ricardo14	#3548219 benavery	Eu estou preparado para morrer?
+pt	#8296759 JGEN	#8264429 CK	Eu acho que estou preparado para isso.
+pt	#8057520 MacGyver	#6884248 CK	A minha presença lá é obrigatória?
+pt	#7849870 Ricardo14	#3818040 CK	A minha presença te incomoda?
+pt	#4686795 Ricardo14	#958870 CM	Vocês estão com pressa?
+pt	#11355785 bill	#7140751 CK	Não sou eu que estou com pressa.
+pt	#9621004 oneberto	#5762727 BHO	Nós temos que prestar atenção e escutar.
+pt	#4472969 Ricardo14	#4472961 Hybrid	Eu vou prestar atenção, prometo.
+pt	#10325553 heo598	#7966905 CK	Eu estava prestes a ir para casa.
+pt	#8154604 ritualesatanum	#3820137 CK	Eu estava prestes a dizer isso.
+pt	#4772049 KimiP	#33721 AlanF_US	A garota remando um barco é minha prima.
+pt	#972325 alexmarcelo	#65946 CK	Minha prima vai ter um filho mês que vem.
+pt	#3416315 carlosalberto	#251743 CK	Meu pai se aposenta na próxima primavera.
+pt	#1200133 alexmarcelo	#256805 CM	A primavera é a estação que eu mais gosto.
+pt	#1331508 alexmarcelo	#1331504 marcelostockle	Tenho que ir ao batizado do meu primo.
+pt	#381507 brauliobezerra	#250215 CK	Meu primo é bom em truques de mágica.
+pt	#8352810 RYutaka	#2912849 astyng	Você me disse que eu era uma princesa.
+pt	#2593312 alexmarcelo	#2588415 Hybrid	Eu vim para salvar a princesa.
+pt	#5275121 ToinhoAlam	#3773319 DostKaplan	Eu amo chocolate, principalmente o com nozes.
+pt	#1201806 alexmarcelo	#257886 CK	Eu gosto de caminhar, principalmente de manhã.
+pt	#10745309 megamanenm	#10745302 megamanenm	Ela se apaixonou por um certo príncipe.
+pt	#9694629 carlosalberto	#9694628 carlosalberto	O príncipe tem quase cem anos de idade.
+pt	#4479147 brauliobezerra	#4168310 CK	A princípio eu o confundi com seu irmão.
+pt	#9681967 Ricardo14	#3591650 CK	Foi o que eu pensei a princípio.
+pt	#3489558 piterkeo	#2547912 CK	Eu fui feito prisioneiro.
+pt	#4388434 ajdavidl	#2548510 CK	Nós temos um prisioneiro.
+pt	#8364139 RYutaka	#4499703 CK	Por favor, respeite minha privacidade.
+pt	#10712298 ajdavidl	#2011696 CK	Eu gostaria de um pouco de privacidade.
+pt	#3500918 mervert1	#70288 CK	Você é estudante de uma escola privada?
+pt	#964080 alexmarcelo	#456075 lukaszpp	Esta companhia é pública ou privada?
+pt	#6396945 Ricardo14	#6392785 Hybrid	Podemos ir para um lugar um pouco mais privado?
+pt	#8223549 Ricardo14	#8223547 Ricardo14	Vou te mandar um mensagem no privado.
+pt	#1069351 alexmarcelo	#1295010 CK	Este é um procedimento ilegal.
+pt	#4838335 bill	#3378688 CK	Isto é procedimento padrão.
+pt	#1011978 alexmarcelo	#1528836 erikspen	A produção de papel cresce a cada ano.
+pt	#998973 une_monica	#240748 CM	A fábrica teve que reduzir sua produção.
+pt	#13408658 ninefi	#13398558 ninefi	Este produto está isento de impostos?
+pt	#1864631 gleydin	#271942 CN	Nós podemos entregar o produto em junho.
+pt	#1176302 paula_guisard	#43539 orcrist	O produtor do remédio é uma empresa japonesa.
+pt	#6893017 Ricardo14	#2440029 CM	Eles têm um produtor talentoso.
+pt	#10514284 carlosalberto	#10514286 carlosalberto	A luz combinada com outra luz pode produzir escuridão.
+pt	#5389309 ajdavidl	#3826518 CK	Eu estava profundamente envergonhado.
+pt	#5264736 carlosalberto	#251953 CK	Minha filha está dormindo profundamente.
+pt	#11388222 carlosalberto	#11388191 carlosalberto	Meu amor é tão profundo quanto o oceano.
+pt	#3063558 carlosalberto	#3063556 carlosalberto	Geralmente meu sono é profundo.
+pt	#7673420 Ricardo14	#3727565 CM	Eu estou impressionado com o seu progresso.
+pt	#2574203 alexmarcelo	#1680741 DracoKall	Como está o seu progresso?
+pt	#12036340 carlosalberto	#10505884 CK	Está na hora de cumprir minha promessa.
+pt	#377569 brauliobezerra	#324195 CK	Eu quero que você mantenha a sua promessa.
+pt	#4581896 KimiP	#3921534 CK	O meu advogado está falando com o promotor.
+pt	#13102747 Advanced	#7367580 CM	O promotor provavelmente usará isso contra Tom.
+pt	#6489551 heo598	#247421 CM	Vocês concordam com a nossa proposta?
+pt	#902402 alexmarcelo	#251539 (unknown)	Você pode aprovar minha proposta?
+pt	#7575570 Ricardo14	#4013639 CK	Por favor, saia da minha propriedade.
+pt	#12957054 jvlopes91	#250271 CK	Minha tia herdou uma grande propriedade.
+pt	#3072232 carlosalberto	#3071826 sharptoothed	Já que dirigimos até aqui, poderíamos muito bem prosseguir.
+pt	#2357889 alexmarcelo	#9496121 CK	Eu preciso da sua proteção.
+pt	#7302929 carlosalberto	#7302735 CK	Não deixes de usar proteção para os olhos.
+pt	#2709080 carlosalberto	#285833 (unknown)	O rosto dele estava protegido contra a luz.
+pt	#9307581 bill	#8985311 mccarras	Tom era o protegido de Mary.
+pt	#1061543 bufo	#906849 CK	Qual é a sua música de protesto favorita?
+pt	#8422169 bill	#8420506 CK	É pouco provável que eu consiga pegar o trem.
+pt	#3453908 piterkeo	#3451817 CK	É muito provável que alguém esteja esperando por nós.
+pt	#1543281 alexmarcelo	#319321 CK	Meu pai morreu de câncer de pulmão.
+pt	#11713376 ajdavidl	#6713184 Eccles17	Preciso de um transplante de pulmão.
+pt	#1837666 pguerrajr	#260656 CM	Eu o peguei pelo pulso.
+pt	#5909246 sergiomelo	#5905076 CK	Como foi que você torceu o pulso?
+pt	#1718501 alexmarcelo	#1717497 Amastan	Vocês já respiraram ar puro?
+pt	#2585515 MarlonX19	#1700568 Amastan	Nós estamos respirando ar puro.
+pt	#4099678 carlosalberto	#42731 CM	Puxa, eu bem que gostaria de ter esse problema.
+pt	#1175225 lazymoose	#794935 (unknown)	Eu não consigo ver as palavras no quadro.
+pt	#1175216 lazymoose	#257442 (unknown)	Eu coloquei meus óculos para ver o quadro.
+pt	#8713606 JGEN	#8594527 CK	Nós queremos uma melhor qualidade de vida.
+pt	#713596 marcusps	#30372 CK	Você tem outros de melhor qualidade?
+pt	#5422494 ajdavidl	#3826755 CK	Nós sempre pagamos a mesma quantidade.
+pt	#2817286 MarlonX19	#1293302 CK	Eu reduzi a quantidade de carne que eu como.
+pt	#1600555 alexmarcelo	#1600538 jathonjet	Vocês estão livres na quarta-feira?
+pt	#9013821 lucasmg123	#6534842 kayano	Você estará aqui na quarta-feira?
+pt	#8806645 heo598	#3826017 CK	Eu tenho certeza de que está quebrado.
+pt	#1228186 alexmarcelo	#1226179 CK	Meu relógio parece estar quebrado.
+pt	#5384308 bill	#5384302 Hybrid	Eu tinha uma queda por ela na época.
+pt	#10693060 bill	#10563318 ddnktr	A neve amorteceu a minha queda.
+pt	#902734 brauliobezerra	#255000 CK	Eu comprei queijo e um pouco de leite.
+pt	#7454397 Ricardo14	#6694911 CK	Eu não gosto de queijo de cabra.
+pt	#10740496 megamanenm	#5736531 CM	Essa foi a minha maior queixa.
+pt	#5990079 bill	#2013914 CK	Eu não quero prestar queixa.
+pt	#7346824 alexmarcelo	#434350 lukaszpp	Eu gostaria de um quilo de bife, por favor.
+pt	#7314358 iart61	#9937675 Nylez	Quanto custa um quilo de castanhas?
+pt	#5595337 Ricardo14	#2952532 CK	Eu tento nadar um quilômetro por dia.
+pt	#5603303 Ricardo14	#5603255 marcj794	Quantos metros são um quilômetro?
+pt	#907627 alexmarcelo	#25347 auxitt	Eu tenho alguma familiaridade com a química.
+pt	#907635 alexmarcelo	#261613 (unknown)	Eu simpatizo com química assim como com física.
+pt	#11543693 carlosalberto	#11543686 carlosalberto	O que o químico descobriu é assustador.
+pt	#12959306 Borbie	#12958632 Lumi	Estou a estudar para me tornar químico.
+pt	#13727486 carlosalberto	#13727502 carlosalberto	Meu time vai jogar amanhã, quinta-feira.
+pt	#9988978 bill	#6809286 Eccles17	Hoje é quinta-feira ou sexta-feira?
+pt	#9249477 bill	#250760 CK	Meu cachorro está abanando o rabo.
+pt	#5716424 bill	#1895829 CK	Você quase pisou no rabo do cachorro.
+pt	#5086985 Enrike100	#5086921 AlanF_US	Gatos daquela raça não tem rabo.
+pt	#9133243 JGEN	#9133655 acell	Somos todos brasileiros sem distinção de raça ou cor.
+pt	#9670840 rekoowa	#8180132 CK	Os celulares emitem radiação?
+pt	#4877604 bill	#4529121 CK	Os níveis de radiação estão dentro dos limites aceitáveis.
+pt	#5378408 carlosalberto	#5378214 User72724	Bom dia, meu raio de sol.
+pt	#1683054 alexmarcelo	#18505 orcrist	O dinheiro é a raiz de todos os males.
+pt	#2467009 MarlonX19	#273980 voxbubnya	Imaginação é a raiz de toda a civilização.
+pt	#6804761 Ricardo14	#10153793 DJ_Saidez	Posso falar com vocês rapidamente?
+pt	#11030308 omniglotman	#388577 CK	Ela respondeu minha carta rapidamente.
+pt	#3805323 muriloricci	#3805291 muriloricci	É raro encontrar um tradutor nepalês.
+pt	#1187615 lazymoose	#278636 CK	O ladrão fugiu sem deixar nenhum rastro.
+pt	#6012837 KimiP	#46839 Eldad	O carro deixou um rastro de poeira.
+pt	#1711256 alexmarcelo	#1687177 Amastan	Eu estou gritando porque vi um rato!
+pt	#1508765 alexmarcelo	#452744 CM	Meu gato matou este rato.
+pt	#5936266 ToinhoAlam	#2361713 CK	Eu acho que tive uma reação exagerada.
+pt	#10166453 DavidDias	#320966 CK	Qual foi a reação deles ao relatório?
+pt	#8989424 carlosalberto	#8989432 carlosalberto	Quantos desejos o gênio prometeu realizar?
+pt	#8186056 josivangoncalves	#8208087 josivangoncalves	Ainda dá tempo de realizar seus sonhos.
+pt	#2569279 alexmarcelo	#2566005 Hybrid	Ele tem cabelo rebelde.
+pt	#7894047 pedrolima	#3909602 CH	Eu mandei um recado para ela.
+pt	#6021862 bill	#2014653 CK	Eu não quero deixar recado.
+pt	#1011951 alexmarcelo	#12549324 laetitiamg	Como você avalia minha receita?
+pt	#8951457 jvlopes91	#2715747 CM	Eu precisarei de uma receita?
+pt	#10635119 lucasmg123	#681861 Source_VOA	Eu tive uma conversa recente com meu vizinho.
+pt	#1120133 alexmarcelo	#328544 fcbond	Esta é uma foto recente?
+pt	#2434019 alexmarcelo	#2429904 espjulie	Eu me encontrei com ele recentemente.
+pt	#4967166 alexmarcelo	#9772395 helloroto	Eu estive muito ocupado recentemente.
+pt	#8188164 Ricardo14	#3756526 Lindoula	Eu deixei a chave na recepção.
+pt	#10166359 DavidDias	#249012 CK	Nós tivemos uma recepção hostil por parte dos aldeões.
+pt	#4810669 bill	#4666961 CK	Quem sou eu para reclamar?
+pt	#6936761 Ricardo14	#5859849 CK	Eu nunca ouvi você reclamar de nada.
+pt	#418054 brauliobezerra	#2246 shortiiboy	Toda tentativa merece uma recompensa.
+pt	#957836 alexmarcelo	#280515 shekitten	A virtude é sua própria recompensa.
+pt	#5087020 Enrike100	#5085007 AlanF_US	Eu preciso recuperar o tempo perdido.
+pt	#6993987 Ricardo14	#4666046 CK	Eu não conseguia recuperar o fôlego.
+pt	#1550937 alexmarcelo	#1550939 CM	A água é um importante recurso natural.
+pt	#2484565 marcospcruz	#2452033 sharptoothed	Um recurso foi concedido a favor da ré.
+pt	#5156778 ajdavidl	#4497069 CK	Como eu poderia recusar?
+pt	#7363567 lucasmg123	#2235207 Hybrid	E se eu recusar?
+pt	#390802 brauliobezerra	#29037 CK	Eu peguei borboletas com uma rede.
+pt	#10793977 DavidDias	#22248 bekindtoall	Eu lancei minha rede ao mar.
+pt	#405590 brauliobezerra	#268707 CM	Depois da refeição eu pedi a conta.
+pt	#931959 brauliobezerra	#268744 CK	Nós dividimos o valor da refeição.
+pt	#2179884 alexmarcelo	#9421925 Nylez	Você foi tomado refém.
+pt	#3255840 mervert1	#681292 Source_VOA	Os extremistas tomaram a esposa do presidente como refém.
+pt	#2481244 MarlonX19	#1128780 marcelostockle	O ministro da energia vai se referir ao apagão de ontem.
+pt	#10650120 malafaya	#10584911 sundown	Tomaste a tua dose vacinal de reforço?
+pt	#4603526 Ricardo14	#2111945 CK	Tragam reforço.
+pt	#9820781 bill	#6085771 CK	Eu vivia em uma região montanhosa.
+pt	#4725315 carlosalberto	#9265058 DJ_Saidez	Eu cresci em uma região vinícola.
+pt	#4985130 Ricardo14	#25638 Zifre	O rei governou o seu reino com justiça.
+pt	#1825638 alexmarcelo	#1824419 Amastan	Este reino necessita de um novo rei.
+pt	#9035963 JGEN	#9009392 CK	Eu preciso de algum tempo para relaxar.
+pt	#4787232 KimiP	#3037518 Hybrid	Eu só quero relaxar no parque e ler um livro.
+pt	#979078 alexmarcelo	#69620 (unknown)	Tu crês em alguma religião?
+pt	#10897808 carlosalberto	#10897805 carlosalberto	A religião significa muito para nós.
+pt	#10742079 ajdavidl	#7737165 CK	Preciso tomar meu remédio agora.
+pt	#1230547 alexmarcelo	#1230545 alec	Meu avô toma remédio todo dia.
+pt	#8940362 JGEN	#8940356 CK	Eu não quero falar com nenhum repórter.
+pt	#3979650 alexmarcelo	#2123417 MrShoval	Eu sou repórter.
+pt	#8649624 JGEN	#8594957 CK	Tom está feliz por ser escolhido para representar sua escola.
+pt	#4765985 bill	#2361124 CK	Não me importo com minha reputação.
+pt	#5976941 bill	#3831266 CK	A minha reputação está em jogo.
+pt	#340444 tinacalysto	#33360 cromwellt	Eu gostaria de uma reserva no hotel.
+pt	#8662187 bill	#54308 CK	Vocês fizeram reserva?
+pt	#3892227 muriloricci	#3891556 Amastan	A equipe de resgate localizou as vítimas.
+pt	#13245694 LucasDePaula	#307176 CK	Eles vieram imediatamente ao nosso resgate.
+pt	#2213678 asuz	#73028 (unknown)	Você precisa de bastante resistência para correr dez mil metros.
+pt	#14067983 kitler	#14068434 carlosalberto	Uma bateria ideal não possui resistência interna.
+pt	#5638105 Ricardo14	#1384361 CK	Eu não sei se eu posso resistir mais.
+pt	#3931745 carlosalberto	#3928177 fekundulo	Você acha que eu posso resistir a todo esse encanto?
+pt	#418124 brauliobezerra	#2407 Zifre	Oi, eu só queria te avisar que o problema foi resolvido.
+pt	#5012928 alexmarcelo	#5012652 CK	Está tudo resolvido agora?
+pt	#2449180 MarlonX19	#1293129 CK	Vocês devem respeitar os mais velhos.
+pt	#5667567 bill	#5368432 Hybrid	Você precisa respeitar a minha privacidade.
+pt	#11470421 DavidDias	#11437307 Nuel	Eu consigo sentir sua respiração em meu pescoço.
+pt	#6006191 bill	#5786675 CK	Eu prendi a respiração.
+pt	#9933995 arademaker	#4499696 CK	Eu assumo total responsabilidade.
+pt	#1018785 helmfer	#453291 blay_paul	A responsabilidade é minha.
+pt	#5129294 bill	#241033 Dejo	Onde eu posso retirar o meu ingresso?
+pt	#1001883 alexmarcelo	#27474 CK	Quantos livros eu posso retirar de uma só vez?
+pt	#2614138 alexmarcelo	#2613919 Dejo	Obrigado por retornar a minha ligação.
+pt	#2425998 MarlonX19	#284221 CM	Assim que ele retornar, eu te contarei.
+pt	#13112857 Advanced	#10465457 DJ_Saidez	Posso alterar a data de retorno?
+pt	#2556522 MethodGT	#315583 CK	Ela orou pelo retorno do seu filho.
+pt	#1797514 alexmarcelo	#12259255 filipe_s	Ele depôs desfavoravelmente ao réu.
+pt	#13599459 carlosalberto	#13599492 carlosalberto	O supremo tribunal condenou o réu à prisão.
+pt	#381589 brauliobezerra	#247270 CK	Nós todos tentamos nos reunir pelo menos uma vez ao ano.
+pt	#3875977 Laudemilson	#3874239 Amastan	Precisamos reunir a família novamente.
+pt	#5098422 bill	#1954799 CK	Eu não posso revelar a minha fonte.
+pt	#14007853 carlosalberto	#14007886 carlosalberto	Meu segredo jamais vou revelar.
+pt	#7827938 Ricardo14	#56017 CK	Esta é a revista que eu falei com você.
+pt	#8288557 JGEN	#8282060 CK	Eu comprei uma revista para ler no trem.
+pt	#1469506 roger_rf	#21658 Ivan24	A revolução deu início a uma nova era.
+pt	#6137700 carlosalberto	#1142121 DarkLinkXXXX	A semente da revolução é a repressão.
+pt	#11980856 ajdavidl	#3732044 CM	Vocês querem rezar?
+pt	#1845235 nowasky	#1739419 Amastan	Eu posso te ensinar a rezar.
+pt	#1150038 tulio	#10291465 ddnktr	Ainda agora não pude conter-me do riso.
+pt	#5349047 carlosalberto	#275905 CK	O presidente não pôde conter o riso.
+pt	#5092270 alexmarcelo	#5092238 AlanF_US	Eu preciso encontrar o meu próprio ritmo.
+pt	#5401709 carlosalberto	#328891 fcbond	O samba é um ritmo brasileiro, não é?
+pt	#405325 brauliobezerra	#1455 mrtaistoi	Isso só mostra que você não é um robô.
+pt	#972008 une_monica	#60322 (unknown)	Os movimentos deste robô são esquisitos.
+pt	#6034607 bill	#6033411 CK	Eu me escondi atrás de uma rocha.
+pt	#6128123 carlosalberto	#1121347 cntrational	Ela está subindo ao topo da rocha.
+pt	#5282142 carlosalberto	#10018467 Nylez	Eu encontrei a roda que faltava.
+pt	#8591734 arademaker	#5178648 CK	Vamos fazer a bola rolar.
+pt	#3450741 piterkeo	#55675 Eldad	Este é o romance mais longo que eu já li.
+pt	#987092 alexmarcelo	#968126 LittleBoy	Eu estou na metade deste romance policial.
+pt	#1004340 alexmarcelo	#3845654 tommg	Espártaco foi um escravo romano.
+pt	#1862481 gleydin	#67421 shekitten	A escrita árabe foi substituída pelo alfabeto romano.
+pt	#4571013 ajdavidl	#4570965 Hybrid	Não há nada romântico entre nós.
+pt	#2554429 alexmarcelo	#6873183 CK	Eu não sou nada romântico.
+pt	#7065266 mervert1	#7063910 mervert1	Se eu fosse uma flor, seria uma rosa.
+pt	#8873208 carlosalberto	#8872975 CK	Eu dei uma rosa vermelha a minha mãe.
+pt	#988762 alexmarcelo	#986423 CK	Quanto custa este roteiro por pessoa?
+pt	#1165164 alexmarcelo	#1331460 marcelostockle	Não se preocupe, isso é parte da minha rotina.
+pt	#11069022 alexmarcelo	#3336748 danepo	Você está cansado da rotina diária?
+pt	#1597486 alexmarcelo	#1573753 trieuho	Meu dinheiro foi roubado por um ladrão.
+pt	#1592925 alexmarcelo	#254103 CK	Eu confessei ter roubado o dinheiro.
+pt	#12684669 Advanced	#9974816 CK	Vamos instalar um alarme contra roubo.
+pt	#1396488 alexmarcelo	#51408 CK	Gostaria de denunciar um roubo.
+pt	#720929 brauliobezerra	#66880 CK	Me desculpe por eu ter sido tão rude.
+pt	#2056834 MarlonX19	#2056794 JonLDS	Você já tentou não ser rude com as pessoas?
+pt	#5254617 carlosalberto	#4666311 CK	Nós precisamos de mudar de rumo.
+pt	#7020658 iart61	#3721445 CM	Não gosto do rumo para onde isto vai.
+pt	#5610139 Ricardo14	#2265775 _undertoad	Vocês têm o sábado livre?
+pt	#6568794 heo598	#2360208 CK	Eu tenho planos para sábado à noite.
+pt	#11985540 ajdavidl	#6024793 CK	Baunilha é meu sabor favorito de sorvete.
+pt	#5101930 bill	#712124 Ronaldonl	Eu gosto do sabor de melancia.
+pt	#5198251 mymi	#5196338 Hybrid	O sacrifício dele não será em vão.
+pt	#988879 alexmarcelo	#979658 Serhiy	Ninguém apreciou seu sacrifício.
+pt	#5469833 carlosalberto	#4901293 Muelisto	Este animal é sagrado?
+pt	#12577980 carlosalberto	#12578013 carlosalberto	Não há nada de sagrado para ele.
+pt	#1266945 paula_guisard	#19360 CK	Eu temperei o peixe com sal e pimenta.
+pt	#934102 une_monica	#40165 CK	Nós acabamos de ficar sem sal e pimenta.
+pt	#3467680 piterkeo	#2793126 shekitten	Vocês querem adicionar abacate à salada?
+pt	#5170646 bill	#1658664 CM	Vocês gostam de salada de frutas?
+pt	#396267 brauliobezerra	#262183 CK	Eu cortei meu cabelo num salão.
+pt	#4281513 Ricardo14	#722023 CK	Alguém deixou o guarda-chuva no salão.
+pt	#1417364 alexmarcelo	#1415951 CK	Pedi ao meu chefe um aumento de salário.
+pt	#2966260 alexmarcelo	#2963978 (unknown)	Eu mereço um salário mais alto por isto.
+pt	#8722006 JGEN	#8593963 CK	A minha mãe não gosta de usar salto.
+pt	#2500549 alexmarcelo	#2498766 Hybrid	Eu vou preparar um sanduíche agora mesmo!
+pt	#2500556 alexmarcelo	#2498760 Hybrid	Você pode cortar o meu sanduíche ao meio?
+pt	#5402875 Wagner1994	#841617 Zifre	Eu mordi a minha língua até sangrar.
+pt	#1321141 alexmarcelo	#1190449 Anon	Meu dedão do pé começou a sangrar.
+pt	#11453397 (unknown)	#9948795 AlanF_US	A fáscia foi rompida e precisa de sarar.
+pt	#4763620 KimiP	#253578 shekitten	Eu estou satisfeito com estes sapatos.
+pt	#6958578 Ricardo14	#5850935 CK	Eu estou satisfeito com o resultado.
+pt	#6382123 bill	#6091237 CK	Vocês não estão com saudade de casa?
+pt	#7257145 carlosalberto	#1561 CK	Vocês tiveram saudade de mim?
+pt	#7445415 Ricardo14	#5858829 CK	Eu não estava saudável naquela época.
+pt	#8328821 JGEN	#8248307 CK	Ficaria feliz se eu fosse mais saudável.
+pt	#1009618 Gyuri	#2758823 mervert1	Sou responsável pela seção de livros.
+pt	#341178 tinacalysto	#51417 qdii	Com licença, onde fica a seção de calçados masculinos?
+pt	#3687929 carlosalberto	#3686224 vvv123	Eles estavam bebendo vinho branco seco.
+pt	#374999 brauliobezerra	#299010 CK	Ele é o secretário privado do chefe.
+pt	#10758497 carlosalberto	#10758490 carlosalberto	Nosso secretário raramente ria.
+pt	#7678873 carlosalberto	#7678869 carlosalberto	Vocês estão com fome ou com sede?
+pt	#1311443 alexmarcelo	#240641 CK	Vocês não estão com sede?
+pt	#8627134 JGEN	#8599731 CK	Eu posso ficar aqui até segunda-feira.
+pt	#1710190 alexmarcelo	#252291 CK	Eu fui pescar na segunda-feira passada.
+pt	#8834546 RochaAr	#3896746 Amastan	O avião deles caiu em uma densa selva.
+pt	#1782897 alexmarcelo	#1782681 Amastan	Posso viver numa selva por meses.
+pt	#1046230 alexmarcelo	#1235129 CK	Foi mordida por um animal selvagem.
+pt	#1277488 alexmarcelo	#63324 CK	A raposa é um animal selvagem.
+pt	#9060019 carlosalberto	#9060062 carlosalberto	Quantas maçãs pode produzir uma semente de maçã?
+pt	#2577800 alexmarcelo	#9433829 Nylez	Este fruto contém uma única semente.
+pt	#3159690 alexmarcelo	#3159577 (unknown)	Seu amigo conhece um ex-senador.
+pt	#4922993 ToinhoAlam	#640841 darinmex	O senador foi censurado pelo comitê de ética do congresso.
+pt	#12205084 kleberlucas	#3300287 Hybrid	Pare agora senão eu vou gritar!
+pt	#376456 brauliobezerra	#242979 CM	Estou ocupado hoje, senão eu aceitaria.
+pt	#8288345 JGEN	#8282285 CK	Eu sei que é uma sensação incrível.
+pt	#6177743 User75171	#6175223 sundown	Ao menos agora tu sabes qual é a sensação.
+pt	#2730550 Thais	#259698 (unknown)	Eu sou inteligente, sensível e criativo.
+pt	#2462842 alexmarcelo	#2460821 Hybrid	Eu tenho a pele sensível.
+pt	#6953034 Ricardo14	#5214629 CK	Eu gosto do seu senso de humor.
+pt	#6477190 heo598	#2833917 CK	Eu perdi meu senso de cheiro.
+pt	#1799752 alexmarcelo	#297915 CK	Ele estava sentado na minha frente.
+pt	#5040390 yinp	#5037908 Zurich899	Estou sentado sozinho em minha casa.
+pt	#2375609 Ricardo14	#2375608 CM	Você poderia traduzir essa sentença?
+pt	#4445141 alexmarcelo	#4368170 Hybrid	Eu vou sentir falta deste lugar.
+pt	#2462191 MarlonX19	#1185312 bart	Eu vou sentir falta do jeito que você cozinha.
+pt	#6468302 heo598	#2761814 Trailsend	O bezerro deve ser separado da mãe dele.
+pt	#5883377 sergiomelo	#5883180 OsoHombre	Layla até se mudou para um quarto separado.
+pt	#5101829 Ricardo14	#257928 CM	Eu devo me separar dos meus velhos móveis.
+pt	#974335 alexmarcelo	#436785 lukaszpp	Eu a amo tanto que não posso me separar dela.
+pt	#6136044 carlosalberto	#6135217 al_ex_an_der	Você responderá estas perguntas em uma sessão fechada?
+pt	#2825466 MarlonX19	#22544 ToxicFriu	A sessão será prolongada de novo.
+pt	#8412660 piterkeo	#6218120 Tangobango	O ano acadêmico começou em setembro.
+pt	#2557464 alexmarcelo	#9178591 Nylez	O comício de seu partido foi em setembro.
+pt	#1930160 williantoshio	#1167649 CK	Eu gostaria que hoje fosse sexta-feira.
+pt	#1249483 Welton	#18481 CK	Nós vamos sair para comer na sexta-feira.
+pt	#10723205 DavidDias	#10185540 Amastan	Você pode chamar isso de um sexto sentido.
+pt	#4111299 carlosalberto	#4195453 JNQ	Moramos no sexto andar.
+pt	#2166866 alexmarcelo	#2166219 faraway9911	Eu não entendo o significado desta frase.
+pt	#2604139 alexmarcelo	#1327507 CK	Eu não entendi o significado.
+pt	#1008661 alexmarcelo	#1008658 sundown	O que este símbolo aqui quer dizer?
+pt	#4394934 carloseperola	#3203809 CK	Você pode me dizer o que esse símbolo significa?
+pt	#4270307 KimiP	#2282043 Hybrid	Eu acho que sou um cara simpático.
+pt	#2594683 alexmarcelo	#2594482 Hybrid	Ele é realmente simpático comigo e eu gosto dele.
+pt	#4842840 ianna	#7971643 adiante19	Sinceramente, eu não acredito mais em você.
+pt	#5448272 carlosalberto	#5448027 deyta	Eu acredito sinceramente nisto.
+pt	#5509009 alexmarcelo	#2014711 CK	Eu quero que você seja sincero comigo.
+pt	#3876614 muriloricci	#3729066 CM	Eu tenho que ser sincero com você.
+pt	#881465 alexmarcelo	#881464 CM	Eu partirei assim que o sino tocar.
+pt	#2037499 patlima	#464362 lukaszpp	Nós ouvimos o sino da igreja todas as manhãs.
+pt	#11072103 Advanced	#8052005 CK	Por que ninguém está visitando meu site?
+pt	#6536404 heo598	#508106 arezoo	Como eu posso desativar a minha conta neste site?
+pt	#1048322 brauliobezerra	#953436 CK	Eu acho que nunca vou soar como um nativo.
+pt	#5624772 Ricardo14	#953692 CK	Eu quero aprender a soar mais como um nativo.
+pt	#6536391 heo598	#6532311 CK	Vocês querem sobremesa?
+pt	#6359817 anthrax26	#6264902 CK	Eu normalmente não como sobremesa.
+pt	#6475589 heo598	#6267581 CK	Eu não sou o único sobrevivente.
+pt	#5634042 ajdavidl	#3738532 CK	Houve algum sobrevivente?
+pt	#5041983 bill	#4132508 CK	O meu sobrinho vai se casar amanhã.
+pt	#1062571 brauliobezerra	#886248 (unknown)	Meu sobrinho raramente organiza suas coisas.
+pt	#7777006 pedrolima	#245581 CK	Minha irmã é envolvida em trabalho social.
+pt	#902794 alexmarcelo	#532786 FeuDRenais	Eu não sou muito social, mas tento fazer um esforço.
+pt	#1749510 franca	#28753 CM	Nós vivemos em uma sociedade civilizada.
+pt	#1010039 une_monica	#248834 Dejo	Nós devemos nos adaptar aos costumes da sociedade.
+pt	#2351496 Matheus	#2747430 mervert1	Aqui está a minha carteirinha de sócio.
+pt	#1974019 Matheus	#4286298 jberkel	Não sou sócio do clube.
+pt	#2321345 MethodGT	#2321329 MethodGT	Eu levei um soco nas costelas e doeu muito.
+pt	#3663017 Luciosp	#3663016 Luciosp	Ela tentou me dar um soco, mas eu me defendi.
+pt	#7491867 Ricardo14	#6897908 CK	Você quer que eu te ajude a mover o sofá?
+pt	#7897492 piterkeo	#7886565 Hybrid	Vocês verificaram embaixo do sofá?
+pt	#941520 une_monica	#51331 (unknown)	Todo o meu sofrimento foi em vão.
+pt	#2508297 Matheus	#1748 Swift	Por que a vida é tão cheia de sofrimento?
+pt	#11053887 bill	#10115992 ddnktr	Quer usar o meu protetor solar?
+pt	#5947880 sergiomelo	#5938087 CK	Eu esqueci de colocar protetor solar.
+pt	#4677157 Ricardo14	#253510 CK	Eu tenho me sentido muito solitário ultimamente.
+pt	#8630497 Ricardo14	#7394354 CH	Ele disse que estava realmente solitário.
+pt	#5455191 ToinhoAlam	#518884 blay_paul	É um solo muito pedregoso, não é?
+pt	#11844873 carlosalberto	#11844833 carlosalberto	Como extraímos o carvão do solo?
+pt	#5633857 bill	#250462 CK	Meu irmão mais velho está solteiro.
+pt	#7091330 alexmarcelo	#5287995 Hybrid	Eu gosto de ser solteiro.
+pt	#1941257 alexmarcelo	#487025 human600	Esse cara tem um parafuso solto!
+pt	#9677826 rekoowa	#295978 CK	Ele deixou o cachorro solto no jardim.
+pt	#10018819 Nylez	#10018504 Nylez	Vocês têm certeza de que essa é a única solução?
+pt	#2617000 alexmarcelo	#3820715 CK	Nós precisamos encontrar uma solução.
+pt	#12628211 Advanced	#281087 CM	Eu me sinto mais fresco na sombra do que no sol.
+pt	#7482449 Ricardo14	#6947833 Eccles17	Você quer se sentar na sombra?
+pt	#8309527 JGEN	#8253029 CK	Eu espero sonhar com você hoje à noite.
+pt	#5484635 carlosalberto	#4498156 CK	Todos nós podemos sonhar.
+pt	#7678905 carlosalberto	#7678891 carlosalberto	Vocês estão com sono ou cansados?
+pt	#2052188 MarlonX19	#324027 CK	Como eu levantei tarde, estou com sono.
+pt	#6470746 heo598	#52320 AlanF_US	Vocês têm uma tigela para sopa?
+pt	#1789106 alexmarcelo	#1788356 Amastan	Não precisei adicionar sal à minha sopa.
+pt	#1042699 brauliobezerra	#953620 CK	Eu ainda amo a sua maneira de sorrir para mim.
+pt	#5260192 carlosalberto	#5259967 CK	Eu não pude deixar de sorrir.
+pt	#2826474 akilez	#2826390 (unknown)	Eu vi um sorriso alegre em seu rosto.
+pt	#1486455 rafael8243	#1487893 arnxy20	Eu acho lindo o seu sorriso.
+pt	#2494102 alexmarcelo	#2494099 CK	Eu sou sortudo comparado a ele.
+pt	#6009843 bill	#2547795 CK	Eu sou um homem muito sortudo.
+pt	#1318005 alexmarcelo	#855364 pirytm	Eu amo sorvete de chocolate!
+pt	#4939974 alexmarcelo	#4938419 CK	Eu posso ir comprar sorvete?
+pt	#5883807 sergiomelo	#5883144 OsoHombre	Layla tinha uma voz muito suave e infantil.
+pt	#1718486 alexmarcelo	#1717616 Amastan	Vocês já tomaram suco de cenoura?
+pt	#3660134 ajdavidl	#2736016 Zaghawa	Tu bebeste este suco de laranja?
+pt	#3433564 piterkeo	#3431248 CK	Tom não tem medo de se sujar.
+pt	#2788008 Ricardo14	#71778 CK	O sujeito de pé ali é meu amigo.
+pt	#5976923 bill	#5975610 CK	Eu sou um sujeito azarado.
+pt	#1153290 FernandoMaiaJr	#2123446 etala	Meu cabelo está tão sujo!
+pt	#1249666 satsu	#435256 aliene	Eu vi um cachorro sujo entrar no jardim.
+pt	#2633285 alexmarcelo	#2633280 meerkat	Como eu posso superar esta dificuldade?
+pt	#8626518 bill	#3312010 CK	Nós vamos superar isto juntos.
+pt	#11006040 carlosalberto	#11006052 carlosalberto	Os icebergs cobriam a superfície do mar.
+pt	#5952301 sjaelsamlaren	#3060810 sharptoothed	O submarino finalmente veio à superfície.
+pt	#13895396 carlosalberto	#3723530 CM	Você está em nível muito superior ao meu.
+pt	#8649630 JGEN	#8594955 CK	Você já escolheu um curso superior?
+pt	#3145223 piterkeo	#57813 CK	Eu não consigo mais suportar esta dor.
+pt	#1749492 franca	#42059 CM	Isso é mais do que eu posso suportar.
+pt	#11333922 carlosalberto	#11333857 carlosalberto	O que é o ser supremo?
+pt	#8211894 josivangoncalves	#8211821 josivangoncalves	Se surgir qualquer coisa, eu te aviso.
+pt	#11939693 carlosalberto	#9243499 Lebensfreude	Nunca se sabe quando pode surgir um problema.
+pt	#1488550 brauliobezerra	#1293007 CK	Eu não queria te surpreender.
+pt	#10828508 DavidDias	#3909282 CH	Eu vim para o surpreender.
+pt	#10101062 Ricardo14	#10183199 DJ_Saidez	Por que será que eu não estou surpreso com isso?
+pt	#2815598 akilez	#2815181 Hybrid	Ninguém ficou mais surpreso do que eu.
+pt	#8330192 JGEN	#8232951 CK	Eu comprei um taco de beisebol.
+pt	#4697346 bill	#886993 CK	Ela o atacou com um taco de beisebol.
+pt	#1176494 paula_guisard	#1176493 paula_guisard	Minha avó tem talento para jardinagem.
+pt	#12012552 carlosalberto	#8879253 shekitten	Eu tenho talento?
+pt	#6037587 bill	#3454098 CK	O tanque de gasolina está quase vazio.
+pt	#12190432 carlosalberto	#12002645 carlosalberto	Com que frequência você enche o tanque do seu carro?
+pt	#8605942 Capistrano	#6323383 Hybrid	Eu nunca vi tantos livros em um só lugar.
+pt	#4818957 bill	#2644739 CK	Nós temos tantos estudantes.
+pt	#1222662 alexmarcelo	#2144996 MethodGT	Vocês sujaram todo o tapete!
+pt	#4823453 ianna	#9133623 acell	Eu encontrei a chave sob o tapete.
+pt	#1917290 alexmarcelo	#1886424 CK	Queres que eu te ajude com a tarefa?
+pt	#1541289 alexmarcelo	#1542008 erikspen	Terminei a minha tarefa de matemática.
+pt	#5126622 bill	#3123499 CK	Quer ver a minha tatuagem?
+pt	#2623525 alexmarcelo	#2540860 CK	Eu estou pensando em fazer uma tatuagem.
+pt	#2167009 alexmarcelo	#2167423 CM	Qual é a taxa de câmbio do dólar?
+pt	#7496980 Leonroz	#7496146 Ricardo14	Qual é a taxa de entrada?
+pt	#1560419 alexmarcelo	#954694 CK	Você quer que eu te chame um táxi?
+pt	#5095947 Ricardo14	#687586 lukaszpp	Onde eu posso pegar um táxi?
+pt	#5945105 Ricardo14	#682166 Source_VOA	Vocês gostariam de ir ao teatro esta noite?
+pt	#1206744 alexmarcelo	#2110350 MethodGT	A que horas vocês vão ao teatro?
+pt	#10691897 beatrixvasc	#10691896 beatrixvasc	Eu preciso comprar dois pedaços de tecido.
+pt	#10691874 beatrixvasc	#10691872 beatrixvasc	Eu comprei um novo tecido.
+pt	#6468349 heo598	#20226 CK	Tecnicamente, ele ainda é um estudante.
+pt	#11346781 Advanced	#8112894 Hybrid	Não era tecnicamente uma mentira.
+pt	#4861506 bill	#2033203 CK	Eu quero que você seja meu técnico.
+pt	#8938893 Ricardo14	#5798706 CK	Eu não vou ser técnico.
+pt	#10135733 Ricardo14	#10137971 Ricardo14	O que vocês pensam sobre a tecnologia?
+pt	#393855 MUIRIEL	#393860 (unknown)	Essa tecnologia é uma coisa incrível!
+pt	#3000286 carlosalberto	#2999897 marcelostockle	Estou assistindo ao jogo na tela do meu celular.
+pt	#5050091 alexmarcelo	#2763237 CM	Você pode me mandar uma captura de tela?
+pt	#4696509 carlosalberto	#285148 megamanenm	Eu me esqueço de telefonar para ele.
+pt	#1056367 brauliobezerra	#1056332 CK	Eu vou te escrever ou então te telefonar na próxima semana.
+pt	#2708703 carlosalberto	#1713 Swift	Onde a gente pode dar um telefonema?
+pt	#6944001 Ricardo14	#279333 CK	Eu tenho que dar um telefonema.
+pt	#5905933 bill	#4014012 CK	Gostaria que eu desligasse a televisão?
+pt	#2962682 carlosalberto	#2961456 meerkat	Com que frequência vocês veem televisão?
+pt	#1357364 alexmarcelo	#256313 CK	Eu gosto do som da chuva sobre o telhado.
+pt	#1846832 alexmarcelo	#250493 CM	O telhado da minha casa é vermelho.
+pt	#5545710 bill	#320772 CK	Minha mãe mediu a minha temperatura.
+pt	#3450995 piterkeo	#682147 Source_VOA	Qual é a temperatura da água da piscina?
+pt	#11864601 ajdavidl	#9238015 sundown	Há previsão de tempestade para amanhã?
+pt	#2298971 Matheus	#2307524 erikspen	Qual vai ser a duração da tempestade?
+pt	#1304310 alexmarcelo	#61271 CK	Quando foi construído este templo?
+pt	#6794697 Ricardo14	#6793329 CK	Com que frequência vocês jogam tênis?
+pt	#8626115 Ricardo14	#6898725 CK	Vocês são bons no tênis, não são?
+pt	#5087103 bill	#264966 CK	Nós aprendemos por tentativa e erro.
+pt	#8939839 JGEN	#8928294 CK	Eu fiz uma segunda tentativa.
+pt	#3741578 davis094	#3738911 CK	Você fez terapia durante muito tempo?
+pt	#8084978 Ricardo14	#43459 CK	A terapia vai me causar alguma dor?
+pt	#1247792 Welton	#23777 CK	Eu terei terminado minha lição de casa terça-feira.
+pt	#5266599 carlosalberto	#2838636 APagano	Qual dia da semana é terça-feira?
+pt	#2665915 carlosalberto	#251255 CK	Que achas do meu terno novo?
+pt	#1301836 alexmarcelo	#60725 CK	A gravata não combina com o meu terno.
+pt	#1311591 alexmarcelo	#57674 CK	Quem é o proprietário deste terreno?
+pt	#7372339 iart61	#8169652 lucasmg123	Compraste o terreno?
+pt	#8832972 RochaAr	#1561360 kolin2009	Você meio que está no território dela.
+pt	#381501 brauliobezerra	#307190 Zifre	Eles aumentaram o território do império.
+pt	#4351166 ajdavidl	#2160869 Hybrid	Eu não gosto de filmes de terror!!!
+pt	#6325169 carlosalberto	#680101 Source_VOA	Vocês têm medo de filmes de terror?
+pt	#4702615 carlosalberto	#4708043 adamtrousers	O ataque terrorista em Paris chocou o mundo.
+pt	#12258901 Advanced	#4436868 maaster	Fomos nós que encontramos o tesouro.
+pt	#4437460 Jeve	#4436872 maaster	Que tipo de tesouro você está procurando?
+pt	#3092619 patrickvob	#3092568 CK	Você está começando a testar minha paciência
+pt	#2213700 asuz	#1723962 Spamster	Ela queria testar os seus limites.
+pt	#2854296 MarlonX19	#18136 BraveSentry	Aconteceu de eu testemunhar o bullying no corredor.
+pt	#1546781 alexmarcelo	#954228 CK	Nossa única testemunha se recusa a testemunhar.
+pt	#1066615 alexmarcelo	#1066156 (unknown)	Tem um morcego no teto do meu escritório!
+pt	#1926941 alexmarcelo	#278781 CK	Eu vi uma mosca no teto.
+pt	#375817 brauliobezerra	#265095 shekitten	O fato é que meu gato é tímido.
+pt	#10201414 BranTheOliver	#7114267 CM	Eu sou terrivelmente tímido.
+pt	#4942677 Ricardo14	#4918110 gcaplan	Vocês gostariam de uma taça de vinho tinto?
+pt	#1143920 alexmarcelo	#2348739 CK	Eu prefiro vinho tinto a vinho branco.
+pt	#10652887 PoliglotaBrasileiro	#11158566 lucasmg123	Ela estava no meio de um tiroteio.
+pt	#7206127 carlosalberto	#7205634 CK	Três policiais ficaram feridos no tiroteio.
+pt	#5192778 alexmarcelo	#5190603 CK	Você se lembra do título daquele livro?
+pt	#1909625 alexmarcelo	#1898013 CK	Qual é o título do livro que está lendo?
+pt	#3667962 mervert1	#3667960 mervert1	A minha toalha está coberta por formigas vermelhas!
+pt	#7275778 iart61	#3071372 sharptoothed	Onde está a minha toalha?
+pt	#11255409 Advanced	#573910 CM	Há faíscas saindo da tomada elétrica.
+pt	#1632231 alexmarcelo	#1077738 keira_n	Eu tomei vinho demais e fiquei tonto.
+pt	#913119 alexmarcelo	#27848 CK	Eu não gosto que me façam de tonto.
+pt	#2830072 MarlonX19	#245071 CK	Que tal caminhar até o topo da colina?
+pt	#12272875 MathKay	#1543550 JimBreen	Nós subimos até o topo.
+pt	#4646447 carlosalberto	#9827111 lucasmg123	Cultivam-se tulipas em torno do meu castelo.
+pt	#3700859 carlosalberto	#2259193 _undertoad	Ela usava uma fita em torno do cabelo.
+pt	#1555486 alexmarcelo	#24283 zmah47jr	Eu vejo a torre de casa.
+pt	#1246975 alexmarcelo	#1246970 al_ex_an_der	De que tamanho é aquela torre?
+pt	#6394855 Ricardo14	#2584129 CK	Vocês gostam de torta de maçã?
+pt	#1732345 alexmarcelo	#908914 CK	A minha mulher adora torta de maçã.
+pt	#8085243 jvlopes91	#5562501 DostKaplan	O garfo está torto.
+pt	#6154650 carlosalberto	#6154480 OjisanSeiuchi	Meu avô é um trabalhador incansável.
+pt	#1718381 alexmarcelo	#1717863 Amastan	Você já despediu um trabalhador?
+pt	#2656504 carlosalberto	#2656510 MethodGT	Esta tradição passa de pais para filhos.
+pt	#2825930 carlosalberto	#2825836 marcelostockle	A tradição oral tem atravessado os séculos.
+pt	#8482328 alexmarcelo	#3991222 Amastan	Dan tornou-se traficante de drogas.
+pt	#3994338 victorhugosilvaspbr	#3992780 Amastan	Dan trabalhou vendendo drogas para um traficante perigoso.
+pt	#4982872 alexmarcelo	#4981303 PvtMarc	Onde ocorreu a tragédia?
+pt	#2968835 carlosalberto	#2968628 Hybrid	Que traição é essa?
+pt	#11069081 alexmarcelo	#3679101 al_ex_an_der	É possível ser bem sucedido sem nenhum ato de traição?
+pt	#8757832 JGEN	#8592694 CK	Tu sabes quem é o traidor?
+pt	#760137 oleckramo	#761868 Zifre	Há um traidor entre nós.
+pt	#980929 kazenochikara	#980928 kazenochikara	Eu preferiria morrer a trair os meus amigos!
+pt	#4670314 Ricardo14	#2271953 CK	Eu não vou te trair.
+pt	#5540683 bill	#2973355 meerkat	Eu esqueci de trancar a porta da frente.
+pt	#7308987 Ricardo14	#1886137 CK	Você se lembrou de trancar a porta?
+pt	#5604898 bill	#2952332 CK	Eu moro num bairro tranquilo.
+pt	#1450824 une_monica	#246384 CK	Eu estou tranquilo.
+pt	#11394209 MrJuice	#18411 CK	Faremos o pagamento por transferência bancária.
+pt	#8452046 JGEN	#8438332 CK	Você precisará transferir para outro ônibus na próxima parada.
+pt	#1488038 brauliobezerra	#1396341 CK	Para mim é difícil transformar meus pensamentos em palavras.
+pt	#6984339 Ricardo14	#2396212 CK	Eu nunca sofri um acidente de trânsito.
+pt	#12548772 laetitiamg	#374814 saeb	Eu me atrasei por causa do trânsito.
+pt	#7038718 iart61	#11831983 Lumi_alt	A que horas começa a transmissão televisiva?
+pt	#10720819 ajdavidl	#10465880 hecko	A qualidade da transmissão foi satisfatória.
+pt	#6198015 User75171	#6196889 sundown	Por que meios de transporte tu chegaste aqui?
+pt	#6472345 heo598	#6472238 mojeanin	Nós usamos o transporte público.
+pt	#12703049 kleberlucas	#11856349 CK	O pneu traseiro da minha bicicleta está furado.
+pt	#2403520 alexmarcelo	#2402286 CK	Seu carro está com um farol traseiro quebrado.
+pt	#4938395 Ricardo14	#4902887 CK	Eu não espero nenhum tipo de tratamento especial.
+pt	#720936 brauliobezerra	#253540 CK	Eu não estou acostumado a esse tipo de tratamento.
+pt	#8332126 JGEN	#8230009 CK	Eu acho que você é um bom treinador.
+pt	#8544390 bill	#4496633 CK	O treinador disse que eu preciso praticar mais.
+pt	#4936005 Ricardo14	#2547118 CK	Eu ainda estou em treinamento.
+pt	#8575977 Ricardo14	#10337248 DJ_Saidez	Vamos ter que ajustar o seu treinamento.
+pt	#4889226 Ricardo14	#4877633 jshholland	Eu ainda preciso treinar mais.
+pt	#4760304 bill	#4500099 CK	Quando posso treinar?
+pt	#9068699 bill	#8683023 sabretou	Sou o cacique desta tribo.
+pt	#1060880 une_monica	#44185 U2FS	Membros daquela tribo se estabeleceram ao longo do rio.
+pt	#6570365 heo598	#6257639 CK	Eu posso fazer isso em trinta minutos.
+pt	#8309192 JGEN	#8253032 CK	Eu gastei trinta dólares em um livro.
+pt	#4380681 carlosalberto	#9133566 acell	O navio afundou com toda a tripulação.
+pt	#5366090 carlosalberto	#5364215 CK	Três membros da tripulação foram resgatados.
+pt	#4287256 carlosalberto	#251241 CK	Meu coração encheu-se de tristeza.
+pt	#2849272 MarlonX19	#2146900 Lars224	Liberte-se da tristeza, miséria e medo!
+pt	#10788282 megamanenm	#1916096 Spamster	O que eu recebo em troca?
+pt	#2454441 alexmarcelo	#2445271 MethodGT	Em troca, eu lhe dei uma boneca.
+pt	#902307 alexmarcelo	#434750 lukaszpp	Perdoe-me, mas eu não tenho troco.
+pt	#2885806 MarlonX19	#2060037 CK	Eu aprendi um novo truque.
+pt	#5894487 sergiomelo	#5817692 OsoHombre	Pode me mostrar outro truque de mágica?
+pt	#4657960 mervert1	#4657574 mervert1	A princesa foi comida pelo tubarão.
+pt	#5184660 bill	#5182624 CK	Você já viu um tubarão?
+pt	#11309894 DavidDias	#1353550 CS	Nós ainda temos uma televisão de tubo velha.
+pt	#2384084 MethodGT	#298300 CK	Ele espremeu a pasta de dentes do tubo.
+pt	#934127 une_monica	#853238 darinmex	Não se preocupe, eu serei um túmulo.
+pt	#5142938 bill	#2592748 WestofEden	Eu fui visitar o túmulo de meu avô hoje.
+pt	#11041621 bill	#11040603 CK	Meu carro enguiçou no túnel.
+pt	#376483 brauliobezerra	#245084 Zifre	Um novo túnel foi aberto na montanha.
+pt	#2738933 Ricardo14	#2738932 (unknown)	Eu deveria me registrar para aquela turma?
+pt	#9803175 Ricardo14	#9803230 DJ_Saidez	Nós já fomos da mesma turma, não?
+pt	#5834024 bill	#3635897 CK	Meu turno está para terminar.
+pt	#4508504 Ricardo14	#1961856 CK	Eu pensei que o seu turno terminou há algumas horas atrás.
+pt	#9711540 Nylez	#9711451 Nylez	Vocês preferem vinho ou uísque?
+pt	#7227857 Ricardo14	#5916337 CK	Eu tomei um gole de uísque.
+pt	#1882846 alexmarcelo	#1882851 Eldad	Eu não tenho muito apetite ultimamente.
+pt	#2520593 Ctrl_Alt_Del	#2360313 CK	Eu não tenho dormido bem ultimamente.
+pt	#5361020 Wagner1994	#66503 rul	As discussões estragaram a nossa união.
+pt	#3215807 gleydin	#437454 FeuDRenais	União é a nossa força!
+pt	#2421513 alexmarcelo	#2420483 espjulie	Nada separa um par unido pelo destino.
+pt	#8441583 bill	#5852019 CK	Quanto custou seu uniforme escolar?
+pt	#1249406 satsu	#271257 CK	Você tem um uniforme escolar?
+pt	#2149237 alexmarcelo	#2011745 CK	Quer unir-se a nós?
+pt	#6470576 heo598	#1152238 belgavox	Deixe-me me unir a sua causa.
+pt	#8885090 carlosalberto	#8885074 carlosalberto	O que tu sabes sobre esta universidade?
+pt	#9988932 bill	#8452967 Luiaard	Em qual universidade vocês estudaram?
+pt	#2437966 MarlonX19	#1636143 ari_diary	Eu me pergunto se estamos sozinhos no universo.
+pt	#1567895 alexmarcelo	#868536 LittleBoy	Eu me perdi no teu universo.
+pt	#8330014 JGEN	#8236702 CK	Eu não tinha ideia de que era tão urgente.
+pt	#378474 brauliobezerra	#71073 CK	Eu tenho um negócio urgente para tratar com você.
+pt	#1731915 alexmarcelo	#1731153 Amastan	É verdade que vocês se depararam com um urso?
+pt	#1377676 tulio	#8349836 lucasmg123	Eu vi como que um animal preto, era um urso.
+pt	#11140139 jvlopes91	#58699 CK	Esse carro é usado pelo meu pai.
+pt	#5960711 sergiomelo	#5958573 CK	Eu comprei um carro usado.
+pt	#2166952 alexmarcelo	#2167308 CM	Eu só tenho artigos de uso pessoal.
+pt	#6114685 carlosalberto	#6097598 CK	Você não acha que o que eu fiz foi útil?
+pt	#8296773 JGEN	#8264417 CK	Eu espero que este conselho seja útil.
+pt	#1873752 alexmarcelo	#1866503 Spamster	Eu aprendi a ordenhar uma vaca.
+pt	#4161154 mervert1	#2626687 CM	Esta é a minha vaca.
+pt	#5014579 alexmarcelo	#58214 CK	Este assento está vago?
+pt	#1319776 alexmaur	#33674 CM	Não havia um assento vago no hall.
+pt	#965529 une_monica	#389714 CM	Não há nada tão valioso quanto o amor.
+pt	#378844 brauliobezerra	#238994 CK	Nada é mais valioso do que a saúde.
+pt	#2764751 Balamax	#2764743 (unknown)	O vampiro suga meu sangue.
+pt	#6399641 bill	#6399635 Hybrid	O vampiro mordeu o pescoço da mulher.
+pt	#375102 brauliobezerra	#54617 (unknown)	Qual é a vantagem de ler esses livros?
+pt	#2827912 MarlonX19	#945535 spockofvulcan	Qual é a vantagem daquela tecnologia?
+pt	#10823412 carlosalberto	#10823421 carlosalberto	Meu copo está completamente vazio.
+pt	#2165239 alexmarcelo	#44209 CK	Eu encontrei o quarto vazio.
+pt	#5493750 carlosalberto	#5493754 carlosalberto	A língua é o veículo do pensamento.
+pt	#10726095 Advanced	#10345325 LimeGreenTeknii	Remova esse veículo danificado.
+pt	#7316673 Ricardo14	#2014327 CK	Eu quero que você acenda a vela.
+pt	#947168 une_monica	#436763 lukaszpp	Eu gosto de cruzar o lago em um barco à vela.
+pt	#384820 brauliobezerra	#254460 CK	Eu me espantei com a velocidade do carro.
+pt	#6152296 bill	#4015106 CK	Você sabe qual é o limite de velocidade?
+pt	#1564636 alexmarcelo	#1561939 CM	Eu sabia que ele seria o vencedor.
+pt	#6995255 Ricardo14	#3168192 CK	Um de nós poderia ser o vencedor.
+pt	#4242211 carloseperola	#2367862 darinmex	Estou pensando em colocar minha casa à venda.
+pt	#5413789 bill	#3732886 CK	Meu carro não está à venda.
+pt	#8029908 jvlopes91	#7869562 AlanF_US	Este líquido escuro contém veneno.
+pt	#4035453 Balamax	#4035469 Balamax	A suspeita é o veneno da amizade.
+pt	#7160275 Adelpa	#8374109 piterkeo	Isto é um verme.
+pt	#5844404 bill	#3008573 CK	Deixe-me contar a minha versão da história.
+pt	#8656105 Ricardo14	#1318696 CK	Eu escutei uma versão francesa dessa música.
+pt	#5332212 carlosalberto	#2220694 Hybrid	Eu trouxe um, por via das dúvidas.
+pt	#981460 alexmarcelo	#2759126 mervert1	Os frascos são de vidro ou de plástico?
+pt	#8388369 lucasmg123	#1272513 marcelostockle	Em caso de emergência, quebre o vidro.
+pt	#6117574 carlosalberto	#4500304 CK	Tom instalou uma câmera de vigilância.
+pt	#5466300 ToinhoAlam	#2273573 CK	Tom está sob vigilância.
+pt	#6809149 heo598	#5096658 Airvian	A vila na qual eu moro é muito pequena.
+pt	#10747724 omniglotman	#394879 Dorenda	Qual a diferença entre uma vila e uma cidade?
+pt	#2613781 alexmarcelo	#2941438 CM	Eu conseguirei a minha vingança.
+pt	#5052597 Ricardo14	#5051639 CK	Todos nós queríamos vingança.
+pt	#1480885 alexmarcelo	#1477247 CN	Minha família vive aqui há vinte anos.
+pt	#5014420 alexmarcelo	#251815 CK	A minha mãe se casou aos vinte anos.
+pt	#3276273 mervert1	#2868200 Amastan	Tu detestas a violência, não?
+pt	#3947472 muriloricci	#3945072 AlanF_US	Eu sou contra a violência contra as mulheres.
+pt	#5881612 sergiomelo	#5881137 OsoHombre	Fadil pode ser extremamente violento.
+pt	#5907967 sergiomelo	#5907633 OsoHombre	O crime foi incrivelmente violento.
+pt	#1648818 alexmarcelo	#1647222 fengli	Você ainda é virgem?
+pt	#7703936 iart61	#10706968 AutoBot	Ele é virgem.
+pt	#1512302 alexmarcelo	#1522376 erikspen	Meu pendrive está com vírus.
+pt	#3350309 mervert1	#3278201 mervert1	Você não tem medo de ficar infetado pelo vírus?
+pt	#3197493 carlosalberto	#9827147 lucasmg123	Você é nosso visitante número cem mil.
+pt	#2677134 carlosalberto	#13532408 nootley	Ele acompanhou o visitante até à porta.
+pt	#5222038 ToinhoAlam	#4496888 CK	Nós fizemos contato visual.
+pt	#5618364 bill	#2270494 CK	Não faça contato visual!
+pt	#4866906 Ricardo14	#23026 spockofvulcan	Sua ajuda é vital para o sucesso do nosso plano.
+pt	#904155 alexmarcelo	#270791 al_ex_an_der	A água é um recurso natural de importância vital.
+pt	#9932672 Ricardo14	#9932647 CK	Foi uma vitória enorme para a gente.
+pt	#4925514 ToinhoAlam	#4501144 CK	Nós precisávamos dessa vitória.
+pt	#3324239 mervert1	#3016772 patgfisher	Há muitos cavalos na minha vizinhança.
+pt	#4952347 bill	#2330011 CK	Eu cresci nessa vizinhança.
+pt	#11668883 carlosalberto	#11668831 carlosalberto	O papagaio de meu vizinho fala romeno.
+pt	#5861162 bill	#680249 Source_VOA	Meu vizinho foi preso ontem à noite.
+pt	#1048381 brauliobezerra	#953294 CK	Vocês já fizerem algum trabalho voluntário?
+pt	#2533614 alexmarcelo	#2531349 CK	Nós estamos procurando um voluntário.
+pt	#1508649 alexmarcelo	#1507554 corvard	Você não está com vontade de vomitar?
+pt	#1916132 alexmarcelo	#1911899 Spamster	Eu comecei a vomitar.
+pt	#3695994 edson1267camaforte	#2645190 CK	A que hora é o voo de vocês?
+pt	#1107341 alexmarcelo	#687416 lukaszpp	A que horas chega meu voo?
+pt	#6309118 carlosalberto	#6301614 sundown	Eu vos disse, mas vós não escutastes!
+pt	#7305236 carlosalberto	#34682 CK	Permitis que eu vos peça um favor?
+pt	#6310685 carlosalberto	#5386062 Objectivesea	Vocês já foram votar hoje?
+pt	#6954230 Ricardo14	#1951926 Amastan	Em quem eu deveria votar?
+pt	#7443498 Ricardo14	#1123130 Eldad	Eu passei o fim de semana com a vovó.
+pt	#8238895 josivangoncalves	#8154938 AlanF_US	Não foi assim que a vovó fez o recheio.
+pt	#1917289 alexmarcelo	#1886425 CK	Você quer que eu lhe traga uma xícara de café?
+pt	#6994898 Ricardo14	#4296322 mervert1	Eu fiz uma xícara de chocolate quente.
+pt	#987317 alexmarcelo	#987311 (unknown)	Eu ensino crianças de zero a cinco anos.
+pt	#13598078 supermarinete	#13598077 supermarinete	Eu estudei sobre a matéria errada e tirei um zero.
+pt	#2141413 alexmarcelo	#4998241 Jesse	O meu quarto deve estar uma zona.
+pt	#8140383 lucasdcs	#2785722 robbieheslop	Eu prefiro estar em minha própria zona de conforto.
