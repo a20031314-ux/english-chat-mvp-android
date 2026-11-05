@@ -1,0 +1,2782 @@
+{
+ "e|अच्छा": [
+  {
+   "text": "अच्छा, तुम कैसे हो?",
+   "en": "Oh, how are you?",
+   "ko": "아, 잘 지냈어?",
+   "blank": "अच्छा"
+  },
+  {
+   "text": "अच्छा लगा मिलकर।",
+   "en": "It was nice to meet you.",
+   "ko": "만나서 반가웠어.",
+   "blank": "अच्छा"
+  },
+  {
+   "text": "अच्छा, यह क्या है?",
+   "en": "Oh, what is this?",
+   "ko": "아, 이게 뭐야?",
+   "blank": "अच्छा"
+  }
+ ],
+ "e|अपनी-अपनी पसंद": [
+  {
+   "text": "यहाँ सबकी अपनी-अपनी पसंद होती है, इसलिए बहस करने का कोई मतलब नहीं है।",
+   "en": "Everyone has their own preferences here, so there's no point in arguing.",
+   "ko": "여기서는 모두가 자신의 취향이 있으니, 논쟁할 필요가 없어.",
+   "blank": "अपनी-अपनी पसंद"
+  },
+  {
+   "text": "तुम्हें जो खाना अच्छा लगे, वही मंगवा लो, अपनी-अपनी पसंद है।",
+   "en": "Order whatever food you like, everyone has their own preference.",
+   "ko": "먹고 싶은 음식 시켜, 각자 취향이 있으니까.",
+   "blank": "अपनी-अपनी पसंद"
+  },
+  {
+   "text": "किताबें चुनने में अपनी-अपनी पसंद होती है, किसी पर मत हँसो।",
+   "en": "Everyone has their own taste in choosing books, don't laugh at anyone.",
+   "ko": "책 고를 때는 각자 취향이 있으니, 누구를 비웃지 마.",
+   "blank": "अपनी-अपनी पसंद"
+  }
+ ],
+ "e|अब क्या करें": [
+  {
+   "text": "बारिश हो रही है, अब क्या करें",
+   "en": "It's raining, now what should we do?",
+   "ko": "비가 오고 있어, 이제 어떻게 하지?",
+   "blank": "अब क्या करें"
+  },
+  {
+   "text": "खाना जल गया, अब क्या करें",
+   "en": "The food burned, now what should we do?",
+   "ko": "음식이 탔어, 이제 어떻게 하지?",
+   "blank": "अब क्या करें"
+  },
+  {
+   "text": "बस छूट गई, अब क्या करें",
+   "en": "We missed the bus, now what should we do?",
+   "ko": "버스를 놓쳤어, 이제 어떻게 하지?",
+   "blank": "अब क्या करें"
+  }
+ ],
+ "e|अरे यार": [
+  {
+   "text": "अरे यार, इतनी बारिश में बाहर कैसे जाएँगे?",
+   "en": "Oh man, how will we go out in so much rain?",
+   "ko": "아이고, 이렇게 비가 많이 오는데 어떻게 밖에 나가?",
+   "blank": "अरे यार"
+  },
+  {
+   "text": "अरे यार, तुमने फिर से मेरी किताब रख दी क्या?",
+   "en": "Oh man, did you take my book again?",
+   "ko": "아이고, 또 내 책 가져갔어?",
+   "blank": "अरे यार"
+  },
+  {
+   "text": "अरे यार, मुझे तो भूख लग रही है अब।",
+   "en": "Oh man, now I'm really hungry.",
+   "ko": "아이고, 나 이제 진짜 배고파.",
+   "blank": "अरे यार"
+  }
+ ],
+ "e|आख़िरकार": [
+  {
+   "text": "आख़िरकार बारिश रुक ही गई।",
+   "en": "Finally, the rain has stopped.",
+   "ko": "드디어 비가 그쳤어.",
+   "blank": "आख़िरकार"
+  },
+  {
+   "text": "आख़िरकार मुझे वो किताब मिल गई जिसकी मुझे तलाश थी।",
+   "en": "I finally found the book I was looking for.",
+   "ko": "드디어 내가 찾던 책을 찾았어.",
+   "blank": "आख़िरकार"
+  },
+  {
+   "text": "आख़िरकार तुमने मेरा फोन क्यों नहीं उठाया?",
+   "en": "Why didn’t you pick up my call after all?",
+   "ko": "결국 왜 내 전화를 안 받았어?",
+   "blank": "आख़िरकार"
+  }
+ ],
+ "e|आँखों का तारा": [
+  {
+   "text": "तुम तो अपने दादी की आँखों का तारा हो।",
+   "en": "You are really the apple of your grandmother's eye.",
+   "ko": "너는 정말 할머니의 눈에 넣어도 아프지 않을 정도로 소중한 존재야.",
+   "blank": "आँखों का तारा"
+  },
+  {
+   "text": "मेरी छोटी बहन हमारे घर की आँखों का तारा है।",
+   "en": "My little sister is the apple of our family's eye.",
+   "ko": "내 여동생은 우리 집에서 가장 사랑받는 존재야.",
+   "blank": "आँखों का तारा"
+  },
+  {
+   "text": "क्या तुम्हें पता है कि वह अपने माता-पिता की आँखों का तारा है?",
+   "en": "Did you know she is the apple of her parents' eye?",
+   "ko": "그녀가 부모님의 눈에 넣어도 아프지 않은 소중한 존재라는 거 알아?",
+   "blank": "आँखों का तारा"
+  }
+ ],
+ "e|आज क्या कर रहे हो": [
+  {
+   "text": "आज क्या कर रहे हो, बाहर चलना है?",
+   "en": "What are you doing today, want to go out?",
+   "ko": "오늘 뭐하고 있어, 밖에 나갈래?",
+   "blank": "आज क्या कर रहे हो"
+  },
+  {
+   "text": "आज क्या कर रहे हो, कुछ खास है क्या?",
+   "en": "What are you doing today, anything special?",
+   "ko": "오늘 뭐하고 있어, 특별한 일 있어?",
+   "blank": "आज क्या कर रहे हो"
+  },
+  {
+   "text": "हाय, आज क्या कर रहे हो?",
+   "en": "Hi, what are you doing today?",
+   "ko": "안녕, 오늘 뭐하고 있어?",
+   "blank": "आज क्या कर रहे हो"
+  }
+ ],
+ "e|आज सुबह": [
+  {
+   "text": "आज सुबह बहुत ठंड थी।",
+   "en": "It was very cold this morning.",
+   "ko": "오늘 아침은 아주 추웠어요.",
+   "blank": "आज सुबह"
+  },
+  {
+   "text": "आज सुबह मैंने चाय पी।",
+   "en": "I drank tea this morning.",
+   "ko": "오늘 아침에 나는 차를 마셨어요.",
+   "blank": "आज सुबह"
+  },
+  {
+   "text": "क्या आज सुबह बारिश हुई थी?",
+   "en": "Did it rain this morning?",
+   "ko": "오늘 아침에 비가 왔나요?",
+   "blank": "आज सुबह"
+  }
+ ],
+ "e|आप कहना चाह रहे हैं": [
+  {
+   "text": "आप कहना चाह रहे हैं कि हमें अभी निकलना चाहिए?",
+   "en": "Are you saying that we should leave now?",
+   "ko": "지금 떠나야 한다는 뜻인가요?",
+   "blank": "आप कहना चाह रहे हैं"
+  },
+  {
+   "text": "आप कहना चाह रहे हैं कि यह काम मुश्किल है?",
+   "en": "Are you saying that this work is difficult?",
+   "ko": "이 일이 어렵다는 뜻인가요?",
+   "blank": "आप कहना चाह रहे हैं"
+  },
+  {
+   "text": "आप कहना चाह रहे हैं कि सब ठीक हो जाएगा?",
+   "en": "Are you saying that everything will be fine?",
+   "ko": "모든 게 괜찮아질 거라는 뜻인가요?",
+   "blank": "आप कहना चाह रहे हैं"
+  }
+ ],
+ "e|आप कैसे हैं": [
+  {
+   "text": "नमस्ते, आप कैसे हैं?",
+   "en": "Hello, how are you?",
+   "ko": "안녕하세요, 어떻게 지내세요?",
+   "blank": "आप कैसे हैं"
+  },
+  {
+   "text": "आज आप कैसे हैं?",
+   "en": "How are you today?",
+   "ko": "오늘 어떻게 지내세요?",
+   "blank": "आप कैसे हैं"
+  },
+  {
+   "text": "आप कैसे हैं, सब ठीक है?",
+   "en": "How are you, is everything okay?",
+   "ko": "어떻게 지내세요, 다 괜찮으세요?",
+   "blank": "आप कैसे हैं"
+  }
+ ],
+ "e|आप सही कह रहे हैं": [
+  {
+   "text": "आप सही कह रहे हैं, यह रास्ता बाजार की ओर जाता है।",
+   "en": "You are right, this road goes to the market.",
+   "ko": "당신이 맞아요, 이 길이 시장으로 가요.",
+   "blank": "आप सही कह रहे हैं"
+  },
+  {
+   "text": "अगर आपको ऐसा लगता है तो आप सही कह रहे हैं।",
+   "en": "If you feel that way, you are right.",
+   "ko": "당신이 그렇게 느낀다면, 당신이 맞아요.",
+   "blank": "आप सही कह रहे हैं"
+  },
+  {
+   "text": "आप सही कह रहे हैं, हमें थोड़ा इंतजार करना चाहिए।",
+   "en": "You are right, we should wait a little.",
+   "ko": "당신이 맞아요, 우리는 조금 기다려야 해요.",
+   "blank": "आप सही कह रहे हैं"
+  }
+ ],
+ "e|आपका नाम क्या है": [
+  {
+   "text": "नमस्ते, आपका नाम क्या है?",
+   "en": "Hello, what is your name?",
+   "ko": "안녕하세요, 이름이 뭐에요?",
+   "blank": "आपका नाम क्या है"
+  },
+  {
+   "text": "आपका नाम क्या है, कृपया बताइए।",
+   "en": "What is your name, please tell me.",
+   "ko": "이름이 뭐에요, 말씀해 주세요.",
+   "blank": "आपका नाम क्या है"
+  },
+  {
+   "text": "पहली बार मिल रहे हैं, आपका नाम क्या है?",
+   "en": "We are meeting for the first time, what is your name?",
+   "ko": "처음 만났는데, 이름이 뭐에요?",
+   "blank": "आपका नाम क्या है"
+  }
+ ],
+ "e|आपकी बात सही है, लेकिन": [
+  {
+   "text": "आपकी बात सही है, लेकिन मुझे अभी और सोचने की जरूरत है।",
+   "en": "What you say is right, but I still need to think more.",
+   "ko": "당신 말이 맞지만, 저는 아직 더 생각할 필요가 있어요.",
+   "blank": "आपकी बात सही है, लेकिन"
+  },
+  {
+   "text": "आपकी बात सही है, लेकिन हर किसी की राय अलग हो सकती है।",
+   "en": "What you say is right, but everyone can have a different opinion.",
+   "ko": "당신 말이 맞지만, 모두의 의견이 다를 수 있어요.",
+   "blank": "आपकी बात सही है, लेकिन"
+  },
+  {
+   "text": "आपकी बात सही है, लेकिन समय की कमी भी एक बड़ी समस्या है।",
+   "en": "What you say is right, but lack of time is also a big problem.",
+   "ko": "당신 말이 맞지만, 시간 부족도 큰 문제예요.",
+   "blank": "आपकी बात सही है, लेकिन"
+  }
+ ],
+ "e|इस पर सोचना पड़ेगा": [
+  {
+   "text": "इस पर सोचना पड़ेगा कि हम कहाँ घूमने जाएँ।",
+   "en": "We will have to think about where to go for an outing.",
+   "ko": "어디로 소풍 갈지 이 문제는 생각해봐야 해요.",
+   "blank": "इस पर सोचना पड़ेगा"
+  },
+  {
+   "text": "इस पर सोचना पड़ेगा कि क्या नया काम शुरू किया जाए या नहीं।",
+   "en": "We will have to think about whether to start a new job or not.",
+   "ko": "새로운 일을 시작할지 말지 이건 고민해야 해요.",
+   "blank": "इस पर सोचना पड़ेगा"
+  },
+  {
+   "text": "इस पर सोचना पड़ेगा कि आज रात क्या खाना बनाना है।",
+   "en": "We will have to think about what to cook for dinner tonight.",
+   "ko": "오늘 저녁에 뭘 요리할지 이건 생각해봐야 해요.",
+   "blank": "इस पर सोचना पड़ेगा"
+  }
+ ],
+ "e|इसका मतलब यह है": [
+  {
+   "text": "अगर बारिश हो रही है, इसका मतलब यह है कि बाहर छाता लेकर जाना चाहिए।",
+   "en": "If it's raining, it means you should take an umbrella outside.",
+   "ko": "비가 오고 있다면, 이것은 밖에 우산을 가져가야 한다는 뜻이야.",
+   "blank": "इसका मतलब यह है"
+  },
+  {
+   "text": "अगर लाइट बंद है, इसका मतलब यह है कि सब लोग सो रहे हैं।",
+   "en": "If the lights are off, it means everyone is sleeping.",
+   "ko": "불이 꺼져 있다면, 그것은 모두가 자고 있다는 뜻이야.",
+   "blank": "इसका मतलब यह है"
+  },
+  {
+   "text": "अगर वह नहीं आया, इसका मतलब यह है कि उसकी तबियत ठीक नहीं है।",
+   "en": "If he didn’t come, it means he’s not feeling well.",
+   "ko": "그가 오지 않았다면, 그것은 그가 몸이 안 좋다는 뜻이야.",
+   "blank": "इसका मतलब यह है"
+  }
+ ],
+ "e|इसमें कोई शक नहीं": [
+  {
+   "text": "इसमें कोई शक नहीं कि आज बहुत गर्मी है।",
+   "en": "There is no doubt that it's very hot today.",
+   "ko": "오늘 정말 덥다는 건 의심할 여지가 없어.",
+   "blank": "इसमें कोई शक नहीं"
+  },
+  {
+   "text": "इसमें कोई शक नहीं कि तुम्हारी मदद से सब आसान हो गया।",
+   "en": "There is no doubt that everything became easier with your help.",
+   "ko": "네 도움이 있어서 모든 게 쉬워졌다는 건 의심할 필요가 없어.",
+   "blank": "इसमें कोई शक नहीं"
+  },
+  {
+   "text": "इसमें कोई शक नहीं कि वह अपनी मेहनत से सफल हुआ है।",
+   "en": "There is no doubt that he succeeded through his hard work.",
+   "ko": "그가 자신의 노력으로 성공했다는 것은 의심의 여지가 없다.",
+   "blank": "इसमें कोई शक नहीं"
+  }
+ ],
+ "e|उम्मीद है": [
+  {
+   "text": "उम्मीद है तुम जल्दी ठीक हो जाओगे।",
+   "en": "Hope you get well soon.",
+   "ko": "곧 나아지길 바랍니다.",
+   "blank": "उम्मीद है"
+  },
+  {
+   "text": "उम्मीद है आज मौसम अच्छा रहेगा।",
+   "en": "Hope the weather will be good today.",
+   "ko": "오늘 날씨가 좋길 바랍니다.",
+   "blank": "उम्मीद है"
+  },
+  {
+   "text": "उम्मीद है तुम्हारा दिन अच्छा बीतेगा।",
+   "en": "Hope you have a good day.",
+   "ko": "좋은 하루 보내길 바랍니다.",
+   "blank": "उम्मीद है"
+  }
+ ],
+ "e|ऊँट के मुँह में ज़ीरा": [
+  {
+   "text": "इतनी कम तनख्वाह तो ऊँट के मुँह में ज़ीरा जैसी है।",
+   "en": "Such a small salary is like a cumin seed in a camel's mouth.",
+   "ko": "이렇게 적은 월급은 낙타 입에 커민씨 같아.",
+   "blank": "ऊँट के मुँह में ज़ीरा"
+  },
+  {
+   "text": "तुम्हारा ये छोटा सा तोहफा ऊँट के मुँह में ज़ीरा है।",
+   "en": "Your small gift is like a cumin seed in a camel's mouth.",
+   "ko": "네 작은 선물은 낙타 입에 커민씨와 같아.",
+   "blank": "ऊँट के मुँह में ज़ीरा"
+  },
+  {
+   "text": "इतना थोड़ा खाना ऊँट के मुँह में ज़ीरा हो जाएगा।",
+   "en": "Such a small amount of food will be like a cumin seed in a camel's mouth.",
+   "ko": "이렇게 적은 음식은 낙타 입에 커민씨와 같을 거야.",
+   "blank": "ऊँट के मुँह में ज़ीरा"
+  }
+ ],
+ "e|एक तरफ़": [
+  {
+   "text": "एक तरफ़ बारिश हो रही है, दूसरी तरफ़ धूप भी निकल आई है।",
+   "en": "On one side it's raining, on the other side the sun has also come out.",
+   "ko": "한쪽에는 비가 오고, 다른 쪽에는 해가 나왔어.",
+   "blank": "एक तरफ़"
+  },
+  {
+   "text": "एक तरफ़ मुझे पढ़ाई करनी है, दूसरी तरफ़ दोस्तों के साथ भी समय बिताना है।",
+   "en": "On one hand I have to study, on the other hand I want to spend time with friends too.",
+   "ko": "한편으론 공부해야 하고, 다른 한편으론 친구들과도 시간을 보내고 싶어.",
+   "blank": "एक तरफ़"
+  },
+  {
+   "text": "एक तरफ़ बाजार बहुत दूर है, दूसरी तरफ़ घर पर कुछ भी नहीं है।",
+   "en": "On one hand the market is very far, on the other hand there is nothing at home.",
+   "ko": "한쪽으론 시장이 너무 멀고, 다른 쪽으론 집에 아무것도 없어.",
+   "blank": "एक तरफ़"
+  }
+ ],
+ "e|एक मिनट": [
+  {
+   "text": "एक मिनट रुकिए।",
+   "en": "Wait one minute.",
+   "ko": "일 분만 기다리세요.",
+   "blank": "एक मिनट"
+  },
+  {
+   "text": "क्या आप एक मिनट देंगे?",
+   "en": "Will you give me one minute?",
+   "ko": "일 분만 주실 수 있나요?",
+   "blank": "एक मिनट"
+  },
+  {
+   "text": "मैं एक मिनट में आता हूँ।",
+   "en": "I will come in one minute.",
+   "ko": "나는 일 분 안에 올게요.",
+   "blank": "एक मिनट"
+  }
+ ],
+ "e|कल मिलते हैं": [
+  {
+   "text": "ठीक है, कल मिलते हैं।",
+   "en": "Alright, see you tomorrow.",
+   "ko": "알겠어, 내일 만나자.",
+   "blank": "कल मिलते हैं"
+  },
+  {
+   "text": "क्लास के बाद कल मिलते हैं।",
+   "en": "See you tomorrow after class.",
+   "ko": "수업 끝나고 내일 만나자.",
+   "blank": "कल मिलते हैं"
+  },
+  {
+   "text": "अगर समय हो तो कल मिलते हैं।",
+   "en": "If you have time, see you tomorrow.",
+   "ko": "시간 있으면 내일 만나자.",
+   "blank": "कल मिलते हैं"
+  }
+ ],
+ "e|कहाँ है": [
+  {
+   "text": "पानी कहाँ है?",
+   "en": "Where is the water?",
+   "ko": "물은 어디에 있나요?",
+   "blank": "कहाँ है"
+  },
+  {
+   "text": "बिल्ली कहाँ है?",
+   "en": "Where is the cat?",
+   "ko": "고양이는 어디에 있나요?",
+   "blank": "कहाँ है"
+  },
+  {
+   "text": "आपका घर कहाँ है?",
+   "en": "Where is your house?",
+   "ko": "당신의 집은 어디에 있나요?",
+   "blank": "कहाँ है"
+  }
+ ],
+ "e|काश": [
+  {
+   "text": "काश आज बारिश नहीं होती।",
+   "en": "I wish it wasn't raining today.",
+   "ko": "오늘 비가 안 왔으면 좋겠어.",
+   "blank": "काश"
+  },
+  {
+   "text": "काश मेरे पास ज्यादा समय होता।",
+   "en": "I wish I had more time.",
+   "ko": "내게 시간이 더 있었으면 좋겠어.",
+   "blank": "काश"
+  },
+  {
+   "text": "काश हम कल मिल सकते।",
+   "en": "I wish we could meet tomorrow.",
+   "ko": "내일 우리가 만날 수 있으면 좋겠어.",
+   "blank": "काश"
+  }
+ ],
+ "e|कितने का है": [
+  {
+   "text": "यह आम कितने का है?",
+   "en": "How much is this mango?",
+   "ko": "이 망고는 얼마예요?",
+   "blank": "कितने का है"
+  },
+  {
+   "text": "यह किताब कितने का है?",
+   "en": "How much is this book?",
+   "ko": "이 책은 얼마예요?",
+   "blank": "कितने का है"
+  },
+  {
+   "text": "यह खिलौना कितने का है?",
+   "en": "How much is this toy?",
+   "ko": "이 장난감은 얼마예요?",
+   "blank": "कितने का है"
+  }
+ ],
+ "e|कितने बजे": [
+  {
+   "text": "आप स्कूल कितने बजे जाते हैं?",
+   "en": "What time do you go to school?",
+   "ko": "학교에 몇 시에 가요?",
+   "blank": "कितने बजे"
+  },
+  {
+   "text": "हमारी ट्रेन कितने बजे आएगी?",
+   "en": "What time will our train arrive?",
+   "ko": "우리 기차는 몇 시에 올까요?",
+   "blank": "कितने बजे"
+  },
+  {
+   "text": "दुकान कितने बजे खुलती है?",
+   "en": "What time does the shop open?",
+   "ko": "가게는 몇 시에 열려요?",
+   "blank": "कितने बजे"
+  }
+ ],
+ "e|कोई और रास्ता": [
+  {
+   "text": "क्या कोई और रास्ता है?",
+   "en": "Is there any other way?",
+   "ko": "다른 길이 있나요?",
+   "blank": "कोई और रास्ता"
+  },
+  {
+   "text": "हमें कोई और रास्ता ढूंढना होगा।",
+   "en": "We have to find another way.",
+   "ko": "우리는 다른 길을 찾아야 해요.",
+   "blank": "कोई और रास्ता"
+  },
+  {
+   "text": "अगर यह बंद है तो कोई और रास्ता देखो।",
+   "en": "If this is closed, look for another way.",
+   "ko": "이 길이 막혔으면, 다른 길을 찾아봐요.",
+   "blank": "कोई और रास्ता"
+  }
+ ],
+ "e|कोई दिक़्क़त है": [
+  {
+   "text": "तुम्हें कोई दिक़्क़त है क्या?",
+   "en": "Do you have any problem?",
+   "ko": "너 문제 있어?",
+   "blank": "कोई दिक़्क़त है"
+  },
+  {
+   "text": "अगर कोई दिक़्क़त है तो बताओ।",
+   "en": "If there is any problem, tell me.",
+   "ko": "문제 있으면 말해.",
+   "blank": "कोई दिक़्क़त है"
+  },
+  {
+   "text": "यहाँ कोई दिक़्क़त है या सब ठीक है?",
+   "en": "Is there any problem here or is everything fine?",
+   "ko": "여기 문제 있어, 아니면 다 괜찮아?",
+   "blank": "कोई दिक़्क़त है"
+  }
+ ],
+ "e|कोई प्लान है": [
+  {
+   "text": "आज शाम को कोई प्लान है?",
+   "en": "Do you have any plans this evening?",
+   "ko": "오늘 저녁에 아무 계획 있어?",
+   "blank": "कोई प्लान है"
+  },
+  {
+   "text": "संडे के लिए कोई प्लान है?",
+   "en": "Any plans for Sunday?",
+   "ko": "일요일에 아무 계획 있어?",
+   "blank": "कोई प्लान है"
+  },
+  {
+   "text": "कुछ स्पेशल करने का कोई प्लान है?",
+   "en": "Any plans to do something special?",
+   "ko": "특별한 일 할 계획 있어?",
+   "blank": "कोई प्लान है"
+  }
+ ],
+ "e|कोई बात नहीं": [
+  {
+   "text": "कोई बात नहीं, सब ठीक है।",
+   "en": "No problem, everything is fine.",
+   "ko": "괜찮아요, 모두 괜찮아요.",
+   "blank": "कोई बात नहीं"
+  },
+  {
+   "text": "कोई बात नहीं, फिर से कोशिश करो।",
+   "en": "No problem, try again.",
+   "ko": "괜찮아요, 다시 시도해봐요.",
+   "blank": "कोई बात नहीं"
+  },
+  {
+   "text": "कोई बात नहीं, मैं मदद कर दूँगा।",
+   "en": "No problem, I will help.",
+   "ko": "괜찮아요, 내가 도와줄게요.",
+   "blank": "कोई बात नहीं"
+  }
+ ],
+ "e|क्या बात है": [
+  {
+   "text": "तुमने तो कमाल कर दिया, क्या बात है!",
+   "en": "You really did an amazing job, what a thing!",
+   "ko": "정말 대단하게 해냈네, 멋지다!",
+   "blank": "क्या बात है"
+  },
+  {
+   "text": "आज तो मौसम बहुत अच्छा है, क्या बात है।",
+   "en": "The weather is really nice today, that's great.",
+   "ko": "오늘 날씨 정말 좋네, 멋지다.",
+   "blank": "क्या बात है"
+  },
+  {
+   "text": "तुम्हारी डांसिंग देखकर तो बस क्या बात है!",
+   "en": "Watching your dancing is just wonderful!",
+   "ko": "네 춤을 보니 정말 멋지다!",
+   "blank": "क्या बात है"
+  }
+ ],
+ "e|क्या हाल है": [
+  {
+   "text": "नमस्ते, क्या हाल है?",
+   "en": "Hello, how are you?",
+   "ko": "안녕하세요, 어떻게 지내세요?",
+   "blank": "क्या हाल है"
+  },
+  {
+   "text": "बहुत दिन बाद मिल रहे हो, क्या हाल है?",
+   "en": "Meeting after a long time, how are you?",
+   "ko": "오랜만에 만나네요, 어떻게 지내세요?",
+   "blank": "क्या हाल है"
+  },
+  {
+   "text": "आजकल क्या हाल है?",
+   "en": "How are you these days?",
+   "ko": "요즘 어떻게 지내세요?",
+   "blank": "क्या हाल है"
+  }
+ ],
+ "e|क्या हुआ": [
+  {
+   "text": "तुम इतने चुप क्यों हो, क्या हुआ?",
+   "en": "Why are you so quiet, what happened?",
+   "ko": "너 왜 이렇게 조용해, 무슨 일 있어?",
+   "blank": "क्या हुआ"
+  },
+  {
+   "text": "चेहरे पर उदासी क्यों है, क्या हुआ?",
+   "en": "Why is there sadness on your face, what happened?",
+   "ko": "네 얼굴에 왜 슬픔이 있지, 무슨 일 있어?",
+   "blank": "क्या हुआ"
+  },
+  {
+   "text": "अचानक रोने क्यों लगे, क्या हुआ?",
+   "en": "Why did you suddenly start crying, what happened?",
+   "ko": "왜 갑자기 울기 시작했어, 무슨 일 있어?",
+   "blank": "क्या हुआ"
+  }
+ ],
+ "e|ख़राब हो गया": [
+  {
+   "text": "मेरा फोन अचानक ख़राब हो गया।",
+   "en": "My phone suddenly broke down.",
+   "ko": "내 핸드폰이 갑자기 고장 났어.",
+   "blank": "ख़राब हो गया"
+  },
+  {
+   "text": "टीवी फिर से ख़राब हो गया।",
+   "en": "The TV is broken again.",
+   "ko": "TV가 또 고장 났어.",
+   "blank": "ख़राब हो गया"
+  },
+  {
+   "text": "पंखा क्यों ख़राब हो गया?",
+   "en": "Why did the fan break down?",
+   "ko": "선풍기가 왜 고장 났지?",
+   "blank": "ख़राब हो गया"
+  }
+ ],
+ "e|गुस्ताख़ी माफ़": [
+  {
+   "text": "गुस्ताख़ी माफ़, क्या आप थोड़ी देर के लिए दरवाज़ा खोल सकते हैं?",
+   "en": "Excuse me, can you open the door for a moment?",
+   "ko": "실례지만 잠깐 문을 열어주실 수 있나요?",
+   "blank": "गुस्ताख़ी माफ़"
+  },
+  {
+   "text": "गुस्ताख़ी माफ़, मैं आपकी बात बीच में काट रहा हूँ।",
+   "en": "Sorry, I'm interrupting you.",
+   "ko": "실례지만 제가 말씀을 끊고 있습니다.",
+   "blank": "गुस्ताख़ी माफ़"
+  },
+  {
+   "text": "गुस्ताख़ी माफ़, क्या आप दोबारा समझा सकते हैं?",
+   "en": "Sorry, could you explain that again?",
+   "ko": "실례지만 다시 설명해주실 수 있나요?",
+   "blank": "गुस्ताख़ी माफ़"
+  }
+ ],
+ "e|चलता है": [
+  {
+   "text": "कोई बात नहीं, यहाँ ऐसा चलता है।",
+   "en": "No problem, this is how it goes here.",
+   "ko": "괜찮아, 여기서는 이렇게 해.",
+   "blank": "चलता है"
+  },
+  {
+   "text": "अगर देर हो जाए तो भी चलता है।",
+   "en": "It's okay even if you're late.",
+   "ko": "늦어도 괜찮아.",
+   "blank": "चलता है"
+  },
+  {
+   "text": "तुम्हारा तरीका थोड़ा अलग है, पर चलता है।",
+   "en": "Your way is a bit different, but it works.",
+   "ko": "네 방식이 좀 다르지만 괜찮아.",
+   "blank": "चलता है"
+  }
+ ],
+ "e|चलो चलते हैं": [
+  {
+   "text": "चलो चलते हैं, बारिश होने वाली है।",
+   "en": "Let's go, it's about to rain.",
+   "ko": "가자, 곧 비가 올 거야.",
+   "blank": "चलो चलते हैं"
+  },
+  {
+   "text": "चलो चलते हैं, बस आ गई है।",
+   "en": "Let's go, the bus has arrived.",
+   "ko": "가자, 버스가 왔어.",
+   "blank": "चलो चलते हैं"
+  },
+  {
+   "text": "चलो चलते हैं, यहाँ बहुत भीड़ है।",
+   "en": "Let's go, it's too crowded here.",
+   "ko": "가자, 여기 너무 붐벼.",
+   "blank": "चलो चलते हैं"
+  }
+ ],
+ "e|चिंता मत करो": [
+  {
+   "text": "चिंता मत करो, सब ठीक हो जाएगा।",
+   "en": "Don't worry, everything will be fine.",
+   "ko": "걱정하지 마, 모든 게 잘 될 거야.",
+   "blank": "चिंता मत करो"
+  },
+  {
+   "text": "अगर देर हो गई है तो चिंता मत करो।",
+   "en": "If you are late, don't worry.",
+   "ko": "늦었어도 걱정하지 마.",
+   "blank": "चिंता मत करो"
+  },
+  {
+   "text": "चिंता मत करो, मैं तुम्हारी मदद करूंगा।",
+   "en": "Don't worry, I will help you.",
+   "ko": "걱정하지 마, 내가 도와줄게.",
+   "blank": "चिंता मत करो"
+  }
+ ],
+ "e|छोटी बहन": [
+  {
+   "text": "मेरी छोटी बहन स्कूल गई है।",
+   "en": "My little sister went to school.",
+   "ko": "내 여동생은 학교에 갔어.",
+   "blank": "छोटी बहन"
+  },
+  {
+   "text": "छोटी बहन को खाना पसंद है।",
+   "en": "Little sister likes food.",
+   "ko": "여동생은 음식을 좋아해.",
+   "blank": "छोटी बहन"
+  },
+  {
+   "text": "क्या तुम्हारी छोटी बहन घर पर है?",
+   "en": "Is your little sister at home?",
+   "ko": "네 여동생 집에 있어?",
+   "blank": "छोटी बहन"
+  }
+ ],
+ "e|छोड़ो ना": [
+  {
+   "text": "छोड़ो ना, इतनी छोटी सी बात पर क्यों परेशान हो रहे हो?",
+   "en": "Let it go, why are you getting upset over such a small thing?",
+   "ko": "그만해, 이렇게 작은 일로 왜 화내고 있어?",
+   "blank": "छोड़ो ना"
+  },
+  {
+   "text": "छोड़ो ना, कल की बात थी, अब भूल जाओ।",
+   "en": "Let it go, that was yesterday, just forget it now.",
+   "ko": "그만해, 어제 일이었으니 이제 잊어버려.",
+   "blank": "छोड़ो ना"
+  },
+  {
+   "text": "छोड़ो ना, मैं खुद कर लूंगा ये काम।",
+   "en": "Let it go, I’ll do this work myself.",
+   "ko": "그만해, 이 일은 내가 직접 할게.",
+   "blank": "छोड़ो ना"
+  }
+ ],
+ "e|ज़माना बदल गया है": [
+  {
+   "text": "अब तो ज़माना बदल गया है, हर चीज़ ऑनलाइन मिल जाती है।",
+   "en": "Times have changed now, you can get everything online.",
+   "ko": "이제는 시대가 변해서 모든 것을 온라인으로 구할 수 있어요.",
+   "blank": "ज़माना बदल गया है"
+  },
+  {
+   "text": "तुम्हें नहीं लगता कि ज़माना बदल गया है?",
+   "en": "Don't you think times have changed?",
+   "ko": "너도 시대가 변했다고 생각하지 않아?",
+   "blank": "ज़माना बदल गया है"
+  },
+  {
+   "text": "पहले लोग खुद मिलने आते थे, अब ज़माना बदल गया है।",
+   "en": "Earlier people used to come meet in person, but times have changed now.",
+   "ko": "예전에는 사람들이 직접 만나러 왔는데, 이제는 시대가 변했어요.",
+   "blank": "ज़माना बदल गया है"
+  }
+ ],
+ "e|ज़रूर": [
+  {
+   "text": "मैं ज़रूर आऊँगा।",
+   "en": "I will definitely come.",
+   "ko": "나는 꼭 올 거야.",
+   "blank": "ज़रूर"
+  },
+  {
+   "text": "क्या आप मेरी मदद ज़रूर करेंगे?",
+   "en": "Will you definitely help me?",
+   "ko": "너는 꼭 나를 도와줄 거야?",
+   "blank": "ज़रूर"
+  },
+  {
+   "text": "तुम यह काम ज़रूर कर सकते हो।",
+   "en": "You can definitely do this work.",
+   "ko": "너는 이 일을 꼭 할 수 있어.",
+   "blank": "ज़रूर"
+  }
+ ],
+ "e|जल्दी आना": [
+  {
+   "text": "कृपया जल्दी आना।",
+   "en": "Please come quickly.",
+   "ko": "빨리 와 주세요.",
+   "blank": "जल्दी आना"
+  },
+  {
+   "text": "शाम को जल्दी आना।",
+   "en": "Come early in the evening.",
+   "ko": "저녁에 일찍 와.",
+   "blank": "जल्दी आना"
+  },
+  {
+   "text": "पार्टी में जल्दी आना।",
+   "en": "Come early to the party.",
+   "ko": "파티에 일찍 와.",
+   "blank": "जल्दी आना"
+  }
+ ],
+ "e|जहाँ तक मैं समझता हूँ": [
+  {
+   "text": "जहाँ तक मैं समझता हूँ, हमें यहाँ इंतजार करना चाहिए।",
+   "en": "As far as I understand, we should wait here.",
+   "ko": "내가 알기로는, 우리는 여기서 기다려야 해.",
+   "blank": "जहाँ तक मैं समझता हूँ"
+  },
+  {
+   "text": "जहाँ तक मैं समझता हूँ, वह आज ऑफ़िस नहीं आएगी।",
+   "en": "As far as I understand, she won't come to the office today.",
+   "ko": "내가 알기로는, 그녀는 오늘 사무실에 오지 않을 거야.",
+   "blank": "जहाँ तक मैं समझता हूँ"
+  },
+  {
+   "text": "जहाँ तक मैं समझता हूँ, यह फिल्म सबको पसंद आई थी।",
+   "en": "As far as I understand, everyone liked this movie.",
+   "ko": "내가 알기로는, 모두 이 영화를 좋아했어.",
+   "blank": "जहाँ तक मैं समझता हूँ"
+  }
+ ],
+ "e|जाने दो": [
+  {
+   "text": "उससे बहस मत करो, जाने दो।",
+   "en": "Don't argue with him, let it go.",
+   "ko": "그와 싸우지 말고, 그냥 넘겨.",
+   "blank": "जाने दो"
+  },
+  {
+   "text": "अगर तुम्हें अच्छा नहीं लग रहा तो जाने दो।",
+   "en": "If you're not feeling good about it, let it go.",
+   "ko": "네가 마음에 들지 않으면, 그냥 넘겨.",
+   "blank": "जाने दो"
+  },
+  {
+   "text": "इतनी छोटी बात पर क्यों अटक गए हो? जाने दो।",
+   "en": "Why are you stuck on such a small thing? Let it go.",
+   "ko": "그렇게 작은 일에 왜 집착해? 그냥 넘겨.",
+   "blank": "जाने दो"
+  }
+ ],
+ "e|जी": [
+  {
+   "text": "जी, मैं यहाँ हूँ।",
+   "en": "Yes, I am here.",
+   "ko": "네, 저 여기 있어요.",
+   "blank": "जी"
+  },
+  {
+   "text": "क्या आप ठीक हैं, जी?",
+   "en": "Are you okay, ji?",
+   "ko": "괜찮으세요, 지?",
+   "blank": "जी"
+  },
+  {
+   "text": "नमस्ते जी!",
+   "en": "Hello, ji!",
+   "ko": "안녕하세요, 지!",
+   "blank": "जी"
+  }
+ ],
+ "e|ज़्यादा तीखा नहीं": [
+  {
+   "text": "क्या ये ज़्यादा तीखा नहीं है?",
+   "en": "Is this not very spicy?",
+   "ko": "이거 너무 맵지 않아요?",
+   "blank": "ज़्यादा तीखा नहीं"
+  },
+  {
+   "text": "मुझे ज़्यादा तीखा नहीं पसंद है।",
+   "en": "I don't like it very spicy.",
+   "ko": "나는 너무 매운 것을 좋아하지 않아요.",
+   "blank": "ज़्यादा तीखा नहीं"
+  },
+  {
+   "text": "अगर ज़्यादा तीखा नहीं हो तो मुझे दे दो।",
+   "en": "Give it to me if it’s not very spicy.",
+   "ko": "너무 맵지 않으면 나에게 주세요.",
+   "blank": "ज़्यादा तीखा नहीं"
+  }
+ ],
+ "e|टेंशन मत लो": [
+  {
+   "text": "टेंशन मत लो, सब ठीक हो जाएगा।",
+   "en": "Don't worry, everything will be fine.",
+   "ko": "걱정하지 마, 다 잘 될 거야.",
+   "blank": "टेंशन मत लो"
+  },
+  {
+   "text": "अगर इंटरव्यू में गलती हो भी गई तो टेंशन मत लो।",
+   "en": "Even if you made a mistake in the interview, don't worry.",
+   "ko": "면접에서 실수했어도 걱정하지 마.",
+   "blank": "टेंशन मत लो"
+  },
+  {
+   "text": "टेंशन मत लो, मैं तुम्हारी मदद कर दूँगा।",
+   "en": "Don't worry, I will help you.",
+   "ko": "걱정하지 마, 내가 도와줄게.",
+   "blank": "टेंशन मत लो"
+  }
+ ],
+ "e|ठीक है": [
+  {
+   "text": "ठीक है, मैं चलती हूँ।",
+   "en": "Okay, I am leaving.",
+   "ko": "알겠어, 나 갈게.",
+   "blank": "ठीक है"
+  },
+  {
+   "text": "ठीक है, पानी ले आऊँ?",
+   "en": "Okay, should I bring water?",
+   "ko": "알겠어, 물 가져올까?",
+   "blank": "ठीक है"
+  },
+  {
+   "text": "ठीक है, बाद में बात करते हैं।",
+   "en": "Okay, we will talk later.",
+   "ko": "알겠어, 나중에 이야기하자.",
+   "blank": "ठीक है"
+  }
+ ],
+ "e|थक गया": [
+  {
+   "text": "मैं बहुत थक गया हूँ।",
+   "en": "I am very tired.",
+   "ko": "나는 정말로 피곤해.",
+   "blank": "थक गया"
+  },
+  {
+   "text": "आज काम करके थक गया।",
+   "en": "I got tired after working today.",
+   "ko": "오늘 일하고 나서 피곤해졌어.",
+   "blank": "थक गया"
+  },
+  {
+   "text": "इतना चलकर थक गया।",
+   "en": "I am tired from so much walking.",
+   "ko": "너무 많이 걸어서 피곤해.",
+   "blank": "थक गया"
+  }
+ ],
+ "e|थोड़ा और समय": [
+  {
+   "text": "मुझे यह प्रोजेक्ट पूरा करने के लिए थोड़ा और समय चाहिए।",
+   "en": "I need a little more time to finish this project.",
+   "ko": "이 프로젝트를 끝내려면 조금 더 시간이 필요해요.",
+   "blank": "थोड़ा और समय"
+  },
+  {
+   "text": "क्या तुम्हें सोचने के लिए थोड़ा और समय चाहिए?",
+   "en": "Do you need a little more time to think?",
+   "ko": "생각할 시간이 조금 더 필요해요?",
+   "blank": "थोड़ा और समय"
+  },
+  {
+   "text": "अगर आप मुझे थोड़ा और समय देंगे तो मैं सब समझा दूँगा।",
+   "en": "If you give me a little more time, I will explain everything.",
+   "ko": "조금 더 시간을 주시면 모두 설명드릴게요.",
+   "blank": "थोड़ा और समय"
+  }
+ ],
+ "e|दाल में कुछ काला है": [
+  {
+   "text": "मुझे लग रहा है दाल में कुछ काला है, मामला सीधा नहीं है।",
+   "en": "I feel something is fishy, the matter isn’t straightforward.",
+   "ko": "뭔가 수상한 것 같아, 일이 단순하지 않아 보여.",
+   "blank": "दाल में कुछ काला है"
+  },
+  {
+   "text": "तुम इतने चुप क्यों हो? मुझे लगता है दाल में कुछ काला है।",
+   "en": "Why are you so quiet? I think something is up.",
+   "ko": "왜 이렇게 조용해? 뭔가 수상한 것 같아.",
+   "blank": "दाल में कुछ काला है"
+  },
+  {
+   "text": "अगर सब ठीक है तो फिर दाल में कुछ काला है क्यों लग रहा है?",
+   "en": "If everything’s fine, then why does it feel like something’s wrong?",
+   "ko": "모든 게 괜찮다면 왜 뭔가 수상하다고 느껴질까?",
+   "blank": "दाल में कुछ काला है"
+  }
+ ],
+ "e|दिल से": [
+  {
+   "text": "मैंने तुम्हें दिल से माफ़ किया है।",
+   "en": "I have forgiven you from my heart.",
+   "ko": "나는 진심으로 너를 용서했어.",
+   "blank": "दिल से"
+  },
+  {
+   "text": "क्या तुम मुझे दिल से याद करते हो?",
+   "en": "Do you remember me from your heart?",
+   "ko": "넌 나를 진심으로 기억하니?",
+   "blank": "दिल से"
+  },
+  {
+   "text": "उसकी बातें दिल से लग गईं।",
+   "en": "His words touched my heart.",
+   "ko": "그의 말이 내 마음에 와 닿았어.",
+   "blank": "दिल से"
+  }
+ ],
+ "e|दूसरी तरफ़": [
+  {
+   "text": "एक तरफ़ बारिश हो रही है, दूसरी तरफ़ धूप निकल आई है।",
+   "en": "It's raining on one side, and on the other side, the sun is out.",
+   "ko": "한쪽에는 비가 오고, 다른 쪽에는 해가 떴어.",
+   "blank": "दूसरी तरफ़"
+  },
+  {
+   "text": "अगर यहाँ भीड़ है तो दूसरी तरफ़ चलते हैं।",
+   "en": "If it's crowded here, let's go to the other side.",
+   "ko": "여기가 붐비면, 다른 쪽으로 가자.",
+   "blank": "दूसरी तरफ़"
+  },
+  {
+   "text": "सड़क की दूसरी तरफ़ एक छोटी सी दुकान है।",
+   "en": "There is a small shop on the other side of the road.",
+   "ko": "길 건너편에 작은 가게가 있어.",
+   "blank": "दूसरी तरफ़"
+  }
+ ],
+ "e|देर हो गई": [
+  {
+   "text": "मुझे लगता है देर हो गई है।",
+   "en": "I think it's late.",
+   "ko": "나는 늦은 것 같아.",
+   "blank": "देर हो गई"
+  },
+  {
+   "text": "अब तो काफी देर हो गई है, चलें?",
+   "en": "It's quite late now, shall we go?",
+   "ko": "이제 꽤 늦었는데, 갈까?",
+   "blank": "देर हो गई"
+  },
+  {
+   "text": "माफ़ करना, मुझे देर हो गई।",
+   "en": "Sorry, I got late.",
+   "ko": "미안해, 내가 늦었어.",
+   "blank": "देर हो गई"
+  }
+ ],
+ "e|धन्यवाद": [
+  {
+   "text": "आपका खाना बहुत अच्छा था, धन्यवाद।",
+   "en": "Your food was very good, thank you.",
+   "ko": "음식이 정말 맛있었어요, 감사합니다.",
+   "blank": "धन्यवाद"
+  },
+  {
+   "text": "आपने दरवाज़ा खोला, धन्यवाद।",
+   "en": "You opened the door, thank you.",
+   "ko": "문을 열어줘서 감사합니다.",
+   "blank": "धन्यवाद"
+  },
+  {
+   "text": "पानी देने के लिए धन्यवाद।",
+   "en": "Thank you for giving water.",
+   "ko": "물 주셔서 감사합니다.",
+   "blank": "धन्यवाद"
+  }
+ ],
+ "e|धीरे बोलिए": [
+  {
+   "text": "कृपया धीरे बोलिए।",
+   "en": "Please speak slowly.",
+   "ko": "천천히 말해주세요.",
+   "blank": "धीरे बोलिए"
+  },
+  {
+   "text": "मैं समझ नहीं पाया, धीरे बोलिए।",
+   "en": "I did not understand, speak slowly.",
+   "ko": "이해하지 못했어요, 천천히 말해주세요.",
+   "blank": "धीरे बोलिए"
+  },
+  {
+   "text": "आप क्या कह रहे हैं? धीरे बोलिए।",
+   "en": "What are you saying? Speak slowly.",
+   "ko": "무슨 말씀이세요? 천천히 말해주세요.",
+   "blank": "धीरे बोलिए"
+  }
+ ],
+ "e|नमस्ते": [
+  {
+   "text": "नमस्ते, मैं राज हूँ।",
+   "en": "Hello, I am Raj.",
+   "ko": "안녕하세요, 저는 라지입니다.",
+   "blank": "नमस्ते"
+  },
+  {
+   "text": "नमस्ते, स्कूल चलें।",
+   "en": "Hello, let's go to school.",
+   "ko": "안녕하세요, 학교 가요.",
+   "blank": "नमस्ते"
+  },
+  {
+   "text": "नमस्ते, घर आइए।",
+   "en": "Hello, please come home.",
+   "ko": "안녕하세요, 집에 오세요.",
+   "blank": "नमस्ते"
+  }
+ ],
+ "e|नाक में दम": [
+  {
+   "text": "इन बच्चों ने तो मेरी नाक में दम कर दिया है।",
+   "en": "These kids have really worn me out.",
+   "ko": "이 아이들 때문에 정말 지쳤어.",
+   "blank": "नाक में दम"
+  },
+  {
+   "text": "उसकी शिकायतों ने सबकी नाक में दम कर रखा है।",
+   "en": "His complaints have made everyone fed up.",
+   "ko": "그의 불평 때문에 모두가 질렸어.",
+   "blank": "नाक में दम"
+  },
+  {
+   "text": "क्या तुम्हारे पड़ोसी भी नाक में दम करते हैं?",
+   "en": "Do your neighbors also drive you crazy?",
+   "ko": "너희 이웃도 너를 힘들게 하니?",
+   "blank": "नाक में दम"
+  }
+ ],
+ "e|पता नहीं": [
+  {
+   "text": "कब आएंगे, पता नहीं।",
+   "en": "When will they come, I don't know.",
+   "ko": "언제 올지, 몰라요.",
+   "blank": "पता नहीं"
+  },
+  {
+   "text": "यह कहाँ है, पता नहीं।",
+   "en": "Where is it, I don't know.",
+   "ko": "어디 있는지, 몰라요.",
+   "blank": "पता नहीं"
+  },
+  {
+   "text": "क्या खाना मिलेगा, पता नहीं।",
+   "en": "Will we get food, I don't know.",
+   "ko": "음식을 받을 수 있을지, 몰라요.",
+   "blank": "पता नहीं"
+  }
+ ],
+ "e|पिछले हफ़्ते": [
+  {
+   "text": "मैं पिछले हफ़्ते बाज़ार गया था।",
+   "en": "I went to the market last week.",
+   "ko": "나는 지난주에 시장에 갔어요.",
+   "blank": "पिछले हफ़्ते"
+  },
+  {
+   "text": "क्या तुम पिछले हफ़्ते स्कूल गए थे?",
+   "en": "Did you go to school last week?",
+   "ko": "너는 지난주에 학교에 갔니?",
+   "blank": "पिछले हफ़्ते"
+  },
+  {
+   "text": "पिछले हफ़्ते बारिश बहुत हुई थी।",
+   "en": "It rained a lot last week.",
+   "ko": "지난주에 비가 많이 왔어요.",
+   "blank": "पिछले हफ़्ते"
+  }
+ ],
+ "e|पैसे वापस मिलेंगे": [
+  {
+   "text": "अगर टिकट कैंसिल करूँ तो पैसे वापस मिलेंगे।",
+   "en": "If I cancel the ticket, will I get my money back?",
+   "ko": "내가 표를 취소하면 돈을 돌려받을 수 있나요?",
+   "blank": "पैसे वापस मिलेंगे"
+  },
+  {
+   "text": "यहां से भी पैसे वापस मिलेंगे या नहीं?",
+   "en": "Will I get my money back from here too or not?",
+   "ko": "여기서도 돈을 돌려받을 수 있나요, 아니면 안 되나요?",
+   "blank": "पैसे वापस मिलेंगे"
+  },
+  {
+   "text": "कुछ दिन में पैसे वापस मिलेंगे।",
+   "en": "You will get your money back in a few days.",
+   "ko": "며칠 안에 돈을 돌려받을 거예요.",
+   "blank": "पैसे वापस मिलेंगे"
+  }
+ ],
+ "e|फ़ायदा और नुक़सान": [
+  {
+   "text": "हर फैसले के फ़ायदा और नुक़सान होते हैं, सोच समझकर कदम उठाओ।",
+   "en": "Every decision has pros and cons, so take steps thoughtfully.",
+   "ko": "모든 결정에는 장점과 단점이 있으니 신중하게 행동해.",
+   "blank": "फ़ायदा और नुक़सान"
+  },
+  {
+   "text": "क्या तुमने इस नए नियम के फ़ायदा और नुक़सान पर ध्यान दिया है?",
+   "en": "Have you considered the pros and cons of this new rule?",
+   "ko": "이 새로운 규칙의 장점과 단점을 생각해 봤어?",
+   "blank": "फ़ायदा और नुक़सान"
+  },
+  {
+   "text": "ऑनलाइन पढ़ाई के भी फ़ायदा और नुक़सान हैं, सबको पता होना चाहिए।",
+   "en": "Online learning also has pros and cons, everyone should know them.",
+   "ko": "온라인 수업에도 장점과 단점이 있으니 모두가 알아야 해.",
+   "blank": "फ़ायदा और नुक़सान"
+  }
+ ],
+ "e|फिर मिलेंगे": [
+  {
+   "text": "अलविदा, फिर मिलेंगे।",
+   "en": "Goodbye, see you again.",
+   "ko": "안녕, 다시 만나요.",
+   "blank": "फिर मिलेंगे"
+  },
+  {
+   "text": "चलो, फिर मिलेंगे।",
+   "en": "Okay, see you again.",
+   "ko": "그래, 다시 만나요.",
+   "blank": "फिर मिलेंगे"
+  },
+  {
+   "text": "क्लास के बाद फिर मिलेंगे।",
+   "en": "We will meet again after class.",
+   "ko": "수업 끝나고 다시 만나요.",
+   "blank": "फिर मिलेंगे"
+  }
+ ],
+ "e|फिर से बोलिए": [
+  {
+   "text": "माफ़ कीजिए, फिर से बोलिए।",
+   "en": "Sorry, please say it again.",
+   "ko": "죄송해요, 다시 말씀해 주세요.",
+   "blank": "फिर से बोलिए"
+  },
+  {
+   "text": "मैं नहीं समझा, फिर से बोलिए।",
+   "en": "I did not understand, please say it again.",
+   "ko": "이해하지 못했어요, 다시 말씀해 주세요.",
+   "blank": "फिर से बोलिए"
+  },
+  {
+   "text": "क्या आप फिर से बोलिए?",
+   "en": "Can you say it again?",
+   "ko": "다시 말씀해 주실 수 있나요?",
+   "blank": "फिर से बोलिए"
+  }
+ ],
+ "e|बड़ा भाई": [
+  {
+   "text": "मेरा बड़ा भाई स्कूल गया है।",
+   "en": "My elder brother has gone to school.",
+   "ko": "내 큰형은 학교에 갔어요.",
+   "blank": "बड़ा भाई"
+  },
+  {
+   "text": "बड़ा भाई खाना बना रहा है।",
+   "en": "Elder brother is cooking food.",
+   "ko": "큰형이 음식을 만들고 있어요.",
+   "blank": "बड़ा भाई"
+  },
+  {
+   "text": "क्या बड़ा भाई घर पर है?",
+   "en": "Is elder brother at home?",
+   "ko": "큰형이 집에 있어요?",
+   "blank": "बड़ा भाई"
+  }
+ ],
+ "e|बहुत अच्छा": [
+  {
+   "text": "तुम्हारा खाना बहुत अच्छा है।",
+   "en": "Your food is very good.",
+   "ko": "너의 음식은 아주 좋아.",
+   "blank": "बहुत अच्छा"
+  },
+  {
+   "text": "तुम्हारा आइडिया बहुत अच्छा है।",
+   "en": "Your idea is very good.",
+   "ko": "네 아이디어가 아주 좋아.",
+   "blank": "बहुत अच्छा"
+  },
+  {
+   "text": "आज मौसम बहुत अच्छा है।",
+   "en": "The weather is very good today.",
+   "ko": "오늘 날씨가 아주 좋아.",
+   "blank": "बहुत अच्छा"
+  }
+ ],
+ "e|बहुत-बहुत बधाई": [
+  {
+   "text": "तुम्हारी नौकरी लग गई, बहुत-बहुत बधाई!",
+   "en": "You got the job, many many congratulations!",
+   "ko": "너 일자리 얻었구나, 정말 정말 축하해!",
+   "blank": "बहुत-बहुत बधाई"
+  },
+  {
+   "text": "तुम्हारे घर में नए मेहमान आए हैं, बहुत-बहुत बधाई।",
+   "en": "You have a new member in your family, many many congratulations.",
+   "ko": "네 가족에 새 식구가 생겼구나, 정말 정말 축하해.",
+   "blank": "बहुत-बहुत बधाई"
+  },
+  {
+   "text": "तुम्हारी परीक्षा में अच्छे अंक आए, बहुत-बहुत बधाई!",
+   "en": "You got good marks in your exams, many many congratulations!",
+   "ko": "시험에서 좋은 점수 받았구나, 정말 정말 축하해!",
+   "blank": "बहुत-बहुत बधाई"
+  }
+ ],
+ "e|बात तो ठीक है": [
+  {
+   "text": "बात तो ठीक है, लेकिन समय नहीं है हमारे पास।",
+   "en": "That's true, but we don't have time.",
+   "ko": "말이 맞긴 한데, 우리에겐 시간이 없어.",
+   "blank": "बात तो ठीक है"
+  },
+  {
+   "text": "अगर सोचा जाए तो बात तो ठीक है।",
+   "en": "If you think about it, that's true.",
+   "ko": "생각해보면 맞는 말이야.",
+   "blank": "बात तो ठीक है"
+  },
+  {
+   "text": "बात तो ठीक है, पर करना मुश्किल है।",
+   "en": "That's true, but it's hard to do.",
+   "ko": "말이 맞긴 한데, 하기는 어려워.",
+   "blank": "बात तो ठीक है"
+  }
+ ],
+ "e|बात बनाना": [
+  {
+   "text": "तुम हर बार बात बनाना क्यों शुरू कर देते हो?",
+   "en": "Why do you always start making excuses?",
+   "ko": "너는 왜 항상 변명하려고 하는 거야?",
+   "blank": "बात बनाना"
+  },
+  {
+   "text": "अगर उसने सच बताया होता तो बात बनाना नहीं पड़ता।",
+   "en": "If he had told the truth, he wouldn't have to make up stories.",
+   "ko": "그가 진실을 말했다면 변명할 필요가 없었을 거야.",
+   "blank": "बात बनाना"
+  },
+  {
+   "text": "मुझे पता है तुम बस बात बनाना चाह रहे हो, सच क्या है बताओ।",
+   "en": "I know you just want to make excuses, tell me the truth.",
+   "ko": "너가 그냥 변명하려는 거 아는데, 진실을 말해봐.",
+   "blank": "बात बनाना"
+  }
+ ],
+ "e|बात यह है कि": [
+  {
+   "text": "बात यह है कि मुझे आज घर जल्दी जाना है।",
+   "en": "The thing is, I have to go home early today.",
+   "ko": "사실은, 오늘 집에 일찍 가야 해요.",
+   "blank": "बात यह है कि"
+  },
+  {
+   "text": "बात यह है कि मेरा फोन खो गया है।",
+   "en": "The thing is, I lost my phone.",
+   "ko": "사실은, 내 핸드폰을 잃어버렸어요.",
+   "blank": "बात यह है कि"
+  },
+  {
+   "text": "बात यह है कि मुझे भूख लगी है।",
+   "en": "The thing is, I am hungry.",
+   "ko": "사실은, 배가 고파요.",
+   "blank": "बात यह है कि"
+  }
+ ],
+ "e|बाल-बाल बचे": [
+  {
+   "text": "आज तो ट्रैफिक में बाल-बाल बचे, एक बाइक अचानक सामने आ गई थी।",
+   "en": "Today I had a close call in traffic, a bike suddenly came in front of me.",
+   "ko": "오늘 교통에서 아슬아슬하게 피했어, 오토바이가 갑자기 내 앞에 나타났거든.",
+   "blank": "बाल-बाल बचे"
+  },
+  {
+   "text": "पानी में गिरते-गिरते बाल-बाल बचे, फिसल ही गया था पैर।",
+   "en": "I narrowly avoided falling into the water, my foot had slipped.",
+   "ko": "물에 거의 빠질 뻔했어, 발이 미끄러졌거든.",
+   "blank": "बाल-बाल बचे"
+  },
+  {
+   "text": "बिजली का तार गिरा लेकिन हम बाल-बाल बचे, सच में किस्मत अच्छी थी।",
+   "en": "An electric wire fell but we had a narrow escape, we were really lucky.",
+   "ko": "전선이 떨어졌는데 우리는 아슬아슬하게 피했어, 정말 운이 좋았어.",
+   "blank": "बाल-बाल बचे"
+  }
+ ],
+ "e|बिल ले आइए": [
+  {
+   "text": "खाना खा लिया है, अब बिल ले आइए।",
+   "en": "We have finished eating, now please bring the bill.",
+   "ko": "식사 다 했으니, 이제 계산서 가져와 주세요.",
+   "blank": "बिल ले आइए"
+  },
+  {
+   "text": "अगर हो सके तो बिल ले आइए।",
+   "en": "If possible, please bring the bill.",
+   "ko": "가능하다면, 계산서 가져와 주세요.",
+   "blank": "बिल ले आइए"
+  },
+  {
+   "text": "मुझे जल्दी है, कृपया बिल ले आइए।",
+   "en": "I am in a hurry, please bring the bill.",
+   "ko": "저는 급해요, 계산서 가져와 주세요.",
+   "blank": "बिल ले आइए"
+  }
+ ],
+ "e|बिलकुल नहीं": [
+  {
+   "text": "मुझे ठंड लग रही है, लेकिन स्वेटर पहनने का मन बिलकुल नहीं है।",
+   "en": "I'm feeling cold, but I absolutely don't feel like wearing a sweater.",
+   "ko": "추워도 스웨터 입고 싶은 마음이 전혀 없어.",
+   "blank": "बिलकुल नहीं"
+  },
+  {
+   "text": "क्या तुमने मेरी किताब देखी? नहीं, मुझे बिलकुल नहीं पता।",
+   "en": "Have you seen my book? No, I have absolutely no idea.",
+   "ko": "내 책 봤어? 아니, 전혀 몰라.",
+   "blank": "बिलकुल नहीं"
+  },
+  {
+   "text": "आज ऑफिस जाने का मूड बिलकुल नहीं है।",
+   "en": "I'm absolutely not in the mood to go to the office today.",
+   "ko": "오늘 회사 갈 기분이 전혀 아니야.",
+   "blank": "बिलकुल नहीं"
+  }
+ ],
+ "e|बीच का रास्ता": [
+  {
+   "text": "अगर तुम चाहो तो हम दोनों के लिए बीच का रास्ता निकाल सकते हैं।",
+   "en": "If you want, we can find a middle path for both of us.",
+   "ko": "네가 원하면 우리 둘 다를 위한 절충안을 찾을 수 있어.",
+   "blank": "बीच का रास्ता"
+  },
+  {
+   "text": "बहस करने से अच्छा है कि बीच का रास्ता ढूंढ लें।",
+   "en": "Instead of arguing, it's better to find a middle path.",
+   "ko": "논쟁하는 것보다 절충점을 찾는 게 더 좋아.",
+   "blank": "बीच का रास्ता"
+  },
+  {
+   "text": "जब कोई फैसला मुश्किल हो, तो बीच का रास्ता अपनाना सही रहता है।",
+   "en": "When making a decision is hard, choosing the middle path is often right.",
+   "ko": "결정 내리기 힘들 때는 절충안을 선택하는 게 옳아.",
+   "blank": "बीच का रास्ता"
+  }
+ ],
+ "e|बुरा मत मानिए": [
+  {
+   "text": "बुरा मत मानिए, मैं आपकी मदद नहीं कर सकता।",
+   "en": "Please don’t mind, I can’t help you.",
+   "ko": "기분 나쁘게 생각하지 마세요, 제가 도와드릴 수 없어요.",
+   "blank": "बुरा मत मानिए"
+  },
+  {
+   "text": "बुरा मत मानिए, लेकिन मुझे जल्दी जाना होगा।",
+   "en": "Don’t take it the wrong way, but I have to leave soon.",
+   "ko": "기분 상하게 생각하지 마세요, 하지만 저 빨리 가야 해요.",
+   "blank": "बुरा मत मानिए"
+  },
+  {
+   "text": "बुरा मत मानिए, आपकी बात मुझे समझ नहीं आई।",
+   "en": "No offense, but I didn’t understand what you said.",
+   "ko": "기분 나쁘게 생각하지 마세요, 무슨 말씀하신 건지 잘 모르겠어요.",
+   "blank": "बुरा मत मानिए"
+  }
+ ],
+ "e|मज़ा आया": [
+  {
+   "text": "आज पिकनिक में बहुत मज़ा आया।",
+   "en": "It was a lot of fun at the picnic today.",
+   "ko": "오늘 소풍에서 정말 재미있었어.",
+   "blank": "मज़ा आया"
+  },
+  {
+   "text": "तुम्हारे साथ खेलकर मज़ा आया।",
+   "en": "I had fun playing with you.",
+   "ko": "너랑 놀아서 재미있었어.",
+   "blank": "मज़ा आया"
+  },
+  {
+   "text": "फिल्म देखकर मज़ा आया।",
+   "en": "I enjoyed watching the movie.",
+   "ko": "영화 봐서 재미있었어.",
+   "blank": "मज़ा आया"
+  }
+ ],
+ "e|मान लीजिए": [
+  {
+   "text": "मान लीजिए बारिश शुरू हो जाए, तो हम क्या करेंगे?",
+   "en": "Suppose it starts raining, what will we do?",
+   "ko": "비가 오기 시작한다고 하면, 우리는 무엇을 할까요?",
+   "blank": "मान लीजिए"
+  },
+  {
+   "text": "मान लीजिए आपको कोई मदद चाहिए, तो आप किसे बुलाएँगे?",
+   "en": "Suppose you need some help, whom will you call?",
+   "ko": "도움이 필요하다고 하면, 누구를 부르시겠어요?",
+   "blank": "मान लीजिए"
+  },
+  {
+   "text": "मान लीजिए कल छुट्टी मिल जाए, तो आप कहाँ जाना चाहेंगे?",
+   "en": "Suppose you get a day off tomorrow, where would you like to go?",
+   "ko": "내일 휴가가 있다고 하면, 어디에 가고 싶으세요?",
+   "blank": "मान लीजिए"
+  }
+ ],
+ "e|माफ़ कीजिए": [
+  {
+   "text": "माफ़ कीजिए, यह सीट खाली है?",
+   "en": "Excuse me, is this seat free?",
+   "ko": "실례합니다, 이 자리 비었나요?",
+   "blank": "माफ़ कीजिए"
+  },
+  {
+   "text": "माफ़ कीजिए, रास्ता दीजिए।",
+   "en": "Excuse me, please give way.",
+   "ko": "실례합니다, 길 좀 비켜 주세요.",
+   "blank": "माफ़ कीजिए"
+  },
+  {
+   "text": "माफ़ कीजिए, पानी है क्या?",
+   "en": "Excuse me, is there water?",
+   "ko": "실례합니다, 물 있나요?",
+   "blank": "माफ़ कीजिए"
+  }
+ ],
+ "e|मुझे तो पसंद आई": [
+  {
+   "text": "यह किताब मुझे तो पसंद आई।",
+   "en": "I actually liked this book.",
+   "ko": "나는 이 책이 마음에 들었어.",
+   "blank": "मुझे तो पसंद आई"
+  },
+  {
+   "text": "यह डिश मुझे तो पसंद आई।",
+   "en": "I actually liked this dish.",
+   "ko": "나는 이 요리가 마음에 들었어.",
+   "blank": "मुझे तो पसंद आई"
+  },
+  {
+   "text": "उसकी बात मुझे तो पसंद आई।",
+   "en": "I actually liked what he said.",
+   "ko": "나는 그의 말이 마음에 들었어.",
+   "blank": "मुझे तो पसंद आई"
+  }
+ ],
+ "e|मुझे पसंद नहीं": [
+  {
+   "text": "यह खाना मुझे पसंद नहीं।",
+   "en": "I don't like this food.",
+   "ko": "이 음식은 나에게 맛이 없어요.",
+   "blank": "मुझे पसंद नहीं"
+  },
+  {
+   "text": "मुझे पसंद नहीं जब बारिश होती है।",
+   "en": "I don't like it when it rains.",
+   "ko": "비가 올 때 나는 싫어요.",
+   "blank": "मुझे पसंद नहीं"
+  },
+  {
+   "text": "मुझे पसंद नहीं इतनी तेज़ आवाज़।",
+   "en": "I don't like such loud noise.",
+   "ko": "이렇게 시끄러운 소리는 싫어요.",
+   "blank": "मुझे पसंद नहीं"
+  }
+ ],
+ "e|मुझे पसंद है": [
+  {
+   "text": "मुझे पसंद है यहाँ आना।",
+   "en": "I like coming here.",
+   "ko": "여기 오는 것이 저는 좋아요.",
+   "blank": "मुझे पसंद है"
+  },
+  {
+   "text": "संगीत सुनना मुझे पसंद है।",
+   "en": "I like listening to music.",
+   "ko": "음악 듣는 것이 저는 좋아요.",
+   "blank": "मुझे पसंद है"
+  },
+  {
+   "text": "मुझे पसंद है सुबह टहलना।",
+   "en": "I like walking in the morning.",
+   "ko": "나는 아침에 산책하는 것이 좋아요.",
+   "blank": "मुझे पसंद है"
+  }
+ ],
+ "e|मुझे लगता है": [
+  {
+   "text": "मुझे लगता है आज बारिश होगी।",
+   "en": "I think it will rain today.",
+   "ko": "오늘 비가 올 것 같아요.",
+   "blank": "मुझे लगता है"
+  },
+  {
+   "text": "मुझे लगता है वह अभी घर पर है।",
+   "en": "I think he is at home now.",
+   "ko": "그는 지금 집에 있는 것 같아요.",
+   "blank": "मुझे लगता है"
+  },
+  {
+   "text": "मुझे लगता है हमें जल्दी जाना चाहिए।",
+   "en": "I think we should go soon.",
+   "ko": "우리는 곧 가야 할 것 같아요.",
+   "blank": "मुझे लगता है"
+  }
+ ],
+ "e|मुझे समझ नहीं आया": [
+  {
+   "text": "यह क्या है, मुझे समझ नहीं आया।",
+   "en": "What is this, I did not understand.",
+   "ko": "이게 뭐야, 나는 이해하지 못했어.",
+   "blank": "मुझे समझ नहीं आया"
+  },
+  {
+   "text": "आपने क्या कहा, मुझे समझ नहीं आया।",
+   "en": "What did you say, I did not understand.",
+   "ko": "뭐라고 하셨어요, 나는 이해하지 못했어.",
+   "blank": "मुझे समझ नहीं आया"
+  },
+  {
+   "text": "यह कैसे करना है, मुझे समझ नहीं आया।",
+   "en": "How to do this, I did not understand.",
+   "ko": "이거 어떻게 해요, 나는 이해하지 못했어.",
+   "blank": "मुझे समझ नहीं आया"
+  }
+ ],
+ "e|मुद्दे की बात": [
+  {
+   "text": "मुद्दे की बात यह है कि हमें कल तक रिपोर्ट पूरी करनी है।",
+   "en": "The main point is that we need to finish the report by tomorrow.",
+   "ko": "핵심은 우리가 내일까지 보고서를 끝내야 한다는 거야.",
+   "blank": "मुद्दे की बात"
+  },
+  {
+   "text": "मुझे तुम्हारी सारी बातें याद हैं, लेकिन मुद्दे की बात बताओ।",
+   "en": "I remember everything you said, but tell me the main point.",
+   "ko": "네가 한 말 다 기억하지만, 핵심만 말해줘.",
+   "blank": "मुद्दे की बात"
+  },
+  {
+   "text": "मुद्दे की बात यह है कि अब और देर नहीं कर सकते।",
+   "en": "The main point is that we can't delay any longer.",
+   "ko": "핵심은 더 이상 미룰 수 없다는 거야.",
+   "blank": "मुद्दे की बात"
+  }
+ ],
+ "e|मुँह में पानी आ गया": [
+  {
+   "text": "इतनी स्वादिष्ट खुशबू आ रही है कि मुँह में पानी आ गया।",
+   "en": "The aroma is so delicious that my mouth is watering.",
+   "ko": "냄새가 너무 맛있어서 입에 침이 고인다.",
+   "blank": "मुँह में पानी आ गया"
+  },
+  {
+   "text": "तुम्हारे बनाए हुए गोलगप्पे देखकर मुँह में पानी आ गया।",
+   "en": "Just looking at the golgappas you made makes my mouth water.",
+   "ko": "네가 만든 골가빠를 보니 입에 침이 고인다.",
+   "blank": "मुँह में पानी आ गया"
+  },
+  {
+   "text": "गर्मा-गरम समोसे देख कर मुँह में पानी आ गया।",
+   "en": "Seeing the hot samosas made my mouth water.",
+   "ko": "뜨거운 사모사를 보니 입에 침이 고인다.",
+   "blank": "मुँह में पानी आ गया"
+  }
+ ],
+ "e|मेरा नाम": [
+  {
+   "text": "मेरा नाम अजय है।",
+   "en": "My name is Ajay.",
+   "ko": "내 이름은 아제이야.",
+   "blank": "मेरा नाम"
+  },
+  {
+   "text": "मेरा नाम क्या है?",
+   "en": "What is my name?",
+   "ko": "내 이름이 뭐지?",
+   "blank": "मेरा नाम"
+  },
+  {
+   "text": "मेरा नाम यहाँ लिखो।",
+   "en": "Write my name here.",
+   "ko": "여기에 내 이름을 써.",
+   "blank": "मेरा नाम"
+  }
+ ],
+ "e|मेरा सुझाव है": [
+  {
+   "text": "मेरा सुझाव है कि आज हम जल्दी खाना खा लें।",
+   "en": "My suggestion is that we eat early today.",
+   "ko": "내 제안은 오늘 우리가 일찍 식사하자는 거야.",
+   "blank": "मेरा सुझाव है"
+  },
+  {
+   "text": "मेरा सुझाव है कि इस फिल्म को देख लो, बहुत अच्छी है।",
+   "en": "My suggestion is to watch this movie, it's really good.",
+   "ko": "내 제안은 이 영화를 보는 거야, 정말 좋아.",
+   "blank": "मेरा सुझाव है"
+  },
+  {
+   "text": "अगर तुम्हें ठंड लग रही है तो मेरा सुझाव है कि जैकेट पहन लो।",
+   "en": "If you are feeling cold, my suggestion is to wear a jacket.",
+   "ko": "너가 춥다면 내 제안은 자켓을 입으라는 거야.",
+   "blank": "मेरा सुझाव है"
+  }
+ ],
+ "e|मेरे ख़याल से": [
+  {
+   "text": "मेरे ख़याल से आज बारिश होगी।",
+   "en": "I think it will rain today.",
+   "ko": "내 생각에는 오늘 비가 올 거예요.",
+   "blank": "मेरे ख़याल से"
+  },
+  {
+   "text": "मेरे ख़याल से यह फिल्म अच्छी है।",
+   "en": "I think this movie is good.",
+   "ko": "내 생각에는 이 영화가 좋아요.",
+   "blank": "मेरे ख़याल से"
+  },
+  {
+   "text": "मेरे ख़याल से हमें अब चलना चाहिए।",
+   "en": "I think we should go now.",
+   "ko": "내 생각에는 이제 우리 가야 해요.",
+   "blank": "मेरे ख़याल से"
+  }
+ ],
+ "e|मेरे घर में": [
+  {
+   "text": "मेरे घर में एक कुत्ता है।",
+   "en": "There is a dog in my house.",
+   "ko": "내 집에는 개가 있어요.",
+   "blank": "मेरे घर में"
+  },
+  {
+   "text": "मेरे घर में बहुत शांति है।",
+   "en": "It is very peaceful in my house.",
+   "ko": "내 집에는 아주 평화로워요.",
+   "blank": "मेरे घर में"
+  },
+  {
+   "text": "मेरे घर में कौन है?",
+   "en": "Who is in my house?",
+   "ko": "내 집에 누가 있어요?",
+   "blank": "मेरे घर में"
+  }
+ ],
+ "e|मैं ठीक हूँ": [
+  {
+   "text": "नमस्ते, मैं ठीक हूँ।",
+   "en": "Hello, I am fine.",
+   "ko": "안녕하세요, 저는 괜찮아요.",
+   "blank": "मैं ठीक हूँ"
+  },
+  {
+   "text": "आप कैसे हैं? मैं ठीक हूँ।",
+   "en": "How are you? I am fine.",
+   "ko": "잘 지내세요? 저는 괜찮아요.",
+   "blank": "मैं ठीक हूँ"
+  },
+  {
+   "text": "धन्यवाद, मैं ठीक हूँ।",
+   "en": "Thank you, I am fine.",
+   "ko": "감사합니다, 저는 괜찮아요.",
+   "blank": "मैं ठीक हूँ"
+  }
+ ],
+ "e|मैं देख लूँगा": [
+  {
+   "text": "तुम चिंता मत करो, मैं देख लूँगा।",
+   "en": "Don't worry, I will take care of it.",
+   "ko": "걱정하지 마, 내가 알아서 할게.",
+   "blank": "मैं देख लूँगा"
+  },
+  {
+   "text": "अगर दरवाजा बंद नहीं हुआ तो मैं देख लूँगा।",
+   "en": "If the door is not closed, I will check it.",
+   "ko": "문이 닫히지 않았다면 내가 확인할게.",
+   "blank": "मैं देख लूँगा"
+  },
+  {
+   "text": "अगर कुछ गिरा हो तो मैं देख लूँगा।",
+   "en": "If something has fallen, I will look after it.",
+   "ko": "무언가 떨어졌다면 내가 확인할게.",
+   "blank": "मैं देख लूँगा"
+  }
+ ],
+ "e|मैं सहमत नहीं हूँ": [
+  {
+   "text": "माफ़ कीजिए, मैं सहमत नहीं हूँ।",
+   "en": "Sorry, I do not agree.",
+   "ko": "죄송하지만, 저는 동의하지 않아요.",
+   "blank": "मैं सहमत नहीं हूँ"
+  },
+  {
+   "text": "इस बारे में मैं सहमत नहीं हूँ।",
+   "en": "About this, I do not agree.",
+   "ko": "이 점에 대해서는 저는 동의하지 않아요.",
+   "blank": "मैं सहमत नहीं हूँ"
+  },
+  {
+   "text": "क्या आप जानते हैं कि मैं सहमत नहीं हूँ?",
+   "en": "Do you know that I do not agree?",
+   "ko": "제가 동의하지 않는다는 걸 아세요?",
+   "blank": "मैं सहमत नहीं हूँ"
+  }
+ ],
+ "e|यह दीजिए": [
+  {
+   "text": "पानी यह दीजिए।",
+   "en": "Give this water.",
+   "ko": "이 물을 주세요.",
+   "blank": "यह दीजिए"
+  },
+  {
+   "text": "किताब यह दीजिए।",
+   "en": "Give this book.",
+   "ko": "이 책을 주세요.",
+   "blank": "यह दीजिए"
+  },
+  {
+   "text": "चाबी यह दीजिए।",
+   "en": "Give this key.",
+   "ko": "이 열쇠를 주세요.",
+   "blank": "यह दीजिए"
+  }
+ ],
+ "e|वैसे": [
+  {
+   "text": "वैसे तुम कहाँ जा रहे हो?",
+   "en": "By the way, where are you going?",
+   "ko": "그런데, 너 어디 가니?",
+   "blank": "वैसे"
+  },
+  {
+   "text": "वैसे खाना कैसा बना है?",
+   "en": "By the way, how is the food?",
+   "ko": "그런데, 음식 어때?",
+   "blank": "वैसे"
+  },
+  {
+   "text": "वैसे तुम्हारा दिन कैसा था?",
+   "en": "By the way, how was your day?",
+   "ko": "그런데, 오늘 하루 어땠어?",
+   "blank": "वैसे"
+  }
+ ],
+ "e|शुक्रिया": [
+  {
+   "text": "शुक्रिया, आपने मेरी मदद की।",
+   "en": "Thank you, you helped me.",
+   "ko": "고마워요, 저를 도와줬어요.",
+   "blank": "शुक्रिया"
+  },
+  {
+   "text": "शुक्रिया, पानी देने के लिए।",
+   "en": "Thank you for giving water.",
+   "ko": "물 주셔서 고마워요.",
+   "blank": "शुक्रिया"
+  },
+  {
+   "text": "शुक्रिया, यह बहुत अच्छा है।",
+   "en": "Thank you, this is very nice.",
+   "ko": "고마워요, 이거 정말 좋아요.",
+   "blank": "शुक्रिया"
+  }
+ ],
+ "e|सच में": [
+  {
+   "text": "सच में तुम आज जल्दी आ गए।",
+   "en": "You really came early today.",
+   "ko": "너 오늘 진짜 일찍 왔네.",
+   "blank": "सच में"
+  },
+  {
+   "text": "क्या सच में यहाँ बारिश हो रही है?",
+   "en": "Is it really raining here?",
+   "ko": "여기 진짜로 비 오고 있어?",
+   "blank": "सच में"
+  },
+  {
+   "text": "मुझे सच में भूख लगी है।",
+   "en": "I am really hungry.",
+   "ko": "나 진짜 배고파.",
+   "blank": "सच में"
+  }
+ ],
+ "e|सब ठीक है": [
+  {
+   "text": "सब ठीक है, चिंता मत करो।",
+   "en": "Everything is fine, don't worry.",
+   "ko": "모든 게 괜찮으니 걱정하지 마.",
+   "blank": "सब ठीक है"
+  },
+  {
+   "text": "क्या सब ठीक है?",
+   "en": "Is everything fine?",
+   "ko": "모든 게 괜찮아?",
+   "blank": "सब ठीक है"
+  },
+  {
+   "text": "अगर सब ठीक है तो चलो चलते हैं।",
+   "en": "If everything is fine, then let's go.",
+   "ko": "모든 게 괜찮으면 가자.",
+   "blank": "सब ठीक है"
+  }
+ ],
+ "e|सबसे बड़ी समस्या": [
+  {
+   "text": "मेरे हिसाब से सबसे बड़ी समस्या समय की कमी है।",
+   "en": "In my opinion, the biggest problem is lack of time.",
+   "ko": "내 생각에 가장 큰 문제는 시간 부족이야.",
+   "blank": "सबसे बड़ी समस्या"
+  },
+  {
+   "text": "आजकल सबसे बड़ी समस्या ट्रैफिक जाम है।",
+   "en": "These days, the biggest problem is traffic jams.",
+   "ko": "요즘 가장 큰 문제는 교통 체증이야.",
+   "blank": "सबसे बड़ी समस्या"
+  },
+  {
+   "text": "तुम्हारे लिए सबसे बड़ी समस्या क्या है?",
+   "en": "What is the biggest problem for you?",
+   "ko": "너에게 가장 큰 문제는 뭐야?",
+   "blank": "सबसे बड़ी समस्या"
+  }
+ ],
+ "e|समय सीमा": [
+  {
+   "text": "इस काम की समय सीमा कब तक है?",
+   "en": "What is the deadline for this work?",
+   "ko": "이 일의 마감일이 언제인가요?",
+   "blank": "समय सीमा"
+  },
+  {
+   "text": "समय सीमा से पहले सबमिट करना ज़रूरी है।",
+   "en": "It is important to submit before the deadline.",
+   "ko": "마감일 전에 제출하는 것이 중요해요.",
+   "blank": "समय सीमा"
+  },
+  {
+   "text": "अगर समय सीमा बढ़ सकती है तो मुझे बताओ।",
+   "en": "Let me know if the deadline can be extended.",
+   "ko": "마감일을 연장할 수 있으면 알려줘요.",
+   "blank": "समय सीमा"
+  }
+ ],
+ "e|सिर पर चढ़ाना": [
+  {
+   "text": "बच्चों को ज़्यादा सिर पर चढ़ाना ठीक नहीं है।",
+   "en": "It's not good to spoil children too much.",
+   "ko": "아이들을 너무 응석받이로 키우는 건 좋지 않아.",
+   "blank": "सिर पर चढ़ाना"
+  },
+  {
+   "text": "हमेशा सिर पर चढ़ाना भी सही नहीं है, कभी-कभी सख्त होना पड़ता है।",
+   "en": "Always spoiling someone is not right, sometimes you have to be strict.",
+   "ko": "항상 응석받이로 하는 것도 옳지 않고, 때로는 엄격해야 해.",
+   "blank": "सिर पर चढ़ाना"
+  },
+  {
+   "text": "तुम्हें अपने छोटे भाई को सिर पर चढ़ाना बंद कर देना चाहिए।",
+   "en": "You should stop spoiling your little brother.",
+   "ko": "너는 네 남동생을 더 이상 지나치게 응석받이로 만들지 말아야 해.",
+   "blank": "सिर पर चढ़ाना"
+  }
+ ],
+ "e|हद हो गई": [
+  {
+   "text": "इतनी देर से बारिश हो रही है, हद हो गई।",
+   "en": "It's been raining for so long, this is too much.",
+   "ko": "이렇게 오랫동안 비가 내리다니, 정말 너무하다.",
+   "blank": "हद हो गई"
+  },
+  {
+   "text": "हर बार तुम्हारा फोन खो जाना, हद हो गई।",
+   "en": "You losing your phone every time is just too much.",
+   "ko": "너가 매번 핸드폰을 잃어버리는 건 정말 너무하다.",
+   "blank": "हद हो गई"
+  },
+  {
+   "text": "इतना लंबा ट्रैफिक जाम, हद हो गई।",
+   "en": "Such a long traffic jam, this is too much.",
+   "ko": "이렇게 긴 교통 체증이라니, 정말 너무하다.",
+   "blank": "हद हो गई"
+  }
+ ],
+ "e|हाँ": [
+  {
+   "text": "हाँ, मैं ठीक हूँ।",
+   "en": "Yes, I am fine.",
+   "ko": "네, 저는 괜찮아요.",
+   "blank": "हाँ"
+  },
+  {
+   "text": "क्या हाँ यह तुम्हारा है?",
+   "en": "Is yes, this yours?",
+   "ko": "네, 이거 너 거야?",
+   "blank": "हाँ"
+  },
+  {
+   "text": "हाँ, मुझे पानी चाहिए।",
+   "en": "Yes, I want water.",
+   "ko": "네, 물 주세요.",
+   "blank": "हाँ"
+  }
+ ],
+ "e|हो सकता है": [
+  {
+   "text": "वह अभी घर पर हो सकता है।",
+   "en": "He might be at home right now.",
+   "ko": "그는 지금 집에 있을 수도 있어요.",
+   "blank": "हो सकता है"
+  },
+  {
+   "text": "आज दुकान बंद हो सकता है।",
+   "en": "The shop might be closed today.",
+   "ko": "오늘 가게가 문을 닫았을 수도 있어요.",
+   "blank": "हो सकता है"
+  },
+  {
+   "text": "कल बारिश हो सकता है।",
+   "en": "It might rain tomorrow.",
+   "ko": "내일 비가 올 수도 있어요.",
+   "blank": "हो सकता है"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "मैं डॉक्टर हूँ।",
+   "en": "I am a doctor.",
+   "ko": "저는 의사예요.",
+   "blank": "हूँ"
+  },
+  {
+   "text": "वह शिक्षक हैं।",
+   "en": "That person is a teacher.",
+   "ko": "그 사람은 선생님이에요.",
+   "blank": "हैं"
+  },
+  {
+   "text": "हम पुराने दोस्त हैं।",
+   "en": "We are old friends.",
+   "ko": "우리는 오래된 친구예요.",
+   "blank": "हैं"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "क्या यह आपकी किताब है?",
+   "en": "Is this your book?",
+   "ko": "이것은 당신의 책인가요?",
+   "blank": "क्या यह"
+  },
+  {
+   "text": "क्या वहाँ पानी है?",
+   "en": "Is there water there?",
+   "ko": "거기에 물이 있나요?",
+   "blank": "क्या वहाँ"
+  },
+  {
+   "text": "क्या यह सही है?",
+   "en": "Is this correct?",
+   "ko": "이것이 맞나요?",
+   "blank": "क्या यह"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "यह मेरा घर है।",
+   "en": "This is my house.",
+   "ko": "이것은 내 집입니다.",
+   "blank": "मेरा"
+  },
+  {
+   "text": "यह मेरी गाड़ी है।",
+   "en": "This is my car.",
+   "ko": "이것은 내 자동차입니다.",
+   "blank": "मेरी"
+  },
+  {
+   "text": "ये मेरे दोस्त हैं।",
+   "en": "These are my friends.",
+   "ko": "이들은 내 친구들입니다.",
+   "blank": "मेरे"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "वह मेरी किताब है।",
+   "en": "That is my book.",
+   "ko": "저것은 내 책이에요.",
+   "blank": "वह"
+  },
+  {
+   "text": "यह कौन है?",
+   "en": "Who is this?",
+   "ko": "이 사람은 누구에요?",
+   "blank": "यह"
+  },
+  {
+   "text": "यह पानी है।",
+   "en": "This is water.",
+   "ko": "이것은 물이에요.",
+   "blank": "यह"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "मैं दिल्ली से हूँ।",
+   "en": "I am from Delhi.",
+   "ko": "나는 델리에서 왔어요.",
+   "blank": "से"
+  },
+  {
+   "text": "पानी बोतल में है।",
+   "en": "The water is in the bottle.",
+   "ko": "물은 병 안에 있어요.",
+   "blank": "में"
+  },
+  {
+   "text": "मैं घर में हूँ।",
+   "en": "I am in the house.",
+   "ko": "나는 집에 있어.",
+   "blank": "में"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "बाजार कहाँ है?",
+   "en": "Where is the market?",
+   "ko": "시장 어디에요?",
+   "blank": "कहाँ"
+  },
+  {
+   "text": "किताब कहाँ है?",
+   "en": "Where is the book?",
+   "ko": "책이 어디에 있나요?",
+   "blank": "कहाँ"
+  },
+  {
+   "text": "चाबी कहाँ है?",
+   "en": "Where is the key?",
+   "ko": "열쇠가 어디에 있나요?",
+   "blank": "कहाँ"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "मुझे टिकट चाहिए।",
+   "en": "I need a ticket.",
+   "ko": "표가 필요해요.",
+   "blank": "चाहिए"
+  },
+  {
+   "text": "बच्चों को दूध चाहिए।",
+   "en": "The children need milk.",
+   "ko": "아이들에게 우유가 필요해요.",
+   "blank": "चाहिए"
+  },
+  {
+   "text": "हमें एक कमरा चाहिए।",
+   "en": "We need a room.",
+   "ko": "방이 하나 필요해요.",
+   "blank": "चाहिए"
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "यहाँ आइए।",
+   "en": "Please come here.",
+   "ko": "여기로 오세요.",
+   "blank": "आइए।"
+  },
+  {
+   "text": "दरवाज़ा खोलिए।",
+   "en": "Please open the door.",
+   "ko": "문을 열어 주세요.",
+   "blank": "खोलिए।"
+  },
+  {
+   "text": "पानी पीजिए।",
+   "en": "Please drink water.",
+   "ko": "물 드세요.",
+   "blank": "पीजिए।"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "मैं हर दिन चाय पीता हूँ।",
+   "en": "I drink tea every day.",
+   "ko": "나는 매일 차를 마셔요.",
+   "blank": "पीता हूँ"
+  },
+  {
+   "text": "मैं शाम को पार्क में चलता हूँ।",
+   "en": "I walk in the park in the evening.",
+   "ko": "나는 저녁에 공원에서 걸어요.",
+   "blank": "चलता हूँ"
+  },
+  {
+   "text": "मैं स्कूल के बाद पढ़ाई करती हूँ।",
+   "en": "I study after school.",
+   "ko": "나는 학교 끝나고 공부해요.",
+   "blank": "करती हूँ"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "मैं किताब पढ़ रहा हूँ।",
+   "en": "I am reading a book.",
+   "ko": "나는 책을 읽고 있어요.",
+   "blank": "रहा हूँ"
+  },
+  {
+   "text": "मैं गाना गा रही हूँ।",
+   "en": "I am singing a song.",
+   "ko": "나는 노래를 부르고 있어요.",
+   "blank": "रही हूँ"
+  },
+  {
+   "text": "मैं बाजार जा रहा हूँ।",
+   "en": "I am going to the market.",
+   "ko": "나는 시장에 가고 있어요.",
+   "blank": "रहा हूँ"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "मैं शाम को खाना बनाऊँगा।",
+   "en": "I will cook food in the evening.",
+   "ko": "저는 저녁에 요리를 할 거예요.",
+   "blank": "बनाऊँगा।"
+  },
+  {
+   "text": "मैं बारिश होने से पहले छाता लाऊँगा।",
+   "en": "I will bring an umbrella before it rains.",
+   "ko": "비 오기 전에 우산을 가져올 거예요.",
+   "blank": "लाऊँगा।"
+  },
+  {
+   "text": "इस रविवार मैं पार्क जाऊँगी।",
+   "en": "I will go to the park this Sunday.",
+   "ko": "이번 일요일에 공원에 갈 거예요.",
+   "blank": "जाऊँगी।"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "कल रात मैं जल्दी सो गया।",
+   "en": "Last night I went to sleep early.",
+   "ko": "어젯밤 나는 일찍 잤어.",
+   "blank": "सो गया।"
+  },
+  {
+   "text": "सुबह वह बाज़ार गई।",
+   "en": "In the morning she went to the market.",
+   "ko": "아침에 그녀는 시장에 갔어.",
+   "blank": "गई।"
+  },
+  {
+   "text": "कल शाम मैं पार्क गया।",
+   "en": "Yesterday evening I went to the park.",
+   "ko": "어제 저녁 나는 공원에 갔어.",
+   "blank": "गया।"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "मुझे संगीत पसंद है।",
+   "en": "I like music.",
+   "ko": "저는 음악을 좋아해요.",
+   "blank": "पसंद है"
+  },
+  {
+   "text": "उन्हें बारिश पसंद है।",
+   "en": "They like the rain.",
+   "ko": "그 사람들은 비를 좋아해요.",
+   "blank": "पसंद है"
+  },
+  {
+   "text": "बच्चों को खेल पसंद है।",
+   "en": "The children like games.",
+   "ko": "아이들은 놀이를 좋아해요.",
+   "blank": "पसंद है"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "स्कूल के पास एक पार्क है।",
+   "en": "There is a park near the school.",
+   "ko": "학교 근처에 공원이 있어요.",
+   "blank": "के पास"
+  },
+  {
+   "text": "नाश्ते के बाद मैं पढ़ाई करता हूँ।",
+   "en": "I study after breakfast.",
+   "ko": "아침 식사 후에 공부해요.",
+   "blank": "के बाद"
+  },
+  {
+   "text": "काम से पहले मैं चाय पीता हूँ।",
+   "en": "I drink tea before work.",
+   "ko": "일하기 전에 차를 마셔요.",
+   "blank": "से पहले"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "कक्षा नौ बजे शुरू होती है।",
+   "en": "The class starts at nine o'clock.",
+   "ko": "수업은 아홉 시에 시작해요.",
+   "blank": "नौ बजे"
+  },
+  {
+   "text": "मैं तीन बजे घर जाता हूँ।",
+   "en": "I go home at three o'clock.",
+   "ko": "나는 세 시에 집에 가요.",
+   "blank": "तीन बजे"
+  },
+  {
+   "text": "तुम कब बजे आओगे?",
+   "en": "When will you come?",
+   "ko": "너 언제 올 거야?",
+   "blank": "कब बजे"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "मैंने नया बैग ख़रीदा।",
+   "en": "I bought a new bag.",
+   "ko": "나는 새 가방을 샀어.",
+   "blank": "मैंने"
+  },
+  {
+   "text": "मैंने सुबह चाय पी।",
+   "en": "I drank tea in the morning.",
+   "ko": "나는 아침에 차를 마셨어.",
+   "blank": "मैंने"
+  },
+  {
+   "text": "मैंने किताब पढ़ी।",
+   "en": "I read a book.",
+   "ko": "나는 책을 읽었어.",
+   "blank": "मैंने"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "मैं गाना गा सकता हूँ।",
+   "en": "I can sing a song.",
+   "ko": "나는 노래를 부를 수 있어요.",
+   "blank": "सकता हूँ।"
+  },
+  {
+   "text": "क्या आप दरवाज़ा खोल सकते हैं?",
+   "en": "Can you open the door?",
+   "ko": "문을 열 수 있나요?",
+   "blank": "सकते हैं?"
+  },
+  {
+   "text": "मैं जल्दी नहीं आ सकता हूँ।",
+   "en": "I cannot come early.",
+   "ko": "나는 일찍 올 수 없어요.",
+   "blank": "सकता हूँ।"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "हमें जल्दी निकलना चाहिए।",
+   "en": "We should leave early.",
+   "ko": "우리는 일찍 나가야 해요.",
+   "blank": "जल्दी निकलना चाहिए।"
+  },
+  {
+   "text": "क्या मुझे आराम करना चाहिए?",
+   "en": "Should I rest?",
+   "ko": "제가 쉬어야 할까요?",
+   "blank": "आराम करना चाहिए?"
+  },
+  {
+   "text": "तुम्हें पानी पीना चाहिए।",
+   "en": "You should drink water.",
+   "ko": "너는 물을 마셔야 해.",
+   "blank": "पानी पीना चाहिए।"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "जब मम्मी आईं, मैं टीवी देख रहा था।",
+   "en": "When mom came, I was watching TV.",
+   "ko": "엄마가 오셨을 때, 나는 TV를 보고 있었어.",
+   "blank": "रहा था।"
+  },
+  {
+   "text": "जब बारिश शुरू हुई, वह घर जा रही थी।",
+   "en": "When it started raining, she was going home.",
+   "ko": "비가 오기 시작했을 때, 그녀는 집에 가고 있었어.",
+   "blank": "रही थी।"
+  },
+  {
+   "text": "जब तुमने बुलाया, हम खाना बना रहे थे।",
+   "en": "When you called, we were cooking food.",
+   "ko": "네가 불렀을 때, 우리는 음식을 만들고 있었어.",
+   "blank": "रहे थे।"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "अगर तुम जल्दी आओगे तो फिल्म देख सकते हैं।",
+   "en": "If you come early, we can watch a movie.",
+   "ko": "네가 일찍 오면, 우리는 영화를 볼 수 있어.",
+   "blank": "अगर"
+  },
+  {
+   "text": "अगर भूख लगी है तो मुझे बताइए।",
+   "en": "If you are hungry, tell me.",
+   "ko": "배고프면 나에게 말해 주세요.",
+   "blank": "अगर"
+  },
+  {
+   "text": "अगर समय मिले तो कॉल करना।",
+   "en": "If you get time, call me.",
+   "ko": "시간이 있으면 전화해.",
+   "blank": "अगर"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "हो सकता है कि वह घर पर हो।",
+   "en": "Maybe he is at home.",
+   "ko": "아마 그가 집에 있을 거예요.",
+   "blank": "कि"
+  },
+  {
+   "text": "उम्मीद है कि तुम जल्दी आओगे।",
+   "en": "Hope you come soon.",
+   "ko": "네가 곧 오길 바래요.",
+   "blank": "कि"
+  },
+  {
+   "text": "उम्मीद है कि सब ठीक है।",
+   "en": "Hopefully everything is fine.",
+   "ko": "모든 것이 괜찮길 바라요.",
+   "blank": "कि"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "मैं आपका काम कर दूँगा।",
+   "en": "I will do your work.",
+   "ko": "제가 당신의 일을 해드릴게요.",
+   "blank": "कर दूँगा।"
+  },
+  {
+   "text": "क्या आपने चाय पी ली?",
+   "en": "Did you drink the tea?",
+   "ko": "차 마셨어요?",
+   "blank": "पी ली?"
+  },
+  {
+   "text": "मेरी किताब खो गई।",
+   "en": "My book got lost.",
+   "ko": "제 책이 잃어버렸어요.",
+   "blank": "खो गई।"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "अगर बारिश नहीं हो रही होती तो हम पार्क जाते।",
+   "en": "If it weren't raining, we would go to the park.",
+   "ko": "비가 오지 않고 있었다면 우리는 공원에 갔을 거야.",
+   "blank": "अगर बारिश नहीं हो रही होती तो"
+  },
+  {
+   "text": "अगर तुम समय पर आए होते तो फिल्म शुरू से देखते।",
+   "en": "If you had come on time, you would have watched the movie from the start.",
+   "ko": "네가 제시간에 왔다면 처음부터 영화를 봤을 거야.",
+   "blank": "अगर तुम समय पर आए होते तो"
+  },
+  {
+   "text": "अगर मेरे पास और पैसे होते तो मैं नया फोन खरीदता।",
+   "en": "If I had more money, I would buy a new phone.",
+   "ko": "내가 돈이 더 있었다면 새 폰을 샀을 거야.",
+   "blank": "अगर मेरे पास और पैसे होते तो"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "मेरा सुझाव है कि हम पहले खाना खा लें।",
+   "en": "My suggestion is that we eat first.",
+   "ko": "제 제안은 우리가 먼저 밥을 먹자는 거예요.",
+   "blank": "कि हम पहले खाना खा लें"
+  },
+  {
+   "text": "मेरा सुझाव है कि हम पार्क में चलें।",
+   "en": "My suggestion is that we walk in the park.",
+   "ko": "제 제안은 우리 공원에서 산책하자는 거예요.",
+   "blank": "कि हम पार्क में चलें"
+  },
+  {
+   "text": "मेरा सुझाव है कि हम इस बारे में सोचें।",
+   "en": "My suggestion is that we think about this.",
+   "ko": "제 제안은 우리가 이 일에 대해 생각해 보자는 거예요.",
+   "blank": "कि हम इस बारे में सोचें"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "यह काम आज ही पूरा किया जाएगा।",
+   "en": "This work will be completed today itself.",
+   "ko": "이 일은 오늘 바로 끝낼 것입니다.",
+   "blank": "किया जाएगा।"
+  },
+  {
+   "text": "रिपोर्ट कब जमा की जाएगी?",
+   "en": "When will the report be submitted?",
+   "ko": "보고서는 언제 제출될까요?",
+   "blank": "की जाएगी?"
+  },
+  {
+   "text": "पार्सल शाम तक भेज दिया जाएगा।",
+   "en": "The parcel will be sent by this evening.",
+   "ko": "소포는 오늘 저녁까지 보내질 거예요.",
+   "blank": "भेज दिया जाएगा।"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "जो किताब तुमने दी थी, वह बहुत रोचक थी।",
+   "en": "The book you gave was very interesting.",
+   "ko": "네가 준 책이 정말 흥미로웠어.",
+   "blank": "जो किताब तुमने दी थी, वह"
+  },
+  {
+   "text": "जो जगह हमने देखी थी, वह बहुत सुंदर थी।",
+   "en": "The place we saw was very beautiful.",
+   "ko": "우리가 봤던 그 장소는 정말 아름다웠어.",
+   "blank": "जो जगह हमने देखी थी, वह"
+  },
+  {
+   "text": "जो फिल्म कल दिखाई गई थी, वह सबको पसंद आई।",
+   "en": "The movie shown yesterday was liked by everyone.",
+   "ko": "어제 상영된 그 영화는 모두가 좋아했어.",
+   "blank": "जो फिल्म कल दिखाई गई थी, वह"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "खाना खा कर ही मैं बाहर जाऊँगा।",
+   "en": "I will go out only after having eaten.",
+   "ko": "먹고 나서야 밖에 나갈 거야.",
+   "blank": "खा कर"
+  },
+  {
+   "text": "कपड़े धो कर अब मैं आराम करूँगा।",
+   "en": "Having washed the clothes, now I will rest.",
+   "ko": "옷을 빨고 이제 쉴 거야.",
+   "blank": "धो कर"
+  },
+  {
+   "text": "सबसे बात कर के उसने फैसला लिया।",
+   "en": "Having talked to everyone, he made a decision.",
+   "ko": "모두와 이야기한 후에 그는 결정을 내렸어.",
+   "blank": "कर के"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "वह अभी ऑफिस में होगा।",
+   "en": "He must be in the office right now.",
+   "ko": "그는 지금 사무실에 있을 거야.",
+   "blank": "होगा।"
+  },
+  {
+   "text": "तुम्हारा फोन कहीं गिर गया होगा।",
+   "en": "Your phone must have fallen somewhere.",
+   "ko": "네 폰이 어딘가에 떨어졌을 거야.",
+   "blank": "होगा।"
+  },
+  {
+   "text": "आज बाहर बहुत ठंड होगी।",
+   "en": "It must be very cold outside today.",
+   "ko": "오늘 밖이 아주 추울 거야.",
+   "blank": "होगी।"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "पहला कमरा बड़ा है, जबकि दूसरा ज्यादा रोशनी वाला है।",
+   "en": "The first room is big, while the second one is brighter.",
+   "ko": "첫 번째 방은 크고, 반면 두 번째 방은 더 밝아요.",
+   "blank": "जबकि"
+  },
+  {
+   "text": "मौसम ठंडा है, फिर भी लोग बाहर घूम रहे हैं।",
+   "en": "The weather is cold, yet people are out walking.",
+   "ko": "날씨가 추운데도, 사람들이 밖에서 산책하고 있어요.",
+   "blank": "फिर भी"
+  },
+  {
+   "text": "एक तरफ़ यहाँ शांति है, दूसरी तरफ़ सड़क बहुत पास है।",
+   "en": "On one hand, it's peaceful here; on the other, the road is very close.",
+   "ko": "한편으로는 여기가 조용하지만, 다른 한편으로는 도로가 아주 가까워요.",
+   "blank": "एक तरफ़"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "तू यहाँ क्यों आया है?",
+   "en": "Why did you come here?",
+   "ko": "너 여기 왜 왔어?",
+   "blank": "तू"
+  },
+  {
+   "text": "तुम ज़रा खिड़की खोल दो।",
+   "en": "Please open the window.",
+   "ko": "창문 좀 열어 줘.",
+   "blank": "तुम"
+  },
+  {
+   "text": "आप चाय पिएँगे क्या?",
+   "en": "Would you like some tea?",
+   "ko": "차 드시겠어요?",
+   "blank": "आप"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "आपका अभिवादन स्वीकार करें।",
+   "en": "Please accept my greetings.",
+   "ko": "제 인사를 받아주세요.",
+   "blank": "अभिवादन"
+  },
+  {
+   "text": "क्या आप मुझे मार्गदर्शन कर सकते हैं?",
+   "en": "Can you guide me?",
+   "ko": "저를 안내해 주실 수 있나요?",
+   "blank": "मार्गदर्शन"
+  },
+  {
+   "text": "आपसे निवेदन है कि थोड़ा धीरे बोलें।",
+   "en": "I request you to speak a bit slowly.",
+   "ko": "좀 천천히 말씀해 주시길 부탁드립니다.",
+   "blank": "निवेदन"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "मैं किताब पढ़ते-पढ़ते सो बैठा।",
+   "en": "I ended up falling asleep while reading the book.",
+   "ko": "책을 읽다가 결국 잠들고 말았어.",
+   "blank": "सो बैठा"
+  },
+  {
+   "text": "आज बारिश में भीगना पड़ गया।",
+   "en": "Today I had to get soaked in the rain.",
+   "ko": "오늘은 비에 젖을 수밖에 없었어.",
+   "blank": "भीगना पड़ गया"
+  },
+  {
+   "text": "मैंने सारे कपड़े धो डाले।",
+   "en": "I washed all the clothes at once.",
+   "ko": "나는 옷을 모두 한 번에 다 빨아버렸어.",
+   "blank": "धो डाले"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "बारिश तेज़ होती जा रही है।",
+   "en": "The rain is getting heavier.",
+   "ko": "비가 점점 더 세지고 있어요.",
+   "blank": "होती जा रही है।"
+  },
+  {
+   "text": "तुम हमेशा शिकायत करते रहते हो।",
+   "en": "You keep complaining all the time.",
+   "ko": "너는 항상 불평만 하고 있어.",
+   "blank": "करते रहते हो।"
+  },
+  {
+   "text": "उसकी सेहत सुधरती जा रही है।",
+   "en": "His health is improving gradually.",
+   "ko": "그의 건강이 점점 더 좋아지고 있어요.",
+   "blank": "सुधरती जा रही है।"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "मैंने तो तुम्हें पहले ही समझाया था।",
+   "en": "I had already explained it to you.",
+   "ko": "나는 이미 너에게 설명했었어.",
+   "blank": "तो"
+  },
+  {
+   "text": "यह किताब मुझे भी चाहिए थी।",
+   "en": "I also wanted this book.",
+   "ko": "나도 이 책이 필요했어.",
+   "blank": "भी"
+  },
+  {
+   "text": "तुम ही सबसे अच्छे गायक हो।",
+   "en": "You are the best singer.",
+   "ko": "너야말로 최고의 가수야.",
+   "blank": "ही"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "शायद आपको वहाँ जल्दी पहुँचना चाहिएगा।",
+   "en": "Maybe you should get there early.",
+   "ko": "아마도 당신은 거기에 일찍 도착해야 할 거예요.",
+   "blank": "शायद"
+  },
+  {
+   "text": "ज़रा दरवाज़ा बंद कर दीजिएगा।",
+   "en": "Please close the door for me.",
+   "ko": "문 좀 닫아 주세요.",
+   "blank": "ज़रा"
+  },
+  {
+   "text": "बुरा मत मानिएगा, पर मुझे अभी जाना है।",
+   "en": "Please don’t mind, but I have to go now.",
+   "ko": "기분 나쁘지 않게 들으세요, 그런데 저 지금 가야 해요.",
+   "blank": "बुरा मत मानिएगा"
+  }
+ ],
+ "g|5:6": [
+  {
+   "text": "वो धीरे-धीरे चल रहा है।",
+   "en": "He is walking slowly.",
+   "ko": "그는 천천히 걷고 있어요.",
+   "blank": "धीरे-धीरे"
+  },
+  {
+   "text": "चल, पहले नाश्ता-वाश्ता कर लेते हैं।",
+   "en": "Come on, let's have some breakfast first.",
+   "ko": "자, 먼저 아침밥 같은 거 먹자.",
+   "blank": "नाश्ता-वाश्ता"
+  },
+  {
+   "text": "मैंने किताब-विताब पढ़ ली है।",
+   "en": "I've read the book and all.",
+   "ko": "책 같은 거 다 읽었어요.",
+   "blank": "किताब-विताब"
+  }
+ ]
+}

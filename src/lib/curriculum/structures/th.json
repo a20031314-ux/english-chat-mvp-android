@@ -1,0 +1,1652 @@
+{
+ "1": [
+  {
+   "id": "th-1-01",
+   "stage": 1,
+   "pattern": "ฉันมาจาก___",
+   "meaningKo": "출신국/도시 말하기",
+   "meaningEn": "Say where you are from",
+   "examples": [
+    {
+     "text": "ฉันมาจากเกาหลี",
+     "ko": "저는 한국에서 왔어요",
+     "en": "I am from Korea"
+    },
+    {
+     "text": "ฉันมาจากกรุงเทพ",
+     "ko": "저는 방콕에서 왔어요",
+     "en": "I am from Bangkok"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신 표현",
+     "noteKo": "___에 나라나 도시를 넣음",
+     "nameEn": "Origin expression",
+     "noteEn": "Place country or city in ___"
+    }
+   ],
+   "related": [
+    "ผมมาจาก___"
+   ],
+   "quiz": {
+    "prompt": "ฉันมาจาก___",
+    "answer": "한국"
+   }
+  },
+  {
+   "id": "th-1-02",
+   "stage": 1,
+   "pattern": "___เท่าไหร่",
+   "meaningKo": "가격 묻기",
+   "meaningEn": "Ask the price",
+   "examples": [
+    {
+     "text": "กล้วยเท่าไหร่",
+     "ko": "바나나 얼마에요?",
+     "en": "How much is the banana?"
+    },
+    {
+     "text": "ส้มเท่าไหร่",
+     "ko": "오렌지 얼마에요?",
+     "en": "How much is the orange?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "물건 + 가격",
+     "noteKo": "___에 물건 이름 넣음",
+     "nameEn": "Item + price",
+     "noteEn": "Place item name in ___"
+    }
+   ],
+   "related": [
+    "___อันนี้เท่าไหร่"
+   ],
+   "quiz": {
+    "prompt": "___เท่าไหร่",
+    "answer": "수박"
+   }
+  },
+  {
+   "id": "th-1-03",
+   "stage": 1,
+   "pattern": "เอา___",
+   "meaningKo": "원하는 것 말하기",
+   "meaningEn": "Say which one you want",
+   "examples": [
+    {
+     "text": "เอากล้วย",
+     "ko": "바나나 주세요",
+     "en": "I want a banana"
+    },
+    {
+     "text": "เอาส้ม",
+     "ko": "오렌지 주세요",
+     "en": "I want an orange"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "요청",
+     "noteKo": "___에 원하는 것 넣음",
+     "nameEn": "Request",
+     "noteEn": "Place what you want in ___"
+    }
+   ],
+   "related": [
+    "เอา___ครับ/ค่ะ"
+   ],
+   "quiz": {
+    "prompt": "เอา___",
+    "answer": "사과"
+   }
+  },
+  {
+   "id": "th-1-04",
+   "stage": 1,
+   "pattern": "สวัสดีครับ ผมชื่อ___",
+   "meaningKo": "자기 이름으로 인사하기 (남자)",
+   "meaningEn": "Greeting and saying your name (male)",
+   "examples": [
+    {
+     "text": "สวัสดีครับ ผมชื่อจุน호",
+     "ko": "안녕하세요, 저는 준호입니다.",
+     "en": "Hello, my name is Junho."
+    },
+    {
+     "text": "สวัสดีครับ ผมชื่อเดวิด",
+     "ko": "안녕하세요, 저는 데이비드입니다.",
+     "en": "Hello, my name is David."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존칭 어미",
+     "noteKo": "ครับ은 남성이 공손하게 말을 끝낼 때 사용.",
+     "nameEn": "Polite ending (male)",
+     "noteEn": "ครับ is used by men to be polite."
+    }
+   ],
+   "related": [
+    "สวัสดีค่ะ ดิฉันชื่อ___"
+   ],
+   "quiz": {
+    "prompt": "สวัสดีครับ ผมชื่อ___",
+    "answer": "your name"
+   }
+  },
+  {
+   "id": "th-1-05",
+   "stage": 1,
+   "pattern": "สวัสดีค่ะ ดิฉันชื่อ___",
+   "meaningKo": "자기 이름으로 인사하기 (여자)",
+   "meaningEn": "Greeting and saying your name (female)",
+   "examples": [
+    {
+     "text": "สวัสดีค่ะ ดิฉันชื่อ민지",
+     "ko": "안녕하세요, 저는 민지입니다.",
+     "en": "Hello, my name is Minji."
+    },
+    {
+     "text": "สวัสดีค่ะ ดิฉันชื่อ사라",
+     "ko": "안녕하세요, 저는 사라입니다.",
+     "en": "Hello, my name is Sara."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존칭 어미",
+     "noteKo": "ค่ะ은 여성이 공손하게 말을 끝낼 때 사용.",
+     "nameEn": "Polite ending (female)",
+     "noteEn": "ค่ะ is used by women to be polite."
+    }
+   ],
+   "related": [
+    "สวัสดีครับ ผมชื่อ___"
+   ],
+   "quiz": {
+    "prompt": "สวัสดีค่ะ ดิฉันชื่อ___",
+    "answer": "your name"
+   }
+  },
+  {
+   "id": "th-1-06",
+   "stage": 1,
+   "pattern": "คุณมาจาก___",
+   "meaningKo": "상대방 출신 국가 말하기",
+   "meaningEn": "Saying where someone is from",
+   "examples": [
+    {
+     "text": "คุณมาจากเกาหลี",
+     "ko": "당신은 한국에서 오셨군요.",
+     "en": "You are from Korea."
+    },
+    {
+     "text": "คุณมาจากญี่ปุ่น",
+     "ko": "당신은 일본에서 오셨군요.",
+     "en": "You are from Japan."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신 표현",
+     "noteKo": "___에 나라 이름을 넣음.",
+     "nameEn": "Origin phrase",
+     "noteEn": "Insert country name in ___."
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "คุณมาจาก___",
+    "answer": "country"
+   }
+  },
+  {
+   "id": "th-1-07",
+   "stage": 1,
+   "pattern": "___อยู่ที่ไหน",
+   "meaningKo": "위치 묻기",
+   "meaningEn": "Asking where something is",
+   "examples": [
+    {
+     "text": "ห้องน้ำอยู่ที่ไหน",
+     "ko": "화장실이 어디에 있나요?",
+     "en": "Where is the toilet?"
+    },
+    {
+     "text": "สถานีรถไฟอยู่ที่ไหน",
+     "ko": "기차역이 어디에 있나요?",
+     "en": "Where is the train station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위치 질문",
+     "noteKo": "___에 장소 이름을 넣음.",
+     "nameEn": "Location question",
+     "noteEn": "Put place name in ___."
+    }
+   ],
+   "related": [
+    "ขอโทษนะครับ ___อยู่ที่ไหน"
+   ],
+   "quiz": {
+    "prompt": "___อยู่ที่ไหน",
+    "answer": "place"
+   }
+  },
+  {
+   "id": "th-1-08",
+   "stage": 1,
+   "pattern": "ขอโทษนะครับ ___อยู่ที่ไหน",
+   "meaningKo": "실례하며 장소 위치 묻기 (남자)",
+   "meaningEn": "Politely asking location (male)",
+   "examples": [
+    {
+     "text": "ขอโทษนะครับ ห้องน้ำอยู่ที่ไหน",
+     "ko": "실례합니다, 화장실이 어디에 있나요?",
+     "en": "Excuse me, where is the toilet?"
+    },
+    {
+     "text": "ขอโทษนะครับ ร้านกาแฟอยู่ที่ไหน",
+     "ko": "실례합니다, 카페가 어디에 있나요?",
+     "en": "Excuse me, where is the coffee shop?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손 표현",
+     "noteKo": "남성은 'ครับ'을 붙여 공손하게 말함.",
+     "nameEn": "Polite form (male)",
+     "noteEn": "Add ครับ for politeness (male speaker)."
+    }
+   ],
+   "related": [
+    "___อยู่ที่ไหน"
+   ],
+   "quiz": {
+    "prompt": "ขอโทษนะครับ ___อยู่ที่ไหน",
+    "answer": "place"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "th-2-01",
+   "stage": 2,
+   "pattern": "เมื่อวานฉัน___",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Say what you did yesterday",
+   "examples": [
+    {
+     "text": "เมื่อวานฉันไปตลาด",
+     "ko": "어제 나는 시장에 갔어",
+     "en": "Yesterday I went to the market"
+    },
+    {
+     "text": "เมื่อวานฉันดูหนัง",
+     "ko": "어제 나는 영화를 봤어",
+     "en": "Yesterday I watched a movie"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___에 과거 동사 또는 활동을 써요",
+     "nameEn": "Past tense",
+     "noteEn": "Use a past action or verb in ___"
+    }
+   ],
+   "related": [
+    "พรุ่งนี้ฉันจะ___"
+   ],
+   "quiz": {
+    "prompt": "เมื่อวานฉัน___",
+    "answer": "ไปตลาด"
+   }
+  },
+  {
+   "id": "th-2-02",
+   "stage": 2,
+   "pattern": "สุดสัปดาห์นี้ฉันจะ___",
+   "meaningKo": "이번 주말에 할 일을 말하기",
+   "meaningEn": "Say what you will do this weekend",
+   "examples": [
+    {
+     "text": "สุดสัปดาห์นี้ฉันจะไปทะเล",
+     "ko": "이번 주말에 나는 바다에 갈 거야",
+     "en": "This weekend I will go to the sea"
+    },
+    {
+     "text": "สุดสัปดาห์นี้ฉันจะพักผ่อน",
+     "ko": "이번 주말에 나는 쉴 거야",
+     "en": "This weekend I will rest"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 시제",
+     "noteKo": "___에 미래 동사 또는 계획을 써요",
+     "nameEn": "Future tense",
+     "noteEn": "Use a future action or plan in ___"
+    }
+   ],
+   "related": [
+    "เมื่อวานฉัน___"
+   ],
+   "quiz": {
+    "prompt": "สุดสัปดาห์นี้ฉันจะ___",
+    "answer": "ไปทะเล"
+   }
+  },
+  {
+   "id": "th-2-03",
+   "stage": 2,
+   "pattern": "ไป___กันไหม",
+   "meaningKo": "어디에 가자고 초대하기",
+   "meaningEn": "Invite someone to go somewhere",
+   "examples": [
+    {
+     "text": "ไปกินข้าวกันไหม",
+     "ko": "밥 먹으러 갈래?",
+     "en": "Shall we go eat?"
+    },
+    {
+     "text": "ไปดูหนังกันไหม",
+     "ko": "영화 보러 갈래?",
+     "en": "Shall we go watch a movie?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "초대 표현",
+     "noteKo": "___에 장소나 활동을 써요",
+     "nameEn": "Invitation",
+     "noteEn": "Put an activity or place in ___"
+    }
+   ],
+   "related": [
+    "นัดเจอกันที่___"
+   ],
+   "quiz": {
+    "prompt": "ไป___กันไหม",
+    "answer": "ดูหนัง"
+   }
+  },
+  {
+   "id": "th-2-04",
+   "stage": 2,
+   "pattern": "นัดเจอกันที่___",
+   "meaningKo": "만날 장소를 정하기",
+   "meaningEn": "Agree on a place to meet",
+   "examples": [
+    {
+     "text": "นัดเจอกันที่ห้าง",
+     "ko": "쇼핑몰에서 만나자",
+     "en": "Let's meet at the mall"
+    },
+    {
+     "text": "นัดเจอกันที่ร้านกาแฟ",
+     "ko": "카페에서 만나자",
+     "en": "Let's meet at the coffee shop"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 명사",
+     "noteKo": "___에 장소를 써요",
+     "nameEn": "Place noun",
+     "noteEn": "Put a place in ___"
+    }
+   ],
+   "related": [
+    "ไป___กันไหม"
+   ],
+   "quiz": {
+    "prompt": "นัดเจอกันที่___",
+    "answer": "ห้าง"
+   }
+  },
+  {
+   "id": "th-2-05",
+   "stage": 2,
+   "pattern": "เอา___เผ็ด___",
+   "meaningKo": "음식 주문할 때 맵기 조절하기",
+   "meaningEn": "Order food and choose spice level",
+   "examples": [
+    {
+     "text": "เอาข้าวผัดเผ็ดน้อย",
+     "ko": "볶음밥, 덜 맵게 주세요",
+     "en": "Fried rice, not too spicy please"
+    },
+    {
+     "text": "เอาก๋วยเตี๋ยวเผ็ดมาก",
+     "ko": "국수, 아주 맵게 주세요",
+     "en": "Noodles, very spicy please"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "음식 이름",
+     "noteKo": "첫 번째 ___에 음식 이름을 써요",
+     "nameEn": "Food name",
+     "noteEn": "First ___ is for the food"
+    },
+    {
+     "nameKo": "맵기 정도",
+     "noteKo": "두 번째 ___에 맵기 정도를 써요",
+     "nameEn": "Spice level",
+     "noteEn": "Second ___ is for how spicy"
+    }
+   ],
+   "related": [
+    "ขอ___เพิ่ม"
+   ],
+   "quiz": {
+    "prompt": "เอา___เผ็ดน้อย",
+    "answer": "ข้าวผัด"
+   }
+  },
+  {
+   "id": "th-2-06",
+   "stage": 2,
+   "pattern": "ตรงไป___",
+   "meaningKo": "택시에서 직진 후 안내하기",
+   "meaningEn": "Tell taxi to go straight to a place",
+   "examples": [
+    {
+     "text": "ตรงไปซอยสาม",
+     "ko": "삼 골목까지 직진해주세요",
+     "en": "Go straight to Soi Three"
+    },
+    {
+     "text": "ตรงไปตลาด",
+     "ko": "시장까지 직진해주세요",
+     "en": "Go straight to the market"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소",
+     "noteKo": "___에 장소를 써요",
+     "nameEn": "Place",
+     "noteEn": "Put a place or landmark in ___"
+    }
+   ],
+   "related": [
+    "เลี้ยวซ้ายที่___",
+    "เลี้ยวขวาที่___"
+   ],
+   "quiz": {
+    "prompt": "ตรงไป___",
+    "answer": "ตลาด"
+   }
+  },
+  {
+   "id": "th-2-07",
+   "stage": 2,
+   "pattern": "เลี้ยวซ้ายที่___",
+   "meaningKo": "택시에서 좌회전 안내하기",
+   "meaningEn": "Tell taxi to turn left at a place",
+   "examples": [
+    {
+     "text": "เลี้ยวซ้ายที่แยกหน้า",
+     "ko": "앞 교차로에서 좌회전해주세요",
+     "en": "Turn left at the next intersection"
+    },
+    {
+     "text": "เลี้ยวซ้ายที่ร้านกาแฟ",
+     "ko": "카페에서 좌회전해주세요",
+     "en": "Turn left at the coffee shop"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소",
+     "noteKo": "___에 장소를 써요",
+     "nameEn": "Place",
+     "noteEn": "Put a place or landmark in ___"
+    }
+   ],
+   "related": [
+    "ตรงไป___",
+    "เลี้ยวขวาที่___"
+   ],
+   "quiz": {
+    "prompt": "เลี้ยวซ้ายที่___",
+    "answer": "แยกหน้า"
+   }
+  },
+  {
+   "id": "th-2-08",
+   "stage": 2,
+   "pattern": "ฉันรู้สึก___",
+   "meaningKo": "증상을 간단히 설명하기",
+   "meaningEn": "Describe a simple symptom",
+   "examples": [
+    {
+     "text": "ฉันรู้สึกไม่สบาย",
+     "ko": "몸이 안 좋아요",
+     "en": "I feel unwell"
+    },
+    {
+     "text": "ฉันรู้สึกเจ็บคอ",
+     "ko": "목이 아파요",
+     "en": "I have a sore throat"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "증상",
+     "noteKo": "___에 증상이나 느낌을 써요",
+     "nameEn": "Symptom",
+     "noteEn": "Describe how you feel in ___"
+    }
+   ],
+   "related": [
+    "ฉันเป็น___"
+   ],
+   "quiz": {
+    "prompt": "ฉันรู้สึก___",
+    "answer": "ไม่สบาย"
+   }
+  },
+  {
+   "id": "th-2-09",
+   "stage": 2,
+   "pattern": "ฉัน___เพราะ___",
+   "meaningKo": "좋아하거나 싫어하는 이유 말하기",
+   "meaningEn": "Say what you like/dislike with a reason",
+   "examples": [
+    {
+     "text": "ฉันชอบกาแฟเพราะหอม",
+     "ko": "나는 커피를 좋아해, 향이 좋아서",
+     "en": "I like coffee because it smells good"
+    },
+    {
+     "text": "ฉันไม่ชอบฝนเพราะเปียก",
+     "ko": "나는 비를 싫어해, 젖으니까",
+     "en": "I don’t like rain because it’s wet"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "감정 동사",
+     "noteKo": "첫 번째 ___에 감정 동사와 대상을 써요",
+     "nameEn": "Feeling and object",
+     "noteEn": "First ___ is for like/dislike and object"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 ___에 이유를 써요",
+     "nameEn": "Reason",
+     "noteEn": "Second ___ is for the reason"
+    }
+   ],
+   "related": [
+    "ฉันไม่ชอบ___"
+   ],
+   "quiz": {
+    "prompt": "ฉันชอบ___เพราะหอม",
+    "answer": "กาแฟ"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "th-3-01",
+   "stage": 3,
+   "pattern": "ตอนที่ฉันไป___ ฉันเจอ___",
+   "meaningKo": "여행 경험을 시간 순서로 이야기하기",
+   "meaningEn": "Describing a travel experience in order",
+   "examples": [
+    {
+     "text": "ตอนที่ฉันไปเชียงใหม่ ฉันเจออากาศหนาว",
+     "ko": "치앙마이에 갔을 때 추운 날씨를 만났어요.",
+     "en": "When I went to Chiang Mai, I experienced cold weather."
+    },
+    {
+     "text": "ตอนที่ฉันไปทะเล ฉันเจอฝนตกหนัก",
+     "ko": "바다에 갔을 때 폭우를 만났어요.",
+     "en": "When I went to the beach, I encountered heavy rain."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 순서의 연결",
+     "noteKo": "___은/는 방문한 장소, 두 번째 ___은/는 그때 만난 일입니다.",
+     "nameEn": "Past event sequencing",
+     "noteEn": "First blank is a place, second is an event you experienced."
+    }
+   ],
+   "related": [
+    "หลังจาก___ ฉัน___",
+    "วันนั้นฉัน___ แล้วก็___"
+   ],
+   "quiz": {
+    "prompt": "ตอนที่ฉันไป___ ฉันเจอฝนตกหนัก",
+    "answer": "ทะเล"
+   }
+  },
+  {
+   "id": "th-3-02",
+   "stage": 3,
+   "pattern": "ฉันคิดว่า___เพราะว่า___ คุณคิดว่าอย่างไร",
+   "meaningKo": "의견을 내고 이유를 설명하고 상대의 생각을 묻기",
+   "meaningEn": "Giving an opinion with a reason and asking for others’ thoughts",
+   "examples": [
+    {
+     "text": "ฉันคิดว่าเรื่องนี้สนุกเพราะว่าตลกมาก คุณคิดว่าอย่างไร",
+     "ko": "재미있다고 생각해요. 왜냐하면 정말 웃겨요. 당신은 어떻게 생각해요?",
+     "en": "I think this story is fun because it's very funny. What do you think?"
+    },
+    {
+     "text": "ฉันคิดว่าโรงแรมนี้ดีเพราะว่าพนักงานน่ารัก คุณคิดว่าอย่างไร",
+     "ko": "이 호텔이 좋은 이유는 직원들이 친절해서예요. 당신 생각은요?",
+     "en": "I think this hotel is good because the staff are nice. What do you think?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현",
+     "noteKo": "첫 번째 ___은/는 의견, 두 번째 ___은/는 이유입니다.",
+     "nameEn": "Opinion with reason",
+     "noteEn": "First blank is your opinion, second is your reason."
+    }
+   ],
+   "related": [
+    "คุณคิดว่า___ไหม",
+    "ฉันว่า___นะ"
+   ],
+   "quiz": {
+    "prompt": "ฉันคิดว่า___เพราะว่าตลกมาก คุณคิดว่าอย่างไร",
+    "answer": "เรื่องนี้สนุก"
+   }
+  },
+  {
+   "id": "th-3-03",
+   "stage": 3,
+   "pattern": "เขาเป็นคน___ และ___",
+   "meaningKo": "사람의 성격이나 특성 자세히 설명하기",
+   "meaningEn": "Describing a person in detail",
+   "examples": [
+    {
+     "text": "เขาเป็นคนใจดี และขยัน",
+     "ko": "그는 친절하고 부지런해요.",
+     "en": "He is kind and hardworking."
+    },
+    {
+     "text": "เขาเป็นคนร่าเริง และพูดเก่ง",
+     "ko": "그녀는 명랑하고 말도 잘해요.",
+     "en": "She is cheerful and talkative."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "형용사 연결",
+     "noteKo": "___은/는 성격이나 특성입니다.",
+     "nameEn": "Adjective joining",
+     "noteEn": "Blanks are adjectives describing a person."
+    }
+   ],
+   "related": [
+    "ที่นี่มี___ และ___",
+    "คนที่___และ___"
+   ],
+   "quiz": {
+    "prompt": "เขาเป็นคน___ และพูดเก่ง",
+    "answer": "ร่าเริง"
+   }
+  },
+  {
+   "id": "th-3-04",
+   "stage": 3,
+   "pattern": "ถ้า___ ฉันจะ___",
+   "meaningKo": "조건에 따라 계획 말하기",
+   "meaningEn": "Talking about plans that depend on conditions",
+   "examples": [
+    {
+     "text": "ถ้าฝนไม่ตก ฉันจะไปเดินเล่น",
+     "ko": "비가 안 오면 산책하러 갈 거예요.",
+     "en": "If it doesn't rain, I will go for a walk."
+    },
+    {
+     "text": "ถ้าเพื่อนว่าง ฉันจะชวนไปกินข้าว",
+     "ko": "친구가 시간이 된다면 밥 먹으러 갈 거예요.",
+     "en": "If my friend is free, I will invite them to eat."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "첫 번째 ___은/는 조건, 두 번째 ___은/는 할 계획입니다.",
+     "nameEn": "Conditional",
+     "noteEn": "First blank is the condition, second is your plan."
+    }
+   ],
+   "related": [
+    "ถ้า___ จะ___ไหม",
+    "ถ้า___ ก็___"
+   ],
+   "quiz": {
+    "prompt": "ถ้าเพื่อนว่าง ฉันจะ___",
+    "answer": "ชวนไปกินข้าว"
+   }
+  },
+  {
+   "id": "th-3-05",
+   "stage": 3,
+   "pattern": "ที่___มี___เยอะมาก",
+   "meaningKo": "장소의 특징 설명하기",
+   "meaningEn": "Describing features of a place",
+   "examples": [
+    {
+     "text": "ที่เชียงใหม่มีวัดเยอะมาก",
+     "ko": "치앙마이에는 사원이 정말 많아요.",
+     "en": "There are many temples in Chiang Mai."
+    },
+    {
+     "text": "ที่ทะเลมีคนมาเที่ยวเยอะมาก",
+     "ko": "바다에는 관광객이 많아요.",
+     "en": "There are many tourists at the sea."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 설명",
+     "noteKo": "첫 번째 ___은/는 장소, 두 번째 ___은/는 많은 것을 의미합니다.",
+     "nameEn": "Place description",
+     "noteEn": "First blank is the place, second is what there is a lot of."
+    }
+   ],
+   "related": [
+    "___มีชื่อเสียงเรื่อง___",
+    "ที่___มี___"
+   ],
+   "quiz": {
+    "prompt": "ที่เชียงใหม่มี___เยอะมาก",
+    "answer": "วัด"
+   }
+  },
+  {
+   "id": "th-3-06",
+   "stage": 3,
+   "pattern": "หลังจาก___ ฉันก็___",
+   "meaningKo": "여행이나 경험에서 사건의 순서 설명하기",
+   "meaningEn": "Sequencing events in a story",
+   "examples": [
+    {
+     "text": "หลังจากกินข้าว ฉันก็ไปเดินตลาด",
+     "ko": "밥을 먹고 나서 시장에 갔어요.",
+     "en": "After eating, I went to the market."
+    },
+    {
+     "text": "หลังจากถึงโรงแรม ฉันก็พักผ่อน",
+     "ko": "호텔에 도착한 후에 쉬었어요.",
+     "en": "After arriving at the hotel, I rested."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 사건 순서",
+     "noteKo": "첫 번째 ___은/는 먼저 한 일, 두 번째 ___은/는 그 다음 한 일입니다.",
+     "nameEn": "Event sequencing",
+     "noteEn": "First blank is what you did first, second is what you did next."
+    }
+   ],
+   "related": [
+    "ตอนนั้นฉัน___ แล้วก็___",
+    "พอ___ ฉันก็___"
+   ],
+   "quiz": {
+    "prompt": "หลังจากถึงโรงแรม ฉันก็___",
+    "answer": "พักผ่อน"
+   }
+  },
+  {
+   "id": "th-3-07",
+   "stage": 3,
+   "pattern": "ฉันเคย___เมื่อ___",
+   "meaningKo": "과거 경험과 시기 설명하기",
+   "meaningEn": "Telling about past experiences with time",
+   "examples": [
+    {
+     "text": "ฉันเคยไปญี่ปุ่นเมื่อปีที่แล้ว",
+     "ko": "작년에 일본에 가본 적 있어요.",
+     "en": "I have been to Japan last year."
+    },
+    {
+     "text": "ฉันเคยนั่งรถไฟเมื่อสมัยเด็ก",
+     "ko": "어릴 때 기차를 타본 적 있어요.",
+     "en": "I have taken a train when I was a child."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 경험",
+     "noteKo": "첫 번째 ___은/는 경험, 두 번째 ___은/는 시기입니다.",
+     "nameEn": "Past experience",
+     "noteEn": "First blank is the experience, second is the time."
+    }
+   ],
+   "related": [
+    "ฉันไม่เคย___มาก่อน",
+    "เมื่อ___ ฉัน___"
+   ],
+   "quiz": {
+    "prompt": "ฉันเคยไปญี่ปุ่นเมื่อ___",
+    "answer": "ปีที่แล้ว"
+   }
+  },
+  {
+   "id": "th-3-08",
+   "stage": 3,
+   "pattern": "ที่นี่___และ___มาก",
+   "meaningKo": "장소의 두 가지 특성을 자세히 묘사하기",
+   "meaningEn": "Describing two features of a place",
+   "examples": [
+    {
+     "text": "ที่นี่สวยและเงียบมาก",
+     "ko": "여기는 아름답고 아주 조용해요.",
+     "en": "Here is beautiful and very quiet."
+    },
+    {
+     "text": "ที่นี่กว้างและสะอาดมาก",
+     "ko": "여기는 넓고 깨끗해요.",
+     "en": "Here is spacious and very clean."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소의 복수 특성",
+     "noteKo": "___은/는 장소의 형용사 두 개입니다.",
+     "nameEn": "Multiple features of a place",
+     "noteEn": "Blanks are adjectives describing the place."
+    }
+   ],
+   "related": [
+    "ที่___เงียบและ___",
+    "ที่นี่___มาก"
+   ],
+   "quiz": {
+    "prompt": "ที่นี่สวยและ___มาก",
+    "answer": "เงียบ"
+   }
+  },
+  {
+   "id": "th-3-09",
+   "stage": 3,
+   "pattern": "ขอให้ช่างมาดู___ให้หน่อยได้ไหมครับ",
+   "meaningKo": "호텔에서 문제를 설명하고 해결 요청하기",
+   "meaningEn": "Explaining a hotel problem and asking for help",
+   "examples": [
+    {
+     "text": "ขอให้ช่างมาดูแอร์ให้หน่อยได้ไหมครับ",
+     "ko": "에어컨을 좀 고쳐줄 수 있나요?",
+     "en": "Can you have someone check the air conditioner?"
+    },
+    {
+     "text": "ขอให้ช่างมาดูไฟในห้องน้ำให้หน่อยได้ไหมครับ",
+     "ko": "욕실 불 좀 고쳐줄 수 있나요?",
+     "en": "Can you have someone check the bathroom light?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "___은/는 고쳐달라고 하는 물건입니다.",
+     "nameEn": "Polite request",
+     "noteEn": "Blank is the thing you want fixed."
+    }
+   ],
+   "related": [
+    "ขอ___เพิ่มได้ไหมครับ",
+    "___เสียครับ ช่วยดูให้หน่อย"
+   ],
+   "quiz": {
+    "prompt": "ขอให้ช่างมาดู___ให้หน่อยได้ไหมครับ",
+    "answer": "แอร์"
+   }
+  },
+  {
+   "id": "th-3-10",
+   "stage": 3,
+   "pattern": "ขอโทษค่ะ ขอเลื่อนนัดเป็น___ได้ไหมคะ",
+   "meaningKo": "전화로 약속 변경하기",
+   "meaningEn": "Moving an appointment by phone",
+   "examples": [
+    {
+     "text": "ขอโทษค่ะ ขอเลื่อนนัดเป็นพรุ่งนี้ได้ไหมคะ",
+     "ko": "죄송한데 약속을 내일로 옮길 수 있을까요?",
+     "en": "Sorry, can I move the appointment to tomorrow?"
+    },
+    {
+     "text": "ขอโทษค่ะ ขอเลื่อนนัดเป็นบ่ายโมงได้ไหมคะ",
+     "ko": "약속을 오후 한 시로 옮길 수 있을까요?",
+     "en": "Sorry, can I move the appointment to one PM?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 변경 요청",
+     "noteKo": "___은/는 새 약속 시간이나 날짜입니다.",
+     "nameEn": "Polite rescheduling request",
+     "noteEn": "Blank is the new time or date for the appointment."
+    }
+   ],
+   "related": [
+    "ขอเปลี่ยนเป็น___ได้ไหมคะ",
+    "นัดใหม่ได้วัน___ไหมคะ"
+   ],
+   "quiz": {
+    "prompt": "ขอโทษค่ะ ขอเลื่อนนัดเป็น___ได้ไหมคะ",
+    "answer": "พรุ่งนี้"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "th-4-01",
+   "stage": 4,
+   "pattern": "ตอนนี้เราทำ___เสร็จแล้ว เหลือ___ และขั้นตอนต่อไปคือ___",
+   "meaningKo": "회의에서 진행상황, 문제, 다음 단계를 말하기",
+   "meaningEn": "Giving a meeting update: progress, problems, and next steps",
+   "examples": [
+    {
+     "text": "ตอนนี้เราทำรายงานเสร็จแล้ว เหลือแก้ไขข้อมูล และขั้นตอนต่อไปคือตรวจสอบความถูกต้อง",
+     "ko": "지금은 보고서를 끝냈고, 데이터 수정만 남았어요. 다음 단계는 정확성 검토입니다.",
+     "en": "We’ve finished the report, just fixing the data remains, and the next step is to check for accuracy."
+    },
+    {
+     "text": "ตอนนี้เราทำดีไซน์เสร็จแล้ว เหลือทดสอบระบบ และขั้นตอนต่อไปคือส่งให้ลูกค้า",
+     "ko": "지금은 디자인을 끝냈고, 시스템 테스트만 남았어요. 다음엔 고객에게 전달할 거예요.",
+     "en": "We’ve finished the design, testing the system is left, and the next step is to send it to the client."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "진행상황 보고",
+     "noteKo": "___은/는 완료된 일, ___은/는 남은 일, ___은/는 다음 단계",
+     "nameEn": "Progress report",
+     "noteEn": "First ___ is finished task, second ___ is remaining task, third ___ is next step"
+    }
+   ],
+   "related": [
+    "ยังเหลือ___ที่ต้องทำ",
+    "ต่อไปเราจะ___"
+   ],
+   "quiz": {
+    "prompt": "ตอนนี้เราทำ___เสร็จแล้ว เหลือวางแผน และขั้นตอนต่อไปคือลงมือทำ",
+    "answer": "หารือกับทีม"
+   }
+  },
+  {
+   "id": "th-4-02",
+   "stage": 4,
+   "pattern": "ถ้าเป็นที่ทำงาน ผมจะพูดว่า___ แต่กับเพื่อนผมจะพูดว่า___",
+   "meaningKo": "상황에 따라 다르게 말하기 (격식/비격식)",
+   "meaningEn": "Switching language style for work vs friends",
+   "examples": [
+    {
+     "text": "ถ้าเป็นที่ทำงาน ผมจะพูดว่าเชิญค่ะ แต่กับเพื่อนผมจะพูดว่าไปดิ",
+     "ko": "회사라면 '초대합니다'라고 할 거고, 친구라면 '가자'라고 해.",
+     "en": "At work I’d say ‘please join,’ but with friends I’d say ‘let’s go.’"
+    },
+    {
+     "text": "ถ้าเป็นที่ทำงาน ผมจะพูดว่าสวัสดีครับ แต่กับเพื่อนผมจะพูดว่าไงวะ",
+     "ko": "회사에서는 '안녕하세요'라고 하고, 친구한테는 '야, 안녕?'이라고 해.",
+     "en": "At work I’d say ‘hello,’ but with friends I’d say ‘yo, what’s up?’"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "격식/비격식 전환",
+     "noteKo": "___은/는 격식 표현, ___은/는 비격식 표현",
+     "nameEn": "Formal/informal switching",
+     "noteEn": "First ___ is formal expression, second ___ is informal"
+    }
+   ],
+   "related": [
+    "กับ___ผมจะพูดว่า___",
+    "เวลาอยู่กับ___ผมจะใช้คำว่า___"
+   ],
+   "quiz": {
+    "prompt": "ถ้าเป็นที่ทำงาน ผมจะพูดว่าเรียนคุณ___ แต่กับเพื่อนผมจะพูดว่าเฮ้",
+    "answer": "เรียนคุณสมชาย"
+   }
+  },
+  {
+   "id": "th-4-03",
+   "stage": 4,
+   "pattern": "ผมเห็นด้วยกับ___เรื่อง___ เพราะว่า___",
+   "meaningKo": "누군가의 의견에 동의하고 그 이유를 말하기",
+   "meaningEn": "Agreeing with someone’s opinion and giving a reason",
+   "examples": [
+    {
+     "text": "ผมเห็นด้วยกับหัวหน้าทีมเรื่องขยายเวลาส่งงาน เพราะว่างานยังไม่เสร็จ",
+     "ko": "팀장님의 마감일 연장 의견에 동의해요. 아직 일이 끝나지 않았거든요.",
+     "en": "I agree with the team leader about extending the deadline because the work is not finished."
+    },
+    {
+     "text": "ผมเห็นด้วยกับเพื่อนเรื่องห้ามขึ้นค่าเช่า เพราะว่าแพงเกินไป",
+     "ko": "친구의 임대료 인상 금지 의견에 동의해요. 너무 비싸니까요.",
+     "en": "I agree with my friend about not raising the rent because it’s too expensive."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동의 표현",
+     "noteKo": "___은/는 동의하는 사람, ___은/는 동의하는 주제, ___은/는 동의 이유",
+     "nameEn": "Agreeing structure",
+     "noteEn": "First ___ is the person you agree with, second ___ is the topic, third ___ is your reason"
+    }
+   ],
+   "related": [
+    "ฉันก็คิดเหมือน___",
+    "เห็นด้วยกับ___เพราะว่า___"
+   ],
+   "quiz": {
+    "prompt": "ผมเห็นด้วยกับน้องเรื่อง___ เพราะว่าเป็นปัญหาสำคัญ",
+    "answer": "สิ่งแวดล้อม"
+   }
+  },
+  {
+   "id": "th-4-04",
+   "stage": 4,
+   "pattern": "ถ้า___ ผมคิดว่าเราควร___",
+   "meaningKo": "조건을 제시하고 제안하기",
+   "meaningEn": "Making a suggestion based on a condition",
+   "examples": [
+    {
+     "text": "ถ้าโปรเจกต์นี้ล่าช้า ผมคิดว่าเราควรแจ้งลูกค้า",
+     "ko": "이 프로젝트가 늦어진다면, 우리는 고객에게 알려야 한다고 생각해요.",
+     "en": "If this project is delayed, I think we should notify the client."
+    },
+    {
+     "text": "ถ้าค่าเช่าสูงไป ผมคิดว่าเราควรต่อรอง",
+     "ko": "임대료가 너무 비싸면, 우리는 협상해야 한다고 생각해요.",
+     "en": "If the rent is too high, I think we should negotiate."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건부 제안",
+     "noteKo": "___은/는 조건, ___은/는 제안",
+     "nameEn": "Conditional suggestion",
+     "noteEn": "First ___ is the condition, second ___ is the suggestion"
+    }
+   ],
+   "related": [
+    "ถ้า___ เราควร___",
+    "ถ้า___ จะ___"
+   ],
+   "quiz": {
+    "prompt": "ถ้าทำงานไม่ทัน ผมคิดว่าเราควร___",
+    "answer": "ขอความช่วยเหลือ"
+   }
+  },
+  {
+   "id": "th-4-05",
+   "stage": 4,
+   "pattern": "ในมุมมองของ___ เรื่อง___สำคัญมาก เพราะว่า___",
+   "meaningKo": "다른 사람의 입장에서 생각하여 의견 말하기",
+   "meaningEn": "Considering another’s perspective and expressing an opinion",
+   "examples": [
+    {
+     "text": "ในมุมมองของนายจ้าง เรื่องความตรงต่อเวลาสำคัญมาก เพราะว่ามีผลต่อภาพลักษณ์องค์กร",
+     "ko": "고용주의 입장에서는 시간 엄수가 매우 중요해요. 회사 이미지에 영향을 주기 때문이죠.",
+     "en": "From an employer’s perspective, punctuality is vital because it affects the company’s image."
+    },
+    {
+     "text": "ในมุมมองของนักศึกษา เรื่องค่าเช่าสำคัญมาก เพราะว่าต้องจัดการงบประมาณ",
+     "ko": "학생의 입장에서는 임대료가 매우 중요해요. 예산을 관리해야 하기 때문이죠.",
+     "en": "From a student’s perspective, rent is very important because they have to manage their budget."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관점 표현",
+     "noteKo": "___은/는 관점의 주체, ___은/는 중요한 주제, ___은/는 이유",
+     "nameEn": "Perspective structure",
+     "noteEn": "First ___ is whose perspective, second ___ is the topic, third ___ is the reason"
+    }
+   ],
+   "related": [
+    "สำหรับ___ เรื่อง___สำคัญ",
+    "ในสายตาของ___"
+   ],
+   "quiz": {
+    "prompt": "ในมุมมองของผู้เช่า เรื่อง___สำคัญมาก เพราะว่ามีผลต่อชีวิตประจำวัน",
+    "answer": "ระบบความปลอดภัย"
+   }
+  },
+  {
+   "id": "th-4-06",
+   "stage": 4,
+   "pattern": "ตอนนี้ทีมเราทำ___เสร็จแล้ว ปัญหาคือ___ และขั้นตอนถัดไปคือ___",
+   "meaningKo": "업데이트: 진척, 문제, 다음 단계 보고하기",
+   "meaningEn": "Giving project update: progress, problems, next steps",
+   "examples": [
+    {
+     "text": "ตอนนี้ทีมเราทำรายงานเสร็จแล้ว ปัญหาคือข้อมูลยังไม่ครบ และขั้นตอนถัดไปคือเก็บข้อมูลเพิ่ม",
+     "ko": "지금 우리 팀은 보고서를 완료했습니다. 문제는 정보가 아직 부족하다는 점이고 다음 단계는 추가 정보를 수집하는 것입니다.",
+     "en": "Our team has finished the report. The problem is the data is incomplete, and the next step is to collect more data."
+    },
+    {
+     "text": "ตอนนี้ทีมเราทำดีไซน์เสร็จแล้ว ปัญหาคือเวลาติดช่วงวันหยุด และขั้นตอนถัดไปคือประชุมกับลูกค้า",
+     "ko": "현재 우리 팀은 디자인을 완료했습니다. 문제는 휴일로 인해 시간이 부족하다는 점이고 다음 단계는 고객과의 회의입니다.",
+     "en": "Our team has finished the design. The problem is the schedule conflicts with holidays, and the next step is to meet with the client."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "업데이트 보고 구조",
+     "noteKo": "각 빈칸에는 진행상황, 문제, 다음 할 일이 들어감",
+     "nameEn": "Progress report structure",
+     "noteEn": "Each blank is for what’s done, the problem, and the next step"
+    }
+   ],
+   "related": [
+    "ตอนนี้เรามีปัญหาเรื่อง___ ต้องแก้ไขก่อน___",
+    "สิ่งที่เสร็จแล้วคือ___ ต่อไปต้อง___"
+   ],
+   "quiz": {
+    "prompt": "ตอนนี้ทีมเราทำ___เสร็จแล้ว ปัญหาคือเวลาไม่พอ และขั้นตอนถัดไปคือคุยกับหัวหน้า",
+    "answer": "แผนงาน"
+   }
+  },
+  {
+   "id": "th-4-07",
+   "stage": 4,
+   "pattern": "กับเพื่อนผมจะเรียก___ แต่กับที่ทำงานจะเรียก___",
+   "meaningKo": "친구와 직장에서 호칭 바꾸기",
+   "meaningEn": "Switching forms of address between friends and work",
+   "examples": [
+    {
+     "text": "กับเพื่อนผมจะเรียกน้องบี แต่กับที่ทำงานจะเรียกคุณบี",
+     "ko": "친구들끼리는 '농비'라고 부르지만 회사에서는 '쿤비'라고 불러요.",
+     "en": "With friends I call her Nong Bee, but at work I call her Khun Bee."
+    },
+    {
+     "text": "กับเพื่อนผมจะเรียกพี่โต้ง แต่กับที่ทำงานจะเรียกหัวหน้าโต้ง",
+     "ko": "친구들 사이에서는 '피똥'이라고 하고, 회사에서는 '화나똥'이라고 해요.",
+     "en": "With friends I call him Phi Tong, but at work I call him Boss Tong."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "호칭 구조",
+     "noteKo": "첫 번째와 두 번째 빈칸에 각각 친구, 직장 호칭을 씀",
+     "nameEn": "Form of address structure",
+     "noteEn": "First blank is for friends, second for workplace"
+    }
+   ],
+   "related": [
+    "เวลาอยู่กับเพื่อนจะพูดว่า___ แต่กับหัวหน้าจะพูดว่า___",
+    "กับคนสนิทจะพูด___ แต่กับคนใหม่จะพูด___"
+   ],
+   "quiz": {
+    "prompt": "กับเพื่อนผมจะเรียก___ แต่กับที่ทำงานจะเรียกคุณสมชาย",
+    "answer": "น้องสมชาย"
+   }
+  },
+  {
+   "id": "th-4-08",
+   "stage": 4,
+   "pattern": "ขออนุญาตแสดงความคิดเห็นนะครับ ผมคิดว่า___แต่เข้าใจที่คุณพูด",
+   "meaningKo": "예의 바르게 의견에 동의하지 않기",
+   "meaningEn": "Disagreeing politely while showing understanding",
+   "examples": [
+    {
+     "text": "ขออนุญาตแสดงความคิดเห็นนะครับ ผมคิดว่าเราควรเลื่อนกำหนดส่งแต่เข้าใจที่คุณพูด",
+     "ko": "실례지만 제 의견을 말씀드리자면, 저는 마감일을 미뤄야 한다고 생각해요. 하지만 말씀하신 부분도 이해합니다.",
+     "en": "If I may, I think we should postpone the deadline, but I understand what you’re saying."
+    },
+    {
+     "text": "ขออนุญาตแสดงความคิดเห็นนะครับ ผมคิดว่าเราควรลดงบประมาณแต่เข้าใจที่คุณพูด",
+     "ko": "제 의견을 말씀드리자면, 우리는 예산을 줄여야 한다고 생각합니다. 하지만 당신 말도 이해해요.",
+     "en": "If I may share my opinion, I think we should reduce the budget, but I understand your point."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 반대",
+     "noteKo": "___은/는 본인의 의견",
+     "nameEn": "Polite disagreement",
+     "noteEn": "___ is your own thought"
+    }
+   ],
+   "related": [
+    "จริงๆแล้ว ฉันเห็นต่างกับ___",
+    "ถ้าเป็นผม ผมจะ___"
+   ],
+   "quiz": {
+    "prompt": "ขออนุญาตแสดงความคิดเห็นนะครับ ผมคิดว่า___แต่เข้าใจที่คุณพูด",
+    "answer": "เราควรประชุมอีกครั้ง"
+   }
+  },
+  {
+   "id": "th-4-09",
+   "stage": 4,
+   "pattern": "ขอโทษนะครับ ผมขอเสนอว่า___ จะได้ไหมครับ",
+   "meaningKo": "공손하게 다른 의견 제시하기",
+   "meaningEn": "Politely offering a different suggestion",
+   "examples": [
+    {
+     "text": "ขอโทษนะครับ ผมขอเสนอว่าเราประชุมพรุ่งนี้เช้า จะได้ไหมครับ",
+     "ko": "실례합니다만 내일 아침에 회의하는 건 어떨까요?",
+     "en": "Excuse me, may I suggest we meet tomorrow morning?"
+    },
+    {
+     "text": "ขอโทษนะครับ ผมขอเสนอว่าเลื่อนกำหนดส่งงานไปอีกหนึ่งสัปดาห์ จะได้ไหมครับ",
+     "ko": "죄송하지만 마감 기한을 일주일 미루는 건 어떨까요?",
+     "en": "Sorry, may I suggest we postpone the deadline by a week?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "제안 표현",
+     "noteKo": "빈칸에는 제안하거나 바꾸고 싶은 내용을 씀",
+     "nameEn": "Suggestion expression",
+     "noteEn": "Blank is the suggested action or change"
+    }
+   ],
+   "related": [
+    "ขออนุญาตเสนอว่า___จะสะดวกกว่าไหมครับ",
+    "จริงๆแล้ว ผมคิดว่า___น่าจะเหมาะกว่า"
+   ],
+   "quiz": {
+    "prompt": "ขอโทษนะครับ ผมขอเสนอว่า___ จะได้ไหมครับ",
+    "answer": "ลดราคาให้หน่อย"
+   }
+  },
+  {
+   "id": "th-4-10",
+   "stage": 4,
+   "pattern": "ข่าววันนี้พูดถึง___ คุณคิดว่าอย่างไร",
+   "meaningKo": "뉴스나 사회 이슈에 대해 질문하기",
+   "meaningEn": "Asking about a news or social topic",
+   "examples": [
+    {
+     "text": "ข่าววันนี้พูดถึงค่าแรงขั้นต่ำ คุณคิดว่าอย่างไร",
+     "ko": "오늘 뉴스에서 최저임금 이야기가 나왔는데 어떻게 생각해?",
+     "en": "Today's news covered the minimum wage. What do you think?"
+    },
+    {
+     "text": "ข่าววันนี้พูดถึงการขึ้นค่าเช่าคอนโด คุณคิดว่าอย่างไร",
+     "ko": "오늘 뉴스에서 콘도 임대료 인상 이야기가 나왔는데 너는 어떻게 생각해?",
+     "en": "Today's news talked about condo rent increases. What do you think?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주제 질문",
+     "noteKo": "빈칸에 뉴스나 사회 이슈를 넣음",
+     "nameEn": "Topic question",
+     "noteEn": "Blank is the news or social topic"
+    }
+   ],
+   "related": [
+    "ช่วงนี้มีข่าวเกี่ยวกับ___ น่าสนใจมาก",
+    "คุณเห็นข่าวเรื่อง___หรือยัง"
+   ],
+   "quiz": {
+    "prompt": "ข่าววันนี้พูดถึง___ คุณคิดว่าอย่างไร",
+    "answer": "การทำงานจากบ้าน"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "th-5-01",
+   "stage": 5,
+   "pattern": "ขออนุญาตปฏิเสธ___ด้วยเหตุผลว่า___ครับ",
+   "meaningKo": "정중하게 요청을 거절하기",
+   "meaningEn": "Politely declining a request",
+   "examples": [
+    {
+     "text": "ขออนุญาตปฏิเสธงานวันนี้ด้วยเหตุผลว่ายุ่งมากครับ",
+     "ko": "오늘 일이 너무 바빠서 정중하게 거절드립니다.",
+     "en": "I must politely decline today’s task as I’m very busy."
+    },
+    {
+     "text": "ขออนุญาตปฏิเสธคำชวนไปงานเลี้ยงด้วยเหตุผลว่ามีธุระครับ",
+     "ko": "볼일이 있어서 모임 초대를 정중히 거절합니다.",
+     "en": "I must politely decline the invitation to the party as I have errands."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 거절 표현",
+     "noteKo": "___에 거절하는 대상이 들어감",
+     "nameEn": "Polite refusal expression",
+     "noteEn": "First blank is what you are refusing"
+    },
+    {
+     "nameKo": "이유 부연",
+     "noteKo": "___에 이유가 들어감",
+     "nameEn": "Giving a reason",
+     "noteEn": "Second blank is your reason"
+    }
+   ],
+   "related": [
+    "ถ้า___ ผมขอ___ไว้ก่อนนะครับ",
+    "ขอโทษนะครับ ผมขอเสนอว่า___ จะได้ไหมครับ"
+   ],
+   "quiz": {
+    "prompt": "ขออนุญาตปฏิเสธ___ด้วยเหตุผลว่าไม่สะดวกครับ",
+    "answer": "คำขอ"
+   }
+  },
+  {
+   "id": "th-5-02",
+   "stage": 5,
+   "pattern": "ถ้าจะพูดแบบทางการ เราจะใช้ว่า___ แต่ถ้าสนิทกันจะพูดว่า___",
+   "meaningKo": "상황에 따라 다르게 말하기",
+   "meaningEn": "Choosing language based on formality",
+   "examples": [
+    {
+     "text": "ถ้าจะพูดแบบทางการ เราจะใช้ว่าเรียนเชิญ แต่ถ้าสนิทกันจะพูดว่าไปด้วยกันไหม",
+     "ko": "공식적으로는 'เรียนเชิญ', 친하면 '같이 갈래?'라고 해요.",
+     "en": "Formally, we say 'please join us', but with friends, 'wanna come?'"
+    },
+    {
+     "text": "ถ้าจะพูดแบบทางการ เราจะใช้ว่ายินดีต้อนรับ แต่ถ้าสนิทกันจะพูดว่ามาดิ",
+     "ko": "공식적으로는 '환영합니다', 친하면 '어서 와'라고 해요.",
+     "en": "Formally, we say 'welcome', but with friends, 'come on in.'"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "상황별 언어 선택",
+     "noteKo": "첫 번째 ___에 공식적 표현, 두 번째 ___에 비공식적 표현",
+     "nameEn": "Register choice",
+     "noteEn": "First blank is formal expression, second is informal"
+    }
+   ],
+   "related": [
+    "กับเพื่อนผมจะเรียก___ แต่กับที่ทำงานจะเรียก___"
+   ],
+   "quiz": {
+    "prompt": "ถ้าจะพูดแบบทางการ เราจะใช้ว่า___ แต่ถ้าสนิทกันจะพูดว่าเฮ้ย",
+    "answer": "สวัสดีครับ"
+   }
+  },
+  {
+   "id": "th-5-03",
+   "stage": 5,
+   "pattern": "ขอแสดงความยินดีกับ___ในโอกาส___",
+   "meaningKo": "축하 인사 전하기",
+   "meaningEn": "Giving a congratulatory message",
+   "examples": [
+    {
+     "text": "ขอแสดงความยินดีกับคุณสมชายในโอกาสเกษียณอายุ",
+     "ko": "솜차이 씨의 은퇴를 축하드립니다.",
+     "en": "Congratulations to Mr. Somchai on his retirement."
+    },
+    {
+     "text": "ขอแสดงความยินดีกับทีมของเราในโอกาสได้รับรางวัล",
+     "ko": "우리 팀이 상을 받은 것을 축하합니다.",
+     "en": "Congratulations to our team on receiving the award."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "축하 대상 및 이유 표현",
+     "noteKo": "첫 번째 ___에 축하 받는 사람, 두 번째 ___에 계기",
+     "nameEn": "Recipient and occasion",
+     "noteEn": "First blank is the person, second is the occasion"
+    }
+   ],
+   "related": [
+    "ขอโทษค่ะ ขอเลื่อนนัดเป็น___ได้ไหมคะ"
+   ],
+   "quiz": {
+    "prompt": "ขอแสดงความยินดีกับ___ในโอกาสวันเกิด",
+    "answer": "คุณสุนีย์"
+   }
+  },
+  {
+   "id": "th-5-04",
+   "stage": 5,
+   "pattern": "ตอนดู___ฉันหัวเราะจน___",
+   "meaningKo": "코미디 프로그램 이야기하기",
+   "meaningEn": "Talking about a comedy show",
+   "examples": [
+    {
+     "text": "ตอนดูหนังเรื่องนั้นฉันหัวเราะจนร้องไห้",
+     "ko": "그 영화 볼 때 너무 웃어서 눈물이 났어요.",
+     "en": "Watching that movie, I laughed till I cried."
+    },
+    {
+     "text": "ตอนดูคลิปในเน็ตฉันหัวเราะจนท้องแข็ง",
+     "ko": "인터넷 동영상 보다가 배꼽 빠지게 웃었어요.",
+     "en": "Watching that online clip, I laughed so hard my stomach hurt."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "결과 강조 표현",
+     "noteKo": "첫 번째 ___에 프로그램, 두 번째 ___에 그 결과",
+     "nameEn": "Result emphasis",
+     "noteEn": "First blank is what you watched, second is the result"
+    }
+   ],
+   "related": [
+    "ฉันรู้สึก___"
+   ],
+   "quiz": {
+    "prompt": "ตอนดู___ฉันหัวเราะจนปวดท้อง",
+    "answer": "รายการตลกเมื่อคืน"
+   }
+  },
+  {
+   "id": "th-5-05",
+   "stage": 5,
+   "pattern": "ในฐานะ___ ขอขอบคุณทุกคนที่___",
+   "meaningKo": "행사에서 감사 인사하기",
+   "meaningEn": "Thanking everyone at an event",
+   "examples": [
+    {
+     "text": "ในฐานะหัวหน้าทีม ขอขอบคุณทุกคนที่ร่วมมือกันอย่างดี",
+     "ko": "팀장으로서 모두의 협력에 감사합니다.",
+     "en": "As team leader, I thank everyone for their cooperation."
+    },
+    {
+     "text": "ในฐานะตัวแทน ขอขอบคุณทุกคนที่มาร่วมงานวันนี้",
+     "ko": "대표로서 오늘 참석해 주신 모든 분께 감사드립니다.",
+     "en": "As a representative, I thank everyone for coming today."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "역할과 감사 내용",
+     "noteKo": "첫 번째 ___에 역할, 두 번째 ___에 감사의 이유",
+     "nameEn": "Role and thanks",
+     "noteEn": "First blank is your role, second is what you thank for"
+    }
+   ],
+   "related": [
+    "ขอแสดงความยินดีกับ___ในโอกาส___"
+   ],
+   "quiz": {
+    "prompt": "ในฐานะ___ ขอขอบคุณทุกคนที่ช่วยสนับสนุน",
+    "answer": "ผู้จัดงาน"
+   }
+  },
+  {
+   "id": "th-5-06",
+   "stage": 5,
+   "pattern": "ถ้าสะดวก รบกวน___ให้หน่อยได้ไหมครับ",
+   "meaningKo": "공손하게 부탁하기",
+   "meaningEn": "Making a polite request",
+   "examples": [
+    {
+     "text": "ถ้าสะดวก รบกวนส่งเอกสารให้หน่อยได้ไหมครับ",
+     "ko": "가능하시다면 서류 좀 보내주실 수 있을까요?",
+     "en": "If convenient, could you please send the documents?"
+    },
+    {
+     "text": "ถ้าสะดวก รบกวนช่วยเช็กข้อมูลให้หน่อยได้ไหมครับ",
+     "ko": "가능하시다면 정보 좀 확인해주실 수 있나요?",
+     "en": "If convenient, could you please check the information?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청 표현",
+     "noteKo": "___에 정중하게 부탁하고 싶은 내용을 넣음",
+     "nameEn": "Polite request structure",
+     "noteEn": "___ is the action politely requested"
+    }
+   ],
+   "related": [
+    "ขออนุญาต___ได้ไหมครับ",
+    "รบกวน___สักครู่ได้ไหมครับ"
+   ],
+   "quiz": {
+    "prompt": "ถ้าสะดวก รบกวน___ให้หน่อยได้ไหมครับ",
+    "answer": "ช่วยดูรายงาน"
+   }
+  },
+  {
+   "id": "th-5-07",
+   "stage": 5,
+   "pattern": "ถ้าทำได้ ผมขอ___ไว้ก่อนนะครับ",
+   "meaningKo": "공손하게 거절하기",
+   "meaningEn": "Politely turning down a request",
+   "examples": [
+    {
+     "text": "ถ้าทำได้ ผมขอปฏิเสธไว้ก่อนนะครับ",
+     "ko": "가능하다면 이번엔 거절하겠습니다.",
+     "en": "If possible, I’d like to politely decline for now."
+    },
+    {
+     "text": "ถ้าทำได้ ผมขอผ่านไว้ก่อนนะครับ",
+     "ko": "가능하다면 이번엔 패스하겠습니다.",
+     "en": "If possible, I’d like to pass this time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 거절",
+     "noteKo": "___에 거절의 의사를 나타내는 말을 넣음",
+     "nameEn": "Soft refusal",
+     "noteEn": "___ is a polite refusal phrase"
+    }
+   ],
+   "related": [
+    "ขอ___ทีหลังได้ไหมครับ",
+    "ขออนุญาตไม่___ในครั้งนี้นะครับ"
+   ],
+   "quiz": {
+    "prompt": "ถ้าทำได้ ผมขอ___ไว้ก่อนนะครับ",
+    "answer": "ปฏิเสธ"
+   }
+  },
+  {
+   "id": "th-5-08",
+   "stage": 5,
+   "pattern": "ขออนุญาตแสดงความคิดเห็นส่วนตัวนะครับ ผมคิดว่า___",
+   "meaningKo": "공식 자리에서 의견 제시하기",
+   "meaningEn": "Giving a personal opinion formally",
+   "examples": [
+    {
+     "text": "ขออนุญาตแสดงความคิดเห็นส่วนตัวนะครับ ผมคิดว่าแผนนี้เหมาะสมดี",
+     "ko": "개인적인 의견을 말씀드리자면, 이 계획이 적합하다고 생각합니다.",
+     "en": "With your permission, I’d like to say I think this plan is suitable."
+    },
+    {
+     "text": "ขออนุญาตแสดงความคิดเห็นส่วนตัวนะครับ ผมคิดว่าควรทดลองก่อน",
+     "ko": "제 개인 의견인데, 먼저 시험해보는 게 좋을 것 같아요.",
+     "en": "If I may express my opinion, I think we should try it first."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공식적 의견 제시",
+     "noteKo": "___에 자신의 의견을 넣음",
+     "nameEn": "Formal opinion expression",
+     "noteEn": "___ is your personal opinion"
+    }
+   ],
+   "related": [
+    "ขออนุญาตเสนอความคิดเห็น___",
+    "ในความคิดเห็นของผม___"
+   ],
+   "quiz": {
+    "prompt": "ขออนุญาตแสดงความคิดเห็นส่วนตัวนะครับ ผมคิดว่า___",
+    "answer": "ควรปรับปรุงวิธีทำงาน"
+   }
+  },
+  {
+   "id": "th-5-09",
+   "stage": 5,
+   "pattern": "สุภาษิตที่ว่า '___' ใช้ได้กับสถานการณ์นี้จริงๆ",
+   "meaningKo": "속담을 자연스럽게 사용하기",
+   "meaningEn": "Using a proverb naturally",
+   "examples": [
+    {
+     "text": "สุภาษิตที่ว่า 'น้ำขึ้นให้รีบตัก' ใช้ได้กับสถานการณ์นี้จริงๆ",
+     "ko": "'기회가 왔을 때 잡아라'라는 속담이 이 상황에 딱 맞아요.",
+     "en": "The proverb 'strike while the iron is hot' really fits this situation."
+    },
+    {
+     "text": "สุภาษิตที่ว่า 'กันไว้ดีกว่าแก้' ใช้ได้กับสถานการณ์นี้จริงๆ",
+     "ko": "'예방이 치료보다 낫다'라는 말이 딱 맞아요.",
+     "en": "The saying 'prevention is better than cure' fits perfectly here."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "속담 인용",
+     "noteKo": "___에 속담이나 명언이 들어감",
+     "nameEn": "Proverb citation",
+     "noteEn": "Blank is the quoted saying"
+    }
+   ],
+   "related": [
+    "ถ้า___ ผมคิดว่าเราควร___"
+   ],
+   "quiz": {
+    "prompt": "สุภาษิตที่ว่า '___' ใช้ได้กับสถานการณ์นี้จริงๆ",
+    "answer": "ปลาหมอตายเพราะปาก"
+   }
+  },
+  {
+   "id": "th-5-10",
+   "stage": 5,
+   "pattern": "พูดตรงๆคือ___ แต่ก็ขอเป็นกำลังใจให้นะครับ",
+   "meaningKo": "비판을 부드럽게 전달하기",
+   "meaningEn": "Softly criticizing but encouraging",
+   "examples": [
+    {
+     "text": "พูดตรงๆคือไอเดียนี้ยังต้องปรับปรุง แต่ก็ขอเป็นกำลังใจให้นะครับ",
+     "ko": "솔직히 이 아이디어는 아직 개선이 필요하지만 응원합니다.",
+     "en": "Honestly, this idea needs improvement, but I wish you the best."
+    },
+    {
+     "text": "พูดตรงๆคือผลงานนี้ยังไม่สมบูรณ์ แต่ก็ขอเป็นกำลังใจให้นะครับ",
+     "ko": "솔직히 이번 결과물은 아직 완벽하지 않지만, 응원할게요.",
+     "en": "Frankly, this work isn’t perfect yet, but I support you."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 비판",
+     "noteKo": "___에 솔직한 의견이 들어감",
+     "nameEn": "Mitigated criticism",
+     "noteEn": "Blank is your honest opinion"
+    }
+   ],
+   "related": [
+    "ขอโทษค่ะ ขอเลื่อนนัดเป็น___ได้ไหมคะ"
+   ],
+   "quiz": {
+    "prompt": "พูดตรงๆคือ___ แต่ก็ขอเป็นกำลังใจให้นะครับ",
+    "answer": "งานนี้ยังขาดรายละเอียด"
+   }
+  }
+ ]
+}

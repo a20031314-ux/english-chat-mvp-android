@@ -33,9 +33,11 @@ import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
-import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
+import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
+import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
+import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { peekBank, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { feelDue, feelLevel, levelOf, noteLevel, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
@@ -55,11 +57,10 @@ import { bankTone, BankToneProvider } from "@/components/studyMap/bankTone";
 import { buildExam, examDue, finishExam, notePool, readLadder, readPool, saveExamState, type ExamItem } from "@/lib/curriculum/exam";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
-import { wordbook } from "@/lib/curriculum/wordbook";
 import { growBank, offerBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
 import { emptyCircle, growCircle, itemState, newPaused, noteAnswer, noteTest, pickCircle, trimCircle, wordTest, wordTestDue, type Circle } from "@/lib/curriculum/circle";
-import { WordbookCard } from "@/components/studyMap/Wordbook";
+import { DictionaryButton } from "@/components/studyMap/Dictionary";
 import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { LedgerState } from "@/lib/learner/ledger";
@@ -106,7 +107,7 @@ type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: QuizTab; vo
 const MIXES: readonly QuizMix[] = ["auto", "speak", "read"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
-/** Quizbank 어휘 탭을 열 때(신호 openNotes words — Logbank 어휘 칸 📖 추천·단계 화면 낱말 줄, 2026-11-02): 저장된 탭을 어휘로 바꾸고 알린다. */
+/** Quizbank 어휘 탭을 열 때(신호 openNotes words — 단계 화면 낱말 줄, 2026-11-02): 저장된 탭을 어휘로 바꾸고 알린다. */
 const KEEP_WORDS_EVENT = "lb-keep-words";
 export function focusQuizbankWords(): void {
   try {
@@ -252,7 +253,7 @@ export function TodayPlan({
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
   const [lane, setLane] = useState<StudyLane>("learn");
-  // 단어장(curriculum/wordbook.ts): 저장한 단어는 이 폰(lib/vocabulary.ts), 낱말을 누르면 뜻 시트.
+  // 저장한 단어(lib/vocabulary.ts, 이 폰)는 어휘 퀴즈 재료. 목록 화면은 단어 사전.
   const [savedWords, setSavedWords] = useState<ReturnType<typeof loadVocabulary>>([]);
   const preview = useVocabPreviewOptional();
   useEffect(() => {
@@ -301,6 +302,7 @@ export function TodayPlan({
   const knownWord = (key: string) => knownState(known, key) === "known";
   // 어휘 탭에 섞는 덩어리 표현(curriculum/expressionDeck.ts, 2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기"): 1~지금 단계, 문장구조와 같은 표현은 빠짐.
   const exprCards = useExpressionCards(language, locale, stage);
+  const prepared = usePrepared(language);
   // 원(circle.ts)이 다루는 열쇠 — 카드가 온 낱말과 표현(단어 시험·틀림 셈·새 것 쉬기에 같이).
   const usableKey = (key: string) => Boolean(bank?.ready.has(key)) || exprCards.ready.has(key);
   const isDeckKey = (key: string) => key.startsWith("w|") || key.startsWith("e|");
@@ -626,7 +628,6 @@ export function TodayPlan({
       now: at,
     });
   const nextIn = (which: StudyLane, weakestNow: PartId | null) => studyQueue(which, Date.now(), weakestNow)[0] ?? null;
-  const words = wordbook(language, known, savedWords, (word) => wordGloss(language, word));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
   const placeAt = async (order: number) => {
     const id = ladderFor(language)?.stages.find((one) => one.order === order)?.id;
@@ -1189,13 +1190,14 @@ export function TodayPlan({
           ? []
           : levelPick(QUIZ_SIZE + 1, { skip: lastCircle.current })
         : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: usableKey, known: knownWord, skip: lastCircle.current });
-      // 낱말 묶음마다 아직 안 본 표현 하나를 둘째 자리에(새 낱말을 쉬는 중이면 표현도 쉼).
-      if (!paused) {
+      // 낱말 묶음마다 아직 안 본 표현 하나를 둘째 자리에(새 낱말을 쉬는 중이면 표현도 쉼). 영어는 그 자리에 넣어 둔 문법·표현 고르기.
+      if (!paused && !prepared) {
         const more = nextExpressions(exprCards.deck, { seen: (key) => Boolean(circleRef.current.items[key]) || knownWord(key), ready: (key) => exprCards.ready.has(key), skip: lastCircle.current });
         keys.splice(Math.min(1, keys.length), 0, ...more);
       }
-      lastCircle.current = new Set(keys);
-      if (!keys.length) return null;
+      const head = !paused && prepared ? pickPrepared(prepared, { stage, skip: lastCircle.current }) : [];
+      lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
+      if (!keys.length && !head.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));
       // 다음 묶음에 나올 새 낱말도 미리(문제은행 미리 받기, 2026-11-01).
       const ahead = levelOn ? levelPick(8, { skip: new Set(keys) }) : pickCircle(circleRef.current, circleOrder, { n: 8, now: Date.now(), usable: usableKey, known: knownWord, skip: new Set(keys) });
@@ -1203,7 +1205,22 @@ export function TodayPlan({
       // 처음 보는 낱말은 고르기, 다시 나온 낱말은 쓰기(처음부터 쓰게 하면 첫날 정답률이 30%대 — 시뮬레이션).
       const questions: QuizQuestion[] = [];
       const used: string[] = [];
+      const writtenWord = new Map((prepared ?? []).filter((item) => item.kind === "word").map((item) => [item.key, item]));
+      for (const item of head) {
+        const made = chooseFromPrepared(item);
+        if (made) {
+          questions.push(made);
+          used.push(item.key);
+        }
+      }
       for (const key of keys) {
+        const word = writtenWord.get(key);
+        const fromFile = word ? typeFromPrepared(word) : null;
+        if (fromFile) {
+          questions.push(fromFile);
+          used.push(key);
+          continue;
+        }
         const fresh = itemState(circleRef.current, key, knownWord(key)) === "new";
         const made = bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: fresh ? "choose" : "type", fallback: fresh ? "type" : "choose", strict: true });
         if (made.questions[0]) {
@@ -1364,7 +1381,7 @@ export function TodayPlan({
             );
           })}
         </div>
-        {!wrongTab && !examTab ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
+        {!wrongTab && !examTab ? <DictionaryButton ui={ui} language={language} locale={locale} /> : null}
         {!wrongTab && !examTab && bank ? settingsIcon : null}
       </div>
       {testDue ? (
@@ -1406,7 +1423,7 @@ export function TodayPlan({
         resetKey={keepResetKey}
         make={keepMake}
         adKey={wrongTab ? "review" : "keep"}
-        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}`}
+        retryKey={`${bank?.next.length ?? -1}|${bank?.ready.size ?? 0}|${circleOrder.length}|${spotCards.size}|${vocabPaused}|${prepared?.length ?? -1}`}
         onResult={recordOne}
         onParts={(parts) => {
           // 복합 문제: 소재마다 한 번에(따로 부르면 기록이 서로 덮임).

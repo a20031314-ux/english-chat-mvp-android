@@ -1,0 +1,1658 @@
+{
+ "1": [
+  {
+   "id": "hi-1-01",
+   "stage": 1,
+   "pattern": "मेरा नाम ___ है।",
+   "meaningKo": "자기 이름 말하기",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "मेरा नाम सोना है।",
+     "ko": "제 이름은 소나예요.",
+     "en": "My name is Sona."
+    },
+    {
+     "text": "मेरा नाम राहुल है।",
+     "ko": "제 이름은 라훌이에요.",
+     "en": "My name is Rahul."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 말하기",
+     "noteKo": "___에 자기 이름을 넣어요.",
+     "nameEn": "Name statement",
+     "noteEn": "Put your name in the blank."
+    }
+   ],
+   "related": [
+    "मैं ___ से हूँ।"
+   ],
+   "quiz": {
+    "prompt": "मेरा नाम ___ है।",
+    "answer": "रवि"
+   }
+  },
+  {
+   "id": "hi-1-02",
+   "stage": 1,
+   "pattern": "मैं ___ से हूँ।",
+   "meaningKo": "자기 출신지 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "मैं कोरिया से हूँ।",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I am from Korea."
+    },
+    {
+     "text": "मैं दिल्ली से हूँ।",
+     "ko": "저는 델리에서 왔어요.",
+     "en": "I am from Delhi."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지 표현",
+     "noteKo": "___에 도시나 나라 이름을 넣어요.",
+     "nameEn": "From-expression",
+     "noteEn": "Insert a place name in the blank."
+    }
+   ],
+   "related": [
+    "मेरा नाम ___ है।"
+   ],
+   "quiz": {
+    "prompt": "मैं ___ से हूँ।",
+    "answer": "जापान"
+   }
+  },
+  {
+   "id": "hi-1-03",
+   "stage": 1,
+   "pattern": "___ कितने का है?",
+   "meaningKo": "가격 물어보기",
+   "meaningEn": "Asking the price of something",
+   "examples": [
+    {
+     "text": "सेब कितने का है?",
+     "ko": "사과 얼마예요?",
+     "en": "How much is the apple?"
+    },
+    {
+     "text": "केला कितने का है?",
+     "ko": "바나나 얼마예요?",
+     "en": "How much is the banana?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가격 질문",
+     "noteKo": "___에 물건 이름을 넣어요.",
+     "nameEn": "Price question",
+     "noteEn": "Put the item's name in the blank."
+    }
+   ],
+   "related": [
+    "मुझे ___ चाहिए।"
+   ],
+   "quiz": {
+    "prompt": "___ कितने का है?",
+    "answer": "आम"
+   }
+  },
+  {
+   "id": "hi-1-04",
+   "stage": 1,
+   "pattern": "मुझे ___ चाहिए।",
+   "meaningKo": "원하는 것 말하기",
+   "meaningEn": "Saying what you want",
+   "examples": [
+    {
+     "text": "मुझे पानी चाहिए।",
+     "ko": "물 주세요.",
+     "en": "I want water."
+    },
+    {
+     "text": "मुझे केला चाहिए।",
+     "ko": "바나나 주세요.",
+     "en": "I want a banana."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "필요 표현",
+     "noteKo": "___에 원하는 것을 넣어요.",
+     "nameEn": "Want/need",
+     "noteEn": "Insert what you want in the blank."
+    }
+   ],
+   "related": [
+    "___ कितने का है?"
+   ],
+   "quiz": {
+    "prompt": "मुझे ___ चाहिए।",
+    "answer": "सेब"
+   }
+  },
+  {
+   "id": "hi-1-05",
+   "stage": 1,
+   "pattern": "___ कहाँ है?",
+   "meaningKo": "장소 위치 물어보기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "शौचालय कहाँ है?",
+     "ko": "화장실 어디예요?",
+     "en": "Where is the toilet?"
+    },
+    {
+     "text": "स्टेशन कहाँ है?",
+     "ko": "역 어디에 있어요?",
+     "en": "Where is the station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위치 질문",
+     "noteKo": "___에 장소 이름을 넣어요.",
+     "nameEn": "Location question",
+     "noteEn": "Put a place name in the blank."
+    }
+   ],
+   "related": [
+    "मुझे ___ जाना है।"
+   ],
+   "quiz": {
+    "prompt": "___ कहाँ है?",
+    "answer": "बाजार"
+   }
+  },
+  {
+   "id": "hi-1-06",
+   "stage": 1,
+   "pattern": "मुझे ___ जाना है।",
+   "meaningKo": "가고 싶은 장소 말하기",
+   "meaningEn": "Saying where you want to go",
+   "examples": [
+    {
+     "text": "मुझे स्टेशन जाना है।",
+     "ko": "역으로 가고 싶어요.",
+     "en": "I want to go to the station."
+    },
+    {
+     "text": "मुझे होटल जाना है।",
+     "ko": "호텔에 가고 싶어요.",
+     "en": "I want to go to the hotel."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 목적 표현",
+     "noteKo": "___에 목적지 이름을 넣어요.",
+     "nameEn": "Destination statement",
+     "noteEn": "Insert the destination in the blank."
+    }
+   ],
+   "related": [
+    "___ कहाँ है?"
+   ],
+   "quiz": {
+    "prompt": "मुझे ___ जाना है।",
+    "answer": "बाजार"
+   }
+  },
+  {
+   "id": "hi-1-07",
+   "stage": 1,
+   "pattern": "नमस्ते, मेरा नाम ___ है।",
+   "meaningKo": "자기 이름 소개하기",
+   "meaningEn": "Introducing your name",
+   "examples": [
+    {
+     "text": "नमस्ते, मेरा नाम रीमा है।",
+     "ko": "안녕하세요, 제 이름은 리마입니다.",
+     "en": "Hello, my name is Rima."
+    },
+    {
+     "text": "नमस्ते, मेरा नाम अरुण है।",
+     "ko": "안녕하세요, 제 이름은 아룬입니다.",
+     "en": "Hello, my name is Arun."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 삽입",
+     "noteKo": "빈칸에는 자신의 이름을 넣음",
+     "nameEn": "Noun insertion",
+     "noteEn": "The blank is for your name"
+    }
+   ],
+   "related": [
+    "मैं ___ से आया हूँ।"
+   ],
+   "quiz": {
+    "prompt": "नमस्ते, मेरा नाम ___ है।",
+    "answer": "रीमा"
+   }
+  },
+  {
+   "id": "hi-1-08",
+   "stage": 1,
+   "pattern": "मैं ___ से आया हूँ।",
+   "meaningKo": "자신의 출신지 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "मैं कोरिया से आया हूँ।",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I am from Korea."
+    },
+    {
+     "text": "मैं दिल्ली से आया हूँ।",
+     "ko": "저는 델리에서 왔어요.",
+     "en": "I am from Delhi."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 삽입",
+     "noteKo": "빈칸에는 출신지를 넣음",
+     "nameEn": "Noun insertion",
+     "noteEn": "The blank is for a place"
+    }
+   ],
+   "related": [
+    "मेरा नाम ___ है।"
+   ],
+   "quiz": {
+    "prompt": "मैं ___ से आया हूँ।",
+    "answer": "कोरिया"
+   }
+  },
+  {
+   "id": "hi-1-09",
+   "stage": 1,
+   "pattern": "मैं ___ हूँ।",
+   "meaningKo": "자신의 상태 답하기",
+   "meaningEn": "Answering how you are",
+   "examples": [
+    {
+     "text": "मैं ठीक हूँ।",
+     "ko": "저는 괜찮아요.",
+     "en": "I am fine."
+    },
+    {
+     "text": "मैं अच्छा हूँ।",
+     "ko": "저는 좋아요.",
+     "en": "I am good."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "형용사 삽입",
+     "noteKo": "빈칸에는 자신의 상태를 넣음",
+     "nameEn": "Adjective insertion",
+     "noteEn": "The blank is for your state/condition"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "मैं ___ हूँ।",
+    "answer": "ठीक"
+   }
+  },
+  {
+   "id": "hi-1-10",
+   "stage": 1,
+   "pattern": "क्या आप ___ बोल सकते हैं?",
+   "meaningKo": "상대방이 특정 언어를 할 수 있는지 묻기",
+   "meaningEn": "Asking if someone can speak a language",
+   "examples": [
+    {
+     "text": "क्या आप हिंदी बोल सकते हैं?",
+     "ko": "힌디어 할 수 있어요?",
+     "en": "Can you speak Hindi?"
+    },
+    {
+     "text": "क्या आप अंग्रेज़ी बोल सकते हैं?",
+     "ko": "영어 할 수 있어요?",
+     "en": "Can you speak English?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사(언어) 삽입",
+     "noteKo": "빈칸에는 언어 이름을 넣음",
+     "nameEn": "Noun (language) insertion",
+     "noteEn": "The blank is for a language"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "क्या आप ___ बोल सकते हैं?",
+    "answer": "हिंदी"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "hi-2-01",
+   "stage": 2,
+   "pattern": "मेरे परिवार में ___ हैं।",
+   "meaningKo": "가족 구성원 소개",
+   "meaningEn": "Introducing your family members",
+   "examples": [
+    {
+     "text": "मेरे परिवार में चार लोग हैं।",
+     "ko": "우리 가족은 네 명이야.",
+     "en": "There are four people in my family."
+    },
+    {
+     "text": "मेरे परिवार में माता-पिता और एक बहन हैं।",
+     "ko": "우리 가족엔 부모님과 한 명의 여동생이 있어.",
+     "en": "My family has parents and a sister."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 구",
+     "noteKo": "___에 가족 구성원 또는 수를 넣어.",
+     "nameEn": "Noun phrase",
+     "noteEn": "Put family members or number of people in ___."
+    }
+   ],
+   "related": [
+    "___ क्या करते हैं?"
+   ],
+   "quiz": {
+    "prompt": "मेरे परिवार में ___ हैं।",
+    "answer": "पाँच लोग"
+   }
+  },
+  {
+   "id": "hi-2-02",
+   "stage": 2,
+   "pattern": "___ में क्या है?",
+   "meaningKo": "음식의 재료나 내용물 묻기",
+   "meaningEn": "Asking what's in a dish",
+   "examples": [
+    {
+     "text": "पनीर टिक्का में क्या है?",
+     "ko": "파니르 티카에는 뭐가 들어 있어?",
+     "en": "What's in paneer tikka?"
+    },
+    {
+     "text": "समोसे में क्या है?",
+     "ko": "사모사에는 뭐가 들어 있어?",
+     "en": "What's in samosa?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "음식 이름 명사",
+     "noteKo": "___에 음식 이름을 넣어.",
+     "nameEn": "Food name noun",
+     "noteEn": "Put the name of the dish in ___."
+    }
+   ],
+   "related": [
+    "___ तीखा है क्या?"
+   ],
+   "quiz": {
+    "prompt": "___ में क्या है?",
+    "answer": "दाल"
+   }
+  },
+  {
+   "id": "hi-2-03",
+   "stage": 2,
+   "pattern": "___ तीखा है क्या?",
+   "meaningKo": "음식이 매운지 묻기",
+   "meaningEn": "Asking if a dish is spicy",
+   "examples": [
+    {
+     "text": "राजमा तीखा है क्या?",
+     "ko": "라즈마는 매워?",
+     "en": "Is rajma spicy?"
+    },
+    {
+     "text": "चाट तीखा है क्या?",
+     "ko": "차트는 매워?",
+     "en": "Is chaat spicy?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "음식 이름 명사",
+     "noteKo": "___에 음식 이름을 넣어.",
+     "nameEn": "Food name noun",
+     "noteEn": "Put the name of the dish in ___."
+    }
+   ],
+   "related": [
+    "___ में क्या है?"
+   ],
+   "quiz": {
+    "prompt": "___ तीखा है क्या?",
+    "answer": "मटर पनीर"
+   }
+  },
+  {
+   "id": "hi-2-04",
+   "stage": 2,
+   "pattern": "मुझे ___ पसंद है।",
+   "meaningKo": "좋아하는 것 말하기",
+   "meaningEn": "Saying what you like",
+   "examples": [
+    {
+     "text": "मुझे आम पसंद है।",
+     "ko": "나는 망고를 좋아해.",
+     "en": "I like mangoes."
+    },
+    {
+     "text": "मुझे संगीत पसंद है।",
+     "ko": "나는 음악을 좋아해.",
+     "en": "I like music."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 또는 동명사",
+     "noteKo": "___에 좋아하는 것 또는 활동을 넣어.",
+     "nameEn": "Noun or gerund",
+     "noteEn": "Put the thing or activity you like in ___."
+    }
+   ],
+   "related": [
+    "मुझे ___ पसंद नहीं है।"
+   ],
+   "quiz": {
+    "prompt": "मुझे ___ पसंद है।",
+    "answer": "खेलना"
+   }
+  },
+  {
+   "id": "hi-2-05",
+   "stage": 2,
+   "pattern": "मैं हर शनिवार ___ जाता हूँ।",
+   "meaningKo": "주말에 주로 하는 일을 말하기",
+   "meaningEn": "Saying what you usually do on weekends",
+   "examples": [
+    {
+     "text": "मैं हर शनिवार बाज़ार जाता हूँ।",
+     "ko": "나는 매주 토요일에 시장에 가.",
+     "en": "I go to the market every Saturday."
+    },
+    {
+     "text": "मैं हर शनिवार पार्क जाता हूँ।",
+     "ko": "나는 매주 토요일에 공원에 가.",
+     "en": "I go to the park every Saturday."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재형",
+     "noteKo": "___에 장소를 넣는다.",
+     "nameEn": "Present tense",
+     "noteEn": "The blank is for the place you go."
+    }
+   ],
+   "related": [
+    "मैं रविवार को ___ करता हूँ।"
+   ],
+   "quiz": {
+    "prompt": "मैं हर शनिवार ___ जाता हूँ।",
+    "answer": "मंदिर"
+   }
+  },
+  {
+   "id": "hi-2-06",
+   "stage": 2,
+   "pattern": "मेरे पापा ___ हैं।",
+   "meaningKo": "아버지의 직업이나 상태를 말하기",
+   "meaningEn": "Saying what your father does",
+   "examples": [
+    {
+     "text": "मेरे पापा डॉक्टर हैं।",
+     "ko": "우리 아버지는 의사야.",
+     "en": "My father is a doctor."
+    },
+    {
+     "text": "मेरे पापा किसान हैं।",
+     "ko": "우리 아버지는 농부야.",
+     "en": "My father is a farmer."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구",
+     "noteKo": "___에 직업이나 신분을 넣는다.",
+     "nameEn": "Noun phrase",
+     "noteEn": "Put the occupation or status in the blank."
+    }
+   ],
+   "related": [
+    "मेरी माँ ___ हैं।"
+   ],
+   "quiz": {
+    "prompt": "मेरे पापा ___ हैं।",
+    "answer": "शिक्षक"
+   }
+  },
+  {
+   "id": "hi-2-07",
+   "stage": 2,
+   "pattern": "मेरी माँ ___ हैं।",
+   "meaningKo": "어머니의 직업이나 상태를 말하기",
+   "meaningEn": "Saying what your mother does",
+   "examples": [
+    {
+     "text": "मेरी माँ टीचर हैं।",
+     "ko": "우리 어머니는 선생님이셔.",
+     "en": "My mother is a teacher."
+    },
+    {
+     "text": "मेरी माँ गृहिणी हैं।",
+     "ko": "우리 어머니는 주부야.",
+     "en": "My mother is a homemaker."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구",
+     "noteKo": "___에 직업이나 신분을 넣는다.",
+     "nameEn": "Noun phrase",
+     "noteEn": "Put the occupation or status in the blank."
+    }
+   ],
+   "related": [
+    "मेरे भाई ___ हैं।"
+   ],
+   "quiz": {
+    "prompt": "मेरी माँ ___ हैं।",
+    "answer": "इंजीनियर"
+   }
+  },
+  {
+   "id": "hi-2-08",
+   "stage": 2,
+   "pattern": "पिछले हफ्ते मैं ___ गया था।",
+   "meaningKo": "지난주에 어디 갔는지 말하기",
+   "meaningEn": "Saying where you went last week",
+   "examples": [
+    {
+     "text": "पिछले हफ्ते मैं दिल्ली गया था।",
+     "ko": "지난주에 나는 델리에 갔어.",
+     "en": "Last week I went to Delhi."
+    },
+    {
+     "text": "पिछले हफ्ते मैं गाँव गया था।",
+     "ko": "지난주에 나는 시골에 갔어.",
+     "en": "Last week I went to the village."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거형",
+     "noteKo": "___에 장소를 넣는다.",
+     "nameEn": "Past tense",
+     "noteEn": "The blank is for the place you went."
+    }
+   ],
+   "related": [
+    "कल मैंने ___ किया।"
+   ],
+   "quiz": {
+    "prompt": "पिछले हफ्ते मैं ___ गया था।",
+    "answer": "मुंबई"
+   }
+  },
+  {
+   "id": "hi-2-09",
+   "stage": 2,
+   "pattern": "___ पर मिलो।",
+   "meaningKo": "어디서 만나자고 제안하기",
+   "meaningEn": "Suggesting where to meet",
+   "examples": [
+    {
+     "text": "कैफ़े पर मिलो।",
+     "ko": "카페에서 만나자.",
+     "en": "Meet at the café."
+    },
+    {
+     "text": "बस स्टॉप पर मिलो।",
+     "ko": "버스 정류장에서 만나자.",
+     "en": "Meet at the bus stop."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 표현",
+     "noteKo": "___에 장소를 넣는다.",
+     "nameEn": "Place expression",
+     "noteEn": "The blank is for the place to meet."
+    }
+   ],
+   "related": [
+    "___ बजे ___ पर मिलेंगे।"
+   ],
+   "quiz": {
+    "prompt": "___ पर मिलो।",
+    "answer": "पार्क"
+   }
+  },
+  {
+   "id": "hi-2-10",
+   "stage": 2,
+   "pattern": "___ दीजिए।",
+   "meaningKo": "음식이나 물건을 주문하기",
+   "meaningEn": "Ordering food or something",
+   "examples": [
+    {
+     "text": "चाय दीजिए।",
+     "ko": "차 주세요.",
+     "en": "Please give (me) tea."
+    },
+    {
+     "text": "रोटी दीजिए।",
+     "ko": "로띠 주세요.",
+     "en": "Please give (me) roti."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구",
+     "noteKo": "___에 원하는 것을 넣는다.",
+     "nameEn": "Noun phrase",
+     "noteEn": "Put the item you want in the blank."
+    }
+   ],
+   "related": [
+    "___ और ___ दीजिए।"
+   ],
+   "quiz": {
+    "prompt": "___ दीजिए।",
+    "answer": "दाल"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "hi-3-01",
+   "stage": 3,
+   "pattern": "मुझे लगता है कि ___ अच्छा था क्योंकि ___।",
+   "meaningKo": "영화나 뉴스에 대한 의견과 이유를 말하기",
+   "meaningEn": "Giving your opinion about something and saying why",
+   "examples": [
+    {
+     "text": "मुझे लगता है कि वह फिल्म अच्छा था क्योंकि कहानी अलग थी।",
+     "ko": "그 영화가 좋았던 이유는 이야기가 독특했기 때문이에요.",
+     "en": "I think that film was good because the story was different."
+    },
+    {
+     "text": "मुझे लगता है कि यह खबर अच्छा था क्योंकि इससे हमें जानकारी मिली।",
+     "ko": "이 뉴스가 좋았던 이유는 정보를 알 수 있었기 때문이에요.",
+     "en": "I think this news was good because we got information from it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 또는 문장",
+     "noteKo": "첫 번째 빈칸에 평가할 대상 입력",
+     "nameEn": "Noun or clause",
+     "noteEn": "First blank is the thing you are judging"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 빈칸에 이유 작성",
+     "nameEn": "Reason",
+     "noteEn": "Second blank is the reason"
+    }
+   ],
+   "related": [
+    "मेरे हिसाब से ___ सबसे अच्छा था।"
+   ],
+   "quiz": {
+    "prompt": "मुझे लगता है कि ___ अच्छा था क्योंकि कहानी अलग थी।",
+    "answer": "वह फिल्म"
+   }
+  },
+  {
+   "id": "hi-3-02",
+   "stage": 3,
+   "pattern": "मेरे हिसाब से ___, लेकिन ___।",
+   "meaningKo": "자신의 의견을 말하고 예외나 다른 생각을 덧붙이기",
+   "meaningEn": "Giving your opinion and adding a contrast",
+   "examples": [
+    {
+     "text": "मेरे हिसाब से फिल्म अच्छी थी, लेकिन थोड़ी लंबी थी।",
+     "ko": "제 생각에 영화는 좋았지만 좀 길었어요.",
+     "en": "In my opinion, the film was good, but it was a bit long."
+    },
+    {
+     "text": "मेरे हिसाब से यह खबर जरूरी थी, लेकिन थोड़ी डरावनी भी थी।",
+     "ko": "제 생각에 그 뉴스는 필요했지만 좀 무서웠어요.",
+     "en": "In my opinion, the news was necessary, but also a bit scary."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장",
+     "noteKo": "첫 번째 빈칸에 자신의 의견 작성",
+     "nameEn": "Clause",
+     "noteEn": "First blank is your main opinion"
+    },
+    {
+     "nameKo": "예외 또는 대조",
+     "noteKo": "두 번째 빈칸에 대조적인 의견 작성",
+     "nameEn": "Contrast or exception",
+     "noteEn": "Second blank is the contrast"
+    }
+   ],
+   "related": [
+    "मैं सहमत हूँ कि ___, पर ___।"
+   ],
+   "quiz": {
+    "prompt": "मेरे हिसाब से ___, लेकिन थोड़ी लंबी थी।",
+    "answer": "फिल्म अच्छी थी"
+   }
+  },
+  {
+   "id": "hi-3-03",
+   "stage": 3,
+   "pattern": "मैं ___ से सहमत हूँ क्योंकि ___।",
+   "meaningKo": "정중하게 동의하며 이유 설명하기",
+   "meaningEn": "Agreeing politely and giving a reason",
+   "examples": [
+    {
+     "text": "मैं आपके विचार से सहमत हूँ क्योंकि यह तर्कसंगत है।",
+     "ko": "당신 의견에 동의해요. 논리적이니까요.",
+     "en": "I agree with your view because it is logical."
+    },
+    {
+     "text": "मैं दोस्त की बात से सहमत हूँ क्योंकि उसने सही कहा।",
+     "ko": "친구 말에 동의해요. 맞는 말이었어요.",
+     "en": "I agree with my friend's opinion because he was right."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사람 또는 의견",
+     "noteKo": "첫 번째 빈칸에 동의하는 대상",
+     "nameEn": "Person or opinion",
+     "noteEn": "First blank is whose view you agree with"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 빈칸에 동의하는 이유",
+     "nameEn": "Reason",
+     "noteEn": "Second blank is the reason for your agreement"
+    }
+   ],
+   "related": [
+    "मैं ___ से असहमत हूँ क्योंकि ___।"
+   ],
+   "quiz": {
+    "prompt": "मैं ___ से सहमत हूँ क्योंकि यह तर्कसंगत है।",
+    "answer": "आपके विचार"
+   }
+  },
+  {
+   "id": "hi-3-04",
+   "stage": 3,
+   "pattern": "मेरी ___ काम नहीं कर रही है, कृपया इसे ठीक कर दीजिए।",
+   "meaningKo": "문제가 있는 것을 설명하고 해결을 요청하기",
+   "meaningEn": "Explaining a problem and asking for a fix",
+   "examples": [
+    {
+     "text": "मेरी पंखा काम नहीं कर रही है, कृपया इसे ठीक कर दीजिए।",
+     "ko": "제 선풍기가 작동하지 않아요, 고쳐 주세요.",
+     "en": "My fan isn't working, please fix it."
+    },
+    {
+     "text": "मेरी वॉशिंग मशीन काम नहीं कर रही है, कृपया इसे ठीक कर दीजिए।",
+     "ko": "제 세탁기가 고장 났어요, 고쳐 주세요.",
+     "en": "My washing machine isn't working, please fix it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 사용",
+     "noteKo": "어떤 물건이 작동하지 않는지 명사 위치에 적음",
+     "nameEn": "Noun usage",
+     "noteEn": "Put the item not working in the blank"
+    }
+   ],
+   "related": [
+    "___ खराब हो गया है, क्या आप मदद कर सकते हैं?"
+   ],
+   "quiz": {
+    "prompt": "मेरी ___ काम नहीं कर रही है, कृपया इसे ठीक कर दीजिए।",
+    "answer": "पंखा"
+   }
+  },
+  {
+   "id": "hi-3-05",
+   "stage": 3,
+   "pattern": "मुझे ___ में समस्या हो रही है।",
+   "meaningKo": "문제가 있는 상황을 설명하기",
+   "meaningEn": "Explaining a problem you are having",
+   "examples": [
+    {
+     "text": "मुझे ट्रेन टिकट में समस्या हो रही है।",
+     "ko": "기차표에 문제가 있어요.",
+     "en": "I am having a problem with the train ticket."
+    },
+    {
+     "text": "मुझे ऑर्डर में समस्या हो रही है।",
+     "ko": "주문에 문제가 있어요.",
+     "en": "I am having a problem with the order."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 사용",
+     "noteKo": "문제가 있는 대상을 빈칸에",
+     "nameEn": "Noun usage",
+     "noteEn": "Put the problematic thing in the blank"
+    }
+   ],
+   "related": [
+    "___ में कुछ गड़बड़ है।"
+   ],
+   "quiz": {
+    "prompt": "मुझे ___ में समस्या हो रही है।",
+    "answer": "ट्रेन टिकट"
+   }
+  },
+  {
+   "id": "hi-3-06",
+   "stage": 3,
+   "pattern": "क्या आप मानते हैं कि ___?",
+   "meaningKo": "상대방의 의견을 정중하게 묻기",
+   "meaningEn": "Asking for someone's opinion politely",
+   "examples": [
+    {
+     "text": "क्या आप मानते हैं कि यह फिल्म अच्छी थी?",
+     "ko": "이 영화가 좋았다고 생각하세요?",
+     "en": "Do you think this film was good?"
+    },
+    {
+     "text": "क्या आप मानते हैं कि खबर सही थी?",
+     "ko": "그 뉴스가 진짜였다고 생각하세요?",
+     "en": "Do you think the news was true?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장",
+     "noteKo": "상대방의 의견을 묻는 내용 작성",
+     "nameEn": "Clause",
+     "noteEn": "Write the thing you want to ask about in the blank"
+    }
+   ],
+   "related": [
+    "क्या आपको ___ लगता है?"
+   ],
+   "quiz": {
+    "prompt": "क्या आप मानते हैं कि ___?",
+    "answer": "यह फिल्म अच्छी थी"
+   }
+  },
+  {
+   "id": "hi-3-07",
+   "stage": 3,
+   "pattern": "मेरी ___ लेट हो गई है, क्या आप मेरी मदद कर सकते हैं?",
+   "meaningKo": "문제가 생겼음을 알리고 도움을 요청하기",
+   "meaningEn": "Explaining a problem and asking for help",
+   "examples": [
+    {
+     "text": "मेरी ट्रेन लेट हो गई है, क्या आप मेरी मदद कर सकते हैं?",
+     "ko": "제 기차가 늦었는데, 도와주실 수 있나요?",
+     "en": "My train is late, can you help me?"
+    },
+    {
+     "text": "मेरी फ्लाइट लेट हो गई है, क्या आप मेरी मदद कर सकते हैं?",
+     "ko": "제 비행기가 지연됐는데, 도와주실 수 있나요?",
+     "en": "My flight is delayed, can you help me?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 삽입",
+     "noteKo": "___에 문제의 대상을 넣음",
+     "nameEn": "Noun slot",
+     "noteEn": "Insert the subject of the problem in ___"
+    }
+   ],
+   "related": [
+    "___ खराब हो गया है, कृपया इसे बदल दीजिए।"
+   ],
+   "quiz": {
+    "prompt": "मेरी ___ लेट हो गई है, क्या आप मेरी मदद कर सकते हैं?",
+    "answer": "ट्रेन"
+   }
+  },
+  {
+   "id": "hi-3-08",
+   "stage": 3,
+   "pattern": "क्या आप ___ ठीक कर सकते हैं?",
+   "meaningKo": "고장난 것 수리 요청하기",
+   "meaningEn": "Requesting to fix a broken item",
+   "examples": [
+    {
+     "text": "क्या आप पंखा ठीक कर सकते हैं?",
+     "ko": "선풍기 좀 고쳐주실 수 있나요?",
+     "en": "Can you fix the fan?"
+    },
+    {
+     "text": "क्या आप दरवाज़ा ठीक कर सकते हैं?",
+     "ko": "문 좀 고쳐주실 수 있나요?",
+     "en": "Can you fix the door?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 삽입",
+     "noteKo": "___에 고장난 물건을 넣음",
+     "nameEn": "Noun slot",
+     "noteEn": "Insert the broken item in ___"
+    }
+   ],
+   "related": [
+    "___ खराब हो गया है, कृपया इसे बदल दीजिए।"
+   ],
+   "quiz": {
+    "prompt": "क्या आप ___ ठीक कर सकते हैं?",
+    "answer": "पंखा"
+   }
+  },
+  {
+   "id": "hi-3-09",
+   "stage": 3,
+   "pattern": "___ के बारे में क्या राय है?",
+   "meaningKo": "상대의 의견 묻기",
+   "meaningEn": "Asking for someone's opinion",
+   "examples": [
+    {
+     "text": "उस फिल्म के बारे में क्या राय है?",
+     "ko": "그 영화에 대해 어떻게 생각해?",
+     "en": "What do you think about that movie?"
+    },
+    {
+     "text": "इस खबर के बारे में क्या राय है?",
+     "ko": "이 뉴스에 대해 어떻게 생각하세요?",
+     "en": "What is your opinion about this news?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 삽입",
+     "noteKo": "___에 의견을 묻는 대상을 넣음",
+     "nameEn": "Noun slot",
+     "noteEn": "Insert the subject of opinion in ___"
+    }
+   ],
+   "related": [
+    "___ पर आप क्या सोचते हैं?"
+   ],
+   "quiz": {
+    "prompt": "___ के बारे में क्या राय है?",
+    "answer": "उस फिल्म"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "hi-4-01",
+   "stage": 4,
+   "pattern": "मुझे लगता है कि ___ सबसे अच्छा विकल्प है क्योंकि ___।",
+   "meaningKo": "선택지를 비교하고 추천하기",
+   "meaningEn": "Comparing options and recommending one",
+   "examples": [
+    {
+     "text": "मुझे लगता है कि यह पैकेज सबसे अच्छा विकल्प है क्योंकि इसमें सभी सुविधाएँ हैं।",
+     "ko": "나는 이 패키지가 가장 좋은 선택이라고 생각해, 왜냐하면 모든 기능이 들어있으니까.",
+     "en": "I think this package is the best option because it has all the features."
+    },
+    {
+     "text": "मुझे लगता है कि जल्दी शुरू करना सबसे अच्छा विकल्प है क्योंकि इससे समय बचता है।",
+     "ko": "일찍 시작하는 것이 가장 좋다고 생각해, 왜냐하면 시간이 절약되니까.",
+     "en": "I think starting early is the best option because it saves time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이유를 덧붙인 추천",
+     "noteKo": "첫 ___에는 선택지를, 두 번째 ___에는 이유를 넣는다.",
+     "nameEn": "Recommendation with reason",
+     "noteEn": "First ___ is the option, second ___ is the reason."
+    }
+   ],
+   "related": [
+    "___ के मुकाबले ___ ज्यादा बेहतर है।"
+   ],
+   "quiz": {
+    "prompt": "मुझे लगता है कि ___ सबसे अच्छा विकल्प है क्योंकि यह किफायती है।",
+    "answer": "यह ऑफर"
+   }
+  },
+  {
+   "id": "hi-4-02",
+   "stage": 4,
+   "pattern": "___ के मुकाबले ___ ज्यादा बेहतर है।",
+   "meaningKo": "선택지 비교하기",
+   "meaningEn": "Comparing two options",
+   "examples": [
+    {
+     "text": "बस के मुकाबले मेट्रो ज्यादा बेहतर है।",
+     "ko": "버스보다 지하철이 더 낫다.",
+     "en": "Metro is better than bus."
+    },
+    {
+     "text": "खुले दफ़्तर के मुकाबले प्राइवेट केबिन ज्यादा बेहतर है।",
+     "ko": "오픈 오피스보다 개인 사무실이 더 좋다.",
+     "en": "Private cabin is better than open office."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비교 표현",
+     "noteKo": "첫 ___에는 비교 대상, 두 번째 ___에는 더 나은 선택을 쓴다.",
+     "nameEn": "Comparative",
+     "noteEn": "First ___ is the compared option, second ___ is the better option."
+    }
+   ],
+   "related": [
+    "मुझे ___ ज्यादा पसंद है, क्योंकि ___।"
+   ],
+   "quiz": {
+    "prompt": "___ के मुकाबले ट्रेनों का सफर ज्यादा बेहतर है।",
+    "answer": "बस"
+   }
+  },
+  {
+   "id": "hi-4-03",
+   "stage": 4,
+   "pattern": "मेरे विचार से ___ ज्यादा बेहतर है, क्योंकि ___।",
+   "meaningKo": "옵션을 비교하고 추천하기",
+   "meaningEn": "Comparing options and recommending",
+   "examples": [
+    {
+     "text": "मेरे विचार से मेट्रो ज्यादा बेहतर है, क्योंकि यह तेज़ और सस्ता है।",
+     "ko": "내 생각엔 지하철이 더 나아요. 빠르고 저렴하니까요.",
+     "en": "I think the metro is better, because it's fast and cheap."
+    },
+    {
+     "text": "मेरे विचार से तीसरा विकल्प ज्यादा बेहतर है, क्योंकि उसमें रिस्क कम है।",
+     "ko": "내 생각엔 세 번째 선택지가 더 좋아요. 위험이 적으니까요.",
+     "en": "I think the third option is better, because it's less risky."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비교급",
+     "noteKo": "___에 명사/대상, ___에 이유",
+     "nameEn": "Comparative",
+     "noteEn": "First blank: noun/subject, second: reason"
+    }
+   ],
+   "related": [
+    "___ के बजाय ___ ज्यादा अच्छा रहेगा।"
+   ],
+   "quiz": {
+    "prompt": "मेरे विचार से ___ ज्यादा बेहतर है, क्योंकि वह पास है।",
+    "answer": "यह ऑफिस"
+   }
+  },
+  {
+   "id": "hi-4-04",
+   "stage": 4,
+   "pattern": "मुझे लगता है कि ___ के बारे में और बात करनी चाहिए, ताकि ___।",
+   "meaningKo": "더 논의할 필요성과 목적 제안하기",
+   "meaningEn": "Suggesting more discussion and its purpose",
+   "examples": [
+    {
+     "text": "मुझे लगता है कि विकल्पों के बारे में और बात करनी चाहिए, ताकि सबको समझ आ सके।",
+     "ko": "선택지에 대해 더 얘기해야 한다고 생각해요, 모두가 이해할 수 있도록.",
+     "en": "I think we should discuss the options more, so everyone can understand."
+    },
+    {
+     "text": "मुझे लगता है कि डेडलाइन के बारे में और बात करनी चाहिए, ताकि बेहतर योजना बन सके।",
+     "ko": "마감일에 대해 더 얘기해야 계획을 더 잘 세울 수 있을 것 같아요.",
+     "en": "I think we should talk more about the deadline, so we can plan better."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조언",
+     "noteKo": "첫 ___에 주제, 두 번째 ___에 목적",
+     "nameEn": "Suggestion",
+     "noteEn": "First blank: topic, second: purpose"
+    }
+   ],
+   "related": [
+    "___ के बारे में आपको क्या लगता है?"
+   ],
+   "quiz": {
+    "prompt": "मुझे लगता है कि ___ के बारे में और बात करनी चाहिए, ताकि सभी सहमत हो सकें।",
+    "answer": "शर्तों"
+   }
+  },
+  {
+   "id": "hi-4-05",
+   "stage": 4,
+   "pattern": "कुछ लोग कहते हैं कि ___, लेकिन मेरा मानना है कि ___।",
+   "meaningKo": "남의 의견과 자신의 의견을 비교해서 주장하기",
+   "meaningEn": "Comparing other's opinion and stating own",
+   "examples": [
+    {
+     "text": "कुछ लोग कहते हैं कि ट्रैफिक सिर्फ कारों से है, लेकिन मेरा मानना है कि पब्लिक ट्रांसपोर्ट भी जिम्मेदार है।",
+     "ko": "일부는 교통이 자동차 때문이라고 하지만, 난 대중교통도 책임이 있다고 생각해요.",
+     "en": "Some say traffic is only due to cars, but I believe public transport is also responsible."
+    },
+    {
+     "text": "कुछ लोग कहते हैं कि लंबा समय बेहतर है, लेकिन मेरा मानना है कि जल्दी शुरू करना फायदेमंद है।",
+     "ko": "어떤 사람들은 긴 기간이 더 낫다고 하지만, 나는 빨리 시작하는 게 더 이득이라고 생각해요.",
+     "en": "Some people say a longer period is better, but I believe starting early is more beneficial."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "기타 의견 대비",
+     "noteKo": "___에 남의 의견, ___에 자신의 의견",
+     "nameEn": "Comparing opinions",
+     "noteEn": "First blank: other's view, second: your view"
+    }
+   ],
+   "related": [
+    "कुछ लोग ___ मानते हैं, जबकि मैं ___ सोचता हूँ।"
+   ],
+   "quiz": {
+    "prompt": "कुछ लोग कहते हैं कि ऑनलाइन मीटिंग आसान है, लेकिन मेरा मानना है कि ___।",
+    "answer": "सीधी बातचीत ज्यादा असरदार है"
+   }
+  },
+  {
+   "id": "hi-4-06",
+   "stage": 4,
+   "pattern": "अगर ___ चुनें तो ___ का फायदा होगा, लेकिन ___ का नुकसान भी हो सकता है।",
+   "meaningKo": "옵션의 장단점 분석하기",
+   "meaningEn": "Analyzing pros and cons of an option",
+   "examples": [
+    {
+     "text": "अगर मेट्रो चुनें तो समय का फायदा होगा, लेकिन भीड़ का नुकसान भी हो सकता है।",
+     "ko": "지하철을 선택하면 시간은 절약되지만, 혼잡할 수도 있어요.",
+     "en": "If you choose the metro, you gain time, but may suffer from crowding."
+    },
+    {
+     "text": "अगर ऑफिस से काम चुनें तो टीमवर्क का फायदा होगा, लेकिन ट्रैफिक का नुकसान भी हो सकता है।",
+     "ko": "사무실 근무를 선택하면 팀워크에 좋지만, 교통체증이 단점일 수 있어요.",
+     "en": "If you choose to work from office, teamwork is a plus, but traffic can be a drawback."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건과 대조",
+     "noteKo": "각 ___에 선택, 장점, 단점",
+     "nameEn": "Conditional and contrast",
+     "noteEn": "First: choice, second: benefit, third: drawback"
+    }
+   ],
+   "related": [
+    "___ में ___ अच्छा है, लेकिन ___ मुश्किल है।"
+   ],
+   "quiz": {
+    "prompt": "अगर घर से काम चुनें तो समय बचाने का फायदा होगा, लेकिन ___ का नुकसान भी हो सकता है।",
+    "answer": "कम्युनिकेशन"
+   }
+  },
+  {
+   "id": "hi-4-07",
+   "stage": 4,
+   "pattern": "आपकी बात सही है, लेकिन ___ भी ध्यान देना ज़रूरी है।",
+   "meaningKo": "공손하게 반론 제기하기",
+   "meaningEn": "Politely raising an objection",
+   "examples": [
+    {
+     "text": "आपकी बात सही है, लेकिन बजट सीमित है, यह भी ध्यान देना ज़रूरी है।",
+     "ko": "당신 말이 맞지만, 예산이 제한되어 있다는 것도 고려해야 해요.",
+     "en": "You are right, but it’s also important to consider the limited budget."
+    },
+    {
+     "text": "आपकी बात सही है, लेकिन समय की कमी भी ध्यान देना ज़रूरी है।",
+     "ko": "당신 말이 맞지만, 시간 부족도 중요하게 생각해야 해요.",
+     "en": "You are right, but the time shortage is also important to consider."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 반박",
+     "noteKo": "___에 추가 고려해야 할 점을 쓴다.",
+     "nameEn": "Polite disagreement",
+     "noteEn": "___ is the point to consider."
+    }
+   ],
+   "related": [
+    "मैं आपकी बात समझता हूँ, लेकिन ___।"
+   ],
+   "quiz": {
+    "prompt": "आपकी बात सही है, लेकिन ___ भी ध्यान देना ज़रूरी है।",
+    "answer": "सुरक्षा"
+   }
+  },
+  {
+   "id": "hi-4-08",
+   "stage": 4,
+   "pattern": "अगर आप चाहें तो ___ कर सकते हैं।",
+   "meaningKo": "상대방에게 선택권 주기",
+   "meaningEn": "Giving an option or suggestion",
+   "examples": [
+    {
+     "text": "अगर आप चाहें तो कल मीटिंग कर सकते हैं।",
+     "ko": "원하신다면 내일 회의할 수 있습니다.",
+     "en": "If you want, we can have the meeting tomorrow."
+    },
+    {
+     "text": "अगर आप चाहें तो कीमत पर चर्चा कर सकते हैं।",
+     "ko": "원하신다면 가격에 대해 논의할 수 있습니다.",
+     "en": "If you want, we can discuss the price."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "제안 또는 선택권",
+     "noteKo": "___에 제안하는 행동을 쓴다.",
+     "nameEn": "Suggestion or option",
+     "noteEn": "___ is the suggested action."
+    }
+   ],
+   "related": [
+    "अगर ___ मुमकिन हो तो ___।"
+   ],
+   "quiz": {
+    "prompt": "अगर आप चाहें तो ___ कर सकते हैं।",
+    "answer": "समझौता"
+   }
+  },
+  {
+   "id": "hi-4-09",
+   "stage": 4,
+   "pattern": "आपने कहा था कि ___, क्या मैं सही समझा?",
+   "meaningKo": "상대방 말 요약하고 확인하기",
+   "meaningEn": "Summarising and checking understanding",
+   "examples": [
+    {
+     "text": "आपने कहा था कि मीटिंग दो बजे होगी, क्या मैं सही समझा?",
+     "ko": "회의가 두 시에 있다고 하셨죠, 제가 제대로 이해한 건가요?",
+     "en": "You said the meeting will be at two, did I understand correctly?"
+    },
+    {
+     "text": "आपने कहा था कि कीमत तय नहीं हुई है, क्या मैं सही समझा?",
+     "ko": "가격이 정해지지 않았다고 하셨죠, 제가 맞게 이해한 건가요?",
+     "en": "You said the price is not fixed, did I get it right?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "내용 확인",
+     "noteKo": "___에 상대가 한 말을 넣는다.",
+     "nameEn": "Checking understanding",
+     "noteEn": "___ is what the other person said."
+    }
+   ],
+   "related": [
+    "तो ___ का मतलब यह है कि ___?"
+   ],
+   "quiz": {
+    "prompt": "आपने कहा था कि ___, क्या मैं सही समझा?",
+    "answer": "अभी भुगतान नहीं करना है"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "hi-5-01",
+   "stage": 5,
+   "pattern": "अगर आप ___ होते तो मैं ___ कहता।",
+   "meaningKo": "듣는 사람이 다른 사람이었을 때 말투 바꾸기",
+   "meaningEn": "Switching tone if the listener were someone else",
+   "examples": [
+    {
+     "text": "अगर आप मेरे दोस्त होते तो मैं मज़ाक में कहता।",
+     "ko": "만약 당신이 내 친구였다면 농담으로 말했을 거예요.",
+     "en": "If you were my friend, I’d have said it as a joke."
+    },
+    {
+     "text": "अगर आप बॉस होते तो मैं सीधे-सीधे कहता।",
+     "ko": "만약 당신이 상사였다면 바로 말했을 거예요.",
+     "en": "If you were the boss, I’d have said it directly."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거",
+     "noteKo": "첫 번째 빈칸(듣는 사람에 대한 조건)에 사용",
+     "nameEn": "Conditional past",
+     "noteEn": "Used in the first blank (about the listener's role)"
+    }
+   ],
+   "related": [
+    "अगर ___ होता तो ___ करता।"
+   ],
+   "quiz": {
+    "prompt": "अगर आप ___ होते तो मैं धीरे से कहता।",
+    "answer": "मेरे पिताजी"
+   }
+  },
+  {
+   "id": "hi-5-02",
+   "stage": 5,
+   "pattern": "___ का मतलब है कि ___।",
+   "meaningKo": "관용어 또는 속담의 의미 설명하기",
+   "meaningEn": "Explaining the meaning of an idiom or proverb",
+   "examples": [
+    {
+     "text": "घर की मुर्गी दाल बराबर का मतलब है कि अपने पास की चीज़ की कदर नहीं करते।",
+     "ko": "\"집 닭은 콩값\"이란 말은 가진 것의 가치를 모른다는 뜻이에요.",
+     "en": "‘The home chicken is worth lentils’ means people don’t value what they have."
+    },
+    {
+     "text": "नाम बड़े और दर्शन छोटे का मतलब है कि दिखावा ज्यादा है, असल में कुछ नहीं।",
+     "ko": "\"이름만 크고 실상은 작다\"는 말은 겉만 번지르르하다는 뜻이에요.",
+     "en": "‘Big name, small presence’ means it’s all show, nothing real."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "설명문",
+     "noteKo": "첫 번째 빈칸(관용어 또는 속담)에 사용",
+     "nameEn": "Explanatory sentence",
+     "noteEn": "First blank is the idiom/proverb"
+    }
+   ],
+   "related": [
+    "___ कहावत का मतलब है कि ___।"
+   ],
+   "quiz": {
+    "prompt": "___ का मतलब है कि मेहनत करने से ही सफलता मिलती है।",
+    "answer": "मेहनत का फल मीठा होता है"
+   }
+  },
+  {
+   "id": "hi-5-03",
+   "stage": 5,
+   "pattern": "___ बोलते ही सब हँसी में ___ लग गए।",
+   "meaningKo": "농담이나 유머에 대한 반응 묘사하기",
+   "meaningEn": "Describing group reaction to a joke",
+   "examples": [
+    {
+     "text": "उसकी बात बोलते ही सब हँसी में लोट-पोट लग गए।",
+     "ko": "그가 말하자마자 모두 빵 터졌어요.",
+     "en": "As soon as he spoke, everyone burst into laughter."
+    },
+    {
+     "text": "उसका चुटकुला बोलते ही सब हँसी में झूमने लग गए।",
+     "ko": "그 농담에 모두 웃으며 흔들렸어요.",
+     "en": "As soon as he cracked the joke, everyone started laughing and swaying."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동작 시작",
+     "noteKo": "두 번째 빈칸(반응하는 행동)에 사용",
+     "nameEn": "Action initiation",
+     "noteEn": "Second blank is the group reaction"
+    }
+   ],
+   "related": [
+    "___ सुनते ही सब ___ करने लग गए।"
+   ],
+   "quiz": {
+    "prompt": "उसका मज़ाक बोलते ही सब हँसी में ___ लग गए।",
+    "answer": "फूट"
+   }
+  },
+  {
+   "id": "hi-5-04",
+   "stage": 5,
+   "pattern": "मैं पूरी तरह सहमत नहीं हूँ, लेकिन ___।",
+   "meaningKo": "비판을 부드럽게 말하기",
+   "meaningEn": "Softening criticism",
+   "examples": [
+    {
+     "text": "मैं पूरी तरह सहमत नहीं हूँ, लेकिन आपकी बात में दम है।",
+     "ko": "완전히 동의하지는 않지만, 당신 말도 일리가 있어요.",
+     "en": "I don’t fully agree, but you have a point."
+    },
+    {
+     "text": "मैं पूरी तरह सहमत नहीं हूँ, लेकिन कोशिश तो अच्छी थी।",
+     "ko": "완전히 동의하진 않지만, 시도는 좋았어요.",
+     "en": "I don’t completely agree, but the effort was good."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "양보의 표현",
+     "noteKo": "두 번째 빈칸(상대방을 배려하는 말)에 사용",
+     "nameEn": "Concessive phrase",
+     "noteEn": "Used in the second blank (polite follow-up)"
+    }
+   ],
+   "related": [
+    "मैं मानता हूँ कि ___, लेकिन ___।"
+   ],
+   "quiz": {
+    "prompt": "मैं पूरी तरह सहमत नहीं हूँ, लेकिन ___।",
+    "answer": "आपकी सोच समझ में आती है"
+   }
+  },
+  {
+   "id": "hi-5-05",
+   "stage": 5,
+   "pattern": "आज मैं आपके सामने ___ के बारे में कुछ कहना चाहता हूँ।",
+   "meaningKo": "공식적인 자리에서 주제 소개하기",
+   "meaningEn": "Introducing a topic in a formal talk",
+   "examples": [
+    {
+     "text": "आज मैं आपके सामने हमारी परंपरा के बारे में कुछ कहना चाहता हूँ।",
+     "ko": "오늘 여러분 앞에서 우리 전통에 대해 말씀드리고자 합니다.",
+     "en": "Today, I’d like to say a few words about our tradition."
+    },
+    {
+     "text": "आज मैं आपके सामने इस आयोजन के महत्व के बारे में कुछ कहना चाहता हूँ।",
+     "ko": "오늘 이 행사 의미에 대해 말씀드리고 싶습니다.",
+     "en": "Today, I wish to speak about the significance of this event."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공식 발표문",
+     "noteKo": "첫 번째 빈칸(발표 주제)에 사용",
+     "nameEn": "Formal speech opener",
+     "noteEn": "First blank is the topic"
+    }
+   ],
+   "related": [
+    "मैं आज ___ विषय पर बोलना चाहूँगा।"
+   ],
+   "quiz": {
+    "prompt": "आज मैं आपके सामने ___ के बारे में कुछ कहना चाहता हूँ।",
+    "answer": "बदलती परंपराओं"
+   }
+  },
+  {
+   "id": "hi-5-06",
+   "stage": 5,
+   "pattern": "अगर बुरा न मानें तो ___।",
+   "meaningKo": "정중하게 거절하거나 민감한 말 꺼내기",
+   "meaningEn": "Tactfully declining or raising a sensitive point",
+   "examples": [
+    {
+     "text": "अगर बुरा न मानें तो मैं अभी नहीं आ सकता।",
+     "ko": "실례가 안 된다면 지금은 못 갑니다.",
+     "en": "If you don’t mind, I can’t come right now."
+    },
+    {
+     "text": "अगर बुरा न मानें तो एक सुझाव देना चाहूँगा।",
+     "ko": "실례가 안 된다면 제안 하나 드리고 싶어요.",
+     "en": "If you don’t mind, I’d like to make a suggestion."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 표현",
+     "noteKo": "첫 번째 빈칸(거절 또는 조심스러운 말)에 사용",
+     "nameEn": "Polite indirectness",
+     "noteEn": "First blank is the tactful statement"
+    }
+   ],
+   "related": [
+    "अगर बुरा लगे तो ___।"
+   ],
+   "quiz": {
+    "prompt": "अगर बुरा न मानें तो ___।",
+    "answer": "मैं अपनी बात रखूँ?"
+   }
+  },
+  {
+   "id": "hi-5-07",
+   "stage": 5,
+   "pattern": "आप ___ बताएँ, फिर हम बात आगे बढ़ाएँगे।",
+   "meaningKo": "상대에게 먼저 의견이나 정보를 말하게 함.",
+   "meaningEn": "Inviting someone to share their input first.",
+   "examples": [
+    {
+     "text": "आप अपनी राय बताएँ, फिर हम बात आगे बढ़ाएँगे।",
+     "ko": "먼저 의견을 말씀해 주세요, 그 다음에 논의를 계속하겠습니다.",
+     "en": "Please share your opinion first, then we will continue the discussion."
+    },
+    {
+     "text": "आप सुझाव बताएँ, फिर हम बात आगे बढ़ाएँगे।",
+     "ko": "먼저 제안을 말씀해 주세요, 그 다음에 진행하겠습니다.",
+     "en": "Please give your suggestion first, then we'll proceed."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "경어체 요청",
+     "noteKo": "___에 들어가는 것은 듣는 사람이 말해야 할 내용을 나타냄.",
+     "nameEn": "Formal invitation/request",
+     "noteEn": "___ is what you want the other person to say or share."
+    }
+   ],
+   "related": [
+    "अगर आप ___ चाहें, तो हम ___ कर सकते हैं।"
+   ],
+   "quiz": {
+    "prompt": "आप ___ बताएँ, फिर हम बात आगे बढ़ाएँगे।",
+    "answer": "अपनी राय"
+   }
+  },
+  {
+   "id": "hi-5-08",
+   "stage": 5,
+   "pattern": "भाई, ___ तोड़ मत, मज़ाक कर रहा हूँ।",
+   "meaningKo": "친근하게 농담임을 밝힘.",
+   "meaningEn": "Clarifying a joke in casual talk.",
+   "examples": [
+    {
+     "text": "भाई, दिल तोड़ मत, मज़ाक कर रहा हूँ।",
+     "ko": "형, 마음 상하지 마, 그냥 농담이야.",
+     "en": "Bro, don't take it to heart, I'm just joking."
+    },
+    {
+     "text": "भाई, भरोसा तोड़ मत, मज़ाक कर रहा हूँ।",
+     "ko": "형, 신뢰 깨지 마, 농담이야.",
+     "en": "Bro, don't lose trust, I'm just kidding."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "구어체 완곡화",
+     "noteKo": "___에 들어가는 것은 농담의 대상(마음, 신뢰 등)이다.",
+     "nameEn": "Casual softening",
+     "noteEn": "___ is the thing not to 'break' (heart, trust, etc.)."
+    }
+   ],
+   "related": [
+    "भाई, ___ को सीरियस मत ले, मज़ाक था।"
+   ],
+   "quiz": {
+    "prompt": "भाई, ___ तोड़ मत, मज़ाक कर रहा हूँ।",
+    "answer": "दिल"
+   }
+  },
+  {
+   "id": "hi-5-09",
+   "stage": 5,
+   "pattern": "अगर आप बुरा न मानें तो ___ कहना चाहूँगा।",
+   "meaningKo": "상대방의 기분을 배려하면서 의견 말하기.",
+   "meaningEn": "Tactfully expressing an opinion.",
+   "examples": [
+    {
+     "text": "अगर आप बुरा न मानें तो एक सुझाव कहना चाहूँगा।",
+     "ko": "실례가 안 된다면 제안 하나 말씀드리고 싶어요.",
+     "en": "If you don't mind, I'd like to make a suggestion."
+    },
+    {
+     "text": "अगर आप बुरा न मानें तो अपनी राय कहना चाहूँगा।",
+     "ko": "실례가 안 된다면 제 의견을 말씀드리고 싶습니다.",
+     "en": "If you don't mind, I'd like to share my opinion."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 의견 제시",
+     "noteKo": "___에 들어가는 것은 말하고 싶은 내용이다.",
+     "nameEn": "Polite disclaimer",
+     "noteEn": "___ is what you wish to say."
+    }
+   ],
+   "related": [
+    "अगर आप चाहें तो ___ साझा करूँ?"
+   ],
+   "quiz": {
+    "prompt": "अगर आप बुरा न मानें तो ___ कहना चाहूँगा।",
+    "answer": "एक सुझाव"
+   }
+  },
+  {
+   "id": "hi-5-10",
+   "stage": 5,
+   "pattern": "___ के बिना, यह समारोह अधूरा लगता।",
+   "meaningKo": "없으면 행사가 불완전함을 강조하기.",
+   "meaningEn": "Saying something is essential for an event.",
+   "examples": [
+    {
+     "text": "मामी जी के बिना, यह समारोह अधूरा लगता।",
+     "ko": "이모가 없으면 이 행사는 불완전할 거예요.",
+     "en": "Without Aunty, this event would feel incomplete."
+    },
+    {
+     "text": "म्यूजिक के बिना, यह समारोह अधूरा लगता।",
+     "ko": "음악이 없으면 이 행사는 허전해요.",
+     "en": "Without music, this event feels incomplete."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "필수 요소 강조",
+     "noteKo": "___에 빠질 수 없는 존재나 대상을 쓴다.",
+     "nameEn": "Emphasizing essential part",
+     "noteEn": "___ is the thing or person that is essential."
+    }
+   ],
+   "related": [
+    "अगर ___ नहीं होता, तो मज़ा नहीं आता।"
+   ],
+   "quiz": {
+    "prompt": "___ के बिना, यह समारोह अधूरा लगता।",
+    "answer": "म्यूजिक"
+   }
+  }
+ ]
+}

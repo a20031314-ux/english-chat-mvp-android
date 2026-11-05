@@ -16,7 +16,6 @@ import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import {
   blankOf,
   frameById,
-  frameModes,
   framesFor,
   isNameExample,
   personalizeFrame,
@@ -551,23 +550,7 @@ function FramePlayer({
             </p>
           ) : null}
         </div>
-      ) : (
-        <div role="group" className="flex shrink-0 gap-1.5 border-b border-line px-4 py-2">
-          {frameModes(frame.stage)
-            .map((id) => [id, { shadow: ui.scriptModeShadow, blank: ui.frameModeBlank, own: ui.scriptModeOwn }[id]] as const)
-            .map(([id, label]) => (
-              <button
-                key={id}
-                type="button"
-                aria-pressed={mode === id}
-                onClick={() => setMode(id)}
-                className={`rounded-full px-3 py-1 text-caption ${mode === id ? "bg-white/90 text-slate-900" : "border border-line text-slate-300 hover:bg-white/10"}`}
-              >
-                {label}
-              </button>
-            ))}
-        </div>
-      )}
+      ) : null}
 
       {offer ? <ResumeChoice ui={ui} at={offer.index} total={steps.length} onResume={resume} onRestart={restart} /> : null}
       <ol className={`min-h-0 flex-1 overflow-y-auto px-3 py-3 ${offer ? "hidden" : ""}`}>

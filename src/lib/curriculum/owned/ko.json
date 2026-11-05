@@ -1,0 +1,2822 @@
+{
+ "e|감사합니다": [
+  {
+   "text": "물 주세요, 감사합니다.",
+   "en": "Water please, thank you.",
+   "ko": "물 좀 주세요, 고마워요.",
+   "blank": "감사합니다"
+  },
+  {
+   "text": "맛있게 먹었습니다, 감사합니다.",
+   "en": "I ate well, thank you.",
+   "ko": "맛있게 먹었어요, 고마워요.",
+   "blank": "감사합니다"
+  },
+  {
+   "text": "오늘 와 주셔서 감사합니다.",
+   "en": "Thank you for coming today.",
+   "ko": "오늘 와 줘서 고마워요.",
+   "blank": "감사합니다"
+  }
+ ],
+ "e|검토해 보겠습니다": [
+  {
+   "text": "이 제안은 검토해 보겠습니다.",
+   "en": "I will review this proposal.",
+   "ko": "이 제안을 살펴볼게요.",
+   "blank": "검토해 보겠습니다"
+  },
+  {
+   "text": "자료를 보내주시면 검토해 보겠습니다.",
+   "en": "If you send me the materials, I will review them.",
+   "ko": "자료를 보내주면 살펴볼게요.",
+   "blank": "검토해 보겠습니다"
+  },
+  {
+   "text": "그 부분도 검토해 보겠습니다.",
+   "en": "I will review that part as well.",
+   "ko": "그것도 살펴볼게요.",
+   "blank": "검토해 보겠습니다"
+  }
+ ],
+ "e|고생 많았어": [
+  {
+   "text": "오늘 하루도 고생 많았어.",
+   "en": "You worked hard today too.",
+   "ko": "오늘 하루 동안 힘들게 일했어.",
+   "blank": "고생 많았어"
+  },
+  {
+   "text": "프로젝트 끝냈다니 고생 많았어.",
+   "en": "You worked hard finishing the project.",
+   "ko": "프로젝트를 끝내느라 힘들었어.",
+   "blank": "고생 많았어"
+  },
+  {
+   "text": "시험 준비하느라 고생 많았어.",
+   "en": "You worked hard preparing for the exam.",
+   "ko": "시험 준비하느라 힘들게 노력했어.",
+   "blank": "고생 많았어"
+  }
+ ],
+ "e|괜찮아요": [
+  {
+   "text": "괜찮아요, 천천히 하세요.",
+   "en": "It's okay, take your time.",
+   "ko": "문제 없어요, 천천히 하세요.",
+   "blank": "괜찮아요"
+  },
+  {
+   "text": "저는 괜찮아요, 걱정하지 마세요.",
+   "en": "I'm okay, don't worry.",
+   "ko": "저는 문제 없어요, 걱정하지 마세요.",
+   "blank": "괜찮아요"
+  },
+  {
+   "text": "괜찮아요? 어디 아파요?",
+   "en": "Are you okay? Are you hurt?",
+   "ko": "문제 없어요? 어디 다쳤어요?",
+   "blank": "괜찮아요"
+  }
+ ],
+ "e|괜히 했다": [
+  {
+   "text": "이렇게 늦게까지 기다렸는데 괜히 했다.",
+   "en": "I waited this late for nothing.",
+   "ko": "이렇게 늦게까지 기다렸는데 아무 소용 없었다.",
+   "blank": "괜히 했다"
+  },
+  {
+   "text": "비도 안 오는데 우산 챙겼더니 괜히 했다.",
+   "en": "I brought my umbrella but it didn't even rain, so it was pointless.",
+   "ko": "비도 안 오는데 우산 챙겼더니 아무 필요 없었다.",
+   "blank": "괜히 했다"
+  },
+  {
+   "text": "친구한테 먼저 연락했더니 괜히 했다.",
+   "en": "I reached out to my friend first, but it was for nothing.",
+   "ko": "친구한테 먼저 연락했더니 아무 의미 없었다.",
+   "blank": "괜히 했다"
+  }
+ ],
+ "e|교환하고 싶은데요": [
+  {
+   "text": "사이즈가 안 맞아서 교환하고 싶은데요.",
+   "en": "I want to exchange it because the size doesn't fit.",
+   "ko": "사이즈가 맞지 않아서 바꾸고 싶어요.",
+   "blank": "교환하고 싶은데요"
+  },
+  {
+   "text": "색깔이 다른데 교환하고 싶은데요.",
+   "en": "The color is different, so I want to exchange it.",
+   "ko": "색깔이 달라서 바꾸고 싶어요.",
+   "blank": "교환하고 싶은데요"
+  },
+  {
+   "text": "이거 불량인 것 같아서 교환하고 싶은데요.",
+   "en": "I think this is defective, so I want to exchange it.",
+   "ko": "이것이 고장난 것 같아서 바꾸고 싶어요.",
+   "blank": "교환하고 싶은데요"
+  }
+ ],
+ "e|그 말이 맞네": [
+  {
+   "text": "생각해 보니까 그 말이 맞네.",
+   "en": "Now that I think about it, that's true.",
+   "ko": "다시 생각해 보니 그것이 사실이야.",
+   "blank": "그 말이 맞네"
+  },
+  {
+   "text": "어제보다 오늘이 더 따뜻하다는 그 말이 맞네.",
+   "en": "It's true that today is warmer than yesterday.",
+   "ko": "오늘이 어제보다 더 따뜻하다는 것은 사실이야.",
+   "blank": "그 말이 맞네"
+  },
+  {
+   "text": "네가 공부를 열심히 해야 한다는 그 말이 맞네.",
+   "en": "It's true that you need to study hard.",
+   "ko": "공부를 열심히 해야 한다는 것은 사실이야.",
+   "blank": "그 말이 맞네"
+  }
+ ],
+ "e|그 부분은요": [
+  {
+   "text": "그 부분은요, 제가 아직 잘 몰라요.",
+   "en": "About that part, I don't really know yet.",
+   "ko": "그에 대해서는 아직 잘 몰라요.",
+   "blank": "그 부분은요"
+  },
+  {
+   "text": "그 부분은요, 내일 다시 확인해 드릴게요.",
+   "en": "As for that part, I'll check again for you tomorrow.",
+   "ko": "그에 대해서는 내일 다시 확인해 드릴게요.",
+   "blank": "그 부분은요"
+  },
+  {
+   "text": "그 부분은요, 직접 말씀해 주셔야 해요.",
+   "en": "Regarding that part, you need to tell me directly.",
+   "ko": "그에 대해서는 직접 말씀해 주셔야 해요.",
+   "blank": "그 부분은요"
+  }
+ ],
+ "e|그건 그렇고": [
+  {
+   "text": "그건 그렇고, 오늘 저녁에 뭐 먹을래?",
+   "en": "By the way, what do you want to eat for dinner tonight?",
+   "ko": "그런데 오늘 저녁에 무엇을 먹고 싶어?",
+   "blank": "그건 그렇고"
+  },
+  {
+   "text": "그건 그렇고, 주말에 시간 돼?",
+   "en": "By the way, are you free this weekend?",
+   "ko": "참, 주말에 시간 있어?",
+   "blank": "그건 그렇고"
+  },
+  {
+   "text": "그건 그렇고, 내일 날씨 어때?",
+   "en": "By the way, how's the weather tomorrow?",
+   "ko": "그런데 내일 날씨는 어때?",
+   "blank": "그건 그렇고"
+  }
+ ],
+ "e|그건 좀": [
+  {
+   "text": "그건 좀 힘들 것 같아요.",
+   "en": "That might be a bit hard.",
+   "ko": "그것은 약간 어렵다고 생각해요.",
+   "blank": "그건 좀"
+  },
+  {
+   "text": "그건 좀 아닌 것 같아.",
+   "en": "That doesn't seem right.",
+   "ko": "그것은 맞지 않는 것 같아.",
+   "blank": "그건 좀"
+  },
+  {
+   "text": "그건 좀 너무해요.",
+   "en": "That's a little too much.",
+   "ko": "그것은 약간 지나쳐요.",
+   "blank": "그건 좀"
+  }
+ ],
+ "e|그때 봐요": [
+  {
+   "text": "오늘은 먼저 갈게요, 그때 봐요.",
+   "en": "I'll go first today, see you then.",
+   "ko": "오늘은 먼저 갈게, 그때 만나.",
+   "blank": "그때 봐요"
+  },
+  {
+   "text": "내일 약속 기억해요? 그때 봐요.",
+   "en": "Do you remember our appointment tomorrow? See you then.",
+   "ko": "내일 약속 기억해? 그때 만나.",
+   "blank": "그때 봐요"
+  },
+  {
+   "text": "수업 끝나고 그때 봐요.",
+   "en": "After class, see you then.",
+   "ko": "수업 끝나고 그때 만나.",
+   "blank": "그때 봐요"
+  }
+ ],
+ "e|그래서 어떻게 됐어": [
+  {
+   "text": "그래서 어떻게 됐어? 궁금해.",
+   "en": "So what happened? I'm curious.",
+   "ko": "그래서 무슨 일이 있었어? 궁금해.",
+   "blank": "그래서 어떻게 됐어"
+  },
+  {
+   "text": "어제 너 이야기 들었어. 그래서 어떻게 됐어?",
+   "en": "I heard your story yesterday. So what happened?",
+   "ko": "어제 네 이야기 들었어. 그래서 그 다음에 무슨 일이 있었어?",
+   "blank": "그래서 어떻게 됐어"
+  },
+  {
+   "text": "그래서 어떻게 됐어? 잘 풀렸어?",
+   "en": "So what happened? Did it go well?",
+   "ko": "그래서 무슨 일이 있었어? 잘 되었어?",
+   "blank": "그래서 어떻게 됐어"
+  }
+ ],
+ "e|그러게 말이야": [
+  {
+   "text": "비가 또 온다니, 그러게 말이야.",
+   "en": "They say it's raining again, I know, right.",
+   "ko": "또 비가 온다고 하니까 정말 그렇지.",
+   "blank": "그러게 말이야"
+  },
+  {
+   "text": "요즘 너무 바빠서 힘들어, 그러게 말이야.",
+   "en": "It's so tough being this busy lately, I know, right.",
+   "ko": "요즘 너무 바빠서 정말 힘들어.",
+   "blank": "그러게 말이야"
+  },
+  {
+   "text": "시간이 진짜 빨리 간다, 그러게 말이야.",
+   "en": "Time really flies, I know, right.",
+   "ko": "시간이 정말 빨리 지나간다.",
+   "blank": "그러게 말이야"
+  }
+ ],
+ "e|그러니까요": [
+  {
+   "text": "그러니까요, 정말 힘들었어요.",
+   "en": "Exactly, it was really hard.",
+   "ko": "맞아요, 정말 힘들었어요.",
+   "blank": "그러니까요"
+  },
+  {
+   "text": "그러니까요, 저도 그렇게 생각해요.",
+   "en": "Exactly, I think so too.",
+   "ko": "맞아요, 저도 그렇게 생각해요.",
+   "blank": "그러니까요"
+  },
+  {
+   "text": "그러니까요, 날씨가 너무 덥죠?",
+   "en": "Exactly, the weather is so hot, right?",
+   "ko": "맞아요, 날씨가 너무 덥죠?",
+   "blank": "그러니까요"
+  }
+ ],
+ "e|그럴 만도 하지": [
+  {
+   "text": "시험을 망쳤다니 그렇게 속상해하는 것도 그럴 만도 하지.",
+   "en": "You failed the exam, so it's understandable that you're so upset.",
+   "ko": "시험에서 떨어져서 속상해하는 건 충분히 이해할 수 있어.",
+   "blank": "그럴 만도 하지"
+  },
+  {
+   "text": "이렇게 더운 날에 힘들어 보이는 것도 그럴 만도 하지.",
+   "en": "On a day this hot, it's understandable to look exhausted.",
+   "ko": "이렇게 더운 날에 지쳐 보이는 것도 충분히 이해돼.",
+   "blank": "그럴 만도 하지"
+  },
+  {
+   "text": "새로운 환경이라서 실수하는 게 그럴 만도 하지.",
+   "en": "It's understandable to make mistakes in a new environment.",
+   "ko": "새로운 환경에 적응하면서 실수하는 건 충분히 이해할 수 있어.",
+   "blank": "그럴 만도 하지"
+  }
+ ],
+ "e|그럴 수도 있죠": [
+  {
+   "text": "비가 올 줄 몰랐어요. 그럴 수도 있죠.",
+   "en": "I didn't know it would rain. That can happen.",
+   "ko": "비가 올지 몰랐어요. 그런 일도 있을 수 있어요.",
+   "blank": "그럴 수도 있죠"
+  },
+  {
+   "text": "시험이 어려웠지요? 그럴 수도 있죠.",
+   "en": "The test was hard, right? That can happen.",
+   "ko": "시험이 어려웠지요? 그런 일이 있을 수 있어요.",
+   "blank": "그럴 수도 있죠"
+  },
+  {
+   "text": "이해 못 했어요? 그럴 수도 있죠.",
+   "en": "Didn't understand? That can happen.",
+   "ko": "이해를 못 했어요? 그런 일이 있을 수 있어요.",
+   "blank": "그럴 수도 있죠"
+  }
+ ],
+ "e|그럴 줄 알았어": [
+  {
+   "text": "네가 늦을 줄 그럴 줄 알았어.",
+   "en": "I knew you would be late.",
+   "ko": "네가 늦을 거라고 예상했어.",
+   "blank": "그럴 줄 알았어"
+  },
+  {
+   "text": "비가 올 거라 그럴 줄 알았어.",
+   "en": "I knew it would rain.",
+   "ko": "비가 올 거라고 예상했어.",
+   "blank": "그럴 줄 알았어"
+  },
+  {
+   "text": "너가 그렇게 말할 줄 그럴 줄 알았어.",
+   "en": "I knew you would say that.",
+   "ko": "네가 그렇게 말할 거라고 예상했어.",
+   "blank": "그럴 줄 알았어"
+  }
+ ],
+ "e|김칫국 마시지 마": [
+  {
+   "text": "아직 결과 안 나왔으니까 김칫국 마시지 마.",
+   "en": "The results aren't out yet, so don't get ahead of yourself.",
+   "ko": "아직 결과 나오지 않았으니까 너무 앞서가지 마.",
+   "blank": "김칫국 마시지 마"
+  },
+  {
+   "text": "내가 된다고 했다고 해서 김칫국 마시지 마.",
+   "en": "Just because I said it might work out, don't count your chickens before they hatch.",
+   "ko": "내가 된다고 했다고 해서 너무 미리 기대하지 마.",
+   "blank": "김칫국 마시지 마"
+  },
+  {
+   "text": "이번에도 김칫국 마시지 마, 지난번처럼 실망할 수도 있어.",
+   "en": "Don't get ahead of yourself this time, you could be disappointed like last time.",
+   "ko": "이번에도 너무 서두르면 지난번처럼 실망할 수 있어.",
+   "blank": "김칫국 마시지 마"
+  }
+ ],
+ "e|내가 쏠게": [
+  {
+   "text": "오늘은 내가 쏠게, 다음엔 네가 해.",
+   "en": "I'll pay today, you can do it next time.",
+   "ko": "오늘은 내가 내고, 다음엔 네가 내.",
+   "blank": "내가 쏠게"
+  },
+  {
+   "text": "피곤하지? 커피 내가 쏠게.",
+   "en": "Are you tired? I'll buy the coffee.",
+   "ko": "피곤하지? 커피 내가 살게.",
+   "blank": "내가 쏠게"
+  },
+  {
+   "text": "이번 영화표는 내가 쏠게.",
+   "en": "I'll pay for the movie tickets this time.",
+   "ko": "이번 영화표는 내가 낼게.",
+   "blank": "내가 쏠게"
+  }
+ ],
+ "e|네 맞아요": [
+  {
+   "text": "네 맞아요, 저 학생이에요.",
+   "en": "Yes, that's right, I am a student.",
+   "ko": "응, 맞아. 나는 학생이야.",
+   "blank": "네 맞아요"
+  },
+  {
+   "text": "네 맞아요, 오늘 비와요.",
+   "en": "Yes, that's right, it is raining today.",
+   "ko": "응, 맞아. 오늘 비가 와.",
+   "blank": "네 맞아요"
+  },
+  {
+   "text": "네 맞아요, 이거 제 책이에요.",
+   "en": "Yes, that's right, this is my book.",
+   "ko": "응, 맞아. 이거 내 책이야.",
+   "blank": "네 맞아요"
+  }
+ ],
+ "e|눈치 보지 마": [
+  {
+   "text": "여기서 하고 싶은 말 있으면 눈치 보지 마.",
+   "en": "If you have something you want to say here, don’t hold back.",
+   "ko": "여기에서 하고 싶은 말이 있으면 망설이지 마.",
+   "blank": "눈치 보지 마"
+  },
+  {
+   "text": "새로운 스타일 입고 와도 눈치 보지 마.",
+   "en": "Even if you come in a new style, don’t worry about what others think.",
+   "ko": "새로운 스타일을 입고 와도 남의 시선 신경 쓰지 마.",
+   "blank": "눈치 보지 마"
+  },
+  {
+   "text": "눈치 보지 마, 네 의견도 중요해.",
+   "en": "Don’t be self-conscious, your opinion matters too.",
+   "ko": "주저하지 말고, 네 의견도 중요해.",
+   "blank": "눈치 보지 마"
+  }
+ ],
+ "e|눈치가 빠르네": [
+  {
+   "text": "벌써 분위기 파악했네, 눈치가 빠르네.",
+   "en": "You already figured out the mood, you're quick-witted.",
+   "ko": "벌써 상황을 이해했네, 정말 센스 있네.",
+   "blank": "눈치가 빠르네"
+  },
+  {
+   "text": "내가 말 안 해도 알아채다니, 눈치가 빠르네.",
+   "en": "You noticed it even though I didn’t say anything, you’re quick-witted.",
+   "ko": "내가 말하지 않아도 알아차리다니, 정말 센스 있네.",
+   "blank": "눈치가 빠르네"
+  },
+  {
+   "text": "어떻게 알았어? 눈치가 빠르네.",
+   "en": "How did you know? You’re quick-witted.",
+   "ko": "어떻게 알았어? 정말 센스 있네.",
+   "blank": "눈치가 빠르네"
+  }
+ ],
+ "e|늦어서 미안해요": [
+  {
+   "text": "늦어서 미안해요, 길이 많이 막혔어요.",
+   "en": "Sorry I'm late, the traffic was heavy.",
+   "ko": "늦게 와서 미안해요, 교통이 많이 막혔어요.",
+   "blank": "늦어서 미안해요"
+  },
+  {
+   "text": "늦어서 미안해요, 기다리게 했죠?",
+   "en": "Sorry I'm late, did I make you wait?",
+   "ko": "늦게 와서 미안해요, 기다리게 했죠?",
+   "blank": "늦어서 미안해요"
+  },
+  {
+   "text": "늦어서 미안해요, 바로 시작할게요.",
+   "en": "Sorry I'm late, I'll start right away.",
+   "ko": "늦게 와서 미안해요, 바로 시작할게요.",
+   "blank": "늦어서 미안해요"
+  }
+ ],
+ "e|다른 색 있어요": [
+  {
+   "text": "이 신발 다른 색 있어요?",
+   "en": "Do you have this shoe in another color?",
+   "ko": "이 신발의 다른 색이 있나요?",
+   "blank": "다른 색 있어요"
+  },
+  {
+   "text": "저 가방 다른 색 있어요?",
+   "en": "Is there another color for that bag?",
+   "ko": "저 가방의 다른 색이 있나요?",
+   "blank": "다른 색 있어요"
+  },
+  {
+   "text": "이 컵 다른 색 있어요?",
+   "en": "Do you have this cup in a different color?",
+   "ko": "이 컵의 다른 색이 있나요?",
+   "blank": "다른 색 있어요"
+  }
+ ],
+ "e|다시 한번 말해 주세요": [
+  {
+   "text": "네가 방금 뭐라고 했어? 다시 한번 말해 주세요.",
+   "en": "What did you just say? Please say it again.",
+   "ko": "방금 뭐라고 했는지 다시 이야기해 주세요.",
+   "blank": "다시 한번 말해 주세요"
+  },
+  {
+   "text": "잘 못 들었어요. 다시 한번 말해 주세요.",
+   "en": "I didn't hear well. Please say it again.",
+   "ko": "잘 안 들렸어요. 한 번 더 이야기해 주세요.",
+   "blank": "다시 한번 말해 주세요"
+  },
+  {
+   "text": "선생님, 다시 한번 말해 주세요.",
+   "en": "Teacher, please say it again.",
+   "ko": "선생님, 다시 말해 주세요.",
+   "blank": "다시 한번 말해 주세요"
+  }
+ ],
+ "e|다음 기회에": [
+  {
+   "text": "오늘은 좀 바쁘니까 다음 기회에 만날 수 있을 것 같아.",
+   "en": "I'm a bit busy today, so I think we can meet next time.",
+   "ko": "오늘은 바빠서 다음에 만날 수 있을 것 같아.",
+   "blank": "다음 기회에"
+  },
+  {
+   "text": "이번 모임에는 못 가지만 다음 기회에 꼭 참석할게.",
+   "en": "I can't make it to this gathering, but I'll definitely join next time.",
+   "ko": "이번 모임에는 못 가지만 다음에는 꼭 참석할게.",
+   "blank": "다음 기회에"
+  },
+  {
+   "text": "지금은 힘들지만 다음 기회에 도전해 볼게요.",
+   "en": "It's hard for me now, but I'll try next time.",
+   "ko": "지금은 힘들지만 다음에 도전해 볼게요.",
+   "blank": "다음 기회에"
+  }
+ ],
+ "e|다음 화 언제 나와": [
+  {
+   "text": "다음 화 언제 나와? 너무 기다려져.",
+   "en": "When does the next episode come out? I can't wait.",
+   "ko": "다음 에피소드가 언제 나오는지 너무 기대돼.",
+   "blank": "다음 화 언제 나와"
+  },
+  {
+   "text": "친구야, 다음 화 언제 나와? 알려줘.",
+   "en": "Hey friend, when does the next episode come out? Tell me.",
+   "ko": "야, 다음 에피소드 언제 나오는지 알려줘.",
+   "blank": "다음 화 언제 나와"
+  },
+  {
+   "text": "다음 화 언제 나와? 오늘 나오는 거 맞지?",
+   "en": "When does the next episode come out? It's coming out today, right?",
+   "ko": "다음 에피소드 오늘 나오는 거 맞지?",
+   "blank": "다음 화 언제 나와"
+  }
+ ],
+ "e|다음에 같이 가요": [
+  {
+   "text": "오늘은 혼자 가지만 다음에 같이 가요.",
+   "en": "Today I will go alone, but let's go together next time.",
+   "ko": "오늘은 혼자 가지만 다음번에는 함께 가자.",
+   "blank": "다음에 같이 가요"
+  },
+  {
+   "text": "시간 없으면 다음에 같이 가요.",
+   "en": "If you don't have time, let's go together next time.",
+   "ko": "시간이 없으면 다음번에 함께 가자.",
+   "blank": "다음에 같이 가요"
+  },
+  {
+   "text": "좋아하는 음식점 있으면 다음에 같이 가요.",
+   "en": "If you have a favorite restaurant, let's go together next time.",
+   "ko": "좋아하는 식당이 있으면 다음번에 함께 가자.",
+   "blank": "다음에 같이 가요"
+  }
+ ],
+ "e|대박": [
+  {
+   "text": "대박, 너 오늘 머리 예쁘다!",
+   "en": "Wow, your hair looks pretty today!",
+   "ko": "와, 너 오늘 머리 예쁘다!",
+   "blank": "대박"
+  },
+  {
+   "text": "대박, 시험 다 맞았어!",
+   "en": "Wow, I got everything right on the test!",
+   "ko": "와, 시험에서 모두 정답이야!",
+   "blank": "대박"
+  },
+  {
+   "text": "대박, 비가 갑자기 온다!",
+   "en": "Wow, it's suddenly raining!",
+   "ko": "와, 갑자기 비가 온다!",
+   "blank": "대박"
+  }
+ ],
+ "e|듣고 보니": [
+  {
+   "text": "네 얘기 듣고 보니 내 생각이 좀 짧았던 것 같아.",
+   "en": "Now that I hear what you said, I think I was a bit short-sighted.",
+   "ko": "네 말을 듣고 나니까 내 생각이 조금 부족했던 것 같아.",
+   "blank": "듣고 보니"
+  },
+  {
+   "text": "듣고 보니 그 방법이 훨씬 더 효율적이겠네.",
+   "en": "Now that I hear it, that method would be much more efficient.",
+   "ko": "이야기를 듣고 나니까 그 방법이 훨씬 더 효율적일 것 같아.",
+   "blank": "듣고 보니"
+  },
+  {
+   "text": "듣고 보니 내가 오해했던 것 같아, 미안해.",
+   "en": "Now that I hear it, I think I misunderstood, sorry.",
+   "ko": "말을 듣고 나니까 내가 오해했던 것 같아서 미안해.",
+   "blank": "듣고 보니"
+  }
+ ],
+ "e|마음에 걸려요": [
+  {
+   "text": "친구한테 너무 심하게 말해서 마음에 걸려요.",
+   "en": "I feel bad because I spoke too harshly to my friend.",
+   "ko": "친구에게 너무 심하게 말해서 신경 쓰여요.",
+   "blank": "마음에 걸려요"
+  },
+  {
+   "text": "어제 약속을 못 지켜서 마음에 걸려요.",
+   "en": "I feel uneasy because I couldn't keep my promise yesterday.",
+   "ko": "어제 약속을 지키지 못해서 신경 쓰여요.",
+   "blank": "마음에 걸려요"
+  },
+  {
+   "text": "숙제를 깜빡해서 마음에 걸려요.",
+   "en": "I feel uneasy because I forgot my homework.",
+   "ko": "숙제를 잊어서 신경 쓰여요.",
+   "blank": "마음에 걸려요"
+  }
+ ],
+ "e|마음은 굴뚝같은데": [
+  {
+   "text": "마음은 굴뚝같은데 시간이 없어서 못 갔어.",
+   "en": "I really wanted to go, but I couldn't because I had no time.",
+   "ko": "정말 가고 싶었지만 시간이 없어서 못 갔어.",
+   "blank": "마음은 굴뚝같은데"
+  },
+  {
+   "text": "마음은 굴뚝같은데 아직 용기가 안 나.",
+   "en": "I really want to, but I don't have the courage yet.",
+   "ko": "정말 하고 싶지만 아직 용기가 안 나.",
+   "blank": "마음은 굴뚝같은데"
+  },
+  {
+   "text": "마음은 굴뚝같은데 몸이 따라주질 않아.",
+   "en": "I really want to, but my body can't keep up.",
+   "ko": "정말 하고 싶지만 몸이 따라주지 않아.",
+   "blank": "마음은 굴뚝같은데"
+  }
+ ],
+ "e|만나서 반가워요": [
+  {
+   "text": "저는 민수예요, 만나서 반가워요.",
+   "en": "I am Minsu, nice to meet you.",
+   "ko": "나는 민수야, 처음 봐서 좋아.",
+   "blank": "만나서 반가워요"
+  },
+  {
+   "text": "여기 와줘서 고마워요, 만나서 반가워요.",
+   "en": "Thank you for coming here, nice to meet you.",
+   "ko": "여기 와줘서 고마워, 처음 봐서 좋아.",
+   "blank": "만나서 반가워요"
+  },
+  {
+   "text": "저는 오늘 처음 와요, 만나서 반가워요.",
+   "en": "It's my first time here, nice to meet you.",
+   "ko": "나는 오늘 처음 와, 너를 만나서 기뻐.",
+   "blank": "만나서 반가워요"
+  }
+ ],
+ "e|말 놓을까요": [
+  {
+   "text": "우리 이제 말 놓을까요?",
+   "en": "Shall we speak more casually now?",
+   "ko": "우리 이제 더 편하게 말할까요?",
+   "blank": "말 놓을까요"
+  },
+  {
+   "text": "처음 뵙지만 말 놓을까요?",
+   "en": "It's our first time meeting, but can we talk casually?",
+   "ko": "처음 만났지만 반말로 이야기할까요?",
+   "blank": "말 놓을까요"
+  },
+  {
+   "text": "나이 차이 많이 안 나니까 말 놓을까요?",
+   "en": "Since there's not much age difference, shall we drop formalities?",
+   "ko": "나이 차이가 별로 없으니까 반말로 할까요?",
+   "blank": "말 놓을까요"
+  }
+ ],
+ "e|말도 마": [
+  {
+   "text": "오늘 하루 어땠냐고? 말도 마, 너무 힘들었어.",
+   "en": "How was my day? Don't even ask, it was so exhausting.",
+   "ko": "오늘 하루가 어땠냐고 묻지 마, 정말 너무 힘들었어.",
+   "blank": "말도 마"
+  },
+  {
+   "text": "요즘 일 때문에 스트레스 많지? 말도 마, 잠도 제대로 못 자.",
+   "en": "You have a lot of stress from work these days, right? Don't even ask, I can't even sleep properly.",
+   "ko": "요즘 일 때문에 스트레스가 많지, 묻지 마, 잠도 제대로 못 자.",
+   "blank": "말도 마"
+  },
+  {
+   "text": "주말에 뭐 했냐고? 말도 마, 집에서 계속 청소만 했어.",
+   "en": "What did I do over the weekend? Don't even ask, I was cleaning at home the whole time.",
+   "ko": "주말에 뭘 했냐고 묻지 마, 집에서 내내 청소만 했어.",
+   "blank": "말도 마"
+  }
+ ],
+ "e|말도 안 돼": [
+  {
+   "text": "말도 안 돼, 네가 그걸 다 먹었어?",
+   "en": "No way, did you eat all of that?",
+   "ko": "네가 그걸 다 먹었다니 믿을 수 없어.",
+   "blank": "말도 안 돼"
+  },
+  {
+   "text": "말도 안 돼, 이렇게 빨리 끝났다고?",
+   "en": "No way, it's finished this quickly?",
+   "ko": "이렇게 빨리 끝났다는 게 믿기지 않아.",
+   "blank": "말도 안 돼"
+  },
+  {
+   "text": "말도 안 돼, 오늘이 네 생일이야?",
+   "en": "No way, is it your birthday today?",
+   "ko": "오늘이 네 생일이라니 믿어지지 않아.",
+   "blank": "말도 안 돼"
+  }
+ ],
+ "e|말씀하신 대로": [
+  {
+   "text": "말씀하신 대로 오늘은 일찍 끝내겠습니다.",
+   "en": "As you said, I will finish early today.",
+   "ko": "당신이 말한 것처럼 오늘은 일찍 끝낼게요.",
+   "blank": "말씀하신 대로"
+  },
+  {
+   "text": "말씀하신 대로 준비를 다 했어요.",
+   "en": "I prepared everything just as you said.",
+   "ko": "당신이 말한 것처럼 준비를 모두 했어요.",
+   "blank": "말씀하신 대로"
+  },
+  {
+   "text": "말씀하신 대로 다음 주에 다시 연락드릴게요.",
+   "en": "As you mentioned, I will contact you again next week.",
+   "ko": "당신이 말한 것처럼 다음 주에 다시 연락할게요.",
+   "blank": "말씀하신 대로"
+  }
+ ],
+ "e|말이 나온 김에": [
+  {
+   "text": "말이 나온 김에 이번 주말에 같이 영화 보러 갈래?",
+   "en": "Since we're on the topic, do you want to go see a movie together this weekend?",
+   "ko": "이야기가 나온 김에 이번 주말에 함께 영화 보러 갈래?",
+   "blank": "말이 나온 김에"
+  },
+  {
+   "text": "말이 나온 김에 그동안 못 만났던 친구들도 한번 불러볼까?",
+   "en": "Since we're talking about it, should we invite the friends we haven't seen in a while?",
+   "ko": "이야기가 나온 김에 오랫동안 못 만난 친구들도 한번 불러볼까?",
+   "blank": "말이 나온 김에"
+  },
+  {
+   "text": "말이 나온 김에 저녁 메뉴도 같이 정할까?",
+   "en": "Since we're talking about it, should we decide on the dinner menu together as well?",
+   "ko": "이야기가 나온 김에 저녁 메뉴도 함께 정할까?",
+   "blank": "말이 나온 김에"
+  }
+ ],
+ "e|머리가 아파요": [
+  {
+   "text": "오늘은 머리가 아파요.",
+   "en": "My head hurts today.",
+   "ko": "오늘은 두통이 있어요.",
+   "blank": "머리가 아파요"
+  },
+  {
+   "text": "머리가 아파요, 그래서 일찍 잘게요.",
+   "en": "My head hurts, so I’ll go to bed early.",
+   "ko": "두통이 있어서 일찍 잘 거예요.",
+   "blank": "머리가 아파요"
+  },
+  {
+   "text": "머리가 아파요, 약 있어요?",
+   "en": "My head hurts, do you have any medicine?",
+   "ko": "두통이 있는데 약 있어요?",
+   "blank": "머리가 아파요"
+  }
+ ],
+ "e|몇 시에 만날까요": [
+  {
+   "text": "오늘 몇 시에 만날까요?",
+   "en": "What time shall we meet today?",
+   "ko": "오늘 몇 시에 함께할까요?",
+   "blank": "몇 시에 만날까요"
+  },
+  {
+   "text": "내일 몇 시에 만날까요?",
+   "en": "What time shall we meet tomorrow?",
+   "ko": "내일 몇 시에 함께할까요?",
+   "blank": "몇 시에 만날까요"
+  },
+  {
+   "text": "영화관에서 몇 시에 만날까요?",
+   "en": "What time shall we meet at the movie theater?",
+   "ko": "영화관에서 몇 시에 함께할까요?",
+   "blank": "몇 시에 만날까요"
+  }
+ ],
+ "e|문제가 생겼어요": [
+  {
+   "text": "선생님, 문제가 생겼어요.",
+   "en": "Teacher, a problem came up.",
+   "ko": "선생님, 문제가 생겼어요.",
+   "blank": "문제가 생겼어요"
+  },
+  {
+   "text": "죄송해요, 문제가 생겼어요.",
+   "en": "Sorry, a problem came up.",
+   "ko": "미안해요, 문제가 생겼어요.",
+   "blank": "문제가 생겼어요"
+  },
+  {
+   "text": "도와줄 수 있어요? 문제가 생겼어요.",
+   "en": "Can you help? A problem came up.",
+   "ko": "도와줄 수 있어요? 문제가 생겼어요.",
+   "blank": "문제가 생겼어요"
+  }
+ ],
+ "e|발이 넓다": [
+  {
+   "text": "그 사람은 발이 넓다 보니까 어디를 가도 아는 사람이 많아요.",
+   "en": "Since that person has a wide network, they know people wherever they go.",
+   "ko": "그 사람은 인맥이 넓어서 어디를 가도 아는 사람이 많아요.",
+   "blank": "발이 넓다"
+  },
+  {
+   "text": "발이 넓다 보니까 좋은 기회가 자주 오는 것 같아.",
+   "en": "It seems like having a lot of connections brings good opportunities often.",
+   "ko": "인맥이 넓으니까 좋은 기회가 자주 오는 것 같아.",
+   "blank": "발이 넓다"
+  },
+  {
+   "text": "우리 언니는 발이 넓다 해서 모임마다 꼭 초대받아.",
+   "en": "My sister is said to have a wide network, so she's invited to every gathering.",
+   "ko": "내 언니는 인맥이 좋아서 모임마다 꼭 초대받는다.",
+   "blank": "발이 넓다"
+  }
+ ],
+ "e|배고파요": [
+  {
+   "text": "배고파요, 뭐 먹을까요?",
+   "en": "I'm hungry, what should we eat?",
+   "ko": "배가 고픈데, 우리 뭐 먹을까?",
+   "blank": "배고파요"
+  },
+  {
+   "text": "아침 안 먹어서 배고파요.",
+   "en": "I didn't eat breakfast, so I'm hungry.",
+   "ko": "아침을 안 먹어서 배가 고파요.",
+   "blank": "배고파요"
+  },
+  {
+   "text": "운동하고 나서 배고파요.",
+   "en": "I'm hungry after exercising.",
+   "ko": "운동한 후에 배가 고파요.",
+   "blank": "배고파요"
+  }
+ ],
+ "e|별일 없지": [
+  {
+   "text": "요즘 별일 없지?",
+   "en": "Nothing special going on these days, right?",
+   "ko": "요즘 특별한 일 없지?",
+   "blank": "별일 없지"
+  },
+  {
+   "text": "오랜만인데 별일 없지?",
+   "en": "It's been a while, everything okay?",
+   "ko": "오랜만인데 다 괜찮지?",
+   "blank": "별일 없지"
+  },
+  {
+   "text": "오늘도 별일 없지?",
+   "en": "Nothing unusual today, right?",
+   "ko": "오늘도 특별한 일 없지?",
+   "blank": "별일 없지"
+  }
+ ],
+ "e|사정이 좀 있어서": [
+  {
+   "text": "오늘은 사정이 좀 있어서 약속을 미뤄야 할 것 같아.",
+   "en": "I have to postpone our plans today because something came up.",
+   "ko": "오늘은 개인적인 이유가 있어서 약속을 미뤄야 할 것 같아.",
+   "blank": "사정이 좀 있어서"
+  },
+  {
+   "text": "사정이 좀 있어서 이번 모임에는 참석하지 못해요.",
+   "en": "I can't attend the meeting this time because something came up.",
+   "ko": "개인적인 사정이 있어서 이번 모임에는 참석하지 못해요.",
+   "blank": "사정이 좀 있어서"
+  },
+  {
+   "text": "사정이 좀 있어서 내일 일찍 나가야 해요.",
+   "en": "I have to leave early tomorrow because something came up.",
+   "ko": "개인적인 사정이 있어서 내일 일찍 나가야 해요.",
+   "blank": "사정이 좀 있어서"
+  }
+ ],
+ "e|생각 좀 해 볼게요": [
+  {
+   "text": "이번 주말에 만날 수 있을지 생각 좀 해 볼게요.",
+   "en": "I'll think about whether I can meet this weekend.",
+   "ko": "이번 주말에 만날 수 있을지 고민해 볼게.",
+   "blank": "생각 좀 해 볼게요"
+  },
+  {
+   "text": "네 제안에 대해 생각 좀 해 볼게요.",
+   "en": "I'll think about your suggestion.",
+   "ko": "네가 한 제안에 대해 고민해 볼게.",
+   "blank": "생각 좀 해 볼게요"
+  },
+  {
+   "text": "저녁 메뉴는 생각 좀 해 볼게요.",
+   "en": "I'll think about what to have for dinner.",
+   "ko": "저녁 메뉴는 고민해 볼게.",
+   "blank": "생각 좀 해 볼게요"
+  }
+ ],
+ "e|선배님 덕분에": [
+  {
+   "text": "선배님 덕분에 이번 프로젝트를 잘 마칠 수 있었어요.",
+   "en": "Thanks to you, senior, I was able to finish this project well.",
+   "ko": "당신 덕에 이번 프로젝트를 잘 끝낼 수 있었어요.",
+   "blank": "선배님 덕분에"
+  },
+  {
+   "text": "선배님 덕분에 자신감이 많이 생겼어요.",
+   "en": "Because of you, I gained a lot of confidence.",
+   "ko": "당신 덕에 자신감을 많이 얻었어요.",
+   "blank": "선배님 덕분에"
+  },
+  {
+   "text": "선배님 덕분에 오늘도 힘내서 공부할 수 있었어요.",
+   "en": "Thanks to you, I was able to study hard again today.",
+   "ko": "당신 덕에 오늘도 열심히 공부할 수 있었어요.",
+   "blank": "선배님 덕분에"
+  }
+ ],
+ "e|속이 시원하다": [
+  {
+   "text": "드디어 오해가 풀려서 속이 시원하다.",
+   "en": "I finally cleared up the misunderstanding, so I feel relieved.",
+   "ko": "오해가 풀려서 마음이 편하다.",
+   "blank": "속이 시원하다"
+  },
+  {
+   "text": "시험이 끝나고 나니 속이 시원하다.",
+   "en": "Now that the exam is over, I feel relieved.",
+   "ko": "시험이 끝나서 마음이 편하다.",
+   "blank": "속이 시원하다"
+  },
+  {
+   "text": "답답했던 이야기를 다 털어놓으니까 속이 시원하다.",
+   "en": "After sharing everything that was bothering me, I feel relieved.",
+   "ko": "마음에 있던 이야기를 다 말해서 편하다.",
+   "blank": "속이 시원하다"
+  }
+ ],
+ "e|손이 크다": [
+  {
+   "text": "손이 크다 보니까 장을 볼 때도 항상 많이 사게 돼.",
+   "en": "Because I tend to be generous, I always end up buying a lot when I shop for groceries.",
+   "ko": "인심이 좋아서 장을 볼 때도 항상 많이 사게 돼.",
+   "blank": "손이 크다"
+  },
+  {
+   "text": "우리 엄마는 손이 크다 보니까 항상 음식을 넉넉하게 해.",
+   "en": "My mom has a generous hand, so she always makes plenty of food.",
+   "ko": "우리 엄마는 인심이 좋아서 항상 음식을 넉넉하게 만들어.",
+   "blank": "손이 크다"
+  },
+  {
+   "text": "손이 크다 보니 선물도 항상 큰 걸 고르더라.",
+   "en": "Since you’re so generous, you always pick big gifts.",
+   "ko": "인심이 좋아서 선물도 항상 큰 걸 고르더라.",
+   "blank": "손이 크다"
+  }
+ ],
+ "e|솔직히 말하면": [
+  {
+   "text": "솔직히 말하면 나는 그 영화가 별로였어.",
+   "en": "To be honest, I didn't really like that movie.",
+   "ko": "정직하게 말하면 나는 그 영화가 마음에 들지 않았어.",
+   "blank": "솔직히 말하면"
+  },
+  {
+   "text": "솔직히 말하면 오늘 좀 피곤해.",
+   "en": "To be honest, I'm a bit tired today.",
+   "ko": "정직하게 말하면 오늘 약간 피곤해.",
+   "blank": "솔직히 말하면"
+  },
+  {
+   "text": "솔직히 말하면 그 계획이 잘 될지 모르겠어.",
+   "en": "To be honest, I'm not sure if that plan will work.",
+   "ko": "정직하게 말하면 그 계획이 성공할지 확신이 없어.",
+   "blank": "솔직히 말하면"
+  }
+ ],
+ "e|수고하셨습니다": [
+  {
+   "text": "오늘도 수고하셨습니다.",
+   "en": "You worked hard today, too.",
+   "ko": "오늘도 열심히 일했어요.",
+   "blank": "수고하셨습니다"
+  },
+  {
+   "text": "회의 끝났네요, 모두 수고하셨습니다.",
+   "en": "The meeting is over, everyone worked hard.",
+   "ko": "회의가 끝났어요, 모두 열심히 일했어요.",
+   "blank": "수고하셨습니다"
+  },
+  {
+   "text": "늦게까지 수고하셨습니다.",
+   "en": "You worked hard until late.",
+   "ko": "늦게까지 열심히 일했어요.",
+   "blank": "수고하셨습니다"
+  }
+ ],
+ "e|스포 하지 마": [
+  {
+   "text": "아직 못 봤으니까 스포 하지 마.",
+   "en": "I haven't watched it yet, so don't spoil it.",
+   "ko": "아직 그거 안 봤으니까 내용 말하지 마.",
+   "blank": "스포 하지 마"
+  },
+  {
+   "text": "다음 화 얘기할 거면 스포 하지 마.",
+   "en": "If you're going to talk about the next episode, don't spoil it.",
+   "ko": "다음 이야기 말할 거면 내용 말하지 마.",
+   "blank": "스포 하지 마"
+  },
+  {
+   "text": "스포 하지 마, 지금 보는 중이야.",
+   "en": "Don't spoil it, I'm watching right now.",
+   "ko": "내용 말하지 마, 지금 보고 있어.",
+   "blank": "스포 하지 마"
+  }
+ ],
+ "e|시원섭섭하다": [
+  {
+   "text": "졸업식이 끝나고 나니 시원섭섭하다.",
+   "en": "Now that graduation is over, I feel bittersweet.",
+   "ko": "졸업식이 끝나고 나니 마음이 후련하면서도 아쉽다.",
+   "blank": "시원섭섭하다"
+  },
+  {
+   "text": "회사 퇴사하는 마지막 날이라 시원섭섭하다.",
+   "en": "It's my last day at work, so I feel bittersweet.",
+   "ko": "회사 그만두는 마지막 날이라 후련하면서도 아쉽다.",
+   "blank": "시원섭섭하다"
+  },
+  {
+   "text": "여행이 끝나니까 시원섭섭하다.",
+   "en": "Now that the trip is over, I feel bittersweet.",
+   "ko": "여행이 끝나니까 후련하면서도 아쉽다.",
+   "blank": "시원섭섭하다"
+  }
+ ],
+ "e|신경 쓰지 마": [
+  {
+   "text": "내가 실수해도 신경 쓰지 마.",
+   "en": "Don't worry even if I make a mistake.",
+   "ko": "내가 실수해도 걱정하지 마.",
+   "blank": "신경 쓰지 마"
+  },
+  {
+   "text": "신경 쓰지 마, 그냥 네 방식대로 해.",
+   "en": "Don't worry about it, just do it your way.",
+   "ko": "걱정하지 말고 그냥 네 방식대로 해.",
+   "blank": "신경 쓰지 마"
+  },
+  {
+   "text": "아직 준비 안 됐어도 신경 쓰지 마.",
+   "en": "Even if you're not ready yet, don't worry about it.",
+   "ko": "아직 준비 안 됐어도 걱정하지 마.",
+   "blank": "신경 쓰지 마"
+  }
+ ],
+ "e|아 그렇구나": [
+  {
+   "text": "오늘은 비가 올 거라고? 아 그렇구나.",
+   "en": "It will rain today? Oh, I see.",
+   "ko": "오늘 비가 온다고? 알겠어.",
+   "blank": "아 그렇구나"
+  },
+  {
+   "text": "네가 혼자 왔구나? 아 그렇구나.",
+   "en": "You came alone? Oh, I see.",
+   "ko": "너 혼자 왔구나? 알겠어.",
+   "blank": "아 그렇구나"
+  },
+  {
+   "text": "시험이 어려웠어? 아 그렇구나.",
+   "en": "The test was hard? Oh, I see.",
+   "ko": "시험이 어려웠어? 알겠어.",
+   "blank": "아 그렇구나"
+  }
+ ],
+ "e|아니요": [
+  {
+   "text": "아니요, 저는 학생 아니에요.",
+   "en": "No, I am not a student.",
+   "ko": "아니, 나는 학생이 아니야.",
+   "blank": "아니요"
+  },
+  {
+   "text": "아니요, 물 필요 없어요.",
+   "en": "No, I do not need water.",
+   "ko": "아니, 나는 물이 필요 없어.",
+   "blank": "아니요"
+  },
+  {
+   "text": "아니요, 오늘은 안 가요.",
+   "en": "No, I am not going today.",
+   "ko": "아니, 오늘은 가지 않아.",
+   "blank": "아니요"
+  }
+ ],
+ "e|아무튼": [
+  {
+   "text": "아무튼 오늘 일이 잘 풀렸으면 좋겠어.",
+   "en": "Anyway, I hope everything goes well today.",
+   "ko": "어쨌든 오늘 일이 잘 되었으면 좋겠어.",
+   "blank": "아무튼"
+  },
+  {
+   "text": "아무튼 네가 결정하면 알려 줘.",
+   "en": "Anyway, let me know when you decide.",
+   "ko": "어쨌든 네가 결정하면 알려 줘.",
+   "blank": "아무튼"
+  },
+  {
+   "text": "아무튼 늦어서 미안해.",
+   "en": "Anyway, sorry for being late.",
+   "ko": "어쨌든 늦어서 미안해.",
+   "blank": "아무튼"
+  }
+ ],
+ "e|안녕하세요": [
+  {
+   "text": "안녕하세요, 저는 민수예요.",
+   "en": "Hello, I am Minsu.",
+   "ko": "안녕, 나는 민수야.",
+   "blank": "안녕하세요"
+  },
+  {
+   "text": "안녕하세요, 오늘 날씨 좋아요.",
+   "en": "Hello, the weather is nice today.",
+   "ko": "안녕, 오늘 날씨가 좋아.",
+   "blank": "안녕하세요"
+  },
+  {
+   "text": "안녕하세요, 만나서 반가워요.",
+   "en": "Hello, nice to meet you.",
+   "ko": "안녕, 만나서 반가워.",
+   "blank": "안녕하세요"
+  }
+ ],
+ "e|안녕히 가세요": [
+  {
+   "text": "안녕히 가세요, 친구야.",
+   "en": "Goodbye, my friend.",
+   "ko": "잘 가, 친구야.",
+   "blank": "안녕히 가세요"
+  },
+  {
+   "text": "지금 집에 가요? 안녕히 가세요.",
+   "en": "Are you going home now? Goodbye.",
+   "ko": "지금 집에 가요? 잘 가요.",
+   "blank": "안녕히 가세요"
+  },
+  {
+   "text": "수업 끝났어요. 안녕히 가세요.",
+   "en": "Class is over. Goodbye.",
+   "ko": "수업 끝났어요. 잘 가요.",
+   "blank": "안녕히 가세요"
+  }
+ ],
+ "e|안녕히 계세요": [
+  {
+   "text": "저 먼저 갈게요, 안녕히 계세요.",
+   "en": "I will go first, goodbye.",
+   "ko": "나 먼저 갈게, 잘 있어.",
+   "blank": "안녕히 계세요"
+  },
+  {
+   "text": "오늘 즐거웠어요, 안녕히 계세요.",
+   "en": "I had fun today, goodbye.",
+   "ko": "오늘 재미있었어, 잘 있어.",
+   "blank": "안녕히 계세요"
+  },
+  {
+   "text": "내일 또 봐요, 안녕히 계세요.",
+   "en": "See you again tomorrow, goodbye.",
+   "ko": "내일 또 보자, 잘 있어.",
+   "blank": "안녕히 계세요"
+  }
+ ],
+ "e|약 있어요": [
+  {
+   "text": "감기 약 있어요?",
+   "en": "Do you have cold medicine?",
+   "ko": "감기약 있습니까?",
+   "blank": "약 있어요"
+  },
+  {
+   "text": "두통 약 있어요.",
+   "en": "I have headache medicine.",
+   "ko": "두통약 있습니다.",
+   "blank": "약 있어요"
+  },
+  {
+   "text": "여기 약 있어요.",
+   "en": "There is medicine here.",
+   "ko": "여기에 약이 있습니다.",
+   "blank": "약 있어요"
+  }
+ ],
+ "e|어디서 내려요": [
+  {
+   "text": "실례하지만 어디서 내려요?",
+   "en": "Excuse me, where do I get off?",
+   "ko": "실례하지만 어디에서 내려야 해요?",
+   "blank": "어디서 내려요"
+  },
+  {
+   "text": "버스에서 어디서 내려요?",
+   "en": "Where do I get off on the bus?",
+   "ko": "버스에서 어디에서 내려야 해요?",
+   "blank": "어디서 내려요"
+  },
+  {
+   "text": "여기서 어디서 내려요?",
+   "en": "Where do I get off here?",
+   "ko": "여기서 어디에서 내려야 해요?",
+   "blank": "어디서 내려요"
+  }
+ ],
+ "e|어떻게 생각해요": [
+  {
+   "text": "이 옷 어때요? 어떻게 생각해요?",
+   "en": "How is this outfit? What do you think?",
+   "ko": "이 옷이 어떤지 물어보는 말이야. 네 생각은 어때?",
+   "blank": "어떻게 생각해요"
+  },
+  {
+   "text": "우리 내일 영화 볼까요? 어떻게 생각해요?",
+   "en": "Should we watch a movie tomorrow? What do you think?",
+   "ko": "내일 영화 볼까 하는데 네 의견이 궁금해.",
+   "blank": "어떻게 생각해요"
+  },
+  {
+   "text": "이 요리 맛있어요? 어떻게 생각해요?",
+   "en": "Is this dish tasty? What do you think?",
+   "ko": "이 음식이 맛있는지 네 생각을 묻는 말이야.",
+   "blank": "어떻게 생각해요"
+  }
+ ],
+ "e|어이가 없네": [
+  {
+   "text": "지금 이 상황은 어이가 없네.",
+   "en": "This situation is ridiculous.",
+   "ko": "이 상황이 너무 황당하다.",
+   "blank": "어이가 없네"
+  },
+  {
+   "text": "네가 갑자기 그런 말을 하다니 어이가 없네.",
+   "en": "I can’t believe you suddenly said something like that.",
+   "ko": "네가 갑자기 그런 말을 해서 너무 황당하다.",
+   "blank": "어이가 없네"
+  },
+  {
+   "text": "이게 말이 된다고 생각해? 어이가 없네.",
+   "en": "Do you really think this makes sense? I’m speechless.",
+   "ko": "이게 정말 말이 된다고 생각하니? 너무 황당하다.",
+   "blank": "어이가 없네"
+  }
+ ],
+ "e|어쩔 수 없죠": [
+  {
+   "text": "비가 너무 많이 와서 취소할 수밖에 없었어요, 어쩔 수 없죠.",
+   "en": "It rained so much we had no choice but to cancel, it can't be helped.",
+   "ko": "비가 너무 많이 와서 취소할 수밖에 없었어요, 방법이 없어요.",
+   "blank": "어쩔 수 없죠"
+  },
+  {
+   "text": "막차가 벌써 떠나버렸으니 어쩔 수 없죠.",
+   "en": "The last bus already left, so there's nothing we can do.",
+   "ko": "막차가 벌써 떠나버렸으니 방법이 없어요.",
+   "blank": "어쩔 수 없죠"
+  },
+  {
+   "text": "가격이 올라서 사지 못해도 어쩔 수 없죠.",
+   "en": "Even if I can't buy it because the price went up, it can't be helped.",
+   "ko": "가격이 올라서 사지 못해도 방법이 없어요.",
+   "blank": "어쩔 수 없죠"
+  }
+ ],
+ "e|언제 시간 있어요": [
+  {
+   "text": "언제 시간 있어요? 같이 밥 먹고 싶어요.",
+   "en": "When do you have time? I want to have a meal together.",
+   "ko": "언제 시간이 있나요? 함께 밥을 먹고 싶어요.",
+   "blank": "언제 시간 있어요"
+  },
+  {
+   "text": "언제 시간 있어요? 영화 보러 가요.",
+   "en": "When do you have time? Let's go see a movie.",
+   "ko": "언제 시간이 있나요? 영화 보러 가요.",
+   "blank": "언제 시간 있어요"
+  },
+  {
+   "text": "언제 시간 있어요? 이야기 좀 해요.",
+   "en": "When do you have time? Let's talk for a bit.",
+   "ko": "언제 시간이 있나요? 잠깐 이야기해요.",
+   "blank": "언제 시간 있어요"
+  }
+ ],
+ "e|얼마예요": [
+  {
+   "text": "사과 얼마예요?",
+   "en": "How much is the apple?",
+   "ko": "사과는 얼마입니까?",
+   "blank": "얼마예요"
+  },
+  {
+   "text": "물 한 병 얼마예요?",
+   "en": "How much is a bottle of water?",
+   "ko": "물 한 병은 얼마입니까?",
+   "blank": "얼마예요"
+  },
+  {
+   "text": "커피 얼마예요?",
+   "en": "How much is the coffee?",
+   "ko": "커피는 얼마인가요?",
+   "blank": "얼마예요"
+  }
+ ],
+ "e|여기서 세워 주세요": [
+  {
+   "text": "저기서 여기서 세워 주세요.",
+   "en": "Please stop here over there.",
+   "ko": "저쪽에서 여기에서 멈춰 주세요.",
+   "blank": "여기서 세워 주세요"
+  },
+  {
+   "text": "병원 앞에서 여기서 세워 주세요.",
+   "en": "Please stop here in front of the hospital.",
+   "ko": "병원 앞에서 여기에서 멈춰 주세요.",
+   "blank": "여기서 세워 주세요"
+  },
+  {
+   "text": "지하철역 근처에서 여기서 세워 주세요.",
+   "en": "Please stop here near the subway station.",
+   "ko": "지하철역 근처에서 여기에서 멈춰 주세요.",
+   "blank": "여기서 세워 주세요"
+  }
+ ],
+ "e|여기요": [
+  {
+   "text": "여기요, 물 좀 주세요.",
+   "en": "Excuse me, water please.",
+   "ko": "실례합니다, 물 좀 주세요.",
+   "blank": "여기요"
+  },
+  {
+   "text": "여기요, 계산해 주세요.",
+   "en": "Excuse me, check please.",
+   "ko": "실례합니다, 계산해 주세요.",
+   "blank": "여기요"
+  },
+  {
+   "text": "여기요, 이거 뭐예요?",
+   "en": "Excuse me, what is this?",
+   "ko": "실례합니다, 이거 뭐예요?",
+   "blank": "여기요"
+  }
+ ],
+ "e|연락할게요": [
+  {
+   "text": "내일 도착하면 연락할게요.",
+   "en": "I will contact you when I arrive tomorrow.",
+   "ko": "내일 도착하면 연락하겠다.",
+   "blank": "연락할게요"
+  },
+  {
+   "text": "시간 맞추면 연락할게요.",
+   "en": "I will contact you when I have the right time.",
+   "ko": "시간이 맞으면 연락하겠다.",
+   "blank": "연락할게요"
+  },
+  {
+   "text": "끝나고 연락할게요.",
+   "en": "I will contact you after I finish.",
+   "ko": "끝난 다음에 연락하겠다.",
+   "blank": "연락할게요"
+  }
+ ],
+ "e|오랜만이야": [
+  {
+   "text": "오랜만이야, 잘 지냈어?",
+   "en": "Long time no see, have you been well?",
+   "ko": "오랫동안 못 봤는데 잘 지냈어?",
+   "blank": "오랜만이야"
+  },
+  {
+   "text": "오랜만이야, 너 많이 변했네.",
+   "en": "Long time no see, you've changed a lot.",
+   "ko": "오랫동안 못 만났는데 너 많이 달라졌네.",
+   "blank": "오랜만이야"
+  },
+  {
+   "text": "오랜만이야, 오늘 여기서 만날 줄 몰랐어.",
+   "en": "Long time no see, I didn’t expect to meet you here today.",
+   "ko": "오랫동안 못 봤는데 오늘 여기서 만날 줄 몰랐어.",
+   "blank": "오랜만이야"
+  }
+ ],
+ "e|완전 공감해요": [
+  {
+   "text": "요즘 날씨 진짜 덥죠? 완전 공감해요.",
+   "en": "The weather is really hot these days, right? I totally agree.",
+   "ko": "요즘 날씨가 진짜 덥다. 나도 그렇게 생각한다.",
+   "blank": "완전 공감해요"
+  },
+  {
+   "text": "일이 너무 많아서 힘들어요. 완전 공감해요.",
+   "en": "There is so much work, it's tough. I totally agree.",
+   "ko": "일이 너무 많아서 힘들다. 나도 그렇게 생각한다.",
+   "blank": "완전 공감해요"
+  },
+  {
+   "text": "혼자 있을 때 외로울 수 있죠. 완전 공감해요.",
+   "en": "It can be lonely when you're alone. I totally agree.",
+   "ko": "혼자 있을 때 외로울 수 있다. 나도 그렇게 생각한다.",
+   "blank": "완전 공감해요"
+  }
+ ],
+ "e|이거 뭐예요": [
+  {
+   "text": "안녕하세요, 이거 뭐예요?",
+   "en": "Hello, what is this?",
+   "ko": "안녕하세요, 이것은 무엇입니까?",
+   "blank": "이거 뭐예요"
+  },
+  {
+   "text": "책상 위에 이거 뭐예요?",
+   "en": "What is this on the desk?",
+   "ko": "책상 위에 이것은 무엇입니까?",
+   "blank": "이거 뭐예요"
+  },
+  {
+   "text": "가방 안에 이거 뭐예요?",
+   "en": "What is this in the bag?",
+   "ko": "가방 안에 이것은 무엇입니까?",
+   "blank": "이거 뭐예요"
+  }
+ ],
+ "e|이거 주세요": [
+  {
+   "text": "물 이거 주세요.",
+   "en": "Please give me this water.",
+   "ko": "이 물을 주세요.",
+   "blank": "이거 주세요"
+  },
+  {
+   "text": "책 이거 주세요.",
+   "en": "Please give me this book.",
+   "ko": "이 책을 주세요.",
+   "blank": "이거 주세요"
+  },
+  {
+   "text": "빵 이거 주세요.",
+   "en": "Please give me this bread.",
+   "ko": "이 빵을 주세요.",
+   "blank": "이거 주세요"
+  }
+ ],
+ "e|일정 조율해 볼게요": [
+  {
+   "text": "내일 회의 일정 조율해 볼게요.",
+   "en": "I'll try to coordinate the meeting schedule for tomorrow.",
+   "ko": "내일 회의 스케줄을 맞춰 보겠다.",
+   "blank": "일정 조율해 볼게요"
+  },
+  {
+   "text": "다음 주 여행 일정 조율해 볼게요.",
+   "en": "I'll try to coordinate the travel plans for next week.",
+   "ko": "다음 주 여행 계획을 맞춰 보겠다.",
+   "blank": "일정 조율해 볼게요"
+  },
+  {
+   "text": "팀원들과 일정 조율해 볼게요.",
+   "en": "I'll try to coordinate the schedule with the team members.",
+   "ko": "팀원들과 스케줄을 맞춰 보겠다.",
+   "blank": "일정 조율해 볼게요"
+  }
+ ],
+ "e|입어 봐도 돼요": [
+  {
+   "text": "이 옷 입어 봐도 돼요?",
+   "en": "Can I try on these clothes?",
+   "ko": "이 옷을 입어도 되는지 물어봄",
+   "blank": "입어 봐도 돼요"
+  },
+  {
+   "text": "비 오는 날에 내 우비 입어 봐도 돼요.",
+   "en": "You can try on my raincoat on a rainy day.",
+   "ko": "비 오는 날 내 우비를 입어도 된다고 말함",
+   "blank": "입어 봐도 돼요"
+  },
+  {
+   "text": "여기에서 운동복 입어 봐도 돼요?",
+   "en": "Can I try on the workout clothes here?",
+   "ko": "여기서 운동복을 입어도 되는지 물어봄",
+   "blank": "입어 봐도 돼요"
+  }
+ ],
+ "e|입이 무겁다": [
+  {
+   "text": "입이 무겁다 보니까 소문이 절대 안 퍼지더라.",
+   "en": "Because they're tight-lipped, rumors never spread.",
+   "ko": "비밀을 잘 지키는 편이라 소문이 전혀 퍼지지 않는다.",
+   "blank": "입이 무겁다"
+  },
+  {
+   "text": "나는 입이 무겁다 해서 친구들이 비밀을 잘 털어놔.",
+   "en": "People say I have a tight lip, so friends trust me with secrets.",
+   "ko": "나는 말이 적고 비밀을 잘 지켜서 친구들이 나에게 비밀을 잘 말한다.",
+   "blank": "입이 무겁다"
+  },
+  {
+   "text": "입이 무겁다 해서 중요한 얘기는 나한테만 한다고 하더라.",
+   "en": "They say they only tell important things to me because I don't spill secrets.",
+   "ko": "나는 비밀을 잘 지키기 때문에 중요한 얘기는 나한테만 한다고 하더라.",
+   "blank": "입이 무겁다"
+  }
+ ],
+ "e|잘 모르겠어요": [
+  {
+   "text": "이 문제는 잘 모르겠어요.",
+   "en": "I do not know this problem well.",
+   "ko": "나는 이 문제를 잘 알지 못해요.",
+   "blank": "잘 모르겠어요"
+  },
+  {
+   "text": "여기가 어디인지 잘 모르겠어요.",
+   "en": "I do not know where this place is.",
+   "ko": "여기가 어디인지 알지 못해요.",
+   "blank": "잘 모르겠어요"
+  },
+  {
+   "text": "무슨 뜻인지 잘 모르겠어요.",
+   "en": "I do not know what it means.",
+   "ko": "무슨 의미인지 알지 못해요.",
+   "blank": "잘 모르겠어요"
+  }
+ ],
+ "e|잘 부탁드립니다": [
+  {
+   "text": "오늘 처음 뵙겠습니다, 잘 부탁드립니다.",
+   "en": "Nice to meet you for the first time, please take care of me.",
+   "ko": "오늘 처음 만났으니 앞으로 잘 도와주세요.",
+   "blank": "잘 부탁드립니다"
+  },
+  {
+   "text": "앞으로 같이 일하게 되었으니 잘 부탁드립니다.",
+   "en": "We will be working together from now on, so please take care of me.",
+   "ko": "이제부터 함께 일하니까 잘 도와주세요.",
+   "blank": "잘 부탁드립니다"
+  },
+  {
+   "text": "이사 온 지 얼마 안 됐어요, 잘 부탁드립니다.",
+   "en": "I just moved here recently, please take care of me.",
+   "ko": "여기로 이사 온 지 얼마 안 되었으니 잘 도와주세요.",
+   "blank": "잘 부탁드립니다"
+  }
+ ],
+ "e|잠깐만요": [
+  {
+   "text": "잠깐만요, 문 좀 열어 주세요.",
+   "en": "Excuse me, please open the door.",
+   "ko": "실례지만 문을 열어 주세요.",
+   "blank": "잠깐만요"
+  },
+  {
+   "text": "잠깐만요, 물 좀 주세요.",
+   "en": "Excuse me, please give me some water.",
+   "ko": "실례지만 물을 좀 주세요.",
+   "blank": "잠깐만요"
+  },
+  {
+   "text": "잠깐만요, 다시 말씀해 주세요.",
+   "en": "Excuse me, please say it again.",
+   "ko": "실례지만 다시 말해 주세요.",
+   "blank": "잠깐만요"
+  }
+ ],
+ "e|재미있었어요": [
+  {
+   "text": "어제 영화가 정말 재미있었어요.",
+   "en": "The movie yesterday was really fun.",
+   "ko": "어제 본 영화는 정말 즐거웠어요.",
+   "blank": "재미있었어요"
+  },
+  {
+   "text": "친구랑 놀이공원에 갔는데 너무 재미있었어요.",
+   "en": "I went to the amusement park with a friend, and it was so fun.",
+   "ko": "친구와 놀이공원에 가서 정말 즐거웠어요.",
+   "blank": "재미있었어요"
+  },
+  {
+   "text": "오늘 수업이 재미있었어요?",
+   "en": "Was today's class fun?",
+   "ko": "오늘 수업이 즐거웠나요?",
+   "blank": "재미있었어요"
+  }
+ ],
+ "e|제 생각에는": [
+  {
+   "text": "제 생각에는 오늘 비가 올 것 같아요.",
+   "en": "I think it will rain today.",
+   "ko": "나는 오늘 비가 올 것 같다고 생각해.",
+   "blank": "제 생각에는"
+  },
+  {
+   "text": "제 생각에는 이 음식이 정말 맛있어요.",
+   "en": "I think this food is really delicious.",
+   "ko": "나는 이 음식이 정말 맛있다고 생각해.",
+   "blank": "제 생각에는"
+  },
+  {
+   "text": "제 생각에는 지금 가는 게 좋아요.",
+   "en": "I think it is good to go now.",
+   "ko": "나는 지금 가는 것이 좋다고 생각해.",
+   "blank": "제 생각에는"
+  }
+ ],
+ "e|제가 알기로는": [
+  {
+   "text": "제가 알기로는 내일 비가 올 거예요.",
+   "en": "As far as I know, it will rain tomorrow.",
+   "ko": "내가 알고 있는 바로는 내일 비가 올 것이다.",
+   "blank": "제가 알기로는"
+  },
+  {
+   "text": "제가 알기로는 이 근처에 맛집이 많아요.",
+   "en": "As far as I know, there are many good restaurants around here.",
+   "ko": "내가 알고 있는 바로는 이 근처에 맛있는 식당이 많다.",
+   "blank": "제가 알기로는"
+  },
+  {
+   "text": "제가 알기로는 그는 아직 도착하지 않았어요.",
+   "en": "As far as I know, he hasn't arrived yet.",
+   "ko": "내가 알고 있는 바로는 그는 아직 도착하지 않았다.",
+   "blank": "제가 알기로는"
+  }
+ ],
+ "e|좀 깎아 주세요": [
+  {
+   "text": "이거 좀 깎아 주세요.",
+   "en": "Please give me a discount on this.",
+   "ko": "이것을 할인해 주세요.",
+   "blank": "좀 깎아 주세요"
+  },
+  {
+   "text": "조금만 더 좀 깎아 주세요.",
+   "en": "Please lower the price just a bit more.",
+   "ko": "가격을 좀 더 내려 주세요.",
+   "blank": "좀 깎아 주세요"
+  },
+  {
+   "text": "현금으로 하면 좀 깎아 주세요.",
+   "en": "If I pay in cash, please give me a discount.",
+   "ko": "현금으로 계산하면 할인해 주세요.",
+   "blank": "좀 깎아 주세요"
+  }
+ ],
+ "e|죄송합니다": [
+  {
+   "text": "죄송합니다, 늦었어요.",
+   "en": "Sorry, I am late.",
+   "ko": "미안해요, 늦었어요.",
+   "blank": "죄송합니다"
+  },
+  {
+   "text": "죄송합니다, 다시 말해 주세요.",
+   "en": "Sorry, please say it again.",
+   "ko": "미안해요, 다시 말해 주세요.",
+   "blank": "죄송합니다"
+  },
+  {
+   "text": "죄송합니다, 지금 바빠요.",
+   "en": "Sorry, I am busy now.",
+   "ko": "미안해요, 지금 바빠요.",
+   "blank": "죄송합니다"
+  }
+ ],
+ "e|주말에 뭐 했어요": [
+  {
+   "text": "오늘 아침에 친구가 주말에 뭐 했어요 물어봤어요.",
+   "en": "This morning, my friend asked what I did over the weekend.",
+   "ko": "오늘 아침에 친구가 내가 주말에 무엇을 했는지 물어봤어요.",
+   "blank": "주말에 뭐 했어요"
+  },
+  {
+   "text": "어제 엄마한테 주말에 뭐 했어요 라고 물었어요.",
+   "en": "Yesterday, I asked my mom what she did over the weekend.",
+   "ko": "어제 엄마에게 주말에 무엇을 했는지 물어봤어요.",
+   "blank": "주말에 뭐 했어요"
+  },
+  {
+   "text": "안녕하세요, 주말에 뭐 했어요?",
+   "en": "Hi, what did you do on the weekend?",
+   "ko": "안녕, 주말에 한 일이 뭐야?",
+   "blank": "주말에 뭐 했어요"
+  }
+ ],
+ "e|진짜요": [
+  {
+   "text": "진짜요? 오늘 비 와요?",
+   "en": "Really? Is it raining today?",
+   "ko": "정말이에요? 오늘 비가 와요?",
+   "blank": "진짜요"
+  },
+  {
+   "text": "와, 진짜요! 대박이에요.",
+   "en": "Wow, really! That's amazing.",
+   "ko": "와, 정말이에요! 대단해요.",
+   "blank": "진짜요"
+  },
+  {
+   "text": "진짜요, 저는 매운 음식 못 먹어요.",
+   "en": "Really, I can't eat spicy food.",
+   "ko": "정말이에요, 저는 매운 음식을 못 먹어요.",
+   "blank": "진짜요"
+  }
+ ],
+ "e|처음 뵙겠습니다": [
+  {
+   "text": "처음 뵙겠습니다, 저는 민수입니다.",
+   "en": "Nice to meet you, I am Minsu.",
+   "ko": "만나서 반갑습니다, 저는 민수입니다.",
+   "blank": "처음 뵙겠습니다"
+  },
+  {
+   "text": "안녕하세요, 처음 뵙겠습니다.",
+   "en": "Hello, nice to meet you.",
+   "ko": "안녕하세요, 만나서 반갑습니다.",
+   "blank": "처음 뵙겠습니다"
+  },
+  {
+   "text": "처음 뵙겠습니다. 잘 부탁드립니다.",
+   "en": "Nice to meet you. Please take care of me.",
+   "ko": "만나서 반갑습니다. 잘 부탁드립니다.",
+   "blank": "처음 뵙겠습니다"
+  }
+ ],
+ "e|천천히 말해 주세요": [
+  {
+   "text": "잘 못 들었어요, 천천히 말해 주세요.",
+   "en": "I didn't hear well, please speak slowly.",
+   "ko": "잘 듣지 못했으니, 천천히 말해 주세요.",
+   "blank": "천천히 말해 주세요"
+  },
+  {
+   "text": "처음 배우고 있어요, 천천히 말해 주세요.",
+   "en": "I'm learning for the first time, please speak slowly.",
+   "ko": "처음 배우고 있으니, 천천히 말해 주세요.",
+   "blank": "천천히 말해 주세요"
+  },
+  {
+   "text": "죄송해요, 천천히 말해 주세요.",
+   "en": "Sorry, please speak slowly.",
+   "ko": "미안하니, 천천히 말해 주세요.",
+   "blank": "천천히 말해 주세요"
+  }
+ ],
+ "e|카드 돼요": [
+  {
+   "text": "여기서 카드 돼요?",
+   "en": "Can I use a card here?",
+   "ko": "여기에서 신용카드 사용할 수 있어요?",
+   "blank": "카드 돼요"
+  },
+  {
+   "text": "포장 카드 돼요?",
+   "en": "Can I pay for takeout with a card?",
+   "ko": "포장 주문에 신용카드 사용 가능해요?",
+   "blank": "카드 돼요"
+  },
+  {
+   "text": "커피 한 잔 카드 돼요?",
+   "en": "Can I pay for a coffee with a card?",
+   "ko": "커피 한 잔 신용카드로 결제할 수 있어요?",
+   "blank": "카드 돼요"
+  }
+ ],
+ "e|편하게 말해": [
+  {
+   "text": "처음이라서 긴장돼? 편하게 말해.",
+   "en": "Are you nervous because it's your first time? Speak comfortably.",
+   "ko": "처음이어서 긴장하니? 편하게 이야기해.",
+   "blank": "편하게 말해"
+  },
+  {
+   "text": "궁금한 거 있으면 편하게 말해.",
+   "en": "If you have any questions, speak comfortably.",
+   "ko": "궁금한 것이 있으면 부담 없이 이야기해.",
+   "blank": "편하게 말해"
+  },
+  {
+   "text": "여기서는 편하게 말해.",
+   "en": "You can speak comfortably here.",
+   "ko": "여기에서는 부담 없이 이야기해.",
+   "blank": "편하게 말해"
+  }
+ ],
+ "e|피곤해요": [
+  {
+   "text": "오늘 너무 피곤해요.",
+   "en": "I'm so tired today.",
+   "ko": "오늘 정말 힘들어요.",
+   "blank": "피곤해요"
+  },
+  {
+   "text": "일 끝나고 피곤해요.",
+   "en": "I'm tired after work.",
+   "ko": "일 끝나고 힘들어요.",
+   "blank": "피곤해요"
+  },
+  {
+   "text": "피곤해요, 그래서 좀 쉴게요.",
+   "en": "I'm tired, so I'll rest a bit.",
+   "ko": "힘들어서 조금 쉴 거예요.",
+   "blank": "피곤해요"
+  }
+ ],
+ "e|하마터면": [
+  {
+   "text": "하마터면 휴대폰을 집에 두고 올 뻔했어.",
+   "en": "I almost left my phone at home.",
+   "ko": "나는 거의 휴대폰을 집에 두고 올 뻔했다.",
+   "blank": "하마터면"
+  },
+  {
+   "text": "하마터면 중요한 약속을 잊을 뻔했어.",
+   "en": "I almost forgot my important appointment.",
+   "ko": "나는 거의 중요한 약속을 잊을 뻔했다.",
+   "blank": "하마터면"
+  },
+  {
+   "text": "하마터면 커피를 쏟을 뻔했네.",
+   "en": "I almost spilled my coffee.",
+   "ko": "나는 거의 커피를 쏟을 뻔했다.",
+   "blank": "하마터면"
+  }
+ ],
+ "e|한국어 조금 해요": [
+  {
+   "text": "안녕하세요, 한국어 조금 해요.",
+   "en": "Hello, I speak a little Korean.",
+   "ko": "안녕, 나는 한국 말을 조금 할 수 있어.",
+   "blank": "한국어 조금 해요"
+  },
+  {
+   "text": "한국어 조금 해요, 천천히 말해 주세요.",
+   "en": "I speak a little Korean, please speak slowly.",
+   "ko": "나는 한국 말을 조금 할 수 있어, 천천히 말해 줘.",
+   "blank": "한국어 조금 해요"
+  },
+  {
+   "text": "미안해요, 한국어 조금 해요.",
+   "en": "Sorry, I speak a little Korean.",
+   "ko": "미안, 나는 한국 말을 조금 할 수 있어.",
+   "blank": "한국어 조금 해요"
+  }
+ ],
+ "e|한잔해": [
+  {
+   "text": "오늘 고생 많았으니까 한잔해.",
+   "en": "You worked hard today, so have a drink.",
+   "ko": "오늘 힘들게 일했으니까 마셔.",
+   "blank": "한잔해"
+  },
+  {
+   "text": "기분도 꿀꿀한데 우리 한잔해.",
+   "en": "We’re feeling down, so let’s have a drink.",
+   "ko": "우울하니까 같이 마시자.",
+   "blank": "한잔해"
+  },
+  {
+   "text": "이렇게 좋은 날엔 한잔해.",
+   "en": "On a nice day like this, have a drink.",
+   "ko": "좋은 날엔 마셔.",
+   "blank": "한잔해"
+  }
+ ],
+ "e|혹시 시간 괜찮으세요": [
+  {
+   "text": "안녕하세요, 혹시 시간 괜찮으세요?",
+   "en": "Hello, do you have a moment?",
+   "ko": "안녕, 지금 잠깐 시간 있어?",
+   "blank": "혹시 시간 괜찮으세요"
+  },
+  {
+   "text": "혹시 시간 괜찮으세요, 잠깐 이야기해도 될까요?",
+   "en": "Do you have a moment? Can I talk to you for a bit?",
+   "ko": "지금 시간 있어? 잠깐 얘기해도 될까?",
+   "blank": "혹시 시간 괜찮으세요"
+  },
+  {
+   "text": "혹시 시간 괜찮으세요? 부탁드릴 게 있어요.",
+   "en": "Do you have a moment? I have a favor to ask.",
+   "ko": "지금 시간 있어? 부탁할 게 있어.",
+   "blank": "혹시 시간 괜찮으세요"
+  }
+ ],
+ "e|화장실 어디예요": [
+  {
+   "text": "안녕하세요, 화장실 어디예요?",
+   "en": "Hello, where is the bathroom?",
+   "ko": "안녕, 욕실이 어디에 있나요?",
+   "blank": "화장실 어디예요"
+  },
+  {
+   "text": "실례합니다, 화장실 어디예요?",
+   "en": "Excuse me, where is the bathroom?",
+   "ko": "실례해요, 욕실이 어디인가요?",
+   "blank": "화장실 어디예요"
+  },
+  {
+   "text": "여기서 화장실 어디예요?",
+   "en": "From here, where is the bathroom?",
+   "ko": "여기에서 욕실이 어디에 있나요?",
+   "blank": "화장실 어디예요"
+  }
+ ],
+ "e|확인 부탁드립니다": [
+  {
+   "text": "메일로 보낸 파일 확인 부탁드립니다.",
+   "en": "Please check the file I sent by email.",
+   "ko": "제가 이메일로 보낸 파일을 확인해 주세요.",
+   "blank": "확인 부탁드립니다"
+  },
+  {
+   "text": "내일 일정 다시 한번 확인 부탁드립니다.",
+   "en": "Please double-check the schedule for tomorrow.",
+   "ko": "내일 일정을 다시 한 번 확인해 주세요.",
+   "blank": "확인 부탁드립니다"
+  },
+  {
+   "text": "회의실 예약 상태 확인 부탁드립니다.",
+   "en": "Please check the reservation status of the meeting room.",
+   "ko": "회의실 예약 상태를 확인해 주세요.",
+   "blank": "확인 부탁드립니다"
+  }
+ ],
+ "e|확인해 보겠습니다": [
+  {
+   "text": "잠시만 기다려 주세요, 확인해 보겠습니다.",
+   "en": "Please wait a moment, I will check.",
+   "ko": "잠깐만 기다려 주세요, 제가 확인할게요.",
+   "blank": "확인해 보겠습니다"
+  },
+  {
+   "text": "이 정보가 맞는지 확인해 보겠습니다.",
+   "en": "I will check if this information is correct.",
+   "ko": "이 정보가 맞는지 제가 확인할게요.",
+   "blank": "확인해 보겠습니다"
+  },
+  {
+   "text": "재고가 있는지 확인해 보겠습니다.",
+   "en": "I will check if it is in stock.",
+   "ko": "재고가 있는지 제가 확인할게요.",
+   "blank": "확인해 보겠습니다"
+  }
+ ],
+ "e|환불 가능해요": [
+  {
+   "text": "이 옷 환불 가능해요?",
+   "en": "Can I get a refund for these clothes?",
+   "ko": "이 옷을 돈으로 돌려받을 수 있어요?",
+   "blank": "환불 가능해요"
+  },
+  {
+   "text": "영수증 있으면 환불 가능해요.",
+   "en": "If you have the receipt, a refund is possible.",
+   "ko": "영수증이 있으면 돈을 돌려받을 수 있어요.",
+   "blank": "환불 가능해요"
+  },
+  {
+   "text": "구매한 상품 환불 가능해요.",
+   "en": "The product you bought can be refunded.",
+   "ko": "구매한 물건은 돈으로 돌려받을 수 있어요.",
+   "blank": "환불 가능해요"
+  }
+ ],
+ "e|힘내요": [
+  {
+   "text": "오늘도 힘내요.",
+   "en": "Cheer up today too.",
+   "ko": "오늘도 기운 내세요.",
+   "blank": "힘내요"
+  },
+  {
+   "text": "시험 잘 보고 힘내요.",
+   "en": "Do well on your test and be strong.",
+   "ko": "시험 잘 보고 기운 내세요.",
+   "blank": "힘내요"
+  },
+  {
+   "text": "아프지 말고 힘내요.",
+   "en": "Don’t get sick and stay strong.",
+   "ko": "아프지 말고 기운 내세요.",
+   "blank": "힘내요"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "저는 한국 사람이에요.",
+   "en": "I am Korean.",
+   "ko": "나는 한국 사람이다.",
+   "blank": "사람이에요."
+  },
+  {
+   "text": "여기는 도서관이에요.",
+   "en": "This is the library.",
+   "ko": "여기는 도서관이다.",
+   "blank": "도서관이에요."
+  },
+  {
+   "text": "이건 제 책이에요.",
+   "en": "This is my book.",
+   "ko": "이것은 나의 책이다.",
+   "blank": "책이에요."
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "이것이 사과가 아니에요.",
+   "en": "This is not an apple.",
+   "ko": "이것은 사과가 아니다.",
+   "blank": "사과가 아니에요."
+  },
+  {
+   "text": "나는 학생이 아니에요.",
+   "en": "I am not a student.",
+   "ko": "나는 학생이 아니다.",
+   "blank": "학생이 아니에요."
+  },
+  {
+   "text": "여기는 집이 아니에요.",
+   "en": "This is not a house.",
+   "ko": "여기는 집이 아니다.",
+   "blank": "집이 아니에요."
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "이것은 책이에요.",
+   "en": "This is a book.",
+   "ko": "이것이 책이야.",
+   "blank": "이것은"
+  },
+  {
+   "text": "오늘은 날씨가 좋아요.",
+   "en": "Today, the weather is nice.",
+   "ko": "오늘 날씨가 좋아.",
+   "blank": "오늘은"
+  },
+  {
+   "text": "고양이는 귀여워요.",
+   "en": "Cats are cute.",
+   "ko": "고양이 귀엽다.",
+   "blank": "고양이는"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "저는 물을 마셔요.",
+   "en": "I drink water.",
+   "ko": "나는 물을 마신다.",
+   "blank": "마셔요."
+  },
+  {
+   "text": "저는 책을 읽어요.",
+   "en": "I read a book.",
+   "ko": "나는 책을 읽는다.",
+   "blank": "읽어요."
+  },
+  {
+   "text": "저는 아침을 먹어요.",
+   "en": "I eat breakfast.",
+   "ko": "나는 아침을 먹는다.",
+   "blank": "먹어요."
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "책을 읽어요.",
+   "en": "I read a book.",
+   "ko": "나는 책을 읽어요.",
+   "blank": "책을"
+  },
+  {
+   "text": "사과를 먹어요.",
+   "en": "I eat an apple.",
+   "ko": "나는 사과를 먹어요.",
+   "blank": "사과를"
+  },
+  {
+   "text": "음악을 들어요.",
+   "en": "I listen to music.",
+   "ko": "나는 음악을 들어요.",
+   "blank": "음악을"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "여기 물 있어요.",
+   "en": "There is water here.",
+   "ko": "여기 물이 있다.",
+   "blank": "있어요."
+  },
+  {
+   "text": "고양이 없어요.",
+   "en": "There is no cat.",
+   "ko": "고양이가 없다.",
+   "blank": "없어요."
+  },
+  {
+   "text": "책 있어요?",
+   "en": "Do you have a book?",
+   "ko": "책이 있니?",
+   "blank": "있어요?"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "커피 한 잔 주세요.",
+   "en": "Please give me a cup of coffee.",
+   "ko": "커피 한 잔 부탁해요.",
+   "blank": "주세요."
+  },
+  {
+   "text": "빵 주세요.",
+   "en": "Please give me bread.",
+   "ko": "빵 부탁해요.",
+   "blank": "주세요."
+  },
+  {
+   "text": "메뉴 주세요.",
+   "en": "Please give me the menu.",
+   "ko": "메뉴 부탁해요.",
+   "blank": "주세요."
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "저는 노래를 안 불러요.",
+   "en": "I do not sing songs.",
+   "ko": "나는 노래를 부르지 않는다.",
+   "blank": "노래를 안 불러요."
+  },
+  {
+   "text": "저는 텔레비전을 안 봐요.",
+   "en": "I do not watch television.",
+   "ko": "나는 텔레비전을 보지 않는다.",
+   "blank": "텔레비전을 안 봐요."
+  },
+  {
+   "text": "저는 운동을 안 해요.",
+   "en": "I don't exercise.",
+   "ko": "나는 운동하지 않아.",
+   "blank": "안 해요."
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "오늘 아침에 늦게 일어났어요.",
+   "en": "I woke up late this morning.",
+   "ko": "오늘 아침에 늦게 일어났어요.",
+   "blank": "일어났어요."
+  },
+  {
+   "text": "점심으로 김밥을 먹었어요.",
+   "en": "I ate kimbap for lunch.",
+   "ko": "점심으로 김밥을 먹었어요.",
+   "blank": "먹었어요."
+  },
+  {
+   "text": "지난주에 영화 봤어요?",
+   "en": "Did you watch a movie last week?",
+   "ko": "지난주에 영화 봤어요?",
+   "blank": "봤어요?"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "저녁에 요리할 거예요.",
+   "en": "I will cook in the evening.",
+   "ko": "저녁에 요리할 것이다.",
+   "blank": "요리할 거예요."
+  },
+  {
+   "text": "곧 비 올 거예요.",
+   "en": "It will rain soon.",
+   "ko": "곧 비 올 것이다.",
+   "blank": "올 거예요."
+  },
+  {
+   "text": "친구를 만날 거예요.",
+   "en": "I will meet a friend.",
+   "ko": "친구를 만날 것이다.",
+   "blank": "만날 거예요."
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "커피를 마시고 싶어요.",
+   "en": "I want to drink coffee.",
+   "ko": "나는 커피를 마시고 싶다.",
+   "blank": "마시고 싶어요."
+  },
+  {
+   "text": "오늘은 쉬고 싶어요.",
+   "en": "I want to rest today.",
+   "ko": "나는 오늘 쉬고 싶다.",
+   "blank": "쉬고 싶어요."
+  },
+  {
+   "text": "친구를 만나고 싶어요.",
+   "en": "I want to meet a friend.",
+   "ko": "나는 친구를 만나고 싶다.",
+   "blank": "만나고 싶어요."
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "저는 운전할 수 있어요.",
+   "en": "I can drive.",
+   "ko": "나는 운전할 수 있다.",
+   "blank": "운전할 수 있어요."
+  },
+  {
+   "text": "여기서 사진을 찍을 수 없어요.",
+   "en": "You cannot take pictures here.",
+   "ko": "여기에서 사진을 찍을 수 없다.",
+   "blank": "찍을 수 없어요."
+  },
+  {
+   "text": "지금 도와줄 수 있어요?",
+   "en": "Can you help now?",
+   "ko": "지금 도와줄 수 있나요?",
+   "blank": "도와줄 수 있어요?"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "책을 읽고 잠을 잤어요.",
+   "en": "I read a book and then slept.",
+   "ko": "나는 책을 읽은 다음에 잠을 잤다.",
+   "blank": "읽고"
+  },
+  {
+   "text": "문을 열고 나갔어요.",
+   "en": "I opened the door and then went out.",
+   "ko": "나는 문을 연 다음에 밖으로 나갔다.",
+   "blank": "열고"
+  },
+  {
+   "text": "물을 마시고 산책했어요.",
+   "en": "I drank water and then took a walk.",
+   "ko": "나는 물을 마신 다음에 산책했다.",
+   "blank": "마시고"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "책을 빌리러 가요.",
+   "en": "I go to borrow a book.",
+   "ko": "책을 빌리기 위해 가요.",
+   "blank": "빌리러 가요."
+  },
+  {
+   "text": "영화를 보러 가요.",
+   "en": "I go to watch a movie.",
+   "ko": "영화를 보기 위해 가요.",
+   "blank": "보러 가요."
+  },
+  {
+   "text": "커피를 마시러 가요.",
+   "en": "I'm going to drink coffee.",
+   "ko": "커피를 마시기 위해 가요.",
+   "blank": "마시러 가요."
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "영화 볼까요?",
+   "en": "Shall we watch a movie?",
+   "ko": "영화를 볼까요?",
+   "blank": "볼까요?"
+  },
+  {
+   "text": "지금 출발할까요?",
+   "en": "Shall we leave now?",
+   "ko": "지금 출발할까요?",
+   "blank": "출발할까요?"
+  },
+  {
+   "text": "내일 다시 만날까요?",
+   "en": "Shall we meet again tomorrow?",
+   "ko": "내일 다시 만나자.",
+   "blank": "만날까요?"
+  }
+ ],
+ "g|2:7": [
+  {
+   "text": "도서관에서 공부해요.",
+   "en": "I study at the library.",
+   "ko": "나는 도서관에서 공부해.",
+   "blank": "도서관에서"
+  },
+  {
+   "text": "학교에 가요.",
+   "en": "I go to school.",
+   "ko": "나는 학교에 가.",
+   "blank": "학교에"
+  },
+  {
+   "text": "집에서 쉬어요.",
+   "en": "I rest at home.",
+   "ko": "나는 집에서 쉬어.",
+   "blank": "집에서"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "배고프니까 밥 먹어요.",
+   "en": "Let's eat because we're hungry.",
+   "ko": "배가 고프니까 밥을 먹어요.",
+   "blank": "배고프니까"
+  },
+  {
+   "text": "늦었으니까 빨리 가요.",
+   "en": "Let's hurry because it's late.",
+   "ko": "늦었으니까 빨리 가요.",
+   "blank": "늦었으니까"
+  },
+  {
+   "text": "졸리니까 집에 갈래요.",
+   "en": "I'm sleepy, so shall we go home?",
+   "ko": "나는 졸려서 집에 가자고 해.",
+   "blank": "졸리니까"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "길이 막혀서 늦었어요.",
+   "en": "I was late because of traffic.",
+   "ko": "교통 체증 때문에 늦었어요.",
+   "blank": "막혀서"
+  },
+  {
+   "text": "배가 고파서 밥을 먹었어요.",
+   "en": "I ate because I was hungry.",
+   "ko": "배고파서 밥을 먹었어요.",
+   "blank": "고파서"
+  },
+  {
+   "text": "비가 와서 우산을 썼어요.",
+   "en": "I used an umbrella because it was raining.",
+   "ko": "비가 내려서 우산을 썼어요.",
+   "blank": "와서"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "배가 고픈데 뭐 먹을래요?",
+   "en": "I'm hungry, so what should we eat?",
+   "ko": "배가 고프니까 뭐 먹을까?",
+   "blank": "고픈데"
+  },
+  {
+   "text": "시간이 없는데 빨리 가야 해요.",
+   "en": "We don't have time, so we need to go quickly.",
+   "ko": "시간이 없으니까 빨리 가야 해.",
+   "blank": "없는데"
+  },
+  {
+   "text": "비가 오는데 우산 있어요?",
+   "en": "It's raining, do you have an umbrella?",
+   "ko": "비가 오니까 우산 있어?",
+   "blank": "오는데"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "비가 오면 우산 써요.",
+   "en": "If it rains, use an umbrella.",
+   "ko": "비가 오면 우산을 써요.",
+   "blank": "오면"
+  },
+  {
+   "text": "시간이 많으면 산책해요.",
+   "en": "If you have a lot of time, go for a walk.",
+   "ko": "시간이 많으면 산책해요.",
+   "blank": "많으면"
+  },
+  {
+   "text": "문 열면 시원해요.",
+   "en": "If you open the door, it is cool.",
+   "ko": "문을 열면 시원해요.",
+   "blank": "열면"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "제가 문을 열게요.",
+   "en": "I will open the door.",
+   "ko": "내가 문을 열 거야.",
+   "blank": "열게요."
+  },
+  {
+   "text": "제가 설명할게요.",
+   "en": "I will explain.",
+   "ko": "내가 설명할게.",
+   "blank": "설명할게요."
+  },
+  {
+   "text": "제가 먼저 갈게요.",
+   "en": "I will go first.",
+   "ko": "내가 먼저 갈게.",
+   "blank": "갈게요."
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "김치를 만들어 본 적이 있어요.",
+   "en": "I have made kimchi before.",
+   "ko": "나는 김치를 만든 경험이 있다.",
+   "blank": "만들어 본 적이 있어요."
+  },
+  {
+   "text": "한국 드라마를 본 적이 있어요.",
+   "en": "I have watched a Korean drama before.",
+   "ko": "나는 한국 드라마를 본 경험이 있다.",
+   "blank": "본 적이 있어요."
+  },
+  {
+   "text": "야생동물을 본 적이 있어요.",
+   "en": "I have seen a wild animal before.",
+   "ko": "나는 야생동물을 본 경험이 있다.",
+   "blank": "본 적이 있어요."
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "비가 오기 때문에 우산을 가져왔어요.",
+   "en": "I brought an umbrella because it is raining.",
+   "ko": "비가 와서 우산을 가져왔어요.",
+   "blank": "비가 오기 때문에"
+  },
+  {
+   "text": "길이 막히기 때문에 늦었어요.",
+   "en": "I am late because there is traffic.",
+   "ko": "길이 막혀서 늦었어요.",
+   "blank": "길이 막히기 때문에"
+  },
+  {
+   "text": "배가 아프기 때문에 집에 있어요.",
+   "en": "I am at home because I have a stomachache.",
+   "ko": "배가 아파서 집에 있어요.",
+   "blank": "배가 아프기 때문에"
+  }
+ ],
+ "g|3:7": [
+  {
+   "text": "창문 좀 닫아.",
+   "en": "Please close the window.",
+   "ko": "창문을 닫아 줘.",
+   "blank": "닫아."
+  },
+  {
+   "text": "빨리 와.",
+   "en": "Come quickly.",
+   "ko": "빨리 이리로 와.",
+   "blank": "와."
+  },
+  {
+   "text": "이거 먹어.",
+   "en": "Eat this.",
+   "ko": "이것을 먹어.",
+   "blank": "먹어."
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "사장님께서 먼저 오셨습니다.",
+   "en": "The boss arrived first.",
+   "ko": "사장님이 먼저 오셨어요.",
+   "blank": "사장님께서"
+  },
+  {
+   "text": "선생님께서 질문을 받으셨습니다.",
+   "en": "The teacher took questions.",
+   "ko": "선생님이 질문을 받으셨어요.",
+   "blank": "선생님께서"
+  },
+  {
+   "text": "고객님께서 계산을 마치셨습니다.",
+   "en": "The customer finished paying.",
+   "ko": "손님이 계산을 끝내셨어요.",
+   "blank": "고객님께서"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "지훈 씨가 도와 달래요.",
+   "en": "Jihoon wants you to help.",
+   "ko": "지훈 씨가 네가 도와주길 원해.",
+   "blank": "달래요."
+  },
+  {
+   "text": "선생님이 먼저 가시래요.",
+   "en": "The teacher says to go first.",
+   "ko": "선생님이 네가 먼저 가라고 하셨어.",
+   "blank": "가시래요."
+  },
+  {
+   "text": "제가 알기로는 내일 비 온대요.",
+   "en": "As far as I know, it will rain tomorrow.",
+   "ko": "내가 알기로는 내일 비가 올 거야.",
+   "blank": "알기로는"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "비가 갑자기 많이 오더라고요.",
+   "en": "I noticed it suddenly rained a lot.",
+   "ko": "갑자기 비가 많이 왔다는 걸 알았어요.",
+   "blank": "오더라고요."
+  },
+  {
+   "text": "친구가 직접 만든 케이크가 맛있더라고요.",
+   "en": "The cake my friend made was really tasty, I noticed.",
+   "ko": "친구가 직접 만든 케이크가 정말 맛있었어요.",
+   "blank": "맛있더라고요."
+  },
+  {
+   "text": "지하철이 생각보다 붐비더라고요.",
+   "en": "I noticed the subway was more crowded than I expected.",
+   "ko": "지하철이 생각보다 사람이 많았어요.",
+   "blank": "붐비더라고요."
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "지금 비 오고 있잖아요.",
+   "en": "It's raining right now, you know.",
+   "ko": "지금 비가 오고 있어요, 그거 알죠.",
+   "blank": "오고 있잖아요."
+  },
+  {
+   "text": "이거 정말 쉽잖아요.",
+   "en": "This is really easy, you know.",
+   "ko": "이것은 정말로 쉽다는 걸 알죠.",
+   "blank": "쉽잖아요."
+  },
+  {
+   "text": "오늘 일찍 오기로 했잖아요.",
+   "en": "You know we were supposed to come early today.",
+   "ko": "우리 오늘 일찍 오기로 약속했잖아.",
+   "blank": "오기로 했잖아요."
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "안에 들어가야 되거든요.",
+   "en": "I need to go inside (because I have a reason).",
+   "ko": "안에 들어가야 할 이유가 있어요.",
+   "blank": "들어가야 되거든요."
+  },
+  {
+   "text": "솔직히 말하면 아직 준비가 안 됐거든요.",
+   "en": "To be honest, I'm not ready yet (because there's a reason).",
+   "ko": "사실 아직 준비가 되어 있지 않아요.",
+   "blank": "솔직히 말하면"
+  },
+  {
+   "text": "그 부분은요, 제가 잘 몰랐거든요.",
+   "en": "About that part, I honestly didn't know (that's the reason).",
+   "ko": "그 부분에 대해서는 제가 정말 몰랐어요.",
+   "blank": "그 부분은요,"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "길을 잘못 들어서 집에 못 갈 뻔했어요.",
+   "en": "I almost couldn't go home because I took a wrong turn.",
+   "ko": "길을 잘못 들어서 집에 거의 못 갔다.",
+   "blank": "못 갈 뻔했어요."
+  },
+  {
+   "text": "젓가락을 떨어뜨릴 뻔했어요.",
+   "en": "I almost dropped my chopsticks.",
+   "ko": "젓가락을 거의 떨어뜨렸다.",
+   "blank": "떨어뜨릴 뻔했어요."
+  },
+  {
+   "text": "계단에서 넘어질 뻔했어요.",
+   "en": "I almost fell on the stairs.",
+   "ko": "계단에서 거의 넘어졌다.",
+   "blank": "넘어질 뻔했어요."
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "갑자기 비가 오는 바람에 옷이 다 젖었어요.",
+   "en": "Because it suddenly rained, my clothes got all wet.",
+   "ko": "갑자기 비가 와서 옷이 모두 젖었어요.",
+   "blank": "비가 오는 바람에"
+  },
+  {
+   "text": "컴퓨터가 고장 나는 바람에 숙제를 못 했어요.",
+   "en": "Because my computer broke unexpectedly, I couldn't do my homework.",
+   "ko": "컴퓨터가 고장 나서 숙제를 못 했어요.",
+   "blank": "고장 나는 바람에"
+  },
+  {
+   "text": "길이 막히는 바람에 약속에 늦었어요.",
+   "en": "Because of the unexpected traffic jam, I was late for my appointment.",
+   "ko": "길이 막혀서 약속에 늦었어요.",
+   "blank": "막히는 바람에"
+  }
+ ],
+ "g|4:7": [
+  {
+   "text": "비가 올 텐데 우산 챙겼어요?",
+   "en": "It's probably going to rain, did you bring an umbrella?",
+   "ko": "비가 올 것 같으니까 우산 챙겼어요?",
+   "blank": "올 텐데"
+  },
+  {
+   "text": "지금 가면 가게가 닫았을 텐데요.",
+   "en": "If we go now, the store is probably closed.",
+   "ko": "지금 가면 가게가 이미 닫았을 것 같아요.",
+   "blank": "닫았을 텐데요"
+  },
+  {
+   "text": "오늘은 좀 추울 텐데 겉옷 입으세요.",
+   "en": "It's probably cold today, so wear a jacket.",
+   "ko": "오늘은 좀 추울 것 같으니까 겉옷 입으세요.",
+   "blank": "추울 텐데"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "매일 운동을 하다 보니 체력이 좋아졌어요.",
+   "en": "As I kept exercising every day, my stamina improved.",
+   "ko": "매일 운동을 계속해서 체력이 더 좋아졌어요.",
+   "blank": "하다 보니"
+  },
+  {
+   "text": "처음엔 어려웠는데 계속 만들다 보니 이제는 쉬워졌어요.",
+   "en": "It was hard at first, but as I kept making it, it became easy.",
+   "ko": "처음에는 어려웠지만 계속 만들어서 이제는 쉬워졌어요.",
+   "blank": "만들다 보니"
+  },
+  {
+   "text": "매일 조금씩 읽다 보니 책 한 권을 다 읽었어요.",
+   "en": "As I kept reading a little every day, I finished a whole book.",
+   "ko": "매일 조금씩 읽으니까 책 한 권을 다 읽었어요.",
+   "blank": "읽다 보니"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "이렇게 늦게까지 일하면 야근하는 셈이네요.",
+   "en": "If you work this late, it amounts to working overtime.",
+   "ko": "이렇게 늦게까지 일하면 결국 야근하는 거예요.",
+   "blank": "야근하는 셈이네요"
+  },
+  {
+   "text": "오늘은 거의 하루 종일 집에 있었으니까 쉰 셈이네요.",
+   "en": "Since I was home almost all day, it amounts to having rested.",
+   "ko": "오늘은 거의 하루 종일 집에 있었으니까 결국 쉰 거예요.",
+   "blank": "쉰 셈이네요"
+  },
+  {
+   "text": "이 가격이면 거의 공짜로 받은 셈이에요.",
+   "en": "At this price, it amounts to getting it for free.",
+   "ko": "이 가격이면 사실상 공짜로 받은 거예요.",
+   "blank": "공짜로 받은 셈이에요"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "우산을 챙길 걸 그랬어요.",
+   "en": "I should have brought an umbrella.",
+   "ko": "우산을 가져올 걸 그랬어요.",
+   "blank": "챙길 걸 그랬어요."
+  },
+  {
+   "text": "조금 더 일찍 나올 걸 그랬어요.",
+   "en": "I should have left a bit earlier.",
+   "ko": "조금 더 빨리 나올 걸 그랬어요.",
+   "blank": "나올 걸 그랬어요."
+  },
+  {
+   "text": "진실을 말할 걸 그랬어요.",
+   "en": "I should have told the truth.",
+   "ko": "사실을 말할 걸 그랬어요.",
+   "blank": "말할 걸 그랬어요."
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "도와주기는 하는데 오늘은 좀 바빠요.",
+   "en": "I can help, but I'm a bit busy today.",
+   "ko": "도와줄 수는 있지만 오늘은 좀 바쁘다.",
+   "blank": "도와주기는 하는데"
+  },
+  {
+   "text": "운동하기는 하는데 자주 못 해요.",
+   "en": "I do exercise, but not often.",
+   "ko": "운동을 하기는 하지만 자주 하지 못한다.",
+   "blank": "운동하기는 하는데"
+  },
+  {
+   "text": "영화 보기는 하는데 혼자 보는 건 싫어요.",
+   "en": "I do watch movies, but I don't like watching alone.",
+   "ko": "영화를 보기는 하지만 혼자 보는 것은 싫다.",
+   "blank": "보기는 하는데"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "졸린 척하면서 집에 갔어요.",
+   "en": "I pretended to be sleepy and went home.",
+   "ko": "나는 피곤하지 않았지만 졸린 것처럼 행동하며 집에 갔어요.",
+   "blank": "졸린 척하면서"
+  },
+  {
+   "text": "모르는 척했지만 사실 다 알고 있었어요.",
+   "en": "I pretended not to know, but actually I knew everything.",
+   "ko": "나는 모르는 것처럼 행동했지만 사실은 모든 것을 알고 있었어요.",
+   "blank": "모르는 척했지만"
+  },
+  {
+   "text": "바쁜 척하면서 핸드폰을 봤어요.",
+   "en": "I pretended to be busy while looking at my phone.",
+   "ko": "나는 바쁜 것처럼 행동하면서 핸드폰을 봤어요.",
+   "blank": "바쁜 척하면서"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "이 집은 한 번 가볼 만해요.",
+   "en": "This place is worth visiting once.",
+   "ko": "이 집은 한 번 방문할 가치가 있어요.",
+   "blank": "가볼 만해요."
+  },
+  {
+   "text": "그 영화는 볼 만했어.",
+   "en": "That movie was worth watching.",
+   "ko": "그 영화는 볼 가치가 있었어.",
+   "blank": "볼 만했어."
+  },
+  {
+   "text": "이 케이크는 먹어볼 만해요.",
+   "en": "This cake is worth trying.",
+   "ko": "이 케이크는 시도해 볼 가치가 있어요.",
+   "blank": "먹어볼 만해요."
+  }
+ ],
+ "g|5:6": [
+  {
+   "text": "어제는 춥더니 오늘은 따뜻하네요.",
+   "en": "It was cold yesterday, but today it's warm.",
+   "ko": "어제는 추웠는데 오늘은 따뜻하다.",
+   "blank": "춥더니"
+  },
+  {
+   "text": "그 친구가 열심히 공부하더니 좋은 대학에 합격했어요.",
+   "en": "That friend studied hard, and as a result got into a good university.",
+   "ko": "그 친구가 열심히 공부해서 좋은 대학에 합격했다.",
+   "blank": "공부하더니"
+  },
+  {
+   "text": "아기가 울더니 금방 잠들었어요.",
+   "en": "The baby was crying, but soon fell asleep.",
+   "ko": "아기가 울었는데 금방 잠들었다.",
+   "blank": "울더니"
+  }
+ ],
+ "g|5:7": [
+  {
+   "text": "비 올까 봐 우산을 챙겼어요.",
+   "en": "I brought an umbrella in case it rains.",
+   "ko": "비가 올지도 몰라서 우산을 챙겼어요.",
+   "blank": "올까 봐"
+  },
+  {
+   "text": "시험에 늦을까 봐 일찍 일어났어요.",
+   "en": "I woke up early in case I might be late for the exam.",
+   "ko": "시험 시간에 늦을까 봐 일찍 일어났어요.",
+   "blank": "늦을까 봐"
+  },
+  {
+   "text": "친구가 심심할까 봐 같이 놀아줬어요.",
+   "en": "I played with my friend in case they were bored.",
+   "ko": "친구가 심심해할까 봐 같이 놀아줬어요.",
+   "blank": "심심할까 봐"
+  }
+ ]
+}

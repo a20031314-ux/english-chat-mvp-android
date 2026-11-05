@@ -270,7 +270,7 @@ export function NotebookSection({
     setTab(next);
     scrollToTabs();
   };
-  // 단어장 열기 신호(openNotes words — Logbank 어휘 칸 📖 추천·단계 화면 낱말 줄·?screen=vocab): 새 앱엔 노트 화면이 없어 Quizbank 어휘 탭으로(2026-11-02 변경 감시 major).
+  // 단어장 열기 신호(openNotes words — 단계 화면 낱말 줄·?screen=vocab): 새 앱엔 노트 화면이 없어 Quizbank 어휘 탭으로(2026-11-02 변경 감시 major).
   useEffect(
     () =>
       onAppIntent("openNotes", () => {

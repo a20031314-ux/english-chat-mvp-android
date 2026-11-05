@@ -212,6 +212,31 @@ export function cellName(ui: UICopy, id: string, grammarName: (stage: number, in
   return id;
 }
 
+/** 칸 id의 앞부분(stage·pos·band…) — 목록 탭과 같다. */
+export function tabOf(id: string): string {
+  const cut = id.indexOf(":");
+  return cut < 0 ? id : id.slice(0, cut);
+}
+
+/**
+ * 섹터 목록에 보여줄 칸. 단계·듣기 띠는 1→5. 나머지는 부족한 것 전부, 아직 모름은 네 개까지.
+ * 맞음·강함과 빈 분류 전체는 넣지 않는다.
+ */
+export function planCells(cells: readonly FillCell[], tab: string): FillCell[] {
+  const list = cells.filter((cell) => tabOf(cell.id) === tab);
+  if (tab === "stage" || tab === "band") return [...list].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  return [...list.filter((cell) => cell.state === "weak"), ...list.filter((cell) => cell.state === "unknown").slice(0, 4)];
+}
+
+/** 그 칸이 부족한 이유 한 줄. 셈 칸(틀린 꼴·막힌 까닭)은 이름 자체가 이유라 예상 차이를 붙이지 않는다. */
+export function lackOf(ui: UICopy, cell: FillCell): string {
+  const counted = tabOf(cell.id) === "miss" || tabOf(cell.id) === "why" || tabOf(cell.id) === "lead" || tabOf(cell.id) === "part";
+  if (cell.state === "unknown") return ui.fillUnknown;
+  if (cell.state === "weak" && !counted && cell.gap > 0) return ui.fillGap.replace("{n}", String(Math.round(cell.gap * 100)));
+  if (cell.state === "weak") return ui.fillWeak;
+  return "";
+}
+
 export function AxisDetail({
   ui,
   axis,
@@ -230,11 +255,7 @@ export function AxisDetail({
 }) {
   const groups = cellGroups(ui, axis);
   const [tab, setTab] = useState<string>(() => groups.find((group) => fill.cells.some((cell) => group.match(cell) && cell.state === "weak"))?.id ?? groups[0]!.id);
-  const group = groups.find((one) => one.id === tab);
-  const ordered = (list: FillCell[]) =>
-    // 단계 칸은 1 → 5 차례대로(부족·아직 모름 먼저가 아니라).
-    group && (group.id === "stage" || group.id === "band") ? [...list].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })) : list;
-  const cells = group ? ordered(fill.cells.filter(group.match)) : [];
+  const cells = planCells(fill.cells, tab);
   const parts = axis === "talk" ? fill.cells.filter((cell) => cell.id.startsWith("part:")) : [];
   const bar = (value: number, weak: boolean) => (
     <span className="relative h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-white/10">
@@ -284,22 +305,26 @@ export function AxisDetail({
         records
       ) : cells.length ? (
         <ol data-skill-cells className="flex flex-col gap-1">
-          {cells.map((cell) => {
+          {cells.map((cell, index) => {
             const weak = cell.state === "weak";
             const counted = cell.id.startsWith("miss:") || cell.id.startsWith("why:") || cell.id.startsWith("lead:") || (axis === "talk" && cell.id.startsWith("fn:"));
-            // 단계 칸 값은 채운 몫(어림 포함)이라 답이 적어도 % 로.
             const staged = cell.id.startsWith("stage:") || cell.id.startsWith("band:");
+            const lack = lackOf(ui, cell);
             return (
               <li key={cell.id}>
                 <button
                   type="button"
                   data-skill-cell={cell.id}
                   data-skill-state={cell.state}
+                  data-skill-order={index + 1}
                   onClick={() => onCell(cell)}
                   className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
                 >
-                  <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${weak ? "text-warn" : "text-slate-500"}`}>{weak ? "▼" : cell.state === "unknown" && !staged ? "?" : cell.state === "strong" ? "▲" : "·"}</span>
-                  <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{cellName(ui, cell.id, grammarName)}</span>
+                  <span className={`w-4 shrink-0 text-center text-caption tabular-nums ${weak ? "text-warn" : "text-slate-400"}`}>{index + 1}</span>
+                  <span className="flex min-w-0 flex-1 flex-col">
+                    <span dir="auto" className="truncate text-note text-ink">{cellName(ui, cell.id, grammarName)}</span>
+                    {lack ? <span className="truncate text-meta text-slate-400">{lack}</span> : null}
+                  </span>
                   {counted ? null : bar(cell.value, weak)}
                   <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">{counted ? cell.n : cell.state === "unknown" && !staged ? "?" : `${Math.round(cell.value * 100)}%`}</span>
                 </button>
@@ -316,40 +341,56 @@ export function AxisDetail({
 
 /* ───────── 3층: 세부 칸 하나 ───────── */
 
+export type CellStep = { key: string; label: string };
 export type CellPlan = {
-  short: { key: string; label: string }[];
-  study: { key: string; label: string }[];
+  /** 이 칸이 섹터 목록에서 몇 번째인지. */
+  order: number;
+  /** 부족한 점 한 줄. */
+  lack: string;
+  /** 추천 이유 한 줄. 틀린 기록이 없으면 비운다. */
+  why: string;
+  /** 틀린 것 순서. 안 푼 표현은 넣지 않는다. */
+  steps: CellStep[];
   recommend: { icon: string; label: string; go: () => void } | null;
 };
 
-export function CellDetail({ ui, cell, plan, onKey }: { ui: UICopy; cell: FillCell; plan: CellPlan; onKey: (key: string) => void }) {
-  const list = (title: string, rows: { key: string; label: string }[], tone: string) =>
-    rows.length ? (
-      <section className="flex flex-col gap-1">
-        <h3 className="text-meta font-semibold text-slate-400">{title}</h3>
-        <ul className="flex flex-wrap gap-1.5">
-          {rows.map((row) => (
-            <li key={row.key}>
-              <button type="button" data-skill-key={row.key} onClick={() => onKey(row.key)} dir="auto" className={`rounded-full border px-3 py-1 text-caption hover:bg-white/5 ${tone}`}>
-                {row.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ) : null;
+export function CellDetail({ ui, plan, onKey }: { ui: UICopy; plan: CellPlan; onKey: (key: string) => void }) {
   return (
-    <div data-skill-cell-detail={cell.id} className="flex flex-col gap-4">
-      <p className="flex items-baseline gap-3 text-note tabular-nums text-slate-300">
-        <span className={cell.state === "weak" ? "text-warn" : "text-slate-400"}>{cell.state === "weak" ? `▼ ${ui.fillWeak}` : cell.state === "unknown" ? `? ${ui.fillUnknown}` : ""}</span>
-        {cell.n ? <span>{`${cell.n}`}</span> : null}
-      </p>
-      {list(ui.fillShort, plan.short, "border-warn/50 text-warn")}
-      {list(ui.fillToStudy, plan.study, "border-line text-ink")}
+    <div data-skill-cell-detail className="flex flex-col gap-4">
+      <section className="flex flex-col gap-1">
+        <h3 className="text-meta font-semibold text-slate-400">{ui.fillShort}</h3>
+        <p className="text-note text-ink">{plan.lack || "—"}</p>
+      </section>
+      {plan.steps.length ? (
+        <section className="flex flex-col gap-1">
+          <h3 className="text-meta font-semibold text-slate-400">{ui.fillOrder}</h3>
+          <ol className="flex flex-col gap-1">
+            {plan.steps.map((step, index) => (
+              <li key={step.key}>
+                <button
+                  type="button"
+                  data-skill-key={step.key}
+                  onClick={() => onKey(step.key)}
+                  className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
+                >
+                  <span className="w-4 shrink-0 text-center text-caption tabular-nums text-slate-400">{index + 1}</span>
+                  <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{step.label}</span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : null}
+      {plan.why ? (
+        <section className="flex flex-col gap-1">
+          <h3 className="text-meta font-semibold text-slate-400">{ui.fillWhy}</h3>
+          <p className="text-note text-ink">{plan.why}</p>
+        </section>
+      ) : null}
       {plan.recommend ? (
         <button type="button" data-skill-recommend onClick={plan.recommend.go} className="tb-btn flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-note font-semibold">
           <span aria-hidden>{plan.recommend.icon}</span>
-          <span>{`${ui.fillRecommend} · ${plan.recommend.label}`}</span>
+          <span>{plan.recommend.label}</span>
         </button>
       ) : null}
     </div>

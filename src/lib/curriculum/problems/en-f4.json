@@ -1,0 +1,274 @@
+{
+  "en-4-04": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Given ___, I think ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "조용한 걸 보니, 그가 화난 것 같아.",
+    "answer": "Given the silence, I think he's upset.",
+    "why": "단서를 바탕으로 추론할 때는 Given the silence, I think he's upset처럼 Given 뒤에 the silence를 쓰고 I think 뒤에 he's upset을 써요.",
+    "options": [
+      "Given silence, I think he's upset.",
+      "Given the silence, I think he upset.",
+      "Given the silence, I think he's upset.",
+      "Given the silence, I think upset he's."
+    ],
+    "line": "Given the silence, I think he's upset."
+  },
+  "en-4-05": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Back then, ___; but now, ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "예전엔 마을이 조용했는데, 지금은 항상 북적거려.",
+    "answer": "Back then, the town was quiet; but now, it's always busy.",
+    "why": "과거와 현재를 견줄 때는 Back then, the town was quiet; but now, it's always busy처럼 예전에는 was를 쓰고 town 앞에 the를 붙여요.",
+    "options": [
+      "Back then, the town was quiet; but now, it's always busy.",
+      "Back then, town was quiet; but now, it's always busy.",
+      "Back then, the town is quiet; but now, it's always busy.",
+      "Back then, the town quiet was; but now, it's always busy."
+    ],
+    "line": "Back then, the town was quiet; but now, it's always busy."
+  },
+  "en-4-06": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Some people say ___, but I believe ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "일부는 결말이 혼란스럽다고 하지만, 나는 말이 된다고 생각해.",
+    "answer": "Some people say the ending was confusing, but I believe it made sense.",
+    "why": "다른 의견을 받고 내 생각을 말할 때는 Some people say the ending was confusing, but I believe it made sense처럼 ending 앞에 the를 쓰고 believe 뒤에 it made sense를 써요.",
+    "options": [
+      "Some people say ending was confusing, but I believe it made sense.",
+      "Some people say the ending was confusing, but I believe it make sense.",
+      "Some people say the ending confusing was, but I believe it made sense.",
+      "Some people say the ending was confusing, but I believe it made sense."
+    ],
+    "line": "Some people say the ending was confusing, but I believe it made sense."
+  },
+  "en-4-07": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It seems like ___, so maybe ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "팀이 피곤해 보여, 아마 쉬는 게 좋을 것 같아.",
+    "answer": "It seems like the team is tired, so maybe we should take a break.",
+    "why": "상황을 보고 추측할 때는 It seems like the team is tired, so maybe we should take a break처럼 team 앞에 the를 쓰고 should 뒤에 take를 쓰며 break 앞에 a를 붙여요.",
+    "options": [
+      "It seems like team is tired, so maybe we should take a break.",
+      "It seems like the team is tired, so maybe we should taking a break.",
+      "It seems like the team is tired, so maybe we should take a break.",
+      "It seems like the team tired is, so maybe we should take a break."
+    ],
+    "line": "It seems like the team is tired, so maybe we should take a break."
+  },
+  "en-4-08": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "While I agree that ___, I still think ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "줄거리가 느렸다는 점에는 동의하지만, 인물은 흥미로웠다고 생각해.",
+    "answer": "While I agree that the plot was slow, I still think the characters were interesting.",
+    "why": "일부만 동의할 때는 While I agree that the plot was slow, I still think the characters were interesting처럼 plot 앞에 the를 쓰고 characters에는 were를 써요.",
+    "options": [
+      "While I agree that the plot was slow, I still think the characters were interesting.",
+      "While I agree that plot was slow, I still think the characters were interesting.",
+      "While I agree that the plot was slow, I still think the characters was interesting.",
+      "While I agree that the plot slow was, I still think the characters were interesting."
+    ],
+    "line": "While I agree that the plot was slow, I still think the characters were interesting."
+  },
+  "en-4-09": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "If I had ___, things might have ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "그 일을 받았더라면, 인생이 달라졌을 수 있어.",
+    "answer": "If I had taken the job, things might have been different.",
+    "why": "하지 않은 과거를 가정할 때는 If I had taken the job, things might have been different처럼 had와 might have 뒤에 과거분사를 쓰고 job 앞에 the를 붙여요.",
+    "options": [
+      "If I had take the job, things might have been different.",
+      "If I had taken job, things might have been different.",
+      "If I had taken the job, things might have different been.",
+      "If I had taken the job, things might have been different."
+    ],
+    "line": "If I had taken the job, things might have been different."
+  },
+  "en-4-10": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I see your point, but maybe we could ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "네 말도 이해해, 하지만 마감일을 일주일 연장할 수도 있을 것 같아.",
+    "answer": "I see your point, but maybe we could extend the deadline by a week.",
+    "why": "공손하게 대안을 낼 때는 I see your point, but maybe we could extend the deadline by a week처럼 could 뒤에 extend를 쓰고 deadline 앞에 the를, week 앞에 a를 붙여요.",
+    "options": [
+      "I see your point, but maybe we could extend deadline by a week.",
+      "I see your point, but maybe we could extending the deadline by a week.",
+      "I see your point, but maybe we could the deadline extend by a week.",
+      "I see your point, but maybe we could extend the deadline by a week."
+    ],
+    "line": "I see your point, but maybe we could extend the deadline by a week."
+  },
+  "en-5-01": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "One thing you might consider is ___, but overall I think ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "예시를 더 추가하는 것도 고려해 볼 수 있겠지만, 전반적으로 보고서는 매우 명확한 것 같아요.",
+    "answer": "One thing you might consider is adding more examples, but overall I think the report is very clear.",
+    "why": "부드럽게 고칠 점을 말할 때는 One thing you might consider is adding more examples, but overall I think the report is very clear처럼 is 뒤에 adding을 쓰고 report 앞에 the를 붙여요.",
+    "options": [
+      "One thing you might consider is adding more examples, but overall I think the report is very clear.",
+      "One thing you might consider is adding more examples, but overall I think report is very clear.",
+      "One thing you might consider is add more examples, but overall I think the report is very clear.",
+      "One thing you might consider is more examples adding, but overall I think the report is very clear."
+    ],
+    "line": "One thing you might consider is adding more examples, but overall I think the report is very clear."
+  },
+  "en-5-02": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It could just be me, but I find ___ a bit ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "제가 느끼기엔, 결말이 조금 갑작스러운 것 같아요.",
+    "answer": "It could just be me, but I find the ending a bit abrupt.",
+    "why": "겸손하게 느낌을 말할 때는 It could just be me, but I find the ending a bit abrupt처럼 find를 쓰고 ending 앞에 the를 붙이며 a bit 뒤에 형용사 abrupt를 써요.",
+    "options": [
+      "It could just be me, but I find ending a bit abrupt.",
+      "It could just be me, but I finding the ending a bit abrupt.",
+      "It could just be me, but I find a bit abrupt the ending.",
+      "It could just be me, but I find the ending a bit abrupt."
+    ],
+    "line": "It could just be me, but I find the ending a bit abrupt."
+  },
+  "en-5-03": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "To be fair, ___, but I still believe ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "공평하게 보면, 제안이 효율적이긴 하지만, 여전히 더 논의가 필요하다고 믿어요.",
+    "answer": "To be fair, your proposal is efficient, but I still believe we need more discussion.",
+    "why": "장점을 인정하고 입장을 지킬 때는 To be fair, your proposal is efficient, but I still believe we need more discussion처럼 proposal 앞에 your를 쓰고 is를 써요.",
+    "options": [
+      "To be fair, proposal is efficient, but I still believe we need more discussion.",
+      "To be fair, your proposal are efficient, but I still believe we need more discussion.",
+      "To be fair, your proposal efficient is, but I still believe we need more discussion.",
+      "To be fair, your proposal is efficient, but I still believe we need more discussion."
+    ],
+    "line": "To be fair, your proposal is efficient, but I still believe we need more discussion."
+  },
+  "en-5-04": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "So there I was, ___, when suddenly ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "그래서 저는 커피를 기다리고 있었는데, 갑자기 화재경보가 울렸어요.",
+    "answer": "So there I was, waiting for my coffee, when suddenly the fire alarm went off.",
+    "why": "이야기를 극적으로 이어 갈 때는 So there I was, waiting for my coffee, when suddenly the fire alarm went off처럼 하던 일은 waiting으로, 갑작스런 일은 went로 쓰고 alarm 앞에 the를 붙여요.",
+    "options": [
+      "So there I was, waiting for my coffee, when suddenly fire alarm went off.",
+      "So there I was, waited for my coffee, when suddenly the fire alarm went off.",
+      "So there I was, waiting for my coffee, when suddenly the fire alarm went off.",
+      "So there I was, for my coffee waiting, when suddenly the fire alarm went off."
+    ],
+    "line": "So there I was, waiting for my coffee, when suddenly the fire alarm went off."
+  },
+  "en-5-05": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "If I'm reading you right, you're saying ___, but is it possible that ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "제 해석이 맞다면, 더 긴 임대를 원하시는 거죠? 하지만 혹시 임대료가 너무 높아서 그런 건가요?",
+    "answer": "If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent is too high?",
+    "why": "상대 말을 확인하고 되물을 때는 If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent is too high?처럼 lease 앞에 a를, rent 앞에 the를 붙이고 is를 써요.",
+    "options": [
+      "If I'm reading you right, you're saying you'd like longer lease, but is it possible that the rent is too high?",
+      "If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent are too high?",
+      "If I'm reading you right, you're saying a longer lease you'd like, but is it possible that the rent is too high?",
+      "If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent is too high?"
+    ],
+    "line": "If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent is too high?"
+  },
+  "en-5-06": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "What I took away from ___ is ___, but I can see how others might ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "제가 기사에서 얻은 점은 균형이 중요하다는 것이지만, 다른 분들은 생산성에 더 주목할 수도 있겠네요.",
+    "answer": "What I took away from the article is that balance is key, but I can see how others might focus on productivity.",
+    "why": "내 해석을 말하고 다른 해석도 인정할 때는 What I took away from the article is that balance is key, but I can see how others might focus on productivity처럼 article 앞에 the를 쓰고 might 뒤에 focus를 써요.",
+    "options": [
+      "What I took away from article is that balance is key, but I can see how others might focus on productivity.",
+      "What I took away from the article is that balance is key, but I can see how others might focusing on productivity.",
+      "What I took away from the article is that balance key is, but I can see how others might focus on productivity.",
+      "What I took away from the article is that balance is key, but I can see how others might focus on productivity."
+    ],
+    "line": "What I took away from the article is that balance is key, but I can see how others might focus on productivity."
+  },
+  "en-5-07": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "You might already be aware, but ___, and if not, ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "이미 알고 계실 수도 있지만, 마감이 다음 주예요. 혹시 모르실까 봐 말씀드려요.",
+    "answer": "You might already be aware, but the deadline is next week, and if not, I just wanted to remind you.",
+    "why": "상대를 존중하며 알려 줄 때는 You might already be aware, but the deadline is next week, and if not, I just wanted to remind you처럼 deadline 앞에 the를 쓰고 to 뒤에 remind를 써요.",
+    "options": [
+      "You might already be aware, but deadline is next week, and if not, I just wanted to remind you.",
+      "You might already be aware, but the deadline is next week, and if not, I just wanted to reminding you.",
+      "You might already be aware, but the deadline next week is, and if not, I just wanted to remind you.",
+      "You might already be aware, but the deadline is next week, and if not, I just wanted to remind you."
+    ],
+    "line": "You might already be aware, but the deadline is next week, and if not, I just wanted to remind you."
+  },
+  "en-5-08": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I'm not saying ___, but I do feel ___",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "당신의 접근 방식이 틀렸다는 건 아니지만, 좀 더 명확한 구조가 도움이 될 수 있다고 생각해요.",
+    "answer": "I'm not saying your approach is wrong, but I do feel a clearer structure could help.",
+    "why": "단정하지 않고 생각을 말할 때는 I'm not saying your approach is wrong, but I do feel a clearer structure could help처럼 structure 앞에 a를 쓰고 could 뒤에 help를 써요.",
+    "options": [
+      "I'm not saying your approach is wrong, but I do feel clearer structure could help.",
+      "I'm not saying your approach is wrong, but I do feel a clearer structure could helping.",
+      "I'm not saying your approach wrong is, but I do feel a clearer structure could help.",
+      "I'm not saying your approach is wrong, but I do feel a clearer structure could help."
+    ],
+    "line": "I'm not saying your approach is wrong, but I do feel a clearer structure could help."
+  },
+  "en-5-09": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I completely see where you're coming from about ___, but what about ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "비용에 대해 말씀하신 점 충분히 이해하지만, 장기적인 가치는 어떻게 생각하세요?",
+    "answer": "I completely see where you're coming from about cost, but what about long-term value?",
+    "why": "상대 의견을 인정하고 다른 점을 물을 때는 I completely see where you're coming from about cost, but what about long-term value?처럼 you're coming을 쓰고 long-term value 순서로 써요.",
+    "options": [
+      "I completely see where you're coming from about cost, but what about long-term value?",
+      "I completely see where you're coming from about a cost, but what about long-term value?",
+      "I completely see where you coming from about cost, but what about long-term value?",
+      "I completely see where you're coming from about cost, but what about value long-term?"
+    ],
+    "line": "I completely see where you're coming from about cost, but what about long-term value?"
+  },
+  "en-5-10": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "One thing I appreciate about ___ is ___, though I do see some areas for improvement.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "보고서의 명확성이 정말 좋다고 생각해요. 하지만 개선할 부분도 보여요.",
+    "answer": "One thing I appreciate about your report is its clarity, though I do see some areas for improvement.",
+    "why": "장점을 먼저 인정할 때는 One thing I appreciate about your report is its clarity, though I do see some areas for improvement처럼 appreciate를 쓰고 report 앞에 your를, clarity 앞에 its를 붙여요.",
+    "options": [
+      "One thing I appreciate about report is its clarity, though I do see some areas for improvement.",
+      "One thing I appreciate about your report is its clarity, though I do see some areas for improvement.",
+      "One thing I appreciating about your report is its clarity, though I do see some areas for improvement.",
+      "One thing I appreciate about your report is clarity its, though I do see some areas for improvement."
+    ],
+    "line": "One thing I appreciate about your report is its clarity, though I do see some areas for improvement."
+  }
+}

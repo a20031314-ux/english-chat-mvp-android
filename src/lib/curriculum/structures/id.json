@@ -1,0 +1,1633 @@
+{
+ "1": [
+  {
+   "id": "id-1-01",
+   "stage": 1,
+   "pattern": "Selamat pagi, nama saya ___.",
+   "meaningKo": "아침 인사와 자기소개하기",
+   "meaningEn": "Greet in the morning and introduce yourself",
+   "examples": [
+    {
+     "text": "Selamat pagi, nama saya Rina.",
+     "ko": "좋은 아침이에요, 제 이름은 리나예요.",
+     "en": "Good morning, my name is Rina."
+    },
+    {
+     "text": "Selamat pagi, nama saya Budi.",
+     "ko": "좋은 아침입니다, 제 이름은 부디입니다.",
+     "en": "Good morning, my name is Budi."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "자기 소개",
+     "noteKo": "___ 자리에 본인의 이름이 들어감",
+     "nameEn": "Self-introduction",
+     "noteEn": "The blank is for your name"
+    }
+   ],
+   "related": [
+    "Selamat sore, nama saya ___."
+   ],
+   "quiz": {
+    "prompt": "Selamat pagi, nama saya ___.",
+    "answer": "Andi"
+   }
+  },
+  {
+   "id": "id-1-02",
+   "stage": 1,
+   "pattern": "Saya dari ___.",
+   "meaningKo": "출신지 말하기",
+   "meaningEn": "Say where you're from",
+   "examples": [
+    {
+     "text": "Saya dari Korea.",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I'm from Korea."
+    },
+    {
+     "text": "Saya dari Jakarta.",
+     "ko": "저는 자카르타에서 왔어요.",
+     "en": "I'm from Jakarta."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지",
+     "noteKo": "___ 자리에 출신 도시나 나라가 들어감",
+     "nameEn": "Origin",
+     "noteEn": "The blank is for your city or country"
+    }
+   ],
+   "related": [
+    "Saya tinggal di ___."
+   ],
+   "quiz": {
+    "prompt": "Saya dari ___.",
+    "answer": "Bandung"
+   }
+  },
+  {
+   "id": "id-1-03",
+   "stage": 1,
+   "pattern": "Saya seorang ___.",
+   "meaningKo": "직업 말하기",
+   "meaningEn": "Say your occupation",
+   "examples": [
+    {
+     "text": "Saya seorang mahasiswa.",
+     "ko": "저는 대학생이에요.",
+     "en": "I'm a university student."
+    },
+    {
+     "text": "Saya seorang guru.",
+     "ko": "저는 선생님이에요.",
+     "en": "I'm a teacher."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업",
+     "noteKo": "___ 자리에 직업이 들어감",
+     "nameEn": "Occupation",
+     "noteEn": "The blank is for your job"
+    }
+   ],
+   "related": [
+    "Saya bekerja di ___."
+   ],
+   "quiz": {
+    "prompt": "Saya seorang ___.",
+    "answer": "dokter"
+   }
+  },
+  {
+   "id": "id-1-04",
+   "stage": 1,
+   "pattern": "Berapa harga ___ ini?",
+   "meaningKo": "가격 물어보기",
+   "meaningEn": "Ask the price of something",
+   "examples": [
+    {
+     "text": "Berapa harga apel ini?",
+     "ko": "이 사과 얼마예요?",
+     "en": "How much is this apple?"
+    },
+    {
+     "text": "Berapa harga pisang ini?",
+     "ko": "이 바나나 얼마예요?",
+     "en": "How much is this banana?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "물건 이름",
+     "noteKo": "___ 자리에 물건 이름이 들어감",
+     "nameEn": "Item name",
+     "noteEn": "The blank is for the item's name"
+    }
+   ],
+   "related": [
+    "Saya mau beli ___."
+   ],
+   "quiz": {
+    "prompt": "Berapa harga ___ ini?",
+    "answer": "jeruk"
+   }
+  },
+  {
+   "id": "id-1-05",
+   "stage": 1,
+   "pattern": "Saya ambil ___.",
+   "meaningKo": "물건 고르기",
+   "meaningEn": "Say you will take something",
+   "examples": [
+    {
+     "text": "Saya ambil dua.",
+     "ko": "두 개 살게요.",
+     "en": "I'll take two."
+    },
+    {
+     "text": "Saya ambil satu.",
+     "ko": "하나 살게요.",
+     "en": "I'll take one."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "수량",
+     "noteKo": "___ 자리에 수량이 들어감",
+     "nameEn": "Quantity",
+     "noteEn": "The blank is for the quantity"
+    }
+   ],
+   "related": [
+    "Saya mau ___ ini."
+   ],
+   "quiz": {
+    "prompt": "Saya ambil ___.",
+    "answer": "tiga"
+   }
+  },
+  {
+   "id": "id-1-06",
+   "stage": 1,
+   "pattern": "Di mana ___?",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Ask where a place is",
+   "examples": [
+    {
+     "text": "Di mana toilet?",
+     "ko": "화장실 어디에 있어요?",
+     "en": "Where is the toilet?"
+    },
+    {
+     "text": "Di mana halte bus?",
+     "ko": "버스 정류장 어디예요?",
+     "en": "Where is the bus stop?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 이름",
+     "noteKo": "___ 자리에 찾는 장소가 들어감",
+     "nameEn": "Place name",
+     "noteEn": "The blank is for the place name"
+    }
+   ],
+   "related": [
+    "Bagaimana menuju ke ___?"
+   ],
+   "quiz": {
+    "prompt": "Di mana ___?",
+    "answer": "restoran"
+   }
+  },
+  {
+   "id": "id-1-07",
+   "stage": 1,
+   "pattern": "Tolong bicara ___, ya.",
+   "meaningKo": "말을 천천히 해달라고 부탁하기",
+   "meaningEn": "Ask someone to speak more slowly",
+   "examples": [
+    {
+     "text": "Tolong bicara pelan-pelan, ya.",
+     "ko": "천천히 말해 주세요.",
+     "en": "Please speak slowly."
+    },
+    {
+     "text": "Tolong bicara lebih pelan, ya.",
+     "ko": "더 천천히 말해 주세요.",
+     "en": "Please speak more slowly."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "속도 표현",
+     "noteKo": "___ 자리에 'pelan-pelan' 또는 'lebih pelan' 등이 들어감",
+     "nameEn": "Speed expression",
+     "noteEn": "The blank is for 'slowly' or 'more slowly'"
+    }
+   ],
+   "related": [
+    "Bisa bicara ___?"
+   ],
+   "quiz": {
+    "prompt": "Tolong bicara ___, ya.",
+    "answer": "pelan-pelan"
+   }
+  },
+  {
+   "id": "id-1-08",
+   "stage": 1,
+   "pattern": "Halo, saya ___.",
+   "meaningKo": "자기소개를 하기",
+   "meaningEn": "Introducing yourself",
+   "examples": [
+    {
+     "text": "Halo, saya Andi.",
+     "ko": "안녕하세요, 저는 안디입니다.",
+     "en": "Hello, I am Andi."
+    },
+    {
+     "text": "Halo, saya Maya.",
+     "ko": "안녕하세요, 저는 마야입니다.",
+     "en": "Hello, I am Maya."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주어 자리에 이름 넣기",
+     "noteKo": "___에 자기 이름을 넣습니다.",
+     "nameEn": "Subject: name",
+     "noteEn": "Fill ___ with your name."
+    }
+   ],
+   "related": [
+    "Saya ___.",
+    "Nama saya ___."
+   ],
+   "quiz": {
+    "prompt": "Halo, saya ___.",
+    "answer": "Andi"
+   }
+  },
+  {
+   "id": "id-1-09",
+   "stage": 1,
+   "pattern": "Selamat malam, saya ___.",
+   "meaningKo": "저녁 인사와 자기소개",
+   "meaningEn": "Greet in the evening and introduce yourself",
+   "examples": [
+    {
+     "text": "Selamat malam, saya Dita.",
+     "ko": "좋은 저녁이에요, 저는 디타입니다.",
+     "en": "Good evening, I am Dita."
+    },
+    {
+     "text": "Selamat malam, saya Budi.",
+     "ko": "좋은 저녁이에요, 저는 부디입니다.",
+     "en": "Good evening, I am Budi."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 넣기",
+     "noteKo": "___에 자기 이름을 넣습니다.",
+     "nameEn": "Name slot",
+     "noteEn": "Put your name in ___."
+    }
+   ],
+   "related": [
+    "Halo, saya ___."
+   ],
+   "quiz": {
+    "prompt": "Selamat malam, saya ___.",
+    "answer": "Dita"
+   }
+  },
+  {
+   "id": "id-1-10",
+   "stage": 1,
+   "pattern": "Saya tinggal di ___.",
+   "meaningKo": "사는 곳 말하기",
+   "meaningEn": "Saying where you live",
+   "examples": [
+    {
+     "text": "Saya tinggal di Jakarta.",
+     "ko": "저는 자카르타에 살아요.",
+     "en": "I live in Jakarta."
+    },
+    {
+     "text": "Saya tinggal di Bandung.",
+     "ko": "저는 반둥에 살아요.",
+     "en": "I live in Bandung."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소명 넣기",
+     "noteKo": "___에 도시나 지역을 넣습니다.",
+     "nameEn": "Place slot",
+     "noteEn": "Put a city or area in ___."
+    }
+   ],
+   "related": [
+    "Saya dari ___."
+   ],
+   "quiz": {
+    "prompt": "Saya tinggal di ___.",
+    "answer": "Jakarta"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "id-2-01",
+   "stage": 2,
+   "pattern": "Kemarin saya ___",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Say what you did yesterday",
+   "examples": [
+    {
+     "text": "Kemarin saya belajar di rumah",
+     "ko": "어제 집에서 공부했어요",
+     "en": "Yesterday I studied at home"
+    },
+    {
+     "text": "Kemarin saya makan bakso",
+     "ko": "어제 바소를 먹었어요",
+     "en": "Yesterday I ate bakso"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___에 과거에 한 일을 넣어요",
+     "nameEn": "Past tense",
+     "noteEn": "___ is what you did in the past"
+    }
+   ],
+   "related": [
+    "Akhir pekan ini saya ___"
+   ],
+   "quiz": {
+    "prompt": "Kemarin saya ___",
+    "answer": "belanja di pasar"
+   }
+  },
+  {
+   "id": "id-2-02",
+   "stage": 2,
+   "pattern": "Akhir pekan ini saya ___",
+   "meaningKo": "이번 주말에 할 일을 말하기",
+   "meaningEn": "Say what you will do this weekend",
+   "examples": [
+    {
+     "text": "Akhir pekan ini saya pergi ke pantai",
+     "ko": "이번 주말에 해변에 갈 거예요",
+     "en": "This weekend I will go to the beach"
+    },
+    {
+     "text": "Akhir pekan ini saya bertemu teman",
+     "ko": "이번 주말에 친구를 만날 거예요",
+     "en": "This weekend I will meet a friend"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 시제",
+     "noteKo": "___에 미래에 할 일을 넣어요",
+     "nameEn": "Future tense",
+     "noteEn": "___ is what you will do"
+    }
+   ],
+   "related": [
+    "Kemarin saya ___"
+   ],
+   "quiz": {
+    "prompt": "Akhir pekan ini saya ___",
+    "answer": "nonton film"
+   }
+  },
+  {
+   "id": "id-2-03",
+   "stage": 2,
+   "pattern": "Mau ke ___ hari apa?",
+   "meaningKo": "만날 날짜 정하기",
+   "meaningEn": "Ask which day to go somewhere",
+   "examples": [
+    {
+     "text": "Mau ke kafe hari apa?",
+     "ko": "카페에 언제 갈까?",
+     "en": "What day do you want to go to the cafe?"
+    },
+    {
+     "text": "Mau ke taman hari apa?",
+     "ko": "공원에 언제 갈까?",
+     "en": "What day do you want to go to the park?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___에 장소를 넣어요",
+     "nameEn": "Question form",
+     "noteEn": "___ is the place you suggest"
+    }
+   ],
+   "related": [
+    "Jam berapa kita ketemu di ___?"
+   ],
+   "quiz": {
+    "prompt": "Mau ke ___ hari apa?",
+    "answer": "bioskop"
+   }
+  },
+  {
+   "id": "id-2-04",
+   "stage": 2,
+   "pattern": "Jam berapa kita ketemu di ___?",
+   "meaningKo": "만날 시간과 장소 정하기",
+   "meaningEn": "Agree on a time and place to meet",
+   "examples": [
+    {
+     "text": "Jam berapa kita ketemu di restoran?",
+     "ko": "식당에서 몇 시에 만날까?",
+     "en": "What time should we meet at the restaurant?"
+    },
+    {
+     "text": "Jam berapa kita ketemu di stasiun?",
+     "ko": "역에서 몇 시에 만날까?",
+     "en": "What time should we meet at the station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___에 장소를 넣어요",
+     "nameEn": "Question form",
+     "noteEn": "___ is the place to meet"
+    }
+   ],
+   "related": [
+    "Mau ke ___ hari apa?"
+   ],
+   "quiz": {
+    "prompt": "Jam berapa kita ketemu di ___?",
+    "answer": "mall"
+   }
+  },
+  {
+   "id": "id-2-05",
+   "stage": 2,
+   "pattern": "Saya mau ___, tolong kurang pedas",
+   "meaningKo": "음식 주문하고 덜 맵게 요청하기",
+   "meaningEn": "Order food and ask for less spicy",
+   "examples": [
+    {
+     "text": "Saya mau nasi goreng, tolong kurang pedas",
+     "ko": "나시고렝 주세요. 덜 맵게 해주세요",
+     "en": "I want fried rice, less spicy please"
+    },
+    {
+     "text": "Saya mau mie ayam, tolong kurang pedas",
+     "ko": "미아얌 주세요. 덜 맵게 해주세요",
+     "en": "I want chicken noodles, less spicy please"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "요청 표현",
+     "noteKo": "___에 음식 이름을 넣어요",
+     "nameEn": "Request form",
+     "noteEn": "___ is the food you want"
+    }
+   ],
+   "related": [
+    "Saya mau ___ tanpa ___"
+   ],
+   "quiz": {
+    "prompt": "Saya mau ___, tolong kurang pedas",
+    "answer": "sate ayam"
+   }
+  },
+  {
+   "id": "id-2-06",
+   "stage": 2,
+   "pattern": "Boleh saya ___?",
+   "meaningKo": "허락 요청하기",
+   "meaningEn": "Ask for permission",
+   "examples": [
+    {
+     "text": "Boleh saya duduk di sini?",
+     "ko": "여기 앉아도 될까요?",
+     "en": "May I sit here?"
+    },
+    {
+     "text": "Boleh saya pinjam buku ini?",
+     "ko": "이 책 빌려도 될까요?",
+     "en": "May I borrow this book?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "허가 요청",
+     "noteKo": "___에 하고 싶은 행동을 넣어요",
+     "nameEn": "Permission request",
+     "noteEn": "___ is the action you want to do"
+    }
+   ],
+   "related": [
+    "Tolong ___"
+   ],
+   "quiz": {
+    "prompt": "Boleh saya ___?",
+    "answer": "memotret"
+   }
+  },
+  {
+   "id": "id-2-07",
+   "stage": 2,
+   "pattern": "Tolong ___",
+   "meaningKo": "정중하게 부탁하기",
+   "meaningEn": "Make a polite request",
+   "examples": [
+    {
+     "text": "Tolong tutup pintu",
+     "ko": "문 좀 닫아주세요",
+     "en": "Please close the door"
+    },
+    {
+     "text": "Tolong bawa tas ini",
+     "ko": "이 가방 좀 들어주세요",
+     "en": "Please carry this bag"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "부탁 표현",
+     "noteKo": "___에 부탁하고 싶은 행동을 넣어요",
+     "nameEn": "Polite request",
+     "noteEn": "___ is what you ask someone to do"
+    }
+   ],
+   "related": [
+    "Boleh saya ___?"
+   ],
+   "quiz": {
+    "prompt": "Tolong ___",
+    "answer": "ambil foto saya"
+   }
+  },
+  {
+   "id": "id-2-08",
+   "stage": 2,
+   "pattern": "Ke ___, ya",
+   "meaningKo": "택시/오토바이 기사에게 목적지 말하기",
+   "meaningEn": "Tell a driver where to go",
+   "examples": [
+    {
+     "text": "Ke bandara, ya",
+     "ko": "공항으로 가 주세요",
+     "en": "To the airport, please"
+    },
+    {
+     "text": "Ke stasiun, ya",
+     "ko": "역으로 가 주세요",
+     "en": "To the station, please"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "목적지 말하기",
+     "noteKo": "___에 장소를 넣어요",
+     "nameEn": "Destination statement",
+     "noteEn": "___ is the place to go"
+    }
+   ],
+   "related": [
+    "Berhenti di ___, ya"
+   ],
+   "quiz": {
+    "prompt": "Ke ___, ya",
+    "answer": "hotel Grand"
+   }
+  },
+  {
+   "id": "id-2-09",
+   "stage": 2,
+   "pattern": "Berhenti di ___, ya",
+   "meaningKo": "택시/오토바이에서 내릴 곳 말하기",
+   "meaningEn": "Tell a driver where to stop",
+   "examples": [
+    {
+     "text": "Berhenti di lampu merah, ya",
+     "ko": "신호등에서 세워 주세요",
+     "en": "Stop at the traffic light, please"
+    },
+    {
+     "text": "Berhenti di depan toko itu, ya",
+     "ko": "저 가게 앞에서 세워 주세요",
+     "en": "Stop in front of that shop, please"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정지 위치 말하기",
+     "noteKo": "___에 내릴 위치 또는 건물을 넣어요",
+     "nameEn": "Stop location",
+     "noteEn": "___ is where you want to stop"
+    }
+   ],
+   "related": [
+    "Ke ___, ya"
+   ],
+   "quiz": {
+    "prompt": "Berhenti di ___, ya",
+    "answer": "halte bus"
+   }
+  },
+  {
+   "id": "id-2-10",
+   "stage": 2,
+   "pattern": "Saya sakit ___",
+   "meaningKo": "아픈 증상 말하기",
+   "meaningEn": "Describe a simple symptom",
+   "examples": [
+    {
+     "text": "Saya sakit kepala",
+     "ko": "머리가 아파요",
+     "en": "I have a headache"
+    },
+    {
+     "text": "Saya sakit tenggorokan",
+     "ko": "목이 아파요",
+     "en": "I have a sore throat"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "증상 말하기",
+     "noteKo": "___에 아픈 부위를 넣어요",
+     "nameEn": "Symptom description",
+     "noteEn": "___ is the part that hurts"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Saya sakit ___",
+    "answer": "perut"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "id-3-01",
+   "stage": 3,
+   "pattern": "Menurut saya ___ karena ___. Kamu sendiri bagaimana?",
+   "meaningKo": "의견을 말하고, 이유를 설명한 후 상대방에게 묻기",
+   "meaningEn": "Giving your opinion with a reason, and asking for theirs",
+   "examples": [
+    {
+     "text": "Menurut saya film itu seru karena ceritanya menarik. Kamu sendiri bagaimana?",
+     "ko": "내 생각엔 그 영화가 재밌어, 줄거리가 흥미로워서. 너는 어때?",
+     "en": "I think the movie is fun because the story is interesting. How about you?"
+    },
+    {
+     "text": "Menurut saya hotel ini nyaman karena pelayanannya ramah. Kamu sendiri bagaimana?",
+     "ko": "내 생각엔 이 호텔이 편안해, 서비스가 친절해서. 너는 어때?",
+     "en": "I think this hotel is comfortable because the service is friendly. How about you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 + 이유",
+     "noteKo": "첫 번째 빈칸에 의견, 두 번째 빈칸에 이유",
+     "nameEn": "Opinion + Reason",
+     "noteEn": "First blank is opinion, second is reason"
+    }
+   ],
+   "related": [
+    "Saya pikir ___ lebih baik karena ___"
+   ],
+   "quiz": {
+    "prompt": "Menurut saya restoran ini enak karena ___ . Kamu sendiri bagaimana?",
+    "answer": "makanannya segar"
+   }
+  },
+  {
+   "id": "id-3-02",
+   "stage": 3,
+   "pattern": "Maaf, saya memesan ___, tapi saya dapat ___. Bisa bantu perbaiki?",
+   "meaningKo": "예약이나 주문에 문제를 설명하고 수정 요청하기",
+   "meaningEn": "Explaining a booking or order problem and requesting a fix",
+   "examples": [
+    {
+     "text": "Maaf, saya memesan kamar deluxe, tapi saya dapat kamar standar. Bisa bantu perbaiki?",
+     "ko": "죄송하지만 디럭스룸을 예약했는데 스탠다드룸을 받았어요. 도와주실 수 있나요?",
+     "en": "Sorry, I booked a deluxe room, but I got a standard room. Can you help fix this?"
+    },
+    {
+     "text": "Maaf, saya memesan ayam goreng, tapi saya dapat ikan. Bisa bantu perbaiki?",
+     "ko": "죄송하지만 치킨을 주문했는데 생선을 받았어요. 고쳐주실 수 있나요?",
+     "en": "Sorry, I ordered fried chicken, but I got fish. Can you help fix it?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "예약/주문 문제",
+     "noteKo": "첫 번째 빈칸에 원래 주문/예약한 것, 두 번째 빈칸에 받은 것",
+     "nameEn": "Booking/order problem",
+     "noteEn": "First blank is what was ordered, second what was received"
+    }
+   ],
+   "related": [
+    "Saya pesan ___, tapi datang ___"
+   ],
+   "quiz": {
+    "prompt": "Maaf, saya memesan kopi, tapi saya dapat ___. Bisa bantu perbaiki?",
+    "answer": "teh"
+   }
+  },
+  {
+   "id": "id-3-03",
+   "stage": 3,
+   "pattern": "Sekarang saya bekerja di ___ sebagai ___. Tugas saya biasanya ___",
+   "meaningKo": "직장과 역할, 주된 업무를 설명하기",
+   "meaningEn": "Describing your workplace, role, and main duties",
+   "examples": [
+    {
+     "text": "Sekarang saya bekerja di kantor pusat sebagai admin. Tugas saya biasanya mengatur jadwal rapat",
+     "ko": "지금 본사에서 관리자 역할을 하고 있어. 내 업무는 주로 회의 일정을 조정하는 거야",
+     "en": "Now I work at the head office as an admin. My job is usually to arrange meeting schedules"
+    },
+    {
+     "text": "Sekarang saya bekerja di sekolah sebagai guru. Tugas saya biasanya mengajar matematika",
+     "ko": "지금 학교에서 선생님으로 일해. 내 업무는 주로 수학을 가르치는 거야",
+     "en": "Now I work at a school as a teacher. My main duty is teaching math"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업 설명",
+     "noteKo": "첫 번째 빈칸에 직장명, 두 번째 빈칸에 직책, 세 번째 빈칸에 주된 업무",
+     "nameEn": "Job description",
+     "noteEn": "First blank is workplace, second is position, third is main duty"
+    }
+   ],
+   "related": [
+    "Saya kuliah di ___ jurusan ___, dan biasanya ___"
+   ],
+   "quiz": {
+    "prompt": "Sekarang saya bekerja di rumah sakit sebagai ___. Tugas saya biasanya memeriksa pasien",
+    "answer": "dokter"
+   }
+  },
+  {
+   "id": "id-3-04",
+   "stage": 3,
+   "pattern": "Kalau dengan teman, saya biasanya bilang ___. Kalau dengan orang baru, saya bilang ___",
+   "meaningKo": "친구와 처음 만난 사람에게 각각 다르게 말하는 표현 설명",
+   "meaningEn": "Explaining how you speak differently with friends vs. strangers",
+   "examples": [
+    {
+     "text": "Kalau dengan teman, saya biasanya bilang 'lu'. Kalau dengan orang baru, saya bilang 'Anda'.",
+     "ko": "친구한테는 'lu'라고 하고, 처음 만난 사람한테는 'Anda'라고 해",
+     "en": "With friends, I usually say 'lu'. With new people, I say 'Anda'."
+    },
+    {
+     "text": "Kalau dengan teman, saya biasanya bilang 'halo bro'. Kalau dengan orang baru, saya bilang 'selamat pagi'.",
+     "ko": "친구한테는 'halo bro'라고 하고, 생소한 사람에게는 'selamat pagi'라고 해",
+     "en": "With friends, I usually say 'halo bro'. With new people, I say 'selamat pagi'."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "경어체/반말 구분",
+     "noteKo": "첫 번째 빈칸에 친구에게 쓰는 표현, 두 번째 빈칸에 낯선 사람에게 쓰는 표현",
+     "nameEn": "Formal/casual speech",
+     "noteEn": "First blank is for friends, second for strangers"
+    }
+   ],
+   "related": [
+    "Kalau sama orang tua, saya bilang ___"
+   ],
+   "quiz": {
+    "prompt": "Kalau dengan teman, saya biasanya bilang 'kamu'. Kalau dengan orang baru, saya bilang ___",
+    "answer": "'Anda'"
+   }
+  },
+  {
+   "id": "id-3-05",
+   "stage": 3,
+   "pattern": "Waktu di ___, saya sempat ___ lalu ___",
+   "meaningKo": "특정 장소에서 한 일을 순서대로 말하기",
+   "meaningEn": "Telling a sequence of actions at a place",
+   "examples": [
+    {
+     "text": "Waktu di Lombok, saya sempat snorkeling lalu makan seafood",
+     "ko": "롬복에 있을 때 스노클링도 하고 해산물도 먹었어",
+     "en": "When I was in Lombok, I went snorkeling and then ate seafood"
+    },
+    {
+     "text": "Waktu di hotel, saya sempat berenang lalu tidur siang",
+     "ko": "호텔에 있을 때 수영도 하고 낮잠도 잤어",
+     "en": "When I was at the hotel, I went swimming and then took a nap"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 경험 순서",
+     "noteKo": "첫 번째 빈칸에 장소, 두 번째와 세 번째 빈칸에 했던 일",
+     "nameEn": "Past experience sequence",
+     "noteEn": "First blank is place, second and third are actions"
+    }
+   ],
+   "related": [
+    "Sesudah ___, saya ___ lalu ___"
+   ],
+   "quiz": {
+    "prompt": "Waktu di pantai, saya sempat berenang lalu ___",
+    "answer": "berjemur"
+   }
+  },
+  {
+   "id": "id-3-06",
+   "stage": 3,
+   "pattern": "Saya suka ___ karena ___. Kamu juga suka?",
+   "meaningKo": "취향을 이유와 함께 밝히고, 상대에게도 물어보기",
+   "meaningEn": "Stating what you like with a reason, and asking if the other does too",
+   "examples": [
+    {
+     "text": "Saya suka menonton drama Korea karena ceritanya seru. Kamu juga suka?",
+     "ko": "나는 한국 드라마를 좋아해, 스토리가 재밌어서. 너도 좋아해?",
+     "en": "I like watching Korean dramas because the story is fun. Do you like them too?"
+    },
+    {
+     "text": "Saya suka kopi karena aromanya wangi. Kamu juga suka?",
+     "ko": "나는 커피를 좋아해, 향이 좋아서. 너도 좋아해?",
+     "en": "I like coffee because it smells good. Do you like it too?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "취향 + 이유",
+     "noteKo": "첫 번째 빈칸에 좋아하는 것, 두 번째 빈칸에 이유",
+     "nameEn": "Preference + Reason",
+     "noteEn": "First blank is what you like, second is the reason"
+    }
+   ],
+   "related": [
+    "Saya tidak suka ___ karena ___"
+   ],
+   "quiz": {
+    "prompt": "Saya suka membaca buku karena ___. Kamu juga suka?",
+    "answer": "bisa belajar hal baru"
+   }
+  },
+  {
+   "id": "id-3-07",
+   "stage": 3,
+   "pattern": "Saya sedang ___, jadi ___ belum bisa ___",
+   "meaningKo": "현재 하고 있는 일 때문에 아직 못하는 일 설명하기",
+   "meaningEn": "Explaining what you're doing so you can't do something else yet",
+   "examples": [
+    {
+     "text": "Saya sedang meeting, jadi saya belum bisa angkat telepon",
+     "ko": "지금 회의 중이라 아직 전화를 받을 수 없어",
+     "en": "I'm in a meeting, so I can't pick up the phone yet"
+    },
+    {
+     "text": "Saya sedang belajar, jadi saya belum bisa keluar",
+     "ko": "지금 공부 중이라 아직 나갈 수 없어",
+     "en": "I'm studying, so I can't go out yet"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "진행 중인 일 + 아직 할 수 없는 일",
+     "noteKo": "첫 번째 빈칸에 현재 하는 일, 두 번째 빈칸에 할 수 없는 일",
+     "nameEn": "Ongoing activity + can't do yet",
+     "noteEn": "First blank is current activity, second is what can't be done"
+    }
+   ],
+   "related": [
+    "Saya belum bisa ___ karena sedang ___"
+   ],
+   "quiz": {
+    "prompt": "Saya sedang makan siang, jadi saya belum bisa ___",
+    "answer": "balas pesan"
+   }
+  },
+  {
+   "id": "id-3-08",
+   "stage": 3,
+   "pattern": "Pertama saya ___, lalu saya ___, setelah itu saya ___.",
+   "meaningKo": "여행이나 사건을 순서대로 이야기하기",
+   "meaningEn": "Telling a story about a trip or event in order",
+   "examples": [
+    {
+     "text": "Pertama saya naik perahu, lalu saya snorkeling, setelah itu saya makan ikan bakar.",
+     "ko": "처음에 배를 타고, 그 다음 스노클링을 하고, 마지막으로 구운 생선을 먹었어.",
+     "en": "First I took a boat, then I went snorkeling, after that I ate grilled fish."
+    },
+    {
+     "text": "Pertama saya check-in di hotel, lalu saya jalan-jalan di pantai, setelah itu saya istirahat di kamar.",
+     "ko": "처음에 호텔에 체크인하고, 그 다음 해변을 산책하고, 마지막으로 방에서 쉬었어.",
+     "en": "First I checked in at the hotel, then I walked on the beach, after that I rested in my room."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간 순서 연결",
+     "noteKo": "___ 자리에 여행이나 활동을 넣음",
+     "nameEn": "Sequencing actions",
+     "noteEn": "Each ___ is for an activity or event in order"
+    }
+   ],
+   "related": [
+    "Setelah ___, saya ___, lalu saya ___",
+    "Sebelum ___, saya ___, lalu ___"
+   ],
+   "quiz": {
+    "prompt": "Pertama saya ___, lalu saya makan, setelah itu saya tidur.",
+    "answer": "berenang"
+   }
+  },
+  {
+   "id": "id-3-09",
+   "stage": 3,
+   "pattern": "Kalau menurut saya, ___ karena ___. Bagaimana menurutmu?",
+   "meaningKo": "의견과 이유를 말하고 상대방 의견 묻기",
+   "meaningEn": "Giving an opinion and a reason, and asking for someone's opinion",
+   "examples": [
+    {
+     "text": "Kalau menurut saya, film ini bagus karena ceritanya unik. Bagaimana menurutmu?",
+     "ko": "내 생각엔 이 영화가 좋아, 이야기가 독특해서. 너는 어때?",
+     "en": "In my opinion, this movie is good because the story is unique. What do you think?"
+    },
+    {
+     "text": "Kalau menurut saya, pantai di Lombok indah karena pasirnya putih. Bagaimana menurutmu?",
+     "ko": "내 생각엔 롬복의 해변이 아름다워, 모래가 하얘서. 너는 어때?",
+     "en": "In my opinion, the beach in Lombok is beautiful because the sand is white. What do you think?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 + 이유",
+     "noteKo": "첫 번째 ___에 의견, 두 번째 ___에 이유",
+     "nameEn": "Opinion + reason",
+     "noteEn": "First ___ is the opinion, second ___ is the reason"
+    }
+   ],
+   "related": [
+    "Saya pikir ___ karena ___, kamu setuju?",
+    "Menurut saya ___, alasannya ___"
+   ],
+   "quiz": {
+    "prompt": "Kalau menurut saya, makanan ini enak karena ___. Bagaimana menurutmu?",
+    "answer": "bumbunya khas"
+   }
+  },
+  {
+   "id": "id-3-10",
+   "stage": 3,
+   "pattern": "Maaf, saya pesan ___, tapi yang datang ___. Bisa dibantu?",
+   "meaningKo": "예약, 배달, 상품 문제 설명하고 해결 요청하기",
+   "meaningEn": "Explaining a booking, delivery or product problem and asking for a fix",
+   "examples": [
+    {
+     "text": "Maaf, saya pesan kamar deluxe, tapi yang datang kamar standar. Bisa dibantu?",
+     "ko": "죄송하지만 디럭스룸을 예약했는데 스탠다드룸이 왔어요. 도와주실 수 있나요?",
+     "en": "Sorry, I booked a deluxe room, but what I got is a standard room. Can you help?"
+    },
+    {
+     "text": "Maaf, saya pesan makanan tanpa pedas, tapi yang datang pedas. Bisa dibantu?",
+     "ko": "죄송하지만 매운맛 없이 주문했는데 매운 게 왔어요. 도와주실 수 있나요?",
+     "en": "Sorry, I ordered non-spicy food, but what I got is spicy. Can you help?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "예약/주문 문제 설명",
+     "noteKo": "첫 번째 ___: 원래 주문/예약한 것, 두 번째 ___: 실제 받은 것",
+     "nameEn": "Explaining order/booking problem",
+     "noteEn": "First ___: what you ordered/booked, second ___: what you got"
+    }
+   ],
+   "related": [
+    "Saya memesan ___, tapi saya menerima ___. Bisa bantu?",
+    "Mohon maaf, saya sudah bayar ___, tapi belum datang."
+   ],
+   "quiz": {
+    "prompt": "Maaf, saya pesan ayam goreng, tapi yang datang ___. Bisa dibantu?",
+    "answer": "ikan bakar"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "id-4-01",
+   "stage": 4,
+   "pattern": "Saya paham kekhawatiran Anda tentang ___, tapi menurut saya ___ bisa menjadi solusi.",
+   "meaningKo": "상대방의 우려를 인정하고 대안을 제시하기",
+   "meaningEn": "Acknowledging concerns and suggesting a solution",
+   "examples": [
+    {
+     "text": "Saya paham kekhawatiran Anda tentang jadwal, tapi menurut saya penjadwalan ulang bisa menjadi solusi.",
+     "ko": "일정에 대한 우려를 이해하지만, 일정을 다시 잡는 것이 해결책이 될 수 있다고 생각합니다.",
+     "en": "I understand your concern about the schedule, but I think rescheduling could be a solution."
+    },
+    {
+     "text": "Saya paham kekhawatiran Anda tentang biaya, tapi menurut saya negosiasi harga bisa menjadi solusi.",
+     "ko": "비용에 대한 우려를 이해하지만, 가격 협상이 해결책이 될 수 있다고 생각합니다.",
+     "en": "I understand your concern about the cost, but I think negotiating the price could be a solution."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "tentang 명사",
+     "noteKo": "첫 슬롯에는 상대방의 걱정이나 이슈가 들어갑니다.",
+     "nameEn": "tentang noun",
+     "noteEn": "First slot is the concern or issue."
+    },
+    {
+     "nameKo": "bisa menjadi 명사/구",
+     "noteKo": "두 번째 슬롯에는 제안하는 해결책이 들어갑니다.",
+     "nameEn": "bisa menjadi noun/phrase",
+     "noteEn": "Second slot is the proposed solution."
+    }
+   ],
+   "related": [
+    "Menurut saya, ___ bisa membantu ___",
+    "Jika ___, maka ___"
+   ],
+   "quiz": {
+    "prompt": "Saya paham kekhawatiran Anda tentang ___, tapi menurut saya negosiasi bisa menjadi solusi.",
+    "answer": "biaya"
+   }
+  },
+  {
+   "id": "id-4-02",
+   "stage": 4,
+   "pattern": "Saya mengerti kekhawatiran Anda tentang ___, tapi jika kita ___, mungkin bisa jadi solusi.",
+   "meaningKo": "상대방의 우려에 공감하고 대안을 제시하기",
+   "meaningEn": "Acknowledging concerns and proposing an alternative",
+   "examples": [
+    {
+     "text": "Saya mengerti kekhawatiran Anda tentang jadwal, tapi jika kita tambah tim, mungkin bisa jadi solusi.",
+     "ko": "일정에 대한 걱정을 이해하지만, 팀을 늘리면 해결될 수 있어요.",
+     "en": "I understand your concern about the schedule, but adding more people could be a solution."
+    },
+    {
+     "text": "Saya mengerti kekhawatiran Anda tentang biaya, tapi jika kita negosiasi ulang, mungkin bisa jadi solusi.",
+     "ko": "비용에 대한 걱정을 이해하지만, 재협상하면 해결될 수 있어요.",
+     "en": "I understand your concern about the cost, but renegotiating could be a solution."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "tentang 명사",
+     "noteKo": "___에 상대방의 걱정거리를 넣음",
+     "nameEn": "tentang + noun",
+     "noteEn": "The first blank is a concern or issue"
+    },
+    {
+     "nameKo": "동사 원형",
+     "noteKo": "___에 제안하는 행동을 넣음",
+     "nameEn": "verb base",
+     "noteEn": "The second blank is the proposed action"
+    }
+   ],
+   "related": [
+    "Kalau kita ___, maka ___.",
+    "Bagaimana kalau kita ___ supaya ___?"
+   ],
+   "quiz": {
+    "prompt": "Saya mengerti kekhawatiran Anda tentang ___, tapi jika kita tambah tim, mungkin bisa jadi solusi.",
+    "answer": "jadwal"
+   }
+  },
+  {
+   "id": "id-4-03",
+   "stage": 4,
+   "pattern": "Saya paham alasan ___, tapi menurut saya lebih baik jika ___.",
+   "meaningKo": "상대방 입장 존중하며 다른 의견 제시하기",
+   "meaningEn": "Disagreeing tactfully while respecting the other side",
+   "examples": [
+    {
+     "text": "Saya paham alasan mempercepat proyek, tapi menurut saya lebih baik jika kita cek ulang dulu.",
+     "ko": "프로젝트를 빨리 끝내고 싶은 이유는 알지만, 먼저 다시 확인하는 게 좋을 것 같아요.",
+     "en": "I understand the reason to speed up the project, but I think it's better if we double-check first."
+    },
+    {
+     "text": "Saya paham alasan memilih lokasi ini, tapi menurut saya lebih baik jika kita survei tempat lain juga.",
+     "ko": "이 장소를 고른 이유는 알지만, 다른 곳도 조사해보는 게 좋을 것 같아요.",
+     "en": "I understand the reason for choosing this location, but I think it's better if we also survey other places."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/동명사",
+     "noteKo": "___에 상대방이 선택한 이유를 넣음",
+     "nameEn": "noun/gerund",
+     "noteEn": "The first blank is the reason for the other's action"
+    },
+    {
+     "nameKo": "행동/제안",
+     "noteKo": "___에 본인의 제안을 넣음",
+     "nameEn": "action/suggestion",
+     "noteEn": "The second blank is your suggestion"
+    }
+   ],
+   "related": [
+    "Saya mengerti kekhawatiran Anda tentang ___, tapi jika kita ___, mungkin bisa jadi solusi.",
+    "Menurut saya ___ karena ___."
+   ],
+   "quiz": {
+    "prompt": "Saya paham alasan mempercepat proyek, tapi menurut saya lebih baik jika kita ___.",
+    "answer": "cek ulang dulu"
+   }
+  },
+  {
+   "id": "id-4-04",
+   "stage": 4,
+   "pattern": "Setelah mendengar pendapat ___, saya ringkas poin utama: ___.",
+   "meaningKo": "회의나 토론에서 요점 정리하기",
+   "meaningEn": "Summarizing main points in a meeting or discussion",
+   "examples": [
+    {
+     "text": "Setelah mendengar pendapat semua, saya ringkas poin utama: kita sepakat tunda peluncuran.",
+     "ko": "모두의 의견을 듣고 주요 내용을 정리하자면, 출시를 연기하기로 합의했습니다.",
+     "en": "After hearing everyone's opinions, I summarize the main point: we agree to postpone the launch."
+    },
+    {
+     "text": "Setelah mendengar pendapat tim, saya ringkas poin utama: biaya harus ditekan.",
+     "ko": "팀 의견을 듣고 요약하면, 비용을 줄여야 한다는 점입니다.",
+     "en": "After hearing the team's opinions, I summarize the main point: costs must be reduced."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사람/집단",
+     "noteKo": "___에 의견을 제공한 사람을 넣음",
+     "nameEn": "person/group",
+     "noteEn": "The first blank is whose opinion is being summarized"
+    },
+    {
+     "nameKo": "핵심 내용",
+     "noteKo": "___에 요약하고 싶은 내용을 넣음",
+     "nameEn": "main point",
+     "noteEn": "The second blank is the main point"
+    }
+   ],
+   "related": [
+    "Tugas ___ adalah ___.",
+    "Mari kita simpulkan: ___"
+   ],
+   "quiz": {
+    "prompt": "Setelah mendengar pendapat tim, saya ringkas poin utama: ___.",
+    "answer": "biaya harus ditekan"
+   }
+  },
+  {
+   "id": "id-4-05",
+   "stage": 4,
+   "pattern": "Tugas ___ adalah ___.",
+   "meaningKo": "회의에서 업무 배정하기",
+   "meaningEn": "Assigning tasks in a meeting",
+   "examples": [
+    {
+     "text": "Tugas Andi adalah membuat laporan akhir.",
+     "ko": "Andi의 임무는 최종 보고서를 작성하는 것입니다.",
+     "en": "Andi's task is to write the final report."
+    },
+    {
+     "text": "Tugas tim pemasaran adalah mengatur promosi.",
+     "ko": "마케팅팀의 임무는 프로모션을 준비하는 것입니다.",
+     "en": "The marketing team's task is to arrange the promotion."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사람/팀",
+     "noteKo": "___에 업무를 맡은 사람이나 팀을 넣음",
+     "nameEn": "person/team",
+     "noteEn": "The first blank is the person or team assigned"
+    },
+    {
+     "nameKo": "업무 내용",
+     "noteKo": "___에 맡은 업무를 넣음",
+     "nameEn": "task description",
+     "noteEn": "The second blank is the task"
+    }
+   ],
+   "related": [
+    "Setelah mendengar pendapat ___, saya ringkas poin utama: ___."
+   ],
+   "quiz": {
+    "prompt": "Tugas tim pemasaran adalah ___.",
+    "answer": "mengatur promosi"
+   }
+  },
+  {
+   "id": "id-4-06",
+   "stage": 4,
+   "pattern": "Kalau boleh tahu, apakah ___ bisa dinegosiasikan menjadi ___?",
+   "meaningKo": "조건이나 가격 협상을 정중하게 요청하기",
+   "meaningEn": "Requesting negotiation about terms or price politely",
+   "examples": [
+    {
+     "text": "Kalau boleh tahu, apakah harga sewa bisa dinegosiasikan menjadi lebih rendah?",
+     "ko": "실례지만, 임대료를 더 낮게 협상할 수 있을까요?",
+     "en": "If I may ask, can the rent be negotiated to a lower price?"
+    },
+    {
+     "text": "Kalau boleh tahu, apakah tanggal jatuh tempo bisa dinegosiasikan menjadi minggu depan?",
+     "ko": "실례지만, 기한을 다음 주로 조정할 수 있을까요?",
+     "en": "If I may ask, can the deadline be negotiated to next week?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건/가격",
+     "noteKo": "___에 협상하려는 조건을 넣음",
+     "nameEn": "term/price",
+     "noteEn": "The first blank is the term or price to negotiate"
+    },
+    {
+     "nameKo": "새로운 조건",
+     "noteKo": "___에 희망하는 조건을 넣음",
+     "nameEn": "new term",
+     "noteEn": "The second blank is the requested new term"
+    }
+   ],
+   "related": [
+    "Bagaimana kalau kita ___ supaya ___?",
+    "Saya ingin konfirmasi apakah ___ bisa diubah menjadi ___?"
+   ],
+   "quiz": {
+    "prompt": "Kalau boleh tahu, apakah harga sewa bisa dinegosiasikan menjadi ___?",
+    "answer": "lebih rendah"
+   }
+  },
+  {
+   "id": "id-4-07",
+   "stage": 4,
+   "pattern": "Menurut informasi, ___ masih kurang ___.",
+   "meaningKo": "문제점이나 부족한 점을 정중히 지적하기",
+   "meaningEn": "Pointing out an issue or deficiency politely",
+   "examples": [
+    {
+     "text": "Menurut informasi, dokumen masih kurang tanda tangan.",
+     "ko": "정보에 따르면, 서류에 아직 서명이 부족합니다.",
+     "en": "According to the information, the document still lacks a signature."
+    },
+    {
+     "text": "Menurut informasi, laporan masih kurang data pendukung.",
+     "ko": "정보에 따르면, 보고서에 아직 보조 자료가 부족합니다.",
+     "en": "According to the information, the report still lacks supporting data."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제 있는 항목",
+     "noteKo": "___에 부족한 대상을 넣음",
+     "nameEn": "item with issue",
+     "noteEn": "The first blank is the item with a deficiency"
+    },
+    {
+     "nameKo": "부족한 부분",
+     "noteKo": "___에 부족한 내용을 넣음",
+     "nameEn": "missing part",
+     "noteEn": "The second blank is what is missing"
+    }
+   ],
+   "related": [
+    "Saya ingin konfirmasi apakah ___ sudah sesuai dengan ___."
+   ],
+   "quiz": {
+    "prompt": "Menurut informasi, dokumen masih kurang ___.",
+    "answer": "tanda tangan"
+   }
+  },
+  {
+   "id": "id-4-08",
+   "stage": 4,
+   "pattern": "Saya paham pendapat Anda, tapi saya rasa ___ bisa dipertimbangkan juga.",
+   "meaningKo": "정중하게 반대 의견 제시하기",
+   "meaningEn": "Tactfully offering a different opinion",
+   "examples": [
+    {
+     "text": "Saya paham pendapat Anda, tapi saya rasa alternatif ini bisa dipertimbangkan juga.",
+     "ko": "당신의 의견을 이해하지만 이 대안도 고려할 만하다고 생각해요.",
+     "en": "I understand your opinion, but I think this alternative can also be considered."
+    },
+    {
+     "text": "Saya paham pendapat Anda, tapi saya rasa jadwal baru bisa dipertimbangkan juga.",
+     "ko": "당신의 의견을 이해하지만 새 일정도 고려할 수 있다고 생각해요.",
+     "en": "I understand your opinion, but I think the new schedule can also be considered."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/명사구",
+     "noteKo": "빈칸에는 제안할 대안이나 아이디어가 들어갑니다.",
+     "nameEn": "Noun/Noun phrase",
+     "noteEn": "The blank is for the alternative or idea you want to propose."
+    }
+   ],
+   "related": [
+    "Saya menghargai ___, namun ___"
+   ],
+   "quiz": {
+    "prompt": "Saya paham pendapat Anda, tapi saya rasa ___ bisa dipertimbangkan juga.",
+    "answer": "alternatif ini"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "id-5-01",
+   "stage": 5,
+   "pattern": "Bapak/Ibu ___, izinkan saya mengucapkan terima kasih atas ___",
+   "meaningKo": "공식적인 작별 인사와 감사를 표현하기",
+   "meaningEn": "Expressing formal farewell and gratitude",
+   "examples": [
+    {
+     "text": "Bapak/Ibu Andi, izinkan saya mengucapkan terima kasih atas bimbingan dan dukungannya",
+     "ko": "안디 선생님, 지도와 지원에 진심으로 감사드립니다.",
+     "en": "Mr./Ms. Andi, allow me to thank you for your guidance and support."
+    },
+    {
+     "text": "Bapak/Ibu Sari, izinkan saya mengucapkan terima kasih atas kesempatan yang diberikan",
+     "ko": "사리 선생님, 기회를 주신 데 대해 감사드립니다.",
+     "en": "Ms. Sari, allow me to thank you for the opportunity you gave."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존칭 및 공식 인사",
+     "noteKo": "첫 번째 칸에는 상대방의 존칭이나 이름이 들어갑니다.",
+     "nameEn": "Honorifics and formal address",
+     "noteEn": "The first slot is for the recipient's name or title."
+    }
+   ],
+   "related": [
+    "Terima kasih atas ___ yang sudah diberikan",
+    "Saya ingin mengucapkan selamat kepada ___ atas ___"
+   ],
+   "quiz": {
+    "prompt": "Bapak/Ibu ___, izinkan saya mengucapkan terima kasih atas bimbingan dan dukungannya",
+    "answer": "Andi"
+   }
+  },
+  {
+   "id": "id-5-02",
+   "stage": 5,
+   "pattern": "Mohon maaf, saat ini saya belum bisa ___ karena ___",
+   "meaningKo": "공손하게 거절하기",
+   "meaningEn": "Politely declining",
+   "examples": [
+    {
+     "text": "Mohon maaf, saat ini saya belum bisa memenuhi permintaan karena masih ada pekerjaan lain",
+     "ko": "죄송하지만 지금은 다른 일이 있어서 요청을 들어드릴 수 없습니다.",
+     "en": "Sorry, I can't fulfill the request right now because I have other work."
+    },
+    {
+     "text": "Mohon maaf, saat ini saya belum bisa hadir karena ada urusan keluarga",
+     "ko": "가족 일이 있어서 참석할 수 없습니다.",
+     "en": "Sorry, I can't attend right now because of family matters."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 거절",
+     "noteKo": "첫 번째 칸은 거절하는 행동, 두 번째 칸은 이유.",
+     "nameEn": "Indirect refusal",
+     "noteEn": "First slot is the action refused, second is the reason."
+    }
+   ],
+   "related": [
+    "Maaf, saya harus menolak ___ karena ___",
+    "Untuk saat ini, saya belum bisa ___"
+   ],
+   "quiz": {
+    "prompt": "Mohon maaf, saat ini saya belum bisa hadir karena ___",
+    "answer": "ada urusan keluarga"
+   }
+  },
+  {
+   "id": "id-5-03",
+   "stage": 5,
+   "pattern": "Eh, lo tau nggak, ___ kemarin itu ___ banget, sampe ___",
+   "meaningKo": "친근하게 농담이나 에피소드 말하기",
+   "meaningEn": "Jokingly telling an anecdote",
+   "examples": [
+    {
+     "text": "Eh, lo tau nggak, si Dika kemarin itu ngaco banget, sampe ketawa semua orang",
+     "ko": "야, 어제 디카 진짜 엉망이었어, 모두가 웃었어.",
+     "en": "Hey, do you know, Dika was so ridiculous yesterday, everyone laughed."
+    },
+    {
+     "text": "Eh, lo tau nggak, acara kemarin itu heboh banget, sampe tetangga pada protes",
+     "ko": "어제 행사 진짜 난리였어, 이웃들이 항의했어.",
+     "en": "Hey, you know, yesterday's event was so wild, the neighbors complained."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비격식 구어체",
+     "noteKo": "첫 번째 칸은 이야기 주제, 두 번째 칸은 감탄사, 세 번째 칸은 결과.",
+     "nameEn": "Informal colloquial",
+     "noteEn": "First slot: topic/person. Second: reaction. Third: result."
+    }
+   ],
+   "related": [
+    "Gila, kemarin ___ parah banget, deh",
+    "Lo nggak bakal percaya, ___ itu ___"
+   ],
+   "quiz": {
+    "prompt": "Eh, lo tau nggak, acara kemarin itu heboh banget, sampe ___",
+    "answer": "tetangga pada protes"
+   }
+  },
+  {
+   "id": "id-5-04",
+   "stage": 5,
+   "pattern": "Saya ingin mengucapkan selamat jalan kepada ___, semoga ___",
+   "meaningKo": "공식적인 작별 인사와 좋은 소망 전하기",
+   "meaningEn": "Offering formal farewell and well wishes",
+   "examples": [
+    {
+     "text": "Saya ingin mengucapkan selamat jalan kepada Pak Budi, semoga sukses di tempat baru",
+     "ko": "부디 님께 작별 인사 드리며, 새로운 곳에서 성공하시길 바랍니다.",
+     "en": "I want to say farewell to Mr. Budi, wishing you success in your new place."
+    },
+    {
+     "text": "Saya ingin mengucapkan selamat jalan kepada Ibu Lina, semoga sehat selalu",
+     "ko": "리나 님께 작별 인사 드리며, 항상 건강하시길 바랍니다.",
+     "en": "I want to wish farewell to Ms. Lina, may you always be healthy."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공식 작별인사",
+     "noteKo": "첫 번째 칸은 떠나는 사람, 두 번째 칸은 바람.",
+     "nameEn": "Formal farewell",
+     "noteEn": "First slot: the person leaving. Second: your wish."
+    }
+   ],
+   "related": [
+    "Semoga ___ selalu ___",
+    "Untuk ___, sukses selalu ke depannya"
+   ],
+   "quiz": {
+    "prompt": "Saya ingin mengucapkan selamat jalan kepada Pak Budi, semoga ___",
+    "answer": "sukses di tempat baru"
+   }
+  },
+  {
+   "id": "id-5-05",
+   "stage": 5,
+   "pattern": "Katanya sih ___, tapi menurut gue ___",
+   "meaningKo": "소문이나 일반적 의견에 대해 개인 의견 제시하기",
+   "meaningEn": "Presenting own opinion after a rumor or common belief",
+   "examples": [
+    {
+     "text": "Katanya sih film itu bagus, tapi menurut gue biasa aja",
+     "ko": "그 영화 좋다고들 하지만, 내 생각엔 그냥 그래.",
+     "en": "They say the movie is good, but I think it's just okay."
+    },
+    {
+     "text": "Katanya sih harga bakal turun, tapi menurut gue malah naik",
+     "ko": "가격이 떨어질 거라고들 하지만, 내 생각엔 오를 것 같아.",
+     "en": "They say prices will drop, but I think they'll go up."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비격식 의견 제시",
+     "noteKo": "첫 번째 칸은 소문, 두 번째 칸은 본인 의견.",
+     "nameEn": "Informal opinion",
+     "noteEn": "First slot: rumor/common belief. Second: your view."
+    }
+   ],
+   "related": [
+    "Menurut orang, ___, tapi aku rasa ___",
+    "Banyak yang bilang ___, tapi ___"
+   ],
+   "quiz": {
+    "prompt": "Katanya sih film itu bagus, tapi menurut gue ___",
+    "answer": "biasa aja"
+   }
+  },
+  {
+   "id": "id-5-06",
+   "stage": 5,
+   "pattern": "Kalau boleh jujur, saya merasa ___, tapi demi kebaikan bersama, ___",
+   "meaningKo": "예의를 지키며 민감한 의견 제시하기",
+   "meaningEn": "Stating a sensitive opinion politely",
+   "examples": [
+    {
+     "text": "Kalau boleh jujur, saya merasa kurang nyaman, tapi demi kebaikan bersama, saya akan berusaha menyesuaikan diri",
+     "ko": "솔직히 좀 불편하지만, 모두를 위해서 적응하려고 합니다.",
+     "en": "Honestly, I feel a bit uncomfortable, but for the common good, I'll try to adjust."
+    },
+    {
+     "text": "Kalau boleh jujur, saya merasa tugas ini berat, tapi demi kebaikan bersama, saya akan coba semaksimal mungkin",
+     "ko": "이 일이 힘들지만 모두의 이익을 위해 최선을 다하겠습니다.",
+     "en": "Honestly, I feel this task is tough, but for everyone's good, I'll try my best."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 표현",
+     "noteKo": "첫 번째 칸은 솔직한 감정, 두 번째 칸은 배려하는 행동.",
+     "nameEn": "Polite hedging",
+     "noteEn": "First slot: honest feeling. Second: group-oriented action."
+    }
+   ],
+   "related": [
+    "Terus terang, saya ___, tapi saya percaya ___",
+    "Sebenarnya, saya ___, namun saya mengerti ___"
+   ],
+   "quiz": {
+    "prompt": "Kalau boleh jujur, saya merasa tugas ini berat, tapi demi kebaikan bersama, ___",
+    "answer": "saya akan coba semaksimal mungkin"
+   }
+  },
+  {
+   "id": "id-5-07",
+   "stage": 5,
+   "pattern": "Intinya, ___, tapi ada beberapa hal yang perlu diperhatikan seperti ___",
+   "meaningKo": "글, 강연 요약 및 비판적 언급하기",
+   "meaningEn": "Summarizing and critiquing a text, talk or film",
+   "examples": [
+    {
+     "text": "Intinya, film ini menyenangkan, tapi ada beberapa hal yang perlu diperhatikan seperti alur cerita yang kurang jelas",
+     "ko": "요약하면 이 영화는 재미있지만, 줄거리가 불분명한 점이 있어요.",
+     "en": "In summary, this movie is enjoyable, but there are things to note like the unclear plot."
+    },
+    {
+     "text": "Intinya, artikelnya informatif, tapi ada beberapa hal yang perlu diperhatikan seperti kurangnya data pendukung",
+     "ko": "요약하자면 정보는 좋지만, 근거 자료가 부족해요.",
+     "en": "In summary, the article is informative, but things like lack of supporting data should be noted."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "요약 및 비판",
+     "noteKo": "첫 번째 칸은 요점, 두 번째 칸은 비판적 사항.",
+     "nameEn": "Summary & critique",
+     "noteEn": "First slot: key point. Second slot: points of critique."
+    }
+   ],
+   "related": [
+    "Menurut saya, ___ adalah poin kuatnya, tapi ___ masih kurang",
+    "Singkatnya, ___, namun ___"
+   ],
+   "quiz": {
+    "prompt": "Intinya, film ini menyenangkan, tapi ada beberapa hal yang perlu diperhatikan seperti ___",
+    "answer": "alur cerita yang kurang jelas"
+   }
+  },
+  {
+   "id": "id-5-08",
+   "stage": 5,
+   "pattern": "Maaf, boleh saya menambahkan sedikit tentang ___ sebelum kita lanjut?",
+   "meaningKo": "그룹 대화에서 자연스럽게 끼어들기",
+   "meaningEn": "Jumping into group conversation smoothly",
+   "examples": [
+    {
+     "text": "Maaf, boleh saya menambahkan sedikit tentang topik kerja sama sebelum kita lanjut?",
+     "ko": "협력 주제에 대해 잠깐 말씀드려도 될까요?",
+     "en": "Sorry, may I add a bit about the cooperation topic before we continue?"
+    },
+    {
+     "text": "Maaf, boleh saya menambahkan sedikit tentang acara kemarin sebelum kita lanjut?",
+     "ko": "어제 행사에 대해 잠깐만 덧붙여도 될까요?",
+     "en": "Sorry, can I add a little about yesterday's event before we move on?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 대화 끼어들기",
+     "noteKo": "첫 번째 칸은 추가하고 싶은 주제.",
+     "nameEn": "Polite interruption",
+     "noteEn": "First slot: topic you want to add about."
+    }
+   ],
+   "related": [
+    "Saya ingin menyampaikan pendapat tentang ___",
+    "Boleh saya komentar sebentar tentang ___?"
+   ],
+   "quiz": {
+    "prompt": "Maaf, boleh saya menambahkan sedikit tentang ___ sebelum kita lanjut?",
+    "answer": "acara kemarin"
+   }
+  }
+ ]
+}

@@ -1,6 +1,7 @@
 import type { ScriptCourse } from "./types.ts";
 
-/** 일본어 글자·소리 기초: 히라가나 행별 → 탁음·っ·장음·요음 → 가타카나 → 외래어 소리. */
+/** 일본어 글자·소리 기초: 히라가나 행별 → 탁음·っ·장음·요음 → 가타카나 → 외래어 소리.
+ * say는 그 글자 소리 한 박자(あ, きゃ). 낱말이 아니다. */
 export const JA_SCRIPT: ScriptCourse = {
   "language": "ja",
   "version": 1,
@@ -603,7 +604,7 @@ export const JA_SCRIPT: ScriptCourse = {
         {
           "char": "を",
           "reading": "o (wo)",
-          "say": "ほんを",
+          "say": "を",
           "example": {
             "word": "ほんをよむ",
             "meaning": {
@@ -797,7 +798,7 @@ export const JA_SCRIPT: ScriptCourse = {
         {
           "char": "っ",
           "reading": "pause (kk, tt, ss, pp)",
-          "say": "きって",
+          "say": "っ",
           "example": {
             "word": "きって",
             "meaning": {
@@ -1663,7 +1664,7 @@ export const JA_SCRIPT: ScriptCourse = {
         {
           "char": "ー",
           "reading": "long vowel (hold 1 beat)",
-          "say": "コーヒー",
+          "say": "ー",
           "example": {
             "word": "コーヒー",
             "meaning": {

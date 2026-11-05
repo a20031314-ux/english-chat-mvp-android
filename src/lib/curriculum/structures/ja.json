@@ -1,0 +1,1558 @@
+{
+ "1": [
+  {
+   "id": "ja-1-01",
+   "stage": 1,
+   "pattern": "___ と いいます",
+   "meaningKo": "자기 이름을 말하기",
+   "meaningEn": "Saying your own name",
+   "examples": [
+    {
+     "text": "キム と いいます",
+     "ko": "김이라고 합니다",
+     "en": "I am Kim"
+    },
+    {
+     "text": "ジョン と いいます",
+     "ko": "존이라고 합니다",
+     "en": "I am John"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 이름이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is your name"
+    }
+   ],
+   "related": [
+    "___ から きました"
+   ],
+   "quiz": {
+    "prompt": "___ と いいます",
+    "answer": "さくら"
+   }
+  },
+  {
+   "id": "ja-1-02",
+   "stage": 1,
+   "pattern": "___ から きました",
+   "meaningKo": "출신지를 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "韓国 から きました",
+     "ko": "한국에서 왔어요",
+     "en": "I am from Korea"
+    },
+    {
+     "text": "アメリカ から きました",
+     "ko": "미국에서 왔어요",
+     "en": "I am from the US"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 나라 이름이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is a country"
+    }
+   ],
+   "related": [
+    "___ と いいます"
+   ],
+   "quiz": {
+    "prompt": "___ から きました",
+    "answer": "日本"
+   }
+  },
+  {
+   "id": "ja-1-03",
+   "stage": 1,
+   "pattern": "___ です",
+   "meaningKo": "자기 직업이나 신분을 말하기",
+   "meaningEn": "Saying your job or status",
+   "examples": [
+    {
+     "text": "学生 です",
+     "ko": "학생입니다",
+     "en": "I am a student"
+    },
+    {
+     "text": "会社員 です",
+     "ko": "회사원입니다",
+     "en": "I am an office worker"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 직업, 신분 등이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is a job or status"
+    }
+   ],
+   "related": [
+    "___ から きました"
+   ],
+   "quiz": {
+    "prompt": "___ です",
+    "answer": "留学生"
+   }
+  },
+  {
+   "id": "ja-1-04",
+   "stage": 1,
+   "pattern": "___ は なん ですか",
+   "meaningKo": "상대방의 정보를 물어보기",
+   "meaningEn": "Asking about someone/something",
+   "examples": [
+    {
+     "text": "おしごと は なん ですか",
+     "ko": "직업이 뭐예요?",
+     "en": "What do you do?"
+    },
+    {
+     "text": "おなまえ は なん ですか",
+     "ko": "이름이 뭐예요?",
+     "en": "What is your name?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 물어볼 대상이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is what you are asking about"
+    }
+   ],
+   "related": [
+    "___ は どこ ですか"
+   ],
+   "quiz": {
+    "prompt": "___ は なん ですか",
+    "answer": "ごしゅっしん"
+   }
+  },
+  {
+   "id": "ja-1-05",
+   "stage": 1,
+   "pattern": "___ は いくら ですか",
+   "meaningKo": "가격을 물어보기",
+   "meaningEn": "Asking the price",
+   "examples": [
+    {
+     "text": "これ は いくら ですか",
+     "ko": "이거 얼마예요?",
+     "en": "How much is this?"
+    },
+    {
+     "text": "おにぎり は いくら ですか",
+     "ko": "주먹밥 얼마예요?",
+     "en": "How much is the rice ball?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 물건이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is the item"
+    }
+   ],
+   "related": [
+    "___ を ください"
+   ],
+   "quiz": {
+    "prompt": "___ は いくら ですか",
+    "answer": "この ほん"
+   }
+  },
+  {
+   "id": "ja-1-06",
+   "stage": 1,
+   "pattern": "___ を ください",
+   "meaningKo": "원하는 물건을 요청하기",
+   "meaningEn": "Requesting an item",
+   "examples": [
+    {
+     "text": "これ を ください",
+     "ko": "이거 주세요",
+     "en": "I will take this"
+    },
+    {
+     "text": "水 を ください",
+     "ko": "물 주세요",
+     "en": "Please give me water"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 원하는 물건이 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is the thing you want"
+    }
+   ],
+   "related": [
+    "___ は いくら ですか"
+   ],
+   "quiz": {
+    "prompt": "___ を ください",
+    "answer": "おちゃ"
+   }
+  },
+  {
+   "id": "ja-1-07",
+   "stage": 1,
+   "pattern": "___ は どこ ですか",
+   "meaningKo": "장소를 물어보기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "えき は どこ ですか",
+     "ko": "역이 어디예요?",
+     "en": "Where is the station?"
+    },
+    {
+     "text": "トイレ は どこ ですか",
+     "ko": "화장실이 어디예요?",
+     "en": "Where is the toilet?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 장소가 들어감",
+     "nameEn": "Noun",
+     "noteEn": "___ is the place"
+    }
+   ],
+   "related": [
+    "___ は なん ですか"
+   ],
+   "quiz": {
+    "prompt": "___ は どこ ですか",
+    "answer": "コンビニ"
+   }
+  },
+  {
+   "id": "ja-1-08",
+   "stage": 1,
+   "pattern": "すみません、___",
+   "meaningKo": "실례하거나 양해를 구하기",
+   "meaningEn": "Excusing yourself or getting attention",
+   "examples": [
+    {
+     "text": "すみません、もういちど おねがいします",
+     "ko": "죄송하지만 한 번 더 부탁드려요",
+     "en": "Excuse me, please say it again"
+    },
+    {
+     "text": "すみません、ちょっと いいですか",
+     "ko": "실례지만 잠깐 괜찮으세요?",
+     "en": "Excuse me, may I ask you something?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장",
+     "noteKo": "___ 자리에 원하는 말을 넣음",
+     "nameEn": "Sentence",
+     "noteEn": "___ is your request or question"
+    }
+   ],
+   "related": [
+    "___ を ください"
+   ],
+   "quiz": {
+    "prompt": "すみません、___",
+    "answer": "おなまえ を おしえて ください"
+   }
+  },
+  {
+   "id": "ja-1-09",
+   "stage": 1,
+   "pattern": "わかりません。___",
+   "meaningKo": "모른다고 하고 반복 요청하기",
+   "meaningEn": "Saying you do not understand and asking again",
+   "examples": [
+    {
+     "text": "わかりません。もういちど おねがいします",
+     "ko": "모르겠어요. 한 번 더 부탁드려요",
+     "en": "I don't understand. Please say it again"
+    },
+    {
+     "text": "わかりません。ゆっくり おねがいします",
+     "ko": "모르겠어요. 천천히 부탁드려요",
+     "en": "I don't understand. Please speak slowly"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장",
+     "noteKo": "___ 자리에 요청 문장이 들어감",
+     "nameEn": "Sentence",
+     "noteEn": "___ is your request"
+    }
+   ],
+   "related": [
+    "すみません、___"
+   ],
+   "quiz": {
+    "prompt": "わかりません。___",
+    "answer": "もういちど おねがいします"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "ja-2-01",
+   "stage": 2,
+   "pattern": "きのう ___ を しました",
+   "meaningKo": "어제 한 일을 말함",
+   "meaningEn": "Saying what you did yesterday",
+   "examples": [
+    {
+     "text": "きのう べんきょう を しました",
+     "ko": "어제 공부를 했어요",
+     "en": "I studied yesterday"
+    },
+    {
+     "text": "きのう さんぽ を しました",
+     "ko": "어제 산책을 했어요",
+     "en": "I took a walk yesterday"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사+を しました",
+     "noteKo": "___ 자리에 한 일을 넣음",
+     "nameEn": "Noun + を しました",
+     "noteEn": "___ is the thing you did"
+    }
+   ],
+   "related": [
+    "きのう ___ に いきました"
+   ],
+   "quiz": {
+    "prompt": "きのう ___ を しました",
+    "answer": "べんきょう"
+   }
+  },
+  {
+   "id": "ja-2-02",
+   "stage": 2,
+   "pattern": "しゅうまつ ___ に いきます",
+   "meaningKo": "주말에 할 일을 말함",
+   "meaningEn": "Saying what you will do this weekend",
+   "examples": [
+    {
+     "text": "しゅうまつ ともだちの うち に いきます",
+     "ko": "주말에 친구 집에 갈 거예요",
+     "en": "I will go to a friend's house this weekend"
+    },
+    {
+     "text": "しゅうまつ えいが に いきます",
+     "ko": "주말에 영화관에 갈 거예요",
+     "en": "I will go to the movies this weekend"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사+に いきます",
+     "noteKo": "___ 자리에 가는 곳을 넣음",
+     "nameEn": "Noun + に いきます",
+     "noteEn": "___ is where you will go"
+    }
+   ],
+   "related": [
+    "しゅうまつ ___ を します"
+   ],
+   "quiz": {
+    "prompt": "しゅうまつ ___ に いきます",
+    "answer": "としょかん"
+   }
+  },
+  {
+   "id": "ja-2-03",
+   "stage": 2,
+   "pattern": "___ に いっしょに いきませんか",
+   "meaningKo": "누군가를 초대함",
+   "meaningEn": "Inviting someone to go somewhere",
+   "examples": [
+    {
+     "text": "カフェ に いっしょに いきませんか",
+     "ko": "카페에 같이 가지 않을래요?",
+     "en": "Shall we go to a cafe together?"
+    },
+    {
+     "text": "えいが に いっしょに いきませんか",
+     "ko": "영화 보러 같이 가지 않을래요?",
+     "en": "Shall we go to a movie together?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소+に",
+     "noteKo": "___ 자리에 가고 싶은 곳을 넣음",
+     "nameEn": "Place + に",
+     "noteEn": "___ is where you want to go"
+    }
+   ],
+   "related": [
+    "___ で あいましょう"
+   ],
+   "quiz": {
+    "prompt": "___ に いっしょに いきませんか",
+    "answer": "レストラン"
+   }
+  },
+  {
+   "id": "ja-2-04",
+   "stage": 2,
+   "pattern": "___ で あいましょう",
+   "meaningKo": "만날 장소를 정함",
+   "meaningEn": "Deciding on a place to meet",
+   "examples": [
+    {
+     "text": "えき で あいましょう",
+     "ko": "역에서 만나요",
+     "en": "Let's meet at the station"
+    },
+    {
+     "text": "こうえん で あいましょう",
+     "ko": "공원에서 만나요",
+     "en": "Let's meet at the park"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소+で",
+     "noteKo": "___ 자리에 만날 장소를 넣음",
+     "nameEn": "Place + で",
+     "noteEn": "___ is the place to meet"
+    }
+   ],
+   "related": [
+    "___ に いっしょに いきませんか"
+   ],
+   "quiz": {
+    "prompt": "___ で あいましょう",
+    "answer": "カフェ"
+   }
+  },
+  {
+   "id": "ja-2-05",
+   "stage": 2,
+   "pattern": "___ を おすすめ しますか",
+   "meaningKo": "추천 메뉴를 물어봄",
+   "meaningEn": "Asking what is recommended",
+   "examples": [
+    {
+     "text": "どの りょうり を おすすめ しますか",
+     "ko": "어떤 요리를 추천해요?",
+     "en": "Which dish do you recommend?"
+    },
+    {
+     "text": "この みせ で なに を おすすめ しますか",
+     "ko": "이 가게에서 무엇을 추천해요?",
+     "en": "What do you recommend at this shop?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사+を",
+     "noteKo": "___ 자리에 추천 받고 싶은 것을 넣음",
+     "nameEn": "Noun + を",
+     "noteEn": "___ is the thing you are asking about"
+    }
+   ],
+   "related": [
+    "___ を たべたい です"
+   ],
+   "quiz": {
+    "prompt": "___ を おすすめ しますか",
+    "answer": "てんぷら"
+   }
+  },
+  {
+   "id": "ja-2-06",
+   "stage": 2,
+   "pattern": "___ を たべたい です",
+   "meaningKo": "먹고 싶은 것을 말함",
+   "meaningEn": "Saying what you want to eat",
+   "examples": [
+    {
+     "text": "ラーメン を たべたい です",
+     "ko": "라면을 먹고 싶어요",
+     "en": "I want to eat ramen"
+    },
+    {
+     "text": "カレー を たべたい です",
+     "ko": "카레를 먹고 싶어요",
+     "en": "I want to eat curry"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사+を",
+     "noteKo": "___ 자리에 먹고 싶은 것을 넣음",
+     "nameEn": "Noun + を",
+     "noteEn": "___ is the thing you want to eat"
+    }
+   ],
+   "related": [
+    "___ を のみたい です"
+   ],
+   "quiz": {
+    "prompt": "___ を たべたい です",
+    "answer": "さかな"
+   }
+  },
+  {
+   "id": "ja-2-07",
+   "stage": 2,
+   "pattern": "___ を のみたい です",
+   "meaningKo": "마시고 싶은 것을 말함",
+   "meaningEn": "Saying what you want to drink",
+   "examples": [
+    {
+     "text": "コーヒー を のみたい です",
+     "ko": "커피를 마시고 싶어요",
+     "en": "I want to drink coffee"
+    },
+    {
+     "text": "みず を のみたい です",
+     "ko": "물을 마시고 싶어요",
+     "en": "I want to drink water"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사+を",
+     "noteKo": "___ 자리에 마시고 싶은 것을 넣음",
+     "nameEn": "Noun + を",
+     "noteEn": "___ is the thing you want to drink"
+    }
+   ],
+   "related": [
+    "___ を たべたい です"
+   ],
+   "quiz": {
+    "prompt": "___ を のみたい です",
+    "answer": "おちゃ"
+   }
+  },
+  {
+   "id": "ja-2-08",
+   "stage": 2,
+   "pattern": "___ が いたい です",
+   "meaningKo": "아픈 부위를 말함",
+   "meaningEn": "Explaining where it hurts",
+   "examples": [
+    {
+     "text": "のど が いたい です",
+     "ko": "목이 아파요",
+     "en": "My throat hurts"
+    },
+    {
+     "text": "あたま が いたい です",
+     "ko": "머리가 아파요",
+     "en": "My head hurts"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "신체부위+が",
+     "noteKo": "___ 자리에 아픈 부위를 넣음",
+     "nameEn": "Body part + が",
+     "noteEn": "___ is the part that hurts"
+    }
+   ],
+   "related": [
+    "___ が いたく ない です"
+   ],
+   "quiz": {
+    "prompt": "___ が いたい です",
+    "answer": "おなか"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "ja-3-01",
+   "stage": 3,
+   "pattern": "___ なんだけど、___ だったから おそくなった",
+   "meaningKo": "늦은 이유를 설명함",
+   "meaningEn": "Explaining why you were late",
+   "examples": [
+    {
+     "text": "バスがこなかった なんだけど、雨 だったから おそくなった",
+     "ko": "버스가 안 왔는데, 비가 와서 늦었어",
+     "en": "The bus didn’t come, but I was late because it was raining"
+    },
+    {
+     "text": "じゅぎょうが ながかった なんだけど、しゅくだい だったから おそくなった",
+     "ko": "수업이 길었는데, 숙제 때문에 늦었어",
+     "en": "Class was long, but I was late because of homework"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "친구에게 이유 설명",
+     "noteKo": "첫 번째 빈칸에 원인, 두 번째 빈칸에 이유를 넣음",
+     "nameEn": "Explaining to friends",
+     "noteEn": "First slot is the situation, second is the reason"
+    }
+   ],
+   "related": [
+    "___ から ___ に なった",
+    "___ せいで ___"
+   ],
+   "quiz": {
+    "prompt": "ドアが あかなかった なんだけど、___ だったから おそくなった",
+    "answer": "かぎ"
+   }
+  },
+  {
+   "id": "ja-3-02",
+   "stage": 3,
+   "pattern": "___ が こまっているので、___ してもらえますか",
+   "meaningKo": "문제를 보고하고 해결 요청함",
+   "meaningEn": "Reporting a problem and asking for a solution",
+   "examples": [
+    {
+     "text": "シャワー が こまっているので、みて してもらえますか",
+     "ko": "샤워기가 고장나서 한 번 봐주실 수 있나요?",
+     "en": "The shower isn’t working, could you take a look?"
+    },
+    {
+     "text": "エアコン が こまっているので、なおしてもらえますか",
+     "ko": "에어컨이 고장나서 고쳐주실 수 있나요?",
+     "en": "The air conditioner is broken, can you fix it?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "복합문 예절 표현",
+     "noteKo": "첫 번째 빈칸에 문제, 두 번째에 부탁하는 동사",
+     "nameEn": "Polite compound request",
+     "noteEn": "First slot is the problem, second is polite request verb"
+    }
+   ],
+   "related": [
+    "___ が こしょう しています",
+    "___ て いただけますか"
+   ],
+   "quiz": {
+    "prompt": "ドア が こまっているので、___ してもらえますか",
+    "answer": "なお"
+   }
+  },
+  {
+   "id": "ja-3-03",
+   "stage": 3,
+   "pattern": "___ かもしれない けど、___ と思う",
+   "meaningKo": "의견을 말하면서 부드럽게 표현함",
+   "meaningEn": "Giving your opinion while softening it",
+   "examples": [
+    {
+     "text": "むずかしい かもしれない けど、できる と思う",
+     "ko": "어려울 수도 있지만 할 수 있을 것 같아",
+     "en": "It might be hard, but I think we can do it"
+    },
+    {
+     "text": "つまらない かもしれない けど、みてみたい と思う",
+     "ko": "재미없을 수도 있지만 보고 싶어",
+     "en": "It might be boring, but I want to watch it"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법/추측",
+     "noteKo": "첫 번째 __에 추측을 넣음",
+     "nameEn": "Possibility/Softener",
+     "noteEn": "First __ is your soft prediction"
+    },
+    {
+     "nameKo": "의견 표현",
+     "noteKo": "두 번째 __에 자신의 의견을 넣음",
+     "nameEn": "Opinion",
+     "noteEn": "Second __ is your main opinion"
+    }
+   ],
+   "related": [
+    "___ かも",
+    "___ と思う"
+   ],
+   "quiz": {
+    "prompt": "たいくつ かもしれない けど、___ と思う",
+    "answer": "たのしい"
+   }
+  },
+  {
+   "id": "ja-3-04",
+   "stage": 3,
+   "pattern": "___ が できない から、___ を おねがいしてもいい？",
+   "meaningKo": "스스로 할 수 없어서 부탁함",
+   "meaningEn": "Asking for help because you can't do something",
+   "examples": [
+    {
+     "text": "パソコン が できない から、てつだい を おねがいしてもいい？",
+     "ko": "컴퓨터를 못해서 도와줄 수 있어?",
+     "en": "I can't use the computer, so can you help me?"
+    },
+    {
+     "text": "にほんご が できない から、ほんやく を おねがいしてもいい？",
+     "ko": "일본어를 못해서 번역 부탁해도 돼?",
+     "en": "I can't do Japanese, so can you translate for me?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "불가능+요청",
+     "noteKo": "첫 번째 __에 할 수 없는 것을, 두 번째 __에 부탁할 내용을 넣음",
+     "nameEn": "Inability + Request",
+     "noteEn": "First __ is what you can't do, second __ is what you ask"
+    }
+   ],
+   "related": [
+    "___ てつだって くれる？"
+   ],
+   "quiz": {
+    "prompt": "スマホ が できない から、___ を おねがいしてもいい？",
+    "answer": "せつめい"
+   }
+  },
+  {
+   "id": "ja-3-05",
+   "stage": 3,
+   "pattern": "ごめん、___ で おそくなった",
+   "meaningKo": "늦은 이유를 설명함",
+   "meaningEn": "Explaining why you were late",
+   "examples": [
+    {
+     "text": "ごめん、でんしゃが おくれて で おそくなった",
+     "ko": "미안, 지하철이 늦어서 늦었어",
+     "en": "Sorry, the train was late so I was late"
+    },
+    {
+     "text": "ごめん、しごとが ながびいて で おそくなった",
+     "ko": "미안, 일이 길어져서 늦었어",
+     "en": "Sorry, my work dragged on so I was late"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "원인 설명",
+     "noteKo": "__에는 늦은 원인을 넣음",
+     "nameEn": "Explaining reason",
+     "noteEn": "Fill __ with the reason you were late"
+    }
+   ],
+   "related": [
+    "___のせいで おそくなった"
+   ],
+   "quiz": {
+    "prompt": "ごめん、___ で おそくなった",
+    "answer": "バスが こなかった"
+   }
+  },
+  {
+   "id": "ja-3-06",
+   "stage": 3,
+   "pattern": "___ できる？",
+   "meaningKo": "상대방이 할 수 있는지 물어봄",
+   "meaningEn": "Asking if someone can do something",
+   "examples": [
+    {
+     "text": "この しごと できる？",
+     "ko": "이 일 할 수 있어?",
+     "en": "Can you do this task?"
+    },
+    {
+     "text": "カラオケ できる？",
+     "ko": "노래방 할 수 있어?",
+     "en": "Can you do karaoke?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가능 표현",
+     "noteKo": "__에 가능 여부를 물을 동작을 넣음",
+     "nameEn": "Ability",
+     "noteEn": "Fill __ with the action"
+    }
+   ],
+   "related": [
+    "___ できない"
+   ],
+   "quiz": {
+    "prompt": "___ できる？",
+    "answer": "ピアノ"
+   }
+  },
+  {
+   "id": "ja-3-07",
+   "stage": 3,
+   "pattern": "___ について もんだい が あります",
+   "meaningKo": "문제가 있음을 알림",
+   "meaningEn": "Reporting a problem",
+   "examples": [
+    {
+     "text": "へや の エアコン について もんだい が あります",
+     "ko": "방 에어컨에 문제가 있어요",
+     "en": "There is a problem with the room air conditioner"
+    },
+    {
+     "text": "シャワー について もんだい が あります",
+     "ko": "샤워에 문제가 있어요",
+     "en": "There is a problem with the shower"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제 보고",
+     "noteKo": "__에 문제가 있는 대상을 넣음",
+     "nameEn": "Reporting issue",
+     "noteEn": "Fill __ with the thing that's problematic"
+    }
+   ],
+   "related": [
+    "___ が こわれて います"
+   ],
+   "quiz": {
+    "prompt": "___ について もんだい が あります",
+    "answer": "トイレ"
+   }
+  },
+  {
+   "id": "ja-3-08",
+   "stage": 3,
+   "pattern": "___ みたい だった",
+   "meaningKo": "과거에 추측을 말함",
+   "meaningEn": "Guessing about something in the past",
+   "examples": [
+    {
+     "text": "かれは いそがしい みたい だった",
+     "ko": "그는 바빴던 것 같아",
+     "en": "He seemed busy"
+    },
+    {
+     "text": "てんき は わるい みたい だった",
+     "ko": "날씨가 안 좋았던 것 같아",
+     "en": "The weather seemed bad"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 추측",
+     "noteKo": "__에 추측하는 상태나 내용을 넣음",
+     "nameEn": "Past guess",
+     "noteEn": "Fill __ with your guess about the past"
+    }
+   ],
+   "related": [
+    "___ みたい",
+    "___ そう だった"
+   ],
+   "quiz": {
+    "prompt": "___ みたい だった",
+    "answer": "かれは つかれている"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "ja-4-01",
+   "stage": 4,
+   "pattern": "___様が___なさいました",
+   "meaningKo": "상대방의 행동을 존경어로 말함",
+   "meaningEn": "Describing someone's action with respect",
+   "examples": [
+    {
+     "text": "社長様がご決定なさいました",
+     "ko": "사장님께서 결정하셨습니다.",
+     "en": "The president has decided."
+    },
+    {
+     "text": "お客様がご署名なさいました",
+     "ko": "고객님께서 서명하셨습니다.",
+     "en": "The customer signed it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "尊敬語 (존경어)",
+     "noteKo": "なさいました는 타인의 행동을 높임",
+     "nameEn": "Honorific language (sonkeigo)",
+     "noteEn": "Used for someone else's action"
+    }
+   ],
+   "related": [
+    "___様が___くださいました"
+   ],
+   "quiz": {
+    "prompt": "部長様が___なさいました",
+    "answer": "ご説明"
+   }
+  },
+  {
+   "id": "ja-4-02",
+   "stage": 4,
+   "pattern": "ご迷惑をおかけして___、___させていただきます",
+   "meaningKo": "문제를 사과하고 해결책을 제안함",
+   "meaningEn": "Apologizing for a problem and proposing a solution",
+   "examples": [
+    {
+     "text": "ご迷惑をおかけして申し訳ございません、再発送させていただきます",
+     "ko": "불편을 드려 죄송합니다. 다시 보내드리겠습니다.",
+     "en": "We apologize for the inconvenience. We will resend it."
+    },
+    {
+     "text": "ご迷惑をおかけして失礼いたしました、すぐに対応させていただきます",
+     "ko": "불편을 드려 실례했습니다. 바로 조치하겠습니다.",
+     "en": "We regret the trouble caused. We will resolve it immediately."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사과 표현",
+     "noteKo": "첫 번째 빈칸에 사과의 말을 넣음",
+     "nameEn": "Apology phrase",
+     "noteEn": "First blank is an apology phrase"
+    },
+    {
+     "nameKo": "謙譲語 (겸양어)",
+     "noteKo": "두 번째 빈칸은 자신의 행동을 낮춤",
+     "nameEn": "Humble language (kenjougo)",
+     "noteEn": "Second blank is the proposed solution in humble form"
+    }
+   ],
+   "related": [
+    "申し訳ございませんが、___させていただきます"
+   ],
+   "quiz": {
+    "prompt": "ご迷惑をおかけして申し訳ございません、___させていただきます",
+    "answer": "再発送"
+   }
+  },
+  {
+   "id": "ja-4-03",
+   "stage": 4,
+   "pattern": "___と思いますが、___はいかがでしょうか",
+   "meaningKo": "회의에서 정중히 반대하고 대안을 제시함",
+   "meaningEn": "Disagreeing politely in a meeting and suggesting an alternative",
+   "examples": [
+    {
+     "text": "延期したほうがよいと思いますが、来週の会議はいかがでしょうか",
+     "ko": "연기하는 것이 좋다고 생각합니다만, 다음 주 회의는 어떨까요?",
+     "en": "I think we should postpone, but how about having the meeting next week?"
+    },
+    {
+     "text": "この案には課題があると思いますが、別の方法はいかがでしょうか",
+     "ko": "이 안에는 문제가 있다고 생각합니다만, 다른 방법은 어떨까요?",
+     "en": "I think this proposal has issues, but how about another approach?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시 & 제안",
+     "noteKo": "첫 번째 빈칸은 자신의 의견, 두 번째는 대안",
+     "nameEn": "Opinion & Suggestion",
+     "noteEn": "First blank is your opinion, second is an alternative"
+    }
+   ],
+   "related": [
+    "___かもしれませんが、___をご検討ください"
+   ],
+   "quiz": {
+    "prompt": "この案には課題があると思いますが、___はいかがでしょうか",
+    "answer": "別の方法"
+   }
+  },
+  {
+   "id": "ja-4-04",
+   "stage": 4,
+   "pattern": "___をお持ちでしたら、___にご提示ください",
+   "meaningKo": "서류 소지 유무 확인 및 안내",
+   "meaningEn": "Checking if someone has a document and giving instructions",
+   "examples": [
+    {
+     "text": "印鑑をお持ちでしたら、窓口にご提示ください",
+     "ko": "도장을 가지고 계시면 창구에 보여주세요.",
+     "en": "If you have your seal, please show it at the counter."
+    },
+    {
+     "text": "身分証明書をお持ちでしたら、受付にご提示ください",
+     "ko": "신분증을 가지고 계시면 접수처에 보여주세요.",
+     "en": "If you have your ID, please show it at reception."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문 + 절차 안내",
+     "noteKo": "첫 번째 빈칸은 확인할 것, 두 번째는 제출 장소",
+     "nameEn": "Conditional + procedural instruction",
+     "noteEn": "First blank is item, second is where to show it"
+    }
+   ],
+   "related": [
+    "___をお持ちの方は、___でご提示ください"
+   ],
+   "quiz": {
+    "prompt": "身分証明書をお持ちでしたら、___にご提示ください",
+    "answer": "受付"
+   }
+  },
+  {
+   "id": "ja-4-05",
+   "stage": 4,
+   "pattern": "___の件につきまして、___をお願い申し上げます",
+   "meaningKo": "공손하게 요청하거나 안내함",
+   "meaningEn": "Making a formal request or guidance related to a matter",
+   "examples": [
+    {
+     "text": "お支払いの件につきまして、ご確認をお願い申し上げます",
+     "ko": "지불 건에 대해 확인 부탁드립니다.",
+     "en": "Regarding the payment, please confirm."
+    },
+    {
+     "text": "納品の件につきまして、ご対応をお願い申し上げます",
+     "ko": "납품 건에 대해 대응 부탁드립니다.",
+     "en": "Regarding the delivery, please take action."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "첫 번째 빈칸은 사안, 두 번째는 요청 내용",
+     "nameEn": "Formal request",
+     "noteEn": "First blank is the matter, second is the specific request"
+    }
+   ],
+   "related": [
+    "___の件について、___をお願いいたします"
+   ],
+   "quiz": {
+    "prompt": "お支払いの件につきまして、___をお願い申し上げます",
+    "answer": "ご確認"
+   }
+  },
+  {
+   "id": "ja-4-06",
+   "stage": 4,
+   "pattern": "___様が___くださいます",
+   "meaningKo": "상대방이 해주신 일에 존경어 사용하기",
+   "meaningEn": "Expressing respect for someone else's action",
+   "examples": [
+    {
+     "text": "社長様がご説明くださいます",
+     "ko": "사장님께서 설명해주십니다.",
+     "en": "The president will kindly explain."
+    },
+    {
+     "text": "お客様がご署名くださいます",
+     "ko": "고객님께서 서명해주십니다.",
+     "en": "The customer will kindly sign."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존경어 동사",
+     "noteKo": "첫 번째 ___에 주체, 두 번째 ___에 동작을 넣음",
+     "nameEn": "Honorific verb",
+     "noteEn": "First ___ is the person, second ___ is the action"
+    }
+   ],
+   "related": [
+    "___様が___なさいます"
+   ],
+   "quiz": {
+    "prompt": "部長様がご___くださいます",
+    "answer": "説明"
+   }
+  },
+  {
+   "id": "ja-4-07",
+   "stage": 4,
+   "pattern": "このたびは___、___させていただきます",
+   "meaningKo": "문제에 대해 사과하고 해결책 제시하기",
+   "meaningEn": "Apologizing for a problem and proposing a solution",
+   "examples": [
+    {
+     "text": "このたびは納品遅れ、再発送させていただきます",
+     "ko": "이번 배송 지연에 대해 다시 발송해드리겠습니다.",
+     "en": "We apologize for the delayed delivery and will reship your order."
+    },
+    {
+     "text": "このたびは書類不備、再提出させていただきます",
+     "ko": "이번 서류 미비에 대해 다시 제출하겠습니다.",
+     "en": "We apologize for the incomplete documents and will resubmit them."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사과 및 해결책",
+     "noteKo": "첫 번째 ___에 문제, 두 번째 ___에 해결책을 넣음",
+     "nameEn": "Apology and solution",
+     "noteEn": "First ___ is the problem, second ___ is the solution"
+    }
+   ],
+   "related": [
+    "ご迷惑をおかけして___、___いたします"
+   ],
+   "quiz": {
+    "prompt": "このたびは___、再発送させていただきます",
+    "answer": "納品遅れ"
+   }
+  },
+  {
+   "id": "ja-4-08",
+   "stage": 4,
+   "pattern": "___かと存じますが、___をご検討いただけますでしょうか",
+   "meaningKo": "회의에서 정중하게 의견을 제시하고 대안을 제안하기",
+   "meaningEn": "Politely expressing disagreement and proposing an alternative",
+   "examples": [
+    {
+     "text": "現行案では難しいかと存じますが、新案をご検討いただけますでしょうか",
+     "ko": "현행안으로는 어렵다고 생각합니다만, 새 안건을 검토해주실 수 있을까요?",
+     "en": "I think the current plan may be difficult, but could you consider a new proposal?"
+    },
+    {
+     "text": "納期短縮は厳しいかと存じますが、分割納品をご検討いただけますでしょうか",
+     "ko": "납기 단축은 어렵다고 생각합니다만, 분할 납품을 검토해주실 수 있을까요?",
+     "en": "I believe shortening the delivery time is tough, but could you consider partial delivery?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 제안",
+     "noteKo": "첫 번째 ___에 반대 의견, 두 번째 ___에 대안",
+     "nameEn": "Polite suggestion",
+     "noteEn": "First ___ is disagreement, second ___ is alternative"
+    }
+   ],
+   "related": [
+    "___と考えますが、___をご検討ください"
+   ],
+   "quiz": {
+    "prompt": "納期短縮は厳しいかと存じますが、___をご検討いただけますでしょうか",
+    "answer": "分割納品"
+   }
+  },
+  {
+   "id": "ja-4-09",
+   "stage": 4,
+   "pattern": "___の件でお電話いたしました",
+   "meaningKo": "비즈니스 전화에서 이유를 전함",
+   "meaningEn": "Stating your reason for calling in a business setting",
+   "examples": [
+    {
+     "text": "納期の件でお電話いたしました",
+     "ko": "납기 건으로 전화드렸습니다.",
+     "en": "I am calling regarding the delivery date."
+    },
+    {
+     "text": "ご注文の確認の件でお電話いたしました",
+     "ko": "주문 확인 건으로 전화드렸습니다.",
+     "en": "I am calling about the order confirmation."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "謙譲語 (겸양어)",
+     "noteKo": "いたしました는 자신의 행동을 낮추어 표현함",
+     "nameEn": "Humble language (kenjougo)",
+     "noteEn": "Used for your own actions to show respect"
+    }
+   ],
+   "related": [
+    "___についてご連絡いたします"
+   ],
+   "quiz": {
+    "prompt": "___の件でお電話いたしました",
+    "answer": "納期"
+   }
+  },
+  {
+   "id": "ja-4-10",
+   "stage": 4,
+   "pattern": "恐れ入りますが、___についてご確認いただけますでしょうか",
+   "meaningKo": "상대방에게 정중히 확인을 요청하기",
+   "meaningEn": "Politely asking someone to confirm something",
+   "examples": [
+    {
+     "text": "恐れ入りますが、納期についてご確認いただけますでしょうか",
+     "ko": "죄송합니다만, 납기 일정에 대해 확인해주실 수 있을까요?",
+     "en": "Excuse me, but could you please confirm the delivery date?"
+    },
+    {
+     "text": "恐れ入りますが、契約内容についてご確認いただけますでしょうか",
+     "ko": "죄송합니다만, 계약 내용에 대해 확인해주실 수 있을까요?",
+     "en": "Excuse me, but could you please check the contract details?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존경어 요청",
+     "noteKo": "___에 확인받고 싶은 내용을 넣음",
+     "nameEn": "Honorific request",
+     "noteEn": "Fill ___ with the item to confirm"
+    }
+   ],
+   "related": [
+    "ご___いただけますでしょうか"
+   ],
+   "quiz": {
+    "prompt": "恐れ入りますが、___についてご確認いただけますでしょうか",
+    "answer": "納期"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "ja-5-01",
+   "stage": 5,
+   "pattern": "まあ___はそうだけど、___かな。",
+   "meaningKo": "상대의 주장 일부를 인정하고 다른 관점을 제시함",
+   "meaningEn": "Partially agreeing and gently contrasting your view",
+   "examples": [
+    {
+     "text": "まあ人気はそうだけど、内容は微妙かな。",
+     "ko": "인기는 그렇지만, 내용은 좀 애매한 것 같아.",
+     "en": "Sure, it’s popular, but the content is a bit iffy."
+    },
+    {
+     "text": "まあ仕方ないはそうだけど、納得できないかな。",
+     "ko": "어쩔 수 없는 건 그렇지만, 납득은 안 가는 것 같아.",
+     "en": "Yes, it couldn’t be helped, but I’m not satisfied."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "부분 동의와 견해 제시 (まあ～はそうだけど)",
+     "noteKo": "첫 번째 ___에 상대 주장의 일부, 두 번째 ___에 자신의 의견",
+     "nameEn": "Partial agreement (まあ～はそうだけど)",
+     "noteEn": "First ___ is what you partially agree to, second ___ is your view"
+    }
+   ],
+   "related": [
+    "たしかに___けど、___と思う。"
+   ],
+   "quiz": {
+    "prompt": "まあストーリーはそうだけど、___かな。",
+    "answer": "演出はあまり好きじゃない"
+   }
+  },
+  {
+   "id": "ja-5-02",
+   "stage": 5,
+   "pattern": "気持ちは___けど、___。",
+   "meaningKo": "상대방의 감정을 이해하며 자신의 생각 전달",
+   "meaningEn": "Expressing empathy while giving your view",
+   "examples": [
+    {
+     "text": "気持ちはわかるけど、もう少し頑張ろう。",
+     "ko": "마음은 이해하지만, 좀 더 힘내자.",
+     "en": "I understand how you feel, but let’s try a bit more."
+    },
+    {
+     "text": "気持ちは痛いほどわかるけど、今回は仕方ないよ。",
+     "ko": "네 마음 너무 잘 알겠지만, 이번엔 어쩔 수 없어.",
+     "en": "I totally get how you feel, but this time can’t be helped."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공감 후 견해 제시",
+     "noteKo": "___에 공감의 정도, 뒤에는 자신의 의견",
+     "nameEn": "Empathy plus opinion",
+     "noteEn": "___ is how much you empathize; after that, your view"
+    }
+   ],
+   "related": [
+    "大変だったね、___。"
+   ],
+   "quiz": {
+    "prompt": "気持ちは___けど、また次があるよ。",
+    "answer": "すごくわかる"
+   }
+  },
+  {
+   "id": "ja-5-03",
+   "stage": 5,
+   "pattern": "___と言えば___だよね。",
+   "meaningKo": "상황에 어울리는 관용구를 자연스럽게 사용",
+   "meaningEn": "Using a fitting idiom or set phrase",
+   "examples": [
+    {
+     "text": "春と言えば花より団子だよね。",
+     "ko": "봄 하면 역시 꽃보다 경단이지.",
+     "en": "Speaking of spring, it’s all about dango over flowers."
+    },
+    {
+     "text": "失敗と言えば七転び八起きだよね。",
+     "ko": "실패하면 칠전팔기지.",
+     "en": "When it comes to failure, it’s ‘fall seven times, get up eight.’"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구 활용",
+     "noteKo": "첫 번째 ___에 상황, 두 번째 ___에 맞는 관용구",
+     "nameEn": "Idiom use",
+     "noteEn": "First ___ is the situation, second ___ is the idiom"
+    }
+   ],
+   "related": [
+    "___といったら___だね。"
+   ],
+   "quiz": {
+    "prompt": "努力と言えば___だよね。",
+    "answer": "継続は力なり"
+   }
+  },
+  {
+   "id": "ja-5-04",
+   "stage": 5,
+   "pattern": "せっかくですが、___は難しいかもしれません。",
+   "meaningKo": "상대방의 부탁을 완곡하게 거절함",
+   "meaningEn": "Softly declining a request, keeping things polite",
+   "examples": [
+    {
+     "text": "せっかくですが、今週の参加は難しいかもしれません。",
+     "ko": "일부러 말씀해주셨지만, 이번 주 참여는 어려울 것 같아요.",
+     "en": "Thank you for inviting me, but joining this week might be difficult."
+    },
+    {
+     "text": "せっかくですが、お手伝いは難しいかもしれません。",
+     "ko": "정성껏 말씀해주셔서 감사하지만, 도와드리기는 힘들 것 같아요.",
+     "en": "I appreciate your asking, but helping out may be difficult."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 부정 (～が、～かもしれません)",
+     "noteKo": "___에 거절하고 싶은 내용을 넣음",
+     "nameEn": "Polite refusal (~が, ~かもしれません)",
+     "noteEn": "Put what you are declining in ___"
+    }
+   ],
+   "related": [
+    "申し訳ありませんが、___できかねます。"
+   ],
+   "quiz": {
+    "prompt": "せっかくですが、___は難しいかもしれません。",
+    "answer": "ご一緒する"
+   }
+  },
+  {
+   "id": "ja-5-05",
+   "stage": 5,
+   "pattern": "大変だったね、___。",
+   "meaningKo": "상대의 마음을 헤아려 위로함",
+   "meaningEn": "Comforting and showing empathy",
+   "examples": [
+    {
+     "text": "大変だったね、気持ちわかるよ。",
+     "ko": "힘들었겠다, 네 마음 이해해.",
+     "en": "That must have been tough; I understand how you feel."
+    },
+    {
+     "text": "大変だったね、無理しないでね。",
+     "ko": "고생했어, 무리하지 마.",
+     "en": "You’ve had a hard time; don’t push yourself."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공감 표현",
+     "noteKo": "___에 위로의 말을 넣음",
+     "nameEn": "Empathy phrase",
+     "noteEn": "Put a comforting phrase in ___"
+    }
+   ],
+   "related": [
+    "つらかったね、___。"
+   ],
+   "quiz": {
+    "prompt": "大変だったね、___。",
+    "answer": "ほんとうにがんばったね"
+   }
+  },
+  {
+   "id": "ja-5-06",
+   "stage": 5,
+   "pattern": "この状況、___って感じだね。",
+   "meaningKo": "상황에 딱 맞는 관용구로 감정을 표현",
+   "meaningEn": "Expressing feelings with a perfect idiom for the situation",
+   "examples": [
+    {
+     "text": "この状況、青天の霹靂って感じだね。",
+     "ko": "이 상황, 청천벽력 같은 느낌이야.",
+     "en": "This situation is like a bolt from the blue."
+    },
+    {
+     "text": "この状況、泣きっ面に蜂って感じだね。",
+     "ko": "이 상황, 설상가상이라는 느낌이야.",
+     "en": "This is like adding insult to injury."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구로 상황 표현",
+     "noteKo": "___에 관용구나 속담을 넣음",
+     "nameEn": "Express with idiom",
+     "noteEn": "Put an idiom or saying in ___"
+    }
+   ],
+   "related": [
+    "___と言えば___だよね。"
+   ],
+   "quiz": {
+    "prompt": "この状況、___って感じだね。",
+    "answer": "棚からぼたもち"
+   }
+  },
+  {
+   "id": "ja-5-07",
+   "stage": 5,
+   "pattern": "ありがたいんですが、___ので今回は遠慮させていただきます",
+   "meaningKo": "정중하게 거절 의사를 밝힘",
+   "meaningEn": "Politely declining a favor",
+   "examples": [
+    {
+     "text": "ありがたいんですが、ちょっと予定があるので今回は遠慮させていただきます",
+     "ko": "고맙지만, 약속이 있어서 이번에는 사양하겠습니다",
+     "en": "I appreciate it, but I have plans so I'll pass this time"
+    },
+    {
+     "text": "ありがたいんですが、体調がよくないので今回は遠慮させていただきます",
+     "ko": "고맙지만, 몸 상태가 안 좋아서 이번에는 사양하겠습니다",
+     "en": "I appreciate it, but I'm not feeling well so I'll pass this time"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 사양",
+     "noteKo": "___에 거절 사유가 들어감",
+     "nameEn": "Polite refusal",
+     "noteEn": "___ is your reason for declining"
+    }
+   ],
+   "related": [
+    "せっかくですが、___はちょっと…"
+   ],
+   "quiz": {
+    "prompt": "ありがたいんですが、___ので今回は遠慮させていただきます",
+    "answer": "事情がある"
+   }
+  },
+  {
+   "id": "ja-5-08",
+   "stage": 5,
+   "pattern": "___けど…",
+   "meaningKo": "말을 흐려 암시함",
+   "meaningEn": "Trailing off to imply something",
+   "examples": [
+    {
+     "text": "行きたい気持ちはあるけど…",
+     "ko": "가고 싶긴 한데…",
+     "en": "I do want to go, but…"
+    },
+    {
+     "text": "できなくはないけど…",
+     "ko": "못하는 건 아닌데…",
+     "en": "It's not that I can't, but…"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "말끝 흐리기",
+     "noteKo": "___에 본심 또는 암시가 들어감",
+     "nameEn": "Trailing off",
+     "noteEn": "___ is your implied or partial thought"
+    }
+   ],
+   "related": [
+    "___ので…"
+   ],
+   "quiz": {
+    "prompt": "___けど…",
+    "answer": "忙しい"
+   }
+  },
+  {
+   "id": "ja-5-09",
+   "stage": 5,
+   "pattern": "___ので…",
+   "meaningKo": "말을 흐려 정중하게 암시하거나 거절함",
+   "meaningEn": "Trailing off politely",
+   "examples": [
+    {
+     "text": "ちょっと用事があるので…",
+     "ko": "약간 일이 있어서…",
+     "en": "I have something to do, so…"
+    },
+    {
+     "text": "今日は体調が悪いので…",
+     "ko": "오늘은 몸이 안 좋아서…",
+     "en": "I'm not feeling well today, so…"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 말끝 흐리기",
+     "noteKo": "___에 사유나 본심이 들어감",
+     "nameEn": "Polite trailing off",
+     "noteEn": "___ is your reason or feeling"
+    }
+   ],
+   "related": [
+    "___けど…"
+   ],
+   "quiz": {
+    "prompt": "___ので…",
+    "answer": "急用ができた"
+   }
+  },
+  {
+   "id": "ja-5-10",
+   "stage": 5,
+   "pattern": "それは___ですよね。気持ち、わかります",
+   "meaningKo": "상대의 감정을 공감하고 위로함",
+   "meaningEn": "Comforting and empathizing",
+   "examples": [
+    {
+     "text": "それはつらいですよね。気持ち、わかります",
+     "ko": "그건 정말 힘들죠. 마음 이해해요",
+     "en": "That must be tough. I understand how you feel"
+    },
+    {
+     "text": "それは悔しいですよね。気持ち、わかります",
+     "ko": "정말 속상하시겠어요. 마음 이해해요",
+     "en": "That must be frustrating. I understand how you feel"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공감 표현",
+     "noteKo": "___에 감정 형용사가 들어감",
+     "nameEn": "Empathy expression",
+     "noteEn": "___ is a feeling adjective"
+    }
+   ],
+   "related": [
+    "大丈夫ですか、___だったら言ってください"
+   ],
+   "quiz": {
+    "prompt": "それは___ですよね。気持ち、わかります",
+    "answer": "大変"
+   }
+  }
+ ]
+}

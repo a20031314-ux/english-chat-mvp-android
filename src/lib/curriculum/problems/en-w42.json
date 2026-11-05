@@ -1,0 +1,1098 @@
+{
+  "w|absorb": {
+    "kind": "word",
+    "type": "type",
+    "name": "absorb",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "흡수하다",
+    "answer": "absorb",
+    "line": "Sponges absorb water quickly."
+  },
+  "w|accidental": {
+    "kind": "word",
+    "type": "type",
+    "name": "accidental",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "우연한",
+    "answer": "accidental",
+    "line": "It was an accidental spill, not on purpose."
+  },
+  "w|accompany": {
+    "kind": "word",
+    "type": "type",
+    "name": "accompany",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "동행하다",
+    "answer": "accompany",
+    "line": "Can you accompany me to the doctor?"
+  },
+  "w|accord": {
+    "kind": "word",
+    "type": "type",
+    "name": "accord",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "협정",
+    "answer": "accord",
+    "line": "They finally reached an accord after hours of talks."
+  },
+  "w|activation": {
+    "kind": "word",
+    "type": "type",
+    "name": "activation",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "활성화",
+    "answer": "activation",
+    "line": "The activation of the alarm was accidental."
+  },
+  "w|addicted": {
+    "kind": "word",
+    "type": "type",
+    "name": "addicted",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "중독된",
+    "answer": "addicted",
+    "line": "He became addicted to video games."
+  },
+  "w|alternatively": {
+    "kind": "word",
+    "type": "type",
+    "name": "alternatively",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대안으로",
+    "answer": "alternatively",
+    "line": "You can take the bus, or alternatively, you could walk."
+  },
+  "w|archbishop": {
+    "kind": "word",
+    "type": "type",
+    "name": "archbishop",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대주교",
+    "answer": "archbishop",
+    "line": "The archbishop visited the local church."
+  },
+  "w|archer": {
+    "kind": "word",
+    "type": "type",
+    "name": "archer",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "궁수",
+    "answer": "archer",
+    "line": "The archer aimed carefully at the target."
+  },
+  "w|assassination": {
+    "kind": "word",
+    "type": "type",
+    "name": "assassination",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "암살",
+    "answer": "assassination",
+    "line": "The assassination shocked the entire nation."
+  },
+  "w|assurance": {
+    "kind": "word",
+    "type": "type",
+    "name": "assurance",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "안심",
+    "answer": "assurance",
+    "line": "Her assurance made everyone feel better about the plan."
+  },
+  "w|athletics": {
+    "kind": "word",
+    "type": "type",
+    "name": "athletics",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "육상",
+    "answer": "athletics",
+    "line": "She excels in athletics at her school."
+  },
+  "w|bash": {
+    "kind": "word",
+    "type": "type",
+    "name": "bash",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강타",
+    "answer": "bash",
+    "line": "He got a nasty bash on the head."
+  },
+  "w|basics": {
+    "kind": "word",
+    "type": "type",
+    "name": "basics",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "기본",
+    "answer": "basics",
+    "line": "Let's go over the basics before we start."
+  },
+  "w|battalion": {
+    "kind": "word",
+    "type": "type",
+    "name": "battalion",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대대",
+    "answer": "battalion",
+    "line": "The battalion moved forward at dawn."
+  },
+  "w|bibliography": {
+    "kind": "word",
+    "type": "type",
+    "name": "bibliography",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "참고 문헌",
+    "answer": "bibliography",
+    "line": "Please include a bibliography at the end of your paper."
+  },
+  "w|bidding": {
+    "kind": "word",
+    "type": "type",
+    "name": "bidding",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "입찰",
+    "answer": "bidding",
+    "line": "The bidding started at a low price.",
+    "hint": "b",
+    "mark": "한 단어"
+  },
+  "w|borough": {
+    "kind": "word",
+    "type": "type",
+    "name": "borough",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "자치구",
+    "answer": "borough",
+    "line": "They moved to a quiet borough outside the city."
+  },
+  "w|boycott": {
+    "kind": "word",
+    "type": "type",
+    "name": "boycott",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "불매 운동",
+    "answer": "boycott",
+    "line": "They organized a boycott of the company’s products."
+  },
+  "w|broadly": {
+    "kind": "word",
+    "type": "type",
+    "name": "broadly",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "넓게",
+    "answer": "broadly",
+    "line": "He smiled broadly at the good news."
+  },
+  "w|calcium": {
+    "kind": "word",
+    "type": "type",
+    "name": "calcium",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "칼슘",
+    "answer": "calcium",
+    "line": "Milk is a good source of calcium."
+  },
+  "w|carpenter": {
+    "kind": "word",
+    "type": "type",
+    "name": "carpenter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "목수",
+    "answer": "carpenter",
+    "line": "The carpenter built a sturdy table."
+  },
+  "w|certainty": {
+    "kind": "word",
+    "type": "type",
+    "name": "certainty",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "확실함",
+    "answer": "certainty",
+    "line": "I can say with certainty that he is honest."
+  },
+  "w|citation": {
+    "kind": "word",
+    "type": "type",
+    "name": "citation",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "인용",
+    "answer": "citation",
+    "line": "You need a citation for this quote."
+  },
+  "w|collectively": {
+    "kind": "word",
+    "type": "type",
+    "name": "collectively",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "집단적으로",
+    "answer": "collectively",
+    "line": "We decided collectively to move forward."
+  },
+  "w|competitor": {
+    "kind": "word",
+    "type": "type",
+    "name": "competitor",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "경쟁 상대",
+    "answer": "competitor",
+    "line": "She is our main competitor in the market."
+  },
+  "w|congregation": {
+    "kind": "word",
+    "type": "type",
+    "name": "congregation",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "교인들",
+    "answer": "congregation",
+    "line": "The congregation gathered for Sunday service."
+  },
+  "w|coordinate": {
+    "kind": "word",
+    "type": "type",
+    "name": "coordinate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "조율하다",
+    "answer": "coordinate",
+    "line": "Let's coordinate our efforts for the project."
+  },
+  "w|critique": {
+    "kind": "word",
+    "type": "type",
+    "name": "critique",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "비평",
+    "answer": "critique",
+    "line": "She wrote a detailed critique of the movie."
+  },
+  "w|cube": {
+    "kind": "word",
+    "type": "type",
+    "name": "cube",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "정육면체",
+    "answer": "cube",
+    "line": "Cut the cheese into a small cube."
+  },
+  "w|cuisine": {
+    "kind": "word",
+    "type": "type",
+    "name": "cuisine",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "요리",
+    "answer": "cuisine",
+    "line": "French cuisine is famous around the world.",
+    "hint": "c",
+    "mark": "한 단어"
+  },
+  "w|decree": {
+    "kind": "word",
+    "type": "type",
+    "name": "decree",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "포고",
+    "answer": "decree",
+    "line": "The government issued a new decree yesterday."
+  },
+  "w|deliberate": {
+    "kind": "word",
+    "type": "type",
+    "name": "deliberate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "고의적인",
+    "answer": "deliberate",
+    "line": "That was a deliberate lie, not a mistake."
+  },
+  "w|despair": {
+    "kind": "word",
+    "type": "type",
+    "name": "despair",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "절망",
+    "answer": "despair",
+    "line": "He was filled with despair after the bad news."
+  },
+  "w|diagnostic": {
+    "kind": "word",
+    "type": "type",
+    "name": "diagnostic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "진단의",
+    "answer": "diagnostic",
+    "line": "The doctor ordered a diagnostic test."
+  },
+  "w|dioxide": {
+    "kind": "word",
+    "type": "type",
+    "name": "dioxide",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "이산화물",
+    "answer": "dioxide",
+    "line": "Plants absorb carbon dioxide from the air."
+  },
+  "w|discourse": {
+    "kind": "word",
+    "type": "type",
+    "name": "discourse",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "담론",
+    "answer": "discourse",
+    "line": "The professor led a lively discourse on history."
+  },
+  "w|dominance": {
+    "kind": "word",
+    "type": "type",
+    "name": "dominance",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지배력",
+    "answer": "dominance",
+    "line": "The team's dominance was clear from the start."
+  },
+  "w|drift": {
+    "kind": "word",
+    "type": "type",
+    "name": "drift",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "떠내려가다",
+    "answer": "drift",
+    "line": "Let the boat drift down the river."
+  },
+  "w|eclipse": {
+    "kind": "word",
+    "type": "type",
+    "name": "eclipse",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "일식",
+    "answer": "eclipse",
+    "line": "We watched the solar eclipse together."
+  },
+  "w|economically": {
+    "kind": "word",
+    "type": "type",
+    "name": "economically",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "경제적으로",
+    "answer": "economically",
+    "line": "The country is growing economically every year."
+  },
+  "w|eighteen": {
+    "kind": "word",
+    "type": "type",
+    "name": "eighteen",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "열여덟",
+    "answer": "eighteen",
+    "line": "She will be eighteen next month."
+  },
+  "w|electron": {
+    "kind": "word",
+    "type": "type",
+    "name": "electron",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전자",
+    "answer": "electron",
+    "line": "An electron orbits the nucleus of an atom."
+  },
+  "w|endure": {
+    "kind": "word",
+    "type": "type",
+    "name": "endure",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "견디다",
+    "answer": "endure",
+    "line": "We must endure the difficulties together."
+  },
+  "w|enjoyment": {
+    "kind": "word",
+    "type": "type",
+    "name": "enjoyment",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "즐거움",
+    "answer": "enjoyment",
+    "line": "He read the book with great enjoyment."
+  },
+  "w|enzyme": {
+    "kind": "word",
+    "type": "type",
+    "name": "enzyme",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "효소",
+    "answer": "enzyme",
+    "line": "This enzyme helps digest food in your stomach."
+  },
+  "w|evolutionary": {
+    "kind": "word",
+    "type": "type",
+    "name": "evolutionary",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "진화의",
+    "answer": "evolutionary",
+    "line": "Birds have unique evolutionary traits."
+  },
+  "w|forwards": {
+    "kind": "word",
+    "type": "type",
+    "name": "forwards",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "앞으로",
+    "answer": "forwards",
+    "line": "Keep moving forwards, no matter what.",
+    "hint": "f",
+    "mark": "한 단어"
+  },
+  "w|gateway": {
+    "kind": "word",
+    "type": "type",
+    "name": "gateway",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "관문",
+    "answer": "gateway",
+    "line": "The small town is a gateway to the mountains."
+  },
+  "w|geological": {
+    "kind": "word",
+    "type": "type",
+    "name": "geological",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지질학의",
+    "answer": "geological",
+    "line": "The area is known for its unique geological formations."
+  },
+  "w|globally": {
+    "kind": "word",
+    "type": "type",
+    "name": "globally",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "세계적으로",
+    "answer": "globally",
+    "line": "The company wants to expand globally."
+  },
+  "w|hatch": {
+    "kind": "word",
+    "type": "type",
+    "name": "hatch",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "부화하다",
+    "answer": "hatch",
+    "line": "The chicks will hatch in a few days."
+  },
+  "w|hawk": {
+    "kind": "word",
+    "type": "type",
+    "name": "hawk",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "매",
+    "answer": "hawk",
+    "line": "A hawk soared high above the field."
+  },
+  "w|honorable": {
+    "kind": "word",
+    "type": "type",
+    "name": "honorable",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "명예로운",
+    "answer": "honorable",
+    "line": "He is known as an honorable leader."
+  },
+  "w|hormone": {
+    "kind": "word",
+    "type": "type",
+    "name": "hormone",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "호르몬",
+    "answer": "hormone",
+    "line": "Growth hormone helps children develop taller."
+  },
+  "w|humidity": {
+    "kind": "word",
+    "type": "type",
+    "name": "humidity",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "습도",
+    "answer": "humidity",
+    "line": "The humidity made the air feel heavy."
+  },
+  "w|infectious": {
+    "kind": "word",
+    "type": "type",
+    "name": "infectious",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전염성의",
+    "answer": "infectious",
+    "line": "The flu is a highly infectious disease."
+  },
+  "w|inferior": {
+    "kind": "word",
+    "type": "type",
+    "name": "inferior",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "열등한",
+    "answer": "inferior",
+    "line": "He always felt inferior to his older brother."
+  },
+  "w|infinity": {
+    "kind": "word",
+    "type": "type",
+    "name": "infinity",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "무한대",
+    "answer": "infinity",
+    "line": "The stars seem to stretch into infinity."
+  },
+  "w|inherent": {
+    "kind": "word",
+    "type": "type",
+    "name": "inherent",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "내재된",
+    "answer": "inherent",
+    "line": "There is an inherent risk in this activity."
+  },
+  "w|injustice": {
+    "kind": "word",
+    "type": "type",
+    "name": "injustice",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "불의",
+    "answer": "injustice",
+    "line": "They protested against social injustice."
+  },
+  "w|innocence": {
+    "kind": "word",
+    "type": "type",
+    "name": "innocence",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "무죄",
+    "answer": "innocence",
+    "line": "She desperately tried to prove her innocence."
+  },
+  "w|insulin": {
+    "kind": "word",
+    "type": "type",
+    "name": "insulin",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "인슐린",
+    "answer": "insulin",
+    "line": "Diabetics often need daily insulin injections."
+  },
+  "w|intentionally": {
+    "kind": "word",
+    "type": "type",
+    "name": "intentionally",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "의도적으로",
+    "answer": "intentionally",
+    "line": "I didn't break it intentionally."
+  },
+  "w|interpret": {
+    "kind": "word",
+    "type": "type",
+    "name": "interpret",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "해석하다",
+    "answer": "interpret",
+    "line": "It's hard to interpret this ancient text."
+  },
+  "w|isle": {
+    "kind": "word",
+    "type": "type",
+    "name": "isle",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "섬",
+    "answer": "isle",
+    "line": "They spent their vacation on a beautiful isle.",
+    "hint": "i",
+    "mark": "한 단어"
+  },
+  "w|ivy": {
+    "kind": "word",
+    "type": "type",
+    "name": "ivy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "담쟁이",
+    "answer": "ivy",
+    "line": "The garden was covered in green ivy."
+  },
+  "w|justification": {
+    "kind": "word",
+    "type": "type",
+    "name": "justification",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "정당한 이유",
+    "answer": "justification",
+    "line": "There is no justification for his behavior."
+  },
+  "w|lid": {
+    "kind": "word",
+    "type": "type",
+    "name": "lid",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "뚜껑",
+    "answer": "lid",
+    "line": "Please put the lid back on the jar."
+  },
+  "w|livestock": {
+    "kind": "word",
+    "type": "type",
+    "name": "livestock",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가축",
+    "answer": "livestock",
+    "line": "Farmers take good care of their livestock."
+  },
+  "w|maiden": {
+    "kind": "word",
+    "type": "type",
+    "name": "maiden",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "처녀",
+    "answer": "maiden",
+    "line": "She wore a dress like a maiden from a fairy tale."
+  },
+  "w|manor": {
+    "kind": "word",
+    "type": "type",
+    "name": "manor",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "장원",
+    "answer": "manor",
+    "line": "The old manor stands at the top of the hill."
+  },
+  "w|marketplace": {
+    "kind": "word",
+    "type": "type",
+    "name": "marketplace",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "장터",
+    "answer": "marketplace",
+    "line": "We met at the local marketplace."
+  },
+  "w|memo": {
+    "kind": "word",
+    "type": "type",
+    "name": "memo",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "메모",
+    "answer": "memo",
+    "line": "Did you see the memo about the meeting?"
+  },
+  "w|metallic": {
+    "kind": "word",
+    "type": "type",
+    "name": "metallic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "금속성의",
+    "answer": "metallic",
+    "line": "Her dress had a shiny metallic finish."
+  },
+  "w|methodology": {
+    "kind": "word",
+    "type": "type",
+    "name": "methodology",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "방법론",
+    "answer": "methodology",
+    "line": "The study's methodology was clearly explained."
+  },
+  "w|nationalism": {
+    "kind": "word",
+    "type": "type",
+    "name": "nationalism",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "민족주의",
+    "answer": "nationalism",
+    "line": "The rise of nationalism changed the country's politics."
+  },
+  "w|nickel": {
+    "kind": "word",
+    "type": "type",
+    "name": "nickel",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "니켈",
+    "answer": "nickel",
+    "line": "This coin is made of nickel and copper."
+  },
+  "w|niece": {
+    "kind": "word",
+    "type": "type",
+    "name": "niece",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "조카딸",
+    "answer": "niece",
+    "line": "My niece is coming to visit this weekend."
+  },
+  "w|obesity": {
+    "kind": "word",
+    "type": "type",
+    "name": "obesity",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "비만",
+    "answer": "obesity",
+    "line": "Childhood obesity is increasing in many countries."
+  },
+  "w|outright": {
+    "kind": "word",
+    "type": "type",
+    "name": "outright",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "완전한",
+    "answer": "outright",
+    "line": "It was an outright victory for the home team."
+  },
+  "w|partisan": {
+    "kind": "word",
+    "type": "type",
+    "name": "partisan",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "당파적인",
+    "answer": "partisan",
+    "line": "He made a very partisan remark in the meeting."
+  },
+  "w|persuade": {
+    "kind": "word",
+    "type": "type",
+    "name": "persuade",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "설득하다",
+    "answer": "persuade",
+    "line": "She tried to persuade him to join us.",
+    "hint": "p",
+    "mark": "한 단어"
+  },
+  "w|pier": {
+    "kind": "word",
+    "type": "type",
+    "name": "pier",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "선착장",
+    "answer": "pier",
+    "line": "We walked to the end of the pier to watch the boats."
+  },
+  "w|pony": {
+    "kind": "word",
+    "type": "type",
+    "name": "pony",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "조랑말",
+    "answer": "pony",
+    "line": "The pony trotted happily in the field."
+  },
+  "w|premise": {
+    "kind": "word",
+    "type": "type",
+    "name": "premise",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전제",
+    "answer": "premise",
+    "line": "The movie is based on a simple premise."
+  },
+  "w|privileged": {
+    "kind": "word",
+    "type": "type",
+    "name": "privileged",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "특권을 가진",
+    "answer": "privileged",
+    "line": "Only a privileged few have access to this information."
+  },
+  "w|protestant": {
+    "kind": "word",
+    "type": "type",
+    "name": "protestant",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "개신교도",
+    "answer": "protestant",
+    "line": "She grew up in a protestant family."
+  },
+  "w|pumpkin": {
+    "kind": "word",
+    "type": "type",
+    "name": "pumpkin",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "호박",
+    "answer": "pumpkin",
+    "line": "We carved a pumpkin for Halloween."
+  },
+  "w|pupil": {
+    "kind": "word",
+    "type": "type",
+    "name": "pupil",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "학생",
+    "answer": "pupil",
+    "line": "The teacher praised the pupil for good work.",
+    "hint": "p",
+    "mark": "한 단어"
+  },
+  "w|quiz": {
+    "kind": "word",
+    "type": "type",
+    "name": "quiz",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "쪽지시험",
+    "answer": "quiz",
+    "line": "We have a quiz every Friday in class."
+  },
+  "w|rainfall": {
+    "kind": "word",
+    "type": "type",
+    "name": "rainfall",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강수량",
+    "answer": "rainfall",
+    "line": "Heavy rainfall caused flooding in the city."
+  },
+  "w|reckless": {
+    "kind": "word",
+    "type": "type",
+    "name": "reckless",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "무모한",
+    "answer": "reckless",
+    "line": "That was a reckless decision, and it put everyone at risk."
+  },
+  "w|redemption": {
+    "kind": "word",
+    "type": "type",
+    "name": "redemption",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "속죄",
+    "answer": "redemption",
+    "line": "He spent years searching for redemption."
+  },
+  "w|reef": {
+    "kind": "word",
+    "type": "type",
+    "name": "reef",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "암초",
+    "answer": "reef",
+    "line": "We went snorkeling near the coral reef."
+  },
+  "w|reluctant": {
+    "kind": "word",
+    "type": "type",
+    "name": "reluctant",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "꺼리는",
+    "answer": "reluctant",
+    "line": "She was reluctant to answer the question."
+  },
+  "w|remedy": {
+    "kind": "word",
+    "type": "type",
+    "name": "remedy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "치료법",
+    "answer": "remedy",
+    "line": "Ginger tea is a popular remedy for sore throats."
+  },
+  "w|replay": {
+    "kind": "word",
+    "type": "type",
+    "name": "replay",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "다시 보기",
+    "answer": "replay",
+    "line": "Let's watch the replay of the goal."
+  },
+  "w|respiratory": {
+    "kind": "word",
+    "type": "type",
+    "name": "respiratory",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "호흡기의",
+    "answer": "respiratory",
+    "line": "Smoking can cause respiratory problems."
+  },
+  "w|revision": {
+    "kind": "word",
+    "type": "type",
+    "name": "revision",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "퇴고",
+    "answer": "revision",
+    "line": "I need to make a revision to my essay."
+  },
+  "w|sickness": {
+    "kind": "word",
+    "type": "type",
+    "name": "sickness",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "질병",
+    "answer": "sickness",
+    "line": "He missed school because of sickness.",
+    "hint": "s",
+    "mark": "한 단어"
+  },
+  "w|sofa": {
+    "kind": "word",
+    "type": "type",
+    "name": "sofa",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "소파",
+    "answer": "sofa",
+    "line": "I fell asleep on the sofa last night.",
+    "hint": "s",
+    "mark": "한 단어"
+  },
+  "w|startup": {
+    "kind": "word",
+    "type": "type",
+    "name": "startup",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "신생 기업",
+    "answer": "startup",
+    "line": "She launched a new startup last year."
+  },
+  "w|suburb": {
+    "kind": "word",
+    "type": "type",
+    "name": "suburb",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "교외",
+    "answer": "suburb",
+    "line": "They moved to a quiet suburb outside the city."
+  },
+  "w|sunrise": {
+    "kind": "word",
+    "type": "type",
+    "name": "sunrise",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "일출",
+    "answer": "sunrise",
+    "line": "We woke up early to watch the sunrise."
+  },
+  "w|surge": {
+    "kind": "word",
+    "type": "type",
+    "name": "surge",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "급증",
+    "answer": "surge",
+    "line": "There was a sudden surge in electricity."
+  },
+  "w|sympathetic": {
+    "kind": "word",
+    "type": "type",
+    "name": "sympathetic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "동정적인",
+    "answer": "sympathetic",
+    "line": "My friend is always sympathetic when I have a problem."
+  },
+  "w|taxation": {
+    "kind": "word",
+    "type": "type",
+    "name": "taxation",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "과세",
+    "answer": "taxation",
+    "line": "Many people complain about high taxation."
+  },
+  "w|thoughtful": {
+    "kind": "word",
+    "type": "type",
+    "name": "thoughtful",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "사려 깊은",
+    "answer": "thoughtful",
+    "line": "That was a very thoughtful gift you gave me."
+  },
+  "w|toddler": {
+    "kind": "word",
+    "type": "type",
+    "name": "toddler",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "걸음마 아기",
+    "answer": "toddler",
+    "line": "Their toddler just learned how to walk."
+  },
+  "w|token": {
+    "kind": "word",
+    "type": "type",
+    "name": "token",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "증표",
+    "answer": "token",
+    "line": "He gave me a small token of appreciation."
+  },
+  "w|tornado": {
+    "kind": "word",
+    "type": "type",
+    "name": "tornado",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "회오리바람",
+    "answer": "tornado",
+    "line": "The tornado destroyed several houses in the town."
+  },
+  "w|twilight": {
+    "kind": "word",
+    "type": "type",
+    "name": "twilight",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "황혼",
+    "answer": "twilight",
+    "line": "The city looks magical at twilight."
+  },
+  "w|undergo": {
+    "kind": "word",
+    "type": "type",
+    "name": "undergo",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "겪다",
+    "answer": "undergo",
+    "line": "She will undergo surgery next week."
+  },
+  "w|unprecedented": {
+    "kind": "word",
+    "type": "type",
+    "name": "unprecedented",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전례 없는",
+    "answer": "unprecedented",
+    "line": "The city faced an unprecedented crisis last year."
+  },
+  "w|vocabulary": {
+    "kind": "word",
+    "type": "type",
+    "name": "vocabulary",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "어휘",
+    "answer": "vocabulary",
+    "line": "Reading helps to build your vocabulary."
+  },
+  "w|willingness": {
+    "kind": "word",
+    "type": "type",
+    "name": "willingness",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "기꺼이 함",
+    "answer": "willingness",
+    "line": "Her willingness to help impressed everyone."
+  },
+  "w|worthless": {
+    "kind": "word",
+    "type": "type",
+    "name": "worthless",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가치 없는",
+    "answer": "worthless",
+    "line": "He felt completely worthless after losing his job."
+  },
+  "w|yacht": {
+    "kind": "word",
+    "type": "type",
+    "name": "yacht",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "요트",
+    "answer": "yacht",
+    "line": "They sailed their new yacht around the bay."
+  },
+  "w|zoom": {
+    "kind": "word",
+    "type": "type",
+    "name": "zoom",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "확대",
+    "answer": "zoom",
+    "line": "Can you show me how to use the zoom on this camera?"
+  }
+}

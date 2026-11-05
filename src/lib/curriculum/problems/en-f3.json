@@ -1,0 +1,194 @@
+{
+  "en-3-02": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "First, ___; then, ___; finally, ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "먼저 손을 씻고, 장갑을 낀 후, 절차를 시작하세요.",
+    "answer": "First, wash your hands; then, put on gloves; finally, start the procedure.",
+    "why": "순서를 말할 때는 First, wash your hands; then, put on gloves; finally, start the procedure처럼 각 단계에 동사 원형을 쓰고 procedure 앞에 the를 붙여요.",
+    "options": [
+      "First, washing your hands; then, put on gloves; finally, start the procedure.",
+      "First, wash your hands; then, put on gloves; finally, start procedure.",
+      "First, wash your hands; then, put on gloves; finally, start the procedure.",
+      "First, your hands wash; then, gloves put on; finally, the procedure start."
+    ],
+    "line": "First, wash your hands; then, put on gloves; finally, start the procedure."
+  },
+  "en-3-03": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I'm calling because ___, and I'd like you to ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "주문이 늦어서 전화드렸고, 확인해주셨으면 해요.",
+    "answer": "I'm calling because my order is late, and I'd like you to check on it.",
+    "why": "문제와 부탁을 함께 말할 때는 I'm calling because my order is late, and I'd like you to check on it처럼 because 뒤에 상황을 쓰고 to 뒤에 동사 원형을 써요.",
+    "options": [
+      "I'm calling because my order is late, and I'd like you to check on it.",
+      "I'm calling because order is late, and I'd like you to check on it.",
+      "I'm calling because my order is late, and I'd like you to checking on it.",
+      "I'm calling because my order late is, and I'd like you to check on it."
+    ],
+    "line": "I'm calling because my order is late, and I'd like you to check on it."
+  },
+  "en-3-04": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "If you ___, ___ will ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "쉬면 기분이 나아질 거야.",
+    "answer": "If you take a break, you will feel better.",
+    "why": "조건과 결과는 If you take a break, you will feel better처럼 if절에는 현재 동사 take를 쓰고 break 앞에 a를 붙이며 결과에는 will을 써요.",
+    "options": [
+      "If you taking a break, you will feel better.",
+      "If you take break, you will feel better.",
+      "If you take a break, you will better feel.",
+      "If you take a break, you will feel better."
+    ],
+    "line": "If you take a break, you will feel better."
+  },
+  "en-3-05": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "___ said (that) ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "의사 선생님이 잠을 더 자라고 하셨어.",
+    "answer": "My doctor said that I should get more sleep.",
+    "why": "다른 사람 말을 전할 때는 My doctor said that I should get more sleep처럼 said 뒤에 전달할 내용을 써요.",
+    "options": [
+      "My doctor say that I should get more sleep.",
+      "My doctor said that I should get more sleep.",
+      "Doctor said that I should get more sleep.",
+      "My doctor that said I should get more sleep."
+    ],
+    "line": "My doctor said that I should get more sleep."
+  },
+  "en-3-06": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Have you ever ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "한국 음식을 먹어본 적 있어요?",
+    "answer": "Have you ever tried Korean food?",
+    "why": "경험을 물을 때는 Have you ever tried Korean food처럼 ever 뒤에 과거분사 tried를 써요.",
+    "options": [
+      "Have you ever try Korean food?",
+      "Have you ever tried a Korean food?",
+      "Have you ever tried Korean food?",
+      "Have ever you tried Korean food?"
+    ],
+    "line": "Have you ever tried Korean food?"
+  },
+  "en-3-07": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I haven't ___ yet.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "아직 제 소포를 받지 못했어요.",
+    "answer": "I haven't received my package yet.",
+    "why": "아직 못 했다는 말은 I haven't received my package yet처럼 haven't 뒤에 과거분사 received를 써요.",
+    "options": [
+      "I haven't received my package yet.",
+      "I haven't receive my package yet.",
+      "I haven't received package yet.",
+      "I haven't my package received yet."
+    ],
+    "line": "I haven't received my package yet."
+  },
+  "en-3-08": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It's someone who ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "프론트 데스크에서 일하는 분이에요.",
+    "answer": "It's someone who works at the front desk.",
+    "why": "사람을 가리킬 때는 It's someone who works at the front desk처럼 who 뒤에 works를 쓰고 desk 앞에 the를 붙여요.",
+    "options": [
+      "It's someone who work at the front desk.",
+      "It's someone who works at front desk.",
+      "It's someone who at the front desk works.",
+      "It's someone who works at the front desk."
+    ],
+    "line": "It's someone who works at the front desk."
+  },
+  "en-3-09": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It's a place where ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "자연을 즐기며 쉴 수 있는 곳이에요.",
+    "answer": "It's a place where you can relax and enjoy nature.",
+    "why": "장소를 설명할 때는 It's a place where you can relax and enjoy nature처럼 place 앞에 a가 오고 can 뒤에 동사 원형을 써요.",
+    "options": [
+      "It's place where you can relax and enjoy nature.",
+      "It's a place where you can relax and enjoy nature.",
+      "It's a place where you can relaxing and enjoy nature.",
+      "It's a place where you can relax and nature enjoy."
+    ],
+    "line": "It's a place where you can relax and enjoy nature."
+  },
+  "en-3-10": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Have you ever had ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "식중독 걸린 적 있어?",
+    "answer": "Have you ever had food poisoning?",
+    "why": "경험을 물을 때는 Have you ever had food poisoning처럼 ever 뒤에 과거분사 had를 써요.",
+    "options": [
+      "Have you ever have food poisoning?",
+      "Have you ever had a food poisoning?",
+      "Have you ever had food poisoning?",
+      "Have you had ever food poisoning?"
+    ],
+    "line": "Have you ever had food poisoning?"
+  },
+  "en-4-01": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I think ___ because ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "결말이 좋았다고 생각해, 왜냐하면 상상력을 자극했으니까.",
+    "answer": "I think the ending was great because it left a lot to the imagination.",
+    "why": "의견과 이유는 I think the ending was great because it left a lot to the imagination처럼 think 뒤에 의견을 쓰고 because로 이유를 달아요.",
+    "options": [
+      "I think the ending was great because it left a lot to the imagination.",
+      "I think ending was great because it left a lot to the imagination.",
+      "I think the ending was great because it leave a lot to the imagination.",
+      "I think the ending great was because it left a lot to the imagination."
+    ],
+    "line": "I think the ending was great because it left a lot to the imagination."
+  },
+  "en-4-02": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "If I were ___, I would ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "내가 매니저라면, 휴식 시간을 더 만들 거야.",
+    "answer": "If I were the manager, I would schedule more breaks.",
+    "why": "가정은 If I were the manager, I would schedule more breaks처럼 were를 쓰고 would 뒤에 동사 원형 schedule을 써요.",
+    "options": [
+      "If I were the manager, I would to schedule more breaks.",
+      "If I were the manager, I would scheduling more breaks.",
+      "If were I the manager, I would schedule more breaks.",
+      "If I were the manager, I would schedule more breaks."
+    ],
+    "line": "If I were the manager, I would schedule more breaks."
+  },
+  "en-4-03": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I wish I had ___; I should have ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "더 공부했으면 좋았을 텐데; 더 잘 준비했어야 했어.",
+    "answer": "I wish I had studied more; I should have prepared better.",
+    "why": "후회는 I wish I had studied more; I should have prepared better처럼 had와 should have 뒤에 과거분사를 써요.",
+    "options": [
+      "I wish I had study more; I should have prepared better.",
+      "I wish I had studied more; I should have prepared better.",
+      "I wish I had studied more; I should have prepare better.",
+      "I wish had I studied more; I have should prepared better."
+    ],
+    "line": "I wish I had studied more; I should have prepared better."
+  }
+}

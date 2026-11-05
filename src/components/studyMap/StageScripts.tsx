@@ -11,17 +11,14 @@ import { markPracticed } from "@/lib/curriculum/practicedToday";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { WayPicker, type Bubble } from "@/components/studyMap/WayPicker";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
-import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
 import { FrameLesson, type LessonSubject } from "@/components/studyMap/FrameLesson";
 import { readPool } from "@/lib/curriculum/exam";
 import { streakOf } from "@/lib/curriculum/nextStudy";
 import { readQuizLog } from "@/lib/curriculum/quizLogStore";
 import { ladderFor } from "@/lib/curriculum/stages/index";
-import { useCheckups } from "@/lib/curriculum/useCheckups";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
-import { allFramesFor, framesFor, framesOfScript, type Frame } from "@/lib/curriculum/frames";
+import { allFramesFor, framesOfScript } from "@/lib/curriculum/frames";
 import { frameUsed } from "@/lib/curriculum/scriptBank";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { TTSButton } from "@/components/TTSButton";
@@ -70,13 +67,8 @@ import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
  * 3~4단계 상대 줄은 판마다 바뀐다(alt). 5단계는 goal과 "통화로 해 보기"(그 상황으로 AI 통화).
  */
 
-type Method = "frame" | "recall" | "situation" | "expression" | "grammar";
-
-/** 단계 연습 방식 아이콘(2026-10-30 사용자 "아이콘으로 구분해줘") — 이름은 읽어 주기(name)로만. */
-const SHOW_RECALL_WAY = false;
+/** 표현 목록은 Quizbank 어휘로 옮김(2026-11-03). 표현 대본은 상황 목록 끝에 붙인다. */
 const SHOW_EXPRESSION_WAY = false;
-const METHOD_ICON: Record<Method, string> = { frame: "🧩", recall: "🎯", situation: "🎭", expression: "🔤", grammar: "📐" };
-
 
 /** 오늘의 대본(서버가 고름): 문법 이름은 앱 언어, 표현은 학습 언어. */
 export type ScriptRecommend = {
@@ -85,45 +77,6 @@ export type ScriptRecommend = {
   why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" };
 };
 type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode; unclear?: string[]; pauses?: [string, number][]; stuck?: boolean };
-
-/** 상황 = 주고받는 대화: 첫 상황의 앞 두 줄(나 줄이 하나는 들도록). */
-export function situationBubbles(script: StageScript | undefined): Bubble[] {
-  if (!script) return [];
-  const at = Math.max(0, script.lines.findIndex((line) => line.who === "me") - 1);
-  return script.lines.slice(at, at + 2).map((line) => ({ side: line.who, text: line.text }));
-}
-
-/** 표현 = 한 줄 속 그 표현: 표현이 든 내 줄과 그 앞 줄, 표현은 칠함. */
-export function expressionBubbles(script: StageScript, expression = script.expressions[0]): Bubble[] {
-  const lower = (text: string) => text.toLowerCase();
-  const at = script.lines.findIndex((line) => line.who === "me" && (!expression || lower(line.text).includes(lower(expression))));
-  const mine = script.lines[at >= 0 ? at : script.lines.findIndex((line) => line.who === "me")];
-  if (!mine) return [];
-  const before = script.lines[script.lines.indexOf(mine) - 1];
-  const start = expression ? lower(mine.text).indexOf(lower(expression)) : -1;
-  const mark = start >= 0 && expression ? mine.text.slice(start, start + expression.length) : undefined;
-  return [...(before ? [{ side: before.who, text: before.text }] : []), { side: "me" as const, text: mine.text, mark }];
-}
-
-/** 문법 칸 = 그 문법이 든 예문 한 줄. */
-export function grammarBubbles(example: string): Bubble[] {
-  return example ? [{ side: "me" as const, text: example }] : [];
-}
-
-/** 문장구조 = 같은 틀에 빈칸만 바뀜: 예문 셋, 바뀐 곳은 칠함. */
-export function frameBubbles(frame: Frame): Bubble[] {
-  return frame.examples.slice(0, 3).map((example) => ({ side: "me" as const, text: example.text, mark: example.slot }));
-}
-
-/** 꺼내 쓰기 = 뜻(앱 언어)을 보고 익힌 틀로 말함: 뜻 한 줄 → 내 말. */
-export function recallBubbles(frame: Frame, locale: string): Bubble[] {
-  const example = frame.examples[frame.examples.length - 1];
-  if (!example) return [];
-  return [
-    { side: "them" as const, text: glossFor(example.gloss, locale), meaning: true },
-    { side: "me" as const, text: example.text, mark: example.slot },
-  ];
-}
 
 export function StageScripts({
   ui,
@@ -170,12 +123,9 @@ export function StageScripts({
   const [frameFor, setFrameFor] = useState<{ id: string; at: number; today?: boolean } | null>(null);
   // 지금 연 대본이 오늘 할 것에서 온 것인지(닫을 때 전면 광고를 항목 사이에 띄우지 않게).
   const [openToday, setOpenToday] = useState(false);
-  const [method, setMethod] = useState<Method>("frame");
-  const [recalling, setRecalling] = useState(false);
   /** 표현·문법 칸 수업(2026-11-01 설계 — 설명은 Stagebank 한 곳). */
   const [lesson, setLesson] = useState<LessonSubject | null>(null);
   const [lessonSeen, setLessonSeen] = useState(0);
-  const { known } = useCheckups(language);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
@@ -186,28 +136,13 @@ export function StageScripts({
     setOpenToday(Boolean(openFor.today));
     // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
     setFrameFor(target ? null : openFor);
-    // 연 것이 있는 방식 칩으로 옮겨 둔다(닫은 뒤 목록이 그 자리에).
-    setMethod(!target ? "frame" : isSituationScript(target) || !SHOW_EXPRESSION_WAY ? "situation" : "expression");
   }
   if (!scripts.length) return null;
   const situations = scripts.filter(isSituationScript);
   const extras = scripts.filter((script) => !isSituationScript(script));
-  const frames = framesFor(language, stage);
   const stageRow = ladderFor(language)?.stages.find((one) => one.order === stage);
   const stageExpressions = stageRow?.expressions ?? [];
   const stageGrammar = stageRow?.grammar ?? [];
-  // 문장구조 중심(2026-10-30, hub/drafts/frames-first-2026-10-30.md): 문장구조 → 꺼내 쓰기가 단계의 길, 상황·표현은 고를 수 있는 연습.
-  const learnedOrder = framesFor(language, stage).filter((frame) => passed.includes(frame.id)).map((frame) => frame.id);
-  const methods = [
-    // 방식 옆 n/m은 뺌(진척 숫자 삭제, 사용자 2026-10-30).
-    ...(frames.length ? [{ id: "frame" as const, name: ui.framesTitle, bubbles: frameBubbles(frames[0]!) }] : []),
-    // 🎯 꺼내 쓰기는 고르기에서 숨김(2026-11-02 사용자 "꺼내쓰기는 일단 숨기고") — 오늘 할 것의 꺼내 쓰기 칸·단계 조건은 그대로.
-    ...(frames.length && SHOW_RECALL_WAY ? [{ id: "recall" as const, name: ui.recallTitle, bubbles: recallBubbles(frames[0]!, locale) }] : []),
-    { id: "situation" as const, name: ui.stageScriptsTitle, bubbles: situationBubbles(situations[0]) },
-    // 🔤 표현은 Quizbank 어휘 탭으로 옮김(2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기") — 표현 대본은 🎭 상황 목록 끝에.
-    ...(SHOW_EXPRESSION_WAY && (extras.length || stageExpressions.length) ? [{ id: "expression" as const, name: ui.scriptsByExpression, count: "", bubbles: extras.length ? expressionBubbles(extras[0]!) : [] }] : []),
-    ...(stageGrammar.length ? [{ id: "grammar" as const, name: ui.partGrammar, count: "", bubbles: grammarBubbles(stageGrammar[0]!.example) }] : []),
-  ].map((one) => ({ ...one, label: METHOD_ICON[one.id] }));
   // 표현·문법 칸 목록: ✓ = 대화로 익힘(퀴즈 기록), 앎 = "알아요"로 넘김(다음 정기 시험에서 확인).
   void lessonSeen;
   const quizLog = readQuizLog(language);
@@ -320,30 +255,12 @@ export function StageScripts({
           <span aria-hidden className="text-caption text-slate-400 rtl:rotate-180">›</span>
         </button>
       ) : null}
-      {/* One button for the way to practise; its sheet shows each way as a tiny dialogue (2026-10-30, user). */}
-      <WayPicker ui={ui} ways={methods} value={method} onPick={setMethod} data="script-method" />
-      {method === "recall" ? (
-        <button
-          type="button"
-          data-recall-start
-          // 익힌 문장구조가 없으면 꺼내 쓸 것이 없다 — 눌러도 아무 일 없던 것(2026-11-02 사용자 "아예 아무것도 안 뜨는 것도") 대신 🧩 문장구조로 보낸다.
-          onClick={() => (learnedOrder.length ? setRecalling(true) : setMethod("frame"))}
-          className="flex items-center gap-3 rounded-xl border border-dashed border-line px-3 py-3 text-start hover:bg-white/5"
-        >
-          <span aria-hidden className="text-body text-ink">{learnedOrder.length ? "▶" : "🔒"}</span>
-          <span className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.recallTitle}</span>
-          {learnedOrder.length ? null : (
-            <span className="shrink-0 text-caption tabular-nums text-slate-400" title={ui.framesTitle}>{`🧩 0 ›`}</span>
-          )}
-        </button>
-      ) : null}
-      {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={learnedOrder} known={known} onClose={() => setRecalling(false)} /> : null}
-      {method === "situation" ? [...situations, ...(SHOW_EXPRESSION_WAY ? [] : extras)].map(row) : null}
-      {method === "expression" ? stageExpressions.map((expression) => itemRow({ key: `e|${expression}`, kind: "expression", stage }, expression)) : null}
-      {method === "expression" ? extras.map(row) : null}
-      {method === "grammar"
-        ? stageGrammar.map((grammar, index) => itemRow({ key: `g|${stage}:${index}`, kind: "grammar", stage, title: glossFor(grammar.name, locale) }, glossFor(grammar.name, locale), grammar.example))
-        : null}
+      {/* 방식 고르기는 숨김(2026-11-03). 문장구조·상황·문법이 같이 보이고, 대본의 말하기·읽기만 오늘 할 것 ⚙에 남는다. */}
+      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} />
+      {[...situations, ...(SHOW_EXPRESSION_WAY ? [] : extras)].map(row)}
+      {SHOW_EXPRESSION_WAY ? stageExpressions.map((expression) => itemRow({ key: `e|${expression}`, kind: "expression", stage }, expression)) : null}
+      {SHOW_EXPRESSION_WAY ? extras.map(row) : null}
+      {stageGrammar.map((grammar, index) => itemRow({ key: `g|${stage}:${index}`, kind: "grammar", stage, title: glossFor(grammar.name, locale) }, glossFor(grammar.name, locale), grammar.example))}
       {lesson ? (
         <FrameLesson
           key={lesson.key}
@@ -358,7 +275,6 @@ export function StageScripts({
           }}
         />
       ) : null}
-      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} listHidden={method !== "frame"} />
       {open ? (
         <ScriptPlayer
           ui={ui}

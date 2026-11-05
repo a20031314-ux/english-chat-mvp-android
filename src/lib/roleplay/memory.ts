@@ -63,6 +63,8 @@ export function contextPrompt(input: {
   setting: string;
   previous: string;
   lines: SpokenLine[];
+  /** 학습자 기기의 오늘(YYYY-MM-DD). "어제"를 그 날짜로 적게. */
+  today: string;
 }): string {
   const transcript = input.lines
     .map((line) => `${line.who === "tutor" ? "You" : "Them"}: ${line.text}`)
@@ -85,11 +87,15 @@ Rewrite your notes to cover all of it. Keep only what you would need to carry on
 
 Plain sentences, in English, at most 80 words. Nothing about this being practice.
 
-Reply as JSON only: {"notes": "<your notes>"}`;
+Also write "facts": what you learned about their life — work, plans, places, people, things they did or like. Not grammar, not a sentence you corrected, not something you only suggested. One short English sentence each. Today is ${input.today}. When they said when it happened, write that day instead of a relative word. An empty list when nothing about their life was said.
+
+Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]}`;
 }
 
-/** The notes out of the model's answer, or null if there are none to use. */
-export function parseContext(raw: string): string | null {
+export type FoldedMemory = { notes: string; facts: string[] };
+
+/** 노트와, 다음 통화로 넘길 삶의 사실. 둘 다 비면 null. */
+export function parseMemory(raw: string): FoldedMemory | null {
   let parsed: unknown;
   try {
     parsed = JSON.parse(raw);
@@ -97,7 +103,20 @@ export function parseContext(raw: string): string | null {
     return null;
   }
   if (typeof parsed !== "object" || parsed === null) return null;
-  const notes = (parsed as { notes?: unknown }).notes;
-  if (typeof notes !== "string" || !notes.trim()) return null;
-  return notes.trim().slice(0, MAX_CONTEXT_CHARS);
+  const record = parsed as { notes?: unknown; facts?: unknown };
+  const notes = typeof record.notes === "string" ? record.notes.trim().slice(0, MAX_CONTEXT_CHARS) : "";
+  const facts = Array.isArray(record.facts)
+    ? record.facts
+        .filter((fact): fact is string => typeof fact === "string")
+        .map((fact) => fact.trim().slice(0, 180))
+        .filter(Boolean)
+        .slice(0, 8)
+    : [];
+  if (!notes && facts.length === 0) return null;
+  return { notes, facts };
+}
+
+/** The notes out of the model's answer, or null if there are none to use. */
+export function parseContext(raw: string): string | null {
+  return parseMemory(raw)?.notes || null;
 }

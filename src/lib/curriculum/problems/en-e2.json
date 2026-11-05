@@ -1,0 +1,398 @@
+{
+  "e|how was your weekend": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "how was your weekend",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕, 주말 잘 보냈어?",
+    "before": "Hi, ",
+    "after": "?",
+    "answer": "how was your weekend",
+    "why": "지난 주말을 묻는 말은 과거형 was를 써서 how was your weekend예요.",
+    "options": [
+      "how were your weekend",
+      "how was your weekend",
+      "how was you weekend",
+      "how did your weekend"
+    ],
+    "line": "Hi, how was your weekend?"
+  },
+  "e|it was fun": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it was fun",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리는 밖에서 놀았고 재미있었어요.",
+    "before": "We played outside and ",
+    "after": ".",
+    "answer": "it was fun",
+    "why": "과거에 재미있었다는 평은 it was fun이에요.",
+    "options": [
+      "it were fun",
+      "it was fun",
+      "it was a fun",
+      "it is been fun"
+    ],
+    "line": "We played outside and it was fun."
+  },
+  "e|not bad at all": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "not bad at all",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "네 그림이 정말 좋아.",
+    "before": "Your drawing is ",
+    "after": ".",
+    "answer": "not bad at all",
+    "why": "전혀 나쁘지 않다는 뜻으로 not bad 뒤에 at all을 붙이면 not bad at all이에요.",
+    "options": [
+      "not bad in all",
+      "not bad at all",
+      "no bad at all",
+      "not badly at all"
+    ],
+    "line": "Your drawing is not bad at all."
+  },
+  "e|what are you up to": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "what are you up to",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕, 이번 주말에 뭐 할 거야?",
+    "before": "Hi, ",
+    "after": " this weekend?",
+    "answer": "what are you up to",
+    "why": "지금 뭐 하는지 물을 때는 what are you up to예요.",
+    "options": [
+      "what you are up to",
+      "what are you up to",
+      "what do you up to",
+      "what are you up on"
+    ],
+    "line": "Hi, what are you up to this weekend?"
+  },
+  "e|are you free on": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "are you free on",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "금요일 밤에 시간 있어요?",
+    "before": "Hi, ",
+    "after": " Friday night?",
+    "answer": "are you free on",
+    "why": "요일에 시간이 있는지 물을 때는 요일 앞에 on을 둔 are you free on이에요.",
+    "options": [
+      "are you free in",
+      "are you free on",
+      "is you free on",
+      "are you free at"
+    ],
+    "line": "Hi, are you free on Friday night?"
+  },
+  "e|sounds good": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "sounds good",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "다섯 시에 공원에서 만나는 거 좋아요.",
+    "before": "We can meet at the park at five, ",
+    "after": ".",
+    "answer": "sounds good",
+    "why": "그 제안이 좋다는 대답은 sounds good이에요.",
+    "options": [
+      "sounds well",
+      "sounds good",
+      "it sound good",
+      "sounds a good"
+    ],
+    "line": "We can meet at the park at five, sounds good."
+  },
+  "e|let's meet at": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "let's meet at",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "학교 끝나고 공원에서 만나자.",
+    "before": "",
+    "after": " the park after school.",
+    "answer": "Let's meet at",
+    "why": "만날 장소를 제안할 때는 Let's meet at 뒤에 장소를 둬요.",
+    "options": [
+      "Let's meeting at",
+      "Let's meet at",
+      "Let's to meet at",
+      "Let meet at"
+    ],
+    "line": "Let's meet at the park after school."
+  },
+  "e|see you then": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "see you then",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "영화가 일곱 시에 시작하니까 그때 보자.",
+    "before": "The movie starts at seven, ",
+    "after": ".",
+    "answer": "see you then",
+    "why": "정해 둔 그 시각에 보자고 할 때는 see you then이에요.",
+    "options": [
+      "see you after",
+      "see you then",
+      "see you that",
+      "sees you then"
+    ],
+    "line": "The movie starts at seven, see you then."
+  },
+  "e|maybe next time": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "maybe next time",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "미안해, 다음에 같이 놀 수 있을 거야.",
+    "before": "Sorry, ",
+    "after": " we can play together.",
+    "answer": "maybe next time",
+    "why": "이번은 어렵고 다음을 기약할 때는 maybe next time이에요.",
+    "options": [
+      "maybe in next time",
+      "maybe next time",
+      "maybe a next time",
+      "maybe next times"
+    ],
+    "line": "Sorry, maybe next time we can play together."
+  },
+  "e|a bit expensive": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "a bit expensive",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이 셔츠는 내가 내고 싶은 것보다 좀 비싸요.",
+    "before": "This shirt is ",
+    "after": " for me.",
+    "answer": "a bit expensive",
+    "why": "조금 비싸다는 정도는 a bit expensive예요.",
+    "options": [
+      "a bit of expensive",
+      "a bit expensive",
+      "a bits expensive",
+      "an bit expensive"
+    ],
+    "line": "This shirt is a bit expensive for me."
+  },
+  "e|a little cheaper": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "a little cheaper",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "내 집세가 조금 더 쌌으면 좋겠어요.",
+    "before": "I wish my rent was ",
+    "after": ".",
+    "answer": "a little cheaper",
+    "why": "조금 더 싸다는 비교는 a little cheaper예요.",
+    "options": [
+      "a little more cheaper",
+      "a little cheaper",
+      "a little cheapest",
+      "a few cheaper"
+    ],
+    "line": "I wish my rent was a little cheaper."
+  },
+  "e|which one is better": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "which one is better",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 셔츠 두 개가 있어, 어떤 게 더 나아?",
+    "before": "I have two shirts, ",
+    "after": "?",
+    "answer": "which one is better",
+    "why": "둘 중 더 나은 쪽을 물을 때는 which one is better예요.",
+    "options": [
+      "which one is more better",
+      "which one is better",
+      "which one are better",
+      "which one is gooder"
+    ],
+    "line": "I have two shirts, which one is better?"
+  },
+  "e|for here or to go": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "for here or to go",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "여기서 드시겠어요, 아니면 포장하시겠어요?",
+    "before": "Hi, ",
+    "after": "?",
+    "answer": "for here or to go",
+    "why": "여기서 드실지 포장하실지 물을 때는 for here or to go예요.",
+    "options": [
+      "for here or for go",
+      "for here or to go",
+      "in here or to go",
+      "for here or going"
+    ],
+    "line": "Hi, for here or to go?"
+  },
+  "e|with oat milk": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "with oat milk",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "커피에 일반 우유 대신 오트 밀크를 넣어 주세요.",
+    "before": "Can I get my coffee ",
+    "after": "?",
+    "answer": "with oat milk",
+    "why": "오트 밀크를 넣어 달라는 말은 with oat milk예요.",
+    "options": [
+      "with an oat milk",
+      "with oat milk",
+      "in oat milk",
+      "by oat milk"
+    ],
+    "line": "Can I get my coffee with oat milk?"
+  },
+  "e|by the way": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "by the way",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "그런데 혹시 우산 있어요?",
+    "before": "",
+    "after": ", do you have an umbrella?",
+    "answer": "By the way",
+    "why": "하던 말에 새 이야기를 덧붙일 때는 By the way로 시작해요.",
+    "options": [
+      "By a way",
+      "By the way",
+      "By the ways",
+      "By an way"
+    ],
+    "line": "By the way, do you have an umbrella?"
+  },
+  "e|how long does it take": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "how long does it take",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "공원까지 걸어서 얼마나 걸리는지 알고 싶어요.",
+    "before": "",
+    "after": " to walk to the park?",
+    "answer": "How long does it take",
+    "why": "걸리는 시간을 물을 때는 How long does it take예요.",
+    "options": [
+      "How long it takes",
+      "How long does it take",
+      "How long is it take",
+      "How long does it took"
+    ],
+    "line": "How long does it take to walk to the park?"
+  },
+  "e|on the way": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "on the way",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "피자가 지금 오고 있어요.",
+    "before": "The pizza is ",
+    "after": ".",
+    "answer": "on the way",
+    "why": "지금 오는 중이라는 말은 on the way예요.",
+    "options": [
+      "on the ways",
+      "on the way",
+      "on a way",
+      "at the way"
+    ],
+    "line": "The pizza is on the way."
+  },
+  "e|last night": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "last night",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "어젯밤에 마당에서 고양이를 봤어.",
+    "before": "I saw a cat in the yard ",
+    "after": ".",
+    "answer": "last night",
+    "why": "어제 밤을 가리킬 때는 last night예요.",
+    "options": [
+      "yesterday night",
+      "last night",
+      "in last night",
+      "the last night"
+    ],
+    "line": "I saw a cat in the yard last night."
+  },
+  "e|next weekend": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "next weekend",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 다음 주말에 할머니를 볼 거예요.",
+    "before": "I will see my grandma ",
+    "after": ".",
+    "answer": "next weekend",
+    "why": "다가오는 주말을 가리킬 때는 next weekend예요.",
+    "options": [
+      "in next weekend",
+      "next weekend",
+      "at next weekend",
+      "on next weekend"
+    ],
+    "line": "I will see my grandma next weekend."
+  },
+  "e|what happened": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "what happened",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "네 신발에 무슨 일이 있었어?",
+    "before": "",
+    "after": " to your shoe?",
+    "answer": "What happened",
+    "why": "무슨 일이 있었는지 물을 때는 과거형 What happened예요.",
+    "options": [
+      "What did happened",
+      "What happened",
+      "What was happened",
+      "What happens did"
+    ],
+    "line": "What happened to your shoe?"
+  },
+  "e|that's too bad": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "that's too bad",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "모자를 잃어버렸다니 안됐구나.",
+    "before": "You lost your hat? ",
+    "after": ".",
+    "answer": "That's too bad",
+    "why": "안타깝다는 말은 That's too bad예요.",
+    "options": [
+      "That's too worse",
+      "That's too bad",
+      "That's a too bad",
+      "That's too badly"
+    ],
+    "line": "You lost your hat? That's too bad."
+  },
+  "e|let me check": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "let me check",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "버스가 도착했는지 확인해 볼게요.",
+    "before": "",
+    "after": " if the bus is here.",
+    "answer": "Let me check",
+    "why": "내가 확인해 보겠다는 말은 Let me check예요.",
+    "options": [
+      "Let me to check",
+      "Let me check",
+      "Let's me check",
+      "Let my check"
+    ],
+    "line": "Let me check if the bus is here."
+  }
+}

@@ -1,0 +1,2802 @@
+{
+ "e|a gente se fala": [
+  {
+   "text": "Se precisar de alguma coisa, a gente se fala mais tarde.",
+   "en": "If you need anything, we’ll talk later.",
+   "ko": "필요한 게 있으면 우리 나중에 얘기해요.",
+   "blank": "a gente se fala"
+  },
+  {
+   "text": "Vou sair agora, mas a gente se fala amanhã.",
+   "en": "I’m leaving now, but we’ll talk tomorrow.",
+   "ko": "지금 나가지만 우리 내일 얘기해요.",
+   "blank": "a gente se fala"
+  },
+  {
+   "text": "Qualquer novidade, a gente se fala pelo grupo.",
+   "en": "If there’s any news, we’ll talk in the group.",
+   "ko": "새 소식 있으면 우리 단체 채팅에서 얘기해요.",
+   "blank": "a gente se fala"
+  }
+ ],
+ "e|a longo prazo": [
+  {
+   "text": "Economizar dinheiro é importante a longo prazo.",
+   "en": "Saving money is important in the long run.",
+   "ko": "돈을 저축하는 것은 장기적으로 중요해.",
+   "blank": "a longo prazo"
+  },
+  {
+   "text": "Você acha que esse investimento vai dar certo a longo prazo?",
+   "en": "Do you think this investment will work out in the long run?",
+   "ko": "이 투자가 장기적으로 효과가 있을 것 같아?",
+   "blank": "a longo prazo"
+  },
+  {
+   "text": "Comer saudável traz benefícios a longo prazo.",
+   "en": "Eating healthy brings benefits in the long run.",
+   "ko": "건강하게 먹는 것은 장기적으로 이점이 있어.",
+   "blank": "a longo prazo"
+  }
+ ],
+ "e|a que horas": [
+  {
+   "text": "Oi, a que horas começa o filme?",
+   "en": "Hi, what time does the movie start?",
+   "ko": "안녕, 영화가 몇 시에 시작해?",
+   "blank": "a que horas"
+  },
+  {
+   "text": "A que horas você vai sair hoje?",
+   "en": "What time are you leaving today?",
+   "ko": "너 오늘 몇 시에 나갈 거야?",
+   "blank": "A que horas"
+  },
+  {
+   "text": "A que horas é o almoço amanhã?",
+   "en": "What time is lunch tomorrow?",
+   "ko": "내일 점심이 몇 시야?",
+   "blank": "A que horas"
+  }
+ ],
+ "e|a questão é": [
+  {
+   "text": "A questão é como vamos resolver isso juntos.",
+   "en": "The question is how we are going to solve this together.",
+   "ko": "문제는 우리가 이것을 어떻게 함께 해결할 것인가야.",
+   "blank": "A questão é"
+  },
+  {
+   "text": "A questão é se vai chover hoje ou não.",
+   "en": "The question is whether it will rain today or not.",
+   "ko": "문제는 오늘 비가 올지 아닐지야.",
+   "blank": "A questão é"
+  },
+  {
+   "text": "A questão é que não temos tempo suficiente.",
+   "en": "The point is that we don't have enough time.",
+   "ko": "문제는 우리가 충분한 시간이 없다는 거야.",
+   "blank": "A questão é"
+  }
+ ],
+ "e|aconteceu um problema": [
+  {
+   "text": "Desculpe, aconteceu um problema com o pedido.",
+   "en": "Sorry, there was a problem with the order.",
+   "ko": "죄송합니다, 주문에 문제가 발생했습니다.",
+   "blank": "aconteceu um problema"
+  },
+  {
+   "text": "Aconteceu um problema no elevador, precisamos esperar.",
+   "en": "There was a problem with the elevator, we need to wait.",
+   "ko": "엘리베이터에 문제가 생겨서 기다려야 해요.",
+   "blank": "Aconteceu um problema"
+  },
+  {
+   "text": "Oi, aconteceu um problema na internet aqui.",
+   "en": "Hi, there was a problem with the internet here.",
+   "ko": "안녕하세요, 여기 인터넷에 문제가 발생했어요.",
+   "blank": "aconteceu um problema"
+  }
+ ],
+ "e|ainda bem": [
+  {
+   "text": "Ainda bem que você chegou cedo.",
+   "en": "Good thing you arrived early.",
+   "ko": "네가 일찍 와서 다행이야.",
+   "blank": "Ainda bem"
+  },
+  {
+   "text": "Está chovendo, mas ainda bem que trouxe guarda-chuva.",
+   "en": "It's raining, but good thing I brought an umbrella.",
+   "ko": "비가 오는데 우산을 가져와서 다행이야.",
+   "blank": "ainda bem"
+  },
+  {
+   "text": "Ainda bem que terminou o trabalho a tempo.",
+   "en": "Good thing you finished the work on time.",
+   "ko": "제시간에 일을 끝내서 다행이야.",
+   "blank": "Ainda bem"
+  }
+ ],
+ "e|aliás": [
+  {
+   "text": "Aliás, você já viu o novo restaurante na esquina?",
+   "en": "By the way, have you seen the new restaurant on the corner?",
+   "ko": "그런데, 너 모퉁이에 새로 생긴 식당 봤어?",
+   "blank": "Aliás"
+  },
+  {
+   "text": "Não gostei do filme, aliás, achei bem cansativo.",
+   "en": "I didn’t like the movie, actually, I found it quite tiring.",
+   "ko": "나는 그 영화가 마음에 들지 않았어, 사실 꽤 지루했어.",
+   "blank": "aliás"
+  },
+  {
+   "text": "Essa blusa ficou ótima em você, aliás, onde você comprou?",
+   "en": "That shirt looks great on you, by the way, where did you buy it?",
+   "ko": "그 셔츠 너한테 정말 잘 어울려, 그런데 어디서 샀어?",
+   "blank": "aliás"
+  }
+ ],
+ "e|até amanhã": [
+  {
+   "text": "Vamos conversar mais até amanhã.",
+   "en": "Let’s talk more tomorrow.",
+   "ko": "우리 내일까지 더 이야기하자.",
+   "blank": "até amanhã"
+  },
+  {
+   "text": "Deixo o livro com você até amanhã.",
+   "en": "I’ll leave the book with you until tomorrow.",
+   "ko": "책은 내일까지 네가 가지고 있어.",
+   "blank": "até amanhã"
+  },
+  {
+   "text": "Fico na cidade até amanhã.",
+   "en": "I stay in the city until tomorrow.",
+   "ko": "나는 내일까지 이 도시에 머물러요.",
+   "blank": "até amanhã"
+  }
+ ],
+ "e|até logo": [
+  {
+   "text": "Vou para casa, até logo.",
+   "en": "I am going home, see you soon.",
+   "ko": "집에 가, 또 봐요.",
+   "blank": "até logo"
+  },
+  {
+   "text": "Terminei minha aula, até logo.",
+   "en": "I finished my class, see you soon.",
+   "ko": "수업 끝났어요, 또 봐요.",
+   "blank": "até logo"
+  },
+  {
+   "text": "Preciso sair agora, até logo.",
+   "en": "I need to leave now, see you soon.",
+   "ko": "지금 나가야 해요, 또 봐요.",
+   "blank": "até logo"
+  }
+ ],
+ "e|beleza": [
+  {
+   "text": "Oi, tudo beleza?",
+   "en": "Hi, how's it going?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "beleza"
+  },
+  {
+   "text": "Chegou cedo, beleza.",
+   "en": "You arrived early, okay.",
+   "ko": "일찍 도착했네, 알겠어.",
+   "blank": "beleza"
+  },
+  {
+   "text": "Pode deixar comigo, beleza.",
+   "en": "Leave it to me, okay.",
+   "ko": "나한테 맡겨, 알겠어.",
+   "blank": "beleza"
+  }
+ ],
+ "e|boa noite": [
+  {
+   "text": "Boa noite, até amanhã.",
+   "en": "Good night, see you tomorrow.",
+   "ko": "잘 자, 내일 봐.",
+   "blank": "Boa noite"
+  },
+  {
+   "text": "Oi, boa noite, tudo bem?",
+   "en": "Hi, good night, how are you?",
+   "ko": "안녕, 좋은 밤이야, 잘 지내?",
+   "blank": "boa noite"
+  },
+  {
+   "text": "Boa noite, estou indo dormir.",
+   "en": "Good night, I am going to sleep.",
+   "ko": "잘 자, 나 이제 자러 가.",
+   "blank": "Boa noite"
+  }
+ ],
+ "e|boa tarde": [
+  {
+   "text": "Boa tarde, como vai?",
+   "en": "Good afternoon, how are you?",
+   "ko": "좋은 오후예요, 어떻게 지내세요?",
+   "blank": "Boa tarde"
+  },
+  {
+   "text": "Boa tarde, preciso de ajuda.",
+   "en": "Good afternoon, I need help.",
+   "ko": "좋은 오후예요, 도움이 필요해요.",
+   "blank": "Boa tarde"
+  },
+  {
+   "text": "Aqui está seu café, boa tarde.",
+   "en": "Here is your coffee, good afternoon.",
+   "ko": "여기 커피 있어요, 좋은 오후예요.",
+   "blank": "boa tarde"
+  }
+ ],
+ "e|bom dia": [
+  {
+   "text": "bom dia, mãe!",
+   "en": "good morning, mom!",
+   "ko": "좋은 아침, 엄마!",
+   "blank": "bom dia"
+  },
+  {
+   "text": "bom dia, eu trouxe pão.",
+   "en": "good morning, I brought bread.",
+   "ko": "좋은 아침, 나 빵 가져왔어.",
+   "blank": "bom dia"
+  },
+  {
+   "text": "bom dia, estou aqui.",
+   "en": "good morning, I am here.",
+   "ko": "좋은 아침, 나 여기 있어.",
+   "blank": "bom dia"
+  }
+ ],
+ "e|caiu a ficha": [
+  {
+   "text": "Demorou, mas finalmente caiu a ficha sobre o que o professor explicou ontem.",
+   "en": "It took a while, but I finally got what the teacher explained yesterday.",
+   "ko": "시간이 좀 걸렸지만, 어제 선생님이 설명한 걸 이제야 이해했어.",
+   "blank": "caiu a ficha"
+  },
+  {
+   "text": "Quando vi a foto antiga, caiu a ficha de quanto tempo já passou.",
+   "en": "When I saw the old photo, it hit me how much time has passed.",
+   "ko": "옛날 사진을 보고 나서야 시간이 얼마나 흘렀는지 실감했어.",
+   "blank": "caiu a ficha"
+  },
+  {
+   "text": "Só caiu a ficha que era feriado quando cheguei e encontrei tudo fechado.",
+   "en": "It only sank in that it was a holiday when I arrived and found everything closed.",
+   "ko": "도착해서 모든 게 닫혀 있는 걸 보고서야 오늘이 공휴일인 걸 깨달았어.",
+   "blank": "caiu a ficha"
+  }
+ ],
+ "e|chegar a um acordo": [
+  {
+   "text": "Acho que podemos chegar a um acordo sobre o horário do almoço.",
+   "en": "I think we can reach an agreement about the lunch time.",
+   "ko": "점심 시간에 대해 합의할 수 있을 것 같아.",
+   "blank": "chegar a um acordo"
+  },
+  {
+   "text": "Se todos estiverem de acordo, vamos tentar chegar a um acordo hoje.",
+   "en": "If everyone agrees, let's try to reach an agreement today.",
+   "ko": "모두 동의한다면 오늘 합의에 도달해 보자.",
+   "blank": "chegar a um acordo"
+  },
+  {
+   "text": "Foi difícil, mas conseguimos chegar a um acordo no final da reunião.",
+   "en": "It was difficult, but we managed to reach an agreement at the end of the meeting.",
+   "ko": "어려웠지만 회의 끝에 결국 합의에 도달했어.",
+   "blank": "chegar a um acordo"
+  }
+ ],
+ "e|chutar o balde": [
+  {
+   "text": "Depois de tanto estresse no trabalho, decidi chutar o balde e viajar por uma semana.",
+   "en": "After so much stress at work, I decided to throw in the towel and travel for a week.",
+   "ko": "직장에서 너무 스트레스를 받아서 그냥 포기하고 일주일 동안 여행 가기로 했어.",
+   "blank": "chutar o balde"
+  },
+  {
+   "text": "Às vezes tudo o que a gente precisa é chutar o balde e começar de novo.",
+   "en": "Sometimes all we need is to give up and start over.",
+   "ko": "가끔은 우리가 필요한 게 그냥 포기하고 다시 시작하는 거야.",
+   "blank": "chutar o balde"
+  },
+  {
+   "text": "Se você continuar assim, vai acabar querendo chutar o balde de vez.",
+   "en": "If you keep going like this, you'll end up wanting to give up for good.",
+   "ko": "계속 이렇게 하면 결국 완전히 포기하고 싶어질 거야.",
+   "blank": "chutar o balde"
+  }
+ ],
+ "e|com certeza": [
+  {
+   "text": "Posso ajudar com certeza.",
+   "en": "I can help for sure.",
+   "ko": "나는 확실히 도와줄 수 있어.",
+   "blank": "com certeza"
+  },
+  {
+   "text": "Você vai ao mercado hoje com certeza?",
+   "en": "Are you going to the market for sure today?",
+   "ko": "너 오늘 정말 시장에 갈 거야?",
+   "blank": "com certeza"
+  },
+  {
+   "text": "Com certeza, eu gosto de café.",
+   "en": "For sure, I like coffee.",
+   "ko": "확실히 나는 커피를 좋아해.",
+   "blank": "Com certeza"
+  }
+ ],
+ "e|com licença": [
+  {
+   "text": "Com licença, posso passar?",
+   "en": "Excuse me, can I pass?",
+   "ko": "실례합니다, 지나가도 될까요?",
+   "blank": "Com licença"
+  },
+  {
+   "text": "Com licença, onde fica o banheiro?",
+   "en": "Excuse me, where is the bathroom?",
+   "ko": "실례합니다, 화장실이 어디에 있나요?",
+   "blank": "Com licença"
+  },
+  {
+   "text": "Com licença, este lugar está ocupado?",
+   "en": "Excuse me, is this seat taken?",
+   "ko": "실례합니다, 이 자리에 누가 앉았나요?",
+   "blank": "Com licença"
+  }
+ ],
+ "e|com todo respeito": [
+  {
+   "text": "Com todo respeito, acho que você poderia ter avisado antes.",
+   "en": "With all due respect, I think you could have let me know earlier.",
+   "ko": "모든 존경을 담아 말씀드리지만, 미리 알려줄 수도 있었을 것 같아요.",
+   "blank": "Com todo respeito"
+  },
+  {
+   "text": "Com todo respeito, não concordo com essa decisão.",
+   "en": "With all due respect, I don't agree with this decision.",
+   "ko": "모든 존경을 담아 말씀드리지만, 저는 이 결정에 동의하지 않아요.",
+   "blank": "Com todo respeito"
+  },
+  {
+   "text": "Com todo respeito, posso sugerir outra ideia?",
+   "en": "With all due respect, may I suggest another idea?",
+   "ko": "모든 존경을 담아 말씀드리지만, 다른 아이디어를 제안해도 될까요?",
+   "blank": "Com todo respeito"
+  }
+ ],
+ "e|combinado": [
+  {
+   "text": "Vamos sair às oito, combinado?",
+   "en": "We are going out at eight, agreed?",
+   "ko": "여덟 시에 나가기로 했지, 알았지?",
+   "blank": "combinado"
+  },
+  {
+   "text": "Você traz o bolo e eu levo o suco, combinado.",
+   "en": "You bring the cake and I bring the juice, deal.",
+   "ko": "네가 케이크를 가져오고 내가 주스를 가져갈게, 약속이야.",
+   "blank": "combinado"
+  },
+  {
+   "text": "Combinado, amanhã te ligo.",
+   "en": "Agreed, I will call you tomorrow.",
+   "ko": "약속했어, 내일 전화할게.",
+   "blank": "Combinado"
+  }
+ ],
+ "e|concordo": [
+  {
+   "text": "Eu concordo com você.",
+   "en": "I agree with you.",
+   "ko": "나는 너에게 동의해.",
+   "blank": "concordo"
+  },
+  {
+   "text": "Sim, concordo que está frio hoje.",
+   "en": "Yes, I agree that it is cold today.",
+   "ko": "응, 오늘 춥다는 것에 동의해.",
+   "blank": "concordo"
+  },
+  {
+   "text": "Concordo, é melhor irmos agora.",
+   "en": "I agree, it's better for us to go now.",
+   "ko": "동의해, 지금 가는 게 더 좋아.",
+   "blank": "Concordo"
+  }
+ ],
+ "e|conversa fiada": [
+  {
+   "text": "Ele ficou meia hora só na conversa fiada com o porteiro.",
+   "en": "He spent half an hour just making small talk with the doorman.",
+   "ko": "그는 경비원과 삼십 분 동안 그냥 잡담만 했어.",
+   "blank": "conversa fiada"
+  },
+  {
+   "text": "Para de conversa fiada e vamos direto ao assunto.",
+   "en": "Stop with the small talk and let’s get to the point.",
+   "ko": "잡담 그만하고 바로 본론으로 가자.",
+   "blank": "conversa fiada"
+  },
+  {
+   "text": "Não tenho paciência para tanta conversa fiada logo cedo.",
+   "en": "I have no patience for so much small talk this early.",
+   "ko": "아침 일찍 이렇게 많은 잡담은 참을 수 없어.",
+   "blank": "conversa fiada"
+  }
+ ],
+ "e|correr atrás": [
+  {
+   "text": "Preciso correr atrás dos meus sonhos, não posso desistir agora.",
+   "en": "I need to chase my dreams, I can't give up now.",
+   "ko": "내 꿈을 좇아야 해, 지금 포기할 수 없어.",
+   "blank": "correr atrás"
+  },
+  {
+   "text": "Se você quiser melhorar, tem que correr atrás dos seus objetivos todos os dias.",
+   "en": "If you want to improve, you have to go after your goals every day.",
+   "ko": "더 나아지고 싶으면 매일 목표를 향해 달려야 해.",
+   "blank": "correr atrás"
+  },
+  {
+   "text": "Ela decidiu correr atrás de uma vaga melhor no trabalho.",
+   "en": "She decided to pursue a better position at work.",
+   "ko": "그녀는 직장에서 더 좋은 자리를 얻으려고 노력하기로 결심했어.",
+   "blank": "correr atrás"
+  }
+ ],
+ "e|dá para trocar": [
+  {
+   "text": "Essa camiseta está pequena, dá para trocar?",
+   "en": "This shirt is small, can I exchange it?",
+   "ko": "이 셔츠가 작아요, 교환할 수 있나요?",
+   "blank": "dá para trocar"
+  },
+  {
+   "text": "Comprei o ingresso errado, dá para trocar?",
+   "en": "I bought the wrong ticket, can I exchange it?",
+   "ko": "잘못된 티켓을 샀는데, 바꿀 수 있나요?",
+   "blank": "dá para trocar"
+  },
+  {
+   "text": "O presente veio quebrado, dá para trocar?",
+   "en": "The gift arrived broken, can I exchange it?",
+   "ko": "선물이 깨져서 왔어요, 교환할 수 있나요?",
+   "blank": "dá para trocar"
+  }
+ ],
+ "e|dar um jeitinho": [
+  {
+   "text": "O ônibus já saiu, mas vou tentar dar um jeitinho para chegar a tempo.",
+   "en": "The bus already left, but I'll try to find a way to get there on time.",
+   "ko": "버스는 이미 떠났지만, 제시간에 도착할 방법을 한번 찾아볼게.",
+   "blank": "dar um jeitinho"
+  },
+  {
+   "text": "Acho que consigo dar um jeitinho para encaixar você na minha agenda amanhã.",
+   "en": "I think I can find a way to fit you into my schedule tomorrow.",
+   "ko": "내일 내 일정에 너를 끼워넣을 방법을 찾아볼 수 있을 것 같아.",
+   "blank": "dar um jeitinho"
+  },
+  {
+   "text": "Se faltar um ingrediente, a gente pode dar um jeitinho na receita.",
+   "en": "If an ingredient is missing, we can find a way to adjust the recipe.",
+   "ko": "재료 하나가 없어도, 우리가 레시피를 어떻게든 조정할 수 있어.",
+   "blank": "dar um jeitinho"
+  }
+ ],
+ "e|dar um retorno": [
+  {
+   "text": "Se você puder dar um retorno sobre o orçamento, agradeço.",
+   "en": "If you can give feedback on the budget, I appreciate it.",
+   "ko": "예산에 대해 답변해주시면 감사하겠습니다.",
+   "blank": "dar um retorno"
+  },
+  {
+   "text": "Você pode dar um retorno assim que tiver novidades?",
+   "en": "Can you give feedback as soon as you have news?",
+   "ko": "소식이 생기면 바로 답변해줄 수 있어요?",
+   "blank": "dar um retorno"
+  },
+  {
+   "text": "Olá, você consegue dar um retorno sobre a proposta ainda hoje?",
+   "en": "Hi, can you give feedback about the proposal still today?",
+   "ko": "안녕하세요, 제안서에 대해 오늘 안으로 답변 주실 수 있나요?",
+   "blank": "dar um retorno"
+  }
+ ],
+ "e|de nada": [
+  {
+   "text": "Obrigado pela ajuda. De nada.",
+   "en": "Thank you for the help. You're welcome.",
+   "ko": "도와줘서 고마워. 천만에요.",
+   "blank": "De nada"
+  },
+  {
+   "text": "Obrigado pelo café. De nada.",
+   "en": "Thanks for the coffee. You're welcome.",
+   "ko": "커피 고마워요. 천만에요.",
+   "blank": "De nada"
+  },
+  {
+   "text": "Obrigado por esperar. De nada.",
+   "en": "Thanks for waiting. You're welcome.",
+   "ko": "기다려 줘서 고마워요. 천만에요.",
+   "blank": "De nada"
+  }
+ ],
+ "e|de repente": [
+  {
+   "text": "De repente, começou a chover forte.",
+   "en": "Suddenly, it started to rain heavily.",
+   "ko": "갑자기 비가 세차게 내리기 시작했어.",
+   "blank": "De repente"
+  },
+  {
+   "text": "De repente, ela ficou triste.",
+   "en": "Suddenly, she became sad.",
+   "ko": "갑자기 그녀가 슬퍼졌어.",
+   "blank": "De repente"
+  },
+  {
+   "text": "Por que você saiu de repente?",
+   "en": "Why did you leave suddenly?",
+   "ko": "왜 갑자기 나갔어?",
+   "blank": "de repente"
+  }
+ ],
+ "e|de vez em quando": [
+  {
+   "text": "Eu como chocolate de vez em quando.",
+   "en": "I eat chocolate from time to time.",
+   "ko": "나는 가끔 초콜릿을 먹어.",
+   "blank": "de vez em quando"
+  },
+  {
+   "text": "Gosto de caminhar no parque de vez em quando.",
+   "en": "I like to walk in the park from time to time.",
+   "ko": "나는 가끔 공원에서 산책하는 것을 좋아해.",
+   "blank": "de vez em quando"
+  },
+  {
+   "text": "Você viaja de vez em quando?",
+   "en": "Do you travel from time to time?",
+   "ko": "너는 가끔 여행하니?",
+   "blank": "de vez em quando"
+  }
+ ],
+ "e|deixa eu ver": [
+  {
+   "text": "Deixa eu ver se tem pão fresco na cozinha.",
+   "en": "Let me see if there is fresh bread in the kitchen.",
+   "ko": "주방에 신선한 빵이 있는지 내가 볼게.",
+   "blank": "Deixa eu ver"
+  },
+  {
+   "text": "Deixa eu ver o horário do próximo ônibus.",
+   "en": "Let me see the time of the next bus.",
+   "ko": "다음 버스 시간 내가 확인할게.",
+   "blank": "Deixa eu ver"
+  },
+  {
+   "text": "Deixa eu ver como ficou a foto que você tirou.",
+   "en": "Let me see how the photo you took turned out.",
+   "ko": "네가 찍은 사진이 어떻게 나왔는지 내가 볼게.",
+   "blank": "Deixa eu ver"
+  }
+ ],
+ "e|depende": [
+  {
+   "text": "Posso ir ao parque, mas depende do tempo.",
+   "en": "I can go to the park, but it depends on the weather.",
+   "ko": "나는 공원에 갈 수 있지만, 날씨에 따라 달라.",
+   "blank": "depende"
+  },
+  {
+   "text": "Você vai ao cinema hoje? Depende de terminar meu trabalho.",
+   "en": "Are you going to the movies today? It depends on finishing my work.",
+   "ko": "너 오늘 영화관 갈 거야? 내 일 끝나는 것에 달려 있어.",
+   "blank": "Depende"
+  },
+  {
+   "text": "A resposta depende da situação.",
+   "en": "The answer depends on the situation.",
+   "ko": "답은 상황에 따라 달라.",
+   "blank": "depende"
+  }
+ ],
+ "e|desculpa": [
+  {
+   "text": "Desculpa, não entendi.",
+   "en": "Sorry, I did not understand.",
+   "ko": "미안해요, 이해하지 못했어요.",
+   "blank": "Desculpa"
+  },
+  {
+   "text": "Desculpa, estou atrasado.",
+   "en": "Sorry, I am late.",
+   "ko": "미안해요, 늦었어요.",
+   "blank": "Desculpa"
+  },
+  {
+   "text": "Desculpa, posso passar?",
+   "en": "Sorry, can I pass?",
+   "ko": "미안해요, 지나가도 될까요?",
+   "blank": "Desculpa"
+  }
+ ],
+ "e|deu ruim": [
+  {
+   "text": "Tentei ligar o computador, mas deu ruim.",
+   "en": "I tried to turn on the computer, but it went wrong.",
+   "ko": "컴퓨터를 켜려고 했는데 잘 안 됐어.",
+   "blank": "deu ruim"
+  },
+  {
+   "text": "Ia pegar o ônibus, mas deu ruim e perdi o horário.",
+   "en": "I was going to catch the bus, but things went wrong and I missed the schedule.",
+   "ko": "버스를 타려다가 일이 꼬여서 시간표를 놓쳤어.",
+   "blank": "deu ruim"
+  },
+  {
+   "text": "Fiz a receita como estava escrito, só que deu ruim.",
+   "en": "I followed the recipe as it was written, but it didn't work out.",
+   "ko": "레시피대로 했는데 잘 안 됐어.",
+   "blank": "deu ruim"
+  }
+ ],
+ "e|e aí": [
+  {
+   "text": "Oi, e aí, tudo bem?",
+   "en": "Hi, how are you?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "e aí"
+  },
+  {
+   "text": "Cheguei, e aí, vamos começar?",
+   "en": "I'm here, so shall we start?",
+   "ko": "나 도착했어, 이제 시작할까?",
+   "blank": "e aí"
+  },
+  {
+   "text": "E aí, gostou do filme?",
+   "en": "So, did you like the movie?",
+   "ko": "그래서, 영화 어땠어?",
+   "blank": "E aí"
+  }
+ ],
+ "e|em compensação": [
+  {
+   "text": "Hoje está frio, em compensação o sol apareceu.",
+   "en": "Today it's cold, but on the other hand the sun came out.",
+   "ko": "오늘은 춥지만, 그 대신 해가 떴어.",
+   "blank": "em compensação"
+  },
+  {
+   "text": "Perdi o ônibus, em compensação cheguei mais cedo ao trabalho ontem.",
+   "en": "I missed the bus, but on the other hand I arrived at work earlier yesterday.",
+   "ko": "버스를 놓쳤지만, 그 대신 어제는 일찍 회사에 도착했어.",
+   "blank": "em compensação"
+  },
+  {
+   "text": "O restaurante está cheio, em compensação a comida é ótima.",
+   "en": "The restaurant is crowded, but on the other hand the food is great.",
+   "ko": "식당이 붐비지만, 그 대신 음식이 정말 좋아.",
+   "blank": "em compensação"
+  }
+ ],
+ "e|em resumo": [
+  {
+   "text": "Em resumo, precisamos terminar o projeto até sexta-feira.",
+   "en": "In short, we need to finish the project by Friday.",
+   "ko": "요약하면, 우리는 금요일까지 프로젝트를 끝내야 해.",
+   "blank": "Em resumo"
+  },
+  {
+   "text": "Em resumo, o filme foi divertido, mas um pouco longo.",
+   "en": "In short, the movie was fun but a bit long.",
+   "ko": "요약하자면, 영화는 재미있었지만 조금 길었어.",
+   "blank": "Em resumo"
+  },
+  {
+   "text": "Em resumo, ele não vai poder vir hoje.",
+   "en": "In short, he won't be able to come today.",
+   "ko": "요약하자면, 그는 오늘 올 수 없어.",
+   "blank": "Em resumo"
+  }
+ ],
+ "e|encher linguiça": [
+  {
+   "text": "Acho que essa palestra está só para encher linguiça.",
+   "en": "I think this lecture is just filling time with unnecessary content.",
+   "ko": "이 강의는 그냥 시간만 때우는 것 같아.",
+   "blank": "encher linguiça"
+  },
+  {
+   "text": "Não quero encher linguiça na apresentação, vou direto ao ponto.",
+   "en": "I don't want to add unnecessary information to the presentation, I'll get straight to the point.",
+   "ko": "발표에서 쓸데없는 말로 시간을 끌고 싶지 않아, 바로 요점만 말할 거야.",
+   "blank": "encher linguiça"
+  },
+  {
+   "text": "Professor, precisamos mesmo encher linguiça no trabalho ou pode ser mais objetivo?",
+   "en": "Professor, do we really need to add unnecessary details to the assignment or can it be more concise?",
+   "ko": "선생님, 과제에 꼭 쓸데없는 내용까지 넣어야 하나요, 아니면 간단하게 해도 되나요?",
+   "blank": "encher linguiça"
+  }
+ ],
+ "e|entendo seu ponto": [
+  {
+   "text": "Entendo seu ponto, mas acho que podemos tentar de outro jeito.",
+   "en": "I see your point, but I think we can try it another way.",
+   "ko": "네 말은 이해하지만, 우리가 다른 방법으로 해볼 수도 있을 것 같아.",
+   "blank": "Entendo seu ponto"
+  },
+  {
+   "text": "Entendo seu ponto, só que para mim não faz sentido.",
+   "en": "I see your point, but to me it doesn't make sense.",
+   "ko": "네 말은 이해하지만, 내게는 그게 의미가 없어.",
+   "blank": "Entendo seu ponto"
+  },
+  {
+   "text": "Entendo seu ponto e vou considerar o que você disse.",
+   "en": "I see your point and I'll consider what you said.",
+   "ko": "네 말은 이해했고, 네가 한 말을 고려해볼게.",
+   "blank": "Entendo seu ponto"
+  }
+ ],
+ "e|estou com dor de": [
+  {
+   "text": "Hoje estou com dor de cabeça.",
+   "en": "Today I have a headache.",
+   "ko": "오늘 나는 두통이 있어.",
+   "blank": "estou com dor de"
+  },
+  {
+   "text": "Estou com dor de barriga depois do almoço.",
+   "en": "I have a stomachache after lunch.",
+   "ko": "나는 점심 먹고 나서 배가 아파.",
+   "blank": "Estou com dor de"
+  },
+  {
+   "text": "Acho que estou com dor de garganta.",
+   "en": "I think I have a sore throat.",
+   "ko": "나는 목이 아픈 것 같아.",
+   "blank": "estou com dor de"
+  }
+ ],
+ "e|eu acho que": [
+  {
+   "text": "Eu acho que está começando a chover.",
+   "en": "I think it is starting to rain.",
+   "ko": "비가 오기 시작하는 것 같아.",
+   "blank": "Eu acho que"
+  },
+  {
+   "text": "Eu acho que ela vai gostar do presente.",
+   "en": "I think she will like the gift.",
+   "ko": "그녀가 선물을 좋아할 것 같아.",
+   "blank": "Eu acho que"
+  },
+  {
+   "text": "Eu acho que esqueci minha carteira em casa.",
+   "en": "I think I forgot my wallet at home.",
+   "ko": "집에 지갑을 두고 온 것 같아.",
+   "blank": "Eu acho que"
+  }
+ ],
+ "e|faz sentido": [
+  {
+   "text": "Acho que faz sentido economizar para viajar nas férias.",
+   "en": "I think it makes sense to save money for traveling during the holidays.",
+   "ko": "휴가 때 여행을 위해 돈을 저축하는 게 타당하다고 생각해.",
+   "blank": "faz sentido"
+  },
+  {
+   "text": "Se está chovendo, faz sentido levar um guarda-chuva.",
+   "en": "If it's raining, it makes sense to take an umbrella.",
+   "ko": "비가 오면 우산을 챙기는 게 타당하지.",
+   "blank": "faz sentido"
+  },
+  {
+   "text": "Faz sentido ficar cansado depois de tanto exercício?",
+   "en": "Does it make sense to feel tired after so much exercise?",
+   "ko": "운동을 많이 한 후에 피곤한 게 타당한가요?",
+   "blank": "Faz sentido"
+  }
+ ],
+ "e|fazer o quê": [
+  {
+   "text": "Está chovendo no dia do piquenique, fazer o quê.",
+   "en": "It's raining on picnic day, what can you do.",
+   "ko": "소풍 날에 비가 오네, 어쩔 수 없지.",
+   "blank": "fazer o quê"
+  },
+  {
+   "text": "O ônibus já foi, fazer o quê.",
+   "en": "The bus already left, what can you do.",
+   "ko": "버스가 이미 떠났어, 어쩔 수 없지.",
+   "blank": "fazer o quê"
+  },
+  {
+   "text": "Se a loja está fechada, fazer o quê.",
+   "en": "If the store is closed, what can you do.",
+   "ko": "가게가 닫혔으면, 어쩔 수 없지.",
+   "blank": "fazer o quê"
+  }
+ ],
+ "e|fazer vista grossa": [
+  {
+   "text": "Você vai fazer vista grossa para esse erro de novo?",
+   "en": "Are you going to turn a blind eye to this mistake again?",
+   "ko": "너 이번 실수 또 못 본 척할 거야?",
+   "blank": "fazer vista grossa"
+  },
+  {
+   "text": "Ele costuma fazer vista grossa quando vê alguém furando fila.",
+   "en": "He usually turns a blind eye when he sees someone cutting in line.",
+   "ko": "그는 누가 줄을 새치기해도 보통 못 본 척해.",
+   "blank": "fazer vista grossa"
+  },
+  {
+   "text": "Não dá para fazer vista grossa para esse barulho toda noite.",
+   "en": "We can't turn a blind eye to this noise every night.",
+   "ko": "매일 밤 이 소음을 못 본 척할 수는 없어.",
+   "blank": "fazer vista grossa"
+  }
+ ],
+ "e|fechou": [
+  {
+   "text": "Então, fechou para o almoço amanhã?",
+   "en": "So, are we set for lunch tomorrow?",
+   "ko": "그럼 내일 점심 약속 확정이야?",
+   "blank": "fechou"
+  },
+  {
+   "text": "Fechou, vejo você mais tarde no parque.",
+   "en": "Deal, I'll see you later at the park.",
+   "ko": "좋아, 나중에 공원에서 봐.",
+   "blank": "Fechou"
+  },
+  {
+   "text": "Se você conseguir os ingressos, fechou!",
+   "en": "If you get the tickets, it's a deal!",
+   "ko": "네가 표를 구하면, 그걸로 결정이야!",
+   "blank": "fechou"
+  }
+ ],
+ "e|fica pra próxima": [
+  {
+   "text": "Não deu pra ir hoje, fica pra próxima.",
+   "en": "I couldn't go today, maybe next time.",
+   "ko": "오늘은 못 갔어, 다음에 하자.",
+   "blank": "fica pra próxima"
+  },
+  {
+   "text": "Se não der certo agora, fica pra próxima.",
+   "en": "If it doesn't work out now, maybe next time.",
+   "ko": "지금 안 되면, 다음에 하자.",
+   "blank": "fica pra próxima"
+  },
+  {
+   "text": "O filme está cheio, fica pra próxima.",
+   "en": "The movie is full, maybe next time.",
+   "ko": "영화관이 꽉 찼어, 다음에 하자.",
+   "blank": "fica pra próxima"
+  }
+ ],
+ "e|ficar de boa": [
+  {
+   "text": "Hoje eu só quero ficar de boa em casa.",
+   "en": "Today I just want to chill at home.",
+   "ko": "오늘은 그냥 집에서 편하게 쉬고 싶어.",
+   "blank": "ficar de boa"
+  },
+  {
+   "text": "Depois da prova, vamos ficar de boa no parque?",
+   "en": "After the exam, shall we just relax at the park?",
+   "ko": "시험 끝나고 공원에서 그냥 편하게 있을래?",
+   "blank": "ficar de boa"
+  },
+  {
+   "text": "Tentei conversar com ela, mas ela só queria ficar de boa.",
+   "en": "I tried to talk to her, but she just wanted to take it easy.",
+   "ko": "나는 그녀와 얘기하려 했지만 그녀는 그냥 조용히 있고 싶어했어.",
+   "blank": "ficar de boa"
+  }
+ ],
+ "e|fim de semana": [
+  {
+   "text": "Vamos viajar no fim de semana.",
+   "en": "We are going to travel on the weekend.",
+   "ko": "우리는 주말에 여행을 갈 거야.",
+   "blank": "fim de semana"
+  },
+  {
+   "text": "O que você vai fazer no fim de semana?",
+   "en": "What are you going to do on the weekend?",
+   "ko": "주말에 뭐 할 거야?",
+   "blank": "fim de semana"
+  },
+  {
+   "text": "Eu gosto de descansar no fim de semana.",
+   "en": "I like to rest on the weekend.",
+   "ko": "나는 주말에 쉬는 것을 좋아해.",
+   "blank": "fim de semana"
+  }
+ ],
+ "e|fiquei sabendo": [
+  {
+   "text": "Fiquei sabendo que vai chover amanhã.",
+   "en": "I heard it's going to rain tomorrow.",
+   "ko": "내일 비가 온다고 들었어.",
+   "blank": "Fiquei sabendo"
+  },
+  {
+   "text": "Fiquei sabendo que você mudou de casa.",
+   "en": "I heard you moved to a new house.",
+   "ko": "네가 이사했다고 들었어.",
+   "blank": "Fiquei sabendo"
+  },
+  {
+   "text": "Fiquei sabendo da festa no sábado.",
+   "en": "I heard about the party on Saturday.",
+   "ko": "토요일 파티 소식을 들었어.",
+   "blank": "Fiquei sabendo"
+  }
+ ],
+ "e|ida e volta": [
+  {
+   "text": "O bilhete de ônibus é ida e volta.",
+   "en": "The bus ticket is round trip.",
+   "ko": "버스 표는 왕복입니다.",
+   "blank": "ida e volta"
+  },
+  {
+   "text": "Você quer passagem ida e volta para o Rio?",
+   "en": "Do you want a round trip ticket to Rio?",
+   "ko": "리우로 가는 왕복 티켓 원해요?",
+   "blank": "ida e volta"
+  },
+  {
+   "text": "O voo de ida e volta ficou mais barato hoje.",
+   "en": "The round trip flight is cheaper today.",
+   "ko": "오늘 왕복 항공권이 더 저렴해졌어요.",
+   "blank": "ida e volta"
+  }
+ ],
+ "e|inclusive": [
+  {
+   "text": "Todo mundo foi convidado para a festa, inclusive aquele vizinho novo.",
+   "en": "Everyone was invited to the party, including that new neighbor.",
+   "ko": "모두가 파티에 초대받았어, 그 새로운 이웃도 포함해서.",
+   "blank": "inclusive"
+  },
+  {
+   "text": "O museu estará aberto durante o feriado, inclusive no domingo.",
+   "en": "The museum will be open during the holiday, including on Sunday.",
+   "ko": "박물관은 휴일 동안 열려 있을 거야, 일요일도 포함해서.",
+   "blank": "inclusive"
+  },
+  {
+   "text": "Eu adoro frutas tropicais, inclusive manga e abacaxi.",
+   "en": "I love tropical fruits, including mango and pineapple.",
+   "ko": "나는 열대과일을 좋아해, 망고랑 파인애플도 포함해서.",
+   "blank": "inclusive"
+  }
+ ],
+ "e|levando em conta": [
+  {
+   "text": "Levando em conta o trânsito, talvez seja melhor sairmos mais cedo.",
+   "en": "Taking traffic into account, maybe it's better for us to leave earlier.",
+   "ko": "교통 상황을 고려하면 우리가 더 일찍 나가는 게 좋을 것 같아.",
+   "blank": "Levando em conta"
+  },
+  {
+   "text": "Levando em conta a previsão de chuva, vou levar um guarda-chuva.",
+   "en": "Taking the rain forecast into account, I will take an umbrella.",
+   "ko": "비 예보를 고려해서 우산을 챙길 거야.",
+   "blank": "Levando em conta"
+  },
+  {
+   "text": "Levando em conta o seu cansaço, podemos descansar um pouco antes de continuar?",
+   "en": "Taking your tiredness into account, can we rest a bit before continuing?",
+   "ko": "네가 피곤한 걸 고려해서, 계속하기 전에 잠깐 쉴 수 있을까?",
+   "blank": "Levando em conta"
+  }
+ ],
+ "e|mais devagar": [
+  {
+   "text": "Fale mais devagar, por favor.",
+   "en": "Speak more slowly, please.",
+   "ko": "좀 더 천천히 말해 주세요.",
+   "blank": "mais devagar"
+  },
+  {
+   "text": "Você pode andar mais devagar?",
+   "en": "Can you walk more slowly?",
+   "ko": "좀 더 천천히 걸을 수 있나요?",
+   "blank": "mais devagar"
+  },
+  {
+   "text": "Leia mais devagar para mim.",
+   "en": "Read more slowly for me.",
+   "ko": "저를 위해 좀 더 천천히 읽어 주세요.",
+   "blank": "mais devagar"
+  }
+ ],
+ "e|mandou bem": [
+  {
+   "text": "Você mandou bem na apresentação hoje.",
+   "en": "You did well in the presentation today.",
+   "ko": "너 오늘 발표에서 잘했어.",
+   "blank": "mandou bem"
+  },
+  {
+   "text": "Mandou bem escolhendo esse restaurante, adorei a comida.",
+   "en": "You did well choosing this restaurant, I loved the food.",
+   "ko": "이 식당 고른 거 잘했어, 음식 정말 마음에 들었어.",
+   "blank": "Mandou bem"
+  },
+  {
+   "text": "Mandou bem em lembrar de trazer o guarda-chuva, começou a chover agora.",
+   "en": "You did well to remember to bring the umbrella, it just started raining.",
+   "ko": "우산 챙긴 거 잘했어, 지금 비 오기 시작했거든.",
+   "blank": "Mandou bem"
+  }
+ ],
+ "e|me vê um": [
+  {
+   "text": "Oi, me vê um café, por favor.",
+   "en": "Hi, can I have a coffee, please?",
+   "ko": "안녕하세요, 커피 한 잔 주세요.",
+   "blank": "me vê um"
+  },
+  {
+   "text": "Me vê um pão quentinho.",
+   "en": "Can I have a warm bread?",
+   "ko": "따뜻한 빵 하나 주세요.",
+   "blank": "Me vê um"
+  },
+  {
+   "text": "Me vê um suco de laranja.",
+   "en": "Can I have an orange juice?",
+   "ko": "오렌지 주스 하나 주세요.",
+   "blank": "Me vê um"
+  }
+ ],
+ "e|na minha opinião": [
+  {
+   "text": "Na minha opinião, está muito frio hoje.",
+   "en": "In my opinion, it is very cold today.",
+   "ko": "내 생각에는 오늘 정말 춥다.",
+   "blank": "Na minha opinião"
+  },
+  {
+   "text": "Na minha opinião, precisamos de mais tempo.",
+   "en": "In my opinion, we need more time.",
+   "ko": "내 생각에는 우리가 시간이 더 필요하다.",
+   "blank": "Na minha opinião"
+  },
+  {
+   "text": "Na minha opinião, esse filme é bom.",
+   "en": "In my opinion, this movie is good.",
+   "ko": "내 생각에는 이 영화가 좋다.",
+   "blank": "Na minha opinião"
+  }
+ ],
+ "e|na real": [
+  {
+   "text": "Na real, eu não estou com tanta fome assim.",
+   "en": "Honestly, I'm not that hungry.",
+   "ko": "솔직히, 난 그렇게 배고프지 않아.",
+   "blank": "Na real"
+  },
+  {
+   "text": "Você, na real, quer mesmo ir à festa?",
+   "en": "Do you actually want to go to the party?",
+   "ko": "너, 사실 파티에 진짜 가고 싶어?",
+   "blank": "na real"
+  },
+  {
+   "text": "Achei fácil, mas na real foi bem complicado.",
+   "en": "I thought it was easy, but actually it was quite complicated.",
+   "ko": "난 쉬울 줄 알았는데, 사실 꽤 복잡했어.",
+   "blank": "na real"
+  }
+ ],
+ "e|não é à toa": [
+  {
+   "text": "Ele é muito respeitado no trabalho, não é à toa.",
+   "en": "He is very respected at work, it's not by chance.",
+   "ko": "그가 직장에서 매우 존경받는 건 우연이 아니야.",
+   "blank": "não é à toa"
+  },
+  {
+   "text": "Esse restaurante vive cheio, não é à toa.",
+   "en": "This restaurant is always packed, it's no coincidence.",
+   "ko": "이 식당이 항상 붐비는 건 우연이 아니야.",
+   "blank": "não é à toa"
+  },
+  {
+   "text": "Ela passou no exame difícil, não é à toa.",
+   "en": "She passed the difficult exam, it's not for nothing.",
+   "ko": "그녀가 어려운 시험에 합격한 건 그냥 이유가 있는 거야.",
+   "blank": "não é à toa"
+  }
+ ],
+ "e|não é bem assim": [
+  {
+   "text": "Acho que não é bem assim, precisamos conversar mais.",
+   "en": "I don't think it's quite like that, we need to talk more.",
+   "ko": "내 생각엔 꼭 그런 건 아니야, 우리 더 이야기해야 해.",
+   "blank": "não é bem assim"
+  },
+  {
+   "text": "Sei que você acha isso, mas não é bem assim.",
+   "en": "I know you think that, but it's not exactly like that.",
+   "ko": "네가 그렇게 생각하는 건 알지만, 꼭 그런 건 아니야.",
+   "blank": "não é bem assim"
+  },
+  {
+   "text": "Oi, você tem certeza? Porque não é bem assim.",
+   "en": "Hi, are you sure? Because that's not exactly how it is.",
+   "ko": "안녕, 확실해? 사실 꼭 그런 건 아니야.",
+   "blank": "não é bem assim"
+  }
+ ],
+ "e|não entendi": [
+  {
+   "text": "Desculpe, não entendi.",
+   "en": "Sorry, I did not understand.",
+   "ko": "미안해요, 이해하지 못했어요.",
+   "blank": "não entendi"
+  },
+  {
+   "text": "Oi, não entendi essa palavra.",
+   "en": "Hi, I did not understand this word.",
+   "ko": "안녕, 이 단어를 이해하지 못했어요.",
+   "blank": "não entendi"
+  },
+  {
+   "text": "Você pode repetir? Não entendi.",
+   "en": "Can you repeat? I did not understand.",
+   "ko": "다시 말해줄 수 있나요? 이해하지 못했어요.",
+   "blank": "Não entendi"
+  }
+ ],
+ "e|não está funcionando": [
+  {
+   "text": "A luz da sala não está funcionando.",
+   "en": "The room light is not working.",
+   "ko": "방 불이 작동하지 않아.",
+   "blank": "não está funcionando"
+  },
+  {
+   "text": "A máquina de café não está funcionando.",
+   "en": "The coffee machine is not working.",
+   "ko": "커피 머신이 작동하지 않아.",
+   "blank": "não está funcionando"
+  },
+  {
+   "text": "Meu computador não está funcionando.",
+   "en": "My computer is not working.",
+   "ko": "내 컴퓨터가 작동하지 않아.",
+   "blank": "não está funcionando"
+  }
+ ],
+ "e|não sei": [
+  {
+   "text": "Desculpa, não sei a resposta.",
+   "en": "Sorry, I don't know the answer.",
+   "ko": "미안해, 나는 답을 몰라.",
+   "blank": "não sei"
+  },
+  {
+   "text": "Não sei onde fica o banheiro.",
+   "en": "I don't know where the bathroom is.",
+   "ko": "나는 화장실이 어디 있는지 몰라.",
+   "blank": "Não sei"
+  },
+  {
+   "text": "Sei lá, não sei mesmo.",
+   "en": "I don't know, really.",
+   "ko": "글쎄, 진짜 몰라.",
+   "blank": "não sei"
+  }
+ ],
+ "e|não tem jeito": [
+  {
+   "text": "A chuva não para e não tem jeito de ir ao parque hoje.",
+   "en": "The rain won't stop and there's no way to go to the park today.",
+   "ko": "비가 그치지 않아서 오늘은 공원에 갈 수가 없어.",
+   "blank": "não tem jeito"
+  },
+  {
+   "text": "Já tentei consertar o relógio, mas não tem jeito, ele quebrou de vez.",
+   "en": "I've tried to fix the watch, but there's no way, it's completely broken.",
+   "ko": "시계를 고치려고 해봤지만, 방법이 없어. 완전히 고장났어.",
+   "blank": "não tem jeito"
+  },
+  {
+   "text": "Se ele não quiser ajudar, não tem jeito, vamos ter que fazer sozinhos.",
+   "en": "If he doesn't want to help, there's no way, we'll have to do it ourselves.",
+   "ko": "그가 돕고 싶지 않으면, 방법이 없어, 우리끼리 해야 해.",
+   "blank": "não tem jeito"
+  }
+ ],
+ "e|no fim das contas": [
+  {
+   "text": "No fim das contas, tudo deu certo.",
+   "en": "In the end, everything worked out.",
+   "ko": "결국, 모든 것이 잘 풀렸어.",
+   "blank": "No fim das contas"
+  },
+  {
+   "text": "No fim das contas, escolhi ficar em casa.",
+   "en": "In the end, I chose to stay home.",
+   "ko": "결국, 나는 집에 있기로 했어.",
+   "blank": "No fim das contas"
+  },
+  {
+   "text": "No fim das contas, não era tão difícil assim.",
+   "en": "In the end, it was not that hard.",
+   "ko": "결국, 그리 어렵지 않았어.",
+   "blank": "No fim das contas"
+  }
+ ],
+ "e|nossa": [
+  {
+   "text": "Nossa, que frio hoje!",
+   "en": "Wow, it's so cold today!",
+   "ko": "와, 오늘 정말 춥다!",
+   "blank": "Nossa"
+  },
+  {
+   "text": "Nossa, você chegou cedo.",
+   "en": "Wow, you arrived early.",
+   "ko": "와, 너 일찍 도착했네.",
+   "blank": "Nossa"
+  },
+  {
+   "text": "Nossa, que comida gostosa!",
+   "en": "Wow, this food is delicious!",
+   "ko": "와, 이 음식 정말 맛있다!",
+   "blank": "Nossa"
+  }
+ ],
+ "e|o lado bom é": [
+  {
+   "text": "Choveu o dia todo, mas o lado bom é que as plantas vão crescer mais.",
+   "en": "It rained all day, but the good side is that the plants will grow more.",
+   "ko": "하루 종일 비가 왔지만, 좋은 점은 식물들이 더 잘 자랄 거라는 거야.",
+   "blank": "o lado bom é"
+  },
+  {
+   "text": "A comida atrasou, mas o lado bom é que vamos ter tempo de conversar mais.",
+   "en": "The food was delayed, but the good side is we’ll have more time to talk.",
+   "ko": "음식이 늦었지만, 좋은 점은 우리가 더 많이 대화할 시간이 생긴다는 거야.",
+   "blank": "o lado bom é"
+  },
+  {
+   "text": "O lado bom é que, mesmo cansados, conseguimos terminar tudo hoje.",
+   "en": "The good side is that, even though we’re tired, we managed to finish everything today.",
+   "ko": "좋은 점은 우리가 피곤해도 오늘 모든 일을 끝냈다는 거야.",
+   "blank": "O lado bom é"
+  }
+ ],
+ "e|o negócio é o seguinte": [
+  {
+   "text": "O negócio é o seguinte, precisamos sair agora.",
+   "en": "Here's the deal, we need to leave now.",
+   "ko": "상황은 이래, 우리 지금 나가야 해.",
+   "blank": "O negócio é o seguinte"
+  },
+  {
+   "text": "O negócio é o seguinte, não tem mais pão.",
+   "en": "Here's the deal, there's no more bread.",
+   "ko": "상황은 이래, 더 이상 빵이 없어.",
+   "blank": "O negócio é o seguinte"
+  },
+  {
+   "text": "O negócio é o seguinte, amanhã vai chover.",
+   "en": "Here's the deal, it's going to rain tomorrow.",
+   "ko": "상황은 이래, 내일 비가 올 거야.",
+   "blank": "O negócio é o seguinte"
+  }
+ ],
+ "e|obrigada": [
+  {
+   "text": "Muito obrigada pela ajuda.",
+   "en": "Thank you very much for the help.",
+   "ko": "도와줘서 정말 고마워요.",
+   "blank": "obrigada"
+  },
+  {
+   "text": "Obrigada pelo café.",
+   "en": "Thank you for the coffee.",
+   "ko": "커피 주셔서 고마워요.",
+   "blank": "Obrigada"
+  },
+  {
+   "text": "Obrigada por esperar.",
+   "en": "Thank you for waiting.",
+   "ko": "기다려줘서 고마워요.",
+   "blank": "Obrigada"
+  }
+ ],
+ "e|obrigado": [
+  {
+   "text": "Muito obrigado pela ajuda.",
+   "en": "Thank you very much for the help.",
+   "ko": "도와줘서 정말 고마워요.",
+   "blank": "obrigado"
+  },
+  {
+   "text": "Sim, obrigado, eu entendi.",
+   "en": "Yes, thank you, I understood.",
+   "ko": "네, 고마워요, 이해했어요.",
+   "blank": "obrigado"
+  },
+  {
+   "text": "Café? Não, obrigado.",
+   "en": "Coffee? No, thank you.",
+   "ko": "커피요? 아니요, 괜찮아요.",
+   "blank": "obrigado"
+  }
+ ],
+ "e|onde fica": [
+  {
+   "text": "Oi, onde fica o banheiro?",
+   "en": "Hi, where is the bathroom?",
+   "ko": "안녕하세요, 화장실이 어디에 있나요?",
+   "blank": "onde fica"
+  },
+  {
+   "text": "Por favor, onde fica a escola?",
+   "en": "Please, where is the school?",
+   "ko": "실례합니다, 학교가 어디에 있나요?",
+   "blank": "onde fica"
+  },
+  {
+   "text": "Você sabe onde fica o parque?",
+   "en": "Do you know where the park is?",
+   "ko": "공원이 어디에 있는지 아세요?",
+   "blank": "onde fica"
+  }
+ ],
+ "e|ontem à noite": [
+  {
+   "text": "Choveu muito ontem à noite.",
+   "en": "It rained a lot last night.",
+   "ko": "어젯밤에 비가 많이 왔어.",
+   "blank": "ontem à noite"
+  },
+  {
+   "text": "Fui ao cinema ontem à noite.",
+   "en": "I went to the movies last night.",
+   "ko": "어젯밤에 영화관에 갔어.",
+   "blank": "ontem à noite"
+  },
+  {
+   "text": "Você estudou ontem à noite?",
+   "en": "Did you study last night?",
+   "ko": "너 어젯밤에 공부했어?",
+   "blank": "ontem à noite"
+  }
+ ],
+ "e|pagar mico": [
+  {
+   "text": "Se eu esquecer o nome dela de novo, vou pagar mico.",
+   "en": "If I forget her name again, I’ll embarrass myself.",
+   "ko": "내가 그녀의 이름을 또 잊어버리면 창피당할 거야.",
+   "blank": "pagar mico"
+  },
+  {
+   "text": "Não quero pagar mico dançando na frente de todo mundo.",
+   "en": "I don't want to embarrass myself dancing in front of everyone.",
+   "ko": "모두 앞에서 춤추다가 창피당하고 싶지 않아.",
+   "blank": "pagar mico"
+  },
+  {
+   "text": "Sempre fico com medo de pagar mico quando tento falar inglês.",
+   "en": "I'm always afraid of embarrassing myself when I try to speak English.",
+   "ko": "영어로 말할 때 항상 창피당할까봐 걱정돼.",
+   "blank": "pagar mico"
+  }
+ ],
+ "e|pelo contrário": [
+  {
+   "text": "Achei que você estava bravo, mas pelo contrário, você estava só concentrado.",
+   "en": "I thought you were angry, but on the contrary, you were just focused.",
+   "ko": "나는 네가 화난 줄 알았는데, 오히려 집중하고 있었구나.",
+   "blank": "pelo contrário"
+  },
+  {
+   "text": "Não fiquei cansado depois da caminhada, pelo contrário, me senti mais animado.",
+   "en": "I wasn't tired after the walk, on the contrary, I felt more energized.",
+   "ko": "산책 후에 피곤하지 않고, 오히려 더 힘이 났어.",
+   "blank": "pelo contrário"
+  },
+  {
+   "text": "Você acha que ele vai desistir? Pelo contrário, ele está ainda mais motivado agora.",
+   "en": "Do you think he's going to give up? On the contrary, he's even more motivated now.",
+   "ko": "그가 포기할 것 같아? 오히려 지금 더 의욕적이야.",
+   "blank": "Pelo contrário"
+  }
+ ],
+ "e|pisar na bola": [
+  {
+   "text": "Sei que você não queria pisar na bola, mas acabou acontecendo.",
+   "en": "I know you didn't mean to mess up, but it happened.",
+   "ko": "네가 실수하려던 건 아니었지만 결국 그렇게 됐어.",
+   "blank": "pisar na bola"
+  },
+  {
+   "text": "Acho melhor pedir desculpas por pisar na bola ontem.",
+   "en": "I think it's better to apologize for messing up yesterday.",
+   "ko": "어제 실수한 것에 대해 사과하는 게 좋을 것 같아.",
+   "blank": "pisar na bola"
+  },
+  {
+   "text": "Quando ele esqueceu meu aniversário, senti que ele foi mesmo pisar na bola.",
+   "en": "When he forgot my birthday, I really felt like he let me down.",
+   "ko": "그가 내 생일을 잊었을 때 정말 실망스러웠어.",
+   "blank": "pisar na bola"
+  }
+ ],
+ "e|pode repetir": [
+  {
+   "text": "Oi, pode repetir por favor?",
+   "en": "Hi, can you repeat please?",
+   "ko": "안녕, 다시 말해줄 수 있어?",
+   "blank": "pode repetir"
+  },
+  {
+   "text": "Desculpa, pode repetir isso?",
+   "en": "Sorry, can you repeat that?",
+   "ko": "미안해, 그거 다시 말해줄 수 있어?",
+   "blank": "pode repetir"
+  },
+  {
+   "text": "Não entendi, pode repetir?",
+   "en": "I did not understand, can you repeat?",
+   "ko": "이해를 못했어요, 다시 말해줄 수 있어요?",
+   "blank": "pode repetir"
+  }
+ ],
+ "e|pode ser": [
+  {
+   "text": "O café pode ser quente ou frio?",
+   "en": "Can the coffee be hot or cold?",
+   "ko": "커피가 뜨겁거나 차가울 수 있나요?",
+   "blank": "pode ser"
+  },
+  {
+   "text": "Esse lugar pode ser bom para o almoço.",
+   "en": "This place can be good for lunch.",
+   "ko": "이곳이 점심 먹기에 좋을 수 있어요.",
+   "blank": "pode ser"
+  },
+  {
+   "text": "A resposta pode ser simples.",
+   "en": "The answer can be simple.",
+   "ko": "답이 간단할 수 있어요.",
+   "blank": "pode ser"
+  }
+ ],
+ "e|pois é": [
+  {
+   "text": "Está chovendo de novo, pois é.",
+   "en": "It's raining again, yeah.",
+   "ko": "또 비가 오네, 그렇지.",
+   "blank": "pois é"
+  },
+  {
+   "text": "Pois é, não consegui terminar o trabalho.",
+   "en": "Yeah, I couldn't finish the work.",
+   "ko": "그래, 일을 끝내지 못했어.",
+   "blank": "Pois é"
+  },
+  {
+   "text": "Pois é, a comida acabou rápido hoje.",
+   "en": "Yeah, the food ran out quickly today.",
+   "ko": "그래, 오늘 음식이 빨리 떨어졌어.",
+   "blank": "Pois é"
+  }
+ ],
+ "e|por favor": [
+  {
+   "text": "Me passa o sal, por favor.",
+   "en": "Pass me the salt, please.",
+   "ko": "소금 좀 건네줘, 부탁해.",
+   "blank": "por favor"
+  },
+  {
+   "text": "Pode falar mais devagar, por favor?",
+   "en": "Can you speak more slowly, please?",
+   "ko": "좀 더 천천히 말해줄 수 있어요, 부탁해요?",
+   "blank": "por favor"
+  },
+  {
+   "text": "Fecha a porta, por favor.",
+   "en": "Close the door, please.",
+   "ko": "문 좀 닫아줘, 부탁해.",
+   "blank": "por favor"
+  }
+ ],
+ "e|por outro lado": [
+  {
+   "text": "Eu gosto do frio, mas por outro lado, o calor também tem suas vantagens.",
+   "en": "I like the cold, but on the other hand, the heat also has its advantages.",
+   "ko": "나는 추운 것을 좋아하지만, 반면에 더운 것도 장점이 있어.",
+   "blank": "por outro lado"
+  },
+  {
+   "text": "Por outro lado, se você não quiser sair, podemos ficar em casa assistindo um filme.",
+   "en": "On the other hand, if you don't want to go out, we can stay home watching a movie.",
+   "ko": "반면에, 네가 나가고 싶지 않으면 우리 집에서 영화 볼 수도 있어.",
+   "blank": "Por outro lado"
+  },
+  {
+   "text": "Morar no centro é prático, mas por outro lado, é bem barulhento à noite.",
+   "en": "Living downtown is convenient, but on the other hand, it's really noisy at night.",
+   "ko": "도심에 사는 건 편리하지만, 반면에 밤에는 정말 시끄러워.",
+   "blank": "por outro lado"
+  }
+ ],
+ "e|por um lado": [
+  {
+   "text": "Por um lado, eu queria sair hoje, mas está chovendo muito.",
+   "en": "On one hand, I wanted to go out today, but it's raining a lot.",
+   "ko": "한편으로는 오늘 나가고 싶었지만 비가 너무 많이 와요.",
+   "blank": "Por um lado"
+  },
+  {
+   "text": "Por um lado, estudar em casa é confortável, mas sinto falta dos amigos.",
+   "en": "On one hand, studying at home is comfortable, but I miss my friends.",
+   "ko": "한편으로는 집에서 공부하는 게 편하지만 친구들이 그리워요.",
+   "blank": "Por um lado"
+  },
+  {
+   "text": "Por um lado, trabalhar remoto é prático, por outro sinto falta do escritório.",
+   "en": "On one hand, working remotely is convenient, but on the other I miss the office.",
+   "ko": "한편으로는 재택근무가 편하지만, 다른 한편으로는 사무실이 그리워요.",
+   "blank": "Por um lado"
+  }
+ ],
+ "e|prazer": [
+  {
+   "text": "Oi, prazer em te conhecer.",
+   "en": "Hi, nice to meet you.",
+   "ko": "안녕, 만나서 반가워.",
+   "blank": "prazer"
+  },
+  {
+   "text": "É um prazer ajudar você.",
+   "en": "It is a pleasure to help you.",
+   "ko": "당신을 도와서 기쁩니다.",
+   "blank": "prazer"
+  },
+  {
+   "text": "Prazer, meu nome é Ana.",
+   "en": "Nice to meet you, my name is Ana.",
+   "ko": "반가워요, 제 이름은 아나입니다.",
+   "blank": "Prazer"
+  }
+ ],
+ "e|quanto custa": [
+  {
+   "text": "Oi, quanto custa o pão?",
+   "en": "Hi, how much does the bread cost?",
+   "ko": "안녕, 빵은 얼마예요?",
+   "blank": "quanto custa"
+  },
+  {
+   "text": "Quanto custa para entrar aqui?",
+   "en": "How much does it cost to enter here?",
+   "ko": "여기 들어가는 데 얼마예요?",
+   "blank": "Quanto custa"
+  },
+  {
+   "text": "Por favor, quanto custa essa água?",
+   "en": "Please, how much does this water cost?",
+   "ko": "저기요, 이 물은 얼마예요?",
+   "blank": "quanto custa"
+  }
+ ],
+ "e|quanto tempo leva": [
+  {
+   "text": "Oi, quanto tempo leva para chegar ao parque?",
+   "en": "Hi, how long does it take to get to the park?",
+   "ko": "안녕, 공원까지 가는 데 얼마나 걸려?",
+   "blank": "quanto tempo leva"
+  },
+  {
+   "text": "Sabe quanto tempo leva para cozinhar esse arroz?",
+   "en": "Do you know how long it takes to cook this rice?",
+   "ko": "이 쌀을 요리하는 데 얼마나 걸리는지 알아?",
+   "blank": "quanto tempo leva"
+  },
+  {
+   "text": "Quanto tempo leva para aprender a nadar?",
+   "en": "How long does it take to learn to swim?",
+   "ko": "수영 배우는 데 얼마나 걸려?",
+   "blank": "Quanto tempo leva"
+  }
+ ],
+ "e|que horas são": [
+  {
+   "text": "Oi, que horas são?",
+   "en": "Hi, what time is it?",
+   "ko": "안녕, 지금 몇 시야?",
+   "blank": "que horas são"
+  },
+  {
+   "text": "Desculpa, você sabe que horas são?",
+   "en": "Excuse me, do you know what time it is?",
+   "ko": "실례하지만, 지금 몇 시인지 아세요?",
+   "blank": "que horas são"
+  },
+  {
+   "text": "Vou perguntar para ela que horas são.",
+   "en": "I will ask her what time it is.",
+   "ko": "나는 그녀에게 지금 몇 시인지 물어볼 거야.",
+   "blank": "que horas são"
+  }
+ ],
+ "e|que legal": [
+  {
+   "text": "Você ganhou um presente? Que legal!",
+   "en": "You got a gift? How cool!",
+   "ko": "선물을 받았다고? 정말 멋지다!",
+   "blank": "Que legal"
+  },
+  {
+   "text": "Hoje não tem aula, que legal!",
+   "en": "There is no class today, how cool!",
+   "ko": "오늘 수업이 없대, 정말 좋다!",
+   "blank": "que legal"
+  },
+  {
+   "text": "Seu cachorro aprendeu um truque novo, que legal!",
+   "en": "Your dog learned a new trick, how cool!",
+   "ko": "네 강아지가 새로운 재주를 배웠다고? 정말 멋지다!",
+   "blank": "que legal"
+  }
+ ],
+ "e|que pena": [
+  {
+   "text": "Que pena, está chovendo hoje.",
+   "en": "What a shame, it's raining today.",
+   "ko": "안타깝게도 오늘 비가 와요.",
+   "blank": "Que pena"
+  },
+  {
+   "text": "Que pena, o café acabou.",
+   "en": "What a shame, the coffee is gone.",
+   "ko": "안타깝게도 커피가 다 떨어졌어요.",
+   "blank": "Que pena"
+  },
+  {
+   "text": "Que pena, perdi o ônibus.",
+   "en": "What a shame, I missed the bus.",
+   "ko": "안타깝게도 버스를 놓쳤어요.",
+   "blank": "Que pena"
+  }
+ ],
+ "e|se não me engano": [
+  {
+   "text": "A reunião é amanhã, se não me engano.",
+   "en": "The meeting is tomorrow, if I’m not mistaken.",
+   "ko": "내가 잘못 알지 않았다면, 회의는 내일이야.",
+   "blank": "se não me engano"
+  },
+  {
+   "text": "Você mora perto daqui, se não me engano.",
+   "en": "You live near here, if I’m not mistaken.",
+   "ko": "내가 잘못 알지 않았다면, 너 여기 근처에 살아.",
+   "blank": "se não me engano"
+  },
+  {
+   "text": "Se não me engano, seu aniversário é em março.",
+   "en": "If I’m not mistaken, your birthday is in March.",
+   "ko": "내가 잘못 알지 않았다면, 네 생일은 삼월이야.",
+   "blank": "Se não me engano"
+  }
+ ],
+ "e|sem querer ser chato": [
+  {
+   "text": "Sem querer ser chato, mas você pode abaixar um pouco o volume?",
+   "en": "I don't want to be annoying, but could you lower the volume a bit?",
+   "ko": "귀찮게 하고 싶진 않은데, 볼륨 좀 줄여줄 수 있어?",
+   "blank": "Sem querer ser chato"
+  },
+  {
+   "text": "Sem querer ser chato, mas você já terminou aquele relatório?",
+   "en": "I don't want to be a bother, but have you finished that report yet?",
+   "ko": "귀찮게 하고 싶진 않은데, 그 보고서 다 끝났어?",
+   "blank": "Sem querer ser chato"
+  },
+  {
+   "text": "Sem querer ser chato, mas você poderia fechar a porta quando sair?",
+   "en": "I don't want to be annoying, but could you close the door when you leave?",
+   "ko": "귀찮게 하고 싶진 않은데, 나갈 때 문 좀 닫아줄래?",
+   "blank": "Sem querer ser chato"
+  }
+ ],
+ "e|sem spoiler": [
+  {
+   "text": "Vamos assistir juntos, mas sem spoiler.",
+   "en": "Let's watch together, but no spoilers.",
+   "ko": "같이 보자, 근데 스포일러는 안 돼.",
+   "blank": "sem spoiler"
+  },
+  {
+   "text": "Conta o final sem spoiler, por favor.",
+   "en": "Tell me the ending with no spoilers, please.",
+   "ko": "결말을 스포일러 없이 말해줘, 제발.",
+   "blank": "sem spoiler"
+  },
+  {
+   "text": "Quero saber se gostou, mas sem spoiler.",
+   "en": "I want to know if you liked it, but no spoilers.",
+   "ko": "재미있었는지 알고 싶어, 근데 스포일러는 안 돼.",
+   "blank": "sem spoiler"
+  }
+ ],
+ "e|seria possível": [
+  {
+   "text": "Seria possível mudar a reserva para amanhã?",
+   "en": "Would it be possible to change the reservation to tomorrow?",
+   "ko": "예약을 내일로 변경할 수 있을까요?",
+   "blank": "Seria possível"
+  },
+  {
+   "text": "Oi, seria possível me ajudar com este formulário?",
+   "en": "Hi, would it be possible to help me with this form?",
+   "ko": "안녕하세요, 이 양식 작성 도와주실 수 있을까요?",
+   "blank": "seria possível"
+  },
+  {
+   "text": "Seria possível entregar o pedido ainda hoje?",
+   "en": "Would it be possible to deliver the order today?",
+   "ko": "오늘 중으로 주문을 배송할 수 있을까요?",
+   "blank": "Seria possível"
+  }
+ ],
+ "e|só que": [
+  {
+   "text": "Queria sair mais cedo, só que tenho uma reunião importante.",
+   "en": "I wanted to leave earlier, but I have an important meeting.",
+   "ko": "나는 더 일찍 나가고 싶었는데 중요한 회의가 있어.",
+   "blank": "só que"
+  },
+  {
+   "text": "Eu tentei ligar para você, só que seu telefone estava desligado.",
+   "en": "I tried to call you, but your phone was off.",
+   "ko": "너에게 전화하려고 했는데 네 전화기가 꺼져 있었어.",
+   "blank": "só que"
+  },
+  {
+   "text": "Gostei do filme, só que achei o final meio confuso.",
+   "en": "I liked the movie, but I found the ending kind of confusing.",
+   "ko": "영화는 좋았는데 결말이 좀 헷갈렸어.",
+   "blank": "só que"
+  }
+ ],
+ "e|tanto faz": [
+  {
+   "text": "Podemos comer pizza ou hambúrguer, tanto faz.",
+   "en": "We can eat pizza or burgers, it doesn’t matter.",
+   "ko": "피자나 햄버거 먹어도 상관없어.",
+   "blank": "tanto faz"
+  },
+  {
+   "text": "Qual filme você quer ver? Tanto faz para mim.",
+   "en": "Which movie do you want to watch? Either is fine for me.",
+   "ko": "어떤 영화 볼래? 나는 아무거나 괜찮아.",
+   "blank": "Tanto faz"
+  },
+  {
+   "text": "Se chover ou não, tanto faz, eu vou sair.",
+   "en": "If it rains or not, it doesn’t matter, I’ll go out.",
+   "ko": "비가 오든 안 오든 상관없어, 나는 나갈 거야.",
+   "blank": "tanto faz"
+  }
+ ],
+ "e|tchau": [
+  {
+   "text": "Tchau, até amanhã.",
+   "en": "Bye, see you tomorrow.",
+   "ko": "잘 가, 내일 봐.",
+   "blank": "Tchau"
+  },
+  {
+   "text": "Já vou, tchau!",
+   "en": "I'm leaving now, bye!",
+   "ko": "나 이제 가, 잘 가!",
+   "blank": "tchau"
+  },
+  {
+   "text": "Tchau, boa noite.",
+   "en": "Bye, good night.",
+   "ko": "잘 가, 좋은 밤 보내.",
+   "blank": "Tchau"
+  }
+ ],
+ "e|tem como": [
+  {
+   "text": "Tem como você me ajudar com essas caixas?",
+   "en": "Is there any way you can help me with these boxes?",
+   "ko": "이 상자들 좀 도와줄 수 있어요?",
+   "blank": "Tem como"
+  },
+  {
+   "text": "Tem como chegar lá antes do almoço?",
+   "en": "Is it possible to get there before lunch?",
+   "ko": "점심 전에 거기 도착할 수 있을까요?",
+   "blank": "Tem como"
+  },
+  {
+   "text": "Oi, tem como trocar essa camiseta por outro tamanho?",
+   "en": "Hi, is it possible to exchange this shirt for another size?",
+   "ko": "안녕하세요, 이 셔츠를 다른 사이즈로 바꿀 수 있을까요?",
+   "blank": "tem como"
+  }
+ ],
+ "e|tem remédio para": [
+  {
+   "text": "Oi, tem remédio para dor de cabeça?",
+   "en": "Hi, is there medicine for a headache?",
+   "ko": "안녕하세요, 두통에 쓸 약 있어요?",
+   "blank": "tem remédio para"
+  },
+  {
+   "text": "Aqui tem remédio para gripe.",
+   "en": "There is medicine for the flu here.",
+   "ko": "여기 감기약 있어요.",
+   "blank": "tem remédio para"
+  },
+  {
+   "text": "Você sabe se tem remédio para alergia?",
+   "en": "Do you know if there is medicine for allergies?",
+   "ko": "알레르기 약 있는지 알아요?",
+   "blank": "tem remédio para"
+  }
+ ],
+ "e|tirar de letra": [
+  {
+   "text": "Pode ficar tranquilo, você vai tirar de letra essa entrevista.",
+   "en": "Don't worry, you'll handle this interview easily.",
+   "ko": "걱정하지 마, 이 면접은 거뜬히 해낼 거야.",
+   "blank": "tirar de letra"
+  },
+  {
+   "text": "Aprender a dirigir não é tão difícil, você vai tirar de letra.",
+   "en": "Learning to drive isn't that hard, you'll do it easily.",
+   "ko": "운전 배우는 건 그렇게 어렵지 않아, 넌 쉽게 해낼 거야.",
+   "blank": "tirar de letra"
+  },
+  {
+   "text": "Você acha que vai tirar de letra a prova de amanhã?",
+   "en": "Do you think you'll ace tomorrow's test?",
+   "ko": "내일 시험을 거뜬히 볼 수 있을 것 같아?",
+   "blank": "tirar de letra"
+  }
+ ],
+ "e|tô cansado": [
+  {
+   "text": "Desculpa, tô cansado hoje.",
+   "en": "Sorry, I'm tired today.",
+   "ko": "미안해, 오늘은 피곤해.",
+   "blank": "tô cansado"
+  },
+  {
+   "text": "Acho que vou dormir cedo porque tô cansado.",
+   "en": "I think I'll go to bed early because I'm tired.",
+   "ko": "피곤해서 일찍 잘 것 같아.",
+   "blank": "tô cansado"
+  },
+  {
+   "text": "Não quero sair agora, tô cansado.",
+   "en": "I don't want to go out now, I'm tired.",
+   "ko": "지금 나가고 싶지 않아, 피곤해.",
+   "blank": "tô cansado"
+  }
+ ],
+ "e|tomara": [
+  {
+   "text": "Tomara que não chova hoje.",
+   "en": "I hope it doesn't rain today.",
+   "ko": "오늘 비가 안 오면 좋겠어.",
+   "blank": "Tomara"
+  },
+  {
+   "text": "Tomara que ele chegue cedo.",
+   "en": "I hope he arrives early.",
+   "ko": "그가 일찍 오면 좋겠어.",
+   "blank": "Tomara"
+  },
+  {
+   "text": "Tomara que dê tudo certo.",
+   "en": "I hope everything goes well.",
+   "ko": "모든 일이 잘 되면 좋겠어.",
+   "blank": "Tomara"
+  }
+ ],
+ "e|tudo bem": [
+  {
+   "text": "Oi, tudo bem?",
+   "en": "Hi, how are you?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "tudo bem"
+  },
+  {
+   "text": "Depois da escola, tudo bem?",
+   "en": "After school, is everything okay?",
+   "ko": "학교 끝나고 괜찮아?",
+   "blank": "tudo bem"
+  },
+  {
+   "text": "Seu cachorro está tudo bem.",
+   "en": "Your dog is okay.",
+   "ko": "네 강아지는 괜찮아.",
+   "blank": "tudo bem"
+  }
+ ],
+ "e|vale a pena": [
+  {
+   "text": "Acho que vale a pena tentar de novo.",
+   "en": "I think it's worth trying again.",
+   "ko": "다시 시도할 가치가 있다고 생각해.",
+   "blank": "vale a pena"
+  },
+  {
+   "text": "Será que vale a pena esperar mais um pouco?",
+   "en": "Is it worth waiting a little longer?",
+   "ko": "조금 더 기다릴 만한 가치가 있을까?",
+   "blank": "vale a pena"
+  },
+  {
+   "text": "Vale a pena visitar esse lugar quando puder.",
+   "en": "It's worth visiting this place when you can.",
+   "ko": "가능할 때 이곳을 방문할 만한 가치가 있어.",
+   "blank": "Vale a pena"
+  }
+ ],
+ "e|valeu": [
+  {
+   "text": "Valeu pela ajuda!",
+   "en": "Thanks for the help!",
+   "ko": "도움 줘서 고마워!",
+   "blank": "Valeu"
+  },
+  {
+   "text": "Valeu, até logo!",
+   "en": "Thanks, see you later!",
+   "ko": "고마워, 나중에 봐!",
+   "blank": "Valeu"
+  },
+  {
+   "text": "Valeu por avisar.",
+   "en": "Thanks for letting me know.",
+   "ko": "알려줘서 고마워.",
+   "blank": "Valeu"
+  }
+ ],
+ "e|vamos alinhar": [
+  {
+   "text": "Vamos alinhar nossos horários para marcar o jantar?",
+   "en": "Shall we coordinate our schedules to arrange dinner?",
+   "ko": "저녁을 약속하려고 우리 시간표를 맞출까요?",
+   "blank": "Vamos alinhar"
+  },
+  {
+   "text": "Antes de começar o projeto, vamos alinhar as expectativas.",
+   "en": "Before starting the project, let’s align our expectations.",
+   "ko": "프로젝트를 시작하기 전에 기대를 맞춰보자.",
+   "blank": "vamos alinhar"
+  },
+  {
+   "text": "Se tiver um tempo depois, vamos alinhar sobre aqueles detalhes.",
+   "en": "If you have time later, let’s align on those details.",
+   "ko": "나중에 시간 있으면 그 세부사항들에 대해 맞춰보자.",
+   "blank": "vamos alinhar"
+  }
+ ],
+ "e|vamos sim": [
+  {
+   "text": "Vamos sim ao parque amanhã.",
+   "en": "Let's go to the park tomorrow.",
+   "ko": "내일 공원에 가자.",
+   "blank": "Vamos sim"
+  },
+  {
+   "text": "Se chover, vamos sim mesmo assim?",
+   "en": "If it rains, are we going anyway?",
+   "ko": "비가 와도 우리 어쨌든 갈 거야?",
+   "blank": "vamos sim"
+  },
+  {
+   "text": "Você quer pizza hoje? Vamos sim!",
+   "en": "Do you want pizza today? Yes, let's!",
+   "ko": "오늘 피자 먹고 싶어? 그래, 먹자!",
+   "blank": "Vamos sim"
+  }
+ ],
+ "e|você me indica": [
+  {
+   "text": "Você me indica um bom restaurante aqui perto?",
+   "en": "Can you suggest a good restaurant nearby?",
+   "ko": "이 근처에 좋은 식당 추천해줄 수 있어요?",
+   "blank": "Você me indica"
+  },
+  {
+   "text": "Você me indica um livro fácil para começar?",
+   "en": "Can you recommend an easy book to start with?",
+   "ko": "처음 시작하기 좋은 쉬운 책 추천해줄 수 있어요?",
+   "blank": "Você me indica"
+  },
+  {
+   "text": "Você me indica um caminho mais rápido para o centro?",
+   "en": "Can you show me a quicker way to downtown?",
+   "ko": "시내로 가는 더 빠른 길 알려줄 수 있어요?",
+   "blank": "Você me indica"
+  }
+ ],
+ "e|vou ver e te falo": [
+  {
+   "text": "Se eu consigo um ingresso, vou ver e te falo.",
+   "en": "If I get a ticket, I'll check and let you know.",
+   "ko": "티켓을 구할 수 있으면 확인하고 알려줄게.",
+   "blank": "vou ver e te falo"
+  },
+  {
+   "text": "Não sei se ela vem hoje, vou ver e te falo.",
+   "en": "I don't know if she's coming today, I'll check and let you know.",
+   "ko": "그녀가 오늘 오는지 모르겠어, 확인하고 알려줄게.",
+   "blank": "vou ver e te falo"
+  },
+  {
+   "text": "Sobre o horário da reunião, vou ver e te falo.",
+   "en": "About the meeting time, I'll check and let you know.",
+   "ko": "회의 시간에 대해 확인하고 알려줄게.",
+   "blank": "vou ver e te falo"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "Sou do Brasil.",
+   "en": "I am from Brazil.",
+   "ko": "나는 브라질 출신이에요.",
+   "blank": "Sou do"
+  },
+  {
+   "text": "Ela é minha amiga.",
+   "en": "She is my friend.",
+   "ko": "그녀는 내 친구예요.",
+   "blank": "é"
+  },
+  {
+   "text": "Nós somos estudantes.",
+   "en": "We are students.",
+   "ko": "우리는 학생이에요.",
+   "blank": "somos"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "Estou cansado.",
+   "en": "I am tired.",
+   "ko": "나는 피곤해.",
+   "blank": "Estou"
+  },
+  {
+   "text": "O livro está na mesa.",
+   "en": "The book is on the table.",
+   "ko": "책이 탁자 위에 있어.",
+   "blank": "está"
+  },
+  {
+   "text": "Você está feliz?",
+   "en": "Are you happy?",
+   "ko": "너는 행복하니?",
+   "blank": "está"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "O carro é novo.",
+   "en": "The car is new.",
+   "ko": "그 차는 새것이에요.",
+   "blank": "O carro"
+  },
+  {
+   "text": "A mesa está limpa.",
+   "en": "The table is clean.",
+   "ko": "그 테이블은 깨끗해요.",
+   "blank": "A mesa"
+  },
+  {
+   "text": "O livro é interessante.",
+   "en": "The book is interesting.",
+   "ko": "그 책은 흥미로워요.",
+   "blank": "O livro"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "Eu estudo português.",
+   "en": "I study Portuguese.",
+   "ko": "나는 포르투갈어를 공부해.",
+   "blank": "estudo"
+  },
+  {
+   "text": "Você canta muito bem.",
+   "en": "You sing very well.",
+   "ko": "너는 노래를 아주 잘해.",
+   "blank": "canta"
+  },
+  {
+   "text": "Nós caminhamos no parque.",
+   "en": "We walk in the park.",
+   "ko": "우리는 공원에서 산책해.",
+   "blank": "caminhamos"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "Onde está o gato?",
+   "en": "Where is the cat?",
+   "ko": "고양이는 어디에 있나요?",
+   "blank": "Onde"
+  },
+  {
+   "text": "Quanto custa esse pão?",
+   "en": "How much does this bread cost?",
+   "ko": "이 빵은 얼마인가요?",
+   "blank": "Quanto"
+  },
+  {
+   "text": "Como você está?",
+   "en": "How are you?",
+   "ko": "잘 지내세요?",
+   "blank": "Como"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "Eu quero uma água.",
+   "en": "I want some water.",
+   "ko": "물 주세요.",
+   "blank": "Eu quero"
+  },
+  {
+   "text": "Eu quero um livro.",
+   "en": "I want a book.",
+   "ko": "책을 원해요.",
+   "blank": "Eu quero"
+  },
+  {
+   "text": "Eu quero uma maçã.",
+   "en": "I want an apple.",
+   "ko": "나는 사과를 원해.",
+   "blank": "Eu quero"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "Eu tenho um cachorro.",
+   "en": "I have a dog.",
+   "ko": "나는 개가 있어요.",
+   "blank": "tenho"
+  },
+  {
+   "text": "Você tem tempo agora?",
+   "en": "Do you have time now?",
+   "ko": "지금 시간 있어요?",
+   "blank": "tem"
+  },
+  {
+   "text": "Eu tenho sede.",
+   "en": "I am thirsty.",
+   "ko": "나는 목말라요.",
+   "blank": "tenho"
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "Eu não como carne.",
+   "en": "I do not eat meat.",
+   "ko": "나는 고기를 먹지 않는다.",
+   "blank": "não como"
+  },
+  {
+   "text": "Ela não mora aqui.",
+   "en": "She does not live here.",
+   "ko": "그녀는 여기 살지 않는다.",
+   "blank": "não mora"
+  },
+  {
+   "text": "Nós não entendemos.",
+   "en": "We do not understand.",
+   "ko": "우리는 이해하지 못한다.",
+   "blank": "não entendemos"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "Hoje eu cozinhei arroz.",
+   "en": "Today I cooked rice.",
+   "ko": "오늘 나는 밥을 지었어.",
+   "blank": "cozinhei"
+  },
+  {
+   "text": "Semana passada nós dançamos muito.",
+   "en": "Last week we danced a lot.",
+   "ko": "지난주 우리는 많이 춤췄어.",
+   "blank": "dançamos"
+  },
+  {
+   "text": "Eu terminei o livro ontem.",
+   "en": "I finished the book yesterday.",
+   "ko": "나는 어제 그 책을 다 읽었어.",
+   "blank": "terminei"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "Ontem eu fiz um bolo.",
+   "en": "Yesterday I made a cake.",
+   "ko": "어제 나는 케이크를 만들었어.",
+   "blank": "fiz"
+  },
+  {
+   "text": "Hoje de manhã eu fui ao mercado.",
+   "en": "This morning I went to the market.",
+   "ko": "오늘 아침에 나는 시장에 갔어.",
+   "blank": "fui"
+  },
+  {
+   "text": "Semana passada eu tive uma ideia nova.",
+   "en": "Last week I had a new idea.",
+   "ko": "지난주에 나는 새로운 아이디어가 있었어.",
+   "blank": "tive"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "Vou estudar depois do almoço.",
+   "en": "I am going to study after lunch.",
+   "ko": "나는 점심 먹고 공부할 거야.",
+   "blank": "Vou estudar"
+  },
+  {
+   "text": "Vamos sair mais tarde.",
+   "en": "We are going to go out later.",
+   "ko": "우리는 나중에 나갈 거야.",
+   "blank": "Vamos sair"
+  },
+  {
+   "text": "Ela vai ligar para você.",
+   "en": "She is going to call you.",
+   "ko": "그녀가 너에게 전화할 거야.",
+   "blank": "vai ligar"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "Estou lendo um livro.",
+   "en": "I am reading a book.",
+   "ko": "나는 책을 읽고 있어.",
+   "blank": "Estou lendo"
+  },
+  {
+   "text": "Ele está cozinhando agora.",
+   "en": "He is cooking now.",
+   "ko": "그는 지금 요리하고 있어.",
+   "blank": "está cozinhando"
+  },
+  {
+   "text": "Estamos estudando juntos.",
+   "en": "We are studying together.",
+   "ko": "우리는 함께 공부하고 있어.",
+   "blank": "Estamos estudando"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "Eu gosto de ler antes de dormir.",
+   "en": "I like to read before sleeping.",
+   "ko": "나는 자기 전에 읽는 것을 좋아해.",
+   "blank": "gosto de"
+  },
+  {
+   "text": "Você gosta de café?",
+   "en": "Do you like coffee?",
+   "ko": "너는 커피를 좋아하니?",
+   "blank": "gosta de"
+  },
+  {
+   "text": "Não gosto de acordar cedo.",
+   "en": "I don't like waking up early.",
+   "ko": "나는 일찍 일어나는 것을 좋아하지 않아.",
+   "blank": "gosto de"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "Este livro é mais interessante do que aquele.",
+   "en": "This book is more interesting than that one.",
+   "ko": "이 책이 저 책보다 더 재미있어요.",
+   "blank": "mais interessante do que"
+  },
+  {
+   "text": "Meu café está mais quente do que o seu.",
+   "en": "My coffee is hotter than yours.",
+   "ko": "내 커피가 네 것보다 더 뜨거워요.",
+   "blank": "mais quente do que"
+  },
+  {
+   "text": "O cachorro é mais rápido do que o gato.",
+   "en": "The dog is faster than the cat.",
+   "ko": "개가 고양이보다 더 빨라요.",
+   "blank": "mais rápido do que"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "Estou esperando faz uma hora.",
+   "en": "I have been waiting for an hour.",
+   "ko": "나는 한 시간째 기다리고 있어.",
+   "blank": "faz uma hora"
+  },
+  {
+   "text": "Saí de casa há cinco minutos.",
+   "en": "I left home five minutes ago.",
+   "ko": "나는 오 분 전에 집을 나왔어.",
+   "blank": "há cinco minutos"
+  },
+  {
+   "text": "Trabalho aqui faz pouco tempo.",
+   "en": "I have worked here for a short time.",
+   "ko": "나는 여기서 얼마 안 됐어 일한 지.",
+   "blank": "faz pouco tempo"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "Quando eu era pequeno, adorava brincar na rua.",
+   "en": "When I was little, I loved playing in the street.",
+   "ko": "어렸을 때 나는 거리에서 노는 것을 좋아했어.",
+   "blank": "era"
+  },
+  {
+   "text": "Minha avó sempre fazia bolo aos domingos.",
+   "en": "My grandmother always made cake on Sundays.",
+   "ko": "내 할머니는 항상 일요일마다 케이크를 만드셨어.",
+   "blank": "fazia"
+  },
+  {
+   "text": "Eu lia muitos livros quando estava de férias.",
+   "en": "I used to read many books when I was on vacation.",
+   "ko": "방학 때 나는 책을 많이 읽곤 했어.",
+   "blank": "lia"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "Eu estava lendo quando o telefone tocou.",
+   "en": "I was reading when the phone rang.",
+   "ko": "나는 전화가 울렸을 때 책을 읽고 있었다.",
+   "blank": "estava lendo"
+  },
+  {
+   "text": "Ela fazia café quando alguém bateu na porta.",
+   "en": "She was making coffee when someone knocked on the door.",
+   "ko": "누군가 문을 두드렸을 때 그녀는 커피를 만들고 있었다.",
+   "blank": "fazia café"
+  },
+  {
+   "text": "Nós caminhávamos no parque quando começou a escurecer.",
+   "en": "We were walking in the park when it started to get dark.",
+   "ko": "어두워지기 시작했을 때 우리는 공원에서 걷고 있었다.",
+   "blank": "caminhávamos"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "Espero que você chegue cedo.",
+   "en": "I hope you arrive early.",
+   "ko": "네가 일찍 오길 바래.",
+   "blank": "chegue"
+  },
+  {
+   "text": "É importante que todos entendam.",
+   "en": "It's important that everyone understands.",
+   "ko": "모두가 이해하는 것이 중요해.",
+   "blank": "entendam"
+  },
+  {
+   "text": "Espero que ele esteja bem.",
+   "en": "I hope he is well.",
+   "ko": "그가 잘 지내길 바래.",
+   "blank": "esteja"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "Você poderia me dizer as horas?",
+   "en": "Could you tell me the time?",
+   "ko": "시간을 알려주실 수 있나요?",
+   "blank": "poderia"
+  },
+  {
+   "text": "Seria possível abrir a janela?",
+   "en": "Would it be possible to open the window?",
+   "ko": "창문을 열 수 있을까요?",
+   "blank": "Seria possível"
+  },
+  {
+   "text": "Você poderia passar o sal, por favor?",
+   "en": "Could you pass the salt, please?",
+   "ko": "소금 좀 건네주실 수 있나요?",
+   "blank": "poderia"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "Eu te ajudo com isso.",
+   "en": "I help you with that.",
+   "ko": "내가 너를 도와줄게.",
+   "blank": "te"
+  },
+  {
+   "text": "Você me entende bem?",
+   "en": "Do you understand me well?",
+   "ko": "너는 나를 잘 이해하니?",
+   "blank": "me"
+  },
+  {
+   "text": "Posso lhe mostrar o caminho.",
+   "en": "I can show you the way.",
+   "ko": "내가 당신에게 길을 보여줄 수 있어요.",
+   "blank": "lhe"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "A gente precisa conversar.",
+   "en": "We need to talk.",
+   "ko": "우리 얘기해야 해.",
+   "blank": "A gente"
+  },
+  {
+   "text": "A gente come aqui ou leva para casa?",
+   "en": "Are we eating here or taking it home?",
+   "ko": "우리 여기서 먹을까 아니면 집에 가져갈까?",
+   "blank": "A gente"
+  },
+  {
+   "text": "A gente sempre ajuda um ao outro.",
+   "en": "We always help each other.",
+   "ko": "우리는 항상 서로를 도와.",
+   "blank": "A gente"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "Este é o livro que eu gosto.",
+   "en": "This is the book that I like.",
+   "ko": "이것은 내가 좋아하는 책이야.",
+   "blank": "que"
+  },
+  {
+   "text": "É a casa onde moram meus avós.",
+   "en": "It's the house where my grandparents live.",
+   "ko": "그곳은 우리 조부모님이 사시는 집이야.",
+   "blank": "onde"
+  },
+  {
+   "text": "Conheço uma menina que fala espanhol.",
+   "en": "I know a girl who speaks Spanish.",
+   "ko": "나는 스페인어를 하는 소녀를 알아.",
+   "blank": "que"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "Se eu tivesse carro, viajaria mais aos finais de semana.",
+   "en": "If I had a car, I would travel more on weekends.",
+   "ko": "차가 있다면 주말마다 더 많이 여행할 텐데요.",
+   "blank": "tivesse carro"
+  },
+  {
+   "text": "Se ela tivesse coragem, mudaria de emprego.",
+   "en": "If she had courage, she would change jobs.",
+   "ko": "그녀가 용기가 있다면 직장을 바꿀 거예요.",
+   "blank": "tivesse coragem"
+  },
+  {
+   "text": "Se nós tivéssemos tempo livre, visitaríamos nossos amigos hoje.",
+   "en": "If we had free time, we would visit our friends today.",
+   "ko": "우리가 시간이 있다면 오늘 친구들을 방문할 거예요.",
+   "blank": "tivéssemos tempo livre"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "Quando você chegar em casa, me liga.",
+   "en": "When you get home, call me.",
+   "ko": "집에 도착하면 나에게 전화해.",
+   "blank": "chegar"
+  },
+  {
+   "text": "Se ele vier amanhã, vamos conversar.",
+   "en": "If he comes tomorrow, we will talk.",
+   "ko": "그가 내일 오면 우리는 이야기할 거야.",
+   "blank": "vier"
+  },
+  {
+   "text": "Assim que terminarem o projeto, me mostrem.",
+   "en": "As soon as you finish the project, show me.",
+   "ko": "프로젝트를 끝내면 나에게 보여줘.",
+   "blank": "terminarem"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "Embora esteja cansada, vou ao cinema.",
+   "en": "Although I am tired, I am going to the movies.",
+   "ko": "비록 피곤하지만 영화관에 갈 거야.",
+   "blank": "Embora esteja"
+  },
+  {
+   "text": "Embora chova, vamos passear no parque.",
+   "en": "Although it is raining, we are going for a walk in the park.",
+   "ko": "비가 오지만 우리는 공원에 산책하러 갈 거야.",
+   "blank": "Embora chova"
+  },
+  {
+   "text": "Embora não entenda tudo, adoro esse livro.",
+   "en": "Although I do not understand everything, I love this book.",
+   "ko": "모두 이해하지는 못하지만 이 책을 좋아해.",
+   "blank": "Embora não entenda"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "Antes de viajarmos, precisamos confirmar as reservas.",
+   "en": "Before we travel, we need to confirm the reservations.",
+   "ko": "우리가 여행 가기 전에 예약을 확인해야 해요.",
+   "blank": "viajarmos"
+  },
+  {
+   "text": "É importante vocês lerem o contrato com atenção.",
+   "en": "It's important that you read the contract carefully.",
+   "ko": "여러분이 계약서를 주의 깊게 읽는 것이 중요해요.",
+   "blank": "lerem"
+  },
+  {
+   "text": "Depois de terminarem o trabalho, me avisem.",
+   "en": "After you finish the work, let me know.",
+   "ko": "여러분이 일을 끝내고 나서 저에게 알려 주세요.",
+   "blank": "terminarem"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "Tenho feito caminhadas todas as manhãs.",
+   "en": "I have been taking walks every morning.",
+   "ko": "나는 매일 아침 산책을 해왔어요.",
+   "blank": "Tenho feito"
+  },
+  {
+   "text": "Tenho feito perguntas sobre o novo projeto.",
+   "en": "I have been asking questions about the new project.",
+   "ko": "나는 새 프로젝트에 대해 계속 질문하고 있어요.",
+   "blank": "Tenho feito"
+  },
+  {
+   "text": "Tenho feito chamadas para meus pais ultimamente.",
+   "en": "I have been making calls to my parents lately.",
+   "ko": "나는 최근 부모님께 전화를 자주 하고 있어요.",
+   "blank": "Tenho feito"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "Ela falou que está cansada.",
+   "en": "She said she is tired.",
+   "ko": "그녀는 피곤하다고 말했다.",
+   "blank": "que está"
+  },
+  {
+   "text": "Disseram que o filme começa cedo.",
+   "en": "They said the movie starts early.",
+   "ko": "그들은 영화가 일찍 시작한다고 말했다.",
+   "blank": "que o"
+  },
+  {
+   "text": "Meu amigo contou que perdeu o ônibus.",
+   "en": "My friend said he missed the bus.",
+   "ko": "내 친구가 버스를 놓쳤다고 말했다.",
+   "blank": "que perdeu"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "Vive-se bem nesta cidade.",
+   "en": "People live well in this city.",
+   "ko": "이 도시에서는 잘 산다.",
+   "blank": "se"
+  },
+  {
+   "text": "Aqui não se aceita cartão de crédito.",
+   "en": "Credit cards are not accepted here.",
+   "ko": "여기서는 신용카드가 받아들여지지 않는다.",
+   "blank": "se"
+  },
+  {
+   "text": "Trabalha-se muito no verão.",
+   "en": "People work a lot in the summer.",
+   "ko": "여름에는 일을 많이 한다.",
+   "blank": "se"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "Eu já tinha almoçado quando você chegou.",
+   "en": "I had already eaten lunch when you arrived.",
+   "ko": "네가 도착했을 때 나는 이미 점심을 먹었어.",
+   "blank": "tinha almoçado"
+  },
+  {
+   "text": "Ela tinha estudado tudo antes da prova começar.",
+   "en": "She had studied everything before the test started.",
+   "ko": "시험이 시작되기 전에 그녀는 모든 것을 공부했어.",
+   "blank": "tinha estudado"
+  },
+  {
+   "text": "Nós já tínhamos comprado os ingressos quando soubemos da promoção.",
+   "en": "We had already bought the tickets when we heard about the promotion.",
+   "ko": "우리는 프로모션 소식을 듣기 전에 이미 티켓을 샀어.",
+   "blank": "tínhamos comprado"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "Caso precise de ajuda, me avise.",
+   "en": "If you need help, let me know.",
+   "ko": "도움이 필요하면 알려 줘.",
+   "blank": "Caso precise"
+  },
+  {
+   "text": "A não ser que você queira sair agora, podemos esperar mais um pouco.",
+   "en": "Unless you want to leave now, we can wait a little longer.",
+   "ko": "네가 지금 나가고 싶지 않으면, 우리는 좀 더 기다릴 수 있어.",
+   "blank": "A não ser que"
+  },
+  {
+   "text": "Contanto que ela concorde, podemos marcar a reunião amanhã.",
+   "en": "As long as she agrees, we can schedule the meeting for tomorrow.",
+   "ko": "그녀가 동의한다면 내일로 회의를 잡을 수 있어.",
+   "blank": "Contanto que"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "Você pode me ajudar rapidinho com isso?",
+   "en": "Can you help me really quickly with this?",
+   "ko": "이거 잠깐만 도와줄 수 있어?",
+   "blank": "rapidinho"
+  },
+  {
+   "text": "Me passa um cafezinho, por favor?",
+   "en": "Can you pass me a little coffee, please?",
+   "ko": "커피 조금만 건네줄래?",
+   "blank": "cafezinho"
+  },
+  {
+   "text": "Pode fechar a portinha quando sair?",
+   "en": "Can you close the little door when you leave?",
+   "ko": "나갈 때 문 좀 닫아줄래?",
+   "blank": "portinha"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "O que me surpreende é a sua paciência.",
+   "en": "What surprises me is your patience.",
+   "ko": "나를 놀라게 하는 것은 너의 인내심이야.",
+   "blank": "O que me surpreende é"
+  },
+  {
+   "text": "O que eu preciso agora é de um descanso.",
+   "en": "What I need now is a break.",
+   "ko": "내가 지금 필요한 것은 휴식이야.",
+   "blank": "O que eu preciso agora é"
+  },
+  {
+   "text": "O que realmente importa é a honestidade.",
+   "en": "What really matters is honesty.",
+   "ko": "정말로 중요한 것은 정직이야.",
+   "blank": "O que realmente importa é"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "Agradecemos desde já sua atenção e colaboração.",
+   "en": "We thank you in advance for your attention and cooperation.",
+   "ko": "귀하의 관심과 협조에 미리 감사드립니다.",
+   "blank": "Agradecemos desde já"
+  },
+  {
+   "text": "Informamos que sua solicitação foi recebida e está em análise.",
+   "en": "We inform you that your request has been received and is under review.",
+   "ko": "귀하의 요청이 접수되어 검토 중임을 알려드립니다.",
+   "blank": "Informamos que"
+  },
+  {
+   "text": "Solicitamos que os documentos sejam enviados até o final da semana.",
+   "en": "We request that the documents be sent by the end of the week.",
+   "ko": "서류를 이번 주 말까지 보내주시기 바랍니다.",
+   "blank": "Solicitamos que"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "Tu gosta desse filme, né?",
+   "en": "You like this movie, right?",
+   "ko": "너 이 영화 좋아하지, 그렇지?",
+   "blank": "Tu gosta"
+  },
+  {
+   "text": "Tu sabe onde fica o mercado?",
+   "en": "Do you know where the market is?",
+   "ko": "너 시장이 어디 있는지 알아?",
+   "blank": "Tu sabe"
+  },
+  {
+   "text": "Tu vai querer café ou chá?",
+   "en": "Do you want coffee or tea?",
+   "ko": "너 커피나 차 마실래?",
+   "blank": "Tu vai"
+  }
+ ],
+ "g|5:6": [
+  {
+   "text": "Pensei que ia chover, mas pelo contrário, fez sol o dia todo.",
+   "en": "I thought it was going to rain, but on the contrary, it was sunny all day.",
+   "ko": "비가 올 줄 알았는데, 오히려 하루 종일 해가 났어.",
+   "blank": "pelo contrário"
+  },
+  {
+   "text": "Aliás, você já conheceu a nova vizinha?",
+   "en": "By the way, have you met the new neighbor?",
+   "ko": "참, 너 새 이웃 만났어?",
+   "blank": "Aliás"
+  },
+  {
+   "text": "Inclusive, todos os meus amigos vão à festa.",
+   "en": "In fact, all my friends are going to the party.",
+   "ko": "게다가 내 친구들 모두 파티에 갈 거야.",
+   "blank": "Inclusive"
+  }
+ ]
+}

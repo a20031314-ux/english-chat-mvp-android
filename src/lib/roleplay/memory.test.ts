@@ -10,6 +10,7 @@ import {
   contextPrompt,
   foldDue,
   parseContext,
+  parseMemory,
   rawLines,
   type ConversationMemory,
 } from "./memory.ts";
@@ -61,23 +62,29 @@ test("the fold is asked to rewrite the notes, not to start over", () => {
       { who: "learner", text: "I might watch a movie tonight" },
       { who: "tutor", text: "Which one?" },
     ],
+    today: "2026-11-04",
   });
   assert.match(prompt, /They work at a design company\./);
   assert.match(prompt, /Them: I might watch a movie tonight/);
   assert.match(prompt, /You: Which one\?/);
   assert.match(prompt, /Rewrite your notes to cover all of it/);
+  assert.match(prompt, /Today is 2026-11-04/);
+  assert.match(prompt, /"facts"/);
 });
 
 test("notes are read out of the answer, or not at all", () => {
   assert.equal(parseContext('{"notes": " Works in design. "}'), "Works in design.");
   assert.equal(parseContext('{"notes": ""}'), null);
   assert.equal(parseContext("not json"), null);
+  const folded = parseMemory('{"notes": "Works in design.", "facts": ["Works in design.", "", 3, " Went to the gym the day before. "]}');
+  assert.deepEqual(folded, { notes: "Works in design.", facts: ["Works in design.", "Went to the gym the day before."] });
+  assert.equal(parseMemory('{"facts": ["Lives in Busan."]}')?.notes, "");
 });
 
 test("the notes reach the tutor at the tail of its brief, leaving the fixed part alone", () => {
   const scenario = findScenario("open-talk-en")!;
   const bank = sentencesFor("en");
-  const brief = (context: string) =>
+  const brief = (context: string, prior = "") =>
     tutorSystemPrompt({
       scenario,
       bank,
@@ -89,6 +96,7 @@ test("the notes reach the tutor at the tail of its brief, leaving the fixed part
         heard: "hi",
         history: [],
         context,
+        prior,
         freeTurns: 0,
         directedTurns: 0,
         level: 3,
@@ -102,4 +110,8 @@ test("the notes reach the tutor at the tail of its brief, leaving the fixed part
   assert.match(withNotes, /What you remember from earlier in this conversation:\nThey work at a design company/);
   const fixed = without.slice(0, without.indexOf("Level:"));
   assert.ok(withNotes.startsWith(fixed), "the cached part must not move");
+  const withPrior = brief("", "Today is 2026-11-04.\n2026-10-28: They went to the gym.");
+  assert.match(withPrior, /from earlier conversations/);
+  assert.match(withPrior, /2026-10-28: They went to the gym/);
+  assert.ok(withPrior.startsWith(fixed), "earlier conversations stay out of the cached part");
 });

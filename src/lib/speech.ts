@@ -314,6 +314,20 @@ const LATIN_LETTER_NAMES: Record<string, Record<string, string>> = {
  * Isolated Latin letters are otherwise read with English names ("jay").
  * Short particles like Portuguese "ne?" must stay a word ("né"), not N-E.
  */
+const KANA_SMALL = new Set(Array.from("ゃゅょぁぃぅぇぉゎっャュョァィゥェォヮッ"));
+
+/** 한 박자 가나(あ, きゃ, ティ, っ, ー). 낱말이 아니라 그 소리만 읽을 때. */
+export function isKanaMora(text: string): boolean {
+  const chars = Array.from(text.trim());
+  if (chars.length < 1 || chars.length > 2) return false;
+  const kana = (ch: string) => {
+    const code = ch.codePointAt(0) ?? 0;
+    return (code >= 0x3041 && code <= 0x3096) || (code >= 0x30a1 && code <= 0x30fa) || ch === "ー";
+  };
+  if (!chars.every(kana)) return false;
+  return chars.length === 1 || KANA_SMALL.has(chars[1] ?? "");
+}
+
 export function spokenFormForTts(text: string, lang: string): string {
   const trimmed = text.replace(/\s+/g, " ").trim();
   if (!trimmed) return "";

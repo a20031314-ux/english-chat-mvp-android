@@ -1,0 +1,2802 @@
+{
+ "e|آسف": [
+  {
+   "text": "آسف، لا أفهم.",
+   "en": "Sorry, I do not understand.",
+   "ko": "미안해, 나는 이해하지 못해.",
+   "blank": "آسف"
+  },
+  {
+   "text": "آسف، ليس معي ماء.",
+   "en": "Sorry, I do not have water.",
+   "ko": "미안해, 물이 없어.",
+   "blank": "آسف"
+  },
+  {
+   "text": "آسف، ليس عندي خبز.",
+   "en": "Sorry, I do not have bread.",
+   "ko": "미안해, 나는 빵이 없어.",
+   "blank": "آسف"
+  }
+ ],
+ "e|أظن أن": [
+  {
+   "text": "أظن أن الطقس سيكون جميلاً اليوم.",
+   "en": "I think the weather will be nice today.",
+   "ko": "오늘 날씨가 좋을 것 같아요.",
+   "blank": "أظن أن"
+  },
+  {
+   "text": "أظن أن القهوة جاهزة الآن.",
+   "en": "I think the coffee is ready now.",
+   "ko": "지금 커피가 준비된 것 같아요.",
+   "blank": "أظن أن"
+  },
+  {
+   "text": "أظن أن هذا الطريق أسرع.",
+   "en": "I think this road is faster.",
+   "ko": "이 길이 더 빠른 것 같아요.",
+   "blank": "أظن أن"
+  }
+ ],
+ "e|أفهم وجهة نظرك": [
+  {
+   "text": "أفهم وجهة نظرك، لكن لدي رأي مختلف قليلاً.",
+   "en": "I understand your point of view, but I have a slightly different opinion.",
+   "ko": "네 입장은 이해하지만, 내 의견은 약간 달라.",
+   "blank": "أفهم وجهة نظرك"
+  },
+  {
+   "text": "أفهم وجهة نظرك وأحترمها، حتى لو لم أوافق تماماً.",
+   "en": "I understand your point of view and respect it, even if I don't completely agree.",
+   "ko": "네 입장은 이해하고 존중해, 완전히 동의하지 않더라도.",
+   "blank": "أفهم وجهة نظرك"
+  },
+  {
+   "text": "أفهم وجهة نظرك الآن بعد أن شرحت أكثر.",
+   "en": "I understand your point of view now that you explained more.",
+   "ko": "네가 더 설명해줘서 이제 네 입장을 이해해.",
+   "blank": "أفهم وجهة نظرك"
+  }
+ ],
+ "e|أكيد": [
+  {
+   "text": "أكيد أنا جوعان.",
+   "en": "Of course I am hungry.",
+   "ko": "당연히 배고파.",
+   "blank": "أكيد"
+  },
+  {
+   "text": "أكيد رح أجي بكرة.",
+   "en": "Of course I will come tomorrow.",
+   "ko": "내일 꼭 올게.",
+   "blank": "أكيد"
+  },
+  {
+   "text": "أكيد أنت بخير؟",
+   "en": "Are you sure you are okay?",
+   "ko": "정말 괜찮아?",
+   "blank": "أكيد"
+  }
+ ],
+ "e|أنا موافق": [
+  {
+   "text": "أنا موافق على هذا الاقتراح.",
+   "en": "I agree with this suggestion.",
+   "ko": "나는 이 제안에 동의해.",
+   "blank": "أنا موافق"
+  },
+  {
+   "text": "إذا أردت أن نلتقي غداً، أنا موافق.",
+   "en": "If you want us to meet tomorrow, I agree.",
+   "ko": "내일 만나고 싶다면, 나도 괜찮아.",
+   "blank": "أنا موافق"
+  },
+  {
+   "text": "هل أنت متأكد أنك تريد الذهاب؟ أنا موافق.",
+   "en": "Are you sure you want to go? I agree.",
+   "ko": "정말 가고 싶은 거야? 나도 괜찮아.",
+   "blank": "أنا موافق"
+  }
+ ],
+ "e|أهلا وسهلا": [
+  {
+   "text": "أهلا وسهلا، كيف حالك اليوم؟",
+   "en": "Hello and welcome, how are you today?",
+   "ko": "안녕하세요, 오늘 어때요?",
+   "blank": "أهلا وسهلا"
+  },
+  {
+   "text": "أهلا وسهلا في بيتنا.",
+   "en": "Welcome to our home.",
+   "ko": "우리 집에 오신 것을 환영해요.",
+   "blank": "أهلا وسهلا"
+  },
+  {
+   "text": "أهلا وسهلا، تفضل اجلس هنا.",
+   "en": "Hello and welcome, please have a seat here.",
+   "ko": "안녕하세요, 여기 앉으세요.",
+   "blank": "أهلا وسهلا"
+  }
+ ],
+ "e|أين الحمام": [
+  {
+   "text": "مرحبا، أين الحمام؟",
+   "en": "Hi, where is the bathroom?",
+   "ko": "안녕, 화장실이 어디에요?",
+   "blank": "أين الحمام"
+  },
+  {
+   "text": "أين الحمام من فضلك؟",
+   "en": "Where is the bathroom, please?",
+   "ko": "화장실이 어디에요, 부탁해요?",
+   "blank": "أين الحمام"
+  },
+  {
+   "text": "أنا جديد هنا، أين الحمام؟",
+   "en": "I am new here, where is the bathroom?",
+   "ko": "저는 여기 처음인데, 화장실이 어디에요?",
+   "blank": "أين الحمام"
+  }
+ ],
+ "e|إذا سمحت لي": [
+  {
+   "text": "إذا سمحت لي، هل يمكنني استخدام هاتفك لدقيقة؟",
+   "en": "If you allow me, can I use your phone for a minute?",
+   "ko": "괜찮으시다면, 잠깐 휴대폰을 써도 될까요?",
+   "blank": "إذا سمحت لي"
+  },
+  {
+   "text": "إذا سمحت لي، أود أن أضيف شيئاً إلى ما قلت.",
+   "en": "If you allow me, I would like to add something to what you said.",
+   "ko": "괜찮으시다면, 당신이 말한 것에 한 가지 덧붙이고 싶어요.",
+   "blank": "إذا سمحت لي"
+  },
+  {
+   "text": "إذا سمحت لي، ممكن أغلق النافذة لأن الجو بارد؟",
+   "en": "If you allow me, can I close the window because it's cold?",
+   "ko": "괜찮으시다면, 추워서 창문을 닫아도 될까요?",
+   "blank": "إذا سمحت لي"
+  }
+ ],
+ "e|إن جاز التعبير": [
+  {
+   "text": "الوقت يمر بسرعة البرق، إن جاز التعبير.",
+   "en": "Time passes in the blink of an eye, so to speak.",
+   "ko": "시간이 눈 깜짝할 사이에 지나가, 말하자면.",
+   "blank": "إن جاز التعبير"
+  },
+  {
+   "text": "أشعر أن قلبي يرقص من الفرح، إن جاز التعبير.",
+   "en": "I feel like my heart is dancing with joy, so to speak.",
+   "ko": "내 마음이 기쁨으로 춤추는 것 같아, 말하자면.",
+   "blank": "إن جاز التعبير"
+  },
+  {
+   "text": "هذه الفوضى في غرفتي هي إعصار صغير، إن جاز التعبير.",
+   "en": "This mess in my room is like a little hurricane, so to speak.",
+   "ko": "내 방의 이 어지러움은 작은 허리케인 같아, 말하자면.",
+   "blank": "إن جاز التعبير"
+  }
+ ],
+ "e|إن شاء الله": [
+  {
+   "text": "سأحضر غداً إن شاء الله.",
+   "en": "I will come tomorrow, God willing.",
+   "ko": "내일 갈 거야, 인샬라(신이 원하신다면).",
+   "blank": "إن شاء الله"
+  },
+  {
+   "text": "سأنجح في الامتحان إن شاء الله.",
+   "en": "I will succeed in the exam, God willing.",
+   "ko": "시험에 합격할 거야, 인샬라.",
+   "blank": "إن شاء الله"
+  },
+  {
+   "text": "سنتقابل قريباً إن شاء الله.",
+   "en": "We will meet soon, God willing.",
+   "ko": "곧 만날 거야, 인샬라.",
+   "blank": "إن شاء الله"
+  }
+ ],
+ "e|البقية في حياتك": [
+  {
+   "text": "البقية في حياتك، الله يصبر قلبك.",
+   "en": "My condolences, may God grant you patience.",
+   "ko": "삼가 고인의 명복을 빕니다, 하나님이 당신에게 인내를 주시길 바랍니다.",
+   "blank": "البقية في حياتك"
+  },
+  {
+   "text": "كنت أتمنى أن أراك في ظروف أفضل، البقية في حياتك.",
+   "en": "I wish I could see you in better circumstances, my condolences.",
+   "ko": "더 좋은 상황에서 당신을 뵙고 싶었는데, 삼가 고인의 명복을 빕니다.",
+   "blank": "البقية في حياتك"
+  },
+  {
+   "text": "البقية في حياتك، إذا احتجت أي شيء أنا هنا.",
+   "en": "My condolences, if you need anything I am here.",
+   "ko": "삼가 고인의 명복을 빕니다, 필요한 게 있으면 제가 도와드릴게요.",
+   "blank": "البقية في حياتك"
+  }
+ ],
+ "e|الحساب من فضلك": [
+  {
+   "text": "الحساب من فضلك، أريد أن أغادر.",
+   "en": "The bill, please, I want to leave.",
+   "ko": "계산서 주세요, 나가고 싶어요.",
+   "blank": "الحساب من فضلك"
+  },
+  {
+   "text": "الحساب من فضلك، الطعام كان لذيذاً.",
+   "en": "The bill, please, the food was delicious.",
+   "ko": "계산서 주세요, 음식이 맛있었어요.",
+   "blank": "الحساب من فضلك"
+  },
+  {
+   "text": "الحساب من فضلك، هل يمكن أن تدفع بالبطاقة؟",
+   "en": "The bill, please, can I pay by card?",
+   "ko": "계산서 주세요, 카드로 결제할 수 있나요?",
+   "blank": "الحساب من فضلك"
+  }
+ ],
+ "e|الحمد لله على السلامة": [
+  {
+   "text": "الحمد لله على السلامة، كيف كانت الرحلة؟",
+   "en": "Thank God for your safe return, how was the trip?",
+   "ko": "무사히 돌아와서 다행이야, 여행은 어땠어?",
+   "blank": "الحمد لله على السلامة"
+  },
+  {
+   "text": "الحمد لله على السلامة، اشتقنا لك كثيراً.",
+   "en": "Thank God for your safe return, we missed you a lot.",
+   "ko": "무사히 돌아와줘서 다행이야, 우리가 많이 보고 싶었어.",
+   "blank": "الحمد لله على السلامة"
+  },
+  {
+   "text": "الحمد لله على السلامة، هل تحتاج إلى شيء؟",
+   "en": "Thank God for your safe return, do you need anything?",
+   "ko": "무사히 돌아와서 다행이야, 필요한 거 있어?",
+   "blank": "الحمد لله على السلامة"
+  }
+ ],
+ "e|السلام عليكم": [
+  {
+   "text": "السلام عليكم، كيف حالك؟",
+   "en": "Peace be upon you, how are you?",
+   "ko": "안녕하세요, 잘 지내세요?",
+   "blank": "السلام عليكم"
+  },
+  {
+   "text": "السلام عليكم، أنا هنا.",
+   "en": "Peace be upon you, I am here.",
+   "ko": "안녕하세요, 저 여기 있어요.",
+   "blank": "السلام عليكم"
+  },
+  {
+   "text": "السلام عليكم في الصباح.",
+   "en": "Peace be upon you in the morning.",
+   "ko": "아침에 안녕하세요.",
+   "blank": "السلام عليكم"
+  }
+ ],
+ "e|الصبر مفتاح الفرج": [
+  {
+   "text": "لا تقلق من تأخر النتائج، الصبر مفتاح الفرج.",
+   "en": "Don't worry about the delay in results, patience is the key to relief.",
+   "ko": "결과가 늦어져도 걱정하지 마, 인내가 해결의 열쇠야.",
+   "blank": "الصبر مفتاح الفرج"
+  },
+  {
+   "text": "كلما شعرت بالإحباط، تذكر أن الصبر مفتاح الفرج.",
+   "en": "Whenever you feel frustrated, remember that patience is the key to relief.",
+   "ko": "좌절감을 느낄 때마다 인내가 해결의 열쇠라는 걸 기억해.",
+   "blank": "الصبر مفتاح الفرج"
+  },
+  {
+   "text": "مررنا بوقت صعب ولكن الصبر مفتاح الفرج.",
+   "en": "We went through a tough time but patience is the key to relief.",
+   "ko": "힘든 시간을 겪었지만 인내가 해결의 열쇠야.",
+   "blank": "الصبر مفتاح الفرج"
+  }
+ ],
+ "e|العين بصيرة واليد قصيرة": [
+  {
+   "text": "كنت أتمنى أساعدك بس العين بصيرة واليد قصيرة.",
+   "en": "I wish I could help you, but I can't do much.",
+   "ko": "도와주고 싶지만, 할 수 있는 게 없어.",
+   "blank": "العين بصيرة واليد قصيرة"
+  },
+  {
+   "text": "أردت السفر هذا الصيف، لكن العين بصيرة واليد قصيرة.",
+   "en": "I wanted to travel this summer, but it's just not possible.",
+   "ko": "이번 여름에 여행 가고 싶었지만, 그냥 할 수가 없어.",
+   "blank": "العين بصيرة واليد قصيرة"
+  },
+  {
+   "text": "أعرف أن السيارة جميلة، لكن العين بصيرة واليد قصيرة.",
+   "en": "I know the car is beautiful, but it's out of my reach.",
+   "ko": "차가 예쁜 건 알지만, 내 힘으로는 어쩔 수 없어.",
+   "blank": "العين بصيرة واليد قصيرة"
+  }
+ ],
+ "e|الله يبارك فيك": [
+  {
+   "text": "شكراً على المساعدة، الله يبارك فيك.",
+   "en": "Thank you for the help, may God bless you.",
+   "ko": "도와줘서 고마워, 신의 축복이 있길 바래.",
+   "blank": "الله يبارك فيك"
+  },
+  {
+   "text": "مبروك على الوظيفة الجديدة، الله يبارك فيك.",
+   "en": "Congratulations on the new job, may God bless you.",
+   "ko": "새 직장 축하해, 신의 축복이 있길 바래.",
+   "blank": "الله يبارك فيك"
+  },
+  {
+   "text": "الله يبارك فيك، كيف حال عائلتك؟",
+   "en": "May God bless you, how is your family?",
+   "ko": "신의 축복이 있길 바래, 가족은 잘 지내?",
+   "blank": "الله يبارك فيك"
+  }
+ ],
+ "e|الله يسلمك": [
+  {
+   "text": "شكراً على المساعدة، الله يسلمك.",
+   "en": "Thank you for the help, may God keep you safe.",
+   "ko": "도와줘서 고마워, 신이 당신을 지켜주길 바랍니다.",
+   "blank": "الله يسلمك"
+  },
+  {
+   "text": "مع السلامة، الله يسلمك.",
+   "en": "Goodbye, may God keep you safe.",
+   "ko": "안녕히 가세요, 신이 당신을 지켜주길 바랍니다.",
+   "blank": "الله يسلمك"
+  },
+  {
+   "text": "الحمد لله أنا بخير، الله يسلمك.",
+   "en": "Thank God, I am fine, may God keep you safe.",
+   "ko": "신께 감사해요, 저는 잘 지내요, 신이 당신을 지켜주길 바랍니다.",
+   "blank": "الله يسلمك"
+  }
+ ],
+ "e|الله يعافيك": [
+  {
+   "text": "شكراً على المساعدة، الله يعافيك.",
+   "en": "Thank you for the help, may God grant you health.",
+   "ko": "도와줘서 고마워요, 신이 당신을 건강하게 해주시길.",
+   "blank": "الله يعافيك"
+  },
+  {
+   "text": "الله يعافيك، تفضل الشاي.",
+   "en": "May God grant you health, here is the tea.",
+   "ko": "신이 당신을 건강하게 해주시길, 여기 차 있어요.",
+   "blank": "الله يعافيك"
+  },
+  {
+   "text": "سلامتك من التعب، الله يعافيك.",
+   "en": "Get well from your tiredness, may God grant you health.",
+   "ko": "피곤에서 회복하세요, 신이 당신을 건강하게 해주시길.",
+   "blank": "الله يعافيك"
+  }
+ ],
+ "e|اللي فات مات": [
+  {
+   "text": "ما تزعلش، اللي فات مات وخلينا نبص لقدام.",
+   "en": "Don't be upset, what's past is past, let's look forward.",
+   "ko": "속상해하지 마, 지난 일은 지난 일이야. 앞으로 보자.",
+   "blank": "اللي فات مات"
+  },
+  {
+   "text": "أنا عارف إنك زعلان، بس اللي فات مات وما في داعي نفكر فيه كتير.",
+   "en": "I know you're upset, but what's past is past and there's no need to think about it much.",
+   "ko": "네가 속상한 거 알아. 하지만 지난 일은 지난 일이야. 너무 많이 생각할 필요 없어.",
+   "blank": "اللي فات مات"
+  },
+  {
+   "text": "ليه كل ما نتكلم ترجع للموضوع القديم؟ اللي فات مات خلاص.",
+   "en": "Why do you always bring up the old topic whenever we talk? What's past is past, that's it.",
+   "ko": "우리가 이야기할 때마다 왜 자꾸 옛날 얘기를 꺼내? 이미 지난 일은 지난 일이야.",
+   "blank": "اللي فات مات"
+  }
+ ],
+ "e|المهم": [
+  {
+   "text": "المهم إنك بخير الآن.",
+   "en": "The important thing is that you are okay now.",
+   "ko": "중요한 건 네가 이제 괜찮다는 거야.",
+   "blank": "المهم"
+  },
+  {
+   "text": "المهم حاولت بكل جهدك.",
+   "en": "The important thing is you tried your best.",
+   "ko": "중요한 건 네가 최선을 다했다는 거야.",
+   "blank": "المهم"
+  },
+  {
+   "text": "المهم لا تنسى موعدك غداً.",
+   "en": "The important thing is don't forget your appointment tomorrow.",
+   "ko": "중요한 건 내일 약속을 잊지 않는 거야.",
+   "blank": "المهم"
+  }
+ ],
+ "e|باختصار": [
+  {
+   "text": "باختصار، كل شيء سار كما خططنا.",
+   "en": "In short, everything went as we planned.",
+   "ko": "간단히 말해서, 모든 것이 우리가 계획한 대로 진행됐어.",
+   "blank": "باختصار"
+  },
+  {
+   "text": "باختصار، الموضوع لا يستحق القلق.",
+   "en": "In short, the issue is not worth worrying about.",
+   "ko": "간단히 말해서, 그 문제는 걱정할 가치가 없어.",
+   "blank": "باختصار"
+  },
+  {
+   "text": "باختصار، أنا موافق على الفكرة.",
+   "en": "In short, I agree with the idea.",
+   "ko": "간단히 말해서, 나는 그 생각에 동의해.",
+   "blank": "باختصار"
+  }
+ ],
+ "e|بالإضافة إلى ذلك": [
+  {
+   "text": "أنا أحب قراءة الكتب، بالإضافة إلى ذلك أستمتع بمشاهدة الأفلام في وقت فراغي.",
+   "en": "I love reading books, and in addition to that I enjoy watching movies in my free time.",
+   "ko": "나는 책 읽는 것을 좋아하고, 게다가 자유 시간에 영화 보는 것도 즐긴다.",
+   "blank": "بالإضافة إلى ذلك"
+  },
+  {
+   "text": "الجو جميل اليوم، بالإضافة إلى ذلك لا يوجد ازدحام في الشوارع.",
+   "en": "The weather is nice today, and in addition to that there is no traffic in the streets.",
+   "ko": "오늘 날씨가 좋고, 게다가 거리에도 교통 체증이 없다.",
+   "blank": "بالإضافة إلى ذلك"
+  },
+  {
+   "text": "أحتاج إلى شراء الخبز، بالإضافة إلى ذلك يجب أن أحضر بعض الحليب.",
+   "en": "I need to buy bread, and in addition to that I have to get some milk.",
+   "ko": "나는 빵을 사야 하고, 게다가 우유도 사야 한다.",
+   "blank": "بالإضافة إلى ذلك"
+  }
+ ],
+ "e|بالعكس": [
+  {
+   "text": "بالعكس، أنا أحب الطقس البارد.",
+   "en": "On the contrary, I like cold weather.",
+   "ko": "반대로, 나는 추운 날씨를 좋아해.",
+   "blank": "بالعكس"
+  },
+  {
+   "text": "ما في مشكلة، بالعكس هذا يساعدني.",
+   "en": "No problem, on the contrary, this helps me.",
+   "ko": "문제 없어, 오히려 이것이 나를 도와줘.",
+   "blank": "بالعكس"
+  },
+  {
+   "text": "بالعكس، الطريق اليوم كان سهل.",
+   "en": "On the contrary, the road was easy today.",
+   "ko": "반대로, 오늘 길이 쉬웠어.",
+   "blank": "بالعكس"
+  }
+ ],
+ "e|بالمختصر المفيد": [
+  {
+   "text": "بالمختصر المفيد، الطقس اليوم جميل ومناسب للخروج.",
+   "en": "In short, the weather today is nice and good for going out.",
+   "ko": "간단히 말해서, 오늘 날씨는 좋아서 나가기 좋아요.",
+   "blank": "بالمختصر المفيد"
+  },
+  {
+   "text": "بالمختصر المفيد، الفيلم ما كان على مستوى التوقعات.",
+   "en": "In short, the movie didn't live up to expectations.",
+   "ko": "간단히 말해서, 그 영화는 기대에 못 미쳤어요.",
+   "blank": "بالمختصر المفيد"
+  },
+  {
+   "text": "بالمختصر المفيد، إذا احتجت أي مساعدة أنا موجود.",
+   "en": "In short, if you need any help, I'm here.",
+   "ko": "간단히 말해서, 도움이 필요하면 제가 있어요.",
+   "blank": "بالمختصر المفيد"
+  }
+ ],
+ "e|بالهناء والشفاء": [
+  {
+   "text": "تفضل الشاي، بالهناء والشفاء.",
+   "en": "Here is the tea, enjoy and may it bring you health.",
+   "ko": "여기 차 드세요, 건강하게 맛있게 드세요.",
+   "blank": "بالهناء والشفاء"
+  },
+  {
+   "text": "أكلت كثيرًا، بالهناء والشفاء.",
+   "en": "You ate a lot, may it be good for you and bring you health.",
+   "ko": "많이 드셨네요, 건강하게 맛있게 드세요.",
+   "blank": "بالهناء والشفاء"
+  },
+  {
+   "text": "شكراً على الطعام، بالهناء والشفاء.",
+   "en": "Thank you for the food, enjoy and may it bring you health.",
+   "ko": "음식 고마워요, 건강하게 맛있게 드세요.",
+   "blank": "بالهناء والشفاء"
+  }
+ ],
+ "e|بخير والحمد لله": [
+  {
+   "text": "كيف حالك؟ بخير والحمد لله.",
+   "en": "How are you? I am fine, thank God.",
+   "ko": "잘 지냈어? 나는 잘 지내, 신께 감사해.",
+   "blank": "بخير والحمد لله"
+  },
+  {
+   "text": "أنا هنا بخير والحمد لله.",
+   "en": "I am here, fine, thank God.",
+   "ko": "나는 여기 있어, 잘 지내, 신께 감사해.",
+   "blank": "بخير والحمد لله"
+  },
+  {
+   "text": "اليوم بخير والحمد لله.",
+   "en": "Today is fine, thank God.",
+   "ko": "오늘은 잘 지내, 신께 감사해.",
+   "blank": "بخير والحمد لله"
+  }
+ ],
+ "e|بشكل عام": [
+  {
+   "text": "بشكل عام، الجو في هذه المدينة معتدل طوال السنة.",
+   "en": "In general, the weather in this city is mild all year round.",
+   "ko": "일반적으로 이 도시의 날씨는 연중 내내 온화해요.",
+   "blank": "بشكل عام"
+  },
+  {
+   "text": "أنا أحب الطبخ بشكل عام، لكن أحياناً لا أجد الوقت.",
+   "en": "I like cooking in general, but sometimes I don't find the time.",
+   "ko": "나는 일반적으로 요리하는 것을 좋아하지만, 가끔은 시간이 없어.",
+   "blank": "بشكل عام"
+  },
+  {
+   "text": "بشكل عام، الأطفال هنا يبدؤون المدرسة في سن صغيرة.",
+   "en": "In general, children here start school at a young age.",
+   "ko": "일반적으로 이곳 아이들은 어린 나이에 학교를 시작해요.",
+   "blank": "بشكل عام"
+  }
+ ],
+ "e|بصراحة": [
+  {
+   "text": "بصراحة، أنا متعب اليوم.",
+   "en": "Honestly, I am tired today.",
+   "ko": "솔직히 오늘 피곤해요.",
+   "blank": "بصراحة"
+  },
+  {
+   "text": "بصراحة، ما فهمت الدرس.",
+   "en": "Honestly, I did not understand the lesson.",
+   "ko": "솔직히 수업을 이해하지 못했어요.",
+   "blank": "بصراحة"
+  },
+  {
+   "text": "بصراحة، الأكل هنا لذيذ جداً.",
+   "en": "Honestly, the food here is very delicious.",
+   "ko": "솔직히 여기 음식이 정말 맛있어요.",
+   "blank": "بصراحة"
+  }
+ ],
+ "e|بكم هذا": [
+  {
+   "text": "مرحبا، بكم هذا القلم؟",
+   "en": "Hi, how much is this pen?",
+   "ko": "안녕하세요, 이 펜은 얼마인가요?",
+   "blank": "بكم هذا"
+  },
+  {
+   "text": "بكم هذا الكتاب؟",
+   "en": "How much is this book?",
+   "ko": "이 책은 얼마인가요?",
+   "blank": "بكم هذا"
+  },
+  {
+   "text": "أريد أن أعرف، بكم هذا الدفتر؟",
+   "en": "I want to know, how much is this notebook?",
+   "ko": "이 공책은 얼마인지 알고 싶어요.",
+   "blank": "بكم هذا"
+  }
+ ],
+ "e|تخيل": [
+  {
+   "text": "تخيل لو كان عندك بيت على البحر.",
+   "en": "Imagine if you had a house by the sea.",
+   "ko": "바닷가에 집이 있다고 상상해 봐.",
+   "blank": "تخيل"
+  },
+  {
+   "text": "تخيل أن الجو يصبح بارداً فجأة.",
+   "en": "Imagine the weather suddenly turns cold.",
+   "ko": "날씨가 갑자기 추워진다고 상상해 봐.",
+   "blank": "تخيل"
+  },
+  {
+   "text": "تخيل أنك نسيت مفاتيحك في المنزل.",
+   "en": "Imagine you forgot your keys at home.",
+   "ko": "집에 열쇠를 두고 왔다고 상상해 봐.",
+   "blank": "تخيل"
+  }
+ ],
+ "e|تشرفنا": [
+  {
+   "text": "مرحبا، تشرفنا.",
+   "en": "Hello, nice to meet you.",
+   "ko": "안녕하세요, 만나서 반가워요.",
+   "blank": "تشرفنا"
+  },
+  {
+   "text": "أنا جديد هنا، تشرفنا.",
+   "en": "I am new here, nice to meet you.",
+   "ko": "저는 여기 처음이에요, 만나서 반가워요.",
+   "blank": "تشرفنا"
+  },
+  {
+   "text": "تشرفنا في السوق اليوم.",
+   "en": "Nice to meet you at the market today.",
+   "ko": "오늘 시장에서 만나서 반가워요.",
+   "blank": "تشرفنا"
+  }
+ ],
+ "e|تفضل": [
+  {
+   "text": "تفضل، هذا كتابك.",
+   "en": "Here you go, this is your book.",
+   "ko": "여기 있어, 이것이 네 책이야.",
+   "blank": "تفضل"
+  },
+  {
+   "text": "تفضل، اجلس هنا.",
+   "en": "Please, sit here.",
+   "ko": "앉으세요, 여기.",
+   "blank": "تفضل"
+  },
+  {
+   "text": "تفضل، اشرب ماء.",
+   "en": "Please, drink water.",
+   "ko": "물 마셔요, 여기 있어요.",
+   "blank": "تفضل"
+  }
+ ],
+ "e|حصل خير": [
+  {
+   "text": "لا تقلق، حصل خير.",
+   "en": "Don't worry, it's all good now.",
+   "ko": "걱정하지 마, 이제 다 괜찮아졌어.",
+   "blank": "حصل خير"
+  },
+  {
+   "text": "لو نسيت المفتاح، حصل خير.",
+   "en": "If you forgot the key, it's fine now.",
+   "ko": "열쇠를 잊어버렸어도, 이제 괜찮아.",
+   "blank": "حصل خير"
+  },
+  {
+   "text": "تأخرت شوية بس حصل خير.",
+   "en": "I was a bit late but it's okay now.",
+   "ko": "좀 늦었지만 이제 괜찮아.",
+   "blank": "حصل خير"
+  }
+ ],
+ "e|حط نفسك مكاني": [
+  {
+   "text": "حط نفسك مكاني، ماذا كنت ستفعل لو واجهت نفس المشكلة؟",
+   "en": "Put yourself in my place, what would you do if you faced the same problem?",
+   "ko": "내 입장이라면, 같은 문제를 겪었다면 어떻게 했을 것 같아?",
+   "blank": "حط نفسك مكاني"
+  },
+  {
+   "text": "حط نفسك مكاني وشوف قد إيش الموضوع صعب بالنسبة لي.",
+   "en": "Put yourself in my place and see how hard this is for me.",
+   "ko": "내 입장이라 생각해봐, 이게 나한테 얼마나 힘든지 알겠지.",
+   "blank": "حط نفسك مكاني"
+  },
+  {
+   "text": "حط نفسك مكاني وخبرني إذا كنت تقدر تتحمل كل هذا الضغط.",
+   "en": "Put yourself in my shoes and tell me if you could handle all this pressure.",
+   "ko": "네가 내 입장이라면 이 모든 압박을 견딜 수 있을지 말해줘.",
+   "blank": "حط نفسك مكاني"
+  }
+ ],
+ "e|خلاص اتفقنا": [
+  {
+   "text": "لو هنخرج بكرة في المساء، خلاص اتفقنا.",
+   "en": "If we're going out tomorrow evening, that's settled.",
+   "ko": "내일 저녁에 나간다면, 그걸로 결정이야.",
+   "blank": "خلاص اتفقنا"
+  },
+  {
+   "text": "خلاص اتفقنا، هجيب الأكل وإنت تجيب المشروبات.",
+   "en": "It's settled, I'll bring the food and you bring the drinks.",
+   "ko": "결정됐어, 내가 음식을 가져오고 네가 음료를 가져와.",
+   "blank": "خلاص اتفقنا"
+  },
+  {
+   "text": "خلاص اتفقنا على موعد الاجتماع الأسبوع الجاي؟",
+   "en": "Have we settled on the meeting time for next week?",
+   "ko": "다음 주 회의 시간을 확정했어?",
+   "blank": "خلاص اتفقنا"
+  }
+ ],
+ "e|خلينا نكون واقعيين": [
+  {
+   "text": "خلينا نكون واقعيين، مش كل شيء رح يمشي مثل ما بدنا.",
+   "en": "Let's be realistic, not everything will go the way we want.",
+   "ko": "현실적으로 생각하자, 모든 것이 우리가 원하는 대로 되지는 않을 거야.",
+   "blank": "خلينا نكون واقعيين"
+  },
+  {
+   "text": "خلينا نكون واقعيين، الدراسة تحتاج وقت وجهد كبير.",
+   "en": "Let's be realistic, studying takes a lot of time and effort.",
+   "ko": "현실적으로 생각하자, 공부에는 많은 시간과 노력이 필요해.",
+   "blank": "خلينا نكون واقعيين"
+  },
+  {
+   "text": "خلينا نكون واقعيين، ما فينا نسافر كل عطلة.",
+   "en": "Let's be realistic, we can't travel every holiday.",
+   "ko": "현실적으로 생각하자, 매번 휴가마다 여행할 수는 없어.",
+   "blank": "خلينا نكون واقعيين"
+  }
+ ],
+ "e|خليها على الله": [
+  {
+   "text": "ما تقلق، خليها على الله وكل شيء بيتسهل.",
+   "en": "Don't worry, leave it to God and everything will get easier.",
+   "ko": "걱정하지 마, 하나님께 맡기면 모든 게 쉬워질 거야.",
+   "blank": "خليها على الله"
+  },
+  {
+   "text": "لو ما لقيت وظيفة هالشهر، خليها على الله ويمكن يجيك الأفضل.",
+   "en": "If you don't find a job this month, leave it to God and maybe something better will come.",
+   "ko": "이번 달에 일자리 못 찾아도 하나님께 맡기면 더 좋은 게 올 수도 있어.",
+   "blank": "خليها على الله"
+  },
+  {
+   "text": "خسرت المباراة اليوم، بس قلت لنفسي خليها على الله.",
+   "en": "I lost the match today, but I told myself to leave it to God.",
+   "ko": "오늘 경기에서 졌지만, 그냥 하나님께 맡기자고 생각했어.",
+   "blank": "خليها على الله"
+  }
+ ],
+ "e|رب ضارة نافعة": [
+  {
+   "text": "خسرت عملي القديم ولكن وجدت وظيفة أفضل، رب ضارة نافعة.",
+   "en": "I lost my old job but found a better one, a blessing in disguise.",
+   "ko": "예전 직장을 잃었지만 더 좋은 직장을 찾았어, 전화위복이야.",
+   "blank": "رب ضارة نافعة"
+  },
+  {
+   "text": "تأخرت على الحافلة ولكن التقيت بصديق قديم، رب ضارة نافعة.",
+   "en": "I missed the bus but met an old friend, a blessing in disguise.",
+   "ko": "버스를 놓쳤지만 오랜 친구를 만났어, 전화위복이야.",
+   "blank": "رب ضارة نافعة"
+  },
+  {
+   "text": "مرضت في العطلة واضطررت للبقاء في البيت، رب ضارة نافعة لأنني ارتحت كثيراً.",
+   "en": "I got sick during the holiday and had to stay home, but it was a blessing in disguise because I got a lot of rest.",
+   "ko": "휴가 중에 아파서 집에 있어야 했는데, 오히려 많이 쉴 수 있어서 전화위복이었어.",
+   "blank": "رب ضارة نافعة"
+  }
+ ],
+ "e|سلامتك": [
+  {
+   "text": "سلامتك، هل تحتاج إلى ماء؟",
+   "en": "Are you okay, do you need water?",
+   "ko": "괜찮아? 물 필요해?",
+   "blank": "سلامتك"
+  },
+  {
+   "text": "سلامتك من البرد، ارتح شوية.",
+   "en": "Get well soon from your cold, rest a little.",
+   "ko": "감기 빨리 나아, 좀 쉬어.",
+   "blank": "سلامتك"
+  },
+  {
+   "text": "سمعت أنك تعبت، سلامتك.",
+   "en": "I heard you were tired, get well soon.",
+   "ko": "너 힘들었다고 들었어, 빨리 나아.",
+   "blank": "سلامتك"
+  }
+ ],
+ "e|شكرا": [
+  {
+   "text": "شكرا على الماء.",
+   "en": "Thank you for the water.",
+   "ko": "물 주셔서 고마워요.",
+   "blank": "شكرا"
+  },
+  {
+   "text": "أكلت الطعام، شكرا.",
+   "en": "I ate the food, thank you.",
+   "ko": "음식 먹었어요, 고마워요.",
+   "blank": "شكرا"
+  },
+  {
+   "text": "شكرا، هذا جميل.",
+   "en": "Thank you, this is nice.",
+   "ko": "고마워요, 이거 좋아요.",
+   "blank": "شكرا"
+  }
+ ],
+ "e|شوي شوي": [
+  {
+   "text": "امشي شوي شوي.",
+   "en": "Walk slowly.",
+   "ko": "천천히 걸어.",
+   "blank": "شوي شوي"
+  },
+  {
+   "text": "حكي شوي شوي.",
+   "en": "Speak slowly.",
+   "ko": "천천히 말해.",
+   "blank": "شوي شوي"
+  },
+  {
+   "text": "كل شوي شوي.",
+   "en": "Eat slowly.",
+   "ko": "천천히 먹어.",
+   "blank": "شوي شوي"
+  }
+ ],
+ "e|شيء آخر": [
+  {
+   "text": "هل تريد شيء آخر؟",
+   "en": "Do you want anything else?",
+   "ko": "다른 것이 필요해요?",
+   "blank": "شيء آخر"
+  },
+  {
+   "text": "أحتاج إلى شيء آخر من المتجر.",
+   "en": "I need something else from the store.",
+   "ko": "가게에서 다른 것이 필요해요.",
+   "blank": "شيء آخر"
+  },
+  {
+   "text": "لا يوجد شيء آخر في الحقيبة.",
+   "en": "There is nothing else in the bag.",
+   "ko": "가방에 다른 것이 없어요.",
+   "blank": "شيء آخر"
+  }
+ ],
+ "e|صباح الخير": [
+  {
+   "text": "صباح الخير، كيف حالك؟",
+   "en": "Good morning, how are you?",
+   "ko": "좋은 아침, 잘 지냈어요?",
+   "blank": "صباح الخير"
+  },
+  {
+   "text": "صباح الخير يا أمي",
+   "en": "Good morning, mom",
+   "ko": "좋은 아침이에요, 엄마",
+   "blank": "صباح الخير"
+  },
+  {
+   "text": "صباح الخير للجميع",
+   "en": "Good morning everyone",
+   "ko": "모두 좋은 아침입니다",
+   "blank": "صباح الخير"
+  }
+ ],
+ "e|صباح النور": [
+  {
+   "text": "صباح النور، كيف حالك اليوم؟",
+   "en": "Good morning, how are you today?",
+   "ko": "좋은 아침, 오늘 어때요?",
+   "blank": "صباح النور"
+  },
+  {
+   "text": "صباح النور، هل شربت قهوتك؟",
+   "en": "Good morning, did you drink your coffee?",
+   "ko": "좋은 아침, 커피 마셨어요?",
+   "blank": "صباح النور"
+  },
+  {
+   "text": "صباح النور، الجو جميل اليوم.",
+   "en": "Good morning, the weather is nice today.",
+   "ko": "좋은 아침, 오늘 날씨가 좋아요.",
+   "blank": "صباح النور"
+  }
+ ],
+ "e|طيب": [
+  {
+   "text": "طيب، أنا أنتظر هنا.",
+   "en": "Okay, I will wait here.",
+   "ko": "알겠어, 나는 여기서 기다릴게.",
+   "blank": "طيب"
+  },
+  {
+   "text": "هل تريد ماء؟ طيب.",
+   "en": "Do you want water? Okay.",
+   "ko": "물 마실래? 알겠어.",
+   "blank": "طيب"
+  },
+  {
+   "text": "طيب، نذهب الآن.",
+   "en": "Okay, we go now.",
+   "ko": "알겠어, 이제 가자.",
+   "blank": "طيب"
+  }
+ ],
+ "e|عظم الله أجركم": [
+  {
+   "text": "عظم الله أجركم، إذا احتجتم لأي شيء أنا موجود.",
+   "en": "May God magnify your reward, if you need anything I am here.",
+   "ko": "하나님께서 당신의 상을 크게 하시길 바랍니다. 필요하신 것이 있으면 제가 여기 있습니다.",
+   "blank": "عظم الله أجركم"
+  },
+  {
+   "text": "عظم الله أجركم، والله يصبركم في هذا الوقت الصعب.",
+   "en": "May God magnify your reward, and may He give you patience in this difficult time.",
+   "ko": "하나님께서 당신의 상을 크게 하시고, 이 어려운 시기에 인내를 주시길 바랍니다.",
+   "blank": "عظم الله أجركم"
+  },
+  {
+   "text": "عظم الله أجركم، لا تترددوا في التواصل معنا إذا أردتم أي مساعدة.",
+   "en": "May God magnify your reward. Don't hesitate to reach out to us if you want any help.",
+   "ko": "하나님께서 당신의 상을 크게 하시길 바랍니다. 도움이 필요하시면 언제든 연락하세요.",
+   "blank": "عظم الله أجركم"
+  }
+ ],
+ "e|عفوا": [
+  {
+   "text": "عفوا، أين الباب؟",
+   "en": "Excuse me, where is the door?",
+   "ko": "실례합니다, 문이 어디에요?",
+   "blank": "عفوا"
+  },
+  {
+   "text": "عفوا، هل هذا مقعدي؟",
+   "en": "Excuse me, is this my seat?",
+   "ko": "실례합니다, 이게 제 자리인가요?",
+   "blank": "عفوا"
+  },
+  {
+   "text": "عفوا، أريد ماء.",
+   "en": "Excuse me, I want water.",
+   "ko": "실례합니다, 물을 원해요.",
+   "blank": "عفوا"
+  }
+ ],
+ "e|على الأقل": [
+  {
+   "text": "حاولت أن أنام مبكرًا، لكن على الأقل استرحت.",
+   "en": "I tried to sleep early, but at least I rested.",
+   "ko": "일찍 자려고 했지만, 적어도 쉬었어.",
+   "blank": "على الأقل"
+  },
+  {
+   "text": "نسيت مفاتيحي، لكن على الأقل معي هاتفي.",
+   "en": "I forgot my keys, but at least I have my phone.",
+   "ko": "열쇠를 잊어버렸지만, 적어도 휴대폰은 있어.",
+   "blank": "على الأقل"
+  },
+  {
+   "text": "لم أفهم كل الدرس، لكن على الأقل فهمت الفكرة الأساسية.",
+   "en": "I didn’t understand the whole lesson, but at least I got the main idea.",
+   "ko": "수업을 다 이해하지는 못했지만, 적어도 핵심은 알았어.",
+   "blank": "على الأقل"
+  }
+ ],
+ "e|على العين والراس": [
+  {
+   "text": "ولا يهمك، طلبك على العين والراس.",
+   "en": "Don't worry, your request is my priority.",
+   "ko": "걱정하지 마세요, 당신의 부탁은 최우선입니다.",
+   "blank": "على العين والراس"
+  },
+  {
+   "text": "إذا تحتاج أي مساعدة، أنا على العين والراس.",
+   "en": "If you need any help, I'm at your service.",
+   "ko": "도움이 필요하면 언제든지 도와드릴게요.",
+   "blank": "على العين والراس"
+  },
+  {
+   "text": "حاضر، كل اللي قلت عليه على العين والراس.",
+   "en": "Sure, everything you mentioned is my priority.",
+   "ko": "물론이죠, 당신이 말한 모든 것이 제 최우선입니다.",
+   "blank": "على العين والراس"
+  }
+ ],
+ "e|على راحتك": [
+  {
+   "text": "خذ وقتك، كل شيء على راحتك.",
+   "en": "Take your time, everything at your own pace.",
+   "ko": "천천히 해, 모든 건 네 편한 대로 해.",
+   "blank": "على راحتك"
+  },
+  {
+   "text": "يمكنك الجلوس هنا على راحتك.",
+   "en": "You can sit here as you like.",
+   "ko": "여기 편하게 앉아도 돼.",
+   "blank": "على راحتك"
+  },
+  {
+   "text": "إذا أردت تغيير المكان، على راحتك.",
+   "en": "If you want to change the place, as you wish.",
+   "ko": "장소를 바꾸고 싶으면, 편할 대로 해.",
+   "blank": "على راحتك"
+  }
+ ],
+ "e|على فكرة": [
+  {
+   "text": "على فكرة، الجو جميل اليوم.",
+   "en": "By the way, the weather is nice today.",
+   "ko": "참고로, 오늘 날씨가 좋아요.",
+   "blank": "على فكرة"
+  },
+  {
+   "text": "على فكرة، نسيت مفاتيحي في البيت.",
+   "en": "By the way, I forgot my keys at home.",
+   "ko": "참고로, 집에 열쇠를 두고 왔어요.",
+   "blank": "على فكرة"
+  },
+  {
+   "text": "على فكرة، أحب الشاي أكثر من القهوة.",
+   "en": "By the way, I like tea more than coffee.",
+   "ko": "참고로, 저는 커피보다 차를 더 좋아해요.",
+   "blank": "على فكرة"
+  }
+ ],
+ "e|على كل حال": [
+  {
+   "text": "ما في مشكلة، على كل حال رح نلاقي حل.",
+   "en": "No problem, anyway we'll find a solution.",
+   "ko": "문제 없어, 어쨌든 우리는 해결책을 찾을 거야.",
+   "blank": "على كل حال"
+  },
+  {
+   "text": "كان الطقس غريب اليوم، على كل حال استمتعت بالخروج.",
+   "en": "The weather was strange today, anyway I enjoyed going out.",
+   "ko": "오늘 날씨가 이상했지만, 어쨌든 나가서 즐거웠어.",
+   "blank": "على كل حال"
+  },
+  {
+   "text": "على كل حال إذا احتجت أي شيء أنا موجود.",
+   "en": "Anyway, if you need anything I'm here.",
+   "ko": "어쨌든, 네가 뭐가 필요하면 나는 여기 있어.",
+   "blank": "على كل حال"
+  }
+ ],
+ "e|عن جد": [
+  {
+   "text": "عن جد الجو اليوم حلو كتير.",
+   "en": "Seriously, the weather is really nice today.",
+   "ko": "진짜로 오늘 날씨가 정말 좋아.",
+   "blank": "عن جد"
+  },
+  {
+   "text": "عن جد أنت متأكد من هذا الخبر؟",
+   "en": "Are you really sure about this news?",
+   "ko": "진짜로 이 소식 확실해?",
+   "blank": "عن جد"
+  },
+  {
+   "text": "عن جد ما عندك وقت تشوفني الأسبوع الجاي؟",
+   "en": "You really don't have time to see me next week?",
+   "ko": "진짜로 다음 주에 나 볼 시간 없어?",
+   "blank": "عن جد"
+  }
+ ],
+ "e|عندي صداع": [
+  {
+   "text": "لا أستطيع الذهاب اليوم، عندي صداع.",
+   "en": "I can't go today, I have a headache.",
+   "ko": "오늘은 갈 수 없어, 머리가 아파.",
+   "blank": "عندي صداع"
+  },
+  {
+   "text": "عندي صداع، أحتاج إلى بعض الراحة.",
+   "en": "I have a headache, I need some rest.",
+   "ko": "머리가 아파서 쉬어야 해.",
+   "blank": "عندي صداع"
+  },
+  {
+   "text": "هل عندك دواء؟ عندي صداع.",
+   "en": "Do you have medicine? I have a headache.",
+   "ko": "약 있어? 머리가 아파.",
+   "blank": "عندي صداع"
+  }
+ ],
+ "e|فكرة حلوة": [
+  {
+   "text": "تعال نلعب في الحديقة، فكرة حلوة.",
+   "en": "Let's play in the park, a nice idea.",
+   "ko": "공원에서 놀자, 좋은 생각이야.",
+   "blank": "فكرة حلوة"
+  },
+  {
+   "text": "ممكن نطبخ اليوم مع بعض؟ فكرة حلوة.",
+   "en": "Can we cook together today? A nice idea.",
+   "ko": "오늘 같이 요리할까? 좋은 생각이야.",
+   "blank": "فكرة حلوة"
+  },
+  {
+   "text": "فكرة حلوة نقرأ كتاب جديد.",
+   "en": "A nice idea to read a new book.",
+   "ko": "새 책을 읽는 것, 좋은 생각이야.",
+   "blank": "فكرة حلوة"
+  }
+ ],
+ "e|في الواقع": [
+  {
+   "text": "في الواقع، لم أكن أخطط للخروج اليوم.",
+   "en": "Actually, I wasn't planning to go out today.",
+   "ko": "사실 오늘은 나갈 생각이 없었어.",
+   "blank": "في الواقع"
+  },
+  {
+   "text": "في الواقع، الطعام هنا ألذ مما توقعت.",
+   "en": "Actually, the food here is tastier than I expected.",
+   "ko": "사실 여기 음식이 내가 기대했던 것보다 더 맛있어.",
+   "blank": "في الواقع"
+  },
+  {
+   "text": "في الواقع، لا أعرف الإجابة على هذا السؤال.",
+   "en": "Actually, I don't know the answer to this question.",
+   "ko": "사실 이 질문의 답을 모르겠어.",
+   "blank": "في الواقع"
+  }
+ ],
+ "e|في رأيي": [
+  {
+   "text": "في رأيي هذا المكان هادئ جداً.",
+   "en": "In my opinion, this place is very quiet.",
+   "ko": "내 생각에는 이곳이 아주 조용해요.",
+   "blank": "في رأيي"
+  },
+  {
+   "text": "في رأيي الطعام هنا لذيذ.",
+   "en": "In my opinion, the food here is delicious.",
+   "ko": "내 생각에는 여기 음식이 맛있어요.",
+   "blank": "في رأيي"
+  },
+  {
+   "text": "في رأيي يجب أن ننتظر قليلاً.",
+   "en": "In my opinion, we should wait a little.",
+   "ko": "내 생각에는 우리 조금 기다려야 해요.",
+   "blank": "في رأيي"
+  }
+ ],
+ "e|في نفس الوقت": [
+  {
+   "text": "أنا أستطيع أن أعمل وأستمع إلى الموسيقى في نفس الوقت.",
+   "en": "I can work and listen to music at the same time.",
+   "ko": "나는 일하면서 동시에 음악을 들을 수 있어.",
+   "blank": "في نفس الوقت"
+  },
+  {
+   "text": "هل يمكنك أن تتكلم وتكتب في نفس الوقت؟",
+   "en": "Can you speak and write at the same time?",
+   "ko": "너는 동시에 말하고 쓸 수 있어?",
+   "blank": "في نفس الوقت"
+  },
+  {
+   "text": "الأطفال كانوا يضحكون ويلعبون في نفس الوقت.",
+   "en": "The children were laughing and playing at the same time.",
+   "ko": "아이들이 동시에 웃고 놀고 있었어.",
+   "blank": "في نفس الوقت"
+  }
+ ],
+ "e|كل عام وأنتم بخير": [
+  {
+   "text": "كل عام وأنتم بخير، أتمنى لكم سنة سعيدة مليئة بالفرح.",
+   "en": "Wishing you a happy year full of joy, all the best every year.",
+   "ko": "항상 행복이 가득한 한 해가 되시길 바랍니다.",
+   "blank": "كل عام وأنتم بخير"
+  },
+  {
+   "text": "كل عام وأنتم بخير، هل خططتم لاحتفال خاص هذا العام؟",
+   "en": "All the best every year, have you planned a special celebration this year?",
+   "ko": "항상 건강하시길, 올해 특별한 축하 계획 있으신가요?",
+   "blank": "كل عام وأنتم بخير"
+  },
+  {
+   "text": "كل عام وأنتم بخير، وأتمنى أن تتحقق كل أمنياتكم.",
+   "en": "All the best every year, and I hope all your wishes come true.",
+   "ko": "항상 좋은 일만 가득하시길, 소원이 모두 이루어지길 바랍니다.",
+   "blank": "كل عام وأنتم بخير"
+  }
+ ],
+ "e|كلامك على راسي": [
+  {
+   "text": "لو تحتاج أي مساعدة، كلامك على راسي.",
+   "en": "If you need any help, your word is my command.",
+   "ko": "도움이 필요하면, 네 말이라면 무조건 들어줄게.",
+   "blank": "كلامك على راسي"
+  },
+  {
+   "text": "ما في داعي تعتذر، كلامك على راسي.",
+   "en": "No need to apologize, your word is respected.",
+   "ko": "사과할 필요 없어, 네 말은 존중해.",
+   "blank": "كلامك على راسي"
+  },
+  {
+   "text": "أكيد رح أعمل اللي طلبته، كلامك على راسي.",
+   "en": "Of course I'll do what you asked, your word is my command.",
+   "ko": "네가 부탁한 건 꼭 할게, 네 말은 내 머리 위야.",
+   "blank": "كلامك على راسي"
+  }
+ ],
+ "e|كيف حالك": [
+  {
+   "text": "مرحبا، كيف حالك؟",
+   "en": "Hello, how are you?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "كيف حالك"
+  },
+  {
+   "text": "أمي، كيف حالك اليوم؟",
+   "en": "Mom, how are you today?",
+   "ko": "엄마, 오늘 어때?",
+   "blank": "كيف حالك"
+  },
+  {
+   "text": "أنا سعيد لأنك سألتني كيف حالك.",
+   "en": "I am happy because you asked me how are you.",
+   "ko": "네가 어떻게 지내냐고 물어봐줘서 기뻐.",
+   "blank": "كيف حالك"
+  }
+ ],
+ "e|لا أختلف معك": [
+  {
+   "text": "لا أختلف معك أن الطقس اليوم جميل.",
+   "en": "I don't disagree with you that the weather is nice today.",
+   "ko": "오늘 날씨가 좋다는 데에 당신과 의견이 다르지 않아요.",
+   "blank": "لا أختلف معك"
+  },
+  {
+   "text": "لا أختلف معك في أن هذا المطعم يستحق التجربة.",
+   "en": "I don't disagree with you that this restaurant is worth trying.",
+   "ko": "이 레스토랑이 시도해볼 가치가 있다는 데에 당신과 이견이 없어요.",
+   "blank": "لا أختلف معك"
+  },
+  {
+   "text": "لا أختلف معك حول أهمية النوم الكافي للصحة.",
+   "en": "I don't disagree with you about the importance of enough sleep for health.",
+   "ko": "건강을 위해 충분한 수면이 중요하다는 데에 당신과 의견이 같아요.",
+   "blank": "لا أختلف معك"
+  }
+ ],
+ "e|لا أفهم": [
+  {
+   "text": "عذرًا، لا أفهم.",
+   "en": "Sorry, I do not understand.",
+   "ko": "미안해요, 이해하지 못해요.",
+   "blank": "لا أفهم"
+  },
+  {
+   "text": "لا أفهم هذا الكلام.",
+   "en": "I do not understand these words.",
+   "ko": "이 말을 이해하지 못해요.",
+   "blank": "لا أفهم"
+  },
+  {
+   "text": "ماذا تعني؟ لا أفهم.",
+   "en": "What do you mean? I do not understand.",
+   "ko": "무슨 뜻이에요? 이해하지 못해요.",
+   "blank": "لا أفهم"
+  }
+ ],
+ "e|لا تاخذها على خاطرك": [
+  {
+   "text": "إذا نسيت عيد ميلادك، لا تاخذها على خاطرك.",
+   "en": "If I forgot your birthday, don't take it personally.",
+   "ko": "네 생일을 까먹었더라도, 기분 나빠하지 마.",
+   "blank": "لا تاخذها على خاطرك"
+  },
+  {
+   "text": "لو قلت شي مزعج بدون قصد، لا تاخذها على خاطرك.",
+   "en": "If I said something upsetting by accident, don't take it personally.",
+   "ko": "실수로 기분 상하게 했더라도, 기분 나빠하지 마.",
+   "blank": "لا تاخذها على خاطرك"
+  },
+  {
+   "text": "ترى إذا ما رديت بسرعة، لا تاخذها على خاطرك.",
+   "en": "If I didn't reply quickly, don't take it personally.",
+   "ko": "내가 바로 답장 안 해도, 기분 나빠하지 마.",
+   "blank": "لا تاخذها على خاطرك"
+  }
+ ],
+ "e|لا يخفى على أحد": [
+  {
+   "text": "لا يخفى على أحد أن الطقس اليوم جميل جداً.",
+   "en": "It's no secret that the weather is very nice today.",
+   "ko": "오늘 날씨가 아주 좋다는 것은 모두가 아는 사실이야.",
+   "blank": "لا يخفى على أحد"
+  },
+  {
+   "text": "أعتقد أن لا يخفى على أحد أهمية الوقت في حياتنا.",
+   "en": "I think it's obvious to everyone how important time is in our lives.",
+   "ko": "시간이 우리 삶에서 얼마나 중요한지는 누구에게나 분명하다고 생각해.",
+   "blank": "لا يخفى على أحد"
+  },
+  {
+   "text": "لا يخفى على أحد أن هذا المكان مزدحم دائماً في المساء.",
+   "en": "It's no secret that this place is always crowded in the evening.",
+   "ko": "이곳이 저녁에 항상 붐빈다는 것은 모두가 아는 사실이야.",
+   "blank": "لا يخفى على أحد"
+  }
+ ],
+ "e|لا يسعني إلا": [
+  {
+   "text": "لا يسعني إلا أن أعتذر عن التأخير، كان الطريق مزدحماً جداً.",
+   "en": "I can only apologize for being late; the traffic was really heavy.",
+   "ko": "늦어서 사과할 수밖에 없어요. 길이 정말 많이 막혔거든요.",
+   "blank": "لا يسعني إلا"
+  },
+  {
+   "text": "لا يسعني إلا أن أفرح بنجاحك، لقد اجتهدت كثيراً.",
+   "en": "I can't help but be happy for your success; you worked so hard.",
+   "ko": "네가 성공해서 기쁘지 않을 수 없어요. 정말 열심히 했잖아요.",
+   "blank": "لا يسعني إلا"
+  },
+  {
+   "text": "لا يسعني إلا أن أوافقك الرأي في هذا الموضوع.",
+   "en": "I can't help but agree with you on this matter.",
+   "ko": "이 문제에 대해 당신의 의견에 동의할 수밖에 없어요.",
+   "blank": "لا يسعني إلا"
+  }
+ ],
+ "e|للأسف": [
+  {
+   "text": "للأسف، المطعم مغلق اليوم.",
+   "en": "Unfortunately, the restaurant is closed today.",
+   "ko": "안타깝게도, 오늘 식당이 닫혔어요.",
+   "blank": "للأسف"
+  },
+  {
+   "text": "للأسف، لا أستطيع الحضور غداً.",
+   "en": "Unfortunately, I can't come tomorrow.",
+   "ko": "안타깝게도, 나는 내일 올 수 없어요.",
+   "blank": "للأسف"
+  },
+  {
+   "text": "للأسف، نسيت كتابي في البيت.",
+   "en": "Unfortunately, I forgot my book at home.",
+   "ko": "안타깝게도, 나는 집에 책을 두고 왔어요.",
+   "blank": "للأسف"
+  }
+ ],
+ "e|ليس بالضرورة": [
+  {
+   "text": "ليس بالضرورة أن يكون كل ما نسمعه صحيحاً.",
+   "en": "Not everything we hear is necessarily true.",
+   "ko": "우리가 듣는 모든 것이 반드시 사실인 것은 아니야.",
+   "blank": "ليس بالضرورة"
+  },
+  {
+   "text": "هل تعتقد أن النجاح يحتاج شهادة جامعية؟ ليس بالضرورة.",
+   "en": "Do you think success requires a university degree? Not necessarily.",
+   "ko": "성공하려면 꼭 대학 졸업장이 필요하다고 생각해? 꼭 그렇진 않아.",
+   "blank": "ليس بالضرورة"
+  },
+  {
+   "text": "ليس بالضرورة أن يكون الطقس جميلًا في هذا الوقت من السنة.",
+   "en": "The weather is not necessarily nice at this time of year.",
+   "ko": "이 시기에는 날씨가 꼭 좋지는 않아.",
+   "blank": "ليس بالضرورة"
+  }
+ ],
+ "e|ما رأيك": [
+  {
+   "text": "ما رأيك في هذا اللون؟",
+   "en": "What do you think of this color?",
+   "ko": "이 색깔 어때?",
+   "blank": "ما رأيك"
+  },
+  {
+   "text": "ما رأيك إذا ذهبنا إلى الحديقة؟",
+   "en": "What do you think if we go to the park?",
+   "ko": "공원에 가는 것 어때?",
+   "blank": "ما رأيك"
+  },
+  {
+   "text": "ما رأيك في الطعام هنا؟",
+   "en": "What do you think of the food here?",
+   "ko": "여기 음식 어때?",
+   "blank": "ما رأيك"
+  }
+ ],
+ "e|ما شاء الله": [
+  {
+   "text": "ما شاء الله، بيتك جميل جدا.",
+   "en": "What a beautiful house you have!",
+   "ko": "와, 집이 정말 예쁘네요!",
+   "blank": "ما شاء الله"
+  },
+  {
+   "text": "ما شاء الله، طعامك لذيذ.",
+   "en": "Your food is delicious!",
+   "ko": "음식이 정말 맛있어요!",
+   "blank": "ما شاء الله"
+  },
+  {
+   "text": "ما شاء الله، ابنك ذكي.",
+   "en": "Your son is smart!",
+   "ko": "아드님이 정말 똑똑하네요!",
+   "blank": "ما شاء الله"
+  }
+ ],
+ "e|ما شفناك من زمان": [
+  {
+   "text": "مرحباً، ما شفناك من زمان، كيف حالك؟",
+   "en": "Hi, we haven't seen you in a long time, how are you?",
+   "ko": "안녕, 오랜만에 보네, 잘 지냈어?",
+   "blank": "ما شفناك من زمان"
+  },
+  {
+   "text": "وينك اختفيت؟ ما شفناك من زمان في الدوام.",
+   "en": "Where have you disappeared? We haven't seen you at work in a long time.",
+   "ko": "어디 갔었어? 회사에서 오랜만에 봐.",
+   "blank": "ما شفناك من زمان"
+  },
+  {
+   "text": "كل مرة أجي للمقهى ما شفناك من زمان هنا.",
+   "en": "Every time I come to the café, I haven't seen you here in a long time.",
+   "ko": "나 카페에 올 때마다 너 못 본지 오래됐어.",
+   "blank": "ما شفناك من زمان"
+  }
+ ],
+ "e|ما عندي مانع": [
+  {
+   "text": "إذا بدك نلتقي بكرة، ما عندي مانع.",
+   "en": "If you want us to meet tomorrow, I don't mind.",
+   "ko": "내일 만나고 싶다면, 난 괜찮아.",
+   "blank": "ما عندي مانع"
+  },
+  {
+   "text": "ما عندي مانع تغير الخطة إذا الكل موافق.",
+   "en": "I don't mind changing the plan if everyone agrees.",
+   "ko": "모두가 동의한다면 계획을 바꿔도 난 괜찮아.",
+   "blank": "ما عندي مانع"
+  },
+  {
+   "text": "ما عندي مانع نجرب هذا المطعم الجديد اليوم.",
+   "en": "I don't mind trying this new restaurant today.",
+   "ko": "오늘 이 새 식당을 가봐도 난 괜찮아.",
+   "blank": "ما عندي مانع"
+  }
+ ],
+ "e|ما في مشكلة": [
+  {
+   "text": "إذا تأخرت شوي، ما في مشكلة.",
+   "en": "If you are a little late, no problem.",
+   "ko": "조금 늦어도 괜찮아.",
+   "blank": "ما في مشكلة"
+  },
+  {
+   "text": "نسيت كتابي في البيت؟ ما في مشكلة.",
+   "en": "Did you forget your book at home? No problem.",
+   "ko": "집에 책을 두고 왔어? 괜찮아.",
+   "blank": "ما في مشكلة"
+  },
+  {
+   "text": "ما عندك فلوس اليوم؟ ما في مشكلة.",
+   "en": "You don’t have money today? No problem.",
+   "ko": "오늘 돈이 없어도 괜찮아.",
+   "blank": "ما في مشكلة"
+  }
+ ],
+ "e|ما يمشي الحال": [
+  {
+   "text": "حاولت أعدل الموعد بس ما يمشي الحال.",
+   "en": "I tried to change the appointment, but it won't work.",
+   "ko": "약속을 바꾸려고 했는데, 안 돼.",
+   "blank": "ما يمشي الحال"
+  },
+  {
+   "text": "لو تأخرت أكتر من هيك، ما يمشي الحال.",
+   "en": "If you're any later than this, it won't be okay.",
+   "ko": "이보다 더 늦으면 안 돼.",
+   "blank": "ما يمشي الحال"
+  },
+  {
+   "text": "بدون تصريح رسمي، ما يمشي الحال.",
+   "en": "Without an official permit, it won't work.",
+   "ko": "공식 허가 없이는 안 돼.",
+   "blank": "ما يمشي الحال"
+  }
+ ],
+ "e|ماذا تنصح": [
+  {
+   "text": "أنا مريض، ماذا تنصح؟",
+   "en": "I am sick, what do you recommend?",
+   "ko": "저는 아픈데, 무엇을 추천하세요?",
+   "blank": "ماذا تنصح"
+  },
+  {
+   "text": "سأزور مصر قريبًا، ماذا تنصح؟",
+   "en": "I will visit Egypt soon, what do you recommend?",
+   "ko": "곧 이집트에 갈 건데, 무엇을 추천하시나요?",
+   "blank": "ماذا تنصح"
+  },
+  {
+   "text": "أريد أن أتعلم السباحة، ماذا تنصح؟",
+   "en": "I want to learn swimming, what do you recommend?",
+   "ko": "수영을 배우고 싶은데, 무엇을 추천하시나요?",
+   "blank": "ماذا تنصح"
+  }
+ ],
+ "e|مبروك": [
+  {
+   "text": "مبروك على الوظيفة الجديدة!",
+   "en": "Congratulations on the new job!",
+   "ko": "새 직장 얻은 거 축하해!",
+   "blank": "مبروك"
+  },
+  {
+   "text": "مبروك على النجاح في الامتحان.",
+   "en": "Congratulations on passing the exam.",
+   "ko": "시험 합격한 거 축하해.",
+   "blank": "مبروك"
+  },
+  {
+   "text": "مبروك على البيت الجديد.",
+   "en": "Congratulations on the new house.",
+   "ko": "새 집 마련한 거 축하해.",
+   "blank": "مبروك"
+  }
+ ],
+ "e|متى نلتقي": [
+  {
+   "text": "متى نلتقي في الحديقة؟",
+   "en": "When do we meet in the park?",
+   "ko": "공원에서 언제 만나요?",
+   "blank": "متى نلتقي"
+  },
+  {
+   "text": "أنا مشغول اليوم، متى نلتقي غدًا؟",
+   "en": "I'm busy today, when do we meet tomorrow?",
+   "ko": "오늘은 바빠요, 내일 언제 만나요?",
+   "blank": "متى نلتقي"
+  },
+  {
+   "text": "متى نلتقي بعد الدرس؟",
+   "en": "When do we meet after the lesson?",
+   "ko": "수업 끝나고 언제 만나요?",
+   "blank": "متى نلتقي"
+  }
+ ],
+ "e|مرة ثانية": [
+  {
+   "text": "من فضلك، مرة ثانية.",
+   "en": "Please, one more time.",
+   "ko": "제발, 한 번 더요.",
+   "blank": "مرة ثانية"
+  },
+  {
+   "text": "هل يمكنك أن تقول مرة ثانية؟",
+   "en": "Can you say it again?",
+   "ko": "다시 말해줄 수 있어요?",
+   "blank": "مرة ثانية"
+  },
+  {
+   "text": "أريد أن أسمع الأغنية مرة ثانية.",
+   "en": "I want to hear the song again.",
+   "ko": "그 노래를 한 번 더 듣고 싶어요.",
+   "blank": "مرة ثانية"
+  }
+ ],
+ "e|مرحبا": [
+  {
+   "text": "مرحبا، أنا هنا.",
+   "en": "Hello, I am here.",
+   "ko": "안녕, 나 여기 있어.",
+   "blank": "مرحبا"
+  },
+  {
+   "text": "مرحبا، ما اسمك؟",
+   "en": "Hello, what is your name?",
+   "ko": "안녕, 이름이 뭐야?",
+   "blank": "مرحبا"
+  },
+  {
+   "text": "مرحبا، صباح الخير.",
+   "en": "Hello, good morning.",
+   "ko": "안녕, 좋은 아침이야.",
+   "blank": "مرحبا"
+  }
+ ],
+ "e|مساء الخير": [
+  {
+   "text": "مساء الخير يا صديقي.",
+   "en": "Good evening, my friend.",
+   "ko": "안녕, 친구야. 좋은 저녁이야.",
+   "blank": "مساء الخير"
+  },
+  {
+   "text": "مساء الخير، كيف حالك؟",
+   "en": "Good evening, how are you?",
+   "ko": "좋은 저녁이야, 잘 지내?",
+   "blank": "مساء الخير"
+  },
+  {
+   "text": "مساء الخير للجميع.",
+   "en": "Good evening, everyone.",
+   "ko": "모두에게 좋은 저녁이야.",
+   "blank": "مساء الخير"
+  }
+ ],
+ "e|مش متأكد": [
+  {
+   "text": "أنا مش متأكد إذا القطار وصل.",
+   "en": "I'm not sure if the train has arrived.",
+   "ko": "기차가 도착했는지 잘 모르겠어.",
+   "blank": "مش متأكد"
+  },
+  {
+   "text": "مش متأكد وين حطيت المفاتيح.",
+   "en": "I'm not sure where I put the keys.",
+   "ko": "어디에 열쇠를 뒀는지 잘 모르겠어.",
+   "blank": "مش متأكد"
+  },
+  {
+   "text": "مش متأكد إذا عندي واجب اليوم.",
+   "en": "I'm not sure if I have homework today.",
+   "ko": "오늘 숙제가 있는지 잘 모르겠어.",
+   "blank": "مش متأكد"
+  }
+ ],
+ "e|مش هيك القصد": [
+  {
+   "text": "مش هيك القصد، كنت بس بحاول أساعد.",
+   "en": "That's not what I meant, I was just trying to help.",
+   "ko": "그런 뜻이 아니었어, 그냥 도와주려고 했던 거야.",
+   "blank": "مش هيك القصد"
+  },
+  {
+   "text": "لو سمحت، مش هيك القصد، ما كنت بقصد أزعلك.",
+   "en": "Excuse me, that's not what I meant, I didn't mean to upset you.",
+   "ko": "실례하지만, 그런 뜻이 아니었어, 너를 화나게 할 생각은 아니었어.",
+   "blank": "مش هيك القصد"
+  },
+  {
+   "text": "مش هيك القصد، أنت فهمتني غلط.",
+   "en": "That's not what I meant, you misunderstood me.",
+   "ko": "그런 뜻이 아니었어, 네가 내 말을 오해한 거야.",
+   "blank": "مش هيك القصد"
+  }
+ ],
+ "e|مع السلامة": [
+  {
+   "text": "أنا ذاهب الآن، مع السلامة.",
+   "en": "I am leaving now, goodbye.",
+   "ko": "나 지금 갈게, 잘 있어.",
+   "blank": "مع السلامة"
+  },
+  {
+   "text": "كان يوم جميل، مع السلامة.",
+   "en": "It was a nice day, goodbye.",
+   "ko": "좋은 하루였어, 잘 가.",
+   "blank": "مع السلامة"
+  },
+  {
+   "text": "أراك غدًا، مع السلامة.",
+   "en": "See you tomorrow, goodbye.",
+   "ko": "내일 봐, 잘 있어.",
+   "blank": "مع السلامة"
+  }
+ ],
+ "e|معك حق": [
+  {
+   "text": "معك حق، الجو اليوم جميل.",
+   "en": "You are right, the weather is nice today.",
+   "ko": "네 말이 맞아, 오늘 날씨가 좋아.",
+   "blank": "معك حق"
+  },
+  {
+   "text": "معك حق، هذا الفيلم ممتع جدا.",
+   "en": "You are right, this movie is very entertaining.",
+   "ko": "네 말이 맞아, 이 영화 정말 재미있어.",
+   "blank": "معك حق"
+  },
+  {
+   "text": "معك حق، يجب أن نرتاح قليلاً.",
+   "en": "You are right, we should rest a little.",
+   "ko": "네 말이 맞아, 우리 조금 쉬어야 해.",
+   "blank": "معك حق"
+  }
+ ],
+ "e|ممكن": [
+  {
+   "text": "ممكن تعطيني الماء؟",
+   "en": "Can you give me the water?",
+   "ko": "물 좀 줄 수 있어요?",
+   "blank": "ممكن"
+  },
+  {
+   "text": "ممكن أساعدك؟",
+   "en": "Can I help you?",
+   "ko": "도와드릴까요?",
+   "blank": "ممكن"
+  },
+  {
+   "text": "ممكن تجلس هنا؟",
+   "en": "Can you sit here?",
+   "ko": "여기 앉을 수 있어요?",
+   "blank": "ممكن"
+  }
+ ],
+ "e|من الآخر": [
+  {
+   "text": "من الآخر، أنا مش فاضي اليوم.",
+   "en": "To be honest, I'm not free today.",
+   "ko": "솔직히 말해서, 오늘 시간 없어.",
+   "blank": "من الآخر"
+  },
+  {
+   "text": "من الآخر، الفيلم كان ممل وما يستاهل.",
+   "en": "Honestly, the movie was boring and not worth it.",
+   "ko": "솔직히 영화는 지루했고 볼 가치가 없었어.",
+   "blank": "من الآخر"
+  },
+  {
+   "text": "من الآخر، إذا محتاج مساعدة قولي على طول.",
+   "en": "Basically, if you need help just tell me right away.",
+   "ko": "간단히 말해서, 도움이 필요하면 바로 말해.",
+   "blank": "من الآخر"
+  }
+ ],
+ "e|من القلب": [
+  {
+   "text": "شكراً من القلب على كل شيء.",
+   "en": "Thank you from the heart for everything.",
+   "ko": "모든 것에 진심으로 고마워.",
+   "blank": "من القلب"
+  },
+  {
+   "text": "أعتذر لك من القلب إذا جرحتك.",
+   "en": "I sincerely apologize if I hurt you.",
+   "ko": "내가 상처 줬다면 진심으로 사과해.",
+   "blank": "من القلب"
+  },
+  {
+   "text": "تهانينا من القلب على نجاحك الجديد!",
+   "en": "Congratulations from the heart on your new success!",
+   "ko": "새로운 성공을 진심으로 축하해!",
+   "blank": "من القلب"
+  }
+ ],
+ "e|من جهة أخرى": [
+  {
+   "text": "الطقس جميل اليوم، من جهة أخرى الجو كان باردًا أمس.",
+   "en": "The weather is nice today, on the other hand it was cold yesterday.",
+   "ko": "오늘은 날씨가 좋지만, 한편 어제는 추웠어요.",
+   "blank": "من جهة أخرى"
+  },
+  {
+   "text": "أنا أحب الشاي، من جهة أخرى صديقي يفضل القهوة.",
+   "en": "I like tea, on the other hand my friend prefers coffee.",
+   "ko": "나는 차를 좋아하지만, 한편 내 친구는 커피를 더 좋아해요.",
+   "blank": "من جهة أخرى"
+  },
+  {
+   "text": "أحتاج الراحة الآن، من جهة أخرى لدي الكثير من العمل.",
+   "en": "I need rest now, on the other hand I have a lot of work.",
+   "ko": "지금은 휴식이 필요하지만, 한편 할 일이 많아요.",
+   "blank": "من جهة أخرى"
+  }
+ ],
+ "e|من فضلك": [
+  {
+   "text": "افتح الباب من فضلك.",
+   "en": "Open the door, please.",
+   "ko": "문 좀 열어 주세요.",
+   "blank": "من فضلك"
+  },
+  {
+   "text": "اجلس هنا من فضلك.",
+   "en": "Sit here, please.",
+   "ko": "여기 앉아 주세요.",
+   "blank": "من فضلك"
+  },
+  {
+   "text": "انتظر دقيقة من فضلك.",
+   "en": "Wait a minute, please.",
+   "ko": "잠깐만 기다려 주세요.",
+   "blank": "من فضلك"
+  }
+ ],
+ "e|من ناحيتي": [
+  {
+   "text": "من ناحيتي، أرى أن الحل بسيط إذا تعاونّا.",
+   "en": "As for me, I think the solution is simple if we cooperate.",
+   "ko": "내 입장에서는 우리가 협력한다면 해결은 간단하다고 생각해.",
+   "blank": "من ناحيتي"
+  },
+  {
+   "text": "من ناحيتي، لا أمانع لو اخترنا مطعمًا مختلفًا اليوم.",
+   "en": "As far as I'm concerned, I don't mind if we choose a different restaurant today.",
+   "ko": "내 입장에서는 오늘 다른 식당을 골라도 상관없어.",
+   "blank": "من ناحيتي"
+  },
+  {
+   "text": "من ناحيتي، انتهيت من تحضير كل شيء للاجتماع.",
+   "en": "From my side, I have finished preparing everything for the meeting.",
+   "ko": "내 입장에서는 회의 준비를 모두 끝냈어.",
+   "blank": "من ناحيتي"
+  }
+ ],
+ "e|نتفق على": [
+  {
+   "text": "ممكن نتفق على موعد جديد للاجتماع؟",
+   "en": "Can we agree on a new time for the meeting?",
+   "ko": "회의를 위한 새로운 시간을 정할 수 있을까요?",
+   "blank": "نتفق على"
+  },
+  {
+   "text": "لازم نتفق على قائمة الطعام قبل الحفلة.",
+   "en": "We need to agree on the menu before the party.",
+   "ko": "파티 전에 메뉴를 정해야 해요.",
+   "blank": "نتفق على"
+  },
+  {
+   "text": "هل نتفق على التفاصيل قبل أن نبدأ المشروع؟",
+   "en": "Shall we agree on the details before we start the project?",
+   "ko": "프로젝트를 시작하기 전에 세부 사항을 정할까요?",
+   "blank": "نتفق على"
+  }
+ ],
+ "e|نشوفك بكرة": [
+  {
+   "text": "خلصنا الشغل، نشوفك بكرة.",
+   "en": "We finished work, see you tomorrow.",
+   "ko": "일 끝났어, 내일 봐.",
+   "blank": "نشوفك بكرة"
+  },
+  {
+   "text": "ما تنسى الكتاب، نشوفك بكرة.",
+   "en": "Don't forget the book, see you tomorrow.",
+   "ko": "책 잊지 마, 내일 봐.",
+   "blank": "نشوفك بكرة"
+  },
+  {
+   "text": "خلص الدرس، نشوفك بكرة.",
+   "en": "The lesson is over, see you tomorrow.",
+   "ko": "수업 끝났어, 내일 봐.",
+   "blank": "نشوفك بكرة"
+  }
+ ],
+ "e|نعم": [
+  {
+   "text": "نعم، أنا هنا.",
+   "en": "Yes, I am here.",
+   "ko": "네, 저 여기 있어요.",
+   "blank": "نعم"
+  },
+  {
+   "text": "هل تريد ماء؟ نعم.",
+   "en": "Do you want water? Yes.",
+   "ko": "물 마실래요? 네.",
+   "blank": "نعم"
+  },
+  {
+   "text": "نعم، أحب هذا.",
+   "en": "Yes, I like this.",
+   "ko": "네, 이거 좋아해요.",
+   "blank": "نعم"
+  }
+ ],
+ "e|نقطة مهمة": [
+  {
+   "text": "قبل أن نبدأ، في نقطة مهمة لازم نوضحها للجميع.",
+   "en": "Before we start, there is an important point we need to clarify for everyone.",
+   "ko": "시작하기 전에 모두에게 설명해야 할 중요한 점이 있어요.",
+   "blank": "نقطة مهمة"
+  },
+  {
+   "text": "نقطة مهمة يجب ألا ننساها هي احترام آراء الآخرين.",
+   "en": "An important point we must not forget is to respect others' opinions.",
+   "ko": "우리가 잊지 말아야 할 중요한 점은 다른 사람의 의견을 존중하는 것이에요.",
+   "blank": "نقطة مهمة"
+  },
+  {
+   "text": "إذا عندك نقطة مهمة حابب تناقشها، تفضل وشاركنا.",
+   "en": "If you have an important point you’d like to discuss, please go ahead and share it with us.",
+   "ko": "논의하고 싶은 중요한 점이 있다면, 편하게 말씀해 주세요.",
+   "blank": "نقطة مهمة"
+  }
+ ],
+ "e|هذا يعتمد على": [
+  {
+   "text": "هل سنذهب إلى الشاطئ غداً؟ هذا يعتمد على الطقس.",
+   "en": "Are we going to the beach tomorrow? That depends on the weather.",
+   "ko": "내일 해변에 갈까? 그건 날씨에 달려 있어.",
+   "blank": "هذا يعتمد على"
+  },
+  {
+   "text": "متى ستنتهي من العمل؟ هذا يعتمد على كمية المهام اليوم.",
+   "en": "When will you finish work? That depends on how much work I have today.",
+   "ko": "언제 일이 끝나? 그건 오늘 일이 얼마나 많은지에 달려 있어.",
+   "blank": "هذا يعتمد على"
+  },
+  {
+   "text": "هل ستشارك في الرحلة؟ هذا يعتمد على إذا كان لدي وقت.",
+   "en": "Will you join the trip? That depends on whether I have time.",
+   "ko": "여행에 참가할 거야? 그건 내가 시간이 있는지에 달려 있어.",
+   "blank": "هذا يعتمد على"
+  }
+ ],
+ "e|وعليكم السلام": [
+  {
+   "text": "مرحبا، وعليكم السلام، كيف حالك؟",
+   "en": "Hello, and peace be upon you, how are you?",
+   "ko": "안녕하세요, 그리고 평화가 있기를, 잘 지냈어요?",
+   "blank": "وعليكم السلام"
+  },
+  {
+   "text": "أنا بخير، وعليكم السلام.",
+   "en": "I am fine, and peace be upon you.",
+   "ko": "저는 잘 지내요, 그리고 평화가 있기를.",
+   "blank": "وعليكم السلام"
+  },
+  {
+   "text": "وعليكم السلام، صباح الخير.",
+   "en": "And peace be upon you, good morning.",
+   "ko": "그리고 평화가 있기를, 좋은 아침이에요.",
+   "blank": "وعليكم السلام"
+  }
+ ],
+ "e|ولا يهمك": [
+  {
+   "text": "ولا يهمك، أنا أقدر أساعدك.",
+   "en": "Don't worry, I can help you.",
+   "ko": "걱정하지 마, 내가 도와줄 수 있어.",
+   "blank": "ولا يهمك"
+  },
+  {
+   "text": "ولا يهمك، كل شيء سيكون بخير.",
+   "en": "Don't worry, everything will be fine.",
+   "ko": "걱정하지 마, 모든 게 잘 될 거야.",
+   "blank": "ولا يهمك"
+  },
+  {
+   "text": "ولا يهمك إذا تأخرت قليلاً.",
+   "en": "Don't worry if you are a little late.",
+   "ko": "조금 늦어도 걱정하지 마.",
+   "blank": "ولا يهمك"
+  }
+ ],
+ "e|يا خسارة": [
+  {
+   "text": "يا خسارة انتهى الفيلم بسرعة.",
+   "en": "What a pity, the movie ended quickly.",
+   "ko": "아쉽다, 영화가 금방 끝났어.",
+   "blank": "يا خسارة"
+  },
+  {
+   "text": "يا خسارة نسيت مفاتيحي في البيت.",
+   "en": "What a shame, I forgot my keys at home.",
+   "ko": "아쉽다, 집에 열쇠를 두고 왔어.",
+   "blank": "يا خسارة"
+  },
+  {
+   "text": "يا خسارة المطر وقفنا من الخروج.",
+   "en": "Too bad, the rain stopped us from going out.",
+   "ko": "아쉽다, 비 때문에 외출을 못 했어.",
+   "blank": "يا خسارة"
+  }
+ ],
+ "e|يا سلام": [
+  {
+   "text": "يا سلام، أخيراً انتهيت من الامتحان!",
+   "en": "Wow, I finally finished the exam!",
+   "ko": "와, 드디어 시험을 끝냈어!",
+   "blank": "يا سلام"
+  },
+  {
+   "text": "يا سلام، الجو اليوم جميل جداً.",
+   "en": "Wow, the weather is really nice today.",
+   "ko": "와, 오늘 날씨 정말 좋다.",
+   "blank": "يا سلام"
+  },
+  {
+   "text": "يا سلام، لم أتوقع أن أراك هنا!",
+   "en": "Wow, I didn't expect to see you here!",
+   "ko": "와, 여기서 널 만날 줄 몰랐어!",
+   "blank": "يا سلام"
+  }
+ ],
+ "e|يعطيك العافية": [
+  {
+   "text": "يعطيك العافية، شكراً لمساعدتك.",
+   "en": "Thank you for your help.",
+   "ko": "도와줘서 고마워요.",
+   "blank": "يعطيك العافية"
+  },
+  {
+   "text": "يعطيك العافية، كيف كان يومك؟",
+   "en": "How was your day?",
+   "ko": "오늘 하루 어땠어요?",
+   "blank": "يعطيك العافية"
+  },
+  {
+   "text": "يعطيك العافية، تفضل الشاي.",
+   "en": "Here is some tea for you.",
+   "ko": "여기 차 드세요.",
+   "blank": "يعطيك العافية"
+  }
+ ],
+ "e|يعني": [
+  {
+   "text": "يعني ما فهمت عليك.",
+   "en": "I mean, I didn't understand you.",
+   "ko": "그러니까, 너를 이해하지 못했어.",
+   "blank": "يعني"
+  },
+  {
+   "text": "أنا يعني مشغول شوي اليوم.",
+   "en": "I'm, like, a bit busy today.",
+   "ko": "나는, 그러니까, 오늘 좀 바빠.",
+   "blank": "يعني"
+  },
+  {
+   "text": "هو يعني مش موجود في البيت.",
+   "en": "He is, you know, not at home.",
+   "ko": "그는, 그러니까, 집에 없어.",
+   "blank": "يعني"
+  }
+ ],
+ "e|يلا": [
+  {
+   "text": "يلا نمشي.",
+   "en": "Let's go.",
+   "ko": "가자.",
+   "blank": "يلا"
+  },
+  {
+   "text": "يلا نأكل.",
+   "en": "Let's eat.",
+   "ko": "밥 먹자.",
+   "blank": "يلا"
+  },
+  {
+   "text": "يلا بسرعة!",
+   "en": "Come on, hurry up!",
+   "ko": "빨리 하자!",
+   "blank": "يلا"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "هو معلم.",
+   "en": "He is a teacher.",
+   "ko": "그는 선생님이야.",
+   "blank": "هو"
+  },
+  {
+   "text": "أنا سعيد.",
+   "en": "I am happy.",
+   "ko": "나는 행복해.",
+   "blank": "أنا"
+  },
+  {
+   "text": "هو مريض.",
+   "en": "He is sick.",
+   "ko": "그는 아파.",
+   "blank": "هو مريض"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "هو في البيت.",
+   "en": "He is at home.",
+   "ko": "그는 집에 있다.",
+   "blank": "هو"
+  },
+  {
+   "text": "أنتِ معلمة.",
+   "en": "You (feminine) are a teacher.",
+   "ko": "너(여자)는 선생님이다.",
+   "blank": "أنتِ"
+  },
+  {
+   "text": "أنتَ هنا.",
+   "en": "You are here.",
+   "ko": "너는 여기 있어.",
+   "blank": "أنتَ"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "هذا سيارة.",
+   "en": "This is a car (feminine in Arabic).",
+   "ko": "이것은 자동차야.",
+   "blank": "سيارة"
+  },
+  {
+   "text": "هو معلمة.",
+   "en": "He is a (female) teacher.",
+   "ko": "그는 여교사야.",
+   "blank": "معلمة"
+  },
+  {
+   "text": "هذه شجرة.",
+   "en": "This is a tree (feminine).",
+   "ko": "이것은 나무입니다(여성형).",
+   "blank": "هذه شجرة"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "هذا كتابي.",
+   "en": "This is my book.",
+   "ko": "이것은 내 책이에요.",
+   "blank": "كتابي"
+  },
+  {
+   "text": "أين بيتك؟",
+   "en": "Where is your house?",
+   "ko": "네 집은 어디에 있니?",
+   "blank": "بيتك"
+  },
+  {
+   "text": "حقيبتك هنا.",
+   "en": "Your bag is here.",
+   "ko": "네 가방이 여기 있어.",
+   "blank": "حقيبتك"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "من هناك؟",
+   "en": "Who is there?",
+   "ko": "누구 있어요?",
+   "blank": "من"
+  },
+  {
+   "text": "كم هذا؟",
+   "en": "How much is this?",
+   "ko": "이거 얼마예요?",
+   "blank": "كم"
+  },
+  {
+   "text": "من في البيت؟",
+   "en": "Who is in the house?",
+   "ko": "집에 누가 있어?",
+   "blank": "من"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "هذه سيارة.",
+   "en": "This is a car.",
+   "ko": "이것은 자동차입니다.",
+   "blank": "هذه"
+  },
+  {
+   "text": "لا أفهم هذا.",
+   "en": "I do not understand this.",
+   "ko": "이것을 이해하지 못해요.",
+   "blank": "هذا"
+  },
+  {
+   "text": "هذه قطة.",
+   "en": "This is a cat.",
+   "ko": "이것은 고양이예요.",
+   "blank": "هذه"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "عندي كتاب.",
+   "en": "I have a book.",
+   "ko": "나는 책이 있어.",
+   "blank": "عندي"
+  },
+  {
+   "text": "عندي قهوة.",
+   "en": "I have coffee.",
+   "ko": "나는 커피가 있어.",
+   "blank": "عندي"
+  },
+  {
+   "text": "عندي مفتاح.",
+   "en": "I have a key.",
+   "ko": "나는 열쇠가 있어.",
+   "blank": "عندي"
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "أريد خبز، من فضلك.",
+   "en": "I want bread, please.",
+   "ko": "빵 주세요.",
+   "blank": "أريد خبز"
+  },
+  {
+   "text": "أريد قلم، من فضلك.",
+   "en": "I want a pen, please.",
+   "ko": "펜 주세요.",
+   "blank": "أريد قلم"
+  },
+  {
+   "text": "أريد شاي، من فضلك.",
+   "en": "I want tea, please.",
+   "ko": "차 주세요.",
+   "blank": "أريد شاي"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "درستُ اللغة العربية أمس.",
+   "en": "I studied Arabic yesterday.",
+   "ko": "나는 어제 아랍어를 공부했어.",
+   "blank": "درستُ"
+  },
+  {
+   "text": "أكلتُ الفطور أمس.",
+   "en": "I ate breakfast yesterday.",
+   "ko": "나는 어제 아침을 먹었어.",
+   "blank": "أكلتُ"
+  },
+  {
+   "text": "كتبتُ رسالة أمس.",
+   "en": "I wrote a letter yesterday.",
+   "ko": "나는 어제 편지를 썼어.",
+   "blank": "كتبتُ"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "تذهب إلى السوق كل يوم.",
+   "en": "You go to the market every day.",
+   "ko": "너는 매일 시장에 간다.",
+   "blank": "تذهب"
+  },
+  {
+   "text": "نكتب الدرس الآن.",
+   "en": "We write the lesson now.",
+   "ko": "우리는 지금 수업을 쓴다.",
+   "blank": "نكتب"
+  },
+  {
+   "text": "يقرأ الكتاب في المساء.",
+   "en": "He reads the book in the evening.",
+   "ko": "그는 저녁에 책을 읽는다.",
+   "blank": "يقرأ"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "سوف أذهب إلى السوق.",
+   "en": "I will go to the market.",
+   "ko": "나는 시장에 갈 거야.",
+   "blank": "سوف أذهب"
+  },
+  {
+   "text": "سأكتب رسالة غداً.",
+   "en": "I will write a letter tomorrow.",
+   "ko": "나는 내일 편지를 쓸 거야.",
+   "blank": "سأكتب"
+  },
+  {
+   "text": "سوف نلعب كرة القدم بعد الدرس.",
+   "en": "We will play football after the lesson.",
+   "ko": "우리는 수업 후에 축구를 할 거야.",
+   "blank": "سوف نلعب"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "لا أفهم هذا الدرس.",
+   "en": "I don't understand this lesson.",
+   "ko": "나는 이 수업을 이해하지 못해.",
+   "blank": "لا"
+  },
+  {
+   "text": "لم أزر هذا المكان من قبل.",
+   "en": "I have not visited this place before.",
+   "ko": "나는 이곳을 전에 방문한 적이 없어.",
+   "blank": "لم"
+  },
+  {
+   "text": "لن أذهب إلى السوق غداً.",
+   "en": "I will not go to the market tomorrow.",
+   "ko": "나는 내일 시장에 가지 않을 거야.",
+   "blank": "لن"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "أحب الطبخ في المنزل.",
+   "en": "I like cooking at home.",
+   "ko": "나는 집에서 요리하는 것을 좋아해.",
+   "blank": "أحب الطبخ"
+  },
+  {
+   "text": "لا أحب الاستيقاظ مبكرًا.",
+   "en": "I don't like waking up early.",
+   "ko": "나는 일찍 일어나는 것을 좋아하지 않아.",
+   "blank": "لا أحب الاستيقاظ"
+  },
+  {
+   "text": "أحب السفر مع الأصدقاء.",
+   "en": "I like traveling with friends.",
+   "ko": "나는 친구들과 여행하는 것을 좋아해.",
+   "blank": "أحب السفر"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "ممكن أشوف الصورة؟",
+   "en": "Could I see the picture?",
+   "ko": "사진을 볼 수 있을까요?",
+   "blank": "ممكن أشوف"
+  },
+  {
+   "text": "ممكن تجيب لي ماء؟",
+   "en": "Could you bring me water?",
+   "ko": "물 좀 가져다줄 수 있어요?",
+   "blank": "ممكن تجيب"
+  },
+  {
+   "text": "ممكن تدخل هنا؟",
+   "en": "Could you come in here?",
+   "ko": "여기로 들어올 수 있어요?",
+   "blank": "ممكن تدخل"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "مفتاح السيارة على الطاولة.",
+   "en": "The car key is on the table.",
+   "ko": "자동차 열쇠가 테이블 위에 있어요.",
+   "blank": "مفتاح السيارة"
+  },
+  {
+   "text": "كتاب المعلم مهم.",
+   "en": "The teacher's book is important.",
+   "ko": "선생님의 책이 중요해요.",
+   "blank": "كتاب المعلم"
+  },
+  {
+   "text": "باب الغرفة مغلق.",
+   "en": "The room door is closed.",
+   "ko": "방 문이 닫혀 있어요.",
+   "blank": "باب الغرفة"
+  }
+ ],
+ "g|2:7": [
+  {
+   "text": "أنا متعب لأنني عملت كثيراً.",
+   "en": "I am tired because I worked a lot.",
+   "ko": "나는 많이 일해서 피곤해.",
+   "blank": "لأنني"
+  },
+  {
+   "text": "لن أذهب لأن المطر كثير.",
+   "en": "I will not go because it is raining a lot.",
+   "ko": "비가 많이 와서 나는 가지 않을 거야.",
+   "blank": "لأن"
+  },
+  {
+   "text": "أكلت بسرعة لأنني جائع.",
+   "en": "I ate quickly because I am hungry.",
+   "ko": "나는 배고파서 빨리 먹었어.",
+   "blank": "لأنني"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "كنت أعمل في المطعم.",
+   "en": "I used to work at the restaurant.",
+   "ko": "나는 식당에서 일하곤 했어.",
+   "blank": "كنت أعمل"
+  },
+  {
+   "text": "كنت أقرأ كل ليلة.",
+   "en": "I used to read every night.",
+   "ko": "나는 매일 밤 책을 읽곤 했어.",
+   "blank": "كنت أقرأ"
+  },
+  {
+   "text": "كنت أمشي إلى المدرسة.",
+   "en": "I used to walk to school.",
+   "ko": "나는 학교에 걸어가곤 했어.",
+   "blank": "كنت أمشي"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "هذا القميص أرخص من ذاك.",
+   "en": "This shirt is cheaper than that one.",
+   "ko": "이 셔츠가 저것보다 더 쌉니다.",
+   "blank": "أرخص من"
+  },
+  {
+   "text": "الشارع هنا أوسع من هناك.",
+   "en": "The street here is wider than over there.",
+   "ko": "여기 거리가 저기보다 더 넓어요.",
+   "blank": "أوسع من"
+  },
+  {
+   "text": "الطفل أسرع من أخيه.",
+   "en": "The child is faster than his brother.",
+   "ko": "그 아이가 그의 형제보다 더 빨라요.",
+   "blank": "أسرع من"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "الكتاب الذي قرأته مفيد.",
+   "en": "The book that I read is useful.",
+   "ko": "내가 읽은 책이 유용해.",
+   "blank": "الذي"
+  },
+  {
+   "text": "الفتاة التي تحدثت معها لطيفة.",
+   "en": "The girl that I spoke with is nice.",
+   "ko": "내가 이야기한 소녀가 친절해.",
+   "blank": "التي"
+  },
+  {
+   "text": "السيارة التي اشتراها جديدة.",
+   "en": "The car that he bought is new.",
+   "ko": "그가 산 차가 새 거야.",
+   "blank": "التي"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "أستطيع أن أكتب رسالة الآن.",
+   "en": "I can write a letter now.",
+   "ko": "지금 편지를 쓸 수 있어요.",
+   "blank": "أن أكتب"
+  },
+  {
+   "text": "لا أستطيع أن أخرج اليوم.",
+   "en": "I can't go out today.",
+   "ko": "오늘은 나갈 수 없어요.",
+   "blank": "أن أخرج"
+  },
+  {
+   "text": "أريد أن أتعلم السباحة.",
+   "en": "I want to learn swimming.",
+   "ko": "수영을 배우고 싶어요.",
+   "blank": "أن أتعلم"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "إذا شعرت بالتعب، استرح قليلاً.",
+   "en": "If you feel tired, rest a bit.",
+   "ko": "피곤하면 잠깐 쉬세요.",
+   "blank": "إذا"
+  },
+  {
+   "text": "إذا انتهيت من العمل، أخبرني.",
+   "en": "If you finish the work, tell me.",
+   "ko": "일이 끝나면 알려 주세요.",
+   "blank": "إذا"
+  },
+  {
+   "text": "إذا نسيت المفتاح، اتصل بي.",
+   "en": "If you forget the key, call me.",
+   "ko": "열쇠를 잊으면 전화하세요.",
+   "blank": "إذا"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "أولا أغسل يدي، ثم أتناول الطعام.",
+   "en": "First I wash my hands, then I eat.",
+   "ko": "먼저 손을 씻고, 그 다음에 밥을 먹어요.",
+   "blank": "أولا"
+  },
+  {
+   "text": "ذهبت إلى السوق، بعد ذلك اشتريت فواكه.",
+   "en": "I went to the market, after that I bought fruits.",
+   "ko": "시장에 갔다가, 그 다음에 과일을 샀어요.",
+   "blank": "بعد ذلك"
+  },
+  {
+   "text": "في النهاية عدت إلى البيت.",
+   "en": "In the end, I returned home.",
+   "ko": "마지막에 집에 돌아왔어요.",
+   "blank": "في النهاية"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "في رأيي، الجو جميل اليوم.",
+   "en": "In my opinion, the weather is nice today.",
+   "ko": "내 생각에는 오늘 날씨가 좋아.",
+   "blank": "في رأيي"
+  },
+  {
+   "text": "أظن أن هذا الفيلم ممتع.",
+   "en": "I think this movie is fun.",
+   "ko": "이 영화가 재미있다고 생각해.",
+   "blank": "أظن أن"
+  },
+  {
+   "text": "بالعكس، هذا المكان هادئ.",
+   "en": "On the contrary, this place is quiet.",
+   "ko": "반대로, 이곳은 조용해.",
+   "blank": "بالعكس"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "تم إصلاح العطل في الجهاز.",
+   "en": "The malfunction in the device was fixed.",
+   "ko": "기기의 고장이 고쳐졌어요.",
+   "blank": "تم إصلاح"
+  },
+  {
+   "text": "يقال إن الطقس سيكون معتدلاً غداً.",
+   "en": "It is said that the weather will be mild tomorrow.",
+   "ko": "내일 날씨가 온화할 거라고 해요.",
+   "blank": "يقال إن"
+  },
+  {
+   "text": "تم إرسال الرسالة إلى المدير.",
+   "en": "The message was sent to the manager.",
+   "ko": "메시지가 관리자에게 보내졌어요.",
+   "blank": "تم إرسال"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "لو وصل القطار في الوقت لـوصلت مبكرًا.",
+   "en": "If the train arrived on time, I would have arrived early.",
+   "ko": "기차가 제시간에 도착했다면 나는 일찍 도착했을 거야.",
+   "blank": "لو وصل القطار في الوقت لـوصلت"
+  },
+  {
+   "text": "لو فهمت الدرس لـحللت الواجب بسهولة.",
+   "en": "If I understood the lesson, I would have done the homework easily.",
+   "ko": "수업을 이해했다면 숙제를 쉽게 했을 거야.",
+   "blank": "لو فهمت الدرس لـحللت"
+  },
+  {
+   "text": "لو طلبت المساعدة لـساعدك الجميع.",
+   "en": "If you asked for help, everyone would help you.",
+   "ko": "도움을 요청했다면 모두가 도와줬을 거야.",
+   "blank": "لو طلبت المساعدة لـساعدك"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "رغم أن الجو بارد، خرجتُ للمشي.",
+   "en": "Although the weather is cold, I went out for a walk.",
+   "ko": "날씨가 춥지만 나는 산책하러 나갔어.",
+   "blank": "رغم أن"
+  },
+  {
+   "text": "رغم أن الطريق طويل، الرحلة ممتعة.",
+   "en": "Although the road is long, the trip is enjoyable.",
+   "ko": "길이 멀지만 여행은 즐거워.",
+   "blank": "رغم أن"
+  },
+  {
+   "text": "رغم أن الوقت متأخر، ما زلت أدرس.",
+   "en": "Although it's late, I'm still studying.",
+   "ko": "늦었지만, 아직 공부하고 있어.",
+   "blank": "رغم أن"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "التأخير في التسليم يسبب مشاكل كثيرة.",
+   "en": "Delays in delivery cause many problems.",
+   "ko": "배송 지연은 많은 문제를 일으킵니다.",
+   "blank": "التأخير"
+  },
+  {
+   "text": "العمل عن بعد يسمح للناس بالبقاء مع عائلاتهم.",
+   "en": "Remote work allows people to stay with their families.",
+   "ko": "재택근무는 사람들이 가족과 함께 있을 수 있게 해줍니다.",
+   "blank": "العمل عن بعد"
+  },
+  {
+   "text": "التأخير في الرد يزعج الزبائن.",
+   "en": "Delays in responding annoy customers.",
+   "ko": "응답 지연은 고객을 짜증나게 합니다.",
+   "blank": "التأخير"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "كلما درست أكثر، فهمت الدرس أفضل.",
+   "en": "The more I study, the better I understand the lesson.",
+   "ko": "더 많이 공부할수록, 수업을 더 잘 이해해요.",
+   "blank": "كلما"
+  },
+  {
+   "text": "كلما أكلت حلويات، شعرت بالسعادة.",
+   "en": "The more sweets I eat, the happier I feel.",
+   "ko": "단 것을 더 먹을수록 더 행복해져요.",
+   "blank": "كلما"
+  },
+  {
+   "text": "كلما خرجت في الصباح الباكر، شعرت بالنشاط.",
+   "en": "Whenever I go out early in the morning, I feel energetic.",
+   "ko": "아침 일찍 나갈수록 더 활력이 생겨요.",
+   "blank": "كلما"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "قد أحتاج إلى بعض الوقت للتفكير.",
+   "en": "I might need some time to think.",
+   "ko": "나는 생각할 시간이 좀 필요할지도 몰라.",
+   "blank": "قد"
+  },
+  {
+   "text": "ربما يكون الطقس أفضل غداً.",
+   "en": "Maybe the weather will be better tomorrow.",
+   "ko": "아마 내일은 날씨가 더 좋을 거야.",
+   "blank": "ربما"
+  },
+  {
+   "text": "قد تصل الحافلة متأخرة اليوم.",
+   "en": "The bus might arrive late today.",
+   "ko": "오늘 버스가 늦게 도착할 수도 있어.",
+   "blank": "قد"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "بالإضافة إلى ذلك، الجو اليوم جميل.",
+   "en": "In addition, the weather is nice today.",
+   "ko": "게다가 오늘 날씨가 좋아요.",
+   "blank": "بالإضافة إلى ذلك"
+  },
+  {
+   "text": "بالإضافة إلى الدراسة، أعمل بدوام جزئي.",
+   "en": "In addition to studying, I work part-time.",
+   "ko": "공부 외에도 아르바이트를 해요.",
+   "blank": "بالإضافة إلى"
+  },
+  {
+   "text": "بالإضافة إلى ذلك، يجب أن نجهز الطعام.",
+   "en": "In addition, we need to prepare the food.",
+   "ko": "게다가 우리는 음식을 준비해야 해요.",
+   "blank": "بالإضافة إلى ذلك"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "لقد انتظرت هذه اللحظة طويلاً.",
+   "en": "I have waited for this moment for a long time.",
+   "ko": "나는 이 순간을 오랫동안 기다려왔다.",
+   "blank": "لقد"
+  },
+  {
+   "text": "إن هذا المكان ليس مجرد مطعم، بل هو تجربة خاصة.",
+   "en": "This place is not just a restaurant, but a special experience.",
+   "ko": "이 곳은 단순한 식당이 아니라 특별한 경험이다.",
+   "blank": "إن"
+  },
+  {
+   "text": "لقد نسيت مفاتيحي في السيارة.",
+   "en": "I have forgotten my keys in the car.",
+   "ko": "나는 차에 열쇠를 두고 잊어버렸다.",
+   "blank": "لقد"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "لا أستطيع إلا أن أوافق على هذا القرار.",
+   "en": "I can only agree with this decision.",
+   "ko": "나는 이 결정에 동의할 수밖에 없어.",
+   "blank": "إلا أن"
+  },
+  {
+   "text": "لم أجد غير كتاب واحد في المكتبة.",
+   "en": "I found only one book in the library.",
+   "ko": "도서관에서 책 한 권밖에 못 찾았어.",
+   "blank": "غير"
+  },
+  {
+   "text": "لا يوجد في الحقيبة إلا مفاتيحي.",
+   "en": "There is nothing in the bag except my keys.",
+   "ko": "가방에는 내 열쇠밖에 없어.",
+   "blank": "إلا"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "ضحكتُ ضحكاً عالياً عندما سمعت النكتة.",
+   "en": "I laughed loudly when I heard the joke.",
+   "ko": "나는 농담을 듣고 크게 웃었어.",
+   "blank": "ضحكاً عالياً"
+  },
+  {
+   "text": "استمتعتُ بالسفر استمتاعاً كاملاً مع أصدقائي.",
+   "en": "I fully enjoyed traveling with my friends.",
+   "ko": "나는 친구들과의 여행을 완전히 즐겼어.",
+   "blank": "استمتاعاً كاملاً"
+  },
+  {
+   "text": "شعرتُ بالخوف شعوراً شديداً أثناء العاصفة.",
+   "en": "I felt intense fear during the storm.",
+   "ko": "나는 폭풍우 동안 강한 두려움을 느꼈어.",
+   "blank": "شعوراً شديداً"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "بارك الله فيك على المساعدة.",
+   "en": "God bless you for your help.",
+   "ko": "도와주셔서 하나님이 축복해 주시길 바랍니다.",
+   "blank": "بارك الله فيك"
+  },
+  {
+   "text": "رحمه الله وغفر له.",
+   "en": "May God have mercy on him and forgive him.",
+   "ko": "하나님께서 그에게 자비를 베풀고 용서해 주시길 바랍니다.",
+   "blank": "رحمه الله"
+  },
+  {
+   "text": "بارك الله فيك وفي عائلتك.",
+   "en": "God bless you and your family.",
+   "ko": "당신과 당신의 가족에게 하나님이 축복해 주시길 바랍니다.",
+   "blank": "بارك الله فيك"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "يبدو أن الطقس سيتغير قريباً.",
+   "en": "It seems the weather will change soon.",
+   "ko": "날씨가 곧 변할 것 같아.",
+   "blank": "يبدو أن"
+  },
+  {
+   "text": "لا يخفى على أحد أن الامتحان كان صعباً.",
+   "en": "It's no secret that the exam was difficult.",
+   "ko": "시험이 어려웠다는 것은 누구에게나 분명해.",
+   "blank": "لا يخفى على أحد أن"
+  },
+  {
+   "text": "يبدو أن المطعم مزدحم اليوم.",
+   "en": "It seems the restaurant is crowded today.",
+   "ko": "오늘 식당이 붐비는 것 같아.",
+   "blank": "يبدو أن"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "الجميع يحب الشوكولاتة، أليس كذلك؟",
+   "en": "Everyone loves chocolate, don't they?",
+   "ko": "모두 초콜릿을 좋아하지, 그렇지?",
+   "blank": "أليس كذلك؟"
+  },
+  {
+   "text": "ومن لا يحب قضاء العطلة على الشاطئ؟",
+   "en": "And who doesn't love spending holidays at the beach?",
+   "ko": "그리고 해변에서 휴가 보내는 걸 누가 안 좋아해?",
+   "blank": "ومن لا يحب"
+  },
+  {
+   "text": "الهدوء في الصباح جميل، أليس كذلك؟",
+   "en": "The quiet in the morning is beautiful, isn't it?",
+   "ko": "아침의 고요함은 아름답지, 그렇지?",
+   "blank": "أليس كذلك؟"
+  }
+ ],
+ "g|5:6": [
+  {
+   "text": "الشغل، بصراحة يعني، مرهق جداً اليوم.",
+   "en": "Work, honestly, is really exhausting today.",
+   "ko": "일이 솔직히 말해서 오늘 정말 힘들어.",
+   "blank": "بصراحة يعني"
+  },
+  {
+   "text": "الحياة صارت سباق، إن جاز التعبير.",
+   "en": "Life has become a race, so to speak.",
+   "ko": "삶이 말하자면 경주가 되어버렸어.",
+   "blank": "إن جاز التعبير"
+  },
+  {
+   "text": "الجو هنا، بصراحة يعني، مشجع للمذاكرة.",
+   "en": "The atmosphere here, honestly, encourages studying.",
+   "ko": "여기 분위기가 솔직히 말해서 공부하기 좋아.",
+   "blank": "بصراحة يعني"
+  }
+ ]
+}

@@ -1,0 +1,692 @@
+{
+  "w|you": {
+    "kind": "word",
+    "type": "type",
+    "name": "you",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "너",
+    "answer": "you",
+    "line": "Are you ready to leave?"
+  },
+  "w|go": {
+    "kind": "word",
+    "type": "type",
+    "name": "go",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가다",
+    "answer": "go",
+    "line": "Let's go to the beach."
+  },
+  "w|know": {
+    "kind": "word",
+    "type": "type",
+    "name": "know",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "알다",
+    "answer": "know",
+    "line": "Do you know her name?"
+  },
+  "w|come": {
+    "kind": "word",
+    "type": "type",
+    "name": "come",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "오다",
+    "answer": "come",
+    "line": "Please come to my party."
+  },
+  "w|like": {
+    "kind": "word",
+    "type": "type",
+    "name": "like",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "좋아하다",
+    "answer": "like",
+    "line": "I like watching movies."
+  },
+  "w|here": {
+    "kind": "word",
+    "type": "type",
+    "name": "here",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "여기",
+    "answer": "here",
+    "line": "Come here and look at this!"
+  },
+  "w|want": {
+    "kind": "word",
+    "type": "type",
+    "name": "want",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "원하다",
+    "answer": "want",
+    "line": "Do you want some tea?"
+  },
+  "w|see": {
+    "kind": "word",
+    "type": "type",
+    "name": "see",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "눈에 보이다",
+    "answer": "see",
+    "line": "Can you see the stars?"
+  },
+  "w|make": {
+    "kind": "word",
+    "type": "type",
+    "name": "make",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "만들다",
+    "answer": "make",
+    "line": "I will make dinner tonight."
+  },
+  "w|good": {
+    "kind": "word",
+    "type": "type",
+    "name": "good",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "좋은",
+    "answer": "good",
+    "line": "That's a good idea."
+  },
+  "w|day": {
+    "kind": "word",
+    "type": "type",
+    "name": "day",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "하루, 날",
+    "answer": "day",
+    "line": "Today is a beautiful day."
+  },
+  "w|work": {
+    "kind": "word",
+    "type": "type",
+    "name": "work",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "일하다",
+    "answer": "work",
+    "line": "I work from home now."
+  },
+  "w|think": {
+    "kind": "word",
+    "type": "type",
+    "name": "think",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "생각하다",
+    "answer": "think",
+    "line": "I think that's right."
+  },
+  "w|look": {
+    "kind": "word",
+    "type": "type",
+    "name": "look",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "바라보다",
+    "answer": "look",
+    "line": "Look at that dog!"
+  },
+  "w|time": {
+    "kind": "word",
+    "type": "type",
+    "name": "time",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "시간",
+    "answer": "time",
+    "line": "I don't have much time.",
+    "hint": "t"
+  },
+  "w|school": {
+    "kind": "word",
+    "type": "type",
+    "name": "school",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "학교",
+    "answer": "school",
+    "line": "He walks to school every day."
+  },
+  "w|because": {
+    "kind": "word",
+    "type": "type",
+    "name": "because",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "때문에",
+    "answer": "because",
+    "line": "I am late because of traffic.",
+    "hint": "b",
+    "mark": "한 단어"
+  },
+  "w|already": {
+    "kind": "word",
+    "type": "type",
+    "name": "already",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "이미",
+    "answer": "already",
+    "line": "I already finished my homework."
+  },
+  "e|nice to meet you": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "nice to meet you",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕하세요, 처음 뵙게 되어 반가워요.",
+    "before": "Hello, ",
+    "after": ".",
+    "answer": "nice to meet you",
+    "why": "처음 만나 반갑다는 인사는 nice to meet you예요.",
+    "options": [
+      "nice to meeting you",
+      "nice to meet you",
+      "nice meet to you",
+      "nice for meet you"
+    ],
+    "line": "Hello, nice to meet you."
+  },
+  "e|where are you from": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "where are you from",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕, 너는 어디에서 왔니?",
+    "before": "Hi, ",
+    "after": "?",
+    "answer": "where are you from",
+    "why": "출신을 물을 때는 where are you from이에요.",
+    "options": [
+      "where you are from",
+      "where are you from",
+      "where is you from",
+      "where are you of"
+    ],
+    "line": "Hi, where are you from?"
+  },
+  "e|what do you do": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "what do you do",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕하세요, 무슨 일 하세요?",
+    "before": "Hi, ",
+    "after": "?",
+    "answer": "what do you do",
+    "why": "직업을 물을 때는 what do you do예요.",
+    "options": [
+      "what does you do",
+      "what do you do",
+      "what you do do",
+      "what are you do"
+    ],
+    "line": "Hi, what do you do?"
+  },
+  "e|how about you": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "how about you",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 이 게임이 좋아, 너는 어때?",
+    "before": "I like this game, ",
+    "after": "?",
+    "answer": "how about you",
+    "why": "같은 질문을 되물을 때는 how about you예요.",
+    "options": [
+      "how about to you",
+      "how about you",
+      "how is about you",
+      "how about your"
+    ],
+    "line": "I like this game, how about you?"
+  },
+  "e|me too": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "me too",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나도 고양이를 좋아해.",
+    "before": "I like cats, ",
+    "after": ".",
+    "answer": "me too",
+    "why": "상대와 같다는 말은 me too예요.",
+    "options": [
+      "me also",
+      "me too",
+      "my too",
+      "also me"
+    ],
+    "line": "I like cats, me too."
+  },
+  "e|see you later": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "see you later",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나 이제 가야 해, 나중에 봐.",
+    "before": "I have to go now, ",
+    "after": ".",
+    "answer": "see you later",
+    "why": "헤어질 때 나중에 보자는 말은 see you later예요.",
+    "options": [
+      "see you after",
+      "see you later",
+      "look you later",
+      "see you lately"
+    ],
+    "line": "I have to go now, see you later."
+  },
+  "e|thanks a lot": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "thanks a lot",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "도와줘서 정말 고마워.",
+    "before": "",
+    "after": " for your help.",
+    "answer": "Thanks a lot",
+    "why": "도움을 크게 고마워할 때는 Thanks a lot이에요. a lot이 '많이'예요.",
+    "options": [
+      "Thank a lot",
+      "Thanks a lot",
+      "Thanks lot",
+      "Thanks a much"
+    ],
+    "line": "Thanks a lot for your help."
+  },
+  "e|excuse me": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "excuse me",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "저 좀 도와줄 수 있나요?",
+    "before": "",
+    "after": ", can you help me?",
+    "answer": "Excuse me",
+    "why": "모르는 사람에게 말을 걸 때는 Excuse me로 시작해요.",
+    "options": [
+      "Excuse my",
+      "Excuse me",
+      "Excuse to me",
+      "Excuse i"
+    ],
+    "line": "Excuse me, can you help me?"
+  },
+  "e|no problem": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "no problem",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "책 고마워요. 괜찮아요.",
+    "before": "Thank you for the book. ",
+    "after": ".",
+    "answer": "No problem",
+    "why": "고마워하는 말에 괜찮다고 받을 때는 No problem이에요.",
+    "options": [
+      "Not problem",
+      "No problem",
+      "No any problem",
+      "No the problem"
+    ],
+    "line": "Thank you for the book. No problem."
+  },
+  "e|how much is this": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "how much is this",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "사과 한 개는 얼마예요?",
+    "before": "",
+    "after": " for one apple?",
+    "answer": "How much is this",
+    "why": "값을 물을 때는 How much is this예요.",
+    "options": [
+      "How much are this",
+      "How much is this",
+      "How many is this",
+      "How much this is"
+    ],
+    "line": "How much is this for one apple?"
+  },
+  "e|just this one": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "just this one",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이것만 가질 수 있나요?",
+    "before": "Can I have ",
+    "after": "?",
+    "answer": "just this one",
+    "why": "이것 하나만 달라는 말은 just this one이에요.",
+    "options": [
+      "just these one",
+      "just this one",
+      "just one this",
+      "just this a one"
+    ],
+    "line": "Can I have just this one?"
+  },
+  "e|what time is it": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "what time is it",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "지금 몇 시인지 알려 주세요.",
+    "before": "",
+    "after": ", please?",
+    "answer": "What time is it",
+    "why": "시각을 물을 때는 What time is it이에요.",
+    "options": [
+      "What time it is",
+      "What time is it",
+      "What hour is it",
+      "What time are it"
+    ],
+    "line": "What time is it, please?"
+  },
+  "e|where is the station": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "where is the station",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이 지도에서 역이 어디에 있나요?",
+    "before": "",
+    "after": " on this map?",
+    "answer": "Where is the station",
+    "why": "역 위치를 물을 때는 Where is the station이에요.",
+    "options": [
+      "Where is station",
+      "Where is the station",
+      "Where are the station",
+      "Where the station is"
+    ],
+    "line": "Where is the station on this map?"
+  },
+  "e|on the left": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "on the left",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "빨간 가방이 왼쪽에 있어요.",
+    "before": "The red bag is ",
+    "after": ".",
+    "answer": "on the left",
+    "why": "왼쪽은 on the left예요.",
+    "options": [
+      "in the left",
+      "on the left",
+      "on left",
+      "at left"
+    ],
+    "line": "The red bag is on the left."
+  },
+  "e|next to the bank": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "next to the bank",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "버스 정류장은 은행 옆에 있어요.",
+    "before": "The bus stop is ",
+    "after": ".",
+    "answer": "next to the bank",
+    "why": "바로 옆은 next to the bank예요.",
+    "options": [
+      "next the bank",
+      "next to the bank",
+      "next of the bank",
+      "next to bank"
+    ],
+    "line": "The bus stop is next to the bank."
+  },
+  "e|say that again": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "say that again",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "미안해요, 다시 말해줄래요?",
+    "before": "Sorry, please ",
+    "after": ".",
+    "answer": "say that again",
+    "why": "다시 말해 달라는 말은 say that again이에요.",
+    "options": [
+      "says that again",
+      "say that again",
+      "tell that again",
+      "say again that"
+    ],
+    "line": "Sorry, please say that again."
+  },
+  "e|not really": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "not really",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "별로요.",
+    "before": "",
+    "after": ".",
+    "answer": "Not really",
+    "why": "별로 아니라는 말은 Not really예요.",
+    "options": [
+      "No really",
+      "Not really",
+      "Don't really",
+      "Not so really"
+    ],
+    "line": "Not really."
+  },
+  "e|good morning": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "good morning",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "안녕, 오늘 기분이 어때?",
+    "before": "",
+    "after": ", how are you?",
+    "answer": "Good morning",
+    "why": "아침 인사는 Good morning이에요.",
+    "options": [
+      "Goods morning",
+      "Good morning",
+      "Good the morning",
+      "Good mornings"
+    ],
+    "line": "Good morning, how are you?"
+  },
+  "e|have a nice day": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "have a nice day",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "도와줘서 고마워요. 좋은 하루 보내세요.",
+    "before": "Thank you for your help. ",
+    "after": ".",
+    "answer": "Have a nice day",
+    "why": "헤어지며 좋은 하루를 빌 때는 Have a nice day예요.",
+    "options": [
+      "Have nice day",
+      "Have a nice day",
+      "Has a nice day",
+      "Have the nice day"
+    ],
+    "line": "Thank you for your help. Have a nice day."
+  },
+  "e|you're welcome": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "you're welcome",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "도와줘서 고마워요. 천만에요.",
+    "before": "Thank you for the help. ",
+    "after": ".",
+    "answer": "You're welcome",
+    "why": "고마워하는 말에 답할 때는 You're welcome이에요.",
+    "options": [
+      "You welcome",
+      "You're welcome",
+      "You are welcomed",
+      "You're welcoming"
+    ],
+    "line": "Thank you for the help. You're welcome."
+  },
+  "g|1:0": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "be동사 am / is / are",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "책이 탁자 위에 있다.",
+    "answer": "is",
+    "why": "book은 하나라서 is예요.",
+    "options": [
+      "am",
+      "is",
+      "are"
+    ],
+    "line": "The book is on the table.",
+    "before": "The book ",
+    "after": " on the table."
+  },
+  "g|1:1": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "현재시제와 3인칭 -s",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "그는 밥을 먹어요.",
+    "answer": "He eats rice.",
+    "why": "he 뒤의 현재 동사는 eats예요.",
+    "options": [
+      "He eat rice.",
+      "He eats rice.",
+      "He eating rice.",
+      "He is eat rice."
+    ],
+    "line": "He eats rice."
+  },
+  "g|1:2": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "관사 a / an / the",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "펜이 있나요?",
+    "answer": "a",
+    "why": "처음 나오는 하나짜리 물건은 a예요.",
+    "options": [
+      "an",
+      "a",
+      "the"
+    ],
+    "line": "Is there a pen?",
+    "before": "Is there ",
+    "after": " pen?"
+  },
+  "g|1:3": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "복수형 명사",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 고양이 두 마리가 있어요.",
+    "answer": "two cats",
+    "why": "두 마리라서 cats로 복수예요.",
+    "options": [
+      "two cat",
+      "two cats",
+      "two cat's"
+    ],
+    "line": "I have two cats.",
+    "before": "I have ",
+    "after": "."
+  },
+  "g|1:4": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "do로 묻기·부정하기",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 차를 좋아하지 않는다.",
+    "answer": "don't",
+    "why": "I의 부정은 don't예요.",
+    "options": [
+      "doesn't",
+      "don't",
+      "not"
+    ],
+    "line": "I don't like tea.",
+    "before": "I ",
+    "after": " like tea."
+  },
+  "g|1:5": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "장소 전치사 on",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "내 가방이 의자 위에 있어요.",
+    "answer": "on the chair",
+    "why": "닿아 있으면 on이에요.",
+    "options": [
+      "in the chair",
+      "on the chair",
+      "at the chair"
+    ],
+    "line": "My bag is on the chair.",
+    "before": "My bag is ",
+    "after": "."
+  },
+  "en-1-03": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I'm a ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "나는 학생이야.",
+    "answer": "I'm a student.",
+    "why": "직업 하나 앞에는 a를 붙여 I'm a student예요.",
+    "options": [
+      "I'm student.",
+      "I'm a student.",
+      "I student.",
+      "I'm a students."
+    ],
+    "line": "I'm a student."
+  },
+  "en-1-04": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "How much is ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "이거 얼마예요?",
+    "answer": "How much is this?",
+    "why": "값을 물을 때는 How much is this예요.",
+    "options": [
+      "How much are this?",
+      "How much is this?",
+      "How many is this?",
+      "How much this is?"
+    ],
+    "line": "How much is this?"
+  },
+  "en-1-08": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I can ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "나는 요리할 수 있어.",
+    "answer": "I can cook.",
+    "why": "can 뒤에는 동사 원형 cook이 와요.",
+    "options": [
+      "I can to cook.",
+      "I can cook.",
+      "I can cooking.",
+      "I can cooks."
+    ],
+    "line": "I can cook."
+  },
+  "en-3-01": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I'm calling because my ___ is ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "제 주문이 늦어서 전화드려요.",
+    "answer": "I'm calling because my order is late.",
+    "why": "전화한 이유라서 I'm calling because로 시작하고, 늦은 것은 주문이에요.",
+    "options": [
+      "Because I'm calling my order is late.",
+      "I'm calling because my order is late.",
+      "My order is calling because I'm late.",
+      "I'm late because my calling is order."
+    ],
+    "line": "I'm calling because my order is late."
+  }
+}

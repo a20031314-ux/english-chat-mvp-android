@@ -12,6 +12,7 @@ import { stretchStream } from "@/lib/server/timeStretch";
 import { parseTutorSpeed } from "@/lib/tutorSpeedValue";
 import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
+  isKanaMora,
   spokenFormForTts,
   speechLangPrefix,
   sceneSpeechInstructions,
@@ -141,7 +142,9 @@ async function synthesize(
   const languageCode = coerceLanguageCode(speechLangPrefix(lang));
   const reference = voxtralReference(languageCode, voice);
   const forcedEngine = trialValue(request, "x-tts-engine");
-  if (reference && voxtralEnabled() && forcedEngine !== "realtime" && forcedEngine !== "speech") {
+  // 가나 한 박자(あ, きゃ)를 튜터 목소리에 맡기면 다른 문장을 지어 낸다. 그 소리만 읽는 엔진으로 보낸다.
+  const kanaMora = isKanaMora(spoken);
+  if (reference && voxtralEnabled() && !kanaMora && forcedEngine !== "realtime" && forcedEngine !== "speech") {
     const started = Date.now();
     try {
       // 점검 사용자는 x-tts-voxtral-speed로 빠르기를 견줘 볼 수 있다.

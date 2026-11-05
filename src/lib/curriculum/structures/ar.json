@@ -1,0 +1,1645 @@
+{
+ "1": [
+  {
+   "id": "ar-1-01",
+   "stage": 1,
+   "pattern": "أنا ___",
+   "meaningKo": "자기소개: 이름 말하기",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "أنا محمد",
+     "ko": "저는 무함마드입니다.",
+     "en": "I am Muhammad."
+    },
+    {
+     "text": "أنا سارة",
+     "ko": "저는 사라입니다.",
+     "en": "I am Sarah."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주어 + 명사",
+     "noteKo": "이름 자리에 자기 이름을 넣습니다.",
+     "nameEn": "Subject + noun",
+     "noteEn": "Put your name in the blank."
+    }
+   ],
+   "related": [
+    "أنا من ___"
+   ],
+   "quiz": {
+    "prompt": "أنا ___",
+    "answer": "محمد"
+   }
+  },
+  {
+   "id": "ar-1-02",
+   "stage": 1,
+   "pattern": "أنا من ___",
+   "meaningKo": "자기소개: 출신지 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "أنا من كوريا",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I am from Korea."
+    },
+    {
+     "text": "أنا من مصر",
+     "ko": "저는 이집트에서 왔어요.",
+     "en": "I am from Egypt."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주어 + 전치사구",
+     "noteKo": "나라 또는 도시를 빈칸에 넣습니다.",
+     "nameEn": "Subject + prepositional phrase",
+     "noteEn": "Put a country or city in the blank."
+    }
+   ],
+   "related": [
+    "أنا ___"
+   ],
+   "quiz": {
+    "prompt": "أنا من ___",
+    "answer": "كوريا"
+   }
+  },
+  {
+   "id": "ar-1-03",
+   "stage": 1,
+   "pattern": "كم سعر ___؟",
+   "meaningKo": "가격 물어보기",
+   "meaningEn": "Asking the price",
+   "examples": [
+    {
+     "text": "كم سعر التفاح؟",
+     "ko": "사과는 얼마예요?",
+     "en": "How much are the apples?"
+    },
+    {
+     "text": "كم سعر هذه الحقيبة؟",
+     "ko": "이 가방은 얼마인가요?",
+     "en": "How much is this bag?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "빈칸에 상품명을 넣습니다.",
+     "nameEn": "Question",
+     "noteEn": "Put an item in the blank."
+    }
+   ],
+   "related": [
+    "أريد ___"
+   ],
+   "quiz": {
+    "prompt": "كم سعر ___؟",
+    "answer": "التفاح"
+   }
+  },
+  {
+   "id": "ar-1-04",
+   "stage": 1,
+   "pattern": "أريد ___",
+   "meaningKo": "원하는 것 요청하기",
+   "meaningEn": "Saying what you want",
+   "examples": [
+    {
+     "text": "أريد موزا",
+     "ko": "바나나 주세요.",
+     "en": "I want bananas."
+    },
+    {
+     "text": "أريد ماء",
+     "ko": "물 주세요.",
+     "en": "I want water."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사 + 명사",
+     "noteKo": "원하는 물건을 빈칸에 넣습니다.",
+     "nameEn": "Verb + noun",
+     "noteEn": "Put what you want in the blank."
+    }
+   ],
+   "related": [
+    "كم سعر ___؟"
+   ],
+   "quiz": {
+    "prompt": "أريد ___",
+    "answer": "موزا"
+   }
+  },
+  {
+   "id": "ar-1-05",
+   "stage": 1,
+   "pattern": "أين ___؟",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "أين الحمام؟",
+     "ko": "화장실이 어디예요?",
+     "en": "Where is the bathroom?"
+    },
+    {
+     "text": "أين المترو؟",
+     "ko": "지하철이 어디에 있나요?",
+     "en": "Where is the metro?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "찾고 있는 장소명을 빈칸에 넣습니다.",
+     "nameEn": "Question",
+     "noteEn": "Put the place you are looking for in the blank."
+    }
+   ],
+   "related": [
+    "أريد ___"
+   ],
+   "quiz": {
+    "prompt": "أين ___؟",
+    "answer": "الحمام"
+   }
+  },
+  {
+   "id": "ar-1-06",
+   "stage": 1,
+   "pattern": "اسمي ___",
+   "meaningKo": "자기 이름을 말함",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "اسمي ليلى",
+     "ko": "제 이름은 레일라입니다",
+     "en": "My name is Layla"
+    },
+    {
+     "text": "اسمي سامي",
+     "ko": "제 이름은 사미입니다",
+     "en": "My name is Sami"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 소개",
+     "noteKo": "___에 본인 이름을 넣음",
+     "nameEn": "Introducing your name",
+     "noteEn": "Put your name in ___"
+    }
+   ],
+   "related": [
+    "أنا ___"
+   ],
+   "quiz": {
+    "prompt": "اسمي ___",
+    "answer": "ليلى"
+   }
+  },
+  {
+   "id": "ar-1-07",
+   "stage": 1,
+   "pattern": "أنا أعمل ___",
+   "meaningKo": "직업을 말함",
+   "meaningEn": "Saying your job",
+   "examples": [
+    {
+     "text": "أنا أعمل مدرس",
+     "ko": "저는 교사로 일합니다",
+     "en": "I work as a teacher"
+    },
+    {
+     "text": "أنا أعمل طالب",
+     "ko": "저는 학생입니다",
+     "en": "I am a student"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업 표현",
+     "noteKo": "___에 직업을 넣음",
+     "nameEn": "Job expression",
+     "noteEn": "Put the job in ___"
+    }
+   ],
+   "related": [
+    "أنا ___"
+   ],
+   "quiz": {
+    "prompt": "أنا أعمل ___",
+    "answer": "مدرس"
+   }
+  },
+  {
+   "id": "ar-1-08",
+   "stage": 1,
+   "pattern": "من فضلك ___",
+   "meaningKo": "공손하게 부탁함",
+   "meaningEn": "Making a polite request",
+   "examples": [
+    {
+     "text": "من فضلك كرر",
+     "ko": "부탁인데 다시 말씀해 주세요",
+     "en": "Please repeat"
+    },
+    {
+     "text": "من فضلك البطاقة",
+     "ko": "부탁인데 카드 주세요",
+     "en": "Please (give me) the card"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 표현",
+     "noteKo": "___에 바라는 것을 넣음",
+     "nameEn": "Polite expression",
+     "noteEn": "Put what you want in ___"
+    }
+   ],
+   "related": [
+    "أريد ___"
+   ],
+   "quiz": {
+    "prompt": "من فضلك ___",
+    "answer": "كرر"
+   }
+  },
+  {
+   "id": "ar-1-09",
+   "stage": 1,
+   "pattern": "سآخذ ___",
+   "meaningKo": "구매 의사 밝힘",
+   "meaningEn": "Saying you will take something",
+   "examples": [
+    {
+     "text": "سآخذ التفاح",
+     "ko": "사과 살게요",
+     "en": "I will take the apples"
+    },
+    {
+     "text": "سآخذ هذا",
+     "ko": "이거 살게요",
+     "en": "I will take this"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "구매 표현",
+     "noteKo": "___에 살 물건을 넣음",
+     "nameEn": "Buying expression",
+     "noteEn": "Put what you will buy in ___"
+    }
+   ],
+   "related": [
+    "أريد ___"
+   ],
+   "quiz": {
+    "prompt": "سآخذ ___",
+    "answer": "التفاح"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "ar-2-01",
+   "stage": 2,
+   "pattern": "ذهبت إلى ___ أمس",
+   "meaningKo": "어제 했던 일을 말하기",
+   "meaningEn": "Saying what you did yesterday",
+   "examples": [
+    {
+     "text": "ذهبت إلى السوق أمس",
+     "ko": "어제 시장에 갔어요",
+     "en": "I went to the market yesterday"
+    },
+    {
+     "text": "ذهبت إلى الحديقة أمس",
+     "ko": "어제 공원에 갔어요",
+     "en": "I went to the park yesterday"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___에 과거에 한 일을 넣어요",
+     "nameEn": "Past tense",
+     "noteEn": "___ is the place you went yesterday"
+    }
+   ],
+   "related": [
+    "سأزور ___ في عطلة نهاية الأسبوع"
+   ],
+   "quiz": {
+    "prompt": "ذهبت إلى ___ أمس",
+    "answer": "المطعم"
+   }
+  },
+  {
+   "id": "ar-2-02",
+   "stage": 2,
+   "pattern": "سأزور ___ في عطلة نهاية الأسبوع",
+   "meaningKo": "이번 주말에 할 일을 말하기",
+   "meaningEn": "Saying what you will do this weekend",
+   "examples": [
+    {
+     "text": "سأزور صديقي في عطلة نهاية الأسبوع",
+     "ko": "주말에 친구를 방문할 거예요",
+     "en": "I will visit my friend this weekend"
+    },
+    {
+     "text": "سأزور المتحف في عطلة نهاية الأسبوع",
+     "ko": "주말에 박물관에 갈 거예요",
+     "en": "I will visit the museum this weekend"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 시제",
+     "noteKo": "___에 앞으로 할 일을 넣어요",
+     "nameEn": "Future tense",
+     "noteEn": "___ is where you will go"
+    }
+   ],
+   "related": [
+    "ذهبت إلى ___ أمس"
+   ],
+   "quiz": {
+    "prompt": "سأزور ___ في عطلة نهاية الأسبوع",
+    "answer": "العائلة"
+   }
+  },
+  {
+   "id": "ar-2-03",
+   "stage": 2,
+   "pattern": "هل تريد أن نلتقي في ___؟",
+   "meaningKo": "장소를 정해 친구를 초대하기",
+   "meaningEn": "Inviting a friend and suggesting a place",
+   "examples": [
+    {
+     "text": "هل تريد أن نلتقي في المقهى؟",
+     "ko": "카페에서 만날래요?",
+     "en": "Do you want to meet at the café?"
+    },
+    {
+     "text": "هل تريد أن نلتقي في الحديقة؟",
+     "ko": "공원에서 만날래요?",
+     "en": "Do you want to meet at the park?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "제안 표현",
+     "noteKo": "___에 만날 장소를 넣어요",
+     "nameEn": "Suggestion",
+     "noteEn": "___ is the meeting place"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "هل تريد أن نلتقي في ___؟",
+    "answer": "المكتبة"
+   }
+  },
+  {
+   "id": "ar-2-04",
+   "stage": 2,
+   "pattern": "أرغب في تناول ___",
+   "meaningKo": "음식이나 음료 주문하기",
+   "meaningEn": "Ordering food or drink",
+   "examples": [
+    {
+     "text": "أرغب في تناول شاي",
+     "ko": "차를 마시고 싶어요",
+     "en": "I would like to have tea"
+    },
+    {
+     "text": "أرغب في تناول بيتزا",
+     "ko": "피자를 먹고 싶어요",
+     "en": "I would like to eat pizza"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "희망 표현",
+     "noteKo": "___에 먹고 싶은 것을 넣어요",
+     "nameEn": "Desire expression",
+     "noteEn": "___ is what you want to eat/drink"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "أرغب في تناول ___",
+    "answer": "قهوة"
+   }
+  },
+  {
+   "id": "ar-2-05",
+   "stage": 2,
+   "pattern": "لدي ___ في عائلتي",
+   "meaningKo": "가족 구성원 소개하기",
+   "meaningEn": "Talking about your family",
+   "examples": [
+    {
+     "text": "لدي أخت في عائلتي",
+     "ko": "저희 가족에는 여동생이 있어요",
+     "en": "I have a sister in my family"
+    },
+    {
+     "text": "لدي أخ في عائلتي",
+     "ko": "저희 가족에는 남동생이 있어요",
+     "en": "I have a brother in my family"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "소유 표현",
+     "noteKo": "___에 가족 구성원을 넣어요",
+     "nameEn": "Possession",
+     "noteEn": "___ is the family member"
+    }
+   ],
+   "related": [
+    "أحب أن ___ مع عائلتي"
+   ],
+   "quiz": {
+    "prompt": "لدي ___ في عائلتي",
+    "answer": "أم"
+   }
+  },
+  {
+   "id": "ar-2-06",
+   "stage": 2,
+   "pattern": "أحب أن ___ مع عائلتي",
+   "meaningKo": "가족과 좋아하는 활동 말하기",
+   "meaningEn": "Saying what you like doing with your family",
+   "examples": [
+    {
+     "text": "أحب أن أتناول الطعام مع عائلتي",
+     "ko": "가족과 식사하는 것을 좋아해요",
+     "en": "I like to eat with my family"
+    },
+    {
+     "text": "أحب أن أشاهد التلفاز مع عائلتي",
+     "ko": "가족과 TV 보는 것을 좋아해요",
+     "en": "I like to watch TV with my family"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "취미/선호 표현",
+     "noteKo": "___에 좋아하는 활동을 넣어요",
+     "nameEn": "Expressing likes",
+     "noteEn": "___ is the activity you like"
+    }
+   ],
+   "related": [
+    "لدي ___ في عائلتي"
+   ],
+   "quiz": {
+    "prompt": "أحب أن ___ مع عائلتي",
+    "answer": "ألعب"
+   }
+  },
+  {
+   "id": "ar-2-07",
+   "stage": 2,
+   "pattern": "هل يمكنني ___؟",
+   "meaningKo": "허락 구하기",
+   "meaningEn": "Asking for permission",
+   "examples": [
+    {
+     "text": "هل يمكنني الجلوس؟",
+     "ko": "앉아도 될까요?",
+     "en": "Can I sit down?"
+    },
+    {
+     "text": "هل يمكنني استخدام الحمام؟",
+     "ko": "화장실 써도 될까요?",
+     "en": "Can I use the bathroom?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "허락 표현",
+     "noteKo": "___에 하고 싶은 행동을 넣어요",
+     "nameEn": "Permission",
+     "noteEn": "___ is the action you want permission for"
+    }
+   ],
+   "related": [
+    "هل تستطيع أن تساعدني في ___؟"
+   ],
+   "quiz": {
+    "prompt": "هل يمكنني ___؟",
+    "answer": "الدخول"
+   }
+  },
+  {
+   "id": "ar-2-08",
+   "stage": 2,
+   "pattern": "أشعر بـ ___",
+   "meaningKo": "증상 말하기",
+   "meaningEn": "Describing a symptom",
+   "examples": [
+    {
+     "text": "أشعر بـ صداع",
+     "ko": "두통이 있어요",
+     "en": "I have a headache"
+    },
+    {
+     "text": "أشعر بـ ألم في الحلق",
+     "ko": "목이 아파요",
+     "en": "I have a sore throat"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "상태 표현",
+     "noteKo": "___에 느끼는 증상이나 아픈 곳을 넣어요",
+     "nameEn": "State/Feeling",
+     "noteEn": "___ is the symptom"
+    }
+   ],
+   "related": [
+    "هل لديك دواء لـ ___؟"
+   ],
+   "quiz": {
+    "prompt": "أشعر بـ ___",
+    "answer": "دوار"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "ar-3-01",
+   "stage": 3,
+   "pattern": "في البداية، ___ ثم ___",
+   "meaningKo": "일어난 일을 순서대로 말하기",
+   "meaningEn": "Telling what happened in order",
+   "examples": [
+    {
+     "text": "في البداية، وصلنا إلى الفندق ثم ذهبنا إلى الشاطئ.",
+     "ko": "처음에 우리는 호텔에 도착했고, 그 다음 해변에 갔어요.",
+     "en": "First, we arrived at the hotel, then we went to the beach."
+    },
+    {
+     "text": "في البداية، فقدت حقيبتي ثم وجدتها في الاستقبال.",
+     "ko": "처음에 가방을 잃어버렸는데, 그 다음 리셉션에서 찾았어요.",
+     "en": "At first, I lost my bag, then I found it at reception."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "순서 연결",
+     "noteKo": "첫 번째와 두 번째 사건을 ___에 넣음",
+     "nameEn": "Sequencing",
+     "noteEn": "Describe events in order using the two blanks"
+    }
+   ],
+   "related": [
+    "بعد ذلك، ___",
+    "أخيراً، ___"
+   ],
+   "quiz": {
+    "prompt": "في البداية، ___ ثم ذهبنا إلى المتحف.",
+    "answer": "زرنا السوق"
+   }
+  },
+  {
+   "id": "ar-3-02",
+   "stage": 3,
+   "pattern": "هناك مشكلة في ___ وأحتاج أن يتم ___",
+   "meaningKo": "문제 설명하고 해결 요청하기",
+   "meaningEn": "Explaining a problem and asking for it to be fixed",
+   "examples": [
+    {
+     "text": "هناك مشكلة في المكيف وأحتاج أن يتم إصلاحه.",
+     "ko": "에어컨에 문제가 있어서 고쳐주셨으면 해요.",
+     "en": "There is a problem with the air conditioner and I need it to be fixed."
+    },
+    {
+     "text": "هناك مشكلة في الماء الساخن وأحتاج أن يتم تصليحه.",
+     "ko": "온수에 문제가 있어서 고쳐주시길 바랍니다.",
+     "en": "There's a problem with the hot water and I need it to be repaired."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제 설명",
+     "noteKo": "문제가 있는 대상을 첫 번째 ___에 넣음",
+     "nameEn": "Problem explanation",
+     "noteEn": "First blank is the thing with the problem"
+    },
+    {
+     "nameKo": "요청",
+     "noteKo": "필요한 조치를 두 번째 ___에 넣음",
+     "nameEn": "Request",
+     "noteEn": "Second blank is the action you want done"
+    }
+   ],
+   "related": [
+    "أحتاج إلى شخص لإصلاح ___",
+    "المشكلة في ___"
+   ],
+   "quiz": {
+    "prompt": "هناك مشكلة في الغسالة وأحتاج أن يتم ___.",
+    "answer": "تصليحها"
+   }
+  },
+  {
+   "id": "ar-3-03",
+   "stage": 3,
+   "pattern": "برأيي، ___ لأن ___، ماذا تعتقد؟",
+   "meaningKo": "의견과 이유를 말하고 상대방 의견 묻기",
+   "meaningEn": "Giving your opinion with a reason and asking for others'",
+   "examples": [
+    {
+     "text": "برأيي، السكن هنا أفضل لأن المكان هادئ، ماذا تعتقد؟",
+     "ko": "제 생각에 여기가 더 좋아요. 왜냐하면 조용하거든요. 당신 생각은요?",
+     "en": "In my opinion, living here is better because it's quiet. What do you think?"
+    },
+    {
+     "text": "برأيي، مشاهدة المسلسل ممتعة لأن القصة مشوقة، ماذا تعتقد؟",
+     "ko": "제 생각에 이 드라마는 재미있어요. 이야기가 흥미로워서요. 당신 생각은요?",
+     "en": "I think watching the series is fun because the story is interesting. What do you think?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시",
+     "noteKo": "본인 의견을 첫 번째 ___에 넣음",
+     "nameEn": "Stating an opinion",
+     "noteEn": "First blank is your opinion"
+    },
+    {
+     "nameKo": "이유 설명",
+     "noteKo": "이유를 두 번째 ___에 넣음",
+     "nameEn": "Giving a reason",
+     "noteEn": "Second blank is your reason"
+    }
+   ],
+   "related": [
+    "أنا أعتقد أن ___",
+    "بالنسبة لي، ___"
+   ],
+   "quiz": {
+    "prompt": "برأيي، الطعام هنا لذيذ لأن ___، ماذا تعتقد؟",
+    "answer": "المكونات طازجة"
+   }
+  },
+  {
+   "id": "ar-3-04",
+   "stage": 3,
+   "pattern": "أيهما تفضل، ___ أم ___؟ ولماذا؟",
+   "meaningKo": "두 가지 중에 비교하고 선호도 말하기",
+   "meaningEn": "Comparing two options and saying which you prefer",
+   "examples": [
+    {
+     "text": "أيهما تفضل، الشقة الكبيرة أم الشقة القريبة من العمل؟ ولماذا؟",
+     "ko": "넓은 집과 직장 가까운 집 중에 무엇을 선호하세요? 그리고 그 이유는?",
+     "en": "Which do you prefer, the large apartment or the one close to work? And why?"
+    },
+    {
+     "text": "أيهما تفضل، مشاهدة الفيلم في السينما أم في البيت؟ ولماذا؟",
+     "ko": "영화를 극장에서 보는 것과 집에서 보는 것 중에 어떤 게 좋아요? 이유는요?",
+     "en": "Which do you prefer, watching a movie at the cinema or at home? And why?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "선택 비교",
+     "noteKo": "비교할 두 대상을 ___에 넣음",
+     "nameEn": "Comparing options",
+     "noteEn": "Blanks are for the two things being compared"
+    }
+   ],
+   "related": [
+    "أفضل ___ على ___",
+    "بالنسبة لي، ___ أفضل من ___"
+   ],
+   "quiz": {
+    "prompt": "أيهما تفضل، الشاي أم ___؟ ولماذا؟",
+    "answer": "القهوة"
+   }
+  },
+  {
+   "id": "ar-3-05",
+   "stage": 3,
+   "pattern": "قرأت أن ___ وهذا جعلني ___",
+   "meaningKo": "뉴스나 정보를 듣고 느낀 점 말하기",
+   "meaningEn": "Reacting to news or information",
+   "examples": [
+    {
+     "text": "قرأت أن المسلسل حصل على جائزة وهذا جعلني متحمسًا.",
+     "ko": "그 드라마가 상을 받았다는 소식을 듣고 신이 났어요.",
+     "en": "I read that the series won an award and that made me excited."
+    },
+    {
+     "text": "قرأت أن الإيجارات سترتفع وهذا جعلني قلقًا.",
+     "ko": "임대료가 오른다는 소식을 듣고 걱정됐어요.",
+     "en": "I read that rents will increase and that made me worried."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정보 전달",
+     "noteKo": "뉴스나 사실을 첫 번째 ___에 넣음",
+     "nameEn": "Reporting information",
+     "noteEn": "First blank is the news or information"
+    },
+    {
+     "nameKo": "감정 표현",
+     "noteKo": "느낀 감정을 두 번째 ___에 넣음",
+     "nameEn": "Expressing reaction",
+     "noteEn": "Second blank is your reaction"
+    }
+   ],
+   "related": [
+    "سمعت أن ___",
+    "قالوا إن ___"
+   ],
+   "quiz": {
+    "prompt": "قرأت أن الطقس سيكون ممطرًا وهذا جعلني ___.",
+    "answer": "سعيدًا"
+   }
+  },
+  {
+   "id": "ar-3-06",
+   "stage": 3,
+   "pattern": "بعد أن ___، قررت أن ___",
+   "meaningKo": "경험 후 결정을 말하기",
+   "meaningEn": "Telling what you decided after something happened",
+   "examples": [
+    {
+     "text": "بعد أن رأيت الشقة، قررت أن أستأجرها.",
+     "ko": "집을 보고 나서 계약하기로 결정했어요.",
+     "en": "After I saw the apartment, I decided to rent it."
+    },
+    {
+     "text": "بعد أن شاهدت الحلقة الأولى، قررت أن أشاهد المسلسل كله.",
+     "ko": "첫 화를 보고 드라마를 다 보기로 했어요.",
+     "en": "After I watched the first episode, I decided to watch the whole series."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 경험",
+     "noteKo": "경험한 일을 첫 번째 ___에 넣음",
+     "nameEn": "Past experience",
+     "noteEn": "First blank is the thing that happened"
+    },
+    {
+     "nameKo": "결정",
+     "noteKo": "내린 결정을 두 번째 ___에 넣음",
+     "nameEn": "Decision",
+     "noteEn": "Second blank is your decision"
+    }
+   ],
+   "related": [
+    "لما ___، فكرت في ___",
+    "عندما ___، شعرت أن ___"
+   ],
+   "quiz": {
+    "prompt": "بعد أن جربت المطعم، قررت أن ___.",
+    "answer": "أعود مرة أخرى"
+   }
+  },
+  {
+   "id": "ar-3-07",
+   "stage": 3,
+   "pattern": "سبب المشكلة هو ___ ولهذا يجب ___",
+   "meaningKo": "문제 원인과 해결책 제시",
+   "meaningEn": "Explaining the cause of a problem and suggesting a solution",
+   "examples": [
+    {
+     "text": "سبب المشكلة هو تسرب الماء ولهذا يجب إصلاح الأنابيب.",
+     "ko": "문제의 원인은 물이 새는 것이고, 그래서 배관을 고쳐야 해요.",
+     "en": "The cause of the problem is water leakage, so the pipes should be fixed."
+    },
+    {
+     "text": "سبب المشكلة هو الضجيج ولهذا يجب إغلاق النوافذ.",
+     "ko": "문제의 원인은 소음이고, 그래서 창문을 닫아야 해요.",
+     "en": "The problem is caused by noise, so the windows should be closed."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "원인 설명",
+     "noteKo": "문제의 원인을 첫 번째 ___에 넣음",
+     "nameEn": "Explaining cause",
+     "noteEn": "First blank is the cause"
+    },
+    {
+     "nameKo": "해결책 제안",
+     "noteKo": "해결 방법을 두 번째 ___에 넣음",
+     "nameEn": "Suggesting solution",
+     "noteEn": "Second blank is the solution"
+    }
+   ],
+   "related": [
+    "المشكلة بسبب ___",
+    "الحل هو ___"
+   ],
+   "quiz": {
+    "prompt": "سبب المشكلة هو انقطاع الكهرباء ولهذا يجب ___.",
+    "answer": "الاتصال بالشركة"
+   }
+  },
+  {
+   "id": "ar-3-08",
+   "stage": 3,
+   "pattern": "ما رأيك في ___؟ ولماذا؟",
+   "meaningKo": "상대방 의견 묻기",
+   "meaningEn": "Asking for someone’s opinion and the reason",
+   "examples": [
+    {
+     "text": "ما رأيك في الشقة الجديدة؟ ولماذا؟",
+     "ko": "새 집에 대해 어떻게 생각해요? 이유는요?",
+     "en": "What do you think about the new apartment? And why?"
+    },
+    {
+     "text": "ما رأيك في المسلسل الجديد؟ ولماذا؟",
+     "ko": "새 드라마에 대해 어떻게 생각해요? 이유는요?",
+     "en": "What do you think about the new series? And why?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 요청",
+     "noteKo": "의견을 물어보고 싶은 대상을 ___에 넣음",
+     "nameEn": "Requesting opinion",
+     "noteEn": "Blank is the thing you ask about"
+    }
+   ],
+   "related": [
+    "هل أعجبك ___؟",
+    "كيف وجدت ___؟"
+   ],
+   "quiz": {
+    "prompt": "ما رأيك في هذا ___؟ ولماذا؟",
+    "answer": "المطعم"
+   }
+  },
+  {
+   "id": "ar-3-09",
+   "stage": 3,
+   "pattern": "سمعت أن ___، هل هذا صحيح؟",
+   "meaningKo": "정보를 확인하기",
+   "meaningEn": "Confirming information you heard",
+   "examples": [
+    {
+     "text": "سمعت أن هناك عرض خاص، هل هذا صحيح؟",
+     "ko": "특별 할인 있다고 들었는데, 맞나요?",
+     "en": "I heard there is a special offer. Is that true?"
+    },
+    {
+     "text": "سمعت أن الإيجار سيرتفع، هل هذا صحيح؟",
+     "ko": "임대료가 오른다고 들었는데, 맞아요?",
+     "en": "I heard the rent will go up. Is that true?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정보 확인",
+     "noteKo": "들은 내용을 ___에 넣음",
+     "nameEn": "Confirming information",
+     "noteEn": "Blank is the information you heard"
+    }
+   ],
+   "related": [
+    "هل صحيح أن ___؟",
+    "قالوا إن ___، هل هذا صحيح؟"
+   ],
+   "quiz": {
+    "prompt": "سمعت أن هناك مشكلة في ___، هل هذا صحيح؟",
+    "answer": "المكيف"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "ar-4-01",
+   "stage": 4,
+   "pattern": "من وجهة نظري، ___ ولكن يمكننا أيضًا النظر في ___",
+   "meaningKo": "자신의 의견을 제시하고 대안을 제시함",
+   "meaningEn": "Presenting your view and suggesting an alternative",
+   "examples": [
+    {
+     "text": "من وجهة نظري، العمل عن بُعد مفيد ولكن يمكننا أيضًا النظر في تحديد أيام للعمل من المكتب",
+     "ko": "제 생각엔 재택근무가 유익하지만, 사무실 출근일을 정하는 것도 고려할 수 있습니다.",
+     "en": "In my opinion, remote work is helpful, but we can also consider setting office days."
+    },
+    {
+     "text": "من وجهة نظري، السعر مرتفع ولكن يمكننا أيضًا النظر في تمديد العقد لفترة أطول",
+     "ko": "제 생각엔 가격이 비싸지만, 계약 기간을 늘리는 것도 고려할 수 있습니다.",
+     "en": "In my opinion, the price is high, but we can also consider extending the contract."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시",
+     "noteKo": "첫 번째 빈칸에 자신의 입장을 넣음",
+     "nameEn": "Stating an opinion",
+     "noteEn": "First slot is for your standpoint"
+    },
+    {
+     "nameKo": "대안 제시",
+     "noteKo": "두 번째 빈칸에 대안을 넣음",
+     "nameEn": "Suggesting an alternative",
+     "noteEn": "Second slot is for an alternative"
+    }
+   ],
+   "related": [
+    "أنا أعتقد أن ___ ولكن ___",
+    "ممكن أن ___ أو ___"
+   ],
+   "quiz": {
+    "prompt": "من وجهة نظري، ___ ولكن يمكننا أيضًا النظر في تقليل التكاليف",
+    "answer": "تأجيل المشروع"
+   }
+  },
+  {
+   "id": "ar-4-02",
+   "stage": 4,
+   "pattern": "أقترح أن ___ حتى نستطيع ___",
+   "meaningKo": "회의에서 제안하고 목적을 설명함",
+   "meaningEn": "Making a suggestion and stating its purpose in a meeting",
+   "examples": [
+    {
+     "text": "أقترح أن نبدأ الاجتماع مبكرًا حتى نستطيع إنهاء المهام في الوقت المحدد",
+     "ko": "회의를 일찍 시작하자는 제안입니다. 그래야 일을 제시간에 끝낼 수 있습니다.",
+     "en": "I suggest we start the meeting early so we can finish tasks on time."
+    },
+    {
+     "text": "أقترح أن نراجع العقد حتى نستطيع تجنب المشاكل لاحقًا",
+     "ko": "계약을 검토하자고 제안합니다. 문제를 예방할 수 있습니다.",
+     "en": "I suggest we review the contract so we can avoid problems later."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "제안",
+     "noteKo": "첫 번째 빈칸에 제안을 넣음",
+     "nameEn": "Suggestion",
+     "noteEn": "First slot is for the suggestion"
+    },
+    {
+     "nameKo": "목적",
+     "noteKo": "두 번째 빈칸에 목적을 넣음",
+     "nameEn": "Purpose",
+     "noteEn": "Second slot is for the purpose"
+    }
+   ],
+   "related": [
+    "من الأفضل أن ___ لكي ___",
+    "يمكننا أن ___ إذا ___"
+   ],
+   "quiz": {
+    "prompt": "أقترح أن نحدد موعدًا جديدًا حتى نستطيع ___",
+    "answer": "إكمال المشروع"
+   }
+  },
+  {
+   "id": "ar-4-03",
+   "stage": 4,
+   "pattern": "مع احترامي، أرى أن ___ لأن ___",
+   "meaningKo": "공손하게 반대 의견을 밝힘",
+   "meaningEn": "Politely expressing a differing opinion",
+   "examples": [
+    {
+     "text": "مع احترامي، أرى أن رفع الإيجار ليس مناسبًا لأن السوق تغير",
+     "ko": "존경을 표하며 임대료 인상에 반대합니다. 시장이 변했기 때문입니다.",
+     "en": "With respect, I believe raising the rent isn't appropriate because the market has changed."
+    },
+    {
+     "text": "مع احترامي، أرى أن التأخير غير مقبول لأننا اتفقنا على موعد محدد",
+     "ko": "존경을 표하며 지연은 받아들일 수 없다고 봅니다. 정해진 날짜에 합의했으니까요.",
+     "en": "With respect, I see the delay as unacceptable because we agreed on a set date."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 반박",
+     "noteKo": "첫 번째 빈칸에 자신의 의견을 넣음",
+     "nameEn": "Polite disagreement",
+     "noteEn": "First slot is for your opinion"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 빈칸에 이유를 넣음",
+     "nameEn": "Reason",
+     "noteEn": "Second slot is for the reason"
+    }
+   ],
+   "related": [
+    "أفهم وجهة نظرك لكن ___ لأن ___"
+   ],
+   "quiz": {
+    "prompt": "مع احترامي، أرى أن ___ لأن الميزانية محدودة",
+    "answer": "شراء أجهزة جديدة"
+   }
+  },
+  {
+   "id": "ar-4-04",
+   "stage": 4,
+   "pattern": "من الإيجابيات ___ ومن السلبيات ___",
+   "meaningKo": "결정의 장단점을 설명함",
+   "meaningEn": "Explaining the pros and cons of a decision",
+   "examples": [
+    {
+     "text": "من الإيجابيات الراحة في العمل عن بُعد ومن السلبيات ضعف التواصل",
+     "ko": "재택근무의 장점은 편리함이고, 단점은 소통이 약해진다는 점입니다.",
+     "en": "One advantage of remote work is comfort, but a disadvantage is weaker communication."
+    },
+    {
+     "text": "من الإيجابيات قرب المكان ومن السلبيات ارتفاع الإيجار",
+     "ko": "장점은 위치가 가깝다는 것이고, 단점은 임대료가 높다는 것입니다.",
+     "en": "A positive is the location's nearness, but a negative is the high rent."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장점",
+     "noteKo": "첫 번째 빈칸에 장점을 넣음",
+     "nameEn": "Advantage",
+     "noteEn": "First slot is for the pro"
+    },
+    {
+     "nameKo": "단점",
+     "noteKo": "두 번째 빈칸에 단점을 넣음",
+     "nameEn": "Disadvantage",
+     "noteEn": "Second slot is for the con"
+    }
+   ],
+   "related": [
+    "من ناحية ___ ومن ناحية أخرى ___",
+    "هناك ميزة في ___ ولكن ___"
+   ],
+   "quiz": {
+    "prompt": "من الإيجابيات ___ ومن السلبيات تعقيد الإجراءات",
+    "answer": "المرونة في الجدول"
+   }
+  },
+  {
+   "id": "ar-4-05",
+   "stage": 4,
+   "pattern": "ما فهمته من ___ هو أن ___",
+   "meaningKo": "팟캐스트나 토론에서 요점을 파악해 말함",
+   "meaningEn": "Summing up a key point from a podcast or discussion",
+   "examples": [
+    {
+     "text": "ما فهمته من الحلقة هو أن العمل الجماعي ضروري",
+     "ko": "에피소드에서 이해한 것은 팀워크가 필요하다는 것입니다.",
+     "en": "What I understood from the episode is that teamwork is essential."
+    },
+    {
+     "text": "ما فهمته من النقاش هو أن الجميع يفضل المرونة",
+     "ko": "토론에서 이해한 것은 모두가 유연함을 선호한다는 점입니다.",
+     "en": "What I got from the discussion is that everyone prefers flexibility."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출처 명시",
+     "noteKo": "첫 번째 빈칸에 출처(토론, 팟캐스트 등)를 넣음",
+     "nameEn": "Source reference",
+     "noteEn": "First slot is for the source"
+    },
+    {
+     "nameKo": "핵심 요점",
+     "noteKo": "두 번째 빈칸에 요점을 넣음",
+     "nameEn": "Key point",
+     "noteEn": "Second slot is for the key point"
+    }
+   ],
+   "related": [
+    "استنتجت من ___ أن ___"
+   ],
+   "quiz": {
+    "prompt": "ما فهمته من حديث المدير هو أن ___",
+    "answer": "المشروع سيتأخر"
+   }
+  },
+  {
+   "id": "ar-4-06",
+   "stage": 4,
+   "pattern": "أفهم وجهة نظرك، لكن ___",
+   "meaningKo": "상대방 의견을 존중하며 반론하기",
+   "meaningEn": "Respectfully disagreeing and presenting your own point",
+   "examples": [
+    {
+     "text": "أفهم وجهة نظرك، لكن أعتقد أن العمل من المنزل يزيد الإنتاجية.",
+     "ko": "당신 의견은 이해하지만, 재택근무가 생산성을 높인다고 생각해요.",
+     "en": "I understand your point of view, but I think working from home increases productivity."
+    },
+    {
+     "text": "أفهم وجهة نظرك، لكننا بحاجة إلى مزيد من الوقت لإنهاء المشروع.",
+     "ko": "당신 의견은 이해하지만, 우리는 프로젝트를 끝내려면 시간이 더 필요해요.",
+     "en": "I understand your point of view, but we need more time to finish the project."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속사 لكن 이후 명제",
+     "noteKo": "___ 칸에 자신의 반론이나 추가 의견을 넣음",
+     "nameEn": "but + statement",
+     "noteEn": "Fill ___ with your counter-argument or additional opinion"
+    }
+   ],
+   "related": [
+    "أحترم رأيك، ولكن ___"
+   ],
+   "quiz": {
+    "prompt": "أفهم وجهة نظرك، لكن ___",
+    "answer": "نحتاج إلى حل وسط"
+   }
+  },
+  {
+   "id": "ar-4-07",
+   "stage": 4,
+   "pattern": "مع احترامي لرأيك، أعتقد أن ___",
+   "meaningKo": "공손하게 반대 의견 제시하기",
+   "meaningEn": "Politely presenting a counterpoint",
+   "examples": [
+    {
+     "text": "مع احترامي لرأيك، أعتقد أن العمل من المنزل أكثر فعالية.",
+     "ko": "당신 의견을 존중하지만, 재택근무가 더 효율적이라고 생각해요.",
+     "en": "With all due respect, I think working from home is more effective."
+    },
+    {
+     "text": "مع احترامي لرأيك، أعتقد أن المشروع يحتاج مزيداً من الوقت.",
+     "ko": "당신 의견을 존중하지만, 프로젝트가 더 많은 시간이 필요하다고 생각해요.",
+     "en": "With all due respect, I think the project needs more time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시 표현",
+     "noteKo": "___에는 자신의 생각이나 주장 사용",
+     "nameEn": "Counterpoint phrase",
+     "noteEn": "Use your opinion or argument in ___"
+    }
+   ],
+   "related": [
+    "أفهم وجهة نظرك، ولكن ___"
+   ],
+   "quiz": {
+    "prompt": "مع احترامي لرأيك، أعتقد أن ___",
+    "answer": "المشروع يحتاج مزيداً من الوقت"
+   }
+  },
+  {
+   "id": "ar-4-08",
+   "stage": 4,
+   "pattern": "أفهم ما تقول، لكن ___",
+   "meaningKo": "상대방 의견을 인정하며 반박하기",
+   "meaningEn": "Acknowledging and countering an objection",
+   "examples": [
+    {
+     "text": "أفهم ما تقول، لكن الميزانية محدودة هذا الشهر.",
+     "ko": "말씀하신 점 이해하지만, 이번 달 예산이 제한되어 있습니다.",
+     "en": "I understand what you're saying, but the budget is limited this month."
+    },
+    {
+     "text": "أفهم ما تقول، لكننا بحاجة لموافقة المدير أولاً.",
+     "ko": "말씀하신 점 이해하지만, 먼저 관리자 승인이 필요합니다.",
+     "en": "I understand what you're saying, but we need the manager's approval first."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 인정 후 반박",
+     "noteKo": "___에 자신의 주장이나 이유 사용",
+     "nameEn": "Concession and rebuttal",
+     "noteEn": "Put your reason or counterpoint in ___"
+    }
+   ],
+   "related": [
+    "مع احترامي لرأيك، أعتقد أن ___"
+   ],
+   "quiz": {
+    "prompt": "أفهم ما تقول، لكن ___",
+    "answer": "الميزانية محدودة هذا الشهر"
+   }
+  },
+  {
+   "id": "ar-4-09",
+   "stage": 4,
+   "pattern": "هل يمكن أن توضح ___ بمزيد من التفاصيل؟",
+   "meaningKo": "상대방 의견에 대해 자세한 설명 요청하기",
+   "meaningEn": "Requesting more details about an opinion",
+   "examples": [
+    {
+     "text": "هل يمكن أن توضح اقتراحك بمزيد من التفاصيل؟",
+     "ko": "당신의 제안을 좀 더 자세히 설명해 주시겠어요?",
+     "en": "Could you explain your proposal in more detail?"
+    },
+    {
+     "text": "هل يمكن أن توضح لماذا تظن أن هذا القرار مناسب بمزيد من التفاصيل؟",
+     "ko": "왜 그 결정이 적합하다고 생각하는지 좀 더 자세히 설명해 주시겠어요?",
+     "en": "Could you clarify why you think this decision is suitable in more detail?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "___에 설명이 필요한 대상 또는 의견 사용",
+     "nameEn": "Polite request",
+     "noteEn": "___ is what you want explained"
+    }
+   ],
+   "related": [
+    "هل يمكنك أن تشرح ___؟"
+   ],
+   "quiz": {
+    "prompt": "هل يمكن أن توضح ___ بمزيد من التفاصيل؟",
+    "answer": "اقتراحك"
+   }
+  },
+  {
+   "id": "ar-4-10",
+   "stage": 4,
+   "pattern": "ألاحظ أن ___، هل تتفق معي؟",
+   "meaningKo": "자신의 관찰을 말하고 동의 구하기",
+   "meaningEn": "Sharing an observation and seeking agreement",
+   "examples": [
+    {
+     "text": "ألاحظ أن الاجتماعات تطول أحياناً، هل تتفق معي؟",
+     "ko": "회의가 가끔 길어지는 것 같아요. 동의하시나요?",
+     "en": "I notice that meetings sometimes run long. Do you agree with me?"
+    },
+    {
+     "text": "ألاحظ أن الأسعار ارتفعت مؤخراً، هل تتفق معي؟",
+     "ko": "최근에 가격이 오른 것 같아요. 동의하시나요?",
+     "en": "I notice that prices have risen recently. Do you agree with me?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관찰과 동의 구하기",
+     "noteKo": "___에 관찰한 사실이나 현상 사용",
+     "nameEn": "Observation and agreement",
+     "noteEn": "Put your observation in ___"
+    }
+   ],
+   "related": [
+    "هل لاحظت أن ___؟"
+   ],
+   "quiz": {
+    "prompt": "ألاحظ أن ___، هل تتفق معي؟",
+    "answer": "الاجتماعات تطول أحياناً"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "ar-5-01",
+   "stage": 5,
+   "pattern": "يقول المثل: ___، وهذا ينطبق على ___",
+   "meaningKo": "적절한 순간에 속담 사용하기",
+   "meaningEn": "Using a proverb at the right moment",
+   "examples": [
+    {
+     "text": "يقول المثل: من جد وجد، وهذا ينطبق على عملك الدؤوب.",
+     "ko": "\"노력하는 자에게 복이 온다\"라는 속담이 있는데, 네 성실함에 딱 맞는 말이야.",
+     "en": "\"He who strives, finds,\" as the proverb says, and this applies to your diligence."
+    },
+    {
+     "text": "يقول المثل: الصبر مفتاح الفرج، وهذا ينطبق على وضعنا الحالي.",
+     "ko": "\"참을 인이 세 번이면 살인도 면한다\"는 속담이 있는데, 지금 우리의 상황에 딱 맞아요.",
+     "en": "\"Patience is the key to relief,\" as the proverb says, and this fits our current situation."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "속담 인용",
+     "noteKo": "___에 속담을 넣음",
+     "nameEn": "Proverb citation",
+     "noteEn": "___ is the proverb"
+    }
+   ],
+   "related": [
+    "أحنا بنقول دايمًا ___ وهذا يبين ___"
+   ],
+   "quiz": {
+    "prompt": "يقول المثل: ___، وهذا ينطبق على فريقنا.",
+    "answer": "الاتحاد قوة"
+   }
+  },
+  {
+   "id": "ar-5-02",
+   "stage": 5,
+   "pattern": "في هذه المناسبة السعيدة، أود أن أقول لـ___: ___",
+   "meaningKo": "공식 자리에서 축사나 작별 인사를 건네기",
+   "meaningEn": "Giving a formal toast or farewell speech",
+   "examples": [
+    {
+     "text": "في هذه المناسبة السعيدة، أود أن أقول لـصديقي العزيز: أتمنى لك النجاح الدائم.",
+     "ko": "이 즐거운 자리에서 친애하는 친구에게 항상 성공하길 바란다고 전하고 싶어요.",
+     "en": "On this happy occasion, I want to say to my dear friend: I wish you constant success."
+    },
+    {
+     "text": "في هذه المناسبة السعيدة، أود أن أقول لـزملائي: أنتم دعمتموني كثيراً.",
+     "ko": "이 자리를 빌려 동료들에게 많은 응원을 받았다고 말하고 싶어요.",
+     "en": "On this happy occasion, I want to say to my colleagues: You have supported me a lot."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "인칭 대명사 목적격",
+     "noteKo": "첫 번째 빈칸에 인물이나 그룹의 이름 또는 호칭이 옵니다.",
+     "nameEn": "Direct address",
+     "noteEn": "First slot is for the person or group addressed."
+    }
+   ],
+   "related": [
+    "أتمنى لـ___ كل التوفيق في ___",
+    "بمناسبة ___، أود أن أشكر ___"
+   ],
+   "quiz": {
+    "prompt": "في هذه المناسبة السعيدة، أود أن أقول لـ___: شكراً لدعمك.",
+    "answer": "مديري"
+   }
+  },
+  {
+   "id": "ar-5-03",
+   "stage": 5,
+   "pattern": "أعبر عن تعازيَّ لـ___ وأتمنى لـ___ الصبر والسلوان",
+   "meaningKo": "애도를 정중하게 전달하기",
+   "meaningEn": "Offering condolences in a formal way",
+   "examples": [
+    {
+     "text": "أعبر عن تعازيَّ لـعائلة الفقيد وأتمنى لـأبنائه الصبر والسلوان",
+     "ko": "유가족께 애도를 표하며 자녀들에게 인내와 위로를 빕니다.",
+     "en": "I offer my condolences to the family of the deceased and wish patience and solace to his children."
+    },
+    {
+     "text": "أعبر عن تعازيَّ لـصديقي وأتمنى لـعائلته الصبر والسلوان",
+     "ko": "친구에게 애도를 전하며 가족에게 인내를 빕니다.",
+     "en": "I offer my condolences to my friend and wish patience for his family."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접 목적어, 직접 목적어",
+     "noteKo": "첫 번째 빈칸에는 애도를 전하는 대상, 두 번째에는 인내를 빌어주는 대상이 옵니다.",
+     "nameEn": "Dative and Accusative",
+     "noteEn": "First slot: person you express condolences to; Second: person/family you wish patience for."
+    }
+   ],
+   "related": [
+    "تعازيّ الحارة لـ___ وأدعو الله أن يرحم ___"
+   ],
+   "quiz": {
+    "prompt": "أعبر عن تعازيَّ لـ___ وأتمنى لـأسرته الصبر والسلوان",
+    "answer": "صديقي"
+   }
+  },
+  {
+   "id": "ar-5-04",
+   "stage": 5,
+   "pattern": "إذا نظرنا إلى ___ نجد أن ___",
+   "meaningKo": "추상적 주제(정체성, 가치관 등)를 분석적으로 논의하기",
+   "meaningEn": "Discussing abstract topics analytically",
+   "examples": [
+    {
+     "text": "إذا نظرنا إلى الهوية نجد أن لها أبعاداً متعددة.",
+     "ko": "정체성을 살펴보면 여러 측면이 있다는 걸 알 수 있어요.",
+     "en": "If we look at identity, we find it has many dimensions."
+    },
+    {
+     "text": "إذا نظرنا إلى التغيير نجد أن الناس يختلفون في تقبله.",
+     "ko": "변화를 보면 사람들이 받아들이는 방식이 다르다는 걸 알 수 있어요.",
+     "en": "If we look at change, we find people differ in accepting it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "분석적 서술",
+     "noteKo": "첫 번째 빈칸에 추상적 주제, 두 번째에는 발견한 사실이나 결론이 옵니다.",
+     "nameEn": "Analytical clause",
+     "noteEn": "First slot: abstract topic; second: observed conclusion."
+    }
+   ],
+   "related": [
+    "عند مناقشة ___ نلاحظ أن ___"
+   ],
+   "quiz": {
+    "prompt": "إذا نظرنا إلى القيم نجد أن ___",
+    "answer": "لكل مجتمع أولوياته"
+   }
+  },
+  {
+   "id": "ar-5-05",
+   "stage": 5,
+   "pattern": "أحترم رأيك، لكن من وجهة نظري ___",
+   "meaningKo": "상대방의 체면을 지키며 반대 의견 제시",
+   "meaningEn": "Disagreeing tactfully",
+   "examples": [
+    {
+     "text": "أحترم رأيك، لكن من وجهة نظري التغيير ضروري في هذه المرحلة.",
+     "ko": "당신의 의견을 존중하지만, 제 생각엔 이 단계에선 변화가 필요합니다.",
+     "en": "I respect your opinion, but in my view, change is necessary at this stage."
+    },
+    {
+     "text": "أحترم رأيك، لكن من وجهة نظري يمكننا تجربة طريقة مختلفة.",
+     "ko": "당신의 의견을 존중하지만, 제 생각엔 다른 방법을 시도해볼 수 있을 것 같아요.",
+     "en": "I respect your opinion, but in my view, we can try a different approach."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 반대",
+     "noteKo": "___에 자신의 의견 제시",
+     "nameEn": "Tactful disagreement",
+     "noteEn": "___ is the speaker's view"
+    }
+   ],
+   "related": [
+    "مع كامل احترامي ___ أرى أن ___"
+   ],
+   "quiz": {
+    "prompt": "أحترم رأيك، لكن من وجهة نظري ___",
+    "answer": "الأولوية للتعليم"
+   }
+  },
+  {
+   "id": "ar-5-06",
+   "stage": 5,
+   "pattern": "أتقدم إليكم بأحر التعازي في وفاة ___",
+   "meaningKo": "애도의 공식 표현 사용하기",
+   "meaningEn": "Offering condolences formally",
+   "examples": [
+    {
+     "text": "أتقدم إليكم بأحر التعازي في وفاة والدكم.",
+     "ko": "아버님의 별세에 깊은 애도를 표합니다.",
+     "en": "I extend my deepest condolences on the passing of your father."
+    },
+    {
+     "text": "أتقدم إليكم بأحر التعازي في وفاة صديقكم العزيز.",
+     "ko": "친애하는 친구분의 별세에 깊은 애도를 표합니다.",
+     "en": "I extend my heartfelt condolences on the loss of your dear friend."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공식적 애도 표현",
+     "noteKo": "___에 고인을 넣음",
+     "nameEn": "Formal condolence phrase",
+     "noteEn": "___ is the person who passed away"
+    }
+   ],
+   "related": [
+    "أدعو الله أن يرحم ___ ويصبركم"
+   ],
+   "quiz": {
+    "prompt": "أتقدم إليكم بأحر التعازي في وفاة ___",
+    "answer": "والدتكم"
+   }
+  },
+  {
+   "id": "ar-5-07",
+   "stage": 5,
+   "pattern": "يعني لو قلت لك ___، رح تفهم قصدي؟",
+   "meaningKo": "힌트나 농담을 이해하는지 확인하기",
+   "meaningEn": "Checking if someone gets a hint or joke",
+   "examples": [
+    {
+     "text": "يعني لو قلت لك السمك بيعرف يطير، رح تفهم قصدي؟",
+     "ko": "내가 '물고기가 날 수 있다'고 하면, 내 말 뜻 알겠지?",
+     "en": "If I said 'fish can fly,' would you get my point?"
+    },
+    {
+     "text": "يعني لو قلت لك الجو حر اليوم، رح تفهم قصدي؟",
+     "ko": "내가 '오늘 날씨 덥다'고 하면, 무슨 뜻인지 알겠어?",
+     "en": "If I told you the weather is hot today, would you get what I mean?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "힌트/은유적 표현",
+     "noteKo": "___에 힌트나 농담 표현",
+     "nameEn": "Hint/metaphor phrase",
+     "noteEn": "___ is the hint or joke"
+    }
+   ],
+   "related": [
+    "لو قلت لك ___ بتعرف عن شو بحكي؟"
+   ],
+   "quiz": {
+    "prompt": "يعني لو قلت لك ___، رح تفهم قصدي؟",
+    "answer": "الحمار صار مدير"
+   }
+  },
+  {
+   "id": "ar-5-08",
+   "stage": 5,
+   "pattern": "زي ما يقولوا ___، وإحنا اليوم نعيش هذا المعنى",
+   "meaningKo": "적절한 순간에 관용구 사용하기",
+   "meaningEn": "Using a set phrase appropriately",
+   "examples": [
+    {
+     "text": "زي ما يقولوا دوام الحال من المحال، وإحنا اليوم نعيش هذا المعنى.",
+     "ko": "'모든 것은 변한다'는 말처럼, 오늘 우리는 그 의미를 직접 겪고 있어요.",
+     "en": "As they say, 'nothing lasts forever,' and today we are living this meaning."
+    },
+    {
+     "text": "زي ما يقولوا اللي فات مات، وإحنا اليوم نعيش هذا المعنى.",
+     "ko": "'지난 일은 지난 일'이라는 말처럼, 오늘 우리는 그걸 체험하고 있습니다.",
+     "en": "As they say, 'let bygones be bygones,' and today we live this meaning."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구 인용",
+     "noteKo": "___에 관용구 또는 속담 입력",
+     "nameEn": "Set phrase citation",
+     "noteEn": "___ is the idiom or proverb"
+    }
+   ],
+   "related": [
+    "على قولة ___، وهذا بالضبط ما نشعر به"
+   ],
+   "quiz": {
+    "prompt": "زي ما يقولوا ___، وإحنا اليوم نعيش هذا المعنى",
+    "answer": "كل بداية لها نهاية"
+   }
+  },
+  {
+   "id": "ar-5-09",
+   "stage": 5,
+   "pattern": "بين الجد والهزل، أقول لك ___ بس لا تزعل",
+   "meaningKo": "친한 친구에게 농담하면서 분위기 조절하기",
+   "meaningEn": "Light teasing with friends, keeping it playful",
+   "examples": [
+    {
+     "text": "بين الجد والهزل، أقول لك إنك دايمًا تتأخر بس لا تزعل.",
+     "ko": "진심 반, 농담 반으로 말하는데, 너 항상 늦잖아. 기분 나빠하지 마.",
+     "en": "Half seriously, half joking, I tell you you're always late, but don't be upset."
+    },
+    {
+     "text": "بين الجد والهزل، أقول لك إنك مشغول طول الوقت بس لا تزعل.",
+     "ko": "농담이지만, 너 항상 바쁘잖아. 기분 상하지 마.",
+     "en": "Jokingly, I say you're busy all the time, but don't be upset."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "농담/진지함 혼합",
+     "noteKo": "___에 농담 또는 장난 표현",
+     "nameEn": "Joke/serious blend",
+     "noteEn": "___ is the playful tease or remark"
+    }
+   ],
+   "related": [
+    "من باب المزاح ___ بس ما تزعل"
+   ],
+   "quiz": {
+    "prompt": "بين الجد والهزل، أقول لك ___ بس لا تزعل",
+    "answer": "أنت ملك النوم"
+   }
+  },
+  {
+   "id": "ar-5-10",
+   "stage": 5,
+   "pattern": "من باب المزاح، أقول: ___ بس لا تأخذها على محمل الجد",
+   "meaningKo": "친한 사이에서 농담하며 분위기 누그러뜨리기",
+   "meaningEn": "Teasing or joking with friends, signaling it's not serious",
+   "examples": [
+    {
+     "text": "من باب المزاح، أقول: أنت دايمًا متأخر بس لا تأخذها على محمل الجد",
+     "ko": "농담이지만, 항상 늦는다고 말해도 진지하게 받아들이지 마세요.",
+     "en": "Just joking: you’re always late, but don’t take it seriously."
+    },
+    {
+     "text": "من باب المزاح، أقول: لو درست أكثر كنت صرت وزير بس لا تأخذها على محمل الجد",
+     "ko": "농담으로, 더 공부했으면 장관이 됐겠다고 해도 진지하게 받아들이지 마요.",
+     "en": "Just joking: if you studied more, you’d be a minister, but don’t take it seriously."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비공식 농담",
+     "noteKo": "빈칸에 농담이나 장난스러운 말이 들어갑니다.",
+     "nameEn": "Joking phrase",
+     "noteEn": "Slot is for the joke or tease."
+    }
+   ],
+   "related": [
+    "مازحاً أقول: ___"
+   ],
+   "quiz": {
+    "prompt": "من باب المزاح، أقول: ___ بس لا تأخذها على محمل الجد",
+    "answer": "أنت أفضل طباخ"
+   }
+  }
+ ]
+}

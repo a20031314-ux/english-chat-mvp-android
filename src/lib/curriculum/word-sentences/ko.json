@@ -1,0 +1,5672 @@
+{
+ "w|가다": [
+  {
+   "text": "지하철로 갈게.",
+   "en": "I'll take the subway.",
+   "ko": "지하철로 갈게.",
+   "blank": "갈게"
+  },
+  {
+   "text": "바다 보러 갈까?",
+   "en": "Want to go see the ocean?",
+   "ko": "바다 보러 갈까?",
+   "blank": "갈까"
+  }
+ ],
+ "w|가르치다": [
+  {
+   "text": "이 단계만 가르쳐 줘.",
+   "en": "Just teach me this step.",
+   "ko": "이 단계만 가르쳐 줘.",
+   "blank": "가르쳐"
+  },
+  {
+   "text": "조카한테 자전거 가르쳤어.",
+   "en": "I taught my nephew to ride a bike.",
+   "ko": "조카한테 자전거 가르쳤어.",
+   "blank": "가르쳤어"
+  }
+ ],
+ "w|가장": [
+  {
+   "text": "이게 가장 좋아요.",
+   "en": "I like this the most.",
+   "ko": "이게 가장 좋아요.",
+   "blank": "가장"
+  },
+  {
+   "text": "가장 가까운 역이 어디예요?",
+   "en": "Where is the nearest station?",
+   "ko": "가장 가까운 역이 어디예요?",
+   "blank": "가장"
+  }
+ ],
+ "w|가져가다": [
+  {
+   "text": "남은 피자 가져가.",
+   "en": "Take the leftover pizza.",
+   "ko": "남은 피자 가져가.",
+   "blank": "가져가"
+  },
+  {
+   "text": "도시락 누가 가져갔어.",
+   "en": "Someone took my lunchbox.",
+   "ko": "도시락 누가 가져갔어.",
+   "blank": "가져갔어"
+  }
+ ],
+ "w|가져오다": [
+  {
+   "text": "우산 가져왔어?",
+   "en": "Did you bring the umbrella?",
+   "ko": "우산 가져왔어?",
+   "blank": "가져왔어"
+  },
+  {
+   "text": "물 좀 가져와.",
+   "en": "Bring some water.",
+   "ko": "물 좀 가져와.",
+   "blank": "가져와"
+  }
+ ],
+ "w|가족": [
+  {
+   "text": "우리 가족 다 모였어.",
+   "en": "Our whole family got together.",
+   "ko": "우리 가족 다 모였어.",
+   "blank": "가족"
+  },
+  {
+   "text": "명절이라 가족이 다 와.",
+   "en": "The whole family's coming for the holiday.",
+   "ko": "명절이라 가족이 다 와.",
+   "blank": "가족이"
+  }
+ ],
+ "w|가지다": [
+  {
+   "text": "시간 좀 가지고 있어?",
+   "en": "Do you have a little time?",
+   "ko": "시간 좀 가지고 있어?",
+   "blank": "가지고"
+  },
+  {
+   "text": "자신감 가지고 해 봐.",
+   "en": "Try it with some confidence.",
+   "ko": "자신감 가지고 해 봐.",
+   "blank": "가지고"
+  }
+ ],
+ "w|감사하다": [
+  {
+   "text": "정말 감사해요.",
+   "en": "Thank you so much.",
+   "ko": "정말 감사해요.",
+   "blank": "감사해요"
+  },
+  {
+   "text": "도와줘서 감사해.",
+   "en": "Thank you for helping me.",
+   "ko": "도와줘서 감사해.",
+   "blank": "감사해"
+  }
+ ],
+ "w|갑자기": [
+  {
+   "text": "갑자기 소나기네.",
+   "en": "It's a sudden shower.",
+   "ko": "갑자기 소나기네.",
+   "blank": "갑자기"
+  },
+  {
+   "text": "갑자기 네가 보고 싶었어.",
+   "en": "I suddenly missed you.",
+   "ko": "갑자기 네가 보고 싶었어.",
+   "blank": "갑자기"
+  }
+ ],
+ "w|갖다": [
+  {
+   "text": "휴지 좀 갖고 와.",
+   "en": "Bring some tissues.",
+   "ko": "휴지 좀 갖고 와.",
+   "blank": "갖고"
+  },
+  {
+   "text": "그 가방은 내가 갖고 갈게.",
+   "en": "I'll take that bag.",
+   "ko": "그 가방은 내가 갖고 갈게.",
+   "blank": "갖고"
+  }
+ ],
+ "w|같다": [
+  {
+   "text": "우리 취향 완전 같아.",
+   "en": "Our tastes are exactly the same.",
+   "ko": "우리 취향 완전 같아.",
+   "blank": "같아"
+  },
+  {
+   "text": "같은 지하철을 탔어.",
+   "en": "We were on the same subway.",
+   "ko": "같은 지하철을 탔어.",
+   "blank": "같은"
+  }
+ ],
+ "w|같이": [
+  {
+   "text": "점심 같이 먹을래?",
+   "en": "Want to have lunch together?",
+   "ko": "점심 같이 먹을래?",
+   "blank": "같이"
+  },
+  {
+   "text": "주말에 같이 등산 갈까?",
+   "en": "Want to go hiking together this weekend?",
+   "ko": "주말에 같이 등산 갈까?",
+   "blank": "같이"
+  }
+ ],
+ "w|갚다": [
+  {
+   "text": "커피값은 내가 갚을게.",
+   "en": "I'll pay you back for the coffee.",
+   "ko": "커피값은 내가 갚을게.",
+   "blank": "갚을게"
+  },
+  {
+   "text": "빌린 돈 다 갚았어.",
+   "en": "I paid back all the money I borrowed.",
+   "ko": "빌린 돈 다 갚았어.",
+   "blank": "갚았어"
+  }
+ ],
+ "w|거": [
+  {
+   "text": "마실 거 시킬까?",
+   "en": "Should we order something to drink?",
+   "ko": "마실 거 시킬까?",
+   "blank": "거"
+  },
+  {
+   "text": "새로 산 거 보여 줄게.",
+   "en": "I'll show you what I just bought.",
+   "ko": "새로 산 거 보여 줄게.",
+   "blank": "거"
+  }
+ ],
+ "w|거기": [
+  {
+   "text": "거기 아직 있어?",
+   "en": "Are you still there?",
+   "ko": "거기 아직 있어?",
+   "blank": "거기"
+  },
+  {
+   "text": "거기 좀 가볼래.",
+   "en": "I want to go there.",
+   "ko": "거기 좀 가볼래.",
+   "blank": "거기"
+  }
+ ],
+ "w|거의": [
+  {
+   "text": "거의 다 왔대.",
+   "en": "They say they're almost here.",
+   "ko": "거의 다 왔대.",
+   "blank": "거의"
+  },
+  {
+   "text": "거의 포기했었어.",
+   "en": "I had almost given up.",
+   "ko": "거의 포기했었어.",
+   "blank": "거의"
+  }
+ ],
+ "w|걱정": [
+  {
+   "text": "걱정 하지 마세요.",
+   "en": "Don't worry.",
+   "ko": "걱정 하지 마세요.",
+   "blank": "걱정"
+  },
+  {
+   "text": "걱정 끼쳐서 미안해.",
+   "en": "Sorry I made you worry.",
+   "ko": "걱정 끼쳐서 미안해.",
+   "blank": "걱정"
+  }
+ ],
+ "w|걱정하다": [
+  {
+   "text": "혼자 걱정하지 마.",
+   "en": "Don't sit there worrying alone.",
+   "ko": "혼자 걱정하지 마.",
+   "blank": "걱정하지"
+  },
+  {
+   "text": "시험 때문에 걱정했어.",
+   "en": "I was worried about the exam.",
+   "ko": "시험 때문에 걱정했어.",
+   "blank": "걱정했어"
+  }
+ ],
+ "w|건너다": [
+  {
+   "text": "파란 불일 때 건너.",
+   "en": "Cross when the light is green.",
+   "ko": "파란 불일 때 건너.",
+   "blank": "건너"
+  },
+  {
+   "text": "다리 벌써 건넜어.",
+   "en": "I already crossed the bridge.",
+   "ko": "다리 벌써 건넜어.",
+   "blank": "건넜어"
+  }
+ ],
+ "w|걷다": [
+  {
+   "text": "날씨 좋으니까 걸어 가자.",
+   "en": "The weather is nice, so let's walk.",
+   "ko": "날씨 좋으니까 걸어 가자.",
+   "blank": "걸어"
+  },
+  {
+   "text": "오늘 많이 걸었어.",
+   "en": "I walked a lot today.",
+   "ko": "오늘 많이 걸었어.",
+   "blank": "걸었어"
+  }
+ ],
+ "w|것": [
+  {
+   "text": "좋은 거 있어.",
+   "en": "There's something good.",
+   "ko": "좋은 거 있어.",
+   "blank": "거"
+  },
+  {
+   "text": "다른 것 골라.",
+   "en": "Pick something else.",
+   "ko": "것 골라.",
+   "blank": "것"
+  }
+ ],
+ "w|결국": [
+  {
+   "text": "결국 해냈어요.",
+   "en": "I finally did it.",
+   "ko": "결국 해냈어요.",
+   "blank": "결국"
+  },
+  {
+   "text": "결국 솔직히 말했어.",
+   "en": "I ended up telling the truth.",
+   "ko": "결국 솔직히 말했어.",
+   "blank": "결국"
+  }
+ ],
+ "w|결혼": [
+  {
+   "text": "결혼 날짜 잡았어?",
+   "en": "Have you set a wedding date?",
+   "ko": "결혼 날짜 잡았어?",
+   "blank": "결혼"
+  },
+  {
+   "text": "결혼은 아직 생각 없어.",
+   "en": "I'm not thinking about marriage yet.",
+   "ko": "결혼은 아직 생각 없어.",
+   "blank": "결혼은"
+  }
+ ],
+ "w|경찰": [
+  {
+   "text": "경찰에 신고하는 게 좋겠어.",
+   "en": "You should report it to the police.",
+   "ko": "경찰에 신고하는 게 좋겠어.",
+   "blank": "경찰에"
+  },
+  {
+   "text": "경찰이 금방 왔어.",
+   "en": "The police got here right away.",
+   "ko": "경찰이 금방 왔어.",
+   "blank": "경찰이"
+  }
+ ],
+ "w|계속": [
+  {
+   "text": "계속 연락이 안 돼.",
+   "en": "I still can't get through.",
+   "ko": "계속 연락이 안 돼.",
+   "blank": "계속"
+  },
+  {
+   "text": "계속 같은 말만 해.",
+   "en": "You keep saying the same thing.",
+   "ko": "계속 같은 말만 해.",
+   "blank": "계속"
+  }
+ ],
+ "w|고맙다": [
+  {
+   "text": "정말 고마워요.",
+   "en": "Thank you so much.",
+   "ko": "정말 고마워요.",
+   "blank": "고마워요"
+  },
+  {
+   "text": "도와줘서 고마워.",
+   "en": "Thanks for helping.",
+   "ko": "도와줘서 고마워.",
+   "blank": "고마워"
+  }
+ ],
+ "w|고치다": [
+  {
+   "text": "시계 좀 고쳐 줘.",
+   "en": "Can you fix my watch?",
+   "ko": "시계 좀 고쳐 줘.",
+   "blank": "고쳐"
+  },
+  {
+   "text": "그 버릇 고쳤어.",
+   "en": "I kicked that habit.",
+   "ko": "그 버릇 고쳤어.",
+   "blank": "고쳤어"
+  }
+ ],
+ "w|곧": [
+  {
+   "text": "곧 시작할 거야.",
+   "en": "It will start soon.",
+   "ko": "곧 시작할 거야.",
+   "blank": "곧"
+  },
+  {
+   "text": "곧 도착해.",
+   "en": "I'll arrive soon.",
+   "ko": "곧 도착해.",
+   "blank": "곧"
+  }
+ ],
+ "w|공부하다": [
+  {
+   "text": "카페에서 공부할래?",
+   "en": "Want to study at a cafe?",
+   "ko": "카페에서 공부할래?",
+   "blank": "공부할래"
+  },
+  {
+   "text": "시험 봐서 밤새 공부했어.",
+   "en": "I studied all night for the exam.",
+   "ko": "시험 봐서 밤새 공부했어.",
+   "blank": "공부했어"
+  }
+ ],
+ "w|괜찮다": [
+  {
+   "text": "괜찮아요, 걱정 마세요.",
+   "en": "It's okay, don't worry.",
+   "ko": "괜찮아요, 걱정 마세요.",
+   "blank": "괜찮아요"
+  },
+  {
+   "text": "저는 괜찮아요.",
+   "en": "I'm okay.",
+   "ko": "저는 괜찮아요.",
+   "blank": "괜찮아요"
+  }
+ ],
+ "w|그": [
+  {
+   "text": "그 사람 알아?",
+   "en": "Do you know that person?",
+   "ko": "그 사람 알아?",
+   "blank": "그"
+  },
+  {
+   "text": "그 책 읽었어.",
+   "en": "I read that book.",
+   "ko": "그 책 읽었어.",
+   "blank": "그"
+  }
+ ],
+ "w|그거": [
+  {
+   "text": "그거 어디 있어요?",
+   "en": "Where is that?",
+   "ko": "그거 어디 있어요?",
+   "blank": "그거"
+  },
+  {
+   "text": "그거 진짜야?",
+   "en": "Is that true?",
+   "ko": "그거 진짜야?",
+   "blank": "그거"
+  }
+ ],
+ "w|그냥": [
+  {
+   "text": "그냥 가자.",
+   "en": "Let's just go.",
+   "ko": "그냥 가자.",
+   "blank": "그냥"
+  },
+  {
+   "text": "그냥 말해.",
+   "en": "Just say it.",
+   "ko": "그냥 말해.",
+   "blank": "그냥"
+  }
+ ],
+ "w|그녀": [
+  {
+   "text": "그녀 오늘 안 왔어.",
+   "en": "She didn't come today.",
+   "ko": "그녀 오늘 안 왔어.",
+   "blank": "그녀"
+  },
+  {
+   "text": "나는 그녀를 좋아해.",
+   "en": "I like her.",
+   "ko": "나는 그녀를 좋아해.",
+   "blank": "그녀를"
+  }
+ ],
+ "w|그때": [
+  {
+   "text": "그때 진짜 힘들었어요.",
+   "en": "It was really hard back then.",
+   "ko": "그때 진짜 힘들었어요.",
+   "blank": "그때"
+  },
+  {
+   "text": "그때 너 어디 있었어?",
+   "en": "Where were you back then?",
+   "ko": "그때 너 어디 있었어?",
+   "blank": "그때"
+  }
+ ],
+ "w|그래도": [
+  {
+   "text": "그래도 해야지.",
+   "en": "Still, I have to do it.",
+   "ko": "그래도 해야지.",
+   "blank": "그래도"
+  },
+  {
+   "text": "그래도 고마워.",
+   "en": "Still, thank you.",
+   "ko": "그래도 고마워.",
+   "blank": "그래도"
+  }
+ ],
+ "w|그래서": [
+  {
+   "text": "그래서 그냥 집에 돌아왔어.",
+   "en": "So I just went back home.",
+   "ko": "그래서 그냥 집에 돌아왔어.",
+   "blank": "그래서"
+  },
+  {
+   "text": "그래서 어떻게 된 거야?",
+   "en": "So what happened?",
+   "ko": "그래서 어떻게 된 거야?",
+   "blank": "그래서"
+  }
+ ],
+ "w|그러니까": [
+  {
+   "text": "그러니까 일찍 와.",
+   "en": "So come early.",
+   "ko": "그러니까 일찍 와.",
+   "blank": "그러니까"
+  },
+  {
+   "text": "그러니까 잘 들어.",
+   "en": "So listen carefully.",
+   "ko": "그러니까 잘 들어.",
+   "blank": "그러니까"
+  }
+ ],
+ "w|그런": [
+  {
+   "text": "그런 말은 상처가 돼.",
+   "en": "Talking like that hurts.",
+   "ko": "그런 말은 상처가 돼.",
+   "blank": "그런"
+  },
+  {
+   "text": "그런 건 사양할게.",
+   "en": "I'll pass on that.",
+   "ko": "그런 건 사양할게.",
+   "blank": "그런"
+  }
+ ],
+ "w|그런데": [
+  {
+   "text": "그런데 진짜야?",
+   "en": "But is it true?",
+   "ko": "그런데 진짜야?",
+   "blank": "그런데"
+  },
+  {
+   "text": "나 피곤해. 그런데 해야 돼.",
+   "en": "I'm tired. But I have to do it.",
+   "ko": "나 피곤해. 그런데 해야 돼.",
+   "blank": "그런데"
+  }
+ ],
+ "w|그럼": [
+  {
+   "text": "그럼 나는 이만 갈게.",
+   "en": "I'll get going, then.",
+   "ko": "그럼 나는 이만 갈게.",
+   "blank": "그럼"
+  },
+  {
+   "text": "그럼 다음에 보자.",
+   "en": "See you next time, then.",
+   "ko": "그럼 다음에 보자.",
+   "blank": "그럼"
+  }
+ ],
+ "w|그렇게": [
+  {
+   "text": "그렇게 서두르지 마.",
+   "en": "Don't rush like that.",
+   "ko": "그렇게 서두르지 마.",
+   "blank": "그렇게"
+  },
+  {
+   "text": "그렇게까지 할 필요 없어.",
+   "en": "You don't have to go that far.",
+   "ko": "그렇게까지 할 필요 없어.",
+   "blank": "그렇게까지"
+  }
+ ],
+ "w|그리고": [
+  {
+   "text": "그리고 나서 갔어.",
+   "en": "And then I went.",
+   "ko": "그리고 나서 갔어.",
+   "blank": "그리고"
+  },
+  {
+   "text": "그리고 다시 시작했어.",
+   "en": "And then started again.",
+   "ko": "그리고 다시 시작했어.",
+   "blank": "그리고"
+  }
+ ],
+ "w|그만": [
+  {
+   "text": "그만 좀 해.",
+   "en": "Stop it already.",
+   "ko": "그만 좀 해.",
+   "blank": "그만"
+  },
+  {
+   "text": "이제 그만 갈래.",
+   "en": "I want to leave now.",
+   "ko": "이제 그만 갈래.",
+   "blank": "그만"
+  }
+ ],
+ "w|그저": [
+  {
+   "text": "그저 웃고 넘겼어.",
+   "en": "I just laughed it off.",
+   "ko": "그저 웃고 넘겼어.",
+   "blank": "그저"
+  },
+  {
+   "text": "그저 미안해서 하는 말이야.",
+   "en": "I'm only saying it because I feel sorry.",
+   "ko": "그저 미안해서 하는 말이야.",
+   "blank": "그저"
+  }
+ ],
+ "w|근데": [
+  {
+   "text": "근데 너 지금 어디야?",
+   "en": "But where are you right now?",
+   "ko": "근데 너 지금 어디야?",
+   "blank": "근데"
+  },
+  {
+   "text": "근데 그건 좀 심했어.",
+   "en": "But that was a bit much.",
+   "ko": "근데 그건 좀 심했어.",
+   "blank": "근데"
+  }
+ ],
+ "w|글쎄": [
+  {
+   "text": "글쎄, 그건 좀 그래.",
+   "en": "Well, that's kind of iffy.",
+   "ko": "글쎄, 그건 좀 그래.",
+   "blank": "글쎄"
+  },
+  {
+   "text": "글쎄, 내일이 나을지도.",
+   "en": "Hmm, maybe tomorrow will be better.",
+   "ko": "글쎄, 내일이 나을지도.",
+   "blank": "글쎄"
+  }
+ ],
+ "w|기다리다": [
+  {
+   "text": "역 앞에서 기다릴게.",
+   "en": "I'll wait in front of the station.",
+   "ko": "역 앞에서 기다릴게.",
+   "blank": "기다릴게"
+  },
+  {
+   "text": "조금만 더 기다릴게.",
+   "en": "I'll wait a little longer.",
+   "ko": "조금만 더 기다릴게.",
+   "blank": "기다릴게"
+  }
+ ],
+ "w|기분": [
+  {
+   "text": "오늘 기분 어때요?",
+   "en": "How do you feel today?",
+   "ko": "오늘 기분 어때요?",
+   "blank": "기분"
+  },
+  {
+   "text": "기분이 많이 풀렸어.",
+   "en": "I feel a lot better.",
+   "ko": "기분이 많이 풀렸어.",
+   "blank": "기분이"
+  }
+ ],
+ "w|기억하다": [
+  {
+   "text": "우리 약속 기억해?",
+   "en": "Do you remember our plan?",
+   "ko": "우리 약속 기억해?",
+   "blank": "기억해"
+  },
+  {
+   "text": "그 골목은 기억하고 있어.",
+   "en": "I still remember that alley.",
+   "ko": "그 골목은 기억하고 있어.",
+   "blank": "기억하고"
+  }
+ ],
+ "w|꺼내다": [
+  {
+   "text": "카드 좀 꺼내.",
+   "en": "Take your card out.",
+   "ko": "카드 좀 꺼내.",
+   "blank": "꺼내"
+  },
+  {
+   "text": "주머니에서 꺼냈어.",
+   "en": "I took it out of my pocket.",
+   "ko": "주머니에서 꺼냈어.",
+   "blank": "꺼냈어"
+  }
+ ],
+ "w|꼭": [
+  {
+   "text": "꼭 연락해.",
+   "en": "Make sure to contact me.",
+   "ko": "꼭 연락해.",
+   "blank": "꼭"
+  },
+  {
+   "text": "꼭 다시 만나자.",
+   "en": "Let's definitely meet again.",
+   "ko": "꼭 다시 만나자.",
+   "blank": "꼭"
+  }
+ ],
+ "w|끌다": [
+  {
+   "text": "소파 앞으로 끌어 줘.",
+   "en": "Pull the sofa forward.",
+   "ko": "소파 앞으로 끌어 줘.",
+   "blank": "끌어"
+  },
+  {
+   "text": "그 제목이 눈길을 끌었어.",
+   "en": "That title caught my eye.",
+   "ko": "그 제목이 눈길을 끌었어.",
+   "blank": "끌었어"
+  }
+ ],
+ "w|끝나다": [
+  {
+   "text": "회의가 아직 안 끝나.",
+   "en": "The meeting isn't over yet.",
+   "ko": "회의가 아직 안 끝나.",
+   "blank": "끝나"
+  },
+  {
+   "text": "영화 끝났어?",
+   "en": "Is the movie over?",
+   "ko": "영화 끝났어?",
+   "blank": "끝났어"
+  }
+ ],
+ "w|끝내다": [
+  {
+   "text": "설거지 끝내고 쉴게.",
+   "en": "I'll rest after I finish the dishes.",
+   "ko": "설거지 끝내고 쉴게.",
+   "blank": "끝내고"
+  },
+  {
+   "text": "보고서 겨우 끝냈어.",
+   "en": "I barely finished the report.",
+   "ko": "보고서 겨우 끝냈어.",
+   "blank": "끝냈어"
+  }
+ ],
+ "w|나": [
+  {
+   "text": "나는 괜찮아.",
+   "en": "I'm okay.",
+   "ko": "나는 괜찮아.",
+   "blank": "나는"
+  },
+  {
+   "text": "나도 갈래.",
+   "en": "I want to go too.",
+   "ko": "나도 갈래.",
+   "blank": "나도"
+  }
+ ],
+ "w|나가다": [
+  {
+   "text": "잠깐 나갔다 올게요.",
+   "en": "I'll step out for a moment.",
+   "ko": "잠깐 나갔다 올게요.",
+   "blank": "나갔다"
+  },
+  {
+   "text": "지금 나갈게.",
+   "en": "I'm heading out now.",
+   "ko": "지금 나갈게.",
+   "blank": "나갈게"
+  }
+ ],
+ "w|나쁘다": [
+  {
+   "text": "기분이 좀 나빠.",
+   "en": "I'm in a bit of a bad mood.",
+   "ko": "기분이 좀 나빠.",
+   "blank": "나빠"
+  },
+  {
+   "text": "나쁜 꿈 꿨어.",
+   "en": "I had a bad dream.",
+   "ko": "나쁜 꿈 꿨어.",
+   "blank": "나쁜"
+  }
+ ],
+ "w|나오다": [
+  {
+   "text": "숨지 말고 나와.",
+   "en": "Don't hide. Come out.",
+   "ko": "숨지 말고 나와.",
+   "blank": "나와"
+  },
+  {
+   "text": "결과 나왔어?",
+   "en": "Are the results out?",
+   "ko": "결과 나왔어?",
+   "blank": "나왔어"
+  }
+ ],
+ "w|나중": [
+  {
+   "text": "나중에 꼭 갚을게.",
+   "en": "I'll pay you back later, promise.",
+   "ko": "나중에 꼭 갚을게.",
+   "blank": "나중에"
+  },
+  {
+   "text": "나중으로 미루지 마.",
+   "en": "Don't put it off until later.",
+   "ko": "나중으로 미루지 마.",
+   "blank": "나중으로"
+  }
+ ],
+ "w|날": [
+  {
+   "text": "비 오는 날 그냥 쉬자.",
+   "en": "Let's just take it easy on a rainy day.",
+   "ko": "비 오는 날 그냥 쉬자.",
+   "blank": "날"
+  },
+  {
+   "text": "이런 날은 나가기 싫어.",
+   "en": "I don't feel like going out on a day like this.",
+   "ko": "이런 날은 나가기 싫어.",
+   "blank": "날은"
+  }
+ ],
+ "w|남기다": [
+  {
+   "text": "메모 남겨 줘.",
+   "en": "Leave me a note.",
+   "ko": "메모 남겨 줘.",
+   "blank": "남겨"
+  },
+  {
+   "text": "밥 남기지 마.",
+   "en": "Don't leave any rice.",
+   "ko": "밥 남기지 마.",
+   "blank": "남기지"
+  }
+ ],
+ "w|남다": [
+  {
+   "text": "국이 아직 남았어.",
+   "en": "There's still soup left.",
+   "ko": "국이 아직 남았어.",
+   "blank": "남았어"
+  },
+  {
+   "text": "시간이 조금 남아.",
+   "en": "There's a little time left.",
+   "ko": "시간이 조금 남아.",
+   "blank": "남아"
+  }
+ ],
+ "w|남자": [
+  {
+   "text": "저 남자 진짜 멋있어요.",
+   "en": "That guy is really cool.",
+   "ko": "저 남자 진짜 멋있어요.",
+   "blank": "남자"
+  },
+  {
+   "text": "저 남자 정말 멋있어요.",
+   "en": "That guy is really cool.",
+   "ko": "저 남자 정말 멋있어요.",
+   "blank": "남자"
+  }
+ ],
+ "w|남자친구": [
+  {
+   "text": "남자친구 만나러 나갈게.",
+   "en": "I'm heading out to meet my boyfriend.",
+   "ko": "남자친구 만나러 나갈게.",
+   "blank": "남자친구"
+  },
+  {
+   "text": "남자친구가 꽃 사 왔어.",
+   "en": "My boyfriend showed up with flowers.",
+   "ko": "남자친구가 꽃 사 왔어.",
+   "blank": "남자친구가"
+  }
+ ],
+ "w|남편": [
+  {
+   "text": "남편 출장 갔어.",
+   "en": "My husband went on a business trip.",
+   "ko": "남편 출장 갔어.",
+   "blank": "남편"
+  },
+  {
+   "text": "남편이 설거지해 줬어.",
+   "en": "My husband did the dishes.",
+   "ko": "남편이 설거지해 줬어.",
+   "blank": "남편이"
+  }
+ ],
+ "w|낫다": [
+  {
+   "text": "감기 이제 다 나았어?",
+   "en": "Is your cold all better now?",
+   "ko": "감기 이제 다 나았어?",
+   "blank": "나았어"
+  },
+  {
+   "text": "약 먹고 좀 나았어요.",
+   "en": "I feel a bit better after the medicine.",
+   "ko": "약 먹고 좀 나았어요.",
+   "blank": "나았어요"
+  }
+ ],
+ "w|내려가다": [
+  {
+   "text": "지하로 내려가자.",
+   "en": "Let's go down to the basement.",
+   "ko": "지하로 내려가자.",
+   "blank": "내려가자"
+  },
+  {
+   "text": "해가 벌써 내려갔어.",
+   "en": "The sun has already gone down.",
+   "ko": "해가 벌써 내려갔어.",
+   "blank": "내려갔어"
+  }
+ ],
+ "w|내려오다": [
+  {
+   "text": "이층에서 얼른 내려와.",
+   "en": "Come down from the second floor.",
+   "ko": "이층에서 얼른 내려와.",
+   "blank": "내려와"
+  },
+  {
+   "text": "밤새 눈이 내려왔어.",
+   "en": "It snowed all night.",
+   "ko": "밤새 눈이 내려왔어.",
+   "blank": "내려왔어"
+  }
+ ],
+ "w|내리다": [
+  {
+   "text": "다음 역에서 내려.",
+   "en": "Get off at the next station.",
+   "ko": "다음 역에서 내려.",
+   "blank": "내려"
+  },
+  {
+   "text": "짐은 내가 내렸어.",
+   "en": "I took the bags down.",
+   "ko": "짐은 내가 내렸어.",
+   "blank": "내렸어"
+  }
+ ],
+ "w|내일": [
+  {
+   "text": "내일 오전에 보자.",
+   "en": "Let's meet tomorrow morning.",
+   "ko": "내일 오전에 보자.",
+   "blank": "내일"
+  },
+  {
+   "text": "내일은 집에서 일할 거야.",
+   "en": "I'm working from home tomorrow.",
+   "ko": "내일은 집에서 일할 거야.",
+   "blank": "내일은"
+  }
+ ],
+ "w|너": [
+  {
+   "text": "너 뭐 해?",
+   "en": "What are you doing?",
+   "ko": "너 뭐 해?",
+   "blank": "너"
+  },
+  {
+   "text": "너도 갈 거야?",
+   "en": "Are you going too?",
+   "ko": "너도 갈 거야?",
+   "blank": "너도"
+  }
+ ],
+ "w|너무": [
+  {
+   "text": "너무 매워서 물을 마셨어.",
+   "en": "It was so spicy I drank some water.",
+   "ko": "너무 매워서 물을 마셨어.",
+   "blank": "너무"
+  },
+  {
+   "text": "너무 늦어서 뛰어왔어.",
+   "en": "I was so late I ran over.",
+   "ko": "너무 늦어서 뛰어왔어.",
+   "blank": "너무"
+  }
+ ],
+ "w|너희": [
+  {
+   "text": "너희 먼저 자리 잡아.",
+   "en": "You all grab seats first.",
+   "ko": "너희 먼저 자리 잡아.",
+   "blank": "너희"
+  },
+  {
+   "text": "너희 시험은 언제야?",
+   "en": "When is your test?",
+   "ko": "너희 시험은 언제야?",
+   "blank": "너희"
+  }
+ ],
+ "w|넘어지다": [
+  {
+   "text": "돌부리에 걸려 넘어졌어.",
+   "en": "I tripped on a rock and fell.",
+   "ko": "돌부리에 걸려 넘어졌어.",
+   "blank": "넘어졌어"
+  },
+  {
+   "text": "하마터면 넘어질 뻔했어.",
+   "en": "I almost fell.",
+   "ko": "하마터면 넘어질 뻔했어.",
+   "blank": "넘어질"
+  }
+ ],
+ "w|넣다": [
+  {
+   "text": "가방에 넣어 둬.",
+   "en": "Put it in the bag.",
+   "ko": "가방에 넣어 둬.",
+   "blank": "넣어"
+  },
+  {
+   "text": "국에 파 넣었어?",
+   "en": "Did you put scallions in the soup?",
+   "ko": "국에 파 넣었어?",
+   "blank": "넣었어"
+  }
+ ],
+ "w|년": [
+  {
+   "text": "몇 년 만이야, 진짜.",
+   "en": "It's been years, seriously.",
+   "ko": "몇 년 만이야, 진짜.",
+   "blank": "년"
+  },
+  {
+   "text": "여기서 오 년 살았어.",
+   "en": "I've lived here for five years.",
+   "ko": "여기서 오 년 살았어.",
+   "blank": "년"
+  }
+ ],
+ "w|노래하다": [
+  {
+   "text": "노래방에서 노래할래?",
+   "en": "Want to sing at karaoke?",
+   "ko": "노래방에서 노래할래?",
+   "blank": "노래할래"
+  },
+  {
+   "text": "샤워하면서 노래했어.",
+   "en": "I sang in the shower.",
+   "ko": "샤워하면서 노래했어.",
+   "blank": "노래했어"
+  }
+ ],
+ "w|놀다": [
+  {
+   "text": "숙제 끝나면 놀자.",
+   "en": "Let's play after the homework is done.",
+   "ko": "숙제 끝나면 놀자.",
+   "blank": "놀자"
+  },
+  {
+   "text": "애들이 마당에서 놀아.",
+   "en": "The kids are playing in the yard.",
+   "ko": "애들이 마당에서 놀아.",
+   "blank": "놀아"
+  }
+ ],
+ "w|놈": [
+  {
+   "text": "그 놈 아직도 여기 있어요.",
+   "en": "That guy is still here.",
+   "ko": "그 놈 아직도 여기 있어요.",
+   "blank": "놈"
+  },
+  {
+   "text": "그 놈 참 웃겨.",
+   "en": "That guy is really funny.",
+   "ko": "그 놈 참 웃겨.",
+   "blank": "놈"
+  }
+ ],
+ "w|놓다": [
+  {
+   "text": "가방 여기 놔.",
+   "en": "Leave the bag here.",
+   "ko": "가방 여기 놔.",
+   "blank": "놔"
+  },
+  {
+   "text": "리모컨 어디 놓았어?",
+   "en": "Where did you put the remote?",
+   "ko": "리모컨 어디 놓았어?",
+   "blank": "놓았어"
+  }
+ ],
+ "w|누구": [
+  {
+   "text": "누구 전화야?",
+   "en": "Who's calling?",
+   "ko": "누구 전화야?",
+   "blank": "누구"
+  },
+  {
+   "text": "지금 누구랑 있어?",
+   "en": "Who are you with right now?",
+   "ko": "지금 누구랑 있어?",
+   "blank": "누구랑"
+  }
+ ],
+ "w|누군가": [
+  {
+   "text": "누군가 초인종을 눌렀어.",
+   "en": "Someone rang the doorbell.",
+   "ko": "누군가 초인종을 눌렀어.",
+   "blank": "누군가"
+  },
+  {
+   "text": "누군가 내 자리를 옮겼어.",
+   "en": "Someone moved my seat.",
+   "ko": "누군가 내 자리를 옮겼어.",
+   "blank": "누군가"
+  }
+ ],
+ "w|누나": [
+  {
+   "text": "누나, 문 좀 열어 줘.",
+   "en": "Nuna, open the door for me.",
+   "ko": "누나, 문 좀 열어 줘.",
+   "blank": "누나"
+  },
+  {
+   "text": "누나가 도시락 싸 줬어.",
+   "en": "My older sister packed me a lunch.",
+   "ko": "누나가 도시락 싸 줬어.",
+   "blank": "누나가"
+  }
+ ],
+ "w|느끼다": [
+  {
+   "text": "이 분위기 느껴?",
+   "en": "Do you feel this mood?",
+   "ko": "이 분위기 느껴?",
+   "blank": "느껴"
+  },
+  {
+   "text": "차이 확 느꼈어.",
+   "en": "I really felt the difference.",
+   "ko": "차이 확 느꼈어.",
+   "blank": "느꼈어"
+  }
+ ],
+ "w|늘": [
+  {
+   "text": "그 가게는 늘 북적여.",
+   "en": "That shop is always packed.",
+   "ko": "그 가게는 늘 북적여.",
+   "blank": "늘"
+  },
+  {
+   "text": "늘 같은 시간에 와.",
+   "en": "You always show up at the same time.",
+   "ko": "늘 같은 시간에 와.",
+   "blank": "늘"
+  }
+ ],
+ "w|다": [
+  {
+   "text": "다 끝났어.",
+   "en": "It's all over.",
+   "ko": "다 끝났어.",
+   "blank": "다"
+  },
+  {
+   "text": "다 모였어.",
+   "en": "Everyone gathered.",
+   "ko": "다 모였어.",
+   "blank": "다"
+  }
+ ],
+ "w|다른": [
+  {
+   "text": "다른 길로 돌아가자.",
+   "en": "Let's go back a different way.",
+   "ko": "다른 길로 돌아가자.",
+   "blank": "다른"
+  },
+  {
+   "text": "다른 색으로 바꿔 줘.",
+   "en": "Please change it to another color.",
+   "ko": "다른 색으로 바꿔 줘.",
+   "blank": "다른"
+  }
+ ],
+ "w|다시": [
+  {
+   "text": "다시 읽어 볼게.",
+   "en": "I'll read it again.",
+   "ko": "다시 읽어 볼게.",
+   "blank": "다시"
+  },
+  {
+   "text": "처음부터 다시 하자.",
+   "en": "Let's start over from the beginning.",
+   "ko": "처음부터 다시 하자.",
+   "blank": "다시"
+  }
+ ],
+ "w|다음": [
+  {
+   "text": "다음 역에서 내리자.",
+   "en": "Let's get off at the next stop.",
+   "ko": "다음 역에서 내리자.",
+   "blank": "다음"
+  },
+  {
+   "text": "다음은 내가 낼게.",
+   "en": "I'll pay next time.",
+   "ko": "다음은 내가 낼게.",
+   "blank": "다음은"
+  }
+ ],
+ "w|다치다": [
+  {
+   "text": "무릎 살짝 다쳤어.",
+   "en": "I hurt my knee a little.",
+   "ko": "무릎 살짝 다쳤어.",
+   "blank": "다쳤어"
+  },
+  {
+   "text": "많이 다친 건 아니야.",
+   "en": "It's not a bad injury.",
+   "ko": "많이 다친 건 아니야.",
+   "blank": "다친"
+  }
+ ],
+ "w|단지": [
+  {
+   "text": "단지 궁금해서 물어봤어.",
+   "en": "I only asked because I was curious.",
+   "ko": "단지 궁금해서 물어봤어.",
+   "blank": "단지"
+  },
+  {
+   "text": "단지 시기가 안 맞았을 뿐이야.",
+   "en": "It just wasn't the right time.",
+   "ko": "단지 시기가 안 맞았을 뿐이야.",
+   "blank": "단지"
+  }
+ ],
+ "w|닫다": [
+  {
+   "text": "문 좀 닫아 줘.",
+   "en": "Close the door, please.",
+   "ko": "문 좀 닫아 줘.",
+   "blank": "닫아"
+  },
+  {
+   "text": "창문 닫았어.",
+   "en": "I closed the window.",
+   "ko": "창문 닫았어.",
+   "blank": "닫았어"
+  }
+ ],
+ "w|달": [
+  {
+   "text": "이번 달 월급 탔어?",
+   "en": "Did you get paid this month?",
+   "ko": "이번 달 월급 탔어?",
+   "blank": "달"
+  },
+  {
+   "text": "다음 달에 이사하기로 했어.",
+   "en": "We've decided to move next month.",
+   "ko": "다음 달에 이사하기로 했어.",
+   "blank": "달에"
+  }
+ ],
+ "w|당기다": [
+  {
+   "text": "서랍 한번 당겨 봐.",
+   "en": "Give the drawer a pull.",
+   "ko": "서랍 한번 당겨 봐.",
+   "blank": "당겨"
+  },
+  {
+   "text": "커튼 끝까지 당겼어.",
+   "en": "I pulled the curtain all the way.",
+   "ko": "커튼 끝까지 당겼어.",
+   "blank": "당겼어"
+  }
+ ],
+ "w|당신": [
+  {
+   "text": "당신 지금 화난 거야?",
+   "en": "Are you angry right now?",
+   "ko": "당신 지금 화난 거야?",
+   "blank": "당신"
+  },
+  {
+   "text": "당신은 어떻게 생각해요?",
+   "en": "What do you think?",
+   "ko": "당신은 어떻게 생각해요?",
+   "blank": "당신은"
+  }
+ ],
+ "w|당연히": [
+  {
+   "text": "당연히 네가 우선이지.",
+   "en": "Of course you come first.",
+   "ko": "당연히 네가 우선이지.",
+   "blank": "당연히"
+  },
+  {
+   "text": "당연히 기억하고 있지.",
+   "en": "Of course I remember.",
+   "ko": "당연히 기억하고 있지.",
+   "blank": "당연히"
+  }
+ ],
+ "w|당장": [
+  {
+   "text": "당장 나가!",
+   "en": "Get out right now!",
+   "ko": "당장 나가!",
+   "blank": "당장"
+  },
+  {
+   "text": "당장 전화해.",
+   "en": "Call right now.",
+   "ko": "당장 전화해.",
+   "blank": "당장"
+  }
+ ],
+ "w|대답하다": [
+  {
+   "text": "돌려 말하지 말고 대답해.",
+   "en": "Don't dodge it. Answer me.",
+   "ko": "돌려 말하지 말고 대답해.",
+   "blank": "대답해"
+  },
+  {
+   "text": "한참 있다가 대답했어.",
+   "en": "I answered after a long pause.",
+   "ko": "한참 있다가 대답했어.",
+   "blank": "대답했어"
+  }
+ ],
+ "w|대신": [
+  {
+   "text": "저 대신 부탁해요.",
+   "en": "Please do it for me.",
+   "ko": "저 대신 부탁해요.",
+   "blank": "대신"
+  },
+  {
+   "text": "커피 대신 차 마실래?",
+   "en": "Want tea instead of coffee?",
+   "ko": "커피 대신 차 마실래?",
+   "blank": "대신"
+  }
+ ],
+ "w|대체": [
+  {
+   "text": "대체 어디 있는 거야?",
+   "en": "Where on earth are you?",
+   "ko": "대체 어디 있는 거야?",
+   "blank": "대체"
+  },
+  {
+   "text": "대체 왜 그런 거야?",
+   "en": "Why on earth did you do that?",
+   "ko": "대체 왜 그런 거야?",
+   "blank": "대체"
+  }
+ ],
+ "w|대하다": [
+  {
+   "text": "저한테 너무 잘 대해줬어요.",
+   "en": "You treated me so well.",
+   "ko": "저한테 너무 잘 대해줬어요.",
+   "blank": "대해줬어요"
+  },
+  {
+   "text": "그 사람에 대해 들어봤어.",
+   "en": "I've heard about that person.",
+   "ko": "그 사람에 대해 들어봤어.",
+   "blank": "대해"
+  }
+ ],
+ "w|더": [
+  {
+   "text": "더 줄까?",
+   "en": "Shall I give you more?",
+   "ko": "더 줄까?",
+   "blank": "더"
+  },
+  {
+   "text": "더 먹어.",
+   "en": "Eat more.",
+   "ko": "더 먹어.",
+   "blank": "더"
+  }
+ ],
+ "w|던지다": [
+  {
+   "text": "공 이리 던져.",
+   "en": "Throw the ball over here.",
+   "ko": "공 이리 던져.",
+   "blank": "던져"
+  },
+  {
+   "text": "쓰레기는 던지지 마.",
+   "en": "Don't throw trash on the ground.",
+   "ko": "쓰레기는 던지지 마.",
+   "blank": "던지지"
+  }
+ ],
+ "w|데려가다": [
+  {
+   "text": "강아지 산책시키러 데려갈게.",
+   "en": "I'll take the dog out for a walk.",
+   "ko": "강아지 산책시키러 데려갈게.",
+   "blank": "데려갈게"
+  },
+  {
+   "text": "동생을 학원에 데려갔어.",
+   "en": "I took my younger sibling to the academy.",
+   "ko": "동생을 학원에 데려갔어.",
+   "blank": "데려갔어"
+  }
+ ],
+ "w|데려오다": [
+  {
+   "text": "친구도 집에 데려와.",
+   "en": "Bring your friend home too.",
+   "ko": "친구도 집에 데려와.",
+   "blank": "데려와"
+  },
+  {
+   "text": "고양이 한 마리 데려왔어.",
+   "en": "I brought a cat home.",
+   "ko": "고양이 한 마리 데려왔어.",
+   "blank": "데려왔어"
+  }
+ ],
+ "w|데리다": [
+  {
+   "text": "학교까지 데리러 갈게.",
+   "en": "I'll come to school to pick you up.",
+   "ko": "학교까지 데리러 갈게.",
+   "blank": "데리러"
+  },
+  {
+   "text": "아이 좀 데려 줘.",
+   "en": "Take the kid with you.",
+   "ko": "아이 좀 데려 줘.",
+   "blank": "데려"
+  }
+ ],
+ "w|도대체": [
+  {
+   "text": "도대체 어디 있는 거야?",
+   "en": "Where on earth are you?",
+   "ko": "도대체 어디 있는 거야?",
+   "blank": "도대체"
+  },
+  {
+   "text": "도대체 왜 말을 안 해?",
+   "en": "Why on earth won't you say anything?",
+   "ko": "도대체 왜 말을 안 해?",
+   "blank": "도대체"
+  }
+ ],
+ "w|도망가다": [
+  {
+   "text": "강아지가 문으로 도망갔어.",
+   "en": "The dog ran out the door.",
+   "ko": "강아지가 문으로 도망갔어.",
+   "blank": "도망갔어"
+  },
+  {
+   "text": "도망가지 말고 얘기해.",
+   "en": "Don't run off. Talk to me.",
+   "ko": "도망가지 말고 얘기해.",
+   "blank": "도망가지"
+  }
+ ],
+ "w|도움": [
+  {
+   "text": "네 도움이 컸어.",
+   "en": "Your help meant a lot.",
+   "ko": "네 도움이 컸어.",
+   "blank": "도움이"
+  },
+  {
+   "text": "도움 청해도 될까요?",
+   "en": "May I ask for help?",
+   "ko": "도움 청해도 될까요?",
+   "blank": "도움"
+  }
+ ],
+ "w|돈": [
+  {
+   "text": "돈은 나중에 정산하자.",
+   "en": "Let's settle the money later.",
+   "ko": "돈은 나중에 정산하자.",
+   "blank": "돈은"
+  },
+  {
+   "text": "돈 떨어졌어.",
+   "en": "I'm out of money.",
+   "ko": "돈 떨어졌어.",
+   "blank": "돈"
+  }
+ ],
+ "w|돌다": [
+  {
+   "text": "저 모퉁이에서 오른쪽으로 돌아.",
+   "en": "Turn right at that corner.",
+   "ko": "저 모퉁이에서 오른쪽으로 돌아.",
+   "blank": "돌아"
+  },
+  {
+   "text": "머리가 빙글 돌았어.",
+   "en": "My head was spinning.",
+   "ko": "머리가 빙글 돌았어.",
+   "blank": "돌았어"
+  }
+ ],
+ "w|돌리다": [
+  {
+   "text": "의자 이쪽으로 돌려 줘.",
+   "en": "Turn the chair this way.",
+   "ko": "의자 이쪽으로 돌려 줘.",
+   "blank": "돌려"
+  },
+  {
+   "text": "화면 가로로 돌렸어.",
+   "en": "I turned the screen sideways.",
+   "ko": "화면 가로로 돌렸어.",
+   "blank": "돌렸어"
+  }
+ ],
+ "w|돌아가다": [
+  {
+   "text": "이제 집에 돌아가자.",
+   "en": "Let's head home now.",
+   "ko": "이제 집에 돌아가자.",
+   "blank": "돌아가자"
+  },
+  {
+   "text": "본가로 돌아갔어.",
+   "en": "They went back to their family home.",
+   "ko": "본가로 돌아갔어.",
+   "blank": "돌아갔어"
+  }
+ ],
+ "w|돌아오다": [
+  {
+   "text": "저녁 전에 돌아올게.",
+   "en": "I'll be back before evening.",
+   "ko": "저녁 전에 돌아올게.",
+   "blank": "돌아올게"
+  },
+  {
+   "text": "어제 출장에서 돌아왔어.",
+   "en": "I got back from a business trip yesterday.",
+   "ko": "어제 출장에서 돌아왔어.",
+   "blank": "돌아왔어"
+  }
+ ],
+ "w|돕다": [
+  {
+   "text": "짐 좀 도와 줘.",
+   "en": "Help me with the bags.",
+   "ko": "짐 좀 도와 줘.",
+   "blank": "도와"
+  },
+  {
+   "text": "어제 정말 도와줬어.",
+   "en": "You really helped me yesterday.",
+   "ko": "어제 정말 도와줬어.",
+   "blank": "도와줬어"
+  }
+ ],
+ "w|동생": [
+  {
+   "text": "동생 학원 데려다 줘야 해.",
+   "en": "I have to drop my younger sibling off at class.",
+   "ko": "동생 학원 데려다 줘야 해.",
+   "blank": "동생"
+  },
+  {
+   "text": "동생이 내 옷 또 입었어.",
+   "en": "My younger sibling wore my clothes again.",
+   "ko": "동생이 내 옷 또 입었어.",
+   "blank": "동생이"
+  }
+ ],
+ "w|동안": [
+  {
+   "text": "회의 동안 자리 비우지 마.",
+   "en": "Don't leave your seat during the meeting.",
+   "ko": "회의 동안 자리 비우지 마.",
+   "blank": "동안"
+  },
+  {
+   "text": "휴가 동안 엄마 집에 있었어.",
+   "en": "I stayed at Mom's during the break.",
+   "ko": "휴가 동안 엄마 집에 있었어.",
+   "blank": "동안"
+  }
+ ],
+ "w|되다": [
+  {
+   "text": "이거 돼?",
+   "en": "Does this work?",
+   "ko": "이거 돼?",
+   "blank": "돼"
+  },
+  {
+   "text": "이제 다 됐어.",
+   "en": "Now it's all done.",
+   "ko": "이제 다 됐어.",
+   "blank": "됐어"
+  }
+ ],
+ "w|두다": [
+  {
+   "text": "우산 현관에 두고 갈게.",
+   "en": "I'll leave the umbrella by the door.",
+   "ko": "우산 현관에 두고 갈게.",
+   "blank": "두고"
+  },
+  {
+   "text": "열쇠 어디 뒀어?",
+   "en": "Where did you put the keys?",
+   "ko": "열쇠 어디 뒀어?",
+   "blank": "뒀어"
+  }
+ ],
+ "w|둘": [
+  {
+   "text": "우리 둘이 같이 가자.",
+   "en": "Let's go together, just us two.",
+   "ko": "우리 둘이 같이 가자.",
+   "blank": "둘이"
+  },
+  {
+   "text": "둘 다 좋아.",
+   "en": "I like both.",
+   "ko": "둘 다 좋아.",
+   "blank": "둘"
+  }
+ ],
+ "w|뒤": [
+  {
+   "text": "내 뒤 좀 봐 줘.",
+   "en": "Watch what's behind me.",
+   "ko": "내 뒤 좀 봐 줘.",
+   "blank": "뒤"
+  },
+  {
+   "text": "나무 뒤에 숨었어.",
+   "en": "I hid behind the tree.",
+   "ko": "나무 뒤에 숨었어.",
+   "blank": "뒤에"
+  }
+ ],
+ "w|듣다": [
+  {
+   "text": "좋은 소식 들었어요.",
+   "en": "I heard good news.",
+   "ko": "좋은 소식 들었어요.",
+   "blank": "들었어요"
+  },
+  {
+   "text": "내 말 좀 들어 봐.",
+   "en": "Just hear me out.",
+   "ko": "내 말 좀 들어 봐.",
+   "blank": "들어"
+  }
+ ],
+ "w|들다": [
+  {
+   "text": "이 상자 잠깐만 들어 줘.",
+   "en": "Hold this box for a second.",
+   "ko": "이 상자 잠깐만 들어 줘.",
+   "blank": "들어"
+  },
+  {
+   "text": "겨울엔 난방비가 많이 들어.",
+   "en": "Heating costs a lot in the winter.",
+   "ko": "겨울엔 난방비가 많이 들어.",
+   "blank": "들어"
+  }
+ ],
+ "w|들어가다": [
+  {
+   "text": "추우니까 얼른 들어가.",
+   "en": "It's cold, so go in quickly.",
+   "ko": "추우니까 얼른 들어가.",
+   "blank": "들어가"
+  },
+  {
+   "text": "애들은 집에 들어갔어.",
+   "en": "The kids have gone inside.",
+   "ko": "애들은 집에 들어갔어.",
+   "blank": "들어갔어"
+  }
+ ],
+ "w|들어오다": [
+  {
+   "text": "문 열고 들어와.",
+   "en": "Open the door and come in.",
+   "ko": "문 열고 들어와.",
+   "blank": "들어와"
+  },
+  {
+   "text": "고양이가 몰래 들어왔어.",
+   "en": "The cat snuck in.",
+   "ko": "고양이가 몰래 들어왔어.",
+   "blank": "들어왔어"
+  }
+ ],
+ "w|따르다": [
+  {
+   "text": "그대로 따라 해 봐.",
+   "en": "Try doing it just like that.",
+   "ko": "그대로 따라 해 봐.",
+   "blank": "따라"
+  },
+  {
+   "text": "그 충고대로 따랐어.",
+   "en": "I followed that advice.",
+   "ko": "그 충고대로 따랐어.",
+   "blank": "따랐어"
+  }
+ ],
+ "w|딱": [
+  {
+   "text": "양이 딱 좋네.",
+   "en": "The amount is just right.",
+   "ko": "양이 딱 좋네.",
+   "blank": "딱"
+  },
+  {
+   "text": "지금이 딱 좋아.",
+   "en": "Now is just the right time.",
+   "ko": "지금이 딱 좋아.",
+   "blank": "딱"
+  }
+ ],
+ "w|딸": [
+  {
+   "text": "딸 생일 케이크 시켰어.",
+   "en": "I ordered a cake for my daughter's birthday.",
+   "ko": "딸 생일 케이크 시켰어.",
+   "blank": "딸"
+  },
+  {
+   "text": "딸이 피아노를 잘 쳐.",
+   "en": "My daughter plays the piano well.",
+   "ko": "딸이 피아노를 잘 쳐.",
+   "blank": "딸이"
+  }
+ ],
+ "w|때": [
+  {
+   "text": "밥 먹을 때 불러 줘.",
+   "en": "Call me when it's time to eat.",
+   "ko": "밥 먹을 때 불러 줘.",
+   "blank": "때"
+  },
+  {
+   "text": "급할 때는 택시 타.",
+   "en": "Take a taxi when you're in a hurry.",
+   "ko": "급할 때는 택시 타.",
+   "blank": "때는"
+  }
+ ],
+ "w|때문": [
+  {
+   "text": "너 때문에 잠을 설쳤어.",
+   "en": "I couldn't sleep because of you.",
+   "ko": "너 때문에 잠을 설쳤어.",
+   "blank": "때문에"
+  },
+  {
+   "text": "비 때문에 행사가 밀렸어.",
+   "en": "The event was delayed because of the rain.",
+   "ko": "비 때문에 행사가 밀렸어.",
+   "blank": "때문에"
+  }
+ ],
+ "w|떠나다": [
+  {
+   "text": "기차 곧 떠나.",
+   "en": "The train is leaving soon.",
+   "ko": "기차 곧 떠나.",
+   "blank": "떠나"
+  },
+  {
+   "text": "새벽에 혼자 떠났어.",
+   "en": "I left alone at dawn.",
+   "ko": "새벽에 혼자 떠났어.",
+   "blank": "떠났어"
+  }
+ ],
+ "w|떨어뜨리다": [
+  {
+   "text": "휴대폰 떨어뜨렸어.",
+   "en": "I dropped my phone.",
+   "ko": "휴대폰 떨어뜨렸어.",
+   "blank": "떨어뜨렸어"
+  },
+  {
+   "text": "숟가락 또 떨어뜨릴 뻔했어.",
+   "en": "I almost dropped the spoon again.",
+   "ko": "숟가락 또 떨어뜨릴 뻔했어.",
+   "blank": "떨어뜨릴"
+  }
+ ],
+ "w|떨어지다": [
+  {
+   "text": "단추가 떨어졌어.",
+   "en": "A button fell off.",
+   "ko": "단추가 떨어졌어.",
+   "blank": "떨어졌어"
+  },
+  {
+   "text": "연락이 요즘 떨어졌네.",
+   "en": "We've lost touch lately.",
+   "ko": "연락이 요즘 떨어졌네.",
+   "blank": "떨어졌네"
+  }
+ ],
+ "w|또": [
+  {
+   "text": "또 왔어요.",
+   "en": "I came again.",
+   "ko": "또 왔어요.",
+   "blank": "또"
+  },
+  {
+   "text": "또 지각이야?",
+   "en": "Late again?",
+   "ko": "또 지각이야?",
+   "blank": "또"
+  }
+ ],
+ "w|뛰다": [
+  {
+   "text": "지각해서 뛰었어.",
+   "en": "I ran because I was late.",
+   "ko": "지각해서 뛰었어.",
+   "blank": "뛰었어"
+  },
+  {
+   "text": "같이 한강에서 뛸래?",
+   "en": "Want to go for a run by the Han River?",
+   "ko": "같이 한강에서 뛸래?",
+   "blank": "뛸래"
+  }
+ ],
+ "w|마시다": [
+  {
+   "text": "물부터 마셔.",
+   "en": "Drink some water first.",
+   "ko": "물부터 마셔.",
+   "blank": "마셔"
+  },
+  {
+   "text": "커피 마셨어?",
+   "en": "Did you have coffee?",
+   "ko": "커피 마셨어?",
+   "blank": "마셨어"
+  }
+ ],
+ "w|마음": [
+  {
+   "text": "마음 단단히 먹어.",
+   "en": "Steel yourself.",
+   "ko": "마음 단단히 먹어.",
+   "blank": "마음"
+  },
+  {
+   "text": "마음이 좀 복잡해.",
+   "en": "My mind is a bit of a mess.",
+   "ko": "마음이 좀 복잡해.",
+   "blank": "마음이"
+  }
+ ],
+ "w|마지막": [
+  {
+   "text": "마지막 열차야, 뛰어.",
+   "en": "It's the last train. Run.",
+   "ko": "마지막 열차야, 뛰어.",
+   "blank": "마지막"
+  },
+  {
+   "text": "이게 마지막 기회야.",
+   "en": "This is the last chance.",
+   "ko": "이게 마지막 기회야.",
+   "blank": "마지막"
+  }
+ ],
+ "w|마치": [
+  {
+   "text": "마치 꿈꾸는 것 같아요.",
+   "en": "It's like I'm dreaming.",
+   "ko": "마치 꿈꾸는 것 같아요.",
+   "blank": "마치"
+  },
+  {
+   "text": "마치 봄날 같아.",
+   "en": "It feels just like a spring day.",
+   "ko": "마치 봄날 같아.",
+   "blank": "마치"
+  }
+ ],
+ "w|만나다": [
+  {
+   "text": "오늘 친구 만났어요.",
+   "en": "I met a friend today.",
+   "ko": "오늘 친구 만났어요.",
+   "blank": "만났어요"
+  },
+  {
+   "text": "주말에 만날래?",
+   "en": "Want to meet this weekend?",
+   "ko": "주말에 만날래?",
+   "blank": "만날래"
+  }
+ ],
+ "w|만들다": [
+  {
+   "text": "제가 직접 만들었어요.",
+   "en": "I made it myself.",
+   "ko": "제가 직접 만들었어요.",
+   "blank": "만들었어요"
+  },
+  {
+   "text": "같이 김치 만들어 볼까?",
+   "en": "Want to make kimchi together?",
+   "ko": "같이 김치 만들어 볼까?",
+   "blank": "만들어"
+  }
+ ],
+ "w|만약": [
+  {
+   "text": "만약 비 오면 말해.",
+   "en": "Let me know if it rains.",
+   "ko": "만약 비 오면 말해.",
+   "blank": "만약"
+  },
+  {
+   "text": "만약 시간 있으면 와.",
+   "en": "Come if you have time.",
+   "ko": "만약 시간 있으면 와.",
+   "blank": "만약"
+  }
+ ],
+ "w|많다": [
+  {
+   "text": "사람이 정말 많아요.",
+   "en": "There are so many people.",
+   "ko": "사람이 정말 많아요.",
+   "blank": "많아요"
+  },
+  {
+   "text": "할 일이 많았어요.",
+   "en": "I had a lot to do.",
+   "ko": "할 일이 많았어요.",
+   "blank": "많았어요"
+  }
+ ],
+ "w|많이": [
+  {
+   "text": "많이 먹었어요.",
+   "en": "I ate a lot.",
+   "ko": "많이 먹었어요.",
+   "blank": "많이"
+  },
+  {
+   "text": "오늘 많이 바빴어.",
+   "en": "I was very busy today.",
+   "ko": "오늘 많이 바빴어.",
+   "blank": "많이"
+  }
+ ],
+ "w|말": [
+  {
+   "text": "그 말 진심이야?",
+   "en": "Did you mean that?",
+   "ko": "그 말 진심이야?",
+   "blank": "말"
+  },
+  {
+   "text": "말은 쉬운 거야.",
+   "en": "Talk is easy.",
+   "ko": "말은 쉬운 거야.",
+   "blank": "말은"
+  }
+ ],
+ "w|말하다": [
+  {
+   "text": "까놓고 말해 봐.",
+   "en": "Just say it straight.",
+   "ko": "까놓고 말해 봐.",
+   "blank": "말해"
+  },
+  {
+   "text": "걔가 먼저 말했어.",
+   "en": "They said it first.",
+   "ko": "걔가 먼저 말했어.",
+   "blank": "말했어"
+  }
+ ],
+ "w|맞다": [
+  {
+   "text": "맞아요, 저도 그렇게 생각해요.",
+   "en": "That's right, I think so too.",
+   "ko": "맞아요, 저도 그렇게 생각해요.",
+   "blank": "맞아요"
+  },
+  {
+   "text": "네가 한 말이 맞아.",
+   "en": "What you said is correct.",
+   "ko": "네가 한 말이 맞아.",
+   "blank": "맞아"
+  }
+ ],
+ "w|맡다": [
+  {
+   "text": "가방 좀 맡아 줘.",
+   "en": "Watch my bag for a bit.",
+   "ko": "가방 좀 맡아 줘.",
+   "blank": "맡아"
+  },
+  {
+   "text": "오늘 사회는 내가 맡았어.",
+   "en": "I'm the emcee today.",
+   "ko": "오늘 사회는 내가 맡았어.",
+   "blank": "맡았어"
+  }
+ ],
+ "w|매우": [
+  {
+   "text": "매우 반가워요.",
+   "en": "I'm very glad to see you.",
+   "ko": "매우 반가워요.",
+   "blank": "매우"
+  },
+  {
+   "text": "매우 조심해야 해.",
+   "en": "You have to be very careful.",
+   "ko": "매우 조심해야 해.",
+   "blank": "매우"
+  }
+ ],
+ "w|매일": [
+  {
+   "text": "저는 매일 운동해요.",
+   "en": "I exercise every day.",
+   "ko": "저는 매일 운동해요.",
+   "blank": "매일"
+  },
+  {
+   "text": "매일 같은 길이야.",
+   "en": "It's the same road every day.",
+   "ko": "매일 같은 길이야.",
+   "blank": "매일"
+  }
+ ],
+ "w|먹다": [
+  {
+   "text": "점심 아직 안 먹었어요.",
+   "en": "I haven't eaten lunch yet.",
+   "ko": "점심 아직 안 먹었어요.",
+   "blank": "먹었어요"
+  },
+  {
+   "text": "뭐 먹을까, 배고파.",
+   "en": "What should we eat? I'm hungry.",
+   "ko": "뭐 먹을까, 배고파.",
+   "blank": "먹을까"
+  }
+ ],
+ "w|먼저": [
+  {
+   "text": "먼저 시작할게.",
+   "en": "I'll start first.",
+   "ko": "먼저 시작할게.",
+   "blank": "먼저"
+  },
+  {
+   "text": "먼저 시작할게요.",
+   "en": "I'll start first.",
+   "ko": "먼저 시작할게요.",
+   "blank": "먼저"
+  }
+ ],
+ "w|멈추다": [
+  {
+   "text": "여기서 잠깐 멈춰.",
+   "en": "Stop here for a second.",
+   "ko": "여기서 잠깐 멈춰.",
+   "blank": "멈춰"
+  },
+  {
+   "text": "비가 드디어 멈췄어.",
+   "en": "The rain finally stopped.",
+   "ko": "비가 드디어 멈췄어.",
+   "blank": "멈췄어"
+  }
+ ],
+ "w|멋지다": [
+  {
+   "text": "오늘 옷차림 멋지네.",
+   "en": "Your outfit looks great today.",
+   "ko": "오늘 옷차림 멋지네.",
+   "blank": "멋지네"
+  },
+  {
+   "text": "무대가 정말 멋졌어요.",
+   "en": "The stage looked really great.",
+   "ko": "무대가 정말 멋졌어요.",
+   "blank": "멋졌어요"
+  }
+ ],
+ "w|몇": [
+  {
+   "text": "몇 시에 만날까?",
+   "en": "What time should we meet?",
+   "ko": "몇 시에 만날까?",
+   "blank": "몇"
+  },
+  {
+   "text": "몇 명 왔어?",
+   "en": "How many people came?",
+   "ko": "몇 명 왔어?",
+   "blank": "몇"
+  }
+ ],
+ "w|모두": [
+  {
+   "text": "모두 이쪽으로 모여.",
+   "en": "Everyone, come over here.",
+   "ko": "모두 이쪽으로 모여.",
+   "blank": "모두"
+  },
+  {
+   "text": "모두 무사히 도착했대.",
+   "en": "I hear everyone arrived safely.",
+   "ko": "모두 무사히 도착했대.",
+   "blank": "모두"
+  }
+ ],
+ "w|모든": [
+  {
+   "text": "모든 게 내 탓이야.",
+   "en": "It's all my fault.",
+   "ko": "모든 게 내 탓이야.",
+   "blank": "모든"
+  },
+  {
+   "text": "모든 사람한테 말할 순 없지.",
+   "en": "I can't tell everybody.",
+   "ko": "모든 사람한테 말할 순 없지.",
+   "blank": "모든"
+  }
+ ],
+ "w|모레": [
+  {
+   "text": "모레 시험인 거 알지?",
+   "en": "You know the test is the day after tomorrow, right?",
+   "ko": "모레 시험인 거 알지?",
+   "blank": "모레"
+  },
+  {
+   "text": "모레까지 내면 돼.",
+   "en": "It just has to be in by the day after tomorrow.",
+   "ko": "모레까지 내면 돼.",
+   "blank": "모레까지"
+  }
+ ],
+ "w|모르다": [
+  {
+   "text": "저도 잘 몰라요.",
+   "en": "I don't really know either.",
+   "ko": "저도 잘 몰라요.",
+   "blank": "몰라요"
+  },
+  {
+   "text": "그 집 주소 몰라.",
+   "en": "I don't know that place's address.",
+   "ko": "그 집 주소 몰라.",
+   "blank": "몰라"
+  }
+ ],
+ "w|무슨": [
+  {
+   "text": "무슨 일 있어?",
+   "en": "What's going on?",
+   "ko": "무슨 일 있어?",
+   "blank": "무슨"
+  },
+  {
+   "text": "무슨 생각해?",
+   "en": "What are you thinking?",
+   "ko": "무슨 생각해?",
+   "blank": "무슨"
+  }
+ ],
+ "w|문": [
+  {
+   "text": "문 좀 열어 줘.",
+   "en": "Open the door for me.",
+   "ko": "문 좀 열어 줘.",
+   "blank": "문"
+  },
+  {
+   "text": "문 잠겼어?",
+   "en": "Is the door locked?",
+   "ko": "문 잠겼어?",
+   "blank": "문"
+  }
+ ],
+ "w|문제": [
+  {
+   "text": "문제 생기면 바로 말해.",
+   "en": "Tell me right away if there's a problem.",
+   "ko": "문제 생기면 바로 말해.",
+   "blank": "문제"
+  },
+  {
+   "text": "별 문제 아니야.",
+   "en": "It's not really a problem.",
+   "ko": "별 문제 아니야.",
+   "blank": "문제"
+  }
+ ],
+ "w|묻다": [
+  {
+   "text": "길 좀 물어봐도 돼?",
+   "en": "Can I ask you the way?",
+   "ko": "길 좀 물어봐도 돼?",
+   "blank": "물어봐도"
+  },
+  {
+   "text": "친구한테 먼저 물었어.",
+   "en": "I asked a friend first.",
+   "ko": "친구한테 먼저 물었어.",
+   "blank": "물었어"
+  }
+ ],
+ "w|물론": [
+  {
+   "text": "물론 네가 맞아.",
+   "en": "Of course you're right.",
+   "ko": "물론 네가 맞아.",
+   "blank": "물론"
+  },
+  {
+   "text": "물론 데려가도 돼.",
+   "en": "Of course you can bring them.",
+   "ko": "물론 데려가도 돼.",
+   "blank": "물론"
+  }
+ ],
+ "w|뭐": [
+  {
+   "text": "뭐 먹고 싶어?",
+   "en": "What do you want to eat?",
+   "ko": "뭐 먹고 싶어?",
+   "blank": "뭐"
+  },
+  {
+   "text": "지금 뭐 마셔?",
+   "en": "What are you drinking?",
+   "ko": "지금 뭐 마셔?",
+   "blank": "뭐"
+  }
+ ],
+ "w|뭔가": [
+  {
+   "text": "뭔가 이상해.",
+   "en": "Something is strange.",
+   "ko": "뭔가 이상해.",
+   "blank": "뭔가"
+  },
+  {
+   "text": "뭔가 생각났어.",
+   "en": "Something came to mind.",
+   "ko": "뭔가 생각났어.",
+   "blank": "뭔가"
+  }
+ ],
+ "w|미안하다": [
+  {
+   "text": "정말 미안해요.",
+   "en": "I'm really sorry.",
+   "ko": "정말 미안해요.",
+   "blank": "미안해요"
+  },
+  {
+   "text": "늦어서 미안해.",
+   "en": "Sorry for being late.",
+   "ko": "늦어서 미안해.",
+   "blank": "미안해"
+  }
+ ],
+ "w|믿다": [
+  {
+   "text": "이번만 믿어 볼게.",
+   "en": "I'll trust you just this once.",
+   "ko": "이번만 믿어 볼게.",
+   "blank": "믿어"
+  },
+  {
+   "text": "그 말은 못 믿겠어.",
+   "en": "I can't believe that.",
+   "ko": "그 말은 못 믿겠어.",
+   "blank": "믿겠어"
+  }
+ ],
+ "w|밀다": [
+  {
+   "text": "이 문 같이 밀어 줘.",
+   "en": "Push this door with me.",
+   "ko": "이 문 같이 밀어 줘.",
+   "blank": "밀어"
+  },
+  {
+   "text": "누가 등을 밀었어.",
+   "en": "Someone pushed my back.",
+   "ko": "누가 등을 밀었어.",
+   "blank": "밀었어"
+  }
+ ],
+ "w|바꾸다": [
+  {
+   "text": "창가 쪽으로 바꿀래?",
+   "en": "Want to switch to the window side?",
+   "ko": "창가 쪽으로 바꿀래?",
+   "blank": "바꿀래"
+  },
+  {
+   "text": "머리 스타일 바꿨어.",
+   "en": "I changed my hairstyle.",
+   "ko": "머리 스타일 바꿨어.",
+   "blank": "바꿨어"
+  }
+ ],
+ "w|바라다": [
+  {
+   "text": "다들 건강하길 바라.",
+   "en": "I hope everyone stays healthy.",
+   "ko": "다들 건강하길 바라.",
+   "blank": "바라"
+  },
+  {
+   "text": "시험 잘 보길 바랄게.",
+   "en": "I hope you do well on the exam.",
+   "ko": "시험 잘 보길 바랄게.",
+   "blank": "바랄게"
+  }
+ ],
+ "w|바로": [
+  {
+   "text": "바로 그 사람이었어.",
+   "en": "That was the very person.",
+   "ko": "바로 그 사람이었어.",
+   "blank": "바로"
+  },
+  {
+   "text": "출구 바로 앞이야.",
+   "en": "It's right in front of the exit.",
+   "ko": "출구 바로 앞이야.",
+   "blank": "바로"
+  }
+ ],
+ "w|밖": [
+  {
+   "text": "밖에 눈 오니까 우산 써.",
+   "en": "It's snowing outside, so use an umbrella.",
+   "ko": "밖에 눈 오니까 우산 써.",
+   "blank": "밖에"
+  },
+  {
+   "text": "나 아직 밖이야.",
+   "en": "I'm still outside.",
+   "ko": "나 아직 밖이야.",
+   "blank": "밖이야"
+  }
+ ],
+ "w|받다": [
+  {
+   "text": "선물 받았어요.",
+   "en": "I got a present.",
+   "ko": "선물 받았어요.",
+   "blank": "받았어요"
+  },
+  {
+   "text": "칭찬 받아서 좋았어.",
+   "en": "It felt good to be praised.",
+   "ko": "칭찬 받아서 좋았어.",
+   "blank": "받아서"
+  }
+ ],
+ "w|밤": [
+  {
+   "text": "오늘 밤은 늦게까지 일해.",
+   "en": "I'm working late tonight.",
+   "ko": "오늘 밤은 늦게까지 일해.",
+   "blank": "밤은"
+  },
+  {
+   "text": "밤 기차를 탔어.",
+   "en": "I took the night train.",
+   "ko": "밤 기차를 탔어.",
+   "blank": "밤"
+  }
+ ],
+ "w|방금": [
+  {
+   "text": "방금 집에 도착했어요.",
+   "en": "I just arrived home.",
+   "ko": "방금 집에 도착했어요.",
+   "blank": "방금"
+  },
+  {
+   "text": "방금 전화 왔어요.",
+   "en": "I just got a call.",
+   "ko": "방금 전화 왔어요.",
+   "blank": "방금"
+  }
+ ],
+ "w|배우다": [
+  {
+   "text": "기타 배우고 있어.",
+   "en": "I'm learning guitar.",
+   "ko": "기타 배우고 있어.",
+   "blank": "배우고"
+  },
+  {
+   "text": "오늘 한 곡 배웠어요.",
+   "en": "I learned one song today.",
+   "ko": "오늘 한 곡 배웠어요.",
+   "blank": "배웠어요"
+  }
+ ],
+ "w|버리다": [
+  {
+   "text": "지난 일은 그냥 버려.",
+   "en": "Just let the past go.",
+   "ko": "지난 일은 그냥 버려.",
+   "blank": "버려"
+  },
+  {
+   "text": "상한 우유 버렸어.",
+   "en": "I threw out the spoiled milk.",
+   "ko": "상한 우유 버렸어.",
+   "blank": "버렸어"
+  }
+ ],
+ "w|번": [
+  {
+   "text": "세 번은 너무 많아.",
+   "en": "Three times is too many.",
+   "ko": "세 번은 너무 많아.",
+   "blank": "번은"
+  },
+  {
+   "text": "몇 번을 확인한 거야?",
+   "en": "How many times did you check?",
+   "ko": "몇 번을 확인한 거야?",
+   "blank": "번을"
+  }
+ ],
+ "w|벌써": [
+  {
+   "text": "벌써 밥 먹었어?",
+   "en": "You already ate?",
+   "ko": "벌써 밥 먹었어?",
+   "blank": "벌써"
+  },
+  {
+   "text": "벌써 돌아가려고?",
+   "en": "You're heading back already?",
+   "ko": "벌써 돌아가려고?",
+   "blank": "벌써"
+  }
+ ],
+ "w|벗다": [
+  {
+   "text": "신발 벗고 들어와.",
+   "en": "Take your shoes off and come in.",
+   "ko": "신발 벗고 들어와.",
+   "blank": "벗고"
+  },
+  {
+   "text": "모자 벗을래?",
+   "en": "Will you take your hat off?",
+   "ko": "모자 벗을래?",
+   "blank": "벗을래"
+  }
+ ],
+ "w|변호사": [
+  {
+   "text": "변호사랑 내일 상담이야.",
+   "en": "I have a meeting with the lawyer tomorrow.",
+   "ko": "변호사랑 내일 상담이야.",
+   "blank": "변호사랑"
+  },
+  {
+   "text": "변호사가 계약서 읽어 봤어.",
+   "en": "The lawyer read the contract.",
+   "ko": "변호사가 계약서 읽어 봤어.",
+   "blank": "변호사가"
+  }
+ ],
+ "w|별로": [
+  {
+   "text": "이 영화는 별로 재미없어요.",
+   "en": "This movie is not really fun.",
+   "ko": "이 영화는 별로 재미없어요.",
+   "blank": "별로"
+  },
+  {
+   "text": "별로 안 좋아해요.",
+   "en": "I don't really like it.",
+   "ko": "별로 안 좋아해요.",
+   "blank": "별로"
+  }
+ ],
+ "w|보내다": [
+  {
+   "text": "사진 보내 줄래?",
+   "en": "Will you send me the photo?",
+   "ko": "사진 보내 줄래?",
+   "blank": "보내"
+  },
+  {
+   "text": "축하 카드 보냈어.",
+   "en": "I sent a congratulations card.",
+   "ko": "축하 카드 보냈어.",
+   "blank": "보냈어"
+  }
+ ],
+ "w|보다": [
+  {
+   "text": "영화 봤어.",
+   "en": "I watched a movie.",
+   "ko": "영화 봤어.",
+   "blank": "봤어"
+  },
+  {
+   "text": "창밖 한번 봐.",
+   "en": "Take a look outside.",
+   "ko": "창밖 한번 봐.",
+   "blank": "봐"
+  }
+ ],
+ "w|보여주다": [
+  {
+   "text": "새 신발 보여 줘.",
+   "en": "Show me the new shoes.",
+   "ko": "새 신발 보여 줘.",
+   "blank": "보여"
+  },
+  {
+   "text": "숙제 엄마한테 보여줬어.",
+   "en": "I showed Mom my homework.",
+   "ko": "숙제 엄마한테 보여줬어.",
+   "blank": "보여줬어"
+  }
+ ],
+ "w|보이다": [
+  {
+   "text": "밖이 잘 안 보여요.",
+   "en": "I can’t see outside well.",
+   "ko": "밖이 잘 안 보여요.",
+   "blank": "보여요"
+  },
+  {
+   "text": "밖에 아무것도 안 보여요.",
+   "en": "I can't see anything outside.",
+   "ko": "밖에 아무것도 안 보여요.",
+   "blank": "보여요"
+  }
+ ],
+ "w|부르다": [
+  {
+   "text": "내 이름 불러 봐.",
+   "en": "Try saying my name.",
+   "ko": "내 이름 불러 봐.",
+   "blank": "불러"
+  },
+  {
+   "text": "택시 불렀어.",
+   "en": "I called a taxi.",
+   "ko": "택시 불렀어.",
+   "blank": "불렀어"
+  }
+ ],
+ "w|부모": [
+  {
+   "text": "부모 허락 받았어?",
+   "en": "Did you get your parents' permission?",
+   "ko": "부모 허락 받았어?",
+   "blank": "부모"
+  },
+  {
+   "text": "부모님이 주말에 오신대.",
+   "en": "I hear my parents are coming this weekend.",
+   "ko": "부모님이 주말에 오신대.",
+   "blank": "부모님이"
+  }
+ ],
+ "w|부인": [
+  {
+   "text": "부인이 먼저 가셨어요.",
+   "en": "Your wife left first.",
+   "ko": "부인이 먼저 가셨어요.",
+   "blank": "부인이"
+  },
+  {
+   "text": "부인도 오시나요?",
+   "en": "Is your wife coming too?",
+   "ko": "부인도 오시나요?",
+   "blank": "부인도"
+  }
+ ],
+ "w|분": [
+  {
+   "text": "오 분 정도 늦을게.",
+   "en": "I'll be about five minutes late.",
+   "ko": "오 분 정도 늦을게.",
+   "blank": "분"
+  },
+  {
+   "text": "십 분만 기다려 줘.",
+   "en": "Wait just ten minutes.",
+   "ko": "십 분만 기다려 줘.",
+   "blank": "분만"
+  }
+ ],
+ "w|분명히": [
+  {
+   "text": "분명히 뭔가 이상해요.",
+   "en": "Something is definitely strange.",
+   "ko": "분명히 뭔가 이상해요.",
+   "blank": "분명히"
+  },
+  {
+   "text": "분명히 여기 뒀는데.",
+   "en": "I definitely put it here.",
+   "ko": "분명히 여기 뒀는데.",
+   "blank": "분명히"
+  }
+ ],
+ "w|붙다": [
+  {
+   "text": "껌이 신발에 붙었어.",
+   "en": "The gum stuck to my shoe.",
+   "ko": "껌이 신발에 붙었어.",
+   "blank": "붙었어"
+  },
+  {
+   "text": "불이 잘 안 붙네.",
+   "en": "The fire won't catch.",
+   "ko": "불이 잘 안 붙네.",
+   "blank": "붙네"
+  }
+ ],
+ "w|붙이다": [
+  {
+   "text": "테이프 여기 붙여.",
+   "en": "Stick the tape here.",
+   "ko": "테이프 여기 붙여.",
+   "blank": "붙여"
+  },
+  {
+   "text": "포스터 벽에 붙였어.",
+   "en": "I stuck the poster on the wall.",
+   "ko": "포스터 벽에 붙였어.",
+   "blank": "붙였어"
+  }
+ ],
+ "w|빌리다": [
+  {
+   "text": "충전기 잠깐 빌려 줘.",
+   "en": "Lend me your charger for a second.",
+   "ko": "충전기 잠깐 빌려 줘.",
+   "blank": "빌려"
+  },
+  {
+   "text": "이 책 도서관에서 빌렸어.",
+   "en": "I borrowed this book from the library.",
+   "ko": "이 책 도서관에서 빌렸어.",
+   "blank": "빌렸어"
+  }
+ ],
+ "w|빨리": [
+  {
+   "text": "빨리 대답 좀 해.",
+   "en": "Answer me, quick.",
+   "ko": "빨리 대답 좀 해.",
+   "blank": "빨리"
+  },
+  {
+   "text": "빨리 씻고 나와.",
+   "en": "Wash up and come out, quick.",
+   "ko": "빨리 씻고 나와.",
+   "blank": "빨리"
+  }
+ ],
+ "w|빼다": [
+  {
+   "text": "그 농담은 빼자.",
+   "en": "Let's drop that joke.",
+   "ko": "그 농담은 빼자.",
+   "blank": "빼자"
+  },
+  {
+   "text": "명단에서 빼 줘.",
+   "en": "Take me off the list.",
+   "ko": "명단에서 빼 줘.",
+   "blank": "빼"
+  }
+ ],
+ "w|사다": [
+  {
+   "text": "가는 길에 우유 사 올게.",
+   "en": "I'll buy milk on the way.",
+   "ko": "가는 길에 우유 사 올게.",
+   "blank": "사"
+  },
+  {
+   "text": "이 빵 어디서 샀어?",
+   "en": "Where did you buy this bread?",
+   "ko": "이 빵 어디서 샀어?",
+   "blank": "샀어"
+  }
+ ],
+ "w|사람": [
+  {
+   "text": "사람 많아요.",
+   "en": "There are a lot of people.",
+   "ko": "사람 많아요.",
+   "blank": "사람"
+  },
+  {
+   "text": "저 사람 알아요?",
+   "en": "Do you know that person?",
+   "ko": "저 사람 알아요?",
+   "blank": "사람"
+  }
+ ],
+ "w|사랑": [
+  {
+   "text": "요즘 사랑 노래만 들어.",
+   "en": "These days I only listen to love songs.",
+   "ko": "요즘 사랑 노래만 들어.",
+   "blank": "사랑"
+  },
+  {
+   "text": "사랑이 쉬운 일은 아니야.",
+   "en": "Love isn't an easy thing.",
+   "ko": "사랑이 쉬운 일은 아니야.",
+   "blank": "사랑이"
+  }
+ ],
+ "w|사랑하다": [
+  {
+   "text": "나 너 정말 사랑해.",
+   "en": "I really love you.",
+   "ko": "나 너 정말 사랑해.",
+   "blank": "사랑해"
+  },
+  {
+   "text": "엄마, 사랑해요.",
+   "en": "Mom, I love you.",
+   "ko": "엄마, 사랑해요.",
+   "blank": "사랑해요"
+  }
+ ],
+ "w|사실": [
+  {
+   "text": "사실 나 그 얘기 몰랐어.",
+   "en": "Actually, I didn't know about that.",
+   "ko": "사실 나 그 얘기 몰랐어.",
+   "blank": "사실"
+  },
+  {
+   "text": "사실은 아직 말 못 했어.",
+   "en": "The truth is, I still haven't said it.",
+   "ko": "사실은 아직 말 못 했어.",
+   "blank": "사실은"
+  }
+ ],
+ "w|사장": [
+  {
+   "text": "사장님이 잠깐 보자고 하셔.",
+   "en": "The boss wants to see me for a minute.",
+   "ko": "사장님이 잠깐 보자고 하셔.",
+   "blank": "사장님이"
+  },
+  {
+   "text": "사장 오늘 기분이 안 좋아.",
+   "en": "The boss is in a bad mood today.",
+   "ko": "사장 오늘 기분이 안 좋아.",
+   "blank": "사장"
+  }
+ ],
+ "w|사촌": [
+  {
+   "text": "사촌이 결혼한대.",
+   "en": "I hear my cousin's getting married.",
+   "ko": "사촌이 결혼한대.",
+   "blank": "사촌이"
+  },
+  {
+   "text": "사촌 동생이 서울에 올라왔어.",
+   "en": "My younger cousin came up to Seoul.",
+   "ko": "사촌 동생이 서울에 올라왔어.",
+   "blank": "사촌"
+  }
+ ],
+ "w|살다": [
+  {
+   "text": "이 동네에서 살아요.",
+   "en": "I live in this neighborhood.",
+   "ko": "이 동네에서 살아요.",
+   "blank": "살아요"
+  },
+  {
+   "text": "시골에 살고 싶던 참이야.",
+   "en": "I was just wishing I lived in the country.",
+   "ko": "시골에 살고 싶던 참이야.",
+   "blank": "살고"
+  }
+ ],
+ "w|삼촌": [
+  {
+   "text": "삼촌이 용돈 주셨어.",
+   "en": "My uncle gave me some allowance.",
+   "ko": "삼촌이 용돈 주셨어.",
+   "blank": "삼촌이"
+  },
+  {
+   "text": "삼촌 차 타고 가자.",
+   "en": "Let's go in uncle's car.",
+   "ko": "삼촌 차 타고 가자.",
+   "blank": "삼촌"
+  }
+ ],
+ "w|새": [
+  {
+   "text": "새 우산 샀어?",
+   "en": "Did you buy a new umbrella?",
+   "ko": "새 우산 샀어?",
+   "blank": "새"
+  },
+  {
+   "text": "새 학기라 정신없어.",
+   "en": "The new term has me swamped.",
+   "ko": "새 학기라 정신없어.",
+   "blank": "새"
+  }
+ ],
+ "w|새롭다": [
+  {
+   "text": "여기 살아 보니 새롭네.",
+   "en": "Living here, it all feels new.",
+   "ko": "여기 살아 보니 새롭네.",
+   "blank": "새롭네"
+  },
+  {
+   "text": "새로운 소식이 있대.",
+   "en": "I hear there's some news.",
+   "ko": "새로운 소식이 있대.",
+   "blank": "새로운"
+  }
+ ],
+ "w|생각": [
+  {
+   "text": "내 생각엔 그게 나아.",
+   "en": "I think that one is better.",
+   "ko": "내 생각엔 그게 나아.",
+   "blank": "생각엔"
+  },
+  {
+   "text": "생각 없이 대답했어.",
+   "en": "I answered without thinking.",
+   "ko": "생각 없이 대답했어.",
+   "blank": "생각"
+  }
+ ],
+ "w|생각하다": [
+  {
+   "text": "찬찬히 생각해 봐.",
+   "en": "Think it over slowly.",
+   "ko": "찬찬히 생각해 봐.",
+   "blank": "생각해"
+  },
+  {
+   "text": "너는 어떻게 생각해?",
+   "en": "What do you think?",
+   "ko": "너는 어떻게 생각해?",
+   "blank": "생각해"
+  }
+ ],
+ "w|서다": [
+  {
+   "text": "출입구 옆에 서 있어.",
+   "en": "I'm standing by the entrance.",
+   "ko": "출입구 옆에 서 있어.",
+   "blank": "서"
+  },
+  {
+   "text": "밖에 한참 섰어.",
+   "en": "I stood outside for a while.",
+   "ko": "밖에 한참 섰어.",
+   "blank": "섰어"
+  }
+ ],
+ "w|서로": [
+  {
+   "text": "서로 눈치 보지 마.",
+   "en": "Stop watching each other so carefully.",
+   "ko": "서로 눈치 보지 마.",
+   "blank": "서로"
+  },
+  {
+   "text": "서로 시간 맞추자.",
+   "en": "Let's find a time that works for both of us.",
+   "ko": "서로 시간 맞추자.",
+   "blank": "서로"
+  }
+ ],
+ "w|선생님": [
+  {
+   "text": "선생님, 질문 있어도 돼요?",
+   "en": "Teacher, may I ask a question?",
+   "ko": "선생님, 질문 있어도 돼요?",
+   "blank": "선생님"
+  },
+  {
+   "text": "선생님이 오늘 칭찬하셨어.",
+   "en": "The teacher praised me today.",
+   "ko": "선생님이 오늘 칭찬하셨어.",
+   "blank": "선생님이"
+  }
+ ],
+ "w|세": [
+  {
+   "text": "물 세 잔만 줘.",
+   "en": "Just give me three glasses of water.",
+   "ko": "물 세 잔만 줘.",
+   "blank": "세"
+  },
+  {
+   "text": "친구 세 명이 왔어.",
+   "en": "Three friends came.",
+   "ko": "친구 세 명이 왔어.",
+   "blank": "세"
+  }
+ ],
+ "w|세상": [
+  {
+   "text": "세상 진짜 넓다.",
+   "en": "The world is really wide.",
+   "ko": "세상 진짜 넓다.",
+   "blank": "세상"
+  },
+  {
+   "text": "세상에 이런 일이!",
+   "en": "Oh my gosh!",
+   "ko": "세상에 이런 일이!",
+   "blank": "세상에"
+  }
+ ],
+ "w|소녀": [
+  {
+   "text": "그 소녀 바이올린 잘 켜더라.",
+   "en": "That girl plays the violin really well.",
+   "ko": "그 소녀 바이올린 잘 켜더라.",
+   "blank": "소녀"
+  },
+  {
+   "text": "소녀가 상을 받았대.",
+   "en": "I hear the girl got an award.",
+   "ko": "소녀가 상을 받았대.",
+   "blank": "소녀가"
+  }
+ ],
+ "w|소년": [
+  {
+   "text": "그 소년 뉴스에 나왔더라.",
+   "en": "That boy was on the news.",
+   "ko": "그 소년 뉴스에 나왔더라.",
+   "blank": "소년"
+  },
+  {
+   "text": "저 소년이 엄마를 찾는 것 같아.",
+   "en": "I think that boy is looking for his mom.",
+   "ko": "저 소년이 엄마를 찾는 것 같아.",
+   "blank": "소년이"
+  }
+ ],
+ "w|소리": [
+  {
+   "text": "무슨 소리 하는 거야?",
+   "en": "What are you talking about?",
+   "ko": "무슨 소리 하는 거야?",
+   "blank": "소리"
+  },
+  {
+   "text": "옆에서 소리 좀 낮춰.",
+   "en": "Keep it down next to me.",
+   "ko": "옆에서 소리 좀 낮춰.",
+   "blank": "소리"
+  }
+ ],
+ "w|손": [
+  {
+   "text": "손 씻었어?",
+   "en": "Did you wash your hands?",
+   "ko": "손 씻었어?",
+   "blank": "손"
+  },
+  {
+   "text": "손이 시려.",
+   "en": "My hands are cold.",
+   "ko": "손이 시려.",
+   "blank": "손이"
+  }
+ ],
+ "w|손녀": [
+  {
+   "text": "손녀가 그림 그려 줬어.",
+   "en": "My granddaughter drew me a picture.",
+   "ko": "손녀가 그림 그려 줬어.",
+   "blank": "손녀가"
+  },
+  {
+   "text": "손녀 돌잔치가 코앞이야.",
+   "en": "My granddaughter's first birthday is right around the corner.",
+   "ko": "손녀 돌잔치가 코앞이야.",
+   "blank": "손녀"
+  }
+ ],
+ "w|손님": [
+  {
+   "text": "손님, 뭐 드릴까요?",
+   "en": "What can I get for you?",
+   "ko": "손님, 뭐 드릴까요?",
+   "blank": "손님"
+  },
+  {
+   "text": "손님이 많이 들어오셨네.",
+   "en": "A lot of customers just came in.",
+   "ko": "손님이 많이 들어오셨네.",
+   "blank": "손님이"
+  }
+ ],
+ "w|손자": [
+  {
+   "text": "손자가 할머니를 쏙 빼닮았어.",
+   "en": "My grandson looks just like his grandma.",
+   "ko": "손자가 할머니를 쏙 빼닮았어.",
+   "blank": "손자가"
+  },
+  {
+   "text": "손자 보러 갈게.",
+   "en": "I'm going to see my grandson.",
+   "ko": "손자 보러 갈게.",
+   "blank": "손자"
+  }
+ ],
+ "w|수": [
+  {
+   "text": "할 수 있어.",
+   "en": "I can do it.",
+   "ko": "할 수 있어.",
+   "blank": "수"
+  },
+  {
+   "text": "볼 수 있을까?",
+   "en": "Can I see it?",
+   "ko": "볼 수 있을까?",
+   "blank": "수"
+  }
+ ],
+ "w|수술": [
+  {
+   "text": "수술 잘 끝났대.",
+   "en": "I heard the surgery went well.",
+   "ko": "수술 잘 끝났대.",
+   "blank": "수술"
+  },
+  {
+   "text": "수술 일정 나왔어.",
+   "en": "The surgery schedule is out.",
+   "ko": "수술 일정 나왔어.",
+   "blank": "수술"
+  }
+ ],
+ "w|쉬다": [
+  {
+   "text": "눈 좀 쉬어.",
+   "en": "Rest your eyes a bit.",
+   "ko": "눈 좀 쉬어.",
+   "blank": "쉬어"
+  },
+  {
+   "text": "어제 하루 종일 쉬었어.",
+   "en": "I rested all day yesterday.",
+   "ko": "어제 하루 종일 쉬었어.",
+   "blank": "쉬었어"
+  }
+ ],
+ "w|시": [
+  {
+   "text": "지금 몇 시?",
+   "en": "What time is it?",
+   "ko": "지금 몇 시?",
+   "blank": "시"
+  },
+  {
+   "text": "세 시에 역에서 만나자.",
+   "en": "Let's meet at the station at three.",
+   "ko": "세 시에 역에서 만나자.",
+   "blank": "시에"
+  }
+ ],
+ "w|시간": [
+  {
+   "text": "시간 좀 내줄래?",
+   "en": "Can you spare some time?",
+   "ko": "시간 좀 내줄래?",
+   "blank": "시간"
+  },
+  {
+   "text": "시간이 없어요.",
+   "en": "I don't have time.",
+   "ko": "시간이 없어요.",
+   "blank": "시간이"
+  }
+ ],
+ "w|시작하다": [
+  {
+   "text": "잡담 그만하고 시작하자.",
+   "en": "Enough chatting. Let's start.",
+   "ko": "잡담 그만하고 시작하자.",
+   "blank": "시작하자"
+  },
+  {
+   "text": "영화 벌써 시작했어.",
+   "en": "The movie has already started.",
+   "ko": "영화 벌써 시작했어.",
+   "blank": "시작했어"
+  }
+ ],
+ "w|신경": [
+  {
+   "text": "그런 말에 신경 쓰지 마.",
+   "en": "Don't let talk like that get to you.",
+   "ko": "그런 말에 신경 쓰지 마.",
+   "blank": "신경"
+  },
+  {
+   "text": "신경 꺼, 별일 아냐.",
+   "en": "Forget it. It's nothing.",
+   "ko": "신경 꺼, 별일 아냐.",
+   "blank": "신경"
+  }
+ ],
+ "w|싫다": [
+  {
+   "text": "달리기 정말 싫어.",
+   "en": "I really hate running.",
+   "ko": "달리기 정말 싫어.",
+   "blank": "싫어"
+  },
+  {
+   "text": "그 냄새 너무 싫어요.",
+   "en": "I really can't stand that smell.",
+   "ko": "그 냄새 너무 싫어요.",
+   "blank": "싫어요"
+  }
+ ],
+ "w|싫어하다": [
+  {
+   "text": "거짓말 정말 싫어해.",
+   "en": "I really hate lies.",
+   "ko": "거짓말 정말 싫어해.",
+   "blank": "싫어해"
+  },
+  {
+   "text": "시끄러운 데는 싫어해요.",
+   "en": "I don't like noisy places.",
+   "ko": "시끄러운 데는 싫어해요.",
+   "blank": "싫어해요"
+  }
+ ],
+ "w|싶다": [
+  {
+   "text": "바다 보고 싶어요.",
+   "en": "I want to see the ocean.",
+   "ko": "바다 보고 싶어요.",
+   "blank": "싶어요"
+  },
+  {
+   "text": "이제 좀 쉬고 싶어.",
+   "en": "I want to rest a bit now.",
+   "ko": "이제 좀 쉬고 싶어.",
+   "blank": "싶어"
+  }
+ ],
+ "w|싸우다": [
+  {
+   "text": "밥 먹다가 싸우지 마.",
+   "en": "Don't fight while we're eating.",
+   "ko": "밥 먹다가 싸우지 마.",
+   "blank": "싸우지"
+  },
+  {
+   "text": "어제 동생이랑 싸웠어.",
+   "en": "I argued with my sibling yesterday.",
+   "ko": "어제 동생이랑 싸웠어.",
+   "blank": "싸웠어"
+  }
+ ],
+ "w|쓰다": [
+  {
+   "text": "모자를 쓰고 나갔어요.",
+   "en": "I went out wearing a hat.",
+   "ko": "모자를 쓰고 나갔어요.",
+   "blank": "쓰고"
+  },
+  {
+   "text": "이름 좀 써 줘.",
+   "en": "Write your name for me.",
+   "ko": "이름 좀 써 줘.",
+   "blank": "써"
+  }
+ ],
+ "w|씻다": [
+  {
+   "text": "밥 먹기 전에 손 씻어.",
+   "en": "Wash your hands before you eat.",
+   "ko": "밥 먹기 전에 손 씻어.",
+   "blank": "씻어"
+  },
+  {
+   "text": "머리도 씻었어.",
+   "en": "I washed my hair too.",
+   "ko": "머리도 씻었어.",
+   "blank": "씻었어"
+  }
+ ],
+ "w|아가씨": [
+  {
+   "text": "그 집 아가씨가 합격했대.",
+   "en": "I hear their daughter got accepted.",
+   "ko": "그 집 아가씨가 합격했대.",
+   "blank": "아가씨가"
+  },
+  {
+   "text": "그 아가씨 노래 잘하더라.",
+   "en": "That young woman sings really well.",
+   "ko": "그 아가씨 노래 잘하더라.",
+   "blank": "아가씨"
+  }
+ ],
+ "w|아기": [
+  {
+   "text": "아기가 방금 잠들었어.",
+   "en": "The baby just fell asleep.",
+   "ko": "아기가 방금 잠들었어.",
+   "blank": "아기가"
+  },
+  {
+   "text": "아기 옷 좀 사 왔어.",
+   "en": "I bought some baby clothes.",
+   "ko": "아기 옷 좀 사 왔어.",
+   "blank": "아기"
+  }
+ ],
+ "w|아내": [
+  {
+   "text": "아내가 저녁 차렸어.",
+   "en": "My wife made dinner.",
+   "ko": "아내가 저녁 차렸어.",
+   "blank": "아내가"
+  },
+  {
+   "text": "아내 오늘 회식이래.",
+   "en": "My wife has a work dinner today.",
+   "ko": "아내 오늘 회식이래.",
+   "blank": "아내"
+  }
+ ],
+ "w|아니다": [
+  {
+   "text": "그 얘긴 아니야.",
+   "en": "That's not what this is about.",
+   "ko": "그 얘긴 아니야.",
+   "blank": "아니야"
+  },
+  {
+   "text": "아니에요, 제가 잘못했어요.",
+   "en": "No, it was my fault.",
+   "ko": "아니에요, 제가 잘못했어요.",
+   "blank": "아니에요"
+  }
+ ],
+ "w|아들": [
+  {
+   "text": "아들 학교 갔다 왔어?",
+   "en": "Is your son back from school?",
+   "ko": "아들 학교 갔다 왔어?",
+   "blank": "아들"
+  },
+  {
+   "text": "우리 아들 키가 부쩍 컸어.",
+   "en": "Our son got so much taller.",
+   "ko": "우리 아들 키가 부쩍 컸어.",
+   "blank": "아들"
+  }
+ ],
+ "w|아마": [
+  {
+   "text": "아마 내일 올 거야.",
+   "en": "Maybe he'll come tomorrow.",
+   "ko": "아마 내일 올 거야.",
+   "blank": "아마"
+  },
+  {
+   "text": "아마 괜찮을 거야.",
+   "en": "Maybe it'll be okay.",
+   "ko": "아마 괜찮을 거야.",
+   "blank": "아마"
+  }
+ ],
+ "w|아마도": [
+  {
+   "text": "아마도 집에 있을걸.",
+   "en": "They're probably at home.",
+   "ko": "아마도 집에 있을걸.",
+   "blank": "아마도"
+  },
+  {
+   "text": "아마도 그게 맞을 거야.",
+   "en": "That's probably right.",
+   "ko": "아마도 그게 맞을 거야.",
+   "blank": "아마도"
+  }
+ ],
+ "w|아무": [
+  {
+   "text": "아무 말도 하지 마.",
+   "en": "Don't say anything.",
+   "ko": "아무 말도 하지 마.",
+   "blank": "아무"
+  },
+  {
+   "text": "아무 생각 없었어.",
+   "en": "I wasn't thinking about anything.",
+   "ko": "아무 생각 없었어.",
+   "blank": "아무"
+  }
+ ],
+ "w|아무것": [
+  {
+   "text": "아무것도 안 했어요.",
+   "en": "I didn't do anything.",
+   "ko": "아무것도 안 했어요.",
+   "blank": "아무것도"
+  },
+  {
+   "text": "아무것도 필요 없어요.",
+   "en": "I don't need anything.",
+   "ko": "아무것도 필요 없어요.",
+   "blank": "아무것도"
+  }
+ ],
+ "w|아버지": [
+  {
+   "text": "아버지, 저 다녀왔습니다.",
+   "en": "Dad, I'm home.",
+   "ko": "아버지, 저 다녀왔습니다.",
+   "blank": "아버지"
+  },
+  {
+   "text": "아버지께서 기다리신대.",
+   "en": "Dad says he's waiting.",
+   "ko": "아버지께서 기다리신대.",
+   "blank": "아버지께서"
+  }
+ ],
+ "w|아빠": [
+  {
+   "text": "아빠 언제 와요?",
+   "en": "When is dad coming?",
+   "ko": "아빠 언제 와요?",
+   "blank": "아빠"
+  },
+  {
+   "text": "아빠랑 같이 갔어요.",
+   "en": "I went with my dad.",
+   "ko": "아빠랑 같이 갔어요.",
+   "blank": "아빠랑"
+  }
+ ],
+ "w|아이": [
+  {
+   "text": "아이 손 꼭 잡고 건너.",
+   "en": "Hold the child's hand tight when you cross.",
+   "ko": "아이 손 꼭 잡고 건너.",
+   "blank": "아이"
+  },
+  {
+   "text": "아이가 소파에서 낮잠 자고 있어.",
+   "en": "The child is napping on the sofa.",
+   "ko": "아이가 소파에서 낮잠 자고 있어.",
+   "blank": "아이가"
+  }
+ ],
+ "w|아저씨": [
+  {
+   "text": "아저씨, 이 버스 시청 가나요?",
+   "en": "Sir, does this bus go to city hall?",
+   "ko": "아저씨, 이 버스 시청 가나요?",
+   "blank": "아저씨"
+  },
+  {
+   "text": "아저씨가 길을 알려 주셨어.",
+   "en": "A man gave me directions.",
+   "ko": "아저씨가 길을 알려 주셨어.",
+   "blank": "아저씨가"
+  }
+ ],
+ "w|아주": [
+  {
+   "text": "아주 잘 골랐어.",
+   "en": "You picked really well.",
+   "ko": "아주 잘 골랐어.",
+   "blank": "아주"
+  },
+  {
+   "text": "아주 조금만 넣어.",
+   "en": "Add just a tiny bit.",
+   "ko": "아주 조금만 넣어.",
+   "blank": "아주"
+  }
+ ],
+ "w|아줌마": [
+  {
+   "text": "아줌마, 이것도 얼마예요?",
+   "en": "Ma'am, how much is this one too?",
+   "ko": "아줌마, 이것도 얼마예요?",
+   "blank": "아줌마"
+  },
+  {
+   "text": "아줌마가 파를 덤으로 주셨어.",
+   "en": "The lady threw in some green onions for free.",
+   "ko": "아줌마가 파를 덤으로 주셨어.",
+   "blank": "아줌마가"
+  }
+ ],
+ "w|아직": [
+  {
+   "text": "아직 안 잤어?",
+   "en": "You're not asleep yet?",
+   "ko": "아직 안 잤어?",
+   "blank": "아직"
+  },
+  {
+   "text": "아직 멀었어, 더 가야 해.",
+   "en": "It's still far. We have to keep going.",
+   "ko": "아직 멀었어, 더 가야 해.",
+   "blank": "아직"
+  }
+ ],
+ "w|아침": [
+  {
+   "text": "아침 먹었어요?",
+   "en": "Did you eat breakfast?",
+   "ko": "아침 먹었어요?",
+   "blank": "아침"
+  },
+  {
+   "text": "아침 공기가 좋네.",
+   "en": "The morning air is nice.",
+   "ko": "아침 공기가 좋네.",
+   "blank": "아침"
+  }
+ ],
+ "w|아프다": [
+  {
+   "text": "머리가 너무 아파.",
+   "en": "My head hurts so much.",
+   "ko": "머리가 너무 아파.",
+   "blank": "아파"
+  },
+  {
+   "text": "배가 아직도 아파요.",
+   "en": "My stomach still hurts.",
+   "ko": "배가 아직도 아파요.",
+   "blank": "아파요"
+  }
+ ],
+ "w|안": [
+  {
+   "text": "나 안 가.",
+   "en": "I'm not going.",
+   "ko": "나 안 가.",
+   "blank": "안"
+  },
+  {
+   "text": "안 먹었어.",
+   "en": "I didn't eat.",
+   "ko": "안 먹었어.",
+   "blank": "안"
+  }
+ ],
+ "w|안녕": [
+  {
+   "text": "안녕, 잘 지냈어?",
+   "en": "Hi, how have you been?",
+   "ko": "안녕, 잘 지냈어?",
+   "blank": "안녕"
+  },
+  {
+   "text": "안녕, 또 봐.",
+   "en": "Bye, see you again.",
+   "ko": "안녕, 또 봐.",
+   "blank": "안녕"
+  }
+ ],
+ "w|앉다": [
+  {
+   "text": "여기 앉아도 될까?",
+   "en": "Can I sit here?",
+   "ko": "여기 앉아도 될까?",
+   "blank": "앉아도"
+  },
+  {
+   "text": "창가에 앉았어.",
+   "en": "I sat by the window.",
+   "ko": "창가에 앉았어.",
+   "blank": "앉았어"
+  }
+ ],
+ "w|알다": [
+  {
+   "text": "그 카페 알아요?",
+   "en": "Do you know that cafe?",
+   "ko": "그 카페 알아요?",
+   "blank": "알아요"
+  },
+  {
+   "text": "나도 다 알고 있어.",
+   "en": "I know all of it too.",
+   "ko": "나도 다 알고 있어.",
+   "blank": "알고"
+  }
+ ],
+ "w|알려주다": [
+  {
+   "text": "어디서 만날지 알려 줘.",
+   "en": "Tell me where we're meeting.",
+   "ko": "어디서 만날지 알려 줘.",
+   "blank": "알려"
+  },
+  {
+   "text": "비밀 레시피 알려줬어.",
+   "en": "They told me the secret recipe.",
+   "ko": "비밀 레시피 알려줬어.",
+   "blank": "알려줬어"
+  }
+ ],
+ "w|애": [
+  {
+   "text": "애가 또 칭얼대.",
+   "en": "The kid's fussing again.",
+   "ko": "애가 또 칭얼대.",
+   "blank": "애가"
+  },
+  {
+   "text": "우리 애 학원 끝났어.",
+   "en": "My kid's class just ended.",
+   "ko": "우리 애 학원 끝났어.",
+   "blank": "애"
+  }
+ ],
+ "w|애인": [
+  {
+   "text": "애인 있어?",
+   "en": "Are you seeing anyone?",
+   "ko": "애인 있어?",
+   "blank": "애인"
+  },
+  {
+   "text": "애인 만나느라 늦었어.",
+   "en": "I was late meeting my partner.",
+   "ko": "애인 만나느라 늦었어.",
+   "blank": "애인"
+  }
+ ],
+ "w|야": [
+  {
+   "text": "야, 너 뭐해?",
+   "en": "Hey, what are you doing?",
+   "ko": "야, 너 뭐해?",
+   "blank": "야"
+  },
+  {
+   "text": "야, 여기 봐봐.",
+   "en": "Hey, look here.",
+   "ko": "야, 여기 봐봐.",
+   "blank": "야"
+  }
+ ],
+ "w|얘기": [
+  {
+   "text": "얘기 좀 해요.",
+   "en": "Let's talk.",
+   "ko": "얘기 좀 해요.",
+   "blank": "얘기"
+  },
+  {
+   "text": "얘기 들었어?",
+   "en": "Did you hear the story?",
+   "ko": "얘기 들었어?",
+   "blank": "얘기"
+  }
+ ],
+ "w|어느": [
+  {
+   "text": "어느 쪽이 출구야?",
+   "en": "Which way is the exit?",
+   "ko": "어느 쪽이 출구야?",
+   "blank": "어느"
+  },
+  {
+   "text": "어느 역에서 내릴까?",
+   "en": "Which station should we get off at?",
+   "ko": "어느 역에서 내릴까?",
+   "blank": "어느"
+  }
+ ],
+ "w|어디": [
+  {
+   "text": "어디 가요?",
+   "en": "Where are you going?",
+   "ko": "어디 가요?",
+   "blank": "어디"
+  },
+  {
+   "text": "어디 있어요?",
+   "en": "Where are you?",
+   "ko": "어디 있어요?",
+   "blank": "어디"
+  }
+ ],
+ "w|어떤": [
+  {
+   "text": "어떤 영화가 재밌어?",
+   "en": "Which movie is good?",
+   "ko": "어떤 영화가 재밌어?",
+   "blank": "어떤"
+  },
+  {
+   "text": "어떤 게 덜 매워?",
+   "en": "Which one is less spicy?",
+   "ko": "어떤 게 덜 매워?",
+   "blank": "어떤"
+  }
+ ],
+ "w|어떻게": [
+  {
+   "text": "이거 어떻게 해?",
+   "en": "How do you do this?",
+   "ko": "이거 어떻게 해?",
+   "blank": "어떻게"
+  },
+  {
+   "text": "어떻게 알았어?",
+   "en": "How did you know?",
+   "ko": "어떻게 알았어?",
+   "blank": "어떻게"
+  }
+ ],
+ "w|어른": [
+  {
+   "text": "어른 앞에서는 목소리 낮춰.",
+   "en": "Keep your voice down in front of adults.",
+   "ko": "어른 앞에서는 목소리 낮춰.",
+   "blank": "어른"
+  },
+  {
+   "text": "어른이 되면 다 이해돼.",
+   "en": "You'll understand when you're an adult.",
+   "ko": "어른이 되면 다 이해돼.",
+   "blank": "어른이"
+  }
+ ],
+ "w|어머니": [
+  {
+   "text": "어머니, 식사는 하셨어요?",
+   "en": "Mother, have you eaten?",
+   "ko": "어머니, 식사는 하셨어요?",
+   "blank": "어머니"
+  },
+  {
+   "text": "어머니는 아직 고향에 계세요.",
+   "en": "My mother is still in her hometown.",
+   "ko": "어머니는 아직 고향에 계세요.",
+   "blank": "어머니는"
+  }
+ ],
+ "w|어제": [
+  {
+   "text": "어제 비 많이 왔지?",
+   "en": "It rained a lot yesterday, didn't it?",
+   "ko": "어제 비 많이 왔지?",
+   "blank": "어제"
+  },
+  {
+   "text": "어제 산 빵 아직 있어?",
+   "en": "Is the bread from yesterday still there?",
+   "ko": "어제 산 빵 아직 있어?",
+   "blank": "어제"
+  }
+ ],
+ "w|어쨌든": [
+  {
+   "text": "어쨌든 몸은 괜찮아?",
+   "en": "Anyway, are you feeling okay?",
+   "ko": "어쨌든 몸은 괜찮아?",
+   "blank": "어쨌든"
+  },
+  {
+   "text": "어쨌든 너는 와 줘.",
+   "en": "Anyway, you just come.",
+   "ko": "어쨌든 너는 와 줘.",
+   "blank": "어쨌든"
+  }
+ ],
+ "w|어쩌면": [
+  {
+   "text": "어쩌면 내가 잘못 봤을지도.",
+   "en": "Maybe I saw it wrong.",
+   "ko": "어쩌면 내가 잘못 봤을지도.",
+   "blank": "어쩌면"
+  },
+  {
+   "text": "어쩌면 그게 답일 수도.",
+   "en": "Maybe that could be the answer.",
+   "ko": "어쩌면 그게 답일 수도.",
+   "blank": "어쩌면"
+  }
+ ],
+ "w|언니": [
+  {
+   "text": "언니, 이 옷 어때?",
+   "en": "Unni, how does this outfit look?",
+   "ko": "언니, 이 옷 어때?",
+   "blank": "언니"
+  },
+  {
+   "text": "언니가 머리 잘라 줬어.",
+   "en": "My older sister cut my hair.",
+   "ko": "언니가 머리 잘라 줬어.",
+   "blank": "언니가"
+  }
+ ],
+ "w|언제": [
+  {
+   "text": "언제 밥 먹을래?",
+   "en": "When do you want to eat?",
+   "ko": "언제 밥 먹을래?",
+   "blank": "언제"
+  },
+  {
+   "text": "언제쯤 끝나?",
+   "en": "About when does it end?",
+   "ko": "언제쯤 끝나?",
+   "blank": "언제쯤"
+  }
+ ],
+ "w|얻다": [
+  {
+   "text": "부모님 허락은 얻었어?",
+   "en": "Did you get your parents' permission?",
+   "ko": "부모님 허락은 얻었어?",
+   "blank": "얻었어"
+  },
+  {
+   "text": "기회를 꼭 얻어야 해.",
+   "en": "We really have to get this chance.",
+   "ko": "기회를 꼭 얻어야 해.",
+   "blank": "얻어야"
+  }
+ ],
+ "w|얼마나": [
+  {
+   "text": "얼마나 걸린대?",
+   "en": "How long did they say it takes?",
+   "ko": "얼마나 걸린대?",
+   "blank": "얼마나"
+  },
+  {
+   "text": "얼마나 놀란 줄 알아?",
+   "en": "Do you know how shocked I was?",
+   "ko": "얼마나 놀란 줄 알아?",
+   "blank": "얼마나"
+  }
+ ],
+ "w|엄마": [
+  {
+   "text": "엄마, 학교 다녀왔어.",
+   "en": "Mom, I'm home from school.",
+   "ko": "엄마, 학교 다녀왔어.",
+   "blank": "엄마"
+  },
+  {
+   "text": "엄마가 국 끓이셨어.",
+   "en": "Mom made soup.",
+   "ko": "엄마가 국 끓이셨어.",
+   "blank": "엄마가"
+  }
+ ],
+ "w|없다": [
+  {
+   "text": "시간 없어.",
+   "en": "I don't have time.",
+   "ko": "시간 없어.",
+   "blank": "없어"
+  },
+  {
+   "text": "아무도 없어.",
+   "en": "No one is here.",
+   "ko": "아무도 없어.",
+   "blank": "없어"
+  }
+ ],
+ "w|여기": [
+  {
+   "text": "여기 두고 갈게.",
+   "en": "I'll leave it here.",
+   "ko": "여기 두고 갈게.",
+   "blank": "여기"
+  },
+  {
+   "text": "여기가 그 분식집이야.",
+   "en": "This is that snack shop.",
+   "ko": "여기가 그 분식집이야.",
+   "blank": "여기가"
+  }
+ ],
+ "w|여러분": [
+  {
+   "text": "여러분, 잠깐만 조용히 해 주세요.",
+   "en": "Everyone, please be quiet for a moment.",
+   "ko": "여러분, 잠깐만 조용히 해 주세요.",
+   "blank": "여러분"
+  },
+  {
+   "text": "여러분 덕분에 여기까지 왔어요.",
+   "en": "I got this far thanks to all of you.",
+   "ko": "여러분 덕분에 여기까지 왔어요.",
+   "blank": "여러분"
+  }
+ ],
+ "w|여보": [
+  {
+   "text": "여보, 우산 챙겼어?",
+   "en": "Honey, did you grab the umbrella?",
+   "ko": "여보, 우산 챙겼어?",
+   "blank": "여보"
+  },
+  {
+   "text": "여보, 나 지금 퇴근해.",
+   "en": "Honey, I'm leaving work now.",
+   "ko": "여보, 나 지금 퇴근해.",
+   "blank": "여보"
+  }
+ ],
+ "w|여보세요": [
+  {
+   "text": "여보세요, 잘 들려요?",
+   "en": "Hello, can you hear me all right?",
+   "ko": "여보세요, 잘 들려요?",
+   "blank": "여보세요"
+  },
+  {
+   "text": "여보세요, 사장님 계신가요?",
+   "en": "Hello, is the boss there?",
+   "ko": "여보세요, 사장님 계신가요?",
+   "blank": "여보세요"
+  }
+ ],
+ "w|여자": [
+  {
+   "text": "저 여자 누구야?",
+   "en": "Who is that woman?",
+   "ko": "저 여자 누구야?",
+   "blank": "여자"
+  },
+  {
+   "text": "여자 화장실이 어디야?",
+   "en": "Where is the women's restroom?",
+   "ko": "여자 화장실이 어디야?",
+   "blank": "여자"
+  }
+ ],
+ "w|여자친구": [
+  {
+   "text": "여자친구 생일이 내일이야.",
+   "en": "My girlfriend's birthday is tomorrow.",
+   "ko": "여자친구 생일이 내일이야.",
+   "blank": "여자친구"
+  },
+  {
+   "text": "여자친구랑 영화 보기로 했어.",
+   "en": "I'm going to a movie with my girlfriend.",
+   "ko": "여자친구랑 영화 보기로 했어.",
+   "blank": "여자친구랑"
+  }
+ ],
+ "w|여전히": [
+  {
+   "text": "여전히 비가 오고 있어요.",
+   "en": "It's still raining.",
+   "ko": "여전히 비가 오고 있어요.",
+   "blank": "여전히"
+  },
+  {
+   "text": "여전히 생각하고 있어요.",
+   "en": "I'm still thinking about it.",
+   "ko": "여전히 생각하고 있어요.",
+   "blank": "여전히"
+  }
+ ],
+ "w|열다": [
+  {
+   "text": "창문 좀 열어, 더워.",
+   "en": "Open the window. It's hot.",
+   "ko": "창문 좀 열어, 더워.",
+   "blank": "열어"
+  },
+  {
+   "text": "선물 열었어?",
+   "en": "Did you open the present?",
+   "ko": "선물 열었어?",
+   "blank": "열었어"
+  }
+ ],
+ "w|오늘": [
+  {
+   "text": "오늘 저녁에 볼래?",
+   "en": "Want to meet this evening?",
+   "ko": "오늘 저녁에 볼래?",
+   "blank": "오늘"
+  },
+  {
+   "text": "오늘 하루 수고했어.",
+   "en": "You worked hard today.",
+   "ko": "오늘 하루 수고했어.",
+   "blank": "오늘"
+  }
+ ],
+ "w|오다": [
+  {
+   "text": "비 와서 신발이 젖었어.",
+   "en": "My shoes got wet in the rain.",
+   "ko": "비 와서 신발이 젖었어.",
+   "blank": "와서"
+  },
+  {
+   "text": "손님 문 앞에 오셨어요.",
+   "en": "A guest has come to the door.",
+   "ko": "손님 문 앞에 오셨어요.",
+   "blank": "오셨어요"
+  }
+ ],
+ "w|오래": [
+  {
+   "text": "꽤 오래 걸렸어.",
+   "en": "It took quite a while.",
+   "ko": "꽤 오래 걸렸어.",
+   "blank": "오래"
+  },
+  {
+   "text": "우리 얼마나 오래됐지?",
+   "en": "How long has it been for us?",
+   "ko": "우리 얼마나 오래됐지?",
+   "blank": "오래됐지"
+  }
+ ],
+ "w|오르다": [
+  {
+   "text": "계단은 천천히 올라.",
+   "en": "Take the stairs slowly.",
+   "ko": "계단은 천천히 올라.",
+   "blank": "올라"
+  },
+  {
+   "text": "언덕 위까지 올랐어.",
+   "en": "I climbed all the way up the hill.",
+   "ko": "언덕 위까지 올랐어.",
+   "blank": "올랐어"
+  }
+ ],
+ "w|오빠": [
+  {
+   "text": "오빠, 나 배고파.",
+   "en": "Oppa, I'm hungry.",
+   "ko": "오빠, 나 배고파.",
+   "blank": "오빠"
+  },
+  {
+   "text": "오빠가 데리러 온대.",
+   "en": "I hear Oppa's coming to pick me up.",
+   "ko": "오빠가 데리러 온대.",
+   "blank": "오빠가"
+  }
+ ],
+ "w|올라가다": [
+  {
+   "text": "옥상으로 같이 올라가.",
+   "en": "Let's go up to the roof together.",
+   "ko": "옥상으로 같이 올라가.",
+   "blank": "올라가"
+  },
+  {
+   "text": "월세가 또 올라갔어.",
+   "en": "The rent went up again.",
+   "ko": "월세가 또 올라갔어.",
+   "blank": "올라갔어"
+  }
+ ],
+ "w|올라오다": [
+  {
+   "text": "주전자에서 김이 올라와.",
+   "en": "Steam is rising from the kettle.",
+   "ko": "주전자에서 김이 올라와.",
+   "blank": "올라와"
+  },
+  {
+   "text": "몸에 열이 올라왔어.",
+   "en": "I'm running a fever.",
+   "ko": "몸에 열이 올라왔어.",
+   "blank": "올라왔어"
+  }
+ ],
+ "w|올리다": [
+  {
+   "text": "볼륨 좀 올려.",
+   "en": "Turn the volume up a bit.",
+   "ko": "볼륨 좀 올려.",
+   "blank": "올려"
+  },
+  {
+   "text": "노을 사진 올렸어.",
+   "en": "I posted a sunset photo.",
+   "ko": "노을 사진 올렸어.",
+   "blank": "올렸어"
+  }
+ ],
+ "w|완전": [
+  {
+   "text": "완전 까먹었어.",
+   "en": "I completely forgot.",
+   "ko": "완전 까먹었어.",
+   "blank": "완전"
+  },
+  {
+   "text": "완전 다른 분위기야.",
+   "en": "The mood is totally different.",
+   "ko": "완전 다른 분위기야.",
+   "blank": "완전"
+  }
+ ],
+ "w|완전히": [
+  {
+   "text": "완전히 끝났다고 들었어.",
+   "en": "I heard it's completely over.",
+   "ko": "완전히 끝났다고 들었어.",
+   "blank": "완전히"
+  },
+  {
+   "text": "완전히 다른 사람 같네.",
+   "en": "You seem like a totally different person.",
+   "ko": "완전히 다른 사람 같네.",
+   "blank": "완전히"
+  }
+ ],
+ "w|왜": [
+  {
+   "text": "왜 그래?",
+   "en": "Why are you like that?",
+   "ko": "왜 그래?",
+   "blank": "왜"
+  },
+  {
+   "text": "왜 안 와?",
+   "en": "Why aren't you coming?",
+   "ko": "왜 안 와?",
+   "blank": "왜"
+  }
+ ],
+ "w|우리": [
+  {
+   "text": "우리 집이야.",
+   "en": "It's our house.",
+   "ko": "우리 집이야.",
+   "blank": "우리"
+  },
+  {
+   "text": "우리 같이 가자.",
+   "en": "Let's go together.",
+   "ko": "우리 같이 가자.",
+   "blank": "우리"
+  }
+ ],
+ "w|운전하다": [
+  {
+   "text": "피곤하면 내가 운전할게.",
+   "en": "If you're tired, I'll drive.",
+   "ko": "피곤하면 내가 운전할게.",
+   "blank": "운전할게"
+  },
+  {
+   "text": "비 와서 천천히 운전했어.",
+   "en": "I drove slowly because it was raining.",
+   "ko": "비 와서 천천히 운전했어.",
+   "blank": "운전했어"
+  }
+ ],
+ "w|울다": [
+  {
+   "text": "슬픈 장면이라 울었어.",
+   "en": "I cried because the scene was sad.",
+   "ko": "슬픈 장면이라 울었어.",
+   "blank": "울었어"
+  },
+  {
+   "text": "울지 말고 말해 봐.",
+   "en": "Don't cry. Tell me.",
+   "ko": "울지 말고 말해 봐.",
+   "blank": "울지"
+  }
+ ],
+ "w|움직이다": [
+  {
+   "text": "굳기 전에 몸 좀 움직여.",
+   "en": "Move a bit before you get stiff.",
+   "ko": "굳기 전에 몸 좀 움직여.",
+   "blank": "움직여"
+  },
+  {
+   "text": "자는 동안 안 움직였어.",
+   "en": "I didn't move while I was asleep.",
+   "ko": "자는 동안 안 움직였어.",
+   "blank": "움직였어"
+  }
+ ],
+ "w|웃다": [
+  {
+   "text": "농담이야, 그냥 웃어.",
+   "en": "It's a joke. Just laugh.",
+   "ko": "농담이야, 그냥 웃어.",
+   "blank": "웃어"
+  },
+  {
+   "text": "그 표정 보고 웃었어.",
+   "en": "I laughed when I saw that face.",
+   "ko": "그 표정 보고 웃었어.",
+   "blank": "웃었어"
+  }
+ ],
+ "w|원하다": [
+  {
+   "text": "뭐 원하는 거 있어요?",
+   "en": "Is there anything you want?",
+   "ko": "뭐 원하는 거 있어요?",
+   "blank": "원하는"
+  },
+  {
+   "text": "원하는 대로 해.",
+   "en": "Do it the way you want.",
+   "ko": "원하는 대로 해.",
+   "blank": "원하는"
+  }
+ ],
+ "w|위하다": [
+  {
+   "text": "널 위해 아껴 둔 거야.",
+   "en": "I saved it for you.",
+   "ko": "널 위해 아껴 둔 거야.",
+   "blank": "위해"
+  },
+  {
+   "text": "친구를 위해 자리를 맡아 뒀어.",
+   "en": "I saved a seat for a friend.",
+   "ko": "친구를 위해 자리를 맡아 뒀어.",
+   "blank": "위해"
+  }
+ ],
+ "w|유일하다": [
+  {
+   "text": "이런 맛은 여기가 유일해.",
+   "en": "This is the only place that tastes like this.",
+   "ko": "이런 맛은 여기가 유일해.",
+   "blank": "유일해"
+  },
+  {
+   "text": "유일한 기회니까 잡자.",
+   "en": "It's the only chance, so let's take it.",
+   "ko": "유일한 기회니까 잡자.",
+   "blank": "유일한"
+  }
+ ],
+ "w|응": [
+  {
+   "text": "응, 알겠어.",
+   "en": "Yeah, got it.",
+   "ko": "응, 알겠어.",
+   "blank": "응"
+  },
+  {
+   "text": "응, 지금 나갈게.",
+   "en": "Yeah, I'll head out now.",
+   "ko": "응, 지금 나갈게.",
+   "blank": "응"
+  }
+ ],
+ "w|의사": [
+  {
+   "text": "의사가 푹 쉬라고 했어.",
+   "en": "The doctor told me to get plenty of rest.",
+   "ko": "의사가 푹 쉬라고 했어.",
+   "blank": "의사가"
+  },
+  {
+   "text": "의사 예약했어?",
+   "en": "Did you make a doctor's appointment?",
+   "ko": "의사 예약했어?",
+   "blank": "의사"
+  }
+ ],
+ "w|이": [
+  {
+   "text": "이 문제 알아?",
+   "en": "Do you know this problem?",
+   "ko": "이 문제 알아?",
+   "blank": "이"
+  },
+  {
+   "text": "이 옷 나랑 안 맞아.",
+   "en": "This outfit doesn't suit me.",
+   "ko": "이 옷 나랑 안 맞아.",
+   "blank": "이"
+  }
+ ],
+ "w|이거": [
+  {
+   "text": "이거 얼마예요?",
+   "en": "How much is this?",
+   "ko": "이거 얼마예요?",
+   "blank": "이거"
+  },
+  {
+   "text": "이거 누구 가방이야?",
+   "en": "Whose bag is this?",
+   "ko": "이거 누구 가방이야?",
+   "blank": "이거"
+  }
+ ],
+ "w|이기다": [
+  {
+   "text": "이번 경기는 이길 거야.",
+   "en": "We'll win this match.",
+   "ko": "이번 경기는 이길 거야.",
+   "blank": "이길"
+  },
+  {
+   "text": "막판에 이겼어.",
+   "en": "We won at the very end.",
+   "ko": "막판에 이겼어.",
+   "blank": "이겼어"
+  }
+ ],
+ "w|이런": [
+  {
+   "text": "이런 날은 그냥 쉬자.",
+   "en": "Let's just rest on a day like this.",
+   "ko": "이런 날은 그냥 쉬자.",
+   "blank": "이런"
+  },
+  {
+   "text": "이런 실수는 처음이야.",
+   "en": "I've never made a mistake like this.",
+   "ko": "이런 실수는 처음이야.",
+   "blank": "이런"
+  }
+ ],
+ "w|이렇게": [
+  {
+   "text": "이렇게 접으면 돼.",
+   "en": "You fold it like this.",
+   "ko": "이렇게 접으면 돼.",
+   "blank": "이렇게"
+  },
+  {
+   "text": "이렇게 더운 줄 몰랐어.",
+   "en": "I didn't know it was this hot.",
+   "ko": "이렇게 더운 줄 몰랐어.",
+   "blank": "이렇게"
+  }
+ ],
+ "w|이름": [
+  {
+   "text": "이름 다시 말해 줘.",
+   "en": "Tell me the name again.",
+   "ko": "이름 다시 말해 줘.",
+   "blank": "이름"
+  },
+  {
+   "text": "그 배우 이름이 뭐더라.",
+   "en": "What was that actor's name again?",
+   "ko": "그 배우 이름이 뭐더라.",
+   "blank": "이름이"
+  }
+ ],
+ "w|이모": [
+  {
+   "text": "이모가 반찬 보내 주셨어.",
+   "en": "My aunt sent us side dishes.",
+   "ko": "이모가 반찬 보내 주셨어.",
+   "blank": "이모가"
+  },
+  {
+   "text": "주말에 이모 집에 갈게.",
+   "en": "I'm going to my aunt's this weekend.",
+   "ko": "주말에 이모 집에 갈게.",
+   "blank": "이모"
+  }
+ ],
+ "w|이미": [
+  {
+   "text": "이미 끝났어요.",
+   "en": "It's already over.",
+   "ko": "이미 끝났어요.",
+   "blank": "이미"
+  },
+  {
+   "text": "나는 이미 먹었어.",
+   "en": "I already ate.",
+   "ko": "나는 이미 먹었어.",
+   "blank": "이미"
+  }
+ ],
+ "w|이번": [
+  {
+   "text": "이번 주말은 비어 있어.",
+   "en": "This weekend is free.",
+   "ko": "이번 주말은 비어 있어.",
+   "blank": "이번"
+  },
+  {
+   "text": "이번 시험은 쉬웠어.",
+   "en": "This exam was easy.",
+   "ko": "이번 시험은 쉬웠어.",
+   "blank": "이번"
+  }
+ ],
+ "w|이상": [
+  {
+   "text": "그 이상은 비밀이야.",
+   "en": "Anything beyond that is a secret.",
+   "ko": "그 이상은 비밀이야.",
+   "blank": "이상은"
+  },
+  {
+   "text": "결과가 기대 이상이야.",
+   "en": "The result beat my expectations.",
+   "ko": "결과가 기대 이상이야.",
+   "blank": "이상이야"
+  }
+ ],
+ "w|이야기": [
+  {
+   "text": "우리 이야기 좀 하자.",
+   "en": "Let's talk for a bit.",
+   "ko": "우리 이야기 좀 하자.",
+   "blank": "이야기"
+  },
+  {
+   "text": "그 이야기 또 해 줘.",
+   "en": "Tell me that story again.",
+   "ko": "그 이야기 또 해 줘.",
+   "blank": "이야기"
+  }
+ ],
+ "w|이웃": [
+  {
+   "text": "이웃이 고양이 밥 챙겨 줬어.",
+   "en": "A neighbor fed the cat.",
+   "ko": "이웃이 고양이 밥 챙겨 줬어.",
+   "blank": "이웃이"
+  },
+  {
+   "text": "이웃 집에서 떡 나눠 줬어.",
+   "en": "The people next door shared rice cakes.",
+   "ko": "이웃 집에서 떡 나눠 줬어.",
+   "blank": "이웃"
+  }
+ ],
+ "w|이유": [
+  {
+   "text": "이유 좀 말해 봐.",
+   "en": "Tell me the reason.",
+   "ko": "이유 좀 말해 봐.",
+   "blank": "이유"
+  },
+  {
+   "text": "이유 없이 늦지 마.",
+   "en": "Don't be late for no reason.",
+   "ko": "이유 없이 늦지 마.",
+   "blank": "이유"
+  }
+ ],
+ "w|이제": [
+  {
+   "text": "이제 슬슬 나가자.",
+   "en": "Let's head out soon.",
+   "ko": "이제 슬슬 나가자.",
+   "blank": "이제"
+  },
+  {
+   "text": "이제 네가 해 봐.",
+   "en": "Now you try.",
+   "ko": "이제 네가 해 봐.",
+   "blank": "이제"
+  }
+ ],
+ "w|이해하다": [
+  {
+   "text": "네 마음 다 이해해.",
+   "en": "I totally understand how you feel.",
+   "ko": "네 마음 다 이해해.",
+   "blank": "이해해"
+  },
+  {
+   "text": "듣고 보니 이해했어.",
+   "en": "Now that I've heard it, I get it.",
+   "ko": "듣고 보니 이해했어.",
+   "blank": "이해했어"
+  }
+ ],
+ "w|일": [
+  {
+   "text": "오늘 일 많았어요.",
+   "en": "I had a lot of work today.",
+   "ko": "오늘 일 많았어요.",
+   "blank": "일"
+  },
+  {
+   "text": "일 끝났어요.",
+   "en": "I'm done with work.",
+   "ko": "일 끝났어요.",
+   "blank": "일"
+  }
+ ],
+ "w|일단": [
+  {
+   "text": "일단 집에 가자.",
+   "en": "Let's go home first.",
+   "ko": "일단 집에 가자.",
+   "blank": "일단"
+  },
+  {
+   "text": "일단 앉아.",
+   "en": "Sit down for now.",
+   "ko": "일단 앉아.",
+   "blank": "일단"
+  }
+ ],
+ "w|일어나다": [
+  {
+   "text": "해 떴어, 일어나.",
+   "en": "The sun is up. Get up.",
+   "ko": "해 떴어, 일어나.",
+   "blank": "일어나"
+  },
+  {
+   "text": "알람 울려서 일어났어.",
+   "en": "I woke up because the alarm went off.",
+   "ko": "알람 울려서 일어났어.",
+   "blank": "일어났어"
+  }
+ ],
+ "w|일하다": [
+  {
+   "text": "오늘은 집에서 일해.",
+   "en": "I'm working from home today.",
+   "ko": "오늘은 집에서 일해.",
+   "blank": "일해"
+  },
+  {
+   "text": "늦게까지 일했어.",
+   "en": "I worked late.",
+   "ko": "늦게까지 일했어.",
+   "blank": "일했어"
+  }
+ ],
+ "w|읽다": [
+  {
+   "text": "문자 좀 읽어 봐.",
+   "en": "Read the text message for me.",
+   "ko": "문자 좀 읽어 봐.",
+   "blank": "읽어"
+  },
+  {
+   "text": "그 만화 다 읽었어?",
+   "en": "Did you finish that comic?",
+   "ko": "그 만화 다 읽었어?",
+   "blank": "읽었어"
+  }
+ ],
+ "w|잃다": [
+  {
+   "text": "집중 잃지 마.",
+   "en": "Don't lose your focus.",
+   "ko": "집중 잃지 마.",
+   "blank": "잃지"
+  },
+  {
+   "text": "지갑을 잃어서 당황했어.",
+   "en": "I panicked because I lost my wallet.",
+   "ko": "지갑을 잃어서 당황했어.",
+   "blank": "잃어서"
+  }
+ ],
+ "w|입다": [
+  {
+   "text": "밖에 추워, 코트 입어.",
+   "en": "It's cold out. Put a coat on.",
+   "ko": "밖에 추워, 코트 입어.",
+   "blank": "입어"
+  },
+  {
+   "text": "이 셔츠 입었어.",
+   "en": "I wore this shirt.",
+   "ko": "이 셔츠 입었어.",
+   "blank": "입었어"
+  }
+ ],
+ "w|있다": [
+  {
+   "text": "여기 있어.",
+   "en": "It's here.",
+   "ko": "여기 있어.",
+   "blank": "있어"
+  },
+  {
+   "text": "시간 있어?",
+   "en": "Do you have time?",
+   "ko": "시간 있어?",
+   "blank": "있어"
+  }
+ ],
+ "w|잊다": [
+  {
+   "text": "약속 잊지 마.",
+   "en": "Don't forget the promise.",
+   "ko": "약속 잊지 마.",
+   "blank": "잊지"
+  },
+  {
+   "text": "그 이름 또 잊었어.",
+   "en": "I forgot that name again.",
+   "ko": "그 이름 또 잊었어.",
+   "blank": "잊었어"
+  }
+ ],
+ "w|자기": [
+  {
+   "text": "자기 뭐 해?",
+   "en": "What are you doing, honey?",
+   "ko": "자기 뭐 해?",
+   "blank": "자기"
+  },
+  {
+   "text": "자기야, 잘 자.",
+   "en": "Good night, honey.",
+   "ko": "자기야, 잘 자.",
+   "blank": "자기야"
+  }
+ ],
+ "w|자네": [
+  {
+   "text": "자네 오늘 좀 남게.",
+   "en": "Stay a bit late today.",
+   "ko": "자네 오늘 좀 남게.",
+   "blank": "자네"
+  },
+  {
+   "text": "자넨 이미 알고 있나?",
+   "en": "You already know, don't you?",
+   "ko": "자넨 이미 알고 있나?",
+   "blank": "자넨"
+  }
+ ],
+ "w|자다": [
+  {
+   "text": "졸려서 이제 자자.",
+   "en": "I'm sleepy, so let's sleep.",
+   "ko": "졸려서 이제 자자.",
+   "blank": "자자"
+  },
+  {
+   "text": "어제 거의 못 잤어.",
+   "en": "I barely slept yesterday.",
+   "ko": "어제 거의 못 잤어.",
+   "blank": "잤어"
+  }
+ ],
+ "w|자매": [
+  {
+   "text": "자매가 같이 카페 해.",
+   "en": "The sisters run a cafe together.",
+   "ko": "자매가 같이 카페 해.",
+   "blank": "자매가"
+  },
+  {
+   "text": "자매끼리 여행 갔대.",
+   "en": "I hear the sisters went on a trip together.",
+   "ko": "자매끼리 여행 갔대.",
+   "blank": "자매끼리"
+  }
+ ],
+ "w|작다": [
+  {
+   "text": "글자가 너무 작아.",
+   "en": "The letters are too small.",
+   "ko": "글자가 너무 작아.",
+   "blank": "작아"
+  },
+  {
+   "text": "이 모자는 좀 작아요.",
+   "en": "This hat is a bit small.",
+   "ko": "이 모자는 좀 작아요.",
+   "blank": "작아요"
+  }
+ ],
+ "w|잘": [
+  {
+   "text": "잘 했어.",
+   "en": "You did well.",
+   "ko": "잘 했어.",
+   "blank": "잘"
+  },
+  {
+   "text": "잘 모르겠어.",
+   "en": "I'm not sure.",
+   "ko": "잘 모르겠어.",
+   "blank": "잘"
+  }
+ ],
+ "w|잠깐": [
+  {
+   "text": "잠깐 기다려 주세요.",
+   "en": "Please wait a moment.",
+   "ko": "잠깐 기다려 주세요.",
+   "blank": "잠깐"
+  },
+  {
+   "text": "잠깐 나갔다 올게.",
+   "en": "I'll be back in a moment.",
+   "ko": "잠깐 나갔다 올게.",
+   "blank": "잠깐"
+  }
+ ],
+ "w|잡다": [
+  {
+   "text": "손 꼭 잡아요.",
+   "en": "Hold my hand tight.",
+   "ko": "손 꼭 잡아요.",
+   "blank": "잡아요"
+  },
+  {
+   "text": "택시 잡았어?",
+   "en": "Did you catch a taxi?",
+   "ko": "택시 잡았어?",
+   "blank": "잡았어"
+  }
+ ],
+ "w|저": [
+  {
+   "text": "저 먼저 갈게요.",
+   "en": "I'll go first.",
+   "ko": "저 먼저 갈게요.",
+   "blank": "저"
+  },
+  {
+   "text": "저는 물로 할게요.",
+   "en": "I'll have water.",
+   "ko": "저는 물로 할게요.",
+   "blank": "저는"
+  }
+ ],
+ "w|저기": [
+  {
+   "text": "저기 봐봐.",
+   "en": "Look over there.",
+   "ko": "저기 봐봐.",
+   "blank": "저기"
+  },
+  {
+   "text": "저기 앉아도 돼요?",
+   "en": "Can I sit over there?",
+   "ko": "저기 앉아도 돼요?",
+   "blank": "저기"
+  }
+ ],
+ "w|저희": [
+  {
+   "text": "저희 집에 놀러 오세요.",
+   "en": "Come visit our house.",
+   "ko": "저희 집에 놀러 오세요.",
+   "blank": "저희"
+  },
+  {
+   "text": "저희 먼저 갈게요.",
+   "en": "We'll head out first.",
+   "ko": "저희 먼저 갈게요.",
+   "blank": "저희"
+  }
+ ],
+ "w|전": [
+  {
+   "text": "자기 전에 불 꺼 줘.",
+   "en": "Turn the light off before you sleep.",
+   "ko": "자기 전에 불 꺼 줘.",
+   "blank": "전에"
+  },
+  {
+   "text": "회의 전엔 자료 봤어.",
+   "en": "I read the notes before the meeting.",
+   "ko": "회의 전엔 자료 봤어.",
+   "blank": "전엔"
+  }
+ ],
+ "w|전부": [
+  {
+   "text": "이게 전부야.",
+   "en": "This is everything.",
+   "ko": "이게 전부야.",
+   "blank": "전부야"
+  },
+  {
+   "text": "전부 끝났어.",
+   "en": "Everything is over.",
+   "ko": "전부 끝났어.",
+   "blank": "전부"
+  }
+ ],
+ "w|전혀": [
+  {
+   "text": "전혀 감이 안 와.",
+   "en": "I have no idea at all.",
+   "ko": "전혀 감이 안 와.",
+   "blank": "전혀"
+  },
+  {
+   "text": "전혀 안 닮았어.",
+   "en": "They don't look alike at all.",
+   "ko": "전혀 안 닮았어.",
+   "blank": "전혀"
+  }
+ ],
+ "w|전화": [
+  {
+   "text": "전화 좀 받아 줘.",
+   "en": "Answer the phone, please.",
+   "ko": "전화 좀 받아 줘.",
+   "blank": "전화"
+  },
+  {
+   "text": "방금 전화 왔어.",
+   "en": "I just got a call.",
+   "ko": "방금 전화 왔어.",
+   "blank": "전화"
+  }
+ ],
+ "w|절대": [
+  {
+   "text": "절대 안 해.",
+   "en": "I will never do it.",
+   "ko": "절대 안 해.",
+   "blank": "절대"
+  },
+  {
+   "text": "절대 잊지 않을게.",
+   "en": "I will never forget.",
+   "ko": "절대 잊지 않을게.",
+   "blank": "절대"
+  }
+ ],
+ "w|정말": [
+  {
+   "text": "정말 배고파.",
+   "en": "I'm really hungry.",
+   "ko": "정말 배고파.",
+   "blank": "정말"
+  },
+  {
+   "text": "정말 그렇게 된 거야?",
+   "en": "Did it really happen like that?",
+   "ko": "정말 그렇게 된 거야?",
+   "blank": "정말"
+  }
+ ],
+ "w|정말로": [
+  {
+   "text": "정말로 그만둘 거야?",
+   "en": "Are you really going to quit?",
+   "ko": "정말로 그만둘 거야?",
+   "blank": "정말로"
+  },
+  {
+   "text": "정말로 거기 안 갔어?",
+   "en": "You really didn't go there?",
+   "ko": "정말로 거기 안 갔어?",
+   "blank": "정말로"
+  }
+ ],
+ "w|제대로": [
+  {
+   "text": "주소 제대로 봤어?",
+   "en": "Did you read the address right?",
+   "ko": "주소 제대로 봤어?",
+   "blank": "제대로"
+  },
+  {
+   "text": "고기가 제대로 안 익었어.",
+   "en": "The meat isn't cooked through.",
+   "ko": "고기가 제대로 안 익었어.",
+   "blank": "제대로"
+  }
+ ],
+ "w|제발": [
+  {
+   "text": "제발 늦지 마.",
+   "en": "Please don't be late.",
+   "ko": "제발 늦지 마.",
+   "blank": "제발"
+  },
+  {
+   "text": "제발 한 번만 믿어 줘.",
+   "en": "Please just trust me this once.",
+   "ko": "제발 한 번만 믿어 줘.",
+   "blank": "제발"
+  }
+ ],
+ "w|제일": [
+  {
+   "text": "난 매운 게 제일 좋아.",
+   "en": "I like spicy food the most.",
+   "ko": "난 매운 게 제일 좋아.",
+   "blank": "제일"
+  },
+  {
+   "text": "지금 제일 급한 게 뭐야?",
+   "en": "What's most urgent right now?",
+   "ko": "지금 제일 급한 게 뭐야?",
+   "blank": "제일"
+  }
+ ],
+ "w|조금": [
+  {
+   "text": "조금 맵게 해 줘.",
+   "en": "Make it a little spicy.",
+   "ko": "조금 맵게 해 줘.",
+   "blank": "조금"
+  },
+  {
+   "text": "소금은 조금 더 넣자.",
+   "en": "Let's add a little more salt.",
+   "ko": "소금은 조금 더 넣자.",
+   "blank": "조금"
+  }
+ ],
+ "w|좀": [
+  {
+   "text": "좀 기다려 줘.",
+   "en": "Wait a bit.",
+   "ko": "좀 기다려 줘.",
+   "blank": "좀"
+  },
+  {
+   "text": "좀 도와줄래?",
+   "en": "Can you help me a bit?",
+   "ko": "좀 도와줄래?",
+   "blank": "좀"
+  }
+ ],
+ "w|좋다": [
+  {
+   "text": "이 향 진짜 좋아.",
+   "en": "I really like this scent.",
+   "ko": "이 향 진짜 좋아.",
+   "blank": "좋아"
+  },
+  {
+   "text": "오늘 날씨 좋아요.",
+   "en": "The weather's nice today.",
+   "ko": "오늘 날씨 좋아요.",
+   "blank": "좋아요"
+  }
+ ],
+ "w|좋아하다": [
+  {
+   "text": "비 오는 날 좋아해.",
+   "en": "I like rainy days.",
+   "ko": "비 오는 날 좋아해.",
+   "blank": "좋아해"
+  },
+  {
+   "text": "매운 거 좋아해요?",
+   "en": "Do you like spicy food?",
+   "ko": "매운 거 좋아해요?",
+   "blank": "좋아해요"
+  }
+ ],
+ "w|죄송하다": [
+  {
+   "text": "먼저 가서 죄송해요.",
+   "en": "Sorry for leaving first.",
+   "ko": "먼저 가서 죄송해요.",
+   "blank": "죄송해요"
+  },
+  {
+   "text": "깜빡해서 죄송합니다.",
+   "en": "I'm sorry. I forgot.",
+   "ko": "깜빡해서 죄송합니다.",
+   "blank": "죄송합니다"
+  }
+ ],
+ "w|주": [
+  {
+   "text": "다음 주 보자.",
+   "en": "See you next week.",
+   "ko": "다음 주 보자.",
+   "blank": "주"
+  },
+  {
+   "text": "이번 주는 회의가 너무 많아.",
+   "en": "There are too many meetings this week.",
+   "ko": "이번 주는 회의가 너무 많아.",
+   "blank": "주는"
+  }
+ ],
+ "w|주다": [
+  {
+   "text": "물 좀 줄래?",
+   "en": "Can you give me some water?",
+   "ko": "물 좀 줄래?",
+   "blank": "줄래"
+  },
+  {
+   "text": "이따가 사진 줄게.",
+   "en": "I'll give you the photo later.",
+   "ko": "이따가 사진 줄게.",
+   "blank": "줄게"
+  }
+ ],
+ "w|주인": [
+  {
+   "text": "이 가게 주인이 누구야?",
+   "en": "Who owns this shop?",
+   "ko": "이 가게 주인이 누구야?",
+   "blank": "주인이"
+  },
+  {
+   "text": "주인분이 참 친절하셔.",
+   "en": "The owner is really kind.",
+   "ko": "주인분이 참 친절하셔.",
+   "blank": "주인분이"
+  }
+ ],
+ "w|죽다": [
+  {
+   "text": "더워 죽겠어, 에어컨 틀자.",
+   "en": "I'm dying of heat. Let's turn on the air conditioner.",
+   "ko": "더워 죽겠어, 에어컨 틀자.",
+   "blank": "죽겠어"
+  },
+  {
+   "text": "폰이 죽어서 연락을 못 했어.",
+   "en": "My phone died, so I couldn't reach you.",
+   "ko": "폰이 죽어서 연락을 못 했어.",
+   "blank": "죽어서"
+  }
+ ],
+ "w|죽이다": [
+  {
+   "text": "티비 소리 좀 죽여.",
+   "en": "Turn the TV down a bit.",
+   "ko": "티비 소리 좀 죽여.",
+   "blank": "죽여"
+  },
+  {
+   "text": "현관 불 죽였어?",
+   "en": "Did you turn off the front light?",
+   "ko": "현관 불 죽였어?",
+   "blank": "죽였어"
+  }
+ ],
+ "w|준비": [
+  {
+   "text": "준비 다 됐어?",
+   "en": "Are you all ready?",
+   "ko": "준비 다 됐어?",
+   "blank": "준비"
+  },
+  {
+   "text": "아직 여행 준비 중이야.",
+   "en": "I'm still getting ready for the trip.",
+   "ko": "아직 여행 준비 중이야.",
+   "blank": "준비"
+  }
+ ],
+ "w|중": [
+  {
+   "text": "회의 중이에요.",
+   "en": "I'm in a meeting.",
+   "ko": "회의 중이에요.",
+   "blank": "중이에요"
+  },
+  {
+   "text": "지금 통화 중이야.",
+   "en": "I'm on the phone right now.",
+   "ko": "지금 통화 중이야.",
+   "blank": "중이야"
+  }
+ ],
+ "w|중요하다": [
+  {
+   "text": "지금 쉬는 게 더 중요해요.",
+   "en": "Resting now matters more.",
+   "ko": "지금 쉬는 게 더 중요해요.",
+   "blank": "중요해요"
+  },
+  {
+   "text": "중요한 약속이 있어.",
+   "en": "I have an important appointment.",
+   "ko": "중요한 약속이 있어.",
+   "blank": "중요한"
+  }
+ ],
+ "w|지금": [
+  {
+   "text": "지금 문 앞이야.",
+   "en": "I'm at the door right now.",
+   "ko": "지금 문 앞이야.",
+   "blank": "지금"
+  },
+  {
+   "text": "지금 바빠서 나중에 할게.",
+   "en": "I'm busy now, so I'll do it later.",
+   "ko": "지금 바빠서 나중에 할게.",
+   "blank": "지금"
+  }
+ ],
+ "w|지나다": [
+  {
+   "text": "그 신호등 지나서 왼쪽이야.",
+   "en": "Turn left after that traffic light.",
+   "ko": "그 신호등 지나서 왼쪽이야.",
+   "blank": "지나서"
+  },
+  {
+   "text": "벌써 여름이 지났어.",
+   "en": "Summer is already over.",
+   "ko": "벌써 여름이 지났어.",
+   "blank": "지났어"
+  }
+ ],
+ "w|지다": [
+  {
+   "text": "일부러 져 준 거야.",
+   "en": "I let you win on purpose.",
+   "ko": "일부러 져 준 거야.",
+   "blank": "져"
+  },
+  {
+   "text": "또 게임에서 졌어.",
+   "en": "I lost the game again.",
+   "ko": "또 게임에서 졌어.",
+   "blank": "졌어"
+  }
+ ],
+ "w|지키다": [
+  {
+   "text": "약속은 꼭 지켜.",
+   "en": "You have to keep your promise.",
+   "ko": "약속은 꼭 지켜.",
+   "blank": "지켜"
+  },
+  {
+   "text": "그 비밀은 지켰어.",
+   "en": "I kept that secret.",
+   "ko": "그 비밀은 지켰어.",
+   "blank": "지켰어"
+  }
+ ],
+ "w|직접": [
+  {
+   "text": "직접 가서 확인해.",
+   "en": "Go and check it yourself.",
+   "ko": "직접 가서 확인해.",
+   "blank": "직접"
+  },
+  {
+   "text": "직접 쓴 편지야.",
+   "en": "It's a letter I wrote myself.",
+   "ko": "직접 쓴 편지야.",
+   "blank": "직접"
+  }
+ ],
+ "w|진짜": [
+  {
+   "text": "진짜 고마워요.",
+   "en": "I really appreciate it.",
+   "ko": "진짜 고마워요.",
+   "blank": "진짜"
+  },
+  {
+   "text": "진짜 지금 가려고?",
+   "en": "Are you really about to leave?",
+   "ko": "진짜 지금 가려고?",
+   "blank": "진짜"
+  }
+ ],
+ "w|집": [
+  {
+   "text": "집에 가고 싶어요.",
+   "en": "I want to go home.",
+   "ko": "집에 가고 싶어요.",
+   "blank": "집에"
+  },
+  {
+   "text": "집이 어디예요?",
+   "en": "Where is your house?",
+   "ko": "집이 어디예요?",
+   "blank": "집이"
+  }
+ ],
+ "w|차": [
+  {
+   "text": "차 막혀서 늦겠어.",
+   "en": "Traffic is bad, so I'll be late.",
+   "ko": "차 막혀서 늦겠어.",
+   "blank": "차"
+  },
+  {
+   "text": "내 차로 갈게, 타.",
+   "en": "We'll take my car. Get in.",
+   "ko": "내 차로 갈게, 타.",
+   "blank": "차로"
+  }
+ ],
+ "w|참": [
+  {
+   "text": "참 웃기다.",
+   "en": "That's really funny.",
+   "ko": "참 웃기다.",
+   "blank": "참"
+  },
+  {
+   "text": "참 고마워.",
+   "en": "I'm really thankful.",
+   "ko": "참 고마워.",
+   "blank": "참"
+  }
+ ],
+ "w|찾다": [
+  {
+   "text": "지갑 찾았어?",
+   "en": "Did you find the wallet?",
+   "ko": "지갑 찾았어?",
+   "blank": "찾았어"
+  },
+  {
+   "text": "같이 찾아보자.",
+   "en": "Let's look for it together.",
+   "ko": "같이 찾아보자.",
+   "blank": "찾아보자"
+  }
+ ],
+ "w|처음": [
+  {
+   "text": "나 여기 처음이야.",
+   "en": "It's my first time here.",
+   "ko": "나 여기 처음이야.",
+   "blank": "처음이야"
+  },
+  {
+   "text": "처음엔 긴장을 많이 했어.",
+   "en": "I was really nervous at first.",
+   "ko": "처음엔 긴장을 많이 했어.",
+   "blank": "처음엔"
+  }
+ ],
+ "w|첫": [
+  {
+   "text": "첫 출근이라 떨려.",
+   "en": "I'm nervous. It's my first day at work.",
+   "ko": "첫 출근이라 떨려.",
+   "blank": "첫"
+  },
+  {
+   "text": "첫 장부터 재미있어.",
+   "en": "It's fun from the first page.",
+   "ko": "첫 장부터 재미있어.",
+   "blank": "첫"
+  }
+ ],
+ "w|초": [
+  {
+   "text": "딱 십 초만 기다려.",
+   "en": "Wait just ten seconds.",
+   "ko": "딱 십 초만 기다려.",
+   "blank": "초만"
+  },
+  {
+   "text": "밥 데우는 데 몇 초 안 걸렸어.",
+   "en": "Heating the rice only took a few seconds.",
+   "ko": "밥 데우는 데 몇 초 안 걸렸어.",
+   "blank": "초"
+  }
+ ],
+ "w|최고": [
+  {
+   "text": "너 오늘 최고 맞았어.",
+   "en": "You were the best today.",
+   "ko": "너 오늘 최고 맞았어.",
+   "blank": "최고"
+  },
+  {
+   "text": "이 국밥은 최고 맞아.",
+   "en": "This soup is the best.",
+   "ko": "이 국밥은 최고 맞아.",
+   "blank": "최고"
+  }
+ ],
+ "w|춤추다": [
+  {
+   "text": "이 노래 나오면 춤춰.",
+   "en": "Dance when this song comes on.",
+   "ko": "이 노래 나오면 춤춰.",
+   "blank": "춤춰"
+  },
+  {
+   "text": "결혼식장에서 춤췄어.",
+   "en": "I danced at the wedding hall.",
+   "ko": "결혼식장에서 춤췄어.",
+   "blank": "춤췄어"
+  }
+ ],
+ "w|치다": [
+  {
+   "text": "박수 한번 쳐 줘.",
+   "en": "Give a round of applause.",
+   "ko": "박수 한번 쳐 줘.",
+   "blank": "쳐"
+  },
+  {
+   "text": "등을 가볍게 쳤어.",
+   "en": "I gave them a light pat on the back.",
+   "ko": "등을 가볍게 쳤어.",
+   "blank": "쳤어"
+  }
+ ],
+ "w|친구": [
+  {
+   "text": "친구랑 밤새 수다 떨었어.",
+   "en": "I stayed up chatting with a friend.",
+   "ko": "친구랑 밤새 수다 떨었어.",
+   "blank": "친구랑"
+  },
+  {
+   "text": "그 친구 아직 학생이야?",
+   "en": "Is that friend still a student?",
+   "ko": "그 친구 아직 학생이야?",
+   "blank": "친구"
+  }
+ ],
+ "w|크다": [
+  {
+   "text": "이 가방 진짜 커요.",
+   "en": "This bag is really big.",
+   "ko": "이 가방 진짜 커요.",
+   "blank": "커요"
+  },
+  {
+   "text": "방이 생각보다 크네.",
+   "en": "The room is bigger than I thought.",
+   "ko": "방이 생각보다 크네.",
+   "blank": "크네"
+  }
+ ],
+ "w|타다": [
+  {
+   "text": "이 버스 타자.",
+   "en": "Let's take this bus.",
+   "ko": "이 버스 타자.",
+   "blank": "타자"
+  },
+  {
+   "text": "막차 겨우 탔어.",
+   "en": "I barely caught the last train.",
+   "ko": "막차 겨우 탔어.",
+   "blank": "탔어"
+  }
+ ],
+ "w|팔다": [
+  {
+   "text": "중고로 팔았어.",
+   "en": "I sold it secondhand.",
+   "ko": "중고로 팔았어.",
+   "blank": "팔았어"
+  },
+  {
+   "text": "이 가격에는 안 팔아.",
+   "en": "I won't sell it at this price.",
+   "ko": "이 가격에는 안 팔아.",
+   "blank": "팔아"
+  }
+ ],
+ "w|필요하다": [
+  {
+   "text": "영수증이 필요해요.",
+   "en": "I need the receipt.",
+   "ko": "영수증이 필요해요.",
+   "blank": "필요해요"
+  },
+  {
+   "text": "필요한 건 이미 챙겼어.",
+   "en": "I already packed what we need.",
+   "ko": "필요한 건 이미 챙겼어.",
+   "blank": "필요한"
+  }
+ ],
+ "w|하나": [
+  {
+   "text": "이거 하나 주세요.",
+   "en": "Give me one of these, please.",
+   "ko": "이거 하나 주세요.",
+   "blank": "하나"
+  },
+  {
+   "text": "하나 더 있어요?",
+   "en": "Do you have one more?",
+   "ko": "하나 더 있어요?",
+   "blank": "하나"
+  }
+ ],
+ "w|하다": [
+  {
+   "text": "그냥 해 봐.",
+   "en": "Just try it.",
+   "ko": "그냥 해 봐.",
+   "blank": "해"
+  },
+  {
+   "text": "뭐 하고 있어?",
+   "en": "What are you doing?",
+   "ko": "뭐 하고 있어?",
+   "blank": "하고"
+  }
+ ],
+ "w|하지만": [
+  {
+   "text": "하지만 괜찮아.",
+   "en": "But it's okay.",
+   "ko": "하지만 괜찮아.",
+   "blank": "하지만"
+  },
+  {
+   "text": "하지만 몰라.",
+   "en": "But I don't know.",
+   "ko": "하지만 몰라.",
+   "blank": "하지만"
+  }
+ ],
+ "w|학생": [
+  {
+   "text": "학생 할인 돼요?",
+   "en": "Is there a student discount?",
+   "ko": "학생 할인 돼요?",
+   "blank": "학생"
+  },
+  {
+   "text": "그 학생 이름이 뭐였더라.",
+   "en": "What was that student's name again?",
+   "ko": "그 학생 이름이 뭐였더라.",
+   "blank": "학생"
+  }
+ ],
+ "w|한": [
+  {
+   "text": "한 번만 더 해.",
+   "en": "Just one more time.",
+   "ko": "한 번만 더 해.",
+   "blank": "한"
+  },
+  {
+   "text": "한 잔만 시킬까?",
+   "en": "Should we order just one drink?",
+   "ko": "한 잔만 시킬까?",
+   "blank": "한"
+  }
+ ],
+ "w|한번": [
+  {
+   "text": "한번 타 봐, 재밌어.",
+   "en": "Try it once. It's fun.",
+   "ko": "한번 타 봐, 재밌어.",
+   "blank": "한번"
+  },
+  {
+   "text": "한번 솔직히 얘기하자.",
+   "en": "Let's talk honestly for a minute.",
+   "ko": "한번 솔직히 얘기하자.",
+   "blank": "한번"
+  }
+ ],
+ "w|할머니": [
+  {
+   "text": "할머니, 저 다녀왔어요.",
+   "en": "Grandma, I'm home.",
+   "ko": "할머니, 저 다녀왔어요.",
+   "blank": "할머니"
+  },
+  {
+   "text": "할머니가 김치 담그셨어.",
+   "en": "Grandma made kimchi.",
+   "ko": "할머니가 김치 담그셨어.",
+   "blank": "할머니가"
+  }
+ ],
+ "w|할아버지": [
+  {
+   "text": "할아버지 말씀 잘 들어.",
+   "en": "Listen to Grandpa.",
+   "ko": "할아버지 말씀 잘 들어.",
+   "blank": "할아버지"
+  },
+  {
+   "text": "할아버지가 산책 나가셨어.",
+   "en": "Grandpa went out for a walk.",
+   "ko": "할아버지가 산책 나가셨어.",
+   "blank": "할아버지가"
+  }
+ ],
+ "w|함께": [
+  {
+   "text": "함께 가자.",
+   "en": "Let's go together.",
+   "ko": "함께 가자.",
+   "blank": "함께"
+  },
+  {
+   "text": "우리 함께 먹자.",
+   "en": "Let's eat together.",
+   "ko": "우리 함께 먹자.",
+   "blank": "함께"
+  }
+ ],
+ "w|항상": [
+  {
+   "text": "항상 응원할게.",
+   "en": "I will always support you.",
+   "ko": "항상 응원할게.",
+   "blank": "항상"
+  },
+  {
+   "text": "항상 건강하세요.",
+   "en": "Always stay healthy.",
+   "ko": "항상 건강하세요.",
+   "blank": "항상"
+  }
+ ],
+ "w|해": [
+  {
+   "text": "한 해 동안 고생 많았어.",
+   "en": "You worked hard all year.",
+   "ko": "한 해 동안 고생 많았어.",
+   "blank": "해"
+  },
+  {
+   "text": "한 해가 벌써 다 갔네.",
+   "en": "The year has gone by already.",
+   "ko": "한 해가 벌써 다 갔네.",
+   "blank": "해가"
+  }
+ ],
+ "w|형": [
+  {
+   "text": "형, 이거 잠깐 들어 줘.",
+   "en": "Bro, hold this for a sec.",
+   "ko": "형, 이거 잠깐 들어 줘.",
+   "blank": "형"
+  },
+  {
+   "text": "형이 차 빌려 줬어.",
+   "en": "My older brother lent me his car.",
+   "ko": "형이 차 빌려 줬어.",
+   "blank": "형이"
+  }
+ ],
+ "w|형제": [
+  {
+   "text": "형제 사이가 참 좋네.",
+   "en": "Those brothers get along really well.",
+   "ko": "형제 사이가 참 좋네.",
+   "blank": "형제"
+  },
+  {
+   "text": "그 집 형제는 키가 다 커.",
+   "en": "The brothers in that family are all tall.",
+   "ko": "그 집 형제는 키가 다 커.",
+   "blank": "형제는"
+  }
+ ],
+ "w|혹시": [
+  {
+   "text": "혹시 우산 있어?",
+   "en": "Do you happen to have an umbrella?",
+   "ko": "혹시 우산 있어?",
+   "blank": "혹시"
+  },
+  {
+   "text": "혹시 열쇠 봤어?",
+   "en": "Did you happen to see the keys?",
+   "ko": "혹시 열쇠 봤어?",
+   "blank": "혹시"
+  }
+ ],
+ "w|혼자": [
+  {
+   "text": "혼자 영화 봐도 좋아.",
+   "en": "I'm fine watching a movie alone.",
+   "ko": "혼자 영화 봐도 좋아.",
+   "blank": "혼자"
+  },
+  {
+   "text": "혼자 있기 싫을 땐 연락해.",
+   "en": "Call me when you don't want to be alone.",
+   "ko": "혼자 있기 싫을 땐 연락해.",
+   "blank": "혼자"
+  }
+ ],
+ "w|확실히": [
+  {
+   "text": "확실히 더 편해졌어.",
+   "en": "It's definitely gotten more comfortable.",
+   "ko": "확실히 더 편해졌어.",
+   "blank": "확실히"
+  },
+  {
+   "text": "확실히 그 사람이 맞아요?",
+   "en": "Are you sure it's that person?",
+   "ko": "확실히 그 사람이 맞아요?",
+   "blank": "확실히"
+  }
+ ],
+ "w|후": [
+  {
+   "text": "점심 후 산책할까?",
+   "en": "Want to take a walk after lunch?",
+   "ko": "점심 후 산책할까?",
+   "blank": "후"
+  },
+  {
+   "text": "회의 후 바로 갈게.",
+   "en": "I'll leave right after the meeting.",
+   "ko": "회의 후 바로 갈게.",
+   "blank": "후"
+  }
+ ],
+ "w|훨씬": [
+  {
+   "text": "오늘은 훨씬 시원해.",
+   "en": "It's much cooler today.",
+   "ko": "오늘은 훨씬 시원해.",
+   "blank": "훨씬"
+  },
+  {
+   "text": "네 생각이 훨씬 나아.",
+   "en": "Your idea is much better.",
+   "ko": "네 생각이 훨씬 나아.",
+   "blank": "훨씬"
+  }
+ ],
+ "w|흔들다": [
+  {
+   "text": "손 흔들어 줘.",
+   "en": "Wave your hand.",
+   "ko": "손 흔들어 줘.",
+   "blank": "흔들어"
+  },
+  {
+   "text": "주스 잘 흔들었어?",
+   "en": "Did you shake the juice well?",
+   "ko": "주스 잘 흔들었어?",
+   "blank": "흔들었어"
+  }
+ ]
+}

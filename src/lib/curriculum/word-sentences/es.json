@@ -1,0 +1,2942 @@
+{
+ "w|a": [
+  {
+   "text": "Voy a casa en camión.",
+   "en": "I'm going home by bus.",
+   "ko": "버스로 집에 가.",
+   "blank": "a"
+  },
+  {
+   "text": "Llama a tu mamá.",
+   "en": "Call your mom.",
+   "ko": "엄마한테 전화해.",
+   "blank": "a"
+  }
+ ],
+ "w|acabar": [
+  {
+   "text": "Se acabó el café.",
+   "en": "The coffee's gone.",
+   "ko": "커피 다 떨어졌어.",
+   "blank": "acabó"
+  },
+  {
+   "text": "Acaba de salir.",
+   "en": "He just left.",
+   "ko": "방금 나갔어.",
+   "blank": "Acaba"
+  }
+ ],
+ "w|acuerdo": [
+  {
+   "text": "Estoy de acuerdo contigo.",
+   "en": "I agree with you.",
+   "ko": "네 말에 동의해.",
+   "blank": "acuerdo"
+  },
+  {
+   "text": "De acuerdo, nos vemos.",
+   "en": "All right, see you.",
+   "ko": "그래, 나중에 보자.",
+   "blank": "acuerdo"
+  }
+ ],
+ "w|ahí": [
+  {
+   "text": "Déjalo ahí, por favor.",
+   "en": "Leave it there, please.",
+   "ko": "거기 둬 줘.",
+   "blank": "ahí"
+  },
+  {
+   "text": "Ahí viene el camión.",
+   "en": "Here comes the bus.",
+   "ko": "버스 온다.",
+   "blank": "Ahí"
+  }
+ ],
+ "w|ahora": [
+  {
+   "text": "Ahora no puedo hablar.",
+   "en": "I can't talk right now.",
+   "ko": "지금은 말 못 해.",
+   "blank": "Ahora"
+  },
+  {
+   "text": "¿Sales ahora o luego?",
+   "en": "Are you leaving now or later?",
+   "ko": "지금 나가, 아니면 나중에?",
+   "blank": "ahora"
+  }
+ ],
+ "w|al": [
+  {
+   "text": "Voy al mercado.",
+   "en": "I'm going to the market.",
+   "ko": "시장에 가.",
+   "blank": "al"
+  },
+  {
+   "text": "Sube al camión, ya llega.",
+   "en": "Get on the bus, it's here.",
+   "ko": "버스 타, 벌써 왔어.",
+   "blank": "al"
+  }
+ ],
+ "w|algo": [
+  {
+   "text": "¿Quieres algo de comer?",
+   "en": "Do you want something to eat?",
+   "ko": "뭐 좀 먹을래?",
+   "blank": "algo"
+  },
+  {
+   "text": "Algo no cuadra aquí.",
+   "en": "Something doesn't add up.",
+   "ko": "뭔가 앞뒤가 안 맞아.",
+   "blank": "Algo"
+  }
+ ],
+ "w|alguien": [
+  {
+   "text": "Alguien dejó la puerta abierta.",
+   "en": "Someone left the door open.",
+   "ko": "누군가 문을 열어 뒀어.",
+   "blank": "Alguien"
+  },
+  {
+   "text": "¿Viste a alguien afuera?",
+   "en": "Did you see anyone outside?",
+   "ko": "밖에서 누구 봤어?",
+   "blank": "alguien"
+  }
+ ],
+ "w|alguno": [
+  {
+   "text": "¿Alguno quiere café?",
+   "en": "Does anyone want coffee?",
+   "ko": "커피 마실 사람?",
+   "blank": "Alguno"
+  },
+  {
+   "text": "¿Tienes alguno igual?",
+   "en": "Do you have one the same?",
+   "ko": "똑같은 거 하나 있어?",
+   "blank": "alguno"
+  }
+ ],
+ "w|allí": [
+  {
+   "text": "Déjalo allí.",
+   "en": "Leave it there.",
+   "ko": "거기 둬.",
+   "blank": "allí"
+  },
+  {
+   "text": "Allí dejé el carro.",
+   "en": "I left the car there.",
+   "ko": "거기에 차를 뒀어.",
+   "blank": "Allí"
+  }
+ ],
+ "w|amigo": [
+  {
+   "text": "Él es mi mejor amigo.",
+   "en": "He's my best friend.",
+   "ko": "그는 내 가장 친한 친구야.",
+   "blank": "amigo"
+  },
+  {
+   "text": "Voy con un amigo.",
+   "en": "I'm going with a friend.",
+   "ko": "친구랑 같이 가.",
+   "blank": "amigo"
+  }
+ ],
+ "w|año": [
+  {
+   "text": "Este año me mudo.",
+   "en": "I'm moving this year.",
+   "ko": "올해 이사를 해.",
+   "blank": "año"
+  },
+  {
+   "text": "Fue un buen año.",
+   "en": "It was a good year.",
+   "ko": "좋은 한 해였어.",
+   "blank": "año"
+  }
+ ],
+ "w|antes": [
+  {
+   "text": "Piénsalo antes de salir.",
+   "en": "Think it over before you leave.",
+   "ko": "나가기 전에 생각해.",
+   "blank": "antes"
+  },
+  {
+   "text": "Antes vivía cerca.",
+   "en": "I used to live nearby.",
+   "ko": "예전에는 근처에 살았어.",
+   "blank": "Antes"
+  }
+ ],
+ "w|aquí": [
+  {
+   "text": "Ven aquí un momento.",
+   "en": "Come here for a moment.",
+   "ko": "잠깐 이리 와.",
+   "blank": "aquí"
+  },
+  {
+   "text": "Aquí está tu abrigo.",
+   "en": "Here's your coat.",
+   "ko": "네 코트 여기 있어.",
+   "blank": "Aquí"
+  }
+ ],
+ "w|así": [
+  {
+   "text": "No lo hagas así.",
+   "en": "Don't do it like that.",
+   "ko": "그렇게 하지 마.",
+   "blank": "así"
+  },
+  {
+   "text": "Así me gusta más.",
+   "en": "I like it better this way.",
+   "ko": "이렇게 하는 게 더 좋아.",
+   "blank": "Así"
+  }
+ ],
+ "w|ayudar": [
+  {
+   "text": "¿Me puedes ayudar?",
+   "en": "Can you help me?",
+   "ko": "나 좀 도와줄래?",
+   "blank": "ayudar"
+  },
+  {
+   "text": "Nadie me ayudó con eso.",
+   "en": "Nobody helped me with that.",
+   "ko": "그 일은 아무도 안 도와줬어.",
+   "blank": "ayudó"
+  }
+ ],
+ "w|bien": [
+  {
+   "text": "Estoy bien, gracias.",
+   "en": "I'm fine, thanks.",
+   "ko": "괜찮아, 고마워.",
+   "blank": "bien"
+  },
+  {
+   "text": "Todo salió bien.",
+   "en": "Everything turned out well.",
+   "ko": "다 잘 됐어.",
+   "blank": "bien"
+  }
+ ],
+ "w|bueno": [
+  {
+   "text": "El taco está bueno.",
+   "en": "The taco is good.",
+   "ko": "타코 맛있어.",
+   "blank": "bueno"
+  },
+  {
+   "text": "Qué bueno que viniste.",
+   "en": "I'm so glad you came.",
+   "ko": "와 줘서 다행이야.",
+   "blank": "bueno"
+  }
+ ],
+ "w|buscar": [
+  {
+   "text": "Voy a buscar trabajo.",
+   "en": "I'm going to look for a job.",
+   "ko": "일자리 찾아볼게.",
+   "blank": "buscar"
+  },
+  {
+   "text": "¿Qué buscas?",
+   "en": "What are you looking for?",
+   "ko": "뭐 찾아?",
+   "blank": "buscas"
+  }
+ ],
+ "w|casa": [
+  {
+   "text": "Ya estoy en casa.",
+   "en": "I'm home already.",
+   "ko": "나 벌써 집이야.",
+   "blank": "casa"
+  },
+  {
+   "text": "Vamos a casa de Ana.",
+   "en": "Let's go to Ana's place.",
+   "ko": "아나네 집에 가자.",
+   "blank": "casa"
+  }
+ ],
+ "w|chico": [
+  {
+   "text": "Ese chico canta bien.",
+   "en": "That kid sings well.",
+   "ko": "저 아이는 노래를 잘해.",
+   "blank": "chico"
+  },
+  {
+   "text": "Ven acá, chico.",
+   "en": "Come here, kid.",
+   "ko": "이리 와, 얘.",
+   "blank": "chico"
+  }
+ ],
+ "w|cierto": [
+  {
+   "text": "¿Es cierto lo que dicen?",
+   "en": "Is what they're saying true?",
+   "ko": "그 말 사실이야?",
+   "blank": "cierto"
+  },
+  {
+   "text": "Por cierto, te llamo luego.",
+   "en": "By the way, I'll call you later.",
+   "ko": "그런데 나중에 전화할게.",
+   "blank": "cierto"
+  }
+ ],
+ "w|claro": [
+  {
+   "text": "Claro, yo te aviso.",
+   "en": "Sure, I'll let you know.",
+   "ko": "그래, 내가 알려 줄게.",
+   "blank": "Claro"
+  },
+  {
+   "text": "¿Te quedó claro?",
+   "en": "Did you get that?",
+   "ko": "이해됐어?",
+   "blank": "claro"
+  }
+ ],
+ "w|como": [
+  {
+   "text": "Hazlo como te dije.",
+   "en": "Do it the way I told you.",
+   "ko": "내가 말한 대로 해.",
+   "blank": "como"
+  },
+  {
+   "text": "Trabaja como enfermera.",
+   "en": "She works as a nurse.",
+   "ko": "그 사람은 간호사로 일해.",
+   "blank": "como"
+  }
+ ],
+ "w|cómo": [
+  {
+   "text": "¿Cómo estás hoy?",
+   "en": "How are you today?",
+   "ko": "오늘 어때?",
+   "blank": "Cómo"
+  },
+  {
+   "text": "No sé cómo entrar.",
+   "en": "I don't know how to get in.",
+   "ko": "어떻게 들어가는지 모르겠어.",
+   "blank": "cómo"
+  }
+ ],
+ "w|con": [
+  {
+   "text": "Café con leche, por favor.",
+   "en": "Coffee with milk, please.",
+   "ko": "우유 넣은 커피 주세요.",
+   "blank": "con"
+  },
+  {
+   "text": "Voy con mi mamá.",
+   "en": "I'm going with my mom.",
+   "ko": "엄마랑 같이 가.",
+   "blank": "con"
+  }
+ ],
+ "w|conmigo": [
+  {
+   "text": "¿Vienes conmigo al cine?",
+   "en": "Are you coming to the movies with me?",
+   "ko": "나랑 영화 보러 갈래?",
+   "blank": "conmigo"
+  },
+  {
+   "text": "Quédate conmigo un rato.",
+   "en": "Stay with me for a bit.",
+   "ko": "잠깐만 나랑 있어.",
+   "blank": "conmigo"
+  }
+ ],
+ "w|conocer": [
+  {
+   "text": "Quiero conocer tu ciudad.",
+   "en": "I want to get to know your city.",
+   "ko": "네 도시를 가 보고 싶어.",
+   "blank": "conocer"
+  },
+  {
+   "text": "¿Conoces a mi primo?",
+   "en": "Do you know my cousin?",
+   "ko": "내 사촌 알아?",
+   "blank": "Conoces"
+  }
+ ],
+ "w|conseguir": [
+  {
+   "text": "Al final lo conseguí.",
+   "en": "I managed it in the end.",
+   "ko": "결국 해냈어.",
+   "blank": "conseguí"
+  },
+  {
+   "text": "¿Conseguiste entradas?",
+   "en": "Did you get tickets?",
+   "ko": "표 구했어?",
+   "blank": "Conseguiste"
+  }
+ ],
+ "w|contigo": [
+  {
+   "text": "Me quedo contigo.",
+   "en": "I'll stay with you.",
+   "ko": "나 너랑 있을게.",
+   "blank": "contigo"
+  },
+  {
+   "text": "Quiero hablar contigo.",
+   "en": "I want to talk with you.",
+   "ko": "너랑 이야기하고 싶어.",
+   "blank": "contigo"
+  }
+ ],
+ "w|cosa": [
+  {
+   "text": "Esa cosa no sirve.",
+   "en": "That thing doesn't work.",
+   "ko": "그거 안 돼.",
+   "blank": "cosa"
+  },
+  {
+   "text": "Otra cosa, ¿vienes?",
+   "en": "One more thing, are you coming?",
+   "ko": "그리고, 너 올 거야?",
+   "blank": "cosa"
+  }
+ ],
+ "w|creer": [
+  {
+   "text": "No lo puedo creer.",
+   "en": "I can't believe it.",
+   "ko": "믿기지 않아.",
+   "blank": "creer"
+  },
+  {
+   "text": "Te creo, de verdad.",
+   "en": "I believe you, really.",
+   "ko": "진짜로 네 말 믿어.",
+   "blank": "creo"
+  }
+ ],
+ "w|cuando": [
+  {
+   "text": "Llámame cuando llegues.",
+   "en": "Call me when you arrive.",
+   "ko": "도착하면 전화해.",
+   "blank": "cuando"
+  },
+  {
+   "text": "Cuando puedas, me escribes.",
+   "en": "Text me when you can.",
+   "ko": "시간 되면 문자해.",
+   "blank": "Cuando"
+  }
+ ],
+ "w|dar": [
+  {
+   "text": "Te voy a dar un abrazo.",
+   "en": "I'm going to give you a hug.",
+   "ko": "안아 줄게.",
+   "blank": "dar"
+  },
+  {
+   "text": "¿Me das un poco de agua?",
+   "en": "Can you give me a little water?",
+   "ko": "물 조금 줄래?",
+   "blank": "das"
+  }
+ ],
+ "w|de": [
+  {
+   "text": "Vengo de la oficina.",
+   "en": "I'm coming from the office.",
+   "ko": "회사에서 오는 길이야.",
+   "blank": "de"
+  },
+  {
+   "text": "Un vaso de agua, por favor.",
+   "en": "A glass of water, please.",
+   "ko": "물 한 잔 주세요.",
+   "blank": "de"
+  }
+ ],
+ "w|deber": [
+  {
+   "text": "Debo ir al doctor.",
+   "en": "I have to go to the doctor.",
+   "ko": "병원에 가야 해.",
+   "blank": "Debo"
+  },
+  {
+   "text": "No debes abrir eso.",
+   "en": "You shouldn't open that.",
+   "ko": "그건 열면 안 돼.",
+   "blank": "debes"
+  }
+ ],
+ "w|decir": [
+  {
+   "text": "Te voy a decir algo.",
+   "en": "I'm going to tell you something.",
+   "ko": "뭐 하나 말해 줄게.",
+   "blank": "decir"
+  },
+  {
+   "text": "Ella dice la verdad.",
+   "en": "She tells the truth.",
+   "ko": "걔는 사실을 말해.",
+   "blank": "dice"
+  }
+ ],
+ "w|dejar": [
+  {
+   "text": "Puedes dejar eso aquí.",
+   "en": "You can leave that here.",
+   "ko": "그건 여기 둬도 돼.",
+   "blank": "dejar"
+  },
+  {
+   "text": "No me dejes solo.",
+   "en": "Don't leave me on my own.",
+   "ko": "나만 두고 가지 마.",
+   "blank": "dejes"
+  }
+ ],
+ "w|del": [
+  {
+   "text": "Vengo del trabajo.",
+   "en": "I'm coming from work.",
+   "ko": "일하다가 오는 길이야.",
+   "blank": "del"
+  },
+  {
+   "text": "La tapa del frasco está dura.",
+   "en": "The jar lid is stuck.",
+   "ko": "병뚜껑이 안 열려.",
+   "blank": "del"
+  }
+ ],
+ "w|desde": [
+  {
+   "text": "No te veo desde ayer.",
+   "en": "I haven't seen you since yesterday.",
+   "ko": "어제부터 안 보였어.",
+   "blank": "desde"
+  },
+  {
+   "text": "Desde aquí se ve todo.",
+   "en": "You can see everything from here.",
+   "ko": "여기서 다 보여.",
+   "blank": "Desde"
+  }
+ ],
+ "w|después": [
+  {
+   "text": "Después te llamo.",
+   "en": "I'll call you afterwards.",
+   "ko": "있다가 전화할게.",
+   "blank": "Después"
+  },
+  {
+   "text": "Lo vemos después de comer.",
+   "en": "We'll see about it after we eat.",
+   "ko": "밥 먹고 나서 보자.",
+   "blank": "después"
+  }
+ ],
+ "w|día": [
+  {
+   "text": "Fue un día muy largo.",
+   "en": "It was a very long day.",
+   "ko": "정말 긴 하루였어.",
+   "blank": "día"
+  },
+  {
+   "text": "Que tengas un buen día.",
+   "en": "Have a good day.",
+   "ko": "좋은 하루 보내.",
+   "blank": "día"
+  }
+ ],
+ "w|dinero": [
+  {
+   "text": "No traigo dinero.",
+   "en": "I didn't bring any money.",
+   "ko": "돈을 안 가져왔어.",
+   "blank": "dinero"
+  },
+  {
+   "text": "Se me acabó el dinero.",
+   "en": "I've run out of money.",
+   "ko": "돈이 다 떨어졌어.",
+   "blank": "dinero"
+  }
+ ],
+ "w|dios": [
+  {
+   "text": "Gracias a Dios llegaste.",
+   "en": "Thank God you made it.",
+   "ko": "도착해서 정말 다행이야.",
+   "blank": "Dios"
+  },
+  {
+   "text": "Si Dios quiere, viajamos.",
+   "en": "God willing, we'll take the trip.",
+   "ko": "잘되면 여행 가자.",
+   "blank": "Dios"
+  }
+ ],
+ "w|donde": [
+  {
+   "text": "¿Dónde dejaste las llaves?",
+   "en": "Where did you leave the keys?",
+   "ko": "열쇠 어디 뒀어?",
+   "blank": "Dónde"
+  },
+  {
+   "text": "Vamos donde tú quieras.",
+   "en": "Let's go wherever you want.",
+   "ko": "네가 가고 싶은 대로 가자.",
+   "blank": "donde"
+  }
+ ],
+ "w|dónde": [
+  {
+   "text": "¿Dónde está el baño?",
+   "en": "Where is the bathroom?",
+   "ko": "화장실이 어디예요?",
+   "blank": "Dónde"
+  },
+  {
+   "text": "No sé dónde dejé la bolsa.",
+   "en": "I don't know where I left the bag.",
+   "ko": "가방을 어디 뒀는지 모르겠어.",
+   "blank": "dónde"
+  }
+ ],
+ "w|dos": [
+  {
+   "text": "Quiero dos tacos, por favor.",
+   "en": "I want two tacos, please.",
+   "ko": "타코 두 개 주세요.",
+   "blank": "dos"
+  },
+  {
+   "text": "Somos dos en la mesa.",
+   "en": "There are two of us at the table.",
+   "ko": "자리에 우리 둘이야.",
+   "blank": "dos"
+  }
+ ],
+ "w|el": [
+  {
+   "text": "Pásame el vaso, por favor.",
+   "en": "Pass me the glass, please.",
+   "ko": "잔 좀 건네줘.",
+   "blank": "el"
+  },
+  {
+   "text": "¿Dónde dejaste el celular?",
+   "en": "Where did you leave the phone?",
+   "ko": "휴대폰 어디 뒀어?",
+   "blank": "el"
+  }
+ ],
+ "w|él": [
+  {
+   "text": "Habla con él primero.",
+   "en": "Talk to him first.",
+   "ko": "먼저 그 사람이랑 얘기해.",
+   "blank": "él"
+  },
+  {
+   "text": "Eso lo trajo él.",
+   "en": "He brought that.",
+   "ko": "그건 그가 가져왔어.",
+   "blank": "él"
+  }
+ ],
+ "w|ella": [
+  {
+   "text": "Voy con ella al parque.",
+   "en": "I'm going to the park with her.",
+   "ko": "걔랑 공원에 가.",
+   "blank": "ella"
+  },
+  {
+   "text": "Ella ya comió.",
+   "en": "She already ate.",
+   "ko": "걔는 벌써 밥 먹었어.",
+   "blank": "Ella"
+  }
+ ],
+ "w|ello": [
+  {
+   "text": "No te preocupes por ello.",
+   "en": "Don't worry about that.",
+   "ko": "그 일은 걱정하지 마.",
+   "blank": "ello"
+  },
+  {
+   "text": "Por ello llegué tarde.",
+   "en": "That's why I got here late.",
+   "ko": "그래서 늦게 도착했어.",
+   "blank": "ello"
+  }
+ ],
+ "w|empezar": [
+  {
+   "text": "Empieza sin mí.",
+   "en": "Start without me.",
+   "ko": "나 없이 시작해.",
+   "blank": "Empieza"
+  },
+  {
+   "text": "Ya quiero empezar.",
+   "en": "I want to get started already.",
+   "ko": "이제 시작하고 싶어.",
+   "blank": "empezar"
+  }
+ ],
+ "w|en": [
+  {
+   "text": "El libro está en la mesa.",
+   "en": "The book is on the table.",
+   "ko": "책이 탁자 위에 있어.",
+   "blank": "en"
+  },
+  {
+   "text": "Vivo en esta ciudad.",
+   "en": "I live in this city.",
+   "ko": "나는 이 도시에 살아.",
+   "blank": "en"
+  }
+ ],
+ "w|encontrar": [
+  {
+   "text": "No logro encontrar las llaves.",
+   "en": "I can't manage to find the keys.",
+   "ko": "열쇠를 못 찾겠어.",
+   "blank": "encontrar"
+  },
+  {
+   "text": "¿Dónde lo encontraste?",
+   "en": "Where did you find it?",
+   "ko": "어디서 찾았어?",
+   "blank": "encontraste"
+  }
+ ],
+ "w|entender": [
+  {
+   "text": "No logro entender eso.",
+   "en": "I can't make sense of that.",
+   "ko": "그건 도무지 이해가 안 돼.",
+   "blank": "entender"
+  },
+  {
+   "text": "¿Me entiendes bien?",
+   "en": "Do you understand me all right?",
+   "ko": "내 말 이해돼?",
+   "blank": "entiendes"
+  }
+ ],
+ "w|entonces": [
+  {
+   "text": "Entonces nos vemos luego.",
+   "en": "So I'll see you later.",
+   "ko": "그러면 나중에 보자.",
+   "blank": "Entonces"
+  },
+  {
+   "text": "Si es así, entonces voy.",
+   "en": "If that's how it is, then I'll go.",
+   "ko": "그렇다면 내가 갈게.",
+   "blank": "entonces"
+  }
+ ],
+ "w|entrar": [
+  {
+   "text": "Entra, está abierto.",
+   "en": "Come in, it's open.",
+   "ko": "들어와, 열려 있어.",
+   "blank": "Entra"
+  },
+  {
+   "text": "No puedo entrar.",
+   "en": "I can't get in.",
+   "ko": "들어갈 수가 없어.",
+   "blank": "entrar"
+  }
+ ],
+ "w|escuchar": [
+  {
+   "text": "Escucha un segundo.",
+   "en": "Listen for a second.",
+   "ko": "잠깐만 들어 봐.",
+   "blank": "Escucha"
+  },
+  {
+   "text": "No te escuché bien.",
+   "en": "I didn't hear you properly.",
+   "ko": "잘 안 들렸어.",
+   "blank": "escuché"
+  }
+ ],
+ "w|ese": [
+  {
+   "text": "Pásame ese plato.",
+   "en": "Pass me that plate.",
+   "ko": "그 접시 좀 줘.",
+   "blank": "ese"
+  },
+  {
+   "text": "Ese señor es mi tío.",
+   "en": "That man is my uncle.",
+   "ko": "저분은 내 삼촌이야.",
+   "blank": "Ese"
+  }
+ ],
+ "w|eso": [
+  {
+   "text": "No me digas eso.",
+   "en": "Don't tell me that.",
+   "ko": "그런 말 하지 마.",
+   "blank": "eso"
+  },
+  {
+   "text": "¿Por qué dices eso?",
+   "en": "Why are you saying that?",
+   "ko": "왜 그런 말을 해?",
+   "blank": "eso"
+  }
+ ],
+ "w|espera": [
+  {
+   "text": "¡Qué larga fue la espera!",
+   "en": "That wait was endless!",
+   "ko": "정말 오래 기다렸어.",
+   "blank": "espera"
+  },
+  {
+   "text": "Estoy en la sala de espera.",
+   "en": "I'm in the waiting room.",
+   "ko": "대기실에 있어.",
+   "blank": "espera"
+  }
+ ],
+ "w|esperar": [
+  {
+   "text": "Te espero en la esquina.",
+   "en": "I'll wait for you on the corner.",
+   "ko": "모퉁이에서 기다릴게.",
+   "blank": "espero"
+  },
+  {
+   "text": "Hay que esperar un poco.",
+   "en": "We have to wait a bit.",
+   "ko": "조금 기다려야 해.",
+   "blank": "esperar"
+  }
+ ],
+ "w|estar": [
+  {
+   "text": "Quiero estar en casa.",
+   "en": "I want to be at home.",
+   "ko": "집에 있고 싶어.",
+   "blank": "estar"
+  },
+  {
+   "text": "Debe estar por llegar.",
+   "en": "They must be about to arrive.",
+   "ko": "곧 도착할 거야.",
+   "blank": "estar"
+  }
+ ],
+ "w|este": [
+  {
+   "text": "Me gusta este lugar.",
+   "en": "I like this place.",
+   "ko": "여기가 마음에 들어.",
+   "blank": "este"
+  },
+  {
+   "text": "¿Ves este carro rojo?",
+   "en": "Do you see this red car?",
+   "ko": "이 빨간 차 보여?",
+   "blank": "este"
+  }
+ ],
+ "w|esto": [
+  {
+   "text": "¿Qué es esto?",
+   "en": "What is this?",
+   "ko": "이게 뭐야?",
+   "blank": "esto"
+  },
+  {
+   "text": "Toma esto y ven.",
+   "en": "Take this and come.",
+   "ko": "이거 들고 와.",
+   "blank": "esto"
+  }
+ ],
+ "w|favor": [
+  {
+   "text": "Por favor, abre la puerta.",
+   "en": "Please open the door.",
+   "ko": "문 좀 열어 줘.",
+   "blank": "favor"
+  },
+  {
+   "text": "¿Me haces un favor?",
+   "en": "Can you do me a favor?",
+   "ko": "부탁 하나 해도 될까?",
+   "blank": "favor"
+  }
+ ],
+ "w|gente": [
+  {
+   "text": "Hay mucha gente hoy.",
+   "en": "There are lots of people today.",
+   "ko": "오늘 사람이 많아.",
+   "blank": "gente"
+  },
+  {
+   "text": "La gente aquí es amable.",
+   "en": "People here are kind.",
+   "ko": "여기 사람들은 친절해.",
+   "blank": "gente"
+  }
+ ],
+ "w|gracias": [
+  {
+   "text": "Muchas gracias por venir.",
+   "en": "Thanks so much for coming.",
+   "ko": "와 줘서 정말 고마워.",
+   "blank": "gracias"
+  },
+  {
+   "text": "Gracias, ya estoy bien.",
+   "en": "Thanks, I'm fine now.",
+   "ko": "고마워, 이제 괜찮아.",
+   "blank": "Gracias"
+  }
+ ],
+ "w|grande": [
+  {
+   "text": "Tu casa es más grande.",
+   "en": "Your house is bigger.",
+   "ko": "네 집이 더 커.",
+   "blank": "grande"
+  },
+  {
+   "text": "¡Qué grande estás!",
+   "en": "You've gotten so big!",
+   "ko": "너 많이 컸네.",
+   "blank": "grande"
+  }
+ ],
+ "w|gustar": [
+  {
+   "text": "Me gusta el café.",
+   "en": "I like coffee.",
+   "ko": "나는 커피를 좋아해.",
+   "blank": "gusta"
+  },
+  {
+   "text": "¿Te gusta este lugar?",
+   "en": "Do you like this place?",
+   "ko": "여기 마음에 들어?",
+   "blank": "gusta"
+  }
+ ],
+ "w|haber": [
+  {
+   "text": "Tiene que haber café.",
+   "en": "There has to be coffee.",
+   "ko": "커피가 있어야 해.",
+   "blank": "haber"
+  },
+  {
+   "text": "Va a haber una fiesta.",
+   "en": "There's going to be a party.",
+   "ko": "파티가 있을 거야.",
+   "blank": "haber"
+  }
+ ],
+ "w|hablar": [
+  {
+   "text": "Necesito hablar contigo.",
+   "en": "I need to talk with you.",
+   "ko": "너랑 얘기해야 해.",
+   "blank": "hablar"
+  },
+  {
+   "text": "Hablamos luego, ¿sí?",
+   "en": "We'll talk later, all right?",
+   "ko": "나중에 얘기하자, 알겠지?",
+   "blank": "Hablamos"
+  }
+ ],
+ "w|hacer": [
+  {
+   "text": "Voy a hacer la cena.",
+   "en": "I'm going to make dinner.",
+   "ko": "내가 저녁 차릴게.",
+   "blank": "hacer"
+  },
+  {
+   "text": "Hay que hacer la tarea.",
+   "en": "You have to do the homework.",
+   "ko": "숙제는 해야 해.",
+   "blank": "hacer"
+  }
+ ],
+ "w|hasta": [
+  {
+   "text": "Hasta luego, cuídate.",
+   "en": "See you later, take care.",
+   "ko": "나중에 봐, 몸 조심해.",
+   "blank": "Hasta"
+  },
+  {
+   "text": "Trabajo hasta tarde hoy.",
+   "en": "I'm working until late today.",
+   "ko": "오늘은 늦게까지 일해.",
+   "blank": "hasta"
+  }
+ ],
+ "w|hecho": [
+  {
+   "text": "Es un hecho, ya se fue.",
+   "en": "It's a fact, they already left.",
+   "ko": "사실이야, 이미 가 버렸어.",
+   "blank": "hecho"
+  },
+  {
+   "text": "El hecho es que llueve.",
+   "en": "The fact is that it's raining.",
+   "ko": "비 온다는 게 사실이야.",
+   "blank": "hecho"
+  }
+ ],
+ "w|hijo": [
+  {
+   "text": "Mi hijo ya duerme.",
+   "en": "My son is already asleep.",
+   "ko": "우리 아들은 이미 자.",
+   "blank": "hijo"
+  },
+  {
+   "text": "Es el hijo de Ana.",
+   "en": "He's Ana's son.",
+   "ko": "아나의 아들이야.",
+   "blank": "hijo"
+  }
+ ],
+ "w|hola": [
+  {
+   "text": "Hola, ¿cómo estás?",
+   "en": "Hi, how are you?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "Hola"
+  },
+  {
+   "text": "Entré y dije hola.",
+   "en": "I walked in and said hi.",
+   "ko": "들어가서 인사했어.",
+   "blank": "hola"
+  }
+ ],
+ "w|hombre": [
+  {
+   "text": "Ese hombre pide ayuda.",
+   "en": "That man is asking for help.",
+   "ko": "저 남자가 도움을 청해.",
+   "blank": "hombre"
+  },
+  {
+   "text": "Hay un hombre en la puerta.",
+   "en": "There's a man at the door.",
+   "ko": "문에 남자 한 분이 있어.",
+   "blank": "hombre"
+  }
+ ],
+ "w|hora": [
+  {
+   "text": "¿Qué hora es?",
+   "en": "What time is it?",
+   "ko": "몇 시야?",
+   "blank": "hora"
+  },
+  {
+   "text": "Ya es hora de irnos.",
+   "en": "It's time we left.",
+   "ko": "이제 우리 나가자.",
+   "blank": "hora"
+  }
+ ],
+ "w|hoy": [
+  {
+   "text": "Hoy no salgo.",
+   "en": "I'm not going out today.",
+   "ko": "오늘은 안 나가.",
+   "blank": "Hoy"
+  },
+  {
+   "text": "¿Qué haces hoy?",
+   "en": "What are you doing today?",
+   "ko": "오늘 뭐 해?",
+   "blank": "hoy"
+  }
+ ],
+ "w|importar": [
+  {
+   "text": "No me importa.",
+   "en": "I don't care.",
+   "ko": "난 상관없어.",
+   "blank": "importa"
+  },
+  {
+   "text": "¿Te importa si abro la ventana?",
+   "en": "Do you mind if I open the window?",
+   "ko": "창문 열어도 될까?",
+   "blank": "importa"
+  }
+ ],
+ "w|intentar": [
+  {
+   "text": "Lo voy a intentar otra vez.",
+   "en": "I'm going to try again.",
+   "ko": "다시 한 번 해 볼게.",
+   "blank": "intentar"
+  },
+  {
+   "text": "Al menos lo intenté.",
+   "en": "At least I tried.",
+   "ko": "적어도 해 보긴 했어.",
+   "blank": "intenté"
+  }
+ ],
+ "w|ir": [
+  {
+   "text": "Quiero ir a la playa.",
+   "en": "I want to go to the beach.",
+   "ko": "바다에 가고 싶어.",
+   "blank": "ir"
+  },
+  {
+   "text": "Ya es hora de ir.",
+   "en": "It's time to go.",
+   "ko": "이제 갈 시간이야.",
+   "blank": "ir"
+  }
+ ],
+ "w|le": [
+  {
+   "text": "Yo le presté mi libro.",
+   "en": "I lent them my book.",
+   "ko": "내 책을 그 사람한테 빌려줬어.",
+   "blank": "le"
+  },
+  {
+   "text": "Después le llamo.",
+   "en": "I'll call them later.",
+   "ko": "나중에 그 사람한테 전화할게.",
+   "blank": "le"
+  }
+ ],
+ "w|llamar": [
+  {
+   "text": "Te voy a llamar luego.",
+   "en": "I'll call you later.",
+   "ko": "나중에 전화할게.",
+   "blank": "llamar"
+  },
+  {
+   "text": "¿Cómo se llama tu perro?",
+   "en": "What's your dog's name?",
+   "ko": "네 개 이름이 뭐야?",
+   "blank": "llama"
+  }
+ ],
+ "w|llegar": [
+  {
+   "text": "Ya voy a llegar.",
+   "en": "I'm about to get there.",
+   "ko": "거의 다 왔어.",
+   "blank": "llegar"
+  },
+  {
+   "text": "¿A qué hora llegas?",
+   "en": "What time do you get here?",
+   "ko": "몇 시에 와?",
+   "blank": "llegas"
+  }
+ ],
+ "w|llevar": [
+  {
+   "text": "Voy a llevar el paraguas.",
+   "en": "I'm going to take the umbrella.",
+   "ko": "우산을 가져갈게.",
+   "blank": "llevar"
+  },
+  {
+   "text": "¿Me llevas a casa?",
+   "en": "Can you take me home?",
+   "ko": "집에 태워 줄래?",
+   "blank": "llevas"
+  }
+ ],
+ "w|lo": [
+  {
+   "text": "Ya lo vi en el mercado.",
+   "en": "I already saw it at the market.",
+   "ko": "시장에서 이미 봤어.",
+   "blank": "lo"
+  },
+  {
+   "text": "No lo entiendo.",
+   "en": "I don't understand it.",
+   "ko": "그건 이해가 안 돼.",
+   "blank": "lo"
+  }
+ ],
+ "w|luego": [
+  {
+   "text": "Luego te cuento.",
+   "en": "I'll tell you later.",
+   "ko": "나중에 말해 줄게.",
+   "blank": "Luego"
+  },
+  {
+   "text": "Comemos y luego salimos.",
+   "en": "We eat and then we head out.",
+   "ko": "먹고 나서 나가.",
+   "blank": "luego"
+  }
+ ],
+ "w|lugar": [
+  {
+   "text": "Este lugar me encanta.",
+   "en": "I love this place.",
+   "ko": "여기 정말 마음에 들어.",
+   "blank": "lugar"
+  },
+  {
+   "text": "¿Este lugar está libre?",
+   "en": "Is this seat free?",
+   "ko": "이 자리 비었어?",
+   "blank": "lugar"
+  }
+ ],
+ "w|madre": [
+  {
+   "text": "Mi madre llega hoy.",
+   "en": "My mom's arriving today.",
+   "ko": "우리 엄마 오늘 와.",
+   "blank": "madre"
+  },
+  {
+   "text": "Llama a tu madre.",
+   "en": "Call your mom.",
+   "ko": "엄마한테 전화해.",
+   "blank": "madre"
+  }
+ ],
+ "w|mal": [
+  {
+   "text": "Lo pasé mal anoche.",
+   "en": "I had a rough time last night.",
+   "ko": "어젯밤 힘들었어.",
+   "blank": "mal"
+  },
+  {
+   "text": "Esto huele mal.",
+   "en": "This smells bad.",
+   "ko": "이거 냄새 나.",
+   "blank": "mal"
+  }
+ ],
+ "w|mamá": [
+  {
+   "text": "Mamá, ya llegué.",
+   "en": "Mom, I'm home.",
+   "ko": "엄마, 나 왔어.",
+   "blank": "Mamá"
+  },
+  {
+   "text": "Se lo conté a mi mamá.",
+   "en": "I told my mom.",
+   "ko": "엄마한테 말했어.",
+   "blank": "mamá"
+  }
+ ],
+ "w|mañana": [
+  {
+   "text": "Mañana te llamo.",
+   "en": "I'll call you tomorrow.",
+   "ko": "내일 전화할게.",
+   "blank": "Mañana"
+  },
+  {
+   "text": "Nos vemos por la mañana.",
+   "en": "See you in the morning.",
+   "ko": "아침에 보자.",
+   "blank": "mañana"
+  }
+ ],
+ "w|mano": [
+  {
+   "text": "Dame la mano.",
+   "en": "Give me your hand.",
+   "ko": "손 잡아.",
+   "blank": "mano"
+  },
+  {
+   "text": "Se me fue de las manos.",
+   "en": "It got out of hand.",
+   "ko": "일이 감당이 안 됐어.",
+   "blank": "manos"
+  }
+ ],
+ "w|más": [
+  {
+   "text": "Quiero más agua.",
+   "en": "I want more water.",
+   "ko": "물 더 마시고 싶어.",
+   "blank": "más"
+  },
+  {
+   "text": "Ven más tarde, por favor.",
+   "en": "Come later, please.",
+   "ko": "나중에 와 줘.",
+   "blank": "más"
+  }
+ ],
+ "w|matar": [
+  {
+   "text": "Ese chiste me mata.",
+   "en": "That joke cracks me up.",
+   "ko": "그 농담 진짜 웃겨.",
+   "blank": "mata"
+  },
+  {
+   "text": "El calor me va a matar.",
+   "en": "This heat is killing me.",
+   "ko": "더워서 죽겠어.",
+   "blank": "matar"
+  }
+ ],
+ "w|me": [
+  {
+   "text": "Esto me duele.",
+   "en": "This hurts.",
+   "ko": "여기 아파.",
+   "blank": "me"
+  },
+  {
+   "text": "¿Me pasas la sal?",
+   "en": "Can you pass me the salt?",
+   "ko": "소금 좀 건네줄래?",
+   "blank": "Me"
+  }
+ ],
+ "w|mejor": [
+  {
+   "text": "Me siento mejor hoy.",
+   "en": "I feel better today.",
+   "ko": "오늘은 컨디션이 나아.",
+   "blank": "mejor"
+  },
+  {
+   "text": "Es mejor esperar un poco.",
+   "en": "It's better to wait a bit.",
+   "ko": "조금 기다리는 게 나아.",
+   "blank": "mejor"
+  }
+ ],
+ "w|menos": [
+  {
+   "text": "Menos mal que llegaste.",
+   "en": "Good thing you got here.",
+   "ko": "다행히 왔구나.",
+   "blank": "Menos"
+  },
+  {
+   "text": "Cada día duermo menos.",
+   "en": "I sleep less every day.",
+   "ko": "매일 잠을 덜 자.",
+   "blank": "menos"
+  }
+ ],
+ "w|mi": [
+  {
+   "text": "Mi casa queda cerca.",
+   "en": "My place is nearby.",
+   "ko": "우리 집은 가까워.",
+   "blank": "Mi"
+  },
+  {
+   "text": "¿Dónde está mi llave?",
+   "en": "Where is my key?",
+   "ko": "내 열쇠 어디 있어?",
+   "blank": "mi"
+  }
+ ],
+ "w|mí": [
+  {
+   "text": "Este regalo es para mí.",
+   "en": "This gift is for me.",
+   "ko": "이 선물은 내 거야.",
+   "blank": "mí"
+  },
+  {
+   "text": "Confía en mí.",
+   "en": "Trust me.",
+   "ko": "날 믿어.",
+   "blank": "mí"
+  }
+ ],
+ "w|mierda": [
+  {
+   "text": "¡Mierda, se me olvidó!",
+   "en": "Damn, I forgot!",
+   "ko": "젠장, 깜빡했어.",
+   "blank": "Mierda"
+  },
+  {
+   "text": "Esto es una mierda.",
+   "en": "This is crap.",
+   "ko": "이거 최악이야.",
+   "blank": "mierda"
+  }
+ ],
+ "w|mío": [
+  {
+   "text": "Ese asiento es mío.",
+   "en": "That seat is mine.",
+   "ko": "그 자리는 내 거야.",
+   "blank": "mío"
+  },
+  {
+   "text": "Un amigo mío te conoce.",
+   "en": "A friend of mine knows you.",
+   "ko": "내 친구 하나가 너를 알아.",
+   "blank": "mío"
+  }
+ ],
+ "w|mira": [
+  {
+   "text": "Mira, ya llegué.",
+   "en": "Look, I got here already.",
+   "ko": "봐, 나 벌써 도착했어.",
+   "blank": "Mira"
+  },
+  {
+   "text": "Ay, mira qué lindo.",
+   "en": "Oh, look how pretty.",
+   "ko": "어머, 정말 예쁘다.",
+   "blank": "mira"
+  }
+ ],
+ "w|mirar": [
+  {
+   "text": "Mira quién llegó.",
+   "en": "Look who showed up.",
+   "ko": "누가 왔는지 봐.",
+   "blank": "Mira"
+  },
+  {
+   "text": "No me mires así.",
+   "en": "Don't look at me like that.",
+   "ko": "그렇게 보지 마.",
+   "blank": "mires"
+  }
+ ],
+ "w|mismo": [
+  {
+   "text": "Da lo mismo, vamos.",
+   "en": "It makes no difference, let's go.",
+   "ko": "똑같아, 그냥 가자.",
+   "blank": "mismo"
+  },
+  {
+   "text": "Es el mismo de ayer.",
+   "en": "It's the same one from yesterday.",
+   "ko": "어제 그거랑 같아.",
+   "blank": "mismo"
+  }
+ ],
+ "w|momento": [
+  {
+   "text": "Dame un momento.",
+   "en": "Give me a moment.",
+   "ko": "잠깐만 있어 봐.",
+   "blank": "momento"
+  },
+  {
+   "text": "Este no es el momento.",
+   "en": "This isn't the time.",
+   "ko": "지금은 때가 아니야.",
+   "blank": "momento"
+  }
+ ],
+ "w|morir": [
+  {
+   "text": "Me muero de hambre.",
+   "en": "I'm starving.",
+   "ko": "배고파 죽겠어.",
+   "blank": "muero"
+  },
+  {
+   "text": "Se murió anoche.",
+   "en": "He died last night.",
+   "ko": "어젯밤에 죽었어.",
+   "blank": "murió"
+  }
+ ],
+ "w|mucho": [
+  {
+   "text": "Hay mucho tráfico hoy.",
+   "en": "There's a lot of traffic today.",
+   "ko": "오늘 차가 많이 막혀.",
+   "blank": "mucho"
+  },
+  {
+   "text": "Trabaja mucho esta semana.",
+   "en": "They work a lot this week.",
+   "ko": "이번 주에는 일을 많이 해.",
+   "blank": "mucho"
+  }
+ ],
+ "w|mujer": [
+  {
+   "text": "La mujer pidió agua.",
+   "en": "The woman asked for water.",
+   "ko": "그 여자가 물을 주문했어.",
+   "blank": "mujer"
+  },
+  {
+   "text": "Mi mujer llega tarde.",
+   "en": "My wife is running late.",
+   "ko": "아내가 늦고 있어.",
+   "blank": "mujer"
+  }
+ ],
+ "w|mundo": [
+  {
+   "text": "Todo el mundo lo sabe.",
+   "en": "Everybody knows.",
+   "ko": "다들 알아.",
+   "blank": "mundo"
+  },
+  {
+   "text": "No es el fin del mundo.",
+   "en": "It's not the end of the world.",
+   "ko": "세상 끝난 거 아니야.",
+   "blank": "mundo"
+  }
+ ],
+ "w|muy": [
+  {
+   "text": "Hace muy calor hoy.",
+   "en": "It's really hot today.",
+   "ko": "오늘 정말 더워.",
+   "blank": "muy"
+  },
+  {
+   "text": "Llegaste muy tarde.",
+   "en": "You got here really late.",
+   "ko": "정말 늦게 왔구나.",
+   "blank": "muy"
+  }
+ ],
+ "w|nada": [
+  {
+   "text": "No pasa nada.",
+   "en": "It's nothing.",
+   "ko": "아무 일 없어.",
+   "blank": "nada"
+  },
+  {
+   "text": "No quiero nada más.",
+   "en": "I don't want anything else.",
+   "ko": "더는 필요 없어.",
+   "blank": "nada"
+  }
+ ],
+ "w|nadie": [
+  {
+   "text": "Nadie vino a la fiesta.",
+   "en": "Nobody came to the party.",
+   "ko": "파티에 아무도 안 왔어.",
+   "blank": "Nadie"
+  },
+  {
+   "text": "No hay nadie en casa.",
+   "en": "There's nobody home.",
+   "ko": "집에 아무도 없어.",
+   "blank": "nadie"
+  }
+ ],
+ "w|necesitar": [
+  {
+   "text": "Necesito un taxi.",
+   "en": "I need a taxi.",
+   "ko": "택시가 필요해.",
+   "blank": "Necesito"
+  },
+  {
+   "text": "¿Necesitas ayuda con eso?",
+   "en": "Do you need help with that?",
+   "ko": "그거 도움이 필요해?",
+   "blank": "Necesitas"
+  }
+ ],
+ "w|ni": [
+  {
+   "text": "Ni modo, ya pasó.",
+   "en": "Oh well, it's already done.",
+   "ko": "어쩌겠어, 이미 지난 일이야.",
+   "blank": "Ni"
+  },
+  {
+   "text": "No dijo ni una palabra.",
+   "en": "They didn't say a word.",
+   "ko": "한마디도 안 했어.",
+   "blank": "ni"
+  }
+ ],
+ "w|ninguno": [
+  {
+   "text": "No tengo ningún problema.",
+   "en": "I don't have a problem.",
+   "ko": "아무 문제 없어.",
+   "blank": "ningún"
+  },
+  {
+   "text": "Ninguno de los dos quiere ir.",
+   "en": "Neither of them wants to go.",
+   "ko": "둘 다 가기 싫어해.",
+   "blank": "Ninguno"
+  }
+ ],
+ "w|niño": [
+  {
+   "text": "El niño está dormido.",
+   "en": "The boy's asleep.",
+   "ko": "남자아이가 자고 있어.",
+   "blank": "niño"
+  },
+  {
+   "text": "Era solo una niña.",
+   "en": "She was just a little girl.",
+   "ko": "그때는 그냥 여자아이였어.",
+   "blank": "niña"
+  }
+ ],
+ "w|no": [
+  {
+   "text": "Hoy no puedo salir.",
+   "en": "I can't go out today.",
+   "ko": "오늘은 못 나가.",
+   "blank": "no"
+  },
+  {
+   "text": "Eso no es cierto.",
+   "en": "That's not true.",
+   "ko": "그건 사실이 아니야.",
+   "blank": "no"
+  }
+ ],
+ "w|noche": [
+  {
+   "text": "Esta noche ceno afuera.",
+   "en": "I'm eating out tonight.",
+   "ko": "오늘 밤에는 밖에서 먹어.",
+   "blank": "noche"
+  },
+  {
+   "text": "Llegué de noche a casa.",
+   "en": "I got home at night.",
+   "ko": "밤에 집에 도착했어.",
+   "blank": "noche"
+  }
+ ],
+ "w|nombre": [
+  {
+   "text": "No recuerdo su nombre.",
+   "en": "I don't remember the name.",
+   "ko": "이름이 기억 안 나.",
+   "blank": "nombre"
+  },
+  {
+   "text": "Escribe tu nombre aquí.",
+   "en": "Write your name here.",
+   "ko": "여기 이름 적어.",
+   "blank": "nombre"
+  }
+ ],
+ "w|nos": [
+  {
+   "text": "Ella nos espera afuera.",
+   "en": "She's waiting for us outside.",
+   "ko": "걔가 밖에서 우리를 기다려.",
+   "blank": "nos"
+  },
+  {
+   "text": "Nos vemos mañana.",
+   "en": "See you tomorrow.",
+   "ko": "내일 보자.",
+   "blank": "Nos"
+  }
+ ],
+ "w|nuestro": [
+  {
+   "text": "Nuestro perro es enorme.",
+   "en": "Our dog is huge.",
+   "ko": "우리 개는 엄청 커.",
+   "blank": "Nuestro"
+  },
+  {
+   "text": "Esta casa es nuestra.",
+   "en": "This house is ours.",
+   "ko": "이 집은 우리 거야.",
+   "blank": "nuestra"
+  }
+ ],
+ "w|nuevo": [
+  {
+   "text": "El celular es nuevo.",
+   "en": "The phone is new.",
+   "ko": "휴대폰이 새 거야.",
+   "blank": "nuevo"
+  },
+  {
+   "text": "Hay un café nuevo aquí.",
+   "en": "There's a new café here.",
+   "ko": "여기 새 카페가 있어.",
+   "blank": "nuevo"
+  }
+ ],
+ "w|nunca": [
+  {
+   "text": "Nunca fui a la playa.",
+   "en": "I've never been to the beach.",
+   "ko": "바다에 가 본 적이 없어.",
+   "blank": "Nunca"
+  },
+  {
+   "text": "Él nunca come pescado.",
+   "en": "He never eats fish.",
+   "ko": "그는 생선을 절대 안 먹어.",
+   "blank": "nunca"
+  }
+ ],
+ "w|o": [
+  {
+   "text": "¿Té o café?",
+   "en": "Tea or coffee?",
+   "ko": "차로 할래, 커피로 할래?",
+   "blank": "o"
+  },
+  {
+   "text": "Hoy o mañana, tú dices.",
+   "en": "Today or tomorrow, you decide.",
+   "ko": "오늘이든 내일이든 네가 정해.",
+   "blank": "o"
+  }
+ ],
+ "w|oh": [
+  {
+   "text": "Oh, qué sorpresa.",
+   "en": "Oh, what a surprise.",
+   "ko": "어, 깜짝이야.",
+   "blank": "Oh"
+  },
+  {
+   "text": "Oh, no era eso.",
+   "en": "Oh, that wasn't it.",
+   "ko": "아, 그건 아니구나.",
+   "blank": "Oh"
+  }
+ ],
+ "w|oír": [
+  {
+   "text": "¿Me oyes desde ahí?",
+   "en": "Can you hear me from there?",
+   "ko": "거기에서 내 말 들려?",
+   "blank": "oyes"
+  },
+  {
+   "text": "Quiero oír esa canción.",
+   "en": "I want to hear that song.",
+   "ko": "그 노래 듣고 싶어.",
+   "blank": "oír"
+  }
+ ],
+ "w|os": [
+  {
+   "text": "Ya os dije que no.",
+   "en": "I already told you all no.",
+   "ko": "너희한테 이미 안 된다고 했잖아.",
+   "blank": "os"
+  },
+  {
+   "text": "Si os gusta, pedimos más.",
+   "en": "If you all like it, we'll order more.",
+   "ko": "너희 마음에 들면 더 시키자.",
+   "blank": "os"
+  }
+ ],
+ "w|otro": [
+  {
+   "text": "Quiero otro café.",
+   "en": "I want another coffee.",
+   "ko": "커피 한 잔 더 마실래.",
+   "blank": "otro"
+  },
+  {
+   "text": "Lo vemos otro día.",
+   "en": "We'll see about it another day.",
+   "ko": "그건 다른 날에 보자.",
+   "blank": "otro"
+  }
+ ],
+ "w|oye": [
+  {
+   "text": "Oye, ¿tienes un minuto?",
+   "en": "Hey, do you have a minute?",
+   "ko": "야, 잠깐 시간 돼?",
+   "blank": "Oye"
+  },
+  {
+   "text": "Oye, eso no se dice.",
+   "en": "Hey, you don't say that.",
+   "ko": "야, 그런 말은 하면 안 돼.",
+   "blank": "Oye"
+  }
+ ],
+ "w|padre": [
+  {
+   "text": "Mi padre cocina rico.",
+   "en": "My dad cooks really well.",
+   "ko": "우리 아빠는 요리를 잘해.",
+   "blank": "padre"
+  },
+  {
+   "text": "Hablé con mi padre.",
+   "en": "I talked with my dad.",
+   "ko": "아빠랑 얘기했어.",
+   "blank": "padre"
+  }
+ ],
+ "w|papá": [
+  {
+   "text": "Papá llega tarde hoy.",
+   "en": "Dad's getting in late today.",
+   "ko": "아빠 오늘 늦게 와.",
+   "blank": "Papá"
+  },
+  {
+   "text": "Se parece a su papá.",
+   "en": "He looks like his dad.",
+   "ko": "아빠를 닮았어.",
+   "blank": "papá"
+  }
+ ],
+ "w|para": [
+  {
+   "text": "Lo compré para ti.",
+   "en": "I bought it for you.",
+   "ko": "너를 위해 샀어.",
+   "blank": "para"
+  },
+  {
+   "text": "Salimos para la playa.",
+   "en": "We're heading to the beach.",
+   "ko": "바다로 출발해.",
+   "blank": "para"
+  }
+ ],
+ "w|parecer": [
+  {
+   "text": "Parece que va a llover.",
+   "en": "It looks like it's going to rain.",
+   "ko": "비 올 것 같아.",
+   "blank": "Parece"
+  },
+  {
+   "text": "Me parece bien así.",
+   "en": "That seems fine to me.",
+   "ko": "그렇게 하면 괜찮을 것 같아.",
+   "blank": "parece"
+  }
+ ],
+ "w|parte": [
+  {
+   "text": "La mejor parte es el final.",
+   "en": "The best part is the ending.",
+   "ko": "끝이 제일 좋아.",
+   "blank": "parte"
+  },
+  {
+   "text": "Por mi parte, ya terminé.",
+   "en": "For my part, I'm done.",
+   "ko": "나는 벌써 끝냈어.",
+   "blank": "parte"
+  }
+ ],
+ "w|pasar": [
+  {
+   "text": "¿Puedo pasar?",
+   "en": "May I come in?",
+   "ko": "들어가도 될까?",
+   "blank": "pasar"
+  },
+  {
+   "text": "Voy a pasar por ti.",
+   "en": "I'll come by to pick you up.",
+   "ko": "데리러 갈게.",
+   "blank": "pasar"
+  }
+ ],
+ "w|pedir": [
+  {
+   "text": "Voy a pedir la cuenta.",
+   "en": "I'm going to ask for the check.",
+   "ko": "계산서 달라고 할게.",
+   "blank": "pedir"
+  },
+  {
+   "text": "Me pidió un favor.",
+   "en": "He asked me for a favor.",
+   "ko": "부탁을 하나 했어.",
+   "blank": "pidió"
+  }
+ ],
+ "w|pensar": [
+  {
+   "text": "Déjame pensar un rato.",
+   "en": "Let me think for a bit.",
+   "ko": "잠깐만 생각하게 해 줘.",
+   "blank": "pensar"
+  },
+  {
+   "text": "¿Qué piensas de eso?",
+   "en": "What do you think about that?",
+   "ko": "그거 어떻게 생각해?",
+   "blank": "piensas"
+  }
+ ],
+ "w|pequeño": [
+  {
+   "text": "El cuarto es pequeño.",
+   "en": "The room is small.",
+   "ko": "방이 작아.",
+   "blank": "pequeño"
+  },
+  {
+   "text": "Era pequeña entonces.",
+   "en": "She was little back then.",
+   "ko": "그때는 어렸어.",
+   "blank": "pequeña"
+  }
+ ],
+ "w|perder": [
+  {
+   "text": "No pierdas el tren.",
+   "en": "Don't miss the train.",
+   "ko": "기차 놓치지 마.",
+   "blank": "pierdas"
+  },
+  {
+   "text": "Perdí las llaves.",
+   "en": "I lost the keys.",
+   "ko": "열쇠를 잃어버렸어.",
+   "blank": "Perdí"
+  }
+ ],
+ "w|pero": [
+  {
+   "text": "Quiero ir, pero llueve.",
+   "en": "I want to go, but it's raining.",
+   "ko": "가고 싶은데 비가 와.",
+   "blank": "pero"
+  },
+  {
+   "text": "Es barato, pero rico.",
+   "en": "It's cheap, but delicious.",
+   "ko": "싼데 맛있어.",
+   "blank": "pero"
+  }
+ ],
+ "w|persona": [
+  {
+   "text": "Es buena persona.",
+   "en": "That's a good person.",
+   "ko": "좋은 사람이야.",
+   "blank": "persona"
+  },
+  {
+   "text": "No conozco a esa persona.",
+   "en": "I don't know that person.",
+   "ko": "그 사람은 몰라.",
+   "blank": "persona"
+  }
+ ],
+ "w|poco": [
+  {
+   "text": "Habla un poco más alto.",
+   "en": "Speak a little louder.",
+   "ko": "조금만 더 크게 말해.",
+   "blank": "poco"
+  },
+  {
+   "text": "Tengo poco tiempo hoy.",
+   "en": "I have little time today.",
+   "ko": "오늘은 시간이 별로 없어.",
+   "blank": "poco"
+  }
+ ],
+ "w|poder": [
+  {
+   "text": "No vas a poder entrar.",
+   "en": "You won't be able to get in.",
+   "ko": "못 들어갈 거야.",
+   "blank": "poder"
+  },
+  {
+   "text": "¿Puedo pasar un momento?",
+   "en": "Can I come in for a moment?",
+   "ko": "잠깐 들어가도 될까?",
+   "blank": "Puedo"
+  }
+ ],
+ "w|poner": [
+  {
+   "text": "Voy a poner la mesa.",
+   "en": "I'm going to set the table.",
+   "ko": "내가 상을 차릴게.",
+   "blank": "poner"
+  },
+  {
+   "text": "¿Dónde lo pongo?",
+   "en": "Where do I put it?",
+   "ko": "이거 어디 둬?",
+   "blank": "pongo"
+  }
+ ],
+ "w|por": [
+  {
+   "text": "Gracias por tu ayuda.",
+   "en": "Thanks for your help.",
+   "ko": "도와줘서 고마워.",
+   "blank": "por"
+  },
+  {
+   "text": "Paso por tu casa luego.",
+   "en": "I'll stop by your place later.",
+   "ko": "나중에 네 집에 들를게.",
+   "blank": "por"
+  }
+ ],
+ "w|porque": [
+  {
+   "text": "Me quedo porque llueve.",
+   "en": "I'm staying because it's raining.",
+   "ko": "비 와서 있을게.",
+   "blank": "porque"
+  },
+  {
+   "text": "Lo digo porque te quiero.",
+   "en": "I'm saying it because I love you.",
+   "ko": "사랑해서 하는 말이야.",
+   "blank": "porque"
+  }
+ ],
+ "w|preocupar": [
+  {
+   "text": "No te preocupes.",
+   "en": "Don't worry.",
+   "ko": "걱정하지 마.",
+   "blank": "preocupes"
+  },
+  {
+   "text": "Me preocupas.",
+   "en": "You worry me.",
+   "ko": "네가 걱정돼.",
+   "blank": "preocupas"
+  }
+ ],
+ "w|primero": [
+  {
+   "text": "Primero come, luego hablas.",
+   "en": "Eat first, then talk.",
+   "ko": "먼저 먹고 말해.",
+   "blank": "Primero"
+  },
+  {
+   "text": "Tú pasas primero.",
+   "en": "You go first.",
+   "ko": "네가 먼저 가.",
+   "blank": "primero"
+  }
+ ],
+ "w|problema": [
+  {
+   "text": "No hay problema.",
+   "en": "No problem.",
+   "ko": "문제없어.",
+   "blank": "problema"
+  },
+  {
+   "text": "Tengo un problema con el carro.",
+   "en": "I've got a problem with the car.",
+   "ko": "차에 문제가 있어.",
+   "blank": "problema"
+  }
+ ],
+ "w|que": [
+  {
+   "text": "Dice que llega tarde.",
+   "en": "They say they're running late.",
+   "ko": "늦는다고 해.",
+   "blank": "que"
+  },
+  {
+   "text": "Creo que va a llover.",
+   "en": "I think it's going to rain.",
+   "ko": "비 올 것 같아.",
+   "blank": "que"
+  }
+ ],
+ "w|qué": [
+  {
+   "text": "¿Qué quieres comer?",
+   "en": "What do you want to eat?",
+   "ko": "뭐 먹고 싶어?",
+   "blank": "Qué"
+  },
+  {
+   "text": "No sé qué decir.",
+   "en": "I don't know what to say.",
+   "ko": "무슨 말을 해야 할지 모르겠어.",
+   "blank": "qué"
+  }
+ ],
+ "w|quedar": [
+  {
+   "text": "¿Quedamos en el parque?",
+   "en": "Shall we meet at the park?",
+   "ko": "공원에서 볼까?",
+   "blank": "Quedamos"
+  },
+  {
+   "text": "Quedó poca comida.",
+   "en": "There's not much food left.",
+   "ko": "음식이 얼마 안 남았어.",
+   "blank": "Quedó"
+  }
+ ],
+ "w|querer": [
+  {
+   "text": "Te quiero mucho.",
+   "en": "I love you so much.",
+   "ko": "정말 사랑해.",
+   "blank": "quiero"
+  },
+  {
+   "text": "No quiero salir hoy.",
+   "en": "I don't want to go out today.",
+   "ko": "오늘은 나가고 싶지 않아.",
+   "blank": "quiero"
+  }
+ ],
+ "w|quién": [
+  {
+   "text": "¿Quién llama a esta hora?",
+   "en": "Who is calling at this hour?",
+   "ko": "이 시간에 누가 전화야?",
+   "blank": "Quién"
+  },
+  {
+   "text": "No sé quién es.",
+   "en": "I don't know who it is.",
+   "ko": "누구인지 모르겠어.",
+   "blank": "quién"
+  }
+ ],
+ "w|realmente": [
+  {
+   "text": "¿Realmente vas a ir?",
+   "en": "Are you really going?",
+   "ko": "진짜 갈 거야?",
+   "blank": "Realmente"
+  },
+  {
+   "text": "Realmente no me gusta.",
+   "en": "I really don't like it.",
+   "ko": "진짜 마음에 안 들어.",
+   "blank": "Realmente"
+  }
+ ],
+ "w|saber": [
+  {
+   "text": "Quiero saber la verdad.",
+   "en": "I want to know the truth.",
+   "ko": "진실을 알고 싶어.",
+   "blank": "saber"
+  },
+  {
+   "text": "No sé qué pasó.",
+   "en": "I don't know what happened.",
+   "ko": "무슨 일인지 모르겠어.",
+   "blank": "sé"
+  }
+ ],
+ "w|salir": [
+  {
+   "text": "Quiero salir a caminar.",
+   "en": "I want to go out for a walk.",
+   "ko": "산책하러 나가고 싶어.",
+   "blank": "salir"
+  },
+  {
+   "text": "Sal un rato, hay sol.",
+   "en": "Step outside for a bit, it's sunny.",
+   "ko": "잠깐 나가 봐, 해가 났어.",
+   "blank": "Sal"
+  }
+ ],
+ "w|se": [
+  {
+   "text": "Se fue sin avisar.",
+   "en": "They left without saying anything.",
+   "ko": "말도 없이 가 버렸어.",
+   "blank": "Se"
+  },
+  {
+   "text": "El vaso se cayó.",
+   "en": "The glass fell.",
+   "ko": "잔이 떨어졌어.",
+   "blank": "se"
+  }
+ ],
+ "w|seguir": [
+  {
+   "text": "Sigue derecho dos calles.",
+   "en": "Keep straight for two blocks.",
+   "ko": "두 블록 직진해.",
+   "blank": "Sigue"
+  },
+  {
+   "text": "Quiero seguir estudiando.",
+   "en": "I want to keep studying.",
+   "ko": "계속 공부하고 싶어.",
+   "blank": "seguir"
+  }
+ ],
+ "w|seguro": [
+  {
+   "text": "¿Estás seguro de eso?",
+   "en": "Are you sure about that?",
+   "ko": "그거 확실해?",
+   "blank": "seguro"
+  },
+  {
+   "text": "Seguro que llega tarde.",
+   "en": "He's sure to be late.",
+   "ko": "분명히 늦을 거야.",
+   "blank": "Seguro"
+  }
+ ],
+ "w|señor": [
+  {
+   "text": "Pase, señor.",
+   "en": "Go ahead, sir.",
+   "ko": "먼저 가세요.",
+   "blank": "señor"
+  },
+  {
+   "text": "El señor ya se fue.",
+   "en": "The gentleman already left.",
+   "ko": "그분은 이미 가셨어요.",
+   "blank": "señor"
+  }
+ ],
+ "w|sentir": [
+  {
+   "text": "Siento llegar tarde.",
+   "en": "Sorry I'm late.",
+   "ko": "늦어서 미안해.",
+   "blank": "Siento"
+  },
+  {
+   "text": "Me siento mucho mejor.",
+   "en": "I feel much better.",
+   "ko": "훨씬 나아졌어.",
+   "blank": "siento"
+  }
+ ],
+ "w|ser": [
+  {
+   "text": "Quiere ser doctora.",
+   "en": "She wants to be a doctor.",
+   "ko": "의사가 되고 싶어 해.",
+   "blank": "ser"
+  },
+  {
+   "text": "Hay que ser paciente.",
+   "en": "You have to be patient.",
+   "ko": "참을성이 있어야 해.",
+   "blank": "ser"
+  }
+ ],
+ "w|si": [
+  {
+   "text": "Si llueve, me quedo.",
+   "en": "If it rains, I'll stay.",
+   "ko": "비 오면 있을게.",
+   "blank": "Si"
+  },
+  {
+   "text": "Avísame si puedes venir.",
+   "en": "Let me know if you can come.",
+   "ko": "올 수 있으면 알려 줘.",
+   "blank": "si"
+  }
+ ],
+ "w|sí": [
+  {
+   "text": "Yo sí quiero ir.",
+   "en": "I do want to go.",
+   "ko": "나는 가고 싶어.",
+   "blank": "sí"
+  },
+  {
+   "text": "Creo que sí.",
+   "en": "I think so.",
+   "ko": "그런 것 같아.",
+   "blank": "sí"
+  }
+ ],
+ "w|siempre": [
+  {
+   "text": "Siempre llego tarde.",
+   "en": "I always arrive late.",
+   "ko": "나는 항상 늦어.",
+   "blank": "Siempre"
+  },
+  {
+   "text": "Ella siempre sonríe.",
+   "en": "She always smiles.",
+   "ko": "걔는 항상 웃어.",
+   "blank": "siempre"
+  }
+ ],
+ "w|sin": [
+  {
+   "text": "Café sin azúcar, por favor.",
+   "en": "Coffee without sugar, please.",
+   "ko": "커피에 설탕은 빼 주세요.",
+   "blank": "sin"
+  },
+  {
+   "text": "Salí sin las llaves.",
+   "en": "I left without the keys.",
+   "ko": "열쇠 두고 나왔어.",
+   "blank": "sin"
+  }
+ ],
+ "w|sobre": [
+  {
+   "text": "El libro está sobre la cama.",
+   "en": "The book is on the bed.",
+   "ko": "책이 침대 위에 있어.",
+   "blank": "sobre"
+  },
+  {
+   "text": "Hablamos sobre el viaje.",
+   "en": "We talked about the trip.",
+   "ko": "여행 얘기를 했어.",
+   "blank": "sobre"
+  }
+ ],
+ "w|solo": [
+  {
+   "text": "Me quedo solo en casa.",
+   "en": "I'm staying home alone.",
+   "ko": "나 혼자 집에 있을게.",
+   "blank": "solo"
+  },
+  {
+   "text": "El niño está solo.",
+   "en": "The child is alone.",
+   "ko": "아이가 혼자 있어.",
+   "blank": "solo"
+  }
+ ],
+ "w|sólo": [
+  {
+   "text": "Sólo quiero dormir.",
+   "en": "I just want to sleep.",
+   "ko": "그냥 자고 싶어.",
+   "blank": "Sólo"
+  },
+  {
+   "text": "Tomo sólo agua.",
+   "en": "I only drink water.",
+   "ko": "나는 물만 마셔.",
+   "blank": "sólo"
+  }
+ ],
+ "w|su": [
+  {
+   "text": "Su perro duerme afuera.",
+   "en": "Their dog sleeps outside.",
+   "ko": "그 집 개는 밖에서 자.",
+   "blank": "Su"
+  },
+  {
+   "text": "¿Cuál es su nombre?",
+   "en": "What is your name?",
+   "ko": "성함이 어떻게 되세요?",
+   "blank": "su"
+  }
+ ],
+ "w|suponer": [
+  {
+   "text": "Supongo que sí.",
+   "en": "I suppose so.",
+   "ko": "아마 그렇겠지.",
+   "blank": "Supongo"
+  },
+  {
+   "text": "No supuse nada de eso.",
+   "en": "I never expected any of that.",
+   "ko": "그건 전혀 생각 못 했어.",
+   "blank": "supuse"
+  }
+ ],
+ "w|tal": [
+  {
+   "text": "¿Qué tal el viaje?",
+   "en": "How was the trip?",
+   "ko": "여행은 어땠어?",
+   "blank": "tal"
+  },
+  {
+   "text": "¿Qué tal si vamos ya?",
+   "en": "How about we leave now?",
+   "ko": "이제 그냥 갈까?",
+   "blank": "tal"
+  }
+ ],
+ "w|también": [
+  {
+   "text": "Yo también quiero ir.",
+   "en": "I want to go too.",
+   "ko": "나도 가고 싶어.",
+   "blank": "también"
+  },
+  {
+   "text": "El postre también está rico.",
+   "en": "The dessert is tasty too.",
+   "ko": "디저트도 맛있어.",
+   "blank": "también"
+  }
+ ],
+ "w|tan": [
+  {
+   "text": "Hace tan calor aquí.",
+   "en": "It's so hot here.",
+   "ko": "여기 너무 덥다.",
+   "blank": "tan"
+  },
+  {
+   "text": "No llegues tan tarde.",
+   "en": "Don't get here so late.",
+   "ko": "그렇게 늦게 오지 마.",
+   "blank": "tan"
+  }
+ ],
+ "w|tanto": [
+  {
+   "text": "No tengo tanto tiempo.",
+   "en": "I don't have that much time.",
+   "ko": "시간이 그렇게 없어.",
+   "blank": "tanto"
+  },
+  {
+   "text": "Hace tanto calor.",
+   "en": "It's so hot.",
+   "ko": "너무 더워.",
+   "blank": "tanto"
+  }
+ ],
+ "w|te": [
+  {
+   "text": "Yo te extraño.",
+   "en": "I miss you.",
+   "ko": "네가 그리워.",
+   "blank": "te"
+  },
+  {
+   "text": "¿Te queda bien así?",
+   "en": "Does it fit you like that?",
+   "ko": "이렇게 하면 잘 맞아?",
+   "blank": "Te"
+  }
+ ],
+ "w|tener": [
+  {
+   "text": "Quiero tener un perro.",
+   "en": "I want to have a dog.",
+   "ko": "강아지 키우고 싶어.",
+   "blank": "tener"
+  },
+  {
+   "text": "Hay que tener cuidado.",
+   "en": "You have to be careful.",
+   "ko": "조심해야 해.",
+   "blank": "tener"
+  }
+ ],
+ "w|terminar": [
+  {
+   "text": "Termina de comer.",
+   "en": "Finish your food.",
+   "ko": "밥 다 먹어.",
+   "blank": "Termina"
+  },
+  {
+   "text": "Todavía no termino.",
+   "en": "I'm not done yet.",
+   "ko": "아직 안 끝났어.",
+   "blank": "termino"
+  }
+ ],
+ "w|ti": [
+  {
+   "text": "Esto es para ti.",
+   "en": "This is for you.",
+   "ko": "이건 너 거야.",
+   "blank": "ti"
+  },
+  {
+   "text": "Pensé en ti todo el día.",
+   "en": "I thought about you all day.",
+   "ko": "하루 종일 너 생각했어.",
+   "blank": "ti"
+  }
+ ],
+ "w|tiempo": [
+  {
+   "text": "No tengo tiempo hoy.",
+   "en": "I don't have time today.",
+   "ko": "오늘은 시간이 없어.",
+   "blank": "tiempo"
+  },
+  {
+   "text": "El tiempo está lindo.",
+   "en": "The weather is lovely.",
+   "ko": "날씨가 정말 좋다.",
+   "blank": "tiempo"
+  }
+ ],
+ "w|tipo": [
+  {
+   "text": "¿Qué tipo de café quieres?",
+   "en": "What kind of coffee do you want?",
+   "ko": "커피 어떤 걸로 할래?",
+   "blank": "tipo"
+  },
+  {
+   "text": "Ese tipo me cae mal.",
+   "en": "I can't stand that guy.",
+   "ko": "저 사람 정말 싫어.",
+   "blank": "tipo"
+  }
+ ],
+ "w|todo": [
+  {
+   "text": "Ya me comí todo.",
+   "en": "I already ate all of it.",
+   "ko": "이미 다 먹었어.",
+   "blank": "todo"
+  },
+  {
+   "text": "Todo está en orden.",
+   "en": "Everything is in order.",
+   "ko": "다 정리돼 있어.",
+   "blank": "Todo"
+  }
+ ],
+ "w|tomar": [
+  {
+   "text": "¿Quieres tomar un café?",
+   "en": "Do you want to grab a coffee?",
+   "ko": "커피 한잔할래?",
+   "blank": "tomar"
+  },
+  {
+   "text": "Voy a tomar el camión.",
+   "en": "I'm going to take the bus.",
+   "ko": "버스를 탈게.",
+   "blank": "tomar"
+  }
+ ],
+ "w|trabajar": [
+  {
+   "text": "Hoy no quiero trabajar.",
+   "en": "I don't feel like working today.",
+   "ko": "오늘은 일 안 하고 싶어.",
+   "blank": "trabajar"
+  },
+  {
+   "text": "Trabajo cerca de casa.",
+   "en": "I work near home.",
+   "ko": "집 근처에서 일해.",
+   "blank": "Trabajo"
+  }
+ ],
+ "w|trabajo": [
+  {
+   "text": "Llegué tarde al trabajo.",
+   "en": "I got to work late.",
+   "ko": "회사에 늦게 도착했어.",
+   "blank": "trabajo"
+  },
+  {
+   "text": "Tengo mucho trabajo hoy.",
+   "en": "I have a lot of work today.",
+   "ko": "오늘은 일이 많아.",
+   "blank": "trabajo"
+  }
+ ],
+ "w|traer": [
+  {
+   "text": "¿Me traes un vaso de agua?",
+   "en": "Can you bring me a glass of water?",
+   "ko": "물 한 잔만 가져다줄래?",
+   "blank": "traes"
+  },
+  {
+   "text": "Traje el postre.",
+   "en": "I brought dessert.",
+   "ko": "디저트 가져왔어.",
+   "blank": "Traje"
+  }
+ ],
+ "w|tratar": [
+  {
+   "text": "Trata de entenderme.",
+   "en": "Try to understand me.",
+   "ko": "내 말 좀 이해해 봐.",
+   "blank": "Trata"
+  },
+  {
+   "text": "No me trates así.",
+   "en": "Don't treat me like that.",
+   "ko": "나를 그렇게 대하지 마.",
+   "blank": "trates"
+  }
+ ],
+ "w|tres": [
+  {
+   "text": "Somos tres.",
+   "en": "There are three of us.",
+   "ko": "우리 셋이야.",
+   "blank": "tres"
+  },
+  {
+   "text": "Dame tres, por favor.",
+   "en": "Give me three, please.",
+   "ko": "세 개만 줘.",
+   "blank": "tres"
+  }
+ ],
+ "w|tu": [
+  {
+   "text": "Me gusta tu idea.",
+   "en": "I like your idea.",
+   "ko": "네 생각 좋은데.",
+   "blank": "tu"
+  },
+  {
+   "text": "¿Es tu carro ese?",
+   "en": "Is that your car?",
+   "ko": "저 차 네 거야?",
+   "blank": "tu"
+  }
+ ],
+ "w|tú": [
+  {
+   "text": "Tú sabes cómo hacerlo.",
+   "en": "You know how to do it.",
+   "ko": "어떻게 하는지는 네가 알잖아.",
+   "blank": "Tú"
+  },
+  {
+   "text": "Eso lo decides tú.",
+   "en": "That's for you to decide.",
+   "ko": "그건 네가 정해.",
+   "blank": "tú"
+  }
+ ],
+ "w|último": [
+  {
+   "text": "Es la última vez que te lo digo.",
+   "en": "This is the last time I'm telling you.",
+   "ko": "이건 마지막으로 말하는 거야.",
+   "blank": "última"
+  },
+  {
+   "text": "¿Me dejas el último pedazo?",
+   "en": "Can I have the last piece?",
+   "ko": "마지막 조각 나 줄래?",
+   "blank": "último"
+  }
+ ],
+ "w|uno": [
+  {
+   "text": "Queda uno en la caja.",
+   "en": "There's one left in the box.",
+   "ko": "상자에 하나 남았어.",
+   "blank": "uno"
+  },
+  {
+   "text": "Uno nunca sabe.",
+   "en": "You never know.",
+   "ko": "그건 모르는 거야.",
+   "blank": "Uno"
+  }
+ ],
+ "w|usted": [
+  {
+   "text": "Usted puede sentarse.",
+   "en": "You may sit down.",
+   "ko": "앉으셔도 돼요.",
+   "blank": "Usted"
+  },
+  {
+   "text": "¿Cómo está usted?",
+   "en": "How are you?",
+   "ko": "어떻게 지내세요?",
+   "blank": "usted"
+  }
+ ],
+ "w|vale": [
+  {
+   "text": "Vale, como quieras.",
+   "en": "Fine, have it your way.",
+   "ko": "좋아, 네 맘대로 해.",
+   "blank": "Vale"
+  },
+  {
+   "text": "Si tú lo dices, vale.",
+   "en": "If you say so, all right.",
+   "ko": "네가 그렇다면 알겠어.",
+   "blank": "vale"
+  }
+ ],
+ "w|valer": [
+  {
+   "text": "No vale la pena.",
+   "en": "It's not worth it.",
+   "ko": "그럴 가치 없어.",
+   "blank": "vale"
+  },
+  {
+   "text": "Valió la pena.",
+   "en": "It was worth it.",
+   "ko": "그럴 만했어.",
+   "blank": "Valió"
+  }
+ ],
+ "w|venir": [
+  {
+   "text": "¿Puedes venir a cenar?",
+   "en": "Can you come over for dinner?",
+   "ko": "저녁 먹으러 올래?",
+   "blank": "venir"
+  },
+  {
+   "text": "Ven cuando puedas.",
+   "en": "Come whenever you can.",
+   "ko": "시간 되면 와.",
+   "blank": "Ven"
+  }
+ ],
+ "w|ver": [
+  {
+   "text": "Quiero ver esa película.",
+   "en": "I want to see that movie.",
+   "ko": "그 영화 보고 싶어.",
+   "blank": "ver"
+  },
+  {
+   "text": "Te voy a ver mañana.",
+   "en": "I'll see you tomorrow.",
+   "ko": "내일 너 볼게.",
+   "blank": "ver"
+  }
+ ],
+ "w|verdad": [
+  {
+   "text": "Dime la verdad.",
+   "en": "Tell me the truth.",
+   "ko": "사실을 말해.",
+   "blank": "verdad"
+  },
+  {
+   "text": "De verdad, no sabía.",
+   "en": "Honestly, I didn't know.",
+   "ko": "진짜로 몰랐어.",
+   "blank": "verdad"
+  }
+ ],
+ "w|vestir": [
+  {
+   "text": "Me visto y salgo.",
+   "en": "I'll get dressed and head out.",
+   "ko": "옷 입고 나갈게.",
+   "blank": "visto"
+  },
+  {
+   "text": "Vístete, que nos vamos.",
+   "en": "Get dressed, we're leaving.",
+   "ko": "옷 입어, 우리 나가.",
+   "blank": "Vístete"
+  }
+ ],
+ "w|vez": [
+  {
+   "text": "Tal vez llueva hoy.",
+   "en": "Maybe it'll rain today.",
+   "ko": "오늘 비가 올지도 몰라.",
+   "blank": "vez"
+  },
+  {
+   "text": "Otra vez lo mismo.",
+   "en": "The same thing again.",
+   "ko": "또 똑같은 일이네.",
+   "blank": "vez"
+  }
+ ],
+ "w|vida": [
+  {
+   "text": "Así es la vida.",
+   "en": "That's life.",
+   "ko": "그런 게 인생이지.",
+   "blank": "vida"
+  },
+  {
+   "text": "La vida da muchas vueltas.",
+   "en": "Life takes many turns.",
+   "ko": "인생은 어떻게 될지 몰라.",
+   "blank": "vida"
+  }
+ ],
+ "w|vivir": [
+  {
+   "text": "Vivo cerca de aquí.",
+   "en": "I live near here.",
+   "ko": "이 근처에서 살아.",
+   "blank": "Vivo"
+  },
+  {
+   "text": "¿Dónde vives ahora?",
+   "en": "Where are you living now?",
+   "ko": "지금 어디 살아?",
+   "blank": "vives"
+  }
+ ],
+ "w|volver": [
+  {
+   "text": "Quiero volver a casa.",
+   "en": "I want to go back home.",
+   "ko": "집에 돌아가고 싶어.",
+   "blank": "volver"
+  },
+  {
+   "text": "Vuelve temprano, ¿sí?",
+   "en": "Come back early, all right?",
+   "ko": "일찍 돌아와, 알겠지?",
+   "blank": "Vuelve"
+  }
+ ],
+ "w|y": [
+  {
+   "text": "Quiero pan y café.",
+   "en": "I want bread and coffee.",
+   "ko": "빵이랑 커피 먹고 싶어.",
+   "blank": "y"
+  },
+  {
+   "text": "Tú y yo podemos ir.",
+   "en": "You and I can go.",
+   "ko": "너랑 나, 우리 갈 수 있어.",
+   "blank": "y"
+  }
+ ],
+ "w|ya": [
+  {
+   "text": "Ya llegué a casa.",
+   "en": "I got home already.",
+   "ko": "나 벌써 집에 도착했어.",
+   "blank": "Ya"
+  },
+  {
+   "text": "¿Ya comiste?",
+   "en": "Have you eaten yet?",
+   "ko": "밥 먹었어?",
+   "blank": "Ya"
+  }
+ ],
+ "w|yo": [
+  {
+   "text": "Eso lo hago yo.",
+   "en": "I'll do that myself.",
+   "ko": "그건 내가 할게.",
+   "blank": "yo"
+  },
+  {
+   "text": "Yo te aviso luego.",
+   "en": "I'll let you know later.",
+   "ko": "나중에 내가 알려 줄게.",
+   "blank": "Yo"
+  }
+ ]
+}

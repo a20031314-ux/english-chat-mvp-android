@@ -38,6 +38,10 @@ import {
   type Recorder,
 } from "@/lib/roleplay/listen";
 import { correctionOf, offeredOf } from "@/lib/roleplay/director";
+import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
+import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
+import { loadStudyPicture, type StudyPicture } from "@/lib/roleplay/studyPicture";
+import { cellName, SkillHexagon } from "@/components/studyMap/SkillHexagon";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
 import { callSeconds, resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
@@ -161,6 +165,8 @@ export function RoleplayScreen({
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
   // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
   const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
+  // 그냥 대화를 열면 인사 전에 자유대화/공부를 고른다. 이어서 하기는 이미 고른 통화라 다시 묻지 않는다.
+  const [picking, setPicking] = useState(false);
   /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. tries = 그 문장을 말해 보라고 한 횟수. */
   const [redo, setRedo] = useState<{ line: string; tries: number }>({ line: "", tries: 0 });
   const redoLine = redo.line;
@@ -204,6 +210,17 @@ export function RoleplayScreen({
   // the value it started with — so notes stored inside it would be overwritten
   // by the next line that finished playing.
   const [memory, setMemory] = useState<ConversationMemory>(EMPTY_MEMORY);
+  /** 지난 통화에서 들은 삶. 이번 통화가 시작될 때 한 번 읽고, 이번 통화에서 새로 적어도 여기엔 안 더한다. */
+  const [prior, setPrior] = useState("");
+  const factsKept = useRef(false);
+  const fixesKept = useRef(false);
+  /** 공부 모드에 띄우는 육각형. 부족한 칸이 없으면 null. */
+  const [picture, setPicture] = useState<StudyPicture | null>(null);
+  const [studyName, setStudyName] = useState("");
+  const [fixesText, setFixesText] = useState("");
+  const [lead, setLead] = useState(0);
+  const stateRef = useRef<SessionState | null>(null);
+  stateRef.current = state;
   // The turn being looked back at, if any. `review` is null while it is being
   // put together, and `failed` says the attempt came back with nothing — the
   // button stays where it was either way.
@@ -259,10 +276,20 @@ export function RoleplayScreen({
     // (saved.ts).
     const picked = carrying ? resumeFrom(carrying, scenario, bank, Date.now()) : null;
     const fresh = picked ? picked.state : startSession(scenario);
+    const needsPick = Boolean(scenario.openEnded && !carrying);
+    setPicking(needsPick);
     setState(fresh);
-    setInstruction(currentInstruction(scenario, bank, fresh));
+    setInstruction(needsPick ? null : currentInstruction(scenario, bank, fresh));
     setSaid(picked ? picked.said : []);
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
+    setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
+    setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
+    setPicture(null);
+    setStudyName("");
+    setLead(0);
+    setDirecting(false);
+    factsKept.current = false;
+    fixesKept.current = false;
     savedId.current =
       carrying?.id ??
       globalThis.crypto?.randomUUID?.() ??
@@ -406,6 +433,9 @@ export function RoleplayScreen({
         ...instruction.request,
         history: rawLines(instruction.request.history, memory),
         context: memory.text,
+        ...(prior ? { prior } : {}),
+        ...(coachOn && studyName ? { study: studyName } : {}),
+        ...(fixesText ? { fixes: fixesText } : {}),
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
         ...(scenario.openEnded && coachOn ? { coach: true, ...(redo.line ? { redo: redo.line, redoTries: redo.tries } : {}) } : {}),
@@ -451,6 +481,10 @@ export function RoleplayScreen({
       const about = !missedTurn && direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
       if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
+      if (instruction.request.heard.trim()) {
+        const left = settleFixes(scenario.language, instruction.request.heard, Boolean(better || meant));
+        setFixesText(fixesPrompt(left, Date.now()));
+      }
       // 튜터 수업: 다시 말해 보라고 했으면(ask) 그 문장을 띄우고, 다시 말한 줄에는 맞힘/아직(pass·miss)을 붙인다.
       const retry = missedTurn ? undefined : direction?.retry;
       // 맞힘/아직은 기다리던 문장이 있을 때만(서버도 같은 규칙).
@@ -540,13 +574,17 @@ export function RoleplayScreen({
       previous: memory.text,
       lines: due.lines,
       isPremium,
-    }).then((notes) => {
+      today: lifeDay(),
+    }).then((folded) => {
       if (session !== sessionRef.current) return;
       folding.current = false;
-      if (!notes) return;
-      setMemory((current) =>
-        current.upTo < due.upTo ? { text: notes, upTo: due.upTo } : current,
-      );
+      if (!folded) return;
+      if (folded.notes) {
+        setMemory((current) =>
+          current.upTo < due.upTo ? { text: folded.notes, upTo: due.upTo } : current,
+        );
+      }
+      if (folded.facts.length) mergeLifeFacts(scenario.language, folded.facts, Date.now(), savedId.current);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [historyLength, memory]);
@@ -875,8 +913,84 @@ export function RoleplayScreen({
     };
   }, []);
 
+  // 공부를 고르면, 부족한 칸이 있을 때만 육각형을 띄우고 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
+  useEffect(() => {
+    if (lead === 0 || !scenario) return;
+    const session = stateRef.current;
+    if (!session) return;
+    let cancel = false;
+    const language = scenario.language;
+    setDirecting(true);
+    void (async () => {
+      let shot: StudyPicture | null = null;
+      try {
+        shot = await loadStudyPicture(language);
+      } catch {
+        shot = null;
+      }
+      if (cancel) return;
+      const name = shot ? cellName(ui, shot.cell.id, () => "") : "";
+      setPicture(shot);
+      setStudyName(name);
+      if (!name) {
+        setDirecting(false);
+        setInstruction(currentInstruction(scenario, bank, session));
+        return;
+      }
+      const answer = await fetchDirection({
+        request: {
+          scenarioId: scenario.id,
+          nodeId: "talk",
+          mode: "free",
+          heard: "",
+          history: [],
+          freeTurns: session.freeTurns,
+          directedTurns: session.directedTurns,
+          level: session.difficulty.level,
+          coach: true,
+          study: name,
+          studyOpen: true,
+          ...(fixesText ? { fixes: fixesText } : {}),
+          ...(prior ? { prior } : {}),
+          ...(tutorIsBilingual(language, nativeLanguage) ? { bilingual: true } : {}),
+          tutorGender,
+        },
+        nativeLanguage,
+        isPremium,
+        practice: null,
+        sessionId: conversationId.current,
+      });
+      if (cancel) return;
+      setDirecting(false);
+      if (isOutOfPoints(answer)) {
+        setOutOfPoints(answer.daily ? "daily" : "points");
+        setInstruction({ do: "finish" });
+        return;
+      }
+      const text = answer && "text" in answer.say ? answer.say.text.trim() : "";
+      if (!text) {
+        setInstruction(currentInstruction(scenario, bank, session));
+        return;
+      }
+      setState({ ...session, nodeId: "talk", queue: [{ text }] });
+      setInstruction({ do: "say", text, voice: scenario.voice });
+    })();
+    return () => {
+      cancel = true;
+    };
+    // 고른 순간에만. 그림·첫 마디에 쓰는 값은 그 렌더의 것.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lead]);
+
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
+  const chooseMode = (study: boolean) => {
+    if (!scenario || !state || !picking) return;
+    if (coachOn !== study) toggleCoach();
+    setPicking(false);
+    if (study) setLead((n) => n + 1);
+    else setInstruction(currentInstruction(scenario, bank, state));
+  };
   const hangUp = () => {
     if (!said.some((line) => line.who === "learner")) {
       onClose();
@@ -890,6 +1004,32 @@ export function RoleplayScreen({
     setHungUp(true);
   };
   const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  // 끝나면 이번 통화에서 들은 삶을 이 폰에 남긴다. 짧은 통화는 접기가 안 돌아 여기서만 남는다.
+  useEffect(() => {
+    if (!callOver || !scenario) return;
+    if (!fixesKept.current && said.some((line) => line.who === "learner")) {
+      fixesKept.current = true;
+      const found = fixesFromLines(said);
+      if (found.length) mergeFixes(scenario.language, found, Date.now(), savedId.current);
+    }
+    if (!state || factsKept.current) return;
+    const lines = state.history.filter((line) => line.text.trim() && line.text !== "…");
+    if (!lines.some((line) => line.who === "learner")) return;
+    factsKept.current = true;
+    const callId = savedId.current;
+    const language = scenario.language;
+    void fetchContext({
+      scenarioId: scenario.id,
+      previous: memory.text,
+      lines: lines.slice(-40),
+      isPremium,
+      today: lifeDay(),
+    }).then((folded) => {
+      if (folded?.facts.length) mergeLifeFacts(language, folded.facts, Date.now(), callId);
+    });
+    // 끝난 순간의 대본만. 노트가 나중에 바뀌어도 다시 부르지 않는다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [callOver]);
   // 통화가 끝난 때 — 끝난 화면 요약 한 줄의 통화 시간(이어서 한 통화는 처음 시작부터, 통화 기록과 같은 셈).
   const [overAt, setOverAt] = useState(0);
   if (callOver && !overAt) setOverAt(Date.now());
@@ -1038,6 +1178,25 @@ export function RoleplayScreen({
         }
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
         coach={coachCard}
+        pick={
+          picking
+            ? {
+                ask: ui.callModeAsk,
+                talk: ui.callModeTalk,
+                study: ui.callModeStudy,
+                last: coachOn ? "study" : "talk",
+                onTalk: () => chooseMode(false),
+                onStudy: () => chooseMode(true),
+              }
+            : null
+        }
+        studyMap={
+          coachOn && picture ? (
+            <div data-call-study={picture.cell.id} className="pointer-events-none w-full max-w-[220px]">
+              <SkillHexagon ui={ui} result={picture.result} before={picture.before} onAxis={() => {}} />
+            </div>
+          ) : null
+        }
       />
       <CallControls
         ui={ui}

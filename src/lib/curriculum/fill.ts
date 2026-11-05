@@ -518,12 +518,33 @@ export function unmeasuredCells(result: FillResult, axes: readonly BankAxis[] = 
   return axes.flatMap((axis) => result.axes[axis].cells.filter((cell) => cell.state === "unknown" && !cell.id.startsWith("stage:") && !cell.id.startsWith("miss:")));
 }
 
-/** 그 칸에 드는 열쇠(세부 칸 → 문제 고르기·3층 "공부할 것"). */
+/** 그 칸에 드는 열쇠(세부 칸 → 문제 고르기). */
 export function keysInCell(catalog: FillCatalog, axis: BankAxis, cellId: string): string[] {
   const items = axis.startsWith("vocab") ? catalog.vocab : catalog.sent;
   const out: string[] = [];
   for (const item of items.values()) if (item.cells.includes(cellId)) out.push(item.key);
   return out;
+}
+
+/**
+ * 그 열쇠를 열 학습. 표현 글자(e|)는 그 자체로 추천하지 않는다 — 읽으면 뜻이 보이고,
+ * 안 푼 표현을 "공부하세요"로 두면 이미 아는 말이 걸린다. 표현을 틀린 기록이면 그 표현이 붙은 빈칸 틀로.
+ * 빈칸이 없는 틀은 통째 문장이라 빼 둔다. 문법 칸은 이름, 낱말은 그 낱말.
+ */
+export function studyPoint(language: string, key: string, grammarName: (stage: number, index: number) => string): { key: string; label: string } | null {
+  const framePoint = (frame: Frame | undefined) => (frame?.pattern.includes("___") ? { key: `f|${frame.id}`, label: frame.pattern } : null);
+  if (key.startsWith("e|")) {
+    const phrase = key.slice(2);
+    return framePoint(allFramesFor(language).find((one) => one.expressions?.some((text) => text.toLowerCase() === phrase.toLowerCase())));
+  }
+  if (key.startsWith("f|")) return framePoint(allFramesFor(language).find((one) => one.id === key.slice(2)));
+  if (key.startsWith("g|")) {
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    const label = grammarName(stage, index);
+    return label ? { key, label } : null;
+  }
+  if (key.startsWith("w|")) return { key, label: key.slice(2) };
+  return null;
 }
 
 export { missKindOf } from "./missKind.ts";

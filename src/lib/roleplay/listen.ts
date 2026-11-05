@@ -819,7 +819,8 @@ export async function fetchContext(input: {
   previous: string;
   lines: SpokenLine[];
   isPremium: boolean;
-}): Promise<string | null> {
+  today: string;
+}): Promise<{ notes: string; facts: string[] } | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/context"), {
       method: "POST",
@@ -831,14 +832,18 @@ export async function fetchContext(input: {
         scenarioId: input.scenarioId,
         previous: input.previous,
         lines: input.lines,
+        today: input.today,
       }),
     });
     if (!response.ok) {
       console.error("[roleplay] context failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as { notes?: unknown };
-    return typeof body.notes === "string" && body.notes.trim() ? body.notes.trim() : null;
+    const body = (await response.json()) as { notes?: unknown; facts?: unknown };
+    const notes = typeof body.notes === "string" ? body.notes.trim() : "";
+    const facts = Array.isArray(body.facts) ? body.facts.filter((fact): fact is string => typeof fact === "string" && fact.trim() !== "") : [];
+    if (!notes && facts.length === 0) return null;
+    return { notes, facts };
   } catch (error) {
     console.error("[roleplay] context threw", error);
     return null;

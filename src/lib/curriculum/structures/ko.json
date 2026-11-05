@@ -1,0 +1,1462 @@
+{
+ "1": [
+  {
+   "id": "ko-1-01",
+   "stage": 1,
+   "pattern": "안녕하세요. 저는 ___입니다.",
+   "meaningKo": "자기소개에서 이름 말하기",
+   "meaningEn": "Saying your name when introducing yourself",
+   "examples": [
+    {
+     "text": "안녕하세요. 저는 민수입니다.",
+     "ko": "안녕하세요. 저는 민수입니다.",
+     "en": "Hello. I am Minsu."
+    },
+    {
+     "text": "안녕하세요. 저는 사라입니다.",
+     "ko": "안녕하세요. 저는 사라입니다.",
+     "en": "Hello. I am Sarah."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이다",
+     "noteKo": "___에 자기 이름을 씁니다.",
+     "nameEn": "to be",
+     "noteEn": "___ is for your name."
+    }
+   ],
+   "related": [
+    "저는 ___사람이에요."
+   ],
+   "quiz": {
+    "prompt": "안녕하세요. 저는 ___입니다.",
+    "answer": "민수"
+   }
+  },
+  {
+   "id": "ko-1-02",
+   "stage": 1,
+   "pattern": "저는 ___사람이에요.",
+   "meaningKo": "어느 나라 사람인지 말하기",
+   "meaningEn": "Saying what country you're from",
+   "examples": [
+    {
+     "text": "저는 한국사람이에요.",
+     "ko": "저는 한국사람이에요.",
+     "en": "I am Korean."
+    },
+    {
+     "text": "저는 미국사람이에요.",
+     "ko": "저는 미국사람이에요.",
+     "en": "I am American."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~사람",
+     "noteKo": "___에 나라 이름을 넣습니다.",
+     "nameEn": "~saram (person)",
+     "noteEn": "___ is for a country name."
+    }
+   ],
+   "related": [
+    "안녕하세요. 저는 ___입니다."
+   ],
+   "quiz": {
+    "prompt": "저는 ___사람이에요.",
+    "answer": "한국"
+   }
+  },
+  {
+   "id": "ko-1-03",
+   "stage": 1,
+   "pattern": "저는 ___이에요.",
+   "meaningKo": "직업 말하기",
+   "meaningEn": "Saying your job or status",
+   "examples": [
+    {
+     "text": "저는 학생이에요.",
+     "ko": "저는 학생이에요.",
+     "en": "I am a student."
+    },
+    {
+     "text": "저는 회사원이에요.",
+     "ko": "저는 회사원이에요.",
+     "en": "I am an office worker."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이다",
+     "noteKo": "___에 직업을 넣습니다.",
+     "nameEn": "to be",
+     "noteEn": "___ is for your job or role."
+    }
+   ],
+   "related": [
+    "저는 ___사람이에요."
+   ],
+   "quiz": {
+    "prompt": "저는 ___이에요.",
+    "answer": "학생"
+   }
+  },
+  {
+   "id": "ko-1-04",
+   "stage": 1,
+   "pattern": "___ 얼마예요?",
+   "meaningKo": "물건 값 물어보기",
+   "meaningEn": "Asking the price of something",
+   "examples": [
+    {
+     "text": "이거 얼마예요?",
+     "ko": "이거 얼마예요?",
+     "en": "How much is this?"
+    },
+    {
+     "text": "커피 얼마예요?",
+     "ko": "커피 얼마예요?",
+     "en": "How much is coffee?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "얼마예요?",
+     "noteKo": "___에 물건을 씁니다.",
+     "nameEn": "How much?",
+     "noteEn": "___ is for the item."
+    }
+   ],
+   "related": [
+    "___ 어디에 있어요?"
+   ],
+   "quiz": {
+    "prompt": "___ 얼마예요?",
+    "answer": "이거"
+   }
+  },
+  {
+   "id": "ko-1-05",
+   "stage": 1,
+   "pattern": "___로 할게요.",
+   "meaningKo": "구매할 상품 고르기",
+   "meaningEn": "Choosing what to buy",
+   "examples": [
+    {
+     "text": "아이스커피로 할게요.",
+     "ko": "아이스커피로 할게요.",
+     "en": "I'll have an iced coffee."
+    },
+    {
+     "text": "샌드위치로 할게요.",
+     "ko": "샌드위치로 할게요.",
+     "en": "I'll have a sandwich."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "로 할게요",
+     "noteKo": "___에 상품이나 메뉴를 넣습니다.",
+     "nameEn": "I'll take ~",
+     "noteEn": "___ is for the item or menu."
+    }
+   ],
+   "related": [
+    "___ 주세요."
+   ],
+   "quiz": {
+    "prompt": "___로 할게요.",
+    "answer": "아이스커피"
+   }
+  },
+  {
+   "id": "ko-1-06",
+   "stage": 1,
+   "pattern": "___ 어디에 있어요?",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "화장실 어디에 있어요?",
+     "ko": "화장실 어디에 있어요?",
+     "en": "Where is the restroom?"
+    },
+    {
+     "text": "출구 어디에 있어요?",
+     "ko": "출구 어디에 있어요?",
+     "en": "Where is the exit?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "어디에 있어요?",
+     "noteKo": "___에 찾는 장소를 넣습니다.",
+     "nameEn": "Where is ~?",
+     "noteEn": "___ is for the place."
+    }
+   ],
+   "related": [
+    "___ 얼마예요?"
+   ],
+   "quiz": {
+    "prompt": "___ 어디에 있어요?",
+    "answer": "화장실"
+   }
+  },
+  {
+   "id": "ko-1-07",
+   "stage": 1,
+   "pattern": "제 이름은 ___예요.",
+   "meaningKo": "자기 이름 말하기",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "제 이름은 민지예요.",
+     "ko": "제 이름은 민지예요.",
+     "en": "My name is Minji."
+    },
+    {
+     "text": "제 이름은 에밀리예요.",
+     "ko": "제 이름은 에밀리예요.",
+     "en": "My name is Emily."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 소개",
+     "noteKo": "___에 자기 이름을 넣음",
+     "nameEn": "Introducing your name",
+     "noteEn": "Fill ___ with your name"
+    }
+   ],
+   "related": [
+    "저는 ___에서 왔어요."
+   ],
+   "quiz": {
+    "prompt": "제 이름은 ___예요.",
+    "answer": "민지"
+   }
+  },
+  {
+   "id": "ko-1-08",
+   "stage": 1,
+   "pattern": "___ 좀 더 천천히 말해 주세요.",
+   "meaningKo": "상대방에게 천천히 말해 달라고 부탁하기",
+   "meaningEn": "Asking someone to speak more slowly",
+   "examples": [
+    {
+     "text": "한국어 좀 더 천천히 말해 주세요.",
+     "ko": "한국어 좀 더 천천히 말해 주세요.",
+     "en": "Please speak Korean more slowly."
+    },
+    {
+     "text": "이 부분 좀 더 천천히 말해 주세요.",
+     "ko": "이 부분 좀 더 천천히 말해 주세요.",
+     "en": "Please say this part more slowly."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존댓말 요청",
+     "noteKo": "___에 언어 또는 내용을 넣음",
+     "nameEn": "Polite request",
+     "noteEn": "Fill ___ with language or topic"
+    }
+   ],
+   "related": [
+    "___ 다시 한 번 말해 주세요."
+   ],
+   "quiz": {
+    "prompt": "___ 좀 더 천천히 말해 주세요.",
+    "answer": "한국어"
+   }
+  },
+  {
+   "id": "ko-1-09",
+   "stage": 1,
+   "pattern": "___ 다시 한 번 말해 주세요.",
+   "meaningKo": "상대방에게 반복해 달라고 부탁하기",
+   "meaningEn": "Asking someone to repeat something",
+   "examples": [
+    {
+     "text": "이름 다시 한 번 말해 주세요.",
+     "ko": "이름 다시 한 번 말해 주세요.",
+     "en": "Please say your name again."
+    },
+    {
+     "text": "금액 다시 한 번 말해 주세요.",
+     "ko": "금액 다시 한 번 말해 주세요.",
+     "en": "Please say the amount again."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존댓말 요청",
+     "noteKo": "___에 반복 요청할 대상을 넣음",
+     "nameEn": "Polite request",
+     "noteEn": "Fill ___ with what you want repeated"
+    }
+   ],
+   "related": [
+    "___ 좀 더 천천히 말해 주세요."
+   ],
+   "quiz": {
+    "prompt": "___ 다시 한 번 말해 주세요.",
+    "answer": "이름"
+   }
+  },
+  {
+   "id": "ko-1-10",
+   "stage": 1,
+   "pattern": "___이 어디예요?",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "화장실이 어디예요?",
+     "ko": "화장실이 어디예요?",
+     "en": "Where is the restroom?"
+    },
+    {
+     "text": "역이 어디예요?",
+     "ko": "역이 어디예요?",
+     "en": "Where is the station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위치 질문",
+     "noteKo": "___에 찾고 싶은 장소를 넣음",
+     "nameEn": "Asking for location",
+     "noteEn": "Fill ___ with the place you want to find"
+    }
+   ],
+   "related": [
+    "___으로 가려면 어떻게 해야 해요?"
+   ],
+   "quiz": {
+    "prompt": "___이 어디예요?",
+    "answer": "화장실"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "ko-2-01",
+   "stage": 2,
+   "pattern": "___에서 만날까요?",
+   "meaningKo": "만날 장소 제안하기",
+   "meaningEn": "Suggesting a place to meet",
+   "examples": [
+    {
+     "text": "카페에서 만날까요?",
+     "ko": "카페에서 만날까요?",
+     "en": "Shall we meet at the cafe?"
+    },
+    {
+     "text": "공원에서 만날까요?",
+     "ko": "공원에서 만날까요?",
+     "en": "Shall we meet at the park?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-에서 만날까요?",
+     "noteKo": "___에 만날 장소를 넣음",
+     "nameEn": "Shall we meet at ___?",
+     "noteEn": "The blank is the meeting place."
+    }
+   ],
+   "related": [
+    "___시에 만날까요?"
+   ],
+   "quiz": {
+    "prompt": "___에서 만날까요?",
+    "answer": "도서관"
+   }
+  },
+  {
+   "id": "ko-2-02",
+   "stage": 2,
+   "pattern": "___시에 만나요.",
+   "meaningKo": "만날 시간 정하기",
+   "meaningEn": "Suggesting a time to meet",
+   "examples": [
+    {
+     "text": "두 시에 만나요.",
+     "ko": "두 시에 만나요.",
+     "en": "Let's meet at two o'clock."
+    },
+    {
+     "text": "네 시에 만나요.",
+     "ko": "네 시에 만나요.",
+     "en": "Let's meet at four o'clock."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-시에",
+     "noteKo": "___에 시간을 넣음",
+     "nameEn": "at ___ o'clock",
+     "noteEn": "The blank is the meeting time."
+    }
+   ],
+   "related": [
+    "___에서 만날까요?"
+   ],
+   "quiz": {
+    "prompt": "___시에 만나요.",
+    "answer": "세"
+   }
+  },
+  {
+   "id": "ko-2-03",
+   "stage": 2,
+   "pattern": "저는 ___ 하고 싶어요.",
+   "meaningKo": "하고 싶은 것 말하기",
+   "meaningEn": "Saying what you want to do",
+   "examples": [
+    {
+     "text": "저는 쇼핑하고 싶어요.",
+     "ko": "저는 쇼핑하고 싶어요.",
+     "en": "I want to go shopping."
+    },
+    {
+     "text": "저는 등산하고 싶어요.",
+     "ko": "저는 등산하고 싶어요.",
+     "en": "I want to go hiking."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-고 싶어요",
+     "noteKo": "___에 하고 싶은 동작을 넣음",
+     "nameEn": "want to ___",
+     "noteEn": "The blank is the action you want to do."
+    }
+   ],
+   "related": [
+    "저는 ___ 할 거예요."
+   ],
+   "quiz": {
+    "prompt": "저는 ___ 하고 싶어요.",
+    "answer": "여행"
+   }
+  },
+  {
+   "id": "ko-2-04",
+   "stage": 2,
+   "pattern": "저는 ___ 할 거예요.",
+   "meaningKo": "할 일 말하기",
+   "meaningEn": "Saying what you will do",
+   "examples": [
+    {
+     "text": "저는 운동할 거예요.",
+     "ko": "저는 운동할 거예요.",
+     "en": "I will exercise."
+    },
+    {
+     "text": "저는 공부할 거예요.",
+     "ko": "저는 공부할 거예요.",
+     "en": "I will study."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-할 거예요",
+     "noteKo": "___에 계획한 동작을 넣음",
+     "nameEn": "will ___",
+     "noteEn": "The blank is the planned action."
+    }
+   ],
+   "related": [
+    "저는 ___ 하고 싶어요."
+   ],
+   "quiz": {
+    "prompt": "저는 ___ 할 거예요.",
+    "answer": "요리"
+   }
+  },
+  {
+   "id": "ko-2-05",
+   "stage": 2,
+   "pattern": "___에 내려 주세요.",
+   "meaningKo": "내릴 장소 말하기",
+   "meaningEn": "Saying where to get off",
+   "examples": [
+    {
+     "text": "명동에 내려 주세요.",
+     "ko": "명동에 내려 주세요.",
+     "en": "Please let me off at Myeongdong."
+    },
+    {
+     "text": "서울역에 내려 주세요.",
+     "ko": "서울역에 내려 주세요.",
+     "en": "Please let me off at Seoul Station."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-에 내려 주세요",
+     "noteKo": "___에 내릴 장소를 넣음",
+     "nameEn": "Please let me off at ___",
+     "noteEn": "The blank is the destination."
+    }
+   ],
+   "related": [
+    "___까지 가 주세요."
+   ],
+   "quiz": {
+    "prompt": "___에 내려 주세요.",
+    "answer": "강남역"
+   }
+  },
+  {
+   "id": "ko-2-06",
+   "stage": 2,
+   "pattern": "___ 있어요?",
+   "meaningKo": "다른 색깔이나 사이즈 요청하기",
+   "meaningEn": "Asking for another size or color",
+   "examples": [
+    {
+     "text": "큰 사이즈 있어요?",
+     "ko": "큰 사이즈 있어요?",
+     "en": "Do you have a bigger size?"
+    },
+    {
+     "text": "파란색 있어요?",
+     "ko": "파란색 있어요?",
+     "en": "Do you have this in blue?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "___ 있어요?",
+     "noteKo": "___에 원하는 색이나 사이즈를 넣음",
+     "nameEn": "Do you have ___?",
+     "noteEn": "The blank is the color or size."
+    }
+   ],
+   "related": [
+    "___ 좀 보여 주세요."
+   ],
+   "quiz": {
+    "prompt": "___ 있어요?",
+    "answer": "작은 사이즈"
+   }
+  },
+  {
+   "id": "ko-2-07",
+   "stage": 2,
+   "pattern": "___ 좀 보여 주세요.",
+   "meaningKo": "다른 색깔이나 사이즈 보여 달라고 요청하기",
+   "meaningEn": "Asking to see a different size or color",
+   "examples": [
+    {
+     "text": "검은색 좀 보여 주세요.",
+     "ko": "검은색 좀 보여 주세요.",
+     "en": "Please show me the black one."
+    },
+    {
+     "text": "작은 사이즈 좀 보여 주세요.",
+     "ko": "작은 사이즈 좀 보여 주세요.",
+     "en": "Please show me the small size."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "___ 좀 보여 주세요",
+     "noteKo": "___에 보고 싶은 색이나 사이즈를 넣음",
+     "nameEn": "Please show me ___",
+     "noteEn": "The blank is the color or size."
+    }
+   ],
+   "related": [
+    "___ 있어요?"
+   ],
+   "quiz": {
+    "prompt": "___ 좀 보여 주세요.",
+    "answer": "빨간색"
+   }
+  },
+  {
+   "id": "ko-2-08",
+   "stage": 2,
+   "pattern": "___ 주세요.",
+   "meaningKo": "원하는 약 말하기",
+   "meaningEn": "Asking for medicine",
+   "examples": [
+    {
+     "text": "감기약 주세요.",
+     "ko": "감기약 주세요.",
+     "en": "Please give me cold medicine."
+    },
+    {
+     "text": "두통약 주세요.",
+     "ko": "두통약 주세요.",
+     "en": "Please give me headache medicine."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "___ 주세요",
+     "noteKo": "___에 약의 이름을 넣음",
+     "nameEn": "Please give me ___",
+     "noteEn": "The blank is the name of the medicine."
+    }
+   ],
+   "related": [
+    "___ 좀 보여 주세요."
+   ],
+   "quiz": {
+    "prompt": "___ 주세요.",
+    "answer": "소화제"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "ko-3-01",
+   "stage": 3,
+   "pattern": "___ 진짜 ___!",
+   "meaningKo": "친구와 반말로 감탄하기",
+   "meaningEn": "Reacting casually (banmal)",
+   "examples": [
+    {
+     "text": "이 장면 진짜 웃겨!",
+     "ko": "이 장면 진짜 웃겨!",
+     "en": "This scene is really funny!"
+    },
+    {
+     "text": "너 진짜 대단해!",
+     "ko": "너 진짜 대단해!",
+     "en": "You’re really awesome!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "반말 감탄문",
+     "noteKo": "첫 번째 빈칸은 대상, 두 번째 빈칸은 감탄 형용사/동사",
+     "nameEn": "Exclamatory (banmal)",
+     "noteEn": "First blank: subject, second blank: exclamatory verb/adjective"
+    }
+   ],
+   "related": [
+    "___ 너무 ___!"
+   ],
+   "quiz": {
+    "prompt": "이 노래 진짜 ___!",
+    "answer": "좋아"
+   }
+  },
+  {
+   "id": "ko-3-02",
+   "stage": 3,
+   "pattern": "___에 대해서 어떻게 생각해?",
+   "meaningKo": "드라마, 노래, 프로그램에 대해 의견 묻기",
+   "meaningEn": "Asking for an opinion about a drama, song, or show",
+   "examples": [
+    {
+     "text": "그 드라마 결말에 대해서 어떻게 생각해?",
+     "ko": "그 드라마 결말에 대해서 어떻게 생각해?",
+     "en": "What do you think about the ending of that drama?"
+    },
+    {
+     "text": "이 노래에 대해서 어떻게 생각해?",
+     "ko": "이 노래에 대해서 어떻게 생각해?",
+     "en": "What do you think about this song?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-에 대해서",
+     "noteKo": "빈칸에 주제를 씀",
+     "nameEn": "About ___",
+     "noteEn": "Put the topic in the blank"
+    }
+   ],
+   "related": [
+    "___ 어땠어?",
+    "___에 대해 말해 줘"
+   ],
+   "quiz": {
+    "prompt": "___에 대해서 어떻게 생각해?",
+    "answer": "그 예능"
+   }
+  },
+  {
+   "id": "ko-3-03",
+   "stage": 3,
+   "pattern": "___ 좀 바꿔 주세요.",
+   "meaningKo": "온라인 구매 물건 교환 요청하기",
+   "meaningEn": "Requesting an exchange for a purchased item",
+   "examples": [
+    {
+     "text": "이 신발 좀 바꿔 주세요.",
+     "ko": "이 신발 좀 바꿔 주세요.",
+     "en": "Please exchange these shoes."
+    },
+    {
+     "text": "사이즈 좀 바꿔 주세요.",
+     "ko": "사이즈 좀 바꿔 주세요.",
+     "en": "Please exchange the size."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-(으)로 바꾸다",
+     "noteKo": "빈칸에 바꾸고 싶은 것",
+     "nameEn": "Exchange ___",
+     "noteEn": "Put the item you want to exchange in the blank"
+    }
+   ],
+   "related": [
+    "___ 환불해 주세요.",
+    "___으로 바꿔 주세요."
+   ],
+   "quiz": {
+    "prompt": "이 옷 ___ 좀 바꿔 주세요.",
+    "answer": "사이즈"
+   }
+  },
+  {
+   "id": "ko-3-04",
+   "stage": 3,
+   "pattern": "___ 진짜 재밌었어.",
+   "meaningKo": "친구와 반말로 감상 말하기",
+   "meaningEn": "Sharing your opinion casually with a friend",
+   "examples": [
+    {
+     "text": "어제 본 드라마 진짜 재밌었어.",
+     "ko": "어제 본 드라마 진짜 재밌었어.",
+     "en": "The drama I watched yesterday was really fun."
+    },
+    {
+     "text": "이 노래 진짜 재밌었어.",
+     "ko": "이 노래 진짜 재밌었어.",
+     "en": "This song was really fun."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "반말, -았/었어",
+     "noteKo": "빈칸에 감상 대상",
+     "nameEn": "Casual past tense",
+     "noteEn": "Put what you are talking about in the blank"
+    }
+   ],
+   "related": [
+    "___ 너무 좋았어.",
+    "___ 별로였어."
+   ],
+   "quiz": {
+    "prompt": "___ 진짜 재밌었어.",
+    "answer": "그 예능"
+   }
+  },
+  {
+   "id": "ko-3-05",
+   "stage": 3,
+   "pattern": "___ 좀 도와줄 수 있어?",
+   "meaningKo": "문제를 해결해 달라고 정중히 요청하기",
+   "meaningEn": "Politely asking someone to help with a problem",
+   "examples": [
+    {
+     "text": "이거 좀 도와줄 수 있어?",
+     "ko": "이거 좀 도와줄 수 있어?",
+     "en": "Can you help me with this?"
+    },
+    {
+     "text": "숙제 좀 도와줄 수 있어?",
+     "ko": "숙제 좀 도와줄 수 있어?",
+     "en": "Can you help me with my homework?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-좀 도와주다",
+     "noteKo": "빈칸에 도움 필요한 일을 씀",
+     "nameEn": "Help with ___",
+     "noteEn": "Put what you need help with in the blank"
+    }
+   ],
+   "related": [
+    "___ 좀 해 줄 수 있어?",
+    "___ 좀 부탁해도 돼?"
+   ],
+   "quiz": {
+    "prompt": "컴퓨터 ___ 좀 도와줄 수 있어?",
+    "answer": "설치"
+   }
+  },
+  {
+   "id": "ko-3-06",
+   "stage": 3,
+   "pattern": "___ 때문에 못 했어요.",
+   "meaningKo": "못 한 이유를 말하기",
+   "meaningEn": "Explaining why you couldn't do something",
+   "examples": [
+    {
+     "text": "감기 때문에 못 했어요.",
+     "ko": "감기 때문에 못 했어요.",
+     "en": "I couldn't do it because of a cold."
+    },
+    {
+     "text": "일 때문에 못 했어요.",
+     "ko": "일 때문에 못 했어요.",
+     "en": "I couldn't do it because of work."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-(으)ㄴ/는 것 때문에",
+     "noteKo": "앞의 ___에 이유를 넣음",
+     "nameEn": "because of ___",
+     "noteEn": "Fill the blank with the reason"
+    }
+   ],
+   "related": [
+    "___라서 못 했어요."
+   ],
+   "quiz": {
+    "prompt": "___ 때문에 못 했어요.",
+    "answer": "감기"
+   }
+  },
+  {
+   "id": "ko-3-07",
+   "stage": 3,
+   "pattern": "저는 ___에 대해 이렇게 생각해요.",
+   "meaningKo": "어떤 것에 대한 의견을 말하기",
+   "meaningEn": "Giving your opinion about something",
+   "examples": [
+    {
+     "text": "저는 결말에 대해 이렇게 생각해요.",
+     "ko": "저는 결말에 대해 어떻게 생각해요.",
+     "en": "Here's what I think about the ending."
+    },
+    {
+     "text": "저는 이 노래에 대해 이렇게 생각해요.",
+     "ko": "저는 이 노래에 대해 어떻게 생각해요.",
+     "en": "Here's what I think about this song."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-에 대해 생각하다",
+     "noteKo": "의견을 말하고 싶은 대상을 ___에 넣음",
+     "nameEn": "think about ___",
+     "noteEn": "Put the topic in the blank"
+    }
+   ],
+   "related": [
+    "저는 ___에 대해 궁금해요."
+   ],
+   "quiz": {
+    "prompt": "저는 ___에 대해 이렇게 생각해요.",
+    "answer": "결말"
+   }
+  },
+  {
+   "id": "ko-3-08",
+   "stage": 3,
+   "pattern": "___면 ___ 거예요.",
+   "meaningKo": "그렇게 하면 어떻게 될지 말하기",
+   "meaningEn": "Saying what will happen if they do that",
+   "examples": [
+    {
+     "text": "지금 가면 늦을 거예요.",
+     "ko": "지금 가면 늦을 거예요.",
+     "en": "If you leave now, you will be late."
+    },
+    {
+     "text": "내일 쉬면 좋을 거예요.",
+     "ko": "내일 쉬면 좋을 거예요.",
+     "en": "It would be good if you rest tomorrow."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건",
+     "noteKo": "앞 빈칸은 조건이고, 뒤 빈칸은 그때의 결과다.",
+     "nameEn": "if",
+     "noteEn": "The first blank is the condition and the second is the result."
+    }
+   ],
+   "related": [
+    "___면 안 돼요."
+   ],
+   "quiz": {
+    "prompt": "지금 가면 ___ 거예요.",
+    "answer": "늦을"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "ko-4-01",
+   "stage": 4,
+   "pattern": "___께서 ___하셨어요.",
+   "meaningKo": "관리자나 상사에게 존댓말로 말하기",
+   "meaningEn": "Speak politely to a manager or superior",
+   "examples": [
+    {
+     "text": "팀장님께서 회의를 시작하셨어요.",
+     "ko": "팀장님께서 회의를 시작하셨어요.",
+     "en": "The team leader started the meeting."
+    },
+    {
+     "text": "부장님께서 오늘 일찍 퇴근하셨어요.",
+     "ko": "부장님께서 오늘 일찍 퇴근하셨어요.",
+     "en": "The department head left early today."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "높임법 (존댓말)",
+     "noteKo": "첫 번째 빈칸에는 높임의 대상을, 두 번째 빈칸에는 높임 동사를 넣음.",
+     "nameEn": "Honorifics (polite form)",
+     "noteEn": "First blank: honorific subject, second blank: honorific verb."
+    }
+   ],
+   "related": [
+    "___께서 ___ 말씀하셨어요.",
+    "___께 ___ 드렸어요."
+   ],
+   "quiz": {
+    "prompt": "___께서 보고서를 확인하셨어요.",
+    "answer": "과장님"
+   }
+  },
+  {
+   "id": "ko-4-02",
+   "stage": 4,
+   "pattern": "___에 대해서는 ___ 생각이에요.",
+   "meaningKo": "뉴스 주제를 균형 있게 논의함",
+   "meaningEn": "Discuss a news topic and give a balanced opinion",
+   "examples": [
+    {
+     "text": "새로운 정책에 대해서는 아직 잘 모르겠다는 생각이에요.",
+     "ko": "새로운 정책에 대해서는 아직 잘 모르겠다는 생각이에요.",
+     "en": "Regarding the new policy, I think I'm not sure yet."
+    },
+    {
+     "text": "재택근무에 대해서는 장단점이 있다는 생각이에요.",
+     "ko": "재택근무에 대해서는 장단점이 있다는 생각이에요.",
+     "en": "About working from home, I think there are pros and cons."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-에 대해서 / -생각",
+     "noteKo": "첫 번째 빈칸은 주제, 두 번째 빈칸은 자신의 의견.",
+     "nameEn": "About / opinion",
+     "noteEn": "First blank: topic, second blank: your opinion."
+    }
+   ],
+   "related": [
+    "___에 대해 ___이라고 생각해요.",
+    "___에 대해서 ___라고 말할 수 있어요."
+   ],
+   "quiz": {
+    "prompt": "최근 뉴스에 대해서는 ___ 생각이에요.",
+    "answer": "여러 가지 시각이 있다고"
+   }
+  },
+  {
+   "id": "ko-4-03",
+   "stage": 4,
+   "pattern": "___거든요.",
+   "meaningKo": "이유나 배경 설명하기",
+   "meaningEn": "Giving a reason or background",
+   "examples": [
+    {
+     "text": "오늘 못 가요. 약속이 있거든요.",
+     "ko": "오늘 못 가요. 약속이 있거든요.",
+     "en": "I can't go today. I have plans."
+    },
+    {
+     "text": "지금 나가야 돼요. 택시가 기다리고 있거든요.",
+     "ko": "지금 나가야 돼요. 택시가 기다리고 있거든요.",
+     "en": "I have to leave now. The taxi is waiting."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-거든요",
+     "noteKo": "이유나 상황을 자연스럽게 설명할 때 사용",
+     "nameEn": "-geodeunyo",
+     "noteEn": "Used for explaining reasons in a conversational way"
+    }
+   ],
+   "related": [
+    "___라서 ___."
+   ],
+   "quiz": {
+    "prompt": "오늘 일찍 가야 해요. ___거든요.",
+    "answer": "중요한 회의가 있"
+   }
+  },
+  {
+   "id": "ko-4-04",
+   "stage": 4,
+   "pattern": "___잖아요.",
+   "meaningKo": "공유된 사실 상기시키기",
+   "meaningEn": "Reminding someone of shared knowledge",
+   "examples": [
+    {
+     "text": "우리가 어제 이야기했잖아요.",
+     "ko": "우리가 어제 이야기했잖아요.",
+     "en": "We talked about it yesterday, remember?"
+    },
+    {
+     "text": "너무 비싸잖아요.",
+     "ko": "너무 비싸잖아요.",
+     "en": "It's too expensive, as you know."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-잖아요",
+     "noteKo": "이미 알고 있는 사실을 상대방에게 상기시킴",
+     "nameEn": "-janayo",
+     "noteEn": "Used to point out something both people already know"
+    }
+   ],
+   "related": [
+    "___지 않아요?"
+   ],
+   "quiz": {
+    "prompt": "오늘 날씨가 정말 덥___잖아요.",
+    "answer": "지"
+   }
+  },
+  {
+   "id": "ko-4-05",
+   "stage": 4,
+   "pattern": "___ 좀 확인해 주시겠어요?",
+   "meaningKo": "상사에게 정중하게 부탁하기",
+   "meaningEn": "Politely asking a manager to check something",
+   "examples": [
+    {
+     "text": "보고서 좀 확인해 주시겠어요?",
+     "ko": "보고서 좀 확인해 주시겠어요?",
+     "en": "Could you please check the report?"
+    },
+    {
+     "text": "일정 좀 확인해 주시겠어요?",
+     "ko": "일정 좀 확인해 주시겠어요?",
+     "en": "Could you please check the schedule?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 부탁 표현",
+     "noteKo": "___에 확인 받고 싶은 대상을 넣음",
+     "nameEn": "Polite request form",
+     "noteEn": "Put what you want checked in the blank"
+    }
+   ],
+   "related": [
+    "___ 좀 검토해 주시겠어요?"
+   ],
+   "quiz": {
+    "prompt": "___ 좀 확인해 주시겠어요?",
+    "answer": "메일"
+   }
+  },
+  {
+   "id": "ko-4-06",
+   "stage": 4,
+   "pattern": "___ 좀 도와주실 수 있으세요?",
+   "meaningKo": "공손하게 도움 부탁하기",
+   "meaningEn": "Politely asking for help",
+   "examples": [
+    {
+     "text": "보고서 작성 좀 도와주실 수 있으세요?",
+     "ko": "보고서 작성 좀 도와주실 수 있으세요?",
+     "en": "Could you please help me with the report?"
+    },
+    {
+     "text": "오늘 일정 조율 좀 도와주실 수 있으세요?",
+     "ko": "오늘 일정 조율 좀 도와주실 수 있으세요?",
+     "en": "Could you please help me coordinate today's schedule?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "높임법",
+     "noteKo": "도움을 받고 싶은 대상을 높여서 사용하는 표현",
+     "nameEn": "Honorific request",
+     "noteEn": "The blank is what you want help with."
+    }
+   ],
+   "related": [
+    "혹시 ___ 가능하실까요?",
+    "___ 부탁드려도 될까요?"
+   ],
+   "quiz": {
+    "prompt": "___ 좀 도와주실 수 있으세요?",
+    "answer": "회의 준비"
+   }
+  },
+  {
+   "id": "ko-4-07",
+   "stage": 4,
+   "pattern": "___ 좀 부탁드려도 될까요?",
+   "meaningKo": "정중하게 부탁하기",
+   "meaningEn": "Politely making a request",
+   "examples": [
+    {
+     "text": "보고서 확인 좀 부탁드려도 될까요?",
+     "ko": "보고서 확인 좀 부탁드려도 될까요?",
+     "en": "Could you please check the report for me?"
+    },
+    {
+     "text": "내일 일정 조정 좀 부탁드려도 될까요?",
+     "ko": "내일 일정 조정 좀 부탁드려도 될까요?",
+     "en": "Could you help adjust tomorrow’s schedule?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 부탁 표현",
+     "noteKo": "첫 번째 ___에 정중하게 부탁하는 내용을 넣음",
+     "nameEn": "Polite request",
+     "noteEn": "The blank is for what you are requesting"
+    }
+   ],
+   "related": [
+    "___ 좀 도와주실 수 있으세요?",
+    "혹시 ___ 가능하실까요?"
+   ],
+   "quiz": {
+    "prompt": "___ 좀 부탁드려도 될까요?",
+    "answer": "회의 자료 준비"
+   }
+  },
+  {
+   "id": "ko-4-08",
+   "stage": 4,
+   "pattern": "___ 좀 도와주시면 감사하겠습니다.",
+   "meaningKo": "정중하게 부탁하기",
+   "meaningEn": "Making a polite request",
+   "examples": [
+    {
+     "text": "보고서 작성 좀 도와주시면 감사하겠습니다.",
+     "ko": "보고서 작성 좀 도와주시면 감사하겠습니다.",
+     "en": "I would appreciate it if you could help me with the report."
+    },
+    {
+     "text": "회의 준비 좀 도와주시면 감사하겠습니다.",
+     "ko": "회의 준비 좀 도와주시면 감사하겠습니다.",
+     "en": "I would appreciate it if you could help prepare for the meeting."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 부탁",
+     "noteKo": "___에 부탁하는 내용을 넣음",
+     "nameEn": "Polite request",
+     "noteEn": "The blank is for the thing you are asking help with."
+    }
+   ],
+   "related": [
+    "___ 좀 도와주시겠어요?",
+    "혹시 ___ 도와주실 수 있으세요?"
+   ],
+   "quiz": {
+    "prompt": "___ 좀 도와주시면 감사하겠습니다.",
+    "answer": "자료 정리"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "ko-5-01",
+   "stage": 5,
+   "pattern": "___, 혹시 ___라고 들어봤어?",
+   "meaningKo": "친구에게 밈이나 유행어 소개하기",
+   "meaningEn": "Introducing a meme or slang to a friend",
+   "examples": [
+    {
+     "text": "지난주 예능 봤어, 혹시 ‘소주 한 잔’이라고 들어봤어?",
+     "ko": "지난주 예능 봤어, 혹시 ‘소주 한 잔’이라고 들어봤어?",
+     "en": "Did you see last week's variety show? Have you heard of 'Soju Han Jan'?"
+    },
+    {
+     "text": "요즘 인터넷 봤어, 혹시 ‘짤방’이라고 들어봤어?",
+     "ko": "요즘 인터넷 봤어, 혹시 ‘짤방’이라고 들어봤어?",
+     "en": "Have you been on the internet lately? Have you heard of 'Jjalbang'?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "소개 및 확인",
+     "noteKo": "첫 번째 ___에 상황, 두 번째 ___에 밈/유행어.",
+     "nameEn": "Introduction and check",
+     "noteEn": "First blank is situation/context, second is meme or phrase."
+    }
+   ],
+   "related": [
+    "___, ___ 알아?",
+    "___, ___ 봤어?"
+   ],
+   "quiz": {
+    "prompt": "요즘 인터넷 봤어, 혹시 ___라고 들어봤어?",
+    "answer": "‘짤방’"
+   }
+  },
+  {
+   "id": "ko-5-02",
+   "stage": 5,
+   "pattern": "___라고 하면 좀 그렇고, ___라고 해야 할 것 같아요.",
+   "meaningKo": "상황에 따라 말을 조심스럽게 바꿈",
+   "meaningEn": "Switching between levels of formality or expressions",
+   "examples": [
+    {
+     "text": "반말이라고 하면 좀 그렇고, 존댓말이라고 해야 할 것 같아요.",
+     "ko": "반말이라고 하면 좀 그렇고, 존댓말이라고 해야 할 것 같아요.",
+     "en": "It feels off to say it's informal speech, I think I should call it polite speech."
+    },
+    {
+     "text": "친구라고 하면 좀 그렇고, 선배라고 해야 할 것 같아요.",
+     "ko": "친구라고 하면 좀 그렇고, 선배라고 해야 할 것 같아요.",
+     "en": "To call them a friend doesn't feel right, I think I should say 'senior.'"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~(이)라고 하면",
+     "noteKo": "첫 번째 ___에 들어가는 말을 완곡하게 설명할 때",
+     "nameEn": "Indirect reference",
+     "noteEn": "First ___ is what you could call it"
+    },
+    {
+     "nameKo": "~(이)라고 해야 하다",
+     "noteKo": "두 번째 ___에 더 적합한 말을 넣음",
+     "nameEn": "More appropriate term",
+     "noteEn": "Second ___ is what you choose to call it"
+    }
+   ],
+   "related": [
+    "___라고 부르는 게 맞는지 모르겠지만, ___ 같아요.",
+    "___라는 표현보다는 ___가 더 맞는 것 같아요."
+   ],
+   "quiz": {
+    "prompt": "___라고 하면 좀 그렇고, 선배라고 해야 할 것 같아요.",
+    "answer": "친구"
+   }
+  },
+  {
+   "id": "ko-5-03",
+   "stage": 5,
+   "pattern": "___라는 건 ___에서 자주 나오는 표현이야.",
+   "meaningKo": "문화적 표현을 설명함",
+   "meaningEn": "Explaining a cultural reference or phrase",
+   "examples": [
+    {
+     "text": "복세편살이라는 건 예능에서 자주 나오는 표현이야.",
+     "ko": "복세편살이라는 건 예능에서 자주 나오는 표현이야.",
+     "en": "The phrase 'boksepyunsal' is something you often hear in variety shows."
+    },
+    {
+     "text": "무야호라는 건 밈에서 자주 나오는 표현이야.",
+     "ko": "무야호라는 건 밈에서 자주 나오는 표현이야.",
+     "en": "The phrase 'muyaho' is a common meme expression."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~라는 건 ~에서",
+     "noteKo": "첫 번째 ___에 설명할 표현, 두 번째 ___에 출처나 맥락을 넣음",
+     "nameEn": "Definition and context marker",
+     "noteEn": "First ___ is the phrase, second ___ is the context/source"
+    }
+   ],
+   "related": [
+    "___는 ___에서 유명한 말이야.",
+    "___라고 하면 ___이 생각나."
+   ],
+   "quiz": {
+    "prompt": "___라는 건 예능에서 자주 나오는 표현이야.",
+    "answer": "복세편살"
+   }
+  },
+  {
+   "id": "ko-5-04",
+   "stage": 5,
+   "pattern": "마음이 힘들 땐 ___도 괜찮아.",
+   "meaningKo": "위로하기",
+   "meaningEn": "Comforting a friend",
+   "examples": [
+    {
+     "text": "마음이 힘들 땐 울어도 괜찮아.",
+     "ko": "마음이 힘들 땐 울어도 괜찮아.",
+     "en": "It's okay to cry when things are tough."
+    },
+    {
+     "text": "마음이 힘들 땐 쉬어도 괜찮아.",
+     "ko": "마음이 힘들 땐 쉬어도 괜찮아.",
+     "en": "It's okay to rest when you're having a hard time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위로 표현",
+     "noteKo": "___에 위로가 되는 행동을 넣음.",
+     "nameEn": "Comforting structure",
+     "noteEn": "The blank is an action that comforts."
+    }
+   ],
+   "related": [
+    "괜찮아, ___해도 돼.",
+    "힘들면 ___해."
+   ],
+   "quiz": {
+    "prompt": "마음이 힘들 땐 ___도 괜찮아.",
+    "answer": "울어"
+   }
+  },
+  {
+   "id": "ko-5-05",
+   "stage": 5,
+   "pattern": "나 같아도 ___ 힘들었을 것 같아.",
+   "meaningKo": "공감하며 위로하기",
+   "meaningEn": "Empathizing and comforting",
+   "examples": [
+    {
+     "text": "나 같아도 그만두는 거 힘들었을 것 같아.",
+     "ko": "나 같아도 그만두는 거 힘들었을 것 같아.",
+     "en": "If it were me, quitting would have been hard too."
+    },
+    {
+     "text": "나 같아도 참는 거 힘들었을 것 같아.",
+     "ko": "나 같아도 참는 거 힘들었을 것 같아.",
+     "en": "If it were me, enduring it would have been tough too."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 표현",
+     "noteKo": "___에 상황을 넣음.",
+     "nameEn": "Empathetic hypothetical",
+     "noteEn": "The blank is a situation or action."
+    }
+   ],
+   "related": [
+    "나라도 ___ 쉽지 않았을 것 같아."
+   ],
+   "quiz": {
+    "prompt": "나 같아도 ___ 힘들었을 것 같아.",
+    "answer": "그만두는 거"
+   }
+  },
+  {
+   "id": "ko-5-06",
+   "stage": 5,
+   "pattern": "이번에는 ___ 어려울 것 같습니다.",
+   "meaningKo": "공손하게 부탁을 거절함",
+   "meaningEn": "Politely declining a request",
+   "examples": [
+    {
+     "text": "이번에는 주말 출근이 어려울 것 같습니다.",
+     "ko": "이번에는 주말 출근이 어려울 것 같습니다.",
+     "en": "This time, working on the weekend will be difficult for me."
+    },
+    {
+     "text": "이번에는 추가 업무가 어려울 것 같습니다.",
+     "ko": "이번에는 추가 업무가 어려울 것 같습니다.",
+     "en": "This time, taking on extra work will be difficult for me."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~(으)ㄹ 것 같습니다",
+     "noteKo": "___ 자리에 들어가는 내용을 완곡하게 말할 때 사용",
+     "nameEn": "Expressing indirect refusal",
+     "noteEn": "___ slot is for the action being declined"
+    }
+   ],
+   "related": [
+    "이번에는 ___ 힘들 것 같아요.",
+    "이번에는 ___ 좀 어려울 것 같아요."
+   ],
+   "quiz": {
+    "prompt": "이번에는 ___ 어려울 것 같습니다.",
+    "answer": "주말 출근이"
+   }
+  },
+  {
+   "id": "ko-5-07",
+   "stage": 5,
+   "pattern": "너무 ___하지 마. 네가 얼마나 노력했는지 알아.",
+   "meaningKo": "친구를 위로함",
+   "meaningEn": "Comforting a friend",
+   "examples": [
+    {
+     "text": "너무 속상해하지 마. 네가 얼마나 노력했는지 알아.",
+     "ko": "너무 속상해하지 마. 네가 얼마나 노력했는지 알아.",
+     "en": "Don't be too upset. I know how hard you tried."
+    },
+    {
+     "text": "너무 자책하지 마. 네가 얼마나 노력했는지 알아.",
+     "ko": "너무 자책하지 마. 네가 얼마나 노력했는지 알아.",
+     "en": "Don't blame yourself too much. I know how much effort you put in."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~하지 마",
+     "noteKo": "___ 자리에 위로하고 싶은 감정이나 행동을 넣음",
+     "nameEn": "Negative command",
+     "noteEn": "___ slot is the feeling or action"
+    }
+   ],
+   "related": [
+    "___해도 괜찮아. 네 편이야.",
+    "___ 때문에 힘들었겠다. 괜찮아질 거야."
+   ],
+   "quiz": {
+    "prompt": "너무 ___하지 마. 네가 얼마나 노력했는지 알아.",
+    "answer": "속상해"
+   }
+  },
+  {
+   "id": "ko-5-08",
+   "stage": 5,
+   "pattern": "___ 덕분에 분위기가 정말 좋아졌어요.",
+   "meaningKo": "상대방이 분위기를 좋게 만들었다고 칭찬함",
+   "meaningEn": "Praising someone for improving the mood",
+   "examples": [
+    {
+     "text": "선배님 덕분에 분위기가 정말 좋아졌어요.",
+     "ko": "선배님 덕분에 분위기가 정말 좋아졌어요.",
+     "en": "Thanks to you, senior, the mood has really improved."
+    },
+    {
+     "text": "과장님 덕분에 분위기가 정말 좋아졌어요.",
+     "ko": "과장님 덕분에 분위기가 정말 좋아졌어요.",
+     "en": "Thanks to you, manager, the atmosphere got much better."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~덕분에",
+     "noteKo": "___ 자리에 분위기를 좋게 만든 사람을 넣음",
+     "nameEn": "Thanks to marker",
+     "noteEn": "___ is the person who improved the mood"
+    }
+   ],
+   "related": [
+    "___ 덕분에 모두가 즐거웠어요.",
+    "___ 덕분에 잘 마무리됐어요."
+   ],
+   "quiz": {
+    "prompt": "___ 덕분에 분위기가 정말 좋아졌어요.",
+    "answer": "선배님"
+   }
+  }
+ ]
+}

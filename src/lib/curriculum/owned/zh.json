@@ -1,0 +1,2742 @@
+{
+ "e|可以拍照吗": [
+  {
+   "text": "你好，这里可以拍照吗？",
+   "en": "Hi, can I take pictures here?",
+   "ko": "안녕하세요, 여기서 사진 찍어도 돼요?",
+   "blank": "可以拍照吗"
+  },
+  {
+   "text": "请问，博物馆里面可以拍照吗？",
+   "en": "Excuse me, can I take pictures inside the museum?",
+   "ko": "실례합니다, 박물관 안에서 사진 찍을 수 있어요?",
+   "blank": "可以拍照吗"
+  },
+  {
+   "text": "这个餐厅可以拍照吗？",
+   "en": "Can I take pictures in this restaurant?",
+   "ko": "이 식당에서 사진 찍어도 돼요?",
+   "blank": "可以拍照吗"
+  }
+ ],
+ "e|看情况": [
+  {
+   "text": "我们明天去不去看情况。",
+   "en": "Whether we go tomorrow depends on the situation.",
+   "ko": "내일 갈지는 상황에 따라 달라.",
+   "blank": "看情况"
+  },
+  {
+   "text": "能不能加班要看情况。",
+   "en": "Whether I can work overtime depends on the situation.",
+   "ko": "야근할 수 있는지는 상황에 따라 달라.",
+   "blank": "看情况"
+  },
+  {
+   "text": "要不要买新的手机，看情况吧。",
+   "en": "Whether to buy a new phone depends on the situation.",
+   "ko": "새 폰을 살지는 상황에 따라 달라.",
+   "blank": "看情况"
+  }
+ ],
+ "e|改天再约": [
+  {
+   "text": "今天有点忙，改天再约吧。",
+   "en": "I'm a bit busy today, let's meet another day.",
+   "ko": "오늘은 좀 바쁘니까, 다음에 다시 약속하자.",
+   "blank": "改天再约"
+  },
+  {
+   "text": "这周事情太多了，改天再约可以吗？",
+   "en": "There’s too much going on this week, can we meet another day?",
+   "ko": "이번 주에 일이 너무 많아서, 다음에 다시 만날 수 있을까?",
+   "blank": "改天再约"
+  },
+  {
+   "text": "你最近太累了，改天再约休息一下也好。",
+   "en": "You've been too tired lately, it’s good to meet another day and take a break.",
+   "ko": "너 요즘 너무 피곤하니까, 다음에 다시 만나서 쉬는 게 좋겠다.",
+   "blank": "改天再约"
+  }
+ ],
+ "e|据我所知": [
+  {
+   "text": "据我所知，最近没有新的通知。",
+   "en": "As far as I know, there hasn't been any new announcement lately.",
+   "ko": "내가 알기로는, 최근에 새로운 공지는 없었어.",
+   "blank": "据我所知"
+  },
+  {
+   "text": "据我所知，他已经搬到别的城市了。",
+   "en": "As far as I know, he has already moved to another city.",
+   "ko": "내가 알기로 그는 이미 다른 도시로 이사했어.",
+   "blank": "据我所知"
+  },
+  {
+   "text": "据我所知，这家餐厅的菜非常受欢迎。",
+   "en": "As far as I know, the dishes at this restaurant are very popular.",
+   "ko": "내가 알기로 이 식당 음식이 매우 인기가 많아.",
+   "blank": "据我所知"
+  }
+ ],
+ "e|恭敬不如从命": [
+  {
+   "text": "既然你这么热情邀请，那我就恭敬不如从命了。",
+   "en": "Since you invited me so warmly, I'll gladly accept.",
+   "ko": "네가 이렇게 정성껏 초대해줘서, 사양하지 않고 받아들일게.",
+   "blank": "恭敬不如从命"
+  },
+  {
+   "text": "如果你坚持要请客，那我就恭敬不如从命吧。",
+   "en": "If you insist on treating, I’ll gladly accept.",
+   "ko": "네가 꼭 사겠다고 하니까, 사양하지 않고 받아들일게.",
+   "blank": "恭敬不如从命"
+  },
+  {
+   "text": "这份工作既然你推荐给我，我只好恭敬不如从命了。",
+   "en": "Since you recommended this job to me, I’ll happily accept.",
+   "ko": "이 일자리를 네가 추천해주니, 사양하지 않고 받아들일게.",
+   "blank": "恭敬不如从命"
+  }
+ ],
+ "e|怪不得": [
+  {
+   "text": "怪不得你今天这么开心。",
+   "en": "No wonder you're so happy today.",
+   "ko": "오늘 네가 이렇게 기쁜 게 이상하지 않네.",
+   "blank": "怪不得"
+  },
+  {
+   "text": "怪不得这里这么安静。",
+   "en": "No wonder it's so quiet here.",
+   "ko": "여기가 이렇게 조용한 게 이상하지 않네.",
+   "blank": "怪不得"
+  },
+  {
+   "text": "怪不得他没来，原来生病了。",
+   "en": "No wonder he didn't come, he is sick.",
+   "ko": "그가 안 온 게 이상하지 않네, 아팠구나.",
+   "blank": "怪不得"
+  }
+ ],
+ "e|几点见": [
+  {
+   "text": "我们几点见？",
+   "en": "What time shall we meet?",
+   "ko": "우리 몇 시에 만날까?",
+   "blank": "几点见"
+  },
+  {
+   "text": "你说几点见比较好？",
+   "en": "What time do you think is good to meet?",
+   "ko": "몇 시에 만나는 게 좋을까?",
+   "blank": "几点见"
+  },
+  {
+   "text": "下课后几点见？",
+   "en": "What time shall we meet after class?",
+   "ko": "수업 끝나고 몇 시에 만날까?",
+   "blank": "几点见"
+  }
+ ],
+ "e|那倒也是": [
+  {
+   "text": "外面下雨，不去公园，那倒也是。",
+   "en": "It's raining outside, so not going to the park makes sense.",
+   "ko": "밖에 비가 오니까 공원에 안 가는 것도 그렇긴 해.",
+   "blank": "那倒也是"
+  },
+  {
+   "text": "你说今天太冷，不想吃冰淇淋，那倒也是。",
+   "en": "You said it's too cold today to eat ice cream, that's true.",
+   "ko": "오늘 너무 추워서 아이스크림 안 먹겠다는 것도 그렇긴 해.",
+   "blank": "那倒也是"
+  },
+  {
+   "text": "他说早点睡身体好，那倒也是。",
+   "en": "He said going to bed early is good for health, that's true.",
+   "ko": "일찍 자는 게 건강에 좋다는 것도 그렇긴 해.",
+   "blank": "那倒也是"
+  }
+ ],
+ "e|拿不准": [
+  {
+   "text": "这道题我真的拿不准答案是什么。",
+   "en": "I'm really not sure what the answer to this question is.",
+   "ko": "이 문제의 답이 정말로 확실하지 않아.",
+   "blank": "拿不准"
+  },
+  {
+   "text": "你要是不拿不准，可以再查查资料。",
+   "en": "If you're not sure, you can look up more information.",
+   "ko": "확실하지 않으면 자료를 더 찾아봐.",
+   "blank": "拿不准"
+  },
+  {
+   "text": "他今天会不会来，我也拿不准。",
+   "en": "I'm also not sure whether he'll come today.",
+   "ko": "그가 오늘 올지 나도 확실하지 않아.",
+   "blank": "拿不准"
+  }
+ ],
+ "e|多少钱": [
+  {
+   "text": "这个苹果多少钱？",
+   "en": "How much is this apple?",
+   "ko": "이 사과는 얼마예요?",
+   "blank": "多少钱"
+  },
+  {
+   "text": "请问，这本书多少钱？",
+   "en": "Excuse me, how much is this book?",
+   "ko": "실례합니다, 이 책은 얼마예요?",
+   "blank": "多少钱"
+  },
+  {
+   "text": "水多少钱？",
+   "en": "How much is the water?",
+   "ko": "물은 얼마예요?",
+   "blank": "多少钱"
+  }
+ ],
+ "e|到了": [
+  {
+   "text": "时间到了，我们走吧。",
+   "en": "Time's up, let's go.",
+   "ko": "시간이 다 됐으니 우리 가자.",
+   "blank": "到了"
+  },
+  {
+   "text": "你好，火车到了吗？",
+   "en": "Hi, has the train arrived?",
+   "ko": "안녕, 기차 도착했어?",
+   "blank": "到了"
+  },
+  {
+   "text": "下雨天到了，要带伞。",
+   "en": "The rainy season is here, bring an umbrella.",
+   "ko": "우기(비 오는 계절)가 왔으니 우산을 가져가야 해.",
+   "blank": "到了"
+  }
+ ],
+ "e|等一下": [
+  {
+   "text": "等一下，我去拿水。",
+   "en": "Wait a moment, I will get some water.",
+   "ko": "잠깐만, 내가 물 가지러 갈게.",
+   "blank": "等一下"
+  },
+  {
+   "text": "等一下，我还没准备好。",
+   "en": "Wait a moment, I am not ready yet.",
+   "ko": "잠깐만, 아직 준비 안 됐어.",
+   "blank": "等一下"
+  },
+  {
+   "text": "你可以等一下吗？",
+   "en": "Can you wait a moment?",
+   "ko": "잠깐만 기다릴 수 있어?",
+   "blank": "等一下"
+  }
+ ],
+ "e|另一方面": [
+  {
+   "text": "这个工作很有挑战，另一方面也能学到很多新知识。",
+   "en": "This job is very challenging, on the other hand, you can also learn a lot of new things.",
+   "ko": "이 일은 매우 도전적이지만, 한편으로는 많은 새로운 것을 배울 수 있어요.",
+   "blank": "另一方面"
+  },
+  {
+   "text": "我喜欢住在城市，一方面很方便，另一方面有点吵。",
+   "en": "I like living in the city, on one hand it's convenient, on the other hand it's a bit noisy.",
+   "ko": "나는 도시에서 사는 게 좋아, 한편으로는 편리하지만 다른 한편으로는 좀 시끄러워.",
+   "blank": "另一方面"
+  },
+  {
+   "text": "你觉得这件事有好处，另一方面有没有什么坏处？",
+   "en": "You think this thing has benefits, on the other hand, are there any disadvantages?",
+   "ko": "너는 이 일이 장점이 있다고 생각하는데, 반면에 단점도 있을까?",
+   "blank": "另一方面"
+  }
+ ],
+ "e|慢点儿说": [
+  {
+   "text": "请慢点儿说，我听不太懂。",
+   "en": "Please speak a bit slower, I can't understand well.",
+   "ko": "좀 천천히 말해 주세요, 잘 못 알아듣겠어요.",
+   "blank": "慢点儿说"
+  },
+  {
+   "text": "你能慢点儿说吗？",
+   "en": "Can you speak more slowly?",
+   "ko": "좀 천천히 말해 줄 수 있어요?",
+   "blank": "慢点儿说"
+  },
+  {
+   "text": "对不起，请慢点儿说，谢谢。",
+   "en": "Sorry, please speak more slowly, thank you.",
+   "ko": "죄송하지만, 천천히 말해 주세요, 감사합니다.",
+   "blank": "慢点儿说"
+  }
+ ],
+ "e|麻烦你了": [
+  {
+   "text": "可以帮我拿一下那个吗？麻烦你了。",
+   "en": "Can you help me get that? Sorry for the trouble.",
+   "ko": "저것 좀 가져다줄 수 있어요? 번거롭게 해서 미안해요.",
+   "blank": "麻烦你了"
+  },
+  {
+   "text": "这件事情麻烦你了，非常感谢。",
+   "en": "This matter has troubled you, thank you very much.",
+   "ko": "이 일로 번거롭게 했네요, 정말 고마워요.",
+   "blank": "麻烦你了"
+  },
+  {
+   "text": "麻烦你了，请把门关一下。",
+   "en": "Sorry to trouble you, please close the door.",
+   "ko": "문 좀 닫아주세요, 번거롭게 해서 미안해요.",
+   "blank": "麻烦你了"
+  }
+ ],
+ "e|不敢当": [
+  {
+   "text": "你太夸奖我了，真是不敢当。",
+   "en": "You praise me too much, I really don't deserve it.",
+   "ko": "너무 칭찬해줘서 고마운데, 정말 과분해.",
+   "blank": "不敢当"
+  },
+  {
+   "text": "被您请教，我不敢当。",
+   "en": "Being consulted by you, I don't deserve it.",
+   "ko": "당신께서 저에게 물어보시다니, 과분해요.",
+   "blank": "不敢当"
+  },
+  {
+   "text": "你说我是专家，我可不敢当。",
+   "en": "You say I'm an expert, but I really don't deserve it.",
+   "ko": "네가 나를 전문가라고 하지만, 나는 정말 그럴 자격 없어.",
+   "blank": "不敢当"
+  }
+ ],
+ "e|不客气": [
+  {
+   "text": "谢谢你的帮助。不客气。",
+   "en": "Thank you for the help. You're welcome.",
+   "ko": "도와줘서 고마워요. 천만에요.",
+   "blank": "不客气"
+  },
+  {
+   "text": "谢谢你的茶。不客气。",
+   "en": "Thanks for the tea. You're welcome.",
+   "ko": "차 고마워요. 천만에요.",
+   "blank": "不客气"
+  },
+  {
+   "text": "谢谢你等我。不客气。",
+   "en": "Thanks for waiting. You're welcome.",
+   "ko": "기다려 줘서 고마워요. 천만에요.",
+   "blank": "不客气"
+  }
+ ],
+ "e|不是": [
+  {
+   "text": "这不是我的水。",
+   "en": "This is not my water.",
+   "ko": "이것은 내 물이 아니야.",
+   "blank": "不是"
+  },
+  {
+   "text": "今天不是星期天。",
+   "en": "Today is not Sunday.",
+   "ko": "오늘은 일요일이 아니야.",
+   "blank": "不是"
+  },
+  {
+   "text": "你不是老师吗？",
+   "en": "Aren't you a teacher?",
+   "ko": "너는 선생님이 아니니?",
+   "blank": "不是"
+  }
+ ],
+ "e|不要辣": [
+  {
+   "text": "请给我一份不要辣的汤。",
+   "en": "Please give me a soup without spice.",
+   "ko": "매운맛 없는 국 하나 주세요.",
+   "blank": "不要辣"
+  },
+  {
+   "text": "这道菜可以不要辣吗？",
+   "en": "Can this dish be made not spicy?",
+   "ko": "이 요리 맵지 않게 할 수 있나요?",
+   "blank": "不要辣"
+  },
+  {
+   "text": "我吃饭的时候喜欢不要辣。",
+   "en": "When I eat, I like it not spicy.",
+   "ko": "나는 밥 먹을 때 맵지 않은 걸 좋아해.",
+   "blank": "不要辣"
+  }
+ ],
+ "e|不在话下": [
+  {
+   "text": "做这点家务对你来说不在话下吧。",
+   "en": "Doing this bit of housework is no big deal for you, right?",
+   "ko": "이 정도 집안일은 너에게 식은 죽 먹기잖아.",
+   "blank": "不在话下"
+  },
+  {
+   "text": "他做饭的手艺好是大家公认的不在话下。",
+   "en": "It's well known that his cooking skills are excellent.",
+   "ko": "그의 요리 실력이 뛰어나다는 건 모두가 인정하는 사실이야.",
+   "blank": "不在话下"
+  },
+  {
+   "text": "这点小问题解决起来不在话下。",
+   "en": "Solving this little problem is a piece of cake.",
+   "ko": "이런 작은 문제는 해결하는 게 식은 죽 먹기야.",
+   "blank": "不在话下"
+  }
+ ],
+ "e|不好意思": [
+  {
+   "text": "不好意思，我来晚了。",
+   "en": "Sorry, I'm late.",
+   "ko": "미안해요, 저 늦었어요.",
+   "blank": "不好意思"
+  },
+  {
+   "text": "不好意思，这个座位有人吗？",
+   "en": "Excuse me, is this seat taken?",
+   "ko": "실례합니다, 이 자리 누가 앉았나요?",
+   "blank": "不好意思"
+  },
+  {
+   "text": "不好意思，可以帮我一下吗？",
+   "en": "Excuse me, can you help me?",
+   "ko": "실례합니다, 저 좀 도와줄 수 있나요?",
+   "blank": "不好意思"
+  }
+ ],
+ "e|不见得": [
+  {
+   "text": "他说的话不见得都是真的。",
+   "en": "What he says is not necessarily all true.",
+   "ko": "그가 하는 말이 모두 진실인 것은 아니야.",
+   "blank": "不见得"
+  },
+  {
+   "text": "外面看起来很暖和，其实不见得不冷。",
+   "en": "It looks warm outside, but it’s not necessarily not cold.",
+   "ko": "밖이 따뜻해 보여도, 꼭 안 추운 건 아니야.",
+   "blank": "不见得"
+  },
+  {
+   "text": "努力了也不见得会成功。",
+   "en": "Even if you work hard, you won’t necessarily succeed.",
+   "ko": "노력해도 꼭 성공하는 건 아니야.",
+   "blank": "不见得"
+  }
+ ],
+ "e|比如说": [
+  {
+   "text": "我喜欢吃水果，比如说苹果和香蕉。",
+   "en": "I like to eat fruit, for example apples and bananas.",
+   "ko": "나는 과일을 좋아해, 예를 들어 사과랑 바나나야.",
+   "blank": "比如说"
+  },
+  {
+   "text": "有时候我会运动，比如说跑步。",
+   "en": "Sometimes I exercise, for example running.",
+   "ko": "가끔 나는 운동을 해, 예를 들어 달리기야.",
+   "blank": "比如说"
+  },
+  {
+   "text": "你喜欢什么颜色，比如说蓝色还是红色？",
+   "en": "What color do you like, for example blue or red?",
+   "ko": "너는 무슨 색을 좋아해? 예를 들어 파란색이나 빨간색?",
+   "blank": "比如说"
+  }
+ ],
+ "e|算了": [
+  {
+   "text": "算了，我们去别的地方吧。",
+   "en": "Forget it, let's go somewhere else.",
+   "ko": "그만하고 우리 다른 데 가자.",
+   "blank": "算了"
+  },
+  {
+   "text": "算了，你不用帮我了。",
+   "en": "Forget it, you don't need to help me anymore.",
+   "ko": "그만해, 더 이상 도와줄 필요 없어.",
+   "blank": "算了"
+  },
+  {
+   "text": "你不想说就算了。",
+   "en": "If you don't want to talk, just forget it.",
+   "ko": "말하고 싶지 않으면 그냥 그만둬.",
+   "blank": "算了"
+  }
+ ],
+ "e|先这样吧": [
+  {
+   "text": "我们今天就先这样吧，明天再继续讨论。",
+   "en": "Let's leave it like this for today and continue discussing tomorrow.",
+   "ko": "오늘은 일단 여기까지만 하고 내일 다시 얘기하자.",
+   "blank": "先这样吧"
+  },
+  {
+   "text": "你要是没别的意见，那就先这样吧。",
+   "en": "If you don't have any other suggestions, let's keep it like this for now.",
+   "ko": "다른 의견 없으면 일단 이렇게 하자.",
+   "blank": "先这样吧"
+  },
+  {
+   "text": "现在时间不早了，先这样吧，你路上小心。",
+   "en": "It's getting late, let's stop here for now, and be careful on your way home.",
+   "ko": "이제 늦었으니 일단 여기까지만 하자. 집에 조심히 가.",
+   "blank": "先这样吧"
+  }
+ ],
+ "e|洗手间在哪儿": [
+  {
+   "text": "你好，洗手间在哪儿？",
+   "en": "Hello, where is the restroom?",
+   "ko": "안녕하세요, 화장실이 어디에요?",
+   "blank": "洗手间在哪儿"
+  },
+  {
+   "text": "请问，洗手间在哪儿。",
+   "en": "Excuse me, where is the restroom?",
+   "ko": "실례합니다, 화장실이 어디에요?",
+   "blank": "洗手间在哪儿"
+  },
+  {
+   "text": "我找不到，洗手间在哪儿？",
+   "en": "I can't find it, where is the restroom?",
+   "ko": "못 찾겠어요, 화장실이 어디에요?",
+   "blank": "洗手间在哪儿"
+  }
+ ],
+ "e|首先": [
+  {
+   "text": "首先，我们需要确认一下时间。",
+   "en": "First, we need to confirm the time.",
+   "ko": "먼저, 우리는 시간을 확인해야 해.",
+   "blank": "首先"
+  },
+  {
+   "text": "你首先考虑一下交通怎么安排。",
+   "en": "You should first consider how to arrange the transportation.",
+   "ko": "먼저 교통을 어떻게 할지 생각해 봐.",
+   "blank": "首先"
+  },
+  {
+   "text": "首先谢谢你的帮助，然后我有几个问题想问。",
+   "en": "First, thank you for your help, and then I have a few questions to ask.",
+   "ko": "먼저 너의 도움에 감사하고, 그 다음에 내가 묻고 싶은 질문이 몇 개 있어.",
+   "blank": "首先"
+  }
+ ],
+ "e|辛苦大家了": [
+  {
+   "text": "今天活动能顺利结束，辛苦大家了。",
+   "en": "Thanks to everyone for making today's event go smoothly.",
+   "ko": "오늘 행사가 순조롭게 끝난 건 모두 덕분이에요, 모두 수고하셨습니다.",
+   "blank": "辛苦大家了"
+  },
+  {
+   "text": "马上放假了，这段时间辛苦大家了。",
+   "en": "The holiday is coming soon, everyone has worked hard lately.",
+   "ko": "곧 휴가인데, 요즘 모두 정말 고생했어요.",
+   "blank": "辛苦大家了"
+  },
+  {
+   "text": "天气这么热还要加班，辛苦大家了。",
+   "en": "It's so hot and we still have to work overtime, thank you all for your hard work.",
+   "ko": "이렇게 더운데도 야근해야 해서, 모두 수고 많으셨어요.",
+   "blank": "辛苦大家了"
+  }
+ ],
+ "e|心里没底": [
+  {
+   "text": "这次面试我心里没底，不知道能不能通过。",
+   "en": "I don't feel confident about this interview; I don't know if I can pass.",
+   "ko": "이번 면접은 마음이 불안해서 통과할 수 있을지 모르겠어.",
+   "blank": "心里没底"
+  },
+  {
+   "text": "医生说要做手术，我心里没底，很担心结果。",
+   "en": "The doctor said I need surgery; I feel uncertain and worried about the result.",
+   "ko": "의사가 수술이 필요하다고 해서 마음이 불안하고 결과가 걱정돼.",
+   "blank": "心里没底"
+  },
+  {
+   "text": "第一次一个人出国，心里没底，不知道会遇到什么。",
+   "en": "It's my first time going abroad alone; I feel uneasy and don't know what to expect.",
+   "ko": "처음 혼자 해외에 가는데 마음이 불안해서 무슨 일이 생길지 모르겠어.",
+   "blank": "心里没底"
+  }
+ ],
+ "e|我去过": [
+  {
+   "text": "我去过那个公园。",
+   "en": "I have been to that park.",
+   "ko": "나는 그 공원에 가본 적 있어.",
+   "blank": "我去过"
+  },
+  {
+   "text": "我去过上海几次。",
+   "en": "I have been to Shanghai a few times.",
+   "ko": "나는 상하이에 몇 번 가본 적 있어.",
+   "blank": "我去过"
+  },
+  {
+   "text": "我去过你说的那家餐厅。",
+   "en": "I have been to the restaurant you mentioned.",
+   "ko": "나는 네가 말한 그 식당에 가본 적 있어.",
+   "blank": "我去过"
+  }
+ ],
+ "e|我能理解": [
+  {
+   "text": "你说的这些问题我能理解。",
+   "en": "I can understand the issues you mentioned.",
+   "ko": "네가 말한 문제들을 나는 이해할 수 있어.",
+   "blank": "我能理解"
+  },
+  {
+   "text": "虽然我没经历过，但我能理解你的感受。",
+   "en": "Although I haven't experienced it, I can understand how you feel.",
+   "ko": "내가 직접 겪어보진 않았지만, 네 감정을 이해할 수 있어.",
+   "blank": "我能理解"
+  },
+  {
+   "text": "如果你需要时间冷静下来，我能理解。",
+   "en": "If you need time to calm down, I can understand.",
+   "ko": "네가 진정할 시간이 필요하다면 나는 이해할 수 있어.",
+   "blank": "我能理解"
+  }
+ ],
+ "e|我同意": [
+  {
+   "text": "我同意你的想法。",
+   "en": "I agree with your idea.",
+   "ko": "나는 네 생각에 동의해.",
+   "blank": "我同意"
+  },
+  {
+   "text": "我同意，这样做更好。",
+   "en": "I agree, doing it this way is better.",
+   "ko": "동의해, 이렇게 하는 게 더 좋아.",
+   "blank": "我同意"
+  },
+  {
+   "text": "我同意我们明天见面。",
+   "en": "I agree that we meet tomorrow.",
+   "ko": "내일 만나자는 것에 동의해.",
+   "blank": "我同意"
+  }
+ ],
+ "e|我不太同意": [
+  {
+   "text": "我不太同意你的看法，不过我们可以讨论一下。",
+   "en": "I don't quite agree with your opinion, but we can discuss it.",
+   "ko": "나는 네 의견에 전적으로 동의하지는 않지만, 우리 이야기를 나눌 수 있어.",
+   "blank": "我不太同意"
+  },
+  {
+   "text": "我不太同意这个计划，因为可能会有风险。",
+   "en": "I don't quite agree with this plan because there could be risks.",
+   "ko": "나는 이 계획에 전적으로 동의하지 않아, 위험이 있을 수 있어서.",
+   "blank": "我不太同意"
+  },
+  {
+   "text": "说实话，我不太同意你刚才说的话。",
+   "en": "To be honest, I don't quite agree with what you just said.",
+   "ko": "솔직히 말해서, 나는 네가 방금 한 말에 전적으로 동의하지 않아.",
+   "blank": "我不太同意"
+  }
+ ],
+ "e|我先干为敬": [
+  {
+   "text": "今天大家都在，我先干为敬。",
+   "en": "Since everyone is here today, I'll drink first to show my respect.",
+   "ko": "오늘 모두가 모였으니, 내가 먼저 건배할게요.",
+   "blank": "我先干为敬"
+  },
+  {
+   "text": "既然你们都不动筷子，那我先干为敬。",
+   "en": "Since none of you are starting, I'll go first.",
+   "ko": "여러분이 아직 시작 안 했으니, 내가 먼저 먹을게요.",
+   "blank": "我先干为敬"
+  },
+  {
+   "text": "这杯酒，我先干为敬，祝我们合作顺利。",
+   "en": "For this glass, I'll drink first to wish us a smooth cooperation.",
+   "ko": "이 잔은 내가 먼저 마시면서, 우리의 협력이 잘 되길 바랄게요.",
+   "blank": "我先干为敬"
+  }
+ ],
+ "e|我是韩国人": [
+  {
+   "text": "你好，我是韩国人。",
+   "en": "Hello, I am Korean.",
+   "ko": "안녕하세요, 저는 한국인입니다.",
+   "blank": "我是韩国人"
+  },
+  {
+   "text": "我是韩国人，你呢？",
+   "en": "I am Korean, how about you?",
+   "ko": "저는 한국인인데, 너는?",
+   "blank": "我是韩国人"
+  },
+  {
+   "text": "他们说我是韩国人。",
+   "en": "They say I am Korean.",
+   "ko": "그들은 내가 한국인이라고 말해요.",
+   "blank": "我是韩国人"
+  }
+ ],
+ "e|我要这个": [
+  {
+   "text": "我要这个，谢谢。",
+   "en": "I want this, thank you.",
+   "ko": "이거 원해요, 감사합니다.",
+   "blank": "我要这个"
+  },
+  {
+   "text": "你好，我要这个。",
+   "en": "Hello, I want this.",
+   "ko": "안녕하세요, 이거 원해요.",
+   "blank": "我要这个"
+  },
+  {
+   "text": "服务员，我要这个。",
+   "en": "Waiter, I want this.",
+   "ko": "종업원, 이거 원해요.",
+   "blank": "我要这个"
+  }
+ ],
+ "e|我听不懂": [
+  {
+   "text": "对不起，我听不懂。",
+   "en": "Sorry, I don't understand.",
+   "ko": "미안해요, 이해하지 못해요.",
+   "blank": "我听不懂"
+  },
+  {
+   "text": "你说什么？我听不懂。",
+   "en": "What did you say? I don't understand.",
+   "ko": "뭐라고 했어요? 이해하지 못해요.",
+   "blank": "我听不懂"
+  },
+  {
+   "text": "老师，我听不懂。",
+   "en": "Teacher, I don't understand.",
+   "ko": "선생님, 이해하지 못해요.",
+   "blank": "我听不懂"
+  }
+ ],
+ "e|我的意思是": [
+  {
+   "text": "我的意思是我们现在需要走了。",
+   "en": "I mean we need to leave now.",
+   "ko": "내 말은 우리 지금 가야 한다는 거야.",
+   "blank": "我的意思是"
+  },
+  {
+   "text": "我的意思是你可以早点回家。",
+   "en": "I mean you can go home earlier.",
+   "ko": "내 말은 네가 더 일찍 집에 가도 된다는 거야.",
+   "blank": "我的意思是"
+  },
+  {
+   "text": "我的意思是这本书很有趣。",
+   "en": "I mean this book is very interesting.",
+   "ko": "내 말은 이 책이 정말 재미있다는 거야.",
+   "blank": "我的意思是"
+  }
+ ],
+ "e|按理说": [
+  {
+   "text": "按理说今天应该下雨的，可是现在还是晴天。",
+   "en": "Normally, it should be raining today, but it's still sunny now.",
+   "ko": "원래 오늘 비가 와야 하는데, 지금은 아직도 맑아요.",
+   "blank": "按理说"
+  },
+  {
+   "text": "按理说他已经到家了，怎么还没给我消息？",
+   "en": "He should have arrived home by now, so why hasn't he messaged me?",
+   "ko": "그가 이제 집에 도착했어야 하는데, 왜 아직도 연락이 없지?",
+   "blank": "按理说"
+  },
+  {
+   "text": "按理说这个问题不难，你怎么还不会做？",
+   "en": "This problem shouldn't be difficult, so how come you still can't solve it?",
+   "ko": "이 문제는 원래 어렵지 않은데, 너는 왜 아직도 못 풀어?",
+   "blank": "按理说"
+  }
+ ],
+ "e|我头疼": [
+  {
+   "text": "我头疼，想休息一下。",
+   "en": "I have a headache, I want to rest for a while.",
+   "ko": "나 머리가 아파서 잠깐 쉬고 싶어.",
+   "blank": "我头疼"
+  },
+  {
+   "text": "今天我头疼，不想出去。",
+   "en": "Today I have a headache, I don't want to go out.",
+   "ko": "오늘 나 머리가 아파서 나가고 싶지 않아.",
+   "blank": "我头疼"
+  },
+  {
+   "text": "你有药吗？我头疼。",
+   "en": "Do you have medicine? I have a headache.",
+   "ko": "너 약 있어? 나 머리가 아파.",
+   "blank": "我头疼"
+  }
+ ],
+ "e|我尽量吧": [
+  {
+   "text": "这么早起床我尽量吧。",
+   "en": "I’ll try my best to get up this early.",
+   "ko": "이렇게 일찍 일어나는 건 내가 최대한 해볼게.",
+   "blank": "我尽量吧"
+  },
+  {
+   "text": "你让我帮忙搬家，我尽量吧。",
+   "en": "You want me to help you move? I’ll try my best.",
+   "ko": "네가 이사 도와달라고 했는데, 내가 최대한 해볼게.",
+   "blank": "我尽量吧"
+  },
+  {
+   "text": "老板让加班到很晚，我尽量吧。",
+   "en": "The boss wants me to work late; I’ll do my best.",
+   "ko": "사장님이 늦게까지 야근하라고 했는데, 내가 최대한 해볼게.",
+   "blank": "我尽量吧"
+  }
+ ],
+ "e|我觉得": [
+  {
+   "text": "我觉得今天有点冷。",
+   "en": "I think it's a bit cold today.",
+   "ko": "오늘은 조금 추운 것 같아.",
+   "blank": "我觉得"
+  },
+  {
+   "text": "我觉得你做得很好。",
+   "en": "I think you did very well.",
+   "ko": "네가 아주 잘한 것 같아.",
+   "blank": "我觉得"
+  },
+  {
+   "text": "我觉得这本书很有意思。",
+   "en": "I think this book is very interesting.",
+   "ko": "이 책이 아주 재미있는 것 같아.",
+   "blank": "我觉得"
+  }
+ ],
+ "e|越来越": [
+  {
+   "text": "天气越来越热了。",
+   "en": "The weather is getting hotter and hotter.",
+   "ko": "날씨가 점점 더워지고 있어.",
+   "blank": "越来越"
+  },
+  {
+   "text": "你的中文越来越好了。",
+   "en": "Your Chinese is getting better and better.",
+   "ko": "너의 중국어가 점점 더 좋아지고 있어.",
+   "blank": "越来越"
+  },
+  {
+   "text": "为什么东西越来越贵？",
+   "en": "Why are things getting more and more expensive?",
+   "ko": "왜 물건이 점점 더 비싸지는 거야?",
+   "blank": "越来越"
+  }
+ ],
+ "e|有道理": [
+  {
+   "text": "你说得有道理，我再考虑一下。",
+   "en": "What you said makes sense, I'll think about it again.",
+   "ko": "네 말이 일리가 있어, 내가 다시 생각해볼게.",
+   "blank": "有道理"
+  },
+  {
+   "text": "这个办法听起来挺有道理的。",
+   "en": "This method sounds quite reasonable.",
+   "ko": "이 방법은 꽤 타당하게 들려.",
+   "blank": "有道理"
+  },
+  {
+   "text": "有道理，不过我还是有点担心。",
+   "en": "That makes sense, but I'm still a bit worried.",
+   "ko": "일리가 있긴 한데, 그래도 좀 걱정돼.",
+   "blank": "有道理"
+  }
+ ],
+ "e|有什么问题": [
+  {
+   "text": "你有什么问题可以直接说。",
+   "en": "If you have any questions, just say it.",
+   "ko": "질문이 있으면 바로 말해 주세요.",
+   "blank": "有什么问题"
+  },
+  {
+   "text": "我们开会时，有什么问题请举手。",
+   "en": "During the meeting, if there are any questions, please raise your hand.",
+   "ko": "회의 중에 질문이 있으면 손을 들어 주세요.",
+   "blank": "有什么问题"
+  },
+  {
+   "text": "你好，有什么问题我可以帮你吗？",
+   "en": "Hello, is there any question I can help you with?",
+   "ko": "안녕하세요, 질문이 있으면 도와드릴 수 있어요?",
+   "blank": "有什么问题"
+  }
+ ],
+ "e|有点儿累": [
+  {
+   "text": "今天有点儿累，我想早点休息。",
+   "en": "I'm a bit tired today, I want to rest early.",
+   "ko": "오늘은 좀 피곤해서 일찍 쉬고 싶어.",
+   "blank": "有点儿累"
+  },
+  {
+   "text": "运动以后有点儿累，我们坐一会儿吧。",
+   "en": "After exercising, I'm a bit tired, let's sit for a while.",
+   "ko": "운동하고 나서 좀 피곤하니까 잠깐 앉자.",
+   "blank": "有点儿累"
+  },
+  {
+   "text": "你看起来有点儿累，要喝点水吗？",
+   "en": "You look a bit tired, do you want some water?",
+   "ko": "너 좀 피곤해 보여, 물 좀 마실래?",
+   "blank": "有点儿累"
+  }
+ ],
+ "e|有两下子": [
+  {
+   "text": "你唱歌还真有两下子，难怪大家都鼓掌。",
+   "en": "You really have some skill at singing; no wonder everyone applauded.",
+   "ko": "너 노래 정말 좀 하네, 모두가 박수치는 게 당연하지.",
+   "blank": "有两下子"
+  },
+  {
+   "text": "别看他年纪小，做饭可是有两下子。",
+   "en": "Don’t underestimate him because he’s young; he’s actually pretty good at cooking.",
+   "ko": "그가 어려 보여도 요리는 꽤 잘해.",
+   "blank": "有两下子"
+  },
+  {
+   "text": "你画画有两下子，是不是学过？",
+   "en": "You’re pretty good at drawing—did you ever take lessons?",
+   "ko": "너 그림 좀 그리네, 혹시 배운 적 있어?",
+   "blank": "有两下子"
+  }
+ ],
+ "e|听说": [
+  {
+   "text": "听说那个公园很漂亮。",
+   "en": "I heard that park is very beautiful.",
+   "ko": "그 공원이 아주 예쁘다고 들었어.",
+   "blank": "听说"
+  },
+  {
+   "text": "听说你会弹钢琴，对吗？",
+   "en": "I heard you can play the piano, right?",
+   "ko": "너 피아노 칠 줄 안다고 들었는데, 맞아?",
+   "blank": "听说"
+  },
+  {
+   "text": "听说今天会下雨，记得带伞。",
+   "en": "I heard it will rain today, remember to bring an umbrella.",
+   "ko": "오늘 비 온다고 들었으니까, 우산 챙겨.",
+   "blank": "听说"
+  }
+ ],
+ "e|一起去吧": [
+  {
+   "text": "我们去超市，一起去吧。",
+   "en": "We are going to the supermarket, let's go together.",
+   "ko": "우리 슈퍼마켓에 가자, 같이 가자.",
+   "blank": "一起去吧"
+  },
+  {
+   "text": "明天有音乐会，一起去吧。",
+   "en": "There is a concert tomorrow, let's go together.",
+   "ko": "내일 콘서트가 있어, 같이 가자.",
+   "blank": "一起去吧"
+  },
+  {
+   "text": "你饿了吗？一起去吧。",
+   "en": "Are you hungry? Let's go together.",
+   "ko": "배고파? 같이 가자.",
+   "blank": "一起去吧"
+  }
+ ],
+ "e|一言难尽": [
+  {
+   "text": "最近我的心情，一言难尽。",
+   "en": "Lately my mood is hard to describe.",
+   "ko": "요즘 내 기분은 한마디로 말하기 어려워.",
+   "blank": "一言难尽"
+  },
+  {
+   "text": "关于这件事的经过，一言难尽。",
+   "en": "The details of what happened are complicated.",
+   "ko": "이 일의 경과는 한마디로 설명하기 힘들어.",
+   "blank": "一言难尽"
+  },
+  {
+   "text": "你问我为什么离职，一言难尽。",
+   "en": "You asked me why I quit my job; it’s complicated.",
+   "ko": "네가 왜 퇴사했냐고 묻는데, 한마디로 말하기 어려워.",
+   "blank": "一言难尽"
+  }
+ ],
+ "e|再见": [
+  {
+   "text": "妈妈，再见。",
+   "en": "Mom, goodbye.",
+   "ko": "엄마, 안녕.",
+   "blank": "再见"
+  },
+  {
+   "text": "明天见，再见。",
+   "en": "See you tomorrow, goodbye.",
+   "ko": "내일 봐, 안녕.",
+   "blank": "再见"
+  },
+  {
+   "text": "同学们，再见。",
+   "en": "Classmates, goodbye.",
+   "ko": "여러분, 안녕.",
+   "blank": "再见"
+  }
+ ],
+ "e|第一次": [
+  {
+   "text": "这是我第一次吃火锅。",
+   "en": "This is my first time eating hotpot.",
+   "ko": "이것은 내가 처음으로 훠궈를 먹는 거야.",
+   "blank": "第一次"
+  },
+  {
+   "text": "你第一次来这里吗？",
+   "en": "Is this your first time here?",
+   "ko": "여기 처음 와봤어?",
+   "blank": "第一次"
+  },
+  {
+   "text": "我弟弟第一次自己上学。",
+   "en": "My younger brother goes to school by himself for the first time.",
+   "ko": "내 남동생이 처음으로 혼자 학교에 가요.",
+   "blank": "第一次"
+  }
+ ],
+ "e|早上好": [
+  {
+   "text": "妈妈，早上好。",
+   "en": "Mom, good morning.",
+   "ko": "엄마, 좋은 아침이에요.",
+   "blank": "早上好"
+  },
+  {
+   "text": "朋友们，早上好！",
+   "en": "Friends, good morning!",
+   "ko": "친구들, 좋은 아침!",
+   "blank": "早上好"
+  },
+  {
+   "text": "老师，早上好。",
+   "en": "Teacher, good morning.",
+   "ko": "선생님, 좋은 아침이에요.",
+   "blank": "早上好"
+  }
+ ],
+ "e|周末有空吗": [
+  {
+   "text": "你好，周末有空吗？",
+   "en": "Hi, are you free this weekend?",
+   "ko": "안녕, 이번 주말에 시간 있어?",
+   "blank": "周末有空吗"
+  },
+  {
+   "text": "我们一起去看电影，周末有空吗？",
+   "en": "Let's go to the movies together, are you free this weekend?",
+   "ko": "같이 영화 보러 가자, 이번 주말에 시간 있어?",
+   "blank": "周末有空吗"
+  },
+  {
+   "text": "我想请你吃饭，周末有空吗？",
+   "en": "I want to invite you to dinner, are you free this weekend?",
+   "ko": "너에게 밥 사주고 싶어, 이번 주말에 시간 있어?",
+   "blank": "周末有空吗"
+  }
+ ],
+ "e|走一步看一步": [
+  {
+   "text": "我现在也没什么计划，只能走一步看一步了。",
+   "en": "I don't really have a plan right now, so I can only take things as they come.",
+   "ko": "나도 지금은 특별한 계획이 없어서 일단 상황을 보면서 할 수밖에 없어.",
+   "blank": "走一步看一步"
+  },
+  {
+   "text": "遇到难题的时候，我们就走一步看一步吧。",
+   "en": "When we run into problems, let's just take it one step at a time.",
+   "ko": "문제가 생기면 우리도 일단 하나씩 해보자.",
+   "blank": "走一步看一步"
+  },
+  {
+   "text": "你打算怎么处理这件事？还是走一步看一步？",
+   "en": "How are you going to handle this? Or just play it by ear?",
+   "ko": "너 이 일 어떻게 처리할 거야? 아니면 그냥 상황 봐가면서 할 거야?",
+   "blank": "走一步看一步"
+  }
+ ],
+ "e|差不多": [
+  {
+   "text": "现在差不多可以走了。",
+   "en": "We can leave soon.",
+   "ko": "이제 곧 나갈 수 있어.",
+   "blank": "差不多"
+  },
+  {
+   "text": "这两件衣服差不多。",
+   "en": "These two clothes are almost the same.",
+   "ko": "이 두 옷은 거의 비슷해.",
+   "blank": "差不多"
+  },
+  {
+   "text": "你差不多准备好了吗？",
+   "en": "Are you almost ready?",
+   "ko": "거의 준비됐어?",
+   "blank": "差不多"
+  }
+ ],
+ "e|打包": [
+  {
+   "text": "请帮我打包这个菜。",
+   "en": "Please help me pack this dish.",
+   "ko": "이 음식을 포장해 주세요.",
+   "blank": "打包"
+  },
+  {
+   "text": "这个蛋糕能打包吗？",
+   "en": "Can this cake be packed to go?",
+   "ko": "이 케이크 포장할 수 있어요?",
+   "blank": "打包"
+  },
+  {
+   "text": "我要打包剩下的饭。",
+   "en": "I want to pack the leftover rice.",
+   "ko": "남은 밥을 포장하고 싶어요.",
+   "blank": "打包"
+  }
+ ],
+ "e|打个比方": [
+  {
+   "text": "打个比方，学习一门新语言就像是在探索一个全新的世界。",
+   "en": "For example, learning a new language is like exploring a whole new world.",
+   "ko": "예를 들어, 새로운 언어를 배우는 것은 완전히 새로운 세계를 탐험하는 것과 같아.",
+   "blank": "打个比方"
+  },
+  {
+   "text": "如果你还不明白，我可以再打个比方。",
+   "en": "If you still don’t understand, I can give another example.",
+   "ko": "아직 이해가 안 된다면, 내가 예시를 하나 더 들어줄게.",
+   "blank": "打个比方"
+  },
+  {
+   "text": "打个比方，这道题就像是拼图，需要一步步来解决。",
+   "en": "For example, this problem is like a puzzle that needs to be solved step by step.",
+   "ko": "예를 들어, 이 문제는 퍼즐과 같아서 한 단계씩 풀어야 해.",
+   "blank": "打个比方"
+  }
+ ],
+ "e|太好了": [
+  {
+   "text": "你来了，太好了！",
+   "en": "You are here, great!",
+   "ko": "너 왔구나, 너무 잘됐다!",
+   "blank": "太好了"
+  },
+  {
+   "text": "天气晴了，太好了。",
+   "en": "The weather is clear, great.",
+   "ko": "날씨가 맑아졌네, 너무 잘됐다.",
+   "blank": "太好了"
+  },
+  {
+   "text": "我们可以一起去玩，太好了！",
+   "en": "We can go play together, great!",
+   "ko": "우리 같이 놀러 갈 수 있어서 너무 잘됐다!",
+   "blank": "太好了"
+  }
+ ],
+ "e|太贵了": [
+  {
+   "text": "这个包太贵了。",
+   "en": "This bag is too expensive.",
+   "ko": "이 가방은 너무 비싸요.",
+   "blank": "太贵了"
+  },
+  {
+   "text": "水太贵了。",
+   "en": "The water is too expensive.",
+   "ko": "물값이 너무 비싸요.",
+   "blank": "太贵了"
+  },
+  {
+   "text": "你好，太贵了，可以便宜一点吗？",
+   "en": "Hello, it's too expensive, can it be cheaper?",
+   "ko": "안녕하세요, 너무 비싸요, 좀 더 싸게 해줄 수 있나요?",
+   "blank": "太贵了"
+  }
+ ],
+ "e|下次吧": [
+  {
+   "text": "今天不方便，下次吧。",
+   "en": "It's not convenient today, maybe next time.",
+   "ko": "오늘은 불편하니까 다음에 하자.",
+   "blank": "下次吧"
+  },
+  {
+   "text": "你要一起吃饭吗？下次吧。",
+   "en": "Do you want to eat together? Maybe next time.",
+   "ko": "같이 밥 먹을래? 다음에 하자.",
+   "blank": "下次吧"
+  },
+  {
+   "text": "下次吧，我现在有点忙。",
+   "en": "Maybe next time, I'm a bit busy now.",
+   "ko": "다음에 하자, 지금 좀 바빠.",
+   "blank": "下次吧"
+  }
+ ],
+ "e|好的": [
+  {
+   "text": "好的，我来了。",
+   "en": "Okay, I am coming.",
+   "ko": "알겠어, 나 갈게.",
+   "blank": "好的"
+  },
+  {
+   "text": "你说什么？好的。",
+   "en": "What did you say? Okay.",
+   "ko": "뭐라고 했어? 알겠어.",
+   "blank": "好的"
+  },
+  {
+   "text": "好的，谢谢你。",
+   "en": "Okay, thank you.",
+   "ko": "알겠어, 고마워.",
+   "blank": "好的"
+  }
+ ],
+ "e|买单": [
+  {
+   "text": "服务员，买单。",
+   "en": "Waiter, bill please.",
+   "ko": "종업원, 계산서 주세요.",
+   "blank": "买单"
+  },
+  {
+   "text": "请问可以买单吗？",
+   "en": "Excuse me, can I pay the bill?",
+   "ko": "실례합니다, 계산할 수 있나요?",
+   "blank": "买单"
+  },
+  {
+   "text": "我们一起买单吧。",
+   "en": "Let's pay the bill together.",
+   "ko": "우리 같이 계산하자.",
+   "blank": "买单"
+  }
+ ],
+ "e|你看怎么样": [
+  {
+   "text": "这个颜色你看怎么样？",
+   "en": "What do you think of this color?",
+   "ko": "이 색깔 너는 어떻게 생각해?",
+   "blank": "你看怎么样"
+  },
+  {
+   "text": "我们明天去郊游，你看怎么样？",
+   "en": "How about we go for an outing tomorrow?",
+   "ko": "내일 소풍 가는 거 너는 어떻게 생각해?",
+   "blank": "你看怎么样"
+  },
+  {
+   "text": "我换了个新发型，你看怎么样？",
+   "en": "I changed my hairstyle, what do you think?",
+   "ko": "나 머리 스타일 바꿨는데, 너는 어떻게 생각해?",
+   "blank": "你看怎么样"
+  }
+ ],
+ "e|你呢": [
+  {
+   "text": "我喜欢苹果，你呢？",
+   "en": "I like apples, how about you?",
+   "ko": "나는 사과를 좋아해, 너는?",
+   "blank": "你呢"
+  },
+  {
+   "text": "今天很热，你呢？",
+   "en": "It's hot today, how about you?",
+   "ko": "오늘은 덥다, 너는 어때?",
+   "blank": "你呢"
+  },
+  {
+   "text": "我不累，你呢？",
+   "en": "I'm not tired, how about you?",
+   "ko": "나는 안 피곤해, 너는?",
+   "blank": "你呢"
+  }
+ ],
+ "e|你推荐什么": [
+  {
+   "text": "你好，去这家餐厅你推荐什么？",
+   "en": "Hi, what do you recommend at this restaurant?",
+   "ko": "안녕, 이 식당에서 너는 무엇을 추천해?",
+   "blank": "你推荐什么"
+  },
+  {
+   "text": "我想买书，你推荐什么？",
+   "en": "I want to buy a book, what do you recommend?",
+   "ko": "나는 책을 사고 싶은데, 너는 무엇을 추천해?",
+   "blank": "你推荐什么"
+  },
+  {
+   "text": "天气热，喝的你推荐什么？",
+   "en": "It's hot, what drink do you recommend?",
+   "ko": "날씨가 더워, 마실 것 중에 너는 무엇을 추천해?",
+   "blank": "你推荐什么"
+  }
+ ],
+ "e|你好": [
+  {
+   "text": "你好，我是学生。",
+   "en": "Hello, I am a student.",
+   "ko": "안녕하세요, 저는 학생이에요.",
+   "blank": "你好"
+  },
+  {
+   "text": "你好，请进。",
+   "en": "Hello, please come in.",
+   "ko": "안녕하세요, 들어오세요.",
+   "blank": "你好"
+  },
+  {
+   "text": "你好，你叫什么？",
+   "en": "Hello, what is your name?",
+   "ko": "안녕, 이름이 뭐야?",
+   "blank": "你好"
+  }
+ ],
+ "e|你说得对": [
+  {
+   "text": "你说得对，我们早点出发吧。",
+   "en": "You're right, let's leave earlier.",
+   "ko": "네 말이 맞아, 우리 일찍 출발하자.",
+   "blank": "你说得对"
+  },
+  {
+   "text": "你说得对，这个颜色很好看。",
+   "en": "You're right, this color looks great.",
+   "ko": "네 말이 맞아, 이 색깔 예쁘다.",
+   "blank": "你说得对"
+  },
+  {
+   "text": "你说得对，我应该多喝水。",
+   "en": "You're right, I should drink more water.",
+   "ko": "네 말이 맞아, 나 물 더 많이 마셔야 해.",
+   "blank": "你说得对"
+  }
+ ],
+ "e|值得一试": [
+  {
+   "text": "这家新开的咖啡馆听说不错，值得一试。",
+   "en": "I heard this newly opened café is good, it's worth a try.",
+   "ko": "이 새로 생긴 카페가 괜찮다고 하던데, 한 번 가볼 만해.",
+   "blank": "值得一试"
+  },
+  {
+   "text": "这个方法虽然简单，但是值得一试。",
+   "en": "This method is simple, but it's worth a try.",
+   "ko": "이 방법은 간단하지만 한 번 시도해볼 만해.",
+   "blank": "值得一试"
+  },
+  {
+   "text": "你觉得这个游戏值得一试吗？",
+   "en": "Do you think this game is worth a try?",
+   "ko": "이 게임 한 번 해볼 만하다고 생각해?",
+   "blank": "值得一试"
+  }
+ ],
+ "e|关键是": [
+  {
+   "text": "关键是你愿不愿意尝试新方法。",
+   "en": "The key is whether you are willing to try new methods.",
+   "ko": "관건은 네가 새로운 방법을 시도할 의향이 있느냐는 거야.",
+   "blank": "关键是"
+  },
+  {
+   "text": "我们已经有了计划，关键是怎么执行。",
+   "en": "We already have a plan; the key is how to carry it out.",
+   "ko": "우리는 이미 계획이 있는데, 관건은 어떻게 실행하느냐야.",
+   "blank": "关键是"
+  },
+  {
+   "text": "关键是别着急，慢慢来就好。",
+   "en": "The key is not to rush; just take it slowly.",
+   "ko": "관건은 조급해하지 말고 천천히 하는 거야.",
+   "blank": "关键是"
+  }
+ ],
+ "e|凑合": [
+  {
+   "text": "这顿饭做得有点咸，不过还凑合。",
+   "en": "This meal is a bit salty, but it's still okay.",
+   "ko": "이 식사는 좀 짜지만 그래도 그럭저럭 괜찮아.",
+   "blank": "凑合"
+  },
+  {
+   "text": "你最近过得怎么样？还凑合吧。",
+   "en": "How have you been lately? Just so-so.",
+   "ko": "요즘 어떻게 지냈어? 그냥 그럭저럭이야.",
+   "blank": "凑合"
+  },
+  {
+   "text": "这把椅子虽然旧了点，坐着还凑合。",
+   "en": "This chair is a bit old, but it's still usable.",
+   "ko": "이 의자는 좀 오래됐지만 그래도 쓸 만해.",
+   "blank": "凑合"
+  }
+ ],
+ "e|哪里哪里": [
+  {
+   "text": "你说我做得好，哪里哪里，其实还有很多不足。",
+   "en": "You say I did well, but not really, I still have a lot to improve.",
+   "ko": "네가 내가 잘했다고 하지만, 어디 어디, 사실 아직 부족한 점이 많아.",
+   "blank": "哪里哪里"
+  },
+  {
+   "text": "哪里哪里，我只是尽力而为，没有你说的那么厉害。",
+   "en": "Not at all, I just tried my best, I'm not as amazing as you say.",
+   "ko": "아니야 아니야, 나는 그냥 최선을 다했을 뿐이야, 네가 말한 만큼 대단하지 않아.",
+   "blank": "哪里哪里"
+  },
+  {
+   "text": "谢谢夸奖，哪里哪里，其实大家都很努力。",
+   "en": "Thanks for the compliment, but not really, actually everyone worked hard.",
+   "ko": "칭찬해줘서 고마워, 별거 아니야, 사실 모두가 열심히 했어.",
+   "blank": "哪里哪里"
+  }
+ ],
+ "e|对了": [
+  {
+   "text": "对了，你明天有空吗？",
+   "en": "By the way, are you free tomorrow?",
+   "ko": "참, 너 내일 시간 있어?",
+   "blank": "对了"
+  },
+  {
+   "text": "对了，我还没告诉你新消息。",
+   "en": "Oh right, I haven’t told you the new news yet.",
+   "ko": "아 참, 너한테 새 소식 아직 안 말했어.",
+   "blank": "对了"
+  },
+  {
+   "text": "对了，你的伞还在我这里。",
+   "en": "Oh, your umbrella is still with me.",
+   "ko": "참, 네 우산 아직 내게 있어.",
+   "blank": "对了"
+  }
+ ],
+ "e|对不起": [
+  {
+   "text": "对不起，我不懂。",
+   "en": "Sorry, I don't understand.",
+   "ko": "미안해, 나 이해 못 해.",
+   "blank": "对不起"
+  },
+  {
+   "text": "对不起，可以再说一遍吗？",
+   "en": "Sorry, can you say it again?",
+   "ko": "미안한데, 다시 말해줄 수 있어?",
+   "blank": "对不起"
+  },
+  {
+   "text": "对不起，这是你的书吗？",
+   "en": "Sorry, is this your book?",
+   "ko": "미안해요, 이거 당신 책이에요?",
+   "blank": "对不起"
+  }
+ ],
+ "e|师傅": [
+  {
+   "text": "师傅，这个怎么用？",
+   "en": "Sir, how do I use this?",
+   "ko": "사부님, 이거 어떻게 사용해요?",
+   "blank": "师傅"
+  },
+  {
+   "text": "师傅，麻烦帮我一下。",
+   "en": "Sir, please help me.",
+   "ko": "사부님, 저 좀 도와주세요.",
+   "blank": "师傅"
+  },
+  {
+   "text": "师傅，到站了请提醒我。",
+   "en": "Sir, please remind me when we arrive.",
+   "ko": "사부님, 도착하면 알려주세요.",
+   "blank": "师傅"
+  }
+ ],
+ "e|开个玩笑": [
+  {
+   "text": "你刚才说的是真的吗，还是开个玩笑？",
+   "en": "Were you serious just now, or just joking?",
+   "ko": "너 아까 한 말 진짜야, 아니면 장난친 거야?",
+   "blank": "开个玩笑"
+  },
+  {
+   "text": "我没想到你会信，我只是想开个玩笑。",
+   "en": "I didn't expect you to believe it, I just wanted to make a joke.",
+   "ko": "네가 믿을 줄은 몰랐어, 그냥 장난치고 싶었을 뿐이야.",
+   "blank": "开个玩笑"
+  },
+  {
+   "text": "别生气，我只是跟你开个玩笑。",
+   "en": "Don't be mad, I was just joking with you.",
+   "ko": "화내지 마, 그냥 너랑 장난친 거야.",
+   "blank": "开个玩笑"
+  }
+ ],
+ "e|怎么走": [
+  {
+   "text": "请问，图书馆怎么走？",
+   "en": "Excuse me, how do I get to the library?",
+   "ko": "실례합니다, 도서관은 어떻게 가요?",
+   "blank": "怎么走"
+  },
+  {
+   "text": "地铁站怎么走？",
+   "en": "How do I get to the subway station?",
+   "ko": "지하철역은 어떻게 가요?",
+   "blank": "怎么走"
+  },
+  {
+   "text": "你好，医院怎么走？",
+   "en": "Hi, how do I get to the hospital?",
+   "ko": "안녕하세요, 병원은 어떻게 가요?",
+   "blank": "怎么走"
+  }
+ ],
+ "e|怎么办": [
+  {
+   "text": "我的手机坏了，怎么办？",
+   "en": "My phone is broken, what should I do?",
+   "ko": "내 핸드폰이 고장 났는데, 어떻게 해야 해?",
+   "blank": "怎么办"
+  },
+  {
+   "text": "下雨了，我们怎么办？",
+   "en": "It's raining, what should we do?",
+   "ko": "비가 오는데, 우리 어떻게 해야 해?",
+   "blank": "怎么办"
+  },
+  {
+   "text": "我忘带钥匙了，怎么办？",
+   "en": "I forgot to bring the key, what should I do?",
+   "ko": "열쇠를 안 가져왔는데, 어떻게 해야 해?",
+   "blank": "怎么办"
+  }
+ ],
+ "e|总的来说": [
+  {
+   "text": "总的来说，这次旅行很顺利。",
+   "en": "Overall, this trip went smoothly.",
+   "ko": "전반적으로 이번 여행은 순조로웠어.",
+   "blank": "总的来说"
+  },
+  {
+   "text": "总的来说，他的建议挺有用的。",
+   "en": "Overall, his advice was quite useful.",
+   "ko": "전반적으로 그의 조언은 꽤 유용했어.",
+   "blank": "总的来说"
+  },
+  {
+   "text": "总的来说，你对这个计划满意吗？",
+   "en": "Overall, are you satisfied with this plan?",
+   "ko": "전반적으로 이 계획에 만족해?",
+   "blank": "总的来说"
+  }
+ ],
+ "e|换句话说": [
+  {
+   "text": "他昨天没来，换句话说，他可能生病了。",
+   "en": "He didn't come yesterday; in other words, he might be sick.",
+   "ko": "그는 어제 오지 않았어, 다시 말하면 아플 수도 있다는 거야.",
+   "blank": "换句话说"
+  },
+  {
+   "text": "换句话说，我们得早点出发，不然会迟到。",
+   "en": "In other words, we need to leave earlier or we'll be late.",
+   "ko": "다시 말하면, 우리는 더 일찍 출발해야 해, 아니면 늦을 거야.",
+   "blank": "换句话说"
+  },
+  {
+   "text": "你不想吃辣的，换句话说，你要点别的菜吗？",
+   "en": "You don't want spicy food; in other words, do you want to order something else?",
+   "ko": "너는 매운 음식을 먹고 싶지 않다는 거네, 다시 말하면 다른 음식을 시킬 거야?",
+   "blank": "换句话说"
+  }
+ ],
+ "e|来不及了": [
+  {
+   "text": "快点走吧，来不及了。",
+   "en": "Hurry up, we are running out of time.",
+   "ko": "서둘러, 시간이 없어.",
+   "blank": "来不及了"
+  },
+  {
+   "text": "对不起，来不及了，下次吧。",
+   "en": "Sorry, it's too late, maybe next time.",
+   "ko": "미안해, 너무 늦었어, 다음에 하자.",
+   "blank": "来不及了"
+  },
+  {
+   "text": "别等了，来不及了。",
+   "en": "Don't wait, it's too late.",
+   "ko": "기다리지 마, 이미 늦었어.",
+   "blank": "来不及了"
+  }
+ ],
+ "e|没空": [
+  {
+   "text": "我今天没空。",
+   "en": "I don't have time today.",
+   "ko": "나 오늘 시간 없어.",
+   "blank": "没空"
+  },
+  {
+   "text": "你现在没空吗？",
+   "en": "Are you busy now?",
+   "ko": "너 지금 시간 없어?",
+   "blank": "没空"
+  },
+  {
+   "text": "他没空去吃饭。",
+   "en": "He doesn't have time to eat.",
+   "ko": "그는 밥 먹을 시간이 없어.",
+   "blank": "没空"
+  }
+ ],
+ "e|没想到": [
+  {
+   "text": "没想到你会来这里。",
+   "en": "I didn't expect you to come here.",
+   "ko": "네가 여기 올 줄은 몰랐어.",
+   "blank": "没想到"
+  },
+  {
+   "text": "天气这么快就变冷了，没想到。",
+   "en": "I didn't expect the weather to get cold so fast.",
+   "ko": "날씨가 이렇게 빨리 추워질 줄은 몰랐어.",
+   "blank": "没想到"
+  },
+  {
+   "text": "没想到这道题这么难。",
+   "en": "I didn't expect this question to be so hard.",
+   "ko": "이 문제가 이렇게 어려울 줄은 몰랐어.",
+   "blank": "没想到"
+  }
+ ],
+ "e|没什么大不了": [
+  {
+   "text": "你迟到了，没什么大不了，下次早点就好。",
+   "en": "You were late, it's not a big deal, just be earlier next time.",
+   "ko": "너 늦었지만, 별일 아니야. 다음엔 일찍 오면 돼.",
+   "blank": "没什么大不了"
+  },
+  {
+   "text": "别担心，这次没考好没什么大不了。",
+   "en": "Don't worry, not doing well on this test is not a big deal.",
+   "ko": "걱정 마, 이번 시험 잘 못 본 거 별일 아니야.",
+   "blank": "没什么大不了"
+  },
+  {
+   "text": "你把水洒了，没什么大不了，擦一擦就好了。",
+   "en": "You spilled the water, it's not a big deal, just wipe it up.",
+   "ko": "물 쏟았어도 별일 아니야, 닦으면 돼.",
+   "blank": "没什么大不了"
+  }
+ ],
+ "e|没关系": [
+  {
+   "text": "对不起，没关系。",
+   "en": "Sorry, it's okay.",
+   "ko": "미안해, 괜찮아.",
+   "blank": "没关系"
+  },
+  {
+   "text": "你迟到了吗？没关系。",
+   "en": "Are you late? It's okay.",
+   "ko": "너 늦었니? 괜찮아.",
+   "blank": "没关系"
+  },
+  {
+   "text": "我打破了杯子，没关系。",
+   "en": "I broke the cup, it's okay.",
+   "ko": "내가 컵을 깼어, 괜찮아.",
+   "blank": "没关系"
+  }
+ ],
+ "e|真的吗": [
+  {
+   "text": "你明天不用上班，真的吗？",
+   "en": "You don't have to work tomorrow, really?",
+   "ko": "너 내일 일 안 해도 돼, 진짜야?",
+   "blank": "真的吗"
+  },
+  {
+   "text": "他说他会唱歌，真的吗？",
+   "en": "He said he can sing, really?",
+   "ko": "그가 노래할 수 있다고 했어, 진짜야?",
+   "blank": "真的吗"
+  },
+  {
+   "text": "你会开车，真的吗？",
+   "en": "You can drive, really?",
+   "ko": "너 운전할 수 있어, 진짜야?",
+   "blank": "真的吗"
+  }
+ ],
+ "e|给个面子": [
+  {
+   "text": "你就给个面子，陪我去参加聚会吧。",
+   "en": "Just do me a favor and come with me to the party.",
+   "ko": "나 좀 봐서 파티에 같이 가줘.",
+   "blank": "给个面子"
+  },
+  {
+   "text": "别那么严肃，给个面子笑一下嘛。",
+   "en": "Don’t be so serious, just give me a smile.",
+   "ko": "그렇게 심각해하지 말고, 나 봐서 한번만 웃어줘.",
+   "blank": "给个面子"
+  },
+  {
+   "text": "给个面子，帮我说几句话好吗？",
+   "en": "Do me a favor and say a few words for me, okay?",
+   "ko": "나 좀 생각해서 내 대신 몇 마디만 해줄래?",
+   "blank": "给个面子"
+  }
+ ],
+ "e|见外了": [
+  {
+   "text": "你这么说就见外了，我们是好朋友啊。",
+   "en": "You’re being too polite by saying that, we’re good friends.",
+   "ko": "너 그렇게 말하면 너무 예의 차리는 거야, 우린 좋은 친구잖아.",
+   "blank": "见外了"
+  },
+  {
+   "text": "有事就直接说，别见外了。",
+   "en": "Just say what’s on your mind, don’t be so formal.",
+   "ko": "할 말 있으면 그냥 말해, 그렇게 예의 차릴 필요 없어.",
+   "blank": "见外了"
+  },
+  {
+   "text": "你帮我这么多次了，我怎么会见外了？",
+   "en": "You’ve helped me so many times, how could I be distant with you?",
+   "ko": "너가 나를 이렇게 여러 번 도와줬는데, 내가 어떻게 거리 둘 수 있겠어?",
+   "blank": "见外了"
+  }
+ ],
+ "e|认识你很高兴": [
+  {
+   "text": "你好，认识你很高兴。",
+   "en": "Hello, nice to meet you.",
+   "ko": "안녕하세요, 만나서 반가워요.",
+   "blank": "认识你很高兴"
+  },
+  {
+   "text": "我们是同学，认识你很高兴。",
+   "en": "We are classmates, nice to meet you.",
+   "ko": "우리는 같은 반이에요, 만나서 반가워요.",
+   "blank": "认识你很高兴"
+  },
+  {
+   "text": "认识你很高兴，我叫小明。",
+   "en": "Nice to meet you, my name is Xiaoming.",
+   "ko": "만나서 반가워요, 제 이름은 샤오밍이에요.",
+   "blank": "认识你很高兴"
+  }
+ ],
+ "e|话虽如此": [
+  {
+   "text": "话虽如此，我还是决定试试看。",
+   "en": "That being said, I still decided to give it a try.",
+   "ko": "그렇긴 하지만, 나는 그래도 한번 해보기로 했어.",
+   "blank": "话虽如此"
+  },
+  {
+   "text": "话虽如此，你要不要再考虑一下？",
+   "en": "Even so, do you want to think about it again?",
+   "ko": "그렇긴 해도, 다시 한번 생각해볼래?",
+   "blank": "话虽如此"
+  },
+  {
+   "text": "话虽如此，现在下雨我们还是得等一会儿。",
+   "en": "Even so, since it's raining now, we still have to wait a bit.",
+   "ko": "그렇긴 해도, 지금 비가 오니까 우리 잠깐 더 기다려야 해.",
+   "blank": "话虽如此"
+  }
+ ],
+ "e|说到底": [
+  {
+   "text": "说到底，我们还是需要更多的时间来准备。",
+   "en": "At the end of the day, we still need more time to prepare.",
+   "ko": "결국 우리는 더 많은 준비 시간이 필요해.",
+   "blank": "说到底"
+  },
+  {
+   "text": "说到底，这只是个小误会，没必要太紧张。",
+   "en": "When it comes down to it, this is just a small misunderstanding, no need to be too nervous.",
+   "ko": "결국 이건 작은 오해일 뿐이니까 너무 긴장할 필요 없어.",
+   "blank": "说到底"
+  },
+  {
+   "text": "说到底，你最想做的事情是什么？",
+   "en": "When all is said and done, what do you want to do most?",
+   "ko": "결국 네가 가장 하고 싶은 일은 뭐야?",
+   "blank": "说到底"
+  }
+ ],
+ "e|说白了": [
+  {
+   "text": "说白了，就是你不想去而已。",
+   "en": "To put it simply, you just don't want to go.",
+   "ko": "솔직히 말해서, 너는 그냥 가기 싫은 거야.",
+   "blank": "说白了"
+  },
+  {
+   "text": "说白了，这个计划没什么新意。",
+   "en": "Honestly, this plan isn't anything new.",
+   "ko": "솔직히, 이 계획은 새로울 게 없어.",
+   "blank": "说白了"
+  },
+  {
+   "text": "说白了，他就是想借钱。",
+   "en": "Basically, he just wants to borrow money.",
+   "ko": "간단히 말해서, 그는 그냥 돈을 빌리고 싶은 거야.",
+   "blank": "说白了"
+  }
+ ],
+ "e|说实话": [
+  {
+   "text": "说实话，我有点紧张。",
+   "en": "To be honest, I'm a bit nervous.",
+   "ko": "솔직히 말해서, 나는 좀 긴장돼.",
+   "blank": "说实话"
+  },
+  {
+   "text": "说实话，这道菜不太合我口味。",
+   "en": "To be honest, this dish is not really to my taste.",
+   "ko": "솔직히 말해서, 이 음식은 내 입맛에 잘 맞지 않아.",
+   "blank": "说实话"
+  },
+  {
+   "text": "说实话，你觉得今天的天气怎么样？",
+   "en": "To be honest, what do you think of today's weather?",
+   "ko": "솔직히 말해서, 오늘 날씨가 어때 보여?",
+   "blank": "说实话"
+  }
+ ],
+ "e|请再说一遍": [
+  {
+   "text": "对不起，请再说一遍。",
+   "en": "Sorry, please say it again.",
+   "ko": "죄송해요, 다시 한 번 말해 주세요.",
+   "blank": "请再说一遍"
+  },
+  {
+   "text": "你刚才说什么？请再说一遍。",
+   "en": "What did you just say? Please say it again.",
+   "ko": "방금 뭐라고 했어요? 다시 한 번 말해 주세요.",
+   "blank": "请再说一遍"
+  },
+  {
+   "text": "我没有听清楚，请再说一遍。",
+   "en": "I didn't hear clearly, please say it again.",
+   "ko": "잘 못 들었어요, 다시 한 번 말해 주세요.",
+   "blank": "请再说一遍"
+  }
+ ],
+ "e|请问": [
+  {
+   "text": "请问，厕所在哪里？",
+   "en": "Excuse me, where is the bathroom?",
+   "ko": "실례지만 화장실이 어디에요?",
+   "blank": "请问"
+  },
+  {
+   "text": "请问，这是谁的书？",
+   "en": "Excuse me, whose book is this?",
+   "ko": "실례하지만 이거 누구 책이에요?",
+   "blank": "请问"
+  },
+  {
+   "text": "请问，你叫什么名字？",
+   "en": "Excuse me, what is your name?",
+   "ko": "실례하지만 이름이 뭐예요?",
+   "blank": "请问"
+  }
+ ],
+ "e|谢谢": [
+  {
+   "text": "你帮我了，谢谢。",
+   "en": "You helped me, thank you.",
+   "ko": "너가 나를 도와줬어, 고마워.",
+   "blank": "谢谢"
+  },
+  {
+   "text": "谢谢，我吃饱了。",
+   "en": "Thank you, I am full.",
+   "ko": "고마워, 나 배불러.",
+   "blank": "谢谢"
+  },
+  {
+   "text": "谢谢，你的水很凉。",
+   "en": "Thank you, your water is very cold.",
+   "ko": "고마워, 네 물이 정말 차가워.",
+   "blank": "谢谢"
+  }
+ ],
+ "e|还行": [
+  {
+   "text": "这个菜还行。",
+   "en": "This dish is okay.",
+   "ko": "이 음식은 괜찮아.",
+   "blank": "还行"
+  },
+  {
+   "text": "你今天感觉还行吗？",
+   "en": "Do you feel okay today?",
+   "ko": "오늘 기분 괜찮아?",
+   "blank": "还行"
+  },
+  {
+   "text": "天气还行，不冷也不热。",
+   "en": "The weather is okay, not cold or hot.",
+   "ko": "날씨가 괜찮아, 춥지도 덥지도 않아.",
+   "blank": "还行"
+  }
+ ],
+ "e|这倒是": [
+  {
+   "text": "这倒是个不错的主意，我们可以试试看。",
+   "en": "That's actually a good idea, we could give it a try.",
+   "ko": "이것도 나쁘지 않은 생각이네, 한번 해볼 수 있겠어.",
+   "blank": "这倒是"
+  },
+  {
+   "text": "天气很冷，但这倒是让我更想喝热巧克力了。",
+   "en": "The weather is really cold, but that actually makes me want hot chocolate more.",
+   "ko": "날씨가 정말 춥지만, 이것도 내가 더 핫초콜릿을 마시고 싶게 해.",
+   "blank": "这倒是"
+  },
+  {
+   "text": "你说的不完全对，不过这倒是有道理的。",
+   "en": "What you said isn't completely correct, but there is some sense in it.",
+   "ko": "네가 한 말이 완전히 맞지는 않지만, 이것도 일리가 있어.",
+   "blank": "这倒是"
+  }
+ ],
+ "e|这不合理": [
+  {
+   "text": "你说要我一天完成三个报告，这不合理。",
+   "en": "You said I have to finish three reports in one day, this is not reasonable.",
+   "ko": "네가 하루 만에 보고서 세 개를 끝내라고 했는데, 이건 말이 안 돼.",
+   "blank": "这不合理"
+  },
+  {
+   "text": "他们要我晚上十点还加班，这不合理。",
+   "en": "They want me to work overtime at ten at night, this is not reasonable.",
+   "ko": "그들이 밤 열 시에도 야근하라고 하는데, 이건 말이 안 돼.",
+   "blank": "这不合理"
+  },
+  {
+   "text": "你把所有责任都推给我，这不合理。",
+   "en": "You put all the responsibility on me, this is not reasonable.",
+   "ko": "너가 모든 책임을 내게 다 떠넘기는 건 말이 안 돼.",
+   "blank": "这不合理"
+  }
+ ],
+ "e|这事儿不好办": [
+  {
+   "text": "这事儿不好办，我们还是再想想别的办法吧。",
+   "en": "This is hard to handle, let's think of another way.",
+   "ko": "이 일은 처리하기 힘드니까, 다른 방법을 생각해보자.",
+   "blank": "这事儿不好办"
+  },
+  {
+   "text": "你也觉得这事儿不好办吗？",
+   "en": "Do you also think this is hard to handle?",
+   "ko": "너도 이 일이 처리하기 어렵다고 생각해?",
+   "blank": "这事儿不好办"
+  },
+  {
+   "text": "虽然这事儿不好办，但我们不能放弃。",
+   "en": "Although this is hard to handle, we can't give up.",
+   "ko": "이 일이 힘들더라도 포기할 수 없어.",
+   "blank": "这事儿不好办"
+  }
+ ],
+ "e|问题在于": [
+  {
+   "text": "问题在于我们没有足够的时间准备。",
+   "en": "The problem is that we don't have enough time to prepare.",
+   "ko": "문제는 우리가 준비할 시간이 충분하지 않다는 거야.",
+   "blank": "问题在于"
+  },
+  {
+   "text": "问题在于他还没决定要不要来。",
+   "en": "The problem is that he hasn't decided whether to come or not.",
+   "ko": "문제는 그가 올지 말지 아직 결정하지 않았다는 거야.",
+   "blank": "问题在于"
+  },
+  {
+   "text": "问题在于这里太吵了，我听不清你说什么。",
+   "en": "The problem is that it's too noisy here, I can't hear what you're saying.",
+   "ko": "문제는 여기가 너무 시끄러워서 네 말을 잘 못 듣겠다는 거야.",
+   "blank": "问题在于"
+  }
+ ],
+ "e|随便": [
+  {
+   "text": "你想吃什么？随便。",
+   "en": "What do you want to eat? Anything is fine.",
+   "ko": "뭐 먹고 싶어? 아무거나 괜찮아.",
+   "blank": "随便"
+  },
+  {
+   "text": "你穿什么衣服都随便。",
+   "en": "Wear whatever clothes you want, it’s up to you.",
+   "ko": "무슨 옷 입든 괜찮아.",
+   "blank": "随便"
+  },
+  {
+   "text": "我们几点见面？随便。",
+   "en": "What time shall we meet? Anytime is fine.",
+   "ko": "몇 시에 만날까? 아무 때나 괜찮아.",
+   "blank": "随便"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "他是学生。",
+   "en": "He is a student.",
+   "ko": "그는 학생입니다.",
+   "blank": "是"
+  },
+  {
+   "text": "这是什么？",
+   "en": "What is this?",
+   "ko": "이것은 무엇입니까?",
+   "blank": "是什么"
+  },
+  {
+   "text": "这是我的书。",
+   "en": "This is my book.",
+   "ko": "이것은 내 책이야.",
+   "blank": "是"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "你有猫吗？",
+   "en": "Do you have a cat?",
+   "ko": "고양이 있어요?",
+   "blank": "吗"
+  },
+  {
+   "text": "这儿有水吗？",
+   "en": "Is there water here?",
+   "ko": "여기에 물 있어요?",
+   "blank": "吗"
+  },
+  {
+   "text": "你会游泳吗？",
+   "en": "Can you swim?",
+   "ko": "수영할 수 있어요?",
+   "blank": "吗"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "我不喝茶。",
+   "en": "I don't drink tea.",
+   "ko": "나는 차를 마시지 않아.",
+   "blank": "不"
+  },
+  {
+   "text": "他不在家。",
+   "en": "He is not at home.",
+   "ko": "그는 집에 없어.",
+   "blank": "不"
+  },
+  {
+   "text": "你不冷吗？",
+   "en": "Aren't you cold?",
+   "ko": "너 안 춥니?",
+   "blank": "不"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "你在哪儿？",
+   "en": "Where are you?",
+   "ko": "너 어디에 있어?",
+   "blank": "在哪儿"
+  },
+  {
+   "text": "书包在哪儿？",
+   "en": "Where is the backpack?",
+   "ko": "가방이 어디에 있어요?",
+   "blank": "在哪儿？"
+  },
+  {
+   "text": "厕所在哪儿？",
+   "en": "Where is the bathroom?",
+   "ko": "화장실이 어디에 있어요?",
+   "blank": "在哪儿"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "那是什么？",
+   "en": "What is that?",
+   "ko": "저건 뭐예요?",
+   "blank": "那"
+  },
+  {
+   "text": "这个很大。",
+   "en": "This is very big.",
+   "ko": "이것은 아주 커요.",
+   "blank": "这个"
+  },
+  {
+   "text": "那是你的。",
+   "en": "That is yours.",
+   "ko": "저건 네 거야.",
+   "blank": "那"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "我没有水。",
+   "en": "I don’t have water.",
+   "ko": "나는 물이 없어.",
+   "blank": "没有"
+  },
+  {
+   "text": "这儿有厕所吗？",
+   "en": "Is there a bathroom here?",
+   "ko": "여기에 화장실이 있나요?",
+   "blank": "有"
+  },
+  {
+   "text": "他没有书。",
+   "en": "He doesn’t have a book.",
+   "ko": "그는 책이 없어.",
+   "blank": "没有"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "这本书很新。",
+   "en": "This book is very new.",
+   "ko": "이 책은 아주 새로워요.",
+   "blank": "很新。"
+  },
+  {
+   "text": "你的猫很可爱。",
+   "en": "Your cat is very cute.",
+   "ko": "네 고양이는 정말 귀여워요.",
+   "blank": "很可爱。"
+  },
+  {
+   "text": "这个房间很大。",
+   "en": "This room is very big.",
+   "ko": "이 방은 아주 커요.",
+   "blank": "很大。"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "我吃了早饭。",
+   "en": "I ate breakfast.",
+   "ko": "나는 아침을 먹었어.",
+   "blank": "了"
+  },
+  {
+   "text": "他买了新鞋。",
+   "en": "He bought new shoes.",
+   "ko": "그는 새 신발을 샀어.",
+   "blank": "了"
+  },
+  {
+   "text": "你写完了作业吗？",
+   "en": "Did you finish your homework?",
+   "ko": "너 숙제 다 했니?",
+   "blank": "了"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "我想喝水。",
+   "en": "I want to drink water.",
+   "ko": "나는 물을 마시고 싶어.",
+   "blank": "想"
+  },
+  {
+   "text": "你要买什么？",
+   "en": "What do you want to buy?",
+   "ko": "너는 무엇을 사고 싶어?",
+   "blank": "要"
+  },
+  {
+   "text": "她想学习中文。",
+   "en": "She wants to study Chinese.",
+   "ko": "그녀는 중국어를 공부하고 싶어.",
+   "blank": "想"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "我早上喝茶。",
+   "en": "I drink tea in the morning.",
+   "ko": "나는 아침에 차를 마셔.",
+   "blank": "早上"
+  },
+  {
+   "text": "他昨天买菜了。",
+   "en": "He bought groceries yesterday.",
+   "ko": "그는 어제 장을 봤어.",
+   "blank": "昨天"
+  },
+  {
+   "text": "我们周末去公园。",
+   "en": "We go to the park on weekends.",
+   "ko": "우리는 주말에 공원에 가.",
+   "blank": "周末"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "我在家做饭。",
+   "en": "I cook at home.",
+   "ko": "나는 집에서 요리해.",
+   "blank": "在家"
+  },
+  {
+   "text": "她在学校写作业。",
+   "en": "She does homework at school.",
+   "ko": "그녀는 학교에서 숙제를 해.",
+   "blank": "在学校"
+  },
+  {
+   "text": "你在图书馆看书。",
+   "en": "You read books in the library.",
+   "ko": "너는 도서관에서 책을 읽어.",
+   "blank": "在图书馆"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "你能帮我吗？",
+   "en": "Can you help me?",
+   "ko": "저 좀 도와줄 수 있어요?",
+   "blank": "能"
+  },
+  {
+   "text": "可以开窗户吗？",
+   "en": "May I open the window?",
+   "ko": "창문 열어도 될까요?",
+   "blank": "可以"
+  },
+  {
+   "text": "我能坐这里吗？",
+   "en": "May I sit here?",
+   "ko": "여기 앉아도 될까요?",
+   "blank": "能"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "你喜欢苹果还是香蕉？",
+   "en": "Do you like apples or bananas?",
+   "ko": "너는 사과를 좋아해, 아니면 바나나를 좋아해?",
+   "blank": "还是"
+  },
+  {
+   "text": "我们现在走还是等一下？",
+   "en": "Shall we go now or wait a bit?",
+   "ko": "지금 갈까, 아니면 좀 기다릴까?",
+   "blank": "还是"
+  },
+  {
+   "text": "你要红色还是蓝色？",
+   "en": "Do you want red or blue?",
+   "ko": "빨간색 원해, 아니면 파란색 원해?",
+   "blank": "还是"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "我坐公交车去。",
+   "en": "I take the bus there.",
+   "ko": "나는 버스를 타고 간다.",
+   "blank": "坐公交车"
+  },
+  {
+   "text": "你打车回家吗？",
+   "en": "Are you taking a taxi home?",
+   "ko": "택시 타고 집에 가니?",
+   "blank": "打车"
+  },
+  {
+   "text": "我们坐船去看风景吧。",
+   "en": "Let's take a boat to see the scenery.",
+   "ko": "우리 배 타고 경치 보러 가자.",
+   "blank": "坐船"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "你看过这部电影吗？",
+   "en": "Have you seen this movie?",
+   "ko": "이 영화를 본 적 있어요?",
+   "blank": "过"
+  },
+  {
+   "text": "我吃过北京烤鸭。",
+   "en": "I have eaten Peking duck.",
+   "ko": "나는 베이징 오리구이를 먹어 본 적 있어요.",
+   "blank": "过"
+  },
+  {
+   "text": "他来过我们家。",
+   "en": "He has been to our home.",
+   "ko": "그는 우리 집에 와 본 적 있어요.",
+   "blank": "过"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "这家咖啡比那家香。",
+   "en": "This coffee shop smells better than that one.",
+   "ko": "이 카페가 저 카페보다 더 향이 좋아요.",
+   "blank": "比那家"
+  },
+  {
+   "text": "今天没有昨天那么冷。",
+   "en": "Today is not as cold as yesterday.",
+   "ko": "오늘은 어제만큼 춥지 않아요.",
+   "blank": "没有昨天那么"
+  },
+  {
+   "text": "我的包没有你的那么大。",
+   "en": "My bag is not as big as yours.",
+   "ko": "내 가방은 네 것만큼 크지 않아요.",
+   "blank": "没有你的那么"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "你听懂老师的话了吗？",
+   "en": "Did you understand what the teacher said?",
+   "ko": "선생님이 하신 말씀을 이해했어요?",
+   "blank": "听懂"
+  },
+  {
+   "text": "我还没吃完午饭。",
+   "en": "I haven’t finished my lunch yet.",
+   "ko": "아직 점심을 다 못 먹었어요.",
+   "blank": "吃完"
+  },
+  {
+   "text": "他已经做完作业了。",
+   "en": "He has already finished his homework.",
+   "ko": "그는 이미 숙제를 다 했어요.",
+   "blank": "做完"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "你跑得很快。",
+   "en": "You run very fast.",
+   "ko": "너 정말 빨리 달린다.",
+   "blank": "得很快"
+  },
+  {
+   "text": "他笑得很开心。",
+   "en": "He laughs very happily.",
+   "ko": "그는 아주 즐겁게 웃는다.",
+   "blank": "得很开心"
+  },
+  {
+   "text": "你唱得不错。",
+   "en": "You sing pretty well.",
+   "ko": "너 노래 잘 부른다.",
+   "blank": "得不错"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "我正在做饭呢。",
+   "en": "I am cooking right now.",
+   "ko": "나 지금 요리하고 있어.",
+   "blank": "正在做饭呢"
+  },
+  {
+   "text": "他正在写作业呢。",
+   "en": "He is doing homework now.",
+   "ko": "그는 지금 숙제를 하고 있어.",
+   "blank": "正在写作业呢"
+  },
+  {
+   "text": "我们正在等车呢。",
+   "en": "We are waiting for the bus now.",
+   "ko": "우리는 지금 버스 기다리고 있어.",
+   "blank": "正在等车呢"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "因为天气冷，所以我要穿外套。",
+   "en": "Because the weather is cold, I need to wear a coat.",
+   "ko": "날씨가 추워서 외투를 입어야 해요.",
+   "blank": "因为天气冷，"
+  },
+  {
+   "text": "因为我饿了，所以想吃饭。",
+   "en": "Because I am hungry, I want to eat.",
+   "ko": "배가 고파서 밥을 먹고 싶어요.",
+   "blank": "因为我饿了，"
+  },
+  {
+   "text": "因为他生病了，所以没来上班。",
+   "en": "Because he is sick, he didn't come to work.",
+   "ko": "그가 아파서 출근하지 않았어요.",
+   "blank": "因为他生病了，"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "你能把灯关掉吗？",
+   "en": "Can you turn off the light?",
+   "ko": "불을 꺼 줄 수 있어요?",
+   "blank": "把灯关掉"
+  },
+  {
+   "text": "我把书放在桌子上了。",
+   "en": "I put the book on the table.",
+   "ko": "나는 책을 책상 위에 놓았어요.",
+   "blank": "把书放在桌子上了。"
+  },
+  {
+   "text": "请把门打开。",
+   "en": "Please open the door.",
+   "ko": "문을 열어 주세요.",
+   "blank": "把门"
+  }
+ ],
+ "g|3:7": [
+  {
+   "text": "你说的话我听不清。",
+   "en": "I can't hear clearly what you're saying.",
+   "ko": "네가 말하는 걸 잘 못 듣겠어.",
+   "blank": "听不清"
+  },
+  {
+   "text": "现在去机场还来得及吗？",
+   "en": "Is it still possible to make it to the airport now?",
+   "ko": "지금 공항에 가면 아직 늦지 않았을까?",
+   "blank": "还来得及吗"
+  },
+  {
+   "text": "电话里他的话我听不清。",
+   "en": "I can't hear him clearly on the phone.",
+   "ko": "전화로는 그의 말을 잘 못 듣겠어.",
+   "blank": "听不清"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "虽然外面下雨了，但是我还是决定去跑步。",
+   "en": "Although it's raining outside, I still decided to go for a run.",
+   "ko": "비가 오고 있지만 나는 그래도 달리기를 하기로 했어.",
+   "blank": "虽然外面下雨了"
+  },
+  {
+   "text": "虽然今天很累，但是我还是要完成作业。",
+   "en": "Although I'm very tired today, I still have to finish my homework.",
+   "ko": "오늘은 많이 피곤하지만 그래도 숙제를 해야 해.",
+   "blank": "虽然今天很累"
+  },
+  {
+   "text": "虽然早餐没吃，但是我现在不饿。",
+   "en": "Although I didn't eat breakfast, I'm not hungry now.",
+   "ko": "아침을 안 먹었지만 지금은 배고프지 않아.",
+   "blank": "虽然早餐没吃"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "这家餐厅不但环境好，而且菜也很美味。",
+   "en": "This restaurant not only has a nice environment but also delicious food.",
+   "ko": "이 식당은 분위기뿐만 아니라 음식도 맛있어요.",
+   "blank": "不但"
+  },
+  {
+   "text": "小李不但会说英语，而且会说法语。",
+   "en": "Xiao Li not only speaks English but also speaks French.",
+   "ko": "샤오리는 영어뿐만 아니라 프랑스어도 할 수 있어요.",
+   "blank": "不但"
+  },
+  {
+   "text": "这本书不但有趣，而且内容丰富。",
+   "en": "This book is not only interesting but also informative.",
+   "ko": "이 책은 재미있을 뿐만 아니라 내용도 풍부해요.",
+   "blank": "不但"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "我的自行车被人偷了。",
+   "en": "My bicycle was stolen by someone.",
+   "ko": "내 자전거가 누군가에게 도난당했어.",
+   "blank": "被人"
+  },
+  {
+   "text": "他的手机被水弄坏了。",
+   "en": "His phone was damaged by water.",
+   "ko": "그의 핸드폰이 물에 의해 고장났어.",
+   "blank": "被水"
+  },
+  {
+   "text": "我们的计划被临时改变了。",
+   "en": "Our plan was changed at the last minute.",
+   "ko": "우리 계획이 갑자기 바뀌었어.",
+   "blank": "被临时"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "只要你认真听讲，就能理解这个问题。",
+   "en": "As long as you listen carefully, you can understand this problem.",
+   "ko": "네가 열심히 수업을 들으면 이 문제를 이해할 수 있어.",
+   "blank": "只要"
+  },
+  {
+   "text": "只有下雨，我们才会取消活动。",
+   "en": "Only if it rains will we cancel the activity.",
+   "ko": "비가 와야만 우리는 행사를 취소할 거야.",
+   "blank": "只有"
+  },
+  {
+   "text": "只要早点出门，就不会迟到。",
+   "en": "As long as you leave early, you won’t be late.",
+   "ko": "일찍 출발하면 늦지 않을 거야.",
+   "blank": "只要"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "难道你没听见我刚才叫你吗？",
+   "en": "Didn't you hear me calling you just now?",
+   "ko": "아까 내가 부른 거 못 들었니?",
+   "blank": "难道你没"
+  },
+  {
+   "text": "难道你没注意到天气变冷了吗？",
+   "en": "Didn't you notice the weather getting colder?",
+   "ko": "날씨가 추워진 거 못 느꼈니?",
+   "blank": "难道你没"
+  },
+  {
+   "text": "难道你没带钥匙出来吗？",
+   "en": "Didn't you bring the keys with you?",
+   "ko": "열쇠 안 가지고 나왔니?",
+   "blank": "难道你没"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "这个故事太无聊了，我听不下去了。",
+   "en": "This story is so boring, I can't keep listening.",
+   "ko": "이 이야기는 너무 지루해서 더 이상 들을 수 없어.",
+   "blank": "听不下去了"
+  },
+  {
+   "text": "你刚才说到哪儿了？继续说下去吧。",
+   "en": "Where did you leave off just now? Go on talking.",
+   "ko": "아까 어디까지 말했지? 계속 말해봐.",
+   "blank": "说下去"
+  },
+  {
+   "text": "我突然想起来，今天是妈妈的生日。",
+   "en": "I suddenly remembered, today is Mom's birthday.",
+   "ko": "갑자기 생각났어, 오늘은 엄마 생일이야.",
+   "blank": "想起来"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "既然今天下雨，就在家休息吧。",
+   "en": "Since it's raining today, then let's rest at home.",
+   "ko": "오늘 비가 오니까 집에서 쉬자.",
+   "blank": "既然今天下雨"
+  },
+  {
+   "text": "既然你喜欢，就多吃一点。",
+   "en": "Since you like it, then eat a bit more.",
+   "ko": "네가 좋아하니까 좀 더 먹어.",
+   "blank": "既然你喜欢"
+  },
+  {
+   "text": "既然大家都同意了，就开始吧。",
+   "en": "Since everyone agrees, then let's start.",
+   "ko": "모두 동의했으니 시작하자.",
+   "blank": "既然大家都同意了"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "鉴于天气预报说会下雨，我们还是改天去吧。",
+   "en": "Given the weather forecast says it will rain, let's go another day.",
+   "ko": "일기예보에 비가 온다고 하니까, 우리 다른 날에 가자.",
+   "blank": "鉴于"
+  },
+  {
+   "text": "请提前告知人数，以便我们准备足够的座位。",
+   "en": "Please inform us of the number of people in advance so we can prepare enough seats.",
+   "ko": "몇 명인지 미리 알려주시면 자리를 충분히 준비할 수 있습니다.",
+   "blank": "以便"
+  },
+  {
+   "text": "大家努力提高服务质量，从而赢得更多客户的信任。",
+   "en": "Everyone works hard to improve service quality, thus gaining more customers' trust.",
+   "ko": "모두가 서비스 품질을 높이려고 노력해서 더 많은 고객의 신뢰를 얻는다.",
+   "blank": "从而"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "即使下雨，我们也要去爬山。",
+   "en": "Even if it rains, we will still go hiking.",
+   "ko": "비가 와도 우리는 등산하러 갈 거야.",
+   "blank": "即使"
+  },
+  {
+   "text": "哪怕很累，他也坚持每天跑步。",
+   "en": "Even if he is very tired, he still insists on running every day.",
+   "ko": "아무리 피곤해도 그는 매일 달리기를 고집해.",
+   "blank": "哪怕"
+  },
+  {
+   "text": "即使没人支持你，你也不能放弃。",
+   "en": "Even if no one supports you, you still can't give up.",
+   "ko": "아무도 널 응원하지 않아도 절대 포기하면 안 돼.",
+   "blank": "即使"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "连小孩子都能做这个游戏。",
+   "en": "Even little kids can play this game.",
+   "ko": "어린아이조차도 이 게임을 할 수 있어요.",
+   "blank": "连小孩子都"
+  },
+  {
+   "text": "连最安静的人都生气了。",
+   "en": "Even the quietest person got angry.",
+   "ko": "가장 조용한 사람조차도 화가 났어요.",
+   "blank": "连最安静的人都"
+  },
+  {
+   "text": "连雨天都有人去跑步。",
+   "en": "Even on rainy days, there are people who go jogging.",
+   "ko": "비 오는 날에도 조깅하러 가는 사람이 있어.",
+   "blank": "连雨天都"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "这么晚还没回家，家里人恐怕会担心吧。",
+   "en": "It's so late and you're not home yet, your family might be worried.",
+   "ko": "이렇게 늦게까지 집에 안 들어가면 가족들이 걱정할 것 같아.",
+   "blank": "恐怕"
+  },
+  {
+   "text": "你不妨试试看新的做法，也许会有不同的结果。",
+   "en": "You might as well try a new way, maybe you'll get a different result.",
+   "ko": "새로운 방법을 한번 시도해보는 것도 괜찮을 거야, 아마 다른 결과가 나올 수도 있어.",
+   "blank": "不妨"
+  },
+  {
+   "text": "有些困难未必不能解决，只是需要时间。",
+   "en": "Some difficulties are not necessarily unsolvable, they just need time.",
+   "ko": "어떤 어려움은 반드시 해결 못 하는 건 아니고, 시간이 필요할 뿐이야.",
+   "blank": "未必"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "他的工作态度一丝不苟。",
+   "en": "His work attitude is meticulous.",
+   "ko": "그의 업무 태도는 빈틈없어.",
+   "blank": "一丝不苟"
+  },
+  {
+   "text": "你考试能取得好成绩，真是实至名归。",
+   "en": "You got good grades in the exam, truly well-deserved.",
+   "ko": "시험에서 좋은 성적을 받은 건 정말 당연해.",
+   "blank": "实至名归"
+  },
+  {
+   "text": "她面对困难总是泰然自若。",
+   "en": "She always stays calm in the face of difficulties.",
+   "ko": "그녀는 어려움 앞에서도 항상 침착하다.",
+   "blank": "泰然自若"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "我帮你问问好了。",
+   "en": "Let me ask around for you.",
+   "ko": "내가 대신 물어볼게.",
+   "blank": "问问"
+  },
+  {
+   "text": "你先试试看，没问题再告诉我。",
+   "en": "Try it out first, and let me know if there are no problems.",
+   "ko": "먼저 시도해보고 문제 없으면 나한테 알려줘.",
+   "blank": "试试看"
+  },
+  {
+   "text": "你先想想，想好了再告诉我。",
+   "en": "Think about it first, and tell me when you’re ready.",
+   "ko": "먼저 생각해보고, 준비되면 말해줘.",
+   "blank": "想想"
+  }
+ ]
+}

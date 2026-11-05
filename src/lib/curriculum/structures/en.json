@@ -1,0 +1,1671 @@
+{
+ "1": [
+  {
+   "id": "en-1-01",
+   "stage": 1,
+   "pattern": "My name is ___.",
+   "meaningKo": "자기 이름 말하기",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "My name is Anna.",
+     "ko": "내 이름은 안나야.",
+     "en": "My name is Anna."
+    },
+    {
+     "text": "My name is David.",
+     "ko": "내 이름은 데이비드야.",
+     "en": "My name is David."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "be동사",
+     "noteKo": "___ 자리에 이름이 온다.",
+     "nameEn": "be verb",
+     "noteEn": "The blank is for your name."
+    }
+   ],
+   "related": [
+    "I'm ___."
+   ],
+   "quiz": {
+    "prompt": "My name is ___.",
+    "answer": "Anna"
+   }
+  },
+  {
+   "id": "en-1-02",
+   "stage": 1,
+   "pattern": "I'm from ___.",
+   "meaningKo": "출신지 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "I'm from Korea.",
+     "ko": "나는 한국에서 왔어.",
+     "en": "I'm from Korea."
+    },
+    {
+     "text": "I'm from Canada.",
+     "ko": "나는 캐나다에서 왔어.",
+     "en": "I'm from Canada."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "be동사",
+     "noteKo": "___ 자리에 나라, 도시 등이 온다.",
+     "nameEn": "be verb",
+     "noteEn": "The blank is for a country or city."
+    }
+   ],
+   "related": [
+    "I live in ___."
+   ],
+   "quiz": {
+    "prompt": "I'm from ___.",
+    "answer": "Korea"
+   }
+  },
+  {
+   "id": "en-1-03",
+   "stage": 1,
+   "pattern": "I'm a ___.",
+   "meaningKo": "직업 말하기",
+   "meaningEn": "Saying your job",
+   "examples": [
+    {
+     "text": "I'm a student.",
+     "ko": "나는 학생이야.",
+     "en": "I'm a student."
+    },
+    {
+     "text": "I'm a teacher.",
+     "ko": "나는 선생님이야.",
+     "en": "I'm a teacher."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "be동사",
+     "noteKo": "___ 자리에 직업이 온다.",
+     "nameEn": "be verb",
+     "noteEn": "The blank is for a job."
+    }
+   ],
+   "related": [
+    "I work at ___."
+   ],
+   "quiz": {
+    "prompt": "I'm a ___.",
+    "answer": "student"
+   }
+  },
+  {
+   "id": "en-1-04",
+   "stage": 1,
+   "pattern": "How much is ___?",
+   "meaningKo": "가격 묻기",
+   "meaningEn": "Asking the price",
+   "examples": [
+    {
+     "text": "How much is this?",
+     "ko": "이거 얼마에요?",
+     "en": "How much is this?"
+    },
+    {
+     "text": "How much is the apple?",
+     "ko": "이 사과 얼마에요?",
+     "en": "How much is the apple?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___ 자리에 상품이 온다.",
+     "nameEn": "Question",
+     "noteEn": "The blank is for the item."
+    }
+   ],
+   "related": [
+    "I want ___."
+   ],
+   "quiz": {
+    "prompt": "How much is ___?",
+    "answer": "this"
+   }
+  },
+  {
+   "id": "en-1-05",
+   "stage": 1,
+   "pattern": "I want ___.",
+   "meaningKo": "원하는 물건 말하기",
+   "meaningEn": "Saying what you want to buy",
+   "examples": [
+    {
+     "text": "I want the red one.",
+     "ko": "빨간색을 원해요.",
+     "en": "I want the red one."
+    },
+    {
+     "text": "I want that bag.",
+     "ko": "저 가방을 원해요.",
+     "en": "I want that bag."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "목적어",
+     "noteKo": "___ 자리에 원하는 것이 온다.",
+     "nameEn": "Object",
+     "noteEn": "The blank is for the thing you want."
+    }
+   ],
+   "related": [
+    "Can I have ___?"
+   ],
+   "quiz": {
+    "prompt": "I want ___.",
+    "answer": "the red one"
+   }
+  },
+  {
+   "id": "en-1-06",
+   "stage": 1,
+   "pattern": "Where is ___?",
+   "meaningKo": "장소 위치 물어보기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "Where is the restroom?",
+     "ko": "화장실이 어디에요?",
+     "en": "Where is the restroom?"
+    },
+    {
+     "text": "Where is the bank?",
+     "ko": "은행이 어디에요?",
+     "en": "Where is the bank?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___ 자리에 장소가 온다.",
+     "nameEn": "Question",
+     "noteEn": "The blank is for the place you are looking for."
+    }
+   ],
+   "related": [
+    "Is it next to ___?"
+   ],
+   "quiz": {
+    "prompt": "Where is ___?",
+    "answer": "the bank"
+   }
+  },
+  {
+   "id": "en-1-07",
+   "stage": 1,
+   "pattern": "It's next to ___.",
+   "meaningKo": "옆에 있다고 말하기",
+   "meaningEn": "Saying something is next to another place",
+   "examples": [
+    {
+     "text": "It's next to the post office.",
+     "ko": "우체국 옆에 있어요.",
+     "en": "It's next to the post office."
+    },
+    {
+     "text": "It's next to the school.",
+     "ko": "학교 옆에 있어요.",
+     "en": "It's next to the school."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "전치사",
+     "noteKo": "___ 자리에 기준 장소가 온다.",
+     "nameEn": "Preposition",
+     "noteEn": "The blank is for the reference place."
+    }
+   ],
+   "related": [
+    "Turn left at ___."
+   ],
+   "quiz": {
+    "prompt": "It's next to ___.",
+    "answer": "the school"
+   }
+  },
+  {
+   "id": "en-1-08",
+   "stage": 1,
+   "pattern": "I can ___.",
+   "meaningKo": "할 수 있는 것 말하기",
+   "meaningEn": "Saying what you can do",
+   "examples": [
+    {
+     "text": "I can cook.",
+     "ko": "나는 요리할 수 있어.",
+     "en": "I can cook."
+    },
+    {
+     "text": "I can speak English.",
+     "ko": "나는 영어를 할 수 있어.",
+     "en": "I can speak English."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "can 조동사",
+     "noteKo": "___ 자리에 동사원형이 온다.",
+     "nameEn": "can modal",
+     "noteEn": "The blank is for a base verb."
+    }
+   ],
+   "related": [
+    "I can't ___."
+   ],
+   "quiz": {
+    "prompt": "I can ___.",
+    "answer": "cook"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "en-2-01",
+   "stage": 2,
+   "pattern": "I went to ___ last weekend.",
+   "meaningKo": "지난 주말에 한 일을 말하기",
+   "meaningEn": "Saying what you did last weekend",
+   "examples": [
+    {
+     "text": "I went to the beach last weekend.",
+     "ko": "지난 주말에 해변에 갔어.",
+     "en": "I went to the beach last weekend."
+    },
+    {
+     "text": "I went to a concert last weekend.",
+     "ko": "지난 주말에 콘서트에 갔어.",
+     "en": "I went to a concert last weekend."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___ 자리에 지난 주말에 한 장소나 활동이 온다.",
+     "nameEn": "Past tense",
+     "noteEn": "The blank is a place or activity."
+    }
+   ],
+   "related": [
+    "I ___ last weekend."
+   ],
+   "quiz": {
+    "prompt": "I went to ___ last weekend.",
+    "answer": "the park"
+   }
+  },
+  {
+   "id": "en-2-02",
+   "stage": 2,
+   "pattern": "It was ___ there.",
+   "meaningKo": "장소나 활동에 대한 느낌 말하기",
+   "meaningEn": "Saying how something was",
+   "examples": [
+    {
+     "text": "It was fun there.",
+     "ko": "거기 재미있었어.",
+     "en": "It was fun there."
+    },
+    {
+     "text": "It was crowded there.",
+     "ko": "거기 사람이 많았어.",
+     "en": "It was crowded there."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "형용사",
+     "noteKo": "___ 자리에 느낌이나 상태를 나타내는 형용사가 온다.",
+     "nameEn": "Adjective",
+     "noteEn": "The blank is an adjective."
+    }
+   ],
+   "related": [
+    "It was ___."
+   ],
+   "quiz": {
+    "prompt": "It was ___ there.",
+    "answer": "amazing"
+   }
+  },
+  {
+   "id": "en-2-03",
+   "stage": 2,
+   "pattern": "Sounds good! See you at ___.",
+   "meaningKo": "약속에 동의하기",
+   "meaningEn": "Agreeing on a plan",
+   "examples": [
+    {
+     "text": "Sounds good! See you at the station.",
+     "ko": "좋아! 역에서 봐.",
+     "en": "Sounds good! See you at the station."
+    },
+    {
+     "text": "Sounds good! See you at five.",
+     "ko": "좋아! 다섯시에 봐.",
+     "en": "Sounds good! See you at five."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 또는 시간",
+     "noteKo": "___ 자리에 만날 장소나 시간이 온다.",
+     "nameEn": "Place or time",
+     "noteEn": "The blank is a place or time."
+    }
+   ],
+   "related": [
+    "See you at ___."
+   ],
+   "quiz": {
+    "prompt": "Sounds good! See you at ___.",
+    "answer": "the library"
+   }
+  },
+  {
+   "id": "en-2-04",
+   "stage": 2,
+   "pattern": "Can I get a ___, please?",
+   "meaningKo": "음료 주문하기",
+   "meaningEn": "Ordering a drink",
+   "examples": [
+    {
+     "text": "Can I get a latte, please?",
+     "ko": "라떼 하나 주세요.",
+     "en": "Can I get a latte, please?"
+    },
+    {
+     "text": "Can I get a green tea, please?",
+     "ko": "녹차 하나 주세요.",
+     "en": "Can I get a green tea, please?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 음료 이름이 온다.",
+     "nameEn": "Noun",
+     "noteEn": "The blank is a drink name."
+    }
+   ],
+   "related": [
+    "Can I have a ___, please?"
+   ],
+   "quiz": {
+    "prompt": "Can I get a ___, please?",
+    "answer": "cappuccino"
+   }
+  },
+  {
+   "id": "en-2-05",
+   "stage": 2,
+   "pattern": "Can I change it to ___?",
+   "meaningKo": "주문 변경하기",
+   "meaningEn": "Changing an order",
+   "examples": [
+    {
+     "text": "Can I change it to soy milk?",
+     "ko": "두유로 바꿔도 될까요?",
+     "en": "Can I change it to soy milk?"
+    },
+    {
+     "text": "Can I change it to a large?",
+     "ko": "라지로 바꿔도 될까요?",
+     "en": "Can I change it to a large?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구",
+     "noteKo": "___ 자리에 바꿀 옵션이 온다.",
+     "nameEn": "Noun phrase",
+     "noteEn": "The blank is the new option."
+    }
+   ],
+   "related": [
+    "Can I have ___ instead?"
+   ],
+   "quiz": {
+    "prompt": "Can I change it to ___?",
+    "answer": "almond milk"
+   }
+  },
+  {
+   "id": "en-2-06",
+   "stage": 2,
+   "pattern": "Excuse me, my ___ isn't working.",
+   "meaningKo": "방에 문제가 있음을 알리기",
+   "meaningEn": "Explaining a problem in your room",
+   "examples": [
+    {
+     "text": "Excuse me, my key isn't working.",
+     "ko": "실례합니다, 제 키가 작동하지 않아요.",
+     "en": "Excuse me, my key isn't working."
+    },
+    {
+     "text": "Excuse me, my shower isn't working.",
+     "ko": "실례합니다, 제 샤워기가 작동하지 않아요.",
+     "en": "Excuse me, my shower isn't working."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사",
+     "noteKo": "___ 자리에 문제가 있는 물건이 온다.",
+     "nameEn": "Noun",
+     "noteEn": "The blank is the thing with a problem."
+    }
+   ],
+   "related": [
+    "My ___ doesn't work."
+   ],
+   "quiz": {
+    "prompt": "Excuse me, my ___ isn't working.",
+    "answer": "air conditioner"
+   }
+  },
+  {
+   "id": "en-2-07",
+   "stage": 2,
+   "pattern": "How often do you ___?",
+   "meaningKo": "어떤 일을 얼마나 자주 하는지 묻기",
+   "meaningEn": "Asking how often someone does something",
+   "examples": [
+    {
+     "text": "How often do you go to the gym?",
+     "ko": "헬스장에 얼마나 자주 가?",
+     "en": "How often do you go to the gym?"
+    },
+    {
+     "text": "How often do you eat out?",
+     "ko": "외식 얼마나 자주 해?",
+     "en": "How often do you eat out?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사구",
+     "noteKo": "___ 자리에 반복되는 행동이 온다.",
+     "nameEn": "Verb phrase",
+     "noteEn": "The blank is a repeated action."
+    }
+   ],
+   "related": [
+    "Do you ___ often?"
+   ],
+   "quiz": {
+    "prompt": "How often do you ___?",
+    "answer": "travel"
+   }
+  },
+  {
+   "id": "en-2-08",
+   "stage": 2,
+   "pattern": "I usually ___ on weekends.",
+   "meaningKo": "주말에 자주 하는 일 말하기",
+   "meaningEn": "Saying what you usually do on weekends",
+   "examples": [
+    {
+     "text": "I usually relax on weekends.",
+     "ko": "주말에는 보통 쉬어요.",
+     "en": "I usually relax on weekends."
+    },
+    {
+     "text": "I usually see my friends on weekends.",
+     "ko": "주말에는 보통 친구들을 만나요.",
+     "en": "I usually see my friends on weekends."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사구",
+     "noteKo": "___ 자리에 평소에 하는 행동이 온다.",
+     "nameEn": "Verb phrase",
+     "noteEn": "The blank is an activity you often do."
+    }
+   ],
+   "related": [
+    "I often ___."
+   ],
+   "quiz": {
+    "prompt": "I usually ___ on weekends.",
+    "answer": "study"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "en-3-01",
+   "stage": 3,
+   "pattern": "I'm calling because my ___ is ___.",
+   "meaningKo": "문제 상황을 전화로 알리기",
+   "meaningEn": "Calling to report a problem",
+   "examples": [
+    {
+     "text": "I'm calling because my order is late.",
+     "ko": "제 주문이 늦어서 전화드려요.",
+     "en": "I'm calling about my order being late."
+    },
+    {
+     "text": "I'm calling because my reservation is missing.",
+     "ko": "예약이 없어져서 전화드려요.",
+     "en": "There's a problem with my reservation."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "소유격 + 명사",
+     "noteKo": "첫 번째 빈칸에 문제의 대상을 씁니다.",
+     "nameEn": "Possessive noun",
+     "noteEn": "First blank: the thing with the problem."
+    },
+    {
+     "nameKo": "상태 표현",
+     "noteKo": "두 번째 빈칸에 상태를 씁니다.",
+     "nameEn": "State",
+     "noteEn": "Second blank: the problem or state."
+    }
+   ],
+   "related": [
+    "Could you help me with my ___?"
+   ],
+   "quiz": {
+    "prompt": "I'm calling because my ___ is damaged.",
+    "answer": "laptop"
+   }
+  },
+  {
+   "id": "en-3-02",
+   "stage": 3,
+   "pattern": "First, ___; then, ___; finally, ___.",
+   "meaningKo": "과정이나 절차를 단계별로 설명하기",
+   "meaningEn": "Explaining a task or process step by step",
+   "examples": [
+    {
+     "text": "First, log in to your account; then, click the settings button; finally, update your profile.",
+     "ko": "먼저 계정에 로그인하고, 설정 버튼을 누른 후, 프로필을 수정하세요.",
+     "en": "Step-by-step instructions for updating a profile."
+    },
+    {
+     "text": "First, wash your hands; then, put on gloves; finally, start the procedure.",
+     "ko": "먼저 손을 씻고, 장갑을 낀 후, 절차를 시작하세요.",
+     "en": "How to begin a procedure."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "순서 표현",
+     "noteKo": "각 빈칸에 단계적인 행동을 씁니다.",
+     "nameEn": "Sequence words",
+     "noteEn": "Each blank: action in the process."
+    }
+   ],
+   "related": [
+    "To ___, you need to ___, ___, and ___."
+   ],
+   "quiz": {
+    "prompt": "First, open the box; then, remove the parts; finally, ___ .",
+    "answer": "assemble the device"
+   }
+  },
+  {
+   "id": "en-3-03",
+   "stage": 3,
+   "pattern": "I'm calling because ___, and I'd like you to ___.",
+   "meaningKo": "문제 상황을 설명하고 해결을 요청하기",
+   "meaningEn": "Explaining a problem and asking for a fix",
+   "examples": [
+    {
+     "text": "I'm calling because my order is late, and I'd like you to check on it.",
+     "ko": "주문이 늦어서 전화드렸고, 확인해주셨으면 합니다.",
+     "en": "My order is late and I want you to check."
+    },
+    {
+     "text": "I'm calling because the wrong item arrived, and I'd like you to send the correct one.",
+     "ko": "잘못된 상품이 와서 전화드렸고, 맞는 상품을 보내주셨으면 해요.",
+     "en": "The wrong item came. I want the right one sent."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "원인 설명",
+     "noteKo": "첫 번째 빈칸에는 문제 상황을 설명합니다.",
+     "nameEn": "Explaining a problem",
+     "noteEn": "The first blank explains the problem."
+    },
+    {
+     "nameKo": "요청 표현",
+     "noteKo": "두 번째 빈칸에는 원하는 조치를 씁니다.",
+     "nameEn": "Making a request",
+     "noteEn": "The second blank is what you want them to do."
+    }
+   ],
+   "related": [
+    "I'm calling to ___ because ___.",
+    "Could you ___ because ___?"
+   ],
+   "quiz": {
+    "prompt": "I'm calling because my delivery is missing, and I'd like you to ___.",
+    "answer": "look into it"
+   }
+  },
+  {
+   "id": "en-3-04",
+   "stage": 3,
+   "pattern": "If you ___, ___ will ___.",
+   "meaningKo": "충고와 결과를 설명하기",
+   "meaningEn": "Giving advice and explaining the result",
+   "examples": [
+    {
+     "text": "If you take a break, you will feel better.",
+     "ko": "쉬면 기분이 나아질 거야.",
+     "en": "Taking a break will help you."
+    },
+    {
+     "text": "If you don't rest, you will get more stressed.",
+     "ko": "쉬지 않으면 더 스트레스를 받을 거야.",
+     "en": "You will be more stressed if you don't rest."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재시제 조건문",
+     "noteKo": "첫 번째 빈칸에는 조건(현재시제 동사)을 씁니다.",
+     "nameEn": "First conditional",
+     "noteEn": "First blank: if + present verb (the condition)."
+    },
+    {
+     "nameKo": "미래 결과",
+     "noteKo": "두 번째 빈칸에는 미래에 일어날 일을 씁니다.",
+     "nameEn": "Future result",
+     "noteEn": "Second blank: subject + will + verb (the result)."
+    }
+   ],
+   "related": [
+    "If you don't ___, ___ will ___.",
+    "If I ___, I will ___."
+   ],
+   "quiz": {
+    "prompt": "If you study hard, you will ___.",
+    "answer": "pass the test"
+   }
+  },
+  {
+   "id": "en-3-05",
+   "stage": 3,
+   "pattern": "___ said (that) ___.",
+   "meaningKo": "다른 사람이 한 말을 전달하기",
+   "meaningEn": "Reporting what someone else said",
+   "examples": [
+    {
+     "text": "My doctor said (that) I should get more sleep.",
+     "ko": "의사 선생님이 잠을 더 자라고 하셨어.",
+     "en": "The doctor told me to sleep more."
+    },
+    {
+     "text": "She said (that) she would call back later.",
+     "ko": "그녀가 나중에 다시 전화하겠다고 했어.",
+     "en": "She said she'll call later."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접화법",
+     "noteKo": "첫 번째 빈칸에는 말한 사람을 씁니다.",
+     "nameEn": "Reported speech",
+     "noteEn": "The first blank is the speaker."
+    },
+    {
+     "nameKo": "전달된 내용",
+     "noteKo": "두 번째 빈칸에는 전달할 내용을 씁니다.",
+     "nameEn": "Reported statement",
+     "noteEn": "The second blank is what was said (often backshifted)."
+    }
+   ],
+   "related": [
+    "___ told me (that) ___.",
+    "___ mentioned (that) ___."
+   ],
+   "quiz": {
+    "prompt": "My boss said (that) ___ was urgent.",
+    "answer": "the project"
+   }
+  },
+  {
+   "id": "en-3-06",
+   "stage": 3,
+   "pattern": "Have you ever ___?",
+   "meaningKo": "경험을 물어보기",
+   "meaningEn": "Asking about someone's experience",
+   "examples": [
+    {
+     "text": "Have you ever lost your luggage at the airport?",
+     "ko": "공항에서 짐을 잃어버린 적 있어요?",
+     "en": "Have you experienced losing luggage at an airport?"
+    },
+    {
+     "text": "Have you ever tried Korean food?",
+     "ko": "한국 음식을 먹어본 적 있어요?",
+     "en": "Did you ever eat Korean food?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재완료",
+     "noteKo": "빈칸에 동사원형의 과거분사 형태를 씁니다.",
+     "nameEn": "Present perfect",
+     "noteEn": "Use past participle of the verb in the blank."
+    }
+   ],
+   "related": [
+    "I've never ___ before."
+   ],
+   "quiz": {
+    "prompt": "Have you ever ___?",
+    "answer": "been to Paris"
+   }
+  },
+  {
+   "id": "en-3-07",
+   "stage": 3,
+   "pattern": "I haven't ___ yet.",
+   "meaningKo": "아직 해보지 않은 경험을 설명하기",
+   "meaningEn": "Describing something you have not done yet",
+   "examples": [
+    {
+     "text": "I haven't received my package yet.",
+     "ko": "아직 제 소포를 받지 못했어요.",
+     "en": "My package hasn't arrived yet."
+    },
+    {
+     "text": "I haven't met our new boss yet.",
+     "ko": "아직 새 상사분을 만나지 못했어요.",
+     "en": "I haven't had a chance to meet the new boss yet."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재완료",
+     "noteKo": "빈칸에 과거분사 동사를 씁니다.",
+     "nameEn": "Present perfect",
+     "noteEn": "Use past participle of the verb in the blank."
+    }
+   ],
+   "related": [
+    "Have you ___ yet?"
+   ],
+   "quiz": {
+    "prompt": "I haven't ___ yet.",
+    "answer": "finished my report"
+   }
+  },
+  {
+   "id": "en-3-08",
+   "stage": 3,
+   "pattern": "It's someone who ___.",
+   "meaningKo": "정확히 모르는 사람을 설명하기",
+   "meaningEn": "Describing a person you can't name exactly",
+   "examples": [
+    {
+     "text": "It's someone who always helps others.",
+     "ko": "항상 다른 사람을 돕는 사람이에요.",
+     "en": "A person who always helps."
+    },
+    {
+     "text": "It's someone who works at the front desk.",
+     "ko": "프론트 데스크에서 일하는 분이에요.",
+     "en": "A person working at the reception."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관계대명사",
+     "noteKo": "빈칸에 사람에 대해 설명하는 문장을 씁니다.",
+     "nameEn": "Relative clause (who)",
+     "noteEn": "Describe what the person does in the blank."
+    }
+   ],
+   "related": [
+    "It's a place where ___ happens."
+   ],
+   "quiz": {
+    "prompt": "It's someone who ___ .",
+    "answer": "fixes computers"
+   }
+  },
+  {
+   "id": "en-3-09",
+   "stage": 3,
+   "pattern": "It's a place where ___.",
+   "meaningKo": "정확히 모르는 장소를 설명하기",
+   "meaningEn": "Describing a place you can't name exactly",
+   "examples": [
+    {
+     "text": "It's a place where you can relax and enjoy nature.",
+     "ko": "자연을 즐기며 쉴 수 있는 곳이에요.",
+     "en": "A place for relaxing and enjoying nature."
+    },
+    {
+     "text": "It's a place where many people go shopping.",
+     "ko": "많은 사람들이 쇼핑하러 가는 곳이에요.",
+     "en": "A place where people shop."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관계대명사",
+     "noteKo": "빈칸에 장소에서 일어나는 일을 씁니다.",
+     "nameEn": "Relative clause (where)",
+     "noteEn": "Describe what happens at the place in the blank."
+    }
+   ],
+   "related": [
+    "It's someone who ___ ."
+   ],
+   "quiz": {
+    "prompt": "It's a place where ___ .",
+    "answer": "they serve great coffee"
+   }
+  },
+  {
+   "id": "en-3-10",
+   "stage": 3,
+   "pattern": "Have you ever had ___?",
+   "meaningKo": "경험을 물어보기",
+   "meaningEn": "Asking about someone's experience",
+   "examples": [
+    {
+     "text": "Have you ever had food poisoning?",
+     "ko": "식중독 걸린 적 있어?",
+     "en": "Did you ever have food poisoning?"
+    },
+    {
+     "text": "Have you ever had a problem with your order?",
+     "ko": "주문에 문제가 있었던 적 있어?",
+     "en": "Did you ever have a problem with your order?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재완료",
+     "noteKo": "빈칸에는 경험을 나타내는 명사구를 씁니다.",
+     "nameEn": "Present perfect",
+     "noteEn": "The blank uses a noun phrase about an experience."
+    }
+   ],
+   "related": [
+    "Have you ever ___?",
+    "Did you ever ___?"
+   ],
+   "quiz": {
+    "prompt": "Have you ever had ___?",
+    "answer": "jet lag"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "en-4-01",
+   "stage": 4,
+   "pattern": "I think ___ because ___.",
+   "meaningKo": "생각과 그 이유 말하기",
+   "meaningEn": "Giving your opinion and backing it up",
+   "examples": [
+    {
+     "text": "I think the ending was great because it left a lot to the imagination.",
+     "ko": "결말이 좋았다고 생각해, 왜냐하면 상상력을 자극했으니까.",
+     "en": "I think the ending was great because it left a lot to the imagination."
+    },
+    {
+     "text": "I think this news story matters because it affects everyone.",
+     "ko": "이 뉴스가 중요하다고 생각해, 왜냐하면 모두에게 영향을 주니까.",
+     "en": "I think this news story matters because it affects everyone."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시",
+     "noteKo": "첫 번째 빈칸은 의견(명사, 명사구, that절 등)이 들어감.",
+     "nameEn": "Stating an opinion",
+     "noteEn": "First blank is your opinion (noun, noun phrase, or that-clause)."
+    }
+   ],
+   "related": [
+    "I feel like ___ because ___."
+   ],
+   "quiz": {
+    "prompt": "I think ___ because it was original.",
+    "answer": "the show was amazing"
+   }
+  },
+  {
+   "id": "en-4-02",
+   "stage": 4,
+   "pattern": "If I were ___, I would ___.",
+   "meaningKo": "상황을 가정해 내 행동 말하기",
+   "meaningEn": "Saying what you would do in an imaginary situation",
+   "examples": [
+    {
+     "text": "If I were in your position, I would ask for feedback.",
+     "ko": "내가 네 입장이라면, 피드백을 요청할 거야.",
+     "en": "If I were in your position, I would ask for feedback."
+    },
+    {
+     "text": "If I were the manager, I would schedule more breaks.",
+     "ko": "내가 매니저라면, 휴식 시간을 더 만들 거야.",
+     "en": "If I were the manager, I would schedule more breaks."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거",
+     "noteKo": "첫 번째 빈칸에 사람, 신분, 상황 등(명사/명사구)이 들어감. 두 번째 빈칸에 행동(동사구)이 들어감.",
+     "nameEn": "Second Conditional",
+     "noteEn": "First blank: role/situation (noun/noun phrase); second blank: action (verb phrase)."
+    }
+   ],
+   "related": [
+    "If ___ happened, I would ___."
+   ],
+   "quiz": {
+    "prompt": "If I were ___, I would try to fix the mistake.",
+    "answer": "the boss"
+   }
+  },
+  {
+   "id": "en-4-03",
+   "stage": 4,
+   "pattern": "I wish I had ___; I should have ___.",
+   "meaningKo": "과거를 후회하고, 더 나았던 행동 말하기",
+   "meaningEn": "Expressing regret and what you should have done",
+   "examples": [
+    {
+     "text": "I wish I had studied more; I should have prepared better.",
+     "ko": "더 공부했으면 좋았을 텐데; 더 잘 준비했어야 했어.",
+     "en": "I wish I had studied more; I should have prepared better."
+    },
+    {
+     "text": "I wish I had called her; I should have reached out.",
+     "ko": "그녀에게 전화했으면 좋았을 텐데; 연락했어야 했어.",
+     "en": "I wish I had called her; I should have reached out."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거완료, should have",
+     "noteKo": "첫 번째 빈칸: 하지 않은 과거 행동(동사 과거분사), 두 번째 빈칸: 더 나았을 행동(동사 과거분사)",
+     "nameEn": "Past unreal conditional, should have",
+     "noteEn": "First blank: past action not done (past participle); second blank: action that would have been better (past participle)."
+    }
+   ],
+   "related": [
+    "If I had ___, I wouldn't have ___."
+   ],
+   "quiz": {
+    "prompt": "I wish I had ___; I should have talked to him.",
+    "answer": "listened"
+   }
+  },
+  {
+   "id": "en-4-04",
+   "stage": 4,
+   "pattern": "Given ___, I think ___.",
+   "meaningKo": "단서를 바탕으로 추론하기",
+   "meaningEn": "Guessing what probably happened from clues",
+   "examples": [
+    {
+     "text": "Given the silence, I think he's upset.",
+     "ko": "조용한 걸 보니, 그가 화난 것 같아.",
+     "en": "Given the silence, I think he's upset."
+    },
+    {
+     "text": "Given her sudden message, I think something urgent came up.",
+     "ko": "갑작스런 메시지로 보아, 급한 일이 생긴 것 같아.",
+     "en": "Given her sudden message, I think something urgent came up."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~을 고려하면",
+     "noteKo": "첫 번째 빈칸: 단서, 상황(명사/명사구). 두 번째 빈칸: 추론(주어+동사).",
+     "nameEn": "Given (evidence), inference",
+     "noteEn": "First blank: clue/evidence (noun/phrase); second: what you infer (subject+verb)."
+    }
+   ],
+   "related": [
+    "Based on ___, I guess ___."
+   ],
+   "quiz": {
+    "prompt": "Given ___, I think he's tired.",
+    "answer": "how quiet he's been"
+   }
+  },
+  {
+   "id": "en-4-05",
+   "stage": 4,
+   "pattern": "Back then, ___; but now, ___.",
+   "meaningKo": "과거와 현재 비교하기",
+   "meaningEn": "Comparing how things used to be with now",
+   "examples": [
+    {
+     "text": "Back then, the town was quiet; but now, it's always busy.",
+     "ko": "예전엔 마을이 조용했는데, 지금은 항상 북적거려.",
+     "en": "Back then, the town was quiet; but now, it's always busy."
+    },
+    {
+     "text": "Back then, we played outside every day; but now, kids stay indoors.",
+     "ko": "예전엔 매일 밖에서 놀았는데, 지금은 아이들이 집에 있어.",
+     "en": "Back then, we played outside every day; but now, kids stay indoors."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거와 현재 비교",
+     "noteKo": "각 빈칸에 과거/현재 상황(문장)이 들어감.",
+     "nameEn": "Comparing past and present",
+     "noteEn": "Each blank: situation in the past/present (sentence/phrase)."
+    }
+   ],
+   "related": [
+    "It used to be ___, but now ___."
+   ],
+   "quiz": {
+    "prompt": "Back then, ___; but now, it's full of new buildings.",
+    "answer": "there were only a few houses"
+   }
+  },
+  {
+   "id": "en-4-06",
+   "stage": 4,
+   "pattern": "Some people say ___, but I believe ___.",
+   "meaningKo": "다른 의견을 언급하고 자신의 의견 말하기",
+   "meaningEn": "Acknowledging others' views and giving your own",
+   "examples": [
+    {
+     "text": "Some people say the ending was confusing, but I believe it made sense.",
+     "ko": "일부는 결말이 혼란스럽다고 하지만, 나는 말이 된다고 생각해.",
+     "en": "Some people say the ending was confusing, but I believe it made sense."
+    },
+    {
+     "text": "Some people say the city has lost its charm, but I believe it's just different now.",
+     "ko": "도시가 매력을 잃었다는 사람도 있지만, 나는 그냥 달라졌다고 생각해.",
+     "en": "Some people say the city has lost its charm, but I believe it's just different now."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 대조",
+     "noteKo": "각 빈칸에 의견(문장)이 들어감.",
+     "nameEn": "Contrasting opinions",
+     "noteEn": "Each blank: opinion (sentence/that-clause)."
+    }
+   ],
+   "related": [
+    "Many people think ___, but I prefer ___."
+   ],
+   "quiz": {
+    "prompt": "Some people say ___, but I believe it's realistic.",
+    "answer": "the ending was too dark"
+   }
+  },
+  {
+   "id": "en-4-07",
+   "stage": 4,
+   "pattern": "It seems like ___, so maybe ___.",
+   "meaningKo": "상황을 보고 추측 제시",
+   "meaningEn": "Making a guess based on what you see",
+   "examples": [
+    {
+     "text": "It seems like she's upset, so maybe something happened at work.",
+     "ko": "그녀가 화난 것 같아, 아마 직장에서 무슨 일이 있었나 봐.",
+     "en": "It seems like she's upset, so maybe something happened at work."
+    },
+    {
+     "text": "It seems like the team is tired, so maybe we should take a break.",
+     "ko": "팀이 피곤해 보여, 아마 쉬는 게 좋을 것 같아.",
+     "en": "It seems like the team is tired, so maybe we should take a break."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "~인 것 같다",
+     "noteKo": "첫 번째 빈칸에 관찰에서 느낀 상황(문장), 두 번째 빈칸에 추측, 제안(문장/동사구).",
+     "nameEn": "Observation and inference",
+     "noteEn": "First blank: what you notice (sentence); second: guess or suggestion (sentence/verb phrase)."
+    }
+   ],
+   "related": [
+    "It looks like ___, so ___."
+   ],
+   "quiz": {
+    "prompt": "It seems like ___, so maybe we should talk to her.",
+    "answer": "she's unhappy"
+   }
+  },
+  {
+   "id": "en-4-08",
+   "stage": 4,
+   "pattern": "While I agree that ___, I still think ___.",
+   "meaningKo": "일부 동의하고 자신의 입장 강조",
+   "meaningEn": "Partly agreeing and emphasizing your view",
+   "examples": [
+    {
+     "text": "While I agree that the plot was slow, I still think the characters were interesting.",
+     "ko": "줄거리가 느렸다는 점에는 동의하지만, 인물은 흥미로웠다고 생각해.",
+     "en": "While I agree that the plot was slow, I still think the characters were interesting."
+    },
+    {
+     "text": "While I agree that the deadline is important, I still think quality matters more.",
+     "ko": "마감이 중요하다는 건 동의하지만, 품질이 더 중요하다고 생각해.",
+     "en": "While I agree that the deadline is important, I still think quality matters more."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "부분 동의",
+     "noteKo": "첫 번째 빈칸에 상대방 의견(문장), 두 번째 빈칸에 자신의 주장(문장)이 들어감.",
+     "nameEn": "Partial agreement",
+     "noteEn": "First blank: their point (that-clause); second: your point (that-clause)."
+    }
+   ],
+   "related": [
+    "Even though ___, I still ___."
+   ],
+   "quiz": {
+    "prompt": "While I agree that ___, I still think she did her best.",
+    "answer": "the task was difficult"
+   }
+  },
+  {
+   "id": "en-4-09",
+   "stage": 4,
+   "pattern": "If I had ___, things might have ___.",
+   "meaningKo": "과거의 다르게 했으면 결과가 달랐을 거라 말하기",
+   "meaningEn": "Imagining a different past and result",
+   "examples": [
+    {
+     "text": "If I had spoken up, things might have turned out better.",
+     "ko": "내가 말을 했더라면, 결과가 더 좋았을 수도 있어.",
+     "en": "If I had spoken up, things might have turned out better."
+    },
+    {
+     "text": "If I had taken the job, things might have been different.",
+     "ko": "그 일을 받았더라면, 인생이 달라졌을 수 있어.",
+     "en": "If I had taken the job, things might have been different."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거완료",
+     "noteKo": "첫 번째 빈칸: 과거에 하지 않은 행동(과거분사), 두 번째 빈칸: 결과(과거분사/구문).",
+     "nameEn": "Third Conditional",
+     "noteEn": "First blank: action not done (past participle); second: possible result (past participle/phrase)."
+    }
+   ],
+   "related": [
+    "If I had ___, I would have ___."
+   ],
+   "quiz": {
+    "prompt": "If I had ___, things might have changed.",
+    "answer": "moved to Seoul"
+   }
+  },
+  {
+   "id": "en-4-10",
+   "stage": 4,
+   "pattern": "I see your point, but maybe we could ___.",
+   "meaningKo": "공손하게 반대 의견과 대안 제시",
+   "meaningEn": "Disagreeing politely and suggesting a compromise",
+   "examples": [
+    {
+     "text": "I see your point, but maybe we could extend the deadline by a week.",
+     "ko": "네 말도 이해해, 하지만 마감일을 일주일 연장할 수도 있을 것 같아.",
+     "en": "I see your point, but maybe we could extend the deadline by a week."
+    },
+    {
+     "text": "I see your point, but maybe we could focus on the main issue first.",
+     "ko": "네 말도 일리가 있지만, 우선 주요 이슈에 집중할 수도 있을 것 같아.",
+     "en": "I see your point, but maybe we could focus on the main issue first."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 반대 + 제안",
+     "noteKo": "빈칸에는 대안(동사구)이 들어감.",
+     "nameEn": "Polite disagreement + suggestion",
+     "noteEn": "Blank is a suggestion (verb phrase)."
+    }
+   ],
+   "related": [
+    "I understand where you're coming from, but ___."
+   ],
+   "quiz": {
+    "prompt": "I see your point, but maybe we could ___.",
+    "answer": "try a different approach"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "en-5-01",
+   "stage": 5,
+   "pattern": "One thing you might consider is ___, but overall I think ___",
+   "meaningKo": "부드럽게 피드백을 주고 긍정적인 점을 강조하기",
+   "meaningEn": "Giving gentle feedback while highlighting strengths",
+   "examples": [
+    {
+     "text": "One thing you might consider is adding more examples, but overall I think the report is very clear.",
+     "ko": "예시를 더 추가하는 것도 고려해 볼 수 있겠지만, 전반적으로 보고서는 매우 명확한 것 같아요.",
+     "en": "Suggesting more examples, but complimenting the clarity of the report."
+    },
+    {
+     "text": "One thing you might consider is simplifying the introduction, but overall I think your argument is strong.",
+     "ko": "서론을 좀 더 간단히 하면 좋겠지만, 전체적으로 논지는 강하다고 생각해요.",
+     "en": "Suggesting a simpler introduction, but praising the argument."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구 삽입",
+     "noteKo": "첫 번째 빈칸: 제안이나 수정할 점을 명사구로 쓴다.",
+     "nameEn": "Noun phrase insertion",
+     "noteEn": "First blank: Suggestion or area of improvement as a noun phrase."
+    },
+    {
+     "nameKo": "명사구 삽입",
+     "noteKo": "두 번째 빈칸: 긍정적인 평가를 명사구로 쓴다.",
+     "nameEn": "Noun phrase insertion",
+     "noteEn": "Second blank: Overall positive point as a noun phrase."
+    }
+   ],
+   "related": [
+    "What I appreciate about ___ is ___",
+    "It might help if you ___, though I also see ___"
+   ],
+   "quiz": {
+    "prompt": "One thing you might consider is ___, but overall I think your analysis is strong.",
+    "answer": "providing more data"
+   }
+  },
+  {
+   "id": "en-5-02",
+   "stage": 5,
+   "pattern": "It could just be me, but I find ___ a bit ___",
+   "meaningKo": "자신의 의견을 겸손하게 전달하기",
+   "meaningEn": "Sharing your opinion humbly",
+   "examples": [
+    {
+     "text": "It could just be me, but I find working from home a bit isolating.",
+     "ko": "제 생각일 수도 있지만, 재택근무가 조금 외롭다고 느껴져요.",
+     "en": "Expressing a personal view on remote work."
+    },
+    {
+     "text": "It could just be me, but I find the ending a bit abrupt.",
+     "ko": "제가 느끼기엔, 결말이 조금 갑작스러운 것 같아요.",
+     "en": "Softening a critique about a story ending."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동명사 혹은 명사구",
+     "noteKo": "첫 번째 빈칸: 자신의 생각이나 느낀 점을 동명사나 명사구로 쓴다.",
+     "nameEn": "Gerund or noun phrase",
+     "noteEn": "First blank: What you find, as a gerund or noun phrase."
+    },
+    {
+     "nameKo": "형용사",
+     "noteKo": "두 번째 빈칸: 그에 대한 느낌을 형용사로 쓴다.",
+     "nameEn": "Adjective",
+     "noteEn": "Second blank: How you feel about it, as an adjective."
+    }
+   ],
+   "related": [
+    "I'm not sure if everyone feels this way, but ___",
+    "Maybe it's just me, but ___ seems ___"
+   ],
+   "quiz": {
+    "prompt": "It could just be me, but I find the music a bit ___.",
+    "answer": "distracting"
+   }
+  },
+  {
+   "id": "en-5-03",
+   "stage": 5,
+   "pattern": "To be fair, ___, but I still believe ___",
+   "meaningKo": "상대방의 장점 인정하고 자신의 입장 고수하기",
+   "meaningEn": "Conceding a point while maintaining your stance",
+   "examples": [
+    {
+     "text": "To be fair, remote work does have benefits, but I still believe in-person meetings build stronger teams.",
+     "ko": "공정하게 보면, 재택근무에도 장점이 있지만, 저는 여전히 대면 회의가 더 강한 팀을 만든다고 생각해요.",
+     "en": "Conceding benefits of remote work but holding own view."
+    },
+    {
+     "text": "To be fair, your proposal is efficient, but I still believe we need more discussion.",
+     "ko": "공평하게 보면, 제안이 효율적이긴 하지만, 여전히 더 논의가 필요하다고 믿어요.",
+     "en": "Acknowledging a proposal’s strength but seeking more discussion."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장 삽입",
+     "noteKo": "첫 번째 빈칸: 상대방의 주장 중 동의하는 부분을 문장으로 쓴다.",
+     "nameEn": "Sentence insertion",
+     "noteEn": "First blank: The point you concede as a full sentence."
+    },
+    {
+     "nameKo": "명사구 또는 동명사구",
+     "noteKo": "두 번째 빈칸: 여전히 믿는 점을 명사구나 동명사구로 쓴다.",
+     "nameEn": "Noun phrase or gerund phrase",
+     "noteEn": "Second blank: What you still believe, as a noun or gerund phrase."
+    }
+   ],
+   "related": [
+    "I can see why ___, but ___",
+    "It's true that ___, yet ___"
+   ],
+   "quiz": {
+    "prompt": "To be fair, you raise some good points, but I still believe ___",
+    "answer": "we should take more time"
+   }
+  },
+  {
+   "id": "en-5-04",
+   "stage": 5,
+   "pattern": "So there I was, ___, when suddenly ___",
+   "meaningKo": "이야기를 극적으로 전개하기",
+   "meaningEn": "Building suspense in a story",
+   "examples": [
+    {
+     "text": "So there I was, waiting for my coffee, when suddenly the fire alarm went off.",
+     "ko": "그래서 저는 커피를 기다리고 있었는데, 갑자기 화재경보가 울렸어요.",
+     "en": "Setting up an eventful story."
+    },
+    {
+     "text": "So there I was, about to leave the party, when suddenly my phone rang.",
+     "ko": "제가 파티를 막 떠나려던 참이었는데, 갑자기 핸드폰이 울렸어요.",
+     "en": "Creating timing for a punchline."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동명사구 또는 현재분사구",
+     "noteKo": "첫 번째 빈칸: 당시 하고 있던 행동을 동명사구로 쓴다.",
+     "nameEn": "Gerund or present participle phrase",
+     "noteEn": "First blank: What you were doing at that moment."
+    },
+    {
+     "nameKo": "문장 (과거 시제)",
+     "noteKo": "두 번째 빈칸: 갑자기 일어난 사건을 과거 시제 문장으로 쓴다.",
+     "nameEn": "Past tense clause",
+     "noteEn": "Second blank: The sudden event, in the past tense."
+    }
+   ],
+   "related": [
+    "Just when I thought ___, ___ happened",
+    "You'll never guess what happened when ___"
+   ],
+   "quiz": {
+    "prompt": "So there I was, walking home in the rain, when suddenly ___",
+    "answer": "a car splashed water all over me"
+   }
+  },
+  {
+   "id": "en-5-05",
+   "stage": 5,
+   "pattern": "If I'm reading you right, you're saying ___, but is it possible that ___?",
+   "meaningKo": "상대방의 숨은 의도 파악하고 조심스럽게 질문하기",
+   "meaningEn": "Checking understanding and gently probing for more",
+   "examples": [
+    {
+     "text": "If I'm reading you right, you're saying you'd like a longer lease, but is it possible that the rent is too high?",
+     "ko": "제 해석이 맞다면, 더 긴 임대를 원하시는 거죠? 하지만 혹시 임대료가 너무 높아서 그런 건가요?",
+     "en": "Clarifying negotiation intentions."
+    },
+    {
+     "text": "If I'm reading you right, you're saying you need more time, but is it possible that you're not sure about the project?",
+     "ko": "제가 잘 이해한 거라면, 시간이 더 필요하신 거죠? 그런데 혹시 프로젝트 자체가 확신이 없으신 건가요?",
+     "en": "Gently asking about true concerns."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장 삽입 (직접화법 또는 간접화법)",
+     "noteKo": "첫 번째 빈칸: 상대방의 의도를 문장으로 정리한다.",
+     "nameEn": "Sentence insertion (direct or indirect)",
+     "noteEn": "First blank: The summary of what the other person is saying."
+    },
+    {
+     "nameKo": "문장 삽입 (추가 가능성)",
+     "noteKo": "두 번째 빈칸: 숨겨진 가능성이나 의심을 문장으로 쓴다.",
+     "nameEn": "Sentence insertion (possible motive)",
+     "noteEn": "Second blank: Another possible reason, as a question."
+    }
+   ],
+   "related": [
+    "Are you saying ___, or is there more to it?",
+    "Let me check if I understand: ___, but could it be that ___?"
+   ],
+   "quiz": {
+    "prompt": "If I'm reading you right, you're saying you want a quieter place, but is it possible that ___?",
+    "answer": "the location is too far"
+   }
+  },
+  {
+   "id": "en-5-06",
+   "stage": 5,
+   "pattern": "What I took away from ___ is ___, but I can see how others might ___",
+   "meaningKo": "자료나 콘텐츠 해석을 나누고 다른 해석도 인정하기",
+   "meaningEn": "Sharing your interpretation and acknowledging others’ views",
+   "examples": [
+    {
+     "text": "What I took away from the article is that balance is key, but I can see how others might focus on productivity.",
+     "ko": "제가 기사에서 얻은 점은 균형이 중요하다는 것이지만, 다른 분들은 생산성에 더 주목할 수도 있겠네요.",
+     "en": "Stating your takeaway and admitting other views."
+    },
+    {
+     "text": "What I took away from that episode is the importance of listening, but I can see how others might disagree.",
+     "ko": "그 에피소드에서 제가 느낀 건 경청의 중요성이지만, 다른 사람들은 다르게 생각할 수도 있겠어요.",
+     "en": "Giving your opinion and opening room for debate."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구 또는 제목/콘텐츠명",
+     "noteKo": "첫 번째 빈칸: 기사, 팟캐스트 등 출처를 명사구로 쓴다.",
+     "nameEn": "Noun phrase or content title",
+     "noteEn": "First blank: The source (article, episode, etc.)."
+    },
+    {
+     "nameKo": "명사구 또는 that절",
+     "noteKo": "두 번째 빈칸: 자신의 해석이나 느낀 점을 명사구나 that절로 쓴다.",
+     "nameEn": "Noun phrase or that-clause",
+     "noteEn": "Second blank: Your takeaway or interpretation."
+    }
+   ],
+   "related": [
+    "My interpretation of ___ is ___, though some may see ___",
+    "I got the sense that ___, but I know others feel ___"
+   ],
+   "quiz": {
+    "prompt": "What I took away from the podcast is ___, but I can see how others might disagree.",
+    "answer": "the value of honest feedback"
+   }
+  },
+  {
+   "id": "en-5-07",
+   "stage": 5,
+   "pattern": "You might already be aware, but ___, and if not, ___",
+   "meaningKo": "상대방을 존중하며 정보/조언을 제공하기",
+   "meaningEn": "Offering advice or information respectfully",
+   "examples": [
+    {
+     "text": "You might already be aware, but the deadline is next week, and if not, I just wanted to remind you.",
+     "ko": "이미 알고 계실 수도 있지만, 마감이 다음 주예요. 혹시 모르실까 봐 말씀드려요.",
+     "en": "Respectfully reminding about a deadline."
+    },
+    {
+     "text": "You might already be aware, but there's a new policy, and if not, it could affect your team.",
+     "ko": "이미 아실 수도 있지만, 새 정책이 생겼어요. 혹시 모르신다면 팀에 영향이 있을 수 있어요.",
+     "en": "Gently sharing news that could matter."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문장 삽입",
+     "noteKo": "첫 번째 빈칸: 상대방이 알 수도 있는 사실을 문장으로 쓴다.",
+     "nameEn": "Sentence insertion",
+     "noteEn": "First blank: The fact or advice the person may already know."
+    },
+    {
+     "nameKo": "문장 삽입",
+     "noteKo": "두 번째 빈칸: 알지 못할 경우 필요한 조치나 추가 정보를 문장으로 쓴다.",
+     "nameEn": "Sentence insertion",
+     "noteEn": "Second blank: What to do, or extra info, if they don’t know."
+    }
+   ],
+   "related": [
+    "Just in case you didn't know, ___",
+    "I wanted to mention that ___, in case it's helpful"
+   ],
+   "quiz": {
+    "prompt": "You might already be aware, but there's a meeting at noon, and if not, ___",
+    "answer": "please let me know if you need the link"
+   }
+  },
+  {
+   "id": "en-5-08",
+   "stage": 5,
+   "pattern": "I'm not saying ___, but I do feel ___",
+   "meaningKo": "의견을 부드럽게 표현하며 여지를 남기기",
+   "meaningEn": "Softening an opinion and leaving room for disagreement",
+   "examples": [
+    {
+     "text": "I'm not saying remote work is for everyone, but I do feel it can boost productivity for some.",
+     "ko": "재택근무가 모두에게 맞는다는 건 아니지만, 일부에게는 생산성을 높일 수 있다고 생각해요.",
+     "en": "Expressing an opinion without being absolute."
+    },
+    {
+     "text": "I'm not saying your approach is wrong, but I do feel a clearer structure could help.",
+     "ko": "당신의 접근 방식이 틀렸다는 건 아니지만, 좀 더 명확한 구조가 도움이 될 수 있다고 생각해요.",
+     "en": "Stating a view without rejecting the other."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "절",
+     "noteKo": "첫 번째 빈칸에는 부정하고 싶은 내용을 넣습니다.",
+     "nameEn": "Clause",
+     "noteEn": "First blank: what you are not claiming."
+    },
+    {
+     "nameKo": "절",
+     "noteKo": "두 번째 빈칸에는 본인의 느낌이나 생각을 넣습니다.",
+     "nameEn": "Clause",
+     "noteEn": "Second blank: your actual feeling."
+    }
+   ],
+   "related": [
+    "I could be wrong, but I get the sense that ___"
+   ],
+   "quiz": {
+    "prompt": "I'm not saying this design is bad, but I do feel ___",
+    "answer": "it could be more user-friendly"
+   }
+  },
+  {
+   "id": "en-5-09",
+   "stage": 5,
+   "pattern": "I completely see where you're coming from about ___, but what about ___?",
+   "meaningKo": "상대의 의견을 인정하면서 다른 관점을 제시하기",
+   "meaningEn": "Conceding a point and introducing a counterpoint",
+   "examples": [
+    {
+     "text": "I completely see where you're coming from about cost, but what about long-term value?",
+     "ko": "비용에 대해 말씀하신 점 충분히 이해하지만, 장기적인 가치는 어떻게 생각하세요?",
+     "en": "Acknowledging their concern while raising another."
+    },
+    {
+     "text": "I completely see where you're coming from about flexibility, but what about team collaboration?",
+     "ko": "유연성에 대해 말씀하신 점 이해하지만, 팀 협업은 어떻게 생각하세요?",
+     "en": "Agreeing with one point, but adding another perspective."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/명사구",
+     "noteKo": "첫 번째 빈칸에는 상대방의 주제나 우려가 옵니다.",
+     "nameEn": "Noun/Noun phrase",
+     "noteEn": "First blank: the point the other person raised."
+    },
+    {
+     "nameKo": "명사/명사구",
+     "noteKo": "두 번째 빈칸에는 새로운 논점을 추가합니다.",
+     "nameEn": "Noun/Noun phrase",
+     "noteEn": "Second blank: your counterpoint."
+    }
+   ],
+   "related": [
+    "That's a good point about ___, but I'm wondering how ___ fits in."
+   ],
+   "quiz": {
+    "prompt": "I completely see where you're coming from about deadlines, but what about ___?",
+    "answer": "quality control"
+   }
+  },
+  {
+   "id": "en-5-10",
+   "stage": 5,
+   "pattern": "One thing I appreciate about ___ is ___, though I do see some areas for improvement.",
+   "meaningKo": "장점을 인정하면서 개선점도 언급하기",
+   "meaningEn": "Giving positive feedback before constructive criticism",
+   "examples": [
+    {
+     "text": "One thing I appreciate about your report is its clarity, though I do see some areas for improvement.",
+     "ko": "보고서의 명확성이 정말 좋다고 생각해요. 하지만 개선할 부분도 보입니다.",
+     "en": "Balancing praise and critique."
+    },
+    {
+     "text": "One thing I appreciate about the presentation is the visuals, though I do see some areas for improvement.",
+     "ko": "발표 자료의 시각 자료가 좋았어요. 그래도 개선할 점이 있다고 생각해요.",
+     "en": "Starting with praise, then suggesting changes."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/명사구",
+     "noteKo": "첫 번째 빈칸에는 평가하는 대상이 옵니다.",
+     "nameEn": "Noun/Noun phrase",
+     "noteEn": "First blank: the thing being evaluated."
+    },
+    {
+     "nameKo": "명사구/절",
+     "noteKo": "두 번째 빈칸에는 긍정적인 특징이 옵니다.",
+     "nameEn": "Noun phrase/clause",
+     "noteEn": "Second blank: the positive aspect."
+    }
+   ],
+   "related": [
+    "Something I value about ___ is ___, but I think ___ could be improved."
+   ],
+   "quiz": {
+    "prompt": "One thing I appreciate about this proposal is ___, though I do see some areas for improvement.",
+    "answer": "its thorough research"
+   }
+  }
+ ]
+}

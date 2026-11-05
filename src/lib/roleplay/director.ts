@@ -119,6 +119,22 @@ export type DirectorRequest = {
   history: SpokenLine[];
   /** Notes on everything older than `history`, or empty (memory.ts). */
   context?: string;
+  /**
+   * 지난 통화에서 들은 삶(lifeFacts.ts). 이 통화의 context와 따로, 날짜가 적힌 짧은 목록.
+   * 비어 있으면 지난 통화를 모른다.
+   */
+  prior?: string;
+  /**
+   * 공부 모드에서 화면에 띄운 육각형의 부족한 칸 이름(앱 언어). 비면 그림이 없다.
+   */
+  study?: string;
+  /** 그 칸을 말하는 첫 마디. 학습자는 아직 말하지 않았다. */
+  studyOpen?: boolean;
+  /**
+   * 지난 통화에서 고친 문장(fixMemory.ts). 날 | 틀린 점 | 고친 문장.
+   * 비어 있으면 지난 고침을 모른다.
+   */
+  fixes?: string;
   /** Consecutive turns already spent off the script. */
   freeTurns: number;
   /** Director turns already spent this session. */
@@ -754,7 +770,7 @@ export function tutorSystemPrompt(input: {
 
 ${
   coaching
-    ? `You are talking out loud with someone who is learning ${target}, and they asked you to be their tutor for this call: a real conversation about their own life, in which you pick up their big mistakes and have them say it right. Everything said on your side of this conversation so far was you, and you carry on as yourself.`
+    ? `You are talking out loud with someone who is learning ${target}, and they asked you to be their tutor for this call. They chose to study on this call: a real conversation about their own life, in which you pick up their big mistakes and have them say it right. Everything said on your side of this conversation so far was you, and you carry on as yourself.`
     : `You are talking out loud with someone who is learning ${target}. Everything said on your side of this conversation so far was you, and you carry on as yourself. Never mention a tutor, practice, mistakes, lessons or a script, and never step out of the scene.`
 }
 
@@ -762,7 +778,7 @@ ${
   scenario.openEnded
     ? coaching
       ? `There is nothing to get done: this is a real conversation, and on an ordinary turn you answer, react, and ask them something back, in one or two short sentences. On a turn you correct a big mistake, do not do that: no reaction, no new question, "open" and "follow" empty. That turn is only the three beats in "How you tutor", and you still say them in your own manner — how you talk — not as a teacher reading an example.`
-      : `There is nothing to get done: this is just a conversation. Answer, react, ask them something back, and keep your turns short so they do most of the talking.`
+      : `There is nothing to get done: this is just a conversation. They chose free conversation for this call. Answer, react, ask them something back, and keep your turns short so they do most of the talking. Never correct a sentence and never ask them to repeat one.`
     : `What you are here to get done, in this order:
 ${steps
   .map((step) => `- step:${step.id} — ${step.goal}${quote(step.questionId) ? ` — you ask it with ${quote(step.questionId)}` : ""}`)
@@ -772,7 +788,7 @@ ${steps
 How to answer them:
 - Judge what they meant, not their wording. Someone who says they will sit by the window has told you "for here".
 - If they answered, just not in the words you expected, take it and move on.
-- If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.
+${scenario.openEnded && !coaching ? `- If they are stuck — silence, the wrong words — ask again more simply, inside the conversation. Leave "note" empty.` : `- If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.`}
 - A sentence that stops on a word like "and", "but", "because" or "the" was cut off while they were still thinking, not abandoned. Do not finish it for them. Answer what they did say and leave them room to go on ("And…?", "Go on"). That is on_track, not stuck.
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
@@ -782,13 +798,17 @@ ${
   coaching
     ? `- One or two short sentences.
 ${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage))}`
-    : `- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
+    : scenario.openEnded
+      ? `- One or two short sentences. They chose free conversation for this call, so what you say is only the conversation. Never correct a sentence, never ask them to repeat it, and never mention practice, mistakes or a lesson.
+- Leave "note", "better", "meant" and "smoother" empty. A mistake is not your job on this call.`
+      : `- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence put right, written the way someone who grew up with ${target} would say it — only when it has a real mistake: grammar, a wrong form, a word that is wrong for what they meant. It is shown under their words, not said aloud, and you never refer to it. A sentence with no mistake that a native would just phrase differently is not "better": that goes in "smoother".
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.
 ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bilingualCharacterRule(target, native)}
 ` : ""}`
-}- "smoother" is only for a sentence that is already correct and that you leave alone: when someone who grew up with ${target} would clearly say the same thing another way here (a more idiomatic phrase, the usual spoken form), write that way; otherwise leave it empty. Another word for the same thing that is no better is not a reason. Never with "better" or "meant".
+}${scenario.openEnded && !coaching ? "" : `- "smoother" is only for a sentence that is already correct and that you leave alone: when someone who grew up with ${target} would clearly say the same thing another way here (a more idiomatic phrase, the usual spoken form), write that way; otherwise leave it empty. Another word for the same thing that is no better is not a reason. Never with "better" or "meant".
 - If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
+`}
 
 Reply as JSON only:
 {"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
@@ -797,7 +817,10 @@ ${
   coaching
     ? `
 "retry" follows "How you tutor": "ask" when this turn has them say a sentence again, "pass" or "miss" on the turn they tried it, empty otherwise.`
-    : `
+    : scenario.openEnded
+      ? `
+Leave "note", "better", "meant" and "smoother" empty. They chose free conversation, so you do not write a correction either.`
+      : `
 "better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
 
 Leave it empty when:
@@ -806,7 +829,7 @@ Leave it empty when:
 - nothing is wrong with it
 Correcting something they said correctly costs more than saying nothing.`
 }${
-    focus
+    focus && !(scenario.openEnded && !coaching)
       ? `
 
 What goes wrong in ${target} in particular, which is what to look at before deciding ${coaching ? "a sentence has no big mistake" : "there is nothing to fix"}:
@@ -856,6 +879,14 @@ Get back to your list as soon as it feels natural.`
             mustReturn(request, scenario) ? ` Come back to it now, with "step:${current.id}".` : ""
           }`
         : `Right now you are on step:${current.id} — ${current.goal}.`,
+    request.prior?.trim()
+      ? `What you remember about them from earlier conversations. Each line starts with the day you heard it. Bring one up only when it fits what they just said, in your own manner, and never read this list out loud. Do not invent a memory that is not written here.
+${request.prior.trim()}`
+      : "",
+    request.fixes?.trim()
+      ? `Corrections from earlier calls. Each line is the day, what was wrong, and the sentence said right. If what they just said is that sentence said right and you are not correcting them, say once, in your own manner, that last time it was off and this time it is right. If they got it wrong again, do not mention the old mistake. Do not invent a correction that is not written here.
+${request.fixes.trim()}`
+      : "",
     request.context?.trim()
       ? `What you remember from earlier in this conversation:
 ${request.context.trim()}`
@@ -872,6 +903,11 @@ ${request.context.trim()}`
       : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
+      : "",
+    request.study?.trim()
+      ? request.studyOpen
+        ? `They have not spoken yet. They chose to study, and they can see their skill map. The marked weak point is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`
+        : `They can see their skill map. The marked weak point is "${request.study.trim()}". Keep this conversation on that point.`
       : "",
   ]
     .filter(Boolean)
@@ -1344,6 +1380,11 @@ export function parseDirection(
     inTargetLanguage(smoothed, request)
       ? smoothed
       : "";
+  // 자유대화로 고른 통화는 고친 문장을 남기지 않는다. 공부는 튜터 수업(coach)일 때만.
+  const freeTalk = scenario.openEnded && !coaching;
+  const keptBetter = freeTalk ? "" : better;
+  const keptMeant = freeTalk ? "" : meant;
+  const keptSmoother = freeTalk ? "" : smoother;
 
   // The ready question the model asked for, unless the turn already asks it.
   // Naming the same line twice is caught above, but the same question can
@@ -1424,11 +1465,11 @@ export function parseDirection(
   return {
     assessment,
     say,
-    note: coachNote || (better || meant ? "" : note),
+    note: freeTalk ? "" : coachNote || (keptBetter || keptMeant ? "" : note),
     next,
-    ...(better ? { better } : {}),
-    ...(meant ? { meant } : {}),
-    ...(smoother ? { smoother } : {}),
+    ...(keptBetter ? { better: keptBetter } : {}),
+    ...(keptMeant ? { meant: keptMeant } : {}),
+    ...(keptSmoother ? { smoother: keptSmoother } : {}),
     // 다시 말해 보라고 한 차례에는 다음 질문을 얹지 않는다 — 고친 문장을 말할 차례다.
     ...(chosenFollow && retry !== "ask" && !(retry === "miss" && !givingUp) ? { follow: chosenFollow } : {}),
     ...(retry ? { retry } : {}),

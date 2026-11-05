@@ -1,0 +1,1712 @@
+{
+ "1": [
+  {
+   "id": "ru-1-01",
+   "stage": 1,
+   "pattern": "Здравствуйте, меня зовут ___.",
+   "meaningKo": "공손하게 자기 이름을 말하기",
+   "meaningEn": "Politely saying your name",
+   "examples": [
+    {
+     "text": "Здравствуйте, меня зовут Анна.",
+     "ko": "안녕하세요, 제 이름은 안나입니다.",
+     "en": "Hello, my name is Anna."
+    },
+    {
+     "text": "Здравствуйте, меня зовут Максим.",
+     "ko": "안녕하세요, 제 이름은 막심입니다.",
+     "en": "Hello, my name is Maksim."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "자기소개",
+     "noteKo": "___에 자신의 이름을 넣음",
+     "nameEn": "Introducing yourself",
+     "noteEn": "Put your name in the blank"
+    }
+   ],
+   "related": [
+    "Я из ___."
+   ],
+   "quiz": {
+    "prompt": "Здравствуйте, меня зовут ___.",
+    "answer": "Ваше имя"
+   }
+  },
+  {
+   "id": "ru-1-02",
+   "stage": 1,
+   "pattern": "Привет, я ___.",
+   "meaningKo": "친근하게 자기 이름을 말하기",
+   "meaningEn": "Casually saying your name",
+   "examples": [
+    {
+     "text": "Привет, я Оля.",
+     "ko": "안녕, 나는 올랴야.",
+     "en": "Hi, I'm Olya."
+    },
+    {
+     "text": "Привет, я Тимур.",
+     "ko": "안녕, 나는 티무르야.",
+     "en": "Hi, I'm Timur."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "자기소개",
+     "noteKo": "___에 자기 이름을 넣음",
+     "nameEn": "Introducing yourself",
+     "noteEn": "Put your name in the blank"
+    }
+   ],
+   "related": [
+    "Я из ___."
+   ],
+   "quiz": {
+    "prompt": "Привет, я ___.",
+    "answer": "Ваше имя"
+   }
+  },
+  {
+   "id": "ru-1-03",
+   "stage": 1,
+   "pattern": "Я из ___.",
+   "meaningKo": "자기 출신 국가나 도시 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "Я из Кореи.",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I'm from Korea."
+    },
+    {
+     "text": "Я из Москвы.",
+     "ko": "저는 모스크바 출신이에요.",
+     "en": "I'm from Moscow."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지 말하기",
+     "noteKo": "___에 국가나 도시 이름을 넣음",
+     "nameEn": "Stating origin",
+     "noteEn": "Insert country or city in the blank"
+    }
+   ],
+   "related": [
+    "Здравствуйте, меня зовут ___."
+   ],
+   "quiz": {
+    "prompt": "Я из ___.",
+    "answer": "ваша страна или город"
+   }
+  },
+  {
+   "id": "ru-1-04",
+   "stage": 1,
+   "pattern": "Я ___. А вы?",
+   "meaningKo": "자신의 직업이나 학생 신분 말하고 상대방에게 묻기",
+   "meaningEn": "Saying your occupation or status and asking in return",
+   "examples": [
+    {
+     "text": "Я студент. А вы?",
+     "ko": "저는 학생이에요. 당신은요?",
+     "en": "I'm a student. And you?"
+    },
+    {
+     "text": "Я учитель. А вы?",
+     "ko": "저는 선생님이에요. 당신은요?",
+     "en": "I'm a teacher. And you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업/상태 말하기",
+     "noteKo": "___에 직업이나 역할을 넣음",
+     "nameEn": "Stating job/status",
+     "noteEn": "Put occupation or status in the blank"
+    }
+   ],
+   "related": [
+    "Я из ___."
+   ],
+   "quiz": {
+    "prompt": "Я ___. А вы?",
+    "answer": "ваша профессия или статус"
+   }
+  },
+  {
+   "id": "ru-1-05",
+   "stage": 1,
+   "pattern": "Сколько стоит ___?",
+   "meaningKo": "물건 가격을 묻기",
+   "meaningEn": "Asking the price of an item",
+   "examples": [
+    {
+     "text": "Сколько стоит вода?",
+     "ko": "물 가격이 얼마예요?",
+     "en": "How much does water cost?"
+    },
+    {
+     "text": "Сколько стоит хлеб?",
+     "ko": "빵 값이 얼마예요?",
+     "en": "How much is the bread?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가격 묻기",
+     "noteKo": "___에 물건 이름을 넣음",
+     "nameEn": "Asking price",
+     "noteEn": "Put item name in the blank"
+    }
+   ],
+   "related": [
+    "___, пожалуйста."
+   ],
+   "quiz": {
+    "prompt": "Сколько стоит ___?",
+    "answer": "товар"
+   }
+  },
+  {
+   "id": "ru-1-06",
+   "stage": 1,
+   "pattern": "___, пожалуйста.",
+   "meaningKo": "정중하게 요청하거나 주문하기",
+   "meaningEn": "Making a polite request",
+   "examples": [
+    {
+     "text": "Воду, пожалуйста.",
+     "ko": "물 주세요.",
+     "en": "Water, please."
+    },
+    {
+     "text": "Счёт, пожалуйста.",
+     "ko": "계산서 주세요.",
+     "en": "Bill, please."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "___에 원하는 것을 넣음",
+     "nameEn": "Polite request",
+     "noteEn": "Put the requested item in the blank"
+    }
+   ],
+   "related": [
+    "Сколько стоит ___?"
+   ],
+   "quiz": {
+    "prompt": "___, пожалуйста.",
+    "answer": "ваша просьба"
+   }
+  },
+  {
+   "id": "ru-1-07",
+   "stage": 1,
+   "pattern": "Где ___?",
+   "meaningKo": "장소의 위치를 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "Где метро?",
+     "ko": "지하철이 어디에 있어요?",
+     "en": "Where is the metro?"
+    },
+    {
+     "text": "Где туалет?",
+     "ko": "화장실이 어디에 있어요?",
+     "en": "Where is the toilet?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위치 묻기",
+     "noteKo": "___에 찾는 장소를 넣음",
+     "nameEn": "Asking location",
+     "noteEn": "Put the place you are looking for in the blank"
+    }
+   ],
+   "related": [
+    "___, пожалуйста."
+   ],
+   "quiz": {
+    "prompt": "Где ___?",
+    "answer": "место"
+   }
+  },
+  {
+   "id": "ru-1-08",
+   "stage": 1,
+   "pattern": "Очень приятно, я ___.",
+   "meaningKo": "정중하게 자기 소개하기",
+   "meaningEn": "Introducing yourself politely",
+   "examples": [
+    {
+     "text": "Очень приятно, я Ольга.",
+     "ko": "만나서 반가워요, 저는 올가입니다.",
+     "en": "Nice to meet you, I’m Olga."
+    },
+    {
+     "text": "Очень приятно, я Александр.",
+     "ko": "만나서 반가워요, 저는 알렉산드르입니다.",
+     "en": "Nice to meet you, I’m Alexander."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 말하기",
+     "noteKo": "__ 위치에 이름을 넣음",
+     "nameEn": "Saying name",
+     "noteEn": "Put your name in ___"
+    }
+   ],
+   "related": [
+    "Меня зовут ___."
+   ],
+   "quiz": {
+    "prompt": "Очень приятно, я ___.",
+    "answer": "Мария"
+   }
+  },
+  {
+   "id": "ru-1-09",
+   "stage": 1,
+   "pattern": "Я из города ___.",
+   "meaningKo": "자신의 출신 도시 말하기",
+   "meaningEn": "Saying your hometown",
+   "examples": [
+    {
+     "text": "Я из города Пусан.",
+     "ko": "저는 부산 출신입니다.",
+     "en": "I am from Busan."
+    },
+    {
+     "text": "Я из города Москва.",
+     "ko": "저는 모스크바 출신입니다.",
+     "en": "I am from Moscow."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지 말하기",
+     "noteKo": "__ 위치에 도시 이름",
+     "nameEn": "Saying where you are from",
+     "noteEn": "Put city in ___"
+    }
+   ],
+   "related": [
+    "Я из ___."
+   ],
+   "quiz": {
+    "prompt": "Я из города ___.",
+    "answer": "Сеул"
+   }
+  },
+  {
+   "id": "ru-1-10",
+   "stage": 1,
+   "pattern": "Я учусь на ___.",
+   "meaningKo": "자신의 전공/직업 말하기",
+   "meaningEn": "Saying your major/job",
+   "examples": [
+    {
+     "text": "Я учусь на инженера.",
+     "ko": "저는 엔지니어를 전공해요.",
+     "en": "I study engineering."
+    },
+    {
+     "text": "Я учусь на врача.",
+     "ko": "저는 의사를 전공해요.",
+     "en": "I study medicine."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "전공/직업 말하기",
+     "noteKo": "__ 위치에 직업/전공",
+     "nameEn": "Saying job/major",
+     "noteEn": "Put job/major in ___"
+    }
+   ],
+   "related": [
+    "Я работаю ___."
+   ],
+   "quiz": {
+    "prompt": "Я учусь на ___.",
+    "answer": "студента"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "ru-2-01",
+   "stage": 2,
+   "pattern": "Вчера я был в ___.",
+   "meaningKo": "어제 어디에 있었는지 말하기",
+   "meaningEn": "Saying where you were yesterday",
+   "examples": [
+    {
+     "text": "Вчера я был в парке.",
+     "ko": "어제 나는 공원에 있었어.",
+     "en": "Yesterday I was at the park."
+    },
+    {
+     "text": "Вчера я был в магазине.",
+     "ko": "어제 나는 가게에 있었어.",
+     "en": "Yesterday I was at the store."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 동사",
+     "noteKo": "___에 들어갈 명사(장소)는 어디에 있었는지 나타낸다.",
+     "nameEn": "Past tense verb",
+     "noteEn": "Slot ___ is where you were."
+    }
+   ],
+   "related": [
+    "Я был в ___ на выходных."
+   ],
+   "quiz": {
+    "prompt": "Вчера я был в ___.",
+    "answer": "музее"
+   }
+  },
+  {
+   "id": "ru-2-02",
+   "stage": 2,
+   "pattern": "На выходных я поеду в ___.",
+   "meaningKo": "주말에 어디 갈지 말하기",
+   "meaningEn": "Saying where you will go at the weekend",
+   "examples": [
+    {
+     "text": "На выходных я поеду в деревню.",
+     "ko": "주말에 시골에 갈 거야.",
+     "en": "At the weekend I will go to the countryside."
+    },
+    {
+     "text": "На выходных я поеду в кино.",
+     "ko": "주말에 영화관에 갈 거야.",
+     "en": "At the weekend I will go to the movies."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 동사",
+     "noteKo": "___에 들어갈 명사(장소)는 어디에 갈지 나타낸다.",
+     "nameEn": "Future tense verb",
+     "noteEn": "Slot ___ is where you will go."
+    }
+   ],
+   "related": [
+    "Вчера я был в ___."
+   ],
+   "quiz": {
+    "prompt": "На выходных я поеду в ___.",
+    "answer": "горы"
+   }
+  },
+  {
+   "id": "ru-2-03",
+   "stage": 2,
+   "pattern": "Пойдём в ___?",
+   "meaningKo": "친구를 어디에 초대하기",
+   "meaningEn": "Inviting a friend to go somewhere",
+   "examples": [
+    {
+     "text": "Пойдём в кафе?",
+     "ko": "카페에 갈래?",
+     "en": "Shall we go to a café?"
+    },
+    {
+     "text": "Пойдём в парк?",
+     "ko": "공원에 갈래?",
+     "en": "Shall we go to the park?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___에 들어갈 명사(장소)는 어디에 갈 것인지 나타낸다.",
+     "nameEn": "Interrogative",
+     "noteEn": "Slot ___ is the place to invite to."
+    }
+   ],
+   "related": [
+    "Встретимся в ___ в ___."
+   ],
+   "quiz": {
+    "prompt": "Пойдём в ___?",
+    "answer": "музей"
+   }
+  },
+  {
+   "id": "ru-2-04",
+   "stage": 2,
+   "pattern": "Встретимся в ___ в ___.",
+   "meaningKo": "만날 장소와 시간 정하기",
+   "meaningEn": "Agreeing on a meeting place and time",
+   "examples": [
+    {
+     "text": "Встретимся в парке в шесть.",
+     "ko": "공원에서 6시에 만나자.",
+     "en": "Let's meet at the park at six."
+    },
+    {
+     "text": "Встретимся в кафе в три.",
+     "ko": "카페에서 3시에 만나자.",
+     "en": "Let's meet at the cafe at three."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소와 시간",
+     "noteKo": "첫 번째 ___은 장소, 두 번째 ___은 시간.",
+     "nameEn": "Place and time",
+     "noteEn": "First ___ is place, second ___ is time."
+    }
+   ],
+   "related": [
+    "Пойдём в ___?"
+   ],
+   "quiz": {
+    "prompt": "Встретимся в библиотеке в ___.",
+    "answer": "пять"
+   }
+  },
+  {
+   "id": "ru-2-05",
+   "stage": 2,
+   "pattern": "Можно мне ___?",
+   "meaningKo": "음식이나 물건을 주문하기",
+   "meaningEn": "Ordering food or asking for something",
+   "examples": [
+    {
+     "text": "Можно мне суп?",
+     "ko": "수프 주세요.",
+     "en": "Can I have soup?"
+    },
+    {
+     "text": "Можно мне чай?",
+     "ko": "차 주세요.",
+     "en": "Can I have tea?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "___에 들어갈 것은 원하는 음식이나 물건.",
+     "nameEn": "Polite request",
+     "noteEn": "Slot ___ is the item you want."
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Можно мне ___?",
+    "answer": "пирог"
+   }
+  },
+  {
+   "id": "ru-2-06",
+   "stage": 2,
+   "pattern": "У меня болит ___.",
+   "meaningKo": "어디가 아픈지 말하기",
+   "meaningEn": "Saying where it hurts",
+   "examples": [
+    {
+     "text": "У меня болит горло.",
+     "ko": "목이 아파요.",
+     "en": "My throat hurts."
+    },
+    {
+     "text": "У меня болит голова.",
+     "ko": "머리가 아파요.",
+     "en": "I have a headache."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "신체 부위 명사",
+     "noteKo": "___에 들어갈 것은 아픈 부위.",
+     "nameEn": "Body part noun",
+     "noteEn": "Slot ___ is the body part that hurts."
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "У меня болит ___.",
+    "answer": "живот"
+   }
+  },
+  {
+   "id": "ru-2-07",
+   "stage": 2,
+   "pattern": "Я хочу ___, потому что ___.",
+   "meaningKo": "하고 싶은 일과 이유 말하기",
+   "meaningEn": "Saying what you want to do and giving a reason",
+   "examples": [
+    {
+     "text": "Я хочу пить, потому что жарко.",
+     "ko": "덥기 때문에 물을 마시고 싶어요.",
+     "en": "I want to drink because it's hot."
+    },
+    {
+     "text": "Я хочу отдохнуть, потому что устал.",
+     "ko": "피곤해서 쉬고 싶어요.",
+     "en": "I want to rest because I am tired."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사 원형, 이유",
+     "noteKo": "첫 번째 ___은 하고 싶은 일(동사), 두 번째 ___은 이유.",
+     "nameEn": "Infinitive verb, reason",
+     "noteEn": "First ___ is what you want to do, second ___ is the reason."
+    }
+   ],
+   "related": [
+    "Я хочу ___."
+   ],
+   "quiz": {
+    "prompt": "Я хочу есть, потому что ___.",
+    "answer": "голоден"
+   }
+  },
+  {
+   "id": "ru-2-08",
+   "stage": 2,
+   "pattern": "Вчера я делал ___",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Saying what you did yesterday",
+   "examples": [
+    {
+     "text": "Вчера я делал домашнее задание",
+     "ko": "어제 나는 숙제를 했어",
+     "en": "Yesterday I did homework"
+    },
+    {
+     "text": "Вчера я делал покупки",
+     "ko": "어제 나는 쇼핑을 했어",
+     "en": "Yesterday I went shopping"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___에 들어가는 동사는 과거형",
+     "nameEn": "Past tense",
+     "noteEn": "The verb in ___ is in past tense"
+    }
+   ],
+   "related": [
+    "На выходных я буду ___"
+   ],
+   "quiz": {
+    "prompt": "Вчера я делал ___",
+    "answer": "домашнее задание"
+   }
+  },
+  {
+   "id": "ru-2-09",
+   "stage": 2,
+   "pattern": "На выходных я буду ___",
+   "meaningKo": "주말에 할 일을 말하기",
+   "meaningEn": "Saying what you will do at the weekend",
+   "examples": [
+    {
+     "text": "На выходных я буду отдыхать",
+     "ko": "주말에 나는 쉴 거야",
+     "en": "At the weekend I will rest"
+    },
+    {
+     "text": "На выходных я буду гулять",
+     "ko": "주말에 나는 산책할 거야",
+     "en": "At the weekend I will go for a walk"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 시제",
+     "noteKo": "___에 들어가는 동사는 원형",
+     "nameEn": "Future tense",
+     "noteEn": "The verb in ___ is infinitive"
+    }
+   ],
+   "related": [
+    "Вчера я делал ___"
+   ],
+   "quiz": {
+    "prompt": "На выходных я буду ___",
+    "answer": "отдыхать"
+   }
+  },
+  {
+   "id": "ru-2-10",
+   "stage": 2,
+   "pattern": "Давай встретимся в ___",
+   "meaningKo": "만날 장소를 제안하기",
+   "meaningEn": "Suggesting a place to meet",
+   "examples": [
+    {
+     "text": "Давай встретимся в парке",
+     "ko": "공원에서 만나자",
+     "en": "Let's meet at the park"
+    },
+    {
+     "text": "Давай встретимся в кафе",
+     "ko": "카페에서 만나자",
+     "en": "Let's meet at the cafe"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "전치격",
+     "noteKo": "___에 들어가는 장소는 전치격",
+     "nameEn": "Prepositional case",
+     "noteEn": "The place in ___ is in prepositional case"
+    }
+   ],
+   "related": [
+    "Давай встретимся в ___ в ___"
+   ],
+   "quiz": {
+    "prompt": "Давай встретимся в ___",
+    "answer": "кафе"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "ru-3-01",
+   "stage": 3,
+   "pattern": "У меня в номере не работает ___, можете пожалуйста ___?",
+   "meaningKo": "호텔에서 문제 신고하고 해결 요청하기",
+   "meaningEn": "Reporting a problem at a hotel and asking for help",
+   "examples": [
+    {
+     "text": "У меня в номере не работает кондиционер, можете пожалуйста починить?",
+     "ko": "방에서 에어컨이 안 돼요, 고쳐 주실 수 있나요?",
+     "en": "The air conditioner isn't working in my room, could you please fix it?"
+    },
+    {
+     "text": "У меня в номере не работает телевизор, можете пожалуйста посмотреть?",
+     "ko": "방에서 TV가 안 돼요, 확인해 주실 수 있나요?",
+     "en": "The TV isn't working in my room, could you please take a look?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사 не работает",
+     "noteKo": "첫 번째 ___에 고장난 것이 들어감",
+     "nameEn": "Negation with не работает",
+     "noteEn": "First ___ is the broken thing"
+    },
+    {
+     "nameKo": "정중한 부탁 можете пожалуйста",
+     "noteKo": "두 번째 ___에 원하는 행동이 들어감",
+     "nameEn": "Polite request with можете пожалуйста",
+     "noteEn": "Second ___ is the action you want"
+    }
+   ],
+   "related": [
+    "Можно поменять ___?",
+    "В номере нет ___"
+   ],
+   "quiz": {
+    "prompt": "У меня в номере не работает кондиционер, можете пожалуйста ___?",
+    "answer": "починить"
+   }
+  },
+  {
+   "id": "ru-3-02",
+   "stage": 3,
+   "pattern": "Если бы ___, я бы ___",
+   "meaningKo": "다른 상황을 가정해서 말하기",
+   "meaningEn": "Talking about a hypothetical situation",
+   "examples": [
+    {
+     "text": "Если бы я не опоздал, я бы успел на начало фильма.",
+     "ko": "내가 늦지 않았다면 영화 시작을 맞췄을 텐데.",
+     "en": "If I hadn’t been late, I would have made it to the start of the movie."
+    },
+    {
+     "text": "Если бы было тепло, я бы пошёл гулять.",
+     "ko": "날씨가 따뜻했다면 산책하러 갔을 거야.",
+     "en": "If it were warm, I would go for a walk."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거",
+     "noteKo": "첫 번째 ___에 과거 상황이나 조건이 들어감, 두 번째 ___에 그 결과가 들어감",
+     "nameEn": "Subjunctive past (conditional)",
+     "noteEn": "First ___ is the unreal condition, second ___ is the hypothetical result"
+    }
+   ],
+   "related": [
+    "Если бы у меня был ___, я бы ___"
+   ],
+   "quiz": {
+    "prompt": "Если бы я знал, я бы ___",
+    "answer": "пришёл раньше"
+   }
+  },
+  {
+   "id": "ru-3-03",
+   "stage": 3,
+   "pattern": "Извини, я опоздал, потому что ___",
+   "meaningKo": "지각한 이유 설명하기",
+   "meaningEn": "Explaining why you were late",
+   "examples": [
+    {
+     "text": "Извини, я опоздал, потому что попал в пробку.",
+     "ko": "미안, 교통 체증 때문에 늦었어.",
+     "en": "Sorry, I was late because I got stuck in traffic."
+    },
+    {
+     "text": "Извини, я опоздал, потому что долго искал парковку.",
+     "ko": "미안, 주차장 찾느라 오래 걸렸어.",
+     "en": "Sorry, I was late because I was looking for parking for a long time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이유 접속사 потому что",
+     "noteKo": "___ 자리에 이유가 들어감",
+     "nameEn": "Because-clause",
+     "noteEn": "___ is a reason in the past"
+    }
+   ],
+   "related": [
+    "Я опоздал из-за ___"
+   ],
+   "quiz": {
+    "prompt": "Извини, я опоздал, потому что ___",
+    "answer": "проспал"
+   }
+  },
+  {
+   "id": "ru-3-04",
+   "stage": 3,
+   "pattern": "По-моему, ___, но могу ошибаться",
+   "meaningKo": "의견을 조심스럽게 말하기",
+   "meaningEn": "Giving a softened opinion",
+   "examples": [
+    {
+     "text": "По-моему, этот сериал интересный, но могу ошибаться.",
+     "ko": "내 생각엔 이 시리즈가 재밌는 것 같아요, 하지만 틀릴 수도 있어요.",
+     "en": "In my opinion, this series is interesting, but I could be wrong."
+    },
+    {
+     "text": "По-моему, он уже ушёл, но могу ошибаться.",
+     "ko": "내 생각엔 그는 이미 떠난 것 같아요, 하지만 아닐 수도 있어요.",
+     "en": "In my opinion, he has already left, but I could be wrong."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현 по-моему",
+     "noteKo": "___에 자신의 의견이나 추측이 들어감",
+     "nameEn": "Softening an opinion",
+     "noteEn": "___ is your opinion or guess"
+    }
+   ],
+   "related": [
+    "Мне кажется, что ___"
+   ],
+   "quiz": {
+    "prompt": "По-моему, ___, но могу ошибаться",
+    "answer": "он прав"
+   }
+  },
+  {
+   "id": "ru-3-05",
+   "stage": 3,
+   "pattern": "Мне кажется, что ___, а тебе?",
+   "meaningKo": "의견 묻고 대화 이어가기",
+   "meaningEn": "Giving an opinion and asking for the other’s",
+   "examples": [
+    {
+     "text": "Мне кажется, что отчёт слишком длинный, а тебе?",
+     "ko": "보고서가 너무 긴 것 같아요, 너는 어떻게 생각해?",
+     "en": "I think the report is too long, what about you?"
+    },
+    {
+     "text": "Мне кажется, что фильм был скучный, а тебе?",
+     "ko": "영화가 지루했던 것 같은데, 너는?",
+     "en": "I think the movie was boring, what about you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현 мне кажется, что",
+     "noteKo": "___에 생각하는 내용을 넣음",
+     "nameEn": "Expressing opinion with мне кажется",
+     "noteEn": "___ is the thing you think"
+    }
+   ],
+   "related": [
+    "По-моему, ___"
+   ],
+   "quiz": {
+    "prompt": "Мне кажется, что ___, а тебе?",
+    "answer": "он устал"
+   }
+  },
+  {
+   "id": "ru-3-06",
+   "stage": 3,
+   "pattern": "Ты можешь помочь мне с ___?",
+   "meaningKo": "친구에게 도움 요청하기",
+   "meaningEn": "Asking a friend for help",
+   "examples": [
+    {
+     "text": "Ты можешь помочь мне с отчётом?",
+     "ko": "보고서 도와줄 수 있어?",
+     "en": "Can you help me with the report?"
+    },
+    {
+     "text": "Ты можешь помочь мне с домашней работой?",
+     "ko": "숙제 좀 도와줄 수 있어?",
+     "en": "Can you help me with my homework?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "도움 요청 표현",
+     "noteKo": "___에 필요한 일을 넣음",
+     "nameEn": "Asking for help",
+     "noteEn": "___ is the thing you need help with"
+    }
+   ],
+   "related": [
+    "Вы не могли бы помочь мне с ___?"
+   ],
+   "quiz": {
+    "prompt": "Ты можешь помочь мне с ___?",
+    "answer": "проектором"
+   }
+  },
+  {
+   "id": "ru-3-07",
+   "stage": 3,
+   "pattern": "Вы не могли бы ___?",
+   "meaningKo": "정중하게 부탁하기 (낯선 사람에게)",
+   "meaningEn": "Politely asking a stranger to do something",
+   "examples": [
+    {
+     "text": "Вы не могли бы открыть окно?",
+     "ko": "창문 좀 열어 주실 수 있나요?",
+     "en": "Could you open the window?"
+    },
+    {
+     "text": "Вы не могли бы объяснить это ещё раз?",
+     "ko": "이것을 다시 설명해 주실 수 있나요?",
+     "en": "Could you explain this one more time?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 부탁 표현",
+     "noteKo": "___에 원하는 행동(동사)이 들어감",
+     "nameEn": "Polite request",
+     "noteEn": "___ is the action you ask for"
+    }
+   ],
+   "related": [
+    "Могли бы вы ___?"
+   ],
+   "quiz": {
+    "prompt": "Вы не могли бы ___?",
+    "answer": "повторить"
+   }
+  },
+  {
+   "id": "ru-3-08",
+   "stage": 3,
+   "pattern": "Я всегда смотрю ___, когда у меня есть свободное время.",
+   "meaningKo": "취미나 반복 습관 말하기",
+   "meaningEn": "Talking about a regular habit or hobby",
+   "examples": [
+    {
+     "text": "Я всегда смотрю сериалы, когда у меня есть свободное время.",
+     "ko": "나는 시간이 있을 때 항상 드라마를 봐.",
+     "en": "I always watch series when I have free time."
+    },
+    {
+     "text": "Я всегда смотрю новости, когда у меня есть свободное время.",
+     "ko": "나는 시간이 있으면 항상 뉴스를 봐.",
+     "en": "I always watch the news when I have free time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "습관 표현 всегда смотрю",
+     "noteKo": "___에 보는 대상이 들어감",
+     "nameEn": "Expressing regular activity",
+     "noteEn": "___ is what you watch"
+    }
+   ],
+   "related": [
+    "Обычно я слушаю ___"
+   ],
+   "quiz": {
+    "prompt": "Я всегда смотрю ___, когда у меня есть свободное время.",
+    "answer": "аниме"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "ru-4-01",
+   "stage": 4,
+   "pattern": "С одной стороны, ___, а с другой — ___.",
+   "meaningKo": "장단점을 나열해서 비교하기",
+   "meaningEn": "Weighing pros and cons",
+   "examples": [
+    {
+     "text": "С одной стороны, переезд даст новые возможности, а с другой — придётся всё начинать сначала.",
+     "ko": "한편으로는 이사가 새로운 기회를 줄 수 있지만, 다른 한편으로는 모든 것을 처음부터 시작해야 해.",
+     "en": "On one hand, moving will give new opportunities, but on the other, you'll have to start everything from scratch."
+    },
+    {
+     "text": "С одной стороны, работа из дома экономит время, а с другой — не хватает общения.",
+     "ko": "한편 재택근무는 시간을 절약하지만, 다른 한편으로는 소통이 부족해.",
+     "en": "On one hand, working from home saves time, but on the other, there’s a lack of interaction."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구 또는 동사구 대조",
+     "noteKo": "두 개의 대조되는 상황을 각각 빈칸에 넣음",
+     "nameEn": "Contrasting noun or verb phrases",
+     "noteEn": "Each slot is for a contrasting situation"
+    }
+   ],
+   "related": [
+    "Сначала я думал ___, но потом понял, что ___",
+    "Если рассмотреть плюсы и минусы ___, то ___"
+   ],
+   "quiz": {
+    "prompt": "С одной стороны, ___, а с другой — это рискованно.",
+    "answer": "предложение сменить работу"
+   }
+  },
+  {
+   "id": "ru-4-02",
+   "stage": 4,
+   "pattern": "Он сказал, что ___, и спросил, ___ ли ___.",
+   "meaningKo": "누군가의 말을 전하고 질문을 재구성하기",
+   "meaningEn": "Retelling what someone said and asked",
+   "examples": [
+    {
+     "text": "Он сказал, что проект почти готов, и спросил, успеем ли мы к пятнице.",
+     "ko": "그는 프로젝트가 거의 끝났다고 말했고, 우리가 금요일까지 끝낼 수 있는지 물었어요.",
+     "en": "He said the project was almost ready and asked if we would finish by Friday."
+    },
+    {
+     "text": "Он сказал, что хочет переехать, и спросил, поддержу ли я его решение.",
+     "ko": "그는 이사하고 싶다고 말했고, 내가 그의 결정을 지지할지 물었어요.",
+     "en": "He said he wanted to move and asked if I would support his decision."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "что절, ли문",
+     "noteKo": "첫 빈칸은 진술, 두 번째와 세 번째는 질문에서 사용",
+     "nameEn": "что-clause, ли-question",
+     "noteEn": "First slot is a statement, second/third are for the question"
+    }
+   ],
+   "related": [
+    "Он спросил, ___ ли ___",
+    "Она сказала, что ___"
+   ],
+   "quiz": {
+    "prompt": "Он сказал, что продукт сломан, и спросил, можно ли ___ вернуть.",
+    "answer": "его"
+   }
+  },
+  {
+   "id": "ru-4-03",
+   "stage": 4,
+   "pattern": "В статье говорится, что ___, а я считаю, что ___.",
+   "meaningKo": "기사 요약 후 의견 제시",
+   "meaningEn": "Summarizing a news story and giving your view",
+   "examples": [
+    {
+     "text": "В статье говорится, что удалённая работа стала популярнее, а я считаю, что это не для всех.",
+     "ko": "기사에서는 재택근무가 더 인기를 끌고 있다고 했지만, 나는 모두에게 맞지 않다고 생각해.",
+     "en": "The article says remote work is becoming more popular, but I think it's not for everyone."
+    },
+    {
+     "text": "В статье говорится, что аренда дорожает, а я считаю, что нужны государственные меры.",
+     "ko": "기사에서 임대료가 오르고 있다고 했고, 나는 정부 대책이 필요하다고 생각해.",
+     "en": "The article says rent is getting more expensive, and I believe government action is needed."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "что절",
+     "noteKo": "첫 빈칸은 기사 요약, 두 번째는 자신의 의견",
+     "nameEn": "что-clause",
+     "noteEn": "First slot is summary, second is your opinion"
+    }
+   ],
+   "related": [
+    "СМИ сообщают, что ___",
+    "Согласно статье, ___"
+   ],
+   "quiz": {
+    "prompt": "В статье говорится, что ___, а я считаю, что решение сложное.",
+    "answer": "работать из дома стало проще"
+   }
+  },
+  {
+   "id": "ru-4-04",
+   "stage": 4,
+   "pattern": "В современном обществе ___ остаётся серьёзной проблемой, например, ___.",
+   "meaningKo": "사회 문제와 예시 제시하기",
+   "meaningEn": "Talking about a social problem with examples",
+   "examples": [
+    {
+     "text": "В современном обществе одиночество остаётся серьёзной проблемой, например, многие люди живут одни.",
+     "ko": "현대 사회에서 외로움이 큰 문제이며, 예를 들어 많은 사람들이 혼자 삽니다.",
+     "en": "Loneliness remains a serious problem in modern society; for example, many people live alone."
+    },
+    {
+     "text": "В современном обществе безработица остаётся серьёзной проблемой, например, молодёжь сложно находит работу.",
+     "ko": "현대 사회에서 실업이 심각한 문제이고, 예를 들어 청년들은 취업이 어렵다.",
+     "en": "Unemployment is still a serious problem in modern society; for example, young people struggle to find jobs."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/동명사, 예시",
+     "noteKo": "첫 빈칸은 문제, 두 번째는 구체적 예시",
+     "nameEn": "Noun/gerund, example",
+     "noteEn": "First slot is the problem, second is the example"
+    }
+   ],
+   "related": [
+    "Одной из главных проблем сейчас является ___, например, ___",
+    "Сегодня многие сталкиваются с ___, например, ___"
+   ],
+   "quiz": {
+    "prompt": "В современном обществе ___ остаётся серьёзной проблемой, например, это видно в больших городах.",
+    "answer": "загрязнение воздуха"
+   }
+  },
+  {
+   "id": "ru-4-05",
+   "stage": 4,
+   "pattern": "Я склоняюсь к ___, потому что ___.",
+   "meaningKo": "결정의 장단점을 평가하고 어느 쪽에 기울었는지 말하기",
+   "meaningEn": "Weighing pros and cons and saying which way you lean",
+   "examples": [
+    {
+     "text": "Я склоняюсь к переезду, потому что там больше возможностей.",
+     "ko": "저는 이사 쪽으로 기울고 있어요. 왜냐하면 그곳에 더 많은 기회가 있기 때문이에요.",
+     "en": "I'm leaning toward moving because there are more opportunities there."
+    },
+    {
+     "text": "Я склоняюсь к тому, чтобы остаться, потому что здесь у меня друзья.",
+     "ko": "저는 남는 쪽으로 기울고 있어요. 여기 친구들이 있기 때문이에요.",
+     "en": "I'm leaning toward staying because I have friends here."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사의 명사형 또는 명사",
+     "noteKo": "첫 번째 빈칸은 명사 또는 동사의 명사형",
+     "nameEn": "Noun or verbal noun",
+     "noteEn": "First blank is a noun or verbal noun"
+    },
+    {
+     "nameKo": "이유를 나타내는 절",
+     "noteKo": "두 번째 빈칸에는 이유를 나타내는 문장",
+     "nameEn": "Reason clause",
+     "noteEn": "Second blank is a reason clause"
+    }
+   ],
+   "related": [
+    "Я выбираю ___, потому что ___",
+    "Мне больше нравится ___, так как ___"
+   ],
+   "quiz": {
+    "prompt": "Я склоняюсь к ___, потому что это быстрее.",
+    "answer": "раннему завершению"
+   }
+  },
+  {
+   "id": "ru-4-06",
+   "stage": 4,
+   "pattern": "Позвольте не согласиться с ___ по поводу ___.",
+   "meaningKo": "회의에서 공손하게 반대 의견 제시하기",
+   "meaningEn": "Disagreeing politely in a meeting",
+   "examples": [
+    {
+     "text": "Позвольте не согласиться с этим решением по поводу сроков.",
+     "ko": "이 결정에 관해서는 일정에 대해 동의하지 않을 수 있습니다.",
+     "en": "Allow me to disagree with this decision regarding the deadlines."
+    },
+    {
+     "text": "Позвольте не согласиться с вашим мнением по поводу бюджета.",
+     "ko": "예산에 대한 당신의 의견에 공손히 동의하지 않겠습니다.",
+     "en": "Let me respectfully disagree with your opinion about the budget."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 또는 대명사",
+     "noteKo": "첫 번째 빈칸은 사람, 의견 등",
+     "nameEn": "Noun or pronoun",
+     "noteEn": "First blank is a person, opinion, etc."
+    },
+    {
+     "nameKo": "주제 명사",
+     "noteKo": "두 번째 빈칸은 논의 주제",
+     "nameEn": "Topic noun",
+     "noteEn": "Second blank is the discussion topic"
+    }
+   ],
+   "related": [
+    "Я не совсем согласен с ___ по поводу ___",
+    "С вашего разрешения, я выражу другое мнение о ___"
+   ],
+   "quiz": {
+    "prompt": "Позвольте не согласиться с вашим предложением по поводу ___.",
+    "answer": "сроков"
+   }
+  },
+  {
+   "id": "ru-4-07",
+   "stage": 4,
+   "pattern": "Он сказал, что ___, и попросил ___.",
+   "meaningKo": "누군가가 한 말과 요청을 전달하기",
+   "meaningEn": "Reporting what someone said and asked",
+   "examples": [
+    {
+     "text": "Он сказал, что не сможет прийти, и попросил перенести встречу.",
+     "ko": "그는 올 수 없다고 말했고, 회의를 미뤄 달라고 부탁했어요.",
+     "en": "He said he couldn't come and asked to reschedule the meeting."
+    },
+    {
+     "text": "Он сказал, что уже отправил документы, и попросил подтвердить получение.",
+     "ko": "그는 이미 서류를 보냈다고 말하며, 수령을 확인해 달라고 부탁했어요.",
+     "en": "He said he had already sent the documents and asked to confirm receipt."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접화법 명사절",
+     "noteKo": "첫 번째 빈칸은 간접화법 내용",
+     "nameEn": "Reported speech clause",
+     "noteEn": "First blank is what was said"
+    },
+    {
+     "nameKo": "요청 내용",
+     "noteKo": "두 번째 빈칸은 요청, 부탁",
+     "nameEn": "Request clause",
+     "noteEn": "Second blank is what was asked"
+    }
+   ],
+   "related": [
+    "Он спросил, ___ ли ___",
+    "Она попросила, чтобы ___"
+   ],
+   "quiz": {
+    "prompt": "Он сказал, что не знает, и попросил ___.",
+    "answer": "объяснить"
+   }
+  },
+  {
+   "id": "ru-4-08",
+   "stage": 4,
+   "pattern": "Я хотел бы оформить возврат, потому что ___ и получить ___.",
+   "meaningKo": "문제를 이유로 환불이나 교환 요청하기",
+   "meaningEn": "Making a formal complaint and requesting refund or exchange",
+   "examples": [
+    {
+     "text": "Я хотел бы оформить возврат, потому что товар неисправен и получить деньги обратно.",
+     "ko": "상품에 문제가 있어서 환불을 받고 싶어요.",
+     "en": "I would like to request a return because the item is faulty and get my money back."
+    },
+    {
+     "text": "Я хотел бы оформить возврат, потому что заказ неполный и получить обмен.",
+     "ko": "주문이 불완전해서 교환을 받고 싶어요.",
+     "en": "I would like to request a return because the order is incomplete and get an exchange."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이유를 나타내는 절",
+     "noteKo": "첫 번째 빈칸은 불만의 이유",
+     "nameEn": "Reason clause",
+     "noteEn": "First blank is the reason for complaint"
+    },
+    {
+     "nameKo": "요청 결과",
+     "noteKo": "두 번째 빈칸에는 환불, 교환 등 원하는 결과",
+     "nameEn": "Desired outcome",
+     "noteEn": "Second blank is the requested outcome"
+    }
+   ],
+   "related": [
+    "Я хотел бы обменять ___, потому что ___",
+    "Прошу вернуть деньги за ___, так как ___"
+   ],
+   "quiz": {
+    "prompt": "Я хотел бы оформить возврат, потому что товар повреждён и получить ___.",
+    "answer": "деньги обратно"
+   }
+  },
+  {
+   "id": "ru-4-09",
+   "stage": 4,
+   "pattern": "В новости говорилось, что ___, а я считаю, что ___.",
+   "meaningKo": "뉴스 내용을 요약하고 자신의 의견 말하기",
+   "meaningEn": "Summarizing a news story and giving your view",
+   "examples": [
+    {
+     "text": "В новости говорилось, что компании переходят на удалёнку, а я считаю, что это удобно.",
+     "ko": "뉴스에서는 회사들이 재택근무로 전환하고 있다고 했고, 저는 그것이 편리하다고 생각해요.",
+     "en": "The news said that companies are switching to remote work, and I think it's convenient."
+    },
+    {
+     "text": "В новости говорилось, что цены растут, а я считаю, что это проблема.",
+     "ko": "뉴스에서는 가격이 오르고 있다고 했고, 저는 그것이 문제라고 생각해요.",
+     "en": "The news said that prices are rising, and I think it's a problem."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접화법 명사절",
+     "noteKo": "첫 번째 빈칸은 뉴스의 내용",
+     "nameEn": "Reported clause",
+     "noteEn": "First blank is the news content"
+    },
+    {
+     "nameKo": "자신의 의견",
+     "noteKo": "두 번째 빈칸은 자신의 생각",
+     "nameEn": "Opinion clause",
+     "noteEn": "Second blank is your opinion"
+    }
+   ],
+   "related": [
+    "В статье говорится, что ___, однако я думаю, что ___",
+    "СМИ сообщили, что ___, а я считаю, что ___"
+   ],
+   "quiz": {
+    "prompt": "В новости говорилось, что удалённая работа становится популярной, а я считаю, что ___.",
+    "answer": "это хорошо"
+   }
+  },
+  {
+   "id": "ru-4-10",
+   "stage": 4,
+   "pattern": "Проблема ___ проявляется, например, в ___.",
+   "meaningKo": "사회 문제를 예시와 함께 말하기",
+   "meaningEn": "Talking about a social problem with examples",
+   "examples": [
+    {
+     "text": "Проблема безработицы проявляется, например, в росте числа людей без работы.",
+     "ko": "실업 문제는 예를 들어 일자리 없는 사람들의 증가에서 드러납니다.",
+     "en": "The problem of unemployment is evident, for example, in the growing number of people without jobs."
+    },
+    {
+     "text": "Проблема загрязнения проявляется, например, в плохом качестве воздуха.",
+     "ko": "오염 문제는 나쁜 공기질에서 드러나요.",
+     "en": "The problem of pollution is evident, for example, in the poor air quality."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제의 명사",
+     "noteKo": "첫 번째 빈칸은 사회 문제의 명사",
+     "nameEn": "Problem noun",
+     "noteEn": "First blank is a social problem noun"
+    },
+    {
+     "nameKo": "예시 명사 또는 명사구",
+     "noteKo": "두 번째 빈칸은 구체적인 예시",
+     "nameEn": "Example noun or noun phrase",
+     "noteEn": "Second blank is a concrete example"
+    }
+   ],
+   "related": [
+    "Одной из проблем общества является ___, например, ___",
+    "___ остаётся серьёзной проблемой, например, ___"
+   ],
+   "quiz": {
+    "prompt": "Проблема бедности проявляется, например, в ___.",
+    "answer": "отсутствии жилья"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "ru-5-01",
+   "stage": 5,
+   "pattern": "Ой, коллега, боюсь, если я возьмусь за ___, то совсем не останется времени на ___.",
+   "meaningKo": "정중하게 요청을 거절하면서 관계를 유지하기",
+   "meaningEn": "Turning down a request politely while keeping the relationship warm",
+   "examples": [
+    {
+     "text": "Ой, коллега, боюсь, если я возьмусь за этот проект, то совсем не останется времени на основной отчёт.",
+     "ko": "동료야, 내가 이 프로젝트를 맡으면 주요 보고서에 쓸 시간이 전혀 없어질 것 같아.",
+     "en": "Colleague, I'm afraid if I take on this project, I won't have any time left for the main report."
+    },
+    {
+     "text": "Ой, коллега, боюсь, если я возьмусь за новые задачи, то совсем не останется времени на текущую работу.",
+     "ko": "새 업무를 맡으면 현재 일에 쓸 시간이 전혀 없을 것 같아.",
+     "en": "If I take on new tasks, I won't have any time left for my current work."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "첫 번째 빈칸(조건에 해당)",
+     "nameEn": "Conditional",
+     "noteEn": "First blank (condition)"
+    },
+    {
+     "nameKo": "결과절",
+     "noteKo": "두 번째 빈칸(결과에 해당)",
+     "nameEn": "Result clause",
+     "noteEn": "Second blank (result)"
+    }
+   ],
+   "related": [
+    "Если бы ___, я бы ___",
+    "Я бы с радостью, но сейчас у меня уже ___, поэтому не смогу помочь."
+   ],
+   "quiz": {
+    "prompt": "Ой, коллега, боюсь, если я возьмусь за ___, то совсем не останется времени на отчёты.",
+    "answer": "эту задачу"
+   }
+  },
+  {
+   "id": "ru-5-02",
+   "stage": 5,
+   "pattern": "Официально это называется ___, но по-простому — это просто ___.",
+   "meaningKo": "공식적, 중립적, 구어체 표현을 상황에 따라 바꿔 말하기",
+   "meaningEn": "Shifting between official, neutral, and colloquial Russian in conversation",
+   "examples": [
+    {
+     "text": "Официально это называется перераспределение ресурсов, но по-простому — это просто делёжка.",
+     "ko": "공식적으로는 자원 재분배라고 하지만, 쉽게 말하면 그냥 나눠 갖기야.",
+     "en": "Officially it's called resource redistribution, but simply put, it's just sharing things out."
+    },
+    {
+     "text": "Официально это называется реструктуризация штата, но по-простому — это просто увольнения.",
+     "ko": "공식적으로는 인력 구조조정이라고 하지만, 쉽게 말하면 해고지.",
+     "en": "Officially it's called staff restructuring, but simply put, it's just layoffs."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명명",
+     "noteKo": "첫 번째 빈칸은 공식 용어",
+     "nameEn": "Naming",
+     "noteEn": "First blank: official term"
+    },
+    {
+     "nameKo": "구어적 설명",
+     "noteKo": "두 번째 빈칸은 구어체 표현",
+     "nameEn": "Colloquial explanation",
+     "noteEn": "Second blank: colloquial meaning"
+    }
+   ],
+   "related": [
+    "На официальном языке это ___, а для нас это просто ___."
+   ],
+   "quiz": {
+    "prompt": "Официально это называется ___, но по-простому — это просто формальность.",
+    "answer": "процедура согласования"
+   }
+  },
+  {
+   "id": "ru-5-03",
+   "stage": 5,
+   "pattern": "Ну, как говорится, ___ — ___, а жизнь — совсем другое.",
+   "meaningKo": "적절한 순간에 속담이나 관용구 사용하기",
+   "meaningEn": "Using idioms or sayings at the right moment",
+   "examples": [
+    {
+     "text": "Ну, как говорится, легко сказать — трудно сделать, а жизнь — совсем другое.",
+     "ko": "말은 쉽고 행동은 어렵다고 하잖아, 인생은 정말 다르지.",
+     "en": "As they say, easier said than done, and life is something else entirely."
+    },
+    {
+     "text": "Ну, как говорится, учиться — свет, а жизнь — совсем другое.",
+     "ko": "배우는 건 빛이라고들 하지만, 인생은 완전히 달라.",
+     "en": "As they say, learning is light, but life is quite another thing."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구",
+     "noteKo": "두 빈칸 모두 속담이나 관용구 일부로 사용",
+     "nameEn": "Idiom",
+     "noteEn": "Both blanks are parts of a saying"
+    }
+   ],
+   "related": [
+    "Как говорится, ___ — ___, но у нас всё наоборот."
+   ],
+   "quiz": {
+    "prompt": "Ну, как говорится, терпение — ___, а жизнь — совсем другое.",
+    "answer": "и труд всё перетрут"
+   }
+  },
+  {
+   "id": "ru-5-04",
+   "stage": 5,
+   "pattern": "— Как тебе ___? — Ну, честно говоря, мне ___, но я рад, что тебе понравилось.",
+   "meaningKo": "상대방의 취향을 존중하며 솔직하게 의견 말하기",
+   "meaningEn": "Expressing your honest view while respecting the other person's taste",
+   "examples": [
+    {
+     "text": "— Как тебе фильм? — Ну, честно говоря, мне не очень, но я рад, что тебе понравилось.",
+     "ko": "— 영화 어땠어? — 솔직히 난 별로였지만, 네가 좋아해서 기뻐.",
+     "en": "— How was the film? — Honestly, not really my thing, but I'm glad you liked it."
+    },
+    {
+     "text": "— Как тебе вечеринка? — Ну, честно говоря, мне скучно, но я рад, что тебе понравилось.",
+     "ko": "— 파티 어땠어? — 솔직히 난 심심했지만, 네가 즐거웠다니 기뻐.",
+     "en": "— How was the party? — Honestly, I was bored, but I'm happy you enjoyed it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주제 질문",
+     "noteKo": "첫 번째 빈칸에 영화, 파티 등 주제",
+     "nameEn": "Subject question",
+     "noteEn": "First blank: topic of the question"
+    },
+    {
+     "nameKo": "개인 감정",
+     "noteKo": "두 번째 빈칸에 자신의 느낌",
+     "nameEn": "Personal feeling",
+     "noteEn": "Second blank: your own feeling"
+    }
+   ],
+   "related": [
+    "Ну, если честно, мне ___, но это только моё мнение."
+   ],
+   "quiz": {
+    "prompt": "— Как тебе поездка? — Ну, честно говоря, мне ___, но я рад, что тебе понравилось.",
+    "answer": "тяжело"
+   }
+  },
+  {
+   "id": "ru-5-05",
+   "stage": 5,
+   "pattern": "Я бы с радостью, но сейчас у меня уже ___, поэтому не смогу помочь.",
+   "meaningKo": "정중하게 부탁을 거절하며 이유 설명하기",
+   "meaningEn": "Politely turning down a request and giving a reason",
+   "examples": [
+    {
+     "text": "Я бы с радостью, но сейчас у меня уже проект, поэтому не смогу помочь.",
+     "ko": "기꺼이 하고 싶지만, 지금 이미 프로젝트가 있어서 도와줄 수 없어.",
+     "en": "I'd love to, but I already have a project now, so I can't help."
+    },
+    {
+     "text": "Я бы с радостью, но сейчас у меня уже встреча, поэтому не смогу помочь.",
+     "ko": "정말 하고 싶지만, 지금 이미 약속이 있어서 도와줄 수 없어.",
+     "en": "I'd be glad to, but I already have a meeting now, so I can't help."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건법",
+     "noteKo": "처음 빈칸은 상황/일정에 대해 씀",
+     "nameEn": "conditional mood",
+     "noteEn": "The slot is for a current commitment or task"
+    }
+   ],
+   "related": [
+    "Если бы было возможно, я бы ___, но ___"
+   ],
+   "quiz": {
+    "prompt": "Я бы с радостью, но сейчас у меня уже ___, поэтому не смогу помочь.",
+    "answer": "работа"
+   }
+  },
+  {
+   "id": "ru-5-06",
+   "stage": 5,
+   "pattern": "Ну конечно, ___ — кто бы мог сомневаться!",
+   "meaningKo": "비꼬거나 아이러니하게 동의하기",
+   "meaningEn": "Expressing irony or sarcasm in agreement",
+   "examples": [
+    {
+     "text": "Ну конечно, он всё сделал сам — кто бы мог сомневаться!",
+     "ko": "당연히 그가 다 했지, 의심할 사람 없지!",
+     "en": "Of course, he did everything himself — who could doubt it!"
+    },
+    {
+     "text": "Ну конечно, все были в восторге — кто бы мог сомневаться!",
+     "ko": "물론 모두가 감탄했지, 누가 의심했겠어!",
+     "en": "Sure, everyone was delighted — who could doubt it!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "아이러니",
+     "noteKo": "빈칸에 사실과 다르거나 과장된 내용을 씀",
+     "nameEn": "irony/sarcasm",
+     "noteEn": "Slot is for the ironic or exaggerated claim"
+    }
+   ],
+   "related": [
+    "Ну да, ___, как же иначе"
+   ],
+   "quiz": {
+    "prompt": "Ну конечно, ___ — кто бы мог сомневаться!",
+    "answer": "он всё понял"
+   }
+  },
+  {
+   "id": "ru-5-07",
+   "stage": 5,
+   "pattern": "Слушай, ты ведь знаешь, что ___, да?",
+   "meaningKo": "이미 알고 있는 사실을 강조하며 확인하기",
+   "meaningEn": "Emphasizing and checking something the listener knows",
+   "examples": [
+    {
+     "text": "Слушай, ты ведь знаешь, что я тебя всегда поддержу, да?",
+     "ko": "있잖아, 내가 항상 네 편인 거 알지?",
+     "en": "Listen, you know I'll always support you, right?"
+    },
+    {
+     "text": "Слушай, ты ведь знаешь, что завтра собрание отменили, да?",
+     "ko": "있잖아, 내일 회의 취소된 거 알지?",
+     "en": "Hey, you know the meeting was canceled tomorrow, right?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "ведь 강조",
+     "noteKo": "빈칸에 이미 알려진 사실을 씀",
+     "nameEn": "ved' for emphasis",
+     "noteEn": "Slot is for something the listener likely knows"
+    }
+   ],
+   "related": [
+    "Ты же понимаешь, что ___"
+   ],
+   "quiz": {
+    "prompt": "Слушай, ты ведь знаешь, что ___, да?",
+    "answer": "экзамен перенесли"
+   }
+  },
+  {
+   "id": "ru-5-08",
+   "stage": 5,
+   "pattern": "Ты же понимаешь, что ___ — никто не идеален.",
+   "meaningKo": "상대방을 위로하며 이해를 표현하기",
+   "meaningEn": "Comforting and expressing understanding",
+   "examples": [
+    {
+     "text": "Ты же понимаешь, что ошибаться — никто не идеален.",
+     "ko": "실수하는 건 당연해, 완벽한 사람 없으니까.",
+     "en": "You know, making mistakes is normal — nobody's perfect."
+    },
+    {
+     "text": "Ты же понимаешь, что иногда бывает тяжело — никто не идеален.",
+     "ko": "가끔 힘든 건 당연해, 완벽한 사람 없으니까.",
+     "en": "You know, sometimes it's tough — nobody's perfect."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "же 강조, 위로 표현",
+     "noteKo": "빈칸에 상대가 겪는 어려움이나 실수를 씀",
+     "nameEn": "zhe for emphasis, comforting",
+     "noteEn": "Slot is what the person is experiencing"
+    }
+   ],
+   "related": [
+    "Все мы иногда ___"
+   ],
+   "quiz": {
+    "prompt": "Ты же понимаешь, что ___ — никто не идеален.",
+    "answer": "ошибаться — это нормально"
+   }
+  },
+  {
+   "id": "ru-5-09",
+   "stage": 5,
+   "pattern": "— Как фильм? — Ну, знаешь, мне-то ___, хотя я понимаю, почему тебе понравилось.",
+   "meaningKo": "자신의 생각을 완곡하게 전달하며 상대의 의견 존중하기",
+   "meaningEn": "Softly stating your opinion while respecting the other person's view",
+   "examples": [
+    {
+     "text": "— Как фильм? — Ну, знаешь, мне-то показалось скучновато, хотя я понимаю, почему тебе понравилось.",
+     "ko": "영화 어땠어? — 음, 나는 좀 지루했지만 네가 왜 좋아했는지 이해해.",
+     "en": "How was the film? — Well, I found it a bit boring, but I get why you liked it."
+    },
+    {
+     "text": "— Как фильм? — Ну, знаешь, мне-то не очень зашло, хотя я понимаю, почему тебе понравилось.",
+     "ko": "영화 어땠어? — 나는 별로였지만 네가 왜 좋아했는지 이해해.",
+     "en": "How was the movie? — Personally, it didn't grab me, though I understand why you liked it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-то 강조, 완곡한 표현",
+     "noteKo": "빈칸에 자신의 평가/느낌을 씀",
+     "nameEn": "-to for emphasis, softening",
+     "noteEn": "Slot is your own honest opinion"
+    }
+   ],
+   "related": [
+    "Ну, это лично мне ___"
+   ],
+   "quiz": {
+    "prompt": "— Как фильм? — Ну, знаешь, мне-то ___, хотя я понимаю, почему тебе понравилось.",
+    "answer": "показался странным"
+   }
+  },
+  {
+   "id": "ru-5-10",
+   "stage": 5,
+   "pattern": "Ну что, расскажи-ка, как у тебя ___?",
+   "meaningKo": "친근하게 근황을 물어보기",
+   "meaningEn": "Casually asking about someone's news in a friendly way",
+   "examples": [
+    {
+     "text": "Ну что, расскажи-ка, как у тебя дела?",
+     "ko": "자, 근황 좀 말해봐!",
+     "en": "So, tell me, how are things with you?"
+    },
+    {
+     "text": "Ну что, расскажи-ка, как у тебя с работой?",
+     "ko": "일은 어때? 말해줘!",
+     "en": "So, tell me, how’s work going for you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "-ка 친근한 요청",
+     "noteKo": "빈칸에 물어보고 싶은 주제를 씀",
+     "nameEn": "-ka for friendly request",
+     "noteEn": "Slot is for what you’re asking about"
+    }
+   ],
+   "related": [
+    "Ну-ка, расскажи мне про ___"
+   ],
+   "quiz": {
+    "prompt": "Ну что, расскажи-ка, как у тебя ___?",
+    "answer": "с семьёй"
+   }
+  }
+ ]
+}

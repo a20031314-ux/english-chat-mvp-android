@@ -1,0 +1,58 @@
+"use client";
+
+import { loadBank, stageOfRank } from "./vocabBank";
+import type { DictEntry } from "./dictionary";
+
+type Sentence = { text?: string; en?: string; ko?: string };
+type SentenceBook = Record<string, Sentence[]>;
+
+const SENTENCES: Record<string, () => Promise<{ default: SentenceBook }>> = {
+  ar: () => import("./word-sentences/ar.json"),
+  en: () => import("./word-sentences/en.json"),
+  es: () => import("./word-sentences/es.json"),
+  fr: () => import("./word-sentences/fr.json"),
+  hi: () => import("./word-sentences/hi.json"),
+  it: () => import("./word-sentences/it.json"),
+  ja: () => import("./word-sentences/ja.json"),
+  ko: () => import("./word-sentences/ko.json"),
+  pt: () => import("./word-sentences/pt.json"),
+  ru: () => import("./word-sentences/ru.json"),
+  th: () => import("./word-sentences/th.json"),
+  vi: () => import("./word-sentences/vi.json"),
+  zh: () => import("./word-sentences/zh.json"),
+};
+
+const GLOSS: Record<string, () => Promise<{ default: Record<string, string> }>> = {
+  en: () => import("./dictionary/en-gloss.json"),
+};
+
+const cache = new Map<string, Promise<DictEntry[]>>();
+
+/** 그 언어의 사전. 빈도 순. 예문은 예문 파일의 첫 문장, 뜻은 넣어 둔 짧은 뜻. */
+export function loadDictionary(language: string): Promise<DictEntry[]> {
+  const have = cache.get(language);
+  if (have) return have;
+  const made = build(language);
+  cache.set(language, made);
+  return made;
+}
+
+async function build(language: string): Promise<DictEntry[]> {
+  const [bank, sentences, gloss] = await Promise.all([
+    loadBank(language),
+    SENTENCES[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null),
+    GLOSS[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null),
+  ]);
+  return bank.map((word, index) => {
+    const line = sentences?.[`w|${word.w}`]?.[0];
+    const meaning = gloss?.[word.w];
+    return {
+      word: word.w,
+      pos: word.pos,
+      ...(word.reading ? { reading: word.reading } : {}),
+      stage: stageOfRank(language, index),
+      ...(meaning ? { gloss: meaning } : {}),
+      ...(line?.text ? { line: line.text, ...(line.ko ? { lineKo: line.ko } : {}), ...(line.en ? { lineEn: line.en } : {}) } : {}),
+    };
+  });
+}

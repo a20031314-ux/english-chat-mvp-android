@@ -171,6 +171,12 @@ export async function POST(request: NextRequest) {
     history: readSpokenLines(body.history),
     context:
       typeof body.context === "string" ? body.context.trim().slice(0, MAX_CONTEXT_CHARS) : "",
+    ...(typeof body.prior === "string" && body.prior.trim()
+      ? { prior: body.prior.trim().slice(0, MAX_CONTEXT_CHARS) }
+      : {}),
+    ...(typeof body.study === "string" && body.study.trim() ? { study: body.study.trim().slice(0, 80) } : {}),
+    ...(body.studyOpen === true ? { studyOpen: true } : {}),
+    ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),
     freeTurns: readCount(body.freeTurns),
     directedTurns: readCount(body.directedTurns),
     level: Math.min(5, Math.max(1, readCount(body.level) || 3)),

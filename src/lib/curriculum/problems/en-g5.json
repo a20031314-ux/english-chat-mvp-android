@@ -1,0 +1,80 @@
+{
+  "g|5:0": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "혼합 가정법",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "과거에 더 열심히 공부했다면, 지금 더 좋은 직업을 가졌을 거야.",
+    "before": "If I ",
+    "after": " harder, I would have a better job now.",
+    "answer": "had studied",
+    "why": "일어나지 않은 과거 공부가 지금 직업으로 이어지므로 had studied예요.",
+    "options": ["have studied", "had studied", "would have studied", "had study"],
+    "line": "If I had studied harder, I would have a better job now."
+  },
+  "g|5:1": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "도치·강조 구문",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "그녀는 일찍 끝냈을 뿐만 아니라 다른 사람들도 도왔어요.",
+    "before": "",
+    "after": " she finish early, but she also helped everyone else.",
+    "answer": "Not only did",
+    "why": "일찍 끝낸 과거를 강조해 조동사를 도치하므로 Not only did예요.",
+    "options": ["Not only does", "Not only did", "Not only had", "Rarely did"],
+    "line": "Not only did she finish early, but she also helped everyone else."
+  },
+  "g|5:2": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "분사구문",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "일 끝나고 피곤해서 나는 음식을 배달시키기로 했어.",
+    "before": "",
+    "after": " after work, I decided to order takeout.",
+    "answer": "Feeling tired",
+    "why": "피곤한 이유가 주어와 같아서 현재분사 Feeling tired예요.",
+    "options": ["Felt tired", "Feeling tired", "Having felt", "Being felt"],
+    "line": "Feeling tired after work, I decided to order takeout."
+  },
+  "g|5:3": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "완곡·유보 표현",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이것이 우리가 예상했던 것보다 더 오래 걸릴 것 같아요.",
+    "before": "",
+    "after": " this might take a bit longer than we thought.",
+    "answer": "It seems to me that",
+    "why": "단정하지 않은 내 짐작이라서 It seems to me that이에요.",
+    "options": ["With all due respect,", "It seems to me that", "Bear in mind that", "To put it mildly,"],
+    "line": "It seems to me that this might take a bit longer than we thought."
+  },
+  "g|5:4": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "양보: although, even so, admittedly",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "비가 왔지만 우리는 여전히 즐거운 소풍을 했어요.",
+    "before": "",
+    "after": " it rained, we still had a nice picnic.",
+    "answer": "Although",
+    "why": "비가 온 사실을 인정하고 소풍으로 이어지므로 Although예요.",
+    "options": ["Even so", "Although", "Admittedly", "Despite"],
+    "line": "Although it rained, we still had a nice picnic."
+  },
+  "g|5:5": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "명사화로 격식 있게 말하기",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "집세가 오르면서 내 예산을 짜기 힘들어졌어.",
+    "before": "",
+    "after": " in rent has put a strain on my budget.",
+    "answer": "The increase",
+    "why": "집세가 오른 일을 명사 주어로 말하므로 The increase예요.",
+    "options": ["Increasing", "The increase", "To increase", "The increasing"],
+    "line": "The increase in rent has put a strain on my budget."
+  }
+}

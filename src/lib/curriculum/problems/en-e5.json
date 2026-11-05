@@ -1,0 +1,380 @@
+{
+  "e|it seems to me": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it seems to me",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리는 교통 체증을 피하기 위해 좀 더 일찍 출발해야 할 것 같아.",
+    "before": "",
+    "after": " that we should leave a bit earlier to avoid traffic.",
+    "answer": "It seems to me",
+    "why": "내가 보기에는 그렇다는 말은 It seems to me예요.",
+    "options": [
+      "It seems for me",
+      "It seems to me",
+      "It seem to me",
+      "It seems me"
+    ],
+    "line": "It seems to me that we should leave a bit earlier to avoid traffic."
+  },
+  "e|arguably": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "arguably",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "여기가 아마 이 동네에서 가장 맛있는 피자집일 거야.",
+    "before": "This is ",
+    "after": " the best pizza place in town.",
+    "answer": "arguably",
+    "why": "단정하지 않고 그렇다고 볼 만하다는 말은 arguably예요.",
+    "options": [
+      "arguable",
+      "arguably",
+      "arguablys",
+      "the arguably"
+    ],
+    "line": "This is arguably the best pizza place in town."
+  },
+  "e|by and large": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "by and large",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "전반적으로 이곳의 날씨는 일 년 내내 꽤 온화해요.",
+    "before": "",
+    "after": ", the weather here is pretty mild all year.",
+    "answer": "By and large",
+    "why": "대체로 그렇다는 말은 By and large예요.",
+    "options": [
+      "By the large",
+      "By and large",
+      "On and large",
+      "By and big"
+    ],
+    "line": "By and large, the weather here is pretty mild all year."
+  },
+  "e|more or less": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "more or less",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "회의가 우리가 예상한 대로 거의 진행됐어.",
+    "before": "The meeting went ",
+    "after": " as we expected.",
+    "answer": "more or less",
+    "why": "거의 그렇다는 말은 more or less예요.",
+    "options": [
+      "more and less",
+      "more or less",
+      "more or fewer",
+      "most or less"
+    ],
+    "line": "The meeting went more or less as we expected."
+  },
+  "e|that said": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "that said",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 정말 피곤하지만, 그렇다고 해도 네가 프로젝트를 끝내는 것을 도와줄게.",
+    "before": "I’m really tired; ",
+    "after": ", I’ll help you finish the project.",
+    "answer": "that said",
+    "why": "앞의 말을 인정하고 다른 말을 덧붙일 때는 that said를 써요.",
+    "options": [
+      "that saying",
+      "that said",
+      "that told",
+      "that is said"
+    ],
+    "line": "I’m really tired; that said, I’ll help you finish the project."
+  },
+  "e|needless to say": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "needless to say",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "비가 올 것 같으면 우산을 가져가는 게 당연해요.",
+    "before": "",
+    "after": ", you should bring an umbrella if it looks like rain.",
+    "answer": "Needless to say",
+    "why": "말할 필요도 없이 당연하다는 말은 Needless to say예요.",
+    "options": [
+      "Needless saying",
+      "Needless to say",
+      "Needless to tell",
+      "Needlessly to say"
+    ],
+    "line": "Needless to say, you should bring an umbrella if it looks like rain."
+  },
+  "e|for the time being": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "for the time being",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "당분간 창문을 닫아 두자.",
+    "before": "Let's keep the windows closed ",
+    "after": ".",
+    "answer": "for the time being",
+    "why": "당분간은 for the time being이에요.",
+    "options": [
+      "for the time been",
+      "for the time being",
+      "in the time being",
+      "for a time being"
+    ],
+    "line": "Let's keep the windows closed for the time being."
+  },
+  "e|to put it mildly": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "to put it mildly",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "어제 날씨가 매우 추웠다는 말로도 부족해요.",
+    "before": "The weather was cold yesterday, ",
+    "after": ".",
+    "answer": "to put it mildly",
+    "why": "말보다 실제가 더 심하다는 완곡한 표현은 to put it mildly예요.",
+    "options": [
+      "to put mildly it",
+      "to put it mildly",
+      "to say it mildly",
+      "to put it in mild"
+    ],
+    "line": "The weather was cold yesterday, to put it mildly."
+  },
+  "e|be that as it may": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "be that as it may",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "그렇다 하더라도, 우리는 여전히 내일까지 프로젝트를 끝내야 해.",
+    "before": "",
+    "after": ", we still have to finish the project by tomorrow.",
+    "answer": "Be that as it may",
+    "why": "그렇다 해도 넘어간다는 말은 Be that as it may예요.",
+    "options": [
+      "Be it as that may",
+      "Be that as it may",
+      "Be that like it may",
+      "Being that as it may"
+    ],
+    "line": "Be that as it may, we still have to finish the project by tomorrow."
+  },
+  "e|for the record": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "for the record",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "분명히 말하지만, 나는 그 계획에 동의한 적 없어.",
+    "before": "Just ",
+    "after": ", I never agreed to that plan.",
+    "answer": "for the record",
+    "why": "분명히 밝혀 둔다는 말은 for the record예요.",
+    "options": [
+      "for a record",
+      "for the record",
+      "in the record",
+      "for the records"
+    ],
+    "line": "Just for the record, I never agreed to that plan."
+  },
+  "e|a grey area": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "a grey area",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "그것이 허용되는지 아닌지는 불분명하다.",
+    "before": "Whether that's allowed or not is kind of ",
+    "after": ".",
+    "answer": "a grey area",
+    "why": "분명하게 갈리지 않는 영역은 a grey area예요.",
+    "options": [
+      "a grey place",
+      "a grey area",
+      "an grey area",
+      "a grey areas"
+    ],
+    "line": "Whether that's allowed or not is kind of a grey area."
+  },
+  "e|in hindsight": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "in hindsight",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "지나고 보니 오늘 우산을 챙겼어야 했어요.",
+    "before": "",
+    "after": ", I should have packed an umbrella today.",
+    "answer": "In hindsight",
+    "why": "지나고 나서 돌아보면 In hindsight예요.",
+    "options": [
+      "On hindsight",
+      "In hindsight",
+      "In the hindsight",
+      "At hindsight"
+    ],
+    "line": "In hindsight, I should have packed an umbrella today."
+  },
+  "e|with all due respect": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "with all due respect",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "실례가 안 된다면, 우리는 다른 선택지를 고려해야 한다고 생각해요.",
+    "before": "",
+    "after": ", I think we should consider another option.",
+    "answer": "With all due respect",
+    "why": "공손하게 이견을 말할 때는 With all due respect를 써요.",
+    "options": [
+      "With all the due respect",
+      "With all due respect",
+      "By all due respect",
+      "With every due respect"
+    ],
+    "line": "With all due respect, I think we should consider another option."
+  },
+  "e|on the fence": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "on the fence",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이번 달에 헬스장에 등록할지 아직 결정하지 못했어.",
+    "before": "I'm still ",
+    "after": " about joining the gym this month.",
+    "answer": "on the fence",
+    "why": "아직 어느 쪽으로도 정하지 못했다는 말은 on the fence예요.",
+    "options": [
+      "in the fence",
+      "on the fence",
+      "at the fence",
+      "on a fence"
+    ],
+    "line": "I'm still on the fence about joining the gym this month."
+  },
+  "e|the bottom line": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "the bottom line",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "가장 중요한 것은 우리가 이 프로젝트를 금요일까지 끝내야 한다는 거야.",
+    "before": "",
+    "after": " is we need to finish this project by Friday.",
+    "answer": "The bottom line",
+    "why": "결국 가장 중요한 점은 The bottom line이에요.",
+    "options": [
+      "The down line",
+      "The bottom line",
+      "The bottom lines",
+      "The bottoms line"
+    ],
+    "line": "The bottom line is we need to finish this project by Friday."
+  },
+  "e|not to mention": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "not to mention",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "하이킹이 길고 힘들었고, 끝에는 정말 진흙투성이였다.",
+    "before": "The hike was long and tiring, ",
+    "after": " really muddy at the end.",
+    "answer": "not to mention",
+    "why": "거기에 더해 또 있다는 말은 not to mention이에요.",
+    "options": [
+      "not mention",
+      "not to mention",
+      "no to mention",
+      "not for mention"
+    ],
+    "line": "The hike was long and tiring, not to mention really muddy at the end."
+  },
+  "e|bear in mind": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "bear in mind",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "일요일에는 가게가 일찍 문을 닫는다는 점을 기억하세요.",
+    "before": "Just ",
+    "after": " that the store closes early on Sundays.",
+    "answer": "bear in mind",
+    "why": "잊지 말고 새기라는 말은 bear in mind예요.",
+    "options": [
+      "bear on mind",
+      "bear in mind",
+      "bear in the mind",
+      "bring in mind"
+    ],
+    "line": "Just bear in mind that the store closes early on Sundays."
+  },
+  "e|read between the lines": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "read between the lines",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "가끔은 전체 이야기를 이해하려면 자세히 살펴봐야 해.",
+    "before": "Sometimes you have to ",
+    "after": " to get the full story.",
+    "answer": "read between the lines",
+    "why": "겉으로 말하지 않은 뜻을 읽는다는 말은 read between the lines예요.",
+    "options": [
+      "read between lines",
+      "read between the lines",
+      "read among the lines",
+      "read in between line"
+    ],
+    "line": "Sometimes you have to read between the lines to get the full story."
+  },
+  "e|beside the point": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "beside the point",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "내일 비가 오는지 여부는 지금 중요하지 않아.",
+    "before": "Whether it rains tomorrow is ",
+    "after": " right now.",
+    "answer": "beside the point",
+    "why": "핵심과 상관없다는 말은 beside the point예요.",
+    "options": [
+      "beside the points",
+      "beside the point",
+      "beside a point",
+      "next to the point"
+    ],
+    "line": "Whether it rains tomorrow is beside the point right now."
+  },
+  "e|a blessing in disguise": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "a blessing in disguise",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "지갑을 잃어버렸는데 누군가가 모든 것이 그대로인 채로 찾아서 돌려줘서 오히려 좋은 일이었다.",
+    "before": "Losing my wallet was actually ",
+    "after": " because someone found it and returned it with everything inside.",
+    "answer": "a blessing in disguise",
+    "why": "당장은 나빠 보여도 나중에 좋은 일은 a blessing in disguise예요.",
+    "options": [
+      "a bless in disguise",
+      "a blessing in disguise",
+      "a blessing on disguise",
+      "a blessing in disguising"
+    ],
+    "line": "Losing my wallet was actually a blessing in disguise because someone found it and returned it with everything inside."
+  },
+  "e|the elephant in the room": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "the elephant in the room",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리 모두가 모르는 척하는 분명한 문제를 그냥 무시할 건가요?",
+    "before": "Are we just going to ignore ",
+    "after": "?",
+    "answer": "the elephant in the room",
+    "why": "모두가 알지만 아무도 꺼내지 않는 문제는 the elephant in the room이에요.",
+    "options": [
+      "the elephant on the room",
+      "the elephant in the room",
+      "the elephant in room",
+      "the elephant of the room"
+    ],
+    "line": "Are we just going to ignore the elephant in the room?"
+  }
+}

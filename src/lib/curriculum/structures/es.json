@@ -1,0 +1,1535 @@
+{
+ "1": [
+  {
+   "id": "es-1-01",
+   "stage": 1,
+   "pattern": "Me llamo ___",
+   "meaningKo": "자기 이름 소개하기",
+   "meaningEn": "Say your name",
+   "examples": [
+    {
+     "text": "Me llamo Ana",
+     "ko": "제 이름은 아나예요.",
+     "en": "My name is Ana."
+    },
+    {
+     "text": "Me llamo Juan",
+     "ko": "제 이름은 후안이에요.",
+     "en": "My name is Juan."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "자기소개",
+     "noteKo": "이름 자리에 사용",
+     "nameEn": "Introduction",
+     "noteEn": "Put your name in the blank"
+    }
+   ],
+   "related": [
+    "Soy ___"
+   ],
+   "quiz": {
+    "prompt": "Me llamo ___",
+    "answer": "Ana"
+   }
+  },
+  {
+   "id": "es-1-02",
+   "stage": 1,
+   "pattern": "Soy de ___",
+   "meaningKo": "출신지 말하기",
+   "meaningEn": "Say where you are from",
+   "examples": [
+    {
+     "text": "Soy de Corea",
+     "ko": "저는 한국 출신이에요.",
+     "en": "I am from Korea."
+    },
+    {
+     "text": "Soy de México",
+     "ko": "저는 멕시코 출신이에요.",
+     "en": "I am from Mexico."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지",
+     "noteKo": "나라 또는 도시 이름",
+     "nameEn": "Place of origin",
+     "noteEn": "Put country or city in the blank"
+    }
+   ],
+   "related": [
+    "Vengo de ___"
+   ],
+   "quiz": {
+    "prompt": "Soy de ___",
+    "answer": "Corea"
+   }
+  },
+  {
+   "id": "es-1-03",
+   "stage": 1,
+   "pattern": "Soy ___",
+   "meaningKo": "직업 말하기",
+   "meaningEn": "Say what you do",
+   "examples": [
+    {
+     "text": "Soy estudiante",
+     "ko": "저는 학생이에요.",
+     "en": "I am a student."
+    },
+    {
+     "text": "Soy profesor",
+     "ko": "저는 선생님이에요.",
+     "en": "I am a teacher."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업",
+     "noteKo": "직업명 위치",
+     "nameEn": "Occupation",
+     "noteEn": "Put your job in the blank"
+    }
+   ],
+   "related": [
+    "Trabajo como ___"
+   ],
+   "quiz": {
+    "prompt": "Soy ___",
+    "answer": "estudiante"
+   }
+  },
+  {
+   "id": "es-1-04",
+   "stage": 1,
+   "pattern": "¿Cuánto cuesta ___?",
+   "meaningKo": "가격 물어보기",
+   "meaningEn": "Ask the price of something",
+   "examples": [
+    {
+     "text": "¿Cuánto cuesta la manzana?",
+     "ko": "이 사과 얼마예요?",
+     "en": "How much is the apple?"
+    },
+    {
+     "text": "¿Cuánto cuesta el pan?",
+     "ko": "이 빵 얼마예요?",
+     "en": "How much is the bread?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가격 질문",
+     "noteKo": "물건 이름 위치",
+     "nameEn": "Price question",
+     "noteEn": "Put the item in the blank"
+    }
+   ],
+   "related": [
+    "¿Cuánto es ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Cuánto cuesta ___?",
+    "answer": "la manzana"
+   }
+  },
+  {
+   "id": "es-1-05",
+   "stage": 1,
+   "pattern": "Está a ___ euros",
+   "meaningKo": "가격 말해주기",
+   "meaningEn": "Say the price",
+   "examples": [
+    {
+     "text": "Está a dos euros",
+     "ko": "2유로예요.",
+     "en": "It is two euros."
+    },
+    {
+     "text": "Está a cinco euros",
+     "ko": "5유로예요.",
+     "en": "It is five euros."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가격 답변",
+     "noteKo": "숫자 위치",
+     "nameEn": "Price answer",
+     "noteEn": "Put the number in the blank"
+    }
+   ],
+   "related": [
+    "Cuesta ___ euros"
+   ],
+   "quiz": {
+    "prompt": "Está a ___ euros",
+    "answer": "dos"
+   }
+  },
+  {
+   "id": "es-1-06",
+   "stage": 1,
+   "pattern": "¿Dónde está ___?",
+   "meaningKo": "장소 위치 물어보기",
+   "meaningEn": "Ask where a place is",
+   "examples": [
+    {
+     "text": "¿Dónde está el baño?",
+     "ko": "화장실 어디에 있어요?",
+     "en": "Where is the bathroom?"
+    },
+    {
+     "text": "¿Dónde está la estación?",
+     "ko": "역이 어디에 있어요?",
+     "en": "Where is the station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "위치 질문",
+     "noteKo": "장소명 위치",
+     "nameEn": "Location question",
+     "noteEn": "Put the place name in the blank"
+    }
+   ],
+   "related": [
+    "¿Dónde queda ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Dónde está ___?",
+    "answer": "el baño"
+   }
+  },
+  {
+   "id": "es-1-07",
+   "stage": 1,
+   "pattern": "Trabajo como ___",
+   "meaningKo": "직업 말하기",
+   "meaningEn": "Saying what you do",
+   "examples": [
+    {
+     "text": "Trabajo como profesor",
+     "ko": "저는 선생님으로 일해요.",
+     "en": "I work as a teacher."
+    },
+    {
+     "text": "Trabajo como ingeniera",
+     "ko": "저는 엔지니어로 일해요.",
+     "en": "I work as an engineer."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업 말하기",
+     "noteKo": "___에 자신의 직업을 넣어요.",
+     "nameEn": "Occupation statement",
+     "noteEn": "Put your job in ___."
+    }
+   ],
+   "related": [
+    "Soy ___"
+   ],
+   "quiz": {
+    "prompt": "Trabajo como ___",
+    "answer": "profesor"
+   }
+  },
+  {
+   "id": "es-1-08",
+   "stage": 1,
+   "pattern": "¿Me puede decir dónde está ___?",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "¿Me puede decir dónde está el baño?",
+     "ko": "화장실이 어디 있는지 말씀해 주시겠어요?",
+     "en": "Can you tell me where the bathroom is?"
+    },
+    {
+     "text": "¿Me puede decir dónde está la estación de metro?",
+     "ko": "지하철역이 어디 있는지 말씀해 주시겠어요?",
+     "en": "Can you tell me where the metro station is?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 묻기",
+     "noteKo": "___에 장소명 입력",
+     "nameEn": "Asking about a place",
+     "noteEn": "Put the place in ___."
+    }
+   ],
+   "related": [
+    "¿Dónde está ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Me puede decir dónde está ___?",
+    "answer": "el baño"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "es-2-01",
+   "stage": 2,
+   "pattern": "Ayer fui a ___",
+   "meaningKo": "어제 어디에 갔다고 말하기",
+   "meaningEn": "Saying where you went yesterday",
+   "examples": [
+    {
+     "text": "Ayer fui a la playa.",
+     "ko": "어제 해변에 갔어요.",
+     "en": "Yesterday I went to the beach."
+    },
+    {
+     "text": "Ayer fui a un concierto.",
+     "ko": "어제 콘서트에 갔어요.",
+     "en": "Yesterday I went to a concert."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "fui는 과거형으로, ___에 간 장소를 말할 때 사용해요.",
+     "nameEn": "Past tense",
+     "noteEn": "fui is used for where you went in the past, slot ___ is a place."
+    }
+   ],
+   "related": [
+    "El fin de semana pasado fui a ___"
+   ],
+   "quiz": {
+    "prompt": "Ayer fui a ___",
+    "answer": "la playa"
+   }
+  },
+  {
+   "id": "es-2-02",
+   "stage": 2,
+   "pattern": "¿Quieres ir a ___ el sábado?",
+   "meaningKo": "친구와 주말에 어디 갈지 제안하기",
+   "meaningEn": "Inviting a friend to go somewhere on Saturday",
+   "examples": [
+    {
+     "text": "¿Quieres ir a un café el sábado?",
+     "ko": "토요일에 카페 갈래?",
+     "en": "Do you want to go to a café on Saturday?"
+    },
+    {
+     "text": "¿Quieres ir a la plaza el sábado?",
+     "ko": "토요일에 광장에 갈래?",
+     "en": "Do you want to go to the plaza on Saturday?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 계획",
+     "noteKo": "___에 갈 장소를 말할 때 사용해요.",
+     "nameEn": "Future plan",
+     "noteEn": "___ is the place you suggest to go."
+    }
+   ],
+   "related": [
+    "¿Te gustaría ir a ___ el domingo?"
+   ],
+   "quiz": {
+    "prompt": "¿Quieres ir a ___ el sábado?",
+    "answer": "un café"
+   }
+  },
+  {
+   "id": "es-2-03",
+   "stage": 2,
+   "pattern": "Nos vemos a las ___ en ___",
+   "meaningKo": "만날 시간과 장소 정하기",
+   "meaningEn": "Setting a time and place to meet",
+   "examples": [
+    {
+     "text": "Nos vemos a las seis en el parque.",
+     "ko": "공원에서 여섯 시에 봐요.",
+     "en": "See you at six in the park."
+    },
+    {
+     "text": "Nos vemos a las cinco en el cine.",
+     "ko": "영화관에서 다섯 시에 봐요.",
+     "en": "See you at five at the cinema."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간 표현",
+     "noteKo": "a las ___는 만날 시간을 말해요.",
+     "nameEn": "Time expression",
+     "noteEn": "a las ___ is the meeting time."
+    },
+    {
+     "nameKo": "장소 표현",
+     "noteKo": "en ___는 만날 장소를 말해요.",
+     "nameEn": "Place expression",
+     "noteEn": "en ___ is the meeting place."
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Nos vemos a las seis en ___",
+    "answer": "el parque"
+   }
+  },
+  {
+   "id": "es-2-04",
+   "stage": 2,
+   "pattern": "Para mí, ___ por favor",
+   "meaningKo": "식당에서 주문하기",
+   "meaningEn": "Ordering something at a restaurant",
+   "examples": [
+    {
+     "text": "Para mí, una ensalada por favor.",
+     "ko": "저는 샐러드 주세요.",
+     "en": "For me, a salad please."
+    },
+    {
+     "text": "Para mí, una sopa por favor.",
+     "ko": "저는 수프 주세요.",
+     "en": "For me, a soup please."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 사용",
+     "noteKo": "___에 주문할 음식을 넣어요.",
+     "nameEn": "Noun use",
+     "noteEn": "___ is the food or drink you want."
+    }
+   ],
+   "related": [
+    "Quisiera ___ por favor"
+   ],
+   "quiz": {
+    "prompt": "Para mí, ___ por favor",
+    "answer": "una ensalada"
+   }
+  },
+  {
+   "id": "es-2-05",
+   "stage": 2,
+   "pattern": "Me duele ___",
+   "meaningKo": "몸이 아픈 부위 말하기",
+   "meaningEn": "Describing pain in a body part",
+   "examples": [
+    {
+     "text": "Me duele la cabeza.",
+     "ko": "머리가 아파요.",
+     "en": "My head hurts."
+    },
+    {
+     "text": "Me duele la garganta.",
+     "ko": "목이 아파요.",
+     "en": "My throat hurts."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "신체 부위 명사",
+     "noteKo": "___에 아픈 부위를 넣어요.",
+     "nameEn": "Body part noun",
+     "noteEn": "___ is the part that hurts."
+    }
+   ],
+   "related": [
+    "Tengo dolor de ___"
+   ],
+   "quiz": {
+    "prompt": "Me duele ___",
+    "answer": "la cabeza"
+   }
+  },
+  {
+   "id": "es-2-06",
+   "stage": 2,
+   "pattern": "Me gusta ___ porque ___",
+   "meaningKo": "좋아하는 것과 그 이유 말하기",
+   "meaningEn": "Saying what you like and why",
+   "examples": [
+    {
+     "text": "Me gusta el café porque es rico.",
+     "ko": "커피가 맛있어서 좋아해요.",
+     "en": "I like coffee because it’s tasty."
+    },
+    {
+     "text": "Me gusta caminar porque me relaja.",
+     "ko": "산책이 저를 편안하게 해서 좋아해요.",
+     "en": "I like walking because it relaxes me."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "취미나 선호",
+     "noteKo": "첫 번째 ___에 좋아하는 것을, 두 번째 ___에 이유를 넣어요.",
+     "nameEn": "Preference and reason",
+     "noteEn": "First ___ is what you like, second ___ is the reason."
+    }
+   ],
+   "related": [
+    "No me gusta ___ porque ___"
+   ],
+   "quiz": {
+    "prompt": "Me gusta ___ porque es rico.",
+    "answer": "el café"
+   }
+  },
+  {
+   "id": "es-2-07",
+   "stage": 2,
+   "pattern": "No me gusta ___ porque ___",
+   "meaningKo": "싫어하는 것과 그 이유 말하기",
+   "meaningEn": "Saying what you do not like and why",
+   "examples": [
+    {
+     "text": "No me gusta el calor porque me cansa.",
+     "ko": "더운 것을 싫어해요, 피곤해서요.",
+     "en": "I don’t like the heat because it tires me."
+    },
+    {
+     "text": "No me gusta el pescado porque no me gusta el olor.",
+     "ko": "생선을 싫어해요, 냄새가 별로라서요.",
+     "en": "I don’t like fish because I don’t like the smell."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "취미나 선호",
+     "noteKo": "첫 번째 ___에 싫어하는 것을, 두 번째 ___에 이유를 넣어요.",
+     "nameEn": "Preference and reason",
+     "noteEn": "First ___ is what you dislike, second ___ is the reason."
+    }
+   ],
+   "related": [
+    "Me gusta ___ porque ___"
+   ],
+   "quiz": {
+    "prompt": "No me gusta ___ porque no me gusta el olor.",
+    "answer": "el pescado"
+   }
+  },
+  {
+   "id": "es-2-08",
+   "stage": 2,
+   "pattern": "¿Se puede ___ aquí?",
+   "meaningKo": "무엇이 허용되는지 물어보기",
+   "meaningEn": "Asking if something is allowed here",
+   "examples": [
+    {
+     "text": "¿Se puede tomar fotos aquí?",
+     "ko": "여기서 사진 찍어도 돼요?",
+     "en": "Is it allowed to take photos here?"
+    },
+    {
+     "text": "¿Se puede comer aquí?",
+     "ko": "여기서 먹어도 돼요?",
+     "en": "Is it allowed to eat here?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사 원형",
+     "noteKo": "___에 허락받고 싶은 행동을 넣어요.",
+     "nameEn": "Infinitive verb",
+     "noteEn": "___ is the action you want to ask about."
+    }
+   ],
+   "related": [
+    "¿Está permitido ___ aquí?"
+   ],
+   "quiz": {
+    "prompt": "¿Se puede ___ aquí?",
+    "answer": "comer"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "es-3-01",
+   "stage": 3,
+   "pattern": "Cuando llegué a ___, me sentí ___",
+   "meaningKo": "여행지나 장소에 도착해서 느낀 감정 말하기",
+   "meaningEn": "Saying how you felt upon arriving somewhere",
+   "examples": [
+    {
+     "text": "Cuando llegué a Madrid, me sentí muy emocionado",
+     "ko": "마드리드에 도착했을 때, 나는 매우 설렜어",
+     "en": "When I arrived in Madrid, I felt very excited"
+    },
+    {
+     "text": "Cuando llegué a la playa, me sentí decepcionado",
+     "ko": "해변에 도착했을 때, 나는 실망했어",
+     "en": "When I arrived at the beach, I felt disappointed"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "llegué는 과거에 도착한 것을 나타냄",
+     "nameEn": "Past tense",
+     "noteEn": "llegué is for something you already did"
+    }
+   ],
+   "related": [
+    "Cuando llegué a ___, vi ___",
+    "Al llegar a ___, me sentí ___"
+   ],
+   "quiz": {
+    "prompt": "Cuando llegué a ___, me sentí feliz",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-02",
+   "stage": 3,
+   "pattern": "Creo que ___ porque ___",
+   "meaningKo": "자신의 의견과 그 이유 설명하기",
+   "meaningEn": "Giving your opinion and explaining why",
+   "examples": [
+    {
+     "text": "Creo que este hotel es bueno porque es muy limpio",
+     "ko": "이 호텔이 좋다고 생각해요, 왜냐하면 매우 깨끗하니까요",
+     "en": "I think this hotel is good because it’s very clean"
+    },
+    {
+     "text": "Creo que deberíamos ir en tren porque es más rápido",
+     "ko": "기차를 타야 한다고 생각해, 더 빠르니까",
+     "en": "I think we should go by train because it’s faster"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현",
+     "noteKo": "Creo que 뒤에 자신의 생각을 말함",
+     "nameEn": "Expressing opinions",
+     "noteEn": "Creo que is followed by your thought"
+    }
+   ],
+   "related": [
+    "Pienso que ___ porque ___",
+    "En mi opinión, ___ porque ___"
+   ],
+   "quiz": {
+    "prompt": "Creo que ___ porque es interesante",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-03",
+   "stage": 3,
+   "pattern": "Estoy de acuerdo con ___ porque ___",
+   "meaningKo": "누군가의 의견에 동의하고 이유 설명하기",
+   "meaningEn": "Agreeing with someone and explaining why",
+   "examples": [
+    {
+     "text": "Estoy de acuerdo con Ana porque su idea es práctica",
+     "ko": "나는 아나의 의견에 동의해, 그녀의 아이디어가 실용적이니까",
+     "en": "I agree with Ana because her idea is practical"
+    },
+    {
+     "text": "Estoy de acuerdo con lo que dijiste porque es verdad",
+     "ko": "네가 말한 것에 동의해, 그게 사실이니까",
+     "en": "I agree with what you said because it’s true"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동의 표현",
+     "noteKo": "con ___에 동의하는 대상을 넣음",
+     "nameEn": "Agreement",
+     "noteEn": "con ___ is who/what you agree with"
+    }
+   ],
+   "related": [
+    "No estoy de acuerdo con ___ porque ___",
+    "Estoy de acuerdo, pero ___"
+   ],
+   "quiz": {
+    "prompt": "Estoy de acuerdo con ___ porque tiene razón",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-04",
+   "stage": 3,
+   "pattern": "¿Has visto ___? Pienso que ___",
+   "meaningKo": "누군가가 ~을 봤는지 물어보고, 자신의 생각 말하기",
+   "meaningEn": "Asking if someone has seen something and giving your opinion",
+   "examples": [
+    {
+     "text": "¿Has visto la nueva serie? Pienso que es muy divertida",
+     "ko": "새로운 시리즈 봤어? 나는 정말 재미있다고 생각해",
+     "en": "Have you seen the new series? I think it’s very fun"
+    },
+    {
+     "text": "¿Has visto la película? Pienso que es aburrida",
+     "ko": "그 영화 봤어? 내 생각엔 지루해",
+     "en": "Have you seen the movie? I think it’s boring"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "현재완료",
+     "noteKo": "Has visto는 경험을 물어볼 때 씀",
+     "nameEn": "Present perfect",
+     "noteEn": "Has visto asks about experiences"
+    }
+   ],
+   "related": [
+    "¿Has probado ___? Me parece ___",
+    "¿Has ido a ___? ¿Qué te pareció?"
+   ],
+   "quiz": {
+    "prompt": "¿Has visto ___? Pienso que es genial",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-05",
+   "stage": 3,
+   "pattern": "Lo que pasó fue que ___ y por eso me sentí ___",
+   "meaningKo": "무슨 일이 있었고 어떻게 느꼈는지 말하기",
+   "meaningEn": "Saying what happened and how you felt about it",
+   "examples": [
+    {
+     "text": "Lo que pasó fue que perdimos el bus y por eso me sentí frustrado",
+     "ko": "버스를 놓쳐서 나는 실망했어",
+     "en": "What happened was we missed the bus and that’s why I felt frustrated"
+    },
+    {
+     "text": "Lo que pasó fue que llovió mucho y por eso me sentí triste",
+     "ko": "비가 많이 와서 나는 슬펐어",
+     "en": "What happened was that it rained a lot and that’s why I felt sad"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "복합 문장",
+     "noteKo": "___에 사건, ___에 감정을 넣음",
+     "nameEn": "Compound sentence",
+     "noteEn": "___ for the event, ___ for the feeling"
+    }
+   ],
+   "related": [
+    "Resulta que ___ y entonces ___",
+    "Después de ___, me sentí ___"
+   ],
+   "quiz": {
+    "prompt": "Lo que pasó fue que ___ y por eso me sentí cansado",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-06",
+   "stage": 3,
+   "pattern": "¿Podría cambiarme ___ porque ___?",
+   "meaningKo": "호텔 등에서 교환/변경 요청하며 이유 말하기",
+   "meaningEn": "Asking for a change and giving a reason at a hotel/shop",
+   "examples": [
+    {
+     "text": "¿Podría cambiarme la habitación porque hay mucho ruido?",
+     "ko": "방이 너무 시끄러워서 바꿔주실 수 있나요?",
+     "en": "Could you change my room because there is a lot of noise?"
+    },
+    {
+     "text": "¿Podría cambiarme la toalla porque está sucia?",
+     "ko": "수건이 더러워서 바꿔주실 수 있나요?",
+     "en": "Could you change my towel because it’s dirty?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 요청",
+     "noteKo": "cambiarme ___에 바꾸고 싶은 것, porque ___에 이유",
+     "nameEn": "Polite request",
+     "noteEn": "cambiarme ___ is what you want changed, porque ___ is the reason"
+    }
+   ],
+   "related": [
+    "¿Me puede dar otra ___ porque ___?",
+    "¿Podría darme ___ nuevo porque ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Podría cambiarme ___ porque está rota?",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-07",
+   "stage": 3,
+   "pattern": "Tengo un problema con ___, ¿puede ayudarme?",
+   "meaningKo": "호텔이나 가게에서 문제 설명하고 도움 요청하기",
+   "meaningEn": "Explaining a problem and asking for help at a hotel or shop",
+   "examples": [
+    {
+     "text": "Tengo un problema con la ducha, ¿puede ayudarme?",
+     "ko": "샤워기가 고장 났는데, 도와주실 수 있나요?",
+     "en": "I have a problem with the shower, can you help me?"
+    },
+    {
+     "text": "Tengo un problema con la llave, ¿puede ayudarme?",
+     "ko": "열쇠에 문제가 있어요, 도와주실 수 있나요?",
+     "en": "I have a problem with the key, can you help me?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제 설명",
+     "noteKo": "con ___에 문제의 대상을 넣음",
+     "nameEn": "Stating a problem",
+     "noteEn": "con ___ is where the problem is"
+    }
+   ],
+   "related": [
+    "La ___ no funciona, ¿puede ayudarme?",
+    "¿Puede ayudarme con ___?"
+   ],
+   "quiz": {
+    "prompt": "Tengo un problema con ___, ¿puede ayudarme?",
+    "answer": "___"
+   }
+  },
+  {
+   "id": "es-3-08",
+   "stage": 3,
+   "pattern": "¿Has tenido alguna vez problemas con ___? ¿Qué hiciste?",
+   "meaningKo": "누군가가 ~와 관련된 문제를 겪은 적 있는지, 어떻게 해결했는지 묻기",
+   "meaningEn": "Asking if someone has ever had a problem with something and what they did",
+   "examples": [
+    {
+     "text": "¿Has tenido alguna vez problemas con tu jefe? ¿Qué hiciste?",
+     "ko": "상사와 문제를 겪은 적 있어? 어떻게 했어?",
+     "en": "Have you ever had problems with your boss? What did you do?"
+    },
+    {
+     "text": "¿Has tenido alguna vez problemas con una reserva? ¿Qué hiciste?",
+     "ko": "예약과 관련해 문제를 겪은 적 있어? 어떻게 해결했어?",
+     "en": "Have you ever had problems with a reservation? What did you do?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "경험 묻기",
+     "noteKo": "alguna vez는 '한 번이라도'라는 의미",
+     "nameEn": "Asking about experience",
+     "noteEn": "alguna vez means 'ever', for experiences"
+    }
+   ],
+   "related": [
+    "¿Alguna vez has tenido problemas con ___?",
+    "¿Has experimentado ___ alguna vez?"
+   ],
+   "quiz": {
+    "prompt": "¿Has tenido alguna vez problemas con ___? ¿Qué hiciste?",
+    "answer": "___"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "es-4-01",
+   "stage": 4,
+   "pattern": "Por un lado, ___, pero por otro lado, ___.",
+   "meaningKo": "아이디어의 장점과 단점을 모두 논의하기",
+   "meaningEn": "Weighing both sides of an idea",
+   "examples": [
+    {
+     "text": "Por un lado, trabajar desde casa es cómodo, pero por otro lado, puede ser solitario.",
+     "ko": "한편으로는 재택근무가 편하지만, 다른 한편으로는 외로울 수 있다.",
+     "en": "On one hand, working from home is comfortable, but on the other hand, it can be lonely."
+    },
+    {
+     "text": "Por un lado, mudarse al extranjero es emocionante, pero por otro lado, es un gran reto.",
+     "ko": "한편으로는 해외 이주가 흥미롭지만, 다른 한편으로는 큰 도전이다.",
+     "en": "On one hand, moving abroad is exciting, but on the other hand, it is a big challenge."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속사와 대조구문",
+     "noteKo": "첫 번째 ___에 긍정적인 면, 두 번째 ___에 부정적인 면을 넣음",
+     "nameEn": "Conjunctions for contrast",
+     "noteEn": "First ___ is the pro, second ___ is the con"
+    }
+   ],
+   "related": [
+    "Aunque ___, ___",
+    "Sin embargo, ___"
+   ],
+   "quiz": {
+    "prompt": "Por un lado, ___, pero por otro lado, es muy costoso.",
+    "answer": "vivir en el centro es conveniente"
+   }
+  },
+  {
+   "id": "es-4-02",
+   "stage": 4,
+   "pattern": "Podemos ___ si tú ___.",
+   "meaningKo": "협상하거나 타협 제안하기",
+   "meaningEn": "Negotiating or offering a compromise",
+   "examples": [
+    {
+     "text": "Podemos entregar el informe mañana si tú revisas los datos hoy.",
+     "ko": "네가 오늘 데이터를 검토하면 내일 보고서를 제출할 수 있어.",
+     "en": "We can submit the report tomorrow if you review the data today."
+    },
+    {
+     "text": "Podemos empezar la reunión a las cinco si tú llegas a tiempo.",
+     "ko": "네가 제시간에 오면 다섯 시에 회의를 시작할 수 있어.",
+     "en": "We can start the meeting at five if you arrive on time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "첫 번째 ___에 가능 제안, 두 번째 ___에 조건을 넣음",
+     "nameEn": "Conditional",
+     "noteEn": "First ___ is what can be done, second ___ is the condition"
+    }
+   ],
+   "related": [
+    "Si quieres, podemos ___",
+    "¿Qué te parece si ___?"
+   ],
+   "quiz": {
+    "prompt": "Podemos cambiar la fecha si tú ___ el horario.",
+    "answer": "ajustas"
+   }
+  },
+  {
+   "id": "es-4-03",
+   "stage": 4,
+   "pattern": "Según ___, ___.",
+   "meaningKo": "뉴스나 기사 요약과 의견 제시",
+   "meaningEn": "Summarising and commenting on news or articles",
+   "examples": [
+    {
+     "text": "Según el artículo, la empresa planea adoptar el teletrabajo permanentemente.",
+     "ko": "기사에 따르면 회사가 영구적으로 재택근무를 도입할 계획이다.",
+     "en": "According to the article, the company plans to adopt remote work permanently."
+    },
+    {
+     "text": "Según las últimas noticias, la situación mejoró mucho.",
+     "ko": "최신 뉴스에 따르면 상황이 많이 나아졌다.",
+     "en": "According to the latest news, the situation has improved a lot."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출처 명시",
+     "noteKo": "첫 번째 ___에 정보의 출처, 두 번째 ___에 요약 또는 의견을 넣음",
+     "nameEn": "Attribution",
+     "noteEn": "First ___ is the source, second ___ is the summary/comment"
+    }
+   ],
+   "related": [
+    "Dicen que ___",
+    "Se informa que ___"
+   ],
+   "quiz": {
+    "prompt": "Según ___, habrá cambios en la política de la empresa.",
+    "answer": "el informe"
+   }
+  },
+  {
+   "id": "es-4-04",
+   "stage": 4,
+   "pattern": "Dicen que ___, pero yo creo que ___.",
+   "meaningKo": "기사나 뉴스에 대한 의견 덧붙이기",
+   "meaningEn": "Adding your opinion about news or reports",
+   "examples": [
+    {
+     "text": "Dicen que mudarse al extranjero es fácil, pero yo creo que requiere mucha preparación.",
+     "ko": "해외 이주가 쉽다고들 하지만, 나는 많은 준비가 필요하다고 생각한다.",
+     "en": "They say moving abroad is easy, but I think it requires a lot of preparation."
+    },
+    {
+     "text": "Dicen que el teletrabajo aumenta la productividad, pero yo creo que depende de la persona.",
+     "ko": "재택근무가 생산성을 높인다고들 하지만, 나는 사람마다 다르다고 생각한다.",
+     "en": "They say remote work increases productivity, but I think it depends on the person."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접화법과 의견 표현",
+     "noteKo": "첫 번째 ___에 들은 이야기, 두 번째 ___에 자신의 의견을 넣음",
+     "nameEn": "Reported speech and opinion",
+     "noteEn": "First ___ is reported information, second ___ is your opinion"
+    }
+   ],
+   "related": [
+    "Se dice que ___, pero yo opino que ___",
+    "Muchos piensan que ___, sin embargo ___"
+   ],
+   "quiz": {
+    "prompt": "Dicen que ___, pero yo creo que es solo el comienzo.",
+    "answer": "la situación ya está resuelta"
+   }
+  },
+  {
+   "id": "es-4-05",
+   "stage": 4,
+   "pattern": "Si ___, entonces ___ podríamos ___.",
+   "meaningKo": "조건과 결과로 타협 또는 계획 제안하기",
+   "meaningEn": "Suggesting a compromise or plan with a condition and result",
+   "examples": [
+    {
+     "text": "Si movemos la reunión a las seis, entonces mañana podríamos terminar el informe.",
+     "ko": "회의를 여섯 시로 옮기면, 내일 보고서를 끝낼 수 있다.",
+     "en": "If we move the meeting to six, then tomorrow we could finish the report."
+    },
+    {
+     "text": "Si tú aceptas el nuevo horario, entonces esta semana podríamos avanzar más rápido.",
+     "ko": "네가 새로운 일정을 받아들이면, 이번 주에 더 빨리 진전될 수 있다.",
+     "en": "If you accept the new schedule, then this week we could make faster progress."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문 복합",
+     "noteKo": "첫 번째 ___에 조건, 두 번째 ___에 때, 세 번째 ___에 결과를 넣음",
+     "nameEn": "Complex conditional",
+     "noteEn": "First ___ is the condition, second ___ is when, third ___ is the result"
+    }
+   ],
+   "related": [
+    "Si ___, entonces ___",
+    "En caso de que ___, ___"
+   ],
+   "quiz": {
+    "prompt": "Si terminamos temprano, entonces mañana podríamos ___ juntos.",
+    "answer": "salir"
+   }
+  },
+  {
+   "id": "es-4-06",
+   "stage": 4,
+   "pattern": "Comentaron que ___ y que ___.",
+   "meaningKo": "누군가의 말을 간접적으로 전달하기",
+   "meaningEn": "Reporting what someone said without quoting directly",
+   "examples": [
+    {
+     "text": "Comentaron que el proyecto va bien y que habrá una reunión la próxima semana.",
+     "ko": "프로젝트가 잘 진행 중이고 다음 주에 회의가 있을 거라고 했다.",
+     "en": "They mentioned that the project is going well and that there will be a meeting next week."
+    },
+    {
+     "text": "Comentaron que les gusta la idea y que están dispuestos a colaborar.",
+     "ko": "그들은 그 아이디어가 마음에 들고 협력할 의향이 있다고 했다.",
+     "en": "They mentioned that they like the idea and that they are willing to collaborate."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "간접화법",
+     "noteKo": "두 ___에 들은 내용들을 넣음",
+     "nameEn": "Reported speech",
+     "noteEn": "Each ___ is a piece of reported information"
+    }
+   ],
+   "related": [
+    "Me dijeron que ___",
+    "Explicaron que ___ y que ___"
+   ],
+   "quiz": {
+    "prompt": "Comentaron que ___ y que la decisión será pronto.",
+    "answer": "hay varias opciones"
+   }
+  },
+  {
+   "id": "es-4-07",
+   "stage": 4,
+   "pattern": "Si yo fuera tú, ___.",
+   "meaningKo": "상대방에게 조언하기",
+   "meaningEn": "Giving advice to someone",
+   "examples": [
+    {
+     "text": "Si yo fuera tú, hablaría con el jefe para negociar el plazo.",
+     "ko": "내가 너라면, 기한을 협상하기 위해 상사와 이야기할 거야.",
+     "en": "If I were you, I would talk to the boss to negotiate the deadline."
+    },
+    {
+     "text": "Si yo fuera tú, aprovecharía la oportunidad de mudarme al extranjero.",
+     "ko": "내가 너라면, 해외로 이주할 기회를 활용할 거야.",
+     "en": "If I were you, I would take the chance to move abroad."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거",
+     "noteKo": "___에 조언 또는 행동을 넣음",
+     "nameEn": "Past subjunctive for advice",
+     "noteEn": "___ is a suggestion or action"
+    }
+   ],
+   "related": [
+    "Yo en tu lugar, ___",
+    "Deberías ___"
+   ],
+   "quiz": {
+    "prompt": "Si yo fuera tú, ___ más sobre el país antes de mudarme.",
+    "answer": "investigaría"
+   }
+  },
+  {
+   "id": "es-4-08",
+   "stage": 4,
+   "pattern": "Ojalá que ___.",
+   "meaningKo": "다른 사람의 행동이나 상황에 대한 소망 표현하기",
+   "meaningEn": "Expressing a wish about others' actions or situations",
+   "examples": [
+    {
+     "text": "Ojalá que el jefe acepte nuestra propuesta.",
+     "ko": "상사가 우리의 제안을 받아들였으면 좋겠다.",
+     "en": "I hope the boss accepts our proposal."
+    },
+    {
+     "text": "Ojalá que puedas visitarnos pronto.",
+     "ko": "네가 곧 우리를 방문할 수 있으면 좋겠다.",
+     "en": "I hope you can visit us soon."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속법 현재",
+     "noteKo": "___에 바라는 상황이나 행동을 넣음",
+     "nameEn": "Present subjunctive for wishes",
+     "noteEn": "___ is the desired situation/action"
+    }
+   ],
+   "related": [
+    "Espero que ___",
+    "Me gustaría que ___"
+   ],
+   "quiz": {
+    "prompt": "Ojalá que ___ la noticia sea cierta.",
+    "answer": "lo que dicen en"
+   }
+  },
+  {
+   "id": "es-4-09",
+   "stage": 4,
+   "pattern": "Me preocupa que ___.",
+   "meaningKo": "다른 사람의 행동이나 상황에 대해 걱정 표현하기",
+   "meaningEn": "Expressing concern about others' actions or situations",
+   "examples": [
+    {
+     "text": "Me preocupa que no lleguemos a tiempo con el proyecto.",
+     "ko": "우리가 프로젝트를 제시간에 끝내지 못할까 봐 걱정이다.",
+     "en": "I'm worried that we won't finish the project on time."
+    },
+    {
+     "text": "Me preocupa que mi amigo no se adapte bien después de mudarse.",
+     "ko": "내 친구가 이사 후 잘 적응하지 못할까 봐 걱정이다.",
+     "en": "I'm worried that my friend won't adapt well after moving."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속법 현재",
+     "noteKo": "___에 걱정하는 상황을 넣음",
+     "nameEn": "Present subjunctive for concern",
+     "noteEn": "___ is the situation or action you are worried about"
+    }
+   ],
+   "related": [
+    "Temo que ___",
+    "Es posible que ___"
+   ],
+   "quiz": {
+    "prompt": "Me preocupa que ___ no acepte nuestra propuesta.",
+    "answer": "el gerente"
+   }
+  },
+  {
+   "id": "es-4-10",
+   "stage": 4,
+   "pattern": "Me gustaría saber si ___.",
+   "meaningKo": "상대방의 생각이나 가능성에 대해 정중하게 질문하기",
+   "meaningEn": "Politely asking about someone's thoughts or possibility",
+   "examples": [
+    {
+     "text": "Me gustaría saber si puedes ayudarme con la mudanza.",
+     "ko": "네가 이사 도와줄 수 있는지 알고 싶어.",
+     "en": "I would like to know if you can help me with the move."
+    },
+    {
+     "text": "Me gustaría saber si es posible cambiar la fecha de entrega.",
+     "ko": "납기일을 변경할 수 있는지 알고 싶어.",
+     "en": "I would like to know if it's possible to change the delivery date."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 질문",
+     "noteKo": "___에 질문하고 싶은 내용을 넣음",
+     "nameEn": "Polite question",
+     "noteEn": "___ is what you want to ask about"
+    }
+   ],
+   "related": [
+    "¿Sería posible ___?",
+    "¿Podrías decirme si ___?"
+   ],
+   "quiz": {
+    "prompt": "Me gustaría saber si ___ piensas mudarte este año.",
+    "answer": "de verdad"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "es-5-01",
+   "stage": 5,
+   "pattern": "¿Podrías explicarme ___ de nuevo, por favor?",
+   "meaningKo": "정중하게 설명을 다시 부탁하기",
+   "meaningEn": "Politely asking for an explanation again",
+   "examples": [
+    {
+     "text": "¿Podrías explicarme el punto tres de nuevo, por favor?",
+     "ko": "3번째 부분을 다시 설명해 주실 수 있나요?",
+     "en": "Could you explain point three to me again, please?"
+    },
+    {
+     "text": "¿Podrías explicarme cómo funciona el sistema de nuevo, por favor?",
+     "ko": "시스템이 어떻게 작동하는지 다시 설명해 주실 수 있나요?",
+     "en": "Could you explain how the system works to me again, please?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건법",
+     "noteKo": "정중한 부탁을 할 때 podrías를 사용함",
+     "nameEn": "Conditional for politeness",
+     "noteEn": "Use podrías in the first slot for polite requests"
+    }
+   ],
+   "related": [
+    "¿Me podrías ayudar con ___?",
+    "¿Sería posible ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Podrías explicarme ___ de nuevo, por favor?",
+    "answer": "la propuesta"
+   }
+  },
+  {
+   "id": "es-5-02",
+   "stage": 5,
+   "pattern": "No es por criticar, pero ___ podría mejorarse un poco.",
+   "meaningKo": "완곡하게 비판하기",
+   "meaningEn": "Softening criticism",
+   "examples": [
+    {
+     "text": "No es por criticar, pero la presentación podría mejorarse un poco.",
+     "ko": "비판하려는 것은 아니지만, 발표는 좀 더 나아질 수 있을 것 같아요.",
+     "en": "I'm not trying to criticize, but the presentation could be improved a little."
+    },
+    {
+     "text": "No es por criticar, pero el diseño podría mejorarse un poco.",
+     "ko": "비판하려는 것은 아니지만, 디자인은 좀 더 좋아질 수 있을 것 같아요.",
+     "en": "I'm not trying to criticize, but the design could be improved a bit."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 표현",
+     "noteKo": "첫 번째 빈칸에 비판 대상을 넣음",
+     "nameEn": "Softening phrase",
+     "noteEn": "First slot is the thing being critiqued"
+    }
+   ],
+   "related": [
+    "Quizás ___ podría revisarse.",
+    "Con todo respeto, creo que ___"
+   ],
+   "quiz": {
+    "prompt": "No es por criticar, pero ___ podría mejorarse un poco.",
+    "answer": "el informe"
+   }
+  },
+  {
+   "id": "es-5-03",
+   "stage": 5,
+   "pattern": "¡Anda que no ___ ni nada!",
+   "meaningKo": "유머러스하게 과장해서 칭찬하기",
+   "meaningEn": "Jokingly exaggerating praise",
+   "examples": [
+    {
+     "text": "¡Anda que no sabes cocinar ni nada!",
+     "ko": "요리 진짜 잘하네!",
+     "en": "Wow, you really know how to cook!"
+    },
+    {
+     "text": "¡Anda que no tienes arte ni nada!",
+     "ko": "정말 재주가 많네!",
+     "en": "Wow, you really are talented!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구",
+     "noteKo": "첫 번째 빈칸에 칭찬하는 능력/특성",
+     "nameEn": "Idiom",
+     "noteEn": "First slot is the skill/trait being praised"
+    }
+   ],
+   "related": [
+    "¡Vaya ___ que tienes!",
+    "¡Qué ___ tienes!"
+   ],
+   "quiz": {
+    "prompt": "¡Anda que no ___ ni nada!",
+    "answer": "sabes bailar"
+   }
+  },
+  {
+   "id": "es-5-04",
+   "stage": 5,
+   "pattern": "Oye, sin ánimo de ofender, pero ___.",
+   "meaningKo": "기분 상하지 않게 비판하거나 의견 제시하기",
+   "meaningEn": "Disagreeing or critiquing tactfully",
+   "examples": [
+    {
+     "text": "Oye, sin ánimo de ofender, pero creo que tu argumento tiene algunas lagunas.",
+     "ko": "기분 나쁘게 하려는 건 아니지만, 네 주장은 약간 허점이 있는 것 같아.",
+     "en": "Hey, no offense, but I think your argument has some gaps."
+    },
+    {
+     "text": "Oye, sin ánimo de ofender, pero tal vez deberías revisar los datos.",
+     "ko": "기분 나쁘게 하려는 건 아니지만, 데이터를 다시 확인해보는 게 좋을 것 같아.",
+     "en": "Hey, no offense, but maybe you should check the data."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 의견 표현",
+     "noteKo": "두 번째 빈칸에 비판 또는 의견 내용",
+     "nameEn": "Mitigated disagreement",
+     "noteEn": "Second slot is the critique or suggestion"
+    }
+   ],
+   "related": [
+    "No te lo tomes a mal, pero ___",
+    "Con todo respeto, ___"
+   ],
+   "quiz": {
+    "prompt": "Oye, sin ánimo de ofender, pero ___.",
+    "answer": "no estoy de acuerdo con esa parte"
+   }
+  },
+  {
+   "id": "es-5-05",
+   "stage": 5,
+   "pattern": "A ver, no quiero ser aguafiestas, pero ___.",
+   "meaningKo": "분위기를 깨고 싶지 않지만 반대 의견 말하기",
+   "meaningEn": "Disagreeing without spoiling the mood",
+   "examples": [
+    {
+     "text": "A ver, no quiero ser aguafiestas, pero creo que deberíamos pensarlo un poco más.",
+     "ko": "분위기 깨고 싶진 않지만, 조금 더 고민해 봐야 할 것 같아.",
+     "en": "Look, I don't want to be a party pooper, but I think we should think about it a bit more."
+    },
+    {
+     "text": "A ver, no quiero ser aguafiestas, pero ese chiste ya lo había escuchado.",
+     "ko": "분위기 깨고 싶진 않지만, 그 농담은 이미 들었어.",
+     "en": "Look, I don't want to be a buzzkill, but I've already heard that joke."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 반대 표현",
+     "noteKo": "두 번째 빈칸에 반대 의견이나 사실",
+     "nameEn": "Mitigated disagreement",
+     "noteEn": "Second slot is the objection or fact"
+    }
+   ],
+   "related": [
+    "No es por ser negativo, pero ___",
+    "No quiero cortar el rollo, pero ___"
+   ],
+   "quiz": {
+    "prompt": "A ver, no quiero ser aguafiestas, pero ___.",
+    "answer": "no creo que funcione"
+   }
+  },
+  {
+   "id": "es-5-06",
+   "stage": 5,
+   "pattern": "¿Le importaría si ___?",
+   "meaningKo": "상대방에게 정중하게 요청함",
+   "meaningEn": "Making a polite request to someone",
+   "examples": [
+    {
+     "text": "¿Le importaría si abro la ventana?",
+     "ko": "창문을 열어도 괜찮으신가요?",
+     "en": "Would you mind if I open the window?"
+    },
+    {
+     "text": "¿Le importaría si le llamo mañana?",
+     "ko": "내일 전화드려도 괜찮으신가요?",
+     "en": "Would you mind if I call you tomorrow?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 요청",
+     "noteKo": "___에 동사원형이나 간단한 행동이 들어감",
+     "nameEn": "Polite request",
+     "noteEn": "___ is a verb in the infinitive or a simple action"
+    }
+   ],
+   "related": [
+    "¿Te importa si ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Le importaría si ___?",
+    "answer": "cierro la puerta"
+   }
+  },
+  {
+   "id": "es-5-07",
+   "stage": 5,
+   "pattern": "No es por nada, pero ___",
+   "meaningKo": "완곡하게 비판을 표현함",
+   "meaningEn": "Soften criticism or feedback",
+   "examples": [
+    {
+     "text": "No es por nada, pero la presentación fue un poco larga.",
+     "ko": "딴 뜻은 없지만, 발표가 좀 길었어요.",
+     "en": "No offense, but the presentation was a bit long."
+    },
+    {
+     "text": "No es por nada, pero podrías revisar los datos otra vez.",
+     "ko": "딴 뜻은 없지만, 데이터를 한 번 더 확인해볼 수 있겠어요?",
+     "en": "No offense, but maybe you could check the data again."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 비판",
+     "noteKo": "___에 비판이나 제안이 들어감",
+     "nameEn": "Softened criticism",
+     "noteEn": "___ holds the criticism or suggestion"
+    }
+   ],
+   "related": [
+    "No quiero ser pesado, pero ___"
+   ],
+   "quiz": {
+    "prompt": "No es por nada, pero ___",
+    "answer": "ese chiste es un poco viejo"
+   }
+  },
+  {
+   "id": "es-5-08",
+   "stage": 5,
+   "pattern": "¿Tú qué opinas de ___?",
+   "meaningKo": "상대방의 의견을 묻는 표현",
+   "meaningEn": "Asking for someone's opinion",
+   "examples": [
+    {
+     "text": "¿Tú qué opinas de la nueva película?",
+     "ko": "새 영화에 대해 어떻게 생각해?",
+     "en": "What do you think about the new movie?"
+    },
+    {
+     "text": "¿Tú qué opinas de su propuesta?",
+     "ko": "그의 제안에 대해 어떻게 생각해?",
+     "en": "What do you think about his proposal?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 묻기",
+     "noteKo": "___에 주제가 들어감",
+     "nameEn": "Asking opinion",
+     "noteEn": "___ is the topic or issue"
+    }
+   ],
+   "related": [
+    "¿Cómo ves tú ___?"
+   ],
+   "quiz": {
+    "prompt": "¿Tú qué opinas de ___?",
+    "answer": "la decisión del jurado"
+   }
+  },
+  {
+   "id": "es-5-09",
+   "stage": 5,
+   "pattern": "Entre tú y yo, ___",
+   "meaningKo": "비밀스럽게 의견을 나눔",
+   "meaningEn": "Sharing something confidentially",
+   "examples": [
+    {
+     "text": "Entre tú y yo, no creo que funcione.",
+     "ko": "너랑 나 사이에서만 말하는 건데, 잘 될 것 같지 않아.",
+     "en": "Just between you and me, I don’t think it will work."
+    },
+    {
+     "text": "Entre tú y yo, prefiero el otro equipo.",
+     "ko": "우리끼리만 얘긴데, 나는 다른 팀이 더 좋아.",
+     "en": "Between you and me, I prefer the other team."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비밀 공유",
+     "noteKo": "___에 비밀스럽게 말하고 싶은 내용이 들어감",
+     "nameEn": "Confidential sharing",
+     "noteEn": "___ is what you want to say in confidence"
+    }
+   ],
+   "related": [
+    "Off the record, ___"
+   ],
+   "quiz": {
+    "prompt": "Entre tú y yo, ___",
+    "answer": "no me gusta el jefe"
+   }
+  },
+  {
+   "id": "es-5-10",
+   "stage": 5,
+   "pattern": "Como quien no quiere la cosa, ___",
+   "meaningKo": "자연스럽게 말하거나 행동함",
+   "meaningEn": "Doing or saying something subtly or offhand",
+   "examples": [
+    {
+     "text": "Como quien no quiere la cosa, le pregunté por su salario.",
+     "ko": "아무렇지 않은 척 그에게 월급을 물어봤다.",
+     "en": "Casually, I asked him about his salary."
+    },
+    {
+     "text": "Como quien no quiere la cosa, dejó el regalo en la mesa.",
+     "ko": "자연스럽게 선물을 테이블에 두었다.",
+     "en": "As if it were nothing, she left the gift on the table."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "자연스러운 행동",
+     "noteKo": "___에 자연스럽게 하는 행동이 들어감",
+     "nameEn": "Subtle action",
+     "noteEn": "___ is the subtle action or comment"
+    }
+   ],
+   "related": [
+    "Sin que se note, ___"
+   ],
+   "quiz": {
+    "prompt": "Como quien no quiere la cosa, ___",
+    "answer": "mencioné el tema"
+   }
+  }
+ ]
+}

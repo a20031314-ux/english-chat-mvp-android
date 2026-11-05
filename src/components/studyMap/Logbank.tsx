@@ -21,13 +21,14 @@ import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
 import type { KnownMap } from "@/lib/curriculum/known";
 import type { CheckResult } from "@/lib/curriculum/checkup";
-import { computeFill, fillCatalog, keysInCell, type Axis, type BankAxis, type FillCell, type FillEvent} from "@/lib/curriculum/fill";
+import { computeFill, fillCatalog, keysInCell, studyPoint, type Axis, type BankAxis, type FillCell, type FillEvent } from "@/lib/curriculum/fill";
+import { COMPARE_MS, directionView, studyMix, type DirectionView, type StudyMix } from "@/lib/curriculum/directionView";
 import { callTurnsOf, fillEvents } from "@/lib/curriculum/fillInputs";
 import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
 import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
 import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
 import { segmentWords } from "@/lib/wordSegments";
-import { AxisDetail, axisName, CellDetail, cellName, SkillHexagon, type CellPlan } from "@/components/studyMap/SkillHexagon";
+import { AxisDetail, axisName, CellDetail, cellName, lackOf, planCells, SkillHexagon, tabOf, type CellPlan } from "@/components/studyMap/SkillHexagon";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 
 function localDay(at: number): string {
@@ -162,10 +163,81 @@ const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"]
 /** 어디서 했는지 → 아이콘(LogItem where · 수업 결과 종류 · 퀴즈). */
 const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", map: "🧩", mission: "🎭", review: "📝", lesson: "🧩", recall: "🎯", script: "🎭", quiz: "📝" };
 
+const pct = (n: number) => String(Math.round(n * 100));
+const put = (template: string, vars: Record<string, string>) => Object.entries(vars).reduce((text, [key, value]) => text.replaceAll(`{${key}}`, value), template);
+
+/** 지난 2주 비교 → 설명 → 다음 하나. 오르지 않은 눈금과 문장 목록은 여기 없다. */
+function DirectionFlow({
+  ui,
+  view,
+  study,
+  nameOf,
+  onNext,
+}: {
+  ui: UICopy;
+  view: DirectionView;
+  /** 첫 부족 칸이 최근 틀림에서 차지하는 개수. 절반 넘으면 설명에 개수로 말한다. */
+  study: StudyMix | null;
+  nameOf: (cell: FillCell) => string;
+  onNext: (cell: FillCell) => void;
+}) {
+  const first = view.lacks[0];
+  const second = view.lacks[1];
+  const gain = view.gains[0];
+  const name = first ? nameOf(first.cell) : "";
+  const most = Boolean(study && study.total > 0 && study.missed * 2 >= study.total);
+  if (!gain && !first) return <p data-direction="empty" className="text-note text-slate-500">{ui.dirEmpty}</p>;
+  return (
+    <div data-direction className="flex flex-col gap-3">
+      {view.gains.length ? (
+        <section className="flex flex-col gap-1">
+          <h3 className="text-caption font-semibold text-slate-300">{ui.dirGain}</h3>
+          <ul className="flex flex-col gap-1">
+            {view.gains.map((row) => (
+              <li key={row.axis} data-dir-gain={row.axis} className="text-note text-ink">
+                {put(ui.dirUp, { name: axisName(ui, row.axis), before: pct(row.before), now: pct(row.now) })}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {view.lacks.length ? (
+        <section className="flex flex-col gap-1">
+          <h3 className="text-caption font-semibold text-slate-300">{ui.dirLack}</h3>
+          <ul className="flex flex-col gap-1">
+            {view.lacks.map((row) => (
+              <li key={`${row.cell.axis}:${row.cell.id}`} data-dir-lack={row.cell.id} className="text-note text-ink">
+                {put(ui.dirUnder, { name: nameOf(row.cell), expected: pct(row.expected), actual: pct(row.actual) })}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      <section data-dir-explain className="flex flex-col gap-1">
+        <h3 className="text-caption font-semibold text-slate-300">{ui.dirExplain}</h3>
+        {gain ? <p className="text-note text-ink">{put(ui.dirSayUp, { name: axisName(ui, gain.axis) })}</p> : null}
+        {most && study ? <p className="text-note text-ink">{put(ui.dirMost, { name, missed: String(study.missed), total: String(study.total) })}</p> : null}
+        {first && !most ? <p className="text-note text-ink">{put(ui.dirSayUnder, { name })}</p> : null}
+      </section>
+      <section data-dir-next className="flex flex-col gap-2">
+        <h3 className="text-caption font-semibold text-slate-300">{ui.dirNext}</h3>
+        {first ? (
+          <button type="button" onClick={() => onNext(first.cell)} className="tb-btn rounded-xl px-3 py-2 text-start text-note font-semibold">
+            {put(ui.dirSayNext, { name })}
+          </button>
+        ) : null}
+        {second ? <p className="text-note text-slate-300">{put(ui.dirSayThen, { name: nameOf(second.cell) })}</p> : null}
+        {gain && first ? <p className="text-meta text-slate-500">{ui.dirSayKept}</p> : null}
+      </section>
+    </div>
+  );
+}
+
 /**
  * Logbank(2026-11-02 사용자 "층위가 모호해서 난잡 — 기준을 하나로, 각 탭에서 학습한 걸 모은 자료, 누르면 세부(스크린샷·학습 내용)"):
  * [주 | 월] ‹기간› → 기준 탭 [⏱ 학습 시간 | 📐 문법 | 🔤 어휘 | 💬 표현] → 그 기간 날마다 막대(누르면 그날 세부 — 결과 카드·배운 것·고친 줄)
- * → 그 기준으로 모은 목록(시간이면 어디서 얼마나, 갈래면 소재 — 누르면 그 소재 세부: 수업 결과 카드·고친 줄·퀴즈 틀림, ▶ 그 수업).
+ * → 그 기준으로 모은 목록은 꼭짓점·시간을 눌렀을 때만.
+ * 육각형 아래는 목록 대신 지난 2주 비교(directionView): 오른 눈금, 예상보다 아래인 칸, 설명, 다음 하나.
  * 재료·자료 셈은 curriculum/logbankData.ts(순수).
  */
 export function Logbank({
@@ -262,6 +334,22 @@ export function Logbank({
   const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
   const [nowAt] = useState(() => Date.now());
   const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
+  const earlier = useMemo(() => {
+    const cut = nowAt - COMPARE_MS;
+    return computeFill({
+      catalog,
+      check,
+      stage,
+      events: events.filter((one) => one.at < cut),
+      calls: callTurns.filter((one) => one.at < cut),
+      now: cut,
+    });
+  }, [catalog, check, stage, events, callTurns, nowAt]);
+  const direction = useMemo(() => directionView(fill, earlier), [fill, earlier]);
+  const study = useMemo(() => {
+    const cell = direction.lacks[0]?.cell;
+    return cell ? studyMix(events, catalog, cell, nowAt - COMPARE_MS) : null;
+  }, [direction, events, catalog, nowAt]);
   // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
   useEffect(() => {
     if (words) saveFillFocus(language, fillDirection(fill, catalog, events, stage));
@@ -371,43 +459,53 @@ export function Logbank({
     if (key.startsWith("w|")) insight?.open({ sentence: key.slice(2), selected: key.slice(2) });
     else openLesson({ language, key });
   };
-  /** 3층: 그 칸의 부족한 것(마지막이 틀림)·공부할 것(맞힌 적 없음, 은행 순서)·추천 하나. */
+  /** 3층: 부족한 점 한 줄, 틀린 기록만 순서. 안 푼 표현은 "공부하세요"로 넣지 않는다. */
   const planFor = (axis: Axis, cell: FillCell): CellPlan => {
+    const rows = planCells(fill.axes[axis].cells, tabOf(cell.id));
+    const order = Math.max(1, rows.findIndex((one) => one.id === cell.id) + 1);
+    const lack = lackOf(ui, cell);
     if (axis === "talk" || axis === "listen") {
-      return { short: [], study: [], recommend: { icon: "📞", label: axisName(ui, axis), go: () => sendAppIntent("startCall", {}) } };
+      const thin = cell.state === "weak" || cell.state === "unknown";
+      return {
+        order,
+        lack,
+        why: thin ? (axis === "listen" ? ui.fillListenWhy : ui.fillTalkWhy) : "",
+        steps: [],
+        recommend: thin ? { icon: "📞", label: axisName(ui, axis), go: () => sendAppIntent("startCall", {}) } : null,
+      };
     }
     const bank = axis as BankAxis;
     const use = bank.endsWith("Use");
     const items = bank.startsWith("vocab") ? catalog.vocab : catalog.sent;
     const mine = (one: FillEvent) => one.use === use && items.has(one.key);
     const latest = new Map<string, FillEvent>();
-    const right = new Set<string>();
     for (const one of [...events].sort((a, b) => a.at - b.at)) {
       if (!mine(one)) continue;
       latest.set(one.key, one);
-      if (one.correct) right.add(one.key);
     }
     const inCell = cell.id.startsWith("miss:")
       ? [...latest.values()].filter((one) => !one.correct && one.miss === cell.id.slice(5)).map((one) => one.key)
       : keysInCell(catalog, bank, cell.id);
-    const short = inCell.filter((key) => latest.get(key) && !latest.get(key)!.correct).slice(0, 8);
-    const study = inCell.filter((key) => !right.has(key) && !short.includes(key)).sort((a, b) => (items.get(a)?.d ?? 1) - (items.get(b)?.d ?? 1)).slice(0, 6);
-    const first = short[0] ?? study[0];
-    const recommend = bank.startsWith("vocab")
-      ? {
-          icon: "📖",
-          label: cellName(ui, cell.id, grammarName),
-          // 시트를 닫고 Quizbank 어휘 탭으로(NotebookSection이 openNotes를 받음).
-          go: () => {
-            setOpenCell(null);
-            setOpenAxis(null);
-            sendAppIntent("openNotes", { section: "words" });
-          },
-        }
-      : first
-        ? { icon: "🧩", label: keyLabel(first), go: () => openKey(first) }
-        : null;
-    return { short: short.map((key) => ({ key, label: keyLabel(key) })), study: study.map((key) => ({ key, label: keyLabel(key) })), recommend };
+    const missed = inCell.filter((key) => latest.get(key) && !latest.get(key)!.correct).sort((a, b) => latest.get(b)!.at - latest.get(a)!.at);
+    const steps: { key: string; label: string }[] = [];
+    const seen = new Set<string>();
+    for (const key of missed) {
+      const point = studyPoint(language, key, grammarName);
+      if (!point || seen.has(point.key)) continue;
+      seen.add(point.key);
+      steps.push(point);
+      if (steps.length === 4) break;
+    }
+    const first = steps[0];
+    return {
+      order,
+      lack,
+      why: first ? ui.fillMissedLast : "",
+      steps,
+      recommend: first
+        ? { icon: first.key.startsWith("w|") ? "📖" : "🧩", label: first.label, go: () => openKey(first.key) }
+        : null,
+    };
   };
   return (
     <div data-logbank className="flex flex-col gap-3">
@@ -431,6 +529,16 @@ export function Logbank({
           onAxis={setOpenAxis}
           onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
           recordLabel={ui.skillRecord}
+        />
+        <DirectionFlow
+          ui={ui}
+          view={direction}
+          study={study}
+          nameOf={(cell) => cellName(ui, cell.id, grammarName)}
+          onNext={(cell) => {
+            setOpenAxis(cell.axis);
+            setOpenCell(cell);
+          }}
         />
         {recordOpen && checkups?.length ? (
           <SkillRecord
@@ -481,7 +589,7 @@ export function Logbank({
       ) : null}
       {openAxis && openCell ? (
         <LogSheet title={`${axisName(ui, openAxis)} · ${cellName(ui, openCell.id, grammarName)}`} ui={ui} onClose={() => setOpenCell(null)}>
-          <CellDetail ui={ui} cell={openCell} plan={planFor(openAxis, openCell)} onKey={openKey} />
+          <CellDetail ui={ui} plan={planFor(openAxis, openCell)} onKey={openKey} />
         </LogSheet>
       ) : null}
       {dayDetail ? (

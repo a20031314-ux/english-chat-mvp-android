@@ -1,0 +1,1584 @@
+{
+ "1": [
+  {
+   "id": "fr-1-01",
+   "stage": 1,
+   "pattern": "Bonjour, je m'appelle ___.",
+   "meaningKo": "자기 이름을 소개하기",
+   "meaningEn": "Introducing your name",
+   "examples": [
+    {
+     "text": "Bonjour, je m'appelle Marie.",
+     "ko": "안녕하세요, 제 이름은 마리입니다.",
+     "en": "Hello, my name is Marie."
+    },
+    {
+     "text": "Bonjour, je m'appelle Paul.",
+     "ko": "안녕하세요, 제 이름은 폴입니다.",
+     "en": "Hello, my name is Paul."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "m'appeler 동사 활용",
+     "noteKo": "___ 자리에 이름을 넣음",
+     "nameEn": "m'appeler verb",
+     "noteEn": "Put your name in the blank"
+    }
+   ],
+   "related": [
+    "Je viens de ___",
+    "Je suis ___"
+   ],
+   "quiz": {
+    "prompt": "Bonjour, je m'appelle ___.",
+    "answer": "Luc"
+   }
+  },
+  {
+   "id": "fr-1-02",
+   "stage": 1,
+   "pattern": "Je suis ___.",
+   "meaningKo": "자기 직업이나 신분을 말하기",
+   "meaningEn": "Saying your job or role",
+   "examples": [
+    {
+     "text": "Je suis étudiant.",
+     "ko": "저는 학생입니다.",
+     "en": "I am a student."
+    },
+    {
+     "text": "Je suis professeur.",
+     "ko": "저는 선생님입니다.",
+     "en": "I am a teacher."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "être 동사",
+     "noteKo": "___ 자리에 직업이나 역할",
+     "nameEn": "être verb",
+     "noteEn": "Put your job or role in the blank"
+    }
+   ],
+   "related": [
+    "Je viens de ___",
+    "Je m'appelle ___"
+   ],
+   "quiz": {
+    "prompt": "Je suis ___.",
+    "answer": "boulanger"
+   }
+  },
+  {
+   "id": "fr-1-03",
+   "stage": 1,
+   "pattern": "Je voudrais ___, s'il vous plaît.",
+   "meaningKo": "원하는 것 정중하게 말하기",
+   "meaningEn": "Politely saying what you want",
+   "examples": [
+    {
+     "text": "Je voudrais une baguette, s'il vous plaît.",
+     "ko": "바게트 하나 주세요.",
+     "en": "I would like a baguette, please."
+    },
+    {
+     "text": "Je voudrais un café, s'il vous plaît.",
+     "ko": "커피 한 잔 주세요.",
+     "en": "I would like a coffee, please."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "voudrais 동사",
+     "noteKo": "___ 자리에 원하는 것",
+     "nameEn": "voudrais verb",
+     "noteEn": "Put what you want in the blank"
+    }
+   ],
+   "related": [
+    "Je prends ___",
+    "Je veux ___, s'il vous plaît."
+   ],
+   "quiz": {
+    "prompt": "Je voudrais ___, s'il vous plaît.",
+    "answer": "un pain au chocolat"
+   }
+  },
+  {
+   "id": "fr-1-04",
+   "stage": 1,
+   "pattern": "Où est ___, s'il vous plaît ?",
+   "meaningKo": "장소 위치를 물어보기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "Où est la station de métro, s'il vous plaît ?",
+     "ko": "지하철역이 어디에 있나요?",
+     "en": "Where is the metro station, please?"
+    },
+    {
+     "text": "Où est la toilette, s'il vous plaît ?",
+     "ko": "화장실이 어디에 있나요?",
+     "en": "Where is the toilet, please?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___ 자리에 장소 이름",
+     "nameEn": "Question phrase",
+     "noteEn": "Put a place in the blank"
+    }
+   ],
+   "related": [
+    "Il y a ___ ici ?",
+    "Où se trouve ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Où est ___, s'il vous plaît ?",
+    "answer": "le musée"
+   }
+  },
+  {
+   "id": "fr-1-05",
+   "stage": 1,
+   "pattern": "Enchanté, je viens de ___ .",
+   "meaningKo": "어디 출신인지 말함",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "Enchanté, je viens de Corée.",
+     "ko": "반가워요, 저는 한국에서 왔어요.",
+     "en": "Nice to meet you, I'm from Korea."
+    },
+    {
+     "text": "Enchanté, je viens de Paris.",
+     "ko": "반가워요, 저는 파리에서 왔어요.",
+     "en": "Nice to meet you, I'm from Paris."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "venir de + 장소",
+     "noteKo": "___에 출신지를 넣음",
+     "nameEn": "venir de + place",
+     "noteEn": "___ is where you are from"
+    }
+   ],
+   "related": [
+    "Je suis de ___ ."
+   ],
+   "quiz": {
+    "prompt": "Enchanté, je viens de ___ .",
+    "answer": "Corée"
+   }
+  },
+  {
+   "id": "fr-1-06",
+   "stage": 1,
+   "pattern": "Je fais ___ . Et vous ?",
+   "meaningKo": "자신의 일을 말하고 상대에게 물어봄",
+   "meaningEn": "Saying what you do and asking the other person",
+   "examples": [
+    {
+     "text": "Je fais du marketing. Et vous ?",
+     "ko": "저는 마케팅을 해요. 당신은요?",
+     "en": "I work in marketing. And you?"
+    },
+    {
+     "text": "Je fais des études. Et vous ?",
+     "ko": "저는 공부를 해요. 당신은요?",
+     "en": "I study. And you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "faire + 활동/직업",
+     "noteKo": "___에 자신의 활동이나 직업을 넣음",
+     "nameEn": "faire + activity/job",
+     "noteEn": "___ is what you do"
+    }
+   ],
+   "related": [
+    "Je travaille comme ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je fais ___ . Et vous ?",
+    "answer": "du marketing"
+   }
+  },
+  {
+   "id": "fr-1-07",
+   "stage": 1,
+   "pattern": "Combien coûte ___ ?",
+   "meaningKo": "가격을 묻기",
+   "meaningEn": "Asking how much something costs",
+   "examples": [
+    {
+     "text": "Combien coûte cette baguette ?",
+     "ko": "이 바게트 얼마에요?",
+     "en": "How much is this baguette?"
+    },
+    {
+     "text": "Combien coûte le ticket ?",
+     "ko": "이 표 얼마에요?",
+     "en": "How much is the ticket?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "coûter + 명사",
+     "noteKo": "___에 물건을 넣음",
+     "nameEn": "coûter + noun",
+     "noteEn": "___ is the item"
+    }
+   ],
+   "related": [
+    "C'est combien pour ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Combien coûte ___ ?",
+    "answer": "cette baguette"
+   }
+  },
+  {
+   "id": "fr-1-08",
+   "stage": 1,
+   "pattern": "Je prends ___, s'il vous plaît.",
+   "meaningKo": "원하는 것을 주문함",
+   "meaningEn": "Ordering what you want",
+   "examples": [
+    {
+     "text": "Je prends une baguette, s'il vous plaît.",
+     "ko": "바게트 하나 주세요.",
+     "en": "I'll take a baguette, please."
+    },
+    {
+     "text": "Je prends deux croissants, s'il vous plaît.",
+     "ko": "크루아상 두 개 주세요.",
+     "en": "I'll take two croissants, please."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "prendre + 명사",
+     "noteKo": "___에 원하는 물건을 넣음",
+     "nameEn": "prendre + noun",
+     "noteEn": "___ is what you want"
+    }
+   ],
+   "related": [
+    "Je voudrais ___, merci."
+   ],
+   "quiz": {
+    "prompt": "Je prends ___, s'il vous plaît.",
+    "answer": "une baguette"
+   }
+  },
+  {
+   "id": "fr-1-09",
+   "stage": 1,
+   "pattern": "Excusez-moi, où sont ___ ?",
+   "meaningKo": "장소의 위치를 물음",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "Excusez-moi, où sont les toilettes ?",
+     "ko": "실례합니다, 화장실이 어디에요?",
+     "en": "Excuse me, where are the toilets?"
+    },
+    {
+     "text": "Excusez-moi, où sont les guichets ?",
+     "ko": "실례합니다, 매표소가 어디에요?",
+     "en": "Excuse me, where are the ticket counters?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "où sont + 복수명사",
+     "noteKo": "___에 장소(복수형)를 넣음",
+     "nameEn": "où sont + plural place",
+     "noteEn": "___ is the place (plural)"
+    }
+   ],
+   "related": [
+    "Excusez-moi, où se trouve ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Excusez-moi, où sont ___ ?",
+    "answer": "les toilettes"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "fr-2-01",
+   "stage": 2,
+   "pattern": "Hier, j'ai ___ .",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Saying what you did yesterday",
+   "examples": [
+    {
+     "text": "Hier, j'ai visité le musée.",
+     "ko": "어제 박물관에 갔어요.",
+     "en": "Yesterday, I visited the museum."
+    },
+    {
+     "text": "Hier, j'ai cuisiné avec ma sœur.",
+     "ko": "어제 언니랑 요리했어요.",
+     "en": "Yesterday, I cooked with my sister."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "복합 과거",
+     "noteKo": "___ 자리에 과거에 한 일(동사 과거분사) 사용",
+     "nameEn": "Passé composé",
+     "noteEn": "___ slot uses a past action (past participle)"
+    }
+   ],
+   "related": [
+    "Ce week-end, je vais ___ ."
+   ],
+   "quiz": {
+    "prompt": "Hier, j'ai ___ .",
+    "answer": "lu un livre"
+   }
+  },
+  {
+   "id": "fr-2-02",
+   "stage": 2,
+   "pattern": "Ce week-end, je vais ___ .",
+   "meaningKo": "이번 주말에 할 일을 말하기",
+   "meaningEn": "Talking about what you are going to do this weekend",
+   "examples": [
+    {
+     "text": "Ce week-end, je vais voir un film.",
+     "ko": "이번 주말에 영화 볼 거예요.",
+     "en": "This weekend, I am going to see a movie."
+    },
+    {
+     "text": "Ce week-end, je vais me reposer.",
+     "ko": "이번 주말에 쉴 거예요.",
+     "en": "This weekend, I am going to rest."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "근접 미래",
+     "noteKo": "___ 자리에 할 일(동사 원형) 사용",
+     "nameEn": "Near future",
+     "noteEn": "___ slot uses an action in the infinitive"
+    }
+   ],
+   "related": [
+    "Hier, j'ai ___ ."
+   ],
+   "quiz": {
+    "prompt": "Ce week-end, je vais ___ .",
+    "answer": "rencontrer mes amis"
+   }
+  },
+  {
+   "id": "fr-2-03",
+   "stage": 2,
+   "pattern": "Tu veux venir ___ ?",
+   "meaningKo": "친구를 초대하기",
+   "meaningEn": "Inviting a friend",
+   "examples": [
+    {
+     "text": "Tu veux venir au cinéma ?",
+     "ko": "영화관에 갈래?",
+     "en": "Do you want to come to the cinema?"
+    },
+    {
+     "text": "Tu veux venir chez moi ?",
+     "ko": "우리 집에 올래?",
+     "en": "Do you want to come to my house?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소/행사 초대",
+     "noteKo": "___ 자리에 장소나 행사명 사용",
+     "nameEn": "Invitation",
+     "noteEn": "___ slot uses a place or event"
+    }
+   ],
+   "related": [
+    "On se retrouve à ___ à ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Tu veux venir ___ ?",
+    "answer": "au parc"
+   }
+  },
+  {
+   "id": "fr-2-04",
+   "stage": 2,
+   "pattern": "On se voit ___ ?",
+   "meaningKo": "만날 날짜나 시간 정하기",
+   "meaningEn": "Suggesting a meeting time or day",
+   "examples": [
+    {
+     "text": "On se voit demain ?",
+     "ko": "내일 볼까?",
+     "en": "Shall we see each other tomorrow?"
+    },
+    {
+     "text": "On se voit ce soir ?",
+     "ko": "오늘 저녁에 볼까?",
+     "en": "Shall we see each other this evening?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간/날짜 표현",
+     "noteKo": "___ 자리에 시간, 날짜, 요일 등 사용",
+     "nameEn": "Time/date",
+     "noteEn": "___ slot uses a time, date, or day"
+    }
+   ],
+   "related": [
+    "Tu veux venir ___ ?"
+   ],
+   "quiz": {
+    "prompt": "On se voit ___ ?",
+    "answer": "samedi"
+   }
+  },
+  {
+   "id": "fr-2-05",
+   "stage": 2,
+   "pattern": "Je prends ___ avec ___ .",
+   "meaningKo": "카페에서 주문하기",
+   "meaningEn": "Ordering food or drink with something",
+   "examples": [
+    {
+     "text": "Je prends un café avec du lait.",
+     "ko": "우유 넣은 커피를 주세요.",
+     "en": "I'll have a coffee with milk."
+    },
+    {
+     "text": "Je prends une tarte avec de la crème.",
+     "ko": "크림을 곁들인 파이를 주세요.",
+     "en": "I'll have a tart with cream."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 연결",
+     "noteKo": "첫 번째 ___는 음식/음료, 두 번째 ___는 곁들이는 것",
+     "nameEn": "Noun combination",
+     "noteEn": "First ___ is food/drink, second ___ is accompaniment"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Je prends ___ avec du sucre.",
+    "answer": "un thé"
+   }
+  },
+  {
+   "id": "fr-2-06",
+   "stage": 2,
+   "pattern": "Je peux ___ ici ?",
+   "meaningKo": "무엇을 해도 되는지 묻기",
+   "meaningEn": "Asking if you may do something",
+   "examples": [
+    {
+     "text": "Je peux m'asseoir ici ?",
+     "ko": "여기 앉아도 될까요?",
+     "en": "Can I sit here?"
+    },
+    {
+     "text": "Je peux prendre une photo ici ?",
+     "ko": "여기서 사진 찍어도 될까요?",
+     "en": "Can I take a photo here?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "허락 요청",
+     "noteKo": "___ 자리에 동사 원형 사용",
+     "nameEn": "Permission",
+     "noteEn": "___ slot uses a verb (infinitive)"
+    }
+   ],
+   "related": [
+    "Est-ce que je peux ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Je peux ___ ici ?",
+    "answer": "utiliser mon ordinateur"
+   }
+  },
+  {
+   "id": "fr-2-07",
+   "stage": 2,
+   "pattern": "J'aime ___ parce que c'est ___ .",
+   "meaningKo": "좋아하는 이유 말하기",
+   "meaningEn": "Saying what you like and giving a reason",
+   "examples": [
+    {
+     "text": "J'aime le chocolat parce que c'est sucré.",
+     "ko": "초콜릿을 좋아해요. 달콤해서요.",
+     "en": "I like chocolate because it's sweet."
+    },
+    {
+     "text": "J'aime la plage parce que c'est calme.",
+     "ko": "해변을 좋아해요. 조용해서요.",
+     "en": "I like the beach because it is calm."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사, 형용사",
+     "noteKo": "첫 번째 ___는 좋아하는 것(명사), 두 번째 ___는 이유(형용사)",
+     "nameEn": "Noun, adjective",
+     "noteEn": "First ___ is what you like (noun), second ___ is reason (adjective)"
+    }
+   ],
+   "related": [
+    "Je n'aime pas ___ ."
+   ],
+   "quiz": {
+    "prompt": "J'aime ___ parce que c'est intéressant.",
+    "answer": "l'histoire"
+   }
+  },
+  {
+   "id": "fr-2-08",
+   "stage": 2,
+   "pattern": "Je n'aime pas ___ .",
+   "meaningKo": "싫어하는 것 말하기",
+   "meaningEn": "Saying what you dislike",
+   "examples": [
+    {
+     "text": "Je n'aime pas les oignons.",
+     "ko": "양파를 싫어해요.",
+     "en": "I don't like onions."
+    },
+    {
+     "text": "Je n'aime pas la pluie.",
+     "ko": "비를 싫어해요.",
+     "en": "I don't like the rain."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 부정",
+     "noteKo": "___ 자리에 싫어하는 것(명사)",
+     "nameEn": "Negative noun",
+     "noteEn": "___ slot uses a disliked thing (noun)"
+    }
+   ],
+   "related": [
+    "J'aime ___ parce que c'est ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je n'aime pas ___ .",
+    "answer": "le fromage"
+   }
+  },
+  {
+   "id": "fr-2-09",
+   "stage": 2,
+   "pattern": "J'ai ___ .",
+   "meaningKo": "증상 말하기",
+   "meaningEn": "Describing a symptom at a pharmacy",
+   "examples": [
+    {
+     "text": "J'ai mal à la tête.",
+     "ko": "머리가 아파요.",
+     "en": "I have a headache."
+    },
+    {
+     "text": "J'ai de la fièvre.",
+     "ko": "열이 있어요.",
+     "en": "I have a fever."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/증상 표현",
+     "noteKo": "___ 자리에 증상(명사구) 사용",
+     "nameEn": "Symptom noun phrase",
+     "noteEn": "___ slot uses a symptom (noun phrase)"
+    }
+   ],
+   "related": [
+    "Je me sens ___ ."
+   ],
+   "quiz": {
+    "prompt": "J'ai ___ .",
+    "answer": "mal à la gorge"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "fr-3-01",
+   "stage": 3,
+   "pattern": "Il y a eu un problème avec ___, et maintenant ___ .",
+   "meaningKo": "문제 발생과 결과 설명하기",
+   "meaningEn": "Explaining a problem and its result",
+   "examples": [
+    {
+     "text": "Il y a eu un problème avec la douche, et maintenant il n'y a plus d'eau chaude.",
+     "ko": "샤워기 문제로 지금 온수가 안 나와요.",
+     "en": "There was a problem with the shower, and now there is no more hot water."
+    },
+    {
+     "text": "Il y a eu un problème avec la porte, et maintenant elle ne ferme plus.",
+     "ko": "문에 문제가 생겨서 지금은 닫히지 않아요.",
+     "en": "There was a problem with the door, and now it doesn't close anymore."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 사건 설명",
+     "noteKo": "첫 번째 빈칸은 문제의 대상, 두 번째는 결과",
+     "nameEn": "Reporting a problem",
+     "noteEn": "First blank: what broke; second: result"
+    }
+   ],
+   "related": [
+    "J'ai un problème avec ___ ."
+   ],
+   "quiz": {
+    "prompt": "Il y a eu un problème avec ___, et maintenant il n'y a plus d'eau chaude.",
+    "answer": "la douche"
+   }
+  },
+  {
+   "id": "fr-3-02",
+   "stage": 3,
+   "pattern": "J'ai regardé ___, et j'ai trouvé ça ___.",
+   "meaningKo": "본 영화나 시리즈와 감상 말하기",
+   "meaningEn": "Saying what you watched and your impression",
+   "examples": [
+    {
+     "text": "J'ai regardé cette série, et j'ai trouvé ça passionnant.",
+     "ko": "나는 그 시리즈를 봤는데 정말 흥미로웠어요.",
+     "en": "I watched that series, and I thought it was fascinating."
+    },
+    {
+     "text": "J'ai regardé ce film, et j'ai trouvé ça ennuyeux.",
+     "ko": "나는 그 영화를 봤는데 지루했어요.",
+     "en": "I watched that film, and I thought it was boring."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 경험 설명",
+     "noteKo": "첫 번째 빈칸은 콘텐츠, 두 번째는 감상",
+     "nameEn": "Talking about past experience",
+     "noteEn": "First blank: what you watched; second: opinion"
+    }
+   ],
+   "related": [
+    "Tu as vu ___ ? Qu'est-ce que tu en as pensé ?"
+   ],
+   "quiz": {
+    "prompt": "J'ai regardé ___, et j'ai trouvé ça ennuyeux.",
+    "answer": "ce film"
+   }
+  },
+  {
+   "id": "fr-3-03",
+   "stage": 3,
+   "pattern": "Désolé(e) pour ___, il y avait ___ .",
+   "meaningKo": "지각·사과 및 이유 설명",
+   "meaningEn": "Apologizing and giving a reason",
+   "examples": [
+    {
+     "text": "Désolé(e) pour le retard, il y avait beaucoup de circulation.",
+     "ko": "늦어서 미안해, 차가 많이 막혔어.",
+     "en": "Sorry for being late, there was a lot of traffic."
+    },
+    {
+     "text": "Désolé(e) pour hier, il y avait un imprévu.",
+     "ko": "어제 미안해, 예기치 못한 일이 있었어.",
+     "en": "Sorry about yesterday, there was something unexpected."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사과와 이유",
+     "noteKo": "첫 번째 빈칸은 사과 대상, 두 번째는 이유",
+     "nameEn": "Apology and reason",
+     "noteEn": "First blank: what you apologize for; second: the reason"
+    }
+   ],
+   "related": [
+    "Je suis en retard à cause de ___ ."
+   ],
+   "quiz": {
+    "prompt": "Désolé(e) pour le retard, il y avait ___.",
+    "answer": "beaucoup de circulation"
+   }
+  },
+  {
+   "id": "fr-3-04",
+   "stage": 3,
+   "pattern": "J'ai un problème avec ___, pouvez-vous ___ ?",
+   "meaningKo": "숙소 문제와 해결 요청",
+   "meaningEn": "Reporting a problem and asking for a solution",
+   "examples": [
+    {
+     "text": "J'ai un problème avec la fenêtre, pouvez-vous l'envoyer réparer ?",
+     "ko": "창문에 문제가 있는데 수리해 주실 수 있나요?",
+     "en": "I have a problem with the window, can you have it repaired?"
+    },
+    {
+     "text": "J'ai un problème avec la serrure, pouvez-vous venir voir ?",
+     "ko": "자물쇠에 문제가 있는데 와서 봐 주실 수 있나요?",
+     "en": "I have a problem with the lock, can you come take a look?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제 보고 및 요청",
+     "noteKo": "첫 번째 빈칸은 문제의 대상, 두 번째는 요청 내용",
+     "nameEn": "Reporting and requesting",
+     "noteEn": "First blank: the problem; second: what you want done"
+    }
+   ],
+   "related": [
+    "Il y a un problème avec ___ ."
+   ],
+   "quiz": {
+    "prompt": "J'ai un problème avec la fenêtre, pouvez-vous ___ ?",
+    "answer": "l'envoyer réparer"
+   }
+  },
+  {
+   "id": "fr-3-05",
+   "stage": 3,
+   "pattern": "Tu peux m'aider avec ___ ?",
+   "meaningKo": "친구에게 도와달라고 요청하기",
+   "meaningEn": "Asking a friend for help",
+   "examples": [
+    {
+     "text": "Tu peux m'aider avec ce dossier ?",
+     "ko": "이 파일 좀 도와줄 수 있어?",
+     "en": "Can you help me with this file?"
+    },
+    {
+     "text": "Tu peux m'aider avec mes devoirs ?",
+     "ko": "내 숙제 좀 도와줄 수 있어?",
+     "en": "Can you help me with my homework?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "친근한 요청",
+     "noteKo": "친구나 가까운 사람에게 'tu'를 사용",
+     "nameEn": "Informal request",
+     "noteEn": "Use 'tu' with friends or people you know well"
+    }
+   ],
+   "related": [
+    "Vous pouvez m'aider avec ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Tu peux m'aider avec ___ ?",
+    "answer": "ce dossier"
+   }
+  },
+  {
+   "id": "fr-3-06",
+   "stage": 3,
+   "pattern": "Vous pouvez m'aider avec ___ ?",
+   "meaningKo": "낯선 사람이나 공식 상황에서 도움 요청",
+   "meaningEn": "Requesting help politely from a stranger",
+   "examples": [
+    {
+     "text": "Vous pouvez m'aider avec la porte ?",
+     "ko": "문 좀 도와주실 수 있나요?",
+     "en": "Can you help me with the door?"
+    },
+    {
+     "text": "Vous pouvez m'aider avec mes bagages ?",
+     "ko": "짐 좀 도와주실 수 있나요?",
+     "en": "Can you help me with my luggage?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존댓말 요청",
+     "noteKo": "'vous'는 모르는 사람이나 공식적인 상황에서 사용",
+     "nameEn": "Polite request",
+     "noteEn": "Use 'vous' in formal or unfamiliar contexts"
+    }
+   ],
+   "related": [
+    "Tu peux m'aider avec ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Vous pouvez m'aider avec ___ ?",
+    "answer": "mes bagages"
+   }
+  },
+  {
+   "id": "fr-3-07",
+   "stage": 3,
+   "pattern": "Tu as vu ___ ? Qu'est-ce que tu en as pensé ?",
+   "meaningKo": "함께 본 영화나 시리즈에 대한 의견 묻기",
+   "meaningEn": "Asking a friend their opinion on something you both watched",
+   "examples": [
+    {
+     "text": "Tu as vu la nouvelle série ? Qu'est-ce que tu en as pensé ?",
+     "ko": "새 시리즈 봤어? 어땠어?",
+     "en": "Did you see the new series? What did you think?"
+    },
+    {
+     "text": "Tu as vu ce film hier ? Qu'est-ce que tu en as pensé ?",
+     "ko": "어제 그 영화 봤어? 어땠어?",
+     "en": "Did you see that film yesterday? What did you think?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "경험과 감상 묻기",
+     "noteKo": "빈칸은 본 영화나 시리즈",
+     "nameEn": "Asking about experience and opinion",
+     "noteEn": "Blank: title of film or series"
+    }
+   ],
+   "related": [
+    "J'ai regardé ___, et j'ai trouvé ça ___."
+   ],
+   "quiz": {
+    "prompt": "Tu as vu ___ ? Qu'est-ce que tu en as pensé ?",
+    "answer": "la nouvelle série"
+   }
+  },
+  {
+   "id": "fr-3-08",
+   "stage": 3,
+   "pattern": "Je suis désolé(e) d'avoir ___, je n'avais pas vu l'heure.",
+   "meaningKo": "늦은 것에 대해 사과하기",
+   "meaningEn": "Apologizing for being late",
+   "examples": [
+    {
+     "text": "Je suis désolé(e) d'avoir traîné, je n'avais pas vu l'heure.",
+     "ko": "늦게 머문 것에 대해 미안해, 시간을 못 봤어.",
+     "en": "Sorry for hanging around, I didn't see the time."
+    },
+    {
+     "text": "Je suis désolé(e) d'avoir pris autant de temps, je n'avais pas vu l'heure.",
+     "ko": "너무 오래 걸린 것에 대해 미안해, 시간을 못 봤어.",
+     "en": "Sorry for taking so long, I didn't see the time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거분사 사용",
+     "noteKo": "첫 번째 빈칸에 동사의 과거분사 형태를 씀",
+     "nameEn": "past participle",
+     "noteEn": "first blank: use the past participle of a verb"
+    }
+   ],
+   "related": [
+    "Je suis désolé(e), je n'ai pas pu ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je suis désolé(e) d'avoir ___, je n'avais pas vu l'heure.",
+    "answer": "traîné"
+   }
+  },
+  {
+   "id": "fr-3-09",
+   "stage": 3,
+   "pattern": "Je pense que ___, mais je ne suis pas sûr(e).",
+   "meaningKo": "확신이 없는 의견 말하기",
+   "meaningEn": "Giving an opinion when unsure",
+   "examples": [
+    {
+     "text": "Je pense que c'est fermé, mais je ne suis pas sûr(e).",
+     "ko": "닫혀 있는 것 같은데, 확실하지는 않아.",
+     "en": "I think it's closed, but I'm not sure."
+    },
+    {
+     "text": "Je pense que tu peux essayer, mais je ne suis pas sûr(e).",
+     "ko": "해봐도 될 것 같은데, 잘 모르겠어.",
+     "en": "I think you can try, but I'm not sure."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직설법",
+     "noteKo": "빈칸에 평서문 형태로 씀",
+     "nameEn": "indicative",
+     "noteEn": "blank: use a statement clause"
+    }
+   ],
+   "related": [
+    "À mon avis, ___, mais je peux me tromper."
+   ],
+   "quiz": {
+    "prompt": "Je pense que ___, mais je ne suis pas sûr(e).",
+    "answer": "c'est fermé"
+   }
+  },
+  {
+   "id": "fr-3-10",
+   "stage": 3,
+   "pattern": "Est-ce que tu pourrais ___, s'il te plaît ?",
+   "meaningKo": "친구에게 정중하게 부탁하기",
+   "meaningEn": "Politely asking a friend for help",
+   "examples": [
+    {
+     "text": "Est-ce que tu pourrais regarder ce fichier, s'il te plaît ?",
+     "ko": "이 파일 좀 봐줄 수 있어?",
+     "en": "Could you look at this file, please?"
+    },
+    {
+     "text": "Est-ce que tu pourrais m'aider avec le rapport, s'il te plaît ?",
+     "ko": "보고서 좀 도와줄 수 있어?",
+     "en": "Could you help me with the report, please?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건법",
+     "noteKo": "빈칸에 동사의 원형을 씀",
+     "nameEn": "conditional",
+     "noteEn": "blank: use the infinitive form of a verb"
+    }
+   ],
+   "related": [
+    "Tu pourrais ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Est-ce que tu pourrais ___, s'il te plaît ?",
+    "answer": "regarder ce fichier"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "fr-4-01",
+   "stage": 4,
+   "pattern": "Je comprends que ___, mais je pense que ___.",
+   "meaningKo": "상대방 의견을 인정하며 내 주장 제시하기",
+   "meaningEn": "Acknowledging someone's view and presenting your own",
+   "examples": [
+    {
+     "text": "Je comprends que tu préfères travailler à distance, mais je pense que la collaboration en présentiel est plus efficace.",
+     "ko": "네가 재택근무를 선호하는 건 알지만, 대면 협업이 더 효율적이라고 생각해.",
+     "en": "I understand you prefer remote work, but I think in-person collaboration is more effective."
+    },
+    {
+     "text": "Je comprends que le délai est serré, mais je pense que nous pouvons y arriver si nous nous organisons bien.",
+     "ko": "기한이 촉박한 건 알지만, 잘 조직하면 해낼 수 있다고 생각해.",
+     "en": "I understand the deadline is tight, but I think we can make it if we organize well."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속사 que 뒤 명사절",
+     "noteKo": "첫 번째 ___에 상대방의 의견이 옴",
+     "nameEn": "Que-clause as object",
+     "noteEn": "First ___ is the other person's view"
+    },
+    {
+     "nameKo": "직설법 현재",
+     "noteKo": "두 번째 ___에 자신의 주장이나 생각",
+     "nameEn": "Indicative present",
+     "noteEn": "Second ___ is your own position"
+    }
+   ],
+   "related": [
+    "Je pense que ___, mais je comprends que ___."
+   ],
+   "quiz": {
+    "prompt": "Je comprends que ___, mais je pense que c'est risqué.",
+    "answer": "tu veuilles essayer cette méthode"
+   }
+  },
+  {
+   "id": "fr-4-02",
+   "stage": 4,
+   "pattern": "Pour résumer, ___, et donc ___.",
+   "meaningKo": "회의나 토론 요약 및 결론 내리기",
+   "meaningEn": "Summarizing and drawing a conclusion",
+   "examples": [
+    {
+     "text": "Pour résumer, nous avons terminé la première étape, et donc nous pouvons passer à la suivante.",
+     "ko": "요약하면, 1단계를 끝냈고, 그래서 다음 단계로 넘어갈 수 있다.",
+     "en": "To sum up, we've finished the first step, and so we can move on to the next."
+    },
+    {
+     "text": "Pour résumer, il y a des avantages et des inconvénients, et donc il faut en discuter plus.",
+     "ko": "정리하자면 장단점이 있고, 그래서 더 논의해야 해.",
+     "en": "To sum up, there are pros and cons, so we need to discuss more."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직설법 현재 또는 과거",
+     "noteKo": "___에 요약 내용, 결론",
+     "nameEn": "Indicative present or past",
+     "noteEn": "___ is the summary or conclusion"
+    }
+   ],
+   "related": [
+    "En résumé, ___ ."
+   ],
+   "quiz": {
+    "prompt": "Pour résumer, nous avons validé la commande, et donc ___.",
+    "answer": "nous attendons la livraison"
+   }
+  },
+  {
+   "id": "fr-4-03",
+   "stage": 4,
+   "pattern": "D'après ___, ___, mais selon moi ___.",
+   "meaningKo": "기사나 뉴스 요약 후 내 의견 제시하기",
+   "meaningEn": "Summarizing a source and giving your own opinion",
+   "examples": [
+    {
+     "text": "D'après l'article, les prix augmentent, mais selon moi la situation va se stabiliser.",
+     "ko": "기사에 따르면 가격이 오르고 있지만, 내 생각엔 곧 안정될 거야.",
+     "en": "According to the article, prices are rising, but in my opinion, the situation will stabilize."
+    },
+    {
+     "text": "D'après les experts, la demande baisse, mais selon moi ce n'est que temporaire.",
+     "ko": "전문가들에 따르면 수요가 줄고 있지만, 내 생각엔 일시적이야.",
+     "en": "According to experts, demand is dropping, but in my opinion it's only temporary."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구, 직설법",
+     "noteKo": "첫번째 ___에 출처, 두 번째 ___에 요약, 세 번째 ___에 자신의 의견",
+     "nameEn": "Noun phrase, indicative",
+     "noteEn": "First ___ is the source, second ___ is summary, third ___ is your opinion"
+    }
+   ],
+   "related": [
+    "Selon ___, ___ ."
+   ],
+   "quiz": {
+    "prompt": "D'après le reportage, le marché ralentit, mais selon moi ___.",
+    "answer": "il y aura une reprise rapide"
+   }
+  },
+  {
+   "id": "fr-4-04",
+   "stage": 4,
+   "pattern": "Peux-tu me tenir au courant de ___ avant ___ ?",
+   "meaningKo": "업무 진행 상황 확인 및 요청하기",
+   "meaningEn": "Requesting a status update before a deadline",
+   "examples": [
+    {
+     "text": "Peux-tu me tenir au courant de l'avancement du projet avant la réunion ?",
+     "ko": "회의 전에 프로젝트 진행 상황 알려줄 수 있어?",
+     "en": "Can you keep me updated on the project's progress before the meeting?"
+    },
+    {
+     "text": "Peux-tu me tenir au courant de la réponse du client avant vendredi ?",
+     "ko": "금요일 전에 고객 답변 알려줄 수 있니?",
+     "en": "Can you keep me informed of the client's reply before Friday?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사구, 시간 표현",
+     "noteKo": "첫번째 ___에 진행 상황, 두 번째 ___에 마감 기한",
+     "nameEn": "Noun phrase, time expression",
+     "noteEn": "First ___ is the topic, second ___ is the deadline"
+    }
+   ],
+   "related": [
+    "Tiens-moi au courant de ___ ."
+   ],
+   "quiz": {
+    "prompt": "Peux-tu me tenir au courant de l'état des commandes avant ___ ?",
+    "answer": "demain"
+   }
+  },
+  {
+   "id": "fr-4-05",
+   "stage": 4,
+   "pattern": "Je ne suis pas sûr(e) que ___ soit la meilleure solution, mais ___ pourrait fonctionner.",
+   "meaningKo": "의견을 조심스럽게 제시하고 대안 제안하기",
+   "meaningEn": "Cautiously giving an opinion and suggesting an alternative",
+   "examples": [
+    {
+     "text": "Je ne suis pas sûr(e) que tout refaire soit la meilleure solution, mais modifier une partie pourrait fonctionner.",
+     "ko": "전부 다시 하는 게 최선인지는 모르겠지만, 일부 수정은 효과가 있을 것 같아.",
+     "en": "I'm not sure that redoing everything is the best solution, but changing a part could work."
+    },
+    {
+     "text": "Je ne suis pas sûr(e) que repousser la date soit la meilleure solution, mais renforcer l'équipe pourrait fonctionner.",
+     "ko": "일정을 미루는 것이 최선인지는 모르겠지만, 팀을 강화하는 것은 가능할 것 같아.",
+     "en": "I'm not sure postponing the date is the best solution, but strengthening the team might work."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속법 현재, 조건법 현재",
+     "noteKo": "첫번째 ___에 논의 중인 방안, 두 번째 ___에 대안",
+     "nameEn": "Subjonctif présent, conditionnel présent",
+     "noteEn": "First ___ is the original idea, second ___ is the alternative"
+    }
+   ],
+   "related": [
+    "Peut-être que ___ serait mieux."
+   ],
+   "quiz": {
+    "prompt": "Je ne suis pas sûr(e) que cette approche soit la meilleure solution, mais ___ pourrait fonctionner.",
+    "answer": "essayer une autre méthode"
+   }
+  },
+  {
+   "id": "fr-4-06",
+   "stage": 4,
+   "pattern": "Et si on ___ ?",
+   "meaningKo": "타협안이나 제안 제시하기",
+   "meaningEn": "Proposing a compromise or suggestion",
+   "examples": [
+    {
+     "text": "Et si on reportait la réunion à demain ?",
+     "ko": "회의를 내일로 미루는 건 어때?",
+     "en": "What if we postpone the meeting to tomorrow?"
+    },
+    {
+     "text": "Et si on travaillait un jour sur deux au bureau ?",
+     "ko": "격일로 사무실 출근하는 건 어때?",
+     "en": "What if we worked at the office every other day?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "Si 가정법 현재",
+     "noteKo": "___에 동사원형",
+     "nameEn": "Si + imparfait",
+     "noteEn": "___ is a verb in imparfait for suggestion"
+    }
+   ],
+   "related": [
+    "On pourrait peut-être ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Et si on ___ ?",
+    "answer": "faisait une pause"
+   }
+  },
+  {
+   "id": "fr-4-07",
+   "stage": 4,
+   "pattern": "Si j'étais toi, je ___.",
+   "meaningKo": "조언하기",
+   "meaningEn": "Giving advice",
+   "examples": [
+    {
+     "text": "Si j'étais toi, je parlerais à mon manager.",
+     "ko": "내가 너라면 매니저에게 말할 거야.",
+     "en": "If I were you, I would talk to my manager."
+    },
+    {
+     "text": "Si j'étais toi, je prendrais le nouveau poste.",
+     "ko": "내가 너라면 새 직책을 맡을 거야.",
+     "en": "If I were you, I would take the new position."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법 과거",
+     "noteKo": "___에 조건법 현재",
+     "nameEn": "Imparfait + conditionnel présent",
+     "noteEn": "___ is the advice in conditional"
+    }
+   ],
+   "related": [
+    "À ta place, je ___ ."
+   ],
+   "quiz": {
+    "prompt": "Si j'étais toi, je ___.",
+    "answer": "demanderais un autre devis"
+   }
+  },
+  {
+   "id": "fr-4-08",
+   "stage": 4,
+   "pattern": "Je comprends votre position, mais je ne suis pas d'accord parce que ___.",
+   "meaningKo": "공손하게 반대 의견 제시하기",
+   "meaningEn": "Politely expressing disagreement",
+   "examples": [
+    {
+     "text": "Je comprends votre position, mais je ne suis pas d'accord parce que cela coûterait trop cher.",
+     "ko": "입장은 이해하지만, 비용이 너무 많이 들어 동의할 수 없습니다.",
+     "en": "I understand your position, but I disagree because it would cost too much."
+    },
+    {
+     "text": "Je comprends votre position, mais je ne suis pas d'accord parce que nous manquons de temps.",
+     "ko": "입장은 알겠지만, 시간이 부족해 동의하지 않습니다.",
+     "en": "I understand your position, but I disagree because we lack time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직설법 현재",
+     "noteKo": "___에 반대 이유",
+     "nameEn": "Indicative present",
+     "noteEn": "___ is your reason for disagreement"
+    }
+   ],
+   "related": [
+    "Je ne partage pas votre avis sur ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je comprends votre position, mais je ne suis pas d'accord parce que ___.",
+    "answer": "le projet comporte trop de risques"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "fr-5-01",
+   "stage": 5,
+   "pattern": "Je me permets de ___, mais ___ .",
+   "meaningKo": "정중하게 이의를 제기하기",
+   "meaningEn": "Politely raising an objection",
+   "examples": [
+    {
+     "text": "Je me permets de vous interrompre, mais ce point mérite discussion.",
+     "ko": "실례가 안 된다면 말씀을 중단시켜 죄송하지만, 이 점은 논의할 가치가 있습니다.",
+     "en": "If I may interrupt, but this point deserves discussion."
+    },
+    {
+     "text": "Je me permets de dire, mais je ne suis pas sûr que ce soit juste.",
+     "ko": "감히 말씀드리자면, 그게 옳은지는 잘 모르겠어요.",
+     "en": "If I may say, but I’m not sure that’s right."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "정중한 표현",
+     "noteKo": "첫 번째 빈칸에 동사원형이 옵니다.",
+     "nameEn": "Polite structure",
+     "noteEn": "First blank takes an infinitive verb."
+    }
+   ],
+   "related": [
+    "Je comprends que ___, mais ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je me permets de ___, mais ce n'est pas tout à fait exact.",
+    "answer": "rectifier"
+   }
+  },
+  {
+   "id": "fr-5-02",
+   "stage": 5,
+   "pattern": "Ce n'est pas pour ___, mais ___ .",
+   "meaningKo": "자신의 말을 누그러뜨리면서 강조하기",
+   "meaningEn": "Softening but emphasizing an opinion",
+   "examples": [
+    {
+     "text": "Ce n'est pas pour critiquer, mais ce film était trop long.",
+     "ko": "비판하려는 건 아니지만, 그 영화 너무 길었어요.",
+     "en": "Not to criticize, but that movie was too long."
+    },
+    {
+     "text": "Ce n'est pas pour me vanter, mais j'ai déjà rencontré l'auteur.",
+     "ko": "자랑하려는 건 아니지만, 이미 작가를 만난 적 있어요.",
+     "en": "Not to brag, but I’ve already met the author."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡한 표현",
+     "noteKo": "첫 번째 빈칸에 동사원형이 옵니다.",
+     "nameEn": "Hedging structure",
+     "noteEn": "First blank takes an infinitive verb."
+    }
+   ],
+   "related": [
+    "On va pas se mentir, ___ ."
+   ],
+   "quiz": {
+    "prompt": "Ce n'est pas pour ___, mais tu aurais pu prévenir.",
+    "answer": "te reprocher"
+   }
+  },
+  {
+   "id": "fr-5-03",
+   "stage": 5,
+   "pattern": "Je ne voudrais pas paraître ___, mais ___ .",
+   "meaningKo": "자신의 태도를 조심스럽게 표현하기",
+   "meaningEn": "Cautiously stating one’s attitude",
+   "examples": [
+    {
+     "text": "Je ne voudrais pas paraître insensible, mais il faut tourner la page.",
+     "ko": "냉정하게 보이고 싶진 않지만, 이제는 잊어야 해요.",
+     "en": "I don’t want to seem insensitive, but it’s time to move on."
+    },
+    {
+     "text": "Je ne voudrais pas paraître pessimiste, mais ça semble compliqué.",
+     "ko": "비관적으로 보이고 싶진 않지만, 복잡해 보여요.",
+     "en": "I don’t want to sound pessimistic, but it looks complicated."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "성향 표현",
+     "noteKo": "첫 번째 빈칸에 형용사가 옵니다.",
+     "nameEn": "Attitude expression",
+     "noteEn": "First blank is an adjective."
+    }
+   ],
+   "related": [
+    "Je me permets de ___, mais ___ ."
+   ],
+   "quiz": {
+    "prompt": "Je ne voudrais pas paraître ___, mais ce n'est pas gagné.",
+    "answer": "arrogant"
+   }
+  },
+  {
+   "id": "fr-5-04",
+   "stage": 5,
+   "pattern": "Entre nous, ___, mais ___ .",
+   "meaningKo": "비공개로 솔직한 의견 나누기",
+   "meaningEn": "Confiding a frank opinion",
+   "examples": [
+    {
+     "text": "Entre nous, il a exagéré, mais il avait de bonnes intentions.",
+     "ko": "우리끼리 얘기지만, 그는 좀 과했어. 그래도 의도는 좋았지.",
+     "en": "Between us, he overdid it, but he meant well."
+    },
+    {
+     "text": "Entre nous, ce client est difficile, mais le contrat vaut la peine.",
+     "ko": "우리끼리 말하는 거지만, 그 고객은 까다로워. 그래도 계약은 할 만해.",
+     "en": "Just between us, that client is tough, but the contract is worth it."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비공식적 대화",
+     "noteKo": "첫 번째 빈칸에 자신의 생각, 두 번째 빈칸에 양보 또는 추가 설명이 옵니다.",
+     "nameEn": "Confidential register",
+     "noteEn": "First blank is your opinion; second blank gives concession or explanation."
+    }
+   ],
+   "related": [
+    "Je ne voudrais pas paraître ___, mais ___ ."
+   ],
+   "quiz": {
+    "prompt": "Entre nous, ___, mais il fallait le dire.",
+    "answer": "ce n'était pas très malin"
+   }
+  },
+  {
+   "id": "fr-5-05",
+   "stage": 5,
+   "pattern": "Vous permettez que je ___ ?",
+   "meaningKo": "정중하게 허락을 구함",
+   "meaningEn": "Asking for permission formally",
+   "examples": [
+    {
+     "text": "Vous permettez que je prenne la parole ?",
+     "ko": "제가 말을 해도 될까요?",
+     "en": "May I speak?"
+    },
+    {
+     "text": "Vous permettez que je m'installe ici ?",
+     "ko": "여기 앉아도 될까요?",
+     "en": "May I sit here?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속법 현재(que 절)",
+     "noteKo": "___에 동사원형이 아닌 접속법 현재 사용",
+     "nameEn": "Subjunctive (after que)",
+     "noteEn": "The verb in ___ uses the subjunctive mood"
+    }
+   ],
+   "related": [
+    "Tu veux bien que je ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Vous permettez que je ___ ?",
+    "answer": "parte un instant"
+   }
+  },
+  {
+   "id": "fr-5-06",
+   "stage": 5,
+   "pattern": "Tu veux bien que je ___ ?",
+   "meaningKo": "친근하게 허락을 구함",
+   "meaningEn": "Asking for permission informally",
+   "examples": [
+    {
+     "text": "Tu veux bien que je t'appelle ce soir ?",
+     "ko": "오늘 밤 전화해도 될까?",
+     "en": "Is it okay if I call you tonight?"
+    },
+    {
+     "text": "Tu veux bien que je prenne un peu de ton gâteau ?",
+     "ko": "네 케이크 조금 먹어도 괜찮아?",
+     "en": "Can I have some of your cake?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "접속법 현재(que 절)",
+     "noteKo": "___에 접속법 현재 사용",
+     "nameEn": "Subjunctive (after que)",
+     "noteEn": "The verb in ___ uses the subjunctive mood"
+    }
+   ],
+   "related": [
+    "Vous permettez que je ___ ?"
+   ],
+   "quiz": {
+    "prompt": "Tu veux bien que je ___ ?",
+    "answer": "parte plus tôt"
+   }
+  },
+  {
+   "id": "fr-5-07",
+   "stage": 5,
+   "pattern": "Ce n'est pas pour dire, mais ___",
+   "meaningKo": "돌려서 비판하거나 의견 제시",
+   "meaningEn": "Softening criticism or giving an opinion indirectly",
+   "examples": [
+    {
+     "text": "Ce n'est pas pour dire, mais il exagère un peu.",
+     "ko": "딱히 뭐라고 하려는 건 아니지만, 그는 좀 과장하는 것 같아.",
+     "en": "Not to be mean, but he exaggerates a bit."
+    },
+    {
+     "text": "Ce n'est pas pour dire, mais ce film était long.",
+     "ko": "뭐라고 하려는 건 아니지만, 그 영화는 길었어.",
+     "en": "Not to say anything bad, but that movie was long."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "완곡표현",
+     "noteKo": "___에는 비판이나 의견이 옴",
+     "nameEn": "Hedging",
+     "noteEn": "___ is the critique or opinion"
+    }
+   ],
+   "related": [
+    "Je ne veux pas être méchant, mais ___"
+   ],
+   "quiz": {
+    "prompt": "Ce n'est pas pour dire, mais ___",
+    "answer": "tu parles beaucoup"
+   }
+  },
+  {
+   "id": "fr-5-08",
+   "stage": 5,
+   "pattern": "On va pas se mentir, ___",
+   "meaningKo": "솔직하게 말할 때 (구어체)",
+   "meaningEn": "Speaking frankly (colloquial)",
+   "examples": [
+    {
+     "text": "On va pas se mentir, il était nul ce film.",
+     "ko": "솔직히 말해서, 그 영화 별로였어.",
+     "en": "Let's be honest, that movie was bad."
+    },
+    {
+     "text": "On va pas se mentir, c'est cher ici.",
+     "ko": "솔직히 여기 비싸.",
+     "en": "Let's be honest, it's expensive here."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "구어체 표현",
+     "noteKo": "___에 진실된 의견이 옴",
+     "nameEn": "Colloquial honesty",
+     "noteEn": "___ is the blunt opinion"
+    }
+   ],
+   "related": [
+    "Franchement, ___"
+   ],
+   "quiz": {
+    "prompt": "On va pas se mentir, ___",
+    "answer": "j’ai pas tout compris"
+   }
+  },
+  {
+   "id": "fr-5-09",
+   "stage": 5,
+   "pattern": "C'est pas gagné, mais ___",
+   "meaningKo": "힘들지만 시도함, 겸손하게 말함",
+   "meaningEn": "Admitting difficulty but showing willingness",
+   "examples": [
+    {
+     "text": "C'est pas gagné, mais on va essayer.",
+     "ko": "쉽진 않겠지만 해볼게.",
+     "en": "It won't be easy, but we'll try."
+    },
+    {
+     "text": "C'est pas gagné, mais je crois en toi.",
+     "ko": "쉽지 않겠지만, 난 너를 믿어.",
+     "en": "It's not a given, but I believe in you."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "관용구+대조",
+     "noteKo": "___에 희망적/긍정적 내용이 옴",
+     "nameEn": "Idiom + contrast",
+     "noteEn": "___ is a positive or hopeful statement"
+    }
+   ],
+   "related": [
+    "C'est pas facile, mais ___"
+   ],
+   "quiz": {
+    "prompt": "C'est pas gagné, mais ___",
+    "answer": "on va avancer"
+   }
+  },
+  {
+   "id": "fr-5-10",
+   "stage": 5,
+   "pattern": "Si je peux me permettre, ___",
+   "meaningKo": "공손하게 의견 제시 또는 이의 제기",
+   "meaningEn": "Politely giving an opinion or objection",
+   "examples": [
+    {
+     "text": "Si je peux me permettre, je pense qu'on pourrait essayer autre chose.",
+     "ko": "실례가 안 된다면, 다른 걸 시도해보는 것도 좋을 것 같아요.",
+     "en": "If I may, I think we could try something else."
+    },
+    {
+     "text": "Si je peux me permettre, ce choix n'est pas idéal.",
+     "ko": "실례가 안 된다면, 이 선택이 최선은 아닌 것 같아요.",
+     "en": "If I may, this choice is not ideal."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 의견",
+     "noteKo": "___에 의견이나 제안이 옴",
+     "nameEn": "Polite opinion",
+     "noteEn": "___ is your polite suggestion or opinion"
+    }
+   ],
+   "related": [
+    "Excusez-moi de vous interrompre, mais ___"
+   ],
+   "quiz": {
+    "prompt": "Si je peux me permettre, ___",
+    "answer": "il faudrait revoir les termes"
+   }
+  }
+ ]
+}

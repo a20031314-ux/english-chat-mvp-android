@@ -71,7 +71,7 @@ const TEXT: Record<string, Lines> = {
   ko: {
     stage: {
       can: [`${F}: 빈칸 하나짜리 틀로 내 문장을 만들어요`, `${S}: 장면을 듣고 내 줄을 말해요`, "0~5단계 — 조건을 채우면 단계 시험"],
-      how: [`「${P}」: 지금 할 것 하나 ▶`, `「${X}」›「${Q}」›「${T}」 순서로 익혀요`, "단계 화면: 사다리 · 연습 방식 · 다음 단계까지"],
+      how: [`「${P}」: 지금 할 것 하나 ▶`, `「${X}」›「${Q}」›「${T}」 순서로 익혀요`, "단계 화면: 사다리 · 문장구조 · 상황 · 문법"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: 빈칸을 쓰거나 골라요`, `「${W}」: 통화·채팅에서 고친 말이 문제로`],
@@ -79,13 +79,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["육각형: 어휘·문장 이해·활용, 듣기, 실전 대화 — 1~5단계 채운 %", "📎 「{ui:fillRecords}」: 날마다 한 공부와 튜터가 고친 줄"],
-      how: ["꼭짓점을 누르면 단계 게이지와 세부 칸", "▼ 「{ui:fillWeak}」 칸을 누르면 「{ui:fillToStudy}」 · 「{ui:fillRecommend}」", "⏱ 막대를 누르면 그날 한 공부"],
+      how: ["꼭짓점을 누르면 단계 게이지와 세부 칸", "번호 칸을 누르면 「{ui:fillShort}」 · 「{ui:fillOrder}」 · 「{ui:fillWhy}」", "⏱ 막대를 누르면 그날 한 공부"],
     },
   },
   en: {
     stage: {
       can: [`${F}: build your own sentence from a one-gap pattern`, `${S}: hear a scene and say your lines`, "Stages 0–5 — meet the goal, then take the stage test"],
-      how: [`“${P}”: one thing to do now ▶`, `Learn it in order: “${X}” › “${Q}” › “${T}”`, "Stage screen: the ladder, how to practise, what’s left"],
+      how: [`“${P}”: one thing to do now ▶`, `Learn it in order: “${X}” › “${Q}” › “${T}”`, "Stage screen: the ladder, patterns, situations, and grammar"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: type or pick the missing words`, `“${W}”: lines fixed in calls and chats come back as questions`],
@@ -93,13 +93,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Hexagon: words, sentences, listening, talk — % of stages 1–5 filled", "📎 “{ui:fillRecords}”: what you did each day and lines the tutor fixed"],
-      how: ["Tap a corner for its stage gauge and detail rows", "Tap a ▼ “{ui:fillWeak}” row for “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Tap a bar for that day’s study"],
+      how: ["Tap a corner for its stage gauge and detail rows", "Tap a numbered row for “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ Tap a bar for that day’s study"],
     },
   },
   es: {
     stage: {
       can: [`${F}: arma tu frase con un patrón de un hueco`, `${S}: escucha una escena y di tus frases`, "Etapas 0–5: cumple la meta y haz el examen de etapa"],
-      how: [`«${P}»: una cosa que hacer ahora ▶`, `En orden: «${X}» › «${Q}» › «${T}»`, "Pantalla de etapa: escalera, forma de practicar, lo que falta"],
+      how: [`«${P}»: una cosa que hacer ahora ▶`, `En orden: «${X}» › «${Q}» › «${T}»`, "Pantalla de etapa: escalera, estructuras, situaciones y gramática"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: escribe o elige lo que falta`, `«${W}»: lo que te corrigieron en llamadas y chats vuelve como pregunta`],
@@ -107,13 +107,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Hexágono: palabras, frases, escucha, charla — % de etapas 1–5", "📎 «{ui:fillRecords}»: lo que hiciste cada día y las frases que corrigió el tutor"],
-      how: ["Toca un vértice para ver su medidor por etapas y los detalles", "Toca una fila ▼ «{ui:fillWeak}» para ver «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Toca una barra para ver lo que estudiaste ese día"],
+      how: ["Toca un vértice para ver su medidor por etapas y los detalles", "Toca una fila numerada para ver «{ui:fillShort}» · «{ui:fillOrder}» · «{ui:fillWhy}»", "⏱ Toca una barra para ver lo que estudiaste ese día"],
     },
   },
   ja: {
     stage: {
       can: [`${F}：空欄ひとつの型で自分の文を作る`, `${S}：場面を聞いて自分のセリフを言う`, "0〜5段階 — 条件を満たすと段階テスト"],
-      how: [`「${P}」：今やることがひとつ ▶`, `「${X}」›「${Q}」›「${T}」の順で身につける`, "段階の画面：はしご・練習のしかた・次の段階まで"],
+      how: [`「${P}」：今やることがひとつ ▶`, `「${X}」›「${Q}」›「${T}」の順で身につける`, "段階の画面：はしご・文型・場面・文法"],
     },
     keep: {
       can: [`${V}・${G}・${E}：空欄を書くか選ぶ`, `「${W}」：通話やチャットで直された言葉が問題に`],
@@ -121,13 +121,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["六角形：語彙・文・リスニング・会話 — 1〜5段階を埋めた％", "📎「{ui:fillRecords}」：毎日の学習とチューターが直した文"],
-      how: ["頂点を押すと段階ゲージと細かい項目", "▼「{ui:fillWeak}」の項目を押すと「{ui:fillToStudy}」・「{ui:fillRecommend}」", "⏱ 棒を押すとその日の学習"],
+      how: ["頂点を押すと段階ゲージと細かい項目", "番号の項目を押すと「{ui:fillShort}」・「{ui:fillOrder}」・「{ui:fillWhy}」", "⏱ 棒を押すとその日の学習"],
     },
   },
   zh: {
     stage: {
       can: [`${F}：用只有一个空的句型造自己的句子`, `${S}：听一个场景，说出自己的台词`, "0～5阶段 — 达到条件就参加阶段测试"],
-      how: [`「${P}」：现在要做的一件事 ▶`, `按「${X}」›「${Q}」›「${T}」的顺序掌握`, "阶段页面：阶梯 · 练习方式 · 离下一阶段还差多少"],
+      how: [`「${P}」：现在要做的一件事 ▶`, `按「${X}」›「${Q}」›「${T}」的顺序掌握`, "阶段页面：阶梯 · 句型 · 情景 · 语法"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}：填写或选择空缺的词`, `「${W}」：通话和聊天里被纠正的话会变成题目`],
@@ -135,13 +135,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["六边形：词汇、句子、听力、对话 — 1~5阶段填满的％", "📎「{ui:fillRecords}」：每天学了什么和导师纠正的句子"],
-      how: ["点顶点看阶段进度条和细项", "点 ▼「{ui:fillWeak}」的细项看「{ui:fillToStudy}」·「{ui:fillRecommend}」", "⏱ 点柱子看那天的学习"],
+      how: ["点顶点看阶段进度条和细项", "点编号细项看「{ui:fillShort}」·「{ui:fillOrder}」·「{ui:fillWhy}」", "⏱ 点柱子看那天的学习"],
     },
   },
   th: {
     stage: {
       can: [`${F}: สร้างประโยคของคุณจากแพตเทิร์นที่มีช่องว่างเดียว`, `${S}: ฟังฉากแล้วพูดบทของคุณ`, "ระดับ 0–5 — ครบเงื่อนไขแล้วสอบระดับ"],
-      how: [`“${P}”: สิ่งที่ต้องทำตอนนี้หนึ่งอย่าง ▶`, `เรียนตามลำดับ “${X}” › “${Q}” › “${T}”`, "หน้าระดับ: บันได · วิธีฝึก · เหลืออีกเท่าไร"],
+      how: [`“${P}”: สิ่งที่ต้องทำตอนนี้หนึ่งอย่าง ▶`, `เรียนตามลำดับ “${X}” › “${Q}” › “${T}”`, "หน้าระดับ: บันได · โครงสร้าง · สถานการณ์ · ไวยากรณ์"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: พิมพ์หรือเลือกคำที่หายไป`, `“${W}”: ประโยคที่ถูกแก้ในการโทรและแชตกลับมาเป็นโจทย์`],
@@ -149,13 +149,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["หกเหลี่ยม: คำ ประโยค การฟัง สนทนา — เติมระดับ 1–5 กี่ %", "📎 “{ui:fillRecords}”: เรียนอะไรในแต่ละวันและประโยคที่ติวเตอร์แก้"],
-      how: ["แตะมุมเพื่อดูเกจรายระดับและรายละเอียด", "แตะแถว ▼ “{ui:fillWeak}” เพื่อดู “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ แตะแท่งเพื่อดูสิ่งที่เรียนวันนั้น"],
+      how: ["แตะมุมเพื่อดูเกจรายระดับและรายละเอียด", "แตะแถวที่มีเลขเพื่อดู “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ แตะแท่งเพื่อดูสิ่งที่เรียนวันนั้น"],
     },
   },
   vi: {
     stage: {
       can: [`${F}: tự đặt câu từ một mẫu có một chỗ trống`, `${S}: nghe một cảnh rồi nói lời của bạn`, "Cấp 0–5 — đạt điều kiện thì làm bài kiểm tra cấp"],
-      how: [`“${P}”: một việc cần làm bây giờ ▶`, `Học theo thứ tự “${X}” › “${Q}” › “${T}”`, "Màn hình cấp: bậc thang · cách luyện · còn bao nhiêu"],
+      how: [`“${P}”: một việc cần làm bây giờ ▶`, `Học theo thứ tự “${X}” › “${Q}” › “${T}”`, "Màn hình cấp: bậc thang · cấu trúc · tình huống · ngữ pháp"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: gõ hoặc chọn từ còn thiếu`, `“${W}”: câu được sửa trong cuộc gọi và trò chuyện thành câu hỏi`],
@@ -163,13 +163,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Lục giác: từ, câu, nghe, hội thoại — % cấp 1–5 đã lấp", "📎 “{ui:fillRecords}”: mỗi ngày đã học gì và câu gia sư sửa"],
-      how: ["Chạm một đỉnh để xem thanh đo theo cấp và các mục chi tiết", "Chạm mục ▼ “{ui:fillWeak}” để xem “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Chạm một cột để xem hôm đó đã học gì"],
+      how: ["Chạm một đỉnh để xem thanh đo theo cấp và các mục chi tiết", "Chạm mục có số để xem “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ Chạm một cột để xem hôm đó đã học gì"],
     },
   },
   id: {
     stage: {
       can: [`${F}: buat kalimatmu dari pola dengan satu titik kosong`, `${S}: dengarkan adegan lalu ucapkan bagianmu`, "Tahap 0–5 — penuhi syaratnya lalu ikut tes tahap"],
-      how: [`“${P}”: satu hal untuk dilakukan sekarang ▶`, `Pelajari berurutan: “${X}” › “${Q}” › “${T}”`, "Layar tahap: tangga · cara latihan · sisa menuju tahap berikutnya"],
+      how: [`“${P}”: satu hal untuk dilakukan sekarang ▶`, `Pelajari berurutan: “${X}” › “${Q}” › “${T}”`, "Layar tahap: tangga · struktur · situasi · tata bahasa"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: ketik atau pilih kata yang hilang`, `“${W}”: kalimat yang dikoreksi saat panggilan dan chat jadi soal`],
@@ -177,13 +177,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Segi enam: kata, kalimat, dengar, bicara — % tahap 1–5 terisi", "📎 “{ui:fillRecords}”: yang kamu pelajari tiap hari dan kalimat yang dikoreksi tutor"],
-      how: ["Ketuk sudut untuk melihat pengukur per tahap dan rinciannya", "Ketuk baris ▼ “{ui:fillWeak}” untuk “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Ketuk batang untuk melihat belajar hari itu"],
+      how: ["Ketuk sudut untuk melihat pengukur per tahap dan rinciannya", "Ketuk baris bernomor untuk “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ Ketuk batang untuk melihat belajar hari itu"],
     },
   },
   hi: {
     stage: {
       can: [`${F}: एक खाली जगह वाले ढाँचे से अपना वाक्य बनाएँ`, `${S}: दृश्य सुनें और अपनी पंक्तियाँ बोलें`, "स्तर 0–5 — शर्त पूरी होने पर स्तर टेस्ट"],
-      how: [`“${P}”: अभी करने का एक काम ▶`, `क्रम से सीखें: “${X}” › “${Q}” › “${T}”`, "स्तर स्क्रीन: सीढ़ी · अभ्यास का तरीका · अगले स्तर तक कितना बाकी"],
+      how: [`“${P}”: अभी करने का एक काम ▶`, `क्रम से सीखें: “${X}” › “${Q}” › “${T}”`, "स्तर स्क्रीन: सीढ़ी · संरचना · स्थिति · व्याकरण"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: छूटा शब्द लिखें या चुनें`, `“${W}”: कॉल और चैट में सुधारी गई बातें सवाल बनकर आती हैं`],
@@ -191,13 +191,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["षट्भुज: शब्द, वाक्य, सुनना, बातचीत — चरण 1–5 कितने % भरे", "📎 “{ui:fillRecords}”: हर दिन क्या पढ़ा और ट्यूटर ने कौन-से वाक्य सुधारे"],
-      how: ["कोने पर टैप करें — चरण वाला गेज और ब्योरे", "▼ “{ui:fillWeak}” वाली पंक्ति पर टैप करें — “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ किसी बार पर टैप करें — उस दिन की पढ़ाई"],
+      how: ["कोने पर टैप करें — चरण वाला गेज और ब्योरे", "नंबर वाली पंक्ति पर टैप करें — “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ किसी बार पर टैप करें — उस दिन की पढ़ाई"],
     },
   },
   ar: {
     stage: {
       can: [`${F}: كوّن جملتك من قالب فيه فراغ واحد`, `${S}: استمع إلى مشهد وقل جملك`, "المراحل 0–5 — حقّق الشرط ثم اختبار المرحلة"],
-      how: [`«${P}»: شيء واحد تفعله الآن ▶`, `تعلّمه بالترتيب: «${X}» › «${Q}» › «${T}»`, "شاشة المرحلة: السلّم · طريقة التدريب · ما بقي للمرحلة التالية"],
+      how: [`«${P}»: شيء واحد تفعله الآن ▶`, `تعلّمه بالترتيب: «${X}» › «${Q}» › «${T}»`, "شاشة المرحلة: السلّم · التراكيب · المواقف · القواعد"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: اكتب الكلمة الناقصة أو اخترها`, `«${W}»: ما صُحّح لك في المكالمات والمحادثات يعود سؤالًا`],
@@ -205,13 +205,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["السداسي: مفردات، جمل، استماع، محادثة — ٪ المراحل 1–5", "📎 «{ui:fillRecords}»: ما درسته كل يوم والجمل التي صحّحها المعلّم"],
-      how: ["اضغط على رأس لترى مقياس المراحل والتفاصيل", "اضغط على صف ▼ «{ui:fillWeak}» لترى «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ اضغط على عمود لترى ما درسته ذلك اليوم"],
+      how: ["اضغط على رأس لترى مقياس المراحل والتفاصيل", "اضغط على صف مرقّم لترى «{ui:fillShort}» · «{ui:fillOrder}» · «{ui:fillWhy}»", "⏱ اضغط على عمود لترى ما درسته ذلك اليوم"],
     },
   },
   fr: {
     stage: {
       can: [`${F} : faites votre phrase avec un modèle à un trou`, `${S} : écoutez une scène et dites vos répliques`, "Étapes 0–5 — objectif atteint, puis test d’étape"],
-      how: [`« ${P} » : une chose à faire maintenant ▶`, `Dans l’ordre : « ${X} » › « ${Q} » › « ${T} »`, "Écran d’étape : échelle, façon de s’entraîner, ce qui reste"],
+      how: [`« ${P} » : une chose à faire maintenant ▶`, `Dans l’ordre : « ${X} » › « ${Q} » › « ${T} »`, "Écran d’étape : échelle, structures, situations, grammaire"],
     },
     keep: {
       can: [`${V} · ${G} · ${E} : tapez ou choisissez le mot manquant`, `« ${W} » : ce qu’on vous a corrigé en appel et en chat revient en question`],
@@ -219,13 +219,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Hexagone : mots, phrases, écoute, oral — % des étapes 1–5", "📎 « {ui:fillRecords} » : ton travail du jour et les phrases corrigées"],
-      how: ["Touche un sommet pour sa jauge par étape et le détail", "Touche une ligne ▼ « {ui:fillWeak} » pour « {ui:fillToStudy} » · « {ui:fillRecommend} »", "⏱ Touche une barre pour ce que tu as étudié ce jour-là"],
+      how: ["Touche un sommet pour sa jauge par étape et le détail", "Touche une ligne numérotée pour « {ui:fillShort} » · « {ui:fillOrder} » · « {ui:fillWhy} »", "⏱ Touche une barre pour ce que tu as étudié ce jour-là"],
     },
   },
   it: {
     stage: {
       can: [`${F}: crea la tua frase con uno schema a un vuoto`, `${S}: ascolta una scena e di’ le tue battute`, "Livelli 0–5 — raggiunto l’obiettivo, il test di livello"],
-      how: [`«${P}»: una cosa da fare ora ▶`, `In ordine: «${X}» › «${Q}» › «${T}»`, "Schermata del livello: scala, modo di esercitarsi, quanto manca"],
+      how: [`«${P}»: una cosa da fare ora ▶`, `In ordine: «${X}» › «${Q}» › «${T}»`, "Schermata del livello: scala, strutture, situazioni, grammatica"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: scrivi o scegli la parola mancante`, `«${W}»: ciò che ti hanno corretto in chiamate e chat torna come domanda`],
@@ -233,13 +233,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Esagono: parole, frasi, ascolto, dialogo — % delle tappe 1–5", "📎 «{ui:fillRecords}»: cosa hai fatto ogni giorno e le frasi corrette dal tutor"],
-      how: ["Tocca un vertice per l’indicatore per tappa e i dettagli", "Tocca una riga ▼ «{ui:fillWeak}» per «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Tocca una barra per lo studio di quel giorno"],
+      how: ["Tocca un vertice per l’indicatore per tappa e i dettagli", "Tocca una riga numerata per «{ui:fillShort}» · «{ui:fillOrder}» · «{ui:fillWhy}»", "⏱ Tocca una barra per lo studio di quel giorno"],
     },
   },
   pt: {
     stage: {
       can: [`${F}: monte sua frase com um modelo de uma lacuna`, `${S}: ouça uma cena e diga suas falas`, "Etapas 0–5 — cumpra a meta e faça o teste da etapa"],
-      how: [`“${P}”: uma coisa para fazer agora ▶`, `Na ordem: “${X}” › “${Q}” › “${T}”`, "Tela da etapa: escada, jeito de praticar, quanto falta"],
+      how: [`“${P}”: uma coisa para fazer agora ▶`, `Na ordem: “${X}” › “${Q}” › “${T}”`, "Tela da etapa: escada, estruturas, situações, gramática"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: digite ou escolha a palavra que falta`, `“${W}”: o que foi corrigido em chamadas e chats volta como pergunta`],
@@ -247,13 +247,13 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Hexágono: palavras, frases, escuta, conversa — % das etapas 1–5", "📎 “{ui:fillRecords}”: o que você fez a cada dia e as frases que o tutor corrigiu"],
-      how: ["Toque num vértice para ver o medidor por etapa e os detalhes", "Toque numa linha ▼ “{ui:fillWeak}” para ver “{ui:fillToStudy}” · “{ui:fillRecommend}”", "⏱ Toque numa barra para ver o estudo daquele dia"],
+      how: ["Toque num vértice para ver o medidor por etapa e os detalhes", "Toque numa linha numerada para ver “{ui:fillShort}” · “{ui:fillOrder}” · “{ui:fillWhy}”", "⏱ Toque numa barra para ver o estudo daquele dia"],
     },
   },
   ru: {
     stage: {
       can: [`${F}: составьте свою фразу по шаблону с одним пропуском`, `${S}: послушайте сцену и скажите свои реплики`, "Уровни 0–5 — выполните условие и пройдите тест уровня"],
-      how: [`«${P}»: одно дело на сейчас ▶`, `По порядку: «${X}» › «${Q}» › «${T}»`, "Экран уровня: лестница, способ практики, сколько осталось"],
+      how: [`«${P}»: одно дело на сейчас ▶`, `По порядку: «${X}» › «${Q}» › «${T}»`, "Экран уровня: лестница, структуры, ситуации, грамматика"],
     },
     keep: {
       can: [`${V} · ${G} · ${E}: впишите или выберите пропущенное`, `«${W}»: исправленное в звонках и чатах возвращается вопросом`],
@@ -261,7 +261,7 @@ const TEXT: Record<string, Lines> = {
     },
     log: {
       can: ["Шестиугольник: слова, фразы, слух, речь — % этапов 1–5", "📎 «{ui:fillRecords}»: что ты делал каждый день и фразы, исправленные репетитором"],
-      how: ["Нажми на вершину — шкала по этапам и подробности", "Нажми на строку ▼ «{ui:fillWeak}» — «{ui:fillToStudy}» · «{ui:fillRecommend}»", "⏱ Нажми на столбик — занятия за тот день"],
+      how: ["Нажми на вершину — шкала по этапам и подробности", "Нажми на строку с номером — «{ui:fillShort}» · «{ui:fillOrder}» · «{ui:fillWhy}»", "⏱ Нажми на столбик — занятия за тот день"],
     },
   },
 };

@@ -600,7 +600,14 @@ function TypeView({
   const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
   const gloss = quizGloss(question.gloss, locale, language);
+  const wordQuiz = Boolean(question.prepared);
   const submit = async (typed: string) => {
+    if (wordQuiz) {
+      const local = typedRight(question.answer, typed, { language, near: question.near });
+      setResult(local);
+      onAnswer({ correct: Boolean(local) && hint === 0, ...(hint ? { assisted: true } : {}) });
+      return;
+    }
     const local = typedRight(question.answer, typed, { language, near: question.near });
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
     const sentence = `${question.before}___${question.after}`;
@@ -615,20 +622,28 @@ function TypeView({
   };
   return (
     <div className="flex flex-col gap-3">
-      {/* Meaning line only after answering (2026-10-31, user: it gave the answer away) — a pattern lesson shows it first (glossFirst). */}
-      {answered || (glossFirst && gloss) ? (
+      {answered || (glossFirst && gloss) || wordQuiz ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
       ) : null}
+      {wordQuiz && (question.prepared?.mark || question.prepared?.hint) ? (
+        <p data-quiz-cue dir="auto" className="text-meta text-slate-400">
+          {[question.prepared?.mark, question.prepared?.hint].filter(Boolean).join(" · ")}
+        </p>
+      ) : null}
+      {wordQuiz && !answered ? null : (
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-          {question.before}
+          {wordQuiz ? question.text : question.before}
+          {wordQuiz ? null : (
           <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
-          {question.after}
+          )}
+          {wordQuiz ? null : question.after}
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
       </div>
+      )}
       <TypeBox
         ui={ui}
         tag={tag}
@@ -832,11 +847,10 @@ function ChooseView({
   const [fitting, setFitting] = useState<number[]>([]);
   const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
-  // 답한 뒤 보기마다 뜻(품사 + 뜻)·틀린 까닭 한 줄(2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지").
-  const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
+  const notes = useOptionNotes(answered && !question.prepared ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
-      {answered ? (
+      {question.prepared || answered ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
@@ -871,6 +885,10 @@ function ChooseView({
               disabled={Boolean(answered) || checking || fitting.includes(i)}
               onClick={async () => {
                 setPicked(i);
+                if (question.prepared) {
+                  onAnswer({ correct: isRight, picked: option });
+                  return;
+                }
                 if (isRight) {
                   onAnswer({ correct: true, picked: option });
                   return;
@@ -906,6 +924,11 @@ function ChooseView({
           );
         })}
       </div>
+      {answered && !answered.correct && question.prepared ? (
+        <p data-quiz-why dir="auto" className="text-note text-slate-300">
+          {question.prepared.why}
+        </p>
+      ) : null}
       {answered && alsoOk ? <AlsoRight ui={ui} answer={question.options[question.answer]!} /> : null}
       {fitting.length && !answered ? (
         <p data-quiz-other-word className="text-caption text-slate-300">

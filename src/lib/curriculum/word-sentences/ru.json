@@ -1,0 +1,9662 @@
+{
+ "w|ага": [
+  {
+   "text": "Ага, сейчас буду.",
+   "en": "Yeah, I'll be right there.",
+   "ko": "응, 지금 갈게.",
+   "blank": "Ага"
+  },
+  {
+   "text": "Ага, я в курсе.",
+   "en": "Yeah, I know.",
+   "ko": "응, 알고 있어.",
+   "blank": "Ага"
+  }
+ ],
+ "w|агент": [
+  {
+   "text": "Агент уже выехал.",
+   "en": "The agent is already on the way.",
+   "ko": "담당자가 이미 출발했어.",
+   "blank": "Агент"
+  },
+  {
+   "text": "Позвони агенту.",
+   "en": "Call the agent.",
+   "ko": "담당자한테 전화해.",
+   "blank": "агенту"
+  }
+ ],
+ "w|адвокат": [
+  {
+   "text": "Адвокат уже здесь.",
+   "en": "The lawyer is already here.",
+   "ko": "변호사가 이미 와 있어.",
+   "blank": "Адвокат"
+  },
+  {
+   "text": "Позвони адвокату.",
+   "en": "Call the lawyer.",
+   "ko": "변호사한테 전화해.",
+   "blank": "адвокату"
+  }
+ ],
+ "w|алло": [
+  {
+   "text": "Алло, ты меня слышишь?",
+   "en": "Hello, can you hear me?",
+   "ko": "여보세요, 내 말 들려?",
+   "blank": "Алло"
+  },
+  {
+   "text": "Алло, кто это?",
+   "en": "Hello, who is this?",
+   "ko": "여보세요, 누구세요?",
+   "blank": "Алло"
+  }
+ ],
+ "w|ах": [
+  {
+   "text": "Ах, как красиво!",
+   "en": "Oh, how beautiful!",
+   "ko": "아, 정말 예뻐!",
+   "blank": "Ах"
+  },
+  {
+   "text": "Ах, я же забыл.",
+   "en": "Oh, I forgot.",
+   "ko": "아, 깜빡했네.",
+   "blank": "Ах"
+  }
+ ],
+ "w|бежать": [
+  {
+   "text": "Он бежит за автобусом.",
+   "en": "He's running after the bus.",
+   "ko": "그 사람이 버스를 쫓아 뛰고 있어.",
+   "blank": "бежит"
+  },
+  {
+   "text": "Я бежал всю дорогу.",
+   "en": "I ran the whole way.",
+   "ko": "오는 내내 뛰었어.",
+   "blank": "бежал"
+  }
+ ],
+ "w|без": [
+  {
+   "text": "Чай без сахара, пожалуйста.",
+   "en": "Tea without sugar, please.",
+   "ko": "설탕 없이 차로 주세요.",
+   "blank": "без"
+  },
+  {
+   "text": "Я сегодня без машины.",
+   "en": "I'm without the car today.",
+   "ko": "오늘은 차 없이 다닐게.",
+   "blank": "без"
+  }
+ ],
+ "w|безопасность": [
+  {
+   "text": "Твоя безопасность важнее.",
+   "en": "Your safety matters more.",
+   "ko": "네 안전이 더 중요해.",
+   "blank": "безопасность"
+  },
+  {
+   "text": "Здесь вопрос безопасности.",
+   "en": "This is a safety issue.",
+   "ko": "이건 안전 문제야.",
+   "blank": "безопасности"
+  }
+ ],
+ "w|белый": [
+  {
+   "text": "Белый хлеб кончился.",
+   "en": "We're out of white bread.",
+   "ko": "흰 빵이 다 떨어졌어.",
+   "blank": "Белый"
+  },
+  {
+   "text": "Надень белую рубашку.",
+   "en": "Wear a white shirt.",
+   "ko": "흰 셔츠 입어.",
+   "blank": "белую"
+  }
+ ],
+ "w|беспокоиться": [
+  {
+   "text": "Не беспокойся за меня.",
+   "en": "Don't worry about me.",
+   "ko": "나 걱정하지 마.",
+   "blank": "беспокойся"
+  },
+  {
+   "text": "Мама беспокоится.",
+   "en": "Mom is worried.",
+   "ko": "엄마가 걱정하셔.",
+   "blank": "беспокоится"
+  }
+ ],
+ "w|близкий": [
+  {
+   "text": "Он мне близкий человек.",
+   "en": "He's someone close to me.",
+   "ko": "그 사람은 나한테 가까운 사이야.",
+   "blank": "близкий"
+  },
+  {
+   "text": "Близкие уже знают.",
+   "en": "The family already knows.",
+   "ko": "가족은 이미 알고 있어.",
+   "blank": "Близкие"
+  }
+ ],
+ "w|бог": [
+  {
+   "text": "Слава богу, все целы.",
+   "en": "Thank goodness, everyone's safe.",
+   "ko": "다행히 다들 무사해.",
+   "blank": "богу"
+  },
+  {
+   "text": "Не дай бог опоздать.",
+   "en": "I hope we're not late.",
+   "ko": "늦으면 큰일이야.",
+   "blank": "бог"
+  }
+ ],
+ "w|более": [
+  {
+   "text": "Найдём более тихое место.",
+   "en": "Let's find a quieter spot.",
+   "ko": "더 조용한 데를 찾자.",
+   "blank": "более"
+  },
+  {
+   "text": "Более того, суп слишком солёный.",
+   "en": "What's more, the soup is too salty.",
+   "ko": "게다가 수프가 너무 짜.",
+   "blank": "Более"
+  }
+ ],
+ "w|боль": [
+  {
+   "text": "Боль прошла.",
+   "en": "The pain is gone.",
+   "ko": "통증은 이제 없어.",
+   "blank": "Боль"
+  },
+  {
+   "text": "От боли не усну.",
+   "en": "The pain is keeping me awake.",
+   "ko": "아파서 잠이 안 와.",
+   "blank": "боли"
+  }
+ ],
+ "w|больница": [
+  {
+   "text": "Его увезли в больницу.",
+   "en": "They took him to the hospital.",
+   "ko": "그 사람을 병원으로 데려갔어.",
+   "blank": "больницу"
+  },
+  {
+   "text": "Больница за углом.",
+   "en": "The hospital is around the corner.",
+   "ko": "병원은 모퉁이 바로 옆이야.",
+   "blank": "Больница"
+  }
+ ],
+ "w|больной": [
+  {
+   "text": "Ребёнок болен.",
+   "en": "The child is sick.",
+   "ko": "아이가 아파.",
+   "blank": "болен"
+  },
+  {
+   "text": "У него больное колено.",
+   "en": "His knee hurts.",
+   "ko": "그 사람 무릎이 아파.",
+   "blank": "больное"
+  }
+ ],
+ "w|большой": [
+  {
+   "text": "У них большой дом.",
+   "en": "They have a big house.",
+   "ko": "그들 집은 커.",
+   "blank": "большой"
+  },
+  {
+   "text": "Какая большая очередь!",
+   "en": "What a long line!",
+   "ko": "줄이 엄청 길다!",
+   "blank": "большая"
+  }
+ ],
+ "w|босс": [
+  {
+   "text": "Босс уже в офисе.",
+   "en": "The boss is already in the office.",
+   "ko": "사장이 이미 사무실에 있어.",
+   "blank": "Босс"
+  },
+  {
+   "text": "Не зли босса.",
+   "en": "Don't make the boss angry.",
+   "ko": "사장을 화나게 하지 마.",
+   "blank": "босса"
+  }
+ ],
+ "w|бояться": [
+  {
+   "text": "Боюсь, мы опоздаем.",
+   "en": "I'm afraid we'll be late.",
+   "ko": "우리 늦을 것 같아.",
+   "blank": "Боюсь"
+  },
+  {
+   "text": "Не бойся, я рядом.",
+   "en": "Don't be scared, I'm here.",
+   "ko": "무서워하지 마, 나 여기 있어.",
+   "blank": "бойся"
+  }
+ ],
+ "w|брат": [
+  {
+   "text": "Брат забрал ключи.",
+   "en": "My brother took the keys.",
+   "ko": "동생이 열쇠를 가져갔어.",
+   "blank": "Брат"
+  },
+  {
+   "text": "Я младше брата.",
+   "en": "I'm younger than my brother.",
+   "ko": "나는 형보다 어려.",
+   "blank": "брата"
+  }
+ ],
+ "w|брать": [
+  {
+   "text": "Бери печенье, не стесняйся.",
+   "en": "Take a cookie, don't be shy.",
+   "ko": "쿠키 먹어, 부끄러워하지 마.",
+   "blank": "Бери"
+  },
+  {
+   "text": "Я беру сегодня выходной.",
+   "en": "I'm taking the day off today.",
+   "ko": "오늘은 하루 쉴게.",
+   "blank": "беру"
+  }
+ ],
+ "w|бросить": [
+  {
+   "text": "Брось сумку на стул.",
+   "en": "Toss the bag onto the chair.",
+   "ko": "가방은 의자에 던져.",
+   "blank": "Брось"
+  },
+  {
+   "text": "Он бросил курить весной.",
+   "en": "He quit smoking in the spring.",
+   "ko": "그는 봄에 담배를 끊었어.",
+   "blank": "бросил"
+  }
+ ],
+ "w|будто": [
+  {
+   "text": "Он делает вид, будто спит.",
+   "en": "He's pretending to be asleep.",
+   "ko": "자는 척하고 있어.",
+   "blank": "будто"
+  },
+  {
+   "text": "Будто так сложно сказать правду.",
+   "en": "As if it's so hard to tell the truth.",
+   "ko": "사실 말하는 게 그렇게 어려워?",
+   "blank": "Будто"
+  }
+ ],
+ "w|бы": [
+  {
+   "text": "Я бы поспал.",
+   "en": "I'd like to get some sleep.",
+   "ko": "나 좀 자고 싶어.",
+   "blank": "бы"
+  },
+  {
+   "text": "Хорошо бы поесть.",
+   "en": "It would be nice to eat.",
+   "ko": "뭐라도 먹으면 좋겠어.",
+   "blank": "бы"
+  }
+ ],
+ "w|бывать": [
+  {
+   "text": "Я там часто бываю.",
+   "en": "I go there often.",
+   "ko": "거기 자주 가.",
+   "blank": "бываю"
+  },
+  {
+   "text": "Такое бывает.",
+   "en": "That happens.",
+   "ko": "그런 일도 있어.",
+   "blank": "бывает"
+  }
+ ],
+ "w|быстро": [
+  {
+   "text": "Быстро вытри стол.",
+   "en": "Wipe the table quickly.",
+   "ko": "식탁 빨리 닦아.",
+   "blank": "Быстро"
+  },
+  {
+   "text": "Как быстро стемнело.",
+   "en": "It got dark so fast.",
+   "ko": "금방 어두워졌네.",
+   "blank": "быстро"
+  }
+ ],
+ "w|быстрый": [
+  {
+   "text": "Дай быстрый ответ.",
+   "en": "Give me a quick answer.",
+   "ko": "빨리 대답해 줘.",
+   "blank": "быстрый"
+  },
+  {
+   "text": "У него быстрая реакция.",
+   "en": "His reactions are quick.",
+   "ko": "그 사람 반응이 빨라.",
+   "blank": "быстрая"
+  }
+ ],
+ "w|быть": [
+  {
+   "text": "Хочу быть рядом.",
+   "en": "I want to be nearby.",
+   "ko": "옆에 있고 싶어.",
+   "blank": "быть"
+  },
+  {
+   "text": "Он был вчера дома.",
+   "en": "He was home yesterday.",
+   "ko": "그는 어제 집에 있었어.",
+   "blank": "был"
+  }
+ ],
+ "w|в": [
+  {
+   "text": "Я в магазине.",
+   "en": "I'm at the store.",
+   "ko": "나 가게에 있어.",
+   "blank": "в"
+  },
+  {
+   "text": "Ключ лежит в кармане.",
+   "en": "The key is in the pocket.",
+   "ko": "열쇠는 주머니에 있어.",
+   "blank": "в"
+  }
+ ],
+ "w|важный": [
+  {
+   "text": "Это важный звонок.",
+   "en": "This is an important call.",
+   "ko": "이건 중요한 전화야.",
+   "blank": "важный"
+  },
+  {
+   "text": "У нас важная встреча.",
+   "en": "We have an important meeting.",
+   "ko": "우리는 중요한 약속이 있어.",
+   "blank": "важная"
+  }
+ ],
+ "w|ваш": [
+  {
+   "text": "Ваш паспорт, пожалуйста.",
+   "en": "Your passport, please.",
+   "ko": "여권 좀 보여 주세요.",
+   "blank": "Ваш"
+  },
+  {
+   "text": "Это ваша очередь.",
+   "en": "It's your turn.",
+   "ko": "당신 차례입니다.",
+   "blank": "ваша"
+  }
+ ],
+ "w|вдруг": [
+  {
+   "text": "Вдруг погас свет.",
+   "en": "The lights suddenly went out.",
+   "ko": "갑자기 불이 나갔어.",
+   "blank": "Вдруг"
+  },
+  {
+   "text": "А вдруг он не придёт?",
+   "en": "What if he doesn't come?",
+   "ko": "만약 그 사람이 안 오면 어쩌지?",
+   "blank": "вдруг"
+  }
+ ],
+ "w|ведь": [
+  {
+   "text": "Ты ведь обещал.",
+   "en": "But you promised.",
+   "ko": "네가 약속했잖아.",
+   "blank": "ведь"
+  },
+  {
+   "text": "Ведь я предупреждал.",
+   "en": "I did warn you.",
+   "ko": "내가 미리 말했잖아.",
+   "blank": "Ведь"
+  }
+ ],
+ "w|верить": [
+  {
+   "text": "Верь мне, я проверю.",
+   "en": "Trust me, I'll check.",
+   "ko": "믿어, 내가 확인할게.",
+   "blank": "Верь"
+  },
+  {
+   "text": "Я своим ушам не верю.",
+   "en": "I can't believe my ears.",
+   "ko": "내 귀를 못 믿겠어.",
+   "blank": "верю"
+  }
+ ],
+ "w|верно": [
+  {
+   "text": "Верно, я забыл.",
+   "en": "Right, I forgot.",
+   "ko": "맞아, 깜빡했어.",
+   "blank": "Верно"
+  },
+  {
+   "text": "Если верно помню, он отказался.",
+   "en": "If I remember right, he said no.",
+   "ko": "내 기억이 맞다면 그 사람은 거절했어.",
+   "blank": "верно"
+  }
+ ],
+ "w|вернуть": [
+  {
+   "text": "Верни мне ручку.",
+   "en": "Give me my pen back.",
+   "ko": "펜 돌려줘.",
+   "blank": "Верни"
+  },
+  {
+   "text": "Деньги я уже вернул.",
+   "en": "I already gave the money back.",
+   "ko": "돈은 이미 돌려줬어.",
+   "blank": "вернул"
+  }
+ ],
+ "w|вернуться": [
+  {
+   "text": "Я скоро вернусь.",
+   "en": "I'll be back soon.",
+   "ko": "곧 돌아올게.",
+   "blank": "вернусь"
+  },
+  {
+   "text": "Мама уже вернулась.",
+   "en": "Mom is already back.",
+   "ko": "엄마는 이미 돌아오셨어.",
+   "blank": "вернулась"
+  }
+ ],
+ "w|вести": [
+  {
+   "text": "Кто будет вести машину?",
+   "en": "Who's going to drive?",
+   "ko": "누가 운전할 거야?",
+   "blank": "вести"
+  },
+  {
+   "text": "Тропинка ведёт к реке.",
+   "en": "The path leads to the river.",
+   "ko": "오솔길이 강으로 이어져.",
+   "blank": "ведёт"
+  }
+ ],
+ "w|весь": [
+  {
+   "text": "Я весь день дома.",
+   "en": "I'm home all day.",
+   "ko": "하루 종일 집에 있어.",
+   "blank": "весь"
+  },
+  {
+   "text": "Выпей всю воду.",
+   "en": "Drink all the water.",
+   "ko": "물 다 마셔.",
+   "blank": "всю"
+  }
+ ],
+ "w|вечер": [
+  {
+   "text": "Добрый вечер!",
+   "en": "Good evening!",
+   "ko": "좋은 저녁이야!",
+   "blank": "вечер"
+  },
+  {
+   "text": "К вечеру похолодает.",
+   "en": "It'll get colder toward evening.",
+   "ko": "저녁쯤 추워질 거야.",
+   "blank": "вечеру"
+  }
+ ],
+ "w|вечеринка": [
+  {
+   "text": "Вечеринка уже началась.",
+   "en": "The party has already started.",
+   "ko": "파티는 이미 시작됐어.",
+   "blank": "Вечеринка"
+  },
+  {
+   "text": "Пойдём на вечеринку?",
+   "en": "Shall we go to the party?",
+   "ko": "파티에 갈까?",
+   "blank": "вечеринку"
+  }
+ ],
+ "w|вещь": [
+  {
+   "text": "Где мои вещи?",
+   "en": "Where are my things?",
+   "ko": "내 짐 어디 있어?",
+   "blank": "вещи"
+  },
+  {
+   "text": "Странная вещь.",
+   "en": "That's odd.",
+   "ko": "이상한 일이야.",
+   "blank": "вещь"
+  }
+ ],
+ "w|взять": [
+  {
+   "text": "Возьми зонт, идёт дождь.",
+   "en": "Take an umbrella, it's raining.",
+   "ko": "우산 가져가, 비 와.",
+   "blank": "Возьми"
+  },
+  {
+   "text": "Я взял такси.",
+   "en": "I took a taxi.",
+   "ko": "나는 택시를 탔어.",
+   "blank": "взял"
+  }
+ ],
+ "w|вид": [
+  {
+   "text": "Отсюда красивый вид.",
+   "en": "The view from here is lovely.",
+   "ko": "여기서 경치가 예뻐.",
+   "blank": "вид"
+  },
+  {
+   "text": "Не делай вид, что спишь.",
+   "en": "Don't pretend you're asleep.",
+   "ko": "자는 척하지 마.",
+   "blank": "вид"
+  }
+ ],
+ "w|видеть": [
+  {
+   "text": "Я тебя вижу.",
+   "en": "I can see you.",
+   "ko": "너 보여.",
+   "blank": "вижу"
+  },
+  {
+   "text": "Ты видел мою сумку?",
+   "en": "Did you see my bag?",
+   "ko": "내 가방 봤어?",
+   "blank": "видел"
+  }
+ ],
+ "w|вино": [
+  {
+   "text": "Вино ещё не открыто.",
+   "en": "The wine hasn't been opened yet.",
+   "ko": "와인은 아직 안 열렸어.",
+   "blank": "Вино"
+  },
+  {
+   "text": "Налей вина, пожалуйста.",
+   "en": "Pour some wine, please.",
+   "ko": "와인 좀 따라 줘.",
+   "blank": "вина"
+  }
+ ],
+ "w|вместе": [
+  {
+   "text": "Сядем вместе.",
+   "en": "Let's sit together.",
+   "ko": "같이 앉자.",
+   "blank": "вместе"
+  },
+  {
+   "text": "Мы живём вместе.",
+   "en": "We live together.",
+   "ko": "우리는 같이 살아.",
+   "blank": "вместе"
+  }
+ ],
+ "w|внимание": [
+  {
+   "text": "Внимание, ступенька скользкая.",
+   "en": "Careful, the step is slippery.",
+   "ko": "조심해, 그 칸이 미끄러워.",
+   "blank": "Внимание"
+  },
+  {
+   "text": "Удели ребёнку внимание.",
+   "en": "Give the child some attention.",
+   "ko": "아이에게 관심을 좀 줘.",
+   "blank": "внимание"
+  }
+ ],
+ "w|внутри": [
+  {
+   "text": "Внутри ещё тепло.",
+   "en": "It's still warm inside.",
+   "ko": "안은 아직 따뜻해.",
+   "blank": "Внутри"
+  },
+  {
+   "text": "Кот сидит внутри.",
+   "en": "The cat is sitting inside.",
+   "ko": "고양이가 안에 앉아 있어.",
+   "blank": "внутри"
+  }
+ ],
+ "w|вода": [
+  {
+   "text": "Вода в чайнике уже тёплая.",
+   "en": "The water in the kettle is already warm.",
+   "ko": "주전자 물은 이미 따뜻해.",
+   "blank": "Вода"
+  },
+  {
+   "text": "Налей мне воды, пожалуйста.",
+   "en": "Pour me some water, please.",
+   "ko": "물 좀 따라 줘.",
+   "blank": "воды"
+  }
+ ],
+ "w|возвращаться": [
+  {
+   "text": "Возвращайся поскорее.",
+   "en": "Come back soon.",
+   "ko": "얼른 돌아와.",
+   "blank": "Возвращайся"
+  },
+  {
+   "text": "Я возвращаюсь домой.",
+   "en": "I'm heading home.",
+   "ko": "나 집에 돌아가는 중이야.",
+   "blank": "возвращаюсь"
+  }
+ ],
+ "w|возможно": [
+  {
+   "text": "Возможно, он забыл.",
+   "en": "Maybe he forgot.",
+   "ko": "아마 깜빡했을 거야.",
+   "blank": "Возможно"
+  },
+  {
+   "text": "Всё возможно.",
+   "en": "Anything is possible.",
+   "ko": "다 가능해.",
+   "blank": "возможно"
+  }
+ ],
+ "w|возможность": [
+  {
+   "text": "Упустишь возможность.",
+   "en": "You'll miss the chance.",
+   "ko": "기회를 놓칠 거야.",
+   "blank": "возможность"
+  },
+  {
+   "text": "Возможности ещё есть.",
+   "en": "There's still a chance.",
+   "ko": "아직 기회는 있어.",
+   "blank": "Возможности"
+  }
+ ],
+ "w|война": [
+  {
+   "text": "Война давно кончилась.",
+   "en": "The war ended long ago.",
+   "ko": "전쟁은 오래전에 끝났어.",
+   "blank": "Война"
+  },
+  {
+   "text": "Я не хочу войны.",
+   "en": "I don't want a war.",
+   "ko": "나는 전쟁은 원하지 않아.",
+   "blank": "войны"
+  }
+ ],
+ "w|вокруг": [
+  {
+   "text": "Оглянись вокруг.",
+   "en": "Look around you.",
+   "ko": "주위를 둘러봐.",
+   "blank": "вокруг"
+  },
+  {
+   "text": "Вокруг дома тихо.",
+   "en": "It's quiet around the house.",
+   "ko": "집 주변은 조용해.",
+   "blank": "Вокруг"
+  }
+ ],
+ "w|волноваться": [
+  {
+   "text": "Не волнуйся, я рядом.",
+   "en": "Don't worry, I'm right here.",
+   "ko": "걱정하지 마, 나 옆에 있어.",
+   "blank": "волнуйся"
+  },
+  {
+   "text": "Мама зря волнуется.",
+   "en": "Mom is worrying for nothing.",
+   "ko": "엄마는 쓸데없이 걱정하셔.",
+   "blank": "волнуется"
+  }
+ ],
+ "w|волос": [
+  {
+   "text": "У тебя волос на плече.",
+   "en": "There's a hair on your shoulder.",
+   "ko": "네 어깨에 머리카락이 있어.",
+   "blank": "волос"
+  },
+  {
+   "text": "Выпал ещё один волос.",
+   "en": "Another hair fell out.",
+   "ko": "머리카락이 또 하나 빠졌어.",
+   "blank": "волос"
+  }
+ ],
+ "w|вон": [
+  {
+   "text": "Вон он, у двери!",
+   "en": "There he is, by the door!",
+   "ko": "저기 있어, 문 옆이야!",
+   "blank": "Вон"
+  },
+  {
+   "text": "Вон отсюда!",
+   "en": "Get out of here!",
+   "ko": "여기서 나가!",
+   "blank": "Вон"
+  }
+ ],
+ "w|вообще": [
+  {
+   "text": "Мне вообще не смешно.",
+   "en": "I don't find it funny at all.",
+   "ko": "나 전혀 안 웃겨.",
+   "blank": "вообще"
+  },
+  {
+   "text": "Ты вообще дома?",
+   "en": "Are you even home?",
+   "ko": "너 아예 집에 있어?",
+   "blank": "вообще"
+  }
+ ],
+ "w|вопрос": [
+  {
+   "text": "Можно вопрос?",
+   "en": "Can I ask something?",
+   "ko": "질문 하나 해도 돼?",
+   "blank": "вопрос"
+  },
+  {
+   "text": "Остался один вопрос.",
+   "en": "There's one question left.",
+   "ko": "질문이 하나 남았어.",
+   "blank": "вопрос"
+  }
+ ],
+ "w|вот": [
+  {
+   "text": "Вот твой билет.",
+   "en": "Here's your ticket.",
+   "ko": "여기 네 표야.",
+   "blank": "Вот"
+  },
+  {
+   "text": "Вот и пришли.",
+   "en": "And here we are.",
+   "ko": "드디어 도착했네.",
+   "blank": "Вот"
+  }
+ ],
+ "w|вперёд": [
+  {
+   "text": "Чуть вперёд подвинься.",
+   "en": "Move forward a little.",
+   "ko": "조금만 앞으로 가.",
+   "blank": "вперёд"
+  },
+  {
+   "text": "Иди вперёд, я за тобой.",
+   "en": "Go ahead, I'm behind you.",
+   "ko": "앞으로 가, 내가 뒤에 있을게.",
+   "blank": "вперёд"
+  }
+ ],
+ "w|врач": [
+  {
+   "text": "Врач тебя ждёт.",
+   "en": "The doctor is waiting for you.",
+   "ko": "의사가 너를 기다려.",
+   "blank": "Врач"
+  },
+  {
+   "text": "Сходи к врачу.",
+   "en": "Go see a doctor.",
+   "ko": "의사한테 가 봐.",
+   "blank": "врачу"
+  }
+ ],
+ "w|время": [
+  {
+   "text": "Сейчас нет времени.",
+   "en": "There's no time right now.",
+   "ko": "지금은 시간이 없어.",
+   "blank": "времени"
+  },
+  {
+   "text": "Время летит быстро.",
+   "en": "Time flies.",
+   "ko": "시간이 빨리 가.",
+   "blank": "Время"
+  }
+ ],
+ "w|вроде": [
+  {
+   "text": "Вроде всё получилось.",
+   "en": "It seems everything worked out.",
+   "ko": "된 것 같아.",
+   "blank": "Вроде"
+  },
+  {
+   "text": "Ты вроде согласен.",
+   "en": "You seem to agree.",
+   "ko": "너는 동의하는 것 같아.",
+   "blank": "вроде"
+  }
+ ],
+ "w|всё": [
+  {
+   "text": "Всё будет хорошо.",
+   "en": "Everything will be fine.",
+   "ko": "다 잘될 거야.",
+   "blank": "Всё"
+  },
+  {
+   "text": "Я всё помню.",
+   "en": "I remember everything.",
+   "ko": "나는 다 기억해.",
+   "blank": "всё"
+  }
+ ],
+ "w|всегда": [
+  {
+   "text": "Он всегда спешит.",
+   "en": "He's always in a hurry.",
+   "ko": "그 사람은 항상 급해.",
+   "blank": "всегда"
+  },
+  {
+   "text": "Я всегда на твоей стороне.",
+   "en": "I'm always on your side.",
+   "ko": "나는 항상 네 편이야.",
+   "blank": "всегда"
+  }
+ ],
+ "w|встретиться": [
+  {
+   "text": "Давай встретимся у фонтана.",
+   "en": "Let's meet by the fountain.",
+   "ko": "분수대에서 만나자.",
+   "blank": "встретимся"
+  },
+  {
+   "text": "Мы встретились в лифте.",
+   "en": "We ran into each other in the elevator.",
+   "ko": "엘리베이터에서 마주쳤어.",
+   "blank": "встретились"
+  }
+ ],
+ "w|встреча": [
+  {
+   "text": "Встреча перенесена.",
+   "en": "The meeting was postponed.",
+   "ko": "만남이 미뤄졌어.",
+   "blank": "Встреча"
+  },
+  {
+   "text": "Не опаздывай на встречу.",
+   "en": "Don't be late for the meeting.",
+   "ko": "모임에 늦지 마.",
+   "blank": "встречу"
+  }
+ ],
+ "w|встречаться": [
+  {
+   "text": "Нам надо встречаться чаще.",
+   "en": "We should see each other more often.",
+   "ko": "우리 더 자주 만나야 해.",
+   "blank": "встречаться"
+  },
+  {
+   "text": "Где вы обычно встречаетесь?",
+   "en": "Where do you usually meet?",
+   "ko": "너희는 보통 어디서 만나?",
+   "blank": "встречаетесь"
+  }
+ ],
+ "w|второй": [
+  {
+   "text": "Это уже вторая попытка.",
+   "en": "This is already the second try.",
+   "ko": "이번이 벌써 두 번째 시도야.",
+   "blank": "вторая"
+  },
+  {
+   "text": "Поднимись на второй этаж.",
+   "en": "Go up to the second floor.",
+   "ko": "이층으로 올라가.",
+   "blank": "второй"
+  }
+ ],
+ "w|вчера": [
+  {
+   "text": "Вчера суп был вкуснее.",
+   "en": "The soup was better yesterday.",
+   "ko": "어제 수프가 더 맛있었어.",
+   "blank": "Вчера"
+  },
+  {
+   "text": "Я вчера тебя не видел.",
+   "en": "I didn't see you yesterday.",
+   "ko": "어제 너를 못 봤어.",
+   "blank": "вчера"
+  }
+ ],
+ "w|вы": [
+  {
+   "text": "Вы меня слышите?",
+   "en": "Can you hear me?",
+   "ko": "제 말 들리세요?",
+   "blank": "Вы"
+  },
+  {
+   "text": "Я вам помогу.",
+   "en": "I'll help you.",
+   "ko": "제가 도와드릴게요.",
+   "blank": "вам"
+  }
+ ],
+ "w|выбор": [
+  {
+   "text": "Выбор за тобой.",
+   "en": "The choice is yours.",
+   "ko": "선택은 네가 해.",
+   "blank": "Выбор"
+  },
+  {
+   "text": "У меня не было выбора.",
+   "en": "I had no choice.",
+   "ko": "나한테는 선택지가 없었어.",
+   "blank": "выбора"
+  }
+ ],
+ "w|выбрать": [
+  {
+   "text": "Выбери сам.",
+   "en": "You choose.",
+   "ko": "네가 골라.",
+   "blank": "Выбери"
+  },
+  {
+   "text": "Я уже выбрал.",
+   "en": "I've already chosen.",
+   "ko": "나는 이미 골랐어.",
+   "blank": "выбрал"
+  }
+ ],
+ "w|выглядеть": [
+  {
+   "text": "Ты хорошо выглядишь.",
+   "en": "You look good.",
+   "ko": "너 좋아 보여.",
+   "blank": "выглядишь"
+  },
+  {
+   "text": "Это выглядит странно.",
+   "en": "This looks strange.",
+   "ko": "이거 이상해 보여.",
+   "blank": "выглядит"
+  }
+ ],
+ "w|выиграть": [
+  {
+   "text": "Мы выиграли матч.",
+   "en": "We won the match.",
+   "ko": "우리가 경기에서 이겼어.",
+   "blank": "выиграли"
+  },
+  {
+   "text": "Он выиграл в карты.",
+   "en": "He won at cards.",
+   "ko": "그는 카드에서 이겼어.",
+   "blank": "выиграл"
+  }
+ ],
+ "w|выйти": [
+  {
+   "text": "Мне надо выйти.",
+   "en": "I need to step out.",
+   "ko": "나 잠깐 나갔다 올게.",
+   "blank": "выйти"
+  },
+  {
+   "text": "Мы вышли не там.",
+   "en": "We got off at the wrong place.",
+   "ko": "우리는 엉뚱한 데서 내렸어.",
+   "blank": "вышли"
+  }
+ ],
+ "w|выпить": [
+  {
+   "text": "Выпьем чаю?",
+   "en": "Shall we have some tea?",
+   "ko": "차 한잔할까?",
+   "blank": "Выпьем"
+  },
+  {
+   "text": "Я уже выпил воду.",
+   "en": "I already drank the water.",
+   "ko": "물은 이미 마셨어.",
+   "blank": "выпил"
+  }
+ ],
+ "w|выходить": [
+  {
+   "text": "Выходи, такси уже ждёт.",
+   "en": "Come out, the taxi is already waiting.",
+   "ko": "나와, 택시가 이미 기다리고 있어.",
+   "blank": "Выходи"
+  },
+  {
+   "text": "Дым выходит из кухни.",
+   "en": "Smoke is coming out of the kitchen.",
+   "ko": "주방에서 연기가 나와.",
+   "blank": "выходит"
+  }
+ ],
+ "w|где": [
+  {
+   "text": "Где моя куртка?",
+   "en": "Where is my jacket?",
+   "ko": "내 재킷 어디 있어?",
+   "blank": "Где"
+  },
+  {
+   "text": "Я не помню, где ключ.",
+   "en": "I don't remember where the key is.",
+   "ko": "열쇠가 어디 있는지 기억이 안 나.",
+   "blank": "где"
+  }
+ ],
+ "w|где-то": [
+  {
+   "text": "Ключи где-то здесь.",
+   "en": "The keys are around here somewhere.",
+   "ko": "열쇠가 이 근처 어딘가에 있어.",
+   "blank": "где-то"
+  },
+  {
+   "text": "Я где-то это уже слышал.",
+   "en": "I've heard this somewhere before.",
+   "ko": "이거 어디선가 들은 적 있어.",
+   "blank": "где-то"
+  }
+ ],
+ "w|главный": [
+  {
+   "text": "Вот главный вход.",
+   "en": "Here's the main entrance.",
+   "ko": "여기가 정문이야.",
+   "blank": "главный"
+  },
+  {
+   "text": "Главное, не паникуй.",
+   "en": "The main thing is, don't panic.",
+   "ko": "중요한 건 당황하지 마.",
+   "blank": "Главное"
+  }
+ ],
+ "w|глаз": [
+  {
+   "text": "Соринка попала в глаз.",
+   "en": "A speck got in my eye.",
+   "ko": "눈에 티가 들어갔어.",
+   "blank": "глаз"
+  },
+  {
+   "text": "Закрой глаза.",
+   "en": "Close your eyes.",
+   "ko": "눈 감아.",
+   "blank": "глаза"
+  }
+ ],
+ "w|глупый": [
+  {
+   "text": "Не делай глупый вид.",
+   "en": "Don't play dumb.",
+   "ko": "모르는 척하지 마.",
+   "blank": "глупый"
+  },
+  {
+   "text": "Это была глупая шутка.",
+   "en": "That was a silly joke.",
+   "ko": "그거 바보 같은 농담이었어.",
+   "blank": "глупая"
+  }
+ ],
+ "w|говорить": [
+  {
+   "text": "Не говори так громко.",
+   "en": "Don't talk so loud.",
+   "ko": "그렇게 크게 말하지 마.",
+   "blank": "говори"
+  },
+  {
+   "text": "Я говорю серьёзно.",
+   "en": "I'm being serious.",
+   "ko": "나 진지하게 말하는 거야.",
+   "blank": "говорю"
+  }
+ ],
+ "w|год": [
+  {
+   "text": "С Новым годом!",
+   "en": "Happy New Year!",
+   "ko": "새해 복 많이 받아!",
+   "blank": "годом"
+  },
+  {
+   "text": "В прошлом году было холодно.",
+   "en": "It was cold last year.",
+   "ko": "작년에는 추웠어.",
+   "blank": "году"
+  }
+ ],
+ "w|голова": [
+  {
+   "text": "У меня болит голова.",
+   "en": "My head hurts.",
+   "ko": "머리가 아파.",
+   "blank": "голова"
+  },
+  {
+   "text": "Не вешай голову.",
+   "en": "Don't lose heart.",
+   "ko": "풀 죽지 마.",
+   "blank": "голову"
+  }
+ ],
+ "w|голос": [
+  {
+   "text": "Голос у тебя хриплый.",
+   "en": "Your voice is hoarse.",
+   "ko": "너 목소리가 쉬었어.",
+   "blank": "Голос"
+  },
+  {
+   "text": "Я узнал его по голосу.",
+   "en": "I recognized him by his voice.",
+   "ko": "목소리로 그 사람을 알아들었어.",
+   "blank": "голосу"
+  }
+ ],
+ "w|город": [
+  {
+   "text": "Мне нравится этот город.",
+   "en": "I like this city.",
+   "ko": "이 도시가 마음에 들어.",
+   "blank": "город"
+  },
+  {
+   "text": "За городом тише.",
+   "en": "It's quieter outside the city.",
+   "ko": "도시 밖이 더 조용해.",
+   "blank": "городом"
+  }
+ ],
+ "w|господин": [
+  {
+   "text": "Господин ошибся дверью.",
+   "en": "The gentleman got the wrong door.",
+   "ko": "그 신사분은 문을 잘못 찾으셨어.",
+   "blank": "Господин"
+  },
+  {
+   "text": "Этого господина я не знаю.",
+   "en": "I don't know this gentleman.",
+   "ko": "이 신사분은 몰라.",
+   "blank": "господина"
+  }
+ ],
+ "w|господь": [
+  {
+   "text": "Господи, какой ветер!",
+   "en": "Goodness, what a wind!",
+   "ko": "세상에, 바람이 정말 세!",
+   "blank": "Господи"
+  },
+  {
+   "text": "Слава господу, дождь кончился.",
+   "en": "Thank goodness the rain stopped.",
+   "ko": "다행히 비는 그쳤어.",
+   "blank": "господу"
+  }
+ ],
+ "w|готовый": [
+  {
+   "text": "Я готов выходить.",
+   "en": "I'm ready to head out.",
+   "ko": "나 나갈 준비 됐어.",
+   "blank": "готов"
+  },
+  {
+   "text": "Ты готова?",
+   "en": "Are you ready?",
+   "ko": "준비됐어?",
+   "blank": "готова"
+  }
+ ],
+ "w|группа": [
+  {
+   "text": "Наша группа выиграла.",
+   "en": "Our group won.",
+   "ko": "우리 조가 이겼어.",
+   "blank": "группа"
+  },
+  {
+   "text": "Я в другой группе.",
+   "en": "I'm in a different group.",
+   "ko": "나는 다른 조야.",
+   "blank": "группе"
+  }
+ ],
+ "w|да": [
+  {
+   "text": "Да, я согласен.",
+   "en": "Yes, I agree.",
+   "ko": "응, 나도 동의해.",
+   "blank": "Да"
+  },
+  {
+   "text": "Ну да, конечно.",
+   "en": "Well yes, of course.",
+   "ko": "글쎄, 당연히 그렇지.",
+   "blank": "да"
+  }
+ ],
+ "w|давать": [
+  {
+   "text": "Давай зайдём внутрь.",
+   "en": "Let's go inside.",
+   "ko": "안에 들어가자.",
+   "blank": "Давай"
+  },
+  {
+   "text": "Он редко даёт советы.",
+   "en": "He rarely gives advice.",
+   "ko": "그 사람은 조언을 잘 안 해.",
+   "blank": "даёт"
+  }
+ ],
+ "w|давно": [
+  {
+   "text": "Давно не ел борща.",
+   "en": "I haven't had borscht in a long time.",
+   "ko": "보르시 먹은 지 오래됐어.",
+   "blank": "Давно"
+  },
+  {
+   "text": "Мы давно не гуляли вместе.",
+   "en": "We haven't taken a walk together in a long time.",
+   "ko": "우리 같이 산책한 지 오래됐어.",
+   "blank": "давно"
+  }
+ ],
+ "w|даже": [
+  {
+   "text": "Даже не думай.",
+   "en": "Don't even think about it.",
+   "ko": "생각도 하지 마.",
+   "blank": "Даже"
+  },
+  {
+   "text": "Даже мама не знает.",
+   "en": "Even Mom doesn't know.",
+   "ko": "엄마도 몰라.",
+   "blank": "Даже"
+  }
+ ],
+ "w|далёкий": [
+  {
+   "text": "Это далёкий родственник.",
+   "en": "This is a distant relative.",
+   "ko": "이 사람은 먼 친척이야.",
+   "blank": "далёкий"
+  },
+  {
+   "text": "Он из далёкого города.",
+   "en": "He's from a faraway city.",
+   "ko": "그 사람은 먼 도시에서 왔어.",
+   "blank": "далёкого"
+  }
+ ],
+ "w|дальше": [
+  {
+   "text": "Дальше сверни направо.",
+   "en": "Then turn right.",
+   "ko": "그다음은 오른쪽으로 꺾어.",
+   "blank": "Дальше"
+  },
+  {
+   "text": "А дальше что?",
+   "en": "And then what?",
+   "ko": "그다음은?",
+   "blank": "дальше"
+  }
+ ],
+ "w|дама": [
+  {
+   "text": "Дама у входа ждёт.",
+   "en": "The lady by the entrance is waiting.",
+   "ko": "입구의 여자가 기다리고 있어.",
+   "blank": "Дама"
+  },
+  {
+   "text": "Я уступил место даме.",
+   "en": "I gave my seat to the lady.",
+   "ko": "나는 그 여자분께 자리를 양보했어.",
+   "blank": "даме"
+  }
+ ],
+ "w|данные": [
+  {
+   "text": "Данные не сходятся.",
+   "en": "The figures don't add up.",
+   "ko": "데이터가 안 맞아.",
+   "blank": "Данные"
+  },
+  {
+   "text": "Без данных не решить.",
+   "en": "We can't decide without the data.",
+   "ko": "데이터 없이는 못 정해.",
+   "blank": "данных"
+  }
+ ],
+ "w|дать": [
+  {
+   "text": "Дай мне руку.",
+   "en": "Give me your hand.",
+   "ko": "손 잡아 줘.",
+   "blank": "Дай"
+  },
+  {
+   "text": "Я дал ему адрес.",
+   "en": "I gave him the address.",
+   "ko": "그 사람한테 주소를 줬어.",
+   "blank": "дал"
+  }
+ ],
+ "w|два": [
+  {
+   "text": "Два билета, пожалуйста.",
+   "en": "Two tickets, please.",
+   "ko": "표 두 장이요.",
+   "blank": "Два"
+  },
+  {
+   "text": "Дай две ложки.",
+   "en": "Give me two spoons.",
+   "ko": "숟가락 두 개 줘.",
+   "blank": "две"
+  }
+ ],
+ "w|дверь": [
+  {
+   "text": "Дверь захлопнулась.",
+   "en": "The door slammed shut.",
+   "ko": "문이 꽝 닫혔어.",
+   "blank": "Дверь"
+  },
+  {
+   "text": "Подержи дверь, пожалуйста.",
+   "en": "Hold the door, please.",
+   "ko": "문 좀 잡아 줘.",
+   "blank": "дверь"
+  }
+ ],
+ "w|двое": [
+  {
+   "text": "Нас двое.",
+   "en": "There are two of us.",
+   "ko": "우리는 둘이야.",
+   "blank": "двое"
+  },
+  {
+   "text": "Двое уже ушли.",
+   "en": "Two people already left.",
+   "ko": "두 사람은 이미 갔어.",
+   "blank": "Двое"
+  }
+ ],
+ "w|девочка": [
+  {
+   "text": "Девочка боится грома.",
+   "en": "The girl is afraid of thunder.",
+   "ko": "여자아이가 천둥을 무서워해.",
+   "blank": "Девочка"
+  },
+  {
+   "text": "Позови девочку ужинать.",
+   "en": "Call the girl to dinner.",
+   "ko": "여자아이 저녁 먹으라고 불러.",
+   "blank": "девочку"
+  }
+ ],
+ "w|девушка": [
+  {
+   "text": "Это моя девушка.",
+   "en": "This is my girlfriend.",
+   "ko": "이 사람은 내 여자친구야.",
+   "blank": "девушка"
+  },
+  {
+   "text": "Девушка, счёт, пожалуйста.",
+   "en": "Miss, the check, please.",
+   "ko": "저기요, 계산서 주세요.",
+   "blank": "Девушка"
+  }
+ ],
+ "w|действительно": [
+  {
+   "text": "Это действительно вкусно.",
+   "en": "This really is tasty.",
+   "ko": "이거 정말 맛있어.",
+   "blank": "действительно"
+  },
+  {
+   "text": "Ты действительно уходишь?",
+   "en": "Are you really leaving?",
+   "ko": "진짜 가는 거야?",
+   "blank": "действительно"
+  }
+ ],
+ "w|делать": [
+  {
+   "text": "Что ты делаешь?",
+   "en": "What are you doing?",
+   "ko": "너 뭐 해?",
+   "blank": "делаешь"
+  },
+  {
+   "text": "Не делай этого.",
+   "en": "Don't do that.",
+   "ko": "그거 하지 마.",
+   "blank": "делай"
+  }
+ ],
+ "w|дело": [
+  {
+   "text": "В чём дело?",
+   "en": "What's going on?",
+   "ko": "무슨 일이야?",
+   "blank": "дело"
+  },
+  {
+   "text": "Это не моё дело.",
+   "en": "That's none of my business.",
+   "ko": "그건 내 일이 아니야.",
+   "blank": "дело"
+  }
+ ],
+ "w|день": [
+  {
+   "text": "Добрый день!",
+   "en": "Good afternoon!",
+   "ko": "안녕하세요!",
+   "blank": "день"
+  },
+  {
+   "text": "Весь день шёл дождь.",
+   "en": "It rained all day.",
+   "ko": "하루 종일 비가 왔어.",
+   "blank": "день"
+  }
+ ],
+ "w|деньги": [
+  {
+   "text": "Где мои деньги?",
+   "en": "Where is my money?",
+   "ko": "내 돈 어디 있어?",
+   "blank": "деньги"
+  },
+  {
+   "text": "У меня мало денег.",
+   "en": "I have little money.",
+   "ko": "나한테 돈이 별로 없어.",
+   "blank": "денег"
+  }
+ ],
+ "w|держать": [
+  {
+   "text": "Держи сумку.",
+   "en": "Hold the bag.",
+   "ko": "가방 잡아.",
+   "blank": "Держи"
+  },
+  {
+   "text": "Он держит слово.",
+   "en": "He keeps his word.",
+   "ko": "그 사람은 약속을 지켜.",
+   "blank": "держит"
+  }
+ ],
+ "w|держаться": [
+  {
+   "text": "Держись за перила.",
+   "en": "Hold on to the railing.",
+   "ko": "난간을 꽉 잡아.",
+   "blank": "Держись"
+  },
+  {
+   "text": "Я держусь, не волнуйся.",
+   "en": "I'm holding up, don't worry.",
+   "ko": "나 버티고 있어, 걱정 마.",
+   "blank": "держусь"
+  }
+ ],
+ "w|десять": [
+  {
+   "text": "Уже десять часов.",
+   "en": "It's already ten o'clock.",
+   "ko": "이미 열 시야.",
+   "blank": "десять"
+  },
+  {
+   "text": "Дай десять рублей.",
+   "en": "Give me ten rubles.",
+   "ko": "십 루블 줘.",
+   "blank": "десять"
+  }
+ ],
+ "w|детектив": [
+  {
+   "text": "Позови детектива.",
+   "en": "Call a detective.",
+   "ko": "형사를 불러.",
+   "blank": "детектива"
+  },
+  {
+   "text": "Я читаю детектив.",
+   "en": "I'm reading a mystery.",
+   "ko": "나는 추리 소설을 읽고 있어.",
+   "blank": "детектив"
+  }
+ ],
+ "w|для": [
+  {
+   "text": "Это подарок для тебя.",
+   "en": "This gift is for you.",
+   "ko": "이 선물은 너 거야.",
+   "blank": "для"
+  },
+  {
+   "text": "Для начала выпей воды.",
+   "en": "First, have some water.",
+   "ko": "일단 물 좀 마셔.",
+   "blank": "Для"
+  }
+ ],
+ "w|до": [
+  {
+   "text": "До встречи вечером.",
+   "en": "See you this evening.",
+   "ko": "저녁에 보자.",
+   "blank": "До"
+  },
+  {
+   "text": "Дойду до угла и назад.",
+   "en": "I'll go to the corner and back.",
+   "ko": "모퉁이까지 갔다 올게.",
+   "blank": "до"
+  }
+ ],
+ "w|добрый": [
+  {
+   "text": "Он добрый человек.",
+   "en": "He's a kind person.",
+   "ko": "그 사람 참 착해.",
+   "blank": "добрый"
+  },
+  {
+   "text": "Будь добрым, уступи место.",
+   "en": "Be kind and give up your seat.",
+   "ko": "착하게 자리 좀 양보해.",
+   "blank": "добрым"
+  }
+ ],
+ "w|доверять": [
+  {
+   "text": "Я тебе доверяю.",
+   "en": "I trust you.",
+   "ko": "나는 너를 믿어.",
+   "blank": "доверяю"
+  },
+  {
+   "text": "Не доверяй незнакомцам.",
+   "en": "Don't trust strangers.",
+   "ko": "모르는 사람은 믿지 마.",
+   "blank": "доверяй"
+  }
+ ],
+ "w|довольный": [
+  {
+   "text": "Вид у тебя довольный.",
+   "en": "You look pleased.",
+   "ko": "너 표정이 만족스러워.",
+   "blank": "довольный"
+  },
+  {
+   "text": "Я доволен ужином.",
+   "en": "I'm pleased with dinner.",
+   "ko": "저녁이 마음에 들어.",
+   "blank": "доволен"
+  }
+ ],
+ "w|доктор": [
+  {
+   "text": "Доктор, мне плохо.",
+   "en": "Doctor, I feel awful.",
+   "ko": "선생님, 저 몸이 안 좋아요.",
+   "blank": "Доктор"
+  },
+  {
+   "text": "Вызови доктора.",
+   "en": "Call a doctor.",
+   "ko": "의사 불러.",
+   "blank": "доктора"
+  }
+ ],
+ "w|долго": [
+  {
+   "text": "Долго ты ещё?",
+   "en": "Are you going to be much longer?",
+   "ko": "너 아직도 오래 걸려?",
+   "blank": "Долго"
+  },
+  {
+   "text": "Не думай слишком долго.",
+   "en": "Don't think too long.",
+   "ko": "너무 오래 생각하지 마.",
+   "blank": "долго"
+  }
+ ],
+ "w|должен": [
+  {
+   "text": "Я должен идти.",
+   "en": "I have to go.",
+   "ko": "나 가야 해.",
+   "blank": "должен"
+  },
+  {
+   "text": "Она должна отдохнуть.",
+   "en": "She needs to rest.",
+   "ko": "그 사람은 쉬어야 해.",
+   "blank": "должна"
+  }
+ ],
+ "w|доллар": [
+  {
+   "text": "Доллар сегодня упал.",
+   "en": "The dollar fell today.",
+   "ko": "오늘 달러가 떨어졌어.",
+   "blank": "Доллар"
+  },
+  {
+   "text": "Дай сдачу в долларах.",
+   "en": "Give me the change in dollars.",
+   "ko": "거스름돈은 달러로 줘.",
+   "blank": "долларах"
+  }
+ ],
+ "w|дом": [
+  {
+   "text": "Я уже дома.",
+   "en": "I'm home already.",
+   "ko": "나 이미 집에 있어.",
+   "blank": "дома"
+  },
+  {
+   "text": "Наш дом у реки.",
+   "en": "Our house is by the river.",
+   "ko": "우리 집은 강가에 있어.",
+   "blank": "дом"
+  }
+ ],
+ "w|домой": [
+  {
+   "text": "Мне пора домой.",
+   "en": "I need to get home.",
+   "ko": "나 이제 집에 가야 해.",
+   "blank": "домой"
+  },
+  {
+   "text": "Проводи меня домой.",
+   "en": "Walk me home.",
+   "ko": "집까지 데려다 줘.",
+   "blank": "домой"
+  }
+ ],
+ "w|дорога": [
+  {
+   "text": "Дорога скользкая, иди медленно.",
+   "en": "The road is slippery, so walk slowly.",
+   "ko": "길이 미끄러우니 천천히 가.",
+   "blank": "Дорога"
+  },
+  {
+   "text": "Перейди дорогу на светофоре.",
+   "en": "Cross the road at the light.",
+   "ko": "신호등에서 길을 건너.",
+   "blank": "дорогу"
+  }
+ ],
+ "w|дорогой": [
+  {
+   "text": "Подарок слишком дорогой.",
+   "en": "The gift is too expensive.",
+   "ko": "선물이 너무 비싸.",
+   "blank": "дорогой"
+  },
+  {
+   "text": "Дорогая, ужин стынет.",
+   "en": "Honey, dinner is getting cold.",
+   "ko": "자기야, 저녁 식어.",
+   "blank": "Дорогая"
+  }
+ ],
+ "w|достаточно": [
+  {
+   "text": "Достаточно, я всё понял.",
+   "en": "Enough, I understood everything.",
+   "ko": "충분해, 다 이해했어.",
+   "blank": "Достаточно"
+  },
+  {
+   "text": "Мне достаточно чая.",
+   "en": "Tea is enough for me.",
+   "ko": "나는 차면 충분해.",
+   "blank": "достаточно"
+  }
+ ],
+ "w|достать": [
+  {
+   "text": "Достань билеты из сумки.",
+   "en": "Get the tickets out of the bag.",
+   "ko": "가방에서 표를 꺼내.",
+   "blank": "Достань"
+  },
+  {
+   "text": "Я достал это из кармана.",
+   "en": "I pulled this out of my pocket.",
+   "ko": "주머니에서 꺼냈어.",
+   "blank": "достал"
+  }
+ ],
+ "w|дочь": [
+  {
+   "text": "Дочь уже в кровати.",
+   "en": "My daughter is already in bed.",
+   "ko": "딸은 이미 침대에 있어.",
+   "blank": "Дочь"
+  },
+  {
+   "text": "Я читаю дочери сказку.",
+   "en": "I'm reading my daughter a story.",
+   "ko": "딸에게 동화를 읽어 주고 있어.",
+   "blank": "дочери"
+  }
+ ],
+ "w|друг": [
+  {
+   "text": "Он мой лучший друг.",
+   "en": "He's my best friend.",
+   "ko": "그 사람은 내 가장 친한 친구야.",
+   "blank": "друг"
+  },
+  {
+   "text": "Позвони другу вечером.",
+   "en": "Call your friend this evening.",
+   "ko": "저녁에 친구한테 전화해.",
+   "blank": "другу"
+  }
+ ],
+ "w|другой": [
+  {
+   "text": "Дай другую ложку.",
+   "en": "Give me another spoon.",
+   "ko": "숟가락 다른 거 줘.",
+   "blank": "другую"
+  },
+  {
+   "text": "Это совсем другой разговор.",
+   "en": "That's a completely different conversation.",
+   "ko": "그건 완전히 다른 얘기야.",
+   "blank": "другой"
+  }
+ ],
+ "w|думать": [
+  {
+   "text": "Я думаю, он прав.",
+   "en": "I think he's right.",
+   "ko": "그 사람이 맞는 것 같아.",
+   "blank": "думаю"
+  },
+  {
+   "text": "Ты слишком много думаешь.",
+   "en": "You think too much.",
+   "ko": "너 너무 생각이 많아.",
+   "blank": "думаешь"
+  }
+ ],
+ "w|душа": [
+  {
+   "text": "На душе сегодня легко.",
+   "en": "I feel light today.",
+   "ko": "오늘 마음이 가벼워.",
+   "blank": "душе"
+  },
+  {
+   "text": "Душа не на месте.",
+   "en": "I feel uneasy.",
+   "ko": "마음이 놓이지 않아.",
+   "blank": "Душа"
+  }
+ ],
+ "w|еда": [
+  {
+   "text": "Еда остыла.",
+   "en": "The food got cold.",
+   "ko": "음식이 식었어.",
+   "blank": "Еда"
+  },
+  {
+   "text": "Домашняя еда вкуснее.",
+   "en": "Home cooking tastes better.",
+   "ko": "집에서 만든 게 더 맛있어.",
+   "blank": "еда"
+  }
+ ],
+ "w|единственный": [
+  {
+   "text": "Это единственный ключ.",
+   "en": "This is the only key.",
+   "ko": "이게 유일한 열쇠야.",
+   "blank": "единственный"
+  },
+  {
+   "text": "Ты здесь не единственный.",
+   "en": "You're not the only one here.",
+   "ko": "여기 너만 있는 건 아니야.",
+   "blank": "единственный"
+  }
+ ],
+ "w|если": [
+  {
+   "text": "Если устанешь, отдохни.",
+   "en": "If you get tired, rest.",
+   "ko": "피곤해지면 쉬어.",
+   "blank": "Если"
+  },
+  {
+   "text": "Я приду, если смогу.",
+   "en": "I'll come if I can.",
+   "ko": "할 수 있으면 갈게.",
+   "blank": "если"
+  }
+ ],
+ "w|есть": [
+  {
+   "text": "Пора есть, садись.",
+   "en": "Time to eat, sit down.",
+   "ko": "이제 밥 먹자, 앉아.",
+   "blank": "есть"
+  },
+  {
+   "text": "Ребёнок плохо ест.",
+   "en": "The kid isn't eating well.",
+   "ko": "아이가 밥을 잘 안 먹어.",
+   "blank": "ест"
+  }
+ ],
+ "w|ехать": [
+  {
+   "text": "Мы едем к бабушке.",
+   "en": "We're on our way to grandma's.",
+   "ko": "우리는 할머니 댁으로 가는 중이야.",
+   "blank": "едем"
+  },
+  {
+   "text": "Поезжай потихоньку, тут туман.",
+   "en": "Drive gently, there's fog here.",
+   "ko": "안개 끼었으니 살살 가.",
+   "blank": "Поезжай"
+  }
+ ],
+ "w|ещё": [
+  {
+   "text": "Хочешь ещё чаю?",
+   "en": "Do you want more tea?",
+   "ko": "차 더 마실래?",
+   "blank": "ещё"
+  },
+  {
+   "text": "Ещё немного, и готово.",
+   "en": "A little more and it's done.",
+   "ko": "조금만 더 하면 끝이야.",
+   "blank": "Ещё"
+  }
+ ],
+ "w|жаль": [
+  {
+   "text": "Жаль, что ты уходишь.",
+   "en": "It's a shame you're leaving.",
+   "ko": "네가 가서 아쉽다.",
+   "blank": "Жаль"
+  },
+  {
+   "text": "Жаль, билеты кончились.",
+   "en": "Too bad, the tickets are gone.",
+   "ko": "아쉽게도 표가 다 나갔어.",
+   "blank": "Жаль"
+  }
+ ],
+ "w|ждать": [
+  {
+   "text": "Я жду внизу.",
+   "en": "I'm waiting downstairs.",
+   "ko": "나 아래에서 기다리고 있어.",
+   "blank": "жду"
+  },
+  {
+   "text": "Не жди меня.",
+   "en": "Don't wait for me.",
+   "ko": "나 기다리지 마.",
+   "blank": "жди"
+  }
+ ],
+ "w|же": [
+  {
+   "text": "Я же предупреждал.",
+   "en": "I did warn you.",
+   "ko": "내가 경고했잖아.",
+   "blank": "же"
+  },
+  {
+   "text": "Ну же, пойдём.",
+   "en": "Come on, let's go.",
+   "ko": "자, 가자.",
+   "blank": "же"
+  }
+ ],
+ "w|жена": [
+  {
+   "text": "Жена ещё на работе.",
+   "en": "My wife is still at work.",
+   "ko": "아내는 아직 출근 중이야.",
+   "blank": "Жена"
+  },
+  {
+   "text": "Я купил жене цветы.",
+   "en": "I bought my wife flowers.",
+   "ko": "아내한테 꽃을 샀어.",
+   "blank": "жене"
+  }
+ ],
+ "w|женщина": [
+  {
+   "text": "Женщина у окна машет.",
+   "en": "The woman by the window is waving.",
+   "ko": "창가의 여자가 손을 흔들고 있어.",
+   "blank": "Женщина"
+  },
+  {
+   "text": "Я подошёл к женщине.",
+   "en": "I walked up to the woman.",
+   "ko": "나는 그 여자에게 다가갔어.",
+   "blank": "женщине"
+  }
+ ],
+ "w|жертва": [
+  {
+   "text": "Он стал жертвой обмана.",
+   "en": "He fell for a scam.",
+   "ko": "그 사람은 사기를 당했어.",
+   "blank": "жертвой"
+  },
+  {
+   "text": "К счастью, жертв нет.",
+   "en": "Luckily, nobody was hurt.",
+   "ko": "다행히 다친 사람은 없어.",
+   "blank": "жертв"
+  }
+ ],
+ "w|живой": [
+  {
+   "text": "Кактус ещё живой, не выбрасывай.",
+   "en": "The cactus is still alive, don't throw it out.",
+   "ko": "선인장은 아직 살아 있으니 버리지 마.",
+   "blank": "живой"
+  },
+  {
+   "text": "Живая музыка мне ближе.",
+   "en": "I prefer live music.",
+   "ko": "나는 라이브 음악이 더 좋아.",
+   "blank": "Живая"
+  }
+ ],
+ "w|жизнь": [
+  {
+   "text": "Жизнь продолжается.",
+   "en": "Life goes on.",
+   "ko": "인생은 계속돼.",
+   "blank": "Жизнь"
+  },
+  {
+   "text": "Такой жизни я не хочу.",
+   "en": "I don't want a life like that.",
+   "ko": "그런 삶은 원하지 않아.",
+   "blank": "жизни"
+  }
+ ],
+ "w|жить": [
+  {
+   "text": "Я живу у парка.",
+   "en": "I live by the park.",
+   "ko": "나는 공원 옆에 살아.",
+   "blank": "живу"
+  },
+  {
+   "text": "Бабушка живёт одна.",
+   "en": "Grandma lives alone.",
+   "ko": "할머니는 혼자 사셔.",
+   "blank": "живёт"
+  }
+ ],
+ "w|за": [
+  {
+   "text": "Спасибо за чай.",
+   "en": "Thanks for the tea.",
+   "ko": "차 고마워.",
+   "blank": "за"
+  },
+  {
+   "text": "Я зайду за тобой.",
+   "en": "I'll come pick you up.",
+   "ko": "내가 데리러 갈게.",
+   "blank": "за"
+  }
+ ],
+ "w|забрать": [
+  {
+   "text": "Забери зонт, на улице дождь.",
+   "en": "Take the umbrella, it's raining outside.",
+   "ko": "우산 가져가, 밖에 비 와.",
+   "blank": "Забери"
+  },
+  {
+   "text": "Посылку уже забрали.",
+   "en": "Someone already picked up the package.",
+   "ko": "택배는 이미 찾아갔어.",
+   "blank": "забрали"
+  }
+ ],
+ "w|забыть": [
+  {
+   "text": "Чуть не забыл ключ.",
+   "en": "I almost forgot the key.",
+   "ko": "열쇠를 깜빡할 뻔했어.",
+   "blank": "забыл"
+  },
+  {
+   "text": "Не забудь шапку.",
+   "en": "Don't forget your hat.",
+   "ko": "모자 잊지 마.",
+   "blank": "забудь"
+  }
+ ],
+ "w|завтра": [
+  {
+   "text": "Увидимся завтра.",
+   "en": "See you tomorrow.",
+   "ko": "내일 보자.",
+   "blank": "завтра"
+  },
+  {
+   "text": "Завтра я выходной.",
+   "en": "I'm off tomorrow.",
+   "ko": "내일은 쉬는 날이야.",
+   "blank": "Завтра"
+  }
+ ],
+ "w|зайти": [
+  {
+   "text": "Зайди на минутку.",
+   "en": "Pop in for a minute.",
+   "ko": "잠깐만 들러.",
+   "blank": "Зайди"
+  },
+  {
+   "text": "Я зайду после работы.",
+   "en": "I'll drop by after work.",
+   "ko": "퇴근하고 들를게.",
+   "blank": "зайду"
+  }
+ ],
+ "w|закон": [
+  {
+   "text": "Это против закона.",
+   "en": "That's against the law.",
+   "ko": "그건 법에 어긋나.",
+   "blank": "закона"
+  },
+  {
+   "text": "Закон уже подписали.",
+   "en": "The law has already been signed.",
+   "ko": "법은 이미 서명됐어.",
+   "blank": "Закон"
+  }
+ ],
+ "w|закончить": [
+  {
+   "text": "Закончим на сегодня.",
+   "en": "Let's stop for today.",
+   "ko": "오늘은 여기까지 하자.",
+   "blank": "Закончим"
+  },
+  {
+   "text": "Я ещё не закончил есть.",
+   "en": "I haven't finished eating yet.",
+   "ko": "나 아직 다 못 먹었어.",
+   "blank": "закончил"
+  }
+ ],
+ "w|закончиться": [
+  {
+   "text": "Дождь закончился.",
+   "en": "The rain has stopped.",
+   "ko": "비는 그쳤어.",
+   "blank": "закончился"
+  },
+  {
+   "text": "Когда фильм закончится?",
+   "en": "When does the film end?",
+   "ko": "영화 언제 끝나?",
+   "blank": "закончится"
+  }
+ ],
+ "w|закрыть": [
+  {
+   "text": "Закрой дверь.",
+   "en": "Close the door.",
+   "ko": "문 닫아.",
+   "blank": "Закрой"
+  },
+  {
+   "text": "Магазин уже закрыли.",
+   "en": "They've already closed the store.",
+   "ko": "가게는 이미 문 닫았어.",
+   "blank": "закрыли"
+  }
+ ],
+ "w|заметить": [
+  {
+   "text": "Ты заметил ошибку?",
+   "en": "Did you notice the mistake?",
+   "ko": "실수 알아챘어?",
+   "blank": "заметил"
+  },
+  {
+   "text": "Заметь, я предупреждал.",
+   "en": "Note that I did warn you.",
+   "ko": "내가 미리 말했잖아.",
+   "blank": "Заметь"
+  }
+ ],
+ "w|замечательный": [
+  {
+   "text": "Замечательный план!",
+   "en": "Wonderful plan!",
+   "ko": "정말 좋은 계획이야!",
+   "blank": "Замечательный"
+  },
+  {
+   "text": "Суп сегодня замечательный.",
+   "en": "The soup is wonderful today.",
+   "ko": "오늘 수프가 정말 맛있어.",
+   "blank": "замечательный"
+  }
+ ],
+ "w|заниматься": [
+  {
+   "text": "Чем ты сейчас занимаешься?",
+   "en": "What are you doing right now?",
+   "ko": "너 지금 뭐 하고 있어?",
+   "blank": "занимаешься"
+  },
+  {
+   "text": "Занимайся, я не мешаю.",
+   "en": "Carry on, I won't interrupt.",
+   "ko": "계속해, 방해 안 할게.",
+   "blank": "Занимайся"
+  }
+ ],
+ "w|занять": [
+  {
+   "text": "Я занял тебе место.",
+   "en": "I saved you a seat.",
+   "ko": "네 자리 맡아 뒀어.",
+   "blank": "занял"
+  },
+  {
+   "text": "Можно занять этот стол?",
+   "en": "Can I take this table?",
+   "ko": "이 자리에 앉아도 돼?",
+   "blank": "занять"
+  }
+ ],
+ "w|запись": [
+  {
+   "text": "Запись к врачу на утро.",
+   "en": "The doctor's appointment is in the morning.",
+   "ko": "병원 예약은 아침이야.",
+   "blank": "Запись"
+  },
+  {
+   "text": "Сотри старую запись.",
+   "en": "Erase the old recording.",
+   "ko": "오래된 녹음은 지워.",
+   "blank": "запись"
+  }
+ ],
+ "w|заплатить": [
+  {
+   "text": "Я сам заплачу.",
+   "en": "I'll pay myself.",
+   "ko": "내가 낼게.",
+   "blank": "заплачу"
+  },
+  {
+   "text": "Заплати за такси.",
+   "en": "Pay for the taxi.",
+   "ko": "택시비를 내.",
+   "blank": "Заплати"
+  }
+ ],
+ "w|заставить": [
+  {
+   "text": "Кто тебя заставил молчать?",
+   "en": "Who made you keep quiet?",
+   "ko": "누가 너보고 입 다물라고 했어?",
+   "blank": "заставил"
+  },
+  {
+   "text": "Меня не заставишь врать.",
+   "en": "You won't make me lie.",
+   "ko": "나더러 거짓말하라면 안 해.",
+   "blank": "заставишь"
+  }
+ ],
+ "w|затем": [
+  {
+   "text": "Сперва суп, затем чай.",
+   "en": "Soup first, then tea.",
+   "ko": "수프 먼저, 그다음에 차 마시자.",
+   "blank": "затем"
+  },
+  {
+   "text": "Затем мы пошли домой.",
+   "en": "Then we went home.",
+   "ko": "그러고 나서 집에 갔어.",
+   "blank": "Затем"
+  }
+ ],
+ "w|захотеть": [
+  {
+   "text": "Я вдруг захотел чаю.",
+   "en": "I suddenly wanted tea.",
+   "ko": "갑자기 차가 마시고 싶었어.",
+   "blank": "захотел"
+  },
+  {
+   "text": "Захочешь, позвони.",
+   "en": "Call if you feel like it.",
+   "ko": "마음 내키면 전화해.",
+   "blank": "Захочешь"
+  }
+ ],
+ "w|зачем": [
+  {
+   "text": "Зачем ты это сделал?",
+   "en": "Why did you do that?",
+   "ko": "왜 그렇게 한 거야?",
+   "blank": "Зачем"
+  },
+  {
+   "text": "Не понимаю, зачем врать.",
+   "en": "I don't get why you'd lie.",
+   "ko": "왜 거짓말하는지 모르겠어.",
+   "blank": "зачем"
+  }
+ ],
+ "w|звать": [
+  {
+   "text": "Как тебя зовут?",
+   "en": "What's your name?",
+   "ko": "이름이 뭐야?",
+   "blank": "зовут"
+  },
+  {
+   "text": "Зови, если что.",
+   "en": "Call me if you need anything.",
+   "ko": "무슨 일 있으면 불러.",
+   "blank": "Зови"
+  }
+ ],
+ "w|звонить": [
+  {
+   "text": "Не звони так поздно.",
+   "en": "Don't call so late.",
+   "ko": "그렇게 늦게는 전화하지 마.",
+   "blank": "звони"
+  },
+  {
+   "text": "Бабушка часто звонит вечером.",
+   "en": "Grandma often calls in the evening.",
+   "ko": "할머니는 저녁에 자주 전화하셔.",
+   "blank": "звонит"
+  }
+ ],
+ "w|звонок": [
+  {
+   "text": "Звонок оборвался.",
+   "en": "The call dropped.",
+   "ko": "통화가 끊겼어.",
+   "blank": "Звонок"
+  },
+  {
+   "text": "Жду звонка от мамы.",
+   "en": "I'm waiting for a call from mom.",
+   "ko": "엄마 전화를 기다리고 있어.",
+   "blank": "звонка"
+  }
+ ],
+ "w|звучать": [
+  {
+   "text": "Это звучит странно.",
+   "en": "That sounds strange.",
+   "ko": "그 말 이상하게 들려.",
+   "blank": "звучит"
+  },
+  {
+   "text": "Голос звучит устало.",
+   "en": "The voice sounds tired.",
+   "ko": "목소리가 지쳐 들려.",
+   "blank": "звучит"
+  }
+ ],
+ "w|здесь": [
+  {
+   "text": "Подожди меня здесь.",
+   "en": "Wait for me here.",
+   "ko": "여기서 나를 기다려.",
+   "blank": "здесь"
+  },
+  {
+   "text": "Здесь очень тихо.",
+   "en": "It's very quiet here.",
+   "ko": "여기는 아주 조용해.",
+   "blank": "Здесь"
+  }
+ ],
+ "w|здоровый": [
+  {
+   "text": "Тебе нужен здоровый сон.",
+   "en": "You need healthy sleep.",
+   "ko": "너는 푹 자야 해.",
+   "blank": "здоровый"
+  },
+  {
+   "text": "Я здоров, не волнуйся.",
+   "en": "I'm well, don't worry.",
+   "ko": "나 건강하니 걱정 마.",
+   "blank": "здоров"
+  }
+ ],
+ "w|здравствуйте": [
+  {
+   "text": "Здравствуйте, я по записи.",
+   "en": "Hello, I have an appointment.",
+   "ko": "안녕하세요, 예약하고 왔습니다.",
+   "blank": "Здравствуйте"
+  },
+  {
+   "text": "Здравствуйте, нас двое.",
+   "en": "Hello, there are two of us.",
+   "ko": "안녕하세요, 두 명입니다.",
+   "blank": "Здравствуйте"
+  }
+ ],
+ "w|земля": [
+  {
+   "text": "Земля после дождя мягкая.",
+   "en": "The ground is soft after the rain.",
+   "ko": "비 온 뒤라 땅이 부드러워.",
+   "blank": "Земля"
+  },
+  {
+   "text": "Не сиди на земле, холодно.",
+   "en": "Don't sit on the ground, it's cold.",
+   "ko": "땅에 앉지 마, 차가워.",
+   "blank": "земле"
+  }
+ ],
+ "w|знать": [
+  {
+   "text": "Я знаю правду.",
+   "en": "I know the truth.",
+   "ko": "나는 진실을 알아.",
+   "blank": "знаю"
+  },
+  {
+   "text": "Ты знаешь его?",
+   "en": "Do you know him?",
+   "ko": "너 그 사람 알아?",
+   "blank": "знаешь"
+  }
+ ],
+ "w|значить": [
+  {
+   "text": "Что это значит?",
+   "en": "What does that mean?",
+   "ko": "그게 무슨 뜻이야?",
+   "blank": "значит"
+  },
+  {
+   "text": "Это ничего не значит.",
+   "en": "That doesn't mean anything.",
+   "ko": "그건 아무 의미 없어.",
+   "blank": "значит"
+  }
+ ],
+ "w|и": [
+  {
+   "text": "Мне чай и сахар.",
+   "en": "Tea and sugar for me.",
+   "ko": "차하고 설탕 주세요.",
+   "blank": "и"
+  },
+  {
+   "text": "Мама и папа дома.",
+   "en": "Mom and dad are home.",
+   "ko": "엄마랑 아빠는 집에 있어.",
+   "blank": "и"
+  }
+ ],
+ "w|игра": [
+  {
+   "text": "Игра затянулась.",
+   "en": "The game dragged on.",
+   "ko": "경기가 길어졌어.",
+   "blank": "Игра"
+  },
+  {
+   "text": "Не порть игру.",
+   "en": "Don't spoil the game.",
+   "ko": "게임 망치지 마.",
+   "blank": "игру"
+  }
+ ],
+ "w|играть": [
+  {
+   "text": "Дети играют во дворе.",
+   "en": "The kids are playing in the yard.",
+   "ko": "아이들이 마당에서 놀고 있어.",
+   "blank": "играют"
+  },
+  {
+   "text": "Не играй с огнём.",
+   "en": "Don't play with fire.",
+   "ko": "불장난하지 마.",
+   "blank": "играй"
+  }
+ ],
+ "w|идея": [
+  {
+   "text": "Идея мне нравится.",
+   "en": "I like the idea.",
+   "ko": "그 생각 마음에 들어.",
+   "blank": "Идея"
+  },
+  {
+   "text": "Есть идея получше.",
+   "en": "There's a better idea.",
+   "ko": "더 나은 생각이 있어.",
+   "blank": "идея"
+  }
+ ],
+ "w|идти": [
+  {
+   "text": "Иди сюда, пожалуйста.",
+   "en": "Come here, please.",
+   "ko": "이리 와 줘.",
+   "blank": "Иди"
+  },
+  {
+   "text": "Я иду пешком.",
+   "en": "I'm going on foot.",
+   "ko": "나는 걸어가고 있어.",
+   "blank": "иду"
+  }
+ ],
+ "w|из": [
+  {
+   "text": "Я из соседнего дома.",
+   "en": "I'm from the house next door.",
+   "ko": "나는 옆집에서 왔어.",
+   "blank": "из"
+  },
+  {
+   "text": "Вода из крана холодная.",
+   "en": "The tap water is cold.",
+   "ko": "수돗물이 차가워.",
+   "blank": "из"
+  }
+ ],
+ "w|из-за": [
+  {
+   "text": "Мы опоздали из-за дождя.",
+   "en": "We were late because of the rain.",
+   "ko": "비 때문에 늦었어.",
+   "blank": "из-за"
+  },
+  {
+   "text": "Из-за тебя все ждут.",
+   "en": "Everyone is waiting because of you.",
+   "ko": "너 때문에 다들 기다려.",
+   "blank": "Из-за"
+  }
+ ],
+ "w|известный": [
+  {
+   "text": "Это известный врач.",
+   "en": "This is a well-known doctor.",
+   "ko": "이 사람은 유명한 의사야.",
+   "blank": "известный"
+  },
+  {
+   "text": "Песня всем известна.",
+   "en": "Everyone knows that song.",
+   "ko": "그 노래는 다들 알아.",
+   "blank": "известна"
+  }
+ ],
+ "w|извинить": [
+  {
+   "text": "Извини, я опоздал.",
+   "en": "Sorry, I'm late.",
+   "ko": "미안, 늦었어.",
+   "blank": "Извини"
+  },
+  {
+   "text": "Извините, можно пройти?",
+   "en": "Excuse me, may I get through?",
+   "ko": "실례합니다, 지나가도 될까요?",
+   "blank": "Извините"
+  }
+ ],
+ "w|изменить": [
+  {
+   "text": "Измени тон, пожалуйста.",
+   "en": "Change your tone, please.",
+   "ko": "말투 좀 바꿔 줘.",
+   "blank": "Измени"
+  },
+  {
+   "text": "Он изменил решение.",
+   "en": "He changed his mind.",
+   "ko": "그 사람은 결정을 바꿨어.",
+   "blank": "изменил"
+  }
+ ],
+ "w|измениться": [
+  {
+   "text": "Погода резко изменилась.",
+   "en": "The weather changed suddenly.",
+   "ko": "날씨가 갑자기 바뀌었어.",
+   "blank": "изменилась"
+  },
+  {
+   "text": "Ты совсем изменился.",
+   "en": "You've completely changed.",
+   "ko": "너 완전히 달라졌어.",
+   "blank": "изменился"
+  }
+ ],
+ "w|или": [
+  {
+   "text": "Чай или кофе?",
+   "en": "Tea or coffee?",
+   "ko": "차야, 커피야?",
+   "blank": "или"
+  },
+  {
+   "text": "Сейчас или потом?",
+   "en": "Now or later?",
+   "ko": "지금 할래, 나중에 할래?",
+   "blank": "или"
+  }
+ ],
+ "w|именно": [
+  {
+   "text": "Мне нужно именно это.",
+   "en": "This is exactly what I need.",
+   "ko": "나한테 필요한 건 바로 이거야.",
+   "blank": "именно"
+  },
+  {
+   "text": "Именно так я и сказал.",
+   "en": "That's exactly what I said.",
+   "ko": "내가 말한 게 딱 그거야.",
+   "blank": "Именно"
+  }
+ ],
+ "w|иметь": [
+  {
+   "text": "Что ты имеешь в виду?",
+   "en": "What do you mean?",
+   "ko": "무슨 뜻으로 하는 말이야?",
+   "blank": "имеешь"
+  },
+  {
+   "text": "Я имею в виду завтра.",
+   "en": "I mean tomorrow.",
+   "ko": "내 말은 내일이야.",
+   "blank": "имею"
+  }
+ ],
+ "w|имя": [
+  {
+   "text": "Повтори своё имя.",
+   "en": "Say your name again.",
+   "ko": "이름을 다시 말해 봐.",
+   "blank": "имя"
+  },
+  {
+   "text": "Имя я записал.",
+   "en": "I wrote the name down.",
+   "ko": "이름은 적어 뒀어.",
+   "blank": "Имя"
+  }
+ ],
+ "w|иначе": [
+  {
+   "text": "Иначе мы опоздаем.",
+   "en": "Otherwise we'll be late.",
+   "ko": "안 그러면 늦어.",
+   "blank": "Иначе"
+  },
+  {
+   "text": "Сделай иначе.",
+   "en": "Do it a different way.",
+   "ko": "다르게 해.",
+   "blank": "иначе"
+  }
+ ],
+ "w|иногда": [
+  {
+   "text": "Иногда лучше промолчать.",
+   "en": "Sometimes it's better to stay quiet.",
+   "ko": "가끔은 입을 다무는 게 나아.",
+   "blank": "Иногда"
+  },
+  {
+   "text": "Я иногда забываю ключи.",
+   "en": "I sometimes forget my keys.",
+   "ko": "나는 가끔 열쇠를 잊어버려.",
+   "blank": "иногда"
+  }
+ ],
+ "w|интересный": [
+  {
+   "text": "Гость сегодня интересный.",
+   "en": "Today's guest is interesting.",
+   "ko": "오늘 손님은 재미있어.",
+   "blank": "интересный"
+  },
+  {
+   "text": "Мысль довольно интересная.",
+   "en": "The thought is quite interesting.",
+   "ko": "그 생각은 꽤 흥미로워.",
+   "blank": "интересная"
+  }
+ ],
+ "w|информация": [
+  {
+   "text": "Информация подтвердилась.",
+   "en": "The information checked out.",
+   "ko": "그 정보는 사실로 확인됐어.",
+   "blank": "Информация"
+  },
+  {
+   "text": "Мне нужна эта информация.",
+   "en": "I need this information.",
+   "ko": "이 정보가 필요해.",
+   "blank": "информация"
+  }
+ ],
+ "w|искать": [
+  {
+   "text": "Я ищу очки.",
+   "en": "I'm looking for my glasses.",
+   "ko": "안경 찾는 중이야.",
+   "blank": "ищу"
+  },
+  {
+   "text": "Ищи в кармане.",
+   "en": "Look in your pocket.",
+   "ko": "주머니 좀 봐.",
+   "blank": "Ищи"
+  }
+ ],
+ "w|использовать": [
+  {
+   "text": "Эту чашку можно использовать?",
+   "en": "Can I use this cup?",
+   "ko": "이 컵 써도 돼?",
+   "blank": "использовать"
+  },
+  {
+   "text": "Не используй моё полотенце.",
+   "en": "Don't use my towel.",
+   "ko": "내 수건은 쓰지 마.",
+   "blank": "используй"
+  }
+ ],
+ "w|история": [
+  {
+   "text": "Расскажи историю.",
+   "en": "Tell a story.",
+   "ko": "이야기 하나 해 줘.",
+   "blank": "историю"
+  },
+  {
+   "text": "Это долгая история.",
+   "en": "It's a long story.",
+   "ko": "긴 이야기야.",
+   "blank": "история"
+  }
+ ],
+ "w|итак": [
+  {
+   "text": "Итак, все в сборе.",
+   "en": "So, everyone is here.",
+   "ko": "자, 다 모였네.",
+   "blank": "Итак"
+  },
+  {
+   "text": "Итак, что решим?",
+   "en": "So, what do we decide?",
+   "ko": "그래서 뭘로 할까?",
+   "blank": "Итак"
+  }
+ ],
+ "w|к": [
+  {
+   "text": "Подойди к окну.",
+   "en": "Come over to the window.",
+   "ko": "창문 쪽으로 와.",
+   "blank": "к"
+  },
+  {
+   "text": "Мы идём к маме.",
+   "en": "We're going to Mom's.",
+   "ko": "우리는 엄마한테 가는 중이야.",
+   "blank": "к"
+  }
+ ],
+ "w|каждый": [
+  {
+   "text": "Каждый ошибается.",
+   "en": "Everyone makes mistakes.",
+   "ko": "누구나 실수는 해.",
+   "blank": "Каждый"
+  },
+  {
+   "text": "Каждому своё.",
+   "en": "To each their own.",
+   "ko": "사람마다 다르지.",
+   "blank": "Каждому"
+  }
+ ],
+ "w|казаться": [
+  {
+   "text": "Мне кажется, он прав.",
+   "en": "I think he's right.",
+   "ko": "내 생각엔 그 사람이 맞아.",
+   "blank": "кажется"
+  },
+  {
+   "text": "Он казался усталым.",
+   "en": "He seemed tired.",
+   "ko": "그 사람 피곤해 보였어.",
+   "blank": "казался"
+  }
+ ],
+ "w|как": [
+  {
+   "text": "Как ты себя чувствуешь?",
+   "en": "How are you feeling?",
+   "ko": "몸 상태는 어때?",
+   "blank": "Как"
+  },
+  {
+   "text": "Делай, как я сказал.",
+   "en": "Do it the way I said.",
+   "ko": "내가 말한 대로 해.",
+   "blank": "как"
+  }
+ ],
+ "w|как-то": [
+  {
+   "text": "Мне как-то не по себе.",
+   "en": "I feel kind of uneasy.",
+   "ko": "왠지 마음이 불편해.",
+   "blank": "как-то"
+  },
+  {
+   "text": "Он как-то странно молчит.",
+   "en": "He's gone oddly quiet.",
+   "ko": "그 사람은 왠지 이상하게 입을 다물고 있어.",
+   "blank": "как-то"
+  }
+ ],
+ "w|какой": [
+  {
+   "text": "Какой сегодня день?",
+   "en": "What day is it today?",
+   "ko": "오늘 무슨 요일이야?",
+   "blank": "Какой"
+  },
+  {
+   "text": "Какая красивая луна!",
+   "en": "What a beautiful moon!",
+   "ko": "달이 정말 예쁘다!",
+   "blank": "Какая"
+  }
+ ],
+ "w|какой-то": [
+  {
+   "text": "Там какой-то шум.",
+   "en": "There's some kind of noise.",
+   "ko": "저기서 무슨 소리가 나.",
+   "blank": "какой-то"
+  },
+  {
+   "text": "Это какой-то бред.",
+   "en": "This is nonsense.",
+   "ko": "이건 헛소리야.",
+   "blank": "какой-то"
+  }
+ ],
+ "w|камера": [
+  {
+   "text": "Камера не работает.",
+   "en": "The camera isn't working.",
+   "ko": "카메라가 안 돼.",
+   "blank": "Камера"
+  },
+  {
+   "text": "Выключи камеру.",
+   "en": "Turn the camera off.",
+   "ko": "카메라 꺼.",
+   "blank": "камеру"
+  }
+ ],
+ "w|капитан": [
+  {
+   "text": "Капитан объявил отплытие.",
+   "en": "The captain announced the departure.",
+   "ko": "선장이 출항을 알렸어.",
+   "blank": "Капитан"
+  },
+  {
+   "text": "Мы уже говорили с капитаном.",
+   "en": "We already spoke with the captain.",
+   "ko": "선장과는 이미 얘기했어.",
+   "blank": "капитаном"
+  }
+ ],
+ "w|квартира": [
+  {
+   "text": "Квартира ещё пустая.",
+   "en": "The apartment is still empty.",
+   "ko": "집은 아직 비어 있어.",
+   "blank": "Квартира"
+  },
+  {
+   "text": "Я живу в этой квартире.",
+   "en": "I live in this apartment.",
+   "ko": "나는 이 아파트에 살아.",
+   "blank": "квартире"
+  }
+ ],
+ "w|клиент": [
+  {
+   "text": "Клиент ждёт у стойки.",
+   "en": "The client is waiting at the counter.",
+   "ko": "고객이 카운터에서 기다리고 있어.",
+   "blank": "Клиент"
+  },
+  {
+   "text": "Позвони клиенту сам.",
+   "en": "Call the client yourself.",
+   "ko": "고객한테 직접 전화해.",
+   "blank": "клиенту"
+  }
+ ],
+ "w|ключ": [
+  {
+   "text": "Ключ не поворачивается.",
+   "en": "The key won't turn.",
+   "ko": "열쇠가 안 돌아가.",
+   "blank": "Ключ"
+  },
+  {
+   "text": "Оставь ключ соседке.",
+   "en": "Leave the key with the neighbor.",
+   "ko": "열쇠는 옆집 아줌마한테 맡겨.",
+   "blank": "ключ"
+  }
+ ],
+ "w|книга": [
+  {
+   "text": "Книга лежит открытой.",
+   "en": "The book is lying open.",
+   "ko": "책이 펼쳐진 채로 있어.",
+   "blank": "Книга"
+  },
+  {
+   "text": "Эту книгу я не дочитал.",
+   "en": "I didn't finish this book.",
+   "ko": "이 책은 끝까지 못 읽었어.",
+   "blank": "книгу"
+  }
+ ],
+ "w|когда": [
+  {
+   "text": "Когда ты вернёшься?",
+   "en": "When will you be back?",
+   "ko": "언제 돌아와?",
+   "blank": "Когда"
+  },
+  {
+   "text": "Позвони, когда приедешь.",
+   "en": "Call when you arrive.",
+   "ko": "도착하면 전화해.",
+   "blank": "когда"
+  }
+ ],
+ "w|когда-нибудь": [
+  {
+   "text": "Когда-нибудь ты поймёшь.",
+   "en": "Someday you'll understand.",
+   "ko": "언젠가 너는 이해하게 될 거야.",
+   "blank": "Когда-нибудь"
+  },
+  {
+   "text": "Загляни когда-нибудь на чай.",
+   "en": "Drop by for tea sometime.",
+   "ko": "언제 한번 차 마시러 들러.",
+   "blank": "когда-нибудь"
+  }
+ ],
+ "w|кое-что": [
+  {
+   "text": "Я кое-что вспомнил.",
+   "en": "I just remembered something.",
+   "ko": "뭔가 하나 생각났어.",
+   "blank": "кое-что"
+  },
+  {
+   "text": "Надо обсудить кое-что.",
+   "en": "We need to talk about something.",
+   "ko": "뭐 하나 얘기해야 해.",
+   "blank": "кое-что"
+  }
+ ],
+ "w|команда": [
+  {
+   "text": "Команда совсем выдохлась.",
+   "en": "The team is completely worn out.",
+   "ko": "팀은 완전히 지쳤어.",
+   "blank": "Команда"
+  },
+  {
+   "text": "Дай команду, мы готовы.",
+   "en": "Give the order, we're ready.",
+   "ko": "지시해, 우리 준비됐어.",
+   "blank": "команду"
+  }
+ ],
+ "w|комната": [
+  {
+   "text": "В комнате душно.",
+   "en": "It's stuffy in the room.",
+   "ko": "방이 답답해.",
+   "blank": "комнате"
+  },
+  {
+   "text": "Комнату надо проветрить.",
+   "en": "The room needs airing out.",
+   "ko": "방 좀 환기해야 해.",
+   "blank": "Комнату"
+  }
+ ],
+ "w|компания": [
+  {
+   "text": "Компания сегодня закрыта.",
+   "en": "The company is closed today.",
+   "ko": "오늘은 회사가 쉬어.",
+   "blank": "Компания"
+  },
+  {
+   "text": "Я работаю в этой компании.",
+   "en": "I work at this company.",
+   "ko": "나는 이 회사에서 일해.",
+   "blank": "компании"
+  }
+ ],
+ "w|конец": [
+  {
+   "text": "Это ещё не конец.",
+   "en": "This isn't over yet.",
+   "ko": "아직 끝이 아니야.",
+   "blank": "конец"
+  },
+  {
+   "text": "Туалет в конце коридора.",
+   "en": "The bathroom is at the end of the hall.",
+   "ko": "화장실은 복도 끝에 있어.",
+   "blank": "конце"
+  }
+ ],
+ "w|конечно": [
+  {
+   "text": "Конечно, заходи.",
+   "en": "Of course, come in.",
+   "ko": "물론이지, 들어와.",
+   "blank": "Конечно"
+  },
+  {
+   "text": "Да, конечно, я помню.",
+   "en": "Yes, of course I remember.",
+   "ko": "응, 당연하지, 기억해.",
+   "blank": "конечно"
+  }
+ ],
+ "w|корабль": [
+  {
+   "text": "Корабль уже отплыл.",
+   "en": "The ship has already sailed.",
+   "ko": "배는 이미 떠났어.",
+   "blank": "Корабль"
+  },
+  {
+   "text": "Мы плывём на корабле.",
+   "en": "We're going by ship.",
+   "ko": "우리는 배를 타고 가.",
+   "blank": "корабле"
+  }
+ ],
+ "w|король": [
+  {
+   "text": "Король вышел на балкон.",
+   "en": "The king came out onto the balcony.",
+   "ko": "왕이 발코니로 나왔어.",
+   "blank": "Король"
+  },
+  {
+   "text": "Он сидит как король.",
+   "en": "He's sitting there like a king.",
+   "ko": "왕처럼 앉아 있어.",
+   "blank": "король"
+  }
+ ],
+ "w|который": [
+  {
+   "text": "Который час?",
+   "en": "What time is it?",
+   "ko": "지금 몇 시야?",
+   "blank": "Который"
+  },
+  {
+   "text": "Вот книга, которую я читал.",
+   "en": "Here's the book I was reading.",
+   "ko": "내가 읽던 책이야.",
+   "blank": "которую"
+  }
+ ],
+ "w|кофе": [
+  {
+   "text": "Кофе ещё горячий.",
+   "en": "The coffee is still hot.",
+   "ko": "커피는 아직 뜨거워.",
+   "blank": "Кофе"
+  },
+  {
+   "text": "Налей мне кофе.",
+   "en": "Pour me some coffee.",
+   "ko": "커피 좀 따라 줘.",
+   "blank": "кофе"
+  }
+ ],
+ "w|красивый": [
+  {
+   "text": "Сегодня красивый закат.",
+   "en": "There's a beautiful sunset today.",
+   "ko": "오늘은 노을이 아름다워.",
+   "blank": "красивый"
+  },
+  {
+   "text": "Какая красивая шаль!",
+   "en": "What a beautiful shawl!",
+   "ko": "숄이 정말 예뻐!",
+   "blank": "красивая"
+  }
+ ],
+ "w|кровь": [
+  {
+   "text": "Кровь уже остановилась.",
+   "en": "The bleeding has already stopped.",
+   "ko": "피는 이미 멈췄어.",
+   "blank": "Кровь"
+  },
+  {
+   "text": "Крови почти нет, не пугайся.",
+   "en": "There's almost no blood, don't be scared.",
+   "ko": "피는 거의 없으니 놀라지 마.",
+   "blank": "Крови"
+  }
+ ],
+ "w|кроме": [
+  {
+   "text": "Кроме чая, ничего не хочу.",
+   "en": "I don't want anything but tea.",
+   "ko": "차 말고는 아무것도 안 원해.",
+   "blank": "Кроме"
+  },
+  {
+   "text": "Все, кроме кота, спят.",
+   "en": "Everyone except the cat is asleep.",
+   "ko": "고양이만 빼고 다 자.",
+   "blank": "кроме"
+  }
+ ],
+ "w|крутой": [
+  {
+   "text": "Ну ты крутой!",
+   "en": "Wow, you're impressive!",
+   "ko": "너 정말 대단해!",
+   "blank": "крутой"
+  },
+  {
+   "text": "Куртка крутая.",
+   "en": "The jacket is cool.",
+   "ko": "점퍼 정말 멋있어.",
+   "blank": "крутая"
+  }
+ ],
+ "w|кстати": [
+  {
+   "text": "Кстати, где ключи?",
+   "en": "By the way, where are the keys?",
+   "ko": "그런데 열쇠 어디 있어?",
+   "blank": "Кстати"
+  },
+  {
+   "text": "Ты, кстати, прав.",
+   "en": "You're right, by the way.",
+   "ko": "그런데 네 말이 맞아.",
+   "blank": "кстати"
+  }
+ ],
+ "w|кто": [
+  {
+   "text": "Кто там за дверью?",
+   "en": "Who's behind the door?",
+   "ko": "문 밖에 누구야?",
+   "blank": "Кто"
+  },
+  {
+   "text": "Я не знаю, кто звонил.",
+   "en": "I don't know who called.",
+   "ko": "누가 전화했는지 모르겠어.",
+   "blank": "кто"
+  }
+ ],
+ "w|кто-нибудь": [
+  {
+   "text": "Есть кто-нибудь на кухне?",
+   "en": "Is anyone in the kitchen?",
+   "ko": "부엌에 누구 있어?",
+   "blank": "кто-нибудь"
+  },
+  {
+   "text": "Позови кого-нибудь взрослого.",
+   "en": "Call some adult over.",
+   "ko": "어른 누구든 불러.",
+   "blank": "кого-нибудь"
+  }
+ ],
+ "w|кто-то": [
+  {
+   "text": "Кто-то стучит в дверь.",
+   "en": "Someone is knocking at the door.",
+   "ko": "누가 문을 두드리고 있어.",
+   "blank": "Кто-то"
+  },
+  {
+   "text": "Там кто-то стоит.",
+   "en": "Someone is standing there.",
+   "ko": "거기 누군가 서 있어.",
+   "blank": "кто-то"
+  }
+ ],
+ "w|куда": [
+  {
+   "text": "Куда ты идёшь?",
+   "en": "Where are you going?",
+   "ko": "어디 가?",
+   "blank": "Куда"
+  },
+  {
+   "text": "Не знаю, куда деться.",
+   "en": "I don't know what to do with myself.",
+   "ko": "어쩔 줄을 모르겠어.",
+   "blank": "куда"
+  }
+ ],
+ "w|купить": [
+  {
+   "text": "Купи молока по дороге.",
+   "en": "Buy milk on the way.",
+   "ko": "오는 길에 우유 사 와.",
+   "blank": "Купи"
+  },
+  {
+   "text": "Где ты это купил?",
+   "en": "Where did you buy this?",
+   "ko": "이거 어디서 샀어?",
+   "blank": "купил"
+  }
+ ],
+ "w|курс": [
+  {
+   "text": "Курс начинается завтра.",
+   "en": "The course starts tomorrow.",
+   "ko": "강의는 내일 시작해.",
+   "blank": "Курс"
+  },
+  {
+   "text": "Я записался на курс.",
+   "en": "I signed up for the course.",
+   "ko": "나는 그 강의를 신청했어.",
+   "blank": "курс"
+  }
+ ],
+ "w|ладно": [
+  {
+   "text": "Ладно, договорились.",
+   "en": "All right, it's a deal.",
+   "ko": "좋아, 그렇게 하자.",
+   "blank": "Ладно"
+  },
+  {
+   "text": "Ну ладно, я подожду.",
+   "en": "Fine, I'll wait.",
+   "ko": "그래, 기다릴게.",
+   "blank": "ладно"
+  }
+ ],
+ "w|леди": [
+  {
+   "text": "После вас, леди.",
+   "en": "After you, ma'am.",
+   "ko": "숙녀분 먼저 가세요.",
+   "blank": "леди"
+  },
+  {
+   "text": "Леди уже ушла.",
+   "en": "The lady has already left.",
+   "ko": "그 숙녀는 이미 떠났어.",
+   "blank": "Леди"
+  }
+ ],
+ "w|лёгкий": [
+  {
+   "text": "Лёгкий ужин нам хватит.",
+   "en": "A light dinner will be enough.",
+   "ko": "저녁은 가볍게 먹으면 충분해.",
+   "blank": "Лёгкий"
+  },
+  {
+   "text": "Сумка совсем лёгкая.",
+   "en": "The bag is really light.",
+   "ko": "가방이 아주 가벼워.",
+   "blank": "лёгкая"
+  }
+ ],
+ "w|ли": [
+  {
+   "text": "Не знаешь ли, где ключ?",
+   "en": "Do you know where the key is?",
+   "ko": "열쇠 어디 있는지 알아?",
+   "blank": "ли"
+  },
+  {
+   "text": "Интересно, придёт ли он.",
+   "en": "I wonder if he'll come.",
+   "ko": "그 사람이 올지 궁금하네.",
+   "blank": "ли"
+  }
+ ],
+ "w|лицо": [
+  {
+   "text": "Умой лицо холодной водой.",
+   "en": "Wash your face with cold water.",
+   "ko": "찬물로 얼굴을 씻어.",
+   "blank": "лицо"
+  },
+  {
+   "text": "По лицу вижу, ты устал.",
+   "en": "I can see from your face that you're tired.",
+   "ko": "얼굴만 봐도 피곤한 게 보여.",
+   "blank": "лицу"
+  }
+ ],
+ "w|лишь": [
+  {
+   "text": "Лишь бы ты был рядом.",
+   "en": "As long as you're beside me.",
+   "ko": "네가 옆에만 있으면 돼.",
+   "blank": "Лишь"
+  },
+  {
+   "text": "Я лишь спросил.",
+   "en": "I only asked.",
+   "ko": "나는 물어보기만 했어.",
+   "blank": "лишь"
+  }
+ ],
+ "w|лучший": [
+  {
+   "text": "Ты мой лучший друг.",
+   "en": "You're my best friend.",
+   "ko": "너는 내 가장 친한 친구야.",
+   "blank": "лучший"
+  },
+  {
+   "text": "Это лучшее место.",
+   "en": "This is the best place.",
+   "ko": "여기가 제일 좋은 데야.",
+   "blank": "лучшее"
+  }
+ ],
+ "w|любимый": [
+  {
+   "text": "Это мой любимый суп.",
+   "en": "This is my favorite soup.",
+   "ko": "이건 내가 제일 좋아하는 수프야.",
+   "blank": "любимый"
+  },
+  {
+   "text": "Любимая, чай готов.",
+   "en": "Darling, the tea is ready.",
+   "ko": "자기야, 차 다 됐어.",
+   "blank": "Любимая"
+  }
+ ],
+ "w|любить": [
+  {
+   "text": "Я люблю этот город.",
+   "en": "I love this city.",
+   "ko": "나는 이 도시가 좋아.",
+   "blank": "люблю"
+  },
+  {
+   "text": "Она любит тишину.",
+   "en": "She loves the quiet.",
+   "ko": "그 사람은 조용한 걸 좋아해.",
+   "blank": "любит"
+  }
+ ],
+ "w|любовь": [
+  {
+   "text": "Не путай жалость с любовью.",
+   "en": "Don't confuse pity with love.",
+   "ko": "동정이랑 사랑을 헷갈리지 마.",
+   "blank": "любовью"
+  },
+  {
+   "text": "В этом доме много любви.",
+   "en": "There's a lot of love in this house.",
+   "ko": "이 집에는 사랑이 많아.",
+   "blank": "любви"
+  }
+ ],
+ "w|любой": [
+  {
+   "text": "Бери любой стакан.",
+   "en": "Take any glass.",
+   "ko": "잔은 아무거나 집어.",
+   "blank": "любой"
+  },
+  {
+   "text": "Звони в любое время.",
+   "en": "Call any time.",
+   "ko": "아무 때나 전화해.",
+   "blank": "любое"
+  }
+ ],
+ "w|магазин": [
+  {
+   "text": "Магазин уже закрыт.",
+   "en": "The store is already closed.",
+   "ko": "가게는 이미 닫았어.",
+   "blank": "Магазин"
+  },
+  {
+   "text": "Зайду в магазин за хлебом.",
+   "en": "I'll stop at the store for bread.",
+   "ko": "빵 사러 가게에 들를게.",
+   "blank": "магазин"
+  }
+ ],
+ "w|маленький": [
+  {
+   "text": "Маленький щенок пищит.",
+   "en": "The little puppy is whimpering.",
+   "ko": "작은 강아지가 낑낑거려.",
+   "blank": "Маленький"
+  },
+  {
+   "text": "Возьми маленькую ложку.",
+   "en": "Take the small spoon.",
+   "ko": "작은 숟가락 써.",
+   "blank": "маленькую"
+  }
+ ],
+ "w|мало": [
+  {
+   "text": "Времени слишком мало.",
+   "en": "There's too little time.",
+   "ko": "시간이 너무 없어.",
+   "blank": "мало"
+  },
+  {
+   "text": "Мало ли что он скажет.",
+   "en": "Who knows what he might say.",
+   "ko": "그가 무슨 말을 할지는 몰라.",
+   "blank": "Мало"
+  }
+ ],
+ "w|малыш": [
+  {
+   "text": "Малыш уже спит.",
+   "en": "The little one is already asleep.",
+   "ko": "아기는 이미 자고 있어.",
+   "blank": "Малыш"
+  },
+  {
+   "text": "Не буди малыша.",
+   "en": "Don't wake the little one.",
+   "ko": "아기 깨우지 마.",
+   "blank": "малыша"
+  }
+ ],
+ "w|мальчик": [
+  {
+   "text": "Мальчик ищет маму.",
+   "en": "The boy is looking for his mom.",
+   "ko": "남자아이가 엄마를 찾고 있어.",
+   "blank": "Мальчик"
+  },
+  {
+   "text": "Я видел этого мальчика утром.",
+   "en": "I saw this boy this morning.",
+   "ko": "이 남자아이를 아침에 봤어.",
+   "blank": "мальчика"
+  }
+ ],
+ "w|мама": [
+  {
+   "text": "Мама, я дома.",
+   "en": "Mom, I'm home.",
+   "ko": "엄마, 나 집에 왔어.",
+   "blank": "Мама"
+  },
+  {
+   "text": "Позвони маме вечером.",
+   "en": "Call Mom this evening.",
+   "ko": "저녁에 엄마한테 전화해.",
+   "blank": "маме"
+  }
+ ],
+ "w|мать": [
+  {
+   "text": "Это моя мать.",
+   "en": "This is my mother.",
+   "ko": "이분은 우리 어머니야.",
+   "blank": "мать"
+  },
+  {
+   "text": "Скучаю по матери.",
+   "en": "I miss my mother.",
+   "ko": "어머니가 그리워.",
+   "blank": "матери"
+  }
+ ],
+ "w|машина": [
+  {
+   "text": "Машина не заводится.",
+   "en": "The car won't start.",
+   "ko": "차가 시동이 안 걸려.",
+   "blank": "Машина"
+  },
+  {
+   "text": "Доеду на машине.",
+   "en": "I'll come by car.",
+   "ko": "차로 갈게.",
+   "blank": "машине"
+  }
+ ],
+ "w|между": [
+  {
+   "text": "Не вставай между нами.",
+   "en": "Don't get between us.",
+   "ko": "우리 사이에 끼어들지 마.",
+   "blank": "между"
+  },
+  {
+   "text": "Между делом позвони маме.",
+   "en": "Call Mom while you're at it.",
+   "ko": "하는 김에 엄마한테 전화해.",
+   "blank": "Между"
+  }
+ ],
+ "w|мера": [
+  {
+   "text": "Прими меры.",
+   "en": "Do something about it.",
+   "ko": "조치를 취해.",
+   "blank": "меры"
+  },
+  {
+   "text": "В какой-то мере ты прав.",
+   "en": "In a way, you're right.",
+   "ko": "어느 정도는 네가 맞아.",
+   "blank": "мере"
+  }
+ ],
+ "w|мёртвый": [
+  {
+   "text": "Телефон совсем мёртвый.",
+   "en": "The phone is completely dead.",
+   "ko": "전화가 완전히 먹통이야.",
+   "blank": "мёртвый"
+  },
+  {
+   "text": "Улица ночью мёртвая.",
+   "en": "The street is dead at night.",
+   "ko": "밤의 거리는 인적이 없어.",
+   "blank": "мёртвая"
+  }
+ ],
+ "w|место": [
+  {
+   "text": "Займи мне место.",
+   "en": "Save me a seat.",
+   "ko": "자리 하나 맡아 줘.",
+   "blank": "место"
+  },
+  {
+   "text": "На твоём месте я бы ушёл.",
+   "en": "If I were you, I'd leave.",
+   "ko": "내가 너라면 떠났을 거야.",
+   "blank": "месте"
+  }
+ ],
+ "w|месяц": [
+  {
+   "text": "Месяц пролетел незаметно.",
+   "en": "The month flew by.",
+   "ko": "한 달이 어느새 가버렸네.",
+   "blank": "Месяц"
+  },
+  {
+   "text": "Вернусь через месяц.",
+   "en": "I'll be back in a month.",
+   "ko": "한 달 뒤에 돌아올게.",
+   "blank": "месяц"
+  }
+ ],
+ "w|миллион": [
+  {
+   "text": "Тут миллион вопросов.",
+   "en": "There are a million questions.",
+   "ko": "질문이 끝도 없어.",
+   "blank": "миллион"
+  },
+  {
+   "text": "У него миллион отговорок.",
+   "en": "He's got a million excuses.",
+   "ko": "그 사람은 핑계가 끝도 없어.",
+   "blank": "миллион"
+  }
+ ],
+ "w|милый": [
+  {
+   "text": "Какой милый щенок!",
+   "en": "What a cute puppy!",
+   "ko": "강아지 정말 귀엽다!",
+   "blank": "милый"
+  },
+  {
+   "text": "Милая, я дома.",
+   "en": "Honey, I'm home.",
+   "ko": "자기야, 나 왔어.",
+   "blank": "Милая"
+  }
+ ],
+ "w|минута": [
+  {
+   "text": "Подожди минуту.",
+   "en": "Wait a minute.",
+   "ko": "잠깐만 기다려.",
+   "blank": "минуту"
+  },
+  {
+   "text": "Минуту, я иду.",
+   "en": "One second, I'm coming.",
+   "ko": "잠깐, 지금 가.",
+   "blank": "Минуту"
+  }
+ ],
+ "w|мир": [
+  {
+   "text": "Мир тесен.",
+   "en": "It's a small world.",
+   "ko": "세상 참 좁다.",
+   "blank": "Мир"
+  },
+  {
+   "text": "Мы заключили мир.",
+   "en": "We made peace.",
+   "ko": "우리는 화해했어.",
+   "blank": "мир"
+  }
+ ],
+ "w|мисс": [
+  {
+   "text": "Мисс, вы обронили шарф.",
+   "en": "Miss, you dropped your scarf.",
+   "ko": "손님, 스카프를 떨어뜨리셨어요.",
+   "blank": "Мисс"
+  },
+  {
+   "text": "Мисс ждёт у стойки.",
+   "en": "The young lady is waiting at the counter.",
+   "ko": "그 여성분은 카운터에서 기다리고 있어.",
+   "blank": "Мисс"
+  }
+ ],
+ "w|миссис": [
+  {
+   "text": "Миссис ждёт в холле.",
+   "en": "The lady is waiting in the lobby.",
+   "ko": "부인께서 로비에서 기다리고 계세요.",
+   "blank": "Миссис"
+  },
+  {
+   "text": "Миссис, ваш столик готов.",
+   "en": "Ma'am, your table is ready.",
+   "ko": "손님, 테이블 준비됐습니다.",
+   "blank": "Миссис"
+  }
+ ],
+ "w|мистер": [
+  {
+   "text": "Простите, мистер.",
+   "en": "Excuse me, sir.",
+   "ko": "실례합니다.",
+   "blank": "мистер"
+  },
+  {
+   "text": "Этот мистер уже ушёл.",
+   "en": "That gentleman has already left.",
+   "ko": "그 분은 이미 가셨어.",
+   "blank": "мистер"
+  }
+ ],
+ "w|многие": [
+  {
+   "text": "Многие так думают.",
+   "en": "A lot of people think so.",
+   "ko": "많은 사람이 그렇게 생각해.",
+   "blank": "Многие"
+  },
+  {
+   "text": "Многим это не нравится.",
+   "en": "A lot of people don't like it.",
+   "ko": "많은 사람이 이걸 안 좋아해.",
+   "blank": "Многим"
+  }
+ ],
+ "w|много": [
+  {
+   "text": "Тут много людей.",
+   "en": "There are lots of people here.",
+   "ko": "여기 사람이 많아.",
+   "blank": "много"
+  },
+  {
+   "text": "Не бери много.",
+   "en": "Don't take a lot.",
+   "ko": "많이 가져가지 마.",
+   "blank": "много"
+  }
+ ],
+ "w|можно": [
+  {
+   "text": "Можно я открою окно?",
+   "en": "May I open the window?",
+   "ko": "창문 열어도 될까?",
+   "blank": "Можно"
+  },
+  {
+   "text": "Здесь можно сесть?",
+   "en": "Is it all right to sit here?",
+   "ko": "여기 앉아도 돼?",
+   "blank": "можно"
+  }
+ ],
+ "w|мозг": [
+  {
+   "text": "Мозг уже не варит.",
+   "en": "My brain has stopped working.",
+   "ko": "머리가 더는 안 돌아가.",
+   "blank": "Мозг"
+  },
+  {
+   "text": "Шевели мозгами.",
+   "en": "Use your head.",
+   "ko": "머리 좀 굴려.",
+   "blank": "мозгами"
+  }
+ ],
+ "w|мой": [
+  {
+   "text": "Где мой ключ?",
+   "en": "Where is my key?",
+   "ko": "내 열쇠 어디 있어?",
+   "blank": "мой"
+  },
+  {
+   "text": "Это моя сумка.",
+   "en": "This is my bag.",
+   "ko": "이거 내 가방이야.",
+   "blank": "моя"
+  }
+ ],
+ "w|молодой": [
+  {
+   "text": "Он ещё молодой.",
+   "en": "He's still young.",
+   "ko": "그 사람은 아직 젊어.",
+   "blank": "молодой"
+  },
+  {
+   "text": "Молодая пара танцует.",
+   "en": "A young couple is dancing.",
+   "ko": "젊은 둘이 춤추고 있어.",
+   "blank": "Молодая"
+  }
+ ],
+ "w|момент": [
+  {
+   "text": "Момент был неловкий.",
+   "en": "The moment was awkward.",
+   "ko": "그 순간은 어색했어.",
+   "blank": "Момент"
+  },
+  {
+   "text": "Момент, я найду очки.",
+   "en": "One moment, I'll find my glasses.",
+   "ko": "잠깐, 안경 찾을게.",
+   "blank": "Момент"
+  }
+ ],
+ "w|мочь": [
+  {
+   "text": "Я не могу уснуть.",
+   "en": "I can't fall asleep.",
+   "ko": "잠이 안 와.",
+   "blank": "могу"
+  },
+  {
+   "text": "Ты можешь подождать?",
+   "en": "Can you wait?",
+   "ko": "기다려 줄 수 있어?",
+   "blank": "можешь"
+  }
+ ],
+ "w|муж": [
+  {
+   "text": "Муж задерживается на работе.",
+   "en": "My husband is running late at work.",
+   "ko": "남편이 퇴근이 늦어지고 있어.",
+   "blank": "Муж"
+  },
+  {
+   "text": "Позови мужа к столу.",
+   "en": "Call my husband to the table.",
+   "ko": "남편 밥 먹으러 오라고 해.",
+   "blank": "мужа"
+  }
+ ],
+ "w|мужчина": [
+  {
+   "text": "Мужчина у двери ждёт.",
+   "en": "The man by the door is waiting.",
+   "ko": "문 앞에 남자가 기다리고 있어.",
+   "blank": "Мужчина"
+  },
+  {
+   "text": "Я не знаю этого мужчину.",
+   "en": "I don't know this man.",
+   "ko": "나는 이 남자를 몰라.",
+   "blank": "мужчину"
+  }
+ ],
+ "w|музыка": [
+  {
+   "text": "Музыка слишком громкая.",
+   "en": "The music is too loud.",
+   "ko": "음악이 너무 커.",
+   "blank": "Музыка"
+  },
+  {
+   "text": "Сделай музыку тише.",
+   "en": "Turn the music down.",
+   "ko": "음악 좀 줄여.",
+   "blank": "музыку"
+  }
+ ],
+ "w|мы": [
+  {
+   "text": "Мы уже рядом.",
+   "en": "We're close now.",
+   "ko": "우리 이제 가까워.",
+   "blank": "Мы"
+  },
+  {
+   "text": "Подожди нас у двери.",
+   "en": "Wait for us by the door.",
+   "ko": "문 앞에서 우리를 기다려.",
+   "blank": "нас"
+  }
+ ],
+ "w|мысль": [
+  {
+   "text": "Хорошая мысль, запиши.",
+   "en": "Good idea, write it down.",
+   "ko": "좋은 생각이니까 적어.",
+   "blank": "мысль"
+  },
+  {
+   "text": "Выкинь эту мысль.",
+   "en": "Drop that idea.",
+   "ko": "그 생각은 버려.",
+   "blank": "мысль"
+  }
+ ],
+ "w|на": [
+  {
+   "text": "Ключ на столе.",
+   "en": "The key is on the table.",
+   "ko": "열쇠는 탁자 위에 있어.",
+   "blank": "на"
+  },
+  {
+   "text": "Я на работе.",
+   "en": "I'm at work.",
+   "ko": "나 일하는 중이야.",
+   "blank": "на"
+  }
+ ],
+ "w|наверное": [
+  {
+   "text": "Он, наверное, спит.",
+   "en": "He's probably asleep.",
+   "ko": "아마 자고 있을 거야.",
+   "blank": "наверное"
+  },
+  {
+   "text": "Наверное, я останусь.",
+   "en": "I'll probably stay.",
+   "ko": "아마 남을 것 같아.",
+   "blank": "Наверное"
+  }
+ ],
+ "w|над": [
+  {
+   "text": "Над городом густой туман.",
+   "en": "There's thick fog over the city.",
+   "ko": "도시 위로 안개가 자욱해.",
+   "blank": "Над"
+  },
+  {
+   "text": "Не стой над душой.",
+   "en": "Don't hover over me.",
+   "ko": "옆에서 쪼이지 마.",
+   "blank": "над"
+  }
+ ],
+ "w|надеяться": [
+  {
+   "text": "Надеюсь, поезд ещё тут.",
+   "en": "I hope the train is still here.",
+   "ko": "기차가 아직 있으면 좋겠어.",
+   "blank": "Надеюсь"
+  },
+  {
+   "text": "Не надейся на удачу.",
+   "en": "Don't count on luck.",
+   "ko": "운에 기대지 마.",
+   "blank": "надейся"
+  }
+ ],
+ "w|надо": [
+  {
+   "text": "Надо бы поесть.",
+   "en": "I ought to eat something.",
+   "ko": "뭐라도 먹어야겠어.",
+   "blank": "Надо"
+  },
+  {
+   "text": "Мне надо на работу.",
+   "en": "I have to get to work.",
+   "ko": "나 일하러 가야 해.",
+   "blank": "надо"
+  }
+ ],
+ "w|назад": [
+  {
+   "text": "Отойди назад.",
+   "en": "Step back.",
+   "ko": "뒤로 물러서.",
+   "blank": "назад"
+  },
+  {
+   "text": "Оглянись назад.",
+   "en": "Look behind you.",
+   "ko": "뒤돌아봐.",
+   "blank": "назад"
+  }
+ ],
+ "w|назвать": [
+  {
+   "text": "Назови своё имя.",
+   "en": "Say your name.",
+   "ko": "이름을 말해.",
+   "blank": "Назови"
+  },
+  {
+   "text": "Как назвали ребёнка?",
+   "en": "What did they name the baby?",
+   "ko": "아기 이름을 뭐라고 지었어?",
+   "blank": "назвали"
+  }
+ ],
+ "w|называть": [
+  {
+   "text": "Как тебя называют?",
+   "en": "What do people call you?",
+   "ko": "사람들이 너를 뭐라고 불러?",
+   "blank": "называют"
+  },
+  {
+   "text": "Не называй меня так.",
+   "en": "Don't call me that.",
+   "ko": "나를 그렇게 부르지 마.",
+   "blank": "называй"
+  }
+ ],
+ "w|найти": [
+  {
+   "text": "Я нашёл твой ключ.",
+   "en": "I found your key.",
+   "ko": "네 열쇠 찾았어.",
+   "blank": "нашёл"
+  },
+  {
+   "text": "Найди тихое место.",
+   "en": "Find a quiet spot.",
+   "ko": "조용한 곳을 찾아.",
+   "blank": "Найди"
+  }
+ ],
+ "w|написать": [
+  {
+   "text": "Напиши, как доедешь.",
+   "en": "Write when you arrive.",
+   "ko": "도착하면 연락해.",
+   "blank": "Напиши"
+  },
+  {
+   "text": "Письмо я уже написал.",
+   "en": "I already wrote the letter.",
+   "ko": "편지는 이미 썼어.",
+   "blank": "написал"
+  }
+ ],
+ "w|например": [
+  {
+   "text": "Приходи, например, завтра.",
+   "en": "Come tomorrow, for example.",
+   "ko": "예를 들면 내일 와.",
+   "blank": "например"
+  },
+  {
+   "text": "Можно, например, поехать к морю.",
+   "en": "We could go to the sea, for example.",
+   "ko": "예를 들면 바다에 갈 수도 있어.",
+   "blank": "например"
+  }
+ ],
+ "w|насколько": [
+  {
+   "text": "Насколько это далеко?",
+   "en": "How far is it?",
+   "ko": "거기 얼마나 멀어?",
+   "blank": "Насколько"
+  },
+  {
+   "text": "Смотри, насколько вырос.",
+   "en": "Look how much he's grown.",
+   "ko": "얼마나 자랐는지 봐.",
+   "blank": "насколько"
+  }
+ ],
+ "w|настоящий": [
+  {
+   "text": "Это настоящий мёд.",
+   "en": "This is real honey.",
+   "ko": "이건 진짜 꿀이야.",
+   "blank": "настоящий"
+  },
+  {
+   "text": "Вот это настоящая зима.",
+   "en": "Now this is a real winter.",
+   "ko": "이래야 진짜 겨울이지.",
+   "blank": "настоящая"
+  }
+ ],
+ "w|насчёт": [
+  {
+   "text": "Насчёт билетов я узнаю.",
+   "en": "I'll check about the tickets.",
+   "ko": "표 건은 내가 알아볼게.",
+   "blank": "Насчёт"
+  },
+  {
+   "text": "Я насчёт ключей.",
+   "en": "I'm here about the keys.",
+   "ko": "나 열쇠 때문에 왔어.",
+   "blank": "насчёт"
+  }
+ ],
+ "w|находиться": [
+  {
+   "text": "Где находится аптека?",
+   "en": "Where is the pharmacy?",
+   "ko": "약국이 어디 있어?",
+   "blank": "находится"
+  },
+  {
+   "text": "Ключи находятся в ящике.",
+   "en": "The keys are in the drawer.",
+   "ko": "열쇠는 서랍에 있어.",
+   "blank": "находятся"
+  }
+ ],
+ "w|начало": [
+  {
+   "text": "Начало мне понравилось.",
+   "en": "I liked the beginning.",
+   "ko": "시작 부분이 마음에 들었어.",
+   "blank": "Начало"
+  },
+  {
+   "text": "Прочитай с начала, пожалуйста.",
+   "en": "Please read it from the beginning.",
+   "ko": "처음부터 다시 읽어 줘.",
+   "blank": "начала"
+  }
+ ],
+ "w|начать": [
+  {
+   "text": "Давай начнём.",
+   "en": "Let's start.",
+   "ko": "시작하자.",
+   "blank": "начнём"
+  },
+  {
+   "text": "Она начала без меня.",
+   "en": "She started without me.",
+   "ko": "그 사람은 나 없이 시작했어.",
+   "blank": "начала"
+  }
+ ],
+ "w|начаться": [
+  {
+   "text": "Фильм сейчас начнётся.",
+   "en": "The movie is about to start.",
+   "ko": "영화가 곧 시작해.",
+   "blank": "начнётся"
+  },
+  {
+   "text": "Дождь начался.",
+   "en": "It started raining.",
+   "ko": "비가 오기 시작했어.",
+   "blank": "начался"
+  }
+ ],
+ "w|начинать": [
+  {
+   "text": "Начинай, мы уже готовы.",
+   "en": "Start, we're already ready.",
+   "ko": "시작해, 우리 준비됐어.",
+   "blank": "Начинай"
+  },
+  {
+   "text": "Мы начинаем без опоздавших.",
+   "en": "We're starting without the latecomers.",
+   "ko": "우리는 늦은 사람 기다리지 않고 시작해.",
+   "blank": "начинаем"
+  }
+ ],
+ "w|наш": [
+  {
+   "text": "Это наш район.",
+   "en": "This is our neighborhood.",
+   "ko": "여기가 우리 동네야.",
+   "blank": "наш"
+  },
+  {
+   "text": "Где наша машина?",
+   "en": "Where is our car?",
+   "ko": "우리 차 어디 있어?",
+   "blank": "наша"
+  }
+ ],
+ "w|не": [
+  {
+   "text": "Я не понял.",
+   "en": "I didn't get it.",
+   "ko": "나는 못 알아들었어.",
+   "blank": "не"
+  },
+  {
+   "text": "Так не говорят.",
+   "en": "People don't say it that way.",
+   "ko": "그렇게는 안 말해.",
+   "blank": "не"
+  }
+ ],
+ "w|небольшой": [
+  {
+   "text": "У нас небольшая проблема.",
+   "en": "We've got a small problem.",
+   "ko": "우리한테 작은 문제가 있어.",
+   "blank": "небольшая"
+  },
+  {
+   "text": "Сделай небольшой перерыв.",
+   "en": "Take a short break.",
+   "ko": "잠깐 쉬어.",
+   "blank": "небольшой"
+  }
+ ],
+ "w|неделя": [
+  {
+   "text": "Всю неделю дождь.",
+   "en": "It has rained all week.",
+   "ko": "일주일 내내 비야.",
+   "blank": "неделю"
+  },
+  {
+   "text": "На этой неделе я занят.",
+   "en": "I'm busy this week.",
+   "ko": "이번 주는 바빠.",
+   "blank": "неделе"
+  }
+ ],
+ "w|некоторый": [
+  {
+   "text": "Некоторые уже ушли домой.",
+   "en": "Some have already gone home.",
+   "ko": "몇몇은 이미 집에 갔어.",
+   "blank": "Некоторые"
+  },
+  {
+   "text": "В некотором смысле ты прав.",
+   "en": "In a sense, you're right.",
+   "ko": "어떤 면에서는 네 말이 맞아.",
+   "blank": "некотором"
+  }
+ ],
+ "w|нельзя": [
+  {
+   "text": "Бегать тут нельзя.",
+   "en": "You can't run here.",
+   "ko": "여기서는 뛰면 안 돼.",
+   "blank": "нельзя"
+  },
+  {
+   "text": "Нельзя же так врать.",
+   "en": "You can't lie like that.",
+   "ko": "그렇게 거짓말하면 안 되지.",
+   "blank": "Нельзя"
+  }
+ ],
+ "w|немного": [
+  {
+   "text": "Подожди немного.",
+   "en": "Wait a little.",
+   "ko": "조금만 기다려.",
+   "blank": "немного"
+  },
+  {
+   "text": "Мне немного стыдно.",
+   "en": "I'm a little embarrassed.",
+   "ko": "나 좀 부끄러워.",
+   "blank": "немного"
+  }
+ ],
+ "w|ненавидеть": [
+  {
+   "text": "Ненавижу, когда опаздывают.",
+   "en": "I hate it when people are late.",
+   "ko": "늦는 건 정말 싫어.",
+   "blank": "Ненавижу"
+  },
+  {
+   "text": "Не надо ненавидеть работу.",
+   "en": "There's no need to hate the job.",
+   "ko": "일을 미워할 필요는 없어.",
+   "blank": "ненавидеть"
+  }
+ ],
+ "w|неплохой": [
+  {
+   "text": "Суп неплохой.",
+   "en": "The soup is pretty good.",
+   "ko": "수프 괜찮은 편이야.",
+   "blank": "неплохой"
+  },
+  {
+   "text": "Неплохая идея, давай так.",
+   "en": "Not a bad idea, let's do that.",
+   "ko": "괜찮은 생각이야, 그렇게 하자.",
+   "blank": "Неплохая"
+  }
+ ],
+ "w|несколько": [
+  {
+   "text": "Дай несколько минут.",
+   "en": "Give me a few minutes.",
+   "ko": "몇 분만 줘.",
+   "blank": "несколько"
+  },
+  {
+   "text": "Я стучал несколько раз.",
+   "en": "I knocked a few times.",
+   "ko": "몇 번 두드렸어.",
+   "blank": "несколько"
+  }
+ ],
+ "w|нет": [
+  {
+   "text": "Нет, спасибо.",
+   "en": "No, thank you.",
+   "ko": "아니, 고마워.",
+   "blank": "Нет"
+  },
+  {
+   "text": "У меня нет времени.",
+   "en": "I don't have time.",
+   "ko": "시간이 없어.",
+   "blank": "нет"
+  }
+ ],
+ "w|неужели": [
+  {
+   "text": "Неужели ты забыл?",
+   "en": "Don't tell me you forgot.",
+   "ko": "설마 잊은 거야?",
+   "blank": "Неужели"
+  },
+  {
+   "text": "Неужели уже полночь?",
+   "en": "Is it really midnight already?",
+   "ko": "설마 벌써 자정이야?",
+   "blank": "Неужели"
+  }
+ ],
+ "w|ни": [
+  {
+   "text": "Ни слова об этом.",
+   "en": "Not a word about this.",
+   "ko": "이 얘기는 한마디도 하지 마.",
+   "blank": "Ни"
+  },
+  {
+   "text": "Я ни разу там не был.",
+   "en": "I've never been there.",
+   "ko": "나는 거기에 한 번도 안 가 봤어.",
+   "blank": "ни"
+  }
+ ],
+ "w|никакой": [
+  {
+   "text": "Никакой паники.",
+   "en": "No need to panic.",
+   "ko": "당황하지 마.",
+   "blank": "Никакой"
+  },
+  {
+   "text": "Нет никакой разницы.",
+   "en": "There's no difference at all.",
+   "ko": "아무 차이도 없어.",
+   "blank": "никакой"
+  }
+ ],
+ "w|никогда": [
+  {
+   "text": "Я никогда так не делаю.",
+   "en": "I never do that.",
+   "ko": "나는 절대 그렇게 안 해.",
+   "blank": "никогда"
+  },
+  {
+   "text": "Никогда больше так не говори.",
+   "en": "Don't ever say that again.",
+   "ko": "다시는 그렇게 말하지 마.",
+   "blank": "Никогда"
+  }
+ ],
+ "w|никто": [
+  {
+   "text": "Никто не отвечает.",
+   "en": "Nobody is answering.",
+   "ko": "아무도 안 받아.",
+   "blank": "Никто"
+  },
+  {
+   "text": "Я никого не жду.",
+   "en": "I'm not waiting for anyone.",
+   "ko": "나는 아무도 안 기다려.",
+   "blank": "никого"
+  }
+ ],
+ "w|ничего": [
+  {
+   "text": "Ничего страшного.",
+   "en": "It's no big deal.",
+   "ko": "별일 아니야.",
+   "blank": "Ничего"
+  },
+  {
+   "text": "Я ничего не брал.",
+   "en": "I didn't take anything.",
+   "ko": "나는 아무것도 안 가져갔어.",
+   "blank": "ничего"
+  }
+ ],
+ "w|но": [
+  {
+   "text": "Хочу спать, но ещё рано.",
+   "en": "I want to sleep, but it's still early.",
+   "ko": "자고 싶은데 아직 일러.",
+   "blank": "но"
+  },
+  {
+   "text": "Дорого, но вкусно.",
+   "en": "It's expensive, but tasty.",
+   "ko": "비싼데 맛있어.",
+   "blank": "но"
+  }
+ ],
+ "w|новость": [
+  {
+   "text": "Новость меня огорошила.",
+   "en": "The news stunned me.",
+   "ko": "그 소식에 얼떨떨했어.",
+   "blank": "Новость"
+  },
+  {
+   "text": "Есть хорошая новость.",
+   "en": "There's good news.",
+   "ko": "좋은 소식이 있어.",
+   "blank": "новость"
+  }
+ ],
+ "w|новый": [
+  {
+   "text": "У меня новый зонт.",
+   "en": "I have a new umbrella.",
+   "ko": "새 우산이 생겼어.",
+   "blank": "новый"
+  },
+  {
+   "text": "Новая серия вышла.",
+   "en": "The new episode is out.",
+   "ko": "새 편이 나왔어.",
+   "blank": "Новая"
+  }
+ ],
+ "w|нога": [
+  {
+   "text": "Нога не влезает в ботинок.",
+   "en": "My foot won't fit in the boot.",
+   "ko": "발이 부츠에 안 들어가.",
+   "blank": "Нога"
+  },
+  {
+   "text": "Ноги промокли насквозь.",
+   "en": "My feet are soaked through.",
+   "ko": "발이 흠뻑 젖었어.",
+   "blank": "Ноги"
+  }
+ ],
+ "w|номер": [
+  {
+   "text": "Номер занят, перезвоню.",
+   "en": "The line is busy, I'll call back.",
+   "ko": "통화 중이야, 다시 걸게.",
+   "blank": "Номер"
+  },
+  {
+   "text": "Продиктуй номер ещё раз.",
+   "en": "Read the number out again.",
+   "ko": "번호를 다시 불러 줘.",
+   "blank": "номер"
+  }
+ ],
+ "w|нормальный": [
+  {
+   "text": "Суп вполне нормальный.",
+   "en": "The soup is perfectly fine.",
+   "ko": "수프는 아주 괜찮아.",
+   "blank": "нормальный"
+  },
+  {
+   "text": "Цена нормальная, бери.",
+   "en": "The price is fair, take it.",
+   "ko": "가격 괜찮아, 사.",
+   "blank": "нормальная"
+  }
+ ],
+ "w|ночь": [
+  {
+   "text": "Спокойной ночи.",
+   "en": "Good night.",
+   "ko": "잘 자.",
+   "blank": "ночи"
+  },
+  {
+   "text": "Я не спал всю ночь.",
+   "en": "I was up all night.",
+   "ko": "나 밤새 한숨도 못 잤어.",
+   "blank": "ночь"
+  }
+ ],
+ "w|нравиться": [
+  {
+   "text": "Мне нравится этот суп.",
+   "en": "I like this soup.",
+   "ko": "이 수프 마음에 들어.",
+   "blank": "нравится"
+  },
+  {
+   "text": "Мне нравятся эти туфли.",
+   "en": "I like these shoes.",
+   "ko": "이 신발 마음에 들어.",
+   "blank": "нравятся"
+  }
+ ],
+ "w|ну": [
+  {
+   "text": "Ну, как скажешь.",
+   "en": "Well, whatever you say.",
+   "ko": "그래, 네 맘대로 해.",
+   "blank": "Ну"
+  },
+  {
+   "text": "Да ну, не может быть.",
+   "en": "Oh come on, that can't be.",
+   "ko": "에이, 그럴 리가.",
+   "blank": "ну"
+  }
+ ],
+ "w|нужно": [
+  {
+   "text": "Мне нужно домой.",
+   "en": "I need to go home.",
+   "ko": "나 집에 가야 해.",
+   "blank": "нужно"
+  },
+  {
+   "text": "Тебе нужно поспать.",
+   "en": "You need to get some sleep.",
+   "ko": "너는 좀 자야 해.",
+   "blank": "нужно"
+  }
+ ],
+ "w|о": [
+  {
+   "text": "Я думаю о работе.",
+   "en": "I'm thinking about work.",
+   "ko": "나는 일 생각을 하고 있어.",
+   "blank": "о"
+  },
+  {
+   "text": "Расскажи о себе.",
+   "en": "Tell me about yourself.",
+   "ko": "너에 대해 얘기해 봐.",
+   "blank": "о"
+  }
+ ],
+ "w|об": [
+  {
+   "text": "Поговорим об этом позже.",
+   "en": "Let's talk about this later.",
+   "ko": "이건 나중에 얘기하자.",
+   "blank": "об"
+  },
+  {
+   "text": "Я мечтаю об отпуске.",
+   "en": "I'm dreaming of a vacation.",
+   "ko": "나는 휴가를 꿈꿔.",
+   "blank": "об"
+  }
+ ],
+ "w|оба": [
+  {
+   "text": "Оба билета пропали.",
+   "en": "Both tickets are gone.",
+   "ko": "표 두 장 다 없어졌어.",
+   "blank": "Оба"
+  },
+  {
+   "text": "Я видел обоих утром.",
+   "en": "I saw both of them this morning.",
+   "ko": "아침에는 둘 다 봤어.",
+   "blank": "обоих"
+  }
+ ],
+ "w|обещать": [
+  {
+   "text": "Ты обещал позвонить.",
+   "en": "You promised to call.",
+   "ko": "전화하겠다고 약속했잖아.",
+   "blank": "обещал"
+  },
+  {
+   "text": "Обещаю, я буду рядом.",
+   "en": "I promise I'll be there.",
+   "ko": "약속할게, 네 옆에 있을게.",
+   "blank": "Обещаю"
+  }
+ ],
+ "w|образ": [
+  {
+   "text": "Мне нравится этот образ.",
+   "en": "I like this look.",
+   "ko": "이 모습 마음에 들어.",
+   "blank": "образ"
+  },
+  {
+   "text": "Таким образом мы успеем.",
+   "en": "This way we'll make it in time.",
+   "ko": "이렇게 하면 시간에 댈 수 있어.",
+   "blank": "образом"
+  }
+ ],
+ "w|обратно": [
+  {
+   "text": "Положи книгу обратно.",
+   "en": "Put the book back.",
+   "ko": "책은 제자리에 둬.",
+   "blank": "обратно"
+  },
+  {
+   "text": "Иди обратно.",
+   "en": "Go back.",
+   "ko": "돌아가.",
+   "blank": "обратно"
+  }
+ ],
+ "w|общий": [
+  {
+   "text": "У нас общий друг.",
+   "en": "We have a mutual friend.",
+   "ko": "우리한테 공통 친구가 있어.",
+   "blank": "общий"
+  },
+  {
+   "text": "Поставь на общую полку.",
+   "en": "Put it on the shared shelf.",
+   "ko": "공용 선반에 올려.",
+   "blank": "общую"
+  }
+ ],
+ "w|объяснить": [
+  {
+   "text": "Объясни ещё раз.",
+   "en": "Explain it once more.",
+   "ko": "한 번 더 설명해 줘.",
+   "blank": "Объясни"
+  },
+  {
+   "text": "Я всё объясню.",
+   "en": "I'll explain everything.",
+   "ko": "내가 다 설명할게.",
+   "blank": "объясню"
+  }
+ ],
+ "w|обычно": [
+  {
+   "text": "Я обычно встаю рано.",
+   "en": "I usually get up early.",
+   "ko": "나는 보통 일찍 일어나.",
+   "blank": "обычно"
+  },
+  {
+   "text": "Обычно тут тише.",
+   "en": "It's usually quieter here.",
+   "ko": "여기는 보통 더 조용해.",
+   "blank": "Обычно"
+  }
+ ],
+ "w|один": [
+  {
+   "text": "Остался один билет.",
+   "en": "One ticket is left.",
+   "ko": "표가 하나 남았어.",
+   "blank": "один"
+  },
+  {
+   "text": "Она живёт одна.",
+   "en": "She lives alone.",
+   "ko": "그 사람은 혼자 살아.",
+   "blank": "одна"
+  }
+ ],
+ "w|однажды": [
+  {
+   "text": "Я однажды там был.",
+   "en": "I was there once.",
+   "ko": "한 번은 거기 있었어.",
+   "blank": "однажды"
+  },
+  {
+   "text": "Однажды это кончится.",
+   "en": "One day this will be over.",
+   "ko": "언젠가 이건 끝날 거야.",
+   "blank": "Однажды"
+  }
+ ],
+ "w|ой": [
+  {
+   "text": "Ой, прости!",
+   "en": "Oh, sorry!",
+   "ko": "앗, 미안해!",
+   "blank": "Ой"
+  },
+  {
+   "text": "Ой, горячо!",
+   "en": "Ow, that's hot!",
+   "ko": "앗, 뜨거워!",
+   "blank": "Ой"
+  }
+ ],
+ "w|оказаться": [
+  {
+   "text": "Оказалось, он прав.",
+   "en": "It turned out he was right.",
+   "ko": "알고 보니 그 사람 말이 맞았어.",
+   "blank": "Оказалось"
+  },
+  {
+   "text": "Ключ оказался в кармане.",
+   "en": "The key turned out to be in my pocket.",
+   "ko": "열쇠는 알고 보니 주머니에 있었어.",
+   "blank": "оказался"
+  }
+ ],
+ "w|около": [
+  {
+   "text": "Жди около входа.",
+   "en": "Wait by the entrance.",
+   "ko": "입구 근처에서 기다려.",
+   "blank": "около"
+  },
+  {
+   "text": "Аптека стоит около рынка.",
+   "en": "The pharmacy is right by the market.",
+   "ko": "약국은 시장 바로 옆에 있어.",
+   "blank": "около"
+  }
+ ],
+ "w|он": [
+  {
+   "text": "Он уже спит.",
+   "en": "He's already asleep.",
+   "ko": "그는 이미 자고 있어.",
+   "blank": "Он"
+  },
+  {
+   "text": "Я ему позвоню.",
+   "en": "I'll call him.",
+   "ko": "그 사람한테 전화할게.",
+   "blank": "ему"
+  }
+ ],
+ "w|она": [
+  {
+   "text": "Она ещё спит.",
+   "en": "She's still asleep.",
+   "ko": "그 사람은 아직 자.",
+   "blank": "Она"
+  },
+  {
+   "text": "Я ей позвоню.",
+   "en": "I'll call her.",
+   "ko": "그 사람한테 전화할게.",
+   "blank": "ей"
+  }
+ ],
+ "w|они": [
+  {
+   "text": "Они уже ушли.",
+   "en": "They've already left.",
+   "ko": "그들은 이미 갔어.",
+   "blank": "Они"
+  },
+  {
+   "text": "Я их не видел.",
+   "en": "I didn't see them.",
+   "ko": "나는 그들을 못 봤어.",
+   "blank": "их"
+  }
+ ],
+ "w|оно": [
+  {
+   "text": "Оно ещё горячо, подожди.",
+   "en": "It's still hot, wait.",
+   "ko": "아직 뜨거우니 기다려.",
+   "blank": "Оно"
+  },
+  {
+   "text": "Где оно лежит?",
+   "en": "Where is it?",
+   "ko": "그거 어디 있어?",
+   "blank": "оно"
+  }
+ ],
+ "w|операция": [
+  {
+   "text": "Операция прошла спокойно.",
+   "en": "The operation went smoothly.",
+   "ko": "수술은 무사히 끝났어.",
+   "blank": "Операция"
+  },
+  {
+   "text": "Ему завтра операция.",
+   "en": "He has surgery tomorrow.",
+   "ko": "그 사람은 내일 수술이야.",
+   "blank": "операция"
+  }
+ ],
+ "w|опять": [
+  {
+   "text": "Опять дождь.",
+   "en": "Rain again.",
+   "ko": "또 비야.",
+   "blank": "Опять"
+  },
+  {
+   "text": "Ты опять опоздал.",
+   "en": "You're late again.",
+   "ko": "너 또 늦었어.",
+   "blank": "опять"
+  }
+ ],
+ "w|оружие": [
+  {
+   "text": "В кино оружие не настоящее.",
+   "en": "The weapon in the movie isn't real.",
+   "ko": "영화 속 무기는 진짜가 아니야.",
+   "blank": "оружие"
+  },
+  {
+   "text": "Нам оружие не нужно.",
+   "en": "We don't need a weapon.",
+   "ko": "우리한테 무기는 필요 없어.",
+   "blank": "оружие"
+  }
+ ],
+ "w|оставаться": [
+  {
+   "text": "Оставайся, ещё пирог есть.",
+   "en": "Stay, there's still pie.",
+   "ko": "가지 마, 파이가 아직 있어.",
+   "blank": "Оставайся"
+  },
+  {
+   "text": "Дети остаются у бабушки.",
+   "en": "The children are staying at grandma's.",
+   "ko": "아이들은 할머니 집에 있어.",
+   "blank": "остаются"
+  }
+ ],
+ "w|оставить": [
+  {
+   "text": "Оставь мне ключ.",
+   "en": "Leave me the key.",
+   "ko": "열쇠는 두고 가.",
+   "blank": "Оставь"
+  },
+  {
+   "text": "Я оставил сумку.",
+   "en": "I left the bag behind.",
+   "ko": "가방을 놓고 왔어.",
+   "blank": "оставил"
+  }
+ ],
+ "w|остальной": [
+  {
+   "text": "Остальное я доделаю сам.",
+   "en": "I'll finish the rest myself.",
+   "ko": "나머지는 내가 마저 할게.",
+   "blank": "Остальное"
+  },
+  {
+   "text": "Остальные пусть отдыхают.",
+   "en": "Let the others rest.",
+   "ko": "나머지는 쉬게 둬.",
+   "blank": "Остальные"
+  }
+ ],
+ "w|остановить": [
+  {
+   "text": "Останови машину.",
+   "en": "Stop the car.",
+   "ko": "차 세워.",
+   "blank": "Останови"
+  },
+  {
+   "text": "Никто меня не остановит.",
+   "en": "No one will stop me.",
+   "ko": "아무도 나를 못 막아.",
+   "blank": "остановит"
+  }
+ ],
+ "w|остановиться": [
+  {
+   "text": "Остановись на секунду.",
+   "en": "Stop for a second.",
+   "ko": "잠깐만 멈춰.",
+   "blank": "Остановись"
+  },
+  {
+   "text": "Машина остановилась.",
+   "en": "The car stopped.",
+   "ko": "차가 멈췄어.",
+   "blank": "остановилась"
+  }
+ ],
+ "w|остаться": [
+  {
+   "text": "Останься на ужин.",
+   "en": "Stay for dinner.",
+   "ko": "저녁까지 있어.",
+   "blank": "Останься"
+  },
+  {
+   "text": "Никого не осталось.",
+   "en": "There's no one left.",
+   "ko": "아무도 안 남았어.",
+   "blank": "осталось"
+  }
+ ],
+ "w|от": [
+  {
+   "text": "Это письмо от мамы.",
+   "en": "This letter is from Mom.",
+   "ko": "이 편지는 엄마가 보낸 거야.",
+   "blank": "от"
+  },
+  {
+   "text": "Отойди от окна.",
+   "en": "Step away from the window.",
+   "ko": "창문에서 떨어져.",
+   "blank": "от"
+  }
+ ],
+ "w|ответ": [
+  {
+   "text": "Жду ответа.",
+   "en": "I'm waiting for an answer.",
+   "ko": "대답을 기다리고 있어.",
+   "blank": "ответа"
+  },
+  {
+   "text": "Ответ пришёл ночью.",
+   "en": "The reply came at night.",
+   "ko": "답은 밤에 왔어.",
+   "blank": "Ответ"
+  }
+ ],
+ "w|ответить": [
+  {
+   "text": "Ответь мне скорее.",
+   "en": "Answer me quickly.",
+   "ko": "빨리 대답해.",
+   "blank": "Ответь"
+  },
+  {
+   "text": "Я уже ответил.",
+   "en": "I already answered.",
+   "ko": "나는 이미 대답했어.",
+   "blank": "ответил"
+  }
+ ],
+ "w|отвечать": [
+  {
+   "text": "Отвечай, когда спрашивают.",
+   "en": "Answer when someone asks you.",
+   "ko": "물으면 대답해.",
+   "blank": "Отвечай"
+  },
+  {
+   "text": "Он не отвечает на звонки.",
+   "en": "He isn't answering calls.",
+   "ko": "그 사람은 전화를 안 받아.",
+   "blank": "отвечает"
+  }
+ ],
+ "w|отдать": [
+  {
+   "text": "Отдай пульт.",
+   "en": "Hand over the remote.",
+   "ko": "리모컨 이리 줘.",
+   "blank": "Отдай"
+  },
+  {
+   "text": "Я отдал долг.",
+   "en": "I paid back what I owed.",
+   "ko": "빚은 갚았어.",
+   "blank": "отдал"
+  }
+ ],
+ "w|отец": [
+  {
+   "text": "Мой отец на работе.",
+   "en": "My dad is at work.",
+   "ko": "우리 아빠는 일하러 가셨어.",
+   "blank": "отец"
+  },
+  {
+   "text": "Спроси у отца.",
+   "en": "Ask Dad.",
+   "ko": "아버지께 물어봐.",
+   "blank": "отца"
+  }
+ ],
+ "w|открыть": [
+  {
+   "text": "Открой, это я.",
+   "en": "Open up, it's me.",
+   "ko": "문 열어, 나야.",
+   "blank": "Открой"
+  },
+  {
+   "text": "Банку я уже открыл.",
+   "en": "I already opened the jar.",
+   "ko": "병은 이미 열었어.",
+   "blank": "открыл"
+  }
+ ],
+ "w|откуда": [
+  {
+   "text": "Откуда этот плед?",
+   "en": "Where did this blanket come from?",
+   "ko": "이 담요 어디서 났어?",
+   "blank": "Откуда"
+  },
+  {
+   "text": "Откуда ты знаешь адрес?",
+   "en": "How do you know the address?",
+   "ko": "주소를 어떻게 알아?",
+   "blank": "Откуда"
+  }
+ ],
+ "w|отличный": [
+  {
+   "text": "Отличная мысль!",
+   "en": "Great idea!",
+   "ko": "좋은 생각이야!",
+   "blank": "Отличная"
+  },
+  {
+   "text": "Суп отличный.",
+   "en": "The soup is excellent.",
+   "ko": "수프 정말 맛있어.",
+   "blank": "отличный"
+  }
+ ],
+ "w|отношение": [
+  {
+   "text": "Его отношение меня задело.",
+   "en": "His attitude hurt me.",
+   "ko": "그의 태도에 마음이 상했어.",
+   "blank": "отношение"
+  },
+  {
+   "text": "У него к работе отношение серьёзное.",
+   "en": "He takes his work seriously.",
+   "ko": "그는 일을 진지하게 대해.",
+   "blank": "отношение"
+  }
+ ],
+ "w|отправить": [
+  {
+   "text": "Отправь это сегодня.",
+   "en": "Send this today.",
+   "ko": "이건 오늘 보내.",
+   "blank": "Отправь"
+  },
+  {
+   "text": "Я уже отправил посылку.",
+   "en": "I already sent the package.",
+   "ko": "택배는 이미 보냈어.",
+   "blank": "отправил"
+  }
+ ],
+ "w|отпустить": [
+  {
+   "text": "Отпусти мою руку.",
+   "en": "Let go of my hand.",
+   "ko": "내 손 놔.",
+   "blank": "Отпусти"
+  },
+  {
+   "text": "Начальник отпустил меня.",
+   "en": "The boss let me leave.",
+   "ko": "상사가 나를 보내 줬어.",
+   "blank": "отпустил"
+  }
+ ],
+ "w|отсюда": [
+  {
+   "text": "Уйди отсюда.",
+   "en": "Get out of here.",
+   "ko": "여기서 나가.",
+   "blank": "отсюда"
+  },
+  {
+   "text": "Отсюда ничего не видно.",
+   "en": "You can't see anything from here.",
+   "ko": "여기선 아무것도 안 보여.",
+   "blank": "Отсюда"
+  }
+ ],
+ "w|офис": [
+  {
+   "text": "Я ещё в офисе.",
+   "en": "I'm still at the office.",
+   "ko": "나 아직 사무실에 있어.",
+   "blank": "офисе"
+  },
+  {
+   "text": "Офис сегодня закрыт.",
+   "en": "The office is closed today.",
+   "ko": "오늘은 사무실이 쉬어.",
+   "blank": "Офис"
+  }
+ ],
+ "w|ох": [
+  {
+   "text": "Ох, как я устал.",
+   "en": "Oh, I'm so tired.",
+   "ko": "아이고, 정말 피곤해.",
+   "blank": "Ох"
+  },
+  {
+   "text": "Ох, не надо было звонить.",
+   "en": "Oh, I shouldn't have called.",
+   "ko": "아, 전화하지 말걸.",
+   "blank": "Ох"
+  }
+ ],
+ "w|очень": [
+  {
+   "text": "Мне очень жаль.",
+   "en": "I'm very sorry.",
+   "ko": "정말 미안해.",
+   "blank": "очень"
+  },
+  {
+   "text": "Очень вкусно, спасибо.",
+   "en": "It's delicious, thank you.",
+   "ko": "정말 맛있어, 고마워.",
+   "blank": "Очень"
+  }
+ ],
+ "w|ошибка": [
+  {
+   "text": "Тут ошибка в счёте.",
+   "en": "There's a mistake on the bill.",
+   "ko": "계산서에 틀린 데가 있어.",
+   "blank": "ошибка"
+  },
+  {
+   "text": "Я нашёл ошибку.",
+   "en": "I found a mistake.",
+   "ko": "틀린 데를 하나 찾았어.",
+   "blank": "ошибку"
+  }
+ ],
+ "w|папа": [
+  {
+   "text": "Папа ещё на работе.",
+   "en": "Dad is still at work.",
+   "ko": "아빠는 아직 회사야.",
+   "blank": "Папа"
+  },
+  {
+   "text": "Спроси у папы.",
+   "en": "Ask dad.",
+   "ko": "아빠한테 물어봐.",
+   "blank": "папы"
+  }
+ ],
+ "w|пара": [
+  {
+   "text": "Подожди пару минут.",
+   "en": "Wait a couple of minutes.",
+   "ko": "몇 분만 기다려.",
+   "blank": "пару"
+  },
+  {
+   "text": "Они хорошая пара.",
+   "en": "They make a good couple.",
+   "ko": "둘은 잘 어울려.",
+   "blank": "пара"
+  }
+ ],
+ "w|парень": [
+  {
+   "text": "Славный парень, правда?",
+   "en": "Nice guy, isn't he?",
+   "ko": "괜찮은 사람이지?",
+   "blank": "парень"
+  },
+  {
+   "text": "Она спросила того парня.",
+   "en": "She asked that guy.",
+   "ko": "그 사람이 그 남자한테 물어봤어.",
+   "blank": "парня"
+  }
+ ],
+ "w|первый": [
+  {
+   "text": "Он первый в очереди.",
+   "en": "He's first in line.",
+   "ko": "그 사람이 맨 앞이야.",
+   "blank": "первый"
+  },
+  {
+   "text": "Первая дверь направо.",
+   "en": "The first door on the right.",
+   "ko": "오른쪽 첫 번째 문이야.",
+   "blank": "Первая"
+  }
+ ],
+ "w|перевод": [
+  {
+   "text": "Перевод уже готов.",
+   "en": "The translation is ready.",
+   "ko": "번역은 이미 끝났어.",
+   "blank": "Перевод"
+  },
+  {
+   "text": "Проверь перевод ещё раз.",
+   "en": "Check the translation once more.",
+   "ko": "번역을 한 번 더 확인해.",
+   "blank": "перевод"
+  }
+ ],
+ "w|перед": [
+  {
+   "text": "Помой руки перед едой.",
+   "en": "Wash your hands before you eat.",
+   "ko": "밥 먹기 전에 손 씻어.",
+   "blank": "перед"
+  },
+  {
+   "text": "Машина стоит перед домом.",
+   "en": "The car is parked in front of the house.",
+   "ko": "차가 집 앞에 서 있어.",
+   "blank": "перед"
+  }
+ ],
+ "w|передать": [
+  {
+   "text": "Передай соль.",
+   "en": "Pass the salt.",
+   "ko": "소금 좀 건네줘.",
+   "blank": "Передай"
+  },
+  {
+   "text": "Я передал ей привет.",
+   "en": "I passed along a hello to her.",
+   "ko": "그 사람한테 안부 전했어.",
+   "blank": "передал"
+  }
+ ],
+ "w|перестать": [
+  {
+   "text": "Перестань кусать губы.",
+   "en": "Stop biting your lips.",
+   "ko": "입술 깨물지 마.",
+   "blank": "Перестань"
+  },
+  {
+   "text": "Дождь наконец перестал.",
+   "en": "The rain finally stopped.",
+   "ko": "비가 드디어 그쳤어.",
+   "blank": "перестал"
+  }
+ ],
+ "w|песня": [
+  {
+   "text": "Песня застряла в голове.",
+   "en": "The song is stuck in my head.",
+   "ko": "그 노래가 머릿속에서 안 떠나.",
+   "blank": "Песня"
+  },
+  {
+   "text": "Поставь эту песню.",
+   "en": "Put this song on.",
+   "ko": "이 노래 틀어.",
+   "blank": "песню"
+  }
+ ],
+ "w|писать": [
+  {
+   "text": "Пиши мне чаще.",
+   "en": "Write to me more often.",
+   "ko": "나한테 더 자주 편지해.",
+   "blank": "Пиши"
+  },
+  {
+   "text": "Я пишу маме.",
+   "en": "I'm writing to mom.",
+   "ko": "엄마한테 편지 쓰는 중이야.",
+   "blank": "пишу"
+  }
+ ],
+ "w|пистолет": [
+  {
+   "text": "Положи пистолет на стол.",
+   "en": "Put the gun on the table.",
+   "ko": "권총을 탁자 위에 놔.",
+   "blank": "пистолет"
+  },
+  {
+   "text": "Пистолет не заряжен.",
+   "en": "The gun isn't loaded.",
+   "ko": "권총에 총알이 안 들어 있어.",
+   "blank": "Пистолет"
+  }
+ ],
+ "w|письмо": [
+  {
+   "text": "Письмо уже в пути.",
+   "en": "The letter is already on its way.",
+   "ko": "편지는 이미 가는 중이야.",
+   "blank": "Письмо"
+  },
+  {
+   "text": "Напиши письмо бабушке.",
+   "en": "Write grandma a letter.",
+   "ko": "할머니께 편지를 써.",
+   "blank": "письмо"
+  }
+ ],
+ "w|пить": [
+  {
+   "text": "Хочешь пить?",
+   "en": "Are you thirsty?",
+   "ko": "목말라?",
+   "blank": "пить"
+  },
+  {
+   "text": "Не пей холодное.",
+   "en": "Don't drink anything cold.",
+   "ko": "찬 건 마시지 마.",
+   "blank": "пей"
+  }
+ ],
+ "w|план": [
+  {
+   "text": "План пока сырой.",
+   "en": "The plan is still rough.",
+   "ko": "계획은 아직 덜 됐어.",
+   "blank": "План"
+  },
+  {
+   "text": "Поменяем план на вечер.",
+   "en": "Let's change the plan for the evening.",
+   "ko": "저녁 계획을 바꾸자.",
+   "blank": "план"
+  }
+ ],
+ "w|плохой": [
+  {
+   "text": "Плохая идея.",
+   "en": "Bad idea.",
+   "ko": "그 생각은 별로야.",
+   "blank": "Плохая"
+  },
+  {
+   "text": "Сегодня плохой день.",
+   "en": "Today is a bad day.",
+   "ko": "오늘은 안 좋은 날이야.",
+   "blank": "плохой"
+  }
+ ],
+ "w|по": [
+  {
+   "text": "Иди по этой улице.",
+   "en": "Go along this street.",
+   "ko": "이 길을 따라가.",
+   "blank": "по"
+  },
+  {
+   "text": "Мы гуляли по парку.",
+   "en": "We walked around the park.",
+   "ko": "우리는 공원을 걸었어.",
+   "blank": "по"
+  }
+ ],
+ "w|повезти": [
+  {
+   "text": "Тебе сегодня повезло.",
+   "en": "You got lucky today.",
+   "ko": "너는 오늘 운이 좋았어.",
+   "blank": "повезло"
+  },
+  {
+   "text": "Ну, как повезёт.",
+   "en": "Well, it depends on luck.",
+   "ko": "글쎄, 운에 달렸지.",
+   "blank": "повезёт"
+  }
+ ],
+ "w|поверить": [
+  {
+   "text": "Не могу поверить.",
+   "en": "I can't believe it.",
+   "ko": "믿을 수가 없어.",
+   "blank": "поверить"
+  },
+  {
+   "text": "Ты мне не поверил.",
+   "en": "You didn't believe me.",
+   "ko": "넌 나를 안 믿었잖아.",
+   "blank": "поверил"
+  }
+ ],
+ "w|повод": [
+  {
+   "text": "Нет повода для паники.",
+   "en": "There's no reason to panic.",
+   "ko": "당황할 이유는 없어.",
+   "blank": "повода"
+  },
+  {
+   "text": "По какому поводу праздник?",
+   "en": "What's the occasion?",
+   "ko": "무슨 일로 하는 잔치야?",
+   "blank": "поводу"
+  }
+ ],
+ "w|поговорить": [
+  {
+   "text": "Нам надо поговорить.",
+   "en": "We need to talk.",
+   "ko": "우리 얘기해야 해.",
+   "blank": "поговорить"
+  },
+  {
+   "text": "Поговорим вечером.",
+   "en": "We'll talk this evening.",
+   "ko": "저녁에 얘기하자.",
+   "blank": "Поговорим"
+  }
+ ],
+ "w|погодить": [
+  {
+   "text": "Погоди минуту.",
+   "en": "Wait a minute.",
+   "ko": "잠깐만 기다려.",
+   "blank": "Погоди"
+  },
+  {
+   "text": "Погодите, я сейчас.",
+   "en": "Hold on, I'm coming.",
+   "ko": "잠깐만요, 지금 갈게요.",
+   "blank": "Погодите"
+  }
+ ],
+ "w|под": [
+  {
+   "text": "Кот под столом.",
+   "en": "The cat is under the table.",
+   "ko": "고양이가 탁자 밑에 있어.",
+   "blank": "под"
+  },
+  {
+   "text": "Ключ под ковриком.",
+   "en": "The key is under the mat.",
+   "ko": "열쇠는 매트 밑에 있어.",
+   "blank": "под"
+  }
+ ],
+ "w|подождать": [
+  {
+   "text": "Подожди у входа.",
+   "en": "Wait by the entrance.",
+   "ko": "입구에서 기다려.",
+   "blank": "Подожди"
+  },
+  {
+   "text": "Можешь подождать?",
+   "en": "Can you wait?",
+   "ko": "잠깐 기다릴 수 있어?",
+   "blank": "подождать"
+  }
+ ],
+ "w|подойти": [
+  {
+   "text": "Подойди сюда.",
+   "en": "Come here.",
+   "ko": "이리 와.",
+   "blank": "Подойди"
+  },
+  {
+   "text": "Это пальто мне не подойдёт.",
+   "en": "This coat won't fit me.",
+   "ko": "이 코트는 나한테 안 맞아.",
+   "blank": "подойдёт"
+  }
+ ],
+ "w|подруга": [
+  {
+   "text": "Подруга ждёт внизу.",
+   "en": "My friend is waiting downstairs.",
+   "ko": "친구가 아래에서 기다려.",
+   "blank": "Подруга"
+  },
+  {
+   "text": "Я позвоню подруге.",
+   "en": "I'll call my friend.",
+   "ko": "친구한테 전화할게.",
+   "blank": "подруге"
+  }
+ ],
+ "w|подумать": [
+  {
+   "text": "Дай подумать.",
+   "en": "Let me think.",
+   "ko": "생각 좀 하게 해 줘.",
+   "blank": "подумать"
+  },
+  {
+   "text": "Я подумаю.",
+   "en": "I'll think about it.",
+   "ko": "생각해 볼게.",
+   "blank": "подумаю"
+  }
+ ],
+ "w|поехать": [
+  {
+   "text": "Поехали!",
+   "en": "Let's go!",
+   "ko": "가자!",
+   "blank": "Поехали"
+  },
+  {
+   "text": "Завтра поеду к врачу.",
+   "en": "I'll go to the doctor tomorrow.",
+   "ko": "내일 병원에 갈 거야.",
+   "blank": "поеду"
+  }
+ ],
+ "w|пожалуйста": [
+  {
+   "text": "Потише, пожалуйста.",
+   "en": "A little quieter, please.",
+   "ko": "조금만 조용히 해 줘.",
+   "blank": "пожалуйста"
+  },
+  {
+   "text": "Пожалуйста, без паники.",
+   "en": "Please don't panic.",
+   "ko": "제발 당황하지 마.",
+   "blank": "Пожалуйста"
+  }
+ ],
+ "w|позволить": [
+  {
+   "text": "Позволь мне сесть.",
+   "en": "Let me sit down.",
+   "ko": "나 좀 앉게 해 줘.",
+   "blank": "Позволь"
+  },
+  {
+   "text": "Мне не позволили уйти.",
+   "en": "They wouldn't let me leave.",
+   "ko": "내가 가는 걸 안 놔줬어.",
+   "blank": "позволили"
+  }
+ ],
+ "w|позвонить": [
+  {
+   "text": "Позвони мне вечером.",
+   "en": "Call me this evening.",
+   "ko": "저녁에 나한테 전화해.",
+   "blank": "Позвони"
+  },
+  {
+   "text": "Я уже позвонил.",
+   "en": "I already called.",
+   "ko": "나 이미 전화했어.",
+   "blank": "позвонил"
+  }
+ ],
+ "w|поздно": [
+  {
+   "text": "Поздно включать музыку.",
+   "en": "It's late to put music on.",
+   "ko": "지금 음악 틀기엔 늦었어.",
+   "blank": "Поздно"
+  },
+  {
+   "text": "Ещё не поздно извиниться.",
+   "en": "It's not too late to apologize.",
+   "ko": "사과하기엔 아직 안 늦었어.",
+   "blank": "поздно"
+  }
+ ],
+ "w|познакомиться": [
+  {
+   "text": "Рад познакомиться.",
+   "en": "Nice to meet you.",
+   "ko": "만나서 반가워.",
+   "blank": "познакомиться"
+  },
+  {
+   "text": "Давай познакомимся.",
+   "en": "Let's get to know each other.",
+   "ko": "우리 알고 지내자.",
+   "blank": "познакомимся"
+  }
+ ],
+ "w|поймать": [
+  {
+   "text": "Поймай такси.",
+   "en": "Catch a taxi.",
+   "ko": "택시 잡아.",
+   "blank": "Поймай"
+  },
+  {
+   "text": "Я поймал мяч.",
+   "en": "I caught the ball.",
+   "ko": "나는 공을 잡았어.",
+   "blank": "поймал"
+  }
+ ],
+ "w|пойти": [
+  {
+   "text": "Пойдём вместе.",
+   "en": "Let's go together.",
+   "ko": "같이 가자.",
+   "blank": "Пойдём"
+  },
+  {
+   "text": "Я пойду один.",
+   "en": "I'll go alone.",
+   "ko": "나는 혼자 갈게.",
+   "blank": "пойду"
+  }
+ ],
+ "w|пока": [
+  {
+   "text": "Пока, до вечера.",
+   "en": "Bye, see you this evening.",
+   "ko": "안녕, 저녁에 봐.",
+   "blank": "Пока"
+  },
+  {
+   "text": "Подожди, пока я вернусь.",
+   "en": "Wait until I'm back.",
+   "ko": "내가 돌아올 때까지 기다려.",
+   "blank": "пока"
+  }
+ ],
+ "w|показать": [
+  {
+   "text": "Покажи билет.",
+   "en": "Show your ticket.",
+   "ko": "표 좀 보여 줘.",
+   "blank": "Покажи"
+  },
+  {
+   "text": "Я покажу дорогу.",
+   "en": "I'll show you the way.",
+   "ko": "길을 알려 줄게.",
+   "blank": "покажу"
+  }
+ ],
+ "w|пол": [
+  {
+   "text": "Пол холодный.",
+   "en": "The floor is cold.",
+   "ko": "바닥이 차가워.",
+   "blank": "Пол"
+  },
+  {
+   "text": "Не садись на пол.",
+   "en": "Don't sit on the floor.",
+   "ko": "바닥에 앉지 마.",
+   "blank": "пол"
+  }
+ ],
+ "w|полагать": [
+  {
+   "text": "Полагаю, он дома.",
+   "en": "I suppose he's home.",
+   "ko": "그 사람 집에 있을 거야.",
+   "blank": "Полагаю"
+  },
+  {
+   "text": "Ты правда так полагаешь?",
+   "en": "Do you really think so?",
+   "ko": "진짜 그렇게 생각해?",
+   "blank": "полагаешь"
+  }
+ ],
+ "w|полиция": [
+  {
+   "text": "Вызови полицию.",
+   "en": "Call the police.",
+   "ko": "경찰 불러.",
+   "blank": "полицию"
+  },
+  {
+   "text": "Полиция уже едет.",
+   "en": "The police are already on the way.",
+   "ko": "경찰이 이미 오고 있어.",
+   "blank": "Полиция"
+  }
+ ],
+ "w|полностью": [
+  {
+   "text": "Я полностью согласен с тобой.",
+   "en": "I completely agree with you.",
+   "ko": "나는 네 말에 완전히 동의해.",
+   "blank": "полностью"
+  },
+  {
+   "text": "Телефон полностью сел.",
+   "en": "The phone is completely dead.",
+   "ko": "폰 배터리가 완전히 나갔어.",
+   "blank": "полностью"
+  }
+ ],
+ "w|полный": [
+  {
+   "text": "Стакан уже полный.",
+   "en": "The glass is already full.",
+   "ko": "잔은 이미 가득 찼어.",
+   "blank": "полный"
+  },
+  {
+   "text": "Какая полная луна!",
+   "en": "What a full moon!",
+   "ko": "보름달이 참 밝아!",
+   "blank": "полная"
+  }
+ ],
+ "w|положить": [
+  {
+   "text": "Положи телефон.",
+   "en": "Put the phone down.",
+   "ko": "전화 내려놔.",
+   "blank": "Положи"
+  },
+  {
+   "text": "Куда положить сдачу?",
+   "en": "Where should I put the change?",
+   "ko": "거스름돈은 어디에 둘까?",
+   "blank": "положить"
+  }
+ ],
+ "w|получить": [
+  {
+   "text": "Я получил посылку.",
+   "en": "I got a package.",
+   "ko": "택배 받았어.",
+   "blank": "получил"
+  },
+  {
+   "text": "Сдачу получишь тут.",
+   "en": "You'll get the change here.",
+   "ko": "거스름돈은 여기서 받아.",
+   "blank": "получишь"
+  }
+ ],
+ "w|получиться": [
+  {
+   "text": "У меня не получилось.",
+   "en": "I didn't manage it.",
+   "ko": "나는 해내지 못했어.",
+   "blank": "получилось"
+  },
+  {
+   "text": "Получится, не волнуйся.",
+   "en": "It'll work out, don't worry.",
+   "ko": "될 거야, 걱정하지 마.",
+   "blank": "Получится"
+  }
+ ],
+ "w|помнить": [
+  {
+   "text": "Я помню твой голос.",
+   "en": "I remember your voice.",
+   "ko": "네 목소리가 기억나.",
+   "blank": "помню"
+  },
+  {
+   "text": "Помнишь тот вечер?",
+   "en": "Remember that evening?",
+   "ko": "그날 저녁 기억나?",
+   "blank": "Помнишь"
+  }
+ ],
+ "w|помогать": [
+  {
+   "text": "Помогай маме.",
+   "en": "Help mom.",
+   "ko": "엄마 좀 도와.",
+   "blank": "Помогай"
+  },
+  {
+   "text": "Он всегда мне помогает.",
+   "en": "He always helps me.",
+   "ko": "그 사람은 늘 나를 도와.",
+   "blank": "помогает"
+  }
+ ],
+ "w|помочь": [
+  {
+   "text": "Помоги мне, пожалуйста.",
+   "en": "Please help me.",
+   "ko": "좀 도와줘.",
+   "blank": "Помоги"
+  },
+  {
+   "text": "Я тебе помогу.",
+   "en": "I'll help you.",
+   "ko": "내가 도와줄게.",
+   "blank": "помогу"
+  }
+ ],
+ "w|помощь": [
+  {
+   "text": "Мне нужна помощь.",
+   "en": "I need help.",
+   "ko": "나 도움이 필요해.",
+   "blank": "помощь"
+  },
+  {
+   "text": "Позови на помощь.",
+   "en": "Call for help.",
+   "ko": "도와 달라고 불러.",
+   "blank": "помощь"
+  }
+ ],
+ "w|понадобиться": [
+  {
+   "text": "Тебе понадобится помощь.",
+   "en": "You're going to need help.",
+   "ko": "너는 도움이 필요할 거야.",
+   "blank": "понадобится"
+  },
+  {
+   "text": "Если понадоблюсь, звони.",
+   "en": "Call if you need me.",
+   "ko": "내가 필요하면 전화해.",
+   "blank": "понадоблюсь"
+  }
+ ],
+ "w|понимать": [
+  {
+   "text": "Я тебя понимаю.",
+   "en": "I understand you.",
+   "ko": "네 마음 알아.",
+   "blank": "понимаю"
+  },
+  {
+   "text": "Ты меня понимаешь?",
+   "en": "Do you understand me?",
+   "ko": "내 말 알아듣겠어?",
+   "blank": "понимаешь"
+  }
+ ],
+ "w|понравиться": [
+  {
+   "text": "Тебе понравится.",
+   "en": "You'll like it.",
+   "ko": "너 마음에 들 거야.",
+   "blank": "понравится"
+  },
+  {
+   "text": "Мне понравился суп.",
+   "en": "I liked the soup.",
+   "ko": "수프가 마음에 들었어.",
+   "blank": "понравился"
+  }
+ ],
+ "w|понятно": [
+  {
+   "text": "Понятно, я сделаю.",
+   "en": "Got it, I'll do it.",
+   "ko": "알겠어, 내가 할게.",
+   "blank": "Понятно"
+  },
+  {
+   "text": "Тебе понятно?",
+   "en": "Is that clear to you?",
+   "ko": "이해됐어?",
+   "blank": "понятно"
+  }
+ ],
+ "w|понять": [
+  {
+   "text": "Я тебя понял.",
+   "en": "I understood you.",
+   "ko": "네 말 이해했어.",
+   "blank": "понял"
+  },
+  {
+   "text": "Пойми меня правильно.",
+   "en": "Don't take this the wrong way.",
+   "ko": "오해하지 마.",
+   "blank": "Пойми"
+  }
+ ],
+ "w|попасть": [
+  {
+   "text": "Мяч попал в лужу.",
+   "en": "The ball landed in a puddle.",
+   "ko": "공이 물웅덩이에 빠졌어.",
+   "blank": "попал"
+  },
+  {
+   "text": "Как нам попасть внутрь?",
+   "en": "How do we get inside?",
+   "ko": "우리 어떻게 안으로 들어가?",
+   "blank": "попасть"
+  }
+ ],
+ "w|попробовать": [
+  {
+   "text": "Попробуй этот сыр.",
+   "en": "Try this cheese.",
+   "ko": "이 치즈 먹어 봐.",
+   "blank": "Попробуй"
+  },
+  {
+   "text": "Можно мне попробовать?",
+   "en": "Can I have a taste?",
+   "ko": "나도 맛봐도 돼?",
+   "blank": "попробовать"
+  }
+ ],
+ "w|попросить": [
+  {
+   "text": "Попроси прощения у мамы.",
+   "en": "Ask Mom to forgive you.",
+   "ko": "엄마한테 미안하다고 해.",
+   "blank": "Попроси"
+  },
+  {
+   "text": "Я попросил его подождать.",
+   "en": "I asked him to wait.",
+   "ko": "그에게 기다리라고 했어.",
+   "blank": "попросил"
+  }
+ ],
+ "w|пора": [
+  {
+   "text": "Пора спать.",
+   "en": "It's bedtime.",
+   "ko": "잘 시간이야.",
+   "blank": "Пора"
+  },
+  {
+   "text": "Ещё не пора.",
+   "en": "It's not time yet.",
+   "ko": "아직 때가 아니야.",
+   "blank": "пора"
+  }
+ ],
+ "w|порядок": [
+  {
+   "text": "Всё в порядке.",
+   "en": "Everything is fine.",
+   "ko": "다 괜찮아.",
+   "blank": "порядке"
+  },
+  {
+   "text": "Наведи порядок на столе.",
+   "en": "Tidy up the table.",
+   "ko": "탁자 좀 정리해.",
+   "blank": "порядок"
+  }
+ ],
+ "w|после": [
+  {
+   "text": "После тебя.",
+   "en": "After you.",
+   "ko": "네가 먼저.",
+   "blank": "После"
+  },
+  {
+   "text": "Созвонимся после обеда.",
+   "en": "Let's call after lunch.",
+   "ko": "점심 먹고 통화하자.",
+   "blank": "после"
+  }
+ ],
+ "w|последний": [
+  {
+   "text": "Это последний автобус.",
+   "en": "This is the last bus.",
+   "ko": "이게 마지막 버스야.",
+   "blank": "последний"
+  },
+  {
+   "text": "В последнюю секунду успел.",
+   "en": "I made it at the last second.",
+   "ko": "마지막 순간에 간신히 됐어.",
+   "blank": "последнюю"
+  }
+ ],
+ "w|послушать": [
+  {
+   "text": "Послушай эту песню.",
+   "en": "Listen to this song.",
+   "ko": "이 노래 좀 들어 봐.",
+   "blank": "Послушай"
+  },
+  {
+   "text": "Дай послушать.",
+   "en": "Let me have a listen.",
+   "ko": "나도 좀 듣게.",
+   "blank": "послушать"
+  }
+ ],
+ "w|посмотреть": [
+  {
+   "text": "Посмотри на небо.",
+   "en": "Look up at the sky.",
+   "ko": "하늘 좀 봐.",
+   "blank": "Посмотри"
+  },
+  {
+   "text": "Я посмотрю позже.",
+   "en": "I'll take a look later.",
+   "ko": "나중에 볼게.",
+   "blank": "посмотрю"
+  }
+ ],
+ "w|поставить": [
+  {
+   "text": "Поставь сумку сюда.",
+   "en": "Put the bag here.",
+   "ko": "가방은 여기 놔.",
+   "blank": "Поставь"
+  },
+  {
+   "text": "Куда поставить цветы?",
+   "en": "Where should I put the flowers?",
+   "ko": "꽃은 어디에 둘까?",
+   "blank": "поставить"
+  }
+ ],
+ "w|постоянно": [
+  {
+   "text": "Он постоянно опаздывает.",
+   "en": "He's always late.",
+   "ko": "그는 맨날 늦어.",
+   "blank": "постоянно"
+  },
+  {
+   "text": "Ты постоянно об этом говоришь.",
+   "en": "You keep talking about that.",
+   "ko": "너는 맨날 그 얘기만 해.",
+   "blank": "постоянно"
+  }
+ ],
+ "w|потерять": [
+  {
+   "text": "Не потеряй перчатки.",
+   "en": "Don't lose your gloves.",
+   "ko": "장갑 잃어버리지 마.",
+   "blank": "потеряй"
+  },
+  {
+   "text": "Я потерял ключи от дома.",
+   "en": "I lost the house keys.",
+   "ko": "집 열쇠를 잃어버렸어.",
+   "blank": "потерял"
+  }
+ ],
+ "w|потом": [
+  {
+   "text": "Сперва чай, потом разговор.",
+   "en": "Tea first, then we'll talk.",
+   "ko": "차 먼저 마시고 그다음에 얘기하자.",
+   "blank": "потом"
+  },
+  {
+   "text": "Потом объясню.",
+   "en": "I'll explain later.",
+   "ko": "나중에 설명할게.",
+   "blank": "Потом"
+  }
+ ],
+ "w|потому": [
+  {
+   "text": "Я молчу, потому что устал.",
+   "en": "I'm quiet because I'm tired.",
+   "ko": "피곤해서 말이 없어.",
+   "blank": "потому"
+  },
+  {
+   "text": "Потому и злюсь.",
+   "en": "That's why I'm angry.",
+   "ko": "그래서 화가 난 거야.",
+   "blank": "Потому"
+  }
+ ],
+ "w|похожий": [
+  {
+   "text": "Он похож на отца.",
+   "en": "He looks like his dad.",
+   "ko": "아버지를 닮았어.",
+   "blank": "похож"
+  },
+  {
+   "text": "У меня похожая куртка.",
+   "en": "I have a similar jacket.",
+   "ko": "나도 비슷한 점퍼가 있어.",
+   "blank": "похожая"
+  }
+ ],
+ "w|почему": [
+  {
+   "text": "Почему ты молчишь?",
+   "en": "Why are you so quiet?",
+   "ko": "왜 말이 없어?",
+   "blank": "Почему"
+  },
+  {
+   "text": "Не понимаю, почему.",
+   "en": "I don't understand why.",
+   "ko": "왜인지 모르겠어.",
+   "blank": "почему"
+  }
+ ],
+ "w|почти": [
+  {
+   "text": "Я почти доел суп.",
+   "en": "I've almost finished the soup.",
+   "ko": "수프 거의 다 먹었어.",
+   "blank": "почти"
+  },
+  {
+   "text": "Чай почти остыл.",
+   "en": "The tea has almost gone cold.",
+   "ko": "차가 거의 식었어.",
+   "blank": "почти"
+  }
+ ],
+ "w|поэтому": [
+  {
+   "text": "Я устал, поэтому молчу.",
+   "en": "I'm tired, so I'm keeping quiet.",
+   "ko": "피곤해서 말 안 해.",
+   "blank": "поэтому"
+  },
+  {
+   "text": "Дождь, поэтому мы дома.",
+   "en": "It's raining, so we're home.",
+   "ko": "비가 와서 집에 있어.",
+   "blank": "поэтому"
+  }
+ ],
+ "w|появиться": [
+  {
+   "text": "Он так и не появился.",
+   "en": "He never showed up.",
+   "ko": "그 사람은 결국 안 나타났어.",
+   "blank": "появился"
+  },
+  {
+   "text": "Скоро появится солнце.",
+   "en": "The sun will come out soon.",
+   "ko": "곧 해가 나올 거야.",
+   "blank": "появится"
+  }
+ ],
+ "w|правда": [
+  {
+   "text": "Скажи мне правду.",
+   "en": "Tell me the truth.",
+   "ko": "사실을 말해 줘.",
+   "blank": "правду"
+  },
+  {
+   "text": "Правда, уже поздно?",
+   "en": "Is it really already late?",
+   "ko": "정말 벌써 늦었어?",
+   "blank": "Правда"
+  }
+ ],
+ "w|правило": [
+  {
+   "text": "Правило простое.",
+   "en": "The rule is simple.",
+   "ko": "규칙은 단순해.",
+   "blank": "Правило"
+  },
+  {
+   "text": "Не нарушай правила.",
+   "en": "Don't break the rules.",
+   "ko": "규칙을 어기지 마.",
+   "blank": "правила"
+  }
+ ],
+ "w|правильный": [
+  {
+   "text": "Это правильный размер.",
+   "en": "This is the right size.",
+   "ko": "이게 맞는 사이즈야.",
+   "blank": "правильный"
+  },
+  {
+   "text": "Открой правильную дверь.",
+   "en": "Open the right door.",
+   "ko": "맞는 문을 열어.",
+   "blank": "правильную"
+  }
+ ],
+ "w|право": [
+  {
+   "text": "Это моё право.",
+   "en": "That's my right.",
+   "ko": "그건 내 권리야.",
+   "blank": "право"
+  },
+  {
+   "text": "Не имеешь права кричать.",
+   "en": "You have no right to shout.",
+   "ko": "소리 지를 권리는 없어.",
+   "blank": "права"
+  }
+ ],
+ "w|представить": [
+  {
+   "text": "Представь нас друг другу.",
+   "en": "Introduce us to each other.",
+   "ko": "우리 서로 소개해 줘.",
+   "blank": "Представь"
+  },
+  {
+   "text": "Я представил её маме.",
+   "en": "I introduced her to my mom.",
+   "ko": "나는 그 여자를 엄마께 소개했어.",
+   "blank": "представил"
+  }
+ ],
+ "w|представлять": [
+  {
+   "text": "Представляешь, он согласился!",
+   "en": "Can you imagine, he agreed!",
+   "ko": "상상이 돼? 그 사람이 동의했어!",
+   "blank": "Представляешь"
+  },
+  {
+   "text": "Я не представляю жизнь без чая.",
+   "en": "I can't imagine life without tea.",
+   "ko": "차 없는 삶은 상상이 안 돼.",
+   "blank": "представляю"
+  }
+ ],
+ "w|прежде": [
+  {
+   "text": "Прежде подумай, потом говори.",
+   "en": "Think first, then speak.",
+   "ko": "말하기 전에 먼저 생각해.",
+   "blank": "Прежде"
+  },
+  {
+   "text": "Прежде я жил у моря.",
+   "en": "I used to live by the sea.",
+   "ko": "예전에는 바닷가에 살았어.",
+   "blank": "Прежде"
+  }
+ ],
+ "w|президент": [
+  {
+   "text": "Президент выступит вечером.",
+   "en": "The president will speak this evening.",
+   "ko": "대통령이 저녁에 연설할 거야.",
+   "blank": "Президент"
+  },
+  {
+   "text": "Я видел президента.",
+   "en": "I saw the president.",
+   "ko": "나는 대통령을 봤어.",
+   "blank": "президента"
+  }
+ ],
+ "w|прекрасный": [
+  {
+   "text": "Сегодня прекрасный день.",
+   "en": "It's a beautiful day.",
+   "ko": "오늘은 정말 좋은 날이야.",
+   "blank": "прекрасный"
+  },
+  {
+   "text": "Прекрасная новость!",
+   "en": "Wonderful news!",
+   "ko": "정말 좋은 소식이야!",
+   "blank": "Прекрасная"
+  }
+ ],
+ "w|прекратить": [
+  {
+   "text": "Прекрати кричать.",
+   "en": "Stop shouting.",
+   "ko": "소리 지르지 마.",
+   "blank": "Прекрати"
+  },
+  {
+   "text": "Дождь прекратился.",
+   "en": "The rain stopped.",
+   "ko": "비가 그쳤어.",
+   "blank": "прекратился"
+  }
+ ],
+ "w|преступление": [
+  {
+   "text": "Это уже преступление.",
+   "en": "This is already a crime.",
+   "ko": "이건 이미 범죄야.",
+   "blank": "преступление"
+  },
+  {
+   "text": "Расследуют это преступление.",
+   "en": "They're investigating this crime.",
+   "ko": "이 범죄를 수사하고 있어.",
+   "blank": "преступление"
+  }
+ ],
+ "w|при": [
+  {
+   "text": "При детях так не говори.",
+   "en": "Don't talk like that around the children.",
+   "ko": "애들 앞에선 그렇게 말하지 마.",
+   "blank": "При"
+  },
+  {
+   "text": "Держи это при себе.",
+   "en": "Keep this to yourself.",
+   "ko": "이 얘기는 혼자만 알고 있어.",
+   "blank": "при"
+  }
+ ],
+ "w|привести": [
+  {
+   "text": "Приведи друга.",
+   "en": "Bring a friend.",
+   "ko": "친구 데리고 와.",
+   "blank": "Приведи"
+  },
+  {
+   "text": "Это ни к чему не привело.",
+   "en": "That led nowhere.",
+   "ko": "그건 아무 결과도 없었어.",
+   "blank": "привело"
+  }
+ ],
+ "w|привет": [
+  {
+   "text": "Привет, давно не виделись.",
+   "en": "Hi, it's been a while.",
+   "ko": "안녕, 오랜만이야.",
+   "blank": "Привет"
+  },
+  {
+   "text": "Передай ему привет.",
+   "en": "Say hi to him for me.",
+   "ko": "그 사람한테 안부 전해 줘.",
+   "blank": "привет"
+  }
+ ],
+ "w|приехать": [
+  {
+   "text": "Гости уже приехали.",
+   "en": "The guests have already arrived.",
+   "ko": "손님들은 이미 도착했어.",
+   "blank": "приехали"
+  },
+  {
+   "text": "Приезжай к ужину.",
+   "en": "Come over for dinner.",
+   "ko": "저녁 먹으러 와.",
+   "blank": "Приезжай"
+  }
+ ],
+ "w|прийти": [
+  {
+   "text": "Я приду попозже.",
+   "en": "I'll come a bit later.",
+   "ko": "조금 이따 갈게.",
+   "blank": "приду"
+  },
+  {
+   "text": "Он так и не пришёл.",
+   "en": "He never did show up.",
+   "ko": "그 사람은 결국 안 왔어.",
+   "blank": "пришёл"
+  }
+ ],
+ "w|прийтись": [
+  {
+   "text": "Пришлось идти пешком.",
+   "en": "I had to walk.",
+   "ko": "걸어서 가야 했어.",
+   "blank": "Пришлось"
+  },
+  {
+   "text": "Придётся всё повторить.",
+   "en": "We'll have to do it all again.",
+   "ko": "전부 다시 해야 해.",
+   "blank": "Придётся"
+  }
+ ],
+ "w|принести": [
+  {
+   "text": "Принеси, пожалуйста, плед.",
+   "en": "Please bring a blanket.",
+   "ko": "담요 좀 가져다줘.",
+   "blank": "Принеси"
+  },
+  {
+   "text": "Кто принёс этот торт?",
+   "en": "Who brought this cake?",
+   "ko": "이 케이크 누가 가져왔어?",
+   "blank": "принёс"
+  }
+ ],
+ "w|принимать": [
+  {
+   "text": "Я не принимаю такие подарки.",
+   "en": "I don't accept gifts like that.",
+   "ko": "나는 그런 선물은 안 받아.",
+   "blank": "принимаю"
+  },
+  {
+   "text": "Принимай решение сам.",
+   "en": "Make the decision yourself.",
+   "ko": "결정은 네가 직접 해.",
+   "blank": "Принимай"
+  }
+ ],
+ "w|принять": [
+  {
+   "text": "Прими мой совет.",
+   "en": "Take my advice.",
+   "ko": "내 말대로 해.",
+   "blank": "Прими"
+  },
+  {
+   "text": "Душ я уже принял.",
+   "en": "I already took a shower.",
+   "ko": "샤워는 이미 했어.",
+   "blank": "принял"
+  }
+ ],
+ "w|приходить": [
+  {
+   "text": "Приходи к чаю вечером.",
+   "en": "Come for tea in the evening.",
+   "ko": "저녁에 차 마시러 와.",
+   "blank": "Приходи"
+  },
+  {
+   "text": "Почта приходит после обеда.",
+   "en": "The mail comes after lunch.",
+   "ko": "우편은 점심 후에 와.",
+   "blank": "приходит"
+  }
+ ],
+ "w|причина": [
+  {
+   "text": "Причина вполне уважительная.",
+   "en": "The reason is perfectly valid.",
+   "ko": "이유는 충분히 납득돼.",
+   "blank": "Причина"
+  },
+  {
+   "text": "Без причины не уходи.",
+   "en": "Don't leave without a reason.",
+   "ko": "이유 없이 가지 마.",
+   "blank": "причины"
+  }
+ ],
+ "w|приятель": [
+  {
+   "text": "Это мой старый приятель.",
+   "en": "This is an old friend of mine.",
+   "ko": "이 사람은 내 오랜 친구야.",
+   "blank": "приятель"
+  },
+  {
+   "text": "Приятель, подожди меня.",
+   "en": "Buddy, wait for me.",
+   "ko": "친구야, 나 좀 기다려.",
+   "blank": "Приятель"
+  }
+ ],
+ "w|приятный": [
+  {
+   "text": "Какой приятный запах!",
+   "en": "What a nice smell!",
+   "ko": "냄새 정말 좋아!",
+   "blank": "приятный"
+  },
+  {
+   "text": "Вечер был приятным.",
+   "en": "The evening was pleasant.",
+   "ko": "저녁이 즐거웠어.",
+   "blank": "приятным"
+  }
+ ],
+ "w|про": [
+  {
+   "text": "Расскажи про работу.",
+   "en": "Tell me about work.",
+   "ko": "일 얘기 좀 해 봐.",
+   "blank": "про"
+  },
+  {
+   "text": "Это фильм про море.",
+   "en": "This is a movie about the sea.",
+   "ko": "이거 바다 영화야.",
+   "blank": "про"
+  }
+ ],
+ "w|проблема": [
+  {
+   "text": "У нас проблема.",
+   "en": "We've got a problem.",
+   "ko": "문제가 생겼어.",
+   "blank": "проблема"
+  },
+  {
+   "text": "Решим проблему потом.",
+   "en": "We'll deal with the problem later.",
+   "ko": "문제는 나중에 해결하자.",
+   "blank": "проблему"
+  }
+ ],
+ "w|проверить": [
+  {
+   "text": "Проверь карман куртки.",
+   "en": "Check your jacket pocket.",
+   "ko": "점퍼 주머니를 확인해 봐.",
+   "blank": "Проверь"
+  },
+  {
+   "text": "Я проверю, закрыт ли газ.",
+   "en": "I'll check whether the gas is off.",
+   "ko": "가스 잠겼는지 내가 확인할게.",
+   "blank": "проверю"
+  }
+ ],
+ "w|провести": [
+  {
+   "text": "Проведи нас к выходу.",
+   "en": "Lead us to the exit.",
+   "ko": "출구까지 안내해 줘.",
+   "blank": "Проведи"
+  },
+  {
+   "text": "Вечер мы провели тихо.",
+   "en": "We spent the evening quietly.",
+   "ko": "저녁은 조용히 보냈어.",
+   "blank": "провели"
+  }
+ ],
+ "w|проводить": [
+  {
+   "text": "Проводи гостя до лифта.",
+   "en": "See the guest to the elevator.",
+   "ko": "손님을 엘리베이터까지 바래다줘.",
+   "blank": "Проводи"
+  },
+  {
+   "text": "Вечер проводим дома.",
+   "en": "We're spending the evening at home.",
+   "ko": "저녁은 집에서 보내.",
+   "blank": "проводим"
+  }
+ ],
+ "w|продолжать": [
+  {
+   "text": "Продолжай, я слушаю.",
+   "en": "Go on, I'm listening.",
+   "ko": "계속해, 듣고 있어.",
+   "blank": "Продолжай"
+  },
+  {
+   "text": "Он продолжает молчать.",
+   "en": "He keeps staying silent.",
+   "ko": "그는 계속 말을 안 해.",
+   "blank": "продолжает"
+  }
+ ],
+ "w|произойти": [
+  {
+   "text": "Что тут произошло?",
+   "en": "What happened here?",
+   "ko": "여기서 무슨 일이 있었어?",
+   "blank": "произошло"
+  },
+  {
+   "text": "Так не должно было произойти.",
+   "en": "It shouldn't have happened like that.",
+   "ko": "그런 일이 일어나서는 안 됐어.",
+   "blank": "произойти"
+  }
+ ],
+ "w|происходить": [
+  {
+   "text": "Что тут происходит?",
+   "en": "What's going on here?",
+   "ko": "여기서 무슨 일이야?",
+   "blank": "происходит"
+  },
+  {
+   "text": "Такое редко происходит.",
+   "en": "That rarely happens.",
+   "ko": "그런 일은 드물어.",
+   "blank": "происходит"
+  }
+ ],
+ "w|пройти": [
+  {
+   "text": "Пройди, не стой.",
+   "en": "Go on through, don't just stand there.",
+   "ko": "지나가, 서 있지 마.",
+   "blank": "Пройди"
+  },
+  {
+   "text": "Гроза уже прошла.",
+   "en": "The thunderstorm has passed.",
+   "ko": "천둥비는 이미 그쳤어.",
+   "blank": "прошла"
+  }
+ ],
+ "w|просить": [
+  {
+   "text": "Я тебя прошу, сядь.",
+   "en": "I'm asking you, sit down.",
+   "ko": "부탁이니까 앉아.",
+   "blank": "прошу"
+  },
+  {
+   "text": "Он просил не ждать.",
+   "en": "He asked us not to wait.",
+   "ko": "기다리지 말라고 했어.",
+   "blank": "просил"
+  }
+ ],
+ "w|простить": [
+  {
+   "text": "Прости, я не расслышал.",
+   "en": "Sorry, I didn't catch that.",
+   "ko": "미안, 잘 못 들었어.",
+   "blank": "Прости"
+  },
+  {
+   "text": "Простите, можно пройти?",
+   "en": "Excuse me, may I get through?",
+   "ko": "실례합니다, 지나갈게요.",
+   "blank": "Простите"
+  }
+ ],
+ "w|просто": [
+  {
+   "text": "Просто скажи правду.",
+   "en": "Just tell the truth.",
+   "ko": "그냥 사실을 말해.",
+   "blank": "Просто"
+  },
+  {
+   "text": "Это просто шутка.",
+   "en": "It's just a joke.",
+   "ko": "그냥 농담이야.",
+   "blank": "просто"
+  }
+ ],
+ "w|против": [
+  {
+   "text": "Я совсем не против.",
+   "en": "I really don't mind.",
+   "ko": "나 전혀 반대 안 해.",
+   "blank": "против"
+  },
+  {
+   "text": "Идти против ветра тяжело.",
+   "en": "Walking against the wind is hard.",
+   "ko": "바람을 거슬러 걷기는 힘들어.",
+   "blank": "против"
+  }
+ ],
+ "w|проходить": [
+  {
+   "text": "Проходи, не толпись.",
+   "en": "Come through, don't crowd the doorway.",
+   "ko": "지나가, 입구를 막지 마.",
+   "blank": "Проходи"
+  },
+  {
+   "text": "Время быстро проходит.",
+   "en": "Time goes by fast.",
+   "ko": "시간이 빨리 가.",
+   "blank": "проходит"
+  }
+ ],
+ "w|прошлое": [
+  {
+   "text": "Забудь прошлое.",
+   "en": "Forget the past.",
+   "ko": "과거는 잊어.",
+   "blank": "прошлое"
+  },
+  {
+   "text": "Прошлое не вернёшь.",
+   "en": "You can't bring the past back.",
+   "ko": "과거는 되돌릴 수 없어.",
+   "blank": "Прошлое"
+  }
+ ],
+ "w|прошлый": [
+  {
+   "text": "На прошлой неделе я болел.",
+   "en": "I was sick last week.",
+   "ko": "지난주에 아팠어.",
+   "blank": "прошлой"
+  },
+  {
+   "text": "Прошлый раз ты обещал.",
+   "en": "Last time you promised.",
+   "ko": "지난번에는 약속했잖아.",
+   "blank": "Прошлый"
+  }
+ ],
+ "w|прощение": [
+  {
+   "text": "Прошу прощения.",
+   "en": "Excuse me.",
+   "ko": "실례했어.",
+   "blank": "прощения"
+  },
+  {
+   "text": "Прощения не будет.",
+   "en": "There'll be no forgiveness.",
+   "ko": "용서는 없을 거야.",
+   "blank": "Прощения"
+  }
+ ],
+ "w|прямо": [
+  {
+   "text": "Иди прямо.",
+   "en": "Go straight.",
+   "ko": "똑바로 가.",
+   "blank": "прямо"
+  },
+  {
+   "text": "Скажи это прямо.",
+   "en": "Say it straight.",
+   "ko": "돌려 말하지 말고 말해.",
+   "blank": "прямо"
+  }
+ ],
+ "w|пусть": [
+  {
+   "text": "Пусть суп немного остынет.",
+   "en": "Let the soup cool a little.",
+   "ko": "수프는 좀 식게 두자.",
+   "blank": "Пусть"
+  },
+  {
+   "text": "Пусть будет по-твоему.",
+   "en": "Have it your way.",
+   "ko": "네 마음대로 해.",
+   "blank": "Пусть"
+  }
+ ],
+ "w|путь": [
+  {
+   "text": "Путь пока свободен.",
+   "en": "The way is clear for now.",
+   "ko": "길은 아직 뚫려 있어.",
+   "blank": "Путь"
+  },
+  {
+   "text": "Счастливого пути, пиши.",
+   "en": "Have a good trip, write to me.",
+   "ko": "잘 다녀와, 연락해.",
+   "blank": "пути"
+  }
+ ],
+ "w|пытаться": [
+  {
+   "text": "Я пытаюсь уснуть.",
+   "en": "I'm trying to fall asleep.",
+   "ko": "자려고 애쓰고 있어.",
+   "blank": "пытаюсь"
+  },
+  {
+   "text": "Не пытайся врать.",
+   "en": "Don't try to lie.",
+   "ko": "거짓말하려고 들지 마.",
+   "blank": "пытайся"
+  }
+ ],
+ "w|пять": [
+  {
+   "text": "Дай пять, мы успели.",
+   "en": "High five, we made it.",
+   "ko": "하이파이브, 우리가 해냈어.",
+   "blank": "пять"
+  },
+  {
+   "text": "Возьми пять яблок, не больше.",
+   "en": "Take five apples, no more.",
+   "ko": "사과는 다섯 개만 가져가.",
+   "blank": "пять"
+  }
+ ],
+ "w|работа": [
+  {
+   "text": "Работа подождёт.",
+   "en": "Work can wait.",
+   "ko": "일은 나중에 해도 돼.",
+   "blank": "Работа"
+  },
+  {
+   "text": "Я устал от работы.",
+   "en": "I'm tired of the work.",
+   "ko": "나는 일이 지겨워.",
+   "blank": "работы"
+  }
+ ],
+ "w|работать": [
+  {
+   "text": "Я работаю из дома.",
+   "en": "I work from home.",
+   "ko": "나는 집에서 일해.",
+   "blank": "работаю"
+  },
+  {
+   "text": "Где ты работаешь?",
+   "en": "Where do you work?",
+   "ko": "너 어디서 일해?",
+   "blank": "работаешь"
+  }
+ ],
+ "w|равно": [
+  {
+   "text": "Мне всё равно, где сидеть.",
+   "en": "I don't care where I sit.",
+   "ko": "어디 앉든 나는 상관없어.",
+   "blank": "равно"
+  },
+  {
+   "text": "Тебе правда всё равно?",
+   "en": "Do you really not care?",
+   "ko": "너 정말 상관없어?",
+   "blank": "равно"
+  }
+ ],
+ "w|рад": [
+  {
+   "text": "Я так рад тебя видеть.",
+   "en": "I'm so glad to see you.",
+   "ko": "만나서 정말 반가워.",
+   "blank": "рад"
+  },
+  {
+   "text": "Мы рады гостям.",
+   "en": "We're glad to have guests.",
+   "ko": "손님 와서 반가워.",
+   "blank": "рады"
+  }
+ ],
+ "w|ради": [
+  {
+   "text": "Я остался ради тебя.",
+   "en": "I stayed for your sake.",
+   "ko": "널 위해서 남았어.",
+   "blank": "ради"
+  },
+  {
+   "text": "Ради шутки так не делают.",
+   "en": "You don't do that as a joke.",
+   "ko": "장난으로 그러면 안 되지.",
+   "blank": "Ради"
+  }
+ ],
+ "w|раз": [
+  {
+   "text": "Ещё раз, пожалуйста.",
+   "en": "One more time, please.",
+   "ko": "한 번만 더 해 줘.",
+   "blank": "раз"
+  },
+  {
+   "text": "В тот раз я опоздал.",
+   "en": "That time I was late.",
+   "ko": "그때는 내가 늦었어.",
+   "blank": "раз"
+  }
+ ],
+ "w|разве": [
+  {
+   "text": "Разве ты не слышал?",
+   "en": "Didn't you hear?",
+   "ko": "너 못 들었단 말이야?",
+   "blank": "Разве"
+  },
+  {
+   "text": "Я разве обещал?",
+   "en": "Did I even promise?",
+   "ko": "내가 약속하기라도 했어?",
+   "blank": "разве"
+  }
+ ],
+ "w|разговаривать": [
+  {
+   "text": "Мы ещё разговариваем.",
+   "en": "We're still talking.",
+   "ko": "우리 아직 얘기 중이야.",
+   "blank": "разговариваем"
+  },
+  {
+   "text": "Не разговаривай за едой.",
+   "en": "Don't talk while you eat.",
+   "ko": "밥 먹으면서 말하지 마.",
+   "blank": "разговаривай"
+  }
+ ],
+ "w|разговор": [
+  {
+   "text": "Какой тяжёлый разговор.",
+   "en": "What a heavy conversation.",
+   "ko": "정말 무거운 대화야.",
+   "blank": "разговор"
+  },
+  {
+   "text": "Отложим этот разговор.",
+   "en": "Let's put this conversation off.",
+   "ko": "이 대화는 나중에 하자.",
+   "blank": "разговор"
+  }
+ ],
+ "w|раньше": [
+  {
+   "text": "Раньше тут была пекарня.",
+   "en": "There used to be a bakery here.",
+   "ko": "예전에는 여기 빵집이 있었어.",
+   "blank": "Раньше"
+  },
+  {
+   "text": "В следующий раз приходи раньше.",
+   "en": "Come earlier next time.",
+   "ko": "다음엔 더 일찍 와.",
+   "blank": "раньше"
+  }
+ ],
+ "w|рассказать": [
+  {
+   "text": "Расскажи, как прошло.",
+   "en": "Tell me how it went.",
+   "ko": "어떻게 됐는지 말해 봐.",
+   "blank": "Расскажи"
+  },
+  {
+   "text": "Я всё расскажу.",
+   "en": "I'll tell you everything.",
+   "ko": "다 말해 줄게.",
+   "blank": "расскажу"
+  }
+ ],
+ "w|рассказывать": [
+  {
+   "text": "Бабушка рассказывает сказку.",
+   "en": "Grandma is telling a story.",
+   "ko": "할머니가 옛이야기를 들려주고 계셔.",
+   "blank": "рассказывает"
+  },
+  {
+   "text": "Не рассказывай это всем.",
+   "en": "Don't tell everyone this.",
+   "ko": "이건 아무한테나 말하지 마.",
+   "blank": "рассказывай"
+  }
+ ],
+ "w|ребёнок": [
+  {
+   "text": "Ребёнок уже спит.",
+   "en": "The child is already asleep.",
+   "ko": "아이는 이미 자.",
+   "blank": "Ребёнок"
+  },
+  {
+   "text": "Не буди ребёнка.",
+   "en": "Don't wake the child.",
+   "ko": "아이 깨우지 마.",
+   "blank": "ребёнка"
+  }
+ ],
+ "w|ребята": [
+  {
+   "text": "Ребята, тише!",
+   "en": "Hey guys, quiet!",
+   "ko": "얘들아, 조용히!",
+   "blank": "Ребята"
+  },
+  {
+   "text": "Наши ребята победили.",
+   "en": "Our team won.",
+   "ko": "우리 팀이 이겼어.",
+   "blank": "ребята"
+  }
+ ],
+ "w|речь": [
+  {
+   "text": "Речь идёт о деньгах.",
+   "en": "This is about money.",
+   "ko": "돈 얘기야.",
+   "blank": "Речь"
+  },
+  {
+   "text": "Его речь затянулась.",
+   "en": "His speech dragged on.",
+   "ko": "그의 연설이 질질 늘어졌어.",
+   "blank": "речь"
+  }
+ ],
+ "w|решение": [
+  {
+   "text": "Решение за тобой.",
+   "en": "The decision is yours.",
+   "ko": "결정은 네가 해.",
+   "blank": "Решение"
+  },
+  {
+   "text": "Без решения не уйду.",
+   "en": "I won't leave without a decision.",
+   "ko": "결정 없이는 안 가.",
+   "blank": "решения"
+  }
+ ],
+ "w|решить": [
+  {
+   "text": "Мы решили остаться.",
+   "en": "We decided to stay.",
+   "ko": "우리는 남기로 했어.",
+   "blank": "решили"
+  },
+  {
+   "text": "Реши сегодня.",
+   "en": "Decide today.",
+   "ko": "오늘 정해.",
+   "blank": "Реши"
+  }
+ ],
+ "w|родитель": [
+  {
+   "text": "Родители всё поймут.",
+   "en": "Your parents will understand.",
+   "ko": "부모님은 다 이해하실 거야.",
+   "blank": "Родители"
+  },
+  {
+   "text": "Без родителей не уезжай.",
+   "en": "Don't leave without your parents.",
+   "ko": "부모님 없이 떠나지 마.",
+   "blank": "родителей"
+  }
+ ],
+ "w|рождение": [
+  {
+   "text": "С днём рождения!",
+   "en": "Happy birthday!",
+   "ko": "생일 축하해!",
+   "blank": "рождения"
+  },
+  {
+   "text": "До рождения ребёнка остался месяц.",
+   "en": "There's a month left until the baby is born.",
+   "ko": "아기 태어나기까지 한 달 남았어.",
+   "blank": "рождения"
+  }
+ ],
+ "w|рубль": [
+  {
+   "text": "Рубли кончились.",
+   "en": "I'm out of rubles.",
+   "ko": "루블이 다 떨어졌어.",
+   "blank": "Рубли"
+  },
+  {
+   "text": "Заплати рублями.",
+   "en": "Pay in rubles.",
+   "ko": "루블로 내.",
+   "blank": "рублями"
+  }
+ ],
+ "w|рука": [
+  {
+   "text": "Дай руку.",
+   "en": "Give me your hand.",
+   "ko": "손 잡아.",
+   "blank": "руку"
+  },
+  {
+   "text": "Руки замёрзли.",
+   "en": "My hands are freezing.",
+   "ko": "손이 얼었어.",
+   "blank": "Руки"
+  }
+ ],
+ "w|рядом": [
+  {
+   "text": "Я рядом, не бойся.",
+   "en": "I'm right here, don't be afraid.",
+   "ko": "나 옆에 있어, 무서워하지 마.",
+   "blank": "рядом"
+  },
+  {
+   "text": "Школа совсем рядом.",
+   "en": "The school is very close.",
+   "ko": "학교는 바로 근처야.",
+   "blank": "рядом"
+  }
+ ],
+ "w|с": [
+  {
+   "text": "Я с работы.",
+   "en": "I'm coming from work.",
+   "ko": "퇴근하는 길이야.",
+   "blank": "с"
+  },
+  {
+   "text": "Поговори со мной.",
+   "en": "Talk to me.",
+   "ko": "나랑 얘기해.",
+   "blank": "со"
+  }
+ ],
+ "w|сам": [
+  {
+   "text": "Я сам открою дверь.",
+   "en": "I'll open the door myself.",
+   "ko": "문은 내가 직접 열게.",
+   "blank": "сам"
+  },
+  {
+   "text": "Она сама всё решила.",
+   "en": "She decided everything herself.",
+   "ko": "그 사람이 다 알아서 정했어.",
+   "blank": "сама"
+  }
+ ],
+ "w|самый": [
+  {
+   "text": "Это самый вкусный суп.",
+   "en": "This is the tastiest soup.",
+   "ko": "이게 제일 맛있는 수프야.",
+   "blank": "самый"
+  },
+  {
+   "text": "Самая тихая улица.",
+   "en": "The quietest street.",
+   "ko": "가장 조용한 길이야.",
+   "blank": "Самая"
+  }
+ ],
+ "w|сбежать": [
+  {
+   "text": "Он сбежал из дома.",
+   "en": "He ran away from home.",
+   "ko": "그는 가출했어.",
+   "blank": "сбежал"
+  },
+  {
+   "text": "Давай сбежим отсюда.",
+   "en": "Let's get out of here.",
+   "ko": "여기서 빠져나가자.",
+   "blank": "сбежим"
+  }
+ ],
+ "w|свадьба": [
+  {
+   "text": "Свадьба в субботу.",
+   "en": "The wedding is on Saturday.",
+   "ko": "결혼식은 토요일이야.",
+   "blank": "Свадьба"
+  },
+  {
+   "text": "Мы приглашены на свадьбу.",
+   "en": "We're invited to the wedding.",
+   "ko": "결혼식에 우리가 초대받았어.",
+   "blank": "свадьбу"
+  }
+ ],
+ "w|свет": [
+  {
+   "text": "Включи свет, темно.",
+   "en": "Turn the light on, it's dark.",
+   "ko": "불 켜, 어두워.",
+   "blank": "свет"
+  },
+  {
+   "text": "Свет режет глаза.",
+   "en": "The light hurts my eyes.",
+   "ko": "빛이 너무 눈부셔.",
+   "blank": "Свет"
+  }
+ ],
+ "w|свидание": [
+  {
+   "text": "У меня свидание.",
+   "en": "I have a date.",
+   "ko": "나 데이트 있어.",
+   "blank": "свидание"
+  },
+  {
+   "text": "Свидание перенесли.",
+   "en": "The date was moved.",
+   "ko": "데이트를 미뤘어.",
+   "blank": "Свидание"
+  }
+ ],
+ "w|свободный": [
+  {
+   "text": "Ты свободен вечером?",
+   "en": "Are you free this evening?",
+   "ko": "오늘 저녁에 시간 돼?",
+   "blank": "свободен"
+  },
+  {
+   "text": "Это место свободно.",
+   "en": "This seat is free.",
+   "ko": "이 자리는 비어 있어.",
+   "blank": "свободно"
+  }
+ ],
+ "w|свой": [
+  {
+   "text": "У каждого свой вкус.",
+   "en": "Everyone has their own taste.",
+   "ko": "사람마다 취향이 달라.",
+   "blank": "свой"
+  },
+  {
+   "text": "Возьми свою куртку.",
+   "en": "Take your jacket.",
+   "ko": "네 재킷 가져와.",
+   "blank": "свою"
+  }
+ ],
+ "w|связь": [
+  {
+   "text": "Связи нет, перезвоню.",
+   "en": "There's no signal, I'll call back.",
+   "ko": "신호가 없어서 다시 전화할게.",
+   "blank": "Связи"
+  },
+  {
+   "text": "Держи со мной связь.",
+   "en": "Keep in touch with me.",
+   "ko": "나랑 연락하고 지내.",
+   "blank": "связь"
+  }
+ ],
+ "w|сделать": [
+  {
+   "text": "Сделай, пожалуйста, чай.",
+   "en": "Please make some tea.",
+   "ko": "차 좀 끓여 줘.",
+   "blank": "Сделай"
+  },
+  {
+   "text": "Я уже всё сделал.",
+   "en": "I've already finished it all.",
+   "ko": "나는 이미 다 했어.",
+   "blank": "сделал"
+  }
+ ],
+ "w|себя": [
+  {
+   "text": "Береги себя.",
+   "en": "Take care of yourself.",
+   "ko": "몸 조심해.",
+   "blank": "себя"
+  },
+  {
+   "text": "Возьми себе стул.",
+   "en": "Grab yourself a chair.",
+   "ko": "의자 하나 가져다 앉아.",
+   "blank": "себе"
+  }
+ ],
+ "w|сегодня": [
+  {
+   "text": "Сегодня я свободен.",
+   "en": "I'm free today.",
+   "ko": "오늘 나는 한가해.",
+   "blank": "Сегодня"
+  },
+  {
+   "text": "Что у нас сегодня?",
+   "en": "What do we have on today?",
+   "ko": "오늘 우리 뭐 해?",
+   "blank": "сегодня"
+  }
+ ],
+ "w|сейчас": [
+  {
+   "text": "Сейчас, одну минуту.",
+   "en": "Just a minute.",
+   "ko": "잠깐만.",
+   "blank": "Сейчас"
+  },
+  {
+   "text": "Я сейчас занят.",
+   "en": "I'm busy right now.",
+   "ko": "나 지금 바빠.",
+   "blank": "сейчас"
+  }
+ ],
+ "w|секунда": [
+  {
+   "text": "Секунду, не клади трубку.",
+   "en": "One second, don't hang up.",
+   "ko": "잠깐, 전화 끊지 마.",
+   "blank": "Секунду"
+  },
+  {
+   "text": "В ту секунду я замер.",
+   "en": "In that second I froze.",
+   "ko": "그 순간에 나는 얼어붙었어.",
+   "blank": "секунду"
+  }
+ ],
+ "w|семья": [
+  {
+   "text": "Вся семья в сборе.",
+   "en": "The whole family is here.",
+   "ko": "식구가 다 모였어.",
+   "blank": "семья"
+  },
+  {
+   "text": "Семья ждёт нас.",
+   "en": "The family is waiting for us.",
+   "ko": "식구들이 우리를 기다려.",
+   "blank": "Семья"
+  }
+ ],
+ "w|сердце": [
+  {
+   "text": "Сердце так и колотится.",
+   "en": "My heart keeps pounding.",
+   "ko": "심장이 계속 뛰어.",
+   "blank": "Сердце"
+  },
+  {
+   "text": "Спасибо от всего сердца.",
+   "en": "Thank you from the bottom of my heart.",
+   "ko": "마음 깊이 고마워.",
+   "blank": "сердца"
+  }
+ ],
+ "w|серьёзно": [
+  {
+   "text": "Ты серьёзно?",
+   "en": "Are you serious?",
+   "ko": "진짜야?",
+   "blank": "серьёзно"
+  },
+  {
+   "text": "Я серьёзно говорю.",
+   "en": "I'm being serious.",
+   "ko": "나 진담으로 말하는 거야.",
+   "blank": "серьёзно"
+  }
+ ],
+ "w|серьёзный": [
+  {
+   "text": "Разговор будет серьёзный.",
+   "en": "The talk is going to be serious.",
+   "ko": "대화는 진지할 거야.",
+   "blank": "серьёзный"
+  },
+  {
+   "text": "Это серьёзное дело.",
+   "en": "This is a serious matter.",
+   "ko": "이건 심각한 일이야.",
+   "blank": "серьёзное"
+  }
+ ],
+ "w|сестра": [
+  {
+   "text": "Сестра одолжила мне платье.",
+   "en": "My sister lent me a dress.",
+   "ko": "여동생이 원피스를 빌려 줬어.",
+   "blank": "Сестра"
+  },
+  {
+   "text": "Позвони сестре, она волнуется.",
+   "en": "Call your sister, she's worried.",
+   "ko": "여동생에게 전화해, 걱정하고 있어.",
+   "blank": "сестре"
+  }
+ ],
+ "w|сидеть": [
+  {
+   "text": "Кот сидит на окне.",
+   "en": "The cat is sitting in the window.",
+   "ko": "고양이가 창가에 앉아 있어.",
+   "blank": "сидит"
+  },
+  {
+   "text": "Сиди тихо, малыш спит.",
+   "en": "Sit quietly, the baby is sleeping.",
+   "ko": "조용히 앉아, 아기가 자.",
+   "blank": "Сиди"
+  }
+ ],
+ "w|сила": [
+  {
+   "text": "Нет сил даже говорить.",
+   "en": "I don't even have the strength to talk.",
+   "ko": "말할 힘도 없어.",
+   "blank": "сил"
+  },
+  {
+   "text": "Собери силы, мы почти там.",
+   "en": "Gather your strength, we're almost there.",
+   "ko": "힘 내, 거의 다 왔어.",
+   "blank": "силы"
+  }
+ ],
+ "w|сильно": [
+  {
+   "text": "Я сильно устал.",
+   "en": "I'm really tired.",
+   "ko": "나 엄청 피곤해.",
+   "blank": "сильно"
+  },
+  {
+   "text": "Не хлопай дверью так сильно.",
+   "en": "Don't slam the door so hard.",
+   "ko": "문을 그렇게 세게 닫지 마.",
+   "blank": "сильно"
+  }
+ ],
+ "w|сильный": [
+  {
+   "text": "Ветер сегодня сильный.",
+   "en": "The wind is strong today.",
+   "ko": "오늘 바람이 세.",
+   "blank": "сильный"
+  },
+  {
+   "text": "Чай слишком сильный.",
+   "en": "The tea is too strong.",
+   "ko": "차가 너무 진해.",
+   "blank": "сильный"
+  }
+ ],
+ "w|система": [
+  {
+   "text": "Система опять зависла.",
+   "en": "The system froze again.",
+   "ko": "시스템이 또 멈췄어.",
+   "blank": "Система"
+  },
+  {
+   "text": "Я не понимаю эту систему.",
+   "en": "I don't understand this system.",
+   "ko": "나는 이 시스템이 이해가 안 돼.",
+   "blank": "систему"
+  }
+ ],
+ "w|ситуация": [
+  {
+   "text": "Ситуация неприятная.",
+   "en": "This is an unpleasant situation.",
+   "ko": "상황이 안 좋아.",
+   "blank": "Ситуация"
+  },
+  {
+   "text": "В такой ситуации лучше молчать.",
+   "en": "In a situation like this, better keep quiet.",
+   "ko": "이런 상황에서는 그냥 입을 다물어.",
+   "blank": "ситуации"
+  }
+ ],
+ "w|сказать": [
+  {
+   "text": "Скажи правду.",
+   "en": "Tell the truth.",
+   "ko": "사실을 말해.",
+   "blank": "Скажи"
+  },
+  {
+   "text": "Я уже сказал.",
+   "en": "I already said it.",
+   "ko": "나는 이미 말했어.",
+   "blank": "сказал"
+  }
+ ],
+ "w|сколько": [
+  {
+   "text": "Сколько с меня?",
+   "en": "How much do I owe?",
+   "ko": "얼마 내면 돼?",
+   "blank": "Сколько"
+  },
+  {
+   "text": "Сколько людей пришло?",
+   "en": "How many people came?",
+   "ko": "사람이 몇이나 왔어?",
+   "blank": "Сколько"
+  }
+ ],
+ "w|скорее": [
+  {
+   "text": "Скорее к столу, стынет.",
+   "en": "Hurry to the table, it's getting cold.",
+   "ko": "빨리 식탁으로 와, 식어.",
+   "blank": "Скорее"
+  },
+  {
+   "text": "Скорее всего, он забыл.",
+   "en": "Most likely he forgot.",
+   "ko": "아마 잊어버렸을 거야.",
+   "blank": "Скорее"
+  }
+ ],
+ "w|скоро": [
+  {
+   "text": "Скоро суп будет готов.",
+   "en": "The soup will be ready soon.",
+   "ko": "수프 곧 다 돼.",
+   "blank": "Скоро"
+  },
+  {
+   "text": "Зима уже скоро.",
+   "en": "Winter is almost here.",
+   "ko": "곧 겨울이야.",
+   "blank": "скоро"
+  }
+ ],
+ "w|следить": [
+  {
+   "text": "Следи за дорогой.",
+   "en": "Watch the road.",
+   "ko": "길 잘 봐.",
+   "blank": "Следи"
+  },
+  {
+   "text": "Я слежу за посылкой.",
+   "en": "I'm tracking the package.",
+   "ko": "택배가 어디쯤인지 보고 있어.",
+   "blank": "слежу"
+  }
+ ],
+ "w|следовать": [
+  {
+   "text": "Следуй за мной, не отставай.",
+   "en": "Follow me, don't fall behind.",
+   "ko": "따라와, 뒤처지지 마.",
+   "blank": "Следуй"
+  },
+  {
+   "text": "Я следую рецепту.",
+   "en": "I'm following the recipe.",
+   "ko": "나는 조리법대로 하고 있어.",
+   "blank": "следую"
+  }
+ ],
+ "w|следующий": [
+  {
+   "text": "Кто следующий?",
+   "en": "Who's next?",
+   "ko": "다음이 누구야?",
+   "blank": "следующий"
+  },
+  {
+   "text": "Увидимся на следующей неделе.",
+   "en": "See you next week.",
+   "ko": "다음 주에 보자.",
+   "blank": "следующей"
+  }
+ ],
+ "w|слишком": [
+  {
+   "text": "Слишком жарко.",
+   "en": "It's too hot.",
+   "ko": "너무 더워.",
+   "blank": "Слишком"
+  },
+  {
+   "text": "Ты слишком громко.",
+   "en": "You're too loud.",
+   "ko": "너 너무 시끄러워.",
+   "blank": "слишком"
+  }
+ ],
+ "w|слово": [
+  {
+   "text": "Я дал слово.",
+   "en": "I gave my word.",
+   "ko": "내가 약속했어.",
+   "blank": "слово"
+  },
+  {
+   "text": "Одним словом, нет.",
+   "en": "In short, no.",
+   "ko": "한마디로, 안 돼.",
+   "blank": "словом"
+  }
+ ],
+ "w|сложный": [
+  {
+   "text": "День выдался сложный.",
+   "en": "The day turned out rough.",
+   "ko": "오늘 하루가 힘들었어.",
+   "blank": "сложный"
+  },
+  {
+   "text": "Задача слишком сложная.",
+   "en": "The task is too hard.",
+   "ko": "과제가 너무 어려워.",
+   "blank": "сложная"
+  }
+ ],
+ "w|случай": [
+  {
+   "text": "Возьми зонт на всякий случай.",
+   "en": "Take an umbrella just in case.",
+   "ko": "혹시 모르니 우산 가져가.",
+   "blank": "случай"
+  },
+  {
+   "text": "Такой случай не упусти.",
+   "en": "Don't miss a chance like this.",
+   "ko": "이런 기회는 놓치지 마.",
+   "blank": "случай"
+  }
+ ],
+ "w|случиться": [
+  {
+   "text": "Что случилось?",
+   "en": "What happened?",
+   "ko": "무슨 일이야?",
+   "blank": "случилось"
+  },
+  {
+   "text": "Так и случится.",
+   "en": "That's how it'll happen.",
+   "ko": "그렇게 될 거야.",
+   "blank": "случится"
+  }
+ ],
+ "w|слушать": [
+  {
+   "text": "Слушай, я не шучу.",
+   "en": "Listen, I'm not joking.",
+   "ko": "야, 나 농담 아니야.",
+   "blank": "Слушай"
+  },
+  {
+   "text": "Я слушаю, говори.",
+   "en": "I'm listening, go ahead.",
+   "ko": "듣고 있으니 말해.",
+   "blank": "слушаю"
+  }
+ ],
+ "w|слышать": [
+  {
+   "text": "Я тебя плохо слышу.",
+   "en": "I can barely hear you.",
+   "ko": "네 말이 잘 안 들려.",
+   "blank": "слышу"
+  },
+  {
+   "text": "Ты слышал гром?",
+   "en": "Did you hear the thunder?",
+   "ko": "천둥 소리 들었어?",
+   "blank": "слышал"
+  }
+ ],
+ "w|смерть": [
+  {
+   "text": "Я до смерти устал.",
+   "en": "I'm dead tired.",
+   "ko": "피곤해서 죽겠어.",
+   "blank": "смерти"
+  },
+  {
+   "text": "Это же не смерть.",
+   "en": "This isn't a matter of life and death.",
+   "ko": "죽는 일도 아니잖아.",
+   "blank": "смерть"
+  }
+ ],
+ "w|смешной": [
+  {
+   "text": "Ну и смешной же ты.",
+   "en": "You're so funny.",
+   "ko": "너 정말 웃겨.",
+   "blank": "смешной"
+  },
+  {
+   "text": "Смешная история, расскажи.",
+   "en": "Funny story, go on.",
+   "ko": "웃긴 얘기네, 해 봐.",
+   "blank": "Смешная"
+  }
+ ],
+ "w|смотреть": [
+  {
+   "text": "Смотри, какая луна.",
+   "en": "Look at that moon.",
+   "ko": "봐, 달 좀 봐.",
+   "blank": "Смотри"
+  },
+  {
+   "text": "Я смотрю в окно.",
+   "en": "I'm looking out the window.",
+   "ko": "나는 창밖을 보고 있어.",
+   "blank": "смотрю"
+  }
+ ],
+ "w|смочь": [
+  {
+   "text": "Я не смогу завтра.",
+   "en": "I won't be able to tomorrow.",
+   "ko": "내일은 못 해.",
+   "blank": "смогу"
+  },
+  {
+   "text": "Ты сможешь один?",
+   "en": "Can you manage on your own?",
+   "ko": "혼자 할 수 있겠어?",
+   "blank": "сможешь"
+  }
+ ],
+ "w|смысл": [
+  {
+   "text": "В этом нет смысла.",
+   "en": "There's no point in this.",
+   "ko": "이건 의미가 없어.",
+   "blank": "смысла"
+  },
+  {
+   "text": "Какой смысл спорить?",
+   "en": "What's the point of arguing?",
+   "ko": "말다툼해서 뭐 해?",
+   "blank": "смысл"
+  }
+ ],
+ "w|сначала": [
+  {
+   "text": "Сначала поешь.",
+   "en": "Eat first.",
+   "ko": "먼저 먹어.",
+   "blank": "Сначала"
+  },
+  {
+   "text": "Сначала я не понял.",
+   "en": "I didn't get it at first.",
+   "ko": "처음에는 이해를 못 했어.",
+   "blank": "Сначала"
+  }
+ ],
+ "w|снова": [
+  {
+   "text": "Он снова опоздал.",
+   "en": "He's late again.",
+   "ko": "또 늦었어.",
+   "blank": "снова"
+  },
+  {
+   "text": "Попробуй снова.",
+   "en": "Try again.",
+   "ko": "다시 해 봐.",
+   "blank": "снова"
+  }
+ ],
+ "w|снять": [
+  {
+   "text": "Сними куртку.",
+   "en": "Take your jacket off.",
+   "ko": "점퍼 벗어.",
+   "blank": "Сними"
+  },
+  {
+   "text": "Мы сняли квартиру.",
+   "en": "We rented an apartment.",
+   "ko": "우리는 집을 빌렸어.",
+   "blank": "сняли"
+  }
+ ],
+ "w|собака": [
+  {
+   "text": "Собака лает у двери.",
+   "en": "The dog is barking at the door.",
+   "ko": "개가 문 앞에서 짖고 있어.",
+   "blank": "Собака"
+  },
+  {
+   "text": "Выгуляй собаку.",
+   "en": "Walk the dog.",
+   "ko": "개 산책시켜.",
+   "blank": "собаку"
+  }
+ ],
+ "w|собираться": [
+  {
+   "text": "Мы собираемся у метро.",
+   "en": "We're meeting at the metro.",
+   "ko": "우리는 지하철역에서 모일 거야.",
+   "blank": "собираемся"
+  },
+  {
+   "text": "Я уже собираюсь.",
+   "en": "I'm already getting ready.",
+   "ko": "나 벌써 준비 중이야.",
+   "blank": "собираюсь"
+  }
+ ],
+ "w|собственный": [
+  {
+   "text": "У него собственный дом.",
+   "en": "He has his own house.",
+   "ko": "그 사람한테는 자기 집이 있어.",
+   "blank": "собственный"
+  },
+  {
+   "text": "Это моё собственное мнение.",
+   "en": "That's my own opinion.",
+   "ko": "그건 내 개인적인 생각이야.",
+   "blank": "собственное"
+  }
+ ],
+ "w|совершенно": [
+  {
+   "text": "Я совершенно забыл.",
+   "en": "I completely forgot.",
+   "ko": "완전히 깜빡했어.",
+   "blank": "совершенно"
+  },
+  {
+   "text": "Ты совершенно прав.",
+   "en": "You're absolutely right.",
+   "ko": "너 완전히 맞아.",
+   "blank": "совершенно"
+  }
+ ],
+ "w|совсем": [
+  {
+   "text": "Я совсем забыл.",
+   "en": "I completely forgot.",
+   "ko": "완전히 깜빡했어.",
+   "blank": "совсем"
+  },
+  {
+   "text": "Совсем другое дело.",
+   "en": "That's a whole different matter.",
+   "ko": "그건 전혀 다른 일이야.",
+   "blank": "Совсем"
+  }
+ ],
+ "w|согласный": [
+  {
+   "text": "Я с тобой согласен.",
+   "en": "I agree with you.",
+   "ko": "나는 네 말에 동의해.",
+   "blank": "согласен"
+  },
+  {
+   "text": "Ты со мной согласна?",
+   "en": "Do you agree with me?",
+   "ko": "너 내 말에 동의해?",
+   "blank": "согласна"
+  }
+ ],
+ "w|сон": [
+  {
+   "text": "Мне снился странный сон.",
+   "en": "I had a strange dream.",
+   "ko": "이상한 꿈을 꿨어.",
+   "blank": "сон"
+  },
+  {
+   "text": "Сна не хватает.",
+   "en": "I don't get enough sleep.",
+   "ko": "잠이 모자라.",
+   "blank": "Сна"
+  }
+ ],
+ "w|сообщение": [
+  {
+   "text": "Сообщение не дошло.",
+   "en": "The message didn't arrive.",
+   "ko": "메시지가 안 갔어.",
+   "blank": "Сообщение"
+  },
+  {
+   "text": "В сообщении опечатка.",
+   "en": "There's a typo in the message.",
+   "ko": "메시지에 오타가 있어.",
+   "blank": "сообщении"
+  }
+ ],
+ "w|состояние": [
+  {
+   "text": "Состояние пока стабильное.",
+   "en": "The condition is stable for now.",
+   "ko": "상태는 아직 안정적이야.",
+   "blank": "Состояние"
+  },
+  {
+   "text": "В таком состоянии не садись за руль.",
+   "en": "Don't drive in that condition.",
+   "ko": "그런 상태로는 운전하지 마.",
+   "blank": "состоянии"
+  }
+ ],
+ "w|спасибо": [
+  {
+   "text": "Спасибо, мне хватит.",
+   "en": "Thanks, I've had enough.",
+   "ko": "고마워, 나는 충분해.",
+   "blank": "Спасибо"
+  },
+  {
+   "text": "Большое спасибо за помощь.",
+   "en": "Thank you so much for the help.",
+   "ko": "도와줘서 정말 고마워.",
+   "blank": "спасибо"
+  }
+ ],
+ "w|спасти": [
+  {
+   "text": "Зонт нас спас от ливня.",
+   "en": "The umbrella saved us from the downpour.",
+   "ko": "우산 덕분에 소나기를 피했어.",
+   "blank": "спас"
+  },
+  {
+   "text": "Спаси файл, батарея садится.",
+   "en": "Save the file, the battery is dying.",
+   "ko": "배터리 나가니 파일을 저장해.",
+   "blank": "Спаси"
+  }
+ ],
+ "w|спать": [
+  {
+   "text": "Я хочу спать.",
+   "en": "I'm sleepy.",
+   "ko": "나 자고 싶어.",
+   "blank": "спать"
+  },
+  {
+   "text": "Не шуми, мама спит.",
+   "en": "Keep it down, mom is asleep.",
+   "ko": "조용히 해, 엄마 주무셔.",
+   "blank": "спит"
+  }
+ ],
+ "w|список": [
+  {
+   "text": "Список на холодильнике.",
+   "en": "The list is on the fridge.",
+   "ko": "목록은 냉장고에 있어.",
+   "blank": "Список"
+  },
+  {
+   "text": "Добавь молоко в список.",
+   "en": "Add milk to the list.",
+   "ko": "목록에 우유를 넣어.",
+   "blank": "список"
+  }
+ ],
+ "w|спокойный": [
+  {
+   "text": "Голос у него спокойный.",
+   "en": "His voice is calm.",
+   "ko": "그 사람 목소리는 차분해.",
+   "blank": "спокойный"
+  },
+  {
+   "text": "Море сегодня спокойное.",
+   "en": "The sea is calm today.",
+   "ko": "오늘 바다는 잔잔해.",
+   "blank": "спокойное"
+  }
+ ],
+ "w|способ": [
+  {
+   "text": "Есть способ проще.",
+   "en": "There's an easier way.",
+   "ko": "더 쉬운 방법이 있어.",
+   "blank": "способ"
+  },
+  {
+   "text": "Таким способом не выйдет.",
+   "en": "It won't work that way.",
+   "ko": "그 방법으로는 안 돼.",
+   "blank": "способом"
+  }
+ ],
+ "w|справиться": [
+  {
+   "text": "Я справлюсь сам.",
+   "en": "I'll handle it myself.",
+   "ko": "내가 알아서 할게.",
+   "blank": "справлюсь"
+  },
+  {
+   "text": "Ты справилась отлично.",
+   "en": "You handled it beautifully.",
+   "ko": "너 정말 잘해냈어.",
+   "blank": "справилась"
+  }
+ ],
+ "w|спрашивать": [
+  {
+   "text": "Не спрашивай меня.",
+   "en": "Don't ask me.",
+   "ko": "나한테 묻지 마.",
+   "blank": "спрашивай"
+  },
+  {
+   "text": "Все спрашивают про тебя.",
+   "en": "Everyone's asking about you.",
+   "ko": "다들 네 소식을 물어.",
+   "blank": "спрашивают"
+  }
+ ],
+ "w|спросить": [
+  {
+   "text": "Спроси дорогу у прохожего.",
+   "en": "Ask a passerby for directions.",
+   "ko": "지나가는 사람에게 길을 물어봐.",
+   "blank": "Спроси"
+  },
+  {
+   "text": "Я уже спросил время.",
+   "en": "I already asked the time.",
+   "ko": "시간은 이미 물어봤어.",
+   "blank": "спросил"
+  }
+ ],
+ "w|сразу": [
+  {
+   "text": "Я сразу понял.",
+   "en": "I understood right away.",
+   "ko": "바로 이해했어.",
+   "blank": "сразу"
+  },
+  {
+   "text": "Приходи сразу после работы.",
+   "en": "Come right after work.",
+   "ko": "퇴근하자마자 와.",
+   "blank": "сразу"
+  }
+ ],
+ "w|становиться": [
+  {
+   "text": "На улице становится темно.",
+   "en": "It's getting dark outside.",
+   "ko": "밖이 점점 어두워져.",
+   "blank": "становится"
+  },
+  {
+   "text": "Не становись в дверях.",
+   "en": "Don't stand in the doorway.",
+   "ko": "문간에 서 있지 마.",
+   "blank": "становись"
+  }
+ ],
+ "w|старый": [
+  {
+   "text": "Старый свитер ещё тёплый.",
+   "en": "The old sweater is still warm.",
+   "ko": "헌 스웨터인데 아직 따뜻해.",
+   "blank": "Старый"
+  },
+  {
+   "text": "Мы старые друзья.",
+   "en": "We're old friends.",
+   "ko": "우리는 오래된 친구야.",
+   "blank": "старые"
+  }
+ ],
+ "w|стать": [
+  {
+   "text": "Он стал спокойнее.",
+   "en": "He's become calmer.",
+   "ko": "그 사람은 더 차분해졌어.",
+   "blank": "стал"
+  },
+  {
+   "text": "Кем ты хочешь стать?",
+   "en": "What do you want to be?",
+   "ko": "너는 뭐가 되고 싶어?",
+   "blank": "стать"
+  }
+ ],
+ "w|стоить": [
+  {
+   "text": "Это дорого стоит.",
+   "en": "That costs a lot.",
+   "ko": "그거 비싸.",
+   "blank": "стоит"
+  },
+  {
+   "text": "Не стоит спорить.",
+   "en": "It's not worth arguing.",
+   "ko": "말다툼할 필요 없어.",
+   "blank": "стоит"
+  }
+ ],
+ "w|стол": [
+  {
+   "text": "Стол у окна занят.",
+   "en": "The table by the window is taken.",
+   "ko": "창가 테이블은 이미 찼어.",
+   "blank": "Стол"
+  },
+  {
+   "text": "Накрой стол, гости тут.",
+   "en": "Set the table, the guests are here.",
+   "ko": "상 차려, 손님들 왔어.",
+   "blank": "стол"
+  }
+ ],
+ "w|столько": [
+  {
+   "text": "Зачем столько соли?",
+   "en": "Why so much salt?",
+   "ko": "소금이 왜 이렇게 많아?",
+   "blank": "столько"
+  },
+  {
+   "text": "Тут столько людей.",
+   "en": "There are so many people here.",
+   "ko": "여기 사람이 정말 많아.",
+   "blank": "столько"
+  }
+ ],
+ "w|сторона": [
+  {
+   "text": "Перейди на ту сторону.",
+   "en": "Cross to that side.",
+   "ko": "저쪽으로 건너가.",
+   "blank": "сторону"
+  },
+  {
+   "text": "Я на твоей стороне.",
+   "en": "I'm on your side.",
+   "ko": "나는 네 편이야.",
+   "blank": "стороне"
+  }
+ ],
+ "w|стоять": [
+  {
+   "text": "Стой, не переходи.",
+   "en": "Stop, don't cross yet.",
+   "ko": "멈춰, 아직 건너지 마.",
+   "blank": "Стой"
+  },
+  {
+   "text": "Ваза стоит на окне.",
+   "en": "The vase is on the windowsill.",
+   "ko": "꽃병이 창턱에 있어.",
+   "blank": "стоит"
+  }
+ ],
+ "w|страна": [
+  {
+   "text": "Страна у нас большая.",
+   "en": "Our country is big.",
+   "ko": "우리나라는 커.",
+   "blank": "Страна"
+  },
+  {
+   "text": "В этой стране жарко.",
+   "en": "It's hot in this country.",
+   "ko": "이 나라는 더워.",
+   "blank": "стране"
+  }
+ ],
+ "w|странный": [
+  {
+   "text": "Странный шум из кладовки.",
+   "en": "There's a strange noise from the closet.",
+   "ko": "창고에서 이상한 소리가 나.",
+   "blank": "Странный"
+  },
+  {
+   "text": "Какая странная тишина!",
+   "en": "What a strange silence!",
+   "ko": "이상하게 조용하네!",
+   "blank": "странная"
+  }
+ ],
+ "w|страшный": [
+  {
+   "text": "Фильм совсем не страшный.",
+   "en": "The film isn't scary at all.",
+   "ko": "영화는 하나도 안 무서워.",
+   "blank": "страшный"
+  },
+  {
+   "text": "Мне стало страшно.",
+   "en": "I got scared.",
+   "ko": "무서워졌어.",
+   "blank": "страшно"
+  }
+ ],
+ "w|стрелять": [
+  {
+   "text": "Не стреляй, это я.",
+   "en": "Don't shoot, it's me.",
+   "ko": "쏘지 마, 나야.",
+   "blank": "стреляй"
+  },
+  {
+   "text": "Где-то стреляют.",
+   "en": "Someone is shooting somewhere.",
+   "ko": "어디선가 총을 쏘고 있어.",
+   "blank": "стреляют"
+  }
+ ],
+ "w|суд": [
+  {
+   "text": "Суд отложили.",
+   "en": "The hearing was postponed.",
+   "ko": "재판이 미뤄졌어.",
+   "blank": "Суд"
+  },
+  {
+   "text": "Дело передали в суд.",
+   "en": "The case went to court.",
+   "ko": "사건이 법원으로 넘어갔어.",
+   "blank": "суд"
+  }
+ ],
+ "w|счастливый": [
+  {
+   "text": "Я сегодня так счастлив.",
+   "en": "I'm so happy today.",
+   "ko": "오늘 정말 행복해.",
+   "blank": "счастлив"
+  },
+  {
+   "text": "Какой счастливый день!",
+   "en": "What a happy day!",
+   "ko": "정말 행복한 날이네!",
+   "blank": "счастливый"
+  }
+ ],
+ "w|счёт": [
+  {
+   "text": "Принеси счёт, пожалуйста.",
+   "en": "Bring the check, please.",
+   "ko": "계산서 좀 주세요.",
+   "blank": "счёт"
+  },
+  {
+   "text": "Счёт уже оплачен.",
+   "en": "The bill is already paid.",
+   "ko": "계산은 이미 끝났어.",
+   "blank": "Счёт"
+  }
+ ],
+ "w|считать": [
+  {
+   "text": "Я считаю, ты прав.",
+   "en": "I think you're right.",
+   "ko": "내 생각엔 네가 맞아.",
+   "blank": "считаю"
+  },
+  {
+   "text": "Считай сдачу.",
+   "en": "Count the change.",
+   "ko": "거스름돈 세 봐.",
+   "blank": "Считай"
+  }
+ ],
+ "w|сын": [
+  {
+   "text": "Это мой сын.",
+   "en": "This is my son.",
+   "ko": "이 아이는 내 아들아.",
+   "blank": "сын"
+  },
+  {
+   "text": "Сыну пора спать.",
+   "en": "It's bedtime for my son.",
+   "ko": "아들은 잘 시간이야.",
+   "blank": "Сыну"
+  }
+ ],
+ "w|сэр": [
+  {
+   "text": "Да, сэр, понял.",
+   "en": "Yes, sir, got it.",
+   "ko": "네, 알겠습니다.",
+   "blank": "сэр"
+  },
+  {
+   "text": "Сэр, ваш чай.",
+   "en": "Sir, your tea.",
+   "ko": "손님, 차 나왔습니다.",
+   "blank": "Сэр"
+  }
+ ],
+ "w|сюда": [
+  {
+   "text": "Иди сюда на минуту.",
+   "en": "Come here for a minute.",
+   "ko": "잠깐 이리 와.",
+   "blank": "сюда"
+  },
+  {
+   "text": "Положи сумку сюда.",
+   "en": "Put the bag here.",
+   "ko": "가방은 여기에 둬.",
+   "blank": "сюда"
+  }
+ ],
+ "w|так": [
+  {
+   "text": "Так будет лучше.",
+   "en": "It'll be better this way.",
+   "ko": "이렇게 하는 게 나아.",
+   "blank": "Так"
+  },
+  {
+   "text": "Не говори так.",
+   "en": "Don't talk like that.",
+   "ko": "그렇게 말하지 마.",
+   "blank": "так"
+  }
+ ],
+ "w|также": [
+  {
+   "text": "Пальто также промокло.",
+   "en": "The coat got soaked as well.",
+   "ko": "코트도 흠뻑 젖었어.",
+   "blank": "также"
+  },
+  {
+   "text": "Шапку также не забудь.",
+   "en": "Don't forget the hat either.",
+   "ko": "모자도 잊지 마.",
+   "blank": "также"
+  }
+ ],
+ "w|такой": [
+  {
+   "text": "Он такой добрый.",
+   "en": "He's so kind.",
+   "ko": "그 사람 정말 착해.",
+   "blank": "такой"
+  },
+  {
+   "text": "Такая жара сегодня.",
+   "en": "It's so hot today.",
+   "ko": "오늘 엄청 덥다.",
+   "blank": "Такая"
+  }
+ ],
+ "w|там": [
+  {
+   "text": "Оставь сумку там.",
+   "en": "Leave the bag there.",
+   "ko": "가방은 거기에 둬.",
+   "blank": "там"
+  },
+  {
+   "text": "Я там никого не знаю.",
+   "en": "I don't know anyone there.",
+   "ko": "거기서는 아는 사람이 없어.",
+   "blank": "там"
+  }
+ ],
+ "w|твой": [
+  {
+   "text": "Где твой брат?",
+   "en": "Where is your brother?",
+   "ko": "네 남동생 어디 있어?",
+   "blank": "твой"
+  },
+  {
+   "text": "Это твоя очередь.",
+   "en": "It's your turn.",
+   "ko": "너 차례야.",
+   "blank": "твоя"
+  }
+ ],
+ "w|телефон": [
+  {
+   "text": "Телефон совсем сел.",
+   "en": "The phone is completely dead.",
+   "ko": "폰 배터리가 다 됐어.",
+   "blank": "Телефон"
+  },
+  {
+   "text": "Не трогай мой телефон.",
+   "en": "Don't touch my phone.",
+   "ko": "내 전화 만지지 마.",
+   "blank": "телефон"
+  }
+ ],
+ "w|тело": [
+  {
+   "text": "Всё тело ломит.",
+   "en": "My whole body aches.",
+   "ko": "온몸이 쑤셔.",
+   "blank": "тело"
+  },
+  {
+   "text": "Тело затекло, встану.",
+   "en": "I'm stiff, I'll get up.",
+   "ko": "몸이 저려서 일어날게.",
+   "blank": "Тело"
+  }
+ ],
+ "w|тема": [
+  {
+   "text": "Давай сменим тему.",
+   "en": "Let's change the subject.",
+   "ko": "얘기 좀 바꾸자.",
+   "blank": "тему"
+  },
+  {
+   "text": "Это скользкая тема.",
+   "en": "That's a touchy subject.",
+   "ko": "그 얘기는 민감한 주제야.",
+   "blank": "тема"
+  }
+ ],
+ "w|теперь": [
+  {
+   "text": "Теперь я понял.",
+   "en": "Now I get it.",
+   "ko": "이제야 이해했어.",
+   "blank": "Теперь"
+  },
+  {
+   "text": "Что будем делать теперь?",
+   "en": "What should we do now?",
+   "ko": "이제 뭘 할까?",
+   "blank": "теперь"
+  }
+ ],
+ "w|типа": [
+  {
+   "text": "Он, типа, занят.",
+   "en": "He's, like, busy.",
+   "ko": "그 사람, 뭐 바쁜가 봐.",
+   "blank": "типа"
+  },
+  {
+   "text": "Типа, ты не знал?",
+   "en": "Wait, you didn't know?",
+   "ko": "설마 몰랐어?",
+   "blank": "Типа"
+  }
+ ],
+ "w|тихий": [
+  {
+   "text": "Тихий сосед мне по душе.",
+   "en": "I like having a quiet neighbor.",
+   "ko": "조용한 이웃이 마음에 들어.",
+   "blank": "Тихий"
+  },
+  {
+   "text": "Река сегодня тихая.",
+   "en": "The river is quiet today.",
+   "ko": "오늘 강은 잔잔해.",
+   "blank": "тихая"
+  }
+ ],
+ "w|тогда": [
+  {
+   "text": "Тогда увидимся вечером.",
+   "en": "Then I'll see you this evening.",
+   "ko": "그러면 저녁에 보자.",
+   "blank": "Тогда"
+  },
+  {
+   "text": "Ну тогда я пошёл.",
+   "en": "All right, I'm off.",
+   "ko": "그럼 나는 갈게.",
+   "blank": "тогда"
+  }
+ ],
+ "w|тоже": [
+  {
+   "text": "Я тоже устал.",
+   "en": "I'm tired too.",
+   "ko": "나도 피곤해.",
+   "blank": "тоже"
+  },
+  {
+   "text": "Мне тоже так кажется.",
+   "en": "I think so too.",
+   "ko": "나도 그런 것 같아.",
+   "blank": "тоже"
+  }
+ ],
+ "w|только": [
+  {
+   "text": "Только не сейчас.",
+   "en": "Just not right now.",
+   "ko": "지금만은 안 돼.",
+   "blank": "Только"
+  },
+  {
+   "text": "Я только что пришёл.",
+   "en": "I just got here.",
+   "ko": "나 방금 도착했어.",
+   "blank": "только"
+  }
+ ],
+ "w|тот": [
+  {
+   "text": "Тот дом очень старый.",
+   "en": "That house is very old.",
+   "ko": "저 집은 아주 낡았어.",
+   "blank": "Тот"
+  },
+  {
+   "text": "Дай ту чашку.",
+   "en": "Give me that cup.",
+   "ko": "저 컵 좀 줘.",
+   "blank": "ту"
+  }
+ ],
+ "w|точно": [
+  {
+   "text": "Точно, я согласен.",
+   "en": "Exactly, I agree.",
+   "ko": "맞아, 나도 동의해.",
+   "blank": "Точно"
+  },
+  {
+   "text": "Ты точно придёшь?",
+   "en": "Are you definitely coming?",
+   "ko": "진짜 올 거지?",
+   "blank": "точно"
+  }
+ ],
+ "w|три": [
+  {
+   "text": "Нужно три стула.",
+   "en": "We need three chairs.",
+   "ko": "의자 세 개가 필요해.",
+   "blank": "три"
+  },
+  {
+   "text": "Съешь три ложки.",
+   "en": "Eat three spoonfuls.",
+   "ko": "세 숟갈만 먹어.",
+   "blank": "три"
+  }
+ ],
+ "w|трудный": [
+  {
+   "text": "Трудный был день.",
+   "en": "It was a hard day.",
+   "ko": "힘든 하루였어.",
+   "blank": "Трудный"
+  },
+  {
+   "text": "Задача оказалась трудной.",
+   "en": "The task turned out to be hard.",
+   "ko": "과제가 생각보다 어려웠어.",
+   "blank": "трудной"
+  }
+ ],
+ "w|туда": [
+  {
+   "text": "Не ходи туда.",
+   "en": "Don't go there.",
+   "ko": "거긴 가지 마.",
+   "blank": "туда"
+  },
+  {
+   "text": "Положи ключ туда.",
+   "en": "Put the key there.",
+   "ko": "열쇠는 거기 둬.",
+   "blank": "туда"
+  }
+ ],
+ "w|тут": [
+  {
+   "text": "Садись тут, рядом.",
+   "en": "Sit here, right beside me.",
+   "ko": "여기 옆에 앉아.",
+   "blank": "тут"
+  },
+  {
+   "text": "Я тут совсем один.",
+   "en": "I'm completely alone here.",
+   "ko": "나 여기 완전히 혼자야.",
+   "blank": "тут"
+  }
+ ],
+ "w|ты": [
+  {
+   "text": "Ты где сейчас?",
+   "en": "Where are you right now?",
+   "ko": "너 지금 어디야?",
+   "blank": "Ты"
+  },
+  {
+   "text": "Я тебе верю.",
+   "en": "I trust you.",
+   "ko": "나는 너를 믿어.",
+   "blank": "тебе"
+  }
+ ],
+ "w|тысяча": [
+  {
+   "text": "Тут тысяча дел.",
+   "en": "There's a mountain of things to do.",
+   "ko": "할 일이 끝도 없어.",
+   "blank": "тысяча"
+  },
+  {
+   "text": "Я должен ему тысячу.",
+   "en": "I owe him a thousand.",
+   "ko": "내가 그 사람한테 천이나 빚졌어.",
+   "blank": "тысячу"
+  }
+ ],
+ "w|тюрьма": [
+  {
+   "text": "Его отправили в тюрьму.",
+   "en": "They sent him to prison.",
+   "ko": "그 사람을 감옥에 보냈어.",
+   "blank": "тюрьму"
+  },
+  {
+   "text": "Тюрьма его изменила.",
+   "en": "Prison changed him.",
+   "ko": "감옥 생활이 그 사람을 바꿔 놓았어.",
+   "blank": "Тюрьма"
+  }
+ ],
+ "w|тяжёлый": [
+  {
+   "text": "Чемодан слишком тяжёлый.",
+   "en": "The suitcase is too heavy.",
+   "ko": "가방이 너무 무거워.",
+   "blank": "тяжёлый"
+  },
+  {
+   "text": "Не поднимай, это тяжёлое.",
+   "en": "Don't pick it up, it's heavy.",
+   "ko": "들지 마, 그거 무거워.",
+   "blank": "тяжёлое"
+  }
+ ],
+ "w|у": [
+  {
+   "text": "У меня есть ключ.",
+   "en": "I have a key.",
+   "ko": "나한테 열쇠 있어.",
+   "blank": "У"
+  },
+  {
+   "text": "Я был у врача.",
+   "en": "I was at the doctor's.",
+   "ko": "나 병원에 갔다 왔어.",
+   "blank": "у"
+  }
+ ],
+ "w|убивать": [
+  {
+   "text": "Не убивай время зря.",
+   "en": "Don't waste the time.",
+   "ko": "시간 낭비하지 마.",
+   "blank": "убивай"
+  },
+  {
+   "text": "Эта жара меня убивает.",
+   "en": "This heat is killing me.",
+   "ko": "이 더위에 죽겠어.",
+   "blank": "убивает"
+  }
+ ],
+ "w|убийство": [
+  {
+   "text": "В сериале было убийство.",
+   "en": "There was a murder in the series.",
+   "ko": "그 드라마에 살인 사건이 나왔어.",
+   "blank": "убийство"
+  },
+  {
+   "text": "Про убийство не хочу говорить.",
+   "en": "I don't want to talk about the murder.",
+   "ko": "살인 얘기는 하고 싶지 않아.",
+   "blank": "убийство"
+  }
+ ],
+ "w|убийца": [
+  {
+   "text": "Убийца ещё на свободе.",
+   "en": "The killer is still at large.",
+   "ko": "범인은 아직 잡히지 않았어.",
+   "blank": "Убийца"
+  },
+  {
+   "text": "Он не убийца.",
+   "en": "He isn't a killer.",
+   "ko": "그 사람은 살인자가 아니야.",
+   "blank": "убийца"
+  }
+ ],
+ "w|убить": [
+  {
+   "text": "Эта жара меня убьёт.",
+   "en": "This heat is killing me.",
+   "ko": "이 더위 때문에 죽겠어.",
+   "blank": "убьёт"
+  },
+  {
+   "text": "Твоя шутка меня убила.",
+   "en": "Your joke absolutely killed me.",
+   "ko": "네 농담에 나 뒤집어졌어.",
+   "blank": "убила"
+  }
+ ],
+ "w|уверенный": [
+  {
+   "text": "Я уверен, он дома.",
+   "en": "I'm sure he's home.",
+   "ko": "그 사람 집에 있는 거 확실해.",
+   "blank": "уверен"
+  },
+  {
+   "text": "Ты в этом уверена?",
+   "en": "Are you sure about that?",
+   "ko": "너 이거 확실해?",
+   "blank": "уверена"
+  }
+ ],
+ "w|увидеть": [
+  {
+   "text": "Рад тебя увидеть.",
+   "en": "Good to see you.",
+   "ko": "만나서 반가워.",
+   "blank": "увидеть"
+  },
+  {
+   "text": "Я увидел ошибку.",
+   "en": "I spotted a mistake.",
+   "ko": "틀린 데를 하나 봤어.",
+   "blank": "увидел"
+  }
+ ],
+ "w|увидеться": [
+  {
+   "text": "Давай увидимся вечером.",
+   "en": "Let's meet this evening.",
+   "ko": "저녁에 보자.",
+   "blank": "увидимся"
+  },
+  {
+   "text": "Мы так и не увиделись.",
+   "en": "We never did manage to meet.",
+   "ko": "우리는 결국 못 만났어.",
+   "blank": "увиделись"
+  }
+ ],
+ "w|угодно": [
+  {
+   "text": "Делай как угодно.",
+   "en": "Do it however you like.",
+   "ko": "마음대로 해.",
+   "blank": "угодно"
+  },
+  {
+   "text": "Бери что угодно.",
+   "en": "Take whatever you want.",
+   "ko": "원하는 거 아무거나 집어.",
+   "blank": "угодно"
+  }
+ ],
+ "w|удача": [
+  {
+   "text": "Ну, удачи.",
+   "en": "Good luck.",
+   "ko": "행운을 빌어.",
+   "blank": "удачи"
+  },
+  {
+   "text": "Какая удача, что ты дома.",
+   "en": "What luck that you're home.",
+   "ko": "네가 집에 있다니 운이 좋네.",
+   "blank": "удача"
+  }
+ ],
+ "w|уехать": [
+  {
+   "text": "Он уже уехал.",
+   "en": "He has already left.",
+   "ko": "그 사람은 이미 떠났어.",
+   "blank": "уехал"
+  },
+  {
+   "text": "Мне пора уехать.",
+   "en": "I need to get going.",
+   "ko": "나 이제 떠나야 해.",
+   "blank": "уехать"
+  }
+ ],
+ "w|уж": [
+  {
+   "text": "Уж очень солёный суп.",
+   "en": "The soup is really salty.",
+   "ko": "수프가 유난히 짜.",
+   "blank": "Уж"
+  },
+  {
+   "text": "Да уж, попали под дождь.",
+   "en": "Well, we got caught in the rain.",
+   "ko": "에휴, 비를 맞았네.",
+   "blank": "уж"
+  }
+ ],
+ "w|ужасный": [
+  {
+   "text": "Ужасный кофе, не пей.",
+   "en": "The coffee is awful, don't drink it.",
+   "ko": "커피가 형편없어, 마시지 마.",
+   "blank": "Ужасный"
+  },
+  {
+   "text": "Какая ужасная пробка!",
+   "en": "What an awful traffic jam!",
+   "ko": "차가 엄청 막히네!",
+   "blank": "ужасная"
+  }
+ ],
+ "w|уже": [
+  {
+   "text": "Я уже поел.",
+   "en": "I've already eaten.",
+   "ko": "나는 이미 먹었어.",
+   "blank": "уже"
+  },
+  {
+   "text": "Уже темно на улице.",
+   "en": "It's already dark outside.",
+   "ko": "밖은 이미 어두워.",
+   "blank": "Уже"
+  }
+ ],
+ "w|ужин": [
+  {
+   "text": "Ужин уже на столе.",
+   "en": "Dinner is already on the table.",
+   "ko": "저녁은 이미 상에 나왔어.",
+   "blank": "Ужин"
+  },
+  {
+   "text": "Оставайся на ужин.",
+   "en": "Stay for dinner.",
+   "ko": "저녁은 먹고 가.",
+   "blank": "ужин"
+  }
+ ],
+ "w|узнать": [
+  {
+   "text": "Я только что узнал.",
+   "en": "I just found out.",
+   "ko": "나 방금 알았어.",
+   "blank": "узнал"
+  },
+  {
+   "text": "Узнай у кассы.",
+   "en": "Ask at the register.",
+   "ko": "계산대에서 알아봐.",
+   "blank": "Узнай"
+  }
+ ],
+ "w|уйти": [
+  {
+   "text": "Мне пора уйти.",
+   "en": "I should get going.",
+   "ko": "나 이제 가야 해.",
+   "blank": "уйти"
+  },
+  {
+   "text": "Он ушёл молча.",
+   "en": "He left without a word.",
+   "ko": "그 사람은 말없이 떠났어.",
+   "blank": "ушёл"
+  }
+ ],
+ "w|украсть": [
+  {
+   "text": "Кто украл мои ключи?",
+   "en": "Who stole my keys?",
+   "ko": "내 열쇠를 누가 훔쳤어?",
+   "blank": "украл"
+  },
+  {
+   "text": "У меня украли кошелёк.",
+   "en": "My wallet was stolen.",
+   "ko": "내 지갑을 훔쳐 갔어.",
+   "blank": "украли"
+  }
+ ],
+ "w|улица": [
+  {
+   "text": "На улице холодно.",
+   "en": "It's cold outside.",
+   "ko": "밖이 추워.",
+   "blank": "улице"
+  },
+  {
+   "text": "Перейди улицу осторожно.",
+   "en": "Cross the street carefully.",
+   "ko": "길 건널 때 조심해.",
+   "blank": "улицу"
+  }
+ ],
+ "w|ум": [
+  {
+   "text": "У него ясный ум.",
+   "en": "He has a clear mind.",
+   "ko": "그 사람은 머리가 맑아.",
+   "blank": "ум"
+  },
+  {
+   "text": "Ума не приложу, где ключ.",
+   "en": "I can't figure out where the key is.",
+   "ko": "열쇠가 어디 있는지 도무지 모르겠어.",
+   "blank": "Ума"
+  }
+ ],
+ "w|умереть": [
+  {
+   "text": "Я чуть не умер со смеху.",
+   "en": "I nearly died laughing.",
+   "ko": "웃겨 죽을 뻔했어.",
+   "blank": "умер"
+  },
+  {
+   "text": "Цветы без воды умрут.",
+   "en": "The flowers will die without water.",
+   "ko": "물 없으면 꽃이 죽을 거야.",
+   "blank": "умрут"
+  }
+ ],
+ "w|уметь": [
+  {
+   "text": "Она умеет готовить.",
+   "en": "She can cook.",
+   "ko": "그녀는 요리할 줄 알아.",
+   "blank": "умеет"
+  },
+  {
+   "text": "Я не умею плавать.",
+   "en": "I can't swim.",
+   "ko": "나는 수영을 못 해.",
+   "blank": "умею"
+  }
+ ],
+ "w|услышать": [
+  {
+   "text": "Ты это услышала?",
+   "en": "Did you hear that?",
+   "ko": "그거 들었어?",
+   "blank": "услышала"
+  },
+  {
+   "text": "Я хочу это услышать.",
+   "en": "I want to hear it.",
+   "ko": "그 말을 듣고 싶어.",
+   "blank": "услышать"
+  }
+ ],
+ "w|успокоиться": [
+  {
+   "text": "Успокойся, всё хорошо.",
+   "en": "Calm down, everything's fine.",
+   "ko": "진정해, 다 괜찮아.",
+   "blank": "Успокойся"
+  },
+  {
+   "text": "Я никак не успокоюсь.",
+   "en": "I just can't calm down.",
+   "ko": "도저히 마음이 안 놓여.",
+   "blank": "успокоюсь"
+  }
+ ],
+ "w|устроить": [
+  {
+   "text": "Я всё устрою.",
+   "en": "I'll sort everything out.",
+   "ko": "내가 다 알아서 할게.",
+   "blank": "устрою"
+  },
+  {
+   "text": "Устрой им встречу.",
+   "en": "Set up a meeting for them.",
+   "ko": "그 사람들 만남을 잡아 줘.",
+   "blank": "Устрой"
+  }
+ ],
+ "w|утро": [
+  {
+   "text": "Доброе утро!",
+   "en": "Good morning!",
+   "ko": "좋은 아침!",
+   "blank": "утро"
+  },
+  {
+   "text": "Утром я не спешу.",
+   "en": "I'm in no rush in the morning.",
+   "ko": "아침에는 서두르지 않아.",
+   "blank": "Утром"
+  }
+ ],
+ "w|уходить": [
+  {
+   "text": "Не уходи.",
+   "en": "Don't go.",
+   "ko": "가지 마.",
+   "blank": "уходи"
+  },
+  {
+   "text": "Я уже ухожу.",
+   "en": "I'm leaving now.",
+   "ko": "나 이제 갈게.",
+   "blank": "ухожу"
+  }
+ ],
+ "w|фильм": [
+  {
+   "text": "В фильме хороший конец.",
+   "en": "The movie has a good ending.",
+   "ko": "그 영화는 결말이 좋아.",
+   "blank": "фильме"
+  },
+  {
+   "text": "Посмотрим фильм вечером?",
+   "en": "Shall we watch a movie tonight?",
+   "ko": "저녁에 영화 볼까?",
+   "blank": "фильм"
+  }
+ ],
+ "w|хватить": [
+  {
+   "text": "Хватит спорить.",
+   "en": "Stop arguing.",
+   "ko": "그만 싸워.",
+   "blank": "Хватит"
+  },
+  {
+   "text": "Еды на всех хватило.",
+   "en": "There was enough food for everyone.",
+   "ko": "음식이 다들 먹을 만큼 있었어.",
+   "blank": "хватило"
+  }
+ ],
+ "w|ходить": [
+  {
+   "text": "Я часто хожу в этот парк.",
+   "en": "I often go to this park.",
+   "ko": "나는 이 공원에 자주 가.",
+   "blank": "хожу"
+  },
+  {
+   "text": "Не ходи по газону.",
+   "en": "Don't walk on the grass.",
+   "ko": "잔디 위로 걷지 마.",
+   "blank": "ходи"
+  }
+ ],
+ "w|хороший": [
+  {
+   "text": "Хороший был денёк.",
+   "en": "It was a nice day.",
+   "ko": "좋은 하루였어.",
+   "blank": "Хороший"
+  },
+  {
+   "text": "У неё хорошая память.",
+   "en": "She has a good memory.",
+   "ko": "그 사람은 기억력이 좋아.",
+   "blank": "хорошая"
+  }
+ ],
+ "w|хорошо": [
+  {
+   "text": "Мне очень хорошо.",
+   "en": "I feel really good.",
+   "ko": "나 정말 좋아.",
+   "blank": "хорошо"
+  },
+  {
+   "text": "Хорошо, я согласен.",
+   "en": "All right, I agree.",
+   "ko": "좋아, 나도 동의해.",
+   "blank": "Хорошо"
+  }
+ ],
+ "w|хотеть": [
+  {
+   "text": "Я хочу чаю.",
+   "en": "I want some tea.",
+   "ko": "나 차 마시고 싶어.",
+   "blank": "хочу"
+  },
+  {
+   "text": "Ты хочешь есть?",
+   "en": "Are you hungry?",
+   "ko": "배고파?",
+   "blank": "хочешь"
+  }
+ ],
+ "w|хотеться": [
+  {
+   "text": "Мне хочется спать.",
+   "en": "I feel sleepy.",
+   "ko": "잠이 와.",
+   "blank": "хочется"
+  },
+  {
+   "text": "Хотелось чаю.",
+   "en": "I felt like having tea.",
+   "ko": "차가 마시고 싶었어.",
+   "blank": "Хотелось"
+  }
+ ],
+ "w|хоть": [
+  {
+   "text": "Хоть чайку попей.",
+   "en": "At least have a little tea.",
+   "ko": "차라도 한 모금 마셔.",
+   "blank": "Хоть"
+  },
+  {
+   "text": "Возьми хоть шарф.",
+   "en": "At least take a scarf.",
+   "ko": "스카프라도 챙겨.",
+   "blank": "хоть"
+  }
+ ],
+ "w|хотя": [
+  {
+   "text": "Я выйду, хотя лень.",
+   "en": "I'll go out, even though I don't feel like it.",
+   "ko": "귀찮아도 나갈게.",
+   "blank": "хотя"
+  },
+  {
+   "text": "Хотя бы чаю попей.",
+   "en": "At least drink some tea.",
+   "ko": "차라도 마셔.",
+   "blank": "Хотя"
+  }
+ ],
+ "w|целый": [
+  {
+   "text": "Я ждал целый день.",
+   "en": "I waited all day.",
+   "ko": "하루 종일 기다렸어.",
+   "blank": "целый"
+  },
+  {
+   "text": "Целая неделя прошла.",
+   "en": "A whole week has gone by.",
+   "ko": "일주일이 통째로 지났어.",
+   "blank": "Целая"
+  }
+ ],
+ "w|цель": [
+  {
+   "text": "Цель ясна.",
+   "en": "The goal is clear.",
+   "ko": "목표는 분명해.",
+   "blank": "Цель"
+  },
+  {
+   "text": "Ради этой цели я здесь.",
+   "en": "I'm here for this goal.",
+   "ko": "이 목표 때문에 여기 있어.",
+   "blank": "цели"
+  }
+ ],
+ "w|час": [
+  {
+   "text": "Дай мне час.",
+   "en": "Give me an hour.",
+   "ko": "한 시간만 줘.",
+   "blank": "час"
+  },
+  {
+   "text": "Подожди час.",
+   "en": "Wait an hour.",
+   "ko": "한 시간만 기다려.",
+   "blank": "час"
+  }
+ ],
+ "w|часто": [
+  {
+   "text": "Ты слишком часто звонишь.",
+   "en": "You call too often.",
+   "ko": "너 너무 자주 전화해.",
+   "blank": "часто"
+  },
+  {
+   "text": "Часто так бывает?",
+   "en": "Does that happen often?",
+   "ko": "그런 일이 자주 있어?",
+   "blank": "Часто"
+  }
+ ],
+ "w|часть": [
+  {
+   "text": "Трудная часть позади.",
+   "en": "The hard part is behind us.",
+   "ko": "어려운 부분은 지났어.",
+   "blank": "часть"
+  },
+  {
+   "text": "Оставь мне часть пирога.",
+   "en": "Leave me a piece of the pie.",
+   "ko": "파이 한 조각은 나한테 남겨 줘.",
+   "blank": "часть"
+  }
+ ],
+ "w|человек": [
+  {
+   "text": "Он хороший человек.",
+   "en": "He's a good person.",
+   "ko": "그 사람 좋은 사람이야.",
+   "blank": "человек"
+  },
+  {
+   "text": "Я видел одного человека.",
+   "en": "I saw one person.",
+   "ko": "나는 사람 한 명을 봤어.",
+   "blank": "человека"
+  }
+ ],
+ "w|через": [
+  {
+   "text": "Аптека через дорогу.",
+   "en": "The pharmacy is across the street.",
+   "ko": "약국은 길 건너야.",
+   "blank": "через"
+  },
+  {
+   "text": "Вернусь через минуту.",
+   "en": "I'll be back in a minute.",
+   "ko": "잠깐이면 돌아올게.",
+   "blank": "через"
+  }
+ ],
+ "w|чёрный": [
+  {
+   "text": "Чёрный кофе, пожалуйста.",
+   "en": "Black coffee, please.",
+   "ko": "커피는 블랙으로 주세요.",
+   "blank": "Чёрный"
+  },
+  {
+   "text": "Дай чёрную ручку.",
+   "en": "Give me the black pen.",
+   "ko": "검은 펜 줘.",
+   "blank": "чёрную"
+  }
+ ],
+ "w|честный": [
+  {
+   "text": "Будь честным со мной.",
+   "en": "Be honest with me.",
+   "ko": "나한테는 솔직하게 말해.",
+   "blank": "честным"
+  },
+  {
+   "text": "Честный ответ мне нужен.",
+   "en": "I need an honest answer.",
+   "ko": "솔직한 대답이 필요해.",
+   "blank": "Честный"
+  }
+ ],
+ "w|честь": [
+  {
+   "text": "Это дело чести.",
+   "en": "This is a matter of honor.",
+   "ko": "이건 자존심이 걸린 일이야.",
+   "blank": "чести"
+  },
+  {
+   "text": "Для меня это честь.",
+   "en": "This is an honor for me.",
+   "ko": "나한테는 영광이야.",
+   "blank": "честь"
+  }
+ ],
+ "w|четыре": [
+  {
+   "text": "Нам нужно четыре стула.",
+   "en": "We need four chairs.",
+   "ko": "의자 네 개가 필요해.",
+   "blank": "четыре"
+  },
+  {
+   "text": "Четыре яблока на столе.",
+   "en": "There are four apples on the table.",
+   "ko": "식탁에 사과가 네 개 있어.",
+   "blank": "Четыре"
+  }
+ ],
+ "w|читать": [
+  {
+   "text": "Я читаю перед сном.",
+   "en": "I read before bed.",
+   "ko": "자기 전에 책을 읽어.",
+   "blank": "читаю"
+  },
+  {
+   "text": "Не читай в темноте.",
+   "en": "Don't read in the dark.",
+   "ko": "어두운 데서 읽지 마.",
+   "blank": "читай"
+  }
+ ],
+ "w|член": [
+  {
+   "text": "Ты член команды или зритель?",
+   "en": "Are you on the team, or just watching?",
+   "ko": "너는 팀원이야, 아니면 구경만 하는 거야?",
+   "blank": "член"
+  },
+  {
+   "text": "Ты теперь член семьи.",
+   "en": "You're family now.",
+   "ko": "이제 너는 가족이야.",
+   "blank": "член"
+  }
+ ],
+ "w|что": [
+  {
+   "text": "Что ты хочешь?",
+   "en": "What do you want?",
+   "ko": "뭐 원해?",
+   "blank": "Что"
+  },
+  {
+   "text": "Я не знаю, что сказать.",
+   "en": "I don't know what to say.",
+   "ko": "무슨 말을 해야 할지 모르겠어.",
+   "blank": "что"
+  }
+ ],
+ "w|что-нибудь": [
+  {
+   "text": "Скажи что-нибудь.",
+   "en": "Say something.",
+   "ko": "뭐라도 말해.",
+   "blank": "что-нибудь"
+  },
+  {
+   "text": "Возьми что-нибудь тёплое.",
+   "en": "Take something warm.",
+   "ko": "따뜻한 거 하나 챙겨.",
+   "blank": "что-нибудь"
+  }
+ ],
+ "w|что-то": [
+  {
+   "text": "Что-то мне не по себе.",
+   "en": "Something feels off.",
+   "ko": "뭔가 기분이 이상해.",
+   "blank": "Что-то"
+  },
+  {
+   "text": "Я что-то забыл дома.",
+   "en": "I forgot something at home.",
+   "ko": "집에 뭔가 두고 왔어.",
+   "blank": "что-то"
+  }
+ ],
+ "w|чтобы": [
+  {
+   "text": "Чтобы успеть, беги.",
+   "en": "Run if you want to make it.",
+   "ko": "시간에 맞추려면 뛰어.",
+   "blank": "Чтобы"
+  },
+  {
+   "text": "Я хочу, чтобы ты остался.",
+   "en": "I want you to stay.",
+   "ko": "나는 네가 남았으면 좋겠어.",
+   "blank": "чтобы"
+  }
+ ],
+ "w|чувство": [
+  {
+   "text": "У меня странное чувство.",
+   "en": "I have a strange feeling.",
+   "ko": "느낌이 이상해.",
+   "blank": "чувство"
+  },
+  {
+   "text": "Доверься своему чувству.",
+   "en": "Trust your feeling.",
+   "ko": "네 느낌을 믿어.",
+   "blank": "чувству"
+  }
+ ],
+ "w|чувствовать": [
+  {
+   "text": "Я плохо себя чувствую.",
+   "en": "I don't feel well.",
+   "ko": "몸이 안 좋아.",
+   "blank": "чувствую"
+  },
+  {
+   "text": "Ты это чувствуешь?",
+   "en": "Do you feel that?",
+   "ko": "이거 느껴져?",
+   "blank": "чувствуешь"
+  }
+ ],
+ "w|шанс": [
+  {
+   "text": "Не упусти этот шанс.",
+   "en": "Don't miss this chance.",
+   "ko": "이 기회를 놓치지 마.",
+   "blank": "шанс"
+  },
+  {
+   "text": "Шанс ещё есть, не ной.",
+   "en": "There's still a chance, stop whining.",
+   "ko": "기회는 아직 있어, 징징대지 마.",
+   "blank": "Шанс"
+  }
+ ],
+ "w|шесть": [
+  {
+   "text": "Уже шесть, пора выходить.",
+   "en": "It's already six, time to head out.",
+   "ko": "벌써 여섯 시야, 나가야 해.",
+   "blank": "шесть"
+  },
+  {
+   "text": "К шести будь дома.",
+   "en": "Be home by six.",
+   "ko": "여섯 시까지는 집에 와.",
+   "blank": "шести"
+  }
+ ],
+ "w|школа": [
+  {
+   "text": "Школа сегодня закрыта.",
+   "en": "School is closed today.",
+   "ko": "오늘은 학교가 쉬어.",
+   "blank": "Школа"
+  },
+  {
+   "text": "После школы зайду.",
+   "en": "I'll stop by after school.",
+   "ko": "학교 끝나고 들를게.",
+   "blank": "школы"
+  }
+ ],
+ "w|шоу": [
+  {
+   "text": "Шоу уже началось.",
+   "en": "The show has already started.",
+   "ko": "쇼는 이미 시작됐어.",
+   "blank": "Шоу"
+  },
+  {
+   "text": "Пойдём на шоу?",
+   "en": "Shall we go to the show?",
+   "ko": "쇼 보러 갈까?",
+   "blank": "шоу"
+  }
+ ],
+ "w|штука": [
+  {
+   "text": "Где эта штука?",
+   "en": "Where is that thing?",
+   "ko": "그거 어디 있어?",
+   "blank": "штука"
+  },
+  {
+   "text": "Ну и штуку ты нашёл.",
+   "en": "Well, look what you found.",
+   "ko": "이런 걸 어디서 찾았어?",
+   "blank": "штуку"
+  }
+ ],
+ "w|шутить": [
+  {
+   "text": "Ты шутишь?",
+   "en": "Are you kidding?",
+   "ko": "너 농담이지?",
+   "blank": "шутишь"
+  },
+  {
+   "text": "Не шути так.",
+   "en": "Don't joke like that.",
+   "ko": "그렇게 농담하지 마.",
+   "blank": "шути"
+  }
+ ],
+ "w|эй": [
+  {
+   "text": "Эй, подожди меня!",
+   "en": "Hey, wait for me!",
+   "ko": "야, 나 기다려!",
+   "blank": "Эй"
+  },
+  {
+   "text": "Эй, ты ключ не забыл?",
+   "en": "Hey, did you forget the key?",
+   "ko": "야, 열쇠 안 챙긴 거 아니야?",
+   "blank": "Эй"
+  }
+ ],
+ "w|это": [
+  {
+   "text": "Это моя мама.",
+   "en": "This is my mom.",
+   "ko": "이 사람은 우리 엄마야.",
+   "blank": "Это"
+  },
+  {
+   "text": "Я не понимаю это.",
+   "en": "I don't understand this.",
+   "ko": "이건 이해가 안 돼.",
+   "blank": "это"
+  }
+ ],
+ "w|этот": [
+  {
+   "text": "Этот чай горячий.",
+   "en": "This tea is hot.",
+   "ko": "이 차는 뜨거워.",
+   "blank": "Этот"
+  },
+  {
+   "text": "Возьми эту сумку.",
+   "en": "Take this bag.",
+   "ko": "이 가방 가져가.",
+   "blank": "эту"
+  }
+ ],
+ "w|я": [
+  {
+   "text": "Я сейчас дома.",
+   "en": "I'm home right now.",
+   "ko": "나 지금 집에 있어.",
+   "blank": "Я"
+  },
+  {
+   "text": "Сегодня за ужин плачу я.",
+   "en": "I'm paying for dinner today.",
+   "ko": "오늘 저녁은 내가 낼게.",
+   "blank": "я"
+  }
+ ],
+ "w|ясно": [
+  {
+   "text": "Ясно, сделаю.",
+   "en": "Got it, I'll do it.",
+   "ko": "알겠어, 내가 할게.",
+   "blank": "Ясно"
+  },
+  {
+   "text": "Тебе всё ясно?",
+   "en": "Is everything clear to you?",
+   "ko": "다 이해됐어?",
+   "blank": "ясно"
+  }
+ ]
+}

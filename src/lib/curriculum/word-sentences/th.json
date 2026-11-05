@@ -1,0 +1,2942 @@
+{
+ "w|ก็": [
+  {
+   "text": "ฉันก็ไป",
+   "en": "I'm going too.",
+   "ko": "나도 가.",
+   "blank": "ก็"
+  },
+  {
+   "text": "งั้นก็แล้วกัน",
+   "en": "Alright, we'll leave it at that.",
+   "ko": "그럼 그렇게 하자.",
+   "blank": "ก็"
+  }
+ ],
+ "w|กลับ": [
+  {
+   "text": "กลับบ้านกัน",
+   "en": "Let's head home.",
+   "ko": "집에 돌아가자.",
+   "blank": "กลับ"
+  },
+  {
+   "text": "เมื่อไหร่จะกลับ",
+   "en": "When are you coming back?",
+   "ko": "언제 돌아와?",
+   "blank": "กลับ"
+  }
+ ],
+ "w|กลัว": [
+  {
+   "text": "กลัวผี",
+   "en": "I'm scared of ghosts.",
+   "ko": "귀신이 무서워.",
+   "blank": "กลัว"
+  },
+  {
+   "text": "ไปคนเดียวกลัว",
+   "en": "I'm scared to go alone.",
+   "ko": "혼자 가기는 무서워.",
+   "blank": "กลัว"
+  }
+ ],
+ "w|กลางคืน": [
+  {
+   "text": "กลางคืนเงียบดี",
+   "en": "It's nice and quiet at night.",
+   "ko": "밤에는 조용해서 좋아.",
+   "blank": "กลางคืน"
+  },
+  {
+   "text": "กลางคืนอย่าออกไปคนเดียว",
+   "en": "Don't go out alone at night.",
+   "ko": "밤에는 혼자 나가지 마.",
+   "blank": "กลางคืน"
+  }
+ ],
+ "w|กับ": [
+  {
+   "text": "คุยกับแม่",
+   "en": "Talk to Mom.",
+   "ko": "엄마랑 얘기해.",
+   "blank": "กับ"
+  },
+  {
+   "text": "ไปกับเพื่อน",
+   "en": "I'm going with a friend.",
+   "ko": "친구랑 가.",
+   "blank": "กับ"
+  }
+ ],
+ "w|กำลัง": [
+  {
+   "text": "กำลังกินข้าว",
+   "en": "I'm eating.",
+   "ko": "밥 먹는 중이야.",
+   "blank": "กำลัง"
+  },
+  {
+   "text": "เขากำลังอาบน้ำ",
+   "en": "He's in the shower.",
+   "ko": "그 사람 샤워하는 중이야.",
+   "blank": "กำลัง"
+  }
+ ],
+ "w|กิน": [
+  {
+   "text": "ฉันยังไม่กิน",
+   "en": "I haven't eaten yet.",
+   "ko": "나 아직 안 먹었어.",
+   "blank": "กิน"
+  },
+  {
+   "text": "กินข้าวหรือยัง",
+   "en": "Have you eaten yet?",
+   "ko": "밥은 먹었어?",
+   "blank": "กิน"
+  }
+ ],
+ "w|เก่า": [
+  {
+   "text": "เพื่อนเก่าโทรมา",
+   "en": "An old friend called.",
+   "ko": "오랜 친구가 전화했어.",
+   "blank": "เก่า"
+  },
+  {
+   "text": "เสื้อตัวนี้เก่าแล้ว",
+   "en": "This shirt is worn out.",
+   "ko": "이 옷은 낡았어.",
+   "blank": "เก่า"
+  }
+ ],
+ "w|เก้า": [
+  {
+   "text": "มีเก้าคน",
+   "en": "There are nine people.",
+   "ko": "아홉 명이야.",
+   "blank": "เก้า"
+  },
+  {
+   "text": "เก้าชิ้นเลย",
+   "en": "That's nine pieces.",
+   "ko": "아홉 조각이나 되네.",
+   "blank": "เก้า"
+  }
+ ],
+ "w|เกี่ยวกับ": [
+  {
+   "text": "ไม่เกี่ยวกับฉัน",
+   "en": "That has nothing to do with me.",
+   "ko": "나랑은 상관없어.",
+   "blank": "เกี่ยวกับ"
+  },
+  {
+   "text": "เกี่ยวกับอะไร",
+   "en": "What's this about?",
+   "ko": "무슨 얘기야?",
+   "blank": "เกี่ยวกับ"
+  }
+ ],
+ "w|ขอ": [
+  {
+   "text": "ขอน้ำหน่อย",
+   "en": "Could I get some water?",
+   "ko": "물 좀 줘요.",
+   "blank": "ขอ"
+  },
+  {
+   "text": "ขอเวลาหน่อย",
+   "en": "Give me a moment.",
+   "ko": "잠깐만 시간을 줘.",
+   "blank": "ขอ"
+  }
+ ],
+ "w|ของ": [
+  {
+   "text": "นี่ของใคร",
+   "en": "Whose is this?",
+   "ko": "이거 누구 거야?",
+   "blank": "ของ"
+  },
+  {
+   "text": "ลืมของไว้",
+   "en": "I left my things.",
+   "ko": "짐을 두고 왔어.",
+   "blank": "ของ"
+  }
+ ],
+ "w|ขอโทษ": [
+  {
+   "text": "ขอโทษนะ",
+   "en": "I'm sorry.",
+   "ko": "미안해.",
+   "blank": "ขอโทษ"
+  },
+  {
+   "text": "ขอโทษที่มาสาย",
+   "en": "Sorry I'm late.",
+   "ko": "늦어서 미안해.",
+   "blank": "ขอโทษ"
+  }
+ ],
+ "w|ขอบคุณ": [
+  {
+   "text": "ขอบคุณมาก",
+   "en": "Thank you so much.",
+   "ko": "정말 고마워.",
+   "blank": "ขอบคุณ"
+  },
+  {
+   "text": "ขอบคุณนะ",
+   "en": "Thanks.",
+   "ko": "고마워.",
+   "blank": "ขอบคุณ"
+  }
+ ],
+ "w|ขาย": [
+  {
+   "text": "อันนี้ขายไหม",
+   "en": "Is this for sale?",
+   "ko": "이거 팔아?",
+   "blank": "ขาย"
+  },
+  {
+   "text": "ขายหมดตั้งแต่เช้า",
+   "en": "It sold out this morning.",
+   "ko": "아침부터 다 팔렸어.",
+   "blank": "ขาย"
+  }
+ ],
+ "w|ขึ้น": [
+  {
+   "text": "ขึ้นมาเลย",
+   "en": "Come on up.",
+   "ko": "올라와.",
+   "blank": "ขึ้น"
+  },
+  {
+   "text": "ราคาขึ้น",
+   "en": "The price went up.",
+   "ko": "값이 올랐어.",
+   "blank": "ขึ้น"
+  }
+ ],
+ "w|เขา": [
+  {
+   "text": "เขาหลับอยู่",
+   "en": "He's asleep.",
+   "ko": "그 사람 자고 있어.",
+   "blank": "เขา"
+  },
+  {
+   "text": "เขาเพิ่งออกไป",
+   "en": "He just stepped out.",
+   "ko": "그 사람 방금 나갔어.",
+   "blank": "เขา"
+  }
+ ],
+ "w|เข้า": [
+  {
+   "text": "เข้ามาได้",
+   "en": "Come on in.",
+   "ko": "들어와.",
+   "blank": "เข้า"
+  },
+  {
+   "text": "เข้าบ้านแล้ว",
+   "en": "I got in the house.",
+   "ko": "집에 들어왔어.",
+   "blank": "เข้า"
+  }
+ ],
+ "w|เข้าใจ": [
+  {
+   "text": "เข้าใจแล้ว",
+   "en": "Got it.",
+   "ko": "알겠어.",
+   "blank": "เข้าใจ"
+  },
+  {
+   "text": "ฉันไม่เข้าใจ",
+   "en": "I don't get it.",
+   "ko": "나 이해가 안 돼.",
+   "blank": "เข้าใจ"
+  }
+ ],
+ "w|คน": [
+  {
+   "text": "คนเยอะมาก",
+   "en": "It's really crowded.",
+   "ko": "사람이 너무 많아.",
+   "blank": "คน"
+  },
+  {
+   "text": "คนนี้เก่ง",
+   "en": "This person is really good.",
+   "ko": "이 사람 잘해.",
+   "blank": "คน"
+  }
+ ],
+ "w|ครอบครัว": [
+  {
+   "text": "ครอบครัวฉันใหญ่",
+   "en": "My family is big.",
+   "ko": "우리 식구가 많아.",
+   "blank": "ครอบครัว"
+  },
+  {
+   "text": "กลับไปหาครอบครัว",
+   "en": "I'm going back to my family.",
+   "ko": "가족한테 돌아가.",
+   "blank": "ครอบครัว"
+  }
+ ],
+ "w|ครั้ง": [
+  {
+   "text": "ครั้งหน้ามาใหม่",
+   "en": "Come again next time.",
+   "ko": "다음에 또 와.",
+   "blank": "ครั้ง"
+  },
+  {
+   "text": "ครั้งนี้ฉันเลี้ยง",
+   "en": "This one's on me.",
+   "ko": "이번엔 내가 살게.",
+   "blank": "ครั้ง"
+  }
+ ],
+ "w|ครับ": [
+  {
+   "text": "ได้เลยครับ",
+   "en": "Of course.",
+   "ko": "그럼요.",
+   "blank": "ครับ"
+  },
+  {
+   "text": "ผมไม่ทราบครับ",
+   "en": "I wouldn't know.",
+   "ko": "저는 모르겠네요.",
+   "blank": "ครับ"
+  }
+ ],
+ "w|ครู": [
+  {
+   "text": "ครูยังไม่มา",
+   "en": "The teacher isn't here yet.",
+   "ko": "선생님이 아직 안 오셔.",
+   "blank": "ครู"
+  },
+  {
+   "text": "ถามครูดีกว่า",
+   "en": "Better ask the teacher.",
+   "ko": "선생님한테 물어보는 게 낫겠어.",
+   "blank": "ครู"
+  }
+ ],
+ "w|ควร": [
+  {
+   "text": "ควรพักบ้าง",
+   "en": "You should rest a little.",
+   "ko": "좀 쉬는 게 좋겠어.",
+   "blank": "ควร"
+  },
+  {
+   "text": "ไม่ควรพูดแบบนั้น",
+   "en": "You shouldn't talk like that.",
+   "ko": "그런 말은 하지 마.",
+   "blank": "ควร"
+  }
+ ],
+ "w|คะ": [
+  {
+   "text": "ขอโทษคะ",
+   "en": "Excuse me.",
+   "ko": "저기요.",
+   "blank": "คะ"
+  },
+  {
+   "text": "เท่าไหร่คะ",
+   "en": "How much is it?",
+   "ko": "얼마예요?",
+   "blank": "คะ"
+  }
+ ],
+ "w|ค่ะ": [
+  {
+   "text": "สวัสดีค่ะ",
+   "en": "Hello.",
+   "ko": "안녕하세요.",
+   "blank": "ค่ะ"
+  },
+  {
+   "text": "พอแล้วค่ะ",
+   "en": "That's plenty, thank you.",
+   "ko": "이제 됐어요.",
+   "blank": "ค่ะ"
+  }
+ ],
+ "w|คิด": [
+  {
+   "text": "ฉันคิดว่าใช่",
+   "en": "I think so.",
+   "ko": "그런 것 같아.",
+   "blank": "คิด"
+  },
+  {
+   "text": "คิดดูก่อน",
+   "en": "Think it over first.",
+   "ko": "일단 생각해 봐.",
+   "blank": "คิด"
+  }
+ ],
+ "w|คืน": [
+  {
+   "text": "เมื่อคืนนอนไม่หลับ",
+   "en": "I couldn't sleep last night.",
+   "ko": "어젯밤에 잠을 못 잤어.",
+   "blank": "คืน"
+  },
+  {
+   "text": "คืนนี้มีนัด",
+   "en": "I have plans tonight.",
+   "ko": "오늘 밤에 약속 있어.",
+   "blank": "คืน"
+  }
+ ],
+ "w|คืนนี้": [
+  {
+   "text": "คืนนี้นอนดึก",
+   "en": "I'm staying up late tonight.",
+   "ko": "오늘 밤은 늦게 잘 거야.",
+   "blank": "คืนนี้"
+  },
+  {
+   "text": "คืนนี้ว่างไหม",
+   "en": "Are you free tonight?",
+   "ko": "오늘 밤 시간 돼?",
+   "blank": "คืนนี้"
+  }
+ ],
+ "w|คุณ": [
+  {
+   "text": "คุณชื่ออะไร",
+   "en": "What's your name?",
+   "ko": "이름이 뭐예요?",
+   "blank": "คุณ"
+  },
+  {
+   "text": "คุณกินข้าวยัง",
+   "en": "Have you eaten?",
+   "ko": "밥 먹었어요?",
+   "blank": "คุณ"
+  }
+ ],
+ "w|เคย": [
+  {
+   "text": "เคยไปเชียงใหม่ไหม",
+   "en": "Have you been to Chiang Mai?",
+   "ko": "치앙마이 가 본 적 있어?",
+   "blank": "เคย"
+  },
+  {
+   "text": "ฉันไม่เคยเห็น",
+   "en": "I've never seen it.",
+   "ko": "난 본 적이 없어.",
+   "blank": "เคย"
+  }
+ ],
+ "w|แค่": [
+  {
+   "text": "แค่ถาม",
+   "en": "Just asking.",
+   "ko": "그냥 물어본 거야.",
+   "blank": "แค่"
+  },
+  {
+   "text": "แค่นี้พอ",
+   "en": "This is enough.",
+   "ko": "이 정도면 돼.",
+   "blank": "แค่"
+  }
+ ],
+ "w|ใคร": [
+  {
+   "text": "ใครโทรมา",
+   "en": "Who called?",
+   "ko": "누가 전화했어?",
+   "blank": "ใคร"
+  },
+  {
+   "text": "ใครอยู่บ้าน",
+   "en": "Who's home?",
+   "ko": "집에 누구 있어?",
+   "blank": "ใคร"
+  }
+ ],
+ "w|ฆ่า": [
+  {
+   "text": "ฆ่ายุงให้หน่อย",
+   "en": "Get that mosquito for me.",
+   "ko": "모기 좀 잡아 줘.",
+   "blank": "ฆ่า"
+  },
+  {
+   "text": "อย่าฆ่าเวลา",
+   "en": "Don't just kill time.",
+   "ko": "시간 때우지 마.",
+   "blank": "ฆ่า"
+  }
+ ],
+ "w|งั้น": [
+  {
+   "text": "งั้นไปก่อนนะ",
+   "en": "I'll head off, then.",
+   "ko": "그럼 먼저 갈게.",
+   "blank": "งั้น"
+  },
+  {
+   "text": "ว่างั้นก็ได้",
+   "en": "All right, if you say so.",
+   "ko": "그렇다면 그렇게 하자.",
+   "blank": "งั้น"
+  }
+ ],
+ "w|งาน": [
+  {
+   "text": "งานเยอะวันนี้",
+   "en": "There's a lot of work today.",
+   "ko": "오늘 일이 많아.",
+   "blank": "งาน"
+  },
+  {
+   "text": "เลิกงานกี่โมง",
+   "en": "What time do you get off work?",
+   "ko": "몇 시에 퇴근해?",
+   "blank": "งาน"
+  }
+ ],
+ "w|ง่าย": [
+  {
+   "text": "ทำง่ายมาก",
+   "en": "It's really easy to make.",
+   "ko": "만들기 정말 쉬워.",
+   "blank": "ง่าย"
+  },
+  {
+   "text": "ง่ายกว่าที่คิดไว้",
+   "en": "It was easier than I thought.",
+   "ko": "생각보다 쉬웠어.",
+   "blank": "ง่าย"
+  }
+ ],
+ "w|เงิน": [
+  {
+   "text": "เงินไม่พอ",
+   "en": "I don't have enough money.",
+   "ko": "돈이 모자라.",
+   "blank": "เงิน"
+  },
+  {
+   "text": "ยืมเงินหน่อยได้ไหม",
+   "en": "Can I borrow some money?",
+   "ko": "돈 좀 빌려 줄래?",
+   "blank": "เงิน"
+  }
+ ],
+ "w|จริง": [
+  {
+   "text": "ไม่จริง",
+   "en": "That's not true.",
+   "ko": "그건 아니야.",
+   "blank": "จริง"
+  },
+  {
+   "text": "พูดจริงนะ",
+   "en": "I mean it.",
+   "ko": "진짜라니까.",
+   "blank": "จริง"
+  }
+ ],
+ "w|จะ": [
+  {
+   "text": "ฝนจะตก",
+   "en": "It's going to rain.",
+   "ko": "비 올 것 같아.",
+   "blank": "จะ"
+  },
+  {
+   "text": "ใครจะรู้",
+   "en": "Who knows?",
+   "ko": "누가 알겠어?",
+   "blank": "จะ"
+  }
+ ],
+ "w|จ้ะ": [
+  {
+   "text": "ได้จ้ะ",
+   "en": "Okay, dear.",
+   "ko": "응, 알겠어.",
+   "blank": "จ้ะ"
+  },
+  {
+   "text": "มาจ้ะ",
+   "en": "Coming!",
+   "ko": "지금 갈게!",
+   "blank": "จ้ะ"
+  }
+ ],
+ "w|จ๊ะ": [
+  {
+   "text": "อะไรจ๊ะ",
+   "en": "What is it, dear?",
+   "ko": "왜, 무슨 일이야?",
+   "blank": "จ๊ะ"
+  },
+  {
+   "text": "ไปไหนจ๊ะ",
+   "en": "Where are you off to?",
+   "ko": "어디 가?",
+   "blank": "จ๊ะ"
+  }
+ ],
+ "w|จาก": [
+  {
+   "text": "จดหมายจากแม่",
+   "en": "A letter from Mom.",
+   "ko": "엄마가 보낸 편이야.",
+   "blank": "จาก"
+  },
+  {
+   "text": "เดินจากบ้าน",
+   "en": "I walked over from home.",
+   "ko": "집에서 걸어왔어.",
+   "blank": "จาก"
+  }
+ ],
+ "w|จ่าย": [
+  {
+   "text": "เดี๋ยวฉันจ่ายเอง",
+   "en": "I'll pay.",
+   "ko": "내가 낼게.",
+   "blank": "จ่าย"
+  },
+  {
+   "text": "จ่ายที่เคาน์เตอร์นะ",
+   "en": "Pay at the counter.",
+   "ko": "계산대에서 내.",
+   "blank": "จ่าย"
+  }
+ ],
+ "w|จำ": [
+  {
+   "text": "จำได้ไหม",
+   "en": "Do you remember?",
+   "ko": "기억나?",
+   "blank": "จำ"
+  },
+  {
+   "text": "จำชื่อเขาไม่ได้",
+   "en": "I can't remember his name.",
+   "ko": "그 사람 이름이 기억 안 나.",
+   "blank": "จำ"
+  }
+ ],
+ "w|เจ็ด": [
+  {
+   "text": "เจ็ดคนพอ",
+   "en": "Seven people is enough.",
+   "ko": "일곱 명이면 돼.",
+   "blank": "เจ็ด"
+  },
+  {
+   "text": "อีกเจ็ดวันค่อยเจอ",
+   "en": "Let's meet in seven days.",
+   "ko": "칠 일 뒤에 보자.",
+   "blank": "เจ็ด"
+  }
+ ],
+ "w|เจอ": [
+  {
+   "text": "เจอแล้ว",
+   "en": "Found it.",
+   "ko": "찾았어.",
+   "blank": "เจอ"
+  },
+  {
+   "text": "เพิ่งเจอเขา",
+   "en": "I just ran into him.",
+   "ko": "방금 그 사람을 만났어.",
+   "blank": "เจอ"
+  }
+ ],
+ "w|ใจ": [
+  {
+   "text": "ใจเย็นก่อน",
+   "en": "Calm down first.",
+   "ko": "일단 진정해.",
+   "blank": "ใจ"
+  },
+  {
+   "text": "เสียใจด้วยนะ",
+   "en": "I'm sorry to hear that.",
+   "ko": "유감이야.",
+   "blank": "ใจ"
+  }
+ ],
+ "w|ฉัน": [
+  {
+   "text": "ฉันหิวแล้ว",
+   "en": "I'm hungry.",
+   "ko": "나 배고파.",
+   "blank": "ฉัน"
+  },
+  {
+   "text": "ฉันกลับก่อนนะ",
+   "en": "I'll head out first.",
+   "ko": "나 먼저 갈게.",
+   "blank": "ฉัน"
+  }
+ ],
+ "w|ช่วย": [
+  {
+   "text": "ช่วยด้วย",
+   "en": "Help me!",
+   "ko": "도와줘!",
+   "blank": "ช่วย"
+  },
+  {
+   "text": "ช่วยเปิดหน้าต่างหน่อย",
+   "en": "Could you open the window?",
+   "ko": "창문 좀 열어 줘.",
+   "blank": "ช่วย"
+  }
+ ],
+ "w|ชอบ": [
+  {
+   "text": "ชอบสีฟ้า",
+   "en": "I like blue.",
+   "ko": "파란색이 좋아.",
+   "blank": "ชอบ"
+  },
+  {
+   "text": "ฉันชอบอันนั้น",
+   "en": "I like that one.",
+   "ko": "나 저거 좋아해.",
+   "blank": "ชอบ"
+  }
+ ],
+ "w|ชั่วโมง": [
+  {
+   "text": "รอมาชั่วโมงแล้ว",
+   "en": "I've been waiting an hour.",
+   "ko": "한 시간째 기다렸어.",
+   "blank": "ชั่วโมง"
+  },
+  {
+   "text": "อีกชั่วโมงค่อยมา",
+   "en": "Come back in an hour.",
+   "ko": "한 시간 있다가 와.",
+   "blank": "ชั่วโมง"
+  }
+ ],
+ "w|ช้า": [
+  {
+   "text": "เดินช้าหน่อย",
+   "en": "Slow down a bit.",
+   "ko": "좀 천천히 가.",
+   "blank": "ช้า"
+  },
+  {
+   "text": "ช้าไปแล้ว",
+   "en": "It's already too late.",
+   "ko": "이미 늦었어.",
+   "blank": "ช้า"
+  }
+ ],
+ "w|เช้า": [
+  {
+   "text": "เช้านี้รถติดมาก",
+   "en": "Traffic was bad this morning.",
+   "ko": "오늘 아침에 차가 많이 막혔어.",
+   "blank": "เช้า"
+  },
+  {
+   "text": "พรุ่งเช้าค่อยว่ากัน",
+   "en": "We'll sort it out tomorrow morning.",
+   "ko": "내일 아침에 다시 얘기하자.",
+   "blank": "เช้า"
+  }
+ ],
+ "w|เชื่อ": [
+  {
+   "text": "เชื่อฉันสิ",
+   "en": "Trust me.",
+   "ko": "나 좀 믿어.",
+   "blank": "เชื่อ"
+  },
+  {
+   "text": "ไม่เชื่อหรอก",
+   "en": "I don't believe it.",
+   "ko": "안 믿어.",
+   "blank": "เชื่อ"
+  }
+ ],
+ "w|ใช่": [
+  {
+   "text": "ใช่เลย",
+   "en": "Exactly.",
+   "ko": "맞아, 그거야.",
+   "blank": "ใช่"
+  },
+  {
+   "text": "นั่นใช่ไหม",
+   "en": "Is that the one?",
+   "ko": "저거 맞아?",
+   "blank": "ใช่"
+  }
+ ],
+ "w|ใช้": [
+  {
+   "text": "ใช้ได้เลย",
+   "en": "Go ahead and use it.",
+   "ko": "그냥 써도 돼.",
+   "blank": "ใช้"
+  },
+  {
+   "text": "อันนี้ใช้ยังไง",
+   "en": "How do you use this?",
+   "ko": "이거 어떻게 써?",
+   "blank": "ใช้"
+  }
+ ],
+ "w|ซิ": [
+  {
+   "text": "เอาซิ",
+   "en": "Fine, go ahead.",
+   "ko": "그래, 해.",
+   "blank": "ซิ"
+  },
+  {
+   "text": "ลองซิ",
+   "en": "Go on, try it.",
+   "ko": "해 봐.",
+   "blank": "ซิ"
+  }
+ ],
+ "w|ซื้อ": [
+  {
+   "text": "ซื้อมาจากไหน",
+   "en": "Where did you buy it?",
+   "ko": "어디서 샀어?",
+   "blank": "ซื้อ"
+  },
+  {
+   "text": "เดี๋ยวฉันซื้อให้",
+   "en": "I'll buy it for you.",
+   "ko": "내가 사 줄게.",
+   "blank": "ซื้อ"
+  }
+ ],
+ "w|ด้วย": [
+  {
+   "text": "ฉันด้วย",
+   "en": "Me too.",
+   "ko": "나도.",
+   "blank": "ด้วย"
+  },
+  {
+   "text": "กินด้วยกัน",
+   "en": "Let's eat together.",
+   "ko": "같이 먹자.",
+   "blank": "ด้วย"
+  }
+ ],
+ "w|ดังนั้น": [
+  {
+   "text": "เขาไม่มา ดังนั้นเลิก",
+   "en": "He's not coming, so let's call it off.",
+   "ko": "그 사람이 안 오니까 그만하자.",
+   "blank": "ดังนั้น"
+  },
+  {
+   "text": "ฝนตก ดังนั้นอยู่บ้าน",
+   "en": "It's raining, so I'll stay home.",
+   "ko": "비가 와서 집에 있을게.",
+   "blank": "ดังนั้น"
+  }
+ ],
+ "w|ดี": [
+  {
+   "text": "อากาศดีจัง",
+   "en": "The weather's lovely.",
+   "ko": "날씨 정말 좋다.",
+   "blank": "ดี"
+  },
+  {
+   "text": "ฝีมือดีมาก",
+   "en": "Really skilled.",
+   "ko": "솜씨가 아주 좋아.",
+   "blank": "ดี"
+  }
+ ],
+ "w|ดู": [
+  {
+   "text": "ดูนี่สิ",
+   "en": "Look at this.",
+   "ko": "이거 봐.",
+   "blank": "ดู"
+  },
+  {
+   "text": "ขอดูหน่อย",
+   "en": "Let me see it.",
+   "ko": "잠깐 보여 줘.",
+   "blank": "ดู"
+  }
+ ],
+ "w|เด็ก": [
+  {
+   "text": "เด็กหลับแล้ว",
+   "en": "The kid's asleep.",
+   "ko": "아이가 잠들었어.",
+   "blank": "เด็ก"
+  },
+  {
+   "text": "เด็กเล่นอยู่",
+   "en": "The kids are playing.",
+   "ko": "아이들이 놀고 있어.",
+   "blank": "เด็ก"
+  }
+ ],
+ "w|เดิน": [
+  {
+   "text": "เดินเล่นหน่อย",
+   "en": "Let's take a walk.",
+   "ko": "잠깐 산책하자.",
+   "blank": "เดิน"
+  },
+  {
+   "text": "เดินไม่ไหวแล้ว",
+   "en": "I can't walk any further.",
+   "ko": "더 이상 못 걷겠어.",
+   "blank": "เดิน"
+  }
+ ],
+ "w|เดี๋ยวนี้": [
+  {
+   "text": "มาเดี๋ยวนี้",
+   "en": "Come right now.",
+   "ko": "지금 당장 와.",
+   "blank": "เดี๋ยวนี้"
+  },
+  {
+   "text": "เดี๋ยวนี้ร้อนมาก",
+   "en": "It's so hot these days.",
+   "ko": "요즘 너무 더워.",
+   "blank": "เดี๋ยวนี้"
+  }
+ ],
+ "w|โดย": [
+  {
+   "text": "มาโดยรถเมล์",
+   "en": "I came by bus.",
+   "ko": "버스로 왔어.",
+   "blank": "โดย"
+  },
+  {
+   "text": "ทำโดยไม่คิด",
+   "en": "You did it without thinking.",
+   "ko": "생각 없이 했어.",
+   "blank": "โดย"
+  }
+ ],
+ "w|ได้": [
+  {
+   "text": "ได้เลย",
+   "en": "Sure.",
+   "ko": "그래, 좋아.",
+   "blank": "ได้"
+  },
+  {
+   "text": "ไม่ได้หรอก",
+   "en": "I really can't.",
+   "ko": "그건 안 돼.",
+   "blank": "ได้"
+  }
+ ],
+ "w|ต้อง": [
+  {
+   "text": "ต้องไปแล้ว",
+   "en": "I have to go.",
+   "ko": "이제 가야 해.",
+   "blank": "ต้อง"
+  },
+  {
+   "text": "ไม่ต้องห่วง",
+   "en": "Don't worry.",
+   "ko": "걱정하지 마.",
+   "blank": "ต้อง"
+  }
+ ],
+ "w|ตอนนี้": [
+  {
+   "text": "ตอนนี้ยุ่งอยู่",
+   "en": "I'm busy right now.",
+   "ko": "지금 바빠.",
+   "blank": "ตอนนี้"
+  },
+  {
+   "text": "ตอนนี้กี่โมง",
+   "en": "What time is it now?",
+   "ko": "지금 몇 시야?",
+   "blank": "ตอนนี้"
+  }
+ ],
+ "w|ตัวเอง": [
+  {
+   "text": "ดูตัวเองก่อน",
+   "en": "Look at yourself first.",
+   "ko": "너부터 봐.",
+   "blank": "ตัวเอง"
+  },
+  {
+   "text": "ถามตัวเองดู",
+   "en": "Ask yourself.",
+   "ko": "스스로한테 물어봐.",
+   "blank": "ตัวเอง"
+  }
+ ],
+ "w|ตาม": [
+  {
+   "text": "ตามมาเลย",
+   "en": "Come along.",
+   "ko": "따라와.",
+   "blank": "ตาม"
+  },
+  {
+   "text": "ตามสบายนะ",
+   "en": "Make yourself at home.",
+   "ko": "편히 있어.",
+   "blank": "ตาม"
+  }
+ ],
+ "w|ตาย": [
+  {
+   "text": "ต้นไม้ตายแล้ว",
+   "en": "The plant died.",
+   "ko": "나무가 죽었어.",
+   "blank": "ตาย"
+  },
+  {
+   "text": "มือถือตายแล้ว",
+   "en": "My phone died.",
+   "ko": "폰이 꺼졌어.",
+   "blank": "ตาย"
+  }
+ ],
+ "w|ตำรวจ": [
+  {
+   "text": "ตรงนั้นมีตำรวจ",
+   "en": "There's a police officer over there.",
+   "ko": "저쪽에 경찰이 있어.",
+   "blank": "ตำรวจ"
+  },
+  {
+   "text": "เรียกตำรวจเลย",
+   "en": "Call the police.",
+   "ko": "당장 경찰 불러.",
+   "blank": "ตำรวจ"
+  }
+ ],
+ "w|ตื่น": [
+  {
+   "text": "เพิ่งตื่น",
+   "en": "Just woke up.",
+   "ko": "방금 일어났어.",
+   "blank": "ตื่น"
+  },
+  {
+   "text": "ตื่นได้แล้ว",
+   "en": "Time to get up.",
+   "ko": "이제 일어나.",
+   "blank": "ตื่น"
+  }
+ ],
+ "w|แต่": [
+  {
+   "text": "อยากไปแต่เหนื่อย",
+   "en": "I want to go, but I'm tired.",
+   "ko": "가고 싶은데 피곤해.",
+   "blank": "แต่"
+  },
+  {
+   "text": "สวยแต่แพง",
+   "en": "Pretty, but expensive.",
+   "ko": "예쁜데 비싸.",
+   "blank": "แต่"
+  }
+ ],
+ "w|แต่ว่า": [
+  {
+   "text": "อยากไปแต่ว่าไม่ว่าง",
+   "en": "I want to go, but I'm not free.",
+   "ko": "가고 싶은데 시간이 안 돼.",
+   "blank": "แต่ว่า"
+  },
+  {
+   "text": "อร่อยแต่ว่าแพง",
+   "en": "It's tasty, but expensive.",
+   "ko": "맛있는데 비싸.",
+   "blank": "แต่ว่า"
+  }
+ ],
+ "w|ถ้า": [
+  {
+   "text": "ถ้าฝนตกค่อยว่ากัน",
+   "en": "We'll see if it rains.",
+   "ko": "비 오면 그때 보자.",
+   "blank": "ถ้า"
+  },
+  {
+   "text": "ถ้าว่างมาหาฉัน",
+   "en": "Come by if you're free.",
+   "ko": "한가하면 놀러 와.",
+   "blank": "ถ้า"
+  }
+ ],
+ "w|ถ้างั้น": [
+  {
+   "text": "ถ้างั้นฉันไม่ไป",
+   "en": "Then I'm not going.",
+   "ko": "그러면 나는 안 갈게.",
+   "blank": "ถ้างั้น"
+  },
+  {
+   "text": "ถ้างั้นพรุ่งนี้นะ",
+   "en": "Tomorrow, then.",
+   "ko": "그러면 내일 보자.",
+   "blank": "ถ้างั้น"
+  }
+ ],
+ "w|ถึง": [
+  {
+   "text": "ถึงบ้านแล้ว",
+   "en": "I'm home.",
+   "ko": "집에 도착했어.",
+   "blank": "ถึง"
+  },
+  {
+   "text": "ถึงเวลาแล้ว",
+   "en": "It's time.",
+   "ko": "이제 시간이야.",
+   "blank": "ถึง"
+  }
+ ],
+ "w|เถอะ": [
+  {
+   "text": "กินก่อนเถอะ",
+   "en": "Eat something first.",
+   "ko": "먼저 먹어.",
+   "blank": "เถอะ"
+  },
+  {
+   "text": "พักก่อนเถอะ",
+   "en": "Rest a bit first.",
+   "ko": "잠깐 쉬어.",
+   "blank": "เถอะ"
+  }
+ ],
+ "w|ทาง": [
+  {
+   "text": "หลงทาง",
+   "en": "I'm lost.",
+   "ko": "길을 잃었어.",
+   "blank": "ทาง"
+  },
+  {
+   "text": "ไปทางนี้",
+   "en": "Go this way.",
+   "ko": "이쪽으로 가.",
+   "blank": "ทาง"
+  }
+ ],
+ "w|ท่าน": [
+  {
+   "text": "ท่านนั่งก่อน",
+   "en": "Please have a seat.",
+   "ko": "앉으세요.",
+   "blank": "ท่าน"
+  },
+  {
+   "text": "ท่านจะรับชาไหม",
+   "en": "Would you like some tea?",
+   "ko": "차 드시겠어요?",
+   "blank": "ท่าน"
+  }
+ ],
+ "w|ทำ": [
+  {
+   "text": "ทำอะไรอยู่",
+   "en": "What are you doing?",
+   "ko": "뭐 하고 있어?",
+   "blank": "ทำ"
+  },
+  {
+   "text": "อย่าทำแบบนั้น",
+   "en": "Don't do that.",
+   "ko": "그렇게 하지 마.",
+   "blank": "ทำ"
+  }
+ ],
+ "w|ทำงาน": [
+  {
+   "text": "วันนี้ทำงานที่บ้าน",
+   "en": "I'm working from home today.",
+   "ko": "오늘은 집에서 일해.",
+   "blank": "ทำงาน"
+  },
+  {
+   "text": "ทำงานเสร็จยัง",
+   "en": "Are you done with work?",
+   "ko": "일은 끝냈어?",
+   "blank": "ทำงาน"
+  }
+ ],
+ "w|ทำไม": [
+  {
+   "text": "ทำไมไม่มา",
+   "en": "Why didn't you come?",
+   "ko": "왜 안 왔어?",
+   "blank": "ทำไม"
+  },
+  {
+   "text": "ทำไมเงียบจัง",
+   "en": "Why so quiet?",
+   "ko": "왜 이렇게 조용해?",
+   "blank": "ทำไม"
+  }
+ ],
+ "w|ทิ้ง": [
+  {
+   "text": "ทิ้งตรงนี้เลย",
+   "en": "Just toss it here.",
+   "ko": "그냥 여기 버려.",
+   "blank": "ทิ้ง"
+  },
+  {
+   "text": "อย่าเพิ่งทิ้ง",
+   "en": "Don't throw it away yet.",
+   "ko": "아직 버리지 마.",
+   "blank": "ทิ้ง"
+  }
+ ],
+ "w|ที่": [
+  {
+   "text": "ฉันอยู่ที่บ้าน",
+   "en": "I'm at home.",
+   "ko": "나 집에 있어.",
+   "blank": "ที่"
+  },
+  {
+   "text": "วางไว้ที่โต๊ะ",
+   "en": "I left it on the table.",
+   "ko": "탁자 위에 뒀어.",
+   "blank": "ที่"
+  }
+ ],
+ "w|ที่นั่น": [
+  {
+   "text": "ที่นั่นไกลไป",
+   "en": "That's too far.",
+   "ko": "거긴 너무 멀어.",
+   "blank": "ที่นั่น"
+  },
+  {
+   "text": "ที่นั่นฝนตก",
+   "en": "It's raining there.",
+   "ko": "거기는 비가 와.",
+   "blank": "ที่นั่น"
+  }
+ ],
+ "w|ที่นี่": [
+  {
+   "text": "ที่นี่ร้อนจัง",
+   "en": "It's so hot here.",
+   "ko": "여기 정말 더워.",
+   "blank": "ที่นี่"
+  },
+  {
+   "text": "นั่งที่นี่สิ",
+   "en": "Sit here.",
+   "ko": "여기 앉아.",
+   "blank": "ที่นี่"
+  }
+ ],
+ "w|ที่ไหน": [
+  {
+   "text": "ห้องน้ำอยู่ที่ไหน",
+   "en": "Where's the restroom?",
+   "ko": "화장실이 어디예요?",
+   "blank": "ที่ไหน"
+  },
+  {
+   "text": "วางที่ไหน",
+   "en": "Where did you put it?",
+   "ko": "어디 뒀어?",
+   "blank": "ที่ไหน"
+  }
+ ],
+ "w|ทุก": [
+  {
+   "text": "ทุกคนเหนื่อย",
+   "en": "Everyone's worn out.",
+   "ko": "다들 지쳤어.",
+   "blank": "ทุก"
+  },
+  {
+   "text": "ทุกวันฝนตก",
+   "en": "It rains every single day.",
+   "ko": "매일 비가 와.",
+   "blank": "ทุก"
+  }
+ ],
+ "w|เท่านั้น": [
+  {
+   "text": "แค่นี้เท่านั้น",
+   "en": "That's all there is.",
+   "ko": "이게 다야.",
+   "blank": "เท่านั้น"
+  },
+  {
+   "text": "เท่านั้นเอง",
+   "en": "That's all it comes to.",
+   "ko": "그뿐이야.",
+   "blank": "เท่านั้น"
+  }
+ ],
+ "w|เธอ": [
+  {
+   "text": "เธอไปไหนมา",
+   "en": "Where have you been?",
+   "ko": "어디 갔다 와?",
+   "blank": "เธอ"
+  },
+  {
+   "text": "เธอมาสายอีกแล้ว",
+   "en": "You're late again.",
+   "ko": "너 또 늦었네.",
+   "blank": "เธอ"
+  }
+ ],
+ "w|น้อง": [
+  {
+   "text": "น้องหลับอยู่",
+   "en": "The little one's asleep.",
+   "ko": "동생이 자고 있어.",
+   "blank": "น้อง"
+  },
+  {
+   "text": "น้องหิวแล้ว",
+   "en": "The younger one's hungry.",
+   "ko": "동생이 배고파.",
+   "blank": "น้อง"
+  }
+ ],
+ "w|นอน": [
+  {
+   "text": "ขอนอนก่อน",
+   "en": "I'm going to turn in.",
+   "ko": "나 먼저 잘게.",
+   "blank": "นอน"
+  },
+  {
+   "text": "เมื่อไหร่จะนอน",
+   "en": "When are you going to sleep?",
+   "ko": "언제 잘 거야?",
+   "blank": "นอน"
+  }
+ ],
+ "w|นะ": [
+  {
+   "text": "ระวังนะ",
+   "en": "Be careful.",
+   "ko": "조심해.",
+   "blank": "นะ"
+  },
+  {
+   "text": "ฝันดีนะ",
+   "en": "Sweet dreams.",
+   "ko": "좋은 꿈 꿔.",
+   "blank": "นะ"
+  }
+ ],
+ "w|น่ะ": [
+  {
+   "text": "เรื่องนี้น่ะง่าย",
+   "en": "This is easy, you know.",
+   "ko": "이건 쉽잖아.",
+   "blank": "น่ะ"
+  },
+  {
+   "text": "คนนั้นน่ะเพื่อนฉัน",
+   "en": "That person is my friend.",
+   "ko": "저 사람 내 친구야.",
+   "blank": "น่ะ"
+  }
+ ],
+ "w|นั่น": [
+  {
+   "text": "นั่นใคร",
+   "en": "Who's that over there?",
+   "ko": "저기 누구야?",
+   "blank": "นั่น"
+  },
+  {
+   "text": "นั่นรถฉัน",
+   "en": "That's my car.",
+   "ko": "저 차 내 거야.",
+   "blank": "นั่น"
+  }
+ ],
+ "w|นั้น": [
+  {
+   "text": "คนนั้นเป็นใคร",
+   "en": "Who is that person?",
+   "ko": "저 사람 누구야?",
+   "blank": "นั้น"
+  },
+  {
+   "text": "วันนั้นฝนตก",
+   "en": "It rained that day.",
+   "ko": "그날은 비가 왔어.",
+   "blank": "นั้น"
+  }
+ ],
+ "w|นาที": [
+  {
+   "text": "ขออีกสักนาที",
+   "en": "Give me another minute.",
+   "ko": "조금만 더 기다려 줘.",
+   "blank": "นาที"
+  },
+  {
+   "text": "รอสักนาที",
+   "en": "Wait a minute.",
+   "ko": "잠깐만 기다려.",
+   "blank": "นาที"
+  }
+ ],
+ "w|นาย": [
+  {
+   "text": "นายไปไหนมา",
+   "en": "Where have you been?",
+   "ko": "너 어디 갔다 와?",
+   "blank": "นาย"
+  },
+  {
+   "text": "นายลืมกุญแจ",
+   "en": "You forgot the key.",
+   "ko": "너 열쇠 깜빡했잖아.",
+   "blank": "นาย"
+  }
+ ],
+ "w|น่ารัก": [
+  {
+   "text": "แมวน่ารักจัง",
+   "en": "The cat is so cute.",
+   "ko": "고양이가 정말 귀여워.",
+   "blank": "น่ารัก"
+  },
+  {
+   "text": "ยิ้มแล้วน่ารัก",
+   "en": "You look cute when you smile.",
+   "ko": "웃으면 귀여워.",
+   "blank": "น่ารัก"
+  }
+ ],
+ "w|นี่": [
+  {
+   "text": "นี่ของฉัน",
+   "en": "This is mine.",
+   "ko": "이거 내 거야.",
+   "blank": "นี่"
+  },
+  {
+   "text": "มานี่สิ",
+   "en": "Come over here.",
+   "ko": "이리 와 봐.",
+   "blank": "นี่"
+  }
+ ],
+ "w|นี้": [
+  {
+   "text": "ห้องนี้เล็ก",
+   "en": "This room is small.",
+   "ko": "이 방은 좁아.",
+   "blank": "นี้"
+  },
+  {
+   "text": "ฉันชอบอันนี้",
+   "en": "I like this one.",
+   "ko": "나 이거 좋아해.",
+   "blank": "นี้"
+  }
+ ],
+ "w|แน่นอน": [
+  {
+   "text": "ฉันไปแน่นอน",
+   "en": "I'm definitely going.",
+   "ko": "나 꼭 가.",
+   "blank": "แน่นอน"
+  },
+  {
+   "text": "แน่นอนอยู่แล้ว",
+   "en": "Well, obviously.",
+   "ko": "당연히 그렇지.",
+   "blank": "แน่นอน"
+  }
+ ],
+ "w|ใน": [
+  {
+   "text": "ในห้องร้อน",
+   "en": "It's hot in the room.",
+   "ko": "방이 더워.",
+   "blank": "ใน"
+  },
+  {
+   "text": "ใส่ในถุง",
+   "en": "Put it in the bag.",
+   "ko": "봉지에 넣어.",
+   "blank": "ใน"
+  }
+ ],
+ "w|บอก": [
+  {
+   "text": "บอกฉันหน่อย",
+   "en": "Tell me.",
+   "ko": "나한테 좀 말해 줘.",
+   "blank": "บอก"
+  },
+  {
+   "text": "บอกตรงๆหน่อย",
+   "en": "Tell me straight.",
+   "ko": "솔직하게 말해.",
+   "blank": "บอก"
+  }
+ ],
+ "w|บาง": [
+  {
+   "text": "บางคนยังไม่มา",
+   "en": "Some people aren't here yet.",
+   "ko": "아직 안 온 사람도 있어.",
+   "blank": "บาง"
+  },
+  {
+   "text": "บางเรื่องฉันลืม",
+   "en": "I've forgotten some of it.",
+   "ko": "일부는 까먹었어.",
+   "blank": "บาง"
+  }
+ ],
+ "w|บ้าน": [
+  {
+   "text": "บ้านอยู่ไกล",
+   "en": "Home is far.",
+   "ko": "집이 멀어.",
+   "blank": "บ้าน"
+  },
+  {
+   "text": "บ้านฉันเล็ก",
+   "en": "My place is small.",
+   "ko": "우리 집은 좁아.",
+   "blank": "บ้าน"
+  }
+ ],
+ "w|ปี": [
+  {
+   "text": "ปีนี้อากาศร้อน",
+   "en": "It's hot this year.",
+   "ko": "올해는 덥네.",
+   "blank": "ปี"
+  },
+  {
+   "text": "ปีที่แล้วฉันย้าย",
+   "en": "I moved last year.",
+   "ko": "작년에 이사했어.",
+   "blank": "ปี"
+  }
+ ],
+ "w|เป็น": [
+  {
+   "text": "เขาเป็นหมอ",
+   "en": "He's a doctor.",
+   "ko": "그 사람 의사야.",
+   "blank": "เป็น"
+  },
+  {
+   "text": "ฉันเป็นหวัด",
+   "en": "I've got a cold.",
+   "ko": "나 감기 걸렸어.",
+   "blank": "เป็น"
+  }
+ ],
+ "w|แปด": [
+  {
+   "text": "ขอแปดอัน",
+   "en": "Eight, please.",
+   "ko": "여덟 개 주세요.",
+   "blank": "แปด"
+  },
+  {
+   "text": "แปดคนพอ",
+   "en": "Eight people is enough.",
+   "ko": "여덟 명이면 돼.",
+   "blank": "แปด"
+  }
+ ],
+ "w|ไป": [
+  {
+   "text": "ไปไหนมา",
+   "en": "Where have you been?",
+   "ko": "어디 갔다 왔어?",
+   "blank": "ไป"
+  },
+  {
+   "text": "ไปก่อนนะ",
+   "en": "I'm heading off.",
+   "ko": "먼저 갈게.",
+   "blank": "ไป"
+  }
+ ],
+ "w|ผม": [
+  {
+   "text": "ผมไปก่อนนะ",
+   "en": "I'll get going.",
+   "ko": "저 먼저 갈게요.",
+   "blank": "ผม"
+  },
+  {
+   "text": "ผมหิวครับ",
+   "en": "I'm hungry.",
+   "ko": "저 배고파요.",
+   "blank": "ผม"
+  }
+ ],
+ "w|ผู้ชาย": [
+  {
+   "text": "ผู้ชายคนนั้นสูง",
+   "en": "That man is tall.",
+   "ko": "저 남자 키가 커.",
+   "blank": "ผู้ชาย"
+  },
+  {
+   "text": "มีผู้ชายโทรมา",
+   "en": "A man called.",
+   "ko": "남자가 전화했어.",
+   "blank": "ผู้ชาย"
+  }
+ ],
+ "w|ผู้หญิง": [
+  {
+   "text": "ผู้หญิงยืนรอ",
+   "en": "A woman is standing there waiting.",
+   "ko": "여자가 서서 기다리고 있어.",
+   "blank": "ผู้หญิง"
+  },
+  {
+   "text": "ผู้หญิงคนนั้นสูง",
+   "en": "That woman is tall.",
+   "ko": "저 여자 키가 커.",
+   "blank": "ผู้หญิง"
+  }
+ ],
+ "w|พรุ่งนี้": [
+  {
+   "text": "พรุ่งนี้ค่อยไป",
+   "en": "Let's go tomorrow.",
+   "ko": "내일 가자.",
+   "blank": "พรุ่งนี้"
+  },
+  {
+   "text": "พรุ่งนี้งานยุ่ง",
+   "en": "Tomorrow's packed.",
+   "ko": "내일은 일이 많아.",
+   "blank": "พรุ่งนี้"
+  }
+ ],
+ "w|พวกเขา": [
+  {
+   "text": "พวกเขากลับแล้ว",
+   "en": "They've gone back.",
+   "ko": "그 사람들은 돌아갔어.",
+   "blank": "พวกเขา"
+  },
+  {
+   "text": "พวกเขาอยู่ไหน",
+   "en": "Where are they?",
+   "ko": "그 사람들 어디 있어?",
+   "blank": "พวกเขา"
+  }
+ ],
+ "w|พวกเรา": [
+  {
+   "text": "พวกเราไปกัน",
+   "en": "Let's all go.",
+   "ko": "우리 다 같이 가자.",
+   "blank": "พวกเรา"
+  },
+  {
+   "text": "พวกเราหิวแล้ว",
+   "en": "We're hungry.",
+   "ko": "우리 배고파.",
+   "blank": "พวกเรา"
+  }
+ ],
+ "w|พ่อ": [
+  {
+   "text": "พ่อกลับแล้ว",
+   "en": "Dad's back.",
+   "ko": "아빠 돌아왔어.",
+   "blank": "พ่อ"
+  },
+  {
+   "text": "โทรหาพ่อ",
+   "en": "Give Dad a call.",
+   "ko": "아빠한테 전화해.",
+   "blank": "พ่อ"
+  }
+ ],
+ "w|พี่": [
+  {
+   "text": "พี่กลับหรือยัง",
+   "en": "Are you back yet?",
+   "ko": "이제 돌아왔어?",
+   "blank": "พี่"
+  },
+  {
+   "text": "พี่หิวไหม",
+   "en": "Are you hungry?",
+   "ko": "배고파?",
+   "blank": "พี่"
+  }
+ ],
+ "w|พูด": [
+  {
+   "text": "พูดช้าหน่อย",
+   "en": "A little slower, please.",
+   "ko": "조금만 천천히 말해 줘.",
+   "blank": "พูด"
+  },
+  {
+   "text": "อย่าพูดดัง",
+   "en": "Don't talk so loud.",
+   "ko": "그렇게 크게 말하지 마.",
+   "blank": "พูด"
+  }
+ ],
+ "w|เพราะ": [
+  {
+   "text": "ไม่มาเพราะรถติด",
+   "en": "I couldn't come because of the traffic.",
+   "ko": "차가 막혀서 못 왔어.",
+   "blank": "เพราะ"
+  },
+  {
+   "text": "เขาโกรธเพราะรอเกิน",
+   "en": "He's mad because he waited too long.",
+   "ko": "너무 오래 기다려서 그 사람 화났어.",
+   "blank": "เพราะ"
+  }
+ ],
+ "w|เพราะว่า": [
+  {
+   "text": "ไม่ไปเพราะว่าป่วย",
+   "en": "I'm not going because I'm sick.",
+   "ko": "아파서 안 가.",
+   "blank": "เพราะว่า"
+  },
+  {
+   "text": "เพราะว่าเผ็ดไป",
+   "en": "It's because it's too spicy.",
+   "ko": "너무 매워서 그래.",
+   "blank": "เพราะว่า"
+  }
+ ],
+ "w|เพื่อ": [
+  {
+   "text": "เพื่ออะไรกัน",
+   "en": "What was that for?",
+   "ko": "도대체 뭘 위해서 그런 거야?",
+   "blank": "เพื่อ"
+  },
+  {
+   "text": "ทำเพื่อครอบครัว",
+   "en": "I do it for my family.",
+   "ko": "가족을 위해서 하는 거야.",
+   "blank": "เพื่อ"
+  }
+ ],
+ "w|เพื่อน": [
+  {
+   "text": "เพื่อนรออยู่",
+   "en": "My friend's waiting.",
+   "ko": "친구가 기다리고 있어.",
+   "blank": "เพื่อน"
+  },
+  {
+   "text": "ชวนเพื่อนมา",
+   "en": "Invite a friend over.",
+   "ko": "친구를 불러 와.",
+   "blank": "เพื่อน"
+  }
+ ],
+ "w|ฟัง": [
+  {
+   "text": "ฟังนะ",
+   "en": "Listen.",
+   "ko": "잘 들어.",
+   "blank": "ฟัง"
+  },
+  {
+   "text": "ฟังเพลงนี้สิ",
+   "en": "Listen to this song.",
+   "ko": "이 노래 들어 봐.",
+   "blank": "ฟัง"
+  }
+ ],
+ "w|แฟน": [
+  {
+   "text": "แฟนรออยู่",
+   "en": "My partner's waiting.",
+   "ko": "애인이 기다리고 있어.",
+   "blank": "แฟน"
+  },
+  {
+   "text": "ไปกับแฟน",
+   "en": "I'm going with my partner.",
+   "ko": "애인이랑 가.",
+   "blank": "แฟน"
+  }
+ ],
+ "w|ภรรยา": [
+  {
+   "text": "ภรรยายังไม่กลับ",
+   "en": "My wife isn't back yet.",
+   "ko": "아내가 아직 안 돌아왔어.",
+   "blank": "ภรรยา"
+  },
+  {
+   "text": "ภรรยาเหนื่อยมาก",
+   "en": "My wife's exhausted.",
+   "ko": "아내가 너무 피곤해.",
+   "blank": "ภรรยา"
+  }
+ ],
+ "w|มัน": [
+  {
+   "text": "มันเผ็ดไป",
+   "en": "This is too spicy.",
+   "ko": "너무 매워.",
+   "blank": "มัน"
+  },
+  {
+   "text": "มันเสียแล้ว",
+   "en": "It's broken.",
+   "ko": "고장 났어.",
+   "blank": "มัน"
+  }
+ ],
+ "w|มั้ย": [
+  {
+   "text": "ไปมั้ย",
+   "en": "Wanna go?",
+   "ko": "갈래?",
+   "blank": "มั้ย"
+  },
+  {
+   "text": "กินมั้ย",
+   "en": "Want a bite?",
+   "ko": "먹을래?",
+   "blank": "มั้ย"
+  }
+ ],
+ "w|มา": [
+  {
+   "text": "มาช้าจัง",
+   "en": "You got here so late.",
+   "ko": "엄청 늦게 왔네.",
+   "blank": "มา"
+  },
+  {
+   "text": "เขามาแล้ว",
+   "en": "He's here.",
+   "ko": "그 사람 왔어.",
+   "blank": "มา"
+  }
+ ],
+ "w|มาก": [
+  {
+   "text": "แพงมาก",
+   "en": "Way too expensive.",
+   "ko": "너무 비싸.",
+   "blank": "มาก"
+  },
+  {
+   "text": "เหนื่อยมาก",
+   "en": "I'm exhausted.",
+   "ko": "너무 피곤해.",
+   "blank": "มาก"
+  }
+ ],
+ "w|มี": [
+  {
+   "text": "มีคนมา",
+   "en": "Someone's here.",
+   "ko": "누가 왔어.",
+   "blank": "มี"
+  },
+  {
+   "text": "ยังมีข้าวไหม",
+   "en": "Is there still rice?",
+   "ko": "밥 아직 있어?",
+   "blank": "มี"
+  }
+ ],
+ "w|เมื่อไร": [
+  {
+   "text": "จะเสร็จเมื่อไร",
+   "en": "When will it be finished?",
+   "ko": "언제 끝나?",
+   "blank": "เมื่อไร"
+  },
+  {
+   "text": "เขาจะมาเมื่อไร",
+   "en": "When is he coming?",
+   "ko": "그 사람 언제 와?",
+   "blank": "เมื่อไร"
+  }
+ ],
+ "w|เมื่อวาน": [
+  {
+   "text": "เมื่อวานฝนตก",
+   "en": "It rained yesterday.",
+   "ko": "어제 비 왔어.",
+   "blank": "เมื่อวาน"
+  },
+  {
+   "text": "เมื่อวานฉันเจอเขา",
+   "en": "I ran into him yesterday.",
+   "ko": "어제 그 사람을 만났어.",
+   "blank": "เมื่อวาน"
+  }
+ ],
+ "w|เมื่อไหร่": [
+  {
+   "text": "เลิกงานเมื่อไหร่",
+   "en": "When do you get off work?",
+   "ko": "퇴근이 언제야?",
+   "blank": "เมื่อไหร่"
+  },
+  {
+   "text": "เมื่อไหร่จะหยุดฝน",
+   "en": "When is this rain going to stop?",
+   "ko": "비는 언제 그쳐?",
+   "blank": "เมื่อไหร่"
+  }
+ ],
+ "w|แม่": [
+  {
+   "text": "แม่เรียก",
+   "en": "Mom's calling.",
+   "ko": "엄마가 불러.",
+   "blank": "แม่"
+  },
+  {
+   "text": "ไปหาแม่",
+   "en": "I'm going to see Mom.",
+   "ko": "엄마 보러 가.",
+   "blank": "แม่"
+  }
+ ],
+ "w|ไม่": [
+  {
+   "text": "ฉันไม่หิว",
+   "en": "I'm not hungry.",
+   "ko": "나 안 배고파.",
+   "blank": "ไม่"
+  },
+  {
+   "text": "ไม่ไปแล้ว",
+   "en": "I'm not going anymore.",
+   "ko": "이제 안 가.",
+   "blank": "ไม่"
+  }
+ ],
+ "w|ยัง": [
+  {
+   "text": "ยังไม่เสร็จ",
+   "en": "It's not done yet.",
+   "ko": "아직 안 끝났어.",
+   "blank": "ยัง"
+  },
+  {
+   "text": "เธอยังอยู่ไหม",
+   "en": "Are you still there?",
+   "ko": "아직 있어?",
+   "blank": "ยัง"
+  }
+ ],
+ "w|ยังไง": [
+  {
+   "text": "เธอจะทำยังไง",
+   "en": "What are you going to do?",
+   "ko": "너 어떻게 할 건데?",
+   "blank": "ยังไง"
+  },
+  {
+   "text": "งั้นยังไงต่อ",
+   "en": "So what now?",
+   "ko": "그래서 이제 어떡해?",
+   "blank": "ยังไง"
+  }
+ ],
+ "w|ยาก": [
+  {
+   "text": "ข้อนี้ยากไป",
+   "en": "This one is too hard.",
+   "ko": "이건 너무 어려워.",
+   "blank": "ยาก"
+  },
+  {
+   "text": "อยู่คนเดียวยาก",
+   "en": "Living alone is hard.",
+   "ko": "혼자 사는 건 힘들어.",
+   "blank": "ยาก"
+  }
+ ],
+ "w|เย็น": [
+  {
+   "text": "เย็นนี้กินอะไรกัน",
+   "en": "What should we eat this evening?",
+   "ko": "오늘 저녁에 뭐 먹을까?",
+   "blank": "เย็น"
+  },
+  {
+   "text": "เย็นแล้วกลับกันเถอะ",
+   "en": "It's evening. Let's head home.",
+   "ko": "저녁이 됐으니 집에 가자.",
+   "blank": "เย็น"
+  }
+ ],
+ "w|รอ": [
+  {
+   "text": "รอฉันหน่อย",
+   "en": "Wait for me.",
+   "ko": "나 좀 기다려.",
+   "blank": "รอ"
+  },
+  {
+   "text": "รอมานานแล้ว",
+   "en": "I've been waiting a long time.",
+   "ko": "한참 기다렸어.",
+   "blank": "รอ"
+  }
+ ],
+ "w|ระวัง": [
+  {
+   "text": "ระวังรถด้วยนะ",
+   "en": "Watch out for cars.",
+   "ko": "차 조심해.",
+   "blank": "ระวัง"
+  },
+  {
+   "text": "ระวังพื้นลื่น",
+   "en": "Careful, the floor is slippery.",
+   "ko": "바닥이 미끄러우니 조심해.",
+   "blank": "ระวัง"
+  }
+ ],
+ "w|รัก": [
+  {
+   "text": "รักแม่นะ",
+   "en": "Love you, Mom.",
+   "ko": "엄마, 사랑해.",
+   "blank": "รัก"
+  },
+  {
+   "text": "เขารักกันมาก",
+   "en": "They really love each other.",
+   "ko": "둘이 정말 사랑해.",
+   "blank": "รัก"
+  }
+ ],
+ "w|รู้": [
+  {
+   "text": "เธอรู้ไหม",
+   "en": "Do you know?",
+   "ko": "너 알아?",
+   "blank": "รู้"
+  },
+  {
+   "text": "ฉันรู้แล้ว",
+   "en": "I know now.",
+   "ko": "이제 알겠어.",
+   "blank": "รู้"
+  }
+ ],
+ "w|เร็ว": [
+  {
+   "text": "เร็วเข้า",
+   "en": "Hurry up.",
+   "ko": "빨리 해.",
+   "blank": "เร็ว"
+  },
+  {
+   "text": "พูดเร็วไป",
+   "en": "You're talking too fast.",
+   "ko": "말이 너무 빨라.",
+   "blank": "เร็ว"
+  }
+ ],
+ "w|เรา": [
+  {
+   "text": "เราไปกันเถอะ",
+   "en": "Let's get going.",
+   "ko": "우리 가자.",
+   "blank": "เรา"
+  },
+  {
+   "text": "เราซื้อของกัน",
+   "en": "Let's go pick some things up.",
+   "ko": "우리 장 보러 가자.",
+   "blank": "เรา"
+  }
+ ],
+ "w|เรียน": [
+  {
+   "text": "วันนี้เรียนอะไร",
+   "en": "What class do you have today?",
+   "ko": "오늘 수업이 뭐야?",
+   "blank": "เรียน"
+  },
+  {
+   "text": "เรียนถึงสี่โมง",
+   "en": "Class goes until four.",
+   "ko": "수업이 네 시까지야.",
+   "blank": "เรียน"
+  }
+ ],
+ "w|เรื่อง": [
+  {
+   "text": "มีเรื่องอะไร",
+   "en": "What's going on?",
+   "ko": "무슨 일이야?",
+   "blank": "เรื่อง"
+  },
+  {
+   "text": "เรื่องนี้จบแล้ว",
+   "en": "This matter is settled.",
+   "ko": "이 일은 끝났어.",
+   "blank": "เรื่อง"
+  }
+ ],
+ "w|ลง": [
+  {
+   "text": "นั่งลงก่อน",
+   "en": "Sit down first.",
+   "ko": "일단 앉아.",
+   "blank": "ลง"
+  },
+  {
+   "text": "ลงมาหน่อย",
+   "en": "Come down a bit.",
+   "ko": "좀 내려와.",
+   "blank": "ลง"
+  }
+ ],
+ "w|ล่ะ": [
+  {
+   "text": "แล้วเธอล่ะ",
+   "en": "And what about you?",
+   "ko": "너는?",
+   "blank": "ล่ะ"
+  },
+  {
+   "text": "ของเธอล่ะ",
+   "en": "What about yours?",
+   "ko": "네 건?",
+   "blank": "ล่ะ"
+  }
+ ],
+ "w|ลืม": [
+  {
+   "text": "ลืมกุญแจไว้ที่บ้าน",
+   "en": "I left my keys at home.",
+   "ko": "열쇠를 집에 두고 왔어.",
+   "blank": "ลืม"
+  },
+  {
+   "text": "อย่าลืมนะ",
+   "en": "Don't forget.",
+   "ko": "잊지 마.",
+   "blank": "ลืม"
+  }
+ ],
+ "w|ลูก": [
+  {
+   "text": "ไปรับลูก",
+   "en": "I'm off to pick up the kid.",
+   "ko": "아이 데리러 가.",
+   "blank": "ลูก"
+  },
+  {
+   "text": "ลูกตื่นหรือยัง",
+   "en": "Is the kid up yet?",
+   "ko": "애는 일어났어?",
+   "blank": "ลูก"
+  }
+ ],
+ "w|เล็ก": [
+  {
+   "text": "เล็กไปใส่ไม่ได้",
+   "en": "It's too small. It doesn't fit.",
+   "ko": "너무 작아서 안 맞아.",
+   "blank": "เล็ก"
+  },
+  {
+   "text": "ห้องนี้เล็กไป",
+   "en": "This room is too small.",
+   "ko": "이 방은 너무 작아.",
+   "blank": "เล็ก"
+  }
+ ],
+ "w|เล่น": [
+  {
+   "text": "ไปเล่นกัน",
+   "en": "Let's go play.",
+   "ko": "놀러 가자.",
+   "blank": "เล่น"
+  },
+  {
+   "text": "เลิกเล่นได้แล้ว",
+   "en": "You can stop playing now.",
+   "ko": "이제 그만 놀아도 돼.",
+   "blank": "เล่น"
+  }
+ ],
+ "w|เลย": [
+  {
+   "text": "อร่อยเลย",
+   "en": "This is really good.",
+   "ko": "진짜 맛있다.",
+   "blank": "เลย"
+  },
+  {
+   "text": "ไม่ไปเลย",
+   "en": "I'm not going at all.",
+   "ko": "아예 안 가.",
+   "blank": "เลย"
+  }
+ ],
+ "w|แล้ว": [
+  {
+   "text": "เสร็จแล้ว",
+   "en": "It's done.",
+   "ko": "다 끝났어.",
+   "blank": "แล้ว"
+  },
+  {
+   "text": "ไฟดับแล้ว",
+   "en": "The power's out.",
+   "ko": "정전됐어.",
+   "blank": "แล้ว"
+  }
+ ],
+ "w|แล้วก็": [
+  {
+   "text": "อาบน้ำแล้วก็นอน",
+   "en": "I'll shower and then sleep.",
+   "ko": "씻고 잘게.",
+   "blank": "แล้วก็"
+  },
+  {
+   "text": "ซื้อของแล้วก็กลับ",
+   "en": "I'll buy a few things and then head back.",
+   "ko": "물건 사고 돌아갈게.",
+   "blank": "แล้วก็"
+  }
+ ],
+ "w|และ": [
+  {
+   "text": "พ่อและแม่รออยู่",
+   "en": "Dad and Mom are waiting.",
+   "ko": "아빠랑 엄마가 기다리고 있어.",
+   "blank": "และ"
+  },
+  {
+   "text": "เขาใจดีและขยัน",
+   "en": "He's kind and hardworking.",
+   "ko": "그 사람 착하고 부지런해.",
+   "blank": "และ"
+  }
+ ],
+ "w|วัน": [
+  {
+   "text": "ทั้งวันไม่ออก",
+   "en": "I didn't go out all day.",
+   "ko": "하루 종일 안 나갔어.",
+   "blank": "วัน"
+  },
+  {
+   "text": "วันเกิดเมื่อไหร่",
+   "en": "When's your birthday?",
+   "ko": "생일이 언제야?",
+   "blank": "วัน"
+  }
+ ],
+ "w|วันนี้": [
+  {
+   "text": "วันนี้ร้อนจัง",
+   "en": "It's so hot today.",
+   "ko": "오늘 정말 덥다.",
+   "blank": "วันนี้"
+  },
+  {
+   "text": "วันนี้หยุด",
+   "en": "Today's a day off.",
+   "ko": "오늘은 쉬는 날이야.",
+   "blank": "วันนี้"
+  }
+ ],
+ "w|ว่า": [
+  {
+   "text": "ฉันว่าดีนะ",
+   "en": "I think it's nice.",
+   "ko": "괜찮은 것 같아.",
+   "blank": "ว่า"
+  },
+  {
+   "text": "เขาบอกว่าไม่มา",
+   "en": "He said he isn't coming.",
+   "ko": "그 사람이 안 온대.",
+   "blank": "ว่า"
+  }
+ ],
+ "w|วิ่ง": [
+  {
+   "text": "เช้านี้ไปวิ่งมา",
+   "en": "I went for a run this morning.",
+   "ko": "오늘 아침에 뛰고 왔어.",
+   "blank": "วิ่ง"
+  },
+  {
+   "text": "อย่าวิ่งในบ้าน",
+   "en": "Don't run in the house.",
+   "ko": "집에서 뛰지 마.",
+   "blank": "วิ่ง"
+  }
+ ],
+ "w|เวลา": [
+  {
+   "text": "ไม่มีเวลาแล้ว",
+   "en": "There's no time left.",
+   "ko": "이제 시간이 없어.",
+   "blank": "เวลา"
+  },
+  {
+   "text": "ถึงเวลาไปแล้ว",
+   "en": "It's time to go.",
+   "ko": "이제 갈 시간이야.",
+   "blank": "เวลา"
+  }
+ ],
+ "w|สวย": [
+  {
+   "text": "วันนี้สวยจัง",
+   "en": "You look lovely today.",
+   "ko": "오늘 정말 예뻐.",
+   "blank": "สวย"
+  },
+  {
+   "text": "วิวสวยมาก",
+   "en": "The view is beautiful.",
+   "ko": "경치가 정말 예뻐.",
+   "blank": "สวย"
+  }
+ ],
+ "w|สวัสดี": [
+  {
+   "text": "สวัสดีครับ",
+   "en": "Hello.",
+   "ko": "안녕하세요.",
+   "blank": "สวัสดี"
+  },
+  {
+   "text": "สวัสดีตอนเช้า",
+   "en": "Good morning.",
+   "ko": "좋은 아침.",
+   "blank": "สวัสดี"
+  }
+ ],
+ "w|สอง": [
+  {
+   "text": "ขอสองแก้ว",
+   "en": "Two glasses, please.",
+   "ko": "두 잔 주세요.",
+   "blank": "สอง"
+  },
+  {
+   "text": "มีสองทาง",
+   "en": "There are two ways.",
+   "ko": "길이 두 갈래야.",
+   "blank": "สอง"
+  }
+ ],
+ "w|สอน": [
+  {
+   "text": "สอนหน่อยได้ไหม",
+   "en": "Can you show me how?",
+   "ko": "좀 가르쳐 줄래?",
+   "blank": "สอน"
+  },
+  {
+   "text": "ใครสอนเธอ",
+   "en": "Who taught you?",
+   "ko": "누가 가르쳤어?",
+   "blank": "สอน"
+  }
+ ],
+ "w|สาม": [
+  {
+   "text": "มีสามคน",
+   "en": "There are three people.",
+   "ko": "세 명이야.",
+   "blank": "สาม"
+  },
+  {
+   "text": "รอสามวัน",
+   "en": "Wait three days.",
+   "ko": "사흘만 기다려.",
+   "blank": "สาม"
+  }
+ ],
+ "w|สามี": [
+  {
+   "text": "สามีโทรมา",
+   "en": "My husband called.",
+   "ko": "남편이 전화했어.",
+   "blank": "สามี"
+  },
+  {
+   "text": "สามีอยู่ไหน",
+   "en": "Where's your husband?",
+   "ko": "남편은 어디 있어?",
+   "blank": "สามี"
+  }
+ ],
+ "w|สำหรับ": [
+  {
+   "text": "อันนี้สำหรับเธอ",
+   "en": "This is for you.",
+   "ko": "이건 너 거야.",
+   "blank": "สำหรับ"
+  },
+  {
+   "text": "สำหรับวันนี้พอแล้ว",
+   "en": "That's enough for today.",
+   "ko": "오늘은 이만하면 됐어.",
+   "blank": "สำหรับ"
+  }
+ ],
+ "w|สิ": [
+  {
+   "text": "บอกมาสิ",
+   "en": "Just tell me.",
+   "ko": "어서 말해.",
+   "blank": "สิ"
+  },
+  {
+   "text": "ลองดูสิ",
+   "en": "Give it a try.",
+   "ko": "한번 해 봐.",
+   "blank": "สิ"
+  }
+ ],
+ "w|สิ่ง": [
+  {
+   "text": "สิ่งนี้ของใคร",
+   "en": "Whose is this?",
+   "ko": "이거 누구 거야?",
+   "blank": "สิ่ง"
+  },
+  {
+   "text": "มีสิ่งหนึ่งอยากบอก",
+   "en": "There's something I want to tell you.",
+   "ko": "할 말이 하나 있어.",
+   "blank": "สิ่ง"
+  }
+ ],
+ "w|สิบ": [
+  {
+   "text": "ขอสิบอัน",
+   "en": "Ten, please.",
+   "ko": "열 개 주세요.",
+   "blank": "สิบ"
+  },
+  {
+   "text": "สิบคนมาครบ",
+   "en": "All ten are here.",
+   "ko": "열 명 다 왔어.",
+   "blank": "สิบ"
+  }
+ ],
+ "w|สี่": [
+  {
+   "text": "ขอสี่อัน",
+   "en": "I'll take four.",
+   "ko": "네 개 주세요.",
+   "blank": "สี่"
+  },
+  {
+   "text": "นั่งสี่คน",
+   "en": "It seats four.",
+   "ko": "네 명이 앉을 수 있어.",
+   "blank": "สี่"
+  }
+ ],
+ "w|หก": [
+  {
+   "text": "มาหกคน",
+   "en": "Six people showed up.",
+   "ko": "여섯 명이나 왔어.",
+   "blank": "หก"
+  },
+  {
+   "text": "เหลือหกชิ้น",
+   "en": "Six pieces left.",
+   "ko": "여섯 조각 남았어.",
+   "blank": "หก"
+  }
+ ],
+ "w|หนึ่ง": [
+  {
+   "text": "ขอหนึ่งแก้ว",
+   "en": "One glass, please.",
+   "ko": "한 잔만요.",
+   "blank": "หนึ่ง"
+  },
+  {
+   "text": "เหลือหนึ่งชิ้น",
+   "en": "There's one piece left.",
+   "ko": "한 조각 남았어.",
+   "blank": "หนึ่ง"
+  }
+ ],
+ "w|หมอ": [
+  {
+   "text": "หมอให้พักสามวัน",
+   "en": "The doctor told me to rest for three days.",
+   "ko": "의사가 사흘 쉬라고 했어.",
+   "blank": "หมอ"
+  },
+  {
+   "text": "ไปหาหมอเถอะ",
+   "en": "You should see a doctor.",
+   "ko": "병원 가 봐.",
+   "blank": "หมอ"
+  }
+ ],
+ "w|หยุด": [
+  {
+   "text": "หยุดตรงนี้",
+   "en": "Stop right here.",
+   "ko": "여기 서.",
+   "blank": "หยุด"
+  },
+  {
+   "text": "หยุดก่อน",
+   "en": "Hold on a second.",
+   "ko": "잠깐만.",
+   "blank": "หยุด"
+  }
+ ],
+ "w|หรอก": [
+  {
+   "text": "ไม่เป็นไรหรอก",
+   "en": "It's fine, really.",
+   "ko": "괜찮아.",
+   "blank": "หรอก"
+  },
+  {
+   "text": "ฉันไม่โกรธหรอก",
+   "en": "I'm not mad.",
+   "ko": "나 화난 거 아니야.",
+   "blank": "หรอก"
+  }
+ ],
+ "w|หรือ": [
+  {
+   "text": "ชาหรือกาแฟ",
+   "en": "Tea or coffee?",
+   "ko": "차로 할래, 커피로 할래?",
+   "blank": "หรือ"
+  },
+  {
+   "text": "กินหรือยัง",
+   "en": "Have you eaten yet?",
+   "ko": "밥은 먹었어?",
+   "blank": "หรือ"
+  }
+ ],
+ "w|หรือว่า": [
+  {
+   "text": "ชาหรือว่ากาแฟ",
+   "en": "Tea or coffee?",
+   "ko": "차야, 커피야?",
+   "blank": "หรือว่า"
+  },
+  {
+   "text": "จริงหรือว่าล้อเล่น",
+   "en": "Are you serious or joking?",
+   "ko": "진짜야, 아니면 장난이야?",
+   "blank": "หรือว่า"
+  }
+ ],
+ "w|หล่อ": [
+  {
+   "text": "วันนี้หล่อจัง",
+   "en": "You look handsome today.",
+   "ko": "오늘 정말 잘생겼어.",
+   "blank": "หล่อ"
+  },
+  {
+   "text": "รูปนี้หล่อดี",
+   "en": "You look good in this photo.",
+   "ko": "이 사진 잘 나왔어.",
+   "blank": "หล่อ"
+  }
+ ],
+ "w|หวัง": [
+  {
+   "text": "หวังว่าจะทัน",
+   "en": "I hope we make it in time.",
+   "ko": "제시간에 됐으면 좋겠어.",
+   "blank": "หวัง"
+  },
+  {
+   "text": "อย่าหวังมาก",
+   "en": "Don't get your hopes up.",
+   "ko": "너무 기대하지 마.",
+   "blank": "หวัง"
+  }
+ ],
+ "w|ห้อง": [
+  {
+   "text": "ห้องร้อนไป",
+   "en": "The room's too hot.",
+   "ko": "방이 너무 더워.",
+   "blank": "ห้อง"
+  },
+  {
+   "text": "ห้องไหนว่าง",
+   "en": "Which room is free?",
+   "ko": "어느 방이 비었어?",
+   "blank": "ห้อง"
+  }
+ ],
+ "w|หัวหน้า": [
+  {
+   "text": "หัวหน้าไม่อยู่",
+   "en": "The boss isn't in.",
+   "ko": "상사는 자리에 없어.",
+   "blank": "หัวหน้า"
+  },
+  {
+   "text": "ถามหัวหน้าก่อนนะ",
+   "en": "Ask the boss first.",
+   "ko": "상사한테 먼저 물어봐.",
+   "blank": "หัวหน้า"
+  }
+ ],
+ "w|หา": [
+  {
+   "text": "ฉันหาแว่น",
+   "en": "I'm looking for my glasses.",
+   "ko": "나 안경 찾고 있어.",
+   "blank": "หา"
+  },
+  {
+   "text": "ช่วยหาให้หน่อย",
+   "en": "Help me look for it.",
+   "ko": "찾는 것 좀 도와줘.",
+   "blank": "หา"
+  }
+ ],
+ "w|ห้า": [
+  {
+   "text": "มีห้าคน",
+   "en": "There are five people.",
+   "ko": "다섯 명이야.",
+   "blank": "ห้า"
+  },
+  {
+   "text": "อีกห้านาที",
+   "en": "Five more minutes.",
+   "ko": "오 분만 더.",
+   "blank": "ห้า"
+  }
+ ],
+ "w|เห็น": [
+  {
+   "text": "เห็นด้วย",
+   "en": "I agree.",
+   "ko": "나도 같은 생각이야.",
+   "blank": "เห็น"
+  },
+  {
+   "text": "ฉันเห็นรถ",
+   "en": "I can see the car.",
+   "ko": "차가 보여.",
+   "blank": "เห็น"
+  }
+ ],
+ "w|เหนื่อย": [
+  {
+   "text": "เหนื่อยจะตาย",
+   "en": "I'm exhausted.",
+   "ko": "피곤해서 죽겠어.",
+   "blank": "เหนื่อย"
+  },
+  {
+   "text": "วันนี้เหนื่อยมาก",
+   "en": "I'm so tired today.",
+   "ko": "오늘 너무 피곤해.",
+   "blank": "เหนื่อย"
+  }
+ ],
+ "w|เหรอ": [
+  {
+   "text": "จริงเหรอ",
+   "en": "Really?",
+   "ko": "진짜?",
+   "blank": "เหรอ"
+  },
+  {
+   "text": "เธอไปแล้วเหรอ",
+   "en": "You already left?",
+   "ko": "너 벌써 갔어?",
+   "blank": "เหรอ"
+  }
+ ],
+ "w|ให้": [
+  {
+   "text": "ขอให้โชคดี",
+   "en": "Good luck.",
+   "ko": "잘되길 바랄게.",
+   "blank": "ให้"
+  },
+  {
+   "text": "แบ่งให้หน่อย",
+   "en": "Let me have some.",
+   "ko": "나 좀 나눠 줘.",
+   "blank": "ให้"
+  }
+ ],
+ "w|ใหญ่": [
+  {
+   "text": "อันนี้ใหญ่ไปหน่อย",
+   "en": "This one is a bit too big.",
+   "ko": "이건 좀 커.",
+   "blank": "ใหญ่"
+  },
+  {
+   "text": "เอาไซส์ใหญ่",
+   "en": "I'll take a large.",
+   "ko": "큰 사이즈로 할게.",
+   "blank": "ใหญ่"
+  }
+ ],
+ "w|ใหม่": [
+  {
+   "text": "ของใหม่เอี่ยม",
+   "en": "It's brand new.",
+   "ko": "아주 새것이야.",
+   "blank": "ใหม่"
+  },
+  {
+   "text": "เพิ่งย้ายมาใหม่",
+   "en": "I just moved here.",
+   "ko": "이사 온 지 얼마 안 됐어.",
+   "blank": "ใหม่"
+  }
+ ],
+ "w|ไหน": [
+  {
+   "text": "อันไหนอร่อย",
+   "en": "Which one tastes good?",
+   "ko": "어떤 게 맛있어?",
+   "blank": "ไหน"
+  },
+  {
+   "text": "ทางไหนสั้นกว่า",
+   "en": "Which way is shorter?",
+   "ko": "어느 쪽이 더 짧아?",
+   "blank": "ไหน"
+  }
+ ],
+ "w|ไหม": [
+  {
+   "text": "หิวไหม",
+   "en": "Are you hungry?",
+   "ko": "배고파?",
+   "blank": "ไหม"
+  },
+  {
+   "text": "ไปด้วยไหม",
+   "en": "Want to come along?",
+   "ko": "같이 갈래?",
+   "blank": "ไหม"
+  }
+ ],
+ "w|อย่า": [
+  {
+   "text": "อย่าเพิ่งไป",
+   "en": "Don't leave yet.",
+   "ko": "아직 가지 마.",
+   "blank": "อย่า"
+  },
+  {
+   "text": "อย่าร้องไห้",
+   "en": "Don't cry.",
+   "ko": "울지 마.",
+   "blank": "อย่า"
+  }
+ ],
+ "w|อยาก": [
+  {
+   "text": "อยากกินข้าว",
+   "en": "I want to eat.",
+   "ko": "밥 먹고 싶어.",
+   "blank": "อยาก"
+  },
+  {
+   "text": "อยากนอนแล้ว",
+   "en": "I'm ready for bed.",
+   "ko": "이제 자고 싶어.",
+   "blank": "อยาก"
+  }
+ ],
+ "w|อย่าง": [
+  {
+   "text": "อย่าทำอย่างนั้น",
+   "en": "Don't do that.",
+   "ko": "그렇게 하지 마.",
+   "blank": "อย่าง"
+  },
+  {
+   "text": "อย่างนี้นะ",
+   "en": "Do it like this.",
+   "ko": "이렇게 해.",
+   "blank": "อย่าง"
+  }
+ ],
+ "w|อย่างไร": [
+  {
+   "text": "เป็นอย่างไรบ้าง",
+   "en": "How have you been?",
+   "ko": "어떻게 지내?",
+   "blank": "อย่างไร"
+  },
+  {
+   "text": "เรื่องเป็นอย่างไร",
+   "en": "How did it turn out?",
+   "ko": "일이 어떻게 됐어?",
+   "blank": "อย่างไร"
+  }
+ ],
+ "w|อยู่": [
+  {
+   "text": "อยู่ไหน",
+   "en": "Where are you?",
+   "ko": "어디야?",
+   "blank": "อยู่"
+  },
+  {
+   "text": "อยู่นี่นะ",
+   "en": "Stay right here.",
+   "ko": "여기 있어.",
+   "blank": "อยู่"
+  }
+ ],
+ "w|ออก": [
+  {
+   "text": "เหงื่อออก",
+   "en": "I'm sweating.",
+   "ko": "땀나.",
+   "blank": "ออก"
+  },
+  {
+   "text": "ออกไปก่อน",
+   "en": "I'm stepping out.",
+   "ko": "잠깐 나갔다 올게.",
+   "blank": "ออก"
+  }
+ ],
+ "w|อะไร": [
+  {
+   "text": "นั่นอะไร",
+   "en": "What's that?",
+   "ko": "저거 뭐야?",
+   "blank": "อะไร"
+  },
+  {
+   "text": "กินอะไรดี",
+   "en": "What should we eat?",
+   "ko": "뭐 먹을까?",
+   "blank": "อะไร"
+  }
+ ],
+ "w|อีก": [
+  {
+   "text": "อีกแก้วไหม",
+   "en": "Want another glass?",
+   "ko": "한 잔 더 할래?",
+   "blank": "อีก"
+  },
+  {
+   "text": "มาอีกนะ",
+   "en": "Come again.",
+   "ko": "또 와.",
+   "blank": "อีก"
+  }
+ ],
+ "w|เอา": [
+  {
+   "text": "ไม่เอา",
+   "en": "No thanks.",
+   "ko": "난 됐어.",
+   "blank": "เอา"
+  },
+  {
+   "text": "เอาอันนี้",
+   "en": "I'll take this one.",
+   "ko": "이걸로 할게.",
+   "blank": "เอา"
+  }
+ ],
+ "w|โอเค": [
+  {
+   "text": "งั้นโอเค",
+   "en": "That's fine, then.",
+   "ko": "그럼 괜찮아.",
+   "blank": "โอเค"
+  },
+  {
+   "text": "โอเค ไปกัน",
+   "en": "Okay, let's go.",
+   "ko": "좋아, 가자.",
+   "blank": "โอเค"
+  }
+ ]
+}

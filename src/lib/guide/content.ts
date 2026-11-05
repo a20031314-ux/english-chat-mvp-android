@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-11-03a";
+export const GUIDE_VERSION = "2026-11-03b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -173,9 +173,9 @@ export const GUIDE_KO: Guide = {
         "shot": "myask"
       },
       {
-        "heading": "6. {ui:practiceWay}",
+        "heading": "6. 단계 목록",
         "body": [
-          "목록 위 버튼 → 🧩 문장구조 · 🎭 상황 · 📐 문법, 그림을 보고 골라요."
+          "문장구조 · 상황 · 문법이 같이 보여요. 대본을 말하기·읽기 중 무엇으로 할지는 오늘 할 것 ⚙에서 고릅니다."
         ],
         "shot": "stage-ways"
       },
@@ -561,9 +561,9 @@ export const GUIDE_EN: Guide = {
         "shot": "myask"
       },
       {
-        "heading": "6. {ui:practiceWay}",
+        "heading": "6. Stage lists",
         "body": [
-          "Button above the list → 🧩 structures · 🎭 situations · 📐 grammar, picked from pictures."
+          "Patterns, situations, and grammar show together. Speaking or reading a script is chosen in today’s plan ⚙."
         ],
         "shot": "stage-ways"
       },

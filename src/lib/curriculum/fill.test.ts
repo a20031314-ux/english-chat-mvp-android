@@ -4,6 +4,7 @@ import {
   computeFill,
   fillCatalog,
   keysInCell,
+  studyPoint,
   listenFill,
   meanKnow,
   missKindOf,
@@ -208,4 +209,18 @@ test("같은 날 틀렸다가 맞힌 열쇠는 맞힘이 나중(ja)", async () =
     segment: (text) => segmentWords(text, "ja"),
   }).filter((one) => one.key === "w|水").sort((a, b) => a.at - b.at);
   assert.equal(events.at(-1)?.correct, true);
+});
+
+test("추천은 표현 글자가 아니라 빈칸 틀이고, 틀에 없는 표현은 지정하지 않는다", async () => {
+  const { allFramesFor } = await import("./frames.ts");
+  const en = studyPoint("en", "e|nice to meet you", () => "");
+  assert.equal(en?.key, "f|en-f1-01");
+  assert.match(en!.label, /___/);
+  assert.equal(studyPoint("en", "e|where are you from", () => ""), null);
+  const ja = allFramesFor("ja").find((frame) => frame.pattern.includes("___") && frame.expressions?.length);
+  assert.ok(ja);
+  const point = studyPoint("ja", `e|${ja!.expressions![0]}`, () => "");
+  assert.equal(point?.key, `f|${ja!.id}`);
+  assert.match(point!.label, /___/);
+  assert.deepEqual(studyPoint("en", "w|apple", () => ""), { key: "w|apple", label: "apple" });
 });

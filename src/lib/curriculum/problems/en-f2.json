@@ -1,0 +1,178 @@
+{
+  "en-1-05": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I want ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "빨간색을 원해요.",
+    "answer": "I want the red one.",
+    "why": "red one 앞에는 the를 붙여 I want the red one이에요.",
+    "options": [
+      "I want red one.",
+      "I wants the red one.",
+      "I want the red one.",
+      "I the red one want."
+    ],
+    "line": "I want the red one."
+  },
+  "en-1-06": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Where is ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "화장실이 어디예요?",
+    "answer": "Where is the restroom?",
+    "why": "어디인지 물을 때는 Where is the restroom처럼 restroom 앞에 the가 와요.",
+    "options": [
+      "Where is restroom?",
+      "Where is the restroom?",
+      "Where are the restroom?",
+      "Where the restroom is?"
+    ],
+    "line": "Where is the restroom?"
+  },
+  "en-1-07": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It's next to ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "학교 옆에 있어요.",
+    "answer": "It's next to the school.",
+    "why": "옆에 있다는 말은 It's next to the school처럼 school 앞에 the를 붙여요.",
+    "options": [
+      "It's next to the school.",
+      "It's next to school.",
+      "It next to the school.",
+      "It's the school next to."
+    ],
+    "line": "It's next to the school."
+  },
+  "en-2-01": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I went to ___ last weekend.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "지난 주말에 해변에 갔어.",
+    "answer": "I went to the beach last weekend.",
+    "why": "지난 주말의 일이라 went를 쓰고, beach 앞에는 the가 와요.",
+    "options": [
+      "I go to the beach last weekend.",
+      "I went to beach last weekend.",
+      "I the beach went to last weekend.",
+      "I went to the beach last weekend."
+    ],
+    "line": "I went to the beach last weekend."
+  },
+  "en-2-02": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "It was ___ there.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "거기 재미있었어.",
+    "answer": "It was fun there.",
+    "why": "그때의 느낌이라서 It was fun there처럼 was를 써요.",
+    "options": [
+      "It is fun there.",
+      "It was fun there.",
+      "It were fun there.",
+      "It fun was there."
+    ],
+    "line": "It was fun there."
+  },
+  "en-2-03": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Sounds good! See you at ___.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "좋아! 역에서 봐.",
+    "answer": "Sounds good! See you at the station.",
+    "why": "역에서 만나자는 말은 Sounds good! See you at the station처럼 station 앞에 at the가 와요.",
+    "options": [
+      "Sounds good! See you at station.",
+      "Sounds good! Seeing you at the station.",
+      "Sounds good! See you at the station.",
+      "Sounds good! At the station see you."
+    ],
+    "line": "Sounds good! See you at the station."
+  },
+  "en-2-04": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Can I get a ___, please?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "라떼 하나 주세요.",
+    "answer": "Can I get a latte, please?",
+    "why": "음료 하나를 부탁할 때는 Can I get a latte, please처럼 can 뒤에 동사 원형과 a가 와요.",
+    "options": [
+      "Can I get a latte, please?",
+      "Can I get latte, please?",
+      "Can I getting a latte, please?",
+      "Can I a latte get, please?"
+    ],
+    "line": "Can I get a latte, please?"
+  },
+  "en-2-05": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Can I change it to ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "라지로 바꿔도 될까요?",
+    "answer": "Can I change it to a large?",
+    "why": "크기를 바꿔 달라는 말은 Can I change it to a large처럼 large 앞에 a가 와요.",
+    "options": [
+      "Can I change it to large?",
+      "Can I changed it to a large?",
+      "Can I to a large change it?",
+      "Can I change it to a large?"
+    ],
+    "line": "Can I change it to a large?"
+  },
+  "en-2-06": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "Excuse me, my ___ isn't working.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "실례합니다, 제 키가 작동하지 않아요.",
+    "answer": "Excuse me, my key isn't working.",
+    "why": "지금 안 된다는 말은 Excuse me, my key isn't working처럼 isn't 뒤에 working을 써요.",
+    "options": [
+      "Excuse me, key isn't working.",
+      "Excuse me, my key isn't working.",
+      "Excuse me, my key isn't work.",
+      "Excuse me, my key working isn't."
+    ],
+    "line": "Excuse me, my key isn't working."
+  },
+  "en-2-07": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "How often do you ___?",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "헬스장에 얼마나 자주 가?",
+    "answer": "How often do you go to the gym?",
+    "why": "얼마나 자주인지는 How often do you go to the gym처럼 do 뒤에 동사 원형 go가 오고 gym 앞에 the가 와요.",
+    "options": [
+      "How often do you go to gym?",
+      "How often do you goes to the gym?",
+      "How often do you go to the gym?",
+      "How often you do go to the gym?"
+    ],
+    "line": "How often do you go to the gym?"
+  },
+  "en-2-08": {
+    "kind": "frame",
+    "type": "choose",
+    "name": "I usually ___ on weekends.",
+    "ask": "뜻에 맞는 영어 문장을 고르세요.",
+    "gloss": "주말에는 보통 쉬어요.",
+    "answer": "I usually relax on weekends.",
+    "why": "주말 습관이라서 I usually relax on weekends처럼 usually 뒤에 동사 원형 relax가 와요.",
+    "options": [
+      "I usually relax on weekends.",
+      "I usually relaxing on weekends.",
+      "I usually relaxes on weekends.",
+      "I on weekends usually relax."
+    ],
+    "line": "I usually relax on weekends."
+  }
+}

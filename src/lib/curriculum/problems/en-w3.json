@@ -1,0 +1,1087 @@
+{
+  "w|sir": {
+    "kind": "word",
+    "type": "type",
+    "name": "sir",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "선생님",
+    "answer": "sir",
+    "line": "Yes, sir, I understand."
+  },
+  "w|put": {
+    "kind": "word",
+    "type": "type",
+    "name": "put",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "놓다",
+    "answer": "put",
+    "line": "Can you put this on the table?"
+  },
+  "w|their": {
+    "kind": "word",
+    "type": "type",
+    "name": "their",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "그들의",
+    "answer": "their",
+    "line": "They brought their dog with them."
+  },
+  "w|use": {
+    "kind": "word",
+    "type": "type",
+    "name": "use",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "사용하다",
+    "answer": "use",
+    "line": "I use this pen to write."
+  },
+  "w|long": {
+    "kind": "word",
+    "type": "type",
+    "name": "long",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "긴",
+    "answer": "long",
+    "line": "It was a long day at work."
+  },
+  "w|great": {
+    "kind": "word",
+    "type": "type",
+    "name": "great",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "훌륭한",
+    "answer": "great",
+    "line": "You did a great job today."
+  },
+  "w|again": {
+    "kind": "word",
+    "type": "type",
+    "name": "again",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "다시",
+    "answer": "again",
+    "line": "Please say that again."
+  },
+  "w|thought": {
+    "kind": "word",
+    "type": "type",
+    "name": "thought",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "생각",
+    "answer": "thought",
+    "line": "That was just a thought."
+  },
+  "w|maybe": {
+    "kind": "word",
+    "type": "type",
+    "name": "maybe",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아마",
+    "answer": "maybe",
+    "line": "Maybe we can go tomorrow."
+  },
+  "w|must": {
+    "kind": "word",
+    "type": "type",
+    "name": "must",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "해야 한다",
+    "answer": "must",
+    "line": "You must wear a seatbelt.",
+    "hint": "m",
+    "mark": "한 단어"
+  },
+  "w|night": {
+    "kind": "word",
+    "type": "type",
+    "name": "night",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "밤",
+    "answer": "night",
+    "line": "Good night, see you tomorrow."
+  },
+  "w|before": {
+    "kind": "word",
+    "type": "type",
+    "name": "before",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~전에",
+    "answer": "before",
+    "line": "Wash your hands before eating."
+  },
+  "w|after": {
+    "kind": "word",
+    "type": "type",
+    "name": "after",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~후에",
+    "answer": "after",
+    "line": "Let's meet after lunch."
+  },
+  "w|home": {
+    "kind": "word",
+    "type": "type",
+    "name": "home",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "자기 집",
+    "answer": "home",
+    "line": "I want to go home now."
+  },
+  "w|away": {
+    "kind": "word",
+    "type": "type",
+    "name": "away",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "멀리",
+    "answer": "away",
+    "line": "Please go away and leave me alone."
+  },
+  "w|girl": {
+    "kind": "word",
+    "type": "type",
+    "name": "girl",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "소녀",
+    "answer": "girl",
+    "line": "The girl smiled at her friend."
+  },
+  "w|than": {
+    "kind": "word",
+    "type": "type",
+    "name": "than",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~보다",
+    "answer": "than",
+    "line": "He is taller than his brother."
+  },
+  "w|name": {
+    "kind": "word",
+    "type": "type",
+    "name": "name",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "이름",
+    "answer": "name",
+    "line": "What is your name?"
+  },
+  "w|friend": {
+    "kind": "word",
+    "type": "type",
+    "name": "friend",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "친구",
+    "answer": "friend",
+    "line": "My best friend lives next door."
+  },
+  "w|last": {
+    "kind": "word",
+    "type": "type",
+    "name": "last",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "마지막",
+    "answer": "last",
+    "line": "This is the last cookie on the plate."
+  },
+  "w|everything": {
+    "kind": "word",
+    "type": "type",
+    "name": "everything",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "모든 것",
+    "answer": "everything",
+    "line": "She packed everything in her bag."
+  },
+  "w|new": {
+    "kind": "word",
+    "type": "type",
+    "name": "new",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "새로운",
+    "answer": "new",
+    "line": "I bought a new phone yesterday."
+  },
+  "w|start": {
+    "kind": "word",
+    "type": "type",
+    "name": "start",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "시작하다",
+    "answer": "start",
+    "line": "Let's start the meeting now."
+  },
+  "w|always": {
+    "kind": "word",
+    "type": "type",
+    "name": "always",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "항상",
+    "answer": "always",
+    "line": "I always brush my teeth before bed."
+  },
+  "w|feel": {
+    "kind": "word",
+    "type": "type",
+    "name": "feel",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "느끼다",
+    "answer": "feel",
+    "line": "I feel happy today."
+  },
+  "w|place": {
+    "kind": "word",
+    "type": "type",
+    "name": "place",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "장소",
+    "answer": "place",
+    "line": "This is a nice place to eat."
+  },
+  "w|meet": {
+    "kind": "word",
+    "type": "type",
+    "name": "meet",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "만나다",
+    "answer": "meet",
+    "line": "Let's meet at the coffee shop."
+  },
+  "w|old": {
+    "kind": "word",
+    "type": "type",
+    "name": "old",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "오래된",
+    "answer": "old",
+    "line": "This building is very old."
+  },
+  "w|woman": {
+    "kind": "word",
+    "type": "type",
+    "name": "woman",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "여자",
+    "answer": "woman",
+    "line": "The woman is reading a book."
+  },
+  "w|money": {
+    "kind": "word",
+    "type": "type",
+    "name": "money",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "돈",
+    "answer": "money",
+    "line": "I need some money for lunch."
+  },
+  "w|around": {
+    "kind": "word",
+    "type": "type",
+    "name": "around",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~주위에",
+    "answer": "around",
+    "line": "Let's walk around the park."
+  },
+  "w|stay": {
+    "kind": "word",
+    "type": "type",
+    "name": "stay",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "머물다",
+    "answer": "stay",
+    "line": "Can you stay a little longer?"
+  },
+  "w|show": {
+    "kind": "word",
+    "type": "type",
+    "name": "show",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "보여주다",
+    "answer": "show",
+    "line": "Please show me your ticket."
+  },
+  "w|lot": {
+    "kind": "word",
+    "type": "type",
+    "name": "lot",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "많이",
+    "answer": "lot",
+    "line": "There is a lot to do today.",
+    "hint": "l",
+    "mark": "한 단어"
+  },
+  "w|kid": {
+    "kind": "word",
+    "type": "type",
+    "name": "kid",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아이",
+    "answer": "kid",
+    "line": "That kid likes to play soccer."
+  },
+  "w|believe": {
+    "kind": "word",
+    "type": "type",
+    "name": "believe",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "믿다",
+    "answer": "believe",
+    "line": "I believe you can do it."
+  },
+  "w|run": {
+    "kind": "word",
+    "type": "type",
+    "name": "run",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "달리다",
+    "answer": "run",
+    "line": "I run every morning before breakfast."
+  },
+  "w|big": {
+    "kind": "word",
+    "type": "type",
+    "name": "big",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "큰",
+    "answer": "big",
+    "line": "That is a big dog."
+  },
+  "w|bring": {
+    "kind": "word",
+    "type": "type",
+    "name": "bring",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가져오다",
+    "answer": "bring",
+    "line": "Please bring your book to class."
+  },
+  "w|wrong": {
+    "kind": "word",
+    "type": "type",
+    "name": "wrong",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "틀린",
+    "answer": "wrong",
+    "line": "I think you called the wrong number."
+  },
+  "w|live": {
+    "kind": "word",
+    "type": "type",
+    "name": "live",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "살다",
+    "answer": "live",
+    "line": "I want to live in a big city someday."
+  },
+  "w|father": {
+    "kind": "word",
+    "type": "type",
+    "name": "father",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아버지",
+    "answer": "father",
+    "line": "My father makes the best pancakes."
+  },
+  "w|ever": {
+    "kind": "word",
+    "type": "type",
+    "name": "ever",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "한 번이라도",
+    "answer": "ever",
+    "line": "Did you ever visit Paris?"
+  },
+  "w|move": {
+    "kind": "word",
+    "type": "type",
+    "name": "move",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "옮기다",
+    "answer": "move",
+    "line": "We have to move these boxes."
+  },
+  "w|boy": {
+    "kind": "word",
+    "type": "type",
+    "name": "boy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "소년",
+    "answer": "boy",
+    "line": "The boy is playing in the park."
+  },
+  "w|die": {
+    "kind": "word",
+    "type": "type",
+    "name": "die",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "죽다",
+    "answer": "die",
+    "line": "Flowers die without water."
+  },
+  "w|listen": {
+    "kind": "word",
+    "type": "type",
+    "name": "listen",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "듣다",
+    "answer": "listen",
+    "line": "Please listen to the teacher.",
+    "hint": "l"
+  },
+  "w|understand": {
+    "kind": "word",
+    "type": "type",
+    "name": "understand",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "이해하다",
+    "answer": "understand",
+    "line": "I don’t understand this question."
+  },
+  "w|which": {
+    "kind": "word",
+    "type": "type",
+    "name": "which",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "어느",
+    "answer": "which",
+    "line": "I don’t know which way to go."
+  },
+  "w|miss": {
+    "kind": "word",
+    "type": "type",
+    "name": "miss",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "그리워하다",
+    "answer": "miss",
+    "line": "I really miss my family."
+  },
+  "w|late": {
+    "kind": "word",
+    "type": "type",
+    "name": "late",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "늦은",
+    "answer": "late",
+    "line": "Sorry I’m late for the meeting."
+  },
+  "w|bad": {
+    "kind": "word",
+    "type": "type",
+    "name": "bad",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "나쁜",
+    "answer": "bad",
+    "line": "This milk smells bad."
+  },
+  "w|nice": {
+    "kind": "word",
+    "type": "type",
+    "name": "nice",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "기분 좋은",
+    "answer": "nice",
+    "line": "It’s nice to meet you."
+  },
+  "w|fine": {
+    "kind": "word",
+    "type": "type",
+    "name": "fine",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "괜찮은",
+    "answer": "fine",
+    "line": "I’m fine, thank you."
+  },
+  "w|kind": {
+    "kind": "word",
+    "type": "type",
+    "name": "kind",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "종류",
+    "answer": "kind",
+    "line": "What kind of music do you like?"
+  },
+  "w|house": {
+    "kind": "word",
+    "type": "type",
+    "name": "house",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "집",
+    "answer": "house",
+    "line": "My house is near the school."
+  },
+  "w|hello": {
+    "kind": "word",
+    "type": "type",
+    "name": "hello",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "안녕하세요",
+    "answer": "hello",
+    "line": "Hello, how are you today?"
+  },
+  "w|someone": {
+    "kind": "word",
+    "type": "type",
+    "name": "someone",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "누군가",
+    "answer": "someone",
+    "line": "I think someone is at the door."
+  },
+  "w|thanks": {
+    "kind": "word",
+    "type": "type",
+    "name": "thanks",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "고마워",
+    "answer": "thanks",
+    "line": "Thanks for your help."
+  },
+  "w|hand": {
+    "kind": "word",
+    "type": "type",
+    "name": "hand",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "손",
+    "answer": "hand",
+    "line": "Raise your hand if you know the answer."
+  },
+  "w|every": {
+    "kind": "word",
+    "type": "type",
+    "name": "every",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "모든",
+    "answer": "every",
+    "line": "I go to the gym every morning."
+  },
+  "w|through": {
+    "kind": "word",
+    "type": "type",
+    "name": "through",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~을 통해",
+    "answer": "through",
+    "line": "We walked through the forest."
+  },
+  "w|lose": {
+    "kind": "word",
+    "type": "type",
+    "name": "lose",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "잃다",
+    "answer": "lose",
+    "line": "Be careful not to lose your keys."
+  },
+  "w|remember": {
+    "kind": "word",
+    "type": "type",
+    "name": "remember",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "기억하다",
+    "answer": "remember",
+    "line": "Do you remember my birthday?"
+  },
+  "w|course": {
+    "kind": "word",
+    "type": "type",
+    "name": "course",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강좌",
+    "answer": "course",
+    "line": "I signed up for a cooking course last week."
+  },
+  "w|mother": {
+    "kind": "word",
+    "type": "type",
+    "name": "mother",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "어머니",
+    "answer": "mother",
+    "line": "My mother makes the best soup."
+  },
+  "w|dad": {
+    "kind": "word",
+    "type": "type",
+    "name": "dad",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아빠",
+    "answer": "dad",
+    "line": "My dad is fixing the bike outside."
+  },
+  "w|turn": {
+    "kind": "word",
+    "type": "type",
+    "name": "turn",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "돌리다",
+    "answer": "turn",
+    "line": "Turn the light off before you leave."
+  },
+  "w|left": {
+    "kind": "word",
+    "type": "type",
+    "name": "left",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "왼쪽",
+    "answer": "left",
+    "line": "Turn left at the corner."
+  },
+  "w|world": {
+    "kind": "word",
+    "type": "type",
+    "name": "world",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "세계",
+    "answer": "world",
+    "line": "The world is full of interesting places."
+  },
+  "w|enough": {
+    "kind": "word",
+    "type": "type",
+    "name": "enough",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "충분한",
+    "answer": "enough",
+    "line": "Do you have enough time to finish this?"
+  },
+  "w|own": {
+    "kind": "word",
+    "type": "type",
+    "name": "own",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "자신의",
+    "answer": "own",
+    "line": "I want to buy my own house someday."
+  },
+  "w|care": {
+    "kind": "word",
+    "type": "type",
+    "name": "care",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "신경 쓰다",
+    "answer": "care",
+    "line": "I care about your happiness."
+  },
+  "w|may": {
+    "kind": "word",
+    "type": "type",
+    "name": "may",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~해도 된다",
+    "answer": "may",
+    "line": "You may leave when you finish."
+  },
+  "w|might": {
+    "kind": "word",
+    "type": "type",
+    "name": "might",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~일지도 모른다",
+    "answer": "might",
+    "line": "It might rain later, so take an umbrella."
+  },
+  "w|three": {
+    "kind": "word",
+    "type": "type",
+    "name": "three",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "셋",
+    "answer": "three",
+    "line": "I have three sisters at home."
+  },
+  "w|today": {
+    "kind": "word",
+    "type": "type",
+    "name": "today",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "오늘",
+    "answer": "today",
+    "line": "It's very sunny today."
+  },
+  "w|car": {
+    "kind": "word",
+    "type": "type",
+    "name": "car",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "자동차",
+    "answer": "car",
+    "line": "My car is parked outside."
+  },
+  "w|another": {
+    "kind": "word",
+    "type": "type",
+    "name": "another",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "또 다른",
+    "answer": "another",
+    "line": "Can I have another piece of cake?"
+  },
+  "w|minute": {
+    "kind": "word",
+    "type": "type",
+    "name": "minute",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "분",
+    "answer": "minute",
+    "line": "Wait a minute, I need to check something."
+  },
+  "w|hold": {
+    "kind": "word",
+    "type": "type",
+    "name": "hold",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "잡다",
+    "answer": "hold",
+    "line": "Hold my hand while we cross the street."
+  },
+  "w|same": {
+    "kind": "word",
+    "type": "type",
+    "name": "same",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "같은",
+    "answer": "same",
+    "line": "We are in the same class at school."
+  },
+  "w|son": {
+    "kind": "word",
+    "type": "type",
+    "name": "son",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아들",
+    "answer": "son",
+    "line": "My son loves to play soccer."
+  },
+  "w|else": {
+    "kind": "word",
+    "type": "type",
+    "name": "else",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "그 밖에",
+    "answer": "else",
+    "line": "Do you want anything else to eat?"
+  },
+  "w|next": {
+    "kind": "word",
+    "type": "type",
+    "name": "next",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "다음",
+    "answer": "next",
+    "line": "My birthday is next month."
+  },
+  "w|mind": {
+    "kind": "word",
+    "type": "type",
+    "name": "mind",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "마음",
+    "answer": "mind",
+    "line": "I changed my mind about the trip."
+  },
+  "w|job": {
+    "kind": "word",
+    "type": "type",
+    "name": "job",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "직업",
+    "answer": "job",
+    "line": "She found a new job last week."
+  },
+  "w|change": {
+    "kind": "word",
+    "type": "type",
+    "name": "change",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "변화",
+    "answer": "change",
+    "line": "He wants to make a big change in his life."
+  },
+  "w|hi": {
+    "kind": "word",
+    "type": "type",
+    "name": "hi",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "안녕",
+    "answer": "hi",
+    "line": "Hi, how are you doing today?"
+  },
+  "w|head": {
+    "kind": "word",
+    "type": "type",
+    "name": "head",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "머리",
+    "answer": "head",
+    "line": "I have a headache and need to rest my head."
+  },
+  "w|dead": {
+    "kind": "word",
+    "type": "type",
+    "name": "dead",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "죽은",
+    "answer": "dead",
+    "line": "The phone is dead, so I can't call you."
+  },
+  "w|family": {
+    "kind": "word",
+    "type": "type",
+    "name": "family",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가족",
+    "answer": "family",
+    "line": "My family is coming to visit this weekend."
+  },
+  "w|open": {
+    "kind": "word",
+    "type": "type",
+    "name": "open",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "열린",
+    "answer": "open",
+    "line": "The store is open until late tonight."
+  },
+  "w|many": {
+    "kind": "word",
+    "type": "type",
+    "name": "many",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "많은",
+    "answer": "many",
+    "line": "There are many people at the park today."
+  },
+  "w|worry": {
+    "kind": "word",
+    "type": "type",
+    "name": "worry",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "걱정하다",
+    "answer": "worry",
+    "line": "Don't worry, everything will be fine."
+  },
+  "w|baby": {
+    "kind": "word",
+    "type": "type",
+    "name": "baby",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아기",
+    "answer": "baby",
+    "line": "The baby is sleeping in the crib."
+  },
+  "w|play": {
+    "kind": "word",
+    "type": "type",
+    "name": "play",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "놀다",
+    "answer": "play",
+    "line": "Let's go outside and play soccer."
+  },
+  "w|mom": {
+    "kind": "word",
+    "type": "type",
+    "name": "mom",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "엄마",
+    "answer": "mom",
+    "line": "My mom makes the best soup."
+  },
+  "w|room": {
+    "kind": "word",
+    "type": "type",
+    "name": "room",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "방",
+    "answer": "room",
+    "line": "My room is on the second floor."
+  },
+  "w|watch": {
+    "kind": "word",
+    "type": "type",
+    "name": "watch",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "보다",
+    "answer": "watch",
+    "line": "I like to watch movies on weekends."
+  },
+  "w|child": {
+    "kind": "word",
+    "type": "type",
+    "name": "child",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "어린이",
+    "answer": "child",
+    "line": "Each child gets a small present."
+  },
+  "w|speak": {
+    "kind": "word",
+    "type": "type",
+    "name": "speak",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "말을 하다",
+    "answer": "speak",
+    "line": "Can you speak a little slower, please?"
+  },
+  "w|morning": {
+    "kind": "word",
+    "type": "type",
+    "name": "morning",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아침",
+    "answer": "morning",
+    "line": "I go for a walk every morning."
+  },
+  "w|hell": {
+    "kind": "word",
+    "type": "type",
+    "name": "hell",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지옥",
+    "answer": "hell",
+    "line": "That exam was like hell for me."
+  },
+  "w|together": {
+    "kind": "word",
+    "type": "type",
+    "name": "together",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "함께",
+    "answer": "together",
+    "line": "Let's eat dinner together tonight."
+  },
+  "w|brother": {
+    "kind": "word",
+    "type": "type",
+    "name": "brother",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "형제",
+    "answer": "brother",
+    "line": "My brother is two years older than me."
+  },
+  "w|yourself": {
+    "kind": "word",
+    "type": "type",
+    "name": "yourself",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "너 자신",
+    "answer": "yourself",
+    "line": "Please help yourself to some food."
+  },
+  "w|pay": {
+    "kind": "word",
+    "type": "type",
+    "name": "pay",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지불하다",
+    "answer": "pay",
+    "line": "I will pay for dinner tonight."
+  },
+  "w|eat": {
+    "kind": "word",
+    "type": "type",
+    "name": "eat",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "먹다",
+    "answer": "eat",
+    "line": "Let's eat lunch at noon."
+  },
+  "w|end": {
+    "kind": "word",
+    "type": "type",
+    "name": "end",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "끝",
+    "answer": "end",
+    "line": "The movie will end in ten minutes."
+  },
+  "w|idea": {
+    "kind": "word",
+    "type": "type",
+    "name": "idea",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "아이디어",
+    "answer": "idea",
+    "line": "That's a great idea for the party!"
+  },
+  "w|forget": {
+    "kind": "word",
+    "type": "type",
+    "name": "forget",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "잊다",
+    "answer": "forget",
+    "line": "Don't forget to lock the door."
+  },
+  "w|real": {
+    "kind": "word",
+    "type": "type",
+    "name": "real",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "진짜",
+    "answer": "real",
+    "line": "Is this painting real or fake?"
+  },
+  "w|problem": {
+    "kind": "word",
+    "type": "type",
+    "name": "problem",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "문제",
+    "answer": "problem",
+    "line": "We need to solve this problem together."
+  },
+  "w|without": {
+    "kind": "word",
+    "type": "type",
+    "name": "without",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "~없이",
+    "answer": "without",
+    "line": "I can't do this without your help."
+  },
+  "w|hope": {
+    "kind": "word",
+    "type": "type",
+    "name": "hope",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "희망하다",
+    "answer": "hope",
+    "line": "I hope you have a good day."
+  },
+  "w|door": {
+    "kind": "word",
+    "type": "type",
+    "name": "door",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "문",
+    "answer": "door",
+    "line": "Can you close the door?"
+  },
+  "w|most": {
+    "kind": "word",
+    "type": "type",
+    "name": "most",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대부분",
+    "answer": "most",
+    "line": "I enjoyed most of the movie."
+  },
+  "w|send": {
+    "kind": "word",
+    "type": "type",
+    "name": "send",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "보내다",
+    "answer": "send",
+    "line": "Can you send me the address?"
+  },
+  "w|matter": {
+    "kind": "word",
+    "type": "type",
+    "name": "matter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "중요하다",
+    "answer": "matter",
+    "line": "It doesn’t matter to me."
+  }
+}

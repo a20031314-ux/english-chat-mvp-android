@@ -1,0 +1,398 @@
+{
+  "e|have you ever been": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "have you ever been",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "큰 콘서트에 가본 적 있어요?",
+    "before": "",
+    "after": " to a big concert?",
+    "answer": "Have you ever been",
+    "why": "가 본 적이 있는지 물을 때는 현재완료 Have you ever been을 써요.",
+    "options": [
+      "Did you ever been",
+      "Have you ever been",
+      "Have you ever went",
+      "Have you ever be"
+    ],
+    "line": "Have you ever been to a big concert?"
+  },
+  "e|it turned out": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it turned out",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "그녀는 집에 열쇠를 두고 와서 가져오지 않았다.",
+    "before": "",
+    "after": " she forgot her keys at home.",
+    "answer": "It turned out",
+    "why": "나중에 드러난 결과는 과거형 It turned out으로 말해요.",
+    "options": [
+      "It turn out",
+      "It turned out",
+      "It was turned out",
+      "It turned off"
+    ],
+    "line": "It turned out she forgot her keys at home."
+  },
+  "e|to be honest": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "to be honest",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "솔직히 말해서, 나는 추운 날씨를 좋아하지 않아.",
+    "before": "",
+    "after": ", I do not like cold weather.",
+    "answer": "To be honest",
+    "why": "솔직히 말한다는 뜻은 To be honest예요.",
+    "options": [
+      "For be honest",
+      "To be honest",
+      "To being honest",
+      "To is honest"
+    ],
+    "line": "To be honest, I do not like cold weather."
+  },
+  "e|the thing is": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "the thing is",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "문제는 내가 집에 열쇠를 두고 왔다는 거야.",
+    "before": "",
+    "after": ", I forgot my keys at home.",
+    "answer": "The thing is",
+    "why": "핵심이나 진짜 이유를 꺼낼 때는 The thing is를 써요.",
+    "options": [
+      "The thing are",
+      "The thing is",
+      "A thing is",
+      "The things is"
+    ],
+    "line": "The thing is, I forgot my keys at home."
+  },
+  "e|in the end": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "in the end",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "결국 우리는 모두 함께 집에 갔어요.",
+    "before": "",
+    "after": ", we all went home together.",
+    "answer": "In the end",
+    "why": "결국 어떻게 됐는지는 In the end로 말해요.",
+    "options": [
+      "In the ends",
+      "In the end",
+      "In end",
+      "On the end"
+    ],
+    "line": "In the end, we all went home together."
+  },
+  "e|it depends": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it depends",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "오늘 공원에 갈 수 있는지는 날씨에 따라 달라요.",
+    "before": "Can we go to the park today? ",
+    "after": " on the weather.",
+    "answer": "It depends",
+    "why": "상황에 따라 달라진다는 말은 It depends예요.",
+    "options": [
+      "It's depends",
+      "It depends",
+      "Is depends",
+      "It depending"
+    ],
+    "line": "Can we go to the park today? It depends on the weather."
+  },
+  "e|no wonder": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "no wonder",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "네가 피곤해 보이는 것이 당연해, 밤새 일했으니까.",
+    "before": "",
+    "after": " you look tired, you worked all night.",
+    "answer": "No wonder",
+    "why": "이유를 들으면 당연하다는 말은 No wonder예요.",
+    "options": [
+      "Not wonder",
+      "No wonder",
+      "No wonders",
+      "No wondering"
+    ],
+    "line": "No wonder you look tired, you worked all night."
+  },
+  "e|make sure": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "make sure",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "문이 잠겼는지 꼭 확인해 주세요.",
+    "before": "Please ",
+    "after": " you lock the door.",
+    "answer": "make sure",
+    "why": "빠뜨리지 말고 확인하라는 말은 make sure예요.",
+    "options": [
+      "do sure",
+      "make sure",
+      "makes the sure",
+      "make surely"
+    ],
+    "line": "Please make sure you lock the door."
+  },
+  "e|figure it out": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "figure it out",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "내가 답을 찾으려고 해볼게.",
+    "before": "Let me try to ",
+    "after": ".",
+    "answer": "figure it out",
+    "why": "스스로 답을 알아낸다는 말은 figure it out이에요.",
+    "options": [
+      "figure out it",
+      "figure it out",
+      "figure it outs",
+      "figure it outed"
+    ],
+    "line": "Let me try to figure it out."
+  },
+  "e|run out of": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "run out of",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리가 더 사지 않으면 우유가 다 떨어질 거야.",
+    "before": "We will ",
+    "after": " milk if we don't buy more.",
+    "answer": "run out of",
+    "why": "무엇이 다 떨어진다는 말은 run out of예요.",
+    "options": [
+      "run out from",
+      "run out of",
+      "run of out",
+      "run out"
+    ],
+    "line": "We will run out of milk if we don't buy more."
+  },
+  "e|on time": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "on time",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "버스는 제시간에 오지 않는다.",
+    "before": "The bus is never ",
+    "after": ".",
+    "answer": "on time",
+    "why": "정해진 시각에 맞는다는 말은 on time이에요.",
+    "options": [
+      "at time",
+      "on time",
+      "on the time",
+      "in the time"
+    ],
+    "line": "The bus is never on time."
+  },
+  "e|as soon as possible": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "as soon as possible",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "최대한 빨리 저에게 다시 전화해 주세요.",
+    "before": "Please call me back ",
+    "after": ".",
+    "answer": "as soon as possible",
+    "why": "가능한 한 빨리라는 말은 as soon as possible이에요.",
+    "options": [
+      "as soon as possibly",
+      "as soon as possible",
+      "as soon possible",
+      "so soon as possible"
+    ],
+    "line": "Please call me back as soon as possible."
+  },
+  "e|it's worth trying": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it's worth trying",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "잘 모르겠으면 시도해 볼 만해.",
+    "before": "If you are not sure, ",
+    "after": ".",
+    "answer": "it's worth trying",
+    "why": "해볼 가치가 있다는 말은 worth 뒤에 동명사를 둔 it's worth trying이에요.",
+    "options": [
+      "it's worth to try",
+      "it's worth trying",
+      "it's worthy trying",
+      "it worths trying"
+    ],
+    "line": "If you are not sure, it's worth trying."
+  },
+  "e|what do you mean": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "what do you mean",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "무슨 뜻인지 설명해 줄 수 있어요?",
+    "before": "",
+    "after": " by that?",
+    "answer": "What do you mean",
+    "why": "무슨 뜻이냐고 되물을 때는 What do you mean이에요.",
+    "options": [
+      "What are you mean",
+      "What do you mean",
+      "What you mean",
+      "What does you mean"
+    ],
+    "line": "What do you mean by that?"
+  },
+  "e|let me know": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "let me know",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "시간이 더 필요하면 알려 주세요.",
+    "before": "",
+    "after": " if you need more time.",
+    "answer": "Let me know",
+    "why": "알려 달라고 할 때는 Let me know예요.",
+    "options": [
+      "Let me to know",
+      "Let me know",
+      "Let i know",
+      "Let me knew"
+    ],
+    "line": "Let me know if you need more time."
+  },
+  "e|keep in touch": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "keep in touch",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "여행이 끝난 후에도 서로 연락하자.",
+    "before": "Let’s ",
+    "after": " after the trip.",
+    "answer": "keep in touch",
+    "why": "앞으로도 연락하자는 말은 keep in touch예요.",
+    "options": [
+      "keep on touch",
+      "keep in touch",
+      "keep in the touch",
+      "keep at touch"
+    ],
+    "line": "Let’s keep in touch after the trip."
+  },
+  "e|sort it out": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "sort it out",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "점심 먹고 나서 문제를 해결하자.",
+    "before": "Let’s ",
+    "after": " after lunch.",
+    "answer": "sort it out",
+    "why": "문제를 해결하자는 말은 sort it out이에요.",
+    "options": [
+      "sort out it",
+      "sort it out",
+      "sort it off",
+      "sort it outs"
+    ],
+    "line": "Let’s sort it out after lunch."
+  },
+  "e|so far": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "so far",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "지금까지 날씨가 좋았어요.",
+    "before": "",
+    "after": ", the weather has been nice.",
+    "answer": "So far",
+    "why": "지금까지를 가리킬 때는 So far를 써요.",
+    "options": [
+      "Until far",
+      "So far",
+      "As far",
+      "So fars"
+    ],
+    "line": "So far, the weather has been nice."
+  },
+  "e|just in case": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "just in case",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "비가 올 경우를 대비해서 우산을 가져가.",
+    "before": "Take an umbrella ",
+    "after": " it rains.",
+    "answer": "just in case",
+    "why": "혹시 모를 일에 대비한다는 말은 just in case예요.",
+    "options": [
+      "just in the case",
+      "just in case",
+      "just on case",
+      "just in a case"
+    ],
+    "line": "Take an umbrella just in case it rains."
+  },
+  "e|that makes sense": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "that makes sense",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이제 이해됐어, 설명해줘서 고마워.",
+    "before": "Oh, ",
+    "after": ", thanks for explaining.",
+    "answer": "that makes sense",
+    "why": "이해가 된다는 말은 that makes sense예요.",
+    "options": [
+      "that make sense",
+      "that makes sense",
+      "that does sense",
+      "that makes a sense"
+    ],
+    "line": "Oh, that makes sense, thanks for explaining."
+  },
+  "e|fair enough": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "fair enough",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "오늘 밤에 올 수 없다고? 알겠어.",
+    "before": "You can’t come tonight? ",
+    "after": ".",
+    "answer": "Fair enough",
+    "why": "상대의 사정을 받아들인다는 대답은 Fair enough예요.",
+    "options": [
+      "Enough fair",
+      "Fair enough",
+      "Fairly enough",
+      "Fair enoughs"
+    ],
+    "line": "You can’t come tonight? Fair enough."
+  },
+  "e|get back to me": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "get back to me",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "답을 알게 되면 나에게 알려줘.",
+    "before": "If you know the answer, ",
+    "after": ".",
+    "answer": "get back to me",
+    "why": "나중에 다시 연락해 달라는 말은 get back to me예요.",
+    "options": [
+      "get back me",
+      "get back to me",
+      "get backs to me",
+      "get back for me"
+    ],
+    "line": "If you know the answer, get back to me."
+  }
+}

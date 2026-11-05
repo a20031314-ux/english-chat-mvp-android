@@ -1,0 +1,2762 @@
+{
+ "e|ada benarnya juga": [
+  {
+   "text": "Mungkin ada benarnya juga kalau kita istirahat sebentar dulu.",
+   "en": "Maybe it's true that we should take a short break first.",
+   "ko": "아마 우리가 잠깐 쉬는 게 맞을 수도 있어.",
+   "blank": "ada benarnya juga"
+  },
+  {
+   "text": "Kata temanmu, harga di sana lebih murah, ada benarnya juga sih.",
+   "en": "Your friend said the prices there are cheaper, and that's probably true.",
+   "ko": "네 친구가 거기 물가가 더 싸다고 했는데, 맞는 말이야.",
+   "blank": "ada benarnya juga"
+  },
+  {
+   "text": "Menurutmu kita harus berhati-hati, ada benarnya juga karena cuaca sedang buruk.",
+   "en": "You think we should be careful, and that's true because the weather is bad.",
+   "ko": "네가 조심해야 한다고 했는데, 맞는 말이야. 날씨가 안 좋으니까.",
+   "blank": "ada benarnya juga"
+  }
+ ],
+ "e|ada masalah": [
+  {
+   "text": "Maaf, ada masalah dengan internet hari ini.",
+   "en": "Sorry, there is a problem with the internet today.",
+   "ko": "미안해, 오늘 인터넷에 문제가 있어.",
+   "blank": "ada masalah"
+  },
+  {
+   "text": "Kalau ada masalah, kamu bisa cerita ke saya.",
+   "en": "If there is a problem, you can talk to me.",
+   "ko": "문제가 있으면 나에게 이야기해도 돼.",
+   "blank": "ada masalah"
+  },
+  {
+   "text": "Saya dengar ada masalah di kantor kemarin.",
+   "en": "I heard there was a problem at the office yesterday.",
+   "ko": "어제 사무실에서 문제가 있었다고 들었어.",
+   "blank": "ada masalah"
+  }
+ ],
+ "e|ada udang di balik batu": [
+  {
+   "text": "Tiba-tiba dia jadi baik banget, aku curiga ada udang di balik batu.",
+   "en": "Suddenly he's being really nice, I suspect there's something hidden behind it.",
+   "ko": "갑자기 그가 너무 친절해졌어, 뭔가 숨겨진 속셈이 있는 것 같아.",
+   "blank": "ada udang di balik batu"
+  },
+  {
+   "text": "Kenapa dia menawar harga semurah itu, jangan-jangan ada udang di balik batu?",
+   "en": "Why is he offering such a low price, could there be something fishy going on?",
+   "ko": "왜 그는 그렇게 싸게 값을 제시하지? 뭔가 수상한 게 있는 건 아닐까?",
+   "blank": "ada udang di balik batu"
+  },
+  {
+   "text": "Kalau penawarannya terlalu bagus, biasanya ada udang di balik batu.",
+   "en": "If the offer is too good, usually there’s something fishy behind it.",
+   "ko": "만약 제안이 너무 좋다면, 보통 뭔가 수상한 게 있는 거야.",
+   "blank": "ada udang di balik batu"
+  }
+ ],
+ "e|apa boleh buat": [
+  {
+   "text": "Kopi tumpah di meja, apa boleh buat, sudah kejadian.",
+   "en": "The coffee spilled on the table, what can we do, it already happened.",
+   "ko": "커피가 테이블에 쏟아졌어, 어쩔 수 없지, 이미 일어난 일이야.",
+   "blank": "apa boleh buat"
+  },
+  {
+   "text": "Tiket konsernya habis, apa boleh buat, kita cari hiburan lain saja.",
+   "en": "The concert tickets are sold out, what can we do, let's just find another entertainment.",
+   "ko": "콘서트 티켓이 다 팔렸어, 어쩔 수 없지, 그냥 다른 즐길 거리를 찾자.",
+   "blank": "apa boleh buat"
+  },
+  {
+   "text": "Hujan deras saat mau pergi, apa boleh buat, kita tunggu reda dulu.",
+   "en": "It's raining heavily when we want to go, what can we do, let's wait until it stops.",
+   "ko": "나가려는데 비가 많이 와, 어쩔 수 없지, 비가 그칠 때까지 기다리자.",
+   "blank": "apa boleh buat"
+  }
+ ],
+ "e|apa kabar": [
+  {
+   "text": "Halo, apa kabar?",
+   "en": "Hello, how are you?",
+   "ko": "안녕, 잘 지내?",
+   "blank": "apa kabar"
+  },
+  {
+   "text": "Pagi, apa kabar?",
+   "en": "Morning, how are you?",
+   "ko": "좋은 아침, 잘 지내?",
+   "blank": "apa kabar"
+  },
+  {
+   "text": "Lama tidak bertemu, apa kabar?",
+   "en": "Long time no see, how are you?",
+   "ko": "오랜만이야, 잘 지내?",
+   "blank": "apa kabar"
+  }
+ ],
+ "e|atas nama tim": [
+  {
+   "text": "Atas nama tim, saya ingin mengucapkan terima kasih atas dukungan Anda selama ini.",
+   "en": "On behalf of the team, I want to thank you for your support all this time.",
+   "ko": "팀을 대표해서, 지금까지의 지원에 감사드린다는 말씀을 드리고 싶습니다.",
+   "blank": "Atas nama tim"
+  },
+  {
+   "text": "Atas nama tim, kami mohon maaf atas keterlambatan pengiriman barang.",
+   "en": "On behalf of the team, we apologize for the delay in shipping the goods.",
+   "ko": "팀을 대표해서, 상품 배송 지연에 대해 사과드립니다.",
+   "blank": "Atas nama tim"
+  },
+  {
+   "text": "Atas nama tim, saya ingin menyampaikan selamat atas pencapaian Anda.",
+   "en": "On behalf of the team, I want to congratulate you on your achievement.",
+   "ko": "팀을 대표해서, 당신의 성과를 축하드립니다.",
+   "blank": "Atas nama tim"
+  }
+ ],
+ "e|ayo": [
+  {
+   "text": "Ayo makan bersama.",
+   "en": "Let's eat together.",
+   "ko": "같이 먹자.",
+   "blank": "Ayo"
+  },
+  {
+   "text": "Ayo pergi ke pasar.",
+   "en": "Let's go to the market.",
+   "ko": "시장에 가자.",
+   "blank": "Ayo"
+  },
+  {
+   "text": "Ayo belajar sekarang.",
+   "en": "Let's study now.",
+   "ko": "지금 공부하자.",
+   "blank": "Ayo"
+  }
+ ],
+ "e|bagaimana kalau": [
+  {
+   "text": "Bagaimana kalau kamu yang presentasi duluan?",
+   "en": "How about you present first?",
+   "ko": "네가 먼저 발표하는 게 어때?",
+   "blank": "Bagaimana kalau"
+  },
+  {
+   "text": "Bagaimana kalau kita tunda rapatnya sampai besok?",
+   "en": "How about we postpone the meeting until tomorrow?",
+   "ko": "회의를 내일까지 미루는 게 어때?",
+   "blank": "Bagaimana kalau"
+  },
+  {
+   "text": "Bagaimana kalau kita makan siang di luar hari ini?",
+   "en": "How about we have lunch outside today?",
+   "ko": "오늘 점심을 밖에서 먹는 건 어때?",
+   "blank": "Bagaimana kalau"
+  }
+ ],
+ "e|basa-basi": [
+  {
+   "text": "Aku capek harus basa-basi setiap kali ketemu orang baru.",
+   "en": "I'm tired of having to make small talk every time I meet new people.",
+   "ko": "새로운 사람을 만날 때마다 형식적인 인사를 해야 해서 피곤해.",
+   "blank": "basa-basi"
+  },
+  {
+   "text": "Kalau ngobrol sama dia, nggak perlu basa-basi, langsung aja ke intinya.",
+   "en": "When talking to him, you don't need small talk, just get straight to the point.",
+   "ko": "그 사람과 얘기할 때는 형식적인 말 필요 없이 바로 본론으로 들어가.",
+   "blank": "basa-basi"
+  },
+  {
+   "text": "Sering kali basa-basi itu justru bikin suasana jadi canggung.",
+   "en": "Often, small talk actually makes things awkward.",
+   "ko": "형식적인 대화가 오히려 분위기를 어색하게 만들 때가 많아.",
+   "blank": "basa-basi"
+  }
+ ],
+ "e|belum": [
+  {
+   "text": "Saya belum makan pagi.",
+   "en": "I haven't had breakfast yet.",
+   "ko": "아직 아침을 먹지 않았어요.",
+   "blank": "belum"
+  },
+  {
+   "text": "Tugas itu belum selesai.",
+   "en": "That task isn't finished yet.",
+   "ko": "그 과제가 아직 끝나지 않았어요.",
+   "blank": "belum"
+  },
+  {
+   "text": "Apakah kamu sudah mandi? Belum.",
+   "en": "Have you showered? Not yet.",
+   "ko": "샤워했어? 아직.",
+   "blank": "Belum"
+  }
+ ],
+ "e|berapa harganya": [
+  {
+   "text": "Permisi, berapa harganya untuk satu apel?",
+   "en": "Excuse me, how much is it for one apple?",
+   "ko": "실례합니다, 사과 하나는 얼마인가요?",
+   "blank": "berapa harganya"
+  },
+  {
+   "text": "Saya ingin tahu berapa harganya tas itu.",
+   "en": "I want to know how much is it for that bag.",
+   "ko": "저 가방은 얼마인지 알고 싶어요.",
+   "blank": "berapa harganya"
+  },
+  {
+   "text": "Maaf, berapa harganya minuman ini?",
+   "en": "Sorry, how much is it for this drink?",
+   "ko": "죄송하지만, 이 음료는 얼마에요?",
+   "blank": "berapa harganya"
+  }
+ ],
+ "e|besok": [
+  {
+   "text": "Kita pergi ke pasar besok.",
+   "en": "We go to the market tomorrow.",
+   "ko": "우리는 내일 시장에 가요.",
+   "blank": "besok"
+  },
+  {
+   "text": "Apakah kamu ada waktu besok?",
+   "en": "Do you have time tomorrow?",
+   "ko": "너 내일 시간 있어?",
+   "blank": "besok"
+  },
+  {
+   "text": "Saya akan belajar besok.",
+   "en": "I will study tomorrow.",
+   "ko": "나는 내일 공부할 거야.",
+   "blank": "besok"
+  }
+ ],
+ "e|bikin baper": [
+  {
+   "text": "Aduh, lagu itu benar-benar bikin baper, deh.",
+   "en": "Oh, that song really makes me emotional.",
+   "ko": "오, 그 노래 정말 감정적으로 만들어요.",
+   "blank": "bikin baper"
+  },
+  {
+   "text": "Jangan ngomong kayak gitu, nanti aku malah makin bikin baper.",
+   "en": "Don't say things like that, you'll just make me even more emotional.",
+   "ko": "그렇게 말하지 마, 나 더 감정적으로 만들 거야.",
+   "blank": "bikin baper"
+  },
+  {
+   "text": "Nonton film romantis sendirian suka bikin baper nggak sih?",
+   "en": "Does watching romantic movies alone ever make you emotional?",
+   "ko": "로맨틱 영화를 혼자 보면 감정적으로 되지 않아?",
+   "blank": "bikin baper"
+  }
+ ],
+ "e|bisa dibantu": [
+  {
+   "text": "Maaf, ada yang bisa dibantu?",
+   "en": "Sorry, is there anything I can help with?",
+   "ko": "죄송하지만, 도와드릴 일이 있나요?",
+   "blank": "bisa dibantu"
+  },
+  {
+   "text": "Kalau ada masalah, saya bisa dibantu.",
+   "en": "If there is a problem, I can help.",
+   "ko": "문제가 있으면, 제가 도와드릴 수 있어요.",
+   "blank": "bisa dibantu"
+  },
+  {
+   "text": "Silakan tanya jika butuh bisa dibantu.",
+   "en": "Please ask if you need any help.",
+   "ko": "도움이 필요하면 말씀하세요.",
+   "blank": "bisa dibantu"
+  }
+ ],
+ "e|boleh": [
+  {
+   "text": "Kamu boleh ambil satu kue.",
+   "en": "You may take one cake.",
+   "ko": "케이크 하나 가져도 돼요.",
+   "blank": "boleh"
+  },
+  {
+   "text": "Boleh saya pinjam pensilmu?",
+   "en": "May I borrow your pencil?",
+   "ko": "연필 좀 빌려도 될까요?",
+   "blank": "Boleh"
+  },
+  {
+   "text": "Maaf, boleh saya duduk di sini?",
+   "en": "Sorry, may I sit here?",
+   "ko": "죄송하지만, 여기 앉아도 될까요?",
+   "blank": "boleh"
+  }
+ ],
+ "e|bungkus": [
+  {
+   "text": "Minta satu bungkus nasi, ya.",
+   "en": "One pack of rice, please.",
+   "ko": "밥 한 봉지 주세요.",
+   "blank": "bungkus"
+  },
+  {
+   "text": "Kamu mau bungkus makanan ini?",
+   "en": "Do you want to wrap this food?",
+   "ko": "이 음식을 포장할래요?",
+   "blank": "bungkus"
+  },
+  {
+   "text": "Saya beli bungkus roti di toko itu.",
+   "en": "I bought a pack of bread at that shop.",
+   "ko": "그 가게에서 빵 한 봉지를 샀어요.",
+   "blank": "bungkus"
+  }
+ ],
+ "e|capek banget": [
+  {
+   "text": "Hari ini aku capek banget setelah kerja.",
+   "en": "Today I'm really tired after work.",
+   "ko": "오늘은 일 끝나고 정말 피곤해.",
+   "blank": "capek banget"
+  },
+  {
+   "text": "Aku capek banget, mau istirahat dulu ya.",
+   "en": "I'm really tired, I want to rest for a bit.",
+   "ko": "나 정말 피곤해, 좀 쉬고 싶어.",
+   "blank": "capek banget"
+  },
+  {
+   "text": "Baru pulang dari pasar, capek banget deh.",
+   "en": "Just got back from the market, I'm really tired.",
+   "ko": "방금 시장에서 돌아왔는데, 정말 피곤해.",
+   "blank": "capek banget"
+  }
+ ],
+ "e|dengan kata lain": [
+  {
+   "text": "Dia selalu datang telat, dengan kata lain, dia kurang disiplin.",
+   "en": "He always comes late, in other words, he is not very disciplined.",
+   "ko": "그는 항상 늦게 오는데, 다시 말해 그는 별로 규칙적이지 않아.",
+   "blank": "dengan kata lain"
+  },
+  {
+   "text": "Aku nggak suka makanan pedas, dengan kata lain, aku pasti pilih yang tidak pedas.",
+   "en": "I don't like spicy food, in other words, I'll definitely choose something not spicy.",
+   "ko": "나는 매운 음식을 좋아하지 않아, 다시 말해 나는 매운 거 안 고를 거야.",
+   "blank": "dengan kata lain"
+  },
+  {
+   "text": "Kamu belum mengerjakan tugas, dengan kata lain, kamu harus lembur malam ini.",
+   "en": "You haven't done your assignment, in other words, you have to work late tonight.",
+   "ko": "너는 아직 과제를 안 했으니까, 다시 말해 오늘 밤 늦게까지 해야 해.",
+   "blank": "dengan kata lain"
+  }
+ ],
+ "e|dengan segala hormat": [
+  {
+   "text": "Dengan segala hormat, saya ingin mengajukan beberapa pertanyaan tentang proyek ini.",
+   "en": "With all due respect, I would like to ask a few questions about this project.",
+   "ko": "진심으로 존경을 표하며, 이 프로젝트에 대해 몇 가지 질문을 하고 싶습니다.",
+   "blank": "Dengan segala hormat"
+  },
+  {
+   "text": "Maaf, dengan segala hormat, saya kurang setuju dengan pendapat Anda.",
+   "en": "Sorry, with all due respect, I disagree with your opinion.",
+   "ko": "죄송하지만, 진심으로 존경을 표하며 저는 당신의 의견에 동의하지 않습니다.",
+   "blank": "dengan segala hormat"
+  },
+  {
+   "text": "Dengan segala hormat, apakah Anda bisa menjelaskan alasan perubahan jadwal?",
+   "en": "With all due respect, could you explain the reason for the schedule change?",
+   "ko": "진심으로 존경을 표하며, 일정 변경의 이유를 설명해 주실 수 있나요?",
+   "blank": "Dengan segala hormat"
+  }
+ ],
+ "e|di satu sisi": [
+  {
+   "text": "Di satu sisi, aku senang bisa bekerja dari rumah, tapi di sisi lain, aku jadi jarang ketemu teman-teman.",
+   "en": "On one hand, I'm happy to work from home, but on the other hand, I rarely meet my friends.",
+   "ko": "한편으로는 집에서 일할 수 있어서 좋지만, 다른 한편으로는 친구들을 거의 못 만나게 돼.",
+   "blank": "Di satu sisi"
+  },
+  {
+   "text": "Di satu sisi, hujan membuat udara sejuk, tapi di sisi lain, jadi sulit pergi ke mana-mana.",
+   "en": "On one hand, the rain makes the air cool, but on the other hand, it's hard to go anywhere.",
+   "ko": "한편으로는 비가 와서 공기가 시원하지만, 다른 한편으로는 어디 가기 힘들어.",
+   "blank": "Di satu sisi"
+  },
+  {
+   "text": "Di satu sisi, belajar online itu praktis, tapi kadang aku merasa kurang fokus.",
+   "en": "On one hand, studying online is practical, but sometimes I feel less focused.",
+   "ko": "한편으로는 온라인으로 공부하는 것이 편리하지만, 가끔 집중이 덜 되는 것 같아.",
+   "blank": "Di satu sisi"
+  }
+ ],
+ "e|di sisi lain": [
+  {
+   "text": "Aku suka tinggal di kota, tapi di sisi lain, aku juga rindu suasana desa.",
+   "en": "I like living in the city, but on the other hand, I also miss the village atmosphere.",
+   "ko": "나는 도시에 사는 것이 좋지만, 한편으로는 시골 분위기도 그리워.",
+   "blank": "di sisi lain"
+  },
+  {
+   "text": "Kerja dari rumah memang nyaman, di sisi lain kadang terasa sepi juga.",
+   "en": "Working from home is comfortable, but on the other hand, it sometimes feels lonely too.",
+   "ko": "재택근무는 편하지만, 한편으론 때때로 외롭기도 해.",
+   "blank": "di sisi lain"
+  },
+  {
+   "text": "Makanan pedas enak sekali, di sisi lain perutku sering bermasalah setelah makan.",
+   "en": "Spicy food is really delicious, but on the other hand, my stomach often has problems after eating it.",
+   "ko": "매운 음식은 정말 맛있지만, 한편으로 먹고 나면 속이 자주 안 좋아져.",
+   "blank": "di sisi lain"
+  }
+ ],
+ "e|emang sih": [
+  {
+   "text": "Emang sih hujan deras, tapi aku tetap mau pergi ke toko.",
+   "en": "It is true that it's raining heavily, but I still want to go to the store.",
+   "ko": "비가 많이 오긴 하지만, 그래도 나는 가게에 가고 싶어.",
+   "blank": "Emang sih"
+  },
+  {
+   "text": "Emang sih makanannya pedas, tapi rasanya enak banget.",
+   "en": "It's true the food is spicy, but it tastes really good.",
+   "ko": "음식이 맵긴 한데, 진짜 맛있어.",
+   "blank": "Emang sih"
+  },
+  {
+   "text": "Emang sih tugasnya banyak, tapi kalau dicicil pasti selesai kok.",
+   "en": "It's true there are a lot of assignments, but if you do them little by little, you'll finish for sure.",
+   "ko": "과제가 많긴 하지만, 조금씩 하면 분명히 끝날 거야.",
+   "blank": "Emang sih"
+  }
+ ],
+ "e|gimana ya": [
+  {
+   "text": "Gimana ya, aku lupa taruh kunci mobil.",
+   "en": "Hmm, I forgot where I put the car keys.",
+   "ko": "음, 나 자동차 열쇠 어디에 뒀는지 잊어버렸어.",
+   "blank": "Gimana ya"
+  },
+  {
+   "text": "Gimana ya cara bikin kopi enak?",
+   "en": "How do you make good coffee?",
+   "ko": "맛있는 커피는 어떻게 만들지?",
+   "blank": "Gimana ya"
+  },
+  {
+   "text": "Gimana ya kalau kita nonton film malam ini?",
+   "en": "How about we watch a movie tonight?",
+   "ko": "오늘 밤에 영화 볼까?",
+   "blank": "Gimana ya"
+  }
+ ],
+ "e|gitu deh": [
+  {
+   "text": "Aku udah coba jelasin, tapi dia nggak ngerti juga, gitu deh.",
+   "en": "I already tried to explain, but he still doesn't get it, that's just how it is.",
+   "ko": "내가 이미 설명하려고 했는데, 그는 여전히 이해하지 못해, 그냥 그런 거야.",
+   "blank": "gitu deh"
+  },
+  {
+   "text": "Kalau kamu nggak suka makanannya, ya bilang aja, gitu deh.",
+   "en": "If you don't like the food, just say it, that's it.",
+   "ko": "음식이 마음에 안 들면 그냥 말해, 그뿐이야.",
+   "blank": "gitu deh"
+  },
+  {
+   "text": "Aku nggak tahu kenapa dia tiba-tiba marah, gitu deh.",
+   "en": "I don't know why she suddenly got angry, that's just how it is.",
+   "ko": "그녀가 갑자기 왜 화냈는지 잘 모르겠어, 그냥 그런 거야.",
+   "blank": "gitu deh"
+  }
+ ],
+ "e|harganya bisa kurang": [
+  {
+   "text": "Maaf, harganya bisa kurang kalau saya beli dua?",
+   "en": "Excuse me, can the price be reduced if I buy two?",
+   "ko": "실례합니다, 두 개 사면 가격을 깎을 수 있나요?",
+   "blank": "harganya bisa kurang"
+  },
+  {
+   "text": "Saya suka barang ini, tapi harganya bisa kurang?",
+   "en": "I like this item, but can the price be lowered?",
+   "ko": "이 물건이 마음에 드는데, 가격을 깎을 수 있나요?",
+   "blank": "harganya bisa kurang"
+  },
+  {
+   "text": "Kalau saya bayar tunai, harganya bisa kurang?",
+   "en": "If I pay in cash, can the price be reduced?",
+   "ko": "현금으로 내면 가격을 깎을 수 있나요?",
+   "blank": "harganya bisa kurang"
+  }
+ ],
+ "e|hati-hati": [
+  {
+   "text": "Jalan licin, hati-hati ya.",
+   "en": "The road is slippery, be careful.",
+   "ko": "길이 미끄러우니까 조심해.",
+   "blank": "hati-hati"
+  },
+  {
+   "text": "Hati-hati saat menyeberang jalan.",
+   "en": "Be careful when crossing the street.",
+   "ko": "길을 건널 때 조심해.",
+   "blank": "Hati-hati"
+  },
+  {
+   "text": "Hati-hati dengan barang bawaanmu.",
+   "en": "Be careful with your belongings.",
+   "ko": "네 소지품을 조심해.",
+   "blank": "Hati-hati"
+  }
+ ],
+ "e|intinya": [
+  {
+   "text": "Intinya, kita harus saling percaya kalau mau kerjasama.",
+   "en": "The point is, we have to trust each other if we want to work together.",
+   "ko": "요점은 우리가 함께 일하려면 서로를 믿어야 한다는 거야.",
+   "blank": "Intinya"
+  },
+  {
+   "text": "Aku tahu kamu sibuk, tapi intinya aku butuh jawaban hari ini.",
+   "en": "I know you're busy, but the point is I need an answer today.",
+   "ko": "네가 바쁜 거 알지만, 요점은 내가 오늘 답이 필요하다는 거야.",
+   "blank": "intinya"
+  },
+  {
+   "text": "Intinya, jangan lupa bawa payung karena cuaca nggak menentu.",
+   "en": "The point is, don't forget to bring an umbrella because the weather is unpredictable.",
+   "ko": "요점은, 날씨가 변덕스러우니까 우산을 꼭 챙기라는 거야.",
+   "blank": "Intinya"
+  }
+ ],
+ "e|izinkan saya": [
+  {
+   "text": "Maaf, izinkan saya mengambil buku itu sebentar.",
+   "en": "Sorry, allow me to take that book for a moment.",
+   "ko": "미안하지만, 제가 그 책을 잠깐 가져가도 될까요?",
+   "blank": "izinkan saya"
+  },
+  {
+   "text": "Izinkan saya menjelaskan dulu sebelum kamu bertanya.",
+   "en": "Allow me to explain first before you ask.",
+   "ko": "질문하기 전에 제가 먼저 설명할게요.",
+   "blank": "Izinkan saya"
+  },
+  {
+   "text": "Izinkan saya membantu membawakan belanjaanmu ke dalam.",
+   "en": "Allow me to help carry your groceries inside.",
+   "ko": "제가 당신의 장을 안으로 옮기는 걸 도와드릴게요.",
+   "blank": "Izinkan saya"
+  }
+ ],
+ "e|jam berapa": [
+  {
+   "text": "Permisi, jam berapa sekarang?",
+   "en": "Excuse me, what time is it now?",
+   "ko": "실례합니다, 지금 몇 시예요?",
+   "blank": "jam berapa"
+  },
+  {
+   "text": "Kamu tahu jam berapa toko buka?",
+   "en": "Do you know what time the store opens?",
+   "ko": "가게가 몇 시에 여는지 알아요?",
+   "blank": "jam berapa"
+  },
+  {
+   "text": "Saya lupa jam berapa film dimulai.",
+   "en": "I forgot what time the movie starts.",
+   "ko": "영화가 몇 시에 시작하는지 잊어버렸어요.",
+   "blank": "jam berapa"
+  }
+ ],
+ "e|jangan salah paham": [
+  {
+   "text": "Jangan salah paham, aku tidak bermaksud menyinggung siapa pun.",
+   "en": "Don't get me wrong, I didn't mean to offend anyone.",
+   "ko": "오해하지 마, 누구를 불쾌하게 할 의도는 아니었어.",
+   "blank": "Jangan salah paham"
+  },
+  {
+   "text": "Kalau aku bicara cepat, jangan salah paham ya, aku cuma gugup.",
+   "en": "If I speak fast, don't get me wrong, I'm just nervous.",
+   "ko": "내가 말을 빨리 해도 오해하지 마, 그냥 긴장해서 그래.",
+   "blank": "jangan salah paham"
+  },
+  {
+   "text": "Jangan salah paham, aku benar-benar ingin membantu kamu.",
+   "en": "Don't get me wrong, I really want to help you.",
+   "ko": "오해하지 마, 나는 정말로 널 도와주고 싶어.",
+   "blank": "Jangan salah paham"
+  }
+ ],
+ "e|jujur aja": [
+  {
+   "text": "Jujur aja, aku belum siap untuk ujian besok.",
+   "en": "Honestly, I'm not ready for the exam tomorrow.",
+   "ko": "솔직히 말해서, 나 내일 시험 준비 안 됐어.",
+   "blank": "Jujur aja"
+  },
+  {
+   "text": "Jujur aja, aku nggak terlalu suka makanan pedas.",
+   "en": "Honestly, I don't really like spicy food.",
+   "ko": "솔직히, 나는 매운 음식 별로 안 좋아해.",
+   "blank": "Jujur aja"
+  },
+  {
+   "text": "Jujur aja, tadi aku lupa bawa dompet.",
+   "en": "Honestly, I forgot to bring my wallet earlier.",
+   "ko": "솔직히, 나 아까 지갑 가져오는 거 깜빡했어.",
+   "blank": "Jujur aja"
+  }
+ ],
+ "e|kabar baik": [
+  {
+   "text": "Saya kabar baik hari ini.",
+   "en": "I am fine today.",
+   "ko": "저는 오늘 잘 지내요.",
+   "blank": "kabar baik"
+  },
+  {
+   "text": "Dia bilang kabar baik saat ditanya.",
+   "en": "She said she is fine when asked.",
+   "ko": "누군가 물었을 때 그녀는 잘 지낸다고 했어요.",
+   "blank": "kabar baik"
+  },
+  {
+   "text": "Semua keluarga kabar baik di rumah.",
+   "en": "All the family are fine at home.",
+   "ko": "집에 있는 가족 모두 잘 지내요.",
+   "blank": "kabar baik"
+  }
+ ],
+ "e|kalau boleh usul": [
+  {
+   "text": "Kalau boleh usul, bagaimana kalau kita pindah ke tempat yang lebih tenang?",
+   "en": "If I may suggest, how about we move to a quieter place?",
+   "ko": "혹시 제안해도 된다면, 더 조용한 곳으로 옮기는 게 어때요?",
+   "blank": "Kalau boleh usul"
+  },
+  {
+   "text": "Kalau boleh usul, mungkin sebaiknya kita mulai rapat sedikit lebih awal besok.",
+   "en": "If I may suggest, maybe we should start the meeting a bit earlier tomorrow.",
+   "ko": "혹시 제안해도 된다면, 내일 회의를 조금 더 일찍 시작하는 게 좋을 것 같아요.",
+   "blank": "Kalau boleh usul"
+  },
+  {
+   "text": "Kalau boleh usul, coba tambahkan sedikit garam ke masakan ini.",
+   "en": "If I may suggest, try adding a bit of salt to this dish.",
+   "ko": "혹시 제안해도 된다면, 이 요리에 소금을 조금 넣어보세요.",
+   "blank": "Kalau boleh usul"
+  }
+ ],
+ "e|kayaknya": [
+  {
+   "text": "Kayaknya hujan mau turun deh.",
+   "en": "It looks like it’s going to rain.",
+   "ko": "비가 올 것 같아.",
+   "blank": "Kayaknya"
+  },
+  {
+   "text": "Kayaknya aku lupa bawa dompet.",
+   "en": "I think I forgot to bring my wallet.",
+   "ko": "지갑을 깜빡한 것 같아.",
+   "blank": "Kayaknya"
+  },
+  {
+   "text": "Kayaknya dia lagi sibuk hari ini.",
+   "en": "It seems like he is busy today.",
+   "ko": "그 사람 오늘 바쁜 것 같아.",
+   "blank": "Kayaknya"
+  }
+ ],
+ "e|ketemu di mana": [
+  {
+   "text": "Kita ketemu di mana kemarin?",
+   "en": "Where did we meet yesterday?",
+   "ko": "우리 어제 어디에서 만났지?",
+   "blank": "ketemu di mana"
+  },
+  {
+   "text": "Kamu ketemu di mana teman baru itu?",
+   "en": "Where did you meet that new friend?",
+   "ko": "너 그 새 친구 어디에서 만났어?",
+   "blank": "ketemu di mana"
+  },
+  {
+   "text": "Saya lupa, kita ketemu di mana ya?",
+   "en": "I forgot, where did we meet?",
+   "ko": "나 까먹었어, 우리 어디서 만났지?",
+   "blank": "ketemu di mana"
+  }
+ ],
+ "e|kiri di sini": [
+  {
+   "text": "Saya turun di kiri di sini.",
+   "en": "I get off on the left here.",
+   "ko": "저는 여기서 왼쪽에서 내립니다.",
+   "blank": "kiri di sini"
+  },
+  {
+   "text": "Tolong berhenti di kiri di sini.",
+   "en": "Please stop on the left here.",
+   "ko": "여기에서 왼쪽에 멈춰 주세요.",
+   "blank": "kiri di sini"
+  },
+  {
+   "text": "Apakah jalan keluar di kiri di sini?",
+   "en": "Is the exit on the left here?",
+   "ko": "출구가 여기서 왼쪽에 있나요?",
+   "blank": "kiri di sini"
+  }
+ ],
+ "e|kita sepakat": [
+  {
+   "text": "Jadi, kita sepakat untuk bertemu lagi minggu depan ya.",
+   "en": "So, we agree to meet again next week, right?",
+   "ko": "그러니까 우리 다음 주에 다시 만나기로 한 거지?",
+   "blank": "kita sepakat"
+  },
+  {
+   "text": "Kalau kita sepakat, besok aku akan mulai pekerjaannya.",
+   "en": "If we agree, I will start the work tomorrow.",
+   "ko": "우리가 동의하면 내일 내가 일을 시작할게.",
+   "blank": "kita sepakat"
+  },
+  {
+   "text": "Bagus, berarti kita sepakat soal harga ini.",
+   "en": "Great, that means we agree about this price.",
+   "ko": "좋아, 그럼 이 가격에 동의하는 거네.",
+   "blank": "kita sepakat"
+  }
+ ],
+ "e|kok bisa": [
+  {
+   "text": "Loh, kok bisa lampunya tiba-tiba mati ya?",
+   "en": "Huh, how could the light suddenly go out?",
+   "ko": "어, 불이 갑자기 왜 꺼졌지?",
+   "blank": "kok bisa"
+  },
+  {
+   "text": "Kamu kok bisa hafal semua lagu itu?",
+   "en": "How come you can memorize all those songs?",
+   "ko": "너는 어떻게 그 모든 노래를 외울 수 있지?",
+   "blank": "kok bisa"
+  },
+  {
+   "text": "Kok bisa lupa bawa dompet sih?",
+   "en": "How could you forget to bring your wallet?",
+   "ko": "어떻게 지갑을 깜빡할 수가 있어?",
+   "blank": "Kok bisa"
+  }
+ ],
+ "e|kurang setuju": [
+  {
+   "text": "Maaf, saya kurang setuju dengan pendapatmu.",
+   "en": "Sorry, I don't really agree with your opinion.",
+   "ko": "미안하지만, 나는 네 의견에 별로 동의하지 않아.",
+   "blank": "kurang setuju"
+  },
+  {
+   "text": "Aku kurang setuju kalau itu cara terbaik.",
+   "en": "I don't really agree that it's the best way.",
+   "ko": "나는 그게 최고의 방법이라고 별로 생각하지 않아.",
+   "blank": "kurang setuju"
+  },
+  {
+   "text": "Saya kurang setuju jika harus pergi sekarang.",
+   "en": "I don't really agree if we have to go now.",
+   "ko": "지금 가야 한다면 나는 별로 동의하지 않아.",
+   "blank": "kurang setuju"
+  }
+ ],
+ "e|lagi apa": [
+  {
+   "text": "Hai, lagi apa sekarang?",
+   "en": "Hi, what are you doing now?",
+   "ko": "안녕, 지금 뭐 하고 있어?",
+   "blank": "lagi apa"
+  },
+  {
+   "text": "Kamu lagi apa di rumah?",
+   "en": "What are you doing at home?",
+   "ko": "집에서 뭐 하고 있어?",
+   "blank": "lagi apa"
+  },
+  {
+   "text": "Lagi apa sore ini?",
+   "en": "What are you doing this afternoon?",
+   "ko": "오늘 오후에 뭐 하고 있어?",
+   "blank": "Lagi apa"
+  }
+ ],
+ "e|lain kali aja": [
+  {
+   "text": "Mau ikut nonton film? Lain kali aja, aku lagi capek hari ini.",
+   "en": "Want to come watch a movie? Maybe next time, I'm tired today.",
+   "ko": "영화 보러 갈래? 다음에 하자, 오늘은 피곤해.",
+   "blank": "Lain kali aja"
+  },
+  {
+   "text": "Terima kasih sudah mengundang, tapi lain kali aja ya, soalnya aku ada janji.",
+   "en": "Thank you for inviting me, but maybe next time, because I have an appointment.",
+   "ko": "초대해줘서 고마워, 그런데 다음에 하자, 약속이 있어.",
+   "blank": "lain kali aja"
+  },
+  {
+   "text": "Kalau mau ngobrol lebih lama, lain kali aja deh, sekarang aku harus pergi.",
+   "en": "If you want to chat longer, maybe next time, I have to go now.",
+   "ko": "더 오래 이야기하고 싶으면, 다음에 하자, 지금은 가야 해.",
+   "blank": "lain kali aja"
+  }
+ ],
+ "e|lebih baik": [
+  {
+   "text": "Lebih baik kita berangkat sekarang.",
+   "en": "It's better if we leave now.",
+   "ko": "지금 출발하는 게 더 좋아.",
+   "blank": "Lebih baik"
+  },
+  {
+   "text": "Menurut saya, lebih baik kamu istirahat dulu.",
+   "en": "In my opinion, it's better for you to rest first.",
+   "ko": "내 생각엔, 네가 먼저 쉬는 게 더 좋아.",
+   "blank": "lebih baik"
+  },
+  {
+   "text": "Kalau hujan, lebih baik tunggu di dalam.",
+   "en": "If it rains, it's better to wait inside.",
+   "ko": "비가 오면, 안에서 기다리는 게 더 좋아.",
+   "blank": "lebih baik"
+  }
+ ],
+ "e|lumayan": [
+  {
+   "text": "Cuacanya hari ini lumayan sejuk.",
+   "en": "The weather today is quite cool.",
+   "ko": "오늘 날씨는 꽤 시원해요.",
+   "blank": "lumayan"
+  },
+  {
+   "text": "Makanannya lumayan enak.",
+   "en": "The food is quite tasty.",
+   "ko": "음식이 꽤 맛있어요.",
+   "blank": "lumayan"
+  },
+  {
+   "text": "Kerjaanku lumayan banyak minggu ini.",
+   "en": "I have quite a lot of work this week.",
+   "ko": "이번 주에 일이 꽤 많아요.",
+   "blank": "lumayan"
+  }
+ ],
+ "e|lurus terus": [
+  {
+   "text": "Jalan saja lurus terus sampai lampu merah.",
+   "en": "Just go straight until the traffic light.",
+   "ko": "신호등까지 계속 곧장 가세요.",
+   "blank": "lurus terus"
+  },
+  {
+   "text": "Kalau mau ke pasar, lurus terus dari sini.",
+   "en": "If you want to go to the market, go straight from here.",
+   "ko": "시장에 가고 싶으면 여기서 계속 곧장 가세요.",
+   "blank": "lurus terus"
+  },
+  {
+   "text": "Untuk ke kantor pos, lurus terus lalu belok kiri.",
+   "en": "To get to the post office, go straight then turn left.",
+   "ko": "우체국에 가려면 계속 곧장 가다가 왼쪽으로 도세요.",
+   "blank": "lurus terus"
+  }
+ ],
+ "e|maaf": [
+  {
+   "text": "Maaf, saya tidak tahu.",
+   "en": "Sorry, I don't know.",
+   "ko": "미안해, 나는 몰라.",
+   "blank": "Maaf"
+  },
+  {
+   "text": "Maaf, ini kursi kamu?",
+   "en": "Sorry, is this your seat?",
+   "ko": "미안해, 이거 네 자리야?",
+   "blank": "Maaf"
+  },
+  {
+   "text": "Maaf, bisa ulangi?",
+   "en": "Sorry, can you repeat?",
+   "ko": "미안해, 다시 말해줄래?",
+   "blank": "Maaf"
+  }
+ ],
+ "e|makan di sini": [
+  {
+   "text": "Saya mau makan di sini.",
+   "en": "I want to eat here.",
+   "ko": "저는 여기서 먹고 싶어요.",
+   "blank": "makan di sini"
+  },
+  {
+   "text": "Apakah Anda ingin makan di sini?",
+   "en": "Do you want to eat here?",
+   "ko": "여기서 먹고 싶으세요?",
+   "blank": "makan di sini"
+  },
+  {
+   "text": "Tolong siapkan meja untuk makan di sini.",
+   "en": "Please prepare a table to eat here.",
+   "ko": "여기서 먹을 수 있게 테이블을 준비해 주세요.",
+   "blank": "makan di sini"
+  }
+ ],
+ "e|masa sih": [
+  {
+   "text": "Masa sih kamu belum makan dari pagi?",
+   "en": "Really, you haven't eaten since morning?",
+   "ko": "정말로 아침부터 아무것도 안 먹었어?",
+   "blank": "Masa sih"
+  },
+  {
+   "text": "Masa sih hujan lagi hari ini?",
+   "en": "Really, it's raining again today?",
+   "ko": "정말로 오늘 또 비가 와?",
+   "blank": "Masa sih"
+  },
+  {
+   "text": "Masa sih dia lupa janji?",
+   "en": "Really, he forgot the promise?",
+   "ko": "정말로 그가 약속을 잊었어?",
+   "blank": "Masa sih"
+  }
+ ],
+ "e|masuk angin": [
+  {
+   "text": "Saya merasa masuk angin hari ini.",
+   "en": "I feel unwell today (like I caught a chill).",
+   "ko": "오늘 몸이 으슬으슬해요(감기기운이 있어요).",
+   "blank": "masuk angin"
+  },
+  {
+   "text": "Jangan mandi malam, nanti masuk angin.",
+   "en": "Don't shower at night, you might catch a chill.",
+   "ko": "밤에 샤워하지 마, 감기 들 수 있어.",
+   "blank": "masuk angin"
+  },
+  {
+   "text": "Sudah minum obat untuk masuk angin?",
+   "en": "Have you taken medicine for feeling unwell?",
+   "ko": "감기기운 있을 때 약 먹었어?",
+   "blank": "masuk angin"
+  }
+ ],
+ "e|mau tidak mau": [
+  {
+   "text": "Mau tidak mau, kita harus menyelesaikan tugas ini hari ini.",
+   "en": "Like it or not, we have to finish this task today.",
+   "ko": "좋든 싫든 오늘 이 일을 끝내야 해.",
+   "blank": "Mau tidak mau"
+  },
+  {
+   "text": "Dia harus menerima keputusan itu, mau tidak mau.",
+   "en": "He has to accept that decision, like it or not.",
+   "ko": "그는 그 결정을 좋든 싫든 받아들여야 해.",
+   "blank": "mau tidak mau"
+  },
+  {
+   "text": "Kalau sudah terlambat, mau tidak mau kita harus menunggu giliran berikutnya.",
+   "en": "If we're already late, like it or not we have to wait for the next turn.",
+   "ko": "이미 늦었으면, 좋든 싫든 다음 차례를 기다려야 해.",
+   "blank": "mau tidak mau"
+  }
+ ],
+ "e|mending": [
+  {
+   "text": "Mending kita nonton film di rumah aja malam ini.",
+   "en": "We'd better just watch a movie at home tonight.",
+   "ko": "오늘 밤은 그냥 집에서 영화 보는 게 낫겠어.",
+   "blank": "Mending"
+  },
+  {
+   "text": "Kalau hujan terus begini, mending tunda dulu perjalanannya.",
+   "en": "If it keeps raining like this, it's better to postpone the trip.",
+   "ko": "비가 계속 이렇게 오면 여행을 미루는 게 낫겠어.",
+   "blank": "mending"
+  },
+  {
+   "text": "Mending kamu bilang yang sebenarnya dari awal.",
+   "en": "You should have just told the truth from the start.",
+   "ko": "처음부터 진실을 말하는 게 나았을 거야.",
+   "blank": "Mending"
+  }
+ ],
+ "e|menurut saya": [
+  {
+   "text": "Menurut saya, cuaca hari ini cukup cerah.",
+   "en": "I think the weather is quite sunny today.",
+   "ko": "내 생각에 오늘 날씨가 꽤 맑아.",
+   "blank": "Menurut saya"
+  },
+  {
+   "text": "Menurut saya, makanan ini terlalu pedas.",
+   "en": "I think this food is too spicy.",
+   "ko": "내 생각에 이 음식은 너무 매워.",
+   "blank": "Menurut saya"
+  },
+  {
+   "text": "Menurut saya, film itu sangat menarik.",
+   "en": "I think that movie is very interesting.",
+   "ko": "내 생각에 그 영화는 아주 재미있어.",
+   "blank": "Menurut saya"
+  }
+ ],
+ "e|minta tolong": [
+  {
+   "text": "Bisa minta tolong ambilkan air?",
+   "en": "Can you please get me some water?",
+   "ko": "물 좀 가져다줄 수 있어?",
+   "blank": "minta tolong"
+  },
+  {
+   "text": "Saya minta tolong bukakan pintu.",
+   "en": "I need help opening the door.",
+   "ko": "문 여는 것 좀 도와줘.",
+   "blank": "minta tolong"
+  },
+  {
+   "text": "Maaf, boleh minta tolong fotokan saya?",
+   "en": "Excuse me, can you please take a photo of me?",
+   "ko": "죄송한데, 사진 좀 찍어줄 수 있어요?",
+   "blank": "minta tolong"
+  }
+ ],
+ "e|mohon maaf sebelumnya": [
+  {
+   "text": "Mohon maaf sebelumnya, saya baru bisa membalas pesan kamu sekarang.",
+   "en": "Sorry in advance, I could only reply to your message now.",
+   "ko": "미리 사과드려요, 이제야 당신의 메시지에 답장할 수 있었어요.",
+   "blank": "Mohon maaf sebelumnya"
+  },
+  {
+   "text": "Mohon maaf sebelumnya, apakah kursi ini sudah ada yang duduki?",
+   "en": "Sorry in advance, is this seat already taken?",
+   "ko": "미리 사과드리는데, 이 자리에 이미 누가 앉아 있나요?",
+   "blank": "Mohon maaf sebelumnya"
+  },
+  {
+   "text": "Mohon maaf sebelumnya, saya tidak sengaja menghapus file kamu.",
+   "en": "Sorry in advance, I accidentally deleted your file.",
+   "ko": "미리 사과드리는데, 실수로 당신의 파일을 삭제했어요.",
+   "blank": "Mohon maaf sebelumnya"
+  }
+ ],
+ "e|nama saya": [
+  {
+   "text": "Halo, nama saya Dita.",
+   "en": "Hello, my name is Dita.",
+   "ko": "안녕하세요, 제 이름은 디타입니다.",
+   "blank": "nama saya"
+  },
+  {
+   "text": "Nama saya suka apel.",
+   "en": "My name likes apples.",
+   "ko": "내 이름은 사과를 좋아해요.",
+   "blank": "Nama saya"
+  },
+  {
+   "text": "Saya lupa nama saya.",
+   "en": "I forgot my name.",
+   "ko": "나는 내 이름을 잊어버렸어요.",
+   "blank": "nama saya"
+  }
+ ],
+ "e|nanti": [
+  {
+   "text": "Aku akan datang nanti.",
+   "en": "I will come later.",
+   "ko": "나중에 올게.",
+   "blank": "nanti"
+  },
+  {
+   "text": "Kita makan bersama nanti?",
+   "en": "Shall we eat together later?",
+   "ko": "나중에 같이 먹을까?",
+   "blank": "nanti"
+  },
+  {
+   "text": "Nanti saya telepon kamu.",
+   "en": "I will call you later.",
+   "ko": "나중에 너한테 전화할게.",
+   "blank": "Nanti"
+  }
+ ],
+ "e|nggak enak hati": [
+  {
+   "text": "Aku nggak enak hati nggak bisa datang ke acara kamu besok.",
+   "en": "I feel bad that I can't come to your event tomorrow.",
+   "ko": "내일 네 행사에 못 가서 미안해.",
+   "blank": "nggak enak hati"
+  },
+  {
+   "text": "Rasanya nggak enak hati sudah lama tidak menghubungi dia.",
+   "en": "I feel bad that I haven't contacted him for a long time.",
+   "ko": "오랫동안 그를 연락하지 않아서 마음이 불편해.",
+   "blank": "nggak enak hati"
+  },
+  {
+   "text": "Saya jadi nggak enak hati setelah tanpa sengaja memecahkan gelas di rumahmu.",
+   "en": "I feel bad after accidentally breaking a glass at your house.",
+   "ko": "네 집에서 실수로 유리컵을 깨서 미안해.",
+   "blank": "nggak enak hati"
+  }
+ ],
+ "e|nggak masuk akal": [
+  {
+   "text": "Harga kopi di warung itu benar-benar nggak masuk akal.",
+   "en": "The price of coffee at that stall is really unreasonable.",
+   "ko": "그 가게의 커피 가격은 정말 말이 안 돼.",
+   "blank": "nggak masuk akal"
+  },
+  {
+   "text": "Dia marah cuma karena hal kecil, menurutku itu nggak masuk akal.",
+   "en": "He got angry just because of a small thing, I think that's unreasonable.",
+   "ko": "그가 작은 일로 화를 내는 건 내 생각에 말이 안 돼.",
+   "blank": "nggak masuk akal"
+  },
+  {
+   "text": "Kenapa harus kerja selama dua puluh jam sehari? Itu nggak masuk akal.",
+   "en": "Why do we have to work for twenty hours a day? That doesn't make sense.",
+   "ko": "왜 하루에 스무 시간씩 일해야 해? 그건 말이 안 돼.",
+   "blank": "nggak masuk akal"
+  }
+ ],
+ "e|nggak nyangka": [
+  {
+   "text": "Aku nggak nyangka kamu datang hari ini.",
+   "en": "I didn't expect you to come today.",
+   "ko": "오늘 네가 올 줄은 정말 몰랐어.",
+   "blank": "nggak nyangka"
+  },
+  {
+   "text": "Dia nggak nyangka bisa lulus ujian itu.",
+   "en": "He didn't expect to pass that test.",
+   "ko": "그는 그 시험에 합격할 줄은 몰랐어.",
+   "blank": "nggak nyangka"
+  },
+  {
+   "text": "Kita semua nggak nyangka hujan turun tiba-tiba.",
+   "en": "None of us expected the rain to fall suddenly.",
+   "ko": "우리 모두 갑자기 비가 내릴 줄 몰랐어.",
+   "blank": "nggak nyangka"
+  }
+ ],
+ "e|nggak pedas ya": [
+  {
+   "text": "Sambalnya nggak pedas ya, cocok untuk anak-anak.",
+   "en": "The chili sauce isn't spicy, right? It's suitable for kids.",
+   "ko": "이 고추장은 맵지 않아서 아이들에게도 괜찮아요.",
+   "blank": "nggak pedas ya"
+  },
+  {
+   "text": "Mau coba sup ini? Nggak pedas ya.",
+   "en": "Do you want to try this soup? It's not spicy, right?",
+   "ko": "이 수프 먹어볼래요? 맵지 않아요.",
+   "blank": "Nggak pedas ya"
+  },
+  {
+   "text": "Ayam gorengnya nggak pedas ya, kamu pasti suka.",
+   "en": "The fried chicken isn't spicy, you'll definitely like it.",
+   "ko": "이 프라이드치킨 맵지 않아서 분명히 좋아할 거예요.",
+   "blank": "nggak pedas ya"
+  }
+ ],
+ "e|oke deh": [
+  {
+   "text": "Oke deh, aku ikut nanti sore.",
+   "en": "Alright, I'll join later this afternoon.",
+   "ko": "알겠어, 나도 오늘 오후에 갈게.",
+   "blank": "Oke deh"
+  },
+  {
+   "text": "Oke deh, kita coba lagi besok.",
+   "en": "Alright, we'll try again tomorrow.",
+   "ko": "알겠어, 내일 다시 해보자.",
+   "blank": "Oke deh"
+  },
+  {
+   "text": "Oke deh, terima kasih sudah membantu.",
+   "en": "Alright, thank you for helping.",
+   "ko": "알겠어, 도와줘서 고마워.",
+   "blank": "Oke deh"
+  }
+ ],
+ "e|parah": [
+  {
+   "text": "Wah, macetnya parah hari ini.",
+   "en": "Wow, the traffic jam is really bad today.",
+   "ko": "와, 오늘 교통 체증이 심하네.",
+   "blank": "parah"
+  },
+  {
+   "text": "Nilai ujianku parah banget.",
+   "en": "My test score is really bad.",
+   "ko": "내 시험 점수 진짜 심각해.",
+   "blank": "parah"
+  },
+  {
+   "text": "Cuacanya parah, hujan terus dari pagi.",
+   "en": "The weather is bad, it's been raining since morning.",
+   "ko": "날씨가 심각해, 아침부터 계속 비야.",
+   "blank": "parah"
+  }
+ ],
+ "e|pelan-pelan saja": [
+  {
+   "text": "Jalan pelan-pelan saja di sini.",
+   "en": "Just walk slowly here.",
+   "ko": "여기서는 천천히 걸으세요.",
+   "blank": "pelan-pelan saja"
+  },
+  {
+   "text": "Makan pelan-pelan saja ya.",
+   "en": "Just eat slowly, okay.",
+   "ko": "천천히 먹으세요.",
+   "blank": "pelan-pelan saja"
+  },
+  {
+   "text": "Bicara pelan-pelan saja, tolong.",
+   "en": "Please speak slowly.",
+   "ko": "천천히 말해 주세요.",
+   "blank": "pelan-pelan saja"
+  }
+ ],
+ "e|permisi": [
+  {
+   "text": "Permisi, saya mau lewat.",
+   "en": "Excuse me, I want to pass.",
+   "ko": "실례합니다, 지나가고 싶어요.",
+   "blank": "Permisi"
+  },
+  {
+   "text": "Permisi, ini kursi kosong?",
+   "en": "Excuse me, is this seat empty?",
+   "ko": "실례합니다, 이 자리 비었나요?",
+   "blank": "Permisi"
+  },
+  {
+   "text": "Permisi, di mana toilet?",
+   "en": "Excuse me, where is the toilet?",
+   "ko": "실례합니다, 화장실이 어디에요?",
+   "blank": "Permisi"
+  }
+ ],
+ "e|pokoknya": [
+  {
+   "text": "Pokoknya kamu harus datang besok.",
+   "en": "The main thing is you have to come tomorrow.",
+   "ko": "중요한 것은 네가 내일 꼭 와야 한다는 거야.",
+   "blank": "Pokoknya"
+  },
+  {
+   "text": "Pokoknya jangan lupa bawa payung, ya.",
+   "en": "Just don't forget to bring an umbrella, okay.",
+   "ko": "중요한 건 우산 꼭 챙기는 거야.",
+   "blank": "Pokoknya"
+  },
+  {
+   "text": "Pokoknya aku nggak mau tahu, tugas harus selesai hari ini.",
+   "en": "I don't care, the assignment must be finished today.",
+   "ko": "어쨌든 오늘 안에 과제가 끝나야 해.",
+   "blank": "Pokoknya"
+  }
+ ],
+ "e|salah fokus": [
+  {
+   "text": "Maaf, aku tadi salah fokus waktu kamu jelasin caranya.",
+   "en": "Sorry, I got distracted when you explained how to do it.",
+   "ko": "미안해, 네가 방법을 설명할 때 내가 집중을 못 했어.",
+   "blank": "salah fokus"
+  },
+  {
+   "text": "Tadi pas ujian aku sempat salah fokus gara-gara suara berisik.",
+   "en": "Earlier during the test I got distracted because of the noisy sound.",
+   "ko": "아까 시험 볼 때 시끄러운 소리 때문에 잠깐 집중을 못 했어.",
+   "blank": "salah fokus"
+  },
+  {
+   "text": "Aku sering salah fokus kalau kerja terlalu lama tanpa istirahat.",
+   "en": "I often get distracted if I work too long without a break.",
+   "ko": "나는 휴식 없이 너무 오래 일하면 자주 집중을 못 해.",
+   "blank": "salah fokus"
+  }
+ ],
+ "e|sama saja": [
+  {
+   "text": "Rasanya kopi ini sama saja dengan yang kemarin.",
+   "en": "This coffee tastes the same as yesterday's.",
+   "ko": "이 커피는 어제 것과 맛이 똑같아.",
+   "blank": "sama saja"
+  },
+  {
+   "text": "Harga di toko itu sama saja dengan di pasar.",
+   "en": "The price at that shop is the same as at the market.",
+   "ko": "그 가게의 가격은 시장과 똑같아.",
+   "blank": "sama saja"
+  },
+  {
+   "text": "Kalau terlambat sedikit, hasilnya sama saja.",
+   "en": "If you are a little late, the result is the same.",
+   "ko": "조금 늦어도 결과는 똑같아.",
+   "blank": "sama saja"
+  }
+ ],
+ "e|sama-sama": [
+  {
+   "text": "Terima kasih. Sama-sama.",
+   "en": "Thank you. You're welcome.",
+   "ko": "고마워. 천만에요.",
+   "blank": "Sama-sama"
+  },
+  {
+   "text": "Terima kasih untuk kopinya. Sama-sama.",
+   "en": "Thanks for the coffee. You're welcome.",
+   "ko": "커피 고마워요. 천만에요.",
+   "blank": "Sama-sama"
+  },
+  {
+   "text": "Terima kasih sudah menunggu. Sama-sama.",
+   "en": "Thanks for waiting. You're welcome.",
+   "ko": "기다려 줘서 고마워요. 천만에요.",
+   "blank": "Sama-sama"
+  }
+ ],
+ "e|sampai jumpa": [
+  {
+   "text": "Sampai jumpa di sekolah.",
+   "en": "See you at school.",
+   "ko": "학교에서 또 봐요.",
+   "blank": "Sampai jumpa"
+  },
+  {
+   "text": "Aku pergi dulu, sampai jumpa!",
+   "en": "I am leaving now, see you!",
+   "ko": "나 먼저 갈게, 또 봐요!",
+   "blank": "sampai jumpa"
+  },
+  {
+   "text": "Sampai jumpa besok pagi.",
+   "en": "See you tomorrow morning.",
+   "ko": "내일 아침에 봐요.",
+   "blank": "Sampai jumpa"
+  }
+ ],
+ "e|santai aja": [
+  {
+   "text": "Santai aja, nanti juga semuanya akan beres kok.",
+   "en": "Just relax, everything will be fine later.",
+   "ko": "그냥 편하게 있어, 나중에 다 괜찮아질 거야.",
+   "blank": "Santai aja"
+  },
+  {
+   "text": "Kalau kamu belum siap ngomong, santai aja dulu ya.",
+   "en": "If you're not ready to talk, just relax for now.",
+   "ko": "아직 말할 준비가 안 됐으면, 그냥 편히 있어.",
+   "blank": "santai aja"
+  },
+  {
+   "text": "Santai aja, nggak perlu buru-buru ngerjain tugasnya.",
+   "en": "Just relax, there's no need to rush doing the assignment.",
+   "ko": "그냥 편하게 해, 과제 서두를 필요 없어.",
+   "blank": "Santai aja"
+  }
+ ],
+ "e|saya mau ini": [
+  {
+   "text": "Saya mau ini, tolong.",
+   "en": "I want this, please.",
+   "ko": "저는 이거 원해요, 부탁해요.",
+   "blank": "Saya mau ini"
+  },
+  {
+   "text": "Bisa saya mau ini?",
+   "en": "Can I have this?",
+   "ko": "이거 가질 수 있나요?",
+   "blank": "saya mau ini"
+  },
+  {
+   "text": "Saya mau ini sekarang.",
+   "en": "I want this now.",
+   "ko": "저는 지금 이거 원해요.",
+   "blank": "Saya mau ini"
+  }
+ ],
+ "e|saya paham maksudnya": [
+  {
+   "text": "Tenang saja, saya paham maksudnya.",
+   "en": "Don't worry, I understand what you mean.",
+   "ko": "걱정하지 마세요, 무슨 뜻인지 알겠어요.",
+   "blank": "saya paham maksudnya"
+  },
+  {
+   "text": "Maaf kalau saya terlambat, tapi saya paham maksudnya sekarang.",
+   "en": "Sorry if I'm late, but I understand what you mean now.",
+   "ko": "늦어서 미안해요, 하지만 이제 무슨 뜻인지 알겠어요.",
+   "blank": "saya paham maksudnya"
+  },
+  {
+   "text": "Setelah dijelaskan lagi, saya paham maksudnya.",
+   "en": "After it was explained again, I understand what you mean.",
+   "ko": "다시 설명해 주셔서 이제 무슨 뜻인지 알겠어요.",
+   "blank": "saya paham maksudnya"
+  }
+ ],
+ "e|saya sakit kepala": [
+  {
+   "text": "Maaf, saya tidak bisa ikut karena saya sakit kepala.",
+   "en": "Sorry, I can't join because I have a headache.",
+   "ko": "미안해, 나는 두통이 있어서 같이 갈 수 없어.",
+   "blank": "saya sakit kepala"
+  },
+  {
+   "text": "Tolong pelankan suara, saya sakit kepala.",
+   "en": "Please lower your voice, I have a headache.",
+   "ko": "목소리를 좀 낮춰줘, 나는 두통이 있어.",
+   "blank": "saya sakit kepala"
+  },
+  {
+   "text": "Hari ini saya sakit kepala, jadi ingin beristirahat.",
+   "en": "Today I have a headache, so I want to rest.",
+   "ko": "오늘 나는 두통이 있어서 쉬고 싶어.",
+   "blank": "saya sakit kepala"
+  }
+ ],
+ "e|saya setuju": [
+  {
+   "text": "Saya setuju dengan rencana itu.",
+   "en": "I agree with that plan.",
+   "ko": "나는 그 계획에 동의해.",
+   "blank": "Saya setuju"
+  },
+  {
+   "text": "Kalau kamu mau pergi besok, saya setuju.",
+   "en": "If you want to go tomorrow, I agree.",
+   "ko": "네가 내일 가고 싶다면, 나는 동의해.",
+   "blank": "saya setuju"
+  },
+  {
+   "text": "Saya setuju, ide ini bagus.",
+   "en": "I agree, this idea is good.",
+   "ko": "나도 동의해, 이 아이디어는 좋아.",
+   "blank": "Saya setuju"
+  }
+ ],
+ "e|saya tidak mengerti": [
+  {
+   "text": "Apa maksudmu? Saya tidak mengerti.",
+   "en": "What do you mean? I don't understand.",
+   "ko": "무슨 뜻이에요? 저는 이해하지 못해요.",
+   "blank": "Saya tidak mengerti"
+  },
+  {
+   "text": "Tolong ulangi, saya tidak mengerti.",
+   "en": "Please repeat, I don't understand.",
+   "ko": "다시 말해 주세요, 저는 이해하지 못해요.",
+   "blank": "saya tidak mengerti"
+  },
+  {
+   "text": "Bisa bicara pelan-pelan? Saya tidak mengerti.",
+   "en": "Can you speak slowly? I do not understand.",
+   "ko": "천천히 말해줄 수 있어요? 저는 이해하지 못해요.",
+   "blank": "Saya tidak mengerti"
+  }
+ ],
+ "e|saya tindak lanjuti": [
+  {
+   "text": "Terima kasih atas masukannya, saya tindak lanjuti segera.",
+   "en": "Thank you for your input, I will follow up on it right away.",
+   "ko": "의견 주셔서 감사합니다, 바로 제가 처리하겠습니다.",
+   "blank": "saya tindak lanjuti"
+  },
+  {
+   "text": "Kalau ada masalah lagi, saya tindak lanjuti seperti biasa.",
+   "en": "If there are more issues, I will follow up as usual.",
+   "ko": "문제가 더 있으면 평소처럼 제가 처리할게요.",
+   "blank": "saya tindak lanjuti"
+  },
+  {
+   "text": "Sudah saya catat, nanti saya tindak lanjuti dengan tim.",
+   "en": "I've noted it, I will follow up with the team later.",
+   "ko": "기록해두었고, 나중에 팀과 함께 처리하겠습니다.",
+   "blank": "saya tindak lanjuti"
+  }
+ ],
+ "e|sayangnya": [
+  {
+   "text": "Sayangnya, saya tidak bisa datang hari ini.",
+   "en": "Unfortunately, I can't come today.",
+   "ko": "안타깝게도 오늘은 갈 수 없어요.",
+   "blank": "Sayangnya"
+  },
+  {
+   "text": "Sayangnya, toko itu sudah tutup.",
+   "en": "Unfortunately, that store is already closed.",
+   "ko": "안타깝게도 그 가게는 이미 문을 닫았어요.",
+   "blank": "Sayangnya"
+  },
+  {
+   "text": "Sayangnya, hujan turun saat kita mau pergi.",
+   "en": "Unfortunately, it rained when we were about to leave.",
+   "ko": "안타깝게도 우리가 나가려고 할 때 비가 왔어요.",
+   "blank": "Sayangnya"
+  }
+ ],
+ "e|sebenarnya": [
+  {
+   "text": "Aku sebenarnya tidak suka kopi.",
+   "en": "I actually don't like coffee.",
+   "ko": "사실 나는 커피를 좋아하지 않아.",
+   "blank": "sebenarnya"
+  },
+  {
+   "text": "Dia sebenarnya sudah pulang dari tadi.",
+   "en": "He actually went home earlier.",
+   "ko": "사실 그는 아까 이미 집에 갔어.",
+   "blank": "sebenarnya"
+  },
+  {
+   "text": "Sebenarnya kamu mau pergi ke mana?",
+   "en": "Where do you actually want to go?",
+   "ko": "사실 너 어디 가고 싶은 거야?",
+   "blank": "Sebenarnya"
+  }
+ ],
+ "e|secara umum": [
+  {
+   "text": "Secara umum, makanan di sini cukup enak dan harganya terjangkau.",
+   "en": "In general, the food here is quite tasty and the prices are affordable.",
+   "ko": "일반적으로 여기 음식은 꽤 맛있고 가격도 저렴해요.",
+   "blank": "Secara umum"
+  },
+  {
+   "text": "Secara umum, cuaca bulan ini lebih panas daripada biasanya.",
+   "en": "In general, the weather this month is hotter than usual.",
+   "ko": "일반적으로 이번 달 날씨가 평소보다 더워요.",
+   "blank": "Secara umum"
+  },
+  {
+   "text": "Secara umum, orang-orang di kota ini ramah dan suka membantu.",
+   "en": "In general, people in this city are friendly and like to help.",
+   "ko": "일반적으로 이 도시 사람들은 친절하고 도와주기를 좋아해요.",
+   "blank": "Secara umum"
+  }
+ ],
+ "e|sejauh ini": [
+  {
+   "text": "Sejauh ini, cuaca masih mendukung untuk piknik.",
+   "en": "So far, the weather is still good for a picnic.",
+   "ko": "지금까지는 날씨가 소풍하기에 여전히 좋아요.",
+   "blank": "Sejauh ini"
+  },
+  {
+   "text": "Sejauh ini, hasil ujian kamu sudah cukup bagus.",
+   "en": "So far, your exam results are quite good.",
+   "ko": "지금까지는 시험 결과가 꽤 좋아요.",
+   "blank": "Sejauh ini"
+  },
+  {
+   "text": "Sejauh ini, proyek kita berjalan lancar tanpa hambatan besar.",
+   "en": "So far, our project is going smoothly without major obstacles.",
+   "ko": "지금까지는 우리 프로젝트가 큰 문제 없이 순조롭게 진행되고 있어요.",
+   "blank": "Sejauh ini"
+  }
+ ],
+ "e|sekali lagi": [
+  {
+   "text": "Bisa ulangi sekali lagi?",
+   "en": "Can you repeat it once more?",
+   "ko": "한 번 더 말해줄 수 있어요?",
+   "blank": "sekali lagi"
+  },
+  {
+   "text": "Coba baca sekali lagi.",
+   "en": "Try to read it once more.",
+   "ko": "한 번 더 읽어봐요.",
+   "blank": "sekali lagi"
+  },
+  {
+   "text": "Aku mau dengar lagu itu sekali lagi.",
+   "en": "I want to hear that song once more.",
+   "ko": "그 노래를 한 번 더 듣고 싶어요.",
+   "blank": "sekali lagi"
+  }
+ ],
+ "e|selamat malam": [
+  {
+   "text": "Selamat malam, ibu.",
+   "en": "Good evening, mom.",
+   "ko": "좋은 저녁이에요, 엄마.",
+   "blank": "Selamat malam"
+  },
+  {
+   "text": "Selamat malam, sampai besok.",
+   "en": "Good evening, see you tomorrow.",
+   "ko": "좋은 저녁이에요, 내일 봐요.",
+   "blank": "Selamat malam"
+  },
+  {
+   "text": "Selamat malam, tidur yang nyenyak.",
+   "en": "Good evening, have a good sleep.",
+   "ko": "좋은 저녁이에요, 잘 자요.",
+   "blank": "Selamat malam"
+  }
+ ],
+ "e|selamat pagi": [
+  {
+   "text": "Selamat pagi, ibu.",
+   "en": "Good morning, mom.",
+   "ko": "좋은 아침이에요, 엄마.",
+   "blank": "Selamat pagi"
+  },
+  {
+   "text": "Selamat pagi, ini roti untuk kamu.",
+   "en": "Good morning, this is bread for you.",
+   "ko": "좋은 아침이에요, 이것은 너를 위한 빵이에요.",
+   "blank": "Selamat pagi"
+  },
+  {
+   "text": "Selamat pagi, saya mau ke pasar.",
+   "en": "Good morning, I want to go to the market.",
+   "ko": "좋은 아침이에요, 저는 시장에 가고 싶어요.",
+   "blank": "Selamat pagi"
+  }
+ ],
+ "e|selamat siang": [
+  {
+   "text": "Selamat siang, apa kabar?",
+   "en": "Good afternoon, how are you?",
+   "ko": "안녕하세요, 잘 지내세요?",
+   "blank": "Selamat siang"
+  },
+  {
+   "text": "Selamat siang, saya baru datang.",
+   "en": "Good afternoon, I just arrived.",
+   "ko": "안녕하세요, 저 방금 도착했어요.",
+   "blank": "Selamat siang"
+  },
+  {
+   "text": "Selamat siang, ini buku saya.",
+   "en": "Good afternoon, this is my book.",
+   "ko": "안녕하세요, 이것은 제 책이에요.",
+   "blank": "Selamat siang"
+  }
+ ],
+ "e|senang bertemu": [
+  {
+   "text": "Halo, senang bertemu di sini.",
+   "en": "Hello, nice to meet you here.",
+   "ko": "안녕, 여기서 만나서 반가워.",
+   "blank": "senang bertemu"
+  },
+  {
+   "text": "Senang bertemu dengan teman baru.",
+   "en": "Nice to meet a new friend.",
+   "ko": "새 친구를 만나서 반가워.",
+   "blank": "Senang bertemu"
+  },
+  {
+   "text": "Saya senang bertemu kamu hari ini.",
+   "en": "I am happy to meet you today.",
+   "ko": "오늘 너를 만나서 기뻐.",
+   "blank": "senang bertemu"
+  }
+ ],
+ "e|seru banget": [
+  {
+   "text": "Film tadi seru banget.",
+   "en": "The movie just now was really exciting.",
+   "ko": "아까 영화 정말 재미있었어.",
+   "blank": "seru banget"
+  },
+  {
+   "text": "Main game ini seru banget!",
+   "en": "Playing this game is really fun!",
+   "ko": "이 게임 하는 거 진짜 재미있어!",
+   "blank": "seru banget"
+  },
+  {
+   "text": "Pesta kemarin seru banget, ya?",
+   "en": "The party yesterday was really exciting, right?",
+   "ko": "어제 파티 진짜 재미있었지, 그치?",
+   "blank": "seru banget"
+  }
+ ],
+ "e|sudah": [
+  {
+   "text": "Saya sudah makan pagi.",
+   "en": "I already had breakfast.",
+   "ko": "나 아침 이미 먹었어.",
+   "blank": "sudah"
+  },
+  {
+   "text": "Kamu sudah sampai rumah?",
+   "en": "Are you already home?",
+   "ko": "너 이미 집에 도착했어?",
+   "blank": "sudah"
+  },
+  {
+   "text": "Tugas ini sudah selesai.",
+   "en": "This task is already finished.",
+   "ko": "이 일 이미 끝났어.",
+   "blank": "sudah"
+  }
+ ],
+ "e|sudah saya cek": [
+  {
+   "text": "Makanan yang kamu pesan sudah saya cek.",
+   "en": "I have checked the food you ordered.",
+   "ko": "네가 주문한 음식은 이미 확인했어.",
+   "blank": "sudah saya cek"
+  },
+  {
+   "text": "Sudah saya cek pintunya terkunci.",
+   "en": "I have checked, the door is locked.",
+   "ko": "이미 확인했는데 문이 잠겨 있어.",
+   "blank": "Sudah saya cek"
+  },
+  {
+   "text": "Tiket konsernya sudah saya cek di email.",
+   "en": "I have checked the concert ticket in the email.",
+   "ko": "콘서트 티켓을 이메일에서 이미 확인했어.",
+   "blank": "sudah saya cek"
+  }
+ ],
+ "e|sungkan": [
+  {
+   "text": "Aku sungkan mau minta bantuan lagi sama dia.",
+   "en": "I feel uncomfortable asking for help from him again.",
+   "ko": "나 또 그에게 도움을 요청하는 게 미안해.",
+   "blank": "sungkan"
+  },
+  {
+   "text": "Jangan sungkan kalau mau ambil makanan lagi, ya.",
+   "en": "Don’t hesitate if you want to take more food, okay?",
+   "ko": "음식 더 먹고 싶으면 부담 갖지 말고 먹어.",
+   "blank": "sungkan"
+  },
+  {
+   "text": "Dia terlihat sungkan waktu ditawari duduk di depan.",
+   "en": "He looked uneasy when offered a seat in the front.",
+   "ko": "앞자리에 앉으라고 하니까 그가 좀 머뭇거렸어.",
+   "blank": "sungkan"
+  }
+ ],
+ "e|tak kenal maka tak sayang": [
+  {
+   "text": "Ayo ikut acara kumpul-kumpul, tak kenal maka tak sayang.",
+   "en": "Come join the gathering, you can’t love what you don’t know.",
+   "ko": "모임에 함께 가자, 서로 알아야 정이 생기지.",
+   "blank": "tak kenal maka tak sayang"
+  },
+  {
+   "text": "Tak kenal maka tak sayang, jadi jangan ragu untuk berkenalan dengan teman baru.",
+   "en": "You can’t care if you don’t know someone, so don’t hesitate to make new friends.",
+   "ko": "서로 알아야 정이 생기니까, 새 친구 사귀는 걸 망설이지 마.",
+   "blank": "Tak kenal maka tak sayang"
+  },
+  {
+   "text": "Kalau kamu terus diam saja, tak kenal maka tak sayang lho.",
+   "en": "If you keep quiet, you’ll never get close to people.",
+   "ko": "계속 조용히 있으면, 서로 알아야 정이 드는 거야.",
+   "blank": "tak kenal maka tak sayang"
+  }
+ ],
+ "e|tapi masalahnya": [
+  {
+   "text": "Aku sudah siap berangkat, tapi masalahnya hujan deras banget di luar.",
+   "en": "I'm ready to leave, but the problem is it's raining really hard outside.",
+   "ko": "나는 나갈 준비가 되었는데, 하지만 문제는 밖에 비가 너무 많이 온다는 거야.",
+   "blank": "tapi masalahnya"
+  },
+  {
+   "text": "Makanan ini enak, tapi masalahnya terlalu pedas buatku.",
+   "en": "This food is delicious, but the problem is it's too spicy for me.",
+   "ko": "이 음식은 맛있는데, 하지만 문제는 나에게 너무 맵다는 거야.",
+   "blank": "tapi masalahnya"
+  },
+  {
+   "text": "Aku ingin ikut nonton film, tapi masalahnya aku belum selesai kerja.",
+   "en": "I want to go watch the movie, but the problem is I haven't finished my work yet.",
+   "ko": "나는 영화 보러 가고 싶은데, 하지만 문제는 아직 일을 끝내지 못했다는 거야.",
+   "blank": "tapi masalahnya"
+  }
+ ],
+ "e|tenggatnya kapan": [
+  {
+   "text": "Maaf, tenggatnya kapan untuk tugas ini?",
+   "en": "Sorry, when is the deadline for this assignment?",
+   "ko": "미안한데, 이 과제의 마감일이 언제야?",
+   "blank": "tenggatnya kapan"
+  },
+  {
+   "text": "Saya lupa, tenggatnya kapan pembayaran listrik bulan ini?",
+   "en": "I forgot, when is the deadline for this month's electricity payment?",
+   "ko": "나 깜빡했는데, 이번 달 전기요금 납부 마감일이 언제야?",
+   "blank": "tenggatnya kapan"
+  },
+  {
+   "text": "Tenggatnya kapan kita harus konfirmasi kehadiran?",
+   "en": "When is the deadline for us to confirm our attendance?",
+   "ko": "우리 참석 여부를 언제까지 알려줘야 해?",
+   "blank": "Tenggatnya kapan"
+  }
+ ],
+ "e|tergantung": [
+  {
+   "text": "Aku bisa ikut, tapi tergantung cuaca besok.",
+   "en": "I can come, but it depends on the weather tomorrow.",
+   "ko": "나도 갈 수 있는데, 내일 날씨에 달려 있어.",
+   "blank": "tergantung"
+  },
+  {
+   "text": "Jam berapa kita berangkat? Tergantung kapan kamu selesai kerja.",
+   "en": "What time do we leave? It depends on when you finish work.",
+   "ko": "몇 시에 출발해? 네가 언제 일 끝내는지에 달려 있어.",
+   "blank": "Tergantung"
+  },
+  {
+   "text": "Tergantung kamu, mau makan di luar atau di rumah?",
+   "en": "Up to you, do you want to eat out or at home?",
+   "ko": "네가 결정해, 밖에서 먹을래 아니면 집에서 먹을래?",
+   "blank": "Tergantung"
+  }
+ ],
+ "e|terima kasih": [
+  {
+   "text": "Terima kasih, ini untuk kamu.",
+   "en": "Thank you, this is for you.",
+   "ko": "고마워, 이거 너를 위한 거야.",
+   "blank": "Terima kasih"
+  },
+  {
+   "text": "Saya sudah makan, terima kasih.",
+   "en": "I have eaten, thank you.",
+   "ko": "저는 이미 먹었어요, 고마워요.",
+   "blank": "terima kasih"
+  },
+  {
+   "text": "Terima kasih, sampai jumpa besok.",
+   "en": "Thank you, see you tomorrow.",
+   "ko": "고마워, 내일 봐.",
+   "blank": "Terima kasih"
+  }
+ ],
+ "e|ternyata": [
+  {
+   "text": "Ternyata hujan turun lebih awal hari ini.",
+   "en": "Turns out the rain came earlier today.",
+   "ko": "오늘 비가 더 일찍 내렸네.",
+   "blank": "Ternyata"
+  },
+  {
+   "text": "Aku kira dia marah, ternyata dia hanya lelah.",
+   "en": "I thought he was angry, but actually he was just tired.",
+   "ko": "나는 그가 화난 줄 알았는데, 사실 그는 그냥 피곤했어.",
+   "blank": "ternyata"
+  },
+  {
+   "text": "Ternyata jalan ke pantai lebih jauh dari yang kukira.",
+   "en": "Turns out the road to the beach is farther than I thought.",
+   "ko": "해변까지 길이 내가 생각한 것보다 더 멀었어.",
+   "blank": "Ternyata"
+  }
+ ],
+ "e|terus": [
+  {
+   "text": "Kamu mau lanjut terus atau berhenti di sini?",
+   "en": "Do you want to keep going or stop here?",
+   "ko": "계속할래, 아니면 여기서 멈출래?",
+   "blank": "terus"
+  },
+  {
+   "text": "Dia bicara terus dari tadi pagi.",
+   "en": "He has been talking nonstop since this morning.",
+   "ko": "그는 오늘 아침부터 계속 이야기하고 있어.",
+   "blank": "terus"
+  },
+  {
+   "text": "Jalan ini terus sampai pasar.",
+   "en": "This road goes straight to the market.",
+   "ko": "이 길은 시장까지 쭉 이어져 있어.",
+   "blank": "terus"
+  }
+ ],
+ "e|tidak apa-apa": [
+  {
+   "text": "Maaf, saya terlambat, tidak apa-apa.",
+   "en": "Sorry, I am late, it's okay.",
+   "ko": "미안해, 나 늦었어, 괜찮아.",
+   "blank": "tidak apa-apa"
+  },
+  {
+   "text": "Kamu lupa buku? Tidak apa-apa.",
+   "en": "You forgot your book? It's okay.",
+   "ko": "책 잊었어? 괜찮아.",
+   "blank": "Tidak apa-apa"
+  },
+  {
+   "text": "Saya jatuh, tapi tidak apa-apa.",
+   "en": "I fell down, but it's okay.",
+   "ko": "나 넘어졌어, 하지만 괜찮아.",
+   "blank": "tidak apa-apa"
+  }
+ ],
+ "e|toiletnya di mana": [
+  {
+   "text": "Maaf, toiletnya di mana?",
+   "en": "Excuse me, where is the toilet?",
+   "ko": "실례합니다, 화장실이 어디에요?",
+   "blank": "toiletnya di mana"
+  },
+  {
+   "text": "Saya ingin tahu, toiletnya di mana.",
+   "en": "I want to know, where is the toilet.",
+   "ko": "저는 알고 싶어요, 화장실이 어디에요?",
+   "blank": "toiletnya di mana"
+  },
+  {
+   "text": "Tolong, toiletnya di mana?",
+   "en": "Please, where is the toilet?",
+   "ko": "부탁해요, 화장실이 어디에요?",
+   "blank": "toiletnya di mana"
+  }
+ ],
+ "e|tolong": [
+  {
+   "text": "Tolong buka pintu.",
+   "en": "Please open the door.",
+   "ko": "문을 열어 주세요.",
+   "blank": "Tolong"
+  },
+  {
+   "text": "Tolong ambilkan air.",
+   "en": "Please get me some water.",
+   "ko": "물 좀 가져다 주세요.",
+   "blank": "Tolong"
+  },
+  {
+   "text": "Tolong matikan lampu.",
+   "en": "Please turn off the light.",
+   "ko": "불을 꺼 주세요.",
+   "blank": "Tolong"
+  }
+ ],
+ "e|udah makan": [
+  {
+   "text": "Kamu udah makan siang belum?",
+   "en": "Have you had lunch yet?",
+   "ko": "너 점심 먹었어?",
+   "blank": "udah makan"
+  },
+  {
+   "text": "Aku udah makan, kamu gimana?",
+   "en": "I've already eaten, how about you?",
+   "ko": "나 벌써 먹었어, 너는?",
+   "blank": "udah makan"
+  },
+  {
+   "text": "Udah makan, tapi masih lapar.",
+   "en": "I've eaten, but I'm still hungry.",
+   "ko": "먹었는데 아직도 배고파.",
+   "blank": "Udah makan"
+  }
+ ],
+ "e|ujung-ujungnya": [
+  {
+   "text": "Aku sudah berusaha diet, tapi ujung-ujungnya makan gorengan juga.",
+   "en": "I tried dieting, but in the end I ate fried snacks anyway.",
+   "ko": "나는 다이어트를 해보려고 했지만, 결국 튀김을 먹었어.",
+   "blank": "ujung-ujungnya"
+  },
+  {
+   "text": "Kita sering debat, tapi ujung-ujungnya tetap berteman.",
+   "en": "We argue a lot, but in the end we’re still friends.",
+   "ko": "우리는 자주 말다툼을 하지만, 결국엔 여전히 친구야.",
+   "blank": "ujung-ujungnya"
+  },
+  {
+   "text": "Ujung-ujungnya semua keputusan ada di tangan bos.",
+   "en": "In the end, all the decisions are in the boss’s hands.",
+   "ko": "결국 모든 결정은 상사의 손에 달려 있어.",
+   "blank": "Ujung-ujungnya"
+  }
+ ],
+ "e|untungnya": [
+  {
+   "text": "Untungnya, hujan berhenti sebelum kita keluar.",
+   "en": "Fortunately, the rain stopped before we went out.",
+   "ko": "다행히도, 우리가 나가기 전에 비가 그쳤어.",
+   "blank": "Untungnya"
+  },
+  {
+   "text": "Saya lupa membawa payung, untungnya ada yang meminjamkan.",
+   "en": "I forgot to bring an umbrella, fortunately someone lent me one.",
+   "ko": "나는 우산을 안 가져왔는데, 다행히 누가 빌려줬어.",
+   "blank": "untungnya"
+  },
+  {
+   "text": "Untungnya, makanan masih hangat saat sampai di rumah.",
+   "en": "Fortunately, the food was still warm when we got home.",
+   "ko": "다행히도, 집에 도착했을 때 음식이 아직 따뜻했어.",
+   "blank": "Untungnya"
+  }
+ ],
+ "e|ya ampun": [
+  {
+   "text": "Ya ampun, aku lupa membawa dompetku.",
+   "en": "Oh my gosh, I forgot to bring my wallet.",
+   "ko": "세상에, 나 지갑 안 가져왔어.",
+   "blank": "Ya ampun"
+  },
+  {
+   "text": "Ya ampun, macetnya parah banget hari ini.",
+   "en": "Oh my gosh, the traffic is really bad today.",
+   "ko": "세상에, 오늘 교통 체증 진짜 심하다.",
+   "blank": "Ya ampun"
+  },
+  {
+   "text": "Ya ampun, kenapa kamu tidak bilang dari tadi?",
+   "en": "Oh my gosh, why didn't you say so earlier?",
+   "ko": "세상에, 왜 진작에 말 안 했어?",
+   "blank": "Ya ampun"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "Saya anak kecil.",
+   "en": "I am a small child.",
+   "ko": "나는 어린이다.",
+   "blank": "Saya"
+  },
+  {
+   "text": "Saya bukan dokter.",
+   "en": "I am not a doctor.",
+   "ko": "나는 의사가 아니다.",
+   "blank": "Saya bukan"
+  },
+  {
+   "text": "Saya teman baru.",
+   "en": "I am a new friend.",
+   "ko": "나는 새 친구야.",
+   "blank": "Saya"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "Saya suka kopi.",
+   "en": "I like coffee.",
+   "ko": "나는 커피를 좋아해.",
+   "blank": "Saya"
+  },
+  {
+   "text": "Anda guru?",
+   "en": "Are you a teacher?",
+   "ko": "당신은 선생님입니까?",
+   "blank": "Anda"
+  },
+  {
+   "text": "Dia di rumah.",
+   "en": "He is at home.",
+   "ko": "그는 집에 있어.",
+   "blank": "Dia"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "Nama ibu kamu siapa?",
+   "en": "What is your mother's name?",
+   "ko": "너의 어머니 이름이 뭐야?",
+   "blank": "ibu kamu"
+  },
+  {
+   "text": "Itu rumah dia.",
+   "en": "That is his/her house.",
+   "ko": "저것은 그의/그녀의 집이에요.",
+   "blank": "rumah dia."
+  },
+  {
+   "text": "Nama ayah kamu siapa?",
+   "en": "What is your father's name?",
+   "ko": "네 아버지 이름이 뭐야?",
+   "blank": "Nama ayah kamu"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "Ini buku saya.",
+   "en": "This is my book.",
+   "ko": "이것은 내 책이에요.",
+   "blank": "Ini"
+  },
+  {
+   "text": "Itu tas baru.",
+   "en": "That is a new bag.",
+   "ko": "저것은 새 가방이에요.",
+   "blank": "Itu"
+  },
+  {
+   "text": "Ini kunci mobil.",
+   "en": "This is the car key.",
+   "ko": "이것은 자동차 열쇠예요.",
+   "blank": "Ini"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "Rumah kamu di mana?",
+   "en": "Where is your house?",
+   "ko": "네 집은 어디에 있어?",
+   "blank": "di mana"
+  },
+  {
+   "text": "Ini buku apa?",
+   "en": "What book is this?",
+   "ko": "이거 무슨 책이야?",
+   "blank": "apa"
+  },
+  {
+   "text": "Harga tas ini berapa?",
+   "en": "How much is this bag?",
+   "ko": "이 가방은 얼마예요?",
+   "blank": "berapa"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "Saya tidak makan.",
+   "en": "I do not eat.",
+   "ko": "저는 먹지 않아요.",
+   "blank": "tidak"
+  },
+  {
+   "text": "Itu bukan rumah saya.",
+   "en": "That is not my house.",
+   "ko": "저것은 제 집이 아니에요.",
+   "blank": "bukan"
+  },
+  {
+   "text": "Ini tidak panas.",
+   "en": "This is not hot.",
+   "ko": "이것은 뜨겁지 않아요.",
+   "blank": "tidak"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "Saya di rumah.",
+   "en": "I am at home.",
+   "ko": "저는 집에 있어요.",
+   "blank": "di rumah."
+  },
+  {
+   "text": "Kamu ke pasar.",
+   "en": "You go to the market.",
+   "ko": "너는 시장에 가.",
+   "blank": "ke pasar."
+  },
+  {
+   "text": "Buku itu di meja.",
+   "en": "The book is on the table.",
+   "ko": "그 책은 책상 위에 있어요.",
+   "blank": "di meja."
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "Ada buku di meja.",
+   "en": "There is a book on the table.",
+   "ko": "책이 탁자 위에 있다.",
+   "blank": "Ada"
+  },
+  {
+   "text": "Ada kucing di luar.",
+   "en": "There is a cat outside.",
+   "ko": "고양이가 밖에 있다.",
+   "blank": "Ada"
+  },
+  {
+   "text": "Ada makanan di dapur.",
+   "en": "There is food in the kitchen.",
+   "ko": "부엌에 음식이 있다.",
+   "blank": "Ada"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "Saya belum tidur.",
+   "en": "I haven't slept yet.",
+   "ko": "나는 아직 자지 않았어.",
+   "blank": "belum"
+  },
+  {
+   "text": "Dia akan datang besok.",
+   "en": "He will come tomorrow.",
+   "ko": "그는 내일 올 거야.",
+   "blank": "akan"
+  },
+  {
+   "text": "Saya sedang belajar.",
+   "en": "I am studying.",
+   "ko": "나는 공부하고 있어.",
+   "blank": "sedang"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "Saya memasak nasi di dapur.",
+   "en": "I cook rice in the kitchen.",
+   "ko": "나는 부엌에서 밥을 요리해요.",
+   "blank": "memasak"
+  },
+  {
+   "text": "Dia menulis surat untuk temannya.",
+   "en": "He writes a letter to his friend.",
+   "ko": "그는 친구에게 편지를 써요.",
+   "blank": "menulis"
+  },
+  {
+   "text": "Kami menonton film bersama.",
+   "en": "We watch a movie together.",
+   "ko": "우리는 함께 영화를 봐요.",
+   "blank": "menonton"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "Saya berjalan ke sekolah.",
+   "en": "I walk to school.",
+   "ko": "나는 학교에 걸어가요.",
+   "blank": "berjalan"
+  },
+  {
+   "text": "Mereka bermain di taman.",
+   "en": "They play in the park.",
+   "ko": "그들은 공원에서 놀아요.",
+   "blank": "bermain"
+  },
+  {
+   "text": "Dia berbicara dengan guru.",
+   "en": "He talks with the teacher.",
+   "ko": "그는 선생님과 이야기해요.",
+   "blank": "berbicara"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "Aku mau makan siang.",
+   "en": "I want to have lunch.",
+   "ko": "나 점심 먹고 싶어.",
+   "blank": "mau"
+  },
+  {
+   "text": "Saya ingin belajar bahasa Indonesia.",
+   "en": "I want to learn Indonesian.",
+   "ko": "저는 인도네시아어를 배우고 싶어요.",
+   "blank": "ingin"
+  },
+  {
+   "text": "Besok aku mau pergi ke pasar.",
+   "en": "Tomorrow I want to go to the market.",
+   "ko": "내일 나는 시장에 가고 싶어.",
+   "blank": "mau"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "Boleh saya ambil air?",
+   "en": "May I take some water?",
+   "ko": "물 좀 가져가도 될까요?",
+   "blank": "Boleh saya"
+  },
+  {
+   "text": "Minta tolong tutup pintu, ya.",
+   "en": "Please close the door.",
+   "ko": "문 좀 닫아 주세요.",
+   "blank": "Minta tolong"
+  },
+  {
+   "text": "Boleh saya coba ini?",
+   "en": "May I try this?",
+   "ko": "이거 한번 써봐도 될까요?",
+   "blank": "Boleh saya"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "Yuk nonton film malam ini.",
+   "en": "Let's watch a movie tonight.",
+   "ko": "오늘 밤 영화 보자.",
+   "blank": "Yuk"
+  },
+  {
+   "text": "Ayo belajar bersama.",
+   "en": "Let's study together.",
+   "ko": "같이 공부하자.",
+   "blank": "Ayo"
+  },
+  {
+   "text": "Ayo jalan ke taman.",
+   "en": "Let's go to the park.",
+   "ko": "공원에 가자.",
+   "blank": "Ayo"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "Saya lapar karena belum makan.",
+   "en": "I am hungry because I haven't eaten.",
+   "ko": "나는 아직 먹지 않아서 배고파.",
+   "blank": "karena"
+  },
+  {
+   "text": "Dia tidur karena lelah.",
+   "en": "He is sleeping because he is tired.",
+   "ko": "그는 피곤해서 자고 있어.",
+   "blank": "karena"
+  },
+  {
+   "text": "Aku terlambat karena macet.",
+   "en": "I am late because of traffic.",
+   "ko": "나는 교통체증 때문에 늦었어.",
+   "blank": "karena"
+  }
+ ],
+ "g|2:7": [
+  {
+   "text": "Kamu pernah naik sepeda di pagi hari?",
+   "en": "Have you ever ridden a bicycle in the morning?",
+   "ko": "아침에 자전거를 타본 적 있어요?",
+   "blank": "pernah"
+  },
+  {
+   "text": "Kamu pernah lihat pelangi?",
+   "en": "Have you ever seen a rainbow?",
+   "ko": "무지개를 본 적 있어요?",
+   "blank": "pernah"
+  },
+  {
+   "text": "Kamu pernah berenang di laut?",
+   "en": "Have you ever swum in the sea?",
+   "ko": "바다에서 수영해본 적 있어요?",
+   "blank": "pernah"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "Makanannya sudah dimasak.",
+   "en": "The food has already been cooked.",
+   "ko": "음식이 이미 요리되었어요.",
+   "blank": "sudah dimasak"
+  },
+  {
+   "text": "Surat itu sudah dikirim.",
+   "en": "The letter has already been sent.",
+   "ko": "그 편지는 이미 보내졌어요.",
+   "blank": "sudah dikirim"
+  },
+  {
+   "text": "Pintu sudah ditutup.",
+   "en": "The door has already been closed.",
+   "ko": "문이 이미 닫혔어요.",
+   "blank": "sudah ditutup"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "Buku itu tertinggal di kelas.",
+   "en": "The book was left behind in the classroom.",
+   "ko": "그 책이 교실에 놓고 왔어요.",
+   "blank": "tertinggal"
+  },
+  {
+   "text": "Payung saya tertinggal di kantor.",
+   "en": "My umbrella was left behind at the office.",
+   "ko": "내 우산이 사무실에 놓고 왔어요.",
+   "blank": "tertinggal"
+  },
+  {
+   "text": "Dompetnya tertinggal di restoran.",
+   "en": "His wallet was left behind at the restaurant.",
+   "ko": "그의 지갑이 식당에 놓고 왔어요.",
+   "blank": "tertinggal"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "Buku ini lebih tebal daripada buku itu.",
+   "en": "This book is thicker than that book.",
+   "ko": "이 책이 저 책보다 더 두꺼워요.",
+   "blank": "lebih tebal daripada"
+  },
+  {
+   "text": "Dia paling cepat di kelas.",
+   "en": "He is the fastest in the class.",
+   "ko": "그는 반에서 가장 빨라요.",
+   "blank": "paling"
+  },
+  {
+   "text": "Rumah saya lebih besar daripada rumahnya.",
+   "en": "My house is bigger than his house.",
+   "ko": "제 집이 그의 집보다 더 커요.",
+   "blank": "lebih besar daripada"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "Bisa tolong bukakan pintunya?",
+   "en": "Can you please open the door?",
+   "ko": "문 좀 열어줄 수 있어요?",
+   "blank": "bukakan"
+  },
+  {
+   "text": "Tolong isikan air ke gelas ini.",
+   "en": "Please fill this glass with water.",
+   "ko": "이 컵에 물을 채워 주세요.",
+   "blank": "isikan"
+  },
+  {
+   "text": "Tolong rapikan meja setelah makan.",
+   "en": "Please tidy up the table after eating.",
+   "ko": "식사 후에 테이블을 정리해 주세요.",
+   "blank": "rapikan"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "Saya suka yang pedas.",
+   "en": "I like the spicy one.",
+   "ko": "나는 매운 것을 좋아해.",
+   "blank": "yang"
+  },
+  {
+   "text": "Mana yang termurah di sini?",
+   "en": "Which one is the cheapest here?",
+   "ko": "여기서 가장 싼 게 뭐예요?",
+   "blank": "yang"
+  },
+  {
+   "text": "Ambil yang di atas meja.",
+   "en": "Take the one on the table.",
+   "ko": "테이블 위에 있는 것을 가져가.",
+   "blank": "yang"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "Kalau lapar, makan saja.",
+   "en": "If you are hungry, just eat.",
+   "ko": "배고프면 그냥 먹어.",
+   "blank": "Kalau"
+  },
+  {
+   "text": "Waktu kecil, saya suka bermain di taman.",
+   "en": "When I was a child, I liked to play in the park.",
+   "ko": "어렸을 때 나는 공원에서 노는 것을 좋아했어.",
+   "blank": "Waktu"
+  },
+  {
+   "text": "Kalau capek, istirahat dulu.",
+   "en": "If you are tired, take a rest first.",
+   "ko": "피곤하면 먼저 쉬어.",
+   "blank": "Kalau"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "Menurut saya, cuacanya terlalu panas.",
+   "en": "In my opinion, the weather is too hot.",
+   "ko": "내 생각에는 날씨가 너무 덥다.",
+   "blank": "Menurut saya"
+  },
+  {
+   "text": "Menurut saya, sarapan itu penting.",
+   "en": "In my opinion, breakfast is important.",
+   "ko": "내 생각에는 아침 식사가 중요하다.",
+   "blank": "Menurut saya"
+  },
+  {
+   "text": "Menurut saya, ini jalan yang benar.",
+   "en": "In my opinion, this is the right way.",
+   "ko": "내 생각에는 이 길이 맞다.",
+   "blank": "Menurut saya"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "Kehilangan dompet tadi pagi bikin aku panik.",
+   "en": "Losing my wallet this morning made me panic.",
+   "ko": "오늘 아침에 지갑을 잃어버려서 당황했어.",
+   "blank": "Kehilangan"
+  },
+  {
+   "text": "Perbedaan waktu membuat kita sulit berkomunikasi.",
+   "en": "The time difference makes it hard for us to communicate.",
+   "ko": "시차 때문에 우리가 소통하기 어려워.",
+   "blank": "Perbedaan"
+  },
+  {
+   "text": "Kegiatan hari ini cukup melelahkan, ya.",
+   "en": "Today's activities were quite tiring, right?",
+   "ko": "오늘 활동이 꽤 피곤했지, 그렇지?",
+   "blank": "Kegiatan"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "Kami ingin mempercepat proses pengiriman.",
+   "en": "We want to speed up the delivery process.",
+   "ko": "우리는 배송 과정을 더 빠르게 하고 싶어요.",
+   "blank": "mempercepat"
+  },
+  {
+   "text": "Dia berusaha memperluas jaringan usahanya.",
+   "en": "She is trying to expand her business network.",
+   "ko": "그녀는 자신의 비즈니스 네트워크를 확장하려고 노력하고 있어요.",
+   "blank": "memperluas"
+  },
+  {
+   "text": "Pemerintah berupaya memperbaiki layanan kesehatan.",
+   "en": "The government is trying to improve health services.",
+   "ko": "정부는 의료 서비스를 개선하려고 노력하고 있어요.",
+   "blank": "memperbaiki"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "Meskipun hujan, saya tetap pergi ke pasar.",
+   "en": "Even though it's raining, I still go to the market.",
+   "ko": "비가 오는데도 나는 여전히 시장에 간다.",
+   "blank": "Meskipun"
+  },
+  {
+   "text": "Saya akan membantu, walaupun sudah lelah.",
+   "en": "I will help, even though I'm already tired.",
+   "ko": "이미 피곤하지만 도와줄게.",
+   "blank": "walaupun"
+  },
+  {
+   "text": "Meskipun dia sibuk, dia sempat menelepon.",
+   "en": "Even though she is busy, she managed to call.",
+   "ko": "그녀가 바쁘지만 전화할 시간을 냈다.",
+   "blank": "Meskipun"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "Saya belajar keras agar bisa lulus ujian.",
+   "en": "I study hard so that I can pass the exam.",
+   "ko": "나는 시험에 합격할 수 있도록 열심히 공부해.",
+   "blank": "agar"
+  },
+  {
+   "text": "Dia memasak lebih awal supaya makanannya siap sebelum tamu datang.",
+   "en": "She cooks earlier so the food is ready before the guests arrive.",
+   "ko": "그녀는 손님이 오기 전에 음식이 준비되도록 더 일찍 요리해.",
+   "blank": "supaya"
+  },
+  {
+   "text": "Kami berbicara pelan-pelan sehingga semua orang bisa mengerti.",
+   "en": "We speak slowly so everyone can understand.",
+   "ko": "모두가 이해할 수 있도록 우리는 천천히 말해.",
+   "blank": "sehingga"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "Seharusnya saya dengarkan nasihatmu.",
+   "en": "I should have listened to your advice.",
+   "ko": "나는 네 조언을 들었어야 했어.",
+   "blank": "Seharusnya"
+  },
+  {
+   "text": "Seharusnya dia belajar lebih giat kemarin.",
+   "en": "He should have studied harder yesterday.",
+   "ko": "그는 어제 더 열심히 공부했어야 했어.",
+   "blank": "Seharusnya"
+  },
+  {
+   "text": "Seharusnya kita datang lebih awal.",
+   "en": "We should have arrived earlier.",
+   "ko": "우리는 더 일찍 도착했어야 했어.",
+   "blank": "Seharusnya"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "Mereka bilang bahwa acara akan dimulai sore ini.",
+   "en": "They said that the event will start this afternoon.",
+   "ko": "그들은 행사가 오늘 오후에 시작된다고 했어.",
+   "blank": "bahwa"
+  },
+  {
+   "text": "Dia bilang bahwa dia sudah makan siang.",
+   "en": "She said that she already had lunch.",
+   "ko": "그녀는 이미 점심을 먹었다고 했어.",
+   "blank": "bahwa"
+  },
+  {
+   "text": "Kami bilang bahwa tugas itu harus selesai besok.",
+   "en": "We said that the task must be finished tomorrow.",
+   "ko": "우리는 그 과제가 내일까지 끝나야 한다고 했어.",
+   "blank": "bahwa"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "Mungkin ini kurang jelas untuk saya.",
+   "en": "Maybe this is not clear enough for me.",
+   "ko": "아마도 이건 저에게 충분히 명확하지 않은 것 같아요.",
+   "blank": "kurang"
+  },
+  {
+   "text": "Rasanya agak asin ya.",
+   "en": "It tastes a bit salty, right?",
+   "ko": "맛이 약간 짠 것 같아요, 그쵸?",
+   "blank": "agak"
+  },
+  {
+   "text": "Mungkin dia kurang suka makanan pedas.",
+   "en": "Maybe he doesn't really like spicy food.",
+   "ko": "아마도 그는 매운 음식을 별로 좋아하지 않을 거예요.",
+   "blank": "kurang"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "Tujuan utama rapat ini adalah untuk membahas rencana kerja.",
+   "en": "The main purpose of this meeting is to discuss the work plan.",
+   "ko": "이 회의의 주요 목적은 작업 계획을 논의하는 것입니다.",
+   "blank": "adalah"
+  },
+  {
+   "text": "Keberhasilan tim ini merupakan hasil kerja keras bersama.",
+   "en": "This team's success is the result of joint hard work.",
+   "ko": "이 팀의 성공은 함께 열심히 노력한 결과입니다.",
+   "blank": "merupakan"
+  },
+  {
+   "text": "Rumah itu ialah milik keluarga mereka sejak lama.",
+   "en": "That house has belonged to their family for a long time.",
+   "ko": "그 집은 오랫동안 그들의 가족 소유였습니다.",
+   "blank": "ialah"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "Biar aku yang nganterin kamu pulang.",
+   "en": "Let me be the one to take you home.",
+   "ko": "내가 너 집에 데려다줄게.",
+   "blank": "nganterin"
+  },
+  {
+   "text": "Biar aku yang ngurusin semuanya.",
+   "en": "Let me be the one to take care of everything.",
+   "ko": "내가 다 처리할게.",
+   "blank": "ngurusin"
+  },
+  {
+   "text": "Biar aku yang ngambilin minumnya.",
+   "en": "Let me be the one to get the drinks.",
+   "ko": "내가 음료 가져올게.",
+   "blank": "ngambilin"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "Santai aja dong, nggak usah buru-buru.",
+   "en": "Just relax, no need to rush.",
+   "ko": "그냥 천천히 해, 서두를 필요 없어.",
+   "blank": "dong"
+  },
+  {
+   "text": "Udah dibilang jangan ke sana, kan?",
+   "en": "I already told you not to go there, right?",
+   "ko": "거기 가지 말라고 했잖아, 맞지?",
+   "blank": "kan"
+  },
+  {
+   "text": "Gimana sih kamu bisa lupa bawa kunci?",
+   "en": "How could you forget to bring the keys?",
+   "ko": "어떻게 열쇠를 잊어버릴 수 있어?",
+   "blank": "sih"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "Coba kamu lihat-lihat dulu sebelum beli.",
+   "en": "Try to look around first before buying.",
+   "ko": "사기 전에 먼저 둘러봐.",
+   "blank": "lihat-lihat"
+  },
+  {
+   "text": "Dia makan-makan di luar sama teman-temannya.",
+   "en": "She went out eating with her friends.",
+   "ko": "그녀는 친구들과 밖에서 먹었어.",
+   "blank": "makan-makan"
+  },
+  {
+   "text": "Barang ini harus dicek satu-satu sebelum dikirim.",
+   "en": "These items must be checked one by one before being sent.",
+   "ko": "이 물건들은 보내기 전에 하나씩 확인해야 해.",
+   "blank": "satu-satu"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "Sepertinya besok agak sulit untuk bertemu.",
+   "en": "It seems a bit difficult to meet tomorrow.",
+   "ko": "내일 만나는 것은 좀 어려울 것 같아요.",
+   "blank": "Sepertinya besok agak sulit"
+  },
+  {
+   "text": "Sepertinya sekarang agak sulit saya bantu.",
+   "en": "It seems a bit difficult for me to help right now.",
+   "ko": "지금 제가 도와드리기는 좀 어려울 것 같아요.",
+   "blank": "Sepertinya sekarang agak sulit"
+  },
+  {
+   "text": "Sepertinya bulan ini agak sulit saya cuti.",
+   "en": "It seems a bit difficult for me to take leave this month.",
+   "ko": "이번 달에 제가 휴가를 내기는 좀 어려울 것 같아요.",
+   "blank": "Sepertinya bulan ini agak sulit"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "Tentang pekerjaan baru, sudah kamu mulai?",
+   "en": "About the new job, have you started?",
+   "ko": "새로운 일에 대해서, 이미 시작했어?",
+   "blank": "Tentang pekerjaan baru,"
+  },
+  {
+   "text": "Urusan laundry, nanti aku yang urus.",
+   "en": "As for the laundry, I'll take care of it later.",
+   "ko": "빨래 문제는, 나중에 내가 처리할게.",
+   "blank": "Urusan laundry,"
+  },
+  {
+   "text": "Soal makan malam, mau pesan atau masak sendiri?",
+   "en": "About dinner, do you want to order or cook yourself?",
+   "ko": "저녁 식사에 대해서, 시켜 먹을래 아니면 직접 만들래?",
+   "blank": "Soal makan malam,"
+  }
+ ]
+}

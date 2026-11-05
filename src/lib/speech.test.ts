@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   canUseLocalSpeechVoice,
   pickSpeechVoice,
+  isKanaMora,
   spokenFormForTts,
   speechLangCandidates,
   ttsSpeechInstructions,
@@ -72,6 +73,11 @@ test("English-only voices are not used for Portuguese", () => {
   ];
   assert.equal(pickSpeechVoice(voices, "pt-PT"), null);
   assert.equal(canUseLocalSpeechVoice(voices[0], "pt-PT"), false);
+});
+
+test("한 박자 가나인지", () => {
+  for (const mora of ["あ", "ん", "を", "っ", "ー", "ア", "きゃ", "ティ", "ファ", "シェ"]) assert.equal(isKanaMora(mora), true, mora);
+  for (const word of ["あめ", "しごと", "がっこう", "hello", ""]) assert.equal(isKanaMora(word), false, word);
 });
 
 test("ttsSpeechInstructions lock Portuguese and Spanish", () => {

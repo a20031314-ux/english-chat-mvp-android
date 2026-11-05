@@ -1,0 +1,1096 @@
+{
+  "w|affidavit": {
+    "kind": "word",
+    "type": "type",
+    "name": "affidavit",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "선서 진술서",
+    "answer": "affidavit",
+    "line": "She signed an affidavit for the court case."
+  },
+  "w|anarchist": {
+    "kind": "word",
+    "type": "type",
+    "name": "anarchist",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "무정부주의자",
+    "answer": "anarchist",
+    "line": "The anarchist handed out leaflets in the square."
+  },
+  "w|anesthesia": {
+    "kind": "word",
+    "type": "type",
+    "name": "anesthesia",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "마취",
+    "answer": "anesthesia",
+    "line": "The doctor gave me anesthesia before the surgery started."
+  },
+  "w|anguish": {
+    "kind": "word",
+    "type": "type",
+    "name": "anguish",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "고뇌",
+    "answer": "anguish",
+    "line": "He cried out in anguish when he heard the news."
+  },
+  "w|authorize": {
+    "kind": "word",
+    "type": "type",
+    "name": "authorize",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "허가하다",
+    "answer": "authorize",
+    "line": "Only the manager can authorize refunds for customers."
+  },
+  "w|barefoot": {
+    "kind": "word",
+    "type": "type",
+    "name": "barefoot",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "맨발의",
+    "answer": "barefoot",
+    "line": "She liked to walk barefoot on the grass in the morning."
+  },
+  "w|biker": {
+    "kind": "word",
+    "type": "type",
+    "name": "biker",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "바이커",
+    "answer": "biker",
+    "line": "A biker sped past us on the highway."
+  },
+  "w|blouse": {
+    "kind": "word",
+    "type": "type",
+    "name": "blouse",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "블라우스",
+    "answer": "blouse",
+    "line": "She wore a white blouse to the interview."
+  },
+  "w|bodyguard": {
+    "kind": "word",
+    "type": "type",
+    "name": "bodyguard",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "경호원",
+    "answer": "bodyguard",
+    "line": "The celebrity arrived with his bodyguard."
+  },
+  "w|brochure": {
+    "kind": "word",
+    "type": "type",
+    "name": "brochure",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "팸플릿",
+    "answer": "brochure",
+    "line": "I picked up a travel brochure at the airport."
+  },
+  "w|broth": {
+    "kind": "word",
+    "type": "type",
+    "name": "broth",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "육수",
+    "answer": "broth",
+    "line": "She added noodles to the hot chicken broth."
+  },
+  "w|bulldog": {
+    "kind": "word",
+    "type": "type",
+    "name": "bulldog",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "불독",
+    "answer": "bulldog",
+    "line": "The bulldog sat calmly beside its owner."
+  },
+  "w|caterpillar": {
+    "kind": "word",
+    "type": "type",
+    "name": "caterpillar",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "애벌레",
+    "answer": "caterpillar",
+    "line": "The caterpillar turned into a butterfly."
+  },
+  "w|censor": {
+    "kind": "word",
+    "type": "type",
+    "name": "censor",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "검열하다",
+    "answer": "censor",
+    "line": "The government decided to censor the movie."
+  },
+  "w|checkpoint": {
+    "kind": "word",
+    "type": "type",
+    "name": "checkpoint",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "검문소",
+    "answer": "checkpoint",
+    "line": "We stopped at a military checkpoint on the way."
+  },
+  "w|cocky": {
+    "kind": "word",
+    "type": "type",
+    "name": "cocky",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "잘난 체하는",
+    "answer": "cocky",
+    "line": "He sounded really cocky when he bragged about his test score."
+  },
+  "w|colossal": {
+    "kind": "word",
+    "type": "type",
+    "name": "colossal",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "어마어마한",
+    "answer": "colossal",
+    "line": "The statue was a colossal work of art."
+  },
+  "w|compile": {
+    "kind": "word",
+    "type": "type",
+    "name": "compile",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "취합하다",
+    "answer": "compile",
+    "line": "I will compile a list of everyone attending."
+  },
+  "w|constellation": {
+    "kind": "word",
+    "type": "type",
+    "name": "constellation",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "별자리",
+    "answer": "constellation",
+    "line": "Can you find the Orion constellation in the sky?",
+    "hint": "c",
+    "mark": "한 단어"
+  },
+  "w|cougar": {
+    "kind": "word",
+    "type": "type",
+    "name": "cougar",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "쿠거",
+    "answer": "cougar",
+    "line": "A cougar was spotted in the mountains."
+  },
+  "w|counterfeit": {
+    "kind": "word",
+    "type": "type",
+    "name": "counterfeit",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "위조",
+    "answer": "counterfeit",
+    "line": "He was arrested for selling counterfeit money."
+  },
+  "w|crispy": {
+    "kind": "word",
+    "type": "type",
+    "name": "crispy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "바삭한",
+    "answer": "crispy",
+    "line": "The fried chicken is so crispy and delicious."
+  },
+  "w|curfew": {
+    "kind": "word",
+    "type": "type",
+    "name": "curfew",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "통금",
+    "answer": "curfew",
+    "line": "My parents set a curfew for me at ten."
+  },
+  "w|deacon": {
+    "kind": "word",
+    "type": "type",
+    "name": "deacon",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "집사",
+    "answer": "deacon",
+    "line": "The deacon greeted everyone at the church entrance.",
+    "hint": "d",
+    "mark": "한 단어"
+  },
+  "w|decorate": {
+    "kind": "word",
+    "type": "type",
+    "name": "decorate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "장식하다",
+    "answer": "decorate",
+    "line": "We decorate the tree every Christmas."
+  },
+  "w|delusion": {
+    "kind": "word",
+    "type": "type",
+    "name": "delusion",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "망상",
+    "answer": "delusion",
+    "line": "He lived under the delusion that he was famous."
+  },
+  "w|designate": {
+    "kind": "word",
+    "type": "type",
+    "name": "designate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지정하다",
+    "answer": "designate",
+    "line": "They will designate a leader for the project."
+  },
+  "w|discard": {
+    "kind": "word",
+    "type": "type",
+    "name": "discard",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "버리다",
+    "answer": "discard",
+    "line": "Please discard the old papers in the bin.",
+    "hint": "d",
+    "mark": "한 단어"
+  },
+  "w|disciple": {
+    "kind": "word",
+    "type": "type",
+    "name": "disciple",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "제자",
+    "answer": "disciple",
+    "line": "He became a disciple of the famous teacher."
+  },
+  "w|discredit": {
+    "kind": "word",
+    "type": "type",
+    "name": "discredit",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "신뢰를 떨어뜨리다",
+    "answer": "discredit",
+    "line": "They tried to discredit her story in public."
+  },
+  "w|downright": {
+    "kind": "word",
+    "type": "type",
+    "name": "downright",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "그야말로",
+    "answer": "downright",
+    "line": "That was downright rude of him to say."
+  },
+  "w|edgy": {
+    "kind": "word",
+    "type": "type",
+    "name": "edgy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "파격적인",
+    "answer": "edgy",
+    "line": "He always wears edgy clothes that stand out in a crowd."
+  },
+  "w|elevate": {
+    "kind": "word",
+    "type": "type",
+    "name": "elevate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "높이다",
+    "answer": "elevate",
+    "line": "They will elevate the platform for a better view."
+  },
+  "w|encore": {
+    "kind": "word",
+    "type": "type",
+    "name": "encore",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "앙코르",
+    "answer": "encore",
+    "line": "The audience cheered for an encore at the concert."
+  },
+  "w|enlist": {
+    "kind": "word",
+    "type": "type",
+    "name": "enlist",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "입대하다",
+    "answer": "enlist",
+    "line": "He plans to enlist in the army next year."
+  },
+  "w|espresso": {
+    "kind": "word",
+    "type": "type",
+    "name": "espresso",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "에스프레소",
+    "answer": "espresso",
+    "line": "He ordered a double espresso at the coffee shop."
+  },
+  "w|evade": {
+    "kind": "word",
+    "type": "type",
+    "name": "evade",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "회피하다",
+    "answer": "evade",
+    "line": "He tried to evade the question during the interview."
+  },
+  "w|eyebrow": {
+    "kind": "word",
+    "type": "type",
+    "name": "eyebrow",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "눈썹",
+    "answer": "eyebrow",
+    "line": "She raised her eyebrow when she heard the news."
+  },
+  "w|firefighter": {
+    "kind": "word",
+    "type": "type",
+    "name": "firefighter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "소방관",
+    "answer": "firefighter",
+    "line": "The firefighter rescued a cat from the tree."
+  },
+  "w|freaky": {
+    "kind": "word",
+    "type": "type",
+    "name": "freaky",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "기괴한",
+    "answer": "freaky",
+    "line": "That movie was so freaky, I couldn't sleep after watching it."
+  },
+  "w|futile": {
+    "kind": "word",
+    "type": "type",
+    "name": "futile",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "소용없는",
+    "answer": "futile",
+    "line": "It felt futile to keep arguing when no one would listen."
+  },
+  "w|gland": {
+    "kind": "word",
+    "type": "type",
+    "name": "gland",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "분비선",
+    "answer": "gland",
+    "line": "The doctor explained how the gland works."
+  },
+  "w|gloomy": {
+    "kind": "word",
+    "type": "type",
+    "name": "gloomy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "우울한",
+    "answer": "gloomy",
+    "line": "The weather is so gloomy today, I just want to stay in bed."
+  },
+  "w|graceful": {
+    "kind": "word",
+    "type": "type",
+    "name": "graceful",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "우아한",
+    "answer": "graceful",
+    "line": "The ballerina's movements were so graceful and light.",
+    "hint": "g",
+    "mark": "한 단어"
+  },
+  "w|guerrilla": {
+    "kind": "word",
+    "type": "type",
+    "name": "guerrilla",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "게릴라",
+    "answer": "guerrilla",
+    "line": "The guerrilla fighters moved quickly through the forest."
+  },
+  "w|gutter": {
+    "kind": "word",
+    "type": "type",
+    "name": "gutter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "홈통",
+    "answer": "gutter",
+    "line": "Rainwater runs down the gutter after a storm."
+  },
+  "w|heartbreak": {
+    "kind": "word",
+    "type": "type",
+    "name": "heartbreak",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "실연",
+    "answer": "heartbreak",
+    "line": "She went through a terrible heartbreak after the breakup."
+  },
+  "w|hearty": {
+    "kind": "word",
+    "type": "type",
+    "name": "hearty",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "푸짐한",
+    "answer": "hearty",
+    "line": "We shared a hearty meal together."
+  },
+  "w|heist": {
+    "kind": "word",
+    "type": "type",
+    "name": "heist",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강도 사건",
+    "answer": "heist",
+    "line": "The movie is about a daring casino heist."
+  },
+  "w|herbal": {
+    "kind": "word",
+    "type": "type",
+    "name": "herbal",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "허브의",
+    "answer": "herbal",
+    "line": "I enjoy drinking herbal tea in the evening."
+  },
+  "w|horseback": {
+    "kind": "word",
+    "type": "type",
+    "name": "horseback",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "승마",
+    "answer": "horseback",
+    "line": "She learned to ride horseback when she was a child."
+  },
+  "w|hysteria": {
+    "kind": "word",
+    "type": "type",
+    "name": "hysteria",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "히스테리",
+    "answer": "hysteria",
+    "line": "There was hysteria when the band appeared."
+  },
+  "w|idiotic": {
+    "kind": "word",
+    "type": "type",
+    "name": "idiotic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "멍청한",
+    "answer": "idiotic",
+    "line": "That was an idiotic thing to say.",
+    "hint": "i",
+    "mark": "한 단어"
+  },
+  "w|illiterate": {
+    "kind": "word",
+    "type": "type",
+    "name": "illiterate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "문맹",
+    "answer": "illiterate",
+    "line": "Some adults are still illiterate in many countries."
+  },
+  "w|infect": {
+    "kind": "word",
+    "type": "type",
+    "name": "infect",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "감염시키다",
+    "answer": "infect",
+    "line": "A virus can infect many people quickly."
+  },
+  "w|inquire": {
+    "kind": "word",
+    "type": "type",
+    "name": "inquire",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "문의하다",
+    "answer": "inquire",
+    "line": "May I inquire about the train schedule?"
+  },
+  "w|intrigue": {
+    "kind": "word",
+    "type": "type",
+    "name": "intrigue",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "흥미를 끌다",
+    "answer": "intrigue",
+    "line": "The mysterious letter will intrigue you."
+  },
+  "w|intruder": {
+    "kind": "word",
+    "type": "type",
+    "name": "intruder",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "침입자",
+    "answer": "intruder",
+    "line": "The alarm went off when the intruder entered the house."
+  },
+  "w|itch": {
+    "kind": "word",
+    "type": "type",
+    "name": "itch",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "가렵다",
+    "answer": "itch",
+    "line": "My arm began to itch after the mosquito bite."
+  },
+  "w|jumbo": {
+    "kind": "word",
+    "type": "type",
+    "name": "jumbo",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "특대",
+    "answer": "jumbo",
+    "line": "We ordered a jumbo pizza for the party."
+  },
+  "w|kale": {
+    "kind": "word",
+    "type": "type",
+    "name": "kale",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "케일",
+    "answer": "kale",
+    "line": "I put fresh kale in my smoothie every morning."
+  },
+  "w|lash": {
+    "kind": "word",
+    "type": "type",
+    "name": "lash",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "후려치다",
+    "answer": "lash",
+    "line": "The wind began to lash the windows violently."
+  },
+  "w|loosen": {
+    "kind": "word",
+    "type": "type",
+    "name": "loosen",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "느슨하게 하다",
+    "answer": "loosen",
+    "line": "Please loosen the knot for me."
+  },
+  "w|magically": {
+    "kind": "word",
+    "type": "type",
+    "name": "magically",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "마법처럼",
+    "answer": "magically",
+    "line": "The room was magically transformed overnight."
+  },
+  "w|manslaughter": {
+    "kind": "word",
+    "type": "type",
+    "name": "manslaughter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "과실치사",
+    "answer": "manslaughter",
+    "line": "He was charged with manslaughter, not murder."
+  },
+  "w|maxim": {
+    "kind": "word",
+    "type": "type",
+    "name": "maxim",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "격언",
+    "answer": "maxim",
+    "line": "My grandfather always shared a wise maxim."
+  },
+  "w|melancholy": {
+    "kind": "word",
+    "type": "type",
+    "name": "melancholy",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "우울감",
+    "answer": "melancholy",
+    "line": "A feeling of melancholy filled the air after the news."
+  },
+  "w|microscopic": {
+    "kind": "word",
+    "type": "type",
+    "name": "microscopic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "미세한",
+    "answer": "microscopic",
+    "line": "They used a microscope to see the microscopic cells."
+  },
+  "w|midday": {
+    "kind": "word",
+    "type": "type",
+    "name": "midday",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "한낮",
+    "answer": "midday",
+    "line": "We had lunch together at midday."
+  },
+  "w|misfortune": {
+    "kind": "word",
+    "type": "type",
+    "name": "misfortune",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "불운",
+    "answer": "misfortune",
+    "line": "He faced great misfortune but remained hopeful."
+  },
+  "w|misty": {
+    "kind": "word",
+    "type": "type",
+    "name": "misty",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "안개 낀",
+    "answer": "misty",
+    "line": "The mountains looked mysterious and misty in the morning."
+  },
+  "w|mop": {
+    "kind": "word",
+    "type": "type",
+    "name": "mop",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대걸레",
+    "answer": "mop",
+    "line": "I grabbed the mop to clean up the spilled juice."
+  },
+  "w|morphine": {
+    "kind": "word",
+    "type": "type",
+    "name": "morphine",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "모르핀",
+    "answer": "morphine",
+    "line": "The doctor gave him morphine for the pain."
+  },
+  "w|murderous": {
+    "kind": "word",
+    "type": "type",
+    "name": "murderous",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "살인적인",
+    "answer": "murderous",
+    "line": "He gave her a murderous look after the prank."
+  },
+  "w|nonstop": {
+    "kind": "word",
+    "type": "type",
+    "name": "nonstop",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "쉬지 않고",
+    "answer": "nonstop",
+    "line": "The music played nonstop all night long."
+  },
+  "w|oatmeal": {
+    "kind": "word",
+    "type": "type",
+    "name": "oatmeal",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "오트밀",
+    "answer": "oatmeal",
+    "line": "She eats oatmeal for breakfast every morning."
+  },
+  "w|obnoxious": {
+    "kind": "word",
+    "type": "type",
+    "name": "obnoxious",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "불쾌한",
+    "answer": "obnoxious",
+    "line": "His obnoxious behavior annoyed everyone."
+  },
+  "w|originate": {
+    "kind": "word",
+    "type": "type",
+    "name": "originate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "유래하다",
+    "answer": "originate",
+    "line": "Many traditions originate from ancient times."
+  },
+  "w|otter": {
+    "kind": "word",
+    "type": "type",
+    "name": "otter",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "수달",
+    "answer": "otter",
+    "line": "An otter slid down the muddy riverbank."
+  },
+  "w|outpost": {
+    "kind": "word",
+    "type": "type",
+    "name": "outpost",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전초기지",
+    "answer": "outpost",
+    "line": "They built a small outpost in the desert."
+  },
+  "w|overflow": {
+    "kind": "word",
+    "type": "type",
+    "name": "overflow",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "넘치다",
+    "answer": "overflow",
+    "line": "The bathtub will overflow if you keep the water running."
+  },
+  "w|pickle": {
+    "kind": "word",
+    "type": "type",
+    "name": "pickle",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "피클",
+    "answer": "pickle",
+    "line": "Would you like a pickle with your sandwich?"
+  },
+  "w|pilgrim": {
+    "kind": "word",
+    "type": "type",
+    "name": "pilgrim",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "순례자",
+    "answer": "pilgrim",
+    "line": "The pilgrim traveled far to reach the holy site."
+  },
+  "w|plumber": {
+    "kind": "word",
+    "type": "type",
+    "name": "plumber",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "배관공",
+    "answer": "plumber",
+    "line": "We called a plumber to fix the leak."
+  },
+  "w|prescribe": {
+    "kind": "word",
+    "type": "type",
+    "name": "prescribe",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "처방하다",
+    "answer": "prescribe",
+    "line": "The doctor will prescribe some medicine for you."
+  },
+  "w|rainforest": {
+    "kind": "word",
+    "type": "type",
+    "name": "rainforest",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "열대우림",
+    "answer": "rainforest",
+    "line": "The rainforest is full of unique plants and animals."
+  },
+  "w|relic": {
+    "kind": "word",
+    "type": "type",
+    "name": "relic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "유물",
+    "answer": "relic",
+    "line": "The museum displays an ancient relic."
+  },
+  "w|resent": {
+    "kind": "word",
+    "type": "type",
+    "name": "resent",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "원망하다",
+    "answer": "resent",
+    "line": "I can't help but resent the unfair treatment."
+  },
+  "w|restroom": {
+    "kind": "word",
+    "type": "type",
+    "name": "restroom",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "화장실",
+    "answer": "restroom",
+    "line": "Excuse me, can you tell me where the restroom is?",
+    "hint": "r",
+    "mark": "한 단어"
+  },
+  "w|reunite": {
+    "kind": "word",
+    "type": "type",
+    "name": "reunite",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "재회시키다",
+    "answer": "reunite",
+    "line": "The movie helped reunite two old friends."
+  },
+  "w|rhythmic": {
+    "kind": "word",
+    "type": "type",
+    "name": "rhythmic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "리드미컬한",
+    "answer": "rhythmic",
+    "line": "The drummer played a steady, rhythmic beat all night."
+  },
+  "w|robber": {
+    "kind": "word",
+    "type": "type",
+    "name": "robber",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강도범",
+    "answer": "robber",
+    "line": "The police caught the bank robber last night."
+  },
+  "w|roulette": {
+    "kind": "word",
+    "type": "type",
+    "name": "roulette",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "룰렛",
+    "answer": "roulette",
+    "line": "Have you ever played roulette at a casino?"
+  },
+  "w|scorpion": {
+    "kind": "word",
+    "type": "type",
+    "name": "scorpion",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "전갈",
+    "answer": "scorpion",
+    "line": "A scorpion crawled out from under the rock."
+  },
+  "w|scramble": {
+    "kind": "word",
+    "type": "type",
+    "name": "scramble",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "스크램블",
+    "answer": "scramble",
+    "line": "I made a quick scramble with eggs and vegetables for breakfast."
+  },
+  "w|sensual": {
+    "kind": "word",
+    "type": "type",
+    "name": "sensual",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "관능적인",
+    "answer": "sensual",
+    "line": "The music had a sensual rhythm."
+  },
+  "w|setback": {
+    "kind": "word",
+    "type": "type",
+    "name": "setback",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "차질",
+    "answer": "setback",
+    "line": "We faced a major setback in our project."
+  },
+  "w|shameless": {
+    "kind": "word",
+    "type": "type",
+    "name": "shameless",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "뻔뻔한",
+    "answer": "shameless",
+    "line": "She gave a shameless excuse for being late."
+  },
+  "w|shorten": {
+    "kind": "word",
+    "type": "type",
+    "name": "shorten",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "짧게 하다",
+    "answer": "shorten",
+    "line": "Can you shorten the skirt for me?"
+  },
+  "w|sinner": {
+    "kind": "word",
+    "type": "type",
+    "name": "sinner",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "죄인",
+    "answer": "sinner",
+    "line": "The priest forgave the sinner after confession."
+  },
+  "w|smoker": {
+    "kind": "word",
+    "type": "type",
+    "name": "smoker",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "흡연자",
+    "answer": "smoker",
+    "line": "A smoker should try to quit for better health."
+  },
+  "w|soar": {
+    "kind": "word",
+    "type": "type",
+    "name": "soar",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "날아오르다",
+    "answer": "soar",
+    "line": "Eagles soar high above the mountains."
+  },
+  "w|soften": {
+    "kind": "word",
+    "type": "type",
+    "name": "soften",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "부드럽게 하다",
+    "answer": "soften",
+    "line": "Let the butter soften before you use it."
+  },
+  "w|sow": {
+    "kind": "word",
+    "type": "type",
+    "name": "sow",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "씨를 뿌리다",
+    "answer": "sow",
+    "line": "Farmers sow seeds in the spring."
+  },
+  "w|sparkle": {
+    "kind": "word",
+    "type": "type",
+    "name": "sparkle",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "반짝이다",
+    "answer": "sparkle",
+    "line": "The stars sparkle in the night sky."
+  },
+  "w|sprinkle": {
+    "kind": "word",
+    "type": "type",
+    "name": "sprinkle",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "뿌리다",
+    "answer": "sprinkle",
+    "line": "Just sprinkle some salt on the fries."
+  },
+  "w|stamina": {
+    "kind": "word",
+    "type": "type",
+    "name": "stamina",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "지구력",
+    "answer": "stamina",
+    "line": "Running a marathon takes a lot of stamina."
+  },
+  "w|surpass": {
+    "kind": "word",
+    "type": "type",
+    "name": "surpass",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "능가하다",
+    "answer": "surpass",
+    "line": "She hopes to surpass her previous score."
+  },
+  "w|surrogate": {
+    "kind": "word",
+    "type": "type",
+    "name": "surrogate",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "대리모",
+    "answer": "surrogate",
+    "line": "She found a surrogate to carry her baby."
+  },
+  "w|tart": {
+    "kind": "word",
+    "type": "type",
+    "name": "tart",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "타르트",
+    "answer": "tart",
+    "line": "Would you like a cherry tart for dessert?"
+  },
+  "w|thinker": {
+    "kind": "word",
+    "type": "type",
+    "name": "thinker",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "사색가",
+    "answer": "thinker",
+    "line": "She is a deep thinker and always asks interesting questions."
+  },
+  "w|tonic": {
+    "kind": "word",
+    "type": "type",
+    "name": "tonic",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "강장제",
+    "answer": "tonic",
+    "line": "The doctor prescribed a tonic to help with her fatigue."
+  },
+  "w|toothbrush": {
+    "kind": "word",
+    "type": "type",
+    "name": "toothbrush",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "칫솔",
+    "answer": "toothbrush",
+    "line": "Don't forget to pack your toothbrush for the trip."
+  },
+  "w|torment": {
+    "kind": "word",
+    "type": "type",
+    "name": "torment",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "괴롭히다",
+    "answer": "torment",
+    "line": "He tried to torment his little brother."
+  },
+  "w|triumphant": {
+    "kind": "word",
+    "type": "type",
+    "name": "triumphant",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "의기양양한",
+    "answer": "triumphant",
+    "line": "She gave a triumphant smile after winning."
+  },
+  "w|troublesome": {
+    "kind": "word",
+    "type": "type",
+    "name": "troublesome",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "성가신",
+    "answer": "troublesome",
+    "line": "This troublesome lock won't open no matter what I do."
+  },
+  "w|tyrant": {
+    "kind": "word",
+    "type": "type",
+    "name": "tyrant",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "폭군",
+    "answer": "tyrant",
+    "line": "The people rebelled against the cruel tyrant."
+  },
+  "w|understatement": {
+    "kind": "word",
+    "type": "type",
+    "name": "understatement",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "축소 표현",
+    "answer": "understatement",
+    "line": "Calling the storm 'bad' is an understatement."
+  },
+  "w|waltz": {
+    "kind": "word",
+    "type": "type",
+    "name": "waltz",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "왈츠",
+    "answer": "waltz",
+    "line": "They danced a beautiful waltz at the party."
+  },
+  "w|wretched": {
+    "kind": "word",
+    "type": "type",
+    "name": "wretched",
+    "ask": "뜻을 보고 영어 단어를 쓰세요.",
+    "gloss": "비참한",
+    "answer": "wretched",
+    "line": "He felt wretched after losing his wallet.",
+    "hint": "w",
+    "mark": "한 단어"
+  }
+}

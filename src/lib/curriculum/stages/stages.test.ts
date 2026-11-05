@@ -161,6 +161,16 @@ for (const language of ALL) {
   });
 }
 
+test("일본어 글자 소리는 낱말이 아니라 그 글자 한 박자", () => {
+  const course = scriptFor("ja")!;
+  for (const group of course.groups) {
+    for (const item of group.items) {
+      if (item.char.length > 2) continue;
+      assert.equal(item.say, item.char, item.char);
+    }
+  }
+});
+
 test("글자 기초 진행과 옮긴 글 순서", () => {
   const course = scriptFor("ja")!;
   const first = course.groups[0]!.id;

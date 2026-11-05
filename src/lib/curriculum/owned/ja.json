@@ -1,0 +1,2802 @@
+{
+ "e|間に合った": [
+  {
+   "text": "電車に間に合った。",
+   "en": "I made it in time for the train.",
+   "ko": "기차에 제시간에 도착했어.",
+   "blank": "間に合った"
+  },
+  {
+   "text": "会議に間に合った？",
+   "en": "Did you make it to the meeting on time?",
+   "ko": "회의에 제시간에 도착했어?",
+   "blank": "間に合った"
+  },
+  {
+   "text": "締め切りに間に合ったから安心した。",
+   "en": "I'm relieved I made the deadline.",
+   "ko": "마감에 맞춰서 안심이야.",
+   "blank": "間に合った"
+  }
+ ],
+ "e|結構です": [
+  {
+   "text": "お水は結構です。",
+   "en": "No water for me, thank you.",
+   "ko": "물은 괜찮아요.",
+   "blank": "結構です"
+  },
+  {
+   "text": "この書類はもう結構です。",
+   "en": "You don’t need this document anymore.",
+   "ko": "이 서류는 이제 필요 없어요.",
+   "blank": "結構です"
+  },
+  {
+   "text": "それについては結構ですので、心配しないでください。",
+   "en": "You don’t need to worry about that, thank you.",
+   "ko": "그것에 대해서는 괜찮으니 걱정하지 마세요.",
+   "blank": "結構です"
+  }
+ ],
+ "e|恐れ入りますが": [
+  {
+   "text": "恐れ入りますが、もう一度説明していただけますか。",
+   "en": "Excuse me, but could you please explain it one more time?",
+   "ko": "죄송하지만, 한 번 더 설명해 주실 수 있나요?",
+   "blank": "恐れ入りますが"
+  },
+  {
+   "text": "恐れ入りますが、窓を閉めてもよろしいでしょうか。",
+   "en": "Excuse me, but may I close the window?",
+   "ko": "죄송하지만, 창문을 닫아도 될까요?",
+   "blank": "恐れ入りますが"
+  },
+  {
+   "text": "恐れ入りますが、少し静かにしていただけますか。",
+   "en": "Excuse me, but could you please be a little quieter?",
+   "ko": "죄송하지만, 조금 조용히 해 주실 수 있나요?",
+   "blank": "恐れ入りますが"
+  }
+ ],
+ "e|考えすぎだよ": [
+  {
+   "text": "そんなに心配しなくていいよ、考えすぎだよ。",
+   "en": "You don't have to worry that much, you're overthinking it.",
+   "ko": "그렇게 걱정하지 않아도 돼, 너무 깊게 생각하고 있어.",
+   "blank": "考えすぎだよ"
+  },
+  {
+   "text": "また悪い方にばかり想像してるね、考えすぎだよ。",
+   "en": "You're imagining all the worst-case scenarios again, you're overthinking it.",
+   "ko": "또 나쁜 쪽으로만 상상하고 있네, 너무 깊게 생각하고 있어.",
+   "blank": "考えすぎだよ"
+  },
+  {
+   "text": "本当にみんなそんなふうに思ってるかな？考えすぎだよ。",
+   "en": "Do you really think everyone feels that way? You're overthinking it.",
+   "ko": "정말로 모두가 그렇게 생각할까? 너무 깊게 생각하고 있어.",
+   "blank": "考えすぎだよ"
+  }
+ ],
+ "e|考えとく": [
+  {
+   "text": "それ、考えとくね。",
+   "en": "I'll think about it.",
+   "ko": "그거, 생각해볼게.",
+   "blank": "考えとく"
+  },
+  {
+   "text": "今は無理だけど、考えとくよ。",
+   "en": "I can't do it now, but I'll think about it.",
+   "ko": "지금은 힘들지만, 생각해볼게.",
+   "blank": "考えとく"
+  },
+  {
+   "text": "新しいプラン、考えとく。",
+   "en": "I'll think about the new plan.",
+   "ko": "새 계획, 생각해볼게.",
+   "blank": "考えとく"
+  }
+ ],
+ "e|久しぶりです": [
+  {
+   "text": "久しぶりです、お元気でしたか。",
+   "en": "Long time no see, how have you been?",
+   "ko": "오랜만이에요, 잘 지내셨나요?",
+   "blank": "久しぶりです"
+  },
+  {
+   "text": "久しぶりです、また会えてうれしいです。",
+   "en": "Long time no see, I’m happy to see you again.",
+   "ko": "오랜만이에요, 다시 만나서 기뻐요.",
+   "blank": "久しぶりです"
+  },
+  {
+   "text": "久しぶりです、最近どうしていますか。",
+   "en": "Long time no see, how have you been lately?",
+   "ko": "오랜만이에요, 요즘 어떻게 지내세요?",
+   "blank": "久しぶりです"
+  }
+ ],
+ "e|筋が通らない": [
+  {
+   "text": "それはちょっと筋が通らないと思うけど、大丈夫？",
+   "en": "I think that doesn't really make sense, are you sure about it?",
+   "ko": "그건 좀 말이 안 되는 것 같은데, 괜찮아?",
+   "blank": "筋が通らない"
+  },
+  {
+   "text": "急にルールを変えるのは筋が通らないよ。",
+   "en": "Suddenly changing the rules isn't fair.",
+   "ko": "갑자기 규칙을 바꾸는 건 말이 안 돼.",
+   "blank": "筋が通らない"
+  },
+  {
+   "text": "筋が通らない話ばかりで、どうしたらいいかわからない。",
+   "en": "None of this makes sense, so I don't know what to do.",
+   "ko": "전부 말이 안 되는 얘기라서 어떻게 해야 할지 모르겠어.",
+   "blank": "筋が通らない"
+  }
+ ],
+ "e|今後ともよろしくお願いいたします": [
+  {
+   "text": "これからも一緒に頑張りましょう。今後ともよろしくお願いいたします。",
+   "en": "Let's keep working hard together. I look forward to working with you from now on as well.",
+   "ko": "앞으로도 함께 열심히 합시다. 앞으로도 잘 부탁드립니다.",
+   "blank": "今後ともよろしくお願いいたします"
+  },
+  {
+   "text": "ご指導いただき、ありがとうございます。今後ともよろしくお願いいたします。",
+   "en": "Thank you for your guidance. I appreciate your continued support.",
+   "ko": "지도해 주셔서 감사합니다. 앞으로도 잘 부탁드립니다.",
+   "blank": "今後ともよろしくお願いいたします"
+  },
+  {
+   "text": "転職しましたが、今後ともよろしくお願いいたします。",
+   "en": "I've changed jobs, but I hope for your continued support.",
+   "ko": "이직했지만 앞으로도 잘 부탁드립니다.",
+   "blank": "今後ともよろしくお願いいたします"
+  }
+ ],
+ "e|今さら言っても": [
+  {
+   "text": "今さら言っても、もう計画は変えられないよ。",
+   "en": "Even if you say it now, we can't change the plan anymore.",
+   "ko": "지금 와서 말해도 계획은 더 이상 바꿀 수 없어.",
+   "blank": "今さら言っても"
+  },
+  {
+   "text": "今さら言っても、彼はもう家に帰っちゃったよ。",
+   "en": "Even if you say it now, he already went home.",
+   "ko": "지금 와서 말해도 그는 이미 집에 갔어.",
+   "blank": "今さら言っても"
+  },
+  {
+   "text": "今さら言っても、忘れ物は取りに戻れないよ。",
+   "en": "Even if you mention it now, we can't go back to get what was forgotten.",
+   "ko": "지금 와서 말해도 잊어버린 건 가지러 돌아갈 수 없어.",
+   "blank": "今さら言っても"
+  }
+ ],
+ "e|念のため": [
+  {
+   "text": "念のため、傘を持って行こうかな。",
+   "en": "Just in case, maybe I should take an umbrella.",
+   "ko": "혹시 모르니까 우산을 가지고 갈까 해.",
+   "blank": "念のため"
+  },
+  {
+   "text": "念のため、メールでも連絡しておきますね。",
+   "en": "Just in case, I'll also contact you by email.",
+   "ko": "혹시 모르니까 이메일로도 연락드릴게요.",
+   "blank": "念のため"
+  },
+  {
+   "text": "念のため、もう一度確認してもいいですか？",
+   "en": "Just in case, can I check one more time?",
+   "ko": "혹시 모르니까 한 번 더 확인해도 될까요?",
+   "blank": "念のため"
+  }
+ ],
+ "e|大丈夫です": [
+  {
+   "text": "いいえ、大丈夫です。",
+   "en": "No, it's okay.",
+   "ko": "아니요, 괜찮아요.",
+   "blank": "大丈夫です"
+  },
+  {
+   "text": "もう大丈夫です。",
+   "en": "I'm okay now.",
+   "ko": "이제 괜찮아요.",
+   "blank": "大丈夫です"
+  },
+  {
+   "text": "水は大丈夫です。",
+   "en": "I'm fine without water.",
+   "ko": "물은 괜찮아요.",
+   "blank": "大丈夫です"
+  }
+ ],
+ "e|道に迷いました": [
+  {
+   "text": "すみません、道に迷いました。",
+   "en": "Excuse me, I am lost.",
+   "ko": "실례지만, 길을 잃었어요.",
+   "blank": "道に迷いました"
+  },
+  {
+   "text": "道に迷いました。駅はどこですか？",
+   "en": "I am lost. Where is the station?",
+   "ko": "길을 잃었어요. 역이 어디예요?",
+   "blank": "道に迷いました"
+  },
+  {
+   "text": "道に迷いました。助けてください。",
+   "en": "I am lost. Please help me.",
+   "ko": "길을 잃었어요. 도와주세요.",
+   "blank": "道に迷いました"
+  }
+ ],
+ "e|頭が痛いです": [
+  {
+   "text": "今日は頭が痛いです。",
+   "en": "I have a headache today.",
+   "ko": "오늘은 머리가 아파요.",
+   "blank": "頭が痛いです"
+  },
+  {
+   "text": "頭が痛いですから、早く帰ります。",
+   "en": "I have a headache, so I will go home early.",
+   "ko": "머리가 아파서 일찍 집에 갈 거예요.",
+   "blank": "頭が痛いです"
+  },
+  {
+   "text": "すみません、頭が痛いです。",
+   "en": "Excuse me, I have a headache.",
+   "ko": "죄송해요, 머리가 아파요.",
+   "blank": "頭が痛いです"
+  }
+ ],
+ "e|無理しないで": [
+  {
+   "text": "疲れたら無理しないで休んでね。",
+   "en": "If you're tired, don't push yourself and take a rest.",
+   "ko": "피곤하면 무리하지 말고 쉬어.",
+   "blank": "無理しないで"
+  },
+  {
+   "text": "今日は無理しないで早く帰っていいよ。",
+   "en": "You can go home early today, don't overdo it.",
+   "ko": "오늘은 무리하지 말고 일찍 집에 가도 돼.",
+   "blank": "無理しないで"
+  },
+  {
+   "text": "熱があるなら無理しないでください。",
+   "en": "If you have a fever, please don't overdo it.",
+   "ko": "열이 있으면 무리하지 마세요.",
+   "blank": "無理しないで"
+  }
+ ],
+ "e|別にいいよ": [
+  {
+   "text": "別にいいよ、好きにして。",
+   "en": "It's fine, do as you like.",
+   "ko": "괜찮아, 네가 하고 싶은 대로 해.",
+   "blank": "別にいいよ"
+  },
+  {
+   "text": "別にいいよ、明日でも。",
+   "en": "It's fine, tomorrow is okay too.",
+   "ko": "괜찮아, 내일도 돼.",
+   "blank": "別にいいよ"
+  },
+  {
+   "text": "別にいいよ、それ使って。",
+   "en": "It's fine, you can use that.",
+   "ko": "괜찮아, 그거 써도 돼.",
+   "blank": "別にいいよ"
+  }
+ ],
+ "e|本当ですか": [
+  {
+   "text": "明日、雨が降るんですか。本当ですか。",
+   "en": "Is it going to rain tomorrow? Is that true?",
+   "ko": "내일 비가 온다고요? 진짜예요?",
+   "blank": "本当ですか"
+  },
+  {
+   "text": "あなたが作ったんですか。本当ですか。",
+   "en": "Did you make this? Really?",
+   "ko": "이거 네가 만든 거야? 진짜예요?",
+   "blank": "本当ですか"
+  },
+  {
+   "text": "日本語が上手ですね。本当ですか。",
+   "en": "Your Japanese is good. Really?",
+   "ko": "일본어 잘하시네요. 진짜예요?",
+   "blank": "本当ですか"
+  }
+ ],
+ "e|腑に落ちない": [
+  {
+   "text": "説明を聞いたけど、やっぱり腑に落ちない。",
+   "en": "I heard the explanation, but it still doesn’t make sense to me.",
+   "ko": "설명을 들었지만, 그래도 이해가 되지 않아.",
+   "blank": "腑に落ちない"
+  },
+  {
+   "text": "どうしてあの人が選ばれたのか、腑に落ちないんだよね。",
+   "en": "I just can’t understand why that person was chosen.",
+   "ko": "왜 그 사람이 선택됐는지 납득이 안 돼.",
+   "blank": "腑に落ちない"
+  },
+  {
+   "text": "結果は出たけど、腑に落ちない気持ちが残っている。",
+   "en": "The results are out, but I still feel uneasy about it.",
+   "ko": "결과가 나왔지만, 아직도 마음이 개운치 않아.",
+   "blank": "腑に落ちない"
+  }
+ ],
+ "e|仕方ない": [
+  {
+   "text": "雨が降っているから、仕方ない。",
+   "en": "It's raining, so it can't be helped.",
+   "ko": "비가 오니까 어쩔 수 없어.",
+   "blank": "仕方ない"
+  },
+  {
+   "text": "電車が遅れても、仕方ないね。",
+   "en": "Even if the train is late, it can't be helped.",
+   "ko": "기차가 늦어도 어쩔 수 없네.",
+   "blank": "仕方ない"
+  },
+  {
+   "text": "仕方ないから、歩いて帰ろう。",
+   "en": "It can't be helped, so let's walk home.",
+   "ko": "어쩔 수 없으니까 걸어서 집에 가자.",
+   "blank": "仕方ない"
+  }
+ ],
+ "e|少々お待ちください": [
+  {
+   "text": "すぐに確認しますので、少々お待ちください。",
+   "en": "I’ll check right away, so please wait a moment.",
+   "ko": "바로 확인할 테니 잠시만 기다려 주세요.",
+   "blank": "少々お待ちください"
+  },
+  {
+   "text": "担当者を呼びますので、少々お待ちください。",
+   "en": "I’ll call the person in charge, so please wait a moment.",
+   "ko": "담당자를 부를 테니 잠시만 기다려 주세요.",
+   "blank": "少々お待ちください"
+  },
+  {
+   "text": "順番にご案内しますので、少々お待ちください。",
+   "en": "We will guide you in order, so please wait a moment.",
+   "ko": "순서대로 안내해 드릴 테니 잠시만 기다려 주세요.",
+   "blank": "少々お待ちください"
+  }
+ ],
+ "e|少しだけ": [
+  {
+   "text": "少しだけ待ってください。",
+   "en": "Please wait just a little.",
+   "ko": "조금만 기다려 주세요.",
+   "blank": "少しだけ"
+  },
+  {
+   "text": "少しだけ食べてもいいですか。",
+   "en": "Can I eat just a little?",
+   "ko": "조금만 먹어도 될까요?",
+   "blank": "少しだけ"
+  },
+  {
+   "text": "今日は少しだけ雨が降りました。",
+   "en": "It rained just a little today.",
+   "ko": "오늘은 조금만 비가 왔어요.",
+   "blank": "少しだけ"
+  }
+ ],
+ "e|水を差すようで悪いけど": [
+  {
+   "text": "水を差すようで悪いけど、そろそろ次の話題に移ってもいい？",
+   "en": "Sorry to interrupt, but is it okay if we move on to the next topic?",
+   "ko": "방해하는 것 같아서 미안한데, 슬슬 다음 주제로 넘어가도 될까?",
+   "blank": "水を差すようで悪いけど"
+  },
+  {
+   "text": "水を差すようで悪いけど、もう少し静かにしてくれる？",
+   "en": "Sorry to spoil the mood, but could you keep it down a little?",
+   "ko": "분위기를 망치는 것 같아서 미안한데, 조금만 조용히 해줄래?",
+   "blank": "水を差すようで悪いけど"
+  },
+  {
+   "text": "水を差すようで悪いけど、その情報は正しくないかも。",
+   "en": "Sorry to rain on your parade, but that information might not be correct.",
+   "ko": "분위기를 깨는 것 같아 미안하지만, 그 정보는 틀릴 수도 있어.",
+   "blank": "水を差すようで悪いけど"
+  }
+ ],
+ "e|承知しました": [
+  {
+   "text": "資料を午後までに提出します、承知しました。",
+   "en": "I will submit the documents by the afternoon, understood.",
+   "ko": "서류를 오후까지 제출하겠습니다, 알겠습니다.",
+   "blank": "承知しました"
+  },
+  {
+   "text": "会議の開始時間が変更になった件、承知しました。",
+   "en": "Understood about the meeting start time being changed.",
+   "ko": "회의 시작 시간이 변경된 것, 알겠습니다.",
+   "blank": "承知しました"
+  },
+  {
+   "text": "明日の予定については承知しました。",
+   "en": "Understood about tomorrow’s schedule.",
+   "ko": "내일 일정에 대해서는 알겠습니다.",
+   "blank": "承知しました"
+  }
+ ],
+ "e|申し訳ございません": [
+  {
+   "text": "電車が遅れてしまい、申し訳ございません。",
+   "en": "I'm sorry for being late because the train was delayed.",
+   "ko": "기차가 늦어서 죄송합니다.",
+   "blank": "申し訳ございません"
+  },
+  {
+   "text": "今すぐ確認いたしますので、申し訳ございません。",
+   "en": "I'll check it right away, so I'm sorry.",
+   "ko": "지금 바로 확인하겠습니다, 죄송합니다.",
+   "blank": "申し訳ございません"
+  },
+  {
+   "text": "注文を間違えてしまい、申し訳ございません。",
+   "en": "I'm sorry for making a mistake with your order.",
+   "ko": "주문을 잘못해서 죄송합니다.",
+   "blank": "申し訳ございません"
+  }
+ ],
+ "e|身に余るお言葉です": [
+  {
+   "text": "そんなに褒めていただいて、身に余るお言葉です。",
+   "en": "You flatter me too much; your words are more than I deserve.",
+   "ko": "그렇게 칭찬해 주셔서, 과분한 말씀이에요.",
+   "blank": "身に余るお言葉です"
+  },
+  {
+   "text": "身に余るお言葉ですが、まだまだ努力が必要だと思います。",
+   "en": "Your words are more than I deserve, but I still think I need to work harder.",
+   "ko": "과분한 말씀이지만, 아직 더 노력해야 한다고 생각해요.",
+   "blank": "身に余るお言葉です"
+  },
+  {
+   "text": "身に余るお言葉ですので、これからも精進します。",
+   "en": "Your words are more than I deserve, so I will keep doing my best.",
+   "ko": "과분한 말씀이니 앞으로도 계속 노력하겠습니다.",
+   "blank": "身に余るお言葉です"
+  }
+ ],
+ "e|失礼いたします": [
+  {
+   "text": "会議中に失礼いたします、少しだけお時間よろしいでしょうか。",
+   "en": "Sorry to interrupt during the meeting, but may I have a moment of your time?",
+   "ko": "회의 중에 실례하지만, 잠깐 시간 괜찮으신가요?",
+   "blank": "失礼いたします"
+  },
+  {
+   "text": "お電話中、失礼いたします。ご用件をお伝えしてもよろしいでしょうか。",
+   "en": "Sorry for interrupting your call. May I tell you the reason for my visit?",
+   "ko": "통화 중에 실례합니다. 용건을 말씀드려도 될까요?",
+   "blank": "失礼いたします"
+  },
+  {
+   "text": "失礼いたします。こちらの書類にご署名をお願いします。",
+   "en": "Excuse me. Could you please sign this document?",
+   "ko": "실례합니다. 이 서류에 서명해 주시겠어요?",
+   "blank": "失礼いたします"
+  }
+ ],
+ "e|言われてみれば": [
+  {
+   "text": "言われてみれば、最近雨が多いね。",
+   "en": "Now that you mention it, there has been a lot of rain lately.",
+   "ko": "그러고 보니, 요즘 비가 많이 오네.",
+   "blank": "言われてみれば"
+  },
+  {
+   "text": "言われてみれば、その映画は去年も見たかも。",
+   "en": "Come to think of it, I might have watched that movie last year too.",
+   "ko": "그러고 보니, 그 영화 작년에도 봤을지도 몰라.",
+   "blank": "言われてみれば"
+  },
+  {
+   "text": "言われてみれば、このカフェのコーヒーは前より美味しくなったね。",
+   "en": "Now that you mention it, the coffee at this cafe tastes better than before.",
+   "ko": "그러고 보니, 이 카페 커피가 예전보다 더 맛있어진 것 같아.",
+   "blank": "言われてみれば"
+  }
+ ],
+ "e|頑張ってください": [
+  {
+   "text": "試験、頑張ってください。",
+   "en": "Good luck on your exam.",
+   "ko": "시험 잘 보세요.",
+   "blank": "頑張ってください"
+  },
+  {
+   "text": "面接に行くなら、頑張ってください。",
+   "en": "If you are going to your interview, good luck.",
+   "ko": "면접 보러 간다면, 힘내세요.",
+   "blank": "頑張ってください"
+  },
+  {
+   "text": "新しい仕事、頑張ってください。",
+   "en": "Good luck with your new job.",
+   "ko": "새로운 일 잘하세요.",
+   "blank": "頑張ってください"
+  }
+ ],
+ "e|要するに": [
+  {
+   "text": "要するに、今日はもう終わりってことだよ。",
+   "en": "Basically, it means we're done for today.",
+   "ko": "요컨대, 오늘은 여기까지라는 뜻이야.",
+   "blank": "要するに"
+  },
+  {
+   "text": "要するに、彼が来ない理由は忙しいからだよ。",
+   "en": "In short, the reason he's not coming is because he's busy.",
+   "ko": "요컨대, 그가 오지 않는 이유는 바빠서야.",
+   "blank": "要するに"
+  },
+  {
+   "text": "要するに、もっと早く言ってほしかったんだよね。",
+   "en": "Basically, I just wanted you to tell me sooner.",
+   "ko": "요컨대, 나는 더 빨리 말해줬으면 했어.",
+   "blank": "要するに"
+  }
+ ],
+ "e|元気ですか": [
+  {
+   "text": "こんにちは、元気ですか。",
+   "en": "Hello, how are you?",
+   "ko": "안녕하세요, 잘 지내세요?",
+   "blank": "元気ですか"
+  },
+  {
+   "text": "お久しぶりですね、元気ですか。",
+   "en": "Long time no see, how are you?",
+   "ko": "오랜만이에요, 잘 지내세요?",
+   "blank": "元気ですか"
+  },
+  {
+   "text": "最近どう？元気ですか。",
+   "en": "How have you been lately? How are you?",
+   "ko": "요즘 어때요? 잘 지내세요?",
+   "blank": "元気ですか"
+  }
+ ],
+ "e|一理ある": [
+  {
+   "text": "その意見にも一理あると思うよ。",
+   "en": "I think your opinion makes sense too.",
+   "ko": "그 의견에도 일리가 있다고 생각해.",
+   "blank": "一理ある"
+  },
+  {
+   "text": "彼の説明は一理あるけど、全部は納得できないな。",
+   "en": "His explanation makes sense, but I can't agree with everything.",
+   "ko": "그의 설명은 일리가 있지만, 전부는 납득할 수 없어.",
+   "blank": "一理ある"
+  },
+  {
+   "text": "一理あるけど、他の方法も考えてみよう。",
+   "en": "That makes sense, but let's think about other options too.",
+   "ko": "일리가 있지만, 다른 방법도 생각해보자.",
+   "blank": "一理ある"
+  }
+ ],
+ "e|一緒に行きませんか": [
+  {
+   "text": "このあと、一緒に行きませんか。",
+   "en": "Shall we go together after this?",
+   "ko": "이따가 같이 가지 않을래요?",
+   "blank": "一緒に行きませんか"
+  },
+  {
+   "text": "明日公園に一緒に行きませんか。",
+   "en": "Shall we go to the park together tomorrow?",
+   "ko": "내일 공원에 같이 가지 않을래요?",
+   "blank": "一緒に行きませんか"
+  },
+  {
+   "text": "映画を見に一緒に行きませんか。",
+   "en": "Shall we go see a movie together?",
+   "ko": "영화 보러 같이 가지 않을래요?",
+   "blank": "一緒に行きませんか"
+  }
+ ],
+ "e|前向きに検討します": [
+  {
+   "text": "その提案については前向きに検討します。",
+   "en": "I will seriously consider that proposal.",
+   "ko": "그 제안에 대해 긍정적으로 검토하겠습니다.",
+   "blank": "前向きに検討します"
+  },
+  {
+   "text": "旅行の話、前向きに検討しますね。",
+   "en": "I'll positively think about the trip.",
+   "ko": "여행 이야기는 긍정적으로 검토할게요.",
+   "blank": "前向きに検討します"
+  },
+  {
+   "text": "新しいプロジェクト、前向きに検討しますので少し時間をください。",
+   "en": "I'll give positive consideration to the new project, so please give me some time.",
+   "ko": "새로운 프로젝트는 긍정적으로 검토할 테니 조금만 시간을 주세요.",
+   "blank": "前向きに検討します"
+  }
+ ],
+ "e|正直なところ": [
+  {
+   "text": "正直なところ、今日はあまり元気がないんだ。",
+   "en": "To be honest, I don't feel very well today.",
+   "ko": "솔직히 오늘은 별로 기운이 없어.",
+   "blank": "正直なところ"
+  },
+  {
+   "text": "正直なところ、まだその映画を見ていません。",
+   "en": "To be honest, I haven't seen that movie yet.",
+   "ko": "솔직히 말하면, 아직 그 영화를 못 봤어.",
+   "blank": "正直なところ"
+  },
+  {
+   "text": "正直なところ、この課題はちょっと難しいと思う。",
+   "en": "To be honest, I think this assignment is a bit difficult.",
+   "ko": "솔직히 이 과제는 좀 어려운 것 같아.",
+   "blank": "正直なところ"
+  }
+ ],
+ "e|助かる": [
+  {
+   "text": "この荷物を持ってくれると助かる。",
+   "en": "It helps if you carry this bag for me.",
+   "ko": "이 짐을 들어주면 도움이 돼.",
+   "blank": "助かる"
+  },
+  {
+   "text": "雨がやんで助かる。",
+   "en": "I'm glad the rain stopped.",
+   "ko": "비가 그쳐서 다행이야.",
+   "blank": "助かる"
+  },
+  {
+   "text": "早く返事をくれて助かる。",
+   "en": "I appreciate your quick reply.",
+   "ko": "빠르게 답장해줘서 고마워.",
+   "blank": "助かる"
+  }
+ ],
+ "e|差し支えなければ": [
+  {
+   "text": "差し支えなければ、お名前を教えていただけますか。",
+   "en": "If you don't mind, could you tell me your name?",
+   "ko": "괜찮으시다면, 이름을 알려주실 수 있나요?",
+   "blank": "差し支えなければ"
+  },
+  {
+   "text": "差し支えなければ、明日の予定を教えてもらえますか。",
+   "en": "If it's not a problem, can you tell me your plans for tomorrow?",
+   "ko": "괜찮으시면, 내일 일정 알려주실 수 있나요?",
+   "blank": "差し支えなければ"
+  },
+  {
+   "text": "差し支えなければ、その理由を教えてもらえますか。",
+   "en": "If you don't mind, could you tell me the reason for that?",
+   "ko": "괜찮으시면, 그 이유를 알려주실 수 있나요?",
+   "blank": "差し支えなければ"
+  }
+ ],
+ "e|痛いところを突かれた": [
+  {
+   "text": "うわ、また宿題のこと言われて、痛いところを突かれた。",
+   "en": "Wow, you brought up my homework again—that hit a sore spot.",
+   "ko": "와, 또 숙제 얘기해서 아픈 부분을 찔렀네.",
+   "blank": "痛いところを突かれた"
+  },
+  {
+   "text": "ダイエットの話になると、痛いところを突かれた気分になるよ。",
+   "en": "When the topic turns to dieting, I feel like you’ve hit a sore spot.",
+   "ko": "다이어트 얘기만 나오면 아픈 곳을 찔린 기분이야.",
+   "blank": "痛いところを突かれた"
+  },
+  {
+   "text": "それ、痛いところを突かれた質問だね。",
+   "en": "That’s a question that really hits a sore spot.",
+   "ko": "그건 정말 아픈 부분을 찌르는 질문이네.",
+   "blank": "痛いところを突かれた"
+  }
+ ],
+ "e|何時にしますか": [
+  {
+   "text": "会議は何時にしますか。",
+   "en": "What time shall we have the meeting?",
+   "ko": "회의는 몇 시에 할까요?",
+   "blank": "何時にしますか"
+  },
+  {
+   "text": "パーティーは何時にしますか。",
+   "en": "What time shall we have the party?",
+   "ko": "파티는 몇 시에 할까요?",
+   "blank": "何時にしますか"
+  },
+  {
+   "text": "晩ご飯は何時にしますか。",
+   "en": "What time shall we have dinner?",
+   "ko": "저녁 식사는 몇 시에 할까요?",
+   "blank": "何時にしますか"
+  }
+ ],
+ "e|何がおすすめですか": [
+  {
+   "text": "初めて来ました。何がおすすめですか。",
+   "en": "This is my first time here. What do you recommend?",
+   "ko": "처음 왔어요. 뭐가 추천이에요?",
+   "blank": "何がおすすめですか"
+  },
+  {
+   "text": "ランチで何がおすすめですか。",
+   "en": "What do you recommend for lunch?",
+   "ko": "점심에 뭐가 추천이에요?",
+   "blank": "何がおすすめですか"
+  },
+  {
+   "text": "お土産に何がおすすめですか。",
+   "en": "What do you recommend for souvenirs?",
+   "ko": "기념품으로 뭐가 추천이에요?",
+   "blank": "何がおすすめですか"
+  }
+ ],
+ "e|確認してまいります": [
+  {
+   "text": "その件については、ただいま確認してまいります。",
+   "en": "I will check on that matter right now.",
+   "ko": "그 건에 대해서는 지금 확인하겠습니다.",
+   "blank": "確認してまいります"
+  },
+  {
+   "text": "お手数ですが、少々お待ちいただけますか？すぐに確認してまいります。",
+   "en": "Sorry for the trouble, could you wait a moment? I will confirm it right away.",
+   "ko": "번거롭게 해드려 죄송하지만 잠시만 기다려주시겠어요? 바로 확인하겠습니다.",
+   "blank": "確認してまいります"
+  },
+  {
+   "text": "ご質問の内容を確認してまいりますので、しばらくお待ちください。",
+   "en": "I will check your question, so please wait a moment.",
+   "ko": "질문하신 내용을 확인하겠습니다. 잠시만 기다려주세요.",
+   "blank": "確認してまいります"
+  }
+ ],
+ "e|確かに": [
+  {
+   "text": "確かに今日は寒いね。",
+   "en": "It really is cold today.",
+   "ko": "확실히 오늘은 춥네.",
+   "blank": "確かに"
+  },
+  {
+   "text": "確かにその映画は面白かった。",
+   "en": "That movie was definitely interesting.",
+   "ko": "확실히 그 영화는 재미있었어.",
+   "blank": "確かに"
+  },
+  {
+   "text": "確かにそう聞こえるね。",
+   "en": "It does sound like that, for sure.",
+   "ko": "확실히 그렇게 들리네.",
+   "blank": "確かに"
+  }
+ ],
+ "e|後ほどご連絡します": [
+  {
+   "text": "今少し手が離せないので、後ほどご連絡します。",
+   "en": "I'm a bit busy right now, so I'll get back to you later.",
+   "ko": "지금은 조금 바빠서 나중에 연락드릴게요.",
+   "blank": "後ほどご連絡します"
+  },
+  {
+   "text": "会議が終わったら、後ほどご連絡します。",
+   "en": "I'll contact you after the meeting is over.",
+   "ko": "회의가 끝나면 나중에 연락드릴게요.",
+   "blank": "後ほどご連絡します"
+  },
+  {
+   "text": "詳細については後ほどご連絡します。",
+   "en": "I'll get in touch with you about the details later.",
+   "ko": "자세한 내용은 나중에 연락드릴게요.",
+   "blank": "後ほどご連絡します"
+  }
+ ],
+ "e|写真を撮ってもいいですか": [
+  {
+   "text": "ここで写真を撮ってもいいですか。",
+   "en": "Can I take a picture here?",
+   "ko": "여기서 사진을 찍어도 돼요?",
+   "blank": "写真を撮ってもいいですか"
+  },
+  {
+   "text": "お友だちと写真を撮ってもいいですか。",
+   "en": "Can I take a picture with my friend?",
+   "ko": "친구와 사진을 찍어도 돼요?",
+   "blank": "写真を撮ってもいいですか"
+  },
+  {
+   "text": "この料理の写真を撮ってもいいですか。",
+   "en": "Can I take a picture of this food?",
+   "ko": "이 음식 사진을 찍어도 돼요?",
+   "blank": "写真を撮ってもいいですか"
+  }
+ ],
+ "e|実は": [
+  {
+   "text": "実は、猫アレルギーなんです。",
+   "en": "Actually, I am allergic to cats.",
+   "ko": "사실, 저는 고양이 알레르기가 있어요.",
+   "blank": "実は"
+  },
+  {
+   "text": "実は、昨日ここに来ました。",
+   "en": "Actually, I came here yesterday.",
+   "ko": "사실, 어제 여기에 왔어요.",
+   "blank": "実は"
+  },
+  {
+   "text": "実は、まだ宿題が終わっていません。",
+   "en": "Actually, I haven’t finished my homework yet.",
+   "ko": "사실, 아직 숙제를 끝내지 못했어요.",
+   "blank": "実は"
+  }
+ ],
+ "e|悪くはないけど": [
+  {
+   "text": "このカレー、悪くはないけど、もう少し辛いほうが好きかも。",
+   "en": "This curry isn't bad, but I might like it a bit spicier.",
+   "ko": "이 카레, 나쁘진 않지만 좀 더 매운 게 좋을지도 몰라.",
+   "blank": "悪くはないけど"
+  },
+  {
+   "text": "その映画、悪くはないけど、感動はしなかったな。",
+   "en": "That movie isn't bad, but it didn't move me.",
+   "ko": "그 영화, 나쁘진 않지만 감동은 없었어.",
+   "blank": "悪くはないけど"
+  },
+  {
+   "text": "この服、悪くはないけど、私にはちょっと派手かな。",
+   "en": "These clothes aren't bad, but they're a bit flashy for me.",
+   "ko": "이 옷, 나쁘진 않지만 나한테는 좀 화려한 것 같아.",
+   "blank": "悪くはないけど"
+  }
+ ],
+ "e|検討いたします": [
+  {
+   "text": "その提案については検討いたします。",
+   "en": "I will consider that suggestion.",
+   "ko": "그 제안에 대해 검토하겠습니다.",
+   "blank": "検討いたします"
+  },
+  {
+   "text": "ご依頼の件、検討いたしますので少々お待ちください。",
+   "en": "I will look into your request, so please wait a moment.",
+   "ko": "요청하신 건은 검토하겠습니다. 잠시만 기다려 주세요.",
+   "blank": "検討いたします"
+  },
+  {
+   "text": "新しいスケジュール案、検討いたします。",
+   "en": "I will review the new schedule proposal.",
+   "ko": "새로운 일정안 검토하겠습니다.",
+   "blank": "検討いたします"
+  }
+ ],
+ "e|楽しみです": [
+  {
+   "text": "新しい本を読むのが楽しみです。",
+   "en": "I am looking forward to reading the new book.",
+   "ko": "새 책을 읽는 것이 기대돼요.",
+   "blank": "楽しみです"
+  },
+  {
+   "text": "友だちに会うのが楽しみです。",
+   "en": "I am looking forward to meeting my friend.",
+   "ko": "친구를 만나는 것이 기대돼요.",
+   "blank": "楽しみです"
+  },
+  {
+   "text": "映画を見るのが楽しみです。",
+   "en": "I'm looking forward to watching a movie.",
+   "ko": "영화 보는 게 기대돼요.",
+   "blank": "楽しみです"
+  }
+ ],
+ "e|残念です": [
+  {
+   "text": "今日は雨ですね。残念です。",
+   "en": "It's raining today. That's too bad.",
+   "ko": "오늘 비가 오네요. 아쉽네요.",
+   "blank": "残念です"
+  },
+  {
+   "text": "そのお店はもう閉まっています。残念です。",
+   "en": "That shop is already closed. That's too bad.",
+   "ko": "그 가게는 이미 닫았어요. 아쉽네요.",
+   "blank": "残念です"
+  },
+  {
+   "text": "ケーキが売り切れで残念です。",
+   "en": "The cake is sold out, that's too bad.",
+   "ko": "케이크가 매진이라 아쉽네요.",
+   "blank": "残念です"
+  }
+ ],
+ "e|気が進まない": [
+  {
+   "text": "今日はちょっと気が進まないけど、手伝いに行くね。",
+   "en": "I don't really feel like it today, but I'll come help.",
+   "ko": "오늘은 좀 내키지 않지만 도우러 갈게.",
+   "blank": "気が進まない"
+  },
+  {
+   "text": "その話題については気が進まないな。",
+   "en": "I'm not eager to talk about that topic.",
+   "ko": "그 주제에 대해서는 마음이 내키지 않아.",
+   "blank": "気が進まない"
+  },
+  {
+   "text": "雨の日は外出するのが気が進まないよね。",
+   "en": "I don't feel like going out on rainy days.",
+   "ko": "비 오는 날은 외출하기가 내키지 않아.",
+   "blank": "気が進まない"
+  }
+ ],
+ "e|気にしないで": [
+  {
+   "text": "遅れてごめんね、気にしないで。",
+   "en": "Sorry I'm late, don't worry about it.",
+   "ko": "늦어서 미안해, 신경 쓰지 마.",
+   "blank": "気にしないで"
+  },
+  {
+   "text": "靴を脱がなくても気にしないで。",
+   "en": "Don't worry about not taking off your shoes.",
+   "ko": "신발을 벗지 않아도 신경 쓰지 마.",
+   "blank": "気にしないで"
+  },
+  {
+   "text": "私のことは気にしないで。",
+   "en": "Don't worry about me.",
+   "ko": "나에 대해서는 신경 쓰지 마.",
+   "blank": "気にしないで"
+  }
+ ],
+ "e|気をつけて": [
+  {
+   "text": "暗い道だから気をつけて。",
+   "en": "Be careful because the road is dark.",
+   "ko": "길이 어두우니까 조심해.",
+   "blank": "気をつけて"
+  },
+  {
+   "text": "外は寒いから気をつけてね。",
+   "en": "Be careful, it's cold outside.",
+   "ko": "밖은 추우니까 조심해.",
+   "blank": "気をつけて"
+  },
+  {
+   "text": "帰り道、気をつけて。",
+   "en": "Be careful on your way home.",
+   "ko": "집에 가는 길 조심해.",
+   "blank": "気をつけて"
+  }
+ ],
+ "e|遅れてごめん": [
+  {
+   "text": "遅れてごめん、電車が遅れたんだ。",
+   "en": "Sorry I'm late, the train was delayed.",
+   "ko": "늦어서 미안해, 기차가 늦었어.",
+   "blank": "遅れてごめん"
+  },
+  {
+   "text": "遅れてごめん、待たせたね。",
+   "en": "Sorry I'm late, I kept you waiting.",
+   "ko": "늦어서 미안해, 기다리게 했네.",
+   "blank": "遅れてごめん"
+  },
+  {
+   "text": "遅れてごめん、今着いたよ。",
+   "en": "Sorry I'm late, I just arrived.",
+   "ko": "늦어서 미안해, 지금 도착했어.",
+   "blank": "遅れてごめん"
+  }
+ ],
+ "e|ありがとうございます": [
+  {
+   "text": "水をくれてありがとうございます。",
+   "en": "Thank you for giving me water.",
+   "ko": "물 주셔서 감사합니다.",
+   "blank": "ありがとうございます"
+  },
+  {
+   "text": "手伝ってくれてありがとうございます。",
+   "en": "Thank you for helping me.",
+   "ko": "도와주셔서 감사합니다.",
+   "blank": "ありがとうございます"
+  },
+  {
+   "text": "今日は来てくれてありがとうございます。",
+   "en": "Thank you for coming today.",
+   "ko": "오늘 와 주셔서 감사합니다.",
+   "blank": "ありがとうございます"
+  }
+ ],
+ "e|いいですね": [
+  {
+   "text": "そのかばん、いいですね。",
+   "en": "That bag is nice.",
+   "ko": "그 가방, 좋네요.",
+   "blank": "いいですね"
+  },
+  {
+   "text": "今日のてんき、いいですね。",
+   "en": "The weather is nice today.",
+   "ko": "오늘 날씨, 좋네요.",
+   "blank": "いいですね"
+  },
+  {
+   "text": "コーヒー、いいですね。",
+   "en": "Coffee sounds good.",
+   "ko": "커피, 좋네요.",
+   "blank": "いいですね"
+  }
+ ],
+ "e|いくらですか": [
+  {
+   "text": "りんごはいくらですか。",
+   "en": "How much is the apple?",
+   "ko": "사과는 얼마입니까?",
+   "blank": "いくらですか"
+  },
+  {
+   "text": "パンはいくらですか。",
+   "en": "How much is the bread?",
+   "ko": "빵은 얼마입니까?",
+   "blank": "いくらですか"
+  },
+  {
+   "text": "このノートはいくらですか。",
+   "en": "How much is this notebook?",
+   "ko": "이 공책은 얼마예요?",
+   "blank": "いくらですか"
+  }
+ ],
+ "e|いただきます": [
+  {
+   "text": "ごはんを食べます。いただきます。",
+   "en": "I will eat. Itadakimasu.",
+   "ko": "밥을 먹습니다. 잘 먹겠습니다.",
+   "blank": "いただきます"
+  },
+  {
+   "text": "おべんとうです。いただきます。",
+   "en": "It's a bento. Itadakimasu.",
+   "ko": "도시락입니다. 잘 먹겠습니다.",
+   "blank": "いただきます"
+  },
+  {
+   "text": "おさけをのみます。いただきます。",
+   "en": "I will drink sake. Itadakimasu.",
+   "ko": "술을 마십니다. 잘 먹겠습니다.",
+   "blank": "いただきます"
+  }
+ ],
+ "e|お世話になっております": [
+  {
+   "text": "お世話になっております、会議の資料を送付いたします。",
+   "en": "I'm sending the meeting materials. Thank you for your continued support.",
+   "ko": "회의 자료를 보내드립니다. 평소에 신세 많이 집니다.",
+   "blank": "お世話になっております"
+  },
+  {
+   "text": "お世話になっております、先日の件はいかがでしょうか。",
+   "en": "I hope you're well. How is the matter we discussed the other day?",
+   "ko": "안녕하세요, 지난번 건은 어떻게 되고 있나요?",
+   "blank": "お世話になっております"
+  },
+  {
+   "text": "お世話になっております、明日の予定をご確認ください。",
+   "en": "Please check the schedule for tomorrow. Thank you as always.",
+   "ko": "내일 일정 확인 부탁드립니다. 항상 신세지고 있습니다.",
+   "blank": "お世話になっております"
+  }
+ ],
+ "e|お手数ですが": [
+  {
+   "text": "お手数ですが、資料をもう一度送っていただけますか。",
+   "en": "Sorry to trouble you, but could you send the documents again?",
+   "ko": "번거롭게 해드려 죄송하지만, 자료를 한 번 더 보내주실 수 있나요?",
+   "blank": "お手数ですが"
+  },
+  {
+   "text": "お手数ですが、こちらにお名前をご記入ください。",
+   "en": "Sorry for the trouble, but please fill in your name here.",
+   "ko": "번거롭게 해드려 죄송하지만, 여기에 성함을 적어주세요.",
+   "blank": "お手数ですが"
+  },
+  {
+   "text": "お手数ですが、窓を閉めてもらえますか。",
+   "en": "Sorry to bother you, but could you close the window?",
+   "ko": "번거롭게 해드려 죄송하지만, 창문을 닫아주실 수 있나요?",
+   "blank": "お手数ですが"
+  }
+ ],
+ "e|お言葉に甘えて": [
+  {
+   "text": "お言葉に甘えて、もう一杯いただきます。",
+   "en": "If you insist, I'll have another cup.",
+   "ko": "권해주셔서 한 잔 더 받을게요.",
+   "blank": "お言葉に甘えて"
+  },
+  {
+   "text": "お言葉に甘えて、少し休ませてもらいます。",
+   "en": "If you don't mind, I'll take a short rest.",
+   "ko": "권해주셔서 잠깐 쉬겠습니다.",
+   "blank": "お言葉に甘えて"
+  },
+  {
+   "text": "お言葉に甘えて、お手伝いお願いしてもいいですか？",
+   "en": "If you don't mind, could I ask for your help?",
+   "ko": "권해주신다면 부탁 좀 드려도 될까요?",
+   "blank": "お言葉に甘えて"
+  }
+ ],
+ "e|お願いします": [
+  {
+   "text": "ゆっくり話してお願いします。",
+   "en": "Please speak slowly.",
+   "ko": "천천히 말해 주세요.",
+   "blank": "お願いします"
+  },
+  {
+   "text": "水をください、お願いします。",
+   "en": "Water, please.",
+   "ko": "물 주세요, 부탁합니다.",
+   "blank": "お願いします"
+  },
+  {
+   "text": "ドアを開けてお願いします。",
+   "en": "Please open the door.",
+   "ko": "문을 열어 주세요.",
+   "blank": "お願いします"
+  }
+ ],
+ "e|お察しします": [
+  {
+   "text": "そんなに忙しかったんですね、お察しします。",
+   "en": "You must have been really busy, I understand how that feels.",
+   "ko": "정말 바쁘셨군요, 이해합니다.",
+   "blank": "お察しします"
+  },
+  {
+   "text": "長い間待たせてしまって、お察しします。",
+   "en": "I can imagine how hard it was to wait for so long.",
+   "ko": "오래 기다리게 해서 마음을 이해합니다.",
+   "blank": "お察しします"
+  },
+  {
+   "text": "最近大変なことが多かったようで、お察しします。",
+   "en": "It sounds like you’ve had a lot going on lately, I sympathize.",
+   "ko": "요즘 힘든 일이 많으셨던 것 같아, 공감합니다.",
+   "blank": "お察しします"
+  }
+ ],
+ "e|お疲れさまです": [
+  {
+   "text": "お疲れさまです、これから会議ですか？",
+   "en": "Hello, are you heading to a meeting now?",
+   "ko": "안녕하세요, 지금 회의 가세요?",
+   "blank": "お疲れさまです"
+  },
+  {
+   "text": "お疲れさまです、先に帰ります。",
+   "en": "I'm heading home now, see you!",
+   "ko": "수고하셨습니다, 먼저 갈게요.",
+   "blank": "お疲れさまです"
+  },
+  {
+   "text": "お疲れさまです、手伝いましょうか？",
+   "en": "Hello, do you need a hand?",
+   "ko": "수고하셨습니다, 도와드릴까요?",
+   "blank": "お疲れさまです"
+  }
+ ],
+ "e|おっしゃる通りです": [
+  {
+   "text": "おっしゃる通りです、まずは落ち着いて考えましょう。",
+   "en": "You're absolutely right, let's calm down and think first.",
+   "ko": "말씀하신 대로 우선 침착하게 생각해봅시다.",
+   "blank": "おっしゃる通りです"
+  },
+  {
+   "text": "おっしゃる通りです、それについてもう一度確認します。",
+   "en": "You're right, I'll check on that again.",
+   "ko": "말씀하신 대로 다시 한 번 확인하겠습니다.",
+   "blank": "おっしゃる通りです"
+  },
+  {
+   "text": "おっしゃる通りです、この案が一番いいと思います。",
+   "en": "You're right, I think this plan is the best.",
+   "ko": "말씀하신 대로 이 방법이 제일 좋은 것 같아요.",
+   "blank": "おっしゃる通りです"
+  }
+ ],
+ "e|おはようございます": [
+  {
+   "text": "おはようございます、きょうもいいてんきですね。",
+   "en": "Good morning, the weather is nice today.",
+   "ko": "좋은 아침입니다, 오늘도 날씨가 좋네요.",
+   "blank": "おはようございます"
+  },
+  {
+   "text": "おはようございます、ねこがまっています。",
+   "en": "Good morning, the cat is waiting.",
+   "ko": "좋은 아침입니다, 고양이가 기다리고 있어요.",
+   "blank": "おはようございます"
+  },
+  {
+   "text": "おはようございます、パンをたべますか。",
+   "en": "Good morning, do you want some bread?",
+   "ko": "좋은 아침입니다, 빵 먹을래요?",
+   "blank": "おはようございます"
+  }
+ ],
+ "e|かしこまりました": [
+  {
+   "text": "すぐに新しいタオルをお持ちします。かしこまりました。",
+   "en": "I will bring you a new towel right away. Understood.",
+   "ko": "새 수건 바로 가져다 드리겠습니다. 알겠습니다.",
+   "blank": "かしこまりました"
+  },
+  {
+   "text": "お席が空き次第、ご案内します。かしこまりました。",
+   "en": "As soon as a table is available, I will guide you. Understood.",
+   "ko": "자리가 나는 대로 안내해 드리겠습니다. 알겠습니다.",
+   "blank": "かしこまりました"
+  },
+  {
+   "text": "会議は午後三時に変更ですね。かしこまりました。",
+   "en": "The meeting has been changed to three in the afternoon, correct? Understood.",
+   "ko": "회의가 오후 세 시로 변경된 거죠? 알겠습니다.",
+   "blank": "かしこまりました"
+  }
+ ],
+ "e|ご無理のない範囲で": [
+  {
+   "text": "ご無理のない範囲で手伝ってもらえると嬉しいです。",
+   "en": "I’d be happy if you could help out, but only as much as you comfortably can.",
+   "ko": "무리하지 않는 범위에서 도와주시면 기쁩니다.",
+   "blank": "ご無理のない範囲で"
+  },
+  {
+   "text": "ご無理のない範囲で参加してくださいね。",
+   "en": "Please participate only as much as you can without overdoing it.",
+   "ko": "무리하지 않는 범위에서 참여해 주세요.",
+   "blank": "ご無理のない範囲で"
+  },
+  {
+   "text": "ご無理のない範囲で連絡をいただけますか。",
+   "en": "Could you contact me if and when you’re able to, without pushing yourself?",
+   "ko": "무리하지 않는 범위에서 연락해 주실 수 있나요?",
+   "blank": "ご無理のない範囲で"
+  }
+ ],
+ "e|ご迷惑をおかけしました": [
+  {
+   "text": "昨日は遅れてしまい、ご迷惑をおかけしました。",
+   "en": "I'm sorry for being late yesterday and causing trouble.",
+   "ko": "어제 늦어서 폐를 끼쳐 죄송합니다.",
+   "blank": "ご迷惑をおかけしました"
+  },
+  {
+   "text": "音が大きくてご迷惑をおかけしました。",
+   "en": "Sorry for causing trouble with the loud noise.",
+   "ko": "소리가 커서 폐를 끼쳐 죄송합니다.",
+   "blank": "ご迷惑をおかけしました"
+  },
+  {
+   "text": "急に予定を変更してご迷惑をおかけしました。",
+   "en": "Sorry for the trouble caused by the sudden change of plans.",
+   "ko": "갑자기 일정을 변경해서 폐를 끼쳐 죄송합니다.",
+   "blank": "ご迷惑をおかけしました"
+  }
+ ],
+ "e|ご確認ください": [
+  {
+   "text": "メールの内容をご確認ください。",
+   "en": "Please check the contents of the email.",
+   "ko": "이메일 내용을 확인해 주세요.",
+   "blank": "ご確認ください"
+  },
+  {
+   "text": "提出物が揃っているかご確認ください。",
+   "en": "Please check if you have all the documents ready.",
+   "ko": "제출물이 모두 준비되었는지 확인해 주세요.",
+   "blank": "ご確認ください"
+  },
+  {
+   "text": "このリンクからご確認ください。",
+   "en": "Please check from this link.",
+   "ko": "이 링크에서 확인해 주세요.",
+   "blank": "ご確認ください"
+  }
+ ],
+ "e|ここだけの話": [
+  {
+   "text": "ここだけの話、実は犬より猫の方が好きなんだ。",
+   "en": "Just between us, I actually like cats more than dogs.",
+   "ko": "여기서만 하는 얘긴데, 사실 나는 개보다 고양이를 더 좋아해.",
+   "blank": "ここだけの話"
+  },
+  {
+   "text": "ここだけの話、来月旅行に行く予定なんだ。",
+   "en": "Just between us, I’m planning to go on a trip next month.",
+   "ko": "여기서만 하는 얘긴데, 나 다음 달에 여행 갈 예정이야.",
+   "blank": "ここだけの話"
+  },
+  {
+   "text": "ここだけの話、昨日のテスト全然自信なかった。",
+   "en": "Just between us, I wasn’t confident at all about yesterday’s test.",
+   "ko": "여기서만 하는 얘긴데, 어제 시험 진짜 자신 없었어.",
+   "blank": "ここだけの話"
+  }
+ ],
+ "e|ごちそうさまでした": [
+  {
+   "text": "ごちそうさまでした、おいしかったです。",
+   "en": "Thank you for the meal, it was delicious.",
+   "ko": "잘 먹었습니다, 맛있었어요.",
+   "blank": "ごちそうさまでした"
+  },
+  {
+   "text": "もう食べました。ごちそうさまでした。",
+   "en": "I have finished eating. Thank you for the meal.",
+   "ko": "다 먹었어요. 잘 먹었습니다.",
+   "blank": "ごちそうさまでした"
+  },
+  {
+   "text": "お母さん、ごちそうさまでした。",
+   "en": "Mom, thank you for the meal.",
+   "ko": "어머니, 잘 먹었습니다.",
+   "blank": "ごちそうさまでした"
+  }
+ ],
+ "e|これください": [
+  {
+   "text": "みず、これください。",
+   "en": "Water, this please.",
+   "ko": "물, 이거 주세요.",
+   "blank": "これください"
+  },
+  {
+   "text": "あかいの、これください。",
+   "en": "The red one, this please.",
+   "ko": "빨간 것, 이거 주세요.",
+   "blank": "これください"
+  },
+  {
+   "text": "ちいさいの、これください。",
+   "en": "The small one, this please.",
+   "ko": "작은 것, 이거 주세요.",
+   "blank": "これください"
+  }
+ ],
+ "e|こんにちは": [
+  {
+   "text": "こんにちは、げんきですか。",
+   "en": "Hello, how are you?",
+   "ko": "안녕하세요, 잘 지내세요?",
+   "blank": "こんにちは"
+  },
+  {
+   "text": "こんにちは、ともだち。",
+   "en": "Hello, friend.",
+   "ko": "안녕, 친구.",
+   "blank": "こんにちは"
+  },
+  {
+   "text": "こんにちは、おなまえは？",
+   "en": "Hello, what is your name?",
+   "ko": "안녕하세요, 이름이 뭐예요?",
+   "blank": "こんにちは"
+  }
+ ],
+ "e|じゃあね": [
+  {
+   "text": "じゃあね、またあした。",
+   "en": "See you, see you tomorrow.",
+   "ko": "잘 가, 내일 또 봐.",
+   "blank": "じゃあね"
+  },
+  {
+   "text": "じゃあね、きをつけて。",
+   "en": "Bye, take care.",
+   "ko": "잘 가, 조심해.",
+   "blank": "じゃあね"
+  },
+  {
+   "text": "じゃあね、いってきます。",
+   "en": "Bye, I’m off now.",
+   "ko": "잘 가, 다녀올게.",
+   "blank": "じゃあね"
+  }
+ ],
+ "e|すみません": [
+  {
+   "text": "すみません、トイレはどこですか。",
+   "en": "Excuse me, where is the bathroom?",
+   "ko": "실례합니다, 화장실이 어디에요?",
+   "blank": "すみません"
+  },
+  {
+   "text": "すみません、もういちどおねがいします。",
+   "en": "Excuse me, one more time please.",
+   "ko": "실례합니다, 한 번 더 부탁해요.",
+   "blank": "すみません"
+  },
+  {
+   "text": "すみません、ちょっといいですか。",
+   "en": "Excuse me, do you have a moment?",
+   "ko": "실례합니다, 잠깐 괜찮으세요?",
+   "blank": "すみません"
+  }
+ ],
+ "e|せっかくだから": [
+  {
+   "text": "せっかくだから、一緒に写真を撮ろう。",
+   "en": "Since we're here, let's take a picture together.",
+   "ko": "기왕 온 김에 같이 사진 찍자.",
+   "blank": "せっかくだから"
+  },
+  {
+   "text": "せっかくだから、新しい料理を食べてみる。",
+   "en": "Since it's a good chance, I'll try the new dish.",
+   "ko": "기왕 온 김에 새로운 요리를 먹어볼게.",
+   "blank": "せっかくだから"
+  },
+  {
+   "text": "せっかくだから、もう少し散歩しようか。",
+   "en": "Since we're out, shall we walk a bit more?",
+   "ko": "기왕 나왔으니까 조금 더 산책할까?",
+   "blank": "せっかくだから"
+  }
+ ],
+ "e|そういえば": [
+  {
+   "text": "そういえば、かさを持ってきた？",
+   "en": "By the way, did you bring an umbrella?",
+   "ko": "그런데, 우산 가져왔어?",
+   "blank": "そういえば"
+  },
+  {
+   "text": "そういえば、ゆうべはよく眠れた？",
+   "en": "By the way, did you sleep well last night?",
+   "ko": "그나저나, 어젯밤에 잘 잤어?",
+   "blank": "そういえば"
+  },
+  {
+   "text": "そういえば、あのカフェに行ったことある？",
+   "en": "By the way, have you ever been to that cafe?",
+   "ko": "그런데, 그 카페 가본 적 있어?",
+   "blank": "そういえば"
+  }
+ ],
+ "e|そうです": [
+  {
+   "text": "はい、そうです。",
+   "en": "Yes, that's right.",
+   "ko": "네, 맞아요.",
+   "blank": "そうです"
+  },
+  {
+   "text": "いいえ、そうです。",
+   "en": "No, that's correct.",
+   "ko": "아니요, 맞아요.",
+   "blank": "そうです"
+  },
+  {
+   "text": "これはりんごそうです。",
+   "en": "This is an apple.",
+   "ko": "이것은 사과예요.",
+   "blank": "そうです"
+  }
+ ],
+ "e|そうですね": [
+  {
+   "text": "そうですね、今日はいい天気ですね。",
+   "en": "Yes, the weather is nice today.",
+   "ko": "그래요, 오늘은 날씨가 좋네요.",
+   "blank": "そうですね"
+  },
+  {
+   "text": "そうですね、少し待ってください。",
+   "en": "Yes, please wait a moment.",
+   "ko": "그래요, 잠깐만 기다려 주세요.",
+   "blank": "そうですね"
+  },
+  {
+   "text": "そうですね、あとで行きましょう。",
+   "en": "Yes, let's go later.",
+   "ko": "그래요, 나중에 갑시다.",
+   "blank": "そうですね"
+  }
+ ],
+ "e|そうなんだ": [
+  {
+   "text": "雨が降るんだ。そうなんだ。",
+   "en": "It's going to rain? I see.",
+   "ko": "비가 온다고? 그렇구나.",
+   "blank": "そうなんだ"
+  },
+  {
+   "text": "君は猫が好きなんだ。そうなんだ。",
+   "en": "You like cats. I see.",
+   "ko": "너는 고양이를 좋아하는구나. 그렇구나.",
+   "blank": "そうなんだ"
+  },
+  {
+   "text": "今日、休みなんだ。そうなんだ。",
+   "en": "Today is a day off. I see.",
+   "ko": "오늘 쉬는 날이구나. 그렇구나.",
+   "blank": "そうなんだ"
+  }
+ ],
+ "e|それはそれとして": [
+  {
+   "text": "それはそれとして、明日の計画どうする？",
+   "en": "That aside, what should we do about tomorrow's plans?",
+   "ko": "그건 그렇다 치고, 내일 계획은 어떻게 할까?",
+   "blank": "それはそれとして"
+  },
+  {
+   "text": "それはそれとして、お腹すいてない？",
+   "en": "That aside, aren't you hungry?",
+   "ko": "그건 그렇다 치고, 배고프지 않아?",
+   "blank": "それはそれとして"
+  },
+  {
+   "text": "それはそれとして、この映画すごく良かったよ。",
+   "en": "That aside, this movie was really good.",
+   "ko": "그건 그렇다 치고, 이 영화 정말 좋았어.",
+   "blank": "それはそれとして"
+  }
+ ],
+ "e|ちょっと難しいかもです": [
+  {
+   "text": "このパズルはちょっと難しいかもです。",
+   "en": "This puzzle might be a little difficult.",
+   "ko": "이 퍼즐은 좀 어려울지도 몰라요.",
+   "blank": "ちょっと難しいかもです"
+  },
+  {
+   "text": "説明を聞いても、ちょっと難しいかもです。",
+   "en": "Even after hearing the explanation, it might be a little difficult.",
+   "ko": "설명을 들어도 좀 어려울지도 몰라요.",
+   "blank": "ちょっと難しいかもです"
+  },
+  {
+   "text": "今日の宿題、ちょっと難しいかもです。",
+   "en": "Today's homework might be a little difficult.",
+   "ko": "오늘 숙제는 좀 어려울지도 몰라요.",
+   "blank": "ちょっと難しいかもです"
+  }
+ ],
+ "e|ちょっと待ってください": [
+  {
+   "text": "ちょっと待ってください、今行きます。",
+   "en": "Please wait a moment, I am coming now.",
+   "ko": "잠깐만 기다려 주세요, 지금 갈게요.",
+   "blank": "ちょっと待ってください"
+  },
+  {
+   "text": "ちょっと待ってください、お金を出します。",
+   "en": "Please wait a moment, I will get the money.",
+   "ko": "잠깐만 기다려 주세요, 돈을 꺼낼게요.",
+   "blank": "ちょっと待ってください"
+  },
+  {
+   "text": "ちょっと待ってください、ドアを開けます。",
+   "en": "Please wait a moment, I will open the door.",
+   "ko": "잠깐만 기다려 주세요, 문을 열게요.",
+   "blank": "ちょっと待ってください"
+  }
+ ],
+ "e|ちょっと聞いてよ": [
+  {
+   "text": "ねえ、ちょっと聞いてよ、今日すごくいいことがあったんだ。",
+   "en": "Hey, listen, something really good happened today.",
+   "ko": "있잖아, 오늘 정말 좋은 일이 있었어.",
+   "blank": "ちょっと聞いてよ"
+  },
+  {
+   "text": "ちょっと聞いてよ、さっき変な人に話しかけられたんだ。",
+   "en": "Listen, a strange person talked to me a while ago.",
+   "ko": "있잖아, 아까 이상한 사람이 나한테 말을 걸었어.",
+   "blank": "ちょっと聞いてよ"
+  },
+  {
+   "text": "ちょっと聞いてよ、明日の予定が急に変わったんだ。",
+   "en": "Listen, tomorrow's plans suddenly changed.",
+   "ko": "있잖아, 내일 일정이 갑자기 바뀌었어.",
+   "blank": "ちょっと聞いてよ"
+  }
+ ],
+ "e|トイレはどこですか": [
+  {
+   "text": "こんにちは、トイレはどこですか。",
+   "en": "Hello, where is the bathroom?",
+   "ko": "안녕하세요, 화장실이 어디예요?",
+   "blank": "トイレはどこですか"
+  },
+  {
+   "text": "おみせでトイレはどこですか。",
+   "en": "Where is the bathroom in the shop?",
+   "ko": "가게에서 화장실이 어디예요?",
+   "blank": "トイレはどこですか"
+  },
+  {
+   "text": "トイレはどこですか、おねがいします。",
+   "en": "Where is the bathroom, please?",
+   "ko": "화장실이 어디인지 알려주세요.",
+   "blank": "トイレはどこですか"
+  }
+ ],
+ "e|どうしましたか": [
+  {
+   "text": "顔色が悪いですね。どうしましたか。",
+   "en": "You don't look well. What's wrong?",
+   "ko": "안색이 안 좋아 보여요. 무슨 일이에요?",
+   "blank": "どうしましたか"
+  },
+  {
+   "text": "泣いていますね。どうしましたか。",
+   "en": "You're crying. What happened?",
+   "ko": "울고 있네요. 무슨 일이에요?",
+   "blank": "どうしましたか"
+  },
+  {
+   "text": "何か困っていますか。どうしましたか。",
+   "en": "Are you having trouble? What's wrong?",
+   "ko": "뭔가 곤란한 일이 있어요? 무슨 일이에요?",
+   "blank": "どうしましたか"
+  }
+ ],
+ "e|どうしよう": [
+  {
+   "text": "かぎをなくして、どうしよう。",
+   "en": "I lost my keys, what should I do?",
+   "ko": "열쇠를 잃어버려서, 어떻게 하지?",
+   "blank": "どうしよう"
+  },
+  {
+   "text": "雨がふってきた、どうしよう。",
+   "en": "It started raining, what should I do?",
+   "ko": "비가 오기 시작했어, 어떻게 하지?",
+   "blank": "どうしよう"
+  },
+  {
+   "text": "しゅくだいをわすれた、どうしよう。",
+   "en": "I forgot my homework, what should I do?",
+   "ko": "숙제를 잊어버렸어, 어떻게 하지?",
+   "blank": "どうしよう"
+  }
+ ],
+ "e|とおっしゃいますと": [
+  {
+   "text": "とおっしゃいますと、もう少し詳しく説明していただけますか。",
+   "en": "When you say that, could you please explain a bit more?",
+   "ko": "그렇게 말씀하시면 좀 더 자세히 설명해 주실 수 있나요?",
+   "blank": "とおっしゃいますと"
+  },
+  {
+   "text": "とおっしゃいますと、どのような意味でしょうか。",
+   "en": "When you say that, what do you mean?",
+   "ko": "그렇게 말씀하시면 어떤 의미인가요?",
+   "blank": "とおっしゃいますと"
+  },
+  {
+   "text": "とおっしゃいますと、この資料を今すぐ確認すればいいですか。",
+   "en": "When you say that, do you mean I should check this document right now?",
+   "ko": "그렇게 말씀하시면 이 자료를 지금 바로 확인하면 되나요?",
+   "blank": "とおっしゃいますと"
+  }
+ ],
+ "e|とりあえず": [
+  {
+   "text": "とりあえずここに座ろう。",
+   "en": "Let's sit here for now.",
+   "ko": "일단 여기 앉자.",
+   "blank": "とりあえず"
+  },
+  {
+   "text": "とりあえず水をください。",
+   "en": "Water for now, please.",
+   "ko": "일단 물 주세요.",
+   "blank": "とりあえず"
+  },
+  {
+   "text": "とりあえずメールを送ります。",
+   "en": "I'll send an email for now.",
+   "ko": "일단 메일을 보낼게요.",
+   "blank": "とりあえず"
+  }
+ ],
+ "e|とんでもないです": [
+  {
+   "text": "そんなに褒められるなんて、とんでもないです。",
+   "en": "I really don’t deserve such praise.",
+   "ko": "그렇게 칭찬받을 일 아니에요.",
+   "blank": "とんでもないです"
+  },
+  {
+   "text": "助けてくれてありがとう、と言われたけど、とんでもないです。",
+   "en": "You thanked me for helping, but it's nothing at all.",
+   "ko": "도와줬다고 고마워했지만, 별거 아니에요.",
+   "blank": "とんでもないです"
+  },
+  {
+   "text": "お土産なんて、とんでもないです。お気遣いなく。",
+   "en": "Oh, a souvenir? No, you really shouldn’t have.",
+   "ko": "선물이라니, 아닙니다. 신경 쓰지 마세요.",
+   "blank": "とんでもないです"
+  }
+ ],
+ "e|なるほど": [
+  {
+   "text": "なるほど、それは便利ですね。",
+   "en": "I see, that's convenient.",
+   "ko": "그렇군요, 그거 편리하네요.",
+   "blank": "なるほど"
+  },
+  {
+   "text": "なるほど、そういうことか。",
+   "en": "I see, so that's how it is.",
+   "ko": "그렇군, 그런 거였구나.",
+   "blank": "なるほど"
+  },
+  {
+   "text": "なるほど、わかりました。",
+   "en": "I see, I understand.",
+   "ko": "그렇군요, 알겠습니다.",
+   "blank": "なるほど"
+  }
+ ],
+ "e|はじめまして": [
+  {
+   "text": "はじめまして、ねこです。",
+   "en": "Nice to meet you, I am a cat.",
+   "ko": "처음 뵙겠습니다, 저는 고양이입니다.",
+   "blank": "はじめまして"
+  },
+  {
+   "text": "はじめまして、ともだちになりたいです。",
+   "en": "Nice to meet you, I want to be friends.",
+   "ko": "처음 뵙겠습니다, 친구가 되고 싶어요.",
+   "blank": "はじめまして"
+  },
+  {
+   "text": "はじめまして、おなまえは？",
+   "en": "Nice to meet you, what is your name?",
+   "ko": "처음 뵙겠습니다, 이름이 뭐예요?",
+   "blank": "はじめまして"
+  }
+ ],
+ "e|マジで": [
+  {
+   "text": "マジで今日雨降るの？",
+   "en": "Is it seriously going to rain today?",
+   "ko": "오늘 진짜로 비 와?",
+   "blank": "マジで"
+  },
+  {
+   "text": "マジでそれ食べたの？",
+   "en": "Did you really eat that?",
+   "ko": "그거 진짜로 먹었어?",
+   "blank": "マジで"
+  },
+  {
+   "text": "マジで助かった、ありがとう。",
+   "en": "You really helped me, thank you.",
+   "ko": "진짜로 고마워, 덕분에 살았어.",
+   "blank": "マジで"
+  }
+ ],
+ "e|また明日": [
+  {
+   "text": "じゃあ、また明日。",
+   "en": "See you tomorrow, then.",
+   "ko": "그럼 내일 또 봐.",
+   "blank": "また明日"
+  },
+  {
+   "text": "今日はここまで、また明日。",
+   "en": "That's it for today, see you tomorrow.",
+   "ko": "오늘은 여기까지, 내일 또 봐.",
+   "blank": "また明日"
+  },
+  {
+   "text": "また明日元気でね。",
+   "en": "Take care, see you tomorrow.",
+   "ko": "내일도 건강하게, 또 보자.",
+   "blank": "また明日"
+  }
+ ],
+ "e|まだです": [
+  {
+   "text": "ごはんはまだです。",
+   "en": "The meal isn't ready yet.",
+   "ko": "밥은 아직입니다.",
+   "blank": "まだです"
+  },
+  {
+   "text": "しゅくだいはまだです。",
+   "en": "I haven't done my homework yet.",
+   "ko": "숙제는 아직입니다.",
+   "blank": "まだです"
+  },
+  {
+   "text": "おふろにはいっていません、まだです。",
+   "en": "I haven't taken a bath yet.",
+   "ko": "목욕은 아직 안 했습니다.",
+   "blank": "まだです"
+  }
+ ],
+ "e|もう一度お願いします": [
+  {
+   "text": "ゆっくり、もう一度お願いします。",
+   "en": "Slowly, please say it one more time.",
+   "ko": "천천히, 한 번 더 말씀해 주세요.",
+   "blank": "もう一度お願いします"
+  },
+  {
+   "text": "それは何ですか？もう一度お願いします。",
+   "en": "What is that? Please say it one more time.",
+   "ko": "그게 뭐예요? 한 번 더 말씀해 주세요.",
+   "blank": "もう一度お願いします"
+  },
+  {
+   "text": "名前をもう一度お願いします。",
+   "en": "Your name again, please.",
+   "ko": "이름을 다시 한 번 부탁합니다.",
+   "blank": "もう一度お願いします"
+  }
+ ],
+ "e|もう終わりました": [
+  {
+   "text": "宿題はもう終わりました。",
+   "en": "I already finished my homework.",
+   "ko": "숙제는 이미 끝났어요.",
+   "blank": "もう終わりました"
+  },
+  {
+   "text": "会議はもう終わりましたか？",
+   "en": "Has the meeting finished already?",
+   "ko": "회의는 이미 끝났어요?",
+   "blank": "もう終わりました"
+  },
+  {
+   "text": "テストはもう終わりました。",
+   "en": "The test is already finished.",
+   "ko": "시험은 이미 끝났어요.",
+   "blank": "もう終わりました"
+  }
+ ],
+ "e|やっぱり": [
+  {
+   "text": "やっぱり今日は寒いね。",
+   "en": "It's cold today after all.",
+   "ko": "역시 오늘은 춥네.",
+   "blank": "やっぱり"
+  },
+  {
+   "text": "やっぱり彼は来なかった。",
+   "en": "He didn't come after all.",
+   "ko": "역시 그는 오지 않았어.",
+   "blank": "やっぱり"
+  },
+  {
+   "text": "やっぱりコーヒーが好き。",
+   "en": "I like coffee after all.",
+   "ko": "역시 커피가 좋아.",
+   "blank": "やっぱり"
+  }
+ ],
+ "e|よかったら": [
+  {
+   "text": "よかったら、一緒に座りませんか。",
+   "en": "If you like, would you like to sit together?",
+   "ko": "괜찮으면 같이 앉을래요?",
+   "blank": "よかったら"
+  },
+  {
+   "text": "よかったら、お茶どうぞ。",
+   "en": "If you like, please have some tea.",
+   "ko": "괜찮으면 차 드세요.",
+   "blank": "よかったら"
+  },
+  {
+   "text": "よかったら、また遊びに来てね。",
+   "en": "If you like, come visit again.",
+   "ko": "괜찮으면 또 놀러 와요.",
+   "blank": "よかったら"
+  }
+ ],
+ "e|よろしくお願いします": [
+  {
+   "text": "はじめまして、よろしくお願いします。",
+   "en": "Nice to meet you, blank.",
+   "ko": "처음 뵙겠습니다, blank.",
+   "blank": "よろしくお願いします"
+  },
+  {
+   "text": "これからもよろしくお願いします。",
+   "en": "Please take care of me from now on, blank.",
+   "ko": "앞으로도 잘 부탁드립니다, blank.",
+   "blank": "よろしくお願いします"
+  },
+  {
+   "text": "どうぞよろしくお願いします。",
+   "en": "Please, blank.",
+   "ko": "잘 부탁드립니다, blank.",
+   "blank": "よろしくお願いします"
+  }
+ ],
+ "e|わかりました": [
+  {
+   "text": "わかりました、ここでまちます。",
+   "en": "Okay, I will wait here.",
+   "ko": "알겠습니다, 여기서 기다릴게요.",
+   "blank": "わかりました"
+  },
+  {
+   "text": "わかりました、もういちどいいます。",
+   "en": "Okay, I will say it again.",
+   "ko": "알겠습니다, 다시 말할게요.",
+   "blank": "わかりました"
+  },
+  {
+   "text": "わかりました、きをつけます。",
+   "en": "Okay, I will be careful.",
+   "ko": "알겠습니다, 조심할게요.",
+   "blank": "わかりました"
+  }
+ ],
+ "e|わかりません": [
+  {
+   "text": "すみません、わかりません。",
+   "en": "Sorry, I don't understand.",
+   "ko": "죄송해요, 이해하지 못해요.",
+   "blank": "わかりません"
+  },
+  {
+   "text": "これはなんですか？わかりません。",
+   "en": "What is this? I don't understand.",
+   "ko": "이게 뭐예요? 이해하지 못해요.",
+   "blank": "わかりません"
+  },
+  {
+   "text": "どこにいきますか？わかりません。",
+   "en": "Where do I go? I don't understand.",
+   "ko": "어디로 가요? 이해하지 못해요.",
+   "blank": "わかりません"
+  }
+ ],
+ "g|1:0": [
+  {
+   "text": "これはいぬです。",
+   "en": "This is a dog.",
+   "ko": "이것은 개입니다.",
+   "blank": "これはいぬです"
+  },
+  {
+   "text": "これはみずです。",
+   "en": "This is water.",
+   "ko": "이것은 물입니다.",
+   "blank": "これはみずです"
+  },
+  {
+   "text": "ここはへやです。",
+   "en": "Here is a room.",
+   "ko": "여기는 방입니다.",
+   "blank": "ここはへやです"
+  }
+ ],
+ "g|1:1": [
+  {
+   "text": "水はありますか。",
+   "en": "Is there water?",
+   "ko": "물이 있습니까?",
+   "blank": "はありますか。"
+  },
+  {
+   "text": "本はどこですか。",
+   "en": "Where is the book?",
+   "ko": "책은 어디에 있습니까?",
+   "blank": "はどこですか。"
+  },
+  {
+   "text": "犬はいますか。",
+   "en": "Is there a dog?",
+   "ko": "개가 있습니까?",
+   "blank": "はいますか。"
+  }
+ ],
+ "g|1:2": [
+  {
+   "text": "よるはテレビを見ます。",
+   "en": "I watch TV at night.",
+   "ko": "밤에는 텔레비전을 봅니다.",
+   "blank": "見ます。"
+  },
+  {
+   "text": "おちゃはのみません。",
+   "en": "I do not drink tea.",
+   "ko": "차는 마시지 않습니다.",
+   "blank": "のみません。"
+  },
+  {
+   "text": "はしをつかいます。",
+   "en": "I use chopsticks.",
+   "ko": "젓가락을 사용합니다.",
+   "blank": "つかいます。"
+  }
+ ],
+ "g|1:3": [
+  {
+   "text": "これはあなたのほんです。",
+   "en": "This is your book.",
+   "ko": "이것은 당신의 책입니다.",
+   "blank": "あなたの"
+  },
+  {
+   "text": "それはともだちのいぬです。",
+   "en": "That is my friend's dog.",
+   "ko": "저것은 친구의 개입니다.",
+   "blank": "ともだちの"
+  },
+  {
+   "text": "これはせんせいのペンです。",
+   "en": "This is the teacher's pen.",
+   "ko": "이것은 선생님의 펜입니다.",
+   "blank": "せんせいの"
+  }
+ ],
+ "g|1:4": [
+  {
+   "text": "これはりんごです。",
+   "en": "This is an apple.",
+   "ko": "이것은 사과입니다.",
+   "blank": "これは"
+  },
+  {
+   "text": "どれがあなたのかさですか。",
+   "en": "Which one is your umbrella?",
+   "ko": "어느 것이 당신의 우산입니까?",
+   "blank": "どれが"
+  },
+  {
+   "text": "あれをみてください。",
+   "en": "Please look at that over there.",
+   "ko": "저것을 봐 주세요.",
+   "blank": "あれを"
+  }
+ ],
+ "g|1:5": [
+  {
+   "text": "みずをください。",
+   "en": "Please give me water.",
+   "ko": "물 주세요.",
+   "blank": "をください。"
+  },
+  {
+   "text": "りんごをください。",
+   "en": "Please give me an apple.",
+   "ko": "사과 주세요.",
+   "blank": "をください。"
+  },
+  {
+   "text": "メニューをください。",
+   "en": "Please give me the menu.",
+   "ko": "메뉴 주세요.",
+   "blank": "をください。"
+  }
+ ],
+ "g|1:6": [
+  {
+   "text": "毎日、学校に行きます。",
+   "en": "I go to school every day.",
+   "ko": "나는 매일 학교에 갑니다.",
+   "blank": "学校に行きます。"
+  },
+  {
+   "text": "友だちの家へ行きます。",
+   "en": "I go to my friend's house.",
+   "ko": "나는 친구 집에 갑니다.",
+   "blank": "家へ行きます。"
+  },
+  {
+   "text": "午後、公園に行きます。",
+   "en": "In the afternoon, I go to the park.",
+   "ko": "오후에 공원에 갑니다.",
+   "blank": "公園に行きます。"
+  }
+ ],
+ "g|1:7": [
+  {
+   "text": "かばんの中に本があります。",
+   "en": "There is a book in the bag.",
+   "ko": "가방 안에 책이 있습니다.",
+   "blank": "があります。"
+  },
+  {
+   "text": "ねこはそとにいます。",
+   "en": "The cat is outside.",
+   "ko": "고양이가 밖에 있습니다.",
+   "blank": "にいます。"
+  },
+  {
+   "text": "トイレはここにありますか。",
+   "en": "Is the bathroom here?",
+   "ko": "화장실이 여기에 있나요?",
+   "blank": "にありますか。"
+  }
+ ],
+ "g|2:0": [
+  {
+   "text": "朝ごはんを食べました。",
+   "en": "I ate breakfast.",
+   "ko": "아침밥을 먹었어요.",
+   "blank": "食べました。"
+  },
+  {
+   "text": "今日は雨が降りませんでした。",
+   "en": "It did not rain today.",
+   "ko": "오늘은 비가 오지 않았어요.",
+   "blank": "降りませんでした。"
+  },
+  {
+   "text": "もう宿題を終わりましたか。",
+   "en": "Have you already finished your homework?",
+   "ko": "이미 숙제를 끝냈어요?",
+   "blank": "終わりましたか。"
+  }
+ ],
+ "g|2:1": [
+  {
+   "text": "ドアを開けてください。",
+   "en": "Please open the door.",
+   "ko": "문을 열어 주세요.",
+   "blank": "開けてください。"
+  },
+  {
+   "text": "ちょっと待ってください。",
+   "en": "Please wait a moment.",
+   "ko": "잠깐만 기다려 주세요.",
+   "blank": "待ってください。"
+  },
+  {
+   "text": "これを見てください。",
+   "en": "Please look at this.",
+   "ko": "이것을 봐 주세요.",
+   "blank": "見てください。"
+  }
+ ],
+ "g|2:2": [
+  {
+   "text": "友だちと話しています。",
+   "en": "I am talking with my friend.",
+   "ko": "친구와 이야기하고 있어요.",
+   "blank": "話しています。"
+  },
+  {
+   "text": "毎日日本語を勉強しています。",
+   "en": "I am studying Japanese every day.",
+   "ko": "매일 일본어를 공부하고 있어요.",
+   "blank": "勉強しています。"
+  },
+  {
+   "text": "ここに車が止まっています。",
+   "en": "A car is parked here.",
+   "ko": "여기에 차가 세워져 있어요.",
+   "blank": "止まっています。"
+  }
+ ],
+ "g|2:3": [
+  {
+   "text": "今日は早く帰りたいです。",
+   "en": "I want to go home early today.",
+   "ko": "오늘은 일찍 집에 가고 싶어요.",
+   "blank": "帰りたいです。"
+  },
+  {
+   "text": "新しい本を読みたいです。",
+   "en": "I want to read a new book.",
+   "ko": "새로운 책을 읽고 싶어요.",
+   "blank": "読みたいです。"
+  },
+  {
+   "text": "日本の料理を作りたいです。",
+   "en": "I want to cook Japanese food.",
+   "ko": "일본 요리를 만들고 싶어요.",
+   "blank": "作りたいです。"
+  }
+ ],
+ "g|2:4": [
+  {
+   "text": "この本を読んでもいいですか。",
+   "en": "May I read this book?",
+   "ko": "이 책을 읽어도 될까요?",
+   "blank": "読んでもいいですか。"
+  },
+  {
+   "text": "トイレに行ってもいいですか。",
+   "en": "May I go to the bathroom?",
+   "ko": "화장실에 가도 될까요?",
+   "blank": "行ってもいいですか。"
+  },
+  {
+   "text": "水を飲んでもいいですか。",
+   "en": "May I drink some water?",
+   "ko": "물을 마셔도 돼요?",
+   "blank": "飲んでもいいですか。"
+  }
+ ],
+ "g|2:5": [
+  {
+   "text": "公園で散歩しませんか。",
+   "en": "Shall we take a walk in the park?",
+   "ko": "공원에서 산책하지 않을래요?",
+   "blank": "しませんか。"
+  },
+  {
+   "text": "カフェでお茶しましょう。",
+   "en": "Let's have tea at a cafe.",
+   "ko": "카페에서 차 마시자.",
+   "blank": "しましょう。"
+  },
+  {
+   "text": "映画を見に行きませんか。",
+   "en": "Would you like to go see a movie?",
+   "ko": "영화 보러 가지 않을래요?",
+   "blank": "行きませんか。"
+  }
+ ],
+ "g|2:6": [
+  {
+   "text": "富士山を見たことがあります。",
+   "en": "I have seen Mt. Fuji.",
+   "ko": "후지산을 본 적이 있습니다.",
+   "blank": "たことがあります。"
+  },
+  {
+   "text": "寿司を食べたことがありますか。",
+   "en": "Have you eaten sushi before?",
+   "ko": "초밥을 먹어본 적이 있나요?",
+   "blank": "たことがありますか。"
+  },
+  {
+   "text": "日本語で話したことがあります。",
+   "en": "I have spoken in Japanese before.",
+   "ko": "일본어로 말해본 적이 있습니다.",
+   "blank": "たことがあります。"
+  }
+ ],
+ "g|2:7": [
+  {
+   "text": "寒いから、窓を閉めます。",
+   "en": "Because it's cold, I'll close the window.",
+   "ko": "추우니까 창문을 닫을게요.",
+   "blank": "から"
+  },
+  {
+   "text": "お腹がすいたから、ご飯を食べます。",
+   "en": "Because I'm hungry, I'll eat a meal.",
+   "ko": "배가 고프니까 밥을 먹을게요.",
+   "blank": "から"
+  },
+  {
+   "text": "疲れたから、早く寝ます。",
+   "en": "Because I'm tired, I'll go to bed early.",
+   "ko": "피곤하니까 일찍 잘게요.",
+   "blank": "から"
+  }
+ ],
+ "g|3:0": [
+  {
+   "text": "今日は雨じゃないね。",
+   "en": "It's not raining today, right?",
+   "ko": "오늘은 비가 안 오네.",
+   "blank": "ない"
+  },
+  {
+   "text": "これ、もう食べた？",
+   "en": "Did you already eat this?",
+   "ko": "이거 벌써 먹었어?",
+   "blank": "た"
+  },
+  {
+   "text": "その話、知らないよ。",
+   "en": "I don't know that story.",
+   "ko": "그 이야기 몰라.",
+   "blank": "ない"
+  }
+ ],
+ "g|3:1": [
+  {
+   "text": "ごめん、今日は行けないんだ。",
+   "en": "Sorry, I can't go today.",
+   "ko": "미안, 오늘은 갈 수 없어.",
+   "blank": "ないんだ。"
+  },
+  {
+   "text": "ちょっと寒いんです。",
+   "en": "It's a bit cold.",
+   "ko": "좀 추워요.",
+   "blank": "んです。"
+  },
+  {
+   "text": "すみません、持っていないんです。",
+   "en": "Sorry, I don't have it.",
+   "ko": "죄송해요, 가지고 있지 않아요.",
+   "blank": "いないんです。"
+  }
+ ],
+ "g|3:2": [
+  {
+   "text": "雨が降ったら、傘を持っていってね。",
+   "en": "If it rains, take an umbrella.",
+   "ko": "비가 오면 우산을 가져가.",
+   "blank": "たら"
+  },
+  {
+   "text": "分からなかったら、聞いてください。",
+   "en": "If you don't understand, please ask.",
+   "ko": "모르면 물어보세요.",
+   "blank": "たら"
+  },
+  {
+   "text": "もっと安ければ、買いたいです。",
+   "en": "If it were cheaper, I would buy it.",
+   "ko": "더 싸면 사고 싶어요.",
+   "blank": "ければ"
+  }
+ ],
+ "g|3:3": [
+  {
+   "text": "この店は安いと思う。",
+   "en": "I think this store is cheap.",
+   "ko": "이 가게는 저렴하다고 생각해.",
+   "blank": "と思う。"
+  },
+  {
+   "text": "今日は混んでいるかもしれません。",
+   "en": "It might be crowded today.",
+   "ko": "오늘은 붐빌지도 몰라요.",
+   "blank": "かもしれません。"
+  },
+  {
+   "text": "彼は来ないと思うよ。",
+   "en": "I think he won't come.",
+   "ko": "그는 안 올 것 같아.",
+   "blank": "と思うよ。"
+  }
+ ],
+ "g|3:4": [
+  {
+   "text": "この箱、持てる？",
+   "en": "Can you carry this box?",
+   "ko": "이 상자, 들 수 있어?",
+   "blank": "持てる"
+  },
+  {
+   "text": "ごめん、聞こえなかったんだ。",
+   "en": "Sorry, I couldn't hear.",
+   "ko": "미안, 들을 수 없었어.",
+   "blank": "聞こえなかった"
+  },
+  {
+   "text": "やっと泳げるようになったよ。",
+   "en": "I finally learned how to swim.",
+   "ko": "드디어 수영할 수 있게 되었어.",
+   "blank": "泳げる"
+  }
+ ],
+ "g|3:5": [
+  {
+   "text": "甘いものを食べすぎないようにするね。",
+   "en": "I’ll make a point not to eat too many sweets.",
+   "ko": "단 것을 너무 많이 먹지 않도록 할게.",
+   "blank": "ようにするね。"
+  },
+  {
+   "text": "毎朝ストレッチをするようにしています。",
+   "en": "I make a point of stretching every morning.",
+   "ko": "매일 아침 스트레칭을 하려고 하고 있어요.",
+   "blank": "ようにしています。"
+  },
+  {
+   "text": "忘れ物をしないようにするね。",
+   "en": "I'll make a point of not forgetting things.",
+   "ko": "잊어버리지 않도록 할게.",
+   "blank": "ようにするね。"
+  }
+ ],
+ "g|3:6": [
+  {
+   "text": "雨が降りそうだね。",
+   "en": "It looks like it's going to rain.",
+   "ko": "비가 올 것 같아.",
+   "blank": "降りそうだね。"
+  },
+  {
+   "text": "彼、眠そうだね。",
+   "en": "He looks sleepy.",
+   "ko": "그 사람, 졸려 보인다.",
+   "blank": "眠そうだね。"
+  },
+  {
+   "text": "この服、暖かそうだね。",
+   "en": "These clothes look warm.",
+   "ko": "이 옷, 따뜻해 보여.",
+   "blank": "暖かそうだね。"
+  }
+ ],
+ "g|3:7": [
+  {
+   "text": "明日は雨が降るよ。",
+   "en": "It will rain tomorrow.",
+   "ko": "내일은 비가 올 거야.",
+   "blank": "よ。"
+  },
+  {
+   "text": "遅れそうなら連絡してね。",
+   "en": "Let me know if you’re running late.",
+   "ko": "늦을 것 같으면 연락해줘.",
+   "blank": "ね。"
+  },
+  {
+   "text": "静かにしたほうがいいよね？",
+   "en": "We should be quiet, right?",
+   "ko": "조용히 하는 게 좋지, 그렇지?",
+   "blank": "よね？"
+  }
+ ],
+ "g|4:0": [
+  {
+   "text": "先生は今どちらにいらっしゃいますか。",
+   "en": "Where is the teacher now?",
+   "ko": "선생님은 지금 어디에 계십니까?",
+   "blank": "いらっしゃいますか。"
+  },
+  {
+   "text": "部長がそうおっしゃいました。",
+   "en": "That’s what the manager said.",
+   "ko": "부장님께서 그렇게 말씀하셨습니다.",
+   "blank": "おっしゃいました。"
+  },
+  {
+   "text": "ご両親も会議にいらっしゃる予定ですか。",
+   "en": "Are your parents also planning to attend the meeting?",
+   "ko": "부모님도 회의에 참석하실 예정입니까?",
+   "blank": "いらっしゃる"
+  }
+ ],
+ "g|4:1": [
+  {
+   "text": "山田と申します。よろしくお願いいたします。",
+   "en": "My name is Yamada. Nice to meet you.",
+   "ko": "야마다라고 합니다. 잘 부탁드립니다.",
+   "blank": "申します"
+  },
+  {
+   "text": "明日、改めてご連絡に参ります。",
+   "en": "I will contact you again tomorrow.",
+   "ko": "내일 다시 연락드리겠습니다.",
+   "blank": "参ります"
+  },
+  {
+   "text": "念のため伺いますが、この資料はもうご覧になりましたか。",
+   "en": "Just to confirm, have you already looked at this document?",
+   "ko": "확인을 위해 여쭤보는데, 이 자료는 이미 보셨나요?",
+   "blank": "伺います"
+  }
+ ],
+ "g|4:2": [
+  {
+   "text": "先に帰らせていただきます。",
+   "en": "I'll leave early.",
+   "ko": "먼저 돌아가겠습니다.",
+   "blank": "帰らせていただきます。"
+  },
+  {
+   "text": "少し休ませていただきます。",
+   "en": "I'll take a short break.",
+   "ko": "잠시 쉬겠습니다.",
+   "blank": "休ませていただきます。"
+  },
+  {
+   "text": "資料を見直させていただきます。",
+   "en": "I'll review the documents.",
+   "ko": "자료를 다시 보겠습니다.",
+   "blank": "見直させていただきます。"
+  }
+ ],
+ "g|4:3": [
+  {
+   "text": "友だちに秘密をばらされて、困っているんです。",
+   "en": "My friend revealed my secret, so I'm having trouble.",
+   "ko": "친구가 내 비밀을 누설해서 곤란해요.",
+   "blank": "ばらされて"
+  },
+  {
+   "text": "大切な書類をなくされて、困っているんです。",
+   "en": "My important documents were lost by someone, so I'm in trouble.",
+   "ko": "중요한 서류를 잃어버려서 곤란해요.",
+   "blank": "なくされて"
+  },
+  {
+   "text": "毎日早く起こされて、困っているんです。",
+   "en": "I'm troubled because I'm woken up early every day.",
+   "ko": "매일 아침 일찍 깨워져서 곤란해요.",
+   "blank": "起こされて"
+  }
+ ],
+ "g|4:4": [
+  {
+   "text": "今日は早く帰らせてください。",
+   "en": "Please let me go home early today.",
+   "ko": "오늘은 일찍 집에 가게 해주세요.",
+   "blank": "帰らせてください。"
+  },
+  {
+   "text": "この仕事、私にもやらせてください。",
+   "en": "Please let me do this job too.",
+   "ko": "이 일, 저도 하게 해주세요.",
+   "blank": "やらせてください。"
+  },
+  {
+   "text": "発表を一番にさせてください。",
+   "en": "Please let me present first.",
+   "ko": "발표를 제일 먼저 하게 해주세요.",
+   "blank": "させてください。"
+  }
+ ],
+ "g|4:5": [
+  {
+   "text": "急に出張することになりました。",
+   "en": "I ended up having to go on a business trip suddenly.",
+   "ko": "갑자기 출장 가게 되었어요.",
+   "blank": "することになりました。"
+  },
+  {
+   "text": "もっと運動することにしました。",
+   "en": "I've decided to exercise more.",
+   "ko": "더 운동하기로 했어요.",
+   "blank": "することにしました。"
+  },
+  {
+   "text": "来週から早起きすることにします。",
+   "en": "I will start getting up early from next week.",
+   "ko": "다음 주부터 일찍 일어나기로 할게요.",
+   "blank": "することにします。"
+  }
+ ],
+ "g|4:6": [
+  {
+   "text": "甘いものが嫌いなわけではないけど、今日は控えておくね。",
+   "en": "It's not that I dislike sweets, but I'll pass today.",
+   "ko": "단 것을 싫어하는 건 아니지만, 오늘은 참을게.",
+   "blank": "嫌いなわけではない"
+  },
+  {
+   "text": "忙しいわけではないのですが、今日は家でゆっくりしたいです。",
+   "en": "It's not that I'm busy, but I just want to relax at home today.",
+   "ko": "바쁜 건 아니지만, 오늘은 집에서 느긋하게 쉬고 싶어.",
+   "blank": "忙しいわけではないのですが"
+  },
+  {
+   "text": "犬が怖いわけではないよ。ちょっと苦手なだけ。",
+   "en": "It's not that I'm afraid of dogs. I'm just not very good with them.",
+   "ko": "개가 무서운 건 아니야. 그냥 조금 서툴러.",
+   "blank": "怖いわけではない"
+  }
+ ],
+ "g|4:7": [
+  {
+   "text": "話せば話すほど、上手になります。",
+   "en": "The more you speak, the better you get.",
+   "ko": "말하면 말할수록 더 잘하게 돼요.",
+   "blank": "話せば話すほど"
+  },
+  {
+   "text": "知れば知るほど、その町が好きになります。",
+   "en": "The more I learn, the more I like that town.",
+   "ko": "알면 알수록 그 마을이 더 좋아져요.",
+   "blank": "知れば知るほど"
+  },
+  {
+   "text": "見れば見るほど、不思議に思います。",
+   "en": "The more I look, the more I wonder.",
+   "ko": "보면 볼수록 신기하다고 생각해요.",
+   "blank": "見れば見るほど"
+  }
+ ],
+ "g|5:0": [
+  {
+   "text": "今日は大事な会議があるから、遅刻するわけにはいかない。",
+   "en": "I can't very well be late because there's an important meeting today.",
+   "ko": "오늘은 중요한 회의가 있으니까 늦을 수는 없어.",
+   "blank": "遅刻するわけにはいかない。"
+  },
+  {
+   "text": "そんなに高いものは買うわけにはいかない。",
+   "en": "I can't very well buy something that expensive.",
+   "ko": "그렇게 비싼 것은 살 수는 없어.",
+   "blank": "買うわけにはいかない。"
+  },
+  {
+   "text": "彼に秘密を話すわけにはいかない。",
+   "en": "I can't very well tell him the secret.",
+   "ko": "그에게 비밀을 말할 수는 없어.",
+   "blank": "話すわけにはいかない。"
+  }
+ ],
+ "g|5:1": [
+  {
+   "text": "電車が止まったから、歩いて帰らざるを得ない。",
+   "en": "Since the train stopped, I have no choice but to walk home.",
+   "ko": "기차가 멈췄으니 걸어서 집에 갈 수밖에 없어요.",
+   "blank": "帰らざるを得ない。"
+  },
+  {
+   "text": "体調が悪いので、今日は休まざるを得ない。",
+   "en": "Since I feel sick, I have no choice but to take a day off today.",
+   "ko": "몸 상태가 안 좋아서 오늘은 쉴 수밖에 없어요.",
+   "blank": "休まざるを得ない。"
+  },
+  {
+   "text": "大切な会議なので、遅れて参加せざるを得ない。",
+   "en": "Since it's an important meeting, I have no choice but to join late.",
+   "ko": "중요한 회의라서 늦게 참석할 수밖에 없어요.",
+   "blank": "参加せざるを得ない。"
+  }
+ ],
+ "g|5:2": [
+  {
+   "text": "雨とはいえ、今日は外で遊びたいです。",
+   "en": "Even though it's raining, I still want to play outside today.",
+   "ko": "비가 오긴 해도, 오늘은 밖에서 놀고 싶어요.",
+   "blank": "雨とはいえ"
+  },
+  {
+   "text": "ダイエット中とはいえ、ケーキは食べたいな。",
+   "en": "Even though I'm on a diet, I still want to eat cake.",
+   "ko": "다이어트 중이긴 해도, 케이크는 먹고 싶네.",
+   "blank": "ダイエット中とはいえ"
+  },
+  {
+   "text": "休日とはいえ、仕事の電話がかかってくることもある。",
+   "en": "Even though it's a holiday, I sometimes get work calls.",
+   "ko": "휴일이긴 해도, 일 전화가 올 때도 있어요.",
+   "blank": "休日とはいえ"
+  }
+ ],
+ "g|5:3": [
+  {
+   "text": "そんなに遅く帰ると、親に心配されかねないよ。",
+   "en": "If you come home that late, it could well lead to your parents worrying about you.",
+   "ko": "그렇게 늦게 돌아가면 부모님이 걱정하실 수도 있어.",
+   "blank": "されかねないよ。"
+  },
+  {
+   "text": "約束を忘れると、信頼を失いかねないよ。",
+   "en": "If you forget your promises, it could well lead to losing trust.",
+   "ko": "약속을 잊으면 신뢰를 잃을 수 있어.",
+   "blank": "失いかねないよ。"
+  },
+  {
+   "text": "大声で話すと、他の人に迷惑をかけかねない。",
+   "en": "If you speak loudly, it could well lead to bothering others.",
+   "ko": "큰 소리로 말하면 다른 사람에게 민폐를 끼칠 수 있어.",
+   "blank": "かけかねない。"
+  }
+ ],
+ "g|5:4": [
+  {
+   "text": "勉強したものの、テストは難しかった。",
+   "en": "Although I studied, the test was difficult.",
+   "ko": "공부했지만 시험이 어려웠어.",
+   "blank": "したものの"
+  },
+  {
+   "text": "約束はしたものの、行けるか分からない。",
+   "en": "Although I promised, I don't know if I can go.",
+   "ko": "약속은 했지만 갈 수 있을지 모르겠어.",
+   "blank": "したものの"
+  },
+  {
+   "text": "話し合ったものの、結論は出なかった。",
+   "en": "Although we discussed it, we couldn't reach a conclusion.",
+   "ko": "이야기를 나눴지만 결론은 나지 않았어.",
+   "blank": "合ったものの"
+  }
+ ],
+ "g|5:5": [
+  {
+   "text": "苦しかった経験があるからこそ、今の自分がいる。",
+   "en": "Precisely because I went through tough times, I am who I am now.",
+   "ko": "힘든 경험이 있었기 때문에 지금의 내가 있다.",
+   "blank": "苦しかった経験があるからこそ"
+  },
+  {
+   "text": "親切にしてもらったからこそ、お返しがしたい。",
+   "en": "Precisely because you were kind to me, I want to return the favor.",
+   "ko": "친절하게 해주셨기 때문에 보답하고 싶어.",
+   "blank": "親切にしてもらったからこそ"
+  },
+  {
+   "text": "朝早く起きたからこそ、きれいな朝日が見られた。",
+   "en": "Precisely because I woke up early, I was able to see the beautiful sunrise.",
+   "ko": "아침 일찍 일어났기 때문에 아름다운 아침 해를 볼 수 있었다.",
+   "blank": "朝早く起きたからこそ"
+  }
+ ],
+ "g|5:6": [
+  {
+   "text": "健康には気をつけるに越したことはない。",
+   "en": "It's best to take care of your health.",
+   "ko": "건강을 신경 쓰는 것이 제일 좋다.",
+   "blank": "に越したことはない。"
+  },
+  {
+   "text": "安いに越したことはないけど、質も大事だよ。",
+   "en": "It's best if it's cheap, but quality is also important.",
+   "ko": "저렴한 게 제일 좋지만, 품질도 중요해.",
+   "blank": "に越したことはないけど、"
+  },
+  {
+   "text": "雨の日は傘を持っていくに越したことはないよ。",
+   "en": "It's best to take an umbrella on a rainy day.",
+   "ko": "비 오는 날에는 우산을 가져가는 게 제일 좋아.",
+   "blank": "に越したことはないよ。"
+  }
+ ],
+ "g|5:7": [
+  {
+   "text": "彼の話を聞かないことには、状況が分からない。",
+   "en": "Unless I hear his story, I won't understand the situation.",
+   "ko": "그의 이야기를 듣지 않으면 상황을 알 수 없다.",
+   "blank": "聞かないことには"
+  },
+  {
+   "text": "本当の理由を知らないことには、判断できない。",
+   "en": "Unless I know the real reason, I can't make a decision.",
+   "ko": "진짜 이유를 알지 못하면 판단할 수 없다.",
+   "blank": "知らないことには"
+  },
+  {
+   "text": "現場を見ないことには、何も始まらない。",
+   "en": "Unless I see the site, nothing can start.",
+   "ko": "현장을 보지 않으면 아무것도 시작할 수 없다.",
+   "blank": "見ないことには"
+  }
+ ]
+}

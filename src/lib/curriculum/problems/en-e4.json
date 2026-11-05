@@ -1,0 +1,398 @@
+{
+  "e|that's a good point": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "that's a good point",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "정말 좋은 지적이에요, 그런 식으로 생각해 본 적이 없었어요.",
+    "before": "",
+    "after": ", I never thought about it that way before.",
+    "answer": "That's a good point",
+    "why": "상대 말이 일리 있다는 말은 That's a good point예요.",
+    "options": [
+      "That's good point",
+      "That's a good point",
+      "That's a well point",
+      "That's a good points"
+    ],
+    "line": "That's a good point, I never thought about it that way before."
+  },
+  "e|on the other hand": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "on the other hand",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 도시에서 사는 것이 좋지만, 한편 시골은 훨씬 조용해.",
+    "before": "I like living in the city, but ",
+    "after": ", the countryside is much quieter.",
+    "answer": "on the other hand",
+    "why": "다른 면을 이어 말할 때는 on the other hand를 써요.",
+    "options": [
+      "in the other hand",
+      "on the other hand",
+      "on other hand",
+      "on the another hand"
+    ],
+    "line": "I like living in the city, but on the other hand, the countryside is much quieter."
+  },
+  "e|to be fair": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "to be fair",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "솔직히 오늘 아침에 늦게 시작했어.",
+    "before": "",
+    "after": ", we did get a late start this morning.",
+    "answer": "To be fair",
+    "why": "공평하게 인정한다는 말은 To be fair예요.",
+    "options": [
+      "For be fair",
+      "To be fair",
+      "To being fair",
+      "To is fair"
+    ],
+    "line": "To be fair, we did get a late start this morning."
+  },
+  "e|having said that": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "having said that",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 매운 음식을 별로 좋아하지 않지만, 가끔은 고추를 조금 즐긴다.",
+    "before": "I’m not a big fan of spicy food; ",
+    "after": ", I do like a little bit of chili now and then.",
+    "answer": "having said that",
+    "why": "앞에서 한 말을 두고 반대로 넘길 때는 having said that을 써요.",
+    "options": [
+      "have said that",
+      "having said that",
+      "having saying that",
+      "having told that"
+    ],
+    "line": "I’m not a big fan of spicy food; having said that, I do like a little bit of chili now and then."
+  },
+  "e|it's up to you": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it's up to you",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "영화를 볼지 게임을 할지 네가 선택해.",
+    "before": "We can watch a movie or play a game, ",
+    "after": ".",
+    "answer": "it's up to you",
+    "why": "결정은 상대에게 달렸다는 말은 it's up to you예요.",
+    "options": [
+      "it's up on you",
+      "it's up to you",
+      "it's up for you",
+      "it's up at you"
+    ],
+    "line": "We can watch a movie or play a game, it's up to you."
+  },
+  "e|make a decision": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "make a decision",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "두 선택지가 모두 좋아 보여서 결정하기가 어렵다.",
+    "before": "It's hard to ",
+    "after": " when both options seem good.",
+    "answer": "make a decision",
+    "why": "여러 가지 중에서 하나를 고른다는 말은 make a decision이에요.",
+    "options": [
+      "do a decision",
+      "make a decision",
+      "make a decide",
+      "make decision"
+    ],
+    "line": "It's hard to make a decision when both options seem good."
+  },
+  "e|take into account": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "take into account",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리가 무엇을 할지 정하기 전에 날씨도 고려해야 해.",
+    "before": "We should ",
+    "after": " the weather before making any plans.",
+    "answer": "take into account",
+    "why": "그 점도 고려한다는 말은 take into account예요.",
+    "options": [
+      "take in account",
+      "take into account",
+      "take on account",
+      "take into the account"
+    ],
+    "line": "We should take into account the weather before making any plans."
+  },
+  "e|come up with": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "come up with",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "친구 생일 선물로 뭘 할지 생각해야 해.",
+    "before": "I need to ",
+    "after": " a gift for my friend's birthday.",
+    "answer": "come up with",
+    "why": "아이디어를 생각해 낸다는 말은 come up with예요.",
+    "options": [
+      "come ups with",
+      "come up with",
+      "come with up",
+      "come up by"
+    ],
+    "line": "I need to come up with a gift for my friend's birthday."
+  },
+  "e|in the long run": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "in the long run",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "매달 조금씩 저축하면 시간이 지나면 도움이 돼요.",
+    "before": "If you save a little money every month, it pays off ",
+    "after": ".",
+    "answer": "in the long run",
+    "why": "긴 시간이 지난 뒤를 말할 때는 in the long run을 써요.",
+    "options": [
+      "on the long run",
+      "in the long run",
+      "in a long run",
+      "in the long runs"
+    ],
+    "line": "If you save a little money every month, it pays off in the long run."
+  },
+  "e|when it comes to": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "when it comes to",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "요리에 관해서라면, 우리 가족 중에서 내 여동생이 최고야.",
+    "before": "",
+    "after": " cooking, my sister is the best in our family.",
+    "answer": "When it comes to",
+    "why": "특정 주제로 좁혀 말할 때는 When it comes to를 써요.",
+    "options": [
+      "When it comes for",
+      "When it comes to",
+      "When it come to",
+      "When comes to"
+    ],
+    "line": "When it comes to cooking, my sister is the best in our family."
+  },
+  "e|no way": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "no way",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "너 혼자서 그 큰 피자를 다 먹었다니 믿을 수 없어.",
+    "before": "",
+    "after": ", you finished that huge pizza by yourself?",
+    "answer": "No way",
+    "why": "믿기 어렵다는 말은 No way예요.",
+    "options": [
+      "Not way",
+      "No way",
+      "No ways",
+      "No the way"
+    ],
+    "line": "No way, you finished that huge pizza by yourself?"
+  },
+  "e|it must have been": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it must have been",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "혼자서 새로운 도시로 이사하는 것은 아마 힘들었을 거예요.",
+    "before": "",
+    "after": " difficult to move to a new city alone.",
+    "answer": "It must have been",
+    "why": "단서로 과거를 추측할 때는 It must have been을 써요.",
+    "options": [
+      "It must has been",
+      "It must have been",
+      "It must been",
+      "It must had been"
+    ],
+    "line": "It must have been difficult to move to a new city alone."
+  },
+  "e|should have known": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "should have known",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "아무도 오지 않았을 때 회의가 취소된 걸 알아챘어야 했어요.",
+    "before": "I ",
+    "after": " the meeting was canceled when nobody showed up.",
+    "answer": "should have known",
+    "why": "그때 이미 알았어야 했다는 말은 should have known이에요.",
+    "options": [
+      "should had known",
+      "should have known",
+      "should have knew",
+      "should has known"
+    ],
+    "line": "I should have known the meeting was canceled when nobody showed up."
+  },
+  "e|you might be right": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "you might be right",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "곧 날씨가 변할 거라는 네 말이 맞을 수도 있어.",
+    "before": "",
+    "after": " about the weather changing soon.",
+    "answer": "You might be right",
+    "why": "상대 말이 맞을 수도 있다는 말은 You might be right예요.",
+    "options": [
+      "You might are right",
+      "You might be right",
+      "You might to be right",
+      "You might being right"
+    ],
+    "line": "You might be right about the weather changing soon."
+  },
+  "e|it's not worth it": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it's not worth it",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 논쟁하고 싶었지만, 솔직히 그럴 가치가 없어.",
+    "before": "I wanted to argue, but honestly, ",
+    "after": ".",
+    "answer": "it's not worth it",
+    "why": "애쓸 가치가 없다는 말은 it's not worth it이에요.",
+    "options": [
+      "it's not worthy it",
+      "it's not worth it",
+      "it doesn't worth it",
+      "it's not worth for it"
+    ],
+    "line": "I wanted to argue, but honestly, it's not worth it."
+  },
+  "e|as long as": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "as long as",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "내일까지 돌려준다면 내 자전거를 빌릴 수 있어.",
+    "before": "You can borrow my bike ",
+    "after": " you bring it back by tomorrow.",
+    "answer": "as long as",
+    "why": "그 조건이면 괜찮다는 말은 as long as예요.",
+    "options": [
+      "as longer as",
+      "as long as",
+      "so long that",
+      "as long like"
+    ],
+    "line": "You can borrow my bike as long as you bring it back by tomorrow."
+  },
+  "e|whether or not": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "whether or not",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "회의에 올 수 있는지 없는지 알려 주세요.",
+    "before": "Let me know ",
+    "after": " you can come to the meeting.",
+    "answer": "whether or not",
+    "why": "가능한지 아닌지를 물을 때는 whether or not을 써요.",
+    "options": [
+      "whether and not",
+      "whether or not",
+      "if or not",
+      "whether or nots"
+    ],
+    "line": "Let me know whether or not you can come to the meeting."
+  },
+  "e|to some extent": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "to some extent",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 네 말에 어느 정도 동의하지만, 나도 다른 의견이 있어.",
+    "before": "I agree with you ",
+    "after": ", but I have a different opinion too.",
+    "answer": "to some extent",
+    "why": "어느 정도까지는 그렇다는 말은 to some extent예요.",
+    "options": [
+      "to some extend",
+      "to some extent",
+      "in some extent",
+      "to some extension"
+    ],
+    "line": "I agree with you to some extent, but I have a different opinion too."
+  },
+  "e|a tight deadline": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "a tight deadline",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리는 시간이 거의 없으니 집중해서 이 일을 끝내자.",
+    "before": "We’re working under ",
+    "after": ", so let’s focus and get this done.",
+    "answer": "a tight deadline",
+    "why": "시간이 매우 빠듯한 마감은 a tight deadline이에요.",
+    "options": [
+      "a tightly deadline",
+      "a tight deadline",
+      "a narrow deadline",
+      "a tighten deadline"
+    ],
+    "line": "We’re working under a tight deadline, so let’s focus and get this done."
+  },
+  "e|meet halfway": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "meet halfway",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "가격에 대해 타협할 수 있을까요?",
+    "before": "Can we ",
+    "after": " on the price?",
+    "answer": "meet halfway",
+    "why": "서로 양보해 맞춘다는 말은 meet halfway예요.",
+    "options": [
+      "meet in halfway",
+      "meet halfway",
+      "meeting halfway",
+      "meet the halfway"
+    ],
+    "line": "Can we meet halfway on the price?"
+  },
+  "e|it's hard to say": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "it's hard to say",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "우리가 제시간에 끝낼 수 있을지 확실하지 않다.",
+    "before": "",
+    "after": " if we'll finish on time.",
+    "answer": "It's hard to say",
+    "why": "쉽게 단정하기 어렵다는 말은 It's hard to say예요.",
+    "options": [
+      "It's hard for say",
+      "It's hard to say",
+      "It's hardly to say",
+      "It's hard to said"
+    ],
+    "line": "It's hard to say if we'll finish on time."
+  },
+  "e|out of the question": {
+    "kind": "expression",
+    "type": "choose",
+    "name": "out of the question",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "이런 폭풍우에 나가는 것은 불가능해요.",
+    "before": "Going out in this storm is ",
+    "after": ".",
+    "answer": "out of the question",
+    "why": "절대 불가능하다는 말은 out of the question이에요.",
+    "options": [
+      "out the question",
+      "out of the question",
+      "out of question",
+      "out of a question"
+    ],
+    "line": "Going out in this storm is out of the question."
+  }
+}

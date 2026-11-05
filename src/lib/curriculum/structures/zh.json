@@ -1,0 +1,1671 @@
+{
+ "1": [
+  {
+   "id": "zh-1-01",
+   "stage": 1,
+   "pattern": "我是___。",
+   "meaningKo": "자기 소개하기 (이름, 국적 등)",
+   "meaningEn": "Introducing yourself (name, nationality, etc.)",
+   "examples": [
+    {
+     "text": "我是李明。",
+     "ko": "저는 리밍입니다.",
+     "en": "I am Li Ming."
+    },
+    {
+     "text": "我是韩国人。",
+     "ko": "저는 한국인입니다.",
+     "en": "I am Korean."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주어 + 시이다",
+     "noteKo": "___에 본인 이름이나 국적을 넣음",
+     "nameEn": "Subject + to be",
+     "noteEn": "___ is your name or nationality"
+    }
+   ],
+   "related": [
+    "你是___吗？"
+   ],
+   "quiz": {
+    "prompt": "我是___。",
+    "answer": "韩国人"
+   }
+  },
+  {
+   "id": "zh-1-02",
+   "stage": 1,
+   "pattern": "你是___吗？",
+   "meaningKo": "상대방의 신분, 국적 확인하기",
+   "meaningEn": "Confirming someone's status or nationality",
+   "examples": [
+    {
+     "text": "你是老师吗？",
+     "ko": "당신은 선생님입니까?",
+     "en": "Are you a teacher?"
+    },
+    {
+     "text": "你是中国人吗？",
+     "ko": "당신은 중국인입니까?",
+     "en": "Are you Chinese?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문문",
+     "noteKo": "___에 신분, 직업, 국적 등 넣음",
+     "nameEn": "Question form",
+     "noteEn": "___ is status, job, or nationality"
+    }
+   ],
+   "related": [
+    "我是___。"
+   ],
+   "quiz": {
+    "prompt": "你是___吗？",
+    "answer": "老师"
+   }
+  },
+  {
+   "id": "zh-1-03",
+   "stage": 1,
+   "pattern": "我要___。",
+   "meaningKo": "원하는 물건/음식 말하기",
+   "meaningEn": "Saying what you want to buy or order",
+   "examples": [
+    {
+     "text": "我要苹果。",
+     "ko": "사과 주세요.",
+     "en": "I want apples."
+    },
+    {
+     "text": "我要这个。",
+     "ko": "이것 주세요.",
+     "en": "I want this one."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동사 + 목적어",
+     "noteKo": "___에 원하는 물건/음식 넣음",
+     "nameEn": "Verb + object",
+     "noteEn": "___ is the item you want"
+    }
+   ],
+   "related": [
+    "我不要___。"
+   ],
+   "quiz": {
+    "prompt": "我要___。",
+    "answer": "苹果"
+   }
+  },
+  {
+   "id": "zh-1-04",
+   "stage": 1,
+   "pattern": "我的电话号码是___。",
+   "meaningKo": "전화번호 말하기",
+   "meaningEn": "Saying your phone number",
+   "examples": [
+    {
+     "text": "我的电话号码是一二三四五六七八九零。",
+     "ko": "제 전화번호는 1234567890입니다.",
+     "en": "My phone number is 1234567890."
+    },
+    {
+     "text": "我的电话号码是一一二二三三。",
+     "ko": "제 전화번호는 112233입니다.",
+     "en": "My phone number is 112233."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 + 숫자",
+     "noteKo": "___에 숫자를 넣음",
+     "nameEn": "Noun + number",
+     "noteEn": "___ is the number"
+    }
+   ],
+   "related": [
+    "我是___。"
+   ],
+   "quiz": {
+    "prompt": "我的电话号码是___。",
+    "answer": "一二三四五六七八九零"
+   }
+  },
+  {
+   "id": "zh-1-05",
+   "stage": 1,
+   "pattern": "___在哪里？",
+   "meaningKo": "장소 위치 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "厕所在哪里？",
+     "ko": "화장실 어디예요?",
+     "en": "Where is the toilet?"
+    },
+    {
+     "text": "地铁站在哪里？",
+     "ko": "지하철역 어디예요?",
+     "en": "Where is the subway station?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 + 在哪里",
+     "noteKo": "___에 장소 이름 넣음",
+     "nameEn": "Place + zài nǎlǐ",
+     "noteEn": "___ is the place"
+    }
+   ],
+   "related": [
+    "你知道___吗？"
+   ],
+   "quiz": {
+    "prompt": "___在哪里？",
+    "answer": "厕所"
+   }
+  },
+  {
+   "id": "zh-1-06",
+   "stage": 1,
+   "pattern": "你好，我叫___。",
+   "meaningKo": "자기 이름 말하기",
+   "meaningEn": "Saying your name",
+   "examples": [
+    {
+     "text": "你好，我叫李明。",
+     "ko": "안녕하세요, 저는 리밍입니다.",
+     "en": "Hello, my name is Li Ming."
+    },
+    {
+     "text": "你好，我叫安娜。",
+     "ko": "안녕하세요, 저는 안나입니다.",
+     "en": "Hello, my name is Anna."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 소개",
+     "noteKo": "___에는 본인의 이름이 들어갑니다.",
+     "nameEn": "Name introduction",
+     "noteEn": "___ is your name."
+    }
+   ],
+   "related": [
+    "我是___人。"
+   ],
+   "quiz": {
+    "prompt": "你好，我叫___。",
+    "answer": "王伟"
+   }
+  },
+  {
+   "id": "zh-1-07",
+   "stage": 1,
+   "pattern": "我是___人。",
+   "meaningKo": "국적 말하기",
+   "meaningEn": "Saying your nationality",
+   "examples": [
+    {
+     "text": "我是韩国人。",
+     "ko": "저는 한국인입니다.",
+     "en": "I'm Korean."
+    },
+    {
+     "text": "我是美国人。",
+     "ko": "저는 미국인입니다.",
+     "en": "I'm American."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "국적 표현",
+     "noteKo": "___에는 나라 이름이 들어갑니다.",
+     "nameEn": "Nationality",
+     "noteEn": "___ is the country."
+    }
+   ],
+   "related": [
+    "你好，我叫___。"
+   ],
+   "quiz": {
+    "prompt": "我是___人。",
+    "answer": "中国"
+   }
+  },
+  {
+   "id": "zh-1-08",
+   "stage": 1,
+   "pattern": "我想要___。",
+   "meaningKo": "원하는 물건 말하기",
+   "meaningEn": "Saying what you want",
+   "examples": [
+    {
+     "text": "我想要苹果。",
+     "ko": "사과를 원해요.",
+     "en": "I want apples."
+    },
+    {
+     "text": "我想要香蕉。",
+     "ko": "바나나를 원해요.",
+     "en": "I want bananas."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "희망 표현",
+     "noteKo": "___에는 원하는 물건이 들어갑니다.",
+     "nameEn": "Wanting something",
+     "noteEn": "___ is what you want."
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "我想要___。",
+    "answer": "葡萄"
+   }
+  },
+  {
+   "id": "zh-1-09",
+   "stage": 1,
+   "pattern": "一共___块。",
+   "meaningKo": "전체 가격 말하기",
+   "meaningEn": "Saying the total price",
+   "examples": [
+    {
+     "text": "一共十块。",
+     "ko": "모두 합해서 십 위안입니다.",
+     "en": "It's ten yuan in total."
+    },
+    {
+     "text": "一共二十块。",
+     "ko": "총 이십 위안입니다.",
+     "en": "Altogether it's twenty yuan."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "수량 표현",
+     "noteKo": "___에는 숫자가 들어갑니다.",
+     "nameEn": "Expressing numbers",
+     "noteEn": "___ is the number for the price."
+    }
+   ],
+   "related": [
+    "我的电话号码是___。"
+   ],
+   "quiz": {
+    "prompt": "一共___块。",
+    "answer": "五"
+   }
+  },
+  {
+   "id": "zh-1-10",
+   "stage": 1,
+   "pattern": "___号是多少？",
+   "meaningKo": "전화번호나 방 번호 묻기",
+   "meaningEn": "Asking for a number (phone/room)",
+   "examples": [
+    {
+     "text": "你电话号是多少？",
+     "ko": "전화번호가 뭐예요?",
+     "en": "What is your phone number?"
+    },
+    {
+     "text": "房间号是多少？",
+     "ko": "방 번호가 뭐예요?",
+     "en": "What is the room number?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소/대상 명칭",
+     "noteKo": "___에는 번호를 묻는 대상이 들어갑니다.",
+     "nameEn": "Number target",
+     "noteEn": "___ is what number you ask about."
+    }
+   ],
+   "related": [
+    "一共___块。"
+   ],
+   "quiz": {
+    "prompt": "___号是多少？",
+    "answer": "你电话"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "zh-2-01",
+   "stage": 2,
+   "pattern": "我每天___。",
+   "meaningKo": "매일 하는 일을 말하기",
+   "meaningEn": "Saying what you do every day",
+   "examples": [
+    {
+     "text": "我每天喝咖啡。",
+     "ko": "나는 매일 커피를 마셔.",
+     "en": "I drink coffee every day."
+    },
+    {
+     "text": "我每天跑步。",
+     "ko": "나는 매일 달려.",
+     "en": "I run every day."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "습관 표현",
+     "noteKo": "___에 매일 하는 동작이 옴",
+     "nameEn": "Habitual action",
+     "noteEn": "___ is the action you do daily"
+    }
+   ],
+   "related": [
+    "我___了。"
+   ],
+   "quiz": {
+    "prompt": "我每天___。",
+    "answer": "喝咖啡"
+   }
+  },
+  {
+   "id": "zh-2-02",
+   "stage": 2,
+   "pattern": "我昨天___了。",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Talking about what you did yesterday",
+   "examples": [
+    {
+     "text": "我昨天看电影了。",
+     "ko": "나는 어제 영화 봤어.",
+     "en": "I watched a movie yesterday."
+    },
+    {
+     "text": "我昨天去超市了。",
+     "ko": "나는 어제 마트에 갔어.",
+     "en": "I went to the supermarket yesterday."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제",
+     "noteKo": "___에 어제 한 동작이 옴",
+     "nameEn": "Past tense",
+     "noteEn": "___ is the action you did yesterday"
+    }
+   ],
+   "related": [
+    "我每天___。"
+   ],
+   "quiz": {
+    "prompt": "我昨天___了。",
+    "answer": "看电影"
+   }
+  },
+  {
+   "id": "zh-2-03",
+   "stage": 2,
+   "pattern": "你___有空吗？",
+   "meaningKo": "시간이 있는지 묻기",
+   "meaningEn": "Asking if someone is free at a time",
+   "examples": [
+    {
+     "text": "你明天有空吗？",
+     "ko": "너 내일 시간 있어?",
+     "en": "Are you free tomorrow?"
+    },
+    {
+     "text": "你周末有空吗？",
+     "ko": "너 주말에 시간 있어?",
+     "en": "Are you free on the weekend?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간 표현",
+     "noteKo": "___에 시간이나 날짜가 옴",
+     "nameEn": "Time expression",
+     "noteEn": "___ is the time or date"
+    }
+   ],
+   "related": [
+    "我们___见面吧。"
+   ],
+   "quiz": {
+    "prompt": "你___有空吗？",
+    "answer": "明天"
+   }
+  },
+  {
+   "id": "zh-2-04",
+   "stage": 2,
+   "pattern": "我们___见面吧。",
+   "meaningKo": "만날 시간과 장소 정하기",
+   "meaningEn": "Suggesting a time and place to meet",
+   "examples": [
+    {
+     "text": "我们下午三点见面吧。",
+     "ko": "우리 오후 세 시에 만나자.",
+     "en": "Let's meet at three in the afternoon."
+    },
+    {
+     "text": "我们地铁站见面吧。",
+     "ko": "우리 지하철역에서 만나자.",
+     "en": "Let's meet at the subway station."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간/장소 제안",
+     "noteKo": "___에 시간이나 장소가 옴",
+     "nameEn": "Suggesting time/place",
+     "noteEn": "___ is time or place to meet"
+    }
+   ],
+   "related": [
+    "你___有空吗？"
+   ],
+   "quiz": {
+    "prompt": "我们___见面吧。",
+    "answer": "地铁站"
+   }
+  },
+  {
+   "id": "zh-2-05",
+   "stage": 2,
+   "pattern": "请给我___。",
+   "meaningKo": "무엇을 달라고 요청하기",
+   "meaningEn": "Requesting something",
+   "examples": [
+    {
+     "text": "请给我菜单。",
+     "ko": "메뉴 좀 주세요.",
+     "en": "Please give me the menu."
+    },
+    {
+     "text": "请给我一杯水。",
+     "ko": "물 한 잔 주세요.",
+     "en": "Please give me a glass of water."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사 요청",
+     "noteKo": "___에 원하는 물건이 옴",
+     "nameEn": "Requesting a noun",
+     "noteEn": "___ is the thing you want"
+    }
+   ],
+   "related": [
+    "我不能吃___。"
+   ],
+   "quiz": {
+    "prompt": "请给我___。",
+    "answer": "菜单"
+   }
+  },
+  {
+   "id": "zh-2-06",
+   "stage": 2,
+   "pattern": "你推荐___吗？",
+   "meaningKo": "추천 음식이나 물건을 묻기",
+   "meaningEn": "Asking for a recommendation",
+   "examples": [
+    {
+     "text": "你推荐面条吗？",
+     "ko": "면을 추천해요?",
+     "en": "Do you recommend the noodles?"
+    },
+    {
+     "text": "你推荐小笼包吗？",
+     "ko": "샤오롱바오를 추천해요?",
+     "en": "Do you recommend xiaolongbao?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "추천 요청",
+     "noteKo": "___에 추천을 원하는 음식/물건이 옴",
+     "nameEn": "Requesting recommendation",
+     "noteEn": "___ is the item you ask about"
+    }
+   ],
+   "related": [
+    "我不能吃___。"
+   ],
+   "quiz": {
+    "prompt": "你推荐___吗？",
+    "answer": "面条"
+   }
+  },
+  {
+   "id": "zh-2-07",
+   "stage": 2,
+   "pattern": "我不能吃___。",
+   "meaningKo": "못 먹는 음식을 말하기",
+   "meaningEn": "Saying what you can't eat",
+   "examples": [
+    {
+     "text": "我不能吃牛肉。",
+     "ko": "나는 소고기를 못 먹어.",
+     "en": "I can't eat beef."
+    },
+    {
+     "text": "我不能吃辣的。",
+     "ko": "나는 매운 것을 못 먹어.",
+     "en": "I can't eat spicy food."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "금기 음식 표현",
+     "noteKo": "___에 못 먹는 음식이 옴",
+     "nameEn": "Food restriction",
+     "noteEn": "___ is the food you can't eat"
+    }
+   ],
+   "related": [
+    "请给我___。"
+   ],
+   "quiz": {
+    "prompt": "我不能吃___。",
+    "answer": "牛肉"
+   }
+  },
+  {
+   "id": "zh-2-08",
+   "stage": 2,
+   "pattern": "怎么去___？",
+   "meaningKo": "가는 방법 묻기",
+   "meaningEn": "Asking how to get somewhere",
+   "examples": [
+    {
+     "text": "怎么去火车站？",
+     "ko": "기차역에 어떻게 가요?",
+     "en": "How do I get to the train station?"
+    },
+    {
+     "text": "怎么去医院？",
+     "ko": "병원에 어떻게 가요?",
+     "en": "How do I get to the hospital?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 이동",
+     "noteKo": "___에 목적지가 옴",
+     "nameEn": "Getting to a place",
+     "noteEn": "___ is the place you want to go"
+    }
+   ],
+   "related": [
+    "到___多少钱？"
+   ],
+   "quiz": {
+    "prompt": "怎么去___？",
+    "answer": "火车站"
+   }
+  },
+  {
+   "id": "zh-2-09",
+   "stage": 2,
+   "pattern": "到___多少钱？",
+   "meaningKo": "택시비나 가격 묻기",
+   "meaningEn": "Asking the price to get somewhere",
+   "examples": [
+    {
+     "text": "到酒店多少钱？",
+     "ko": "호텔까지 얼마예요?",
+     "en": "How much is it to the hotel?"
+    },
+    {
+     "text": "到机场多少钱？",
+     "ko": "공항까지 얼마예요?",
+     "en": "How much is it to the airport?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "목적지 요금",
+     "noteKo": "___에 목적지가 옴",
+     "nameEn": "Destination price",
+     "noteEn": "___ is the destination"
+    }
+   ],
+   "related": [
+    "怎么去___？"
+   ],
+   "quiz": {
+    "prompt": "到___多少钱？",
+    "answer": "酒店"
+   }
+  },
+  {
+   "id": "zh-2-10",
+   "stage": 2,
+   "pattern": "我可以___吗？",
+   "meaningKo": "허락을 구하거나 요청하기",
+   "meaningEn": "Asking for permission or making a request",
+   "examples": [
+    {
+     "text": "我可以进来吗？",
+     "ko": "들어가도 돼요?",
+     "en": "Can I come in?"
+    },
+    {
+     "text": "我可以试试吗？",
+     "ko": "시험해 봐도 될까요?",
+     "en": "Can I try?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "허락 표현",
+     "noteKo": "___에 원하는 동작이 옴",
+     "nameEn": "Permission expression",
+     "noteEn": "___ is the action you want to do"
+    }
+   ],
+   "related": [
+    "请给我___。"
+   ],
+   "quiz": {
+    "prompt": "我可以___吗？",
+    "answer": "进来"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "zh-3-01",
+   "stage": 3,
+   "pattern": "我觉得___，因为___。你觉得呢？",
+   "meaningKo": "의견을 말하고 이유를 설명하며 의견을 묻기",
+   "meaningEn": "Giving an opinion, explaining a reason, and asking for others’ opinions",
+   "examples": [
+    {
+     "text": "我觉得这个手机很好，因为很快。你觉得呢？",
+     "ko": "이 휴대폰이 좋아, 왜냐하면 빨라. 너는 어때?",
+     "en": "I think this phone is good because it’s fast. What do you think?"
+    },
+    {
+     "text": "我觉得今天的天气不错，因为不冷也不热。你觉得呢？",
+     "ko": "오늘 날씨가 괜찮은 것 같아, 춥지도 덥지도 않으니까. 넌?",
+     "en": "I think today's weather is nice because it’s not cold or hot. What about you?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현",
+     "noteKo": "첫 번째 빈칸은 자신의 의견을 넣음",
+     "nameEn": "Opinion statement",
+     "noteEn": "The first blank is for your opinion"
+    },
+    {
+     "nameKo": "이유 설명",
+     "noteKo": "두 번째 빈칸은 이유를 설명함",
+     "nameEn": "Reason clause",
+     "noteEn": "The second blank is for your reason"
+    }
+   ],
+   "related": [
+    "你觉得___怎么样？",
+    "我更喜欢___，因为___。"
+   ],
+   "quiz": {
+    "prompt": "我觉得___，因为很方便。你觉得呢？",
+    "answer": "地铁"
+   }
+  },
+  {
+   "id": "zh-3-02",
+   "stage": 3,
+   "pattern": "那天我___，后来___。",
+   "meaningKo": "과거의 두 사건을 순서대로 이야기하기",
+   "meaningEn": "Telling two events in order from the past",
+   "examples": [
+    {
+     "text": "那天我丢了钥匙，后来找到了。",
+     "ko": "그날 열쇠를 잃어버렸는데, 나중에 찾았어.",
+     "en": "That day I lost my keys, then found them later."
+    },
+    {
+     "text": "那天我去商场，后来遇到朋友了。",
+     "ko": "그날 쇼핑몰에 갔다가, 나중에 친구를 만났어.",
+     "en": "That day I went to the mall, then ran into a friend."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간 흐름",
+     "noteKo": "첫 번째 빈칸은 먼저 일어난 일, 두 번째는 나중에 일어난 일",
+     "nameEn": "Sequence of events",
+     "noteEn": "First blank is the earlier event, second is the later event"
+    }
+   ],
+   "related": [
+    "刚开始我___，后来才___。",
+    "我一开始___，然后___。"
+   ],
+   "quiz": {
+    "prompt": "那天我___，后来吃了晚饭。",
+    "answer": "下班很晚"
+   }
+  },
+  {
+   "id": "zh-3-03",
+   "stage": 3,
+   "pattern": "如果___，我会___。",
+   "meaningKo": "조건을 말하고 자신의 행동을 말하기",
+   "meaningEn": "Stating a condition and your response",
+   "examples": [
+    {
+     "text": "如果明天下雨，我会带伞。",
+     "ko": "내일 비가 오면 우산을 가져갈 거야.",
+     "en": "If it rains tomorrow, I will bring an umbrella."
+    },
+    {
+     "text": "如果有问题，我会联系你。",
+     "ko": "문제가 있으면 너에게 연락할게.",
+     "en": "If there is a problem, I will contact you."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "첫 번째 빈칸은 조건, 두 번째는 결과",
+     "nameEn": "Conditional sentence",
+     "noteEn": "First blank is the condition, second is your action"
+    }
+   ],
+   "related": [
+    "要是___，就___。",
+    "只要___，就___。"
+   ],
+   "quiz": {
+    "prompt": "如果___，我会早点起床。",
+    "answer": "明天有考试"
+   }
+  },
+  {
+   "id": "zh-3-04",
+   "stage": 3,
+   "pattern": "我更喜欢___，因为___。",
+   "meaningKo": "선호와 이유를 말하기",
+   "meaningEn": "Stating a preference and giving a reason",
+   "examples": [
+    {
+     "text": "我更喜欢看电影，因为很放松。",
+     "ko": "나는 영화 보는 걸 더 좋아해, 왜냐하면 편안하니까.",
+     "en": "I prefer watching movies, because it’s relaxing."
+    },
+    {
+     "text": "我更喜欢早上学习，因为比较安静。",
+     "ko": "나는 아침에 공부하는 걸 더 좋아해, 더 조용하니까.",
+     "en": "I prefer studying in the morning because it’s quieter."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "선호 표현",
+     "noteKo": "첫 번째 빈칸에는 선호하는 것을 넣음",
+     "nameEn": "Preference statement",
+     "noteEn": "First blank is for what you prefer"
+    },
+    {
+     "nameKo": "이유 설명",
+     "noteKo": "두 번째 빈칸에는 이유를 넣음",
+     "nameEn": "Reason clause",
+     "noteEn": "Second blank is for your reason"
+    }
+   ],
+   "related": [
+    "我觉得___比___好。",
+    "___让我觉得很___。"
+   ],
+   "quiz": {
+    "prompt": "我更喜欢___，因为很方便。",
+    "answer": "网购"
+   }
+  },
+  {
+   "id": "zh-3-05",
+   "stage": 3,
+   "pattern": "那天我去了___，遇到了___。",
+   "meaningKo": "여행 중 있었던 일을 이야기하기",
+   "meaningEn": "Telling a short story about a trip",
+   "examples": [
+    {
+     "text": "那天我去了海边，遇到了一个很有趣的人。",
+     "ko": "그날 저는 해변에 갔고, 아주 재미있는 사람을 만났어요.",
+     "en": "That day I went to the beach and met a very interesting person."
+    },
+    {
+     "text": "那天我去了山上，遇到了很多小动物。",
+     "ko": "그날 저는 산에 갔고, 많은 작은 동물들을 만났어요.",
+     "en": "That day I went up the mountain and met many small animals."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 서술",
+     "noteKo": "첫 번째 빈칸은 방문한 장소를 씁니다.",
+     "nameEn": "Past event narration",
+     "noteEn": "The first blank is the place visited."
+    },
+    {
+     "nameKo": "경험 설명",
+     "noteKo": "두 번째 빈칸은 만난 사람이나 일어난 일을 씁니다.",
+     "nameEn": "Describing experiences",
+     "noteEn": "The second blank describes what or whom you encountered."
+    }
+   ],
+   "related": [
+    "我在___的时候，___了。"
+   ],
+   "quiz": {
+    "prompt": "那天我去了___，遇到了一个很有趣的人。",
+    "answer": "海边"
+   }
+  },
+  {
+   "id": "zh-3-06",
+   "stage": 3,
+   "pattern": "你能告诉我___是什么意思吗？",
+   "meaningKo": "모르는 단어의 뜻을 물어보기",
+   "meaningEn": "Asking what a word means",
+   "examples": [
+    {
+     "text": "你能告诉我“续费”是什么意思吗？",
+     "ko": "‘续费’가 무슨 뜻인지 말해줄 수 있어?",
+     "en": "Can you tell me what '续费' means?"
+    },
+    {
+     "text": "你能告诉我“剧透”是什么意思吗？",
+     "ko": "'剧透'가 무슨 뜻인지 알려 줄 수 있어?",
+     "en": "Can you tell me what '剧透' means?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의문 표현",
+     "noteKo": "첫 번째 빈칸은 모르는 단어를 넣음",
+     "nameEn": "Question about meaning",
+     "noteEn": "The blank is for the word you don’t understand"
+    }
+   ],
+   "related": [
+    "___是什么？",
+    "你能用中文解释___吗？"
+   ],
+   "quiz": {
+    "prompt": "你能告诉我___是什么意思吗？",
+    "answer": "押金"
+   }
+  },
+  {
+   "id": "zh-3-07",
+   "stage": 3,
+   "pattern": "对不起，我不太懂___，你可以换个说法吗？",
+   "meaningKo": "모르는 말을 들었을 때 대화 이어가기",
+   "meaningEn": "Keeping a conversation going when you don't know a word or phrase",
+   "examples": [
+    {
+     "text": "对不起，我不太懂“剧情”，你可以换个说法吗？",
+     "ko": "미안, '剧情'이 잘 이해가 안 돼. 다른 말로 설명해 줄 수 있어?",
+     "en": "Sorry, I don’t really understand '剧情', can you say it another way?"
+    },
+    {
+     "text": "对不起，我不太懂“续订”，你可以换个说法吗？",
+     "ko": "미안, '续订'이 뭔지 잘 모르겠어. 다른 표현으로 말해줄래?",
+     "en": "Sorry, I don’t quite get '续订', could you say it differently?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "모르는 단어",
+     "noteKo": "빈칸에 이해가 안 되는 단어나 표현을 넣음",
+     "nameEn": "Unknown word or phrase",
+     "noteEn": "The blank is for the word or phrase you don't understand"
+    }
+   ],
+   "related": [
+    "你可以解释一下___吗？",
+    "你能用别的话说___吗？"
+   ],
+   "quiz": {
+    "prompt": "对不起，我不太懂___，你可以换个说法吗？",
+    "answer": "套餐"
+   }
+  },
+  {
+   "id": "zh-3-08",
+   "stage": 3,
+   "pattern": "对不起，我不懂___，可以说得简单一点吗？",
+   "meaningKo": "모르는 단어를 물어보고 설명을 부탁하기",
+   "meaningEn": "Asking about a word you don't know",
+   "examples": [
+    {
+     "text": "对不起，我不懂“套餐”，可以说得简单一点吗？",
+     "ko": "죄송해요, '套餐'을 몰라요. 더 쉽게 설명해 주실 수 있나요?",
+     "en": "Sorry, I don't understand 'plan'. Can you explain in a simpler way?"
+    },
+    {
+     "text": "对不起，我不懂“留学”，可以说得简单一点吗？",
+     "ko": "죄송해요, '留学'을 몰라요. 더 쉽게 말해 줄 수 있나요?",
+     "en": "Sorry, I don't understand 'study abroad'. Could you say it more simply?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "모르는 단어 질문",
+     "noteKo": "빈칸에 모르는 단어 또는 표현을 넣습니다.",
+     "nameEn": "Asking about unknown words",
+     "noteEn": "The blank is the word or expression you don't know."
+    }
+   ],
+   "related": [
+    "你可以解释一下___吗？"
+   ],
+   "quiz": {
+    "prompt": "对不起，我不懂___，可以说得简单一点吗？",
+    "answer": "套餐"
+   }
+  },
+  {
+   "id": "zh-3-09",
+   "stage": 3,
+   "pattern": "如果你遇到___，你会怎么办？",
+   "meaningKo": "문제 상황에 대한 의견 묻기",
+   "meaningEn": "Asking for advice about a problem situation",
+   "examples": [
+    {
+     "text": "如果你遇到空调坏了，你会怎么办？",
+     "ko": "에어컨이 고장 나면 어떻게 할 거예요?",
+     "en": "If you find the air conditioner is broken, what would you do?"
+    },
+    {
+     "text": "如果你遇到钱包丢了，你会怎么办？",
+     "ko": "지갑을 잃어버리면 어떻게 할 거예요?",
+     "en": "If you lost your wallet, what would you do?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정법",
+     "noteKo": "빈칸에 문제 상황을 넣습니다.",
+     "nameEn": "Conditional (if-clauses)",
+     "noteEn": "The blank is the problem or situation."
+    }
+   ],
+   "related": [
+    "如果___，你会怎么做？"
+   ],
+   "quiz": {
+    "prompt": "如果你遇到___，你会怎么办？",
+    "answer": "空调坏了"
+   }
+  },
+  {
+   "id": "zh-3-10",
+   "stage": 3,
+   "pattern": "我刚才说的___是什么意思？",
+   "meaningKo": "자신이 쓴 단어의 의미를 물어보기",
+   "meaningEn": "Asking what a word you used means",
+   "examples": [
+    {
+     "text": "我刚才说的“套餐”是什么意思？",
+     "ko": "제가 아까 말한 '套餐'은 무슨 뜻이에요?",
+     "en": "What does the 'plan' I just mentioned mean?"
+    },
+    {
+     "text": "我刚才说的“留学”是什么意思？",
+     "ko": "제가 방금 말한 '留学'은 무슨 뜻이에요?",
+     "en": "What does 'study abroad' that I just mentioned mean?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의미 질문",
+     "noteKo": "빈칸에 자신이 말한 단어나 표현을 넣습니다.",
+     "nameEn": "Asking for meanings",
+     "noteEn": "The blank is the word or phrase you want explained."
+    }
+   ],
+   "related": [
+    "___是什么意思？"
+   ],
+   "quiz": {
+    "prompt": "我刚才说的___是什么意思？",
+    "answer": "套餐"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "zh-4-01",
+   "stage": 4,
+   "pattern": "关于___，一些人认为___，但也有人觉得___。",
+   "meaningKo": "뉴스 주제에 대해 찬반 의견을 나눔",
+   "meaningEn": "Weighing pros and cons of a news topic",
+   "examples": [
+    {
+     "text": "关于远程工作，一些人认为可以提高效率，但也有人觉得会影响团队合作。",
+     "ko": "재택근무에 대해 어떤 사람들은 효율이 높아진다고 하지만, 팀워크에 영향을 준다고 생각하는 사람도 있다.",
+     "en": "Some people think remote work increases efficiency, but others think it affects teamwork."
+    },
+    {
+     "text": "关于使用社交媒体，一些人认为信息传播更快，但也有人觉得会产生假新闻。",
+     "ko": "SNS 사용에 대해 어떤 사람들은 정보가 더 빨리 퍼진다고 하지만, 가짜뉴스가 생긴다고 생각하는 사람도 있다.",
+     "en": "Some think social media spreads information quickly, but others think it leads to fake news."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주제 소개",
+     "noteKo": "첫 번째 빈칸에는 논의할 주제를 넣음.",
+     "nameEn": "Topic introduction",
+     "noteEn": "First blank is for the topic being discussed."
+    }
+   ],
+   "related": [
+    "有的人觉得___，有的人觉得___。"
+   ],
+   "quiz": {
+    "prompt": "关于___，一些人认为可以提高效率，但也有人觉得会影响团队合作。",
+    "answer": "远程工作"
+   }
+  },
+  {
+   "id": "zh-4-02",
+   "stage": 4,
+   "pattern": "虽然我理解你的想法，但我更倾向于___，因为___。",
+   "meaningKo": "공손하게 반대하고 대안을 제시함",
+   "meaningEn": "Disagree politely and propose an alternative",
+   "examples": [
+    {
+     "text": "虽然我理解你的想法，但我更倾向于弹性工作制，因为这样可以照顾不同需求。",
+     "ko": "당신의 생각을 이해하지만, 저는 유연 근무제를 선호합니다. 이렇게 하면 다양한 요구를 맞출 수 있기 때문입니다.",
+     "en": "I understand your point, but I prefer flexible work schedules because they accommodate different needs."
+    },
+    {
+     "text": "虽然我理解你的想法，但我更倾向于面对面会议，因为沟通更顺畅。",
+     "ko": "당신의 생각을 이해하지만, 저는 대면 회의를 더 선호합니다. 그 이유는 소통이 더 원활하기 때문입니다.",
+     "en": "I understand your view, but I prefer face-to-face meetings because communication is smoother."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "대안 제시",
+     "noteKo": "첫 번째 빈칸에 대안을, 두 번째 빈칸에 그 이유를 넣음.",
+     "nameEn": "Alternative and reason",
+     "noteEn": "First blank: alternative; second blank: reason."
+    }
+   ],
+   "related": [
+    "我认为___更合适，因为___。"
+   ],
+   "quiz": {
+    "prompt": "虽然我理解你的想法，但我更倾向于___，因为可以照顾不同需求。",
+    "answer": "弹性工作制"
+   }
+  },
+  {
+   "id": "zh-4-03",
+   "stage": 4,
+   "pattern": "目前项目进展到___，但我担心___可能会影响进度。",
+   "meaningKo": "프로젝트 진행 상황을 보고하고 위험을 제기함",
+   "meaningEn": "Report progress and raise a risk in a meeting",
+   "examples": [
+    {
+     "text": "目前项目进展到测试阶段，但我担心人员不足可能会影响进度。",
+     "ko": "현재 프로젝트는 테스트 단계까지 진행되었지만, 인력 부족이 일정에 영향을 줄까 걱정됩니다.",
+     "en": "The project is at the testing stage, but I’m concerned that staff shortages may affect the timeline."
+    },
+    {
+     "text": "目前项目进展到设计完成，但我担心材料延迟可能会影响进度。",
+     "ko": "현재 프로젝트는 설계 완료 단계지만, 자재 지연이 일정에 영향을 줄까 걱정입니다.",
+     "en": "The project has finished the design phase, but I’m worried material delays may impact the schedule."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "진행상황 보고",
+     "noteKo": "첫 번째 빈칸은 현재 단계, 두 번째 빈칸은 위험요소임.",
+     "nameEn": "Progress and risk",
+     "noteEn": "First blank: current stage; second blank: risk."
+    }
+   ],
+   "related": [
+    "现在已经完成了___，但还需要注意___。"
+   ],
+   "quiz": {
+    "prompt": "目前项目进展到___，但我担心材料延迟可能会影响进度。",
+    "answer": "设计完成"
+   }
+  },
+  {
+   "id": "zh-4-04",
+   "stage": 4,
+   "pattern": "很抱歉打扰您，我想反映___的问题，希望可以___。",
+   "meaningKo": "공손하게 불만을 제기하고 해결책을 요청",
+   "meaningEn": "Make a polite complaint and negotiate a solution",
+   "examples": [
+    {
+     "text": "很抱歉打扰您，我想反映快递延误的问题，希望可以尽快送达。",
+     "ko": "죄송하지만, 배송 지연 문제를 말씀드리고 싶습니다. 가능한 빨리 배송해 주셨으면 합니다.",
+     "en": "Sorry to bother you, but I’d like to report a delivery delay. I hope it can be delivered soon."
+    },
+    {
+     "text": "很抱歉打扰您，我想反映产品损坏的问题，希望可以更换新的。",
+     "ko": "죄송하지만, 제품 파손 문제를 말씀드리고 싶습니다. 새 제품으로 교환해 주셨으면 합니다.",
+     "en": "Sorry for the trouble, but I’d like to report a damaged product and hope for a replacement."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "불만 및 요청",
+     "noteKo": "첫 번째 빈칸에는 문제점, 두 번째 빈칸에는 원하는 해결책을 넣음.",
+     "nameEn": "Complaint and request",
+     "noteEn": "First blank: problem; second blank: solution asked for."
+    }
+   ],
+   "related": [
+    "我想投诉___，希望能够___。"
+   ],
+   "quiz": {
+    "prompt": "很抱歉打扰您，我想反映___的问题，希望可以尽快送达。",
+    "answer": "快递延误"
+   }
+  },
+  {
+   "id": "zh-4-05",
+   "stage": 4,
+   "pattern": "这篇文章主要讲了___，作者认为___。",
+   "meaningKo": "기사나 영상을 요약함",
+   "meaningEn": "Summarise an article or video",
+   "examples": [
+    {
+     "text": "这篇文章主要讲了远程办公的优缺点，作者认为灵活性很重要。",
+     "ko": "이 기사는 재택근무의 장단점에 대해 다루었고, 저자는 유연성이 중요하다고 봅니다.",
+     "en": "The article covers the pros and cons of remote work, and the author thinks flexibility is important."
+    },
+    {
+     "text": "这篇文章主要讲了社交媒体的影响，作者认为要理性使用。",
+     "ko": "이 기사는 SNS의 영향에 대해 다루었고, 저자는 이성적으로 사용해야 한다고 봅니다.",
+     "en": "The article is about the influence of social media, and the author believes we should use it rationally."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "내용 요약",
+     "noteKo": "첫 번째 빈칸은 주제, 두 번째 빈칸은 저자의 견해임.",
+     "nameEn": "Summary and opinion",
+     "noteEn": "First blank: main point; second blank: author’s opinion."
+    }
+   ],
+   "related": [
+    "视频里介绍了___，最后提出了___。"
+   ],
+   "quiz": {
+    "prompt": "这篇文章主要讲了___，作者认为要理性使用。",
+    "answer": "社交媒体的影响"
+   }
+  },
+  {
+   "id": "zh-4-06",
+   "stage": 4,
+   "pattern": "我最近一直在___，这让我觉得___。",
+   "meaningKo": "최근 감정이나 관계에 대해 상세히 말함",
+   "meaningEn": "Talk about recent feelings or relationships in detail",
+   "examples": [
+    {
+     "text": "我最近一直在忙工作，这让我觉得有点压力。",
+     "ko": "최근 계속 일로 바빴는데, 그래서 조금 스트레스를 느낍니다.",
+     "en": "I've been busy with work lately, which makes me feel a bit stressed."
+    },
+    {
+     "text": "我最近一直在和朋友交流，这让我觉得很开心。",
+     "ko": "최근 친구들과 자주 연락해서 매우 기쁩니다.",
+     "en": "I’ve been talking to friends a lot recently, and it makes me really happy."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "감정 표현",
+     "noteKo": "첫 번째 빈칸은 최근 행동이나 경험, 두 번째 빈칸은 그로 인한 감정임.",
+     "nameEn": "Emotion expression",
+     "noteEn": "First blank: recent activity or experience; second blank: resulting feeling."
+    }
+   ],
+   "related": [
+    "我最近经常___，所以觉得___。"
+   ],
+   "quiz": {
+    "prompt": "我最近一直在___，这让我觉得有点压力。",
+    "answer": "忙工作"
+   }
+  },
+  {
+   "id": "zh-4-07",
+   "stage": 4,
+   "pattern": "对于___，我的建议是___，这样可以___。",
+   "meaningKo": "문제에 해결책을 제시하고 기대되는 효과 설명",
+   "meaningEn": "Propose a solution and expected effect",
+   "examples": [
+    {
+     "text": "对于项目延迟，我的建议是增加人手，这样可以加快进度。",
+     "ko": "프로젝트 지연에 대해 제안은 인력을 늘려서 속도를 높이는 것입니다.",
+     "en": "For project delays, my suggestion is to add more staff, which can speed up the progress."
+    },
+    {
+     "text": "对于沟通问题，我的建议是定期开会，这样可以及时解决误解。",
+     "ko": "소통 문제에 대해 제안은 정기적으로 회의를 여는 것입니다. 이렇게 하면 오해를 즉시 해결할 수 있습니다.",
+     "en": "For communication issues, I suggest regular meetings so that misunderstandings can be resolved promptly."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "문제/제안/효과",
+     "noteKo": "첫 번째 빈칸: 문제, 두 번째: 제안, 세 번째: 효과.",
+     "nameEn": "Problem/Suggestion/Effect",
+     "noteEn": "First blank: problem; second: suggestion; third: effect."
+    }
+   ],
+   "related": [
+    "针对___，我们可以___，以便___。"
+   ],
+   "quiz": {
+    "prompt": "对于项目延迟，我的建议是___，这样可以加快进度。",
+    "answer": "增加人手"
+   }
+  },
+  {
+   "id": "zh-4-08",
+   "stage": 4,
+   "pattern": "事实上，___并不像大家想的那样___，我觉得___。",
+   "meaningKo": "오해를 바로잡고 의견 제시",
+   "meaningEn": "Correct a misconception and give your view",
+   "examples": [
+    {
+     "text": "事实上，远程工作并不像大家想的那样轻松，我觉得很有挑战性。",
+     "ko": "사실 재택근무가 모두가 생각하는 것처럼 쉽지는 않고, 오히려 도전적이라고 생각합니다.",
+     "en": "In fact, remote work is not as easy as people think; I find it quite challenging."
+    },
+    {
+     "text": "事实上，社交媒体并不像大家想的那样全是负面影响，我觉得有很多积极作用。",
+     "ko": "사실 SNS가 모두가 생각하는 것처럼 다 부정적인 것은 아니고, 긍정적인 점도 많다고 생각합니다.",
+     "en": "Actually, social media isn't all negative as people think; there are many positives."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "오해 바로잡기",
+     "noteKo": "첫 번째 빈칸: 바로잡을 대상, 두 번째 빈칸: 대중의 인식.",
+     "nameEn": "Correction",
+     "noteEn": "First blank: topic to correct; second: common belief."
+    }
+   ],
+   "related": [
+    "其实___没有大家说的那么___。"
+   ],
+   "quiz": {
+    "prompt": "事实上，远程工作并不像大家想的那样___，我觉得很有挑战性。",
+    "answer": "轻松"
+   }
+  },
+  {
+   "id": "zh-4-09",
+   "stage": 4,
+   "pattern": "其实我不是很同意___，因为我觉得___。",
+   "meaningKo": "공손하게 반대 의견을 밝힘",
+   "meaningEn": "Express polite disagreement with a reason",
+   "examples": [
+    {
+     "text": "其实我不是很同意全部远程办公，因为我觉得团队合作会变弱。",
+     "ko": "사실 저는 전면 재택근무에는 동의하지 않습니다. 팀워크가 약해질 수 있다고 생각합니다.",
+     "en": "Actually, I don't fully agree with all-remote work, because I think teamwork would weaken."
+    },
+    {
+     "text": "其实我不是很同意减少会议，因为我觉得沟通会不充分。",
+     "ko": "사실 저는 회의 시간을 줄이는 데 동의하지 않습니다. 소통이 부족해질 수 있다고 생각합니다.",
+     "en": "Honestly, I don't quite agree with reducing meetings, since I think communication could suffer."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공손한 반대",
+     "noteKo": "첫 번째 빈칸: 동의하지 않는 대상, 두 번째: 이유.",
+     "nameEn": "Polite disagreement",
+     "noteEn": "First blank: thing you disagree with; second: reason."
+    }
+   ],
+   "related": [
+    "我有不同的看法，主要是因为___。"
+   ],
+   "quiz": {
+    "prompt": "其实我不是很同意___，因为我觉得沟通会不充分。",
+    "answer": "减少会议"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "zh-5-01",
+   "stage": 5,
+   "pattern": "说到___，大家常说“___”。",
+   "meaningKo": "주제를 언급하고 관련된 속담이나 관용어를 인용함",
+   "meaningEn": "Introducing a topic and quoting a saying or idiom",
+   "examples": [
+    {
+     "text": "说到合作，大家常说“合作共赢”。",
+     "ko": "협력에 대해 말할 때는 '협력하여 모두가 이긴다'고들 하죠.",
+     "en": "Speaking of cooperation, people often say 'win-win partnership.'"
+    },
+    {
+     "text": "说到努力，大家常说“功夫不负有心人”。",
+     "ko": "노력에 대해 말할 때는 '노력은 배신하지 않는다'고들 하죠.",
+     "en": "Speaking of hard work, people often say 'hard work pays off.'"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "주제 명사",
+     "noteKo": "첫 번째 ___ 자리에 주제나 키워드가 들어감",
+     "nameEn": "Topic noun",
+     "noteEn": "First ___ is the topic being discussed"
+    },
+    {
+     "nameKo": "속담/관용구",
+     "noteKo": "두 번째 ___ 자리에 인용할 속담이나 관용구가 들어감",
+     "nameEn": "Saying/Idiom",
+     "noteEn": "Second ___ is the idiom or saying"
+    }
+   ],
+   "related": [
+    "正如大家常说的“___”，___。",
+    "每当提到___，大家都会想到“___”。"
+   ],
+   "quiz": {
+    "prompt": "说到坚持，大家常说“___”。",
+    "answer": "坚持就是胜利"
+   }
+  },
+  {
+   "id": "zh-5-02",
+   "stage": 5,
+   "pattern": "这个___可能不太合适，我建议___。",
+   "meaningKo": "완곡하게 제안이나 요청을 거절함",
+   "meaningEn": "Declining or refusing politely by offering an alternative",
+   "examples": [
+    {
+     "text": "这个方案可能不太合适，我建议重新考虑。",
+     "ko": "이 방안은 적합하지 않을 것 같으니 다시 생각해보는 게 좋겠습니다.",
+     "en": "This plan may not be suitable, I suggest reconsidering it."
+    },
+    {
+     "text": "这个时间可能不太合适，我建议下周再谈。",
+     "ko": "이 시간은 좀 어려우니 다음 주에 다시 얘기하자고 제안합니다.",
+     "en": "This time may not be ideal, I suggest talking next week."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "명사/명사구",
+     "noteKo": "첫 번째 ___ 자리에 거절하는 대상이 들어감",
+     "nameEn": "Noun/Noun phrase",
+     "noteEn": "First ___ is what you are politely declining"
+    },
+    {
+     "nameKo": "제안/대안",
+     "noteKo": "두 번째 ___ 자리에 대안이나 제안이 들어감",
+     "nameEn": "Alternative/Suggestion",
+     "noteEn": "Second ___ is your suggestion or alternative"
+    }
+   ],
+   "related": [
+    "恐怕___不太方便，我看能不能___。",
+    "也许我们可以考虑___。"
+   ],
+   "quiz": {
+    "prompt": "这个价格可能不太合适，我建议___。",
+    "answer": "再讨论一下"
+   }
+  },
+  {
+   "id": "zh-5-03",
+   "stage": 5,
+   "pattern": "刚刚___，你们就___，太快了吧！",
+   "meaningKo": "친근하게 농담하거나 놀림",
+   "meaningEn": "Joking about something happening quickly",
+   "examples": [
+    {
+     "text": "刚刚发红包，你们就抢完了，太快了吧！",
+     "ko": "방금 홍바오를 보냈는데 벌써 다 가져갔네요, 엄청 빠르네요!",
+     "en": "I just sent a red envelope and you guys already grabbed it all, so fast!"
+    },
+    {
+     "text": "刚刚说减肥，你们就点奶茶了，太快了吧！",
+     "ko": "다이어트 얘기하자마자 벌써 밀크티를 시켰네요, 진짜 빠르네요!",
+     "en": "We just talked about dieting and you already ordered milk tea, that's quick!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "방금 한 일",
+     "noteKo": "첫 번째 ___ 자리에 막 일어난 사건이 들어감",
+     "nameEn": "Recent action",
+     "noteEn": "First ___ is what just happened"
+    },
+    {
+     "nameKo": "즉각적인 반응",
+     "noteKo": "두 번째 ___ 자리에 즉각적인 반응이나 행동이 들어감",
+     "nameEn": "Immediate reaction",
+     "noteEn": "Second ___ is what people did immediately"
+    }
+   ],
+   "related": [
+    "才___，你就___了，真行！"
+   ],
+   "quiz": {
+    "prompt": "刚刚下班，你们就___，太快了吧！",
+    "answer": "到家了"
+   }
+  },
+  {
+   "id": "zh-5-04",
+   "stage": 5,
+   "pattern": "要我说，___才是最重要的，___只是其次。",
+   "meaningKo": "협상이나 논의에서 우선순위를 강조함",
+   "meaningEn": "Emphasizing priorities in negotiation or argument",
+   "examples": [
+    {
+     "text": "要我说，信任才是最重要的，价格只是其次。",
+     "ko": "제 생각엔 신뢰가 가장 중요하고 가격은 그다음입니다.",
+     "en": "In my opinion, trust is the most important, price comes second."
+    },
+    {
+     "text": "要我说，合作方式才是最重要的，分成只是其次。",
+     "ko": "협력 방식이 가장 중요하고 분배는 그 다음이라고 생각해요.",
+     "en": "I think the way of cooperation is most important, profit sharing is secondary."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "최우선 요소",
+     "noteKo": "첫 번째 ___ 자리에 가장 중요한 것이 들어감",
+     "nameEn": "Top priority",
+     "noteEn": "First ___ is what you think is most important"
+    },
+    {
+     "nameKo": "부차적 요소",
+     "noteKo": "두 번째 ___ 자리에 덜 중요한 것이 들어감",
+     "nameEn": "Secondary point",
+     "noteEn": "Second ___ is less important"
+    }
+   ],
+   "related": [
+    "在我看来，___比___更重要。"
+   ],
+   "quiz": {
+    "prompt": "要我说，质量才是最重要的，___只是其次。",
+    "answer": "速度"
+   }
+  },
+  {
+   "id": "zh-5-05",
+   "stage": 5,
+   "pattern": "其实我很想___，但___，还请你理解。",
+   "meaningKo": "상대방의 부탁을 정중하게 거절함",
+   "meaningEn": "Declining a request while expressing understanding",
+   "examples": [
+    {
+     "text": "其实我很想帮你，但最近真的太忙了，还请你理解。",
+     "ko": "사실 도와주고 싶지만 요즘 너무 바빠서 이해해 주세요.",
+     "en": "I really want to help you, but I've been too busy lately, please understand."
+    },
+    {
+     "text": "其实我很想参加，但身体不太舒服，还请你理解。",
+     "ko": "참석하고 싶지만 몸이 좀 안 좋아요, 양해 부탁드립니다.",
+     "en": "I really want to attend, but I'm not feeling well, please understand."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "하고 싶은 일",
+     "noteKo": "첫 번째 ___ 자리에 원하지만 못하는 일이 들어감",
+     "nameEn": "Desired action",
+     "noteEn": "First ___ is what you wish you could do"
+    },
+    {
+     "nameKo": "못하는 이유",
+     "noteKo": "두 번째 ___ 자리에 못하는 이유가 들어감",
+     "nameEn": "Reason for refusal",
+     "noteEn": "Second ___ is your reason for refusing"
+    }
+   ],
+   "related": [
+    "本来想___，可是___，希望你能理解。"
+   ],
+   "quiz": {
+    "prompt": "其实我很想去旅行，但___，还请你理解。",
+    "answer": "工作太忙"
+   }
+  },
+  {
+   "id": "zh-5-06",
+   "stage": 5,
+   "pattern": "虽然___，但我们还是可以___，这样对大家都好。",
+   "meaningKo": "양보 또는 타협안을 제시함",
+   "meaningEn": "Offering a compromise or middle ground",
+   "examples": [
+    {
+     "text": "虽然条件有点苛刻，但我们还是可以再沟通，这样对大家都好。",
+     "ko": "조건이 까다롭긴 하지만 그래도 다시 소통할 수 있으니 모두에게 좋을 거예요.",
+     "en": "Although the terms are a bit strict, we can still communicate more, this way it's good for everyone."
+    },
+    {
+     "text": "虽然预算有限，但我们还是可以分阶段合作，这样对大家都好。",
+     "ko": "예산이 한정되어 있지만 단계적으로 협력할 수 있어서 모두에게 좋을 거예요.",
+     "en": "Although the budget is limited, we can still cooperate in stages, which benefits everyone."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "양보/문제 상황",
+     "noteKo": "첫 번째 ___ 자리에 문제점이나 어려움이 들어감",
+     "nameEn": "Obstacle/Problem",
+     "noteEn": "First ___ is the challenge or issue"
+    },
+    {
+     "nameKo": "타협안/해결책",
+     "noteKo": "두 번째 ___ 자리에 타협안이나 해결책이 들어감",
+     "nameEn": "Compromise/Solution",
+     "noteEn": "Second ___ is the proposed compromise"
+    }
+   ],
+   "related": [
+    "如果___，我们可以___，这样大家都能接受。"
+   ],
+   "quiz": {
+    "prompt": "虽然时间紧张，但我们还是可以___，这样对大家都好。",
+    "answer": "加快进度"
+   }
+  },
+  {
+   "id": "zh-5-07",
+   "stage": 5,
+   "pattern": "请允许我代表___，向大家敬酒。",
+   "meaningKo": "공식적으로 건배를 제안함",
+   "meaningEn": "Proposing a toast formally",
+   "examples": [
+    {
+     "text": "请允许我代表我们公司，向大家敬酒。",
+     "ko": "우리 회사를 대표해서 여러분께 건배하겠습니다.",
+     "en": "Allow me to propose a toast on behalf of our company."
+    },
+    {
+     "text": "请允许我代表所有同事，向大家敬酒。",
+     "ko": "모든 동료를 대표해서 여러분께 건배하겠습니다.",
+     "en": "Allow me to propose a toast on behalf of all colleagues."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "대표명사 삽입",
+     "noteKo": "___ 자리에 대표하는 단체, 사람 등의 명칭이 들어감",
+     "nameEn": "Noun as representative",
+     "noteEn": "___ is the group or people you represent"
+    }
+   ],
+   "related": [
+    "我谨代表___，感谢大家的支持。"
+   ],
+   "quiz": {
+    "prompt": "请允许我代表___，向大家敬酒。",
+    "answer": "我们公司"
+   }
+  },
+  {
+   "id": "zh-5-08",
+   "stage": 5,
+   "pattern": "哪里哪里，___才值得称赞。",
+   "meaningKo": "칭찬에 겸손하게 반응함",
+   "meaningEn": "Responding modestly to compliments",
+   "examples": [
+    {
+     "text": "哪里哪里，您的经验才值得称赞。",
+     "ko": "아닙니다, 선생님의 경험이야말로 칭찬받을 만합니다.",
+     "en": "Not at all, your experience is really worth praising."
+    },
+    {
+     "text": "哪里哪里，团队的努力才值得称赞。",
+     "ko": "아닙니다, 팀의 노력이야말로 칭찬받아야 합니다.",
+     "en": "Not at all, the team's effort is truly commendable."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "칭찬의 대상",
+     "noteKo": "___ 자리에 진짜 칭찬받을 만한 것을 넣어 겸손을 표현함",
+     "nameEn": "Object of real compliment",
+     "noteEn": "___ is what you say is really worthy of praise"
+    }
+   ],
+   "related": [
+    "承蒙夸奖，其实___。",
+    "过奖了，其实___才厉害。"
+   ],
+   "quiz": {
+    "prompt": "哪里哪里，___才值得称赞。",
+    "answer": "您的经验"
+   }
+  }
+ ]
+}

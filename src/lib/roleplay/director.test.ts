@@ -317,6 +317,9 @@ test("an open conversation has nowhere to be sent home to", () => {
     request: request({ scenarioId: open.id, nodeId: "talk" }),
   });
   assert.match(prompt, /There is nothing to get done: this is just a conversation/);
+  assert.match(prompt, /They chose free conversation for this call/);
+  assert.match(prompt, /Leave "note", "better", "meant" and "smoother" empty/);
+  assert.doesNotMatch(prompt, /Fill it whenever one would notice something/);
   // 고른 튜터(lib/tutorGender.ts)의 이름·성별 — 없으면 그 언어의 예전 튜터.
   assert.match(prompt, new RegExp(`You are ${chatPartnerForLanguage(open.language).givenName}, the`));
   const chosen = tutorSystemPrompt({
@@ -504,6 +507,23 @@ test("a struggling learner is not led off the list", () => {
     { nodeId: "size-answer", heard: "" },
   );
   assert.deepEqual(stuck?.next, { step: "size-answer" });
+});
+
+test("자유대화는 고친 문장을 남기지 않는다", () => {
+  const direction = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Nice! Was it busy?", translation: "" },
+      better: "I went to the gym yesterday.",
+      note: "시제",
+      next: "free",
+    },
+    { heard: "I go to gym yesterday", scenarioId: open.id, nodeId: "talk" },
+    open,
+  );
+  assert.equal(direction?.better, undefined);
+  assert.equal(direction?.note, "");
+  assert.match(direction?.say && "text" in direction.say ? direction.say.text : "", /Nice/);
 });
 
 test("their own sentence, said better, rides under their own line", () => {
@@ -957,7 +977,7 @@ test("the character corrects against what this language in particular gets wrong
     scenario: open,
     bank,
     recorded: recordedLines(open, SCENARIOS, bank),
-    request: request({ targetLanguage: "ja" }),
+    request: request({ targetLanguage: "ja", coach: true }),
   });
   assert.match(japanese, /What goes wrong in Japanese in particular/);
   assert.match(japanese, /polite vs plain/);
@@ -987,7 +1007,7 @@ test("the row sits in the half of the brief that does not move", () => {
       scenario: open,
       bank,
       recorded: recordedLines(open, SCENARIOS, bank),
-      request: request({ targetLanguage: "ja", ...partial }),
+      request: request({ targetLanguage: "ja", coach: true, ...partial }),
     });
   const a = brief({ level: 2 });
   const b = brief({ level: 4, freeTurns: 3 });
@@ -1262,6 +1282,13 @@ test("튜터 수업: 그냥 대화의 '실수·튜터 말 금지'를 뒤집고 �
   const coach = coachBrief({ coach: true });
   assert.doesNotMatch(coach, /Never mention a tutor/);
   assert.doesNotMatch(coach, /Teaching never goes in what you say out loud/);
+  assert.match(coach, /They chose to study on this call/);
+  const opening = coachBrief({ coach: true, study: "동사", studyOpen: true, fixes: "2026-11-03 | 시제 | Yesterday, I went to the gym." });
+  const fixed = opening.slice(0, opening.indexOf("Level:"));
+  assert.doesNotMatch(fixed, /동사/);
+  assert.match(opening, /They have not spoken yet/);
+  assert.match(opening, /last time it was off and this time it is right/);
+  assert.match(opening, /Yesterday, I went to the gym/);
   assert.match(coach, /Pick up only big mistakes/);
   assert.match(coach, /point out what was wrong/);
   assert.match(coach, /said out loud/);

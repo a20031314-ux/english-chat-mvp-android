@@ -1,0 +1,1700 @@
+{
+ "1": [
+  {
+   "id": "vi-1-01",
+   "stage": 1,
+   "pattern": "Anh tên là ___",
+   "meaningKo": "자기 이름을 남자(형)로 말하기",
+   "meaningEn": "Introducing your name as a man (older)",
+   "examples": [
+    {
+     "text": "Anh tên là Minh",
+     "ko": "제 이름은 민입니다.",
+     "en": "My name is Minh."
+    },
+    {
+     "text": "Anh tên là Tuấn",
+     "ko": "제 이름은 투안입니다.",
+     "en": "My name is Tuan."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 소개",
+     "noteKo": "___ 자리에 자신의 이름을 넣음",
+     "nameEn": "Naming",
+     "noteEn": "___ slot is for your name"
+    }
+   ],
+   "related": [
+    "Chị tên là ___"
+   ],
+   "quiz": {
+    "prompt": "Anh tên là ___",
+    "answer": "Minh"
+   }
+  },
+  {
+   "id": "vi-1-02",
+   "stage": 1,
+   "pattern": "Chị tên là ___",
+   "meaningKo": "자기 이름을 여자(누나/언니)로 말하기",
+   "meaningEn": "Introducing your name as a woman (older)",
+   "examples": [
+    {
+     "text": "Chị tên là Lan",
+     "ko": "제 이름은 란입니다.",
+     "en": "My name is Lan."
+    },
+    {
+     "text": "Chị tên là Hương",
+     "ko": "제 이름은 흐엉입니다.",
+     "en": "My name is Huong."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "이름 소개",
+     "noteKo": "___ 자리에 자신의 이름을 넣음",
+     "nameEn": "Naming",
+     "noteEn": "___ slot is for your name"
+    }
+   ],
+   "related": [
+    "Anh tên là ___"
+   ],
+   "quiz": {
+    "prompt": "Chị tên là ___",
+    "answer": "Lan"
+   }
+  },
+  {
+   "id": "vi-1-03",
+   "stage": 1,
+   "pattern": "Tôi đến từ ___",
+   "meaningKo": "출신지를 말하기",
+   "meaningEn": "Saying where you are from",
+   "examples": [
+    {
+     "text": "Tôi đến từ Hàn Quốc",
+     "ko": "저는 한국에서 왔어요.",
+     "en": "I am from Korea."
+    },
+    {
+     "text": "Tôi đến từ Mỹ",
+     "ko": "저는 미국에서 왔어요.",
+     "en": "I am from America."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출신지",
+     "noteKo": "___ 자리에 나라나 도시를 넣음",
+     "nameEn": "Place of origin",
+     "noteEn": "___ slot is for a country or city"
+    }
+   ],
+   "related": [
+    "Tôi là ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi đến từ ___",
+    "answer": "Hàn Quốc"
+   }
+  },
+  {
+   "id": "vi-1-04",
+   "stage": 1,
+   "pattern": "Tôi là ___",
+   "meaningKo": "직업이나 신분을 말하기",
+   "meaningEn": "Saying your job or role",
+   "examples": [
+    {
+     "text": "Tôi là sinh viên",
+     "ko": "저는 학생입니다.",
+     "en": "I am a student."
+    },
+    {
+     "text": "Tôi là giáo viên",
+     "ko": "저는 선생님입니다.",
+     "en": "I am a teacher."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업/신분",
+     "noteKo": "___ 자리에 직업이나 신분을 넣음",
+     "nameEn": "Job/role",
+     "noteEn": "___ slot is for a job or role"
+    }
+   ],
+   "related": [
+    "Tôi đến từ ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi là ___",
+    "answer": "sinh viên"
+   }
+  },
+  {
+   "id": "vi-1-05",
+   "stage": 1,
+   "pattern": "Tôi lấy ___",
+   "meaningKo": "원하는 물건 선택하기",
+   "meaningEn": "Choosing what you want to buy",
+   "examples": [
+    {
+     "text": "Tôi lấy một ký táo",
+     "ko": "사과 1킬로 주세요.",
+     "en": "I will take one kilo of apples."
+    },
+    {
+     "text": "Tôi lấy cái này",
+     "ko": "이거 주세요.",
+     "en": "I'll take this."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "물건 선택",
+     "noteKo": "___ 자리에 원하는 물건/양을 넣음",
+     "nameEn": "Item selection",
+     "noteEn": "___ slot is for the item or amount"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Tôi lấy ___",
+    "answer": "một ký táo"
+   }
+  },
+  {
+   "id": "vi-1-06",
+   "stage": 1,
+   "pattern": "___ ở đâu?",
+   "meaningKo": "장소 위치를 묻기",
+   "meaningEn": "Asking where a place is",
+   "examples": [
+    {
+     "text": "Trạm xe buýt ở đâu?",
+     "ko": "버스 정류장이 어디예요?",
+     "en": "Where is the bus stop?"
+    },
+    {
+     "text": "Siêu thị ở đâu?",
+     "ko": "슈퍼마켓이 어디예요?",
+     "en": "Where is the supermarket?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 위치 질문",
+     "noteKo": "___ 자리에 장소명을 넣음",
+     "nameEn": "Place location question",
+     "noteEn": "___ slot is for a place name"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "___ ở đâu?",
+    "answer": "Trạm xe buýt"
+   }
+  },
+  {
+   "id": "vi-1-07",
+   "stage": 1,
+   "pattern": "Cảm ơn ___",
+   "meaningKo": "감사의 인사",
+   "meaningEn": "Thanking someone",
+   "examples": [
+    {
+     "text": "Cảm ơn bạn",
+     "ko": "고마워요.",
+     "en": "Thank you."
+    },
+    {
+     "text": "Cảm ơn anh",
+     "ko": "감사합니다 (형에게).",
+     "en": "Thank you (to older man)."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "감사 인사",
+     "noteKo": "___ 자리에 호칭을 넣음",
+     "nameEn": "Thanking",
+     "noteEn": "___ slot is for the person's title"
+    }
+   ],
+   "related": [
+    "Xin lỗi ___"
+   ],
+   "quiz": {
+    "prompt": "Cảm ơn ___",
+    "answer": "bạn"
+   }
+  },
+  {
+   "id": "vi-1-08",
+   "stage": 1,
+   "pattern": "Xin lỗi ___",
+   "meaningKo": "사과나 양해 구하기",
+   "meaningEn": "Saying sorry or excuse me",
+   "examples": [
+    {
+     "text": "Xin lỗi chị",
+     "ko": "죄송해요 (누나/언니에게).",
+     "en": "Sorry (to older woman)."
+    },
+    {
+     "text": "Xin lỗi em",
+     "ko": "미안해 (동생에게).",
+     "en": "Sorry (to younger person)."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "사과/양해",
+     "noteKo": "___ 자리에 호칭을 넣음",
+     "nameEn": "Apology/Excuse",
+     "noteEn": "___ slot is for the person's title"
+    }
+   ],
+   "related": [
+    "Cảm ơn ___"
+   ],
+   "quiz": {
+    "prompt": "Xin lỗi ___",
+    "answer": "chị"
+   }
+  },
+  {
+   "id": "vi-1-09",
+   "stage": 1,
+   "pattern": "Bạn có thể nói ___ không?",
+   "meaningKo": "말을 천천히 해달라고 요청하기",
+   "meaningEn": "Asking someone to speak slower",
+   "examples": [
+    {
+     "text": "Bạn có thể nói chậm không?",
+     "ko": "천천히 말씀해 주시겠어요?",
+     "en": "Can you speak slowly?"
+    },
+    {
+     "text": "Bạn có thể nói lại không?",
+     "ko": "다시 말씀해주실 수 있나요?",
+     "en": "Can you say it again?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "요청문",
+     "noteKo": "___ 자리에 동사/부사 넣음",
+     "nameEn": "Request sentence",
+     "noteEn": "___ slot is for an adverb or verb"
+    }
+   ],
+   "related": [],
+   "quiz": {
+    "prompt": "Bạn có thể nói ___ không?",
+    "answer": "chậm"
+   }
+  }
+ ],
+ "2": [
+  {
+   "id": "vi-2-01",
+   "stage": 2,
+   "pattern": "Hôm qua tôi đã ___",
+   "meaningKo": "어제 한 일을 말하기",
+   "meaningEn": "Saying what you did yesterday",
+   "examples": [
+    {
+     "text": "Hôm qua tôi đã đi chơi với bạn.",
+     "ko": "어제 친구랑 놀았어요.",
+     "en": "Yesterday I hung out with my friend."
+    },
+    {
+     "text": "Hôm qua tôi đã học tiếng Việt.",
+     "ko": "어제 베트남어를 공부했어요.",
+     "en": "Yesterday I studied Vietnamese."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "과거 시제 đã",
+     "noteKo": "___ 자리에 동사",
+     "nameEn": "Past tense marker đã",
+     "noteEn": "___ is a verb"
+    }
+   ],
+   "related": [
+    "Cuối tuần này tôi sẽ ___"
+   ],
+   "quiz": {
+    "prompt": "Hôm qua tôi đã ___.",
+    "answer": "ăn phở"
+   }
+  },
+  {
+   "id": "vi-2-02",
+   "stage": 2,
+   "pattern": "Cuối tuần này tôi sẽ ___",
+   "meaningKo": "이번 주말 계획 말하기",
+   "meaningEn": "Saying what you will do this weekend",
+   "examples": [
+    {
+     "text": "Cuối tuần này tôi sẽ đi Đà Lạt.",
+     "ko": "이번 주말에 달랏에 갈 거예요.",
+     "en": "This weekend I will go to Da Lat."
+    },
+    {
+     "text": "Cuối tuần này tôi sẽ gặp bạn bè.",
+     "ko": "이번 주말에 친구들을 만날 거예요.",
+     "en": "This weekend I will meet friends."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "미래 시제 sẽ",
+     "noteKo": "___ 자리에 동사",
+     "nameEn": "Future tense marker sẽ",
+     "noteEn": "___ is a verb"
+    }
+   ],
+   "related": [
+    "Hôm qua tôi đã ___"
+   ],
+   "quiz": {
+    "prompt": "Cuối tuần này tôi sẽ ___.",
+    "answer": "đi chơi"
+   }
+  },
+  {
+   "id": "vi-2-03",
+   "stage": 2,
+   "pattern": "Bạn rảnh ___ không?",
+   "meaningKo": "만날 시간 묻기",
+   "meaningEn": "Asking if someone is free at a time",
+   "examples": [
+    {
+     "text": "Bạn rảnh chiều nay không?",
+     "ko": "오늘 오후에 시간 있어요?",
+     "en": "Are you free this afternoon?"
+    },
+    {
+     "text": "Bạn rảnh cuối tuần không?",
+     "ko": "주말에 시간 있어요?",
+     "en": "Are you free on the weekend?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "시간 표현",
+     "noteKo": "___ 자리에 시간",
+     "nameEn": "Time expression",
+     "noteEn": "___ is a time"
+    }
+   ],
+   "related": [
+    "Chúng mình gặp nhau ở ___ nhé"
+   ],
+   "quiz": {
+    "prompt": "Bạn rảnh ___ không?",
+    "answer": "tối nay"
+   }
+  },
+  {
+   "id": "vi-2-04",
+   "stage": 2,
+   "pattern": "Chúng mình gặp nhau ở ___ nhé",
+   "meaningKo": "만날 장소 정하기",
+   "meaningEn": "Suggesting a meeting place",
+   "examples": [
+    {
+     "text": "Chúng mình gặp nhau ở quán cà phê nhé.",
+     "ko": "카페에서 만나요.",
+     "en": "Let's meet at the café."
+    },
+    {
+     "text": "Chúng mình gặp nhau ở công viên nhé.",
+     "ko": "공원에서 만나요.",
+     "en": "Let's meet at the park."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 표현",
+     "noteKo": "___ 자리에 장소",
+     "nameEn": "Place expression",
+     "noteEn": "___ is a place"
+    }
+   ],
+   "related": [
+    "Bạn rảnh ___ không?"
+   ],
+   "quiz": {
+    "prompt": "Chúng mình gặp nhau ở ___ nhé.",
+    "answer": "trường học"
+   }
+  },
+  {
+   "id": "vi-2-05",
+   "stage": 2,
+   "pattern": "Cho tôi một ___",
+   "meaningKo": "음식이나 음료 주문하기",
+   "meaningEn": "Ordering food or drink",
+   "examples": [
+    {
+     "text": "Cho tôi một phở bò.",
+     "ko": "쇠고기 쌀국수 하나 주세요.",
+     "en": "Give me a beef pho."
+    },
+    {
+     "text": "Cho tôi một trà đá.",
+     "ko": "아이스티 하나 주세요.",
+     "en": "Give me an iced tea."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "메뉴 항목",
+     "noteKo": "___ 자리에 음식/음료",
+     "nameEn": "Menu item",
+     "noteEn": "___ is a food or drink"
+    }
+   ],
+   "related": [
+    "Không ___",
+    "Ít ___"
+   ],
+   "quiz": {
+    "prompt": "Cho tôi một ___.",
+    "answer": "bún chả"
+   }
+  },
+  {
+   "id": "vi-2-06",
+   "stage": 2,
+   "pattern": "Không ___",
+   "meaningKo": "빼달라고 부탁하기",
+   "meaningEn": "Asking to leave something out",
+   "examples": [
+    {
+     "text": "Không ớt.",
+     "ko": "고추 빼주세요.",
+     "en": "No chili."
+    },
+    {
+     "text": "Không hành.",
+     "ko": "파 빼주세요.",
+     "en": "No green onions."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "재료",
+     "noteKo": "___ 자리에 빼고 싶은 재료",
+     "nameEn": "Ingredient",
+     "noteEn": "___ is something you don't want"
+    }
+   ],
+   "related": [
+    "Ít ___"
+   ],
+   "quiz": {
+    "prompt": "Không ___.",
+    "answer": "đường"
+   }
+  },
+  {
+   "id": "vi-2-07",
+   "stage": 2,
+   "pattern": "Ít ___",
+   "meaningKo": "적게 넣어달라고 부탁하기",
+   "meaningEn": "Asking for less of something",
+   "examples": [
+    {
+     "text": "Ít đường.",
+     "ko": "설탕 적게 넣어주세요.",
+     "en": "Less sugar."
+    },
+    {
+     "text": "Ít đá.",
+     "ko": "얼음 적게 넣어주세요.",
+     "en": "Less ice."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "재료",
+     "noteKo": "___ 자리에 적게 넣어달라고 하는 재료",
+     "nameEn": "Ingredient",
+     "noteEn": "___ is something you want less of"
+    }
+   ],
+   "related": [
+    "Không ___"
+   ],
+   "quiz": {
+    "prompt": "Ít ___.",
+    "answer": "muối"
+   }
+  },
+  {
+   "id": "vi-2-08",
+   "stage": 2,
+   "pattern": "Cho tôi xuống ở ___",
+   "meaningKo": "내릴 장소 말하기",
+   "meaningEn": "Telling driver where to stop",
+   "examples": [
+    {
+     "text": "Cho tôi xuống ở chợ Bến Thành.",
+     "ko": "벤탄 시장에서 내려주세요.",
+     "en": "Let me off at Ben Thanh market."
+    },
+    {
+     "text": "Cho tôi xuống ở ngã tư.",
+     "ko": "사거리에서 내려주세요.",
+     "en": "Let me off at the intersection."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소",
+     "noteKo": "___ 자리에 내릴 위치",
+     "nameEn": "Place",
+     "noteEn": "___ is a place"
+    }
+   ],
+   "related": [
+    "Đi đến ___"
+   ],
+   "quiz": {
+    "prompt": "Cho tôi xuống ở ___.",
+    "answer": "bệnh viện"
+   }
+  },
+  {
+   "id": "vi-2-09",
+   "stage": 2,
+   "pattern": "Tôi bị ___",
+   "meaningKo": "증상 말하기",
+   "meaningEn": "Describing a symptom",
+   "examples": [
+    {
+     "text": "Tôi bị đau họng.",
+     "ko": "목이 아파요.",
+     "en": "I have a sore throat."
+    },
+    {
+     "text": "Tôi bị nhức đầu.",
+     "ko": "두통이 있어요.",
+     "en": "I have a headache."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "증상",
+     "noteKo": "___ 자리에 증상",
+     "nameEn": "Symptom",
+     "noteEn": "___ is the symptom"
+    }
+   ],
+   "related": [
+    "Tôi muốn ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi bị ___.",
+    "answer": "đau bụng"
+   }
+  }
+ ],
+ "3": [
+  {
+   "id": "vi-3-01",
+   "stage": 3,
+   "pattern": "Đầu tiên tôi ___, sau đó tôi ___",
+   "meaningKo": "여행이나 사건의 순서를 설명하기",
+   "meaningEn": "Describing the order of events in a story",
+   "examples": [
+    {
+     "text": "Đầu tiên tôi đến chợ đêm, sau đó tôi ăn bánh tráng nướng.",
+     "ko": "먼저 야시장에 갔고, 그 다음에 바인짱느엉을 먹었어요.",
+     "en": "First I went to the night market, then I ate grilled rice paper."
+    },
+    {
+     "text": "Đầu tiên tôi tham quan vườn hoa, sau đó tôi uống cà phê.",
+     "ko": "먼저 꽃밭을 구경했고, 그 다음에 커피를 마셨어요.",
+     "en": "First I visited the flower garden, then I had coffee."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동작 순서 표현",
+     "noteKo": "___에 과거 동사를 씀",
+     "nameEn": "Sequence of actions",
+     "noteEn": "Each ___ takes a past-tense verb phrase"
+    }
+   ],
+   "related": [
+    "Sau khi tôi ___, tôi ___",
+    "Lúc ___, tôi ___"
+   ],
+   "quiz": {
+    "prompt": "Đầu tiên tôi ___, sau đó tôi đi bộ quanh hồ.",
+    "answer": "ăn sáng"
+   }
+  },
+  {
+   "id": "vi-3-02",
+   "stage": 3,
+   "pattern": "Máy lạnh ở ___ bị hỏng, bạn có thể ___ không?",
+   "meaningKo": "문제를 설명하고 해결을 요청하기",
+   "meaningEn": "Explaining a problem and requesting a fix",
+   "examples": [
+    {
+     "text": "Máy lạnh ở phòng khách bị hỏng, bạn có thể sửa giúp tôi không?",
+     "ko": "거실의 에어컨이 고장났는데, 고쳐줄 수 있어요?",
+     "en": "The air conditioner in the living room is broken, can you fix it for me?"
+    },
+    {
+     "text": "Máy lạnh ở phòng ngủ bị hỏng, bạn có thể kiểm tra không?",
+     "ko": "침실의 에어컨이 고장났는데, 점검해 줄 수 있나요?",
+     "en": "The air conditioner in the bedroom is broken, can you check it?"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장소 명사",
+     "noteKo": "첫 번째 ___에 고장난 장소를 씀",
+     "nameEn": "Location noun",
+     "noteEn": "First ___ is the place where the problem is"
+    },
+    {
+     "nameKo": "동사",
+     "noteKo": "두 번째 ___에 해결 요청 동사를 씀",
+     "nameEn": "Request verb",
+     "noteEn": "Second ___ is a verb for the requested action"
+    }
+   ],
+   "related": [
+    "Tôi cần ___ vì ___",
+    "Bạn giúp tôi ___ được không?"
+   ],
+   "quiz": {
+    "prompt": "Máy lạnh ở phòng khách bị hỏng, bạn có thể ___ không?",
+    "answer": "sửa"
+   }
+  },
+  {
+   "id": "vi-3-03",
+   "stage": 3,
+   "pattern": "Theo tôi, ___ vì ___",
+   "meaningKo": "의견을 말하고 이유를 설명하기",
+   "meaningEn": "Giving an opinion and a reason",
+   "examples": [
+    {
+     "text": "Theo tôi, nên chọn gói này vì giá rẻ.",
+     "ko": "제 생각엔 이 요금제를 선택하는 게 좋다고 생각해요. 가격이 싸서요.",
+     "en": "I think we should choose this plan because it's cheap."
+    },
+    {
+     "text": "Theo tôi, video đó thú vị vì rất hài hước.",
+     "ko": "제 생각에 그 영상이 재미있는 이유는 아주 웃기기 때문이에요.",
+     "en": "In my opinion, that video is interesting because it's very funny."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 표현",
+     "noteKo": "첫 번째 ___에 의견을 씀",
+     "nameEn": "Opinion expression",
+     "noteEn": "First ___ is your opinion"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 ___에 이유를 씀",
+     "nameEn": "Reason",
+     "noteEn": "Second ___ is your reason"
+    }
+   ],
+   "related": [
+    "Tôi nghĩ ___ là ___",
+    "Theo ý kiến của tôi, ___"
+   ],
+   "quiz": {
+    "prompt": "Theo tôi, nên chọn gói này vì ___.",
+    "answer": "giá rẻ"
+   }
+  },
+  {
+   "id": "vi-3-04",
+   "stage": 3,
+   "pattern": "Tôi thích ___ hơn ___ vì ___",
+   "meaningKo": "두 가지를 비교하고 선호도와 이유를 설명하기",
+   "meaningEn": "Comparing two options and giving a preference and reason",
+   "examples": [
+    {
+     "text": "Tôi thích dùng mạng này hơn mạng kia vì nhanh hơn.",
+     "ko": "이 통신사를 저 통신사보다 더 좋아해요. 더 빨라서요.",
+     "en": "I prefer this network over the other one because it's faster."
+    },
+    {
+     "text": "Tôi thích xem video ngắn hơn video dài vì không tốn nhiều thời gian.",
+     "ko": "긴 영상보다 짧은 영상을 더 좋아해요. 시간이 많이 안 들어서요.",
+     "en": "I prefer watching short videos over long ones because they don't take much time."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "비교 대상",
+     "noteKo": "첫 번째와 두 번째 ___에 비교할 대상을 씀",
+     "nameEn": "Comparison targets",
+     "noteEn": "First and second ___ are compared items"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "세 번째 ___에 이유를 씀",
+     "nameEn": "Reason",
+     "noteEn": "Third ___ is the reason"
+    }
+   ],
+   "related": [
+    "Cái này ___ hơn cái kia",
+    "Tôi chọn ___ thay vì ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi thích điện thoại này hơn điện thoại kia vì ___.",
+    "answer": "pin lâu"
+   }
+  },
+  {
+   "id": "vi-3-05",
+   "stage": 3,
+   "pattern": "Công việc của tôi là ___ và thỉnh thoảng tôi phải ___",
+   "meaningKo": "자신의 일을 설명하고 어려운 점을 말하기",
+   "meaningEn": "Describing your job and what is hard about it",
+   "examples": [
+    {
+     "text": "Công việc của tôi là chăm sóc khách hàng và thỉnh thoảng tôi phải làm thêm giờ.",
+     "ko": "제 일은 고객을 돌보는 것이고 가끔 야근을 해야 해요.",
+     "en": "My job is taking care of customers and sometimes I have to work overtime."
+    },
+    {
+     "text": "Công việc của tôi là dạy tiếng Anh và thỉnh thoảng tôi phải chấm bài khuya.",
+     "ko": "제 일은 영어를 가르치는 것이고, 가끔 늦게까지 채점을 해야 해요.",
+     "en": "My job is teaching English and sometimes I have to grade late at night."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직업 설명",
+     "noteKo": "첫 번째 ___에 하는 일을 씀",
+     "nameEn": "Job description",
+     "noteEn": "First ___ is your main job duty"
+    },
+    {
+     "nameKo": "어려운 점",
+     "noteKo": "두 번째 ___에 어려운 점을 씀",
+     "nameEn": "Difficulty",
+     "noteEn": "Second ___ is a hard part of the job"
+    }
+   ],
+   "related": [
+    "Tôi làm việc ở ___ và thường ___",
+    "Tôi chịu trách nhiệm về ___"
+   ],
+   "quiz": {
+    "prompt": "Công việc của tôi là bán hàng và thỉnh thoảng tôi phải ___.",
+    "answer": "tăng ca"
+   }
+  },
+  {
+   "id": "vi-3-06",
+   "stage": 3,
+   "pattern": "Tôi đồng ý với ___ vì ___",
+   "meaningKo": "동의하는 사람/의견과 그 이유를 말하기",
+   "meaningEn": "Agreeing with someone or an idea and giving a reason",
+   "examples": [
+    {
+     "text": "Tôi đồng ý với bạn vì ý kiến của bạn hợp lý.",
+     "ko": "당신 의견에 동의해요. 논리적이니까요.",
+     "en": "I agree with you because your opinion makes sense."
+    },
+    {
+     "text": "Tôi đồng ý với quyết định này vì nó có lợi cho công ty.",
+     "ko": "이 결정에 동의해요. 회사에 이익이 되니까요.",
+     "en": "I agree with this decision because it's good for the company."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "동의 대상",
+     "noteKo": "첫 번째 ___에 동의하는 사람이나 의견을 씀",
+     "nameEn": "Agreement target",
+     "noteEn": "First ___ is the person or idea you agree with"
+    },
+    {
+     "nameKo": "이유",
+     "noteKo": "두 번째 ___에 이유를 씀",
+     "nameEn": "Reason",
+     "noteEn": "Second ___ is the reason"
+    }
+   ],
+   "related": [
+    "Tôi không đồng ý với ___ vì ___",
+    "Tôi nghĩ ___ là đúng"
+   ],
+   "quiz": {
+    "prompt": "Tôi đồng ý với bạn vì ___.",
+    "answer": "ý kiến hợp lý"
+   }
+  },
+  {
+   "id": "vi-3-07",
+   "stage": 3,
+   "pattern": "Tin tức nói rằng ___ và điều này ảnh hưởng đến ___",
+   "meaningKo": "뉴스의 주요 내용을 말하고 영향 설명하기",
+   "meaningEn": "Summarizing news and explaining its impact",
+   "examples": [
+    {
+     "text": "Tin tức nói rằng giá xăng tăng và điều này ảnh hưởng đến chi phí sinh hoạt.",
+     "ko": "뉴스에서는 기름값이 올랐다고 하고, 이것이 생활비에 영향을 미쳐요.",
+     "en": "The news says that gas prices increased and this affects living costs."
+    },
+    {
+     "text": "Tin tức nói rằng có bão lớn và điều này ảnh hưởng đến giao thông.",
+     "ko": "뉴스에서 큰 태풍이 온다고 하고, 이것이 교통에 영향을 준대요.",
+     "en": "The news says there is a big storm and this impacts traffic."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "뉴스 내용",
+     "noteKo": "첫 번째 ___에 뉴스의 주요 내용을 씀",
+     "nameEn": "News content",
+     "noteEn": "First ___ is the main point of the news"
+    },
+    {
+     "nameKo": "영향 받는 대상",
+     "noteKo": "두 번째 ___에 영향을 받는 대상을 씀",
+     "nameEn": "Affected target",
+     "noteEn": "Second ___ is what is affected"
+    }
+   ],
+   "related": [
+    "Theo tin tức, ___",
+    "Điều này làm cho ___"
+   ],
+   "quiz": {
+    "prompt": "Tin tức nói rằng thời tiết xấu và điều này ảnh hưởng đến ___.",
+    "answer": "du lịch"
+   }
+  },
+  {
+   "id": "vi-3-08",
+   "stage": 3,
+   "pattern": "Nếu ___ thì bạn nên ___",
+   "meaningKo": "문제 상황에 대한 조언이나 해결책 제시",
+   "meaningEn": "Giving advice or a solution for a problem",
+   "examples": [
+    {
+     "text": "Nếu máy lạnh không mát thì bạn nên gọi thợ.",
+     "ko": "에어컨이 시원하지 않으면 기술자를 부르세요.",
+     "en": "If the air conditioner isn't cold, you should call a technician."
+    },
+    {
+     "text": "Nếu không biết chọn gói nào thì bạn nên hỏi nhân viên.",
+     "ko": "어떤 요금제를 고를지 모르겠으면 직원에게 물어보세요.",
+     "en": "If you don't know which plan to choose, you should ask the staff."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건절",
+     "noteKo": "첫 번째 ___에 조건을 씀",
+     "nameEn": "Condition clause",
+     "noteEn": "First ___ is the condition"
+    },
+    {
+     "nameKo": "조언",
+     "noteKo": "두 번째 ___에 해결책이나 조언을 씀",
+     "nameEn": "Advice or solution",
+     "noteEn": "Second ___ is the suggested action"
+    }
+   ],
+   "related": [
+    "Bạn nên ___ nếu ___",
+    "Trong trường hợp ___, bạn nên ___"
+   ],
+   "quiz": {
+    "prompt": "Nếu không khỏe thì bạn nên ___.",
+    "answer": "nghỉ ngơi"
+   }
+  },
+  {
+   "id": "vi-3-09",
+   "stage": 3,
+   "pattern": "Tôi thấy ___ rất ___",
+   "meaningKo": "어떤 것에 대한 느낌이나 평가 말하기",
+   "meaningEn": "Expressing a feeling or opinion about something",
+   "examples": [
+    {
+     "text": "Tôi thấy Đà Lạt rất đẹp.",
+     "ko": "달랏이 아주 예쁘다고 생각해요.",
+     "en": "I think Đà Lạt is very beautiful."
+    },
+    {
+     "text": "Tôi thấy video này rất thú vị.",
+     "ko": "이 영상이 아주 흥미롭다고 생각해요.",
+     "en": "I think this video is very interesting."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "대상",
+     "noteKo": "첫 번째 ___에 평가할 대상을 씀",
+     "nameEn": "Object",
+     "noteEn": "First ___ is the thing being described"
+    },
+    {
+     "nameKo": "평가 형용사",
+     "noteKo": "두 번째 ___에 평가나 느낌을 나타내는 형용사를 씀",
+     "nameEn": "Opinion adjective",
+     "noteEn": "Second ___ is an adjective for opinion or feeling"
+    }
+   ],
+   "related": [
+    "Tôi nghĩ ___ là ___",
+    "Theo tôi, ___ rất ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi thấy món ăn này rất ___.",
+    "answer": "ngon"
+   }
+  },
+  {
+   "id": "vi-3-10",
+   "stage": 3,
+   "pattern": "Thường thì tôi ___ nhưng hôm nay tôi ___",
+   "meaningKo": "평소와 다른 상황을 설명하기",
+   "meaningEn": "Describing a usual habit and an exception",
+   "examples": [
+    {
+     "text": "Thường thì tôi đi làm bằng xe máy nhưng hôm nay tôi đi taxi.",
+     "ko": "보통 오토바이로 출근하지만 오늘은 택시를 탔어요.",
+     "en": "Usually I go to work by motorbike but today I took a taxi."
+    },
+    {
+     "text": "Thường thì tôi ăn sáng ở nhà nhưng hôm nay tôi ăn ở quán.",
+     "ko": "보통 집에서 아침을 먹지만 오늘은 식당에서 먹었어요.",
+     "en": "Usually I have breakfast at home but today I ate at a restaurant."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "평소 습관",
+     "noteKo": "첫 번째 ___에 평소 하는 일을 씀",
+     "nameEn": "Usual habit",
+     "noteEn": "First ___ is your usual action"
+    },
+    {
+     "nameKo": "예외 상황",
+     "noteKo": "두 번째 ___에 오늘 한 일을 씀",
+     "nameEn": "Exception",
+     "noteEn": "Second ___ is what you did today"
+    }
+   ],
+   "related": [
+    "Bình thường tôi ___ nhưng hôm nay tôi ___",
+    "Mọi khi tôi ___, hôm nay thì ___"
+   ],
+   "quiz": {
+    "prompt": "Thường thì tôi uống cà phê nhưng hôm nay tôi ___.",
+    "answer": "uống trà"
+   }
+  }
+ ],
+ "4": [
+  {
+   "id": "vi-4-01",
+   "stage": 4,
+   "pattern": "Tôi cho rằng ___ bởi vì ___",
+   "meaningKo": "의견에 이유를 들어 주장하기",
+   "meaningEn": "Arguing for a view with a reason",
+   "examples": [
+    {
+     "text": "Tôi cho rằng cấm xe máy là cần thiết bởi vì giao thông sẽ an toàn hơn",
+     "ko": "오토바이 금지는 필요하다고 생각해요, 왜냐하면 교통이 더 안전해질 거니까요.",
+     "en": "I think banning motorbikes is necessary because traffic will be safer."
+    },
+    {
+     "text": "Tôi cho rằng nên có nhiều cây xanh hơn bởi vì không khí sẽ trong lành hơn",
+     "ko": "더 많은 나무가 필요하다고 생각해요, 왜냐하면 공기가 더 맑아질 테니까요.",
+     "en": "I think there should be more trees because the air will be cleaner."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "의견 제시",
+     "noteKo": "___: 주장하는 내용",
+     "nameEn": "Giving an opinion",
+     "noteEn": "___: what you argue for"
+    },
+    {
+     "nameKo": "이유 설명",
+     "noteKo": "___: 이유",
+     "nameEn": "Explaining a reason",
+     "noteEn": "___: your reason"
+    }
+   ],
+   "related": [
+    "Tôi nghĩ rằng ___ vì ___",
+    "Theo quan điểm của tôi, ___ do ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi cho rằng ___ bởi vì giao thông sẽ tốt hơn",
+    "answer": "cấm xe máy"
+   }
+  },
+  {
+   "id": "vi-4-02",
+   "stage": 4,
+   "pattern": "Nếu mọi người ___, tôi đề nghị chúng ta ___",
+   "meaningKo": "회의에서 제안하기",
+   "meaningEn": "Proposing an action in a meeting",
+   "examples": [
+    {
+     "text": "Nếu mọi người đồng ý, tôi đề nghị chúng ta bắt đầu sớm hơn",
+     "ko": "모두 동의한다면, 우리는 더 일찍 시작하자고 제안합니다.",
+     "en": "If everyone agrees, I suggest we start earlier."
+    },
+    {
+     "text": "Nếu mọi người thấy phù hợp, tôi đề nghị chúng ta chuyển sang đề tài tiếp theo",
+     "ko": "모두 괜찮으시다면, 다음 주제로 넘어가자고 제안합니다.",
+     "en": "If everyone thinks it's appropriate, I suggest we move to the next topic."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "___: 조건",
+     "nameEn": "Conditional",
+     "noteEn": "___: the condition"
+    },
+    {
+     "nameKo": "제안",
+     "noteKo": "___: 제안하는 행동",
+     "nameEn": "Making a suggestion",
+     "noteEn": "___: what you propose"
+    }
+   ],
+   "related": [
+    "Nếu không ai phản đối, tôi xin phép ___",
+    "Mọi người có đồng ý ___ không?"
+   ],
+   "quiz": {
+    "prompt": "Nếu mọi người ___, tôi đề nghị chúng ta họp lại vào tuần sau",
+    "answer": "đồng ý"
+   }
+  },
+  {
+   "id": "vi-4-03",
+   "stage": 4,
+   "pattern": "Tôi hiểu ý ___, nhưng tôi nghĩ ___",
+   "meaningKo": "정중하게 반대 의견 말하기",
+   "meaningEn": "Disagreeing politely",
+   "examples": [
+    {
+     "text": "Tôi hiểu ý anh, nhưng tôi nghĩ chúng ta nên cân nhắc thêm",
+     "ko": "선생님 의견을 이해하지만, 좀 더 고려해야 한다고 생각합니다.",
+     "en": "I understand your point, but I think we should consider more."
+    },
+    {
+     "text": "Tôi hiểu ý sếp, nhưng tôi nghĩ phương án này chưa tối ưu",
+     "ko": "상사 의견을 이해하지만, 이 방법이 최선이 아니라고 생각합니다.",
+     "en": "I understand the boss’s view, but I think this option is not optimal."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "상대방 의견",
+     "noteKo": "___: 상대방",
+     "nameEn": "Referring to someone’s view",
+     "noteEn": "___: whose view you understand"
+    },
+    {
+     "nameKo": "정중한 반대",
+     "noteKo": "___: 나의 생각",
+     "nameEn": "Polite disagreement",
+     "noteEn": "___: your differing opinion"
+    }
+   ],
+   "related": [
+    "Tôi tôn trọng ý kiến của ___, nhưng ___",
+    "Tôi đồng ý một phần, tuy nhiên ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi hiểu ý chị, nhưng tôi nghĩ ___",
+    "answer": "chúng ta nên đổi kế hoạch"
+   }
+  },
+  {
+   "id": "vi-4-04",
+   "stage": 4,
+   "pattern": "Một mặt ___, mặt khác ___",
+   "meaningKo": "장단점 설명하기",
+   "meaningEn": "Explaining pros and cons",
+   "examples": [
+    {
+     "text": "Một mặt giảm xe máy giúp giảm ô nhiễm, mặt khác gây khó khăn cho người dân",
+     "ko": "한편 오토바이 감소는 오염을 줄이지만, 다른 한편으로 시민들에게 어려움을 줄 수 있어요.",
+     "en": "On one hand, reducing motorbikes helps with pollution, but on the other, it causes difficulty for people."
+    },
+    {
+     "text": "Một mặt giá nhà tăng giúp phát triển kinh tế, mặt khác lại làm nhiều người không mua nổi nhà",
+     "ko": "한편 집값 상승은 경제 발전에 도움이 되지만, 다른 한편으로 많은 사람들이 집을 못 사게 됩니다.",
+     "en": "On one hand, rising house prices help the economy, but on the other, many people can’t afford houses."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "장점",
+     "noteKo": "___: 첫 번째 면(보통 긍정)",
+     "nameEn": "First aspect",
+     "noteEn": "___: usually the advantage"
+    },
+    {
+     "nameKo": "단점",
+     "noteKo": "___: 두 번째 면(보통 부정)",
+     "nameEn": "Second aspect",
+     "noteEn": "___: usually the disadvantage"
+    }
+   ],
+   "related": [
+    "Tuy ___ nhưng ___",
+    "Vừa ___ vừa ___"
+   ],
+   "quiz": {
+    "prompt": "Một mặt ___, mặt khác gây ô nhiễm",
+    "answer": "xe máy tiện lợi"
+   }
+  },
+  {
+   "id": "vi-4-05",
+   "stage": 4,
+   "pattern": "Nếu ___, tôi có thể ___ nhưng ___",
+   "meaningKo": "협상과 타협 제안하기",
+   "meaningEn": "Negotiating and offering compromise",
+   "examples": [
+    {
+     "text": "Nếu anh giảm giá, tôi có thể ký hợp đồng nhưng cần thêm thời gian xem xét",
+     "ko": "가격을 내려주시면 계약할 수 있지만, 검토 시간이 더 필요합니다.",
+     "en": "If you lower the price, I can sign the contract, but I need more time to review."
+    },
+    {
+     "text": "Nếu chủ nhà sửa thiết bị, tôi có thể ở lại nhưng mong giảm tiền thuê",
+     "ko": "집주인이 수리해주시면 계속 살 수 있지만, 임대료 인하를 바랍니다.",
+     "en": "If the landlord repairs the equipment, I can stay, but I hope for a rent reduction."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건",
+     "noteKo": "___: 상대 조건",
+     "nameEn": "Counterparty’s condition",
+     "noteEn": "___: what you want"
+    },
+    {
+     "nameKo": "타협 제안",
+     "noteKo": "___: 내 제안이나 요청",
+     "nameEn": "Your proposal",
+     "noteEn": "___: what you can do, with an extra condition"
+    }
+   ],
+   "related": [
+    "Nếu ___ thì tôi sẽ ___",
+    "Tôi đồng ý ___ với điều kiện ___"
+   ],
+   "quiz": {
+    "prompt": "Nếu chủ nhà giảm giá, tôi có thể ở lại nhưng ___",
+    "answer": "cần sửa phòng tắm"
+   }
+  },
+  {
+   "id": "vi-4-06",
+   "stage": 4,
+   "pattern": "Để tôi tóm tắt: ___ và ___",
+   "meaningKo": "회의에서 요점 정리하기",
+   "meaningEn": "Summarizing in a meeting",
+   "examples": [
+    {
+     "text": "Để tôi tóm tắt: chúng ta cần hoàn thành báo cáo và gửi cho khách hàng trước thứ sáu",
+     "ko": "요약하자면, 우리는 금요일 전까지 보고서를 완성해서 고객에게 보내야 합니다.",
+     "en": "Let me summarize: we need to finish the report and send it to the client before Friday."
+    },
+    {
+     "text": "Để tôi tóm tắt: mọi người đồng ý giải pháp này và sẽ thử áp dụng tuần sau",
+     "ko": "요약하면, 모두가 이 해결책에 동의했고 다음 주에 적용해보기로 했습니다.",
+     "en": "To summarize: everyone agrees with this solution and will try applying it next week."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "요약 내용",
+     "noteKo": "___: 첫 번째 요점",
+     "nameEn": "Summary point 1",
+     "noteEn": "___: first main point"
+    },
+    {
+     "nameKo": "요약 내용",
+     "noteKo": "___: 두 번째 요점",
+     "nameEn": "Summary point 2",
+     "noteEn": "___: second main point"
+    }
+   ],
+   "related": [
+    "Chúng ta đã thống nhất ___ và ___",
+    "Như vậy, ___ và ___"
+   ],
+   "quiz": {
+    "prompt": "Để tôi tóm tắt: chúng ta cần họp lại vào thứ hai và ___",
+    "answer": "chuẩn bị tài liệu"
+   }
+  },
+  {
+   "id": "vi-4-07",
+   "stage": 4,
+   "pattern": "Tôi muốn đưa ra ví dụ về ___ để minh họa cho ___",
+   "meaningKo": "사례로 의견 뒷받침하기",
+   "meaningEn": "Giving an example to support a point",
+   "examples": [
+    {
+     "text": "Tôi muốn đưa ra ví dụ về Singapore để minh họa cho việc cấm xe máy hiệu quả",
+     "ko": "오토바이 금지가 효과적인 사례로 싱가포르를 예로 들고 싶어요.",
+     "en": "I want to give Singapore as an example to illustrate the effectiveness of banning motorbikes."
+    },
+    {
+     "text": "Tôi muốn đưa ra ví dụ về một công ty thành công để minh họa cho ý tưởng của tôi",
+     "ko": "내 아이디어를 뒷받침할 성공적인 회사의 예를 들고 싶어요.",
+     "en": "I want to give an example of a successful company to illustrate my idea."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "예시",
+     "noteKo": "___: 예시로 드는 것",
+     "nameEn": "Example",
+     "noteEn": "___: what you use as an example"
+    },
+    {
+     "nameKo": "설명 대상",
+     "noteKo": "___: 설명하고자 하는 내용",
+     "nameEn": "Point illustrated",
+     "noteEn": "___: what you aim to illustrate"
+    }
+   ],
+   "related": [
+    "Chẳng hạn, ___ cho thấy ___",
+    "Ví dụ như ___, ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi muốn đưa ra ví dụ về ___ để minh họa cho giao thông xanh",
+    "answer": "Hà Nội"
+   }
+  },
+  {
+   "id": "vi-4-08",
+   "stage": 4,
+   "pattern": "Tôi vừa nghe ___ nói về ___, họ cho rằng ___",
+   "meaningKo": "팟캐스트나 토론 내용 언급하기",
+   "meaningEn": "Referring to a podcast or discussion",
+   "examples": [
+    {
+     "text": "Tôi vừa nghe chương trình radio nói về nhà ở, họ cho rằng giá nhà sẽ giảm",
+     "ko": "라디오 프로그램에서 주택에 대해 들었는데, 집값이 떨어질 거라고 하더라고요.",
+     "en": "I just heard a radio show about housing, they said house prices will fall."
+    },
+    {
+     "text": "Tôi vừa nghe podcast nói về giao thông, họ cho rằng cần phát triển xe buýt",
+     "ko": "팟캐스트에서 교통에 대해 들었는데, 버스 발전이 필요하다고 했어요.",
+     "en": "I just heard a podcast about traffic, they said buses need to be developed."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "출처 내용",
+     "noteKo": "___: 방송, 토론 등",
+     "nameEn": "Source",
+     "noteEn": "___: show or discussion"
+    },
+    {
+     "nameKo": "주제",
+     "noteKo": "___: 다루는 주제",
+     "nameEn": "Topic",
+     "noteEn": "___: topic discussed"
+    }
+   ],
+   "related": [
+    "Tôi nghe ___ nói rằng ___",
+    "Trong chương trình ___, họ bàn về ___"
+   ],
+   "quiz": {
+    "prompt": "Tôi vừa nghe podcast nói về giao thông, họ cho rằng ___",
+    "answer": "cần phát triển xe buýt"
+   }
+  },
+  {
+   "id": "vi-4-09",
+   "stage": 4,
+   "pattern": "Sau khi thảo luận, chúng ta thống nhất ___ và sẽ ___",
+   "meaningKo": "회의 후 합의와 다음 단계 정하기",
+   "meaningEn": "Agreeing next steps after a meeting",
+   "examples": [
+    {
+     "text": "Sau khi thảo luận, chúng ta thống nhất giữ nguyên kế hoạch và sẽ cập nhật tiến độ hàng tuần",
+     "ko": "회의 후 계획을 그대로 두고, 매주 진행 상황을 업데이트하기로 했습니다.",
+     "en": "After discussion, we agreed to keep the plan and will update progress weekly."
+    },
+    {
+     "text": "Sau khi thảo luận, chúng ta thống nhất thay đổi phương án và sẽ báo cho khách hàng",
+     "ko": "논의 후 방안을 변경하고, 고객에게 알리기로 했어요.",
+     "en": "After discussion, we agreed to change the approach and will inform the client."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "합의 내용",
+     "noteKo": "___: 합의된 사항",
+     "nameEn": "Agreed point",
+     "noteEn": "___: what was agreed"
+    },
+    {
+     "nameKo": "다음 단계",
+     "noteKo": "___: 앞으로 할 일",
+     "nameEn": "Next step",
+     "noteEn": "___: what will be done"
+    }
+   ],
+   "related": [
+    "Chúng ta quyết định ___ và sẽ ___",
+    "Sau khi bàn bạc, ___"
+   ],
+   "quiz": {
+    "prompt": "Sau khi thảo luận, chúng ta thống nhất chuyển sang phương án mới và sẽ ___",
+    "answer": "báo cho khách hàng"
+   }
+  }
+ ],
+ "5": [
+  {
+   "id": "vi-5-01",
+   "stage": 5,
+   "pattern": "Nếu nói vui thì ___, chứ thật ra ___.",
+   "meaningKo": "농담과 진심을 구분해 말하기",
+   "meaningEn": "Making a joke, then revealing the truth",
+   "examples": [
+    {
+     "text": "Nếu nói vui thì phim này dở tệ, chứ thật ra mình thấy khá ổn.",
+     "ko": "농담으로 말하자면 이 영화 완전 별로인데, 사실 꽤 괜찮았어.",
+     "en": "Jokingly, I’d say the film was terrible, but honestly I thought it was pretty good."
+    },
+    {
+     "text": "Nếu nói vui thì tôi ngủ quên, chứ thật ra tôi đang bận.",
+     "ko": "웃자고 말하면 잤다는데, 사실 바빴어.",
+     "en": "If I joked, I’d say I overslept, but actually I was busy."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건절과 대조",
+     "noteKo": "___에 농담/진심 내용",
+     "nameEn": "Conditional and contrast clause",
+     "noteEn": "First ___ is joke, second ___ is truth"
+    }
+   ],
+   "related": [
+    "Nói đùa thôi chứ ___"
+   ],
+   "quiz": {
+    "prompt": "Nếu nói vui thì ___, chứ thật ra mình thấy khá ổn.",
+    "answer": "phim này dở tệ"
+   }
+  },
+  {
+   "id": "vi-5-02",
+   "stage": 5,
+   "pattern": "Nếu ___ có gì không phải, mong ___ bỏ qua.",
+   "meaningKo": "실수나 무례함에 대해 정중하게 양해 구하기",
+   "meaningEn": "Apologizing for possible offense in a tactful way",
+   "examples": [
+    {
+     "text": "Nếu tôi có gì không phải, mong anh bỏ qua.",
+     "ko": "제가 실수했다면, 용서해 주세요.",
+     "en": "If I did anything wrong, I hope you’ll forgive me."
+    },
+    {
+     "text": "Nếu lời nói của tôi có gì không phải, mong chị bỏ qua.",
+     "ko": "제 말이 실례였다면, 이해해 주세요.",
+     "en": "If my words were inappropriate, I hope you’ll let it go."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "조건문",
+     "noteKo": "___에 상황, 상대방 호칭",
+     "nameEn": "Conditional clause",
+     "noteEn": "First ___ is situation, second ___ is person"
+    }
+   ],
+   "related": [
+    "Nếu ___ làm phiền, mong ___ thông cảm"
+   ],
+   "quiz": {
+    "prompt": "Nếu ___ có gì không phải, mong anh bỏ qua.",
+    "answer": "tôi"
+   }
+  },
+  {
+   "id": "vi-5-03",
+   "stage": 5,
+   "pattern": "Nói thật với ___, ___ cũng không dễ đâu.",
+   "meaningKo": "솔직하게 조언하거나 상황을 설명하기",
+   "meaningEn": "Frankly explaining something is not easy",
+   "examples": [
+    {
+     "text": "Nói thật với em, chuyện này cũng không dễ đâu.",
+     "ko": "솔직히 말해서, 이 일 쉽지 않아.",
+     "en": "To be honest with you, this isn’t easy."
+    },
+    {
+     "text": "Nói thật với anh, thay đổi thói quen cũng không dễ đâu.",
+     "ko": "솔직히 선생님께 말씀드리면, 습관 바꾸는 건 쉽지 않아요.",
+     "en": "To be honest, changing habits isn’t easy."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "직설적 표현",
+     "noteKo": "___에 상대방, 상황/행동",
+     "nameEn": "Direct speech",
+     "noteEn": "First ___ is addressee, second ___ is situation/action"
+    }
+   ],
+   "related": [
+    "Thực ra ___ cũng không hẳn là ___"
+   ],
+   "quiz": {
+    "prompt": "Nói thật với ___, chuyện này cũng không dễ đâu.",
+    "answer": "em"
+   }
+  },
+  {
+   "id": "vi-5-04",
+   "stage": 5,
+   "pattern": "Nói thì ___ vậy, chứ ___.",
+   "meaningKo": "겉과 속이 다른 상황을 말하기",
+   "meaningEn": "Highlighting a difference between what’s said and the truth",
+   "examples": [
+    {
+     "text": "Nói thì muốn nghỉ việc vậy, chứ vẫn còn phân vân.",
+     "ko": "말은 퇴사한다고 해도 사실 아직 고민 중이야.",
+     "en": "I say I want to quit, but I’m still unsure."
+    },
+    {
+     "text": "Nói thì không quan tâm vậy, chứ thật ra cũng để ý lắm.",
+     "ko": "신경 안 쓴다고 해도 사실 엄청 신경 써.",
+     "en": "I say I don’t care, but I actually care a lot."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "가정과 반전",
+     "noteKo": "___에 표면/진심 내용",
+     "nameEn": "Stated vs. reality contrast",
+     "noteEn": "First ___ is what’s said, second ___ is the real situation"
+    }
+   ],
+   "related": [
+    "Bề ngoài thì ___, nhưng thực chất ___"
+   ],
+   "quiz": {
+    "prompt": "Nói thì muốn nghỉ việc vậy, chứ ___.",
+    "answer": "vẫn còn phân vân"
+   }
+  },
+  {
+   "id": "vi-5-05",
+   "stage": 5,
+   "pattern": "___ mà cũng ___, đúng là '___'!",
+   "meaningKo": "속담이나 관용구로 상황을 평가하기",
+   "meaningEn": "Using an idiom to comment on an ironic situation",
+   "examples": [
+    {
+     "text": "Mưa mà cũng nắng, đúng là 'Trời không chiều lòng người'!",
+     "ko": "비도 오고 해도 뜨고, 역시 '하늘이 사람 뜻대로 안 된다'네!",
+     "en": "It rains and shines at the same time, truly 'The sky doesn’t please people’s wishes'!"
+    },
+    {
+     "text": "Làm việc chăm chỉ mà cũng bị phê bình, đúng là 'Làm dâu trăm họ'!",
+     "ko": "열심히 일했는데도 욕먹다니, '백성 며느리'네!",
+     "en": "Worked hard but still got criticized, really 'A bride to a hundred in-laws'!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "상황과 속담",
+     "noteKo": "___에 상황, 속담",
+     "nameEn": "Situation and idiom",
+     "noteEn": "First two ___ are situation, last ___ is idiom"
+    }
+   ],
+   "related": [
+    "Đúng là '___', trường hợp của ___"
+   ],
+   "quiz": {
+    "prompt": "Làm việc chăm chỉ mà cũng bị phê bình, đúng là '___'!",
+    "answer": "Làm dâu trăm họ"
+   }
+  },
+  {
+   "id": "vi-5-06",
+   "stage": 5,
+   "pattern": "Nói chuyện với ___, tôi mới biết ___ có nhiều ___ thú vị như vậy.",
+   "meaningKo": "지역별 차이나 문화를 새롭게 알게 됨을 표현하기",
+   "meaningEn": "Expressing learning about regional culture from someone",
+   "examples": [
+    {
+     "text": "Nói chuyện với người miền Nam, tôi mới biết Sài Gòn có nhiều món ăn thú vị như vậy.",
+     "ko": "남부 사람과 이야기하다가 사이공에 맛있는 음식이 많은 걸 알았어.",
+     "en": "Talking with a southerner, I realized Saigon has so many interesting foods."
+    },
+    {
+     "text": "Nói chuyện với bạn miền Trung, tôi mới biết Huế có nhiều lễ hội thú vị như vậy.",
+     "ko": "중부 친구 덕분에 후에에 축제가 많은 걸 알게 됐어.",
+     "en": "After talking with a friend from the central region, I learned Hue has so many fun festivals."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "새 정보 습득",
+     "noteKo": "___에 사람, 지역, 명사",
+     "nameEn": "Learning new information",
+     "noteEn": "First ___ is person, second ___ is place, third ___ is thing"
+    }
+   ],
+   "related": [
+    "Nhờ ___ tôi mới biết ___"
+   ],
+   "quiz": {
+    "prompt": "Nói chuyện với người miền Nam, tôi mới biết Sài Gòn có nhiều ___ thú vị như vậy.",
+    "answer": "món ăn"
+   }
+  },
+  {
+   "id": "vi-5-07",
+   "stage": 5,
+   "pattern": "Kính thưa quý vị, hôm nay tôi rất vinh dự được ___",
+   "meaningKo": "공식 연설에서 존경을 표함",
+   "meaningEn": "Formally expressing respect in a speech",
+   "examples": [
+    {
+     "text": "Kính thưa quý vị, hôm nay tôi rất vinh dự được phát biểu trong lễ cưới này.",
+     "ko": "존경하는 여러분, 오늘 이 결혼식에서 연설하게 되어 매우 영광입니다.",
+     "en": "Ladies and gentlemen, today I am honored to speak at this wedding."
+    },
+    {
+     "text": "Kính thưa quý vị, hôm nay tôi rất vinh dự được đại diện cho công ty.",
+     "ko": "존경하는 여러분, 오늘 회사를 대표하게 되어 매우 영광입니다.",
+     "en": "Ladies and gentlemen, today I am honored to represent the company."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "공식 연설 서두",
+     "noteKo": "___ 자리에 연설의 주제를 넣음",
+     "nameEn": "Formal speech opening",
+     "noteEn": "___ slot is for the topic of the speech"
+    }
+   ],
+   "related": [
+    "Xin trân trọng cảm ơn ___",
+    "Nhân dịp ___, tôi xin gửi lời chúc ___"
+   ],
+   "quiz": {
+    "prompt": "Kính thưa quý vị, hôm nay tôi rất vinh dự được ___",
+    "answer": "phát biểu trong lễ cưới này"
+   }
+  },
+  {
+   "id": "vi-5-08",
+   "stage": 5,
+   "pattern": "Đúng là '___', câu này nói đúng quá!",
+   "meaningKo": "속담이나 관용구를 인용함",
+   "meaningEn": "Quoting a proverb or idiom",
+   "examples": [
+    {
+     "text": "Đúng là 'Có công mài sắt, có ngày nên kim', câu này nói đúng quá!",
+     "ko": "'노력하면 이루어진다'는 말이 정말 맞아요!",
+     "en": "'Practice makes perfect,' this saying is so true!"
+    },
+    {
+     "text": "Đúng là 'Một cây làm chẳng nên non', câu này nói đúng quá!",
+     "ko": "'혼자서는 아무것도 할 수 없다'는 말이 정말 맞아요!",
+     "en": "'One tree does not make a forest,' this saying is so true!"
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "속담 인용",
+     "noteKo": "___에 속담이나 관용구",
+     "nameEn": "Idiom/proverb quoting",
+     "noteEn": "___ is for the idiom or saying"
+    }
+   ],
+   "related": [
+    "Như ông bà ta hay nói: ___",
+    "Có câu là: ___"
+   ],
+   "quiz": {
+    "prompt": "Đúng là '___', câu này nói đúng quá!",
+    "answer": "Có công mài sắt, có ngày nên kim"
+   }
+  },
+  {
+   "id": "vi-5-09",
+   "stage": 5,
+   "pattern": "Xin phép ___, tôi xin phép từ chối.",
+   "meaningKo": "상대를 존중하며 거절하기",
+   "meaningEn": "Politely turning down a proposal",
+   "examples": [
+    {
+     "text": "Xin phép anh, tôi xin phép từ chối.",
+     "ko": "선생님께 실례를 무릅쓰고, 거절하겠습니다.",
+     "en": "If you’ll allow me, I must politely decline."
+    },
+    {
+     "text": "Xin phép chị, tôi xin phép từ chối.",
+     "ko": "누나께 실례지만, 거절할 수밖에 없습니다.",
+     "en": "Excuse me, but I have to refuse."
+    }
+   ],
+   "grammar": [
+    {
+     "nameKo": "존대 표현",
+     "noteKo": "___에 상대방 호칭이 들어감",
+     "nameEn": "Honorific address",
+     "noteEn": "___ is the person being addressed respectfully"
+    }
+   ],
+   "related": [
+    "Xin lỗi ___, tôi không thể ___"
+   ],
+   "quiz": {
+    "prompt": "Xin phép ___, tôi xin phép từ chối.",
+    "answer": "anh"
+   }
+  }
+ ]
+}
