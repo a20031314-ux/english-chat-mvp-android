@@ -1,5 +1,5 @@
 {
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)hub' ':(exclude).claude' ':(exclude)AGENTS.md' ':(exclude)CLAUDE.md'",
+  "ignoreCommand": "git diff --quiet ${VERCEL_GIT_PREVIOUS_SHA:-HEAD^} HEAD -- . ':(exclude)hub' ':(exclude).claude' ':(exclude)AGENTS.md' ':(exclude)CLAUDE.md'",
   "crons": [
     {
       "path": "/api/account/purge",
