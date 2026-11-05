@@ -302,7 +302,8 @@ export function TodayPlan({
   const knownWord = (key: string) => knownState(known, key) === "known";
   // 어휘 탭에 섞는 덩어리 표현(curriculum/expressionDeck.ts, 2026-11-03 사용자 "표현을 퀴즈 쪽으로 — 어휘 탭에 섞기"): 1~지금 단계, 문장구조와 같은 표현은 빠짐.
   const exprCards = useExpressionCards(language, locale, stage);
-  const prepared = usePrepared(language);
+  // 넣어 둔 문제(problems/*.json)는 뜻·까닭이 한국어뿐이라 앱 언어가 한국어일 때만 낸다. 다른 앱 언어는 예전 문제 그대로.
+  const prepared = usePrepared(locale === "ko" ? language : "");
   // 원(circle.ts)이 다루는 열쇠 — 카드가 온 낱말과 표현(단어 시험·틀림 셈·새 것 쉬기에 같이).
   const usableKey = (key: string) => Boolean(bank?.ready.has(key)) || exprCards.ready.has(key);
   const isDeckKey = (key: string) => key.startsWith("w|") || key.startsWith("e|");

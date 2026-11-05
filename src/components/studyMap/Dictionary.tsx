@@ -30,7 +30,8 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   }, [open, entries, language]);
   const posName: Record<string, string> = { noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction };
   const hits = entries ? searchDictionary(entries, query) : [];
-  const lineGloss = (entry: DictEntry) => (locale === "ko" ? entry.lineKo : entry.lineEn) || entry.lineKo || entry.lineEn;
+  // 예문 뜻은 한국어·영어만 있다 — 한국어가 아닌 앱 언어에는 한국어를 보이지 않는다.
+  const lineGloss = (entry: DictEntry) => (locale === "ko" ? entry.lineKo || entry.lineEn : entry.lineEn);
   return (
     <>
       <button
