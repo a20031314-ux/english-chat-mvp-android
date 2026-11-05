@@ -184,7 +184,7 @@
     "type": "type",
     "name": "bride",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "신부",
+    "gloss": "신부(결혼)",
     "answer": "bride",
     "line": "The bride looked beautiful in her white dress.",
     "hint": "b",
@@ -269,7 +269,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "주로",
     "answer": "mostly",
-    "line": "I mostly eat vegetables for lunch."
+    "line": "I mostly eat vegetables for lunch.",
+    "hint": "m",
+    "mark": "한 단어"
   },
   "w|product": {
     "kind": "word",
@@ -384,7 +386,7 @@
     "type": "type",
     "name": "colleague",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "동료",
+    "gloss": "직장 동료",
     "answer": "colleague",
     "line": "My colleague helped me finish the project."
   },
@@ -512,7 +514,7 @@
     "type": "type",
     "name": "presence",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "존재",
+    "gloss": "존재감",
     "answer": "presence",
     "line": "Her presence makes the room feel warm."
   },
@@ -541,7 +543,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "그러므로",
     "answer": "therefore",
-    "line": "It is raining; therefore, we stayed inside."
+    "line": "It is raining; therefore, we stayed inside.",
+    "hint": "t",
+    "mark": "한 단어"
   },
   "w|crown": {
     "kind": "word",
@@ -1033,7 +1037,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "드문",
     "answer": "rare",
-    "line": "It’s rare to see snow here."
+    "line": "It’s rare to see snow here.",
+    "hint": "r"
   },
   "w|valley": {
     "kind": "word",

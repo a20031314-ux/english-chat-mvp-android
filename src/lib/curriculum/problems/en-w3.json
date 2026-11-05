@@ -76,7 +76,7 @@
     "type": "type",
     "name": "maybe",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "아마",
+    "gloss": "어쩌면",
     "answer": "maybe",
     "line": "Maybe we can go tomorrow."
   },
@@ -85,7 +85,7 @@
     "type": "type",
     "name": "must",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "해야 한다",
+    "gloss": "반드시 해야 한다",
     "answer": "must",
     "line": "You must wear a seatbelt.",
     "hint": "m",
@@ -105,7 +105,7 @@
     "type": "type",
     "name": "before",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "~전에",
+    "gloss": "~하기 전에",
     "answer": "before",
     "line": "Wash your hands before eating."
   },
@@ -132,7 +132,7 @@
     "type": "type",
     "name": "away",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "멀리",
+    "gloss": "저리",
     "answer": "away",
     "line": "Please go away and leave me alone."
   },
@@ -170,7 +170,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "친구",
     "answer": "friend",
-    "line": "My best friend lives next door."
+    "line": "My best friend lives next door.",
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|last": {
     "kind": "word",
@@ -206,7 +208,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "시작하다",
     "answer": "start",
-    "line": "Let's start the meeting now."
+    "line": "Let's start the meeting now.",
+    "hint": "s"
   },
   "w|always": {
     "kind": "word",
@@ -233,7 +236,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "장소",
     "answer": "place",
-    "line": "This is a nice place to eat."
+    "line": "This is a nice place to eat.",
+    "hint": "p"
   },
   "w|meet": {
     "kind": "word",
@@ -343,7 +347,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "큰",
     "answer": "big",
-    "line": "That is a big dog."
+    "line": "That is a big dog.",
+    "hint": "b"
   },
   "w|bring": {
     "kind": "word",
@@ -406,7 +411,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "소년",
     "answer": "boy",
-    "line": "The boy is playing in the park."
+    "line": "The boy is playing in the park.",
+    "hint": "b"
   },
   "w|die": {
     "kind": "word",
@@ -434,7 +440,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "이해하다",
     "answer": "understand",
-    "line": "I don’t understand this question."
+    "line": "I don’t understand this question.",
+    "hint": "u"
   },
   "w|which": {
     "kind": "word",
@@ -488,7 +495,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "괜찮은",
     "answer": "fine",
-    "line": "I’m fine, thank you."
+    "line": "I’m fine, thank you.",
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|kind": {
     "kind": "word",
@@ -497,7 +506,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "종류",
     "answer": "kind",
-    "line": "What kind of music do you like?"
+    "line": "What kind of music do you like?",
+    "hint": "k",
+    "mark": "한 단어"
   },
   "w|house": {
     "kind": "word",
@@ -605,7 +616,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "아빠",
     "answer": "dad",
-    "line": "My dad is fixing the bike outside."
+    "line": "My dad is fixing the bike outside.",
+    "hint": "d",
+    "mark": "한 단어"
   },
   "w|turn": {
     "kind": "word",
@@ -632,7 +645,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "세계",
     "answer": "world",
-    "line": "The world is full of interesting places."
+    "line": "The world is full of interesting places.",
+    "hint": "w",
+    "mark": "한 단어"
   },
   "w|enough": {
     "kind": "word",
@@ -641,7 +656,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "충분한",
     "answer": "enough",
-    "line": "Do you have enough time to finish this?"
+    "line": "Do you have enough time to finish this?",
+    "hint": "e",
+    "mark": "한 단어"
   },
   "w|own": {
     "kind": "word",
@@ -704,7 +721,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "자동차",
     "answer": "car",
-    "line": "My car is parked outside."
+    "line": "My car is parked outside.",
+    "hint": "c"
   },
   "w|another": {
     "kind": "word",
@@ -783,7 +801,7 @@
     "type": "type",
     "name": "job",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "직업",
+    "gloss": "일자리",
     "answer": "job",
     "line": "She found a new job last week."
   },

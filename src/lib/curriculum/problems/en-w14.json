@@ -280,7 +280,7 @@
     "type": "type",
     "name": "assistant",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "조수",
+    "gloss": "조수(사람)",
     "answer": "assistant",
     "line": "The assistant helped me find the right book."
   },
@@ -370,7 +370,7 @@
     "type": "type",
     "name": "grave",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "무덤",
+    "gloss": "무덤(매장)",
     "answer": "grave",
     "line": "We laid flowers on her grave yesterday."
   },
@@ -518,7 +518,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "화려한",
     "answer": "fancy",
-    "line": "He wore a fancy suit to the party."
+    "line": "He wore a fancy suit to the party.",
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|insist": {
     "kind": "word",
@@ -986,7 +988,7 @@
     "type": "type",
     "name": "mystery",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "수수께끼",
+    "gloss": "신비",
     "answer": "mystery",
     "line": "The story is full of mystery."
   },
@@ -1049,7 +1051,7 @@
     "type": "type",
     "name": "describe",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "묘사하다",
+    "gloss": "말로 묘사하다",
     "answer": "describe",
     "line": "Can you describe what happened?"
   },

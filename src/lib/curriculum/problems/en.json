@@ -241,18 +241,18 @@
     "type": "choose",
     "name": "me too",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "나도 고양이를 좋아해.",
-    "before": "I like cats, ",
-    "after": ".",
-    "answer": "me too",
+    "gloss": "저도요, 저도 고양이를 좋아해요.",
+    "before": "",
+    "after": ", I like cats.",
+    "answer": "Me too",
     "why": "상대와 같다는 말은 me too예요.",
     "options": [
-      "me also",
-      "me too",
-      "my too",
-      "also me"
+      "Me also",
+      "Me too",
+      "My too",
+      "Also me"
     ],
-    "line": "I like cats, me too."
+    "line": "Me too, I like cats."
   },
   "e|see you later": {
     "kind": "expression",
@@ -295,7 +295,7 @@
     "type": "choose",
     "name": "excuse me",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "저 좀 도와줄 수 있나요?",
+    "gloss": "실례합니다, 저 좀 도와줄 수 있나요?",
     "before": "",
     "after": ", can you help me?",
     "answer": "Excuse me",
@@ -313,9 +313,9 @@
     "type": "choose",
     "name": "no problem",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "책 고마워요. 괜찮아요.",
-    "before": "Thank you for the book. ",
-    "after": ".",
+    "gloss": "괜찮아요, 제가 도와드릴게요.",
+    "before": "",
+    "after": ", I can help you.",
     "answer": "No problem",
     "why": "고마워하는 말에 괜찮다고 받을 때는 No problem이에요.",
     "options": [
@@ -324,16 +324,16 @@
       "No any problem",
       "No the problem"
     ],
-    "line": "Thank you for the book. No problem."
+    "line": "No problem, I can help you."
   },
   "e|how much is this": {
     "kind": "expression",
     "type": "choose",
     "name": "how much is this",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "사과 한 개는 얼마예요?",
+    "gloss": "이거 얼마예요?",
     "before": "",
-    "after": " for one apple?",
+    "after": "?",
     "answer": "How much is this",
     "why": "값을 물을 때는 How much is this예요.",
     "options": [
@@ -342,7 +342,7 @@
       "How many is this",
       "How much this is"
     ],
-    "line": "How much is this for one apple?"
+    "line": "How much is this?"
   },
   "e|just this one": {
     "kind": "expression",
@@ -475,7 +475,7 @@
     "type": "choose",
     "name": "good morning",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "안녕, 오늘 기분이 어때?",
+    "gloss": "좋은 아침이에요, 오늘 기분이 어때요?",
     "before": "",
     "after": ", how are you?",
     "answer": "Good morning",
@@ -493,8 +493,8 @@
     "type": "choose",
     "name": "have a nice day",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "도와줘서 고마워요. 좋은 하루 보내세요.",
-    "before": "Thank you for your help. ",
+    "gloss": "좋은 하루 보내요.",
+    "before": "",
     "after": ".",
     "answer": "Have a nice day",
     "why": "헤어지며 좋은 하루를 빌 때는 Have a nice day예요.",
@@ -504,16 +504,16 @@
       "Has a nice day",
       "Have the nice day"
     ],
-    "line": "Thank you for your help. Have a nice day."
+    "line": "Have a nice day."
   },
   "e|you're welcome": {
     "kind": "expression",
     "type": "choose",
     "name": "you're welcome",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "도와줘서 고마워요. 천만에요.",
-    "before": "Thank you for the help. ",
-    "after": ".",
+    "gloss": "천만에요, 도울 수 있어서 기뻐요.",
+    "before": "",
+    "after": ", I'm glad I could help.",
     "answer": "You're welcome",
     "why": "고마워하는 말에 답할 때는 You're welcome이에요.",
     "options": [
@@ -522,7 +522,7 @@
       "You are welcomed",
       "You're welcoming"
     ],
-    "line": "Thank you for the help. You're welcome."
+    "line": "You're welcome, I'm glad I could help."
   },
   "g|1:0": {
     "kind": "grammar",
@@ -624,6 +624,24 @@
     "line": "My bag is on the chair.",
     "before": "My bag is ",
     "after": "."
+  },
+  "g|1:6": {
+    "kind": "grammar",
+    "type": "choose",
+    "name": "can: 능력과 부탁",
+    "ask": "뜻에 맞는 영어를 고르세요.",
+    "gloss": "나는 이 책을 읽을 수 있어요.",
+    "answer": "can",
+    "why": "능력은 can이고, 뒤에는 동사 원형이 와요.",
+    "options": [
+      "cans",
+      "can",
+      "canning",
+      "can to"
+    ],
+    "line": "I can read this book.",
+    "before": "I ",
+    "after": " read this book."
   },
   "en-1-03": {
     "kind": "frame",

@@ -98,7 +98,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "무시하다",
     "answer": "ignore",
-    "line": "Do not ignore your teacher’s advice."
+    "line": "Do not ignore your teacher’s advice.",
+    "hint": "i"
   },
   "w|christian": {
     "kind": "word",
@@ -116,7 +117,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "밝히다",
     "answer": "reveal",
-    "line": "She will reveal the secret soon."
+    "line": "She will reveal the secret soon.",
+    "hint": "r"
   },
   "w|goodness": {
     "kind": "word",
@@ -177,7 +179,7 @@
     "type": "type",
     "name": "gather",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "모으다",
+    "gloss": "불러 모으다",
     "answer": "gather",
     "line": "Let’s gather everyone in the living room.",
     "hint": "g",
@@ -404,7 +406,7 @@
     "type": "type",
     "name": "appointment",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "예약",
+    "gloss": "진료 예약",
     "answer": "appointment",
     "line": "I have a dentist appointment tomorrow."
   },
@@ -635,7 +637,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "맛있는",
     "answer": "delicious",
-    "line": "That was a delicious meal, thank you."
+    "line": "That was a delicious meal, thank you.",
+    "hint": "d",
+    "mark": "한 단어"
   },
   "w|particular": {
     "kind": "word",
@@ -772,7 +776,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "목표",
     "answer": "goal",
-    "line": "My goal is to finish this project."
+    "line": "My goal is to finish this project.",
+    "hint": "g",
+    "mark": "한 단어"
   },
   "w|beast": {
     "kind": "word",
@@ -988,7 +994,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "공연",
     "answer": "performance",
-    "line": "The performance last night was incredible."
+    "line": "The performance last night was incredible.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|apple": {
     "kind": "word",

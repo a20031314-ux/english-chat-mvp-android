@@ -13,7 +13,7 @@
     "type": "type",
     "name": "accurate",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "정확한",
+    "gloss": "오차 없는",
     "answer": "accurate",
     "line": "Make sure your answer is accurate.",
     "hint": "a",
@@ -24,7 +24,7 @@
     "type": "type",
     "name": "advertising",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "광고",
+    "gloss": "광고업",
     "answer": "advertising",
     "line": "He works in the advertising industry.",
     "hint": "a",
@@ -55,7 +55,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "대략",
     "answer": "approximately",
-    "line": "It takes approximately one hour to get there."
+    "line": "It takes approximately one hour to get there.",
+    "hint": "a"
   },
   "w|assembly": {
     "kind": "word",
@@ -199,7 +200,7 @@
     "type": "type",
     "name": "corporation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "기업",
+    "gloss": "주식회사",
     "answer": "corporation",
     "line": "He works for a large corporation in Seoul."
   },
@@ -237,7 +238,7 @@
     "type": "type",
     "name": "definition",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "정의",
+    "gloss": "정의(뜻)",
     "answer": "definition",
     "line": "Can you provide a definition for this term?",
     "hint": "d",
@@ -266,7 +267,7 @@
     "type": "type",
     "name": "depth",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "깊이",
+    "gloss": "수심",
     "answer": "depth",
     "line": "Divers measured the depth of the lake.",
     "hint": "d",
@@ -331,7 +332,7 @@
     "type": "type",
     "name": "ensure",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "보장하다",
+    "gloss": "확실히 하다",
     "answer": "ensure",
     "line": "I will ensure the doors are locked tonight.",
     "hint": "e",
@@ -362,7 +363,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "필수적인",
     "answer": "essential",
-    "line": "Water is essential for all living things."
+    "line": "Water is essential for all living things.",
+    "hint": "e",
+    "mark": "한 단어"
   },
   "w|exclusive": {
     "kind": "word",
@@ -551,7 +554,7 @@
     "type": "type",
     "name": "liberal",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "진보적인",
+    "gloss": "자유주의적인",
     "answer": "liberal",
     "line": "She has very liberal views on education."
   },
@@ -569,7 +572,7 @@
     "type": "type",
     "name": "mainly",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "주로",
+    "gloss": "주로(격식)",
     "answer": "mainly",
     "line": "This book is mainly about history.",
     "hint": "m",
@@ -688,7 +691,7 @@
     "type": "type",
     "name": "parliament",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의회",
+    "gloss": "의회(영국)",
     "answer": "parliament",
     "line": "The new law was approved by parliament.",
     "hint": "p",
@@ -746,7 +749,7 @@
     "type": "type",
     "name": "portion",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "일부",
+    "gloss": "몫",
     "answer": "portion",
     "line": "She ate only a small portion of her lunch."
   },
@@ -863,7 +866,7 @@
     "type": "type",
     "name": "resolution",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "결의",
+    "gloss": "결심",
     "answer": "resolution",
     "line": "Her resolution to finish the project was impressive."
   },
@@ -937,7 +940,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "상당히",
     "answer": "significantly",
-    "line": "Her health has improved significantly."
+    "line": "Her health has improved significantly.",
+    "hint": "s"
   },
   "w|solo": {
     "kind": "word",
@@ -973,7 +977,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "경기장",
     "answer": "stadium",
-    "line": "The concert will be held in the stadium."
+    "line": "The concert will be held in the stadium.",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|storage": {
     "kind": "word",
@@ -1043,7 +1049,7 @@
     "type": "type",
     "name": "update",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "갱신하다",
+    "gloss": "최신으로 바꾸다",
     "answer": "update",
     "line": "I will update the file with new information."
   },
@@ -1070,7 +1076,7 @@
     "type": "type",
     "name": "variety",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "다양성",
+    "gloss": "여러 종류",
     "answer": "variety",
     "line": "The market offers a variety of fresh fruits."
   },

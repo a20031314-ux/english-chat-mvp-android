@@ -112,7 +112,7 @@
     "type": "type",
     "name": "bicycle",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "자전거",
+    "gloss": "자전거(격식)",
     "answer": "bicycle",
     "line": "I ride my bicycle to work every day.",
     "hint": "b",
@@ -125,7 +125,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "협곡",
     "answer": "canyon",
-    "line": "The hikers admired the view from the canyon edge."
+    "line": "The hikers admired the view from the canyon edge.",
+    "hint": "c"
   },
   "w|capitalism": {
     "kind": "word",
@@ -161,7 +162,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "특성",
     "answer": "characteristic",
-    "line": "Kindness is an important characteristic in a friend."
+    "line": "Kindness is an important characteristic in a friend.",
+    "hint": "c"
   },
   "w|circular": {
     "kind": "word",
@@ -435,7 +437,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "다행히",
     "answer": "fortunately",
-    "line": "Fortunately, the storm passed without causing damage."
+    "line": "Fortunately, the storm passed without causing damage.",
+    "hint": "f"
   },
   "w|fraction": {
     "kind": "word",
@@ -462,7 +465,7 @@
     "type": "type",
     "name": "frontier",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "국경",
+    "gloss": "개척지",
     "answer": "frontier",
     "line": "The explorers crossed the frontier into new territory.",
     "hint": "f",
@@ -637,7 +640,7 @@
     "type": "type",
     "name": "mandate",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "명령",
+    "gloss": "법적 명령",
     "answer": "mandate",
     "line": "The new law is a government mandate.",
     "hint": "m",
@@ -675,7 +678,7 @@
     "type": "type",
     "name": "nominee",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "후보자",
+    "gloss": "지명자",
     "answer": "nominee",
     "line": "The nominee stood nervously before the crowd.",
     "hint": "n",
@@ -758,7 +761,7 @@
     "type": "type",
     "name": "preview",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "예고편",
+    "gloss": "미리 보기",
     "answer": "preview",
     "line": "We watched the preview of the new movie online.",
     "hint": "p",
@@ -1054,7 +1057,7 @@
     "type": "type",
     "name": "triumph",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "승리",
+    "gloss": "쾌거",
     "answer": "triumph",
     "line": "Winning the race was a great triumph for her.",
     "hint": "t",

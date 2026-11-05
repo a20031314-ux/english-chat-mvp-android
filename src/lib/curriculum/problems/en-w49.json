@@ -402,7 +402,7 @@
     "type": "type",
     "name": "flick",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "영화",
+    "gloss": "영화(속어)",
     "answer": "flick",
     "line": "Let’s watch a flick tonight.",
     "hint": "f",
@@ -872,7 +872,7 @@
     "type": "type",
     "name": "squash",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "호박",
+    "gloss": "호박(식용)",
     "answer": "squash",
     "line": "I like to eat squash in the fall.",
     "hint": "s",
@@ -1036,7 +1036,7 @@
     "type": "type",
     "name": "whisky",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "위스키",
+    "gloss": "위스키(영국)",
     "answer": "whisky",
     "line": "Would you like some whisky on the rocks?",
     "hint": "w",
@@ -1058,7 +1058,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "자궁",
     "answer": "womb",
-    "line": "The baby developed in the mother’s womb."
+    "line": "The baby developed in the mother’s womb.",
+    "hint": "w"
   },
   "w|woodland": {
     "kind": "word",

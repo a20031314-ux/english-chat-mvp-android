@@ -69,7 +69,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "평가",
     "answer": "assessment",
-    "line": "The teacher gave an assessment at the end of the course."
+    "line": "The teacher gave an assessment at the end of the course.",
+    "hint": "a"
   },
   "w|assist": {
     "kind": "word",
@@ -195,7 +196,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "의류",
     "answer": "clothing",
-    "line": "He packed all his clothing for the trip."
+    "line": "He packed all his clothing for the trip.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|coal": {
     "kind": "word",
@@ -213,7 +216,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "헌신",
     "answer": "commitment",
-    "line": "She showed great commitment to the project."
+    "line": "She showed great commitment to the project.",
+    "hint": "c"
   },
   "w|comparison": {
     "kind": "word",
@@ -440,7 +444,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "제법",
     "answer": "fairly",
-    "line": "The exam was fairly easy for most students."
+    "line": "The exam was fairly easy for most students.",
+    "hint": "f"
   },
   "w|fiction": {
     "kind": "word",
@@ -537,7 +542,7 @@
     "type": "type",
     "name": "household",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "가정",
+    "gloss": "가구(살림)",
     "answer": "household",
     "line": "Each household received a survey by mail."
   },
@@ -703,7 +708,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "탁월한",
     "answer": "outstanding",
-    "line": "She received an award for her outstanding performance."
+    "line": "She received an award for her outstanding performance.",
+    "hint": "o",
+    "mark": "한 단어"
   },
   "w|ownership": {
     "kind": "word",

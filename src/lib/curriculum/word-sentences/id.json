@@ -1,0 +1,1682 @@
+{
+ "w|ada": [
+  {
+   "text": "Masih ada sisa.",
+   "en": "There's still some left.",
+   "ko": "아직 남아 있어.",
+   "blank": "ada"
+  },
+  {
+   "text": "Ada apa?",
+   "en": "What's wrong?",
+   "ko": "무슨 일이야?",
+   "blank": "Ada"
+  }
+ ],
+ "w|akan": [
+  {
+   "text": "Besok akan hujan.",
+   "en": "It'll rain tomorrow.",
+   "ko": "내일 비 올 거야.",
+   "blank": "akan"
+  },
+  {
+   "text": "Aku akan telat.",
+   "en": "I'm going to be late.",
+   "ko": "나 늦을 거야.",
+   "blank": "akan"
+  }
+ ],
+ "w|aku": [
+  {
+   "text": "Aku lapar banget.",
+   "en": "I'm starving.",
+   "ko": "배고파 죽겠어.",
+   "blank": "Aku"
+  },
+  {
+   "text": "Aku pulang dulu.",
+   "en": "I'll head home first.",
+   "ko": "나 먼저 집에 갈게.",
+   "blank": "Aku"
+  }
+ ],
+ "w|anak": [
+  {
+   "text": "Anak itu nangis.",
+   "en": "That kid is crying.",
+   "ko": "저 아이가 울고 있어.",
+   "blank": "Anak"
+  },
+  {
+   "text": "Jangan marahi anak kecil.",
+   "en": "Don't yell at a little kid.",
+   "ko": "어린아이한테 소리 지르지 마.",
+   "blank": "anak"
+  }
+ ],
+ "w|anda": [
+  {
+   "text": "Anda mau pesan apa?",
+   "en": "What would you like to order?",
+   "ko": "주문은 뭐로 하시겠어요?",
+   "blank": "Anda"
+  },
+  {
+   "text": "Nama Anda siapa?",
+   "en": "What's your name?",
+   "ko": "성함이 어떻게 되세요?",
+   "blank": "Anda"
+  }
+ ],
+ "w|apa": [
+  {
+   "text": "Apa kabar?",
+   "en": "How are you?",
+   "ko": "잘 지내?",
+   "blank": "Apa"
+  },
+  {
+   "text": "Mau makan apa?",
+   "en": "What do you want to eat?",
+   "ko": "뭐 먹을래?",
+   "blank": "apa"
+  }
+ ],
+ "w|atau": [
+  {
+   "text": "Teh atau kopi?",
+   "en": "Tea or coffee?",
+   "ko": "차로 할래, 커피로 할래?",
+   "blank": "atau"
+  },
+  {
+   "text": "Naik bus atau kereta?",
+   "en": "Bus or train?",
+   "ko": "버스로 갈까, 기차로 갈까?",
+   "blank": "atau"
+  }
+ ],
+ "w|ayah": [
+  {
+   "text": "Ayah sedang di kantor.",
+   "en": "Dad's at the office.",
+   "ko": "아빠는 회사에 있어.",
+   "blank": "Ayah"
+  },
+  {
+   "text": "Aku mirip ayah.",
+   "en": "I take after Dad.",
+   "ko": "나 아빠를 닮았어.",
+   "blank": "ayah"
+  }
+ ],
+ "w|ayo": [
+  {
+   "text": "Ayo makan.",
+   "en": "Let's eat.",
+   "ko": "밥 먹자.",
+   "blank": "Ayo"
+  },
+  {
+   "text": "Ayo, jangan malas.",
+   "en": "Come on, don't be lazy.",
+   "ko": "얼른 해, 게으름 피우지 마.",
+   "blank": "Ayo"
+  }
+ ],
+ "w|bagaimana": [
+  {
+   "text": "Bagaimana kalau besok?",
+   "en": "How about tomorrow?",
+   "ko": "내일로 할까?",
+   "blank": "Bagaimana"
+  },
+  {
+   "text": "Mau bagaimana lagi?",
+   "en": "What else am I supposed to do?",
+   "ko": "이제 어떻게 하란 거야?",
+   "blank": "bagaimana"
+  }
+ ],
+ "w|bagus": [
+  {
+   "text": "Bagus sekali idenya.",
+   "en": "That's a great idea.",
+   "ko": "그 생각 정말 좋아.",
+   "blank": "Bagus"
+  },
+  {
+   "text": "Baju ini bagus.",
+   "en": "This shirt looks good.",
+   "ko": "이 옷 괜찮아.",
+   "blank": "bagus"
+  }
+ ],
+ "w|bahwa": [
+  {
+   "text": "Aku yakin bahwa dia jujur.",
+   "en": "I'm sure they're honest.",
+   "ko": "그 사람이 정직하다고 확신해.",
+   "blank": "bahwa"
+  },
+  {
+   "text": "Dia bilang bahwa rapat dibatalkan.",
+   "en": "They said the meeting was canceled.",
+   "ko": "회의가 취소됐다고 했어.",
+   "blank": "bahwa"
+  }
+ ],
+ "w|baik": [
+  {
+   "text": "Baik, aku mengerti.",
+   "en": "All right, I understand.",
+   "ko": "알겠어, 이해했어.",
+   "blank": "Baik"
+  },
+  {
+   "text": "Kamu orang baik.",
+   "en": "You're a good person.",
+   "ko": "너는 착한 사람이야.",
+   "blank": "baik"
+  }
+ ],
+ "w|banyak": [
+  {
+   "text": "Orangnya banyak sekali.",
+   "en": "There are so many people.",
+   "ko": "사람이 정말 많아.",
+   "blank": "banyak"
+  },
+  {
+   "text": "Jangan makan terlalu banyak.",
+   "en": "Don't eat too much.",
+   "ko": "너무 많이 먹지 마.",
+   "blank": "banyak"
+  }
+ ],
+ "w|baru": [
+  {
+   "text": "Ini baju baru.",
+   "en": "This is a new shirt.",
+   "ko": "이거 새 옷이야.",
+   "blank": "baru"
+  },
+  {
+   "text": "Aku baru sampai.",
+   "en": "I just got here.",
+   "ko": "방금 도착했어.",
+   "blank": "baru"
+  }
+ ],
+ "w|beberapa": [
+  {
+   "text": "Tunggu beberapa menit.",
+   "en": "Wait a few minutes.",
+   "ko": "몇 분만 기다려.",
+   "blank": "beberapa"
+  },
+  {
+   "text": "Ada beberapa orang di depan.",
+   "en": "There are a few people out front.",
+   "ko": "앞에 몇 명 있어.",
+   "blank": "beberapa"
+  }
+ ],
+ "w|begitu": [
+  {
+   "text": "Jangan begitu, dong.",
+   "en": "Don't be like that.",
+   "ko": "그러지 마.",
+   "blank": "begitu"
+  },
+  {
+   "text": "Kok bisa begitu?",
+   "en": "How did it end up like that?",
+   "ko": "어떻게 그렇게 됐어?",
+   "blank": "begitu"
+  }
+ ],
+ "w|benar": [
+  {
+   "text": "Jawabanmu benar.",
+   "en": "Your answer is right.",
+   "ko": "네 답이 맞아.",
+   "blank": "benar"
+  },
+  {
+   "text": "Benar, kan?",
+   "en": "Right?",
+   "ko": "맞지?",
+   "blank": "Benar"
+  }
+ ],
+ "w|bilang": [
+  {
+   "text": "Siapa yang bilang?",
+   "en": "Who said that?",
+   "ko": "누가 그랬어?",
+   "blank": "bilang"
+  },
+  {
+   "text": "Jangan bilang siapa-siapa.",
+   "en": "Don't tell anyone.",
+   "ko": "아무한테도 말하지 마.",
+   "blank": "bilang"
+  }
+ ],
+ "w|bisa": [
+  {
+   "text": "Bisa pelan-pelan?",
+   "en": "Can you slow down a bit?",
+   "ko": "좀 천천히 해 줄래?",
+   "blank": "Bisa"
+  },
+  {
+   "text": "Maaf, aku tidak bisa.",
+   "en": "Sorry, I can't.",
+   "ko": "미안, 나 못 해.",
+   "blank": "bisa"
+  }
+ ],
+ "w|bukan": [
+  {
+   "text": "Bukan begitu.",
+   "en": "No, not like that.",
+   "ko": "그게 아니야.",
+   "blank": "Bukan"
+  },
+  {
+   "text": "Bukan aku, kok.",
+   "en": "It wasn't me.",
+   "ko": "나 아니라니까.",
+   "blank": "Bukan"
+  }
+ ],
+ "w|dalam": [
+  {
+   "text": "Simpan dalam tas.",
+   "en": "Keep it in the bag.",
+   "ko": "가방 안에 넣어 둬.",
+   "blank": "dalam"
+  },
+  {
+   "text": "Masuk ke dalam.",
+   "en": "Go on inside.",
+   "ko": "안으로 들어가.",
+   "blank": "dalam"
+  }
+ ],
+ "w|dan": [
+  {
+   "text": "Teh dan kopi habis.",
+   "en": "We're out of tea and coffee.",
+   "ko": "차도 커피도 다 떨어졌어.",
+   "blank": "dan"
+  },
+  {
+   "text": "Ibu dan ayah sudah pulang.",
+   "en": "Mom and Dad are already home.",
+   "ko": "엄마랑 아빠는 벌써 돌아왔어.",
+   "blank": "dan"
+  }
+ ],
+ "w|dapat": [
+  {
+   "text": "Aku dapat tiketnya.",
+   "en": "I got the ticket.",
+   "ko": "표를 구했어.",
+   "blank": "dapat"
+  },
+  {
+   "text": "Kita tidak dapat masuk.",
+   "en": "We can't get in.",
+   "ko": "우리는 들어갈 수가 없어.",
+   "blank": "dapat"
+  }
+ ],
+ "w|dari": [
+  {
+   "text": "Dari mana saja kamu?",
+   "en": "Where have you been?",
+   "ko": "어디 갔다 온 거야?",
+   "blank": "Dari"
+  },
+  {
+   "text": "Ini dari ibu.",
+   "en": "This is from Mom.",
+   "ko": "이건 엄마가 준 거야.",
+   "blank": "dari"
+  }
+ ],
+ "w|datang": [
+  {
+   "text": "Tamu sudah datang.",
+   "en": "The guests are here.",
+   "ko": "손님이 이미 왔어.",
+   "blank": "datang"
+  },
+  {
+   "text": "Datang ke sini sebentar.",
+   "en": "Come here for a second.",
+   "ko": "잠깐 이리 와.",
+   "blank": "Datang"
+  }
+ ],
+ "w|dengan": [
+  {
+   "text": "Pergi dengan siapa?",
+   "en": "Who are you going with?",
+   "ko": "누구랑 가?",
+   "blank": "dengan"
+  },
+  {
+   "text": "Jangan main dengan api.",
+   "en": "Don't play with fire.",
+   "ko": "불장난하지 마.",
+   "blank": "dengan"
+  }
+ ],
+ "w|di": [
+  {
+   "text": "Aku di rumah.",
+   "en": "I'm at home.",
+   "ko": "나 집에 있어.",
+   "blank": "di"
+  },
+  {
+   "text": "Taruh di meja.",
+   "en": "Put it on the table.",
+   "ko": "탁자 위에 놔.",
+   "blank": "di"
+  }
+ ],
+ "w|dia": [
+  {
+   "text": "Dia belum datang.",
+   "en": "They haven't come yet.",
+   "ko": "그 사람 아직 안 왔어.",
+   "blank": "Dia"
+  },
+  {
+   "text": "Kamu lihat dia?",
+   "en": "Did you see them?",
+   "ko": "그 사람 봤어?",
+   "blank": "dia"
+  }
+ ],
+ "w|diri": [
+  {
+   "text": "Jaga diri baik-baik.",
+   "en": "Take care.",
+   "ko": "몸 조심해.",
+   "blank": "diri"
+  },
+  {
+   "text": "Jangan lupa diri.",
+   "en": "Don't get full of yourself.",
+   "ko": "자만하지 마.",
+   "blank": "diri"
+  }
+ ],
+ "w|hal": [
+  {
+   "text": "Ada hal yang mau kubilang.",
+   "en": "There's something I want to tell you.",
+   "ko": "할 말이 있어.",
+   "blank": "hal"
+  },
+  {
+   "text": "Hal itu nanti saja.",
+   "en": "We'll leave that for later.",
+   "ko": "그 일은 나중에 하자.",
+   "blank": "Hal"
+  }
+ ],
+ "w|hanya": [
+  {
+   "text": "Itu hanya lelucon.",
+   "en": "That was only a joke.",
+   "ko": "그냥 농담이었어.",
+   "blank": "hanya"
+  },
+  {
+   "text": "Hanya tinggal satu.",
+   "en": "There's only one left.",
+   "ko": "이제 하나밖에 안 남았어.",
+   "blank": "Hanya"
+  }
+ ],
+ "w|hari": [
+  {
+   "text": "Hari ini panas sekali.",
+   "en": "It's really hot today.",
+   "ko": "오늘은 엄청 더워.",
+   "blank": "Hari"
+  },
+  {
+   "text": "Tiap hari dia telat.",
+   "en": "They're late every day.",
+   "ko": "그 사람은 매일 늦어.",
+   "blank": "hari"
+  }
+ ],
+ "w|harus": [
+  {
+   "text": "Kamu harus istirahat.",
+   "en": "You need to rest.",
+   "ko": "너는 쉬어야 해.",
+   "blank": "harus"
+  },
+  {
+   "text": "Aku harus pergi.",
+   "en": "I have to go.",
+   "ko": "나 가야 해.",
+   "blank": "harus"
+  }
+ ],
+ "w|hidup": [
+  {
+   "text": "Dia masih hidup.",
+   "en": "They're still alive.",
+   "ko": "그 사람은 아직 살아 있어.",
+   "blank": "hidup"
+  },
+  {
+   "text": "Aku hidup sendiri.",
+   "en": "I live on my own.",
+   "ko": "나 혼자 살아.",
+   "blank": "hidup"
+  }
+ ],
+ "w|ibu": [
+  {
+   "text": "Ibu sedang masak.",
+   "en": "Mom's cooking.",
+   "ko": "엄마가 요리하고 있어.",
+   "blank": "Ibu"
+  },
+  {
+   "text": "Telepon ibu, ya.",
+   "en": "Call Mom, okay?",
+   "ko": "엄마한테 전화해.",
+   "blank": "ibu"
+  }
+ ],
+ "w|ingin": [
+  {
+   "text": "Aku ingin tidur.",
+   "en": "I want to sleep.",
+   "ko": "자고 싶어.",
+   "blank": "ingin"
+  },
+  {
+   "text": "Ingin pulang saja.",
+   "en": "I just want to go home.",
+   "ko": "그냥 집에 가고 싶어.",
+   "blank": "Ingin"
+  }
+ ],
+ "w|ini": [
+  {
+   "text": "Hari ini hujannya deras.",
+   "en": "It's raining hard today.",
+   "ko": "오늘은 비가 많이 와.",
+   "blank": "ini"
+  },
+  {
+   "text": "Coba ini dulu.",
+   "en": "Try this first.",
+   "ko": "이거 먼저 해 봐.",
+   "blank": "ini"
+  }
+ ],
+ "w|itu": [
+  {
+   "text": "Itu terlalu mahal.",
+   "en": "That's too expensive.",
+   "ko": "그거 너무 비싸.",
+   "blank": "Itu"
+  },
+  {
+   "text": "Jangan sentuh itu.",
+   "en": "Don't touch that.",
+   "ko": "그거 만지지 마.",
+   "blank": "itu"
+  }
+ ],
+ "w|jadi": [
+  {
+   "text": "Nasinya sudah jadi.",
+   "en": "The rice is ready.",
+   "ko": "밥 다 됐어.",
+   "blank": "jadi"
+  },
+  {
+   "text": "Aku jadi malas.",
+   "en": "I don't feel like it anymore.",
+   "ko": "그만 하기 싫어졌어.",
+   "blank": "jadi"
+  }
+ ],
+ "w|jangan": [
+  {
+   "text": "Jangan bohong.",
+   "en": "Don't lie.",
+   "ko": "거짓말하지 마.",
+   "blank": "Jangan"
+  },
+  {
+   "text": "Jangan dekat-dekat.",
+   "en": "Stay away.",
+   "ko": "가까이 오지 마.",
+   "blank": "Jangan"
+  }
+ ],
+ "w|jika": [
+  {
+   "text": "Jika hujan, kita batal.",
+   "en": "If it rains, we'll call it off.",
+   "ko": "비 오면 취소하자.",
+   "blank": "Jika"
+  },
+  {
+   "text": "Jika sempat, mampir.",
+   "en": "Drop by if you have time.",
+   "ko": "시간 되면 들러.",
+   "blank": "Jika"
+  }
+ ],
+ "w|juga": [
+  {
+   "text": "Aku juga lapar.",
+   "en": "I'm hungry too.",
+   "ko": "나도 배고파.",
+   "blank": "juga"
+  },
+  {
+   "text": "Itu juga boleh.",
+   "en": "That one's fine too.",
+   "ko": "그것도 괜찮아.",
+   "blank": "juga"
+  }
+ ],
+ "w|kalau": [
+  {
+   "text": "Kalau hujan, aku di rumah.",
+   "en": "If it rains, I'll stay home.",
+   "ko": "비 오면 집에 있을게.",
+   "blank": "Kalau"
+  },
+  {
+   "text": "Kabari aku kalau sudah sampai.",
+   "en": "Let me know when you get there.",
+   "ko": "도착하면 연락해.",
+   "blank": "kalau"
+  }
+ ],
+ "w|kalian": [
+  {
+   "text": "Kalian mau ke mana?",
+   "en": "Where are you all going?",
+   "ko": "너희 어디 가?",
+   "blank": "Kalian"
+  },
+  {
+   "text": "Kalian sudah makan?",
+   "en": "Have you all eaten?",
+   "ko": "너희는 밥 먹었어?",
+   "blank": "Kalian"
+  }
+ ],
+ "w|kami": [
+  {
+   "text": "Kami duluan, ya.",
+   "en": "We'll go on ahead.",
+   "ko": "우리 먼저 갈게.",
+   "blank": "Kami"
+  },
+  {
+   "text": "Kami dari Surabaya.",
+   "en": "We're from Surabaya.",
+   "ko": "우리는 수라바야에서 왔어.",
+   "blank": "Kami"
+  }
+ ],
+ "w|kamu": [
+  {
+   "text": "Kamu di mana?",
+   "en": "Where are you?",
+   "ko": "너 어디야?",
+   "blank": "Kamu"
+  },
+  {
+   "text": "Aku kangen kamu.",
+   "en": "I miss you.",
+   "ko": "네가 그리워.",
+   "blank": "kamu"
+  }
+ ],
+ "w|karena": [
+  {
+   "text": "Aku telat karena macet.",
+   "en": "I'm late because of the traffic.",
+   "ko": "차가 막혀서 늦었어.",
+   "blank": "karena"
+  },
+  {
+   "text": "Bukan karena kamu.",
+   "en": "It's not because of you.",
+   "ko": "너 때문은 아니야.",
+   "blank": "karena"
+  }
+ ],
+ "w|kasih": [
+  {
+   "text": "Terima kasih, ya.",
+   "en": "Thanks.",
+   "ko": "고마워.",
+   "blank": "kasih"
+  },
+  {
+   "text": "Kasih aku air.",
+   "en": "Give me some water.",
+   "ko": "물 좀 줘.",
+   "blank": "Kasih"
+  }
+ ],
+ "w|kau": [
+  {
+   "text": "Kau mau ke mana?",
+   "en": "Where are you going?",
+   "ko": "너 어디 가?",
+   "blank": "Kau"
+  },
+  {
+   "text": "Dari tadi kau di mana?",
+   "en": "Where have you been all this time?",
+   "ko": "아까부터 어디 있었어?",
+   "blank": "kau"
+  }
+ ],
+ "w|ke": [
+  {
+   "text": "Aku ke kantor dulu.",
+   "en": "I'm off to the office.",
+   "ko": "나 회사 먼저 갈게.",
+   "blank": "ke"
+  },
+  {
+   "text": "Pergi ke pasar, ya.",
+   "en": "Go to the market, okay?",
+   "ko": "시장에 다녀와.",
+   "blank": "ke"
+  }
+ ],
+ "w|keluar": [
+  {
+   "text": "Ayo keluar.",
+   "en": "Let's go outside.",
+   "ko": "밖에 나가자.",
+   "blank": "keluar"
+  },
+  {
+   "text": "Jangan keluar malam-malam.",
+   "en": "Don't go out in the middle of the night.",
+   "ko": "밤중에 나가지 마.",
+   "blank": "keluar"
+  }
+ ],
+ "w|kembali": [
+  {
+   "text": "Kapan kamu kembali?",
+   "en": "When are you coming back?",
+   "ko": "언제 돌아와?",
+   "blank": "kembali"
+  },
+  {
+   "text": "Aku baru kembali dari pasar.",
+   "en": "I just got back from the market.",
+   "ko": "시장에서 막 돌아왔어.",
+   "blank": "kembali"
+  }
+ ],
+ "w|kenapa": [
+  {
+   "text": "Kenapa diam saja?",
+   "en": "Why so quiet?",
+   "ko": "왜 말이 없어?",
+   "blank": "Kenapa"
+  },
+  {
+   "text": "Kamu kenapa, sih?",
+   "en": "What's the matter with you?",
+   "ko": "너 왜 그래?",
+   "blank": "kenapa"
+  }
+ ],
+ "w|kita": [
+  {
+   "text": "Kita makan dulu.",
+   "en": "Let's eat first.",
+   "ko": "우리 먼저 먹자.",
+   "blank": "Kita"
+  },
+  {
+   "text": "Nanti kita bicara.",
+   "en": "We'll talk later.",
+   "ko": "나중에 얘기하자.",
+   "blank": "kita"
+  }
+ ],
+ "w|lagi": [
+  {
+   "text": "Coba lagi.",
+   "en": "Try again.",
+   "ko": "다시 해 봐.",
+   "blank": "lagi"
+  },
+  {
+   "text": "Mau minum lagi?",
+   "en": "Want another drink?",
+   "ko": "한 잔 더 할래?",
+   "blank": "lagi"
+  }
+ ],
+ "w|lain": [
+  {
+   "text": "Coba yang lain.",
+   "en": "Try another one.",
+   "ko": "다른 걸로 해 봐.",
+   "blank": "lain"
+  },
+  {
+   "text": "Lain kali jangan begitu.",
+   "en": "Don't do that next time.",
+   "ko": "다음엔 그러지 마.",
+   "blank": "Lain"
+  }
+ ],
+ "w|lalu": [
+  {
+   "text": "Makan dulu, lalu tidur.",
+   "en": "Eat first, then sleep.",
+   "ko": "먼저 먹고 자.",
+   "blank": "lalu"
+  },
+  {
+   "text": "Lalu kenapa?",
+   "en": "And then what?",
+   "ko": "그래서 어떻게 됐어?",
+   "blank": "Lalu"
+  }
+ ],
+ "w|lebih": [
+  {
+   "text": "Lebih pelan, dong.",
+   "en": "A bit slower.",
+   "ko": "좀 더 천천히 해.",
+   "blank": "Lebih"
+  },
+  {
+   "text": "Aku lebih suka kopi.",
+   "en": "I prefer coffee.",
+   "ko": "나는 커피가 더 좋아.",
+   "blank": "lebih"
+  }
+ ],
+ "w|maaf": [
+  {
+   "text": "Maaf, aku telat.",
+   "en": "Sorry, I'm late.",
+   "ko": "미안, 늦었어.",
+   "blank": "Maaf"
+  },
+  {
+   "text": "Minta maaf kepadanya.",
+   "en": "Apologize to them.",
+   "ko": "그 사람한테 사과해.",
+   "blank": "maaf"
+  }
+ ],
+ "w|malam": [
+  {
+   "text": "Malam ini kita kumpul.",
+   "en": "We're getting together tonight.",
+   "ko": "오늘 밤에 모이자.",
+   "blank": "Malam"
+  },
+  {
+   "text": "Sudah malam, pulang yuk.",
+   "en": "It's late, let's head home.",
+   "ko": "밤 늦었어, 집에 가자.",
+   "blank": "malam"
+  }
+ ],
+ "w|mana": [
+  {
+   "text": "Yang mana?",
+   "en": "Which one?",
+   "ko": "어떤 거야?",
+   "blank": "mana"
+  },
+  {
+   "text": "Kamu taruh di mana?",
+   "en": "Where did you put it?",
+   "ko": "어디에 뒀어?",
+   "blank": "mana"
+  }
+ ],
+ "w|masa": [
+  {
+   "text": "Masa iya?",
+   "en": "No way, really?",
+   "ko": "설마 진짜야?",
+   "blank": "Masa"
+  },
+  {
+   "text": "Itu sudah masa lalu.",
+   "en": "That's all in the past.",
+   "ko": "그건 이미 지난 일이야.",
+   "blank": "masa"
+  }
+ ],
+ "w|masih": [
+  {
+   "text": "Kamu masih di kantor?",
+   "en": "Are you still at the office?",
+   "ko": "아직 회사에 있어?",
+   "blank": "masih"
+  },
+  {
+   "text": "Aku masih lapar.",
+   "en": "I'm still hungry.",
+   "ko": "아직 배고파.",
+   "blank": "masih"
+  }
+ ],
+ "w|masuk": [
+  {
+   "text": "Silakan masuk.",
+   "en": "Please come in.",
+   "ko": "들어오세요.",
+   "blank": "masuk"
+  },
+  {
+   "text": "Aku belum masuk kerja.",
+   "en": "I haven't gone in to work yet.",
+   "ko": "아직 출근 안 했어.",
+   "blank": "masuk"
+  }
+ ],
+ "w|mati": [
+  {
+   "text": "Lampunya mati.",
+   "en": "The light's out.",
+   "ko": "불이 꺼졌어.",
+   "blank": "mati"
+  },
+  {
+   "text": "Ikan itu sudah mati.",
+   "en": "That fish is already dead.",
+   "ko": "그 물고기는 이미 죽었어.",
+   "blank": "mati"
+  }
+ ],
+ "w|mau": [
+  {
+   "text": "Mau ikut?",
+   "en": "Want to come along?",
+   "ko": "같이 갈래?",
+   "blank": "Mau"
+  },
+  {
+   "text": "Aku mau pulang.",
+   "en": "I want to go home.",
+   "ko": "집에 갈래.",
+   "blank": "mau"
+  }
+ ],
+ "w|melakukan": [
+  {
+   "text": "Jangan melakukan itu.",
+   "en": "Don't do that.",
+   "ko": "그런 거 하지 마.",
+   "blank": "melakukan"
+  },
+  {
+   "text": "Aku tidak melakukan apa-apa.",
+   "en": "I didn't do anything.",
+   "ko": "나 아무것도 안 했어.",
+   "blank": "melakukan"
+  }
+ ],
+ "w|melihat": [
+  {
+   "text": "Kamu melihat itu?",
+   "en": "Did you see that?",
+   "ko": "그거 봤어?",
+   "blank": "melihat"
+  },
+  {
+   "text": "Aku melihat dia kemarin.",
+   "en": "I saw them yesterday.",
+   "ko": "어제 그 사람을 봤어.",
+   "blank": "melihat"
+  }
+ ],
+ "w|membuat": [
+  {
+   "text": "Ibu membuat kue.",
+   "en": "Mom's making cake.",
+   "ko": "엄마가 과자를 만들고 있어.",
+   "blank": "membuat"
+  },
+  {
+   "text": "Jangan membuat ribut.",
+   "en": "Don't make a racket.",
+   "ko": "시끄럽게 하지 마.",
+   "blank": "membuat"
+  }
+ ],
+ "w|membunuh": [
+  {
+   "text": "Dia tidak membunuh siapa pun.",
+   "en": "They didn't kill anyone.",
+   "ko": "그 사람은 아무도 죽이지 않았어.",
+   "blank": "membunuh"
+  },
+  {
+   "text": "Aku tidak mau membunuh hewan.",
+   "en": "I don't want to kill animals.",
+   "ko": "동물을 죽이고 싶지 않아.",
+   "blank": "membunuh"
+  }
+ ],
+ "w|memiliki": [
+  {
+   "text": "Dia memiliki dua rumah.",
+   "en": "They own two houses.",
+   "ko": "그 사람은 집을 두 채 가지고 있어.",
+   "blank": "memiliki"
+  },
+  {
+   "text": "Perusahaan itu memiliki banyak cabang.",
+   "en": "That company has a lot of branches.",
+   "ko": "그 회사는 지점이 많아.",
+   "blank": "memiliki"
+  }
+ ],
+ "w|mengapa": [
+  {
+   "text": "Mengapa kamu diam?",
+   "en": "Why are you quiet?",
+   "ko": "왜 말이 없어?",
+   "blank": "Mengapa"
+  },
+  {
+   "text": "Aku tidak mengerti mengapa.",
+   "en": "I don't understand why.",
+   "ko": "왜 그런지 모르겠어.",
+   "blank": "mengapa"
+  }
+ ],
+ "w|mengatakan": [
+  {
+   "text": "Dia mengatakan yang sebenarnya.",
+   "en": "They told the truth.",
+   "ko": "그 사람은 사실을 말했어.",
+   "blank": "mengatakan"
+  },
+  {
+   "text": "Jangan mengatakan itu.",
+   "en": "Don't say that.",
+   "ko": "그 말 하지 마.",
+   "blank": "mengatakan"
+  }
+ ],
+ "w|menjadi": [
+  {
+   "text": "Dia ingin menjadi guru.",
+   "en": "They want to be a teacher.",
+   "ko": "그 사람은 선생님이 되고 싶어.",
+   "blank": "menjadi"
+  },
+  {
+   "text": "Dia menjadi dokter.",
+   "en": "They became a doctor.",
+   "ko": "그 사람은 의사가 됐어.",
+   "blank": "menjadi"
+  }
+ ],
+ "w|menunggu": [
+  {
+   "text": "Aku menunggu di luar.",
+   "en": "I'll wait outside.",
+   "ko": "밖에서 기다릴게.",
+   "blank": "menunggu"
+  },
+  {
+   "text": "Jangan menunggu terlalu lama.",
+   "en": "Don't wait too long.",
+   "ko": "너무 오래 기다리지 마.",
+   "blank": "menunggu"
+  }
+ ],
+ "w|mereka": [
+  {
+   "text": "Mereka sudah pulang.",
+   "en": "They've gone home.",
+   "ko": "다들 이미 집에 갔어.",
+   "blank": "Mereka"
+  },
+  {
+   "text": "Mereka masih di jalan.",
+   "en": "They're still on the way.",
+   "ko": "아직 오는 길이야.",
+   "blank": "Mereka"
+  }
+ ],
+ "w|mungkin": [
+  {
+   "text": "Mungkin dia lupa.",
+   "en": "Maybe they forgot.",
+   "ko": "아마 그 사람 깜빡한 것 같아.",
+   "blank": "Mungkin"
+  },
+  {
+   "text": "Mungkin saja hujan.",
+   "en": "It might rain.",
+   "ko": "비 올 수도 있어.",
+   "blank": "Mungkin"
+  }
+ ],
+ "w|oke": [
+  {
+   "text": "Oke, aku mengerti.",
+   "en": "Okay, I get it.",
+   "ko": "알겠어.",
+   "blank": "Oke"
+  },
+  {
+   "text": "Jam delapan, oke?",
+   "en": "Eight o'clock, okay?",
+   "ko": "여덟 시, 괜찮아?",
+   "blank": "oke"
+  }
+ ],
+ "w|orang": [
+  {
+   "text": "Aku kenal orang itu.",
+   "en": "I know that person.",
+   "ko": "저 사람은 내가 알아.",
+   "blank": "orang"
+  },
+  {
+   "text": "Banyak orang di sini.",
+   "en": "There are a lot of people here.",
+   "ko": "여기 사람이 많아.",
+   "blank": "orang"
+  }
+ ],
+ "w|pada": [
+  {
+   "text": "Serahkan pada saya.",
+   "en": "Leave it to me.",
+   "ko": "저에게 맡기세요.",
+   "blank": "pada"
+  },
+  {
+   "text": "Jangan marah pada dia.",
+   "en": "Don't be angry at them.",
+   "ko": "그 사람한테 화내지 마.",
+   "blank": "pada"
+  }
+ ],
+ "w|pergi": [
+  {
+   "text": "Jangan pergi dulu.",
+   "en": "Don't leave yet.",
+   "ko": "아직 가지 마.",
+   "blank": "pergi"
+  },
+  {
+   "text": "Dia pergi tanpa pamit.",
+   "en": "They left without saying goodbye.",
+   "ko": "인사도 없이 가 버렸어.",
+   "blank": "pergi"
+  }
+ ],
+ "w|perlu": [
+  {
+   "text": "Tidak perlu buru-buru.",
+   "en": "No need to rush.",
+   "ko": "서두를 필요 없어.",
+   "blank": "perlu"
+  },
+  {
+   "text": "Aku perlu bantuan.",
+   "en": "I need help.",
+   "ko": "도움이 필요해.",
+   "blank": "perlu"
+  }
+ ],
+ "w|pernah": [
+  {
+   "text": "Kamu pernah ke Bali?",
+   "en": "Have you ever been to Bali?",
+   "ko": "발리에 가 본 적 있어?",
+   "blank": "pernah"
+  },
+  {
+   "text": "Aku belum pernah naik pesawat.",
+   "en": "I've never been on a plane.",
+   "ko": "비행기는 아직 한 번도 안 타 봤어.",
+   "blank": "pernah"
+  }
+ ],
+ "w|punya": [
+  {
+   "text": "Kamu punya payung?",
+   "en": "Do you have an umbrella?",
+   "ko": "우산 있어?",
+   "blank": "punya"
+  },
+  {
+   "text": "Aku tidak punya uang.",
+   "en": "I don't have any money.",
+   "ko": "나 돈이 없어.",
+   "blank": "punya"
+  }
+ ],
+ "w|rumah": [
+  {
+   "text": "Pulang ke rumah, yuk.",
+   "en": "Let's go home.",
+   "ko": "집에 가자.",
+   "blank": "rumah"
+  },
+  {
+   "text": "Rumah ini kosong.",
+   "en": "This house is empty.",
+   "ko": "이 집은 비어 있어.",
+   "blank": "Rumah"
+  }
+ ],
+ "w|saat": [
+  {
+   "text": "Saat itu aku kaget.",
+   "en": "I was startled then.",
+   "ko": "그때 깜짝 놀랐어.",
+   "blank": "Saat"
+  },
+  {
+   "text": "Jangan pergi saat hujan.",
+   "en": "Don't go out while it's raining.",
+   "ko": "비 올 때는 나가지 마.",
+   "blank": "saat"
+  }
+ ],
+ "w|saja": [
+  {
+   "text": "Biar saja.",
+   "en": "Just leave it.",
+   "ko": "그냥 내버려 둬.",
+   "blank": "saja"
+  },
+  {
+   "text": "Di rumah saja.",
+   "en": "Just stay home.",
+   "ko": "그냥 집에 있어.",
+   "blank": "saja"
+  }
+ ],
+ "w|salah": [
+  {
+   "text": "Kamu salah kamar.",
+   "en": "You've got the wrong room.",
+   "ko": "방을 잘못 찾았어.",
+   "blank": "salah"
+  },
+  {
+   "text": "Aku salah.",
+   "en": "I was wrong.",
+   "ko": "내가 틀렸어.",
+   "blank": "salah"
+  }
+ ],
+ "w|sampai": [
+  {
+   "text": "Sampai nanti, ya.",
+   "en": "See you later.",
+   "ko": "나중에 봐.",
+   "blank": "Sampai"
+  },
+  {
+   "text": "Kabarnya belum sampai.",
+   "en": "The news hasn't reached us yet.",
+   "ko": "소식이 아직 안 왔어.",
+   "blank": "sampai"
+  }
+ ],
+ "w|sana": [
+  {
+   "text": "Tunggu di sana.",
+   "en": "Wait over there.",
+   "ko": "저기서 기다려.",
+   "blank": "sana"
+  },
+  {
+   "text": "Sana, jangan di sini.",
+   "en": "Over there, not here.",
+   "ko": "저기로 가, 여기 말고.",
+   "blank": "Sana"
+  }
+ ],
+ "w|sangat": [
+  {
+   "text": "Aku sangat lelah.",
+   "en": "I'm really worn out.",
+   "ko": "정말 지쳤어.",
+   "blank": "sangat"
+  },
+  {
+   "text": "Ini sangat enak.",
+   "en": "This tastes really good.",
+   "ko": "이거 정말 맛있어.",
+   "blank": "sangat"
+  }
+ ],
+ "w|satu": [
+  {
+   "text": "Tinggal satu.",
+   "en": "There's one left.",
+   "ko": "하나 남았어.",
+   "blank": "satu"
+  },
+  {
+   "text": "Ambil satu saja.",
+   "en": "Just take one.",
+   "ko": "하나만 집어.",
+   "blank": "satu"
+  }
+ ],
+ "w|saya": [
+  {
+   "text": "Saya mau tanya.",
+   "en": "I'd like to ask something.",
+   "ko": "물어볼 게 있어요.",
+   "blank": "Saya"
+  },
+  {
+   "text": "Permisi, saya lewat.",
+   "en": "Excuse me, coming through.",
+   "ko": "실례합니다, 지나갈게요.",
+   "blank": "saya"
+  }
+ ],
+ "w|sebuah": [
+  {
+   "text": "Ada sebuah kotak di meja.",
+   "en": "There's a box on the table.",
+   "ko": "탁자 위에 상자가 하나 있어.",
+   "blank": "sebuah"
+  },
+  {
+   "text": "Dia memberi sebuah buku.",
+   "en": "They gave a book.",
+   "ko": "그 사람이 책을 한 권 줬어.",
+   "blank": "sebuah"
+  }
+ ],
+ "w|sedang": [
+  {
+   "text": "Aku sedang makan.",
+   "en": "I'm eating.",
+   "ko": "나 밥 먹는 중이야.",
+   "blank": "sedang"
+  },
+  {
+   "text": "Dia sedang mandi.",
+   "en": "They're in the shower.",
+   "ko": "그 사람 샤워하고 있어.",
+   "blank": "sedang"
+  }
+ ],
+ "w|sekali": [
+  {
+   "text": "Enak sekali.",
+   "en": "It's really good.",
+   "ko": "정말 맛있어.",
+   "blank": "sekali"
+  },
+  {
+   "text": "Coba sekali saja.",
+   "en": "Just try it once.",
+   "ko": "한 번만 해 봐.",
+   "blank": "sekali"
+  }
+ ],
+ "w|sekarang": [
+  {
+   "text": "Sekarang jam berapa?",
+   "en": "What time is it now?",
+   "ko": "지금 몇 시야?",
+   "blank": "Sekarang"
+  },
+  {
+   "text": "Aku sibuk sekarang.",
+   "en": "I'm busy right now.",
+   "ko": "지금은 바빠.",
+   "blank": "sekarang"
+  }
+ ],
+ "w|semua": [
+  {
+   "text": "Habiskan semua.",
+   "en": "Finish all of it.",
+   "ko": "남기지 말고 다 먹어.",
+   "blank": "semua"
+  },
+  {
+   "text": "Semua orang sudah pulang.",
+   "en": "Everyone has gone home.",
+   "ko": "다들 집에 갔어.",
+   "blank": "Semua"
+  }
+ ],
+ "w|sendiri": [
+  {
+   "text": "Aku datang sendiri.",
+   "en": "I came alone.",
+   "ko": "나 혼자 왔어.",
+   "blank": "sendiri"
+  },
+  {
+   "text": "Kerjakan sendiri.",
+   "en": "Do it yourself.",
+   "ko": "네가 직접 해.",
+   "blank": "sendiri"
+  }
+ ],
+ "w|seorang": [
+  {
+   "text": "Ada seorang tamu di depan.",
+   "en": "There's a guest out front.",
+   "ko": "앞에 손님이 한 명 왔어.",
+   "blank": "seorang"
+  },
+  {
+   "text": "Dia seorang guru.",
+   "en": "They're a teacher.",
+   "ko": "그 사람은 선생님이야.",
+   "blank": "seorang"
+  }
+ ],
+ "w|seperti": [
+  {
+   "text": "Jangan seperti itu.",
+   "en": "Don't be like that.",
+   "ko": "그렇게 하지 마.",
+   "blank": "seperti"
+  },
+  {
+   "text": "Cuacanya seperti kemarin.",
+   "en": "The weather's like yesterday.",
+   "ko": "날씨가 어제랑 같아.",
+   "blank": "seperti"
+  }
+ ],
+ "w|sesuatu": [
+  {
+   "text": "Ada sesuatu di sakumu.",
+   "en": "There's something in your pocket.",
+   "ko": "주머니에 뭔가 들어 있어.",
+   "blank": "sesuatu"
+  },
+  {
+   "text": "Kamu menyembunyikan sesuatu.",
+   "en": "You're hiding something.",
+   "ko": "뭔가 숨기고 있잖아.",
+   "blank": "sesuatu"
+  }
+ ],
+ "w|siapa": [
+  {
+   "text": "Siapa itu?",
+   "en": "Who's that?",
+   "ko": "저 사람 누구야?",
+   "blank": "Siapa"
+  },
+  {
+   "text": "Kamu sama siapa?",
+   "en": "Who are you with?",
+   "ko": "누구랑 있어?",
+   "blank": "siapa"
+  }
+ ],
+ "w|sini": [
+  {
+   "text": "Bawa sini.",
+   "en": "Bring it here.",
+   "ko": "이리 가져와.",
+   "blank": "sini"
+  },
+  {
+   "text": "Sini, aku bantu.",
+   "en": "Come here, I'll help.",
+   "ko": "이리 와, 내가 도와줄게.",
+   "blank": "Sini"
+  }
+ ],
+ "w|sudah": [
+  {
+   "text": "Sudah makan?",
+   "en": "Have you eaten?",
+   "ko": "밥 먹었어?",
+   "blank": "Sudah"
+  },
+  {
+   "text": "Sudah, jangan nangis.",
+   "en": "That's enough, don't cry.",
+   "ko": "됐어, 울지 마.",
+   "blank": "Sudah"
+  }
+ ],
+ "w|tahu": [
+  {
+   "text": "Aku tidak tahu.",
+   "en": "I don't know.",
+   "ko": "나 몰라.",
+   "blank": "tahu"
+  },
+  {
+   "text": "Siapa tahu dia lupa.",
+   "en": "Who knows, they might have forgotten.",
+   "ko": "그 사람 깜빡했을 수도 있어.",
+   "blank": "tahu"
+  }
+ ],
+ "w|tahun": [
+  {
+   "text": "Tahun depan aku lulus.",
+   "en": "I graduate next year.",
+   "ko": "내년에 졸업해.",
+   "blank": "Tahun"
+  },
+  {
+   "text": "Umurnya dua puluh tahun.",
+   "en": "They're twenty.",
+   "ko": "스무 살이야.",
+   "blank": "tahun"
+  }
+ ],
+ "w|tak": [
+  {
+   "text": "Tak jadi deh.",
+   "en": "Never mind, forget it.",
+   "ko": "됐어, 관둘게.",
+   "blank": "Tak"
+  },
+  {
+   "text": "Tak usah diantar.",
+   "en": "You don't have to drop me off.",
+   "ko": "데려다주지 않아도 돼.",
+   "blank": "Tak"
+  }
+ ],
+ "w|tapi": [
+  {
+   "text": "Enak, tapi pedas.",
+   "en": "It's good, but spicy.",
+   "ko": "맛있는데 매워.",
+   "blank": "tapi"
+  },
+  {
+   "text": "Aku mau, tapi takut.",
+   "en": "I want to, but I'm scared.",
+   "ko": "하고 싶은데 무서워.",
+   "blank": "tapi"
+  }
+ ],
+ "w|telah": [
+  {
+   "text": "Waktu telah habis.",
+   "en": "Time's up.",
+   "ko": "시간이 다 됐어.",
+   "blank": "telah"
+  },
+  {
+   "text": "Ayah telah pulang.",
+   "en": "Dad is already home.",
+   "ko": "아빠는 이미 돌아왔어.",
+   "blank": "telah"
+  }
+ ],
+ "w|tempat": [
+  {
+   "text": "Ini tempat dudukku.",
+   "en": "This is my seat.",
+   "ko": "여기가 내 자리아.",
+   "blank": "tempat"
+  },
+  {
+   "text": "Simpan di tempat lain.",
+   "en": "Put it somewhere else.",
+   "ko": "다른 곳에 넣어 둬.",
+   "blank": "tempat"
+  }
+ ],
+ "w|tentang": [
+  {
+   "text": "Kita bicara tentang apa?",
+   "en": "What are we talking about?",
+   "ko": "무슨 얘기를 하는 거야?",
+   "blank": "tentang"
+  },
+  {
+   "text": "Aku tidak mau dengar tentang itu.",
+   "en": "I don't want to hear about that.",
+   "ko": "그 얘긴 듣고 싶지 않아.",
+   "blank": "tentang"
+  }
+ ],
+ "w|terima": [
+  {
+   "text": "Terima kasih banyak.",
+   "en": "Thank you so much.",
+   "ko": "정말 고마워.",
+   "blank": "Terima"
+  },
+  {
+   "text": "Ya sudah, aku terima.",
+   "en": "Fine, I'll accept it.",
+   "ko": "그래, 받아들일게.",
+   "blank": "terima"
+  }
+ ],
+ "w|terjadi": [
+  {
+   "text": "Apa yang terjadi?",
+   "en": "What happened?",
+   "ko": "무슨 일이야?",
+   "blank": "terjadi"
+  },
+  {
+   "text": "Ini tidak akan terjadi lagi.",
+   "en": "This won't happen again.",
+   "ko": "이런 일은 다시 안 생길 거야.",
+   "blank": "terjadi"
+  }
+ ],
+ "w|tidak": [
+  {
+   "text": "Tidak apa-apa.",
+   "en": "It's all right.",
+   "ko": "괜찮아.",
+   "blank": "Tidak"
+  },
+  {
+   "text": "Aku tidak mau.",
+   "en": "I don't want to.",
+   "ko": "나 하기 싫어.",
+   "blank": "tidak"
+  }
+ ],
+ "w|untuk": [
+  {
+   "text": "Ini untuk kamu.",
+   "en": "This is for you.",
+   "ko": "이거 너 주는 거야.",
+   "blank": "untuk"
+  },
+  {
+   "text": "Simpan untuk besok.",
+   "en": "Save it for tomorrow.",
+   "ko": "내일 쓰려고 남겨 둬.",
+   "blank": "untuk"
+  }
+ ],
+ "w|waktu": [
+  {
+   "text": "Tidak ada waktu.",
+   "en": "There's no time.",
+   "ko": "시간이 없어.",
+   "blank": "waktu"
+  },
+  {
+   "text": "Waktu itu aku masih kecil.",
+   "en": "I was still little back then.",
+   "ko": "그때는 아직 어렸어.",
+   "blank": "Waktu"
+  }
+ ],
+ "w|ya": [
+  {
+   "text": "Ya, boleh.",
+   "en": "Yeah, that's fine.",
+   "ko": "응, 괜찮아.",
+   "blank": "Ya"
+  },
+  {
+   "text": "Jangan lupa ya.",
+   "en": "Don't forget, okay?",
+   "ko": "잊지 마.",
+   "blank": "ya"
+  }
+ ],
+ "w|yang": [
+  {
+   "text": "Ambil yang merah.",
+   "en": "Take the red one.",
+   "ko": "빨간 걸로 집어.",
+   "blank": "yang"
+  },
+  {
+   "text": "Yang mana, sih?",
+   "en": "Which one, though?",
+   "ko": "어떤 걸 말하는 거야?",
+   "blank": "Yang"
+  }
+ ]
+}

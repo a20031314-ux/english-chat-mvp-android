@@ -13,6 +13,20 @@
    "blank": "家"
   }
  ],
+ "w|歌": [
+  {
+   "text": "この歌、知ってる？",
+   "en": "Do you know this song?",
+   "ko": "이 노래 알아?",
+   "blank": "歌"
+  },
+  {
+   "text": "歌、上手だね。",
+   "en": "You're a good singer.",
+   "ko": "노래 잘해.",
+   "blank": "歌"
+  }
+ ],
  "w|街": [
   {
    "text": "街に出よう。",
@@ -69,6 +83,20 @@
    "blank": "間"
   }
  ],
+ "w|間違い": [
+  {
+   "text": "ここ、間違いだよ。",
+   "en": "This part is wrong.",
+   "ko": "여기 틀렸어.",
+   "blank": "間違い"
+  },
+  {
+   "text": "間違いなく来るよ。",
+   "en": "They'll definitely come.",
+   "ko": "틀림없이 와.",
+   "blank": "間違い"
+  }
+ ],
  "w|簡単": [
   {
    "text": "簡単だよ。",
@@ -83,6 +111,20 @@
    "blank": "簡単"
   }
  ],
+ "w|感謝": [
+  {
+   "text": "感謝してるよ。",
+   "en": "I'm really grateful.",
+   "ko": "정말 고마워하고 있어.",
+   "blank": "感謝"
+  },
+  {
+   "text": "感謝しかない。",
+   "en": "I'm nothing but grateful.",
+   "ko": "감사할 뿐이야.",
+   "blank": "感謝"
+  }
+ ],
  "w|感じ": [
   {
    "text": "いい感じだね。",
@@ -95,6 +137,20 @@
    "en": "That came off badly.",
    "ko": "느낌이 안 좋아.",
    "blank": "感じ"
+  }
+ ],
+ "w|感じる": [
+  {
+   "text": "なんか感じる。",
+   "en": "I've got a feeling about this.",
+   "ko": "뭔가 느껴져.",
+   "blank": "感じる"
+  },
+  {
+   "text": "寒く感じるね。",
+   "en": "It feels cold.",
+   "ko": "춥게 느껴지네.",
+   "blank": "感じる"
   }
  ],
  "w|開始": [
@@ -181,6 +237,34 @@
    "blank": "見える"
   }
  ],
+ "w|見せる": [
+  {
+   "text": "写真、見せて。",
+   "en": "Show me the photo.",
+   "ko": "사진 보여 줘.",
+   "blank": "見せて"
+  },
+  {
+   "text": "あとで見せるね。",
+   "en": "I'll show you later.",
+   "ko": "나중에 보여 줄게.",
+   "blank": "見せる"
+  }
+ ],
+ "w|見つける": [
+  {
+   "text": "鍵、見つけた？",
+   "en": "Did you find the key?",
+   "ko": "열쇠 찾았어?",
+   "blank": "見つけた"
+  },
+  {
+   "text": "すぐ見つけるよ。",
+   "en": "I'll find it in a second.",
+   "ko": "금방 찾을게.",
+   "blank": "見つける"
+  }
+ ],
  "w|見る": [
   {
    "text": "ちょっと見て。",
@@ -251,6 +335,20 @@
    "blank": "結婚"
   }
  ],
+ "w|決める": [
+  {
+   "text": "もう決めた？",
+   "en": "Did you decide yet?",
+   "ko": "벌써 정했어?",
+   "blank": "決めた"
+  },
+  {
+   "text": "今日中に決めるね。",
+   "en": "I'll decide before the day is out.",
+   "ko": "오늘 중으로 정할게.",
+   "blank": "決める"
+  }
+ ],
  "w|頃": [
   {
    "text": "あの頃が懐かしいよ。",
@@ -305,6 +403,20 @@
    "en": "Do you have a plan?",
    "ko": "무슨 계획 있어?",
    "blank": "計画"
+  }
+ ],
+ "w|高校": [
+  {
+   "text": "高校、どこ？",
+   "en": "Which high school?",
+   "ko": "고등학교 어디야?",
+   "blank": "高校"
+  },
+  {
+   "text": "高校の時の友達。",
+   "en": "A friend from high school.",
+   "ko": "고등학교 때 친구야.",
+   "blank": "高校"
   }
  ],
  "w|曲": [
@@ -419,6 +531,20 @@
    "blank": "過去"
   }
  ],
+ "w|果物": [
+  {
+   "text": "果物、洗った？",
+   "en": "Did you wash the fruit?",
+   "ko": "과일 씻었어?",
+   "blank": "果物"
+  },
+  {
+   "text": "果物が足りない。",
+   "en": "We don't have enough fruit.",
+   "ko": "과일이 모자라.",
+   "blank": "果物"
+  }
+ ],
  "w|管理": [
   {
    "text": "管理が甘いよ。",
@@ -461,6 +587,20 @@
    "blank": "過ぎてる"
   }
  ],
+ "w|交換": [
+  {
+   "text": "席、交換する？",
+   "en": "Want to swap seats?",
+   "ko": "자리 바꿀래?",
+   "blank": "交換"
+  },
+  {
+   "text": "これ、交換できる？",
+   "en": "Can I exchange this?",
+   "ko": "이거 교환돼?",
+   "blank": "交換"
+  }
+ ],
  "w|口": [
   {
    "text": "口を開けて。",
@@ -501,6 +641,20 @@
    "en": "I hear he's in the military.",
    "ko": "군대 사람이래.",
    "blank": "軍"
+  }
+ ],
+ "w|求める": [
+  {
+   "text": "助けを求めるよ。",
+   "en": "I'm going to ask for help.",
+   "ko": "도움을 구할게.",
+   "blank": "求める"
+  },
+  {
+   "text": "完璧ばかり求める。",
+   "en": "You demand nothing but perfection.",
+   "ko": "완벽만 바라.",
+   "blank": "求める"
   }
  ],
  "w|近く": [
@@ -713,6 +867,34 @@
    "blank": "金曜日"
   }
  ],
+ "w|企画": [
+  {
+   "text": "いい企画だね。",
+   "en": "That's a good proposal.",
+   "ko": "좋은 기획이네.",
+   "blank": "企画"
+  },
+  {
+   "text": "企画、通ったよ。",
+   "en": "The proposal got approved.",
+   "ko": "기획 통과됐어.",
+   "blank": "企画"
+  }
+ ],
+ "w|記録": [
+  {
+   "text": "記録、更新したよ。",
+   "en": "I beat the record.",
+   "ko": "기록 경신했어.",
+   "blank": "記録"
+  },
+  {
+   "text": "記録に残そ。",
+   "en": "Let's write that down.",
+   "ko": "기록으로 남기자.",
+   "blank": "記録"
+  }
+ ],
  "w|起きる": [
   {
    "text": "もう起きた？",
@@ -725,6 +907,20 @@
    "en": "Get up.",
    "ko": "빨리 일어나.",
    "blank": "起きて"
+  }
+ ],
+ "w|難しい": [
+  {
+   "text": "これ、難しいね。",
+   "en": "This is tough.",
+   "ko": "이거 어렵네.",
+   "blank": "難しい"
+  },
+  {
+   "text": "難しいこと言うなよ。",
+   "en": "Don't make this complicated.",
+   "ko": "어려운 소리 하지 마.",
+   "blank": "難しい"
   }
  ],
  "w|男": [
@@ -839,6 +1035,20 @@
    "blank": "女の子"
   }
  ],
+ "w|能力": [
+  {
+   "text": "能力がある人だよ。",
+   "en": "They're really capable.",
+   "ko": "능력 있는 사람이야.",
+   "blank": "能力"
+  },
+  {
+   "text": "能力を活かして。",
+   "en": "Use what you're good at.",
+   "ko": "능력을 살려.",
+   "blank": "能力"
+  }
+ ],
  "w|多分": [
   {
    "text": "多分雨だね。",
@@ -851,6 +1061,34 @@
    "en": "I'll probably be late.",
    "ko": "아마 늦을 것 같아.",
    "blank": "多分"
+  }
+ ],
+ "w|担当": [
+  {
+   "text": "担当、誰？",
+   "en": "Who's in charge?",
+   "ko": "담당이 누구야?",
+   "blank": "担当"
+  },
+  {
+   "text": "私が担当です。",
+   "en": "I'm the one in charge.",
+   "ko": "제가 담당이에요.",
+   "blank": "担当"
+  }
+ ],
+ "w|答え": [
+  {
+   "text": "答え、わかった？",
+   "en": "Did you get the answer?",
+   "ko": "답 알았어?",
+   "blank": "答え"
+  },
+  {
+   "text": "答えはノーだよ。",
+   "en": "The answer is no.",
+   "ko": "답은 아니야.",
+   "blank": "答え"
   }
  ],
  "w|多い": [
@@ -879,6 +1117,20 @@
    "en": "Take good care of it.",
    "ko": "소중히 다뤄 줘.",
    "blank": "大事"
+  }
+ ],
+ "w|大人": [
+  {
+   "text": "まだ大人じゃないよ。",
+   "en": "I'm not a grown-up yet.",
+   "ko": "아직 어른 아니야.",
+   "blank": "大人"
+  },
+  {
+   "text": "もう大人なんだから。",
+   "en": "You're a grown-up now.",
+   "ko": "이제 어른이잖아.",
+   "blank": "大人"
   }
  ],
  "w|大丈夫": [
@@ -1133,6 +1385,48 @@
    "blank": "連絡"
   }
  ],
+ "w|例": [
+  {
+   "text": "例を出して。",
+   "en": "Give me an example.",
+   "ko": "예를 들어 봐.",
+   "blank": "例"
+  },
+  {
+   "text": "いい例だね。",
+   "en": "That's a good example.",
+   "ko": "좋은 예네.",
+   "blank": "例"
+  }
+ ],
+ "w|料理": [
+  {
+   "text": "料理、上手だね。",
+   "en": "You're good at cooking.",
+   "ko": "요리 잘해.",
+   "blank": "料理"
+  },
+  {
+   "text": "この料理、熱いよ。",
+   "en": "Careful, this dish is hot.",
+   "ko": "이 요리 뜨거워.",
+   "blank": "料理"
+  }
+ ],
+ "w|流れ": [
+  {
+   "text": "流れが変わったね。",
+   "en": "The whole mood shifted.",
+   "ko": "흐름이 바뀌었네.",
+   "blank": "流れ"
+  },
+  {
+   "text": "その流れでいいよ。",
+   "en": "We can keep going like this.",
+   "ko": "그 흐름이면 돼.",
+   "blank": "流れ"
+  }
+ ],
  "w|利用": [
   {
    "text": "図書館をよく利用するよ。",
@@ -1189,6 +1483,20 @@
    "blank": "漫画"
   }
  ],
+ "w|晩ご飯": [
+  {
+   "text": "晩ご飯、何にする？",
+   "en": "What do you want for dinner?",
+   "ko": "저녁 뭐 먹을까?",
+   "blank": "晩ご飯"
+  },
+  {
+   "text": "晩ご飯は外で食べよ。",
+   "en": "Let's eat dinner out.",
+   "ko": "저녁은 나가서 먹자.",
+   "blank": "晩ご飯"
+  }
+ ],
  "w|忘れる": [
   {
    "text": "傘、忘れた。",
@@ -1229,6 +1537,20 @@
    "en": "The movie was really good.",
    "ko": "영화 재미있었어.",
    "blank": "面白かった"
+  }
+ ],
+ "w|勉強": [
+  {
+   "text": "ちょっと勉強してくる。",
+   "en": "I'm going to go study for a bit.",
+   "ko": "잠깐 공부하고 올게.",
+   "blank": "勉強"
+  },
+  {
+   "text": "勉強になったよ。",
+   "en": "I learned a lot from that.",
+   "ko": "많이 배웠어.",
+   "blank": "勉強"
   }
  ],
  "w|明日": [
@@ -1285,6 +1607,20 @@
    "en": "My mom is worried.",
    "ko": "엄마가 걱정하고 있어.",
    "blank": "母"
+  }
+ ],
+ "w|木": [
+  {
+   "text": "この木、大きいね。",
+   "en": "This tree is huge.",
+   "ko": "이 나무 커.",
+   "blank": "木"
+  },
+  {
+   "text": "庭の木が倒れた。",
+   "en": "The tree in the yard fell over.",
+   "ko": "마당 나무가 쓰러졌어.",
+   "blank": "木"
   }
  ],
  "w|目": [
@@ -1385,6 +1721,20 @@
    "blank": "無理"
   }
  ],
+ "w|文字": [
+  {
+   "text": "文字が小さいよ。",
+   "en": "The text is too small.",
+   "ko": "글자가 작아.",
+   "blank": "文字"
+  },
+  {
+   "text": "文字、読めない。",
+   "en": "I can't read the writing.",
+   "ko": "글자를 못 읽겠어.",
+   "blank": "文字"
+  }
+ ],
  "w|問題": [
   {
    "text": "問題ないって。",
@@ -1425,6 +1775,20 @@
    "en": "Yeah, I heard about that.",
    "ko": "그거 들었어.",
    "blank": "聞いた"
+  }
+ ],
+ "w|味": [
+  {
+   "text": "味、濃いね。",
+   "en": "The flavor is really strong.",
+   "ko": "맛이 진해.",
+   "blank": "味"
+  },
+  {
+   "text": "この味、好き。",
+   "en": "I like this flavor.",
+   "ko": "이 맛 좋아.",
+   "blank": "味"
   }
  ],
  "w|米": [
@@ -1483,6 +1847,34 @@
    "blank": "放送"
   }
  ],
+ "w|配信": [
+  {
+   "text": "配信、見てた？",
+   "en": "Were you watching the stream?",
+   "ko": "방송 보고 있었어?",
+   "blank": "配信"
+  },
+  {
+   "text": "今夜配信するよ。",
+   "en": "I'm going live tonight.",
+   "ko": "오늘 밤에 방송해.",
+   "blank": "配信"
+  }
+ ],
+ "w|白": [
+  {
+   "text": "白がいい。",
+   "en": "I'll take the white one.",
+   "ko": "흰색이 좋아.",
+   "blank": "白"
+  },
+  {
+   "text": "これ、白だよ。",
+   "en": "This one's white.",
+   "ko": "이거 흰색이야.",
+   "blank": "白"
+  }
+ ],
  "w|番": [
   {
    "text": "君の番だよ。",
@@ -1539,6 +1931,20 @@
    "blank": "病院"
   }
  ],
+ "w|報告": [
+  {
+   "text": "あとで報告するね。",
+   "en": "I'll fill you in later.",
+   "ko": "나중에 보고할게.",
+   "blank": "報告"
+  },
+  {
+   "text": "報告、聞いた？",
+   "en": "Did you hear the update?",
+   "ko": "보고 들었어?",
+   "blank": "報告"
+  }
+ ],
  "w|普通": [
   {
    "text": "普通でいいよ。",
@@ -1553,6 +1959,20 @@
    "blank": "普通"
   }
  ],
+ "w|保護": [
+  {
+   "text": "データ、保護しといて。",
+   "en": "Keep the data safe.",
+   "ko": "데이터 보호해 둬.",
+   "blank": "保護"
+  },
+  {
+   "text": "子供の保護が先だよ。",
+   "en": "Keeping the children safe comes first.",
+   "ko": "아이들 보호가 먼저야.",
+   "blank": "保護"
+  }
+ ],
  "w|僕": [
   {
    "text": "僕はコーヒー。",
@@ -1565,6 +1985,20 @@
    "en": "I'll eat too.",
    "ko": "나도 먹을게.",
    "blank": "僕"
+  }
+ ],
+ "w|服": [
+  {
+   "text": "この服、似合うよ。",
+   "en": "That looks good on you.",
+   "ko": "이 옷 잘 어울려.",
+   "blank": "服"
+  },
+  {
+   "text": "服、汚れた。",
+   "en": "I got my clothes dirty.",
+   "ko": "옷 더러워졌어.",
+   "blank": "服"
   }
  ],
  "w|本": [
@@ -1665,6 +2099,34 @@
    "blank": "分からない"
   }
  ],
+ "w|非常": [
+  {
+   "text": "非常に危ないよ。",
+   "en": "It's really dangerous.",
+   "ko": "굉장히 위험해.",
+   "blank": "非常"
+  },
+  {
+   "text": "非常に助かった。",
+   "en": "That helped so much.",
+   "ko": "정말 큰 도움이 됐어.",
+   "blank": "非常"
+  }
+ ],
+ "w|死": [
+  {
+   "text": "死のことは考えたくない。",
+   "en": "I don't want to think about death.",
+   "ko": "죽음은 생각하고 싶지 않아.",
+   "blank": "死"
+  },
+  {
+   "text": "突然の死だった。",
+   "en": "It was a sudden death.",
+   "ko": "갑작스러운 죽음이었어.",
+   "blank": "死"
+  }
+ ],
  "w|私": [
   {
    "text": "私はコーヒーで。",
@@ -1749,6 +2211,34 @@
    "blank": "使用"
   }
  ],
+ "w|傘": [
+  {
+   "text": "傘、持った？",
+   "en": "Did you bring an umbrella?",
+   "ko": "우산 챙겼어?",
+   "blank": "傘"
+  },
+  {
+   "text": "傘、貸して。",
+   "en": "Let me borrow your umbrella.",
+   "ko": "우산 빌려 줘.",
+   "blank": "傘"
+  }
+ ],
+ "w|山": [
+  {
+   "text": "山、見える？",
+   "en": "Can you see the mountain?",
+   "ko": "산 보여?",
+   "blank": "山"
+  },
+  {
+   "text": "山に行こうよ。",
+   "en": "Let's go to the mountains.",
+   "ko": "산에 가자.",
+   "blank": "山"
+  }
+ ],
  "w|上": [
   {
    "text": "棚の上だよ。",
@@ -1763,6 +2253,20 @@
    "blank": "上"
   }
  ],
+ "w|詳細": [
+  {
+   "text": "詳細は後で送るね。",
+   "en": "I'll send the details later.",
+   "ko": "자세한 건 나중에 보낼게.",
+   "blank": "詳細"
+  },
+  {
+   "text": "詳細、教えて。",
+   "en": "Tell me the details.",
+   "ko": "자세히 알려 줘.",
+   "blank": "詳細"
+  }
+ ],
  "w|相手": [
   {
    "text": "相手によるね。",
@@ -1775,6 +2279,20 @@
    "en": "They're a good match.",
    "ko": "좋은 상대네.",
    "blank": "相手"
+  }
+ ],
+ "w|商品": [
+  {
+   "text": "この商品、人気だよ。",
+   "en": "This one is selling really well.",
+   "ko": "이 상품 인기 있어.",
+   "blank": "商品"
+  },
+  {
+   "text": "商品、届いた？",
+   "en": "Did your order arrive?",
+   "ko": "상품 도착했어?",
+   "blank": "商品"
   }
  ],
  "w|社会": [
@@ -2029,6 +2547,20 @@
    "blank": "先月"
   }
  ],
+ "w|選挙": [
+  {
+   "text": "選挙に行ってきたよ。",
+   "en": "I went and voted.",
+   "ko": "선거 다녀왔어.",
+   "blank": "選挙"
+  },
+  {
+   "text": "今度の選挙、行く？",
+   "en": "Are you voting this time?",
+   "ko": "이번 선거에는 갈 거야?",
+   "blank": "選挙"
+  }
+ ],
  "w|設定": [
   {
    "text": "設定はどこ？",
@@ -2041,6 +2573,20 @@
    "en": "The settings are messed up.",
    "ko": "설정이 이상해.",
    "blank": "設定"
+  }
+ ],
+ "w|星": [
+  {
+   "text": "星がきれいだね。",
+   "en": "The stars are beautiful.",
+   "ko": "별이 예쁘네.",
+   "blank": "星"
+  },
+  {
+   "text": "星、見えたよ。",
+   "en": "I saw a star.",
+   "ko": "별 보였어.",
+   "blank": "星"
   }
  ],
  "w|成功": [
@@ -2083,6 +2629,20 @@
    "en": "I like this world.",
    "ko": "이 세계가 좋아.",
    "blank": "世界"
+  }
+ ],
+ "w|洗う": [
+  {
+   "text": "手を洗うよ。",
+   "en": "I'll wash my hands.",
+   "ko": "손 씻을게.",
+   "blank": "洗う"
+  },
+  {
+   "text": "この服、洗える？",
+   "en": "Can I wash this?",
+   "ko": "이 옷 빨 수 있어?",
+   "blank": "洗える"
   }
  ],
  "w|紹介": [
@@ -2211,6 +2771,20 @@
    "blank": "時間"
   }
  ],
+ "w|時期": [
+  {
+   "text": "時期が悪いね。",
+   "en": "The timing is bad.",
+   "ko": "시기가 안 좋네.",
+   "blank": "時期"
+  },
+  {
+   "text": "もうちょっと時期を見て。",
+   "en": "Let's wait for a better time.",
+   "ko": "시기를 좀 더 보자.",
+   "blank": "時期"
+  }
+ ],
  "w|時代": [
   {
    "text": "いい時代だね。",
@@ -2223,6 +2797,20 @@
    "en": "I like that era.",
    "ko": "그 시대가 좋아.",
    "blank": "時代"
+  }
+ ],
+ "w|施設": [
+  {
+   "text": "この施設、広いね。",
+   "en": "This place is huge.",
+   "ko": "이 시설 넓네.",
+   "blank": "施設"
+  },
+  {
+   "text": "施設、閉まってた。",
+   "en": "The place was closed.",
+   "ko": "시설이 닫혀 있었어.",
+   "blank": "施設"
   }
  ],
  "w|食べる": [
@@ -2265,6 +2853,20 @@
    "en": "I bought a new one.",
    "ko": "새로 샀어.",
    "blank": "新しい"
+  }
+ ],
+ "w|失敗": [
+  {
+   "text": "また失敗した。",
+   "en": "I messed up again.",
+   "ko": "또 실패했어.",
+   "blank": "失敗"
+  },
+  {
+   "text": "失敗してもいいよ。",
+   "en": "It's okay if you fail.",
+   "ko": "실패해도 돼.",
+   "blank": "失敗"
   }
  ],
  "w|心": [
@@ -2321,6 +2923,20 @@
    "en": "Your face is red.",
    "ko": "얼굴이 빨개.",
    "blank": "顔"
+  }
+ ],
+ "w|安心": [
+  {
+   "text": "もう安心だよ。",
+   "en": "We're in the clear now.",
+   "ko": "이제 안심해도 돼.",
+   "blank": "安心"
+  },
+  {
+   "text": "やっと安心した。",
+   "en": "I can finally relax.",
+   "ko": "이제야 안심됐어.",
+   "blank": "安心"
   }
  ],
  "w|安全": [
@@ -2547,6 +3163,20 @@
    "blank": "欲しい"
   }
  ],
+ "w|右": [
+  {
+   "text": "右に曲がって。",
+   "en": "Turn right.",
+   "ko": "오른쪽으로 꺾어.",
+   "blank": "右"
+  },
+  {
+   "text": "もっと右。",
+   "en": "A bit more to the right.",
+   "ko": "좀 더 오른쪽으로.",
+   "blank": "右"
+  }
+ ],
  "w|友達": [
   {
    "text": "友達と飲む。",
@@ -2561,6 +3191,62 @@
    "blank": "友達"
   }
  ],
+ "w|牛乳": [
+  {
+   "text": "牛乳、切れてる。",
+   "en": "We're out of milk.",
+   "ko": "우유 떨어졌어.",
+   "blank": "牛乳"
+  },
+  {
+   "text": "牛乳にする？",
+   "en": "Want milk?",
+   "ko": "우유로 할래?",
+   "blank": "牛乳"
+  }
+ ],
+ "w|運動": [
+  {
+   "text": "運動、した？",
+   "en": "Did you get any exercise?",
+   "ko": "운동했어?",
+   "blank": "運動"
+  },
+  {
+   "text": "ちょっと運動しよう。",
+   "en": "Let's get some exercise.",
+   "ko": "잠깐 운동하자.",
+   "blank": "運動"
+  }
+ ],
+ "w|運営": [
+  {
+   "text": "運営、大変そう。",
+   "en": "Running this looks exhausting.",
+   "ko": "운영이 힘들어 보여.",
+   "blank": "運営"
+  },
+  {
+   "text": "運営に聞いてみて。",
+   "en": "Ask the people running it.",
+   "ko": "운영 쪽에 물어봐.",
+   "blank": "運営"
+  }
+ ],
+ "w|運転": [
+  {
+   "text": "運転、代わろか。",
+   "en": "Want me to drive for a bit?",
+   "ko": "운전 교대해 줄까?",
+   "blank": "運転"
+  },
+  {
+   "text": "運転しないで。",
+   "en": "Don't drive.",
+   "ko": "운전하지 마.",
+   "blank": "運転"
+  }
+ ],
  "w|元": [
   {
    "text": "元に戻して。",
@@ -2573,6 +3259,34 @@
    "en": "I've known all along.",
    "ko": "원래부터 알아.",
    "blank": "元"
+  }
+ ],
+ "w|原因": [
+  {
+   "text": "原因、わかった？",
+   "en": "Did you find the cause?",
+   "ko": "원인 알았어?",
+   "blank": "原因"
+  },
+  {
+   "text": "原因は寝不足だよ。",
+   "en": "It's because you haven't slept enough.",
+   "ko": "원인은 잠이 부족한 거야.",
+   "blank": "原因"
+  }
+ ],
+ "w|元気": [
+  {
+   "text": "元気にしてた？",
+   "en": "You been doing okay?",
+   "ko": "잘 지냈어?",
+   "blank": "元気"
+  },
+  {
+   "text": "元気出して。",
+   "en": "Cheer up.",
+   "ko": "기운 내.",
+   "blank": "元気"
   }
  ],
  "w|月": [
@@ -2601,6 +3315,20 @@
    "en": "Starting Monday is fine.",
    "ko": "월요일부터면 돼.",
    "blank": "月曜日"
+  }
+ ],
+ "w|危険": [
+  {
+   "text": "そこ、危険だよ。",
+   "en": "That spot is dangerous.",
+   "ko": "거긴 위험해.",
+   "blank": "危険"
+  },
+  {
+   "text": "夜道は危険だよ。",
+   "en": "The streets are dangerous at night.",
+   "ko": "밤길은 위험해.",
+   "blank": "危険"
   }
  ],
  "w|違い": [
@@ -2673,6 +3401,20 @@
    "blank": "意味"
   }
  ],
+ "w|意識": [
+  {
+   "text": "もっと意識して。",
+   "en": "Pay more attention to it.",
+   "ko": "좀 더 의식해.",
+   "blank": "意識"
+  },
+  {
+   "text": "意識、飛んでた。",
+   "en": "I completely zoned out.",
+   "ko": "나 정신 놓고 있었어.",
+   "blank": "意識"
+  }
+ ],
  "w|議員": [
   {
    "text": "議員が会見してた。",
@@ -2685,6 +3427,20 @@
    "en": "That's our local representative.",
    "ko": "지역 의원이야.",
    "blank": "議員"
+  }
+ ],
+ "w|移動": [
+  {
+   "text": "もう移動しよう。",
+   "en": "Let's get moving.",
+   "ko": "이제 이동하자.",
+   "blank": "移動"
+  },
+  {
+   "text": "今、移動してる。",
+   "en": "I'm on my way.",
+   "ko": "지금 이동하고 있어.",
+   "blank": "移動"
   }
  ],
  "w|以上": [
@@ -2799,6 +3555,20 @@
    "blank": "人気"
   }
  ],
+ "w|認める": [
+  {
+   "text": "それは認めるよ。",
+   "en": "I'll give you that.",
+   "ko": "그건 인정해.",
+   "blank": "認める"
+  },
+  {
+   "text": "才能は認めるよ。",
+   "en": "You have talent, I'll admit that.",
+   "ko": "재능은 인정해.",
+   "blank": "認める"
+  }
+ ],
  "w|日": [
   {
    "text": "忙しい日だった。",
@@ -2827,6 +3597,20 @@
    "blank": "一般"
   }
  ],
+ "w|一方": [
+  {
+   "text": "味はいいよ。一方、値段は高い。",
+   "en": "It tastes good. The price, though, is high.",
+   "ko": "맛은 좋아. 한편 값은 비싸.",
+   "blank": "一方"
+  },
+  {
+   "text": "デザインはいい。一方、使いづらいよ。",
+   "en": "The design is nice. On the other hand, it's hard to use.",
+   "ko": "디자인은 좋은데, 쓰기는 불편해.",
+   "blank": "一方"
+  }
+ ],
  "w|一番": [
   {
    "text": "これが一番好き。",
@@ -2839,6 +3623,20 @@
    "en": "I got here first.",
    "ko": "제일 먼저 왔어.",
    "blank": "一番"
+  }
+ ],
+ "w|日本人": [
+  {
+   "text": "日本人の友達がいる。",
+   "en": "I have a Japanese friend.",
+   "ko": "일본인 친구가 있어.",
+   "blank": "日本人"
+  },
+  {
+   "text": "日本人のお客さんが多い。",
+   "en": "A lot of the customers are Japanese.",
+   "ko": "일본인 손님이 많아.",
+   "blank": "日本人"
   }
  ],
  "w|一部": [
@@ -3093,6 +3891,20 @@
    "blank": "前"
   }
  ],
+ "w|展開": [
+  {
+   "text": "展開が早すぎる。",
+   "en": "This is moving way too fast.",
+   "ko": "전개가 너무 빨라.",
+   "blank": "展開"
+  },
+  {
+   "text": "予想外の展開だね。",
+   "en": "I didn't see that coming.",
+   "ko": "예상 밖 전개네.",
+   "blank": "展開"
+  }
+ ],
  "w|全部": [
   {
    "text": "全部食べちゃった。",
@@ -3105,6 +3917,20 @@
    "en": "Is all of it okay?",
    "ko": "전부여도 돼?",
    "blank": "全部"
+  }
+ ],
+ "w|全体": [
+  {
+   "text": "全体を見て。",
+   "en": "Look at the whole thing.",
+   "ko": "전체를 봐.",
+   "blank": "全体"
+  },
+  {
+   "text": "全体で決めよう。",
+   "en": "Let's decide as a group.",
+   "ko": "전체로 정하자.",
+   "blank": "全体"
   }
  ],
  "w|全然": [
@@ -3289,6 +4115,20 @@
    "blank": "政府"
   }
  ],
+ "w|精神": [
+  {
+   "text": "精神、保って。",
+   "en": "Keep it together.",
+   "ko": "정신 붙들어.",
+   "blank": "精神"
+  },
+  {
+   "text": "あの人、精神が強い。",
+   "en": "That person is mentally tough.",
+   "ko": "그 사람 정신이 강해.",
+   "blank": "精神"
+  }
+ ],
  "w|政治": [
   {
    "text": "政治の話はやめよ。",
@@ -3301,6 +4141,20 @@
    "en": "I'm not interested in politics.",
    "ko": "정치에는 관심 없어.",
    "blank": "政治"
+  }
+ ],
+ "w|提供": [
+  {
+   "text": "無料で提供するって。",
+   "en": "They say they're offering it for free.",
+   "ko": "무료로 제공한대.",
+   "blank": "提供"
+  },
+  {
+   "text": "会場、提供してもらった。",
+   "en": "They let us use the venue.",
+   "ko": "장소를 제공받았어.",
+   "blank": "提供"
   }
  ],
  "w|朝": [
@@ -3329,6 +4183,20 @@
    "en": "The findings are in.",
    "ko": "조사 결과가 나왔어.",
    "blank": "調査"
+  }
+ ],
+ "w|組織": [
+  {
+   "text": "組織が大きすぎる。",
+   "en": "The organization is too big.",
+   "ko": "조직이 너무 커.",
+   "blank": "組織"
+  },
+  {
+   "text": "組織を立て直そう。",
+   "en": "Let's get the organization back on its feet.",
+   "ko": "조직 다시 세우자.",
+   "blank": "組織"
   }
  ],
  "w|足": [
@@ -3373,6 +4241,20 @@
    "blank": "終了"
   }
  ],
+ "w|終わり": [
+  {
+   "text": "もう終わり？",
+   "en": "Is it over already?",
+   "ko": "벌써 끝이야?",
+   "blank": "終わり"
+  },
+  {
+   "text": "そろそろ終わりだよ。",
+   "en": "It's about time we wrapped this up.",
+   "ko": "슬슬 끝이야.",
+   "blank": "終わり"
+  }
+ ],
  "w|終わる": [
   {
    "text": "まだ終わってないよ。",
@@ -3413,6 +4295,34 @@
    "en": "I haven't had breakfast yet.",
    "ko": "아침은 아직이야.",
    "blank": "朝ご飯"
+  }
+ ],
+ "w|調べる": [
+  {
+   "text": "ネットで調べる。",
+   "en": "I'll look it up online.",
+   "ko": "인터넷으로 찾아볼게.",
+   "blank": "調べる"
+  },
+  {
+   "text": "自分で調べるの？",
+   "en": "You're going to look it up yourself?",
+   "ko": "네가 직접 찾아보는 거야?",
+   "blank": "調べる"
+  }
+ ],
+ "w|酒": [
+  {
+   "text": "酒、強いね。",
+   "en": "You can really hold your drink.",
+   "ko": "술 잘 마시네.",
+   "blank": "酒"
+  },
+  {
+   "text": "今日は酒やめる。",
+   "en": "I'm not drinking today.",
+   "ko": "오늘은 술 안 마실게.",
+   "blank": "酒"
   }
  ],
  "w|主義": [
@@ -3457,6 +4367,20 @@
    "blank": "中"
   }
  ],
+ "w|中心": [
+  {
+   "text": "町の中心だよ。",
+   "en": "It's the middle of town.",
+   "ko": "동네 중심이야.",
+   "blank": "中心"
+  },
+  {
+   "text": "話の中心はそこじゃない。",
+   "en": "That's not the point of this.",
+   "ko": "이야기 핵심은 그게 아니야.",
+   "blank": "中心"
+  }
+ ],
  "w|重要": [
   {
    "text": "これ、重要だよ。",
@@ -3483,6 +4407,20 @@
    "en": "I bought it at a local shop.",
    "ko": "지역 가게에서 샀어.",
    "blank": "地域"
+  }
+ ],
+ "w|支援": [
+  {
+   "text": "支援が必要だよ。",
+   "en": "We need support.",
+   "ko": "지원이 필요해.",
+   "blank": "支援"
+  },
+  {
+   "text": "みんなで支援しよう。",
+   "en": "Let's all pitch in.",
+   "ko": "다 같이 지원하자.",
+   "blank": "支援"
   }
  ],
  "w|質問": [
@@ -3567,6 +4505,34 @@
    "en": "You still have that on.",
    "ko": "아직 그거 입고 있잖아.",
    "blank": "着た"
+  }
+ ],
+ "w|責任": [
+  {
+   "text": "責任、取ってよ。",
+   "en": "Own up to it.",
+   "ko": "책임져.",
+   "blank": "責任"
+  },
+  {
+   "text": "私の責任だよ。",
+   "en": "That's on me.",
+   "ko": "내 책임이야.",
+   "blank": "責任"
+  }
+ ],
+ "w|妻": [
+  {
+   "text": "妻に聞いてみる。",
+   "en": "I'll ask my wife.",
+   "ko": "아내한테 물어볼게.",
+   "blank": "妻"
+  },
+  {
+   "text": "妻は外出中だよ。",
+   "en": "My wife is out.",
+   "ko": "아내는 외출 중이야.",
+   "blank": "妻"
   }
  ],
  "w|初めて": [
@@ -3681,6 +4647,20 @@
    "blank": "最後"
   }
  ],
+ "w|最も": [
+  {
+   "text": "最も大事なのはそれ。",
+   "en": "That's the thing that matters most.",
+   "ko": "가장 중요한 건 그거야.",
+   "blank": "最も"
+  },
+  {
+   "text": "ここが最も危ない。",
+   "en": "This spot is the most dangerous.",
+   "ko": "여기가 가장 위험해.",
+   "blank": "最も"
+  }
+ ],
  "w|追加": [
   {
    "text": "追加で頼むね。",
@@ -3751,6 +4731,20 @@
    "blank": "他"
   }
  ],
+ "w|誕生": [
+  {
+   "text": "無事に誕生したよ。",
+   "en": "The baby was born safe and sound.",
+   "ko": "무사히 태어났어.",
+   "blank": "誕生"
+  },
+  {
+   "text": "誕生を祝いたい。",
+   "en": "I want to celebrate the birth.",
+   "ko": "탄생을 축하하고 싶어.",
+   "blank": "誕生"
+  }
+ ],
  "w|探す": [
   {
    "text": "鍵、探して。",
@@ -3777,6 +4771,20 @@
    "en": "Just as I thought.",
    "ko": "생각한 그대로네.",
    "blank": "通り"
+  }
+ ],
+ "w|投稿": [
+  {
+   "text": "投稿、見たよ。",
+   "en": "I saw your post.",
+   "ko": "올린 글 봤어.",
+   "blank": "投稿"
+  },
+  {
+   "text": "さっき投稿した。",
+   "en": "I just posted it.",
+   "ko": "방금 올렸어.",
+   "blank": "投稿"
   }
  ],
  "w|特別": [
@@ -3849,6 +4857,34 @@
    "blank": "怖かった"
   }
  ],
+ "w|表示": [
+  {
+   "text": "表示がおかしいよ。",
+   "en": "The display looks wrong.",
+   "ko": "표시가 이상해.",
+   "blank": "表示"
+  },
+  {
+   "text": "表示、出てこない。",
+   "en": "Nothing's showing up.",
+   "ko": "표시가 안 나와.",
+   "blank": "表示"
+  }
+ ],
+ "w|表現": [
+  {
+   "text": "表現がうまいね。",
+   "en": "That's nicely put.",
+   "ko": "표현이 능숙하네.",
+   "blank": "表現"
+  },
+  {
+   "text": "別の表現ある？",
+   "en": "Is there another way to say it?",
+   "ko": "다른 표현 있어?",
+   "blank": "表現"
+  }
+ ],
  "w|風": [
   {
    "text": "風が冷たいね。",
@@ -3889,6 +4925,20 @@
    "en": "I had a fight with her.",
    "ko": "여자친구랑 싸웠어.",
    "blank": "彼女"
+  }
+ ],
+ "w|被害": [
+  {
+   "text": "被害はなかったよ。",
+   "en": "There was no damage.",
+   "ko": "피해는 없었어.",
+   "blank": "被害"
+  },
+  {
+   "text": "被害が出てるって。",
+   "en": "They're saying there's damage.",
+   "ko": "피해가 났대.",
+   "blank": "被害"
   }
  ],
  "w|必要": [
@@ -3961,6 +5011,20 @@
    "blank": "限定"
   }
  ],
+ "w|限り": [
+  {
+   "text": "できる限り早く行くよ。",
+   "en": "I'll get there as soon as I can.",
+   "ko": "최대한 빨리 갈게.",
+   "blank": "限り"
+  },
+  {
+   "text": "見た限り問題ない。",
+   "en": "From what I saw, it's fine.",
+   "ko": "본 바로는 문제없어.",
+   "blank": "限り"
+  }
+ ],
  "w|海": [
   {
    "text": "海に行きたいな。",
@@ -3973,6 +5037,20 @@
    "en": "The sea is rough.",
    "ko": "바다가 거칠어.",
    "blank": "海"
+  }
+ ],
+ "w|解決": [
+  {
+   "text": "どう解決する？",
+   "en": "How do we sort this out?",
+   "ko": "어떻게 해결할까?",
+   "blank": "解決"
+  },
+  {
+   "text": "もう解決したよ。",
+   "en": "It's already settled.",
+   "ko": "이미 해결됐어.",
+   "blank": "解決"
   }
  ],
  "w|海外": [
@@ -4003,6 +5081,20 @@
    "blank": "行動"
   }
  ],
+ "w|行う": [
+  {
+   "text": "式はここで行うよ。",
+   "en": "The ceremony will be held here.",
+   "ko": "식은 여기서 열어.",
+   "blank": "行う"
+  },
+  {
+   "text": "点検はもう行った。",
+   "en": "We already did the inspection.",
+   "ko": "점검은 이미 했어.",
+   "blank": "行った"
+  }
+ ],
  "w|行く": [
   {
    "text": "一緒に行く？",
@@ -4015,6 +5107,20 @@
    "en": "I'm heading out.",
    "ko": "이제 갈게.",
    "blank": "行く"
+  }
+ ],
+ "w|幸せ": [
+  {
+   "text": "今が幸せ。",
+   "en": "I'm happy right now.",
+   "ko": "지금이 행복해.",
+   "blank": "幸せ"
+  },
+  {
+   "text": "幸せそうだね。",
+   "en": "You look happy.",
+   "ko": "행복해 보여.",
+   "blank": "幸せ"
   }
  ],
  "w|向ける": [
@@ -4073,6 +5179,20 @@
    "blank": "嫌"
   }
  ],
+ "w|嫌い": [
+  {
+   "text": "それ、嫌い。",
+   "en": "I hate that.",
+   "ko": "그거 싫어.",
+   "blank": "嫌い"
+  },
+  {
+   "text": "嫌いじゃないよ。",
+   "en": "I don't mind it.",
+   "ko": "싫지 않아.",
+   "blank": "嫌い"
+  }
+ ],
  "w|協力": [
   {
    "text": "協力してほしい。",
@@ -4115,6 +5235,20 @@
    "blank": "好き"
   }
  ],
+ "w|呼ぶ": [
+  {
+   "text": "タクシー呼ぶね。",
+   "en": "I'll call a taxi.",
+   "ko": "택시 부를게.",
+   "blank": "呼ぶ"
+  },
+  {
+   "text": "母を呼ぶね。",
+   "en": "I'll call Mom over.",
+   "ko": "엄마 부를게.",
+   "blank": "呼ぶ"
+  }
+ ],
  "w|花": [
   {
    "text": "花、きれいだね。",
@@ -4155,6 +5289,20 @@
    "en": "Let's make it Tuesday.",
    "ko": "화요일로 하자.",
    "blank": "火曜日"
+  }
+ ],
+ "w|話題": [
+  {
+   "text": "その話題、やめよ。",
+   "en": "Let's drop that subject.",
+   "ko": "그 화제는 그만하자.",
+   "blank": "話題"
+  },
+  {
+   "text": "話題になってるよ。",
+   "en": "Everybody's talking about it.",
+   "ko": "화제가 되고 있어.",
+   "blank": "話題"
   }
  ],
  "w|確認": [
@@ -4241,6 +5389,20 @@
    "blank": "後"
   }
  ],
+ "w|興味": [
+  {
+   "text": "興味ある？",
+   "en": "You interested?",
+   "ko": "관심 있어?",
+   "blank": "興味"
+  },
+  {
+   "text": "興味ないんだ。",
+   "en": "I'm not interested.",
+   "ko": "관심 없어.",
+   "blank": "興味"
+  }
+ ],
  "w|希望": [
   {
    "text": "希望はあるよ。",
@@ -4253,6 +5415,20 @@
    "en": "Anything you want?",
    "ko": "바라는 거 있어?",
    "blank": "希望"
+  }
+ ],
+ "w|嬉しい": [
+  {
+   "text": "めっちゃ嬉しい。",
+   "en": "I'm so happy.",
+   "ko": "엄청 기뻐.",
+   "blank": "嬉しい"
+  },
+  {
+   "text": "それが一番嬉しい。",
+   "en": "That makes me happiest.",
+   "ko": "그게 제일 기뻐.",
+   "blank": "嬉しい"
   }
  ],
  "w|与える": [
@@ -4281,6 +5457,34 @@
    "en": "I'm done at work.",
    "ko": "회사 끝났어.",
    "blank": "会社"
+  }
+ ],
+ "w|会う": [
+  {
+   "text": "明日会える？",
+   "en": "Can we meet tomorrow?",
+   "ko": "내일 만날 수 있어?",
+   "blank": "会える"
+  },
+  {
+   "text": "また会うよ。",
+   "en": "I'll see you again.",
+   "ko": "또 만날게.",
+   "blank": "会う"
+  }
+ ],
+ "w|価値": [
+  {
+   "text": "やる価値ある？",
+   "en": "Is it worth doing?",
+   "ko": "할 가치 있어?",
+   "blank": "価値"
+  },
+  {
+   "text": "その価値、わかる？",
+   "en": "Do you see what this is worth?",
+   "ko": "그 가치 알겠어?",
+   "blank": "価値"
   }
  ],
  "w|内容": [
@@ -4339,6 +5543,20 @@
    "blank": "参加"
   }
  ],
+ "w|営業": [
+  {
+   "text": "今日は営業してる？",
+   "en": "Are they open today?",
+   "ko": "오늘 영업해?",
+   "blank": "営業"
+  },
+  {
+   "text": "営業、もう終わり。",
+   "en": "They're done for the day.",
+   "ko": "영업 끝났어.",
+   "blank": "営業"
+  }
+ ],
  "w|嘘": [
   {
    "text": "嘘でしょ。",
@@ -4393,6 +5611,20 @@
    "en": "Nice voice.",
    "ko": "목소리 좋다.",
    "blank": "声"
+  }
+ ],
+ "w|変": [
+  {
+   "text": "なんか変だよ。",
+   "en": "Something's off.",
+   "ko": "뭔가 이상해.",
+   "blank": "変"
+  },
+  {
+   "text": "それ、変だね。",
+   "en": "That's weird.",
+   "ko": "그거 이상하네.",
+   "blank": "変"
   }
  ],
  "w|変更": [
@@ -4451,6 +5683,20 @@
    "blank": "学校"
   }
  ],
+ "w|学生": [
+  {
+   "text": "まだ学生だよ。",
+   "en": "I'm still a student.",
+   "ko": "아직 학생이야.",
+   "blank": "学生"
+  },
+  {
+   "text": "学生割引ある？",
+   "en": "Is there a student discount?",
+   "ko": "학생 할인 있어?",
+   "blank": "学生"
+  }
+ ],
  "w|実際": [
   {
    "text": "実際どうなの？",
@@ -4477,6 +5723,20 @@
    "en": "You haven't slept yet?",
    "ko": "아직 안 잤어?",
    "blank": "寝てない"
+  }
+ ],
+ "w|対象": [
+  {
+   "text": "学生が対象だよ。",
+   "en": "It's for students.",
+   "ko": "학생이 대상이야.",
+   "blank": "対象"
+  },
+  {
+   "text": "私が対象なの？",
+   "en": "Does this include me?",
+   "ko": "내가 대상이야?",
+   "blank": "対象"
   }
  ],
  "w|対応": [
@@ -4533,6 +5793,20 @@
    "en": "You've got a strong will.",
    "ko": "기가 세네.",
    "blank": "強い"
+  }
+ ],
+ "w|当時": [
+  {
+   "text": "当時は若かったね。",
+   "en": "We were young back then.",
+   "ko": "그때는 젊었지.",
+   "blank": "当時"
+  },
+  {
+   "text": "当時の写真、ある？",
+   "en": "Do you have a photo from back then?",
+   "ko": "그때 사진 있어?",
+   "blank": "当時"
   }
  ],
  "w|悪い": [
@@ -4689,6 +5963,20 @@
    "blank": "歴史"
   }
  ],
+ "w|残念": [
+  {
+   "text": "残念だったね。",
+   "en": "That's a shame.",
+   "ko": "아쉬웠네.",
+   "blank": "残念"
+  },
+  {
+   "text": "残念だけど行けない。",
+   "en": "I wish I could, but I can't go.",
+   "ko": "아쉽지만 못 가.",
+   "blank": "残念"
+  }
+ ],
  "w|毎日": [
   {
    "text": "毎日来てるよ。",
@@ -4715,6 +6003,20 @@
    "en": "Something about it bugs me.",
    "ko": "왠지 신경 쓰여.",
    "blank": "気"
+  }
+ ],
+ "w|気分": [
+  {
+   "text": "気分が乗らない。",
+   "en": "I'm just not feeling it.",
+   "ko": "기분이 안 나.",
+   "blank": "気分"
+  },
+  {
+   "text": "今日は気分いい。",
+   "en": "I'm in a good mood today.",
+   "ko": "오늘 기분 좋아.",
+   "blank": "気分"
   }
  ],
  "w|気持ち": [
@@ -4787,6 +6089,20 @@
    "blank": "発見"
   }
  ],
+ "w|発生": [
+  {
+   "text": "事故が発生したって。",
+   "en": "They say there was an accident.",
+   "ko": "사고가 났대.",
+   "blank": "発生"
+  },
+  {
+   "text": "またエラーが発生してる。",
+   "en": "The error is back.",
+   "ko": "또 오류가 나고 있어.",
+   "blank": "発生"
+  }
+ ],
  "w|発表": [
   {
    "text": "発表、見た？",
@@ -4843,6 +6159,34 @@
    "blank": "経済"
   }
  ],
+ "w|経験": [
+  {
+   "text": "いい経験だった。",
+   "en": "That was a good experience.",
+   "ko": "좋은 경험이었어.",
+   "blank": "経験"
+  },
+  {
+   "text": "そんな経験ないよ。",
+   "en": "Nothing like that has happened to me.",
+   "ko": "그런 경험은 없어.",
+   "blank": "経験"
+  }
+ ],
+ "w|絵": [
+  {
+   "text": "この絵、好き。",
+   "en": "I like this picture.",
+   "ko": "이 그림 좋아.",
+   "blank": "絵"
+  },
+  {
+   "text": "絵、上手だね。",
+   "en": "You're really good at drawing.",
+   "ko": "그림 잘 그리네.",
+   "blank": "絵"
+  }
+ ],
  "w|続ける": [
   {
    "text": "まだ続ける？",
@@ -4857,6 +6201,20 @@
    "blank": "続けて"
   }
  ],
+ "w|薬": [
+  {
+   "text": "薬、飲んだ？",
+   "en": "Did you take your medicine?",
+   "ko": "약 먹었어?",
+   "blank": "薬"
+  },
+  {
+   "text": "この薬、効くよ。",
+   "en": "This medicine works.",
+   "ko": "이 약 잘 들어.",
+   "blank": "薬"
+  }
+ ],
  "w|覚える": [
   {
    "text": "名前、覚えてね。",
@@ -4869,6 +6227,20 @@
    "en": "Have you memorized it?",
    "ko": "이제 외웠어?",
    "blank": "覚えた"
+  }
+ ],
+ "w|観る": [
+  {
+   "text": "映画、観た？",
+   "en": "Did you see the movie?",
+   "ko": "영화 봤어?",
+   "blank": "観た"
+  },
+  {
+   "text": "一緒に観よう。",
+   "en": "Let's watch it together.",
+   "ko": "같이 보자.",
+   "blank": "観よう"
   }
  ],
  "w|説明": [
@@ -4955,6 +6327,20 @@
    "blank": "駅"
   }
  ],
+ "w|黒": [
+  {
+   "text": "黒が似合うね。",
+   "en": "Black suits you.",
+   "ko": "검정이 잘 어울려.",
+   "blank": "黒"
+  },
+  {
+   "text": "黒にしよう。",
+   "en": "Let's go with black.",
+   "ko": "검정으로 하자.",
+   "blank": "黒"
+  }
+ ],
  "w|ああ": [
   {
    "text": "ああ、疲れた。",
@@ -4967,6 +6353,20 @@
    "en": "Oh, so that's how it is.",
    "ko": "아, 그렇구나.",
    "blank": "ああ"
+  }
+ ],
+ "w|あげる": [
+  {
+   "text": "これ、あげるよ。",
+   "en": "Here, you can have this.",
+   "ko": "이거 줄게.",
+   "blank": "あげる"
+  },
+  {
+   "text": "妹にあげたよ。",
+   "en": "I gave it to my little sister.",
+   "ko": "여동생한테 줬어.",
+   "blank": "あげた"
   }
  ],
  "w|あっ": [
@@ -5277,6 +6677,20 @@
    "blank": "お金"
   }
  ],
+ "w|お茶": [
+  {
+   "text": "お茶、入れるね。",
+   "en": "I'll make some tea.",
+   "ko": "차 끓일게.",
+   "blank": "お茶"
+  },
+  {
+   "text": "お茶でもどう？",
+   "en": "How about some tea?",
+   "ko": "차라도 마실래?",
+   "blank": "お茶"
+  }
+ ],
  "w|お願い": [
   {
    "text": "お願いがあるんだけど。",
@@ -5331,6 +6745,20 @@
    "en": "Hey, listen.",
    "ko": "야, 들어 봐.",
    "blank": "おい"
+  }
+ ],
+ "w|おお": [
+  {
+   "text": "おお、来た来た。",
+   "en": "Oh, there they are.",
+   "ko": "오, 왔다 왔다.",
+   "blank": "おお"
+  },
+  {
+   "text": "おお、マジか。",
+   "en": "Wait, seriously?",
+   "ko": "오, 진짜야?",
+   "blank": "おお"
   }
  ],
  "w|おる": [
@@ -5401,6 +6829,20 @@
    "en": "You've gotten cuter.",
    "ko": "전보다 귀여워졌어.",
    "blank": "かわいく"
+  }
+ ],
+ "w|キャラ": [
+  {
+   "text": "キャラが立ってるね。",
+   "en": "That character really comes through.",
+   "ko": "캐릭터가 살아 있네.",
+   "blank": "キャラ"
+  },
+  {
+   "text": "好きなキャラ、誰？",
+   "en": "Who's your favorite character?",
+   "ko": "좋아하는 캐릭터 누구야?",
+   "blank": "キャラ"
   }
  ],
  "w|くださる": [
@@ -5585,6 +7027,20 @@
    "blank": "この"
   }
  ],
+ "w|ごめん": [
+  {
+   "text": "ごめん、遅れちゃった。",
+   "en": "Sorry, I'm late.",
+   "ko": "미안, 늦었어.",
+   "blank": "ごめん"
+  },
+  {
+   "text": "ほんとごめん。",
+   "en": "I'm really sorry.",
+   "ko": "정말 미안해.",
+   "blank": "ごめん"
+  }
+ ],
  "w|これ": [
   {
    "text": "これ、食べる？",
@@ -5669,6 +7125,20 @@
    "blank": "しかし"
   }
  ],
+ "w|しかも": [
+  {
+   "text": "安くて、しかもおいしい。",
+   "en": "It's cheap, and it tastes good too.",
+   "ko": "싼데다가 맛있어.",
+   "blank": "しかも"
+  },
+  {
+   "text": "しかも無料なんだ。",
+   "en": "And it's free, too.",
+   "ko": "게다가 무료래.",
+   "blank": "しかも"
+  }
+ ],
  "w|システム": [
   {
    "text": "システムが落ちた。",
@@ -5681,6 +7151,20 @@
    "en": "The system is outdated.",
    "ko": "시스템이 낡았어.",
    "blank": "システム"
+  }
+ ],
+ "w|しっかり": [
+  {
+   "text": "しっかり食べて。",
+   "en": "Eat a proper meal.",
+   "ko": "제대로 먹어.",
+   "blank": "しっかり"
+  },
+  {
+   "text": "鍵、しっかり閉めて。",
+   "en": "Lock up properly.",
+   "ko": "문 꼭 잠가.",
+   "blank": "しっかり"
   }
  ],
  "w|しまう": [
@@ -5781,6 +7265,20 @@
    "blank": "ずっと"
   }
  ],
+ "w|スポーツ": [
+  {
+   "text": "スポーツ、やってる？",
+   "en": "Do you play any sports?",
+   "ko": "스포츠 하고 있어?",
+   "blank": "スポーツ"
+  },
+  {
+   "text": "週末はスポーツだよ。",
+   "en": "Weekends are for sports.",
+   "ko": "주말에는 스포츠야.",
+   "blank": "スポーツ"
+  }
+ ],
  "w|する": [
   {
    "text": "今から宿題する。",
@@ -5879,6 +7377,20 @@
    "blank": "その後"
   }
  ],
+ "w|そのまま": [
+  {
+   "text": "そのまま置いといて。",
+   "en": "Just leave it like that.",
+   "ko": "그대로 둬.",
+   "blank": "そのまま"
+  },
+  {
+   "text": "そのまま来ていいよ。",
+   "en": "You can come as you are.",
+   "ko": "그대로 와도 돼.",
+   "blank": "そのまま"
+  }
+ ],
  "w|それ": [
   {
    "text": "それ、ちょうだい。",
@@ -5893,6 +7405,20 @@
    "blank": "それ"
   }
  ],
+ "w|それぞれ": [
+  {
+   "text": "それぞれ好きにしよう。",
+   "en": "Let's each do what we want.",
+   "ko": "각자 하고 싶은 대로 하자.",
+   "blank": "それぞれ"
+  },
+  {
+   "text": "それぞれ違うよ。",
+   "en": "Each one is different.",
+   "ko": "각각 달라.",
+   "blank": "それぞれ"
+  }
+ ],
  "w|そんな": [
   {
    "text": "そんなの、いらない。",
@@ -5905,6 +7431,34 @@
    "en": "Don't make that face.",
    "ko": "그런 표정 짓지 마.",
    "blank": "そんな"
+  }
+ ],
+ "w|タイトル": [
+  {
+   "text": "タイトル、決めた？",
+   "en": "Did you settle on a title?",
+   "ko": "제목 정했어?",
+   "blank": "タイトル"
+  },
+  {
+   "text": "タイトルが長いね。",
+   "en": "That title is long.",
+   "ko": "제목이 길어.",
+   "blank": "タイトル"
+  }
+ ],
+ "w|タイプ": [
+  {
+   "text": "私のタイプじゃない。",
+   "en": "Not my type.",
+   "ko": "내 타입 아니야.",
+   "blank": "タイプ"
+  },
+  {
+   "text": "そういうタイプだね。",
+   "en": "You're that kind of person.",
+   "ko": "그런 타입이구나.",
+   "blank": "タイプ"
   }
  ],
  "w|たくさん": [
@@ -5977,6 +7531,20 @@
    "blank": "チーム"
   }
  ],
+ "w|チェック": [
+  {
+   "text": "予定、チェックした？",
+   "en": "Did you check the schedule?",
+   "ko": "일정 확인했어?",
+   "blank": "チェック"
+  },
+  {
+   "text": "ちょっとチェックして。",
+   "en": "Take a quick look.",
+   "ko": "잠깐 확인해 줘.",
+   "blank": "チェック"
+  }
+ ],
  "w|ちゃんと": [
   {
    "text": "ちゃんと聞いてよ。",
@@ -6045,6 +7613,20 @@
    "en": "So that's what this is.",
    "ko": "결국 그런 거야.",
    "blank": "つまり"
+  }
+ ],
+ "w|つもり": [
+  {
+   "text": "行くつもりだよ。",
+   "en": "I plan on going.",
+   "ko": "갈 생각이야.",
+   "blank": "つもり"
+  },
+  {
+   "text": "そんなつもりじゃなかった。",
+   "en": "I didn't mean it that way.",
+   "ko": "그럴 생각은 없었어.",
+   "blank": "つもり"
   }
  ],
  "w|データ": [
@@ -6173,6 +7755,20 @@
    "blank": "どの"
   }
  ],
+ "w|とりあえず": [
+  {
+   "text": "とりあえず座ろ。",
+   "en": "Let's just sit down for now.",
+   "ko": "일단 앉자.",
+   "blank": "とりあえず"
+  },
+  {
+   "text": "とりあえず返事した。",
+   "en": "I replied for now.",
+   "ko": "일단 답장했어.",
+   "blank": "とりあえず"
+  }
+ ],
  "w|どれ": [
   {
    "text": "どれにする？",
@@ -6213,6 +7809,34 @@
    "en": "We're out of bread.",
    "ko": "빵 다 떨어졌어.",
    "blank": "ない"
+  }
+ ],
+ "w|なお": [
+  {
+   "text": "なお、明日は休みです。",
+   "en": "Also, tomorrow is a day off.",
+   "ko": "참고로 내일은 쉽니다.",
+   "blank": "なお"
+  },
+  {
+   "text": "なお、質問は後でどうぞ。",
+   "en": "And please save questions for later.",
+   "ko": "질문은 나중에 해 주세요.",
+   "blank": "なお"
+  }
+ ],
+ "w|なかなか": [
+  {
+   "text": "なかなか上手だね。",
+   "en": "You're pretty good at this.",
+   "ko": "꽤 잘하네.",
+   "blank": "なかなか"
+  },
+  {
+   "text": "なかなか来ないね。",
+   "en": "They're taking forever to get here.",
+   "ko": "영 안 오네.",
+   "blank": "なかなか"
   }
  ],
  "w|なぜ": [
@@ -6341,6 +7965,20 @@
    "blank": "はず"
   }
  ],
+ "w|バス": [
+  {
+   "text": "バス、遅れてる。",
+   "en": "The bus is running late.",
+   "ko": "버스가 늦고 있어.",
+   "blank": "バス"
+  },
+  {
+   "text": "バスで行こう。",
+   "en": "Let's take the bus.",
+   "ko": "버스로 가자.",
+   "blank": "バス"
+  }
+ ],
  "w|ファン": [
   {
    "text": "ファンが増えたね。",
@@ -6369,6 +8007,20 @@
    "blank": "プロ"
   }
  ],
+ "w|ポイント": [
+  {
+   "text": "ここがポイントだよ。",
+   "en": "This is the part that matters.",
+   "ko": "여기가 핵심이야.",
+   "blank": "ポイント"
+  },
+  {
+   "text": "ポイント貯まってる？",
+   "en": "Got any points saved up?",
+   "ko": "포인트 쌓여 있어?",
+   "blank": "ポイント"
+  }
+ ],
  "w|ほとんど": [
   {
    "text": "ほとんど終わったよ。",
@@ -6381,6 +8033,20 @@
    "en": "Hardly anyone came.",
    "ko": "거의 안 왔어.",
    "blank": "ほとんど"
+  }
+ ],
+ "w|ほぼ": [
+  {
+   "text": "ほぼ終わったよ。",
+   "en": "It's pretty much done.",
+   "ko": "거의 끝났어.",
+   "blank": "ほぼ"
+  },
+  {
+   "text": "ほぼ毎日行ってる。",
+   "en": "I go almost every day.",
+   "ko": "거의 매일 가고 있어.",
+   "blank": "ほぼ"
   }
  ],
  "w|まあ": [
@@ -6521,6 +8187,20 @@
    "en": "I already got there.",
    "ko": "이미 도착했어.",
    "blank": "もう"
+  }
+ ],
+ "w|もし": [
+  {
+   "text": "もし雨なら、やめとく？",
+   "en": "If it rains, want to call it off?",
+   "ko": "비 오면 그냥 말까?",
+   "blank": "もし"
+  },
+  {
+   "text": "もし遅れたら、先に食べて。",
+   "en": "If I'm late, start eating without me.",
+   "ko": "늦으면 먼저 먹어.",
+   "blank": "もし"
   }
  ],
  "w|もちろん": [

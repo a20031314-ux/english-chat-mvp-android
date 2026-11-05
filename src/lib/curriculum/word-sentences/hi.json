@@ -13,6 +13,20 @@
    "blank": "अगर"
   }
  ],
+ "w|अगस्त": [
+  {
+   "text": "अगस्त की रातें भी गर्म रहती हैं।",
+   "en": "The nights stay hot in August too.",
+   "ko": "팔월 밤도 계속 더워.",
+   "blank": "अगस्त"
+  },
+  {
+   "text": "मेहमान अगस्त के अंत में आएँगे।",
+   "en": "The guests will come at the end of August.",
+   "ko": "손님은 팔월 말에 올 거야.",
+   "blank": "अगस्त"
+  }
+ ],
  "w|अंग्रेज़ी": [
   {
    "text": "वह बच्चों को अंग्रेज़ी पढ़ाती है।",
@@ -41,6 +55,20 @@
    "blank": "अच्छी"
   }
  ],
+ "w|अंदर": [
+  {
+   "text": "जूते बाहर उतारो, फिर अंदर आओ।",
+   "en": "Take your shoes off outside, then come in.",
+   "ko": "신발은 밖에서 벗고 들어와.",
+   "blank": "अंदर"
+  },
+  {
+   "text": "बिल्ली रसोई के अंदर घुस गई।",
+   "en": "The cat got into the kitchen.",
+   "ko": "고양이가 부엌 안으로 들어갔어.",
+   "blank": "अंदर"
+  }
+ ],
  "w|अधिक": [
   {
    "text": "इस व्यंजन में अधिक मिर्च है।",
@@ -53,6 +81,48 @@
    "en": "Don't sit in the sun for too long.",
    "ko": "햇볕에 너무 오래 앉아 있지 마.",
    "blank": "अधिक"
+  }
+ ],
+ "w|अधिकार": [
+  {
+   "text": "इस घर पर माँ का भी अधिकार है।",
+   "en": "Mother has a right in this house too.",
+   "ko": "이 집에는 엄마의 권리도 있어.",
+   "blank": "अधिकार"
+  },
+  {
+   "text": "अधिकार जताने की यहाँ ज़रूरत नहीं।",
+   "en": "Nobody needs to pull rank here.",
+   "ko": "여기서 권한을 내세울 필요는 없어.",
+   "blank": "अधिकार"
+  }
+ ],
+ "w|अधिकारी": [
+  {
+   "text": "अधिकारी ने अर्ज़ी ध्यान से सुनी।",
+   "en": "The officer heard the petition out carefully.",
+   "ko": "담당자가 청원을 귀담아들었어.",
+   "blank": "अधिकारी"
+  },
+  {
+   "text": "नए अधिकारी आज दफ़्तर आए हैं।",
+   "en": "The new officer has come to the office today.",
+   "ko": "새 담당자가 오늘 사무실에 왔어.",
+   "blank": "अधिकारी"
+  }
+ ],
+ "w|अध्यक्ष": [
+  {
+   "text": "बैठक के अध्यक्ष देर से आए।",
+   "en": "The chair of the meeting arrived late.",
+   "ko": "회의 의장이 늦게 왔어.",
+   "blank": "अध्यक्ष"
+  },
+  {
+   "text": "अध्यक्ष ने सबकी बात सुनी।",
+   "en": "The chair heard everyone out.",
+   "ko": "의장이 모두 말을 들어 줬어.",
+   "blank": "अध्यक्ष"
   }
  ],
  "w|अन्य": [
@@ -223,6 +293,20 @@
    "blank": "आदमी"
   }
  ],
+ "w|आधार": [
+  {
+   "text": "इस बात का कोई आधार नहीं है।",
+   "en": "There's no basis for this.",
+   "ko": "이 말에는 근거가 없어.",
+   "blank": "आधार"
+  },
+  {
+   "text": "उसका दावा बिना आधार के है।",
+   "en": "His claim has no basis.",
+   "ko": "그의 주장은 근거가 하나도 없어.",
+   "blank": "आधार"
+  }
+ ],
  "w|आना": [
   {
    "text": "जल्दी आ जाओ, खाना तैयार है।",
@@ -279,6 +363,20 @@
    "blank": "आम"
   }
  ],
+ "w|आरोप": [
+  {
+   "text": "उस पर चोरी का आरोप लगा है।",
+   "en": "A theft charge has been laid on him.",
+   "ko": "그 사람한테 도둑질 혐의가 씌워졌어.",
+   "blank": "आरोप"
+  },
+  {
+   "text": "मुझ पर आरोप मत लगाओ।",
+   "en": "Don't lay the blame on me.",
+   "ko": "나한테 혐의를 씌우지 마.",
+   "blank": "आरोप"
+  }
+ ],
  "w|इतना": [
   {
    "text": "इतना गरम सूप अभी मत पियो।",
@@ -291,6 +389,20 @@
    "en": "Don't lift this much luggage alone.",
    "ko": "짐이 이렇게 많은데 혼자 들지 마.",
    "blank": "इतना"
+  }
+ ],
+ "w|इतिहास": [
+  {
+   "text": "इतिहास की किताब मेज़ पर है।",
+   "en": "The history book is on the table.",
+   "ko": "역사책은 탁자 위에 있어.",
+   "blank": "इतिहास"
+  },
+  {
+   "text": "इस शहर का इतिहास पुराना है।",
+   "en": "This city's history goes a long way back.",
+   "ko": "이 도시의 역사는 오래됐어.",
+   "blank": "इतिहास"
   }
  ],
  "w|इनका": [
@@ -391,6 +503,20 @@
    "blank": "उनकी"
   }
  ],
+ "w|उम्र": [
+  {
+   "text": "तुम्हारी उम्र क्या है?",
+   "en": "How old are you?",
+   "ko": "너 몇 살이야?",
+   "blank": "उम्र"
+  },
+  {
+   "text": "इस उम्र में भारी सामान मत उठाओ।",
+   "en": "Don't lift heavy loads at this age.",
+   "ko": "이 나이에는 무거운 짐을 들지 마.",
+   "blank": "उम्र"
+  }
+ ],
  "w|उसका": [
   {
    "text": "उसका घर नदी के पास है।",
@@ -431,6 +557,20 @@
    "en": "Wait just a moment.",
    "ko": "잠깐만 기다려.",
    "blank": "एक"
+  }
+ ],
+ "w|एक जैसा": [
+  {
+   "text": "दोनों भाई एक जैसे दिखते हैं।",
+   "en": "The two brothers look the same.",
+   "ko": "두 형제는 똑같이 생겼어.",
+   "blank": "एक जैसे"
+  },
+  {
+   "text": "दीवार और दरवाज़े का रंग एक जैसा है।",
+   "en": "The wall and the door are the same color.",
+   "ko": "벽이랑 문 색깔이 똑같아.",
+   "blank": "एक जैसा"
   }
  ],
  "w|एक साथ": [
@@ -615,6 +755,20 @@
    "blank": "किया"
   }
  ],
+ "w|करवाना": [
+  {
+   "text": "घर की सफ़ाई करवा दो, मेहमान आ रहे हैं।",
+   "en": "Get the house cleaned, the guests are on their way.",
+   "ko": "집 청소를 시켜, 손님이 오고 있어.",
+   "blank": "करवा"
+  },
+  {
+   "text": "पंखा ठीक करवाना है, हवा नहीं दे रहा।",
+   "en": "The fan needs to be got fixed, it isn't blowing.",
+   "ko": "선풍기는 수리를 맡겨야 해, 바람이 안 나와.",
+   "blank": "करवाना"
+  }
+ ],
  "w|कराना": [
   {
    "text": "पिता ने बेटे से सफ़ाई कराई।",
@@ -727,6 +881,20 @@
    "blank": "के"
   }
  ],
+ "w|कानून": [
+  {
+   "text": "कानून सबके लिए बराबर है।",
+   "en": "The law is the same for everyone.",
+   "ko": "법은 모두에게 같아.",
+   "blank": "कानून"
+  },
+  {
+   "text": "नया कानून अगले महीने आएगा।",
+   "en": "The new law comes next month.",
+   "ko": "새 법은 다음 달에 나와.",
+   "blank": "कानून"
+  }
+ ],
  "w|काफ़ी": [
   {
    "text": "आज बाहर काफ़ी गर्मी है।",
@@ -753,6 +921,20 @@
    "en": "This job will run until tomorrow.",
    "ko": "이 일은 내일까지 갈 거야.",
    "blank": "काम"
+  }
+ ],
+ "w|काम करना": [
+  {
+   "text": "रसोई में काम करना मुझे भाता है।",
+   "en": "I like working in the kitchen.",
+   "ko": "나는 부엌에서 일하는 게 좋아.",
+   "blank": "काम करना"
+  },
+  {
+   "text": "दीदी दफ़्तर में काम करती है।",
+   "en": "Elder sister works at the office.",
+   "ko": "언니는 사무실에서 일해.",
+   "blank": "काम करती"
   }
  ],
  "w|कारण": [
@@ -783,6 +965,34 @@
    "blank": "कार्य"
   }
  ],
+ "w|कार्यक्रम": [
+  {
+   "text": "कार्यक्रम शाम को शुरू होगा।",
+   "en": "The program will start in the evening.",
+   "ko": "행사는 저녁에 시작해.",
+   "blank": "कार्यक्रम"
+  },
+  {
+   "text": "स्कूल का कार्यक्रम रद्द हो गया।",
+   "en": "The school program was cancelled.",
+   "ko": "학교 행사는 취소됐어.",
+   "blank": "कार्यक्रम"
+  }
+ ],
+ "w|काला": [
+  {
+   "text": "काला कुत्ता फाटक पर बैठा है।",
+   "en": "The black dog is sitting at the gate.",
+   "ko": "검은 개가 대문 앞에 앉아 있어.",
+   "blank": "काला"
+  },
+  {
+   "text": "काली बिल्ली छत पर बैठी है।",
+   "en": "The black cat is sitting on the roof.",
+   "ko": "검은 고양이가 지붕 위에 앉아 있어.",
+   "blank": "काली"
+  }
+ ],
  "w|कि": [
   {
    "text": "उसने कहा कि कल छुट्टी है।",
@@ -795,6 +1005,20 @@
    "en": "I'm sure you will come.",
    "ko": "네가 올 거라고 확신해.",
    "blank": "कि"
+  }
+ ],
+ "w|कितना": [
+  {
+   "text": "यह कितना का है?",
+   "en": "How much is this?",
+   "ko": "이거 얼마야?",
+   "blank": "कितना"
+  },
+  {
+   "text": "तुम कितनी दूर से आए हो?",
+   "en": "How far have you come from?",
+   "ko": "너는 얼마나 먼 데서 왔어?",
+   "blank": "कितनी"
   }
  ],
  "w|किस": [
@@ -895,6 +1119,20 @@
    "blank": "के साथ"
   }
  ],
+ "w|केंद्र": [
+  {
+   "text": "शहर का केंद्र भीड़ से भरा है।",
+   "en": "The city center is packed with people.",
+   "ko": "시내는 사람으로 붐벼.",
+   "blank": "केंद्र"
+  },
+  {
+   "text": "स्वास्थ्य केंद्र सुबह खुलता है।",
+   "en": "The health center opens in the morning.",
+   "ko": "보건소는 아침에 문을 열어.",
+   "blank": "केंद्र"
+  }
+ ],
  "w|केवल": [
   {
    "text": "केवल बच्चे छत पर खेलें।",
@@ -979,6 +1217,34 @@
    "blank": "कोई भी"
   }
  ],
+ "w|कोर्ट": [
+  {
+   "text": "कल सुबह कोर्ट जाना है।",
+   "en": "I have to go to court tomorrow morning.",
+   "ko": "내일 아침에 법원에 가야 해.",
+   "blank": "कोर्ट"
+  },
+  {
+   "text": "वकील कोर्ट के बाहर इंतज़ार कर रहा है।",
+   "en": "The lawyer is waiting outside the court.",
+   "ko": "변호사가 법원 밖에서 기다리고 있어.",
+   "blank": "कोर्ट"
+  }
+ ],
+ "w|कोशिश": [
+  {
+   "text": "एक बार और कोशिश करो।",
+   "en": "Try one more time.",
+   "ko": "한 번만 더 해 봐.",
+   "blank": "कोशिश"
+  },
+  {
+   "text": "मैंने पूरी कोशिश की।",
+   "en": "I really tried.",
+   "ko": "나는 정말 애썼어.",
+   "blank": "कोशिश"
+  }
+ ],
  "w|कौन": [
   {
    "text": "दरवाज़े पर कौन खड़ा है?",
@@ -1049,6 +1315,20 @@
    "blank": "क्षेत्र"
   }
  ],
+ "w|ख़बर": [
+  {
+   "text": "ख़बर सुनकर माँ चुप हो गई।",
+   "en": "Mother went quiet when she heard the news.",
+   "ko": "소식을 듣고 엄마는 입을 다물었어.",
+   "blank": "ख़बर"
+  },
+  {
+   "text": "यह ख़बर सच है।",
+   "en": "This news is true.",
+   "ko": "이 소식은 사실이야.",
+   "blank": "ख़बर"
+  }
+ ],
  "w|खाना": [
   {
    "text": "रोटी गरम है, खा लो।",
@@ -1105,6 +1385,20 @@
    "blank": "खेले"
   }
  ],
+ "w|ग़लत": [
+  {
+   "text": "यह हिसाब ग़लत है।",
+   "en": "This sum is wrong.",
+   "ko": "이 계산은 틀렸어.",
+   "blank": "ग़लत"
+  },
+  {
+   "text": "ग़लत रास्ते पर मत जाओ।",
+   "en": "Don't go down the wrong road.",
+   "ko": "잘못된 길로 가지 마.",
+   "blank": "ग़लत"
+  }
+ ],
  "w|गाँव": [
   {
    "text": "गाँव में आज मेला लगा है।",
@@ -1117,6 +1411,34 @@
    "en": "Our village sits up on a hill.",
    "ko": "우리 마을은 언덕 위에 있어.",
    "blank": "गाँव"
+  }
+ ],
+ "w|गिरना": [
+  {
+   "text": "छत से पानी गिर रहा है।",
+   "en": "Water is coming down from the roof.",
+   "ko": "지붕에서 물이 떨어져.",
+   "blank": "गिर"
+  },
+  {
+   "text": "पके आम डाल से गिरते हैं।",
+   "en": "Ripe mangoes fall off the branch.",
+   "ko": "익은 망고가 가지에서 떨어져.",
+   "blank": "गिरते"
+  }
+ ],
+ "w|घंटा": [
+  {
+   "text": "एक घंटा और लग जाएगा।",
+   "en": "It will take another hour.",
+   "ko": "한 시간은 더 걸릴 거야.",
+   "blank": "घंटा"
+  },
+  {
+   "text": "मैं दो घंटे से यहाँ हूँ।",
+   "en": "I've been here for two hours.",
+   "ko": "나는 두 시간째 여기 있어.",
+   "blank": "घंटे"
   }
  ],
  "w|घर": [
@@ -1203,6 +1525,20 @@
    "blank": "चाहिए"
   }
  ],
+ "w|चीज़": [
+  {
+   "text": "यह चीज़ धूप में मत रखो।",
+   "en": "Don't leave this thing out in the sun.",
+   "ko": "이 물건은 햇볕에 두지 마.",
+   "blank": "चीज़"
+  },
+  {
+   "text": "छोटी चीज़ दराज में डाल दो।",
+   "en": "Put the small thing in the drawer.",
+   "ko": "작은 물건은 서랍에 넣어.",
+   "blank": "चीज़"
+  }
+ ],
  "w|चुकना": [
   {
    "text": "खाना बन चुका है।",
@@ -1217,6 +1553,20 @@
    "blank": "चुकी"
   }
  ],
+ "w|चुकाना": [
+  {
+   "text": "दूध वाले का हिसाब चुका दो।",
+   "en": "Settle the milkman's account.",
+   "ko": "우유값을 치러.",
+   "blank": "चुका"
+  },
+  {
+   "text": "बाकी किराया आज चुकाना है।",
+   "en": "The rest of the rent has to be paid today.",
+   "ko": "남은 집세는 오늘 내야 해.",
+   "blank": "चुकाना"
+  }
+ ],
  "w|चुनाव": [
   {
    "text": "चुनाव के दिन स्कूल बंद रहेगा।",
@@ -1229,6 +1579,20 @@
    "en": "Every lane is talking about the election.",
    "ko": "골목마다 선거 이야기다.",
    "blank": "चुनाव"
+  }
+ ],
+ "w|चेहरा": [
+  {
+   "text": "धूप से उसका चेहरा लाल हो गया।",
+   "en": "His face went red in the sun.",
+   "ko": "햇볕에 그 얼굴이 빨개졌어.",
+   "blank": "चेहरा"
+  },
+  {
+   "text": "चेहरा ढक लो, धूल उड़ रही है।",
+   "en": "Cover your face, dust is blowing.",
+   "ko": "얼굴을 가려, 먼지가 날려.",
+   "blank": "चेहरा"
   }
  ],
  "w|छात्र": [
@@ -1315,6 +1679,20 @@
    "blank": "जब"
   }
  ],
+ "w|जब तक": [
+  {
+   "text": "जब तक चाय गर्म है, पी लो।",
+   "en": "Drink the tea while it's still hot.",
+   "ko": "차 따뜻할 때 마셔.",
+   "blank": "जब तक"
+  },
+  {
+   "text": "जब तक माँ न आए, दरवाज़ा बंद रखना।",
+   "en": "Keep the door shut until mother comes.",
+   "ko": "엄마가 올 때까지 문은 닫아 둬.",
+   "blank": "जब तक"
+  }
+ ],
  "w|जबकि": [
   {
    "text": "मैं चाय पीता हूँ जबकि वह दूध पीती है।",
@@ -1329,6 +1707,34 @@
    "blank": "जबकि"
   }
  ],
+ "w|ज़रूर": [
+  {
+   "text": "ठंड लग रही हो तो चाय ज़रूर पीना।",
+   "en": "If you feel cold, do have some tea.",
+   "ko": "춥거든 차는 꼭 마셔.",
+   "blank": "ज़रूर"
+  },
+  {
+   "text": "वह ज़रूर कोई बहाना बनाएगा।",
+   "en": "He is bound to come up with some excuse.",
+   "ko": "그는 분명 핑계를 댈 거야.",
+   "blank": "ज़रूर"
+  }
+ ],
+ "w|ज़रूरत": [
+  {
+   "text": "अभी पैसे की ज़रूरत नहीं है।",
+   "en": "Money isn't needed right now.",
+   "ko": "지금은 돈이 필요 없어.",
+   "blank": "ज़रूरत"
+  },
+  {
+   "text": "ज़रूरत पड़े तो फ़ोन कर देना।",
+   "en": "Call if you need something.",
+   "ko": "필요하면 전화해.",
+   "blank": "ज़रूरत"
+  }
+ ],
  "w|जलना": [
   {
    "text": "दीया रात भर जल रहा है।",
@@ -1341,6 +1747,20 @@
    "en": "The bread burned on the griddle.",
    "ko": "로티가 철판에서 탔어.",
    "blank": "जल"
+  }
+ ],
+ "w|जवाब": [
+  {
+   "text": "जवाब साफ़ दो।",
+   "en": "Give a straight answer.",
+   "ko": "대답은 분명히 해.",
+   "blank": "जवाब"
+  },
+  {
+   "text": "उसके जवाब से सब हँस पड़े।",
+   "en": "Everyone burst out laughing at his answer.",
+   "ko": "그의 대답에 모두 웃어 버렸어.",
+   "blank": "जवाब"
   }
  ],
  "w|जहाँ": [
@@ -1413,6 +1833,20 @@
    "blank": "गई"
   }
  ],
+ "w|ज़िंदगी": [
+  {
+   "text": "ज़िंदगी यूँ ही नहीं कटती।",
+   "en": "Life doesn't just pass by on its own.",
+   "ko": "인생은 그냥 흘러가지 않아.",
+   "blank": "ज़िंदगी"
+  },
+  {
+   "text": "गाँव की ज़िंदगी मुझे भाती है।",
+   "en": "I like village life.",
+   "ko": "나는 시골 생활이 마음에 들어.",
+   "blank": "ज़िंदगी"
+  }
+ ],
  "w|ज़िला": [
   {
    "text": "हमारा ज़िला पहाड़ों में है।",
@@ -1453,6 +1887,20 @@
    "en": "Yes, tell me, what do you need?",
    "ko": "네, 말씀하세요. 뭐가 필요하세요?",
    "blank": "जी"
+  }
+ ],
+ "w|जीत": [
+  {
+   "text": "आज हमारी जीत हुई।",
+   "en": "We won today.",
+   "ko": "오늘 우리가 이겼어.",
+   "blank": "जीत"
+  },
+  {
+   "text": "जीत पर सबने मिठाई खाई।",
+   "en": "Everyone had sweets for the win.",
+   "ko": "이긴 기념으로 다들 과자를 먹었어.",
+   "blank": "जीत"
   }
  ],
  "w|जीतना": [
@@ -1525,6 +1973,20 @@
    "blank": "जो"
   }
  ],
+ "w|जोड़ना": [
+  {
+   "text": "हिसाब में भाड़ा भी जोड़ दो।",
+   "en": "Add the fare into the bill too.",
+   "ko": "계산에 차비도 넣어.",
+   "blank": "जोड़"
+  },
+  {
+   "text": "यह पुल दोनों गाँवों को जोड़ता है।",
+   "en": "This bridge links the two villages.",
+   "ko": "이 다리는 두 마을을 이어.",
+   "blank": "जोड़ता"
+  }
+ ],
  "w|ज्ञान": [
   {
    "text": "बातचीत से ज्ञान बढ़ता है।",
@@ -1579,6 +2041,20 @@
    "en": "Everything will be all right, don't worry.",
    "ko": "다 괜찮아질 테니 걱정 마.",
    "blank": "ठीक"
+  }
+ ],
+ "w|डरना": [
+  {
+   "text": "बच्चा अँधेरे से डरता है।",
+   "en": "The child is afraid of the dark.",
+   "ko": "아이는 어둠을 무서워해.",
+   "blank": "डरता"
+  },
+  {
+   "text": "इतना मत डरो, कुत्ता बँधा है।",
+   "en": "Don't be so scared, the dog is tied.",
+   "ko": "그렇게 무서워하지 마, 개는 묶어 뒀어.",
+   "blank": "डरो"
   }
  ],
  "w|डालना": [
@@ -1665,6 +2141,34 @@
    "blank": "तरह"
   }
  ],
+ "w|तरीका": [
+  {
+   "text": "रोटी इस तरीके से बेलो।",
+   "en": "Roll the roti this way.",
+   "ko": "로티는 이 방법으로 밀어.",
+   "blank": "तरीके"
+  },
+  {
+   "text": "कोई आसान तरीका बताओ।",
+   "en": "Tell me some easier way.",
+   "ko": "더 쉬운 방법을 알려 줘.",
+   "blank": "तरीका"
+  }
+ ],
+ "w|ताकि": [
+  {
+   "text": "बत्ती जला दो, ताकि लिखाई दिखे।",
+   "en": "Light the lamp so the writing can be seen.",
+   "ko": "불을 켜, 그래야 글씨가 보여.",
+   "blank": "ताकि"
+  },
+  {
+   "text": "जल्दी चलो, ताकि भीड़ से बचें।",
+   "en": "Hurry, so we avoid the crowd.",
+   "ko": "서둘러, 그래야 인파를 피해.",
+   "blank": "ताकि"
+  }
+ ],
  "w|तीन": [
   {
    "text": "तीन भाई एक ही दुकान चलाते हैं।",
@@ -1735,6 +2239,20 @@
    "blank": "तेरी"
   }
  ],
+ "w|तैयार": [
+  {
+   "text": "खाना तैयार है, आ जाओ।",
+   "en": "The food is ready, come on.",
+   "ko": "밥 다 됐어, 와.",
+   "blank": "तैयार"
+  },
+  {
+   "text": "मैं यात्रा के लिए तैयार हूँ।",
+   "en": "I'm ready for the trip.",
+   "ko": "나 여행 갈 준비 됐어.",
+   "blank": "तैयार"
+  }
+ ],
  "w|तो": [
   {
    "text": "आना हो तो पहले बता देना।",
@@ -1747,6 +2265,34 @@
    "en": "Once you read it, you'll understand.",
    "ko": "읽어 보면 이해가 될 거야.",
    "blank": "तो"
+  }
+ ],
+ "w|तौर": [
+  {
+   "text": "यह बात मज़ाक के तौर पर मत लो।",
+   "en": "Don't take this remark as a joke.",
+   "ko": "이 말을 농담으로 듣지 마.",
+   "blank": "तौर"
+  },
+  {
+   "text": "वह मेहमान के तौर पर रुका है।",
+   "en": "He is staying as a guest.",
+   "ko": "그는 손님으로 묵고 있어.",
+   "blank": "तौर"
+  }
+ ],
+ "w|दर्द": [
+  {
+   "text": "कमर में दर्द हो रहा है।",
+   "en": "My lower back is hurting.",
+   "ko": "허리가 아파.",
+   "blank": "दर्द"
+  },
+  {
+   "text": "दवा के बाद दर्द कम हुआ।",
+   "en": "The pain eased after the medicine.",
+   "ko": "약을 먹으니 통증이 덜해.",
+   "blank": "दर्द"
   }
  ],
  "w|दिखना": [
@@ -1973,6 +2519,20 @@
    "blank": "न"
   }
  ],
+ "w|नगर": [
+  {
+   "text": "नगर के बाहर नया बाज़ार खुला है।",
+   "en": "A new market has opened outside the town.",
+   "ko": "도시 밖에 새 시장이 열렸어.",
+   "blank": "नगर"
+  },
+  {
+   "text": "हमारा नगर नदी के किनारे है।",
+   "en": "Our town sits by the river.",
+   "ko": "우리 도시는 강가에 있어.",
+   "blank": "नगर"
+  }
+ ],
  "w|नज़र": [
   {
    "text": "उसकी नज़र खिड़की पर टिकी थी।",
@@ -2085,6 +2645,20 @@
    "blank": "निकाल"
   }
  ],
+ "w|निर्माण": [
+  {
+   "text": "पुल का निर्माण चल रहा है।",
+   "en": "The bridge is under construction.",
+   "ko": "다리를 건설하는 중이야.",
+   "blank": "निर्माण"
+  },
+  {
+   "text": "मकान का निर्माण पूरा हो गया।",
+   "en": "The house has finished being built.",
+   "ko": "집 짓는 일은 끝났어.",
+   "blank": "निर्माण"
+  }
+ ],
  "w|नीचे": [
   {
    "text": "जूते नीचे रख दो।",
@@ -2127,6 +2701,20 @@
    "blank": "नेता"
   }
  ],
+ "w|पकड़ना": [
+  {
+   "text": "देर हो रही है, बस पकड़ लो।",
+   "en": "It's getting late, catch the bus.",
+   "ko": "늦어지고 있어, 버스를 잡아.",
+   "blank": "पकड़"
+  },
+  {
+   "text": "बच्चे ने माँ की उँगली पकड़ी।",
+   "en": "The child caught hold of his mother's finger.",
+   "ko": "아이가 엄마 손가락을 붙잡았어.",
+   "blank": "पकड़ी"
+  }
+ ],
  "w|पढ़ना": [
   {
    "text": "बच्चा कहानी पढ़ रहा है।",
@@ -2153,6 +2741,48 @@
    "en": "This address is no use anymore.",
    "ko": "이 주소는 이제 쓸모가 없어.",
    "blank": "पता"
+  }
+ ],
+ "w|पति": [
+  {
+   "text": "पति देर से लौटे, खाना गरम है।",
+   "en": "Husband got back late, and the food is still warm.",
+   "ko": "남편이 늦게 돌아왔어, 밥은 아직 따뜻해.",
+   "blank": "पति"
+  },
+  {
+   "text": "उनके पति की तबीयत आज ठीक है।",
+   "en": "Her husband is feeling all right today.",
+   "ko": "그분 남편은 오늘 몸이 괜찮아.",
+   "blank": "पति"
+  }
+ ],
+ "w|पत्नी": [
+  {
+   "text": "उसकी पत्नी डॉक्टर है।",
+   "en": "His wife is a doctor.",
+   "ko": "그의 아내는 의사야.",
+   "blank": "पत्नी"
+  },
+  {
+   "text": "पत्नी बच्चों के साथ बाज़ार गई।",
+   "en": "His wife went to the market with the children.",
+   "ko": "아내가 아이들과 시장에 갔어.",
+   "blank": "पत्नी"
+  }
+ ],
+ "w|पद": [
+  {
+   "text": "उसे नया पद मिला है।",
+   "en": "He has got a new post.",
+   "ko": "그가 새 직위를 받았어.",
+   "blank": "पद"
+  },
+  {
+   "text": "इस पद की ज़िम्मेदारी बड़ी है।",
+   "en": "This post carries a heavy responsibility.",
+   "ko": "이 자리는 책임이 커.",
+   "blank": "पद"
   }
  ],
  "w|पर": [
@@ -2183,6 +2813,20 @@
    "blank": "परिवार"
   }
  ],
+ "w|पहचानना": [
+  {
+   "text": "अँधेरे में रास्ता पहचानना मुश्किल है।",
+   "en": "It's hard to make out the path in the dark.",
+   "ko": "어두우면 길을 알아보기가 어려워.",
+   "blank": "पहचानना"
+  },
+  {
+   "text": "मैंने उसे आवाज़ से पहचान लिया।",
+   "en": "I recognized him by his voice.",
+   "ko": "목소리로 그를 알아봤어.",
+   "blank": "पहचान"
+  }
+ ],
  "w|पहला": [
   {
    "text": "पहला सवाल थोड़ा कठिन था।",
@@ -2211,6 +2855,20 @@
    "blank": "पहले"
   }
  ],
+ "w|पहले से": [
+  {
+   "text": "खाना पहले से तैयार है।",
+   "en": "The food is already ready.",
+   "ko": "밥은 미리 준비돼 있어.",
+   "blank": "पहले से"
+  },
+  {
+   "text": "मुझे यह बात पहले से पता थी।",
+   "en": "I already knew about this.",
+   "ko": "나는 이 일을 이미 알고 있었어.",
+   "blank": "पहले से"
+  }
+ ],
  "w|पहुँचना": [
   {
    "text": "हम स्टेशन देर से पहुँचे।",
@@ -2223,6 +2881,20 @@
    "en": "The letter still hasn't arrived.",
    "ko": "편지가 아직 안 도착했어.",
    "blank": "पहुँचा"
+  }
+ ],
+ "w|पाँच": [
+  {
+   "text": "पाँच आम टोकरी में हैं।",
+   "en": "There are five mangoes in the basket.",
+   "ko": "바구니에 망고가 다섯 개 있어.",
+   "blank": "पाँच"
+  },
+  {
+   "text": "वह पाँच बजे दुकान बंद करता है।",
+   "en": "He closes the shop at five.",
+   "ko": "그는 다섯 시에 가게 문을 닫아.",
+   "blank": "पाँच"
   }
  ],
  "w|पाना": [
@@ -2295,6 +2967,20 @@
    "blank": "पिता"
   }
  ],
+ "w|पीछे": [
+  {
+   "text": "घर के पीछे आम का पेड़ है।",
+   "en": "There's a mango tree behind the house.",
+   "ko": "집 뒤에 망고나무가 있어.",
+   "blank": "पीछे"
+  },
+  {
+   "text": "तुम पीछे मत रह जाना।",
+   "en": "Don't get left behind.",
+   "ko": "너는 뒤에 처지지 마.",
+   "blank": "पीछे"
+  }
+ ],
  "w|पीना": [
   {
    "text": "गरम दूध धीरे पी लो।",
@@ -2307,6 +2993,20 @@
    "en": "Grandpa drinks tea in the morning.",
    "ko": "할아버지는 아침에 차를 마셔.",
    "blank": "पीते"
+  }
+ ],
+ "w|पुराना": [
+  {
+   "text": "पुराना जूता अब तंग है।",
+   "en": "The old shoe is tight now.",
+   "ko": "헌 구두는 이제 꽉 껴.",
+   "blank": "पुराना"
+  },
+  {
+   "text": "यह पुरानी आदत नहीं छूटती।",
+   "en": "This old habit won't go away.",
+   "ko": "이 오래된 버릇은 안 사라져.",
+   "blank": "पुरानी"
   }
  ],
  "w|पुलिस": [
@@ -2365,6 +3065,20 @@
    "blank": "पूरी"
   }
  ],
+ "w|पूर्ण": [
+  {
+   "text": "आवेदन अभी पूर्ण नहीं है।",
+   "en": "The application isn't complete yet.",
+   "ko": "신청서는 아직 다 안 됐어.",
+   "blank": "पूर्ण"
+  },
+  {
+   "text": "मुझे उन पर पूर्ण विश्वास है।",
+   "en": "I trust them completely.",
+   "ko": "나는 그 사람을 완전히 믿어.",
+   "blank": "पूर्ण"
+  }
+ ],
  "w|पूर्व": [
   {
    "text": "सूरज पूर्व से निकलता है।",
@@ -2421,6 +3135,20 @@
    "blank": "प्रकार"
   }
  ],
+ "w|प्रदर्शन": [
+  {
+   "text": "गेट पर शांत प्रदर्शन चल रहा है।",
+   "en": "A quiet demonstration is going on at the gate.",
+   "ko": "정문에서 조용한 시위가 이어지고 있어.",
+   "blank": "प्रदर्शन"
+  },
+  {
+   "text": "बच्चों का प्रदर्शन देखकर माँ खुश हुई।",
+   "en": "Mother was glad after watching the children's show.",
+   "ko": "아이들 공연을 보고 엄마가 기뻐했어.",
+   "blank": "प्रदर्शन"
+  }
+ ],
  "w|प्रदेश": [
   {
    "text": "हमारा प्रदेश नदियों से घिरा है।",
@@ -2449,6 +3177,34 @@
    "blank": "प्रधानमंत्री"
   }
  ],
+ "w|प्रमुख": [
+  {
+   "text": "गाँव के प्रमुख आज शहर गए हैं।",
+   "en": "The village head has gone to the city today.",
+   "ko": "마을 대표가 오늘 도시에 갔어.",
+   "blank": "प्रमुख"
+  },
+  {
+   "text": "बैठक का प्रमुख मुद्दा पानी था।",
+   "en": "The main issue in the meeting was water.",
+   "ko": "회의의 주요 안건은 물이었어.",
+   "blank": "प्रमुख"
+  }
+ ],
+ "w|प्रयास": [
+  {
+   "text": "घबराओ मत, एक और प्रयास करो।",
+   "en": "Don't get flustered, try once more.",
+   "ko": "당황하지 마, 한 번 더 해 봐.",
+   "blank": "प्रयास"
+  },
+  {
+   "text": "उसका प्रयास काम आ गया।",
+   "en": "His effort paid off.",
+   "ko": "그 노력이 보람이 있었어.",
+   "blank": "प्रयास"
+  }
+ ],
  "w|प्रयोग": [
   {
    "text": "इस शब्द का प्रयोग कम होता है।",
@@ -2461,6 +3217,20 @@
    "en": "The trial worked, and everyone was glad.",
    "ko": "실험이 잘되어서 모두 기뻤어.",
    "blank": "प्रयोग"
+  }
+ ],
+ "w|प्रेम": [
+  {
+   "text": "उनका प्रेम सच्चा है।",
+   "en": "Their love is genuine.",
+   "ko": "두 사람의 사랑은 진심이야.",
+   "blank": "प्रेम"
+  },
+  {
+   "text": "प्रेम से बोला करो, गुस्से से नहीं।",
+   "en": "Speak kindly, not in anger.",
+   "ko": "화내지 말고 다정하게 말해.",
+   "blank": "प्रेम"
   }
  ],
  "w|फिर": [
@@ -2477,6 +3247,20 @@
    "blank": "फिर"
   }
  ],
+ "w|फिर से": [
+  {
+   "text": "यह गाना फिर से चलाओ।",
+   "en": "Play this song again.",
+   "ko": "이 노래 다시 틀어.",
+   "blank": "फिर से"
+  },
+  {
+   "text": "फिर से वही गलती मत करना।",
+   "en": "Don't make the same mistake again.",
+   "ko": "또 같은 실수는 하지 마.",
+   "blank": "फिर से"
+  }
+ ],
  "w|फ़िल्म": [
   {
    "text": "कल वाली फ़िल्म बहुत अच्छी थी।",
@@ -2489,6 +3273,34 @@
    "en": "Don't watch this film with the children.",
    "ko": "이 영화는 아이들과 같이 보지 마.",
    "blank": "फ़िल्म"
+  }
+ ],
+ "w|बचना": [
+  {
+   "text": "धूप से बचना मुश्किल है।",
+   "en": "It's hard to stay out of the sun.",
+   "ko": "햇볕을 피하기가 어려워.",
+   "blank": "बचना"
+  },
+  {
+   "text": "वह मुसीबत से बच गया।",
+   "en": "He got out of the trouble.",
+   "ko": "그는 곤경에서 빠져나왔어.",
+   "blank": "बच"
+  }
+ ],
+ "w|बचाना": [
+  {
+   "text": "बारिश से कपड़े बचा लो।",
+   "en": "Save the clothes from the rain.",
+   "ko": "비 맞지 않게 옷을 걷어.",
+   "blank": "बचा"
+  },
+  {
+   "text": "दादी त्योहार के लिए पैसे बचाती है।",
+   "en": "Grandma puts money aside for the festival.",
+   "ko": "할머니는 명절에 쓰려고 돈을 모아.",
+   "blank": "बचाती"
   }
  ],
  "w|बच्चा": [
@@ -2531,6 +3343,20 @@
    "en": "The crowd is slowly growing.",
    "ko": "사람이 조금씩 늘고 있어.",
    "blank": "बढ़"
+  }
+ ],
+ "w|बढ़ाना": [
+  {
+   "text": "आवाज़ थोड़ी बढ़ाओ।",
+   "en": "Turn the volume up a little.",
+   "ko": "소리 좀 키워.",
+   "blank": "बढ़ाओ"
+  },
+  {
+   "text": "उसने दाम बढ़ा दिया।",
+   "en": "He raised the price.",
+   "ko": "그가 값을 올렸어.",
+   "blank": "बढ़ा"
   }
  ],
  "w|बताना": [
@@ -2603,6 +3429,20 @@
    "blank": "बना"
   }
  ],
+ "w|बल्कि": [
+  {
+   "text": "चाय ठंडी नहीं है, बल्कि बहुत मीठी है।",
+   "en": "The tea isn't cold; it's very sweet.",
+   "ko": "차는 식은 게 아니라 너무 달아.",
+   "blank": "बल्कि"
+  },
+  {
+   "text": "वह रो नहीं रहा, बल्कि हँस रहा है।",
+   "en": "He isn't crying; he's laughing.",
+   "ko": "그는 우는 게 아니라 웃고 있어.",
+   "blank": "बल्कि"
+  }
+ ],
  "w|बस": [
   {
    "text": "बस, अब और मत खरीदो।",
@@ -2615,6 +3455,20 @@
    "en": "That was all I wanted to say.",
    "ko": "하고 싶은 말은 그게 다였어.",
    "blank": "बस"
+  }
+ ],
+ "w|बहन": [
+  {
+   "text": "मेरी बहन दिल्ली में पढ़ती है।",
+   "en": "My sister studies in Delhi.",
+   "ko": "우리 누나는 델리에서 공부해.",
+   "blank": "बहन"
+  },
+  {
+   "text": "बहन ने स्वेटर बुन दिया।",
+   "en": "Sister knitted a sweater.",
+   "ko": "누나가 스웨터를 짜 줬어.",
+   "blank": "बहन"
   }
  ],
  "w|बहुत": [
@@ -2687,6 +3541,20 @@
    "blank": "बाद में"
   }
  ],
+ "w|बाप": [
+  {
+   "text": "मेरे बाप की दुकान चौक पर है।",
+   "en": "My father's shop is on the square.",
+   "ko": "우리 아버지 가게는 광장에 있어.",
+   "blank": "बाप"
+  },
+  {
+   "text": "बाप ने उसे समझाया।",
+   "en": "Father talked it through with him.",
+   "ko": "아버지가 그를 타일러 주셨어.",
+   "blank": "बाप"
+  }
+ ],
  "w|बार": [
   {
    "text": "इस बार ज़रूर साथ चलना।",
@@ -2701,6 +3569,20 @@
    "blank": "बार"
   }
  ],
+ "w|बार बार": [
+  {
+   "text": "बार बार वही किस्सा मत सुनाओ।",
+   "en": "Don't tell that same tale over and over.",
+   "ko": "같은 이야기를 자꾸 늘어놓지 마.",
+   "blank": "बार बार"
+  },
+  {
+   "text": "बच्चा बार बार पानी माँग रहा है।",
+   "en": "The child keeps asking for water.",
+   "ko": "아이가 자꾸 물을 달라고 해.",
+   "blank": "बार बार"
+  }
+ ],
  "w|बाहर": [
   {
    "text": "बच्चे बाहर धूप में खेल रहे हैं।",
@@ -2713,6 +3595,20 @@
    "en": "A strong wind is blowing outside.",
    "ko": "바깥에 바람이 세게 불어.",
    "blank": "बाहर"
+  }
+ ],
+ "w|बिजली": [
+  {
+   "text": "बिजली चली गई, पंखा रुक गया।",
+   "en": "The power went out and the fan stopped.",
+   "ko": "전기가 나가서 선풍기가 멈췄어.",
+   "blank": "बिजली"
+  },
+  {
+   "text": "आज बिजली का बिल आया है।",
+   "en": "The electricity bill came today.",
+   "ko": "오늘 전기 요금 고지서가 왔어.",
+   "blank": "बिजली"
   }
  ],
  "w|बिना": [
@@ -2743,6 +3639,20 @@
    "blank": "बीच"
   }
  ],
+ "w|बुरा": [
+  {
+   "text": "बुरा मत मानो, मैं मज़ाक कर रहा था।",
+   "en": "Don't take it to heart, I was only joking.",
+   "ko": "기분 나빠하지 마, 장난이었어.",
+   "blank": "बुरा"
+  },
+  {
+   "text": "बुरी आदत एक दिन में नहीं जाती।",
+   "en": "A bad habit doesn't leave in a day.",
+   "ko": "나쁜 습관은 하루 만에 안 사라져.",
+   "blank": "बुरी"
+  }
+ ],
  "w|बेटा": [
   {
    "text": "बेटा स्कूल से लौट आया।",
@@ -2755,6 +3665,34 @@
    "en": "My son plays cricket.",
    "ko": "우리 아들은 크리켓을 해.",
    "blank": "बेटा"
+  }
+ ],
+ "w|बेटी": [
+  {
+   "text": "छोटी बेटी अभी सो रही है।",
+   "en": "The younger daughter is asleep just now.",
+   "ko": "작은딸은 지금 자고 있어.",
+   "blank": "बेटी"
+  },
+  {
+   "text": "बेटी ने माँ के लिए चाय बनाई।",
+   "en": "Daughter made tea for her mother.",
+   "ko": "딸이 엄마한테 차를 끓여 줬어.",
+   "blank": "बेटी"
+  }
+ ],
+ "w|बैंक": [
+  {
+   "text": "बैंक आज बंद है।",
+   "en": "The bank is closed today.",
+   "ko": "은행은 오늘 쉬어.",
+   "blank": "बैंक"
+  },
+  {
+   "text": "मैं बैंक से पैसे निकाल लाया।",
+   "en": "I brought money out from the bank.",
+   "ko": "은행에서 돈을 찾아 왔어.",
+   "blank": "बैंक"
   }
  ],
  "w|बैठना": [
@@ -2811,6 +3749,20 @@
    "en": "Tears welled up in the eyes.",
    "ko": "눈에 눈물이 고였어.",
    "blank": "भर"
+  }
+ ],
+ "w|भरा": [
+  {
+   "text": "गिलास दूध से भरा है।",
+   "en": "The glass is full of milk.",
+   "ko": "잔이 우유로 가득해.",
+   "blank": "भरा"
+  },
+  {
+   "text": "टंकी बारिश के पानी से भरी है।",
+   "en": "The tank is full of rainwater.",
+   "ko": "물탱크가 빗물로 가득 찼어.",
+   "blank": "भरी"
   }
  ],
  "w|भाई": [
@@ -2897,6 +3849,48 @@
    "blank": "भी"
   }
  ],
+ "w|भूलना": [
+  {
+   "text": "मैं छाता गाड़ी में भूल आया।",
+   "en": "I forgot the umbrella in the car and came away.",
+   "ko": "우산을 차에 두고 내려버렸어.",
+   "blank": "भूल"
+  },
+  {
+   "text": "उसका नाम मत भूलना।",
+   "en": "Don't forget his name.",
+   "ko": "그 사람 이름을 잊지 마.",
+   "blank": "भूलना"
+  }
+ ],
+ "w|भेजना": [
+  {
+   "text": "यह पार्सल आज ही भेज दो।",
+   "en": "Send this parcel today itself.",
+   "ko": "이 소포는 오늘 보내.",
+   "blank": "भेज"
+  },
+  {
+   "text": "मैंने पत्र भेजा था।",
+   "en": "I had sent the letter.",
+   "ko": "나는 편지를 보냈었어.",
+   "blank": "भेजा"
+  }
+ ],
+ "w|मगर": [
+  {
+   "text": "जाना तो चाहता हूँ, मगर आज नहीं।",
+   "en": "I do want to go, but not today.",
+   "ko": "가고는 싶은데 오늘은 안 돼.",
+   "blank": "मगर"
+  },
+  {
+   "text": "बात अच्छी है, मगर समय नहीं है।",
+   "en": "It's a good idea, but there's no time.",
+   "ko": "생각은 좋은데 시간이 없어.",
+   "blank": "मगर"
+  }
+ ],
  "w|मत": [
   {
    "text": "इतना ज़ोर से मत बोलो।",
@@ -2911,6 +3905,20 @@
    "blank": "मत"
   }
  ],
+ "w|मतलब": [
+  {
+   "text": "तुम्हारा मतलब क्या है?",
+   "en": "What do you mean?",
+   "ko": "무슨 뜻이야?",
+   "blank": "मतलब"
+  },
+  {
+   "text": "मेरा मतलब यह नहीं था।",
+   "en": "That's not what I meant.",
+   "ko": "내가 그런 뜻은 아니었어.",
+   "blank": "मतलब"
+  }
+ ],
  "w|मंत्री": [
   {
    "text": "मंत्री कल गाँव का दौरा करेंगे।",
@@ -2923,6 +3931,20 @@
    "en": "The education minister called a meeting.",
    "ko": "교육 장관이 회의를 소집했어.",
    "blank": "मंत्री"
+  }
+ ],
+ "w|मदद": [
+  {
+   "text": "मदद चाहिए तो बोल देना।",
+   "en": "If you need help, just say so.",
+   "ko": "도움이 필요하면 말해.",
+   "blank": "मदद"
+  },
+  {
+   "text": "पड़ोसी ने बरसात में मदद की।",
+   "en": "The neighbor helped during the rains.",
+   "ko": "이웃이 장마 때 도와줬어.",
+   "blank": "मदद"
   }
  ],
  "w|मंदिर": [
@@ -2953,6 +3975,20 @@
    "blank": "मन"
   }
  ],
+ "w|मनाना": [
+  {
+   "text": "दिवाली हम छत पर मनाएँगे।",
+   "en": "We'll celebrate Diwali on the roof.",
+   "ko": "디왈리는 옥상에서 지낼 거야.",
+   "blank": "मनाएँगे"
+  },
+  {
+   "text": "उसे मना लो, वरना वह रुठा रहेगा।",
+   "en": "Coax him, or he'll stay in a sulk.",
+   "ko": "달래 봐, 안 그러면 계속 토라져 있을 거야.",
+   "blank": "मना"
+  }
+ ],
  "w|मरना": [
   {
    "text": "बिना पानी के पौधे मर गए।",
@@ -2981,6 +4017,20 @@
    "blank": "महिला"
   }
  ],
+ "w|महीना": [
+  {
+   "text": "यह महीना बहुत गर्म है।",
+   "en": "This month is very hot.",
+   "ko": "이번 달은 무척 더워.",
+   "blank": "महीना"
+  },
+  {
+   "text": "एक महीना और रुकना पड़ेगा।",
+   "en": "We'll have to wait another month.",
+   "ko": "한 달은 더 있어야 해.",
+   "blank": "महीना"
+  }
+ ],
  "w|माँ": [
   {
    "text": "माँ रसोई में हैं।",
@@ -2993,6 +4043,20 @@
    "en": "Call Mom, the food is ready.",
    "ko": "엄마 불러, 밥 다 됐어.",
    "blank": "माँ"
+  }
+ ],
+ "w|मांग": [
+  {
+   "text": "मज़दूरों की मांग जायज़ है।",
+   "en": "The workers' demand is fair.",
+   "ko": "노동자들 요구는 당연해.",
+   "blank": "मांग"
+  },
+  {
+   "text": "उसकी मांग मान ली।",
+   "en": "They accepted his demand.",
+   "ko": "그의 요구를 들어줬어.",
+   "blank": "मांग"
   }
  ],
  "w|माँगना": [
@@ -3107,6 +4171,48 @@
    "blank": "मीडिया"
   }
  ],
+ "w|मुख्य": [
+  {
+   "text": "मुख्य दरवाज़ा अंदर से बंद है।",
+   "en": "The main door is shut from the inside.",
+   "ko": "정문은 안에서 잠겨 있어.",
+   "blank": "मुख्य"
+  },
+  {
+   "text": "मुख्य बात यह है कि समय कम है।",
+   "en": "The main point is that time is short.",
+   "ko": "핵심은 시간이 없다는 거야.",
+   "blank": "मुख्य"
+  }
+ ],
+ "w|मुख्यमंत्री": [
+  {
+   "text": "मुख्यमंत्री कल गाँव आ रहे हैं।",
+   "en": "The chief minister is coming to the village tomorrow.",
+   "ko": "주총리가 내일 마을에 와.",
+   "blank": "मुख्यमंत्री"
+  },
+  {
+   "text": "मुख्यमंत्री ने नई सड़क का वादा किया।",
+   "en": "The chief minister promised a new road.",
+   "ko": "주총리가 새 길을 약속했어.",
+   "blank": "मुख्यमंत्री"
+  }
+ ],
+ "w|मुँह": [
+  {
+   "text": "समोसे की खुशबू से मुँह में पानी आ गया।",
+   "en": "The smell of the samosas made my mouth water.",
+   "ko": "사모사 냄새에 군침이 돌았어.",
+   "blank": "मुँह"
+  },
+  {
+   "text": "खाँसी है, बोलते समय मुँह ढको।",
+   "en": "You have a cough, cover your mouth while speaking.",
+   "ko": "기침이 나니까 말할 때는 입을 가려.",
+   "blank": "मुँह"
+  }
+ ],
  "w|में": [
   {
    "text": "चाय में चीनी कम है।",
@@ -3147,6 +4253,20 @@
    "en": "I'll set out tomorrow morning.",
    "ko": "나 내일 아침에 출발할게.",
    "blank": "मैं"
+  }
+ ],
+ "w|मैच": [
+  {
+   "text": "मैच की भीड़ में मेरी चप्पल खो गई।",
+   "en": "My slipper got lost in the match crowd.",
+   "ko": "경기 인파 속에서 슬리퍼를 잃어버렸어.",
+   "blank": "मैच"
+  },
+  {
+   "text": "रात वाला मैच बारिश से रुक गया।",
+   "en": "The night match stopped for the rain.",
+   "ko": "밤 경기는 비 때문에 멈췄어.",
+   "blank": "मैच"
   }
  ],
  "w|मौत": [
@@ -3233,6 +4353,20 @@
    "blank": "या"
   }
  ],
+ "w|यात्रा": [
+  {
+   "text": "यात्रा लंबी है, पानी साथ रखो।",
+   "en": "The journey is long, so keep water with you.",
+   "ko": "길이 멀어, 물을 챙겨.",
+   "blank": "यात्रा"
+  },
+  {
+   "text": "ट्रेन से यात्रा आराम से हुई।",
+   "en": "The train journey was comfortable.",
+   "ko": "기차 여행은 편했어.",
+   "blank": "यात्रा"
+  }
+ ],
  "w|याद": [
   {
    "text": "मुझे तुम्हारी याद आ रही है।",
@@ -3247,6 +4381,20 @@
    "blank": "याद"
   }
  ],
+ "w|युद्ध": [
+  {
+   "text": "युद्ध में बहुत लोग बिछड़ गए।",
+   "en": "A lot of people were separated in the war.",
+   "ko": "전쟁통에 많은 사람이 흩어졌어.",
+   "blank": "युद्ध"
+  },
+  {
+   "text": "उस युद्ध की कहानी दादा सुनाते हैं।",
+   "en": "Grandfather tells the story of that war.",
+   "ko": "할아버지는 그 전쟁 이야기를 해 주셔.",
+   "blank": "युद्ध"
+  }
+ ],
  "w|ये": [
   {
    "text": "ये जूते तुम्हारे हैं।",
@@ -3259,6 +4407,20 @@
    "en": "These kids are very naughty.",
    "ko": "이 아이들은 장난이 심해.",
    "blank": "ये"
+  }
+ ],
+ "w|योजना": [
+  {
+   "text": "छुट्टी की योजना बन गई।",
+   "en": "The holiday plan is settled.",
+   "ko": "휴가 계획이 잡혔어.",
+   "blank": "योजना"
+  },
+  {
+   "text": "यह योजना काम नहीं करेगी।",
+   "en": "This plan won't work.",
+   "ko": "이 계획은 안 될 거야.",
+   "blank": "योजना"
   }
  ],
  "w|रखना": [
@@ -3303,6 +4465,20 @@
    "blank": "रहते"
   }
  ],
+ "w|राजा": [
+  {
+   "text": "नानी की कहानी का राजा जंगल में रहता था।",
+   "en": "The king in Grandma's story lived in the forest.",
+   "ko": "할머니 이야기 속 왕은 숲에 살았어.",
+   "blank": "राजा"
+  },
+  {
+   "text": "राजा का किला उस पहाड़ी पर है।",
+   "en": "The king's fort is on that hill.",
+   "ko": "왕의 성은 저 언덕 위에 있어.",
+   "blank": "राजा"
+  }
+ ],
  "w|राज्य": [
   {
    "text": "इस राज्य में आम की बहार है।",
@@ -3345,6 +4521,20 @@
    "blank": "राष्ट्रीय"
   }
  ],
+ "w|रुपया": [
+  {
+   "text": "सब्ज़ी वाले को रुपया दे आना।",
+   "en": "Go pay the vegetable seller.",
+   "ko": "채소 가게 사람한테 돈 주고 와.",
+   "blank": "रुपया"
+  },
+  {
+   "text": "यह कलम दस रुपये की है।",
+   "en": "This pen costs ten rupees.",
+   "ko": "이 펜은 열 루피야.",
+   "blank": "रुपये"
+  }
+ ],
  "w|रूप": [
   {
    "text": "बातचीत ने अचानक नया रूप ले लिया।",
@@ -3385,6 +4575,20 @@
    "en": "This price seems all right.",
    "ko": "이 값이면 괜찮아 보여.",
    "blank": "लगती"
+  }
+ ],
+ "w|लगभग": [
+  {
+   "text": "काम लगभग पूरा हो गया।",
+   "en": "The work is almost finished.",
+   "ko": "일이 거의 끝났어.",
+   "blank": "लगभग"
+  },
+  {
+   "text": "वह लगभग रोज़ यहाँ आता है।",
+   "en": "He comes here almost every day.",
+   "ko": "그는 거의 매일 여기 와.",
+   "blank": "लगभग"
   }
  ],
  "w|लड़का": [
@@ -3455,6 +4659,20 @@
    "en": "My son has brought fruit.",
    "ko": "아들이 과일을 가져왔어.",
    "blank": "लाया"
+  }
+ ],
+ "w|लाल": [
+  {
+   "text": "लाल कमीज़ अलमारी में है।",
+   "en": "The red shirt is in the cupboard.",
+   "ko": "빨간 셔츠는 옷장에 있어.",
+   "blank": "लाल"
+  },
+  {
+   "text": "बच्चे को लाल गुब्बारा पसंद है।",
+   "en": "The child likes the red balloon.",
+   "ko": "아이는 빨간 풍선을 좋아해.",
+   "blank": "लाल"
   }
  ],
  "w|लिखना": [
@@ -3541,6 +4759,20 @@
    "blank": "वक़्त"
   }
  ],
+ "w|वजह": [
+  {
+   "text": "देरी की वजह बारिश है।",
+   "en": "The rain is why we're late.",
+   "ko": "늦은 이유는 비야.",
+   "blank": "वजह"
+  },
+  {
+   "text": "वह वजह बताए बिना चला गया।",
+   "en": "He left without giving a reason.",
+   "ko": "그는 이유도 말하지 않고 가 버렸어.",
+   "blank": "वजह"
+  }
+ ],
  "w|वर्ष": [
   {
    "text": "इस वर्ष बारिश अच्छी हुई।",
@@ -3581,6 +4813,34 @@
    "en": "My bicycle is standing there.",
    "ko": "내 자전거가 거기 세워져 있어.",
    "blank": "वहाँ"
+  }
+ ],
+ "w|वहीं": [
+  {
+   "text": "मेरा चश्मा वहीं रखा है।",
+   "en": "My glasses are lying right there.",
+   "ko": "내 안경은 거기 그대로 있어.",
+   "blank": "वहीं"
+  },
+  {
+   "text": "तुम वहीं बैठे रहो, मैं अभी आया।",
+   "en": "Stay right there, I'll be back in a moment.",
+   "ko": "너는 거기 앉아 있어, 나 금방 올게.",
+   "blank": "वहीं"
+  }
+ ],
+ "w|वापस": [
+  {
+   "text": "उधार की किताब वापस कर दो।",
+   "en": "Give the borrowed book back.",
+   "ko": "빌린 책은 돌려줘.",
+   "blank": "वापस"
+  },
+  {
+   "text": "वह शाम तक वापस आ जाएगा।",
+   "en": "He will be back by evening.",
+   "ko": "그는 저녁까지 돌아올 거야.",
+   "blank": "वापस"
   }
  ],
  "w|वाला": [
@@ -3625,6 +4885,20 @@
    "blank": "विचार"
   }
  ],
+ "w|विधायक": [
+  {
+   "text": "विधायक गाँव की सभा में आए।",
+   "en": "The legislator came to the village meeting.",
+   "ko": "주의원이 마을 모임에 왔어.",
+   "blank": "विधायक"
+  },
+  {
+   "text": "विधायक ने शिकायत सुन ली।",
+   "en": "The legislator heard the complaint.",
+   "ko": "주의원이 민원을 들어 줬어.",
+   "blank": "विधायक"
+  }
+ ],
  "w|विभाग": [
   {
    "text": "शिक्षा विभाग आज बंद है।",
@@ -3637,6 +4911,62 @@
    "en": "This department is on another floor.",
    "ko": "이 부서는 다른 층에 있어.",
    "blank": "विभाग"
+  }
+ ],
+ "w|विरोध": [
+  {
+   "text": "नए नियम का विरोध हुआ है।",
+   "en": "The new rule has met with opposition.",
+   "ko": "새 규칙에 반대가 나왔어.",
+   "blank": "विरोध"
+  },
+  {
+   "text": "मेरा विरोध फ़ैसले से है, तुमसे नहीं।",
+   "en": "I object to the decision, not to you.",
+   "ko": "내가 반대하는 건 그 결정이야, 네가 아니야.",
+   "blank": "विरोध"
+  }
+ ],
+ "w|विशेष": [
+  {
+   "text": "आज कोई विशेष बात नहीं है।",
+   "en": "There's nothing special today.",
+   "ko": "오늘은 특별한 일이 없어.",
+   "blank": "विशेष"
+  },
+  {
+   "text": "इस मेहमान का विशेष स्वागत होगा।",
+   "en": "This guest will get a special welcome.",
+   "ko": "이 손님은 특별히 맞이할 거야.",
+   "blank": "विशेष"
+  }
+ ],
+ "w|विषय": [
+  {
+   "text": "विषय बदलो, यह बहस रहने दो।",
+   "en": "Change the subject and drop this argument.",
+   "ko": "화제를 바꿔, 이 말다툼은 그만두자.",
+   "blank": "विषय"
+  },
+  {
+   "text": "आज का विषय बच्चों ने चुना।",
+   "en": "The children picked today's topic.",
+   "ko": "오늘 주제는 아이들이 골랐어.",
+   "blank": "विषय"
+  }
+ ],
+ "w|वीडियो": [
+  {
+   "text": "वीडियो रुक-रुक कर चल रहा है।",
+   "en": "The video keeps stalling as it plays.",
+   "ko": "영상이 끊기면서 재생돼.",
+   "blank": "वीडियो"
+  },
+  {
+   "text": "यह वीडियो एक बार और दिखाओ।",
+   "en": "Play this video once more.",
+   "ko": "이 영상 한 번 더 틀어 줘.",
+   "blank": "वीडियो"
   }
  ],
  "w|वे": [
@@ -3667,6 +4997,34 @@
    "blank": "वैसा"
   }
  ],
+ "w|वैसे": [
+  {
+   "text": "वैसे तुमने खाना खाया?",
+   "en": "By the way, did you eat?",
+   "ko": "그런데 밥은 먹었어?",
+   "blank": "वैसे"
+  },
+  {
+   "text": "वैसे वह बुरा लड़का नहीं है।",
+   "en": "He isn't a bad fellow, mind you.",
+   "ko": "그나저나 그는 나쁜 애는 아니야.",
+   "blank": "वैसे"
+  }
+ ],
+ "w|वोट": [
+  {
+   "text": "वोट देना मत भूलना।",
+   "en": "Don't forget to cast your vote.",
+   "ko": "투표하는 것 잊지 마.",
+   "blank": "वोट"
+  },
+  {
+   "text": "मैंने इस बार वोट दिया।",
+   "en": "I cast my vote this time.",
+   "ko": "이번엔 내가 투표했어.",
+   "blank": "वोट"
+  }
+ ],
  "w|व्यक्ति": [
   {
    "text": "वह बहुत शांत व्यक्ति है।",
@@ -3679,6 +5037,34 @@
    "en": "Every person got water.",
    "ko": "사람마다 물을 받았어.",
    "blank": "व्यक्ति"
+  }
+ ],
+ "w|व्यवस्था": [
+  {
+   "text": "पानी की व्यवस्था हो गई है।",
+   "en": "The water has been arranged.",
+   "ko": "물은 준비가 됐어.",
+   "blank": "व्यवस्था"
+  },
+  {
+   "text": "बैठने की व्यवस्था छत पर है।",
+   "en": "The seating is set up on the roof.",
+   "ko": "앉을 자리는 옥상에 마련돼 있어.",
+   "blank": "व्यवस्था"
+  }
+ ],
+ "w|शक्ति": [
+  {
+   "text": "बीमारी के बाद शक्ति धीरे लौट रही है।",
+   "en": "Strength is slowly coming back after the illness.",
+   "ko": "아프고 나서 기운이 천천히 돌아오고 있어.",
+   "blank": "शक्ति"
+  },
+  {
+   "text": "आज बोलने की शक्ति नहीं, गला बैठा है।",
+   "en": "I can't manage to talk today, my throat has gone.",
+   "ko": "오늘은 말할 힘이 없어, 목이 잠겼어.",
+   "blank": "शक्ति"
   }
  ],
  "w|शब्द": [
@@ -3695,6 +5081,20 @@
    "blank": "शब्द"
   }
  ],
+ "w|शरीर": [
+  {
+   "text": "शरीर भारी लग रहा है।",
+   "en": "My body feels heavy.",
+   "ko": "몸이 무겁게 느껴져.",
+   "blank": "शरीर"
+  },
+  {
+   "text": "बीमारी के बाद शरीर कमज़ोर है।",
+   "en": "The body is weak after the illness.",
+   "ko": "앓고 나니 몸이 약해.",
+   "blank": "शरीर"
+  }
+ ],
  "w|शहर": [
   {
    "text": "यह शहर रात को जागता रहता है।",
@@ -3707,6 +5107,34 @@
    "en": "It's hotter in the city today.",
    "ko": "오늘은 도시가 더 더워.",
    "blank": "शहर"
+  }
+ ],
+ "w|शादी": [
+  {
+   "text": "शादी में सारा गाँव आया।",
+   "en": "The whole village came to the wedding.",
+   "ko": "결혼식에 마을 사람이 다 왔어.",
+   "blank": "शादी"
+  },
+  {
+   "text": "उनकी शादी अगले महीने है।",
+   "en": "Their wedding is next month.",
+   "ko": "그들 결혼식은 다음 달이야.",
+   "blank": "शादी"
+  }
+ ],
+ "w|शायद": [
+  {
+   "text": "शायद वह बस चूक गया।",
+   "en": "Maybe he missed the bus.",
+   "ko": "아마 그가 버스를 놓쳤어.",
+   "blank": "शायद"
+  },
+  {
+   "text": "शायद कल छुट्टी हो।",
+   "en": "Maybe tomorrow is a day off.",
+   "ko": "내일은 쉴지도 몰라.",
+   "blank": "शायद"
   }
  ],
  "w|शिक्षा": [
@@ -3735,6 +5163,48 @@
    "en": "Can you drive the car in the rain?",
    "ko": "비 오는 데 너 운전할 수 있어?",
    "blank": "सकती"
+  }
+ ],
+ "w|संख्या": [
+  {
+   "text": "बच्चों की संख्या गिन लो, कोई बाहर न रह जाए।",
+   "en": "Count the children so nobody is left outside.",
+   "ko": "아이들 수를 세어, 밖에 빠지는 애가 없게 해.",
+   "blank": "संख्या"
+  },
+  {
+   "text": "इस बस में सीटों की संख्या कम है।",
+   "en": "This bus doesn't have enough seats.",
+   "ko": "이 버스는 좌석 수가 적어.",
+   "blank": "संख्या"
+  }
+ ],
+ "w|सच": [
+  {
+   "text": "सच बताओ, कहाँ थे?",
+   "en": "Tell the truth, where were you?",
+   "ko": "솔직히 말해, 어디 있었어?",
+   "blank": "सच"
+  },
+  {
+   "text": "उसकी बात सच निकली।",
+   "en": "What he said turned out true.",
+   "ko": "그의 말이 사실로 드러났어.",
+   "blank": "सच"
+  }
+ ],
+ "w|सड़क": [
+  {
+   "text": "सड़क पर पानी भरा है।",
+   "en": "The road is full of water.",
+   "ko": "길에 물이 고여 있어.",
+   "blank": "सड़क"
+  },
+  {
+   "text": "यह सड़क सीधे स्टेशन जाती है।",
+   "en": "This road goes straight to the station.",
+   "ko": "이 길은 역으로 곧장 가.",
+   "blank": "सड़क"
   }
  ],
  "w|सब": [
@@ -3807,6 +5277,34 @@
    "blank": "समय"
   }
  ],
+ "w|समय पर": [
+  {
+   "text": "ट्रेन समय पर पहुँची।",
+   "en": "The train arrived on time.",
+   "ko": "기차가 제시간에 도착했어.",
+   "blank": "समय पर"
+  },
+  {
+   "text": "दवाई समय पर खा लेना।",
+   "en": "Take the medicine on time.",
+   "ko": "약은 제때 먹어.",
+   "blank": "समय पर"
+  }
+ ],
+ "w|समर्थन": [
+  {
+   "text": "पूरे मोहल्ले ने उसका समर्थन किया।",
+   "en": "The whole neighborhood stood by him.",
+   "ko": "동네 사람들이 모두 그를 지지했어.",
+   "blank": "समर्थन"
+  },
+  {
+   "text": "समर्थन न मिला तो प्रस्ताव रुक गया।",
+   "en": "The proposal stopped when it found no support.",
+   "ko": "지지를 못 받아서 제안이 멈췄어.",
+   "blank": "समर्थन"
+  }
+ ],
  "w|समाज": [
   {
    "text": "समाज इस फ़ैसले से खुश नहीं।",
@@ -3819,6 +5317,34 @@
    "en": "His work is for society.",
    "ko": "그의 일은 사회를 위한 거야.",
    "blank": "समाज"
+  }
+ ],
+ "w|सम्मान": [
+  {
+   "text": "बड़ों का सम्मान करो।",
+   "en": "Show respect to your elders.",
+   "ko": "어른을 공경해.",
+   "blank": "सम्मान"
+  },
+  {
+   "text": "इस सम्मान से वह शर्मा गया।",
+   "en": "He turned shy at being honored like that.",
+   "ko": "그런 예우를 받고 그는 쑥스러워했어.",
+   "blank": "सम्मान"
+  }
+ ],
+ "w|सर": [
+  {
+   "text": "सर, यह सवाल समझ नहीं आया।",
+   "en": "Sir, I didn't follow this question.",
+   "ko": "선생님, 이 질문은 이해가 안 됐어.",
+   "blank": "सर"
+  },
+  {
+   "text": "सर दफ़्तर में आ गए हैं।",
+   "en": "Sir has arrived at the office.",
+   "ko": "선생님이 사무실에 오셨어.",
+   "blank": "सर"
   }
  ],
  "w|सरकार": [
@@ -3933,6 +5459,20 @@
    "blank": "साल"
   }
  ],
+ "w|साहब": [
+  {
+   "text": "साहब अंदर आइए।",
+   "en": "Sir, please come in.",
+   "ko": "선생님, 안으로 들어오세요.",
+   "blank": "साहब"
+  },
+  {
+   "text": "साहब अभी बैठक में हैं।",
+   "en": "Sir is in a meeting right now.",
+   "ko": "사장님은 지금 회의 중이야.",
+   "blank": "साहब"
+  }
+ ],
  "w|सिर्फ़": [
   {
    "text": "अभी सिर्फ़ पानी पीना, कुछ और नहीं।",
@@ -3973,6 +5513,20 @@
    "en": "We head out early in the morning.",
    "ko": "우리는 아침 일찍 나서.",
    "blank": "सुबह"
+  }
+ ],
+ "w|सुरक्षा": [
+  {
+   "text": "बच्चों की सुरक्षा पहले है।",
+   "en": "The children's safety comes first.",
+   "ko": "아이들 안전이 먼저야.",
+   "blank": "सुरक्षा"
+  },
+  {
+   "text": "सुरक्षा के लिए हेलमेट पहनो।",
+   "en": "Wear a helmet for safety.",
+   "ko": "안전하려고 헬멧을 써.",
+   "blank": "सुरक्षा"
   }
  ],
  "w|से": [
@@ -4059,6 +5613,20 @@
    "blank": "स्कूल"
   }
  ],
+ "w|स्तर": [
+  {
+   "text": "पानी का स्तर बढ़ गया है।",
+   "en": "The water level has risen.",
+   "ko": "물 높이가 올라갔어.",
+   "blank": "स्तर"
+  },
+  {
+   "text": "पढ़ाई का स्तर इस साल अच्छा है।",
+   "en": "The standard of studies is good this year.",
+   "ko": "올해 공부 수준은 좋아.",
+   "blank": "स्तर"
+  }
+ ],
  "w|स्थान": [
   {
    "text": "यह स्थान बहुत शांत है।",
@@ -4073,6 +5641,48 @@
    "blank": "स्थान"
   }
  ],
+ "w|स्थित": [
+  {
+   "text": "डाकखाना चौराहे पर स्थित है।",
+   "en": "The post office is at the crossroads.",
+   "ko": "우체국은 사거리에 있어.",
+   "blank": "स्थित"
+  },
+  {
+   "text": "मंदिर पहाड़ी पर स्थित है।",
+   "en": "The temple stands on the hill.",
+   "ko": "사원은 언덕 위에 있어.",
+   "blank": "स्थित"
+  }
+ ],
+ "w|स्थिति": [
+  {
+   "text": "स्थिति अभी काबू में है।",
+   "en": "The situation is under control for now.",
+   "ko": "상황은 아직 통제되고 있어.",
+   "blank": "स्थिति"
+  },
+  {
+   "text": "बारिश से स्थिति बिगड़ गई।",
+   "en": "The rain made the situation worse.",
+   "ko": "비 때문에 상황이 더 나빠졌어.",
+   "blank": "स्थिति"
+  }
+ ],
+ "w|हज़ार": [
+  {
+   "text": "मैंने हज़ार बार कहा, पर वह नहीं माना।",
+   "en": "I said it a thousand times, but he wouldn't listen.",
+   "ko": "내가 천 번을 말해도 그는 안 들었어.",
+   "blank": "हज़ार"
+  },
+  {
+   "text": "टिकट दो हज़ार का पड़ गया।",
+   "en": "The ticket came to two thousand.",
+   "ko": "표 값이 이천 루피가 나왔어.",
+   "blank": "हज़ार"
+  }
+ ],
  "w|हम": [
   {
    "text": "हम आज घर पर ही रहेंगे।",
@@ -4085,6 +5695,20 @@
    "en": "The two of us came on the same bus.",
    "ko": "우리 둘은 같은 버스로 왔어.",
    "blank": "हम"
+  }
+ ],
+ "w|हमला": [
+  {
+   "text": "रात को हमला हो गया।",
+   "en": "There was an attack in the night.",
+   "ko": "밤에 공격이 있었어.",
+   "blank": "हमला"
+  },
+  {
+   "text": "हमले के बाद बाज़ार बंद रहा।",
+   "en": "The market stayed shut after the attack.",
+   "ko": "공격 뒤에 시장은 닫혀 있었어.",
+   "blank": "हमले"
   }
  ],
  "w|हमारा": [
@@ -4129,6 +5753,34 @@
    "blank": "हर"
   }
  ],
+ "w|हर दिन": [
+  {
+   "text": "वह हर दिन सुबह टहलता है।",
+   "en": "He goes for a walk every morning.",
+   "ko": "그는 매일 아침 산책해.",
+   "blank": "हर दिन"
+  },
+  {
+   "text": "हर दिन यही झगड़ा होता है।",
+   "en": "This same quarrel happens every day.",
+   "ko": "매일 똑같은 다툼이 생겨.",
+   "blank": "हर दिन"
+  }
+ ],
+ "w|हाँ": [
+  {
+   "text": "हाँ, दूध अभी गर्म है।",
+   "en": "Yes, the milk is still hot.",
+   "ko": "응, 우유는 아직 뜨거워.",
+   "blank": "हाँ"
+  },
+  {
+   "text": "माँ ने हाँ कह दिया, अब खेलने जाओ।",
+   "en": "Mother said yes, so go and play.",
+   "ko": "엄마가 그렇다고 했어, 이제 놀러 가.",
+   "blank": "हाँ"
+  }
+ ],
  "w|हाथ": [
   {
    "text": "खाने से पहले हाथ धो लो।",
@@ -4143,6 +5795,20 @@
    "blank": "हाथ"
   }
  ],
+ "w|हालांकि": [
+  {
+   "text": "हालांकि थक गया हूँ, काम पूरा करूँगा।",
+   "en": "I'm tired, and I'll still finish the work.",
+   "ko": "피곤해도 일은 끝낼게.",
+   "blank": "हालांकि"
+  },
+  {
+   "text": "हालांकि बारिश हो रही है, वह आया।",
+   "en": "It was raining, and he came anyway.",
+   "ko": "비가 오는데도 그가 왔어.",
+   "blank": "हालांकि"
+  }
+ ],
  "w|हिंदी": [
   {
    "text": "हिंदी उसकी मातृभाषा है।",
@@ -4155,6 +5821,20 @@
    "en": "He speaks Hindi clearly and slowly.",
    "ko": "그는 힌디어를 또박또박 천천히 말해.",
    "blank": "हिंदी"
+  }
+ ],
+ "w|हिस्सा": [
+  {
+   "text": "इस काम में मेरा भी हिस्सा है।",
+   "en": "I have a share in this work too.",
+   "ko": "이 일에는 내 몫도 있어.",
+   "blank": "हिस्सा"
+  },
+  {
+   "text": "केक का बड़ा हिस्सा बच्चों को दो।",
+   "en": "Give the children the bigger share of the cake.",
+   "ko": "케이크는 큰 쪽을 애들한테 줘.",
+   "blank": "हिस्सा"
   }
  ],
  "w|ही": [

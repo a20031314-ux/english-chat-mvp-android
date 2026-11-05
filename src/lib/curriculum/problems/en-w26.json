@@ -24,7 +24,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "추가의",
     "answer": "additional",
-    "line": "We need additional help for this project."
+    "line": "We need additional help for this project.",
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|administration": {
     "kind": "word",
@@ -51,7 +53,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "매년의",
     "answer": "annual",
-    "line": "We have an annual meeting every spring."
+    "line": "We have an annual meeting every spring.",
+    "hint": "a"
   },
   "w|asset": {
     "kind": "word",
@@ -94,7 +97,7 @@
     "type": "type",
     "name": "bake",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "굽다",
+    "gloss": "오븐에 굽다",
     "answer": "bake",
     "line": "I like to bake cookies on weekends."
   },
@@ -139,7 +142,7 @@
     "type": "type",
     "name": "bid",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "입찰",
+    "gloss": "입찰가",
     "answer": "bid",
     "line": "His bid for the painting was the highest."
   },
@@ -204,7 +207,7 @@
     "type": "type",
     "name": "combat",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "전투",
+    "gloss": "교전",
     "answer": "combat",
     "line": "Soldiers train for combat in difficult conditions.",
     "hint": "c",
@@ -224,7 +227,7 @@
     "type": "type",
     "name": "congress",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의회",
+    "gloss": "의회(미국)",
     "answer": "congress",
     "line": "He was elected to congress last year."
   },
@@ -278,7 +281,7 @@
     "type": "type",
     "name": "description",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "설명",
+    "gloss": "묘사",
     "answer": "description",
     "line": "Can you give me a description of the suspect?",
     "hint": "d",
@@ -397,7 +400,7 @@
     "type": "type",
     "name": "finding",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "발견",
+    "gloss": "연구 결과",
     "answer": "finding",
     "line": "The scientist published her finding.",
     "hint": "f",
@@ -419,7 +422,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "냉장고",
     "answer": "fridge",
-    "line": "Put the milk back in the fridge."
+    "line": "Put the milk back in the fridge.",
+    "hint": "f"
   },
   "w|generally": {
     "kind": "word",
@@ -525,7 +529,7 @@
     "type": "type",
     "name": "institute",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "기관",
+    "gloss": "연구소",
     "answer": "institute",
     "line": "She works at a research institute in the city."
   },
@@ -716,7 +720,7 @@
     "type": "type",
     "name": "prior",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "이전의",
+    "gloss": "사전의",
     "answer": "prior",
     "line": "She had no prior experience.",
     "hint": "p",
@@ -1026,7 +1030,7 @@
     "type": "type",
     "name": "various",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "다양한",
+    "gloss": "여러 가지의",
     "answer": "various",
     "line": "The shop offers various types of bread."
   },

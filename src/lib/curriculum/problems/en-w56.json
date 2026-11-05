@@ -244,7 +244,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "교활한",
     "answer": "cunning",
-    "line": "He came up with a cunning plan to win."
+    "line": "He came up with a cunning plan to win.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|cupboard": {
     "kind": "word",

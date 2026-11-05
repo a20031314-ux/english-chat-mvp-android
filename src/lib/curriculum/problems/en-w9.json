@@ -15,7 +15,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "탄산음료",
     "answer": "pop",
-    "line": "He drank a cold pop with his lunch."
+    "line": "He drank a cold pop with his lunch.",
+    "hint": "p"
   },
   "w|boyfriend": {
     "kind": "word",
@@ -58,7 +59,7 @@
     "type": "type",
     "name": "pleasure",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "기쁨",
+    "gloss": "만나서 기쁨",
     "answer": "pleasure",
     "line": "It's a pleasure to meet you."
   },
@@ -85,7 +86,7 @@
     "type": "type",
     "name": "mum",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "엄마",
+    "gloss": "엄마(영국)",
     "answer": "mum",
     "line": "My mum makes the best soup.",
     "hint": "m",
@@ -134,7 +135,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "자주",
     "answer": "often",
-    "line": "I often go for a walk after dinner."
+    "line": "I often go for a walk after dinner.",
+    "hint": "o"
   },
   "w|type": {
     "kind": "word",
@@ -179,7 +181,7 @@
     "type": "type",
     "name": "photo",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "사진",
+    "gloss": "사진(구어)",
     "answer": "photo",
     "line": "Can you send me that photo from the party?",
     "hint": "p",
@@ -253,7 +255,7 @@
     "type": "type",
     "name": "mama",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "엄마",
+    "gloss": "엄마(아기)",
     "answer": "mama",
     "line": "My little brother always calls for mama when he's scared.",
     "hint": "m",
@@ -293,7 +295,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "사라지다",
     "answer": "disappear",
-    "line": "Watch the magician make the rabbit disappear."
+    "line": "Watch the magician make the rabbit disappear.",
+    "hint": "d"
   },
   "w|beer": {
     "kind": "word",
@@ -318,7 +321,7 @@
     "type": "type",
     "name": "client",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "고객",
+    "gloss": "의뢰인",
     "answer": "client",
     "line": "The lawyer met with her client this morning."
   },
@@ -412,7 +415,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "특히",
     "answer": "especially",
-    "line": "I like ice cream, especially chocolate."
+    "line": "I like ice cream, especially chocolate.",
+    "hint": "e",
+    "mark": "한 단어"
   },
   "w|green": {
     "kind": "word",
@@ -628,7 +633,7 @@
     "type": "type",
     "name": "issue",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "문제",
+    "gloss": "사안",
     "answer": "issue",
     "line": "There is an important issue we need to discuss.",
     "hint": "i",
@@ -695,7 +700,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "거대한",
     "answer": "huge",
-    "line": "That building is huge and impressive."
+    "line": "That building is huge and impressive.",
+    "hint": "h",
+    "mark": "한 단어"
   },
   "w|beginning": {
     "kind": "word",
@@ -711,7 +718,7 @@
     "type": "type",
     "name": "holy",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "신성한",
+    "gloss": "거룩한",
     "answer": "holy",
     "line": "The church is a holy place for many people."
   },
@@ -738,7 +745,7 @@
     "type": "type",
     "name": "suggest",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "제안하다",
+    "gloss": "추천하다",
     "answer": "suggest",
     "line": "Can you suggest a good restaurant?",
     "hint": "s",
@@ -780,7 +787,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "장난",
     "answer": "trick",
-    "line": "He played a trick on his friend."
+    "line": "He played a trick on his friend.",
+    "hint": "t"
   },
   "w|wine": {
     "kind": "word",
@@ -978,7 +986,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "해결하다",
     "answer": "settle",
-    "line": "Let's settle this problem now."
+    "line": "Let's settle this problem now.",
+    "hint": "s"
   },
   "w|stage": {
     "kind": "word",
@@ -1048,7 +1057,7 @@
     "type": "type",
     "name": "yell",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "소리치다",
+    "gloss": "고함치다",
     "answer": "yell",
     "line": "Please don’t yell at me.",
     "hint": "y",

@@ -163,7 +163,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "수수료",
     "answer": "fee",
-    "line": "There is a small fee to enter the museum."
+    "line": "There is a small fee to enter the museum.",
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|objection": {
     "kind": "word",
@@ -278,7 +280,7 @@
     "type": "type",
     "name": "someplace",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "어딘가",
+    "gloss": "어딘가(구어)",
     "answer": "someplace",
     "line": "Let's go eat someplace nice tonight.",
     "hint": "s",
@@ -424,7 +426,7 @@
     "type": "type",
     "name": "forth",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "앞으로",
+    "gloss": "앞으로 나서",
     "answer": "forth",
     "line": "He stepped forth to accept the prize.",
     "hint": "f",
@@ -732,7 +734,7 @@
     "type": "type",
     "name": "ouch",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "아야",
+    "gloss": "아야(강조)",
     "answer": "ouch",
     "line": "Ouch, that really hurt when I bumped my knee.",
     "hint": "o",
@@ -772,7 +774,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "격노",
     "answer": "rage",
-    "line": "He shouted in a fit of rage."
+    "line": "He shouted in a fit of rage.",
+    "hint": "r",
+    "mark": "한 단어"
   },
   "w|native": {
     "kind": "word",

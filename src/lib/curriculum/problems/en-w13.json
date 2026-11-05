@@ -109,7 +109,7 @@
     "type": "type",
     "name": "babe",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "아기",
+    "gloss": "아기(구어)",
     "answer": "babe",
     "line": "Look at that cute little babe sleeping.",
     "hint": "b",
@@ -131,7 +131,7 @@
     "type": "type",
     "name": "amount",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "양",
+    "gloss": "분량",
     "answer": "amount",
     "line": "The amount of sugar in this cake is just right."
   },
@@ -178,7 +178,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "우주",
     "answer": "universe",
-    "line": "The universe is so vast and full of mysteries."
+    "line": "The universe is so vast and full of mysteries.",
+    "hint": "u"
   },
   "w|wing": {
     "kind": "word",
@@ -270,7 +271,7 @@
     "type": "type",
     "name": "cigarette",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "담배",
+    "gloss": "담배(개비)",
     "answer": "cigarette",
     "line": "He lit a cigarette outside the building."
   },
@@ -344,7 +345,7 @@
     "type": "type",
     "name": "proof",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "증거",
+    "gloss": "증명",
     "answer": "proof",
     "line": "Do you have any proof of your claim?",
     "hint": "p",
@@ -645,7 +646,7 @@
     "type": "type",
     "name": "priest",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "신부",
+    "gloss": "신부(성직)",
     "answer": "priest",
     "line": "The priest led the ceremony."
   },
@@ -710,7 +711,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "최근에",
     "answer": "lately",
-    "line": "I haven't seen her lately."
+    "line": "I haven't seen her lately.",
+    "hint": "l"
   },
   "w|worker": {
     "kind": "word",
@@ -728,7 +730,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "용감한",
     "answer": "brave",
-    "line": "He was brave during the storm."
+    "line": "He was brave during the storm.",
+    "hint": "b"
   },
   "w|lip": {
     "kind": "word",
@@ -771,7 +774,7 @@
     "type": "type",
     "name": "snow",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "눈",
+    "gloss": "눈(날씨)",
     "answer": "snow",
     "line": "The snow is falling gently outside.",
     "hint": "s",
@@ -975,7 +978,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "광장",
     "answer": "square",
-    "line": "Let’s meet at the main square."
+    "line": "Let’s meet at the main square.",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|bike": {
     "kind": "word",
@@ -1074,7 +1079,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "직원",
     "answer": "staff",
-    "line": "The staff at this hotel are very kind."
+    "line": "The staff at this hotel are very kind.",
+    "hint": "s"
   },
   "w|stare": {
     "kind": "word",

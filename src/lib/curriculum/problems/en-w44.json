@@ -366,7 +366,7 @@
     "type": "type",
     "name": "gown",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "가운",
+    "gloss": "야회복",
     "answer": "gown",
     "line": "She wore a beautiful gown to the party."
   },
@@ -514,7 +514,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "납치",
     "answer": "kidnapping",
-    "line": "The police are investigating a kidnapping case."
+    "line": "The police are investigating a kidnapping case.",
+    "hint": "k"
   },
   "w|lifelong": {
     "kind": "word",

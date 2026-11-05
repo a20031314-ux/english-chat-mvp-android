@@ -195,7 +195,7 @@
     "type": "type",
     "name": "consistently",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "꾸준히",
+    "gloss": "한결같이",
     "answer": "consistently",
     "line": "She performs consistently well in every test."
   },
@@ -222,7 +222,7 @@
     "type": "type",
     "name": "conventional",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "전통적인",
+    "gloss": "관습적인",
     "answer": "conventional",
     "line": "He prefers a conventional style of painting.",
     "hint": "c",
@@ -233,7 +233,7 @@
     "type": "type",
     "name": "conversion",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "전환",
+    "gloss": "환산",
     "answer": "conversion",
     "line": "We need the conversion rate for dollars to euros.",
     "hint": "c",
@@ -376,7 +376,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "오로지",
     "answer": "exclusively",
-    "line": "This area is reserved exclusively for members."
+    "line": "This area is reserved exclusively for members.",
+    "hint": "e"
   },
   "w|export": {
     "kind": "word",
@@ -412,7 +413,7 @@
     "type": "type",
     "name": "formerly",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "이전에",
+    "gloss": "종전에",
     "answer": "formerly",
     "line": "He was formerly the manager of this store.",
     "hint": "f",
@@ -488,7 +489,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "강조하다",
     "answer": "highlight",
-    "line": "Let me highlight the key points for you."
+    "line": "Let me highlight the key points for you.",
+    "hint": "h",
+    "mark": "한 단어"
   },
   "w|holder": {
     "kind": "word",
@@ -524,7 +527,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "문의",
     "answer": "inquiry",
-    "line": "She made an inquiry about the train schedule."
+    "line": "She made an inquiry about the train schedule.",
+    "hint": "i"
   },
   "w|instantly": {
     "kind": "word",
@@ -828,7 +832,7 @@
     "type": "type",
     "name": "scope",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "범위",
+    "gloss": "범위(한계)",
     "answer": "scope",
     "line": "The project is beyond the scope of our budget.",
     "hint": "s",
@@ -929,7 +933,7 @@
     "type": "type",
     "name": "terror",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "공포",
+    "gloss": "극심한 공포",
     "answer": "terror",
     "line": "She screamed in terror when she saw the spider.",
     "hint": "t",

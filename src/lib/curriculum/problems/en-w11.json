@@ -58,18 +58,22 @@
     "type": "type",
     "name": "extra",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "여분의",
+    "gloss": "추가의",
     "answer": "extra",
-    "line": "I need an extra chair for the guest."
+    "line": "I need an extra chair for the guest.",
+    "hint": "e",
+    "mark": "한 단어"
   },
   "w|speed": {
     "kind": "word",
     "type": "type",
     "name": "speed",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "속도",
+    "gloss": "속력",
     "answer": "speed",
-    "line": "The car picked up speed on the highway."
+    "line": "The car picked up speed on the highway.",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|focus": {
     "kind": "word",
@@ -78,7 +82,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "집중하다",
     "answer": "focus",
-    "line": "I need to focus on my homework now."
+    "line": "I need to focus on my homework now.",
+    "hint": "f"
   },
   "w|cheat": {
     "kind": "word",
@@ -355,7 +360,7 @@
     "type": "type",
     "name": "mommy",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "엄마",
+    "gloss": "엄마(아이)",
     "answer": "mommy",
     "line": "My mommy makes the best soup.",
     "hint": "m",
@@ -512,7 +517,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "돼지",
     "answer": "pig",
-    "line": "A pig rolled in the mud."
+    "line": "A pig rolled in the mud.",
+    "hint": "p"
   },
   "w|nurse": {
     "kind": "word",
@@ -602,7 +608,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "가짜",
     "answer": "fake",
-    "line": "That bag is a fake designer item."
+    "line": "That bag is a fake designer item.",
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|due": {
     "kind": "word",
@@ -636,9 +644,11 @@
     "type": "type",
     "name": "plenty",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "풍부한",
+    "gloss": "넉넉한",
     "answer": "plenty",
-    "line": "There is plenty of food for everyone."
+    "line": "There is plenty of food for everyone.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|willing": {
     "kind": "word",
@@ -780,7 +790,7 @@
     "type": "type",
     "name": "justice",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "정의",
+    "gloss": "정의(공정)",
     "answer": "justice",
     "line": "Everyone deserves justice in court."
   },
@@ -807,7 +817,7 @@
     "type": "type",
     "name": "bridge",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "다리",
+    "gloss": "다리(교량)",
     "answer": "bridge",
     "line": "Let's meet on the bridge after school.",
     "hint": "b",
@@ -854,7 +864,7 @@
     "type": "type",
     "name": "lesson",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "수업",
+    "gloss": "수업(내용)",
     "answer": "lesson",
     "line": "Today's lesson was about animals.",
     "hint": "l",
@@ -991,7 +1001,7 @@
     "type": "type",
     "name": "remove",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "제거하다",
+    "gloss": "벗다",
     "answer": "remove",
     "line": "Please remove your shoes before entering."
   },

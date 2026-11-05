@@ -123,7 +123,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "화물",
     "answer": "cargo",
-    "line": "The ship carried a heavy cargo."
+    "line": "The ship carried a heavy cargo.",
+    "hint": "c"
   },
   "w|carpet": {
     "kind": "word",
@@ -283,7 +284,7 @@
     "type": "type",
     "name": "determination",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "결의",
+    "gloss": "각오",
     "answer": "determination",
     "line": "With determination, he reached his goal.",
     "hint": "d",
@@ -566,7 +567,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "지하철",
     "answer": "metro",
-    "line": "I take the metro to work every morning."
+    "line": "I take the metro to work every morning.",
+    "hint": "m"
   },
   "w|metropolitan": {
     "kind": "word",
@@ -802,7 +804,7 @@
     "type": "type",
     "name": "retain",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "유지하다",
+    "gloss": "간직하다",
     "answer": "retain",
     "line": "It's hard to retain all this information.",
     "hint": "r",
@@ -950,7 +952,7 @@
     "type": "type",
     "name": "sunshine",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "햇빛",
+    "gloss": "햇살",
     "answer": "sunshine",
     "line": "Today is full of warm sunshine."
   },
@@ -986,7 +988,7 @@
     "type": "type",
     "name": "tobacco",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "담배",
+    "gloss": "담배(잎)",
     "answer": "tobacco",
     "line": "Smoking tobacco is banned here.",
     "hint": "t",

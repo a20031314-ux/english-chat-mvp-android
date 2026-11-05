@@ -42,7 +42,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "넉넉한",
     "answer": "ample",
-    "line": "We have ample time to finish the project."
+    "line": "We have ample time to finish the project.",
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|analogy": {
     "kind": "word",
@@ -67,9 +69,11 @@
     "type": "type",
     "name": "apparel",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의복",
+    "gloss": "의류",
     "answer": "apparel",
-    "line": "The store sells sports apparel and shoes."
+    "line": "The store sells sports apparel and shoes.",
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|appoint": {
     "kind": "word",
@@ -159,7 +163,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "고급스러운",
     "answer": "classy",
-    "line": "She wore a classy dress to the dinner party."
+    "line": "She wore a classy dress to the dinner party.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|comprehend": {
     "kind": "word",
@@ -231,7 +237,7 @@
     "type": "type",
     "name": "delegate",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "대표",
+    "gloss": "파견 대표",
     "answer": "delegate",
     "line": "Each country sent a delegate to the conference.",
     "hint": "d",
@@ -316,7 +322,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "활발한",
     "answer": "energetic",
-    "line": "She is always energetic in the mornings."
+    "line": "She is always energetic in the mornings.",
+    "hint": "e",
+    "mark": "한 단어"
   },
   "w|feasible": {
     "kind": "word",
@@ -649,7 +657,7 @@
     "type": "type",
     "name": "onset",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "시작",
+    "gloss": "도래",
     "answer": "onset",
     "line": "The onset of winter brought heavy snow.",
     "hint": "o",
@@ -786,7 +794,7 @@
     "type": "type",
     "name": "realization",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "깨달음",
+    "gloss": "알아차림",
     "answer": "realization",
     "line": "He had a sudden realization about his mistake."
   },
@@ -941,7 +949,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "세련된",
     "answer": "stylish",
-    "line": "You look so stylish today."
+    "line": "You look so stylish today.",
+    "hint": "s"
   },
   "w|technician": {
     "kind": "word",

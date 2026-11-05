@@ -114,7 +114,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "사랑스러운",
     "answer": "lovely",
-    "line": "You have such a lovely smile."
+    "line": "You have such a lovely smile.",
+    "hint": "l"
   },
   "w|list": {
     "kind": "word",
@@ -148,7 +149,7 @@
     "type": "type",
     "name": "middle",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "한가운데",
+    "gloss": "한가운데(장소)",
     "answer": "middle",
     "line": "She stood in the middle of the room."
   },
@@ -159,7 +160,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "부유한",
     "answer": "rich",
-    "line": "He became rich after starting his own company."
+    "line": "He became rich after starting his own company.",
+    "hint": "r"
   },
   "w|accident": {
     "kind": "word",
@@ -294,7 +296,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "살인자",
     "answer": "killer",
-    "line": "The police arrested the killer last night."
+    "line": "The police arrested the killer last night.",
+    "hint": "k"
   },
   "w|grab": {
     "kind": "word",
@@ -530,7 +533,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "변호사",
     "answer": "lawyer",
-    "line": "She wants to become a lawyer."
+    "line": "She wants to become a lawyer.",
+    "hint": "l",
+    "mark": "한 단어"
   },
   "w|prison": {
     "kind": "word",
@@ -584,7 +589,7 @@
     "type": "type",
     "name": "doubt",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의심하다",
+    "gloss": "의심이 들다",
     "answer": "doubt",
     "line": "I doubt he will come on time.",
     "hint": "d",
@@ -597,7 +602,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "학생",
     "answer": "student",
-    "line": "The student is reading a book."
+    "line": "The student is reading a book.",
+    "hint": "s"
   },
   "w|partner": {
     "kind": "word",
@@ -633,14 +639,15 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "찢다",
     "answer": "tear",
-    "line": "Be careful not to tear your shirt."
+    "line": "Be careful not to tear your shirt.",
+    "hint": "t"
   },
   "w|position": {
     "kind": "word",
     "type": "type",
     "name": "position",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "위치",
+    "gloss": "자리",
     "answer": "position",
     "line": "Please return the chair to its original position."
   },
@@ -707,7 +714,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "망치다",
     "answer": "ruin",
-    "line": "Rain can ruin your picnic."
+    "line": "Rain can ruin your picnic.",
+    "hint": "r"
   },
   "w|form": {
     "kind": "word",
@@ -860,7 +868,7 @@
     "type": "type",
     "name": "forward",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "앞으로",
+    "gloss": "앞으로 나와",
     "answer": "forward",
     "line": "Please step forward and introduce yourself.",
     "hint": "f",
@@ -891,7 +899,7 @@
     "type": "type",
     "name": "risk",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "위험",
+    "gloss": "위험성",
     "answer": "risk",
     "line": "He took a big risk to start his own business."
   },
@@ -965,7 +973,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "비행기",
     "answer": "plane",
-    "line": "The plane landed safely at the airport."
+    "line": "The plane landed safely at the airport.",
+    "hint": "p"
   },
   "w|note": {
     "kind": "word",
@@ -1037,7 +1046,7 @@
     "type": "type",
     "name": "suspect",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의심하다",
+    "gloss": "수상히 여기다",
     "answer": "suspect",
     "line": "I suspect he is not telling the truth.",
     "hint": "s",

@@ -41,6 +41,20 @@
    "blank": "abrir"
   }
  ],
+ "w|absolutamente": [
+  {
+   "text": "Absolutamente não concordo.",
+   "en": "I absolutely don't agree.",
+   "ko": "전혀 동의하지 않아.",
+   "blank": "Absolutamente"
+  },
+  {
+   "text": "Nada mudou absolutamente.",
+   "en": "Absolutely nothing changed.",
+   "ko": "아무것도 전혀 안 바뀌었어.",
+   "blank": "absolutamente"
+  }
+ ],
  "w|acabar": [
   {
    "text": "Isso vai acabar bem.",
@@ -195,6 +209,20 @@
    "blank": "acreditar"
   }
  ],
+ "w|acusação": [
+  {
+   "text": "A acusação não cola.",
+   "en": "The accusation doesn't stick.",
+   "ko": "그 혐의는 안 통해.",
+   "blank": "acusação"
+  },
+  {
+   "text": "Ele riu da acusação.",
+   "en": "He laughed at the accusation.",
+   "ko": "그 사람이 혐의를 비웃었어.",
+   "blank": "acusação"
+  }
+ ],
  "w|adeus": [
   {
    "text": "Disse adeus e foi embora.",
@@ -263,6 +291,20 @@
    "en": "I need a lawyer.",
    "ko": "변호사가 필요해.",
    "blank": "advogado"
+  }
+ ],
+ "w|afinal": [
+  {
+   "text": "Afinal deu tudo certo.",
+   "en": "It all worked out in the end.",
+   "ko": "결국 다 잘 됐어.",
+   "blank": "Afinal"
+  },
+  {
+   "text": "Afinal, quem paga a conta?",
+   "en": "So, who's paying the bill?",
+   "ko": "그래서 계산은 누가 해?",
+   "blank": "Afinal"
   }
  ],
  "w|agente": [
@@ -767,6 +809,20 @@
    "en": "I bought the birthday cake.",
    "ko": "생일 케이크를 샀어.",
    "blank": "aniversário"
+  }
+ ],
+ "w|anjo": [
+  {
+   "text": "A enfermeira foi um anjo.",
+   "en": "The nurse was an angel.",
+   "ko": "간호사가 천사였어.",
+   "blank": "anjo"
+  },
+  {
+   "text": "Dorme, meu anjo.",
+   "en": "Sleep, my angel.",
+   "ko": "자, 내 천사야.",
+   "blank": "anjo"
   }
  ],
  "w|ano": [
@@ -1357,6 +1413,20 @@
    "blank": "até"
   }
  ],
+ "w|até logo": [
+  {
+   "text": "Até logo, pessoal.",
+   "en": "See you later, everyone.",
+   "ko": "다들 또 봐.",
+   "blank": "Até logo"
+  },
+  {
+   "text": "Falei até logo e saí.",
+   "en": "I said see you later and left.",
+   "ko": "또 보자고 하고 나왔어.",
+   "blank": "até logo"
+  }
+ ],
  "w|até que": [
   {
    "text": "Espera até que eu termine.",
@@ -1481,6 +1551,20 @@
    "en": "I got to class late.",
    "ko": "수업에 늦게 도착했어.",
    "blank": "aula"
+  }
+ ],
+ "w|aumentar": [
+  {
+   "text": "Aumenta o zoom, por favor.",
+   "en": "Zoom in, please.",
+   "ko": "화면 좀 확대해 줘.",
+   "blank": "Aumenta"
+  },
+  {
+   "text": "A conta aumentou este mês.",
+   "en": "The bill went up this month.",
+   "ko": "이번 달 요금이 올랐어.",
+   "blank": "aumentou"
   }
  ],
  "w|avião": [
@@ -2183,6 +2267,20 @@
    "blank": "Cada"
   }
  ],
+ "w|cada um": [
+  {
+   "text": "Cada um paga o próprio lanche.",
+   "en": "Each person pays for their own snack.",
+   "ko": "각자 자기 간식값은 내.",
+   "blank": "Cada um"
+  },
+  {
+   "text": "Cada um escolhe um lugar.",
+   "en": "Each one picks a seat.",
+   "ko": "각자 자리를 골라.",
+   "blank": "Cada um"
+  }
+ ],
  "w|cadê": [
   {
    "text": "Cadê meu guarda-chuva?",
@@ -2379,6 +2477,20 @@
    "blank": "campo"
   }
  ],
+ "w|canção": [
+  {
+   "text": "A canção nova emociona.",
+   "en": "The new song is moving.",
+   "ko": "새 노래가 마음을 울려.",
+   "blank": "canção"
+  },
+  {
+   "text": "Ele pediu a mesma canção.",
+   "en": "He requested the same song.",
+   "ko": "그 사람이 같은 노래를 신청했어.",
+   "blank": "canção"
+  }
+ ],
  "w|cansado": [
   {
    "text": "Cheguei cansado do trabalho.",
@@ -2533,6 +2645,20 @@
    "blank": "carregar"
   }
  ],
+ "w|carreira": [
+  {
+   "text": "A carreira no palco cansa.",
+   "en": "A career on stage wears you out.",
+   "ko": "무대 일은 힘들어.",
+   "blank": "carreira"
+  },
+  {
+   "text": "Pensei em mudar de carreira.",
+   "en": "I thought about changing careers.",
+   "ko": "직업을 바꿀까 생각했어.",
+   "blank": "carreira"
+  }
+ ],
  "w|carro": [
   {
    "text": "O carro não liga.",
@@ -2587,6 +2713,20 @@
    "en": "I'm going home.",
    "ko": "나 집에 가.",
    "blank": "casa"
+  }
+ ],
+ "w|casal": [
+  {
+   "text": "O casal dançou coladinho.",
+   "en": "The couple danced pressed close.",
+   "ko": "그 커플이 바짝 붙어서 춤췄어.",
+   "blank": "casal"
+  },
+  {
+   "text": "O casal pediu a sobremesa.",
+   "en": "The couple ordered dessert.",
+   "ko": "그 커플이 디저트를 주문했어.",
+   "blank": "casal"
   }
  ],
  "w|casamento": [
@@ -3443,6 +3583,20 @@
    "blank": "condição"
   }
  ],
+ "w|confiança": [
+  {
+   "text": "Ela traiu a minha confiança.",
+   "en": "She betrayed my trust.",
+   "ko": "그 여자가 내 신뢰를 배신했어.",
+   "blank": "confiança"
+  },
+  {
+   "text": "Tenho confiança nesse médico.",
+   "en": "I trust this doctor.",
+   "ko": "나는 그 의사를 믿어.",
+   "blank": "confiança"
+  }
+ ],
  "w|confiar": [
   {
    "text": "Posso confiar em você?",
@@ -3611,6 +3765,20 @@
    "blank": "contato"
   }
  ],
+ "w|contigo": [
+  {
+   "text": "Saio contigo agora.",
+   "en": "I'm leaving with you now.",
+   "ko": "지금 너랑 나갈게.",
+   "blank": "contigo"
+  },
+  {
+   "text": "Conto contigo amanhã.",
+   "en": "I'm counting on you tomorrow.",
+   "ko": "내일 너한테 기댈게.",
+   "blank": "contigo"
+  }
+ ],
  "w|continuar": [
   {
    "text": "Podemos continuar amanhã?",
@@ -3651,6 +3819,20 @@
    "en": "I think the exact opposite.",
    "ko": "나는 정반대로 생각해.",
    "blank": "contrário"
+  }
+ ],
+ "w|contrato": [
+  {
+   "text": "O contrato vence em maio.",
+   "en": "The contract runs out in May.",
+   "ko": "계약이 오월에 끝나.",
+   "blank": "contrato"
+  },
+  {
+   "text": "Leva o contrato assinado.",
+   "en": "Take the signed contract.",
+   "ko": "서명된 계약서를 가져가.",
+   "blank": "contrato"
   }
  ],
  "w|controlar": [
@@ -3975,6 +4157,20 @@
    "blank": "crime"
   }
  ],
+ "w|criminoso": [
+  {
+   "text": "Prenderam o criminoso à noite.",
+   "en": "They arrested the criminal at night.",
+   "ko": "밤에 범인을 체포했어.",
+   "blank": "criminoso"
+  },
+  {
+   "text": "A criminosa se entregou.",
+   "en": "The criminal turned herself in.",
+   "ko": "범인인 그 여자가 자수했어.",
+   "blank": "criminosa"
+  }
+ ],
  "w|cuidado": [
   {
    "text": "Cuidado com a cabeça.",
@@ -4213,6 +4409,20 @@
    "blank": "defesa"
   }
  ],
+ "w|definitivamente": [
+  {
+   "text": "Definitivamente eu fico em casa.",
+   "en": "I'm definitely staying home.",
+   "ko": "나는 확실히 집에 있을게.",
+   "blank": "Definitivamente"
+  },
+  {
+   "text": "Ela definitivamente viu a mensagem.",
+   "en": "She definitely saw the message.",
+   "ko": "그 여자는 분명히 메시지를 봤어.",
+   "blank": "definitivamente"
+  }
+ ],
  "w|deixar": [
   {
    "text": "Pode deixar isso aqui.",
@@ -4297,6 +4507,20 @@
    "blank": "demais"
   }
  ],
+ "w|demônio": [
+  {
+   "text": "Que demônio de fila hoje.",
+   "en": "What a devil of a line today.",
+   "ko": "오늘 줄은 정말 악마야.",
+   "blank": "demônio"
+  },
+  {
+   "text": "O filme tem um demônio.",
+   "en": "The movie has a demon in it.",
+   "ko": "그 영화에 악마가 나와.",
+   "blank": "demônio"
+  }
+ ],
  "w|demorar": [
   {
    "text": "Não demora no banho.",
@@ -4351,6 +4575,34 @@
    "en": "The phone is inside a drawer.",
    "ko": "휴대폰이 서랍 안에 있어.",
    "blank": "dentro de"
+  }
+ ],
+ "w|departamento": [
+  {
+   "text": "O departamento mudou de andar.",
+   "en": "The department moved floors.",
+   "ko": "부서가 층을 옮겼어.",
+   "blank": "departamento"
+  },
+  {
+   "text": "Liga para o departamento pessoal.",
+   "en": "Call human resources.",
+   "ko": "인사팀에 전화해.",
+   "blank": "departamento"
+  }
+ ],
+ "w|depender": [
+  {
+   "text": "Depende do ônibus.",
+   "en": "It depends on the bus.",
+   "ko": "버스에 달렸어.",
+   "blank": "Depende"
+  },
+  {
+   "text": "Não depende só de sorte.",
+   "en": "It doesn't depend only on luck.",
+   "ko": "운에만 달린 게 아니야.",
+   "blank": "depende"
   }
  ],
  "w|depois": [
@@ -4505,6 +4757,20 @@
    "en": "I've lived here since I was a kid.",
    "ko": "어릴 때부터 여기 살아.",
    "blank": "desde"
+  }
+ ],
+ "w|desde que": [
+  {
+   "text": "Fico, desde que tenha café.",
+   "en": "I'll stay, as long as there's coffee.",
+   "ko": "커피만 있으면 남을게.",
+   "blank": "desde que"
+  },
+  {
+   "text": "Pode usar, desde que devolva.",
+   "en": "You can use it, as long as you give it back.",
+   "ko": "써도 돼, 돌려주기만 하면.",
+   "blank": "desde que"
   }
  ],
  "w|desejar": [
@@ -4885,6 +5151,20 @@
    "blank": "discutiram"
   }
  ],
+ "w|distância": [
+  {
+   "text": "A casa fica a pouca distância.",
+   "en": "The house is a short distance away.",
+   "ko": "집은 가까운 거리에 있어.",
+   "blank": "distância"
+  },
+  {
+   "text": "A distância na foto engana.",
+   "en": "The distance in the photo is misleading.",
+   "ko": "사진 속 거리는 눈을 속여.",
+   "blank": "distância"
+  }
+ ],
  "w|divertido": [
   {
    "text": "O churrasco foi divertido.",
@@ -5135,6 +5415,20 @@
    "en": "You and I are going.",
    "ko": "너랑 나랑 가.",
    "blank": "e"
+  }
+ ],
+ "w|efeito": [
+  {
+   "text": "O café fez efeito rápido.",
+   "en": "The coffee kicked in fast.",
+   "ko": "커피가 빨리 듣더라.",
+   "blank": "efeito"
+  },
+  {
+   "text": "O efeito sonoro assustou.",
+   "en": "The sound effect startled me.",
+   "ko": "효과음이 놀래켰어.",
+   "blank": "efeito"
   }
  ],
  "w|ei": [
@@ -5851,6 +6145,20 @@
    "blank": "esperar"
   }
  ],
+ "w|esperto": [
+  {
+   "text": "Esperto ele, achou um atalho.",
+   "en": "Smart guy, he found a shortcut.",
+   "ko": "그 사람 영리해, 지름길을 찾았어.",
+   "blank": "Esperto"
+  },
+  {
+   "text": "Não quero uma solução esperta.",
+   "en": "I don't want a clever little workaround.",
+   "ko": "잔머리 해결책은 싫어.",
+   "blank": "esperta"
+  }
+ ],
  "w|espírito": [
   {
    "text": "Essa música levanta o espírito.",
@@ -5975,6 +6283,20 @@
    "en": "I prefer this one.",
    "ko": "이게 더 좋아.",
    "blank": "este"
+  }
+ ],
+ "w|estilo": [
+  {
+   "text": "Curti o estilo da casa.",
+   "en": "I liked the style of the house.",
+   "ko": "그 집 스타일이 마음에 들어.",
+   "blank": "estilo"
+  },
+  {
+   "text": "Assim não é o meu estilo.",
+   "en": "That's not my style.",
+   "ko": "그런 건 내 스타일이 아니야.",
+   "blank": "estilo"
   }
  ],
  "w|estrada": [
@@ -6229,6 +6551,34 @@
    "blank": "explicar"
   }
  ],
+ "w|explodir": [
+  {
+   "text": "O pneu dianteiro explodiu.",
+   "en": "The front tire blew out.",
+   "ko": "앞 타이어가 터졌어.",
+   "blank": "explodiu"
+  },
+  {
+   "text": "Não deixa a discussão explodir.",
+   "en": "Don't let the argument blow up.",
+   "ko": "말다툼이 터지게 두지 마.",
+   "blank": "explodir"
+  }
+ ],
+ "w|fã": [
+  {
+   "text": "Sou fã do feijão da vó.",
+   "en": "I'm a fan of Grandma's beans.",
+   "ko": "나는 할머니 콩요리 팬이야.",
+   "blank": "fã"
+  },
+  {
+   "text": "Os fãs esperaram cantando.",
+   "en": "The fans waited, singing.",
+   "ko": "팬들이 노래하며 기다렸어.",
+   "blank": "fãs"
+  }
+ ],
  "w|faca": [
   {
    "text": "Me passa a faca.",
@@ -6439,6 +6789,20 @@
    "blank": "fazer"
   }
  ],
+ "w|fé": [
+  {
+   "text": "Tenho fé na vitória.",
+   "en": "I have faith in the win.",
+   "ko": "나는 승리를 믿어.",
+   "blank": "fé"
+  },
+  {
+   "text": "Perdi a fé no atalho.",
+   "en": "I lost faith in the shortcut.",
+   "ko": "그 지름길을 못 믿게 됐어.",
+   "blank": "fé"
+  }
+ ],
  "w|fechar": [
   {
    "text": "Pode fechar a janela?",
@@ -6479,6 +6843,20 @@
    "en": "He's in a good mood today.",
    "ko": "그 사람 오늘 기분 좋아.",
    "blank": "feliz"
+  }
+ ],
+ "w|férias": [
+  {
+   "text": "Mal vejo a hora das férias.",
+   "en": "I can hardly wait for vacation.",
+   "ko": "휴가가 너무 기다려져.",
+   "blank": "férias"
+  },
+  {
+   "text": "As férias coletivas começaram.",
+   "en": "The company-wide vacation started.",
+   "ko": "회사 휴가가 시작됐어.",
+   "blank": "férias"
   }
  ],
  "w|ferir": [
@@ -7097,6 +7475,20 @@
    "blank": "grande"
   }
  ],
+ "w|grávida": [
+  {
+   "text": "Ela descobriu que está grávida.",
+   "en": "She found out she's pregnant.",
+   "ko": "그 여자가 임신한 걸 알았어.",
+   "blank": "grávida"
+  },
+  {
+   "text": "A gata está grávida de novo.",
+   "en": "The cat is pregnant again.",
+   "ko": "고양이가 또 임신했어.",
+   "blank": "grávida"
+  }
+ ],
  "w|gritar": [
   {
    "text": "Gritar não resolve nada.",
@@ -7461,6 +7853,20 @@
    "blank": "imediatamente"
   }
  ],
+ "w|impedir": [
+  {
+   "text": "Não impede a menina de falar.",
+   "en": "Don't stop the girl from speaking.",
+   "ko": "그 아이 말하는 걸 막지 마.",
+   "blank": "impede"
+  },
+  {
+   "text": "A lama impediu o ônibus.",
+   "en": "The mud stopped the bus.",
+   "ko": "진흙 때문에 버스가 못 갔어.",
+   "blank": "impediu"
+  }
+ ],
  "w|importante": [
   {
    "text": "Isso é muito importante.",
@@ -7529,6 +7935,20 @@
    "en": "The view from here is incredible.",
    "ko": "여기서 보는 경치가 대단해.",
    "blank": "incrível"
+  }
+ ],
+ "w|índio": [
+  {
+   "text": "Ela é índia e ensina cerâmica.",
+   "en": "She's indigenous and teaches ceramics.",
+   "ko": "그 여자는 원주민이고 도자기를 가르쳐.",
+   "blank": "índia"
+  },
+  {
+   "text": "Os índios dessa região fazem cerâmica.",
+   "en": "The indigenous people of this region make ceramics.",
+   "ko": "이 지역 원주민들은 도자기를 만들어.",
+   "blank": "índios"
   }
  ],
  "w|infelizmente": [
@@ -8385,6 +8805,20 @@
    "blank": "lindo"
   }
  ],
+ "w|língua": [
+  {
+   "text": "Mordi a língua no almoço.",
+   "en": "I bit my tongue at lunch.",
+   "ko": "점심에 혀를 깨물었어.",
+   "blank": "língua"
+  },
+  {
+   "text": "Em casa a língua é o espanhol.",
+   "en": "At home the language is Spanish.",
+   "ko": "집에서는 스페인어를 써.",
+   "blank": "língua"
+  }
+ ],
  "w|linha": [
   {
    "text": "A linha caiu de novo.",
@@ -8693,6 +9127,20 @@
    "blank": "mais"
   }
  ],
+ "w|major": [
+  {
+   "text": "O major revisou a escala.",
+   "en": "The major reviewed the roster.",
+   "ko": "소령이 근무표를 다시 봤어.",
+   "blank": "major"
+  },
+  {
+   "text": "Chama o major, por favor.",
+   "en": "Call the major, please.",
+   "ko": "소령 좀 불러 줘.",
+   "blank": "major"
+  }
+ ],
  "w|mal": [
   {
    "text": "Dormi mal.",
@@ -8733,6 +9181,20 @@
    "en": "What rotten luck I have.",
    "ko": "나 정말 운이 없네.",
    "blank": "maldito"
+  }
+ ],
+ "w|maluco": [
+  {
+   "text": "O plano é maluco e eu topo.",
+   "en": "The plan is crazy and I'm in.",
+   "ko": "계획은 미쳤고 나는 할게.",
+   "blank": "maluco"
+  },
+  {
+   "text": "Ela soltou uma risada maluca.",
+   "en": "She let out a wild laugh.",
+   "ko": "그 여자가 괴상하게 웃음을 터뜨렸어.",
+   "blank": "maluca"
   }
  ],
  "w|mamãe": [
@@ -9015,6 +9477,20 @@
    "blank": "meio"
   }
  ],
+ "w|meio-dia": [
+  {
+   "text": "A gente almoça ao meio-dia.",
+   "en": "We have lunch at noon.",
+   "ko": "우리는 정오에 점심을 먹어.",
+   "blank": "meio-dia"
+  },
+  {
+   "text": "A padaria fecha ao meio-dia.",
+   "en": "The bakery closes at noon.",
+   "ko": "빵집은 정오에 닫아.",
+   "blank": "meio-dia"
+  }
+ ],
  "w|melhor": [
   {
    "text": "Me sinto melhor.",
@@ -9055,6 +9531,20 @@
    "en": "One member is missing from the meeting.",
    "ko": "회의에 한 사람이 빠졌어.",
    "blank": "membro"
+  }
+ ],
+ "w|memória": [
+  {
+   "text": "A memória do computador lotou.",
+   "en": "The computer's memory filled up.",
+   "ko": "컴퓨터 메모리가 가득 찼어.",
+   "blank": "memória"
+  },
+  {
+   "text": "A memória dela é de elefante.",
+   "en": "Her memory is incredible.",
+   "ko": "그 여자는 기억력이 엄청나.",
+   "blank": "memória"
   }
  ],
  "w|menina": [
@@ -9337,6 +9827,20 @@
    "blank": "mim"
   }
  ],
+ "w|mínimo": [
+  {
+   "text": "Faz o mínimo com capricho.",
+   "en": "Do the bare minimum with care.",
+   "ko": "최소한의 일도 정성껏 해.",
+   "blank": "mínimo"
+  },
+  {
+   "text": "A chance mínima ainda existe.",
+   "en": "The slimmest chance still exists.",
+   "ko": "아주 작은 가능성은 아직 있어.",
+   "blank": "mínima"
+  }
+ ],
  "w|minuto": [
   {
    "text": "Espera um minuto.",
@@ -9377,6 +9881,20 @@
    "en": "Call that young man.",
    "ko": "저 청년 좀 불러.",
    "blank": "moço"
+  }
+ ],
+ "w|modelo": [
+  {
+   "text": "Ela posa de modelo aos sábados.",
+   "en": "She works as a model on Saturdays.",
+   "ko": "그 여자는 토요일에 모델로 일해.",
+   "blank": "modelo"
+  },
+  {
+   "text": "Segue o modelo da ficha.",
+   "en": "Follow the form's template.",
+   "ko": "신청서 양식대로 해.",
+   "blank": "modelo"
   }
  ],
  "w|modo": [
@@ -9729,6 +10247,20 @@
    "blank": "Não"
   }
  ],
+ "w|nariz": [
+  {
+   "text": "O nariz escorreu o dia todo.",
+   "en": "My nose ran all day.",
+   "ko": "하루 종일 콧물이 났어.",
+   "blank": "nariz"
+  },
+  {
+   "text": "Ela torceu o nariz pro cheiro.",
+   "en": "She wrinkled her nose at the smell.",
+   "ko": "그 여자가 냄새에 코를 찡그렸어.",
+   "blank": "nariz"
+  }
+ ],
  "w|nascer": [
   {
    "text": "Nasci numa cidade pequena.",
@@ -9755,6 +10287,20 @@
    "en": "Merry Christmas to you all.",
    "ko": "다들 즐거운 크리스마스.",
    "blank": "Natal"
+  }
+ ],
+ "w|natural": [
+  {
+   "text": "A maquiagem ficou natural.",
+   "en": "The makeup looked natural.",
+   "ko": "화장이 자연스러워.",
+   "blank": "natural"
+  },
+  {
+   "text": "É natural sentir ciúme.",
+   "en": "It's natural to feel jealous.",
+   "ko": "질투가 나는 건 자연스러워.",
+   "blank": "natural"
   }
  ],
  "w|natureza": [
@@ -10219,6 +10765,20 @@
    "blank": "Obrigado"
   }
  ],
+ "w|obviamente": [
+  {
+   "text": "Obviamente o cachorro comeu.",
+   "en": "Obviously the dog ate it.",
+   "ko": "당연히 개가 먹었지.",
+   "blank": "Obviamente"
+  },
+  {
+   "text": "Ela obviamente estava com pressa.",
+   "en": "She was obviously in a hurry.",
+   "ko": "그 여자는 뻔히 급해 보였어.",
+   "blank": "obviamente"
+  }
+ ],
  "w|ocupado": [
   {
    "text": "O banheiro está ocupado.",
@@ -10653,6 +11213,20 @@
    "blank": "pagar"
   }
  ],
+ "w|pago": [
+  {
+   "text": "O pedágio já está pago.",
+   "en": "The toll is already paid.",
+   "ko": "통행료는 이미 냈어.",
+   "blank": "pago"
+  },
+  {
+   "text": "A fatura foi paga ontem.",
+   "en": "The bill was paid yesterday.",
+   "ko": "청구서는 어제 냈어.",
+   "blank": "paga"
+  }
+ ],
  "w|pai": [
   {
    "text": "Meu pai chegou.",
@@ -10793,6 +11367,20 @@
    "blank": "Parabéns"
   }
  ],
+ "w|parado": [
+  {
+   "text": "Tudo ficou parado na greve.",
+   "en": "Everything stopped during the strike.",
+   "ko": "파업으로 모든 게 멈췄어.",
+   "blank": "parado"
+  },
+  {
+   "text": "Não fica parada na escada.",
+   "en": "Don't stand still on the stairs.",
+   "ko": "계단에 서 있지 마.",
+   "blank": "parada"
+  }
+ ],
  "w|parar": [
   {
    "text": "Pode parar aqui.",
@@ -10917,6 +11505,20 @@
    "en": "This will pass.",
    "ko": "이건 지나갈 거야.",
    "blank": "passar"
+  }
+ ],
+ "w|pássaro": [
+  {
+   "text": "O pássaro bebeu na poça.",
+   "en": "The bird drank from the puddle.",
+   "ko": "새가 물웅덩이에서 물을 마셨어.",
+   "blank": "pássaro"
+  },
+  {
+   "text": "Tem um pássaro no ar-condicionado.",
+   "en": "There's a bird in the air conditioner.",
+   "ko": "에어컨에 새가 있어.",
+   "blank": "pássaro"
   }
  ],
  "w|passo": [
@@ -11113,6 +11715,20 @@
    "en": "I feel sorry for that cat.",
    "ko": "저 고양이가 안됐어.",
    "blank": "pena"
+  }
+ ],
+ "w|pensamento": [
+  {
+   "text": "Um pensamento me acordou.",
+   "en": "A thought woke me up.",
+   "ko": "어떤 생각에 잠이 깼어.",
+   "blank": "pensamento"
+  },
+  {
+   "text": "Tira esse pensamento daí.",
+   "en": "Get that thought out of there.",
+   "ko": "그 생각은 치워.",
+   "blank": "pensamento"
   }
  ],
  "w|pensar": [
@@ -11323,6 +11939,48 @@
    "en": "Don't come close.",
    "ko": "가까이 오지 마.",
    "blank": "perto"
+  }
+ ],
+ "w|pescoço": [
+  {
+   "text": "Dormi mal e travou o pescoço.",
+   "en": "I slept badly and my neck locked up.",
+   "ko": "잠을 잘못 자서 목이 굳었어.",
+   "blank": "pescoço"
+  },
+  {
+   "text": "O colar marcou o pescoço.",
+   "en": "The necklace left a mark on the neck.",
+   "ko": "목걸이가 목에 자국을 남겼어.",
+   "blank": "pescoço"
+  }
+ ],
+ "w|peso": [
+  {
+   "text": "A encomenda passou do peso.",
+   "en": "The parcel went over the weight limit.",
+   "ko": "택배가 무게를 초과했어.",
+   "blank": "peso"
+  },
+  {
+   "text": "O peso do casaco cansa.",
+   "en": "The weight of the coat wears you out.",
+   "ko": "코트 무게가 버거워.",
+   "blank": "peso"
+  }
+ ],
+ "w|pesquisa": [
+  {
+   "text": "A pesquisa apontou outra causa.",
+   "en": "The research pointed to another cause.",
+   "ko": "조사에서 다른 원인이 나왔어.",
+   "blank": "pesquisa"
+  },
+  {
+   "text": "Participo de uma pesquisa hoje.",
+   "en": "I'm taking part in a survey today.",
+   "ko": "오늘 설문조사에 참여해.",
+   "blank": "pesquisa"
   }
  ],
  "w|pessoa": [
@@ -11675,6 +12333,20 @@
    "blank": "possível"
   }
  ],
+ "w|posto": [
+  {
+   "text": "O posto ficou sem etanol.",
+   "en": "The gas station ran out of ethanol.",
+   "ko": "주유소에 에탄올이 떨어졌어.",
+   "blank": "posto"
+  },
+  {
+   "text": "Passei no posto de saúde cedo.",
+   "en": "I stopped by the clinic early.",
+   "ko": "아침에 보건소에 들렀어.",
+   "blank": "posto"
+  }
+ ],
  "w|pouco": [
   {
    "text": "Espera um pouco.",
@@ -11715,6 +12387,20 @@
    "en": "Take sunscreen to the beach.",
    "ko": "해변에 선크림 가져가.",
    "blank": "praia"
+  }
+ ],
+ "w|prato": [
+  {
+   "text": "Quebrei o prato fundo.",
+   "en": "I broke the soup plate.",
+   "ko": "깊은 접시를 깨뜨렸어.",
+   "blank": "prato"
+  },
+  {
+   "text": "O prato do dia é peixe.",
+   "en": "The dish of the day is fish.",
+   "ko": "오늘의 요리는 생선이야.",
+   "blank": "prato"
   }
  ],
  "w|prazer": [
@@ -11967,6 +12653,20 @@
    "en": "This turned into a problem.",
    "ko": "이게 문제가 됐어.",
    "blank": "problema"
+  }
+ ],
+ "w|processo": [
+  {
+   "text": "O processo seletivo abriu.",
+   "en": "The selection process opened.",
+   "ko": "선발 과정이 열렸어.",
+   "blank": "processo"
+  },
+  {
+   "text": "Meu processo anda devagar.",
+   "en": "My lawsuit is moving slowly.",
+   "ko": "내 소송은 천천히 가.",
+   "blank": "processo"
   }
  ],
  "w|procurar": [
@@ -12641,6 +13341,20 @@
    "blank": "Reconheço"
   }
  ],
+ "w|redor": [
+  {
+   "text": "Tem fio ao redor do pacote.",
+   "en": "There's string around the package.",
+   "ko": "꾸러미 주위에 끈이 있어.",
+   "blank": "redor"
+  },
+  {
+   "text": "Olha ao redor, achei estranho.",
+   "en": "Look around, I thought it was odd.",
+   "ko": "주위를 봐, 이상해.",
+   "blank": "redor"
+  }
+ ],
  "w|registro": [
   {
    "text": "Perdi o registro do carro.",
@@ -12751,6 +13465,20 @@
    "en": "I suddenly felt like it.",
    "ko": "갑자기 그러고 싶어졌어.",
    "blank": "repente"
+  }
+ ],
+ "w|repetir": [
+  {
+   "text": "Repete o nome devagar.",
+   "en": "Repeat the name slowly.",
+   "ko": "이름을 천천히 다시 말해.",
+   "blank": "Repete"
+  },
+  {
+   "text": "O erro se repetiu ontem.",
+   "en": "The mistake happened again yesterday.",
+   "ko": "실수가 어제 또 반복됐어.",
+   "blank": "repetiu"
   }
  ],
  "w|resolver": [
@@ -13047,6 +13775,20 @@
    "blank": "ruim"
   }
  ],
+ "w|russo": [
+  {
+   "text": "Meu avô fala russo.",
+   "en": "My grandfather speaks Russian.",
+   "ko": "우리 할아버지가 러시아어를 하셔.",
+   "blank": "russo"
+  },
+  {
+   "text": "A salada russa esfriou.",
+   "en": "The Russian salad got cold.",
+   "ko": "러시아식 샐러드가 식었어.",
+   "blank": "russa"
+  }
+ ],
  "w|saber": [
   {
    "text": "Quero saber a verdade.",
@@ -13255,6 +13997,20 @@
    "en": "The passage is secret.",
    "ko": "그 통로는 비밀이야.",
    "blank": "secreta"
+  }
+ ],
+ "w|século": [
+  {
+   "text": "A casa tem mais de um século.",
+   "en": "The house is over a century old.",
+   "ko": "그 집은 한 세기가 넘었어.",
+   "blank": "século"
+  },
+  {
+   "text": "Li um romance do outro século.",
+   "en": "I read a novel from another century.",
+   "ko": "다른 세기의 소설을 읽었어.",
+   "blank": "século"
   }
  ],
  "w|segredo": [
@@ -13647,6 +14403,20 @@
    "en": "Sex came up out of nowhere.",
    "ko": "갑자기 섹스 얘기가 나왔어.",
    "blank": "Sexo"
+  }
+ ],
+ "w|sexual": [
+  {
+   "text": "Denunciei o assédio sexual.",
+   "en": "I reported the sexual harassment.",
+   "ko": "성희롱을 신고했어.",
+   "blank": "sexual"
+  },
+  {
+   "text": "Evita piada sexual no trabalho.",
+   "en": "Avoid sexual jokes at work.",
+   "ko": "직장에서 성적인 농담은 피해.",
+   "blank": "sexual"
   }
  ],
  "w|show": [
@@ -14293,6 +15063,20 @@
    "blank": "tempo"
   }
  ],
+ "w|temporada": [
+  {
+   "text": "É temporada de manga.",
+   "en": "It's mango season.",
+   "ko": "망고 철이야.",
+   "blank": "temporada"
+  },
+  {
+   "text": "A temporada de chuva chegou.",
+   "en": "The rainy season has arrived.",
+   "ko": "우기가 시작됐어.",
+   "blank": "temporada"
+  }
+ ],
  "w|tenente": [
   {
    "text": "O tenente pediu silêncio.",
@@ -14319,6 +15103,20 @@
    "en": "You don't have to try.",
    "ko": "억지로 안 해도 돼.",
    "blank": "tentar"
+  }
+ ],
+ "w|teoria": [
+  {
+   "text": "Na teoria parece simples.",
+   "en": "In theory it looks simple.",
+   "ko": "이론상으로는 단순해 보여.",
+   "blank": "teoria"
+  },
+  {
+   "text": "A teoria dele é furada.",
+   "en": "His theory doesn't hold up.",
+   "ko": "그 사람 이론은 엉터이야.",
+   "blank": "teoria"
   }
  ],
  "w|ter": [
@@ -14503,6 +15301,20 @@
    "blank": "tipo"
   }
  ],
+ "w|tira": [
+  {
+   "text": "O tira anotou a placa.",
+   "en": "The cop wrote down the plate.",
+   "ko": "형사가 번호판을 적었어.",
+   "blank": "tira"
+  },
+  {
+   "text": "Corta uma tira de fita.",
+   "en": "Cut a strip of tape.",
+   "ko": "테이프를 한 줄 잘라.",
+   "blank": "tira"
+  }
+ ],
  "w|tirar": [
   {
    "text": "Pode tirar o casaco.",
@@ -14627,6 +15439,20 @@
    "en": "Don't let the talk turn into a fight.",
    "ko": "대화가 싸움이 되게 두지 마.",
    "blank": "tornar"
+  }
+ ],
+ "w|total": [
+  {
+   "text": "Foi um apagão total.",
+   "en": "It was a total blackout.",
+   "ko": "완전 정전이었어.",
+   "blank": "total"
+  },
+  {
+   "text": "O silêncio na sala foi total.",
+   "en": "The silence in the room was total.",
+   "ko": "방 안이 완전히 조용했어.",
+   "blank": "total"
   }
  ],
  "w|totalmente": [
@@ -15481,6 +16307,20 @@
    "en": "I don't feel like going out.",
    "ko": "나가고 싶은 마음이 없어.",
    "blank": "vontade"
+  }
+ ],
+ "w|vosso": [
+  {
+   "text": "O vosso cachorro latiu a noite toda.",
+   "en": "Your dog barked all night.",
+   "ko": "당신들 개가 밤새 짖었어.",
+   "blank": "vosso"
+  },
+  {
+   "text": "Devolve o vosso crachá na saída.",
+   "en": "Hand in your badge on the way out.",
+   "ko": "나갈 때 당신들 출입증을 반납해.",
+   "blank": "vosso"
   }
  ],
  "w|voto": [

@@ -72,7 +72,8 @@
     "gloss": "꽤",
     "answer": "quite",
     "line": "It is quite cold today.",
-    "hint": "q"
+    "hint": "q",
+    "mark": "한 단어"
   },
   "w|book": {
     "kind": "word",
@@ -125,7 +126,7 @@
     "type": "type",
     "name": "hate",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "싫어하다",
+    "gloss": "아주 싫어하다",
     "answer": "hate",
     "line": "I hate waiting in long lines."
   },
@@ -250,7 +251,8 @@
     "gloss": "전기",
     "answer": "power",
     "line": "The city lost power during the storm.",
-    "hint": "p"
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|ring": {
     "kind": "word",
@@ -418,7 +420,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "거의",
     "answer": "almost",
-    "line": "I am almost done with my work."
+    "line": "I am almost done with my work.",
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|blood": {
     "kind": "word",
@@ -553,7 +557,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "겁주다",
     "answer": "scare",
-    "line": "Loud noises scare my cat."
+    "line": "Loud noises scare my cat.",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|fact": {
     "kind": "word",
@@ -764,7 +770,8 @@
     "gloss": "멍청한",
     "answer": "stupid",
     "line": "That was a stupid mistake.",
-    "hint": "s"
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|sort": {
     "kind": "word",
@@ -774,7 +781,8 @@
     "gloss": "종류",
     "answer": "sort",
     "line": "What sort of music do you like?",
-    "hint": "s"
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|full": {
     "kind": "word",
@@ -837,7 +845,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "서두르다",
     "answer": "hurry",
-    "line": "Hurry or you'll be late!"
+    "line": "Hurry or you'll be late!",
+    "hint": "h"
   },
   "w|early": {
     "kind": "word",
@@ -881,7 +890,7 @@
     "type": "type",
     "name": "along",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "함께",
+    "gloss": "따라오다",
     "answer": "along",
     "line": "Come along with me.",
     "hint": "a"
@@ -975,7 +984,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "선장",
     "answer": "captain",
-    "line": "The captain gave the order."
+    "line": "The captain gave the order.",
+    "hint": "c"
   },
   "w|hang": {
     "kind": "word",
@@ -1104,7 +1114,7 @@
     "type": "type",
     "name": "ahead",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "앞으로",
+    "gloss": "곧장 앞으로",
     "answer": "ahead",
     "line": "Go straight ahead.",
     "hint": "a"

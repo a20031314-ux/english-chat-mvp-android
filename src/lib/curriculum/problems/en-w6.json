@@ -54,7 +54,8 @@
     "gloss": "괜찮은",
     "answer": "alright",
     "line": "Are you feeling alright today?",
-    "hint": "a"
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|million": {
     "kind": "word",
@@ -88,7 +89,7 @@
     "type": "type",
     "name": "land",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "땅",
+    "gloss": "땅(토지)",
     "answer": "land",
     "line": "He bought a piece of land in the countryside.",
     "hint": "l"
@@ -136,7 +137,7 @@
     "type": "type",
     "name": "beat",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "이기다",
+    "gloss": "뛰어넘다",
     "answer": "beat",
     "line": "Try to beat your best score.",
     "hint": "b"
@@ -418,9 +419,11 @@
     "type": "type",
     "name": "cop",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "순경",
+    "gloss": "경찰",
     "answer": "cop",
-    "line": "A cop helped the lost child."
+    "line": "A cop helped the lost child.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|master": {
     "kind": "word",
@@ -508,7 +511,8 @@
     "gloss": "영화",
     "answer": "movie",
     "line": "Let's watch a movie tonight.",
-    "hint": "m"
+    "hint": "m",
+    "mark": "한 단어"
   },
   "w|agree": {
     "kind": "word",
@@ -553,10 +557,11 @@
     "type": "type",
     "name": "charge",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "요금",
+    "gloss": "수수료",
     "answer": "charge",
     "line": "There is a small charge for delivery.",
-    "hint": "c"
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|grow": {
     "kind": "word",
@@ -575,7 +580,8 @@
     "gloss": "~까지",
     "answer": "till",
     "line": "I'll wait here till you come back.",
-    "hint": "t"
+    "hint": "t",
+    "mark": "한 단어"
   },
   "w|luck": {
     "kind": "word",
@@ -618,7 +624,7 @@
     "type": "type",
     "name": "daddy",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "아빠",
+    "gloss": "아빠(애칭)",
     "answer": "daddy",
     "line": "I made this card for my daddy.",
     "hint": "d"
@@ -671,7 +677,8 @@
     "gloss": "영화",
     "answer": "film",
     "line": "Have you seen this film before?",
-    "hint": "f"
+    "hint": "f",
+    "mark": "한 단어"
   },
   "w|carry": {
     "kind": "word",
@@ -747,7 +754,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "선박",
     "answer": "ship",
-    "line": "The ship sailed across the ocean."
+    "line": "The ship sailed across the ocean.",
+    "hint": "s"
   },
   "w|allow": {
     "kind": "word",
@@ -814,7 +822,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "보호하다",
     "answer": "protect",
-    "line": "We must protect the environment for future generations."
+    "line": "We must protect the environment for future generations.",
+    "hint": "p"
   },
   "w|join": {
     "kind": "word",
@@ -1011,7 +1020,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "녀석",
     "answer": "dude",
-    "line": "Hey dude, what’s up?"
+    "line": "Hey dude, what’s up?",
+    "hint": "d"
   },
   "w|bag": {
     "kind": "word",
@@ -1045,7 +1055,7 @@
     "type": "type",
     "name": "class",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "수업",
+    "gloss": "수업(시간)",
     "answer": "class",
     "line": "My math class starts at noon.",
     "hint": "c"
@@ -1131,7 +1141,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "상상하다",
     "answer": "imagine",
-    "line": "Can you imagine living here?"
+    "line": "Can you imagine living here?",
+    "hint": "i"
   },
   "w|joke": {
     "kind": "word",

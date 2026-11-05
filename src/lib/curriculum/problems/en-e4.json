@@ -40,7 +40,7 @@
     "type": "choose",
     "name": "to be fair",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "솔직히 오늘 아침에 늦게 시작했어.",
+    "gloss": "공정하게 말하면, 오늘 아침에 늦게 시작했어요.",
     "before": "",
     "after": ", we did get a late start this morning.",
     "answer": "To be fair",

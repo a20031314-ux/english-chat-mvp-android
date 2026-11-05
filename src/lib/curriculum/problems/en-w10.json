@@ -42,7 +42,7 @@
     "type": "type",
     "name": "moon",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "달",
+    "gloss": "달(하늘)",
     "answer": "moon",
     "line": "The moon is bright and full tonight.",
     "hint": "m",
@@ -118,7 +118,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "결과",
     "answer": "result",
-    "line": "The test result came back positive."
+    "line": "The test result came back positive.",
+    "hint": "r",
+    "mark": "한 단어"
   },
   "w|rid": {
     "kind": "word",
@@ -233,7 +235,7 @@
     "type": "type",
     "name": "yep",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "응",
+    "gloss": "응(짧게)",
     "answer": "yep",
     "line": "Yep, I finished my homework already.",
     "hint": "y",
@@ -343,7 +345,7 @@
     "type": "type",
     "name": "crap",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "쓰레기",
+    "gloss": "형편없는 것",
     "answer": "crap",
     "line": "This movie is total crap."
   },
@@ -399,7 +401,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "고용하다",
     "answer": "hire",
-    "line": "We need to hire more staff."
+    "line": "We need to hire more staff.",
+    "hint": "h",
+    "mark": "한 단어"
   },
   "w|egg": {
     "kind": "word",
@@ -424,7 +428,7 @@
     "type": "type",
     "name": "wood",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "목재",
+    "gloss": "나무(재료)",
     "answer": "wood",
     "line": "This table is made of wood."
   },
@@ -487,7 +491,7 @@
     "type": "type",
     "name": "correct",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "정확한",
+    "gloss": "맞는",
     "answer": "correct",
     "line": "Please write the correct answer."
   },
@@ -550,7 +554,7 @@
     "type": "type",
     "name": "innocent",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "순진한",
+    "gloss": "천진한",
     "answer": "innocent",
     "line": "He looks so innocent when he smiles."
   },
@@ -570,7 +574,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "범죄자",
     "answer": "criminal",
-    "line": "The police caught the criminal."
+    "line": "The police caught the criminal.",
+    "hint": "c"
   },
   "w|herself": {
     "kind": "word",
@@ -588,7 +593,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "설득하다",
     "answer": "convince",
-    "line": "I will convince him to join us."
+    "line": "I will convince him to join us.",
+    "hint": "c"
   },
   "w|pray": {
     "kind": "word",
@@ -815,7 +821,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "수술",
     "answer": "operation",
-    "line": "The operation lasted for three hours."
+    "line": "The operation lasted for three hours.",
+    "hint": "o"
   },
   "w|indeed": {
     "kind": "word",
@@ -849,7 +856,7 @@
     "type": "type",
     "name": "refuse",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "거절하다",
+    "gloss": "마다하다",
     "answer": "refuse",
     "line": "I refuse to give up my dream."
   },
@@ -1015,7 +1022,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "화장실",
     "answer": "bathroom",
-    "line": "Excuse me, where is the bathroom?"
+    "line": "Excuse me, where is the bathroom?",
+    "hint": "b",
+    "mark": "한 단어"
   },
   "w|silly": {
     "kind": "word",
@@ -1049,7 +1058,7 @@
     "type": "type",
     "name": "loud",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "시끄러운",
+    "gloss": "소리가 큰",
     "answer": "loud",
     "line": "The music is too loud in this room."
   },

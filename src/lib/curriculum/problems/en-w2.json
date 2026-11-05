@@ -51,7 +51,7 @@
     "type": "type",
     "name": "anything",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "무엇이든",
+    "gloss": "어떤 것이든",
     "answer": "anything",
     "line": "Is there anything I can do?"
   },
@@ -239,7 +239,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "신",
     "answer": "god",
-    "line": "Oh my god, that's amazing!"
+    "line": "Oh my god, that's amazing!",
+    "hint": "g"
   },
   "w|gonna": {
     "kind": "word",
@@ -260,7 +261,8 @@
     "gloss": "남자",
     "answer": "guy",
     "line": "That guy is really funny.",
-    "hint": "g"
+    "hint": "g",
+    "mark": "한 단어"
   },
   "w|happen": {
     "kind": "word",
@@ -296,7 +298,7 @@
     "type": "type",
     "name": "hear",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "듣다",
+    "gloss": "들리다",
     "answer": "hear",
     "line": "Can you hear the music?",
     "hint": "h"
@@ -405,7 +407,7 @@
     "type": "type",
     "name": "keep",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "유지하다",
+    "gloss": "닫아 두다",
     "answer": "keep",
     "line": "Please keep the door closed."
   },
@@ -474,7 +476,8 @@
     "gloss": "남자",
     "answer": "man",
     "line": "That man is very tall.",
-    "hint": "m"
+    "hint": "m",
+    "mark": "한 단어"
   },
   "w|mean": {
     "kind": "word",
@@ -616,7 +619,8 @@
     "gloss": "~위에",
     "answer": "on",
     "line": "The book is on the shelf.",
-    "hint": "o"
+    "hint": "o",
+    "mark": "한 단어"
   },
   "w|one": {
     "kind": "word",
@@ -708,7 +712,8 @@
     "gloss": "정말로",
     "answer": "really",
     "line": "I really like this movie.",
-    "hint": "r"
+    "hint": "r",
+    "mark": "한 단어"
   },
   "w|right": {
     "kind": "word",
@@ -742,7 +747,7 @@
     "type": "type",
     "name": "should",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "해야 한다",
+    "gloss": "하는 게 좋다",
     "answer": "should",
     "line": "You should call your mom.",
     "hint": "s",
@@ -790,7 +795,7 @@
     "type": "type",
     "name": "still",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "아직",
+    "gloss": "여전히",
     "answer": "still",
     "line": "Are you still there?",
     "hint": "s"
@@ -937,7 +942,7 @@
     "type": "type",
     "name": "try",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "시도하다",
+    "gloss": "해 보다",
     "answer": "try",
     "line": "Try to finish your homework."
   },
@@ -992,7 +997,7 @@
     "type": "type",
     "name": "we",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "우리",
+    "gloss": "우리(사람)",
     "answer": "we",
     "line": "We are going to the park.",
     "hint": "w"
@@ -1059,7 +1064,8 @@
     "gloss": "~할 것이다",
     "answer": "will",
     "line": "I will call you later.",
-    "hint": "w"
+    "hint": "w",
+    "mark": "한 단어"
   },
   "w|with": {
     "kind": "word",

@@ -159,7 +159,7 @@
     "type": "type",
     "name": "compensation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "보상",
+    "gloss": "보상(배상)",
     "answer": "compensation",
     "line": "The company offered compensation for the delay.",
     "hint": "c",
@@ -197,7 +197,7 @@
     "type": "type",
     "name": "conservation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "보존",
+    "gloss": "보전(자연)",
     "answer": "conservation",
     "line": "The park promotes wildlife conservation."
   },
@@ -563,7 +563,7 @@
     "type": "type",
     "name": "instant",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "즉각적인",
+    "gloss": "순간적인",
     "answer": "instant",
     "line": "He made an instant decision to help her.",
     "hint": "i",
@@ -576,7 +576,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "풍경",
     "answer": "landscape",
-    "line": "The landscape here is absolutely beautiful."
+    "line": "The landscape here is absolutely beautiful.",
+    "hint": "l"
   },
   "w|layer": {
     "kind": "word",
@@ -612,7 +613,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "액체",
     "answer": "liquid",
-    "line": "Pour the liquid into the measuring cup."
+    "line": "Pour the liquid into the measuring cup.",
+    "hint": "l"
   },
   "w|logic": {
     "kind": "word",
@@ -684,7 +686,7 @@
     "type": "type",
     "name": "obtain",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "얻다",
+    "gloss": "획득하다",
     "answer": "obtain",
     "line": "You must obtain permission before entering the lab.",
     "hint": "o",
@@ -724,7 +726,7 @@
     "type": "type",
     "name": "pace",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "속도",
+    "gloss": "속도(걸음)",
     "answer": "pace",
     "line": "She walked at a slow pace through the park.",
     "hint": "p",
@@ -811,7 +813,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "저명한",
     "answer": "prominent",
-    "line": "He is a prominent leader in his community."
+    "line": "He is a prominent leader in his community.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|radical": {
     "kind": "word",
@@ -993,7 +997,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "상당한",
     "answer": "substantial",
-    "line": "She received a substantial raise at work."
+    "line": "She received a substantial raise at work.",
+    "hint": "s"
   },
   "w|suitable": {
     "kind": "word",

@@ -78,7 +78,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "복부",
     "answer": "belly",
-    "line": "My belly hurts after eating too much."
+    "line": "My belly hurts after eating too much.",
+    "hint": "b"
   },
   "w|beneath": {
     "kind": "word",
@@ -125,7 +126,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "햄버거",
     "answer": "burger",
-    "line": "I grabbed a burger for lunch today."
+    "line": "I grabbed a burger for lunch today.",
+    "hint": "b"
   },
   "w|chairman": {
     "kind": "word",
@@ -471,7 +473,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "인류",
     "answer": "humanity",
-    "line": "We must protect humanity from danger."
+    "line": "We must protect humanity from danger.",
+    "hint": "h"
   },
   "w|ideal": {
     "kind": "word",
@@ -487,7 +490,7 @@
     "type": "type",
     "name": "impact",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "여파",
+    "gloss": "파급",
     "answer": "impact",
     "line": "This law had a big impact on society."
   },
@@ -514,9 +517,11 @@
     "type": "type",
     "name": "intelligent",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "지적인",
+    "gloss": "똑똑한",
     "answer": "intelligent",
-    "line": "She is an intelligent student."
+    "line": "She is an intelligent student.",
+    "hint": "i",
+    "mark": "한 단어"
   },
   "w|intense": {
     "kind": "word",
@@ -595,7 +600,7 @@
     "type": "type",
     "name": "lousy",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "형편없는",
+    "gloss": "몸이 안 좋은",
     "answer": "lousy",
     "line": "I feel lousy today because I have a cold.",
     "hint": "l",
@@ -615,7 +620,7 @@
     "type": "type",
     "name": "minor",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "사소한",
+    "gloss": "경미한",
     "answer": "minor",
     "line": "He suffered only minor injuries in the accident."
   },
@@ -725,7 +730,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "더미",
     "answer": "pile",
-    "line": "There is a pile of books on my desk."
+    "line": "There is a pile of books on my desk.",
+    "hint": "p"
   },
   "w|plot": {
     "kind": "word",
@@ -1031,7 +1037,7 @@
     "type": "type",
     "name": "uncomfortable",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "불편한",
+    "gloss": "불편한(몸)",
     "answer": "uncomfortable",
     "line": "This chair is really uncomfortable to sit on."
   },

@@ -55,6 +55,20 @@
    "blank": "anh"
   }
  ],
+ "w|anh em": [
+  {
+   "text": "Anh em mình đi ăn đi.",
+   "en": "Let's go eat, just us.",
+   "ko": "우리 둘이 밥 먹으러 가자.",
+   "blank": "Anh em"
+  },
+  {
+   "text": "Anh em trong nhà hay cãi nhau.",
+   "en": "The siblings at home argue a lot.",
+   "ko": "집에 있는 형제들이 자주 싸워.",
+   "blank": "Anh em"
+  }
+ ],
  "w|ấy": [
   {
    "text": "Hôm ấy mưa suốt ngày.",
@@ -69,6 +83,20 @@
    "blank": "ấy"
   }
  ],
+ "w|ba": [
+  {
+   "text": "Lấy giúp ba cái bát.",
+   "en": "Grab three bowls for me.",
+   "ko": "그릇 세 개만 집어 줘.",
+   "blank": "ba"
+  },
+  {
+   "text": "Đi ba ngã tư là tới.",
+   "en": "Go past three intersections and you're there.",
+   "ko": "사거리 세 개만 지나면 돼.",
+   "blank": "ba"
+  }
+ ],
  "w|bà": [
   {
    "text": "Cháu thương bà nhiều.",
@@ -81,6 +109,34 @@
    "en": "Grandma tells a story every evening.",
    "ko": "할머니는 저녁마다 이야기를 해 주셔.",
    "blank": "bà"
+  }
+ ],
+ "w|bác": [
+  {
+   "text": "Bác ơi, cho cháu hỏi đường.",
+   "en": "Excuse me, may I ask the way?",
+   "ko": "저기요, 길 좀 물어볼게요.",
+   "blank": "Bác"
+  },
+  {
+   "text": "Bác hàng xóm cho ít rau.",
+   "en": "The neighbor gave us some vegetables.",
+   "ko": "옆집 어른이 채소 좀 주셨어.",
+   "blank": "Bác"
+  }
+ ],
+ "w|bắn": [
+  {
+   "text": "Cẩn thận, nước bắn ra.",
+   "en": "Careful, the water's splashing.",
+   "ko": "조심해, 물이 튀어.",
+   "blank": "bắn"
+  },
+  {
+   "text": "Tới nơi thì bắn tin nhé.",
+   "en": "Text me when you get there.",
+   "ko": "도착하면 문자 보내.",
+   "blank": "bắn"
   }
  ],
  "w|bạn": [
@@ -109,6 +165,20 @@
    "en": "This table's made of metal.",
    "ko": "이 탁자는 쇠로 만들었어.",
    "blank": "bằng"
+  }
+ ],
+ "w|báo": [
+  {
+   "text": "Báo mẹ là tớ về muộn.",
+   "en": "Tell Mom I'll be home late.",
+   "ko": "엄마한테 늦게 들어간다고 말해.",
+   "blank": "Báo"
+  },
+  {
+   "text": "Có gì thì báo tớ nhé.",
+   "en": "Let me know if anything comes up.",
+   "ko": "무슨 일 있으면 나한테 말해.",
+   "blank": "báo"
   }
  ],
  "w|bảo": [
@@ -251,6 +321,34 @@
    "blank": "bỏ"
   }
  ],
+ "w|bộ": [
+  {
+   "text": "Bộ đồ này mặc vừa lắm.",
+   "en": "This outfit fits really well.",
+   "ko": "이 옷 입으니까 딱 맞아.",
+   "blank": "Bộ"
+  },
+  {
+   "text": "Mượn bộ nồi của mẹ nhé.",
+   "en": "Let me borrow Mom's set of pots.",
+   "ko": "엄마 냄비 세트 빌려도 되지?",
+   "blank": "bộ"
+  }
+ ],
+ "w|bởi": [
+  {
+   "text": "Bởi mưa nên tớ không đi.",
+   "en": "I'm not going because of the rain.",
+   "ko": "비가 와서 안 갈게.",
+   "blank": "Bởi"
+  },
+  {
+   "text": "Cậu giận bởi tớ muộn à?",
+   "en": "Are you mad because I was late?",
+   "ko": "내가 늦어서 화난 거야?",
+   "blank": "bởi"
+  }
+ ],
  "w|bọn": [
   {
    "text": "Thôi bọn mình về.",
@@ -347,6 +445,20 @@
    "en": "Do you need me to help?",
    "ko": "내가 도와줘야 해?",
    "blank": "cần"
+  }
+ ],
+ "w|câu": [
+  {
+   "text": "Câu này khó hiểu quá.",
+   "en": "This line is really hard to follow.",
+   "ko": "이 문장 이해하기 너무 어려워.",
+   "blank": "Câu"
+  },
+  {
+   "text": "Nhắc lại câu vừa rồi đi.",
+   "en": "Say that last bit again.",
+   "ko": "방금 그 말 다시 해 봐.",
+   "blank": "câu"
   }
  ],
  "w|cậu": [
@@ -517,6 +629,34 @@
    "blank": "Chỗ"
   }
  ],
+ "w|chờ": [
+  {
+   "text": "Chờ tớ một chút.",
+   "en": "Wait for me a second.",
+   "ko": "잠깐만 기다려.",
+   "blank": "Chờ"
+  },
+  {
+   "text": "Đừng chờ, ăn trước đi.",
+   "en": "Don't wait. Start eating.",
+   "ko": "기다리지 말고 먼저 먹어.",
+   "blank": "chờ"
+  }
+ ],
+ "w|chơi": [
+  {
+   "text": "Chiều nay ra ngoài chơi đi.",
+   "en": "Let's go out this afternoon.",
+   "ko": "오늘 오후에 나가서 놀자.",
+   "blank": "chơi"
+  },
+  {
+   "text": "Bọn trẻ đang chơi ngoài sân.",
+   "en": "The kids are playing outside.",
+   "ko": "애들이 마당에서 놀고 있어.",
+   "blank": "chơi"
+  }
+ ],
  "w|chú": [
   {
    "text": "Chú uống nước đã ạ.",
@@ -643,6 +783,20 @@
    "blank": "cô"
   }
  ],
+ "w|cô gái": [
+  {
+   "text": "Cô gái kia đang tìm cậu.",
+   "en": "That girl is looking for you.",
+   "ko": "저 여자가 너를 찾고 있어.",
+   "blank": "Cô gái"
+  },
+  {
+   "text": "Cô gái ấy hát hay lắm.",
+   "en": "That girl sings really well.",
+   "ko": "그 여자 노래 정말 잘해.",
+   "blank": "Cô gái"
+  }
+ ],
  "w|có thể": [
   {
    "text": "Chiều nay có thể mưa.",
@@ -713,6 +867,20 @@
    "blank": "của"
   }
  ],
+ "w|cửa": [
+  {
+   "text": "Đóng cửa lại, gió lùa.",
+   "en": "Close the door, there's a draft.",
+   "ko": "문 닫아, 바람이 들어와.",
+   "blank": "cửa"
+  },
+  {
+   "text": "Có ai gõ cửa kìa.",
+   "en": "Someone's knocking at the door.",
+   "ko": "누가 문을 두드리고 있어.",
+   "blank": "cửa"
+  }
+ ],
  "w|cùng": [
   {
    "text": "Mình đi cùng nhau nhé.",
@@ -755,6 +923,20 @@
    "blank": "cuộc sống"
   }
  ],
+ "w|cứu": [
+  {
+   "text": "Cứu tớ với, kẹt cửa rồi.",
+   "en": "Help, the door's stuck.",
+   "ko": "도와 줘, 문이 안 열려.",
+   "blank": "Cứu"
+  },
+  {
+   "text": "Ra cứu với, nồi trào rồi.",
+   "en": "Come help, the pot's boiling over.",
+   "ko": "와서 도와 줘, 냄비가 넘쳤어.",
+   "blank": "cứu"
+  }
+ ],
  "w|đã": [
   {
    "text": "Mẹ đã nấu cơm xong.",
@@ -781,6 +963,34 @@
    "en": "I'm busy for a bit.",
    "ko": "잠깐만 바쁜 중이야.",
    "blank": "đang"
+  }
+ ],
+ "w|đáng": [
+  {
+   "text": "Cuốn này đáng đọc lắm.",
+   "en": "This book's well worth reading.",
+   "ko": "이 책 정말 읽을 만해.",
+   "blank": "đáng"
+  },
+  {
+   "text": "Không đáng để ý đâu.",
+   "en": "It's not worth your attention.",
+   "ko": "신경 쓸 거 없어.",
+   "blank": "đáng"
+  }
+ ],
+ "w|đánh": [
+  {
+   "text": "Tối nay đánh bài không?",
+   "en": "Want to play cards tonight?",
+   "ko": "오늘 밤에 카드 할래?",
+   "blank": "đánh"
+  },
+  {
+   "text": "Nhớ đánh răng trước khi ngủ.",
+   "en": "Brush your teeth before bed.",
+   "ko": "자기 전에 양치하는 거 잊지 마.",
+   "blank": "đánh"
   }
  ],
  "w|đâu": [
@@ -867,6 +1077,34 @@
    "blank": "đến"
   }
  ],
+ "w|đẹp": [
+  {
+   "text": "Hôm nay trời đẹp quá.",
+   "en": "The weather's lovely today.",
+   "ko": "오늘 날씨가 정말 좋아.",
+   "blank": "đẹp"
+  },
+  {
+   "text": "Cái áo này đẹp thật.",
+   "en": "This shirt is really nice.",
+   "ko": "이 옷 진짜 예뻐.",
+   "blank": "đẹp"
+  }
+ ],
+ "w|đều": [
+  {
+   "text": "Hai đứa đều đói rồi.",
+   "en": "We're both hungry.",
+   "ko": "둘 다 배고파.",
+   "blank": "đều"
+  },
+  {
+   "text": "Mấy món này đều ngon.",
+   "en": "Every one of these dishes is good.",
+   "ko": "이 요리들은 다 맛있어.",
+   "blank": "đều"
+  }
+ ],
  "w|đi": [
   {
    "text": "Mình đi chợ kẻo muộn.",
@@ -937,6 +1175,34 @@
    "blank": "Đồ"
   }
  ],
+ "w|đổi": [
+  {
+   "text": "Đổi món đi, chán cơm rồi.",
+   "en": "Let's eat something else. I'm sick of rice.",
+   "ko": "다른 거 먹자, 밥은 이제 질렸어.",
+   "blank": "Đổi"
+  },
+  {
+   "text": "Mình đổi chỗ cho mát.",
+   "en": "Let's switch seats so we can cool off.",
+   "ko": "시원하게 자리 바꾸자.",
+   "blank": "đổi"
+  }
+ ],
+ "w|đủ": [
+  {
+   "text": "Tiền này đủ chưa?",
+   "en": "Is this enough money?",
+   "ko": "이 돈이면 충분해?",
+   "blank": "đủ"
+  },
+  {
+   "text": "Đủ rồi, đừng lấy thêm.",
+   "en": "That's enough. Don't take any more.",
+   "ko": "됐어, 더 가져가지 마.",
+   "blank": "Đủ"
+  }
+ ],
  "w|đưa": [
   {
    "text": "Anh đưa em đi học nhé.",
@@ -949,6 +1215,34 @@
    "en": "Hand me the book.",
    "ko": "그 책 좀 줘.",
    "blank": "đưa"
+  }
+ ],
+ "w|đứa": [
+  {
+   "text": "Đứa bé ngủ rồi, im nào.",
+   "en": "The little one is asleep, so hush.",
+   "ko": "아기 잠들었어, 조용히 하자.",
+   "blank": "Đứa"
+  },
+  {
+   "text": "Đứa nào đói thì ăn trước.",
+   "en": "Whoever's hungry can eat first.",
+   "ko": "배고픈 애부터 먼저 먹어.",
+   "blank": "Đứa"
+  }
+ ],
+ "w|dùng": [
+  {
+   "text": "Cậu dùng đũa hay thìa?",
+   "en": "Do you use chopsticks or a spoon?",
+   "ko": "젓가락 쓸래, 숟가락 쓸래?",
+   "blank": "dùng"
+  },
+  {
+   "text": "Cái này dùng được không?",
+   "en": "Can this still be used?",
+   "ko": "이거 아직 쓸 수 있어?",
+   "blank": "dùng"
   }
  ],
  "w|đúng": [
@@ -1049,6 +1343,20 @@
    "blank": "gì"
   }
  ],
+ "w|gì đó": [
+  {
+   "text": "Hình như quên gì đó ở nhà.",
+   "en": "I think I left something at home.",
+   "ko": "집에 뭘 두고 온 것 같아.",
+   "blank": "gì đó"
+  },
+  {
+   "text": "Trong hộp có gì đó kêu.",
+   "en": "Something's rattling in the box.",
+   "ko": "상자 안에서 뭐가 달그락거려.",
+   "blank": "gì đó"
+  }
+ ],
  "w|giết": [
   {
    "text": "Thôi đừng giết thời gian nữa.",
@@ -1075,6 +1383,34 @@
    "en": "It's bedtime.",
    "ko": "이제 잘 시간이야.",
    "blank": "giờ"
+  }
+ ],
+ "w|giống": [
+  {
+   "text": "Cậu giống mẹ quá.",
+   "en": "You look so much like your mom.",
+   "ko": "엄마를 많이 닮았어.",
+   "blank": "giống"
+  },
+  {
+   "text": "Hai cái áo giống nhau.",
+   "en": "The two shirts look the same.",
+   "ko": "셔츠 두 벌이 똑같아.",
+   "blank": "giống"
+  }
+ ],
+ "w|giữ": [
+  {
+   "text": "Cậu giữ chỗ giúp tớ nhé.",
+   "en": "Save a seat for me.",
+   "ko": "자리 좀 맡아 줘.",
+   "blank": "giữ"
+  },
+  {
+   "text": "Giữ ấm, trời lạnh.",
+   "en": "Bundle up, it's cold.",
+   "ko": "따뜻하게 입어, 날씨가 추워.",
+   "blank": "Giữ"
   }
  ],
  "w|giúp": [
@@ -1259,6 +1595,34 @@
    "blank": "hỏi"
   }
  ],
+ "w|hôm": [
+  {
+   "text": "Hôm qua tớ quên ô.",
+   "en": "I forgot my umbrella yesterday.",
+   "ko": "어제 우산 두고 나왔어.",
+   "blank": "Hôm"
+  },
+  {
+   "text": "Hôm nọ cậu hứa rồi mà.",
+   "en": "You promised the other day.",
+   "ko": "며칠 전에 약속했잖아.",
+   "blank": "Hôm"
+  }
+ ],
+ "w|hôm nay": [
+  {
+   "text": "Hôm nay trời mát thật.",
+   "en": "It's really nice and cool today.",
+   "ko": "오늘 날씨가 정말 시원해.",
+   "blank": "Hôm nay"
+  },
+  {
+   "text": "Hôm nay cậu rảnh không?",
+   "en": "Are you free today?",
+   "ko": "오늘 시간 돼?",
+   "blank": "Hôm nay"
+  }
+ ],
  "w|hơn": [
   {
    "text": "Cái này ngon hơn.",
@@ -1343,6 +1707,34 @@
    "blank": "không"
   }
  ],
+ "w|không gì": [
+  {
+   "text": "Không gì bằng bát phở nóng.",
+   "en": "Nothing beats a hot bowl of pho.",
+   "ko": "뜨거운 쌀국수만 한 게 없어.",
+   "blank": "Không gì"
+  },
+  {
+   "text": "Không gì đâu, chuyện nhỏ thôi.",
+   "en": "It's nothing, just a small thing.",
+   "ko": "아무것도 아니야, 별일 아니야.",
+   "blank": "Không gì"
+  }
+ ],
+ "w|kia": [
+  {
+   "text": "Cái áo kia của ai?",
+   "en": "Whose shirt is that over there?",
+   "ko": "저 옷 누구 거야?",
+   "blank": "kia"
+  },
+  {
+   "text": "Hồi kia tớ đã dặn rồi.",
+   "en": "I already told you earlier.",
+   "ko": "아까 이미 말해 줬잖아.",
+   "blank": "kia"
+  }
+ ],
  "w|là": [
   {
    "text": "Đây là quán phở tớ hay ăn.",
@@ -1413,6 +1805,20 @@
    "blank": "lần"
   }
  ],
+ "w|lâu": [
+  {
+   "text": "Lâu rồi không gặp.",
+   "en": "It's been a long time.",
+   "ko": "정말 오랜만이야.",
+   "blank": "Lâu"
+  },
+  {
+   "text": "Chờ lâu quá, về thôi.",
+   "en": "We've waited too long. Let's go.",
+   "ko": "너무 오래 기다렸어, 그만 가자.",
+   "blank": "lâu"
+  }
+ ],
  "w|lấy": [
   {
    "text": "Nhớ lấy ô kẻo mưa.",
@@ -1441,6 +1847,20 @@
    "blank": "lên"
   }
  ],
+ "w|lo": [
+  {
+   "text": "Đừng lo, tớ ổn mà.",
+   "en": "Don't worry, I'm fine.",
+   "ko": "걱정하지 마, 나 괜찮아.",
+   "blank": "lo"
+  },
+  {
+   "text": "Mẹ lo cho cậu suốt.",
+   "en": "Mom worries about you all the time.",
+   "ko": "엄마가 늘 너를 걱정해.",
+   "blank": "lo"
+  }
+ ],
  "w|lời": [
   {
    "text": "Nghe lời bà đi.",
@@ -1453,6 +1873,20 @@
    "en": "I did keep my promise.",
    "ko": "약속은 지켰잖아.",
    "blank": "lời"
+  }
+ ],
+ "w|lớn": [
+  {
+   "text": "Cái túi này lớn quá.",
+   "en": "This bag is way too big.",
+   "ko": "이 가방 너무 커.",
+   "blank": "lớn"
+  },
+  {
+   "text": "Em lớn rồi, tự lo được.",
+   "en": "You're grown. You can handle it.",
+   "ko": "너 이제 다 컸잖아, 네가 알아서 해.",
+   "blank": "lớn"
   }
  ],
  "w|lúc": [
@@ -1483,6 +1917,20 @@
    "blank": "luôn"
   }
  ],
+ "w|lý do": [
+  {
+   "text": "Cậu nghỉ vì lý do gì?",
+   "en": "What's your reason for taking off?",
+   "ko": "무슨 이유로 쉬는 거야?",
+   "blank": "lý do"
+  },
+  {
+   "text": "Lý do tớ muộn là kẹt xe.",
+   "en": "I'm late because of traffic.",
+   "ko": "늦은 이유는 차가 막혀서야.",
+   "blank": "Lý do"
+  }
+ ],
  "w|mà": [
   {
    "text": "Em nói rồi mà.",
@@ -1495,6 +1943,20 @@
    "en": "It's good though. Why not try?",
    "ko": "괜찮은데, 왜 안 해 봐?",
    "blank": "mà"
+  }
+ ],
+ "w|mang": [
+  {
+   "text": "Nhớ mang ô theo.",
+   "en": "Don't forget to bring an umbrella.",
+   "ko": "우산 가져가는 거 잊지 마.",
+   "blank": "mang"
+  },
+  {
+   "text": "Mang giày vào đã.",
+   "en": "Put your shoes on first.",
+   "ko": "일단 신발부터 신어.",
+   "blank": "Mang"
   }
  ],
  "w|mất": [
@@ -1523,6 +1985,20 @@
    "en": "You look really pale.",
    "ko": "얼굴이 너무 창백해.",
    "blank": "Mặt"
+  }
+ ],
+ "w|máy": [
+  {
+   "text": "Máy giặt lại hỏng rồi.",
+   "en": "The washing machine's broken again.",
+   "ko": "세탁기가 또 고장 났어.",
+   "blank": "Máy"
+  },
+  {
+   "text": "Bật máy lạnh giúp tớ.",
+   "en": "Turn the air conditioner on for me.",
+   "ko": "에어컨 좀 켜 줘.",
+   "blank": "máy"
   }
  ],
  "w|mày": [
@@ -1805,6 +2281,20 @@
    "blank": "Ngoài"
   }
  ],
+ "w|ngủ": [
+  {
+   "text": "Khuya rồi, ngủ đi.",
+   "en": "It's late. Go to sleep.",
+   "ko": "늦었어, 이제 자.",
+   "blank": "ngủ"
+  },
+  {
+   "text": "Trưa nay tớ ngủ một giấc.",
+   "en": "I'm going to nap this afternoon.",
+   "ko": "오늘 낮에 한숨 잘게.",
+   "blank": "ngủ"
+  }
+ ],
  "w|ngươi": [
   {
    "text": "Ngươi muốn gì?",
@@ -1831,6 +2321,20 @@
    "en": "Don't be so quick to trust a stranger.",
    "ko": "낯선 사람 그렇게 쉽게 믿지 마.",
    "blank": "người"
+  }
+ ],
+ "w|người ta": [
+  {
+   "text": "Người ta đang nhìn kìa.",
+   "en": "People are staring.",
+   "ko": "사람들이 쳐다보고 있어.",
+   "blank": "Người ta"
+  },
+  {
+   "text": "Người ta chờ mãi mà cậu không đến.",
+   "en": "I waited forever and you never came.",
+   "ko": "얼마나 기다렸는데 너는 안 왔잖아.",
+   "blank": "Người ta"
   }
  ],
  "w|nhà": [
@@ -1945,6 +2449,20 @@
    "blank": "nhìn"
   }
  ],
+ "w|nhỏ": [
+  {
+   "text": "Căn phòng nhỏ mà ấm.",
+   "en": "The room is small but cozy.",
+   "ko": "방은 작아도 포근해.",
+   "blank": "nhỏ"
+  },
+  {
+   "text": "Hồi nhỏ tớ sợ chó.",
+   "en": "When I was little I was scared of dogs.",
+   "ko": "어렸을 때는 개가 무서웠어.",
+   "blank": "nhỏ"
+  }
+ ],
  "w|nhớ": [
   {
    "text": "Tớ nhớ mùi cơm nhà.",
@@ -2057,6 +2575,34 @@
    "blank": "nữa"
   }
  ],
+ "w|nước": [
+  {
+   "text": "Rót nước cho tớ với.",
+   "en": "Pour me some water.",
+   "ko": "물 좀 따라 줘.",
+   "blank": "nước"
+  },
+  {
+   "text": "Nước cam này chua quá.",
+   "en": "This orange juice is really sour.",
+   "ko": "이 오렌지 주스 너무 셔.",
+   "blank": "Nước"
+  }
+ ],
+ "w|ôi": [
+  {
+   "text": "Ôi, quên mất chìa khóa.",
+   "en": "Oh no, I forgot the key.",
+   "ko": "아, 열쇠를 두고 왔어.",
+   "blank": "Ôi"
+  },
+  {
+   "text": "Ôi trời, cay quá.",
+   "en": "Oh wow, that's spicy.",
+   "ko": "아이고, 너무 매워.",
+   "blank": "Ôi"
+  }
+ ],
  "w|ơi": [
   {
    "text": "Mẹ ơi, cơm chín chưa?",
@@ -2069,6 +2615,20 @@
    "en": "Minh, wait for me.",
    "ko": "민아, 기다려.",
    "blank": "ơi"
+  }
+ ],
+ "w|ổn": [
+  {
+   "text": "Mọi chuyện ổn rồi.",
+   "en": "Everything's fine now.",
+   "ko": "이제 다 괜찮아졌어.",
+   "blank": "ổn"
+  },
+  {
+   "text": "Cậu thấy ổn không?",
+   "en": "Are you feeling okay?",
+   "ko": "괜찮아?",
+   "blank": "ổn"
   }
  ],
  "w|ông": [
@@ -2183,6 +2743,20 @@
    "blank": "rất"
   }
  ],
+ "w|rõ": [
+  {
+   "text": "Nói rõ hơn được không?",
+   "en": "Can you say it more clearly?",
+   "ko": "좀 더 분명히 말해 줄래?",
+   "blank": "rõ"
+  },
+  {
+   "text": "Tớ nghe không rõ.",
+   "en": "I can't hear it clearly.",
+   "ko": "잘 안 들려.",
+   "blank": "rõ"
+  }
+ ],
  "w|rồi": [
   {
    "text": "Tớ ăn sáng rồi.",
@@ -2195,6 +2769,20 @@
    "en": "The rice is done. Let's eat.",
    "ko": "밥 다 됐으니 먹자.",
    "blank": "rồi"
+  }
+ ],
+ "w|sáng": [
+  {
+   "text": "Sáng nay tớ dậy muộn.",
+   "en": "I got up late this morning.",
+   "ko": "오늘 아침에 늦게 일어났어.",
+   "blank": "Sáng"
+  },
+  {
+   "text": "Sáng mai gặp ở quán nhé.",
+   "en": "Let's meet at the cafe tomorrow morning.",
+   "ko": "내일 아침에 카페에서 보자.",
+   "blank": "Sáng"
   }
  ],
  "w|sao": [
@@ -2251,6 +2839,20 @@
    "en": "I forgot the house number.",
    "ko": "집 번지를 잊어버렸어.",
    "blank": "số"
+  }
+ ],
+ "w|sợ": [
+  {
+   "text": "Tớ sợ nhện lắm.",
+   "en": "I'm really scared of spiders.",
+   "ko": "나 거미가 정말 무서워.",
+   "blank": "sợ"
+  },
+  {
+   "text": "Sợ muộn nên tớ đi sớm.",
+   "en": "I left early so I wouldn't be late.",
+   "ko": "늦을까 봐 일찍 나갔어.",
+   "blank": "Sợ"
   }
  ],
  "w|sống": [
@@ -2337,6 +2939,20 @@
    "blank": "Tất cả"
   }
  ],
+ "w|tất nhiên": [
+  {
+   "text": "Tất nhiên là tớ đi.",
+   "en": "Of course I'm going.",
+   "ko": "당연히 가지.",
+   "blank": "Tất nhiên"
+  },
+  {
+   "text": "Tất nhiên rồi, tớ giúp.",
+   "en": "Of course, I'll help.",
+   "ko": "당연하지, 내가 도와줄게.",
+   "blank": "Tất nhiên"
+  }
+ ],
  "w|tay": [
   {
    "text": "Rửa tay rồi mới ăn.",
@@ -2421,6 +3037,34 @@
    "blank": "thế"
   }
  ],
+ "w|thế nào": [
+  {
+   "text": "Chuyện đó thế nào rồi?",
+   "en": "How did that turn out?",
+   "ko": "그 일은 어떻게 됐어?",
+   "blank": "thế nào"
+  },
+  {
+   "text": "Làm thế nào mở cái này ra?",
+   "en": "How do you get this open?",
+   "ko": "이거 어떻게 열어야 해?",
+   "blank": "thế nào"
+  }
+ ],
+ "w|thêm": [
+  {
+   "text": "Cho thêm đá với.",
+   "en": "A bit more ice, please.",
+   "ko": "얼음 좀 더 넣어 줘.",
+   "blank": "thêm"
+  },
+  {
+   "text": "Ăn thêm đi, còn nhiều.",
+   "en": "Have more, there's plenty left.",
+   "ko": "더 먹어, 아직 많이 남았어.",
+   "blank": "thêm"
+  }
+ ],
  "w|theo": [
   {
    "text": "Đi theo tớ, gần thôi.",
@@ -2463,6 +3107,34 @@
    "blank": "thích"
   }
  ],
+ "w|thôi": [
+  {
+   "text": "Thôi, về nhà đi.",
+   "en": "Alright, let's head home.",
+   "ko": "됐다, 집에 가자.",
+   "blank": "Thôi"
+  },
+  {
+   "text": "Ăn thế thôi, no rồi.",
+   "en": "I'll stop here. I'm full.",
+   "ko": "이만큼만 먹을게, 배불러.",
+   "blank": "thôi"
+  }
+ ],
+ "w|thời gian": [
+  {
+   "text": "Tớ chẳng có thời gian.",
+   "en": "I just don't have the time.",
+   "ko": "시간이 전혀 없어.",
+   "blank": "thời gian"
+  },
+  {
+   "text": "Thời gian trôi nhanh thật.",
+   "en": "Time really flies.",
+   "ko": "시간이 정말 빨리 가.",
+   "blank": "Thời gian"
+  }
+ ],
  "w|thứ": [
   {
    "text": "Cái thứ này lạ quá.",
@@ -2491,6 +3163,48 @@
    "blank": "thưa"
   }
  ],
+ "w|thực sự": [
+  {
+   "text": "Tớ thực sự mệt rồi.",
+   "en": "I'm honestly worn out.",
+   "ko": "나 정말로 지쳤어.",
+   "blank": "thực sự"
+  },
+  {
+   "text": "Cậu thực sự muốn về à?",
+   "en": "Do you really want to go home?",
+   "ko": "정말 집에 가고 싶어?",
+   "blank": "thực sự"
+  }
+ ],
+ "w|thương": [
+  {
+   "text": "Mẹ thương mấy đứa lắm.",
+   "en": "Mom loves you kids so much.",
+   "ko": "엄마가 너희를 정말 아껴.",
+   "blank": "thương"
+  },
+  {
+   "text": "Thương cậu nên tớ mới nói.",
+   "en": "I'm only saying this because I care.",
+   "ko": "네가 걱정돼서 하는 말이야.",
+   "blank": "Thương"
+  }
+ ],
+ "w|thường": [
+  {
+   "text": "Tớ thường ăn ở nhà.",
+   "en": "I usually eat at home.",
+   "ko": "나는 보통 집에서 먹어.",
+   "blank": "thường"
+  },
+  {
+   "text": "Quán này thường đông lắm.",
+   "en": "This place is usually packed.",
+   "ko": "이 식당은 보통 사람이 많아.",
+   "blank": "thường"
+  }
+ ],
  "w|tiền": [
   {
    "text": "Tớ hết tiền mặt rồi.",
@@ -2503,6 +3217,20 @@
    "en": "Can you pay for me?",
    "ko": "나 대신 계산해 줘.",
    "blank": "tiền"
+  }
+ ],
+ "w|tiếng": [
+  {
+   "text": "Tiếng gì ngoài cửa thế?",
+   "en": "What's that sound outside the door?",
+   "ko": "문 밖에서 무슨 소리지?",
+   "blank": "Tiếng"
+  },
+  {
+   "text": "Ngồi thêm một tiếng nữa.",
+   "en": "Stay another hour.",
+   "ko": "한 시간만 더 있자.",
+   "blank": "tiếng"
   }
  ],
  "w|tiếp": [
@@ -2589,6 +3317,20 @@
    "blank": "tôi"
   }
  ],
+ "w|tối": [
+  {
+   "text": "Tối nay ăn gì?",
+   "en": "What are we eating tonight?",
+   "ko": "오늘 저녁에 뭐 먹어?",
+   "blank": "Tối"
+  },
+  {
+   "text": "Tối qua tớ ngủ sớm.",
+   "en": "I went to bed early last night.",
+   "ko": "어제 저녁에 일찍 잤어.",
+   "blank": "Tối"
+  }
+ ],
  "w|tới": [
   {
    "text": "Khách tới đông lắm.",
@@ -2617,6 +3359,20 @@
    "blank": "tốt"
   }
  ],
+ "w|trả": [
+  {
+   "text": "Trả tiền rồi mình về.",
+   "en": "Let's pay and head out.",
+   "ko": "계산하고 가자.",
+   "blank": "Trả"
+  },
+  {
+   "text": "Nhớ trả áo cho tớ.",
+   "en": "Remember to give the shirt back.",
+   "ko": "옷 돌려주는 거 잊지 마.",
+   "blank": "trả"
+  }
+ ],
  "w|trên": [
   {
    "text": "Sách để trên bàn.",
@@ -2629,6 +3385,34 @@
    "en": "Look up on the shelf.",
    "ko": "선반 위를 봐.",
    "blank": "trên"
+  }
+ ],
+ "w|trở lại": [
+  {
+   "text": "Bao giờ cậu trở lại?",
+   "en": "When are you coming back?",
+   "ko": "언제 돌아와?",
+   "blank": "trở lại"
+  },
+  {
+   "text": "Nhớ trở lại lấy ô.",
+   "en": "Come back for the umbrella.",
+   "ko": "우산 가지러 다시 오는 거 잊지 마.",
+   "blank": "trở lại"
+  }
+ ],
+ "w|trời": [
+  {
+   "text": "Trời mưa rồi, vào nhà đi.",
+   "en": "It's raining. Come inside.",
+   "ko": "비 온다, 집 안으로 들어와.",
+   "blank": "Trời"
+  },
+  {
+   "text": "Trời ơi, quên tắt bếp.",
+   "en": "Oh no, I forgot to turn off the stove.",
+   "ko": "어머, 가스불 끄는 걸 깜빡했어.",
+   "blank": "Trời"
   }
  ],
  "w|trong": [
@@ -2701,6 +3485,20 @@
    "blank": "từng"
   }
  ],
+ "w|tưởng": [
+  {
+   "text": "Tớ tưởng cậu không đến.",
+   "en": "I thought you weren't coming.",
+   "ko": "너 안 오는 줄 알았어.",
+   "blank": "tưởng"
+  },
+  {
+   "text": "Tưởng dễ, ai ngờ khó.",
+   "en": "I thought it was easy, but it's hard.",
+   "ko": "쉬운 줄 알았는데 어렵네.",
+   "blank": "Tưởng"
+  }
+ ],
  "w|tuyệt": [
   {
    "text": "Quán này tuyệt thật.",
@@ -2727,6 +3525,20 @@
    "en": "Pick up some vegetables and meat for me.",
    "ko": "채소랑 고기 좀 사다 줘.",
    "blank": "và"
+  }
+ ],
+ "w|vài": [
+  {
+   "text": "Chờ tớ vài phút.",
+   "en": "Give me a few minutes.",
+   "ko": "몇 분만 기다려.",
+   "blank": "vài"
+  },
+  {
+   "text": "Tớ chỉ ăn vài miếng.",
+   "en": "I only ate a few bites.",
+   "ko": "몇 입만 먹었어.",
+   "blank": "vài"
   }
  ],
  "w|vẫn": [
@@ -2853,6 +3665,34 @@
    "en": "Have you heard about that?",
    "ko": "그 얘기 들었어?",
    "blank": "vụ"
+  }
+ ],
+ "w|vừa": [
+  {
+   "text": "Tớ vừa ăn xong.",
+   "en": "I just finished eating.",
+   "ko": "나 방금 밥 다 먹었어.",
+   "blank": "vừa"
+  },
+  {
+   "text": "Mưa vừa tạnh.",
+   "en": "The rain just stopped.",
+   "ko": "비가 방금 그쳤어.",
+   "blank": "vừa"
+  }
+ ],
+ "w|vui": [
+  {
+   "text": "Nghe tin đó tớ vui lắm.",
+   "en": "That news made me really happy.",
+   "ko": "그 소식 듣고 너무 기뻐.",
+   "blank": "vui"
+  },
+  {
+   "text": "Đi chơi với cậu vui thật.",
+   "en": "It's really fun going out with you.",
+   "ko": "너랑 놀러 나가면 진짜 신나.",
+   "blank": "vui"
   }
  ],
  "w|xe": [

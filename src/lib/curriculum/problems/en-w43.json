@@ -523,7 +523,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "수하물",
     "answer": "luggage",
-    "line": "Don’t forget your luggage at the airport."
+    "line": "Don’t forget your luggage at the airport.",
+    "hint": "l"
   },
   "w|mechanic": {
     "kind": "word",
@@ -975,7 +976,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "스웨터",
     "answer": "sweater",
-    "line": "It's cold outside, so wear a sweater."
+    "line": "It's cold outside, so wear a sweater.",
+    "hint": "s"
   },
   "w|thankfully": {
     "kind": "word",
@@ -1056,7 +1058,7 @@
     "type": "type",
     "name": "vendor",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "판매자",
+    "gloss": "노점상",
     "answer": "vendor",
     "line": "The street vendor sells delicious snacks.",
     "hint": "v",
@@ -1067,7 +1069,7 @@
     "type": "type",
     "name": "wardrobe",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "옷장",
+    "gloss": "장롱",
     "answer": "wardrobe",
     "line": "She has a big wardrobe full of clothes.",
     "hint": "w",

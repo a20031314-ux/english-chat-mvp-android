@@ -332,7 +332,7 @@
     "type": "type",
     "name": "emerge",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "나타나다",
+    "gloss": "모습을 드러내다",
     "answer": "emerge",
     "line": "The sun will emerge from behind the clouds soon.",
     "hint": "e",
@@ -444,7 +444,7 @@
     "type": "type",
     "name": "glow",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "빛나다",
+    "gloss": "은은히 빛나다",
     "answer": "glow",
     "line": "The fireflies glow in the dark at night.",
     "hint": "g",
@@ -581,7 +581,7 @@
     "type": "type",
     "name": "likelihood",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "가능성",
+    "gloss": "있음직함",
     "answer": "likelihood",
     "line": "There is a high likelihood of rain tomorrow.",
     "hint": "l",
@@ -765,7 +765,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "끈질긴",
     "answer": "persistent",
-    "line": "She is very persistent about her goals."
+    "line": "She is very persistent about her goals.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|pharmaceutical": {
     "kind": "word",
@@ -900,7 +902,7 @@
     "type": "type",
     "name": "sensation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "느낌",
+    "gloss": "저림",
     "answer": "sensation",
     "line": "A tingling sensation ran down my arm.",
     "hint": "s",
@@ -1077,7 +1079,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "속력",
     "answer": "velocity",
-    "line": "The velocity of the car increased on the highway."
+    "line": "The velocity of the car increased on the highway.",
+    "hint": "v",
+    "mark": "한 단어"
   },
   "w|verbal": {
     "kind": "word",

@@ -357,7 +357,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "지진",
     "answer": "earthquake",
-    "line": "The earthquake shook the buildings last night."
+    "line": "The earthquake shook the buildings last night.",
+    "hint": "e"
   },
   "w|editorial": {
     "kind": "word",
@@ -492,7 +493,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "겸손한",
     "answer": "humble",
-    "line": "Despite his success, he remains humble."
+    "line": "Despite his success, he remains humble.",
+    "hint": "h",
+    "mark": "한 단어"
   },
   "w|hybrid": {
     "kind": "word",
@@ -508,7 +511,7 @@
     "type": "type",
     "name": "iconic",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "상징적인",
+    "gloss": "대표적인",
     "answer": "iconic",
     "line": "The Eiffel Tower is an iconic landmark."
   },
@@ -670,7 +673,7 @@
     "type": "type",
     "name": "mathematics",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "수학",
+    "gloss": "수학(격식)",
     "answer": "mathematics",
     "line": "He studies mathematics every evening.",
     "hint": "m",
@@ -771,7 +774,7 @@
     "type": "type",
     "name": "peer",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "동료",
+    "gloss": "동등한 동료",
     "answer": "peer",
     "line": "She always tries to impress her peer at work.",
     "hint": "p",

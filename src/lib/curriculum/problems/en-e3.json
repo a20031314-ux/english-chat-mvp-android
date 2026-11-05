@@ -22,7 +22,7 @@
     "type": "choose",
     "name": "it turned out",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "그녀는 집에 열쇠를 두고 와서 가져오지 않았다.",
+    "gloss": "알고 보니 집에 열쇠를 두고 왔어요.",
     "before": "",
     "after": " she forgot her keys at home.",
     "answer": "It turned out",
@@ -94,8 +94,8 @@
     "type": "choose",
     "name": "it depends",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "오늘 공원에 갈 수 있는지는 날씨에 따라 달라요.",
-    "before": "Can we go to the park today? ",
+    "gloss": "날씨에 따라 달라요.",
+    "before": "",
     "after": " on the weather.",
     "answer": "It depends",
     "why": "상황에 따라 달라진다는 말은 It depends예요.",
@@ -105,7 +105,7 @@
       "Is depends",
       "It depending"
     ],
-    "line": "Can we go to the park today? It depends on the weather."
+    "line": "It depends on the weather."
   },
   "e|no wonder": {
     "kind": "expression",
@@ -364,9 +364,9 @@
     "type": "choose",
     "name": "fair enough",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "오늘 밤에 올 수 없다고? 알겠어.",
-    "before": "You can’t come tonight? ",
-    "after": ".",
+    "gloss": "알겠어요, 내일 다시 해 봐요.",
+    "before": "",
+    "after": ", we can try tomorrow.",
     "answer": "Fair enough",
     "why": "상대의 사정을 받아들인다는 대답은 Fair enough예요.",
     "options": [
@@ -375,7 +375,7 @@
       "Fairly enough",
       "Fair enoughs"
     ],
-    "line": "You can’t come tonight? Fair enough."
+    "line": "Fair enough, we can try tomorrow."
   },
   "e|get back to me": {
     "kind": "expression",

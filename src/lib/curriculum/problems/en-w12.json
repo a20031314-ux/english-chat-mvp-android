@@ -220,7 +220,7 @@
     "type": "type",
     "name": "affair",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "사건",
+    "gloss": "일(사안)",
     "answer": "affair",
     "line": "The whole affair was very confusing."
   },
@@ -341,7 +341,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "자유",
     "answer": "freedom",
-    "line": "Many people have fought for their freedom."
+    "line": "Many people have fought for their freedom.",
+    "hint": "f"
   },
   "w|among": {
     "kind": "word",
@@ -366,7 +367,7 @@
     "type": "type",
     "name": "bro",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "형제",
+    "gloss": "형제(구어)",
     "answer": "bro",
     "line": "Hey bro, do you want to play basketball later?",
     "hint": "b",
@@ -705,7 +706,7 @@
     "type": "type",
     "name": "doc",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의사",
+    "gloss": "의사(구어)",
     "answer": "doc",
     "line": "Hey doc, can you check this out?",
     "hint": "d",
@@ -871,7 +872,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "솔직히",
     "answer": "honestly",
-    "line": "You can tell me honestly what you think."
+    "line": "You can tell me honestly what you think.",
+    "hint": "h"
   },
   "w|confuse": {
     "kind": "word",
@@ -1093,7 +1095,7 @@
     "type": "type",
     "name": "collect",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "모으다",
+    "gloss": "수집하다",
     "answer": "collect",
     "line": "I like to collect stamps from different countries."
   }

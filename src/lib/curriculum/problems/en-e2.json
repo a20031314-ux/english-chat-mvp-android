@@ -40,7 +40,7 @@
     "type": "choose",
     "name": "not bad at all",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "네 그림이 정말 좋아.",
+    "gloss": "네 그림은 생각보다 꽤 괜찮아요.",
     "before": "Your drawing is ",
     "after": ".",
     "answer": "not bad at all",
@@ -94,18 +94,18 @@
     "type": "choose",
     "name": "sounds good",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "다섯 시에 공원에서 만나는 거 좋아요.",
-    "before": "We can meet at the park at five, ",
-    "after": ".",
-    "answer": "sounds good",
+    "gloss": "좋아요, 다섯 시에 만나요.",
+    "before": "",
+    "after": ", let's meet at five.",
+    "answer": "Sounds good",
     "why": "그 제안이 좋다는 대답은 sounds good이에요.",
     "options": [
-      "sounds well",
-      "sounds good",
-      "it sound good",
-      "sounds a good"
+      "Sounds well",
+      "Sounds good",
+      "It sound good",
+      "Sounds a good"
     ],
-    "line": "We can meet at the park at five, sounds good."
+    "line": "Sounds good, let's meet at five."
   },
   "e|let's meet at": {
     "kind": "expression",
@@ -148,9 +148,9 @@
     "type": "choose",
     "name": "maybe next time",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "미안해, 다음에 같이 놀 수 있을 거야.",
+    "gloss": "미안해요, 다음에요.",
     "before": "Sorry, ",
-    "after": " we can play together.",
+    "after": ".",
     "answer": "maybe next time",
     "why": "이번은 어렵고 다음을 기약할 때는 maybe next time이에요.",
     "options": [
@@ -159,7 +159,7 @@
       "maybe a next time",
       "maybe next times"
     ],
-    "line": "Sorry, maybe next time we can play together."
+    "line": "Sorry, maybe next time."
   },
   "e|a bit expensive": {
     "kind": "expression",
@@ -364,9 +364,9 @@
     "type": "choose",
     "name": "that's too bad",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "모자를 잃어버렸다니 안됐구나.",
-    "before": "You lost your hat? ",
-    "after": ".",
+    "gloss": "모자를 잃어버려서 안됐어요.",
+    "before": "",
+    "after": " about your hat.",
     "answer": "That's too bad",
     "why": "안타깝다는 말은 That's too bad예요.",
     "options": [
@@ -375,7 +375,7 @@
       "That's a too bad",
       "That's too badly"
     ],
-    "line": "You lost your hat? That's too bad."
+    "line": "That's too bad about your hat."
   },
   "e|let me check": {
     "kind": "expression",

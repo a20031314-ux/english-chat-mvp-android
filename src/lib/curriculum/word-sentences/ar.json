@@ -97,6 +97,20 @@
    "blank": "آنسة"
   }
  ],
+ "w|آني": [
+  {
+   "text": "بدنا حل آني، مو بكرة.",
+   "en": "We need a solution right now, not tomorrow.",
+   "ko": "내일 말고 당장 해결이 필요해.",
+   "blank": "آني"
+  },
+  {
+   "text": "الرد الآني فرق بالموضوع.",
+   "en": "The immediate reply made a difference.",
+   "ko": "바로 답한 게 일에 도움이 됐어.",
+   "blank": "الآني"
+  }
+ ],
  "w|آه": [
   {
    "text": "آه والله تعبت اليوم.",
@@ -713,6 +727,20 @@
    "blank": "أخر"
   }
  ],
+ "w|أخرج": [
+  {
+   "text": "أخرج المفتاح من جيبه بهدوء.",
+   "en": "He quietly took the key out of his pocket.",
+   "ko": "그가 주머니에서 열쇠를 조용히 꺼냈어.",
+   "blank": "أخرج"
+  },
+  {
+   "text": "أخرج الدفاتر من الدرج لو سمحت.",
+   "en": "Please take the notebooks out of the drawer.",
+   "ko": "서랍에서 공책 꺼내 줘.",
+   "blank": "أخرج"
+  }
+ ],
  "w|أخضر": [
   {
    "text": "الحديقة مليئة بالنباتات الخضراء.",
@@ -1035,6 +1063,20 @@
    "blank": "أربعون"
   }
  ],
+ "w|أرجح": [
+  {
+   "text": "الأرجح إنه نايم هلق.",
+   "en": "He is most likely asleep now.",
+   "ko": "지금 자고 있을 가능성이 커.",
+   "blank": "الأرجح"
+  },
+  {
+   "text": "أرجح إنهم تأخروا بالطريق.",
+   "en": "They most likely got delayed on the way.",
+   "ko": "길에서 늦었을 가능성이 커.",
+   "blank": "أرجح"
+  }
+ ],
  "w|أرخص": [
   {
    "text": "وجدت حذاء أرخص في السوق.",
@@ -1089,6 +1131,20 @@
    "en": "I sent a gift to my friend on the holiday.",
    "ko": "명절에 친구에게 선물을 보냈어.",
    "blank": "أرسلت"
+  }
+ ],
+ "w|أرشد": [
+  {
+   "text": "أرشدني الموظف إلى المكتب.",
+   "en": "The employee guided me to the office.",
+   "ko": "직원이 사무실까지 나를 안내했어.",
+   "blank": "أرشدني"
+  },
+  {
+   "text": "أرشد الدليل المجموعة في المتحف.",
+   "en": "The guide led the group through the museum.",
+   "ko": "안내원이 박물관에서 일행을 이끌었어.",
+   "blank": "أرشد"
   }
  ],
  "w|أرض": [
@@ -1495,6 +1551,20 @@
    "en": "I always wear black shoes.",
    "ko": "나는 항상 검은 신발을 신어.",
    "blank": "أسود"
+  }
+ ],
+ "w|أشار": [
+  {
+   "text": "أشار لي بيده من بعيد.",
+   "en": "He signaled to me with his hand from far away.",
+   "ko": "그가 멀리서 손으로 나를 가리켰어.",
+   "blank": "أشار"
+  },
+  {
+   "text": "أشارت اللافتة إلى المخرج.",
+   "en": "The sign pointed to the exit.",
+   "ko": "표지판이 출구를 가리켰어.",
+   "blank": "أشارت"
   }
  ],
  "w|أشرف": [
@@ -3107,6 +3177,20 @@
    "blank": "أنزل"
   }
  ],
+ "w|أنصت": [
+  {
+   "text": "أنصت شوي، الخبر مهم.",
+   "en": "Listen a moment, the news is important.",
+   "ko": "잠깐만 들어, 소식이 중요해.",
+   "blank": "أنصت"
+  },
+  {
+   "text": "أنصت لها للنهاية وما قاطع.",
+   "en": "He listened to her until the end and didn't cut in.",
+   "ko": "끝까지 듣고 말을 끊지 않았어.",
+   "blank": "أنصت"
+  }
+ ],
  "w|أنصف": [
   {
    "text": "أنصف القاضي بين المتخاصمين.",
@@ -3331,6 +3415,20 @@
    "blank": "أو"
   }
  ],
+ "w|أوان": [
+  {
+   "text": "لسا مو أوان السفر.",
+   "en": "It is not time to travel yet.",
+   "ko": "아직 떠날 때가 아니야.",
+   "blank": "أوان"
+  },
+  {
+   "text": "جاء أوان النوم، روح ارتاح.",
+   "en": "It is time to sleep, go and rest.",
+   "ko": "잘 시간이 됐으니 가서 쉬어.",
+   "blank": "أوان"
+  }
+ ],
  "w|أوضح": [
   {
    "text": "أوضح المدير سبب التأخير.",
@@ -3485,6 +3583,20 @@
    "blank": "أين"
   }
  ],
+ "w|أينما": [
+  {
+   "text": "أينما تروح بتلاقي زحمة.",
+   "en": "Wherever you go, you run into traffic.",
+   "ko": "어딜 가나 차가 막혀.",
+   "blank": "أينما"
+  },
+  {
+   "text": "أينما كنت ابعت لي خبر.",
+   "en": "Wherever you are, send me word.",
+   "ko": "어디 있든 나한테 소식 줘.",
+   "blank": "أينما"
+  }
+ ],
  "w|إبداع": [
   {
    "text": "إبداع الطلاب في المشروع رائع.",
@@ -3525,6 +3637,34 @@
    "en": "The water jug is on the table.",
    "ko": "물 주전자가 테이블 위에 있어.",
    "blank": "إبريق"
+  }
+ ],
+ "w|إثارة": [
+  {
+   "text": "بلا إثارة، احكي بهدوء.",
+   "en": "Drop the drama and speak calmly.",
+   "ko": "호들갑 떨지 말고 차분하게 말해.",
+   "blank": "إثارة"
+  },
+  {
+   "text": "في إثارة كبيرة بالجمهور.",
+   "en": "The crowd is really worked up.",
+   "ko": "관중이 아주 들떠 있어.",
+   "blank": "إثارة"
+  }
+ ],
+ "w|إثبات": [
+  {
+   "text": "بدنا إثبات قبل ما نصدق.",
+   "en": "We need proof before we believe it.",
+   "ko": "믿기 전에 증거가 필요해.",
+   "blank": "إثبات"
+  },
+  {
+   "text": "إثبات الهوية مطلوب عند الباب.",
+   "en": "You have to show ID at the door.",
+   "ko": "문 앞에서 신분 확인을 해야 해.",
+   "blank": "إثبات"
   }
  ],
  "w|إثر": [
@@ -3625,6 +3765,34 @@
    "blank": "إحساس"
   }
  ],
+ "w|إحضار": [
+  {
+   "text": "نسيت إحضار الشاحن، ضل بالبيت.",
+   "en": "I forgot to bring the charger. It stayed at home.",
+   "ko": "충전기를 집에 두고 왔어.",
+   "blank": "إحضار"
+  },
+  {
+   "text": "إحضار الأوراق عليك مو علي.",
+   "en": "Bringing the papers is on you, not me.",
+   "ko": "서류는 내가 아니라 네가 가져와야 해.",
+   "blank": "إحضار"
+  }
+ ],
+ "w|إخباري": [
+  {
+   "text": "شفت تقرير إخباري عن الحادث.",
+   "en": "I saw a news report about the accident.",
+   "ko": "사고에 대한 뉴스 보도를 봤어.",
+   "blank": "إخباري"
+  },
+  {
+   "text": "الموقع الإخباري نشر التفاصيل.",
+   "en": "The news site published the details.",
+   "ko": "뉴스 사이트에 자세한 내용이 올라왔어.",
+   "blank": "الإخباري"
+  }
+ ],
  "w|إدارة": [
   {
    "text": "إدارة الشركة تهتم بالتفاصيل.",
@@ -3709,6 +3877,20 @@
    "blank": "إذن"
   }
  ],
+ "w|إرسال": [
+  {
+   "text": "إرسال الصور واقف من الصبح.",
+   "en": "Sending the photos has been stuck since morning.",
+   "ko": "아침부터 사진이 안 보내져.",
+   "blank": "إرسال"
+  },
+  {
+   "text": "بعد إرسال الطلب رنوا علي.",
+   "en": "After the request was sent, they called me.",
+   "ko": "신청을 보내고 나니 전화가 왔어.",
+   "blank": "إرسال"
+  }
+ ],
  "w|إرهاق": [
   {
    "text": "إرهاق السفر يحتاج للراحة.",
@@ -3735,6 +3917,20 @@
    "en": "We quickly called the ambulance.",
    "ko": "우리는 급히 구급차를 불렀어.",
    "blank": "الإسعاف"
+  }
+ ],
+ "w|إسفنجة": [
+  {
+   "text": "الإسفنجة نشفت على الحوض.",
+   "en": "The sponge dried on the sink.",
+   "ko": "수세미가 싱크대 위에서 말랐어.",
+   "blank": "الإسفنجة"
+  },
+  {
+   "text": "أعطني إسفنجة عشان أنظف الصحون.",
+   "en": "Give me a sponge so I can wash the dishes.",
+   "ko": "설거지하게 수세미 좀 줘.",
+   "blank": "إسفنجة"
   }
  ],
  "w|إسلام": [
@@ -3989,6 +4185,20 @@
    "blank": "الإعلان"
   }
  ],
+ "w|إغلاق": [
+  {
+   "text": "إغلاق المحل بكير اليوم.",
+   "en": "The shop is closing early today.",
+   "ko": "오늘 가게가 일찍 닫혀.",
+   "blank": "إغلاق"
+  },
+  {
+   "text": "بعد إغلاق الشارع زادت الزحمة.",
+   "en": "After they closed the street, the traffic got worse.",
+   "ko": "길을 막은 뒤로 차가 더 막혀.",
+   "blank": "إغلاق"
+  }
+ ],
  "w|إقامة": [
   {
    "text": "هل لديك إقامة دائمة هنا؟",
@@ -4157,6 +4367,20 @@
    "blank": "إمساك"
   }
  ],
+ "w|إمكان": [
+  {
+   "text": "في إمكان نخلص اليوم إذا بلشنا.",
+   "en": "We might finish today if we start.",
+   "ko": "지금 시작하면 오늘 끝낼 수도 있어.",
+   "blank": "إمكان"
+  },
+  {
+   "text": "ما في إمكان أسافر هالأسبوع.",
+   "en": "I can't travel this week.",
+   "ko": "이번 주는 여행 갈 수가 없어.",
+   "blank": "إمكان"
+  }
+ ],
  "w|إمكانية": [
   {
    "text": "توجد إمكانية لحل المشكلة.",
@@ -4297,6 +4521,20 @@
    "blank": "إنما"
   }
  ],
+ "w|إياه": [
+  {
+   "text": "إياه أقصد، مو أخوه.",
+   "en": "I mean him, not his brother.",
+   "ko": "그 사람을 말한 거야, 형이 아니라.",
+   "blank": "إياه"
+  },
+  {
+   "text": "ما حدا شاف إياه من الصبح.",
+   "en": "Nobody has seen him since morning.",
+   "ko": "아침부터 그 사람을 본 사람이 없어.",
+   "blank": "إياه"
+  }
+ ],
  "w|إياها": [
   {
    "text": "قلت له نفس الكلمة إياها.",
@@ -4309,6 +4547,20 @@
    "en": "We went back to the same problem again.",
    "ko": "다시 그 문제로 돌아갔어.",
    "blank": "إياها"
+  }
+ ],
+ "w|إيجاد": [
+  {
+   "text": "إيجاد موقف بهالزحمة صعب.",
+   "en": "Finding a parking spot in this traffic is hard.",
+   "ko": "이 혼잡한 데서 주차할 곳을 찾기가 어려워.",
+   "blank": "إيجاد"
+  },
+  {
+   "text": "إيجاد شغل قريب من البيت مو سهل.",
+   "en": "Finding a job near home is not easy.",
+   "ko": "집 근처에서 일자리를 구하기가 쉽지 않아.",
+   "blank": "إيجاد"
   }
  ],
  "w|إيجار": [
@@ -4519,6 +4771,20 @@
    "en": "Agreement on the rules is necessary for everyone.",
    "ko": "규칙에 대한 합의는 모두에게 필요해.",
    "blank": "الاتفاق"
+  }
+ ],
+ "w|اتفاقية": [
+  {
+   "text": "وقعنا اتفاقية الشغل أمس.",
+   "en": "We signed the work agreement yesterday.",
+   "ko": "우리는 어제 근로 계약에 서명했어.",
+   "blank": "اتفاقية"
+  },
+  {
+   "text": "قرأنا الاتفاقية سطر سطر.",
+   "en": "We read the agreement line by line.",
+   "ko": "우리는 합의문을 한 줄씩 읽었어.",
+   "blank": "الاتفاقية"
   }
  ],
  "w|اتفق": [
@@ -5807,6 +6073,20 @@
    "en": "My brother worked all night yesterday.",
    "ko": "내 동생은 어젯밤 내내 일했어.",
    "blank": "اشتغل"
+  }
+ ],
+ "w|اشتكى": [
+  {
+   "text": "اشتكى الجار من الصوت العالي.",
+   "en": "The neighbor complained about the loud noise.",
+   "ko": "이웃이 큰 소리 때문에 불평했어.",
+   "blank": "اشتكى"
+  },
+  {
+   "text": "اشتكى لي من دوامه الطويل.",
+   "en": "He complained to me about his long shift.",
+   "ko": "그가 긴 근무 때문에 나한테 불평했어.",
+   "blank": "اشتكى"
   }
  ],
  "w|اشتهى": [
@@ -7181,6 +7461,20 @@
    "blank": "الباحث"
   }
  ],
+ "w|بادر": [
+  {
+   "text": "بادر صديقي بالاعتذار بسرعة.",
+   "en": "My friend was quick to apologize.",
+   "ko": "내 친구가 얼른 먼저 사과했어.",
+   "blank": "بادر"
+  },
+  {
+   "text": "بادر الولد وساعد أمه.",
+   "en": "The boy stepped in and helped his mother.",
+   "ko": "소년은 먼저 나서서 엄마를 도왔어.",
+   "blank": "بادر"
+  }
+ ],
  "w|باذنجان": [
   {
    "text": "حضرت باذنجان مشوي للعشاء.",
@@ -7207,6 +7501,20 @@
    "en": "It is cold in the morning.",
    "ko": "아침에 날씨가 추워.",
    "blank": "بارد"
+  }
+ ],
+ "w|بارع": [
+  {
+   "text": "الطباخ بارع بالمشاوي.",
+   "en": "The cook is excellent with grilled food.",
+   "ko": "그 요리사는 고기 굽는 솜씨가 좋아.",
+   "blank": "بارع"
+  },
+  {
+   "text": "أخوي بارع بإصلاح الجوال.",
+   "en": "My brother is great at fixing phones.",
+   "ko": "우리 형은 휴대폰 고치는 걸 잘해.",
+   "blank": "بارع"
   }
  ],
  "w|بارك": [
@@ -7349,6 +7657,48 @@
    "blank": "بالفعل"
   }
  ],
+ "w|بالكاد": [
+  {
+   "text": "بالكاد لحقت الباب قبل ما يسكر.",
+   "en": "I barely made it through the door before it shut.",
+   "ko": "문 닫히기 직전에 겨우 탔어.",
+   "blank": "بالكاد"
+  },
+  {
+   "text": "صوته واطي، بالكاد سمعته.",
+   "en": "His voice is low, I barely heard him.",
+   "ko": "목소리가 작아서 겨우 들었어.",
+   "blank": "بالكاد"
+  }
+ ],
+ "w|بالكامل": [
+  {
+   "text": "نسيت الاسم بالكامل.",
+   "en": "I completely forgot the name.",
+   "ko": "이름을 통째로 까먹었어.",
+   "blank": "بالكامل"
+  },
+  {
+   "text": "الشارع مسكر بالكامل.",
+   "en": "The street is completely closed.",
+   "ko": "길이 완전히 막혔어.",
+   "blank": "بالكامل"
+  }
+ ],
+ "w|بالله": [
+  {
+   "text": "بالله عليك خلص بدري اليوم.",
+   "en": "Please finish early today.",
+   "ko": "제발 오늘은 일찍 끝내.",
+   "blank": "بالله"
+  },
+  {
+   "text": "بالله قولي الحقيقة.",
+   "en": "Please tell me the truth.",
+   "ko": "제발 사실을 말해.",
+   "blank": "بالله"
+  }
+ ],
  "w|بالمناسبة": [
   {
    "text": "بالمناسبة، عيد ميلاد أمي غدًا.",
@@ -7475,6 +7825,34 @@
    "blank": "بجانبي"
   }
  ],
+ "w|بجدية": [
+  {
+   "text": "احكي بجدية، الموضوع مو لعبة.",
+   "en": "Talk seriously. This isn't a game.",
+   "ko": "진지하게 말해, 이건 장난이 아니야.",
+   "blank": "بجدية"
+  },
+  {
+   "text": "عم بفكر بجدية أترك الشغل.",
+   "en": "I'm seriously thinking of leaving the job.",
+   "ko": "일을 그만둘까 진지하게 생각하고 있어.",
+   "blank": "بجدية"
+  }
+ ],
+ "w|بجوار": [
+  {
+   "text": "قعد بجوار الشباك طول الطريق.",
+   "en": "He sat by the window the whole way.",
+   "ko": "오는 내내 창가에 앉았어.",
+   "blank": "بجوار"
+  },
+  {
+   "text": "الدكان بجوار بيتنا بالضبط.",
+   "en": "The shop is right next to our house.",
+   "ko": "가게가 우리 집 바로 옆이야.",
+   "blank": "بجوار"
+  }
+ ],
  "w|بحار": [
   {
    "text": "كلما رأيت البحر، أتخيل نفسي بحار يبحث عن كنوز.",
@@ -7585,6 +7963,20 @@
    "en": "It is said that a stingy person doesn't share his food.",
    "ko": "بخيل한 사람은 음식을 안 나눈다고 해.",
    "blank": "بخيل"
+  }
+ ],
+ "w|بدء": [
+  {
+   "text": "بدء المباراة تأخر نص ساعة.",
+   "en": "The start of the match was delayed half an hour.",
+   "ko": "경기 시작이 반 시간 밀렸어.",
+   "blank": "بدء"
+  },
+  {
+   "text": "قبل بدء السفر عد الحقائب.",
+   "en": "Count the bags before the trip starts.",
+   "ko": "출발하기 전에 가방을 세어 봐.",
+   "blank": "بدء"
   }
  ],
  "w|بدأ": [
@@ -8441,6 +8833,20 @@
    "blank": "بغل"
   }
  ],
+ "w|بقاء": [
+  {
+   "text": "بقاء الطفل مع أمه بطمنه.",
+   "en": "Staying with his mother calms the child.",
+   "ko": "아이가 엄마랑 있으면 마음이 놓여.",
+   "blank": "بقاء"
+  },
+  {
+   "text": "البقاء ما عاد له داعي بعد ما خلصنا.",
+   "en": "There is no point in staying after we finished.",
+   "ko": "다 끝났으니 더 있을 필요 없어.",
+   "blank": "البقاء"
+  }
+ ],
  "w|بقالة": [
   {
    "text": "ذهبت إلى بقالة الحي لشراء الخبز.",
@@ -9001,6 +9407,34 @@
    "blank": "بوابة"
   }
  ],
+ "w|بواسطة": [
+  {
+   "text": "وصلت بواسطة صديقي لأن السيارة خربانة.",
+   "en": "I got here through a friend because the car broke down.",
+   "ko": "차가 고장 나서 친구 도움으로 도착했어.",
+   "blank": "بواسطة"
+  },
+  {
+   "text": "عرفت الخبر بواسطة أختي.",
+   "en": "I heard the news through my sister.",
+   "ko": "언니를 통해서 소식을 알았어.",
+   "blank": "بواسطة"
+  }
+ ],
+ "w|بوب": [
+  {
+   "text": "بوب نسي محفظته بالبيت.",
+   "en": "Bob forgot his wallet at home.",
+   "ko": "밥이 지갑을 집에 두고 왔어.",
+   "blank": "بوب"
+  },
+  {
+   "text": "بوب تأخر عن الغدا.",
+   "en": "Bob was late for lunch.",
+   "ko": "밥이 점심에 늦었어.",
+   "blank": "بوب"
+  }
+ ],
  "w|بوضوح": [
   {
    "text": "تكلم بوضوح حتى يسمعك الجميع.",
@@ -9435,6 +9869,20 @@
    "blank": "تبادل"
   }
  ],
+ "w|تبرع": [
+  {
+   "text": "وصل تبرع كبير للمستشفى.",
+   "en": "A large donation arrived at the hospital.",
+   "ko": "큰 기부금이 병원에 도착했어.",
+   "blank": "تبرع"
+  },
+  {
+   "text": "ما ننسى تبرعك أبدًا.",
+   "en": "We will never forget your donation.",
+   "ko": "우리는 네 기부를 절대 잊지 않을게.",
+   "blank": "تبرعك"
+  }
+ ],
  "w|تبع": [
   {
    "text": "تبع الكلب صاحبه في كل مكان.",
@@ -9685,6 +10133,20 @@
    "en": "I advise you to update regularly.",
    "ko": "정기적으로 업데이트하는 게 좋아.",
    "blank": "تحديث"
+  }
+ ],
+ "w|تحديد": [
+  {
+   "text": "تحديد الموعد صار من أمس.",
+   "en": "The time was set yesterday.",
+   "ko": "일정은 어제 정해졌어.",
+   "blank": "تحديد"
+  },
+  {
+   "text": "من دون تحديد وقت ما بنبلش.",
+   "en": "We cannot start without setting a time.",
+   "ko": "시간을 정하지 않으면 시작을 못 해.",
+   "blank": "تحديد"
   }
  ],
  "w|تحديدا": [
@@ -10317,6 +10779,20 @@
    "blank": "تساءلت"
   }
  ],
+ "w|تسبب": [
+  {
+   "text": "المطر تسبب بسيول عالطريق.",
+   "en": "The rain caused flooding on the road.",
+   "ko": "비 때문에 길에 물이 넘쳤어.",
+   "blank": "تسبب"
+  },
+  {
+   "text": "تأخيره تسبب بمشكلة مع المدير.",
+   "en": "His being late caused a problem with the manager.",
+   "ko": "그가 늦어서 팀장이랑 문제가 생겼어.",
+   "blank": "تسبب"
+  }
+ ],
  "w|تسجيل": [
   {
    "text": "لدي تسجيل صوتي للمحاضرة.",
@@ -10471,6 +10947,20 @@
    "blank": "تشجيع"
   }
  ],
+ "w|تشغيل": [
+  {
+   "text": "تشغيل المكيف من الصبح غالي.",
+   "en": "Running the air conditioner since morning is expensive.",
+   "ko": "아침부터 에어컨을 켜 두면 돈이 많이 들어.",
+   "blank": "تشغيل"
+  },
+  {
+   "text": "بعد التشغيل اشتغل الجهاز طبيعي.",
+   "en": "After it was switched on, the device ran normally.",
+   "ko": "켜고 나니 기기가 정상으로 작동했어.",
+   "blank": "التشغيل"
+  }
+ ],
  "w|تصالح": [
   {
    "text": "تصالح الأصدقاء بعد الخلاف.",
@@ -10483,6 +10973,20 @@
    "en": "The neighbors reconciled after years of estrangement.",
    "ko": "이웃들이 오랜 불화 끝에 화해했어.",
    "blank": "تصالح"
+  }
+ ],
+ "w|تصديق": [
+  {
+   "text": "تصديق هالحكي صعب علي.",
+   "en": "It's hard for me to believe this.",
+   "ko": "이 말은 나로서는 믿기가 어려워.",
+   "blank": "تصديق"
+  },
+  {
+   "text": "بدي تصديق للشهادة قبل السفر.",
+   "en": "I need the certificate attested before I travel.",
+   "ko": "여행 전에 증명서 공증을 받아야 해.",
+   "blank": "تصديق"
   }
  ],
  "w|تصرف": [
@@ -10555,6 +11059,20 @@
    "blank": "تصوير"
   }
  ],
+ "w|تضامن": [
+  {
+   "text": "التضامن بين الجيران كان واضح.",
+   "en": "The solidarity among the neighbors was obvious.",
+   "ko": "이웃들 사이의 연대가 분명했어.",
+   "blank": "التضامن"
+  },
+  {
+   "text": "أظهروا تضامن حقيقي مع العائلة.",
+   "en": "They showed the family real solidarity.",
+   "ko": "그들은 그 가족에게 진짜 연대를 보여줬어.",
+   "blank": "تضامن"
+  }
+ ],
  "w|تضايق": [
   {
    "text": "تضايق من الانتظار الطويل في الطابور.",
@@ -10581,6 +11099,20 @@
    "en": "I downloaded an app on my phone yesterday.",
    "ko": "어제 내 휴대폰에 앱을 설치했다.",
    "blank": "تطبيق"
+  }
+ ],
+ "w|تطلب": [
+  {
+   "text": "تطلب أمي أساعدها بالمطبخ.",
+   "en": "My mother is asking me to help her in the kitchen.",
+   "ko": "엄마가 부엌에서 도와 달라고 하셔.",
+   "blank": "تطلب"
+  },
+  {
+   "text": "إذا تطلب شي قوليلي.",
+   "en": "If you need something, tell me.",
+   "ko": "필요한 거 있으면 나한테 말해.",
+   "blank": "تطلب"
   }
  ],
  "w|تطور": [
@@ -10737,6 +11269,20 @@
    "blank": "تعديل"
   }
  ],
+ "w|تعرض": [
+  {
+   "text": "تعرض للمطر ورجع مريض.",
+   "en": "He got caught in the rain and came back sick.",
+   "ko": "비를 맞고 아파서 돌아왔어.",
+   "blank": "تعرض"
+  },
+  {
+   "text": "ما تعرض لهالشي من قبل.",
+   "en": "He has never been through this before.",
+   "ko": "이런 일을 전에 겪은 적이 없어.",
+   "blank": "تعرض"
+  }
+ ],
  "w|تعرف": [
   {
    "text": "تعرف على أصدقاء جدد في الحفلة.",
@@ -10749,6 +11295,20 @@
    "en": "The man recognized the road quickly.",
    "ko": "남자가 길을 빨리 알아봤어.",
    "blank": "تعرف"
+  }
+ ],
+ "w|تعرفة": [
+  {
+   "text": "تعرفة الباص غالية هالشهر.",
+   "en": "The bus fare is expensive this month.",
+   "ko": "이번 달 버스 요금이 비싸.",
+   "blank": "تعرفة"
+  },
+  {
+   "text": "اسأل عن التعرفة قبل ما تدفع.",
+   "en": "Ask about the fare before you pay.",
+   "ko": "내기 전에 요금이 얼마인지 물어봐.",
+   "blank": "التعرفة"
   }
  ],
  "w|تعزية": [
@@ -10819,6 +11379,20 @@
    "en": "There should be good education for everyone.",
    "ko": "모두에게 좋은 교육이 있어야 해.",
    "blank": "تعليم"
+  }
+ ],
+ "w|تعود": [
+  {
+   "text": "تعود جدي على المشي قبل الفطور.",
+   "en": "My grandfather got used to walking before breakfast.",
+   "ko": "할아버지는 아침 먹기 전에 걷는 데 익숙해지셨어.",
+   "blank": "تعود"
+  },
+  {
+   "text": "تعودت على صوت القطار تحت البيت.",
+   "en": "I got used to the train noise under the house.",
+   "ko": "나는 집 아래로 기차가 지나가는 소리에 익숙해졌어.",
+   "blank": "تعودت"
   }
  ],
  "w|تعيس": [
@@ -10933,6 +11507,34 @@
    "blank": "تفاهم"
   }
  ],
+ "w|تفتح": [
+  {
+   "text": "الورد تفتح بعد المطر.",
+   "en": "The roses opened after the rain.",
+   "ko": "비 온 뒤에 장미가 피었어.",
+   "blank": "تفتح"
+  },
+  {
+   "text": "الزهر تفتح بكير بهالبستان.",
+   "en": "The blossoms open early in this orchard.",
+   "ko": "이 과수원은 꽃이 일찍 펴.",
+   "blank": "تفتح"
+  }
+ ],
+ "w|تفسير": [
+  {
+   "text": "من تفسيره للحلم ضحك الكل.",
+   "en": "Everyone laughed at his reading of the dream.",
+   "ko": "그가 꿈을 풀이하자 모두 웃었어.",
+   "blank": "تفسيره"
+  },
+  {
+   "text": "بدي تفسير واضح، مو لف ودوران.",
+   "en": "I want a clear explanation, not going in circles.",
+   "ko": "빙빙 돌리지 말고 분명히 말해 줘.",
+   "blank": "تفسير"
+  }
+ ],
  "w|تفضل": [
   {
    "text": "تفضل بالجلوس هنا من فضلك.",
@@ -10959,6 +11561,20 @@
    "en": "Please sit down, the coffee is ready.",
    "ko": "앉으세요, 커피가 준비됐어요.",
    "blank": "تفضلي"
+  }
+ ],
+ "w|تفقد": [
+  {
+   "text": "لا تفقد أعصابك على هالموضوع.",
+   "en": "Do not lose your temper over this.",
+   "ko": "이 일로 성질내지 마.",
+   "blank": "تفقد"
+  },
+  {
+   "text": "تفقد الجيب قبل ما تطلع.",
+   "en": "Check your pocket before you go out.",
+   "ko": "나가기 전에 주머니를 확인해.",
+   "blank": "تفقد"
   }
  ],
  "w|تفكير": [
@@ -11451,6 +12067,20 @@
    "blank": "تمساح"
   }
  ],
+ "w|تمسك": [
+  {
+   "text": "تمسك بالحبل وما تطلع لتحت.",
+   "en": "Hold on to the rope and don't look down.",
+   "ko": "밧줄을 잡고 아래를 보지 마.",
+   "blank": "تمسك"
+  },
+  {
+   "text": "تمسك برأيه رغم الكل.",
+   "en": "He stuck to his opinion even though everyone was against it.",
+   "ko": "다들 말려도 자기 생각을 굽히지 않았어.",
+   "blank": "تمسك"
+  }
+ ],
  "w|تمنى": [
   {
    "text": "دائما تمنى الأفضل للجميع.",
@@ -11591,6 +12221,20 @@
    "blank": "تنورة"
   }
  ],
+ "w|تهانينا": [
+  {
+   "text": "تهانينا، صار عندك بيت.",
+   "en": "Congratulations, you have a house now.",
+   "ko": "축하해, 이제 집이 생겼네.",
+   "blank": "تهانينا"
+  },
+  {
+   "text": "تهانينا على التخرج، والله فرحان.",
+   "en": "Congratulations on graduating. I'm really happy for you.",
+   "ko": "졸업 축하해, 정말 기뻐.",
+   "blank": "تهانينا"
+  }
+ ],
  "w|تهديد": [
   {
    "text": "تلقى رسالة تهديد مجهولة.",
@@ -11647,6 +12291,20 @@
    "blank": "التوأم"
   }
  ],
+ "w|تواجد": [
+  {
+   "text": "تواجد الحارس طول الليل عالباب.",
+   "en": "The guard was at the door all night.",
+   "ko": "경비원이 밤새 문 앞에 있었어.",
+   "blank": "تواجد"
+  },
+  {
+   "text": "ما تواجد أحد يستقبلنا.",
+   "en": "Nobody was there to meet us.",
+   "ko": "마중 나온 사람이 아무도 없었어.",
+   "blank": "تواجد"
+  }
+ ],
  "w|تواصل": [
   {
    "text": "من الأفضل أن نحافظ على تواصل دائم.",
@@ -11673,6 +12331,20 @@
    "en": "A person's humility makes him loved among people.",
    "ko": "사람의 겸손함은 그를 사람들 사이에서 사랑받게 만든다.",
    "blank": "تواضع"
+  }
+ ],
+ "w|توت": [
+  {
+   "text": "اشتريت توت طازج من السوق.",
+   "en": "I bought fresh mulberries at the market.",
+   "ko": "나는 시장에서 신선한 오디를 샀어.",
+   "blank": "توت"
+  },
+  {
+   "text": "التوت حامض شوي هالمرة.",
+   "en": "The mulberries are a bit sour this time.",
+   "ko": "이번 오디는 조금 셔.",
+   "blank": "التوت"
   }
  ],
  "w|توتر": [
@@ -11757,6 +12429,20 @@
    "en": "The car stopped suddenly on the road.",
    "ko": "차가 도로에서 갑자기 멈췄어.",
    "blank": "توقف"
+  }
+ ],
+ "w|توقيت": [
+  {
+   "text": "توقيت المكالمة كان مناسب.",
+   "en": "The timing of the call was right.",
+   "ko": "전화 타이밍이 적절했어.",
+   "blank": "توقيت"
+  },
+  {
+   "text": "ضبطت التوقيت على الساعة.",
+   "en": "I set the time on the clock.",
+   "ko": "나는 시계 시간을 맞췄어.",
+   "blank": "التوقيت"
   }
  ],
  "w|توقيع": [
@@ -11897,6 +12583,20 @@
    "en": "I finished high school last year.",
    "ko": "나는 작년에 고등학교를 마쳤어.",
    "blank": "ثانوية"
+  }
+ ],
+ "w|ثاني": [
+  {
+   "text": "هذا ثاني يوم بلا نوم منيح.",
+   "en": "This is the second day without proper sleep.",
+   "ko": "제대로 못 잔 게 오늘로 이틀째야.",
+   "blank": "ثاني"
+  },
+  {
+   "text": "خد المقعد الثاني من اليمين.",
+   "en": "Take the second seat from the right.",
+   "ko": "오른쪽에서 두 번째 자리에 앉아.",
+   "blank": "الثاني"
   }
  ],
  "w|ثانيا": [
@@ -12051,6 +12751,20 @@
    "en": "The bag is heavy on my back.",
    "ko": "가방이 내 등에 무거워.",
    "blank": "ثقيلة"
+  }
+ ],
+ "w|ثلاث": [
+  {
+   "text": "عندي ثلاث أخوات.",
+   "en": "I have three sisters.",
+   "ko": "나는 자매가 셋 있어.",
+   "blank": "ثلاث"
+  },
+  {
+   "text": "حكيت معها ثلاث مرات اليوم.",
+   "en": "I talked to her three times today.",
+   "ko": "오늘 걔한테 세 번 말했어.",
+   "blank": "ثلاث"
   }
  ],
  "w|ثلاثة": [
@@ -12303,6 +13017,20 @@
    "en": "Who came to the party?",
    "ko": "누가 파티에 왔어?",
    "blank": "جاء"
+  }
+ ],
+ "w|جائزة": [
+  {
+   "text": "أخذ جائزة عالرسم بالمدرسة.",
+   "en": "He got a prize for drawing at school.",
+   "ko": "학교에서 그림으로 상을 받았어.",
+   "blank": "جائزة"
+  },
+  {
+   "text": "الجائزة سفر، مو فلوس.",
+   "en": "The prize is a trip, not money.",
+   "ko": "상은 돈이 아니라 여행이야.",
+   "blank": "الجائزة"
   }
  ],
  "w|جائع": [
@@ -12669,6 +13397,20 @@
    "blank": "جدول"
   }
  ],
+ "w|جدي": [
+  {
+   "text": "جدي حكالي قصة قديمة.",
+   "en": "My grandfather told me an old story.",
+   "ko": "할아버지가 옛날이야기를 해주셨어.",
+   "blank": "جدي"
+  },
+  {
+   "text": "زرت جدي وجلسنا بالحديقة.",
+   "en": "I visited my grandfather and we sat in the garden.",
+   "ko": "할아버지를 찾아가서 정원에 앉았어.",
+   "blank": "جدي"
+  }
+ ],
  "w|جديا": [
   {
    "text": "أنا أتكلم جديا الآن.",
@@ -12975,6 +13717,20 @@
    "en": "I feel pain in my body today.",
    "ko": "오늘 내 몸이 아프다.",
    "blank": "جسدي"
+  }
+ ],
+ "w|جسدي": [
+  {
+   "text": "التعب جسدي من الشيل.",
+   "en": "The tiredness is physical, from carrying things.",
+   "ko": "짐을 들어서 몸이 피곤해.",
+   "blank": "جسدي"
+  },
+  {
+   "text": "الفحص الجسدي كان سريع.",
+   "en": "The physical exam was quick.",
+   "ko": "신체검사는 빨리 끝났어.",
+   "blank": "الجسدي"
   }
  ],
  "w|جسر": [
@@ -13397,6 +14153,20 @@
    "blank": "جندي"
   }
  ],
+ "w|جنرال": [
+  {
+   "text": "الجنرال طلب اجتماع عاجل.",
+   "en": "The general called an urgent meeting.",
+   "ko": "장군이 긴급 회의를 열라고 했어.",
+   "blank": "الجنرال"
+  },
+  {
+   "text": "يا جنرال، الأوامر وصلت.",
+   "en": "General, the orders have arrived.",
+   "ko": "장군님, 명령이 도착했습니다.",
+   "blank": "جنرال"
+  }
+ ],
  "w|جنس": [
   {
    "text": "كل جنس له خصوصياته.",
@@ -13551,6 +14321,20 @@
    "blank": "جواب"
   }
  ],
+ "w|جوار": [
+  {
+   "text": "جوار المدرسة في دكان فواكه.",
+   "en": "There's a fruit shop next to the school.",
+   "ko": "학교 옆에 과일 가게가 있어.",
+   "blank": "جوار"
+  },
+  {
+   "text": "هاد الجوار هادي بالليل.",
+   "en": "This neighborhood is quiet at night.",
+   "ko": "이 동네는 밤에 조용해.",
+   "blank": "الجوار"
+  }
+ ],
  "w|جواز": [
   {
    "text": "لا تنس جواز السفر عند السفر.",
@@ -13563,6 +14347,20 @@
    "en": "My brother's passport has expired.",
    "ko": "내 동생의 여권이 만료됐어.",
    "blank": "جواز"
+  }
+ ],
+ "w|جوافة": [
+  {
+   "text": "الجوافة ريحتها قوية.",
+   "en": "The guava has a strong smell.",
+   "ko": "구아바는 향이 강해.",
+   "blank": "الجوافة"
+  },
+  {
+   "text": "عصير الجوافة بارد ولذيذ.",
+   "en": "The guava juice is cold and tasty.",
+   "ko": "구아바 주스는 차갑고 맛있어.",
+   "blank": "الجوافة"
   }
  ],
  "w|جوال": [
@@ -13647,6 +14445,20 @@
    "en": "Do you want a tour with the tour guide?",
    "ko": "가이드와 함께 투어하고 싶어?",
    "blank": "جولة"
+  }
+ ],
+ "w|جوي": [
+  {
+   "text": "في اضطراب جوي فوق المطار.",
+   "en": "There is turbulence over the airport.",
+   "ko": "공항 위에 난기류가 있어.",
+   "blank": "جوي"
+  },
+  {
+   "text": "بعثت الأوراق بالبريد الجوي.",
+   "en": "I sent the papers by airmail.",
+   "ko": "서류는 항공편으로 보냈어.",
+   "blank": "الجوي"
   }
  ],
  "w|جيب": [
@@ -13969,6 +14781,20 @@
    "en": "The student crafted an exciting story for the competition.",
    "ko": "학생이 대회를 위해 흥미로운 이야기를 만들었어.",
    "blank": "حاك"
+  }
+ ],
+ "w|حاكم": [
+  {
+   "text": "حاكم القاضي المتهم بهدوء.",
+   "en": "The judge tried the defendant calmly.",
+   "ko": "판사가 피고를 차분하게 심리했어.",
+   "blank": "حاكم"
+  },
+  {
+   "text": "حاكمته المحكمة وطلع بريء.",
+   "en": "The court tried him and he came out innocent.",
+   "ko": "법원에서 재판받고 무죄로 나왔어.",
+   "blank": "حاكمته"
   }
  ],
  "w|حال": [
@@ -14965,6 +15791,20 @@
    "blank": "حظ"
   }
  ],
+ "w|حفاظ": [
+  {
+   "text": "حفاظ السر بينا أهم شي.",
+   "en": "Keeping the secret between us matters most.",
+   "ko": "우리끼리 비밀을 지키는 게 제일 중요해.",
+   "blank": "حفاظ"
+  },
+  {
+   "text": "هو من حفاظ القرآن بالحي.",
+   "en": "He's one of the people in the neighborhood who have memorized the Quran.",
+   "ko": "그는 이 동네에서 코란을 외우는 사람이야.",
+   "blank": "حفاظ"
+  }
+ ],
  "w|حفر": [
   {
    "text": "حفر العمال بئرًا عميقًا في القرية.",
@@ -15075,6 +15915,20 @@
    "en": "I am really happy today.",
    "ko": "오늘 정말 행복해.",
    "blank": "حقا"
+  }
+ ],
+ "w|حقبة": [
+  {
+   "text": "هذي حقبة صعبة على الجميع.",
+   "en": "This is a tough era for everybody.",
+   "ko": "이건 모두에게 힘든 시대야.",
+   "blank": "حقبة"
+  },
+  {
+   "text": "انتهت حقبة وبدأت غيرها.",
+   "en": "One era ended and another began.",
+   "ko": "한 시대가 끝나고 다른 시대가 시작됐어.",
+   "blank": "حقبة"
   }
  ],
  "w|حقق": [
@@ -15665,6 +16519,20 @@
    "blank": "حي"
   }
  ],
+ "w|حيا": [
+  {
+   "text": "حيا المدير الضيوف عند الباب.",
+   "en": "The manager greeted the guests at the door.",
+   "ko": "관리자가 문 앞에서 손님들을 맞았어.",
+   "blank": "حيا"
+  },
+  {
+   "text": "حيا الجمهور اللاعب بحرارة.",
+   "en": "The crowd gave the player a warm welcome.",
+   "ko": "관중은 선수를 따뜻하게 맞았어.",
+   "blank": "حيا"
+  }
+ ],
  "w|حياء": [
   {
    "text": "حياء الفتاة جعلها تحمر خجلاً.",
@@ -15789,6 +16657,20 @@
    "en": "I was happy when I heard the news.",
    "ko": "소식을 들었을 때 기뻤어.",
    "blank": "حينما"
+  }
+ ],
+ "w|حينها": [
+  {
+   "text": "حينها فهمت قصده.",
+   "en": "That was when I understood what he meant.",
+   "ko": "그때서야 그 사람 뜻을 이해했어.",
+   "blank": "حينها"
+  },
+  {
+   "text": "كنت صغير حينها وما فاهم.",
+   "en": "I was young then and did not understand.",
+   "ko": "그때 나는 어렸고 잘 몰랐어.",
+   "blank": "حينها"
   }
  ],
  "w|حيوان": [
@@ -15929,6 +16811,20 @@
    "en": "I have a private secret.",
    "ko": "나만의 비밀이 있어.",
    "blank": "خاص"
+  }
+ ],
+ "w|خاصة": [
+  {
+   "text": "أحب الجو البارد، خاصة في الليل.",
+   "en": "I like cool weather, especially at night.",
+   "ko": "나는 선선한 날씨를 좋아해, 특히 밤에.",
+   "blank": "خاصة"
+  },
+  {
+   "text": "هذا الموضوع يخصك خاصة.",
+   "en": "This matter concerns you in particular.",
+   "ko": "이 일은 특히 너한테 해당돼.",
+   "blank": "خاصة"
   }
  ],
  "w|خاط": [
@@ -16813,6 +17709,20 @@
    "blank": "خمر"
   }
  ],
+ "w|خمس": [
+  {
+   "text": "استنى خمس دقايق وبوصلك.",
+   "en": "Wait five minutes and I will reach you.",
+   "ko": "오 분만 기다리면 내가 갈게.",
+   "blank": "خمس"
+  },
+  {
+   "text": "اشترينا خمس تفاحات من الدكان.",
+   "en": "We bought five apples from the shop.",
+   "ko": "가게에서 사과를 다섯 개 샀어.",
+   "blank": "خمس"
+  }
+ ],
  "w|خمسة": [
   {
    "text": "عندي خمسة كتب.",
@@ -17569,6 +18479,20 @@
    "blank": "دكتور"
   }
  ],
+ "w|دل": [
+  {
+   "text": "دل الطفل أمه على لعبته.",
+   "en": "The child showed his mother where his toy was.",
+   "ko": "아이가 엄마에게 장난감 있는 곳을 알려줬어.",
+   "blank": "دل"
+  },
+  {
+   "text": "دلني السائق على أقرب محطة.",
+   "en": "The driver directed me to the nearest station.",
+   "ko": "기사님이 가장 가까운 역으로 나를 안내했어.",
+   "blank": "دلني"
+  }
+ ],
  "w|دلفين": [
   {
    "text": "لعب دلفين قرب الشاطئ اليوم.",
@@ -17581,6 +18505,20 @@
    "en": "A dolphin is very smart and swims fast.",
    "ko": "돌고래는 아주 똑똑하고 빨리 헤엄쳐.",
    "blank": "دلفين"
+  }
+ ],
+ "w|دلو": [
+  {
+   "text": "جيب الدلو عشان نغسل السيارة.",
+   "en": "Bring the bucket so we can wash the car.",
+   "ko": "세차하려고 양동이를 가져와.",
+   "blank": "الدلو"
+  },
+  {
+   "text": "الدلو ثقيل وما أقدر أشيله.",
+   "en": "The bucket is heavy and I cannot carry it.",
+   "ko": "양동이가 무거워서 나는 못 들어.",
+   "blank": "الدلو"
   }
  ],
  "w|دليل": [
@@ -17791,6 +18729,20 @@
    "en": "He asked me about the teacher’s role in class.",
    "ko": "그는 수업에서 선생님의 역할에 대해 물었어.",
    "blank": "دور"
+  }
+ ],
+ "w|دورة": [
+  {
+   "text": "بلشت دورة علاج جديدة اليوم.",
+   "en": "I started a new course of treatment today.",
+   "ko": "오늘 새 치료 과정을 시작했어.",
+   "blank": "دورة"
+  },
+  {
+   "text": "الدورة الدموية ضعيفة عنده.",
+   "en": "His circulation is weak.",
+   "ko": "그 사람 혈액순환이 약해.",
+   "blank": "الدورة"
   }
  ],
  "w|دوري": [
@@ -18205,6 +19157,12 @@
    "en": "Going to the mall tomorrow?",
    "ko": "내일 몰에 갈래?",
    "blank": "ذهاب"
+  },
+  {
+   "text": "الذهاب للسوق بدري أفضل.",
+   "en": "Going to the market early is better.",
+   "ko": "시장에 일찍 가는 게 더 나아.",
+   "blank": "الذهاب"
   }
  ],
  "w|ذهب": [
@@ -18219,6 +19177,20 @@
    "en": "Do you want to go with me tomorrow?",
    "ko": "내일 나랑 같이 갈래?",
    "blank": "ذهب"
+  }
+ ],
+ "w|ذو": [
+  {
+   "text": "هو شخص ذو قلب طيب.",
+   "en": "He is a kind-hearted person.",
+   "ko": "그 사람은 마음이 착해.",
+   "blank": "ذو"
+  },
+  {
+   "text": "بدنا موظف ذو خبرة.",
+   "en": "We need an employee with experience.",
+   "ko": "경험 있는 직원이 필요해.",
+   "blank": "ذو"
   }
  ],
  "w|رأس": [
@@ -18737,6 +19709,20 @@
    "en": "The men of the village gathered in the square.",
    "ko": "마을 남자들이 광장에 모였어요.",
    "blank": "رجال"
+  }
+ ],
+ "w|رجالي": [
+  {
+   "text": "القسم الرجالي عاليمين.",
+   "en": "The men's section is on the right.",
+   "ko": "남성 코너는 오른쪽이야.",
+   "blank": "الرجالي"
+  },
+  {
+   "text": "بدي خياط رجالي للبدلة.",
+   "en": "I want a men's tailor for the suit.",
+   "ko": "정장 맞출 남성 재단사가 필요해.",
+   "blank": "رجالي"
   }
  ],
  "w|رجع": [
@@ -19297,6 +20283,20 @@
    "en": "A giraffe's neck is very long.",
    "ko": "기린의 목은 정말 길어.",
    "blank": "رقبة"
+  }
+ ],
+ "w|رقة": [
+  {
+   "text": "حكيها فيه رقة وما بيجرح.",
+   "en": "There's a gentleness in her talk, and it doesn't hurt.",
+   "ko": "그 사람 말은 부드러워서 상처가 안 돼.",
+   "blank": "رقة"
+  },
+  {
+   "text": "رقته مع أمه بتبين.",
+   "en": "His tenderness with his mother shows.",
+   "ko": "어머니를 대하는 다정함이 드러나.",
+   "blank": "رقته"
   }
  ],
  "w|رقص": [
@@ -19929,6 +20929,20 @@
    "blank": "زرع"
   }
  ],
+ "w|زعتر": [
+  {
+   "text": "فيه زعتر زيادة على الخبز.",
+   "en": "There is extra zaatar on the bread.",
+   "ko": "빵 위에 자타르가 많이 있어.",
+   "blank": "زعتر"
+  },
+  {
+   "text": "ريحة الزعتر طالعة من الفرن.",
+   "en": "The smell of zaatar is coming from the oven.",
+   "ko": "오븐에서 자타르 냄새가 나.",
+   "blank": "الزعتر"
+  }
+ ],
  "w|زعل": [
   {
    "text": "زعل أخي مني بسبب مزحة.",
@@ -20069,6 +21083,20 @@
    "blank": "زميل"
   }
  ],
+ "w|زنجبيل": [
+  {
+   "text": "حطيت زنجبيل في الشاي.",
+   "en": "I put ginger in the tea.",
+   "ko": "나는 차에 생강을 넣었어.",
+   "blank": "زنجبيل"
+  },
+  {
+   "text": "الزنجبيل يريح المعدة.",
+   "en": "Ginger settles the stomach.",
+   "ko": "생강은 속을 편하게 해.",
+   "blank": "الزنجبيل"
+  }
+ ],
  "w|زهرة": [
   {
    "text": "أعطتني زهرة جميلة جداً.",
@@ -20123,6 +21151,20 @@
    "en": "He loves his wife very much.",
    "ko": "그는 아내를 정말 사랑해.",
    "blank": "زوجة"
+  }
+ ],
+ "w|زوجي": [
+  {
+   "text": "زوجي رجع متأخر من الشغل.",
+   "en": "My husband came home late from work.",
+   "ko": "남편이 일 끝나고 늦게 돌아왔어.",
+   "blank": "زوجي"
+  },
+  {
+   "text": "زوجي ما بشرب القهوة بالليل.",
+   "en": "My husband does not drink coffee at night.",
+   "ko": "남편은 밤에 커피를 안 마셔.",
+   "blank": "زوجي"
   }
  ],
  "w|زيادة": [
@@ -20391,6 +21433,20 @@
    "blank": "سادس"
   }
  ],
+ "w|سار": [
+  {
+   "text": "سار الولد لحاله للمدرسة.",
+   "en": "The boy walked to school on his own.",
+   "ko": "아이가 혼자 학교까지 걸어갔어.",
+   "blank": "سار"
+  },
+  {
+   "text": "سار الاجتماع أحسن مما توقعنا.",
+   "en": "The meeting went better than we expected.",
+   "ko": "회의는 예상보다 잘 풀렸어.",
+   "blank": "سار"
+  }
+ ],
  "w|سارق": [
   {
    "text": "ألقت الشرطة القبض على سارق.",
@@ -20615,6 +21671,20 @@
    "blank": "سبحنا"
   }
  ],
+ "w|سبع": [
+  {
+   "text": "استنيت سبع دقايق وما أجا.",
+   "en": "I waited seven minutes and he didn't come.",
+   "ko": "칠 분을 기다렸는데 안 왔어.",
+   "blank": "سبع"
+  },
+  {
+   "text": "عندي سبع إخوة أكبر مني.",
+   "en": "I have seven siblings older than me.",
+   "ko": "나보다 큰 형제가 일곱 있어.",
+   "blank": "سبع"
+  }
+ ],
  "w|سبعة": [
   {
    "text": "عندي سبعة كتب على الرف.",
@@ -20685,6 +21755,20 @@
    "blank": "ست"
   }
  ],
+ "w|ستائر": [
+  {
+   "text": "ستائر الصالة لونها هادئ.",
+   "en": "The living room curtains are a calm color.",
+   "ko": "거실 커튼 색이 차분해.",
+   "blank": "ستائر"
+  },
+  {
+   "text": "غسلت الستائر وعلقتها.",
+   "en": "I washed the curtains and hung them back up.",
+   "ko": "나는 커튼을 빨아서 다시 걸었어.",
+   "blank": "الستائر"
+  }
+ ],
  "w|ستارة": [
   {
    "text": "فتحت الستارة لأدخل الضوء.",
@@ -20753,6 +21837,20 @@
    "en": "Sixty students attended the lesson today.",
    "ko": "오늘 육십 명의 학생이 수업에 참석했어.",
    "blank": "ستون"
+  }
+ ],
+ "w|سجاد": [
+  {
+   "text": "السجاد يحتاج تنظيف.",
+   "en": "The carpet needs a clean.",
+   "ko": "카펫은 청소가 필요해.",
+   "blank": "السجاد"
+  },
+  {
+   "text": "فرشنا سجاد جديد في الصالة.",
+   "en": "We laid a new carpet in the living room.",
+   "ko": "우리는 거실에 새 카펫을 깔았어.",
+   "blank": "سجاد"
   }
  ],
  "w|سجادة": [
@@ -21049,6 +22147,20 @@
    "blank": "سري"
   }
  ],
+ "w|سرية": [
+  {
+   "text": "سرية الاجتماع مهمة، لا تحكي.",
+   "en": "The meeting is confidential, do not talk about it.",
+   "ko": "회의가 비밀이니까 말하지 마.",
+   "blank": "سرية"
+  },
+  {
+   "text": "حافظ على سرية الخبر لو سمحت.",
+   "en": "Please keep the news confidential.",
+   "ko": "그 소식은 비밀로 해 줘.",
+   "blank": "سرية"
+  }
+ ],
  "w|سرير": [
   {
    "text": "نمت على سرير مريح الليلة.",
@@ -21089,6 +22201,20 @@
    "en": "Quickly, everything returned to normal.",
    "ko": "모든 게 빨리 정상으로 돌아왔어.",
    "blank": "سريعا"
+  }
+ ],
+ "w|سريعة": [
+  {
+   "text": "بدي أكلة سريعة قبل الدوام.",
+   "en": "I want a quick bite before work.",
+   "ko": "출근 전에 간단히 먹고 싶어.",
+   "blank": "سريعة"
+  },
+  {
+   "text": "الوجبة سريعة بس ما بتشبع.",
+   "en": "The meal is fast, but it doesn't fill you up.",
+   "ko": "음식은 빨리 나오는데 배가 안 차.",
+   "blank": "سريعة"
   }
  ],
  "w|سطح": [
@@ -21819,6 +22945,20 @@
    "blank": "سهولة"
   }
  ],
+ "w|سوء": [
+  {
+   "text": "صار سوء تفاهم بينا أمس.",
+   "en": "A misunderstanding came up between us yesterday.",
+   "ko": "어제 우리 사이에 오해가 생겼어.",
+   "blank": "سوء"
+  },
+  {
+   "text": "سوء الطقس أخر الرحلة.",
+   "en": "The bad weather delayed the trip.",
+   "ko": "날씨가 나빠서 여행이 늦어졌어.",
+   "blank": "سوء"
+  }
+ ],
  "w|سواء": [
   {
    "text": "سواء حضرت أم لا، سأبدأ.",
@@ -22043,6 +23183,20 @@
    "blank": "سيدة"
   }
  ],
+ "w|سير": [
+  {
+   "text": "السير واقف، خلينا نمشي.",
+   "en": "Traffic is stopped, so let's walk.",
+   "ko": "차가 안 움직이니까 걸어가자.",
+   "blank": "السير"
+  },
+  {
+   "text": "سير الرحلة كان مريح لهلق.",
+   "en": "The trip has been comfortable so far.",
+   "ko": "지금까지 가는 길은 편했어.",
+   "blank": "سير"
+  }
+ ],
  "w|سيطر": [
   {
    "text": "سيطر الهدوء على المكان فجأة.",
@@ -22069,6 +23223,20 @@
    "en": "This is complete control over the situation.",
    "ko": "이것은 상황에 대한 완전한 통제야.",
    "blank": "سيطرة"
+  }
+ ],
+ "w|سيف": [
+  {
+   "text": "السيف عالحائط للزينة بس.",
+   "en": "The sword on the wall is only for show.",
+   "ko": "벽에 걸린 칼은 장식일 뿐이야.",
+   "blank": "السيف"
+  },
+  {
+   "text": "حمل سيف خشبي بالمسرحية.",
+   "en": "He carried a wooden sword in the play.",
+   "ko": "연극에서 나무 칼을 들었어.",
+   "blank": "سيف"
   }
  ],
  "w|سينما": [
@@ -22125,6 +23293,20 @@
    "en": "I saw a young man reading a book in the park.",
    "ko": "공원에서 책을 읽는 젊은이를 봤어.",
    "blank": "شاب"
+  }
+ ],
+ "w|شابه": [
+  {
+   "text": "الولد شابه أبوه بالطبع.",
+   "en": "The boy takes after his father in temperament.",
+   "ko": "그 아이는 성격이 아버지를 닮았어.",
+   "blank": "شابه"
+  },
+  {
+   "text": "ما شابه أحد من إخوته.",
+   "en": "He does not resemble any of his siblings.",
+   "ko": "형제들 중 누구와도 닮지 않았어.",
+   "blank": "شابه"
   }
  ],
  "w|شاة": [
@@ -22335,6 +23517,20 @@
    "en": "I loved the youth period in my life.",
    "ko": "나는 내 삶의 청년기를 사랑했어요.",
    "blank": "الشباب"
+  }
+ ],
+ "w|شباك": [
+  {
+   "text": "سكر الشباك، الهواء بارد.",
+   "en": "Shut the window, the air is cold.",
+   "ko": "창문 닫아, 공기가 차가워.",
+   "blank": "الشباك"
+  },
+  {
+   "text": "شباك الغرفة يطل على الحديقة.",
+   "en": "The room's window looks onto the garden.",
+   "ko": "방 창문은 정원을 향해 있어.",
+   "blank": "شباك"
   }
  ],
  "w|شبح": [
@@ -22589,6 +23785,20 @@
    "blank": "شديد"
   }
  ],
+ "w|شر": [
+  {
+   "text": "ابتعد عن كل شر.",
+   "en": "Keep away from every evil.",
+   "ko": "온갖 악에서 멀리 떨어져.",
+   "blank": "شر"
+  },
+  {
+   "text": "نيته ما فيها شر.",
+   "en": "There is no ill will in his intention.",
+   "ko": "그의 마음에는 악의가 없어.",
+   "blank": "شر"
+  }
+ ],
  "w|شراء": [
   {
    "text": "الشراء من الإنترنت أصبح سهلاً.",
@@ -22783,6 +23993,20 @@
    "en": "The main character in the film is very evil.",
    "ko": "영화의 주인공은 매우 شرير해.",
    "blank": "شرير"
+  }
+ ],
+ "w|شريط": [
+  {
+   "text": "جيب شريط لاصق من الدرج.",
+   "en": "Get the adhesive tape from the drawer.",
+   "ko": "서랍에서 테이프 가져와.",
+   "blank": "شريط"
+  },
+  {
+   "text": "الشريط انقطع وأنا ألفه.",
+   "en": "The tape snapped while I was winding it.",
+   "ko": "감다가 테이프가 끊어졌어.",
+   "blank": "الشريط"
   }
  ],
  "w|شريك": [
@@ -23807,6 +25031,20 @@
    "blank": "تصدق"
   }
  ],
+ "w|صدقة": [
+  {
+   "text": "الصدقة بالسر أحسن.",
+   "en": "Quiet charity is better.",
+   "ko": "자선은 남몰래 하는 게 더 나아.",
+   "blank": "الصدقة"
+  },
+  {
+   "text": "حطيت صدقة في الصندوق.",
+   "en": "I put some charity money in the box.",
+   "ko": "나는 모금함에 자선금을 넣었어.",
+   "blank": "صدقة"
+  }
+ ],
  "w|صدمة": [
   {
    "text": "كانت صدمة الخبر واضحة على وجهه.",
@@ -24171,6 +25409,20 @@
    "blank": "صناعة"
   }
  ],
+ "w|صنبور": [
+  {
+   "text": "الصنبور يقطّر من الليل.",
+   "en": "The faucet has been dripping since nighttime.",
+   "ko": "수도꼭지가 밤부터 물을 떨어뜨리고 있어.",
+   "blank": "الصنبور"
+  },
+  {
+   "text": "سكر الصنبور بعد ما تغسل يديك.",
+   "en": "Turn the faucet off after you wash your hands.",
+   "ko": "손 씻고 나서 수도꼭지를 잠가.",
+   "blank": "الصنبور"
+  }
+ ],
  "w|صندل": [
   {
    "text": "اشتريت صندل جديد للصيف.",
@@ -24323,6 +25575,20 @@
    "en": "Wool is warm in winter.",
    "ko": "겨울에는 울이 따뜻해.",
    "blank": "الصوف"
+  }
+ ],
+ "w|صوفي": [
+  {
+   "text": "الشيخ صوفي وبيحضر الذكر.",
+   "en": "The sheikh is a Sufi and he attends the dhikr.",
+   "ko": "그 셰이크는 수피라서 지크르 모임에 참석해.",
+   "blank": "صوفي"
+  },
+  {
+   "text": "الجاكيت صوفي وبدفي بالشتا.",
+   "en": "The jacket is wool and it keeps you warm in winter.",
+   "ko": "재킷이 울이라 겨울에 따뜻해.",
+   "blank": "صوفي"
   }
  ],
  "w|صوم": [
@@ -24995,6 +26261,20 @@
    "en": "I need extra energy today.",
    "ko": "오늘은 추가적인 طاقة가 필요해.",
    "blank": "طاقة"
+  }
+ ],
+ "w|طاقم": [
+  {
+   "text": "طاقم الطيارة ساعدنا ننزل الشنط.",
+   "en": "The flight crew helped us get the bags down.",
+   "ko": "승무원이 가방 내리는 걸 도와줬어.",
+   "blank": "طاقم"
+  },
+  {
+   "text": "الطاقم بالمطعم جديد ولسا يتعلم.",
+   "en": "The restaurant staff is new and still learning.",
+   "ko": "식당 직원들은 새로 와서 아직 배우는 중이야.",
+   "blank": "الطاقم"
   }
  ],
  "w|طاقية": [
@@ -25683,6 +26963,20 @@
    "blank": "طيران"
   }
  ],
+ "w|طيلة": [
+  {
+   "text": "بقيت بالبيت طيلة اليوم.",
+   "en": "I stayed home throughout the day.",
+   "ko": "하루 종일 집에 있었어.",
+   "blank": "طيلة"
+  },
+  {
+   "text": "طيلة الأسبوع ما رديت علي.",
+   "en": "You did not reply to me all week.",
+   "ko": "일주일 내내 내 연락에 답을 안 했어.",
+   "blank": "طيلة"
+  }
+ ],
  "w|طين": [
   {
    "text": "مشيت في الطين بعد المطر الغزير.",
@@ -25863,6 +27157,20 @@
    "en": "I reproached my sister because she didn't reply to my message.",
    "ko": "언니가 내 메시지에 답장하지 않아서 꾸짖었어요.",
    "blank": "عاتبت"
+  }
+ ],
+ "w|عاجز": [
+  {
+   "text": "حسيت إني عاجز عن المساعدة.",
+   "en": "I felt I could not help.",
+   "ko": "나는 도와줄 수 없다고 느꼈어.",
+   "blank": "عاجز"
+  },
+  {
+   "text": "كان عاجز عن المشي بعد الإصابة.",
+   "en": "He could not walk after the injury.",
+   "ko": "그는 부상 뒤에 걸을 수 없었어.",
+   "blank": "عاجز"
   }
  ],
  "w|عاد": [
@@ -26103,6 +27411,34 @@
    "blank": "عالمي"
   }
  ],
+ "w|عالمية": [
+  {
+   "text": "الماركة عالمية بس تقليدها كتير.",
+   "en": "The brand is global, but there are lots of copies.",
+   "ko": "그 상표는 세계적인데 짝퉁이 많아.",
+   "blank": "عالمية"
+  },
+  {
+   "text": "بدي شركة عالمية للشحن.",
+   "en": "I want a worldwide company for the shipping.",
+   "ko": "배송은 세계적인 회사에 맡기고 싶어.",
+   "blank": "عالمية"
+  }
+ ],
+ "w|عالية": [
+  {
+   "text": "الأسعار عالية هالشهر.",
+   "en": "Prices are high this month.",
+   "ko": "이번 달 물가가 높아.",
+   "blank": "عالية"
+  },
+  {
+   "text": "الجودة عالية بس السعر غالي.",
+   "en": "The quality is high but the price is steep.",
+   "ko": "품질은 좋은데 값이 비싸.",
+   "blank": "عالية"
+  }
+ ],
  "w|عام": [
   {
    "text": "سافرنا كثيرا هذا عام.",
@@ -26115,6 +27451,20 @@
    "en": "Happy new year.",
    "ko": "새해 복 많이 받아.",
    "blank": "عام"
+  }
+ ],
+ "w|عامة": [
+  {
+   "text": "عامة أصحى بدري يوم الدوام.",
+   "en": "I usually wake up early on workdays.",
+   "ko": "나는 보통 출근하는 날에는 일찍 일어나.",
+   "blank": "عامة"
+  },
+  {
+   "text": "الجو هالأسبوع حار عامة.",
+   "en": "The weather is mostly hot this week.",
+   "ko": "이번 주 날씨는 대체로 더워.",
+   "blank": "عامة"
   }
  ],
  "w|عامل": [
@@ -26241,6 +27591,20 @@
    "en": "Did you find the correct answer?",
    "ko": "정답을 찾았니?",
    "blank": "عثرت"
+  }
+ ],
+ "w|عثور": [
+  {
+   "text": "العثور على المفتاح أخذ وقت.",
+   "en": "Finding the key took a while.",
+   "ko": "열쇠를 찾는 데 시간이 걸렸어.",
+   "blank": "العثور"
+  },
+  {
+   "text": "عثور الشرطة على السيارة طمن الأهل.",
+   "en": "The police finding the car reassured the family.",
+   "ko": "경찰이 차를 찾아서 가족이 안심했어.",
+   "blank": "عثور"
   }
  ],
  "w|عجل": [
@@ -27055,6 +28419,20 @@
    "blank": "عفو"
   }
  ],
+ "w|عفوا": [
+  {
+   "text": "عفوا، وين مدخل العمارة؟",
+   "en": "Excuse me, where's the building entrance?",
+   "ko": "저기요, 건물 입구가 어디예요?",
+   "blank": "عفوا"
+  },
+  {
+   "text": "عفوا، أخذت محلك بالغلط.",
+   "en": "Sorry, I took your seat by mistake.",
+   "ko": "미안, 실수로 네 자리에 앉았어.",
+   "blank": "عفوا"
+  }
+ ],
  "w|عقبة": [
   {
    "text": "كل عقبة تزيدنا قوة وإصرار.",
@@ -27137,6 +28515,20 @@
    "en": "The punishment for the crime varies according to its severity.",
    "ko": "범죄의 처벌은 그 심각성에 따라 다르다.",
    "blank": "عقوبة"
+  }
+ ],
+ "w|عقيد": [
+  {
+   "text": "العقيد طلب التقرير هالصباح.",
+   "en": "The colonel asked for the report this morning.",
+   "ko": "대령이 오늘 아침에 보고서를 달라고 했어.",
+   "blank": "العقيد"
+  },
+  {
+   "text": "يا عقيد، في حركة عالبوابة.",
+   "en": "Colonel, there's movement at the gate.",
+   "ko": "대령님, 문 쪽에 움직임이 있습니다.",
+   "blank": "عقيد"
   }
  ],
  "w|عكس": [
@@ -27313,6 +28705,12 @@
    "en": "The attic is full of old stuff.",
    "ko": "다락방엔 옛날 물건이 가득해.",
    "blank": "العلية"
+  },
+  {
+   "text": "طلعنا العلية ولقينا صور قديمة.",
+   "en": "We went up to the attic and found old photos.",
+   "ko": "다락방에 올라갔다가 옛날 사진을 찾았어.",
+   "blank": "العلية"
   }
  ],
  "w|عم": [
@@ -27385,6 +28783,20 @@
    "blank": "عمر"
   }
  ],
+ "w|عمرة": [
+  {
+   "text": "أمي رايحة على عمرة هالأسبوع.",
+   "en": "My mother is going on umrah this week.",
+   "ko": "엄마가 이번 주에 움라를 가셔.",
+   "blank": "عمرة"
+  },
+  {
+   "text": "العمرة كانت هادية ومرتاحة.",
+   "en": "The umrah was calm and easy.",
+   "ko": "움라는 조용하고 편했어.",
+   "blank": "العمرة"
+  }
+ ],
  "w|عمق": [
   {
    "text": "عمق البحر هنا كبير.",
@@ -27439,6 +28851,20 @@
    "en": "I want to exchange currency to dollars.",
    "ko": "나는 화폐를 달러로 환전하고 싶다.",
    "blank": "عملة"
+  }
+ ],
+ "w|عملي": [
+  {
+   "text": "هالحل مو عملي أبدا.",
+   "en": "This solution is not practical at all.",
+   "ko": "이 방법은 전혀 실용적이지 않아.",
+   "blank": "عملي"
+  },
+  {
+   "text": "بدنا حل عملي اليوم.",
+   "en": "We need a practical solution today.",
+   "ko": "오늘 현실적인 해결이 필요해.",
+   "blank": "عملي"
   }
  ],
  "w|عملية": [
@@ -27581,6 +29007,20 @@
    "blank": "عنصر"
   }
  ],
+ "w|عنف": [
+  {
+   "text": "في عنف زيادة بهالفيلم.",
+   "en": "There's too much violence in this film.",
+   "ko": "이 영화는 폭력이 너무 심해.",
+   "blank": "عنف"
+  },
+  {
+   "text": "العنف ما بحل ولا مشكلة.",
+   "en": "Violence doesn't solve a single problem.",
+   "ko": "폭력으로는 문제가 하나도 안 풀려.",
+   "blank": "العنف"
+  }
+ ],
  "w|عنكبوت": [
   {
    "text": "رأيت عنكبوت يبني شبكته في الزاوية.",
@@ -27635,6 +29075,20 @@
    "en": "Don't be stubborn when discussing with others.",
    "ko": "다른 사람과 이야기할 때 고집부리지 마.",
    "blank": "عنيد"
+  }
+ ],
+ "w|عهد": [
+  {
+   "text": "في عهد جدي كانت الحياة أهدأ.",
+   "en": "Life was calmer in my grandfather's day.",
+   "ko": "할아버지 시절에는 삶이 더 고요했어.",
+   "blank": "عهد"
+  },
+  {
+   "text": "هذا عهد بيننا، ما نكسره.",
+   "en": "This is a promise between us, and we will not break it.",
+   "ko": "이건 우리 사이의 약속이야, 깨지 않을게.",
+   "blank": "عهد"
   }
  ],
  "w|عود": [
@@ -29457,6 +30911,20 @@
    "blank": "فكرة"
   }
  ],
+ "w|فكري": [
+  {
+   "text": "التعب فكري، مو من الشغل الثقيل.",
+   "en": "The exhaustion is mental, not from heavy work.",
+   "ko": "피곤한 건 힘든 일 때문이 아니라 머리야.",
+   "blank": "فكري"
+  },
+  {
+   "text": "النقاش فكري وما حد زعل.",
+   "en": "The discussion stayed on ideas and nobody got upset.",
+   "ko": "토론은 생각 이야기였고 아무도 화내지 않았어.",
+   "blank": "فكري"
+  }
+ ],
  "w|فلاح": [
   {
    "text": "يعمل جدي فلاح في القرية.",
@@ -29569,6 +31037,20 @@
    "blank": "فهم"
   }
  ],
+ "w|فور": [
+  {
+   "text": "فور ما وصل رن علي.",
+   "en": "As soon as he arrived he called me.",
+   "ko": "도착하자마자 나한테 전화했어.",
+   "blank": "فور"
+  },
+  {
+   "text": "رديت فور ما شفت رسالتك.",
+   "en": "I replied as soon as I saw your message.",
+   "ko": "메시지를 보자마자 답장했어.",
+   "blank": "فور"
+  }
+ ],
  "w|فورا": [
   {
    "text": "أحتاج إلى مساعدتك فورا.",
@@ -29667,6 +31149,20 @@
    "blank": "في"
   }
  ],
+ "w|فيدرالية": [
+  {
+   "text": "البلد صارت فيدرالية بعد الاتفاق.",
+   "en": "The country became a federation after the agreement.",
+   "ko": "합의 뒤에 그 나라는 연방제가 됐어.",
+   "blank": "فيدرالية"
+  },
+  {
+   "text": "ألمانيا فيدرالية من زمان.",
+   "en": "Germany has been a federation for a long time.",
+   "ko": "독일은 오래전부터 연방국이야.",
+   "blank": "فيدرالية"
+  }
+ ],
  "w|فيديو": [
   {
    "text": "شاهدت فيديو مضحك على الإنترنت.",
@@ -29751,6 +31247,20 @@
    "blank": "فيلم"
   }
  ],
+ "w|فيما": [
+  {
+   "text": "فيما بعد بنحكي بهالموضوع.",
+   "en": "We will talk about this later.",
+   "ko": "이 얘기는 나중에 하자.",
+   "blank": "فيما"
+  },
+  {
+   "text": "فيما كنت بالدكان، اتصلت فيك.",
+   "en": "While I was at the shop, you called me.",
+   "ko": "내가 가게에 있을 때 네가 전화했어.",
+   "blank": "فيما"
+  }
+ ],
  "w|قائد": [
   {
    "text": "القائد يعطي التعليمات للفريق.",
@@ -29833,6 +31343,20 @@
    "en": "The teacher led the school trip.",
    "ko": "선생님이 수학여행을 이끌었어요.",
    "blank": "قاد"
+  }
+ ],
+ "w|قادر": [
+  {
+   "text": "هو قادر على إنهاء الشغل اليوم.",
+   "en": "He can finish the work today.",
+   "ko": "그는 오늘 일을 끝낼 수 있어.",
+   "blank": "قادر"
+  },
+  {
+   "text": "ما كنت قادر أفتح الباب.",
+   "en": "I could not open the door.",
+   "ko": "나는 문을 열 수 없었어.",
+   "blank": "قادر"
   }
  ],
  "w|قادم": [
@@ -30269,6 +31793,20 @@
    "blank": "قدم"
   }
  ],
+ "w|قدوم": [
+  {
+   "text": "قدوم الضيوف بكرة الصبح.",
+   "en": "The guests arrive tomorrow morning.",
+   "ko": "손님들이 내일 아침에 와.",
+   "blank": "قدوم"
+  },
+  {
+   "text": "انتظرت قدومك طول النهار.",
+   "en": "I waited for you to arrive all day.",
+   "ko": "하루 종일 네가 오기를 기다렸어.",
+   "blank": "قدومك"
+  }
+ ],
  "w|قديم": [
   {
    "text": "هذا الكتاب قديم جدًا.",
@@ -30295,6 +31833,20 @@
    "en": "I don't like the dirtiness of the ground after it rains.",
    "ko": "비가 온 후 땅의 더러움을 좋아하지 않아.",
    "blank": "قذارة"
+  }
+ ],
+ "w|قذر": [
+  {
+   "text": "الحذاء قذر، امسحه قبل ما تفوت.",
+   "en": "The shoe is dirty. Wipe it before you come in.",
+   "ko": "신발 더러우니까 들어오기 전에 닦아.",
+   "blank": "قذر"
+  },
+  {
+   "text": "الشغل قذر بس المعاش منيح.",
+   "en": "The work is dirty, but the pay is good.",
+   "ko": "일은 지저분한데 월급은 괜찮아.",
+   "blank": "قذر"
   }
  ],
  "w|قرآن": [
@@ -30715,6 +32267,20 @@
    "en": "My brother is short in height.",
    "ko": "내 동생은 키가 작아.",
    "blank": "قصير"
+  }
+ ],
+ "w|قضاء": [
+  {
+   "text": "قضاء العصر عند البحر بيريح.",
+   "en": "Spending the afternoon by the sea is calming.",
+   "ko": "오후에 바다에 있으면 마음이 놓여.",
+   "blank": "قضاء"
+  },
+  {
+   "text": "هذا قضاء وما إلنا يد.",
+   "en": "This is fate, and there's nothing we can do.",
+   "ko": "이건 운명이라 우리가 어쩔 수 없어.",
+   "blank": "قضاء"
   }
  ],
  "w|قضية": [
@@ -31277,6 +32843,20 @@
    "blank": "قيامك"
   }
  ],
+ "w|قيد": [
+  {
+   "text": "قيد اسمك بالدفتر قبل ما تمشي.",
+   "en": "Write your name in the register before you leave.",
+   "ko": "가기 전에 네 이름을 장부에 적어.",
+   "blank": "قيد"
+  },
+  {
+   "text": "الموظف قيد الملاحظة بملف القضية.",
+   "en": "The clerk entered the note in the case file.",
+   "ko": "직원이 사건 파일에 메모를 적었어.",
+   "blank": "قيد"
+  }
+ ],
  "w|قيمة": [
   {
    "text": "قيمة الصداقة لا تقدر بثمن.",
@@ -31331,6 +32911,20 @@
    "en": "The weather is as if we are in winter.",
    "ko": "마치 겨울인 것 같아.",
    "blank": "كأننا"
+  }
+ ],
+ "w|كابتن": [
+  {
+   "text": "يا كابتن، وين مقعدي؟",
+   "en": "Captain, where is my seat?",
+   "ko": "기장님, 제 좌석이 어디예요?",
+   "blank": "كابتن"
+  },
+  {
+   "text": "الكابتن قال نربط الحزام.",
+   "en": "The captain said to fasten the belt.",
+   "ko": "기장님이 벨트를 매라고 했어.",
+   "blank": "الكابتن"
   }
  ],
  "w|كابوس": [
@@ -31499,6 +33093,20 @@
    "en": "I asked a priest's advice on an important issue.",
    "ko": "나는 중요한 문제에 대해 신부님의 조언을 구했어.",
    "blank": "كاهن"
+  }
+ ],
+ "w|كبار": [
+  {
+   "text": "كبار السن ركبوا الباص الأول.",
+   "en": "The older passengers boarded the first bus.",
+   "ko": "어르신들이 첫 버스에 타셨어.",
+   "blank": "كبار"
+  },
+  {
+   "text": "صالة كبار الزوار بهالمطار هادية.",
+   "en": "The VIP lounge in this airport is quiet.",
+   "ko": "이 공항 귀빈실은 조용해.",
+   "blank": "كبار"
   }
  ],
  "w|كبد": [
@@ -32005,6 +33613,20 @@
    "blank": "كف"
   }
  ],
+ "w|كفء": [
+  {
+   "text": "الموظف كفء ويعرف شغله.",
+   "en": "The employee is capable and knows his work.",
+   "ko": "그 직원은 유능하고 일을 잘 알아.",
+   "blank": "كفء"
+  },
+  {
+   "text": "نحتاج شخص كفء لهالمهمة.",
+   "en": "We need a capable person for this task.",
+   "ko": "이 일에는 유능한 사람이 필요해.",
+   "blank": "كفء"
+  }
+ ],
  "w|كفاية": [
   {
    "text": "هذا الطعام كفاية للجميع.",
@@ -32073,6 +33695,20 @@
    "en": "I do not like lying words.",
    "ko": "거짓말을 좋아하지 않아요.",
    "blank": "كلام"
+  }
+ ],
+ "w|كلاهما": [
+  {
+   "text": "كلاهما تأخر عن الغدا.",
+   "en": "Both of them were late for lunch.",
+   "ko": "둘 다 점심에 늦었어.",
+   "blank": "كلاهما"
+  },
+  {
+   "text": "كلاهما وافق على الخطة.",
+   "en": "Both of them agreed to the plan.",
+   "ko": "둘 다 계획에 동의했어.",
+   "blank": "كلاهما"
   }
  ],
  "w|كلب": [
@@ -32425,6 +34061,20 @@
    "blank": "الكون"
   }
  ],
+ "w|كوني": [
+  {
+   "text": "كوني صريحة معي.",
+   "en": "Be honest with me.",
+   "ko": "나한테 솔직하게 말해.",
+   "blank": "كوني"
+  },
+  {
+   "text": "كوني مرتاحة، أنا معك.",
+   "en": "Be at ease, I am with you.",
+   "ko": "편하게 있어, 내가 옆에 있어.",
+   "blank": "كوني"
+  }
+ ],
  "w|كوى": [
   {
    "text": "كوى القميص قبل الخروج.",
@@ -32619,6 +34269,20 @@
    "en": "This job suits your experience perfectly.",
    "ko": "이 일은 너의 경력에 딱 맞아.",
    "blank": "يلاءم"
+  }
+ ],
+ "w|لائق": [
+  {
+   "text": "لبسك لائق للمقابلة.",
+   "en": "Your clothes are suitable for the interview.",
+   "ko": "네 옷차림은 면접에 어울려.",
+   "blank": "لائق"
+  },
+  {
+   "text": "كلامه ما كان لائق قدام الضيوف.",
+   "en": "What he said was not proper in front of the guests.",
+   "ko": "그의 말은 손님들 앞에서 적절하지 않았어.",
+   "blank": "لائق"
   }
  ],
  "w|لاجئ": [
@@ -32865,6 +34529,12 @@
    "en": "This is a beautiful and moving melody.",
    "ko": "이것은 아름답고 감동적인 멜로디야.",
    "blank": "لحن"
+  },
+  {
+   "text": "لحن الأغنية عالق في راسي.",
+   "en": "The tune of the song is stuck in my head.",
+   "ko": "그 노래 멜로디가 머릿속에 남았어.",
+   "blank": "لحن"
   }
  ],
  "w|لحية": [
@@ -32998,6 +34668,12 @@
    "text": "تكلمت لصالح صديقي.",
    "en": "I spoke for my friend.",
    "ko": "나는 친구를 위해 말했어.",
+   "blank": "لصالح"
+  },
+  {
+   "text": "الحكم طلع لصالح الفريق الضيف.",
+   "en": "The call went in favor of the away team.",
+   "ko": "판정은 원정 팀 쪽으로 나왔어.",
    "blank": "لصالح"
   }
  ],
@@ -33449,6 +35125,20 @@
    "blank": "اللوز"
   }
  ],
+ "w|لولا": [
+  {
+   "text": "لولا المطر كنا طلعنا نتمشى.",
+   "en": "If it hadn't rained, we would have gone out for a walk.",
+   "ko": "비만 아니었으면 산책하러 나갔을 거야.",
+   "blank": "لولا"
+  },
+  {
+   "text": "لولا أمك ما خلصنا الشغل.",
+   "en": "If it weren't for your mother, we wouldn't have finished the work.",
+   "ko": "네 엄마가 안 계셨으면 일을 못 끝냈을 거야.",
+   "blank": "لولا"
+  }
+ ],
  "w|لوم": [
   {
    "text": "شعرتُ لوم شديد بعد الخطأ.",
@@ -33559,6 +35249,20 @@
    "en": "Did you see the moon last night?",
    "ko": "어젯밤에 달 봤어?",
    "blank": "ليلة"
+  }
+ ],
+ "w|ليلي": [
+  {
+   "text": "دوامي ليلي وبصحى متأخر.",
+   "en": "My shift is at night and I wake up late.",
+   "ko": "나는 야간 근무라 늦게 일어나.",
+   "blank": "ليلي"
+  },
+  {
+   "text": "بحب الهدوء الليلي بالحي.",
+   "en": "I like the quiet of the neighborhood at night.",
+   "ko": "동네의 밤 조용함이 좋아.",
+   "blank": "الليلي"
   }
  ],
  "w|ليمون": [
@@ -33771,6 +35475,20 @@
    "blank": "مؤلم"
   }
  ],
+ "w|مؤهل": [
+  {
+   "text": "هي مؤهلة للوظيفة.",
+   "en": "She is qualified for the job.",
+   "ko": "그녀는 그 일에 자격이 있어.",
+   "blank": "مؤهلة"
+  },
+  {
+   "text": "المرشح مؤهل وخبرته واضحة.",
+   "en": "The candidate is qualified and his experience shows.",
+   "ko": "그 지원자는 자격이 있고 경력도 분명해.",
+   "blank": "مؤهل"
+  }
+ ],
  "w|مئة": [
   {
    "text": "أحتاج إلى مئة ورقة للطباعة.",
@@ -33979,6 +35697,20 @@
    "en": "I spoke with the restaurant owner.",
    "ko": "나는 식당 주인과 이야기했어요.",
    "blank": "مالك"
+  }
+ ],
+ "w|مالي": [
+  {
+   "text": "وضعه مالي صعب هالشهر.",
+   "en": "Money is tight for him this month.",
+   "ko": "이번 달 그 사람 살림이 빠듯해.",
+   "blank": "مالي"
+  },
+  {
+   "text": "الدعم مالي مو بس كلام حلو.",
+   "en": "The support is money, not just nice words.",
+   "ko": "지원은 좋은 말이 아니라 돈으로 와.",
+   "blank": "مالي"
   }
  ],
  "w|مانجو": [
@@ -34877,6 +36609,20 @@
    "blank": "مجهول"
   }
  ],
+ "w|مجيء": [
+  {
+   "text": "مجيء المطر فاجأ الجميع.",
+   "en": "The rain coming surprised everyone.",
+   "ko": "비가 와서 모두가 놀랐어.",
+   "blank": "مجيء"
+  },
+  {
+   "text": "انتظرت مجيئك من الصبح.",
+   "en": "I have been waiting for you to come since morning.",
+   "ko": "아침부터 네가 오기를 기다렸어.",
+   "blank": "مجيئك"
+  }
+ ],
  "w|محا": [
   {
    "text": "محا الطالب الخطأ من الدفتر.",
@@ -34967,6 +36713,12 @@
    "en": "My brother became a lawyer this year.",
    "ko": "우리 오빠는 올해 변호사가 되었어요.",
    "blank": "محامي"
+  },
+  {
+   "text": "كلمت المحامي قبل الجلسة.",
+   "en": "I called the lawyer before the hearing.",
+   "ko": "재판 전에 변호사한테 전화했어.",
+   "blank": "المحامي"
   }
  ],
  "w|محاولة": [
@@ -35207,6 +36959,20 @@
    "blank": "محلي"
   }
  ],
+ "w|محلية": [
+  {
+   "text": "البضاعة محلية ومن هالبلد.",
+   "en": "The goods are local, from this country.",
+   "ko": "물건은 이 나라에서 난 지역 산물이야.",
+   "blank": "محلية"
+  },
+  {
+   "text": "بدي جبنة محلية مو مستوردة.",
+   "en": "I want local cheese, not imported.",
+   "ko": "수입품 말고 이 지역 치즈가 먹고 싶어.",
+   "blank": "محلية"
+  }
+ ],
  "w|محمول": [
   {
    "text": "أحتاج إلى شاحن محمول لهاتفي.",
@@ -35437,6 +37203,12 @@
    "en": "The teacher praised the student for his efforts.",
    "ko": "선생님이 학생의 노력을 칭찬했어요.",
    "blank": "مدح"
+  },
+  {
+   "text": "ما مدح أحد هذا الشغل.",
+   "en": "Nobody praised this work.",
+   "ko": "아무도 이 일을 칭찬하지 않았어.",
+   "blank": "مدح"
   }
  ],
  "w|مدخل": [
@@ -35495,6 +37267,20 @@
    "blank": "مدرسة"
   }
  ],
+ "w|مدعي": [
+  {
+   "text": "المدعي شرح قصته للقاضي.",
+   "en": "The plaintiff told his story to the judge.",
+   "ko": "원고가 판사에게 사연을 설명했어.",
+   "blank": "المدعي"
+  },
+  {
+   "text": "ما اقتنع القاضي بكلام المدعي.",
+   "en": "The judge was not convinced by the plaintiff.",
+   "ko": "판사는 원고의 말을 납득하지 못했어.",
+   "blank": "المدعي"
+  }
+ ],
  "w|مدفأة": [
   {
    "text": "أشعلنا مدفأة الغرفة بسبب البرد.",
@@ -35535,6 +37321,20 @@
    "en": "This show is really amazing!",
    "ko": "이 공연은 정말 놀라워!",
    "blank": "مدهش"
+  }
+ ],
+ "w|مدى": [
+  {
+   "text": "لأي مدى رح تكمل بهالموضوع؟",
+   "en": "How far are you going to take this?",
+   "ko": "이 일을 어디까지 계속할 거야?",
+   "blank": "مدى"
+  },
+  {
+   "text": "مدى تعبه بان من صوته.",
+   "en": "You could hear how tired he was.",
+   "ko": "얼마나 지쳤는지 목소리에서 드러났어.",
+   "blank": "مدى"
   }
  ],
  "w|مدير": [
@@ -35661,6 +37461,20 @@
    "en": "This medicine tastes bitter.",
    "ko": "이 약은 쓴맛이 나요.",
    "blank": "مر"
+  }
+ ],
+ "w|مرء": [
+  {
+   "text": "كل مرء بيعرف أهل بيته.",
+   "en": "Everyone knows their own household.",
+   "ko": "누구나 자기 집안 사정은 알아.",
+   "blank": "مرء"
+  },
+  {
+   "text": "المرء يبين من كلامه.",
+   "en": "You can tell a person by how they speak.",
+   "ko": "사람은 하는 말에서 드러나.",
+   "blank": "المرء"
   }
  ],
  "w|مرآب": [
@@ -35815,6 +37629,20 @@
    "en": "This mountain is very high above the sea.",
    "ko": "이 산은 바다보다 매우 높아요.",
    "blank": "مرتفع"
+  }
+ ],
+ "w|مرح": [
+  {
+   "text": "في الجلسة مرح وضحك.",
+   "en": "There is fun and laughter at the gathering.",
+   "ko": "모임에는 즐거움과 웃음이 있어.",
+   "blank": "مرح"
+  },
+  {
+   "text": "سمعنا مرح الأطفال من الشارع.",
+   "en": "We heard the kids having fun from the street.",
+   "ko": "우리는 거리에서 아이들이 신나게 노는 소리를 들었어.",
+   "blank": "مرح"
   }
  ],
  "w|مرحاض": [
@@ -36097,6 +37925,20 @@
    "blank": "مزحت"
   }
  ],
+ "w|مزحة": [
+  {
+   "text": "كانت مزحة، لا تزعل.",
+   "en": "It was a joke, do not get upset.",
+   "ko": "농담이었어, 화내지 마.",
+   "blank": "مزحة"
+  },
+  {
+   "text": "مزحتك ثقيلة شوي اليوم.",
+   "en": "Your joke was a bit harsh today.",
+   "ko": "오늘 네 농담이 좀 심했어.",
+   "blank": "مزحتك"
+  }
+ ],
  "w|مزخرف": [
   {
    "text": "هذا القفطان مزخرف بشكل جميل.",
@@ -36263,6 +38105,20 @@
    "en": "I need extra space to store things.",
    "ko": "물건을 보관하려면 추가 공간이 필요해.",
    "blank": "مساحة"
+  }
+ ],
+ "w|مسار": [
+  {
+   "text": "مسار الباص تغير من اليوم.",
+   "en": "The bus route changed starting today.",
+   "ko": "오늘부터 버스 노선이 바뀌었어.",
+   "blank": "مسار"
+  },
+  {
+   "text": "ضل على المسار ولا تلف يمين.",
+   "en": "Stay on this route and don't turn right.",
+   "ko": "그 길로 가, 오른쪽으로 꺾지 마.",
+   "blank": "المسار"
   }
  ],
  "w|مساعد": [
@@ -37021,6 +38877,20 @@
    "blank": "مشمش"
   }
  ],
+ "w|مشهد": [
+  {
+   "text": "المشهد الأخير خلانا نبكي.",
+   "en": "The last scene made us cry.",
+   "ko": "마지막 장면 때문에 우리가 울었어.",
+   "blank": "المشهد"
+  },
+  {
+   "text": "شفت مشهد زحمة عالباب.",
+   "en": "I saw a crowd packed at the door.",
+   "ko": "문 앞에 사람들 북적이는 걸 봤어.",
+   "blank": "مشهد"
+  }
+ ],
  "w|مشهور": [
   {
    "text": "هذا الممثل مشهور عالميا.",
@@ -37299,6 +39169,20 @@
    "en": "This is a big international airport.",
    "ko": "이곳은 큰 국제 공항이야.",
    "blank": "مطار"
+  }
+ ],
+ "w|مطاف": [
+  {
+   "text": "بنهاية المطاف رجعنا البيت.",
+   "en": "In the end we went back home.",
+   "ko": "결국 우리는 집에 돌아왔어.",
+   "blank": "المطاف"
+  },
+  {
+   "text": "آخر المطاف كان هادي.",
+   "en": "The end of it was calm.",
+   "ko": "마지막은 조용했어.",
+   "blank": "المطاف"
   }
  ],
  "w|مطبخ": [
@@ -38435,6 +40319,20 @@
    "blank": "مكتبة"
   }
  ],
+ "w|مكتبي": [
+  {
+   "text": "مكتبي فوضى وما بلاقي الورقة.",
+   "en": "My desk is a mess and I cannot find the paper.",
+   "ko": "책상이 엉망이라 종이를 못 찾겠어.",
+   "blank": "مكتبي"
+  },
+  {
+   "text": "الكرسي المكتبي الجديد مريح.",
+   "en": "The new office chair is comfortable.",
+   "ko": "새 사무용 의자가 편해.",
+   "blank": "المكتبي"
+  }
+ ],
  "w|مكتوب": [
   {
    "text": "كل شي مكتوب بورقة.",
@@ -38561,6 +40459,20 @@
    "blank": "ملاءة"
   }
  ],
+ "w|ملائم": [
+  {
+   "text": "الوقت ملائم للاجتماع.",
+   "en": "The time suits the meeting.",
+   "ko": "그 시간은 회의에 적합해.",
+   "blank": "ملائم"
+  },
+  {
+   "text": "لقيت حل ملائم للمشكلة.",
+   "en": "I found a solution that fits the problem.",
+   "ko": "나는 그 문제에 맞는 해결책을 찾았어.",
+   "blank": "ملائم"
+  }
+ ],
  "w|ملابس": [
   {
    "text": "أحتاج إلى ملابس جديدة للمدرسة.",
@@ -38589,6 +40501,20 @@
    "blank": "ملاحظة"
   }
  ],
+ "w|ملازم": [
+  {
+   "text": "الملازم طلب تقرير الصباح.",
+   "en": "The lieutenant asked for the morning report.",
+   "ko": "중위가 아침 보고를 올려 달라고 했어.",
+   "blank": "الملازم"
+  },
+  {
+   "text": "يا ملازم، وصل خبر جديد.",
+   "en": "Lieutenant, a new report has come in.",
+   "ko": "중위님, 새 소식이 도착했어요.",
+   "blank": "ملازم"
+  }
+ ],
  "w|ملاك": [
   {
    "text": "رسم الطفل صورة ملاك بأجنحة بيضاء.",
@@ -38601,6 +40527,20 @@
    "en": "It is said that an angel protects children.",
    "ko": "천사가 아이들을 지킨다고 해요.",
    "blank": "ملاك"
+  }
+ ],
+ "w|ملايين": [
+  {
+   "text": "في ملايين الناس بالساحة اليوم.",
+   "en": "There are millions of people in the square today.",
+   "ko": "오늘 광장에 수백만 명이 있어.",
+   "blank": "ملايين"
+  },
+  {
+   "text": "المشروع كلف ملايين وما خلص.",
+   "en": "The project cost millions and it is still not done.",
+   "ko": "그 사업은 수백만이 들었는데 아직 안 끝났어.",
+   "blank": "ملايين"
   }
  ],
  "w|ملح": [
@@ -38727,6 +40667,20 @@
    "en": "I dreamed that I became a queen in a fairy tale.",
    "ko": "나는 동화에서 여왕이 되는 꿈을 꾸었어요.",
    "blank": "ملكة"
+  }
+ ],
+ "w|ملكي": [
+  {
+   "text": "الختم ملكي وما بنقدر نقلده.",
+   "en": "The seal is royal and we can't copy it.",
+   "ko": "왕실 도장이라 우리가 흉내 낼 수 없어.",
+   "blank": "ملكي"
+  },
+  {
+   "text": "القصر ملكي ومسكر اليوم.",
+   "en": "The palace is royal and it's closed today.",
+   "ko": "왕궁이라 오늘은 문을 닫았어.",
+   "blank": "ملكي"
   }
  ],
  "w|ملكية": [
@@ -38937,6 +40891,20 @@
    "en": "My mother is a professional nurse.",
    "ko": "우리 엄마는 전문 간호사에요.",
    "blank": "ممرضة"
+  }
+ ],
+ "w|ممسحة": [
+  {
+   "text": "وين الممسحة؟ الأرض مبلولة.",
+   "en": "Where is the mop? The floor is wet.",
+   "ko": "대걸레 어디 있어? 바닥이 젖었어.",
+   "blank": "الممسحة"
+  },
+  {
+   "text": "الممسحة ورا الباب.",
+   "en": "The mop is behind the door.",
+   "ko": "대걸레는 문 뒤에 있어.",
+   "blank": "الممسحة"
   }
  ],
  "w|ممطر": [
@@ -39289,6 +41257,20 @@
    "blank": "منزل"
   }
  ],
+ "w|منزلي": [
+  {
+   "text": "طبخت أكل منزلي اليوم.",
+   "en": "I cooked a homemade meal today.",
+   "ko": "오늘 집에서 음식을 만들었어.",
+   "blank": "منزلي"
+  },
+  {
+   "text": "الشغل المنزلي ريحني أكتر.",
+   "en": "Working from home suits me more.",
+   "ko": "집에서 하는 일이 나한테 더 편해.",
+   "blank": "المنزلي"
+  }
+ ],
  "w|منشفة": [
   {
    "text": "أحتاج إلى منشفة بعد الاستحمام.",
@@ -39583,6 +41565,20 @@
    "blank": "مهندس"
   }
  ],
+ "w|مواجهة": [
+  {
+   "text": "المواجهة مع المدير كانت تقيلة.",
+   "en": "Facing the manager was rough.",
+   "ko": "팀장이랑 맞서는 게 버거웠어.",
+   "blank": "المواجهة"
+  },
+  {
+   "text": "في مواجهة بين الفريقين اليوم.",
+   "en": "The two teams meet today.",
+   "ko": "오늘 두 팀이 맞붙어.",
+   "blank": "مواجهة"
+  }
+ ],
  "w|مواطن": [
   {
    "text": "كل مواطن له حقوق.",
@@ -39807,6 +41803,20 @@
    "blank": "موهبة"
   }
  ],
+ "w|مياه": [
+  {
+   "text": "المياه مقطوعة من الصبح.",
+   "en": "The water has been cut off since morning.",
+   "ko": "아침부터 물이 끊겼어.",
+   "blank": "المياه"
+  },
+  {
+   "text": "جيب مياه من البراد.",
+   "en": "Get some water from the fridge.",
+   "ko": "냉장고에서 물 좀 가져와.",
+   "blank": "مياه"
+  }
+ ],
  "w|ميت": [
   {
    "text": "وجدوا طائراً ميت في الحديقة.",
@@ -39819,6 +41829,20 @@
    "en": "The flowers look dead in winter.",
    "ko": "겨울에는 꽃이 죽어 보여.",
    "blank": "ميتة"
+  }
+ ],
+ "w|ميثاق": [
+  {
+   "text": "قرأنا الميثاق قبل ما نوقع.",
+   "en": "We read the charter before we signed.",
+   "ko": "우리는 서명하기 전에 헌장을 읽었어.",
+   "blank": "الميثاق"
+  },
+  {
+   "text": "وقعوا ميثاق شرف بينهم.",
+   "en": "They made a code of honor among themselves.",
+   "ko": "그들은 서로 명예 서약을 맺었어.",
+   "blank": "ميثاق"
   }
  ],
  "w|ميدان": [
@@ -39877,6 +41901,20 @@
    "blank": "ميزة"
   }
  ],
+ "w|ميل": [
+  {
+   "text": "عندي ميل للقهوة أكتر من الشاي.",
+   "en": "I have more of a taste for coffee than tea.",
+   "ko": "나는 차보다 커피를 더 좋아해.",
+   "blank": "ميل"
+  },
+  {
+   "text": "ميله للرسم بان من صغره.",
+   "en": "His bent for drawing showed from childhood.",
+   "ko": "어릴 때부터 그림에 소질이 있었어.",
+   "blank": "ميله"
+  }
+ ],
  "w|ميلاد": [
   {
    "text": "عيد ميلاد سعيد يا صديقي.",
@@ -39889,6 +41927,20 @@
    "en": "This is my friend's birthday.",
    "ko": "오늘은 내 친구의 생일이다.",
    "blank": "ميلاد"
+  }
+ ],
+ "w|ميلادي": [
+  {
+   "text": "التاريخ ميلادي عالجواز.",
+   "en": "The date on the passport is Gregorian.",
+   "ko": "여권에 적힌 날짜는 서기야.",
+   "blank": "ميلادي"
+  },
+  {
+   "text": "التقويم عندنا ميلادي بالمدرسة.",
+   "en": "The calendar we use at school is Gregorian.",
+   "ko": "학교에서 쓰는 달력은 서기야.",
+   "blank": "ميلادي"
   }
  ],
  "w|ميناء": [
@@ -40323,6 +42375,20 @@
    "en": "I narrowly survived drowning.",
    "ko": "나는 가까스로 익사에서 살아남았어.",
    "blank": "نجوت"
+  }
+ ],
+ "w|نجاة": [
+  {
+   "text": "نجاة الركاب كانت معجزة.",
+   "en": "The passengers' survival was a miracle.",
+   "ko": "승객들이 살아난 건 기적이었어.",
+   "blank": "نجاة"
+  },
+  {
+   "text": "النجاة كانت صعبة بهالعاصفة.",
+   "en": "Getting through this storm was hard.",
+   "ko": "이 폭풍에서 살아남기가 힘들었어.",
+   "blank": "النجاة"
   }
  ],
  "w|نجاح": [
@@ -40787,6 +42853,20 @@
    "blank": "نشيط"
   }
  ],
+ "w|نص": [
+  {
+   "text": "نص الرسالة كان واضح.",
+   "en": "The wording of the message was clear.",
+   "ko": "메시지 내용은 분명했어.",
+   "blank": "نص"
+  },
+  {
+   "text": "اقرأ النص على مهلك.",
+   "en": "Read the text slowly.",
+   "ko": "문구를 천천히 읽어.",
+   "blank": "النص"
+  }
+ ],
  "w|نصح": [
   {
    "text": "نصحني الطبيب بالراحة.",
@@ -40821,6 +42901,12 @@
    "en": "Be careful of the knife’s blade, it’s very sharp.",
    "ko": "칼날 조심해, 엄청 날카로워.",
    "blank": "نصل"
+  },
+  {
+   "text": "نصل المقص انعوج.",
+   "en": "The scissors blade bent.",
+   "ko": "가위 날이 휘었어.",
+   "blank": "نصل"
   }
  ],
  "w|نصيحة": [
@@ -40835,6 +42921,20 @@
    "en": "Always follow the doctor's advice.",
    "ko": "항상 의사의 조언을 따라.",
    "blank": "نصيحة"
+  }
+ ],
+ "w|نطاق": [
+  {
+   "text": "هاد خارج نطاق شغلي.",
+   "en": "This is outside my job.",
+   "ko": "이건 내 일 범위를 벗어나.",
+   "blank": "نطاق"
+  },
+  {
+   "text": "نطاق الشبكة ضعيف بالبيت.",
+   "en": "The signal barely reaches inside the house.",
+   "ko": "집에선 통신 범위가 약해.",
+   "blank": "نطاق"
   }
  ],
  "w|نطق": [
@@ -40977,6 +43077,20 @@
    "blank": "نظيف"
   }
  ],
+ "w|نظيفة": [
+  {
+   "text": "المي نظيفة وبنشرب منها.",
+   "en": "The water is clean and we drink it.",
+   "ko": "물이 깨끗해서 그냥 마셔.",
+   "blank": "نظيفة"
+  },
+  {
+   "text": "الحديقة نظيفة بعد ما كنسوها.",
+   "en": "The garden is clean now that they've swept it.",
+   "ko": "쓸고 나니까 정원이 깨끗해.",
+   "blank": "نظيفة"
+  }
+ ],
  "w|نعال": [
   {
    "text": "أحب ارتداء نعال في المنزل.",
@@ -41108,6 +43222,12 @@
    "text": "نفسي أروح البحر اليوم.",
    "en": "I feel like going to the sea today.",
    "ko": "오늘 바다에 가고 싶다.",
+   "blank": "نفسي"
+  },
+  {
+   "text": "هذا تعب نفسي مو جسدي.",
+   "en": "This is mental fatigue, not physical.",
+   "ko": "이건 마음이 피곤한 거야, 몸이 피곤한 게 아니야.",
    "blank": "نفسي"
   }
  ],
@@ -41419,6 +43539,20 @@
    "blank": "نهائيا"
   }
  ],
+ "w|نهار": [
+  {
+   "text": "نهارك سعيد، كيفك اليوم؟",
+   "en": "Have a good day, how are you today?",
+   "ko": "좋은 하루야, 오늘 어때?",
+   "blank": "نهارك"
+  },
+  {
+   "text": "اشتغلت طول النهار وما ارتحت.",
+   "en": "I worked all day and did not rest.",
+   "ko": "하루 종일 일하고 쉬지를 못했어.",
+   "blank": "النهار"
+  }
+ ],
  "w|نهارا": [
   {
    "text": "يعمل في الحديقة نهارا.",
@@ -41711,6 +43845,20 @@
    "en": "I like the calm atmosphere in the morning.",
    "ko": "나는 아침의 조용한 분위기를 좋아해요.",
    "blank": "هادئ"
+  }
+ ],
+ "w|هام": [
+  {
+   "text": "هام قلبه فيها من أول نظرة.",
+   "en": "He fell for her at first sight.",
+   "ko": "첫눈에 그녀에게 마음을 뺐겼어.",
+   "blank": "هام"
+  },
+  {
+   "text": "هام بالفكرة وما نام الليل.",
+   "en": "He got caught up in the idea and didn't sleep that night.",
+   "ko": "그 생각에 빠져서 밤에 잠을 못 잤어.",
+   "blank": "هام"
   }
  ],
  "w|هاو": [
@@ -42217,6 +44365,20 @@
    "blank": "هي"
   }
  ],
+ "w|هيئة": [
+  {
+   "text": "الهيئة طلبت أوراق زيادة.",
+   "en": "The authority asked for more papers.",
+   "ko": "기관에서 서류를 더 내라고 했어.",
+   "blank": "الهيئة"
+  },
+  {
+   "text": "هيئته رسمية اليوم بالمقابلة.",
+   "en": "He looks formal today for the interview.",
+   "ko": "오늘 면접에서 차림이 단정했어.",
+   "blank": "هيئته"
+  }
+ ],
  "w|هيا": [
   {
    "text": "هيا نلعب في الحديقة.",
@@ -42237,6 +44399,12 @@
    "en": "My mom always puts cardamom in tea.",
    "ko": "우리 엄마는 항상 차에 카다멈을 넣어.",
    "blank": "هيل"
+  },
+  {
+   "text": "ريحة الهيل طالعة من المطبخ.",
+   "en": "The smell of cardamom is coming from the kitchen.",
+   "ko": "주방에서 카다멈 냄새가 나.",
+   "blank": "الهيل"
   }
  ],
  "w|و": [
@@ -43163,6 +45331,20 @@
    "blank": "وعدتني"
   }
  ],
+ "w|وعي": [
+  {
+   "text": "الولد فقد وعيه بعد ما وقع.",
+   "en": "The boy lost consciousness after he fell.",
+   "ko": "아이가 넘어진 뒤에 의식을 잃었어.",
+   "blank": "وعيه"
+  },
+  {
+   "text": "وعي الناس بهالموضوع زاد.",
+   "en": "People are more aware of this now.",
+   "ko": "이 일에 대한 사람들 인식이 늘었어.",
+   "blank": "وعي"
+  }
+ ],
  "w|وفاة": [
   {
    "text": "حزنت الأسرة بسبب وفاة الجد.",
@@ -43191,6 +45373,20 @@
    "blank": "أوفر"
   }
  ],
+ "w|وفقا": [
+  {
+   "text": "وفقا للخطة بنبلش الصبح.",
+   "en": "According to the plan, we start in the morning.",
+   "ko": "계획대로면 아침에 시작해.",
+   "blank": "وفقا"
+  },
+  {
+   "text": "وفقا لكلامه، القطار تأجل.",
+   "en": "According to him, the train was delayed.",
+   "ko": "그 사람 말대로 기차가 연착됐대.",
+   "blank": "وفقا"
+  }
+ ],
  "w|وفي": [
   {
    "text": "وفي صديقي بوعده لي.",
@@ -43217,6 +45413,20 @@
    "en": "I need time to think.",
    "ko": "생각할 시간이 필요해.",
    "blank": "وقت"
+  }
+ ],
+ "w|وقتها": [
+  {
+   "text": "وقتها كنت لسا بالجامعة.",
+   "en": "Back then I was still at university.",
+   "ko": "그때는 아직 대학에 다녔어.",
+   "blank": "وقتها"
+  },
+  {
+   "text": "وقتها فهمت ليش زعل.",
+   "en": "That's when I understood why he was upset.",
+   "ko": "그때야 그가 왜 화났는지 알았어.",
+   "blank": "وقتها"
   }
  ],
  "w|وقح": [
@@ -43273,6 +45483,20 @@
    "en": "The plane's fuel is finished.",
    "ko": "비행기 연료가 다 떨어졌어.",
    "blank": "وقود"
+  }
+ ],
+ "w|وكالة": [
+  {
+   "text": "رحت على وكالة السفر الصبح.",
+   "en": "I went to the travel agency in the morning.",
+   "ko": "아침에 여행사에 갔어.",
+   "blank": "وكالة"
+  },
+  {
+   "text": "الوكالة نشرت الخبر بسرعة.",
+   "en": "The agency put the news out quickly.",
+   "ko": "그 통신사가 소식을 바로 냈어.",
+   "blank": "الوكالة"
   }
  ],
  "w|ولادة": [
@@ -43357,6 +45581,34 @@
    "en": "He devoted his time to helping others.",
    "ko": "다른 사람을 돕는 데 시간을 바쳤다.",
    "blank": "وهب"
+  }
+ ],
+ "w|وهم": [
+  {
+   "text": "هاد الكلام وهم، لا تصدقه.",
+   "en": "That talk is an illusion, do not believe it.",
+   "ko": "그 말은 착각이니까 믿지 마.",
+   "blank": "وهم"
+  },
+  {
+   "text": "طلع كل شي وهم بالنهاية.",
+   "en": "In the end it all turned out to be an illusion.",
+   "ko": "결국 전부 착각으로 드러났어.",
+   "blank": "وهم"
+  }
+ ],
+ "w|ويل": [
+  {
+   "text": "يا ويل اللي يتأخر عن الطيارة.",
+   "en": "Too bad for whoever misses the plane.",
+   "ko": "비행기 놓치는 사람은 큰일이야.",
+   "blank": "ويل"
+  },
+  {
+   "text": "ويل لنا إذا خلص البنزين.",
+   "en": "We are in trouble if the gas runs out.",
+   "ko": "기름이 떨어지면 우리 큰일이야.",
+   "blank": "ويل"
   }
  ],
  "w|يأس": [
@@ -43455,6 +45707,20 @@
    "en": "The library is to the left of the school.",
    "ko": "도서관이 학교 왼쪽에 있어.",
    "blank": "يسار"
+  }
+ ],
+ "w|يسير": [
+  {
+   "text": "الامتحان كان يسير اليوم.",
+   "en": "The exam was easy today.",
+   "ko": "오늘 시험은 쉬웠어.",
+   "blank": "يسير"
+  },
+  {
+   "text": "الحل يسير، لا تعقده.",
+   "en": "The solution is simple, don't complicate it.",
+   "ko": "풀이는 쉬우니까 복잡하게 만들지 마.",
+   "blank": "يسير"
   }
  ],
  "w|يكفي": [

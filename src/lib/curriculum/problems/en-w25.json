@@ -287,7 +287,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "현재",
     "answer": "currently",
-    "line": "She is currently studying abroad."
+    "line": "She is currently studying abroad.",
+    "hint": "c"
   },
   "w|deadly": {
     "kind": "word",
@@ -296,7 +297,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "치명적인",
     "answer": "deadly",
-    "line": "That snake has a deadly bite."
+    "line": "That snake has a deadly bite.",
+    "hint": "d",
+    "mark": "한 단어"
   },
   "w|dedicate": {
     "kind": "word",
@@ -487,7 +490,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "사기",
     "answer": "fraud",
-    "line": "He was arrested for bank fraud."
+    "line": "He was arrested for bank fraud.",
+    "hint": "f"
   },
   "w|gig": {
     "kind": "word",
@@ -523,7 +527,7 @@
     "type": "type",
     "name": "granny",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "할머니",
+    "gloss": "할머니(구어)",
     "answer": "granny",
     "line": "I love visiting my granny on weekends.",
     "hint": "g",
@@ -536,7 +540,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "중간에",
     "answer": "halfway",
-    "line": "We are already halfway through the movie."
+    "line": "We are already halfway through the movie.",
+    "hint": "h"
   },
   "w|happily": {
     "kind": "word",
@@ -705,7 +710,7 @@
     "type": "type",
     "name": "nicely",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "공손하게",
+    "gloss": "상냥하게",
     "answer": "nicely",
     "line": "Please ask nicely if you want something."
   },
@@ -759,7 +764,7 @@
     "type": "type",
     "name": "poetry",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "시가",
+    "gloss": "시(문학)",
     "answer": "poetry",
     "line": "She reads poetry every morning to relax."
   },
@@ -914,7 +919,7 @@
     "type": "type",
     "name": "slice",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "조각",
+    "gloss": "얇은 조각",
     "answer": "slice",
     "line": "Can I have another slice of pizza, please?",
     "hint": "s",

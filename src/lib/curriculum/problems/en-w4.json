@@ -24,7 +24,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "어려운",
     "answer": "hard",
-    "line": "This test is really hard."
+    "line": "This test is really hard.",
+    "hint": "h"
   },
   "w|happy": {
     "kind": "word",
@@ -105,14 +106,16 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "꽤",
     "answer": "pretty",
-    "line": "That's a pretty good idea."
+    "line": "That's a pretty good idea.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|guess": {
     "kind": "word",
     "type": "type",
     "name": "guess",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "추측하다",
+    "gloss": "맞히다",
     "answer": "guess",
     "line": "Can you guess the answer?"
   },
@@ -139,7 +142,7 @@
     "type": "type",
     "name": "hour",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "시",
+    "gloss": "한 시간",
     "answer": "hour",
     "line": "It took me an hour to get here."
   },
@@ -157,7 +160,7 @@
     "type": "type",
     "name": "eye",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "눈",
+    "gloss": "눈(신체)",
     "answer": "eye",
     "line": "Don't rub your eye."
   },
@@ -195,7 +198,7 @@
     "type": "type",
     "name": "whole",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "전체",
+    "gloss": "전부",
     "answer": "whole",
     "line": "I ate the whole pizza myself."
   },
@@ -457,7 +460,7 @@
     "type": "type",
     "name": "gotta",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "해야 한다",
+    "gloss": "해야 한다(구어)",
     "answer": "gotta",
     "line": "I gotta go now.",
     "hint": "g",
@@ -468,7 +471,7 @@
     "type": "type",
     "name": "ago",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "~전에",
+    "gloss": "~전에(과거)",
     "answer": "ago",
     "line": "I met him a year ago.",
     "hint": "a"
@@ -478,7 +481,7 @@
     "type": "type",
     "name": "excuse",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "용서하다",
+    "gloss": "양해하다",
     "answer": "excuse",
     "line": "Please excuse my mistake."
   },
@@ -489,7 +492,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "짐작하다",
     "answer": "suppose",
-    "line": "I suppose he will come."
+    "line": "I suppose he will come.",
+    "hint": "s"
   },
   "w|anyone": {
     "kind": "word",
@@ -516,7 +520,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "~까지",
     "answer": "until",
-    "line": "Wait here until I come back."
+    "line": "Wait here until I come back.",
+    "hint": "u",
+    "mark": "한 단어"
   },
   "w|become": {
     "kind": "word",
@@ -561,7 +567,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "경찰",
     "answer": "police",
-    "line": "The police are here."
+    "line": "The police are here.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|part": {
     "kind": "word",
@@ -722,7 +730,7 @@
     "type": "type",
     "name": "month",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "달",
+    "gloss": "달(한 해의 열두 달)",
     "answer": "month",
     "line": "We will travel for a month."
   },
@@ -769,7 +777,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "이야기",
     "answer": "story",
-    "line": "Tell me a funny story."
+    "line": "Tell me a funny story.",
+    "hint": "s"
   },
   "w|body": {
     "kind": "word",
@@ -841,7 +850,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "미친",
     "answer": "crazy",
-    "line": "Are you crazy or just joking?"
+    "line": "Are you crazy or just joking?",
+    "hint": "c"
   },
   "w|exactly": {
     "kind": "word",
@@ -850,7 +860,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "정확히",
     "answer": "exactly",
-    "line": "That’s exactly what I meant."
+    "line": "That’s exactly what I meant.",
+    "hint": "e"
   },
   "w|under": {
     "kind": "word",
@@ -859,7 +870,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "~아래에",
     "answer": "under",
-    "line": "The keys are under the table."
+    "line": "The keys are under the table.",
+    "hint": "u",
+    "mark": "한 단어"
   },
   "w|everybody": {
     "kind": "word",
@@ -906,7 +919,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "기회",
     "answer": "chance",
-    "line": "Give me a chance to explain."
+    "line": "Give me a chance to explain.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|party": {
     "kind": "word",
@@ -960,14 +975,16 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "그것의",
     "answer": "its",
-    "line": "The cat chased its tail for hours."
+    "line": "The cat chased its tail for hours.",
+    "hint": "i",
+    "mark": "한 단어"
   },
   "w|whatever": {
     "kind": "word",
     "type": "type",
     "name": "whatever",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "무엇이든",
+    "gloss": "뭐든지",
     "answer": "whatever",
     "line": "Do whatever makes you happy.",
     "hint": "w"
@@ -1031,7 +1048,7 @@
     "type": "type",
     "name": "set",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "놓다",
+    "gloss": "상을 차리다",
     "answer": "set",
     "line": "Please set the table for dinner.",
     "hint": "s"
@@ -1041,7 +1058,7 @@
     "type": "type",
     "name": "different",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "다른",
+    "gloss": "서로 다른",
     "answer": "different",
     "line": "We have different opinions about that.",
     "hint": "d"

@@ -58,7 +58,7 @@
     "type": "type",
     "name": "range",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "범위",
+    "gloss": "범위(종류)",
     "answer": "range",
     "line": "This store has a wide range of shoes."
   },
@@ -204,7 +204,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "장비",
     "answer": "equipment",
-    "line": "We need more equipment for the gym."
+    "line": "We need more equipment for the gym.",
+    "hint": "e"
   },
   "w|expose": {
     "kind": "word",
@@ -238,7 +239,7 @@
     "type": "type",
     "name": "nasty",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "고약한",
+    "gloss": "못된",
     "answer": "nasty",
     "line": "That was a nasty comment to make."
   },
@@ -249,7 +250,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "무례한",
     "answer": "rude",
-    "line": "It's rude to interrupt when someone is talking."
+    "line": "It's rude to interrupt when someone is talking.",
+    "hint": "r"
   },
   "w|amen": {
     "kind": "word",
@@ -265,7 +267,7 @@
     "type": "type",
     "name": "merry",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "즐거운",
+    "gloss": "흥겨운",
     "answer": "merry",
     "line": "They wished everyone a merry holiday."
   },
@@ -348,7 +350,7 @@
     "type": "type",
     "name": "virgin",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "손대지 않은",
+    "gloss": "원시의",
     "answer": "virgin",
     "line": "The island is covered in virgin forest."
   },
@@ -447,7 +449,7 @@
     "type": "type",
     "name": "alert",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "경계하는",
+    "gloss": "방심 없이",
     "answer": "alert",
     "line": "Stay alert while crossing the street."
   },
@@ -503,7 +505,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "비슷한",
     "answer": "similar",
-    "line": "These two shirts are very similar."
+    "line": "These two shirts are very similar.",
+    "hint": "s"
   },
   "w|trigger": {
     "kind": "word",
@@ -730,7 +733,7 @@
     "type": "type",
     "name": "conference",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "회의",
+    "gloss": "대규모 회의",
     "answer": "conference",
     "line": "The conference will start at nine in the morning."
   },

@@ -22,7 +22,7 @@
     "type": "type",
     "name": "adviser",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "조언자",
+    "gloss": "조언자(영국식)",
     "answer": "adviser",
     "line": "She met with her academic adviser.",
     "hint": "a",
@@ -496,7 +496,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "교차로",
     "answer": "junction",
-    "line": "We met at the junction of two main roads."
+    "line": "We met at the junction of two main roads.",
+    "hint": "j",
+    "mark": "한 단어"
   },
   "w|leap": {
     "kind": "word",
@@ -512,7 +514,7 @@
     "type": "type",
     "name": "litigation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "소송",
+    "gloss": "소송(절차)",
     "answer": "litigation",
     "line": "The company is involved in litigation.",
     "hint": "l",
@@ -532,7 +534,7 @@
     "type": "type",
     "name": "manuscript",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "원고",
+    "gloss": "원고(글)",
     "answer": "manuscript",
     "line": "She finished writing her manuscript last month."
   },
@@ -559,7 +561,7 @@
     "type": "type",
     "name": "merchandise",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "상품",
+    "gloss": "상품(매장)",
     "answer": "merchandise",
     "line": "The store displays new merchandise every week."
   },
@@ -687,7 +689,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "기꺼이",
     "answer": "readily",
-    "line": "He readily agreed to help us."
+    "line": "He readily agreed to help us.",
+    "hint": "r",
+    "mark": "한 단어"
   },
   "w|rebellion": {
     "kind": "word",
@@ -721,7 +725,7 @@
     "type": "type",
     "name": "regiment",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "연대",
+    "gloss": "연대(군대)",
     "answer": "regiment",
     "line": "The regiment marched through the city."
   },
@@ -766,7 +770,7 @@
     "type": "type",
     "name": "risky",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "위험한",
+    "gloss": "모험적인",
     "answer": "risky",
     "line": "Investing in unknown companies can be risky.",
     "hint": "r",
@@ -898,7 +902,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "군주",
     "answer": "sovereign",
-    "line": "The sovereign addressed the nation on television."
+    "line": "The sovereign addressed the nation on television.",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|spice": {
     "kind": "word",

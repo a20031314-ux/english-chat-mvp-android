@@ -6,7 +6,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "근사한",
     "answer": "wonderful",
-    "line": "This cake tastes wonderful."
+    "line": "This cake tastes wonderful.",
+    "hint": "w",
+    "mark": "한 단어"
   },
   "w|mad": {
     "kind": "word",
@@ -109,7 +111,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "자기야",
     "answer": "darling",
-    "line": "Good morning, darling!"
+    "line": "Good morning, darling!",
+    "hint": "d"
   },
   "w|share": {
     "kind": "word",
@@ -152,7 +155,7 @@
     "type": "type",
     "name": "leg",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "다리",
+    "gloss": "다리(신체)",
     "answer": "leg",
     "line": "She hurt her leg while running.",
     "hint": "l",
@@ -268,7 +271,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "놀라운",
     "answer": "amazing",
-    "line": "That movie was absolutely amazing."
+    "line": "That movie was absolutely amazing.",
+    "hint": "a"
   },
   "w|round": {
     "kind": "word",
@@ -302,7 +306,7 @@
     "type": "type",
     "name": "weird",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "이상한",
+    "gloss": "괴상한",
     "answer": "weird",
     "line": "That movie was really weird.",
     "hint": "w",
@@ -315,14 +319,16 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "계산서",
     "answer": "bill",
-    "line": "The bill for dinner was expensive."
+    "line": "The bill for dinner was expensive.",
+    "hint": "b",
+    "mark": "한 단어"
   },
   "w|chief": {
     "kind": "word",
     "type": "type",
     "name": "chief",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "우두머리",
+    "gloss": "대장",
     "answer": "chief",
     "line": "The fire chief led the team."
   },
@@ -488,7 +494,7 @@
     "type": "type",
     "name": "thousand",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "천",
+    "gloss": "천(숫자)",
     "answer": "thousand",
     "line": "There are a thousand stars in the sky."
   },
@@ -515,7 +521,7 @@
     "type": "type",
     "name": "ground",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "땅",
+    "gloss": "땅(바닥)",
     "answer": "ground",
     "line": "The children played on the ground.",
     "hint": "g",
@@ -1004,7 +1010,7 @@
     "type": "type",
     "name": "boat",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "배",
+    "gloss": "배(탈것)",
     "answer": "boat",
     "line": "We took the boat across the lake.",
     "hint": "b",

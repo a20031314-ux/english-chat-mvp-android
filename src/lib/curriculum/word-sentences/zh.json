@@ -209,6 +209,20 @@
    "blank": "家伙"
   }
  ],
+ "w|改变": [
+  {
+   "text": "什么都没改变。",
+   "en": "Nothing has changed.",
+   "ko": "아무것도 안 바뀌었어.",
+   "blank": "改变"
+  },
+  {
+   "text": "人是会改变的。",
+   "en": "People do change.",
+   "ko": "사람은 변하게 돼 있어.",
+   "blank": "改变"
+  }
+ ],
  "w|去": [
   {
    "text": "你让他去。",
@@ -249,6 +263,34 @@
    "en": "The police are here.",
    "ko": "경찰 왔어.",
    "blank": "警察"
+  }
+ ],
+ "w|故事": [
+  {
+   "text": "给我讲个故事。",
+   "en": "Tell me a story.",
+   "ko": "이야기 하나 해 줘.",
+   "blank": "故事"
+  },
+  {
+   "text": "这故事是真的吗？",
+   "en": "Is this story true?",
+   "ko": "이 이야기 진짜야?",
+   "blank": "故事"
+  }
+ ],
+ "w|公司": [
+  {
+   "text": "我去公司了。",
+   "en": "I'm heading to the office.",
+   "ko": "나 회사 가.",
+   "blank": "公司"
+  },
+  {
+   "text": "公司让我加班。",
+   "en": "The company wants me to work late.",
+   "ko": "회사에서 야근하래.",
+   "blank": "公司"
   }
  ],
  "w|工作": [
@@ -293,6 +335,20 @@
    "blank": "告诉"
   }
  ],
+ "w|救": [
+  {
+   "text": "你救了他。",
+   "en": "You saved him.",
+   "ko": "네가 그 사람을 구했어.",
+   "blank": "救"
+  },
+  {
+   "text": "谁来救我？",
+   "en": "Who's going to save me?",
+   "ko": "누가 나 좀 구해 줘?",
+   "blank": "救"
+  }
+ ],
  "w|机会": [
   {
    "text": "给我个机会。",
@@ -333,6 +389,20 @@
    "en": "Let him know.",
    "ko": "그 사람한테 한마디 해.",
    "blank": "跟"
+  }
+ ],
+ "w|根本": [
+  {
+   "text": "根本没这回事。",
+   "en": "Nothing like that happened.",
+   "ko": "그런 일은 전혀 없었어.",
+   "blank": "根本"
+  },
+  {
+   "text": "我根本不认识他。",
+   "en": "I don't know him at all.",
+   "ko": "나는 그 사람을 전혀 몰라.",
+   "blank": "根本"
   }
  ],
  "w|今天": [
@@ -389,6 +459,20 @@
    "en": "There is nothing else.",
    "ko": "다른 건 없어.",
    "blank": "其他"
+  }
+ ],
+ "w|其实": [
+  {
+   "text": "其实我不饿。",
+   "en": "Actually, I'm not hungry.",
+   "ko": "사실 나는 안 배고파.",
+   "blank": "其实"
+  },
+  {
+   "text": "其实挺好的。",
+   "en": "It's actually pretty good.",
+   "ko": "사실 꽤 괜찮아.",
+   "blank": "其实"
   }
  ],
  "w|起来": [
@@ -503,6 +587,20 @@
    "blank": "那么"
   }
  ],
+ "w|那儿": [
+  {
+   "text": "那儿太吵了。",
+   "en": "It's too noisy there.",
+   "ko": "거긴 너무 시끄러워.",
+   "blank": "那儿"
+  },
+  {
+   "text": "那儿人很多。",
+   "en": "There are lots of people there.",
+   "ko": "거긴 사람이 많아.",
+   "blank": "那儿"
+  }
+ ],
  "w|那样": [
   {
    "text": "别那样。",
@@ -515,6 +613,20 @@
    "en": "That way won't work.",
    "ko": "그렇게 하면 안 돼.",
    "blank": "那样"
+  }
+ ],
+ "w|那边": [
+  {
+   "text": "你去那边等。",
+   "en": "Wait over there.",
+   "ko": "저쪽에서 기다려.",
+   "blank": "那边"
+  },
+  {
+   "text": "那边有人。",
+   "en": "There's someone over there.",
+   "ko": "저쪽에 사람 있어.",
+   "blank": "那边"
   }
  ],
  "w|女人": [
@@ -557,6 +669,20 @@
    "en": "New Year is almost here.",
    "ko": "설이 코앞이야.",
    "blank": "年"
+  }
+ ],
+ "w|女儿": [
+  {
+   "text": "我女儿回来了。",
+   "en": "My daughter's back.",
+   "ko": "우리 딸 돌아왔어.",
+   "blank": "女儿"
+  },
+  {
+   "text": "这是我女儿。",
+   "en": "This is my daughter.",
+   "ko": "이 애가 내 딸이야.",
+   "blank": "女儿"
   }
  ],
  "w|能": [
@@ -783,6 +909,20 @@
    "blank": "等等"
   }
  ],
+ "w|弄": [
+  {
+   "text": "你别弄了。",
+   "en": "Stop messing with it.",
+   "ko": "그만 만져.",
+   "blank": "弄"
+  },
+  {
+   "text": "这事我来弄。",
+   "en": "I'll handle this.",
+   "ko": "이 일은 내가 할게.",
+   "blank": "弄"
+  }
+ ],
  "w|了": [
   {
    "text": "他来了吗？",
@@ -853,6 +993,20 @@
    "blank": "离开"
   }
  ],
+ "w|麻烦": [
+  {
+   "text": "这事太麻烦了。",
+   "en": "This is such a hassle.",
+   "ko": "이 일은 너무 번거로워.",
+   "blank": "麻烦"
+  },
+  {
+   "text": "麻烦你让一下。",
+   "en": "Excuse me, could you step aside?",
+   "ko": "미안한데 좀 비켜 줘.",
+   "blank": "麻烦"
+  }
+ ],
  "w|明白": [
   {
    "text": "你明白吗？",
@@ -893,6 +1047,20 @@
    "en": "We'll talk about it tomorrow.",
    "ko": "내일 얘기하자.",
    "blank": "明天"
+  }
+ ],
+ "w|母亲": [
+  {
+   "text": "我母亲来了。",
+   "en": "My mother's here.",
+   "ko": "우리 어머니 오셨어요.",
+   "blank": "母亲"
+  },
+  {
+   "text": "母亲同意了。",
+   "en": "Mother agreed.",
+   "ko": "어머니가 허락하셨어.",
+   "blank": "母亲"
   }
  ],
  "w|无法": [
@@ -937,6 +1105,48 @@
    "blank": "放"
   }
  ],
+ "w|房子": [
+  {
+   "text": "这房子太旧了。",
+   "en": "This house is too old.",
+   "ko": "이 집은 너무 낡았어.",
+   "blank": "房子"
+  },
+  {
+   "text": "我们看房子去。",
+   "en": "Let's go look at a house.",
+   "ko": "우리 집 보러 가자.",
+   "blank": "房子"
+  }
+ ],
+ "w|房间": [
+  {
+   "text": "房间里太暗了。",
+   "en": "It's too dark in the room.",
+   "ko": "방 안이 너무 어두워.",
+   "blank": "房间"
+  },
+  {
+   "text": "我收拾一下房间。",
+   "en": "I'll tidy the room.",
+   "ko": "방 좀 정리할게.",
+   "blank": "房间"
+  }
+ ],
+ "w|拜托": [
+  {
+   "text": "拜托你了。",
+   "en": "I'm counting on you.",
+   "ko": "부탁할게.",
+   "blank": "拜托"
+  },
+  {
+   "text": "拜托，安静点。",
+   "en": "Please, keep it down.",
+   "ko": "제발 조용히 해.",
+   "blank": "拜托"
+  }
+ ],
  "w|不": [
   {
    "text": "谁不来？",
@@ -949,6 +1159,20 @@
    "en": "This doesn't suit.",
    "ko": "이건 안 맞아.",
    "blank": "不"
+  }
+ ],
+ "w|不管": [
+  {
+   "text": "不管了，先吃饭。",
+   "en": "Forget it, let's eat first.",
+   "ko": "됐다, 먼저 밥 먹자.",
+   "blank": "不管"
+  },
+  {
+   "text": "不管你去不去，我去。",
+   "en": "I'm going whether you do or not.",
+   "ko": "네가 가든 말든 나는 가.",
+   "blank": "不管"
   }
  ],
  "w|不要": [
@@ -979,6 +1203,20 @@
    "blank": "不用"
   }
  ],
+ "w|夫人": [
+  {
+   "text": "夫人，请这边走。",
+   "en": "Ma'am, this way please.",
+   "ko": "부인, 이쪽으로 오세요.",
+   "blank": "夫人"
+  },
+  {
+   "text": "我夫人还在楼上。",
+   "en": "My wife is still upstairs.",
+   "ko": "우리 부인은 아직 위층에 있어.",
+   "blank": "夫人"
+  }
+ ],
  "w|不行": [
   {
    "text": "不行。",
@@ -991,6 +1229,20 @@
    "en": "That won't do.",
    "ko": "그건 안 되지.",
    "blank": "不行"
+  }
+ ],
+ "w|不好": [
+  {
+   "text": "这样不好。",
+   "en": "That's not good.",
+   "ko": "이러면 안 좋아.",
+   "blank": "不好"
+  },
+  {
+   "text": "天气不好。",
+   "en": "The weather's bad.",
+   "ko": "날씨가 안 좋아.",
+   "blank": "不好"
   }
  ],
  "w|朋友": [
@@ -1089,6 +1341,20 @@
    "en": "Oh, that thing.",
    "ko": "아, 그 일.",
    "blank": "事"
+  }
+ ],
+ "w|些": [
+  {
+   "text": "先吃些东西。",
+   "en": "Eat something first.",
+   "ko": "뭐라도 먼저 먹어.",
+   "blank": "些"
+  },
+  {
+   "text": "给我些时间。",
+   "en": "Give me some time.",
+   "ko": "시간을 좀 줘.",
+   "blank": "些"
   }
  ],
  "w|死": [
@@ -1385,6 +1651,20 @@
    "blank": "小时"
   }
  ],
+ "w|睡": [
+  {
+   "text": "我去睡。",
+   "en": "I'm going to sleep.",
+   "ko": "나 자러 갈게.",
+   "blank": "睡"
+  },
+  {
+   "text": "你怎么还不睡？",
+   "en": "Why aren't you asleep yet?",
+   "ko": "너는 왜 아직 안 자?",
+   "blank": "睡"
+  }
+ ],
  "w|需要": [
   {
    "text": "我需要帮忙。",
@@ -1427,6 +1707,20 @@
    "blank": "新"
   }
  ],
+ "w|甚至": [
+  {
+   "text": "甚至饭都没吃。",
+   "en": "I didn't even eat.",
+   "ko": "심지어 밥도 안 먹었어.",
+   "blank": "甚至"
+  },
+  {
+   "text": "甚至他也不信。",
+   "en": "Even he doesn't believe it.",
+   "ko": "심지어 그 사람도 안 믿어.",
+   "blank": "甚至"
+  }
+ ],
  "w|什么": [
   {
    "text": "你要什么？",
@@ -1467,6 +1761,34 @@
    "en": "Oh, it's you.",
    "ko": "아, 너였구나.",
    "blank": "哦"
+  }
+ ],
+ "w|喔": [
+  {
+   "text": "喔，原来是你。",
+   "en": "Oh, it's you.",
+   "ko": "아, 너였구나.",
+   "blank": "喔"
+  },
+  {
+   "text": "喔，我懂了。",
+   "en": "Oh, I get it.",
+   "ko": "아, 이제 알겠어.",
+   "blank": "喔"
+  }
+ ],
+ "w|安全": [
+  {
+   "text": "这儿安全吗？",
+   "en": "Is it safe here?",
+   "ko": "여기 안전해?",
+   "blank": "安全"
+  },
+  {
+   "text": "路上注意安全。",
+   "en": "Be safe on the way.",
+   "ko": "가는 길 조심해.",
+   "blank": "安全"
   }
  ],
  "w|我们": [
@@ -1581,6 +1903,34 @@
    "blank": "永远"
   }
  ],
+ "w|哇": [
+  {
+   "text": "哇，这也太好吃了。",
+   "en": "Wow, this tastes amazing.",
+   "ko": "와, 이거 너무 맛있어.",
+   "blank": "哇"
+  },
+  {
+   "text": "哇，下雪了。",
+   "en": "Wow, it's snowing.",
+   "ko": "와, 눈 온다.",
+   "blank": "哇"
+  }
+ ],
+ "w|完": [
+  {
+   "text": "还没完呢。",
+   "en": "It's not over yet.",
+   "ko": "아직 안 끝났어.",
+   "blank": "完"
+  },
+  {
+   "text": "等我说完。",
+   "en": "Let me finish.",
+   "ko": "내 말 다 하게 해 줘.",
+   "blank": "完"
+  }
+ ],
  "w|玩": [
   {
    "text": "出去玩吧。",
@@ -1679,6 +2029,20 @@
    "blank": "又"
   }
  ],
+ "w|愿意": [
+  {
+   "text": "你愿意就好。",
+   "en": "As long as you're willing.",
+   "ko": "너만 괜찮으면 돼.",
+   "blank": "愿意"
+  },
+  {
+   "text": "你愿意留下吗？",
+   "en": "Do you want to stay?",
+   "ko": "너 남을래?",
+   "blank": "愿意"
+  }
+ ],
  "w|月": [
   {
    "text": "这个月太忙了。",
@@ -1707,6 +2071,20 @@
    "blank": "有"
   }
  ],
+ "w|有些": [
+  {
+   "text": "有些话别说。",
+   "en": "Some things are better left unsaid.",
+   "ko": "어떤 말은 하지 마.",
+   "blank": "有些"
+  },
+  {
+   "text": "我有些累。",
+   "en": "I'm a bit tired.",
+   "ko": "나 좀 피곤해.",
+   "blank": "有些"
+  }
+ ],
  "w|有人": [
   {
    "text": "有人吗？",
@@ -1721,6 +2099,20 @@
    "blank": "有人"
   }
  ],
+ "w|唯一": [
+  {
+   "text": "这是唯一的办法。",
+   "en": "This is the only way.",
+   "ko": "이게 유일한 방법이야.",
+   "blank": "唯一"
+  },
+  {
+   "text": "这是唯一的机会。",
+   "en": "This is the only chance.",
+   "ko": "이게 유일한 기회야.",
+   "blank": "唯一"
+  }
+ ],
  "w|有点": [
   {
    "text": "有点累。",
@@ -1733,6 +2125,20 @@
    "en": "I'm a little cold.",
    "ko": "나 좀 추워.",
    "blank": "有点"
+  }
+ ],
+ "w|有没有": [
+  {
+   "text": "你有没有空？",
+   "en": "Are you free?",
+   "ko": "너 시간 있어?",
+   "blank": "有没有"
+  },
+  {
+   "text": "有没有人在家？",
+   "en": "Is anyone home?",
+   "ko": "집에 누구 있어?",
+   "blank": "有没有"
   }
  ],
  "w|听": [
@@ -1789,6 +2195,20 @@
    "en": "Don't use this as an excuse.",
    "ko": "이걸 핑계로 대지 마.",
    "blank": "以"
+  }
+ ],
+ "w|已": [
+  {
+   "text": "我已到了。",
+   "en": "I've arrived.",
+   "ko": "나 도착했어.",
+   "blank": "已"
+  },
+  {
+   "text": "天已黑了。",
+   "en": "It's already dark.",
+   "ko": "이미 어두워졌어.",
+   "blank": "已"
   }
  ],
  "w|而": [
@@ -1859,6 +2279,20 @@
    "en": "It's all because of you.",
    "ko": "다 너 때문이야.",
    "blank": "因为"
+  }
+ ],
+ "w|人们": [
+  {
+   "text": "人们都这么说。",
+   "en": "That's what people say.",
+   "ko": "사람들이 다 그렇게 말해.",
+   "blank": "人们"
+  },
+  {
+   "text": "人们都走了。",
+   "en": "Everyone's gone.",
+   "ko": "사람들은 다 갔어.",
+   "blank": "人们"
   }
  ],
  "w|一": [
@@ -2211,6 +2645,20 @@
    "blank": "找到"
   }
  ],
+ "w|坐": [
+  {
+   "text": "你先坐。",
+   "en": "You sit first.",
+   "ko": "너 먼저 앉아.",
+   "blank": "坐"
+  },
+  {
+   "text": "我坐地铁。",
+   "en": "I'll take the subway.",
+   "ko": "나 지하철 타고 가.",
+   "blank": "坐"
+  }
+ ],
  "w|住": [
   {
    "text": "我住这儿。",
@@ -2293,6 +2741,20 @@
    "en": "Let's start with what matters.",
    "ko": "중요한 얘기부터 하자.",
    "blank": "重要"
+  }
+ ],
+ "w|之": [
+  {
+   "text": "失败是成功之母。",
+   "en": "Failure is the mother of success.",
+   "ko": "실패는 성공의 어머니야.",
+   "blank": "之"
+  },
+  {
+   "text": "这就称之为缘分。",
+   "en": "This is what we call fate.",
+   "ko": "이게 바로 인연이야.",
+   "blank": "之"
   }
  ],
  "w|只": [
@@ -2435,6 +2897,20 @@
    "blank": "着"
   }
  ],
+ "w|站": [
+  {
+   "text": "你站这儿。",
+   "en": "Stand here.",
+   "ko": "여기 서.",
+   "blank": "站"
+  },
+  {
+   "text": "请站好。",
+   "en": "Stand properly.",
+   "ko": "똑바로 서.",
+   "blank": "站"
+  }
+ ],
  "w|天": [
   {
    "text": "天要下雨了。",
@@ -2447,6 +2923,20 @@
    "en": "What a cold day.",
    "ko": "오늘따라 춥다.",
    "blank": "天"
+  }
+ ],
+ "w|穿": [
+  {
+   "text": "这件你穿。",
+   "en": "You wear this one.",
+   "ko": "이건 네가 입어.",
+   "blank": "穿"
+  },
+  {
+   "text": "今天穿这件。",
+   "en": "Wear this today.",
+   "ko": "오늘은 이거 입어.",
+   "blank": "穿"
   }
  ],
  "w|最": [
@@ -2617,6 +3107,20 @@
    "blank": "打"
   }
  ],
+ "w|打算": [
+  {
+   "text": "你打算怎么办？",
+   "en": "What are you going to do?",
+   "ko": "너 어떻게 할 생각이야?",
+   "blank": "打算"
+  },
+  {
+   "text": "我打算早点走。",
+   "en": "I plan to leave early.",
+   "ko": "나는 일찍 갈 생각이야.",
+   "blank": "打算"
+  }
+ ],
  "w|他们": [
   {
    "text": "他们在哪儿？",
@@ -2701,6 +3205,20 @@
    "blank": "抱歉"
   }
  ],
+ "w|漂亮": [
+  {
+   "text": "你今天真漂亮。",
+   "en": "You look beautiful today.",
+   "ko": "너 오늘 정말 예뻐.",
+   "blank": "漂亮"
+  },
+  {
+   "text": "这花开得真漂亮。",
+   "en": "Look how pretty these flowers are.",
+   "ko": "이 꽃 정말 예쁘게 피었어.",
+   "blank": "漂亮"
+  }
+ ],
  "w|被": [
   {
    "text": "被他拿走了。",
@@ -2771,6 +3289,20 @@
    "blank": "确定"
   }
  ],
+ "w|下来": [
+  {
+   "text": "你先下来。",
+   "en": "Come down first.",
+   "ko": "일단 내려와.",
+   "blank": "下来"
+  },
+  {
+   "text": "下来吃饭。",
+   "en": "Come down and eat.",
+   "ko": "내려와서 밥 먹어.",
+   "blank": "下来"
+  }
+ ],
  "w|孩子": [
   {
    "text": "孩子睡了。",
@@ -2783,6 +3315,20 @@
    "en": "And your kid?",
    "ko": "너희 아이는?",
    "blank": "孩子"
+  }
+ ],
+ "w|害怕": [
+  {
+   "text": "别害怕，我在。",
+   "en": "Don't be scared, I'm here.",
+   "ko": "무서워하지 마, 내가 있잖아.",
+   "blank": "害怕"
+  },
+  {
+   "text": "我有点儿害怕。",
+   "en": "I'm a little scared.",
+   "ko": "나 좀 무서워.",
+   "blank": "害怕"
   }
  ],
  "w|行": [
@@ -2811,6 +3357,20 @@
    "en": "Go and thank him.",
    "ko": "그 사람한테 고맙다고 해.",
    "blank": "向"
+  }
+ ],
+ "w|兄弟": [
+  {
+   "text": "我们是兄弟。",
+   "en": "We're brothers.",
+   "ko": "우리는 형제야.",
+   "blank": "兄弟"
+  },
+  {
+   "text": "兄弟，帮帮我。",
+   "en": "Bro, help me out.",
+   "ko": "형제, 나 좀 도와줘.",
+   "blank": "兄弟"
   }
  ],
  "w|好": [
@@ -2895,6 +3455,20 @@
    "en": "Who are you with?",
    "ko": "누구랑이야?",
    "blank": "和"
+  }
+ ],
+ "w|回": [
+  {
+   "text": "你什么时候回？",
+   "en": "When are you coming back?",
+   "ko": "너 언제 돌아와?",
+   "blank": "回"
+  },
+  {
+   "text": "记得回我。",
+   "en": "Remember to reply.",
+   "ko": "답장 잊지 마.",
+   "blank": "回"
   }
  ],
  "w|回家": [
@@ -3261,6 +3835,20 @@
    "blank": "儿子"
   }
  ],
+ "w|关于": [
+  {
+   "text": "关于明天，你定吧。",
+   "en": "You decide about tomorrow.",
+   "ko": "내일 일은 네가 정해.",
+   "blank": "关于"
+  },
+  {
+   "text": "关于他，别问我。",
+   "en": "Don't ask me about him.",
+   "ko": "그 사람 얘기는 나한테 묻지 마.",
+   "blank": "关于"
+  }
+ ],
  "w|写": [
   {
    "text": "我来写。",
@@ -3287,6 +3875,20 @@
    "en": "I have decided to stay.",
    "ko": "나는 남기로 했어.",
    "blank": "决定"
+  }
+ ],
+ "w|刚才": [
+  {
+   "text": "你刚才去哪儿了？",
+   "en": "Where did you just go?",
+   "ko": "너 방금 어디 갔다 왔어?",
+   "blank": "刚才"
+  },
+  {
+   "text": "刚才谁打电话？",
+   "en": "Who called just now?",
+   "ko": "방금 누가 전화했어?",
+   "blank": "刚才"
   }
  ],
  "w|别": [
@@ -3413,6 +4015,20 @@
    "en": "You say it.",
    "ko": "네가 말해 봐.",
    "blank": "吧"
+  }
+ ],
+ "w|呃": [
+  {
+   "text": "呃，我不确定。",
+   "en": "Uh, I'm not sure.",
+   "ko": "어, 잘 모르겠어.",
+   "blank": "呃"
+  },
+  {
+   "text": "呃，让我想想。",
+   "en": "Uh, let me think.",
+   "ko": "어, 생각 좀 해볼게.",
+   "blank": "呃"
   }
  ],
  "w|哪": [
@@ -3625,6 +4241,20 @@
    "blank": "它们"
   }
  ],
+ "w|宝贝": [
+  {
+   "text": "宝贝，该睡了。",
+   "en": "Sweetie, time for bed.",
+   "ko": "아가, 잘 시간이야.",
+   "blank": "宝贝"
+  },
+  {
+   "text": "这可是宝贝，别摔。",
+   "en": "This is precious, don't drop it.",
+   "ko": "이거 귀한 거니까 떨어뜨리지 마.",
+   "blank": "宝贝"
+  }
+ ],
  "w|对": [
   {
    "text": "你说得对。",
@@ -3665,6 +4295,20 @@
    "en": "It's about to get light.",
    "ko": "곧 밝아지겠네.",
    "blank": "将"
+  }
+ ],
+ "w|岁": [
+  {
+   "text": "你几岁了？",
+   "en": "How old are you?",
+   "ko": "너 몇 살이야?",
+   "blank": "岁"
+  },
+  {
+   "text": "孩子两岁了。",
+   "en": "The kid is two.",
+   "ko": "아이가 두 살이야.",
+   "blank": "岁"
   }
  ],
  "w|带": [
@@ -3793,6 +4437,20 @@
    "blank": "当然"
   }
  ],
+ "w|当时": [
+  {
+   "text": "当时我没在。",
+   "en": "I wasn't there then.",
+   "ko": "그때 나는 없었어.",
+   "blank": "当时"
+  },
+  {
+   "text": "你当时怎么不说？",
+   "en": "Why didn't you say so then?",
+   "ko": "너는 그때 왜 말 안 했어?",
+   "blank": "当时"
+  }
+ ],
  "w|怎么": [
   {
    "text": "你怎么了？",
@@ -3861,6 +4519,34 @@
    "en": "Take care on your way.",
    "ko": "조심히 가세요.",
    "blank": "您"
+  }
+ ],
+ "w|懂": [
+  {
+   "text": "我懂你的意思。",
+   "en": "I know what you mean.",
+   "ko": "네 말뜻 알겠어.",
+   "blank": "懂"
+  },
+  {
+   "text": "你懂我意思吧。",
+   "en": "You know what I mean, right?",
+   "ko": "내 말 알지?",
+   "blank": "懂"
+  }
+ ],
+ "w|搞": [
+  {
+   "text": "你在搞什么？",
+   "en": "What are you up to?",
+   "ko": "뭐 하고 있는 거야?",
+   "blank": "搞"
+  },
+  {
+   "text": "搞什么名堂？",
+   "en": "What are you playing at?",
+   "ko": "무슨 수작이야?",
+   "blank": "搞"
   }
  ],
  "w|时": [
@@ -3947,6 +4633,34 @@
    "blank": "来"
   }
  ],
+ "w|来说": [
+  {
+   "text": "对我来说太难了。",
+   "en": "It's too hard for me.",
+   "ko": "나한테는 너무 어려워.",
+   "blank": "来说"
+  },
+  {
+   "text": "对他来说都一样。",
+   "en": "It's all the same to him.",
+   "ko": "그 사람한테는 다 똑같아.",
+   "blank": "来说"
+  }
+ ],
+ "w|枪": [
+  {
+   "text": "把枪放下。",
+   "en": "Put the gun down.",
+   "ko": "총 내려놔.",
+   "blank": "枪"
+  },
+  {
+   "text": "枪里没有子弹。",
+   "en": "The gun isn't loaded.",
+   "ko": "총에 총알이 없어.",
+   "blank": "枪"
+  }
+ ],
  "w|没": [
   {
    "text": "他没来。",
@@ -4003,6 +4717,20 @@
    "blank": "没错"
   }
  ],
+ "w|清楚": [
+  {
+   "text": "清楚了吗？",
+   "en": "Is that clear?",
+   "ko": "알겠어?",
+   "blank": "清楚"
+  },
+  {
+   "text": "我听清楚了。",
+   "en": "I heard you clearly.",
+   "ko": "분명히 들었어.",
+   "blank": "清楚"
+  }
+ ],
  "w|爱": [
   {
    "text": "爱吃辣吗？",
@@ -4045,6 +4773,20 @@
    "blank": "电话"
   }
  ],
+ "w|疯": [
+  {
+   "text": "你别疯。",
+   "en": "Don't be crazy.",
+   "ko": "미친 짓 하지 마.",
+   "blank": "疯"
+  },
+  {
+   "text": "他真疯。",
+   "en": "He's really crazy.",
+   "ko": "그 사람 진짜 미쳤어.",
+   "blank": "疯"
+  }
+ ],
  "w|真": [
   {
    "text": "真好吃。",
@@ -4085,6 +4827,20 @@
    "en": "I mean it.",
    "ko": "나 진심이야.",
    "blank": "真的"
+  }
+ ],
+ "w|真正": [
+  {
+   "text": "你真正想要什么？",
+   "en": "What do you really want?",
+   "ko": "네가 진짜 원하는 게 뭐야?",
+   "blank": "真正"
+  },
+  {
+   "text": "这才是真正的原因。",
+   "en": "This is the real reason.",
+   "ko": "이게 진짜 이유야.",
+   "blank": "真正"
   }
  ],
  "w|结束": [
@@ -4169,6 +4925,20 @@
    "en": "What do you think?",
    "ko": "너는 어때?",
    "blank": "觉得"
+  }
+ ],
+ "w|计划": [
+  {
+   "text": "计划变了。",
+   "en": "The plan changed.",
+   "ko": "계획이 바뀌었어.",
+   "blank": "计划"
+  },
+  {
+   "text": "你有计划吗？",
+   "en": "Do you have a plan?",
+   "ko": "계획 있어?",
+   "blank": "计划"
   }
  ],
  "w|认为": [
@@ -4339,6 +5109,20 @@
    "blank": "跑"
   }
  ],
+ "w|车": [
+  {
+   "text": "车来了，快走。",
+   "en": "The bus is here, hurry.",
+   "ko": "차 왔다, 빨리 가.",
+   "blank": "车"
+  },
+  {
+   "text": "我的车在楼下。",
+   "en": "My car is downstairs.",
+   "ko": "내 차는 아래층에 있어.",
+   "blank": "车"
+  }
+ ],
  "w|过": [
   {
    "text": "吃过了。",
@@ -4479,6 +5263,20 @@
    "blank": "这些"
   }
  ],
+ "w|这次": [
+  {
+   "text": "这次算我的。",
+   "en": "This one's on me.",
+   "ko": "이번은 내가 낼게.",
+   "blank": "这次"
+  },
+  {
+   "text": "这次你别去了。",
+   "en": "Don't go this time.",
+   "ko": "이번엔 가지 마.",
+   "blank": "这次"
+  }
+ ],
  "w|这个": [
   {
    "text": "我要这个。",
@@ -4549,6 +5347,34 @@
    "blank": "这种"
   }
  ],
+ "w|进去": [
+  {
+   "text": "我们进去看看。",
+   "en": "Let's go in and look.",
+   "ko": "우리 들어가서 보자.",
+   "blank": "进去"
+  },
+  {
+   "text": "我进去了。",
+   "en": "I went in.",
+   "ko": "나 들어갔어.",
+   "blank": "进去"
+  }
+ ],
+ "w|进来": [
+  {
+   "text": "进来坐。",
+   "en": "Come in and sit.",
+   "ko": "들어와서 앉아.",
+   "blank": "进来"
+  },
+  {
+   "text": "你进来吧。",
+   "en": "Come on in.",
+   "ko": "들어와.",
+   "blank": "进来"
+  }
+ ],
  "w|钱": [
   {
    "text": "钱够吗？",
@@ -4575,6 +5401,20 @@
    "en": "You are wrong.",
    "ko": "네가 틀렸어.",
    "blank": "错"
+  }
+ ],
+ "w|长官": [
+  {
+   "text": "是，长官。",
+   "en": "Yes, sir.",
+   "ko": "네, 상관님.",
+   "blank": "长官"
+  },
+  {
+   "text": "长官，我们准备好了。",
+   "en": "Sir, we're ready.",
+   "ko": "상관님, 우리 준비됐어.",
+   "blank": "长官"
   }
  ],
  "w|问": [

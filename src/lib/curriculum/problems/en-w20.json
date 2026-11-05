@@ -60,7 +60,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "매일의",
     "answer": "daily",
-    "line": "She writes in her diary on a daily basis."
+    "line": "She writes in her diary on a daily basis.",
+    "hint": "d"
   },
   "w|basement": {
     "kind": "word",
@@ -177,7 +178,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "소파",
     "answer": "couch",
-    "line": "She fell asleep on the couch."
+    "line": "She fell asleep on the couch.",
+    "hint": "c"
   },
   "w|script": {
     "kind": "word",
@@ -211,7 +213,7 @@
     "type": "type",
     "name": "associate",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "동료",
+    "gloss": "소속 변호사",
     "answer": "associate",
     "line": "He is an associate at the law firm.",
     "hint": "a",
@@ -285,7 +287,7 @@
     "type": "type",
     "name": "closet",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "옷장",
+    "gloss": "벽장",
     "answer": "closet",
     "line": "I keep my shoes in the closet."
   },
@@ -341,7 +343,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "품행",
     "answer": "conduct",
-    "line": "His conduct in class was always polite."
+    "line": "His conduct in class was always polite.",
+    "hint": "c",
+    "mark": "한 단어"
   },
   "w|repair": {
     "kind": "word",
@@ -519,9 +523,11 @@
     "type": "type",
     "name": "particularly",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "특별히",
+    "gloss": "특히",
     "answer": "particularly",
-    "line": "I'm not particularly interested in sports."
+    "line": "I'm not particularly interested in sports.",
+    "hint": "p",
+    "mark": "한 단어"
   },
   "w|ad": {
     "kind": "word",
@@ -530,7 +536,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "광고",
     "answer": "ad",
-    "line": "I saw an ad for a new phone online."
+    "line": "I saw an ad for a new phone online.",
+    "hint": "a",
+    "mark": "한 단어"
   },
   "w|passport": {
     "kind": "word",
@@ -656,7 +664,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "비참한",
     "answer": "miserable",
-    "line": "He felt miserable after losing his wallet."
+    "line": "He felt miserable after losing his wallet.",
+    "hint": "m"
   },
   "w|tuesday": {
     "kind": "word",
@@ -780,7 +789,7 @@
     "type": "type",
     "name": "cage",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "우리",
+    "gloss": "우리(동물)",
     "answer": "cage",
     "line": "The bird sang inside its cage.",
     "hint": "c",
@@ -820,7 +829,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "지독하게",
     "answer": "terribly",
-    "line": "The weather was terribly cold last night."
+    "line": "The weather was terribly cold last night.",
+    "hint": "t"
   },
   "w|sec": {
     "kind": "word",
@@ -971,7 +981,7 @@
     "type": "type",
     "name": "delay",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "미루다",
+    "gloss": "늦추다",
     "answer": "delay",
     "line": "Please don't delay your decision any longer."
   },
@@ -982,7 +992,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "구체적인",
     "answer": "specific",
-    "line": "Can you be more specific about your request?"
+    "line": "Can you be more specific about your request?",
+    "hint": "s",
+    "mark": "한 단어"
   },
   "w|plastic": {
     "kind": "word",
@@ -1081,6 +1093,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "추천하다",
     "answer": "recommend",
-    "line": "I recommend this restaurant to everyone."
+    "line": "I recommend this restaurant to everyone.",
+    "hint": "r",
+    "mark": "한 단어"
   }
 }

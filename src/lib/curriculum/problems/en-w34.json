@@ -13,7 +13,7 @@
     "type": "type",
     "name": "administrator",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "관리자",
+    "gloss": "시스템 관리자",
     "answer": "administrator",
     "line": "The system administrator fixed the issue.",
     "hint": "a",
@@ -62,7 +62,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "평가하다",
     "answer": "assess",
-    "line": "The teacher will assess your work."
+    "line": "The teacher will assess your work.",
+    "hint": "a"
   },
   "w|assumption": {
     "kind": "word",
@@ -134,7 +135,7 @@
     "type": "type",
     "name": "butler",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "집사",
+    "gloss": "집사(저택)",
     "answer": "butler",
     "line": "The butler will bring you some tea."
   },
@@ -179,7 +180,7 @@
     "type": "type",
     "name": "confirmation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "확인",
+    "gloss": "확정",
     "answer": "confirmation",
     "line": "I received a confirmation email for my order."
   },
@@ -399,9 +400,11 @@
     "type": "type",
     "name": "genuinely",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "진심으로",
+    "gloss": "정말로",
     "answer": "genuinely",
-    "line": "She seems genuinely happy to see you."
+    "line": "She seems genuinely happy to see you.",
+    "hint": "g",
+    "mark": "한 단어"
   },
   "w|glorious": {
     "kind": "word",
@@ -570,7 +573,7 @@
     "type": "type",
     "name": "layout",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "배치",
+    "gloss": "배치(구조)",
     "answer": "layout",
     "line": "The layout of this room makes it feel bigger."
   },
@@ -687,7 +690,7 @@
     "type": "type",
     "name": "obligation",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "의무",
+    "gloss": "책무",
     "answer": "obligation",
     "line": "I have an obligation to help my family.",
     "hint": "o",
@@ -927,7 +930,7 @@
     "type": "type",
     "name": "setup",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "설치",
+    "gloss": "초기 설정",
     "answer": "setup",
     "line": "The computer setup was quick and easy.",
     "hint": "s",
@@ -994,7 +997,7 @@
     "type": "type",
     "name": "technological",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "기술적인",
+    "gloss": "과학기술적인",
     "answer": "technological",
     "line": "We live in a technological age.",
     "hint": "t",

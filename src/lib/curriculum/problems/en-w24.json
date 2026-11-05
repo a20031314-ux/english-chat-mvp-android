@@ -177,7 +177,7 @@
     "type": "type",
     "name": "convict",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "죄수",
+    "gloss": "죄수(유죄)",
     "answer": "convict",
     "line": "The convict served ten years in prison.",
     "hint": "c",
@@ -233,7 +233,7 @@
     "type": "type",
     "name": "discussion",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "토론",
+    "gloss": "논의",
     "answer": "discussion",
     "line": "We had a long discussion about the project."
   },
@@ -318,7 +318,7 @@
     "type": "type",
     "name": "feature",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "기능",
+    "gloss": "특징",
     "answer": "feature",
     "line": "The new phone has a cool camera feature.",
     "hint": "f",
@@ -374,7 +374,7 @@
     "type": "type",
     "name": "grief",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "슬픔",
+    "gloss": "비통",
     "answer": "grief",
     "line": "She was overcome with grief after the loss."
   },
@@ -383,7 +383,7 @@
     "type": "type",
     "name": "guardian",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "보호자",
+    "gloss": "법적 보호자",
     "answer": "guardian",
     "line": "Her uncle is her legal guardian."
   },
@@ -403,7 +403,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "고속도로",
     "answer": "highway",
-    "line": "We took the highway to the next city."
+    "line": "We took the highway to the next city.",
+    "hint": "h",
+    "mark": "한 단어"
   },
   "w|hop": {
     "kind": "word",
@@ -556,7 +558,7 @@
     "type": "type",
     "name": "liquor",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "술",
+    "gloss": "독주",
     "answer": "liquor",
     "line": "He doesn't drink any liquor at parties."
   },
@@ -574,7 +576,7 @@
     "type": "type",
     "name": "loyalty",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "충성",
+    "gloss": "의리",
     "answer": "loyalty",
     "line": "She showed great loyalty to her friends."
   },
@@ -839,7 +841,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "목사",
     "answer": "reverend",
-    "line": "The reverend gave a touching speech at the wedding."
+    "line": "The reverend gave a touching speech at the wedding.",
+    "hint": "r"
   },
   "w|reverse": {
     "kind": "word",
@@ -913,7 +916,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "부드럽게",
     "answer": "softly",
-    "line": "She spoke softly so she wouldn't wake the baby."
+    "line": "She spoke softly so she wouldn't wake the baby.",
+    "hint": "s"
   },
   "w|southern": {
     "kind": "word",
@@ -1095,7 +1099,7 @@
     "type": "type",
     "name": "worthy",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "자격이 있는",
+    "gloss": "그럴 만한",
     "answer": "worthy",
     "line": "Your idea is worthy of attention."
   }

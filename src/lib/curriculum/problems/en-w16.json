@@ -78,14 +78,15 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "몹시",
     "answer": "badly",
-    "line": "He wanted to win the game badly."
+    "line": "He wanted to win the game badly.",
+    "hint": "b"
   },
   "w|television": {
     "kind": "word",
     "type": "type",
     "name": "television",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "텔레비전",
+    "gloss": "텔레비전(격식)",
     "answer": "television",
     "line": "I watch the news on television every night.",
     "hint": "t",
@@ -348,7 +349,7 @@
     "type": "type",
     "name": "courage",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "용기",
+    "gloss": "용기(용감)",
     "answer": "courage",
     "line": "She showed great courage."
   },
@@ -393,7 +394,7 @@
     "type": "type",
     "name": "photograph",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "사진",
+    "gloss": "사진(격식)",
     "answer": "photograph",
     "line": "She took a beautiful photograph.",
     "hint": "p",
@@ -575,7 +576,7 @@
     "type": "type",
     "name": "aside",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "옆으로",
+    "gloss": "한쪽으로",
     "answer": "aside",
     "line": "He stepped aside to let her pass."
   },
@@ -665,7 +666,7 @@
     "type": "type",
     "name": "grandmother",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "할머니",
+    "gloss": "할머니(격식)",
     "answer": "grandmother",
     "line": "My grandmother bakes the best cookies.",
     "hint": "g",
@@ -721,7 +722,7 @@
     "type": "type",
     "name": "reward",
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
-    "gloss": "보상",
+    "gloss": "보상(상)",
     "answer": "reward",
     "line": "She got a reward for her honesty."
   },
@@ -795,7 +796,8 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "택시",
     "answer": "taxi",
-    "line": "We need to call a taxi to get home."
+    "line": "We need to call a taxi to get home.",
+    "hint": "t"
   },
   "w|surround": {
     "kind": "word",
@@ -977,7 +979,9 @@
     "ask": "뜻을 보고 영어 단어를 쓰세요.",
     "gloss": "고마운",
     "answer": "grateful",
-    "line": "I am very grateful for your help."
+    "line": "I am very grateful for your help.",
+    "hint": "g",
+    "mark": "한 단어"
   },
   "w|route": {
     "kind": "word",
