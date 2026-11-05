@@ -162,10 +162,11 @@ async function pastCall(learn, prefix, said) {
       said, memory: { text: "", upTo: 0 },
     }]));
   }, [said, learn, now]);
-  await page.goto(`http://localhost:${PORT}/?screen=chat`, { waitUntil: "domcontentloaded" });
+  await page.goto(`http://localhost:${PORT}/?screen=people`, { waitUntil: "domcontentloaded" });
   await wait(page, 3500);
   const copy = JSON.parse(fs.readFileSync(path.join(ROOT, "tmp", "store-layers", "copy.json"), "utf8"))[ui];
-  await page.getByRole("button", { name: copy.sessionMenu, exact: true }).first().click();
+  await page.getByRole("button", { name: copy.talkAiTutor, exact: true }).first().click();
+  await wait(page, 800);
   await page.getByRole("button", { name: copy.callRecordsTitle, exact: true }).first().click();
   await wait(page, 800);
   await page.getByRole("button", { name: copy.packSeeRetro, exact: true }).first().click();

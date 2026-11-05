@@ -33,8 +33,7 @@ import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { AccountCard } from "@/components/account/AccountCard";
 import { isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures } from "@/lib/features";
 import { readEntryDoor } from "@/lib/doors";
-import { CHECK_PRIOR, type Check } from "@/lib/curriculum/fill";
-import { readFillCheck, saveFillCheck } from "@/lib/curriculum/fillCheck";
+import { saveFillCheck } from "@/lib/curriculum/fillCheck";
 
 /**
  * 커리큘럼만(2026-10-28 사용자 "커리큘럼이랑 동떨어져 있는 이전 기능은 다 숨겨줘"): 시작은 대화 예시로 단계만 고르고(체크 3질문·지도 그리기 없음,
@@ -581,7 +580,6 @@ function StageStart({
 }) {
   const [stage, setStage] = useState<string | null>(startStage);
   const [firstPick, setFirstPick] = useState(false);
-  const [levelPick, setLevelPick] = useState<Check | null>(() => readFillCheck(targetLanguage));
   const [saving, setSaving] = useState(false);
   const [failed, setFailed] = useState(false);
   // 처음 시험(실력 확인, lib/curriculum/placement.ts)으로 정할지, 대화 예시로 고를지 — 처음엔 둘 중 고르게(2026-10-29 사용자).
@@ -651,33 +649,6 @@ function StageStart({
           }}
           onClose={() => setMode(startStage ? "pick" : "choose")}
         />
-      ) : null}
-      {/* 처음 체크(2026-11-02, Logbank 육각형 시작 어림 — curriculum/fill.ts): 누르면 그 단계가 골라지고, 시작은 아래 버튼. */}
-      {mode === "pick" ? (
-        <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-label={ui.mapLevelLabel} data-fill-check>
-          {(["beginner", "mid", "advanced"] as const).map((level) => {
-            const on = levelPick === level;
-            return (
-              <button
-                key={level}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                disabled={saving}
-                data-fill-level={level}
-                onClick={() => {
-                  setLevelPick(level);
-                  saveFillCheck(targetLanguage, level);
-                  setFirstPick(true);
-                  setStage(idOf(CHECK_PRIOR[level].stage));
-                }}
-                className={`rounded-xl border px-2 py-2.5 text-note ${on ? "border-platinum bg-platinum text-canvas font-semibold" : "border-line text-slate-200 hover:bg-white/5"}`}
-              >
-                {level === "beginner" ? ui.mapLevelBeginner : level === "mid" ? ui.mapLevelIntermediate : ui.mapLevelAdvanced}
-              </button>
-            );
-          })}
-        </div>
       ) : null}
       {/* Stage 0 — letters and sounds (2026-10-29), only where the learning language uses another script. */}
       {needsLetters(targetLanguage) ? (

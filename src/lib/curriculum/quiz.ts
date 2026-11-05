@@ -62,8 +62,6 @@ export type QuizQuestion =
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
    */
   | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean }
-  /** 대화에서 틀린 줄(2026-10-30): 짧은 대화 몇 줄 중 한 줄만 틀림 — 그 줄을 고른 뒤 틀린 곳을 고친다. */
-  | { kind: "dialog"; lines: { who: "me" | "them"; text: string; gloss: ScriptGloss }[]; at: number; spot: SpotQuestion; from: string }
   /**
    * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
@@ -685,16 +683,53 @@ function typoOk(a: string, b: string, language?: string): boolean {
 }
 
 /** 일본어 활용 조각(さ·れ·ま·した)은 한 조각으로 — 낱말 자르기가 동사 꼬리를 잘게 나눠 순서 문제가 이상해진다. */
-const JA_TAIL = /^(?:[ぁ-ゖ]|した|します|ました|ません|ます|です|でした|たい|ない|なかった|れる|られ|れ|て|た|だ|って|った|ている|ています|ていました|てる|ちゃ|じゃ|います|いました|いる)$/u;
+const JA_TAIL = /^(?:[ぁ-ゖ]|した|します|ました|ません|ます|です|でした|たい|ない|なかった|れる|られ|れ|て|た|だ|って|った|ている|てい|ています|ていました|てる|ちゃ|じゃ|います|いました|いる|せん)$/u;
 const JA_PARTICLE = new Set(["は", "が", "を", "に", "で", "へ", "と", "も", "の", "か", "ね", "よ", "や"]);
+const JA_HAN = /[一-鿿々]/u;
+const JA_KATA = /^[ァ-ヺー]+$/u;
+const JA_NUM = /^[〇一二三四五六七八九十百千万]+$/u;
+/**
+ * 한 글자로 잘린 뒤가 접미사라면 앞 한자 낱말에 붙인다(担当+者, 番号+札, 十一+時).
+ * 한 글자 한자가 앞쪽이면 접미사가 아니어도 붙인다(会+社員, 試+着) — 조사 없이 한자가 이어지면 한 낱말의 앞부분이다.
+ */
+const JA_SUFFIX = new Set("者場部口時中様語員日人分目的屋店室代券費料製化性感所側内外上下後前用力庁係行機器品士師札家案制回主会".split(""));
+
+/** ICU가 한자 낱말을 중간에서 자른 것을 순서 조각으로 쓰기 전에 붙인다. 조사(は·を)나 한 글자 동사(映画+見)는 그대로 둔다. */
+function joinJaCompounds(words: string[]): string[] {
+  const out: string[] = [];
+  for (const word of words) {
+    const prev = out[out.length - 1];
+    if (prev && (prev === "お" || prev === "ご") && JA_HAN.test(word.charAt(0))) {
+      out[out.length - 1] = prev + word;
+      continue;
+    }
+    const prevHan = Boolean(prev && JA_HAN.test(prev.slice(-1)));
+    if (prev && prevHan && JA_HAN.test(word.charAt(0)) && (prev.length === 1 || (word.length === 1 && JA_SUFFIX.has(word)))) {
+      out[out.length - 1] = prev + word;
+      continue;
+    }
+    if (prev && prev.length === 1 && prevHan && /^[ぁ-ゖ]/.test(word) && !JA_PARTICLE.has(word)) {
+      out[out.length - 1] = prev + word;
+      continue;
+    }
+    // 숫자(五〇三)와 한 글자로 갈라진 가타카나(パク).
+    if (prev && ((JA_NUM.test(prev) && JA_NUM.test(word.charAt(0))) || (JA_KATA.test(prev) && JA_KATA.test(word) && (prev.length === 1 || word.length === 1)))) {
+      out[out.length - 1] = prev + word;
+      continue;
+    }
+    out.push(word);
+  }
+  return out;
+}
 
 export function tilesOf(text: string, language: string): string[] {
   const words = segmentWords(text, language);
   if (language !== "ja") return words;
   const out: string[] = [];
-  for (const word of words) {
+  for (const word of joinJaCompounds(words)) {
     const prev = out[out.length - 1];
-    if (prev && JA_TAIL.test(word) && !JA_PARTICLE.has(word) && (JA_TAIL.test(prev) || /[ぁ-ゖ]$/u.test(prev) || /[一-鿿]$/u.test(prev))) {
+    // 조사 뒤에 붙은 한 글자(へ+お)는 활용이 아니다.
+    if (prev && JA_TAIL.test(word) && !JA_PARTICLE.has(word) && !JA_PARTICLE.has(prev) && (JA_TAIL.test(prev) || /[ぁ-ゖ]$/u.test(prev) || JA_HAN.test(prev.slice(-1)))) {
       out[out.length - 1] = prev + word;
     } else out.push(word);
   }
@@ -829,37 +864,6 @@ export function spotFromCard(language: string, card: QuizCard): SpotQuestion | n
   return { kind: "spot", text: card.wrong, right: card.right, words: span.words, bad: span.bad, want: span.want, ...(card.note ? { note: card.note } : {}), from: "card", mine: true };
 }
 
-/**
- * 대화에서 틀린 줄(2026-10-30): 지금 단계까지의 대본에서 네다섯 줄을 잘라, 문장구조 조각이 든 줄 하나만 확실히 틀린 꼴로 바꾼다.
- * 돌려주는 key = 바꾼 줄의 문장구조(f|) — 결과는 그 열쇠에 남는다.
- */
-export function dialogOf(language: string, stage: number, seed: string): { question: QuizQuestion; key: string } | null {
-  const random = rng(`${seed}|dialog`);
-  const top = Math.max(1, stage);
-  const scripts = shuffled(allScriptsFor(language).filter((script) => script.stage >= 1 && script.stage <= top && script.lines.length >= 4), random);
-  for (const script of scripts.slice(0, 30)) {
-    const size = Math.min(script.lines.length, 4 + Math.floor(random() * 2));
-    const start = Math.floor(random() * (script.lines.length - size + 1));
-    const window = script.lines.slice(start, start + size);
-    const order = shuffled(window.map((_, i) => i), random);
-    for (const i of order) {
-      const line = window[i]!;
-      for (const frameId of line.frames ?? []) {
-        const frame = frameOf(language, frameId);
-        const piece = frame?.core.find((core) => core && line.text.includes(core));
-        if (!frame || !piece) continue;
-        const spot = spotOf(language, `f|${frameId}`, { text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece }, random);
-        if (!spot) continue;
-        return {
-          key: `f|${frameId}`,
-          question: { kind: "dialog", lines: window.map((one, k) => ({ who: one.who, text: k === i ? spot.text : one.text, gloss: one.gloss })), at: i, spot, from: script.id },
-        };
-      }
-    }
-  }
-  return null;
-}
-
 /** 고친 말이 맞는지(틀린 곳 고치기) — 빈칸 쓰기와 같은 채점, 틀린 꼴 그대로 다시 친 것은 틀림. */
 export function fixedRight(question: SpotQuestion, typed: string, language: string): "exact" | "loose" | false {
   const wrongPart = question.bad.map((i) => question.words[i]).join(isSpaceless(question.text) ? "" : " ");
@@ -888,11 +892,11 @@ export function speakScored(key: string): boolean {
  */
 export function wordQuiz(language: string, key: string, seed = ""): Quiz | null {
   // 단어 퀴즈 = 예문 빈칸 하나(2026-10-30 사용자 "단어 퀴즈는 단순하게 맞추기 > 예문 형태로, 발음·듣기 문제는 삭제").
-  // 같은 낱말을 모양만 바꿔 세 번 묻지 않는다 — 낱말 여럿은 짝 맞추기(WordMatch) 뒤 묶음으로 한 문제씩.
+  // 같은 낱말을 모양만 바꿔 세 번 묻지 않는다 — 낱말 여럿은 묶음으로 한 문제씩.
   const source = shownLast(language, key, quizSources(language, key))[0];
   if (!source?.piece || !source.text.includes(source.piece)) return null;
   const random = rng(`${key}|${seed}|word`);
-  // 단어는 뜻 맞추기(짝 — WordMatch)·빈칸만(사용자 2026-10-30 "단어는 그냥 뜻맞추기, 빈칸채우기로 제한") — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
+  // 단어는 빈칸만(사용자 2026-10-30, 짝 맞추기는 2026-11-03에 뺌) — 빈칸을 못 만들면 순서 맞추기로 넘기지 않는다.
   // 빈칸 쓰기를 먼저(2026-10-30 사용자 "타이핑 문제를 대거") — 보기로 고르기는 다음 문장에서.
   const typed = typeOf(language, source, key);
   const question = chooseOf(language, key, source, random);
@@ -925,7 +929,7 @@ export function bundleQuiz(
     fallback?: QuizStyle;
     /**
      * 틀린 곳 찾아 고치기를 섞는다(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식 · 대화 속 틀린 문장 고르기"):
-     * cards = 열쇠마다 튜터가 고친 내 줄(내 실수 먼저), dialog = 대화에서 틀린 줄 하나도.
+     * cards = 열쇠마다 튜터가 고친 내 줄(내 실수 먼저). 대화에서 틀린 줄은 문법 탭과 함께 뺌(2026-11-03).
      */
     spots?: SpotMix;
   } = {},
@@ -960,9 +964,9 @@ export function bundleQuiz(
 }
 
 /** anyCard: 묶음 열쇠 밖의 고친 줄도(틀린 것 탭 — 내 실수가 먼저). */
-export type SpotMix = { cards?: ReadonlyMap<string, QuizCard>; anyCard?: boolean; dialog?: boolean };
+export type SpotMix = { cards?: ReadonlyMap<string, QuizCard>; anyCard?: boolean };
 
-/** 묶음에 틀린 곳 고치기 하나(+ 대화 속 틀린 줄 하나)를 끼운다 — 내 실수 줄 먼저, 없으면 문장구조 예문, 넷에 하나는 틀린 곳 없는 문장. */
+/** 묶음에 틀린 곳 고치기 하나를 끼운다 — 내 실수 줄 먼저, 없으면 문장구조 예문, 넷에 하나는 틀린 곳 없는 문장. */
 function addSpots(
   language: string,
   keys: readonly string[],
@@ -1007,13 +1011,6 @@ function addSpots(
     questions.splice(at, 0, spot.question);
     out.splice(at, 0, spot.key);
   }
-  if (options.spots?.dialog) {
-    const dialog = dialogOf(language, options.stage ?? 1, `${options.seed ?? ""}|${keys[0] ?? ""}`);
-    if (dialog) {
-      questions.push(dialog.question);
-      out.push(dialog.key);
-    }
-  }
 }
 
 export function buildQuiz(
@@ -1046,7 +1043,7 @@ export function buildQuiz(
     if (word && only.length) return { key, questions: only };
     // 모양을 골랐는데 그 모양을 못 만들면 내지 않는다(부르는 쪽이 다른 열쇠로).
     if (options.kinds?.length) return null;
-    // 단어는 빈칸(여기)·뜻 맞추기(WordMatch)만 — 빈칸을 못 만들면 순서·말하기·뜻 고르기로 넘어가지 않는다(사용자 2026-10-30).
+    // 단어는 빈칸만 — 빈칸을 못 만들면 순서·말하기·뜻 고르기로 넘어가지 않는다(사용자 2026-10-30, 짝 맞추기는 2026-11-03에 뺌).
     return word;
   }
   // 조합(말하기·읽기)이 정한 모양, "알아서"면 항목에 맞는 모양(curriculum/learnStyle.ts — 부르는 쪽이 kinds로).

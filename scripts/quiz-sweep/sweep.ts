@@ -1,20 +1,19 @@
 /**
  * 퀴즈 전수 점검(2026-11-01 사용자 "퀴즈 탭은 196명을 돌려서 모두 점검하는 건 무리인가?" → "일단 만들어줘").
  *
- * 화면을 누르는 가상 사용자 대신, 앱이 쓰는 같은 코드(curriculum/quiz.ts buildQuiz·bundleQuiz, nextStudy)로 문제를 대량으로 만들어
+ * 화면을 누르는 가상 사용자 대신, 앱이 쓰는 같은 코드(curriculum/quiz.ts buildQuiz·bundleQuiz)로 문제를 대량으로 만들어
  * 학습 언어 14 × 앱 언어 14 = 196 조합 × 단계 1~5를 모두 규칙으로 검사한다. 모델을 부르지 않는다.
  *
- *   node --experimental-strip-types scripts/quiz-sweep/sweep.ts [--langs=ja,en] [--stages=1-5] [--net] [--days=7] [--judge=30]
+ *   node --experimental-strip-types scripts/quiz-sweep/sweep.ts [--langs=ja,en] [--stages=1-5] [--net] [--judge=30]
  *   → tmp/quiz-sweep/<날>/marks.jsonl(화면 점검 /mark와 같은 모양) · stats.json · judge/<언어>.jsonl(판정 표본)
  *   → 보고서: node scripts/quiz-sweep/report.mjs
  *
  * 검사(문제마다):
  *   - 앱 언어와 상관없는 것: 빈칸 밖에 답이 또 있음(easy-leak) · 오답이 정답과 같거나 쳐도 맞음(wrong-judge) · 보기 겹침 ·
  *     순서 조각 둘 이하(easy-order) · 섞이지 않음(easy-copy) · 한자 낱말이 조각으로 잘림(split-word) · 지금 단계 + 1보다 위 문장(hard-level)
- *   - 앱 언어마다(뜻 줄이 답하기 전에 보이는 모양 — 순서·말하기·틀린 곳 고치기·대화): 뜻 줄에 답이 보임(easy-leak, 앱 언어 = 학습 언어일 때 등) ·
+ *   - 앱 언어마다(뜻 줄이 답하기 전에 보이는 모양 — 순서·말하기·틀린 곳 고치기): 뜻 줄에 답이 보임(easy-leak, 앱 언어 = 학습 언어일 때 등) ·
  *     뜻 줄이 비어 무엇을 말할지 모름(no-meaning, --net으로 뜻풀이 옮김을 받았을 때만)
- * 하루 흐름(학습 언어 × 단계 × 문법·표현 탭): nextStudy + bundleQuiz를 앱(TodayPlan bundleFor)처럼 돌려 같은 날 같은 문장, 쉬어야 할 열쇠가 다시 나오는지(easy-repeat),
- *   다른 열쇠가 같은 문장을 쓰는 비율, 탭이 비는 묶음 수를 센다. 정답률 80%인 학습자.
+ * 문법·표현 탭의 하루 흐름은 그 탭이 2026-11-01에 빠져 더 이상 돌리지 않는다.
  *
  * --net(읽기만, 운영 API): 앱 언어별 뜻풀이 옮김(?glosses=1), 낱말 카드(앞 두 묶음, 앱 언어 en), 문제은행 묶음(점검 사용자라 서버가 키우지도 셈하지도 않음).
  * 처음 받는 뜻풀이·카드는 서버가 한 번 만들어 저장한다(모든 사용자가 처음 열 때와 같음). 받은 것은 tmp/quiz-sweep/cache에 남겨 다시 받지 않는다.
@@ -22,7 +21,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { buildQuiz, bundleQuiz, canQuiz, joinWords, typedRight, registerQuizSources, quizSources, type QuizQuestion, type QuizSource } from "../../src/lib/curriculum/quiz.ts";
-import { nextStudy, recordQuiz, restUntil, type QuizLog } from "../../src/lib/curriculum/nextStudy.ts";
 import { grammarKey, isCurriculumKey, reviewKeysOf } from "../../src/lib/curriculum/dailyPlan.ts";
 import { allScriptsFor, quizGloss, rememberGlosses, type ScriptGloss } from "../../src/lib/curriculum/stageScripts.ts";
 import { allFramesFor } from "../../src/lib/curriculum/frames.ts";
@@ -41,8 +39,6 @@ const UIS = Object.keys(INTERFACE_LANGUAGE_LABELS);
 const [from, to] = (arg("stages") ?? "1-5").split("-").map(Number);
 const STAGES = Array.from({ length: (to ?? from!) - from! + 1 }, (_, i) => from! + i);
 const NET = flag("net");
-const DAYS = Number(arg("days") ?? 7);
-const PER_DAY = 6;
 const JUDGE = Number(arg("judge") ?? 30);
 const OUT = path.join(ROOT, "tmp/quiz-sweep", date);
 const CACHE = path.join(ROOT, "tmp/quiz-sweep/cache");
@@ -143,14 +139,13 @@ function mark(row: Omit<Mark, "persona" | "shot" | "day"> & { day?: number }) {
   marks.push({ persona: "sweep", shot: "", day: row.day ?? 0, ...row });
 }
 
-const textOf = (q: QuizQuestion): string => ("text" in q ? q.text : q.kind === "fix" ? q.right : q.kind === "dialog" ? q.spot.text : "");
+const textOf = (q: QuizQuestion): string => ("text" in q ? q.text : q.kind === "fix" ? q.right : "");
 function metaOf(key: string, q: QuizQuestion): Meta {
   const base: Meta = { key, kind: q.kind, text: textOf(q), ...("from" in q && q.from ? { from: q.from } : {}) };
   if (q.kind === "choose") return { ...base, options: q.options, answer: q.answer, before: q.before, after: q.after };
   if (q.kind === "type") return { ...base, answer: q.answer, before: q.before, after: q.after, ...(q.near?.length ? { options: q.near } : {}) };
   if (q.kind === "spot") return { ...base, right: q.right, answer: q.want, words: q.words };
   if (q.kind === "order") return { ...base, words: q.words };
-  if (q.kind === "dialog") return { ...base, right: q.spot.right, answer: q.spot.want };
   return base;
 }
 const norm = (text: string) => text.toLocaleLowerCase().normalize("NFC").replace(/[\s\p{P}]+/gu, "");
@@ -220,7 +215,6 @@ function checkQuestion(language: string, stage: number, { key, q }: Seen) {
   const before: { gloss: ScriptGloss; answer: string; what: string }[] =
     q.kind === "order" || q.kind === "say" ? [{ gloss: q.gloss, answer: q.text, what: "문장" }]
     : q.kind === "spot" && q.gloss ? [{ gloss: q.gloss, answer: q.want, what: "고칠 말" }]
-    : q.kind === "dialog" ? q.lines.map((line, i) => ({ gloss: line.gloss, answer: i === q.at ? q.spot.want : "", what: "고칠 말" })).filter((one) => one.answer)
     : [];
   // 문제은행·낱말 카드는 앱 언어 en으로만 받았다(앱은 자기 앱 언어 뜻을 같이 받음) — 그 재료의 뜻 줄은 en 앱만 정확.
   const source = "from" in q ? String(q.from ?? "") : "";
@@ -259,81 +253,11 @@ function questionsFor(language: string, stage: number, key: string): Seen[] {
   for (const seed of ["a", "b"]) {
     for (const q of buildQuiz(language, key, { stage, seed })?.questions ?? []) push(q);
     for (const style of ["type", "choose"] as const) {
-      const made = bundleQuiz(language, [key], { seed, stage, style, fallback: style === "type" ? "choose" : "type", strict: true, ...(key.startsWith("f|") || key.startsWith("g|") ? { spots: { dialog: seed === "a" } } : {}) });
+      const made = bundleQuiz(language, [key], { seed, stage, style, fallback: style === "type" ? "choose" : "type", strict: true });
       made.questions.forEach((q, i) => push(q, made.keys[i] ?? key));
     }
   }
   return out;
-}
-
-// ---------- 하루 흐름 ----------
-type Flow = { learn: string; stage: number; tab: string; bundles: number; questions: number; empty: number; sameDay: number; twice: number; apart: number; resting: number; otherKey: number };
-function rngOf(seed: number) {
-  let a = seed;
-  return () => ((a = (a * 1103515245 + 12345) % 2147483648) / 2147483648);
-}
-function flow(language: string, stage: number, tab: "grammar" | "expression"): Flow {
-  const random = rngOf(stage * 31 + tab.length);
-  const passed = new Set(allScriptsFor(language).filter((one) => one.stage < stage).map((one) => one.id));
-  const expressions = (ladderFor(language)?.stages.find((one) => one.order === stage)?.expressions ?? []).map((text) => ({ text, state: null }));
-  let log: QuizLog = {};
-  let now = Date.UTC(2026, 10, 2, 0);
-  let round = 0;
-  const result: Flow = { learn: language, stage, tab, bundles: 0, questions: 0, empty: 0, sameDay: 0, twice: 0, apart: 0, resting: 0, otherKey: 0 };
-  const textKeys = new Map<string, { key: string; day: number }>();
-  for (let day = 1; day <= DAYS; day += 1) {
-    const asked = new Set<string>();
-    const todayTexts = new Set<string>();
-    for (let b = 0; b < PER_DAY; b += 1) {
-      const queue = nextStudy({ language, stage, passed, review: {}, log, weakest: null, expressions, skip: asked, focus: tab, lane: "learn", now });
-      const keys = queue.map((pick) => pick.key);
-      const made = bundleQuiz(language, keys.slice(0, 8), { seed: `d${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, ...(tab === "grammar" ? { spots: { dialog: round % 2 === 0 } } : {}) });
-      round += 1;
-      result.bundles += 1;
-      if (made.questions.length < 2) {
-        result.empty += 1;
-        continue;
-      }
-      const inBundle = new Set<string>();
-      made.questions.forEach((q, i) => {
-        const key = made.keys[i] ?? "";
-        const text = textOf(q);
-        result.questions += 1;
-        const meta = metaOf(key, q);
-        if (text && todayTexts.has(text)) {
-          result.sameDay += 1;
-          mark({ learn: language, ui: "*", reason: "easy-repeat", note: `${tab} 탭 ${day}일째 ${b + 1}번째 묶음: 같은 날 같은 문장이 또`, stage, tab, day, questions: [meta] });
-        }
-        if (key && i > 0 && made.keys[i - 1] === key) {
-          result.twice += 1;
-          mark({ learn: language, ui: "*", reason: "easy-repeat", note: `${tab} 탭: 한 묶음에 같은 열쇠가 모양만 바꿔 또`, stage, tab, day, questions: [meta] });
-        } else if (key && inBundle.has(key)) {
-          // 떨어진 자리에 같은 열쇠(틀린 곳 고치기를 다른 자리에 끼움, quiz.ts addSpots) — 설계대로라 표시 없이 셈만.
-          result.apart += 1;
-        } else if (key && log[key]?.last && now < restUntil(log[key])) {
-          result.resting += 1;
-          mark({ learn: language, ui: "*", reason: "easy-repeat", note: `${tab} 탭 ${day}일째: 맞혀서 쉬어야 할 열쇠가 다시`, stage, tab, day, questions: [meta] });
-        }
-        const before = textKeys.get(text);
-        if (before && before.key !== key && day - before.day <= 3) {
-          result.otherKey += 1;
-          mark({ learn: language, ui: "*", reason: "easy-repeat", note: `${tab} 탭: ${day - before.day}일 전 다른 열쇠(${before.key})로 나온 문장이 또`, stage, tab, day, questions: [meta] });
-        }
-        if (text) {
-          todayTexts.add(text);
-          textKeys.set(text, { key, day });
-        }
-        if (key) {
-          inBundle.add(key);
-          asked.add(key);
-          log = recordQuiz(log, key, random() < 0.8, now);
-        }
-        now += 45 * 1000;
-      });
-    }
-    now += 24 * 60 * 60 * 1000;
-  }
-  return result;
 }
 
 // ---------- 판정 표본 ----------
@@ -379,11 +303,11 @@ function judgeRows(language: string, all: Seen[]): JudgeRow[] {
 }
 
 // ---------- 돌리기 ----------
-const stats: { languages: Record<string, { keys: Record<number, number>; noQuiz: Record<number, number>; questions: Record<number, number>; words: number; bank: number }>; flows: Flow[]; net: boolean; days: number; uis: number } = {
+const stats: { languages: Record<string, { keys: Record<number, number>; noQuiz: Record<number, number>; questions: Record<number, number>; words: number; bank: number }>; flows: never[]; net: boolean; days: number; uis: number } = {
   languages: {},
   flows: [],
   net: NET,
-  days: DAYS,
+  days: 0,
   uis: UIS.length,
 };
 for (const language of LANGS) {
@@ -405,7 +329,6 @@ for (const language of LANGS) {
     }
     entry.noQuiz[stage] = none;
     entry.questions[stage] = count;
-    for (const tab of ["grammar", "expression"] as const) stats.flows.push(flow(language, stage, tab));
   }
   stats.languages[language] = entry;
   const rows = judgeRows(language, all);

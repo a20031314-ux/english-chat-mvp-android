@@ -24,12 +24,10 @@ import {
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
-import { buildQuiz, buildUnit, bundleQuiz, orderTiles, QUIZ_SIZE, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle } from "@/lib/curriculum/quiz";
+import { buildQuiz, buildUnit, bundleQuiz, QUIZ_SIZE, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
-import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
@@ -38,7 +36,7 @@ import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/stu
 import { useWordBank, wordGloss } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
-import { peekBank, quizPos, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
+import { peekBank, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { feelDue, feelLevel, levelOf, noteLevel, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
@@ -46,20 +44,15 @@ import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor, isSituationScript, scriptById } from "@/lib/curriculum/stageScripts";
-import { MiniDialogue, type Bubble } from "@/components/studyMap/WayPicker";
 import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
 import { pickBankScript } from "@/lib/curriculum/scriptBank";
 import { BodyLayer } from "@/components/FullScreenLayer";
-import { MATCH_SIZE, WordMatch, matchPairs, type MatchPair } from "@/components/studyMap/WordMatch";
-import { samePosRounds } from "@/lib/curriculum/wordRounds";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
-import { keyPart, nextStudy, recordQuiz, restUntil, streakOf, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
-import { multiOf, spotsOf } from "@/lib/curriculum/multiQuiz";
+import { keyPart, nextStudy, recordQuiz, restUntil, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
 import { commonWords, hitsIn, readTalks, shareable, talkOf, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { bankTone, BankToneProvider } from "@/components/studyMap/bankTone";
-import { buildExam, EXAM_POOL_MIN, examDue, finishExam, notePool, readLadder, readPool, saveExamState, type ExamItem } from "@/lib/curriculum/exam";
-import { openLesson } from "@/lib/appIntents";
+import { buildExam, examDue, finishExam, notePool, readLadder, readPool, saveExamState, type ExamItem } from "@/lib/curriculum/exam";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import type { PartId } from "@/lib/notes/stageParts";
 import { wordbook } from "@/lib/curriculum/wordbook";
@@ -79,6 +72,8 @@ import { mixProbes, readFillFocus } from "@/lib/curriculum/fillFocus";
  * 학습 끝 체크(SelfCheck)는 대본·문장구조 화면 끝에서 표현·문장구조마다 알아요/헷갈려요 → 서버 다시 볼 것(stageScripts:v1 review).
  */
 
+/** 단어 한 묶음. 예전 짝 맞추기 판과 같던 다섯. */
+const WORD_BATCH = 5;
 const SETTINGS_KEY = "dailyPlan.v1";
 const TODAY_KEY = "dailyPlan.today.v1";
 const REVIEW_EVENT = "lb-review";
@@ -101,21 +96,14 @@ function saveQuizDone(day: string, keys: Set<string>) {
   }
 }
 
-type StudyFocus = "review" | "auto" | "exam" | PartId;
+/** Quizbank 탭(2026-11-01 문법·표현 탭을 뺌). 저장된 문법·표현·알아서 값은 어휘로 읽는다. */
+type QuizTab = "vocab" | "review" | "exam";
+const QUIZ_TABS: readonly QuizTab[] = ["vocab", "review", "exam"];
 /** 지속 학습의 두 줄(2026-10-29 사용자 "복습/이외 카테고리로 나눠줘" → "알아서·어휘·문법·표현·발음을 복습과 같은 층위로"). */
 type StudyLane = "review" | "learn";
-/** 복습 탭마다 고른 연습 방식(2026-10-30 사용자 "각각의 탭에 들어갔을 때 학습 방식을 선택하게"): 알아서 = 돌아가며, match = 단어 맞추기(어휘만). */
-type Style = "auto" | QuizStyle | "match";
-/** 어휘 탭 다시 쓰기: 한 묶음에 몇 낱말까지, 고르기 문제와 몇 문제 떨어뜨릴지(2026-11-02). */
-const RETYPE_MAX = 2;
-const RETYPE_GAP = 2;
-const STYLES: readonly Style[] = ["auto", "type", "choose", "order", "say", "meaning", "match"];
-type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: StudyFocus; vocab?: VocabPick; styles?: Partial<Record<StudyFocus, Style>> };
+type Settings = { pace: Pace; order: PlanOrder; mix: QuizMix; focus: QuizTab; vocab?: VocabPick };
 // 듣기 위주는 뺌(2026-10-30 사용자 "듣기 문제는 삭제") — 저장된 듣기는 랜덤으로.
 const MIXES: readonly QuizMix[] = ["auto", "speak", "read"];
-// 계속 공부 갈래(2026-10-29 "지속 학습도 단어·문법 등으로 나눠도 돼" → "진행해줘").
-// 발음 버튼은 뺌(2026-10-29 사용자 — 표현과 같은 문제였음). 저장된 발음은 랜덤으로.
-const FOCUSES: readonly StudyFocus[] = ["review", "auto", "vocab", "grammar", "expression"];
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
 
 /** Quizbank 어휘 탭을 열 때(신호 openNotes words — Logbank 어휘 칸 📖 추천·단계 화면 낱말 줄, 2026-11-02): 저장된 탭을 어휘로 바꾸고 알린다. */
@@ -135,13 +123,12 @@ function readSettings(): Settings {
     const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null") as Partial<Settings> | null;
     const pace = PACES.includes(raw?.pace as Pace) ? (raw!.pace as Pace) : 10;
     const mix = MIXES.includes(raw?.mix as QuizMix) ? (raw!.mix as QuizMix) : "auto";
-    const focus = FOCUSES.includes(raw?.focus as StudyFocus) ? (raw!.focus as StudyFocus) : "auto";
+    const focus = QUIZ_TABS.includes(raw?.focus as QuizTab) ? (raw!.focus as QuizTab) : "vocab";
     // 옛 "band"(많이 쓰는 순) 설정은 버린다(전체) — 2026-10-31 단계로 바꿈.
     const vocab = raw?.vocab && ["all", "stage", "pos", "topic"].includes(raw.vocab.by) && typeof raw.vocab.value === "string" ? raw.vocab : undefined;
-    const styles = Object.fromEntries(Object.entries(raw?.styles ?? {}).filter(([key, value]) => FOCUSES.includes(key as StudyFocus) && STYLES.includes(value as Style))) as Settings["styles"];
-    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}), ...(styles && Object.keys(styles).length ? { styles } : {}) };
+    return { pace, order: raw?.order === "record" ? "record" : "curriculum", mix, focus, ...(vocab ? { vocab } : {}) };
   } catch {
-    return { pace: 10, order: "curriculum", mix: "auto", focus: "auto" };
+    return { pace: 10, order: "curriculum", mix: "auto", focus: "vocab" };
   }
 }
 
@@ -214,17 +201,15 @@ export function TodayPlan({
   useStageGlosses(language, stage, locale);
   useStageGlosses(language, Math.min(5, stage + 1), locale);
   const { isPremium } = usePremium();
-  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "auto" });
+  const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum", mix: "auto", focus: "vocab" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
   // 복습은 지속 학습 아래 따로 칸(2026-10-30 사용자 "복습탭은 따로 독립된 탭으로, 지속학습 아래에") — 지속 학습 탭에는 복습이 없다(예전 설정의 review는 랜덤으로).
-  // 지속 학습 탭은 어휘 · 문법 · 표현(2026-10-30 사용자 "지속 학습 > 단어 > 학습 방식" — 랜덤은 탭이 아니라 방식). 저장된 랜덤·복습은 어휘로.
-  // Quizbank 탭 셋(2026-11-01 사용자 "셋으로 줄여줘"): 어휘 · 시험 · 다시 보기 — 예전 문법·표현 탭을 골라 둔 사람은 어휘로.
+  // Quizbank 탭 셋(2026-11-01 사용자 "셋으로 줄여줘"): 어휘 · 시험 · 다시 보기 — 예전 문법·표현·랜덤을 골라 둔 사람은 어휘로.
   const keepFocus = "vocab" as PartId;
-  const examTab = settings.focus === "exam";
+  // 소재가 모이기 전엔 시험 탭을 두지 않는다(2026-11-03). 모이면 탭이 나타나 풀 수 있다.
+  const examReady = examDue(readPool(language));
+  const examTab = examReady && settings.focus === "exam";
   const studyFocus: PartId | null = keepFocus;
-  // 알아서일 때 세 번에 한 번은 새 낱말(빈도 단어)을 앞으로 — 부족한 갈래가 늘 앞을 차지해 낱말이 안 나오지 않게.
-  const firstPick = (picks: readonly StudyPick[], lane: StudyLane = "learn"): StudyPick | undefined =>
-    lane === "learn" && !studyFocus && round % 3 === 2 ? (picks.find((pick) => pick.reason === "word") ?? picks[0]) : picks[0];
   // 오늘 계속 공부로 는 것(curriculum/studyTally.ts, 이 폰).
   const [tally, setTally] = useState<Tally>({ day: "", known: [], fixed: [] });
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
@@ -242,8 +227,7 @@ export function TodayPlan({
   /** 단어 시험(2026-11-01 사용자 "주기적으로 단어 모음 시험 — 틀린 단어·맞힌 단어를 섞어서"). */
   const [wordTestQ, setWordTestQ] = useState<{ keys: string[]; questions: QuizQuestion[] } | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
-  const [matching, setMatching] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState<"keep" | "review" | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [todaySettings, setTodaySettings] = useState(false);
   // 오늘 할 것의 퀴즈 한 문제: 답은 "다음"을 누를 때 기록(바로 기록하면 맞음·틀림을 보기 전에 다음 할 것으로 바뀜).
   const todayServed = useRef<{ id: string; result: boolean | null } | null>(null);
@@ -263,7 +247,6 @@ export function TodayPlan({
   const [asked, setAsked] = useState<Set<string>>(new Set());
   const askedWrong = useRef<Set<string>>(new Set());
   // 이번에 낸 복합 문제 문장(curriculum/multiQuiz.ts) — 한 바퀴 돌면 비운다.
-  const multiShown = useRef<Set<string>>(new Set());
   const talkShown = useRef<Set<string>>(new Set());
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
@@ -313,10 +296,6 @@ export function TodayPlan({
     }
   };
   const lastCircle = useRef<Set<string>>(new Set());
-  // 어휘 탭 다시 쓰기(2026-11-02 사용자 "어휘퀴즈에 빈칸 타이핑유형을 추가"): 이 묶음에서 고르기로 처음 본 낱말을 묶음 끝에 빈칸 쓰기로 한 번 더.
-  // 두 번째 답은 원 기록을 올리지 않고(한 번 맞히면 익힘 그대로), 틀리면 틀림으로만.
-  const retypeKeys = useRef<Set<string>>(new Set());
-  const retypeSeen = useRef<Set<string>>(new Set());
   const [circleNeed, setCircleNeed] = useState<string[]>([]);
   const bank = useWordBank(language, locale, known, vocabPick, stage, mineWords, circleOn ? circleNeed : undefined);
   const knownWord = (key: string) => knownState(known, key) === "known";
@@ -333,7 +312,6 @@ export function TodayPlan({
   // Quizbank 몸통은 여기서 만들어 칸 밖에서 넘기므로 칸 색을 직접(studyMap/bankTone.tsx).
   const keepTone = bankTone("keep");
   // ⚙ 시트는 Quizbank에서만 열린다.
-  const sheetTone = keepTone;
   const cuts = stageCuts(language);
   const level = levelOf(circle, stage, cuts);
   const ranked = useMemo(() => bank?.ranked ?? [], [bank]);
@@ -381,7 +359,7 @@ export function TodayPlan({
     if (offers.length) void offerBank(language, offers.slice(-12));
   }, [language, stage, bankReady]);
   const [frozenItems, setFrozenItems] = useState<readonly unknown[] | null>(null);
-  const [checkupOpen, setCheckupOpen] = useState<"take" | "record" | "stage" | "entry" | "placement" | "exam" | null>(null);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "stage" | "entry" | "placement" | "exam" | null>(null);
   /** 정기 시험(curriculum/exam.ts) — 연 동안 문제 고정. */
   const [examItems, setExamItems] = useState<ExamItem[] | null>(null);
   const [examSeen, setExamSeen] = useState(0);
@@ -647,7 +625,7 @@ export function TodayPlan({
       lane: which,
       now: at,
     });
-  const nextIn = (which: StudyLane, weakestNow: PartId | null) => firstPick(studyQueue(which, Date.now(), weakestNow), which) ?? null;
+  const nextIn = (which: StudyLane, weakestNow: PartId | null) => studyQueue(which, Date.now(), weakestNow)[0] ?? null;
   const words = wordbook(language, known, savedWords, (word) => wordGloss(language, word));
   // 계속 공부 안의 시험: 단계 시험(6주) → 이번 주 확인 → 퀴즈. 시험을 끝내면 결과에서 [계속 공부 ›]로 이어서 퀴즈.
   const placeAt = async (order: number) => {
@@ -668,7 +646,6 @@ export function TodayPlan({
   const learnTest: "placement" | "stage" | "entry" | null = placementOffer ? "placement" : stageTestOffer && stageTestItems.length ? "stage" : entryOffer ? "entry" : null;
   // 이번 주 확인은 정기 시험(Quizbank 시험 탭)으로 바뀜(2026-11-01) — Logbank에는 📈 실력 기록만.
   void checkupOffer;
-  const reviewTest: "take" | null = null;
   const itemsOf = (test: "placement" | "stage" | "entry" | "take") => (test === "placement" ? [] : test === "stage" ? stageTestItems : test === "entry" ? entryItems : checkupItems);
   const studyItem = (pick: StudyPick): PlanItem => {
     const practice = itemForKey(language, pick.key);
@@ -683,107 +660,30 @@ export function TodayPlan({
       ...(pick.reason === "gap" && gaps.find((gap) => gap.key === pick.key)?.card ? { card: gaps.find((gap) => gap.key === pick.key)!.card } : {}),
     };
   };
-  // 묶음 퀴즈(2026-10-29 사용자 "세 부분을 합쳐서 묶음 퀴즈로"): 랜덤은 갈래가 다른 열쇠부터, 문법·표현·복습은 그 줄의 열쇠 여럿에서 한 문제씩. 어휘는 단어 퀴즈 그대로.
+  // 낱말 묶음 또는 다시 보기. 문법·표현 탭 묶음(복합·대화 틀린 줄)은 2026-11-01에 탭과 함께 뺌.
   const bundleFor = (which: StudyLane, wordKeys?: readonly string[]): { keys: string[]; questions: QuizQuestion[] } | null => {
-    // 어휘: 짝 맞추기에서 본 낱말들의 예문 빈칸, 낱말마다 한 문제(같은 낱말을 모양만 바꿔 세 번 묻지 않음, 2026-10-30).
     if (wordKeys) {
-      // 문제은행이 이 낱말들을 늘려 두게(다음 묶음부터 쓰임, curriculum/qbank.ts).
       void growBank(language, locale, wordKeys.map((key) => ({ key, stage })));
-      // 빈칸 쓰기(2026-10-30 사용자 "그냥 타이핑해서 맞추는 식") — 길어서 못 치는 조각만 빈칸 고르기.
       const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true });
       return made.questions.length ? made : null;
     }
-    if (which === "learn" && studyFocus === "vocab") return null;
-    const queue = studyQueue(which, Date.now(), studyWeakest);
-    let keys: string[];
-    if (which === "learn" && !studyFocus) {
-      const firstOf = new Map<PartId, string>();
-      for (const pick of queue) {
-        const part = keyPart(language, pick.key);
-        if (!firstOf.has(part)) firstOf.set(part, pick.key);
-      }
-      // 세 번에 한 번 앞에 오는 새 낱말도(firstPick).
-      const lead = firstPick(queue, which)?.key;
-      keys = [...new Set([...(lead ? [lead] : []), ...firstOf.values(), ...queue.map((pick) => pick.key)])];
-    } else keys = queue.map((pick) => pick.key);
+    if (which !== "review") return null;
+    const keys = studyQueue("review", Date.now(), studyWeakest).map((pick) => pick.key);
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
-    // 다음 묶음 열쇠도 미리(2026-11-01 사용자 "문제은행 미리 받기") — 받은 것은 이 폰에 남아 다음 묶음 첫 문제부터 쓰인다.
     void growBank(language, locale, keys.slice(8, 16).map((key) => ({ key, stage })));
-    // 문법 탭·틀린 것 탭에는 틀린 곳 찾아 고치기를 하나씩(내가 고침받은 줄 먼저), 문법 탭은 대화 속 틀린 줄도(2026-10-30 사용자 "1,2,3 순서로").
-    const grammarTab = which === "learn" && studyFocus === "grammar";
-    const spots = which === "review" ? { cards: spotCards, anyCard: true } : grammarTab ? { cards: spotCards, dialog: round % 2 === 0 } : undefined;
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, ...(spots ? { spots } : {}) });
-    // 복합 퀴즈(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개", curriculum/multiQuiz.ts): 문법·표현 탭에서
-    // 세 묶음에 한 번 끝에 하나, 낼 것이 다 떨어지면(맞힌 것은 쉬는 중) 복합 문제만으로 — 소재가 한정돼도 탭이 비지 않게.
-    const multiTab = which === "learn" && (studyFocus === "grammar" || studyFocus === "expression") ? studyFocus : null;
-    if (multiTab && made.questions.length >= 2) {
-      // 대화 조각 빈칸(curriculum/talkQuiz.ts): 세 묶음에 한 번, 내 AI 채팅·통화에 그 탭 소재가 든 줄이 있으면.
-      if (round % 3 === 1) {
-        const one = talkFor(multiTab);
-        if (one) {
-          made.questions.push(one.question);
-          made.keys.push(one.key);
-        }
-      }
-      if (round % 3 === 2) {
-        const one = multiFor(multiTab, made.questions.map((q) => ("text" in q ? q.text : "")));
-        if (one) {
-          made.questions.push(one.question);
-          made.keys.push(one.keys[0]!);
-        }
-      }
-      return made;
-    }
-    if (multiTab) {
-      const multi: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
-      // 낼 것이 떨어지면 대화 조각 하나 + 복합 문제.
-      const talk = talkFor(multiTab);
-      if (talk) {
-        multi.questions.push(talk.question);
-        multi.keys.push(talk.key);
-      }
-      for (let i = multi.questions.length; i < 3; i += 1) {
-        const one = multiFor(multiTab, [], i);
-        if (!one) break;
-        multi.questions.push(one.question);
-        multi.keys.push(one.keys[0]!);
-      }
-      if (multi.questions.length) return multi;
-    }
-    // 틀린 것 탭은 한 문제만 남아도 낸다.
-    return made.questions.length >= (which === "review" ? 1 : 2) ? made : null;
+    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } });
+    return made.questions.length >= 1 ? made : null;
   };
-  // 대화 조각 하나(이 폰의 AI 채팅·통화 기록) — 그 탭 소재, 쉬는 날이 끝나 가는 것부터, 이번에 낸 줄은 빼고.
-  const talkFor = (tab: "grammar" | "expression") => {
+  // 정기 시험의 짧은 대화 하나(이 폰의 AI 채팅·통화). 문법 탭용 갈래는 탭과 함께 뺌.
+  const talkFor = () => {
     const made = talkOf(language, readTalks(language), {
       stage,
       seed: `${day}-${round}`,
-      wants: (key: string) => (tab === "grammar" ? keyPart(language, key) === "grammar" : keyPart(language, key) !== "grammar"),
+      wants: (key: string) => keyPart(language, key) !== "grammar",
       rank: (key: string) => restUntil(log[key]),
       avoid: talkShown.current,
     });
     if (made) talkShown.current.add(made.question.text);
-    return made;
-  };
-  // 복합 문제 하나: 이미 맞힌 소재(이 폰 연속 맞힘 1 이상·서버 익힘)만 비우고, 잊을 때가 가까운 소재가 든 문장부터. 문법 탭은 복합 틀린 곳을 번갈아.
-  const multiFor = (tab: "grammar" | "expression", avoidTexts: readonly string[], offset = 0) => {
-    const options = {
-      stage,
-      seed: `${day}-${round}-${offset}`,
-      learned: (key: string) => streakOf(log[key]) >= 1 || knownState(known, key) === "known",
-      wants: (key: string) => (tab === "grammar" ? keyPart(language, key) === "grammar" : keyPart(language, key) !== "grammar"),
-      rank: (key: string) => restUntil(log[key]),
-      avoid: new Set([...multiShown.current, ...avoidTexts]),
-    };
-    const make = () => (tab === "grammar" && (round + offset) % 2 === 0 ? spotsOf(language, options) : null) ?? multiOf(language, options) ?? (tab === "grammar" ? spotsOf(language, options) : null);
-    let made = make();
-    // 한 바퀴 다 냈으면 처음부터 다시(문장 수는 한정 — 다른 날 다른 소재 조합으로).
-    if (!made && multiShown.current.size) {
-      multiShown.current = new Set();
-      options.avoid = new Set(avoidTexts);
-      made = make();
-    }
-    if (made) multiShown.current.add(made.question.kind === "spots" ? made.question.right : made.question.text);
     return made;
   };
   const startStudy = (pick: StudyPick | null, which: StudyLane = lane, wordKeys?: readonly string[]) => {
@@ -794,15 +694,9 @@ export function TodayPlan({
       setBundle(null);
       return;
     }
-    // 어휘 계속 공부: 짝 맞추기면 짝부터(끝나면 같은 낱말들의 예문), 예문 빈칸이면 지금 공부 줄 낱말들로 바로.
-    if (which === "learn" && studyFocus === "vocab" && !wordKeys) {
-      if (keepStyle === "match") {
-        setStudying(pick);
-        setMatching(true);
-        return;
-      }
+    if (which === "learn" && !wordKeys) {
       const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
-      if (keys.length) return startStudy(pick, which, keys.slice(0, MATCH_SIZE));
+      if (keys.length) return startStudy(pick, which, keys.slice(0, WORD_BATCH));
     }
     const made = bundleFor(which, wordKeys);
     if (made) {
@@ -848,73 +742,7 @@ export function TodayPlan({
   // 같은 날·같은 조합이면 같은 문제(씨앗) — 다시 그려도 바뀌지 않는다.
   const unitQuestions = unitItem && unitMix ? buildUnit(language, unitItem.id, unitMix, day) : [];
 
-  // 단어 맞추기 짝(2026-10-30): 곧 배울 낱말(뜻을 받은 것) → 단어장 → 이 단계 문장구조 예문의 빈칸 말.
-  const pairs = matchPairs([
-    ...(bank?.next ?? []).map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
-    ...words.map((row) => ({ word: row.word, meaning: row.gloss })),
-    ...allFramesFor(language)
-      .filter((one) => one.stage <= Math.max(1, stage))
-      .flatMap((one) => one.examples.map((ex) => ({ word: ex.slot, meaning: glossFor(ex.cue, locale) }))),
-  ]).slice(0, MATCH_SIZE * 4);
-  // 어휘 계속 공부의 짝: 지금 공부 줄의 낱말 열쇠(w|) — 뒤의 예문 빈칸이 같은 낱말로 이어진다.
-  const posOfWord = new Map((peekBank(language) ?? []).map((word) => [word.w, quizPos(word.pos)]));
-  const vocabPairs: MatchPair[] =
-    studyFocus === "vocab"
-      ? samePosRounds(
-          matchPairs(
-            studyQueue("learn", Date.now(), studyWeakest)
-              .map((pick) => pick.key)
-              .filter((key) => key.startsWith("w|"))
-              .map((key) => ({ word: key.slice(2), meaning: wordGloss(language, key.slice(2)) })),
-          ),
-          (word) => posOfWord.get(word),
-          MATCH_SIZE,
-        )
-      : [];
-  // 탭(무엇을) → 그 탭의 연습 방식(어떻게), 2026-10-30 사용자. 그림은 그 모양으로 풀게 될 짧은 대화(이 단계 상황 줄·낱말에서).
-  // 퀴즈 = 빈칸에 들어갈 말 고르기만(사용자 2026-10-30 "퀴즈를 빈칸에 들어갈 단어를 고르는 것으로 단순화") — 짝 맞추기·순서·말하기·뜻 고르기는 퀴즈 칸에서 안 냄.
-  const keepStyle: Style = "choose";
-  const reviewStyle: Style = "choose";
-  // 퀴즈 칸의 따로 된 탭 "지난번에 틀린 것"(사용자 2026-10-30 "틀린 것 다시보기는 별도의 탭으로") — 설정의 focus "review"를 쓴다.
   const wrongTab = settings.focus === "review";
-  const asQuiz = (one: Style): QuizStyle | undefined => (one === "auto" || one === "match" ? undefined : one);
-  const styleFor = (which: StudyLane): QuizStyle | undefined => asQuiz(which === "review" ? reviewStyle : keepStyle);
-  const waysFor = (focus: StudyFocus) => {
-    const situation = allScriptsFor(language).filter((one) => one.stage === stage).find(isSituationScript);
-    const lines = situation?.lines ?? [];
-    const mineAt = Math.max(0, lines.findIndex((line) => line.who === "me"));
-    const mine = lines[mineAt];
-    const pair = pairs[0];
-    if (!mine) return [];
-    const tiles = orderTiles(mine.text, language);
-    const mid = Math.floor(tiles.length / 2);
-    const meaning: Bubble = { side: "them", text: glossFor(mine.gloss, locale), meaning: true };
-    const blank: Bubble = { side: "me", text: mine.text.replace(tiles[mid] ?? "", "___"), mark: "___" };
-    const pictures: Record<Style, Bubble[]> = {
-      auto: [blank, { side: "me", text: [...tiles].reverse().join(" · ") }, { side: "me", text: `🎤 ${mine.text}` }],
-      // 빈칸 쓰기: 뜻 → 빈칸 문장에 직접 친다(보기 없음, 2026-10-30).
-      type: [meaning, blank, { side: "me", text: `⌨ ${tiles[mid] ?? ""}` }],
-      choose: [blank, { side: "me", text: [tiles[mid], tiles[(mid + 1) % tiles.length]].filter(Boolean).join("  /  ") }],
-      order: [meaning, { side: "me", text: [...tiles].reverse().join(" · ") }],
-      say: [meaning, { side: "me", text: `🎤 ${mine.text}` }],
-      meaning: pair
-        ? [{ side: "me", text: pair.word, mark: pair.word }, { side: "them", text: pair.meaning, meaning: true }, ...(pairs[1] ? [{ side: "them" as const, text: pairs[1].meaning, meaning: true }] : [])]
-        : [{ side: "me", text: mine.text }, meaning],
-      match: (vocabPairs.length >= 3 ? vocabPairs : pairs).slice(0, 3).map((one) => ({ side: "me" as const, text: `${one.word}  —  ${one.meaning}`, mark: one.word })),
-    };
-    const label: Record<Style, string> = {
-      auto: ui.studyRandom,
-      type: ui.selfFocusWriting,
-      choose: ui.quizKindChoose,
-      order: ui.quizKindOrder,
-      say: ui.quizKindSay,
-      meaning: ui.quizKindMeaning,
-      match: ui.wordMatch,
-    };
-    // 어휘: 짝 맞추기(→ 그 낱말들 예문 빈칸) · 예문 빈칸(2026-10-30 사용자 "단순하게 맞추기 > 예문 형태로").
-    const ids: Style[] = focus === "vocab" ? [...(vocabPairs.length >= 3 ? (["match"] as const) : []), "type", "choose"] : ["auto", "type", "choose", "order", "say"];
-    return ids.map((id) => ({ id, label: label[id], bubbles: pictures[id] }));
-  };
   // "오늘 학습할 분량 n분"은 칸 머리가 아니라 지금 할 것 카드 바로 위(점 줄)에(2026-11-03 사용자 "My name is 부분이 학습할 분량 — 거기 표시"). 머리는 끝났을 때 ✓만.
   const todaySummary = finished ? <span>{`✓ ${ui.planAllDone}`}</span> : null;
   const todayAmount = ui.planTodayAmount.replace("{n}", String(items.reduce((sum, item) => sum + item.minutes, 0)));
@@ -1110,20 +938,6 @@ export function TodayPlan({
   const overlays = (
     <>
       {recalling ? <RecallPlayer ui={ui} locale={locale} language={language} learned={recallLearned} known={known} fromToday onClose={() => setRecalling(false)} /> : null}
-      {matching && vocabPairs.length >= 3 ? (
-        <WordMatch
-          ui={ui}
-          pairs={vocabPairs}
-          onClose={() => {
-            setMatching(false);
-            setStudying(null);
-          }}
-          onNext={(seen) => {
-            setMatching(false);
-            startStudy(studying, "learn", seen.map((word) => `w|${word}`));
-          }}
-        />
-      ) : null}
       {checkupOpen === "stage" ? (
         <CheckupPlayer
           ui={ui}
@@ -1221,9 +1035,6 @@ export function TodayPlan({
           onClose={() => setCheckupOpen(null)}
         />
       ) : null}
-      {checkupOpen === "record" ? (
-        <SkillRecord ui={ui} locale={locale} checkups={checkups} labelOf={(key) => keyLabel(language, key, grammarName)} onClose={() => setCheckupOpen(null)} />
-      ) : null}
       {unitItem && unitQuestions.length ? (
         <QuizPlayer
           key={`unit-${unitItem.id}`}
@@ -1315,7 +1126,7 @@ export function TodayPlan({
           round={log[quiz.id]?.n ?? 0}
           stage={stage}
           mix={settings.mix}
-          style={studying ? styleFor(lane) : undefined}
+          style={studying ? "choose" : undefined}
           stopHint={missRun >= 2}
           onMore={() => startStudy(nextIn(studying ? lane : "learn", studyWeakest))}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
@@ -1339,9 +1150,6 @@ export function TodayPlan({
   // 칸 안에서 바로 푸는 퀴즈(2026-10-30 사용자 "아예 퀴즈 화면을 보여 줘서 … 풀면 다음 문제로, 설명이나 옵션은 그 내부에"):
   // 칸에는 문제만, 무엇을·어떻게·어떤 낱말은 ⚙ 시트, 단어장·실력 기록·시험은 아이콘.
   const recordOne = (one: { key: string; correct: boolean; skipped: boolean; shape?: "c" | "t"; miss?: string }) => {
-    // 다시 쓰기(이 묶음 두 번째 답): 맞으면 원 기록 그대로, 틀리면 틀림으로만 — 경계·익힘을 두 번 세지 않는다.
-    const retype = Boolean(one.key) && retypeKeys.current.has(one.key) && retypeSeen.current.has(one.key);
-    if (one.key && retypeKeys.current.has(one.key)) retypeSeen.current.add(one.key);
     // "모르겠어요"·답 보기는 원에서는 틀림으로(다시 나오게), 다른 기록에는 그대로 안 셈.
     if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
       saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, false, Date.now()), circleOrder, knownWord)));
@@ -1349,9 +1157,7 @@ export function TodayPlan({
     if (one.skipped || !one.key) return;
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
-    if (retype && !wrongTab && keepFocus === "vocab" && circleOn && bank) {
-      if (!one.correct) saveCircle(trimCircle(noteAnswer(circleRef.current, one.key, false, Date.now())));
-    } else if (!wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
+    if (!wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
       const before = circleRef.current;
       const rank = rankOf.get(one.key);
       if (levelOn && rank !== undefined) {
@@ -1405,83 +1211,34 @@ export function TodayPlan({
           used.push(key);
         }
       }
-      // 처음 본 낱말 둘까지 묶음 끝에 빈칸 쓰기로 다시 — 두 문제 넘게 뒤에, 고르기와 다른 예문으로(같은 낱말을 모양만 바꿔 연달아 내지 않게).
-      const retype: QuizQuestion[] = [];
-      const retyped = new Set<string>();
-      used.forEach((key, index) => {
-        if (retype.length >= RETYPE_MAX || used.length - index < RETYPE_GAP) return;
-        const first = questions[index];
-        if (first?.kind !== "choose") return;
-        // 다른 예문이 있으면 그것(문제은행이 자라면 생김), 없으면 같은 예문이라도 — 사이에 다른 문제가 있어 떠올려 쓰는 차례가 된다.
-        let same: QuizQuestion | null = null;
-        for (let tryAt = 0; tryAt < 3; tryAt += 1) {
-          const again = bundleQuiz(language, [key], { seed: `${day}-${round}-${key}-retype${tryAt}`, stage, style: "type", strict: true }).questions[0];
-          if (again?.kind !== "type") continue;
-          if (again.text !== first.text) {
-            retype.push(again);
-            retyped.add(key);
-            return;
-          }
-          same ??= again;
-        }
-        if (same) {
-          retype.push(same);
-          retyped.add(key);
-        }
-      });
-      retypeKeys.current = retyped;
-      retypeSeen.current = new Set();
-      return questions.length ? takeBatch({ keys: [...used, ...used.filter((key) => retyped.has(key))], questions: [...questions, ...retype] }) : null;
+      // 한 묶음에 푼 낱말을 빈칸 쓰기로 다시 붙이지 않는다(2026-11-03). 예문이 그 명사만 받지 않아서, 다른 명사를 쳐도 문장은 맞는데 거절됐다.
+      return questions.length ? takeBatch({ keys: used, questions }) : null;
     }
-    if (keepFocus === "vocab") {
-      const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
-      return keys.length ? takeBatch(bundleFor("learn", keys.slice(0, MATCH_SIZE))) : null;
-    }
-    return takeBatch(bundleFor("learn"));
+    const keys = studyQueue("learn", Date.now(), studyWeakest).map((one) => one.key).filter((key) => key.startsWith("w|"));
+    return keys.length ? takeBatch(bundleFor("learn", keys.slice(0, WORD_BATCH))) : null;
   };
-  const settingsIcon = (which: "keep" | "review") => (
-    <button type="button" data-quiz-settings={which} aria-label={ui.planSettings} title={ui.planSettings} onClick={() => setSettingsOpen(which)} className={iconButton}>
+  const settingsIcon = (
+    <button type="button" data-quiz-settings="keep" aria-label={ui.planSettings} title={ui.planSettings} onClick={() => setSettingsOpen(true)} className={iconButton}>
       <span aria-hidden>⚙</span>
     </button>
   );
-  const waysGrid = (ways: ReturnType<typeof waysFor>, value: Style, onPick: (next: Style) => void, data: string) => (
-    <div data-way-sheet={data} className="grid grid-cols-2 gap-2">
-      {ways.map((one) => (
-        <button
-          key={one.id}
-          type="button"
-          aria-pressed={value === one.id}
-          data-way={one.id}
-          aria-label={one.label}
-          onClick={() => onPick(one.id)}
-          className={`flex min-w-0 flex-col gap-2 rounded-xl border p-2 text-start ${value === one.id ? sheetTone.on : "border-line hover:bg-white/5"}`}
-        >
-          <MiniDialogue bubbles={one.bubbles} />
-          <span className="text-caption font-semibold text-ink">{one.label}</span>
-        </button>
-      ))}
-    </div>
-  );
   const settingsSheet = settingsOpen ? (
     <BodyLayer>
-      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setSettingsOpen(null)}>
+      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setSettingsOpen(false)}>
         <div
           role="dialog"
           aria-modal="true"
           aria-label={ui.planSettings}
-          data-quiz-settings-sheet={settingsOpen}
+          data-quiz-settings-sheet="keep"
           onClick={(event) => event.stopPropagation()}
           className="flex max-h-[85vh] w-full max-w-md flex-col gap-3 overflow-y-auto rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
         >
           <div className="flex items-center justify-end">
-            <button type="button" aria-label={ui.billingClose} onClick={() => setSettingsOpen(null)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+            <button type="button" aria-label={ui.billingClose} onClick={() => setSettingsOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
               ✕
             </button>
           </div>
-          {settingsOpen === "keep" ? (
-            <>
-              {/* 어떤 낱말 */}
-              {keepFocus === "vocab" && bank ? (
+          {keepFocus === "vocab" && bank ? (
                 <div data-vocab-by className="flex flex-col gap-1.5">
                   <div role="group" className="flex flex-wrap gap-1.5">
             {(["stage", "pos", "topic"] as const).map((by) => (
@@ -1509,7 +1266,7 @@ export function TodayPlan({
                     aria-pressed={on}
                     onClick={() => {
                       saveCircle({ ...circleRef.current, lv: pickLevel(levelOf(circleRef.current, stage, cuts), row.start) });
-                      setSettingsOpen(null);
+                      setSettingsOpen(false);
                     }}
                     className={`flex items-baseline gap-2 rounded-xl border px-3 py-2 text-start ${on ? keepTone.on : "border-line hover:bg-white/10"}`}
                   >
@@ -1541,11 +1298,7 @@ export function TodayPlan({
             </div>
           ) : null}
                 </div>
-              ) : null}
-            </>
-          ) : (
-            waysGrid(waysFor("review"), reviewStyle, (next) => save({ ...settings, styles: { ...settings.styles, review: next } }), "review-style")
-          )}
+          ) : null}
         </div>
       </div>
     </BodyLayer>
@@ -1556,11 +1309,9 @@ export function TodayPlan({
   // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
   const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
-  const keepTabs: readonly ("vocab" | "exam" | "review")[] = ["vocab", "exam", "review"];
-  // 시험 탭: 모인 소재가 EXAM_POOL_MIN개면 시험(2026-11-01 사용자 "주기는 모인 소재로"), 그 전엔 모인 수와 모인 소재(누르면 Stagebank 수업).
+  // 시험 탭은 소재가 모여 시험이 생길 때만(2026-11-03). 그 전엔 탭·모인 수·소재 칩을 두지 않는다. 단어 시험은 어휘 탭에 그대로.
+  const keepTabs: readonly ("vocab" | "exam" | "review")[] = examReady ? ["vocab", "exam", "review"] : ["vocab", "review"];
   void examSeen;
-  const pool = examTab ? readPool(language) : {};
-  const poolKeys = Object.keys(pool);
   const startExam = () => {
     const circleNow = circleRef.current;
     const usable = (key: string) => Boolean(bank?.ready.has(key));
@@ -1575,7 +1326,7 @@ export function TodayPlan({
       wordQuestion: (key) => bundleQuiz(language, [key], { seed: `${day}-exam-${key}`, stage, style: "type", fallback: "choose", strict: true }).questions[0] ?? null,
     });
     // 짧은 대화 파트에 이 폰 대화 조각 하나(있으면).
-    const talk = talkFor("expression");
+    const talk = talkFor();
     if (talk && !items.some((item) => item.key === talk.key)) items.push({ key: talk.key, section: "dialog", question: talk.question });
     if (!items.length) return;
     void growBank(language, locale, items.filter((item) => !item.key.startsWith("w|")).map((item) => ({ key: item.key, stage })));
@@ -1583,29 +1334,12 @@ export function TodayPlan({
     setCheckupOpen("exam");
   };
   const examBody = (
-    <div data-exam className="mt-2 flex flex-col gap-2">
-      {examDue(pool) ? (
-        <button type="button" data-exam-start onClick={startExam} className={`flex w-full items-center gap-2 rounded-xl border ${keepTone.soft} px-3 py-2.5 text-start text-chat font-semibold text-ink`}>
-          <span aria-hidden>📝</span>
-          <span className="min-w-0 flex-1">{ui.examTitle}</span>
-          <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
-        </button>
-      ) : (
-        <p data-exam-pool className="px-1 text-caption tabular-nums text-slate-400">
-          {ui.examPool.replace("{n}", String(poolKeys.length)).replace("{m}", String(EXAM_POOL_MIN))}
-        </p>
-      )}
-      {poolKeys.length ? (
-        <div className="flex flex-wrap gap-1.5">
-          {poolKeys.slice(0, 30).map((key) => (
-            <button key={key} type="button" data-exam-pool-item={key} onClick={() => openLesson({ language, key })} dir="auto" className="rounded-full border border-line px-2.5 py-0.5 text-caption text-slate-200 hover:bg-white/10">
-              {keyLabel(language, key, grammarName)}
-            </button>
-          ))}
-        </div>
-      ) : null}
-      {/* 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. */}
-      {examDue(pool) ? null : <NativeAdSlot feedId="my-full" slotKey="exam-wait" spaced layerOnly />}
+    <div data-exam className="mt-2">
+      <button type="button" data-exam-start onClick={startExam} className={`flex w-full items-center gap-2 rounded-xl border ${keepTone.soft} px-3 py-2.5 text-start text-chat font-semibold text-ink`}>
+        <span aria-hidden>📝</span>
+        <span className="min-w-0 flex-1">{ui.examTitle}</span>
+        <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
+      </button>
     </div>
   );
   const keepBody = (
@@ -1631,7 +1365,7 @@ export function TodayPlan({
           })}
         </div>
         {!wrongTab && !examTab ? <WordbookCard icon ui={ui} language={language} locale={locale} words={words} onWord={(word) => preview?.open(word)} /> : null}
-        {!wrongTab && !examTab && bank ? settingsIcon("keep") : null}
+        {!wrongTab && !examTab && bank ? settingsIcon : null}
       </div>
       {testDue ? (
         <button
@@ -1706,20 +1440,8 @@ export function TodayPlan({
       {settingsSheet}
     </div>
   );
-  // 복습 칸(퀴즈 아래, 따로): 읽고 정리(2026-10-30 사용자 A — 카드는 NotebookSection이 studyMap/ReviewNotes로) + 📝 시험 아이콘.
-  // 틀린 것 다시 풀기는 퀴즈 칸의 "지난번에 틀린 것" 탭(nextStudy review 줄).
-  // Logbank 머리 아이콘(2026-10-31): 📈 실력 기록 · 📝 이번 주 확인 — 기록을 보는 곳이라 Quizbank에서 옮김.
-  const reviewBody =
-    reviewTest || checkups.length ? (
-      <div data-review className="mb-2 flex items-center justify-end gap-0.5">
-        {checkups.length ? (
-          <button type="button" data-skill-record-open aria-label={ui.skillRecord} title={ui.skillRecord} onClick={() => setCheckupOpen("record")} className={iconButton}>
-            <span aria-hidden>📈</span>
-          </button>
-        ) : null}
-        {reviewTest ? testIcon(reviewTest) : null}
-      </div>
-    ) : null;
+  // 실력 기록은 Logbank 육각형 한가운데(2026-11-03). 이번 주 확인 버튼은 새 앱에 없다.
+  const reviewBody = null;
   // My는 큰 칸만 보이고 나머지는 그 안으로(2026-10-30 사용자): 칸을 그리는 쪽(NotebookSection)이 오늘 할 것 · 단계 · 지속 학습 · 복습 순서로 놓는다.
   return children({
     today: { summary: todaySummary, body: todayBody, done: finished },

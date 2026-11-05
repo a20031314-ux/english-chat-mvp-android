@@ -624,9 +624,15 @@ const SCENES = [
         if (body.action === "mine") return route.fulfill({ json: { packs: [pack], own: [pack] } });
         return route.continue({ headers: { ...request.headers(), "x-rc-user": state.uid } });
       });
-      await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
+      const rooms = roomCopy(locale);
+      await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
       await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
-      await wait(4000);
+      await wait(2000);
+      await page.getByRole("button", { name: new RegExp(rooms.message.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) }).last().click();
+      await wait(1500);
+      await page.getByRole("button", { name: t.tab }).last().click();
+      await page.getByRole("button", { name: t.browse }).click();
+      await wait(2000);
       state.iconCopy = t;
     },
   },

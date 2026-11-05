@@ -59,7 +59,7 @@ export function AiTutorRows({
 /**
  * 대화 목록의 AI 튜터 한 줄(2026-10-20, `hub/drafts/one-list-tabs.md`).
  * 2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합": 사람 탭에 프로필(AiTutorProfile)이 있고, 대화 목록에는 다른 대화처럼
- * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅, 📞는 바로 통화. 통화 기록은 프로필 시트·AI 대화 ⋮(CallList, 채팅과 따로).
+ * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅, 📞는 바로 통화. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
  */
 export function AiTutorRow({
   ui,

@@ -12,6 +12,7 @@
  * 은행 꼭짓점의 수렴(어휘 탭 vocabLevel.ts를 넓힘): 항목마다 자리 d(쉬운 것 0 → 어려운 것 1, 은행 안 순서),
  * 꼭짓점 실력 θ(같은 눈금), 아는 확률 P = 1 / (1 + e^((d − θ)/σ)), 맞힐 확률 = g + (1 − g)·P(고르기 g = ⅓).
  * 기록을 때 순서로 다시 돌려(재생) θ += K·w·(맞음 − 맞힐 확률) — 처음 체크가 시작점, 체크가 없으면(기존 사용자) 지금 단계.
+ * 활용 시작 어림은 이해 어림 ×0.6 한 번(θ와 표시에 둘 다 곱하지 않음). 듣기 단계 띠는 질문 차례가 없으면 시작 어림.
  * 범위 = 1/√(처음 정밀도 + Σ w·정보) — ±5%p 안이면 수렴.
  *
  * 세부 칸(10절): 칸마다 Σ예상·Σ실제·분산·답 수(30일 반감) → 부족 = 답 8개+ · 예상보다 15%p+ 아래 · z ≥ 1.65.
@@ -312,8 +313,8 @@ export function computeFill(input: FillInput): FillResult {
     const family: Family = axis.startsWith("vocab") ? "vocab" : "sent";
     const use = axis.endsWith("Use");
     const items = family === "vocab" ? catalog.vocab : catalog.sent;
-    const share = PRIOR_SHARE[axis];
-    let theta = thetaForFill(prior.fill * share);
+    // θ는 이해 어림. 활용 몫(×0.6)은 아래에서 한 번만 곱한다 — θ에도 곱하면 0.36배가 되어 시작 어림이 0%로 보인다.
+    let theta = thetaForFill(prior.fill);
     const range0 = Math.max(CONVERGED_RANGE / 2, prior.range);
     let precision = 1 / (range0 * range0);
     let weightSum = 0;
@@ -367,7 +368,7 @@ export function computeFill(input: FillInput): FillResult {
       if (one.free) freeShare += evidence;
     }
     const known = stageSums.reduce((a, b) => a + b, 0);
-    const credit = use ? 0.6 : 1;
+    const credit = use ? PRIOR_SHARE[axis] : 1;
     const fill = clamp01((known * credit + (use ? 0.4 * freeShare : 0)) / total);
     const half = 1 / Math.sqrt(precision);
     // 범위는 θ 눈금 → 채움 눈금으로(가운데 기울기 근사).
@@ -497,15 +498,17 @@ export function listenFill(calls: readonly CallTurns[], prior: number, range0: n
     asked[s] += call.asked;
     got[s] += (call.heardYes ?? 0) + 0.5 * (call.heardAfter ?? 0);
   }
-  const bands = asked.map((n, i) => (n ? Math.min(1, got[i]! / n / LISTEN_FULL) : 0));
+  const scored = asked.map((n, i) => (n ? Math.min(1, got[i]! / n / LISTEN_FULL) : 0));
   const total = asked.reduce((a, b) => a + b, 0);
-  const measured = bands.reduce((a, b) => a + b, 0) / STAGES;
+  const measured = scored.reduce((a, b) => a + b, 0) / STAGES;
   const trust = total / (total + 10);
   const fill = clamp01(trust * measured + (1 - trust) * prior);
   const half = range0 / Math.sqrt(1 + total / 10);
-  const cells: FillCell[] = bands.map((value, i) => ({ axis: "listen" as const, id: `band:${i + 1}`, value, n: asked[i]!, gap: 0, state: (asked[i]! < WEAK_MIN_N ? "unknown" : value < 0.6 ? "weak" : "ok") as CellState }));
+  // 질문 차례가 없는 단계 띠는 0이 아니라 시작 어림(게이지가 빈 막대로 보이지 않게).
+  const stages = asked.map((n, i) => (n ? scored[i]! : prior));
+  const cells: FillCell[] = stages.map((value, i) => ({ axis: "listen" as const, id: `band:${i + 1}`, value, n: asked[i]!, gap: 0, state: (asked[i]! < WEAK_MIN_N ? "unknown" : value < 0.6 ? "weak" : "ok") as CellState }));
   for (const cell of cells) if (cell.state === "weak") cell.gap = 0.6 - cell.value;
-  return { axis: "listen", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: total, stages: bands, cells: sortCells(cells) };
+  return { axis: "listen", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: total, stages, cells: sortCells(cells) };
 }
 
 /* ───────── 계속 재기 ───────── */

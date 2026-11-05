@@ -9,7 +9,7 @@ import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 
 /**
  * AI 통화 기록 — 채팅(메시지)과 따로(2026-10-27 사용자 "통화 기능과 메시지 기능은 분리해줘. 한 탭에 넣더라도 기록이 따로 남도록").
- * 예전엔 AI 대화 안에 🗒 카드로 섞여 있었다. 이제 통화는 이 목록에만: 대화 탭 "AI 튜터와 통화" 줄, AI 대화 ⋮에서 연다.
+ * 예전엔 AI 대화 안에 🗒 카드로 섞여 있었다. 목록은 AI 튜터 프로필에서 연다. 사람 탭이 없을 때만 채팅 ⋮.
  * 새 통화(📞)·이어서 하기·돌아보기·지우기. 기록은 예전처럼 이 폰에만(callStore → saved.ts, 최근 20개).
  */
 export function CallList({

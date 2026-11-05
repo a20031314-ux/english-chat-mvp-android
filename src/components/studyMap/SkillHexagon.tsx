@@ -61,11 +61,16 @@ export function SkillHexagon({
   result,
   before,
   onAxis,
+  onRecord,
+  recordLabel,
 }: {
   ui: UICopy;
   result: FillResult;
   before: FillResult | null;
   onAxis: (axis: Axis) => void;
+  /** 육각형 한가운데 📈. 기록이 있을 때만(2026-11-03). */
+  onRecord?: () => void;
+  recordLabel?: string;
 }) {
   const now = AXES.map((axis, i) => point(i, Math.max(0.02, result.axes[axis].fill)));
   const then = before ? AXES.map((axis, i) => point(i, Math.max(0.02, before.axes[axis].fill))) : null;
@@ -123,6 +128,30 @@ export function SkillHexagon({
             </g>
           );
         })}
+        {onRecord ? (
+          <g
+            role="button"
+            tabIndex={0}
+            data-skill-record-open
+            aria-label={recordLabel}
+            onClick={(event) => {
+              event.stopPropagation();
+              onRecord();
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                onRecord();
+              }
+            }}
+            className="cursor-pointer outline-none"
+          >
+            <circle cx={CX} cy={CY} r="18" className="fill-black/75 stroke-info" strokeWidth="1.4" />
+            <text x={CX} y={CY + 6} textAnchor="middle" className="text-body">
+              📈
+            </text>
+          </g>
+        ) : null}
       </svg>
     </figure>
   );

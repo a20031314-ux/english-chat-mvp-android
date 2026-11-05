@@ -457,6 +457,13 @@ test("순서 문제는 낱말 하나가 조각 하나, 일본어 ください·�
   assert.deepEqual(tilesOf("このパンをください。", "ja"), ["この", "パン", "を", "ください"]);
   assert.deepEqual(segmentWords("おはようございます。", "ja"), ["おはよう", "ございます"]);
   assert.deepEqual(segmentWords("ちょっと待ってください。", "ja").slice(-1), ["ください"]);
+  // 한자 낱말은 중간에서 자르지 않는다(会社員·唐揚げ·担当者). 한 글자 동사·부사는 앞 낱말에 붙이지 않는다(映画見·少々声).
+  assert.deepEqual(tilesOf("わたしは会社員です。", "ja"), ["わたし", "は", "会社員です"]);
+  assert.deepEqual(tilesOf("試着してもいいですか。", "ja"), ["試着して", "も", "いいです", "か"]);
+  assert.deepEqual(tilesOf("ちょっと手伝ってください。", "ja"), ["ちょっと", "手伝って", "ください"]);
+  assert.deepEqual(tilesOf("時間があったら、一緒に映画見ようよ。", "ja"), ["時間", "が", "あったら", "一緒", "に", "映画", "見よう", "よ"]);
+  assert.deepEqual(tilesOf("恐れ入りますが、少々声が遠いようです。", "ja"), ["恐れ", "入ります", "が", "少々", "声", "が", "遠い", "ようです"]);
+  assert.ok(tilesOf("お手数ですが、使い終わったカップは返却口へお戻しください。", "ja").join("|").includes("返却口|へ|お戻し"));
   const es = orderOf("es", source("Creo que dejé las llaves en el coche."), fixed);
   assert.ok(es?.kind === "order" && es.words.length === 8);
   // 태국어 모음 부호(\p{M})는 그대로.

@@ -289,7 +289,6 @@ export function QuestionView({
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "dialog" ? <DialogView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "talk" ? <TalkView ui={ui} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -800,75 +799,6 @@ function SpotView({
         <p dir="auto" className="text-caption text-slate-300">
           {question.note}
         </p>
-      ) : null}
-    </div>
-  );
-}
-
-/** 대화에서 틀린 줄(2026-10-30): 줄을 눌러 고르고, 맞으면 그 줄에서 틀린 곳을 고친다(SpotView). 다른 줄을 고르면 틀림 + 틀린 줄 표시. */
-function DialogView({
-  ui,
-  locale,
-  language,
-  question,
-  answered,
-  onAnswer,
-  tag,
-}: {
-  ui: UICopy;
-  locale: string;
-  language: string;
-  question: Extract<QuizQuestion, { kind: "dialog" }>;
-  answered: Answer | null;
-  onAnswer: (answer: Answer) => void;
-  tag: string;
-}) {
-  const tone = useBankTone();
-  const [picked, setPicked] = useState<number | null>(null);
-  const right = picked === question.at;
-  return (
-    <div className="flex flex-col gap-2" data-dialog-lines>
-      {question.lines.map((line, i) => {
-        const mine = line.who === "me";
-        const shown = answered && !right && i === question.at;
-        const style =
-          picked === i && !right
-            ? "border-bad/70 text-slate-400 line-through"
-            : shown
-              ? "border-bad bg-bad/10 text-bad"
-              : right && i === question.at
-                ? tone.pick
-                : "border-line text-slate-100 hover:bg-white/5";
-        return (
-          <div key={i} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
-            {right && i === question.at ? (
-              <div className={`w-full max-w-[92%] rounded-2xl border px-3 py-2 ${style}`}>
-                <SpotView ui={ui} locale={locale} language={language} question={question.spot} answered={answered} onAnswer={onAnswer} tag={tag} bare />
-              </div>
-            ) : (
-              <button
-                type="button"
-                dir="auto"
-                disabled={Boolean(answered) || picked !== null}
-                onClick={() => {
-                  setPicked(i);
-                  if (i !== question.at) onAnswer({ correct: false });
-                }}
-                className={`max-w-[85%] rounded-2xl border px-3 py-2 text-start text-chat ${style}`}
-              >
-                {line.text}
-              </button>
-            )}
-          </div>
-        );
-      })}
-      {answered && !right ? (
-        <div className="flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">
-          <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
-            {question.spot.right}
-          </p>
-          <TTSButton text={question.spot.right} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
-        </div>
       ) : null}
     </div>
   );

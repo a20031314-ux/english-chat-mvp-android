@@ -69,7 +69,6 @@
 |---|---|---|---|
 | `call` | `call-live` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallParts.tsx` |
 | `chat-locked` | `chat-locked` | AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. | AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
-| `my-full` | `exam-wait` | 시험을 아직 못 열 때(소재가 모이는 중) 그 줄 아래 빈 공간에 네이티브 하나 — Quizbank 전체 화면에서만, 칩과 띄움. | My 탭 `my` · `studyMap/TodayPlan.tsx` |
 | `my-full` | `logbank-list` | Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. | My 탭 `my` · `studyMap/Logbank.tsx` |
 | `my-full` | `stagebank-stage` | 단계 화면 ‘이 단계에선 이런 대화가 돼요’ 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `my-full` | `stagebank-today` | Stagebank 전체 화면: 오늘 할 것 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만). | My 탭 `my` · `notes/NotebookSection.tsx` |
@@ -98,7 +97,7 @@
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 30개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 

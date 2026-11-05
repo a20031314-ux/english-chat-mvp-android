@@ -60,8 +60,8 @@ const totalQs = langs.reduce((n, l) => n + sum(stats.languages[l].questions), 0)
 const totalNo = langs.reduce((n, l) => n + sum(stats.languages[l].noQuiz), 0);
 out.push(`# 퀴즈 전수 점검 — ${date}`, "");
 out.push(
-  `> \`scripts/quiz-sweep/sweep.ts\`(규칙 검사, 모델 없음)${judged.total ? " + 판정 표본(`JUDGE.md`)" : ""} → \`report.mjs\`. 앱이 쓰는 코드(buildQuiz·bundleQuiz·nextStudy)로 문제를 만들어 검사 — 화면은 거치지 않음.`,
-  `> 학습 언어 ${langs.length} × 앱 언어 ${stats.uis} = ${langs.length * stats.uis} 조합 · 단계 1~5 · 열쇠 ${totalKeys}개 · 문제 ${totalQs}개(열쇠마다 씨앗 둘 × 모양 셋) · 문제를 못 만드는 열쇠 ${totalNo}개 · 하루 흐름 ${stats.days}일 × 하루 6묶음.`,
+  `> \`scripts/quiz-sweep/sweep.ts\`(규칙 검사, 모델 없음)${judged.total ? " + 판정 표본(`JUDGE.md`)" : ""} → \`report.mjs\`. 앱이 쓰는 코드(buildQuiz·bundleQuiz)로 문제를 만들어 검사 — 화면은 거치지 않음.`,
+  `> 학습 언어 ${langs.length} × 앱 언어 ${stats.uis} = ${langs.length * stats.uis} 조합 · 단계 1~5 · 열쇠 ${totalKeys}개 · 문제 ${totalQs}개(열쇠마다 씨앗 둘 × 모양 셋) · 문제를 못 만드는 열쇠 ${totalNo}개${stats.flows?.length ? ` · 하루 흐름 ${stats.days}일 × 하루 6묶음.` : "."}`,
   `> ${stats.net ? "운영 데이터 포함(--net): 앱 언어별 뜻풀이 옮김·낱말 카드(앞 100개)·문제은행 묶음." : "**앱 안 데이터만**(--net 없이): 낱말(w|)·문제은행 예문 없음, 영어·한국어 밖 앱 언어의 뜻 줄은 영어로 계산 — 뜻 줄 검사는 en·ko 앱만 정확."}`,
   `> 고치는 법: 이유마다 "고칠 자리" → \`scripts/ux-check/FIX.md\`와 같은 순서. 표시 전체: \`tmp/quiz-sweep/${date}/marks.jsonl\`(채팅이 끝나면 사라짐).`,
   "",
@@ -98,14 +98,16 @@ if (leakUi.length) {
   out.push("", "앱 언어가 학습 언어와 같으면 답하기 전에 보이는 뜻 줄(순서 맞추기·말하기·틀린 곳 고치기)이 문장 그 자체가 된다.");
 }
 
-out.push("", "## 하루 흐름 (Quizbank 문법·표현 탭, 정답률 80% 학습자, 문제 100개당)", "");
-out.push("| 학습 언어 | 탭 | 문제 | 같은 날 같은 문장 | 3일 안 다른 열쇠로 같은 문장 | 맞혀서 쉬는 열쇠가 다시 | 같은 열쇠 연달아 | 같은 열쇠 떨어져서(설계) | 빈 묶음 |", "|---|---|---|---|---|---|---|---|---|");
-const per = (n, d) => (d ? (Math.round((n / d) * 1000) / 10).toString() : "·");
-for (const l of langs) {
-  for (const tab of ["grammar", "expression"]) {
-    const flows = stats.flows.filter((f) => f.learn === l && f.tab === tab);
-    const t = flows.reduce((acc, f) => ({ q: acc.q + f.questions, s: acc.s + f.sameDay, o: acc.o + f.otherKey, r: acc.r + f.resting, w: acc.w + f.twice, a: acc.a + (f.apart ?? 0), e: acc.e + f.empty, b: acc.b + f.bundles }), { q: 0, s: 0, o: 0, r: 0, w: 0, a: 0, e: 0, b: 0 });
-    out.push(`| ${l} | ${tab === "grammar" ? "문법" : "표현"} | ${t.q} | ${per(t.s, t.q)} | ${per(t.o, t.q)} | ${per(t.r, t.q)} | ${per(t.w, t.q)} | ${per(t.a, t.q)} | ${t.e}/${t.b} |`);
+if (stats.flows?.length) {
+  out.push("", "## 하루 흐름 (Quizbank 문법·표현 탭, 정답률 80% 학습자, 문제 100개당)", "");
+  out.push("| 학습 언어 | 탭 | 문제 | 같은 날 같은 문장 | 3일 안 다른 열쇠로 같은 문장 | 맞혀서 쉬는 열쇠가 다시 | 같은 열쇠 연달아 | 같은 열쇠 떨어져서(설계) | 빈 묶음 |", "|---|---|---|---|---|---|---|---|---|");
+  const per = (n, d) => (d ? (Math.round((n / d) * 1000) / 10).toString() : "·");
+  for (const l of langs) {
+    for (const tab of ["grammar", "expression"]) {
+      const flows = stats.flows.filter((f) => f.learn === l && f.tab === tab);
+      const t = flows.reduce((acc, f) => ({ q: acc.q + f.questions, s: acc.s + f.sameDay, o: acc.o + f.otherKey, r: acc.r + f.resting, w: acc.w + f.twice, a: acc.a + (f.apart ?? 0), e: acc.e + f.empty, b: acc.b + f.bundles }), { q: 0, s: 0, o: 0, r: 0, w: 0, a: 0, e: 0, b: 0 });
+      out.push(`| ${l} | ${tab === "grammar" ? "문법" : "표현"} | ${t.q} | ${per(t.s, t.q)} | ${per(t.o, t.q)} | ${per(t.r, t.q)} | ${per(t.w, t.q)} | ${per(t.a, t.q)} | ${t.e}/${t.b} |`);
+    }
   }
 }
 

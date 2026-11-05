@@ -59,12 +59,17 @@ export function markTurn(signals: TurnSignals): TurnMark {
   if (signals.lead === "min") why.push("minimal");
   const stuck = signals.assessment === "stuck" || signals.hesitationMs > STUCK_MS || why.length >= 2;
   const flow: Flow = stuck ? "stuck" : why.length === 1 ? "snag" : "smooth";
-  const heard = signals.heard === "yes" && signals.afterMissed ? "after" : signals.heard;
+  // 감독이 heard를 비우면 자막 없이 답한 차례를 듣기 어림으로 남긴다(비면 듣기 축이 안 움직임). 막히면 못 알아들음.
+  const heard = signals.captions
+    ? undefined
+    : signals.heard === "yes" && signals.afterMissed
+      ? "after"
+      : signals.heard ?? (signals.afterMissed ? "after" : stuck ? "off" : "yes");
   return {
     flow,
     ...(why.length ? { why } : {}),
-    ...(heard && !signals.captions ? { heard } : {}),
-    ...(heard && signals.captions ? { captioned: true } : {}),
+    ...(heard ? { heard } : {}),
+    ...(signals.captions ? { captioned: true } : {}),
     ...(signals.lead ? { lead: signals.lead } : {}),
     ...(signals.leadHow ? { how: signals.leadHow } : {}),
     ...(signals.fnGroup ? { fn: signals.fnGroup } : {}),
@@ -100,10 +105,18 @@ export function tallyTurns(marks: readonly (TurnMark | undefined)[]): TurnTally 
     out[mark.flow] += 1;
     levels += mark.level;
     if (mark.lead) out[mark.lead] += 1;
-    if (mark.heard) {
+    if (mark.captioned) {
+      // 자막을 보고 답한 차례는 듣기가 아님.
+    } else if (mark.heard) {
       out.asked += 1;
       if (mark.heard === "yes") out.heardYes += 1;
       if (mark.heard === "after") out.heardAfter += 1;
+    } else if (mark.flow === "stuck") {
+      // 예전 통화(heard 칸이 생기기 전): 막힌 차례는 못 알아들음.
+      out.asked += 1;
+    } else {
+      out.asked += 1;
+      out.heardYes += 1;
     }
     for (const why of mark.why ?? []) out.why[why] = (out.why[why] ?? 0) + 1;
     if (mark.how) out.leadHow[mark.how] = (out.leadHow[mark.how] ?? 0) + 1;

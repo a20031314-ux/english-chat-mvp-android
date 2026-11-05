@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allFramesFor } from "./frames.ts";
-import { bundleQuiz, dialogOf, diffSpan, fixedRight, plainMisses, quizSources, spotFromCard, spotOf, typedRight } from "./quiz.ts";
+import { bundleQuiz, diffSpan, fixedRight, plainMisses, quizSources, spotFromCard, spotOf, typedRight } from "./quiz.ts";
 import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
 import { romajiToHiragana } from "../romaji.ts";
@@ -75,27 +75,13 @@ test("틀린 곳 고치기: 내가 고침받은 줄 — 자리가 하나면 고�
   assert.equal(diffSpan("fr", "Je suis allé au marché.", "Je suis allée au marché.")?.want, "allée");
 });
 
-test("묶음: 문법 탭은 빈칸 쓰기 + 틀린 곳 고치기(같은 열쇠 바로 뒤가 아님) + 대화 속 틀린 줄", () => {
+test("묶음: 다시 보기는 빈칸 쓰기 + 틀린 곳 고치기(같은 열쇠 바로 뒤가 아님)", () => {
   const keys = allFramesFor("en").filter((frame) => frame.stage <= 2).slice(0, 8).map((frame) => `f|${frame.id}`);
-  const made = bundleQuiz("en", keys, { seed: "2026-10-30-0", stage: 2, style: "type", fallback: "choose", strict: true, spots: { dialog: true } });
+  const made = bundleQuiz("en", keys, { seed: "2026-10-30-0", stage: 2, style: "type", fallback: "choose", strict: true, spots: {} });
   const kinds = made.questions.map((q) => q.kind);
   assert.ok(kinds.includes("spot"), kinds.join(","));
-  assert.ok(kinds.includes("dialog"), kinds.join(","));
-  assert.ok(kinds.filter((kind) => kind !== "spot" && kind !== "dialog").every((kind) => kind === "type" || kind === "choose"));
+  assert.ok(kinds.filter((kind) => kind !== "spot").every((kind) => kind === "type" || kind === "choose"));
   const at = kinds.indexOf("spot");
   assert.notEqual(made.keys[at], made.keys[at - 1]);
   assert.equal(made.keys.length, made.questions.length);
-});
-
-test("대화 속 틀린 줄: 한 줄만 바뀌고 나머지는 대본 그대로(태국어·아랍어)", () => {
-  for (const language of ["th", "ar"]) {
-    const dialog = dialogOf(language, 2, "seed");
-    assert.ok(dialog, language);
-    const q = dialog!.question;
-    assert.equal(q.kind, "dialog");
-    if (q.kind !== "dialog") continue;
-    assert.ok(q.lines.length >= 4 && q.lines.length <= 5);
-    assert.equal(q.lines[q.at]!.text, q.spot.text);
-    assert.ok(dialog!.key.startsWith("f|"));
-  }
 });

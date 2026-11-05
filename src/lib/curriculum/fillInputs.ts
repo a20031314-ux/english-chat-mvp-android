@@ -55,10 +55,13 @@ export function fillEvents(input: FillSources): FillEvent[] {
   }
 
   // 익힘 기록: 맞힌 날마다 한 번(같은 날 Quizbank 칸에 이미 있으면 뺌) — 고르기로 어림.
+  // r|틀은 꺼내 쓰기(만들어 냄). 은행 열쇠는 f|라서 그대로 두면 문장 활용이 빠진다.
   for (const [key, entry] of Object.entries(input.known)) {
+    const produced = key.startsWith("r|");
+    const bankKey = produced ? `f|${key.slice(2)}` : key;
     for (const utcDay of entry.days) {
-      if (seen.has(`${key}@${utcDay}`)) continue;
-      add({ at: utcDay * DAY + NOON, key, correct: true, source: "quiz", use: false, choose: true });
+      if (!produced && seen.has(`${bankKey}@${utcDay}`)) continue;
+      add({ at: utcDay * DAY + NOON, key: bankKey, correct: true, source: produced ? "recall" : "quiz", use: produced, ...(produced ? {} : { choose: true }) });
     }
   }
 

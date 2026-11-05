@@ -369,7 +369,10 @@ export function GuideButton({
   }, [open, locale]);
 
   const shown = data ?? (open ? readCachedGuide(locale) : null);
-  const chapters: GuideChapter[] = (shown?.chapters ?? []).filter((chapter) => availableGo.includes(chapter.go));
+  // 내 문장 말해보기(call.ownline)는 이 빌드에서 숨김(2026-11-03). 칸 순서는 서버에 그대로라 옛 앱 안내는 안 어긋난다.
+  const chapters: GuideChapter[] = (shown?.chapters ?? [])
+    .filter((chapter) => availableGo.includes(chapter.go))
+    .map((chapter) => ({ ...chapter, sections: chapter.sections.filter((section) => section.id !== "call.ownline") }));
   const sectionChapter = target.section ? chapters.find((chapter) => chapter.sections.some((row) => row.id === target.section))?.id : undefined;
   const overview = shown?.overview;
   const focusChapter = sectionChapter ?? (target.chapter === "flow" && !overview ? "my" : target.chapter);

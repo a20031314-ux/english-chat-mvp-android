@@ -21,6 +21,8 @@ test("알아들음: 자막을 켰으면 듣기 근거에서 빼고, 🙉 다시 
   assert.equal(markTurn({ ...base, heard: "yes", captions: true }).heard, undefined);
   assert.equal(markTurn({ ...base, heard: "yes", captions: true }).captioned, true);
   assert.equal(markTurn({ ...base, heard: "yes", afterMissed: true }).heard, "after");
+  assert.equal(markTurn(base).heard, "yes", "감독이 비우면 자막 없이 답한 차례는 알아들음");
+  assert.equal(markTurn({ ...base, assessment: "stuck" }).heard, "off");
 });
 
 test("통화 셈: 차례·이끎·알아들음·까닭을 세고 튜터 단계는 평균", () => {

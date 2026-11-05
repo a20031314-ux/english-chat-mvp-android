@@ -115,7 +115,7 @@
         {
           "heading": "El menú",
           "body": [
-            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:reportTitle}»"
           ],
           "shot": "tutor-pick"
         },
@@ -367,7 +367,7 @@
         {
           "heading": "Iconos",
           "body": [
-            "Consigue un paquete y envíalo desde 🙂. También puedes crear, compartir o vender los tuyos."
+            "En un chat directo o de grupo, mira, recibe y envía paquetes desde 🙂. También puedes crear o vender los tuyos."
           ],
           "shot": "people-icons"
         }
@@ -503,7 +503,7 @@
         {
           "heading": "メニュー",
           "body": [
-            "⋮ → 「{ui:tutorVoice}」・「{ui:tutorLanguage}」・「{ui:callRecordsTitle}」・「{ui:reportTitle}」"
+            "⋮ → 「{ui:tutorVoice}」・「{ui:tutorLanguage}」・「{ui:reportTitle}」"
           ],
           "shot": "tutor-pick"
         },
@@ -755,7 +755,7 @@
         {
           "heading": "アイコン",
           "body": [
-            "パックを受け取ると🙂から送れます。自分で作って公開・販売もできます。"
+            "1対1・グループの入力欄🙂からパックを見て、受け取って送れます。自分で作って販売もできます。"
           ],
           "shot": "people-icons"
         }
@@ -891,7 +891,7 @@
         {
           "heading": "菜单",
           "body": [
-            "⋮ → “{ui:tutorVoice}”·“{ui:tutorLanguage}”·“{ui:callRecordsTitle}”·“{ui:reportTitle}”"
+            "⋮ → “{ui:tutorVoice}”·“{ui:tutorLanguage}”·“{ui:reportTitle}”"
           ],
           "shot": "tutor-pick"
         },
@@ -1143,7 +1143,7 @@
         {
           "heading": "表情",
           "body": [
-            "领取表情包后从 🙂 发送。也可以自己做、分享或出售。"
+            "在私聊或群聊输入栏的 🙂 里浏览、领取并发送。也可以自己做或出售。"
           ],
           "shot": "people-icons"
         }
@@ -1279,7 +1279,7 @@
         {
           "heading": "Menu",
           "body": [
-            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
           ],
           "shot": "tutor-pick"
         },
@@ -1531,7 +1531,7 @@
         {
           "heading": "Biểu tượng",
           "body": [
-            "Nhận gói để gửi từ 🙂. Bạn cũng có thể tự làm, chia sẻ hoặc bán."
+            "Trong chat riêng hoặc nhóm, xem, nhận và gửi gói từ 🙂. Bạn cũng có thể tự làm hoặc bán."
           ],
           "shot": "people-icons"
         }
@@ -1667,7 +1667,7 @@
         {
           "heading": "Le menu",
           "body": [
-            "⋮ → « {ui:tutorVoice} » · « {ui:tutorLanguage} » · « {ui:callRecordsTitle} » · « {ui:reportTitle} »"
+            "⋮ → « {ui:tutorVoice} » · « {ui:tutorLanguage} » · « {ui:reportTitle} »"
           ],
           "shot": "tutor-pick"
         },
@@ -1919,7 +1919,7 @@
         {
           "heading": "Icônes",
           "body": [
-            "Récupérez un pack pour l'envoyer depuis 🙂. Vous pouvez aussi créer, partager ou vendre les vôtres."
+            "Dans une discussion privée ou de groupe, parcourez, recevez et envoyez des packs depuis 🙂. Vous pouvez aussi créer ou vendre les vôtres."
           ],
           "shot": "people-icons"
         }
@@ -2055,7 +2055,7 @@
         {
           "heading": "Il menu",
           "body": [
-            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:reportTitle}»"
           ],
           "shot": "tutor-pick"
         },
@@ -2307,7 +2307,7 @@
         {
           "heading": "Icone",
           "body": [
-            "Prendi un pacchetto e invialo da 🙂. Puoi anche crearne, condividerne o venderne di tuoi."
+            "In una chat diretta o di gruppo, sfoglia, ricevi e invia i pacchetti da 🙂. Puoi anche crearne o venderne di tuoi."
           ],
           "shot": "people-icons"
         }
@@ -2443,7 +2443,7 @@
         {
           "heading": "O menu",
           "body": [
-            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
           ],
           "shot": "tutor-pick"
         },
@@ -2695,7 +2695,7 @@
         {
           "heading": "Ícones",
           "body": [
-            "Pegue um pacote para enviar pelo 🙂. Você também pode criar, compartilhar ou vender os seus."
+            "No chat direto ou em grupo, veja, receba e envie pacotes pelo 🙂. Você também pode criar ou vender os seus."
           ],
           "shot": "people-icons"
         }
@@ -2831,7 +2831,7 @@
         {
           "heading": "Меню",
           "body": [
-            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
+            "⋮ → «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:reportTitle}»"
           ],
           "shot": "tutor-pick"
         },
@@ -3083,7 +3083,7 @@
         {
           "heading": "Иконки",
           "body": [
-            "Получите набор и отправляйте из 🙂. Можно создать, выложить или продать свой."
+            "В личном или групповом чате смотрите, получайте и отправляйте наборы из 🙂. Можно создать или продать свой."
           ],
           "shot": "people-icons"
         }
@@ -3219,7 +3219,7 @@
         {
           "heading": "Menu",
           "body": [
-            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
           ],
           "shot": "tutor-pick"
         },
@@ -3471,7 +3471,7 @@
         {
           "heading": "Ikon",
           "body": [
-            "Ambil paket untuk dikirim dari 🙂. Kamu juga bisa membuat, membagikan, atau menjual punyamu."
+            "Di chat pribadi atau grup, lihat, ambil, dan kirim paket dari 🙂. Kamu juga bisa membuat atau menjual punyamu."
           ],
           "shot": "people-icons"
         }
@@ -3607,7 +3607,7 @@
         {
           "heading": "القائمة",
           "body": [
-            "⋮ ← «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:callRecordsTitle}» · «{ui:reportTitle}»"
+            "⋮ ← «{ui:tutorVoice}» · «{ui:tutorLanguage}» · «{ui:reportTitle}»"
           ],
           "shot": "tutor-pick"
         },
@@ -3859,7 +3859,7 @@
         {
           "heading": "أيقونات",
           "body": [
-            "احصل على حزمة لترسلها من 🙂. ويمكنك أيضًا صنع حزمتك ومشاركتها أو بيعها."
+            "في دردشة خاصة أو جماعية، تصفّح الحزم واستلمها وأرسلها من 🙂. ويمكنك أيضًا صنع حزمتك أو بيعها."
           ],
           "shot": "people-icons"
         }
@@ -3995,7 +3995,7 @@
         {
           "heading": "เมนู",
           "body": [
-            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
           ],
           "shot": "tutor-pick"
         },
@@ -4247,7 +4247,7 @@
         {
           "heading": "ไอคอน",
           "body": [
-            "รับแพ็กแล้วส่งจาก 🙂 ได้ ทำเอง แชร์ หรือขายก็ได้"
+            "ในแชทส่วนตัวหรือกลุ่ม ดู รับ และส่งแพ็กจาก 🙂 ได้ และทำหรือขายเองก็ได้"
           ],
           "shot": "people-icons"
         }
@@ -4383,7 +4383,7 @@
         {
           "heading": "मेनू",
           "body": [
-            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:callRecordsTitle}’ · ‘{ui:reportTitle}’"
+            "⋮ → ‘{ui:tutorVoice}’ · ‘{ui:tutorLanguage}’ · ‘{ui:reportTitle}’"
           ],
           "shot": "tutor-pick"
         },
@@ -4635,7 +4635,7 @@
         {
           "heading": "आइकन",
           "body": [
-            "पैक लें और 🙂 से भेजें। अपना बनाकर शेयर या बेच भी सकते हैं।"
+            "निजी या ग्रुप चैट में 🙂 से पैक देखें, लें और भेजें। अपना बनाकर बेच भी सकते हैं।"
           ],
           "shot": "people-icons"
         }

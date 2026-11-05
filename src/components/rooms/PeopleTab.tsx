@@ -17,25 +17,22 @@ import { requestDm } from "@/lib/rooms/openDm";
 import { PeopleList } from "./RoomPeople";
 import { InviteButton } from "@/components/invite/InviteButton";
 import { BoardView } from "./BoardView";
-import { IconsView } from "./IconPacks";
-import { iconCopy } from "@/lib/rooms/iconCopy";
 import { AiTutorPeople } from "@/components/AiTutorProfile";
 
 /**
  * 하단 "사람" 탭: 최근에 앱을 쓴 사람들의 프로필 목록(RoomPeople.tsx).
  * 카드에서 팔로우·메시지, 누르면 프로필 시트. 메시지는 말하는 방과 같은 대화 화면(openDm.ts).
  * 로그인해야 보인다 — 안 했으면 My와 같은 계정 카드.
- * 보는 방식(2026-10-19): 사람 / 게시판(BoardView.tsx) / 아이콘(IconPacks.tsx, 2026-10-23), 고른 것은 기기에(`peopleViewMode`).
+ * 보는 방식: 사람 / 게시판(BoardView.tsx). 아이콘 마켓은 1:1·단체방 입력칸 🙂(2026-11-03 이 칩·게시판에서 뺌). 고른 것은 기기에(`peopleViewMode`).
  */
-type PeopleView = "people" | "board" | "icons";
+type PeopleView = "people" | "board";
 const VIEW_KEY = "peopleViewMode";
 // 사람 = 👤(프로필) — 👥는 단체방 표시라 겹치지 않게(2026-11-02 사용자 "단체방, 프로필 아이콘이 중첩").
-const VIEW_EMOJI = { people: "👤", board: "📋", icons: "🙂" } as const;
+const VIEW_EMOJI = { people: "👤", board: "📋" } as const;
 
 function readView(): PeopleView {
   try {
-    const saved = localStorage.getItem(VIEW_KEY);
-    return saved === "board" || saved === "icons" ? saved : "people";
+    return localStorage.getItem(VIEW_KEY) === "board" ? "board" : "people";
   } catch {
     return "people";
   }
@@ -70,7 +67,7 @@ export function PeopleTab({
       // Kept for this session only.
     }
   };
-  const VIEW_NAME: Record<PeopleView, string> = { people: t.peopleViewList, board: t.boardTab, icons: iconCopy(locale).tab };
+  const VIEW_NAME: Record<PeopleView, string> = { people: t.peopleViewList, board: t.boardTab };
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
@@ -109,7 +106,7 @@ export function PeopleTab({
             ) : null}
             {/* 보기 칩은 이모지만(이름은 aria-label·title, 2026-10-24 사용자). */}
             <div className="mb-3 flex gap-1" role="group">
-              {(["people", "board", "icons"] as const).map((mode) => (
+              {(["people", "board"] as const).map((mode) => (
                 <button
                   key={mode}
                   type="button"
@@ -125,8 +122,6 @@ export function PeopleTab({
             </div>
             {view === "board" ? (
               <BoardView t={t} locale={locale} targetLanguage={targetLanguage} onOpenGroup={onOpenGroup} />
-            ) : view === "icons" ? (
-              <IconsView locale={locale} targetLanguage={targetLanguage} />
             ) : (
               <>
                 {/* AI 튜터도 사람 중 하나로 맨 위에(2026-10-27) — 여자·남자 둘(2026-11-02). */}

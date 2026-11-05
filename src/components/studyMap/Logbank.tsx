@@ -23,11 +23,12 @@ import type { KnownMap } from "@/lib/curriculum/known";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { computeFill, fillCatalog, keysInCell, type Axis, type BankAxis, type FillCell, type FillEvent} from "@/lib/curriculum/fill";
 import { callTurnsOf, fillEvents } from "@/lib/curriculum/fillInputs";
-import { FILL_CHECK_EVENT, readFillCheck, saveFillCheck } from "@/lib/curriculum/fillCheck";
+import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
 import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
 import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
 import { segmentWords } from "@/lib/wordSegments";
 import { AxisDetail, axisName, CellDetail, cellName, SkillHexagon, type CellPlan } from "@/components/studyMap/SkillHexagon";
+import { SkillRecord } from "@/components/studyMap/SkillRecord";
 
 function localDay(at: number): string {
   const d = new Date(at);
@@ -214,6 +215,7 @@ export function Logbank({
   const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
   // 육각형 아래 ⏱ 한 줄을 누르면 학습 시간 막대(예전 기준 탭 ⏱ 자리, 2026-11-02 기준 탭은 육각형 꼭짓점으로).
   const [showTime, setShowTime] = useState(false);
+  const [recordOpen, setRecordOpen] = useState(false);
   const [openAxis, setOpenAxis] = useState<Axis | null>(null);
   const [openCell, setOpenCell] = useState<FillCell | null>(null);
   const [back, setBack] = useState(0);
@@ -422,17 +424,29 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
-        {/* Starting estimate (user 2026-11-03): without a level check the hexagon starts from the current stage; while there is little data, [beginner | mid | advanced] lets the learner reset it. Buttons only (RULES 4). */}
-        {!check && events.length < 20 ? (
-          <div role="radiogroup" aria-label={ui.mapLevelLabel} data-log-fill-check className="flex flex-wrap justify-center gap-1.5">
-            {(["beginner", "mid", "advanced"] as const).map((level) => (
-              <button key={level} type="button" role="radio" aria-checked={false} data-fill-level={level} onClick={() => saveFillCheck(language, level)} className={chip(false)}>
-                {level === "beginner" ? ui.mapLevelBeginner : level === "mid" ? ui.mapLevelIntermediate : ui.mapLevelAdvanced}
-              </button>
-            ))}
-          </div>
+        <SkillHexagon
+          ui={ui}
+          result={fill}
+          before={before}
+          onAxis={setOpenAxis}
+          onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
+          recordLabel={ui.skillRecord}
+        />
+        {recordOpen && checkups?.length ? (
+          <SkillRecord
+            ui={ui}
+            locale={locale}
+            checkups={checkups}
+            labelOf={(key) => {
+              if (key.startsWith("g|") && grammarName) {
+                const [stage, index] = key.slice(2).split(":").map(Number);
+                return grammarName(stage!, index!);
+              }
+              return keyLabel(key);
+            }}
+            onClose={() => setRecordOpen(false)}
+          />
         ) : null}
-        <SkillHexagon ui={ui} result={fill} before={before} onAxis={setOpenAxis} />
         <button
           type="button"
           data-log-time
