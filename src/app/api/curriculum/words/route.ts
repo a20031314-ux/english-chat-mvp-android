@@ -9,6 +9,7 @@ import { BANK_CHUNK, hasBank } from "@/lib/curriculum/vocabBank";
 import { cardsInUi, extraChunk, extraCount, searchWord } from "@/lib/server/wordExtras";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { wordSenses } from "@/lib/server/wordSenses";
+import { preparedCopy } from "@/lib/server/preparedCopy";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -41,6 +42,11 @@ export async function GET(request: NextRequest) {
     return jsonWithCors(request, { cards, total, size: BANK_CHUNK });
   }
   // ?senses=<낱말>: 단어 사전 낱말의 여러 뜻(server/wordSenses.ts, 2026-11-06) — 처음 한 번만 모델(wordSenses op), 그 뒤엔 저장된 것.
+  // ?prepared=1: 넣어 둔 문법·표현 문제의 뜻·까닭을 앱 언어로(server/preparedCopy.ts, 2026-11-06) — 학습 언어 × 앱 언어마다 처음 한 번만 모델.
+  if (params.has("prepared")) {
+    const copy = await preparedCopy(language, ui, () => void meterRequest(request, "preparedCopy")).catch(() => ({}));
+    return jsonWithCors(request, { copy });
+  }
   if (params.has("senses")) {
     const senses = await wordSenses(language, params.get("senses") ?? "", ui, () => void meterRequest(request, "wordSenses")).catch(() => []);
     return jsonWithCors(request, { senses });

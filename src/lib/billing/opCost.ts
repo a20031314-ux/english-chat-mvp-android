@@ -101,6 +101,8 @@ export const OP_COST: Record<string, OpCost> = {
   fixedLesson: estimated("fixedLesson", { input: 5500, output: 1600 }),
   // 단어 사전 여러 뜻 하나(server/wordSenses.ts): 짧은 지시 + 낱말, 뜻 넷까지 JSON.
   wordSenses: estimated("wordSenses", { input: 450, output: 450 }),
+  // 넣어 둔 문제 뜻·까닭 묶음 하나(20문제 = 40줄, server/preparedCopy.ts).
+  preparedCopy: estimated("translate", { input: 1600, output: 2000 }),
   // 출력에 Haiku 앞 생각 몫을 얹음(2026-11-02 낱말 꼴 오답 — 운영에서 1600 한도를 생각으로 다 쓴 빈 답 확인).
   qbankGrow: estimated("translate", { input: 700, output: 1500 }),
   qbankSeed: estimated("translate", { input: 500, output: 400 }),

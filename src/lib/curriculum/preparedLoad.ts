@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { PreparedItem } from "./preparedQuiz";
 import { stageOfRank } from "./vocabBank";
 import { ladderFor } from "./stages/index";
+import { apiUrl } from "../apiBase";
 
 type Raw = {
   kind?: string;
@@ -123,17 +124,67 @@ async function build(language: string, files: (() => Promise<{ default: Record<s
   return items;
 }
 
-export function usePrepared(language: string): PreparedItem[] | null {
+const COPY = "preparedCopy.v1";
+const COPY_DAYS = 30;
+
+/**
+ * 앱 언어가 한국어가 아니면 뜻·까닭을 그 말로(server/preparedCopy.ts, 2026-11-06 사용자 "다른 앱언어도 나오게해줘").
+ * 옮긴 것이 없는 문제와 단어 문제(뜻이 한국어뿐 — 카드가 맡음)는 뺀다. 이 폰에 30일.
+ */
+async function inUi(language: string, ui: string, items: PreparedItem[]): Promise<PreparedItem[]> {
+  if (ui === "ko") return items;
+  const cacheKey = `${COPY}.${language}.${ui}`;
+  let copy: Record<string, { gloss: string; why: string }> | null = null;
+  try {
+    const kept = JSON.parse(localStorage.getItem(cacheKey) ?? "null") as { at: number; copy: Record<string, { gloss: string; why: string }> } | null;
+    if (kept && Date.now() - kept.at < COPY_DAYS * 86400000 && Object.keys(kept.copy).length) copy = kept.copy;
+  } catch {
+    copy = null;
+  }
+  if (!copy) {
+    const body = await fetch(apiUrl(`/api/curriculum/words?prepared=1&lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}`))
+      .then((response) => (response.ok ? (response.json() as Promise<{ copy?: Record<string, { gloss: string; why: string }> }>) : null))
+      .catch(() => null);
+    copy = body?.copy && typeof body.copy === "object" ? body.copy : {};
+    // 다 옮겨졌을 때만 남긴다(일부 실패면 다음에 다시).
+    const want = items.filter((item) => item.kind !== "word").length;
+    if (Object.keys(copy).length >= want) {
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify({ at: Date.now(), copy }));
+      } catch {
+        // 이번에만.
+      }
+    }
+  }
+  const out: PreparedItem[] = [];
+  for (const item of items) {
+    if (item.kind === "word") continue;
+    const one = copy[item.key];
+    if (one?.gloss && one.why) out.push({ ...item, gloss: one.gloss, why: one.why });
+  }
+  return out;
+}
+
+/** ui = 앱 언어. 앱 언어 = 학습 언어면 없음(뜻 줄이 곧 문장). */
+export function usePrepared(language: string, ui = "ko"): PreparedItem[] | null {
+  const want = language && ui !== language ? language : "";
+  return usePreparedFor(want, ui);
+}
+
+function usePreparedFor(language: string, ui: string): PreparedItem[] | null {
   // 언어를 바꾸면 그 언어 것이 올 때까지 null(예전 언어 문제를 잠깐이라도 내지 않게).
-  const [loaded, setLoaded] = useState<{ language: string; items: PreparedItem[] | null } | null>(null);
+  const id = `${language}|${ui}`;
+  const [loaded, setLoaded] = useState<{ id: string; items: PreparedItem[] | null } | null>(null);
   useEffect(() => {
     let live = true;
-    void loadPrepared(language).then((list) => {
-      if (live) setLoaded({ language, items: list });
-    });
+    void loadPrepared(language)
+      .then((list) => (list ? inUi(language, ui, list) : null))
+      .then((list) => {
+        if (live) setLoaded({ id, items: list?.length ? list : null });
+      });
     return () => {
       live = false;
     };
-  }, [language]);
-  return loaded && loaded.language === language ? loaded.items : null;
+  }, [language, ui, id]);
+  return loaded && loaded.id === id ? loaded.items : null;
 }

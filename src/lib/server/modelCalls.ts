@@ -75,6 +75,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   fixedLesson: 2,
   // 단어 사전 여러 뜻(server/wordSenses.ts) — 낱말 × 앱 언어마다 처음 한 번, 저장된 뒤엔 0.
   wordSenses: 1,
+  // 넣어 둔 문법·표현 문제 뜻·까닭 옮기기(server/preparedCopy.ts) — 학습 언어 × 앱 언어마다 처음 한 번(묶음 몇 개), 저장된 뒤엔 0.
+  preparedCopy: 1,
   // 자라는 문제은행(server/qbank.ts) — 열쇠가 모자랄 때만 만들기 1 + 앱 언어 뜻 옮기기 1, 열쇠마다 하루 3번·전체 하루 400번까지.
   qbankGrow: 2,
   // 출시 초반 문제은행 미리 채우기(예약 작업 /api/curriculum/qbank/seed) — 예문 없는 열쇠마다 만들기 1, 한 번에 30개·2시간마다, 다 돌면 0.
