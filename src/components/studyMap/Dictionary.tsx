@@ -246,27 +246,37 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
       >
         <span aria-hidden>📕</span>
       </button>
-      {open ? (
-        <BodyLayer>
-          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
-            <div
-              role="dialog"
-              aria-modal="true"
-              data-dictionary
-              onClick={(event) => event.stopPropagation()}
-              className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
-            >
-              <div className="flex items-center gap-2">
-                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.dictionaryTitle}</h3>
-                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
-                  ✕
-                </button>
-              </div>
-              <DictionaryBody ui={ui} language={language} locale={locale} />
-            </div>
-          </div>
-        </BodyLayer>
-      ) : null}
+      {open ? <DictionarySheet ui={ui} language={language} locale={locale} onClose={() => setOpen(false)} /> : null}
     </>
+  );
+}
+
+/** 사전 시트 — 📕 단어 사전, 그리고 개편 Quizbank 문제의 사전 문(word를 주면 그 낱말 화면부터). */
+export function DictionarySheet({ ui, language, locale, word, title, onClose }: { ui: UICopy; language: string; locale: string; word?: string; title?: string; onClose: () => void }) {
+  const [pick, setPick] = useState<string | undefined>(word);
+  return (
+    <BodyLayer>
+      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={onClose}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          data-dictionary
+          onClick={(event) => event.stopPropagation()}
+          className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
+        >
+          <div className="flex items-center gap-2">
+            <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{title ?? ui.dictionaryTitle}</h3>
+            <button type="button" aria-label={ui.billingClose} onClick={onClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+              ✕
+            </button>
+          </div>
+          {word ? (
+            <DictionaryBody ui={ui} language={language} locale={locale} word={pick} onIndex={() => setPick(undefined)} onPick={setPick} />
+          ) : (
+            <DictionaryBody ui={ui} language={language} locale={locale} />
+          )}
+        </div>
+      </div>
+    </BodyLayer>
   );
 }

@@ -31,6 +31,7 @@ export function InlineQuiz({
   onParts,
   empty,
   explainLink = false,
+  dictDoor = false,
   adKey,
 }: {
   ui: UICopy;
@@ -47,6 +48,8 @@ export function InlineQuiz({
   empty: React.ReactNode;
   /** 틀리면 "설명"으로 Stagebank 그 소재 수업(다시 보기 탭). */
   explainLink?: boolean;
+  /** 답한 뒤 사전 문(개편 Quizbank, QuestionView dictDoor). */
+  dictDoor?: boolean;
   /**
    * Quizbank에서 이어 푸는 퀴즈(있으면): 문제 아래 네이티브(Quizbank 전체 화면에서만, 문제가 바뀔 때 60초 넘었으면 새 광고)와
    * 10문제를 넘긴 뒤 묶음 경계의 전면(quizBreak). 오늘 할 것의 한 문제에는 없음(항목 사이 광고 없음).
@@ -129,6 +132,7 @@ export function InlineQuiz({
         onNext={next}
         bankKey={batch.keys[index]}
         explainLink={explainLink}
+        dictDoor={dictDoor}
       />
       {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
       {adKey ? <NativeAdSlot feedId="quiz-inline" slotKey={`${adKey}-${adRound}`} spaced layerOnly /> : null}

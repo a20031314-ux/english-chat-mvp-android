@@ -24,6 +24,7 @@ import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/lear
 import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { openLesson } from "@/lib/appIntents";
+import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { useOptionNotes } from "@/lib/curriculum/optionNotes";
 
 /**
@@ -221,6 +222,7 @@ export function QuestionView({
   explainLink = false,
   autoAdvance = true,
   glossFirst = false,
+  dictDoor = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -239,7 +241,13 @@ export function QuestionView({
   autoAdvance?: boolean;
   /** 빈칸 쓰기의 뜻 줄을 답하기 전에도(문장구조 수업 — 배운 틀을 뜻을 보고 떠올림). 낱말 문제는 늘 답한 뒤에만(2026-10-31). */
   glossFirst?: boolean;
+  /**
+   * 개편 Quizbank(lib/reform.ts): 답한 뒤 그 소재의 사전 문 — 낱말은 사전 시트(그 낱말 화면), 표현·문법·문장구조는 그 수업(openLesson).
+   * 답하기 전에는 없다(정답이 보임). 틀리거나 모르겠어요면 진하게.
+   */
+  dictDoor?: boolean;
 }) {
+  const [dictWord, setDictWord] = useState<string | null>(null);
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
   const question: QuizQuestion = useMemo(
     () =>
@@ -263,7 +271,7 @@ export function QuestionView({
   // Blank questions with a key show more examples after the answer, so they wait for 다음 (user, 2026-10-31).
   // 문법 칸(g|)은 같은 문법을 쓴 아무 대본 줄이라 문제와 상관없어 보임(가상 사용자 2026-11-01 "정답 뒤 예문이 늘 Me llamo/Soy de") — 빼기.
   const examples = showExamples && Boolean(bankKey) && !bankKey?.startsWith("g|") && (question.kind === "choose" || question.kind === "type");
-  const autoNext = Boolean(autoAdvance && answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
+  const autoNext = Boolean(autoAdvance && !dictWord && answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
@@ -305,6 +313,17 @@ export function QuestionView({
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
+          {dictDoor && bankKey && /^[wefg]\|/.test(bankKey) ? (
+            <button
+              type="button"
+              data-quiz-dict
+              onClick={() => (bankKey.startsWith("w|") ? setDictWord(bankKey.slice(2)) : openLesson({ language, key: bankKey }))}
+              className={`ms-auto rounded-full border px-3 py-1 text-caption hover:bg-white/10 ${answered.correct ? "border-line text-slate-400" : "border-slate-300 font-semibold text-ink"}`}
+            >
+              <span aria-hidden>📕 </span>
+              {ui.languagebankTitle}
+            </button>
+          ) : null}
           {explainLink && !answered.correct && bankKey && /^[efg]\|/.test(bankKey) ? (
             <button type="button" data-quiz-explain onClick={() => openLesson({ language, key: bankKey })} className="ms-auto rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
               {ui.explanation}
@@ -315,6 +334,7 @@ export function QuestionView({
           </button>
         </div>
       ) : null}
+      {dictWord ? <DictionarySheet ui={ui} language={language} locale={locale} word={dictWord} title={ui.languagebankTitle} onClose={() => setDictWord(null)} /> : null}
     </section>
   );
 }
