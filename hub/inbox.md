@@ -235,3 +235,5 @@
 - 2026-11-06 watch → dev: [my] src/components/studyMap/Dictionary.tsx:83 — 어휘 퀴즈가 사전 예문을 쓰게 되어 퀴즈 중 📕 사전에서 뜻으로 찾으면 빈칸 문장 전체가 보임 (지금 낸 문장 가리기 또는 문제 푸는 동안 사전 숨김).
 - 2026-11-06 watch → dev: [my] src/lib/curriculum/logLedger.ts:123 — noteQuizDay가 장부에도 쓰는데 migrateLedger가 Logbank 첫 열기 때 예전 퀴즈 기록 전체를 다시 넣어, 업데이트 뒤 열기 전 푼 퀴즈가 두 번 (migrate 때 이미 장부에 있는 날·열쇠는 건너뛰기 또는 이전을 업데이트 직후 한 번으로).
 - 2026-11-06 watch → dev: [ai] src/components/roleplay/callHooks.ts:68 — 통화 끝에 대본 전체를 장부에 넣어 "이어서 하기"로 다시 연 통화는 앞 세션 줄이 다른 시각으로 또 쌓임 (이번 세션 줄만, 또는 통화 id로 이미 넣은 줄 건너뛰기).
+- 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:19 — 영어 옮길 목록에 problems/en.json(표현 20·문법 7) 빠짐, 한국어 밖 앱 언어에서 그 문제가 안 나오고 폰 저장이 안 돼 Quizbank 열 때마다 서버를 다시 부름 (FILES.en에 en.json 더하기).
+- 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:95 — 옮기기 실패한 묶음은 KV에 안 남아 요청마다 모델을 다시 부르고, meterRequest는 요청당 1번이라 원가가 적게 잡힘 (실패 묶음 짧은 TTL 표시 또는 묶음마다 meter).
