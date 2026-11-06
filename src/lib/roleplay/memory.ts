@@ -95,7 +95,11 @@ Plain sentences, in English, at most 80 words. Nothing about this being practice
 Also write "facts": what you learned about their life — work, plans, places, people, things they did or like. Not grammar, not a sentence you corrected, not something you only suggested. One short English sentence each. Today is ${input.today}. When they said when it happened, write that day instead of a relative word. An empty list when nothing about their life was said.
 
 ${input.summary ? `
-The call is over. Also write "summary": a short note from you, ${input.summary.name}, to them about this whole call, the way you talk (${input.summary.manner}). Write it in ${input.summary.language}, speaking to them as "you", in two or three short sentences: what you talked about, one thing they did well in it, and one specific thing to practise next time — something that actually came up in this call. You may name a word or pattern in ${input.summary.target}. No levels, scores, grades, percentages or praise for being a learner; do not quote whole sentences of theirs; no lists. If they said very little, one or two sentences are enough.
+The call is over. Also write "summary": a short note from you, ${input.summary.name}, to them about this whole call, the way you talk (${input.summary.manner}). Write it in ${input.summary.language}, speaking to them as "you": at most three short sentences, about 60 words in all, no questions, no lists.
+1. What you talked about, in a few words.
+2. One thing they said well — something that is really in their lines above.
+3. One thing to practise next: the mistake they made most in their own lines above (look at what they said, not at what you said), named by its right form in ${input.summary.target}, a few words, not a whole sentence of theirs. If they made no mistake, something they could say more of. Never invent a mistake, a word or a topic that is not in this call.
+They are learning ${input.summary.target}: every word, form or example from it stays in ${input.summary.target}. Never give an example in ${input.summary.language} or show how to say it in ${input.summary.language}. No levels, scores, grades, percentages or praise for being a learner.
 ` : ""}
 Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]${input.summary ? `, "summary": "<your note to them>"` : ""}}`;
 }

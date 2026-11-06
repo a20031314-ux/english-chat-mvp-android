@@ -124,6 +124,9 @@ test("the last fold also asks the tutor for a note to the learner, in their lang
   assert.match(last, /Write it in Korean \(한국어\)/);
   assert.match(last, /from you, Haruto/);
   assert.match(last, /No levels, scores, grades, percentages/);
+  assert.match(last, /Never give an example in Korean \(한국어\)/, "the example stays in the language they learn");
+  assert.match(last, /Never invent a mistake/);
+  assert.match(last, /at most three short sentences/);
   assert.match(last, /"summary": "<your note to them>"/);
 });
 
