@@ -44,3 +44,18 @@ test("사전 예문 → 퀴즈 재료: 빈칸 조각이 문장에 그대로 든 
   assert.deepEqual(es.map((line) => line.piece), ["compré", "comprar", "comprar"]);
   assert.deepEqual(dictLinesOf(null, "comprar"), []);
 });
+
+test("사전 예문 파일 14개 언어: 빈칸 조각이 문장 안에서 낱말 자리로 잡힌다(대소문자·활용 꼴 그대로)", async () => {
+  const { readFileSync, readdirSync } = await import("node:fs");
+  const { pieceAt } = await import("./quiz.ts");
+  const dir = new URL("./word-sentences/", import.meta.url);
+  const bad: string[] = [];
+  for (const file of readdirSync(dir).filter((name) => name.endsWith(".json"))) {
+    const language = file.replace(".json", "");
+    const book = JSON.parse(readFileSync(new URL(file, dir), "utf8")) as Record<string, { text: string; blank: string }[]>;
+    for (const [key, lines] of Object.entries(book)) {
+      for (const line of lines) if (pieceAt(line.text, line.blank, language) < 0) bad.push(`${language} ${key}: ${line.text} [${line.blank}]`);
+    }
+  }
+  assert.deepEqual(bad.slice(0, 20), []);
+});
