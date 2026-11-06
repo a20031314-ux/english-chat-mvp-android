@@ -44,6 +44,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   roleplayReview: "gpt-5.6-terra",
   chatVerify: "gpt-6-luna",
   fixedLesson: "gpt-6-luna",
+  wordSenses: "gpt-6-luna",
 } as const;
 
 export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
@@ -92,6 +93,9 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   scriptChoices: SONNET,
   // Stagebank 고정 수업(2026-11-02, server/fixedLesson.ts): 틀 × 앱 언어마다 한 번 쓰고 모두가 오래 보므로 Sonnet. 초안 Haiku + Sonnet 검수로 바꾸면 약 절반(사용자에게 안내함).
   fixedLesson: SONNET,
+  // 단어 사전 여러 뜻(2026-11-06, server/wordSenses.ts): 낱말 × 앱 언어마다 한 번 만들어 고정(모두가 오래 봄) — Sonnet.
+  // Haiku로 먼저 해 보니 en means를 mean(의미하다)의 뜻으로, ja 上がる에 "肩の荷が上がった" 같은 틀린 예문을 냄.
+  wordSenses: SONNET,
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,

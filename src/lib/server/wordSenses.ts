@@ -1,8 +1,8 @@
 /**
  * 단어 사전 낱말의 여러 뜻(2026-11-06 사용자 "뜻이 여러 개일 때는?" → "고정 가능한 거야?" → "붙여줘").
  *
- * 낱말 × 앱 언어마다 처음 열 때 한 번 모델(vocab 경로)이 뜻 1~4개(뜻마다 품사·예문·예문 뜻)를 만들고,
- * `wordsense:v1:<언어>:<앱 언어>:<낱말>`에 남겨 모두가 같이 쓴다 — 그 뒤엔 모델을 부르지 않는다(고정).
+ * 낱말 × 앱 언어마다 처음 열 때 한 번 모델(wordSenses 경로, Sonnet)이 뜻 1~4개(뜻마다 품사·예문·예문 뜻)를 만들고,
+ * `wordsense:v2:<언어>:<앱 언어>:<낱말>`(v1은 Haiku로 만든 첫 시험분 — 버림)에 남겨 모두가 같이 쓴다 — 그 뒤엔 모델을 부르지 않는다(고정).
  * 빈도 목록·찾아서 더한 낱말에 있는 낱말만 만든다(아무 글이나 넣어 모델을 부르지 못하게). 학습자 글은 받지 않는다.
  */
 import { kvGetJson, kvSetJsonIfAbsent } from "./kv.ts";
@@ -17,7 +17,7 @@ export type WordSense = { gloss: string; pos?: string; example?: string; example
 
 const POS: Record<string, string> = { noun: "noun", verb: "verb", adj: "adj", adjective: "adj", adv: "adv", adverb: "adv", other: "other" };
 const TTL_SECONDS = 400 * 24 * 60 * 60;
-export const senseKey = (language: string, ui: string, word: string) => `wordsense:v1:${language}:${ui}:${word}`;
+export const senseKey = (language: string, ui: string, word: string) => `wordsense:v2:${language}:${ui}:${word}`;
 
 /** 모델 답(JSON) → 뜻 목록. 뜻 칸이 빈 것은 버리고, 예문은 그 낱말(또는 앞 세 글자)을 담을 때만. 넷까지. */
 export function parseSenses(raw: unknown, word: string): WordSense[] {
@@ -68,18 +68,19 @@ export async function wordSenses(language: string, word: string, ui: string, onM
   const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? "English";
   onMake?.();
-  const completion = await completeChat(client, "vocab", {
+  const completion = await completeChat(client, "wordSenses", {
     temperature: 0.2,
     response_format: { type: "json_object" },
     messages: [
       {
         role: "system",
         content: `You write a learner's dictionary entry for the ${name} word given by the user${entry.pos ? ` (listed as ${entry.pos})` : ""}.
+The entry is for exactly this written form. If it is itself an inflected form of another word, give the meanings this exact form has as its own headword (English "means" = a way of doing something; also the verb "mean" in the third person — then list that as a separate meaning); never describe a different word.
 List its distinct common meanings, most common first: one meaning if it really has only one, at most four. Skip rare, archaic, slang and vulgar senses. Senses that only differ in nuance are one meaning.
 For each meaning:
 - gloss: a short natural meaning in ${uiName} (1 to 5 words; synonyms separated by commas are fine).
 - pos: one of noun, verb, adj, adv, other.
-- example: one short everyday ${name} sentence (4 to 10 words) using the word in exactly this meaning (the word itself or one inflected form). No digits, no names of real people or brands, nothing rude.
+- example: one short everyday ${name} sentence (4 to 10 words) that uses the word in exactly this meaning — the sentence must contain the word exactly as written when possible (otherwise one inflected form). Check that the sentence is idiomatic and that the word really carries this meaning there; if you cannot write such a sentence, leave example empty. No digits, no names of real people or brands, nothing rude.
 - exampleGloss: a natural ${uiName} translation of that sentence.
 Answer with only JSON: {"senses":[{"gloss":"","pos":"","example":"","exampleGloss":""}]}`,
       },

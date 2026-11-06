@@ -46,7 +46,7 @@ async function build(language: string): Promise<DictEntry[]> {
 }
 
 export type WordSense = { gloss: string; pos?: string; example?: string; exampleGloss?: string };
-const SENSE_CACHE = "wordSense.v1";
+const SENSE_CACHE = "wordSense.v2";
 const SENSE_MS = 30 * 24 * 60 * 60 * 1000;
 
 /**

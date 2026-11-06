@@ -67,6 +67,7 @@ export const TASKS = {
   roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? D.roleplayReview, about: "통화 돌아보기 평가" },
   chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? D.chatVerify, about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
   fixedLesson: { tier: "high", openai: () => D.fixedLesson, about: "Stagebank 고정 수업 쓰기(틀 × 앱 언어마다 한 번·공유, 검사기 통과만 저장)" },
+  wordSenses: { tier: "high", openai: () => D.wordSenses, about: "단어 사전 낱말의 여러 뜻(낱말 × 앱 언어마다 한 번·공유)" },
 } satisfies Record<TextTask, { tier: Tier; openai: () => string; about: string }>;
 
 export type Task = keyof typeof TASKS;
