@@ -2,7 +2,7 @@
 
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
-import { noteLedger } from "@/lib/curriculum/logLedger";
+import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -27,7 +27,7 @@ import {
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { RecallPlayer } from "@/components/studyMap/RecallPlayer";
-import { buildQuiz, buildUnit, bundleQuiz, QUIZ_SIZE, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, buildUnit, bundleQuiz, cardQuiz, QUIZ_SIZE, registerQuizSources, type QuizCard, type QuizMix, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -684,18 +684,37 @@ export function TodayPlan({
       ...(pick.reason === "gap" && gaps.find((gap) => gap.key === pick.key)?.card ? { card: gaps.find((gap) => gap.key === pick.key)!.card } : {}),
     };
   };
+  // 개편 퀴즈(quiz.ts cardQuiz): 낱말·표현은 카드 변형 — 맞힌 적 없으면 뜻 가리기(뜻 고르기), 있으면 뜻만 보여 주기(그 말 쓰기).
+  // 카드가 없는 열쇠·문법·문장구조는 old(예전 모양)로, 순서는 받은 대로.
+  const reformAsk = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }): { keys: string[]; questions: QuizQuestion[] } => {
+    const answered = new Set(readLedger(language).filter((event) => event.r === "ok").map((event) => event.k));
+    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) }));
+    const rest = made.filter((one) => !one.question).map((one) => one.key);
+    const back = rest.length ? old(rest) : { keys: [], questions: [] };
+    const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
+    const out: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
+    for (const one of made) {
+      const question = one.question ?? byKey.get(one.key);
+      if (!question) continue;
+      out.keys.push(one.key);
+      out.questions.push(question);
+    }
+    return out;
+  };
   // 낱말 묶음 또는 다시 보기. 문법·표현 탭 묶음(복합·대화 틀린 줄)은 2026-11-01에 탭과 함께 뺌.
   const bundleFor = (which: StudyLane, wordKeys?: readonly string[]): { keys: string[]; questions: QuizQuestion[] } | null => {
     if (wordKeys) {
       void growBank(language, locale, wordKeys.map((key) => ({ key, stage })));
-      const made = bundleQuiz(language, wordKeys, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true });
+      const old = (rest: readonly string[]) => bundleQuiz(language, rest, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true });
+      const made = reform ? reformAsk(wordKeys, old) : old(wordKeys);
       return made.questions.length ? made : null;
     }
     if (which !== "review") return null;
     const keys = studyQueue("review", Date.now(), studyWeakest).map((pick) => pick.key);
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
     void growBank(language, locale, keys.slice(8, 16).map((key) => ({ key, stage })));
-    const made = bundleQuiz(language, keys.slice(0, 8), { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } });
+    const old = (rest: readonly string[]) => bundleQuiz(language, rest, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } });
+    const made = reform ? reformAsk(keys.slice(0, 8), old) : old(keys.slice(0, 8));
     return made.questions.length >= 1 ? made : null;
   };
   // 정기 시험의 짧은 대화 하나(이 폰의 AI 채팅·통화). 문법 탭용 갈래는 탭과 함께 뺌.
@@ -1267,6 +1286,19 @@ export function TodayPlan({
           questions.push(made);
           used.push(item.key);
         }
+      }
+      if (reform) {
+        // 개편: 낱말·표현은 카드 변형(넣어 둔 영어 단어 문제는 이미 "뜻 보고 쓰기"라 맞힌 적 있을 때 그대로).
+        const answered = new Set(readLedger(language).filter((event) => event.r === "ok").map((event) => event.k));
+        for (const key of keys) {
+          const word = answered.has(key) ? writtenWord.get(key) : undefined;
+          const question = (word ? typeFromPrepared(word) : null) ?? cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+          if (question) {
+            questions.push(question);
+            used.push(key);
+          }
+        }
+        return questions.length ? takeBatch({ keys: used, questions }) : null;
       }
       for (const key of keys) {
         const word = writtenWord.get(key);

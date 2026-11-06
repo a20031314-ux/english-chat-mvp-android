@@ -1285,3 +1285,58 @@ export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<nu
   }
   return [...out];
 }
+
+/**
+ * 개편 퀴즈(2026-11-07 사용자 "단어카드에서 뜻만 가리거나 반대로 뜻만 보여주는 형태로" → "일단 만들고 보여줘", 설계 hub/drafts/quiz-mix-2026-11-04.md):
+ * 낱말(w|)·표현(e|) 카드 하나로 두 모양.
+ *   hide = 뜻 가리기 — 카드 예문 속 그 말에 밑줄, 뜻 넷 중 고르기(오답 = 같은 종류·같은 품사의 다른 카드 뜻)
+ *   show = 뜻만 보여 주기 — 앱 언어 뜻만 보고 그 말 쓰기(예문은 답한 뒤). 같은 뜻 카드가 둘 이상이면 첫 글자.
+ * 카드(뜻)가 아직 안 왔거나 오답이 모자라면 null — 부르는 쪽이 예전 모양으로.
+ */
+export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {
+  const kind = key.startsWith("w|") ? "w" : key.startsWith("e|") ? "e" : null;
+  if (!kind) return null;
+  const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
+  const source = (pool?.get(key) ?? []).find((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
+  if (!source?.wordGloss || !pool) return null;
+  const answer = key.slice(2);
+  const gloss = source.wordGloss.trim();
+  const norm = (text: string) => text.normalize("NFC").toLocaleLowerCase().replace(/[\s.,;:!?。、]+/gu, " ").trim();
+  const others: { key: string; gloss: string; pos?: string }[] = [];
+  for (const [other, sources] of pool) {
+    if (other === key || !other.startsWith(`${kind}|`)) continue;
+    const one = sources.find((item) => item.wordGloss?.trim());
+    if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}) });
+  }
+  const random = rng(`${seed}|${key}|${mode}`);
+  if (mode === "show") {
+    // 같은 뜻의 다른 말이 있으면 첫 글자(한 글자 말은 첫 글자가 곧 답이라 내지 않음).
+    const same = others.some((other) => norm(other.gloss) === norm(gloss));
+    const letters = Array.from(answer);
+    if (same && letters.length < 2) return null;
+    return {
+      kind: "type",
+      text: source.text,
+      before: "",
+      after: "",
+      answer,
+      gloss: { en: "", raw: gloss },
+      from: key,
+      prepared: same ? { hint: letters[0]! } : {},
+    };
+  }
+  const seen = new Set([norm(gloss)]);
+  const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
+  const wrong: string[] = [];
+  for (const other of [...shuffled(samePos, random), ...shuffled(others, random)]) {
+    if (wrong.length >= 3) break;
+    const n = norm(other.gloss);
+    if (seen.has(n)) continue;
+    seen.add(n);
+    wrong.push(other.gloss);
+  }
+  if (wrong.length < 3) return null;
+  const right: ScriptGloss = { en: "", raw: gloss };
+  const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
+  return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece };
+}
