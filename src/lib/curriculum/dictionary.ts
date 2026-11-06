@@ -5,6 +5,8 @@
 
 export type DictEntry = {
   word: string;
+  /** 빈도 순위(0부터) — 낱말 카드 묶음(50개) 자리. */
+  rank?: number;
   pos: string;
   reading?: string;
   stage: number;
@@ -28,7 +30,7 @@ export function searchDictionary(entries: readonly DictEntry[], query: string, l
   const prefix: DictEntry[] = [];
   const rest: DictEntry[] = [];
   for (const entry of entries) {
-    const fields = [entry.word, entry.reading, entry.gloss].filter((one): one is string => Boolean(one)).map(fold);
+    const fields = [entry.word, entry.reading, entry.gloss].filter((one): one is string => typeof one === "string" && one.length > 0).map(fold);
     if (fields.some((one) => one.startsWith(q))) prefix.push(entry);
     else if (fields.some((one) => one.includes(q))) rest.push(entry);
     if (prefix.length >= limit) break;

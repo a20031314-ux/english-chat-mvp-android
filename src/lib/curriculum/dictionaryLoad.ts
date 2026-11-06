@@ -32,6 +32,7 @@ async function build(language: string): Promise<DictEntry[]> {
     const meaning = gloss?.[word.w];
     return {
       word: word.w,
+      rank: index,
       pos: word.pos,
       ...(word.reading ? { reading: word.reading } : {}),
       stage: stageOfRank(language, index),

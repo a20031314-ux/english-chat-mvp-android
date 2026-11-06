@@ -7,8 +7,9 @@ import { useBankTone } from "@/components/studyMap/bankTone";
 import type { UICopy } from "@/lib/copy";
 import { searchDictionary, type DictEntry } from "@/lib/curriculum/dictionary";
 import { loadDictionary } from "@/lib/curriculum/dictionaryLoad";
-import { posGroup, wordKey } from "@/lib/curriculum/vocabBank";
+import { BANK_CHUNK, posGroup, wordKey } from "@/lib/curriculum/vocabBank";
 import { grownItems, growBank } from "@/lib/curriculum/qbank";
+import { cachedGlosses, fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 
 /**
@@ -34,6 +35,10 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   const [picked, setPicked] = useState<DictEntry | null>(null);
   // 연 낱말의 예문이 둘이 안 되면: 이 폰에 받아 둔 문제은행 예문부터 보이고, 모자라면 서버에 키워 달라고(같은 열쇠는 10분에 한 번).
   const [making, setMaking] = useState<string | null>(null);
+  // 앱 언어 뜻(2026-11-06 사용자 "뜻 넣어줘"): 낱말 카드 묶음(퀴즈와 같은 것 — 처음이면 서버가 묶음째 만들어 모두가 같이 씀)의 뜻과
+  // 사전 예문의 앱 언어 뜻. 넣어 둔 한국어 짧은 뜻(영어 학습)은 한국어 앱에서 그대로 먼저.
+  const [cardGloss, setCardGloss] = useState<Record<string, string>>({});
+  const [lineGloss2, setLineGloss2] = useState<Record<string, string>>({});
   const [grown, setGrown] = useState(0);
   const haveLines = (entry: DictEntry) => [entry.line, entry.line2?.text].filter((one): one is string => Boolean(one));
   const made = useMemo(
@@ -44,6 +49,14 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   );
   const openEntry = (entry: DictEntry) => {
     setPicked(entry);
+    if (typeof entry.rank === "number" && !cardGloss[entry.word]) {
+      void fetchWordChunk(language, locale, Math.floor(entry.rank / BANK_CHUNK)).then(({ cards, dict }) => {
+        const words = Object.fromEntries(cards.filter((card) => typeof card.gloss === "string" && card.gloss).map((card) => [card.w, card.gloss]));
+        const lines = Object.fromEntries(Object.values(dict).flat().filter((line) => typeof line.gloss === "string" && line.gloss && line.gloss !== line.text).map((line) => [line.text, line.gloss]));
+        setCardGloss((now) => ({ ...now, ...words }));
+        setLineGloss2((now) => ({ ...now, ...lines }));
+      });
+    }
     if ((entry.lineCount ?? 0) >= 2) return;
     const have = haveLines(entry);
     if (grownLines(language, entry.word, locale, have, 2 - have.length).length >= 2 - have.length) return;
@@ -64,9 +77,18 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
     };
   }, [open, entries, language]);
   const posName: Record<string, string> = { noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction };
-  const hits = entries ? searchDictionary(entries, query) : [];
+  // 찾기·목록의 뜻: 한국어 앱은 넣어 둔 짧은 뜻, 그 밖은 이 폰에 받아 둔 카드 뜻(퀴즈·사전에서 연 묶음) — 앱 언어 아닌 뜻은 섞지 않는다.
+  const shaped = useMemo(() => {
+    if (!entries) return null;
+    const saved = cachedGlosses(language, locale, Math.ceil(entries.length / BANK_CHUNK));
+    return entries.map((entry) => {
+      const gloss = (locale === "ko" ? entry.gloss : undefined) || cardGloss[entry.word] || saved.get(entry.word);
+      return { ...entry, gloss };
+    });
+  }, [entries, language, locale, cardGloss]);
+  const hits = shaped ? searchDictionary(shaped, query) : [];
   // 예문 뜻은 한국어·영어만 있다 — 한국어가 아닌 앱 언어에는 한국어를 보이지 않는다.
-  const lineGloss = (entry: DictEntry) => (locale === "ko" ? entry.lineKo || entry.lineEn : entry.lineEn);
+  const lineGloss = (entry: DictEntry) => lineGloss2[entry.line ?? ""] || (locale === "ko" ? entry.lineKo || entry.lineEn : entry.lineEn);
   return (
     <>
       <button
@@ -131,11 +153,14 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                     <span className="mx-1.5">·</span>
                     {ui.dictionaryStage.replace("{n}", String(picked.stage))}
                   </p>
-                  {locale === "ko" && picked.gloss ? <p dir="auto" className="mt-2 text-chat text-ink">{picked.gloss}</p> : null}
+                  {(() => {
+                    const gloss = (locale === "ko" ? picked.gloss : undefined) || cardGloss[picked.word];
+                    return gloss ? <p dir="auto" data-dictionary-gloss className="mt-2 text-chat text-ink">{gloss}</p> : null;
+                  })()}
                   {(() => {
                     const shown: Shown[] = [
                       ...(picked.line ? [{ text: picked.line, gloss: lineGloss(picked) }] : []),
-                      ...(picked.line2 ? [{ text: picked.line2.text, gloss: locale === "ko" ? picked.line2.ko || picked.line2.en : picked.line2.en }] : []),
+                      ...(picked.line2 ? [{ text: picked.line2.text, gloss: lineGloss2[picked.line2.text] || (locale === "ko" ? picked.line2.ko || picked.line2.en : picked.line2.en) }] : []),
                       ...made,
                     ];
                     const busy = making === picked.word;
@@ -165,7 +190,7 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                         className="flex w-full items-baseline gap-2 rounded-xl px-2 py-1.5 text-start hover:bg-white/[0.06]"
                       >
                         <bdi dir="auto" className="text-chat text-ink">{entry.word}</bdi>
-                        {locale === "ko" && entry.gloss ? <span dir="auto" className="min-w-0 truncate text-meta text-slate-400">{entry.gloss}</span> : null}
+                        {entry.gloss ? <span dir="auto" className="min-w-0 truncate text-meta text-slate-400">{entry.gloss}</span> : null}
                       </button>
                     </li>
                   ))}

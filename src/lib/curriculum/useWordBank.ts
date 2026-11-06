@@ -64,6 +64,42 @@ function writeDict(language: string, ui: string, chunk: number | string, dict: D
 }
 
 /**
+ * 50개 묶음 하나의 낱말 카드(앱 언어 뜻·예문) + 사전 예문(앱 언어 뜻) — 이 폰에 있으면 그것, 없으면 서버(처음이면 모델이 묶음째 만들어 모두가 같이 씀).
+ * chunk: 빈도 목록 묶음 번호, 또는 "x<n>" = 찾아서 더한 낱말 묶음. 퀴즈(useWordBank)와 📕 단어 사전이 같이 쓴다.
+ */
+export async function fetchWordChunk(language: string, ui: string, chunk: number | string): Promise<{ cards: Card[]; dict: DictBook }> {
+  const extra = typeof chunk === "string" && chunk.startsWith("x");
+  const c = extra ? Number(String(chunk).slice(1)) : Number(chunk);
+  const cacheId = extra ? `x${c}` : c;
+  const cached = readCached(language, ui, cacheId);
+  // 사전 예문은 빈도 목록 묶음에만 있다(찾아서 더한 낱말 묶음은 카드만).
+  const cachedDict = extra ? {} : readDict(language, ui, cacheId);
+  if (cached && cachedDict) return { cards: cached, dict: cachedDict };
+  const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&chunk=${c}${extra ? "&extra=1" : ""}`))
+    .then((response) => (response.ok ? (response.json() as Promise<{ cards?: Card[]; dict?: DictBook }>) : null))
+    .catch(() => null);
+  const cards = Array.isArray(body?.cards) ? body!.cards! : cached ?? [];
+  const dict = body?.dict && typeof body.dict === "object" ? body.dict : cachedDict ?? {};
+  // 더한 낱말 묶음은 다 찬 것만 이 폰에 남긴다(마지막 묶음은 계속 자람).
+  if (cards.length && (!extra || cards.length >= BANK_CHUNK)) {
+    try {
+      localStorage.setItem(`${CACHE}.${language}.${ui}.${cacheId}`, JSON.stringify(cards));
+    } catch {
+      // 이번에만.
+    }
+  }
+  if (!extra && body?.dict) writeDict(language, ui, cacheId, dict);
+  return { cards, dict };
+}
+
+/** 이 폰에 받아 둔 빈도 목록 카드의 뜻(낱말 → 앱 언어 뜻) — 단어 사전이 뜻으로 찾을 때. 묶음 chunks개까지 훑음. */
+export function cachedGlosses(language: string, ui: string, chunks: number): Map<string, string> {
+  const out = new Map<string, string>();
+  for (let c = 0; c < chunks; c += 1) for (const card of readCached(language, ui, c) ?? []) if (typeof card?.gloss === "string" && card.gloss && typeof card.w === "string") out.set(card.w, card.gloss);
+  return out;
+}
+
+/**
  * 낱말 하나의 퀴즈 재료(2026-11-06 사용자 "퀴즈 알고리즘부터 — 예문 없는 단어는 퀴즈 풀 때마다 예문 생성 → 사전에 추가"):
  * 사전 예문(고정, 사람이 고른 것)을 먼저, 그다음 낱말 카드 예문(모델이 묶음마다 만든 한 줄, 사전과 같은 문장이면 뺌).
  * 문제은행이 키운 예문은 quiz.ts quizSources가 그 뒤에 붙인다 — 문제은행은 사전 예문이 없는 낱말만 키운다(server/qbank.ts).
@@ -280,30 +316,7 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     let alive = true;
     const want = chunks.split(",");
     void Promise.all(
-      want.map(async (id): Promise<{ cards: Card[]; dict: DictBook }> => {
-        const extra = id.startsWith("x");
-        const c = Number(id.slice(1));
-        const cacheId = extra ? `x${c}` : c;
-        const cached = readCached(language, ui, cacheId);
-        // 사전 예문은 빈도 목록 묶음에만 있다(찾아서 더한 낱말 묶음은 카드만).
-        const cachedDict = extra ? {} : readDict(language, ui, cacheId);
-        if (cached && cachedDict) return { cards: cached, dict: cachedDict };
-        const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&chunk=${c}${extra ? "&extra=1" : ""}`))
-          .then((response) => (response.ok ? (response.json() as Promise<{ cards?: Card[]; dict?: DictBook }>) : null))
-          .catch(() => null);
-        const cards = Array.isArray(body?.cards) ? body!.cards! : cached ?? [];
-        const dict = body?.dict && typeof body.dict === "object" ? body.dict : cachedDict ?? {};
-        // 더한 낱말 묶음은 다 찬 것만 이 폰에 남긴다(마지막 묶음은 계속 자람).
-        if (cards.length && (!extra || cards.length >= BANK_CHUNK)) {
-          try {
-            localStorage.setItem(`${CACHE}.${language}.${ui}.${cacheId}`, JSON.stringify(cards));
-          } catch {
-            // 이번에만.
-          }
-        }
-        if (!extra && body?.dict) writeDict(language, ui, cacheId, dict);
-        return { cards, dict };
-      }),
+      want.map((id) => fetchWordChunk(language, ui, id.startsWith("x") ? `x${Number(id.slice(1))}` : Number(id.slice(1)))),
     ).then((groups) => {
       if (!alive) return;
       const cards = groups.flatMap((group) => group.cards);
