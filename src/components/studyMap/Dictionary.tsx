@@ -190,7 +190,8 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                       ...(picked.line ? [{ text: picked.line, gloss: lineGloss(picked) }] : []),
                       ...(picked.line2 ? [{ text: picked.line2.text, gloss: lineGloss2[picked.line2.text] || (locale === "ko" ? picked.line2.ko || picked.line2.en : picked.line2.en) }] : []),
                       ...made,
-                    ];
+                      // 여러 뜻 목록에 이미 나온 문장은 다시 보이지 않는다.
+                    ].filter((one) => !(senses[picked.word] ?? []).some((sense) => (senses[picked.word]?.length ?? 0) >= 2 && sense.example === one.text));
                     const busy = making === picked.word;
                     if (!shown.length && !busy) return null;
                     return (
