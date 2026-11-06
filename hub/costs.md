@@ -86,6 +86,7 @@
 | analysisInput | 2.5원 | 5 | claude-haiku-5-5 2000/300 토큰 (기능 analysis) | 가정 |
 | qbankGrow | 2.3원 | 2 | claude-haiku-5-5 700/1500 토큰 (기능 translate) | 가정 |
 | tts | 1.8원 | 1 | 음성 합성 6초 voxtral-mini-tts-3-0 | 가정 |
+| preparedCopy | 1.6원 | 1 | claude-haiku-5-5 1600/2000 토큰 (기능 translate) | 가정 |
 | contentDiscovery | 1.5원 | 3 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
 | videoPrepare | 1.5원 | 3 | 자막 단계 claude-haiku-5-5 | 가정 |
 | videoWindow | 1.5원 | 3 | 자막 단계 claude-haiku-5-5 | 가정 |
@@ -209,7 +210,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.0131 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 68개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, fixedLesson, wordSenses, qbankGrow, qbankSeed, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, quizOptionNotes, roleplayBranch, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 69개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, fixedLesson, wordSenses, preparedCopy, qbankGrow, qbankSeed, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, quizOptionNotes, roleplayBranch, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 
