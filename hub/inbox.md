@@ -216,7 +216,6 @@
 - 2026-11-02 watch → dev: [ai] src/app/api/chat/route.ts:1167 — 채팅 맛보기를 답 뒤에 깎아 동시 전송이면 10통 초과 (보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:324 — 통화 중단 뒤 늦은 튜터 차례가 끝 화면 대본·저장에 붙음 (say 효과 맨 앞 hungUpRef면 return).
 - 2026-11-02 watch → dev: [my] src/components/studyMap/StageReview.tsx:116 — 수업 대화 칸 제목에 하단 탭 이름 homeTabTalk 재사용 (수업 대화 문구로).
-- 2026-11-02 dev → qa: 다음 빌드 기기에서 Logbank 맨 위 언어능력 육각형 — 꼭짓점 누르면 그 화면(게이지·세부 칩·📎 기록), 세부 칸 누르면 부족한 것·공부할 것·추천, 단계 고르기 화면의 [초급 | 중급 | 고급]. 그리고 그냥 대화 통화 몇 번 뒤 듣기·실전 대화 %가 움직이는지(통화 기록에 차례 셈이 쌓이는지). ja/ko·en/ja·es/ar.
 - 2026-11-02 watch → dev: [my] src/lib/curriculum/missKind.ts:68 — 대화 조각 빈칸을 보기로 푼 것도 쓰기로 셈 (talk에 options 있으면 choose).
 - 2026-11-02 watch → dev: [ai] src/components/RoleplayScreen.tsx:308 — 통화 끝난 뒤 끝 화면에서 저장될 때마다 activeSecs가 늘어남 (finished면 끝난 순간 값 고정).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:276 — openNotes를 화면이 떠 있을 때만 받아 My가 뜨기 전에 온 신호(?screen=vocab)를 놓침 (뜰 때 takeAppIntent("openNotes")면 focusQuizbankWords·setTab("keep")).
@@ -230,7 +229,5 @@
 - 2026-11-02 watch → dev: [my] src/components/studyMap/Logbank.tsx:322 — 익힘 표시 status-mastered → info로 익힘·배움이 같은 하늘색, DESIGN.md "익힘 색 그대로"와 어긋남, SkillHexagon도 (되돌리거나 DESIGN.md에 Logbank 예외 한 줄).
 - 2026-11-02 watch → dev: [my] src/components/notes/NotebookSection.tsx:2136 — AutoFull 하루 키 toDateString(), AutoQuiz는 localDay() — 날짜 기준 둘 (localDay()로 통일).
 - 2026-11-03 store → dev: [my] Logbank 꼭짓점 세부 칸(문장 활용 · 1단계)에 "29"·"1:0 1:1 1:2…" 칩이 이름 없이 보임(en 앱·es 학습, 이 폰 기록만 있는 사용자) — 열쇠가 그대로 나오는지 확인. 앱 빌드.
-- 2026-11-04 watch → dev: [my] src/components/studyMap/Logbank.tsx:426 — 새 [초급|중급|고급] 칩이 한 번 누르면 사라지고 고른 표시·다시 고르기 없음(잘못 누르면 육각형 시작 어림이 굳음) (기록 20개 전까진 칩을 남기고 고른 칩 on/aria-checked).
 - 2026-11-04 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:587 — good=false면 빨강 취소선인데 판단 실패(practice null)도 포함돼 맞게 쓴 답이 틀린 것처럼 보임 (practice?.good===false일 때만 빨강).
 - 2026-11-05 watch → dev: [my] src/components/studyMap/Dictionary.tsx:34 — 단어 사전 뜻은 영어 학습+한국어 앱에서만, 예문 뜻이 원문과 같은 문장으로 두 번(영어 학습 lineEn·한국어 학습+한국어 앱 lineKo), 다른 앱 언어는 안 보이는 한국어 뜻으로 검색이 맞음 (학습 언어와 같은 뜻 줄 빼기, 뜻 없는 조합은 칸 이름 "단어", 뜻 검색은 ko 앱만).
-- 2026-11-05 watch → dev: [my] src/components/studyMap/Logbank.tsx:219 — "틀린 낱말 n개 중 m개는…"(dirMost)이 문장 꼭짓점(sentRead·sentUse)에도 나와 문법·표현 틀림을 낱말로 셈 (vocab 꼭짓점만 쓰거나 문장용 문구 14개 언어).
