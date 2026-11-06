@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1, 시작 고르기 튜터 둘 &pick=1)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1, 튜터 메모 &note=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1, 시작 고르기 &pick=1)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1, 튜터 메모 &note=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -10,7 +10,6 @@ import { RoomCallStage, type CallPerson } from "@/components/rooms/RoomCall";
 import { DmBubble } from "@/components/rooms/RoomDm";
 import { GroupBubble } from "@/components/rooms/RoomGroups";
 import { CallButton, CallButtonRow } from "@/components/speech/CallKit";
-import { writeTutorGender } from "@/lib/tutorGender";
 import { CallControls, CallStage, CallSummary, LettersHomework, TutorNote } from "@/components/roleplay/CallParts";
 import { resolveUiCopy } from "@/lib/resolveUiCopy";
 import { isLocale } from "@/lib/copy";
@@ -72,7 +71,7 @@ function Preview() {
           coach={params.get("caption") === "1" || params.get("pick") === "1" ? null : coachCard}
           pick={
             params.get("pick") === "1"
-              ? { ask: ui.callModeAsk, talk: ui.callModeTalk, study: ui.callModeStudy, last: "talk", onTalk: noop, onStudy: noop, onTutor: (g) => writeTutorGender(learn, g) }
+              ? { ask: ui.callModeAsk, talk: ui.callModeTalk, study: ui.callModeStudy, last: "talk", onTalk: noop, onStudy: noop }
               : null
           }
         />

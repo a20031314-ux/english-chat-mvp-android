@@ -13,10 +13,14 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { readMyLanguages, saveMyLanguages, toggleMyLanguage } from "@/lib/myLanguages";
+import { AiAvatar } from "@/components/AiTutorProfile";
+import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
+import { readTutorGender, writeTutorGender } from "@/lib/tutorGender";
 
 /**
  * 배울 언어·앱 언어 고르기(사용자 2026-10-31).
  * - 처음 설치: 배울 언어 국기만(`FirstLanguagePick`) — 여러 개 눌러 고르고 "시작"(2026-11-02 여러 개). 앱 언어는 묻지 않고 기기 언어로(lib/firstLanguage.ts).
+ *   그다음 고른 언어마다 튜터 둘 얼굴에서 하나(2026-11-06 사용자 "앱 설치했을 때 프로필로 선택하게 해서 쭉") — tutorGender.v1, 바꾸기는 ⋮ 튜터 목소리·사람 탭 튜터 프로필.
  * - 그 뒤: 상단바의 지금 배우는 언어 국기 하나 → 언어 설정 시트(`LanguageSettingsButton`).
  *   맨 위 줄 = 내 언어(누르면 그 언어로 바로), 아래 국기 모음 = 내 언어에 더하기·빼기(✓), 앱 언어는 바로.
  *   목록은 lib/myLanguages.ts(이 폰). 학습 기록은 언어마다 따로 남아 돌아오면 이어진다.
@@ -90,6 +94,23 @@ export function FirstLanguagePick({
 }) {
   const { setTargetLanguage } = useLearningLanguage();
   const [picked, setPicked] = useState<LearningLanguageCode[]>([]);
+  const [tutorStep, setTutorStep] = useState(false);
+  if (tutorStep) {
+    return (
+      <FirstTutorPick
+        ui={ui}
+        locale={locale}
+        languages={picked}
+        onDone={() => {
+          const [first] = picked;
+          if (!first) return;
+          saveMyLanguages(picked);
+          setTargetLanguage(first);
+          onPicked();
+        }}
+      />
+    );
+  }
   return (
     <BodyLayer>
       <div
@@ -120,11 +141,7 @@ export function FirstLanguagePick({
             disabled={!picked.length}
             data-first-language-start
             onClick={() => {
-              const [first] = picked;
-              if (!first) return;
-              saveMyLanguages(picked);
-              setTargetLanguage(first);
-              onPicked();
+              if (picked.length) setTutorStep(true);
             }}
             className="mx-auto flex w-full max-w-md items-center justify-center gap-1.5 rounded-xl bg-platinum px-3 py-3 text-body font-semibold text-canvas hover:bg-platinum-hover disabled:opacity-40"
           >
@@ -132,6 +149,80 @@ export function FirstLanguagePick({
               <LearningLanguageFlag key={code} language={getLearningLanguage(code)} />
             ))}
             <span className="ms-1">{ui.packStart}</span>
+          </button>
+        </div>
+      </div>
+    </BodyLayer>
+  );
+}
+
+/** 처음 설치 둘째 장: 고른 언어마다 튜터 둘 — 처음엔 그 언어 기본 튜터가 골라진 채, 누르면 그 튜터로. */
+function FirstTutorPick({
+  ui,
+  locale,
+  languages,
+  onDone,
+}: {
+  ui: UICopy;
+  locale: Locale;
+  languages: LearningLanguageCode[];
+  onDone: () => void;
+}) {
+  const [chosen, setChosen] = useState<Record<string, TutorGender>>(() =>
+    Object.fromEntries(languages.map((code) => [code, readTutorGender(code)])),
+  );
+  return (
+    <BodyLayer>
+      <div
+        dir={learningLanguageTextDir(locale)}
+        className="fixed inset-0 z-[85] overflow-y-auto bg-canvas"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="first-tutor-title"
+        data-first-tutor
+      >
+        <div className="mx-auto w-full max-w-md px-4 pb-28 pt-12">
+          <h1 id="first-tutor-title" className="mb-6 text-center text-heading font-semibold text-ink">
+            {ui.talkAiTutor}
+          </h1>
+          <ul className="flex flex-col gap-4">
+            {languages.map((code) => (
+              <li key={code} className="flex items-center gap-3 rounded-2xl border border-line bg-surface p-3" data-first-tutor-language={code}>
+                <LearningLanguageFlag language={getLearningLanguage(code)} />
+                <div className="flex flex-1 justify-around gap-2">
+                  {(["f", "m"] as const).map((gender) => {
+                    const person = chatPartnerForLanguage(code, gender);
+                    const on = (chosen[code] ?? readTutorGender(code)) === person.gender;
+                    return (
+                      <button
+                        key={gender}
+                        type="button"
+                        aria-pressed={on}
+                        data-first-tutor-choice={gender}
+                        onClick={() => setChosen((all) => ({ ...all, [code]: person.gender }))}
+                        className={`flex flex-col items-center gap-1.5 rounded-xl p-2 ${on ? "bg-white/10 ring-2 ring-platinum" : "opacity-50"}`}
+                      >
+                        <AiAvatar size={72} language={code} gender={person.gender} />
+                        <bdi className="text-note font-semibold text-ink">{person.givenName}</bdi>
+                      </button>
+                    );
+                  })}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="fixed inset-x-0 bottom-0 border-t border-line bg-canvas px-4 py-3">
+          <button
+            type="button"
+            data-first-tutor-start
+            onClick={() => {
+              for (const code of languages) writeTutorGender(code, chosen[code] ?? readTutorGender(code));
+              onDone();
+            }}
+            className="mx-auto flex w-full max-w-md items-center justify-center rounded-xl bg-platinum px-3 py-3 text-body font-semibold text-canvas hover:bg-platinum-hover"
+          >
+            {ui.packStart}
           </button>
         </div>
       </div>
