@@ -163,6 +163,7 @@ const en: Section[] = [
     title: "Example Sentences From Others",
     body: [
       "Some example sentences in the word dictionary and quizzes come from Tatoeba (tatoeba.org) and are used under the Creative Commons Attribution 2.0 France license (CC BY 2.0 FR). Each sentence keeps its Tatoeba number and author; the full list is at https://www.languagebank.net/credits/example-sentences.txt. The Korean translations of those sentences are ours.",
+      "Some Korean example sentences come from the Basic Korean Dictionary (krdict.korean.go.kr) by the National Institute of Korean Language, used under the Creative Commons Attribution-ShareAlike 2.0 Korea license (CC BY-SA 2.0 KR), and some sentences in other languages come from Wiktionary (wiktionary.org) under CC BY-SA 4.0. Their English translations are ours, and those sentences together with our translations are shared under the same licenses; they are marked in the list above.",
     ],
   },
   {
@@ -307,6 +308,7 @@ const ko: Section[] = [
     title: "다른 곳에서 가져온 예문",
     body: [
       "단어 사전과 퀴즈의 예문 일부는 Tatoeba(tatoeba.org)에서 가져와 크리에이티브 커먼즈 저작자표시 2.0 프랑스 라이선스(CC BY 2.0 FR)로 씁니다. 문장마다 Tatoeba 번호와 작성자를 함께 두며, 전체 목록은 https://www.languagebank.net/credits/example-sentences.txt 에 있습니다. 그 문장의 한국어 번역은 저희가 했습니다.",
+      "한국어 예문 일부는 국립국어원 한국어기초사전(krdict.korean.go.kr)에서 크리에이티브 커먼즈 저작자표시-동일조건변경허락 2.0 대한민국 라이선스(CC BY-SA 2.0 KR)로, 다른 언어 예문 일부는 위키낱말사전(wiktionary.org)에서 CC BY-SA 4.0으로 가져와 씁니다. 그 문장의 영어 번역은 저희가 했고, 그 문장과 번역은 같은 라이선스로 공유합니다. 위 목록에 함께 표시합니다.",
     ],
   },
   {
