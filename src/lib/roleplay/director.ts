@@ -826,7 +826,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -925,8 +925,10 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
       : "",
     scenario.openEnded && request.aimCheck?.trim()
       ? `On your last turn you were steering toward: ${request.aimCheck.trim()}
-Add "aim" to your JSON about their turn you are answering now: "used" when it did that and the part it was about was right, "wrong" when it did that with a mistake in that part, "" when it did not do it.`
-      : "",
+"aim" is about their turn you are answering now: "used" when it did that and the part it was about was right, "wrong" when it did that with a mistake in that part, "" when it did not do it. Always give it on this turn.`
+      : scenario.openEnded
+        ? `Leave "aim" empty.`
+        : "",
     request.study?.trim()
       ? request.studyOpen
         ? `They have not spoken yet. They chose to study, and they can see their skill map. The marked weak point is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`

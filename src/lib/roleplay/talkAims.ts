@@ -18,6 +18,8 @@ export type Aim = {
   kind: AimKind;
   /** fix: 감독에게 간 고침 목록의 번호(1부터) · fn: 갈래. */
   ref: string;
+  /** fix: 그 고침의 틀린 점 한 줄(앱 언어, 고침 목록 그대로) — "고침 n번"만으로는 튜터가 어디로 몰지 몰랐다(점검 2026-11-06). */
+  point?: string;
 };
 
 type Run = { tries: number; used: number; wrong: number; last: number };
@@ -31,6 +33,8 @@ export type TalkAimState = {
   minStreak: number;
   /** 바로 앞 학습자 말이 겨냥을 쉬어야 하는 말이었나(못 알아들음·막힘·스스로 꺼냄). */
   rest: boolean;
+  /** 바로 앞 학습자 말이 살아남을 만큼만(min)이었나 — 그때 질문 없이 멈추면 대화가 끊긴다(점검 2026-11-06 ja). */
+  lastMin: boolean;
   /** 바로 앞 튜터 차례에 실은 겨냥(열쇠·글). 이번 학습자 말로 확인한다. */
   sent: { key: string; text: string } | null;
 };
@@ -61,7 +65,8 @@ const EASY_TEXT = "Ask a question they can answer by picking one of two options.
 
 export function aimText(aim: Aim): string {
   if (aim.kind === "fix") {
-    return `Make room for them to say again, in a sentence of their own, what correction ${aim.ref} in the list of corrections from earlier calls was about. Do not mention the old mistake.`;
+    const what = aim.point?.trim() ? ` (what was wrong: "${aim.point.trim()}")` : "";
+    return `Ask about something new in their life whose natural answer needs the same kind of sentence as correction ${aim.ref} in the list of corrections from earlier calls${what}. Do not mention the old mistake.`;
   }
   if (aim.kind === "lead") return LEAD_TEXT;
   return FN_TEXT[aim.ref as FnGroup] ?? "";
@@ -69,7 +74,7 @@ export function aimText(aim: Aim): string {
 
 export type PlanInput = {
   /** 감독에게 가는 고침 목록 그대로(fixesPrompt와 같은 순서 — 마지막이 가장 최근). */
-  fixes: readonly { right: string }[];
+  fixes: readonly { right: string; point?: string }[];
   /** Logbank 부족 칸이 이끌기(실전 대화)인가. */
   wantsLead: boolean;
   /** 최근 통화들의 fn 갈래 셈 합(callDays turns.fn). */
@@ -82,7 +87,9 @@ export type PlanInput = {
 export function planAims(input: PlanInput): Aim[] {
   const out: Aim[] = [];
   const lastFix = input.fixes.at(-1);
-  if (lastFix?.right.trim()) out.push({ key: `fix:${lastFix.right.trim()}`, kind: "fix", ref: String(input.fixes.length) });
+  if (lastFix?.right.trim()) {
+    out.push({ key: `fix:${lastFix.right.trim()}`, kind: "fix", ref: String(input.fixes.length), ...(lastFix.point?.trim() ? { point: lastFix.point.trim() } : {}) });
+  }
   if (input.wantsLead) out.push({ key: "lead", kind: "lead", ref: "lead" });
   const total = Object.values(input.fnCounts).reduce((sum, n) => sum + (n ?? 0), 0);
   if (total >= FN_MIN_TURNS) {
@@ -100,7 +107,7 @@ export function planAims(input: PlanInput): Aim[] {
 }
 
 export function startAims(aims: Aim[]): TalkAimState {
-  return { aims, runs: {}, tutorTurns: 0, minStreak: 0, rest: false, sent: null };
+  return { aims, runs: {}, tutorTurns: 0, minStreak: 0, rest: false, lastMin: false, sent: null };
 }
 
 function runOf(state: TalkAimState, key: string): Run {
@@ -119,7 +126,10 @@ export function beforeTurn(state: TalkAimState): { state: TalkAimState; aim: str
   });
   if (turn <= AIM_WARMUP_TURNS || state.rest) return next(null);
   if (state.minStreak >= 2) return next({ key: "easy", text: EASY_TEXT }, state.runs, 0);
+  // 겨냥 다음 차례는 늘 쉰다 — 겨냥마다 간격만 두면 겨냥 셋이 돌아가며 매 차례 실렸다(점검 2026-11-06).
+  if (state.sent) return next(null);
   for (const aim of state.aims) {
+    if (aim.kind === "lead" && state.lastMin) continue;
     const run = runOf(state, aim.key);
     if (run.used >= AIM_DONE_USED || run.tries >= AIM_TRIES) continue;
     if (turn - run.last <= AIM_GAP) continue;
@@ -141,7 +151,7 @@ export function afterTurn(state: TalkAimState, seen: TurnSeen): TalkAimState {
     runs = { ...runs, [key]: { ...run, used: run.used + (seen.aim === "used" ? 1 : 0), wrong: run.wrong + (seen.aim === "wrong" ? 1 : 0) } };
   }
   const rest = Boolean(seen.missed || seen.heard === "off" || seen.flow === "stuck" || seen.lead === "lead");
-  return { ...state, runs, rest, minStreak: seen.lead === "min" ? state.minStreak + 1 : 0 };
+  return { ...state, runs, rest, lastMin: seen.lead === "min", minStreak: seen.lead === "min" ? state.minStreak + 1 : 0 };
 }
 
 export type AimOutcome = { key: string; kind: AimKind; result: "used" | "wrong" | "none" };

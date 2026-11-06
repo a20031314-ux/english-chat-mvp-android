@@ -1494,7 +1494,8 @@ test("an aim steers only the turn it is sent with, and only in free conversation
   assert.match(aimed, /Never say this out loud/);
   assert.ok(aimed.startsWith(plain.slice(0, plain.indexOf("Level:"))), "the cached half does not move");
   assert.doesNotMatch(brief({ aim: "Ask about something they did." }, cafe), /Where to take the conversation/, "a scripted scene has its own steps");
-  assert.match(brief({ aimCheck: "Ask about something they did." }), /Add "aim" to your JSON/);
+  assert.match(brief({ aimCheck: "Ask about something they did." }), /"aim" is about their turn you are answering now/);
+  assert.match(plain, /"aim": "used" \| "wrong" \| ""/, "the key is in the fixed reply shape, so it is never forgotten");
 });
 
 test("the aim result is read only when an aim was being checked", () => {

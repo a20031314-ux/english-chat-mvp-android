@@ -10,7 +10,7 @@
  * 상태는 TALK_AIMS_DIR(기본 tmp/talk-aims/)에. 사용자 id는 simcheck-talkaims-<이름> — 끝나면 sim-users/forget.mjs로 지운다.
  * mode plain은 같은 인물·같은 고침 목록으로 겨냥만 뺀 비교군. 되받기 규칙은 둘 다 같다(서버).
  */
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, readdirSync, rmdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterTurn, beforeTurn, planAims, startAims } from "../../src/lib/roleplay/talkAims.ts";
 
@@ -70,7 +70,30 @@ async function start() {
   console.log(`튜터: ${data.history[0].text}`);
 }
 
+// 학습자 역이 두 줄을 한꺼번에 보내도 차례가 섞이지 않게 통화마다 한 줄씩(점검 2026-11-06에 두 번 겪음).
+async function withLock(run, work) {
+  const lock = join(DIR, `${run}.lock`);
+  for (let i = 0; ; i += 1) {
+    try {
+      mkdirSync(lock);
+      break;
+    } catch {
+      if (i > 600) throw new Error("lock");
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+  }
+  try {
+    return await work();
+  } finally {
+    rmdirSync(lock);
+  }
+}
+
 async function say() {
+  return withLock(name, sayLocked);
+}
+
+async function sayLocked() {
   const data = load(name);
   const heard = rest.join(" ").trim();
   let aim = null;
