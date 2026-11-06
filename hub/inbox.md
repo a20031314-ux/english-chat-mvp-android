@@ -237,3 +237,5 @@
 - 2026-11-06 watch → dev: [ai] src/components/roleplay/callHooks.ts:68 — 통화 끝에 대본 전체를 장부에 넣어 "이어서 하기"로 다시 연 통화는 앞 세션 줄이 다른 시각으로 또 쌓임 (이번 세션 줄만, 또는 통화 id로 이미 넣은 줄 건너뛰기).
 - 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:19 — 영어 옮길 목록에 problems/en.json(표현 20·문법 7) 빠짐, 한국어 밖 앱 언어에서 그 문제가 안 나오고 폰 저장이 안 돼 Quizbank 열 때마다 서버를 다시 부름 (FILES.en에 en.json 더하기).
 - 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:95 — 옮기기 실패한 묶음은 KV에 안 남아 요청마다 모델을 다시 부르고, meterRequest는 요청당 1번이라 원가가 적게 잡힘 (실패 묶음 짧은 TTL 표시 또는 묶음마다 meter).
+- 2026-11-06 watch → dev: [my] src/lib/curriculum/quiz.ts:1340 — 카드 뜻 가림 오답의 "빈도 순위 ±200"이 GAP_SOURCES 들어간 차례라 단계가 먼 낱말도 가깝게 잡혀 한눈에 지워지는 오답이 남음 (QuizSource에 빈도 순위를 실어 그 값으로 비교, 순위 없는 u|·검색 낱말은 near에서 빼기).
+- 2026-11-06 watch → dev: [my] hub/QUIZ.md:70 — 0-4가 c31928d 카드 퀴즈 규칙(가까운 순위 오답·앞 문제 보기 뺌·예문 돌림·쓴 말 낱말 가림·개편 단어 시험·방금 묶음 열쇠 뺌)으로 안 고쳐짐 (0-4 갱신, RULES 11 ⑥).
