@@ -1475,3 +1475,32 @@ test("튜터 수업: 건넨 표현(offer)은 고친 말로 세지 않고 💡로
   assert.equal(offeredOf({ meant: "Vi una película.", better: "x", offer: true }), "");
   assert.equal(correctionOf(null), "");
 });
+
+test("free conversation says the right form back without correcting", () => {
+  const prompt = tutorSystemPrompt({ scenario: open, bank, recorded: recordedLines(open, SCENARIOS, bank), request: request({ scenarioId: open.id, nodeId: "talk", mode: "free" }) });
+  assert.match(prompt, /let the right form come up in your own reply/);
+  assert.match(prompt, /Never point it out/);
+  const coached = tutorSystemPrompt({ scenario: open, bank, recorded: recordedLines(open, SCENARIOS, bank), request: request({ scenarioId: open.id, nodeId: "talk", mode: "free", coach: true }) });
+  assert.doesNotMatch(coached, /let the right form come up in your own reply/, "the tutor mode corrects out loud instead");
+});
+
+test("an aim steers only the turn it is sent with, and only in free conversation", () => {
+  const brief = (partial: Partial<DirectorRequest>, scenario = open) =>
+    tutorSystemPrompt({ scenario, bank, recorded: recordedLines(scenario, SCENARIOS, bank), request: request({ scenarioId: scenario.id, nodeId: "talk", mode: "free", ...partial }) });
+  const plain = brief({});
+  const aimed = brief({ aim: "Ask about something they did." });
+  assert.doesNotMatch(plain, /Where to take the conversation/);
+  assert.match(aimed, /Where to take the conversation on this turn, for you only: Ask about something they did\./);
+  assert.match(aimed, /Never say this out loud/);
+  assert.ok(aimed.startsWith(plain.slice(0, plain.indexOf("Level:"))), "the cached half does not move");
+  assert.doesNotMatch(brief({ aim: "Ask about something they did." }, cafe), /Where to take the conversation/, "a scripted scene has its own steps");
+  assert.match(brief({ aimCheck: "Ask about something they did." }), /Add "aim" to your JSON/);
+});
+
+test("the aim result is read only when an aim was being checked", () => {
+  const free = { scenarioId: open.id, nodeId: "talk", mode: "free" as const, heard: "I go to the park yesterday" };
+  assert.equal(parse({ say: "Oh, you went to the park?", assessment: "on_track", next: "free", aim: "wrong" }, { ...free, aimCheck: "past" }, open)?.aim, "wrong");
+  assert.equal(parse({ say: "Nice.", assessment: "on_track", next: "free", aim: "used" }, free, open)?.aim, undefined, "no aim was checked");
+  assert.equal(parse({ say: "Nice.", assessment: "on_track", next: "free", aim: "maybe" }, { ...free, aimCheck: "past" }, open)?.aim, undefined);
+  assert.equal(parse({ say: "Sorry?", assessment: "stuck", next: "free", aim: "used" }, { ...free, heard: "", aimCheck: "past" }, open)?.aim, undefined, "nothing was said");
+});

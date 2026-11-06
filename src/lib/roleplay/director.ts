@@ -171,7 +171,20 @@ export type DirectorRequest = {
   redo?: string;
   /** 그 문장을 지금까지 몇 번 말해 보라고 했나(1·2). 2면 이번이 마지막 — 또 틀려도 다시 묻지 않고 넘어간다. */
   redoTries?: number;
+  /**
+   * 자유대화 채우기(2026-11-06, hub/drafts/call-modes-2026-11-06.md 6절): 이번 튜터 차례가 몰아갈 곳 한 줄(영어, 모델용).
+   * 앱이 기록으로 고른다(talkAims.ts). 튜터는 말하지 않고, 학습자 말과 안 맞으면 버린다. 예문은 넣지 않는다.
+   */
+  aim?: string;
+  /** 바로 앞 튜터 차례에 실었던 aim — 이번 학습자 말이 그걸 해냈는지 `aim` 측정 칸으로 돌려준다. */
+  aimCheck?: string;
 };
+
+/** 자유대화 채우기 측정: 앞 차례 겨냥을 이번 말에서 맞게 씀(used)·썼지만 틀림(wrong). */
+export type AimResult = "used" | "wrong";
+const AIM_RESULTS: readonly AimResult[] = ["used", "wrong"];
+/** aim·aimCheck 글 길이 상한(서버가 자름). */
+export const AIM_MAX_CHARS = 200;
 
 /**
  * 차례 재기 칸의 뜻(같은 호출, 화면엔 안 보임 — Logbank 육각형 듣기·실전 대화, 2026-11-02). 짧게: 출력 몇 토큰.
@@ -269,6 +282,8 @@ export type Direction = {
   fnGroup?: FnGroup;
   /** 차례 전부(또는 거의)를 앱 언어로 말함. */
   native?: boolean;
+  /** 자유대화 채우기: aimCheck를 보냈을 때만 — 앞 차례 겨냥을 이번 말에서 해냈나. */
+  aim?: AimResult;
 };
 
 export type { Heard, Lead, LeadHow };
@@ -793,7 +808,7 @@ ${scenario.openEnded && !coaching ? `- If they are stuck — silence, the wrong 
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
-${scenario.openEnded && !coaching ? `- Now and then — about one turn in three, when they are managing, never two in a row and never right after a correction — end on a reaction or a short remark of your own instead of a question, and leave them room to take the conversation where they want.\n` : ""}${tutorSpeechRules(request.targetLanguage, partner?.gender)}
+${scenario.openEnded && !coaching ? `- When what they just said had a mistake, let the right form come up in your own reply, the way someone who heard them would naturally say it back: use their idea again with the wording put right, inside your reaction or your question. Never point it out, never stress it and never ask them to say it again — it is part of the conversation, not a correction. When there was no mistake, do nothing of the kind.\n` : ""}${scenario.openEnded && !coaching ? `- Now and then — about one turn in three, when they are managing, never two in a row and never right after a correction — end on a reaction or a short remark of your own instead of a question, and leave them room to take the conversation where they want.\n` : ""}${tutorSpeechRules(request.targetLanguage, partner?.gender)}
 ${
   coaching
     ? `- One or two short sentences.
@@ -903,6 +918,14 @@ ${request.context.trim()}`
       : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
+      : "",
+    scenario.openEnded && request.aim?.trim()
+      ? `Where to take the conversation on this turn, for you only: ${request.aim.trim()}
+Do it inside the conversation, in your own manner. Never say this out loud, never name it, never teach it and never ask them to practise anything. If it does not fit what they just said, or they just brought up something of their own, leave it and simply follow them.`
+      : "",
+    scenario.openEnded && request.aimCheck?.trim()
+      ? `On your last turn you were steering toward: ${request.aimCheck.trim()}
+Add "aim" to your JSON about their turn you are answering now: "used" when it did that and the part it was about was right, "wrong" when it did that with a mistake in that part, "" when it did not do it.`
       : "",
     request.study?.trim()
       ? request.studyOpen
@@ -1078,6 +1101,7 @@ export function parseDirection(
     how?: unknown;
     fn?: unknown;
     native?: unknown;
+    aim?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -1476,7 +1500,18 @@ export function parseDirection(
     // 표현 건네기는 고친 말(better)로 온 ask에서만 — 내 말 문장을 바꿔 준 것(meant)은 건네기가 아니다.
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
+    ...aimMeasure(record, request, scenario),
   };
+}
+
+/** 자유대화 채우기 측정 읽기: aimCheck를 보낸 그냥 대화 차례에서만, 학습자 말이 있을 때만. 모르는 값은 버린다. */
+export function aimMeasure(
+  record: { aim?: unknown },
+  request: Pick<DirectorRequest, "aimCheck" | "heard" | "missed">,
+  scenario: Pick<RoleplayScenario, "openEnded">,
+): Pick<Direction, "aim"> {
+  if (!scenario.openEnded || !request.aimCheck?.trim() || request.missed || !request.heard.trim()) return {};
+  return AIM_RESULTS.includes(record.aim as AimResult) ? { aim: record.aim as AimResult } : {};
 }
 
 /**

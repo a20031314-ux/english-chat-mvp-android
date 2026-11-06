@@ -15,6 +15,7 @@ import {
   leadFromPartial,
   playableBy,
   parseDirection,
+  AIM_MAX_CHARS,
   readSpokenLines,
   recordedLines,
   tutorMessages,
@@ -177,6 +178,9 @@ export async function POST(request: NextRequest) {
     ...(typeof body.study === "string" && body.study.trim() ? { study: body.study.trim().slice(0, 80) } : {}),
     ...(body.studyOpen === true ? { studyOpen: true } : {}),
     ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),
+    // 자유대화 채우기(2026-11-06): 이번 차례 겨냥·앞 차례 겨냥 확인 — 앱이 고른 짧은 영어 한 줄.
+    ...(typeof body.aim === "string" && body.aim.trim() ? { aim: body.aim.trim().slice(0, AIM_MAX_CHARS) } : {}),
+    ...(typeof body.aimCheck === "string" && body.aimCheck.trim() ? { aimCheck: body.aimCheck.trim().slice(0, AIM_MAX_CHARS) } : {}),
     freeTurns: readCount(body.freeTurns),
     directedTurns: readCount(body.directedTurns),
     level: Math.min(5, Math.max(1, readCount(body.level) || 3)),

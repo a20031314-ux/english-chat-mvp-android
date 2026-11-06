@@ -160,7 +160,8 @@ export const TTS_USD_PER_MINUTE = ttsPerMinute(codeTtsModel(), 0.015);
  * not been touched in a month is a figure to distrust.
  */
 export const ROLEPLAY_TURN = {
-  input: 851,
+  // 2026-11-06 자유대화 되받기 규칙(늘) + 채우기 겨냥 두 줄(실을 때) ≈ +100토큰 — 실측 전 어림.
+  input: 951,
   output: 50,
   turnSeconds: 15,
   tutorSpeakingSeconds: 5,
