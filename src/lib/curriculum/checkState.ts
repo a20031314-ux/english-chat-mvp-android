@@ -100,7 +100,8 @@ export function cardFaces(events: readonly LogEvent[]): (key: string) => "hide" 
   const lastLook = new Map<string, number>();
   const lastQuiz = new Map<string, number>();
   for (const event of events) {
-    if (event.r === "ok") ok.add(event.k);
+    // 통화·대화에서 쓴 말(used)도 — 그 말은 알아보기보다 쓰기로(2026-11-07 점검: 적용이 힘듦 카드인데 뜻 고르기가 나옴).
+    if (event.r === "ok" || event.r === "used") ok.add(event.k);
     if (event.r === "look") lastLook.set(event.k, Math.max(lastLook.get(event.k) ?? 0, event.t));
     if (event.src === "quiz" || event.src === "exam") lastQuiz.set(event.k, Math.max(lastQuiz.get(event.k) ?? 0, event.t));
   }

@@ -725,7 +725,9 @@ export function TodayPlan({
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
     void growBank(language, locale, keys.slice(8, 16).map((key) => ({ key, stage })));
     const old = (rest: readonly string[]) => bundleQuiz(language, rest, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } });
-    const made = reform ? reformAsk(keys.slice(0, 8), old) : old(keys.slice(0, 8));
+    // 개편: 방금 묶음에서 나온 열쇠는 다음 묶음에 다시 안 냄(2026-11-07 점검: 틀린 tamaño가 같은 예문으로 바로 다음에).
+    const reviewKeys = reform ? keys.filter((key) => !lastCircle.current.has(key)) : keys;
+    const made = reform ? reformAsk(reviewKeys.slice(0, 8), old) : old(keys.slice(0, 8));
     return made.questions.length >= 1 ? made : null;
   };
   // 정기 시험의 짧은 대화 하나(이 폰의 AI 채팅·통화). 문법 탭용 갈래는 탭과 함께 뺌.
@@ -1254,6 +1256,7 @@ export function TodayPlan({
         const due = bundleFor("review");
         if (due) {
           reviewBatch.current = true;
+          lastCircle.current = new Set(due.keys);
           return takeBatch(due);
         }
       }
@@ -1499,10 +1502,12 @@ export function TodayPlan({
             // 낱말마다 한 문제(묶음 퀴즈는 네 문제까지라 하나씩 만들어 붙임).
             const made: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
             for (const key of keys) {
-              const one = bundleQuiz(language, [key], { seed: `${day}-wordtest-${round}-${key}`, stage, style: "type", fallback: "choose", strict: true });
-              if (one.questions[0]) {
+              // 개편: 단어 시험도 카드 낱말 가림(뜻·예문 뜻이 보임 — 2026-11-07 점검 "빈칸에 뜻이 없어 답이 여럿").
+              const card = reform ? cardQuiz(language, key, "show", `${day}-wordtest-${round}`) : null;
+              const one = card ?? bundleQuiz(language, [key], { seed: `${day}-wordtest-${round}-${key}`, stage, style: "type", fallback: "choose", strict: true }).questions[0];
+              if (one) {
                 made.keys.push(key);
-                made.questions.push(one.questions[0]);
+                made.questions.push(one);
               }
             }
             if (!made.questions.length) return;

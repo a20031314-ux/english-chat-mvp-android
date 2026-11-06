@@ -44,3 +44,22 @@ test("카드 변형: 낱말 가림은 예문 빈칸, 오답이 모자라면 뜻 
   assert.equal(cardQuiz("es", "w|grande", "hide", "s"), null);
   assert.equal(cardQuiz("es", "g|1:2", "show", "s"), null);
 });
+
+test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저, 바로 앞 문제 보기는 다시 안 씀 (th·it)", () => {
+  const many = (lang: string, words: string[]) =>
+    words.map((w, i) => card(`w|${w}`, `${w} ${w}.`, w, `뜻${i}`));
+  // 앞 다섯은 순위가 가깝고, 뒤 다섯은 300개 넘게 떨어진 자리(사이를 빈 카드로 채움).
+  const filler = Array.from({ length: 300 }, (_, i) => card(`w|x${i}`, `x${i} x${i}.`, `x${i}`, `먼${i}`, "verb"));
+  registerQuizSources("th", [...many("th", ["น้ำ", "ข้าว", "บ้าน", "รถ", "แมว"]), ...filler, ...many("th", ["ภูเขา", "ทะเล", "ฟ้า"])]);
+  const first = cardQuiz("th", "w|น้ำ", "hide", "a");
+  assert.equal(first?.kind, "meaning");
+  if (first?.kind !== "meaning") return;
+  const raws = first.options.map((o) => o.raw);
+  assert.ok(raws.every((r) => /^뜻[0-4]$/.test(r!)), raws.join(","));
+  registerQuizSources("it", [...many("it", ["casa", "cane", "gatto", "libro", "mare", "sole", "luna", "pane"])]);
+  const a = cardQuiz("it", "w|casa", "hide", "s1");
+  const b = cardQuiz("it", "w|libro", "hide", "s1");
+  if (a?.kind !== "meaning" || b?.kind !== "meaning") return assert.fail("meaning");
+  const prev = new Set(a.options.map((o) => o.raw));
+  assert.ok(b.options.filter((o) => o.raw !== "뜻3").every((o) => !prev.has(o.raw)), "앞 문제 보기 다시");
+});

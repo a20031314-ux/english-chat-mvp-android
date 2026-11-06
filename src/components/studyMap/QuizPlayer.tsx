@@ -572,7 +572,15 @@ function TypeBox({
       ) : (
         <div className="flex items-center gap-2">
           {hint < 2 ? (
-            <button type="button" data-quiz-hint onClick={onHint} className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
+            <button
+              type="button"
+              data-quiz-hint
+              onClick={() => {
+                // 힌트는 입력칸 안내 글로 보여서, 이미 쓴 글이 있으면 안 보였다(2026-11-07 점검 Layla "tu" + 힌트 → "tuel") — 쓴 글을 비운다.
+                setTyped("");
+                onHint();
+              }}
+              className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
               💡 {ui.missionHint}
             </button>
           ) : null}

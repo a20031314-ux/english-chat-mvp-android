@@ -1297,20 +1297,29 @@ export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<nu
  *   show = 낱말 가림 — 뜻·예문 뜻은 보이고 낱말 칸과 예문 속 그 말만 빈칸 → 예문 속 꼴 쓰기(사전형도 맞음)
  * 카드(뜻)가 아직 안 왔거나 오답이 모자라면 null — 부르는 쪽이 예전 모양으로.
  */
+/** 언어마다 바로 앞 뜻 가림 문제에 나온 보기(뜻) — 다음 문제 보기에서 뺀다. */
+const RECENT_OPTIONS = new Map<string, Set<string>>();
+
 export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {
   const kind = key.startsWith("w|") ? "w" : key.startsWith("e|") ? "e" : null;
   if (!kind) return null;
   const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
-  const source = (pool?.get(key) ?? []).find((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
+  // 예문이 여럿이면 차례(seed)마다 다른 것 — 다시 볼 때 같은 문장을 기억으로 풀지 않게(2026-11-07 점검 easy-repeat).
+  const usable = (pool?.get(key) ?? []).filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
+  const source = usable.length ? usable[Math.floor(rng(`${seed}|${key}|src`)() * usable.length)] : undefined;
   if (!source?.wordGloss || !pool) return null;
   const answer = key.slice(2);
   const gloss = source.wordGloss.trim();
   const norm = (text: string) => text.normalize("NFC").toLocaleLowerCase().replace(/[\s.,;:!?。、]+/gu, " ").trim();
-  const others: { key: string; gloss: string; pos?: string }[] = [];
+  const others: { key: string; gloss: string; pos?: string; at: number }[] = [];
+  let at = -1;
+  let index = 0;
   for (const [other, sources] of pool) {
+    index += 1;
+    if (other === key) at = index;
     if (other === key || !other.startsWith(`${kind}|`)) continue;
     const one = sources.find((item) => item.wordGloss?.trim());
-    if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}) });
+    if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}), at: index });
   }
   const random = rng(`${seed}|${key}|${mode}`);
   const face: QuizCardFace = { word: answer, meaning: gloss };
@@ -1328,17 +1337,22 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
       card: face,
     };
   }
+  // 오답: 같은 품사 + 빈도 순위가 가까운 카드의 뜻 먼저(드문 낱말 뜻은 한눈에 지워짐 — 2026-11-07 점검 easy-decoy "area ↔ 바나나"),
+  // 바로 앞 문제에 보기로 나온 뜻은 빼고(같은 보기가 다음 문제 정답·오답으로 다시 — easy-repeat).
+  const recent = RECENT_OPTIONS.get(language) ?? new Set<string>();
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
+  const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
   const wrong: string[] = [];
-  for (const other of [...shuffled(samePos, random), ...shuffled(others, random)]) {
+  for (const other of [...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)]) {
     if (wrong.length >= 3) break;
     const n = norm(other.gloss);
-    if (seen.has(n)) continue;
+    if (seen.has(n) || recent.has(n)) continue;
     seen.add(n);
     wrong.push(other.gloss);
   }
   if (wrong.length < 3) return null;
+  RECENT_OPTIONS.set(language, new Set([norm(gloss), ...wrong.map(norm)]));
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
   return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };
