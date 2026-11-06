@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1, 튜터 메모 &note=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -10,12 +10,18 @@ import { RoomCallStage, type CallPerson } from "@/components/rooms/RoomCall";
 import { DmBubble } from "@/components/rooms/RoomDm";
 import { GroupBubble } from "@/components/rooms/RoomGroups";
 import { CallButton, CallButtonRow } from "@/components/speech/CallKit";
-import { CallControls, CallStage, CallSummary, LettersHomework } from "@/components/roleplay/CallParts";
+import { CallControls, CallStage, CallSummary, LettersHomework, TutorNote } from "@/components/roleplay/CallParts";
 import { resolveUiCopy } from "@/lib/resolveUiCopy";
 import { isLocale } from "@/lib/copy";
 import { roomCopy } from "@/lib/rooms/copy";
 
 const ME = "acct-me";
+// 끝 화면 튜터 메모 미리 보기(&note=1) — 2026-11-06 운영 응답에서 고른 것.
+const NOTE: Record<string, string> = {
+  ja: "오늘은 편의점 아르바이트와 아이스라테 이야기를 나눴어요. 바쁜 하루 뒤에 커피 한 잔을 고르는 모습이 참 따뜻하게 느껴졌어요. 다음에는 「ミルクが多い」처럼 が를 붙여 말하는 연습을 해 보세요.",
+  en: "今日はジムとベンチプレスの話をしたね。60キロから70キロに上がった話、すごく良かったよ。次は lifted や tried みたいな過去形を練習してみよう。",
+  es: "حديثنا اليوم كان عن عملك في المستشفى الليلي وعن طبق المقلوبة. أحسنتِ في جملة «por eso estudio español». وللتدريب القادم: «el problema» وليس «la problema».",
+};
 // 자막 미리 보기(&caption=1, 해석 &meaning=1) — 튜터 한 줄과 앱 언어 해석(미리 보기라 고정 문장).
 const CAPTION: Record<string, { text: string; meaning: string }> = {
   ja: { text: "今日はどんな一日だった？", meaning: "오늘 하루 어땠어?" },
@@ -71,6 +77,7 @@ function Preview() {
     return (
       <div className="flex h-dvh flex-col bg-black" dir={lang === "ar" ? "rtl" : "ltr"}>
         <CallSummary ui={ui} language={learn} seconds={312} tally={{ fixed: 4, hints: 1, missed: 0, redone: 3 }} />
+        {params.get("note") === "1" ? <TutorNote text={NOTE[learn] ?? NOTE.en} language={learn} /> : null}
         {params.get("homework") === "1" ? <LettersHomework ui={ui} language={learn} onOpen={noop} /> : null}
       </div>
     );
