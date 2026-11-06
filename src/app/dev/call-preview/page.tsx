@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -51,7 +51,7 @@ function Preview() {
     return (
       <div className="flex h-dvh flex-col bg-black" dir={lang === "ar" ? "rtl" : "ltr"}>
         <CallStage language={learn} speaker="listening" timeLeft={null} caption={null} coach={coachCard} />
-        <CallControls ui={ui} canAnswer captions={false} coach onToggleCoach={noop} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} />
+        <CallControls ui={ui} canAnswer captions={false} coach onToggleCoach={noop} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} />
       </div>
     );
   }
