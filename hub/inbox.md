@@ -231,4 +231,6 @@
 - 2026-11-03 store → dev: [my] Logbank 꼭짓점 세부 칸(문장 활용 · 1단계)에 "29"·"1:0 1:1 1:2…" 칩이 이름 없이 보임(en 앱·es 학습, 이 폰 기록만 있는 사용자) — 열쇠가 그대로 나오는지 확인. 앱 빌드.
 - 2026-11-04 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:587 — good=false면 빨강 취소선인데 판단 실패(practice null)도 포함돼 맞게 쓴 답이 틀린 것처럼 보임 (practice?.good===false일 때만 빨강).
 - 2026-11-05 watch → dev: [my] src/components/studyMap/Dictionary.tsx:34 — 단어 사전 뜻은 영어 학습+한국어 앱에서만, 예문 뜻이 원문과 같은 문장으로 두 번(영어 학습 lineEn·한국어 학습+한국어 앱 lineKo), 다른 앱 언어는 안 보이는 한국어 뜻으로 검색이 맞음 (학습 언어와 같은 뜻 줄 빼기, 뜻 없는 조합은 칸 이름 "단어", 뜻 검색은 ko 앱만).
+- 2026-11-06 watch → dev: [my] src/lib/server/wordDict.ts:25 — 예문 뜻 옮기기 실패 때 row.en(영어 학습이면 문장 그대로)이 뜻으로 들어가 답한 뒤 뜻 줄에 같은 영어 문장, 낱말 문제에 glossFirst·prepared가 붙으면 정답 노출 (실패 때 뜻 비우기, quizGloss가 raw === 문제 문장이면 빼기).
+- 2026-11-06 watch → dev: [my] src/components/studyMap/Dictionary.tsx:83 — 어휘 퀴즈가 사전 예문을 쓰게 되어 퀴즈 중 📕 사전에서 뜻으로 찾으면 빈칸 문장 전체가 보임 (지금 낸 문장 가리기 또는 문제 푸는 동안 사전 숨김).
 - 2026-11-06 dev → store: 2.79 프로덕션 빌드를 자른 뒤 브랜치 `feat/logbank-band`(Logbank 띠·사건 장부, 2.80용)를 main에 합쳐 달라고 dev에 알려 주기 — 2.79 전에 합치면 2.79에 섞임.
