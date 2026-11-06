@@ -2,6 +2,7 @@
 
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
+import { cardFaces } from "@/lib/curriculum/checkState";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
@@ -687,8 +688,8 @@ export function TodayPlan({
   // 개편 퀴즈(quiz.ts cardQuiz): 낱말·표현은 카드 변형 — 맞힌 적 없으면 뜻 가리기(뜻 고르기), 있으면 뜻만 보여 주기(그 말 쓰기).
   // 카드가 없는 열쇠·문법·문장구조는 old(예전 모양)로, 순서는 받은 대로.
   const reformAsk = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }): { keys: string[]; questions: QuizQuestion[] } => {
-    const answered = new Set(readLedger(language).filter((event) => event.r === "ok").map((event) => event.k));
-    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) }));
+    const face = cardFaces(readLedger(language));
+    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, face(key), `${day}-${round}`) }));
     const rest = made.filter((one) => !one.question).map((one) => one.key);
     const back = rest.length ? old(rest) : { keys: [], questions: [] };
     const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
@@ -1289,10 +1290,10 @@ export function TodayPlan({
       }
       if (reform) {
         // 개편: 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·예전 모양).
-        const answered = new Set(readLedger(language).filter((event) => event.r === "ok").map((event) => event.k));
+        const face = cardFaces(readLedger(language));
         for (const key of keys) {
-          const word = answered.has(key) ? writtenWord.get(key) : undefined;
-          const question = cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+          const word = face(key) === "show" ? writtenWord.get(key) : undefined;
+          const question = cardQuiz(language, key, face(key), `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
           if (question) {
             questions.push(question);
             used.push(key);

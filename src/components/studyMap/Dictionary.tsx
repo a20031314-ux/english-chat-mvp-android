@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { noteLedger } from "@/lib/curriculum/logLedger";
+import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
+import { checkStates } from "@/lib/curriculum/checkState";
+import { reformOn } from "@/lib/reform";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
@@ -32,12 +34,38 @@ function grownLines(language: string, word: string, locale: string, have: readon
  * 사전 몸통(찾기칸 + 목록 | 낱말 화면) — 📕 시트와 Languagebank 탭(2026-11-06 개편 1단계, studyMap/LanguageBank)이 같이 쓴다.
  * word = 이 낱말 화면으로 바로 열기(Languagebank 묶음에서 누른 낱말). onIndex = 낱말 화면 ‹ 를 눌렀을 때 바깥(색인)으로.
  */
+/**
+ * 개편(lib/reform.ts): 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 체크 셋 표시 하나
+ * (2026-11-06 사용자 "사전에서 열어볼 때는 어떻게" → "만들어줘"): 앎 ✓ + 다음 확인 n일 뒤 · 적용이 힘듦 ◐ · 그 밖(고르기로만 맞힘·처음 봄·기록 없음)은 없음.
+ * 어림값은 사전에 붙이지 않는다(2026-11-06 결정). 열어 본 것은 장부에 찾아봄으로만(상태는 그대로).
+ */
+function cardStatus(language: string, word: string): { level: "known" | "hard"; days?: number } | null {
+  const state = checkStates(readLedger(language).filter((event) => event.k === wordKey(word))).get(wordKey(word));
+  if (!state || state.level === "new") return null;
+  if (state.level === "hard") return { level: "hard" };
+  const days = state.due === undefined ? undefined : Math.max(0, Math.ceil((state.due - Date.now() / 1000) / 86400));
+  return { level: "known", ...(days === undefined ? {} : { days }) };
+}
+
+function StatusMark({ ui, status }: { ui: UICopy; status: { level: "known" | "hard"; days?: number } }) {
+  const label = status.level === "hard" ? ui.lbCardHard : status.days === undefined ? "✓" : status.days === 0 ? ui.lbCheckNow : ui.lbCheckIn.replace("{n}", String(status.days));
+  return (
+    <span data-card-status={status.level} title={label} aria-label={label} className="ms-auto flex shrink-0 items-center gap-1.5 text-meta">
+      <span aria-hidden className={status.level === "known" ? "text-status-learned" : "text-slate-400"}>{status.level === "known" ? "✓" : "◐"}</span>
+      {status.level === "known" && status.days !== undefined ? <span className="text-slate-500">{label}</span> : null}
+    </span>
+  );
+}
+
 export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean }) {
   const tone = useBankTone();
   const open = true;
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<DictEntry | null>(null);
+  const [reform] = useState(reformOn);
+  // 연 낱말의 체크 셋 표시(개편) — 낱말이 바뀔 때만 장부를 읽는다.
+  const status = useMemo(() => (reform && picked ? cardStatus(language, picked.word) : null), [reform, picked, language]);
   const wantRef = useRef<string | null>(null);
   // 연 낱말의 예문이 둘이 안 되면: 이 폰에 받아 둔 문제은행 예문부터 보이고, 모자라면 서버에 키워 달라고(같은 열쇠는 10분에 한 번).
   const [making, setMaking] = useState<string | null>(null);
@@ -153,9 +181,11 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                     <span aria-hidden className="rtl:rotate-180">‹ </span>
                     {onIndex ? ui.languagebankTitle : ui.dictionaryTitle}
                   </button>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <div data-dictionary-card={reform ? "1" : undefined} className={reform ? "mt-2 rounded-xl border border-line p-3" : undefined}>
+                  <div className={`${reform ? "" : "mt-2 "}flex flex-wrap items-center gap-2`}>
                     <p dir="auto" className="text-xl font-semibold text-ink">{picked.word}</p>
                     <TTSButton text={picked.word} ariaLabel={ui.listen} />
+                    {reform && status ? <StatusMark ui={ui} status={status} /> : null}
                   </div>
                   {picked.reading ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{picked.reading}</p> : null}
                   <p className="mt-1 text-meta text-slate-400">
@@ -209,6 +239,7 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                       </div>
                     );
                   })()}
+                  </div>
                 </div>
               ) : (
                 <ul className="mt-3 flex min-h-0 flex-col gap-1 overflow-y-auto">

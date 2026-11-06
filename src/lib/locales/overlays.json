@@ -985,7 +985,9 @@
     "lbWhyCheck": "確認の時期 {n}",
     "lbWhyStuck": "通話・会話で間違えた {n}",
     "lbWhyTry": "まだ言ったことのない表現 {n}",
-    "lbWhyNew": "初めて見る {n}"
+    "lbWhyNew": "初めて見る {n}",
+    "lbCheckIn": "{n}日後に確認",
+    "lbCheckNow": "確認の時期"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1973,7 +1975,9 @@
     "lbWhyCheck": "该复习了 {n}",
     "lbWhyStuck": "通话·对话中出错 {n}",
     "lbWhyTry": "还没说过的表达 {n}",
-    "lbWhyNew": "还没见过 {n}"
+    "lbWhyNew": "还没见过 {n}",
+    "lbCheckIn": "{n}天后复习",
+    "lbCheckNow": "该复习了"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2964,7 +2968,9 @@
     "lbWhyCheck": "Đến lúc ôn {n}",
     "lbWhyStuck": "Sai trong gọi và trò chuyện {n}",
     "lbWhyTry": "Cách nói chưa từng dùng {n}",
-    "lbWhyNew": "Chưa gặp {n}"
+    "lbWhyNew": "Chưa gặp {n}",
+    "lbCheckIn": "Ôn sau {n} ngày",
+    "lbCheckNow": "Đến lúc ôn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3960,7 +3966,9 @@
     "lbWhyCheck": "À revoir maintenant {n}",
     "lbWhyStuck": "Erreurs en appel et en discussion {n}",
     "lbWhyTry": "Expressions jamais dites {n}",
-    "lbWhyNew": "Pas encore vu {n}"
+    "lbWhyNew": "Pas encore vu {n}",
+    "lbCheckIn": "À revoir dans {n} j",
+    "lbCheckNow": "À revoir"
   },
   "it": {
     "archive": "Report",
@@ -5147,7 +5155,9 @@
     "lbWhyCheck": "Da ripassare ora {n}",
     "lbWhyStuck": "Errori in chiamate e chat {n}",
     "lbWhyTry": "Espressioni mai dette {n}",
-    "lbWhyNew": "Non ancora visto {n}"
+    "lbWhyNew": "Non ancora visto {n}",
+    "lbCheckIn": "Ripasso tra {n} giorni",
+    "lbCheckNow": "Da ripassare"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6146,7 +6156,9 @@
     "lbWhyCheck": "Hora de revisar {n}",
     "lbWhyStuck": "Erros em chamadas e conversas {n}",
     "lbWhyTry": "Expressões ainda não ditas {n}",
-    "lbWhyNew": "Ainda não visto {n}"
+    "lbWhyNew": "Ainda não visto {n}",
+    "lbCheckIn": "Revisar em {n} dias",
+    "lbCheckNow": "Hora de revisar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7331,7 +7343,9 @@
     "lbWhyCheck": "Пора проверить {n}",
     "lbWhyStuck": "Ошибки в звонках и чатах {n}",
     "lbWhyTry": "Выражения, которые ещё не говорили {n}",
-    "lbWhyNew": "Ещё не видели {n}"
+    "lbWhyNew": "Ещё не видели {n}",
+    "lbCheckIn": "Проверка через {n} дн.",
+    "lbCheckNow": "Пора проверить"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8326,7 +8340,9 @@
     "lbWhyCheck": "Waktunya dicek {n}",
     "lbWhyStuck": "Salah di panggilan dan obrolan {n}",
     "lbWhyTry": "Ungkapan yang belum pernah diucapkan {n}",
-    "lbWhyNew": "Belum pernah dilihat {n}"
+    "lbWhyNew": "Belum pernah dilihat {n}",
+    "lbCheckIn": "Dicek {n} hari lagi",
+    "lbCheckNow": "Waktunya dicek"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9314,7 +9330,9 @@
     "lbWhyCheck": "حان وقت مراجعته {n}",
     "lbWhyStuck": "أخطاء في المكالمات والمحادثات {n}",
     "lbWhyTry": "تعابير لم تقلها بعد {n}",
-    "lbWhyNew": "لم تره بعد {n}"
+    "lbWhyNew": "لم تره بعد {n}",
+    "lbCheckIn": "مراجعة بعد {n} أيام",
+    "lbCheckNow": "حان وقت المراجعة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10302,7 +10320,9 @@
     "lbWhyCheck": "ถึงเวลาทบทวน {n}",
     "lbWhyStuck": "ผิดในการโทรและแชต {n}",
     "lbWhyTry": "สำนวนที่ยังไม่เคยพูด {n}",
-    "lbWhyNew": "ยังไม่เคยเห็น {n}"
+    "lbWhyNew": "ยังไม่เคยเห็น {n}",
+    "lbCheckIn": "ทบทวนอีก {n} วัน",
+    "lbCheckNow": "ถึงเวลาทบทวน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11290,6 +11310,8 @@
     "lbWhyCheck": "दोहराने का समय {n}",
     "lbWhyStuck": "कॉल और बातचीत में गलत {n}",
     "lbWhyTry": "अभी तक न बोले गए भाव {n}",
-    "lbWhyNew": "अभी तक नहीं देखा {n}"
+    "lbWhyNew": "अभी तक नहीं देखा {n}",
+    "lbCheckIn": "{n} दिन बाद दोहराएँ",
+    "lbCheckNow": "दोहराने का समय"
   }
 }

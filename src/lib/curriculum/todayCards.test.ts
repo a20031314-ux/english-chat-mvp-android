@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { checkStates, dueKeys, stateOf } from "./checkState.ts";
+import { cardFaces, checkStates, dueKeys, stateOf } from "./checkState.ts";
 import { doneOf, pickCards, NEW_DONE } from "./todayCards.ts";
 import type { LogEvent } from "./logLedger.ts";
 
@@ -76,4 +76,17 @@ test("오늘 카드 끝: 사건으로 — 확인은 다 풀면, 써 보기는 �
   const fresh = Array.from({ length: NEW_DONE }, (_, i) => ev(`w|n${i}`, "ok", at + i, { m: "pick" }));
   assert.equal(doneOf({ kind: "new", keys: [], n: NEW_DONE }, fresh.slice(1), at), false);
   assert.equal(doneOf({ kind: "new", keys: [], n: NEW_DONE }, fresh, at), true);
+});
+
+test("카드 가릴 칸: 맞힌 적 있거나 사전에서 찾아본 뒤 안 풀었으면 낱말 가림 (th·ja)", () => {
+  const face = cardFaces([
+    { k: "w|ข้าว", src: "dict", r: "look", t: T0 },
+    { k: "w|水", src: "quiz", r: "ok", m: "pick", t: T0 },
+    { k: "w|山", src: "dict", r: "look", t: T0 },
+    { k: "w|山", src: "quiz", r: "miss", m: "write", t: T0 + 5 },
+  ]);
+  assert.equal(face("w|ข้าว"), "show");
+  assert.equal(face("w|水"), "show");
+  assert.equal(face("w|山"), "hide");
+  assert.equal(face("w|空"), "hide");
 });
