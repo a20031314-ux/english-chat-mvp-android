@@ -10,7 +10,7 @@ import { kvGetJsonMany, kvScanKeys } from "./kv.ts";
 import { textsFingerprint, translated } from "./stageCopy.ts";
 import { BANK_CHUNK, loadBank } from "../curriculum/vocabBank.ts";
 import { dictLinesOf, loadWordSentences } from "../curriculum/wordSentencesLoad.ts";
-import { promotable, type BankEntry } from "../curriculum/qbankRules.ts";
+import { promotable, reviewable, type BankEntry } from "../curriculum/qbankRules.ts";
 
 export type DictQuizLine = { text: string; piece: string; gloss: string };
 
@@ -44,9 +44,9 @@ export type PromotedLine = { w: string; text: string; piece: string; en: string;
 
 /**
  * 사전에 올릴 후보: 문제은행 낱말 열쇠(w|) 중 예문이 둘이 안 되는 낱말의, 충분히 풀렸고 너무 쉽지도 이상하지도 않은 모델 예문.
- * 사전에 이미 있는 문장은 뺀다. 많이 풀린 것부터.
+ * 사전에 이미 있는 문장은 뺀다. 많이 풀린 것부터. unplayed면 덜 풀린 예문(사전에서 열어 만든 것 등)도 — 검토가 정한다(qbankRules.reviewable).
  */
-export async function promotedWords(language: string, limit = 2000): Promise<PromotedLine[]> {
+export async function promotedWords(language: string, limit = 2000, options: { unplayed?: boolean } = {}): Promise<PromotedLine[]> {
   const book = await loadWordSentences(language);
   const keys = (await kvScanKeys(`qbank:v1:${language}:w|*`)).slice(0, 20000);
   const out: PromotedLine[] = [];
@@ -61,7 +61,7 @@ export async function promotedWords(language: string, limit = 2000): Promise<Pro
       if (have.length >= 2) return;
       const seen = new Set(have.map((line) => line.text));
       for (const item of entry.items) {
-        if (!promotable(item) || seen.has(item.t)) continue;
+        if (!(options.unplayed ? reviewable(item) : promotable(item)) || seen.has(item.t)) continue;
         out.push({ w: word, text: item.t, piece: item.p, en: item.g, n: item.n, r: item.r });
       }
     });

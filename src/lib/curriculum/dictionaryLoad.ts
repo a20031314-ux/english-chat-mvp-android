@@ -26,7 +26,9 @@ async function build(language: string): Promise<DictEntry[]> {
     GLOSS[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null),
   ]);
   return bank.map((word, index) => {
-    const line = sentences?.[`w|${word.w}`]?.[0];
+    const lines = sentences?.[`w|${word.w}`] ?? [];
+    const line = lines[0];
+    const second = lines[1];
     const meaning = gloss?.[word.w];
     return {
       word: word.w,
@@ -35,6 +37,8 @@ async function build(language: string): Promise<DictEntry[]> {
       stage: stageOfRank(language, index),
       ...(meaning ? { gloss: meaning } : {}),
       ...(line?.text ? { line: line.text, ...(line.ko ? { lineKo: line.ko } : {}), ...(line.en ? { lineEn: line.en } : {}) } : {}),
+      ...(second?.text ? { line2: { text: second.text, ...(second.ko ? { ko: second.ko } : {}), ...(second.en ? { en: second.en } : {}) } } : {}),
+      lineCount: lines.length,
     };
   });
 }

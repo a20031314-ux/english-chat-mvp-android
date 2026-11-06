@@ -171,4 +171,10 @@ test("사전 승격: 20번 넘게 풀렸고 정답률 15~95%인 모델 예문만
   assert.equal(promotable({ ...base, n: 40, r: 20, o: "talk" }), false);
   assert.equal(promotable({ ...base, n: 40, r: 20, off: "easy" }), false);
   assert.equal(promotable({ t: "猫が好きです。", p: "猫", g: "I like cats.", s: 1, n: 25, r: 15 }), true);
+  const { reviewable } = await import("./qbankRules.ts");
+  // 사전에서 열어 만든 예문(덜 풀림)도 검토 표에 — 많이 풀렸으면 promotable 기준, 뺀 것·대화 줄은 아님.
+  assert.equal(reviewable({ ...base, n: 0, r: 0 }), true);
+  assert.equal(reviewable({ ...base, n: 40, r: 39 }), false);
+  assert.equal(reviewable({ ...base, n: 3, r: 1, off: "easy" }), false);
+  assert.equal(reviewable({ ...base, n: 0, r: 0, o: "talk" }), false);
 });

@@ -2,7 +2,8 @@
 // 문제은행이 만든 낱말 예문을 사전 예문 파일에 올린다(2026-11-06 사용자 "예문 없는 단어는 퀴즈 풀 때마다 예문 생성 → 사전에 추가", "자동 + 주기적 확인").
 //
 // 흐름: 퀴즈가 사전 예문 없는 낱말을 내면 문제은행(server/qbank.ts)이 예문을 만들고, 풀이 결과로 셈한다.
-//   20번 넘게 풀렸고 정답률이 15~95%인 예문(qbankRules.promotable)이 후보.
+//   단어 사전(📕)에서 예문 없는 낱말을 열어도 같은 문제은행이 예문을 만든다(studyMap/Dictionary).
+//   20번 넘게 풀렸고 정답률이 15~95%인 예문(qbankRules.promotable) + 아직 덜 풀린 예문(n < 20, reviewable)이 후보 — n·rate 칸을 보고 정한다.
 //   1) pull  — 운영 서버에서 후보를 받아 검토 표(tmp/promote/<언어>.tsv)로 쓴다. 운영자 키는 환경 변수 OPS_KEY.
 //   2) 검토  — Cursor 구독 에이전트나 Claude가 표를 읽고 ok 칸에 y/n, ko 칸에 한국어 뜻을 쓴다(RULES "생성은 Cursor 먼저").
 //              버릴 것: 어색한 문장·뜻이 다른 낱말·특정인·민감한 내용·합성어 속 낱말(빈칸이 다른 낱말의 일부).
@@ -27,13 +28,13 @@ async function pull(langs) {
   if (!key) throw new Error("OPS_KEY 환경 변수가 필요합니다(운영자 키 — 저장소에 두지 않음).");
   mkdirSync(OUT, { recursive: true });
   for (const lang of langs) {
-    const response = await fetch(`${BASE}/api/curriculum/qbank?promoted=${lang}`, { headers: { "x-ops-key": key } });
+    const response = await fetch(`${BASE}/api/curriculum/qbank?promoted=${lang}&all=1`, { headers: { "x-ops-key": key } });
     if (!response.ok) {
       console.log(lang, "실패", response.status);
       continue;
     }
     const { lines = [] } = await response.json();
-    const rows = ["w\ttext\tpiece\ten\tn\trate\tok\tko", ...lines.map((one) => [one.w, one.text, one.piece, one.en, one.n, Math.round((one.r / one.n) * 100) + "%", "", ""].map(cell).join("\t"))];
+    const rows = ["w\ttext\tpiece\ten\tn\trate\tok\tko", ...lines.map((one) => [one.w, one.text, one.piece, one.en, one.n, one.n ? Math.round((one.r / one.n) * 100) + "%" : "-", "", ""].map(cell).join("\t"))];
     writeFileSync(join(OUT, `${lang}.tsv`), rows.join("\n") + "\n");
     console.log(lang, "후보", lines.length, "→", join("tmp", "promote", `${lang}.tsv`));
   }

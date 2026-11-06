@@ -74,6 +74,15 @@ export function promotable(item: BankItem): boolean {
   return rate > 0.15 && rate < 0.95;
 }
 
+/**
+ * 사전에서 연 낱말로 만든 예문처럼 아직 덜 풀린 것도 검토 표에 올린다(2026-11-06 사용자 "단어장에서 검색 후 열었을 때 생성하는 흐름도").
+ * 많이 풀렸으면 promotable 기준 그대로, 덜 풀렸으면 사람이·Cursor가 보고 정한다(뺀 것·대화 줄은 아님).
+ */
+export function reviewable(item: BankItem): boolean {
+  if (item.off || item.o === "talk") return false;
+  return item.n < PROMOTE_AFTER || promotable(item);
+}
+
 export function liveItems(entry: BankEntry): BankItem[] {
   return entry.items.filter((item) => !item.off);
 }

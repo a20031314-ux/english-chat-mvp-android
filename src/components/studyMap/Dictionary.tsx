@@ -1,23 +1,58 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
 import type { UICopy } from "@/lib/copy";
 import { searchDictionary, type DictEntry } from "@/lib/curriculum/dictionary";
 import { loadDictionary } from "@/lib/curriculum/dictionaryLoad";
-import { posGroup } from "@/lib/curriculum/vocabBank";
+import { posGroup, wordKey } from "@/lib/curriculum/vocabBank";
+import { grownItems, growBank } from "@/lib/curriculum/qbank";
+import { glossFor } from "@/lib/curriculum/stageScripts";
 
 /**
- * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 하나.
+ * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 둘.
+ * 예문 파일에 둘이 안 되는 낱말은 열 때 퀴즈와 같은 문제은행(lib/curriculum/qbank.ts growBank, 열쇠 w|낱말)이 만들어 채운다
+ * (2026-11-06 사용자 "검색 후 열었을 때 생성하는 흐름도") — 모두가 같이 쓰고, 검토를 거쳐 사전 파일에 올린다(scripts/dict-promote.mjs).
  */
+type Shown = { text: string; gloss?: string };
+
+/** 문제은행 예문 → 보일 줄(앱 언어 뜻). */
+function grownLines(language: string, word: string, locale: string, have: readonly string[], room: number): Shown[] {
+  if (room <= 0) return [];
+  return grownItems(language, wordKey(word))
+    .filter((item) => !have.includes(item.text))
+    .slice(0, room)
+    .map((item) => ({ text: item.text, gloss: glossFor(item.gloss, locale) }));
+}
 export function DictionaryButton({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
   const tone = useBankTone();
   const [open, setOpen] = useState(false);
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<DictEntry | null>(null);
+  // 연 낱말의 예문이 둘이 안 되면: 이 폰에 받아 둔 문제은행 예문부터 보이고, 모자라면 서버에 키워 달라고(같은 열쇠는 10분에 한 번).
+  const [making, setMaking] = useState<string | null>(null);
+  const [grown, setGrown] = useState(0);
+  const haveLines = (entry: DictEntry) => [entry.line, entry.line2?.text].filter((one): one is string => Boolean(one));
+  const made = useMemo(
+    () => (picked && (picked.lineCount ?? 0) < 2 ? grownLines(language, picked.word, locale, haveLines(picked), 2 - haveLines(picked).length) : []),
+    // grown은 받아 온 뒤 다시 읽게 하는 표시.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [picked, language, locale, grown],
+  );
+  const openEntry = (entry: DictEntry) => {
+    setPicked(entry);
+    if ((entry.lineCount ?? 0) >= 2) return;
+    const have = haveLines(entry);
+    if (grownLines(language, entry.word, locale, have, 2 - have.length).length >= 2 - have.length) return;
+    setMaking(entry.word);
+    void growBank(language, locale, [{ key: wordKey(entry.word), stage: Math.min(5, entry.stage) }]).finally(() => {
+      setMaking((now) => (now === entry.word ? null : now));
+      setGrown((n) => n + 1);
+    });
+  };
   useEffect(() => {
     if (!open || entries) return;
     let live = true;
@@ -97,13 +132,27 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                     {ui.dictionaryStage.replace("{n}", String(picked.stage))}
                   </p>
                   {locale === "ko" && picked.gloss ? <p dir="auto" className="mt-2 text-chat text-ink">{picked.gloss}</p> : null}
-                  {picked.line ? (
-                    <div className="mt-3 rounded-xl bg-white/[0.04] px-3 py-2">
-                      <p className="text-meta text-slate-500">{ui.dictionaryExample}</p>
-                      <p dir="auto" className="mt-0.5 text-chat text-ink">{picked.line}</p>
-                      {lineGloss(picked) ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{lineGloss(picked)}</p> : null}
-                    </div>
-                  ) : null}
+                  {(() => {
+                    const shown: Shown[] = [
+                      ...(picked.line ? [{ text: picked.line, gloss: lineGloss(picked) }] : []),
+                      ...(picked.line2 ? [{ text: picked.line2.text, gloss: locale === "ko" ? picked.line2.ko || picked.line2.en : picked.line2.en }] : []),
+                      ...made,
+                    ];
+                    const busy = making === picked.word;
+                    if (!shown.length && !busy) return null;
+                    return (
+                      <div data-dictionary-examples className="mt-3 rounded-xl bg-white/[0.04] px-3 py-2">
+                        <p className="text-meta text-slate-500">{ui.dictionaryExample}</p>
+                        {shown.map((one) => (
+                          <div key={one.text} className="mt-1.5 first-of-type:mt-0.5">
+                            <p dir="auto" className="text-chat text-ink">{one.text}</p>
+                            {one.gloss && one.gloss !== one.text ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{one.gloss}</p> : null}
+                          </div>
+                        ))}
+                        {busy ? <p aria-busy className="mt-1.5 animate-pulse text-meta text-slate-500">…</p> : null}
+                      </div>
+                    );
+                  })()}
                 </div>
               ) : (
                 <ul className="mt-3 flex min-h-0 flex-col gap-1 overflow-y-auto">
@@ -112,7 +161,7 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                     <li key={entry.word}>
                       <button
                         type="button"
-                        onClick={() => setPicked(entry)}
+                        onClick={() => openEntry(entry)}
                         className="flex w-full items-baseline gap-2 rounded-xl px-2 py-1.5 text-start hover:bg-white/[0.06]"
                       >
                         <bdi dir="auto" className="text-chat text-ink">{entry.word}</bdi>

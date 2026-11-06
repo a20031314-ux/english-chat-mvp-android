@@ -13,6 +13,10 @@ export type DictEntry = {
   line?: string;
   lineKo?: string;
   lineEn?: string;
+  /** 예문 파일의 문장 수(둘이 안 되면 열 때 문제은행이 더 만든다 — studyMap/Dictionary). */
+  lineCount?: number;
+  /** 둘째 예문. */
+  line2?: { text: string; ko?: string; en?: string };
 };
 
 const fold = (text: string) => text.normalize("NFC").toLocaleLowerCase();

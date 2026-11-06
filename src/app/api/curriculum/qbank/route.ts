@@ -23,13 +23,13 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 /**
- * GET ?promoted=<언어> (헤더 x-ops-key: 운영자 키) — 문제은행이 만든 낱말 예문 중 사전에 올릴 후보(server/wordDict.ts promotedWords).
- * scripts/dict-promote.mjs가 받아 검토 → 사전 예문 파일(word-sentences)에 합친다. 모델 호출 없음.
+ * GET ?promoted=<언어>[&all=1] (헤더 x-ops-key: 운영자 키) — 문제은행이 만든 낱말 예문 중 사전에 올릴 후보(server/wordDict.ts promotedWords).
+ * scripts/dict-promote.mjs가 받아 검토 → 사전 예문 파일(word-sentences)에 합친다. 모델 호출 없음. all=1이면 덜 풀린 예문도(사전에서 열어 만든 것).
  */
 export async function GET(request: NextRequest) {
   const language = request.nextUrl.searchParams.get("promoted");
   if (!language || !canOperate(request.headers.get("x-ops-key"))) return jsonWithCors(request, { error: "forbidden" }, { status: 403 });
-  const lines = await promotedWords(coerceLanguageCode(language)).catch(() => null);
+  const lines = await promotedWords(coerceLanguageCode(language), 2000, { unplayed: request.nextUrl.searchParams.get("all") === "1" }).catch(() => null);
   if (!lines) return jsonWithCors(request, { error: "unavailable" }, { status: 503 });
   return jsonWithCors(request, { language: coerceLanguageCode(language), lines });
 }
