@@ -1,6 +1,7 @@
 "use client";
 
 import { reformOn } from "@/lib/reform";
+import { QUIZ_FOCUS_EVENT } from "@/lib/curriculum/quizFocus";
 import { LanguageBank } from "@/components/studyMap/LanguageBank";
 import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
 import { setUpNextFallback } from "@/lib/curriculum/upNext";
@@ -266,9 +267,9 @@ export function NotebookSection({
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
   // 지금 보는 탭(위 칸 이름 줄, 2026-11-02) — 하루 첫 화면은 Stagebank, 오늘 할 것을 다 하면 그날 한 번 Quizbank(AutoQuiz).
-  // 개편 스위치(시험 앱 껍데기에서만 켜짐, lib/reform.ts) — 켜지면 첫 칸은 Quizbank(오늘 카드가 생기면 Logbank).
+  // 개편 스위치(시험 앱 껍데기에서만 켜짐, lib/reform.ts) — 켜지면 첫 칸은 Logbank(맨 위 오늘 카드, 3단계).
   const [reform] = useState(reformOn);
-  const [tab, setTab] = useState<MyLayer>(() => (reformOn() ? "keep" : "stage"));
+  const [tab, setTab] = useState<MyLayer>(() => (reformOn() ? "log" : "stage"));
   /** 그 탭으로 바꾸고 펴기(밖에서 문장구조·상황을 열 때, 오늘 할 것이 끝났을 때). */
   const openLayer = (next: MyLayer | null) => {
     if (!next) return;
@@ -276,6 +277,12 @@ export function NotebookSection({
     scrollToTabs();
   };
   // 단어장 열기 신호(openNotes words — 단계 화면 낱말 줄·?screen=vocab): 새 앱엔 노트 화면이 없어 Quizbank 어휘 탭으로(2026-11-02 변경 감시 major).
+  // 오늘 카드(Logbank)를 누르면 Quizbank 칸으로 — 그 판의 열쇠는 Quizbank가 가져감(curriculum/quizFocus.ts).
+  useEffect(() => {
+    const on = () => setTab("keep");
+    window.addEventListener(QUIZ_FOCUS_EVENT, on);
+    return () => window.removeEventListener(QUIZ_FOCUS_EVENT, on);
+  }, []);
   useEffect(
     () =>
       onAppIntent("openNotes", () => {
@@ -575,7 +582,7 @@ export function NotebookSection({
           onClose={() => setStageTestFor(null)}
         />
       ) : null}
-      {frame && CURRICULUM_ONLY && book.stages.length ? <UpNextHost ui={ui} onKeep={() => openLayer("keep")} /> : null}
+      {frame && CURRICULUM_ONLY && book.stages.length && !reform ? <UpNextHost ui={ui} onKeep={() => openLayer("keep")} /> : null}
       {frame && CURRICULUM_ONLY && book.stages.length ? (
         <MyLayers
           ui={ui}

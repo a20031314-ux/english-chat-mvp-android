@@ -1,6 +1,8 @@
 "use client";
 
 import { reformOn } from "@/lib/reform";
+import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -252,6 +254,21 @@ export function TodayPlan({
   const askedWrong = useRef<Set<string>>(new Set());
   // 개편 한 줄: 지금 묶음이 다시 볼 것인지(기록은 다시 보기 탭처럼), 지난 묶음이 다시 볼 것이었는지(번갈아 내기).
   const reviewBatch = useRef(false);
+  // 개편 3단계: Logbank 오늘 카드가 맡긴 열쇠(curriculum/quizFocus.ts) — 그 열쇠부터 다섯씩, 다 내면 한 줄 그대로.
+  const focusKeys = useRef<string[]>([]);
+  const [focusSerial, setFocusSerial] = useState(0);
+  useEffect(() => {
+    if (!reform) return;
+    const take = () => {
+      const focus = takeQuizFocus(language);
+      if (!focus) return;
+      focusKeys.current = focus.keys;
+      setFocusSerial(focus.serial);
+    };
+    take();
+    window.addEventListener(QUIZ_FOCUS_EVENT, take);
+    return () => window.removeEventListener(QUIZ_FOCUS_EVENT, take);
+  }, [reform, language]);
   // 이번에 낸 복합 문제 문장(curriculum/multiQuiz.ts) — 한 바퀴 돌면 비운다.
   const talkShown = useRef<Set<string>>(new Set());
   const [missRun, setMissRun] = useState(0);
@@ -758,7 +775,7 @@ export function TodayPlan({
   const currentAt = items.findIndex((item) => !doneOf(item));
   const current = currentAt >= 0 ? items[currentAt]! : null;
   const openItem = (item: PlanItem) => (item.kind === "recall" ? setRecalling(true) : item.kind === "quiz" ? setQuiz(item) : unitMixOf(item) ? setUnitItem(item) : onOpen(item.stage, item.id, "today"));
-  upNextRef.current = items.filter((item) => !doneOf(item)).map((item) => ({ id: item.id, label: labelOf(item), open: () => openItem(item) }));
+  upNextRef.current = reform ? [] : items.filter((item) => !doneOf(item)).map((item) => ({ id: item.id, label: labelOf(item), open: () => openItem(item) }));
   const todayMake = (): QuizBatch | null => {
     if (!current || current.kind !== "quiz") return null;
     const served = todayServed.current;
@@ -1164,6 +1181,8 @@ export function TodayPlan({
     if (one.skipped && one.key && !wrongTab && keepFocus === "vocab" && circleOn && bank && isDeckKey(one.key)) {
       saveCircle(trimCircle(growCircle(noteAnswer(circleRef.current, one.key, false, Date.now()), circleOrder, knownWord)));
     }
+    // 개편: 모르겠어요·답 보기도 장부에는 틀림으로(오늘 카드 "확인할 것"이 끝나게, 앎이면 적용이 힘듦으로 — curriculum/checkState.ts).
+    if (one.skipped && one.key && reform) noteLedger(language, [{ k: one.key, src: "quiz", r: "miss", ...(one.shape ? { m: one.shape === "t" ? "write" : "pick" } : {}) }]);
     if (one.skipped || !one.key) return;
     if (wrongTab) askedWrong.current.add(one.key);
     else setAsked((current) => new Set([...current, one.key]));
@@ -1192,6 +1211,13 @@ export function TodayPlan({
   const keepMake = (): QuizBatch | null => {
     if (examTab) return null;
     if (wrongTab) return takeBatch(bundleFor("review"));
+    if (reform && focusKeys.current.length) {
+      const keys = focusKeys.current.slice(0, 5);
+      focusKeys.current = focusKeys.current.slice(5);
+      reviewBatch.current = false;
+      const made = bundleFor("learn", keys);
+      if (made) return takeBatch(made);
+    }
     if (reform) {
       // 한 줄: 다시 볼 것이 있으면 새 묶음과 번갈아(연달아 다시 볼 것만 나오지 않게), 새 것이 떨어지면 다시 볼 것만.
       if (!reviewBatch.current) {
@@ -1354,7 +1380,7 @@ export function TodayPlan({
   const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, usableKey));
   // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
   const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
-  const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
+  const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${focusSerial}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
   // 시험 탭은 소재가 모여 시험이 생길 때만(2026-11-03). 그 전엔 탭·모인 수·소재 칩을 두지 않는다. 단어 시험은 어휘 탭에 그대로.
   const keepTabs: readonly ("vocab" | "exam" | "review")[] = examReady ? ["vocab", "exam", "review"] : ["vocab", "review"];
   void examSeen;
@@ -1389,7 +1415,7 @@ export function TodayPlan({
     </div>
   );
   const keepBody = (
-    <div data-keep-learning>
+    <div data-keep-learning data-focus-serial={reform ? focusSerial : undefined}>
       <div className="flex items-center gap-1">
         {/* 무엇을 = 탭(사용자 2026-10-30): 어휘 · 문법 · 표현 · 지난번에 틀린 것 — 틀린 것 다시 풀기는 이 탭에서만(nextStudy review 줄). */}
         <div role="tablist" data-study-focus className="flex min-w-0 flex-1 flex-wrap gap-1.5">

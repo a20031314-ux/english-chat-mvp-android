@@ -11,7 +11,7 @@
 ## 화면 흐름 (손으로 씀)
 
 > **다음 구조(2026-11-03, 화면은 아직):** Languagebank 탭이 이 자리의 정체(사전)가 된다. 아래 그림은 지금 코드다. 기준 `hub/drafts/languagebank-2026-11-03.md`. 만들기 전에는 이 그림을 다음 구조로 고치지 않는다.
-> **개편 1단계(2026-11-06, 스위치 `lib/reform.ts` — 시험 앱 껍데기에서만 켜짐, 브라우저는 localStorage `lbReform`=1):** My 칸 [Logbank · Quizbank · Languagebank], Stagebank 대신 Languagebank(`studyMap/LanguageBank` — 찾기 = 단어 사전 몸통 `Dictionary` DictionaryBody, 전체보기 띠 → 종류(줄 주제|품사 × 난이도) → 묶음 칩 → 낱말 화면 / 표현·문법은 openLesson), 첫 칸 Quizbank, 📕는 Quizbank에서 빠짐, AutoFull·AutoQuiz 끔. **2단계(2026-11-07):** Quizbank 탭 줄 없음 — 한 흐름(TodayPlan keepMake: 다시 볼 것 묶음과 새 묶음(낱말·표현·영어 문법) 번갈아, 시험이 모이면 📝 줄), 답한 뒤 문제마다 📕 Languagebank 문(QuestionView dictDoor — 낱말은 사전 시트 DictionarySheet 그 낱말 화면, 표현·문법·문장구조는 openLesson, 틀리면 진하게). 스위치가 꺼진 앱(Play·웹)은 아래 그림 그대로.
+> **개편 1단계(2026-11-06, 스위치 `lib/reform.ts` — 시험 앱 껍데기에서만 켜짐, 브라우저는 localStorage `lbReform`=1):** My 칸 [Logbank · Quizbank · Languagebank], Stagebank 대신 Languagebank(`studyMap/LanguageBank` — 찾기 = 단어 사전 몸통 `Dictionary` DictionaryBody, 전체보기 띠 → 종류(줄 주제|품사 × 난이도) → 묶음 칩 → 낱말 화면 / 표현·문법은 openLesson), 첫 칸 Quizbank, 📕는 Quizbank에서 빠짐, AutoFull·AutoQuiz 끔. **2단계(2026-11-07):** Quizbank 탭 줄 없음 — 한 흐름(TodayPlan keepMake: 다시 볼 것 묶음과 새 묶음(낱말·표현·영어 문법) 번갈아, 시험이 모이면 📝 줄), 답한 뒤 문제마다 📕 Languagebank 문(QuestionView dictDoor — 낱말은 사전 시트 DictionarySheet 그 낱말 화면, 표현·문법·문장구조는 openLesson, 틀리면 진하게). **3단계(2026-11-07):** 첫 칸 Logbank — 맨 위 오늘 카드 최대 셋(studyMap/TodayCards: 확인할 것 · 막힌 것 · 적용이 힘듦 · 써 보기 · 새로 배울 것, 근거 숫자 + 문, 고르기·끝 셈 curriculum/todayCards.ts, 체크 셋 curriculum/checkState.ts — 장부 logbank.v1에서, 그날 고정 todayCards.v1.<언어> 이 폰). 퀴즈 카드 → Quizbank 칸이 그 열쇠부터(curriculum/quizFocus.ts 신호), 써 보기 → practice 신호로 📞 통화(그 표현). 다음 추천·오늘 할 것·단계 사다리는 안 보임. 스위치가 꺼진 앱(Play·웹)은 아래 그림 그대로.
 
 ```
 앱 열기 ─ AI 동의(iOS만) ─ 배울 언어 고르기(처음 설치만 — 국기 14개, 여러 개 눌러 ✓ → 아래 [국기들 시작하기] → 처음 누른 언어로 My(2026-11-02 여러 개), 앱 언어는 기기 언어, LanguagePick FirstLanguagePick·lib/firstLanguage.ts, 2026-10-31) ─ (쓸 기능 고르기는 처음 설치에도 안 띄움 — 전부 켬, 고르기는 ? 사용법 창 맨 앞 탭, 2026-10-29) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
@@ -161,7 +161,7 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
-- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/BankHelp` · `studyMap/CheckupPlayer` · `studyMap/ContentScope` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/GrowthNetwork` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LedgerPanel` · `studyMap/LessonHost` · `studyMap/Logbank` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/RecallPlayer` · `studyMap/ReviewNotes` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/SkillBands` · `studyMap/SkillHexagon` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageReview` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayPlan` · `studyMap/UpNext` · `studyMap/WeakStrip` · `studyMap/bankTone`
+- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `notes/PartDetailSheet` · `studyMap/BankHelp` · `studyMap/CheckupPlayer` · `studyMap/ContentScope` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/GrowthNetwork` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LedgerPanel` · `studyMap/LessonHost` · `studyMap/Logbank` · `studyMap/PlacementPlayer` · `studyMap/QuizPlayer` · `studyMap/RecallPlayer` · `studyMap/ReviewNotes` · `studyMap/ScriptAmount` · `studyMap/ScriptPractice` · `studyMap/SkillBands` · `studyMap/SkillHexagon` · `studyMap/SkillRecord` · `studyMap/StageCheck` · `studyMap/StageFrames` · `studyMap/StageReview` · `studyMap/StageScripts` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/TodayPlan` · `studyMap/UpNext` · `studyMap/WeakStrip` · `studyMap/bankTone`
 - API: `curriculum/ask` · `curriculum/choices` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/generate`(학습 기록 공통) · `curriculum/item-lesson` · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/option-notes` · `curriculum/pick` · `curriculum/progress` · `curriculum/qbank` · `curriculum/recall` · `curriculum/restore`(학습 기록 공통) · `curriculum/review` · `curriculum`(AI 통화, 학습 기록 공통) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`(학습 기록 공통)
 - 다른 영역이 씀: `studyMap/LessonHost` ← 앱 틀 · `studyMap/SkillHexagon` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
@@ -203,7 +203,7 @@
 | `openTab` | 여러 영역 8곳 | 앱 틀 |
 | `chatDraft` | — | AI 채팅 |
 | `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
-| `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
+| `practice` | AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | — | AI 통화 |

@@ -975,7 +975,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "推定値",
     "lbEstimateHelp": "クイズと単語テストの記録から推定した値です。解くほど合わせていきます。",
-    "lbExtended": "拡張"
+    "lbExtended": "拡張",
+    "lbToday": "今日",
+    "lbCardCheck": "確認するもの",
+    "lbCardStuck": "つまずき",
+    "lbCardHard": "使いこなせない",
+    "lbCardTry": "使ってみる",
+    "lbCardNew": "新しく学ぶ",
+    "lbWhyCheck": "確認の時期 {n}",
+    "lbWhyStuck": "通話・会話で間違えた {n}",
+    "lbWhyTry": "まだ言ったことのない表現 {n}",
+    "lbWhyNew": "初めて見る {n}"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1953,7 +1963,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "估计值",
     "lbEstimateHelp": "根据你的测验和单词测试记录估计。练得越多越准。",
-    "lbExtended": "扩展"
+    "lbExtended": "扩展",
+    "lbToday": "今天",
+    "lbCardCheck": "要复习",
+    "lbCardStuck": "卡住的",
+    "lbCardHard": "难以运用",
+    "lbCardTry": "试着用",
+    "lbCardNew": "新学的",
+    "lbWhyCheck": "该复习了 {n}",
+    "lbWhyStuck": "通话·对话中出错 {n}",
+    "lbWhyTry": "还没说过的表达 {n}",
+    "lbWhyNew": "还没见过 {n}"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2934,7 +2954,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Ước tính",
     "lbEstimateHelp": "Ước tính từ bài kiểm tra và bài thi từ vựng của bạn. Càng làm càng chính xác.",
-    "lbExtended": "Mở rộng"
+    "lbExtended": "Mở rộng",
+    "lbToday": "Hôm nay",
+    "lbCardCheck": "Cần ôn",
+    "lbCardStuck": "Bị vấp",
+    "lbCardHard": "Khó dùng",
+    "lbCardTry": "Thử dùng",
+    "lbCardNew": "Học mới",
+    "lbWhyCheck": "Đến lúc ôn {n}",
+    "lbWhyStuck": "Sai trong gọi và trò chuyện {n}",
+    "lbWhyTry": "Cách nói chưa từng dùng {n}",
+    "lbWhyNew": "Chưa gặp {n}"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3920,7 +3950,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Estimation",
     "lbEstimateHelp": "Estimé à partir de vos quiz et tests de mots. Ça s’ajuste au fil de votre pratique.",
-    "lbExtended": "Extra"
+    "lbExtended": "Extra",
+    "lbToday": "Aujourd'hui",
+    "lbCardCheck": "À revoir",
+    "lbCardStuck": "Bloqué",
+    "lbCardHard": "Difficile à utiliser",
+    "lbCardTry": "À essayer",
+    "lbCardNew": "Nouveau",
+    "lbWhyCheck": "À revoir maintenant {n}",
+    "lbWhyStuck": "Erreurs en appel et en discussion {n}",
+    "lbWhyTry": "Expressions jamais dites {n}",
+    "lbWhyNew": "Pas encore vu {n}"
   },
   "it": {
     "archive": "Report",
@@ -5097,7 +5137,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Stima",
     "lbEstimateHelp": "Stimato dai tuoi quiz e test di parole. Si aggiusta man mano che pratichi.",
-    "lbExtended": "Extra"
+    "lbExtended": "Extra",
+    "lbToday": "Oggi",
+    "lbCardCheck": "Da ripassare",
+    "lbCardStuck": "Bloccato",
+    "lbCardHard": "Difficile da usare",
+    "lbCardTry": "Da provare",
+    "lbCardNew": "Nuovo",
+    "lbWhyCheck": "Da ripassare ora {n}",
+    "lbWhyStuck": "Errori in chiamate e chat {n}",
+    "lbWhyTry": "Espressioni mai dette {n}",
+    "lbWhyNew": "Non ancora visto {n}"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6086,7 +6136,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Estimativa",
     "lbEstimateHelp": "Estimado a partir dos seus quizzes e testes de palavras. Vai se ajustando conforme você pratica.",
-    "lbExtended": "Extra"
+    "lbExtended": "Extra",
+    "lbToday": "Hoje",
+    "lbCardCheck": "Para revisar",
+    "lbCardStuck": "Travado",
+    "lbCardHard": "Difícil de usar",
+    "lbCardTry": "Experimente",
+    "lbCardNew": "Novo",
+    "lbWhyCheck": "Hora de revisar {n}",
+    "lbWhyStuck": "Erros em chamadas e conversas {n}",
+    "lbWhyTry": "Expressões ainda não ditas {n}",
+    "lbWhyNew": "Ainda não visto {n}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7261,7 +7321,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Оценка",
     "lbEstimateHelp": "Оценено по вашим тестам и проверкам слов. Уточняется по ходу занятий.",
-    "lbExtended": "Дополнительно"
+    "lbExtended": "Дополнительно",
+    "lbToday": "Сегодня",
+    "lbCardCheck": "Проверить",
+    "lbCardStuck": "Трудности",
+    "lbCardHard": "Сложно применять",
+    "lbCardTry": "Попробовать",
+    "lbCardNew": "Новое",
+    "lbWhyCheck": "Пора проверить {n}",
+    "lbWhyStuck": "Ошибки в звонках и чатах {n}",
+    "lbWhyTry": "Выражения, которые ещё не говорили {n}",
+    "lbWhyNew": "Ещё не видели {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8246,7 +8316,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "Perkiraan",
     "lbEstimateHelp": "Diperkirakan dari kuis dan tes kosakatamu. Makin sering latihan, makin tepat.",
-    "lbExtended": "Tambahan"
+    "lbExtended": "Tambahan",
+    "lbToday": "Hari ini",
+    "lbCardCheck": "Perlu dicek",
+    "lbCardStuck": "Tersendat",
+    "lbCardHard": "Sulit dipakai",
+    "lbCardTry": "Coba pakai",
+    "lbCardNew": "Baru",
+    "lbWhyCheck": "Waktunya dicek {n}",
+    "lbWhyStuck": "Salah di panggilan dan obrolan {n}",
+    "lbWhyTry": "Ungkapan yang belum pernah diucapkan {n}",
+    "lbWhyNew": "Belum pernah dilihat {n}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9224,7 +9304,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "تقدير",
     "lbEstimateHelp": "قيمة مقدّرة من اختباراتك واختبارات الكلمات. تصبح أدق كلما تدرّبت.",
-    "lbExtended": "إضافي"
+    "lbExtended": "إضافي",
+    "lbToday": "اليوم",
+    "lbCardCheck": "للمراجعة",
+    "lbCardStuck": "متعثّر",
+    "lbCardHard": "صعب الاستخدام",
+    "lbCardTry": "جرّبه",
+    "lbCardNew": "جديد",
+    "lbWhyCheck": "حان وقت مراجعته {n}",
+    "lbWhyStuck": "أخطاء في المكالمات والمحادثات {n}",
+    "lbWhyTry": "تعابير لم تقلها بعد {n}",
+    "lbWhyNew": "لم تره بعد {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10202,7 +10292,17 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "ค่าประมาณ",
     "lbEstimateHelp": "ประมาณจากผลควิซและแบบทดสอบคำศัพท์ของคุณ ยิ่งทำยิ่งแม่นขึ้น",
-    "lbExtended": "เพิ่มเติม"
+    "lbExtended": "เพิ่มเติม",
+    "lbToday": "วันนี้",
+    "lbCardCheck": "ต้องทบทวน",
+    "lbCardStuck": "ติดขัด",
+    "lbCardHard": "ใช้ยาก",
+    "lbCardTry": "ลองใช้",
+    "lbCardNew": "เรียนใหม่",
+    "lbWhyCheck": "ถึงเวลาทบทวน {n}",
+    "lbWhyStuck": "ผิดในการโทรและแชต {n}",
+    "lbWhyTry": "สำนวนที่ยังไม่เคยพูด {n}",
+    "lbWhyNew": "ยังไม่เคยเห็น {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11180,6 +11280,16 @@
     "languagebankTitle": "Languagebank",
     "lbEstimate": "अनुमान",
     "lbEstimateHelp": "आपकी क्विज़ और शब्द परीक्षाओं से लगाया गया अनुमान। जितना अभ्यास करेंगे, उतना सटीक होगा।",
-    "lbExtended": "अतिरिक्त"
+    "lbExtended": "अतिरिक्त",
+    "lbToday": "आज",
+    "lbCardCheck": "दोहराना है",
+    "lbCardStuck": "अटके हुए",
+    "lbCardHard": "इस्तेमाल करना मुश्किल",
+    "lbCardTry": "इस्तेमाल करके देखें",
+    "lbCardNew": "नया",
+    "lbWhyCheck": "दोहराने का समय {n}",
+    "lbWhyStuck": "कॉल और बातचीत में गलत {n}",
+    "lbWhyTry": "अभी तक न बोले गए भाव {n}",
+    "lbWhyNew": "अभी तक नहीं देखा {n}"
   }
 }

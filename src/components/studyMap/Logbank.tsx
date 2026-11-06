@@ -1,5 +1,7 @@
 "use client";
 
+import { TodayCards } from "@/components/studyMap/TodayCards";
+import { reformOn } from "@/lib/reform";
 import { bankTone } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -292,6 +294,8 @@ export function Logbank({
   head?: ReactNode;
 }) {
   const insight = useExpressionInsightOptional();
+  // 개편 3단계: 맨 위 오늘 카드(lib/reform.ts가 켜진 앱만).
+  const [reform] = useState(reformOn);
   const quiz = useQuizDays(language);
   const results = useDayResults(language);
   const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
@@ -550,6 +554,7 @@ export function Logbank({
   };
   return (
     <div data-logbank className="flex flex-col gap-3">
+      {reform ? <TodayCards ui={ui} language={language} /> : null}
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">

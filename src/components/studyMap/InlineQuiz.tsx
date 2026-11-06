@@ -81,7 +81,13 @@ export function InlineQuiz({
   useEffect(() => {
     emptyRef.current = !batch?.questions.length;
   });
+  // 처음 그릴 때는 위 resetKey 효과가 이미 make()를 불렀다 — 여기서 또 부르면 그 묶음을 덮는다(오늘 카드가 맡긴 열쇠 묶음이 사라짐, 2026-11-07).
+  const firstRetry = useRef(true);
   useEffect(() => {
+    if (firstRetry.current) {
+      firstRetry.current = false;
+      return;
+    }
     if (retryKey === undefined || !emptyRef.current) return;
     const made = makeRef.current();
     if (!made?.questions.length) return;
