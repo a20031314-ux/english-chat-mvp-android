@@ -4,8 +4,292 @@ Each line: language, sentence number and author, English translation number and 
 Sentence page: https://tatoeba.org/sentences/show/<number>
 Korean translations by languagebank.
 
-Authors (934): _undertoad, aaugustho, abiniz, Abyrvalg, acell, adamtrousers, Adazul77, Adelpa, adiante19, adjusting, adl, Advanced, ae5s, Aemith, afeinberg, Afonkin, AfricanQuant, afyodor, Aghanim, agotaanna, Ahha, Airvian, Airy, ajdavidl, ajje, Akh2403, akilez, AKINCI81, Akira, akira_ito, al_ex_an_der, al_lastor, AlanF_US, albrusgher, alec, Alex_do, Alex_M, alexdiment, alexmarcelo, alexmaur, alicup, aliene, alik_farber, Alkrasnov, allenmanbear, aln, aloannguyen, Alta, alvren, always, amanshi, AmarMecheri, Amastan, AMIKEMA, Amntag, andibing, Ann74, annewate, Annushka, Anon, anonym, Anthea_Phan, anthrax26, AntonKhorev, AOCinJAPAN, Aomori, APagano, ApioDelPueblo, AqQoyriq, AqQoyriq_1, aquatius, arademaker, araneo, Archibald, arezoo, ari_diary, ariarin, arielpolycarpo, arivkai, Arkadeko, arnxy20, arseniiv, artemlyubchenko, AsaeP, ashulga, Asif, Asma, astru, astyng, astynk, asuz, atc, Atversch, Auride, AutoBot, Automotom, autuno, auxitt, Avelesy, averoes, avoidingrealwork, awiz, axxeny, azjani, Babelball, bagonyi, Bah_Dure, baisong, bajama, bakarov, Balamax, Barra, bart, beatrixvasc, bekindtoall, belgavox, benavery, benthomas, BHO, BiancaSanti, Biga, bill, BlackZ, blay_paul, BlueLagoon, bmarrow, bmaynard87, bonney12, Borbie, BoriQa, boston2390, BranTheOliver, Brasiliense, brauliobezerra, BraveSentry, Brunosprak, bsc2015, bufo, buzz1k, BW, Cainntear, Cak_ypa2010, calypsow, camouat, candistyx, Cangarejo, Capistrano, caponych, carlo, carlosalberto, carloseperola, CarpeLanam, casaniere, caspian, Castro5432, cataphract, catcher, cathrynm, CC, CF, CH, chanchan, Charmander, chaule3, cheesr, chemgio_2001123, ChinesePoster, chintsu, Chrikaru, Cindrogriza, Cinthya, CK, claudiofuzita, Clavain, Clepsydris, CM, CN, cntrational, Colbo, Conjuice, corbinjurgens, corvard, cost_, coynejeremy, crbk92, cris, cromwellt, croogie, CS, CT, Ctrl_Alt_Del, Cxom, dafp, dan1ruusianspanish, DanaDescalza, danepo, Dani6187, DanielDaniel, DanielTzvi, Danika_Dakika, Danka, Danquebec, darinmex, Dark, DarkHollow, DarkLinkXXXX, daroth2504, dasfunked, daveoily, davidb, DavidDias, davis094, ddnktr, Dejo, Delian, deniko, derpapottamus, deyta, DiePain, dimitris, dipdowel, DiploIago, DiscoNostalgia, DJ_Saidez, djinni74, djtait, dkulp, dobleahl, Dominicus_Ng_03, Domitori, don_ramon, dora98, Dorenda, DostKaplan, dotheduyet1999, DracoKall, dreznovk, DrWinters, dryhay, Duck, dust_bunny, duythanh, dzoja, dzouras, eastasiastudent, Eccles17, edson1267camaforte, Eevee, eggershead, eirik174, Ekselans, Eldad, elencw, Elenkina, eleutherothentes1, elisei, ellasevia, elsherif, elsteris, Emersono, enclectm, EnriCP, Enrike100, enteka, epiphany, Ergulis, erikspen, espamatics, esperanturk, espjulie, estambulista, Esto, ET, etala, etoile, EugeneGS, Evgeniy, fabricio5, fagott, fanty, faraway9911, fcbond, fekundulo, felidad, fengli, Fenrir, FernandoMaiaJr, FeuDRenais, FeuDRenais2, filipe_s, Fin, fishda, FishlandicFishy, fizdyuk, fjay69, florence_arctica, franca, freddy1, frpzzd, Gal, Ganz, garborg, garynw, gcaplan, GeeZ, gin, GLaDOS, gleki, gleydin, glossboss, gone2bacolod, gracefully, gracehero, GranD, gregoryguy, Grim_fandango, Grst4Ntmlgystz485791, Gruzilkin, Gulliver, GustaBR, GustavHRV90, Gustavo, gustonrankin, Gyuri, HaffA, HAGNi, haibuihoang, HakeemEvrenoglu, halfb1t, hansemannbr, hantol01, haomakk, harshnisar, Hayabusa, hayastan, heccele, hecko, Hector005, Helene, Hellerick, helloroto, hellosunshine, helmfer, Henrixion, heo598, Hidari_v, hinto4, hitalos, honestlang, honeygod, hothuyhien, human600, Hung, hunzerf, Huskion, Hybrid, ianna, iart61, ichivivi20, Igider, Ignoto, ihteandr, Imp, Indigirka, Inego, Innaloo, Ioan_Cristian, isaacandrade, IsabelleRain, Isach, Isgandar, iskander, islandisto, issadouba, iT4LL, Ivan24, ivanov, Ivanovb, Iwapedro, J_S, jakov, Jamez_Bender, jan_OkulaJu, Jane_Austen, jathonjet, jberkel, JeanM, jeedrek, Jefepeters, JeNNeR, Jesse, Jeve, JFMorais, jgauthier, JGEN, JGGG, jhomel, Jillyappleseed, JimBreen, JK_Summerlin, JNQ, joao7889, JohnKnaphus, JonLDS, Joseph, josivangoncalves, joulin, jrom, jshholland, jumarinho, Just_Balls, justpeachy, jvlopes91, Kai2313, kaiperkins271, Kar1na, karloelkebekio, Karok, Katabasis, Kathereenah, Katie_Yves, katix824, katjka, Katubeltza, kayano, kazenochikara, kebukebu, Keiden, keira_n, Kenbi93, kerbear407, khoaharp, khungla, KimiP, kitler, KiwiCreme, kkflf4, kleberlucas, Knabacxo, knnida, kobylkin, kolin2009, konhuruk, koosy, kostas, kotowaza, kremel, KrisR, Kristinka, krzysiek, kukla, kylewii, laetitiamg, lalala, LanguagesLover, Lars224, las, Lathean, Laudemilson, Lazovic, lazymoose, LB, LdjuherTaqvaylit, Lebad, Lebensfreude, LeeSooHa, leishenki, Lemmy, Lenin_1917, lenon_perez, Leonid204, Leono, Leonroz, Lepotdeterre, less_tat, letuananh, leucammieuvu, LeviHighway, lewtds, Lili691, LimeGreenTeknii, LinaTamazight, Lindoula, linguine, LittleBoy, Lonely_cup_noodle, LoverofEnglish, luca22, lucas, lucasdcs, LucasDePaula, lucasfr, lucasmg123, Luciferous, Luciosp, ludoviko, Luiaard, lukaszpp, Lumi, Lumi_alt, Luornu, lurking_plant, Lycoris, Lyte3000, maaster, MaccAodh, MacGyver, mactrey, madhatter5, madvomon, mahdiye, mailohilohi, maily, makarov, Maksimo, malafaya, mamat, mangodurian, Mar1L, marafon, Maralula, marauder016, marcelostockle, marciom, marcj794, marcoinacio, marcosmilton, marcospcruz, marcusps, MariTTB, markpalmer, marloncori, MarlonX19, Martha, Martka, marvinibahs2020, Massin04, Matheus, MatheusHDRJ, MatheusPese, MathKay, mayon, mccarras, Mecamute, meerkat, megamanenm, megaton, meirad, Melzar708, menaud, mervert1, MessDjaaf, metcaslix, MethodGT, michalina, MicheleMaria, Micsmithel, migmorais, MikaM, mikhail_dvorkin, Miktsoanit, milana, mindfroggery, minshirui, Mira, Mofli, mojeanin, monahxo, monday0rsunday, monodioo, mookeee, moriole, Mouseneb, moxy, mraz, MrJuice, MrSener95, MrShoval, mrtaistoi, MTC, Muelisto, MUIRIEL, muitoazul, Mukaltin, muriloricci, mymi, Myrano_, n1ls, Naityahia, nami, Nandixer, Natalia_Su, Native77, Natsumi, Nattiko, naXa, neron, Netka, newtonlkh, ngbaanh, ngdongit, nhphuc, nhuttan2004, Nicacioh20, Nicat, niceguydave, NickC, nina99nv, ninefi, nmsalgueiro, NNON, NoahAB, Noktuo, noneim, nootley, notenoughsun, nowasky, nthkmf, Nuel, NurseMeeks, Nylez, Obado, Objectivesea, odexed, odien16, odiernod, OjisanSeiuchi, oleckramo, Olya, omniglotman, oneberto, oneconor, OneJanuary, Ooneykcall, Opiejay888, Orange, orcrist, OsoHombre, oxioxigen, pajunior, panamicua, pandark, papabear, paper1n0, papersaltserver, Parmeet, patgfisher, patlima, patrickvob, paul_lingvo, paula_guisard, pauldhunt, PedroAugusto, pedrolima, pedromarques, pedzi, petersmr, pgavda, pguerrajr, phoenix3000, phongvu, phrasemix, phuc, pierrephi, piksea, pip, pirytm, piterkeo, Ploomich, plover, PoliglotaBrasileiro, popball, potatosoup, princesamee, professorNilo, prokofyev, Proxima5, psykami, puxatudo, PvtMarc, pyn, qdii, quickfitter, quoctrong018, rafael8243, rafaeldejesus8199, Rafik, raghebaraby, raissalima, Ramona, raulguilherme10, rdgscratch, reez, rekoowa, Ricardo14, Rime, ritualesatanum, RJH, rkqb, Roaming, robbieheslop, Robertpaulson, RochaAr, rodrigo20, roger_rf, Ronaldonl, roobarb, RoyalBee, rpglover64, ruj, rul, ryanthewired, RYutaka, saasmath, sabretou, sacredceltic, Sadness, saeb, saiko, salikh, saluyot, sam_m, Samer, samir_t, sangelo, satsu, savella, say123, Sbgodin, Schierbeck, Scott, scriptin, sctld, Selena777, seltsameseeds, Serg_K1ng, sergiomelo, Serhiy, Settler, Shady_arc, shanghainese, sharptoothed, sharris123, shea, shekitten, Shishir, shortiiboy, Shujinko, sigavax, Silivrin, Sistemas, Sitko, sjaelsamlaren, slampisko, Sleepyscreen, Smoky, Snark, SofiaSilva, Sokian, Solana, soliloquist, soniamiku, sonick_rnd, SophiaKorsh, Source_VOA, souris_qui_rit, soweli_Elepanto, Spamster, speedwell, spenceryonce, spockofvulcan, spontaliku, Sprachprofi, sqrrl, SSibelty, stariy, starzykj, StephenCase, StrikerFX, Suelida, sugirajj, sugoi, sundown, superdenden, supermarinete, Suzumeya_Meiya, Svetislava, Sweatled, Swift, swolesuki, szaby78, Taam, Takirabor, tanay, Tangobango, tasarut, tatemame97, tatomeimei, Tavat, Teashrock, Temp, terrywallwork, Tesseract42, Th0th, Thais, thalitanjos, thanhcona40, the_orange, TheDQN, Theocracy, thuha0812, tieguy, timmartin, timsa, tinacalysto, tinowls, tjwhale, tkwswims, ToinhoAlam, tom0483, Tom9358, tommg, Tonari, ToxicFriu, Trailsend, TRANG, tranglich, tresoldi, Tretiz, triantafillou, tridz, trieuho, tripbeetle, trochal, truongap, truongdathuong, tsayng, tsp_2, tucm, tulio, tvindy, U2FS, Ueltatoeba2014, ulyssemc1, une_monica, unholywhale, urusu_tom, User140029, User72724, User75171, user83158, User91366, User97998, Ussis, V_Zmoova, Valentina_, valovski, Vanilla, Velosareon, vencxjo, venticello, Verdastelo, vexvine, vgigregg, vicch, victorhugosilvaspbr, victorromero85, Vienna, VilhelmsPort, vilnat, VirtuOZ, Vitie, vkoj, vodka, Vokabre, Vortarulo, voxbubnya, vvv123, vxern, Wadimiy, Wagner1994, warrenbisch, WarsawWill, weihaiping, Welton, wess, WestofEden, weylaway, Wezel, Wezzel, whatnot, whipback, whitefishglobal, williantoshio, Winter, witbrock, wittleghoul, wma, wnieboer, Wolgoon, wondersz1, wuiwie, wutiarn, XenoKat, xlenchik, xmoffx, xtofu80, xunglv, XY, xylian, Yagurten, Yanka, yappie, yashar, yatomoya, yinp, yippe, Ylberi, Yokhor, ytugen, yura, Zaghawa, zalaim, ZegPhig, Zifre, zmah47jr, zmoo, zogwarg, zumley, Zurich899, zvaigzne, zvzuibqx, zwhzwh, zWreXczV7J
+Authors (1000): _undertoad, aandrusiak, aaroned, aaugustho, abiniz, Abyrvalg, acell, adamtrousers, Adazul77, Adelpa, adiante19, adjusting, adl, Advanced, ae5s, Aemith, afeinberg, Afonkin, AfricanQuant, afyodor, Aghanim, agotaanna, Ahha, Airvian, Airy, ajdavidl, ajje, Akh2403, akilez, AKINCI81, Akira, akira_ito, al_ex_an_der, al_lastor, AlanF_US, albrusgher, alec, Alex_do, Alex_M, alexdiment, alexmarcelo, alexmaur, alicup, aliene, alik_farber, Alkrasnov, allenmanbear, aln, aloannguyen, Alois, Alta, alvren, always, amanshi, AmarMecheri, Amastan, AMIKEMA, Amntag, andibing, anko, Ann74, annewate, Annushka, Anon, anonym, Anthea_Phan, anthrax26, AntonKhorev, anubhav93, AOCinJAPAN, Aomori, APagano, Aphima, ApioDelPueblo, AqQoyriq, AqQoyriq_1, aquatius, arademaker, araneo, Archibald, arezoo, ari_diary, ariarin, arielpolycarpo, arihato, arivkai, Arkadeko, arnab, arnxy20, arseniiv, artemlyubchenko, AsaeP, ashulga, Asif, Asma, asosan, astru, astyng, astynk, asuz, atc, Atversch, Auride, AutoBot, Automotom, autuno, auxitt, Avelesy, averoes, avoidingrealwork, awiz, axxeny, Aya, azjani, Babelball, bagonyi, Bah_Dure, baisong, bajama, bakarov, Balamax, Barra, bart, beatrixvasc, bekindtoall, belgavox, benavery, benthomas, BHO, BiancaSanti, Biga, bill, BlackZ, Blanka_Meduzo, blay_paul, BlueLagoon, bmarrow, bmaynard87, bobson, bonney12, Borbie, BoriQa, boston2390, BranTheOliver, Brasiliense, brauliobezerra, BraveSentry, Brunosprak, bsc2015, bufo, bunbuku, buzz1k, BW, Cainntear, cairnhead, Cak_ypa2010, calypsow, camouat, candistyx, Cangarejo, Capistrano, caponych, carlo, carlosalberto, carloseperola, CarpeLanam, casaniere, caspian, Castro5432, cataphract, catcher, cathrynm, CC, CF, CH, chanchan, Charmander, chaule3, cheesr, chemgio_2001123, ChinesePoster, chintsu, Chrikaru, Christophe, Chus, Cindrogriza, Cinthya, CK, claudiofuzita, Clavain, Clepsydris, CM, CN, cntrational, Colbo, Conjuice, corbinjurgens, corvard, cost_, coynejeremy, CP, crbk92, crescat, cris, cromwellt, croogie, CS, CT, Ctrl_Alt_Del, Cxom, dafp, dan1ruusianspanish, DanaDescalza, danepo, Dani6187, DanielDaniel, DanielTzvi, Danika_Dakika, Danka, Danquebec, darinmex, Dark, DarkHollow, DarkLinkXXXX, daroth2504, dasfunked, daveoily, davidb, DavidDias, davis094, ddnktr, Dejo, Delian, deniko, derpapottamus, deyta, DiePain, dimitris, dipdowel, DiploIago, DiscoNostalgia, DJ_Saidez, djinni74, djtait, dkulp, dnjst, dobleahl, Dominicus_Ng_03, Domitori, don_ramon, dora98, Dorenda, DostKaplan, dotheduyet1999, DracoKall, dreznovk, DrWinters, dryhay, Duck, dust_bunny, duythanh, dzoja, dzouras, eastasiastudent, Eccles17, edson1267camaforte, Eevee, eggershead, eirik174, Ekselans, Eldad, elencw, Elenkina, eleutherothentes1, elisei, ellasevia, elsherif, elsteris, Emersono, enclectm, end, EnriCP, Enrike100, enteka, epiphany, Ergulis, erikspen, espamatics, esperanturk, espjulie, estambulista, Esto, ET, etala, etoile, EugeneGS, Evgeniy, fabricio5, fagott, fanty, faraway9911, fcbond, FeAst, fekundulo, felidad, fenfang557, fengli, Fenrir, FernandoMaiaJr, FeuDRenais, FeuDRenais2, filipe_s, Fin, fishda, FishlandicFishy, fizdyuk, fjay69, florence_arctica, franca, freddy1, frpzzd, fucongcong, Gal, Ganz, garborg, Gardenia, garynw, gcaplan, GeeZ, gin, GLaDOS, gleki, gleydin, glossboss, gone2bacolod, gracefully, gracehero, GranD, gregoryguy, Grim_fandango, Grst4Ntmlgystz485791, Gruzilkin, Gulliver, GustaBR, GustavHRV90, Gustavo, gustonrankin, Gyuri, h_aibe, HaffA, HAGNi, haibuihoang, HakeemEvrenoglu, halfb1t, Hans_Adler, hansemannbr, hantol01, haomakk, harshnisar, Hayabusa, hayastan, heccele, hecko, Hector005, Helene, Hellerick, helloroto, hellosunshine, helmfer, Henrixion, heo598, Hidari_v, hinto4, hitalos, honestlang, honeygod, hothuyhien, hrin, human600, Hung, hunzerf, Huskion, Hybrid, ianna, iart61, ichivivi20, Igider, Ignoto, ihteandr, Imp, Indigirka, Inego, Innaloo, Ioan_Cristian, isaacandrade, IsabelleRain, Isach, Isgandar, iskander, islandisto, issadouba, iT4LL, Ivan24, ivanov, Ivanovb, Iwapedro, J_S, jakov, Jamez_Bender, jan_OkulaJu, Jane_Austen, jathonjet, jberkel, JeanM, jeedrek, Jefepeters, JeNNeR, Jesse, Jeve, JFMorais, jgauthier, JGEN, JGGG, jhomel, Jillyappleseed, JimBreen, JK_Summerlin, JNQ, joao7889, JohnKnaphus, JonLDS, Joseph, josivangoncalves, joulin, jrom, jshholland, jumarinho, jummy, JunjouLover, Just_Balls, justpeachy, jvlopes91, Kai2313, kaiperkins271, kamojun, Kar1na, karloelkebekio, Karok, Katabasis, Kathereenah, Katie_Yves, katix824, katjka, Katubeltza, kayano, kazenochikara, kebukebu, Keiden, keira_n, Kenbi93, kerbear407, khoaharp, khungla, KimiP, kitler, KiwiCreme, KK_kaku_, kkflf4, kleberlucas, Knabacxo, knnida, kobylkin, kolin2009, konhuruk, koosy, kostas, kotowaza, kremel, KrisR, Kristinka, krzysiek, kukla, kylewii, laetitiamg, lalala, LanguagesLover, Lars224, las, Lathean, Laudemilson, Lazovic, lazymoose, LB, LdjuherTaqvaylit, Lebad, Lebensfreude, LeeSooHa, leishenki, Lemmy, Lenin_1917, lenon_perez, Leonid204, Leono, Leonroz, Lepotdeterre, less_tat, letuananh, leucammieuvu, LeviHighway, lewtds, Lili691, LimeGreenTeknii, LinaTamazight, Lindoula, linguine, LittleBoy, Lonely_cup_noodle, LoverofEnglish, luca22, lucas, lucasdcs, LucasDePaula, lucasfr, lucasmg123, Luciferous, Luciosp, ludoviko, Luiaard, lukaszpp, Lumi, Lumi_alt, Luornu, lurking_plant, Lycoris, Lyte3000, maaster, MaccAodh, MacGyver, mactrey, madhatter5, madvomon, mahdiye, mailohilohi, maily, makarov, Maksimo, malafaya, mamat, mangodurian, Mar1L, marafon, Maralula, marauder016, marcelostockle, marciom, marcj794, marcoinacio, marcosmilton, marcospcruz, marcusps, MariTTB, markpalmer, marloncori, MarlonX19, Martha, Martka, marvinibahs2020, Massin04, Matheus, MatheusHDRJ, MatheusPese, MathKay, mayon, mccarras, Mecamute, meerkat, megamanenm, megaton, meirad, Melzar708, menaud, mervert1, MessDjaaf, metcaslix, MethodGT, michalina, MicheleMaria, Micsmithel, migmorais, MikaM, mikhail_dvorkin, Miktsoanit, milana, mindfroggery, minshirui, Mira, Mofli, mojeanin, monahxo, monday0rsunday, monodioo, mookeee, moriole, Mouseneb, moxy, mraz, MrJuice, MrSener95, MrShoval, mrtaistoi, MTC, Muelisto, MUIRIEL, muitoazul, Mukaltin, muriloricci, mymi, Myrano_, n1ls, Naityahia, nami, Nandixer, Natalia_Su, Native77, Natsumi, Nattiko, naXa, neron, Netka, newtonlkh, ngbaanh, ngdongit, nhphuc, nhuttan2004, Nicacioh20, Nicat, niceguydave, NickC, nickyeow, nina99nv, ninefi, nmsalgueiro, NNON, NoahAB, Noktuo, noneim, nootley, notenoughsun, nowasky, nthkmf, Nuel, nurendra, NurseMeeks, Nylez, Obado, Objectivesea, odexed, odien16, odiernod, ojiisan, OjisanSeiuchi, oleckramo, Olya, omniglotman, oneberto, oneconor, OneJanuary, Ooneykcall, Opiejay888, Orange, orcrist, OsoHombre, oxioxigen, pajunior, panamicua, pandark, papabear, paper1n0, papersaltserver, Parmeet, pastelite, patgfisher, pathem, patlima, patrickvob, paul_lingvo, paula_guisard, pauldhunt, PedroAugusto, pedrolima, pedromarques, pedzi, petersmr, pgavda, pguerrajr, phoenix3000, phongvu, phrasemix, phuc, pierrephi, piksea, pip, pirytm, piterkeo, pkdome, Ploomich, plover, PoliglotaBrasileiro, popball, potatosoup, princesamee, professorNilo, prokofyev, Proxima5, psykami, Pun_intended, puxatudo, PvtMarc, pyn, qahwa, qdii, quickfitter, quoctrong018, RadiumCat, rafael8243, rafaeldejesus8199, Rafik, raghebaraby, raissalima, Ramona, raulguilherme10, rdgscratch, reez, regambit, rekoowa, Ricardo14, riccioberto, Rime, ritualesatanum, RJH, rkqb, Roaming, robbieheslop, Robertpaulson, RochaAr, rodrigo20, roger_rf, Ronaldonl, roobarb, RoyalBee, rpglover64, ruj, rul, ryanthewired, ryanwoo, RYutaka, ryuwryyy, saasmath, sabretou, sacredceltic, Sadness, saeb, saiko, salikh, saluyot, sam_m, Samer, samir_t, sangelo, satsu, savella, say123, Sbgodin, Schierbeck, Scott, scriptin, sctld, Selena777, seltsameseeds, Serg_K1ng, sergiomelo, Serhiy, Settler, Shady_arc, shanghainese, sharptoothed, sharris123, shea, shekitten, shiboy, Shishir, shortiiboy, Shujinko, sigavax, Silivrin, Sim5634, Simplemind, Sistemas, Sitko, sjaelsamlaren, slampisko, Sleepyscreen, slivercat, slo_oth, small_snow, Smoky, Snark, SofiaSilva, Sokian, Solana, soliloquist, SomeHungryBois, Somsak, Sonata, soniamiku, sonick_rnd, SophiaKorsh, Source_VOA, souris_qui_rit, soweli_Elepanto, Spamster, Spanger, speedwell, spenceryonce, spockofvulcan, spontaliku, Sprachprofi, sqrrl, SSibelty, stariy, starzykj, StephenCase, stephenmk, StrikerFX, Suelida, sugirajj, sugoi, sundown, superdenden, supermarinete, Suzumeya_Meiya, Svetislava, Sweatled, Swift, swolesuki, szaby78, Taam, Takirabor, tanay, Tangobango, tasarut, tatemame97, tatoebashrek, tatomeimei, Tavat, Teashrock, Temp, terrywallwork, Tesseract42, Th0th, Thais, thalitanjos, thanhcona40, thayne, the_orange, TheDQN, Theocracy, thuha0812, thyc244, tieguy, timmartin, timsa, tinacalysto, tinowls, Tirifto, tjwhale, tkwswims, ToinhoAlam, tom0483, Tom9358, tommg, tommy_san, Tonari, ToxicFriu, Trailsend, TRANG, tranglich, tresoldi, Tretiz, triantafillou, tridz, trieuho, tripbeetle, trochal, truongap, truongdathuong, tsayng, tsp_2, tucm, tulio, tvindy, U2FS, Ueltatoeba2014, ulyssemc1, une_monica, unholywhale, urro, urusu_tom, User140029, User66813, User72724, User75171, user83158, User91366, User97998, Ussis, V_Zmoova, Valentina_, valovski, Vanilla, Velosareon, vencxjo, venticello, Verdastelo, vexvine, vgigregg, vicch, victorhugosilvaspbr, victorromero85, Vienna, VilhelmsPort, vilnat, VirtuOZ, Vitie, vkoj, vodka, Vokabre, Vortarulo, voxbubnya, vvv123, vxern, Wadimiy, Wagner1994, wakatyann630, warrenbisch, WarsawWill, wat, weihaiping, Welton, wess, WestofEden, weylaway, Wezel, Wezzel, whatnot, whipback, Whiskkebarr, whitefishglobal, williantoshio, Winter, witbrock, wittleghoul, wma, wnieboer, Wolgoon, wondersz1, wuiwie, wutiarn, XenoKat, xfig, xlenchik, xmoffx, xtofu80, xunglv, XY, xylian, Yagurten, Yanka, yappie, yashar, yatomoya, yinp, yippe, Ylberi, Yokhor, ytugen, yura, Zaghawa, zalaim, ZegPhig, Zifre, zmah47jr, zmoo, zogwarg, zumley, Zurich899, zvaigzne, zvzuibqx, zwhzwh, zWreXczV7J
 
+hi	#2021504 RadiumCat	#591671 Ploomich	वह बहुत अच्छी अध्यापिका है.
+hi	#498179 minshirui	#473603 CK	उसे ज़ुकाम बहुत आसानी से हो जाता है।
+hi	#506452 minshirui	#63731 CK	ज़ुकाम हो तो यह दवाई ले लेना।
+hi	#10068360 sabretou	#5621933 CK	टॉम जॉन का जुड़वाँ भाई है।
+hi	#451302 minshirui	#27956 CK	डॉक्टर ने मेरी नब्ज़ ली।
+hi	#487209 minshirui	#325348 CK	मैं उससे नाई के यहाँ मिला।
+hi	#3212869 anubhav93	#3534080 nurendra	वह बूढ़ी औरत अपनी पोती पर मुस्कुराई।
+hi	#476369 minshirui	#398740 FeuDRenais	मकड़ियों को जाल बुनना अच्छा लगता है।
+hi	#13688739 sabretou	#2545851 CK	कुत्ते ने भौंकना बंद किया।
+hi	#10301776 sabretou	#8493921 Luiaard	उसके पास मूँछ है।
+hi	#516708 minshirui	#259385 CM	मुझे बहुत सारे शब्दों और वाक्यांशों को रटना है।
+hi	#487507 minshirui	#325794 CK	मैं अच्छा रसोइया हूँ।
+ja	#2563167 tommy_san	#11455449 auxitt	寝起きの冴えない頭でトムは必死に考えたが、何もいいアイデアは浮かばなかった。
+ja	#211091 (unknown)	#48365 CM	その件については我々はみんなのアイデアを出し合って、もっといい案を出した方が良い。
+ja	#186325 (unknown)	#23461 CK	我々のチームは、あんたのチームを最初の試合で簡単に負かすことが可能だ。
+ja	#75599 bunbuku	#328119 papabear	何あんた、またパン？相変わらず変わり映えのしない食生活送ってんのね。
+ja	#1106161 mookeee	#1869474 JunjouLover	隣の家が何だかがやがやとうるさい。パーティーでもしているのだろうか？
+ja	#183706 bunbuku	#20829 Zifre	間取りも狭いし、周りもうるさいけど、住めば都なんだよ、この部屋。
+ja	#169302 (unknown)	#245184 (unknown)	酸素が不足することは大部分の動物にとって命にかかわることである。
+ja	#96658 bunbuku	#307047 (unknown)	彼らは素敵なカップルである。いつもお互いに気持ちが通じあっている。
+ja	#9257707 small_snow	#4141214 AlanF_US	トムとメアリーはお似合いのカップルだってずっと思ってたよ。
+ja	#152078 (unknown)	#262475 (unknown)	私自身についていえば、クールな国際人になるより、心を開いた地球人でありたいのです。
+ja	#119287 (unknown)	#284376 (unknown)	彼ってクールだから、私たちみんな彼にはカリスマ性があると思っている。
+ja	#3749550 tommy_san	#9373346 DJ_Saidez	ダウンロードを開始するには「保存」ボタンをクリックしてください。
+ja	#230371 (unknown)	#67738 papabear	あまりお金がないので、私はこの冬は新しいコートなしで過ごさなければならない。
+ja	#11682845 small_snow	#9435412 sundown	黒のコートを着てる方って、あなたの叔父さんじゃないかと思うんだけど、当たり？
+ja	#229759 (unknown)	#67120 CK	あれだけのコインを収集するのにどれだけの年月がかかりましたか。
+ja	#234242 (unknown)	#71614 Lumi_alt	あなたがここで手にしている古いこのコインを見てご覧なさい。
+ja	#338505 shiboy	#44498 Lumi_alt	その博物館にはケルト時代の文化遺産のすばらしいコレクションがある。
+ja	#164180 (unknown)	#250330 Hans_Adler	私のコレクションは彼のものと比較すれば取るに足らない。
+ja	#195092 bunbuku	#32266 CM	ミツバチは、においのサンプルを巣に持ち帰ることによって食糧のありかを伝える。
+ja	#216261 (unknown)	#53565 (unknown)	しかしながら、色が貴社のカタログのサンプルの色と異なっていました。
+ja	#926789 bunbuku	#998978 Pun_intended	最近お腹がぽっこり出てきちゃったからさ、明日からジムに通うことにしたよ。
+ja	#1721173 anko	#697773 papabear	スタジオはとても狭くて、隠れる場所はない。
+ja	#10746618 bunbuku	#323966 CM	夜はスタジオの電気をつけないんだ。
+ja	#10901686 bunbuku	#11162146 jummy	セキュリティに問題あるから削除されるのはしょうがない。
+ja	#3450116 arnab	#2995493 CK	どなたかセキュリティに連絡できますか？
+ja	#11742192 bunbuku	#7127855 CK	ハゲている男性をセクシーだと思う女性もいます。
+ja	#137674 (unknown)	#275562 CK	大雨のためにすべて電車が止まって、タクシーに乗らねばなりませんでした。
+ja	#203737 KK_kaku_	#40977 Swift	タクシーが故障したので、私たちは歩いて駅まで行かなければならなかった。
+ja	#207154 (unknown)	#44405 papabear	その晩私はテーブルの上で逆さにしたコーヒーカップの下にチップを置いて出た。
+ja	#753376 arihato	#785464 hrin	テーブルの上に鍵を忘れてきてしまいました。お手数ですが持ってきて戴けませんか？
+ja	#459043 qahwa	#533237 blay_paul	お客さま、そちらのドレスはすとんとしたシルエットがとても上品で素敵なんです。
+ja	#1037909 bunbuku	#1037277 riccioberto	あなたのドレス、とても素敵ね。ここに「いいね！」ボタンがあればいいのに。
+ja	#75900 (unknown)	#327818 (unknown)	台座に心棒を立てて、各パーツをずらしながら重ねていきます。
+ja	#83525 (unknown)	#320191 CK	弊社は機械パーツの輸入を行っています。
+ja	#76258 mookeee	#327462 shekitten	韓流ドラマブームに便乗して、韓国の製品を売る業者が増えた。
+ja	#7217928 Aya	#7217846 Hybrid	メアリーは鏡で彼女のメイクをチェックした。
+ja	#9443762 small_snow	#9426958 CK	トムはお父さんのことがめちゃくちゃ大好きだったんだ。
+ja	#10032408 small_snow	#10019236 shekitten	電気自動車の充電って、めちゃくちゃ時間がかかるのよ。
+ja	#11771094 bunbuku	#54370 CM	これがラストオーダーです。
+ja	#2238228 tommy_san	#1848964 Spamster	私はタトエバのロゴが好きだ。
+ja	#97820 (unknown)	#305884 CK	彼らはそれをどのようにすればいいかということでは意見の一致が見られなかった。
+ja	#186374 (unknown)	#23510 CK	我々が手に手を取って一致団結すれば、きっとこの不況の時代も乗り切れるだろう。
+ja	#98367 (unknown)	#305335 (unknown)	彼らは、その値を下げることに同意しなかった。
+ja	#208334 (unknown)	#45591 (unknown)	その騒音の音量を下げるか消すかしなさい。
+ja	#219752 (unknown)	#57072 papabear	この本の主人公は社会の不正を口では激しく攻撃するが、何も実行しない。
+ja	#234507 (unknown)	#71884 Eldad	あきれたことに、彼は試験中に不正行為をしていて見つけられた。
+ja	#169915 (unknown)	#244571 CM	昨日会社からの帰宅の途中で、私は不良の一団に徹底的にたたきのめされてしまった。
+ja	#11580324 small_snow	#11761011 end	うちのお兄ちゃん、高校の頃、手に負えない程の不良だったのよ。
+ja	#231354 (unknown)	#68721 (unknown)	あのカーディーラーはこの中古のトヨタが調子がいいなどと、まんまと一杯くわせやがった。
+ja	#10566767 small_snow	#2413532 AlanF_US	中古の車を買おうと思ってたけど、今はそれなりに稼いでるから、奮発して新車を買うことにしたんだ。
+ja	#96772 (unknown)	#306932 (unknown)	彼らは人工衛星を軌道に乗せることに成功した。
+ja	#116160 (unknown)	#287509 CK	彼の母親が彼を車に乗せるために来た。
+ja	#1664165 Christophe	#1664175 Christophe	空気が乾くと、喉も渇いて咳が出る。
+ja	#85875 (unknown)	#317837 (unknown)	皮は乾くにつれて堅くなった。
+ja	#10673582 h_aibe	#10673579 CK	トムの了解も得ないで、そんなことをするのは良くないよ。
+ja	#11024998 small_snow	#11697580 pip	遺伝子解析は癌やその他の疾患の可能性を予測するのに役立てることができます。
+ja	#121143 small_snow	#282864 papabear	彼あんなに元気だったのに。突然亡くなるなんて。一寸先は闇だね。
+ja	#11163599 small_snow	#6580418 Hybrid	トムのお母さんは、トムのお父さんが亡くなるとすぐに再婚した。
+ja	#11126897 bunbuku	#59623 CK	この付近の家は、どれも似たり寄ったりだから、見分けがつかないんだよな。
+ja	#11200596 bunbuku	#59627 CK	この付近の郵便局を教えていただけませんか。
+ja	#10600496 small_snow	#10600508 DJ_Saidez	私は日本人です。日本語以外は、英語が少しできる程度ですが、仲良くしてね。
+ja	#194910 (unknown)	#32084 CK	みんな忙しくしているのに、そんなところでノウノウと休憩してるんじゃないよ。
+ja	#338235 mookeee	#2192 Zifre	きみは午前中ずっとこの問題について考えてる。休憩しろ、お昼を食べに行ってこい。
+ja	#8430686 small_snow	#8431032 CK	トムは学校に行きたくないわけではなかったが、体調が悪くて行けなかった。
+ja	#772976 marloncori	#11339744 stephenmk	体調が悪くなっているので、生憎そんなに重い箱を運ぶことはできない。
+ja	#74512 fcbond	#329207 fcbond	仕事が忙しすぎるのも考えものだけど、時間が余るのもなぁ。
+ja	#193599 (unknown)	#30766 CM	もし手に余るようなことがあれば、私に助けを求めなさい。
+ja	#10846504 small_snow	#11480718 pip	水分が多く含まれる夏野菜は、体内の熱を冷ます作用があります。
+ja	#127308 (unknown)	#276781 CM	暖かい天候の時は、発汗作用が体温の調節をする上で役立つ。
+ja	#170172 (unknown)	#244312 CM	作者の真の意志を知るためには行間を読まなければならない。
+ja	#219900 KK_kaku_	#57219 Dejo	この文章は作者の気持ちを的確に表現している。
+ja	#145765 (unknown)	#268797 CM	食料の供給が不足したので、我々は残された少量を配分しなければならなかった。
+ja	#148317 (unknown)	#266242 (unknown)	樹木から水の供給がなければ、降雨量はやがて減少し、その地域は乾燥し続ける。
+ja	#202038 mookeee	#39250 CN	テレビでは俳優が台詞を思い出せるようにキューカードが主に使われる。
+ja	#207257 (unknown)	#44508 (unknown)	その俳優は自分のスーツをその仕立屋さんにつくっていたものだった。
+ja	#127054 wakatyann630	#277036 Zifre	知識そのものは目的ではなく、充実した人間らしい生活を送るという目的のための手段である。
+ja	#190013 (unknown)	#27169 sundown	稲光は雷の音に先行する。
+ja	#141854 mookeee	#272716 (unknown)	先週ウッドさんに手紙を書いて、農場で仕事をさせてくれるように頼んでおいたよ。
+ja	#155488 (unknown)	#259050 (unknown)	私は先週、昔のクラスメートに会った。彼女は、相変わらず退屈なひとだった。
+ja	#175882 (unknown)	#238583 AlanF_US	結果が公表され次第、私は君にそれを知らせた。
+ja	#168323 (unknown)	#246170 (unknown)	市長は調査の結果を公表すると宣言した。
+ja	#225071 (unknown)	#62406 (unknown)	こういうハイキングで冒険を好む君の趣味は十分満足させられるだろう。
+ja	#138262 (unknown)	#274973 papabear	多分、君は冗談だと思うだろうけど、若い頃、僕はパンクロッカーだったんだ。
+ja	#9120398 small_snow	#9120393 CK	トムはメアリーが冗談を言ってるんだって思ってたけど、メアリーはとても真剣だったんだ。
+ja	#202501 (unknown)	#39716 (unknown)	ディスクと出力紙をかばんに詰めて下さい。
+ja	#100652 (unknown)	#303046 papabear	彼は膝の怪我のため、大事をとってトーナメントには出場しないことにした。
+ja	#8662231 bunbuku	#7633298 CK	パスポートの期限が切れる前に、もう一度オーストラリアに行きたいなあ。
+ja	#119471 (unknown)	#284192 papabear	彼が毎日日記を付けているのに刺激されて、私も英語で日記を付けることにしました。
+ja	#76737 mookeee	#326983 papabear	この仕事の面白みは、常に技術が進化しているので、刺激を受け続けられることですね。
+ja	#144035 (unknown)	#270531 (unknown)	人生とは不十分な前提から十分な結論を引き出す技術である。
+ja	#165882 (unknown)	#248622 (unknown)	私たちは結婚を前提として交際しています。
+ja	#182884 (unknown)	#20004 CK	議長は意見が割れるかも知れないという可能性を除外しはしなかった。
+ja	#10175907 small_snow	#10172690 AlanF_US	グラスにお湯は入れないでください。割れる場合があります。
+ja	#144230 (unknown)	#270335 (unknown)	人間社会のことがらにおいて、恐怖ではなく希望が創造の原理となる。
+ja	#174703 (unknown)	#239765 (unknown)	言葉による詩とは、要約して言えば、韻律的美の創造であるとしたい。
+ja	#83874 (unknown)	#319842 (unknown)	福祉予算を犠牲にして打ち上げられた人工衛星は、正常に動作しなかった。
+ja	#140424 (unknown)	#274149 (unknown)	相反する理想を抱いた二つの強力な勢力が対決するのは、最終手段の時である。
+ja	#605278 Scott	#605320 Scott	湯あがりの化粧をした顔には、ほんのりと赤みを帯びて、見ちがえるほど美しかった。
+ja	#153230 (unknown)	#261315 Eldad	私は彼女の洋服のセンスが好きです。彼女の服とお化粧はいつもすてき。
+ja	#1219078 thyc244	#1217545 darinmex	その官僚は匿名を条件として記者に話をした。
+ja	#101624 bunbuku	#302069 CK	彼は匿名で赤十字に多額のお金を寄付した。
+ja	#167199 (unknown)	#247302 CK	私たちが訪問したときは、小説に半年間も取り組んでいたんですから。
+ja	#403779 blay_paul	#403780 blay_paul	半年後に銀行融資を受けたいのだが、今から何を準備すればいいのか？
+ja	#87986 (unknown)	#315721 mamat	彼女は沢山の趣味を持っています。料理、編み物、園芸、切手収集など。
+ja	#11953095 bunbuku	#3725147 CM	トムからそれを取り上げる権利は、あなたにはありませんよ。
+ja	#212934 (unknown)	#50219 (unknown)	そのテレビ番組は新しい問題をよく取り上げる。
+ja	#217791 (unknown)	#55101 CM	これらの物質がどのようにして体内に吸収されるのかを知りたいと思う。
+ja	#74775 fcbond	#328944 fcbond	海綿は水を吸収しますので水彩絵具をぼかしたりする時に便利です。
+ja	#152895 (unknown)	#261651 (unknown)	私は勉強するのとフルートを吹くのをかわるがわるするつもりです。
+ja	#74429 fcbond	#329291 fcbond	風が吹くたびに、桜の花びらが、ひらひらと舞い降りてました。
+ja	#159920 bunbuku	#254602 CK	私はその内気な青年にその美しい少女への愛を告白するように勧めた。
+ja	#77297 mookeee	#326422 CK	老人のための国立の病院がもっとあってしかるべきだ。
+ja	#221914 bunbuku	#59240 CM	この国立公園には景色のいい所がたくさんある。
+ja	#144257 (unknown)	#270309 (unknown)	人間は地上への最初の出現以来、つねに情報を集め、有用な考えを他の人間に伝達しようとしてきた。
+ja	#8998456 Imp	#8998410 Imp	地獄はもぬけの空だ。すべての悪魔はここ地上に来ているから。
+ja	#1619654 mookeee	#4644882 corbinjurgens	最近塾の講師を始めた。主に数学と英語の個別指導をしている。
+ja	#230956 (unknown)	#68323 CM	あの子を無理に塾に通わせるのは反対だね。
+ja	#10650563 bunbuku	#10768175 end	子供の前で、子供の夢を壊すようなことを言わないでよ。
+ja	#230841 (unknown)	#68208 Eldad	あの少年はボールをぶつけてよくうちの窓を壊す。
+ja	#10014761 Sim5634	#10906025 SomeHungryBois	世界の大半の言語はSOVの語順をとりますが、主要な言語はSVOの語順をとります。
+ja	#137299 (unknown)	#275937 CM	大半のアメリカ人は私が彼らをファーストネームで呼ぶことをいやがらない。
+ja	#137282 (unknown)	#275954 (unknown)	大幅な値上げをＯＰＥＣのせいにしようとしたってそうはいかない。とても納得できないね。
+ja	#11003499 small_snow	#12600524 urro	ただし、干ばつの時期には湖の水位が大幅に低くなる可能性があります。
+ja	#191632 (unknown)	#28795 al_ex_an_der	われわれは持っているわずかな天然資源をできるだけ利用しなければならない。
+ja	#942808 thyc244	#941410 bobson	英国と云えばサッカー、フィッシュアンドチップス、そして女王です。
+ja	#93300 (unknown)	#310408 (unknown)	彼女はいつも気取っていて、まるで女王様のように振る舞っている。
+ja	#164600 (unknown)	#249907 (unknown)	私には姉妹が三人いる。一人は看護婦で、残る二人は学生である。
+ja	#149294 (unknown)	#265264 CM	実質上、我々が関わるすべての活動において、学習が行われるのだろう。
+ja	#149293 (unknown)	#265265 CM	実質成長と名目成長率の差は物価上昇を意味する。
+ja	#149286 (unknown)	#265272 CM	実力が伯仲したチーム同士の対戦なので面白い試合になりそうだ。
+ja	#11583447 bunbuku	#2050649 CK	ジャイアンツは明日、ドラゴンズと対戦します。
+ja	#186853 (unknown)	#23990 auxitt	科学技術は人間と自然の対立関係を和らげることができなかった。
+ja	#874010 thyc244	#873916 papabear	ヴァレンシアは対立候補よりもはるかに生徒会長候補に相応しい。
+ja	#778999 marloncori	#10906014 SomeHungryBois	箸で寿司を取ろうとするたびに、相変わらず落としてしまいます。
+ja	#167679 bunbuku	#246821 CK	私が出した高価な寿司を誰も食べなかったのにはがっかりした。
+ja	#95515 (unknown)	#308190 CK	彼女が屋根の修理を手伝いましょうかと言った時、彼は大喜びしました。
+ja	#212173 (unknown)	#49453 al_ex_an_der	その屋根のむこうに見える建物はわたしたちの教会です。
+ja	#3322488 Chus	#3322487 Chus	クズリは、岩の割れ目や、引き抜かれた根の下、および他の辺鄙な場所に巣を作る。
+ja	#205937 (unknown)	#43183 (unknown)	それから、最後の恐ろしい叫び声とともに、怪物は山から下方の岩に身を投げて死んだ。
+ja	#637886 blay_paul	#637887 blay_paul	ヨーロッパでの奴隷制度の廃止は、やがてアメリカにも波及しました。
+ja	#149211 (unknown)	#265347 (unknown)	社会は人種差別の原因となるような法律を廃止しなければならない。
+ja	#2113574 bunbuku	#1830525 CK	雨が降っていたので、私たちはピクニック用のお弁当を室内で食べなければいけなかった。
+ja	#164913 (unknown)	#249594 (unknown)	私どものカタログにあなたの論文の一部を引用させていただきたいと思っています。
+ja	#236282 mookeee	#73646 Eldad	「自分を愛するようにあなたの隣人を愛せよ」ということばは聖書からの引用です。
+ja	#144298 (unknown)	#270267 (unknown)	人間は環境に適応し、ある点では環境を形成することが出来るようになった。
+ja	#2124194 Blanka_Meduzo	#1690442 marcelostockle	肺、心臓、静脈、動脈、毛細血管により循環器系が形成されています。
+ja	#2929326 tommy_san	#2961601 JimBreen	この不確実な時代を生き抜くには、従来の価値観に囚われない柔軟な発想が必要だ。
+ja	#148002 (unknown)	#266557 (unknown)	従来の常識を覆す発明というのは、普通とは違う現象に気づく能力と関係がある。
+ja	#81582 (unknown)	#322133 CM	本状には微妙な情報が含まれており、気分を害することがあるかもしれない。
+ja	#215580 (unknown)	#52882 (unknown)	ジョーンズ先生は英米の語法の微妙な違いにとても敏感である。
+ja	#10654588 bunbuku	#10651646 CK	トムがヘルメットをかぶっていれば、こんなひどい怪我にならなかったでしょうね。
+ja	#4212146 User66813	#10124956 tsp_2	結局、私たちは二人共アルフレッドの音楽に合わせて息が切れるまで踊った。
+ja	#103499 (unknown)	#300194 sundown	彼は水に飛び込んでから息をしようとして水面に浮かび上がってきた。
+ja	#192560 (unknown)	#29724 AlanF_US	ランダーが当初からエメットのスタイルを変更する意図を持っていたかどうかは明らかでない。
+ja	#153998 (unknown)	#260545 Dejo	私は彼の意図を誤解していたということが、だんだんわかってきた。
+ja	#215056 (unknown)	#52352 Swift	スーパーヒーローたちは、私たちが持っていない才能を持っていると思いますか。
+ja	#149847 (unknown)	#264711 CK	自分の才能を示すために、めったにないこの機会を最大限に利用すべきだ。
+ja	#115615 (unknown)	#288055 (unknown)	彼は、ペンを使って書くこともできないし、コンピュータのキーを打つこともできない。
+ja	#187943 (unknown)	#25082 CK	何か上手くいっていないことがあるなら、直ぐに手を打つべきである。
+ja	#10156821 Sim5634	#11562717 pip	台風の日は茎が折れる危険性があるので補強する必要があります。
+ja	#188241 (unknown)	#25381 sundown	音読は彼にとってたいへん骨の折れる仕事であった。
+ja	#193927 (unknown)	#31095 Dejo	もしあなたがダイエット中なら、朝食を抜くのはよくないということを忘れてはいけない。
+ja	#141195 (unknown)	#273377 AlanF_US	洗面所の栓を抜くと、水がガバガバ流れ出した。
+ja	#148408 (unknown)	#266151 (unknown)	首相は議会の抜本的な改革に着手するつもりがあることを表明した。
+ja	#191037 (unknown)	#28196 Dejo	意味のある変革がなされるならば、私は政治改革に総じて賛成だ。
+ja	#147474 (unknown)	#267086 Eldad	暑い気候のところの人々がカレーのように辛い物を食べるのは不思議なことだ。
+ja	#229861 Scott	#67224 Scott	ある暑い夏の午後に、彼女は彼氏を町の外の農場に連れていこうと決めました。
+ja	#215510 (unknown)	#52812 Swift	ジョンケネディが暗殺された時、リンデルジョンソンが大統領の任期を引き継いだ。
+ja	#7562208 Sonata	#7562251 CK	マスクをつけると眼鏡が曇る。
+ja	#74395 fcbond	#329325 fcbond	石油が化学製品の材料として用いられるようになったのはごく最近のことである。
+ja	#11365322 marcelostockle	#11365323 marcelostockle	この格好じゃ外には出られないな。ちょっと待っててくれる？すぐ着替えるから。
+ja	#217381 (unknown)	#54690 CM	こんな格好をしているといかにもスポーツしてそうに見えるけど、全然やってないんだよ。
+ja	#163860 (unknown)	#250650 nickyeow	私の級友の中にはバレーボールが好きな人もいれば、テニスを楽しむ人もいる。
+ja	#82343 (unknown)	#321372 (unknown)	僕たちはゲームを楽しむためというよりただ暇をつぶすためにチェスをした。
+ja	#10387251 KK_kaku_	#390425 Scott	人間の心と行動を研究する学問である心理学は、観察や実験によって知識を構築します。
+ja	#868163 Scott	#868162 Scott	君は喜びを得て、それでなく権力を得て、と神は言った。でも、両方を得ることはできない。
+ja	#222453 (unknown)	#59782 (unknown)	この機種は気に入らないが、これで間に合わせなければならない。
+ja	#194004 (unknown)	#31173 CK	もう売り切れてしまったのですが、次回有効券をお渡しいたします。
+ja	#205443 (unknown)	#42687 CK	それはとてものろい列車だった。小さな駅ごとに止まるのだった。
+ja	#114692 (unknown)	#288979 CM	彼はイギリス人のフリをしていたが、外国なまりからその正体がばれた。
+ja	#201479 (unknown)	#38689 CM	どうして君のお父さんはあの男の正体を見抜いたのかわからない。
+ja	#223138 (unknown)	#60469 (unknown)	この前の講和会議で完全に失敗してから、彼は斬新な権謀術策で十分に武装すべきことを学んだ。
+ja	#230072 (unknown)	#238066 xtofu80	あらかじめ警告を受けているのは、あらかじめ武装しているに同じ。
+ja	#776966 Chus	#777008 Chus	この学校に入ったら、日本人学生と同じように毎週レポートを書かなければならない。
+ja	#148768 (unknown)	#265791 CP	若きマーテインは、ジョージア州アトランタで、比較的平穏な子供時代を過ごした。
+ja	#173118 (unknown)	#241353 (unknown)	国が保存するほどの重要性を持った建物は比較的無事である。
+ja	#200420 (unknown)	#37621 mailohilohi	どのくらいの数の民族がアメリカの人口を構成しているか正確にはだれもわかりません。
+ja	#173443 (unknown)	#241027 (unknown)	考古学者とは昔の民族の生活様式についての糸口を捜し求める人達である。
+ja	#10171364 small_snow	#3401934 Hybrid	服が汚れるのは嫌だな。
+ja	#140719 (unknown)	#251343 (unknown)	祖父は、晴れた日に池の色とりどりの鯉を眺めているのが好きです。
+ja	#2912362 tommy_san	#3331690 patgfisher	この池には、毎年冬になるとたくさんの渡り鳥がやってきます。
+ja	#213839 (unknown)	#51126 Alois	そうですね、部屋の掃除をしたり、洗濯したり、豪華な晩御飯を作ったり、します。
+ja	#234190 wat	#71564 CK	あなたがただ手紙を書くだけで、あなたの父親は多くのことを心配しなくて済むだろう。
+ja	#151132 (unknown)	#263424 (unknown)	試験が済むまでは忙しくて暇がないだろうと思います。
+ja	#152006 (unknown)	#262547 mamat	私達のうち誰も時間通りに港に着くことが出来なかった。
+ja	#183119 (unknown)	#20241 fishda	汽笛が鳴って船はゆっくりと港から離れていった。
+ja	#76263 kamojun	#327457 (unknown)	漢字を書くときは点やはらいに気をつけて、なるべく早くていねいに書きましょう。
+ja	#392028 mookeee	#535811 blay_paul	トマさんは小学生向けの本が読めるぐらい漢字をたくさん覚えています。
+ja	#85772 (unknown)	#317942 Tirifto	非常に苦しいさなかにも、笑うことは、感情の激しい人には容易にできることではない。
+ja	#216447 mookeee	#53751 CP	ジェーンは事故の後、交通量の激しい所ではうまく運転できないように感じた。
+ja	#10091797 small_snow	#10091751 CK	ニャンちゃん、魚は好きなんだけど、足が濡れるのは嫌なのよ。
+ja	#86532 (unknown)	#317179 CK	彼女は黙るようにと私が頼んだ後でもしゃべり続けた。
+ja	#80029 (unknown)	#264763 (unknown)	黙ることを知らない者は話し上手ではない。
+ja	#103143 (unknown)	#300550 CK	彼は昔、押し入れの中には珍しい生き物が住んでいると彼女に嘘をついたのでした。
+ja	#232459 (unknown)	#57815 CM	あなたはどのようにしてそれらの珍しい本を手に入れたのですか。
+ja	#10792438 bunbuku	#308427 CK	彼女が都会に住んでいようが田舎に住んでいようが、僕には大した違いはないよ。
+ja	#171997 bunbuku	#242478 CK	今日では、都会の暮らしより田舎の暮らしを好む人がますます多くなっている。
+ja	#1291614 bunbuku	#11485050 pip	大根の皮も料理に使えるというが、農薬が心配なので捨ててしまうことが多い。
+ja	#11388983 bunbuku	#1898395 CK	トムがバナナの皮で滑ったのを見て、部屋にいた全員が大笑いした。
+ja	#228942 (unknown)	#66300 (unknown)	いったい、いつになったらそのケチは直るの？
+ja	#183946 (unknown)	#21072 CK	患者が確かに直るとは私は申しません。
+ja	#142745 (unknown)	#271825 Jesse	生徒たちは試験の直前になるまで本気になって勉強しない。
+ja	#197006 Scott	#34186 Scott	戦争の直前、日本がフランスと同盟を結びました。
+ja	#10633694 small_snow	#11237796 pip	「相変わらず、親バカね」「親バカの何が悪い？」「わぁ、開き直っちゃった」
+ja	#123753 (unknown)	#280242 shekitten	動物はどんなかっこうでも眠る事ができると思うかもしれない。
+ja	#1106176 mookeee	#1869498 JunjouLover	すやすやと眠る娘の顔を見ると、また明日もがんばろうと思う。
+ja	#140609 (unknown)	#273964 (unknown)	組織培養の視点からは、この実験の環境はもっと厳密に規定されるべきである。
+ja	#13060895 Gardenia	#13065355 end	君の意見には賛成できない部分もあるが、視点としては非常に参考になる。
+ja	#194017 (unknown)	#31186 CK	もう電話を切らなくてはなりません。電話が空くのを待っている人がいるのです。
+ja	#10624613 small_snow	#11123012 newtonlkh	ただいま満席です。席が空くまでこちらでお待ちください。
+ja	#125325 mookeee	#278668 CM	敵の防御は強力だったが我々は突破しようと試みた。
+ja	#90767 (unknown)	#312946 (unknown)	彼女は快活で愛想がよく、親切でなおかつ思いやりがある。要するに立派な人です。
+ja	#75897 mookeee	#327821 (unknown)	大丈夫、キミなら出来る！自分を信じて！キミはもう既に立派なスイマーなのよ！
+ja	#11748134 small_snow	#11748121 CK	トムは、冷たいルートビアの缶を開け、アイスクリームの上にかけた。
+ja	#156605 Simplemind	#257929 CM	私は使い古した注射器を安全に捨てるために缶の中に入れました。
+ja	#147011 (unknown)	#267550 (unknown)	小さな子に手助けしてもらう時は、その子の年齢を考慮してやらねばなりませんよ。
+ja	#982390 thyc244	#974597 slivercat	征服された側が常に悪いのだ。歴史は彼らが敗北したということしか考慮しない。
+ja	#110506 bunbuku	#293180 CK	彼はやっとのことでその燃えているバスから脱出した。
+ja	#229496 (unknown)	#66856 (unknown)	アンはどのように脱出したのかを説明してくれた。
+ja	#74116 fcbond	#329604 fcbond	たまにはビール以外のお酒をちびちび舐めるのも良いでしょう。
+ja	#76257 mookeee	#327463 (unknown)	顔をべろべろ舐めるな。わはは。止めろよ。
+ja	#186333 (unknown)	#23469 Whiskkebarr	我々のコンピューター・システムには最初若干のトラブルがあったが、今は全部解決されている。
+ja	#79415 (unknown)	#324302 CM	勇敢な人々の英雄的行為を読んで、尊敬と賞賛の気持ちを抱かない人があろうか。
+ja	#2485680 bunbuku	#63588 CM	かの偉大なローマの英雄、ジュリアス・シーザーは暗殺されたのだった。
+ja	#174269 (unknown)	#240200 CM	御急ぎでなかったら、御茶か何かいかがですか。
+ja	#78870 (unknown)	#324846 CM	溶け続ける氷河を監視するために、人工衛星が軌道に打ち上げられた。
+ja	#233395 (unknown)	#70765 CM	あなたの寄附は小児病院を建設する補助として、大いに役立つでしょう。
+ja	#207097 (unknown)	#44347 (unknown)	その飛行機は補助ロケットを使って離陸した。
+ja	#10283832 bunbuku	#324089 CK	野球やるなら、バットとボール、それからグローブが要るよ。
+ja	#191109 (unknown)	#28269 CM	委員会は、大気汚染を抑制するために互いに協力し合うよう各国に要請した。
+ja	#221750 (unknown)	#59076 CM	この市の市長は市民の要請にみみを貸さないと非難された。
+ja	#146345 KK_kaku_	#268217 CM	肖像画を書く準備として、私の友達は対象をよく観察するために写真を沢山撮る。
+ja	#2828946 thayne	#2828962 thayne	僕は犯人のこと、どう解釈したらいいのか今の自分にもわかりかねています。
+ja	#207891 (unknown)	#45147 papabear	その地域に工場を設立する外国企業には、税が大幅に減免される。
+ja	#10771383 small_snow	#10771388 DJ_Saidez	大学では、認知科学を専攻するつもりです。
+ja	#1102448 bunbuku	#10124112 tsp_2	しらばっくれるな！君が万引きしたところを警備員が見ていたんだぞ。
+ja	#231075 (unknown)	#68442 CM	あの警備員は何でも規則通りにする傾向がある。
+ja	#868193 Scott	#868192 Scott	私の友人は私の財産だ。ですので友人を蓄えたがる私の貪欲さを見逃してください。
+ja	#87288 (unknown)	#316420 CK	彼女は彼の人柄に惹かれているのであって、彼の財産に惹かれているのではない。
+ja	#225487 (unknown)	#62824 CN	クリスは家のペンキ塗りとして雇われ、お金を貯める事が出来ました。
+ja	#1119909 bunbuku	#1094574 CK	トムはお金を貯めるためなら出来ることは何でもする。
+ja	#155160 wat	#259379 CM	私は誰にもこの時計を貸すつもりはありません。ましてや手放すつもりなど毛頭ありません。
+ja	#9667195 bunbuku	#6678664 CK	トムに金を貸すなんて、お前もうかつなことしたもんだな。
+ja	#75040 fcbond	#328679 fcbond	あの、私、残念ですが小用が御座いますので、この辺りで失礼致しますね。
+ja	#76589 mookeee	#327131 (unknown)	だいたい、この川原の辺りを一巡りするのが、基本的な朝のコースである。
+ja	#9237482 bunbuku	#4313860 patgfisher	トムがオンボロの古い車で娘を学校に迎えに行くと、彼女は他人のふりをした。
+ja	#125573 (unknown)	#278419 (unknown)	通販で理想的な枕が買えます。
+ja	#10208697 dnjst	#3065458 al_ex_an_der	論理または常識によればロシアと欧州連合とアメリカが共に行動しなければならない。
+ja	#8255778 ryuwryyy	#9714492 DJ_Saidez	サッカーは連携が大切だ。
+ja	#79258 (unknown)	#324459 (unknown)	有能な連邦捜査局員はちゅうちょすることなく、自分の義務を実行する。
+ja	#83485 (unknown)	#320231 (unknown)	米国連邦準備銀行は銀行の取り付け騒ぎを食い止めようとしています。
+ja	#143463 (unknown)	#271104 papabear	世界で、鹿やムースやキジといった野性獣を狩ることは違法とする国が多い。
+ja	#3606461 arnab	#517810 darinmex	映画館は、インターネット上に出回る違法コピーのせいで、収益をますます失いつつある。
+ja	#76126 (unknown)	#327592 (unknown)	妻は魚のオードブルが好きだからね、釣りに出掛けるときはお許しが出やすいんだよね。
+ja	#176488 (unknown)	#237976 sundown	経営側は、労働側が、提案された変更点を受け入れないなら工場閉鎖すると、脅している。
+ja	#1396361 bunbuku	#1664549 Christophe	インフルエンザの欠席者が多いから、明日から三日間学級閉鎖だって。
+ja	#461942 qahwa	#533323 blay_paul	沖縄県民は、命に関わる危険と背中合わせの暮らしを強いられてきました。
+ja	#184683 (unknown)	#21811 blay_paul	概していえば、この種の問題では直接人々と関わる人が好きだ。
+ja	#147074 (unknown)	#267487 CM	将来のエネルギー需要をどう満たすかは考えなければならない大きな問題だ。
+ja	#221034 (unknown)	#58356 (unknown)	この新型の車はとても人気があるので需要に応じるために新しい工場を作らねばならなかった。
+ja	#1181145 bunbuku	#9987463 tsp_2	風に乗ってどこからともなく金木犀の香りがした。秋を感じた瞬間だった。
+ja	#219113 (unknown)	#56429 (unknown)	この薔薇の花は先日私が買ったものほど甘い香りがしない。
 pt	#406663 brauliobezerra	#56269 CK	Eu não sei o que fazer a partir de agora.
 pt	#9245146 heo598	#6014213 zumley	A partir de amanhã, eu não vou fumar mais.
 pt	#4443045 Ricardo14	#4440516 AlanF_US	Vocês poderiam abaixar a música, por favor?
@@ -5544,6 +5828,43 @@ ru	#5543198 marafon	#3736143 CK	Это привело меня в ярость.
 ru	#2959246 sharptoothed	#2959245 sharptoothed	Мой отец пришёл в ярость, когда это узнал.
 ru	#7965684 odexed	#7733488 CK	Насколько большой ящик тебе нужен?
 ru	#11712256 marafon	#8935537 sundown	Вы уже проверили почтовый ящик?
+th	#8714315 pastelite	#63743 CK	คุณปิดแก๊สไหม?
+th	#8720366 pastelite	#1141223 CK	ทอมทำอาหารด้วยแก๊ส
+th	#7784216 pastelite	#778139 marloncori	ฉันยังพูดภาษาอินโดนีเซียไม่คล่อง
+th	#8675880 pastelite	#313036 CK	เธอเป็นคนพูดภาษาอังกฤษได้คล่อง
+th	#10487145 Somsak	#25902 CK	ที่ไหนมีควันที่นั่นมีไฟ
+th	#3196044 ojiisan	#553578 aandrusiak	หายใจลำบาก เมื่อความชื้นสูง
+th	#2177592 regambit	#18237 AlanF_US	อากาศนั้นนุ่มและดินนั้นชื้น
+th	#8717399 pastelite	#304173 CK	เขาตาบอด
+th	#11084437 Somsak	#7697601 CK	เราใช้เวลาทั้งวันหาทางออกจากถ้ำ
+th	#8681613 pastelite	#748748 CK	ประเทศไทยอยู่ในทวีปเอเชีย
+th	#8675730 pastelite	#300575 CK	เขาโยนก้อนหินลงไปในบ่อ
+th	#8669292 pastelite	#278173 CK	นกกระพือปีก
+th	#10873714 pkdome	#325215 CM	เปลือกไข่แตกง่าย
+th	#10649497 Somsak	#53047 jakov	ไม่มีน้ำไหลออกมาจากฝักบัว
+th	#2874210 ojiisan	#2640974 CK	ทอมมีฟาร์มอยู่ไม่ไกลจากบอสตัน
+th	#10189705 Somsak	#49409 CK	มีเฟอร์นิเจอร์มากเกินไปในบ้าน
+th	#8669231 pastelite	#58127 CK	แม่น้ำนี้ไม่มีมลพิษ
+th	#8673128 pastelite	#262928 CK	เราชอบว่ายน้ำในมหาสมุทร
+th	#2905457 (unknown)	#2708792 (unknown)	ฉันกำลังว่ายในมหาสมุทร
+th	#8669308 pastelite	#48464 CK	ตำรวจกุมตัวเขาเพราะเมาแล้วขับ
+th	#8675908 pastelite	#3331087 CK	คุณเมามาก
+th	#8717325 pastelite	#1542 blay_paul	สิบปีเป็นเวลาที่ยาวนานสำหรับการรอคอย
+th	#8720135 pastelite	#3006681 CK	มันเป็นสัปดาห์ที่ยาวนาน
+th	#8671286 pastelite	#8611506 Hybrid	ไวรัสกำลังแพร่กระจายอย่างรวดเร็ว
+th	#8720363 pastelite	#3331081 CK	คุณมาถึงที่นี่อย่างรวดเร็ว
+th	#10064310 tatoebashrek	#7960141 AlanF_US	โรงรถอยู่ด้านข้างของบ้าน
+th	#4284541 Spanger	#4278929 Hybrid	ทอมเจอตู้เซฟเก่าในโรงรถ
+th	#10289068 Somsak	#326242 CK	รถไฟล่าช้าเพราะหิมะ
+th	#8743331 pastelite	#36073 CK	บ้านของคุณวิเศษมาก
+th	#8703170 pastelite	#36037 CK	ช่างเป็นดอกไม้ที่สวยงามจริง ๆ!
+th	#8703207 pastelite	#1300117 CK	ช่างเป็นค่ำคืนที่สวยงาม!
+th	#8703084 pastelite	#340503 aaroned	สุนัขของคุณกัดหรือไม่?
+th	#8679116 pastelite	#2698626 WestofEden	ทอมพาสุนัขของเขาไปเดินเล่นทุกเช้า
+th	#7878526 pastelite	#2089 CK	เขากำลังนอนหลับเหมือนเด็กทารก
+th	#8709473 pastelite	#3795266 popball	หวีของฉันอยู่ที่ไหน
+th	#10277377 Somsak	#45405 CK	เด็กชายจับหมาที่หาง
+th	#4293642 Spanger	#4288156 corvard	เก็บยาให้ห่างจากมือและสายตาเด็ก
 vi	#13916597 leucammieuvu	#13915849 Nuel	Cô ấy bị ám ảnh với việc dọn dẹp.
 vi	#10257540 hothuyhien	#9717995 ariarin	Bạn sẽ ăn cơm tối vào mấy giờ?
 vi	#13381872 leucammieuvu	#11759965 CK	Chúng tôi thường ăn cơm bằng đũa.
@@ -6319,3 +6640,14 @@ vi	#14057118 leucammieuvu	#14055485 maaster	Y học hiện đại điều trị 
 vi	#10222536 dotheduyet1999	#61936 jakov	Ở đây, trẻ em có thể yên tâm chơi đùa.
 vi	#9003273 dotheduyet1999	#284200 CK	Tôi đã yên tâm khi nghe tin anh ấy không sao.
 vi	#13398776 tridz	#13363074 Igider	Đồ yếu đuối!
+zh	#8734972 crescat	#11290473 Aphima	有一些意面掉到了制服上的徽章那儿，把那边弄脏了。
+zh	#2609577 fenfang557	#2610586 FeuDRenais2	攀比心理会让人产生负面情绪。
+zh	#811371 fucongcong	#704103 jakov	你们可以搜索词并得到翻译。但这真不是一本寻常的字典。
+zh	#811373 fucongcong	#704106 jakov	你们可以搜索含有某个词的句子并得到这些句子的翻译。
+zh	#1438476 asosan	#30526 AlanF_US	当然我接受了他的支援请求。
+zh	#8560803 slo_oth	#8559964 CK	我希望汤姆已经吸取教训了。
+zh	#333507 fucongcong	#237733 (unknown)	你必须从失败中吸取教训。
+zh	#3647401 xfig	#3647304 pathem	设备是便携的。
+zh	#4757238 ryanwoo	#4756241 cairnhead	这是台旧设备。
+zh	#5068341 FeAst	#5068290 jhomel	当迈克返回到简的家的时候，她睡得正熟。
+zh	#334773 fucongcong	#435250 aliene	迷路的渔船安全地返回了港口。

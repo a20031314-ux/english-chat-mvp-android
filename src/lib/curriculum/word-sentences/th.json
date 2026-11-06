@@ -111,6 +111,22 @@
    "blank": "กรกฎาคม"
   }
  ],
+ "w|กรงเล็บ": [
+  {
+   "text": "นกอินทรีจับปลาด้วยกรงเล็บ",
+   "en": "The eagle catches fish with its talons.",
+   "ko": "독수리는 발톱으로 물고기를 잡아.",
+   "blank": "กรงเล็บ",
+   "src": "made"
+  },
+  {
+   "text": "แมวกางกรงเล็บออกมา",
+   "en": "The cat put out its claws.",
+   "ko": "고양이가 발톱을 세웠어.",
+   "blank": "กรงเล็บ",
+   "src": "made"
+  }
+ ],
  "w|กรรไกร": [
   {
    "text": "ส่งกรรไกรให้หน่อยได้ไหม",
@@ -165,6 +181,22 @@
    "en": "The car mirror is dusty.",
    "ko": "차 거울에 먼지가 많아.",
    "blank": "กระจก"
+  }
+ ],
+ "w|กระจกเงา": [
+  {
+   "text": "เธอส่องกระจกเงาก่อนออกจากบ้าน",
+   "en": "She looks in the mirror before leaving home.",
+   "ko": "그녀는 집을 나서기 전에 거울을 봐.",
+   "blank": "กระจกเงา",
+   "src": "made"
+  },
+  {
+   "text": "กระจกเงาในห้องน้ำแตก",
+   "en": "The bathroom mirror is cracked.",
+   "ko": "욕실 거울이 깨졌어.",
+   "blank": "กระจกเงา",
+   "src": "made"
   }
  ],
  "w|กระซิบ": [
@@ -377,6 +409,22 @@
    "blank": "กระเพาะ"
   }
  ],
+ "w|กระแสน้ำ": [
+  {
+   "text": "กระแสน้ำตรงนี้แรงมาก",
+   "en": "The current here is very strong.",
+   "ko": "여기 물살이 아주 세.",
+   "blank": "กระแสน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "เรือลอยไปตามกระแสน้ำ",
+   "en": "The boat drifted with the current.",
+   "ko": "배가 물살을 따라 떠내려갔어.",
+   "blank": "กระแสน้ำ",
+   "src": "made"
+  }
+ ],
  "w|กริ่ง": [
   {
    "text": "กริ่งประตูดังขึ้นสองครั้ง",
@@ -389,6 +437,22 @@
    "en": "When I heard the doorbell, I hurried to open the door.",
    "ko": "초인종 소리를 듣고 서둘러 문을 열었어.",
    "blank": "กริ่ง"
+  }
+ ],
+ "w|กรุบ": [
+  {
+   "text": "ผักนี้กรุบอร่อย",
+   "en": "These vegetables are crunchy and tasty.",
+   "ko": "이 채소는 아삭하고 맛있어.",
+   "blank": "กรุบ",
+   "src": "made"
+  },
+  {
+   "text": "แอปเปิลลูกนี้กรุบดี",
+   "en": "This apple is nice and crisp.",
+   "ko": "이 사과는 아삭아삭해.",
+   "blank": "กรุบ",
+   "src": "made"
   }
  ],
  "w|กลม": [
@@ -447,6 +511,22 @@
    "blank": "กล้อง"
   }
  ],
+ "w|กลอน": [
+  {
+   "text": "ลงกลอนประตูก่อนนอน",
+   "en": "Bolt the door before bed.",
+   "ko": "자기 전에 문 빗장을 걸어.",
+   "blank": "กลอน",
+   "src": "made"
+  },
+  {
+   "text": "กลอนประตูหลุด",
+   "en": "The door bolt came off.",
+   "ko": "문 빗장이 빠졌어.",
+   "blank": "กลอน",
+   "src": "made"
+  }
+ ],
  "w|กลับ": [
   {
    "text": "กลับบ้านกัน",
@@ -489,6 +569,22 @@
    "blank": "กล้า"
   }
  ],
+ "w|กลาง": [
+  {
+   "text": "ฉันขอเสื้อไซซ์กลาง",
+   "en": "I'd like a medium-size shirt.",
+   "ko": "미디엄 사이즈 셔츠로 주세요.",
+   "blank": "กลาง",
+   "src": "made"
+  },
+  {
+   "text": "บ้านเขาอยู่กลางเมือง",
+   "en": "His house is in the middle of the city.",
+   "ko": "그의 집은 시내 한복판에 있어.",
+   "blank": "กลาง",
+   "src": "made"
+  }
+ ],
  "w|กลางคืน": [
   {
    "text": "กลางคืนเงียบดี",
@@ -529,6 +625,22 @@
    "en": "He will become a doctor.",
    "ko": "그는 의사가 될 거야.",
    "blank": "กลายเป็น"
+  }
+ ],
+ "w|กล้าหาญ": [
+  {
+   "text": "ทหารคนนั้นกล้าหาญมาก",
+   "en": "That soldier is very brave.",
+   "ko": "그 군인은 아주 용감해.",
+   "blank": "กล้าหาญ",
+   "src": "made"
+  },
+  {
+   "text": "เธอกล้าหาญพอที่จะพูดความจริง",
+   "en": "She was brave enough to tell the truth.",
+   "ko": "그녀는 진실을 말할 만큼 용감했어.",
+   "blank": "กล้าหาญ",
+   "src": "made"
   }
  ],
  "w|กลิ้ง": [
@@ -613,6 +725,22 @@
    "en": "Run a bit faster than this.",
    "ko": "이보다 좀 더 빨리 뛰어.",
    "blank": "กว่า"
+  }
+ ],
+ "w|กวาง": [
+  {
+   "text": "เราเห็นกวางในป่า",
+   "en": "We saw a deer in the forest.",
+   "ko": "우리는 숲에서 사슴을 봤어.",
+   "blank": "กวาง",
+   "src": "made"
+  },
+  {
+   "text": "กวางวิ่งหนีเร็วมาก",
+   "en": "The deer ran away very fast.",
+   "ko": "사슴이 아주 빨리 달아났어.",
+   "blank": "กวาง",
+   "src": "made"
   }
  ],
  "w|กว้าง": [
@@ -879,6 +1007,22 @@
    "en": "I like wearing jeans every day.",
    "ko": "나는 매일 청바지 입는 게 좋아.",
    "blank": "กางเกงยีนส์"
+  }
+ ],
+ "w|กาต้มน้ำ": [
+  {
+   "text": "ใช้กาต้มน้ำต้มน้ำร้อน",
+   "en": "Boil water with the kettle.",
+   "ko": "주전자로 물을 끓여.",
+   "blank": "กาต้มน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "กาต้มน้ำไฟฟ้าเสียแล้ว",
+   "en": "The electric kettle is broken.",
+   "ko": "전기 주전자가 고장 났어.",
+   "blank": "กาต้มน้ำ",
+   "src": "made"
   }
  ],
  "w|กาแฟ": [
@@ -1259,6 +1403,22 @@
    "blank": "กำหนด"
   }
  ],
+ "w|กำหนดการ": [
+  {
+   "text": "กำหนดการเดินทางเปลี่ยนแล้ว",
+   "en": "The travel schedule has changed.",
+   "ko": "여행 일정이 바뀌었어.",
+   "blank": "กำหนดการ",
+   "src": "made"
+  },
+  {
+   "text": "ช่วยส่งกำหนดการประชุมให้ฉันหน่อย",
+   "en": "Please send me the meeting agenda.",
+   "ko": "회의 일정 좀 보내 줘.",
+   "blank": "กำหนดการ",
+   "src": "made"
+  }
+ ],
  "w|กำหนดส่ง": [
   {
    "text": "อย่าพลาดกำหนดส่งรายงาน",
@@ -1285,6 +1445,22 @@
    "en": "A bird is perched on the branch.",
    "ko": "새가 가지에 앉아 있어.",
    "blank": "กิ่ง"
+  }
+ ],
+ "w|กิ้งก่า": [
+  {
+   "text": "กิ้งก่าเปลี่ยนสีได้",
+   "en": "Lizards can change color.",
+   "ko": "도마뱀은 색을 바꿀 수 있어.",
+   "blank": "กิ้งก่า",
+   "src": "made"
+  },
+  {
+   "text": "กิ้งก่านอนอาบแดดบนก้อนหิน",
+   "en": "The lizard is basking on a rock.",
+   "ko": "도마뱀이 바위 위에서 햇볕을 쬐고 있어.",
+   "blank": "กิ้งก่า",
+   "src": "made"
   }
  ],
  "w|กิจกรรม": [
@@ -1567,6 +1743,22 @@
    "blank": "เก้า"
   }
  ],
+ "w|เก่าแก่": [
+  {
+   "text": "วัดนี้เก่าแก่มาก",
+   "en": "This temple is very old.",
+   "ko": "이 절은 아주 오래됐어.",
+   "blank": "เก่าแก่",
+   "src": "made"
+  },
+  {
+   "text": "เมืองนี้มีประวัติศาสตร์เก่าแก่",
+   "en": "This city has an ancient history.",
+   "ko": "이 도시는 역사가 오래됐어.",
+   "blank": "เก่าแก่",
+   "src": "made"
+  }
+ ],
  "w|เก้าอี้": [
   {
    "text": "นั่งเก้าอี้ตัวนี้สิ",
@@ -1847,6 +2039,22 @@
    "blank": "แก้ว"
   }
  ],
+ "w|แก๊ส": [
+  {
+   "text": "คุณปิดแก๊สไหม?",
+   "en": "Did you turn off the gas?",
+   "ko": "가스 잠갔어?",
+   "blank": "แก๊ส",
+   "src": "tatoeba:8714315/pastelite en:63743/CK"
+  },
+  {
+   "text": "ทอมทำอาหารด้วยแก๊ส",
+   "en": "Tom cooks with gas.",
+   "ko": "톰은 가스로 요리해.",
+   "blank": "แก๊ส",
+   "src": "tatoeba:8720366/pastelite en:1141223/CK"
+  }
+ ],
  "w|แกะ": [
   {
    "text": "แกะขนฟูขาวสวย",
@@ -1917,6 +2125,22 @@
    "blank": "ใกล้"
   }
  ],
+ "w|ใกล้เคียง": [
+  {
+   "text": "ราคาสองร้านนี้ใกล้เคียงกัน",
+   "en": "The prices at these two shops are about the same.",
+   "ko": "두 가게 가격이 비슷해.",
+   "blank": "ใกล้เคียง",
+   "src": "made"
+  },
+  {
+   "text": "เราไปเที่ยวจังหวัดใกล้เคียง",
+   "en": "We traveled to a nearby province.",
+   "ko": "우리는 근처 지방으로 놀러 갔어.",
+   "blank": "ใกล้เคียง",
+   "src": "made"
+  }
+ ],
  "w|ไก่": [
   {
    "text": "คืนนี้กินไก่ย่างกัน",
@@ -1971,6 +2195,38 @@
    "en": "They called while I was showering.",
    "ko": "내가 샤워하는 동안 전화 왔어.",
    "blank": "ขณะที่"
+  }
+ ],
+ "w|ขน": [
+  {
+   "text": "แมวตัวนี้ขนยาวมาก",
+   "en": "This cat has very long fur.",
+   "ko": "이 고양이는 털이 아주 길어.",
+   "blank": "ขน",
+   "src": "made"
+  },
+  {
+   "text": "หมาขนร่วงเต็มโซฟา",
+   "en": "The dog's hair is all over the sofa.",
+   "ko": "개털이 소파에 잔뜩 빠져 있어.",
+   "blank": "ขน",
+   "src": "made"
+  }
+ ],
+ "w|ข้น": [
+  {
+   "text": "ซุปนี้ข้นมาก",
+   "en": "This soup is very thick.",
+   "ko": "이 수프는 아주 걸쭉해.",
+   "blank": "ข้น",
+   "src": "made"
+  },
+  {
+   "text": "ใส่นมข้นในกาแฟหน่อย",
+   "en": "Put some condensed milk in the coffee.",
+   "ko": "커피에 연유 좀 넣어.",
+   "blank": "ข้น",
+   "src": "made"
   }
  ],
  "w|ขนตา": [
@@ -2449,6 +2705,22 @@
    "blank": "ขับรถ"
   }
  ],
+ "w|ขั้วโลก": [
+  {
+   "text": "หมีขาวอาศัยอยู่ที่ขั้วโลกเหนือ",
+   "en": "Polar bears live at the North Pole.",
+   "ko": "북극곰은 북극에 살아.",
+   "blank": "ขั้วโลก",
+   "src": "made"
+  },
+  {
+   "text": "น้ำแข็งที่ขั้วโลกกำลังละลาย",
+   "en": "The ice at the poles is melting.",
+   "ko": "극지방의 얼음이 녹고 있어.",
+   "blank": "ขั้วโลก",
+   "src": "made"
+  }
+ ],
  "w|ขา": [
   {
    "text": "ขาฉันแข็งหมด",
@@ -2897,6 +3169,22 @@
    "blank": "เข็ม"
   }
  ],
+ "w|เข้ม": [
+  {
+   "text": "ฉันชอบกาแฟเข้มๆ",
+   "en": "I like strong coffee.",
+   "ko": "나는 진한 커피가 좋아.",
+   "blank": "เข้ม",
+   "src": "made"
+  },
+  {
+   "text": "เขาใส่เสื้อสีน้ำเงินเข้ม",
+   "en": "He's wearing a dark blue shirt.",
+   "ko": "그는 짙은 파란색 셔츠를 입고 있어.",
+   "blank": "เข้ม",
+   "src": "made"
+  }
+ ],
  "w|เข็มขัด": [
   {
    "text": "เข็มขัดเส้นนี้ยาวไปหน่อย",
@@ -3035,6 +3323,22 @@
    "en": "The light is green — you can go.",
    "ko": "초록불이야, 가도 돼.",
    "blank": "เขียว"
+  }
+ ],
+ "w|เขี้ยว": [
+  {
+   "text": "เสือมีเขี้ยวแหลมคม",
+   "en": "Tigers have sharp fangs.",
+   "ko": "호랑이는 송곳니가 날카로워.",
+   "blank": "เขี้ยว",
+   "src": "made"
+  },
+  {
+   "text": "หมาแยกเขี้ยวใส่คนแปลกหน้า",
+   "en": "The dog bared its fangs at the stranger.",
+   "ko": "개가 낯선 사람에게 이빨을 드러냈어.",
+   "blank": "เขี้ยว",
+   "src": "made"
   }
  ],
  "w|แขก": [
@@ -3513,6 +3817,22 @@
    "blank": "ครบ"
   }
  ],
+ "w|ครบถ้วน": [
+  {
+   "text": "เอกสารครบถ้วนแล้ว",
+   "en": "The documents are complete.",
+   "ko": "서류가 다 갖춰졌어.",
+   "blank": "ครบถ้วน",
+   "src": "made"
+  },
+  {
+   "text": "กรุณากรอกข้อมูลให้ครบถ้วน",
+   "en": "Please fill in all the information.",
+   "ko": "정보를 빠짐없이 적어 주세요.",
+   "blank": "ครบถ้วน",
+   "src": "made"
+  }
+ ],
  "w|ครอบครัว": [
   {
    "text": "ครอบครัวฉันใหญ่",
@@ -3765,6 +4085,38 @@
    "blank": "ครูใหญ่"
   }
  ],
+ "w|คลอง": [
+  {
+   "text": "บ้านริมคลองมีเรือจอดอยู่",
+   "en": "Boats are moored at the houses by the canal.",
+   "ko": "운하 옆 집들에 배가 매여 있어.",
+   "blank": "คลอง",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อก่อนคนใช้คลองเดินทาง",
+   "en": "In the past people traveled by canal.",
+   "ko": "예전에는 사람들이 운하로 다녔어.",
+   "blank": "คลอง",
+   "src": "made"
+  }
+ ],
+ "w|คล่อง": [
+  {
+   "text": "ฉันยังพูดภาษาอินโดนีเซียไม่คล่อง",
+   "en": "I can't speak fluent Indonesian yet.",
+   "ko": "나는 아직 인도네시아어를 유창하게 못 해.",
+   "blank": "คล่อง",
+   "src": "tatoeba:7784216/pastelite en:778139/marloncori"
+  },
+  {
+   "text": "เธอเป็นคนพูดภาษาอังกฤษได้คล่อง",
+   "en": "She is a fluent speaker of English.",
+   "ko": "그녀는 영어를 유창하게 해.",
+   "blank": "คล่อง",
+   "src": "tatoeba:8675880/pastelite en:313036/CK"
+  }
+ ],
  "w|คล้าย": [
   {
    "text": "ใบหน้าคล้ายแม่มาก",
@@ -3777,6 +4129,22 @@
    "en": "The taste is just like home.",
    "ko": "맛이 집 음식이랑 똑같아.",
    "blank": "คล้าย"
+  }
+ ],
+ "w|คล้ายกัน": [
+  {
+   "text": "สองคนนี้หน้าตาคล้ายกัน",
+   "en": "These two look alike.",
+   "ko": "이 두 사람은 얼굴이 닮았어.",
+   "blank": "คล้ายกัน",
+   "src": "made"
+  },
+  {
+   "text": "ภาษาไทยกับภาษาลาวคล้ายกัน",
+   "en": "Thai and Lao are similar.",
+   "ko": "태국어와 라오어는 비슷해.",
+   "blank": "คล้ายกัน",
+   "src": "made"
   }
  ],
  "w|คลิก": [
@@ -3821,6 +4189,22 @@
    "blank": "คลี่"
   }
  ],
+ "w|คลื่น": [
+  {
+   "text": "วันนี้คลื่นแรงมาก ห้ามลงทะเล",
+   "en": "The waves are very strong today, no going in the sea.",
+   "ko": "오늘은 파도가 세서 바다에 들어가면 안 돼.",
+   "blank": "คลื่น",
+   "src": "made"
+  },
+  {
+   "text": "เสียงคลื่นทำให้ฉันหลับสบาย",
+   "en": "The sound of the waves helps me sleep well.",
+   "ko": "파도 소리를 들으면 잠이 잘 와.",
+   "blank": "คลื่น",
+   "src": "made"
+  }
+ ],
  "w|คลื่นไส้": [
   {
    "text": "รถเมล์ทำให้คลื่นไส้",
@@ -3835,6 +4219,22 @@
    "blank": "คลื่นไส้"
   }
  ],
+ "w|คลุมเครือ": [
+  {
+   "text": "คำตอบของเขาคลุมเครือ",
+   "en": "His answer was vague.",
+   "ko": "그의 대답은 애매했어.",
+   "blank": "คลุมเครือ",
+   "src": "made"
+  },
+  {
+   "text": "ข้อความนี้เขียนคลุมเครือ",
+   "en": "This message is written ambiguously.",
+   "ko": "이 글은 모호하게 쓰여 있어.",
+   "blank": "คลุมเครือ",
+   "src": "made"
+  }
+ ],
  "w|ควร": [
   {
    "text": "ควรพักบ้าง",
@@ -3847,6 +4247,22 @@
    "en": "You shouldn't talk like that.",
    "ko": "그런 말은 하지 마.",
    "blank": "ควร"
+  }
+ ],
+ "w|ควัน": [
+  {
+   "text": "ที่ไหนมีควันที่นั่นมีไฟ",
+   "en": "Where there is smoke, there is fire.",
+   "ko": "아니 땐 굴뚝에 연기 나랴.",
+   "blank": "ควัน",
+   "src": "tatoeba:10487145/Somsak en:25902/CK"
+  },
+  {
+   "text": "ควันจากรถทำให้อากาศแย่",
+   "en": "Car exhaust makes the air bad.",
+   "ko": "차 매연 때문에 공기가 나빠.",
+   "blank": "ควัน",
+   "src": "made"
   }
  ],
  "w|ความกลัว": [
@@ -4099,6 +4515,22 @@
    "en": "Evil always has consequences.",
    "ko": "악에는 항상 결과가 있어.",
    "blank": "ความชั่ว"
+  }
+ ],
+ "w|ความชื้น": [
+  {
+   "text": "หายใจลำบาก เมื่อความชื้นสูง",
+   "en": "It's difficult to breathe when humidity is high.",
+   "ko": "습도가 높으면 숨쉬기 힘들어.",
+   "blank": "ความชื้น",
+   "src": "tatoeba:3196044/ojiisan en:553578/aandrusiak"
+  },
+  {
+   "text": "ความชื้นวันนี้สูงมาก",
+   "en": "The humidity is very high today.",
+   "ko": "오늘은 습도가 아주 높아.",
+   "blank": "ความชื้น",
+   "src": "made"
   }
  ],
  "w|ความเชื่อ": [
@@ -4857,6 +5289,22 @@
    "blank": "คอ"
   }
  ],
+ "w|คอก": [
+  {
+   "text": "ม้ากลับเข้าคอกแล้ว",
+   "en": "The horses have gone back into the pen.",
+   "ko": "말들이 우리로 돌아갔어.",
+   "blank": "คอก",
+   "src": "made"
+  },
+  {
+   "text": "อย่าลืมปิดประตูคอก",
+   "en": "Don't forget to close the pen gate.",
+   "ko": "우리 문 닫는 거 잊지 마.",
+   "blank": "คอก",
+   "src": "made"
+  }
+ ],
  "w|ค่อนข้าง": [
   {
    "text": "ค่อนข้างยากเลย",
@@ -5037,6 +5485,22 @@
    "en": "I bumped my chin on the table—ouch.",
    "ko": "턱이 테이블에 부딪혀 아파.",
    "blank": "คาง"
+  }
+ ],
+ "w|ค้างคาว": [
+  {
+   "text": "ค้างคาวออกบินตอนพลบค่ำ",
+   "en": "Bats fly out at dusk.",
+   "ko": "박쥐는 해 질 녘에 날아올라.",
+   "blank": "ค้างคาว",
+   "src": "made"
+  },
+  {
+   "text": "ค้างคาวห้อยหัวลงนอน",
+   "en": "Bats sleep hanging upside down.",
+   "ko": "박쥐는 거꾸로 매달려 자.",
+   "blank": "ค้างคาว",
+   "src": "made"
   }
  ],
  "w|ค่าจ้าง": [
@@ -5345,6 +5809,22 @@
    "en": "Thick eyebrows look bold.",
    "ko": "굵은 눈썹이 또렷해 보여.",
    "blank": "คิ้ว"
+  }
+ ],
+ "w|คึกคัก": [
+  {
+   "text": "ตลาดตอนเช้าคึกคักมาก",
+   "en": "The morning market is very lively.",
+   "ko": "아침 시장은 아주 북적여.",
+   "blank": "คึกคัก",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงเทศกาลเมืองนี้คึกคัก",
+   "en": "The town is bustling during the festival.",
+   "ko": "축제 기간에는 이 도시가 활기차.",
+   "blank": "คึกคัก",
+   "src": "made"
   }
  ],
  "w|คืน": [
@@ -5739,6 +6219,22 @@
    "blank": "เครื่องซักผ้า"
   }
  ],
+ "w|เครื่องดูดฝุ่น": [
+  {
+   "text": "ฉันใช้เครื่องดูดฝุ่นทำความสะอาดพรม",
+   "en": "I clean the carpet with the vacuum cleaner.",
+   "ko": "진공청소기로 카펫을 청소해.",
+   "blank": "เครื่องดูดฝุ่น",
+   "src": "made"
+  },
+  {
+   "text": "เครื่องดูดฝุ่นอยู่ในตู้",
+   "en": "The vacuum cleaner is in the cupboard.",
+   "ko": "청소기는 장 안에 있어.",
+   "blank": "เครื่องดูดฝุ่น",
+   "src": "made"
+  }
+ ],
  "w|เครื่องบิน": [
   {
    "text": "เครื่องบินดีเลย์สองชั่วโมง",
@@ -5765,6 +6261,22 @@
    "en": "She keeps jewelry in a small box.",
    "ko": "그녀는 장신구를 작은 상자에 넣어 둬.",
    "blank": "เครื่องประดับ"
+  }
+ ],
+ "w|เครื่องปั่น": [
+  {
+   "text": "ฉันใช้เครื่องปั่นทำน้ำผลไม้",
+   "en": "I use the blender to make juice.",
+   "ko": "믹서기로 주스를 만들어.",
+   "blank": "เครื่องปั่น",
+   "src": "made"
+  },
+  {
+   "text": "เครื่องปั่นนี้เสียงดังมาก",
+   "en": "This blender is very loud.",
+   "ko": "이 믹서기는 소리가 아주 커.",
+   "blank": "เครื่องปั่น",
+   "src": "made"
   }
  ],
  "w|เครื่องมือ": [
@@ -6047,6 +6559,22 @@
    "blank": "โฆษณา"
   }
  ],
+ "w|งดงาม": [
+  {
+   "text": "วัดนี้งดงามมาก",
+   "en": "This temple is very beautiful.",
+   "ko": "이 절은 아주 아름다워.",
+   "blank": "งดงาม",
+   "src": "made"
+  },
+  {
+   "text": "พระอาทิตย์ตกที่นี่งดงามที่สุด",
+   "en": "The sunset here is the most beautiful.",
+   "ko": "여기 노을이 가장 아름다워.",
+   "blank": "งดงาม",
+   "src": "made"
+  }
+ ],
  "w|งบประมาณ": [
   {
    "text": "งบประมาณทริปนี้จำกัดมาก",
@@ -6185,6 +6713,22 @@
    "en": "Try finding a new hobby.",
    "ko": "새 취미를 찾아 봐.",
    "blank": "งานอดิเรก"
+  }
+ ],
+ "w|งาม": [
+  {
+   "text": "ดอกไม้ในสวนบานงาม",
+   "en": "The flowers in the garden are blooming beautifully.",
+   "ko": "정원의 꽃이 곱게 피었어.",
+   "blank": "งาม",
+   "src": "made"
+  },
+  {
+   "text": "เธอมีกิริยางาม",
+   "en": "She has graceful manners.",
+   "ko": "그녀는 몸가짐이 고와.",
+   "blank": "งาม",
+   "src": "made"
   }
  ],
  "w|ง่าย": [
@@ -6747,6 +7291,22 @@
    "blank": "จักรยาน"
   }
  ],
+ "w|จักรวาล": [
+  {
+   "text": "จักรวาลกว้างใหญ่มาก",
+   "en": "The universe is vast.",
+   "ko": "우주는 아주 광대해.",
+   "blank": "จักรวาล",
+   "src": "made"
+  },
+  {
+   "text": "เขาสนใจเรื่องจักรวาลและดวงดาว",
+   "en": "He's interested in the universe and the stars.",
+   "ko": "그는 우주와 별에 관심이 많아.",
+   "blank": "จักรวาล",
+   "src": "made"
+  }
+ ],
  "w|จังหวัด": [
   {
    "text": "ฉันเกิดที่จังหวัดเชียงใหม่",
@@ -6899,6 +7459,22 @@
    "en": "I walked over from home.",
    "ko": "집에서 걸어왔어.",
    "blank": "จาก"
+  }
+ ],
+ "w|จาง": [
+  {
+   "text": "สีเสื้อจางลงหลังจากซัก",
+   "en": "The shirt's color faded after washing.",
+   "ko": "빨았더니 셔츠 색이 바랬어.",
+   "blank": "จาง",
+   "src": "made"
+  },
+  {
+   "text": "กลิ่นน้ำหอมเริ่มจางแล้ว",
+   "en": "The perfume's scent has started to fade.",
+   "ko": "향수 냄새가 옅어지기 시작했어.",
+   "blank": "จาง",
+   "src": "made"
   }
  ],
  "w|จ้าง": [
@@ -7055,6 +7631,38 @@
    "blank": "จำเป็น"
   }
  ],
+ "w|จิ้งจก": [
+  {
+   "text": "จิ้งจกเกาะอยู่บนผนัง",
+   "en": "A house lizard is on the wall.",
+   "ko": "도마뱀이 벽에 붙어 있어.",
+   "blank": "จิ้งจก",
+   "src": "made"
+  },
+  {
+   "text": "จิ้งจกช่วยกินแมลง",
+   "en": "House lizards help eat insects.",
+   "ko": "도마뱀은 벌레를 잡아먹어 줘.",
+   "blank": "จิ้งจก",
+   "src": "made"
+  }
+ ],
+ "w|จิ้งจอก": [
+  {
+   "text": "จิ้งจอกเป็นสัตว์ที่ฉลาด",
+   "en": "The fox is a clever animal.",
+   "ko": "여우는 영리한 동물이야.",
+   "blank": "จิ้งจอก",
+   "src": "made"
+  },
+  {
+   "text": "จิ้งจอกแอบเข้าไปในเล้าไก่",
+   "en": "The fox sneaked into the henhouse.",
+   "ko": "여우가 닭장에 몰래 들어갔어.",
+   "blank": "จิ้งจอก",
+   "src": "made"
+  }
+ ],
  "w|จิตวิทยา": [
   {
    "text": "จิตวิทยาช่วยเข้าใจพฤติกรรมคน",
@@ -7067,6 +7675,22 @@
    "en": "She studies psychology to become a counselor.",
    "ko": "그녀는 상담사가 되려고 심리학을 배워.",
    "blank": "จิตวิทยา"
+  }
+ ],
+ "w|จิ๋ว": [
+  {
+   "text": "ฉันซื้อรถของเล่นคันจิ๋ว",
+   "en": "I bought a tiny toy car.",
+   "ko": "조그만 장난감 차를 샀어.",
+   "blank": "จิ๋ว",
+   "src": "made"
+  },
+  {
+   "text": "ลูกหมาตัวจิ๋วน่ารักมาก",
+   "en": "The tiny puppy is very cute.",
+   "ko": "조그만 강아지가 아주 귀여워.",
+   "blank": "จิ๋ว",
+   "src": "made"
   }
  ],
  "w|จีบ": [
@@ -7151,6 +7775,22 @@
    "en": "You can always find a new starting point.",
    "ko": "언제든 새 시작점을 찾을 수 있어.",
    "blank": "จุดเริ่มต้น"
+  }
+ ],
+ "w|จุ๋มจิ๋ม": [
+  {
+   "text": "เธอกินข้าวจุ๋มจิ๋ม",
+   "en": "She eats in tiny bites.",
+   "ko": "그녀는 밥을 깨작깨작 먹어.",
+   "blank": "จุ๋มจิ๋ม",
+   "src": "made"
+  },
+  {
+   "text": "ร้านเล็กๆ จุ๋มจิ๋มน่ารักดี",
+   "en": "The little shop is small and cute.",
+   "ko": "자그마한 가게가 아기자기하고 귀여워.",
+   "blank": "จุ๋มจิ๋ม",
+   "src": "made"
   }
  ],
  "w|จูบ": [
@@ -7601,6 +8241,22 @@
    "blank": "ฉัน"
   }
  ],
+ "w|ฉับไว": [
+  {
+   "text": "หมอตัดสินใจอย่างฉับไว",
+   "en": "The doctor made a quick decision.",
+   "ko": "의사는 재빨리 결정했어.",
+   "blank": "ฉับไว",
+   "src": "made"
+  },
+  {
+   "text": "เขาตอบคำถามได้ฉับไว",
+   "en": "He answered the question quickly.",
+   "ko": "그는 질문에 재빨리 대답했어.",
+   "blank": "ฉับไว",
+   "src": "made"
+  }
+ ],
  "w|ฉาก": [
   {
    "text": "ฉากนี้สวยและเศร้า",
@@ -7643,6 +8299,22 @@
    "blank": "ฉีดยา"
   }
  ],
+ "w|ฉุกเฉิน": [
+  {
+   "text": "ถ้ามีเหตุฉุกเฉินให้โทรหาฉัน",
+   "en": "Call me if there's an emergency.",
+   "ko": "급한 일이 생기면 나한테 전화해.",
+   "blank": "ฉุกเฉิน",
+   "src": "made"
+  },
+  {
+   "text": "รถพยาบาลพาเขาไปห้องฉุกเฉิน",
+   "en": "The ambulance took him to the emergency room.",
+   "ko": "구급차가 그를 응급실로 데려갔어.",
+   "blank": "ฉุกเฉิน",
+   "src": "made"
+  }
+ ],
  "w|เฉพาะ": [
   {
    "text": "ห้องนี้สำหรับสมาชิกเฉพาะ",
@@ -7655,6 +8327,38 @@
    "en": "I came specifically to see you.",
    "ko": "난 너만 보러 왔어.",
    "blank": "เฉพาะ"
+  }
+ ],
+ "w|เฉพาะตัว": [
+  {
+   "text": "เธอมีสไตล์เฉพาะตัว",
+   "en": "She has her own unique style.",
+   "ko": "그녀는 자기만의 스타일이 있어.",
+   "blank": "เฉพาะตัว",
+   "src": "made"
+  },
+  {
+   "text": "ของใช้เฉพาะตัวห้ามยืม",
+   "en": "Personal items must not be borrowed.",
+   "ko": "개인 물품은 빌리면 안 돼.",
+   "blank": "เฉพาะตัว",
+   "src": "made"
+  }
+ ],
+ "w|เฉย": [
+  {
+   "text": "ทำไมเธอเฉยไม่ตอบ",
+   "en": "Why are you silent and not answering?",
+   "ko": "왜 대답 없이 가만히 있어?",
+   "blank": "เฉย",
+   "src": "made"
+  },
+  {
+   "text": "เขาเห็นแล้วแต่ก็เฉย",
+   "en": "He saw it but stayed indifferent.",
+   "ko": "그는 봤지만 모른 척했어.",
+   "blank": "เฉย",
+   "src": "made"
   }
  ],
  "w|ชนะ": [
@@ -7739,6 +8443,22 @@
    "en": "I'm traveling during the school break.",
    "ko": "방학 때 여행 가.",
    "blank": "ช่วง"
+  }
+ ],
+ "w|ช่วงเวลา": [
+  {
+   "text": "ช่วงเวลานี้รถติดมาก",
+   "en": "Traffic is very heavy at this time.",
+   "ko": "이 시간대에는 차가 많이 막혀.",
+   "blank": "ช่วงเวลา",
+   "src": "made"
+  },
+  {
+   "text": "นั่นเป็นช่วงเวลาที่มีความสุขที่สุด",
+   "en": "That was the happiest time.",
+   "ko": "그때가 가장 행복한 시기였어.",
+   "blank": "ช่วงเวลา",
+   "src": "made"
   }
  ],
  "w|ชวน": [
@@ -7851,6 +8571,22 @@
    "en": "The customer likes the service.",
    "ko": "고객이 서비스에 만족해.",
    "blank": "ชอบใจ"
+  }
+ ],
+ "w|ชักโครก": [
+  {
+   "text": "ชักโครกตัน",
+   "en": "The toilet is clogged.",
+   "ko": "변기가 막혔어.",
+   "blank": "ชักโครก",
+   "src": "made"
+  },
+  {
+   "text": "กดชักโครกด้วยนะ",
+   "en": "Remember to flush the toilet.",
+   "ko": "변기 물 꼭 내려.",
+   "blank": "ชักโครก",
+   "src": "made"
   }
  ],
  "w|ชักชวน": [
@@ -8063,6 +8799,22 @@
    "blank": "ชายแดน"
   }
  ],
+ "w|ชายฝั่ง": [
+  {
+   "text": "เราขับรถเลียบชายฝั่ง",
+   "en": "We drove along the coast.",
+   "ko": "우리는 해안을 따라 운전했어.",
+   "blank": "ชายฝั่ง",
+   "src": "made"
+  },
+  {
+   "text": "มีพายุเข้าชายฝั่งตะวันออก",
+   "en": "A storm is hitting the east coast.",
+   "ko": "폭풍이 동쪽 해안에 들이닥치고 있어.",
+   "blank": "ชายฝั่ง",
+   "src": "made"
+  }
+ ],
  "w|ชายหาด": [
   {
    "text": "ชายหาดวันนี้เงียบสงบดี",
@@ -8245,6 +8997,22 @@
    "blank": "ชีส"
   }
  ],
+ "w|ชื้น": [
+  {
+   "text": "อากาศนั้นนุ่มและดินนั้นชื้น",
+   "en": "The air is soft, the soil moist.",
+   "ko": "공기는 부드럽고 흙은 촉촉해.",
+   "blank": "ชื้น",
+   "src": "tatoeba:2177592/regambit en:18237/AlanF_US"
+  },
+  {
+   "text": "เสื้อยังชื้นอยู่ ยังใส่ไม่ได้",
+   "en": "The shirt is still damp, I can't wear it yet.",
+   "ko": "셔츠가 아직 축축해서 못 입어.",
+   "blank": "ชื้น",
+   "src": "made"
+  }
+ ],
  "w|ชื่นชม": [
   {
    "text": "ฉันชื่นชมความพยายามของเธอ",
@@ -8327,6 +9095,22 @@
    "en": "Let's develop the community together.",
    "ko": "함께 공동체를 발전시키자.",
    "blank": "ชุมชน"
+  }
+ ],
+ "w|ชุ่มชื้น": [
+  {
+   "text": "ผิวต้องการความชุ่มชื้น",
+   "en": "Skin needs moisture.",
+   "ko": "피부에는 수분이 필요해.",
+   "blank": "ชุ่มชื้น",
+   "src": "made"
+  },
+  {
+   "text": "หลังฝนตกอากาศชุ่มชื้น",
+   "en": "The air is moist after the rain.",
+   "ko": "비가 온 뒤 공기가 촉촉해.",
+   "blank": "ชุ่มชื้น",
+   "src": "made"
   }
  ],
  "w|เช็ค": [
@@ -8439,6 +9223,22 @@
    "en": "I don't believe it.",
    "ko": "안 믿어.",
    "blank": "เชื่อ"
+  }
+ ],
+ "w|เชื่องช้า": [
+  {
+   "text": "เต่าเดินเชื่องช้า",
+   "en": "The turtle walks slowly.",
+   "ko": "거북이는 느릿느릿 걸어.",
+   "blank": "เชื่องช้า",
+   "src": "made"
+  },
+  {
+   "text": "อินเทอร์เน็ตวันนี้เชื่องช้ามาก",
+   "en": "The internet is very sluggish today.",
+   "ko": "오늘 인터넷이 아주 느려.",
+   "blank": "เชื่องช้า",
+   "src": "made"
   }
  ],
  "w|เชื้อชาติ": [
@@ -8607,6 +9407,22 @@
    "en": "Everyone shouted hooray together.",
    "ko": "모두가 함께 만세를 외쳤어.",
    "blank": "ไชโย"
+  }
+ ],
+ "w|ซน": [
+  {
+   "text": "ลูกชายฉันซนมาก",
+   "en": "My son is very naughty.",
+   "ko": "우리 아들은 아주 장난꾸러기야.",
+   "blank": "ซน",
+   "src": "made"
+  },
+  {
+   "text": "อย่าซนนะ นั่งเฉยๆ",
+   "en": "Don't be naughty, sit still.",
+   "ko": "장난치지 말고 가만히 앉아 있어.",
+   "blank": "ซน",
+   "src": "made"
   }
  ],
  "w|ซ่อน": [
@@ -8973,6 +9789,22 @@
    "blank": "ดวงจันทร์"
   }
  ],
+ "w|ดวงดาว": [
+  {
+   "text": "คืนนี้มองเห็นดวงดาวเต็มท้องฟ้า",
+   "en": "Tonight the sky is full of stars.",
+   "ko": "오늘 밤은 하늘에 별이 가득해.",
+   "blank": "ดวงดาว",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ ชอบนับดวงดาว",
+   "en": "Children like to count the stars.",
+   "ko": "아이들은 별 세는 걸 좋아해.",
+   "blank": "ดวงดาว",
+   "src": "made"
+  }
+ ],
  "w|ดวงอาทิตย์": [
   {
    "text": "ดวงอาทิตย์ขึ้นแล้ว",
@@ -9029,6 +9861,38 @@
    "blank": "ด้วยกัน"
   }
  ],
+ "w|ดอกกุหลาบ": [
+  {
+   "text": "เขาให้ดอกกุหลาบแดงกับแฟน",
+   "en": "He gave his girlfriend red roses.",
+   "ko": "그는 여자 친구에게 빨간 장미를 줬어.",
+   "blank": "ดอกกุหลาบ",
+   "src": "made"
+  },
+  {
+   "text": "ดอกกุหลาบมีหนาม",
+   "en": "Roses have thorns.",
+   "ko": "장미에는 가시가 있어.",
+   "blank": "ดอกกุหลาบ",
+   "src": "made"
+  }
+ ],
+ "w|ดอกบัว": [
+  {
+   "text": "ดอกบัวบานในสระ",
+   "en": "Lotus flowers are blooming in the pond.",
+   "ko": "연못에 연꽃이 피었어.",
+   "blank": "ดอกบัว",
+   "src": "made"
+  },
+  {
+   "text": "คนไทยใช้ดอกบัวไหว้พระ",
+   "en": "Thai people offer lotus flowers to the Buddha.",
+   "ko": "태국 사람들은 연꽃을 부처님께 바쳐.",
+   "blank": "ดอกบัว",
+   "src": "made"
+  }
+ ],
  "w|ดอกเบี้ย": [
   {
    "text": "ดอกเบี้ยเงินกู้สูงขึ้นอีก",
@@ -9041,6 +9905,22 @@
    "en": "The savings account earns little interest.",
    "ko": "저축 계좌는 이자가 적어.",
    "blank": "ดอกเบี้ย"
+  }
+ ],
+ "w|ดอกมะลิ": [
+  {
+   "text": "ดอกมะลิมีกลิ่นหอมมาก",
+   "en": "Jasmine flowers smell very sweet.",
+   "ko": "재스민 꽃은 향기가 아주 좋아.",
+   "blank": "ดอกมะลิ",
+   "src": "made"
+  },
+  {
+   "text": "วันแม่คนไทยให้ดอกมะลิ",
+   "en": "On Mother's Day Thai people give jasmine.",
+   "ko": "어머니날에 태국 사람들은 재스민을 선물해.",
+   "blank": "ดอกมะลิ",
+   "src": "made"
   }
  ],
  "w|ดอกไม้": [
@@ -9785,6 +10665,22 @@
    "blank": "ได้"
   }
  ],
+ "w|ไดโนเสาร์": [
+  {
+   "text": "ลูกชายฉันชอบไดโนเสาร์มาก",
+   "en": "My son loves dinosaurs.",
+   "ko": "우리 아들은 공룡을 아주 좋아해.",
+   "blank": "ไดโนเสาร์",
+   "src": "made"
+  },
+  {
+   "text": "พิพิธภัณฑ์มีกระดูกไดโนเสาร์",
+   "en": "The museum has dinosaur bones.",
+   "ko": "박물관에 공룡 뼈가 있어.",
+   "blank": "ไดโนเสาร์",
+   "src": "made"
+  }
+ ],
  "w|ได้ยิน": [
   {
    "text": "ได้ยินไหม",
@@ -9797,6 +10693,22 @@
    "en": "I heard a strange sound.",
    "ko": "이상한 소리가 들렸어.",
    "blank": "ได้ยิน"
+  }
+ ],
+ "w|ไดร์เป่าผม": [
+  {
+   "text": "ไดร์เป่าผมเสียแล้ว",
+   "en": "The hair dryer is broken.",
+   "ko": "드라이어가 고장 났어.",
+   "blank": "ไดร์เป่าผม",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมมีไดร์เป่าผมในห้องน้ำ",
+   "en": "The hotel has a hair dryer in the bathroom.",
+   "ko": "호텔 욕실에 드라이어가 있어.",
+   "blank": "ไดร์เป่าผม",
+   "src": "made"
   }
  ],
  "w|ได้รับ": [
@@ -9911,6 +10823,22 @@
    "blank": "ต้นทุน"
   }
  ],
+ "w|ต้นปาล์ม": [
+  {
+   "text": "ชายหาดมีต้นปาล์มเรียงราย",
+   "en": "The beach is lined with palm trees.",
+   "ko": "해변에 야자나무가 줄지어 있어.",
+   "blank": "ต้นปาล์ม",
+   "src": "made"
+  },
+  {
+   "text": "เรานั่งพักใต้ต้นปาล์ม",
+   "en": "We rested under a palm tree.",
+   "ko": "우리는 야자나무 아래에서 쉬었어.",
+   "blank": "ต้นปาล์ม",
+   "src": "made"
+  }
+ ],
  "w|ต้นไม้": [
   {
    "text": "ต้นไม้นี้สูงมาก",
@@ -9923,6 +10851,22 @@
    "en": "Don't cut down the trees.",
    "ko": "나무를 베지 마.",
    "blank": "ต้นไม้"
+  }
+ ],
+ "w|ต้นสน": [
+  {
+   "text": "บนภูเขามีต้นสนเยอะ",
+   "en": "There are many pine trees on the mountain.",
+   "ko": "산에 소나무가 많아.",
+   "blank": "ต้นสน",
+   "src": "made"
+  },
+  {
+   "text": "เราประดับต้นสนสำหรับคริสต์มาส",
+   "en": "We decorated a pine tree for Christmas.",
+   "ko": "우리는 크리스마스에 소나무를 장식했어.",
+   "blank": "ต้นสน",
+   "src": "made"
   }
  ],
  "w|ต้ม": [
@@ -9965,6 +10909,38 @@
    "en": "Can you just say it straight?",
    "ko": "그냥 솔직히 말해 줄래?",
    "blank": "ตรง"
+  }
+ ],
+ "w|ตรงกลาง": [
+  {
+   "text": "วางแจกันไว้ตรงกลางโต๊ะ",
+   "en": "Put the vase in the middle of the table.",
+   "ko": "꽃병을 탁자 한가운데에 놓아.",
+   "blank": "ตรงกลาง",
+   "src": "made"
+  },
+  {
+   "text": "เขานั่งตรงกลางระหว่างพ่อกับแม่",
+   "en": "He sat in the middle between his father and mother.",
+   "ko": "그는 아빠와 엄마 사이 한가운데에 앉았어.",
+   "blank": "ตรงกลาง",
+   "src": "made"
+  }
+ ],
+ "w|ตรงกันข้าม": [
+  {
+   "text": "บ้านเขาอยู่ฝั่งตรงกันข้าม",
+   "en": "His house is on the opposite side.",
+   "ko": "그의 집은 맞은편에 있어.",
+   "blank": "ตรงกันข้าม",
+   "src": "made"
+  },
+  {
+   "text": "คำว่าร้อนตรงกันข้ามกับคำว่าเย็น",
+   "en": "The word hot is the opposite of cold.",
+   "ko": "'덥다'는 '시원하다'의 반대말이야.",
+   "blank": "ตรงกันข้าม",
+   "src": "made"
   }
  ],
  "w|ตรงข้าม": [
@@ -10555,6 +11531,38 @@
    "blank": "ตะโกน"
   }
  ],
+ "w|ตะขาบ": [
+  {
+   "text": "ระวังตะขาบในห้องน้ำ",
+   "en": "Watch out for centipedes in the bathroom.",
+   "ko": "욕실에서 지네 조심해.",
+   "blank": "ตะขาบ",
+   "src": "made"
+  },
+  {
+   "text": "ฉันโดนตะขาบกัด",
+   "en": "I got bitten by a centipede.",
+   "ko": "지네한테 물렸어.",
+   "blank": "ตะขาบ",
+   "src": "made"
+  }
+ ],
+ "w|ตะไคร่": [
+  {
+   "text": "ก้อนหินมีตะไคร่ขึ้นเต็ม",
+   "en": "The rocks are covered with moss.",
+   "ko": "돌에 이끼가 잔뜩 끼었어.",
+   "blank": "ตะไคร่",
+   "src": "made"
+  },
+  {
+   "text": "ระวังลื่นเพราะตะไคร่น้ำ",
+   "en": "Careful not to slip on the algae.",
+   "ko": "물이끼 때문에 미끄러지지 않게 조심해.",
+   "blank": "ตะไคร่",
+   "src": "made"
+  }
+ ],
  "w|ตะวันตก": [
   {
    "text": "ดวงอาทิตย์ตกทางตะวันตก",
@@ -10581,6 +11589,22 @@
    "en": "My house is on the east side.",
    "ko": "우리 집은 동쪽에 있어.",
    "blank": "ตะวันออก"
+  }
+ ],
+ "w|ตั้งครรภ์": [
+  {
+   "text": "พี่สาวฉันตั้งครรภ์ได้ห้าเดือน",
+   "en": "My sister is five months pregnant.",
+   "ko": "언니가 임신 오 개월이야.",
+   "blank": "ตั้งครรภ์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้หญิงตั้งครรภ์ควรพักผ่อนให้มาก",
+   "en": "Pregnant women should rest a lot.",
+   "ko": "임신부는 충분히 쉬어야 해.",
+   "blank": "ตั้งครรภ์",
+   "src": "made"
   }
  ],
  "w|ตั้งใจ": [
@@ -10835,6 +11859,22 @@
    "blank": "ต่างหาก"
   }
  ],
+ "w|ตาบอด": [
+  {
+   "text": "เขาตาบอด",
+   "en": "He went blind.",
+   "ko": "그는 눈이 멀었어.",
+   "blank": "ตาบอด",
+   "src": "tatoeba:8717399/pastelite en:304173/CK"
+  },
+  {
+   "text": "สุนัขนำทางช่วยคนตาบอดเดินข้ามถนน",
+   "en": "A guide dog helps a blind person cross the road.",
+   "ko": "안내견이 시각 장애인이 길을 건너도록 도와줘.",
+   "blank": "ตาบอด",
+   "src": "made"
+  }
+ ],
  "w|ตาม": [
   {
    "text": "ตามมาเลย",
@@ -10889,6 +11929,22 @@
    "en": "The train schedule has changed.",
    "ko": "기차 시간표가 바뀌었어.",
    "blank": "ตาราง"
+  }
+ ],
+ "w|ตารางเวลา": [
+  {
+   "text": "ดูตารางเวลารถไฟก่อนออกจากบ้าน",
+   "en": "Check the train timetable before leaving home.",
+   "ko": "집을 나서기 전에 기차 시간표를 봐.",
+   "blank": "ตารางเวลา",
+   "src": "made"
+  },
+  {
+   "text": "ตารางเวลาเรียนเทอมนี้แน่นมาก",
+   "en": "This term's class schedule is very full.",
+   "ko": "이번 학기 수업 시간표가 아주 빡빡해.",
+   "blank": "ตารางเวลา",
+   "src": "made"
   }
  ],
  "w|ต่ำ": [
@@ -11073,6 +12129,22 @@
    "blank": "ตื้น"
   }
  ],
+ "w|ตื่นตัว": [
+  {
+   "text": "หลังดื่มกาแฟฉันรู้สึกตื่นตัว",
+   "en": "I feel alert after drinking coffee.",
+   "ko": "커피를 마시고 나니 정신이 맑아.",
+   "blank": "ตื่นตัว",
+   "src": "made"
+  },
+  {
+   "text": "คนในเมืองตื่นตัวเรื่องสิ่งแวดล้อม",
+   "en": "People in the city are aware of environmental issues.",
+   "ko": "도시 사람들은 환경 문제에 관심이 높아.",
+   "blank": "ตื่นตัว",
+   "src": "made"
+  }
+ ],
  "w|ตื่นเต้น": [
   {
    "text": "ตื่นเต้นก่อนขึ้นเวที",
@@ -11099,6 +12171,22 @@
    "en": "He finds it hard to wake up before dawn.",
    "ko": "그는 새벽에는 일어나기 힘들어해.",
    "blank": "ตื่นนอน"
+  }
+ ],
+ "w|ตุ๊กแก": [
+  {
+   "text": "ได้ยินเสียงตุ๊กแกร้องตอนกลางคืน",
+   "en": "I hear the gecko calling at night.",
+   "ko": "밤에 도마뱀붙이 우는 소리가 들려.",
+   "blank": "ตุ๊กแก",
+   "src": "made"
+  },
+  {
+   "text": "ตุ๊กแกตัวใหญ่อยู่หลังตู้",
+   "en": "A big gecko is behind the cupboard.",
+   "ko": "큰 도마뱀붙이가 장 뒤에 있어.",
+   "blank": "ตุ๊กแก",
+   "src": "made"
   }
  ],
  "w|ตุ๊กตา": [
@@ -11155,6 +12243,22 @@
    "en": "Put the vegetables in the fridge too.",
    "ko": "채소도 냉장고에 넣어 둬.",
    "blank": "ตู้เย็น"
+  }
+ ],
+ "w|ตู้เสื้อผ้า": [
+  {
+   "text": "ตู้เสื้อผ้าของฉันเต็มแล้ว",
+   "en": "My wardrobe is full.",
+   "ko": "내 옷장이 꽉 찼어.",
+   "blank": "ตู้เสื้อผ้า",
+   "src": "made"
+  },
+  {
+   "text": "แขวนเสื้อไว้ในตู้เสื้อผ้า",
+   "en": "Hang the shirt in the wardrobe.",
+   "ko": "셔츠를 옷장에 걸어 둬.",
+   "blank": "ตู้เสื้อผ้า",
+   "src": "made"
   }
  ],
  "w|ตู้เอทีเอ็ม": [
@@ -11283,6 +12387,22 @@
    "blank": "เต่า"
   }
  ],
+ "w|เตารีด": [
+  {
+   "text": "เตารีดร้อนมาก ระวังนะ",
+   "en": "The iron is very hot, be careful.",
+   "ko": "다리미가 아주 뜨거우니 조심해.",
+   "blank": "เตารีด",
+   "src": "made"
+  },
+  {
+   "text": "ฉันลืมถอดปลั๊กเตารีด",
+   "en": "I forgot to unplug the iron.",
+   "ko": "다리미 플러그 뽑는 걸 깜빡했어.",
+   "blank": "เตารีด",
+   "src": "made"
+  }
+ ],
  "w|เต้าหู้": [
   {
    "text": "ทอดเต้าหู้ให้เหลืองกรอบ",
@@ -11379,6 +12499,22 @@
    "en": "Pretty, but expensive.",
    "ko": "예쁜데 비싸.",
    "blank": "แต่"
+  }
+ ],
+ "w|แตกต่าง": [
+  {
+   "text": "ความคิดของเราแตกต่างกัน",
+   "en": "Our ideas are different.",
+   "ko": "우리 생각은 서로 달라.",
+   "blank": "แตกต่าง",
+   "src": "made"
+  },
+  {
+   "text": "อาหารแต่ละภาคแตกต่างกันมาก",
+   "en": "The food of each region is very different.",
+   "ko": "지역마다 음식이 많이 달라.",
+   "blank": "แตกต่าง",
+   "src": "made"
   }
  ],
  "w|แต่ก่อน": [
@@ -11689,6 +12825,22 @@
    "blank": "ถังขยะ"
   }
  ],
+ "w|ถังน้ำ": [
+  {
+   "text": "เติมน้ำให้เต็มถังน้ำ",
+   "en": "Fill the bucket with water.",
+   "ko": "양동이에 물을 가득 채워.",
+   "blank": "ถังน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ถังน้ำรั่ว",
+   "en": "The bucket leaks.",
+   "ko": "양동이가 새.",
+   "blank": "ถังน้ำ",
+   "src": "made"
+  }
+ ],
  "w|ถัดจาก": [
   {
    "text": "ห้องน้ำอยู่ถัดจากลิฟต์",
@@ -11787,6 +12939,22 @@
    "blank": "ถ่ายรูป"
   }
  ],
+ "w|ถาวร": [
+  {
+   "text": "นี่เป็นวิธีแก้ปัญหาแบบถาวร",
+   "en": "This is a permanent solution.",
+   "ko": "이건 영구적인 해결책이야.",
+   "blank": "ถาวร",
+   "src": "made"
+  },
+  {
+   "text": "เขาย้ายไปอยู่ต่างประเทศอย่างถาวร",
+   "en": "He moved abroad permanently.",
+   "ko": "그는 외국으로 아예 이주했어.",
+   "blank": "ถาวร",
+   "src": "made"
+  }
+ ],
  "w|ถ้าหาก": [
   {
    "text": "ถ้าหากว่างมาช่วยหน่อย",
@@ -11799,6 +12967,38 @@
    "en": "If it rains, we will postpone.",
    "ko": "비가 오면 미루자.",
    "blank": "ถ้าหาก"
+  }
+ ],
+ "w|ถ้ำ": [
+  {
+   "text": "เราใช้เวลาทั้งวันหาทางออกจากถ้ำ",
+   "en": "We spent all day searching for a way out of the cave.",
+   "ko": "우리는 하루 종일 동굴에서 나갈 길을 찾았어.",
+   "blank": "ถ้ำ",
+   "src": "tatoeba:11084437/Somsak en:7697601/CK"
+  },
+  {
+   "text": "ค้างคาวอาศัยอยู่ในถ้ำ",
+   "en": "Bats live in caves.",
+   "ko": "박쥐는 동굴에 살아.",
+   "blank": "ถ้ำ",
+   "src": "made"
+  }
+ ],
+ "w|ถี่": [
+  {
+   "text": "ช่วงนี้ฝนตกถี่",
+   "en": "It's been raining frequently lately.",
+   "ko": "요즘 비가 자주 와.",
+   "blank": "ถี่",
+   "src": "made"
+  },
+  {
+   "text": "หัวใจเต้นถี่เพราะตื่นเต้น",
+   "en": "My heart is beating fast from excitement.",
+   "ko": "설레서 심장이 빨리 뛰어.",
+   "blank": "ถี่",
+   "src": "made"
   }
  ],
  "w|ถึง": [
@@ -11899,6 +13099,22 @@
    "blank": "ถูก"
   }
  ],
+ "w|ถูกกฎหมาย": [
+  {
+   "text": "การซื้อขายนี้ถูกกฎหมาย",
+   "en": "This trade is legal.",
+   "ko": "이 거래는 합법이야.",
+   "blank": "ถูกกฎหมาย",
+   "src": "made"
+  },
+  {
+   "text": "ร้านนี้ขายของถูกกฎหมายทั้งหมด",
+   "en": "This shop sells only legal goods.",
+   "ko": "이 가게는 합법적인 물건만 팔아.",
+   "blank": "ถูกกฎหมาย",
+   "src": "made"
+  }
+ ],
  "w|ถูกต้อง": [
   {
    "text": "คำตอบถูกต้อง",
@@ -11925,6 +13141,22 @@
    "en": "Rest a bit first.",
    "ko": "잠깐 쉬어.",
    "blank": "เถอะ"
+  }
+ ],
+ "w|เถาวัลย์": [
+  {
+   "text": "เถาวัลย์พันรอบต้นไม้",
+   "en": "Vines are wrapped around the tree.",
+   "ko": "덩굴이 나무를 휘감고 있어.",
+   "blank": "เถาวัลย์",
+   "src": "made"
+  },
+  {
+   "text": "ลิงห้อยโหนเถาวัลย์",
+   "en": "The monkey swings on the vines.",
+   "ko": "원숭이가 덩굴에 매달려 그네를 타.",
+   "blank": "เถาวัลย์",
+   "src": "made"
   }
  ],
  "w|เถียง": [
@@ -12095,6 +13327,22 @@
    "blank": "ทวน"
   }
  ],
+ "w|ทวีป": [
+  {
+   "text": "ประเทศไทยอยู่ในทวีปเอเชีย",
+   "en": "Thailand is in Asia.",
+   "ko": "태국은 아시아 대륙에 있어.",
+   "blank": "ทวีป",
+   "src": "tatoeba:8681613/pastelite en:748748/CK"
+  },
+  {
+   "text": "โลกมีเจ็ดทวีป",
+   "en": "The world has seven continents.",
+   "ko": "세계에는 일곱 대륙이 있어.",
+   "blank": "ทวีป",
+   "src": "made"
+  }
+ ],
  "w|ทศวรรษ": [
   {
    "text": "เพลงนี้ดังมานานหลายทศวรรษ",
@@ -12177,6 +13425,22 @@
    "en": "The local market is lively.",
    "ko": "동네 시장이 아주 북적여.",
    "blank": "ท้องถิ่น"
+  }
+ ],
+ "w|ท้องทุ่ง": [
+  {
+   "text": "วัวกินหญ้าอยู่ในท้องทุ่ง",
+   "en": "Cows are grazing in the field.",
+   "ko": "소들이 들판에서 풀을 먹고 있어.",
+   "blank": "ท้องทุ่ง",
+   "src": "made"
+  },
+  {
+   "text": "ท้องทุ่งเต็มไปด้วยดอกไม้",
+   "en": "The field is full of flowers.",
+   "ko": "들판이 꽃으로 가득해.",
+   "blank": "ท้องทุ่ง",
+   "src": "made"
   }
  ],
  "w|ท้องฟ้า": [
@@ -12459,6 +13723,22 @@
    "blank": "ทันสมัย"
   }
  ],
+ "w|ทั่วถึง": [
+  {
+   "text": "ครูดูแลนักเรียนได้ทั่วถึง",
+   "en": "The teacher looks after all the students thoroughly.",
+   "ko": "선생님은 학생들을 빠짐없이 챙겨.",
+   "blank": "ทั่วถึง",
+   "src": "made"
+  },
+  {
+   "text": "น้ำประปายังไปไม่ทั่วถึงหมู่บ้าน",
+   "en": "Tap water doesn't yet reach the whole village.",
+   "ko": "수돗물이 아직 마을 곳곳에 닿지 않아.",
+   "blank": "ทั่วถึง",
+   "src": "made"
+  }
+ ],
  "w|ทั่วไป": [
   {
    "text": "โดยทั่วไปแล้วคนไทยใจดี",
@@ -12653,6 +13933,22 @@
    "en": "Kids love guessing fun riddles.",
    "ko": "아이들은 재미있는 수수께끼 맞히기를 좋아해.",
    "blank": "ทาย"
+  }
+ ],
+ "w|ท้าย": [
+  {
+   "text": "เขานั่งท้ายรถ",
+   "en": "He sat in the back of the car.",
+   "ko": "그는 차 뒷자리에 앉았어.",
+   "blank": "ท้าย",
+   "src": "made"
+  },
+  {
+   "text": "ฉันชอบตอนท้ายของหนังเรื่องนี้",
+   "en": "I like the ending of this movie.",
+   "ko": "나는 이 영화 끝부분이 좋아.",
+   "blank": "ท้าย",
+   "src": "made"
   }
  ],
  "w|ทารก": [
@@ -12893,6 +14189,22 @@
    "blank": "ทิ้งขว้าง"
   }
  ],
+ "w|ทิชชู่": [
+  {
+   "text": "ทิชชู่หมดแล้ว",
+   "en": "We're out of tissues.",
+   "ko": "휴지가 다 떨어졌어.",
+   "blank": "ทิชชู่",
+   "src": "made"
+  },
+  {
+   "text": "ขอทิชชู่หน่อยได้ไหม",
+   "en": "Can I have a tissue?",
+   "ko": "휴지 좀 줄래?",
+   "blank": "ทิชชู่",
+   "src": "made"
+  }
+ ],
  "w|ทิศ": [
   {
    "text": "ถามทิศทางไปสถานีหน่อย",
@@ -12975,6 +14287,22 @@
    "en": "He got angry at once when he heard the news.",
    "ko": "소식을 듣자마자 바로 화났어.",
    "blank": "ทีเดียว"
+  }
+ ],
+ "w|ที่นอน": [
+  {
+   "text": "ที่นอนนี้แข็งเกินไป",
+   "en": "This mattress is too hard.",
+   "ko": "이 매트리스는 너무 딱딱해.",
+   "blank": "ที่นอน",
+   "src": "made"
+  },
+  {
+   "text": "เราซื้อที่นอนใหม่",
+   "en": "We bought a new mattress.",
+   "ko": "우리는 새 매트리스를 샀어.",
+   "blank": "ที่นอน",
+   "src": "made"
   }
  ],
  "w|ที่นั่น": [
@@ -13103,6 +14431,22 @@
    "blank": "ที่ไหน"
   }
  ],
+ "w|ที่อยู่": [
+  {
+   "text": "ช่วยเขียนที่อยู่ของคุณตรงนี้",
+   "en": "Please write your address here.",
+   "ko": "여기에 주소를 적어 주세요.",
+   "blank": "ที่อยู่",
+   "src": "made"
+  },
+  {
+   "text": "ฉันเปลี่ยนที่อยู่แล้ว",
+   "en": "I've changed my address.",
+   "ko": "주소가 바뀌었어.",
+   "blank": "ที่อยู่",
+   "src": "made"
+  }
+ ],
  "w|ทึบ": [
   {
    "text": "กระจกบานนี้ทึบมองไม่ผ่าน",
@@ -13115,6 +14459,22 @@
    "en": "Thick fog covers the road.",
    "ko": "짙은 안개가 길을 덮어.",
    "blank": "ทึบ"
+  }
+ ],
+ "w|ทึม": [
+  {
+   "text": "ห้องนี้ทึมเพราะไม่มีหน้าต่าง",
+   "en": "This room is dim because it has no windows.",
+   "ko": "이 방은 창문이 없어서 어둑해.",
+   "blank": "ทึม",
+   "src": "made"
+  },
+  {
+   "text": "สีเสื้อตัวนี้ดูทึมไปหน่อย",
+   "en": "This shirt's color looks a bit dull.",
+   "ko": "이 셔츠 색은 좀 칙칙해 보여.",
+   "blank": "ทึม",
+   "src": "made"
   }
  ],
  "w|ทื่อ": [
@@ -13677,6 +15037,70 @@
    "blank": "นก"
   }
  ],
+ "w|นกแก้ว": [
+  {
+   "text": "นกแก้วของฉันพูดได้",
+   "en": "My parrot can talk.",
+   "ko": "내 앵무새는 말을 할 수 있어.",
+   "blank": "นกแก้ว",
+   "src": "made"
+  },
+  {
+   "text": "นกแก้วมีขนสีเขียวสด",
+   "en": "The parrot has bright green feathers.",
+   "ko": "앵무새는 깃털이 선명한 초록색이야.",
+   "blank": "นกแก้ว",
+   "src": "made"
+  }
+ ],
+ "w|นกพิราบ": [
+  {
+   "text": "นกพิราบเดินอยู่ในจัตุรัส",
+   "en": "Pigeons are walking in the square.",
+   "ko": "비둘기들이 광장을 걸어 다녀.",
+   "blank": "นกพิราบ",
+   "src": "made"
+  },
+  {
+   "text": "อย่าให้อาหารนกพิราบ",
+   "en": "Don't feed the pigeons.",
+   "ko": "비둘기에게 먹이를 주지 마.",
+   "blank": "นกพิราบ",
+   "src": "made"
+  }
+ ],
+ "w|นกอินทรี": [
+  {
+   "text": "นกอินทรีบินอยู่สูงบนฟ้า",
+   "en": "An eagle is flying high in the sky.",
+   "ko": "독수리가 하늘 높이 날고 있어.",
+   "blank": "นกอินทรี",
+   "src": "made"
+  },
+  {
+   "text": "นกอินทรีมีสายตาดีมาก",
+   "en": "Eagles have very good eyesight.",
+   "ko": "독수리는 눈이 아주 좋아.",
+   "blank": "นกอินทรี",
+   "src": "made"
+  }
+ ],
+ "w|นกฮูก": [
+  {
+   "text": "นกฮูกออกหากินตอนกลางคืน",
+   "en": "Owls hunt at night.",
+   "ko": "부엉이는 밤에 먹이를 찾아.",
+   "blank": "นกฮูก",
+   "src": "made"
+  },
+  {
+   "text": "ได้ยินเสียงนกฮูกร้องในป่า",
+   "en": "I hear an owl hooting in the forest.",
+   "ko": "숲에서 부엉이 우는 소리가 들려.",
+   "blank": "นกฮูก",
+   "src": "made"
+  }
+ ],
  "w|นม": [
   {
    "text": "เด็กควรดื่มนมทุกวัน",
@@ -13703,6 +15127,22 @@
    "en": "Don't turn anyone's life into hell.",
    "ko": "누구의 삶도 지옥으로 만들지 마.",
    "blank": "นรก"
+  }
+ ],
+ "w|นอก": [
+  {
+   "text": "เด็กๆ ชอบเล่นนอกบ้าน",
+   "en": "Children like playing outside the house.",
+   "ko": "아이들은 집 밖에서 노는 걸 좋아해.",
+   "blank": "นอก",
+   "src": "made"
+  },
+  {
+   "text": "วันนี้เรากินข้าวนอกบ้านกัน",
+   "en": "Let's eat out today.",
+   "ko": "오늘은 밖에서 밥 먹자.",
+   "blank": "นอก",
+   "src": "made"
   }
  ],
  "w|นอกจากนี้": [
@@ -14139,6 +15579,22 @@
    "blank": "น่าเกลียด"
   }
  ],
+ "w|นาข้าว": [
+  {
+   "text": "นาข้าวเขียวขจีสุดสายตา",
+   "en": "Green rice fields stretch as far as the eye can see.",
+   "ko": "푸른 논이 끝없이 펼쳐져 있어.",
+   "blank": "นาข้าว",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาทำงานในนาข้าวทั้งวัน",
+   "en": "Farmers work in the rice fields all day.",
+   "ko": "농부들은 하루 종일 논에서 일해.",
+   "blank": "นาข้าว",
+   "src": "made"
+  }
+ ],
  "w|นาง": [
   {
    "text": "นางมาถึงก่อนเวลานัด",
@@ -14433,6 +15889,22 @@
    "blank": "นาฬิกา"
   }
  ],
+ "w|นาฬิกาปลุก": [
+  {
+   "text": "นาฬิกาปลุกดังตอนหกโมงเช้า",
+   "en": "The alarm clock rang at six in the morning.",
+   "ko": "알람 시계가 아침 여섯 시에 울렸어.",
+   "blank": "นาฬิกาปลุก",
+   "src": "made"
+  },
+  {
+   "text": "ฉันลืมตั้งนาฬิกาปลุก",
+   "en": "I forgot to set the alarm clock.",
+   "ko": "알람 맞추는 걸 깜빡했어.",
+   "blank": "นาฬิกาปลุก",
+   "src": "made"
+  }
+ ],
  "w|น่าอาย": [
   {
    "text": "ทำแบบนั้นน่าอายจริง ๆ",
@@ -14461,6 +15933,22 @@
    "blank": "น้ำ"
   }
  ],
+ "w|น้ำขึ้น": [
+  {
+   "text": "ตอนน้ำขึ้นชายหาดจะแคบลง",
+   "en": "At high tide the beach gets narrower.",
+   "ko": "밀물 때면 해변이 좁아져.",
+   "blank": "น้ำขึ้น",
+   "src": "made"
+  },
+  {
+   "text": "น้ำขึ้นให้รีบตัก",
+   "en": "Make hay while the sun shines.",
+   "ko": "물 들어올 때 노 저어라.",
+   "blank": "น้ำขึ้น",
+   "src": "made"
+  }
+ ],
  "w|น้ำแข็ง": [
   {
    "text": "ใส่น้ำแข็งเพิ่มหน่อย",
@@ -14473,6 +15961,22 @@
    "en": "The ice has all melted.",
    "ko": "얼음이 다 녹았어.",
    "blank": "น้ำแข็ง"
+  }
+ ],
+ "w|น้ำค้าง": [
+  {
+   "text": "ตอนเช้ามีน้ำค้างบนใบไม้",
+   "en": "In the morning there's dew on the leaves.",
+   "ko": "아침에는 나뭇잎에 이슬이 맺혀 있어.",
+   "blank": "น้ำค้าง",
+   "src": "made"
+  },
+  {
+   "text": "หญ้าเปียกน้ำค้าง",
+   "en": "The grass is wet with dew.",
+   "ko": "풀이 이슬에 젖었어.",
+   "blank": "น้ำค้าง",
+   "src": "made"
   }
  ],
  "w|น้ำเงิน": [
@@ -14501,6 +16005,22 @@
    "en": "Thai kindness is well known.",
    "ko": "태국인의 인정은 유명해.",
    "blank": "น้ำใจ"
+  }
+ ],
+ "w|น้ำตก": [
+  {
+   "text": "น้ำตกนี้สวยมากในหน้าฝน",
+   "en": "This waterfall is beautiful in the rainy season.",
+   "ko": "이 폭포는 우기에 아주 아름다워.",
+   "blank": "น้ำตก",
+   "src": "made"
+  },
+  {
+   "text": "เราไปเล่นน้ำที่น้ำตก",
+   "en": "We went to play in the water at the waterfall.",
+   "ko": "우리는 폭포에 물놀이하러 갔어.",
+   "blank": "น้ำตก",
+   "src": "made"
   }
  ],
  "w|น้ำตา": [
@@ -14601,6 +16121,38 @@
    "blank": "น้ำมัน"
   }
  ],
+ "w|น้ำยาล้างจาน": [
+  {
+   "text": "น้ำยาล้างจานใกล้หมดแล้ว",
+   "en": "The dish soap is almost gone.",
+   "ko": "주방 세제가 거의 다 떨어졌어.",
+   "blank": "น้ำยาล้างจาน",
+   "src": "made"
+  },
+  {
+   "text": "ใส่น้ำยาล้างจานนิดเดียวก็พอ",
+   "en": "Just a little dish soap is enough.",
+   "ko": "주방 세제는 조금만 넣으면 돼.",
+   "blank": "น้ำยาล้างจาน",
+   "src": "made"
+  }
+ ],
+ "w|น้ำลง": [
+  {
+   "text": "ตอนน้ำลงเราเดินไปที่เกาะได้",
+   "en": "At low tide we can walk to the island.",
+   "ko": "썰물 때는 섬까지 걸어갈 수 있어.",
+   "blank": "น้ำลง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ เก็บหอยตอนน้ำลง",
+   "en": "The kids collect shells at low tide.",
+   "ko": "아이들은 썰물 때 조개를 주워.",
+   "blank": "น้ำลง",
+   "src": "made"
+  }
+ ],
  "w|น้ำส้ม": [
   {
    "text": "คั้นน้ำส้มสดตอนเช้า",
@@ -14657,6 +16209,22 @@
    "blank": "น้ำอัดลม"
   }
  ],
+ "w|นิ่ง": [
+  {
+   "text": "น้ำในทะเลสาบนิ่งมาก",
+   "en": "The lake water is very still.",
+   "ko": "호수 물이 아주 잔잔해.",
+   "blank": "นิ่ง",
+   "src": "made"
+  },
+  {
+   "text": "เขานั่งนิ่งไม่พูดอะไรเลย",
+   "en": "He sat still and said nothing.",
+   "ko": "그는 아무 말 없이 가만히 앉아 있었어.",
+   "blank": "นิ่ง",
+   "src": "made"
+  }
+ ],
  "w|นิดเดียว": [
   {
    "text": "ขอน้ำตาลนิดเดียว",
@@ -14711,6 +16279,22 @@
    "en": "This fairy tale teaches a good lesson.",
    "ko": "이 동화는 교훈이 좋아.",
    "blank": "นิทาน"
+  }
+ ],
+ "w|นิ่ม": [
+  {
+   "text": "หมอนใบนี้นิ่มมาก",
+   "en": "This pillow is very soft.",
+   "ko": "이 베개는 아주 푹신해.",
+   "blank": "นิ่ม",
+   "src": "made"
+  },
+  {
+   "text": "ขนมปังยังนิ่มอยู่",
+   "en": "The bread is still soft.",
+   "ko": "빵이 아직 말랑해.",
+   "blank": "นิ่ม",
+   "src": "made"
   }
  ],
  "w|นิยาย": [
@@ -14867,6 +16451,22 @@
    "blank": "เน่า"
   }
  ],
+ "w|เนินเขา": [
+  {
+   "text": "บ้านเขาอยู่บนเนินเขา",
+   "en": "His house is on a hill.",
+   "ko": "그의 집은 언덕 위에 있어.",
+   "blank": "เนินเขา",
+   "src": "made"
+  },
+  {
+   "text": "เราเดินขึ้นเนินเขาไปดูพระอาทิตย์ตก",
+   "en": "We walked up the hill to watch the sunset.",
+   "ko": "우리는 노을을 보러 언덕을 올랐어.",
+   "blank": "เนินเขา",
+   "src": "made"
+  }
+ ],
  "w|เนื้อ": [
   {
    "text": "เนื้อวัวชิ้นนี้เหนียว",
@@ -14935,6 +16535,22 @@
    "en": "I am still not sure about the plan.",
    "ko": "난 아직 계획이 확실하지 않아.",
    "blank": "แน่ใจ"
+  }
+ ],
+ "w|แน่ชัด": [
+  {
+   "text": "ยังไม่มีคำตอบที่แน่ชัด",
+   "en": "There's no clear answer yet.",
+   "ko": "아직 분명한 답이 없어.",
+   "blank": "แน่ชัด",
+   "src": "made"
+  },
+  {
+   "text": "สาเหตุยังไม่แน่ชัด",
+   "en": "The cause is not yet certain.",
+   "ko": "원인은 아직 확실하지 않아.",
+   "blank": "แน่ชัด",
+   "src": "made"
   }
  ],
  "w|แน่น": [
@@ -15019,6 +16635,22 @@
    "en": "He finally made a decision.",
    "ko": "그는 결국 결정을 내렸어.",
    "blank": "ในที่สุด"
+  }
+ ],
+ "w|บกพร่อง": [
+  {
+   "text": "สินค้าชิ้นนี้บกพร่อง",
+   "en": "This product is defective.",
+   "ko": "이 상품은 결함이 있어.",
+   "blank": "บกพร่อง",
+   "src": "made"
+  },
+  {
+   "text": "เขาบกพร่องในหน้าที่",
+   "en": "He was negligent in his duties.",
+   "ko": "그는 자기 직무를 소홀히 했어.",
+   "blank": "บกพร่อง",
+   "src": "made"
   }
  ],
  "w|บทความ": [
@@ -15147,6 +16779,22 @@
    "blank": "บวม"
   }
  ],
+ "w|บ่อ": [
+  {
+   "text": "เขาโยนก้อนหินลงไปในบ่อ",
+   "en": "He threw a stone into the pond.",
+   "ko": "그는 연못에 돌을 던졌어.",
+   "blank": "บ่อ",
+   "src": "tatoeba:8675730/pastelite en:300575/CK"
+  },
+  {
+   "text": "เด็กๆ ตกปลาในบ่อหลังบ้าน",
+   "en": "The kids fish in the pond behind the house.",
+   "ko": "아이들이 집 뒤 연못에서 낚시를 해.",
+   "blank": "บ่อ",
+   "src": "made"
+  }
+ ],
  "w|บอก": [
   {
    "text": "บอกฉันหน่อย",
@@ -15159,6 +16807,22 @@
    "en": "Tell me straight.",
    "ko": "솔직하게 말해.",
    "blank": "บอก"
+  }
+ ],
+ "w|บ่อน้ำ": [
+  {
+   "text": "หมู่บ้านนี้ใช้น้ำจากบ่อน้ำ",
+   "en": "This village uses water from a well.",
+   "ko": "이 마을은 우물물을 써.",
+   "blank": "บ่อน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "มีปลาเล็กๆ ในบ่อน้ำ",
+   "en": "There are little fish in the pond.",
+   "ko": "연못에 작은 물고기가 있어.",
+   "blank": "บ่อน้ำ",
+   "src": "made"
   }
  ],
  "w|บ่อย": [
@@ -15637,6 +17301,22 @@
    "blank": "เบา"
   }
  ],
+ "w|เบาบาง": [
+  {
+   "text": "หมอกเริ่มเบาบางลงแล้ว",
+   "en": "The fog has started to thin out.",
+   "ko": "안개가 옅어지기 시작했어.",
+   "blank": "เบาบาง",
+   "src": "made"
+  },
+  {
+   "text": "ผมของเขาเริ่มเบาบาง",
+   "en": "His hair is starting to thin.",
+   "ko": "그는 머리숱이 줄기 시작했어.",
+   "blank": "เบาบาง",
+   "src": "made"
+  }
+ ],
  "w|เบาหวาน": [
   {
    "text": "ควบคุมเบาหวานด้วยอาหาร",
@@ -15735,6 +17415,22 @@
    "blank": "แบตเตอรี่"
   }
  ],
+ "w|แบน": [
+  {
+   "text": "ยางรถแบนต้องเติมลม",
+   "en": "The tire is flat and needs air.",
+   "ko": "타이어가 납작해서 바람을 넣어야 해.",
+   "blank": "แบน",
+   "src": "made"
+  },
+  {
+   "text": "ขนมปังแผ่นนี้แบนมาก",
+   "en": "This flatbread is very flat.",
+   "ko": "이 빵은 아주 납작해.",
+   "blank": "แบน",
+   "src": "made"
+  }
+ ],
  "w|แบบ": [
   {
    "text": "ชอบแบบนี้นะ",
@@ -15831,6 +17527,22 @@
    "en": "Can I get a receipt?",
    "ko": "영수증 좀 주세요.",
    "blank": "ใบ"
+  }
+ ],
+ "w|ใบ้": [
+  {
+   "text": "เด็กคนนั้นเป็นใบ้แต่ฉลาดมาก",
+   "en": "That child is mute but very smart.",
+   "ko": "그 아이는 말을 못 하지만 아주 똑똑해.",
+   "blank": "ใบ้",
+   "src": "made"
+  },
+  {
+   "text": "ช่วยใบ้หน่อยได้ไหม",
+   "en": "Can you give me a hint?",
+   "ko": "힌트 좀 줄래?",
+   "blank": "ใบ้",
+   "src": "made"
   }
  ],
  "w|ใบขับขี่": [
@@ -15943,6 +17655,22 @@
    "en": "The dog protects our house.",
    "ko": "개가 우리 집을 지켜.",
    "blank": "ปกป้อง"
+  }
+ ],
+ "w|ปฏิทิน": [
+  {
+   "text": "ฉันจดวันนัดไว้ในปฏิทิน",
+   "en": "I wrote the appointment on the calendar.",
+   "ko": "약속 날짜를 달력에 적어 뒀어.",
+   "blank": "ปฏิทิน",
+   "src": "made"
+  },
+  {
+   "text": "ปฏิทินบนผนังเป็นของปีที่แล้ว",
+   "en": "The calendar on the wall is from last year.",
+   "ko": "벽에 걸린 달력은 작년 거야.",
+   "blank": "ปฏิทิน",
+   "src": "made"
   }
  ],
  "w|ปฏิบัติ": [
@@ -16153,6 +17881,22 @@
    "en": "The door was left open.",
    "ko": "문이 열려 있었어.",
    "blank": "ประตู"
+  }
+ ],
+ "w|ประตูรั้ว": [
+  {
+   "text": "อย่าลืมปิดประตูรั้วนะ",
+   "en": "Don't forget to close the gate.",
+   "ko": "대문 닫는 거 잊지 마.",
+   "blank": "ประตูรั้ว",
+   "src": "made"
+  },
+  {
+   "text": "หมารออยู่หน้าประตูรั้ว",
+   "en": "The dog is waiting at the gate.",
+   "ko": "개가 대문 앞에서 기다리고 있어.",
+   "blank": "ประตูรั้ว",
+   "src": "made"
   }
  ],
  "w|ประทับใจ": [
@@ -16449,6 +18193,22 @@
    "blank": "ปล้น"
   }
  ],
+ "w|ปลอกหมอน": [
+  {
+   "text": "ปลอกหมอนสีฟ้าเข้ากับผ้าห่ม",
+   "en": "The blue pillowcase matches the blanket.",
+   "ko": "하늘색 베갯잇이 이불과 어울려.",
+   "blank": "ปลอกหมอน",
+   "src": "made"
+  },
+  {
+   "text": "ช่วยเอาปลอกหมอนไปซักหน่อย",
+   "en": "Please put the pillowcases in the wash.",
+   "ko": "베갯잇 좀 빨래에 넣어 줘.",
+   "blank": "ปลอกหมอน",
+   "src": "made"
+  }
+ ],
  "w|ปลอดภัย": [
   {
    "text": "เดินทางปลอดภัยนะ",
@@ -16561,6 +18321,54 @@
    "blank": "ปลา"
   }
  ],
+ "w|ปลาดาว": [
+  {
+   "text": "เราเจอปลาดาวบนชายหาด",
+   "en": "We found a starfish on the beach.",
+   "ko": "우리는 해변에서 불가사리를 찾았어.",
+   "blank": "ปลาดาว",
+   "src": "made"
+  },
+  {
+   "text": "ปลาดาวมีห้าแขน",
+   "en": "Starfish have five arms.",
+   "ko": "불가사리는 팔이 다섯 개야.",
+   "blank": "ปลาดาว",
+   "src": "made"
+  }
+ ],
+ "w|ปลาทอง": [
+  {
+   "text": "ฉันเลี้ยงปลาทองสองตัว",
+   "en": "I keep two goldfish.",
+   "ko": "나는 금붕어 두 마리를 키워.",
+   "blank": "ปลาทอง",
+   "src": "made"
+  },
+  {
+   "text": "ปลาทองว่ายอยู่ในโหล",
+   "en": "The goldfish is swimming in the jar.",
+   "ko": "금붕어가 어항에서 헤엄치고 있어.",
+   "blank": "ปลาทอง",
+   "src": "made"
+  }
+ ],
+ "w|ปลาย": [
+  {
+   "text": "บ้านเขาอยู่ปลายซอย",
+   "en": "His house is at the end of the alley.",
+   "ko": "그의 집은 골목 끝에 있어.",
+   "blank": "ปลาย",
+   "src": "made"
+  },
+  {
+   "text": "ปลายเดือนนี้ฉันจะย้ายบ้าน",
+   "en": "I'm moving at the end of this month.",
+   "ko": "이번 달 말에 이사해.",
+   "blank": "ปลาย",
+   "src": "made"
+  }
+ ],
  "w|ปลาวาฬ": [
   {
    "text": "ปลาวาฬตัวใหญ่มาก",
@@ -16659,6 +18467,22 @@
    "blank": "ป่วย"
   }
  ],
+ "w|ป่อง": [
+  {
+   "text": "กินมากจนท้องป่อง",
+   "en": "I ate so much my belly bulged.",
+   "ko": "너무 많이 먹어서 배가 불룩해.",
+   "blank": "ป่อง",
+   "src": "made"
+  },
+  {
+   "text": "ปลาปักเป้าทำตัวป่องเมื่อตกใจ",
+   "en": "The pufferfish puffs up when startled.",
+   "ko": "복어는 놀라면 몸을 부풀려.",
+   "blank": "ป่อง",
+   "src": "made"
+  }
+ ],
  "w|ป้องกัน": [
   {
    "text": "ใส่หมวกกันน็อกเพื่อป้องกันศีรษะ",
@@ -16685,6 +18509,22 @@
    "en": "The doctor already checked my lungs.",
    "ko": "의사가 폐를 검사해 줬어.",
    "blank": "ปอด"
+  }
+ ],
+ "w|ปะการัง": [
+  {
+   "text": "ปะการังที่นี่สวยมาก",
+   "en": "The coral here is very beautiful.",
+   "ko": "여기 산호는 아주 아름다워.",
+   "blank": "ปะการัง",
+   "src": "made"
+  },
+  {
+   "text": "อย่าเหยียบปะการัง",
+   "en": "Don't step on the coral.",
+   "ko": "산호를 밟지 마.",
+   "blank": "ปะการัง",
+   "src": "made"
   }
  ],
  "w|ปัจจุบัน": [
@@ -16881,6 +18721,22 @@
    "en": "I moved last year.",
    "ko": "작년에 이사했어.",
    "blank": "ปี"
+  }
+ ],
+ "w|ปีก": [
+  {
+   "text": "นกกระพือปีก",
+   "en": "The bird flapped its wings.",
+   "ko": "새가 날개를 퍼덕였어.",
+   "blank": "ปีก",
+   "src": "tatoeba:8669292/pastelite en:278173/CK"
+  },
+  {
+   "text": "นกตัวนั้นบาดเจ็บที่ปีก",
+   "en": "That bird hurt its wing.",
+   "ko": "그 새는 날개를 다쳤어.",
+   "blank": "ปีก",
+   "src": "made"
   }
  ],
  "w|ปีที่แล้ว": [
@@ -17107,6 +18963,22 @@
    "blank": "เป็นมิตร"
   }
  ],
+ "w|เป็นระเบียบ": [
+  {
+   "text": "ห้องของเขาเป็นระเบียบมาก",
+   "en": "His room is very tidy.",
+   "ko": "그의 방은 아주 정돈돼 있어.",
+   "blank": "เป็นระเบียบ",
+   "src": "made"
+  },
+  {
+   "text": "ช่วยเข้าแถวให้เป็นระเบียบ",
+   "en": "Please line up in order.",
+   "ko": "줄을 질서 있게 서 주세요.",
+   "blank": "เป็นระเบียบ",
+   "src": "made"
+  }
+ ],
  "w|เป็นลม": [
   {
    "text": "อากาศร้อนจนเป็นลม",
@@ -17205,6 +19077,38 @@
    "blank": "เปลี่ยนแปลง"
   }
  ],
+ "w|เปลี่ยว": [
+  {
+   "text": "ถนนเส้นนี้เปลี่ยวตอนกลางคืน",
+   "en": "This road is deserted at night.",
+   "ko": "이 길은 밤에 인적이 드물어.",
+   "blank": "เปลี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "อย่าเดินคนเดียวในที่เปลี่ยว",
+   "en": "Don't walk alone in deserted places.",
+   "ko": "외딴곳에서 혼자 걷지 마.",
+   "blank": "เปลี่ยว",
+   "src": "made"
+  }
+ ],
+ "w|เปลือก": [
+  {
+   "text": "เปลือกไข่แตกง่าย",
+   "en": "The shell of an egg is easily broken.",
+   "ko": "달걀 껍데기는 쉽게 깨져.",
+   "blank": "เปลือก",
+   "src": "tatoeba:10873714/pkdome en:325215/CM"
+  },
+  {
+   "text": "ปอกเปลือกส้มให้หน่อย",
+   "en": "Please peel the orange for me.",
+   "ko": "귤 껍질 좀 까 줘.",
+   "blank": "เปลือก",
+   "src": "made"
+  }
+ ],
  "w|เปอร์เซ็นต์": [
   {
    "text": "เปอร์เซ็นต์ส่วนลดสูงมาก",
@@ -17259,6 +19163,22 @@
    "en": "Open the door for me.",
    "ko": "문 좀 열어 줘.",
    "blank": "เปิด"
+  }
+ ],
+ "w|เปิดเผย": [
+  {
+   "text": "เขาเปิดเผยความจริงทั้งหมด",
+   "en": "He revealed the whole truth.",
+   "ko": "그는 진실을 모두 밝혔어.",
+   "blank": "เปิดเผย",
+   "src": "made"
+  },
+  {
+   "text": "เธอเป็นคนเปิดเผยและจริงใจ",
+   "en": "She is open and sincere.",
+   "ko": "그녀는 솔직하고 진실해.",
+   "blank": "เปิดเผย",
+   "src": "made"
   }
  ],
  "w|เปียก": [
@@ -17387,6 +19307,22 @@
    "blank": "โปรแกรม"
   }
  ],
+ "w|โปร่ง": [
+  {
+   "text": "วันนี้ท้องฟ้าโปร่ง",
+   "en": "The sky is clear today.",
+   "ko": "오늘은 하늘이 맑아.",
+   "blank": "โปร่ง",
+   "src": "made"
+  },
+  {
+   "text": "ห้องนี้โปร่งและเย็นสบาย",
+   "en": "This room is airy and cool.",
+   "ko": "이 방은 탁 트이고 시원해.",
+   "blank": "โปร่ง",
+   "src": "made"
+  }
+ ],
  "w|โปรโมชั่น": [
   {
    "text": "โปรโมชั่นนี้หมดสิ้นเดือนนี้",
@@ -17413,6 +19349,22 @@
    "en": "I'm heading off.",
    "ko": "먼저 갈게.",
    "blank": "ไป"
+  }
+ ],
+ "w|ผงซักฟอก": [
+  {
+   "text": "ใส่ผงซักฟอกในเครื่องซักผ้า",
+   "en": "Put detergent in the washing machine.",
+   "ko": "세탁기에 세제를 넣어.",
+   "blank": "ผงซักฟอก",
+   "src": "made"
+  },
+  {
+   "text": "ผงซักฟอกนี้กลิ่นหอม",
+   "en": "This detergent smells nice.",
+   "ko": "이 세제는 향이 좋아.",
+   "blank": "ผงซักฟอก",
+   "src": "made"
   }
  ],
  "w|ผนัง": [
@@ -17723,6 +19675,22 @@
    "blank": "ผ่าน"
   }
  ],
+ "w|ผ้าปูที่นอน": [
+  {
+   "text": "ฉันเปลี่ยนผ้าปูที่นอนทุกสัปดาห์",
+   "en": "I change the bed sheets every week.",
+   "ko": "나는 매주 침대 시트를 갈아.",
+   "blank": "ผ้าปูที่นอน",
+   "src": "made"
+  },
+  {
+   "text": "ผ้าปูที่นอนผืนนี้นุ่มมาก",
+   "en": "This bed sheet is very soft.",
+   "ko": "이 침대 시트는 아주 부드러워.",
+   "blank": "ผ้าปูที่นอน",
+   "src": "made"
+  }
+ ],
  "w|ผ้าห่ม": [
   {
    "text": "คืนนี้หนาวห่มผ้าห่มหนาๆ",
@@ -17749,6 +19717,22 @@
    "en": "This word is wrong.",
    "ko": "이 단어 틀렸어.",
    "blank": "ผิด"
+  }
+ ],
+ "w|ผิดกฎหมาย": [
+  {
+   "text": "การขับรถเร็วเกินกำหนดผิดกฎหมาย",
+   "en": "Speeding is illegal.",
+   "ko": "과속은 불법이야.",
+   "blank": "ผิดกฎหมาย",
+   "src": "made"
+  },
+  {
+   "text": "เขาถูกจับเพราะทำสิ่งผิดกฎหมาย",
+   "en": "He was arrested for doing something illegal.",
+   "ko": "그는 불법 행위로 잡혔어.",
+   "blank": "ผิดกฎหมาย",
+   "src": "made"
   }
  ],
  "w|ผิดพลาด": [
@@ -18171,6 +20155,22 @@
    "blank": "แผล"
   }
  ],
+ "w|ไผ่": [
+  {
+   "text": "บ้านนี้สร้างด้วยไผ่",
+   "en": "This house is built of bamboo.",
+   "ko": "이 집은 대나무로 지었어.",
+   "blank": "ไผ่",
+   "src": "made"
+  },
+  {
+   "text": "หน่อไม้คือหน่อของไผ่",
+   "en": "Bamboo shoots are the young shoots of bamboo.",
+   "ko": "죽순은 대나무의 어린순이야.",
+   "blank": "ไผ่",
+   "src": "made"
+  }
+ ],
  "w|ฝน": [
   {
    "text": "ฝนตกแรงมาก",
@@ -18199,6 +20199,22 @@
    "blank": "ฝรั่ง"
   }
  ],
+ "w|ฝักบัว": [
+  {
+   "text": "ไม่มีน้ำไหลออกมาจากฝักบัว",
+   "en": "There's no water coming out of the shower.",
+   "ko": "샤워기에서 물이 안 나와.",
+   "blank": "ฝักบัว",
+   "src": "tatoeba:10649497/Somsak en:53047/jakov"
+  },
+  {
+   "text": "ฝักบัวในห้องน้ำน้ำไหลแรงดี",
+   "en": "The shower in the bathroom has good pressure.",
+   "ko": "욕실 샤워기 수압이 세.",
+   "blank": "ฝักบัว",
+   "src": "made"
+  }
+ ],
  "w|ฝัง": [
   {
    "text": "สุนัขชอบฝังกระดูกในสวน",
@@ -18211,6 +20227,22 @@
    "en": "Don't bury problems in your heart.",
    "ko": "문제를 마음속에 묻어 두지 마.",
    "blank": "ฝัง"
+  }
+ ],
+ "w|ฝั่ง": [
+  {
+   "text": "เรือกำลังเข้าฝั่ง",
+   "en": "The boat is coming ashore.",
+   "ko": "배가 해안에 닿고 있어.",
+   "blank": "ฝั่ง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านอาหารอยู่ฝั่งตรงข้ามแม่น้ำ",
+   "en": "The restaurant is on the other side of the river.",
+   "ko": "식당은 강 건너편에 있어.",
+   "blank": "ฝั่ง",
+   "src": "made"
   }
  ],
  "w|ฝัน": [
@@ -18281,6 +20313,22 @@
    "en": "The singer rehearsed the new song all day.",
    "ko": "가수가 하루 종일 새 노래를 연습했어.",
    "blank": "ฝึกซ้อม"
+  }
+ ],
+ "w|ฝุ่น": [
+  {
+   "text": "บนโต๊ะมีฝุ่นเต็มไปหมด",
+   "en": "The table is covered in dust.",
+   "ko": "탁자 위에 먼지가 잔뜩 쌓였어.",
+   "blank": "ฝุ่น",
+   "src": "made"
+  },
+  {
+   "text": "วันนี้ฝุ่นเยอะ ใส่หน้ากากด้วย",
+   "en": "There's a lot of dust today, wear a mask.",
+   "ko": "오늘 미세먼지가 많으니 마스크 써.",
+   "blank": "ฝุ่น",
+   "src": "made"
   }
  ],
  "w|เฝ้า": [
@@ -18647,6 +20695,22 @@
    "blank": "พลาสติก"
   }
  ],
+ "w|พลุกพล่าน": [
+  {
+   "text": "สถานีรถไฟพลุกพล่านตอนเย็น",
+   "en": "The train station is crowded in the evening.",
+   "ko": "저녁에는 기차역이 붐벼.",
+   "blank": "พลุกพล่าน",
+   "src": "made"
+  },
+  {
+   "text": "ถนนสายนี้คนพลุกพล่านทั้งวัน",
+   "en": "This street is busy with people all day.",
+   "ko": "이 거리는 하루 종일 사람으로 붐벼.",
+   "blank": "พลุกพล่าน",
+   "src": "made"
+  }
+ ],
  "w|พวกเขา": [
   {
    "text": "พวกเขากลับแล้ว",
@@ -18899,6 +20963,22 @@
    "blank": "พัดลม"
   }
  ],
+ "w|พัดลมเพดาน": [
+  {
+   "text": "เปิดพัดลมเพดานหน่อย ร้อนมาก",
+   "en": "Turn on the ceiling fan, it's very hot.",
+   "ko": "천장 선풍기 좀 켜, 너무 더워.",
+   "blank": "พัดลมเพดาน",
+   "src": "made"
+  },
+  {
+   "text": "พัดลมเพดานหมุนช้าๆ",
+   "en": "The ceiling fan turns slowly.",
+   "ko": "천장 선풍기가 천천히 돌아.",
+   "blank": "พัดลมเพดาน",
+   "src": "made"
+  }
+ ],
  "w|พัน": [
   {
    "text": "ค่าตั๋วพันบาท",
@@ -18953,6 +21033,22 @@
    "en": "Don't go out during a storm.",
    "ko": "폭풍이 올 때 나가지 마.",
    "blank": "พายุ"
+  }
+ ],
+ "w|พิการ": [
+  {
+   "text": "เขาพิการแต่ก็ทำงานได้ดี",
+   "en": "He is disabled but works well.",
+   "ko": "그는 장애가 있지만 일을 잘해.",
+   "blank": "พิการ",
+   "src": "made"
+  },
+  {
+   "text": "ที่นี่มีทางลาดสำหรับคนพิการ",
+   "en": "There's a ramp here for disabled people.",
+   "ko": "여기에 장애인용 경사로가 있어.",
+   "blank": "พิการ",
+   "src": "made"
   }
  ],
  "w|พิซซ่า": [
@@ -19501,6 +21597,22 @@
    "blank": "ฟ้าผ่า"
   }
  ],
+ "w|ฟาร์ม": [
+  {
+   "text": "ทอมมีฟาร์มอยู่ไม่ไกลจากบอสตัน",
+   "en": "Tom had a farm not too far from Boston.",
+   "ko": "톰은 보스턴에서 멀지 않은 곳에 농장이 있었어.",
+   "blank": "ฟาร์ม",
+   "src": "tatoeba:2874210/ojiisan en:2640974/CK"
+  },
+  {
+   "text": "ฟาร์มนี้เลี้ยงวัวนม",
+   "en": "This farm raises dairy cows.",
+   "ko": "이 농장은 젖소를 키워.",
+   "blank": "ฟาร์ม",
+   "src": "made"
+  }
+ ],
  "w|ฟ้าร้อง": [
   {
    "text": "ได้ยินฟ้าร้องดังมาก",
@@ -19513,6 +21625,22 @@
    "en": "The dog is afraid of thunder.",
    "ko": "개가 천둥을 무서워해.",
    "blank": "ฟ้าร้อง"
+  }
+ ],
+ "w|ฟ้าแลบ": [
+  {
+   "text": "ฟ้าแลบแล้วตามด้วยฟ้าร้อง",
+   "en": "Lightning flashed, followed by thunder.",
+   "ko": "번개가 번쩍이더니 천둥이 쳤어.",
+   "blank": "ฟ้าแลบ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กกลัวฟ้าแลบ",
+   "en": "The child is afraid of lightning.",
+   "ko": "아이는 번개를 무서워해.",
+   "blank": "ฟ้าแลบ",
+   "src": "made"
   }
  ],
  "w|ฟิสิกส์": [
@@ -19571,6 +21699,38 @@
    "blank": "ฟุ่มเฟือย"
   }
  ],
+ "w|ฟู": [
+  {
+   "text": "เค้กฟูขึ้นในเตาอบ",
+   "en": "The cake rose in the oven.",
+   "ko": "케이크가 오븐에서 부풀었어.",
+   "blank": "ฟู",
+   "src": "made"
+  },
+  {
+   "text": "ผมของเธอฟูหลังจากสระ",
+   "en": "Her hair is fluffy after washing.",
+   "ko": "머리를 감았더니 그녀 머리가 부스스해.",
+   "blank": "ฟู",
+   "src": "made"
+  }
+ ],
+ "w|เฟอร์นิเจอร์": [
+  {
+   "text": "มีเฟอร์นิเจอร์มากเกินไปในบ้าน",
+   "en": "There is too much furniture in the house.",
+   "ko": "집에 가구가 너무 많아.",
+   "blank": "เฟอร์นิเจอร์",
+   "src": "tatoeba:10189705/Somsak en:49409/CK"
+  },
+  {
+   "text": "เราซื้อเฟอร์นิเจอร์ใหม่สำหรับห้องนั่งเล่น",
+   "en": "We bought new furniture for the living room.",
+   "ko": "거실에 놓을 새 가구를 샀어.",
+   "blank": "เฟอร์นิเจอร์",
+   "src": "made"
+  }
+ ],
  "w|แฟน": [
   {
    "text": "แฟนรออยู่",
@@ -19627,6 +21787,22 @@
    "blank": "ไฟ"
   }
  ],
+ "w|ไฟฉาย": [
+  {
+   "text": "ไฟดับ เอาไฟฉายมาหน่อย",
+   "en": "The power's out, bring a flashlight.",
+   "ko": "정전됐어, 손전등 좀 가져와.",
+   "blank": "ไฟฉาย",
+   "src": "made"
+  },
+  {
+   "text": "เก็บไฟฉายไว้ในรถเผื่อฉุกเฉิน",
+   "en": "Keep a flashlight in the car for emergencies.",
+   "ko": "비상시를 대비해 차에 손전등을 둬.",
+   "blank": "ไฟฉาย",
+   "src": "made"
+  }
+ ],
  "w|ไฟแดง": [
   {
    "text": "หยุดรถเมื่อเจอไฟแดง",
@@ -19639,6 +21815,22 @@
    "en": "I was stuck at a long red light this morning.",
    "ko": "오늘 아침 빨간불에 오래 걸렸어.",
    "blank": "ไฟแดง"
+  }
+ ],
+ "w|ไฟป่า": [
+  {
+   "text": "ไฟป่าลุกลามอย่างรวดเร็ว",
+   "en": "The forest fire spread quickly.",
+   "ko": "산불이 빠르게 번졌어.",
+   "blank": "ไฟป่า",
+   "src": "made"
+  },
+  {
+   "text": "หน้าแล้งมักเกิดไฟป่า",
+   "en": "Forest fires often happen in the dry season.",
+   "ko": "건기에는 산불이 자주 나.",
+   "blank": "ไฟป่า",
+   "src": "made"
   }
  ],
  "w|ไฟล์": [
@@ -19695,6 +21887,22 @@
    "en": "Natural disasters are happening more often.",
    "ko": "자연재해가 더 자주 와.",
    "blank": "ภัย"
+  }
+ ],
+ "w|ภัยแล้ง": [
+  {
+   "text": "ภัยแล้งทำให้ข้าวเสียหาย",
+   "en": "The drought damaged the rice.",
+   "ko": "가뭄으로 벼가 피해를 입었어.",
+   "blank": "ภัยแล้ง",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้หลายจังหวัดเจอภัยแล้ง",
+   "en": "Many provinces faced drought this year.",
+   "ko": "올해는 여러 지방이 가뭄을 겪었어.",
+   "blank": "ภัยแล้ง",
+   "src": "made"
   }
  ],
  "w|ภาค": [
@@ -19823,6 +22031,22 @@
    "blank": "ภาวนา"
   }
  ],
+ "w|ภาวะโลกร้อน": [
+  {
+   "text": "ภาวะโลกร้อนทำให้น้ำแข็งละลาย",
+   "en": "Global warming is melting the ice.",
+   "ko": "지구 온난화로 얼음이 녹고 있어.",
+   "blank": "ภาวะโลกร้อน",
+   "src": "made"
+  },
+  {
+   "text": "เราช่วยลดภาวะโลกร้อนได้",
+   "en": "We can help reduce global warming.",
+   "ko": "우리는 지구 온난화를 줄이는 데 도움을 줄 수 있어.",
+   "blank": "ภาวะโลกร้อน",
+   "src": "made"
+  }
+ ],
  "w|ภาษา": [
   {
    "text": "อยากเรียนภาษาไทย",
@@ -19949,6 +22173,22 @@
    "blank": "ภูเขา"
   }
  ],
+ "w|ภูเขาไฟ": [
+  {
+   "text": "ภูเขาไฟลูกนี้ยังไม่ดับ",
+   "en": "This volcano is still active.",
+   "ko": "이 화산은 아직 활동 중이야.",
+   "blank": "ภูเขาไฟ",
+   "src": "made"
+  },
+  {
+   "text": "ญี่ปุ่นมีภูเขาไฟหลายลูก",
+   "en": "Japan has many volcanoes.",
+   "ko": "일본에는 화산이 많아.",
+   "blank": "ภูเขาไฟ",
+   "src": "made"
+  }
+ ],
  "w|ภูมิใจ": [
   {
    "text": "แม่ภูมิใจในตัวฉัน",
@@ -20047,6 +22287,22 @@
    "blank": "มนุษย์"
   }
  ],
+ "w|มลพิษ": [
+  {
+   "text": "แม่น้ำนี้ไม่มีมลพิษ",
+   "en": "This river is not polluted.",
+   "ko": "이 강은 오염되지 않았어.",
+   "blank": "มลพิษ",
+   "src": "tatoeba:8669231/pastelite en:58127/CK"
+  },
+  {
+   "text": "มลพิษทางอากาศเป็นปัญหาใหญ่",
+   "en": "Air pollution is a big problem.",
+   "ko": "대기 오염은 큰 문제야.",
+   "blank": "มลพิษ",
+   "src": "made"
+  }
+ ],
  "w|ม่วง": [
   {
    "text": "องุ่นสีม่วงหวานดี",
@@ -20089,6 +22345,22 @@
    "blank": "มวย"
   }
  ],
+ "w|มหัศจรรย์": [
+  {
+   "text": "ธรรมชาติเป็นสิ่งมหัศจรรย์",
+   "en": "Nature is a marvel.",
+   "ko": "자연은 경이로워.",
+   "blank": "มหัศจรรย์",
+   "src": "made"
+  },
+  {
+   "text": "มันเป็นเรื่องมหัศจรรย์ที่เขารอดชีวิต",
+   "en": "It's a miracle that he survived.",
+   "ko": "그가 살아남은 건 기적이야.",
+   "blank": "มหัศจรรย์",
+   "src": "made"
+  }
+ ],
  "w|มหาวิทยาลัย": [
   {
    "text": "สอบเข้ามหาวิทยาลัยปีหน้า",
@@ -20101,6 +22373,54 @@
    "en": "This university is in the city.",
    "ko": "이 대학교는 도심에 있어.",
    "blank": "มหาวิทยาลัย"
+  }
+ ],
+ "w|มหาศาล": [
+  {
+   "text": "เขาได้เงินมหาศาลจากธุรกิจนี้",
+   "en": "He made an enormous amount of money from this business.",
+   "ko": "그는 이 사업으로 엄청난 돈을 벌었어.",
+   "blank": "มหาศาล",
+   "src": "made"
+  },
+  {
+   "text": "น้ำท่วมสร้างความเสียหายมหาศาล",
+   "en": "The flood caused enormous damage.",
+   "ko": "홍수가 막대한 피해를 냈어.",
+   "blank": "มหาศาล",
+   "src": "made"
+  }
+ ],
+ "w|มหาสมุทร": [
+  {
+   "text": "เราชอบว่ายน้ำในมหาสมุทร",
+   "en": "We like swimming in the ocean.",
+   "ko": "우리는 바다에서 수영하는 걸 좋아해.",
+   "blank": "มหาสมุทร",
+   "src": "tatoeba:8673128/pastelite en:262928/CK"
+  },
+  {
+   "text": "ฉันกำลังว่ายในมหาสมุทร",
+   "en": "I'm swimming in the ocean.",
+   "ko": "나는 바다에서 수영하고 있어.",
+   "blank": "มหาสมุทร",
+   "src": "tatoeba:2905457 en:2708792"
+  }
+ ],
+ "w|มหึมา": [
+  {
+   "text": "เรือลำนี้มีขนาดมหึมา",
+   "en": "This ship is gigantic.",
+   "ko": "이 배는 어마어마하게 커.",
+   "blank": "มหึมา",
+   "src": "made"
+  },
+  {
+   "text": "มีก้อนหินมหึมาขวางทางอยู่",
+   "en": "A huge boulder is blocking the way.",
+   "ko": "거대한 바위가 길을 막고 있어.",
+   "blank": "มหึมา",
+   "src": "made"
   }
  ],
  "w|มอง": [
@@ -20243,6 +22563,22 @@
    "blank": "มะม่วง"
   }
  ],
+ "w|มะรืน": [
+  {
+   "text": "มะรืนนี้เราจะไปเชียงใหม่",
+   "en": "We're going to Chiang Mai the day after tomorrow.",
+   "ko": "모레 우리는 치앙마이에 가.",
+   "blank": "มะรืน",
+   "src": "made"
+  },
+  {
+   "text": "ร้านปิดถึงวันมะรืน",
+   "en": "The shop is closed until the day after tomorrow.",
+   "ko": "가게는 모레까지 문을 닫아.",
+   "blank": "มะรืน",
+   "src": "made"
+  }
+ ],
  "w|มะเร็ง": [
   {
    "text": "ตรวจหามะเร็งตั้งแต่เนิ่นๆ",
@@ -20283,6 +22619,22 @@
    "en": "This one is right, maybe.",
    "ko": "이게 맞을지도 몰라.",
    "blank": "มั้ง"
+  }
+ ],
+ "w|มังกร": [
+  {
+   "text": "ในนิทานมังกรพ่นไฟได้",
+   "en": "In the tale the dragon can breathe fire.",
+   "ko": "동화 속 용은 불을 뿜을 수 있어.",
+   "blank": "มังกร",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้เป็นปีมังกร",
+   "en": "This year is the year of the dragon.",
+   "ko": "올해는 용의 해야.",
+   "blank": "มังกร",
+   "src": "made"
   }
  ],
  "w|มังคุด": [
@@ -20467,6 +22819,22 @@
    "blank": "ม่าน"
   }
  ],
+ "w|ม้าลาย": [
+  {
+   "text": "ม้าลายมีลายขาวดำ",
+   "en": "Zebras have black and white stripes.",
+   "ko": "얼룩말은 검고 흰 줄무늬가 있어.",
+   "blank": "ม้าลาย",
+   "src": "made"
+  },
+  {
+   "text": "ม้าลายวิ่งเป็นฝูง",
+   "en": "Zebras run in herds.",
+   "ko": "얼룩말은 떼 지어 달려.",
+   "blank": "ม้าลาย",
+   "src": "made"
+  }
+ ],
  "w|มิฉะนั้น": [
   {
    "text": "ปิดไฟมิฉะนั้นแบตจะหมด",
@@ -20535,6 +22903,22 @@
    "en": "Free time is valuable; don't waste it.",
    "ko": "여가 시간은 소중하니 헛되이 쓰지 마.",
    "blank": "มีค่า"
+  }
+ ],
+ "w|มีชีวิต": [
+  {
+   "text": "ปลาตัวนี้ยังมีชีวิตอยู่",
+   "en": "This fish is still alive.",
+   "ko": "이 물고기는 아직 살아 있어.",
+   "blank": "มีชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "ทุกสิ่งที่มีชีวิตต้องการน้ำ",
+   "en": "Every living thing needs water.",
+   "ko": "살아 있는 모든 것은 물이 필요해.",
+   "blank": "มีชีวิต",
+   "src": "made"
   }
  ],
  "w|มีชีวิตชีวา": [
@@ -20663,6 +23047,22 @@
    "blank": "มือสอง"
   }
  ],
+ "w|มุ้ง": [
+  {
+   "text": "นอนในมุ้งจะได้ไม่โดนยุงกัด",
+   "en": "Sleep under a mosquito net so you won't get bitten.",
+   "ko": "모기장 안에서 자면 모기에 안 물려.",
+   "blank": "มุ้ง",
+   "src": "made"
+  },
+  {
+   "text": "คุณยายกางมุ้งให้หลาน",
+   "en": "Grandma put up the mosquito net for her grandchild.",
+   "ko": "할머니가 손주에게 모기장을 쳐 주셨어.",
+   "blank": "มุ้ง",
+   "src": "made"
+  }
+ ],
  "w|มุมมอง": [
   {
    "text": "ลองดูจากมุมมองอื่น",
@@ -20747,6 +23147,22 @@
    "blank": "เมษายน"
   }
  ],
+ "w|เมา": [
+  {
+   "text": "ตำรวจกุมตัวเขาเพราะเมาแล้วขับ",
+   "en": "The policeman arrested him for drunken driving.",
+   "ko": "경찰이 음주 운전으로 그를 체포했어.",
+   "blank": "เมา",
+   "src": "tatoeba:8669308/pastelite en:48464/CK"
+  },
+  {
+   "text": "คุณเมามาก",
+   "en": "You got very drunk.",
+   "ko": "너 많이 취했어.",
+   "blank": "เมา",
+   "src": "tatoeba:8675908/pastelite en:3331087/CK"
+  }
+ ],
  "w|เมื่อ": [
   {
    "text": "เมื่อถึงแล้วโทรมา",
@@ -20773,6 +23189,22 @@
    "en": "He used to be kinder than this.",
    "ko": "예전에는 그 사람이 더 착했어.",
    "blank": "เมื่อก่อน"
+  }
+ ],
+ "w|เมื่อคืน": [
+  {
+   "text": "เมื่อคืนฉันนอนดึกมาก",
+   "en": "I went to bed very late last night.",
+   "ko": "어젯밤에 아주 늦게 잤어.",
+   "blank": "เมื่อคืน",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อคืนฝนตกหนัก",
+   "en": "It rained heavily last night.",
+   "ko": "어젯밤에 비가 많이 왔어.",
+   "blank": "เมื่อคืน",
+   "src": "made"
   }
  ],
  "w|เมือง": [
@@ -20815,6 +23247,22 @@
    "en": "I ran into him yesterday.",
    "ko": "어제 그 사람을 만났어.",
    "blank": "เมื่อวาน"
+  }
+ ],
+ "w|เมื่อวานซืน": [
+  {
+   "text": "เมื่อวานซืนฉันเจอเพื่อนเก่า",
+   "en": "The day before yesterday I ran into an old friend.",
+   "ko": "그저께 옛 친구를 만났어.",
+   "blank": "เมื่อวานซืน",
+   "src": "made"
+  },
+  {
+   "text": "พัสดุมาถึงตั้งแต่เมื่อวานซืน",
+   "en": "The package arrived the day before yesterday.",
+   "ko": "소포는 그저께 도착했어.",
+   "blank": "เมื่อวานซืน",
+   "src": "made"
   }
  ],
  "w|เมื่อไหร่": [
@@ -20871,6 +23319,22 @@
    "en": "Ask the vendor how much it costs.",
    "ko": "상인에게 얼마인지 물어봐.",
    "blank": "แม่ค้า"
+  }
+ ],
+ "w|แมงกะพรุน": [
+  {
+   "text": "ระวังแมงกะพรุนในทะเล",
+   "en": "Watch out for jellyfish in the sea.",
+   "ko": "바다에서 해파리 조심해.",
+   "blank": "แมงกะพรุน",
+   "src": "made"
+  },
+  {
+   "text": "ฉันโดนแมงกะพรุนต่อย",
+   "en": "I got stung by a jellyfish.",
+   "ko": "해파리에 쏘였어.",
+   "blank": "แมงกะพรุน",
+   "src": "made"
   }
  ],
  "w|แมงมุม": [
@@ -20955,6 +23419,22 @@
    "en": "Shoo the fly out of the room.",
    "ko": "파리를 방에서 쫓아내.",
    "blank": "แมลงวัน"
+  }
+ ],
+ "w|แมลงสาบ": [
+  {
+   "text": "มีแมลงสาบในครัว",
+   "en": "There's a cockroach in the kitchen.",
+   "ko": "부엌에 바퀴벌레가 있어.",
+   "blank": "แมลงสาบ",
+   "src": "made"
+  },
+  {
+   "text": "เธอกลัวแมลงสาบมาก",
+   "en": "She's very afraid of cockroaches.",
+   "ko": "그녀는 바퀴벌레를 무척 무서워해.",
+   "blank": "แมลงสาบ",
+   "src": "made"
   }
  ],
  "w|แมว": [
@@ -21055,6 +23535,22 @@
    "blank": "ไม่กี่"
   }
  ],
+ "w|ไม้แขวนเสื้อ": [
+  {
+   "text": "ขอไม้แขวนเสื้อเพิ่มอีกสองอัน",
+   "en": "I'd like two more hangers.",
+   "ko": "옷걸이 두 개만 더 주세요.",
+   "blank": "ไม้แขวนเสื้อ",
+   "src": "made"
+  },
+  {
+   "text": "ไม้แขวนเสื้อหักแล้ว",
+   "en": "The hanger is broken.",
+   "ko": "옷걸이가 부러졌어.",
+   "blank": "ไม้แขวนเสื้อ",
+   "src": "made"
+  }
+ ],
  "w|ไม่ค่อย": [
   {
    "text": "เขาไม่ค่อยพูดในที่ประชุม",
@@ -21095,6 +23591,22 @@
    "en": "Put on a coat, otherwise you will be cold.",
    "ko": "코트 입어. 안 그러면 추워.",
    "blank": "ไม่งั้น"
+  }
+ ],
+ "w|ไม้ถูพื้น": [
+  {
+   "text": "เอาไม้ถูพื้นมาเช็ดน้ำที่หก",
+   "en": "Bring the mop and wipe up the spilled water.",
+   "ko": "대걸레 가져와서 흘린 물 닦아.",
+   "blank": "ไม้ถูพื้น",
+   "src": "made"
+  },
+  {
+   "text": "ไม้ถูพื้นอยู่ในห้องน้ำ",
+   "en": "The mop is in the bathroom.",
+   "ko": "대걸레는 화장실에 있어.",
+   "blank": "ไม้ถูพื้น",
+   "src": "made"
   }
  ],
  "w|ไม่นาน": [
@@ -21151,6 +23663,22 @@
    "en": "No one is exempt.",
    "ko": "예외는 없어.",
    "blank": "ยกเว้น"
+  }
+ ],
+ "w|ยอด": [
+  {
+   "text": "เขาเป็นนักฟุตบอลฝีมือยอด",
+   "en": "He is a top football player.",
+   "ko": "그는 최고의 축구 선수야.",
+   "blank": "ยอด",
+   "src": "made"
+  },
+  {
+   "text": "ยอดขายเดือนนี้สูงมาก",
+   "en": "Sales this month are very high.",
+   "ko": "이번 달 매출이 아주 높아.",
+   "blank": "ยอด",
+   "src": "made"
   }
  ],
  "w|ยอดขาย": [
@@ -21249,6 +23777,22 @@
    "en": "He still won't admit fault.",
    "ko": "그는 아직 잘못을 인정 안 해.",
    "blank": "ยอมรับ"
+  }
+ ],
+ "w|ยักษ์": [
+  {
+   "text": "ในสวนสัตว์มีเต่ายักษ์",
+   "en": "There's a giant tortoise at the zoo.",
+   "ko": "동물원에 거대한 거북이가 있어.",
+   "blank": "ยักษ์",
+   "src": "made"
+  },
+  {
+   "text": "ร้านนี้ขายพิซซ่าถาดยักษ์",
+   "en": "This shop sells giant pizzas.",
+   "ko": "이 가게는 대형 피자를 팔아.",
+   "blank": "ยักษ์",
+   "src": "made"
   }
  ],
  "w|ยัง": [
@@ -21405,6 +23949,22 @@
    "blank": "ยาว"
   }
  ],
+ "w|ยาวนาน": [
+  {
+   "text": "สิบปีเป็นเวลาที่ยาวนานสำหรับการรอคอย",
+   "en": "Ten years is a long time to wait.",
+   "ko": "십 년은 기다리기엔 긴 시간이야.",
+   "blank": "ยาวนาน",
+   "src": "tatoeba:8717325/pastelite en:1542/blay_paul"
+  },
+  {
+   "text": "มันเป็นสัปดาห์ที่ยาวนาน",
+   "en": "It's been a long week.",
+   "ko": "긴 한 주였어.",
+   "blank": "ยาวนาน",
+   "src": "tatoeba:8720135/pastelite en:3006681/CK"
+  }
+ ],
  "w|ยาสีฟัน": [
   {
    "text": "ยาสีฟันหลอดนี้ใกล้หมดแล้ว",
@@ -21529,6 +24089,22 @@
    "en": "You have a lovely smile.",
    "ko": "너 웃는 게 예뻐.",
    "blank": "ยิ้ม"
+  }
+ ],
+ "w|ยีราฟ": [
+  {
+   "text": "ยีราฟกินใบไม้บนต้นไม้สูง",
+   "en": "Giraffes eat leaves from tall trees.",
+   "ko": "기린은 높은 나무의 잎을 먹어.",
+   "blank": "ยีราฟ",
+   "src": "made"
+  },
+  {
+   "text": "ยีราฟมีคอยาวมาก",
+   "en": "Giraffes have very long necks.",
+   "ko": "기린은 목이 아주 길어.",
+   "blank": "ยีราฟ",
+   "src": "made"
   }
  ],
  "w|ยี่สิบ": [
@@ -21755,6 +24331,22 @@
    "blank": "เยี่ยมเยียน"
   }
  ],
+ "w|เยือกเย็น": [
+  {
+   "text": "เขาเป็นคนเยือกเย็น",
+   "en": "He is a calm person.",
+   "ko": "그는 침착한 사람이야.",
+   "blank": "เยือกเย็น",
+   "src": "made"
+  },
+  {
+   "text": "อากาศในถ้ำเยือกเย็น",
+   "en": "The air in the cave is chilly.",
+   "ko": "동굴 안 공기가 서늘해.",
+   "blank": "เยือกเย็น",
+   "src": "made"
+  }
+ ],
  "w|แย่": [
   {
    "text": "อากาศวันนี้แย่",
@@ -21935,6 +24527,22 @@
    "en": "This umbrella blocks the sun well.",
    "ko": "이 우산은 햇빛을 잘 막아.",
    "blank": "ร่ม"
+  }
+ ],
+ "w|รวดเร็ว": [
+  {
+   "text": "ไวรัสกำลังแพร่กระจายอย่างรวดเร็ว",
+   "en": "The virus is spreading rapidly.",
+   "ko": "바이러스가 빠르게 퍼지고 있어.",
+   "blank": "รวดเร็ว",
+   "src": "tatoeba:8671286/pastelite en:8611506/Hybrid"
+  },
+  {
+   "text": "คุณมาถึงที่นี่อย่างรวดเร็ว",
+   "en": "You got here fast.",
+   "ko": "여기 빨리 왔네.",
+   "blank": "รวดเร็ว",
+   "src": "tatoeba:8720363/pastelite en:3331081/CK"
   }
  ],
  "w|รวบรวม": [
@@ -22343,6 +24951,22 @@
    "blank": "ระยะทาง"
   }
  ],
+ "w|ระยะเวลา": [
+  {
+   "text": "โครงการนี้ใช้ระยะเวลาสามเดือน",
+   "en": "This project takes three months.",
+   "ko": "이 프로젝트는 석 달이 걸려.",
+   "blank": "ระยะเวลา",
+   "src": "made"
+  },
+  {
+   "text": "ในระยะเวลาสั้นๆ เขาพูดไทยเก่งขึ้นมาก",
+   "en": "In a short time his Thai got much better.",
+   "ko": "짧은 기간에 그의 태국어가 많이 늘었어.",
+   "blank": "ระยะเวลา",
+   "src": "made"
+  }
+ ],
  "w|ระวัง": [
   {
    "text": "ระวังรถด้วยนะ",
@@ -22411,6 +25035,22 @@
    "en": "Treatment will take several months.",
    "ko": "몇 달 동안 치료해야 해.",
    "blank": "รักษา"
+  }
+ ],
+ "w|รัง": [
+  {
+   "text": "นกทำรังบนต้นไม้",
+   "en": "The bird built a nest in the tree.",
+   "ko": "새가 나무에 둥지를 틀었어.",
+   "blank": "รัง",
+   "src": "made"
+  },
+  {
+   "text": "มีรังผึ้งอยู่ใต้หลังคา",
+   "en": "There's a beehive under the roof.",
+   "ko": "지붕 밑에 벌집이 있어.",
+   "blank": "รัง",
+   "src": "made"
   }
  ],
  "w|รังแก": [
@@ -22749,6 +25389,22 @@
    "blank": "ราว"
   }
  ],
+ "w|ราวตากผ้า": [
+  {
+   "text": "เอาเสื้อไปตากที่ราวตากผ้า",
+   "en": "Hang the shirts on the clothesline.",
+   "ko": "빨랫줄에 옷을 널어.",
+   "blank": "ราวตากผ้า",
+   "src": "made"
+  },
+  {
+   "text": "ราวตากผ้าอยู่หลังบ้าน",
+   "en": "The clothesline is behind the house.",
+   "ko": "빨랫줄은 집 뒤에 있어.",
+   "blank": "ราวตากผ้า",
+   "src": "made"
+  }
+ ],
  "w|รำคาญ": [
   {
    "text": "เสียงดังทำให้รำคาญ",
@@ -22803,6 +25459,22 @@
    "en": "You don't have to rush that much.",
    "ko": "그렇게까지 서두를 필요 없어.",
    "blank": "รีบ"
+  }
+ ],
+ "w|รุ้ง": [
+  {
+   "text": "หลังฝนตกมีรุ้งบนฟ้า",
+   "en": "After the rain there's a rainbow in the sky.",
+   "ko": "비가 그친 뒤 하늘에 무지개가 떴어.",
+   "blank": "รุ้ง",
+   "src": "made"
+  },
+  {
+   "text": "รุ้งมีเจ็ดสี",
+   "en": "A rainbow has seven colors.",
+   "ko": "무지개는 일곱 빛깔이야.",
+   "blank": "รุ้ง",
+   "src": "made"
   }
  ],
  "w|รุ่งเช้า": [
@@ -23029,6 +25701,22 @@
    "blank": "เรียบง่าย"
   }
  ],
+ "w|เรียบเฉย": [
+  {
+   "text": "หน้าของเขาเรียบเฉยไม่แสดงอารมณ์",
+   "en": "His face was blank and showed no emotion.",
+   "ko": "그의 얼굴은 무표정했어.",
+   "blank": "เรียบเฉย",
+   "src": "made"
+  },
+  {
+   "text": "เธอตอบด้วยน้ำเสียงเรียบเฉย",
+   "en": "She answered in a flat voice.",
+   "ko": "그녀는 덤덤한 목소리로 대답했어.",
+   "blank": "เรียบเฉย",
+   "src": "made"
+  }
+ ],
  "w|เรียบร้อย": [
   {
    "text": "ชุดนักเรียนเรียบร้อยดี",
@@ -23113,6 +25801,22 @@
    "blank": "แรก"
   }
  ],
+ "w|แรด": [
+  {
+   "text": "แรดมีนอบนจมูก",
+   "en": "Rhinos have a horn on their nose.",
+   "ko": "코뿔소는 코에 뿔이 있어.",
+   "blank": "แรด",
+   "src": "made"
+  },
+  {
+   "text": "แรดเป็นสัตว์ใกล้สูญพันธุ์",
+   "en": "The rhino is an endangered animal.",
+   "ko": "코뿔소는 멸종 위기 동물이야.",
+   "blank": "แรด",
+   "src": "made"
+  }
+ ],
  "w|โรค": [
   {
    "text": "ป้องกันโรคด้วยการล้างมือ",
@@ -23155,6 +25859,22 @@
    "blank": "โรงพยาบาล"
   }
  ],
+ "w|โรงรถ": [
+  {
+   "text": "โรงรถอยู่ด้านข้างของบ้าน",
+   "en": "The garage is on the side of the house.",
+   "ko": "차고는 집 옆에 있어.",
+   "blank": "โรงรถ",
+   "src": "tatoeba:10064310/tatoebashrek en:7960141/AlanF_US"
+  },
+  {
+   "text": "ทอมเจอตู้เซฟเก่าในโรงรถ",
+   "en": "Tom found an old safe in his garage.",
+   "ko": "톰은 차고에서 오래된 금고를 찾았어.",
+   "blank": "โรงรถ",
+   "src": "tatoeba:4284541/Spanger en:4278929/Hybrid"
+  }
+ ],
  "w|โรงเรียน": [
   {
    "text": "ลูกไปโรงเรียนแล้ว",
@@ -23195,6 +25915,22 @@
    "en": "The cinema near home has soft seats.",
    "ko": "집 근처 영화관은 좌석이 부드러워.",
    "blank": "โรงหนัง"
+  }
+ ],
+ "w|ไร่": [
+  {
+   "text": "ครอบครัวเขามีไร่อ้อย",
+   "en": "His family has a sugarcane farm.",
+   "ko": "그의 가족은 사탕수수밭이 있어.",
+   "blank": "ไร่",
+   "src": "made"
+  },
+  {
+   "text": "เราไปเที่ยวไร่สตรอว์เบอร์รี",
+   "en": "We visited a strawberry farm.",
+   "ko": "우리는 딸기 농장에 놀러 갔어.",
+   "blank": "ไร่",
+   "src": "made"
   }
  ],
  "w|ไร้ค่า": [
@@ -23589,6 +26325,22 @@
    "blank": "ลักษณะ"
   }
  ],
+ "w|ลับ": [
+  {
+   "text": "นี่เป็นเรื่องลับ อย่าบอกใคร",
+   "en": "This is a secret matter, don't tell anyone.",
+   "ko": "이건 비밀이니 아무한테도 말하지 마.",
+   "blank": "ลับ",
+   "src": "made"
+  },
+  {
+   "text": "ประตูลับอยู่หลังตู้หนังสือ",
+   "en": "The secret door is behind the bookcase.",
+   "ko": "비밀 문은 책장 뒤에 있어.",
+   "blank": "ลับ",
+   "src": "made"
+  }
+ ],
  "w|ลา": [
   {
    "text": "ขอลาก่อนนะ",
@@ -23657,6 +26409,22 @@
    "en": "He was careless so he had to wash the dishes again.",
    "ko": "그가 대충해서 설거지를 다시 해야 했어.",
    "blank": "ล้างจาน"
+  }
+ ],
+ "w|ล่าช้า": [
+  {
+   "text": "รถไฟล่าช้าเพราะหิมะ",
+   "en": "The train was delayed by snow.",
+   "ko": "눈 때문에 기차가 늦어졌어.",
+   "blank": "ล่าช้า",
+   "src": "tatoeba:10289068/Somsak en:326242/CK"
+  },
+  {
+   "text": "ขอโทษที่ตอบล่าช้า",
+   "en": "Sorry for the late reply.",
+   "ko": "답이 늦어서 미안해.",
+   "blank": "ล่าช้า",
+   "src": "made"
   }
  ],
  "w|ล้าน": [
@@ -23741,6 +26509,22 @@
    "en": "Friendship is more precious than any object.",
    "ko": "우정이 어떤 물건보다 더 소중해.",
    "blank": "ล้ำค่า"
+  }
+ ],
+ "w|ลำธาร": [
+  {
+   "text": "น้ำในลำธารใสมาก",
+   "en": "The water in the stream is very clear.",
+   "ko": "시냇물이 아주 맑아.",
+   "blank": "ลำธาร",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ จับปลาในลำธาร",
+   "en": "The kids caught fish in the stream.",
+   "ko": "아이들이 시내에서 물고기를 잡았어.",
+   "blank": "ลำธาร",
+   "src": "made"
   }
  ],
  "w|ลำไย": [
@@ -23841,6 +26625,22 @@
    "blank": "ลึก"
   }
  ],
+ "w|ลื่น": [
+  {
+   "text": "พื้นเปียกระวังลื่นนะ",
+   "en": "The floor is wet, careful not to slip.",
+   "ko": "바닥이 젖었으니 미끄러지지 않게 조심해.",
+   "blank": "ลื่น",
+   "src": "made"
+  },
+  {
+   "text": "ถนนลื่นหลังฝนตก",
+   "en": "The road is slippery after the rain.",
+   "ko": "비 온 뒤라 길이 미끄러워.",
+   "blank": "ลื่น",
+   "src": "made"
+  }
+ ],
  "w|ลืม": [
   {
    "text": "ลืมกุญแจไว้ที่บ้าน",
@@ -23909,6 +26709,22 @@
    "en": "Is the kid up yet?",
    "ko": "애는 일어났어?",
    "blank": "ลูก"
+  }
+ ],
+ "w|ลูกไก่": [
+  {
+   "text": "แม่ไก่พาลูกไก่เดินเล่น",
+   "en": "The hen takes her chicks for a walk.",
+   "ko": "암탉이 병아리들을 데리고 다녀.",
+   "blank": "ลูกไก่",
+   "src": "made"
+  },
+  {
+   "text": "ลูกไก่สีเหลืองน่ารักมาก",
+   "en": "The yellow chicks are very cute.",
+   "ko": "노란 병아리가 아주 귀여워.",
+   "blank": "ลูกไก่",
+   "src": "made"
   }
  ],
  "w|ลูกเขย": [
@@ -23981,6 +26797,22 @@
    "blank": "ลูกน้อง"
   }
  ],
+ "w|ลูกบิด": [
+  {
+   "text": "ลูกบิดประตูหลวม",
+   "en": "The doorknob is loose.",
+   "ko": "문손잡이가 헐거워.",
+   "blank": "ลูกบิด",
+   "src": "made"
+  },
+  {
+   "text": "หมุนลูกบิดไปทางซ้าย",
+   "en": "Turn the knob to the left.",
+   "ko": "손잡이를 왼쪽으로 돌려.",
+   "blank": "ลูกบิด",
+   "src": "made"
+  }
+ ],
  "w|ลูกพี่ลูกน้อง": [
   {
    "text": "ลูกพี่ลูกน้องมาเล่นที่บ้าน",
@@ -23993,6 +26825,22 @@
    "en": "I am very close with my cousin.",
    "ko": "나는 사촌과 아주 친해.",
    "blank": "ลูกพี่ลูกน้อง"
+  }
+ ],
+ "w|ลูกแมว": [
+  {
+   "text": "ลูกแมวกำลังเล่นไหมพรม",
+   "en": "The kitten is playing with yarn.",
+   "ko": "새끼 고양이가 털실을 가지고 놀고 있어.",
+   "blank": "ลูกแมว",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบ้านให้ลูกแมวมาหนึ่งตัว",
+   "en": "The neighbor gave us a kitten.",
+   "ko": "이웃이 새끼 고양이 한 마리를 줬어.",
+   "blank": "ลูกแมว",
+   "src": "made"
   }
  ],
  "w|ลูกสะใภ้": [
@@ -24021,6 +26869,38 @@
    "en": "I'm taking my daughter to the doctor.",
    "ko": "딸 병원 데려가.",
    "blank": "ลูกสาว"
+  }
+ ],
+ "w|ลูกหมา": [
+  {
+   "text": "ลูกหมาตัวนี้ชอบกัดรองเท้า",
+   "en": "This puppy likes chewing shoes.",
+   "ko": "이 강아지는 신발 무는 걸 좋아해.",
+   "blank": "ลูกหมา",
+   "src": "made"
+  },
+  {
+   "text": "ลูกหมาหลับอยู่ข้างแม่",
+   "en": "The puppy is sleeping next to its mother.",
+   "ko": "강아지가 어미 옆에서 자고 있어.",
+   "blank": "ลูกหมา",
+   "src": "made"
+  }
+ ],
+ "w|ลูกเห็บ": [
+  {
+   "text": "เมื่อวานมีลูกเห็บตก",
+   "en": "It hailed yesterday.",
+   "ko": "어제 우박이 내렸어.",
+   "blank": "ลูกเห็บ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกเห็บทำให้หลังคาเสียหาย",
+   "en": "The hail damaged the roof.",
+   "ko": "우박 때문에 지붕이 망가졌어.",
+   "blank": "ลูกเห็บ",
+   "src": "made"
   }
  ],
  "w|ลูกอม": [
@@ -24149,6 +27029,22 @@
    "blank": "เลว"
   }
  ],
+ "w|เลวร้าย": [
+  {
+   "text": "สถานการณ์เลวร้ายลงเรื่อยๆ",
+   "en": "The situation is getting worse and worse.",
+   "ko": "상황이 점점 나빠지고 있어.",
+   "blank": "เลวร้าย",
+   "src": "made"
+  },
+  {
+   "text": "นั่นเป็นวันที่เลวร้ายที่สุดในชีวิต",
+   "en": "That was the worst day of my life.",
+   "ko": "그날은 내 인생 최악의 날이었어.",
+   "blank": "เลวร้าย",
+   "src": "made"
+  }
+ ],
  "w|เล่า": [
   {
    "text": "เล่าให้ฟังหน่อย",
@@ -24189,6 +27085,22 @@
    "en": "Don't break up just yet.",
    "ko": "아직은 헤어지지 마.",
    "blank": "เลิกกัน"
+  }
+ ],
+ "w|เลิศ": [
+  {
+   "text": "อาหารร้านนี้รสชาติเลิศ",
+   "en": "The food at this restaurant tastes superb.",
+   "ko": "이 식당 음식은 맛이 최고야.",
+   "blank": "เลิศ",
+   "src": "made"
+  },
+  {
+   "text": "เธอเป็นนักร้องที่เลิศที่สุด",
+   "en": "She is the finest singer.",
+   "ko": "그녀는 가장 뛰어난 가수야.",
+   "blank": "เลิศ",
+   "src": "made"
   }
  ],
  "w|เลี้ยง": [
@@ -24359,6 +27271,22 @@
    "blank": "โลก"
   }
  ],
+ "w|โล่ง": [
+  {
+   "text": "ถนนวันนี้โล่งมาก",
+   "en": "The road is very clear today.",
+   "ko": "오늘은 길이 아주 한산해.",
+   "blank": "โล่ง",
+   "src": "made"
+  },
+  {
+   "text": "พอพูดออกไปแล้วรู้สึกโล่งใจ",
+   "en": "After saying it, I felt relieved.",
+   "ko": "말하고 나니 속이 후련해.",
+   "blank": "โล่ง",
+   "src": "made"
+  }
+ ],
  "w|โลมา": [
   {
    "text": "โลมาฉลาดและเป็นมิตร",
@@ -24401,6 +27329,22 @@
    "blank": "วรรณคดี"
   }
  ],
+ "w|ว่องไว": [
+  {
+   "text": "แมวตัวนี้ว่องไวมาก",
+   "en": "This cat is very quick.",
+   "ko": "이 고양이는 아주 날쌔.",
+   "blank": "ว่องไว",
+   "src": "made"
+  },
+  {
+   "text": "เขาทำงานได้ว่องไวและถูกต้อง",
+   "en": "He works quickly and accurately.",
+   "ko": "그는 일을 빠르고 정확하게 해.",
+   "blank": "ว่องไว",
+   "src": "made"
+  }
+ ],
  "w|วอร์ม": [
   {
    "text": "นักวิ่งวอร์มก่อนออกสตาร์ท",
@@ -24427,6 +27371,22 @@
    "en": "Go get the vaccine at the clinic.",
    "ko": "클리닉에서 백신을 맞아.",
    "blank": "วัคซีน"
+  }
+ ],
+ "w|วัชพืช": [
+  {
+   "text": "พ่อกำลังถอนวัชพืชในสวน",
+   "en": "Dad is pulling weeds in the garden.",
+   "ko": "아빠가 정원에서 잡초를 뽑고 계셔.",
+   "blank": "วัชพืช",
+   "src": "made"
+  },
+  {
+   "text": "วัชพืชขึ้นเร็วมากในหน้าฝน",
+   "en": "Weeds grow very fast in the rainy season.",
+   "ko": "우기에는 잡초가 아주 빨리 자라.",
+   "blank": "วัชพืช",
+   "src": "made"
   }
  ],
  "w|วัฒนธรรม": [
@@ -24485,6 +27445,22 @@
    "blank": "วันเกิด"
   }
  ],
+ "w|วันครบรอบ": [
+  {
+   "text": "วันนี้เป็นวันครบรอบแต่งงานของพ่อแม่",
+   "en": "Today is my parents' wedding anniversary.",
+   "ko": "오늘은 부모님 결혼기념일이야.",
+   "blank": "วันครบรอบ",
+   "src": "made"
+  },
+  {
+   "text": "เราไปกินข้าวฉลองวันครบรอบ",
+   "en": "We went out to dinner to celebrate our anniversary.",
+   "ko": "기념일을 축하하러 외식했어.",
+   "blank": "วันครบรอบ",
+   "src": "made"
+  }
+ ],
  "w|วันจันทร์": [
   {
    "text": "วันจันทร์เช้าเหนื่อยเสมอ",
@@ -24511,6 +27487,22 @@
    "en": "Next workday there will be an important meeting.",
    "ko": "다음 근무일에 중요한 회의가 있어.",
    "blank": "วันทำงาน"
+  }
+ ],
+ "w|วันที่": [
+  {
+   "text": "วันนี้วันที่เท่าไร",
+   "en": "What's the date today?",
+   "ko": "오늘 며칠이야?",
+   "blank": "วันที่",
+   "src": "made"
+  },
+  {
+   "text": "กรุณาเขียนวันที่ไว้มุมขวาบน",
+   "en": "Please write the date in the top right corner.",
+   "ko": "오른쪽 위에 날짜를 적어 주세요.",
+   "blank": "วันที่",
+   "src": "made"
   }
  ],
  "w|วันธรรมดา": [
@@ -24975,6 +27967,22 @@
    "blank": "วิศวกร"
   }
  ],
+ "w|วิเศษ": [
+  {
+   "text": "บ้านของคุณวิเศษมาก",
+   "en": "Your house is fantastic.",
+   "ko": "너희 집 정말 멋지다.",
+   "blank": "วิเศษ",
+   "src": "tatoeba:8743331/pastelite en:36073/CK"
+  },
+  {
+   "text": "นี่เป็นวันที่วิเศษจริงๆ",
+   "en": "This is a truly wonderful day.",
+   "ko": "정말 멋진 날이야.",
+   "blank": "วิเศษ",
+   "src": "made"
+  }
+ ],
  "w|วีซ่า": [
   {
    "text": "ยื่นขอวีซ่าเรียบร้อยแล้ว",
@@ -25043,6 +28051,22 @@
    "en": "It's time to go.",
    "ko": "이제 갈 시간이야.",
    "blank": "เวลา"
+  }
+ ],
+ "w|เวลาว่าง": [
+  {
+   "text": "เวลาว่างคุณชอบทำอะไร",
+   "en": "What do you like to do in your free time?",
+   "ko": "시간 날 때 뭐 하는 걸 좋아해?",
+   "blank": "เวลาว่าง",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงนี้ฉันไม่ค่อยมีเวลาว่าง",
+   "en": "I don't have much free time these days.",
+   "ko": "요즘은 여유 시간이 별로 없어.",
+   "blank": "เวลาว่าง",
+   "src": "made"
   }
  ],
  "w|เวียนหัว": [
@@ -25395,6 +28419,22 @@
    "blank": "สงสาร"
   }
  ],
+ "w|สง่า": [
+  {
+   "text": "เธอเดินอย่างสง่า",
+   "en": "She walks gracefully.",
+   "ko": "그녀는 우아하게 걸어.",
+   "blank": "สง่า",
+   "src": "made"
+  },
+  {
+   "text": "ม้าตัวนี้ดูสง่ามาก",
+   "en": "This horse looks very majestic.",
+   "ko": "이 말은 아주 늠름해 보여.",
+   "blank": "สง่า",
+   "src": "made"
+  }
+ ],
  "w|สด": [
   {
    "text": "ผักวันนี้สดมาก",
@@ -25547,6 +28587,22 @@
    "en": "The airport is very crowded today.",
    "ko": "오늘 공항에 사람이 많아.",
    "blank": "สนามบิน"
+  }
+ ],
+ "w|สนามหญ้า": [
+  {
+   "text": "เด็กๆ เล่นฟุตบอลบนสนามหญ้า",
+   "en": "The kids play football on the lawn.",
+   "ko": "아이들이 잔디밭에서 축구를 해.",
+   "blank": "สนามหญ้า",
+   "src": "made"
+  },
+  {
+   "text": "ฉันตัดหญ้าในสนามหญ้าทุกเสาร์",
+   "en": "I mow the lawn every Saturday.",
+   "ko": "나는 토요일마다 잔디를 깎아.",
+   "blank": "สนามหญ้า",
+   "src": "made"
   }
  ],
  "w|สนุก": [
@@ -25759,6 +28815,22 @@
    "blank": "สมาชิก"
   }
  ],
+ "w|สมุนไพร": [
+  {
+   "text": "คุณยายปลูกสมุนไพรหลังบ้าน",
+   "en": "Grandma grows herbs behind the house.",
+   "ko": "할머니는 집 뒤에서 약초를 기르셔.",
+   "blank": "สมุนไพร",
+   "src": "made"
+  },
+  {
+   "text": "ชาสมุนไพรช่วยให้หลับสบาย",
+   "en": "Herbal tea helps you sleep well.",
+   "ko": "허브차를 마시면 잠이 잘 와.",
+   "blank": "สมุนไพร",
+   "src": "made"
+  }
+ ],
  "w|สโมสร": [
   {
    "text": "สโมสรฟุตบอลชนะเกมสำคัญ",
@@ -25785,6 +28857,38 @@
    "en": "Mom gave me a gold necklace.",
    "ko": "엄마가 금목걸이를 주셨어.",
    "blank": "สร้อย"
+  }
+ ],
+ "w|สระว่ายน้ำ": [
+  {
+   "text": "โรงแรมนี้มีสระว่ายน้ำ",
+   "en": "This hotel has a swimming pool.",
+   "ko": "이 호텔에는 수영장이 있어.",
+   "blank": "สระว่ายน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ เล่นน้ำในสระว่ายน้ำ",
+   "en": "The kids are playing in the swimming pool.",
+   "ko": "아이들이 수영장에서 물놀이를 해.",
+   "blank": "สระว่ายน้ำ",
+   "src": "made"
+  }
+ ],
+ "w|สร่าง": [
+  {
+   "text": "รอให้สร่างเมาก่อนค่อยขับรถ",
+   "en": "Wait until you sober up before driving.",
+   "ko": "술이 깰 때까지 기다렸다가 운전해.",
+   "blank": "สร่าง",
+   "src": "made"
+  },
+  {
+   "text": "ไข้เริ่มสร่างแล้ว",
+   "en": "The fever has started to go down.",
+   "ko": "열이 내리기 시작했어.",
+   "blank": "สร่าง",
+   "src": "made"
   }
  ],
  "w|สร้าง": [
@@ -25899,6 +29003,22 @@
    "blank": "ส่วนแบ่ง"
   }
  ],
+ "w|สวนผลไม้": [
+  {
+   "text": "ที่จันทบุรีมีสวนผลไม้เยอะ",
+   "en": "There are many orchards in Chanthaburi.",
+   "ko": "짠타부리에는 과수원이 많아.",
+   "blank": "สวนผลไม้",
+   "src": "made"
+  },
+  {
+   "text": "เราไปเก็บมังคุดที่สวนผลไม้",
+   "en": "We went to pick mangosteens at the orchard.",
+   "ko": "우리는 과수원에 망고스틴을 따러 갔어.",
+   "blank": "สวนผลไม้",
+   "src": "made"
+  }
+ ],
  "w|ส่วนลด": [
   {
    "text": "วันนี้มีส่วนลดพิเศษทั้งร้าน",
@@ -26009,6 +29129,22 @@
    "en": "The view is beautiful.",
    "ko": "경치가 정말 예뻐.",
    "blank": "สวย"
+  }
+ ],
+ "w|สวยงาม": [
+  {
+   "text": "ช่างเป็นดอกไม้ที่สวยงามจริง ๆ!",
+   "en": "What a beautiful flower!",
+   "ko": "정말 예쁜 꽃이다!",
+   "blank": "สวยงาม",
+   "src": "tatoeba:8703170/pastelite en:36037/CK"
+  },
+  {
+   "text": "ช่างเป็นค่ำคืนที่สวยงาม!",
+   "en": "What a beautiful night!",
+   "ko": "정말 아름다운 밤이다!",
+   "blank": "สวยงาม",
+   "src": "tatoeba:8703207/pastelite en:1300117/CK"
   }
  ],
  "w|สวรรค์": [
@@ -26275,6 +29411,22 @@
    "en": "Wash your hands clean before eating.",
    "ko": "먹기 전에 손을 깨끗이 씻어.",
    "blank": "สะอาด"
+  }
+ ],
+ "w|สะอาดสะอ้าน": [
+  {
+   "text": "ห้องน้ำโรงแรมสะอาดสะอ้าน",
+   "en": "The hotel bathroom is spotless.",
+   "ko": "호텔 욕실이 아주 깔끔해.",
+   "blank": "สะอาดสะอ้าน",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ แต่งตัวสะอาดสะอ้านไปโรงเรียน",
+   "en": "The kids go to school neatly dressed.",
+   "ko": "아이들이 깔끔하게 차려입고 학교에 가.",
+   "blank": "สะอาดสะอ้าน",
+   "src": "made"
   }
  ],
  "w|สัก": [
@@ -26963,6 +30115,22 @@
    "blank": "สุดท้าย"
   }
  ],
+ "w|สุดยอด": [
+  {
+   "text": "คอนเสิร์ตเมื่อคืนสุดยอดมาก",
+   "en": "Last night's concert was awesome.",
+   "ko": "어젯밤 콘서트 최고였어.",
+   "blank": "สุดยอด",
+   "src": "made"
+  },
+  {
+   "text": "อาหารจานนี้รสชาติสุดยอด",
+   "en": "This dish tastes amazing.",
+   "ko": "이 요리는 맛이 끝내줘.",
+   "blank": "สุดยอด",
+   "src": "made"
+  }
+ ],
  "w|สุดสัปดาห์": [
   {
    "text": "สุดสัปดาห์ไปเที่ยวกัน",
@@ -26975,6 +30143,22 @@
    "en": "Are you free this weekend?",
    "ko": "이번 주말 한가해?",
    "blank": "สุดสัปดาห์"
+  }
+ ],
+ "w|สุนัข": [
+  {
+   "text": "สุนัขของคุณกัดหรือไม่?",
+   "en": "Does your dog bite?",
+   "ko": "너희 개 물어?",
+   "blank": "สุนัข",
+   "src": "tatoeba:8703084/pastelite en:340503/aaroned"
+  },
+  {
+   "text": "ทอมพาสุนัขของเขาไปเดินเล่นทุกเช้า",
+   "en": "Tom walks his dog every morning.",
+   "ko": "톰은 매일 아침 개를 산책시켜.",
+   "blank": "สุนัข",
+   "src": "tatoeba:8679116/pastelite en:2698626/WestofEden"
   }
  ],
  "w|สุภาพ": [
@@ -27537,6 +30721,22 @@
    "blank": "ไส้กรอก"
   }
  ],
+ "w|ไส้เดือน": [
+  {
+   "text": "ไส้เดือนช่วยให้ดินดี",
+   "en": "Earthworms make the soil good.",
+   "ko": "지렁이는 흙을 좋게 해 줘.",
+   "blank": "ไส้เดือน",
+   "src": "made"
+  },
+  {
+   "text": "พ่อใช้ไส้เดือนเป็นเหยื่อตกปลา",
+   "en": "Dad uses earthworms as fishing bait.",
+   "ko": "아빠는 지렁이를 낚시 미끼로 써.",
+   "blank": "ไส้เดือน",
+   "src": "made"
+  }
+ ],
  "w|หก": [
   {
    "text": "มาหกคน",
@@ -27747,6 +30947,22 @@
    "blank": "หน้าที่"
   }
  ],
+ "w|หนาแน่น": [
+  {
+   "text": "กรุงเทพฯ มีประชากรหนาแน่น",
+   "en": "Bangkok is densely populated.",
+   "ko": "방콕은 인구가 빽빽해.",
+   "blank": "หนาแน่น",
+   "src": "made"
+  },
+  {
+   "text": "ป่านี้มีต้นไม้หนาแน่น",
+   "en": "This forest is thick with trees.",
+   "ko": "이 숲은 나무가 빽빽해.",
+   "blank": "หนาแน่น",
+   "src": "made"
+  }
+ ],
  "w|หน้าบ้าน": [
   {
    "text": "จอดรถไว้หน้าบ้านได้",
@@ -27873,6 +31089,22 @@
    "blank": "หนึ่ง"
   }
  ],
+ "w|หนืด": [
+  {
+   "text": "น้ำผึ้งเย็นๆ จะหนืดมาก",
+   "en": "Cold honey is very thick.",
+   "ko": "차가운 꿀은 아주 걸쭉해.",
+   "blank": "หนืด",
+   "src": "made"
+  },
+  {
+   "text": "น้ำมันเครื่องนี้หนืดเกินไป",
+   "en": "This engine oil is too viscous.",
+   "ko": "이 엔진 오일은 너무 끈적해.",
+   "blank": "หนืด",
+   "src": "made"
+  }
+ ],
  "w|หนุ่ม": [
   {
    "text": "ชายหนุ่มคนนั้นสูงดี",
@@ -27941,6 +31173,22 @@
    "en": "This milk carton has expired; just throw it away.",
    "ko": "이 우유는 유통기한이 지났어. 버려.",
    "blank": "หมดอายุ"
+  }
+ ],
+ "w|หม่น": [
+  {
+   "text": "วันนี้ท้องฟ้าหม่นเหมือนฝนจะตก",
+   "en": "The sky is gloomy today as if it will rain.",
+   "ko": "오늘은 비가 올 것처럼 하늘이 흐려.",
+   "blank": "หม่น",
+   "src": "made"
+  },
+  {
+   "text": "ใบหน้าเธอดูหม่นลงเมื่อได้ยินข่าว",
+   "en": "Her face grew gloomy when she heard the news.",
+   "ko": "그 소식을 듣고 그녀의 얼굴이 어두워졌어.",
+   "blank": "หม่น",
+   "src": "made"
   }
  ],
  "w|หมวก": [
@@ -28027,6 +31275,22 @@
    "blank": "หมอฟัน"
   }
  ],
+ "w|หม้อหุงข้าว": [
+  {
+   "text": "หม้อหุงข้าวทำให้หุงข้าวง่ายขึ้น",
+   "en": "A rice cooker makes cooking rice easier.",
+   "ko": "전기밥솥이 있으면 밥 짓기가 쉬워.",
+   "blank": "หม้อหุงข้าว",
+   "src": "made"
+  },
+  {
+   "text": "ข้าวในหม้อหุงข้าวยังอุ่นอยู่",
+   "en": "The rice in the rice cooker is still warm.",
+   "ko": "밥솥의 밥이 아직 따뜻해.",
+   "blank": "หม้อหุงข้าว",
+   "src": "made"
+  }
+ ],
  "w|หมา": [
   {
    "text": "หมาตัวนี้ดุไหม",
@@ -28039,6 +31303,22 @@
    "en": "I have two dogs.",
    "ko": "개 두 마리 키워.",
    "blank": "หมา"
+  }
+ ],
+ "w|หมาป่า": [
+  {
+   "text": "หมาป่าหอนตอนกลางคืน",
+   "en": "Wolves howl at night.",
+   "ko": "늑대는 밤에 울부짖어.",
+   "blank": "หมาป่า",
+   "src": "made"
+  },
+  {
+   "text": "ในนิทานหมาป่าหลอกเด็ก",
+   "en": "In the story the wolf tricks the child.",
+   "ko": "동화에서 늑대가 아이를 속여.",
+   "blank": "หมาป่า",
+   "src": "made"
   }
  ],
  "w|หมายถึง": [
@@ -28573,6 +31853,22 @@
    "blank": "หลังจากนั้น"
   }
  ],
+ "w|หลับ": [
+  {
+   "text": "เขากำลังนอนหลับเหมือนเด็กทารก",
+   "en": "He's sleeping like a baby.",
+   "ko": "그는 아기처럼 자고 있어.",
+   "blank": "หลับ",
+   "src": "tatoeba:7878526/pastelite en:2089/CK"
+  },
+  {
+   "text": "ลูกหลับไปแล้ว อย่าเสียงดัง",
+   "en": "The baby's asleep, don't be loud.",
+   "ko": "아기 잠들었으니 시끄럽게 하지 마.",
+   "blank": "หลับ",
+   "src": "made"
+  }
+ ],
  "w|หลับตา": [
   {
    "text": "หลับตาแล้วหายใจเข้าลึก ๆ",
@@ -28741,6 +32037,22 @@
    "blank": "หวย"
   }
  ],
+ "w|ห่วย": [
+  {
+   "text": "หนังเรื่องนี้ห่วยมาก",
+   "en": "This movie is really bad.",
+   "ko": "이 영화 정말 별로야.",
+   "blank": "ห่วย",
+   "src": "made"
+  },
+  {
+   "text": "บริการร้านนี้ห่วย",
+   "en": "The service at this shop is lousy.",
+   "ko": "이 가게 서비스는 엉망이야.",
+   "blank": "ห่วย",
+   "src": "made"
+  }
+ ],
  "w|หวัง": [
   {
    "text": "หวังว่าจะทัน",
@@ -28811,6 +32123,22 @@
    "blank": "หวาน"
   }
  ],
+ "w|หวี": [
+  {
+   "text": "หวีของฉันอยู่ที่ไหน",
+   "en": "Where is my comb?",
+   "ko": "내 빗 어디 있지?",
+   "blank": "หวี",
+   "src": "tatoeba:8709473/pastelite en:3795266/popball"
+  },
+  {
+   "text": "ฉันลืมหวีไว้ที่บ้าน",
+   "en": "I left my comb at home.",
+   "ko": "빗을 집에 두고 왔어.",
+   "blank": "หวี",
+   "src": "made"
+  }
+ ],
  "w|หวีผม": [
   {
    "text": "น้องสาวหวีผมหน้ากระจก",
@@ -28879,6 +32207,38 @@
    "en": "The emergency room is very crowded.",
    "ko": "응급실이 아주 붐벼.",
    "blank": "ห้องฉุกเฉิน"
+  }
+ ],
+ "w|ห้องใต้ดิน": [
+  {
+   "text": "ห้องใต้ดินมืดและเย็น",
+   "en": "The basement is dark and cool.",
+   "ko": "지하실은 어둡고 서늘해.",
+   "blank": "ห้องใต้ดิน",
+   "src": "made"
+  },
+  {
+   "text": "ไวน์เก็บไว้ในห้องใต้ดิน",
+   "en": "The wine is kept in the basement.",
+   "ko": "와인은 지하실에 보관해.",
+   "blank": "ห้องใต้ดิน",
+   "src": "made"
+  }
+ ],
+ "w|ห้องใต้หลังคา": [
+  {
+   "text": "เราเก็บของเก่าไว้ในห้องใต้หลังคา",
+   "en": "We keep old things in the attic.",
+   "ko": "우리는 오래된 물건을 다락방에 보관해.",
+   "blank": "ห้องใต้หลังคา",
+   "src": "made"
+  },
+  {
+   "text": "ห้องใต้หลังคาร้อนมากตอนกลางวัน",
+   "en": "The attic is very hot during the day.",
+   "ko": "낮에는 다락방이 아주 더워.",
+   "blank": "ห้องใต้หลังคา",
+   "src": "made"
   }
  ],
  "w|ห้องนอน": [
@@ -29047,6 +32407,22 @@
    "en": "This shellfish is fresh and sweet.",
    "ko": "이 조개가 신선하고 달아.",
    "blank": "หอย"
+  }
+ ],
+ "w|หอยทาก": [
+  {
+   "text": "หอยทากเดินช้ามาก",
+   "en": "Snails move very slowly.",
+   "ko": "달팽이는 아주 느리게 움직여.",
+   "blank": "หอยทาก",
+   "src": "made"
+  },
+  {
+   "text": "หลังฝนตกมีหอยทากเต็มสวน",
+   "en": "After the rain the garden is full of snails.",
+   "ko": "비가 온 뒤 정원에 달팽이가 가득해.",
+   "blank": "หอยทาก",
+   "src": "made"
   }
  ],
  "w|หัก": [
@@ -29259,6 +32635,38 @@
    "blank": "หาก"
   }
  ],
+ "w|หาง": [
+  {
+   "text": "เด็กชายจับหมาที่หาง",
+   "en": "The boy caught the dog by the tail.",
+   "ko": "소년이 개의 꼬리를 잡았어.",
+   "blank": "หาง",
+   "src": "tatoeba:10277377/Somsak en:45405/CK"
+  },
+  {
+   "text": "หมาแกว่งหางเมื่อเห็นเจ้าของ",
+   "en": "The dog wags its tail when it sees its owner.",
+   "ko": "개는 주인을 보면 꼬리를 흔들어.",
+   "blank": "หาง",
+   "src": "made"
+  }
+ ],
+ "w|ห่าง": [
+  {
+   "text": "เก็บยาให้ห่างจากมือและสายตาเด็ก",
+   "en": "Keep all medicines out of the reach and sight of children.",
+   "ko": "약은 아이 손이 닿지 않고 보이지 않는 곳에 둬.",
+   "blank": "ห่าง",
+   "src": "tatoeba:4293642/Spanger en:4288156/corvard"
+  },
+  {
+   "text": "บ้านเราอยู่ห่างจากโรงเรียนไม่มาก",
+   "en": "Our house isn't far from the school.",
+   "ko": "우리 집은 학교에서 별로 멀지 않아.",
+   "blank": "ห่าง",
+   "src": "made"
+  }
+ ],
  "w|ห้าง": [
   {
    "text": "วันนี้ไปห้างกันไหม",
@@ -29271,6 +32679,22 @@
    "en": "This mall is big and has lots of stuff.",
    "ko": "이 백화점 크고 물건이 많아.",
    "blank": "ห้าง"
+  }
+ ],
+ "w|ห่างไกล": [
+  {
+   "text": "เขาเกิดในหมู่บ้านห่างไกล",
+   "en": "He was born in a remote village.",
+   "ko": "그는 외딴 마을에서 태어났어.",
+   "blank": "ห่างไกล",
+   "src": "made"
+  },
+  {
+   "text": "อย่าอยู่ห่างไกลจากครอบครัวนานเกินไป",
+   "en": "Don't stay far from your family for too long.",
+   "ko": "가족과 너무 오래 떨어져 있지 마.",
+   "blank": "ห่างไกล",
+   "src": "made"
   }
  ],
  "w|ห้างสรรพสินค้า": [
@@ -29355,6 +32779,22 @@
    "en": "I yawn when I feel sleepy.",
    "ko": "졸리면 하품이 나와.",
    "blank": "หาว"
+  }
+ ],
+ "w|ห้าว": [
+  {
+   "text": "เด็กผู้หญิงคนนี้ห้าวเหมือนเด็กผู้ชาย",
+   "en": "This girl is as bold as a boy.",
+   "ko": "이 여자아이는 남자아이처럼 대담해.",
+   "blank": "ห้าว",
+   "src": "made"
+  },
+  {
+   "text": "เสียงของเขาห้าวและดัง",
+   "en": "His voice is gruff and loud.",
+   "ko": "그의 목소리는 굵고 커.",
+   "blank": "ห้าว",
+   "src": "made"
   }
  ],
  "w|หิน": [
@@ -29469,6 +32909,22 @@
    "blank": "หุ้นส่วน"
   }
  ],
+ "w|หุบเขา": [
+  {
+   "text": "หมู่บ้านอยู่ในหุบเขา",
+   "en": "The village is in a valley.",
+   "ko": "마을은 골짜기에 있어.",
+   "blank": "หุบเขา",
+   "src": "made"
+  },
+  {
+   "text": "หมอกปกคลุมหุบเขาตอนเช้า",
+   "en": "Fog covers the valley in the morning.",
+   "ko": "아침이면 안개가 골짜기를 덮어.",
+   "blank": "หุบเขา",
+   "src": "made"
+  }
+ ],
  "w|หู": [
   {
    "text": "หูฉันอื้อไปหมด",
@@ -29481,6 +32937,22 @@
    "en": "Speak softer — my ears are sensitive.",
    "ko": "작게 말해, 귀가 예민해.",
    "blank": "หู"
+  }
+ ],
+ "w|หูหนวก": [
+  {
+   "text": "คุณยายเริ่มหูหนวก",
+   "en": "Grandma is going deaf.",
+   "ko": "할머니가 귀가 먹기 시작하셨어.",
+   "blank": "หูหนวก",
+   "src": "made"
+  },
+  {
+   "text": "เขาเรียนภาษามือเพื่อคุยกับเพื่อนที่หูหนวก",
+   "en": "He learned sign language to talk with his deaf friend.",
+   "ko": "그는 청각 장애가 있는 친구와 이야기하려고 수어를 배웠어.",
+   "blank": "หูหนวก",
+   "src": "made"
   }
  ],
  "w|เหงา": [
@@ -29523,6 +32995,22 @@
    "en": "Large fresh mushrooms taste good.",
    "ko": "큰 생버섯이 맛이 좋아.",
    "blank": "เห็ด"
+  }
+ ],
+ "w|เห็ดรา": [
+  {
+   "text": "ห้องชื้นทำให้มีเห็ดราขึ้น",
+   "en": "A damp room causes mold to grow.",
+   "ko": "방이 습하면 곰팡이가 생겨.",
+   "blank": "เห็ดรา",
+   "src": "made"
+  },
+  {
+   "text": "ขนมปังมีเห็ดราขึ้นแล้ว",
+   "en": "The bread has gone moldy.",
+   "ko": "빵에 곰팡이가 피었어.",
+   "blank": "เห็ดรา",
+   "src": "made"
   }
  ],
  "w|เหตุการณ์": [
@@ -29607,6 +33095,22 @@
    "en": "The gum is sticky and stuck to my teeth.",
    "ko": "껌이 질겨서 이에 들러붙었어.",
    "blank": "เหนียว"
+  }
+ ],
+ "w|เหนียวแน่น": [
+  {
+   "text": "มิตรภาพของเราเหนียวแน่น",
+   "en": "Our friendship is strong.",
+   "ko": "우리 우정은 끈끈해.",
+   "blank": "เหนียวแน่น",
+   "src": "made"
+  },
+  {
+   "text": "กาวนี้ติดเหนียวแน่นมาก",
+   "en": "This glue sticks very firmly.",
+   "ko": "이 풀은 아주 단단히 붙어.",
+   "blank": "เหนียวแน่น",
+   "src": "made"
   }
  ],
  "w|เหนือ": [
@@ -29775,6 +33279,22 @@
    "en": "Iron rusts when it gets wet.",
    "ko": "철은 젖으면 녹슨다.",
    "blank": "เหล็ก"
+  }
+ ],
+ "w|เหลว": [
+  {
+   "text": "ไข่ยังเหลวอยู่ ต้มต่ออีกหน่อย",
+   "en": "The egg is still runny, boil it a bit longer.",
+   "ko": "달걀이 아직 묽으니 좀 더 삶아.",
+   "blank": "เหลว",
+   "src": "made"
+  },
+  {
+   "text": "สบู่เหลวหมดแล้ว",
+   "en": "We're out of liquid soap.",
+   "ko": "물비누가 다 떨어졌어.",
+   "blank": "เหลว",
+   "src": "made"
   }
  ],
  "w|เหล้า": [
@@ -30211,6 +33731,22 @@
    "blank": "อบ"
   }
  ],
+ "w|อบอุ่น": [
+  {
+   "text": "บ้านหลังนี้อบอุ่นมาก",
+   "en": "This house is very cozy.",
+   "ko": "이 집은 아주 아늑해.",
+   "blank": "อบอุ่น",
+   "src": "made"
+  },
+  {
+   "text": "ขอบคุณที่ต้อนรับอย่างอบอุ่น",
+   "en": "Thank you for the warm welcome.",
+   "ko": "따뜻하게 맞아 줘서 고마워.",
+   "blank": "อบอุ่น",
+   "src": "made"
+  }
+ ],
  "w|อพาร์ตเมนต์": [
   {
    "text": "เช่าอพาร์ตเมนต์ใกล้ที่ทำงาน",
@@ -30603,6 +34139,22 @@
    "blank": "อ่อน"
   }
  ],
+ "w|อ่อนนุ่ม": [
+  {
+   "text": "ผ้าห่มผืนนี้อ่อนนุ่มมาก",
+   "en": "This blanket is very soft.",
+   "ko": "이 담요는 아주 부드러워.",
+   "blank": "อ่อนนุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "ขนของลูกแมวอ่อนนุ่ม",
+   "en": "The kitten's fur is soft.",
+   "ko": "새끼 고양이 털이 보드라워.",
+   "blank": "อ่อนนุ่ม",
+   "src": "made"
+  }
+ ],
  "w|อ่อนเพลีย": [
   {
    "text": "อากาศร้อนทำให้อ่อนเพลียง่าย",
@@ -30785,6 +34337,38 @@
    "blank": "อันที่จริง"
   }
  ],
+ "w|อับ": [
+  {
+   "text": "ห้องนี้อับมาก เปิดหน้าต่างหน่อย",
+   "en": "This room is stuffy, open the window.",
+   "ko": "이 방은 아주 답답해, 창문 좀 열어.",
+   "blank": "อับ",
+   "src": "made"
+  },
+  {
+   "text": "เสื้อผ้ามีกลิ่นอับ",
+   "en": "The clothes smell musty.",
+   "ko": "옷에서 쉰내가 나.",
+   "blank": "อับ",
+   "src": "made"
+  }
+ ],
+ "w|อัปลักษณ์": [
+  {
+   "text": "ในนิทานมียักษ์หน้าตาอัปลักษณ์",
+   "en": "In the tale there's an ugly giant.",
+   "ko": "동화에는 못생긴 거인이 나와.",
+   "blank": "อัปลักษณ์",
+   "src": "made"
+  },
+  {
+   "text": "ตึกหลังนี้ดูอัปลักษณ์",
+   "en": "This building looks hideous.",
+   "ko": "이 건물은 흉해 보여.",
+   "blank": "อัปลักษณ์",
+   "src": "made"
+  }
+ ],
  "w|อัปโหลด": [
   {
    "text": "ช่วยอัปโหลดรูปขึ้นเว็บหน่อย",
@@ -30867,6 +34451,22 @@
    "en": "The sink is clogged — we need a plumber.",
    "ko": "싱크대가 막혀서 수리공을 불러야 해.",
    "blank": "อ่าง"
+  }
+ ],
+ "w|อ่างอาบน้ำ": [
+  {
+   "text": "เด็กๆ ชอบเล่นในอ่างอาบน้ำ",
+   "en": "The kids like playing in the bathtub.",
+   "ko": "아이들은 욕조에서 노는 걸 좋아해.",
+   "blank": "อ่างอาบน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ห้องนี้มีอ่างอาบน้ำด้วย",
+   "en": "This room has a bathtub too.",
+   "ko": "이 방에는 욕조도 있어.",
+   "blank": "อ่างอาบน้ำ",
+   "src": "made"
   }
  ],
  "w|อาจ": [
@@ -31051,6 +34651,22 @@
    "blank": "อารมณ์เสีย"
   }
  ],
+ "w|อ่าว": [
+  {
+   "text": "เรือจอดอยู่ในอ่าว",
+   "en": "The boats are anchored in the bay.",
+   "ko": "배들이 만에 정박해 있어.",
+   "blank": "อ่าว",
+   "src": "made"
+  },
+  {
+   "text": "อ่าวนี้น้ำสงบเหมาะกับการว่ายน้ำ",
+   "en": "This bay has calm water, good for swimming.",
+   "ko": "이 만은 물이 잔잔해서 수영하기 좋아.",
+   "blank": "อ่าว",
+   "src": "made"
+  }
+ ],
  "w|อาวุธ": [
   {
    "text": "ห้ามนำอาวุธเข้าไปข้างใน",
@@ -31219,6 +34835,22 @@
    "blank": "อิ่ม"
   }
  ],
+ "w|อิ่มเอม": [
+  {
+   "text": "ฉันรู้สึกอิ่มเอมใจเมื่อได้ช่วยคนอื่น",
+   "en": "I feel fulfilled when I help others.",
+   "ko": "남을 도우면 마음이 뿌듯해.",
+   "blank": "อิ่มเอม",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนกลับบ้านด้วยความอิ่มเอม",
+   "en": "Everyone went home content.",
+   "ko": "모두 흐뭇한 마음으로 집에 갔어.",
+   "blank": "อิ่มเอม",
+   "src": "made"
+  }
+ ],
  "w|อิสระ": [
   {
    "text": "ฉันอยากมีชีวิตที่เป็นอิสระ",
@@ -31273,6 +34905,22 @@
    "en": "Let me say it again.",
    "ko": "한 번 더 말할게.",
    "blank": "อีกครั้ง"
+  }
+ ],
+ "w|อีกา": [
+  {
+   "text": "อีกาเกาะอยู่บนหลังคา",
+   "en": "A crow is perched on the roof.",
+   "ko": "까마귀가 지붕에 앉아 있어.",
+   "blank": "อีกา",
+   "src": "made"
+  },
+  {
+   "text": "อีกาเป็นนกที่ฉลาด",
+   "en": "Crows are clever birds.",
+   "ko": "까마귀는 영리한 새야.",
+   "blank": "อีกา",
+   "src": "made"
   }
  ],
  "w|อีเมล": [
@@ -31413,6 +35061,22 @@
    "en": "Oops, I spilled the water.",
    "ko": "어이쿠, 물을 엎질렀어.",
    "blank": "อุ๊ย"
+  }
+ ],
+ "w|อูฐ": [
+  {
+   "text": "อูฐเดินในทะเลทรายได้นาน",
+   "en": "Camels can walk a long time in the desert.",
+   "ko": "낙타는 사막에서 오래 걸을 수 있어.",
+   "blank": "อูฐ",
+   "src": "made"
+  },
+  {
+   "text": "เราขี่อูฐที่อียิปต์",
+   "en": "We rode camels in Egypt.",
+   "ko": "우리는 이집트에서 낙타를 탔어.",
+   "blank": "อูฐ",
+   "src": "made"
   }
  ],
  "w|เอกสาร": [
@@ -31707,6 +35371,22 @@
    "en": "Hello, I can hear you.",
    "ko": "여보세요, 당신 말 들려요.",
    "blank": "ฮัลโหล"
+  }
+ ],
+ "w|ฮิปโป": [
+  {
+   "text": "ฮิปโปชอบแช่น้ำ",
+   "en": "Hippos like to soak in water.",
+   "ko": "하마는 물에 몸 담그는 걸 좋아해.",
+   "blank": "ฮิปโป",
+   "src": "made"
+  },
+  {
+   "text": "ลูกฮิปโปในสวนสัตว์โด่งดังมาก",
+   "en": "The baby hippo at the zoo is very famous.",
+   "ko": "동물원의 아기 하마가 아주 유명해.",
+   "blank": "ฮิปโป",
+   "src": "made"
   }
  ],
  "w|ฮีโร่": [
