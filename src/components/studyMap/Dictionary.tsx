@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
@@ -52,6 +53,7 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   );
   const openEntry = (entry: DictEntry) => {
     setPicked(entry);
+    noteLedger(language, [{ k: wordKey(entry.word), src: "dict", r: "look" }]);
     if (!senses[entry.word]) {
       void fetchSenses(language, locale, entry.word).then((list) => {
         if (list.length) setSenses((now) => ({ ...now, [entry.word]: list }));

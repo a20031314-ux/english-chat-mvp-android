@@ -22,13 +22,15 @@ import type { LogItem, PartId } from "@/lib/notes/stageParts";
 import type { KnownMap } from "@/lib/curriculum/known";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { computeFill, fillCatalog, keysInCell, studyPoint, type Axis, type BankAxis, type FillCell, type FillEvent } from "@/lib/curriculum/fill";
-import { COMPARE_MS, directionView, studyMix, type DirectionView, type StudyMix } from "@/lib/curriculum/directionView";
+import { COMPARE_MS, directionView, type DirectionView } from "@/lib/curriculum/directionView";
+import { migrateLedger } from "@/lib/curriculum/logLedger";
 import { callTurnsOf, fillEvents } from "@/lib/curriculum/fillInputs";
 import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
 import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
 import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
 import { segmentWords } from "@/lib/wordSegments";
 import { AxisDetail, axisName, CellDetail, cellName, lackOf, planCells, SkillHexagon, tabOf, type CellPlan } from "@/components/studyMap/SkillHexagon";
+import { SkillBands } from "@/components/studyMap/SkillBands";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 
 function localDay(at: number): string {
@@ -151,6 +153,16 @@ function useCallDays(language: string): Record<string, CallDay> {
 }
 
 const PERIOD_KEY = "logbankPeriod.v1";
+const VIEW_KEY = "logbankView.v1";
+type LogView = "bands" | "hexagon";
+function readLogView(): LogView {
+  try {
+    return localStorage.getItem(VIEW_KEY) === "hexagon" ? "hexagon" : "bands";
+  } catch {
+    return "bands";
+  }
+}
+
 function readPeriodKind(): PeriodKind {
   try {
     return localStorage.getItem(PERIOD_KEY) === "month" ? "month" : "week";
@@ -166,34 +178,29 @@ const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: 
 const pct = (n: number) => String(Math.round(n * 100));
 const put = (template: string, vars: Record<string, string>) => Object.entries(vars).reduce((text, [key, value]) => text.replaceAll(`{${key}}`, value), template);
 
-/** 지난 2주 비교 → 설명 → 다음 하나. 오르지 않은 눈금과 문장 목록은 여기 없다. */
+/**
+ * 지난 2주 비교: 오른 눈금과 예상보다 아래인 칸만(2026-11-06 개편안 4절 ③ — 설명·"다음" 줄·권유 문장 없음).
+ * 아래인 칸을 누르면 그 칸 세부(부족한 것·틀린 기록 순서).
+ */
 function DirectionFlow({
   ui,
   view,
-  study,
   nameOf,
-  onNext,
+  onLack,
 }: {
   ui: UICopy;
   view: DirectionView;
-  /** 첫 부족 칸이 최근 틀림에서 차지하는 개수. 절반 넘으면 설명에 개수로 말한다. */
-  study: StudyMix | null;
   nameOf: (cell: FillCell) => string;
-  onNext: (cell: FillCell) => void;
+  onLack: (cell: FillCell) => void;
 }) {
-  const first = view.lacks[0];
-  const second = view.lacks[1];
-  const gain = view.gains[0];
-  const name = first ? nameOf(first.cell) : "";
-  const most = Boolean(study && study.total > 0 && study.missed * 2 >= study.total);
-  if (!gain && !first) return <p data-direction="empty" className="text-note text-slate-500">{ui.dirEmpty}</p>;
+  if (!view.gains.length && !view.lacks.length) return <p data-direction="empty" className="text-note text-slate-500">{ui.dirEmpty}</p>;
   return (
     <div data-direction className="flex flex-col gap-3">
       {view.gains.length ? (
         <section className="flex flex-col gap-1">
           <h3 className="text-caption font-semibold text-slate-300">{ui.dirGain}</h3>
           <ul className="flex flex-col gap-1">
-            {view.gains.map((row) => (
+            {view.gains.slice(0, 2).map((row) => (
               <li key={row.axis} data-dir-gain={row.axis} className="text-note text-ink">
                 {put(ui.dirUp, { name: axisName(ui, row.axis), before: pct(row.before), now: pct(row.now) })}
               </li>
@@ -205,30 +212,21 @@ function DirectionFlow({
         <section className="flex flex-col gap-1">
           <h3 className="text-caption font-semibold text-slate-300">{ui.dirLack}</h3>
           <ul className="flex flex-col gap-1">
-            {view.lacks.map((row) => (
-              <li key={`${row.cell.axis}:${row.cell.id}`} data-dir-lack={row.cell.id} className="text-note text-ink">
-                {put(ui.dirUnder, { name: nameOf(row.cell), expected: pct(row.expected), actual: pct(row.actual) })}
+            {view.lacks.slice(0, 1).map((row) => (
+              <li key={`${row.cell.axis}:${row.cell.id}`}>
+                <button
+                  type="button"
+                  data-dir-lack={row.cell.id}
+                  onClick={() => onLack(row.cell)}
+                  className="tb-btn w-full rounded-xl px-3 py-2 text-start text-note text-ink"
+                >
+                  {put(ui.dirUnder, { name: nameOf(row.cell), expected: pct(row.expected), actual: pct(row.actual) })}
+                </button>
               </li>
             ))}
           </ul>
         </section>
       ) : null}
-      <section data-dir-explain className="flex flex-col gap-1">
-        <h3 className="text-caption font-semibold text-slate-300">{ui.dirExplain}</h3>
-        {gain ? <p className="text-note text-ink">{put(ui.dirSayUp, { name: axisName(ui, gain.axis) })}</p> : null}
-        {most && study ? <p className="text-note text-ink">{put(ui.dirMost, { name, missed: String(study.missed), total: String(study.total) })}</p> : null}
-        {first && !most ? <p className="text-note text-ink">{put(ui.dirSayUnder, { name })}</p> : null}
-      </section>
-      <section data-dir-next className="flex flex-col gap-2">
-        <h3 className="text-caption font-semibold text-slate-300">{ui.dirNext}</h3>
-        {first ? (
-          <button type="button" onClick={() => onNext(first.cell)} className="tb-btn rounded-xl px-3 py-2 text-start text-note font-semibold">
-            {put(ui.dirSayNext, { name })}
-          </button>
-        ) : null}
-        {second ? <p className="text-note text-slate-300">{put(ui.dirSayThen, { name: nameOf(second.cell) })}</p> : null}
-        {gain && first ? <p className="text-meta text-slate-500">{ui.dirSayKept}</p> : null}
-      </section>
     </div>
   );
 }
@@ -285,6 +283,20 @@ export function Logbank({
   // 오늘은 이 칸을 처음 그릴 때 한 번(그리는 동안 시계를 읽지 않게).
   const [today] = useState(() => localDay(Date.now()));
   const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
+  // 띠 | 육각형(같은 데이터, 기본 띠 — 2026-11-06, RULES 4 "보는 방식 고르기").
+  const [view, setView] = useState<LogView>(() => readLogView());
+  const chooseView = (next: LogView) => {
+    setView(next);
+    try {
+      localStorage.setItem(VIEW_KEY, next);
+    } catch {
+      // 이번에만.
+    }
+  };
+  // 사건 장부(curriculum/logLedger.ts): 예전 퀴즈 기록을 이 언어로 처음 열 때 한 번 옮김.
+  useEffect(() => {
+    migrateLedger(language, readQuizDays);
+  }, [language]);
   // 육각형 아래 ⏱ 한 줄을 누르면 학습 시간 막대(예전 기준 탭 ⏱ 자리, 2026-11-02 기준 탭은 육각형 꼭짓점으로).
   const [showTime, setShowTime] = useState(false);
   const [recordOpen, setRecordOpen] = useState(false);
@@ -346,10 +358,6 @@ export function Logbank({
     });
   }, [catalog, check, stage, events, callTurns, nowAt]);
   const direction = useMemo(() => directionView(fill, earlier), [fill, earlier]);
-  const study = useMemo(() => {
-    const cell = direction.lacks[0]?.cell;
-    return cell ? studyMix(events, catalog, cell, nowAt - COMPARE_MS) : null;
-  }, [direction, events, catalog, nowAt]);
   // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
   useEffect(() => {
     if (words) saveFillFocus(language, fillDirection(fill, catalog, events, stage));
@@ -522,20 +530,46 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
-        <SkillHexagon
-          ui={ui}
-          result={fill}
-          before={before}
-          onAxis={setOpenAxis}
-          onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
-          recordLabel={ui.skillRecord}
-        />
+        <div className="flex gap-1 self-end" role="group">
+          {(["bands", "hexagon"] as const).map((one) => (
+            <button
+              key={one}
+              type="button"
+              data-log-view={one}
+              aria-pressed={view === one}
+              aria-label={one === "bands" ? ui.logViewBands : ui.logViewHexagon}
+              title={one === "bands" ? ui.logViewBands : ui.logViewHexagon}
+              onClick={() => chooseView(one)}
+              className={chip(view === one)}
+            >
+              {one === "bands" ? "☰" : "⬡"}
+            </button>
+          ))}
+        </div>
+        {view === "bands" ? (
+          <SkillBands
+            ui={ui}
+            result={fill}
+            before={before}
+            onAxis={setOpenAxis}
+            onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
+            recordLabel={ui.skillRecord}
+          />
+        ) : (
+          <SkillHexagon
+            ui={ui}
+            result={fill}
+            before={before}
+            onAxis={setOpenAxis}
+            onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
+            recordLabel={ui.skillRecord}
+          />
+        )}
         <DirectionFlow
           ui={ui}
           view={direction}
-          study={study}
           nameOf={(cell) => cellName(ui, cell.id, grammarName)}
-          onNext={(cell) => {
+          onLack={(cell) => {
             setOpenAxis(cell.axis);
             setOpenCell(cell);
           }}

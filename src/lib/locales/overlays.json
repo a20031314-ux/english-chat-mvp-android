@@ -968,6 +968,8 @@
     "dictionaryTitle": "単語辞典",
     "dictionarySearch": "単語か意味",
     "dictionaryEmpty": "見つかりません",
+    "logViewBands": "帯",
+    "logViewHexagon": "六角形",
     "dictionaryExample": "例文",
     "dictionaryStage": "{n}段階"
   },
@@ -1940,6 +1942,8 @@
     "dictionaryTitle": "单词词典",
     "dictionarySearch": "单词或意思",
     "dictionaryEmpty": "没有找到",
+    "logViewBands": "条带",
+    "logViewHexagon": "六边形",
     "dictionaryExample": "例句",
     "dictionaryStage": "{n}级"
   },
@@ -2915,6 +2919,8 @@
     "dictionaryTitle": "Từ điển",
     "dictionarySearch": "Từ hoặc nghĩa",
     "dictionaryEmpty": "Không thấy",
+    "logViewBands": "Dải",
+    "logViewHexagon": "Lục giác",
     "dictionaryExample": "Ví dụ",
     "dictionaryStage": "Giai đoạn {n}"
   },
@@ -3895,6 +3901,8 @@
     "dictionaryTitle": "Dictionnaire",
     "dictionarySearch": "Mot ou sens",
     "dictionaryEmpty": "Aucun résultat",
+    "logViewBands": "Bandes",
+    "logViewHexagon": "Hexagone",
     "dictionaryExample": "Exemple",
     "dictionaryStage": "Étape {n}"
   },
@@ -5066,6 +5074,8 @@
     "dictionaryTitle": "Dizionario",
     "dictionarySearch": "Parola o significato",
     "dictionaryEmpty": "Nessun risultato",
+    "logViewBands": "Bande",
+    "logViewHexagon": "Esagono",
     "dictionaryExample": "Esempio",
     "dictionaryStage": "Fase {n}"
   },
@@ -6049,6 +6059,8 @@
     "dictionaryTitle": "Dicionário",
     "dictionarySearch": "Palavra ou sentido",
     "dictionaryEmpty": "Nenhum resultado",
+    "logViewBands": "Faixas",
+    "logViewHexagon": "Hexágono",
     "dictionaryExample": "Exemplo",
     "dictionaryStage": "Etapa {n}"
   },
@@ -7218,6 +7230,8 @@
     "dictionaryTitle": "Словарь",
     "dictionarySearch": "Слово или значение",
     "dictionaryEmpty": "Ничего не найдено",
+    "logViewBands": "Полосы",
+    "logViewHexagon": "Шестиугольник",
     "dictionaryExample": "Пример",
     "dictionaryStage": "Этап {n}"
   },
@@ -8197,6 +8211,8 @@
     "dictionaryTitle": "Kamus",
     "dictionarySearch": "Kata atau arti",
     "dictionaryEmpty": "Tidak ada",
+    "logViewBands": "Pita",
+    "logViewHexagon": "Segi enam",
     "dictionaryExample": "Contoh",
     "dictionaryStage": "Tahap {n}"
   },
@@ -9169,6 +9185,8 @@
     "dictionaryTitle": "معجم",
     "dictionarySearch": "كلمة أو معنى",
     "dictionaryEmpty": "لا توجد نتائج",
+    "logViewBands": "أشرطة",
+    "logViewHexagon": "سداسي",
     "dictionaryExample": "مثال",
     "dictionaryStage": "المرحلة {n}"
   },
@@ -10141,6 +10159,8 @@
     "dictionaryTitle": "พจนานุกรม",
     "dictionarySearch": "คำหรือความหมาย",
     "dictionaryEmpty": "ไม่พบ",
+    "logViewBands": "แถบ",
+    "logViewHexagon": "หกเหลี่ยม",
     "dictionaryExample": "ตัวอย่าง",
     "dictionaryStage": "ขั้น {n}"
   },
@@ -11113,6 +11133,8 @@
     "dictionaryTitle": "शब्दकोश",
     "dictionarySearch": "शब्द या अर्थ",
     "dictionaryEmpty": "कोई परिणाम नहीं",
+    "logViewBands": "पट्टियाँ",
+    "logViewHexagon": "षट्भुज",
     "dictionaryExample": "उदाहरण",
     "dictionaryStage": "चरण {n}"
   }

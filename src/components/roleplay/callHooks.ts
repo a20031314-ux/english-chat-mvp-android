@@ -7,7 +7,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
-import { buildRecap, recapReviewKeys } from "@/lib/roleplay/recap";
+import { buildRecap, recapLedgerKeys, wordLedgerKeys, recapReviewKeys } from "@/lib/roleplay/recap";
+import { loadBank } from "@/lib/curriculum/vocabBank";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import type { TranscriptLine } from "@/lib/roleplay/review";
 
 /**
@@ -55,6 +57,23 @@ export function useCallRecap(callOver: boolean, language: string | null, said: T
   const recap = useMemo(() => (callOver && language ? buildRecap(language, said) : []), [callOver, language, said]);
   const [saved, setSaved] = useState(false);
   const sentRef = useRef("");
+  const ledgerRef = useRef(false);
+  // Logbank 사건 장부: 끝난 통화마다 한 번 — 고친 말의 문장구조는 틀림, 그대로 쓴 문장구조는 씀(curriculum/logLedger.ts).
+  useEffect(() => {
+    if (!callOver) {
+      ledgerRef.current = false;
+      return;
+    }
+    if (!language || ledgerRef.current) return;
+    ledgerRef.current = true;
+    const note = (keys: { miss: string[]; used: string[] }) =>
+      noteLedger(language, [...keys.miss.map((k) => ({ k, src: "call" as const, r: "miss" as const })), ...keys.used.map((k) => ({ k, src: "call" as const, r: "used" as const }))]);
+    // 문장구조·문법·단계 표현은 바로, 낱말은 빈도 목록을 불러온 뒤(언어마다 한 번).
+    note(recapLedgerKeys(language, said));
+    void loadBank(language)
+      .then((bank) => note(wordLedgerKeys(language, said, new Map(bank.map((word) => [word.w.toLocaleLowerCase(), word.pos])))))
+      .catch(() => undefined);
+  }, [callOver, language, said]);
   useEffect(() => {
     if (!callOver || !language) return;
     const keys = recapReviewKeys(recap);
