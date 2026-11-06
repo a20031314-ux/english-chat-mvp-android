@@ -971,7 +971,11 @@
     "logViewBands": "帯",
     "logViewHexagon": "六角形",
     "dictionaryExample": "例文",
-    "dictionaryStage": "{n}段階"
+    "dictionaryStage": "{n}段階",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "推定値",
+    "lbEstimateHelp": "クイズと単語テストの記録から推定した値です。解くほど合わせていきます。",
+    "lbExtended": "拡張"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1945,7 +1949,11 @@
     "logViewBands": "条带",
     "logViewHexagon": "六边形",
     "dictionaryExample": "例句",
-    "dictionaryStage": "{n}级"
+    "dictionaryStage": "{n}级",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "估计值",
+    "lbEstimateHelp": "根据你的测验和单词测试记录估计。练得越多越准。",
+    "lbExtended": "扩展"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2922,7 +2930,11 @@
     "logViewBands": "Dải",
     "logViewHexagon": "Lục giác",
     "dictionaryExample": "Ví dụ",
-    "dictionaryStage": "Giai đoạn {n}"
+    "dictionaryStage": "Giai đoạn {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Ước tính",
+    "lbEstimateHelp": "Ước tính từ bài kiểm tra và bài thi từ vựng của bạn. Càng làm càng chính xác.",
+    "lbExtended": "Mở rộng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3904,7 +3916,11 @@
     "logViewBands": "Bandes",
     "logViewHexagon": "Hexagone",
     "dictionaryExample": "Exemple",
-    "dictionaryStage": "Étape {n}"
+    "dictionaryStage": "Étape {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Estimation",
+    "lbEstimateHelp": "Estimé à partir de vos quiz et tests de mots. Ça s’ajuste au fil de votre pratique.",
+    "lbExtended": "Extra"
   },
   "it": {
     "archive": "Report",
@@ -5077,7 +5093,11 @@
     "logViewBands": "Bande",
     "logViewHexagon": "Esagono",
     "dictionaryExample": "Esempio",
-    "dictionaryStage": "Fase {n}"
+    "dictionaryStage": "Fase {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Stima",
+    "lbEstimateHelp": "Stimato dai tuoi quiz e test di parole. Si aggiusta man mano che pratichi.",
+    "lbExtended": "Extra"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6062,7 +6082,11 @@
     "logViewBands": "Faixas",
     "logViewHexagon": "Hexágono",
     "dictionaryExample": "Exemplo",
-    "dictionaryStage": "Etapa {n}"
+    "dictionaryStage": "Etapa {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Estimativa",
+    "lbEstimateHelp": "Estimado a partir dos seus quizzes e testes de palavras. Vai se ajustando conforme você pratica.",
+    "lbExtended": "Extra"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7233,7 +7257,11 @@
     "logViewBands": "Полосы",
     "logViewHexagon": "Шестиугольник",
     "dictionaryExample": "Пример",
-    "dictionaryStage": "Этап {n}"
+    "dictionaryStage": "Этап {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Оценка",
+    "lbEstimateHelp": "Оценено по вашим тестам и проверкам слов. Уточняется по ходу занятий.",
+    "lbExtended": "Дополнительно"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8214,7 +8242,11 @@
     "logViewBands": "Pita",
     "logViewHexagon": "Segi enam",
     "dictionaryExample": "Contoh",
-    "dictionaryStage": "Tahap {n}"
+    "dictionaryStage": "Tahap {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "Perkiraan",
+    "lbEstimateHelp": "Diperkirakan dari kuis dan tes kosakatamu. Makin sering latihan, makin tepat.",
+    "lbExtended": "Tambahan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9188,7 +9220,11 @@
     "logViewBands": "أشرطة",
     "logViewHexagon": "سداسي",
     "dictionaryExample": "مثال",
-    "dictionaryStage": "المرحلة {n}"
+    "dictionaryStage": "المرحلة {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "تقدير",
+    "lbEstimateHelp": "قيمة مقدّرة من اختباراتك واختبارات الكلمات. تصبح أدق كلما تدرّبت.",
+    "lbExtended": "إضافي"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10162,7 +10198,11 @@
     "logViewBands": "แถบ",
     "logViewHexagon": "หกเหลี่ยม",
     "dictionaryExample": "ตัวอย่าง",
-    "dictionaryStage": "ขั้น {n}"
+    "dictionaryStage": "ขั้น {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "ค่าประมาณ",
+    "lbEstimateHelp": "ประมาณจากผลควิซและแบบทดสอบคำศัพท์ของคุณ ยิ่งทำยิ่งแม่นขึ้น",
+    "lbExtended": "เพิ่มเติม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11136,6 +11176,10 @@
     "logViewBands": "पट्टियाँ",
     "logViewHexagon": "षट्भुज",
     "dictionaryExample": "उदाहरण",
-    "dictionaryStage": "चरण {n}"
+    "dictionaryStage": "चरण {n}",
+    "languagebankTitle": "Languagebank",
+    "lbEstimate": "अनुमान",
+    "lbEstimateHelp": "आपकी क्विज़ और शब्द परीक्षाओं से लगाया गया अनुमान। जितना अभ्यास करेंगे, उतना सटीक होगा।",
+    "lbExtended": "अतिरिक्त"
   }
 }

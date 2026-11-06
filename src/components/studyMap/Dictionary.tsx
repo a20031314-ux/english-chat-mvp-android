@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger } from "@/lib/curriculum/logLedger";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
@@ -28,12 +28,17 @@ function grownLines(language: string, word: string, locale: string, have: readon
     .slice(0, room)
     .map((item) => ({ text: item.text, gloss: glossFor(item.gloss, locale) }));
 }
-export function DictionaryButton({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
+/**
+ * 사전 몸통(찾기칸 + 목록 | 낱말 화면) — 📕 시트와 Languagebank 탭(2026-11-06 개편 1단계, studyMap/LanguageBank)이 같이 쓴다.
+ * word = 이 낱말 화면으로 바로 열기(Languagebank 묶음에서 누른 낱말). onIndex = 낱말 화면 ‹ 를 눌렀을 때 바깥(색인)으로.
+ */
+export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean }) {
   const tone = useBankTone();
-  const [open, setOpen] = useState(false);
+  const open = true;
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<DictEntry | null>(null);
+  const wantRef = useRef<string | null>(null);
   // 연 낱말의 예문이 둘이 안 되면: 이 폰에 받아 둔 문제은행 예문부터 보이고, 모자라면 서버에 키워 달라고(같은 열쇠는 10분에 한 번).
   const [making, setMaking] = useState<string | null>(null);
   // 앱 언어 뜻(2026-11-06 사용자 "뜻 넣어줘"): 낱말 카드 묶음(퀴즈와 같은 것 — 처음이면 서버가 묶음째 만들어 모두가 같이 씀)의 뜻과
@@ -53,6 +58,8 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   );
   const openEntry = (entry: DictEntry) => {
     setPicked(entry);
+    wantRef.current = entry.word;
+    onPick?.(entry.word);
     noteLedger(language, [{ k: wordKey(entry.word), src: "dict", r: "look" }]);
     if (!senses[entry.word]) {
       void fetchSenses(language, locale, entry.word).then((list) => {
@@ -76,6 +83,14 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
       setGrown((n) => n + 1);
     });
   };
+  // 바깥에서 고른 낱말이 오면 목록이 불러와진 뒤 그 낱말 화면으로(같은 낱말은 한 번).
+  useEffect(() => {
+    if (!word || !entries || wantRef.current === word) return;
+    wantRef.current = word;
+    const hit = entries.find((one) => one.word === word);
+    if (hit) openEntry(hit);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [word, entries]);
   useEffect(() => {
     if (!open || entries) return;
     let live = true;
@@ -101,32 +116,7 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
   const lineGloss = (entry: DictEntry) => lineGloss2[entry.line ?? ""] || (locale === "ko" ? entry.lineKo || entry.lineEn : entry.lineEn);
   return (
     <>
-      <button
-        type="button"
-        data-dictionary-open
-        aria-label={ui.dictionaryTitle}
-        title={ui.dictionaryTitle}
-        onClick={() => setOpen(true)}
-        className="flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
-      >
-        <span aria-hidden>📕</span>
-      </button>
-      {open ? (
-        <BodyLayer>
-          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
-            <div
-              role="dialog"
-              aria-modal="true"
-              data-dictionary
-              onClick={(event) => event.stopPropagation()}
-              className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
-            >
-              <div className="flex items-center gap-2">
-                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.dictionaryTitle}</h3>
-                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
-                  ✕
-                </button>
-              </div>
+              {search && !picked ? (
               <form
                 role="search"
                 className="mt-3"
@@ -147,11 +137,21 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                   className={`w-full rounded-xl border border-line bg-transparent px-3 py-2 text-chat text-slate-100 outline-none ${tone.focus}`}
                 />
               </form>
+              ) : null}
               {picked ? (
                 <div data-dictionary-entry className="mt-3 min-h-0 overflow-y-auto">
-                  <button type="button" onClick={() => setPicked(null)} className="text-meta text-slate-400 hover:text-ink">
+                  <button
+                    type="button"
+                    data-dictionary-back
+                    onClick={() => {
+                      setPicked(null);
+                      wantRef.current = null;
+                      onIndex?.();
+                    }}
+                    className="text-meta text-slate-400 hover:text-ink"
+                  >
                     <span aria-hidden className="rtl:rotate-180">‹ </span>
-                    {ui.dictionaryTitle}
+                    {onIndex ? ui.languagebankTitle : ui.dictionaryTitle}
                   </button>
                   <div className="mt-2 flex flex-wrap items-center gap-2">
                     <p dir="auto" className="text-xl font-semibold text-ink">{picked.word}</p>
@@ -227,6 +227,42 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                   ))}
                 </ul>
               )}
+    </>
+  );
+}
+
+/** 📕 단어 사전 시트(Quizbank 어휘 탭 머리 — 개편 스위치가 켜지면 사전은 Languagebank 탭으로 옮겨 이 버튼은 안 보임). */
+export function DictionaryButton({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        type="button"
+        data-dictionary-open
+        aria-label={ui.dictionaryTitle}
+        title={ui.dictionaryTitle}
+        onClick={() => setOpen(true)}
+        className="flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
+      >
+        <span aria-hidden>📕</span>
+      </button>
+      {open ? (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={() => setOpen(false)}>
+            <div
+              role="dialog"
+              aria-modal="true"
+              data-dictionary
+              onClick={(event) => event.stopPropagation()}
+              className="flex max-h-[80vh] w-full max-w-md flex-col rounded-t-2xl border border-line bg-surface p-4 sm:rounded-2xl"
+            >
+              <div className="flex items-center gap-2">
+                <h3 className="min-w-0 flex-1 text-note font-semibold text-ink">{ui.dictionaryTitle}</h3>
+                <button type="button" aria-label={ui.billingClose} onClick={() => setOpen(false)} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+                  ✕
+                </button>
+              </div>
+              <DictionaryBody ui={ui} language={language} locale={locale} />
             </div>
           </div>
         </BodyLayer>

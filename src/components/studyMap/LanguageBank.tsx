@@ -1,0 +1,274 @@
+"use client";
+
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import type { UICopy } from "@/lib/copy";
+import { DictionaryBody } from "@/components/studyMap/Dictionary";
+import { loadBank, posGroup, stageCuts, stageOfRank, type BankWord } from "@/lib/curriculum/vocabBank";
+import { knowChance, levelOf, type Level } from "@/lib/curriculum/vocabLevel";
+import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
+import { ladderFor } from "@/lib/curriculum/stages/index";
+import { glossFor } from "@/lib/curriculum/stageScripts";
+import { openLesson } from "@/lib/appIntents";
+
+/**
+ * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/drafts/languagebank-2026-11-03.md,
+ * 시안 https://claude.ai/artifact/Bzy6aC9rEvoonjYVTq4WtW "Languagebank 탭".
+ *
+ * - 맨 위 찾기(단어 사전 — studyMap/Dictionary DictionaryBody, 낱말을 열면 그 낱말 화면).
+ * - 전체보기: 단어·표현·문법 띠 하나씩 — 난이도 구간 폭 = 그 구간 개수, 색 진하기 = 어림(아마 앎) 이어서 흐려짐, 비율 + ?.
+ *   단어 어림 = 퀴즈 수준 맞추기 경계(vocabLevel levelOf·knowChance, 이 폰 quizCircle.v1). 표현·문법은 순위가 없어 난이도 안 차례를
+ *   같은 눈금에 놓고 같은 경계로(시안과 같음 — 체크 셋을 만들 때 바꿈).
+ * - 종류 화면: 줄(단어 = 주제 | 품사, 표현·문법 = 난이도) × 열(난이도), 칸 = 비율·개수, 누르면 아래 묶음.
+ * - 묶음: 칩(진하기 = 어림), 낱말 → 사전 낱말 화면, 표현·문법 → 그 수업(openLesson, studyMap/LessonHost).
+ * 학습한 단어 표시는 여기 없음(사용자 2026-11-06 — 낱말 화면과 Logbank에만).
+ */
+type Kind = "word" | "expr" | "gram";
+type Item = { key: string; name: string; lv: number; rank: number; group: string; word?: string };
+type View = { kind: Kind | null; axis: "topic" | "pos"; row: string | null; lv: number | null };
+
+const STARTS = [0, 0, 700, 1500, 2500, 3500, 5000, 7000];
+const tint = (p: number): CSSProperties => ({ background: `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * p)}%, transparent)` });
+const ribbon = (items: readonly Item[], chance: (rank: number) => number): CSSProperties => {
+  if (!items.length) return { background: "color-mix(in oklab, var(--color-status-learned) 4%, transparent)" };
+  const sorted = [...items].sort((a, b) => a.rank - b.rank);
+  const steps = Math.min(10, sorted.length);
+  const stops = Array.from({ length: steps }, (_, i) => {
+    const one = sorted[Math.floor((i * (sorted.length - 1)) / Math.max(1, steps - 1))]!;
+    return `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * chance(one.rank))}%, transparent) ${Math.round((100 * i) / Math.max(1, steps - 1))}%`;
+  });
+  return { background: steps > 1 ? `linear-gradient(90deg, ${stops.join(", ")})` : stops[0]!.split(" ").slice(0, -1).join(" ") };
+};
+
+function readLevel(language: string, stage: number): Level {
+  let circle: Circle = emptyCircle();
+  try {
+    const raw = JSON.parse(localStorage.getItem(`quizCircle.v1.${language}`) ?? "null") as Circle | null;
+    if (raw && typeof raw.size === "number" && raw.items) circle = raw;
+  } catch {
+    // 없으면 처음 어림.
+  }
+  return levelOf(circle, Math.max(1, stage), stageCuts(language));
+}
+
+/** 표현·문법은 난이도 안 차례대로 그 단계 순위 구간에 고르게 놓는다. */
+function placed(items: Omit<Item, "rank">[]): Item[] {
+  const by = new Map<number, Omit<Item, "rank">[]>();
+  for (const one of items) by.set(one.lv, [...(by.get(one.lv) ?? []), one]);
+  return items.map((one) => {
+    const list = by.get(one.lv)!;
+    const at = list.indexOf(one);
+    const a = STARTS[one.lv] ?? 0;
+    const b = STARTS[one.lv + 1] ?? a + 1000;
+    return { ...one, rank: a + ((at + 0.5) / list.length) * (b - a) };
+  });
+}
+
+export function LanguageBank({ ui, language, locale, stage }: { ui: UICopy; language: string; locale: string; stage: number }) {
+  const [words, setWords] = useState<readonly BankWord[] | null>(null);
+  const [view, setView] = useState<View>({ kind: null, axis: "topic", row: null, lv: null });
+  const [word, setWord] = useState<string | null>(null);
+  const [help, setHelp] = useState(false);
+  const [level, setLevel] = useState<Level | null>(null);
+  useEffect(() => {
+    let live = true;
+    void loadBank(language).then((list) => {
+      if (!live) return;
+      setWords(list);
+      setLevel(readLevel(language, stage));
+    });
+    return () => {
+      live = false;
+    };
+  }, [language, stage]);
+  const chance = (rank: number) => (level ? knowChance(level, rank) : 0);
+  const items = useMemo(() => {
+    const ladder = ladderFor(language);
+    const wordItems: Item[] = (words ?? []).map((one, rank) => ({
+      key: `w|${one.w}`,
+      name: one.w,
+      word: one.w,
+      lv: stageOfRank(language, rank),
+      rank,
+      group: one.topic ?? "function",
+    }));
+    const posOf = new Map((words ?? []).map((one) => [one.w, posGroup(one.pos)]));
+    const expr = placed((ladder?.stages ?? []).flatMap((st) => st.expressions.map((e) => ({ key: `e|${e}`, name: e, lv: st.order, group: String(st.order) }))));
+    const gram = placed(
+      (ladder?.stages ?? []).flatMap((st) => st.grammar.map((g, index) => ({ key: `g|${st.order}:${index}`, name: glossFor(g.name, locale), lv: st.order, group: String(st.order) }))),
+    );
+    return { word: wordItems, expr, gram, posOf };
+  }, [words, language, locale]);
+  const avg = (list: readonly Item[]) => (list.length ? list.reduce((sum, one) => sum + chance(one.rank), 0) / list.length : 0);
+  const pct = (list: readonly Item[]) => (list.length ? `${Math.round(100 * avg(list))}%` : "");
+  const kindName: Record<Kind, string> = { word: ui.partVocab, expr: ui.partExpression, gram: ui.partGrammar };
+  const levels = (kind: Kind) => (kind === "word" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5]);
+  const lvName = (lv: number) => (lv === 6 ? ui.lbExtended : String(lv));
+  const topicName: Record<string, string> = {
+    people: ui.topicPeople, food: ui.topicFood, home: ui.topicHome, work: ui.topicWork, health: ui.topicHealth, travel: ui.topicTravel, shopping: ui.topicShopping,
+    time: ui.topicTime, feelings: ui.topicFeelings, actions: ui.topicActions, describing: ui.topicDescribing, nature: ui.topicNature, society: ui.topicSociety, function: ui.topicFunction,
+  };
+  const posName: Record<string, string> = { noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction };
+  const rowOf = (kind: Kind, one: Item) => (kind === "word" ? (view.axis === "pos" ? items.posOf.get(one.word ?? "") ?? "function" : one.group) : String(one.lv));
+  const openItem = (kind: Kind, one: Item) => {
+    if (kind === "word") setWord(one.word ?? null);
+    else openLesson({ language, key: one.key });
+  };
+  const helpButton = (
+    <button type="button" data-lb-help aria-label={ui.lbEstimate} title={ui.lbEstimate} onClick={() => setHelp((on) => !on)} className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-line text-meta text-slate-400">
+      ?
+    </button>
+  );
+  const crumbs: { label: string; go: () => void }[] = [{ label: ui.vocabByAll, go: () => setView({ kind: null, axis: "topic", row: null, lv: null }) }];
+  if (view.kind) crumbs.push({ label: kindName[view.kind], go: () => setView({ ...view, row: null, lv: null }) });
+  const kind = view.kind;
+  const bundle = kind && (view.row || view.lv) ? items[kind].filter((one) => (!view.row || rowOf(kind, one) === view.row) && (!view.lv || one.lv === view.lv)).sort((a, b) => a.rank - b.rank) : null;
+  if (kind && bundle) {
+    const rowLabel = view.row ? (kind === "word" ? (view.axis === "pos" ? posName[view.row] : topicName[view.row]) ?? view.row : "") : "";
+    crumbs.push({ label: [view.lv ? ui.dictionaryStage.replace("{n}", lvName(view.lv)) : "", rowLabel].filter(Boolean).join(" · "), go: () => undefined });
+  }
+  return (
+    <div data-languagebank className="flex flex-col gap-3">
+      {/* 찾기 · 낱말 화면(단어 사전과 같은 몸통). 낱말을 열면 아래 색인은 숨긴다. */}
+      <div data-lb-search className="flex min-h-0 flex-col">
+        <DictionaryBody ui={ui} language={language} locale={locale} word={word} onIndex={() => setWord(null)} onPick={(w) => setWord(w)} />
+      </div>
+      {word ? null : (
+        <>
+          <nav aria-label={ui.languagebankTitle} className="flex flex-wrap items-center gap-1.5 text-note">
+            {crumbs.map((one, index) => (
+              <span key={`${one.label}-${index}`} className="flex items-center gap-1.5">
+                {index ? <span aria-hidden className="text-slate-600 rtl:rotate-180">›</span> : null}
+                <button type="button" onClick={one.go} className={index === crumbs.length - 1 ? "font-semibold text-ink" : "text-slate-400 hover:text-ink"}>
+                  {one.label}
+                </button>
+              </span>
+            ))}
+            <span className="flex-1" />
+            {helpButton}
+          </nav>
+          {help ? (
+            <div role="note" data-lb-help-note className="flex items-start gap-2 rounded-xl border border-line bg-surface-raised px-3 py-2 text-caption text-slate-200">
+              <span className="flex-1">{ui.lbEstimateHelp}</span>
+              <button type="button" aria-label={ui.billingClose} onClick={() => setHelp(false)} className="text-slate-500">
+                ✕
+              </button>
+            </div>
+          ) : null}
+          {!words || !level ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
+          {words && level && !kind
+            ? (["word", "expr", "gram"] as const).map((k) => {
+                const all = items[k];
+                if (!all.length) return null;
+                return (
+                  <section key={k} data-lb-kind={k} className="rounded-2xl border border-line bg-surface p-3">
+                    <button type="button" onClick={() => setView({ kind: k, axis: "topic", row: null, lv: null })} className="flex w-full items-baseline gap-2 text-start">
+                      <span className="text-note font-semibold text-status-learned">{kindName[k]}</span>
+                      <span className="text-meta text-slate-500">{all.length.toLocaleString()}</span>
+                      <span className="flex-1" />
+                      <span className="text-title font-semibold text-ink">{pct(all)}</span>
+                      <span aria-hidden className="text-slate-500 rtl:rotate-180">›</span>
+                    </button>
+                    <div className="mt-2 flex gap-1">
+                      {levels(k).map((lv) => {
+                        const part = all.filter((one) => one.lv === lv);
+                        if (!part.length) return null;
+                        return (
+                          <button
+                            key={lv}
+                            type="button"
+                            aria-label={`${kindName[k]} ${ui.dictionaryStage.replace("{n}", lvName(lv))} ${pct(part)}`}
+                            onClick={() => setView({ kind: k, axis: "topic", row: null, lv })}
+                            className="flex min-w-[1.75rem] flex-col gap-1"
+                            style={{ flexGrow: part.length, flexBasis: 0 }}
+                          >
+                            <span className="block h-9 rounded-lg" style={ribbon(part, chance)} />
+                            <span className="text-center text-meta text-slate-500">{lvName(lv)}</span>
+                            <span className="text-center text-meta text-slate-400">{pct(part)}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </section>
+                );
+              })
+            : null}
+          {words && level && kind ? (
+            <>
+              {kind === "word" ? (
+                <div className="flex gap-1.5">
+                  {(["topic", "pos"] as const).map((axis) => (
+                    <button
+                      key={axis}
+                      type="button"
+                      aria-pressed={view.axis === axis}
+                      onClick={() => setView({ ...view, axis, row: null })}
+                      className={`rounded-lg border px-3 py-1 text-caption ${view.axis === axis ? "border-status-learned/50 bg-status-learned/10 font-semibold text-status-learned" : "border-line text-slate-400"}`}
+                    >
+                      {axis === "topic" ? ui.vocabByTopic : ui.vocabByPos}
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+              <div className="grid gap-1" style={{ gridTemplateColumns: `4.5rem repeat(${levels(kind).length}, minmax(0, 1fr))` }}>
+                <span />
+                {levels(kind).map((lv) => (
+                  <button key={lv} type="button" onClick={() => setView({ ...view, row: null, lv })} className={`rounded-lg py-0.5 text-meta ${view.lv === lv && !view.row ? "bg-status-learned/15 text-status-learned" : "text-slate-500"}`}>
+                    {lvName(lv)}
+                  </button>
+                ))}
+                {(kind === "word" ? Object.keys(view.axis === "pos" ? posName : topicName) : ["all"]).map((row) => {
+                  const inRow = kind === "word" ? items[kind].filter((one) => rowOf(kind, one) === row) : items[kind];
+                  if (!inRow.length) return null;
+                  return (
+                    <div key={row} className="contents">
+                      <button
+                        type="button"
+                        disabled={kind !== "word"}
+                        onClick={() => setView({ ...view, row, lv: null })}
+                        className={`truncate text-start text-meta ${view.row === row && !view.lv ? "text-status-learned" : "text-slate-400"}`}
+                      >
+                        {kind === "word" ? (view.axis === "pos" ? posName[row] : topicName[row]) : kindName[kind]}
+                      </button>
+                      {levels(kind).map((lv) => {
+                        const cell = inRow.filter((one) => one.lv === lv);
+                        const on = (view.row === row || kind !== "word") && view.lv === lv;
+                        return (
+                          <button
+                            key={lv}
+                            type="button"
+                            disabled={!cell.length}
+                            data-lb-cell
+                            onClick={() => setView({ ...view, row: kind === "word" ? row : null, lv })}
+                            className={`flex h-10 flex-col items-center justify-center rounded-lg border leading-tight ${on ? "border-ink" : "border-line"}`}
+                            style={ribbon(cell, chance)}
+                          >
+                            <span className="text-caption font-semibold text-ink">{pct(cell)}</span>
+                            <span className="text-meta text-slate-400">{cell.length || ""}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  );
+                })}
+              </div>
+              {bundle ? (
+                <section data-lb-bundle className="rounded-2xl border border-line bg-surface p-3">
+                  <p className="text-meta text-slate-400">
+                    {bundle.length.toLocaleString()} · {pct(bundle)}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {bundle.slice(0, 200).map((one) => (
+                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(chance(one.rank))}>
+                        {one.name}
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+            </>
+          ) : null}
+        </>
+      )}
+    </div>
+  );
+}

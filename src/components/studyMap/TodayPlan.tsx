@@ -1,5 +1,6 @@
 "use client";
 
+import { reformOn } from "@/lib/reform";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -1382,7 +1383,8 @@ export function TodayPlan({
             );
           })}
         </div>
-        {!wrongTab && !examTab ? <DictionaryButton ui={ui} language={language} locale={locale} /> : null}
+        {/* 개편 스위치가 켜지면 단어 사전은 Languagebank 탭으로 옮김(lib/reform.ts). */}
+        {!wrongTab && !examTab && !reformOn() ? <DictionaryButton ui={ui} language={language} locale={locale} /> : null}
         {!wrongTab && !examTab && bank ? settingsIcon : null}
       </div>
       {testDue ? (

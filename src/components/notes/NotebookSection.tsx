@@ -1,5 +1,7 @@
 "use client";
 
+import { reformOn } from "@/lib/reform";
+import { LanguageBank } from "@/components/studyMap/LanguageBank";
 import { noteSpot, takeSpotPart } from "@/lib/resumeSpot";
 import { setUpNextFallback } from "@/lib/curriculum/upNext";
 import { UpNextBar } from "@/components/studyMap/UpNext";
@@ -99,7 +101,8 @@ const CURRICULUM_ONLY = true;
 
 // 오늘 할 것과 단계는 한 칸(2026-10-30 사용자 "오늘 할 것과 단계는 통합 — 첫 화면은 일일 학습으로 바로, 끝나면 단계 화면"): "stage".
 // 복습 칸은 Logbank로(2026-10-31 사용자 "복습 탭은 단계 학습 안으로, 그 자리는 날마다·주마다 배운 것 정리 — 이름은 ~bank로").
-type MyLayer = "stage" | "keep" | "log";
+// "lang" = Languagebank(개편 1단계 2026-11-06, 스위치 lib/reform.ts가 켜졌을 때만 — Stagebank 자리, 칸 순서 [Logbank · Quizbank · Languagebank]).
+type MyLayer = "stage" | "keep" | "log" | "lang";
 // 하루 첫 화면은 일일 학습(2026-10-31 사용자 "하루 첫 화면은 일일 학습, 끝나면 퀴즈 탭을 펴서 제일 위로 — 계속 학습을 유도").
 // 위 칸 이름 줄이 탭 — 누른 칸 하나만 그 아래 제자리에 보인다(2026-11-02 사용자 "위에 있는 버튼을 기준으로 탭을 분할해줘" — 예전 모두 펼침·전체 화면은 뺌).
 const AUTO_KEEP_KEY = "myLayer.autoKeep";
@@ -263,7 +266,9 @@ export function NotebookSection({
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
   // 지금 보는 탭(위 칸 이름 줄, 2026-11-02) — 하루 첫 화면은 Stagebank, 오늘 할 것을 다 하면 그날 한 번 Quizbank(AutoQuiz).
-  const [tab, setTab] = useState<MyLayer>("stage");
+  // 개편 스위치(시험 앱 껍데기에서만 켜짐, lib/reform.ts) — 켜지면 첫 칸은 Quizbank(오늘 카드가 생기면 Logbank).
+  const [reform] = useState(reformOn);
+  const [tab, setTab] = useState<MyLayer>(() => (reformOn() ? "keep" : "stage"));
   /** 그 탭으로 바꾸고 펴기(밖에서 문장구조·상황을 열 때, 오늘 할 것이 끝났을 때). */
   const openLayer = (next: MyLayer | null) => {
     if (!next) return;
@@ -575,6 +580,8 @@ export function NotebookSection({
         <MyLayers
           ui={ui}
           language={language}
+          reform={reform}
+          languagebank={<LanguageBank ui={ui} language={language} locale={locale} stage={book.stage} />}
           tab={tab}
           onOpen={openLayer}
           today={
@@ -2158,6 +2165,7 @@ const LAYER_TONE: Record<MyLayer, { box: string; title: string; dim: string }> =
   stage: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned", dim: "border-status-learned/20 text-status-learned/70" },
   keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good", dim: "border-good/20 text-good/70" },
   log: { box: "border-info/40 bg-info/[0.04]", title: "text-info", dim: "border-info/20 text-info/70" },
+  lang: { box: "border-status-learned/40 bg-status-learned/[0.04]", title: "text-status-learned", dim: "border-status-learned/20 text-status-learned/70" },
 };
 
 /**
@@ -2214,6 +2222,8 @@ function LayerJump({
 function MyLayers({
   ui,
   language,
+  reform,
+  languagebank,
   locale,
   tab,
   onOpen,
@@ -2225,6 +2235,9 @@ function MyLayers({
 }: {
   ui: UICopy;
   language: string;
+  /** 개편 스위치(lib/reform.ts) — 켜지면 Stagebank 대신 Languagebank, 순서 [Logbank · Quizbank · Languagebank]. */
+  reform: boolean;
+  languagebank: ReactNode;
   locale: string;
   /** 지금 보는 탭(위 칸 이름 줄). */
   tab: MyLayer;
@@ -2250,7 +2263,8 @@ function MyLayers({
   useEffect(() => {
     const my = takeSpotPart("my");
     if (!my) return;
-    if (my.bank === "stage" || my.bank === "keep" || my.bank === "log") onOpen(my.bank);
+    if (my.bank === "keep" || my.bank === "log") onOpen(my.bank);
+    else if (my.bank === "stage" || my.bank === "lang") onOpen(reform ? "lang" : "stage");
     if (my.full) setFull(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -2271,7 +2285,7 @@ function MyLayers({
     // 탭으로 고른 칸만 그린다(2026-11-02).
     // 칸 안의 강조색도 그 칸 색(studyMap/bankTone.tsx, 2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘").
     if (shown !== id) return null;
-    const toned = <BankToneProvider tone={id}>{body}</BankToneProvider>;
+    const toned = <BankToneProvider tone={id === "lang" ? "stage" : id}>{body}</BankToneProvider>;
     // 전체 화면이면 칸 안만 전체 화면 층에(머리는 위 이름 줄이 대신).
     if (full)
       return (
@@ -2289,17 +2303,19 @@ function MyLayers({
             <span aria-hidden className="shrink-0 text-caption text-slate-500">⤢</span>
           </button>
           {/* 칸마다 "?" — 배울 수 있는 것·이렇게 공부해요(2026-10-31). */}
-          <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} />
+          {id !== "lang" ? <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={title} /> : null}
         </div>
         <div className="px-3 pb-3">{toned}</div>
       </section>
     );
   };
   const draw = (parts?: PlanParts) => {
-    shown = tab === "keep" && !parts ? "stage" : tab;
+    shown = tab === "keep" && !parts ? (reform ? "lang" : "stage") : tab;
+    if (reform && shown === "stage") shown = parts ? "keep" : "lang";
+    if (!reform && shown === "lang") shown = "stage";
     const first = parts?.today ?? today;
     const todayDone = !first || (parts?.today.done ?? false);
-    const stageCard = card(
+    const stageCard = reform ? null : card(
       "stage",
       stage.title,
       todayDone ? stage.summary : (first.summary ?? stage.summary),
@@ -2333,14 +2349,17 @@ function MyLayers({
         )
       : null;
     const reviewCard = card("log", ui.logbankTitle, null, logbank(parts?.review.body ?? null));
+    const langCard = reform ? card("lang", ui.languagebankTitle, null, languagebank) : null;
     // 탭 순서는 늘 같게(Stagebank · Quizbank · Logbank) — 오늘 할 것이 끝나면 순서 대신 Quizbank 탭으로 바뀜(AutoQuiz).
-    const jumpItems = [...(parts ? (["stage", "keep"] as const) : (["stage"] as const)), "log" as const].map((id) => ({ id, title: id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : ui.logbankTitle }));
+    const order: MyLayer[] = reform ? ["log", ...(parts ? (["keep"] as const) : []), "lang"] : [...(parts ? (["stage", "keep"] as const) : (["stage"] as const)), "log"];
+    const titleOf = (id: MyLayer) => (id === "stage" ? stage.title : id === "keep" ? ui.keepTitle : id === "lang" ? ui.languagebankTitle : ui.logbankTitle);
+    const jumpItems = order.map((id) => ({ id, title: titleOf(id) }));
     return (
       <>
         {/* 오늘 할 것이 끝나면 그날 한 번 Quizbank 탭으로(2026-10-31, 탭 2026-11-02). */}
-        {parts ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
+        {parts && !reform ? <AutoQuiz done={todayDone} onOpen={onOpen} baseDepth={full ? 1 : 0} /> : null}
         {/* 오늘 할 것이 남았으면 My를 처음 열 때 Stagebank를 펼친 채(전체 화면)로 — 끝나면 AutoQuiz가 Quizbank로 넘김(2026-11-03). */}
-        {parts && !todayDone && shown === "stage" && !full ? <AutoFull onFull={() => setFull(true)} /> : null}
+        {parts && !reform && !todayDone && shown === "stage" && !full ? <AutoFull onFull={() => setFull(true)} /> : null}
         {full ? (
           <FullScreenLayer>
             <LayerJump
@@ -2349,20 +2368,22 @@ function MyLayers({
               active={shown}
               onClose={() => setFull(false)}
               closeLabel={ui.billingClose}
-              help={<BankHelpButton ui={ui} locale={locale} language={language} bank={shown} title={jumpItems.find((one) => one.id === shown)?.title ?? ""} />}
+              help={shown !== "lang" ? <BankHelpButton ui={ui} locale={locale} language={language} bank={shown} title={jumpItems.find((one) => one.id === shown)?.title ?? ""} /> : undefined}
             />
             <div className="min-h-0 flex-1 overflow-y-auto">
               {stageCard}
-              {keepCard}
               {reviewCard}
+              {keepCard}
+              {langCard}
             </div>
           </FullScreenLayer>
         ) : (
           <>
             <LayerJump items={jumpItems} onJump={pressTab} active={shown} />
             {stageCard}
-            {keepCard}
             {reviewCard}
+            {keepCard}
+            {langCard}
           </>
         )}
         {parts?.overlays}
