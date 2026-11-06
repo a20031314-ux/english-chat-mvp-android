@@ -90,6 +90,7 @@ export function CallButton({
   disabled,
   pressed,
   tone = "plain",
+  callout = false,
 }: {
   icon: string;
   label: string;
@@ -97,6 +98,8 @@ export function CallButton({
   disabled?: boolean;
   pressed?: boolean;
   tone?: "plain" | "end" | "warn";
+  /** 지금 누를 차례라 눈에 띄게(글 없이 — 끝내기: 튜터가 작별 인사를 했을 때, 2026-11-06). */
+  callout?: boolean;
 }) {
   return (
     <button
@@ -110,7 +113,7 @@ export function CallButton({
     >
       <span
         aria-hidden
-        className={`flex h-14 w-14 items-center justify-center rounded-full text-title transition ${
+        className={`flex h-14 w-14 items-center justify-center rounded-full text-title transition ${callout ? "scale-110 ring-4 ring-bad/40 motion-safe:animate-pulse " : ""}${
           tone === "end"
             ? "bg-bad text-white"
             : tone === "warn"

@@ -1505,3 +1505,21 @@ test("the aim result is read only when an aim was being checked", () => {
   assert.equal(parse({ say: "Nice.", assessment: "on_track", next: "free", aim: "maybe" }, { ...free, aimCheck: "past" }, open)?.aim, undefined);
   assert.equal(parse({ say: "Sorry?", assessment: "stuck", next: "free", aim: "used" }, { ...free, heard: "", aimCheck: "past" }, open)?.aim, undefined, "nothing was said");
 });
+
+test("in an open conversation the learner hangs up, not the tutor", () => {
+  const leaving = parse(
+    { say: { text: "Bye, take care!", translation: "" }, assessment: "closing", next: "end" },
+    { nodeId: "talk", mode: "free", heard: "Thank you", directedTurns: 5 },
+    withBank,
+  );
+  assert.equal(leaving?.assessment, "closing", "the app still learns they sounded like leaving");
+  assert.deepEqual(leaving?.next, { step: "talk" }, "but the call stays open");
+  const capped = parse(
+    { say: { text: "Bye!", translation: "" }, assessment: "on_track", next: "free" },
+    { nodeId: "talk", mode: "free", heard: "ok", directedTurns: DIRECTED_TURN_LIMIT - 1 },
+    withBank,
+  );
+  assert.deepEqual(capped?.next, { end: true }, "the turn cap still closes it");
+  const prompt = tutorSystemPrompt({ scenario: open, bank, recorded: recordedLines(open, SCENARIOS, bank), request: request({ scenarioId: open.id, nodeId: "talk" }) });
+  assert.match(prompt, /They hang up themselves when they want to/);
+});

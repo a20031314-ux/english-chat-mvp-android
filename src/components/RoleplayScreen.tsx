@@ -172,6 +172,8 @@ export function RoleplayScreen({
   const redoLine = redo.line;
   /** 튜터 수업 카드 — 고친 말·건넨 표현을 통화 화면에 띄움(lib/roleplay/transcriptMarks.ts nextCoachCard). */
   const [coachCard, setCoachCard] = useState<CoachCard | null>(null);
+  // 그냥 대화: 튜터가 학습자 말을 작별로 읽은 차례(2026-11-06) — 통화는 열어 두고 끝내기만 강조. 다음 차례에 다시 판단.
+  const [leaving, setLeaving] = useState(false);
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
   /** 자막 줄을 눌러 뜻을 편 튜터 줄(글) — 💬 자막은 원문만, 누르면 해석(2026-11-03 사용자 "2번"). 다음 줄이 오면 접힘. */
@@ -473,6 +475,7 @@ export function RoleplayScreen({
       // than a word about something they managed to say.
       // 못 알아들었어요로 부른 차례: 학습자 줄이 없으니 고친 말·막힘 표시를 붙이지 않는다.
       const missedTurn = Boolean(instruction.request.missed);
+      setLeaving(Boolean(scenario.openEnded && direction?.assessment === "closing" && !("end" in direction.next)));
       // 튜터 수업의 표현 건네기(offer)는 맞게 말한 줄 — 고친 말(better)이 아니라 💡 더 자연스럽게(smoother)로 붙인다.
       const meant = missedTurn ? "" : (direction?.meant ?? "");
       const offered = missedTurn ? "" : offeredOf(direction);
@@ -1208,6 +1211,7 @@ export function RoleplayScreen({
         onToggleCoach={toggleCoach}
         onHint={openHelp}
         onEnd={hangUp}
+        leaving={leaving}
       />
       <CallAdStrip />
 

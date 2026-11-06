@@ -856,7 +856,7 @@ ${focus}`
 "next" is where the conversation is after your line:
 ${
   scenario.openEnded
-    ? `- "free": it carries on.\n- "end": your line closes it.`
+    ? `- "free": always. They hang up themselves when they want to. When they are leaving, say a short, warm goodbye in your own manner, give "closing" as the assessment and still "free" — and if they carry on talking after all, simply carry on.\n- "end": only when you are told this is the last turn you have.`
     : `- "step:<id>": your line ends by asking that step's question. Jump ahead if they already answered later steps; never go back to a step that is done — if they change an earlier answer, say so and stay where you are.
 - "free": you are off your list for a moment, talking about something else.
 - "end": your line closes the conversation.
@@ -1360,6 +1360,10 @@ export function parseDirection(
       next = { free: true };
     }
   }
+  // 그냥 대화는 학습자가 끝내기를 눌러 끊는다(사용자 2026-11-06 "종료시점을 명확하게… 버튼"). 튜터가 작별로 읽어도
+  // 통화는 열어 두고(assessment closing → 앱이 끝내기 버튼을 강조), 닫는 건 한도 차례뿐. 점검: 짧은 "ありがとう"를
+  // 작별로 읽어 6턴에 닫힌 통화가 둘.
+  if (scenario.openEnded && "end" in next && !lastTurn(request)) next = { step: request.nodeId };
   if (lastTurn(request)) {
     next = { end: true };
     follow = undefined;
