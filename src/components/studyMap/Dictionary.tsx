@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
@@ -112,7 +113,10 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
                     <li key={entry.word}>
                       <button
                         type="button"
-                        onClick={() => setPicked(entry)}
+                        onClick={() => {
+                          setPicked(entry);
+                          noteLedger(language, [{ k: `w|${entry.word.toLocaleLowerCase()}`, src: "dict", r: "look" }]);
+                        }}
                         className="flex w-full items-baseline gap-2 rounded-xl px-2 py-1.5 text-start hover:bg-white/[0.06]"
                       >
                         <bdi dir="auto" className="text-chat text-ink">{entry.word}</bdi>

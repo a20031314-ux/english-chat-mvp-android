@@ -243,6 +243,8 @@ export type AxisFill = {
   n: number;
   /** 단계 칸마다 채운 몫(0~1, 게이지). */
   stages: number[];
+  /** 단계 칸마다 실제로 잰 수(답·차례 — 반감 전). 0이면 그 단계는 아직 안 만남: 띠(SkillBands)는 칠하지 않는다(2026-11-06). */
+  stageN: number[];
   cells: FillCell[];
 };
 export type FillResult = { axes: Record<Axis, AxisFill>; weak: FillCell[]; startStage: number };
@@ -399,7 +401,7 @@ export function computeFill(input: FillInput): FillResult {
       if (have) have.value = stages[s - 1] ?? 0;
       else out.push({ axis, id: `stage:${s}`, value: stages[s - 1] ?? 0, n: 0, gap: 0, state: "unknown" });
     }
-    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, cells: sortCells(out) };
+    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, stageN: Array.from({ length: STAGES }, (_, i) => cells.get(`stage:${i + 1}`)?.n ?? 0), cells: sortCells(out) };
   }
 
   axes.talk = talkFill(input.calls, prior.fill * PRIOR_SHARE.talk, prior.range);
@@ -486,7 +488,7 @@ export function talkFill(calls: readonly CallTurns[], prior: number, range0: num
     lead.gap = flowShare - leadShare;
   }
   const stages = stageTurns.map((t, i) => (t ? stageFlow[i]! / t : 0));
-  return { axis: "talk", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: turns, stages, cells: sortCells(cells) };
+  return { axis: "talk", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: turns, stages, stageN: stageTurns, cells: sortCells(cells) };
 }
 
 export function listenFill(calls: readonly CallTurns[], prior: number, range0: number): AxisFill {
@@ -508,7 +510,7 @@ export function listenFill(calls: readonly CallTurns[], prior: number, range0: n
   const stages = asked.map((n, i) => (n ? scored[i]! : prior));
   const cells: FillCell[] = stages.map((value, i) => ({ axis: "listen" as const, id: `band:${i + 1}`, value, n: asked[i]!, gap: 0, state: (asked[i]! < WEAK_MIN_N ? "unknown" : value < 0.6 ? "weak" : "ok") as CellState }));
   for (const cell of cells) if (cell.state === "weak") cell.gap = 0.6 - cell.value;
-  return { axis: "listen", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: total, stages, cells: sortCells(cells) };
+  return { axis: "listen", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: total, stages, stageN: asked, cells: sortCells(cells) };
 }
 
 /* ───────── 계속 재기 ───────── */

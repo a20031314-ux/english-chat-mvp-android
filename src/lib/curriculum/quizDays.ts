@@ -2,6 +2,8 @@
  * 날마다 푼 퀴즈 수·맞힌 수(2026-10-31 Logbank — 사용자 "복습 칸 자리에 날마다·주마다 배운 것 정리, AI 없이 목록만").
  * 이 폰에만, 언어마다, 최근 1년(2026-11-02 Logbank 주·월 정리 — 예전 60일). 수와 그날 틀린 열쇠(낱말·표현·틀 이름 — 학습자 문장 아님)만.
  */
+import { noteLedger } from "./logLedger.ts";
+
 const KEY = "quizDays.v1";
 const KEEP_DAYS = 366;
 
@@ -59,6 +61,8 @@ export function noteQuizDay(language: string, day: string, correct: boolean, key
   } catch {
     // 이번에만.
   }
+  // Logbank 사건 장부에도(같이 쓰기 — curriculum/logLedger.ts).
+  if (key) noteLedger(language, [{ k: key, src: "quiz", r: correct ? "ok" : "miss", ...(shape ? { m: shape === "t" ? "write" : "pick" } : {}) }]);
 }
 
 /** "2026-10-31" 같은 날(localDay) → 비교용 수. */

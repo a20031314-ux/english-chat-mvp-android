@@ -5,6 +5,8 @@ import { apiUrl } from "@/lib/apiBase";
 import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
+import { noteLedger } from "@/lib/curriculum/logLedger";
+import { fixLedgerKeys } from "@/lib/roleplay/recap";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { FollowList, PersonCard, PublicProfile } from "./social";
 import type { LiarMode, LiarTopic, LiarView } from "./liarGame";
@@ -327,6 +329,8 @@ export async function fixMyLine(input: {
     disputed?: unknown;
   };
   if (body.skip || body.hasError !== true || typeof body.corrected !== "string" || typeof body.original !== "string") return null;
+  // Logbank 사건 장부: 고친 문장에만 있는 문장구조 = 틀림(문장은 남기지 않음, curriculum/logLedger.ts).
+  noteLedger(input.targetLanguage, fixLedgerKeys(input.targetLanguage, body.original, body.corrected).map((k) => ({ k, src: "people" as const, r: "miss" as const })));
   return {
     original: body.original,
     corrected: body.corrected,

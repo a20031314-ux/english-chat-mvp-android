@@ -89,3 +89,31 @@ export function sameLine(text: string): string {
 export function recapReviewKeys(items: RecapItem[]): string[] {
   return [...new Set(items.flatMap((item) => item.frames.map((frame) => `f|${frame.id}`)))].slice(0, 12);
 }
+
+/**
+ * Logbank 사건 장부(curriculum/logLedger.ts, 2026-11-06)에 남길 통화 사건 — 문장은 빼고 열쇠만.
+ * 고친 말의 문장구조 = 틀림(miss), 고칠 것 없이 내가 한 줄에 든 문장구조 = 씀(used). 같은 열쇠는 틀림이 앞선다.
+ */
+export function recapLedgerKeys(language: string, lines: TranscriptLine[], pool: Frame[] = allFramesFor(language)): { miss: string[]; used: string[] } {
+  const miss = new Set<string>();
+  const used = new Set<string>();
+  for (const line of lines) {
+    if (line.who !== "learner") continue;
+    const right = (line.meant || line.better || "").trim();
+    if (right && right !== line.text.trim()) {
+      for (const frame of framesInLine(language, right, pool)) miss.add(`f|${frame.id}`);
+    } else {
+      for (const frame of framesInLine(language, line.text, pool)) used.add(`f|${frame.id}`);
+    }
+  }
+  for (const key of miss) used.delete(key);
+  return { miss: [...miss], used: [...used] };
+}
+
+/** 사람 대화 교정(방 내 줄 교정): 고친 문장에만 있는 문장구조 = 틀림 열쇠. */
+export function fixLedgerKeys(language: string, original: string, corrected: string, pool: Frame[] = allFramesFor(language)): string[] {
+  const had = new Set(framesInLine(language, original, pool).map((frame) => frame.id));
+  return framesInLine(language, corrected, pool)
+    .filter((frame) => !had.has(frame.id))
+    .map((frame) => `f|${frame.id}`);
+}
