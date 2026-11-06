@@ -235,3 +235,4 @@
 - 2026-11-06 watch → dev: [my] src/components/studyMap/Dictionary.tsx:83 — 어휘 퀴즈가 사전 예문을 쓰게 되어 퀴즈 중 📕 사전에서 뜻으로 찾으면 빈칸 문장 전체가 보임 (지금 낸 문장 가리기 또는 문제 푸는 동안 사전 숨김).
 - 2026-11-06 watch → dev: [my] src/lib/curriculum/logLedger.ts:123 — noteQuizDay가 장부에도 쓰는데 migrateLedger가 Logbank 첫 열기 때 예전 퀴즈 기록 전체를 다시 넣어, 업데이트 뒤 열기 전 푼 퀴즈가 두 번 (migrate 때 이미 장부에 있는 날·열쇠는 건너뛰기 또는 이전을 업데이트 직후 한 번으로).
 - 2026-11-06 watch → dev: [ai] src/components/roleplay/callHooks.ts:68 — 통화 끝에 대본 전체를 장부에 넣어 "이어서 하기"로 다시 연 통화는 앞 세션 줄이 다른 시각으로 또 쌓임 (이번 세션 줄만, 또는 통화 id로 이미 넣은 줄 건너뛰기).
+- 2026-11-06 watch → dev: [my] src/lib/curriculum/quiz.ts:1312 — 개편 cardQuiz "뜻만 보고 쓰기"가 앱 언어=학습 언어면 quizGloss null이라 뜻 줄·문장 없이 입력칸만 남음 (뜻이 없으면 null을 돌려 예전 모양으로, 또는 뜻 가리기처럼 듣고 말하기로 — 2.80에서 개편 켜기 전).
