@@ -3,17 +3,17 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 탭 번호(`hub/tabs.md` — 1 메인·2 My·3 AI·4 사람·5 점검·6 스토어): "N번 받기" → `hub/handoff/N.md`부터, 길어지면 `/pass N`으로 양도. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-11-05(PC·내부 테스트 작업 main에 합침).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-11-06(Play 2.79 확인).
 
 ## 버전
 
 | 항목 | 값 | 어디서 바꾸나 |
 |---|---|---|
-| Play에 올라간 앱 | **2.78 (versionCode 92)** — 사용자 확인 2026-11-02 "Play에는 2.78이 올라가있어". 허브는 2.75로 남아 있었고 2.79 올림(fe46330)이 "2.78은 Play에 안 나감"으로 잘못 적음 → 바로잡음. 빌드한 커밋·공개일은 아직 모름(PR #27 머지 2026-10-30 03시 KST 뒤 main) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
+| Play에 올라간 앱 | **2.79 (versionCode 93)** — 사용자 확인 2026-11-06 "2.79는 이미 올라가있어". 빌드한 커밋·공개일은 아직 모름(내부 테스트 태그 `internal-2.79.4` 2026-11-03 기준이면 그 뒤 main 57커밋은 2.80 몫). 그 전 Play는 2.78(92) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | **2.79 (versionCode 93) 올림(2026-11-01, 사용자 "버전 2.79로 올려줘")** — 2.78(92)은 Play에 나감(2026-11-02 바로잡음 — 위 줄), 2.79 = 2.78 빌드 뒤 main 전부(Stagebank·Quizbank 개편·정기 시험·실제 통화 화면·튜터 그림·목소리 남녀·튜터 말투 등). Play는 2.78 → 2.79(출시 노트 93·새로워진 점은 2.75 → 2.79 기준으로 쓰여 있어 다시 봐야 함). 새로워진 점 4장(my-banks·lesson·quizbank·real-call, 14개 언어 그림 — 2.76~2.78 카드는 비움)·사용법(My·통화·채팅 메뉴 14개 언어, 2.78 이하는 예전 글 `r283`) 넣음(2026-11-01). 체감 점검(`hub/drafts/ux-check-2026-11-01.md`)·난이도 표시 17/18 고침(baeec1e). **출시 노트 93 = PR #29(사람이 머지)** → PC에서 `npm run pc:build` → Signed Bundle(사람). **2026-11-03 내부 테스트만** 올렸던 창구 정리(`internal/2.79-check`, 태그 `internal-2.79.4`)와 그 위 PC(Cursor) 작업(통화 자유대화/공부·지난 통화 기억·단어 사전·영어 넣어 둔 문제·Logbank 2주 비교)은 **2026-11-05 main에 합침** — 서버는 바로, 화면은 2.79 빌드부터. 배너(2.66)·Play 공개(2.78)는 그대로. | — |
+| 다음 앱 버전 | **2.80 (versionCode 94) — 아직 안 올림.** 2.79 빌드 뒤 main(통화 자유대화/공부·지난 통화 기억·자유대화 채우기, 단어 사전 여러 뜻·앱 언어 뜻, 사전 예문 먼저 어휘 퀴즈 등). Languagebank 개편안(사전 탭·오늘 할 것 없애기·체크 셋·Logbank 개편)은 문서·시안만, 코드 아님(2026-11-06 점검). 2.79 상세 기록은 `hub/roles/store.md` 출시 기록. | — |
 | iOS | **85.14(2.71) 심사 취소하고 갈아타기(사용자 2026-10-31)** — iOS 1차 = 다음 안드로이드 출시와 같은 커밋(사람·통화·포인트 끔, 대본 플랜 추가). 순서·사람 일: `hub/drafts/ios-launch.md` "출시 범위 다시 정함 2". 앱 ID 6824542951 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
