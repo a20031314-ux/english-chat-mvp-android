@@ -16,7 +16,8 @@ state.uid = `simcheck-ux-${Date.now().toString(36)}-${name}`;
 const browser = await chromium.launch({ args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", `--use-file-for-fake-audio-capture=${path.join(ROOT, "tmp/ux/voice.wav")}`] });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, colorScheme: "dark", hasTouch: true });
 // UX_UPDATED_FROM=2.75: 처음 열 때 그 버전에서 업데이트한 사람처럼(새로워진 점이 뜸 — hub/ux-issues.md U02).
-await ctx.addInitScript(([learn, ui, from]) => { if (!localStorage.getItem("appUiLocale")) { localStorage.setItem("appUiLocale", ui); localStorage.setItem("appTargetLanguage", learn); if (from) localStorage.setItem("whatsNewSeenVersion", from); } }, [learn, ui, process.env.UX_UPDATED_FROM || ""]);
+// UX_REFORM=1: Languagebank 개편 화면(lib/reform.ts 스위치 — 시험 앱과 같은 화면, 2026-11-07).
+await ctx.addInitScript(([learn, ui, from, reform]) => { if (!localStorage.getItem("appUiLocale")) { localStorage.setItem("appUiLocale", ui); localStorage.setItem("appTargetLanguage", learn); if (from) localStorage.setItem("whatsNewSeenVersion", from); } if (reform) localStorage.setItem("lbReform", "1"); }, [learn, ui, process.env.UX_UPDATED_FROM || "", process.env.UX_REFORM || ""]);
 const page = await ctx.newPage();
 let pendingSay = "";
 let dayOffset = 0;
