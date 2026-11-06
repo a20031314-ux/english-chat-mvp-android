@@ -82,7 +82,7 @@
     "words:v1": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 50개 묶음마다 모델이 만든 예문·쓴 꼴·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻 — 학습자 글 없음" },
     "exprcards:v2": { "feature": "Quizbank 어휘 탭 표현 카드", "scope": "shared", "onAccountDelete": "해당 없음", "what": "단계마다 덩어리 표현에 모델이 만든 예문·뜻·예문 뜻(학습 언어마다), 앱 언어로 옮긴 뜻, 빠진 표현 다시 만들기 표시(하루) — 학습자 글 없음" },
     "words:v2": { "feature": "지속 학습 빈도 단어", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 단어 묶음 카드의 앱 언어 뜻 — 원문 줄 지문까지 열쇠에 넣어 카드가 바뀌면 다시 옮김(2026-10-31), 학습자 글 없음" },
-    "preparedcopy:v1": { "feature": "Quizbank 넣어 둔 문법·표현 문제", "scope": "shared", "onAccountDelete": "해당 없음", "what": "저장소 문제 파일의 한국어 뜻·까닭을 앱 언어로 옮긴 것(학습 언어 × 앱 언어 × 묶음 지문마다) — 학습자 글 없음" },
+    "preparedcopy:v2": { "feature": "Quizbank 넣어 둔 문법·표현 문제", "scope": "shared", "onAccountDelete": "해당 없음", "what": "저장소 문제 파일의 한국어 뜻·까닭을 앱 언어로 옮긴 것(학습 언어 × 앱 언어 × 묶음 지문마다) — 학습자 글 없음" },
     "wordsense:v2": { "feature": "📕 단어 사전 낱말의 여러 뜻", "scope": "shared", "onAccountDelete": "해당 없음", "what": "빈도 목록 낱말 × 앱 언어마다 모델이 한 번 만든 뜻 1~4개(뜻마다 품사·예문·예문 뜻) — 모두가 같이 쓰는 고정 값, 학습자 글 없음" },
     "worddict:v1": { "feature": "Quizbank 어휘 탭 사전 예문", "scope": "shared", "onAccountDelete": "해당 없음", "what": "사전 예문(word-sentences, 저장소 파일)의 영어 뜻을 앱 언어로 옮긴 것(학습 언어 × 앱 언어 × 묶음 지문마다) — 학습자 글 없음" },
     "stagecopy:v1": { "feature": "지도 단계", "scope": "shared", "onAccountDelete": "해당 없음", "what": "단계 범위 화면 글·단계 대본과 틀의 뜻풀이를 앱 언어로 옮긴 것(학습 언어 × 앱 언어마다 하나, 대본·틀은 단계마다)" },

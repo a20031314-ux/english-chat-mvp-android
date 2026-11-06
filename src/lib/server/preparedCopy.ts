@@ -43,7 +43,7 @@ async function translateChunk(lines: string[], target: string, uiName: string, u
     messages: [
       {
         role: "system",
-        content: `Translate each numbered line from Korean into ${uiName}. The lines belong to a quiz on a ${target}-learning app read by a ${uiName} speaker: some are the meaning of a ${target} sentence, some explain in one sentence why a ${target} form is right. Write every line in ${uiName}. Keep every ${target} word, form, particle and grammar term exactly as written in ${target} — never translate or change them. Plain and natural, the same length or shorter. Answer with exactly ${lines.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
+        content: `Translate each numbered line from Korean into ${uiName}. The lines belong to a quiz on a ${target}-learning app read by a ${uiName} speaker: some are the meaning of a ${target} sentence, some explain in one sentence why a ${target} form is right. Write every line in ${uiName}. Keep every ${target} word, form, particle and grammar term exactly as written in ${target} — never translate or change them. Every Korean word must be translated, including Korean inside quotes or brackets (like '～보다 더' or '~하고 싶다'); no Korean (Hangul) may remain. Plain and natural, the same length or shorter. Answer with exactly ${lines.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
       },
       { role: "user", content: lines.map((text, index) => `${index + 1}|${text.replace(/\s+/g, " ")}`).join("\n") },
     ],
@@ -55,7 +55,8 @@ async function translateChunk(lines: string[], target: string, uiName: string, u
     if (match) byNumber.set(Number(match[1]), match[2]!.trim());
   }
   const texts = lines.map((_, index) => byNumber.get(index + 1) ?? "");
-  if (texts.some((text) => !text) || !looksLike(ui, texts)) return null;
+  // 한글이 남으면(따옴표 속 한국어 풀이를 그대로 둔 것) 그 묶음은 버린다 — 2026-11-06 th·ar 운영 확인.
+  if (texts.some((text) => !text || /\p{Script=Hangul}/u.test(text)) || !looksLike(ui, texts)) return null;
   return texts;
 }
 
@@ -78,7 +79,7 @@ export async function preparedCopy(language: string, ui: string, onMake?: () => 
   await Promise.all(
     parts.map(async (part) => {
       const lines = part.flatMap((one) => [one.gloss, one.why]);
-      const key = `preparedcopy:v1:${language}:${ui}:${textsFingerprint(lines)}`;
+      const key = `preparedcopy:v2:${language}:${ui}:${textsFingerprint(lines)}`;
       let texts: string[] | null = null;
       try {
         const kept = await kvGetJson<string[]>(key);

@@ -124,7 +124,7 @@ async function build(language: string, files: (() => Promise<{ default: Record<s
   return items;
 }
 
-const COPY = "preparedCopy.v1";
+const COPY = "preparedCopy.v2";
 const COPY_DAYS = 30;
 
 /**
