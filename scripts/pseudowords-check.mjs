@@ -70,7 +70,8 @@ async function check(lang) {
     if (shortList.some((one) => lev1(word, one))) near += 1;
   }
   if (words.length !== WANT) errs.push(`개수 ${words.length} (≠ ${WANT})`);
-  if (near > words.length / 2) errs.push(`한 글자 바꿈이 절반 넘음: ${near}/${words.length}`);
+  // 한자 두 글자 말은 한 글자를 공유하는 진짜 낱말이 늘 있어 이 규칙이 뜻이 없다(ja·zh).
+  if (!["ja", "zh"].includes(lang) && near > words.length / 2) errs.push(`한 글자 바꿈이 절반 넘음: ${near}/${words.length}`);
   const fake = median(words.map((w) => [...String(w)].length));
   const base = median(WORDS.slice(0, 5000).map((row) => [...String(row[0])].length));
   if (base && (fake < base * 0.6 || fake > base * 1.4)) warns.push(`길이 중앙값 ${fake} (빈도 목록 ${base})`);
