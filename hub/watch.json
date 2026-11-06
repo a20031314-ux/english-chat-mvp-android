@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "808c08899be5716ab8543e575b72118dd9609147",
- "at": "2026-11-06T04:21:38.248Z",
+ "last": "ccfdc9c0622a4d7b32520d58857481c7d56ebd83",
+ "at": "2026-11-06T06:22:08.707Z",
  "screensFiredAt": "2026-11-04T22:25:37.051Z",
  "metrics": {
-  "commit": "808c088",
+  "commit": "ccfdc9c",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -141,6 +141,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · scriptRecheck · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · scriptRecheck · 값 매기는 법": "claude-sonnet-5-5 2000/300 토큰 (기능 scriptRecheck)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · scriptRecheck · 근거": "가정",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordSenses · 한 번": "7.6원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordSenses · 모델 호출": "1",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordSenses · 값 매기는 법": "claude-sonnet-5-5 450/450 토큰 (기능 wordSenses)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · wordSenses · 근거": "가정",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatVerify · 한 번": "5.3원",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatVerify · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatVerify · 값 매기는 법": "claude-sonnet-5-5 900/200 토큰 (기능 chatVerify)",
@@ -493,6 +497,9 @@
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · fixedLesson · 모델": "claude-sonnet-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · fixedLesson · 입력/출력 (100만 토큰당)": "$2 / $10",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · fixedLesson · 출처": "platform.claude.com pricing 2026-10-22",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · wordSenses · 모델": "claude-sonnet-5-5",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · wordSenses · 입력/출력 (100만 토큰당)": "$2 / $10",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · wordSenses · 출처": "platform.claude.com pricing 2026-10-22",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · 받아쓰기 — 통화·방 한 마디 · 모델": "scribe_v2",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · 받아쓰기 — 통화·방 한 마디 · 입력/출력 (100만 토큰당)": "분당 $0.0036",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · 받아쓰기 — 통화·방 한 마디 · 출처": "hub/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원)",

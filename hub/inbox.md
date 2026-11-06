@@ -233,3 +233,5 @@
 - 2026-11-05 watch → dev: [my] src/components/studyMap/Dictionary.tsx:34 — 단어 사전 뜻은 영어 학습+한국어 앱에서만, 예문 뜻이 원문과 같은 문장으로 두 번(영어 학습 lineEn·한국어 학습+한국어 앱 lineKo), 다른 앱 언어는 안 보이는 한국어 뜻으로 검색이 맞음 (학습 언어와 같은 뜻 줄 빼기, 뜻 없는 조합은 칸 이름 "단어", 뜻 검색은 ko 앱만).
 - 2026-11-06 watch → dev: [my] src/lib/server/wordDict.ts:25 — 예문 뜻 옮기기 실패 때 row.en(영어 학습이면 문장 그대로)이 뜻으로 들어가 답한 뒤 뜻 줄에 같은 영어 문장, 낱말 문제에 glossFirst·prepared가 붙으면 정답 노출 (실패 때 뜻 비우기, quizGloss가 raw === 문제 문장이면 빼기).
 - 2026-11-06 watch → dev: [my] src/components/studyMap/Dictionary.tsx:83 — 어휘 퀴즈가 사전 예문을 쓰게 되어 퀴즈 중 📕 사전에서 뜻으로 찾으면 빈칸 문장 전체가 보임 (지금 낸 문장 가리기 또는 문제 푸는 동안 사전 숨김).
+- 2026-11-06 watch → dev: [my] src/lib/curriculum/logLedger.ts:123 — noteQuizDay가 장부에도 쓰는데 migrateLedger가 Logbank 첫 열기 때 예전 퀴즈 기록 전체를 다시 넣어, 업데이트 뒤 열기 전 푼 퀴즈가 두 번 (migrate 때 이미 장부에 있는 날·열쇠는 건너뛰기 또는 이전을 업데이트 직후 한 번으로).
+- 2026-11-06 watch → dev: [ai] src/components/roleplay/callHooks.ts:68 — 통화 끝에 대본 전체를 장부에 넣어 "이어서 하기"로 다시 연 통화는 앞 세션 줄이 다른 시각으로 또 쌓임 (이번 세션 줄만, 또는 통화 id로 이미 넣은 줄 건너뛰기).
