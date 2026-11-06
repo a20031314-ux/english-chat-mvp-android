@@ -56,7 +56,16 @@ export function CallStage({
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
   onCaptionTap?: () => void;
   /** 통화 시작: 자유대화 / 공부. 고르기 전에는 인사가 없다. */
-  pick?: { ask: string; talk: string; study: string; last: "talk" | "study"; onTalk: () => void; onStudy: () => void } | null;
+  pick?: {
+    ask: string;
+    talk: string;
+    study: string;
+    last: "talk" | "study";
+    onTalk: () => void;
+    onStudy: () => void;
+    /** 그 언어의 튜터 둘 중 고르기(2026-11-06 사용자 "시작할 때 선택") — 고르면 인사 목소리·이름이 그 튜터로. */
+    onTutor?: (gender: TutorGender) => void;
+  } | null;
   /** 공부 모드: 로그뱅크 육각형. 부족한 칸이 있을 때만. */
   studyMap?: ReactNode;
   language: string;
@@ -83,16 +92,46 @@ export function CallStage({
 
       {/* 위: AI 튜터 */}
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-tutor>
-        <SpeakingRing speaking={speaker === "tutor"}>
-          <AiAvatar size={96} language={language} gender={partner.gender} />
-        </SpeakingRing>
-        <p className="flex items-center gap-2 text-title font-semibold text-ink">
-          <bdi>{partner.givenName}</bdi>
-          {partner.flagCountry ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
-          ) : null}
-        </p>
+        {pick?.onTutor ? (
+          <div className="flex items-start justify-center gap-6" data-call-tutor-pick>
+            {(["f", "m"] as const).map((one) => {
+              const person = chatPartnerForLanguage(language, one);
+              const on = person.gender === partner.gender;
+              return (
+                <button
+                  key={one}
+                  type="button"
+                  data-call-tutor-choice={one}
+                  aria-pressed={on}
+                  onClick={() => pick.onTutor?.(one)}
+                  className={`flex flex-col items-center gap-2 rounded-2xl p-2 ${on ? "bg-white/15 ring-2 ring-white/50" : "opacity-50"}`}
+                >
+                  <AiAvatar size={on ? 96 : 72} language={language} gender={one} />
+                  <span className="flex items-center gap-2 text-note font-semibold text-ink">
+                    <bdi>{person.givenName}</bdi>
+                    {person.flagCountry ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={`/flags/${person.flagCountry}.png`} alt="" className="h-3 w-5 object-cover" />
+                    ) : null}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <>
+            <SpeakingRing speaking={speaker === "tutor"}>
+              <AiAvatar size={96} language={language} gender={partner.gender} />
+            </SpeakingRing>
+            <p className="flex items-center gap-2 text-title font-semibold text-ink">
+              <bdi>{partner.givenName}</bdi>
+              {partner.flagCountry ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
+              ) : null}
+            </p>
+          </>
+        )}
         {studyMap}
         <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start gap-3" aria-live="polite">
           {pick ? (

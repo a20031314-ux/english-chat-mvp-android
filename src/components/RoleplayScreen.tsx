@@ -65,7 +65,8 @@ import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
 import { translateUtterance } from "@/lib/translateUtterance";
 import { tutorIsBilingual } from "@/lib/tutorLanguage";
-import { readTutorGender } from "@/lib/tutorGender";
+import { readTutorGender, writeTutorGender } from "@/lib/tutorGender";
+import type { TutorGender } from "@/lib/chatPartner";
 import { withTutorGender } from "@/lib/roleplay/justTalk";
 
 /** How long to wait for the rest of a sentence the pause cut off. */
@@ -142,7 +143,8 @@ export function RoleplayScreen({
   const timeLine = useCallTimeLine(ui, isPremium);
   // 그냥 대화는 고른 튜터(여자·남자)의 목소리로 — 통화 동안은 처음 값 그대로(lib/tutorGender.ts, 2026-11-01).
   const catalogScene = findScenario(scenarioId);
-  const [tutorGender] = useState(() => readTutorGender(catalogScene?.language));
+  // 시작 고르기 화면(첫 인사 전)에서만 바꿀 수 있다 — 고른 값은 ⋮ 튜터 목소리와 같은 자리에(2026-11-06).
+  const [tutorGender, setTutorGender] = useState(() => readTutorGender(catalogScene?.language));
   const scenario = useMemo(() => (catalogScene ? withTutorGender(catalogScene, tutorGender) : null), [catalogScene, tutorGender]);
   const analysis = useEnglishAnalysisOptional();
   const [state, setState] = useState<SessionState | null>(null);
@@ -1239,6 +1241,10 @@ export function RoleplayScreen({
                 last: coachOn ? "study" : "talk",
                 onTalk: () => chooseMode(false),
                 onStudy: () => chooseMode(true),
+                onTutor: (gender: TutorGender) => {
+                  setTutorGender(gender);
+                  writeTutorGender(scenario.language, gender);
+                },
               }
             : null
         }

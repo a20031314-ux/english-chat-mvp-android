@@ -509,14 +509,14 @@ export function justTalkScenarios(): RoleplayScenario[] {
 
 /**
  * "그냥 대화"를 고른 튜터(여자·남자, lib/tutorGender.ts)의 목소리로 — 채팅 듣기와 같은 사람(2026-11-01).
- * 녹음된 인사·작별과 목소리가 다르면 `unrecorded`(두 줄도 합성, 장면 목소리라 모두와 나누는 캐시에 한 번).
+ * 인사·작별도 늘 합성(`unrecorded`, 장면 목소리라 모두와 나누는 캐시에 한 번) — 녹음 파일은 예전 목소리라,
+ * 기본 튜터일 때 첫 마디만 다른 목소리로 들렸다(2026-11-06 사용자 "튜터의 첫마디가 이후 발화와 목소리가 달라").
  * 대본 장면(바리스타 등)은 그 장면 사람의 목소리 그대로.
  */
 export function withTutorGender(scenario: RoleplayScenario, gender: TutorGender | null | undefined): RoleplayScenario {
   if (scenario.id !== justTalkId(scenario.language)) return scenario;
   const partner = chatPartnerForLanguage(scenario.language, gender);
   const gendered = LANGUAGES.find((entry) => entry.language === scenario.language)?.greetingAs?.[partner.gender];
-  if (partner.voice === scenario.voice && !gendered) return scenario;
   const hi = scenario.nodes.hi;
   return {
     ...scenario,

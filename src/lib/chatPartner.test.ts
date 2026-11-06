@@ -58,7 +58,7 @@ test("chosen gender changes name, voice and the identity line (ja spaceless, es 
   assert.equal(chatPartnerForLanguage("es", "f").photo, "/tutors/es-f.webp");
 });
 
-test("just talk takes the chosen tutor's voice; a recorded voice it no longer matches is synthesised", async () => {
+test("just talk takes the chosen tutor's voice, greeting included — never the old recording", async () => {
   const { justTalkScenarios, withTutorGender } = await import("./roleplay/justTalk.ts");
   const { startSession, currentInstruction } = await import("./roleplay/session.ts");
   const { sentencesFor, findScenario } = await import("./roleplay/catalog.ts");
@@ -71,8 +71,8 @@ test("just talk takes the chosen tutor's voice; a recorded voice it no longer ma
       assert.equal(hello?.do, "say");
       if (hello?.do !== "say") continue;
       assert.equal(hello.voice, used.voice);
-      // 녹음과 같은 목소리면 파일, 아니면 파일 없이(합성).
-      assert.equal(Boolean(hello.audioPath), used.voice === scene.voice, `${language} ${gender}`);
+      // 녹음 파일은 예전 목소리 — 기본 튜터여도 첫 마디부터 합성(2026-11-06 "첫마디가 이후 발화와 목소리가 달라").
+      assert.equal(hello.audioPath, undefined, `${language} ${gender}`);
     }
   }
   // 대본 장면은 그 장면 사람의 목소리 그대로.
@@ -93,7 +93,7 @@ test("a woman tutor greets in the woman's form where the language marks it (ru, 
   assert.match(hello("ru", "m")!.text, /Рад /);
   assert.equal(hello("ru", "f")!.audioPath, undefined);
   assert.match(hello("ar", "f")!.text, /سعيدة/);
-  assert.ok(hello("ar", "m")!.audioPath, "Omar keeps the recording");
+  assert.equal(hello("ar", "m")!.audioPath, undefined, "Omar's greeting is spoken in his voice now too");
 });
 
 test("the Arabic tutor is from no one country — no country in the brief, no flag by the name", () => {
