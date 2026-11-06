@@ -34,7 +34,21 @@ const FILES: Record<string, (() => Promise<{ default: Record<string, Raw> }>)[]>
       const n = index + 2;
       return () => import(`./problems/en-w${n}.json`).catch(() => ({ default: {} as Record<string, Raw> }));
     }),
+    () => import("./problems/en-g.json"),
   ],
+  // 문법 고르기(앱 언어 한국어, 2026-11-06 사용자 "490문제 … 그냥 만들어줘") — 언어마다 그 학습 언어 문법 칸 하나에 한 문제.
+  zh: [() => import("./problems/zh-g.json")],
+  ja: [() => import("./problems/ja-g.json")],
+  es: [() => import("./problems/es-g.json")],
+  fr: [() => import("./problems/fr-g.json")],
+  it: [() => import("./problems/it-g.json")],
+  pt: [() => import("./problems/pt-g.json")],
+  ru: [() => import("./problems/ru-g.json")],
+  vi: [() => import("./problems/vi-g.json")],
+  id: [() => import("./problems/id-g.json")],
+  ar: [() => import("./problems/ar-g.json")],
+  th: [() => import("./problems/th-g.json")],
+  hi: [() => import("./problems/hi-g.json")],
 };
 
 const cache = new Map<string, Promise<PreparedItem[] | null>>();

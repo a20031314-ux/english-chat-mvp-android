@@ -1,0 +1,128 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "be동사 am / is / are",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "우리 형은 간호사야.",
+  "before": "My brother ",
+  "after": " a nurse.",
+  "answer": "is",
+  "why": "주어가 3인칭 단수(my brother)라 be동사는 is예요.",
+  "options": [
+   "are",
+   "is",
+   "be",
+   "am"
+  ],
+  "line": "My brother is a nurse."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "현재시제와 3인칭 -s",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "그녀는 강 근처에 살아.",
+  "before": "She ",
+  "after": " near the river.",
+  "answer": "lives",
+  "why": "3인칭 단수 현재라 동사에 -s를 붙여 lives예요.",
+  "options": [
+   "living",
+   "is live",
+   "lives",
+   "live"
+  ],
+  "line": "She lives near the river."
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "관사 a / an / the",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "모퉁이에 은행이 있어.",
+  "before": "There is ",
+  "after": " on the corner.",
+  "answer": "a bank",
+  "why": "처음 말하는 셀 수 있는 명사 하나라 a bank예요.",
+  "options": [
+   "a bank",
+   "bank",
+   "a banks",
+   "an bank"
+  ],
+  "line": "There is a bank on the corner."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "복수형 명사",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "사과 세 개 주세요.",
+  "before": "I'd like three ",
+  "after": ", please.",
+  "answer": "apples",
+  "why": "둘 이상은 복수형이라 apples예요.",
+  "options": [
+   "apple",
+   "apples",
+   "apple's",
+   "an apples"
+  ],
+  "line": "I'd like three apples, please."
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "do로 묻기·부정하기",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "토요일에도 일해요?",
+  "before": "",
+  "after": " on Saturdays?",
+  "answer": "Do you work",
+  "why": "일반동사 의문문은 Do + 주어 + 동사원형이에요.",
+  "options": [
+   "Are you work",
+   "Do you works",
+   "Do you work",
+   "You do work"
+  ],
+  "line": "Do you work on Saturdays?"
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "장소·시간 전치사 in / on / at",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "수업은 월요일 아홉 시에 시작해.",
+  "before": "The class starts ",
+  "after": " nine on Monday.",
+  "answer": "at",
+  "why": "시각 앞에는 at을 써요.",
+  "options": [
+   "in",
+   "at",
+   "by at",
+   "on"
+  ],
+  "line": "The class starts at nine on Monday."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "can: 능력과 부탁",
+  "ask": "뜻에 맞는 영어를 고르세요.",
+  "gloss": "조금 천천히 말해 줄 수 있어요?",
+  "before": "",
+  "after": " a little slower?",
+  "answer": "Can you speak",
+  "why": "부탁은 Can you + 동사원형이에요.",
+  "options": [
+   "Can you speak",
+   "Can you speaking",
+   "Can you to speak",
+   "Can you spoke"
+  ],
+  "line": "Can you speak a little slower?"
+ }
+}

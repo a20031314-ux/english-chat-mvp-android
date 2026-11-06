@@ -1,0 +1,650 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "'이다' 동사 없이: Saya + 명사",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "나는 대학생이에요.",
+  "before": "",
+  "after": ".",
+  "answer": "Saya mahasiswa",
+  "why": "인도네시아어는 '이다' 없이 Saya + 명사로 말해요.",
+  "options": [
+   "Saya adalah mahasiswa saya",
+   "Saya mahasiswa",
+   "Mahasiswa saya ada",
+   "Saya ada mahasiswa"
+  ],
+  "line": "Saya mahasiswa."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "대명사 saya·Anda·kamu·dia",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "그 사람은 내 친구예요.",
+  "before": "",
+  "after": " teman saya.",
+  "answer": "Dia",
+  "why": "'그 사람'은 3인칭 dia예요.",
+  "options": [
+   "Kamu",
+   "Anda",
+   "Dia",
+   "Saya"
+  ],
+  "line": "Dia teman saya."
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "소유: 명사 + 주인",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이건 내 가방이에요.",
+  "before": "Ini ",
+  "after": ".",
+  "answer": "tas saya",
+  "why": "소유는 명사 뒤에 주인을 놓아 tas saya예요.",
+  "options": [
+   "tas saya",
+   "tas punya",
+   "saya punya tasnya",
+   "saya tas"
+  ],
+  "line": "Ini tas saya."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ini / itu (이것·저것)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "저건 얼마예요?",
+  "before": "",
+  "after": " berapa?",
+  "answer": "Itu",
+  "why": "멀리 있는 것을 가리킬 때는 itu예요.",
+  "options": [
+   "Ini itu",
+   "Itu",
+   "Situ",
+   "Sana"
+  ],
+  "line": "Itu berapa?"
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "의문사 apa·siapa·di mana·berapa",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이름이 뭐예요?",
+  "before": "Nama kamu ",
+  "after": "?",
+  "answer": "siapa",
+  "why": "이름을 물을 때는 siapa를 써요.",
+  "options": [
+   "apa siapa",
+   "di mana",
+   "siapa",
+   "berapa"
+  ],
+  "line": "Nama kamu siapa?"
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "부정: 명사엔 bukan, 동사·형용사엔 tidak",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "나는 일본 사람이 아니에요.",
+  "before": "Saya ",
+  "after": " orang Jepang.",
+  "answer": "bukan",
+  "why": "명사를 부정할 때는 bukan이에요.",
+  "options": [
+   "tidak",
+   "bukan",
+   "jangan",
+   "belum"
+  ],
+  "line": "Saya bukan orang Jepang."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "장소 di(에서)·ke(로)·dari(에서부터)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "나는 한국에서 왔어요.",
+  "before": "Saya ",
+  "after": " Korea.",
+  "answer": "dari",
+  "why": "출신은 dari로 말해요.",
+  "options": [
+   "dari",
+   "ke",
+   "di",
+   "pada"
+  ],
+  "line": "Saya dari Korea."
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ada (있다)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "생수 있어요?",
+  "before": "",
+  "after": " air mineral?",
+  "answer": "Ada",
+  "why": "'있다'는 ada예요.",
+  "options": [
+   "Punya ada",
+   "Ini",
+   "Ada",
+   "Adalah"
+  ],
+  "line": "Ada air mineral?"
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "시제 낱말: sudah·sedang·akan·belum",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "나는 이미 먹었어요.",
+  "before": "Saya ",
+  "after": " makan.",
+  "answer": "sudah",
+  "why": "이미 한 일은 sudah예요.",
+  "options": [
+   "sedang",
+   "akan",
+   "sudah",
+   "belum sudah"
+  ],
+  "line": "Saya sudah makan."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "me- 접두사 동사",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "나는 매일 밤 책을 읽어요.",
+  "before": "Saya ",
+  "after": " buku setiap malam.",
+  "answer": "membaca",
+  "why": "baca에 me- 접두사가 붙어 membaca예요.",
+  "options": [
+   "mebaca",
+   "menbaca",
+   "baca-baca membaca",
+   "membaca"
+  ],
+  "line": "Saya membaca buku setiap malam."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ber- 동사(하다·가지다·상태)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "우리는 일곱 시에 출발해요.",
+  "before": "Kami ",
+  "after": " jam tujuh.",
+  "answer": "berangkat",
+  "why": "angkat에 ber-가 붙어 '출발하다' berangkat예요.",
+  "options": [
+   "diangkat",
+   "terangkat",
+   "mengangkat",
+   "berangkat"
+  ],
+  "line": "Kami berangkat jam tujuh."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "mau / ingin (~하고 싶다)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "발리에 가고 싶어요.",
+  "before": "Saya ",
+  "after": " ke Bali.",
+  "answer": "ingin",
+  "why": "'~하고 싶다'는 ingin이에요.",
+  "options": [
+   "pernah",
+   "ingin",
+   "sudah ingin",
+   "boleh"
+  ],
+  "line": "Saya ingin ke Bali."
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "boleh(해도 된다)·tolong(해 주세요)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "여기 앉아도 돼요?",
+  "before": "",
+  "after": " saya duduk di sini?",
+  "answer": "Boleh",
+  "why": "허락을 구할 때는 boleh예요.",
+  "options": [
+   "Boleh",
+   "Harus",
+   "Ayo",
+   "Tolong"
+  ],
+  "line": "Boleh saya duduk di sini?"
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "yuk / ayo (~하자)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "같이 점심 먹어요.",
+  "before": "",
+  "after": " makan siang bersama.",
+  "answer": "Ayo",
+  "why": "'~하자'는 ayo예요.",
+  "options": [
+   "Tolong",
+   "Ayo",
+   "Boleh",
+   "Jangan"
+  ],
+  "line": "Ayo makan siang bersama."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "karena (~때문에)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "비 때문에 못 왔어요.",
+  "before": "Saya tidak datang ",
+  "after": " hujan.",
+  "answer": "karena",
+  "why": "까닭은 karena로 이어요.",
+  "options": [
+   "sehingga",
+   "tetapi",
+   "supaya",
+   "karena"
+  ],
+  "line": "Saya tidak datang karena hujan."
+ },
+ "g|2:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "pernah (~한 적 있다)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "족자카르타에 가 본 적 있어?",
+  "before": "Kamu ",
+  "after": " ke Yogyakarta?",
+  "answer": "pernah",
+  "why": "'~한 적 있다'는 pernah예요.",
+  "options": [
+   "akan",
+   "mau pernah",
+   "sedang",
+   "pernah"
+  ],
+  "line": "Kamu pernah ke Yogyakarta?"
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "수동 di- 동사",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "방은 이미 청소됐어요.",
+  "before": "Kamarnya sudah ",
+  "after": ".",
+  "answer": "dibersihkan",
+  "why": "수동은 di- + 동사라 dibersihkan이에요.",
+  "options": [
+   "bersihkan di",
+   "dibersihkan",
+   "terbersih",
+   "membersihkan"
+  ],
+  "line": "Kamarnya sudah dibersihkan."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ter-: 저절로 된 일·최상급",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "열쇠를 차에 두고 왔어요(깜빡).",
+  "before": "Kuncinya ",
+  "after": " di mobil.",
+  "answer": "tertinggal",
+  "why": "저절로·실수로 된 일은 ter-라서 tertinggal이에요.",
+  "options": [
+   "ditinggalkan oleh",
+   "meninggalkan",
+   "tertinggal",
+   "bertinggal"
+  ],
+  "line": "Kuncinya tertinggal di mobil."
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "비교 lebih … daripada, 최상 paling",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "자카르타가 반둥보다 더 붐벼요.",
+  "before": "Jakarta ",
+  "after": " Bandung.",
+  "answer": "lebih ramai daripada",
+  "why": "비교는 lebih … daripada예요.",
+  "options": [
+   "lebih ramai dengan",
+   "lebih ramai daripada",
+   "paling ramai daripada",
+   "ramai lebih dari"
+  ],
+  "line": "Jakarta lebih ramai daripada Bandung."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "동사 접미사 -kan·-i",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "주소 좀 보내 주세요.",
+  "before": "Tolong ",
+  "after": " alamatnya.",
+  "answer": "kirimkan",
+  "why": "부탁할 때 kirim에 -kan을 붙여 kirimkan이에요.",
+  "options": [
+   "dikirimkan",
+   "mengirimi",
+   "kirimkan",
+   "kirim-kirimkan"
+  ],
+  "line": "Tolong kirimkan alamatnya."
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "yang으로 꾸미고 가리키기",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "파란색으로 할게요.",
+  "before": "Saya mau ",
+  "after": " warna biru.",
+  "answer": "yang",
+  "why": "'~인 것'을 가리킬 때는 yang이에요.",
+  "options": [
+   "punya",
+   "yang",
+   "itu yang itu",
+   "dengan"
+  ],
+  "line": "Saya mau yang warna biru."
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "kalau(~하면)·waktu(~했을 때)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "비가 오면 그냥 집에 있자.",
+  "before": "",
+  "after": " hujan, kita di rumah saja.",
+  "answer": "Kalau",
+  "why": "'~하면'은 kalau예요.",
+  "options": [
+   "Sehingga",
+   "Karena",
+   "Supaya",
+   "Kalau"
+  ],
+  "line": "Kalau hujan, kita di rumah saja."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "menurut saya (제 생각엔)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "제 생각엔 그 영화는 좀 지루해요.",
+  "before": "",
+  "after": ", filmnya agak membosankan.",
+  "answer": "Menurut saya",
+  "why": "의견은 menurut saya로 시작해요.",
+  "options": [
+   "Untuk saya menurut",
+   "Menurut",
+   "Menurut saya",
+   "Saya menurut"
+  ],
+  "line": "Menurut saya, filmnya agak membosankan."
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "per-/-an·ke-/-an 명사",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이 도시의 교통 체증은 점점 심해져요.",
+  "before": "",
+  "after": " di kota ini makin parah.",
+  "answer": "Kemacetan",
+  "why": "macet에 ke-/-an이 붙어 명사 kemacetan이에요.",
+  "options": [
+   "Macetan",
+   "Permacetan",
+   "Kemacet",
+   "Kemacetan"
+  ],
+  "line": "Kemacetan di kota ini makin parah."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "memper- 동사(더 ~하게 하다)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "과정을 개선해야 해요.",
+  "before": "Kita perlu ",
+  "after": " prosesnya.",
+  "answer": "memperbaiki",
+  "why": "'더 좋게 하다'는 memper- + baik + -i라 memperbaiki예요.",
+  "options": [
+   "memperbaiki",
+   "dibaik",
+   "membaiki",
+   "perbaikan"
+  ],
+  "line": "Kita perlu memperbaiki prosesnya."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "양보: meskipun·walaupun (~에도)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "비싸긴 해도 품질은 좋아요.",
+  "before": "",
+  "after": " mahal, kualitasnya bagus.",
+  "answer": "Meskipun",
+  "why": "양보는 meskipun이에요.",
+  "options": [
+   "Supaya",
+   "Meskipun",
+   "Karena",
+   "Sehingga"
+  ],
+  "line": "Meskipun mahal, kualitasnya bagus."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "목적·결과: agar·supaya·sehingga",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "늦지 않으려고 일찍 시작해요.",
+  "before": "Kita mulai lebih awal ",
+  "after": " tidak terlambat.",
+  "answer": "supaya",
+  "why": "목적은 supaya예요.",
+  "options": [
+   "karena",
+   "tetapi",
+   "supaya",
+   "meskipun"
+  ],
+  "line": "Kita mulai lebih awal supaya tidak terlambat."
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "seharusnya (~했어야 했다)",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "고객에게 더 빨리 알렸어야 했어요.",
+  "before": "",
+  "after": " kita kabari klien lebih cepat.",
+  "answer": "Seharusnya",
+  "why": "'~했어야 했다'는 seharusnya예요.",
+  "options": [
+   "Seharusnya",
+   "Harusnya akan",
+   "Sebaiknya sudah",
+   "Semestinya jangan"
+  ],
+  "line": "Seharusnya kita kabari klien lebih cepat."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "bahwa로 전하는 말",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "그는 데이터가 아직 다 안 됐다고 했어요.",
+  "before": "Dia bilang ",
+  "after": " datanya belum lengkap.",
+  "answer": "bahwa",
+  "why": "전하는 말은 bahwa로 이어요.",
+  "options": [
+   "supaya",
+   "bahwa",
+   "karena bahwa",
+   "yang bahwa"
+  ],
+  "line": "Dia bilang bahwa datanya belum lengkap."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "agak·kurang·mungkin으로 누그러뜨리기",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이건 지금은 좀 맞지 않을 수도 있어요.",
+  "before": "Mungkin ini ",
+  "after": " tepat untuk sekarang.",
+  "answer": "kurang",
+  "why": "부드러운 부정 '좀 덜'은 kurang이에요.",
+  "options": [
+   "lebih",
+   "tidak sangat",
+   "paling",
+   "kurang"
+  ],
+  "line": "Mungkin ini kurang tepat untuk sekarang."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식 표현 adalah·merupakan·ialah",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이 협력은 중요한 한 걸음입니다.",
+  "before": "Kerja sama ini ",
+  "after": " langkah yang penting.",
+  "answer": "merupakan",
+  "why": "격식 글의 '~이다'는 merupakan이에요.",
+  "options": [
+   "merupakan",
+   "ada merupakan",
+   "merupa",
+   "dirupakan"
+  ],
+  "line": "Kerja sama ini merupakan langkah yang penting."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "자카르타 구어 동사 -in·ng-",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이따 알려 줄게.",
+  "before": "Nanti aku ",
+  "after": " ya.",
+  "answer": "kabarin",
+  "why": "자카르타 구어에서 -in을 붙여 kabarin이에요.",
+  "options": [
+   "kabar-kabar",
+   "kabarin",
+   "mengabari in",
+   "dikabarin aku"
+  ],
+  "line": "Nanti aku kabarin ya."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "말끝 소사 kok·sih·deh·dong·kan",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "어째서 아까부터 말 안 했어?",
+  "before": "",
+  "after": " kamu nggak bilang dari tadi sih?",
+  "answer": "Kok",
+  "why": "의외라는 느낌의 '어째서'는 kok이에요.",
+  "options": [
+   "Deh",
+   "Dong",
+   "Kok",
+   "Kan"
+  ],
+  "line": "Kok kamu nggak bilang dari tadi sih?"
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "반복형으로 다양함·정도 나타내기",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "그는 산책하면서 이런저런 아이디어를 찾아요.",
+  "before": "Dia jalan-jalan sambil ",
+  "after": " ide.",
+  "answer": "cari-cari",
+  "why": "반복형 cari-cari로 '이것저것 찾다'를 나타내요.",
+  "options": [
+   "cari-cari",
+   "carian",
+   "mencari-carikan",
+   "cari cari-cari"
+  ],
+  "line": "Dia jalan-jalan sambil cari-cari ide."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "sepertinya·agak sulit로 돌려 거절하기",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "이번 주는 좀 어려울 것 같습니다.",
+  "before": "",
+  "after": " minggu ini agak sulit, Pak.",
+  "answer": "Sepertinya",
+  "why": "돌려 거절할 때는 sepertinya로 시작해요.",
+  "options": [
+   "Tentu saja",
+   "Sepertinya",
+   "Pastinya",
+   "Seperti"
+  ],
+  "line": "Sepertinya minggu ini agak sulit, Pak."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "말에서 생략·주제 먼저 놓기",
+  "ask": "뜻에 맞는 인도네시아어를 고르세요.",
+  "gloss": "그 문제는 나중에 다시 얘기하죠.",
+  "before": "",
+  "after": ", nanti kita bahas lagi.",
+  "answer": "Soal itu",
+  "why": "주제를 먼저 놓을 때 soal itu로 시작해요.",
+  "options": [
+   "Soalnya itu",
+   "Soal itu",
+   "Dengan soal itu kita",
+   "Itu soal"
+  ],
+  "line": "Soal itu, nanti kita bahas lagi."
+ }
+}

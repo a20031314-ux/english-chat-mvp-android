@@ -1,0 +1,668 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "être·s'appeler로 자기소개",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "내 이름은 민지고, 한국 사람이야.",
+  "before": "Je m'appelle Minji, je ",
+  "after": " coréenne.",
+  "answer": "suis",
+  "why": "être의 je 꼴은 suis예요.",
+  "options": [
+   "es",
+   "suis",
+   "ai",
+   "est"
+  ],
+  "line": "Je m'appelle Minji, je suis coréenne."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "est-ce que와 올림 억양으로 묻기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "영어 하세요?",
+  "before": "",
+  "after": " vous parlez anglais ?",
+  "answer": "Est-ce que",
+  "why": "평서문 앞에 est-ce que를 붙이면 묻는 말이 돼요.",
+  "options": [
+   "Qu'est-ce que",
+   "Est que",
+   "Est-ce que",
+   "Est-ce"
+  ],
+  "line": "Est-ce que vous parlez anglais ?"
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "관사 un / une / le / la / les",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "바게트 하나랑 신문 주세요.",
+  "before": "Je voudrais ",
+  "after": " et le journal.",
+  "answer": "une baguette",
+  "why": "baguette는 여성 명사라 une를 써요.",
+  "options": [
+   "une baguette",
+   "la baguettes",
+   "une baguettes",
+   "un baguette"
+  ],
+  "line": "Je voudrais une baguette et le journal."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "부정 ne … pas",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "나는 프랑스어를 잘 못해.",
+  "before": "Je ",
+  "after": " bien français.",
+  "answer": "ne parle pas",
+  "why": "부정은 동사를 ne … pas로 감싸요.",
+  "options": [
+   "ne pas parle",
+   "ne parle pas",
+   "pas parle ne",
+   "parle ne pas"
+  ],
+  "line": "Je ne parle pas bien français."
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-er 동사 현재형",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "나는 서울에 살고 사무실에서 일해.",
+  "before": "J'",
+  "after": " à Séoul et je travaille dans un bureau.",
+  "answer": "habite",
+  "why": "-er 동사의 je 꼴은 -e라서 habite예요.",
+  "options": [
+   "habiter",
+   "habites",
+   "habite",
+   "habitons"
+  ],
+  "line": "J'habite à Séoul et je travaille dans un bureau."
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "il y a (～이 있다)",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "이 근처에 약국 있어요?",
+  "before": "",
+  "after": " une pharmacie près d'ici ?",
+  "answer": "Il y a",
+  "why": "무엇이 있는지는 il y a로 말해요.",
+  "options": [
+   "Il est",
+   "Il y a",
+   "Il a",
+   "C'est"
+  ],
+  "line": "Il y a une pharmacie près d'ici ?"
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "정중한 요청 je voudrais",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "크루아상 두 개 주세요.",
+  "before": "",
+  "after": " deux croissants, s'il vous plaît.",
+  "answer": "Je voudrais",
+  "why": "가게에서 정중하게 청할 때는 je voudrais예요.",
+  "options": [
+   "Je voudrais",
+   "Je veux voudrais",
+   "Je voulais que",
+   "Je vouloir"
+  ],
+  "line": "Je voudrais deux croissants, s'il vous plaît."
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "의문사 où / combien / comment",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "지하철역이 어디예요?",
+  "before": "",
+  "after": " est la station de métro ?",
+  "answer": "Où",
+  "why": "장소를 묻는 의문사는 où예요.",
+  "options": [
+   "Quand",
+   "Comment",
+   "Où",
+   "Combien"
+  ],
+  "line": "Où est la station de métro ?"
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "avoir를 쓰는 복합과거",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "어제 언니랑 영화를 봤어.",
+  "before": "Hier, j'",
+  "after": " un film avec ma sœur.",
+  "answer": "ai regardé",
+  "why": "regarder의 복합과거는 avoir + 과거분사라 ai regardé예요.",
+  "options": [
+   "ai regarder",
+   "suis regardé",
+   "ai regardé",
+   "regardais été"
+  ],
+  "line": "Hier, j'ai regardé un film avec ma sœur."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "être를 쓰는 복합과거 (aller·venir·partir)",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "그녀는 여덟 시에 떠났어.",
+  "before": "Elle ",
+  "after": " à huit heures.",
+  "answer": "est partie",
+  "why": "partir는 être로 복합과거를 만들고 주어가 여성이라 partie예요.",
+  "options": [
+   "a partie",
+   "est parti",
+   "a parti",
+   "est partie"
+  ],
+  "line": "Elle est partie à huit heures."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "가까운 미래 aller + 동사원형",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "이번 주말에 오르세 미술관에 갈 거야.",
+  "before": "Ce week-end, je ",
+  "after": " le musée d'Orsay.",
+  "answer": "vais visiter",
+  "why": "가까운 미래는 aller + 동사원형이라 vais visiter예요.",
+  "options": [
+   "va visiter",
+   "vais à visiter",
+   "vais visite",
+   "vais visiter"
+  ],
+  "line": "Ce week-end, je vais visiter le musée d'Orsay."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "pouvoir / vouloir + 동사원형",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "여기 앉아도 돼요?",
+  "before": "Je ",
+  "after": " m'asseoir ici ?",
+  "answer": "peux",
+  "why": "pouvoir의 je 꼴은 peux예요.",
+  "options": [
+   "peut",
+   "peux",
+   "pouvoir",
+   "pouvons"
+  ],
+  "line": "Je peux m'asseoir ici ?"
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "일과를 말하는 재귀동사",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "나는 매일 일곱 시에 일어나.",
+  "before": "Je ",
+  "after": " à sept heures tous les jours.",
+  "answer": "me lève",
+  "why": "se lever는 재귀동사라 je에는 me lève예요.",
+  "options": [
+   "me lève",
+   "me lever",
+   "se lève",
+   "lève"
+  ],
+  "line": "Je me lève à sept heures tous les jours."
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "목적 대명사 le / la / les",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "이 스웨터요? 이걸로 할게요.",
+  "before": "Ce pull ? Je ",
+  "after": " prends.",
+  "answer": "le",
+  "why": "pull(남성 단수)을 받는 대명사는 le예요.",
+  "options": [
+   "lui",
+   "le",
+   "la",
+   "les"
+  ],
+  "line": "Ce pull ? Je le prends."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "parce que (～ 때문에)",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "비가 와서 집에 있어.",
+  "before": "Je reste à la maison ",
+  "after": "il pleut.",
+  "answer": "parce qu'",
+  "why": "까닭을 말할 때는 parce que, 모음 앞이라 parce qu'예요.",
+  "options": [
+   "alors qu'",
+   "parce que ",
+   "pour qu'",
+   "parce qu'"
+  ],
+  "line": "Je reste à la maison parce qu'il pleut."
+ },
+ "g|2:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "일상 회화에서 '우리'를 뜻하는 on",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "영화관 앞에서 만날까?",
+  "before": "",
+  "after": " se retrouve devant le cinéma ?",
+  "answer": "On",
+  "why": "회화에서 '우리'는 on을 많이 써요(동사는 3인칭 단수).",
+  "options": [
+   "Ils",
+   "Vous",
+   "Nous",
+   "On"
+  ],
+  "line": "On se retrouve devant le cinéma ?"
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "반과거와 복합과거 구별",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "전화가 울렸을 때 나는 자고 있었어.",
+  "before": "Je ",
+  "after": " quand le téléphone a sonné.",
+  "answer": "dormais",
+  "why": "진행 중이던 배경은 반과거라 dormais예요.",
+  "options": [
+   "dors",
+   "dormais",
+   "dormirai",
+   "ai dormi"
+  ],
+  "line": "Je dormais quand le téléphone a sonné."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "대명사 y와 en",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "크루아상이요? 세 개 샀어요.",
+  "before": "Des croissants ? J'",
+  "after": " ai acheté trois.",
+  "answer": "en",
+  "why": "수량과 함께 앞의 명사를 받을 때는 en이에요.",
+  "options": [
+   "les",
+   "y",
+   "en",
+   "le"
+  ],
+  "line": "Des croissants ? J'en ai acheté trois."
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "관계대명사 qui / que / où",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "여기가 내가 예전에 살던 동네야.",
+  "before": "C'est le quartier ",
+  "after": " j'habitais avant.",
+  "answer": "où",
+  "why": "장소를 받는 관계대명사는 où예요.",
+  "options": [
+   "dont",
+   "où",
+   "que",
+   "qui"
+  ],
+  "line": "C'est le quartier où j'habitais avant."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "단순미래",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "내일 아침에 전화할게.",
+  "before": "Je t'",
+  "after": " demain matin.",
+  "answer": "appellerai",
+  "why": "앞으로 할 일은 단순미래 appellerai예요.",
+  "options": [
+   "ai appelé",
+   "appelais",
+   "appellerai",
+   "appeller"
+  ],
+  "line": "Je t'appellerai demain matin."
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "정중한 부탁의 조건법 현재",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "이 서류 좀 도와줄 수 있어?",
+  "before": "Tu ",
+  "after": " m'aider avec ce dossier ?",
+  "answer": "pourrais",
+  "why": "정중한 부탁은 조건법 pourrais예요.",
+  "options": [
+   "pouvoir",
+   "pourrais",
+   "pourras que",
+   "pouvais pas"
+  ],
+  "line": "Tu pourrais m'aider avec ce dossier ?"
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "구어에서 ne 빠뜨리기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "네 메시지 못 봤어.",
+  "before": "J'ai ",
+  "after": " vu ton message.",
+  "answer": "pas",
+  "why": "구어 부정에서는 ne를 빼고 pas만 남겨요.",
+  "options": [
+   "ne",
+   "non",
+   "rien pas",
+   "pas"
+  ],
+  "line": "J'ai pas vu ton message."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "je pense que / je trouve que로 의견 말하기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "결말이 좀 빨랐던 것 같아.",
+  "before": "Je ",
+  "after": " la fin était un peu rapide.",
+  "answer": "trouve que",
+  "why": "의견을 말할 때는 je trouve que예요.",
+  "options": [
+   "trouve qu'il",
+   "trouve de",
+   "trouve que",
+   "trouve"
+  ],
+  "line": "Je trouve que la fin était un peu rapide."
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "il faut que / je veux que 뒤 접속법",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "목요일 전에 보고서를 끝내야 해.",
+  "before": "Il faut que tu ",
+  "after": " le rapport avant jeudi.",
+  "answer": "finisses",
+  "why": "il faut que 뒤에는 접속법이라 finisses예요.",
+  "options": [
+   "finis",
+   "finiras",
+   "finir",
+   "finisses"
+  ],
+  "line": "Il faut que tu finisses le rapport avant jeudi."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "감정·의심 뒤 접속법",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "그가 동의할지 의심스러워.",
+  "before": "Je doute qu'il ",
+  "after": " d'accord.",
+  "answer": "soit",
+  "why": "의심을 나타내는 je doute que 뒤에는 접속법 soit예요.",
+  "options": [
+   "soit",
+   "être",
+   "est",
+   "sera"
+  ],
+  "line": "Je doute qu'il soit d'accord."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "si + 반과거, 조건법 (가정)",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "내가 너라면 자리를 옮길 거야.",
+  "before": "Si j'étais toi, je ",
+  "after": " de poste.",
+  "answer": "changerais",
+  "why": "si + 반과거 뒤에는 조건법 changerais예요.",
+  "options": [
+   "changerai",
+   "changerais",
+   "change",
+   "changeais"
+  ],
+  "line": "Si j'étais toi, je changerais de poste."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "대과거로 더 앞선 과거",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "내가 도착했을 때 회의는 이미 시작돼 있었어.",
+  "before": "Quand je suis arrivé, la réunion ",
+  "after": ".",
+  "answer": "avait déjà commencé",
+  "why": "도착보다 더 앞선 일은 대과거 avait commencé예요.",
+  "options": [
+   "a déjà commencé",
+   "aura déjà commencé",
+   "avait déjà commencé",
+   "commençait déjà"
+  ],
+  "line": "Quand je suis arrivé, la réunion avait déjà commencé."
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "대조 연결어 pourtant·alors que·en revanche",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "집은 작은데 월세는 비싸.",
+  "before": "Le loyer est cher, ",
+  "after": " l'appartement est petit.",
+  "answer": "alors que",
+  "why": "대조를 이을 때는 alors que예요.",
+  "options": [
+   "alors que",
+   "donc",
+   "parce que",
+   "pour que"
+  ],
+  "line": "Le loyer est cher, alors que l'appartement est petit."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "목적 대명사 두 개 겹치기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "그 서류? 오늘 저녁에 보내 줄게.",
+  "before": "Le document ? Je ",
+  "after": "envoie ce soir.",
+  "answer": "te l'",
+  "why": "두 대명사는 te가 le 앞에 와서 te l'예요.",
+  "options": [
+   "l'te ",
+   "te l'",
+   "te le ",
+   "le te "
+  ],
+  "line": "Le document ? Je te l'envoie ce soir."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "제롱디프 en + -ant",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "요리하면서 팟캐스트를 들어.",
+  "before": "J'écoute des podcasts ",
+  "after": " la cuisine.",
+  "answer": "en faisant",
+  "why": "동시에 하는 일은 en + 현재분사라 en faisant예요.",
+  "options": [
+   "en fait",
+   "en faire",
+   "faisant en",
+   "en faisant"
+  ],
+  "line": "J'écoute des podcasts en faisant la cuisine."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "조건법 과거로 후회·아쉬움",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "더 일찍 알려 줬어야 했는데.",
+  "before": "J'",
+  "after": " te prévenir plus tôt.",
+  "answer": "aurais dû",
+  "why": "지나간 일에 대한 아쉬움은 조건법 과거 aurais dû예요.",
+  "options": [
+   "aurais dû",
+   "avais dû",
+   "ai dû",
+   "devrais"
+  ],
+  "line": "J'aurais dû te prévenir plus tôt."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "접속법 과거",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "네가 와 줘서 기뻐.",
+  "before": "Je suis content que tu ",
+  "after": ".",
+  "answer": "sois venu",
+  "why": "감정 뒤 이미 일어난 일은 접속법 과거 sois venu예요.",
+  "options": [
+   "sois venir",
+   "sois venu",
+   "es venu",
+   "viens"
+  ],
+  "line": "Je suis content que tu sois venu."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "강조 구문 c'est … qui / ce que … c'est",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "나를 불편하게 하는 건 투명성 부족이야.",
+  "before": "",
+  "after": " me gêne, c'est le manque de transparence.",
+  "answer": "Ce qui",
+  "why": "주어 자리를 앞으로 빼는 강조는 ce qui예요.",
+  "options": [
+   "Qui",
+   "Ce que",
+   "Ce qui",
+   "Ce dont"
+  ],
+  "line": "Ce qui me gêne, c'est le manque de transparence."
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "양보: bien que·quoique·avoir beau",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "아무리 설명해도 그는 들으려 하지 않아.",
+  "before": "J'",
+  "after": " lui expliquer, il ne veut rien entendre.",
+  "answer": "ai beau",
+  "why": "'아무리 ~해도'는 avoir beau + 동사원형이에요.",
+  "options": [
+   "ai beau",
+   "ai belle",
+   "bien que",
+   "ai bien"
+  ],
+  "line": "J'ai beau lui expliquer, il ne veut rien entendre."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식 말투의 수동·비인칭 구문",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "프로젝트를 미루기로 결정되었습니다.",
+  "before": "Il ",
+  "after": " de reporter le projet.",
+  "answer": "a été décidé",
+  "why": "격식 공지는 비인칭 수동 il a été décidé를 써요.",
+  "options": [
+   "est décidé",
+   "a été décidé",
+   "a décidé été",
+   "a été décider"
+  ],
+  "line": "Il a été décidé de reporter le projet."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "글 속 단순과거 알아보기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "그는 문을 열고 말없이 나갔다.",
+  "before": "Il ouvrit la porte et ",
+  "after": " sans un mot.",
+  "answer": "sortit",
+  "why": "글의 서술은 단순과거라 ouvrit에 맞춰 sortit예요.",
+  "options": [
+   "sortira",
+   "sortit",
+   "sort",
+   "sortait"
+  ],
+  "line": "Il ouvrit la porte et sortit sans un mot."
+ },
+ "g|5:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "조건법으로 말을 누그러뜨리기",
+  "ask": "뜻에 맞는 프랑스어를 고르세요.",
+  "gloss": "수치가 좀 낙관적인 것 같습니다.",
+  "before": "Il ",
+  "after": " que les chiffres soient un peu optimistes.",
+  "answer": "semblerait",
+  "why": "말을 누그러뜨릴 때는 조건법 semblerait예요.",
+  "options": [
+   "semblera",
+   "sembler",
+   "sembla",
+   "semblerait"
+  ],
+  "line": "Il semblerait que les chiffres soient un peu optimistes."
+ }
+}

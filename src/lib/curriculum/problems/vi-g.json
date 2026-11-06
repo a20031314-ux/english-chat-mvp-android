@@ -1,0 +1,650 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "A là B (A는 B이다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "나는 김이에요.",
+  "before": "Tôi ",
+  "after": " Kim.",
+  "answer": "là",
+  "why": "'A는 B이다'는 A là B예요.",
+  "options": [
+   "có",
+   "là",
+   "thì",
+   "ở"
+  ],
+  "line": "Tôi là Kim."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "나이·관계에 따른 호칭: anh·chị·em·bạn",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "(언니·누나뻘에게) 이름이 뭐예요?",
+  "before": "",
+  "after": " tên là gì?",
+  "answer": "Chị",
+  "why": "나이가 조금 많은 여성에게는 chị라고 불러요.",
+  "options": [
+   "Nó",
+   "Em ấy",
+   "Chị",
+   "Tôi"
+  ],
+  "line": "Chị tên là gì?"
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "… không?으로 묻는 예/아니요 질문",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "잘 지내세요?",
+  "before": "Anh có khỏe ",
+  "after": "?",
+  "answer": "không",
+  "why": "예/아니요 질문은 문장 끝에 không을 붙여요.",
+  "options": [
+   "không",
+   "gì",
+   "đâu",
+   "chưa"
+  ],
+  "line": "Anh có khỏe không?"
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "không으로 부정하기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이해가 안 돼요.",
+  "before": "Tôi ",
+  "after": ".",
+  "answer": "không hiểu",
+  "why": "부정은 동사 앞에 không을 놓아요.",
+  "options": [
+   "hiểu không",
+   "không hiểu",
+   "không có hiểu không",
+   "chưa không hiểu"
+  ],
+  "line": "Tôi không hiểu."
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "의문사 gì(무엇)·đâu(어디)·bao nhiêu(얼마)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이거 얼마예요?",
+  "before": "Cái này ",
+  "after": " tiền?",
+  "answer": "bao nhiêu",
+  "why": "값·양을 물을 때는 bao nhiêu예요.",
+  "options": [
+   "gì",
+   "đâu",
+   "bao nhiêu",
+   "ai"
+  ],
+  "line": "Cái này bao nhiêu tiền?"
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "분류사 cái·con·quả와 này(이)·kia(저)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이 망고 두 개 주세요.",
+  "before": "Cho tôi hai ",
+  "after": " này.",
+  "answer": "quả xoài",
+  "why": "과일을 셀 때는 분류사 quả를 써요.",
+  "options": [
+   "con xoài",
+   "quả xoài",
+   "cái quả xoài",
+   "xoài quả"
+  ],
+  "line": "Cho tôi hai quả xoài này."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "có (가지다·있다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "여기 화장실 있어요?",
+  "before": "Ở đây ",
+  "after": " nhà vệ sinh không?",
+  "answer": "có",
+  "why": "'있다'는 có예요.",
+  "options": [
+   "có",
+   "là",
+   "ở",
+   "được"
+  ],
+  "line": "Ở đây có nhà vệ sinh không?"
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ở + 장소 (～에 있다·살다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "나는 하노이에 살아요.",
+  "before": "Tôi ",
+  "after": " Hà Nội.",
+  "answer": "ở",
+  "why": "사는 곳·있는 곳은 ở + 장소예요.",
+  "options": [
+   "có",
+   "đến ở",
+   "ở",
+   "là"
+  ],
+  "line": "Tôi ở Hà Nội."
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "đã(과거)와 rồi(이미 했다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "어제 엄마랑 시장에 갔어요.",
+  "before": "Hôm qua tôi ",
+  "after": " chợ với mẹ.",
+  "answer": "đã đi",
+  "why": "지난 일은 동사 앞에 đã를 붙여요.",
+  "options": [
+   "đang đi",
+   "sẽ đi",
+   "đã đi",
+   "đi đã"
+  ],
+  "line": "Hôm qua tôi đã đi chợ với mẹ."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "sẽ로 미래 말하기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이번 주말에 고향에 갈 거야.",
+  "before": "Cuối tuần này mình ",
+  "after": " quê.",
+  "answer": "sẽ về",
+  "why": "앞으로 할 일은 동사 앞에 sẽ를 붙여요.",
+  "options": [
+   "đã về",
+   "về sẽ",
+   "vừa về",
+   "sẽ về"
+  ],
+  "line": "Cuối tuần này mình sẽ về quê."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "đang (～하고 있다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "학교 정문에서 기다리고 있어요.",
+  "before": "Em ",
+  "after": " ở cổng trường.",
+  "answer": "đang đợi",
+  "why": "지금 하는 중인 일은 đang + 동사예요.",
+  "options": [
+   "sẽ đã đợi",
+   "vừa đang đợi",
+   "đợi đang",
+   "đang đợi"
+  ],
+  "line": "Em đang đợi ở cổng trường."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "muốn(원하다)·thích(좋아하다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "호이안에 가고 싶어요.",
+  "before": "Tôi ",
+  "after": " Hội An.",
+  "answer": "muốn đi",
+  "why": "'~하고 싶다'는 muốn + 동사예요.",
+  "options": [
+   "đi muốn",
+   "muốn đi",
+   "muốn là đi",
+   "thích muốn đi"
+  ],
+  "line": "Tôi muốn đi Hội An."
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "cho + 사람 / làm ơn으로 정중하게 부탁하기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "여기서 내려 주세요.",
+  "before": "",
+  "after": " xuống ở đây.",
+  "answer": "Làm ơn cho tôi",
+  "why": "정중한 부탁은 làm ơn cho + 사람이에요.",
+  "options": [
+   "Làm ơn cho tôi",
+   "Làm ơn tôi cho",
+   "Tôi làm ơn cho",
+   "Cho làm ơn tôi"
+  ],
+  "line": "Làm ơn cho tôi xuống ở đây."
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "… nhé / … đi로 제안하기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "우리 영화 보러 가자.",
+  "before": "Mình đi xem phim ",
+  "after": ".",
+  "answer": "nhé",
+  "why": "부드럽게 제안할 때는 문장 끝에 nhé를 붙여요.",
+  "options": [
+   "không nhé",
+   "nhé",
+   "chưa",
+   "à chưa"
+  ],
+  "line": "Mình đi xem phim nhé."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "… chưa? (벌써 ～했어요?)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "밥 먹었어요?",
+  "before": "Anh ăn cơm ",
+  "after": "?",
+  "answer": "chưa",
+  "why": "'벌써 ~했어요?'는 문장 끝 chưa예요.",
+  "options": [
+   "sẽ",
+   "đã",
+   "rồi chưa không",
+   "chưa"
+  ],
+  "line": "Anh ăn cơm chưa?"
+ },
+ "g|2:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "vì … nên … (～ 때문에 그래서 ～)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "비가 와서 집에 있어요.",
+  "before": "Vì trời mưa ",
+  "after": " tôi ở nhà.",
+  "answer": "nên",
+  "why": "vì … nên …으로 까닭과 결과를 이어요.",
+  "options": [
+   "thì nếu",
+   "mà vì",
+   "nhưng",
+   "nên"
+  ],
+  "line": "Vì trời mưa nên tôi ở nhà."
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "비교: hơn(더)·bằng(만큼)·nhất(가장)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "달랏이 하노이보다 훨씬 시원해요.",
+  "before": "Đà Lạt mát ",
+  "after": " Hà Nội nhiều.",
+  "answer": "hơn",
+  "why": "'~보다 더'는 형용사 뒤 hơn이에요.",
+  "options": [
+   "bằng",
+   "hơn",
+   "như",
+   "nhất"
+  ],
+  "line": "Đà Lạt mát hơn Hà Nội nhiều."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "bị(나쁜 일)·được(좋은 일)로 당하다·받다",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "어제 지갑을 잃어버렸어요.",
+  "before": "Hôm qua tôi ",
+  "after": " mất ví.",
+  "answer": "bị",
+  "why": "나쁜 일을 당했을 때는 bị예요.",
+  "options": [
+   "có",
+   "được",
+   "bị",
+   "đã được"
+  ],
+  "line": "Hôm qua tôi bị mất ví."
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "nếu … thì … (만약 ～라면)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "내일 날씨가 좋으면 등산 가자.",
+  "before": "Nếu mai trời đẹp ",
+  "after": " mình đi leo núi.",
+  "answer": "thì",
+  "why": "nếu … thì …로 조건을 이어요.",
+  "options": [
+   "mà nếu",
+   "thì",
+   "nên",
+   "nhưng"
+  ],
+  "line": "Nếu mai trời đẹp thì mình đi leo núi."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "tuy … nhưng … (～지만)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "조금 멀긴 하지만 이 가게는 아주 맛있어요.",
+  "before": "Tuy hơi xa ",
+  "after": " quán này rất ngon.",
+  "answer": "nhưng",
+  "why": "tuy … nhưng …으로 양보를 이어요.",
+  "options": [
+   "thì",
+   "nên",
+   "nhưng",
+   "vì"
+  ],
+  "line": "Tuy hơi xa nhưng quán này rất ngon."
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "순서: trước khi(～하기 전)·sau khi(～한 뒤)·rồi(그러고 나서)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "아침을 먹은 뒤 우리는 바다에 나갔어요.",
+  "before": "",
+  "after": " ăn sáng, chúng tôi ra biển.",
+  "answer": "Sau khi",
+  "why": "'~한 뒤'는 sau khi예요.",
+  "options": [
+   "Sau rồi khi",
+   "Sau khi",
+   "Trước khi",
+   "Khi sau"
+  ],
+  "line": "Sau khi ăn sáng, chúng tôi ra biển."
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "nghĩ là / nói là (～라고 생각하다·말하다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "그 사람 말이 맞다고 생각해요.",
+  "before": "Tôi ",
+  "after": " anh ấy nói đúng.",
+  "answer": "nghĩ là",
+  "why": "'~라고 생각하다'는 nghĩ là예요.",
+  "options": [
+   "nghĩ về là",
+   "là nghĩ",
+   "nói nghĩ",
+   "nghĩ là"
+  ],
+  "line": "Tôi nghĩ là anh ấy nói đúng."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "vừa(막 ～했다)·sắp(곧 ～한다)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "방금 집에 도착했어요.",
+  "before": "Tôi ",
+  "after": " về đến nhà.",
+  "answer": "vừa",
+  "why": "'막 ~했다'는 동사 앞 vừa예요.",
+  "options": [
+   "đang sắp",
+   "sẽ vừa",
+   "vừa",
+   "sắp"
+  ],
+  "line": "Tôi vừa về đến nhà."
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "không những … mà còn … (～뿐 아니라 ～도)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이 계획은 쌀 뿐 아니라 빠르기도 해요.",
+  "before": "Kế hoạch này không những rẻ ",
+  "after": " nhanh.",
+  "answer": "mà còn",
+  "why": "không những … mà còn …으로 이어요.",
+  "options": [
+   "nhưng còn",
+   "mà thôi",
+   "còn mà",
+   "mà còn"
+  ],
+  "line": "Kế hoạch này không những rẻ mà còn nhanh."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "dù … vẫn … (～하더라도 여전히)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "값이 비싸도 많은 사람이 여전히 사요.",
+  "before": "Dù giá cao, nhiều người ",
+  "after": " mua.",
+  "answer": "vẫn",
+  "why": "dù … vẫn …으로 '그래도 여전히'를 말해요.",
+  "options": [
+   "vẫn",
+   "chưa",
+   "nên",
+   "thì"
+  ],
+  "line": "Dù giá cao, nhiều người vẫn mua."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "để … / nhằm … (～하기 위해)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "회사는 품질을 높이기 위해 교육 과정을 열었어요.",
+  "before": "Công ty mở lớp đào tạo ",
+  "after": " nâng cao chất lượng.",
+  "answer": "để",
+  "why": "목적은 để + 동사예요.",
+  "options": [
+   "nên",
+   "để",
+   "vì",
+   "mà để"
+  ],
+  "line": "Công ty mở lớp đào tạo để nâng cao chất lượng."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "càng … càng … (～할수록 더 ～)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "도시가 붐빌수록 교통은 더 막혀요.",
+  "before": "Thành phố ",
+  "after": " tắc.",
+  "answer": "càng đông, giao thông càng",
+  "why": "càng … càng …으로 '~할수록 더'를 말해요.",
+  "options": [
+   "đông càng, giao thông càng",
+   "rất đông, giao thông càng",
+   "càng đông, giao thông càng",
+   "càng đông, giao thông hơn"
+  ],
+  "line": "Thành phố càng đông, giao thông càng tắc."
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "hơi·khá·cũng으로 말 누그러뜨리기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "이 아이디어도 괜찮은데 조금 하기 어려워요.",
+  "before": "Ý tưởng này cũng hay, nhưng ",
+  "after": " khó làm.",
+  "answer": "hơi",
+  "why": "말을 누그러뜨리는 '조금'은 hơi예요.",
+  "options": [
+   "hơi",
+   "lắm",
+   "rất quá",
+   "nhất"
+  ],
+  "line": "Ý tưởng này cũng hay, nhưng hơi khó làm."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "thì로 화제 앞세우기",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "예산 문제라면 더 논의해야 해요.",
+  "before": "Về ngân sách ",
+  "after": " chúng ta cần bàn thêm.",
+  "answer": "thì",
+  "why": "화제를 앞세울 때는 thì를 붙여요.",
+  "options": [
+   "nên",
+   "thì",
+   "mà thì",
+   "là"
+  ],
+  "line": "Về ngân sách thì chúng ta cần bàn thêm."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식 연결어: do đó(따라서)·tuy nhiên(그러나)·ngoài ra(그 밖에)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "그러나 아직 데이터가 충분하지 않습니다.",
+  "before": "",
+  "after": ", chúng ta chưa có đủ dữ liệu.",
+  "answer": "Tuy nhiên",
+  "why": "격식 글에서 '그러나'는 tuy nhiên이에요.",
+  "options": [
+   "Vì vậy",
+   "Do đó",
+   "Ngoài ra",
+   "Tuy nhiên"
+  ],
+  "line": "Tuy nhiên, chúng ta chưa có đủ dữ liệu."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "강조 chính(바로)·ngay(곧바로)·đến cả(～조차)",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "바로 그 사람이 이 아이디어를 낸 사람이에요.",
+  "before": "",
+  "after": " anh ấy là người đề xuất ý tưởng này.",
+  "answer": "Chính",
+  "why": "'바로 ~'라는 강조는 chính이에요.",
+  "options": [
+   "Chính",
+   "Chỉ",
+   "Ngay",
+   "Đến cả"
+  ],
+  "line": "Chính anh ấy là người đề xuất ý tưởng này."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "태도를 싣는 문장 끝 말: chứ·mà·cơ·đấy",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "내가 말했잖아요.",
+  "before": "Em đã bảo rồi ",
+  "after": ".",
+  "answer": "mà",
+  "why": "'~잖아'라는 태도는 문장 끝 mà예요.",
+  "options": [
+   "không",
+   "mà",
+   "chưa",
+   "à"
+  ],
+  "line": "Em đã bảo rồi mà."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "반어 질문: sao lại … / có phải … đâu",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "그게 제 잘못인 건 아니잖아요.",
+  "before": "",
+  "after": " lỗi của em đâu.",
+  "answer": "Có phải",
+  "why": "반어는 có phải … đâu로 말해요.",
+  "options": [
+   "Sao lại có",
+   "Phải có",
+   "Có phải",
+   "Có phải không"
+  ],
+  "line": "Có phải lỗi của em đâu."
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식 문어체: nhằm·đối với·trong bối cảnh",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "소기업에게 이것은 큰 도전입니다.",
+  "before": "",
+  "after": " doanh nghiệp nhỏ, đây là một thách thức lớn.",
+  "answer": "Đối với",
+  "why": "격식 글에서 '~에게·~에 대해'는 đối với예요.",
+  "options": [
+   "Đối với",
+   "Trong khi",
+   "Do",
+   "Nhằm"
+  ],
+  "line": "Đối với doanh nghiệp nhỏ, đây là một thách thức lớn."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "완곡한 양보: không phải là … nhưng …",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "제가 싫다는 게 아니라, 시간이 안 돼서요.",
+  "before": "",
+  "after": " em không muốn, nhưng thời gian không cho phép.",
+  "answer": "Không phải là",
+  "why": "완곡한 양보는 không phải là … nhưng …이에요.",
+  "options": [
+   "Không là phải",
+   "Không phải là",
+   "Có phải là",
+   "Phải không là"
+  ],
+  "line": "Không phải là em không muốn, nhưng thời gian không cho phép."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "겹말로 뉘앙스 주기: xinh xinh·đo đỏ·nhè nhẹ",
+  "ask": "뜻에 맞는 베트남어를 고르세요.",
+  "gloss": "오늘은 날씨가 쌀쌀하고 바람이 살랑살랑 불어요.",
+  "before": "Hôm nay trời lành lạnh, gió thổi ",
+  "after": ".",
+  "answer": "nhè nhẹ",
+  "why": "겹말 nhè nhẹ로 '살살'이라는 느낌을 줘요.",
+  "options": [
+   "nhẹ nhẹ nhàng",
+   "nhè nhẹ",
+   "nhè",
+   "nhẹ nhè"
+  ],
+  "line": "Hôm nay trời lành lạnh, gió thổi nhè nhẹ."
+ }
+}

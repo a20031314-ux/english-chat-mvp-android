@@ -2,7 +2,7 @@
 
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
-import { cardFaces } from "@/lib/curriculum/checkState";
+import { cardFaces, checkStates, dueKeys } from "@/lib/curriculum/checkState";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
@@ -152,6 +152,15 @@ function readSnapshot(): Snapshot | null {
 /** 학습 끝 체크가 서버에 반영되면 오늘 할 것이 다시 볼 것을 새로 읽는다. */
 function announceReview(language: string, review: ReviewMap) {
   window.dispatchEvent(new CustomEvent(REVIEW_EVENT, { detail: { language, review } }));
+}
+
+/** 넣어 둔 문제 중 맞혀서 쉬는 열쇠(장부에 ok — 단 1·3·7·30일 확인 때가 된 것은 다시 낸다). */
+function preparedRest(language: string, prepared: readonly { key: string }[] | null): string[] {
+  if (!prepared?.length) return [];
+  const events = readLedger(language);
+  const ok = new Set(events.filter((event) => event.r === "ok").map((event) => event.k));
+  const due = new Set(dueKeys(checkStates(events), Math.floor(Date.now() / 1000)));
+  return prepared.map((item) => item.key).filter((key) => ok.has(key) && !due.has(key));
 }
 
 export function TodayPlan({
@@ -1266,11 +1275,14 @@ export function TodayPlan({
           : levelPick(QUIZ_SIZE + 1, { skip: lastCircle.current })
         : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: usableKey, known: knownWord, skip: lastCircle.current });
       // 낱말 묶음마다 아직 안 본 표현 하나를 둘째 자리에(새 낱말을 쉬는 중이면 표현도 쉼). 영어는 그 자리에 넣어 둔 문법·표현 고르기.
-      if (!paused && !prepared) {
+      // 넣어 둔 표현 문제가 없는 언어(영어 말고는 문법만 넣어 둠, 2026-11-06)는 표현 카드를 그대로.
+      if (!paused && !prepared?.some((item) => item.kind === "expression")) {
         const more = nextExpressions(exprCards.deck, { seen: (key) => Boolean(circleRef.current.items[key]) || knownWord(key), ready: (key) => exprCards.ready.has(key), skip: lastCircle.current });
         keys.splice(Math.min(1, keys.length), 0, ...more);
       }
-      const head = !paused && prepared ? pickPrepared(prepared, { stage, skip: lastCircle.current }) : [];
+      // 개편: 맞힌 넣어 둔 문제는 확인할 때가 될 때까지 다시 안 냄(예전엔 지난 묶음만 빼서 둘이 번갈아 나옴).
+      const preparedSkip = reform ? preparedRest(language, prepared) : null;
+      const head = !paused && prepared ? pickPrepared(prepared, { stage, skip: new Set([...lastCircle.current, ...(preparedSkip ?? [])]) }) : [];
       lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
       if (!keys.length && !head.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));

@@ -1,0 +1,668 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "이름·출신·직업의 ser (~이다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "안녕, 나는 민지고 한국에서 왔어.",
+  "before": "Hola, ",
+  "after": " Min-ji y vengo de Corea.",
+  "answer": "soy",
+  "why": "이름·정체를 말할 때는 ser를 써서 yo에는 soy예요.",
+  "options": [
+   "estoy",
+   "soy",
+   "eres",
+   "es"
+  ],
+  "line": "Hola, soy Min-ji y vengo de Corea."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "llamarse (이름이 ~이다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "내 이름은 준이야. 너는?",
+  "before": "",
+  "after": " Jun. ¿Y tú?",
+  "answer": "Me llamo",
+  "why": "이름은 재귀동사 llamarse로 말해서 me llamo예요.",
+  "options": [
+   "Me llama",
+   "Se llamo",
+   "Me llamo",
+   "Llamo"
+  ],
+  "line": "Me llamo Jun. ¿Y tú?"
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "규칙 -ar 동사 현재형",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "나는 사무실에서 일하고 스페인어를 공부해.",
+  "before": "",
+  "after": " en una oficina y estudio español.",
+  "answer": "Trabajo",
+  "why": "-ar 동사의 yo 꼴은 -o라서 trabajo예요.",
+  "options": [
+   "Trabajo",
+   "Trabajar",
+   "Trabajas",
+   "Trabaja"
+  ],
+  "line": "Trabajo en una oficina y estudio español."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "¿…?와 의문사로 묻기",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "너 어디 살아?",
+  "before": "¿",
+  "after": " vives?",
+  "answer": "Dónde",
+  "why": "장소를 묻는 의문사는 악센트가 있는 dónde예요.",
+  "options": [
+   "Donde",
+   "Dónde",
+   "Qué",
+   "Cuándo"
+  ],
+  "line": "¿Dónde vives?"
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "명사의 성·수: el/la, un/una",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "사과 하나랑 오렌지 두 개 주세요.",
+  "before": "Quiero ",
+  "after": " y dos naranjas.",
+  "answer": "una manzana",
+  "why": "manzana는 여성 명사라 부정관사 una를 써요.",
+  "options": [
+   "un manzana",
+   "uno manzana",
+   "una manzana",
+   "una manzanas"
+  ],
+  "line": "Quiero una manzana y dos naranjas."
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "위치의 estar (~에 있다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "지하철역은 여기서 가까워.",
+  "before": "El metro ",
+  "after": " cerca de aquí.",
+  "answer": "está",
+  "why": "어디에 있는지는 ser가 아니라 estar라서 está예요.",
+  "options": [
+   "es",
+   "está",
+   "estás",
+   "hay"
+  ],
+  "line": "El metro está cerca de aquí."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "hay (~이 있다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "이 근처에 슈퍼마켓 있어요?",
+  "before": "¿",
+  "after": " un supermercado por aquí?",
+  "answer": "Hay",
+  "why": "무엇이 있는지 물을 때는 hay를 써요.",
+  "options": [
+   "Hay",
+   "Está",
+   "Es",
+   "Tiene"
+  ],
+  "line": "¿Hay un supermercado por aquí?"
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "나이·소유의 tener",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "나는 스물다섯 살이야.",
+  "before": "",
+  "after": " veinticinco años.",
+  "answer": "Tengo",
+  "why": "나이는 tener로 말해서 yo에는 tengo예요.",
+  "options": [
+   "Estoy",
+   "Tiene",
+   "Tengo",
+   "Soy"
+  ],
+  "line": "Tengo veinticinco años."
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "단순과거(한 일): 규칙 동사",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "어제 친구들이랑 저녁 먹었어.",
+  "before": "Ayer ",
+  "after": " con mis amigos.",
+  "answer": "cené",
+  "why": "어제 끝난 일이라 단순과거, -ar 동사 yo는 -é라서 cené예요.",
+  "options": [
+   "cenaba",
+   "ceno",
+   "cené",
+   "cenó"
+  ],
+  "line": "Ayer cené con mis amigos."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "자주 쓰는 불규칙 과거: fui, hice, tuve",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "토요일에 바닷가에 갔어.",
+  "before": "El sábado ",
+  "after": " a la playa.",
+  "answer": "fui",
+  "why": "ir의 단순과거 yo 꼴은 불규칙 fui예요.",
+  "options": [
+   "fue",
+   "iba",
+   "voy",
+   "fui"
+  ],
+  "line": "El sábado fui a la playa."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ir a + 동사원형 (~할 거다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "내일 할머니 뵈러 갈 거야.",
+  "before": "Mañana ",
+  "after": " a mi abuela.",
+  "answer": "voy a visitar",
+  "why": "가까운 미래는 ir a + 동사원형이라 voy a visitar예요.",
+  "options": [
+   "voy a visito",
+   "vaya a visitar",
+   "voy visitar",
+   "voy a visitar"
+  ],
+  "line": "Mañana voy a visitar a mi abuela."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "gustar·encantar (~가 좋다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "나는 공포 영화를 정말 좋아해.",
+  "before": "",
+  "after": " mucho las películas de miedo.",
+  "answer": "Me gustan",
+  "why": "좋아하는 대상이 복수(películas)라서 gustan이에요.",
+  "options": [
+   "Me gusta",
+   "Me gustan",
+   "Yo gusto",
+   "Me gusto"
+  ],
+  "line": "Me gustan mucho las películas de miedo."
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "어간이 바뀌는 동사: querer, poder, preferir",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "여덟 시에 올 수 있어?",
+  "before": "¿",
+  "after": " venir a las ocho?",
+  "answer": "Puedes",
+  "why": "poder는 어간이 o → ue로 바뀌어서 tú에는 puedes예요.",
+  "options": [
+   "Puedes",
+   "Puedas",
+   "Pueden",
+   "Podes"
+  ],
+  "line": "¿Puedes venir a las ocho?"
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "tener que + 동사원형 (~해야 한다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "오늘은 늦게까지 일해야 해.",
+  "before": "Hoy ",
+  "after": " hasta tarde.",
+  "answer": "tengo que trabajar",
+  "why": "의무는 tener que + 동사원형이에요.",
+  "options": [
+   "tengo de trabajar",
+   "tengo que trabajar",
+   "tengo trabajar",
+   "tengo que trabajo"
+  ],
+  "line": "Hoy tengo que trabajar hasta tarde."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "doler (~가 아프다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "목이 아파.",
+  "before": "",
+  "after": " la garganta.",
+  "answer": "Me duele",
+  "why": "아픈 곳(la garganta)이 하나라서 doler는 duele, 아픈 사람은 me예요.",
+  "options": [
+   "Me dolo",
+   "Duelo",
+   "Me duelen",
+   "Me duele"
+  ],
+  "line": "Me duele la garganta."
+ },
+ "g|2:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "목적 대명사 lo, la, los, las",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "케이크요? 설탕 빼고 주세요.",
+  "before": "¿El pastel? ",
+  "after": " quiero sin azúcar.",
+  "answer": "Lo",
+  "why": "el pastel(남성 단수)을 받는 목적 대명사는 lo예요.",
+  "options": [
+   "Le",
+   "Los",
+   "La",
+   "Lo"
+  ],
+  "line": "¿El pastel? Lo quiero sin azúcar."
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "단순과거와 불완료과거(사건 vs 배경)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "우리가 호텔에 도착했을 때 비가 많이 오고 있었어.",
+  "before": "",
+  "after": " mucho cuando llegamos al hotel.",
+  "answer": "Llovía",
+  "why": "사건의 배경은 불완료과거라서 llovía예요.",
+  "options": [
+   "Llueve",
+   "Llovía",
+   "Ha llovido",
+   "Llovió"
+  ],
+  "line": "Llovía mucho cuando llegamos al hotel."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "현재완료(~해 본 적 있다)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "몰레 먹어 본 적 있어?",
+  "before": "¿Alguna vez ",
+  "after": " el mole?",
+  "answer": "has probado",
+  "why": "해 본 적을 묻는 현재완료는 haber + 과거분사라 has probado예요.",
+  "options": [
+   "has probó",
+   "has probar",
+   "has probado",
+   "hayas probado"
+  ],
+  "line": "¿Alguna vez has probado el mole?"
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "재귀동사(일과)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "나는 일찍 일어나서 빨리 샤워해.",
+  "before": "",
+  "after": " temprano y me ducho rápido.",
+  "answer": "Me levanto",
+  "why": "levantarse는 재귀동사라 yo에는 me levanto예요.",
+  "options": [
+   "Se levanto",
+   "Me levanto",
+   "Levanto",
+   "Me levanta"
+  ],
+  "line": "Me levanto temprano y me ducho rápido."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "의견: creo que / no creo que + 접속법",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "좋은 드라마 같은데, 해피엔딩일 것 같지는 않아.",
+  "before": "Creo que es una buena serie, pero no creo que ",
+  "after": " final feliz.",
+  "answer": "tenga",
+  "why": "no creo que 뒤에는 접속법이라 tenga예요.",
+  "options": [
+   "tener",
+   "tiene",
+   "tenga",
+   "tendrá"
+  ],
+  "line": "Creo que es una buena serie, pero no creo que tenga final feliz."
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "공손한 부탁의 조건법 (podría, me gustaría)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "방을 바꿔 주실 수 있을까요?",
+  "before": "¿",
+  "after": " cambiarme de habitación?",
+  "answer": "Podría",
+  "why": "공손한 부탁은 조건법 podría예요.",
+  "options": [
+   "Poder",
+   "Podría",
+   "Pudo",
+   "Podría que"
+  ],
+  "line": "¿Podría cambiarme de habitación?"
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "비교: más/menos… que, tan… como",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "이 동네가 시내보다 조용해.",
+  "before": "Este barrio es ",
+  "after": " el centro.",
+  "answer": "más tranquilo que",
+  "why": "비교는 más … que예요.",
+  "options": [
+   "más tranquilo como",
+   "tan tranquilo que",
+   "más tranquilo de",
+   "más tranquilo que"
+  ],
+  "line": "Este barrio es más tranquilo que el centro."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "목적 대명사 두 개: se lo, me la",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "열쇠가 안 돼요. 바꿔 주실 수 있어요?",
+  "before": "La llave no funciona. ¿",
+  "after": " puede cambiar?",
+  "answer": "Me la",
+  "why": "간접 목적어(me)가 직접 목적어(la) 앞에 와서 me la예요.",
+  "options": [
+   "Se la",
+   "Me lo",
+   "Me la",
+   "La me"
+  ],
+  "line": "La llave no funciona. ¿Me la puede cambiar?"
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "바람·감정 뒤 접속법 현재",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "면접 잘 보길 바라.",
+  "before": "Espero que te ",
+  "after": " bien en la entrevista.",
+  "answer": "vaya",
+  "why": "바람을 나타내는 espero que 뒤에는 접속법 현재 vaya예요.",
+  "options": [
+   "va",
+   "irá",
+   "ir",
+   "vaya"
+  ],
+  "line": "Espero que te vaya bien en la entrevista."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "si + 접속법 과거 + 조건법 (만약 ~라면)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "시간이 더 있다면 기타를 배울 텐데.",
+  "before": "Si ",
+  "after": " más tiempo, aprendería a tocar la guitarra.",
+  "answer": "tuviera",
+  "why": "현재 사실과 반대인 가정은 si + 접속법 과거라 tuviera예요.",
+  "options": [
+   "tuviera",
+   "tenga",
+   "tengo",
+   "tendría"
+  ],
+  "line": "Si tuviera más tiempo, aprendería a tocar la guitarra."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "양보: aunque + 직설법/접속법",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "비가 오더라도 나갈 거야.",
+  "before": "Aunque ",
+  "after": ", vamos a salir.",
+  "answer": "llueva",
+  "why": "올지 모르는 일에 대한 양보는 aunque + 접속법이라 llueva예요.",
+  "options": [
+   "llovería",
+   "llueva",
+   "lloverá",
+   "llover"
+  ],
+  "line": "Aunque llueva, vamos a salir."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "간접화법: dijo que…",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "차가 많이 막혀서 늦을 거라고 나한테 말했어.",
+  "before": "Me dijo que ",
+  "after": " tarde porque había mucho tráfico.",
+  "answer": "llegaría",
+  "why": "과거에 말한 미래는 간접화법에서 조건법 llegaría가 돼요.",
+  "options": [
+   "llegue",
+   "llegando",
+   "llegaría",
+   "llegar"
+  ],
+  "line": "Me dijo que llegaría tarde porque había mucho tráfico."
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "때를 나타내는 접속법: cuando + 접속법",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "보고서 다 쓰면 나한테 보내 줘.",
+  "before": "Cuando ",
+  "after": " el informe, mándamelo.",
+  "answer": "termines",
+  "why": "앞으로 일어날 때를 말하는 cuando 뒤에는 접속법이라 termines예요.",
+  "options": [
+   "termines",
+   "terminarás",
+   "terminas",
+   "terminaste"
+  ],
+  "line": "Cuando termines el informe, mándamelo."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "수동·무인칭 se",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "물가가 오른다고들 해.",
+  "before": "",
+  "after": " que van a subir los precios.",
+  "answer": "Se dice",
+  "why": "누가 말하는지 정하지 않는 무인칭은 se dice예요.",
+  "options": [
+   "Dice se",
+   "Se dice",
+   "Es dicho",
+   "Se dicen"
+  ],
+  "line": "Se dice que van a subir los precios."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "논리 연결어: por un lado, en cambio, por lo tanto",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "한편으로는 시간을 아끼지만, 반면에 더 외로워.",
+  "before": "Por un lado ahorras tiempo; ",
+  "after": ", te sientes más solo.",
+  "answer": "en cambio",
+  "why": "앞과 반대되는 면을 이을 때는 en cambio예요.",
+  "options": [
+   "además",
+   "por lo tanto",
+   "es decir",
+   "en cambio"
+  ],
+  "line": "Por un lado ahorras tiempo; en cambio, te sientes más solo."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "후회의 접속법 과거완료 (si hubiera…)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "미리 말해 줬으면 도와줬을 텐데.",
+  "before": "Si me lo ",
+  "after": " antes, te habría ayudado.",
+  "answer": "hubieras dicho",
+  "why": "과거 사실과 반대인 가정은 si + 접속법 과거완료라 hubieras dicho예요.",
+  "options": [
+   "hubieras dicho",
+   "dijiste",
+   "habías dicho",
+   "habrías dicho"
+  ],
+  "line": "Si me lo hubieras dicho antes, te habría ayudado."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "불완료과거·조건법으로 누그러뜨리기 (quería, diría)",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "제안서에 대해 하나 말씀드리고 싶었어요.",
+  "before": "",
+  "after": " comentarte una cosita sobre la propuesta.",
+  "answer": "Quería",
+  "why": "말을 누그러뜨릴 때는 불완료과거 quería를 써요.",
+  "options": [
+   "Quiero que",
+   "Quería",
+   "Quise",
+   "Querré"
+  ],
+  "line": "Quería comentarte una cosita sobre la propuesta."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "강조 구문: lo que…, es… quien",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "내가 제일 걱정되는 건 예산이야.",
+  "before": "",
+  "after": " más me preocupa es el presupuesto.",
+  "answer": "Lo que",
+  "why": "'~하는 것'을 앞으로 빼는 강조는 lo que예요.",
+  "options": [
+   "El que",
+   "Que",
+   "Lo que",
+   "Lo cual"
+  ],
+  "line": "Lo que más me preocupa es el presupuesto."
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "정해지지 않은 대상 뒤 접속법",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "디자인을 알고 독일어를 하는 사람을 찾고 있어.",
+  "before": "Busco a alguien que ",
+  "after": " de diseño y hable alemán.",
+  "answer": "sepa",
+  "why": "아직 정해지지 않은 사람을 꾸미면 접속법이라 sepa예요.",
+  "options": [
+   "sepa",
+   "saber",
+   "sabía",
+   "sabe"
+  ],
+  "line": "Busco a alguien que sepa de diseño y hable alemán."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식체: usted, le agradecería que…",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "서류를 되도록 빨리 보내 주시면 감사하겠습니다.",
+  "before": "Le agradecería que me ",
+  "after": " la documentación cuanto antes.",
+  "answer": "enviara",
+  "why": "agradecería que 뒤에는 접속법 과거라 enviara예요.",
+  "options": [
+   "enviará",
+   "enviara",
+   "envía",
+   "envíe a"
+  ],
+  "line": "Le agradecería que me enviara la documentación cuanto antes."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "말투를 바꾸는 축소사·확대사",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "잠깐만 기다려, 거의 다 끝나.",
+  "before": "Espera un ",
+  "after": ", que ya casi termino.",
+  "answer": "momentito",
+  "why": "말을 부드럽게 하는 축소사 -ito라 momentito예요.",
+  "options": [
+   "momentón",
+   "momentito",
+   "momentillos",
+   "momentazo"
+  ],
+  "line": "Espera un momentito, que ya casi termino."
+ },
+ "g|5:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "담화 표지: o sea, es decir, en definitiva",
+  "ask": "뜻에 맞는 스페인어를 고르세요.",
+  "gloss": "그러니까 결국 안 온다는 거지?",
+  "before": "",
+  "after": ", que al final no vienes, ¿no?",
+  "answer": "O sea",
+  "why": "앞말을 정리해서 되물을 때는 o sea예요.",
+  "options": [
+   "En cambio",
+   "Sin embargo",
+   "Aunque",
+   "O sea"
+  ],
+  "line": "O sea, que al final no vienes, ¿no?"
+ }
+}

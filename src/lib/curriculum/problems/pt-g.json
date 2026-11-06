@@ -1,0 +1,650 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ser — 누구인지·어디 출신인지",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "나는 한국 사람이야.",
+  "before": "Eu ",
+  "after": " coreano.",
+  "answer": "sou",
+  "why": "출신·정체는 ser, eu에는 sou예요.",
+  "options": [
+   "estou",
+   "sou",
+   "são",
+   "é"
+  ],
+  "line": "Eu sou coreano."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "estar — 상태와 위치",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "잘 지내, 고마워.",
+  "before": "",
+  "after": " bem, obrigada.",
+  "answer": "Estou",
+  "why": "지금의 상태는 estar라서 estou예요.",
+  "options": [
+   "Está",
+   "Tenho",
+   "Estou",
+   "Sou"
+  ],
+  "line": "Estou bem, obrigada."
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "관사 o / a와 명사의 성",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "집은 크고 방은 작아.",
+  "before": "",
+  "after": " é grande e o quarto é pequeno.",
+  "answer": "A casa",
+  "why": "casa는 여성 명사라 관사 a예요.",
+  "options": [
+   "A casa",
+   "As casa",
+   "Um casa",
+   "O casa"
+  ],
+  "line": "A casa é grande e o quarto é pequeno."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-ar 동사 현재형",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "나는 상파울루에 살아.",
+  "before": "Eu ",
+  "after": " em São Paulo.",
+  "answer": "moro",
+  "why": "-ar 동사의 eu 꼴은 -o라서 moro예요.",
+  "options": [
+   "mora",
+   "moro",
+   "moramos",
+   "morar"
+  ],
+  "line": "Eu moro em São Paulo."
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "onde·quanto·como·o que로 묻기",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "화장실이 어디예요?",
+  "before": "",
+  "after": " fica o banheiro?",
+  "answer": "Onde",
+  "why": "장소를 묻는 의문사는 onde예요.",
+  "options": [
+   "Quanto",
+   "Como",
+   "Onde",
+   "O que"
+  ],
+  "line": "Onde fica o banheiro?"
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "querer + 명사 (～를 원해요)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "치즈빵 하나 주세요.",
+  "before": "Eu ",
+  "after": " um pão de queijo.",
+  "answer": "quero",
+  "why": "querer의 eu 꼴은 quero예요.",
+  "options": [
+   "quer",
+   "quero",
+   "queira",
+   "querer"
+  ],
+  "line": "Eu quero um pão de queijo."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ter (가지다, 있다)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "탄산 없는 물 있어요?",
+  "before": "Você ",
+  "after": " água sem gás?",
+  "answer": "tem",
+  "why": "você와 함께 ter는 tem이에요.",
+  "options": [
+   "tem",
+   "tenho",
+   "está",
+   "é"
+  ],
+  "line": "Você tem água sem gás?"
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "동사 앞의 não (부정)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "나는 포르투갈어를 아주 잘하진 못해.",
+  "before": "Eu ",
+  "after": " português muito bem.",
+  "answer": "não falo",
+  "why": "부정은 동사 앞에 não를 놓아요.",
+  "options": [
+   "nem falo",
+   "não fala",
+   "não falo",
+   "falo não"
+  ],
+  "line": "Eu não falo português muito bem."
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "규칙 동사 과거형 (pretérito perfeito)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "어제 늦게까지 일했어.",
+  "before": "Ontem eu ",
+  "after": " até tarde.",
+  "answer": "trabalhei",
+  "why": "끝난 과거 일, -ar 동사 eu는 -ei라서 trabalhei예요.",
+  "options": [
+   "trabalhava",
+   "trabalho",
+   "trabalhei",
+   "trabalhou"
+  ],
+  "line": "Ontem eu trabalhei até tarde."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "불규칙 과거형: fui, fiz, tive",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "토요일에 바닷가에 갔어.",
+  "before": "No sábado eu ",
+  "after": " à praia.",
+  "answer": "fui",
+  "why": "ir의 과거 eu 꼴은 불규칙 fui예요.",
+  "options": [
+   "foi",
+   "ia",
+   "vou",
+   "fui"
+  ],
+  "line": "No sábado eu fui à praia."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "ir + 동사원형 (～할 거예요)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "연휴에 여행 갈 거야.",
+  "before": "",
+  "after": " no feriado.",
+  "answer": "Vou viajar",
+  "why": "가까운 미래는 ir + 동사원형이라 vou viajar예요.",
+  "options": [
+   "Vai viajo",
+   "Vou viajo",
+   "Vou a viajar",
+   "Vou viajar"
+  ],
+  "line": "Vou viajar no feriado."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "estar + -ndo (지금 ～하는 중)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "약국을 찾고 있어요.",
+  "before": "",
+  "after": " uma farmácia.",
+  "answer": "Estou procurando",
+  "why": "지금 하는 중인 일은 estar + -ndo예요.",
+  "options": [
+   "Sou procurando",
+   "Estou procurando",
+   "Estou procurar",
+   "Estou procurado"
+  ],
+  "line": "Estou procurando uma farmácia."
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "gostar de + 명사·동사 (～를 좋아해요)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "나는 주말에 요리하는 걸 좋아해.",
+  "before": "Eu ",
+  "after": " cozinhar no fim de semana.",
+  "answer": "gosto de",
+  "why": "gostar 뒤에는 늘 de가 와요.",
+  "options": [
+   "gosto de",
+   "gosta de",
+   "gosto a",
+   "gosto"
+  ],
+  "line": "Eu gosto de cozinhar no fim de semana."
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "mais ... do que로 비교하기",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "리우가 쿠리치바보다 더워.",
+  "before": "O Rio é ",
+  "after": " Curitiba.",
+  "answer": "mais quente do que",
+  "why": "비교는 mais … do que예요.",
+  "options": [
+   "tão quente que",
+   "mais quente do que",
+   "mais quente como",
+   "mais quente de que"
+  ],
+  "line": "O Rio é mais quente do que Curitiba."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "faz / há + 기간 (～ 동안, ～ 전)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "여기 산 지 2년 됐어.",
+  "before": "Moro aqui ",
+  "after": " dois anos.",
+  "answer": "faz",
+  "why": "기간은 faz + 기간으로 말해요.",
+  "options": [
+   "por",
+   "desde",
+   "fazem",
+   "faz"
+  ],
+  "line": "Moro aqui faz dois anos."
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "배경·습관의 미완료 과거 (imperfeito)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "어렸을 때 시골에 살았어.",
+  "before": "Quando eu era criança, ",
+  "after": " no interior.",
+  "answer": "morava",
+  "why": "과거의 배경·습관은 미완료 과거 morava예요.",
+  "options": [
+   "moro",
+   "morava",
+   "morarei",
+   "morei"
+  ],
+  "line": "Quando eu era criança, morava no interior."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "한 이야기 속 미완료 과거와 완료 과거",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "집을 나서는데 비가 오기 시작했어.",
+  "before": "Eu estava saindo de casa quando ",
+  "after": " a chover.",
+  "answer": "começou",
+  "why": "배경 속에 끼어든 일은 완료 과거 começou예요.",
+  "options": [
+   "começa",
+   "começava",
+   "começou",
+   "comece"
+  ],
+  "line": "Eu estava saindo de casa quando começou a chover."
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "espero que·é importante que 뒤 접속법 현재",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "선물이 마음에 들면 좋겠어.",
+  "before": "Espero que você ",
+  "after": " do presente.",
+  "answer": "goste",
+  "why": "espero que 뒤에는 접속법 현재 goste예요.",
+  "options": [
+   "gostou",
+   "goste",
+   "gosta",
+   "gostar"
+  ],
+  "line": "Espero que você goste do presente."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "공손한 부탁의 조건법 (poderia, seria)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "가방 좀 도와주실 수 있어요?",
+  "before": "Você ",
+  "after": " me ajudar com a mala?",
+  "answer": "poderia",
+  "why": "공손한 부탁은 조건법 poderia예요.",
+  "options": [
+   "poder",
+   "pôde",
+   "poderia",
+   "possa"
+  ],
+  "line": "Você poderia me ajudar com a mala?"
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "말에서 동사 앞에 오는 목적 대명사 te·me·lhe",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "이따 전화할게.",
+  "before": "Eu ",
+  "after": " mais tarde.",
+  "answer": "te ligo",
+  "why": "회화에서는 목적 대명사를 동사 앞에 둬서 te ligo예요.",
+  "options": [
+   "te liga",
+   "te ligo",
+   "ligo te",
+   "ligo-lhe te"
+  ],
+  "line": "Eu te ligo mais tarde."
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "nós 대신 쓰는 a gente (우리)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "우리 여덟 시에 나갈 거야.",
+  "before": "",
+  "after": " sair às oito.",
+  "answer": "A gente vai",
+  "why": "a gente는 '우리'지만 동사는 3인칭 단수라 vai예요.",
+  "options": [
+   "A gente vamos",
+   "A gente vão",
+   "A gente vou",
+   "A gente vai"
+  ],
+  "line": "A gente vai sair às oito."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "관계사 que와 onde",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "여기가 우리가 처음 만난 식당이야.",
+  "before": "É o restaurante ",
+  "after": " a gente se conheceu.",
+  "answer": "onde",
+  "why": "장소를 받는 관계사는 onde예요.",
+  "options": [
+   "o qual que",
+   "cujo",
+   "onde",
+   "quem"
+  ],
+  "line": "É o restaurante onde a gente se conheceu."
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "접속법 과거 + 조건법 (～라면 ～할 텐데)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "시간이 더 있다면 리더십 강좌를 들을 텐데.",
+  "before": "Se eu ",
+  "after": " mais tempo, faria um curso de liderança.",
+  "answer": "tivesse",
+  "why": "현재와 반대인 가정은 se + 접속법 과거라 tivesse예요.",
+  "options": [
+   "tenho",
+   "teria",
+   "tiver",
+   "tivesse"
+  ],
+  "line": "Se eu tivesse mais tempo, faria um curso de liderança."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "quando·se·assim que 뒤 접속법 미래",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "될 때 보고서 보내 줘.",
+  "before": "Quando você ",
+  "after": ", me manda o relatório.",
+  "answer": "puder",
+  "why": "앞으로의 때를 말하는 quando 뒤에는 접속법 미래 puder예요.",
+  "options": [
+   "puder",
+   "possa que",
+   "pode",
+   "poderia"
+  ],
+  "line": "Quando você puder, me manda o relatório."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "embora + 접속법 (비록 ～지만)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "비싸긴 하지만 그 강좌는 투자할 가치가 있어.",
+  "before": "Embora ",
+  "after": " caro, o curso vale o investimento.",
+  "answer": "seja",
+  "why": "embora 뒤에는 접속법이라 seja예요.",
+  "options": [
+   "foi",
+   "seja",
+   "é",
+   "ser"
+  ],
+  "line": "Embora seja caro, o curso vale o investimento."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "인칭 부정사",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "그들이 결정하기 전에 우리가 얘기하는 게 낫겠어.",
+  "before": "É melhor a gente conversar antes de eles ",
+  "after": ".",
+  "answer": "decidirem",
+  "why": "주어(eles)가 있는 부정사는 인칭 부정사 decidirem이에요.",
+  "options": [
+   "decidir eles",
+   "decidissem que",
+   "decidirem",
+   "decidem"
+  ],
+  "line": "É melhor a gente conversar antes de eles decidirem."
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "최근 되풀이되는 일의 현재완료 (tenho feito)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "요 몇 주 일을 많이 하고 있어.",
+  "before": "",
+  "after": " muito nas últimas semanas.",
+  "answer": "Tenho trabalhado",
+  "why": "최근 되풀이되는 일은 ter + 과거분사라 tenho trabalhado예요.",
+  "options": [
+   "Tenho trabalhado",
+   "Trabalhei tenho",
+   "Tenho trabalhar",
+   "Tinha trabalho"
+  ],
+  "line": "Tenho trabalhado muito nas últimas semanas."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "남의 말 옮기기",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "그는 늦게 도착할 거라고 했어.",
+  "before": "Ele disse que ",
+  "after": " atrasado.",
+  "answer": "ia chegar",
+  "why": "과거에 말한 미래는 ia + 동사원형이에요.",
+  "options": [
+   "chega ia",
+   "ia chegar",
+   "ir chegar",
+   "vai chegou"
+  ],
+  "line": "Ele disse que ia chegar atrasado."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "주어 없는 se",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "요즘 그 얘기를 많이들 해.",
+  "before": "",
+  "after": " muito disso hoje em dia.",
+  "answer": "Fala-se",
+  "why": "주어 없는 말은 동사 + se라 fala-se예요.",
+  "options": [
+   "Falou-se-se",
+   "Se falam-se",
+   "Fala-lhe",
+   "Fala-se"
+  ],
+  "line": "Fala-se muito disso hoje em dia."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "과거완료 (tinha feito)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "내가 도착했을 때 그들은 이미 나가고 없었어.",
+  "before": "Quando cheguei, eles já ",
+  "after": ".",
+  "answer": "tinham saído",
+  "why": "더 앞선 과거는 과거완료 tinham saído예요.",
+  "options": [
+   "tinham saído",
+   "tinham sair",
+   "saíram tinham",
+   "têm saído"
+  ],
+  "line": "Quando cheguei, eles já tinham saído."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "caso·a não ser que·contanto que 뒤 접속법",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "비가 안 오면 토요일에 바비큐 하자.",
+  "before": "A não ser que ",
+  "after": ", a gente faz o churrasco no sábado.",
+  "answer": "chova",
+  "why": "a não ser que 뒤에는 접속법 chova예요.",
+  "options": [
+   "choveu",
+   "chova",
+   "chove",
+   "chover"
+  ],
+  "line": "A não ser que chova, a gente faz o churrasco no sábado."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "부탁을 부드럽게 하는 지소사",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "잠깐 시간 날 때 이것 좀 봐 줘.",
+  "before": "Dá uma ",
+  "after": " nisso quando tiver um minutinho.",
+  "answer": "olhadinha",
+  "why": "부탁을 부드럽게 하는 지소사 -inha라 olhadinha예요.",
+  "options": [
+   "olhadão",
+   "olhadona",
+   "olhadinha",
+   "olhadinhas"
+  ],
+  "line": "Dá uma olhadinha nisso quando tiver um minutinho."
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "강조 구문 (o que ... é)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "날 불편하게 하는 건 소통 부족이야.",
+  "before": "",
+  "after": " me incomoda é a falta de comunicação.",
+  "answer": "O que",
+  "why": "'~하는 것'을 앞으로 빼는 강조는 o que예요.",
+  "options": [
+   "O que",
+   "Quem",
+   "O qual",
+   "Que"
+  ],
+  "line": "O que me incomoda é a falta de comunicação."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "격식 있는 글말",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "이 메일로 기한 연장을 요청드립니다.",
+  "before": "",
+  "after": " e-mail solicitar a prorrogação do prazo.",
+  "answer": "Venho por meio deste",
+  "why": "격식 글말은 venho por meio deste e-mail로 시작해요.",
+  "options": [
+   "Venho de meio deste",
+   "Venho por meio deste",
+   "Vou por meio desse",
+   "Estou por meio deste"
+  ],
+  "line": "Venho por meio deste e-mail solicitar a prorrogação do prazo."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "지역의 tu (말에서는 흔히 você 동사꼴과)",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "너 내일 파티 가?",
+  "before": "Tu ",
+  "after": " na festa amanhã?",
+  "answer": "vai",
+  "why": "말에서 tu는 흔히 você 동사꼴 vai와 함께 써요.",
+  "options": [
+   "vou",
+   "vai",
+   "vamos",
+   "vais a"
+  ],
+  "line": "Tu vai na festa amanhã?"
+ },
+ "g|5:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "말 잇는 표지 pelo contrário·aliás·inclusive",
+  "ask": "뜻에 맞는 포르투갈어를 고르세요.",
+  "gloss": "비싸지 않아, 오히려 엄청 싸.",
+  "before": "Não é caro; ",
+  "after": ", é uma pechincha.",
+  "answer": "pelo contrário",
+  "why": "앞말과 반대로 뒤집을 때는 pelo contrário예요.",
+  "options": [
+   "aliás que",
+   "inclusive que",
+   "portanto",
+   "pelo contrário"
+  ],
+  "line": "Não é caro; pelo contrário, é uma pechincha."
+ }
+}
