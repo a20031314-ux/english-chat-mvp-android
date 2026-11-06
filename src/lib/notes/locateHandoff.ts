@@ -69,3 +69,20 @@ export function takeFrame(language: string): FrameHandoff | null {
   pendingFrame = null;
   return out;
 }
+
+/**
+ * 통화 끝 숙제 "글자·소리"(2026-11-06 사용자 "알파벳도 모를 시 일단 학습을 진행하되 숙제로 0단계 학습") → My Stagebank를 펴서
+ * 오늘 할 것 자리의 0단계 글자 묶음(LettersPlan)으로. 같은 길: My 탭이 그려지고 노트 틀이 서버 답을 받은 뒤 꺼낸다.
+ */
+let pendingLetters: { language: string; at: number } | null = null;
+
+export function handOffLetters(language: string): void {
+  pendingLetters = { language, at: Date.now() };
+  listeners.forEach((listener) => listener());
+}
+
+export function takeLetters(language: string): boolean {
+  if (!pendingLetters || pendingLetters.language !== language || Date.now() - pendingLetters.at > KEEP_MS) return false;
+  pendingLetters = null;
+  return true;
+}

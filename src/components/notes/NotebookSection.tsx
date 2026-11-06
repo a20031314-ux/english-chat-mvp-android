@@ -15,7 +15,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
-import { onLocate, takeFrame, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
+import { onLocate, takeFrame, takeLetters, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type LogItem, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
 import { onAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
@@ -312,6 +312,8 @@ export function NotebookSection({
         openLayer("stage");
         setJump({ stage: frame.stage, id: frame.id, at: Date.now() });
       }
+      // 통화 끝 숙제 "글자·소리" → 단계 칸을 펴면 오늘 할 것 자리에 0단계 글자 묶음.
+      if (takeLetters(language)) openLayer("stage");
       const handed = takeLocate(language);
       if (!handed) return;
       setQuestion(handed);

@@ -66,7 +66,7 @@ export function TalkingBars({ on }: { on: boolean }) {
 }
 
 /** 자막 한 줄(상대가 마지막에 한 말). 여럿이면 앞에 이름. */
-export function CallCaption({ text, meaning, name, onTap }: { text: string; meaning?: string; name?: string; /** 누르면 해석을 펴고 접음(AI 통화, 2026-11-03). */ onTap?: () => void }) {
+export function CallCaption({ text, meaning, name, onTap }: { text: string; meaning?: string; name?: string; /** 누르면 해석 켬/끔(AI 통화 — 다음 줄들도 그대로, 2026-11-06). */ onTap?: () => void }) {
   return (
     <div
       className={`w-full rounded-2xl bg-black/40 px-4 py-2 ${onTap ? "cursor-pointer hover:bg-black/50" : ""}`}
@@ -146,23 +146,26 @@ export function ChatFaceSlot({ children }: { children: ReactNode }) {
 }
 
 /** 이 기기에 남는 켬/끔(통화 자막·끝난 대본 번역). 저장이 안 되면 이번 통화에만 바뀐다. */
-export function useStoredToggle(key: string): [boolean, () => void] {
-  const [on, setOn] = useState<boolean>(() => {
+/**
+ * 이 기기에 기억하는 켬/끔. 한 번도 안 눌렀으면 `fallback`(그때그때 다를 수 있음 — 글자를 아직 모르는 학습자면 자막·해석 켬, 2026-11-06).
+ */
+export function useStoredToggle(key: string, fallback = false): [boolean, () => void] {
+  const [raw, setRaw] = useState<string | null>(() => {
     try {
-      return localStorage.getItem(key) === "1";
+      return localStorage.getItem(key);
     } catch {
-      return false;
+      return null;
     }
   });
+  const on = raw === null ? fallback : raw === "1";
   const toggle = () => {
-    setOn((current) => {
-      try {
-        localStorage.setItem(key, current ? "0" : "1");
-      } catch {
-        // Not kept, still switched for this conversation.
-      }
-      return !current;
-    });
+    const next = on ? "0" : "1";
+    try {
+      localStorage.setItem(key, next);
+    } catch {
+      // Not kept, still switched for this conversation.
+    }
+    setRaw(next);
   };
   return [on, toggle];
 }
@@ -172,3 +175,6 @@ export const CALL_COACH_KEY = "callCoach.v1";
 
 /** 통화 자막 켬/끔 — AI 통화와 사람 통화가 같은 값(한쪽에서 켜면 다른 쪽도, 2026-11-01). */
 export const CALL_CAPTIONS_KEY = "roleplayCaptions";
+
+/** AI 통화 자막의 해석 켬/끔 — 자막 줄을 누르면 바뀌고 다음 통화도 그대로(2026-11-06 사용자 "자막 해석도 켜고 끌 수 있게", 예전엔 누른 그 줄만). */
+export const CALL_MEANING_KEY = "callMeaning.v1";

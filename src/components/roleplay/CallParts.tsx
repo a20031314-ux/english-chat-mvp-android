@@ -341,6 +341,28 @@ export function CallSummary({
   );
 }
 
+/**
+ * 통화 끝 숙제 한 줄(2026-11-06): 글자를 아직 모르는 학습자(0단계를 고른 채)에게 — 튜터 얼굴 · 📝 글자·소리 ›.
+ * 누르면 My Stagebank 0단계 글자 묶음으로(handOffLetters). 안내 글 없이 이름만(숙제 판 튜터 얼굴, 설계 call-modes 5절).
+ */
+export function LettersHomework({ ui, language, gender, onOpen }: { ui: UICopy; language: string; gender?: TutorGender; onOpen: () => void }) {
+  const chosen = useTutorGender(language);
+  const partner = chatPartnerForLanguage(language, gender ?? chosen);
+  return (
+    <button
+      type="button"
+      data-call-homework="letters"
+      onClick={onOpen}
+      className="flex w-full shrink-0 items-center gap-3 border-b border-white/10 px-4 py-2.5 text-start hover:bg-white/5"
+    >
+      <AiAvatar size={28} language={language} gender={partner.gender} />
+      <span aria-hidden className="text-body">📝</span>
+      <span className="min-w-0 flex-1 truncate text-note font-semibold text-ink">{ui.notebookScript}</span>
+      <span aria-hidden className="text-note text-slate-400 rtl:rotate-180">›</span>
+    </button>
+  );
+}
+
 /** 대본 줄 옆 얼굴 — 튜터·나(채팅과 같은 크기). */
 export function TutorFace() {
   return <AiAvatar size={CHAT_FACE_SIZE} />;

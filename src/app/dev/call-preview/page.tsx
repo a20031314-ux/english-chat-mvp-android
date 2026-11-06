@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -10,12 +10,18 @@ import { RoomCallStage, type CallPerson } from "@/components/rooms/RoomCall";
 import { DmBubble } from "@/components/rooms/RoomDm";
 import { GroupBubble } from "@/components/rooms/RoomGroups";
 import { CallButton, CallButtonRow } from "@/components/speech/CallKit";
-import { CallControls, CallStage, CallSummary } from "@/components/roleplay/CallParts";
+import { CallControls, CallStage, CallSummary, LettersHomework } from "@/components/roleplay/CallParts";
 import { resolveUiCopy } from "@/lib/resolveUiCopy";
 import { isLocale } from "@/lib/copy";
 import { roomCopy } from "@/lib/rooms/copy";
 
 const ME = "acct-me";
+// 자막 미리 보기(&caption=1, 해석 &meaning=1) — 튜터 한 줄과 앱 언어 해석(미리 보기라 고정 문장).
+const CAPTION: Record<string, { text: string; meaning: string }> = {
+  ja: { text: "今日はどんな一日だった？", meaning: "오늘 하루 어땠어?" },
+  en: { text: "How was your day today?", meaning: "今日はどんな一日だった？" },
+  es: { text: "¿Qué tal tu día?", meaning: "كيف كان يومك؟" },
+};
 const now = Date.UTC(2026, 10, 1, 6, 0);
 
 function Preview() {
@@ -50,7 +56,13 @@ function Preview() {
   if (v === "ai") {
     return (
       <div className="flex h-dvh flex-col bg-black" dir={lang === "ar" ? "rtl" : "ltr"}>
-        <CallStage language={learn} speaker="listening" timeLeft={null} caption={null} coach={coachCard} />
+        <CallStage
+          language={learn}
+          speaker="listening"
+          timeLeft={null}
+          caption={params.get("caption") === "1" ? { text: CAPTION[learn]?.text ?? CAPTION.en.text, ...(params.get("meaning") === "1" ? { meaning: CAPTION[learn]?.meaning ?? CAPTION.en.meaning } : {}) } : null}
+          coach={params.get("caption") === "1" ? null : coachCard}
+        />
         <CallControls ui={ui} canAnswer captions={false} coach onToggleCoach={noop} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} />
       </div>
     );
@@ -59,6 +71,7 @@ function Preview() {
     return (
       <div className="flex h-dvh flex-col bg-black" dir={lang === "ar" ? "rtl" : "ltr"}>
         <CallSummary ui={ui} language={learn} seconds={312} tally={{ fixed: 4, hints: 1, missed: 0, redone: 3 }} />
+        {params.get("homework") === "1" ? <LettersHomework ui={ui} language={learn} onOpen={noop} /> : null}
       </div>
     );
   }

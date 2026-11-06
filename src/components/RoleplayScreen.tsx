@@ -5,10 +5,11 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
-import { CALL_CAPTIONS_KEY, CALL_COACH_KEY } from "@/components/speech/CallKit";
+import { CALL_CAPTIONS_KEY, CALL_COACH_KEY, CALL_MEANING_KEY } from "@/components/speech/CallKit";
+import { readLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -18,7 +19,7 @@ import type { UICopy } from "@/lib/copy";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { saidPhrase } from "@/lib/learner/practice";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
-import { handOffFrame } from "@/lib/notes/locateHandoff";
+import { handOffFrame, handOffLetters } from "@/lib/notes/locateHandoff";
 import { captureSceneSoon, enterScene } from "@/lib/notes/sceneShots";
 import { turnDiagnosticsEnabled } from "@/lib/platform";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
@@ -162,7 +163,12 @@ export function RoleplayScreen({
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
   const [showTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
-  const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY);
+  // 글자를 아직 모르는 학습자(0단계를 고른 채, curriculum/lettersFirst.ts — 2026-11-06 사용자 "알파벳도 모를 시 일단 학습을 진행하되
+  // 숙제로 0단계"): 통화는 그대로 하고, 한 번도 안 눌렀으면 자막과 해석을 켠 채 시작, 끝 화면에 숙제 "글자·소리".
+  const [lettersBeginner] = useState(() => (catalogScene ? readLettersFirst(catalogScene.language) : false));
+  const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY, lettersBeginner);
+  // 자막 해석 켬/끔(2026-11-06) — 자막 줄을 누르면 바뀌고 다음 줄·다음 통화도 그대로.
+  const [showMeaning, toggleMeaning] = useStoredToggle(CALL_MEANING_KEY, lettersBeginner);
   // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
   const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
   // 그냥 대화를 열면 인사 전에 자유대화/공부를 고른다. 이어서 하기는 이미 고른 통화라 다시 묻지 않는다.
@@ -177,7 +183,6 @@ export function RoleplayScreen({
   /** 두 번 연속 못 알아들은 튜터 줄(번호) — 자막을 꺼 두었어도 이 줄만 뜻과 함께 보여 준다. */
   const [forcedCaption, setForcedCaption] = useState(-1);
   /** 자막 줄을 눌러 뜻을 편 튜터 줄(글) — 💬 자막은 원문만, 누르면 해석(2026-11-03 사용자 "2번"). 다음 줄이 오면 접힘. */
-  const [captionOpen, setCaptionOpen] = useState("");
   /** 못 알아들었다고 해서 감독이 다시 말하는 중 — 그 줄(들)에 again 표시. 다음 내 차례가 오면 끝. */
   const rephrasingRef = useRef(false);
   const [recording, setRecording] = useState(false);
@@ -683,6 +688,13 @@ export function RoleplayScreen({
     [scenario, nativeLanguage],
   );
 
+  // 자막 해석을 켜 두었으면 튜터 새 줄마다 해석을 받아 둔다(자막이 보일 때만).
+  useEffect(() => {
+    if (!showMeaning || !showCaptions) return;
+    const last = [...said].reverse().find((line) => line.who === "tutor");
+    if (last && !last.translation) translateLine(last.text);
+  }, [said, showMeaning, showCaptions, translateLine]);
+
   // With translations on show, a line the character wrote just now is
   // translated as it appears — after it is said, so the voice never waits.
   useEffect(() => {
@@ -1068,6 +1080,18 @@ export function RoleplayScreen({
           seconds={activeBefore.current + Math.max(0, Math.round(((overAt || openedAt.current) - openedAt.current) / 1000))}
           tally={tallyCall(said)}
         />
+        {lettersBeginner && scenario.openEnded ? (
+          <LettersHomework
+            ui={ui}
+            language={scenario.language}
+            gender={tutorGender}
+            onOpen={() => {
+              handOffLetters(scenario.language);
+              onClose();
+              sendAppIntent("openTab", { tab: "map" });
+            }}
+          />
+        ) : null}
       {practice ? (
         <div className="shrink-0 border-b border-white/10 px-3 py-2">
           <PracticeBanner
@@ -1137,7 +1161,7 @@ export function RoleplayScreen({
   const forced = lastTutorAt >= 0 && forcedCaption === lastTutorAt;
   const caption =
     lastTutor && (showCaptions || forced)
-      ? { text: lastTutor.text, ...((forced || captionOpen === lastTutor.text) && lastTutor.translation ? { meaning: lastTutor.translation } : {}) }
+      ? { text: lastTutor.text, ...((forced || showMeaning) && lastTutor.translation ? { meaning: lastTutor.translation } : {}) }
       : null;
   const speaker: CallSpeaker =
     instruction?.do === "say"
@@ -1174,8 +1198,8 @@ export function RoleplayScreen({
         onCaptionTap={
           lastTutor
             ? () => {
-                setCaptionOpen((open) => (open === lastTutor.text ? "" : lastTutor.text));
-                if (!lastTutor.translation) translateLine(lastTutor.text);
+                if (!showMeaning && !lastTutor.translation) translateLine(lastTutor.text);
+                toggleMeaning();
               }
             : undefined
         }
