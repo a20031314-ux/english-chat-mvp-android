@@ -65,6 +65,11 @@ export function contextPrompt(input: {
   lines: SpokenLine[];
   /** 학습자 기기의 오늘(YYYY-MM-DD). "어제"를 그 날짜로 적게. */
   today: string;
+  /**
+   * 통화가 끝난 접기에만(2026-11-06 사용자 "카드마다 튜터가 요약을 적어서 기록"): 튜터가 학습자에게 남기는 두세 문장.
+   * Logbank 통화 카드·끝 화면에 보인다. 중간 접기는 안 씀(출력만 늘어서).
+   */
+  summary?: { language: string; target: string; name: string; manner: string };
 }): string {
   const transcript = input.lines
     .map((line) => `${line.who === "tutor" ? "You" : "Them"}: ${line.text}`)
@@ -89,10 +94,16 @@ Plain sentences, in English, at most 80 words. Nothing about this being practice
 
 Also write "facts": what you learned about their life — work, plans, places, people, things they did or like. Not grammar, not a sentence you corrected, not something you only suggested. One short English sentence each. Today is ${input.today}. When they said when it happened, write that day instead of a relative word. An empty list when nothing about their life was said.
 
-Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]}`;
+${input.summary ? `
+The call is over. Also write "summary": a short note from you, ${input.summary.name}, to them about this whole call, the way you talk (${input.summary.manner}). Write it in ${input.summary.language}, speaking to them as "you", in two or three short sentences: what you talked about, one thing they did well in it, and one specific thing to practise next time — something that actually came up in this call. You may name a word or pattern in ${input.summary.target}. No levels, scores, grades, percentages or praise for being a learner; do not quote whole sentences of theirs; no lists. If they said very little, one or two sentences are enough.
+` : ""}
+Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]${input.summary ? `, "summary": "<your note to them>"` : ""}}`;
 }
 
-export type FoldedMemory = { notes: string; facts: string[] };
+export type FoldedMemory = { notes: string; facts: string[]; summary?: string };
+
+/** 튜터 요약 글 상한(서버가 자름). */
+export const SUMMARY_MAX_CHARS = 400;
 
 /** 노트와, 다음 통화로 넘길 삶의 사실. 둘 다 비면 null. */
 export function parseMemory(raw: string): FoldedMemory | null {
@@ -103,7 +114,7 @@ export function parseMemory(raw: string): FoldedMemory | null {
     return null;
   }
   if (typeof parsed !== "object" || parsed === null) return null;
-  const record = parsed as { notes?: unknown; facts?: unknown };
+  const record = parsed as { notes?: unknown; facts?: unknown; summary?: unknown };
   const notes = typeof record.notes === "string" ? record.notes.trim().slice(0, MAX_CONTEXT_CHARS) : "";
   const facts = Array.isArray(record.facts)
     ? record.facts
@@ -112,8 +123,9 @@ export function parseMemory(raw: string): FoldedMemory | null {
         .filter(Boolean)
         .slice(0, 8)
     : [];
-  if (!notes && facts.length === 0) return null;
-  return { notes, facts };
+  const summary = typeof record.summary === "string" ? record.summary.trim().slice(0, SUMMARY_MAX_CHARS) : "";
+  if (!notes && facts.length === 0 && !summary) return null;
+  return { notes, facts, ...(summary ? { summary } : {}) };
 }
 
 /** The notes out of the model's answer, or null if there are none to use. */

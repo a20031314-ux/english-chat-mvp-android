@@ -342,6 +342,23 @@ export function CallSummary({
 }
 
 /**
+ * 통화가 끝나면 튜터가 남기는 메모 두세 문장(2026-11-06 사용자 "카드마다 튜터가 요약을 적어서 기록") — 앱 언어, 그 튜터 말투.
+ * 끝 화면 요약 아래와 Logbank 통화 카드에(lib/roleplay/callNotes.ts). 얼굴 옆 말풍선처럼.
+ */
+export function TutorNote({ text, language, gender, compact = false }: { text: string; language: string; gender?: TutorGender; compact?: boolean }) {
+  const chosen = useTutorGender(language);
+  const partner = chatPartnerForLanguage(language, gender ?? chosen);
+  return (
+    <div data-call-note className={`flex shrink-0 items-start gap-2 ${compact ? "" : "border-b border-white/10 px-4 py-2.5"}`}>
+      {compact ? null : <AiAvatar size={28} language={language} gender={partner.gender} />}
+      <p dir="auto" className={`min-w-0 flex-1 whitespace-pre-line ${compact ? "text-meta text-slate-300" : "rounded-lg rounded-ss-sm bg-white/[0.06] px-3 py-2 text-note text-slate-100"}`}>
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/**
  * 통화 끝 숙제 한 줄(2026-11-06): 글자를 아직 모르는 학습자(0단계를 고른 채)에게 — 튜터 얼굴 · 📝 글자·소리 ›.
  * 누르면 My Stagebank 0단계 글자 묶음으로(handOffLetters). 안내 글 없이 이름만(숙제 판 튜터 얼굴, 설계 call-modes 5절).
  */

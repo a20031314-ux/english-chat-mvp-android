@@ -12,6 +12,8 @@ import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { openLesson, sendAppIntent } from "@/lib/appIntents";
 import { expressionKeyOf, expressionKeysIn, grammarKeyOfNode } from "@/lib/curriculum/lessonKey";
 import { discardCall, readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
+import { CALL_NOTES_EVENT, readCallNotes, removeCallNote, type CallNote } from "@/lib/roleplay/callNotes";
+import { TutorNote } from "@/components/roleplay/CallParts";
 import { buildRecap } from "@/lib/roleplay/recap";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
@@ -90,18 +92,19 @@ function useDayResults(language: string): DayResult[] {
   }, [raw, language]);
 }
 
-type Day = { day: string; items: LogItem[]; quiz: QuizDays[string] | null; results: DayResult[]; calls: SavedConversation[] };
+/** notes = 그날 통화 카드(callNotes — 튜터 메모, 원문이 밀려난 통화도). */
+type Day = { day: string; items: LogItem[]; quiz: QuizDays[string] | null; results: DayResult[]; calls: SavedConversation[]; notes: CallNote[] };
 
 /**
  * 날마다 묶기 — 그날 한 공부 전부(일일 총학습, 2026-11-01): 서버 배움·숙지·고침 + 이 폰의 결과(수업·꺼내 쓰기·상황·통화·Quizbank).
  * 같은 날 배움·숙지가 둘 다면 숙지 하나만, 고친 줄은 한 번만. 새 날 먼저.
  */
-export function logDays(items: readonly LogItem[], quiz: QuizDays, results: readonly DayResult[] = [], calls: readonly SavedConversation[] = []): Day[] {
+export function logDays(items: readonly LogItem[], quiz: QuizDays, results: readonly DayResult[] = [], calls: readonly SavedConversation[] = [], notes: readonly CallNote[] = []): Day[] {
   const byDay = new Map<string, Day>();
   const dayOf = (day: string): Day => {
     const have = byDay.get(day);
     if (have) return have;
-    const fresh: Day = { day, items: [], quiz: quiz[day]?.n ? quiz[day]! : null, results: [], calls: [] };
+    const fresh: Day = { day, items: [], quiz: quiz[day]?.n ? quiz[day]! : null, results: [], calls: [], notes: [] };
     byDay.set(day, fresh);
     return fresh;
   };
@@ -109,6 +112,7 @@ export function logDays(items: readonly LogItem[], quiz: QuizDays, results: read
   for (const day of Object.keys(quiz)) if (quiz[day]!.n) dayOf(day);
   for (const result of results) dayOf(result.day).results.push(result);
   for (const call of calls) if (call.said.some((line) => line.who === "learner")) dayOf(localDay(call.startedAt)).calls.push(call);
+  for (const note of notes) dayOf(localDay(note.at)).notes.push(note);
   return [...byDay.values()]
     .map((one) => {
       const mastered = new Set(one.items.filter((item) => item.kind === "mastered").map((item) => `${item.part}|${item.text}`));
@@ -122,9 +126,33 @@ export function logDays(items: readonly LogItem[], quiz: QuizDays, results: read
         seenFix.add(id);
         return true;
       });
-      return { ...one, items: kept, results: [...one.results].sort((a, b) => a.at - b.at), calls: [...one.calls].sort((a, b) => a.startedAt - b.startedAt) };
+      return { ...one, items: kept, results: [...one.results].sort((a, b) => a.at - b.at), calls: [...one.calls].sort((a, b) => a.startedAt - b.startedAt), notes: [...one.notes].sort((a, b) => a.at - b.at) };
     })
     .sort((a, b) => dayValue(b.day) - dayValue(a.day));
+}
+
+/** 통화 카드(callNotes.v1.<언어>) — 끝난 통화가 남기거나 튜터 메모가 오면 다시 읽는다. */
+function useCallNotes(language: string): CallNote[] {
+  const raw = useSyncExternalStore(
+    (callback) => {
+      window.addEventListener(CALL_NOTES_EVENT, callback);
+      window.addEventListener("storage", callback);
+      return () => {
+        window.removeEventListener(CALL_NOTES_EVENT, callback);
+        window.removeEventListener("storage", callback);
+      };
+    },
+    () => {
+      try {
+        return localStorage.getItem(`callNotes.v1.${language}`) ?? "[]";
+      } catch {
+        return "[]";
+      }
+    },
+    () => "[]",
+  );
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- raw가 바뀔 때만 다시 읽음
+  return useMemo(() => readCallNotes(language), [raw, language]);
 }
 
 function useCallDays(language: string): Record<string, CallDay> {
@@ -268,7 +296,8 @@ export function Logbank({
   const results = useDayResults(language);
   const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
   const calls = useMemo(() => allCalls.filter((call) => call.language === language), [allCalls, language]);
-  const allDays = useMemo(() => logDays(items, quiz, results, calls), [items, quiz, results, calls]);
+  const callNotes = useCallNotes(language);
+  const allDays = useMemo(() => logDays(items, quiz, results, calls, callNotes), [items, quiz, results, calls, callNotes]);
   const callDays = useCallDays(language);
   // 정리용 통화 숫자: 따로 남긴 줄(callDays, 1년) + 그 전에 저장돼 줄이 없는 통화 기록.
   const callRows = useMemo(() => {
@@ -437,14 +466,18 @@ export function Logbank({
   /** 📎 기록: 지금 Logbank의 그 갈래 막대·목록(꼭짓점 몫) — 어휘는 어휘, 문장은 문법 + 덩어리 표현, 듣기·실전 대화는 그 기간 통화. */
   const recordsFor = (axis: Axis): ReactNode => {
     if (axis === "talk" || axis === "listen") {
-      const callDaysIn = allDays.filter((one) => one.calls.length && inPeriod(period, one.day));
+      const callDaysIn = allDays.filter((one) => (one.calls.length || one.notes.length) && inPeriod(period, one.day));
       return callDaysIn.length ? (
         <ol data-log-calls className="flex flex-col gap-1">
           {callDaysIn.map((one) => (
             <li key={one.day}>
               <button type="button" onClick={() => setOpenDay(one.day)} className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5">
                 <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
-                <span className="shrink-0 text-meta tabular-nums text-slate-400">{`📞 ${one.calls.length} · ${Math.max(1, Math.round(one.calls.reduce((n, call) => n + callSeconds(call), 0) / 60))}′`}</span>
+                <span className="shrink-0 text-meta tabular-nums text-slate-400">{(() => {
+                  const gone = orphanNotes(one);
+                  const secs = one.calls.reduce((n, call) => n + callSeconds(call), 0) + gone.reduce((n, note) => n + note.secs, 0);
+                  return `📞 ${one.calls.length + gone.length} · ${Math.max(1, Math.round(secs / 60))}′`;
+                })()}</span>
               </button>
             </li>
           ))}
@@ -828,7 +861,7 @@ function DayBody({
           ))}
         </ul>
       ) : null}
-      {!day.results.length && !day.calls.length && !day.items.length && !day.quiz ? <p className="text-note text-slate-500">—</p> : null}
+      {!day.results.length && !day.calls.length && !day.notes.length && !day.items.length && !day.quiz ? <p className="text-note text-slate-500">—</p> : null}
     </div>
   );
 }
@@ -883,6 +916,12 @@ function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; la
 
 const RESULT_ICON: Record<DayResult["kind"], string> = { lesson: "🧩", recall: "🎯", script: "🎭" };
 
+/** 그날 카드 중 원문(통화 기록)이 이제 없는 것. */
+function orphanNotes(day: Pick<Day, "calls" | "notes">): CallNote[] {
+  const kept = new Set(day.calls.map((call) => call.id));
+  return day.notes.filter((note) => !kept.has(note.id));
+}
+
 /**
  * 그날 결과 카드(2026-11-01 사용자 "결과 샷 — 통화면 학습 결과 창"): 수업·꺼내 쓰기·상황은 끝 화면의 맞힌 수와 내가 말한 줄,
  * 통화는 통화 정리(고친 말·💡) — 누르면 그 통화 돌아보기, Quizbank는 그날 틀린 것. 이 폰 기록만.
@@ -891,7 +930,9 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
   // 통화 카드 ×는 통화 기록도 지워서 한 번 묻는다(2026-11-01 사용자 "X랑 일괄 삭제") — 지금 묻는 통화 id.
   const [asking, setAsking] = useState<string | null>(null);
   const wrong = (day.quiz?.wrong ?? []).map((key) => reviewLabel(language, key)).filter(Boolean);
-  if (!day.results.length && !day.calls.length && !wrong.length) return null;
+  const gone = orphanNotes(day);
+  const noteOf = (id: string) => day.notes.find((note) => note.id === id)?.summary ?? "";
+  if (!day.results.length && !day.calls.length && !gone.length && !wrong.length) return null;
   const card = "mt-1.5 flex flex-col gap-1 rounded-lg border border-line bg-white/[0.02] px-2.5 py-2";
   const remove = (label: string, onClick: () => void, data: string) => (
     <button type="button" data-day-remove={data} aria-label={`${label} · ${ui.notebookDelete}`} title={ui.notebookDelete} onClick={onClick} className="-me-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-caption text-slate-500 hover:bg-white/10 hover:text-ink">
@@ -924,6 +965,7 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
               </button>
               {remove(call.title, () => setAsking(call.id), "call")}
             </div>
+            {noteOf(call.id) ? <TutorNote compact text={noteOf(call.id)} language={language} /> : null}
             {/* Each corrected line opens its Stagebank lesson carrying the sentence (or the call review when no topic is found). */}
             {fixes.slice(0, 2).map((item, i) => {
               const key = item.frames[0] ? `f|${item.frames[0].id}` : expressionKeysIn(language, item.line, 1)[0];
@@ -947,11 +989,28 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
               );
             })}
             {asking === call.id ? (
-              <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); setAsking(null); }} onNo={() => setAsking(null)} />
+              <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); removeCallNote(language, call.id); setAsking(null); }} onNo={() => setAsking(null)} />
             ) : null}
           </div>
         );
       })}
+      {/* 원문이 20통 밖으로 밀려난 통화 — 카드와 튜터 메모만(열 수 없음, 2026-11-06). */}
+      {gone.map((note) => (
+        <div key={note.id} data-day-call-note className={card}>
+          <div className="flex items-start gap-2">
+            <span className="flex min-w-0 flex-1 items-center gap-2 text-caption">
+              <span aria-hidden>📞</span>
+              <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{note.title}</span>
+              <span className="shrink-0 tabular-nums text-slate-400">{`${Math.max(1, Math.round(note.secs / 60))}′`}</span>
+              {note.fixed ? <span className="shrink-0 tabular-nums text-bad">{`✎ ${note.fixed}`}</span> : null}
+              {note.hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${note.hints}`}</span> : null}
+              {note.redone ? <span className="shrink-0 tabular-nums text-good" title={ui.roleplaySayAgain} aria-label={`${ui.roleplaySayAgain} ${note.redone}`}>{`🔁 ${note.redone}`}</span> : null}
+            </span>
+            {remove(note.title, () => removeCallNote(language, note.id), "call-note")}
+          </div>
+          {note.summary ? <TutorNote compact text={note.summary} language={language} {...(note.gender ? { gender: note.gender } : {})} /> : null}
+        </div>
+      ))}
       {day.results.map((result, i) => (
         <div key={`${result.item}-${result.at}-${i}`} data-day-result={result.kind} className={card}>
           <span className="flex items-center gap-2 text-caption">
@@ -1006,7 +1065,7 @@ function Confirm({ ui, note, onYes, onNo }: { ui: UICopy; note?: string; onYes: 
 /** 날짜 줄 🗑: 그날 이 폰의 결과(수업·꺼내 쓰기·상황·Quizbank·통화)를 한 번에 — 계정 기록(칩·고친 줄)은 그대로. */
 function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Day }) {
   const [asking, setAsking] = useState(false);
-  if (!day.results.length && !day.calls.length && !day.quiz) return null;
+  if (!day.results.length && !day.calls.length && !day.notes.length && !day.quiz) return null;
   return (
     <>
       <button type="button" data-day-clear aria-label={ui.notebookDelete} title={ui.notebookDelete} onClick={() => setAsking(true)} className="ms-auto flex h-6 w-6 items-center justify-center rounded-full text-caption text-slate-500 hover:bg-white/10 hover:text-ink">
@@ -1021,6 +1080,7 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
               clearDayResults(language, day.day);
               clearQuizDay(language, day.day);
               for (const call of day.calls) discardCall(call.id);
+              for (const note of day.notes) removeCallNote(language, note.id);
               setAsking(false);
             }}
             onNo={() => setAsking(false)}

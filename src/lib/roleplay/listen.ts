@@ -820,7 +820,9 @@ export async function fetchContext(input: {
   lines: SpokenLine[];
   isPremium: boolean;
   today: string;
-}): Promise<{ notes: string; facts: string[] } | null> {
+  /** 통화가 끝난 접기 — 튜터 요약(summary)도 받는다(2026-11-06). */
+  final?: { locale: string; tutorGender?: string };
+}): Promise<{ notes: string; facts: string[]; summary?: string } | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/context"), {
       method: "POST",
@@ -833,17 +835,19 @@ export async function fetchContext(input: {
         previous: input.previous,
         lines: input.lines,
         today: input.today,
+        ...(input.final ? { final: true, locale: input.final.locale, ...(input.final.tutorGender ? { tutorGender: input.final.tutorGender } : {}) } : {}),
       }),
     });
     if (!response.ok) {
       console.error("[roleplay] context failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as { notes?: unknown; facts?: unknown };
+    const body = (await response.json()) as { notes?: unknown; facts?: unknown; summary?: unknown };
     const notes = typeof body.notes === "string" ? body.notes.trim() : "";
     const facts = Array.isArray(body.facts) ? body.facts.filter((fact): fact is string => typeof fact === "string" && fact.trim() !== "") : [];
-    if (!notes && facts.length === 0) return null;
-    return { notes, facts };
+    const summary = typeof body.summary === "string" ? body.summary.trim() : "";
+    if (!notes && facts.length === 0 && !summary) return null;
+    return { notes, facts, ...(summary ? { summary } : {}) };
   } catch (error) {
     console.error("[roleplay] context threw", error);
     return null;

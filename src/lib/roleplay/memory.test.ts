@@ -115,3 +115,20 @@ test("the notes reach the tutor at the tail of its brief, leaving the fixed part
   assert.match(withPrior, /2026-10-28: They went to the gym/);
   assert.ok(withPrior.startsWith(fixed), "earlier conversations stay out of the cached part");
 });
+
+test("the last fold also asks the tutor for a note to the learner, in their language and manner", () => {
+  const base = { tutorRole: "a friend", setting: "A chat.", previous: "", lines: [{ who: "learner" as const, text: "昨日カフェ行きました" }], today: "2026-11-06" };
+  const plain = contextPrompt(base);
+  assert.doesNotMatch(plain, /"summary"/, "a fold in the middle of a call writes no note");
+  const last = contextPrompt({ ...base, summary: { language: "Korean (한국어)", target: "Japanese", name: "Haruto", manner: "easygoing; short replies" } });
+  assert.match(last, /Write it in Korean \(한국어\)/);
+  assert.match(last, /from you, Haruto/);
+  assert.match(last, /No levels, scores, grades, percentages/);
+  assert.match(last, /"summary": "<your note to them>"/);
+});
+
+test("the note is read when it is there, and alone is enough", () => {
+  assert.equal(parseMemory('{"notes": "", "facts": [], "summary": " 오늘은 카페 얘기를 했어요. "}')?.summary, "오늘은 카페 얘기를 했어요.");
+  assert.equal(parseMemory('{"notes": "Likes cafés.", "facts": []}')?.summary, undefined);
+  assert.equal(parseMemory(`{"notes": "x", "summary": "${"가".repeat(500)}"}`)?.summary?.length, 400);
+});

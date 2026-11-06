@@ -5,7 +5,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { CALL_CAPTIONS_KEY, CALL_COACH_KEY, CALL_MEANING_KEY } from "@/components/speech/CallKit";
@@ -41,6 +41,7 @@ import {
 import { correctionOf, offeredOf } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
+import { saveCallNote, setCallSummary } from "@/lib/roleplay/callNotes";
 import { loadStudyPicture, type StudyPicture } from "@/lib/roleplay/studyPicture";
 import { cellName, SkillHexagon } from "@/components/studyMap/SkillHexagon";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
@@ -1019,6 +1020,8 @@ export function RoleplayScreen({
     setHungUp(true);
   };
   const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  /** 통화가 끝난 뒤 튜터가 남긴 메모(끝 화면 요약 아래, Logbank 카드에도). */
+  const [tutorNote, setTutorNote] = useState("");
   // 끝나면 이번 통화에서 들은 삶을 이 폰에 남긴다. 짧은 통화는 접기가 안 돌아 여기서만 남는다.
   useEffect(() => {
     if (!callOver || !scenario) return;
@@ -1033,14 +1036,35 @@ export function RoleplayScreen({
     factsKept.current = true;
     const callId = savedId.current;
     const language = scenario.language;
+    // 통화 카드(문장 없이 — 원문이 20통 밖으로 밀려나도 Logbank에 남음, lib/roleplay/callNotes.ts, 2026-11-06).
+    const tally = tallyCall(said);
+    const openTalk = Boolean(scenario.openEnded);
+    if (callId) {
+      saveCallNote(language, {
+        id: callId,
+        at: startedAt.current || Date.now(),
+        secs: activeBefore.current + Math.max(0, Math.round((Date.now() - openedAt.current) / 1000)),
+        title: scenario.title,
+        fixed: tally.fixed,
+        hints: tally.hints,
+        redone: tally.redone ?? 0,
+        gender: tutorGender,
+      });
+    }
     void fetchContext({
       scenarioId: scenario.id,
       previous: memory.text,
       lines: lines.slice(-40),
       isPremium,
       today: lifeDay(),
+      // 그냥 대화가 끝나면 튜터가 앱 언어로 두세 문장 메모를 남긴다(같은 호출에 붙음 — 호출 수 그대로).
+      ...(openTalk ? { final: { locale: nativeLanguage, tutorGender } } : {}),
     }).then((folded) => {
       if (folded?.facts.length) mergeLifeFacts(language, folded.facts, Date.now(), callId);
+      if (folded?.summary) {
+        setTutorNote(folded.summary);
+        if (callId) setCallSummary(language, callId, folded.summary);
+      }
     });
     // 끝난 순간의 대본만. 노트가 나중에 바뀌어도 다시 부르지 않는다.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1080,6 +1104,7 @@ export function RoleplayScreen({
           seconds={activeBefore.current + Math.max(0, Math.round(((overAt || openedAt.current) - openedAt.current) / 1000))}
           tally={tallyCall(said)}
         />
+        {tutorNote ? <TutorNote text={tutorNote} language={scenario.language} gender={tutorGender} /> : null}
         {lettersBeginner && scenario.openEnded ? (
           <LettersHomework
             ui={ui}

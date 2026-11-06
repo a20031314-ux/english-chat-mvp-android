@@ -123,7 +123,7 @@
 ### AI 통화 (어디서나 뜨는 층 CallHost — 대화·사람 탭 📞) `call`
 - 화면: `CallHost` · `CallList` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/CallParts` · `roleplay/CallRecap` · `roleplay/TurnDiagBox` · `roleplay/callHooks`
 - API: `pack/finish` · `pack/today` · `roleplay/branch` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
-- 다른 영역이 씀: `CallHost` ← 앱 틀
+- 다른 영역이 씀: `CallHost` ← 앱 틀 · `roleplay/CallParts` ← My 탭
 
 ### 말하기·통화 공용 부품 — 한 줄 말해 보기, 통화 화면 조각·말풍선 얼굴 자리 (AI 통화·사람 통화·채팅·My가 같이 씀) `speech`
 - 화면: `speech/Attempt` · `speech/CallKit`
