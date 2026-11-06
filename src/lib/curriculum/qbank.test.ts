@@ -160,3 +160,15 @@ test("띄어쓰기 없는 말의 꼴 오답은 정답을 품어도 보기로(중
   assert.ok(choose && choose.kind === "choose", JSON.stringify(quiz));
   if (choose?.kind === "choose") assert.deepEqual([...choose.options].sort(), ["喝", "喝了", "喝着"].sort());
 });
+
+test("사전 승격: 20번 넘게 풀렸고 정답률 15~95%인 모델 예문만, 대화 줄·빠진 예문은 안 올림", async () => {
+  const { promotable, PROMOTE_AFTER } = await import("./qbankRules.ts");
+  const base = { t: "Ella compró pan.", p: "compró", g: "She bought bread.", s: 3 };
+  assert.equal(promotable({ ...base, n: PROMOTE_AFTER - 1, r: 10 }), false);
+  assert.equal(promotable({ ...base, n: PROMOTE_AFTER, r: 12 }), true);
+  assert.equal(promotable({ ...base, n: 40, r: 39 }), false);
+  assert.equal(promotable({ ...base, n: 40, r: 4 }), false);
+  assert.equal(promotable({ ...base, n: 40, r: 20, o: "talk" }), false);
+  assert.equal(promotable({ ...base, n: 40, r: 20, off: "easy" }), false);
+  assert.equal(promotable({ t: "猫が好きです。", p: "猫", g: "I like cats.", s: 1, n: 25, r: 15 }), true);
+});

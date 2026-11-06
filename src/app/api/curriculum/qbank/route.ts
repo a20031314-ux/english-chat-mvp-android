@@ -5,6 +5,8 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { bankFor, bankView, offerToBank } from "@/lib/server/qbank";
 import { isSimRequest } from "@/lib/server/simData";
 import type { BankResult } from "@/lib/curriculum/qbankRules";
+import { canOperate } from "@/lib/server/opsStore";
+import { promotedWords } from "@/lib/server/wordDict";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -20,7 +22,19 @@ export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
-type Body = { language?: string; ui?: string; keys?: { key?: string; stage?: number }[]; results?: (BankResult & { key?: string })[]; offers?: { key?: string; text?: string; stage?: number }[] };
+/**
+ * GET ?promoted=<언어> (헤더 x-ops-key: 운영자 키) — 문제은행이 만든 낱말 예문 중 사전에 올릴 후보(server/wordDict.ts promotedWords).
+ * scripts/dict-promote.mjs가 받아 검토 → 사전 예문 파일(word-sentences)에 합친다. 모델 호출 없음.
+ */
+export async function GET(request: NextRequest) {
+  const language = request.nextUrl.searchParams.get("promoted");
+  if (!language || !canOperate(request.headers.get("x-ops-key"))) return jsonWithCors(request, { error: "forbidden" }, { status: 403 });
+  const lines = await promotedWords(coerceLanguageCode(language)).catch(() => null);
+  if (!lines) return jsonWithCors(request, { error: "unavailable" }, { status: 503 });
+  return jsonWithCors(request, { language: coerceLanguageCode(language), lines });
+}
+
+type Body = { language?: string; ui?: string; keys?: { key?: string; stage?: number }[]; results?: (BankResult & { key?: string })[]; offers?: { key?: string; text?: string; stage?: number }[]; dict?: number };
 
 export async function POST(request: NextRequest) {
   const body = (await request.json().catch(() => ({}))) as Body;
@@ -52,7 +66,7 @@ export async function POST(request: NextRequest) {
   const debug: Record<string, string> = {};
   for (const key of new Set([...wanted.keys(), ...resultKeys])) {
     const mine = results.filter((one) => one.key === key);
-    const entry = await bankFor(language, key, wanted.get(key) ?? 1, mine, wanted.has(key) && !simUser ? meter : undefined).catch(() => null);
+    const entry = await bankFor(language, key, wanted.get(key) ?? 1, mine, wanted.has(key) && !simUser ? meter : undefined, { dictFirst: body.dict === 1 }).catch(() => null);
     if (entry && wanted.has(key)) banks[key] = await bankView(language, key, entry, ui, meter).catch(() => null);
     if (entry) debug[key] = (entry as { last?: string }).last ?? "";
   }

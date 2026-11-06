@@ -118,7 +118,8 @@ export async function growBank(language: string, ui: string, keys: readonly { ke
     const response = await fetch(apiUrl("/api/curriculum/qbank"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ language, ui, keys: wanted, results }),
+      // dict: 이 앱은 낱말 문제에 사전 예문을 먼저 쓴다 — 서버는 사전 예문이 있는 낱말을 키우지 않는다(2026-11-06, 옛 앱은 그대로 키움).
+      body: JSON.stringify({ language, ui, keys: wanted, results, dict: 1 }),
     });
     if (!response.ok) return;
     const body = (await response.json()) as { banks?: Record<string, { items: { text: string; piece: string; gloss: string; uiGloss?: string; stage: number; wrong?: string[] }[]; decoys: Record<string, string[]> }> };

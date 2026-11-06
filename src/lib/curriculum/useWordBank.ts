@@ -39,6 +39,42 @@ function sourcesOf(card: Card, pos: string | undefined, topic?: string): QuizSou
   return [{ text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: wordKey(card.w), stage: 0, piece: card.piece, who: "me", wordGloss: card.gloss, ...(pos ? { pos: quizPos(pos) } : {}), ...(topic ? { topic } : {}) }];
 }
 
+/** 사전 예문(서버 server/wordDict.ts dictChunk) — 낱말 → 줄들(앱 언어 뜻). */
+type DictLine = { text: string; piece: string; gloss: string };
+type DictBook = Record<string, DictLine[]>;
+const DICT_CACHE = "wordDict.v1";
+// 사전 파일은 앱·서버 배포로 늘어난다(문제은행 예문이 사전에 오름) — 이 폰 기억은 일주일만.
+const DICT_MS = 7 * 24 * 60 * 60 * 1000;
+
+function readDict(language: string, ui: string, chunk: number | string): DictBook | null {
+  try {
+    const raw = JSON.parse(localStorage.getItem(`${DICT_CACHE}.${language}.${ui}.${chunk}`) ?? "null") as { at: number; dict: DictBook } | null;
+    return raw && Date.now() - raw.at < DICT_MS && raw.dict && typeof raw.dict === "object" ? raw.dict : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeDict(language: string, ui: string, chunk: number | string, dict: DictBook): void {
+  try {
+    localStorage.setItem(`${DICT_CACHE}.${language}.${ui}.${chunk}`, JSON.stringify({ at: Date.now(), dict }));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/**
+ * 낱말 하나의 퀴즈 재료(2026-11-06 사용자 "퀴즈 알고리즘부터 — 예문 없는 단어는 퀴즈 풀 때마다 예문 생성 → 사전에 추가"):
+ * 사전 예문(고정, 사람이 고른 것)을 먼저, 그다음 낱말 카드 예문(모델이 묶음마다 만든 한 줄, 사전과 같은 문장이면 뺌).
+ * 문제은행이 키운 예문은 quiz.ts quizSources가 그 뒤에 붙인다 — 문제은행은 사전 예문이 없는 낱말만 키운다(server/qbank.ts).
+ */
+export function wordSources(word: string, dict: readonly DictLine[], card: Card | undefined, pos: string | undefined, topic?: string): QuizSource[] {
+  const extra = { ...(card?.gloss ? { wordGloss: card.gloss } : {}), ...(pos ? { pos: quizPos(pos) } : {}), ...(topic ? { topic } : {}) };
+  const out: QuizSource[] = dict.filter((line) => line.text.includes(line.piece)).map((line) => ({ text: line.text, gloss: { en: "", raw: line.gloss }, from: wordKey(word), stage: 0, piece: line.piece, who: "me", ...extra }));
+  if (card && !out.some((source) => source.text === card.example)) out.push(...sourcesOf(card, pos, topic));
+  return out;
+}
+
 /** 순위 index의 카드 묶음: 빈도 목록은 "b<n>", 그 뒤 찾아서 더한 낱말은 "x<n>". */
 function chunkOf(index: number, baseLength: number): string {
   return index < baseLength ? `b${Math.floor(index / BANK_CHUNK)}` : `x${Math.floor((index - baseLength) / BANK_CHUNK)}`;
@@ -244,16 +280,19 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
     let alive = true;
     const want = chunks.split(",");
     void Promise.all(
-      want.map(async (id) => {
+      want.map(async (id): Promise<{ cards: Card[]; dict: DictBook }> => {
         const extra = id.startsWith("x");
         const c = Number(id.slice(1));
         const cacheId = extra ? `x${c}` : c;
         const cached = readCached(language, ui, cacheId);
-        if (cached) return cached;
+        // 사전 예문은 빈도 목록 묶음에만 있다(찾아서 더한 낱말 묶음은 카드만).
+        const cachedDict = extra ? {} : readDict(language, ui, cacheId);
+        if (cached && cachedDict) return { cards: cached, dict: cachedDict };
         const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&chunk=${c}${extra ? "&extra=1" : ""}`))
-          .then((response) => (response.ok ? (response.json() as Promise<{ cards?: Card[] }>) : null))
+          .then((response) => (response.ok ? (response.json() as Promise<{ cards?: Card[]; dict?: DictBook }>) : null))
           .catch(() => null);
-        const cards = Array.isArray(body?.cards) ? body!.cards! : [];
+        const cards = Array.isArray(body?.cards) ? body!.cards! : cached ?? [];
+        const dict = body?.dict && typeof body.dict === "object" ? body.dict : cachedDict ?? {};
         // 더한 낱말 묶음은 다 찬 것만 이 폰에 남긴다(마지막 묶음은 계속 자람).
         if (cards.length && (!extra || cards.length >= BANK_CHUNK)) {
           try {
@@ -262,15 +301,22 @@ export function useWordBank(language: string, ui: string, known: KnownMap, pick?
             // 이번에만.
           }
         }
-        return cards;
+        if (!extra && body?.dict) writeDict(language, ui, cacheId, dict);
+        return { cards, dict };
       }),
     ).then((groups) => {
       if (!alive) return;
-      const cards = groups.flat();
+      const cards = groups.flatMap((group) => group.cards);
+      const dict: DictBook = Object.assign({}, ...groups.map((group) => group.dict));
       const listed = new Map([...(peekBank(language) ?? []), ...extras].map((word) => [word.w, word]));
-      registerQuizSources(language, cards.map((card) => ({ key: wordKey(card.w), sources: sourcesOf(card, listed.get(card.w)?.pos, listed.get(card.w)?.topic) })));
+      const byWord = new Map(cards.map((card) => [card.w, card]));
+      const words = [...new Set([...Object.keys(dict), ...byWord.keys()])];
+      registerQuizSources(
+        language,
+        words.map((w) => ({ key: wordKey(w), sources: wordSources(w, dict[w] ?? [], byWord.get(w), listed.get(w)?.pos, listed.get(w)?.topic) })),
+      );
       for (const card of cards) glossOf.set(`${language}|${card.w}`, card.gloss);
-      setReady((current) => new Set([...current, ...cards.map((card) => wordKey(card.w))]));
+      setReady((current) => new Set([...current, ...words.filter((w) => (dict[w]?.length ?? 0) > 0 || byWord.has(w)).map((w) => wordKey(w))]));
     });
     return () => {
       alive = false;

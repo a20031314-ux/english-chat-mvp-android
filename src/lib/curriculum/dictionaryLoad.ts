@@ -2,25 +2,7 @@
 
 import { loadBank, stageOfRank } from "./vocabBank";
 import type { DictEntry } from "./dictionary";
-
-type Sentence = { text?: string; en?: string; ko?: string };
-type SentenceBook = Record<string, Sentence[]>;
-
-const SENTENCES: Record<string, () => Promise<{ default: SentenceBook }>> = {
-  ar: () => import("./word-sentences/ar.json"),
-  en: () => import("./word-sentences/en.json"),
-  es: () => import("./word-sentences/es.json"),
-  fr: () => import("./word-sentences/fr.json"),
-  hi: () => import("./word-sentences/hi.json"),
-  it: () => import("./word-sentences/it.json"),
-  ja: () => import("./word-sentences/ja.json"),
-  ko: () => import("./word-sentences/ko.json"),
-  pt: () => import("./word-sentences/pt.json"),
-  ru: () => import("./word-sentences/ru.json"),
-  th: () => import("./word-sentences/th.json"),
-  vi: () => import("./word-sentences/vi.json"),
-  zh: () => import("./word-sentences/zh.json"),
-};
+import { loadWordSentences } from "./wordSentencesLoad";
 
 const GLOSS: Record<string, () => Promise<{ default: Record<string, string> }>> = {
   en: () => import("./dictionary/en-gloss.json"),
@@ -40,7 +22,7 @@ export function loadDictionary(language: string): Promise<DictEntry[]> {
 async function build(language: string): Promise<DictEntry[]> {
   const [bank, sentences, gloss] = await Promise.all([
     loadBank(language),
-    SENTENCES[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null),
+    loadWordSentences(language),
     GLOSS[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null),
   ]);
   return bank.map((word, index) => {

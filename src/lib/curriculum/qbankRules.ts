@@ -61,6 +61,19 @@ export function emptyEntry(): BankEntry {
   return { items: [], decoys: {}, served: 0, grownAt: 0, day: "", dayGrows: 0 };
 }
 
+/**
+ * 사전에 올릴 만한 예문(2026-11-06 사용자 "예문 없는 단어는 퀴즈 풀 때마다 예문 생성 → 사전에 추가", "자동 + 주기적 확인"):
+ * 빠지지 않았고, 도태 판정을 받을 만큼(RETIRE_AFTER번) 풀렸는데 너무 쉽지도(95% 이상) 이상하지도(15% 이하) 않은 모델 예문.
+ * 대화에서 온 줄(o: "talk")은 올리지 않는다 — 사전은 고정 파일에 남으니까. 고정(frozen)이라 easy를 안 빼도 여기서 거른다.
+ */
+export const PROMOTE_AFTER = RETIRE_AFTER;
+
+export function promotable(item: BankItem): boolean {
+  if (item.off || item.o === "talk" || item.n < PROMOTE_AFTER) return false;
+  const rate = item.r / item.n;
+  return rate > 0.15 && rate < 0.95;
+}
+
 export function liveItems(entry: BankEntry): BankItem[] {
   return entry.items.filter((item) => !item.off);
 }

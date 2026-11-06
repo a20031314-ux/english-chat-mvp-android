@@ -19,6 +19,7 @@ import { allFramesFor } from "../curriculum/frames.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
 import { acceptDecoy, acceptForms, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
 import { allScriptsFor } from "../curriculum/stageScripts.ts";
+import { dictCount } from "./wordDict.ts";
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
 export const DAILY_BUDGET = 400;
@@ -114,7 +115,7 @@ function today(): string {
 /**
  * 열쇠 하나: 결과를 셈에 넣고, 필요하면 키우고, 앱에 보낼 모양을 돌려준다. onMake는 모델을 부를 때마다(계량).
  */
-export async function bankFor(language: string, key: string, stage: number, results: readonly BankResult[], onMake?: () => void): Promise<BankEntry | null> {
+export async function bankFor(language: string, key: string, stage: number, results: readonly BankResult[], onMake?: () => void, options: { dictFirst?: boolean } = {}): Promise<BankEntry | null> {
   const target = targetOf(language, key);
   if (!target) return null;
   const storeKey = bankKey(language, key);
@@ -126,7 +127,10 @@ export async function bankFor(language: string, key: string, stage: number, resu
   }
   const day = today();
   // 키우기는 앱이 지금 풀려는 열쇠만(onMake가 있을 때) — 결과만 온 열쇠는 셈만.
-  if (onMake && !bankFrozen() && needGrow(entry, day, { forms: key.startsWith("w|") })) {
+  // 사전 예문이 둘 이상인 낱말(w|)은 키우지 않는다 — 예문은 예문 없는 낱말만 만든다(2026-11-06, server/wordDict.ts).
+  // 사전 예문을 퀴즈에 쓰는 앱(dictFirst)만 — 옛 앱(2.78 이하)은 카드 한 줄 + 문제은행뿐이라 예전대로 키운다.
+  const dictWord = Boolean(options.dictFirst) && key.startsWith("w|") && (await dictCount(language, key.slice(2).trim()).catch(() => 0)) >= 2;
+  if (onMake && !dictWord && !bankFrozen() && needGrow(entry, day, { forms: key.startsWith("w|") })) {
     const spent = await kvIncrBy(`qbank:v1:budget:${day}`, 1, 2 * 24 * 60 * 60).catch(() => DAILY_BUDGET + 1);
     if (spent <= DAILY_BUDGET) {
       onMake?.();

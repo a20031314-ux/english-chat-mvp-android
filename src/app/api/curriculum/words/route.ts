@@ -3,6 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { wordCards } from "@/lib/server/wordCards";
+import { dictChunk } from "@/lib/server/wordDict";
 import { expressionCards } from "@/lib/server/expressionCards";
 import { BANK_CHUNK, hasBank } from "@/lib/curriculum/vocabBank";
 import { cardsInUi, extraChunk, extraCount, searchWord } from "@/lib/server/wordExtras";
@@ -52,12 +53,17 @@ export async function GET(request: NextRequest) {
   }
   if (!hasBank(language) || !Number.isInteger(chunk) || chunk < 0 || chunk > 200) return jsonWithCors(request, { cards: [], size: BANK_CHUNK });
   let metered = false;
-  const cards = await wordCards(language, chunk, ui, INTERFACE_LANGUAGE_LABELS[ui] ?? "English", () => {
+  const meter = () => {
     if (metered) return;
     metered = true;
     void meterRequest(request, "wordCards");
-  });
-  return jsonWithCors(request, { cards, size: BANK_CHUNK });
+  };
+  // 사전 예문(word-sentences)도 같은 묶음으로 — 앱은 이것을 카드 예문보다 먼저 퀴즈 재료로 쓴다(2026-11-06, server/wordDict.ts).
+  const [cards, dict] = await Promise.all([
+    wordCards(language, chunk, ui, INTERFACE_LANGUAGE_LABELS[ui] ?? "English", meter),
+    dictChunk(language, chunk, ui, INTERFACE_LANGUAGE_LABELS[ui] ?? "English", meter).catch(() => ({})),
+  ]);
+  return jsonWithCors(request, { cards, dict, size: BANK_CHUNK });
 }
 
 /**
