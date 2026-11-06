@@ -27,18 +27,20 @@ test("카드 변형: 뜻 가리기 = 밑줄 낱말 + 뜻 넷 중 하나, 뜻만 
   const show = cardQuiz("ja", "w|食べる", "show", "s");
   assert.equal(show?.kind, "type");
   if (show?.kind !== "type") return;
-  assert.equal(show.answer, "食べる");
-  assert.equal(show.gloss.raw, "먹다");
-  assert.deepEqual(show.prepared, {});
+  // 카드 그대로: 뜻은 보이고 예문 속 그 말만 빈칸(답 = 예문 속 꼴).
+  assert.equal(show.answer, "食べ");
+  assert.equal(show.before + "＿" + show.after, "パンを＿た。");
+  assert.deepEqual(show.card, { word: "食べる", meaning: "먹다" });
+  assert.deepEqual(hide.card, { word: "水", meaning: "물" });
   // 일본어는 읽기(가나)로 쳐도 맞음 — 채점은 예전 typedRight 그대로(읽기는 빈도 목록이 넣음).
   registerReadings("ja", [["食べる", "たべる"]]);
   assert.ok(typedRight("食べる", "たべる", { language: "ja" }));
 });
 
-test("카드 변형: 같은 뜻의 다른 말이 있으면 첫 글자, 오답이 모자라면 null (es)", () => {
+test("카드 변형: 낱말 가림은 예문 빈칸, 오답이 모자라면 뜻 가림은 null (es)", () => {
   registerQuizSources("es", [card("w|grande", "Es una casa grande.", "grande", "큰", "adj"), card("w|enorme", "Un perro enorme.", "enorme", "큰", "adj")]);
   const show = cardQuiz("es", "w|grande", "show", "s");
-  assert.equal(show?.kind === "type" && show.prepared?.hint, "g");
+  assert.equal(show?.kind === "type" && show.before, "Es una casa ");
   assert.equal(cardQuiz("es", "w|grande", "hide", "s"), null);
   assert.equal(cardQuiz("es", "g|1:2", "show", "s"), null);
 });

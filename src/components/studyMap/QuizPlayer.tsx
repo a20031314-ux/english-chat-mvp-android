@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -621,7 +621,15 @@ function TypeView({
   const { checking, grade } = useTypedGrade(language);
   const gloss = quizGloss(question.gloss, locale, language);
   const wordQuiz = Boolean(question.prepared);
+  const card = question.card;
   const submit = async (typed: string) => {
+    if (card) {
+      // 카드 낱말 가림: 예문 속 꼴 또는 사전형 — 기기에서만(모델 없음).
+      const local = typedRight(question.answer, typed, { language, near: question.near }) || typedRight(card.word, typed, { language });
+      setResult(local);
+      onAnswer({ correct: Boolean(local) && hint === 0, ...(hint ? { assisted: true } : {}) });
+      return;
+    }
     if (wordQuiz) {
       const local = typedRight(question.answer, typed, { language, near: question.near });
       setResult(local);
@@ -640,6 +648,40 @@ function TypeView({
     setResult(final);
     onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
   };
+  if (card) {
+    return (
+      <div className="flex flex-col gap-3">
+        <CardFace
+          word={answered ? card.word : null}
+          meaning={card.meaning}
+          line={
+            <>
+              {question.before}
+              <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
+              {question.after}
+            </>
+          }
+          lineGloss={gloss}
+          speak={answered ? { text: question.text, tag } : null}
+        />
+        <TypeBox
+          ui={ui}
+          tag={tag}
+          answer={question.answer}
+          done={Boolean(answered)}
+          result={answered ? result : null}
+          busy={false}
+          hint={hint}
+          onHint={() => setHint((n) => n + 1)}
+          onSubmit={(typed) => void submit(typed)}
+          onGiveUp={() => {
+            setResult(false);
+            onAnswer({ correct: false, assisted: true });
+          }}
+        />
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col gap-3">
       {answered || (glossFirst && gloss) || wordQuiz ? (
@@ -1408,14 +1450,25 @@ function PickView({
 }) {
   const [picked, setPicked] = useState<number | null>(null);
   const label = (i: number) => quizGloss(question.options[i]!, locale, language) ?? "…";
+  const card = question.card;
   return (
     <div className="flex flex-col gap-3">
+      {card ? (
+        <CardFace
+          word={card.word}
+          meaning={answered ? card.meaning : null}
+          line={<Marked text={question.text} mark={question.mark} />}
+          lineGloss={answered ? quizGloss(question.gloss, locale, language) : null}
+          speak={{ text: question.text, tag }}
+        />
+      ) : (
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           <Marked text={question.text} mark={question.mark} />
         </p>
         <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
       </div>
+      )}
       <div className="flex flex-col gap-2">
         {question.options.map((_, i) => {
           const isRight = i === question.answer;
@@ -1462,6 +1515,38 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
         );
       })}
     </>
+  );
+}
+
+/**
+ * 카드 한 장(개편 cardQuiz, 2026-11-06 사용자 "카드를 그대로 두고 예문에 빈칸, 단어만 가리고"): 낱말 · 뜻 · 예문 · 예문 뜻.
+ * 가린 칸은 null(＿＿＿) — 뜻 가림이면 예문 뜻도 답한 뒤에(뜻이 새지 않게), 낱말 가림이면 예문에도 빈칸.
+ */
+function CardFace({ word, meaning, line, lineGloss, speak }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null }) {
+  const tone = useBankTone();
+  const hidden = <span className={`font-semibold ${tone.blank}`}>＿＿＿</span>;
+  return (
+    <div data-quiz-card className="flex flex-col gap-2 rounded-xl border border-line p-3">
+      <p dir="auto" data-card-word className="text-xl font-semibold text-ink">
+        {word ?? hidden}
+      </p>
+      <p dir="auto" data-card-meaning className="text-chat text-slate-200">
+        {meaning ?? hidden}
+      </p>
+      <div className="flex items-start gap-2 border-t border-line pt-2">
+        <div className="min-w-0 flex-1">
+          <p dir="auto" className="text-chat text-slate-100">
+            {line}
+          </p>
+          {lineGloss ? (
+            <p dir="auto" data-quiz-gloss className="mt-0.5 text-note text-slate-400">
+              {lineGloss}
+            </p>
+          ) : null}
+        </div>
+        {speak ? <TTSButton text={speak.text} lang={speak.tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
+      </div>
+    </div>
   );
 }
 

@@ -1288,11 +1288,11 @@ export function TodayPlan({
         }
       }
       if (reform) {
-        // 개편: 낱말·표현은 카드 변형(넣어 둔 영어 단어 문제는 이미 "뜻 보고 쓰기"라 맞힌 적 있을 때 그대로).
+        // 개편: 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·예전 모양).
         const answered = new Set(readLedger(language).filter((event) => event.r === "ok").map((event) => event.k));
         for (const key of keys) {
           const word = answered.has(key) ? writtenWord.get(key) : undefined;
-          const question = (word ? typeFromPrepared(word) : null) ?? cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+          const question = cardQuiz(language, key, answered.has(key) ? "show" : "hide", `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
           if (question) {
             questions.push(question);
             used.push(key);

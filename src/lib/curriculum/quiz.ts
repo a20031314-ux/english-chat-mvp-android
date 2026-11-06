@@ -24,6 +24,9 @@ import { segmentWords, isSpaceless } from "../wordSegments.ts";
 import { hasLatin, romajiToHiragana, sameKana } from "../romaji.ts";
 
 /** who: 상대 줄("them")은 고르기·맞추기에만, 말하기는 내 줄·예문만. */
+/** 단어·표현 카드 한 장(낱말 · 앱 언어 뜻) — 문제는 이 중 한 칸을 가린다(cardQuiz). */
+export type QuizCardFace = { word: string; meaning: string };
+
 export type QuizSource = {
   text: string;
   gloss: ScriptGloss;
@@ -56,7 +59,7 @@ export type QuizQuestion =
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 넣어 둔 단어 문제. 뜻만 보고 단어를 쓴다. 문장은 답한 뒤에. hint는 첫 글자, mark는 "한 글자"·"한 단어". */ prepared?: { hint?: string; mark?: string } }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 넣어 둔 단어 문제. 뜻만 보고 단어를 쓴다. 문장은 답한 뒤에. hint는 첫 글자, mark는 "한 글자"·"한 단어". */ prepared?: { hint?: string; mark?: string }; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
@@ -75,7 +78,7 @@ export type QuizQuestion =
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
-  | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string };
+  | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**
  * 학습 조합(2026-10-29 사용자 "방식에 이름을 붙이기보다 나눠서 고르거나 학습 조합을 짜 주는 식"):
@@ -1289,8 +1292,9 @@ export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<nu
 /**
  * 개편 퀴즈(2026-11-07 사용자 "단어카드에서 뜻만 가리거나 반대로 뜻만 보여주는 형태로" → "일단 만들고 보여줘", 설계 hub/drafts/quiz-mix-2026-11-04.md):
  * 낱말(w|)·표현(e|) 카드 하나로 두 모양.
- *   hide = 뜻 가리기 — 카드 예문 속 그 말에 밑줄, 뜻 넷 중 고르기(오답 = 같은 종류·같은 품사의 다른 카드 뜻)
- *   show = 뜻만 보여 주기 — 앱 언어 뜻만 보고 그 말 쓰기(예문은 답한 뒤). 같은 뜻 카드가 둘 이상이면 첫 글자.
+ * 2026-11-06 사용자 "그냥 카드를 그대로 두고 예문에 빈칸, 단어만 가리고": 카드 한 장(낱말 · 뜻 · 예문 · 예문 뜻) 그대로, 한 칸만 가린다.
+ *   hide = 뜻 가림 — 낱말·예문(밑줄)은 보이고 뜻 칸과 예문 뜻만 가림 → 뜻 넷 중 고르기(오답 = 같은 종류·같은 품사의 다른 카드 뜻)
+ *   show = 낱말 가림 — 뜻·예문 뜻은 보이고 낱말 칸과 예문 속 그 말만 빈칸 → 예문 속 꼴 쓰기(사전형도 맞음)
  * 카드(뜻)가 아직 안 왔거나 오답이 모자라면 null — 부르는 쪽이 예전 모양으로.
  */
 export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {
@@ -1309,20 +1313,19 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
     if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}) });
   }
   const random = rng(`${seed}|${key}|${mode}`);
+  const face: QuizCardFace = { word: answer, meaning: gloss };
   if (mode === "show") {
-    // 같은 뜻의 다른 말이 있으면 첫 글자(한 글자 말은 첫 글자가 곧 답이라 내지 않음).
-    const same = others.some((other) => norm(other.gloss) === norm(gloss));
-    const letters = Array.from(answer);
-    if (same && letters.length < 2) return null;
+    // 낱말 가림: 카드의 뜻·예문 뜻은 그대로, 낱말 칸과 예문 속 그 말만 빈칸 — 예문 속 꼴을 쓴다(사전형도 맞음).
+    const at = source.text.indexOf(source.piece!);
     return {
       kind: "type",
       text: source.text,
-      before: "",
-      after: "",
-      answer,
-      gloss: { en: "", raw: gloss },
+      before: source.text.slice(0, at),
+      after: source.text.slice(at + source.piece!.length),
+      answer: source.piece!,
+      gloss: source.gloss,
       from: key,
-      prepared: same ? { hint: letters[0]! } : {},
+      card: face,
     };
   }
   const seen = new Set([norm(gloss)]);
@@ -1338,5 +1341,5 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   if (wrong.length < 3) return null;
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
-  return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece };
+  return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };
 }
