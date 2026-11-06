@@ -3,6 +3,7 @@
 import { loadBank, stageOfRank } from "./vocabBank";
 import type { DictEntry } from "./dictionary";
 import { loadWordSentences } from "./wordSentencesLoad";
+import { apiUrl } from "../apiBase";
 
 const GLOSS: Record<string, () => Promise<{ default: Record<string, string> }>> = {
   en: () => import("./dictionary/en-gloss.json"),
@@ -42,4 +43,34 @@ async function build(language: string): Promise<DictEntry[]> {
       lineCount: lines.length,
     };
   });
+}
+
+export type WordSense = { gloss: string; pos?: string; example?: string; exampleGloss?: string };
+const SENSE_CACHE = "wordSense.v1";
+const SENSE_MS = 30 * 24 * 60 * 60 * 1000;
+
+/**
+ * 낱말의 여러 뜻(앱 언어, 2026-11-06) — 서버가 낱말 × 앱 언어마다 한 번 만들어 고정한 것(server/wordSenses.ts). 이 폰에 30일.
+ * 실패·빈 답은 남기지 않는다.
+ */
+export async function fetchSenses(language: string, ui: string, word: string): Promise<WordSense[]> {
+  const name = `${SENSE_CACHE}.${language}.${ui}.${word}`;
+  try {
+    const raw = JSON.parse(localStorage.getItem(name) ?? "null") as { at: number; senses: WordSense[] } | null;
+    if (raw && Date.now() - raw.at < SENSE_MS && Array.isArray(raw.senses) && raw.senses.length) return raw.senses;
+  } catch {
+    // 없음.
+  }
+  const body = await fetch(apiUrl(`/api/curriculum/words?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(ui)}&senses=${encodeURIComponent(word)}`))
+    .then((response) => (response.ok ? (response.json() as Promise<{ senses?: WordSense[] }>) : null))
+    .catch(() => null);
+  const senses = Array.isArray(body?.senses) ? body!.senses!.filter((one) => one && typeof one.gloss === "string" && one.gloss) : [];
+  if (senses.length) {
+    try {
+      localStorage.setItem(name, JSON.stringify({ at: Date.now(), senses }));
+    } catch {
+      // 이번에만.
+    }
+  }
+  return senses;
 }

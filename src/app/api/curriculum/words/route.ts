@@ -8,6 +8,7 @@ import { expressionCards } from "@/lib/server/expressionCards";
 import { BANK_CHUNK, hasBank } from "@/lib/curriculum/vocabBank";
 import { cardsInUi, extraChunk, extraCount, searchWord } from "@/lib/server/wordExtras";
 import { requestUserId } from "@/lib/server/premiumRequest";
+import { wordSenses } from "@/lib/server/wordSenses";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -38,6 +39,11 @@ export async function GET(request: NextRequest) {
     if (!Number.isInteger(chunk) || chunk < 0 || chunk * BANK_CHUNK >= total) return jsonWithCors(request, { cards: [], total, size: BANK_CHUNK });
     const cards = await cardsInUi(language, await extraChunk(language, chunk), ui, () => void meterRequest(request, "wordCards"));
     return jsonWithCors(request, { cards, total, size: BANK_CHUNK });
+  }
+  // ?senses=<낱말>: 단어 사전 낱말의 여러 뜻(server/wordSenses.ts, 2026-11-06) — 처음 한 번만 모델(vocabSearch op), 그 뒤엔 저장된 것.
+  if (params.has("senses")) {
+    const senses = await wordSenses(language, params.get("senses") ?? "", ui, () => void meterRequest(request, "vocabSearch")).catch(() => []);
+    return jsonWithCors(request, { senses });
   }
   // ?expr=<단계>: 그 단계 덩어리 표현 카드(server/expressionCards.ts, 2026-11-03 — Quizbank 어휘 탭에 표현을 섞음). 처음만 모델(같은 op).
   const exprStage = Number(params.get("expr"));
