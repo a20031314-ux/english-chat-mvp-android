@@ -1191,8 +1191,8 @@ function periodDays(period: Period, today: string): string[] {
 
 const LEARN_ICON: Record<CardPart, string> = { word: "🔤", grammar: "📐", expression: "💬", frame: "🧩" };
 
-type GrowCol = "fresh" | "learned" | "used";
-const GROW_COLS: readonly GrowCol[] = ["fresh", "learned", "used"];
+type GrowCol = "studied" | "used";
+const GROW_COLS: readonly GrowCol[] = ["studied", "used"];
 
 function learnPartName(ui: UICopy, part: CardPart): string {
   return { word: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, frame: ui.framesTitle }[part];
@@ -1231,7 +1231,8 @@ function Learned({
   dateLabel: (day: string) => string;
 }) {
   // 배운 것 = 표 하나(2026-11-07 밤 사용자 "배운 것·늘어난 것·어휘·새로가 UI로 구분이 안 돼" → "바꿔줘, 대화에서 씀은 활용으로"):
-  // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 어디까지(처음 봄 · 익힘 · 활용), 아래 다시 맞힘 · 고쳐 씀 · 통화. 계산 curriculum/growthView.ts.
+  // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 학습(그 기간에 푼 것) · 활용(대화에서 맞게 씀) — 익힘은 뺌(같은 밤 "기준이 모호, 활용과 겹침"),
+  // 아래 다시 맞힘 · 고쳐 씀 · 통화. 계산 curriculum/growthView.ts.
   const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | "call" | "recovered" | "fixed" | null>(null);
   const days = useMemo(() => periodDays(period, today), [period, today]);
   const progress = useMemo(() => progressIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
@@ -1254,7 +1255,7 @@ function Learned({
   ].filter((one) => one.n > 0);
   if (!rows.length && !extras.length) return null;
   const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
-  const colName = (col: GrowCol) => ({ fresh: ui.lbFresh, learned: ui.growLearned, used: ui.growUsed })[col];
+  const colName = (col: GrowCol) => ({ studied: ui.lbFresh, used: ui.growUsed })[col];
   const openCell = typeof open === "object" && open ? open : null;
   return (
     <div data-learned className="flex flex-col gap-2">
@@ -1502,7 +1503,7 @@ function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: re
           <span className="text-slate-300">{dateLabel(at.day)}</span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
-            {`${ui.lbFresh} ${at.fresh}`}
+            {`${ui.lbFresh} ${at.fresh + at.again}`}
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-25`}><rect width="8" height="8" rx="2" /></svg>

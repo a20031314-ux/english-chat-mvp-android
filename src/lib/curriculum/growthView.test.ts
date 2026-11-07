@@ -20,6 +20,7 @@ test("개수: 새로·익힘·다시 맞힘·써 봄·앎 — 기간 안만, 열
     ev("e|por cierto", "used", 3, "chat"), // 써 봄(3일째) · 처음 봄 → 힘듦
   ];
   const all = progressIn(events, () => true, dayOf);
+  assert.deepEqual(new Set(all.studied), new Set(["w|casa", "w|食べる", "w|perro"]), "학습 = 푼 열쇠(대화에서 쓴 것은 활용만)");
   assert.deepEqual(new Set(all.fresh), new Set(["w|casa", "w|食べる", "w|perro"]));
   assert.deepEqual(all.learned, ["w|casa"]);
   assert.deepEqual(all.recovered, ["w|食べる"]);
@@ -29,6 +30,7 @@ test("개수: 새로·익힘·다시 맞힘·써 봄·앎 — 기간 안만, 열
   assert.deepEqual(day3.learned, []);
   assert.deepEqual(day3.recovered, ["w|食べる"]);
   assert.deepEqual(new Set(day3.fresh), new Set(["w|perro"]));
+  assert.deepEqual(new Set(day3.studied), new Set(["w|食べる", "w|perro"]), "다시 맞힌 것도 그날 학습");
   assert.deepEqual(day3.known, ["w|casa"], "앎은 누적");
 });
 

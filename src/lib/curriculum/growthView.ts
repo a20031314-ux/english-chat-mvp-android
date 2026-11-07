@@ -2,7 +2,8 @@
  * "늘었어요" 재료(2026-11-07 사용자 "포인트 말고 오늘 학습한 단어 N개 식으로도" · "틀렸던 문장 > 이후 배워서 활용한 문장" →
  * "진행해줘"). 순수 모듈 — 장부(logLedger.ts)와 이 폰의 대화 문장(growthLines.ts)에서.
  *
- * 개수(기간 안):
+ * 개수(기간 안) — Logbank 표는 학습·활용 두 칸(2026-11-07 밤 사용자 "익힘은 삭제, 다시 맞힌 것은 학습으로, 대화에서 쓴 것은 활용으로"):
+ *   학습     그 기간에 푼 열쇠(처음이든 다시든, 맞든 틀리든 — 퀴즈·시험·대본)
  *   새로     그 열쇠를 처음 푼 답(퀴즈·시험·대본)이 기간 안
  *   익힘     체크 셋이 처음으로 앎이 된 때가 기간 안(checkState.ts stepState)
  *   다시 맞힘 앞서 틀린 열쇠를 다른 날 맞히거나 대화에서 씀 — 그 첫 맞음이 기간 안
@@ -14,7 +15,7 @@ import type { LogEvent } from "./logLedger.ts";
 import { dayOfSeconds, stepState, type CheckState } from "./checkState.ts";
 import { partOf } from "./todayCards.ts";
 
-export type ProgressCounts = { fresh: string[]; learned: string[]; recovered: string[]; used: string[]; known: string[] };
+export type ProgressCounts = { studied: string[]; fresh: string[]; learned: string[]; recovered: string[]; used: string[]; known: string[] };
 
 const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script") && (event.r === "ok" || event.r === "miss");
 const talked = (event: LogEvent) => event.src === "call" || event.src === "people" || event.src === "chat";
@@ -28,7 +29,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (list) list.push(event);
     else byKey.set(event.k, [event]);
   }
-  const at = { fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>() };
+  const at = { studied: new Map<string, number>(), fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>() };
   const known: [string, number][] = [];
   for (const [key, list] of byKey) {
     list.sort((a, b) => a.t - b.t);
@@ -37,6 +38,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     let firstAnswer = true;
     let missDay: string | null = null;
     for (const event of list) {
+      if (answered(event) && inDay(event.t)) at.studied.set(key, event.t);
       if (answered(event) && firstAnswer) {
         firstAnswer = false;
         if (inDay(event.t)) at.fresh.set(key, event.t);
@@ -56,7 +58,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (state.level === "known") known.push([key, state.last]);
   }
   const order = (map: Map<string, number>) => [...map].sort((a, b) => b[1] - a[1]).map(([key]) => key);
-  return { fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
+  return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
 }
 
 /** 그 시각(초)까지의 답으로 앎인 열쇠 수 — 학습 곡선 선(누적). */

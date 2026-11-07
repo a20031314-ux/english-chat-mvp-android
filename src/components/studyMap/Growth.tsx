@@ -53,8 +53,7 @@ export function TodayGrowth({ ui, language }: { ui: UICopy; language: string }) 
   }, [tick, language, today]);
   const parts = [
     // Logbank "배운 것" 표의 칸 이름 그대로 — 같은 숫자의 오늘 몫(2026-11-07 밤).
-    { icon: "", label: ui.lbFresh, n: counts.fresh.length },
-    { icon: "", label: ui.growLearned, n: counts.learned.length },
+    { icon: "", label: ui.lbFresh, n: counts.studied.length },
     { icon: "", label: ui.growUsed, n: counts.used.length },
     { icon: "↺", label: ui.growRecovered, n: counts.recovered.length },
   ].filter((one) => one.n > 0);
