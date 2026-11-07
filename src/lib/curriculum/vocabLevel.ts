@@ -28,6 +28,8 @@ export type Level = {
   run?: number;
   /** 경계를 사용자가 직접 정함(⚙ 단계 예시) — 가늠 단계 건너뜀. */
   picked?: boolean;
+  /** 모으는 중인 묶음(가늠이 끝난 뒤): 답 수 · 맞힘 · 찍어 맞힐 몫 합(noteLevelBatch). */
+  pend?: { n: number; ok: number; g: number; e?: number };
 };
 
 /** 처음 섞어서 내는 새 낱말 수. */
@@ -74,6 +76,35 @@ export function noteLevel(level: Level, rank: number, correct: boolean, options:
   const b = Math.min(Math.max(0, options.total - 1), Math.max(0, Math.exp(x) - OFFSET));
   const run = options.fresh ? (correct ? (level.run ?? 0) + 1 : 0) : level.run;
   return { ...level, b, n: level.n + 1, ...(run !== undefined ? { run } : {}) };
+}
+
+/** 묶음 판정(2026-11-07 사용자 "문제 하나를 맞출때마다 매번 변수로 반영하는게 문제 — 모아서 판정"): 이만큼 모이면 한 번. */
+export const BATCH = 10;
+/** 판정 기준: 묶음 낱말들을 지금 경계로 알 확률 평균(경계 둘레면 약 50%)보다 BATCH_GAP 넘게 높으면 올림, 낮으면 내림 — 경계 둘레에선 70% / 30%.
+ * (처음 안 70% / 40% 고정은 가상 학습자 30일에서 경계가 참값의 0.45~0.7배로 미끄러짐 — 경계 둘레 낱말은 원래 절반쯤 맞혀서, 2026-11-07.) */
+export const BATCH_GAP = 0.2;
+/** 판정 한 번에 경계를 옮기는 몫(로그 눈금 — ×1.2 / ÷1.2). */
+export const BATCH_STEP = 1.2;
+
+/**
+ * 가늠 단계(처음 PROBE개, 첫 측정·⚙로 정했으면 없음)는 답마다 noteLevel, 그 뒤엔 BATCH개를 모아 한 번:
+ * 찍어 맞힐 몫을 뺀 맞힌 비율이 기대(알 확률 평균)보다 0.2 넘게 높으면 경계 ×1.2, 0.2 넘게 낮으면 ÷1.2, 그 사이는 그대로.
+ */
+export function noteLevelBatch(level: Level, rank: number, correct: boolean, options: { choose?: boolean; total: number; fresh?: boolean }): Level {
+  if (level.n < PROBE && !level.picked) return noteLevel(level, rank, correct, options);
+  const guess = options.choose ? 1 / 3 : 0;
+  const pend = { n: (level.pend?.n ?? 0) + 1, ok: (level.pend?.ok ?? 0) + (correct ? 1 : 0), g: (level.pend?.g ?? 0) + guess, e: (level.pend?.e ?? 0) + knowChance(level, rank) };
+  const run = options.fresh ? (correct ? (level.run ?? 0) + 1 : 0) : level.run;
+  const base = { ...level, n: level.n + 1, ...(run !== undefined ? { run } : {}) };
+  if (pend.n < BATCH) return { ...base, pend };
+  const rate = (pend.ok - pend.g) / Math.max(1e-9, pend.n - pend.g);
+  const x = level.b + OFFSET;
+  const expected = (pend.e ?? pend.n * 0.5) / pend.n;
+  const moved = rate > expected + BATCH_GAP ? x * BATCH_STEP : rate < expected - BATCH_GAP ? x / BATCH_STEP : x;
+  const b = Math.min(Math.max(0, options.total - 1), Math.max(0, moved - OFFSET));
+  const { pend: _drop, ...rest } = base;
+  void _drop;
+  return { ...rest, b };
 }
 
 /** 사용자 체크(새 객체). newSeen = 지금까지 새 낱말 푼 수. */

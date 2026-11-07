@@ -39,6 +39,7 @@ import { SkillBands } from "@/components/studyMap/SkillBands";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
+import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, sureOf, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import type { CardPart } from "@/lib/curriculum/todayCards";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
@@ -406,9 +407,13 @@ export function Logbank({
   }, [reform, ledger, language, known, quiz, results, items, checkups]);
   const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
   const [nowAt] = useState(() => Date.now());
-  const fill = useMemo(() => computeFill({ catalog, check, stage, placed, events, calls: callTurns, now: nowAt }), [catalog, check, stage, placed, events, callTurns, nowAt]);
+  // 개편: 하루 한 번 판정(fillJudge.ts — 공부한 날 끝마다 꼭짓점당 ±2%p, 오늘 답은 미세 몫). 2주 비교·기간 시작·곡선도 같은 값.
+  const fillInput = useMemo(() => ({ catalog, check, stage, placed, events, calls: callTurns, now: nowAt }), [catalog, check, stage, placed, events, callTurns, nowAt]);
+  const chain = useMemo(() => (reform ? fillChain(fillInput) : null), [reform, fillInput]);
+  const fill = useMemo(() => (chain ? judgeFill(computeFill(fillInput), chain, fillInput) : computeFill(fillInput)), [chain, fillInput]);
   const earlier = useMemo(() => {
     const cut = nowAt - COMPARE_MS;
+    if (chain) return fillAt(chain, fillInput, cut);
     return computeFill({
       catalog,
       check,
@@ -418,7 +423,7 @@ export function Logbank({
       calls: callTurns.filter((one) => one.at < cut),
       now: cut,
     });
-  }, [catalog, check, stage, placed, events, callTurns, nowAt]);
+  }, [chain, fillInput, catalog, check, stage, placed, events, callTurns, nowAt]);
   const direction = useMemo(() => directionView(fill, earlier), [fill, earlier]);
   // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
   useEffect(() => {
@@ -430,18 +435,18 @@ export function Logbank({
     const [y, m, d] = period.start.split("-").map(Number);
     const start = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
     if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
+    if (chain) return fillAt(chain, fillInput, Math.min(start, nowAt));
     return computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
-  }, [catalog, check, stage, placed, events, callTurns, period.start]);
+  }, [chain, fillInput, nowAt, catalog, check, stage, placed, events, callTurns, period.start]);
   // 학습 곡선 선 = 날마다 그날 끝의 확인된 실력(learnedView.ts sureOf — 2026-11-07 사용자 "Logbank는 학습량 + 채운 %").
   const sureDays = useMemo(() => {
-    if (!reform) return [] as (number | null)[];
+    if (!reform || !chain) return [] as (number | null)[];
     return periodDays(period, today).map((day) => {
       const end = dayEndMs(day);
       if (end - 86_400_000 > nowAt) return null;
-      const cut = Math.min(end, nowAt);
-      return sureOf(computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < cut), calls: callTurns.filter((one) => one.at < cut), now: cut }));
+      return end > nowAt ? sureOf(fill) : sureOf(fillAt(chain, fillInput, end));
     });
-  }, [reform, period, today, catalog, check, stage, placed, events, callTurns, nowAt]);
+  }, [reform, chain, fill, fillInput, period, today, nowAt]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });

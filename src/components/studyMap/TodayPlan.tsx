@@ -44,7 +44,7 @@ import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { peekBank, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
-import { feelDue, feelLevel, levelOf, noteLevel, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
+import { feelDue, feelLevel, levelOf, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -1146,7 +1146,7 @@ export function TodayPlan({
             for (const one of results) {
               next = noteAnswer(next, one.key, one.correct && !one.skipped, Date.now());
               const rank = rankOf.get(one.key);
-              if (levelOn && rank !== undefined) lv = noteLevel(lv, rank, one.correct && !one.skipped, { total: ranked.length });
+              if (levelOn && rank !== undefined) lv = noteLevelBatch(lv, rank, one.correct && !one.skipped, { total: ranked.length });
             }
             saveCircle(trimCircle(noteTest(levelOn ? { ...next, lv } : next, day, Date.now())));
             finishMany(results.filter((one) => !one.skipped).map((one) => ({ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined })));
@@ -1235,7 +1235,7 @@ export function TodayPlan({
         const lv = levelOf(before, stage, cuts);
         const early = fresh && tooEarly(lv, rank, one.correct);
         const next = noteAnswer(before, one.key, one.correct, Date.now(), early);
-        saveCircle(trimCircle({ ...next, lv: noteLevel(lv, rank, one.correct, { choose: fresh, total: ranked.length, fresh }) }));
+        saveCircle(trimCircle({ ...next, lv: noteLevelBatch(lv, rank, one.correct, { choose: fresh, total: ranked.length, fresh }) }));
       } else saveCircle(trimCircle(growCircle(noteAnswer(before, one.key, one.correct, Date.now()), circleOrder, knownWord)));
     }
     finishMany([{ key: one.key, correct: one.correct, review: review[one.key] ? one.key : undefined, shape: one.shape, miss: one.miss }]);

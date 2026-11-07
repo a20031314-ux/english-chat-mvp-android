@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { emptyCircle, noteAnswer, newPaused, wordTest, type Circle } from "./circle.ts";
-import { feelDue, feelLevel, noteLevel, pickLevel, pickLevelWords, presumedWords, PROBE, startLevel, tooEarly, type Level } from "./vocabLevel.ts";
+import { BATCH, feelDue, feelLevel, noteLevel, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, PROBE, startLevel, tooEarly, type Level } from "./vocabLevel.ts";
 
 const cuts = [700, 1500, 2500, 3500, 5000];
 const ranked = Array.from({ length: 7000 }, (_, i) => `w|r${i}`);
@@ -82,4 +82,19 @@ test("아마 앎(경계보다 한참 아래 안 본 낱말)만 단어 시험 확
   assert.ok(picks.length >= 1);
   for (const key of picks) assert.ok(rankOf(key) < 1000 - 150);
   assert.deepEqual(presumedWords(emptyCircle(), { b: 20, n: PROBE }, { ranked, usable: all, known: none }), []);
+});
+
+test("묶음 판정: 가늠이 끝나면 열 개를 모아 한 번 — 기대보다 20%p 넘게 높으면 올림·낮으면 내림, 사이는 그대로", () => {
+  const start: Level = { b: 1000, n: 30, picked: true };
+  const run = (pattern: boolean[]) => pattern.reduce((level, correct) => noteLevelBatch(level, 1100, correct, { total: 7000 }), start);
+  let level = start;
+  for (let i = 0; i < BATCH - 1; i += 1) level = noteLevelBatch(level, 1100, true, { total: 7000 });
+  assert.equal(level.b, start.b, "아홉 개까지는 그대로");
+  assert.ok(run(Array(10).fill(true)).b > start.b);
+  assert.ok(run(Array.from({ length: 10 }, (_, i) => i < 1)).b < start.b);
+  assert.equal(run(Array.from({ length: 10 }, (_, i) => i < 6)).b, start.b);
+  // 고르기는 찍어 맞힐 몫을 뺌: 열에 일곱 맞혀도(보정 55%) 그대로.
+  assert.equal(Array.from({ length: 10 }, (_, i) => i < 7).reduce((l, c) => noteLevelBatch(l, 1100, c, { total: 7000, choose: true }), start).b, start.b);
+  // 가늠 단계(n < PROBE, 직접 정하지 않음)는 답마다.
+  assert.notEqual(noteLevelBatch({ b: 1000, n: 0 }, 1100, true, { total: 7000 }).b, 1000);
 });

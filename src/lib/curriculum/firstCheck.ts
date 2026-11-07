@@ -4,7 +4,7 @@
  *
  *   ① 글자: 소리 듣고 글자 고르기 6문제, 셋 넘게 틀리면 글자부터(그 뒤 ②③은 건너뜀 — 못 읽는 글자로 낱말을 물을 수 없음).
  *   ② 낱말 범위: 예/아니오 24장(진짜 20 + 가짜 4) → 경계 b 최대가능도 → 뜻 고르기 5문제로 b를 고침(vocabLevel.noteLevel).
- *   ③ 표현·문법: 1단계부터 번갈아 한 문제씩, 맞히면 위 단계, 틀리면 같은 단계 한 번 더, 두 번 연달아 틀리면 그 종류 멈춤.
+ *   ③ 표현·문법: 1단계부터 번갈아, 단계마다 세 문제 중 둘 맞히면 위 단계, 둘 틀리면 그 종류 멈춤(11-07 저녁 — 모아서 판정).
  *
  * 예전 placement.ts(단계 오르내리기 시험, PlacementPlayer)와는 다른 것 — 그쪽은 개편 밖 화면만 쓴다.
  * 결과는 Logbank %를 칠하지 않는다(설계 5절): 낱말 경계는 Quizbank·Languagebank 진하기, 단계는 지금 단계.
@@ -20,7 +20,8 @@ export const YN_REAL = 20;
 export const YN_FAKE = 4;
 export const YN_TOTAL = YN_REAL + YN_FAKE;
 export const MEANING_N = 5;
-export const CLIMB_MAX = 10;
+/** 오르기 최대 문제 수(두 종류 합) — 단계마다 2~3문제라 예전 10에서 늘림. */
+export const CLIMB_MAX = 18;
 export const STAGES = 5;
 /** 거짓 앎이 이만큼이면 예/아니오를 버리고 뜻 고르기만. */
 export const FAKE_TRUST_MAX = 0.5;
@@ -256,11 +257,19 @@ export function wordsAbout(b: number): number {
 /* ───────── ③ 표현·문법 오르기 ───────── */
 
 export type ClimbKind = "expression" | "grammar";
-export type ClimbLane = { stage: number; passed: number; missRun: number; stopped: boolean };
+/**
+ * 오르기는 단계마다 모아서 판정(2026-11-07 사용자 "모아서 판정하거나 단일문제는 좀더 미시적으로" → "다 바꿔줘"):
+ * 한 단계에 세 문제까지, 둘 맞히면 넘음(셋째는 안 냄), 둘 틀리면 그 종류는 거기서 멈춤.
+ * 예전(한 문제 맞히면 위, 틀리면 한 번 더)은 넷 중 하나 찍기로 단계가 올라가 5단계 과대(체감 점검 오후 민지·Layla).
+ * 찍기만으로 한 단계를 넘을 확률: 셋 중 둘 이상 = 3·¼²·¾ + ¼³ ≈ 16%(예전 ¼ + ¾·¼ ≈ 44%).
+ */
+export const STAGE_ASK = 3;
+export const STAGE_PASS = 2;
+export type ClimbLane = { stage: number; passed: number; right: number; wrong: number; stopped: boolean };
 export type Climb = { lanes: Record<ClimbKind, ClimbLane>; asked: number; turn: ClimbKind };
 
 export function startClimb(has: Record<ClimbKind, boolean>): Climb {
-  const lane = (on: boolean): ClimbLane => ({ stage: 1, passed: 0, missRun: 0, stopped: !on });
+  const lane = (on: boolean): ClimbLane => ({ stage: 1, passed: 0, right: 0, wrong: 0, stopped: !on });
   return { lanes: { expression: lane(has.expression), grammar: lane(has.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
 }
 
@@ -275,17 +284,19 @@ export function climbNext(climb: Climb): { kind: ClimbKind; stage: number } | nu
   return null;
 }
 
-/** 답 하나(새 객체). 맞음 → 위 단계(5 넘으면 멈춤), 틀림 → 같은 단계 한 번 더, 두 번 연달아 틀리면 멈춤. */
+/** 답 하나(새 객체). 그 단계에서 둘 맞히면 위 단계(5 넘으면 멈춤), 둘 틀리면 멈춤. */
 export function climbAnswer(climb: Climb, kind: ClimbKind, correct: boolean): Climb {
   const lane = { ...climb.lanes[kind] };
-  if (correct) {
+  if (correct) lane.right += 1;
+  else lane.wrong += 1;
+  if (lane.right >= STAGE_PASS) {
     lane.passed = lane.stage;
     lane.stage += 1;
-    lane.missRun = 0;
+    lane.right = 0;
+    lane.wrong = 0;
     if (lane.stage > STAGES) lane.stopped = true;
-  } else {
-    lane.missRun += 1;
-    if (lane.missRun >= 2) lane.stopped = true;
+  } else if (lane.wrong > STAGE_ASK - STAGE_PASS) {
+    lane.stopped = true;
   }
   const other: ClimbKind = kind === "expression" ? "grammar" : "expression";
   return { lanes: { ...climb.lanes, [kind]: lane }, asked: climb.asked + 1, turn: other };

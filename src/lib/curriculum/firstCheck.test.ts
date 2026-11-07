@@ -91,29 +91,48 @@ test("뜻 고르기: b 근처 다섯, 맞히면 b가 오르고 틀리면 내림"
   assert.equal(wordsAbout(2468), 2500);
 });
 
-test("표현·문법 오르기: 맞으면 위, 틀리면 한 번 더, 두 번 틀리면 멈춤, 최대 10문제", () => {
+test("표현·문법 오르기: 단계마다 셋 중 둘 맞혀야 넘음, 둘 틀리면 멈춤, 최대 18문제", () => {
   let climb = startClimb({ expression: true, grammar: true });
   const answer = (kind: "expression" | "grammar", ok: boolean) => {
     const next = climbNext(climb)!;
     assert.equal(next.kind, kind);
     climb = climbAnswer(climb, kind, ok);
   };
-  answer("expression", true); // 표현 1 넘음
-  answer("grammar", true); // 문법 1 넘음
-  answer("expression", true); // 표현 2 넘음
-  answer("grammar", false); // 문법 2 한 번 틀림
+  answer("expression", true);
+  answer("grammar", true);
+  assert.equal(climb.lanes.expression.stage, 1, "한 문제 맞혀선 안 넘음");
+  answer("expression", true); // 표현 1 넘음(둘)
+  answer("grammar", false);
+  assert.equal(climb.lanes.expression.stage, 2);
   answer("expression", false);
-  answer("grammar", false); // 문법 멈춤
-  answer("expression", false); // 표현 멈춤
+  answer("grammar", true); // 문법 1 넘음(셋 중 둘)
+  answer("expression", true);
+  answer("grammar", false);
+  answer("expression", false); // 표현 2: 맞1 틀2 → 멈춤
+  answer("grammar", false); // 문법 2: 틀2 → 멈춤
   assert.equal(climbNext(climb), null);
-  assert.equal(climbStart(climb.lanes.expression), 3);
+  assert.equal(climbStart(climb.lanes.expression), 2);
   assert.equal(climbStart(climb.lanes.grammar), 2);
   let all = startClimb({ expression: true, grammar: true });
-  for (let i = 0; i < 20 && climbNext(all); i += 1) all = climbAnswer(all, climbNext(all)!.kind, true);
-  assert.ok(all.asked <= 10);
+  for (let i = 0; i < 40 && climbNext(all); i += 1) all = climbAnswer(all, climbNext(all)!.kind, true);
+  assert.equal(climbStart(all.lanes.expression), 5);
+  assert.equal(climbStart(all.lanes.grammar), 5);
+  assert.ok(all.asked <= 18);
   const none = startClimb({ expression: false, grammar: true });
   assert.equal(climbNext(none)?.kind, "grammar");
   assert.equal(climbStart(none.lanes.expression), 1);
+});
+
+test("찍기만 하는 사람(넷 중 하나): 예전보다 단계가 덜 올라감 — 2단계 이상 시작 15% 아래", () => {
+  const random = seeded("guess");
+  let over = 0;
+  const runs = 4000;
+  for (let r = 0; r < runs; r += 1) {
+    let climb = startClimb({ expression: false, grammar: true });
+    for (let i = 0; i < 40 && climbNext(climb); i += 1) climb = climbAnswer(climb, "grammar", random() < 0.25);
+    if (climbStart(climb.lanes.grammar) >= 2) over += 1;
+  }
+  assert.ok(over / runs < 0.2, String(over / runs));
 });
 
 test("글자: 여섯 문제, 정답이 보기에 있고 보기 넷이 다름, 넷 틀리면 글자부터 (ja·th·ar)", () => {
