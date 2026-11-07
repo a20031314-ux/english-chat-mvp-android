@@ -35,3 +35,56 @@ test("학습 곡선: 날마다 답한 수·맞힌 비율(답 셋 미만인 날�
   assert.equal(curveReady(curveOf(events, days, "grammar", utcDay)), false);
   assert.deepEqual(curveOf(events, days, null, utcDay).map((p) => p.n), [4, 0, 2]);
 });
+
+test("학습량: 새로(처음 푼 열쇠)·다시(전에 푼 열쇠) — 기간 앞에 푼 것도 다시 (ja·es)", async () => {
+  const { amountOf } = await import("./learnedView.ts");
+  const day = (t: number) => new Date(t * 1000).toISOString().slice(0, 10);
+  const D = 86400;
+  const t0 = Date.UTC(2026, 10, 1) / 1000 + 3600;
+  const events = [
+    { k: "w|食べる", src: "quiz" as const, r: "ok" as const, m: "pick" as const, t: t0 },
+    { k: "w|食べる", src: "quiz" as const, r: "miss" as const, m: "write" as const, t: t0 + D },
+    { k: "w|comer", src: "quiz" as const, r: "ok" as const, m: "pick" as const, t: t0 + D },
+    { k: "w|comer", src: "dict" as const, r: "look" as const, t: t0 + D },
+    { k: "g|1:0", src: "exam" as const, r: "ok" as const, m: "pick" as const, t: t0 + 2 * D },
+  ];
+  const points = amountOf(events, ["2026-11-02", "2026-11-03"], day);
+  assert.deepEqual(points, [
+    { day: "2026-11-02", fresh: 1, again: 1 },
+    { day: "2026-11-03", fresh: 1, again: 0 },
+  ]);
+});
+
+test("내 것: 날마다 그날 끝의 앎·적용이 힘듦 — 다른 날 쓰기로 맞히면 앎, 종류 밖 열쇠는 안 셈, 오늘 뒤는 null", async () => {
+  const { ownCurve, dayEndMs } = await import("./learnedView.ts");
+  const start = dayEndMs("2026-11-01") / 1000 + 3600; // 11-02 01시(그 폰 시각)
+  const D = 86400;
+  const events = [
+    { k: "g|1:0", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
+    { k: "g|1:1", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
+    { k: "g|1:0", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start + D },
+    { k: "w|casa", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
+  ];
+  const curve = ownCurve(events, ["2026-11-02", "2026-11-03", "2026-11-04"], (key) => key.startsWith("g|"), "2026-11-03");
+  assert.deepEqual(curve, [
+    { day: "2026-11-02", known: 0, hard: 2 },
+    { day: "2026-11-03", known: 1, hard: 1 },
+    null,
+  ]);
+});
+
+test("확인된 실력: 네 꼭짓점 아래 끝 평균 — 답이 쌓이면 오름 (es)", async () => {
+  const { sureOf } = await import("./learnedView.ts");
+  const { computeFill, fillCatalog } = await import("./fill.ts");
+  const { loadBank } = await import("./vocabBank.ts");
+  const catalog = fillCatalog("es", await loadBank("es"));
+  const first = [...catalog.vocab.values()].filter((item) => item.stage === 1 && item.key.startsWith("w|"));
+  const now = Date.UTC(2026, 10, 7);
+  const fillAt = (n: number) =>
+    computeFill({ catalog, check: null, stage: 1, events: first.slice(0, n).map((item, i) => ({ at: now - 1e6 + i, key: item.key, correct: i % 5 !== 0, source: "quiz" as const, use: false, choose: true })), calls: [], now });
+  const a = sureOf(fillAt(0));
+  const b = sureOf(fillAt(10));
+  const c = sureOf(fillAt(60));
+  assert.equal(a, 0);
+  assert.ok(b > a && c > b, `${a} ${b} ${c}`);
+});

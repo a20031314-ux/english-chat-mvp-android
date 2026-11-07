@@ -38,7 +38,7 @@ import { SkillBands } from "@/components/studyMap/SkillBands";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
-import { curveOf, curveReady, LEARN_PARTS, learnedIn, type CurvePoint, type LearnedItem } from "@/lib/curriculum/learnedView";
+import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, sureOf, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import type { CardPart } from "@/lib/curriculum/todayCards";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent } from "@/lib/curriculum/logLedger";
@@ -428,6 +428,16 @@ export function Logbank({
     if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
     return computeFill({ catalog, check, stage, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
   }, [catalog, check, stage, events, callTurns, period.start]);
+  // 학습 곡선 선 = 날마다 그날 끝의 확인된 실력(learnedView.ts sureOf — 2026-11-07 사용자 "Logbank는 학습량 + 채운 %").
+  const sureDays = useMemo(() => {
+    if (!reform) return [] as (number | null)[];
+    return periodDays(period, today).map((day) => {
+      const end = dayEndMs(day);
+      if (end - 86_400_000 > nowAt) return null;
+      const cut = Math.min(end, nowAt);
+      return sureOf(computeFill({ catalog, check, stage, events: events.filter((one) => one.at < cut), calls: callTurns.filter((one) => one.at < cut), now: cut }));
+    });
+  }, [reform, period, today, catalog, check, stage, events, callTurns, nowAt]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -601,6 +611,7 @@ export function Logbank({
             ledger={ledger}
             period={period}
             today={today}
+            sure={sureDays}
             calls={calls}
             notes={callNotes}
             grammarName={grammarName}
@@ -1182,6 +1193,7 @@ function Learned({
   ledger,
   period,
   today,
+  sure,
   calls,
   notes,
   grammarName,
@@ -1194,6 +1206,8 @@ function Learned({
   ledger: readonly LogEvent[];
   period: Period;
   today: string;
+  /** 날마다 그날 끝의 확인된 실력(days와 같은 차례, 오늘 뒤는 null). */
+  sure: readonly (number | null)[];
   calls: readonly SavedConversation[];
   notes: readonly CallNote[];
   grammarName: (stage: number, index: number) => string;
@@ -1201,12 +1215,11 @@ function Learned({
   dateLabel: (day: string) => string;
 }) {
   const [open, setOpen] = useState<CardPart | "call" | null>(null);
-  const [curvePart, setCurvePart] = useState<CardPart | null>(null);
   const days = useMemo(() => periodDays(period, today), [period, today]);
   const learned = useMemo(() => learnedIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
   const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
-  const points = useMemo(() => (curvePart ? curveOf(ledger, days, curvePart, (t) => dayOfSeconds(t)) : all), [ledger, days, curvePart, all]);
+  const amounts = useMemo(() => amountOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
   const parts = LEARN_PARTS.filter((part) => learned[part].length);
   if (!parts.length && !periodCalls.length) return null;
   const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
@@ -1230,7 +1243,7 @@ function Learned({
         ) : null}
       </div>
       {curveReady(all) ? (
-        <LearnCurve ui={ui} points={points} parts={parts} part={curvePart} onPart={setCurvePart} dateLabel={dateLabel} />
+        <LearnCurve ui={ui} amounts={amounts} sure={sure} dateLabel={dateLabel} />
       ) : null}
       {open && open !== "call" ? (
         <LogSheet title={`${LEARN_ICON[open]} ${learnPartName(ui, open)} · ${learned[open].length}`} ui={ui} onClose={() => setOpen(null)}>
@@ -1354,83 +1367,76 @@ function LearnedCards({
   );
 }
 
-/** 학습 곡선: 날마다 푼 수(막대) + 맞힌 비율(선, 답 셋 이상인 날만 점) — 요소 칩 [전체 | 낱말 | 문법 …]. */
-function LearnCurve({
-  ui,
-  points,
-  parts,
-  part,
-  onPart,
-  dateLabel,
-}: {
-  ui: UICopy;
-  points: readonly CurvePoint[];
-  parts: readonly CardPart[];
-  part: CardPart | null;
-  onPart: (part: CardPart | null) => void;
-  dateLabel: (day: string) => string;
-}) {
+/**
+ * 학습 곡선(2026-11-07 사용자 "Logbank는 학습량 + 채운 %, 학습량은 푼 수"): 아래 막대 = 날마다 푼 수(새로 · 다시 두 색),
+ * 위 선 = 그날 끝의 확인된 실력(learnedView.ts sureOf, 띠·육각형과 같은 계산의 아래 끝). 눈금이 둘이라 숫자 눈금은 없고,
+ * 날을 누르면 그날 "새로 n · 다시 m · 확인된 실력 x%". 선의 세로는 0~(가장 높은 값 + 여유)로 잡아 작은 오름도 보이게.
+ */
+function LearnCurve({ ui, amounts, sure, dateLabel }: { ui: UICopy; amounts: readonly AmountPoint[]; sure: readonly (number | null)[]; dateLabel: (day: string) => string }) {
+  const [pick, setPick] = useState<number | null>(null);
   const W = 320;
   const H = 120;
-  const top = 8;
-  const max = Math.max(1, ...points.map((point) => point.n));
-  const step = W / Math.max(1, points.length);
+  const top = 10;
+  const barTop = H * 0.55;
+  const max = Math.max(1, ...amounts.map((one) => one.fresh + one.again));
+  const step = W / Math.max(1, amounts.length);
   const barW = Math.max(2, Math.min(18, step * 0.6));
   const x = (i: number) => step * i + step / 2;
-  const yScore = (score: number) => top + (1 - score) * (H - top);
-  const scored = points.map((point, i) => (point.score === null ? null : ([x(i), yScore(point.score)] as const)));
-  const line = scored.filter(Boolean).map((p, i) => `${i ? "L" : "M"}${p![0].toFixed(1)},${p![1].toFixed(1)}`).join(" ");
-  const every = points.length > 10 ? 5 : 1;
-  const tabs: (CardPart | null)[] = [null, ...parts];
+  const peak = Math.max(0.05, ...sure.map((one) => one ?? 0)) * 1.25;
+  const ySure = (value: number) => top + (1 - value / peak) * (barTop - top);
+  const dots = sure.map((one, i) => (one === null ? null : ([x(i), ySure(one)] as const)));
+  const line = dots.filter(Boolean).map((p, i) => `${i ? "L" : "M"}${p![0].toFixed(1)},${p![1].toFixed(1)}`).join(" ");
+  const every = amounts.length > 10 ? 5 : 1;
+  const shown = pick ?? (() => {
+    for (let i = sure.length - 1; i >= 0; i -= 1) if (sure[i] !== null) return i;
+    return amounts.length - 1;
+  })();
+  const at = amounts[shown];
+  const pct = (value: number | null | undefined) => `${Math.round(100 * (value ?? 0))}%`;
   return (
     <figure data-learn-curve className="m-0 flex flex-col gap-2 rounded-xl border border-line p-3">
-      <div className="flex flex-wrap items-center gap-1.5">
-        <figcaption className="me-1 text-caption font-semibold text-slate-300">{ui.lbCurve}</figcaption>
-        {tabs.map((one) => (
-          <button
-            key={one ?? "all"}
-            type="button"
-            aria-pressed={part === one}
-            data-curve-part={one ?? "all"}
-            onClick={() => onPart(one)}
-            className={`rounded-full px-2.5 py-0.5 text-caption ${part === one ? LOG.chip : "border border-line text-slate-400"}`}
-          >
-            {one ? `${LEARN_ICON[one]} ${learnPartName(ui, one)}` : ui.vocabByAll}
-          </button>
-        ))}
-      </div>
+      <figcaption className="text-caption font-semibold text-slate-300">{ui.lbCurve}</figcaption>
       <svg viewBox={`0 0 ${W} ${H + 16}`} role="img" aria-label={ui.lbCurve} direction="ltr" className="h-auto w-full">
-        {[0, 0.5, 1].map((g) => (
-          <line key={g} x1={0} x2={W} y1={yScore(g)} y2={yScore(g)} className="stroke-white/10" strokeWidth="0.6" />
-        ))}
-        {points.map((point, i) => {
-          const h = (point.n / max) * (H - top);
-          return point.n ? <rect key={point.day} x={x(i) - barW / 2} y={H - h} width={barW} height={h} rx="1.5" className={`${LOG.fill} opacity-40`} /> : null;
+        <line x1={0} x2={W} y1={H} y2={H} className="stroke-white/10" strokeWidth="0.6" />
+        {amounts.map((one, i) => {
+          const h1 = (one.fresh / max) * (H - barTop - 4);
+          const h2 = (one.again / max) * (H - barTop - 4);
+          return (
+            <g key={one.day} data-curve-day={one.day} onClick={() => setPick(i)} className="cursor-pointer">
+              <rect x={x(i) - step / 2} y={0} width={step} height={H} className="fill-transparent" />
+              {one.again ? <rect x={x(i) - barW / 2} y={H - h2} width={barW} height={h2} rx="1.5" className={`${LOG.fill} opacity-25`} /> : null}
+              {one.fresh ? <rect x={x(i) - barW / 2} y={H - h2 - h1} width={barW} height={h1} rx="1.5" className={`${LOG.fill} opacity-60`} /> : null}
+              {i === shown ? <rect x={x(i) - step / 2 + 1} y={1} width={step - 2} height={H - 1} rx="3" className="fill-white/5" /> : null}
+            </g>
+          );
         })}
-        {line ? <path d={line} className={`fill-none ${LOG.stroke}`} strokeWidth="1.8" strokeLinejoin="round" /> : null}
-        {scored.map((p, i) => (p ? <circle key={points[i]!.day} cx={p[0]} cy={p[1]} r="2.6" className={LOG.fill} /> : null))}
-        {points.map((point, i) =>
-          i % every === 0 || i === points.length - 1 ? (
-            <text key={`d-${point.day}`} x={x(i)} y={H + 12} textAnchor="middle" className="fill-slate-500 text-meta">
-              {dateLabel(point.day)}
+        {line ? <path d={line} className={`pointer-events-none fill-none ${LOG.stroke}`} strokeWidth="1.8" strokeLinejoin="round" /> : null}
+        {dots.map((p, i) => (p ? <circle key={amounts[i]!.day} cx={p[0]} cy={p[1]} r={i === shown ? 3.4 : 2.4} className={`pointer-events-none ${LOG.fill}`} /> : null))}
+        {amounts.map((one, i) =>
+          i % every === 0 || i === amounts.length - 1 ? (
+            <text key={`d-${one.day}`} x={x(i)} y={H + 12} textAnchor="middle" className="fill-slate-500 text-meta">
+              {dateLabel(one.day)}
             </text>
           ) : null,
         )}
       </svg>
-      <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
-        <span className="inline-flex items-center gap-1">
-          <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-40`}><rect width="8" height="8" rx="2" /></svg>
-          {`${ui.lbAnswered} ${points.reduce((n, point) => n + point.n, 0)}`}
-        </span>
-        <span className="inline-flex items-center gap-1">
-          <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
-          {(() => {
-            const n = points.reduce((a, point) => a + point.n, 0);
-            const ok = points.reduce((a, point) => a + point.ok, 0);
-            return `${ui.lbRight} ${n ? Math.round((100 * ok) / n) : 0}%`;
-          })()}
-        </span>
-      </div>
+      {at ? (
+        <p data-curve-detail className="flex flex-wrap items-center gap-x-3 text-meta tabular-nums text-slate-400">
+          <span className="text-slate-300">{dateLabel(at.day)}</span>
+          <span className="inline-flex items-center gap-1">
+            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
+            {`${ui.lbFresh} ${at.fresh}`}
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-25`}><rect width="8" height="8" rx="2" /></svg>
+            {`${ui.lbAgain} ${at.again}`}
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
+            {`${ui.lbSure} ${pct(sure[shown])}`}
+          </span>
+        </p>
+      ) : null}
     </figure>
   );
 }

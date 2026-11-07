@@ -7,6 +7,8 @@
  */
 import type { LogEvent } from "./logLedger.ts";
 import { partOf, type CardPart } from "./todayCards.ts";
+import { BANK_AXES, type FillResult } from "./fill.ts";
+import { checkStates } from "./checkState.ts";
 
 export const LEARN_PARTS: readonly CardPart[] = ["word", "grammar", "expression", "frame"];
 export const CURVE_MIN_DAYS = 2;
@@ -56,4 +58,58 @@ export function curveOf(events: readonly LogEvent[], days: readonly string[], pa
 /** 곡선을 그릴 만큼 모였나(답한 날이 둘 이상). */
 export function curveReady(points: readonly CurvePoint[]): boolean {
   return points.filter((point) => point.n > 0).length >= CURVE_MIN_DAYS;
+}
+
+/* ───────── 학습량 · 확인된 실력 · 내 것 (2026-11-07 사용자 "Logbank는 학습량 + 채운 %, Languagebank는 채운 것만, 학습량은 푼 수") ───────── */
+
+
+/** 날마다 푼 수 — 새로(그 열쇠를 처음 푼 답) · 다시(전에 푼 적 있는 열쇠). */
+export type AmountPoint = { day: string; fresh: number; again: number };
+
+export function amountOf(events: readonly LogEvent[], days: readonly string[], dayOf: (t: number) => string): AmountPoint[] {
+  const at = new Map(days.map((day, i) => [day, i]));
+  const out = days.map((day) => ({ day, fresh: 0, again: 0 }));
+  const seen = new Set<string>();
+  for (const event of [...events].sort((a, b) => a.t - b.t)) {
+    if (!answered(event) || !partOf(event.k)) continue;
+    const i = at.get(dayOf(event.t));
+    if (i !== undefined) {
+      if (seen.has(event.k)) out[i]!.again += 1;
+      else out[i]!.fresh += 1;
+    }
+    seen.add(event.k);
+  }
+  return out;
+}
+
+/**
+ * 확인된 실력(통합 한 숫자): 낱말·문장 이해·활용 네 꼭짓점의 어림 범위 아래 끝 평균. 답이 쌓이면 범위가 좁아져 오르고,
+ * 실력이 늘면 또 오르고, 많이 틀릴 때만 내려간다. 듣기·실전 대화는 처음 어림이라 넣지 않는다.
+ */
+export function sureOf(result: FillResult): number {
+  return BANK_AXES.reduce((sum, axis) => sum + result.axes[axis].low, 0) / BANK_AXES.length;
+}
+
+/** 그 폰 날짜 YYYY-MM-DD가 끝나는 때(다음 날 0시, ms). */
+export function dayEndMs(day: string): number {
+  const [y, m, d] = day.split("-").map(Number);
+  return new Date(y ?? 1970, (m ?? 1) - 1, (d ?? 1) + 1).getTime();
+}
+
+/** 내 것(Languagebank 종류별): 날마다 그날 끝의 체크 셋 — 앎 수 · 적용이 힘듦 수. keep = 그 종류 열쇠. 오늘 뒤 날은 null. */
+export type OwnPoint = { day: string; known: number; hard: number } | null;
+
+export function ownCurve(events: readonly LogEvent[], days: readonly string[], keep: (key: string) => boolean, today: string): OwnPoint[] {
+  const mine = events.filter((event) => keep(event.k)).sort((a, b) => a.t - b.t);
+  return days.map((day) => {
+    if (day > today) return null;
+    const end = dayEndMs(day) / 1000;
+    let known = 0;
+    let hard = 0;
+    for (const state of checkStates(mine.filter((event) => event.t < end)).values()) {
+      if (state.level === "known") known += 1;
+      else if (state.level === "hard") hard += 1;
+    }
+    return { day, known, hard };
+  });
 }

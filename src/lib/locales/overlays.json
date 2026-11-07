@@ -996,7 +996,10 @@
     "fcLetters": "文字",
     "fcWordsAbout": "約{n}語",
     "fcStart": "始める",
-    "fcHelp": "短いチェックで決めたスタート地点です。答えるほど調整されます。"
+    "fcHelp": "短いチェックで決めたスタート地点です。答えるほど調整されます。",
+    "lbFresh": "新規",
+    "lbAgain": "復習",
+    "lbSure": "確かな実力"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1995,7 +1998,10 @@
     "fcLetters": "文字",
     "fcWordsAbout": "约 {n} 个",
     "fcStart": "开始",
-    "fcHelp": "这是根据简短测试定的起点，答得越多越准。"
+    "fcHelp": "这是根据简短测试定的起点，答得越多越准。",
+    "lbFresh": "新学",
+    "lbAgain": "复习",
+    "lbSure": "确认的水平"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2997,7 +3003,10 @@
     "fcLetters": "Chữ cái",
     "fcWordsAbout": "Khoảng {n}",
     "fcStart": "Bắt đầu",
-    "fcHelp": "Điểm bắt đầu theo bài kiểm tra ngắn. Càng trả lời càng chính xác."
+    "fcHelp": "Điểm bắt đầu theo bài kiểm tra ngắn. Càng trả lời càng chính xác.",
+    "lbFresh": "Mới",
+    "lbAgain": "Ôn lại",
+    "lbSure": "Trình độ đã xác nhận"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4004,7 +4013,10 @@
     "fcLetters": "Lettres",
     "fcWordsAbout": "Environ {n}",
     "fcStart": "Commencer",
-    "fcHelp": "Un point de départ fixé par ce court test. Il s’ajuste au fil de vos réponses."
+    "fcHelp": "Un point de départ fixé par ce court test. Il s’ajuste au fil de vos réponses.",
+    "lbFresh": "Nouveaux",
+    "lbAgain": "Révisions",
+    "lbSure": "Niveau confirmé"
   },
   "it": {
     "archive": "Report",
@@ -5202,7 +5214,10 @@
     "fcLetters": "Lettere",
     "fcWordsAbout": "Circa {n}",
     "fcStart": "Inizia",
-    "fcHelp": "Un punto di partenza da questo breve test. Si aggiusta man mano che rispondi."
+    "fcHelp": "Un punto di partenza da questo breve test. Si aggiusta man mano che rispondi.",
+    "lbFresh": "Nuove",
+    "lbAgain": "Ripasso",
+    "lbSure": "Livello confermato"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6212,7 +6227,10 @@
     "fcLetters": "Letras",
     "fcWordsAbout": "Cerca de {n}",
     "fcStart": "Começar",
-    "fcHelp": "Um ponto de partida com este teste curto. Ele se ajusta conforme você responde."
+    "fcHelp": "Um ponto de partida com este teste curto. Ele se ajusta conforme você responde.",
+    "lbFresh": "Novas",
+    "lbAgain": "Revisão",
+    "lbSure": "Nível confirmado"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7408,7 +7426,10 @@
     "fcLetters": "Буквы",
     "fcWordsAbout": "Около {n}",
     "fcStart": "Начать",
-    "fcHelp": "Отправная точка по короткой проверке. Уточняется по мере ответов."
+    "fcHelp": "Отправная точка по короткой проверке. Уточняется по мере ответов.",
+    "lbFresh": "Новое",
+    "lbAgain": "Повтор",
+    "lbSure": "Подтверждённый уровень"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8414,7 +8435,10 @@
     "fcLetters": "Huruf",
     "fcWordsAbout": "Sekitar {n}",
     "fcStart": "Mulai",
-    "fcHelp": "Titik awal dari tes singkat ini. Makin banyak menjawab, makin tepat."
+    "fcHelp": "Titik awal dari tes singkat ini. Makin banyak menjawab, makin tepat.",
+    "lbFresh": "Baru",
+    "lbAgain": "Ulang",
+    "lbSure": "Kemampuan terkonfirmasi"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9413,7 +9437,10 @@
     "fcLetters": "الحروف",
     "fcWordsAbout": "نحو {n}",
     "fcStart": "ابدأ",
-    "fcHelp": "نقطة بداية من هذا الاختبار القصير، وتتعدّل كلما أجبت."
+    "fcHelp": "نقطة بداية من هذا الاختبار القصير، وتتعدّل كلما أجبت.",
+    "lbFresh": "جديد",
+    "lbAgain": "مراجعة",
+    "lbSure": "المستوى المؤكَّد"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10412,7 +10439,10 @@
     "fcLetters": "ตัวอักษร",
     "fcWordsAbout": "ประมาณ {n}",
     "fcStart": "เริ่ม",
-    "fcHelp": "จุดเริ่มต้นจากแบบทดสอบสั้นนี้ ยิ่งตอบยิ่งแม่นขึ้น"
+    "fcHelp": "จุดเริ่มต้นจากแบบทดสอบสั้นนี้ ยิ่งตอบยิ่งแม่นขึ้น",
+    "lbFresh": "ใหม่",
+    "lbAgain": "ทบทวน",
+    "lbSure": "ระดับที่ยืนยันแล้ว"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11411,6 +11441,9 @@
     "fcLetters": "अक्षर",
     "fcWordsAbout": "लगभग {n}",
     "fcStart": "शुरू करें",
-    "fcHelp": "इस छोटी जाँच से तय शुरुआती बिंदु। जितने जवाब देंगे, उतना सटीक होगा।"
+    "fcHelp": "इस छोटी जाँच से तय शुरुआती बिंदु। जितने जवाब देंगे, उतना सटीक होगा।",
+    "lbFresh": "नए",
+    "lbAgain": "दोहराए",
+    "lbSure": "पक्का स्तर"
   }
 }
