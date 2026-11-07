@@ -28,6 +28,8 @@ import { GrowthNetwork, type BoardMode, type BoardOptions } from "@/components/s
 import { StageExamples, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { PlacementPlayer } from "@/components/studyMap/PlacementPlayer";
+import { FirstCheck } from "@/components/studyMap/FirstCheck";
+import { startStageOf } from "@/lib/curriculum/firstCheck";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
@@ -619,6 +621,24 @@ function StageStart({
       body: JSON.stringify({ language: targetLanguage, checkup: result }),
     }).catch(() => undefined);
   };
+  // 개편(lib/reform.ts) 처음: 첫 측정(studyMap/FirstCheck — 글자 → 낱말 → 표현·문법 → 결과, 2026-11-07). 건너뛰면 1단계.
+  if (reformOn() && firstRun) {
+    return (
+      <FirstCheck
+        ui={ui}
+        locale={locale}
+        language={targetLanguage}
+        onSkip={() => void start(firstStage)}
+        onDone={(result) => {
+          if (result.letters) {
+            saveLettersFirst(targetLanguage, true);
+            saveFillCheck(targetLanguage, "letters");
+          }
+          void start(idOf(startStageOf(result)));
+        }}
+      />
+    );
+  }
   if (mode === "choose") {
     return (
       <div className="mx-auto flex max-w-md flex-col gap-3">

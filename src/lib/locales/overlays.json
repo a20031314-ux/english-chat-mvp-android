@@ -990,7 +990,13 @@
     "lbCheckNow": "確認の時期",
     "lbCurve": "学習曲線",
     "lbAnswered": "解いた数",
-    "lbRight": "正答率"
+    "lbRight": "正答率",
+    "fcKnow": "知ってる",
+    "fcUnknown": "知らない",
+    "fcLetters": "文字",
+    "fcWordsAbout": "約{n}語",
+    "fcStart": "始める",
+    "fcHelp": "短いチェックで決めたスタート地点です。答えるほど調整されます。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1983,7 +1989,13 @@
     "lbCheckNow": "该复习了",
     "lbCurve": "学习曲线",
     "lbAnswered": "答题数",
-    "lbRight": "正确率"
+    "lbRight": "正确率",
+    "fcKnow": "认识",
+    "fcUnknown": "不认识",
+    "fcLetters": "文字",
+    "fcWordsAbout": "约 {n} 个",
+    "fcStart": "开始",
+    "fcHelp": "这是根据简短测试定的起点，答得越多越准。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2979,7 +2991,13 @@
     "lbCheckNow": "Đến lúc ôn",
     "lbCurve": "Đường cong học tập",
     "lbAnswered": "Số câu đã làm",
-    "lbRight": "Tỉ lệ đúng"
+    "lbRight": "Tỉ lệ đúng",
+    "fcKnow": "Biết",
+    "fcUnknown": "Không biết",
+    "fcLetters": "Chữ cái",
+    "fcWordsAbout": "Khoảng {n}",
+    "fcStart": "Bắt đầu",
+    "fcHelp": "Điểm bắt đầu theo bài kiểm tra ngắn. Càng trả lời càng chính xác."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3980,7 +3998,13 @@
     "lbCheckNow": "À revoir",
     "lbCurve": "Courbe d’apprentissage",
     "lbAnswered": "Réponses",
-    "lbRight": "Bonnes réponses"
+    "lbRight": "Bonnes réponses",
+    "fcKnow": "Je connais",
+    "fcUnknown": "Je ne connais pas",
+    "fcLetters": "Lettres",
+    "fcWordsAbout": "Environ {n}",
+    "fcStart": "Commencer",
+    "fcHelp": "Un point de départ fixé par ce court test. Il s’ajuste au fil de vos réponses."
   },
   "it": {
     "archive": "Report",
@@ -5172,7 +5196,13 @@
     "lbCheckNow": "Da ripassare",
     "lbCurve": "Curva di apprendimento",
     "lbAnswered": "Risposte",
-    "lbRight": "Corrette"
+    "lbRight": "Corrette",
+    "fcKnow": "La conosco",
+    "fcUnknown": "Non la conosco",
+    "fcLetters": "Lettere",
+    "fcWordsAbout": "Circa {n}",
+    "fcStart": "Inizia",
+    "fcHelp": "Un punto di partenza da questo breve test. Si aggiusta man mano che rispondi."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6176,7 +6206,13 @@
     "lbCheckNow": "Hora de revisar",
     "lbCurve": "Curva de aprendizado",
     "lbAnswered": "Respondidas",
-    "lbRight": "Acertos"
+    "lbRight": "Acertos",
+    "fcKnow": "Conheço",
+    "fcUnknown": "Não conheço",
+    "fcLetters": "Letras",
+    "fcWordsAbout": "Cerca de {n}",
+    "fcStart": "Começar",
+    "fcHelp": "Um ponto de partida com este teste curto. Ele se ajusta conforme você responde."
   },
   "ru": {
     "archive": "Отчёты",
@@ -7366,7 +7402,13 @@
     "lbCheckNow": "Пора проверить",
     "lbCurve": "Кривая обучения",
     "lbAnswered": "Ответов",
-    "lbRight": "Верно"
+    "lbRight": "Верно",
+    "fcKnow": "Знаю",
+    "fcUnknown": "Не знаю",
+    "fcLetters": "Буквы",
+    "fcWordsAbout": "Около {n}",
+    "fcStart": "Начать",
+    "fcHelp": "Отправная точка по короткой проверке. Уточняется по мере ответов."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8366,7 +8408,13 @@
     "lbCheckNow": "Waktunya dicek",
     "lbCurve": "Kurva belajar",
     "lbAnswered": "Dijawab",
-    "lbRight": "Benar"
+    "lbRight": "Benar",
+    "fcKnow": "Tahu",
+    "fcUnknown": "Tidak tahu",
+    "fcLetters": "Huruf",
+    "fcWordsAbout": "Sekitar {n}",
+    "fcStart": "Mulai",
+    "fcHelp": "Titik awal dari tes singkat ini. Makin banyak menjawab, makin tepat."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9359,7 +9407,13 @@
     "lbCheckNow": "حان وقت المراجعة",
     "lbCurve": "منحنى التعلّم",
     "lbAnswered": "الإجابات",
-    "lbRight": "الصحيحة"
+    "lbRight": "الصحيحة",
+    "fcKnow": "أعرفها",
+    "fcUnknown": "لا أعرفها",
+    "fcLetters": "الحروف",
+    "fcWordsAbout": "نحو {n}",
+    "fcStart": "ابدأ",
+    "fcHelp": "نقطة بداية من هذا الاختبار القصير، وتتعدّل كلما أجبت."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10352,7 +10406,13 @@
     "lbCheckNow": "ถึงเวลาทบทวน",
     "lbCurve": "กราฟการเรียนรู้",
     "lbAnswered": "จำนวนที่ตอบ",
-    "lbRight": "อัตราที่ตอบถูก"
+    "lbRight": "อัตราที่ตอบถูก",
+    "fcKnow": "รู้",
+    "fcUnknown": "ไม่รู้",
+    "fcLetters": "ตัวอักษร",
+    "fcWordsAbout": "ประมาณ {n}",
+    "fcStart": "เริ่ม",
+    "fcHelp": "จุดเริ่มต้นจากแบบทดสอบสั้นนี้ ยิ่งตอบยิ่งแม่นขึ้น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11345,6 +11405,12 @@
     "lbCheckNow": "दोहराने का समय",
     "lbCurve": "सीखने का ग्राफ़",
     "lbAnswered": "हल किए",
-    "lbRight": "सही"
+    "lbRight": "सही",
+    "fcKnow": "जानता/जानती हूँ",
+    "fcUnknown": "नहीं जानता/जानती",
+    "fcLetters": "अक्षर",
+    "fcWordsAbout": "लगभग {n}",
+    "fcStart": "शुरू करें",
+    "fcHelp": "इस छोटी जाँच से तय शुरुआती बिंदु। जितने जवाब देंगे, उतना सटीक होगा।"
   }
 }
