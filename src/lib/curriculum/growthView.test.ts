@@ -64,3 +64,10 @@ test("학습 곡선 선(누적 앎): 날마다 늘고, 다시 틀린 것만 빠�
   const events = [ev("w|casa", "ok", 0), ev("w|casa", "ok", 1), ev("w|perro", "ok", 1), ev("w|perro", "ok", 2), ev("w|casa", "miss", 3, "pick")];
   assert.deepEqual([0, 1, 2, 3].map((day) => knownAt(events, T + day * D + 3600, dayOf)), [0, 1, 2, 1]);
 });
+
+test("학습 곡선 선(누적 활용): 대화에서 맞게 쓴 열쇠 수, 줄지 않음 — 퀴즈 맞힘은 안 셈", async () => {
+  const { usedAt } = await import("./growthView.ts");
+  const ev = (k: string, r: LogEvent["r"], day: number, src: LogEvent["src"]): LogEvent => ({ k, src, r, t: T + day * D + 60 });
+  const events = [ev("w|casa", "ok", 0, "quiz"), ev("e|por cierto", "used", 1, "chat"), ev("g|2:0", "used", 2, "call"), ev("e|por cierto", "used", 3, "call"), ev("g|2:0", "miss", 3, "call")];
+  assert.deepEqual([0, 1, 2, 3].map((day) => usedAt(events, T + day * D + 3600)), [0, 1, 2, 2]);
+});

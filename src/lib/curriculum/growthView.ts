@@ -66,6 +66,13 @@ export function knownAt(events: readonly LogEvent[], until: number, dayOf: (t: n
   return progressIn(events.filter((event) => event.t <= until), () => false, dayOf).known.length;
 }
 
+/** 그 시각(초)까지 대화에서 맞게 쓴 열쇠 수(누적, 줄지 않음) — 학습 곡선 선(2026-11-07 밤 사용자 "1번으로" — 표 칸 활용과 같은 말). */
+export function usedAt(events: readonly LogEvent[], until: number): number {
+  const keys = new Set<string>();
+  for (const event of events) if (event.t <= until && event.r === "used" && talked(event) && partOf(event.k)) keys.add(event.k);
+  return keys.size;
+}
+
 /* ───────── 고쳐 씀 — 틀린 문장 → 다른 날 맞게 쓴 문장 ───────── */
 
 export type TalkSource = "call" | "chat" | "people";

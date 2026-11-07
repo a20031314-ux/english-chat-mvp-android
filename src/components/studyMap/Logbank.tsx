@@ -40,7 +40,7 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
-import { knownAt, progressIn } from "@/lib/curriculum/growthView";
+import { progressIn, usedAt } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
@@ -441,13 +441,13 @@ export function Logbank({
     if (chain) return fillAt(chain, fillInput, Math.min(start, nowAt));
     return computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
   }, [chain, fillInput, nowAt, catalog, check, stage, placed, events, callTurns, period.start]);
-  // 학습 곡선 선 = 날마다 그날 끝까지 앎이 된 것 누적(growthView.ts knownAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로", 예전 확인된 실력 %).
+  // 학습 곡선 선 = 날마다 그날 끝까지 활용(대화에서 맞게 쓴 것) 누적(growthView.ts usedAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로" → 표에서 익힘을 빼며 "1번으로").
   const knownDays = useMemo(() => {
     if (!reform) return [] as (number | null)[];
     return periodDays(period, today).map((day) => {
       const end = dayEndMs(day);
       if (end - 86_400_000 > nowAt) return null;
-      return knownAt(ledger, Math.floor(Math.min(end, nowAt) / 1000));
+      return usedAt(ledger, Math.floor(Math.min(end, nowAt) / 1000));
     });
   }, [reform, ledger, period, today, nowAt]);
   const rangeFormat = useMemo(() => {
@@ -1445,8 +1445,8 @@ function LearnedCards({
 
 /**
  * 학습 곡선(2026-11-07 사용자 "Logbank는 학습량 + 채운 %, 학습량은 푼 수"): 아래 막대 = 날마다 푼 수(새로 · 다시 두 색),
- * 위 선 = 그날 끝까지 앎이 된 것 누적(growthView.ts knownAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로", 줄지 않음 — 다시 틀려 힘듦으로 내려간 것만 빠짐).
- * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "새로 n · 다시 m · 지금까지 앎 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
+ * 위 선 = 그날 끝까지 활용 누적(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
+ * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 복습 m · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
 function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string }) {
   const [pick, setPick] = useState<number | null>(null);
@@ -1511,7 +1511,7 @@ function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: re
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
-            {`${ui.growKnownAll} ${known[shown] ?? 0}`}
+            {`${ui.growUsedAll} ${known[shown] ?? 0}`}
           </span>
         </p>
       ) : null}
