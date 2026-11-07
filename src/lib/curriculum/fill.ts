@@ -15,6 +15,10 @@
  * 활용 시작 어림은 이해 어림 ×0.6 한 번(θ와 표시에 둘 다 곱하지 않음). 듣기 단계 띠는 질문 차례가 없으면 시작 어림.
  * 범위 = 1/√(처음 정밀도 + Σ w·정보) — ±5%p 안이면 수렴.
  *
+ * 2026-11-07 바꿈(사용자 "1번 고쳐줘" — 1단계 칸이 답 0개에도 96%): 단계 칸·채운 몫은 θ 곡선이 아니라 그 단계에서 실제로 푼 열쇠의
+ * 맞힌 몫(마지막 답, 고르기는 찍기 몫을 덜고 STAGE_PULL로 반 쪽에 당김)이고, 안 푼 단계는 0. 처음 어림(지금 단계)은 칠하지 않는다.
+ * θ는 세부 칸의 예상(부족 찾기)에만 쓰고 걸음을 THETA_STEP으로 줄였다. 범위 = 푼 단계 표본 흔들림, 안 푼 단계는 위 끝에.
+ *
  * 세부 칸(10절): 칸마다 Σ예상·Σ실제·분산·답 수(30일 반감) → 부족 = 답 8개+ · 예상보다 15%p+ 아래 · z ≥ 1.65.
  * 문장은 이 폰 기록에서만 만든다(학습자 문장은 서버에 안 감 — 여기엔 열쇠·숫자만).
  */
@@ -256,6 +260,10 @@ export const WEAK_GAP = 0.15;
 export const WEAK_Z = 1.65;
 export const CELL_HALF_LIFE_DAYS = 30;
 export const CONVERGED_RANGE = 0.05;
+/** θ 첫 걸음(답 하나, 무게 1) — 답이 쌓일수록 작아진다. */
+export const THETA_STEP = 0.08;
+/** 단계 칸을 반(0.5) 쪽으로 당기는 몫 — 열쇠 이만큼을 반쯤 아는 것으로 보탬(답 6개 다 맞혀도 75%, 30개면 92%). */
+export const STAGE_PULL = 6;
 
 /* ───────── 계산 ───────── */
 
@@ -319,12 +327,11 @@ export function computeFill(input: FillInput): FillResult {
     const items = family === "vocab" ? catalog.vocab : catalog.sent;
     // θ는 이해 어림. 활용 몫(×0.6)은 아래에서 한 번만 곱한다 — θ에도 곱하면 0.36배가 되어 시작 어림이 0%로 보인다.
     let theta = thetaForFill(prior.fill);
-    const range0 = Math.max(CONVERGED_RANGE / 2, prior.range);
-    let precision = 1 / (range0 * range0);
     let weightSum = 0;
     let n = 0;
     const cells = new Map<string, Cell>();
-    const latest = new Map<string, { correct: boolean; free: boolean; d: number }>();
+    // 열쇠마다 마지막 답(단계 칸·채운 몫의 재료 — 같은 열쇠를 여러 번 풀어도 하나로 센다).
+    const latest = new Map<string, { correct: boolean; free: boolean; d: number; g: number }>();
     for (const event of events) {
       if (event.use !== use) continue;
       const item = items.get(event.key);
@@ -334,10 +341,9 @@ export function computeFill(input: FillInput): FillResult {
       const p = knowChance(theta, item.d);
       const expect = g + (1 - g) * p;
       const y = event.correct ? 1 : 0;
-      const k = Math.max(0.01, 0.25 / (1 + weightSum / 8));
+      // θ 걸음(2026-11-07 원인 2): 예전 0.25는 σ 0.1 눈금에서 한 답에 단계 반 칸이 움직여 8문제 중 4개 틀리면 40% → 4%. 작게 시작해 더 작아진다.
+      const k = Math.max(0.01, THETA_STEP / (1 + weightSum / 16));
       theta = Math.min(1.3, Math.max(-0.3, theta + k * w * (y - expect)));
-      const pi = knowChance(theta, item.d, INFO_SIGMA);
-      precision += w * (1 - g) * (1 - g) * pi * (1 - pi) / (INFO_SIGMA * INFO_SIGMA);
       weightSum += w;
       n += 1;
       const decay = Math.pow(0.5, Math.max(0, now - event.at) / (CELL_HALF_LIFE_DAYS * DAY));
@@ -355,31 +361,33 @@ export function computeFill(input: FillInput): FillResult {
       for (const id of item.cells) add(id);
       if (!event.correct && event.miss) add(`miss:${event.miss}`, { e: 0, o: 1 });
       const prev = latest.get(item.key);
-      latest.set(item.key, { correct: event.correct, free: (prev?.free ?? false) || (event.correct && event.source === "free"), d: item.d });
+      latest.set(item.key, { correct: event.correct, free: (prev?.free ?? false) || (event.correct && event.source === "free"), d: item.d, g });
     }
-    // 채운 몫: 어림(θ) + 직접 증거로 고침, 활용은 시켜서 0.6 · 스스로 1.
-    const edges = stageEdges(catalog.stageCounts[family]);
+    // 채운 몫(2026-11-07 원인 1): 단계 칸 = 그 단계에서 실제로 푼 열쇠의 맞힌 몫(고르기는 찍어 맞힐 몫을 덜고, 답이 적으면 반 쪽으로 당김).
+    // 예전엔 θ 곡선 적분이라 처음 어림만으로 1단계가 답 0개에도 96%였다. 안 푼 단계는 0(띠에서는 빈칸), 어림은 칠하지 않는다.
     const counts = catalog.stageCounts[family];
     const total = counts.reduce((a, b) => a + b, 0) || 1;
-    const stageSums = edges.map(([a, b], i) => meanKnow(theta, a, b) * (counts[i] ?? 0));
+    const edges = stageEdges(counts);
     const stageOfD = (d: number) => Math.max(0, edges.findIndex(([, b]) => d < b));
+    const sums = Array(STAGES).fill(0) as number[];
+    const keyN = Array(STAGES).fill(0) as number[];
     let freeShare = 0;
     for (const one of latest.values()) {
-      const s = stageOfD(one.d);
-      const p = knowChance(theta, one.d);
-      const evidence = one.correct ? Math.max(p, 0.95) : Math.min(p, 0.15);
-      stageSums[s] = (stageSums[s] ?? 0) + evidence - p;
-      if (one.free) freeShare += evidence;
+      const s = Math.min(STAGES - 1, stageOfD(one.d));
+      sums[s] += ((one.correct ? 1 : 0) - one.g) / (1 - one.g);
+      keyN[s] += 1;
+      if (one.free) freeShare += 1;
     }
-    const known = stageSums.reduce((a, b) => a + b, 0);
+    const measured = sums.map((sum, i) => (keyN[i] ? clamp01((sum + STAGE_PULL * 0.5) / (keyN[i] + STAGE_PULL)) : 0));
     const credit = use ? PRIOR_SHARE[axis] : 1;
+    const known = measured.reduce((a, value, i) => a + value * (counts[i] ?? 0), 0);
     const fill = clamp01((known * credit + (use ? 0.4 * freeShare : 0)) / total);
-    const half = 1 / Math.sqrt(precision);
-    // 범위는 θ 눈금 → 채움 눈금으로(가운데 기울기 근사).
-    const lowFill = clamp01(meanKnow(theta - half, 0, 1) * credit);
-    // 활용의 위 끝은 모두 스스로 쓴 경우(1배).
-    const highFill = clamp01(meanKnow(theta + half, 0, 1));
-    const stages = stageSums.map((sum, i) => clamp01(((sum ?? 0) * credit) / Math.max(1, counts[i] ?? 0)));
+    // 범위: 푼 단계는 표본 흔들림, 안 푼 단계는 0~다 앎 어디든(위 끝에만 더함).
+    const spread = Math.sqrt(measured.reduce((a, v, i) => a + (keyN[i] ? (v * (1 - v) * (counts[i] ?? 0) ** 2) / (keyN[i] + STAGE_PULL) : 0), 0)) / total;
+    const unmeasured = counts.reduce((a, c, i) => a + (keyN[i] ? 0 : c), 0) / total;
+    const lowFill = clamp01(fill - spread);
+    const highFill = clamp01(fill + spread + unmeasured);
+    const stages = measured.map((value) => clamp01(value * credit));
     const out: FillCell[] = [];
     for (const [id, cell] of cells) {
       const isMiss = id.startsWith("miss:");
@@ -403,7 +411,7 @@ export function computeFill(input: FillInput): FillResult {
       if (have) have.value = stages[s - 1] ?? 0;
       else out.push({ axis, id: `stage:${s}`, value: stages[s - 1] ?? 0, n: 0, gap: 0, state: "unknown" });
     }
-    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, stageN: Array.from({ length: STAGES }, (_, i) => cells.get(`stage:${i + 1}`)?.n ?? 0), cells: sortCells(out) };
+    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, stageN: keyN, cells: sortCells(out) };
   }
 
   axes.talk = talkFill(input.calls, prior.fill * PRIOR_SHARE.talk, prior.range);

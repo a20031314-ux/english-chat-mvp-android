@@ -51,29 +51,39 @@ test("은행 목록(ja 띄어쓰기 없음·es): 단계마다 항목, 세부 칸
   }
 });
 
-test("처음 체크는 글자부터만: 초급·중급·고급은 없음, 글자부터는 0, 활용·듣기·실전 대화도 어림 비율대로", async () => {
-  const catalog = fillCatalog("es", await wordsOf("es"));
+test("처음 체크는 글자부터만, 답이 없으면 어림을 칠하지 않음 — 시작 단계가 높아도 0 (es·ja)", async () => {
   assert.deepEqual([...CHECKS], ["letters"]);
-  const letters = computeFill({ catalog, check: "letters", stage: 1, events: [], calls: [], now: NOW });
-  assert.ok(letters.axes.vocabRead.fill < 0.02, String(letters.axes.vocabRead.fill));
-  assert.equal(letters.startStage, 0);
-  const four = computeFill({ catalog, check: null, stage: 4, events: [], calls: [], now: NOW });
-  const read = four.axes.sentRead.fill;
-  assert.ok(Math.abs(four.axes.talk.fill - read * 0.5) < 0.01, `${four.axes.talk.fill} ${read}`);
-  assert.ok(!four.axes.vocabRead.converged && four.axes.vocabRead.high - four.axes.vocabRead.low > 0.2);
-  assert.equal(four.startStage, 4);
-});
-
-test("체크 없이(1단계 바로 시작): 0에서 시작하지 않고 지금 단계로 어림, 단계가 높으면 더, 0단계만 0(es·ja)", async () => {
   for (const language of ["es", "ja"]) {
     const catalog = fillCatalog(language, await wordsOf(language));
-    const at = (stage: number) => computeFill({ catalog, check: null, stage, events: [], calls: [], now: NOW });
-    const one = at(1);
-    assert.ok(one.axes.vocabRead.fill >= 0.09, `${language} ${one.axes.vocabRead.fill}`);
-    assert.ok(one.axes.talk.fill > 0 && one.axes.sentUse.fill > 0, language);
-    assert.ok(at(3).axes.sentRead.fill > one.axes.sentRead.fill + 0.1, language);
-    assert.ok(!one.axes.vocabRead.converged, language);
-    assert.equal(at(0).axes.vocabRead.fill < 0.02, true, language);
+    const letters = computeFill({ catalog, check: "letters", stage: 1, events: [], calls: [], now: NOW });
+    assert.equal(letters.startStage, 0);
+    const four = computeFill({ catalog, check: null, stage: 4, events: [], calls: [], now: NOW });
+    assert.equal(four.startStage, 4);
+    for (const axis of ["vocabRead", "vocabUse", "sentRead", "sentUse"] as const) {
+      assert.equal(four.axes[axis].fill, 0, `${language} ${axis}`);
+      assert.deepEqual(four.axes[axis].stageN, [0, 0, 0, 0, 0]);
+      assert.ok(!four.axes[axis].converged && four.axes[axis].high > 0.9, `${language} ${axis} 안 푼 단계는 위 끝에`);
+    }
+  }
+});
+
+test("단계 칸 = 실제로 푼 몫(2026-11-07 원인 1): 1단계 8개 다 맞혀도 96%가 아니고, 시작 단계와 상관없음 (es·ja)", async () => {
+  for (const language of ["es", "ja"]) {
+    const catalog = fillCatalog(language, await wordsOf(language));
+    const first = [...catalog.vocab.values()].filter((item) => item.stage === 1 && item.key.startsWith("w|")).slice(0, 8);
+    const events = (rightOf: (i: number) => boolean): FillEvent[] => first.map((item, i) => ({ at: NOW - 1000 + i, key: item.key, correct: rightOf(i), source: "quiz", use: false, choose: true }));
+    const all = computeFill({ catalog, check: null, stage: 4, events: events(() => true), calls: [], now: NOW }).axes.vocabRead;
+    const low = computeFill({ catalog, check: null, stage: 1, events: events(() => true), calls: [], now: NOW }).axes.vocabRead;
+    assert.ok(all.stages[0]! > 0.7 && all.stages[0]! < 0.85, `${language} 8/8 → ${all.stages[0]}`);
+    assert.equal(all.stages[0], low.stages[0], "시작 단계가 단계 칸을 바꾸지 않음");
+    assert.deepEqual(all.stageN, [8, 0, 0, 0, 0]);
+    assert.deepEqual(all.stages.slice(1), [0, 0, 0, 0]);
+    // 반만 맞힘(고르기): 찍어 맞힐 몫을 덜어 절반보다 낮게, 그러나 0으로 무너지지 않음.
+    const half = computeFill({ catalog, check: null, stage: 4, events: events((i) => i % 2 === 0), calls: [], now: NOW }).axes.vocabRead;
+    assert.ok(half.stages[0]! > 0.2 && half.stages[0]! < 0.5, `${language} 4/8 → ${half.stages[0]}`);
+    // 같은 열쇠를 여러 번 맞혀도 열쇠 하나.
+    const again = computeFill({ catalog, check: null, stage: 1, events: [...events(() => true), ...events(() => true).map((one) => ({ ...one, at: one.at + 500 }))], calls: [], now: NOW }).axes.vocabRead;
+    assert.deepEqual(again.stageN, [8, 0, 0, 0, 0]);
   }
 });
 
@@ -92,16 +102,17 @@ function simulate(catalogKeys: { key: string; d: number }[], trueFill: number, n
   return out;
 }
 
-test("수렴: 시작 단계를 높게(4) 잘못 골라도 답이 쌓이면 참 실력(20%) 쪽으로, 범위가 좁아짐", async () => {
+test("수렴: 시작 단계를 높게(4) 잘못 골라도 답이 쌓이면 참 실력(20%) 쪽으로, 범위가 좁아짐 — 활용은 답이 없으면 0", async () => {
   const catalog = fillCatalog("es", await wordsOf("es"));
   const near = [...catalog.vocab.values()].filter((item) => item.d < 0.5).map(({ key, d }) => ({ key, d }));
   const few = computeFill({ catalog, check: null, stage: 4, events: simulate(near, 0.2, 10, false), calls: [], now: NOW });
   const many = computeFill({ catalog, check: null, stage: 4, events: simulate(near, 0.2, 120, false), calls: [], now: NOW });
-  assert.ok(many.axes.vocabRead.fill < few.axes.vocabRead.fill, `${few.axes.vocabRead.fill} → ${many.axes.vocabRead.fill}`);
+  // 시작 단계 어림을 칠하지 않으니 10문제 뒤에도 4단계(높은 어림)로 부풀지 않는다.
+  assert.ok(few.axes.vocabRead.fill < 0.35, `10문제 뒤 ${few.axes.vocabRead.fill}`);
   assert.ok(Math.abs(many.axes.vocabRead.fill - 0.2) < 0.08, `120문제 뒤 ${many.axes.vocabRead.fill}`);
   assert.ok(many.axes.vocabRead.high - many.axes.vocabRead.low < few.axes.vocabRead.high - few.axes.vocabRead.low);
-  // 활용 답이 없으니 활용은 그대로 처음 어림.
-  assert.ok(Math.abs(many.axes.vocabUse.fill - few.axes.vocabUse.fill) < 1e-9);
+  // 활용 답이 없으니 활용은 0(어림을 칠하지 않음).
+  assert.equal(many.axes.vocabUse.fill, 0);
 });
 
 test("세부 칸: 동사만 늘 틀리면 품사 동사가 부족, 답이 적은 칸은 아직 모름", async () => {
