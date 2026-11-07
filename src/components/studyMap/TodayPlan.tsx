@@ -2,7 +2,8 @@
 
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
-import { cardFaces, checkStates, dueKeys } from "@/lib/curriculum/checkState";
+import { cardFaces, checkStates, dayOfSeconds, dueKeys } from "@/lib/curriculum/checkState";
+import { reviewKeys as ledgerReview } from "@/lib/curriculum/todayCards";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { publishUpNext, type UpNext } from "@/lib/curriculum/upNext";
@@ -297,7 +298,8 @@ export function TodayPlan({
   // 빈도 단어 묶음(curriculum/vocabBank.ts — 지금 en·es·ja): 지속 학습의 어휘 분모와 새 낱말.
   // 기준만 고르고 칸을 안 골랐으면: 단계는 내 단계까지 전체(빈 값), 품사·주제는 첫 칸(명사 · 사람).
   const vocabPick: VocabPick | null =
-    keepFocus === "vocab" && settings.vocab && settings.vocab.by !== "all"
+    // 개편엔 ⚙가 없어 예전에 고른 칸이 바꿀 길 없이 남지 않게 쓰지 않음.
+    !reform && keepFocus === "vocab" && settings.vocab && settings.vocab.by !== "all"
       ? { by: settings.vocab.by, value: settings.vocab.value || ({ stage: "", pos: "noun", topic: "people" } as const)[settings.vocab.by] }
       : null;
   // 내가 저장한 낱말(이 학습 언어)은 단계와 상관없이 어휘 퀴즈 맨 앞(2026-10-31 낱말 층위 ⑤).
@@ -721,7 +723,13 @@ export function TodayPlan({
       return made.questions.length ? made : null;
     }
     if (which !== "review") return null;
-    const keys = studyQueue("review", Date.now(), studyWeakest).map((pick) => pick.key);
+    // 개편: 다시 볼 것은 장부·체크 셋에서(오늘 카드와 같은 기록, todayCards.ts reviewKeys) — 예전 복습 기록은 안 씀.
+    const keys = reform
+      ? (() => {
+          const ledger = readLedger(language);
+          return ledgerReview({ events: ledger, states: checkStates(ledger), now: Math.floor(Date.now() / 1000), today: (t) => dayOfSeconds(t) });
+        })()
+      : studyQueue("review", Date.now(), studyWeakest).map((pick) => pick.key);
     void growBank(language, locale, keys.slice(0, 8).map((key) => ({ key, stage })));
     void growBank(language, locale, keys.slice(8, 16).map((key) => ({ key, stage })));
     const old = (rest: readonly string[]) => bundleQuiz(language, rest, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } });
@@ -1272,7 +1280,7 @@ export function TodayPlan({
   };
   const makeFresh = (): QuizBatch | null => {
     if (keepFocus === "vocab" && circleOn && bank && (levelOn ? ranked.length : circleOrder.length)) {
-      const paused = newPaused(circleRef.current, usableKey);
+      const paused = !reform && newPaused(circleRef.current, usableKey);
       const keys = levelOn
         ? paused
           ? []
@@ -1424,11 +1432,13 @@ export function TodayPlan({
       </div>
     </BodyLayer>
   ) : null;
-  const testDue = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: usableKey }));
+  // 개편에서 빼는 예전 것(2026-11-07 사용자 "개편전 기능, 버튼들은 다 찾아서 빼줘"): 📝 단어 시험 · 😴 쉬워요 줄 · 📝 정기 시험 · ⚙ ·
+  // 틀린 낱말이 많을 때 새 낱말 쉬기(예전 퀴즈 기록 quizCircle 기준 — 다시 볼 것은 장부에서 번갈아 나옴). 낱말 수준 어림(vocabLevel)은 답으로 계속 고쳐짐.
+  const testDue = Boolean(!reform && !wrongTab && keepFocus === "vocab" && circleOn && bank && !wordTestQ && wordTestDue(circle, { now: Date.now(), today: day, usable: usableKey }));
   // 틀린 낱말이 많으면 새 낱말을 쉬고 시험부터(circle.ts WRONG_PAUSE) — 탭에는 📝 줄만, "다 했어요"를 띄우지 않는다.
-  const vocabPaused = Boolean(!wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, usableKey));
+  const vocabPaused = Boolean(!reform && !wrongTab && keepFocus === "vocab" && circleOn && bank && newPaused(circle, usableKey));
   // 새 낱말 10개마다 한 줄: 쉬워요 · 적당해요 · 어려워요(눌러도 되고 안 눌러도 됨, 사용자 2026-11-01).
-  const feelOn = Boolean(!wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
+  const feelOn = Boolean(!reform && !wrongTab && keepFocus === "vocab" && levelOn && bank && !vocabPaused && feelDue(level, circle.newSeen ?? 0));
   const keepResetKey = `${language}|${wrongTab ? "review" : keepFocus}|${focusSerial}|${settings.vocab?.by ?? ""}|${settings.vocab?.value ?? ""}`;
   // 시험 탭은 소재가 모여 시험이 생길 때만(2026-11-03). 그 전엔 탭·모인 수·소재 칩을 두지 않는다. 단어 시험은 어휘 탭에 그대로.
   const keepTabs: readonly ("vocab" | "exam" | "review")[] = examReady ? ["vocab", "exam", "review"] : ["vocab", "review"];
@@ -1487,7 +1497,7 @@ export function TodayPlan({
         </div>
         {/* 개편 스위치가 켜지면 단어 사전은 Languagebank 탭으로 옮김(lib/reform.ts). */}
         {!wrongTab && !examTab && !reformOn() ? <DictionaryButton ui={ui} language={language} locale={locale} /> : null}
-        {!wrongTab && !examTab && bank ? settingsIcon : null}
+        {!reform && !wrongTab && !examTab && bank ? settingsIcon : null}
       </div>
       {testDue ? (
         <button
@@ -1521,7 +1531,7 @@ export function TodayPlan({
           <span aria-hidden className="text-slate-400">›</span>
         </button>
       ) : null}
-      {examTab || (reform && examReady) ? examBody : null}
+      {examTab ? examBody : null}
       {examTab ? null : <InlineQuiz
         ui={ui}
         locale={locale}

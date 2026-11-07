@@ -118,3 +118,29 @@ export function parseCards(raw: string | null): TodayCards | null {
     return null;
   }
 }
+
+/**
+ * 개편 Quizbank의 다시 볼 것(2026-11-07 사용자 "데이터상 맞지 않는 것들도"): 오늘 카드와 같은 장부·체크 셋에서 —
+ * 확인할 때 된 앎 → 대화에서 막힌 것 → 적용이 힘듦(오늘 아직 안 푼 것) → 마지막 답이 틀린 처음 봄. 예전 복습 기록(reviewMap·known)은 쓰지 않는다.
+ */
+export function reviewKeys(input: { events: readonly LogEvent[]; states: ReadonlyMap<string, CheckState>; now: number; today: (t: number) => string }): string[] {
+  const { events, states, now } = input;
+  const out: string[] = [];
+  const add = (key: string) => {
+    if (partOf(key) && !out.includes(key)) out.push(key);
+  };
+  for (const key of dueKeys(states, now)) add(key);
+  const card = pickCards({ events, states, now, canCall: false }).find((one) => one.kind === "stuck");
+  for (const key of card?.keys ?? []) add(key);
+  const lastQuiz = new Map<string, LogEvent>();
+  for (const event of events) if (quizLike(event) && (lastQuiz.get(event.k)?.t ?? -1) <= event.t) lastQuiz.set(event.k, event);
+  const today = input.today(now);
+  const byLast = [...states].sort((a, b) => a[1].last - b[1].last);
+  for (const [key, state] of byLast) {
+    if (state.level !== "hard") continue;
+    const last = lastQuiz.get(key);
+    if (!last || input.today(last.t) !== today) add(key);
+  }
+  for (const [key, state] of byLast) if (state.level === "new" && lastQuiz.get(key)?.r === "miss") add(key);
+  return out;
+}

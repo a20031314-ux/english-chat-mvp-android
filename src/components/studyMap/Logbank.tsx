@@ -27,8 +27,8 @@ import type { KnownMap } from "@/lib/curriculum/known";
 import type { CheckResult } from "@/lib/curriculum/checkup";
 import { computeFill, fillCatalog, keysInCell, studyPoint, type Axis, type BankAxis, type FillCell, type FillEvent } from "@/lib/curriculum/fill";
 import { COMPARE_MS, directionView, type DirectionView } from "@/lib/curriculum/directionView";
-import { migrateLedger } from "@/lib/curriculum/logLedger";
-import { callTurnsOf, fillEvents } from "@/lib/curriculum/fillInputs";
+import { LEDGER_EVENT, migrateLedger, readLedger } from "@/lib/curriculum/logLedger";
+import { callTurnsOf, fillEvents, ledgerFillEvents } from "@/lib/curriculum/fillInputs";
 import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
 import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
 import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
@@ -372,10 +372,22 @@ export function Logbank({
     () => null,
   );
   const catalog = useMemo(() => fillCatalog(language, words), [language, words]);
-  const events = useMemo(
-    () => fillEvents({ language, known, quiz, results, items, checkups, segment: (text) => segmentWords(text, language) }),
-    [language, known, quiz, results, items, checkups],
-  );
+  // 개편: 띠·육각형 재료 = 사건 장부(오늘 카드·Quizbank와 같은 기록) + 수업 결과·AI 채팅 서버 기록(fillInputs.ts ledgerFillEvents).
+  const [ledgerTick, setLedgerTick] = useState(0);
+  useEffect(() => {
+    if (!reform) return;
+    const on = () => setLedgerTick((n) => n + 1);
+    window.addEventListener(LEDGER_EVENT, on);
+    return () => window.removeEventListener(LEDGER_EVENT, on);
+  }, [reform]);
+  const events = useMemo(() => {
+    const segment = (text: string) => segmentWords(text, language);
+    if (reform) {
+      void ledgerTick;
+      return ledgerFillEvents({ ledger: readLedger(language), results, items, language, segment });
+    }
+    return fillEvents({ language, known, quiz, results, items, checkups, segment });
+  }, [reform, ledgerTick, language, known, quiz, results, items, checkups]);
   const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
   const [nowAt] = useState(() => Date.now());
   const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
@@ -590,7 +602,7 @@ export function Logbank({
             result={fill}
             before={before}
             onAxis={setOpenAxis}
-            onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
+            onRecord={!reform && checkups?.length ? () => setRecordOpen(true) : undefined}
             recordLabel={ui.skillRecord}
           />
         ) : (
@@ -599,7 +611,7 @@ export function Logbank({
             result={fill}
             before={before}
             onAxis={setOpenAxis}
-            onRecord={checkups?.length ? () => setRecordOpen(true) : undefined}
+            onRecord={!reform && checkups?.length ? () => setRecordOpen(true) : undefined}
             recordLabel={ui.skillRecord}
           />
         )}

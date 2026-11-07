@@ -12,6 +12,7 @@ import { missKindOf, MISS_KINDS, type MissKind } from "./missKind.ts";
 import { dayValue, type QuizDays } from "./quizDays.ts";
 import type { CallDay } from "../roleplay/callDays.ts";
 import type { LogItem } from "../notes/stageParts.ts";
+import type { LogEvent } from "./logLedger.ts";
 
 const DAY = 86_400_000;
 const NOON = DAY / 2;
@@ -105,4 +106,40 @@ export function fillEvents(input: FillSources): FillEvent[] {
 /** 통화 숫자 줄 → 육각형 듣기·실전 대화 재료(차례 셈이 있는 통화만 — 2026-11-02부터). */
 export function callTurnsOf(rows: readonly CallDay[]): CallTurns[] {
   return rows.flatMap((row) => (row.turns ? [{ at: row.at, ...row.turns }] : []));
+}
+
+/**
+ * 개편(lib/reform.ts) Logbank 띠·육각형 재료 = 사건 장부(logbank.v1) — 오늘 카드·체크 셋·Quizbank와 같은 기록(2026-11-07 사용자 "데이터상 맞지 않는 것들도 빼줘").
+ * 예전 재료(quizDays·익힘 기록 known·시험 checkups)는 같은 답이 장부에도 들어가 있어(퀴즈를 옮기고 같이 씀) 섞으면 두 번 센다 — 쓰지 않는다.
+ * 장부에 없는 것만 더한다: 수업 결과(dayLog)·AI 채팅의 서버 기록(통화 몫은 장부 통화 정리가 이미 담음).
+ */
+export function ledgerFillEvents(input: { ledger: readonly LogEvent[]; results: readonly DayResult[]; items: readonly LogItem[]; language: string; segment: (text: string) => string[] }): FillEvent[] {
+  const out: FillEvent[] = [];
+  for (const event of input.ledger) {
+    if (event.r === "look") continue;
+    const at = event.t * 1000;
+    const talk = event.src === "call" || event.src === "people";
+    if (event.r === "used") {
+      out.push({ at, key: event.k, correct: true, source: "free", use: true });
+      continue;
+    }
+    const correct = event.r === "ok";
+    if (talk) {
+      out.push({ at, key: event.k, correct, source: correct ? "free" : "fix", use: true });
+      continue;
+    }
+    const source: FillSource = event.src === "exam" ? "test" : event.src === "script" ? "lesson" : "quiz";
+    const write = event.m === "write";
+    out.push({ at, key: event.k, correct, source, use: write, ...(write ? {} : { choose: true }) });
+  }
+  const rest = fillEvents({
+    language: input.language,
+    known: {},
+    quiz: {},
+    results: input.results,
+    items: input.items.filter((item) => item.where !== "call"),
+    checkups: [],
+    segment: input.segment,
+  });
+  return [...out, ...rest];
 }

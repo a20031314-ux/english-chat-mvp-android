@@ -10,6 +10,8 @@ import { ladderFor } from "@/lib/curriculum/stages/index";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
 import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
+import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
+import { checkStates } from "@/lib/curriculum/checkState";
 
 /**
  * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/drafts/languagebank-2026-11-03.md,
@@ -22,6 +24,8 @@ import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpe
  * - 종류 화면: 줄(단어 = 주제 | 품사, 표현·문법 = 난이도) × 열(난이도), 칸 = 비율·개수, 누르면 아래 묶음.
  * - 묶음: 칩(진하기 = 어림), 낱말 → 사전 낱말 화면, 표현·문법 → 그 수업(openLesson, studyMap/LessonHost).
  * 학습한 단어 표시는 여기 없음(사용자 2026-11-06 — 낱말 화면과 Logbank에만).
+ * 2026-11-07(사용자 "데이터상 맞지 않는 것들도"): 표현·문법은 낱말 어림을 빌리지 않고 체크 셋(사건 장부 — 앎 1 · 적용이 힘듦 ½ · 처음 봄 0)으로.
+ * 예전엔 낱말 경계를 표현·문법에도 씌워 세 종류 %가 늘 같았다(체감 점검 11-07). 낱말만 어림(~).
  */
 type Kind = "word" | "expr" | "gram";
 type Item = { key: string; name: string; lv: number; rank: number; group: string; word?: string };
@@ -29,13 +33,13 @@ type View = { kind: Kind | null; axis: "topic" | "pos"; row: string | null; lv: 
 
 const STARTS = [0, 0, 700, 1500, 2500, 3500, 5000, 7000];
 const tint = (p: number): CSSProperties => ({ background: `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * p)}%, transparent)` });
-const ribbon = (items: readonly Item[], chance: (rank: number) => number): CSSProperties => {
+const ribbon = (items: readonly Item[], chance: (one: Item) => number): CSSProperties => {
   if (!items.length) return { background: "color-mix(in oklab, var(--color-status-learned) 4%, transparent)" };
   const sorted = [...items].sort((a, b) => a.rank - b.rank);
   const steps = Math.min(10, sorted.length);
   const stops = Array.from({ length: steps }, (_, i) => {
     const one = sorted[Math.floor((i * (sorted.length - 1)) / Math.max(1, steps - 1))]!;
-    return `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * chance(one.rank))}%, transparent) ${Math.round((100 * i) / Math.max(1, steps - 1))}%`;
+    return `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * chance(one))}%, transparent) ${Math.round((100 * i) / Math.max(1, steps - 1))}%`;
   });
   return { background: steps > 1 ? `linear-gradient(90deg, ${stops.join(", ")})` : stops[0]!.split(" ").slice(0, -1).join(" ") };
 };
@@ -111,6 +115,21 @@ export function LanguageBank({
     };
   }, [language, stage]);
   const chance = (rank: number) => (level ? knowChance(level, rank) : 0);
+  const [ledgerTick, setLedgerTick] = useState(0);
+  useEffect(() => {
+    const on = () => setLedgerTick((n) => n + 1);
+    window.addEventListener(LEDGER_EVENT, on);
+    return () => window.removeEventListener(LEDGER_EVENT, on);
+  }, []);
+  const states = useMemo(() => {
+    void ledgerTick;
+    return checkStates(readLedger(language));
+  }, [language, ledgerTick]);
+  const valueOf = (one: Item) => {
+    if (one.key.startsWith("w|")) return chance(one.rank);
+    const level = states.get(one.key)?.level;
+    return level === "known" ? 1 : level === "hard" ? 0.5 : 0;
+  };
   const items = useMemo(() => {
     const ladder = ladderFor(language);
     const wordItems: Item[] = (words ?? []).map((one, rank) => ({
@@ -128,8 +147,9 @@ export function LanguageBank({
     );
     return { word: wordItems, expr, gram, posOf };
   }, [words, language, locale]);
-  const avg = (list: readonly Item[]) => (list.length ? list.reduce((sum, one) => sum + chance(one.rank), 0) / list.length : 0);
-  const pct = (list: readonly Item[]) => (list.length ? `${Math.round(100 * avg(list))}%` : "");
+  const avg = (list: readonly Item[]) => (list.length ? list.reduce((sum, one) => sum + valueOf(one), 0) / list.length : 0);
+  // 낱말은 어림이라 "~", 표현·문법은 체크 셋 그대로.
+  const pct = (list: readonly Item[]) => (list.length ? `${list[0]!.key.startsWith("w|") ? "~" : ""}${Math.round(100 * avg(list))}%` : "");
   const kindName: Record<Kind, string> = { word: ui.partVocab, expr: ui.partExpression, gram: ui.partGrammar };
   const levels = (kind: Kind) => (kind === "word" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5]);
   const lvName = (lv: number) => (lv === 6 ? ui.lbExtended : String(lv));
@@ -218,7 +238,7 @@ export function LanguageBank({
                             className="flex min-w-[1.75rem] flex-col gap-1"
                             style={{ flexGrow: part.length, flexBasis: 0 }}
                           >
-                            <span className="block h-9 rounded-lg" style={ribbon(part, chance)} />
+                            <span className="block h-9 rounded-lg" style={ribbon(part, valueOf)} />
                             <span className="text-center text-meta text-slate-500">{lvName(lv)}</span>
                             <span className="text-center text-meta text-slate-400">{pct(part)}</span>
                           </button>
@@ -277,7 +297,7 @@ export function LanguageBank({
                             data-lb-cell
                             onClick={() => setView({ ...view, row: kind === "word" ? row : null, lv })}
                             className={`flex h-10 flex-col items-center justify-center rounded-lg border leading-tight ${on ? "border-ink" : "border-line"}`}
-                            style={ribbon(cell, chance)}
+                            style={ribbon(cell, valueOf)}
                           >
                             <span className="text-caption font-semibold text-ink">{pct(cell)}</span>
                             <span className="text-meta text-slate-400">{cell.length || ""}</span>
@@ -295,7 +315,7 @@ export function LanguageBank({
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {bundle.slice(0, 200).map((one) => (
-                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(chance(one.rank))}>
+                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(valueOf(one))}>
                         {one.name}
                       </button>
                     ))}

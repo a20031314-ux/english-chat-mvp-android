@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { cardFaces, checkStates, dueKeys, stateOf } from "./checkState.ts";
-import { doneOf, pickCards, NEW_DONE } from "./todayCards.ts";
+import { doneOf, pickCards, NEW_DONE, reviewKeys } from "./todayCards.ts";
+import { ledgerFillEvents } from "./fillInputs.ts";
 import type { LogEvent } from "./logLedger.ts";
 
 const DAY = 86400;
@@ -89,4 +90,37 @@ test("카드 가릴 칸: 맞힌 적 있거나 사전에서 찾아본 뒤 안 풀
   assert.equal(face("w|水"), "show");
   assert.equal(face("w|山"), "hide");
   assert.equal(face("w|空"), "hide");
+});
+
+test("개편 다시 볼 것: 확인할 때 된 앎 → 적용이 힘듦(오늘 안 푼 것) → 틀린 처음 봄, 장부만 (ja·es)", () => {
+  const due = "w|食べる";
+  const hardOld = "e|por favor";
+  const hardToday = "g|1:0";
+  const missed = "w|tamaño";
+  const fine = "w|casa";
+  const now = T0 + 5 * DAY;
+  const events = [
+    ev(due, "ok", T0, { m: "write" }), ev(due, "ok", T0 + DAY, { m: "write" }), // 앎, 확인 날 = T0+2일
+    ev(hardOld, "ok", T0 + 3 * DAY, { m: "write" }),
+    ev(hardToday, "ok", now - 60, { m: "write" }),
+    ev(missed, "miss", now - 120, { m: "pick" }),
+    ev(fine, "ok", now - 100, { m: "pick" }),
+  ];
+  const keys = reviewKeys({ events, states: checkStates(events, utcDay), now, today: utcDay });
+  assert.deepEqual(keys, [due, hardOld, missed]);
+});
+
+test("개편 띠 재료 = 장부: 쓰기는 활용·고르기는 이해·통화에서 씀은 스스로, 찾아봄은 뺌 (th·it)", () => {
+  const events: LogEvent[] = [
+    ev("w|กิน", "ok", T0, { m: "write" }),
+    ev("w|casa", "miss", T0, { m: "pick" }),
+    { k: "e|grazie mille", src: "call", r: "used", t: T0 },
+    { k: "w|กิน", src: "dict", r: "look", t: T0 },
+  ];
+  const out = ledgerFillEvents({ ledger: events, results: [], items: [], language: "th", segment: (text) => [text] });
+  assert.deepEqual(
+    out.map((one) => [one.key, one.correct, one.use, one.source, one.choose ?? false]),
+    [["w|กิน", true, true, "quiz", false], ["w|casa", false, false, "quiz", true], ["e|grazie mille", true, true, "free", false]],
+  );
+  assert.equal(out[0]!.at, T0 * 1000);
 });
