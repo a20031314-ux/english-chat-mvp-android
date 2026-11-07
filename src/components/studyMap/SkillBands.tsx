@@ -70,7 +70,7 @@ export function SkillBands({
                 key={axis}
                 type="button"
                 data-band-row={axis}
-                aria-label={`${name} ${row.pct ?? "—"}`}
+                aria-label={`${name} ${row.pct ?? "─"}`}
                 onClick={() => onAxis(axis)}
                 className="grid grid-cols-[6.5rem_1fr_3.25rem] items-center gap-2 rounded-lg px-1 py-1 text-start hover:bg-white/5"
               >

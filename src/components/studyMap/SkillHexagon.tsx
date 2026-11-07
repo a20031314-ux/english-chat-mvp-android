@@ -3,7 +3,8 @@
 import { bankTone } from "@/components/studyMap/bankTone";
 import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { AXES, STAGES, type Axis, type AxisFill, type FillCell, type FillResult } from "@/lib/curriculum/fill";
+import { AXES, type Axis, type AxisFill, type FillCell, type FillResult } from "@/lib/curriculum/fill";
+import { axisGain, axisShown, axisWeak, bandCells, bandPct } from "@/lib/curriculum/bandView";
 
 /** Logbank 칸 색(하늘) — 위 칸 이름 버튼과 같게(2026-11-03). */
 const LOG = bankTone("log");
@@ -12,6 +13,7 @@ const LOG = bankTone("log");
  * Logbank 맨 위 언어능력 육각형(2026-11-02 사용자 그림 "언어능력 지도" — 꼭짓점을 누르면 그 변수의 게이지, 빈 곳을 누르면 부족한 것·공부할 것·추천,
  * hub/drafts/fill-gauge-2026-11-02.md 9~11절). 값은 curriculum/fill.ts computeFill. 진한 면 = 지금, 흐린 선 = 고른 기간이 시작할 때.
  * 수렴 전 꼭짓점은 "~n%"와 축 위 범위 띠, 부족한 세부 칸이 있는 꼭짓점은 주황 점. 설명 글 없음(RULES 4) — 이름·숫자·아이콘만.
+ * 숫자·점·▲는 띠(SkillBands)와 같은 규칙(curriculum/bandView.ts, 2026-11-07): 답 8개 미만인 꼭짓점은 ─, 면은 가운데, 빈 점.
  */
 
 export function axisName(ui: UICopy, axis: Axis): string {
@@ -25,16 +27,11 @@ export function axisName(ui: UICopy, axis: Axis): string {
   }[axis];
 }
 
-export const pct = (axis: AxisFill) => `${axis.converged ? "" : "~"}${Math.round(axis.fill * 100)}%`;
+/** 꼭짓점 숫자 — 띠와 같은 규칙(답 8개 미만이면 ─). */
+export const pct = (axis: AxisFill) => bandPct(axis) ?? "─";
 
-/** 꼭짓점이 약한가: 부족한 세부 칸이 있거나 다른 꼭짓점 평균보다 15%p 넘게 낮음. */
-export function weakAxis(result: FillResult, axis: Axis): boolean {
-  const one = result.axes[axis];
-  if (one.cells.some((cell) => cell.state === "weak")) return true;
-  const others = AXES.filter((other) => other !== axis).map((other) => result.axes[other].fill);
-  const mean = others.reduce((a, b) => a + b, 0) / others.length;
-  return one.converged && one.fill < mean - 0.15;
-}
+/** 육각형 면에 찍을 값 — 숫자가 안 보이는 꼭짓점은 가운데(어림을 그림으로도 안 보임). */
+const drawn = (axis: AxisFill) => Math.max(0.02, axisShown(axis) ? axis.fill : 0);
 
 /** 긴 꼭짓점 이름(영어·스페인어 등 "Sentence understanding")은 가운데 가까운 띄어쓰기에서 두 줄로 — 그림 옆으로 잘리지 않게. */
 export function labelLines(name: string, max = 14): string[] {
@@ -72,8 +69,8 @@ export function SkillHexagon({
   onRecord?: () => void;
   recordLabel?: string;
 }) {
-  const now = AXES.map((axis, i) => point(i, Math.max(0.02, result.axes[axis].fill)));
-  const then = before ? AXES.map((axis, i) => point(i, Math.max(0.02, before.axes[axis].fill))) : null;
+  const now = AXES.map((axis, i) => point(i, drawn(result.axes[axis])));
+  const then = before ? AXES.map((axis, i) => point(i, drawn(before.axes[axis]))) : null;
   const path = (list: [number, number][]) => list.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ") + " Z";
   return (
     <figure data-skill-hexagon className="m-0 flex justify-center">
@@ -92,15 +89,16 @@ export function SkillHexagon({
           const one = result.axes[axis];
           const [lx, ly] = point(i, one.low);
           const [hx, hy] = point(i, one.high);
-          return one.converged ? null : <line key={`r-${axis}`} x1={lx} y1={ly} x2={hx} y2={hy} className="stroke-info" strokeWidth="6" strokeLinecap="round" opacity="0.25" />;
+          return one.converged || !axisShown(one) ? null : <line key={`r-${axis}`} x1={lx} y1={ly} x2={hx} y2={hy} className="stroke-info" strokeWidth="6" strokeLinecap="round" opacity="0.25" />;
         })}
         {AXES.map((axis, i) => {
           const one = result.axes[axis];
           const [x, y] = now[i]!;
           const [tx, ty] = point(i, 1.24);
-          const weak = weakAxis(result, axis);
+          const weak = axisWeak(result, axis);
+          const shown = axisShown(one);
           const anchor = Math.abs(tx - CX) < 8 ? "middle" : tx > CX ? "start" : "end";
-          const delta = before ? Math.round((one.fill - before.axes[axis].fill) * 100) : 0;
+          const delta = axisGain(one, before?.axes[axis]);
           return (
             <g
               key={axis}
@@ -114,7 +112,7 @@ export function SkillHexagon({
               }}
               className="cursor-pointer outline-none"
             >
-              <circle cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : LOG.fill} />
+              <circle data-skill-dot={shown ? "measured" : "none"} cx={x} cy={y} r={weak ? 7 : 5.5} className={weak ? "fill-warn" : shown ? LOG.fill : `fill-none ${LOG.stroke}`} strokeWidth={shown ? undefined : 1.5} />
               <text x={tx} y={ty - 6} textAnchor={anchor} className="fill-ink text-caption font-semibold">
                 {labelLines(axisName(ui, axis)).map((line, n, all) => (
                   <tspan key={n} x={tx} dy={n === 0 ? -(all.length - 1) * 15 : 15}>{line}</tspan>
@@ -266,16 +264,18 @@ export function AxisDetail({
     <div data-skill-detail={axis} className="flex flex-col gap-3">
       <div className="flex items-baseline gap-2">
         <span className="text-title font-semibold tabular-nums text-ink">{pct(fill)}</span>
-        {fill.converged ? null : <span className="text-meta tabular-nums text-slate-400">{`${Math.round(fill.low * 100)}–${Math.round(fill.high * 100)}%`}</span>}
+        {fill.converged || !axisShown(fill) ? null : <span className="text-meta tabular-nums text-slate-400">{`${Math.round(fill.low * 100)}–${Math.round(fill.high * 100)}%`}</span>}
       </div>
-      {/* 게이지: 단계 칸 다섯(듣기는 단계 띠, 실전 대화는 그 단계 통화의 막힘없음). */}
+      {/* 게이지: 단계 칸 다섯(듣기는 단계 띠, 실전 대화는 그 단계 통화의 막힘없음) — 띠와 같은 칸(잰 것 없는 단계는 빈 테두리, 적으면 옅게). */}
       <div data-skill-gauge className="grid grid-cols-5 gap-1">
-        {Array.from({ length: STAGES }, (_, i) => (
-          <div key={i} className="flex flex-col items-center gap-1">
-            <div className="relative h-16 w-full overflow-hidden rounded-lg bg-white/10">
-              <div className="absolute inset-x-0 bottom-0 bg-info/70" style={{ height: `${Math.round((fill.stages[i] ?? 0) * 100)}%` }} />
+        {bandCells(fill).map((cell) => (
+          <div key={cell.stage} className="flex flex-col items-center gap-1">
+            <div data-gauge-cell={cell.state} className={`relative h-16 w-full overflow-hidden rounded-lg ${cell.state === "none" ? "border border-dashed border-line" : "bg-white/10"}`}>
+              {cell.state === "none" ? null : (
+                <div className={`absolute inset-x-0 bottom-0 bg-info/70 ${cell.state === "thin" ? "opacity-40" : ""}`} style={{ height: `${Math.round(cell.value * 100)}%` }} />
+              )}
             </div>
-            <span className="text-meta tabular-nums text-slate-400">{i + 1}</span>
+            <span className="text-meta tabular-nums text-slate-400">{cell.stage}</span>
           </div>
         ))}
       </div>
@@ -325,8 +325,11 @@ export function AxisDetail({
                     <span dir="auto" className="truncate text-note text-ink">{cellName(ui, cell.id, grammarName)}</span>
                     {lack ? <span className="truncate text-meta text-slate-400">{lack}</span> : null}
                   </span>
-                  {counted ? null : bar(cell.value, weak)}
-                  <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">{counted ? cell.n : cell.state === "unknown" && !staged ? "?" : `${Math.round(cell.value * 100)}%`}</span>
+                  {counted ? null : bar(staged && cell.n <= 0 ? 0 : cell.value, weak)}
+                  <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">
+                    {/* 단계 칸도 게이지·띠처럼 잰 것이 없으면 ─(어림 % 안 보임, 2026-11-07). */}
+                    {counted ? cell.n : staged && cell.n <= 0 ? "─" : cell.state === "unknown" && !staged ? "?" : `${Math.round(cell.value * 100)}%`}
+                  </span>
                 </button>
               </li>
             );

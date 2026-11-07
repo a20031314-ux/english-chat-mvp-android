@@ -8,6 +8,10 @@
  * - 줄 끝 %: 답(차례)이 8 미만이면 숫자 대신 null(화면은 ─). 어림 폭이 아직 넓으면 "~"(육각형과 같음).
  * - 고른 기간이 시작할 때보다 오른 만큼(▲n, 1%p 이상만).
  * 설계 hub/drafts/logbank-2026-11-06.md 4절 ②.
+ *
+ * 숫자 하나의 규칙(2026-11-07 점검 "띠는 ─인데 육각형은 5%", 사용자 "띠, 육각형의 수치부터 맞춰줘"):
+ * 띠·육각형·꼭짓점 세부·2주 비교가 모두 여기 axisShown·bandPct·axisWeak·axisGain만 쓴다.
+ * 답 8개 미만인 꼭짓점은 어림(priorFill)만 있는 것이라 숫자·▲·약함 점·나아진 점 어디에도 안 올린다.
  */
 import { AXES, STAGES, WEAK_MIN_N, type Axis, type AxisFill, type FillResult } from "./fill.ts";
 
@@ -27,22 +31,40 @@ export function bandCells(axis: AxisFill): BandCell[] {
   });
 }
 
+/** 그 꼭짓점을 숫자로 보여 줄 만큼 답했나. */
+export function axisShown(axis: AxisFill): boolean {
+  return axis.n >= WEAK_MIN_N;
+}
+
 export function bandPct(axis: AxisFill): string | null {
-  if (axis.n < WEAK_MIN_N) return null;
+  if (!axisShown(axis)) return null;
   return `${axis.converged ? "" : "~"}${Math.round(axis.fill * 100)}%`;
 }
 
-/** 육각형의 주황 점과 같은 기준: 수렴한 꼭짓점이 여섯 평균보다 15%p 넘게 낮음. */
-function weakAxis(result: FillResult, axis: Axis): boolean {
+/**
+ * 약한 꼭짓점(띠의 주황 점 = 육각형의 주황 점): 숫자가 보이는 꼭짓점 중, 부족한 세부 칸이 있거나
+ * 수렴한 채 숫자가 보이는 다른 꼭짓점 평균보다 15%p 넘게 낮음.
+ */
+export function axisWeak(result: FillResult, axis: Axis): boolean {
   const one = result.axes[axis];
-  const mean = AXES.reduce((sum, a) => sum + result.axes[a].fill, 0) / AXES.length;
+  if (!axisShown(one)) return false;
+  if (one.cells.some((cell) => cell.state === "weak")) return true;
+  const others = AXES.filter((other) => other !== axis && axisShown(result.axes[other])).map((other) => result.axes[other].fill);
+  if (!others.length) return false;
+  const mean = others.reduce((a, b) => a + b, 0) / others.length;
   return one.converged && one.fill < mean - 0.15;
+}
+
+/** 기간 처음보다 오른 %p — 두 때 모두 숫자가 보일 때만(어림 6% → 잰 17% 같은 가짜 오름 없음). */
+export function axisGain(now: AxisFill, before: AxisFill | null | undefined): number {
+  if (!before || !axisShown(now) || !axisShown(before)) return 0;
+  const gain = Math.round((now.fill - before.fill) * 100);
+  return gain > 0 ? gain : 0;
 }
 
 export function bandRows(result: FillResult, before: FillResult | null = null): BandRow[] {
   return AXES.map((axis) => {
     const one = result.axes[axis];
-    const gain = before && one.n >= WEAK_MIN_N ? Math.round((one.fill - before.axes[axis].fill) * 100) : 0;
-    return { axis, cells: bandCells(one), pct: bandPct(one), gain: gain > 0 ? gain : 0, weak: weakAxis(result, axis) };
+    return { axis, cells: bandCells(one), pct: bandPct(one), gain: axisGain(one, before?.axes[axis]), weak: axisWeak(result, axis) };
   });
 }

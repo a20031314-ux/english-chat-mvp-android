@@ -2,6 +2,7 @@
  * Logbank가 화면에 올리는 비교(2026-11-04). 목록은 없고, 지난 2주보다 오른 눈금과
  * 예상보다 아래인 칸만. 설명과 다음 하나는 이 둘로 만든다. 문장·초·틀린 낱말은 없다.
  */
+import { axisShown } from "./bandView.ts";
 import { AXES, BANK_AXES, keysInCell, type Axis, type BankAxis, type FillCatalog, type FillCell, type FillEvent, type FillResult } from "./fill.ts";
 
 export const COMPARE_MS = 14 * 86_400_000;
@@ -48,7 +49,9 @@ export function studyMix(events: readonly FillEvent[], catalog: FillCatalog, cel
 }
 
 export function directionView(now: FillResult, earlier: FillResult): DirectionView {
-  const gains = AXES.map((axis) => ({ axis, before: earlier.axes[axis].fill, now: now.axes[axis].fill }))
+  // 숫자가 보이는 꼭짓점끼리만(띠·육각형과 같은 규칙, bandView axisShown).
+  const gains = AXES.filter((axis) => axisShown(now.axes[axis]) && axisShown(earlier.axes[axis]))
+    .map((axis) => ({ axis, before: earlier.axes[axis].fill, now: now.axes[axis].fill }))
     .filter((row) => row.now - row.before >= GAIN_MIN)
     .sort((a, b) => b.now - b.before - (a.now - a.before))
     .slice(0, SHOW);

@@ -51,3 +51,11 @@ test("틀린 낱말 대부분이 그 칸이면 개수를 센다. 듣기 칸은 �
   assert.deepEqual(studyMix(events, catalog, verb, 0), { missed: 2, total: 2 });
   assert.equal(studyMix(events, catalog, { ...verb, axis: "listen", id: "band:1" }, 0), null);
 });
+
+test("나아진 점은 두 때 모두 답이 8개 넘는 꼭짓점만(띠·육각형 숫자와 같은 규칙)", () => {
+  const earlier = result({ vocabUse: 0.06, listen: 0.4 });
+  const now = result({ vocabUse: 0.17, listen: 0.5 });
+  earlier.axes.vocabUse.n = 2;
+  const view = directionView(now, earlier);
+  assert.deepEqual(view.gains.map((row) => row.axis), ["listen"]);
+});
