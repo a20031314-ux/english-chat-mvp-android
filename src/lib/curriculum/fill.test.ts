@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
+  CHECKS,
   computeFill,
   fillCatalog,
   keysInCell,
@@ -50,14 +51,17 @@ test("은행 목록(ja 띄어쓰기 없음·es): 단계마다 항목, 세부 칸
   }
 });
 
-test("처음 체크만: 이해는 체크 어림, 활용 0.6배, 듣기·실전 대화 0.5배, 범위가 넓어 수렴 아님", async () => {
+test("처음 체크는 글자부터만: 초급·중급·고급은 없음, 글자부터는 0, 활용·듣기·실전 대화도 어림 비율대로", async () => {
   const catalog = fillCatalog("es", await wordsOf("es"));
-  const result = computeFill({ catalog, check: "advanced", stage: 1, events: [], calls: [], now: NOW });
-  assert.ok(Math.abs(result.axes.vocabRead.fill - 0.67) < 0.02, String(result.axes.vocabRead.fill));
-  assert.ok(Math.abs(result.axes.sentUse.fill - 0.67 * 0.6) < 0.05, String(result.axes.sentUse.fill));
-  assert.ok(Math.abs(result.axes.talk.fill - 0.335) < 0.01);
-  assert.ok(!result.axes.vocabRead.converged && result.axes.vocabRead.high - result.axes.vocabRead.low > 0.2);
-  assert.equal(result.startStage, 4);
+  assert.deepEqual([...CHECKS], ["letters"]);
+  const letters = computeFill({ catalog, check: "letters", stage: 1, events: [], calls: [], now: NOW });
+  assert.ok(letters.axes.vocabRead.fill < 0.02, String(letters.axes.vocabRead.fill));
+  assert.equal(letters.startStage, 0);
+  const four = computeFill({ catalog, check: null, stage: 4, events: [], calls: [], now: NOW });
+  const read = four.axes.sentRead.fill;
+  assert.ok(Math.abs(four.axes.talk.fill - read * 0.5) < 0.01, `${four.axes.talk.fill} ${read}`);
+  assert.ok(!four.axes.vocabRead.converged && four.axes.vocabRead.high - four.axes.vocabRead.low > 0.2);
+  assert.equal(four.startStage, 4);
 });
 
 test("체크 없이(1단계 바로 시작): 0에서 시작하지 않고 지금 단계로 어림, 단계가 높으면 더, 0단계만 0(es·ja)", async () => {
@@ -88,11 +92,11 @@ function simulate(catalogKeys: { key: string; d: number }[], trueFill: number, n
   return out;
 }
 
-test("수렴: 체크를 고급으로 잘못 골라도 답이 쌓이면 참 실력(20%) 쪽으로, 범위가 좁아짐", async () => {
+test("수렴: 시작 단계를 높게(4) 잘못 골라도 답이 쌓이면 참 실력(20%) 쪽으로, 범위가 좁아짐", async () => {
   const catalog = fillCatalog("es", await wordsOf("es"));
   const near = [...catalog.vocab.values()].filter((item) => item.d < 0.5).map(({ key, d }) => ({ key, d }));
-  const few = computeFill({ catalog, check: "advanced", stage: 1, events: simulate(near, 0.2, 10, false), calls: [], now: NOW });
-  const many = computeFill({ catalog, check: "advanced", stage: 1, events: simulate(near, 0.2, 120, false), calls: [], now: NOW });
+  const few = computeFill({ catalog, check: null, stage: 4, events: simulate(near, 0.2, 10, false), calls: [], now: NOW });
+  const many = computeFill({ catalog, check: null, stage: 4, events: simulate(near, 0.2, 120, false), calls: [], now: NOW });
   assert.ok(many.axes.vocabRead.fill < few.axes.vocabRead.fill, `${few.axes.vocabRead.fill} → ${many.axes.vocabRead.fill}`);
   assert.ok(Math.abs(many.axes.vocabRead.fill - 0.2) < 0.08, `120문제 뒤 ${many.axes.vocabRead.fill}`);
   assert.ok(many.axes.vocabRead.high - many.axes.vocabRead.low < few.axes.vocabRead.high - few.axes.vocabRead.low);
@@ -109,7 +113,7 @@ test("세부 칸: 동사만 늘 틀리면 품사 동사가 부족, 답이 적은
     ...nouns.map((item, i) => ({ at: NOW - DAY + i, key: item.key, correct: true, source: "quiz" as const, use: true })),
     ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true, miss: "form" as const })),
   ];
-  const result = computeFill({ catalog, check: "mid", stage: 2, events, calls: [], now: NOW });
+  const result = computeFill({ catalog, check: null, stage: 2, events, calls: [], now: NOW });
   const cells = result.axes.vocabUse.cells;
   assert.equal(cells.find((cell) => cell.id === "pos:verb")?.state, "weak");
   assert.notEqual(cells.find((cell) => cell.id === "pos:noun")?.state, "weak");
@@ -187,7 +191,7 @@ test("학습 방향: 부족한 칸 열쇠·아직 모름 칸 열쇠, 채우기 �
     ...nouns.map((item, i) => ({ at: NOW - DAY + i, key: item.key, correct: true, source: "quiz" as const, use: true })),
     ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true })),
   ];
-  const result = computeFill({ catalog, check: "mid", stage: 2, events, calls: [], now: NOW });
+  const result = computeFill({ catalog, check: null, stage: 2, events, calls: [], now: NOW });
   const focus = fillDirection(result, catalog, events, 5, NOW);
   // 1단계 사람에겐 1단계 소재만.
   const low = fillDirection(result, catalog, events, 1, NOW);

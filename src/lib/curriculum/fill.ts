@@ -1,5 +1,5 @@
 /**
- * 채우기 — 언어능력 육각형의 값(2026-11-02 사용자 "처음엔 초보·중급·고급 체크로 '67% 부근'에서 시작, 학습하며 조정해 실제 실력과 수렴,
+ * 채우기 — 언어능력 육각형의 값(2026-11-02 사용자 "처음엔 초보·중급·고급 체크로 '67% 부근'에서 시작(체크는 2026-11-07에 없앰 — 글자부터만), 학습하며 조정해 실제 실력과 수렴,
  * 이후 약점 파악·학습 방향", 설계 hub/drafts/fill-gauge-2026-11-02.md). 순수 모듈 — 모델 호출 없음.
  *
  * 꼭짓점 여섯:
@@ -36,16 +36,18 @@ const DAY = 86_400_000;
 
 /* ───────── 처음 체크 ───────── */
 
-export const CHECKS = ["letters", "beginner", "mid", "advanced"] as const;
+export const CHECKS = ["letters"] as const;
 export type Check = (typeof CHECKS)[number];
 
-/** 체크 → 시작 어림(이해 꼭짓점 몫)·범위·시작 단계. 활용은 ×0.6, 듣기·실전 대화는 ×0.5(설계 9절). */
+/**
+ * 처음 체크 → 시작 어림. 초급·중급·고급 고르기는 없앰(2026-11-07 사용자 "처음 초급, 중급, 고급선택은 삭제") — 스스로 고른 수준이
+ * 1단계 칸을 답 0개에도 96%로 칠했다. 남은 것은 글자부터(0단계)뿐, 그 밖은 지금 단계 어림(priorFill). 첫 측정(placement-2026-11-06.md)이 대신한다.
+ */
 export const CHECK_PRIOR: Record<Check, { fill: number; range: number; stage: number }> = {
   letters: { fill: 0, range: 0.05, stage: 0 },
-  beginner: { fill: 0.1, range: 0.15, stage: 1 },
-  mid: { fill: 0.4, range: 0.2, stage: 2 },
-  advanced: { fill: 0.67, range: 0.25, stage: 4 },
 };
+/** 체크가 없을 때 가장 낮은 시작 어림·범위(예전 초급 값). */
+export const BASE_PRIOR = { fill: 0.1, range: 0.2 } as const;
 export const PRIOR_SHARE: Record<Axis, number> = { vocabRead: 1, sentRead: 1, vocabUse: 0.6, sentUse: 0.6, listen: 0.5, talk: 0.5 };
 
 /* ───────── 은행 목록(분모) ───────── */
@@ -283,7 +285,7 @@ export function priorFill(check: Check | null, stage: number, catalog: FillCatal
   const at = Math.min(STAGES, stage);
   const below = counts.slice(0, at - 1).reduce((a, b) => a + b, 0);
   const here = (counts[at - 1] ?? 0) / 2;
-  return { fill: Math.max(CHECK_PRIOR.beginner.fill, (below + here) / total), range: Math.max(CHECK_PRIOR.beginner.range, 0.2) };
+  return { fill: Math.max(BASE_PRIOR.fill, (below + here) / total), range: BASE_PRIOR.range };
 }
 
 function cellState(cell: Cell): CellState {

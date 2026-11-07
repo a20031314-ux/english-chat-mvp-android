@@ -672,7 +672,9 @@ function StageStart({
           <span aria-hidden className="text-slate-400 rtl:rotate-180">›</span>
         </button>
       ) : null}
-      <StagePicker
+      {/* 개편(lib/reform.ts): 대화 예시로 1~5단계를 스스로 고르지 않는다(2026-11-07 사용자 요청) — 1단계에서 시작,
+          수준은 첫 측정(hub/drafts/placement-2026-11-06.md)이 생기기 전까지 퀴즈 답으로만 맞춰짐. 글자부터(0단계)는 남김. */}
+      {reformOn() ? null : <StagePicker
         ui={ui}
         stages={stages}
         chosen={stageOk ? chosenStage : null}
@@ -680,11 +682,11 @@ function StageStart({
           setFirstPick(true);
           setStage(id);
         }}
-        disabled={saving} script={{ targetLanguage, locale, isPremium }} />
+        disabled={saving} script={{ targetLanguage, locale, isPremium }} />}
       <button
         type="button"
         disabled={!stageOk || saving}
-        onClick={() => void start()}
+        onClick={() => void start(reformOn() ? firstStage : chosenStage)}
         className="tb-btn rounded-xl px-4 py-3 text-note font-semibold disabled:opacity-40"
       >
         {ui.stageBegin}

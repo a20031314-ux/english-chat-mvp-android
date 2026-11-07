@@ -6,7 +6,7 @@
  *
  * 참 실력의 사람은 fill.ts와 다른 흐림(0.1)과 실수 5%·안다고 찍기로 답한다 — 모델이 자기 가정만 맞히지 않게.
  */
-import { computeFill, fillCatalog, thetaForFill, CHECKS, type Check, type FillEvent } from "../src/lib/curriculum/fill.ts";
+import { computeFill, fillCatalog, thetaForFill, type FillEvent } from "../src/lib/curriculum/fill.ts";
 import { loadBank } from "../src/lib/curriculum/vocabBank.ts";
 
 const language = process.argv[2] ?? "es";
@@ -38,10 +38,11 @@ function pickNear(rand: () => number, center: number): (typeof items)[number] {
   return items[a]!;
 }
 
-type Row = { trueFill: number; check: Check; at: number[]; err: number[]; covered: number[] };
+type Row = { trueFill: number; check: number; at: number[]; err: number[]; covered: number[] };
 const rows: Row[] = [];
 for (const trueFill of TRUE_FILLS) {
-  for (const check of CHECKS.filter((one) => one !== "letters")) {
+  // 초급·중급·고급 체크는 2026-11-07에 없앰 — 시작 단계(1·2·4) 어림으로 본다.
+  for (const check of [1, 2, 4]) {
     const err = CHECKPOINTS.map(() => 0);
     const covered = CHECKPOINTS.map(() => 0);
     const reached: number[] = [];
@@ -49,7 +50,7 @@ for (const trueFill of TRUE_FILLS) {
       const rand = rng(seed + Math.round(trueFill * 1000));
       const theta = thetaForFill(trueFill, 0.1);
       const events: FillEvent[] = [];
-      let estimate = computeFill({ catalog, check, stage: 1, events, calls: [], now: NOW }).axes.vocabRead.fill;
+      let estimate = computeFill({ catalog, check: null, stage: check, events, calls: [], now: NOW }).axes.vocabRead.fill;
       let hit = -1;
       for (let i = 1; i <= CHECKPOINTS.at(-1)!; i += 1) {
         const item = pickNear(rand, estimate);
@@ -59,7 +60,7 @@ for (const trueFill of TRUE_FILLS) {
         const correct = (knows && !slip) || (!knows && choose && rand() < 1 / 3);
         events.push({ at: NOW - (200 - i) * 60_000, key: item.key, correct, source: "quiz", use: false, choose });
         if (i % 5 === 0 || CHECKPOINTS.includes(i)) {
-          const axis = computeFill({ catalog, check, stage: 1, events, calls: [], now: NOW }).axes.vocabRead;
+          const axis = computeFill({ catalog, check: null, stage: check, events, calls: [], now: NOW }).axes.vocabRead;
           estimate = axis.fill;
           if (hit < 0 && Math.abs(axis.fill - trueFill) <= 0.05) hit = i;
           const at = CHECKPOINTS.indexOf(i);
@@ -77,7 +78,7 @@ for (const trueFill of TRUE_FILLS) {
 }
 
 console.log(`채우기 시뮬레이션 — ${language}, 어휘 이해, 씨앗 ${seeds}개`);
-console.log(`참 실력 | 체크 | ±5%p 닿은 문제 수(가운데 · 90%) | 평균 오차 ${CHECKPOINTS.join("/")}문제 | 범위가 참값을 덮음`);
+console.log(`참 실력 | 시작 단계 | ±5%p 닿은 문제 수(가운데 · 90%) | 평균 오차 ${CHECKPOINTS.join("/")}문제 | 범위가 참값을 덮음`);
 for (const row of rows) {
   const fmt = (n: number) => (Number.isFinite(n) ? String(n) : ">160");
   console.log(`${Math.round(row.trueFill * 100)}% | ${row.check} | ${fmt(row.at[0]!)} · ${fmt(row.at[1]!)} | ${row.err.map((e) => (e * 100).toFixed(1)).join(" / ")} | ${row.covered.map((c) => Math.round(c * 100) + "%").join(" / ")}`);

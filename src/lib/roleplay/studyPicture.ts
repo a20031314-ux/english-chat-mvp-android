@@ -31,7 +31,7 @@ export async function loadStudyPicture(language: string, now = Date.now()): Prom
     }
   }
   const check = readFillCheck(language);
-  const stage = check ? CHECK_PRIOR[check].stage : 1;
+  const stage = check ? CHECK_PRIOR[check].stage : 1; // 체크는 글자부터(0)만
   const catalog = fillCatalog(language, words);
   const events = fillEvents({
     language,
