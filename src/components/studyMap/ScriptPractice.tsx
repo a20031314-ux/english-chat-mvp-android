@@ -366,3 +366,88 @@ export function LettersPlan({ ui, targetLanguage, locale, isPremium, onDone }: {
     </section>
   );
 }
+
+/**
+ * Languagebank의 글자·소리 칸(개편, 2026-11-07 사용자 "0단계 … 사전 중 하나로 편입"): 개관 줄 — 이름 · 묶음 수 · 지난 묶음/전체 + 묶음마다 칸(지난 것 채움).
+ */
+export function LettersRow({ ui, targetLanguage, locale, isPremium, onOpen }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean; onOpen: () => void }) {
+  const [data] = useScript(targetLanguage, locale, isPremium);
+  if (!data?.course) return null;
+  const passed = new Set(data.passed);
+  const groups = data.course.groups;
+  const done = groups.filter((group) => passed.has(group.id)).length;
+  return (
+    <section data-lb-kind="letters" className="rounded-2xl border border-line bg-surface p-3">
+      <button type="button" onClick={onOpen} className="flex w-full items-baseline gap-2 text-start">
+        <span className="text-note font-semibold text-status-learned">{ui.notebookScript}</span>
+        <span className="text-meta text-slate-500">{groups.length.toLocaleString()}</span>
+        <span className="flex-1" />
+        <span className="text-title font-semibold tabular-nums text-ink">
+          {done}/{groups.length}
+        </span>
+        <span aria-hidden className="text-slate-500 rtl:rotate-180">›</span>
+      </button>
+      <div className="mt-2 flex gap-0.5" aria-hidden>
+        {groups.map((group) => (
+          <span key={group.id} className={`block h-3 flex-1 rounded-full ${passed.has(group.id) ? "bg-status-learned" : "bg-white/10"}`} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/**
+ * 글자·소리 칸 안: 모든 묶음을 칩으로(지난 묶음 ✓, 다음 묶음은 테두리) — 누르면 그 묶음 연습(ScriptSheet).
+ * 0단계(글자부터)에서 다 지나면 "1단계 ›"(onDone, 예전 LettersPlan과 같음).
+ */
+export function LettersBank({ ui, targetLanguage, locale, isPremium, onDone }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean; onDone?: () => void }) {
+  const [data, setData] = useScript(targetLanguage, locale, isPremium);
+  const [open, setOpen] = useState<string | null>(null);
+  if (!data?.course || !data.progress) return <p className="py-6 text-center text-meta text-slate-500">…</p>;
+  const passed = new Set(data.passed);
+  const next = data.course.groups.find((group) => !passed.has(group.id))?.id ?? null;
+  return (
+    <section data-letters-bank className="flex flex-col gap-2">
+      <p className="text-caption text-slate-400">{data.course.title}</p>
+      <div className="grid grid-cols-2 gap-1.5">
+        {data.course.groups.map((group) => {
+          const isPassed = passed.has(group.id);
+          return (
+            <button
+              key={group.id}
+              type="button"
+              data-letters-group={group.id}
+              data-passed={isPassed ? "1" : undefined}
+              onClick={() => setOpen(group.id)}
+              className={`flex min-w-0 flex-col rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${group.id === next ? "border-status-learned" : "border-line"}`}
+            >
+              <span className="flex items-center gap-1.5">
+                <span className="min-w-0 flex-1 truncate text-note text-ink">{group.title}</span>
+                {isPassed ? <span aria-hidden className="text-caption text-status-learned">✓</span> : null}
+              </span>
+              <span dir="auto" className="truncate text-caption text-slate-400">
+                {group.items.map((item) => item.char).join(" ")}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      {onDone && data.progress.finished ? (
+        <button type="button" onClick={onDone} className="mt-1 w-full rounded-xl bg-status-learned py-2.5 text-note font-semibold text-black">
+          {ui.stageNumber.replace("{n}", "1")} ›
+        </button>
+      ) : null}
+      {open ? (
+        <ScriptSheet
+          ui={ui}
+          targetLanguage={targetLanguage}
+          isPremium={isPremium}
+          data={data}
+          initialGroup={open}
+          onPassed={(next2) => setData(next2)}
+          onClose={() => setOpen(null)}
+        />
+      ) : null}
+    </section>
+  );
+}

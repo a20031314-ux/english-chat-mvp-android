@@ -32,7 +32,8 @@ import { useCheckups } from "@/lib/curriculum/useCheckups";
 import { skippedIds } from "@/lib/curriculum/known";
 import { frontierStage, useStudyMode, type StudyMode } from "@/lib/curriculum/studyMode";
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
-import { LettersPlan, ScriptEntry } from "@/components/studyMap/ScriptPractice";
+import { LettersBank, LettersPlan, LettersRow, ScriptEntry } from "@/components/studyMap/ScriptPractice";
+import { LETTERS_OPEN_EVENT, openLettersBank } from "@/lib/curriculum/lettersOpen";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { StageReview } from "@/components/studyMap/StageReview";
 import { STAGE_DONE_SHARE } from "@/lib/curriculum/stages";
@@ -281,7 +282,13 @@ export function NotebookSection({
   useEffect(() => {
     const on = () => setTab("keep");
     window.addEventListener(QUIZ_FOCUS_EVENT, on);
-    return () => window.removeEventListener(QUIZ_FOCUS_EVENT, on);
+    // 글자·소리 칸(Languagebank 안)을 여는 신호 — 오늘 카드(0단계)·통화 숙제.
+    const letters = () => setTab("lang");
+    window.addEventListener(LETTERS_OPEN_EVENT, letters);
+    return () => {
+      window.removeEventListener(QUIZ_FOCUS_EVENT, on);
+      window.removeEventListener(LETTERS_OPEN_EVENT, letters);
+    };
   }, []);
   useEffect(
     () =>
@@ -325,7 +332,11 @@ export function NotebookSection({
         setJump({ stage: frame.stage, id: frame.id, at: Date.now() });
       }
       // 통화 끝 숙제 "글자·소리" → 단계 칸을 펴면 오늘 할 것 자리에 0단계 글자 묶음.
-      if (takeLetters(language)) openLayer("stage");
+      // 개편: 글자·소리는 Languagebank의 한 칸 — 그 칸을 바로 연다(2026-11-07, 예전엔 사라진 Stagebank로 가서 Languagebank 첫 화면만 떴음).
+      if (takeLetters(language)) {
+        if (reform && needsLetters(language)) openLettersBank(language);
+        else openLayer("stage");
+      }
       const handed = takeLocate(language);
       if (!handed) return;
       setQuestion(handed);
@@ -341,7 +352,7 @@ export function NotebookSection({
       setJump({ stage: item.stage, id: item.id, at: Date.now() });
     }
     return onLocate(take);
-  }, [loaded, language]);
+  }, [loaded, language, reform]);
 
   useEffect(() => {
     let cancelled = false;
@@ -588,7 +599,22 @@ export function NotebookSection({
           ui={ui}
           language={language}
           reform={reform}
-          languagebank={<LanguageBank ui={ui} language={language} locale={locale} stage={book.stage} />}
+          languagebank={
+            <LanguageBank
+              ui={ui}
+              language={language}
+              locale={locale}
+              stage={book.stage}
+              letters={
+                needsLetters(language)
+                  ? {
+                      row: (open) => <LettersRow ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onOpen={open} />,
+                      body: <LettersBank ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={lettersOn ? () => setLetters(false) : undefined} />,
+                    }
+                  : undefined
+              }
+            />
+          }
           tab={tab}
           onOpen={openLayer}
           today={

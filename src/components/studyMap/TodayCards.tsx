@@ -10,6 +10,9 @@ import { checkStates } from "@/lib/curriculum/checkState";
 import { cardsForDay, doneOf, parseCards, pickCards, type TodayCard, type TodayCards as Saved } from "@/lib/curriculum/todayCards";
 import { focusQuiz } from "@/lib/curriculum/quizFocus";
 import { localDay } from "@/lib/curriculum/resume";
+import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
+import { openLettersBank } from "@/lib/curriculum/lettersOpen";
+import { useScript } from "@/components/studyMap/ScriptPractice";
 
 /**
  * Logbank 맨 위 "오늘" 카드(개편 3단계, 스위치 lib/reform.ts — 설계 hub/drafts/no-today-2026-11-05.md 8절 B안).
@@ -42,7 +45,71 @@ function buildView(language: string, canCall: boolean): { today: Saved; done: bo
   return { today, done: today.cards.map((card) => doneOf(card, events, today.at)) };
 }
 
-export function TodayCards({ ui, language }: { ui: UICopy; language: string }) {
+/**
+ * 0단계(글자부터, curriculum/lettersFirst.ts)면 카드 하나 — 오늘의 글자 묶음 → Languagebank 글자·소리 칸(2026-11-07 점검: 준호 카드 ▶ Quizbank가
+ * Languagebank 첫 화면으로 떨어짐 — 0단계엔 Quizbank 칸이 없음). 그날 처음 고른 묶음을 지나면 ✓(todayLetters.v1).
+ */
+export function TodayCards({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
+  const [lettersFlag] = useLettersFirst(language);
+  if (lettersFlag && needsLetters(language)) return <LettersToday ui={ui} language={language} locale={locale} />;
+  return <QuizToday ui={ui} language={language} />;
+}
+
+const LETTERS_KEY = "todayLetters.v1";
+
+function lettersTarget(language: string, next: string | null): string | null {
+  const day = localDay();
+  try {
+    const kept = JSON.parse(localStorage.getItem(`${LETTERS_KEY}.${language}`) ?? "null") as { day: string; group: string } | null;
+    if (kept?.day === day && kept.group) return kept.group;
+    if (next) localStorage.setItem(`${LETTERS_KEY}.${language}`, JSON.stringify({ day, group: next }));
+  } catch {
+    // 이번에만.
+  }
+  return next;
+}
+
+function LettersToday({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
+  const tone = useBankTone();
+  const { isPremium } = usePremium();
+  const [data] = useScript(language, locale, isPremium);
+  const groups = data?.course?.groups ?? [];
+  const passed = new Set(data?.passed ?? []);
+  const next = groups.find((group) => !passed.has(group.id))?.id ?? null;
+  // 그날 처음 고른 묶음을 하루 그대로(이 폰).
+  const target = data?.course ? lettersTarget(language, next) : null;
+  const group = groups.find((one) => one.id === target);
+  if (!data?.course || !group) return null;
+  const done = passed.has(group.id);
+  return (
+    <section data-today-cards className="flex flex-col gap-2 rounded-xl border border-line p-3">
+      <div className="flex items-center justify-between gap-2">
+        <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
+        {done ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
+      </div>
+      <button
+        type="button"
+        data-today-card="letters"
+        data-done={done ? "1" : undefined}
+        onClick={() => openLettersBank(language)}
+        className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-start ${done ? "border-line opacity-60" : tone.soft}`}
+      >
+        <span aria-hidden className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-caption ${done ? "border-good text-good" : "border-line text-slate-400"}`}>
+          {done ? "✓" : ""}
+        </span>
+        <span className="flex min-w-0 flex-1 flex-col">
+          <span className="text-chat font-semibold text-ink">{ui.notebookScript}</span>
+          <span dir="auto" className="truncate text-caption text-slate-400">
+            {group.title} · {group.items.map((item) => item.char).join(" ")}
+          </span>
+        </span>
+        <span className="shrink-0 text-caption text-slate-300">▶ {ui.languagebankTitle}</span>
+      </button>
+    </section>
+  );
+}
+
+function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
   const tone = useBankTone();
   const { isPremium } = usePremium();
   const [tick, setTick] = useState(0);

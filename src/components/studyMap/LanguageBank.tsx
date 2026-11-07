@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
 import { DictionaryBody } from "@/components/studyMap/Dictionary";
 import { loadBank, posGroup, stageCuts, stageOfRank, type BankWord } from "@/lib/curriculum/vocabBank";
@@ -9,6 +9,7 @@ import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
 import { ladderFor } from "@/lib/curriculum/stages/index";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
+import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
 
 /**
  * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/drafts/languagebank-2026-11-03.md,
@@ -63,10 +64,39 @@ function placed(items: Omit<Item, "rank">[]): Item[] {
   });
 }
 
-export function LanguageBank({ ui, language, locale, stage }: { ui: UICopy; language: string; locale: string; stage: number }) {
+/**
+ * letters: 글자가 다른 학습 언어의 글자·소리 칸(2026-11-07 사용자 "0단계 … 사전 중 하나로 편입") — row는 개관 줄(누르면 열기), body는 칸 안.
+ * 오늘 카드·통화 숙제가 openLettersBank로 열면(curriculum/lettersOpen.ts) 이 칸이 바로 열린다.
+ */
+export function LanguageBank({
+  ui,
+  language,
+  locale,
+  stage,
+  letters,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  stage: number;
+  letters?: { row: (open: () => void) => ReactNode; body: ReactNode };
+}) {
+  const [word, setWord] = useState<string | null>(null);
+  const [lettersView, setLettersView] = useState(() => Boolean(letters) && takeLettersOpen(language));
+  useEffect(() => {
+    if (!letters) return;
+    const on = (event: Event) => {
+      const detail = (event as CustomEvent<{ language?: string }>).detail;
+      if (detail?.language && detail.language !== language) return;
+      takeLettersOpen(language);
+      setLettersView(true);
+      setWord(null);
+    };
+    window.addEventListener(LETTERS_OPEN_EVENT, on);
+    return () => window.removeEventListener(LETTERS_OPEN_EVENT, on);
+  }, [letters, language]);
   const [words, setWords] = useState<readonly BankWord[] | null>(null);
   const [view, setView] = useState<View>({ kind: null, axis: "topic", row: null, lv: null });
-  const [word, setWord] = useState<string | null>(null);
   const [help, setHelp] = useState(false);
   const [level, setLevel] = useState<Level | null>(null);
   useEffect(() => {
@@ -118,8 +148,13 @@ export function LanguageBank({ ui, language, locale, stage }: { ui: UICopy; lang
       ?
     </button>
   );
-  const crumbs: { label: string; go: () => void }[] = [{ label: ui.vocabByAll, go: () => setView({ kind: null, axis: "topic", row: null, lv: null }) }];
-  if (view.kind) crumbs.push({ label: kindName[view.kind], go: () => setView({ ...view, row: null, lv: null }) });
+  const toAll = () => {
+    setLettersView(false);
+    setView({ kind: null, axis: "topic", row: null, lv: null });
+  };
+  const crumbs: { label: string; go: () => void }[] = [{ label: ui.vocabByAll, go: toAll }];
+  if (lettersView && letters) crumbs.push({ label: ui.notebookScript, go: () => undefined });
+  else if (view.kind) crumbs.push({ label: kindName[view.kind], go: () => setView({ ...view, row: null, lv: null }) });
   const kind = view.kind;
   const bundle = kind && (view.row || view.lv) ? items[kind].filter((one) => (!view.row || rowOf(kind, one) === view.row) && (!view.lv || one.lv === view.lv)).sort((a, b) => a.rank - b.rank) : null;
   if (kind && bundle) {
@@ -154,8 +189,10 @@ export function LanguageBank({ ui, language, locale, stage }: { ui: UICopy; lang
               </button>
             </div>
           ) : null}
-          {!words || !level ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
-          {words && level && !kind
+          {lettersView && letters ? <div data-lb-letters>{letters.body}</div> : null}
+          {!lettersView && letters && !kind ? letters.row(() => setLettersView(true)) : null}
+          {lettersView ? null : !words || !level ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
+          {!lettersView && words && level && !kind
             ? (["word", "expr", "gram"] as const).map((k) => {
                 const all = items[k];
                 if (!all.length) return null;
@@ -192,7 +229,7 @@ export function LanguageBank({ ui, language, locale, stage }: { ui: UICopy; lang
                 );
               })
             : null}
-          {words && level && kind ? (
+          {!lettersView && words && level && kind ? (
             <>
               {kind === "word" ? (
                 <div className="flex gap-1.5">

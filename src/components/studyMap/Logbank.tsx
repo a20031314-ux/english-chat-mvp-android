@@ -554,7 +554,7 @@ export function Logbank({
   };
   return (
     <div data-logbank className="flex flex-col gap-3">
-      {reform ? <TodayCards ui={ui} language={language} /> : null}
+      {reform ? <TodayCards ui={ui} language={language} locale={locale} /> : null}
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
