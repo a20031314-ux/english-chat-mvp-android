@@ -238,3 +238,6 @@
 - 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:95 — 옮기기 실패한 묶음은 KV에 안 남아 요청마다 모델을 다시 부르고, meterRequest는 요청당 1번이라 원가가 적게 잡힘 (실패 묶음 짧은 TTL 표시 또는 묶음마다 meter).
 - 2026-11-06 watch → dev: [my] src/lib/curriculum/quiz.ts:1340 — 카드 뜻 가림 오답의 "빈도 순위 ±200"이 GAP_SOURCES 들어간 차례라 단계가 먼 낱말도 가깝게 잡혀 한눈에 지워지는 오답이 남음 (QuizSource에 빈도 순위를 실어 그 값으로 비교, 순위 없는 u|·검색 낱말은 near에서 빼기).
 - 2026-11-06 watch → dev: [my] hub/QUIZ.md:70 — 0-4가 c31928d 카드 퀴즈 규칙(가까운 순위 오답·앞 문제 보기 뺌·예문 돌림·쓴 말 낱말 가림·개편 단어 시험·방금 묶음 열쇠 뺌)으로 안 고쳐짐 (0-4 갱신, RULES 11 ⑥).
+- 2026-11-07 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:254 — 첫 측정 ③ 오르기가 표현·문법 문제를 불러오기 전(null)이나 그 앱 언어에 문법 문제가 없으면 바로 멈추고 결과 장에 묻지 않은 "문법 1단계"를 보임, startStageOf(firstCheck.ts:340)는 문법만 봐 표현 결과가 시작 단계에 안 들어감 (불러올 때까지 기다리고, 묻지 않은 갈래는 ─, 시작 단계는 잰 갈래로)
+- 2026-11-07 watch → dev: [ai] src/components/CallHost.tsx:70 — My "써 보기"(practice)도 수업 통화로 열려 RoleplayScreen:293 lead가 연습 표현 없이 육각형 부족 칸으로 첫 마디를 만듦 (practice가 있으면 lead 건너뛰거나 practice.goal을 실어 보내기)
+- 2026-11-07 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:164 — 글자 문제 700ms 타이머를 안 치워 마지막 글자 고른 뒤 바로 건너뛰면 닫힌 뒤에도 firstCheck.v1 저장 (타이머 ref, unmount·건너뛰기 때 clearTimeout)
