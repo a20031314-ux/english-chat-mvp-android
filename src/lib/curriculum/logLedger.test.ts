@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { addEvents, eventsFromQuizDays, KEEP_SECONDS, parseLedger, type LogEvent } from "./logLedger.ts";
+import { addEvents, eventsFromQuizDays, KEEP_SECONDS, migrateLedger, parseLedger, type LogEvent } from "./logLedger.ts";
 
 const NOW = 1_800_000_000;
 
@@ -44,4 +44,29 @@ test("장부: 예전 퀴즈 날 기록 → 고르기·쓰기, 맞음·틀림으�
   );
   // 시각은 그날 정오(지역 시간).
   assert.equal(new Date(events[0]!.t * 1000).getHours(), 12);
+});
+
+test("옮기기: 이미 장부에 있는 같은 날·열쇠·결과는 다시 넣지 않고, 옮겼으면 알림 (ja·es)", () => {
+  const store = new Map<string, string>();
+  const g = globalThis as unknown as { localStorage?: unknown; dispatchEvent?: unknown };
+  const saved = { localStorage: g.localStorage, dispatchEvent: g.dispatchEvent };
+  let told = 0;
+  g.localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
+  g.dispatchEvent = () => {
+    told += 1;
+    return true;
+  };
+  try {
+    const noon = Math.floor(new Date(2026, 10, 6, 15).getTime() / 1000);
+    store.set("logbank.v1.ja", JSON.stringify({ v: 1, rows: [["w|食べる", "quiz", "ok", "write", noon]] }));
+    migrateLedger("ja", () => ({ "2026-11-06": { okt: ["w|食べる"], okc: ["w|casa"] } }));
+    const rows = (JSON.parse(store.get("logbank.v1.ja")!) as { rows: unknown[][] }).rows;
+    assert.deepEqual(rows.map((row) => row[0]).sort(), ["w|casa", "w|食べる"]);
+    assert.equal(told, 1);
+    migrateLedger("ja", () => ({ "2026-11-06": { okt: ["w|食べる"] } }));
+    assert.equal(told, 1);
+  } finally {
+    g.localStorage = saved.localStorage;
+    g.dispatchEvent = saved.dispatchEvent;
+  }
 });

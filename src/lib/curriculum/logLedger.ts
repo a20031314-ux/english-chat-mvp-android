@@ -119,13 +119,24 @@ export function eventsFromQuizDays(days: Record<string, QuizDayLike>): LogEvent[
   return out;
 }
 
+/** 옮길 때 같은 사건인지: 열쇠·결과·방식·그 폰 날짜(예전 기록은 시각이 그날 정오뿐). */
+function sameKey(k: string, r: string, m: string, t: number): string {
+  const d = new Date(t * 1000);
+  return `${k}|${r}|${m}|${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
 /** 예전 퀴즈 기록을 한 번 옮긴다(이미 옮겼으면 아무것도 안 함). Logbank를 처음 열 때 부른다. */
 export function migrateLedger(language: string, readQuizDays: (language: string) => Record<string, QuizDayLike>): void {
   try {
     const stored = parseLedger(globalThis.localStorage?.getItem(storageKey(language)) ?? null);
     if (stored.migrated) return;
-    const next = addEvents({ ...stored, migrated: true }, eventsFromQuizDays(readQuizDays(language)), nowSeconds());
+    // 업데이트 뒤 Logbank를 열기 전에 푼 퀴즈는 이미 장부에도 있다(noteQuizDay가 같이 씀) — 같은 날·열쇠·결과·방식은 건너뜀(2026-11-06 변경 감시).
+    const have = new Set(stored.rows.filter((row) => row[1] === "quiz").map((row) => sameKey(row[0], row[2], row[3], row[4])));
+    const fresh = eventsFromQuizDays(readQuizDays(language)).filter((event) => !have.has(sameKey(event.k, event.r, event.m ?? "", event.t)));
+    const next = addEvents({ ...stored, migrated: true }, fresh, nowSeconds());
     globalThis.localStorage?.setItem(storageKey(language), JSON.stringify(next));
+    // 장부만 읽는 개편 화면이 옮긴 기록으로 다시 그리게(2026-11-07 변경 감시 — 첫 열기에 띠·%·다시 볼 것이 비어 보임).
+    if (fresh.length) globalThis.dispatchEvent?.(new CustomEvent(LEDGER_EVENT, { detail: { language } }));
   } catch {
     // 다음에 다시.
   }
