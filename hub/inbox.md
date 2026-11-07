@@ -241,3 +241,6 @@
 - 2026-11-07 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:254 — 첫 측정 ③ 오르기가 표현·문법 문제를 불러오기 전(null)이나 그 앱 언어에 문법 문제가 없으면 바로 멈추고 결과 장에 묻지 않은 "문법 1단계"를 보임, startStageOf(firstCheck.ts:340)는 문법만 봐 표현 결과가 시작 단계에 안 들어감 (불러올 때까지 기다리고, 묻지 않은 갈래는 ─, 시작 단계는 잰 갈래로)
 - 2026-11-07 watch → dev: [ai] src/components/CallHost.tsx:70 — My "써 보기"(practice)도 수업 통화로 열려 RoleplayScreen:293 lead가 연습 표현 없이 육각형 부족 칸으로 첫 마디를 만듦 (practice가 있으면 lead 건너뛰거나 practice.goal을 실어 보내기)
 - 2026-11-07 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:164 — 글자 문제 700ms 타이머를 안 치워 마지막 글자 고른 뒤 바로 건너뛰면 닫힌 뒤에도 firstCheck.v1 저장 (타이머 ref, unmount·건너뛰기 때 clearTimeout)
+- 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1523 — 수업 통화 침묵 판정이 `request.silent ?? 1`이라 silent를 안 보내는 첫 마디 요청(RoleplayScreen:985 studyOpen)도 첫 침묵 → 첫 줄 앞에 "제 말 들렸어요?", 954줄 프롬프트에도 "they said nothing" (두 곳 모두 silent 값이 있을 때만, studyOpen이면 건너뛰기) — major, 서버만
+- 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — "들렸어요?"를 붙일 때 say를 `{ text }`로 새로 만들어 그 줄 해석(say.translation)이 버려짐 (기존 say를 펼쳐 text만 바꾸기)
+- 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — 앱 언어 한 마디를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음(예: ar 앱·es 학습, 소리는 못 들어 봄) (앱 언어 한 마디는 따로 내기)
