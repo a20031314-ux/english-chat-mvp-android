@@ -381,12 +381,15 @@ export function computeFill(input: FillInput): FillResult {
     const measured = sums.map((sum, i) => (keyN[i] ? clamp01((sum + STAGE_PULL * 0.5) / (keyN[i] + STAGE_PULL)) : 0));
     const credit = use ? PRIOR_SHARE[axis] : 1;
     const known = measured.reduce((a, value, i) => a + value * (counts[i] ?? 0), 0);
-    const fill = clamp01((known * credit + (use ? 0.4 * freeShare : 0)) / total);
+    const estimate = clamp01((known * credit + (use ? 0.4 * freeShare : 0)) / total);
     // 범위: 푼 단계는 표본 흔들림, 안 푼 단계는 0~다 앎 어디든(위 끝에만 더함).
     const spread = Math.sqrt(measured.reduce((a, v, i) => a + (keyN[i] ? (v * (1 - v) * (counts[i] ?? 0) ** 2) / (keyN[i] + STAGE_PULL) : 0), 0)) / total;
     const unmeasured = counts.reduce((a, c, i) => a + (keyN[i] ? 0 : c), 0) / total;
-    const lowFill = clamp01(fill - spread);
-    const highFill = clamp01(fill + spread + unmeasured);
+    // 보이는 숫자 = 확인된 실력(어림의 아래 끝, 2026-11-07 사용자 "숫자는 맞춰줘") — 띠·육각형·2주 비교·학습 곡선이 같은 값.
+    // 답이 쌓이면 흔들림이 줄어 오르고, 실력이 늘면 또 오르고, 많이 틀릴 때만 내려간다.
+    const fill = clamp01(estimate - spread);
+    const lowFill = fill;
+    const highFill = clamp01(estimate + spread + unmeasured);
     const stages = measured.map((value) => clamp01(value * credit));
     const out: FillCell[] = [];
     for (const [id, cell] of cells) {

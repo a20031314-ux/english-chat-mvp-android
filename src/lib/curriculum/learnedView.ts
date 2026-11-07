@@ -83,11 +83,11 @@ export function amountOf(events: readonly LogEvent[], days: readonly string[], d
 }
 
 /**
- * 확인된 실력(통합 한 숫자): 낱말·문장 이해·활용 네 꼭짓점의 어림 범위 아래 끝 평균. 답이 쌓이면 범위가 좁아져 오르고,
+ * 확인된 실력(통합 한 숫자): 낱말·문장 이해·활용 네 꼭짓점 %(= 어림 범위 아래 끝, fill.ts — 띠·육각형과 같은 값)의 평균. 답이 쌓이면 범위가 좁아져 오르고,
  * 실력이 늘면 또 오르고, 많이 틀릴 때만 내려간다. 듣기·실전 대화는 처음 어림이라 넣지 않는다.
  */
 export function sureOf(result: FillResult): number {
-  return BANK_AXES.reduce((sum, axis) => sum + result.axes[axis].low, 0) / BANK_AXES.length;
+  return BANK_AXES.reduce((sum, axis) => sum + result.axes[axis].fill, 0) / BANK_AXES.length;
 }
 
 /** 그 폰 날짜 YYYY-MM-DD가 끝나는 때(다음 날 0시, ms). */
