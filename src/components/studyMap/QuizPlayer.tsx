@@ -1531,7 +1531,7 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
  * 카드 한 장(개편 cardQuiz, 2026-11-06 사용자 "카드를 그대로 두고 예문에 빈칸, 단어만 가리고"): 낱말 · 뜻 · 예문 · 예문 뜻.
  * 가린 칸은 null(＿＿＿) — 뜻 가림이면 예문 뜻도 답한 뒤에(뜻이 새지 않게), 낱말 가림이면 예문에도 빈칸.
  */
-function CardFace({ word, meaning, line, lineGloss, speak }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null }) {
+export function CardFace({ word, meaning, line, lineGloss, speak }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null }) {
   const tone = useBankTone();
   const hidden = <span className={`font-semibold ${tone.blank}`}>＿＿＿</span>;
   return (

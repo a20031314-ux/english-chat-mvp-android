@@ -987,7 +987,10 @@
     "lbWhyTry": "まだ言ったことのない表現 {n}",
     "lbWhyNew": "初めて見る {n}",
     "lbCheckIn": "{n}日後に確認",
-    "lbCheckNow": "確認の時期"
+    "lbCheckNow": "確認の時期",
+    "lbCurve": "学習曲線",
+    "lbAnswered": "解いた数",
+    "lbRight": "正答率"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1977,7 +1980,10 @@
     "lbWhyTry": "还没说过的表达 {n}",
     "lbWhyNew": "还没见过 {n}",
     "lbCheckIn": "{n}天后复习",
-    "lbCheckNow": "该复习了"
+    "lbCheckNow": "该复习了",
+    "lbCurve": "学习曲线",
+    "lbAnswered": "答题数",
+    "lbRight": "正确率"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2970,7 +2976,10 @@
     "lbWhyTry": "Cách nói chưa từng dùng {n}",
     "lbWhyNew": "Chưa gặp {n}",
     "lbCheckIn": "Ôn sau {n} ngày",
-    "lbCheckNow": "Đến lúc ôn"
+    "lbCheckNow": "Đến lúc ôn",
+    "lbCurve": "Đường cong học tập",
+    "lbAnswered": "Số câu đã làm",
+    "lbRight": "Tỉ lệ đúng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3968,7 +3977,10 @@
     "lbWhyTry": "Expressions jamais dites {n}",
     "lbWhyNew": "Pas encore vu {n}",
     "lbCheckIn": "À revoir dans {n} j",
-    "lbCheckNow": "À revoir"
+    "lbCheckNow": "À revoir",
+    "lbCurve": "Courbe d’apprentissage",
+    "lbAnswered": "Réponses",
+    "lbRight": "Bonnes réponses"
   },
   "it": {
     "archive": "Report",
@@ -5157,7 +5169,10 @@
     "lbWhyTry": "Espressioni mai dette {n}",
     "lbWhyNew": "Non ancora visto {n}",
     "lbCheckIn": "Ripasso tra {n} giorni",
-    "lbCheckNow": "Da ripassare"
+    "lbCheckNow": "Da ripassare",
+    "lbCurve": "Curva di apprendimento",
+    "lbAnswered": "Risposte",
+    "lbRight": "Corrette"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6158,7 +6173,10 @@
     "lbWhyTry": "Expressões ainda não ditas {n}",
     "lbWhyNew": "Ainda não visto {n}",
     "lbCheckIn": "Revisar em {n} dias",
-    "lbCheckNow": "Hora de revisar"
+    "lbCheckNow": "Hora de revisar",
+    "lbCurve": "Curva de aprendizado",
+    "lbAnswered": "Respondidas",
+    "lbRight": "Acertos"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7345,7 +7363,10 @@
     "lbWhyTry": "Выражения, которые ещё не говорили {n}",
     "lbWhyNew": "Ещё не видели {n}",
     "lbCheckIn": "Проверка через {n} дн.",
-    "lbCheckNow": "Пора проверить"
+    "lbCheckNow": "Пора проверить",
+    "lbCurve": "Кривая обучения",
+    "lbAnswered": "Ответов",
+    "lbRight": "Верно"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8342,7 +8363,10 @@
     "lbWhyTry": "Ungkapan yang belum pernah diucapkan {n}",
     "lbWhyNew": "Belum pernah dilihat {n}",
     "lbCheckIn": "Dicek {n} hari lagi",
-    "lbCheckNow": "Waktunya dicek"
+    "lbCheckNow": "Waktunya dicek",
+    "lbCurve": "Kurva belajar",
+    "lbAnswered": "Dijawab",
+    "lbRight": "Benar"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9332,7 +9356,10 @@
     "lbWhyTry": "تعابير لم تقلها بعد {n}",
     "lbWhyNew": "لم تره بعد {n}",
     "lbCheckIn": "مراجعة بعد {n} أيام",
-    "lbCheckNow": "حان وقت المراجعة"
+    "lbCheckNow": "حان وقت المراجعة",
+    "lbCurve": "منحنى التعلّم",
+    "lbAnswered": "الإجابات",
+    "lbRight": "الصحيحة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10322,7 +10349,10 @@
     "lbWhyTry": "สำนวนที่ยังไม่เคยพูด {n}",
     "lbWhyNew": "ยังไม่เคยเห็น {n}",
     "lbCheckIn": "ทบทวนอีก {n} วัน",
-    "lbCheckNow": "ถึงเวลาทบทวน"
+    "lbCheckNow": "ถึงเวลาทบทวน",
+    "lbCurve": "กราฟการเรียนรู้",
+    "lbAnswered": "จำนวนที่ตอบ",
+    "lbRight": "อัตราที่ตอบถูก"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11312,6 +11342,9 @@
     "lbWhyTry": "अभी तक न बोले गए भाव {n}",
     "lbWhyNew": "अभी तक नहीं देखा {n}",
     "lbCheckIn": "{n} दिन बाद दोहराएँ",
-    "lbCheckNow": "दोहराने का समय"
+    "lbCheckNow": "दोहराने का समय",
+    "lbCurve": "सीखने का ग्राफ़",
+    "lbAnswered": "हल किए",
+    "lbRight": "सही"
   }
 }

@@ -1300,6 +1300,14 @@ export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<nu
 /** 언어마다 바로 앞 뜻 가림 문제에 나온 보기(뜻) — 다음 문제 보기에서 뺀다. */
 const RECENT_OPTIONS = new Map<string, Set<string>>();
 
+/** 낱말·표현 카드 앞면(Logbank "배운 것" 목록 — 2026-11-07): 퀴즈와 같은 카드(낱말·뜻·예문·예문 뜻), 첫 예문. 없으면 null. */
+export function cardFaceOf(language: string, key: string): { word: string; meaning: string; text: string; piece: string; gloss: ScriptGloss } | null {
+  const pool = key.startsWith("w|") ? GAP_SOURCES.get(language) : key.startsWith("e|") ? EXPRESSION_CARDS.get(language) : undefined;
+  const source = (pool?.get(key) ?? []).find((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
+  if (!source?.wordGloss || !source.piece) return null;
+  return { word: key.slice(2), meaning: source.wordGloss.trim(), text: source.text, piece: source.piece, gloss: source.gloss };
+}
+
 export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {
   const kind = key.startsWith("w|") ? "w" : key.startsWith("e|") ? "e" : null;
   if (!kind) return null;

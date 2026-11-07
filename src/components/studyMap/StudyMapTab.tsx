@@ -218,7 +218,7 @@ export function StudyMapTab({
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <TabTitle tab="map" label={ui.homeTabProfile} />
-        {/* 개편(lib/reform.ts)에는 단계 다시 고르기 없음 — 단계 사다리가 안 보이고, 낱말 수준은 퀴즈 답으로 고쳐짐(2026-11-07 사용자 "개편전 기능, 버튼들은 다 찾아서 빼줘"). */}
+        {/* 개편(lib/reform.ts)에는 단계 다시 고르기 없음 — 단계 사다리가 안 보이고, 낱말 수준은 퀴즈 답으로 고쳐짐(2026-11-07 사용자 요청). */}
         {started && !editing && !reformOn() ? (
           <button
             type="button"

@@ -36,6 +36,18 @@ import { segmentWords } from "@/lib/wordSegments";
 import { AxisDetail, axisName, CellDetail, cellName, lackOf, planCells, SkillHexagon, tabOf, type CellPlan } from "@/components/studyMap/SkillHexagon";
 import { SkillBands } from "@/components/studyMap/SkillBands";
 import { SkillRecord } from "@/components/studyMap/SkillRecord";
+import { CardFace } from "@/components/studyMap/QuizPlayer";
+import { DictionarySheet } from "@/components/studyMap/Dictionary";
+import { curveOf, curveReady, LEARN_PARTS, learnedIn, type CurvePoint, type LearnedItem } from "@/lib/curriculum/learnedView";
+import type { CardPart } from "@/lib/curriculum/todayCards";
+import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
+import type { LogEvent } from "@/lib/curriculum/logLedger";
+import { usePrepared } from "@/lib/curriculum/preparedLoad";
+import { cardFaceOf } from "@/lib/curriculum/quiz";
+import { quizGloss } from "@/lib/curriculum/stageScripts";
+import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
+
+const LOG = bankTone("log");
 
 function localDay(at: number): string {
   const d = new Date(at);
@@ -380,14 +392,15 @@ export function Logbank({
     window.addEventListener(LEDGER_EVENT, on);
     return () => window.removeEventListener(LEDGER_EVENT, on);
   }, [reform]);
+  const ledger = useMemo(() => {
+    void ledgerTick;
+    return reform ? readLedger(language) : [];
+  }, [reform, ledgerTick, language]);
   const events = useMemo(() => {
     const segment = (text: string) => segmentWords(text, language);
-    if (reform) {
-      void ledgerTick;
-      return ledgerFillEvents({ ledger: readLedger(language), results, items, language, segment });
-    }
+    if (reform) return ledgerFillEvents({ ledger, results, items, language, segment });
     return fillEvents({ language, known, quiz, results, items, checkups, segment });
-  }, [reform, ledgerTick, language, known, quiz, results, items, checkups]);
+  }, [reform, ledger, language, known, quiz, results, items, checkups]);
   const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
   const [nowAt] = useState(() => Date.now());
   const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
@@ -580,6 +593,21 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
+        {reform ? (
+          <Learned
+            ui={ui}
+            language={language}
+            locale={locale}
+            ledger={ledger}
+            period={period}
+            today={today}
+            calls={calls}
+            notes={callNotes}
+            grammarName={grammarName}
+            keyLabel={keyLabel}
+            dateLabel={dateLabel}
+          />
+        ) : null}
         <div className="flex gap-1 self-end" role="group">
           {(["bands", "hexagon"] as const).map((one) => (
             <button
@@ -944,8 +972,7 @@ function orphanNotes(day: Pick<Day, "calls" | "notes">): CallNote[] {
  * 통화는 통화 정리(고친 말·💡) — 누르면 그 통화 돌아보기, Quizbank는 그날 틀린 것. 이 폰 기록만.
  */
 function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: Day }) {
-  // 통화 카드 ×는 통화 기록도 지워서 한 번 묻는다(2026-11-01 사용자 "X랑 일괄 삭제") — 지금 묻는 통화 id.
-  const [asking, setAsking] = useState<string | null>(null);
+  // 통화 카드 ×는 통화 기록도 지워서 한 번 묻는다(2026-11-01 사용자 "X랑 일괄 삭제") — CallResultCard 안에서.
   const wrong = (day.quiz?.wrong ?? []).map((key) => reviewLabel(language, key)).filter(Boolean);
   const gone = orphanNotes(day);
   const noteOf = (id: string) => day.notes.find((note) => note.id === id)?.summary ?? "";
@@ -958,59 +985,9 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
   );
   return (
     <div data-day-results className="mt-1">
-      {day.calls.map((call) => {
-        const recap = buildRecap(language, call.said);
-        const fixes = recap.filter((item) => item.kind === "fix");
-        const hints = recap.filter((item) => item.kind === "hint").length;
-        // 튜터 수업에서 다시 말해 맞힌 줄 수 — 통화 끝 요약의 🔁와 같은 셈(2026-11-02 사용자 "학습결과창에도").
-        const redone = tallyCall(call.said).redone;
-        const minutes = Math.max(1, Math.round(callSeconds(call) / 60));
-        return (
-          <div key={call.id} data-day-call className={card}>
-            <div className="flex items-start gap-2">
-              <button type="button" data-day-call-open onClick={() => sendAppIntent("openCall", { id: call.id })} className="flex min-w-0 flex-1 flex-col gap-1 text-start">
-                <span className="flex items-center gap-2 text-caption">
-                  <span aria-hidden>📞</span>
-                  <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{call.title}</span>
-                  <span className="shrink-0 tabular-nums text-slate-400">{`${minutes}′`}</span>
-                  {fixes.length ? <span className="shrink-0 tabular-nums text-bad">{`✎ ${fixes.length}`}</span> : null}
-                  {hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${hints}`}</span> : null}
-                  {redone ? (
-                    <span className="shrink-0 tabular-nums text-good" title={ui.roleplaySayAgain} aria-label={`${ui.roleplaySayAgain} ${redone}`}>{`🔁 ${redone}`}</span>
-                  ) : null}
-                </span>
-              </button>
-              {remove(call.title, () => setAsking(call.id), "call")}
-            </div>
-            {noteOf(call.id) ? <TutorNote compact text={noteOf(call.id)} language={language} /> : null}
-            {/* Each corrected line opens its Stagebank lesson carrying the sentence (or the call review when no topic is found). */}
-            {fixes.slice(0, 2).map((item, i) => {
-              const key = item.frames[0] ? `f|${item.frames[0].id}` : expressionKeysIn(language, item.line, 1)[0];
-              return (
-                <button
-                  key={i}
-                  type="button"
-                  data-day-call-fix
-                  onClick={() =>
-                    key
-                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
-                      : sendAppIntent("openCall", { id: call.id })
-                  }
-                  className="text-start text-meta hover:opacity-80"
-                >
-                  {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
-                  {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
-                  <span dir="auto" className="text-slate-200">{item.line}</span>
-                  {key ? <span aria-hidden className="ms-1 text-slate-500">{key.startsWith("f|") ? "🧩" : "🔤"}</span> : null}
-                </button>
-              );
-            })}
-            {asking === call.id ? (
-              <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); removeCallNote(language, call.id); setAsking(null); }} onNo={() => setAsking(null)} />
-            ) : null}
-          </div>
-        );
-      })}
+      {day.calls.map((call) => (
+        <CallResultCard key={call.id} ui={ui} language={language} call={call} note={noteOf(call.id)} />
+      ))}
       {/* 원문이 20통 밖으로 밀려난 통화 — 카드와 튜터 메모만(열 수 없음, 2026-11-06). */}
       {gone.map((note) => (
         <div key={note.id} data-day-call-note className={card}>
@@ -1065,6 +1042,71 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
 }
 
 /** 지우기 전에 한 번(누르기 직전 결과가 달라지는 것만 글로 — 통화 기록도 지워짐). */
+/**
+ * 통화 결과 카드 하나(그날 세부·"배운 것" 통화 목록이 같이 씀 — 2026-11-07 사용자 "통화학습은 이미 있는 통화결과창"):
+ * 제목·분·✎·💡·🔁 + 튜터 메모 + 고친 줄 둘, 누르면 그 통화 돌아보기(openCall). removable이면 ×(통화 기록도 지움 — 한 번 묻기).
+ */
+function CallResultCard({ ui, language, call, note, removable = true }: { ui: UICopy; language: string; call: SavedConversation; note: string; removable?: boolean }) {
+  const [asking, setAsking] = useState<string | null>(null);
+  const card = "mt-1.5 flex flex-col gap-1 rounded-lg border border-line bg-white/[0.02] px-2.5 py-2";
+  const remove = (label: string, onClick: () => void, data: string) => (
+    <button type="button" data-day-remove={data} aria-label={`${label} · ${ui.notebookDelete}`} title={ui.notebookDelete} onClick={onClick} className="-me-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-caption text-slate-500 hover:bg-white/10 hover:text-ink">
+      ✕
+    </button>
+  );
+        const recap = buildRecap(language, call.said);
+        const fixes = recap.filter((item) => item.kind === "fix");
+        const hints = recap.filter((item) => item.kind === "hint").length;
+        // 튜터 수업에서 다시 말해 맞힌 줄 수 — 통화 끝 요약의 🔁와 같은 셈(2026-11-02 사용자 "학습결과창에도").
+        const redone = tallyCall(call.said).redone;
+        const minutes = Math.max(1, Math.round(callSeconds(call) / 60));
+  return (
+          <div data-day-call className={card}>
+            <div className="flex items-start gap-2">
+              <button type="button" data-day-call-open onClick={() => sendAppIntent("openCall", { id: call.id })} className="flex min-w-0 flex-1 flex-col gap-1 text-start">
+                <span className="flex items-center gap-2 text-caption">
+                  <span aria-hidden>📞</span>
+                  <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{call.title}</span>
+                  <span className="shrink-0 tabular-nums text-slate-400">{`${minutes}′`}</span>
+                  {fixes.length ? <span className="shrink-0 tabular-nums text-bad">{`✎ ${fixes.length}`}</span> : null}
+                  {hints ? <span className="shrink-0 tabular-nums text-slate-300">{`💡 ${hints}`}</span> : null}
+                  {redone ? (
+                    <span className="shrink-0 tabular-nums text-good" title={ui.roleplaySayAgain} aria-label={`${ui.roleplaySayAgain} ${redone}`}>{`🔁 ${redone}`}</span>
+                  ) : null}
+                </span>
+              </button>
+              {removable ? remove(call.title, () => setAsking(call.id), "call") : null}
+            </div>
+            {note ? <TutorNote compact text={note} language={language} /> : null}
+            {/* Each corrected line opens its Stagebank lesson carrying the sentence (or the call review when no topic is found). */}
+            {fixes.slice(0, 2).map((item, i) => {
+              const key = item.frames[0] ? `f|${item.frames[0].id}` : expressionKeysIn(language, item.line, 1)[0];
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  data-day-call-fix
+                  onClick={() =>
+                    key
+                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
+                      : sendAppIntent("openCall", { id: call.id })
+                  }
+                  className="text-start text-meta hover:opacity-80"
+                >
+                  {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
+                  {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
+                  <span dir="auto" className="text-slate-200">{item.line}</span>
+                  {key ? <span aria-hidden className="ms-1 text-slate-500">{key.startsWith("f|") ? "🧩" : "🔤"}</span> : null}
+                </button>
+              );
+            })}
+            {asking === call.id ? (
+              <Confirm ui={ui} note={ui.callAlsoDeleted} onYes={() => { discardCall(call.id); removeCallNote(language, call.id); setAsking(null); }} onNo={() => setAsking(null)} />
+            ) : null}
+          </div>
+        );
+}
+
 function Confirm({ ui, note, onYes, onNo }: { ui: UICopy; note?: string; onYes: () => void; onNo: () => void }) {
   return (
     <div data-day-confirm className="mt-1 flex flex-wrap items-center gap-2 text-meta">
@@ -1112,4 +1154,283 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
 function lessonKeyOf(language: string, item: LogItem): string | null {
   if (item.part === "grammar") return grammarKeyOfNode(language, item.node);
   return expressionKeyOf(language, item.text);
+}
+
+/** 기간의 날짜 목록(오래된 것부터, 오늘까지만). */
+function periodDays(period: Period, today: string): string[] {
+  const last = periodLastDay(period);
+  const end = dayValue(last) < dayValue(today) ? last : today;
+  const out: string[] = [];
+  for (let value = dayValue(period.start); value <= dayValue(end); value += 86_400_000) out.push(new Date(value).toISOString().slice(0, 10));
+  return out;
+}
+
+const LEARN_ICON: Record<CardPart, string> = { word: "🔤", grammar: "📐", expression: "💬", frame: "🧩" };
+
+function learnPartName(ui: UICopy, part: CardPart): string {
+  return { word: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, frame: ui.framesTitle }[part];
+}
+
+/**
+ * 개편 Logbank "배운 것"(2026-11-07 사용자 "학습한 게 확실하게 보이게"): 고른 기간에 푼 것 — 요소마다 개수(누르면 그 카드들) + 📞 통화 수(누르면 통화 결과 카드).
+ * 그 아래 학습 곡선(답한 날이 둘 이상일 때) — 날마다 푼 수 막대와 맞힌 비율 선, 요소 칩으로 바꿔 봄. 재료는 사건 장부(curriculum/learnedView.ts).
+ */
+function Learned({
+  ui,
+  language,
+  locale,
+  ledger,
+  period,
+  today,
+  calls,
+  notes,
+  grammarName,
+  keyLabel,
+  dateLabel,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  ledger: readonly LogEvent[];
+  period: Period;
+  today: string;
+  calls: readonly SavedConversation[];
+  notes: readonly CallNote[];
+  grammarName: (stage: number, index: number) => string;
+  keyLabel: (key: string) => string;
+  dateLabel: (day: string) => string;
+}) {
+  const [open, setOpen] = useState<CardPart | "call" | null>(null);
+  const [curvePart, setCurvePart] = useState<CardPart | null>(null);
+  const days = useMemo(() => periodDays(period, today), [period, today]);
+  const learned = useMemo(() => learnedIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
+  const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
+  const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
+  const points = useMemo(() => (curvePart ? curveOf(ledger, days, curvePart, (t) => dayOfSeconds(t)) : all), [ledger, days, curvePart, all]);
+  const parts = LEARN_PARTS.filter((part) => learned[part].length);
+  if (!parts.length && !periodCalls.length) return null;
+  const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
+  return (
+    <div data-learned className="flex flex-col gap-2">
+      <h3 className="text-caption font-semibold text-slate-300">{ui.itemsLearned}</h3>
+      <div className="flex flex-wrap gap-1.5">
+        {parts.map((part) => (
+          <button key={part} type="button" data-learned-part={part} onClick={() => setOpen(part)} className={chip}>
+            <span aria-hidden>{LEARN_ICON[part]}</span>
+            <span>{learnPartName(ui, part)}</span>
+            <span className="font-semibold text-ink">{learned[part].length}</span>
+          </button>
+        ))}
+        {periodCalls.length ? (
+          <button type="button" data-learned-part="call" onClick={() => setOpen("call")} className={chip}>
+            <span aria-hidden>📞</span>
+            <span>{ui.homeTabCall}</span>
+            <span className="font-semibold text-ink">{periodCalls.length}</span>
+          </button>
+        ) : null}
+      </div>
+      {curveReady(all) ? (
+        <LearnCurve ui={ui} points={points} parts={parts} part={curvePart} onPart={setCurvePart} dateLabel={dateLabel} />
+      ) : null}
+      {open && open !== "call" ? (
+        <LogSheet title={`${LEARN_ICON[open]} ${learnPartName(ui, open)} · ${learned[open].length}`} ui={ui} onClose={() => setOpen(null)}>
+          <LearnedCards ui={ui} language={language} locale={locale} items={learned[open]} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+        </LogSheet>
+      ) : null}
+      {open === "call" ? (
+        <LogSheet title={`📞 ${ui.homeTabCall} · ${periodCalls.length}`} ui={ui} onClose={() => setOpen(null)}>
+          <div data-learned-calls className="flex flex-col gap-1">
+            {periodCalls.map((call) => (
+              <div key={call.id}>
+                <p className="mt-2 text-meta text-slate-500">{dayFormat(locale, localDay(call.startedAt))}</p>
+                <CallResultCard ui={ui} language={language} call={call} note={notes.find((note) => note.id === call.id)?.summary ?? ""} removable={false} />
+              </div>
+            ))}
+          </div>
+        </LogSheet>
+      ) : null}
+    </div>
+  );
+}
+
+/** 푼 카드들: 퀴즈에서 본 카드 그대로(낱말·뜻·예문·예문 뜻) + 체크 셋 표시·맞힘/틀림 수 + 📕(사전·그 수업). */
+function LearnedCards({
+  ui,
+  language,
+  locale,
+  items,
+  ledger,
+  grammarName,
+  keyLabel,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  items: readonly LearnedItem[];
+  ledger: readonly LogEvent[];
+  grammarName: (stage: number, index: number) => string;
+  keyLabel: (key: string) => string;
+}) {
+  const [word, setWord] = useState<string | null>(null);
+  const states = useMemo(() => checkStates(ledger), [ledger]);
+  const prepared = usePrepared(language, locale);
+  const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  const markOf = (key: string) => {
+    const level = states.get(key)?.level ?? "new";
+    return level === "known" ? { icon: "✓", label: ui.knownTag, cls: "text-good" } : level === "hard" ? { icon: "◐", label: ui.lbCardHard, cls: "text-warn" } : { icon: "○", label: ui.lbCardNew, cls: "text-slate-400" };
+  };
+  const face = (key: string) => {
+    if (key.startsWith("w|") || key.startsWith("e|")) {
+      const one = cardFaceOf(language, key);
+      if (!one) return null;
+      const at = one.text.indexOf(one.piece);
+      return {
+        word: one.word,
+        meaning: one.meaning,
+        line: (
+          <>
+            {one.text.slice(0, at)}
+            <strong className="font-semibold text-ink">{one.piece}</strong>
+            {one.text.slice(at + one.piece.length)}
+          </>
+        ),
+        lineGloss: quizGloss(one.gloss, locale, language),
+        speak: { text: one.text, tag },
+      };
+    }
+    const item = key.startsWith("g|") ? prepared?.find((one) => one.key === key) : undefined;
+    if (!item) return null;
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    return {
+      word: grammarName(stage ?? 0, index ?? 0) || item.answer,
+      meaning: item.why,
+      line: (
+        <>
+          {item.before}
+          <strong className="font-semibold text-ink">{item.answer}</strong>
+          {item.after}
+        </>
+      ),
+      lineGloss: item.gloss,
+      speak: { text: `${item.before}${item.answer}${item.after}`, tag },
+    };
+  };
+  return (
+    <ul data-learned-cards className="flex flex-col gap-3">
+      {items.map((one) => {
+        const mark = markOf(one.key);
+        const card = face(one.key);
+        return (
+          <li key={one.key} data-learned-card={one.key} className="flex flex-col gap-1">
+            <div className="flex items-center gap-2 text-caption">
+              <span className={`font-semibold ${mark.cls}`} aria-label={mark.label} title={mark.label}>
+                {mark.icon}
+              </span>
+              <span className="tabular-nums text-good">{`✓ ${one.ok}`}</span>
+              {one.miss ? <span className="tabular-nums text-bad">{`✗ ${one.miss}`}</span> : null}
+              <span className="flex-1" />
+              <button
+                type="button"
+                data-learned-open
+                onClick={() => (one.key.startsWith("w|") ? setWord(one.key.slice(2)) : openLesson({ language, key: one.key }))}
+                className="rounded-full border border-line px-3 py-0.5 text-caption text-slate-300 hover:bg-white/10"
+              >
+                <span aria-hidden>📕 </span>
+                {ui.languagebankTitle}
+              </button>
+            </div>
+            {card ? (
+              <CardFace word={card.word} meaning={card.meaning} line={card.line} lineGloss={card.lineGloss} speak={card.speak} />
+            ) : (
+              <p dir="auto" className="rounded-xl border border-line p-3 text-chat font-semibold text-ink">
+                {keyLabel(one.key)}
+              </p>
+            )}
+          </li>
+        );
+      })}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} /> : null}
+    </ul>
+  );
+}
+
+/** 학습 곡선: 날마다 푼 수(막대) + 맞힌 비율(선, 답 셋 이상인 날만 점) — 요소 칩 [전체 | 낱말 | 문법 …]. */
+function LearnCurve({
+  ui,
+  points,
+  parts,
+  part,
+  onPart,
+  dateLabel,
+}: {
+  ui: UICopy;
+  points: readonly CurvePoint[];
+  parts: readonly CardPart[];
+  part: CardPart | null;
+  onPart: (part: CardPart | null) => void;
+  dateLabel: (day: string) => string;
+}) {
+  const W = 320;
+  const H = 120;
+  const top = 8;
+  const max = Math.max(1, ...points.map((point) => point.n));
+  const step = W / Math.max(1, points.length);
+  const barW = Math.max(2, Math.min(18, step * 0.6));
+  const x = (i: number) => step * i + step / 2;
+  const yScore = (score: number) => top + (1 - score) * (H - top);
+  const scored = points.map((point, i) => (point.score === null ? null : ([x(i), yScore(point.score)] as const)));
+  const line = scored.filter(Boolean).map((p, i) => `${i ? "L" : "M"}${p![0].toFixed(1)},${p![1].toFixed(1)}`).join(" ");
+  const every = points.length > 10 ? 5 : 1;
+  const tabs: (CardPart | null)[] = [null, ...parts];
+  return (
+    <figure data-learn-curve className="m-0 flex flex-col gap-2 rounded-xl border border-line p-3">
+      <div className="flex flex-wrap items-center gap-1.5">
+        <figcaption className="me-1 text-caption font-semibold text-slate-300">{ui.lbCurve}</figcaption>
+        {tabs.map((one) => (
+          <button
+            key={one ?? "all"}
+            type="button"
+            aria-pressed={part === one}
+            data-curve-part={one ?? "all"}
+            onClick={() => onPart(one)}
+            className={`rounded-full px-2.5 py-0.5 text-caption ${part === one ? LOG.chip : "border border-line text-slate-400"}`}
+          >
+            {one ? `${LEARN_ICON[one]} ${learnPartName(ui, one)}` : ui.vocabByAll}
+          </button>
+        ))}
+      </div>
+      <svg viewBox={`0 0 ${W} ${H + 16}`} role="img" aria-label={ui.lbCurve} direction="ltr" className="h-auto w-full">
+        {[0, 0.5, 1].map((g) => (
+          <line key={g} x1={0} x2={W} y1={yScore(g)} y2={yScore(g)} className="stroke-white/10" strokeWidth="0.6" />
+        ))}
+        {points.map((point, i) => {
+          const h = (point.n / max) * (H - top);
+          return point.n ? <rect key={point.day} x={x(i) - barW / 2} y={H - h} width={barW} height={h} rx="1.5" className={`${LOG.fill} opacity-40`} /> : null;
+        })}
+        {line ? <path d={line} className={`fill-none ${LOG.stroke}`} strokeWidth="1.8" strokeLinejoin="round" /> : null}
+        {scored.map((p, i) => (p ? <circle key={points[i]!.day} cx={p[0]} cy={p[1]} r="2.6" className={LOG.fill} /> : null))}
+        {points.map((point, i) =>
+          i % every === 0 || i === points.length - 1 ? (
+            <text key={`d-${point.day}`} x={x(i)} y={H + 12} textAnchor="middle" className="fill-slate-500 text-meta">
+              {dateLabel(point.day)}
+            </text>
+          ) : null,
+        )}
+      </svg>
+      <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
+        <span className="inline-flex items-center gap-1">
+          <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-40`}><rect width="8" height="8" rx="2" /></svg>
+          {`${ui.lbAnswered} ${points.reduce((n, point) => n + point.n, 0)}`}
+        </span>
+        <span className="inline-flex items-center gap-1">
+          <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
+          {(() => {
+            const n = points.reduce((a, point) => a + point.n, 0);
+            const ok = points.reduce((a, point) => a + point.ok, 0);
+            return `${ui.lbRight} ${n ? Math.round((100 * ok) / n) : 0}%`;
+          })()}
+        </span>
+      </div>
+    </figure>
+  );
 }
