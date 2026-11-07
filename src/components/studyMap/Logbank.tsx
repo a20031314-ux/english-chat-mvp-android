@@ -40,9 +40,10 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
-import { progressIn } from "@/lib/curriculum/growthView";
+import { knownAt, progressIn } from "@/lib/curriculum/growthView";
+import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
-import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, sureOf, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
+import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import type { CardPart } from "@/lib/curriculum/todayCards";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent } from "@/lib/curriculum/logLedger";
@@ -440,15 +441,15 @@ export function Logbank({
     if (chain) return fillAt(chain, fillInput, Math.min(start, nowAt));
     return computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
   }, [chain, fillInput, nowAt, catalog, check, stage, placed, events, callTurns, period.start]);
-  // 학습 곡선 선 = 날마다 그날 끝의 확인된 실력(learnedView.ts sureOf — 2026-11-07 사용자 "Logbank는 학습량 + 채운 %").
-  const sureDays = useMemo(() => {
-    if (!reform || !chain) return [] as (number | null)[];
+  // 학습 곡선 선 = 날마다 그날 끝까지 앎이 된 것 누적(growthView.ts knownAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로", 예전 확인된 실력 %).
+  const knownDays = useMemo(() => {
+    if (!reform) return [] as (number | null)[];
     return periodDays(period, today).map((day) => {
       const end = dayEndMs(day);
       if (end - 86_400_000 > nowAt) return null;
-      return end > nowAt ? sureOf(fill) : sureOf(fillAt(chain, fillInput, end));
+      return knownAt(ledger, Math.floor(Math.min(end, nowAt) / 1000));
     });
-  }, [reform, chain, fill, fillInput, period, today, nowAt]);
+  }, [reform, ledger, period, today, nowAt]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -622,7 +623,7 @@ export function Logbank({
             ledger={ledger}
             period={period}
             today={today}
-            sure={sureDays}
+            known={knownDays}
             calls={calls}
             notes={callNotes}
             grammarName={grammarName}
@@ -1160,6 +1161,7 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
             onYes={() => {
               clearDayResults(language, day.day);
               clearQuizDay(language, day.day);
+              forgetGrowthDay(language, day.day, (t) => dayOfSeconds(t));
               for (const call of day.calls) discardCall(call.id);
               for (const note of day.notes) removeCallNote(language, note.id);
               setAsking(false);
@@ -1206,7 +1208,7 @@ function Learned({
   ledger,
   period,
   today,
-  sure,
+  known,
   calls,
   notes,
   grammarName,
@@ -1220,7 +1222,7 @@ function Learned({
   period: Period;
   today: string;
   /** 날마다 그날 끝의 확인된 실력(days와 같은 차례, 오늘 뒤는 null). */
-  sure: readonly (number | null)[];
+  known: readonly (number | null)[];
   calls: readonly SavedConversation[];
   notes: readonly CallNote[];
   grammarName: (stage: number, index: number) => string;
@@ -1290,7 +1292,7 @@ function Learned({
       ) : null}
       <TalkCompare ui={ui} language={language} locale={locale} />
       {curveReady(all) ? (
-        <LearnCurve ui={ui} amounts={amounts} sure={sure} dateLabel={dateLabel} />
+        <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} />
       ) : null}
       {growOpen ? (
         <LogSheet title={`${grow.find((one) => one.id === growOpen)!.icon} ${grow.find((one) => one.id === growOpen)!.label} · ${grow.find((one) => one.id === growOpen)!.n}`} ui={ui} onClose={() => setGrowOpen(null)}>
@@ -1425,10 +1427,10 @@ function LearnedCards({
 
 /**
  * 학습 곡선(2026-11-07 사용자 "Logbank는 학습량 + 채운 %, 학습량은 푼 수"): 아래 막대 = 날마다 푼 수(새로 · 다시 두 색),
- * 위 선 = 그날 끝의 확인된 실력(learnedView.ts sureOf, 띠·육각형과 같은 계산의 아래 끝). 눈금이 둘이라 숫자 눈금은 없고,
- * 날을 누르면 그날 "새로 n · 다시 m · 확인된 실력 x%". 선의 세로는 0~(가장 높은 값 + 여유)로 잡아 작은 오름도 보이게.
+ * 위 선 = 그날 끝까지 앎이 된 것 누적(growthView.ts knownAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로", 줄지 않음 — 다시 틀려 힘듦으로 내려간 것만 빠짐).
+ * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "새로 n · 다시 m · 지금까지 앎 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
-function LearnCurve({ ui, amounts, sure, dateLabel }: { ui: UICopy; amounts: readonly AmountPoint[]; sure: readonly (number | null)[]; dateLabel: (day: string) => string }) {
+function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string }) {
   const [pick, setPick] = useState<number | null>(null);
   const W = 320;
   const H = 120;
@@ -1438,17 +1440,19 @@ function LearnCurve({ ui, amounts, sure, dateLabel }: { ui: UICopy; amounts: rea
   const step = W / Math.max(1, amounts.length);
   const barW = Math.max(2, Math.min(18, step * 0.6));
   const x = (i: number) => step * i + step / 2;
-  const peak = Math.max(0.05, ...sure.map((one) => one ?? 0)) * 1.25;
-  const ySure = (value: number) => top + (1 - value / peak) * (barTop - top);
-  const dots = sure.map((one, i) => (one === null ? null : ([x(i), ySure(one)] as const)));
+  const values = known.filter((one): one is number => one !== null);
+  const high = Math.max(1, ...values);
+  const low = Math.max(0, Math.min(high, ...values) - Math.max(1, (high - Math.min(high, ...values)) * 0.25));
+  const span = Math.max(1, (high - low) * 1.15);
+  const ySure = (value: number) => top + (1 - (value - low) / span) * (barTop - top);
+  const dots = known.map((one, i) => (one === null ? null : ([x(i), ySure(one)] as const)));
   const line = dots.filter(Boolean).map((p, i) => `${i ? "L" : "M"}${p![0].toFixed(1)},${p![1].toFixed(1)}`).join(" ");
   const every = amounts.length > 10 ? 5 : 1;
   const shown = pick ?? (() => {
-    for (let i = sure.length - 1; i >= 0; i -= 1) if (sure[i] !== null) return i;
+    for (let i = known.length - 1; i >= 0; i -= 1) if (known[i] !== null) return i;
     return amounts.length - 1;
   })();
   const at = amounts[shown];
-  const pct = (value: number | null | undefined) => `${Math.round(100 * (value ?? 0))}%`;
   return (
     <figure data-learn-curve className="m-0 flex flex-col gap-2 rounded-xl border border-line p-3">
       <figcaption className="text-caption font-semibold text-slate-300">{ui.lbCurve}</figcaption>
@@ -1489,7 +1493,7 @@ function LearnCurve({ ui, amounts, sure, dateLabel }: { ui: UICopy; amounts: rea
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
-            {`${ui.lbSure} ${pct(sure[shown])}`}
+            {`${ui.growKnownAll} ${known[shown] ?? 0}`}
           </span>
         </p>
       ) : null}

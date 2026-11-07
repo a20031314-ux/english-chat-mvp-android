@@ -1258,7 +1258,11 @@ export function ChatWindow({
       // 짚인 줄은 이 기기에 그 순간 화면을 찍어 둔다 — 오늘의 학습에서 "화면 함께"로 노트에 붙일 수 있게(lib/notes/sceneShots.ts).
       if (!ownLanguage && correctionResult.hasError) captureSceneSoon(sessionLanguageCode, message);
       // Logbank 장부·고쳐 씀(2026-11-07): 고친 줄 = 바른 꼴에만 든 열쇠 틀림, 고쳐지지 않은 줄 = 쓴 열쇠 씀(src chat, 이 폰에만).
-      if (!ownLanguage) noteChatLine(sessionLanguageCode, message, correctionResult.hasError ? correctionResult.corrected : "");
+      // 위험한 교정(확인 모델이 뒤집을 수 있는 것)은 확인이 끝난 최종 결과로만 남긴다(verifyTurnCorrection) — 변경 감시 리뷰 2026-11-07 major.
+      if (!ownLanguage) {
+        const risky = correctionResult.hasError && correctionRisk({ original: message, corrected: correctionResult.corrected, target: sessionLanguageCode, explanation: correctionResult.explanation }).risky;
+        if (!risky) noteChatOnce(turnId, message, correctionResult);
+      }
       // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
       if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
         void verifyTurnCorrection(turnId, message, correctionResult);
@@ -1334,6 +1338,14 @@ export function ChatWindow({
   };
 
   /** 확인 모델에 교정을 한 번 더(위험한 줄만 — 서버도 같은 규칙으로 다시 거른다). 끝나면 그 턴의 교정을 바꾼다. */
+  // 채팅 줄 장부 기록은 줄마다 한 번(확인이 두 번 돌아도).
+  const notedTurns = useRef(new Set<string>());
+  const noteChatOnce = (turnId: string, original: string, result: CorrectionResult) => {
+    if (notedTurns.current.has(turnId)) return;
+    notedTurns.current.add(turnId);
+    noteChatLine(sessionLanguageCode, original, result.hasError ? result.corrected : "");
+  };
+
   const verifyTurnCorrection = async (
     turnId: string,
     original: string,
@@ -1392,6 +1404,7 @@ export function ChatWindow({
     } catch {
       // 확인을 못 하면 싼 모델 교정 그대로.
     }
+    noteChatOnce(turnId, original, next);
     setTurns((previous) =>
       previous.map((t) =>
         t.id === turnId

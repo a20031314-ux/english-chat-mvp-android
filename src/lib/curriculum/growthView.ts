@@ -59,6 +59,11 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
   return { fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
 }
 
+/** 그 시각(초)까지의 답으로 앎인 열쇠 수 — 학습 곡선 선(누적). */
+export function knownAt(events: readonly LogEvent[], until: number, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): number {
+  return progressIn(events.filter((event) => event.t <= until), () => false, dayOf).known.length;
+}
+
 /* ───────── 고쳐 씀 — 틀린 문장 → 다른 날 맞게 쓴 문장 ───────── */
 
 export type TalkSource = "call" | "chat" | "people";

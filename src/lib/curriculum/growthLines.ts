@@ -68,3 +68,16 @@ export function noteGrowthLines(language: string, add: { miss?: readonly MissLin
     // 창 없음.
   }
 }
+
+/** Logbank "그날 지우기": 그날(dayOf — 그 폰 날짜) 남긴 줄을 지운다. */
+export function forgetGrowthDay(language: string, day: string, dayOf: (t: number) => string, store: Store | null = browserStore()): void {
+  if (!store) return;
+  const now = readGrowthLines(language, store);
+  const next: Saved = { v: 1, miss: now.miss.filter((one) => dayOf(one.t) !== day), used: now.used.filter((one) => dayOf(one.t) !== day) };
+  try {
+    store.setItem(`${KEY}.${language}`, JSON.stringify(next));
+    globalThis.dispatchEvent?.(new Event(GROWTH_LINES_EVENT));
+  } catch {
+    // 이번만.
+  }
+}

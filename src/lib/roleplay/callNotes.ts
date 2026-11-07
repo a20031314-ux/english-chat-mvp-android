@@ -32,7 +32,7 @@ export type CallNote = {
   topics?: string[];
 };
 
-type Store = { getItem(key: string): string | null; setItem(key: string, value: string): void };
+type Store = { getItem(key: string): string | null; setItem(key: string, value: string): void; removeItem?(key: string): void };
 
 function browserStore(): Store | null {
   try {
@@ -125,8 +125,15 @@ export function keepFirstTalkSample(language: string, sample: TalkSample, store:
   }
 }
 
-/** Logbank에서 통화를 지울 때 카드도. */
+/** Logbank에서 통화를 지울 때 카드도(그 통화가 대화 비교의 처음 보기 문장이면 그것도). */
 export function removeCallNote(language: string, id: string, store: Store | null = browserStore()): void {
+  if (readTalkSample(language, store)?.id === id) {
+    try {
+      store?.removeItem?.(`${SAMPLE_KEY}.${language}`);
+    } catch {
+      // 이번만.
+    }
+  }
   const notes = readCallNotes(language, store);
   if (!notes.some((one) => one.id === id)) return;
   write(language, notes.filter((one) => one.id !== id), store);

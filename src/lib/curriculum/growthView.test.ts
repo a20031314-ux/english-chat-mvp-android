@@ -55,3 +55,10 @@ test("대화 줄 → 고친 줄·쓴 줄 열쇠(빈도 목록 있을 때 낱말�
   const ja = growthLinesOf("ja", [{ who: "learner", text: "パンを食べる" }], "call", T, new Map([["パン", "noun"]]));
   assert.ok(ja.used[0]?.k.includes("w|パン"), JSON.stringify(ja));
 });
+
+test("학습 곡선 선(누적 앎): 날마다 늘고, 다시 틀린 것만 빠짐", async () => {
+  const { knownAt } = await import("./growthView.ts");
+  const ev = (k: string, r: LogEvent["r"], day: number, m: LogEvent["m"] = "write"): LogEvent => ({ k, src: "quiz", r, t: T + day * D + 60, m });
+  const events = [ev("w|casa", "ok", 0), ev("w|casa", "ok", 1), ev("w|perro", "ok", 1), ev("w|perro", "ok", 2), ev("w|casa", "miss", 3, "pick")];
+  assert.deepEqual([0, 1, 2, 3].map((day) => knownAt(events, T + day * D + 3600, dayOf)), [0, 1, 2, 1]);
+});
