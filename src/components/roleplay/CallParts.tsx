@@ -173,6 +173,7 @@ export function CallControls({
   onHint,
   onEnd,
   leaving = false,
+  help = true,
 }: {
   ui: UICopy;
   /** 내 차례라 못 알아들었어요·힌트를 누를 수 있다. */
@@ -184,12 +185,14 @@ export function CallControls({
   onEnd: () => void;
   /** 튜터가 작별로 읽은 차례 — 끝내기를 강조. */
   leaving?: boolean;
+  /** 🙉·💡를 보일 때(2026-11-07): false = 자리만 지키고 숨김(자유대화 — 망설이거나 막혔을 때 true), "none" = 아예 없음(수업 — 튜터가 먼저 묻고 힌트). */
+  help?: boolean | "none";
 }) {
   return (
     <CallButtonRow>
-      <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
+      {help === "none" ? null : <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} hidden={!help} />}
       <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
-      <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
+      {help === "none" ? null : <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} hidden={!help} />}
       <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" callout={leaving} />
     </CallButtonRow>
   );

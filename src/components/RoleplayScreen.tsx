@@ -104,6 +104,11 @@ const SHOW_CAPTIONS_KEY = CALL_CAPTIONS_KEY;
 
 type Spoken = TranscriptLine;
 
+/** 자유대화에서 내 차례가 열리고 이만큼 말이 없으면 🙉·💡를 띄운다(2026-11-07). */
+const HELP_AFTER_MS = 3000;
+/** 수업 통화에서 첫 말을 기다리는 시간 — 이 뒤엔 튜터가 "들었어요?"·힌트로 먼저(기본 12초보다 짧게). */
+const LESSON_NO_SPEECH_MS = 7000;
+
 export function RoleplayScreen({
   scenarioId,
   nativeLanguage,
@@ -208,6 +213,9 @@ export function RoleplayScreen({
    * 예전에는 말하는 동안 화면에 아무것도 없다가, 다 끝난 뒤에야 튜터 쪽 "…"가 떴다.
    */
   const [learnerTalking, setLearnerTalking] = useState(false);
+  // 🙉·💡는 필요할 때만(2026-11-07 사용자): 내 차례에 3초 말이 없거나(hesitating), 감독이 막힘·못 알아들음·애매함·앱 언어로 읽은 다음 차례(helpCue).
+  const [hesitating, setHesitating] = useState(false);
+  const [helpCue, setHelpCue] = useState(false);
   /** Lets a review or a close release the wait for the rest of a sentence. */
   const releaseRestRef = useRef<() => void>(() => undefined);
   // The director is deciding what the character says. Shown as the character
@@ -232,6 +240,15 @@ export function RoleplayScreen({
   const [studyName, setStudyName] = useState("");
   const [fixesText, setFixesText] = useState("");
   const [lead, setLead] = useState(0);
+  // 내 차례가 열리고 말이 없으면 3초 뒤 🙉·💡(앱 망설임 셈 review.ts LONG_SILENCE_MS와 같은 값).
+  useEffect(() => {
+    if (!recording || learnerTalking) {
+      setHesitating(false);
+      return;
+    }
+    const timer = window.setTimeout(() => setHesitating(true), HELP_AFTER_MS);
+    return () => window.clearTimeout(timer);
+  }, [recording, learnerTalking]);
   const stateRef = useRef<SessionState | null>(null);
   stateRef.current = state;
   // The turn being looked back at, if any. `review` is null while it is being
@@ -488,6 +505,7 @@ export function RoleplayScreen({
       // 못 알아들었어요로 부른 차례: 학습자 줄이 없으니 고친 말·막힘 표시를 붙이지 않는다.
       const missedTurn = Boolean(instruction.request.missed);
       setLeaving(Boolean(scenario.openEnded && direction?.assessment === "closing" && !("end" in direction.next)));
+      setHelpCue(Boolean(direction && (direction.assessment === "stuck" || direction.heard === "off" || direction.heard === "vague" || direction.native)));
       // 튜터 수업의 표현 건네기(offer)는 맞게 말한 줄 — 고친 말(better)이 아니라 💡 더 자연스럽게(smoother)로 붙인다.
       const meant = missedTurn ? "" : (direction?.meant ?? "");
       const offered = missedTurn ? "" : offeredOf(direction);
@@ -811,6 +829,8 @@ export function RoleplayScreen({
           if (yes) setLearnerTalking(true);
         },
         onSettled: () => setSettled((count) => count + 1),
+        // 수업 통화는 🙉·💡가 없어 튜터가 먼저 묻는다 — 말이 없으면 더 일찍 넘긴다.
+        ...(coachOn ? { noSpeechMs: LESSON_NO_SPEECH_MS } : {}),
       });
       setRecording(true);
     } catch {
@@ -1249,6 +1269,7 @@ export function RoleplayScreen({
         onMissed={missLine}
         onToggleCaptions={toggleCaptions}
         onHint={openHelp}
+        help={!scenario.openEnded ? true : coachOn ? "none" : lettersBeginner || ((hesitating || helpCue) && !learnerTalking)}
         onEnd={hangUp}
         leaving={leaving}
       />

@@ -91,6 +91,7 @@ export function CallButton({
   pressed,
   tone = "plain",
   callout = false,
+  hidden = false,
 }: {
   icon: string;
   label: string;
@@ -100,6 +101,8 @@ export function CallButton({
   tone?: "plain" | "end" | "warn";
   /** 지금 누를 차례라 눈에 띄게(글 없이 — 끝내기: 튜터가 작별 인사를 했을 때, 2026-11-06). */
   callout?: boolean;
+  /** 자리는 지키되 안 보임 — 필요할 때 그 자리에 부드럽게 나타남(통화 🙉·💡, 2026-11-07). */
+  hidden?: boolean;
 }) {
   return (
     <button
@@ -108,8 +111,12 @@ export function CallButton({
       disabled={disabled}
       aria-pressed={pressed}
       aria-label={label}
+      aria-hidden={hidden || undefined}
+      tabIndex={hidden ? -1 : undefined}
       title={label}
-      className="flex min-w-0 max-w-[4.5rem] flex-1 flex-col items-center gap-1.5 disabled:opacity-40"
+      data-call-hidden={hidden ? "1" : undefined}
+      style={hidden ? { opacity: 0 } : undefined}
+      className={`flex min-w-0 max-w-[4.5rem] flex-1 flex-col items-center gap-1.5 transition-opacity duration-300 disabled:opacity-40 ${hidden ? "pointer-events-none" : ""}`}
     >
       <span
         aria-hidden

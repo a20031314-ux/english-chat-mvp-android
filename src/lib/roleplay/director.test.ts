@@ -1526,3 +1526,21 @@ test("in an open conversation the learner hangs up, not the tutor", () => {
   const prompt = tutorSystemPrompt({ scenario: open, bank, recorded: recordedLines(open, SCENARIOS, bank), request: request({ scenarioId: open.id, nodeId: "talk" }) });
   assert.match(prompt, /They hang up themselves when they want to/);
 });
+
+test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 번째면 힌트(버튼 없음, 2026-11-07)", () => {
+  const coaching = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", coach: true, targetLanguage: "es", nativeLanguage: "ar" }),
+  });
+  assert.match(coaching, /When they said nothing at all/);
+  assert.match(coaching, /give a hint — the start of a sentence/);
+  const freeTalk = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk" }),
+  });
+  assert.doesNotMatch(freeTalk, /When they said nothing at all/);
+});
