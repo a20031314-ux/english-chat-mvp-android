@@ -188,7 +188,7 @@ function CoachCardView({ card }: { card: CoachCard }) {
 
 /**
  * 통화 중 아래 버튼 넷: 🙉 못 알아들었어요 · 💬 자막 · 💡 힌트 · 끝내기(빨강).
- * 그냥 대화면 💬 옆에 🎓 튜터 수업(켬/끔, 2026-11-02) — 큰 실수만 소리로 짚고 다시 말해 보기.
+ * 통화 중 🎓 튜터 수업 켬/끔은 뺌(2026-11-07 사용자 "빼줘") — 교정 방식은 통화를 열 때 고른 자유대화/공부가 정한다.
  * 끝내기는 통화를 내려놓는 것 — 기록에 남아 통화 기록에서 이어서 할 수 있다(예전 "중단").
  * 그냥 대화는 튜터가 끊지 않는다(2026-11-06) — 튜터가 작별 인사를 한 차례(leaving)엔 끝내기가 눈에 띄게, 다시 말하면 그대로 이어짐.
  */
@@ -198,8 +198,6 @@ export function CallControls({
   captions,
   onMissed,
   onToggleCaptions,
-  coach,
-  onToggleCoach,
   onHint,
   onEnd,
   leaving = false,
@@ -210,9 +208,6 @@ export function CallControls({
   captions: boolean;
   onMissed: () => void;
   onToggleCaptions: () => void;
-  /** 튜터 수업 켬/끔 — undefined면 버튼 없음(대본 장면). */
-  coach?: boolean;
-  onToggleCoach?: () => void;
   onHint: () => void;
   onEnd: () => void;
   /** 튜터가 작별로 읽은 차례 — 끝내기를 강조. */
@@ -222,9 +217,6 @@ export function CallControls({
     <CallButtonRow>
       <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} />
       <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
-      {coach !== undefined && onToggleCoach ? (
-        <CallButton icon="🎓" label={ui.callCoach} onClick={onToggleCoach} pressed={coach} />
-      ) : null}
       <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} />
       <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" callout={leaving} />
     </CallButtonRow>

@@ -79,7 +79,7 @@ function Preview() {
               : null
           }
         />
-        <CallControls ui={ui} canAnswer captions={false} coach onToggleCoach={noop} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} />
+        <CallControls ui={ui} canAnswer captions={false} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} />
       </div>
     );
   }

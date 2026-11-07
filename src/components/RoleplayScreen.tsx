@@ -170,7 +170,7 @@ export function RoleplayScreen({
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY, lettersBeginner);
   // 자막 해석 켬/끔(2026-11-06) — 자막 줄을 누르면 바뀌고 다음 줄·다음 통화도 그대로.
   const [showMeaning, toggleMeaning] = useStoredToggle(CALL_MEANING_KEY, lettersBeginner);
-  // 튜터 수업(🎓, 2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만, 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
+  // 튜터 수업(2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만. 켬/끔은 통화를 열 때 고르는 공부/자유대화뿐(통화 중 🎓 버튼은 2026-11-07에 뺌).
   const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
   // 그냥 대화를 열면 인사 전에 자유대화/공부를 고른다. 이어서 하기는 이미 고른 통화라 다시 묻지 않는다.
   const [picking, setPicking] = useState(false);
@@ -1261,8 +1261,6 @@ export function RoleplayScreen({
         captions={showCaptions}
         onMissed={missLine}
         onToggleCaptions={toggleCaptions}
-        coach={scenario.openEnded ? coachOn : undefined}
-        onToggleCoach={toggleCoach}
         onHint={openHelp}
         onEnd={hangUp}
         leaving={leaving}
