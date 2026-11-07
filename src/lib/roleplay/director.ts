@@ -752,6 +752,24 @@ function lastTurn(request: DirectorRequest): boolean {
  * Fixed parts first and the moving parts last, so the start of it is the same
  * from one turn to the next and can be served from the prompt cache.
  */
+/** 수업 통화 첫 침묵에 앞에 붙이는 "제 말 들렸어요?" — 학습자 앱 언어(앱 언어 = 감독 요청 nativeLanguage). */
+export const CAUGHT_IT: Partial<Record<string, string>> = {
+  ko: "제 말 들렸어요?",
+  en: "Did you catch that?",
+  es: "¿Me has oído?",
+  ja: "聞こえましたか？",
+  zh: "听到了吗？",
+  vi: "Bạn có nghe rõ không?",
+  fr: "Tu m'as entendu ?",
+  it: "Mi hai sentito?",
+  pt: "Você me ouviu?",
+  ru: "Вы меня услышали?",
+  id: "Kamu dengar tadi?",
+  ar: "هل سمعتني؟",
+  th: "ได้ยินไหม",
+  hi: "क्या आपने सुना?",
+};
+
 export function tutorSystemPrompt(input: {
   scenario: RoleplayScenario;
   bank: SentenceBank;
@@ -936,7 +954,7 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
     isCoaching(request, scenario) && !request.heard.trim() && !request.missed
       ? (request.silent ?? 1) >= 2
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
-        : `This turn: they said nothing. Two parts, in this order: (1) in ${native}, only a few words asking whether they caught what you said; (2) your last question again, in fewer and easier words, in ${target} — the question itself is never in ${native}. "assessment" is "stuck".`
+        : `This turn: they said nothing. Say only your last question again, in fewer and easier words of ${target} — nothing in ${native}, and do not ask whether they heard you: the app says that first, in their language. "assessment" is "stuck".`
       : "",
     request.study?.trim()
       ? request.studyOpen
@@ -1498,6 +1516,15 @@ export function parseDirection(
       if (!lettersOf(spokenNow).includes(lettersOf(repeatThis))) {
         say = { text: [spokenNow, repeatThis].filter(Boolean).join(" ") };
       }
+    }
+  }
+
+  // 수업 통화 첫 침묵(2026-11-07): "들었어요?"는 앱 언어 고정 한 마디로 앞에 붙인다 — 모델에게 맡기면 학습 언어로 묻는 일이 잦았다(운영 ja·es).
+  if (coaching && !request.heard.trim() && !request.missed && (request.silent ?? 1) < 2) {
+    const caught = CAUGHT_IT[request.nativeLanguage];
+    const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
+    if (caught && request.nativeLanguage !== request.targetLanguage && !spokenNow.startsWith(caught)) {
+      say = { text: [caught, spokenNow].filter(Boolean).join(" ") };
     }
   }
 

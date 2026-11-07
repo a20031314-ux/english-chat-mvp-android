@@ -1541,7 +1541,7 @@ test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 
     recorded: recordedLines(open, SCENARIOS, bank),
     request: request({ scenarioId: open.id, nodeId: "talk", coach: true, heard: "", silent: 1, targetLanguage: "es", nativeLanguage: "ar" }),
   });
-  assert.match(first, /whether they caught what you said/);
+  assert.match(first, /the app says that first, in their language/);
   const second = tutorSystemPrompt({
     scenario: open,
     bank,
@@ -1549,7 +1549,7 @@ test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 
     request: request({ scenarioId: open.id, nodeId: "talk", coach: true, heard: "", silent: 2, targetLanguage: "es", nativeLanguage: "ar" }),
   });
   assert.match(second, /Give a hint/);
-  assert.doesNotMatch(second, /whether they caught what you said/);
+  assert.doesNotMatch(second, /the app says that first/);
   const freeTalk = tutorSystemPrompt({
     scenario: open,
     bank,
@@ -1557,4 +1557,14 @@ test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 
     request: request({ scenarioId: open.id, nodeId: "talk" }),
   });
   assert.doesNotMatch(freeTalk, /When they said nothing at all/);
+});
+
+test("수업 통화 첫 침묵: 앱 언어 '들렸어요?'를 앞에 붙이고, 두 번째 침묵·자유대화엔 안 붙임", () => {
+  const raw = { say: "¿Qué tal tu día?", assessment: "stuck", next: "free" };
+  const first = parse(raw, { coach: true, heard: "", silent: 1, nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
+  assert.equal(first?.say && "text" in first.say ? first.say.text : "", "هل سمعتني؟ ¿Qué tal tu día?");
+  const second = parse({ say: "Hoy estoy…", assessment: "stuck", next: "free" }, { coach: true, heard: "", silent: 2, nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
+  assert.equal(second?.say && "text" in second.say ? second.say.text : "", "Hoy estoy…");
+  const free = parse(raw, { heard: "", nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
+  assert.equal(free?.say && "text" in free.say ? free.say.text : "", "¿Qué tal tu día?");
 });
