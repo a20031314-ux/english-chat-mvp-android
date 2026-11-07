@@ -42,6 +42,7 @@ import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
 import { progressIn, usedAt } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
+import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
@@ -1162,6 +1163,7 @@ function ClearDay({ ui, language, day }: { ui: UICopy; language: string; day: Da
               clearDayResults(language, day.day);
               clearQuizDay(language, day.day);
               forgetGrowthDay(language, day.day, (t) => dayOfSeconds(t));
+              forgetTalkDay(language, day.day, (ms) => dayOfSeconds(Math.floor(ms / 1000)));
               for (const call of day.calls) discardCall(call.id);
               for (const note of day.notes) removeCallNote(language, note.id);
               setAsking(false);

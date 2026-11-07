@@ -89,13 +89,16 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
   opening.forEach((line, i) => {
     if (!spoken(line) || fixedLine(line)) return;
     for (const key of keysOf(line)) if (!firstUses[key]) firstUses[key] = { at: input.at, line: line.text.trim() };
-    const extra = tags.uses[i] ?? [];
+    // 감지기가 이미 잡은 열쇠는 callHooks가 장부에 남겼으니 빼서, 한 통화에 두 번 used로 처음 봄 → 앎이 되지 않게(변경 감시 2026-11-07 major).
+    const detected = new Set(recapLedgerKeys(language, [line]).used);
+    const extra = (tags.uses[i] ?? []).filter((key) => !detected.has(key));
     if (extra.length) {
       for (const k of extra) ledger.push({ k, src: "call", r: "used" });
       used.push({ k: extra, x: line.text.trim(), t, s: "call" });
     }
   });
   write(`${FIRST_USE_KEY}.${language}`, firstUses, store);
+  // 표시 몫(모델이 고른 문법)은 한 통화에 열쇠마다 한 번만.
   if (ledger.length) noteLedger(language, [...new Map(ledger.map((one) => [one.k, one])).values()]);
   if (used.length) noteGrowthLines(language, { used }, store);
   // 3. 같은 종류 질문에 한 대답(그 질문 뒤 첫 내 줄)
@@ -103,10 +106,22 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
   for (const [at, kind] of Object.entries(tags.asks)) {
     const i = Number(at);
     const reply = opening.slice(i + 1).find((line) => line.who === "learner");
-    if (!reply || !spoken(reply) || opening.slice(i + 1, opening.indexOf(reply)).some((line) => line.who === "tutor")) continue;
+    if (!reply || !spoken(reply) || fixedLine(reply) || opening.slice(i + 1, opening.indexOf(reply)).some((line) => line.who === "tutor")) continue;
     const answer: Answer = { at: input.at, q: opening[i]!.text.trim(), a: reply.text.trim(), n: segmentWords(reply.text, language).filter((token) => LETTER.test(token)).length };
     const was = answers[kind];
     answers[kind] = was ? { first: was.first, last: answer } : { first: answer, last: answer };
   }
   write(`${ANSWERS_KEY}.${language}`, answers, store);
+}
+
+/** Logbank "그날 지우기": 그날(dayOf — 그 폰 날짜, ms) 남긴 대답·처음 쓴 것을 지운다. 질문 짝은 처음·마지막 중 그날 것이 있으면 그 종류째. */
+export function forgetTalkDay(language: string, day: string, dayOf: (ms: number) => string, store: Store | null = browserStore()): void {
+  const answers = readAnswers(language, store);
+  for (const [kind, pair] of Object.entries(answers) as [QuestionKind, { first: Answer; last: Answer }][]) {
+    if (pair && (dayOf(pair.first.at) === day || dayOf(pair.last.at) === day)) delete answers[kind];
+  }
+  write(`${ANSWERS_KEY}.${language}`, answers, store);
+  const uses = readFirstUses(language, store);
+  for (const [key, use] of Object.entries(uses)) if (dayOf(use.at) === day) delete uses[key];
+  write(`${FIRST_USE_KEY}.${language}`, uses, store);
 }

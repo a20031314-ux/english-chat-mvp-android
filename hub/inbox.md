@@ -238,9 +238,6 @@
 - 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:95 — 옮기기 실패한 묶음은 KV에 안 남아 요청마다 모델을 다시 부르고, meterRequest는 요청당 1번이라 원가가 적게 잡힘 (실패 묶음 짧은 TTL 표시 또는 묶음마다 meter).
 - 2026-11-06 watch → dev: [my] src/lib/curriculum/quiz.ts:1340 — 카드 뜻 가림 오답의 "빈도 순위 ±200"이 GAP_SOURCES 들어간 차례라 단계가 먼 낱말도 가깝게 잡혀 한눈에 지워지는 오답이 남음 (QuizSource에 빈도 순위를 실어 그 값으로 비교, 순위 없는 u|·검색 낱말은 near에서 빼기).
 - 2026-11-06 watch → dev: [my] hub/QUIZ.md:70 — 0-4가 c31928d 카드 퀴즈 규칙(가까운 순위 오답·앞 문제 보기 뺌·예문 돌림·쓴 말 낱말 가림·개편 단어 시험·방금 묶음 열쇠 뺌)으로 안 고쳐짐 (0-4 갱신, RULES 11 ⑥).
-- 2026-11-07 watch → dev: [ai] src/lib/roleplay/talkMemory.ts:94 — 통화 끝 Haiku 문법 표시(uses)를 확인 없이 장부 used로, 감지기 몫과 중복도 안 빼서 같은 통화에 new→known(USED_LIFTS) → 퀴즈·다시 볼 것에서 빠짐 (표시 몫은 체크 셋을 안 올리는 r로 남기거나 대화 비교에만, 최소한 감지기가 잡은 열쇠는 빼기) — major, 앱 빌드
-- 2026-11-07 watch → dev: [my] src/components/studyMap/Logbank.tsx:1164 — 그날 지우기가 talkAnswers.v1·talkFirstUse.v1을 안 지워 지운 날 문장이 대화 비교에 남음 (talkMemory에 그날 지우기 함수)
-- 2026-11-07 watch → dev: [ai] src/lib/roleplay/talkMemory.ts:109 — 질문 짝 '지금' 대답에 고쳐진(틀린) 줄도 들어감 (fixedLine이면 건너뛰기)
 - 2026-11-07 watch → dev: [ai] src/app/api/roleplay/context/route.ts:89 — 끝 호출 처음 20줄·max_tokens 1200인데 opCost roleplayContext는 기본 어림 (estimated 토큰 고치기, 서버만)
 - 2026-11-07 watch → dev: [my] src/components/studyMap/Growth.tsx:236 — 처음 써 본 것 칩 이름이 없으면 "2:1" 같은 내부 열쇠가 화면에 (빼거나 종류 이름으로)
 - 2026-11-07 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:254 — 첫 측정 ③ 오르기가 표현·문법 문제를 불러오기 전(null)이나 그 앱 언어에 문법 문제가 없으면 바로 멈추고 결과 장에 묻지 않은 "문법 1단계"를 보임, startStageOf(firstCheck.ts:340)는 문법만 봐 표현 결과가 시작 단계에 안 들어감 (불러올 때까지 기다리고, 묻지 않은 갈래는 ─, 시작 단계는 잰 갈래로)

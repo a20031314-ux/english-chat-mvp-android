@@ -46,3 +46,20 @@ test("표시 적용: 문형 칸 숫자·처음 쓴 것·같은 질문 대답(처
   assert.equal(pair.first.a, "Playa");
   assert.ok(pair.last.n > pair.first.n);
 });
+
+test("그날 지우기: 그날 대답·처음 쓴 것을 지움, 고쳐진 대답은 짝에 안 들어감", async () => {
+  const { forgetTalkDay } = await import("./talkMemory.ts");
+  const store = memoryStore();
+  const language = "es";
+  const g = grammarList(language);
+  const day1 = Date.UTC(2026, 10, 1, 3);
+  saveCallNote(language, { id: "x", at: day1, secs: 300, title: "t", fixed: 0, hints: 0, redone: 0 } as never, store);
+  applyTalkTags({ language, callId: "x", said: [{ who: "tutor", text: "¿Qué tal el día?" }, { who: "learner", text: "Yo estar bien", better: "Estoy bien" }, { who: "tutor", text: "¿Y el fin de semana?" }, { who: "learner", text: "Fui a la playa" }], tags: { uses: { 3: [`g|${g[8]!.id}`] }, asks: { 0: "day", 2: "weekend" } }, at: day1 }, store);
+  const answers = readAnswers(language, store);
+  assert.equal(answers.day, undefined, "고쳐진 대답은 안 셈");
+  assert.ok(answers.weekend);
+  const iso = (ms: number) => new Date(ms).toISOString().slice(0, 10);
+  forgetTalkDay(language, iso(day1), iso, store);
+  assert.deepEqual(readAnswers(language, store), {});
+  assert.deepEqual(readFirstUses(language, store), {});
+});
