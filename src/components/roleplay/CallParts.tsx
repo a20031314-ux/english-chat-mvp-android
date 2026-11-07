@@ -50,21 +50,11 @@ export function CallStage({
   coach,
   gender,
   onCaptionTap,
-  pick,
   studyMap,
 }: {
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
   onCaptionTap?: () => void;
-  /** 통화 시작: 자유대화 / 공부. 고르기 전에는 인사가 없다. */
-  pick?: {
-    ask: string;
-    talk: string;
-    study: string;
-    last: "talk" | "study";
-    onTalk: () => void;
-    onStudy: () => void;
-  } | null;
-  /** 공부 모드: 로그뱅크 육각형. 부족한 칸이 있을 때만. */
+  /** 수업 통화: 로그뱅크 육각형. 부족한 칸이 있을 때만. */
   studyMap?: ReactNode;
   language: string;
   /** 이 통화의 튜터(통화를 열 때 고정). 없으면 지금 고른 튜터. */
@@ -102,25 +92,7 @@ export function CallStage({
         </p>
         {studyMap}
         <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start gap-3" aria-live="polite">
-          {pick ? (
-            <div data-call-mode className="flex w-full flex-col items-center gap-3">
-              <p className="text-note text-ink">{pick.ask}</p>
-              <div className="flex w-full gap-2">
-                {(["talk", "study"] as const).map((mode) => (
-                  <button
-                    key={mode}
-                    type="button"
-                    data-call-mode-pick={mode}
-                    aria-pressed={pick.last === mode}
-                    onClick={mode === "talk" ? pick.onTalk : pick.onStudy}
-                    className={`flex-1 rounded-xl border px-3 py-3 text-note font-semibold ${pick.last === mode ? "border-white/50 bg-white/15 text-ink" : "border-white/15 text-slate-300"}`}
-                  >
-                    {mode === "talk" ? pick.talk : pick.study}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : speaker === "thinking" ? (
+          {speaker === "thinking" ? (
             <span aria-hidden className="composing-dots inline-flex gap-1 text-slate-400">
               <span>•</span>
               <span>•</span>

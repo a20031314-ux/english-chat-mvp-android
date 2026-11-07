@@ -170,9 +170,6 @@ export function useStoredToggle(key: string, fallback = false): [boolean, () => 
   return [on, toggle];
 }
 
-/** AI 통화 튜터 수업 켬/끔(🎓, 2026-11-02) — 이 기기에 기억, 그냥 대화에서만. */
-export const CALL_COACH_KEY = "callCoach.v1";
-
 /** 통화 자막 켬/끔 — AI 통화와 사람 통화가 같은 값(한쪽에서 켜면 다른 쪽도, 2026-11-01). */
 export const CALL_CAPTIONS_KEY = "roleplayCaptions";
 

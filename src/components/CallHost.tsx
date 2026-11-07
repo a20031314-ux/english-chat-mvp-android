@@ -19,7 +19,7 @@ import type { SavedConversation } from "@/lib/roleplay/saved";
  * AI 튜터와의 통화 — 앱 어디서나 떠 있는 층(2026-10-23, `hub/drafts/conversation-unify-2026-10-23.md` 3단계).
  *
  * 예전 통화 탭의 첫 화면(팩·오늘 해볼 것·안내·남은 시간·내 문장 말해보기·지난 대화)을 없애고, 1:1처럼 📞를 누르면 바로 통화.
- * - 시작: `startCall`(AI 튜터 줄·AI 대화 머리의 📞), `practice`(tab roleplay — 오늘의 팩·오늘 해볼 것·지도).
+ * - 시작: `startCall`(AI 튜터 줄·AI 대화 머리의 📞 = 자유대화, My 수업 문 = `lesson: true`), `practice`(tab roleplay — My 써 보기 카드 등, 수업 통화).
  * - 끝나면 통화는 통화 기록 목록(CallList)에만 남는다 — 채팅과 따로(2026-10-27). `openCall` id 없음 = 목록, id = 돌아보기.
  * - 마이크는 사람이 누른 뒤에만 연다(링크 `?screen=roleplay`는 통화를 열지 않고 AI 대화로).
  */
@@ -48,6 +48,8 @@ export function CallHost({
   const [playing, setPlaying] = useState<string | null>(() => (arrived && openTalk ? openTalk : null));
   const [practice, setPractice] = useState<PracticeRequest | null>(arrived);
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
+  // 수업 통화인가(My에서 연 것 — 들어올 때 이미 온 연습 요청도 수업, 2026-11-07).
+  const [lesson, setLesson] = useState(() => Boolean(arrived));
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [ownLine, setOwnLine] = useState(false);
   const [listing, setListing] = useState(false);
@@ -64,17 +66,20 @@ export function CallHost({
         takeAppIntent("practice", (detail) => detail.tab === "roleplay");
         setPractice(request);
         setResuming(null);
+        // My에서 연 연습(써 보기 카드 등)은 수업 통화(2026-11-07).
+        setLesson(true);
         setPlaying(openTalk);
       }),
     [enabled, openTalk],
   );
   useEffect(
     () =>
-      onAppIntent("startCall", ({ resumeId }) => {
+      onAppIntent("startCall", ({ resumeId, lesson: asLesson }) => {
         if (!enabled || !openTalk) return;
         const carry = resumeId ? (readCalls().find((row) => row.id === resumeId) ?? null) : null;
         setPractice(null);
         setResuming(carry);
+        setLesson(Boolean(asLesson));
         setPlaying(carry?.scenarioId ?? openTalk);
       }),
     [enabled, openTalk],
@@ -104,10 +109,12 @@ export function CallHost({
           resume={resuming}
           onSaved={keepCall}
           practice={practice}
+          lesson={lesson}
           onClose={() => {
             setPlaying(null);
             setResuming(null);
             setPractice(null);
+            setLesson(false);
           }}
         />
       ) : null}

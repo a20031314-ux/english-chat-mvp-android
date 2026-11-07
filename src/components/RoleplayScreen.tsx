@@ -8,7 +8,7 @@ import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
-import { CALL_CAPTIONS_KEY, CALL_COACH_KEY, CALL_MEANING_KEY } from "@/components/speech/CallKit";
+import { CALL_CAPTIONS_KEY, CALL_MEANING_KEY } from "@/components/speech/CallKit";
 import { readLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
@@ -112,6 +112,7 @@ export function RoleplayScreen({
   resume,
   onSaved,
   practice: practiceRequest,
+  lesson: lessonRequest = false,
 }: {
   scenarioId: string;
   /** What the learner speaks, so the director's notes are written in it. */
@@ -135,6 +136,11 @@ export function RoleplayScreen({
    * the conversation with each phrase ticked once said (learner/practice.ts).
    */
   practice?: PracticeRequest | null;
+  /**
+   * 수업 통화(2026-11-07 사용자 "커리큘럼과 자유대화는 외부에서 분리"): My에서 연 통화 — 튜터가 말로 짚고 다시 말해 보기.
+   * 📞(대화·사람 탭)은 늘 자유대화. 이어서 하기는 그 기록의 mode를 따른다.
+   */
+  lesson?: boolean;
 }) {
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("call"), []);
@@ -170,10 +176,9 @@ export function RoleplayScreen({
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY, lettersBeginner);
   // 자막 해석 켬/끔(2026-11-06) — 자막 줄을 누르면 바뀌고 다음 줄·다음 통화도 그대로.
   const [showMeaning, toggleMeaning] = useStoredToggle(CALL_MEANING_KEY, lettersBeginner);
-  // 튜터 수업(2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만. 켬/끔은 통화를 열 때 고르는 공부/자유대화뿐(통화 중 🎓 버튼은 2026-11-07에 뺌).
-  const [coachOn, toggleCoach] = useStoredToggle(CALL_COACH_KEY);
-  // 그냥 대화를 열면 인사 전에 자유대화/공부를 고른다. 이어서 하기는 이미 고른 통화라 다시 묻지 않는다.
-  const [picking, setPicking] = useState(false);
+  // 튜터 수업(2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만. 수업 통화인지는 들어온 문이 정한다
+  // (My = 수업, 📞 = 자유대화, 2026-11-07) — 통화 안 고르기·🎓 버튼 없음. 이어서 하기는 그 기록의 mode.
+  const coachOn = Boolean(catalogScene?.openEnded && (resume && resume.scenarioId === scenarioId ? resume.mode === "lesson" : lessonRequest));
   /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. tries = 그 문장을 말해 보라고 한 횟수. */
   const [redo, setRedo] = useState<{ line: string; tries: number }>({ line: "", tries: 0 });
   const redoLine = redo.line;
@@ -284,17 +289,17 @@ export function RoleplayScreen({
     // (saved.ts).
     const picked = carrying ? resumeFrom(carrying, scenario, bank, Date.now()) : null;
     const fresh = picked ? picked.state : startSession(scenario);
-    const needsPick = Boolean(scenario.openEnded && !carrying);
-    setPicking(needsPick);
+    // 수업 통화는 첫 마디를 부족한 칸으로(아래 lead 효과), 없으면 보통 인사. 자유대화·이어서 하기는 바로.
+    const openLesson = Boolean(scenario.openEnded && !carrying && coachOn);
     setState(fresh);
-    setInstruction(needsPick ? null : currentInstruction(scenario, bank, fresh));
+    setInstruction(openLesson ? null : currentInstruction(scenario, bank, fresh));
     setSaid(picked ? picked.said : []);
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
     setPicture(null);
     setStudyName("");
-    setLead(0);
+    setLead(openLesson ? 1 : 0);
     setDirecting(false);
     factsKept.current = false;
     fixesKept.current = false;
@@ -339,6 +344,7 @@ export function RoleplayScreen({
       scenarioId: scenario.id,
       language: scenario.language,
       title: titleFor(said, scenario.title),
+      ...(coachOn ? { mode: "lesson" as const } : {}),
       startedAt: startedAt.current || now,
       updatedAt: now,
       ...(state.finished ? { finishedAt: now } : {}),
@@ -932,7 +938,7 @@ export function RoleplayScreen({
     };
   }, []);
 
-  // 공부를 고르면, 부족한 칸이 있을 때만 육각형을 띄우고 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
+  // 수업 통화는, 부족한 칸이 있을 때만 육각형을 띄우고 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
   useEffect(() => {
     if (lead === 0 || !scenario) return;
     const session = stateRef.current;
@@ -1005,13 +1011,6 @@ export function RoleplayScreen({
   const headTitle = scenario?.openEnded ? (coachOn ? ui.callModeStudy : ui.callModeTalk) : (scenario?.title ?? "");
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
-  const chooseMode = (study: boolean) => {
-    if (!scenario || !state || !picking) return;
-    if (coachOn !== study) toggleCoach();
-    setPicking(false);
-    if (study) setLead((n) => n + 1);
-    else setInstruction(currentInstruction(scenario, bank, state));
-  };
   const hangUp = () => {
     if (!said.some((line) => line.who === "learner")) {
       onClose();
@@ -1049,7 +1048,7 @@ export function RoleplayScreen({
         id: callId,
         at: startedAt.current || Date.now(),
         secs: activeBefore.current + Math.max(0, Math.round((Date.now() - openedAt.current) / 1000)),
-        title: scenario.title,
+        title: headTitle,
         fixed: tally.fixed,
         hints: tally.hints,
         redone: tally.redone ?? 0,
@@ -1235,18 +1234,6 @@ export function RoleplayScreen({
         }
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
         coach={coachCard}
-        pick={
-          picking
-            ? {
-                ask: ui.callModeAsk,
-                talk: ui.callModeTalk,
-                study: ui.callModeStudy,
-                last: coachOn ? "study" : "talk",
-                onTalk: () => chooseMode(false),
-                onStudy: () => chooseMode(true),
-              }
-            : null
-        }
         studyMap={
           coachOn && picture ? (
             <div data-call-study={picture.cell.id} className="pointer-events-none w-full max-w-[220px]">

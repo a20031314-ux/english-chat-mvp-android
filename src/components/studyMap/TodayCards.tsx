@@ -135,6 +135,7 @@ function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
       {view.today.cards.map((card, index) => (
         <CardRow key={`${card.kind}-${index}`} ui={ui} card={card} done={view.done[index] ?? false} soft={tone.soft} language={language} />
       ))}
+      <LessonDoor ui={ui} />
     </section>
   );
 }
@@ -178,6 +179,25 @@ function CardRow({ ui, card, done, soft, language }: { ui: UICopy; card: TodayCa
         <span className="text-caption text-slate-400">{why}</span>
       </span>
       <span className="shrink-0 text-caption text-slate-300">{call ? `📞 ${ui.callModeStudy}` : `▶ ${ui.keepTitle}`}</span>
+    </button>
+  );
+}
+
+/**
+ * 수업 통화 문(2026-11-07 사용자 "커리큘럼과 자유대화는 외부에서 분리"): My에서만 연다 — 📞(대화·사람 탭)은 자유대화.
+ * 튜터가 큰 실수를 말로 짚고 다시 말해 보게 하는 통화(RoleplayScreen lesson). 통화 기록에도 수업으로 따로 남음.
+ */
+function LessonDoor({ ui }: { ui: UICopy }) {
+  return (
+    <button
+      type="button"
+      data-today-lesson
+      onClick={() => sendAppIntent("startCall", { lesson: true })}
+      className="flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
+    >
+      <span aria-hidden className="flex h-6 w-6 shrink-0 items-center justify-center text-title">📞</span>
+      <span className="min-w-0 flex-1 text-chat font-semibold text-ink">{ui.callModeStudy}</span>
+      <span aria-hidden className="shrink-0 text-caption text-slate-300">›</span>
     </button>
   );
 }
