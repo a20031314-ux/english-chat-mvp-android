@@ -36,6 +36,15 @@
 
 ## 새 보고
 
+### 2026-11-07 · 변경 감시 · 리뷰 major 1: 통화 끝 문법 표시 중복 제거가 그 줄 하나만 봐서 같은 통화 used 두 번 → '앎' 그대로 · 돈·광고·퀴즈 그대로 · 광고 새 안 없음
+- 무엇을: b4a8d3e..bc45c05, 커밋 6개(코드 3개, 파일 8개), 줄 my·ai·공통 — Logbank 표 학습·활용 두 칸, 학습 곡선 선 = 활용 누적, 지난 감시 지적 고침(talkMemory).
+- 결과: 비용표·손익·광고 지도·퀴즈 원인 모두 그대로(바뀐 칸 0, 알릴 것 0). 리뷰 major 1 · minor 1.
+  - major(두 번 확인, 맞음): `src/lib/roleplay/talkMemory.ts:93` — 지난 지적의 고침이 절반. 중복 제거가 `recapLedgerKeys(language, [line])`(그 줄 하나)뿐인데 `callHooks.ts:74`는 통화 전체 `said`로 used를 남김 → 감지기가 다른 줄에서 잡은 열쇠를 모델이 이 줄에 표시하면 한 통화에 used 두 번, `checkState.ts` USED_LIFTS로 처음 봄 → 앎. `logLedger` 2초 합치기로는 못 막음.
+  - minor: `Logbank.tsx:1508` 곡선 상세 "학습 n"은 새로+복습 합인데 색 견본은 "새로" 색, 위 표의 "학습"(기간 안 열쇠 수)과 같은 이름에 다른 숫자.
+  - 광고: 새 안 없음, 6개 이어 씀(지금 +780,982 → 안 넣으면 +554,475원/1,000명·월, 무료 한 사람 +753 → +519원). 바뀐 화면(Logbank 표·곡선)은 새 자리 없음 — 표 칸이 여는 LogSheet 끝은 기존 4번 안.
+- 제안: 2번(dev) 채팅이 talkMemory에서 반복문 밖 `recapLedgerKeys(language, said)` 집합으로 빼기(앱 빌드 필요). 화면 점검은 마지막 실행이 가까워 건너뜀.
+- 결정:
+
 ### 2026-11-07 · 가상 사용자 화면 점검 · 168장 · 새 문제 없음 — `icons-create` 4조합이 새로 장면 갱신 필요
 - 무엇을: 지금 main(690c3df) www, `sim:screens` ja:ko·en:ja·es:ar·en:ko 42장면, 조합별 한 장 모아 직접 봄
 - 결과: 막힘 48 — 모두 점검 쪽. 알려진 44(My 첫 화면 단계 고르기 `map-leave`·`selfcheck`·`ledger`·`notes`·`notes-words`·`vocab-search`·`growth`, `map`·`board-likes`·`sentence-ask`·`word-card`). 새로 `icons-create` 4조합: 아이콘이 1:1 🙂로 옮긴 뒤 묶음 시트(Gatos)가 아이콘 시트 위에 겹쳐 뜨는데 장면이 닫기 ×를 `.first()`(가려진 아래 시트)로 눌러 위 시트가 안 닫히고 "새 묶음"을 못 누름 — **장면 갱신 필요**(`.last()`로). 프로필 시트 맨 위층 검사 3장면 4조합 모두 ✓(UI 숨겨짐 없음). 글자 잘림·다른 언어 문구·아랍어 방향 깨짐·빈 화면 새로 없음
