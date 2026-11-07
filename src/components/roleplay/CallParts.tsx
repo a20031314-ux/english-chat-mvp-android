@@ -147,7 +147,7 @@ export function CallStage({
           <TalkingBars on={speaker === "learner"} />
         )}
         {coach ? (
-          <CoachCardView card={coach} />
+          <CoachCardView key={`${coach.said}|${coach.right}`} card={coach} />
         ) : goal ? (
           <p className="max-w-md text-meta text-slate-400">{goal}</p>
         ) : null}
@@ -158,12 +158,19 @@ export function CallStage({
 
 /**
  * 튜터 수업 카드(2026-11-02): ✎ 고친 말이면 내 말(틀린 곳 빨간 취소선) → 고친 문장, 💬 내 말·부서진 말이면 흐리게 내 말 → 학습 언어 문장,
- * 💡 표현이면 건넨 표현만. 고친 문장 앞 🔁(다시 말할 차례) / ✓(맞힘). 까닭 한 줄은 앱 언어, 작게. 화면 속 설명 글 없이 아이콘만.
+ * 💡 표현이면 건넨 표현만(자유대화의 💡는 내 말 → 더 자연스러운 말). 고친 문장 앞 🔁(다시 말할 차례) / ✓(맞힘). 까닭 한 줄은 앱 언어, 작게. 화면 속 설명 글 없이 아이콘만.
  */
 function CoachCardView({ card }: { card: CoachCard }) {
   const icon = card.kind === "offer" ? "💡" : card.kind === "meant" ? "💬" : "✎";
+  // 자유대화 카드(quiet): 다시 말할 차례가 아니라 🔁 대신 →, 틀린 말이면 노란 테두리로 한 번 번쩍(coach-pop), 한 차례 지나면 흐림(old).
+  const tone = card.quiet && card.kind !== "offer" ? "border-warn/60 bg-warn/10" : "border-white/10 bg-white/5";
+  const lead = card.kind === "offer" && !card.passed ? "💡" : card.passed ? "✓" : card.quiet ? "→" : "🔁";
   return (
-    <div className="w-full max-w-md rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-start" data-call-coach={card.kind}>
+    <div
+      className={`w-full max-w-md rounded-xl border px-3 py-2.5 text-start transition-opacity ${tone} ${card.quiet && !card.old ? "coach-pop" : ""} ${card.old ? "opacity-50" : ""}`}
+      data-call-coach={card.kind}
+      data-call-coach-quiet={card.quiet ? (card.old ? "old" : "new") : undefined}
+    >
       {card.kind !== "offer" && card.said ? (
         <p className="flex items-start gap-1.5 text-meta text-slate-400">
           <span aria-hidden>{icon}</span>
@@ -171,7 +178,7 @@ function CoachCardView({ card }: { card: CoachCard }) {
         </p>
       ) : null}
       <p className={`flex items-start gap-1.5 text-body font-medium ${card.passed ? "text-good" : "text-ink"} ${card.kind !== "offer" && card.said ? "mt-1" : ""}`} data-call-redo>
-        <span aria-hidden>{card.kind === "offer" && !card.passed ? "💡" : card.passed ? "✓" : "🔁"}</span>
+        <span aria-hidden className={lead === "→" ? "inline-block rtl:-scale-x-100" : undefined}>{lead}</span>
         <bdi dir="auto">{card.right}</bdi>
       </p>
       {card.why ? <p className="mt-1 text-meta text-slate-400" dir="auto">{card.why}</p> : null}

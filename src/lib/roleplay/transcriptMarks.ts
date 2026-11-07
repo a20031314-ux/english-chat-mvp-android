@@ -121,14 +121,26 @@ export function nextRedo(current: RedoWait, retry: "ask" | "pass" | "miss" | und
  * fix = 내 말을 고침(틀린 곳 표시 → 고친 문장) · meant = 내 말(앱 언어)·부서진 말을 학습 언어 문장으로 · offer = 맞게 말했는데 더 자연스러운 표현.
  * why = 고친 까닭 한 줄(앱 언어), passed = 다시 말해서 맞힘(다음 보통 차례에 사라짐).
  */
-export type CoachCard = { kind: "fix" | "meant" | "offer"; said: string; right: string; why: string; passed?: boolean };
+/**
+ * quiet = 자유대화 카드(2026-11-07): 튜터는 말로 짚지 않고 화면에만 — 다시 말해 보기(🔁) 없음.
+ * old = 그 뒤 한 차례가 지나 흐려진 카드(그다음 차례에 사라짐).
+ */
+export type CoachCard = { kind: "fix" | "meant" | "offer"; said: string; right: string; why: string; passed?: boolean; quiet?: boolean; old?: boolean };
 
 export function nextCoachCard(
   current: CoachCard | null,
-  turn: { retry?: "ask" | "pass" | "miss"; better?: string; meant?: string; note?: string; offer?: boolean; heard: string; gaveUp: boolean },
+  turn: { retry?: "ask" | "pass" | "miss"; better?: string; meant?: string; note?: string; offer?: boolean; smoother?: string; heard: string; gaveUp: boolean; quiet?: boolean },
 ): CoachCard | null {
   const right = (turn.meant || turn.better || "").trim();
   const why = (turn.note ?? "").trim();
+  // 자유대화: 고친 말·더 자연스러운 말을 그 차례에 바로 카드로, 새 카드가 없으면 한 차례 흐리게 남겼다가 사라짐.
+  if (turn.quiet && !turn.retry) {
+    const said = turn.heard.trim();
+    if (right && said) return { kind: turn.meant ? "meant" : "fix", said, right, why, quiet: true };
+    const smoother = (turn.smoother ?? "").trim();
+    if (smoother && said) return { kind: "offer", said, right: smoother, why: "", quiet: true };
+    return current?.quiet && !current.old ? { ...current, old: true } : null;
+  }
   if (turn.retry === "ask") {
     if (!right) return current;
     return { kind: turn.offer ? "offer" : turn.meant ? "meant" : "fix", said: turn.heard.trim(), right, why: turn.offer ? "" : why };

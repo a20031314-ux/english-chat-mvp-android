@@ -318,8 +318,10 @@ test("an open conversation has nowhere to be sent home to", () => {
   });
   assert.match(prompt, /There is nothing to get done: this is just a conversation/);
   assert.match(prompt, /They chose free conversation for this call/);
-  assert.match(prompt, /Leave "note", "better", "meant" and "smoother" empty/);
-  assert.doesNotMatch(prompt, /Fill it whenever one would notice something/);
+  // 자유대화도 고친 문장은 쓴다 — 말로는 안 짚고 화면에만(2026-11-07).
+  assert.match(prompt, /Corrections are written, never spoken/);
+  assert.match(prompt, /Never correct a sentence out loud/);
+  assert.match(prompt, /Fill it whenever one would notice something/);
   // 고른 튜터(lib/tutorGender.ts)의 이름·성별 — 없으면 그 언어의 예전 튜터.
   assert.match(prompt, new RegExp(`You are ${chatPartnerForLanguage(open.language).givenName}, the`));
   const chosen = tutorSystemPrompt({
@@ -509,7 +511,7 @@ test("a struggling learner is not led off the list", () => {
   assert.deepEqual(stuck?.next, { step: "size-answer" });
 });
 
-test("자유대화는 고친 문장을 남기지 않는다", () => {
+test("자유대화는 고친 문장·짚는 한 줄을 화면용으로 남기고 말은 그대로", () => {
   const direction = parse(
     {
       assessment: "on_track",
@@ -521,9 +523,10 @@ test("자유대화는 고친 문장을 남기지 않는다", () => {
     { heard: "I go to gym yesterday", scenarioId: open.id, nodeId: "talk" },
     open,
   );
-  assert.equal(direction?.better, undefined);
-  assert.equal(direction?.note, "");
-  assert.match(direction?.say && "text" in direction.say ? direction.say.text : "", /Nice/);
+  assert.equal(direction?.better, "I went to the gym yesterday.");
+  assert.equal(direction?.note, "시제");
+  assert.equal(direction?.retry, undefined);
+  assert.match(direction?.say && "text" in direction.say ? direction.say.text : "", /^Nice! Was it busy\?$/);
 });
 
 test("their own sentence, said better, rides under their own line", () => {
@@ -1356,7 +1359,7 @@ test("튜터 수업: retry를 읽고, 고친 문장 없는 ask·대본 장면의
     open,
   );
   assert.equal(notCoaching?.retry, undefined);
-  assert.equal(notCoaching?.note, "", "그냥 대화는 고친 말이 있으면 note를 비운다(예전 그대로)");
+  assert.equal(notCoaching?.note, "어제 일이라 went", "그냥 대화도 짚는 한 줄은 화면 카드로(2026-11-07)");
 });
 
 test("튜터 수업: 다시 말해 보라고 한 차례에는 다음 질문(follow)을 얹지 않는다", () => {

@@ -109,3 +109,16 @@ test("튜터 수업 카드: 고침 → 아직 → 맞힘 → 다음 차례에 �
   assert.deepEqual(offer, { kind: "offer", said: "Vi una película el fin de semana", right: "Vi una peli el finde.", why: "" });
   assert.equal(nextCoachCard(null, { retry: "pass", heard: "x", gaveUp: false }), null, "기다리는 카드 없이 온 pass는 무시");
 });
+
+test("자유대화 카드: 말로 안 짚은 고친 말·더 자연스러운 말을 바로, 한 차례 흐리게 남겼다 사라짐", () => {
+  const heard = "Ayer yo voy a la playa";
+  const fix = nextCoachCard(null, { better: "Ayer fui a la playa.", note: "어제 일이라 과거형", heard, gaveUp: false, quiet: true });
+  assert.deepEqual(fix, { kind: "fix", said: heard, right: "Ayer fui a la playa.", why: "어제 일이라 과거형", quiet: true });
+  const dim = nextCoachCard(fix, { heard: "Me gustó mucho", gaveUp: false, quiet: true });
+  assert.equal(dim?.old, true);
+  assert.equal(nextCoachCard(dim, { heard: "Sí", gaveUp: false, quiet: true }), null);
+  const smooth = nextCoachCard(null, { smoother: "週末は海に行ってきました。", heard: "週末は海に行きました。", gaveUp: false, quiet: true });
+  assert.equal(smooth?.kind, "offer");
+  assert.equal(smooth?.quiet, true);
+  assert.equal(nextCoachCard(null, { heard: "", better: "x", gaveUp: false, quiet: true }), null, "들은 말 없으면 카드 없음");
+});

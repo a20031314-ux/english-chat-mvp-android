@@ -161,3 +161,15 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
 @media (prefers-reduced-motion: reduce) {
   .composing-dots > span { animation: none; opacity: 0.6; }
 }
+/* 통화 자유대화 카드가 뜰 때 한 번 튀어나옴(CallParts CoachCardView quiet). */
+.coach-pop {
+  animation: coach-pop 0.5s ease-out;
+}
+@keyframes coach-pop {
+  0% { opacity: 0; transform: translateY(6px) scale(0.96); }
+  60% { opacity: 1; transform: translateY(0) scale(1.03); }
+  100% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coach-pop { animation: none; }
+}

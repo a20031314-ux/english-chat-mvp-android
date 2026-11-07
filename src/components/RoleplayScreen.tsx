@@ -537,8 +537,11 @@ export function RoleplayScreen({
             meant,
             note: direction?.note,
             offer: direction?.offer,
+            smoother: direction?.smoother,
             heard: instruction.request.heard,
             gaveUp: retry === "miss" && !waitNext.line,
+            // 자유대화(🎓 끔): 말로 안 짚은 고친 말을 화면 카드로 바로(2026-11-07).
+            quiet: Boolean(scenario.openEnded && !coachOn),
           }),
         );
       }
@@ -998,6 +1001,8 @@ export function RoleplayScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lead]);
 
+  // 그냥 대화는 머리에 고른 모드 이름(앱 언어) — 예전엔 학습 언어 장면 이름 "Just talk"가 늘 떴음(점검 2026-11-07).
+  const headTitle = scenario?.openEnded ? (coachOn ? ui.callModeStudy : ui.callModeTalk) : (scenario?.title ?? "");
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
   const chooseMode = (study: boolean) => {
@@ -1093,7 +1098,7 @@ export function RoleplayScreen({
         {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
         <CallHeader
           ui={ui}
-          title={scenario.title}
+          title={headTitle}
           subtitle={timeLine ?? scenario.tutorRole}
           onClose={onClose}
         />
