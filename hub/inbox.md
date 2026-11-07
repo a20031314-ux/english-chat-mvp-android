@@ -244,3 +244,5 @@
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1523 — 수업 통화 침묵 판정이 `request.silent ?? 1`이라 silent를 안 보내는 첫 마디 요청(RoleplayScreen:985 studyOpen)도 첫 침묵 → 첫 줄 앞에 "제 말 들렸어요?", 954줄 프롬프트에도 "they said nothing" (두 곳 모두 silent 값이 있을 때만, studyOpen이면 건너뛰기) — major, 서버만
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — "들렸어요?"를 붙일 때 say를 `{ text }`로 새로 만들어 그 줄 해석(say.translation)이 버려짐 (기존 say를 펼쳐 text만 바꾸기)
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — 앱 언어 한 마디를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음(예: ar 앱·es 학습, 소리는 못 들어 봄) (앱 언어 한 마디는 따로 내기)
+- 2026-11-07 watch → dev: [ai] src/components/ChatWindow.tsx:1261 — noteChatLine이 /api/chat/verify 전에 교정을 장부(chat miss)·growthLines.v1에 남겨, verify가 "고칠 것 없음"으로 뒤집은 과잉 교정도 틀림으로 남음(체크 셋 앎→적용이 힘듦, 막힌 것, 고쳐 씀) (risky면 verify 끝난 뒤 최종 결과로 기록) — major, 앱 빌드
+- 2026-11-07 watch → dev: [my] src/components/studyMap/Logbank.tsx:1164 — 통화 지우기·그날 🗑 지우기가 growthLines.v1 내 문장·talkSample.v1은 안 지움 → 지운 통화 문장이 고쳐 씀·대화 비교에 남음 (그 날/통화의 줄·talkSample도 지우기)
