@@ -21,6 +21,13 @@ export function grammarList(language: string): { id: string; name: string }[] {
   return (ladderFor(language)?.stages ?? []).flatMap((stage) => stage.grammar.map((grammar, index) => ({ id: `${stage.order}:${index}`, name: grammar.name.en ?? Object.values(grammar.name)[0] ?? "" }))).filter((one) => one.name);
 }
 
+/** 지시 안 문법 코드 — 줄 번호("3.")와 헷갈리지 않게 "G2-0"(2026-11-07 운영 확인: "1:1"꼴은 Haiku가 줄 번호와 섞음). */
+export const codeOf = (id: string) => `G${id.replace(":", "-")}`;
+const idOfCode = (code: string) => {
+  const m = /^(?:g\||G)?(\d+)[-:](\d+)$/i.exec(code.trim());
+  return m ? `${m[1]}:${m[2]}` : "";
+};
+
 /** 서버: 보낸 처음 줄(자리 그대로 — 빈 줄도 번호는 지킴). */
 export function readOpening(raw: unknown): OpeningLine[] {
   if (!Array.isArray(raw)) return [];
@@ -39,9 +46,10 @@ export function tagPrompt(language: string, opening: readonly OpeningLine[]): st
 The first lines of this call, numbered:
 ${lines}
 
-Also write "uses": for each numbered "Them" line, the grammar points from this list that the line really uses and gets right (the form is there and correct, not only a word from it). Use the ids only. A line that is only words without a sentence structure, or that gets the form wrong, gets an empty list.
-${list.map((one) => `${one.id} ${one.name}`).join("\n")}
-Write it as {"<line number>": ["<id>"]}, only for "Them" lines.
+Also write "uses": for each numbered "Them" line, every grammar point from the list below that the line really uses and gets right — look at its tense, verb forms, connecting words and question forms one by one. A point counts only when its form is in the line and correct, not when only a word from it appears. A line that is only words without a sentence structure, or that gets the form wrong, gets an empty list.
+Grammar points (code: name):
+${list.map((one) => `${codeOf(one.id)}: ${one.name}`).join("\n")}
+Write it as {"<line number>": ["<code>"]}, only for "Them" lines, using the codes exactly as written (like ${codeOf(list[0]?.id ?? "1:0")}).
 Also write "asks": for each numbered "You" line that asks them something, what it asks about, from this list only: ${QUESTION_KINDS.join(", ")} (day = how their day is or was; past = something they did, not the weekend; opinion = what they think or prefer). Write it as {"<line number>": "<kind>"}.`;
 }
 
@@ -54,7 +62,7 @@ export function readTags(language: string, opening: readonly OpeningLine[], raw:
     for (const [at, value] of Object.entries(raw.uses as Record<string, unknown>)) {
       const i = Number(at);
       if (!Number.isInteger(i) || opening[i]?.who !== "learner" || !Array.isArray(value)) continue;
-      const keys = [...new Set(value.filter((one): one is string => typeof one === "string" && ids.has(one)))].slice(0, 4).map((id) => `g|${id}`);
+      const keys = [...new Set(value.filter((one): one is string => typeof one === "string").map(idOfCode).filter((id) => ids.has(id)))].slice(0, 4).map((id) => `g|${id}`);
       if (keys.length) uses[i] = keys;
     }
   }

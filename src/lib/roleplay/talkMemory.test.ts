@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { grammarList, readTags, tagPrompt, type OpeningLine } from "./talkTags.ts";
+import { codeOf, grammarList, readTags, tagPrompt, type OpeningLine } from "./talkTags.ts";
 import { applyTalkTags, bestAnswerPair, readAnswers, readFirstUses } from "./talkMemory.ts";
 import { readCallNotes, saveCallNote } from "./callNotes.ts";
 import type { TranscriptLine } from "./review.ts";
@@ -15,10 +15,12 @@ test("표시 읽기: 목록 안 문법 id만 내 줄에, 질문 종류는 튜터
     const list = grammarList(language);
     assert.ok(list.length >= 20, `${language} ${list.length}`);
     const opening: OpeningLine[] = [{ who: "tutor", text: "q?" }, { who: "learner", text: "a" }];
-    const tags = readTags(language, opening, { uses: { "1": [list[0]!.id, "99:99"], "0": [list[1]!.id] }, asks: { "0": "weekend", "1": "food", "5": "day" } });
+    const tags = readTags(language, opening, { uses: { "1": [codeOf(list[0]!.id), "G99-99"], "0": [codeOf(list[1]!.id)] }, asks: { "0": "weekend", "1": "food", "5": "day" } });
     assert.deepEqual(tags.uses, { 1: [`g|${list[0]!.id}`] });
     assert.deepEqual(tags.asks, { 0: "weekend" });
-    assert.ok(tagPrompt(language, opening).includes(list[0]!.id));
+    assert.ok(tagPrompt(language, opening).includes(codeOf(list[0]!.id)));
+    // 앱이 서버 답(이미 g|단계:번호)을 다시 걸러도 그대로.
+    assert.deepEqual(readTags(language, opening, { uses: tags.uses as never, asks: {} }).uses, tags.uses);
     assert.equal(tagPrompt(language, [{ who: "tutor", text: "q?" }]), "");
   }
 });
