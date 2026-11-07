@@ -114,7 +114,12 @@ function AppAdSlot({ feedId, slotKey, active, layer, spaced = false }: { feedId:
   useEffect(() => {
     const element = ref.current;
     if (!enabled || failed || !active || !element) return;
-    return attachNativeSlot(feedId, slotKey, element, layer);
+    const detach = attachNativeSlot(feedId, slotKey, element, layer);
+    const stopFollow = followSlotMoves(element);
+    return () => {
+      stopFollow();
+      detach();
+    };
   }, [enabled, failed, active, feedId, slotKey, layer]);
 
   const loaded = useSyncExternalStore(
@@ -126,4 +131,22 @@ function AppAdSlot({ feedId, slotKey, active, layer, spaced = false }: { feedId:
   // 자리 높이는 늘 120px — 플러그인(admob native-ad-feed isSupportedSize)이 120px 미만 자리에는 광고를 아예 불러오지 않아
   // 1px로 접어 두면 Loaded가 영영 오지 않는다(2026-11-02 1px 접기 되돌림, 보고함 major). 들어오기 전엔 바깥 여백만 뺀다.
   return <div ref={ref} aria-hidden className={spaced && loaded ? "my-6 w-full" : "w-full"} style={{ height: NATIVE_SLOT_HEIGHT }} />;
+}
+
+/**
+ * 자리가 스크롤 없이 움직일 때(위 내용이 줄거나 늚 — 퀴즈 결과 줄이 사라지고 다음 문제가 그려짐 등) 광고를 따라 옮긴다.
+ * 플러그인(native-ad-feed)은 스크롤·터치·창 크기·자리 크기만 보고 자리 위치 변화는 못 봐서, 광고가 옛 자리에 남아
+ * 아래 버튼(😴 쉬워요 줄)을 덮었다(2026-11-07 사용자 폰). 위치가 바뀌면 플러그인이 듣는 'load'(문서 캡처 단계)를 그 자리에서 한 번 보낸다.
+ */
+const FOLLOW_MS = 250;
+
+function followSlotMoves(element: HTMLElement): () => void {
+  let last = "";
+  const timer = window.setInterval(() => {
+    const rect = element.getBoundingClientRect();
+    const now = `${Math.round(rect.top)}:${Math.round(rect.left)}:${Math.round(rect.width)}`;
+    if (last && now !== last) element.dispatchEvent(new Event("load"));
+    last = now;
+  }, FOLLOW_MS);
+  return () => window.clearInterval(timer);
 }

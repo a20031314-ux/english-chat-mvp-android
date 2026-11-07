@@ -271,7 +271,8 @@ export function QuestionView({
   // Blank questions with a key show more examples after the answer, so they wait for 다음 (user, 2026-10-31).
   // 문법 칸(g|)은 같은 문법을 쓴 아무 대본 줄이라 문제와 상관없어 보임(가상 사용자 2026-11-01 "정답 뒤 예문이 늘 Me llamo/Soy de") — 빼기.
   const examples = showExamples && Boolean(bankKey) && !bankKey?.startsWith("g|") && (question.kind === "choose" || question.kind === "type");
-  const autoNext = Boolean(autoAdvance && !dictWord && answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
+  // 개편(📕 문이 붙은 퀴즈 — dictDoor)은 맞혀도 저절로 넘어가지 않는다: 답한 뒤 카드(뜻·예문)를 보고 📕나 다음을 고르게(2026-11-07 사용자 "풀면 바로 넘어가버려").
+  const autoNext = Boolean(autoAdvance && !dictDoor && !dictWord && answered?.correct && !answered.skipped && !examples && (question.kind === "choose" || question.kind === "meaning" || question.kind === "type" || question.kind === "spot"));
   const nextRef = useRef(onNext);
   useEffect(() => {
     nextRef.current = onNext;
