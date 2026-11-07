@@ -177,6 +177,8 @@ export async function POST(request: NextRequest) {
       : {}),
     ...(typeof body.study === "string" && body.study.trim() ? { study: body.study.trim().slice(0, 80) } : {}),
     ...(body.studyOpen === true ? { studyOpen: true } : {}),
+    // 수업 통화에서 말없이 지나간 차례가 이어진 수(2026-11-07, 화면에 🙉·💡 없음 — 튜터가 먼저 묻고 힌트).
+    ...(readCount(body.silent) > 0 ? { silent: Math.min(9, readCount(body.silent)) } : {}),
     ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),
     // 자유대화 채우기(2026-11-06): 이번 차례 겨냥·앞 차례 겨냥 확인 — 앱이 고른 짧은 영어 한 줄.
     ...(typeof body.aim === "string" && body.aim.trim() ? { aim: body.aim.trim().slice(0, AIM_MAX_CHARS) } : {}),

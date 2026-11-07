@@ -153,3 +153,15 @@ export function nextCoachCard(
   if (turn.retry === "pass") return current ? { ...current, passed: true } : null;
   return null;
 }
+
+/** 끝에서부터 말없이 지나간 내 차례("…")가 몇 번 이어졌나 — 튜터 줄은 건너뛰고, 말한 내 줄에서 멈춘다. */
+export function silentRun(said: readonly { who: string; text: string }[]): number {
+  let run = 0;
+  for (let i = said.length - 1; i >= 0; i -= 1) {
+    const line = said[i];
+    if (line.who !== "learner") continue;
+    if (line.text.trim() && line.text.trim() !== "…") break;
+    run += 1;
+  }
+  return Math.max(1, run);
+}

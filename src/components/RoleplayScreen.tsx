@@ -59,7 +59,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { answeredAfterMissed, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { answeredAfterMissed, silentRun, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { markTurn } from "@/lib/roleplay/turnTally";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
@@ -470,6 +470,8 @@ export function RoleplayScreen({
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
         ...(scenario.openEnded && coachOn ? { coach: true, ...(redo.line ? { redo: redo.line, redoTries: redo.tries } : {}) } : {}),
+        // 수업 통화: 말없이 지나간 차례가 몇 번째인지 — 튜터가 먼저 묻고(1) 힌트(2 이상)(2026-11-07).
+        ...(scenario.openEnded && coachOn && !instruction.request.heard.trim() && !instruction.request.missed ? { silent: silentRun(said) } : {}),
       },
       nativeLanguage,
       isPremium,

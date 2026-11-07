@@ -131,6 +131,11 @@ export type DirectorRequest = {
   /** 그 칸을 말하는 첫 마디. 학습자는 아직 말하지 않았다. */
   studyOpen?: boolean;
   /**
+   * 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
+   * 튜터가 먼저: 1이면 들었는지 묻고 질문을 쉽게 다시, 2 이상이면 이어 말할 문장 앞부분 힌트.
+   */
+  silent?: number;
+  /**
    * 지난 통화에서 고친 문장(fixMemory.ts). 날 | 틀린 점 | 고친 문장.
    * 비어 있으면 지난 고침을 모른다.
    */
@@ -512,7 +517,7 @@ export function coachRules(target: string, native: string, bilingual: boolean): 
 - A turn with a big mistake is three spoken beats and nothing else, in this order: (1) point out what was wrong in one short phrase in ${native} — name the mistake (the time, the word, the order, the missing word), the same words as "note", said out loud; (2) their whole sentence said right, once, in ${target}, in your own manner — your rhythm and everyday wording, still at the speech level they use with you — spoken as your own line, never wrapped in quotation marks or read out as a cited example; the words stay their sentence put right, not a different story of yours; (3) ask them to say it again in a few words of ${target}, in that same manner: a short nudge rather than a polite set phrase, and not in ${native}. Ask no new question. Do not react to what they told you, and do not use a ready line. Leave "open" and "follow" empty. Put the right sentence alone in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask". Do not put the corrected sentence in "note".
 - On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can, still in your own manner — and ask once more in a few words of ${target}. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
 - When they say a whole sentence in ${native}: a few words to show you understood, then the ${target} sentence for exactly what they said, and have them say it ("meant", "retry": "ask") — even when you understood it perfectly. Checking back with a question is only for when you truly cannot tell what they meant.
-- When they said nothing at all (what you heard is empty): they may not have caught you, or not know how to answer — there are no buttons on their screen for this, so you check. The first time, ask in a few words of ${native} whether they caught it, then say your last question again in fewer, easier words of ${target}. If they were silent on the turn before as well (the last two lines of the conversation are both yours, with nothing from them in between), do not ask again: give a hint — the start of a sentence in ${target} they can finish, said out loud, and put that same start in "note". Set "assessment" to "stuck" either way.
+- When they said nothing at all (what you heard is empty): they may not have caught you, or not know how to answer — there are no buttons on their screen for this, so you check. What to do is written under "This turn".
 - When they say they do not know, or cannot say it: do not make up an answer for them. Make it easier — ask again in fewer words, offer two choices to pick from, or give the start of a sentence they can finish. Only when they asked how to say something in particular, hand them that sentence to say.
 - Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask" and "offer" set to true (it is not a correction: what they said was fine).
 - ${
@@ -928,6 +933,11 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
       : scenario.openEnded
         ? `Leave "aim" empty.`
         : "",
+    isCoaching(request, scenario) && !request.heard.trim() && !request.missed
+      ? (request.silent ?? 1) >= 2
+        ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
+        : `This turn: they said nothing. Ask, in a few words of ${native} — not ${target} — whether they caught what you said, then say your last question again in fewer, easier words of ${target}. "assessment" is "stuck".`
+      : "",
     request.study?.trim()
       ? request.studyOpen
         ? `They have not spoken yet. They chose to study, and they can see their skill map. The marked weak point is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`

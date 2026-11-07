@@ -1535,7 +1535,21 @@ test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 
     request: request({ scenarioId: open.id, nodeId: "talk", coach: true, targetLanguage: "es", nativeLanguage: "ar" }),
   });
   assert.match(coaching, /When they said nothing at all/);
-  assert.match(coaching, /give a hint — the start of a sentence/);
+  const first = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", coach: true, heard: "", silent: 1, targetLanguage: "es", nativeLanguage: "ar" }),
+  });
+  assert.match(first, /whether they caught what you said/);
+  const second = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", coach: true, heard: "", silent: 2, targetLanguage: "es", nativeLanguage: "ar" }),
+  });
+  assert.match(second, /Give a hint/);
+  assert.doesNotMatch(second, /whether they caught what you said/);
   const freeTalk = tutorSystemPrompt({
     scenario: open,
     bank,

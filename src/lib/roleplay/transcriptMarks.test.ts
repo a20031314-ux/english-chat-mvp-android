@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { silentRun, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -121,4 +121,18 @@ test("자유대화 카드: 말로 안 짚은 고친 말·더 자연스러운 말
   assert.equal(smooth?.kind, "offer");
   assert.equal(smooth?.quiet, true);
   assert.equal(nextCoachCard(null, { heard: "", better: "x", gaveUp: false, quiet: true }), null, "들은 말 없으면 카드 없음");
+});
+
+test("말없이 지나간 내 차례 수: 튜터 줄은 건너뛰고 말한 줄에서 멈춤", () => {
+  const said = [
+    { who: "tutor", text: "¿Qué tal?" },
+    { who: "learner", text: "Bien" },
+    { who: "tutor", text: "¿Y hoy?" },
+    { who: "learner", text: "…" },
+    { who: "tutor", text: "聞こえましたか？" },
+    { who: "learner", text: "…" },
+  ];
+  assert.equal(silentRun(said), 2);
+  assert.equal(silentRun(said.slice(0, 4)), 1);
+  assert.equal(silentRun([]), 1);
 });
