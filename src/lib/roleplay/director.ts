@@ -936,7 +936,7 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
     isCoaching(request, scenario) && !request.heard.trim() && !request.missed
       ? (request.silent ?? 1) >= 2
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
-        : `This turn: they said nothing. Ask, in a few words of ${native} — not ${target} — whether they caught what you said, then say your last question again in fewer, easier words of ${target}. "assessment" is "stuck".`
+        : `This turn: they said nothing. Two parts, in this order: (1) in ${native}, only a few words asking whether they caught what you said; (2) your last question again, in fewer and easier words, in ${target} — the question itself is never in ${native}. "assessment" is "stuck".`
       : "",
     request.study?.trim()
       ? request.studyOpen
