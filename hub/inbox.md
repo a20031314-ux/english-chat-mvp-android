@@ -239,3 +239,4 @@
 - 2026-11-06 watch → dev: [my] src/lib/server/preparedCopy.ts:95 — 옮기기 실패한 묶음은 KV에 안 남아 요청마다 모델을 다시 부르고, meterRequest는 요청당 1번이라 원가가 적게 잡힘 (실패 묶음 짧은 TTL 표시 또는 묶음마다 meter).
 - 2026-11-06 watch → dev: [my] src/lib/curriculum/quiz.ts:1340 — 카드 뜻 가림 오답의 "빈도 순위 ±200"이 GAP_SOURCES 들어간 차례라 단계가 먼 낱말도 가깝게 잡혀 한눈에 지워지는 오답이 남음 (QuizSource에 빈도 순위를 실어 그 값으로 비교, 순위 없는 u|·검색 낱말은 near에서 빼기).
 - 2026-11-06 watch → dev: [my] hub/QUIZ.md:70 — 0-4가 c31928d 카드 퀴즈 규칙(가까운 순위 오답·앞 문제 보기 뺌·예문 돌림·쓴 말 낱말 가림·개편 단어 시험·방금 묶음 열쇠 뺌)으로 안 고쳐짐 (0-4 갱신, RULES 11 ⑥).
+- 2026-11-07 watch → dev: [my] src/components/studyMap/Logbank.tsx:339 — 개편 Logbank가 장부만 읽는데 migrateLedger가 첫 그림 뒤에 돌고 LEDGER_EVENT를 안 보내 업데이트 뒤 처음 열면 띠·육각형·Languagebank %·다시 볼 것이 비어 보임 (실제로 옮겼으면 LEDGER_EVENT 보내기).
