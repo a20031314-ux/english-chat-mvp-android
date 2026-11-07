@@ -1,5 +1,6 @@
 "use client";
 
+import { noteChatLine } from "@/lib/roleplay/chatGrowth";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
 import { CHAT_FACE_SIZE } from "@/components/speech/CallKit";
@@ -1256,6 +1257,8 @@ export function ChatWindow({
       );
       // 짚인 줄은 이 기기에 그 순간 화면을 찍어 둔다 — 오늘의 학습에서 "화면 함께"로 노트에 붙일 수 있게(lib/notes/sceneShots.ts).
       if (!ownLanguage && correctionResult.hasError) captureSceneSoon(sessionLanguageCode, message);
+      // Logbank 장부·고쳐 씀(2026-11-07): 고친 줄 = 바른 꼴에만 든 열쇠 틀림, 고쳐지지 않은 줄 = 쓴 열쇠 씀(src chat, 이 폰에만).
+      if (!ownLanguage) noteChatLine(sessionLanguageCode, message, correctionResult.hasError ? correctionResult.corrected : "");
       // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
       if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
         void verifyTurnCorrection(turnId, message, correctionResult);

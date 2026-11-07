@@ -1,3 +1,4 @@
+import { readTopics, TALK_TOPICS } from "./talkStats.ts";
 import type { SpokenLine } from "./director.ts";
 
 /**
@@ -99,12 +100,13 @@ The call is over. Also write "summary": a short note from you, ${input.summary.n
 1. What you talked about, in a few words.
 2. One thing they said well — something that is really in their lines above.
 3. One thing to practise next: the mistake they made most in their own lines above (look at what they said, not at what you said), named by its right form in ${input.summary.target}, a few words, not a whole sentence of theirs. If they made no mistake, something they could say more of. Never invent a mistake, a word or a topic that is not in this call.
+Also write "topics": the one or two things this call was mostly about, from this list only: ${TALK_TOPICS.join(", ")} (people = family, friends, someone; time = plans, schedule, daily routine; nature = weather, seasons, animals; society = news, culture, school). An empty list if none fits.
 They are learning ${input.summary.target}: every word, form or example from it stays in ${input.summary.target}. Never give an example in ${input.summary.language} or show how to say it in ${input.summary.language}. No levels, scores, grades, percentages or praise for being a learner.
 ` : ""}
-Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]${input.summary ? `, "summary": "<your note to them>"` : ""}}`;
+Reply as JSON only: {"notes": "<your notes>", "facts": ["<a fact>"]${input.summary ? `, "summary": "<your note to them>", "topics": ["<topic>"]` : ""}}`;
 }
 
-export type FoldedMemory = { notes: string; facts: string[]; summary?: string };
+export type FoldedMemory = { notes: string; facts: string[]; summary?: string; topics?: string[] };
 
 /** 튜터 요약 글 상한(서버가 자름). */
 export const SUMMARY_MAX_CHARS = 400;
@@ -118,7 +120,7 @@ export function parseMemory(raw: string): FoldedMemory | null {
     return null;
   }
   if (typeof parsed !== "object" || parsed === null) return null;
-  const record = parsed as { notes?: unknown; facts?: unknown; summary?: unknown };
+  const record = parsed as { notes?: unknown; facts?: unknown; summary?: unknown; topics?: unknown };
   const notes = typeof record.notes === "string" ? record.notes.trim().slice(0, MAX_CONTEXT_CHARS) : "";
   const facts = Array.isArray(record.facts)
     ? record.facts
@@ -129,7 +131,8 @@ export function parseMemory(raw: string): FoldedMemory | null {
     : [];
   const summary = typeof record.summary === "string" ? record.summary.trim().slice(0, SUMMARY_MAX_CHARS) : "";
   if (!notes && facts.length === 0 && !summary) return null;
-  return { notes, facts, ...(summary ? { summary } : {}) };
+  const topics = readTopics(record.topics);
+  return { notes, facts, ...(summary ? { summary } : {}), ...(topics.length ? { topics } : {}) };
 }
 
 /** The notes out of the model's answer, or null if there are none to use. */

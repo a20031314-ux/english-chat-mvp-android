@@ -1,5 +1,7 @@
 "use client";
 
+import { noteGrowthLines } from "@/lib/curriculum/growthLines";
+import { growthLinesOf } from "@/lib/roleplay/talkGrowth";
 import type { LangMatch } from "./langMatch";
 import { apiUrl } from "@/lib/apiBase";
 import { noteSuspended } from "./suspended";
@@ -331,6 +333,8 @@ export async function fixMyLine(input: {
   if (body.skip || body.hasError !== true || typeof body.corrected !== "string" || typeof body.original !== "string") return null;
   // Logbank 사건 장부: 고친 문장에만 있는 문장구조 = 틀림(문장은 남기지 않음, curriculum/logLedger.ts).
   noteLedger(input.targetLanguage, fixLedgerKeys(input.targetLanguage, body.original, body.corrected).map((k) => ({ k, src: "people" as const, r: "miss" as const })));
+  // 고쳐 씀 재료(이 폰에만, curriculum/growthLines.ts).
+  noteGrowthLines(input.targetLanguage, growthLinesOf(input.targetLanguage, [{ who: "learner", text: body.original, better: body.corrected }], "people", Math.round(Date.now() / 1000), null));
   return {
     original: body.original,
     corrected: body.corrected,

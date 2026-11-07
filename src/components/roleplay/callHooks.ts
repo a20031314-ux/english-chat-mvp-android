@@ -10,6 +10,8 @@ import type { UICopy } from "@/lib/copy";
 import { buildRecap, recapLedgerKeys, wordLedgerKeys, recapReviewKeys } from "@/lib/roleplay/recap";
 import { loadBank } from "@/lib/curriculum/vocabBank";
 import { noteLedger } from "@/lib/curriculum/logLedger";
+import { noteGrowthLines } from "@/lib/curriculum/growthLines";
+import { growthLinesOf } from "@/lib/roleplay/talkGrowth";
 import type { TranscriptLine } from "@/lib/roleplay/review";
 
 /**
@@ -70,9 +72,15 @@ export function useCallRecap(callOver: boolean, language: string | null, said: T
       noteLedger(language, [...keys.miss.map((k) => ({ k, src: "call" as const, r: "miss" as const })), ...keys.used.map((k) => ({ k, src: "call" as const, r: "used" as const }))]);
     // 문장구조·문법·단계 표현은 바로, 낱말은 빈도 목록을 불러온 뒤(언어마다 한 번).
     note(recapLedgerKeys(language, said));
+    // 고쳐 씀 재료(줄과 열쇠, 이 폰 growthLines.v1 — 2026-11-07): 낱말 열쇠까지 넣으려고 빈도 목록 뒤에, 못 받으면 문장구조만.
+    const t = Math.round(Date.now() / 1000);
     void loadBank(language)
-      .then((bank) => note(wordLedgerKeys(language, said, new Map(bank.map((word) => [word.w.toLocaleLowerCase(), word.pos])))))
-      .catch(() => undefined);
+      .then((bank) => {
+        const words = new Map(bank.map((word) => [word.w.toLocaleLowerCase(), word.pos]));
+        note(wordLedgerKeys(language, said, words));
+        noteGrowthLines(language, growthLinesOf(language, said, "call", t, words));
+      })
+      .catch(() => noteGrowthLines(language, growthLinesOf(language, said, "call", t, null)));
   }, [callOver, language, said]);
   useEffect(() => {
     if (!callOver || !language) return;

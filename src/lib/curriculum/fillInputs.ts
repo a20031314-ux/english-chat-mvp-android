@@ -116,7 +116,8 @@ export function callTurnsOf(rows: readonly CallDay[]): CallTurns[] {
 export function ledgerFillEvents(input: { ledger: readonly LogEvent[]; results: readonly DayResult[]; items: readonly LogItem[]; language: string; segment: (text: string) => string[] }): FillEvent[] {
   const out: FillEvent[] = [];
   for (const event of input.ledger) {
-    if (event.r === "look") continue;
+    // AI 채팅(chat, 2026-11-07 대화 비교·고쳐 씀)은 아래 서버 기록(logItems)이 이미 담아 두 번 세지 않게 뺀다.
+    if (event.r === "look" || event.src === "chat") continue;
     const at = event.t * 1000;
     const talk = event.src === "call" || event.src === "people";
     if (event.r === "used") {

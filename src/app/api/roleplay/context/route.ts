@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     if (!folded) {
       return jsonWithCors(request, { error: "NO_CONTEXT" }, { status: 502 });
     }
-    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary ? { summary: folded.summary } : {}) });
+    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary ? { summary: folded.summary } : {}), ...(summary && folded.topics?.length ? { topics: folded.topics } : {}) });
   } catch (error) {
     console.error("[roleplay/context]", error);
     return jsonWithCors(request, { error: "CONTEXT_FAILED" }, { status: 502 });

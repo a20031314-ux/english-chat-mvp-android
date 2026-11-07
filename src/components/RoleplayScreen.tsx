@@ -41,7 +41,11 @@ import {
 import { correctionOf, offeredOf } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
-import { saveCallNote, setCallSummary } from "@/lib/roleplay/callNotes";
+import { CallGrowthPairs } from "@/components/studyMap/Growth";
+import { reformOn } from "@/lib/reform";
+import { keepFirstTalkSample, saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
+import { sampleLines, talkStatsOf } from "@/lib/roleplay/talkStats";
+import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
 import { loadStudyPicture, type StudyPicture } from "@/lib/roleplay/studyPicture";
 import { cellName, SkillHexagon } from "@/components/studyMap/SkillHexagon";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
@@ -1076,6 +1080,18 @@ export function RoleplayScreen({
         redone: tally.redone ?? 0,
         gender: tutorGender,
       });
+      // 대화 비교(자유대화만, 문장 없이 숫자 — 처음 통화의 긴 두 줄만 따로, lib/roleplay/talkStats.ts, 2026-11-07).
+      if (openTalk) {
+        const startAt = startedAt.current || Date.now();
+        void loadBank(language)
+          .then((bank) => {
+            const talk = talkStatsOf(language, said, bank, stageCuts(language)[0] ?? 700);
+            if (!talk) return;
+            setCallExtra(language, callId, { talk });
+            keepFirstTalkSample(language, { id: callId, at: startAt, lines: sampleLines(language, said) });
+          })
+          .catch(() => undefined);
+      }
     }
     void fetchContext({
       scenarioId: scenario.id,
@@ -1091,6 +1107,7 @@ export function RoleplayScreen({
         setTutorNote(folded.summary);
         if (callId) setCallSummary(language, callId, folded.summary);
       }
+      if (folded?.topics?.length && callId) setCallExtra(language, callId, { topics: folded.topics });
     });
     // 끝난 순간의 대본만. 노트가 나중에 바뀌어도 다시 부르지 않는다.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1131,6 +1148,7 @@ export function RoleplayScreen({
           tally={tallyCall(said)}
         />
         {tutorNote ? <TutorNote text={tutorNote} language={scenario.language} gender={tutorGender} /> : null}
+        {reformOn() ? <div className="px-4"><CallGrowthPairs ui={ui} language={scenario.language} locale={nativeLanguage} since={Math.floor(openedAt.current / 1000)} /></div> : null}
         {lettersBeginner && scenario.openEnded ? (
           <LettersHomework
             ui={ui}

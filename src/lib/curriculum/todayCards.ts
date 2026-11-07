@@ -51,7 +51,7 @@ export function pickCards(input: { events: readonly LogEvent[]; states: Readonly
   const weekAgo = now - 7 * DAY;
   const lastTalkMiss = new Map<string, number>();
   for (const event of events) {
-    if (event.t < weekAgo || event.r !== "miss" || (event.src !== "call" && event.src !== "people")) continue;
+    if (event.t < weekAgo || event.r !== "miss" || (event.src !== "call" && event.src !== "people" && event.src !== "chat")) continue;
     if (!partOf(event.k)) continue;
     lastTalkMiss.set(event.k, Math.max(lastTalkMiss.get(event.k) ?? 0, event.t));
   }

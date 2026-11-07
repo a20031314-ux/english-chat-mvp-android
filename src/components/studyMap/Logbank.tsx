@@ -40,6 +40,8 @@ import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
+import { progressIn } from "@/lib/curriculum/growthView";
+import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, sureOf, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import type { CardPart } from "@/lib/curriculum/todayCards";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
@@ -1187,6 +1189,8 @@ function periodDays(period: Period, today: string): string[] {
 
 const LEARN_ICON: Record<CardPart, string> = { word: "🔤", grammar: "📐", expression: "💬", frame: "🧩" };
 
+type GrowId = "fresh" | "learned" | "recovered" | "fixed" | "used" | "known";
+
 function learnPartName(ui: UICopy, part: CardPart): string {
   return { word: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, frame: ui.framesTitle }[part];
 }
@@ -1224,13 +1228,32 @@ function Learned({
   dateLabel: (day: string) => string;
 }) {
   const [open, setOpen] = useState<CardPart | "call" | null>(null);
+  const [growOpen, setGrowOpen] = useState<GrowId | null>(null);
   const days = useMemo(() => periodDays(period, today), [period, today]);
   const learned = useMemo(() => learnedIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
+  // 늘어난 것(2026-11-07 사용자 "포인트 말고 N개 식으로" · "틀렸던 문장 > 이후 활용한 문장"): curriculum/growthView.ts.
+  const progress = useMemo(() => progressIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
+  const inTime = useMemo(() => (t: number) => inPeriod(period, dayOfSeconds(t)), [period]);
+  const pairs = useGrowthPairs(language, inTime);
+  const allItems = useMemo(() => {
+    const all = learnedIn(ledger, () => true);
+    return new Map(LEARN_PARTS.flatMap((part) => all[part]).map((one) => [one.key, one]));
+  }, [ledger]);
+  const itemsOf = (keys: readonly string[]): LearnedItem[] => keys.map((key) => allItems.get(key) ?? { key, ok: 0, miss: 0, last: 0, lastOk: false });
+  const grow: { id: GrowId; icon: string; label: string; n: number }[] = [
+    { id: "fresh", icon: "🆕", label: ui.lbFresh, n: progress.fresh.length },
+    { id: "learned", icon: "✓", label: ui.growLearned, n: progress.learned.length },
+    { id: "recovered", icon: "↺", label: ui.growRecovered, n: progress.recovered.length },
+    { id: "fixed", icon: "✎✓", label: ui.growFixed, n: pairs.length },
+    { id: "used", icon: "💬", label: ui.growUsed, n: progress.used.length },
+    { id: "known", icon: "📚", label: ui.growKnownAll, n: progress.known.length },
+  ];
+  const growShown = grow.filter((one) => one.n > 0);
   const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
   const amounts = useMemo(() => amountOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
   const parts = LEARN_PARTS.filter((part) => learned[part].length);
-  if (!parts.length && !periodCalls.length) return null;
+  if (!parts.length && !periodCalls.length && !growShown.length) return null;
   const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
   return (
     <div data-learned className="flex flex-col gap-2">
@@ -1251,8 +1274,32 @@ function Learned({
           </button>
         ) : null}
       </div>
+      {growShown.length ? (
+        <>
+          <h3 className="text-caption font-semibold text-slate-300">{ui.growTitle}</h3>
+          <div data-growth className="flex flex-wrap gap-1.5">
+            {growShown.map((one) => (
+              <button key={one.id} type="button" data-growth-chip={one.id} onClick={() => setGrowOpen(one.id)} className={chip}>
+                <span aria-hidden>{one.icon}</span>
+                <span>{one.label}</span>
+                <span className="font-semibold text-ink">{one.n}</span>
+              </button>
+            ))}
+          </div>
+        </>
+      ) : null}
+      <TalkCompare ui={ui} language={language} locale={locale} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} amounts={amounts} sure={sure} dateLabel={dateLabel} />
+      ) : null}
+      {growOpen ? (
+        <LogSheet title={`${grow.find((one) => one.id === growOpen)!.icon} ${grow.find((one) => one.id === growOpen)!.label} · ${grow.find((one) => one.id === growOpen)!.n}`} ui={ui} onClose={() => setGrowOpen(null)}>
+          {growOpen === "fixed" ? (
+            <PairList pairs={pairs} locale={locale} />
+          ) : (
+            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress[growOpen].slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+          )}
+        </LogSheet>
       ) : null}
       {open && open !== "call" ? (
         <LogSheet title={`${LEARN_ICON[open]} ${learnPartName(ui, open)} · ${learned[open].length}`} ui={ui} onClose={() => setOpen(null)}>

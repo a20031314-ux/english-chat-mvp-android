@@ -1,5 +1,6 @@
 "use client";
 
+import { TodayGrowth } from "@/components/studyMap/Growth";
 import { useEffect, useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -87,6 +88,7 @@ function LettersToday({ ui, language, locale }: { ui: UICopy; language: string; 
         <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
         {done ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
+      <TodayGrowth ui={ui} language={language} />
       <button
         type="button"
         data-today-card="letters"
@@ -132,6 +134,7 @@ function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
         <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
         {allDone ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
+      <TodayGrowth ui={ui} language={language} />
       {view.today.cards.map((card, index) => (
         <CardRow key={`${card.kind}-${index}`} ui={ui} card={card} done={view.done[index] ?? false} soft={tone.soft} language={language} />
       ))}

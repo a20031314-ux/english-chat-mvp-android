@@ -6,7 +6,7 @@
  * 학습자 문장은 넣지 않는다 — 열쇠(w|·e|·g|·f|·l|…)·출처·결과·방식·시각만. 이 폰에만, 학습 언어마다, 최근 1년.
  */
 
-export type LogSource = "quiz" | "exam" | "call" | "people" | "dict" | "script";
+export type LogSource = "quiz" | "exam" | "call" | "people" | "dict" | "script" | "chat";
 /** ok 맞음 · miss 틀림 · used 통화·대화에서 씀 · look 찾아봄 */
 export type LogResult = "ok" | "miss" | "used" | "look";
 /** write 빈칸 쓰기 · pick 고르기(퀴즈만) */
@@ -24,7 +24,7 @@ export const MAX_ROWS = 40000;
 /** 같은 열쇠·출처·결과가 이만큼 안에 또 오면 한 번으로(같은 화면이 두 번 그려져 두 번 쓰는 것 막기). */
 const SAME_SECONDS = 2;
 
-const SOURCES: readonly LogSource[] = ["quiz", "exam", "call", "people", "dict", "script"];
+const SOURCES: readonly LogSource[] = ["quiz", "exam", "call", "people", "dict", "script", "chat"];
 const RESULTS: readonly LogResult[] = ["ok", "miss", "used", "look"];
 
 function storageKey(language: string): string {

@@ -38,34 +38,35 @@ function knownNow(t: number, step = 0): Pick<CheckState, "level" | "knownAt" | "
   return { level: "known", knownAt: t, step, due: t + CHECK_DAYS[Math.min(step, CHECK_DAYS.length - 1)]! * DAY };
 }
 
+/** 순수: 사건 하나를 받은 다음 체크 셋(stateOf·learnedAt이 같이 씀). */
+export function stepState(prev: CheckState, event: LogEvent, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): CheckState {
+  let state: CheckState = { ...prev, last: event.t };
+  const talk = event.src === "call" || event.src === "people" || event.src === "chat";
+  if (event.r === "look") return state;
+  if (state.level === "new") {
+    if (event.r === "ok" && event.m === "write") state = { ...state, level: "hard", hardDay: dayOf(event.t) };
+    else if (event.r === "used" && USED_LIFTS) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
+    return state;
+  }
+  if (state.level === "hard") {
+    const otherDay = dayOf(event.t) !== state.hardDay;
+    if ((event.r === "ok" && event.m === "write" && otherDay) || (event.r === "used" && USED_LIFTS)) state = { ...state, ...knownNow(event.t) };
+    return state;
+  }
+  // 앎
+  if (event.r === "miss" && (talk || event.src === "quiz" || event.src === "exam")) return { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
+  if ((event.r === "ok" || event.r === "used") && state.due !== undefined && event.t >= state.due) {
+    // 확인 때가 지나 다시 맞힘 = 다음 확인으로.
+    const step = state.step + 1;
+    state = { ...state, step, due: step >= CHECK_DAYS.length ? undefined : event.t + CHECK_DAYS[step]! * DAY };
+  }
+  return state;
+}
+
 /** 순수: 한 열쇠의 사건(시각 순)을 체크 셋 하나로. */
 export function stateOf(events: readonly LogEvent[], dayOf: (t: number) => string = (t) => dayOfSeconds(t)): CheckState {
   let state: CheckState = { level: "new", step: 0, last: 0 };
-  for (const event of [...events].sort((a, b) => a.t - b.t)) {
-    state = { ...state, last: event.t };
-    const talk = event.src === "call" || event.src === "people";
-    if (event.r === "look") continue;
-    if (state.level === "new") {
-      if (event.r === "ok" && event.m === "write") state = { ...state, level: "hard", hardDay: dayOf(event.t) };
-      else if (event.r === "used" && USED_LIFTS) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
-      continue;
-    }
-    if (state.level === "hard") {
-      const otherDay = dayOf(event.t) !== state.hardDay;
-      if ((event.r === "ok" && event.m === "write" && otherDay) || (event.r === "used" && USED_LIFTS)) state = { ...state, ...knownNow(event.t) };
-      continue;
-    }
-    // 앎
-    if (event.r === "miss" && (talk || event.src === "quiz" || event.src === "exam")) {
-      state = { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
-      continue;
-    }
-    if ((event.r === "ok" || event.r === "used") && state.due !== undefined && event.t >= state.due) {
-      // 확인 때가 지나 다시 맞힘 = 다음 확인으로.
-      const step = state.step + 1;
-      state = { ...state, step, due: step >= CHECK_DAYS.length ? undefined : event.t + CHECK_DAYS[step]! * DAY };
-    }
-  }
+  for (const event of [...events].sort((a, b) => a.t - b.t)) state = stepState(state, event, dayOf);
   return state;
 }
 
