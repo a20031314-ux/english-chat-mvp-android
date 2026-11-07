@@ -36,6 +36,16 @@
 
 ## 새 보고
 
+### 2026-11-07 · 변경 감시 · 리뷰 major 1: 통화 끝 모델 문법 표시가 확인 없이 장부 used → 같은 통화에 '앎'까지 · 돈·광고·퀴즈 그대로 · 광고 새 안 없음
+- 무엇을: 17de043..b4a8d3e, 커밋 6개(코드 4개, 파일 20개), 줄 my·ai·공통 — 대화 비교 2(질문 짝·처음 3분·문법 표시), 학습 곡선 누적, 채팅 교정 확인 뒤 장부, Logbank 배운 것 표.
+- 결과: 비용표·손익·광고 지도·퀴즈 원인 모두 그대로(바뀐 칸 0, 알릴 것 0). 리뷰 major 1 · minor 4.
+  - major(두 번 확인, 부분적으로 맞음): `src/lib/roleplay/talkMemory.ts:92-99` — Haiku 표시 `uses`를 감지기 확인 없이 장부 `r:"used"`로. `checkState.ts` used 한 번은 new→hard, 이미 hard면 같은 날도 바로 known(USED_LIFTS). 감지기(callHooks recapLedgerKeys)와 중복을 안 빼 같은 통화에 두 번 쌓이면 new→known. known은 확인 때까지 다시 볼 것·적용이 힘듦 카드에서 빠짐.
+  - minor: 그날 지우기가 talkAnswers.v1·talkFirstUse.v1을 안 지움 · 질문 짝 '지금' 대답에 고쳐진(틀린) 줄도 · opCost roleplayContext가 늘어난 끝 호출(처음 20줄·max_tokens 1200)을 반영 안 함 · Growth.tsx:236 이름 없으면 "2:1" 같은 내부 열쇠가 화면에.
+  - 광고: 새 안 없음, 6개 이어 씀(지금 +780,982 → 안 넣으면 +554,475원/1,000명·월, 무료 한 사람 +753 → +519원). 바뀐 화면(배운 것 표·TalkCompare·CallGrowthPairs)은 같은 층 광고가 이미 있어 넣지 않음.
+- 제안: 2번(dev) 채팅이 talkMemory 표시 몫을 체크 셋을 안 올리는 종류로 남기거나 감지기와 중복 제거(앱 빌드 필요). opCost 어림 고치기는 서버만. 화면 점검을 다시 부름(바뀐 화면 4).
+- 링크: main b4a8d3e
+- 결정:
+
 ### 2026-11-07 · 변경 감시 · 리뷰 major 1: AI 채팅 과잉 교정이 확인 전에 장부·"고쳐 씀"에 남음 · 돈·광고·퀴즈 그대로 · 광고 새 안 없음
 - 무엇을: a0d0f4c..17de043, 커밋 4개(코드 2개, 파일 33개), 줄 ai·my·공통·people — 늘어난 것(개수 칩·오늘 한 줄·고쳐 씀·대화 비교), 모아서 판정(첫 측정 오르기·Logbank 하루 판정·낱말 경계 묶음)
 - 결과: 비용표 529칸·손익 185칸·광고 지도 97칸·퀴즈 원인 2개 모두 그대로(알릴 것 0). 리뷰 major 1·minor 1 — major(두 번째 에이전트가 코드로 확인): `ChatWindow.tsx:1261` `noteChatLine`이 `/api/chat/verify` 전에 교정을 장부(src chat miss)·`growthLines.v1`에 남기고, verify가 "고칠 것 없음"으로 뒤집어도 지우지 않음 → 앎이 적용이 힘듦으로 내려가고 오늘 카드 "막힌 것"·Logbank "고쳐 씀"에 맞는 문장이 틀린 줄로. minor: Logbank 통화·그날 지우기가 `growthLines.v1`·`talkSample.v1`은 안 지움. 광고 안 6개 모두 지난번 이어 씀(새 화면 TodayGrowth·늘어난 것 칩·TalkCompare·CallGrowthPairs는 모두 "넣지 않음") — 지금 1,000명당 월 +780,982원(무료 한 사람 +753원) → 안 4개 넣으면 +554,475원(+519원). 화면 점검은 오늘 이미 돌아 건너뜀
