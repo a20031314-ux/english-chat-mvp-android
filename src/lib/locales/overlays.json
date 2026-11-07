@@ -1013,7 +1013,13 @@
     "talkLevel": "ステージ2以上の単語",
     "talkFixed": "直された行",
     "talkAsked": "自分からの質問",
-    "talkTopics": "話題"
+    "talkTopics": "話題",
+    "talkMine3": "最初の3分の自分の単語数",
+    "talkMineShare": "自分が話した割合",
+    "talkShaped": "文型のある行",
+    "talkKinds": "使った文法・表現",
+    "talkTop": "使った最高ステージ",
+    "talkNewUse": "初めて使えたもの"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2029,7 +2035,13 @@
     "talkLevel": "第2阶段以上的词",
     "talkFixed": "被纠正的句子",
     "talkAsked": "你提的问题",
-    "talkTopics": "话题"
+    "talkTopics": "话题",
+    "talkMine3": "前3分钟你说的词数",
+    "talkMineShare": "你说话的占比",
+    "talkShaped": "含语法结构的句子",
+    "talkKinds": "用到的语法·表达",
+    "talkTop": "用到的最高阶段",
+    "talkNewUse": "第一次用上的"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3048,7 +3060,13 @@
     "talkLevel": "Từ giai đoạn 2+",
     "talkFixed": "Câu bị sửa",
     "talkAsked": "Câu bạn hỏi",
-    "talkTopics": "Chủ đề"
+    "talkTopics": "Chủ đề",
+    "talkMine3": "Số từ của bạn, 3 phút đầu",
+    "talkMineShare": "Phần bạn nói",
+    "talkShaped": "Câu có cấu trúc ngữ pháp",
+    "talkKinds": "Ngữ pháp & cách nói đã dùng",
+    "talkTop": "Giai đoạn cao nhất đã dùng",
+    "talkNewUse": "Lần đầu bạn dùng"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4072,7 +4090,13 @@
     "talkLevel": "Mots d’étape 2+",
     "talkFixed": "Phrases corrigées",
     "talkAsked": "Tes questions",
-    "talkTopics": "Sujets"
+    "talkTopics": "Sujets",
+    "talkMine3": "Tes mots, 3 premières min",
+    "talkMineShare": "Ta part de la conversation",
+    "talkShaped": "Phrases avec grammaire",
+    "talkKinds": "Grammaire et expressions utilisées",
+    "talkTop": "Étape la plus haute utilisée",
+    "talkNewUse": "Utilisé pour la première fois"
   },
   "it": {
     "archive": "Report",
@@ -5287,7 +5311,13 @@
     "talkLevel": "Parole di livello 2+",
     "talkFixed": "Frasi corrette",
     "talkAsked": "Domande tue",
-    "talkTopics": "Argomenti"
+    "talkTopics": "Argomenti",
+    "talkMine3": "Le tue parole, primi 3 min",
+    "talkMineShare": "La tua parte della conversazione",
+    "talkShaped": "Frasi con grammatica",
+    "talkKinds": "Grammatica ed espressioni usate",
+    "talkTop": "Livello più alto usato",
+    "talkNewUse": "Usato per la prima volta"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6314,7 +6344,13 @@
     "talkLevel": "Palavras da etapa 2+",
     "talkFixed": "Frases corrigidas",
     "talkAsked": "Perguntas suas",
-    "talkTopics": "Temas"
+    "talkTopics": "Temas",
+    "talkMine3": "Suas palavras, 3 primeiros min",
+    "talkMineShare": "Sua parte da conversa",
+    "talkShaped": "Frases com gramática",
+    "talkKinds": "Gramática e expressões usadas",
+    "talkTop": "Etapa mais alta usada",
+    "talkNewUse": "Usou pela primeira vez"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7527,7 +7563,13 @@
     "talkLevel": "Слова 2+ этапа",
     "talkFixed": "Исправленные фразы",
     "talkAsked": "Ваши вопросы",
-    "talkTopics": "Темы"
+    "talkTopics": "Темы",
+    "talkMine3": "Ваши слова, первые 3 мин",
+    "talkMineShare": "Ваша доля разговора",
+    "talkShaped": "Фразы с грамматикой",
+    "talkKinds": "Грамматика и выражения",
+    "talkTop": "Самый высокий этап",
+    "talkNewUse": "Впервые использовали"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8550,7 +8592,13 @@
     "talkLevel": "Kata tahap 2+",
     "talkFixed": "Kalimat dikoreksi",
     "talkAsked": "Pertanyaanmu",
-    "talkTopics": "Topik"
+    "talkTopics": "Topik",
+    "talkMine3": "Kata-katamu, 3 menit pertama",
+    "talkMineShare": "Bagian bicaramu",
+    "talkShaped": "Kalimat dengan tata bahasa",
+    "talkKinds": "Tata bahasa & ungkapan dipakai",
+    "talkTop": "Tahap tertinggi dipakai",
+    "talkNewUse": "Pertama kali kamu pakai"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9566,7 +9614,13 @@
     "talkLevel": "كلمات المرحلة 2+",
     "talkFixed": "جمل صُحّحت",
     "talkAsked": "أسئلتك",
-    "talkTopics": "المواضيع"
+    "talkTopics": "المواضيع",
+    "talkMine3": "كلماتك في أول 3 دقائق",
+    "talkMineShare": "نصيبك من الكلام",
+    "talkShaped": "جمل فيها قواعد",
+    "talkKinds": "قواعد وتعابير استخدمتها",
+    "talkTop": "أعلى مرحلة استخدمتها",
+    "talkNewUse": "استخدمتها لأول مرة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10582,7 +10636,13 @@
     "talkLevel": "คำขั้น 2 ขึ้นไป",
     "talkFixed": "ประโยคที่ถูกแก้",
     "talkAsked": "คำถามที่คุณถาม",
-    "talkTopics": "หัวข้อ"
+    "talkTopics": "หัวข้อ",
+    "talkMine3": "คำของคุณ 3 นาทีแรก",
+    "talkMineShare": "สัดส่วนที่คุณพูด",
+    "talkShaped": "ประโยคที่มีโครงสร้าง",
+    "talkKinds": "ไวยากรณ์และสำนวนที่ใช้",
+    "talkTop": "ขั้นสูงสุดที่ใช้",
+    "talkNewUse": "ใช้เป็นครั้งแรก"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11598,6 +11658,12 @@
     "talkLevel": "चरण 2+ के शब्द",
     "talkFixed": "सुधारे गए वाक्य",
     "talkAsked": "आपके सवाल",
-    "talkTopics": "विषय"
+    "talkTopics": "विषय",
+    "talkMine3": "पहले 3 मिनट में आपके शब्द",
+    "talkMineShare": "बातचीत में आपका हिस्सा",
+    "talkShaped": "व्याकरण वाले वाक्य",
+    "talkKinds": "इस्तेमाल किए व्याकरण·अभिव्यक्ति",
+    "talkTop": "इस्तेमाल किया सबसे ऊँचा चरण",
+    "talkNewUse": "पहली बार इस्तेमाल किया"
   }
 }

@@ -1,5 +1,7 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
 import { readTopics } from "./talkStats.ts";
+import { readTags, type OpeningLine, type TalkTags } from "./talkTags.ts";
+import { findScenario } from "./catalog.ts";
 import { resetTtsAudio } from "../ttsPlayer.ts";
 import { PATIENT_SILENCE_MS, TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
@@ -822,8 +824,8 @@ export async function fetchContext(input: {
   isPremium: boolean;
   today: string;
   /** 통화가 끝난 접기 — 튜터 요약(summary)도 받는다(2026-11-06). */
-  final?: { locale: string; tutorGender?: string };
-}): Promise<{ notes: string; facts: string[]; summary?: string; topics?: string[] } | null> {
+  final?: { locale: string; tutorGender?: string; opening?: readonly OpeningLine[] };
+}): Promise<{ notes: string; facts: string[]; summary?: string; topics?: string[]; tags?: TalkTags } | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/context"), {
       method: "POST",
@@ -836,20 +838,23 @@ export async function fetchContext(input: {
         previous: input.previous,
         lines: input.lines,
         today: input.today,
-        ...(input.final ? { final: true, locale: input.final.locale, ...(input.final.tutorGender ? { tutorGender: input.final.tutorGender } : {}) } : {}),
+        ...(input.final ? { final: true, locale: input.final.locale, ...(input.final.tutorGender ? { tutorGender: input.final.tutorGender } : {}), ...(input.final.opening?.length ? { opening: input.final.opening } : {}) } : {}),
       }),
     });
     if (!response.ok) {
       console.error("[roleplay] context failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as { notes?: unknown; facts?: unknown; summary?: unknown; topics?: unknown };
+    const body = (await response.json()) as { notes?: unknown; facts?: unknown; summary?: unknown; topics?: unknown; uses?: unknown; asks?: unknown };
     const notes = typeof body.notes === "string" ? body.notes.trim() : "";
     const facts = Array.isArray(body.facts) ? body.facts.filter((fact): fact is string => typeof fact === "string" && fact.trim() !== "") : [];
     const summary = typeof body.summary === "string" ? body.summary.trim() : "";
     if (!notes && facts.length === 0 && !summary) return null;
     const topics = readTopics(body.topics);
-    return { notes, facts, ...(summary ? { summary } : {}), ...(topics.length ? { topics } : {}) };
+    // 표시는 서버가 이미 걸렀지만 앱도 같은 규칙으로 한 번 더(옛 서버·이상한 답).
+    const opening = input.final?.opening ?? [];
+    const tags = opening.length && (body.uses || body.asks) ? readTags(findScenario(input.scenarioId)?.language ?? "en", opening, { uses: body.uses, asks: body.asks }) : null;
+    return { notes, facts, ...(summary ? { summary } : {}), ...(topics.length ? { topics } : {}), ...(tags ? { tags } : {}) };
   } catch (error) {
     console.error("[roleplay] context threw", error);
     return null;

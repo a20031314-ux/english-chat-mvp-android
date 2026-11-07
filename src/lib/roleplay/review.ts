@@ -32,6 +32,8 @@ import type { TurnMark } from "./turnTally.ts";
 export type TranscriptLine = {
   who: "tutor" | "learner";
   text: string;
+  /** 그 줄이 나온 시각(ms) — 대화 비교 "처음 3분"(talkStats.ts, 2026-11-07 밤). 예전 기록엔 없음. */
+  at?: number;
   translation?: string;
   /** On the character's line: help for the moment they were stuck in. Never spoken. */
   tip?: string;

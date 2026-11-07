@@ -1290,7 +1290,7 @@ function Learned({
           </div>
         </>
       ) : null}
-      <TalkCompare ui={ui} language={language} locale={locale} />
+      <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} />
       ) : null}

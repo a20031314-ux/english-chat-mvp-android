@@ -43,8 +43,10 @@ import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from 
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
 import { CallGrowthPairs } from "@/components/studyMap/Growth";
 import { reformOn } from "@/lib/reform";
-import { keepFirstTalkSample, saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
-import { sampleLines, talkStatsOf } from "@/lib/roleplay/talkStats";
+import { saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
+import { talkStatsOf } from "@/lib/roleplay/talkStats";
+import { OPENING_LINES } from "@/lib/roleplay/talkTags";
+import { applyTalkTags } from "@/lib/roleplay/talkMemory";
 import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
 import { loadStudyPicture, type StudyPicture } from "@/lib/roleplay/studyPicture";
 import { cellName, SkillHexagon } from "@/components/studyMap/SkillHexagon";
@@ -413,6 +415,7 @@ export function RoleplayScreen({
       {
         who: "tutor",
         text: instruction.text,
+        at: Date.now(),
         translation: gloss,
         ...(instruction.tip ? { tip: instruction.tip } : {}),
         ...(rephrasingRef.current ? { again: true } : {}),
@@ -634,7 +637,7 @@ export function RoleplayScreen({
   const answer = useCallback(
     async (heard: string, endedAt: number, speechStartedAt: number | null) => {
       if (!scenario || !state) return;
-      setSaid((current) => [...current, { who: "learner", text: heard || "…", ...(heardUnsure(heard) ? { unsure: true } : {}) }]);
+      setSaid((current) => [...current, { who: "learner", text: heard || "…", at: Date.now(), ...(heardUnsure(heard) ? { unsure: true } : {}) }]);
       if (heard) refreshLedgerSoon(scenario.language, 6000);
       const result = submitSpeech(scenario, bank, state, heard, endedAt, speechStartedAt);
       setState(result.state);
@@ -1082,13 +1085,10 @@ export function RoleplayScreen({
       });
       // 대화 비교(자유대화만, 문장 없이 숫자 — 처음 통화의 긴 두 줄만 따로, lib/roleplay/talkStats.ts, 2026-11-07).
       if (openTalk) {
-        const startAt = startedAt.current || Date.now();
         void loadBank(language)
           .then((bank) => {
             const talk = talkStatsOf(language, said, bank, stageCuts(language)[0] ?? 700);
-            if (!talk) return;
-            setCallExtra(language, callId, { talk });
-            keepFirstTalkSample(language, { id: callId, at: startAt, lines: sampleLines(language, said) });
+            if (talk) setCallExtra(language, callId, { talk });
           })
           .catch(() => undefined);
       }
@@ -1100,8 +1100,10 @@ export function RoleplayScreen({
       isPremium,
       today: lifeDay(),
       // 그냥 대화가 끝나면 튜터가 앱 언어로 두세 문장 메모를 남긴다(같은 호출에 붙음 — 호출 수 그대로).
-      ...(openTalk ? { final: { locale: nativeLanguage, tutorGender } } : {}),
+      // 처음 줄도 보내 내 줄 문법·튜터 질문 종류를 같이 표시받는다(talkTags.ts — 대화 비교, 2026-11-07 밤).
+      ...(openTalk ? { final: { locale: nativeLanguage, tutorGender, opening: said.slice(0, OPENING_LINES).map((line) => ({ who: line.who, text: line.text })) } } : {}),
     }).then((folded) => {
+      if (openTalk && callId && folded?.tags) applyTalkTags({ language, callId, said, tags: folded.tags, at: startedAt.current || Date.now() });
       if (folded?.facts.length) mergeLifeFacts(language, folded.facts, Date.now(), callId);
       if (folded?.summary) {
         setTutorNote(folded.summary);

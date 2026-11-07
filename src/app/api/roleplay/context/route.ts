@@ -1,4 +1,5 @@
 import { completeChat } from "@/lib/server/llm";
+import { readOpening, readTags } from "@/lib/roleplay/talkTags";
 import { NextRequest } from "next/server";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { readSpokenLines } from "@/lib/roleplay/director";
@@ -62,6 +63,9 @@ export async function POST(request: NextRequest) {
       ? summaryVoice(scenario.language, body.locale, serverTutorGender(scenario.language, body.tutorGender))
       : null;
 
+  // 끝난 접기면 그 통화 처음 줄도(내 줄 문법·튜터 질문 종류 표시, talkTags.ts — 2026-11-07 밤).
+  const opening = summary ? readOpening(body.opening) : [];
+
   await meterRequest(request, "roleplayContext");
 
   try {
@@ -77,17 +81,19 @@ export async function POST(request: NextRequest) {
             lines,
             today: typeof body.today === "string" && /^\d{4}-\d{2}-\d{2}$/.test(body.today) ? body.today : new Date().toISOString().slice(0, 10),
             ...(summary ? { summary } : {}),
+            ...(opening.length ? { opening: { language: scenario.language, lines: opening } } : {}),
           }),
         },
       ],
       response_format: { type: "json_object" },
-      max_tokens: summary ? 800 : 500, // Claude 여유(2026-10-22). 노트와 사실 목록(+ 끝이면 튜터 요약).
+      max_tokens: summary ? (opening.length ? 1200 : 800) : 500, // Claude 여유(2026-10-22). 노트와 사실 목록(+ 끝이면 튜터 요약).
     });
     const folded = parseMemory(completion.choices[0]?.message?.content ?? "");
     if (!folded) {
       return jsonWithCors(request, { error: "NO_CONTEXT" }, { status: 502 });
     }
-    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary ? { summary: folded.summary } : {}), ...(summary && folded.topics?.length ? { topics: folded.topics } : {}) });
+    const tags = opening.length ? readTags(scenario.language, opening, { uses: folded.uses, asks: folded.asks }) : null;
+    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary ? { summary: folded.summary } : {}), ...(summary && folded.topics?.length ? { topics: folded.topics } : {}), ...(tags ? { uses: tags.uses, asks: tags.asks } : {}) });
   } catch (error) {
     console.error("[roleplay/context]", error);
     return jsonWithCors(request, { error: "CONTEXT_FAILED" }, { status: 502 });
