@@ -52,17 +52,18 @@ export function TodayGrowth({ ui, language }: { ui: UICopy; language: string }) 
     return progressIn(readLedger(language), (t) => dayOfSeconds(t) === today);
   }, [tick, language, today]);
   const parts = [
-    { icon: "🆕", label: ui.lbFresh, n: counts.fresh.length },
-    { icon: "✓", label: ui.growLearned, n: counts.learned.length },
+    // Logbank "배운 것" 표의 칸 이름 그대로 — 같은 숫자의 오늘 몫(2026-11-07 밤).
+    { icon: "", label: ui.lbFresh, n: counts.fresh.length },
+    { icon: "", label: ui.growLearned, n: counts.learned.length },
+    { icon: "", label: ui.growUsed, n: counts.used.length },
     { icon: "↺", label: ui.growRecovered, n: counts.recovered.length },
-    { icon: "💬", label: ui.growUsed, n: counts.used.length },
   ].filter((one) => one.n > 0);
   if (!parts.length) return null;
   return (
     <p data-today-growth className="flex flex-wrap gap-x-3 gap-y-0.5 text-caption tabular-nums text-slate-300">
       {parts.map((one) => (
         <span key={one.label}>
-          <span aria-hidden>{one.icon} </span>
+          {one.icon ? <span aria-hidden>{one.icon} </span> : null}
           {one.label} <span className="font-semibold text-ink">{one.n}</span>
         </span>
       ))}

@@ -44,7 +44,7 @@ import { knownAt, progressIn } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
-import type { CardPart } from "@/lib/curriculum/todayCards";
+import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent } from "@/lib/curriculum/logLedger";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
@@ -1191,7 +1191,8 @@ function periodDays(period: Period, today: string): string[] {
 
 const LEARN_ICON: Record<CardPart, string> = { word: "🔤", grammar: "📐", expression: "💬", frame: "🧩" };
 
-type GrowId = "fresh" | "learned" | "recovered" | "fixed" | "used" | "known";
+type GrowCol = "fresh" | "learned" | "used";
+const GROW_COLS: readonly GrowCol[] = ["fresh", "learned", "used"];
 
 function learnPartName(ui: UICopy, part: CardPart): string {
   return { word: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, frame: ui.framesTitle }[part];
@@ -1229,11 +1230,10 @@ function Learned({
   keyLabel: (key: string) => string;
   dateLabel: (day: string) => string;
 }) {
-  const [open, setOpen] = useState<CardPart | "call" | null>(null);
-  const [growOpen, setGrowOpen] = useState<GrowId | null>(null);
+  // 배운 것 = 표 하나(2026-11-07 밤 사용자 "배운 것·늘어난 것·어휘·새로가 UI로 구분이 안 돼" → "바꿔줘, 대화에서 씀은 활용으로"):
+  // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 어디까지(처음 봄 · 익힘 · 활용), 아래 다시 맞힘 · 고쳐 씀 · 통화. 계산 curriculum/growthView.ts.
+  const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | "call" | "recovered" | "fixed" | null>(null);
   const days = useMemo(() => periodDays(period, today), [period, today]);
-  const learned = useMemo(() => learnedIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
-  // 늘어난 것(2026-11-07 사용자 "포인트 말고 N개 식으로" · "틀렸던 문장 > 이후 활용한 문장"): curriculum/growthView.ts.
   const progress = useMemo(() => progressIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
   const inTime = useMemo(() => (t: number) => inPeriod(period, dayOfSeconds(t)), [period]);
   const pairs = useGrowthPairs(language, inTime);
@@ -1242,70 +1242,87 @@ function Learned({
     return new Map(LEARN_PARTS.flatMap((part) => all[part]).map((one) => [one.key, one]));
   }, [ledger]);
   const itemsOf = (keys: readonly string[]): LearnedItem[] => keys.map((key) => allItems.get(key) ?? { key, ok: 0, miss: 0, last: 0, lastOk: false });
-  const grow: { id: GrowId; icon: string; label: string; n: number }[] = [
-    { id: "fresh", icon: "🆕", label: ui.lbFresh, n: progress.fresh.length },
-    { id: "learned", icon: "✓", label: ui.growLearned, n: progress.learned.length },
-    { id: "recovered", icon: "↺", label: ui.growRecovered, n: progress.recovered.length },
-    { id: "fixed", icon: "✎✓", label: ui.growFixed, n: pairs.length },
-    { id: "used", icon: "💬", label: ui.growUsed, n: progress.used.length },
-    { id: "known", icon: "📚", label: ui.growKnownAll, n: progress.known.length },
-  ];
-  const growShown = grow.filter((one) => one.n > 0);
+  const cell = (part: CardPart, col: GrowCol) => progress[col].filter((key) => partOf(key) === part);
+  const rows = LEARN_PARTS.filter((part) => GROW_COLS.some((col) => cell(part, col).length));
   const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
   const amounts = useMemo(() => amountOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
-  const parts = LEARN_PARTS.filter((part) => learned[part].length);
-  if (!parts.length && !periodCalls.length && !growShown.length) return null;
+  const extras = [
+    { id: "recovered" as const, icon: "↺", label: ui.growRecovered, n: progress.recovered.length },
+    { id: "fixed" as const, icon: "✎✓", label: ui.growFixed, n: pairs.length },
+    { id: "call" as const, icon: "📞", label: ui.homeTabCall, n: periodCalls.length },
+  ].filter((one) => one.n > 0);
+  if (!rows.length && !extras.length) return null;
   const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
+  const colName = (col: GrowCol) => ({ fresh: ui.lbFresh, learned: ui.growLearned, used: ui.growUsed })[col];
+  const openCell = typeof open === "object" && open ? open : null;
   return (
     <div data-learned className="flex flex-col gap-2">
       <h3 className="text-caption font-semibold text-slate-300">{ui.itemsLearned}</h3>
-      <div className="flex flex-wrap gap-1.5">
-        {parts.map((part) => (
-          <button key={part} type="button" data-learned-part={part} onClick={() => setOpen(part)} className={chip}>
-            <span aria-hidden>{LEARN_ICON[part]}</span>
-            <span>{learnPartName(ui, part)}</span>
-            <span className="font-semibold text-ink">{learned[part].length}</span>
-          </button>
-        ))}
-        {periodCalls.length ? (
-          <button type="button" data-learned-part="call" onClick={() => setOpen("call")} className={chip}>
-            <span aria-hidden>📞</span>
-            <span>{ui.homeTabCall}</span>
-            <span className="font-semibold text-ink">{periodCalls.length}</span>
-          </button>
-        ) : null}
-      </div>
-      {growShown.length ? (
-        <>
-          <h3 className="text-caption font-semibold text-slate-300">{ui.growTitle}</h3>
-          <div data-growth className="flex flex-wrap gap-1.5">
-            {growShown.map((one) => (
-              <button key={one.id} type="button" data-growth-chip={one.id} onClick={() => setGrowOpen(one.id)} className={chip}>
-                <span aria-hidden>{one.icon}</span>
-                <span>{one.label}</span>
-                <span className="font-semibold text-ink">{one.n}</span>
-              </button>
+      {rows.length ? (
+        <table data-learned-table className="w-full text-note tabular-nums">
+          <thead>
+            <tr className="text-meta text-slate-500">
+              <th className="py-1 text-start font-normal" />
+              {GROW_COLS.map((col) => (
+                <th key={col} className="py-1 text-end font-normal">{colName(col)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((part) => (
+              <tr key={part} data-learned-part={part} className="border-t border-line">
+                <td className="py-1.5 text-slate-300">
+                  <span aria-hidden>{LEARN_ICON[part]} </span>
+                  {learnPartName(ui, part)}
+                </td>
+                {GROW_COLS.map((col) => {
+                  const n = cell(part, col).length;
+                  return (
+                    <td key={col} className="py-1 text-end">
+                      {n ? (
+                        <button type="button" data-learned-cell={`${part}-${col}`} onClick={() => setOpen({ part, col })} className="rounded-full px-2 py-0.5 font-semibold text-ink hover:bg-white/5">
+                          {n}
+                        </button>
+                      ) : (
+                        <span className="px-2 text-slate-600">0</span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
             ))}
-          </div>
-        </>
+          </tbody>
+        </table>
+      ) : null}
+      {extras.length ? (
+        <div data-growth className="flex flex-wrap gap-1.5">
+          {extras.map((one) => (
+            <button key={one.id} type="button" data-growth-chip={one.id} onClick={() => setOpen(one.id)} className={chip}>
+              <span aria-hidden>{one.icon}</span>
+              <span>{one.label}</span>
+              <span className="font-semibold text-ink">{one.n}</span>
+            </button>
+          ))}
+        </div>
       ) : null}
       <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} />
       ) : null}
-      {growOpen ? (
-        <LogSheet title={`${grow.find((one) => one.id === growOpen)!.icon} ${grow.find((one) => one.id === growOpen)!.label} · ${grow.find((one) => one.id === growOpen)!.n}`} ui={ui} onClose={() => setGrowOpen(null)}>
-          {growOpen === "fixed" ? (
-            <PairList pairs={pairs} locale={locale} />
-          ) : (
-            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress[growOpen].slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
-          )}
+      {openCell ? (
+        <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
-      {open && open !== "call" ? (
-        <LogSheet title={`${LEARN_ICON[open]} ${learnPartName(ui, open)} · ${learned[open].length}`} ui={ui} onClose={() => setOpen(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={learned[open]} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+      {open === "recovered" ? (
+        <LogSheet title={`↺ ${ui.growRecovered} · ${progress.recovered.length}`} ui={ui} onClose={() => setOpen(null)}>
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress.recovered.slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+        </LogSheet>
+      ) : null}
+      {open === "fixed" ? (
+        <LogSheet title={`✎✓ ${ui.growFixed} · ${pairs.length}`} ui={ui} onClose={() => setOpen(null)}>
+          <PairList pairs={pairs} locale={locale} />
         </LogSheet>
       ) : null}
       {open === "call" ? (
