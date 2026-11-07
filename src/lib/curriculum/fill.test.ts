@@ -239,3 +239,27 @@ test("추천은 표현 글자가 아니라 빈칸 틀이고, 틀에 없는 표�
   assert.match(point!.label, /___/);
   assert.deepEqual(studyPoint("en", "w|apple", () => ""), { key: "w|apple", label: "apple" });
 });
+
+test("첫 측정 근거(2026-11-07): 경계 b 아래 단계는 안 풀어도 채워지고(옅게), 측정 전 시각·글자부터면 안 씀 (es·ja)", async () => {
+  for (const language of ["es", "ja"]) {
+    const catalog = fillCatalog(language, await wordsOf(language));
+    const now = NOW;
+    const placed = { at: now - 1000, letters: false, b: 3000, grammar: 3, expression: 3 };
+    const result = computeFill({ catalog, check: null, stage: 3, placed, events: [], calls: [], now });
+    const read = result.axes.vocabRead;
+    assert.ok(read.stages[0]! > 0.8 && read.stages[1]! > 0.7, `${language} ${read.stages}`);
+    assert.ok(read.presumed?.[0] && read.presumed?.[1], language);
+    assert.ok(read.fill > 0.4, `${language} 낱말 이해 ${read.fill}`);
+    assert.ok(result.axes.sentRead.stages[0]! > 0.8 && result.axes.sentRead.stages[4] === 0, `${language} ${result.axes.sentRead.stages}`);
+    const before = computeFill({ catalog, check: null, stage: 3, placed: { ...placed, at: now + 1000 }, events: [], calls: [], now });
+    assert.equal(before.axes.vocabRead.fill, 0, "측정 전 시각에는 안 씀");
+    const letters = computeFill({ catalog, check: null, stage: 1, placed: { ...placed, letters: true }, events: [], calls: [], now });
+    assert.equal(letters.axes.vocabRead.fill, 0);
+    // 푼 단계는 측정 몫 쪽으로 당김: 1단계 8개 중 4개만 맞혀도 측정 근거 없는 것보다 높음.
+    const first = [...catalog.vocab.values()].filter((item) => item.stage === 1 && item.key.startsWith("w|")).slice(0, 8);
+    const events: FillEvent[] = first.map((item, i) => ({ at: now - 500 + i, key: item.key, correct: i % 2 === 0, source: "quiz", use: false, choose: true }));
+    const withPlaced = computeFill({ catalog, check: null, stage: 3, placed, events, calls: [], now }).axes.vocabRead.stages[0]!;
+    const without = computeFill({ catalog, check: null, stage: 3, events, calls: [], now }).axes.vocabRead.stages[0]!;
+    assert.ok(withPlaced > without, `${withPlaced} > ${without}`);
+  }
+});

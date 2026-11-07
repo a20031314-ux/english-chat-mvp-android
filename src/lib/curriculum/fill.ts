@@ -28,6 +28,7 @@ import { posGroup, stageCuts, type BankWord } from "./vocabBank.ts";
 import { stageKeyMap } from "../notes/myParts.ts";
 import { isWordish } from "../notes/stageParts.ts";
 import type { LeadHow, TalkWhy } from "../roleplay/turnTally.ts";
+import { knowChance as levelKnow } from "./vocabLevel.ts";
 
 export const AXES = ["vocabRead", "vocabUse", "sentRead", "sentUse", "listen", "talk"] as const;
 export type Axis = (typeof AXES)[number];
@@ -251,6 +252,8 @@ export type AxisFill = {
   stages: number[];
   /** 단계 칸마다 실제로 잰 수(답·차례 — 반감 전). 0이면 그 단계는 아직 안 만남: 띠(SkillBands)는 칠하지 않는다(2026-11-06). */
   stageN: number[];
+  /** 단계마다 첫 측정으로만 채웠나(푼 답 없음 — 띠에서 옅게). 듣기·실전 대화는 없음. */
+  presumed?: boolean[];
   cells: FillCell[];
 };
 export type FillResult = { axes: Record<Axis, AxisFill>; weak: FillCell[]; startStage: number };
@@ -313,7 +316,35 @@ export type FillInput = {
   events: readonly FillEvent[];
   calls: readonly CallTurns[];
   now: number;
+  /**
+   * 첫 측정 결과(curriculum/firstCheck.ts firstCheck.v1, 2026-11-07 사용자 "1번으로해줘"): 안 푼 아래 단계의 근거.
+   * 낱말은 경계 b로 단계마다 아는 몫(vocabLevel 곡선), 문장은 문법·표현 시작 단계 아래 0.85 · 그 단계 0.4. now보다 뒤에 잰 것은 안 씀.
+   */
+  placed?: { at: number; letters: boolean; b: number; grammar: number; expression: number } | null;
 };
+
+/** 첫 측정으로 채운 단계: 시작 단계 아래·그 단계의 아는 몫, 이 아래면 근거로 안 씀. */
+export const PLACED_BELOW = 0.85;
+export const PLACED_AT = 0.4;
+export const PLACED_MIN = 0.2;
+
+/** 묶음의 단계마다 첫 측정이 말하는 아는 몫(없으면 null). */
+function placedStages(family: Family, items: ReadonlyMap<string, FillItem>, vocabTotal: number, placed: NonNullable<FillInput["placed"]>): (number | null)[] {
+  const sum = Array(STAGES).fill(0) as number[];
+  const cnt = Array(STAGES).fill(0) as number[];
+  for (const item of items.values()) {
+    const s = Math.min(STAGES, Math.max(1, item.stage)) - 1;
+    let p: number;
+    if (family === "vocab") p = levelKnow({ b: placed.b, n: 0 }, item.d * vocabTotal);
+    else {
+      const start = item.key.startsWith("e|") ? placed.expression : placed.grammar;
+      p = item.stage < start ? PLACED_BELOW : item.stage === start ? PLACED_AT : 0;
+    }
+    sum[s] += p;
+    cnt[s] += 1;
+  }
+  return sum.map((v, i) => (cnt[i] && v / cnt[i]! >= PLACED_MIN ? v / cnt[i]! : null));
+}
 
 export function computeFill(input: FillInput): FillResult {
   const { catalog, now } = input;
@@ -378,13 +409,18 @@ export function computeFill(input: FillInput): FillResult {
       keyN[s] += 1;
       if (one.free) freeShare += 1;
     }
-    const measured = sums.map((sum, i) => (keyN[i] ? clamp01((sum + STAGE_PULL * 0.5) / (keyN[i] + STAGE_PULL)) : 0));
+    // 첫 측정 근거: 안 푼 단계는 그 몫(띠에서 옅게), 푼 단계는 반(0.5) 대신 그 몫 쪽으로 당김.
+    const placed = input.placed && !input.placed.letters && input.placed.at <= now ? input.placed : null;
+    const vocabTotal = stageCuts(catalog.language)[STAGES - 1] ?? 5000;
+    const presumedOf = placed ? placedStages(family, items, vocabTotal, placed) : Array<number | null>(STAGES).fill(null);
+    const measured = sums.map((sum, i) => (keyN[i] ? clamp01((sum + STAGE_PULL * (presumedOf[i] ?? 0.5)) / (keyN[i] + STAGE_PULL)) : presumedOf[i] ?? 0));
+    const presumed = presumedOf.map((one, i) => one !== null && !keyN[i]);
     const credit = use ? PRIOR_SHARE[axis] : 1;
     const known = measured.reduce((a, value, i) => a + value * (counts[i] ?? 0), 0);
     const estimate = clamp01((known * credit + (use ? 0.4 * freeShare : 0)) / total);
     // 범위: 푼 단계는 표본 흔들림, 안 푼 단계는 0~다 앎 어디든(위 끝에만 더함).
-    const spread = Math.sqrt(measured.reduce((a, v, i) => a + (keyN[i] ? (v * (1 - v) * (counts[i] ?? 0) ** 2) / (keyN[i] + STAGE_PULL) : 0), 0)) / total;
-    const unmeasured = counts.reduce((a, c, i) => a + (keyN[i] ? 0 : c), 0) / total;
+    const spread = Math.sqrt(measured.reduce((a, v, i) => a + (keyN[i] || presumed[i] ? (v * (1 - v) * (counts[i] ?? 0) ** 2) / (keyN[i] + STAGE_PULL) : 0), 0)) / total;
+    const unmeasured = counts.reduce((a, c, i) => a + (keyN[i] || presumed[i] ? 0 : c), 0) / total;
     // 보이는 숫자 = 확인된 실력(어림의 아래 끝, 2026-11-07 사용자 "숫자는 맞춰줘") — 띠·육각형·2주 비교·학습 곡선이 같은 값.
     // 답이 쌓이면 흔들림이 줄어 오르고, 실력이 늘면 또 오르고, 많이 틀릴 때만 내려간다.
     const fill = clamp01(estimate - spread);
@@ -414,7 +450,7 @@ export function computeFill(input: FillInput): FillResult {
       if (have) have.value = stages[s - 1] ?? 0;
       else out.push({ axis, id: `stage:${s}`, value: stages[s - 1] ?? 0, n: 0, gap: 0, state: "unknown" });
     }
-    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, stageN: keyN, cells: sortCells(out) };
+    axes[axis] = { axis, fill, low: Math.min(fill, lowFill), high: Math.max(fill, highFill), converged: (Math.max(fill, highFill) - Math.min(fill, lowFill)) / 2 <= CONVERGED_RANGE, n, stages, stageN: keyN, presumed, cells: sortCells(out) };
   }
 
   axes.talk = talkFill(input.calls, prior.fill * PRIOR_SHARE.talk, prior.range);

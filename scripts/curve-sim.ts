@@ -12,6 +12,7 @@ import type { LogEvent } from "../src/lib/curriculum/logLedger.ts";
 
 const language = process.argv[2] ?? "es";
 const DAYS = 30;
+const NO_PLACED = process.env.NO_PLACED === "1";
 const D = 86400;
 const T0 = Date.UTC(2026, 9, 1, 0) / 1000; // 10-01 UTC
 const words = await loadBank(language);
@@ -53,6 +54,8 @@ function run(p: Persona, seed: number) {
   };
   // 앱 쪽: 첫 측정이 낱말 경계를 어림(참의 0.7~1.3배), 그 뒤 퀴즈 답으로 noteLevel.
   let level: Level = { b: p.trueB * (0.7 + 0.6 * random()), n: PROBE, picked: true };
+  // 첫 측정 결과(fill.ts placed): 경계 어림 + 문법·표현 시작 단계(참 단계 반올림 ±1).
+  const placed = { at: T0 * 1000, letters: false, b: level.b, grammar: Math.max(1, Math.min(5, Math.round(p.trueG + (random() - 0.5)))), expression: Math.max(1, Math.min(5, Math.round(p.trueG + (random() - 0.5)))) };
   const seenRank = new Set<number>();
   const rows: { day: number; sure: number; read: number; use: number; n: number; fresh: number; again: number; known: number; hard: number }[] = [];
   for (let day = 0; day < DAYS; day += 1) {
@@ -104,7 +107,7 @@ function run(p: Persona, seed: number) {
     }
     const end = (T0 + (day + 1) * D) * 1000;
     const events = ledgerFillEvents({ ledger, results: [], items: [], language, segment: (s) => s.split(" ") });
-    const fill = computeFill({ catalog, check: null, stage: Math.max(1, Math.round(p.trueG)), events, calls: [], now: end });
+    const fill = computeFill({ catalog, check: null, stage: Math.max(1, Math.round(p.trueG)), placed: NO_PLACED ? null : placed, events, calls: [], now: end });
     const own = checkStates(ledger);
     let known = 0;
     let hard = 0;

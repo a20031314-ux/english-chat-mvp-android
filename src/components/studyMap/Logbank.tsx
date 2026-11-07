@@ -30,6 +30,7 @@ import { COMPARE_MS, directionView, type DirectionView } from "@/lib/curriculum/
 import { LEDGER_EVENT, migrateLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { callTurnsOf, fillEvents, ledgerFillEvents } from "@/lib/curriculum/fillInputs";
 import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
+import { readFirstCheck } from "@/lib/curriculum/firstCheck";
 import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
 import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
 import { segmentWords } from "@/lib/wordSegments";
@@ -384,6 +385,8 @@ export function Logbank({
     () => null,
   );
   const catalog = useMemo(() => fillCatalog(language, words), [language, words]);
+  // 첫 측정(firstCheck.v1) — 안 푼 아래 단계의 근거(fill.ts placed, 2026-11-07).
+  const placed = useMemo(() => readFirstCheck(language), [language]);
   // 개편: 띠·육각형 재료 = 사건 장부(오늘 카드·Quizbank와 같은 기록) + 수업 결과·AI 채팅 서버 기록(fillInputs.ts ledgerFillEvents).
   const [ledgerTick, setLedgerTick] = useState(0);
   useEffect(() => {
@@ -403,18 +406,19 @@ export function Logbank({
   }, [reform, ledger, language, known, quiz, results, items, checkups]);
   const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
   const [nowAt] = useState(() => Date.now());
-  const fill = useMemo(() => computeFill({ catalog, check, stage, events, calls: callTurns, now: nowAt }), [catalog, check, stage, events, callTurns, nowAt]);
+  const fill = useMemo(() => computeFill({ catalog, check, stage, placed, events, calls: callTurns, now: nowAt }), [catalog, check, stage, placed, events, callTurns, nowAt]);
   const earlier = useMemo(() => {
     const cut = nowAt - COMPARE_MS;
     return computeFill({
       catalog,
       check,
       stage,
+      placed,
       events: events.filter((one) => one.at < cut),
       calls: callTurns.filter((one) => one.at < cut),
       now: cut,
     });
-  }, [catalog, check, stage, events, callTurns, nowAt]);
+  }, [catalog, check, stage, placed, events, callTurns, nowAt]);
   const direction = useMemo(() => directionView(fill, earlier), [fill, earlier]);
   // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
   useEffect(() => {
@@ -426,8 +430,8 @@ export function Logbank({
     const [y, m, d] = period.start.split("-").map(Number);
     const start = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
     if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
-    return computeFill({ catalog, check, stage, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
-  }, [catalog, check, stage, events, callTurns, period.start]);
+    return computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
+  }, [catalog, check, stage, placed, events, callTurns, period.start]);
   // 학습 곡선 선 = 날마다 그날 끝의 확인된 실력(learnedView.ts sureOf — 2026-11-07 사용자 "Logbank는 학습량 + 채운 %").
   const sureDays = useMemo(() => {
     if (!reform) return [] as (number | null)[];
@@ -435,9 +439,9 @@ export function Logbank({
       const end = dayEndMs(day);
       if (end - 86_400_000 > nowAt) return null;
       const cut = Math.min(end, nowAt);
-      return sureOf(computeFill({ catalog, check, stage, events: events.filter((one) => one.at < cut), calls: callTurns.filter((one) => one.at < cut), now: cut }));
+      return sureOf(computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < cut), calls: callTurns.filter((one) => one.at < cut), now: cut }));
     });
-  }, [reform, period, today, catalog, check, stage, events, callTurns, nowAt]);
+  }, [reform, period, today, catalog, check, stage, placed, events, callTurns, nowAt]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });

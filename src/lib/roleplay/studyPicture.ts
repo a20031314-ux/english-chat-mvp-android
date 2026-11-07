@@ -5,6 +5,7 @@
 import { CHECK_PRIOR, computeFill, fillCatalog, type FillCell, type FillResult } from "../curriculum/fill.ts";
 import { callTurnsOf, fillEvents } from "../curriculum/fillInputs.ts";
 import { readFillCheck } from "../curriculum/fillCheck.ts";
+import { readFirstCheck } from "../curriculum/firstCheck.ts";
 import { readDayResults } from "../curriculum/dayLog.ts";
 import { readQuizDays } from "../curriculum/quizDays.ts";
 import { COMPARE_MS } from "../curriculum/directionView.ts";
@@ -43,7 +44,8 @@ export async function loadStudyPicture(language: string, now = Date.now()): Prom
     segment: (text) => segmentWords(text, language),
   });
   const calls = callTurnsOf(Object.values(readCallDays(language)));
-  const result = computeFill({ catalog, check, stage, events, calls, now });
+  const placed = readFirstCheck(language);
+  const result = computeFill({ catalog, check, stage, placed, events, calls, now });
   const cell = pickStudyCell(result.weak);
   if (!cell) return null;
   const cut = now - COMPARE_MS;
@@ -53,6 +55,7 @@ export async function loadStudyPicture(language: string, now = Date.now()): Prom
           catalog,
           check,
           stage,
+          placed,
           events: events.filter((one) => one.at < cut),
           calls: calls.filter((one) => one.at < cut),
           now: cut,

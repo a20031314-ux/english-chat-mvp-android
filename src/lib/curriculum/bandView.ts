@@ -26,14 +26,16 @@ export function bandCells(axis: AxisFill): BandCell[] {
   return Array.from({ length: STAGES }, (_, i) => {
     const n = axis.stageN?.[i] ?? 0;
     const value = Math.min(1, Math.max(0, axis.stages[i] ?? 0));
-    const state: BandCellState = n <= 0 ? "none" : n < WEAK_MIN_N ? "thin" : "measured";
+    // 첫 측정으로만 채운 단계는 옅게(2026-11-07).
+    const state: BandCellState = n <= 0 ? (axis.presumed?.[i] ? "thin" : "none") : n < WEAK_MIN_N ? "thin" : "measured";
     return { stage: i + 1, value: state === "none" ? 0 : value, state };
   });
 }
 
 /** 그 꼭짓점을 숫자로 보여 줄 만큼 답했나. */
 export function axisShown(axis: AxisFill): boolean {
-  return axis.n >= WEAK_MIN_N;
+  // 첫 측정(24장 + 뜻 5 + 오르기)을 했으면 답이 적어도 숫자를 보인다 — 그 측정이 근거.
+  return axis.n >= WEAK_MIN_N || Boolean(axis.presumed?.some(Boolean));
 }
 
 export function bandPct(axis: AxisFill): string | null {
