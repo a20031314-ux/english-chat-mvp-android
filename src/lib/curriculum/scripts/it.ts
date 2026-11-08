@@ -11,7 +11,7 @@ export const IT_SCRIPT: ScriptCourse = {
       title: { en: "The five vowels", ko: "모음 다섯 개" },
       note: {
         en: "Each vowel always keeps its own clear sound, and every vowel is pronounced, even at the end of a word.",
-        ko: "모음은 늘 같은 소리로 또렷하게, 낱말 끝 모음까지 빠짐없이 소리 낸다.",
+        ko: "모음은 늘 같은 소리로 또렷하게, 단어 끝 모음까지 빠짐없이 소리 낸다.",
       },
       items: [
         { char: "a", reading: "a", say: "a", example: { word: "amico", meaning: { en: "friend", ko: "친구" } } },
@@ -148,7 +148,7 @@ export const IT_SCRIPT: ScriptCourse = {
       title: { en: "Stress and accent marks", ko: "강세와 강세 부호" },
       note: {
         en: "Most words stress the second-to-last syllable; a written accent (à è é ì ò ù) marks a stressed last syllable or tells two words apart.",
-        ko: "대부분 끝에서 두 번째 음절에 강세. 부호(à è é ì ò ù)가 있으면 그 마지막 음절에 강세가 오거나, 같은 철자의 다른 낱말을 구별한다.",
+        ko: "대부분 끝에서 두 번째 음절에 강세. 부호(à è é ì ò ù)가 있으면 그 마지막 음절에 강세가 오거나, 같은 철자의 다른 단어를 구별한다.",
       },
       items: [
         { char: "casa", reading: "KA-sa", say: "casa", example: { word: "casa", meaning: { en: "house", ko: "집" } } },

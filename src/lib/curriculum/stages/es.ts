@@ -237,7 +237,7 @@ export const ES_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Put the stress where the accent mark says: estás vs estas, término vs terminó; a misplaced stress changes the word.",
-        ko: "강세 표시가 있는 곳에 힘을 준다: estás(너는 있다)와 estas(이것들), término(끝)과 terminó(끝냈다) — 강세가 바뀌면 낱말이 바뀐다.",
+        ko: "강세 표시가 있는 곳에 힘을 준다: estás(너는 있다)와 estas(이것들), término(끝)과 terminó(끝냈다) — 강세가 바뀌면 단어가 바뀐다.",
       },
       dialogues: [
         {
@@ -323,7 +323,7 @@ export const ES_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Link words smoothly: a vowel at the end joins the next vowel, so la_amiga and me_encanta sound like one word.",
-        ko: "낱말을 이어 말한다: 끝 모음과 다음 모음이 붙어 la amiga, me encanta가 한 낱말처럼 들린다.",
+        ko: "단어를 이어 말한다: 끝 모음과 다음 모음이 붙어 la amiga, me encanta가 한 단어처럼 들린다.",
       },
       dialogues: [
         {

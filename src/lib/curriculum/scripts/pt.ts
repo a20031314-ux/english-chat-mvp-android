@@ -11,7 +11,7 @@ export const PT_SCRIPT: ScriptCourse = {
       title: { en: "Vowels: open and closed e, o", ko: "모음: 열린 e·o와 닫힌 e·o" },
       note: {
         en: "e and o each have an open and a closed sound: é, ó are open; ê, ô are closed. Without an accent, learn it with the word.",
-        ko: "e와 o는 열린 소리와 닫힌 소리가 있다: é·ó는 열린(입 크게), ê·ô는 닫힌 소리. 기호가 없으면 낱말과 함께 익힌다.",
+        ko: "e와 o는 열린 소리와 닫힌 소리가 있다: é·ó는 열린(입 크게), ê·ô는 닫힌 소리. 기호가 없으면 단어와 함께 익힌다.",
       },
       items: [
         { char: "a", reading: "a (ba-TA-ta)", say: "batata", example: { word: "batata", meaning: { en: "potato", ko: "감자" } } },
@@ -28,7 +28,7 @@ export const PT_SCRIPT: ScriptCourse = {
       title: { en: "Final -o and -e, de and te", ko: "끝소리 -o·-e와 de·te" },
       note: {
         en: "At the end of a word, unstressed o sounds like u and e like i. Before that i sound, d becomes dj and t becomes tch.",
-        ko: "낱말 끝의 힘 없는 o는 '우', e는 '이'처럼 난다. 그 '이' 소리 앞에서 d는 '지', t는 '치'가 된다.",
+        ko: "단어 끝의 힘 없는 o는 '우', e는 '이'처럼 난다. 그 '이' 소리 앞에서 d는 '지', t는 '치'가 된다.",
       },
       items: [
         { char: "-o", reading: "u (GA-tu)", say: "gato", example: { word: "gato", meaning: { en: "cat", ko: "고양이" } } },
@@ -95,7 +95,7 @@ export const PT_SCRIPT: ScriptCourse = {
       title: { en: "r, rr and silent h", ko: "r·rr와 소리 없는 h" },
       note: {
         en: "In Brazil, r at the start of a word and rr sound like an English h; a single r between vowels is a quick flap. caro (expensive) and carro (car) are different words.",
-        ko: "브라질에서는 낱말 첫 r과 rr가 영어 h(ㅎ)처럼, 모음 사이 r 하나는 혀를 한 번 튕기는 ㄹ처럼 난다. caro(비싼)와 carro(자동차)는 다른 낱말.",
+        ko: "브라질에서는 단어 첫 r과 rr가 영어 h(ㅎ)처럼, 모음 사이 r 하나는 혀를 한 번 튕기는 ㄹ처럼 난다. caro(비싼)와 carro(자동차)는 다른 단어.",
       },
       items: [
         { char: "r- (start)", reading: "h (HI-u)", say: "rio", example: { word: "rio", meaning: { en: "river", ko: "강" } } },
@@ -111,7 +111,7 @@ export const PT_SCRIPT: ScriptCourse = {
       title: { en: "s, ss and z", ko: "s·ss·z" },
       note: {
         en: "A single s between vowels sounds like z; ss is always s. In Rio, s before a consonant or at the end often sounds like sh.",
-        ko: "모음 사이 s 하나는 z처럼, ss는 언제나 s. 리우에서는 자음 앞·낱말 끝의 s가 흔히 sh처럼 들린다.",
+        ko: "모음 사이 s 하나는 z처럼, ss는 언제나 s. 리우에서는 자음 앞·단어 끝의 s가 흔히 sh처럼 들린다.",
       },
       items: [
         { char: "s (start)", reading: "s", say: "sol", example: { word: "sol", meaning: { en: "sun", ko: "해" } } },
@@ -127,7 +127,7 @@ export const PT_SCRIPT: ScriptCourse = {
       title: { en: "x and final l", ko: "x와 음절 끝 l" },
       note: {
         en: "x is most often sh (at the start and after ai, ei); its other sounds are learned with the word. l at the end of a syllable sounds like u.",
-        ko: "x는 대개 sh(낱말 첫머리, ai·ei 뒤). 다른 소리는 낱말과 함께 익힌다. 음절 끝의 l은 '우'처럼 난다.",
+        ko: "x는 대개 sh(단어 첫머리, ai·ei 뒤). 다른 소리는 단어와 함께 익힌다. 음절 끝의 l은 '우'처럼 난다.",
       },
       items: [
         { char: "x = sh", reading: "sh (PEY-shi)", say: "peixe", example: { word: "peixe", meaning: { en: "fish", ko: "생선, 물고기" } } },

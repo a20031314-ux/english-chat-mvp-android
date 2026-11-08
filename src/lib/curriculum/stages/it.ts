@@ -65,7 +65,7 @@ export const IT_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Say every vowel fully and clearly, even at the end of a word: grazie is gra-tsi-e, not \"grats\".",
-        ko: "낱말 끝 모음까지 또렷이 다 소리 낸다: grazie는 \"그랏\"이 아니라 그라-치-에.",
+        ko: "단어 끝 모음까지 또렷이 다 소리 낸다: grazie는 \"그랏\"이 아니라 그라-치-에.",
       },
       dialogues: [
         {
@@ -234,7 +234,7 @@ export const IT_LADDER: StageLadder = {
       ],
       listening: {
         en: "Follow fast casual speech where words merge: \"che c'è\", \"cos'hai\", \"me l'ha detto\", \"non c'ho voglia\".",
-        ko: "낱말이 붙는 빠른 구어 알아듣기: \"che c'è\", \"cos'hai\", \"me l'ha detto\", \"non c'ho voglia\".",
+        ko: "단어가 붙는 빠른 구어 알아듣기: \"che c'è\", \"cos'hai\", \"me l'ha detto\", \"non c'ho voglia\".",
       },
       pronunciation: {
         en: "Put the stress in the right place, since it can change meaning: ÀNcora (anchor) vs anCOra (still), and keep it far back on long verbs like teLEfonano.",
@@ -408,7 +408,7 @@ export const IT_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Use rhythm and emphasis to carry meaning: stretch and stress the key word (\"è stato davvero incredibile\") and keep doubled consonants crisp in fast speech.",
-        ko: "리듬과 강세로 뜻을 싣는다: 핵심 낱말을 늘이고 힘주어(\"è stato davvero incredibile\"), 빠르게 말할 때도 겹자음은 또렷이.",
+        ko: "리듬과 강세로 뜻을 싣는다: 핵심 단어를 늘이고 힘주어(\"è stato davvero incredibile\"), 빠르게 말할 때도 겹자음은 또렷이.",
       },
       dialogues: [
         {

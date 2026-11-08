@@ -52,7 +52,7 @@ export const RU_SCRIPT: ScriptCourse = {
       title: { en: "New shapes: vowels and Й", ko: "새 모양: 모음 글자와 Й" },
       note: {
         en: "Я, Ю, Ё (and Е) say ya, yu, yo (ye) at the start of a word; after a consonant they make it soft.",
-        ko: "Я·Ю·Ё(그리고 Е)는 낱말 처음에서 야·유·요(예), 자음 뒤에서는 그 자음을 부드럽게 만든다.",
+        ko: "Я·Ю·Ё(그리고 Е)는 단어 처음에서 야·유·요(예), 자음 뒤에서는 그 자음을 부드럽게 만든다.",
       },
       items: [
         { char: "И и", reading: "i", say: "и", example: { word: "имя", meaning: { en: "name", ko: "이름" } } },
@@ -100,7 +100,7 @@ export const RU_SCRIPT: ScriptCourse = {
       title: { en: "Stress: one strong syllable", ko: "강세: 힘주는 음절 하나" },
       note: {
         en: "Every word has one stressed syllable, louder and longer. Normal text does not mark it; dictionaries use ´.",
-        ko: "낱말마다 강세 음절이 하나 있고, 더 세고 길게 읽는다. 보통 글에는 표시가 없고 사전에서 ´로 보여 준다.",
+        ko: "단어마다 강세 음절이 하나 있고, 더 세고 길게 읽는다. 보통 글에는 표시가 없고 사전에서 ´로 보여 준다.",
       },
       items: [
         { char: "ма́ма", reading: "MA-ma", say: "мама", example: { word: "мама", meaning: { en: "mom", ko: "엄마" } } },
@@ -134,7 +134,7 @@ export const RU_SCRIPT: ScriptCourse = {
       title: { en: "Written one way, said another", ko: "쓰는 것과 다르게 나는 소리" },
       note: {
         en: "At the end of a word, б д г з ж в sound like п т к с ш ф. Г in -ого / -его sounds like в.",
-        ko: "낱말 끝의 б·д·г·з·ж·в는 п·т·к·с·ш·ф로 난다. -ого·-его의 г는 в로 읽는다.",
+        ko: "단어 끝의 б·д·г·з·ж·в는 п·т·к·с·ш·ф로 난다. -ого·-его의 г는 в로 읽는다.",
       },
       items: [
         { char: "хлеб", reading: "khlep", say: "хлеб", example: { word: "хлеб", meaning: { en: "bread", ko: "빵" } } },

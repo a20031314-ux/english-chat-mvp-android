@@ -64,7 +64,7 @@ export function promoteVerbObjectSlip(
 
 /** 앱 언어로 쓴 짧은 설명. 영어 낱말 바로 뒤에 조사를 붙이지 않는다(한국어). */
 const EXPLAIN: Record<string, (verb: string, person: string) => string> = {
-  ko: (v, p) => `'${v}' 바로 뒤에는 사람을 둘 수 없어요. 사람 앞에 'to' 낱말을 붙여 '${v} … to ${p}' 꼴로 써요.`,
+  ko: (v, p) => `'${v}' 바로 뒤에는 사람을 둘 수 없어요. 사람 앞에 'to' 단어를 붙여 '${v} … to ${p}' 꼴로 써요.`,
   en: (v, p) => `'${v}' can't take the person straight after it; put 'to' before the person: '${v} … to ${p}'.`,
   es: (v, p) => `Después de '${v}' no puede ir directamente la persona; se pone 'to' delante: '${v} … to ${p}'.`,
   ja: (v, p) => `'${v}'の直後に人は置けません。人の前に'to'を付けて'${v} … to ${p}'の形にします。`,

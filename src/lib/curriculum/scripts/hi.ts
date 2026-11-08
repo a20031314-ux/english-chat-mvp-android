@@ -11,7 +11,7 @@ export const HI_SCRIPT: ScriptCourse = {
       title: { en: "Vowels (standalone)", ko: "모음 (홀로 쓰는 꼴)" },
       note: {
         en: "These forms are used at the start of a word. Short and long pairs (इ/ई, उ/ऊ) differ only in length.",
-        ko: "낱말 첫머리에 쓰는 꼴이다. 짧은 것과 긴 것(इ/ई, उ/ऊ)은 길이만 다르다.",
+        ko: "단어 첫머리에 쓰는 꼴이다. 짧은 것과 긴 것(इ/ई, उ/ऊ)은 길이만 다르다.",
       },
       items: [
         { char: "अ", reading: "a (short, like 'uh')", say: "अ", example: { word: "अनार", meaning: { en: "pomegranate", ko: "석류" } } },
@@ -143,7 +143,7 @@ export const HI_SCRIPT: ScriptCourse = {
       title: { en: "With and without a puff of air", ko: "숨을 내느냐 안 내느냐 (유기음)" },
       note: {
         en: "The letter with h is said with a puff of air; the other has none. The difference changes the word.",
-        ko: "h가 붙은 글자는 숨을 훅 내고, 다른 쪽은 숨 없이 낸다. 이 차이로 낱말이 바뀐다.",
+        ko: "h가 붙은 글자는 숨을 훅 내고, 다른 쪽은 숨 없이 낸다. 이 차이로 단어가 바뀐다.",
       },
       items: [
         { char: "क · ख", reading: "ka · kha", say: "काना, खाना", example: { word: "खाना", meaning: { en: "food", ko: "음식" } } },

@@ -27,7 +27,7 @@ export const ID_SCRIPT: ScriptCourse = {
       title: { en: "The two e sounds", ko: "두 가지 e 소리" },
       note: {
         en: "The letter e is written the same for both sounds: weak e (like 으) is more common; learn each word's e by ear.",
-        ko: "e는 두 소리를 같은 글자로 쓴다: 약한 e('으' 비슷)가 더 흔하고, 낱말마다 귀로 익힌다.",
+        ko: "e는 두 소리를 같은 글자로 쓴다: 약한 e('으' 비슷)가 더 흔하고, 단어마다 귀로 익힌다.",
       },
       items: [
         { char: "e (weak)", reading: "e (으)", say: "besar", example: { word: "besar", meaning: { en: "big", ko: "크다" } } },
@@ -61,7 +61,7 @@ export const ID_SCRIPT: ScriptCourse = {
       title: { en: "The rolled r", ko: "굴리는 r" },
       note: {
         en: "r is a tapped or rolled tongue-tip sound everywhere, including at the end of a word.",
-        ko: "r은 어디서나 혀끝을 튕기거나 굴리는 소리로, 낱말 끝에서도 분명히 낸다.",
+        ko: "r은 어디서나 혀끝을 튕기거나 굴리는 소리로, 단어 끝에서도 분명히 낸다.",
       },
       items: [
         { char: "r", reading: "r (굴림)", say: "rumah", example: { word: "rumah", meaning: { en: "house", ko: "집" } } },
@@ -92,7 +92,7 @@ export const ID_SCRIPT: ScriptCourse = {
       title: { en: "Borrowed sounds sy, kh, f, z", ko: "빌려 온 소리 sy·kh·f·z" },
       note: {
         en: "These come mainly from Arabic and English loanwords; in casual speech kh often becomes k and f becomes p.",
-        ko: "주로 아랍어·영어에서 온 낱말에 나온다. 편한 말에선 kh가 k로, f가 p로 들리기도 한다.",
+        ko: "주로 아랍어·영어에서 온 단어에 나온다. 편한 말에선 kh가 k로, f가 p로 들리기도 한다.",
       },
       items: [
         { char: "sy", reading: "sy (샤)", say: "syukur", example: { word: "syukur", meaning: { en: "gratitude", ko: "감사" } } },
@@ -105,7 +105,7 @@ export const ID_SCRIPT: ScriptCourse = {
     },
     {
       id: "id-final-1",
-      title: { en: "Word endings: final k, h", ko: "낱말 끝 소리 k·h" },
+      title: { en: "Word endings: final k, h", ko: "단어 끝 소리 k·h" },
       note: {
         en: "Final k is a glottal stop: close the throat and stop, without releasing a k. Final h is a soft breath you can hear.",
         ko: "끝 k는 목을 닫아 멈추는 소리(성문 파열음)로 'ㅋ'를 터뜨리지 않는다. 끝 h는 들릴 듯한 약한 숨.",
@@ -121,7 +121,7 @@ export const ID_SCRIPT: ScriptCourse = {
     },
     {
       id: "id-stress-1",
-      title: { en: "Word stress and rhythm", ko: "낱말 강세와 리듬" },
+      title: { en: "Word stress and rhythm", ko: "단어 강세와 리듬" },
       note: {
         en: "Stress is light and usually on the second-to-last syllable; if that syllable has weak e, it moves to the last one.",
         ko: "강세는 가볍고 보통 끝에서 두 번째 음절에 온다. 그 음절이 약한 e면 마지막 음절로 옮긴다.",

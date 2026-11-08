@@ -66,7 +66,7 @@ export const HI_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Keep aspiration apart: a puff of air changes the word, as in काना (one-eyed) vs खाना (food).",
-        ko: "숨소리(유기음)를 구별한다: 바람이 나오느냐에 따라 낱말이 바뀐다 — काना(애꾸눈)와 खाना(음식).",
+        ko: "숨소리(유기음)를 구별한다: 바람이 나오느냐에 따라 단어가 바뀐다 — काना(애꾸눈)와 खाना(음식).",
       },
       dialogues: [
         {
@@ -375,7 +375,7 @@ export const HI_LADDER: StageLadder = {
         { name: { en: "Continuative -ते रहना / -ता जाना", ko: "계속형 -ते रहना / -ता जाना (계속 ~하다)" }, example: "शहर बदलता जा रहा है।" },
         { name: { en: "Emphatic particles ही / भी / तो", ko: "강조 조사 ही / भी / तो" }, example: "मैं तो पहले ही कह रहा था।" },
         { name: { en: "Softening with ज़रा / शायद / -इएगा", ko: "ज़रा / शायद / -इएगा로 부드럽게 말하기" }, example: "ज़रा इस पर एक बार फिर सोचिएगा।" },
-        { name: { en: "Echo words and reduplication: चाय-वाय, धीरे-धीरे", ko: "메아리 낱말과 반복: चाय-वाय, धीरे-धीरे" }, example: "चलो, चाय-वाय पीते हैं।" },
+        { name: { en: "Echo words and reduplication: चाय-वाय, धीरे-धीरे", ko: "메아리 단어와 반복: चाय-वाय, धीरे-धीरे" }, example: "चलो, चाय-वाय पीते हैं।" },
       ],
       expressions: [
         "अरे यार",
@@ -401,7 +401,7 @@ export const HI_LADDER: StageLadder = {
       ],
       listening: {
         en: "Follow Hinglish code-switching: in fast talk, English words take Hindi endings, as in टेंशन मत लो or मैं मैनेज कर लूँगा.",
-        ko: "힌글리시 섞어 말하기를 따라간다: 빠른 말에서 영어 낱말에 힌디어 어미가 붙는다 — टेंशन मत लो, मैं मैनेज कर लूँगा.",
+        ko: "힌글리시 섞어 말하기를 따라간다: 빠른 말에서 영어 단어에 힌디어 어미가 붙는다 — टेंशन मत लो, मैं मैनेज कर लूँगा.",
       },
       pronunciation: {
         en: "Use intonation for nuance: a rising, stretched अच्छा? means \"really?\", a short falling अच्छा means \"okay, got it\".",

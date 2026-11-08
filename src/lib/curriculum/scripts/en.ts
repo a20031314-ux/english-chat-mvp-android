@@ -143,7 +143,7 @@ export const EN_SCRIPT: ScriptCourse = {
     },
     {
       id: "en-stress-9",
-      title: { en: "Word stress", ko: "낱말 강세" },
+      title: { en: "Word stress", ko: "단어 강세" },
       note: {
         en: "Say the stressed syllable longer and louder; the others get weaker, often 'uh'.",
         ko: "강세 음절은 길고 크게, 나머지는 약하게(흔히 '어')로 읽어요.",

@@ -64,7 +64,7 @@ export const VI_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Keep the tone on every syllable — ma, má, mà, mả, mã, mạ are six different words; say a word flat and it becomes another one.",
-        ko: "음절마다 성조를 지킨다 — ma·má·mà·mả·mã·mạ는 서로 다른 여섯 낱말이고, 평평하게 말하면 다른 말이 된다.",
+        ko: "음절마다 성조를 지킨다 — ma·má·mà·mả·mã·mạ는 서로 다른 여섯 단어고, 평평하게 말하면 다른 말이 된다.",
       },
       dialogues: [
         {
@@ -144,7 +144,7 @@ export const VI_LADDER: StageLadder = {
       ],
       listening: {
         en: "Catch time words in fast speech: tell hôm qua (yesterday) from hôm nay (today) and mai (tomorrow), and hear rưỡi in hai giờ rưỡi (half past two).",
-        ko: "빠른 말에서 때 낱말 알아듣기: hôm qua(어제)·hôm nay(오늘)·mai(내일)를 구별하고, hai giờ rưỡi(2시 반)의 rưỡi를 듣는다.",
+        ko: "빠른 말에서 때 단어 알아듣기: hôm qua(어제)·hôm nay(오늘)·mai(내일)를 구별하고, hai giờ rưỡi(2시 반)의 rưỡi를 듣는다.",
       },
       pronunciation: {
         en: "Make the heavy tone (dấu nặng) short and dropping with a catch at the end: mạ, chợ, đẹp — it is not just a low note.",
@@ -229,7 +229,7 @@ export const VI_LADDER: StageLadder = {
       ],
       listening: {
         en: "Follow the sequence words in a story: catch lúc đầu, sau đó, rồi and cuối cùng to know what happened first and what happened last.",
-        ko: "이야기 속 순서 낱말 따라가기: lúc đầu·sau đó·rồi·cuối cùng을 들으며 무엇이 먼저고 무엇이 마지막인지 안다.",
+        ko: "이야기 속 순서 단어 따라가기: lúc đầu·sau đó·rồi·cuối cùng을 들으며 무엇이 먼저고 무엇이 마지막인지 안다.",
       },
       pronunciation: {
         en: "Tell the asking tone (hỏi) from the tumbling tone (ngã): hỏi dips and rises softly (mả, nghỉ), ngã rises with a break in the middle (mã, nghĩ).",

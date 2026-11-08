@@ -47,7 +47,7 @@ export function CallRecap({
   if (!items.length) return null;
   const label = (item: RecapItem) =>
     item.kind === "fix"
-      ? ui.roleplayBetter
+      ? "✎"
       : item.kind === "hint"
         ? `💡 ${ui.missionHint}`
         : item.kind === "missed"
@@ -62,7 +62,7 @@ export function CallRecap({
       <ol className="mt-2 space-y-2">
         {items.map((item, index) => (
           <li key={`${item.kind}-${index}`} className="rounded-xl bg-white/[0.04] px-3 py-2">
-            <p className="text-caption text-slate-400">{label(item)}</p>
+            <p className="text-caption text-slate-400" title={item.kind === "fix" ? ui.roleplayBetter : undefined}>{label(item)}</p>
             {/* 고친 말: 내가 한 말은 틀린 곳만 표시, 고친 문장은 바뀐 곳만 초록(사용자 2026-11-01). */}
             {item.said ? (
               <p className="mt-0.5 text-meta text-slate-400">

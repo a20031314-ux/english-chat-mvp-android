@@ -5833,7 +5833,7 @@ export const HI_FRAMES: Frame[] = [
     ],
     "meaning": {
       "en": "Casual invitation with echo words: Come on, let's eat ___ and stuff first.",
-      "ko": "편하게 권하기(메아리 낱말): 야, 먼저 ~ 같은 거 먹자."
+      "ko": "편하게 권하기(메아리 단어): 야, 먼저 ~ 같은 거 먹자."
     },
     "grammar": [
       6

@@ -675,7 +675,7 @@
         {
           "wrong": "It's next the bank.",
           "right": "It's next to the bank.",
-          "why": "next to는 두 낱말이 한 묶음이에요. to를 빼면 '다음'이라는 뜻이 돼 버려요."
+          "why": "next to는 두 단어가 한 묶음이에요. to를 빼면 '다음'이라는 뜻이 돼 버려요."
         },
         {
           "wrong": "It's the bank next to.",
@@ -1214,7 +1214,7 @@
         },
         {
           "piece": "get up",
-          "role": "'일어나다'(두 낱말이 한 동사)",
+          "role": "'일어나다'(두 단어가 한 동사)",
           "ui": "일어나요"
         },
         {

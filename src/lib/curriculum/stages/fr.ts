@@ -411,7 +411,7 @@ export const FR_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Keep the even rhythm of French: syllables of equal length with the stress on the last syllable of each group, not on single words.",
-        ko: "프랑스어의 고른 리듬을 지킨다: 음절 길이를 고르게, 강세는 낱말마다가 아니라 말 덩어리의 마지막 음절에.",
+        ko: "프랑스어의 고른 리듬을 지킨다: 음절 길이를 고르게, 강세는 단어마다가 아니라 말 덩어리의 마지막 음절에.",
       },
       dialogues: [
         {

@@ -64,7 +64,7 @@ export const ZH_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Keep the four tones apart on short words: 买 mǎi (buy) vs 卖 mài (sell), 汤 tāng (soup) vs 糖 táng (sugar).",
-        ko: "짧은 낱말에서 네 성조를 구별한다: 买 mǎi(사다)와 卖 mài(팔다), 汤 tāng(국)과 糖 táng(설탕).",
+        ko: "짧은 단어에서 네 성조를 구별한다: 买 mǎi(사다)와 卖 mài(팔다), 汤 tāng(국)과 糖 táng(설탕).",
       },
       dialogues: [
         {
@@ -113,7 +113,7 @@ export const ZH_LADDER: StageLadder = {
       grammar: [
         { name: { en: "了 for completed actions", ko: "완료를 나타내는 了" }, example: "我昨天看了一个电影。" },
         { name: { en: "想 / 要 (want to)", ko: "想 / 要 (하고 싶다·하려고 하다)" }, example: "我想去上海玩儿。" },
-        { name: { en: "Time words before the verb", ko: "시간 낱말은 동사 앞에" }, example: "我每天七点起床。" },
+        { name: { en: "Time words before the verb", ko: "시간 단어는 동사 앞에" }, example: "我每天七点起床。" },
         { name: { en: "在 + place + verb", ko: "在 + 장소 + 동사" }, example: "他在公司上班。" },
         { name: { en: "可以 / 能 (may, can)", ko: "可以 / 能 (해도 된다·할 수 있다)" }, example: "这儿可以拍照吗？" },
         { name: { en: "Choice questions with 还是", ko: "还是로 고르게 묻기" }, example: "你喝茶还是喝咖啡？" },
@@ -188,7 +188,7 @@ export const ZH_LADDER: StageLadder = {
         { en: "Explain a problem at a hotel or shop and ask for a fix", ko: "호텔·가게에서 문제를 설명하고 해결을 요청한다" },
         { en: "Compare two options and make a choice", ko: "두 가지를 비교하고 고른다" },
         { en: "Talk about your work or studies and future plans", ko: "일이나 공부, 앞으로의 계획을 이야기한다" },
-        { en: "Keep a conversation going when you don't know a word", ko: "낱말을 몰라도 돌려 말하며 대화를 이어간다" },
+        { en: "Keep a conversation going when you don't know a word", ko: "단어를 몰라도 돌려 말하며 대화를 이어간다" },
       ],
       situations: [
         { en: "Reporting a broken air conditioner at a hotel", ko: "호텔에 에어컨 고장 알리기" },
@@ -235,7 +235,7 @@ export const ZH_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Keep zh / ch / sh apart from z / c / s in common words: 四 sì (four) vs 十 shí (ten), 资 zī vs 知 zhī.",
-        ko: "자주 쓰는 낱말에서 zh·ch·sh와 z·c·s를 구별한다: 四 sì(넷)와 十 shí(열), 资 zī와 知 zhī.",
+        ko: "자주 쓰는 단어에서 zh·ch·sh와 z·c·s를 구별한다: 四 sì(넷)와 十 shí(열), 资 zī와 知 zhī.",
       },
       dialogues: [
         {
@@ -319,7 +319,7 @@ export const ZH_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Use the neutral tone in common two-syllable words (东西 dōngxi 'thing' vs dōngxī 'east and west', 地道 dìdao) and keep 一 / 不 changes automatic in fast speech.",
-        ko: "자주 쓰는 두 음절 낱말의 경성을 살린다(东西 dōngxi '물건' vs dōngxī '동서', 地道 dìdao). 빠른 말에서도 一·不 변조를 자연스럽게.",
+        ko: "자주 쓰는 두 음절 단어의 경성을 살린다(东西 dōngxi '물건' vs dōngxī '동서', 地道 dìdao). 빠른 말에서도 一·不 변조를 자연스럽게.",
       },
       dialogues: [
         {
@@ -402,7 +402,7 @@ export const ZH_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Control rhythm and stress for tone of voice: stress the key word, lighten function words, and use a rising 啊 / 嘛 / 呗 ending to sound friendly rather than blunt.",
-        ko: "말투를 위한 리듬과 강세: 핵심 낱말에 힘을 주고 기능어는 가볍게, 끝의 啊·嘛·呗로 퉁명스럽지 않고 친근하게 들리게 한다.",
+        ko: "말투를 위한 리듬과 강세: 핵심 단어에 힘을 주고 기능어는 가볍게, 끝의 啊·嘛·呗로 퉁명스럽지 않고 친근하게 들리게 한다.",
       },
       dialogues: [
         {

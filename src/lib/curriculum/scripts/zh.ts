@@ -11,7 +11,7 @@ export const ZH_SCRIPT: ScriptCourse = {
       title: { en: "The four tones and the neutral tone", ko: "네 성조와 경성" },
       note: {
         en: "Same syllable, different tone, different word. The tone mark sits on a, then o or e, otherwise on the last vowel (guò, xiě).",
-        ko: "같은 음절도 성조가 다르면 다른 낱말이에요. 성조 부호는 a에, 없으면 o·e에, 그 밖에는 뒤 모음에 붙어요(guò, xiě).",
+        ko: "같은 음절도 성조가 다르면 다른 단어예요. 성조 부호는 a에, 없으면 o·e에, 그 밖에는 뒤 모음에 붙어요(guò, xiě).",
       },
       items: [
         { char: "mā", reading: "mā · 1 high, flat", say: "妈", example: { word: "妈妈", meaning: { en: "mom", ko: "엄마" } } },

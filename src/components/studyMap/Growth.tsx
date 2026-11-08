@@ -142,9 +142,9 @@ export function CallGrowthPairs({ ui, language, locale, since }: { ui: UICopy; l
   if (!pairs.length) return null;
   return (
     <section data-call-growth className="flex flex-col gap-2">
-      <h3 className="text-caption font-semibold text-slate-300">
+      <h3 className="text-caption font-semibold text-slate-300" title={ui.growFixed} aria-label={`${ui.growFixed} ${pairs.length}`}>
         <span aria-hidden>✎✓ </span>
-        {ui.growFixed} <span className="tabular-nums text-ink">{pairs.length}</span>
+        <span aria-hidden className="tabular-nums text-ink">{pairs.length}</span>
       </h3>
       <PairList pairs={pairs} locale={locale} max={3} />
     </section>
@@ -152,7 +152,7 @@ export function CallGrowthPairs({ ui, language, locale, since }: { ui: UICopy; l
 }
 
 function rowName(ui: UICopy, id: CompareRow["id"]): string {
-  return { mine3: ui.talkMine3, share: ui.talkMineShare, shaped: ui.talkShaped, kinds: ui.talkKinds, top: ui.talkTop, words: ui.talkWords, level: ui.talkLevel, fixed: ui.talkFixed, asked: ui.talkAsked, topics: ui.talkTopics }[id];
+  return { mine3: ui.talkMine3, share: ui.talkMineShare, shaped: ui.talkShaped, kinds: ui.talkKinds, top: ui.talkTop, words: ui.talkWords, level: ui.talkLevel, fixed: "✎", asked: ui.talkAsked, topics: ui.talkTopics }[id];
 }
 
 function rowValue(id: CompareRow["id"], value: number): string {
@@ -235,7 +235,7 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
           <tbody>
             {view.rows.map((row) => (
               <tr key={row.id} data-talk-row={row.id}>
-                <td className="py-0.5 text-slate-300">{rowName(ui, row.id)}</td>
+                <td className="py-0.5 text-slate-300" title={row.id === "fixed" ? ui.talkFixed : undefined}>{rowName(ui, row.id)}</td>
                 <td className="py-0.5 text-end text-slate-500">{rowValue(row.id, row.then)}</td>
                 <td className="py-0.5 text-end font-semibold text-ink">{rowValue(row.id, row.now)}</td>
               </tr>

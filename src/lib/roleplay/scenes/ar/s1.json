@@ -8340,7 +8340,7 @@
         "id": "l-understand",
         "goal": {
           "en": "Say you don't understand this word on the form.",
-          "ko": "서류에 있는 이 낱말을 이해 못 하겠다고 하세요."
+          "ko": "서류에 있는 이 단어를 이해 못 하겠다고 하세요."
         },
         "frame": "ar-f1-12",
         "expect": [

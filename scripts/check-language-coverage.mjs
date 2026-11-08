@@ -284,6 +284,37 @@ for (const file of [...sourceFiles("src/components"), ...sourceFiles("src/app")]
   }
 }
 
+// 4. One term, one word (2026-11-08, user "같은데 다르게 표기되는 부분"): keys that
+//    name the same thing must read the same in every interface language, or a
+//    screen says "review" where the next one says "to check".
+{
+  const SAME_TERMS = [
+    ["lbAgain", "lbCardCheck", "studyReview", "weakTitle"],
+    ["knownTag", "itemsMastered", "checkKnown", "fcKnow", "markKnown"],
+  ];
+  const source = readFileSync("src/lib/copy.ts", "utf8").split("\n");
+  const start = (code) => source.findIndex((line) => line === `  ${code}: {`);
+  const block = (code) => {
+    const from = start(code);
+    const values = {};
+    for (let i = from + 1; i < source.length && source[i] !== "  },"; i += 1) {
+      const match = source[i].match(/^ {4}(\w+): "(.*)",$/);
+      if (match) values[match[1]] = match[2];
+    }
+    return values;
+  };
+  const generated = JSON.parse(readFileSync("src/lib/locales/generated.json", "utf8"));
+  const overlays = JSON.parse(readFileSync("src/lib/locales/overlays.json", "utf8"));
+  const tables = { ko: block("ko"), en: block("en"), es: block("es") };
+  for (const code of Object.keys(generated)) tables[code] = { ...generated[code], ...(overlays[code] ?? {}) };
+  for (const [code, table] of Object.entries(tables)) {
+    for (const group of SAME_TERMS) {
+      const words = new Set(group.map((key) => table[key]).filter(Boolean));
+      if (words.size > 1) uiNote(`terms:${code}`, `${group.join("·")} should be one word, are: ${[...words].join(" / ")}`);
+    }
+  }
+}
+
 const languages = SUPPORTED_LEARNING_LANGUAGES.length;
 if (problems.length === 0 && uiProblems.length === 0) {
   console.log(`${languages} languages, nothing to report.`);

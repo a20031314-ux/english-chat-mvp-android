@@ -90,7 +90,7 @@ const ko = {
   f_speaking: "말하기",
   f_listening: "듣기",
   f_writing: "쓰기",
-  f_words: "어휘",
+  f_words: "단어",
 };
 
 type ProfileCopy = typeof ko;

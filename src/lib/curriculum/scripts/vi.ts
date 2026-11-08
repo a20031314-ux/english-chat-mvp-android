@@ -11,7 +11,7 @@ export const VI_SCRIPT: ScriptCourse = {
       title: { en: "The six tones", ko: "여섯 성조" },
       note: {
         en: "Every syllable has one tone, shown by a mark on the vowel. Change the tone and you get a different word.",
-        ko: "음절마다 성조가 하나 있고 모음 위아래 기호로 표시한다. 성조가 바뀌면 다른 낱말이 된다.",
+        ko: "음절마다 성조가 하나 있고 모음 위아래 기호로 표시한다. 성조가 바뀌면 다른 단어가 된다.",
       },
       items: [
         { char: "ma", reading: "ma — level, mid pitch, no mark (ngang)", say: "ma", example: { word: "ba", meaning: { en: "three", ko: "셋" } } },

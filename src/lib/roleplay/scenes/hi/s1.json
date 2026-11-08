@@ -496,7 +496,7 @@
         "id": "l-word",
         "goal": {
           "en": "Say you didn't understand one word.",
-          "ko": "한 낱말을 못 알아들었다고 하세요."
+          "ko": "한 단어를 못 알아들었다고 하세요."
         },
         "frame": "hi-f1-16",
         "expect": [
@@ -7705,7 +7705,7 @@
         "id": "l-word",
         "goal": {
           "en": "Say you didn't understand that word.",
-          "ko": "그 낱말을 못 알아들었다고 하세요."
+          "ko": "그 단어를 못 알아들었다고 하세요."
         },
         "frame": "hi-f1-16",
         "expect": [

@@ -2365,7 +2365,7 @@
         "id": "l-pulpo",
         "goal": {
           "en": "You don't know that word. Say you don't understand it.",
-          "ko": "그 낱말을 몰라요. 모르겠다고 말하세요."
+          "ko": "그 단어를 몰라요. 모르겠다고 말하세요."
         },
         "frame": "es-f1-17",
         "expect": [
@@ -8958,7 +8958,7 @@
         "id": "l-form",
         "goal": {
           "en": "You don't know that word. Say you don't understand it.",
-          "ko": "그 낱말을 몰라요. 모르겠다고 하세요."
+          "ko": "그 단어를 몰라요. 모르겠다고 하세요."
         },
         "frame": "es-f1-17",
         "expect": [

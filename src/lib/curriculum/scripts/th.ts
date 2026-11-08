@@ -15,7 +15,7 @@ export const TH_SCRIPT: ScriptCourse = {
       title: { en: "Mid-class consonants (ก จ ด ต บ ป อ)", ko: "중자음 (ก จ ด ต บ ป อ)" },
       note: {
         en: "Each letter has a name word (ก ไก่ = \"k as in chicken\"). ก ต ป have no puff of air, like Korean ㄲ ㄸ ㅃ; อ is a silent holder for vowels.",
-        ko: "글자마다 이름 낱말이 있다(ก ไก่ = '닭의 k'). ก ต ป는 숨 없이 ㄲ ㄸ ㅃ처럼, อ는 소리 없이 모음을 받치는 글자.",
+        ko: "글자마다 이름 단어가 있다(ก ไก่ = '닭의 k'). ก ต ป는 숨 없이 ㄲ ㄸ ㅃ처럼, อ는 소리 없이 모음을 받치는 글자.",
       },
       items: [
         { char: "ก", reading: "k (ko kai)", say: "ก ไก่", example: { word: "กิน", meaning: { en: "to eat", ko: "먹다" } } },
@@ -64,7 +64,7 @@ export const TH_SCRIPT: ScriptCourse = {
       title: { en: "Low-class consonants: ง น ม ย ร ล ว", ko: "저자음 ง น ม ย ร ล ว" },
       note: {
         en: "ง is the \"ng\" of Korean 받침 ㅇ, but Thai also uses it at the start of a word. In casual speech ร often sounds like ล.",
-        ko: "ง는 받침 ㅇ 소리(ng)인데 태국어는 낱말 첫소리에도 쓴다. 편한 말에서는 ร를 ล처럼 내는 일이 많다.",
+        ko: "ง는 받침 ㅇ 소리(ng)인데 태국어는 단어 첫소리에도 쓴다. 편한 말에서는 ร를 ล처럼 내는 일이 많다.",
       },
       items: [
         { char: "ง", reading: "ng (ngo ngu)", say: "ง งู", example: { word: "งาน", meaning: { en: "work", ko: "일" } } },
@@ -81,7 +81,7 @@ export const TH_SCRIPT: ScriptCourse = {
       title: { en: "Vowels after, above and below: short and long", ko: "뒤·위·아래 모음: 짧은 것과 긴 것" },
       note: {
         en: "อ here only holds the vowel's place; put any consonant there. A long vowel is held about twice as long, and length changes the word.",
-        ko: "อ는 모음 자리만 보여 주는 받침 글자 — 어느 자음이든 그 자리에 온다. 긴 모음은 두 배쯤 끌고, 길이가 다르면 다른 낱말.",
+        ko: "อ는 모음 자리만 보여 주는 받침 글자 — 어느 자음이든 그 자리에 온다. 긴 모음은 두 배쯤 끌고, 길이가 다르면 다른 단어.",
       },
       items: [
         { char: "อะ", reading: "a (short)", say: "อะ", example: { word: "จะ", meaning: { en: "will (future)", ko: "～할 것이다" } } },
@@ -118,7 +118,7 @@ export const TH_SCRIPT: ScriptCourse = {
       title: { en: "Vowel combinations (ไ ใ เา ำ เีย เือ ัว เออ)", ko: "합친 모음 (ไ ใ เา ำ เีย เือ ัว เออ)" },
       note: {
         en: "ไ and ใ sound the same (ai); ใ appears in only about twenty words, such as ใจ and ใช่.",
-        ko: "ไ와 ใ는 소리가 같다(ai). ใ는 ใจ·ใช่처럼 스무 낱말 정도에만 쓴다.",
+        ko: "ไ와 ใ는 소리가 같다(ai). ใ는 ใจ·ใช่처럼 스무 단어 정도에만 쓴다.",
       },
       items: [
         { char: "ไอ", reading: "ai", say: "ไอ", example: { word: "ไป", meaning: { en: "to go", ko: "가다" } } },
@@ -154,7 +154,7 @@ export const TH_SCRIPT: ScriptCourse = {
       title: { en: "The five tones", ko: "다섯 성조" },
       note: {
         en: "Thai has five tones: mid, low, falling, high and rising. Changing the tone changes the word — มา, ม้า and หมา are three different words.",
-        ko: "태국어 성조는 다섯: 평성·저성·하강·고성·상승. 성조가 바뀌면 낱말이 바뀐다 — มา·ม้า·หมา는 서로 다른 낱말.",
+        ko: "태국어 성조는 다섯: 평성·저성·하강·고성·상승. 성조가 바뀌면 단어가 바뀐다 — มา·ม้า·หมา는 서로 다른 단어.",
       },
       items: [
         { char: "มา", reading: "maa (mid, flat)", say: "มา", example: { word: "มา", meaning: { en: "to come", ko: "오다" } } },
@@ -187,10 +187,10 @@ export const TH_SCRIPT: ScriptCourse = {
     },
     {
       id: "th-read-11",
-      title: { en: "First words to read", ko: "처음 읽어 볼 낱말" },
+      title: { en: "First words to read", ko: "처음 읽어 볼 단어" },
       note: {
         en: "Thai writes words together without spaces; a space marks the end of a phrase or sentence.",
-        ko: "태국어는 낱말 사이를 띄지 않고 붙여 쓴다. 띄어 쓴 곳은 구절이나 문장이 끝난 자리.",
+        ko: "태국어는 단어 사이를 띄지 않고 붙여 쓴다. 띄어 쓴 곳은 구절이나 문장이 끝난 자리.",
       },
       items: [
         { char: "สวัสดี", reading: "sawatdii", say: "สวัสดี", example: { word: "สวัสดี", meaning: { en: "hello", ko: "안녕하세요" } } },

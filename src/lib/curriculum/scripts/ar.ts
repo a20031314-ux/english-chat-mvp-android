@@ -94,7 +94,7 @@ export const AR_SCRIPT: ScriptCourse = {
       title: { en: "Letters join and change shape", ko: "글자는 이어지며 모양이 바뀐다" },
       note: {
         en: "Most letters have a start, middle and end shape inside a word. ا د ذ ر ز و never join to the letter after them, so a small gap follows.",
-        ko: "대부분의 글자는 낱말 안에서 처음·가운데·끝 모양이 있다. ا د ذ ر ز و는 뒤 글자와 이어지지 않아 뒤에 작은 틈이 생긴다.",
+        ko: "대부분의 글자는 단어 안에서 처음·가운데·끝 모양이 있다. ا د ذ ر ز و는 뒤 글자와 이어지지 않아 뒤에 작은 틈이 생긴다.",
       },
       items: [
         { char: "ي يـ ـيـ ـي", reading: "y (alone, start, middle, end)", say: "ياء", example: { word: "بيت", meaning: { en: "house", ko: "집" } } },
@@ -124,10 +124,10 @@ export const AR_SCRIPT: ScriptCourse = {
     },
     {
       id: "ar-vowels-2",
-      title: { en: "Long vowels, ة and word endings", ko: "긴 모음·ة·낱말 끝" },
+      title: { en: "Long vowels, ة and word endings", ko: "긴 모음·ة·단어 끝" },
       note: {
         en: "ا و ي after a letter make long aa, uu, ii — hold them twice as long. ة at the end sounds a, and t when another word is joined to it.",
-        ko: "글자 뒤 ا و ي는 긴 aa·uu·ii — 두 배로 늘인다. 끝의 ة는 a로 읽고, 뒤에 낱말이 이어지면 t로 읽는다.",
+        ko: "글자 뒤 ا و ي는 긴 aa·uu·ii — 두 배로 늘인다. 끝의 ة는 a로 읽고, 뒤에 단어가 이어지면 t로 읽는다.",
       },
       items: [
         { char: "با", reading: "baa", say: "باب", example: { word: "باب", meaning: { en: "door", ko: "문" } } },

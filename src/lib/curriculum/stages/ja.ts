@@ -322,7 +322,7 @@ export const JA_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Use pitch accent to tell words apart: 箸 (háshi, chopsticks) vs 橋 (hashí, bridge), 雨 (áme) vs 飴 (amé).",
-        ko: "높낮이로 낱말을 구별한다: 箸(하↘시, 젓가락)와 橋(하↗시, 다리), 雨(아↘메, 비)와 飴(아↗메, 사탕).",
+        ko: "높낮이로 단어를 구별한다: 箸(하↘시, 젓가락)와 橋(하↗시, 다리), 雨(아↘메, 비)와 飴(아↗메, 사탕).",
       },
       dialogues: [
         {

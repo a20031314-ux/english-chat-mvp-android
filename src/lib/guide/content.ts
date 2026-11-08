@@ -235,7 +235,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "단어를 눌러 단어장에",
         "body": [
-          "낱말을 누르고 ‘{ui:vocabPreviewSave}’."
+          "단어를 누르고 ‘{ui:vocabPreviewSave}’."
         ],
         "shot": "chat-word"
       },

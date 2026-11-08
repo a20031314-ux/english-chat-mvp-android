@@ -90,12 +90,12 @@ export function checkLesson(lesson: FixedLesson, frame: Frame | undefined, tooEa
     if (frame.core.some((core) => has(turn.them, core))) warn(`상대 줄에 틀이 그대로 있음(따라 하기 쉬움): ${turn.them}`);
     if (tooEarly) {
       const early = [...tooEarly(turn.them), ...tooEarly(turn.me)];
-      if (early.length) warn(`이 단계에 이른 낱말: ${[...new Set(early)].join(", ")}`);
+      if (early.length) warn(`이 단계에 이른 단어: ${[...new Set(early)].join(", ")}`);
     }
   }
   if (tooEarly) {
     const early = lesson.quiz.flatMap((q) => tooEarly(q.kind === "fix" ? q.wrong : `${q.before} ${q.after}`));
-    if (early.length) warn(`퀴즈에 이 단계에 이른 낱말: ${[...new Set(early)].join(", ")}`);
+    if (early.length) warn(`퀴즈에 이 단계에 이른 단어: ${[...new Set(early)].join(", ")}`);
   }
   return out;
 }

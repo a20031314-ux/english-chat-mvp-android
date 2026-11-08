@@ -94,7 +94,7 @@ export const ES_SCRIPT: ScriptCourse = {
       title: { en: "r and rr", ko: "r과 rr" },
       note: {
         en: "One r between vowels is a single quick tap of the tongue; rr, and r at the start of a word, is rolled.",
-        ko: "모음 사이 r 하나는 혀를 한 번 튕기고(ㄹ), rr과 낱말 첫 r은 혀를 떨어 굴린다.",
+        ko: "모음 사이 r 하나는 혀를 한 번 튕기고(ㄹ), rr과 단어 첫 r은 혀를 떨어 굴린다.",
       },
       items: [
         { char: "r", reading: "r", say: "pero", example: { word: "pero", meaning: { en: "but", ko: "하지만" } } },
@@ -179,7 +179,7 @@ export const ES_SCRIPT: ScriptCourse = {
       title: { en: "Marks that change meaning, and ¿ ¡", ko: "뜻을 가르는 표시와 ¿ ¡" },
       note: {
         en: "Questions and exclamations open with an upside-down mark: ¿…? and ¡…!. Read the whole sentence with that tone from the start.",
-        ko: "물음·느낌 문장은 앞에 거꾸로 된 부호로 연다: ¿…?, ¡…!. 첫 낱말부터 그 억양으로 읽는다.",
+        ko: "물음·느낌 문장은 앞에 거꾸로 된 부호로 연다: ¿…?, ¡…!. 첫 단어부터 그 억양으로 읽는다.",
       },
       items: [
         { char: "sí / si", reading: "si (yes / if)", say: "sí", example: { word: "sí", meaning: { en: "yes (si = if)", ko: "네 (si = 만약)" } } },

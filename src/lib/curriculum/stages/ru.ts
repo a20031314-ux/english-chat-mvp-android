@@ -60,7 +60,7 @@ export const RU_LADDER: StageLadder = {
       ],
       listening: {
         en: "Catch prices: tell сто (100), двести (200) and триста (300) apart, and hear рубль / рубля / рублей as the same word.",
-        ko: "가격 알아듣기: сто(100)·двести(200)·триста(300)를 구별하고, рубль·рубля·рублей가 같은 낱말임을 알아듣는다.",
+        ko: "가격 알아듣기: сто(100)·двести(200)·триста(300)를 구별하고, рубль·рубля·рублей가 같은 단어임을 알아듣는다.",
       },
       pronunciation: {
         en: "Put the stress on one syllable and weaken unstressed о to an \"a\" sound: молоко is said \"ma-la-KO\", хорошо \"kha-ra-SHO\".",
@@ -319,7 +319,7 @@ export const RU_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Devoice voiced consonants at the end of a word and before voiceless ones: хлеб sounds \"khlep\", вторник \"FTOR-nik\", всё \"fsyo\".",
-        ko: "낱말 끝과 무성음 앞의 유성음은 무성으로: хлеб는 '흘렙', вторник는 '프토르닉', всё는 '프쇼'.",
+        ko: "단어 끝과 무성음 앞의 유성음은 무성으로: хлеб는 '흘렙', вторник는 '프토르닉', всё는 '프쇼'.",
       },
       dialogues: [
         {

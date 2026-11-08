@@ -280,8 +280,8 @@ export function RoleplayLine({
             ) : null}
             {line.better ? (
               <>
-                <p className="text-[10px] uppercase tracking-wide text-neutral-500">
-                  {ui.roleplayBetter}
+                <p className="text-[10px] uppercase tracking-wide text-neutral-500" title={ui.roleplayBetter} aria-label={ui.roleplayBetter}>
+                  ✎
                 </p>
                 <p dir="auto" className="mt-0.5 text-[13px] leading-snug text-slate-100">
                   <RightWithChanges said={line.text} right={line.better} />
@@ -441,7 +441,7 @@ export function RoleplayReviewPanel({
             ) : null}
             {review.say ? (
               <div className="mt-3 rounded-xl bg-white/5 p-3">
-                <p className="text-[11px] text-neutral-500">{turn.live ? ui.roleplayBetter : ui.roleplayReviewSay}</p>
+                <p className="text-[11px] text-neutral-500">{turn.live ? "✎" : ui.roleplayReviewSay}</p>
                 <p className="mt-1 text-[14px] text-neutral-100">{review.say}</p>
                 {review.meaning ? (
                   <p className="mt-0.5 text-[12px] text-neutral-500">{review.meaning}</p>

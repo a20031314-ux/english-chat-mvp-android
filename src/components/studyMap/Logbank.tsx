@@ -954,7 +954,7 @@ function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; la
               {event.kind === "mastered" ? <span className="text-info">{`✓ ${ui.itemsMastered}`}</span> : null}
               {event.kind === "learned" ? <span className="text-info">{ui.itemsLearned}</span> : null}
               {event.kind === "quizWrong" ? <span className="text-bad">{`✗ ${ui.keepTitle}`}</span> : null}
-              {event.kind === "fixed" ? <span className="text-bad">{`✎ ${ui.partFixed}`}</span> : null}
+              {event.kind === "fixed" ? <span className="text-bad" title={ui.partFixed} aria-label={ui.partFixed}>✎</span> : null}
               {event.result ? (
                 <span className={`tabular-nums ${event.result.passed ? "text-good" : "text-slate-400"}`}>{`${event.result.right}/${event.result.total}${event.result.passed ? " ✓" : ""}`}</span>
               ) : null}
@@ -1301,9 +1301,10 @@ function Learned({
       {extras.length ? (
         <div data-growth className="flex flex-wrap gap-1.5">
           {extras.map((one) => (
-            <button key={one.id} type="button" data-growth-chip={one.id} onClick={() => setOpen(one.id)} className={chip}>
+            <button key={one.id} type="button" data-growth-chip={one.id} title={one.label} onClick={() => setOpen(one.id)} className={chip}>
               <span aria-hidden>{one.icon}</span>
-              <span>{one.label}</span>
+              {/* Fixes show the icon alone (user, 2026-11-08); the name is in aria-label and title. */}
+              <span className={one.id === "fixed" ? "sr-only" : undefined}>{one.label}</span>
               <span className="font-semibold text-ink">{one.n}</span>
             </button>
           ))}
@@ -1330,7 +1331,7 @@ function Learned({
         </LogSheet>
       ) : null}
       {open === "fixed" ? (
-        <LogSheet title={`✎✓ ${ui.growFixed} · ${pairs.length}`} ui={ui} onClose={() => setOpen(null)}>
+        <LogSheet title={`✎✓ ${pairs.length}`} ui={ui} onClose={() => setOpen(null)}>
           <PairList pairs={pairs} locale={locale} />
         </LogSheet>
       ) : null}

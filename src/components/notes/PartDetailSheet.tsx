@@ -96,7 +96,7 @@ export function PartDetailSheet({
   const open = (text: string) => insight?.open({ sentence: text, selected: text });
   const states = (["mastered", "learned", null] as const).map((state) => ({ state, list: all.filter((row) => (row.state === "met" ? null : row.state) === state) }));
   const stateName = (state: "mastered" | "learned" | null) => (state === "mastered" ? ui.itemsMastered : state === "learned" ? ui.itemsLearned : ui.itemsToLearn);
-  const kindName = (kind: PartLogItem["kind"]) => (kind === "mastered" ? ui.itemsMastered : kind === "learned" ? ui.itemsLearned : ui.partFixed);
+  const kindName = (kind: PartLogItem["kind"]) => (kind === "mastered" ? ui.itemsMastered : kind === "learned" ? ui.itemsLearned : "✎");
   const kindStyle = (kind: PartLogItem["kind"]) =>
     kind === "mastered" ? "bg-status-mastered text-slate-900" : kind === "learned" ? "bg-status-learned/20 text-status-learned" : "bg-warn/15 text-warn";
 
@@ -114,7 +114,7 @@ export function PartDetailSheet({
                 <span>{ui.partRecent}</span>
                 {counts.mastered ? <span className="text-status-mastered">{ui.itemsMastered} +{counts.mastered}</span> : null}
                 {counts.learned ? <span className="text-status-learned">{ui.itemsLearned} +{counts.learned}</span> : null}
-                {counts.fixed ? <span className="text-warn">{ui.partFixed} {counts.fixed}</span> : null}
+                {counts.fixed ? <span className="text-warn" title={ui.partFixed}>✎ {counts.fixed}</span> : null}
               </p>
             </div>
             <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">

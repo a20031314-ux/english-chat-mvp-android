@@ -146,7 +146,7 @@
  "g|2:0": {
   "kind": "grammar",
   "type": "choose",
-  "name": "시제 낱말: sudah·sedang·akan·belum",
+  "name": "시제 단어: sudah·sedang·akan·belum",
   "ask": "뜻에 맞는 인도네시아어를 고르세요.",
   "gloss": "나는 이미 먹었어요.",
   "before": "Saya ",

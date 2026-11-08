@@ -113,7 +113,7 @@ export const ID_LADDER: StageLadder = {
         { en: "Describing a cold at a pharmacy", ko: "약국에서 감기 증상 말하기" },
       ],
       grammar: [
-        { name: { en: "Time words for past and future: sudah, sedang, akan, belum", ko: "시제 낱말: sudah·sedang·akan·belum" }, example: "Saya sudah makan." },
+        { name: { en: "Time words for past and future: sudah, sedang, akan, belum", ko: "시제 단어: sudah·sedang·akan·belum" }, example: "Saya sudah makan." },
         { name: { en: "Verbs with me- prefix", ko: "me- 접두사 동사" }, example: "Saya membaca buku setiap malam." },
         { name: { en: "Ber- verbs (do, have, be in a state)", ko: "ber- 동사(하다·가지다·상태)" }, example: "Kami berangkat jam tujuh." },
         { name: { en: "Mau / ingin (want to)", ko: "mau / ingin (~하고 싶다)" }, example: "Saya ingin ke Bali." },
@@ -147,7 +147,7 @@ export const ID_LADDER: StageLadder = {
       ],
       listening: {
         en: "Catch time words that change the whole meaning: sudah (already), belum (not yet), nanti (later), tadi (earlier today).",
-        ko: "뜻을 통째로 바꾸는 시간 낱말 잡기: sudah(이미)·belum(아직)·nanti(나중에)·tadi(아까).",
+        ko: "뜻을 통째로 바꾸는 시간 단어 잡기: sudah(이미)·belum(아직)·nanti(나중에)·tadi(아까).",
       },
       pronunciation: {
         en: "Keep the final k short and stopped, almost silent: bapak, enak, tidak end with a catch in the throat, not a full k.",
@@ -318,7 +318,7 @@ export const ID_LADDER: StageLadder = {
       ],
       listening: {
         en: "Catch the formal words newsreaders use in place of everyday ones: tidak instead of nggak, akan, telah instead of sudah, ujar / kata.",
-        ko: "뉴스 진행자가 쓰는 격식 낱말 잡기: nggak 대신 tidak, sudah 대신 telah, 그리고 akan·ujar.",
+        ko: "뉴스 진행자가 쓰는 격식 단어 잡기: nggak 대신 tidak, sudah 대신 telah, 그리고 akan·ujar.",
       },
       pronunciation: {
         en: "Put light stress on the second-to-last syllable and do not hit it hard: pe-ker-JA-an, ke-MA-cet-an sounds even, not punchy.",
@@ -405,7 +405,7 @@ export const ID_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Use intonation, not just words, to sound polite: a gentle rise and longer final vowel in Maaf ya… softens a refusal.",
-        ko: "낱말보다 억양으로 공손함을 낸다: Maaf ya…의 끝을 살짝 올리고 늘이면 거절이 부드러워진다.",
+        ko: "단어보다 억양으로 공손함을 낸다: Maaf ya…의 끝을 살짝 올리고 늘이면 거절이 부드러워진다.",
       },
       dialogues: [
         {

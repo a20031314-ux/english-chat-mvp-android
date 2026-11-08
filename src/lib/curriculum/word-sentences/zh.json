@@ -14996,7 +14996,7 @@
   {
    "text": "你们可以搜索含有某个词的句子并得到这些句子的翻译。",
    "en": "You can search sentences containing a certain word and get translations for these sentences.",
-   "ko": "어떤 낱말이 든 문장을 검색해서 그 번역을 볼 수 있어요.",
+   "ko": "어떤 단어가 든 문장을 검색해서 그 번역을 볼 수 있어요.",
    "blank": "搜索",
    "src": "tatoeba:811373/fucongcong en:704106/jakov"
   }

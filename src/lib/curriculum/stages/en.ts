@@ -250,7 +250,7 @@ export const EN_LADDER: StageLadder = {
       ],
       listening: {
         en: "Follow linking between words: a final consonant joins the next vowel, so 'turned out' sounds like 'tur-n-dout' and 'look into it' like 'loo-kin-tu-wit'.",
-        ko: "낱말 이어 듣기: 끝 자음이 다음 모음에 붙어 turned out은 '턴다웃', look into it은 '루킨투잇'처럼 들린다.",
+        ko: "단어 이어 듣기: 끝 자음이 다음 모음에 붙어 turned out은 '턴다웃', look into it은 '루킨투잇'처럼 들린다.",
       },
       pronunciation: {
         en: "Contract the present perfect: say I've, she's, we haven't instead of I have, she has, we have not.",
@@ -346,7 +346,7 @@ export const EN_LADDER: StageLadder = {
       },
       pronunciation: {
         en: "Use sentence stress to disagree politely: stress the word you are contrasting ('I see your point, but the timing worries me').",
-        ko: "문장 강세로 부드럽게 반박하기: 대조하는 낱말에 힘을 준다(I see your point, but the TIMING worries me).",
+        ko: "문장 강세로 부드럽게 반박하기: 대조하는 단어에 힘을 준다(I see your point, but the TIMING worries me).",
       },
       dialogues: [
         {

@@ -11,7 +11,7 @@ export const FR_SCRIPT: ScriptCourse = {
       title: { en: "Single vowels", ko: "모음 한 글자" },
       note: {
         en: "An e at the end of a word is usually silent: table sounds like 'tabl'.",
-        ko: "낱말 끝의 e는 보통 소리 나지 않는다: table은 '타블'.",
+        ko: "단어 끝의 e는 보통 소리 나지 않는다: table은 '타블'.",
       },
       items: [
         { char: "a", reading: "a", say: "papa", example: { word: "papa", meaning: { en: "dad", ko: "아빠" } } },
@@ -65,7 +65,7 @@ export const FR_SCRIPT: ScriptCourse = {
       title: { en: "u vs ou", ko: "u와 ou 구별" },
       note: {
         en: "u: lips rounded, tongue forward (ü). ou: lips rounded, tongue back (u). Changing one changes the word.",
-        ko: "u는 입술을 둥글게 하고 혀를 앞으로(위에 가까움), ou는 혀를 뒤로('우'). 바뀌면 다른 낱말이 된다.",
+        ko: "u는 입술을 둥글게 하고 혀를 앞으로(위에 가까움), ou는 혀를 뒤로('우'). 바뀌면 다른 단어가 된다.",
       },
       items: [
         { char: "tu", reading: "tü", say: "tu", example: { word: "tu", meaning: { en: "you", ko: "너" } } },
@@ -155,7 +155,7 @@ export const FR_SCRIPT: ScriptCourse = {
       title: { en: "Liaison and elision", ko: "연음과 축약" },
       note: {
         en: "A silent final consonant is said when the next word starts with a vowel (s and x sound z). Small words like le, je, de drop their vowel before a vowel and take an apostrophe.",
-        ko: "다음 낱말이 모음으로 시작하면 소리 없던 끝 자음을 이어 낸다(s·x는 z). le·je·de 같은 짧은 말은 모음 앞에서 모음을 빼고 '를 붙인다.",
+        ko: "다음 단어가 모음으로 시작하면 소리 없던 끝 자음을 이어 낸다(s·x는 z). le·je·de 같은 짧은 말은 모음 앞에서 모음을 빼고 '를 붙인다.",
       },
       items: [
         { char: "les amis", reading: "le-zami", say: "les amis", example: { word: "les amis", meaning: { en: "the friends", ko: "친구들" } } },

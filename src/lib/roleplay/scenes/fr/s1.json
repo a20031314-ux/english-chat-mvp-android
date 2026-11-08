@@ -479,7 +479,7 @@
         "id": "l-word",
         "goal": {
           "en": "Say you don't understand the last word.",
-          "ko": "마지막 낱말을 모르겠다고 하세요."
+          "ko": "마지막 단어를 모르겠다고 하세요."
         },
         "frame": "fr-f1-18",
         "expect": [
@@ -8204,7 +8204,7 @@
         "id": "l-vitale",
         "goal": {
           "en": "Say you don't understand that word.",
-          "ko": "그 낱말을 모르겠다고 하세요."
+          "ko": "그 단어를 모르겠다고 하세요."
         },
         "frame": "fr-f1-18",
         "expect": [
