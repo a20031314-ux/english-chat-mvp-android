@@ -80,7 +80,9 @@ export function parseReplay(raw: unknown): ReplayScene[] {
   let value = raw;
   if (typeof raw === "string") {
     try {
-      value = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, ""));
+      const start = raw.indexOf("{");
+      const end = raw.lastIndexOf("}");
+      value = JSON.parse(start >= 0 && end > start ? raw.slice(start, end + 1) : raw);
     } catch {
       return [];
     }
