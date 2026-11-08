@@ -5,7 +5,9 @@
  * 순수 모듈. 182개 조합을 손으로 쓰지 않고 특징표 하나에서 나온다(Claude 작성, 원어민·언어학자 확인 전).
  * 쓰는 곳(다음): 퀴즈에 낼 문법 칸 고르기·맞나 틀리나 칸 비중·문법 카드의 모국어 비교 한 줄.
  * ② 닮은 말은 `pairs/cognates.json`(scripts/cognates.py).
+ * 학습자의 언어(모국어·아는 언어)는 learnerLanguages.ts — 아는 언어가 여럿이면 그 개념이 있는 언어 쪽으로(가장 가벼운 비중).
  */
+import { ladderFor } from "./stages/index.ts";
 
 export type Feature =
   | "article" | "gender" | "case" | "particle" | "classifier" | "honorific" | "verbPerson"
@@ -105,4 +107,28 @@ export function pairSummary(l1: string, l2: string): { fresh: Feature[]; weaker:
     sameScript: a.script === b.script || (a.script === "hanzi" && b.script === "kana"),
     sameOrder: a.order === b.order,
   };
+}
+
+/** 문법 열쇠("g|1:2") → 사다리 순서 번호(`grammarList` 차례). 없으면 -1. */
+export function grammarIndex(language: string, key: string): number {
+  const m = /^g\|(\d+):(\d+)$/.exec(key);
+  if (!m) return -1;
+  let index = 0;
+  for (const stage of ladderFor(language)?.stages ?? []) {
+    for (let i = 0; i < stage.grammar.length; i += 1) {
+      if (String(stage.order) === m[1] && String(i) === m[2]) return index;
+      if (stage.grammar[i]!.name) index += 1;
+    }
+  }
+  return -1;
+}
+
+/**
+ * 아는 언어 여럿(모국어 + 할 수 있는 언어)으로 본 문법 칸 비중: 가장 가벼운 것(그 개념을 아는 언어가 하나라도 있으면 가볍게).
+ * 예: 한국어 모국어 + 영어를 하는 사람이 스페인어 관사 칸 → 영어로 관사를 알아서 0.8.
+ */
+export function knownSlotWeight(known: readonly string[], l2: string, key: string): number {
+  const index = grammarIndex(l2, key);
+  if (index < 0 || !known.length) return 1;
+  return Math.min(...known.map((l1) => slotWeight(l1, l2, index)));
 }

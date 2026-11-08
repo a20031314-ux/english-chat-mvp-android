@@ -58,13 +58,15 @@ export function typeFromPrepared(item: PreparedItem): QuizQuestion | null {
 /** 지금 단계의 문법, 그다음 표현. 앞 단계는 그 단계가 떨어졌을 때만. 더 높은 단계는 넣지 않는다. */
 export function pickPrepared(
   items: readonly PreparedItem[],
-  options: { stage: number; skip?: ReadonlySet<string>; grammar?: number; expression?: number },
+  options: { stage: number; skip?: ReadonlySet<string>; grammar?: number; expression?: number; weight?: (key: string) => number },
 ): PreparedItem[] {
   const skip = options.skip ?? new Set<string>();
+  // 언어 조합 비중(languagePairs.ts knownSlotWeight, 2026-11-08): 같은 단계 안에서 무거운 칸(모국어에 없는 개념)부터, 같으면 원래 차례.
+  const heavier = (list: PreparedItem[]) => (options.weight ? list.map((item, i) => ({ item, i, w: options.weight!(item.key) })).sort((a, b) => b.w - a.w || a.i - b.i).map((one) => one.item) : list);
   const take = (kind: PreparedItem["kind"], n: number) => {
     const open = items.filter((item) => item.kind === kind && item.stage <= options.stage && !skip.has(item.key));
-    const here = open.filter((item) => item.stage === options.stage);
-    const earlier = open.filter((item) => item.stage < options.stage);
+    const here = heavier(open.filter((item) => item.stage === options.stage));
+    const earlier = heavier(open.filter((item) => item.stage < options.stage));
     return [...here, ...earlier].slice(0, n);
   };
   return [...take("grammar", options.grammar ?? 1), ...take("expression", options.expression ?? 1)];

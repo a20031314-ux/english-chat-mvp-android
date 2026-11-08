@@ -43,6 +43,10 @@ import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
+import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
+import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
+import { readCachedAccount } from "@/lib/account/session";
+import { factsOf } from "@/lib/account/profileFacts";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { peekBank, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
 import { feelDue, feelLevel, levelOf, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
@@ -1297,7 +1301,9 @@ export function TodayPlan({
       }
       // 개편: 맞힌 넣어 둔 문제는 확인할 때가 될 때까지 다시 안 냄(예전엔 지난 묶음만 빼서 둘이 번갈아 나옴).
       const preparedSkip = reform ? preparedRest(language, prepared) : null;
-      const head = !paused && prepared ? pickPrepared(prepared, { stage, skip: new Set([...lastCircle.current, ...(preparedSkip ?? [])]) }) : [];
+      // 개편: 같은 단계 문법은 이 학습자에게 무거운 칸(모국어·아는 언어에 없는 개념)부터 — 프로필 모국어 → 국적 → 앱 언어(2026-11-08).
+      const known = reform ? learnerLanguages(factsOf(readCachedAccount()?.profile.facts), locale).known : [];
+      const head = !paused && prepared ? pickPrepared(prepared, { stage, skip: new Set([...lastCircle.current, ...(preparedSkip ?? [])]), ...(known.length ? { weight: (key: string) => knownSlotWeight(known, language, key) } : {}) }) : [];
       lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
       if (!keys.length && !head.length) return null;
       void growBank(language, locale, keys.map((key) => ({ key, stage })));
