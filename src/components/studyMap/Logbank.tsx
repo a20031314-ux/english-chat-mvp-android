@@ -1374,7 +1374,7 @@ function LearnedCards({
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const markOf = (key: string) => {
     const level = states.get(key)?.level ?? "new";
-    return level === "known" ? { icon: "✓", label: ui.knownTag, cls: "text-good" } : level === "hard" ? { icon: "◐", label: ui.lbCardHard, cls: "text-warn" } : { icon: "○", label: ui.lbCardNew, cls: "text-slate-400" };
+    return level === "known" ? { icon: "✓", label: ui.knownTag, cls: "text-good" } : level === "hard" ? { icon: "◐", label: ui.lbCardHard, cls: "text-warn" } : null;
   };
   const face = (key: string) => {
     if (key.startsWith("w|") || key.startsWith("e|")) {
@@ -1420,9 +1420,12 @@ function LearnedCards({
         return (
           <li key={one.key} data-learned-card={one.key} className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-caption">
-              <span className={`font-semibold ${mark.cls}`} aria-label={mark.label} title={mark.label}>
-                {mark.icon}
-              </span>
+              {/* New는 표시하지 않는다(2026-11-08) — 적용이 힘듦 ◐ · 알아요 ✓만. */}
+              {mark ? (
+                <span className={`font-semibold ${mark.cls}`} aria-label={mark.label} title={mark.label}>
+                  {mark.icon}
+                </span>
+              ) : null}
               <span className="tabular-nums text-good">{`✓ ${one.ok}`}</span>
               {one.miss ? <span className="tabular-nums text-bad">{`✗ ${one.miss}`}</span> : null}
               <span className="flex-1" />

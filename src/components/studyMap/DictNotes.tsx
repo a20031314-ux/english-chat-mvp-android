@@ -52,14 +52,14 @@ function useBank(language: string | undefined): { bank: readonly BankWord[] | nu
   return { bank: language && bank ? bank : null, irregular: language ? irregularCache.get(language) : undefined };
 }
 
-export function DictNotes({ text, language, locale, className = "", tone = "dark" }: { text: string; language?: string; locale?: Locale; className?: string; /** 밝은 바탕(재생 중 자막 카드·내 말풍선) 위인지. */ tone?: "dark" | "light" }) {
+export function DictNotes({ text, language, locale, className = "", tone = "dark", skip }: { text: string; language?: string; locale?: Locale; className?: string; /** 밝은 바탕(재생 중 자막 카드·내 말풍선) 위인지. */ tone?: "dark" | "light"; /** 빼는 열쇠(그 문제의 소재 — 바로 위 카드에 이미 있음). */ skip?: string }) {
   const learning = useLearningLanguageOptional();
   const lang = language ?? learning?.targetLanguage;
   const [loc] = useState<Locale>(() => locale ?? appLocale());
   const ui = useUiCopy(loc);
   const { bank, irregular } = useBank(lang);
   const [word, setWord] = useState<string | null>(null);
-  const notes = useMemo(() => (lang && bank ? dictNotes(lang, text, bank, irregular) : []), [lang, text, bank, irregular]);
+  const notes = useMemo(() => (lang && bank ? dictNotes(lang, text, bank, irregular).filter((one) => one.key !== skip) : []), [lang, text, bank, irregular, skip]);
   const ordered = useMemo(() => {
     if (!lang || !notes.length) return [] as (DictNote & { known: boolean })[];
     const states = checkStates(readLedger(lang));

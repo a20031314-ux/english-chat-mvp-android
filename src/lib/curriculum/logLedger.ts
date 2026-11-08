@@ -11,7 +11,8 @@ export type LogSource = "quiz" | "exam" | "call" | "people" | "dict" | "script" 
 /** ok 맞음 · miss 틀림 · used 통화·대화에서 씀 · look 찾아봄 */
 export type LogResult = "ok" | "miss" | "used" | "look";
 /** write 빈칸 쓰기 · pick 고르기(퀴즈만) */
-export type LogMode = "write" | "pick";
+/** sure = 어림이 높은 처음 본 말을 예문 없이 써서 맞힘(quizTier.ts) — 체크 셋 바로 알아요. */
+export type LogMode = "write" | "pick" | "sure";
 export type LogEvent = { k: string; src: LogSource; r: LogResult; m?: LogMode; t: number };
 
 /** 저장 꼴: 짧은 줄 [열쇠, 출처, 결과, 방식|"", 시각(초)] — 1년 치가 폰 저장 한도 안에 들게. */
@@ -40,7 +41,7 @@ function validRow(row: unknown): row is Row {
     row[0].length > 2 &&
     SOURCES.includes(row[1] as LogSource) &&
     RESULTS.includes(row[2] as LogResult) &&
-    (row[3] === "" || row[3] === "write" || row[3] === "pick") &&
+    (row[3] === "" || row[3] === "write" || row[3] === "pick" || row[3] === "sure") &&
     typeof row[4] === "number" &&
     Number.isFinite(row[4])
   );

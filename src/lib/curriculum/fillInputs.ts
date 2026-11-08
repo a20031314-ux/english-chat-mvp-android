@@ -130,7 +130,7 @@ export function ledgerFillEvents(input: { ledger: readonly LogEvent[]; results: 
       continue;
     }
     const source: FillSource = event.src === "exam" ? "test" : event.src === "script" ? "lesson" : "quiz";
-    const write = event.m === "write";
+    const write = event.m === "write" || event.m === "sure";
     out.push({ at, key: event.k, correct, source, use: write, ...(write ? {} : { choose: true }) });
   }
   const rest = fillEvents({

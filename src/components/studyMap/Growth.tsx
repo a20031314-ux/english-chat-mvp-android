@@ -264,7 +264,7 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
  * 답하기 전 장부(events — 부르는 쪽이 문제를 낼 때 잡아 둠, 답하면 곧바로 장부에 들어가서)로 전 점을 내고, 답하면 바뀐 점만 톡 커졌다 돌아옴. 앎이 되면 점 셋 둘레가 빛남,
  * 전에 틀린 걸 다른 날 맞히면 ↺ 그 날짜. 글 없이 — 이름은 aria-label(Logbank 표와 같은 말이 아니라 체크 셋 이름).
  */
-export function CardProgressDots({ events, locale, bankKey, mode, correct }: { events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick"; correct: boolean }) {
+export function CardProgressDots({ events, locale, bankKey, mode, correct }: { events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick" | "sure"; correct: boolean }) {
   const [at] = useState(() => Math.floor(Date.now() / 1000));
   const progress = useMemo(() => cardProgress(events, bankKey, { correct, mode, t: at }), [events, bankKey, correct, mode, at]);
   const [phase, setPhase] = useState(0);
@@ -276,7 +276,9 @@ export function CardProgressDots({ events, locale, bankKey, mode, correct }: { e
       window.clearTimeout(two);
     };
   }, []);
-  const shown = phase === 0 ? progress.before : progress.after;
+  // New(○○○)는 보이지 않는다(2026-11-08 사용자 "처음 본 단어에 New가 떠버려" → 표시 빼기): 처음 보는 말은 답한 뒤 단계부터, 그대로 New면 점 없음.
+  const shown = phase === 0 && progress.before !== 0 ? progress.before : progress.after;
+  if (progress.after === 0 && progress.recoveredFrom === null) return null;
   const fill = (i: number, dots: number) => (dots >= i + 1 ? 1 : i === 0 && dots === 0.5 ? 0.5 : 0);
   return (
     <span data-card-progress={`${progress.before}>${progress.after}`} className="inline-flex items-center gap-2">

@@ -44,14 +44,17 @@ export function stepState(prev: CheckState, event: LogEvent, dayOf: (t: number) 
   let state: CheckState = { ...prev, last: event.t };
   const talk = event.src === "call" || event.src === "people" || event.src === "chat";
   if (event.r === "look") return state;
+  const write = event.m === "write" || event.m === "sure";
   if (state.level === "new") {
-    if (event.r === "ok" && event.m === "write") state = { ...state, level: "hard", hardDay: dayOf(event.t) };
+    // 어림이 높은 처음 본 말을 예문 없이 써서 맞힘 = 바로 알아요, 첫 확인은 3일 뒤(2026-11-08 사용자 "첫 답이 단계를 정하게").
+    if (event.r === "ok" && event.m === "sure") return { ...state, ...knownNow(event.t, 1) };
+    if (event.r === "ok" && write) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
     else if (event.r === "used" && USED_LIFTS) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
     return state;
   }
   if (state.level === "hard") {
     const otherDay = dayOf(event.t) !== state.hardDay;
-    if ((event.r === "ok" && event.m === "write" && otherDay) || (event.r === "used" && USED_LIFTS)) state = { ...state, ...knownNow(event.t) };
+    if ((event.r === "ok" && (write && (otherDay || event.m === "sure"))) || (event.r === "used" && USED_LIFTS)) state = { ...state, ...knownNow(event.t) };
     return state;
   }
   // 앎

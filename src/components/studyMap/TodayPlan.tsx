@@ -4,6 +4,7 @@ import { TodayGrowth } from "@/components/studyMap/Growth";
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { cardFaces, checkStates, dayOfSeconds, dueKeys } from "@/lib/curriculum/checkState";
+import { answeredKeys, cardMode, expressionChance } from "@/lib/curriculum/quizTier";
 import { reviewKeys as ledgerReview } from "@/lib/curriculum/todayCards";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
@@ -51,7 +52,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import { factsOf } from "@/lib/account/profileFacts";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { peekBank, stageCuts, wordKey, type VocabBy, type VocabPick } from "@/lib/curriculum/vocabBank";
-import { feelDue, feelLevel, levelOf, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
+import { feelDue, feelLevel, knowChance, levelOf, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { markPracticed, PRACTICED_EVENT, readPracticed } from "@/lib/curriculum/practicedToday";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -274,6 +275,10 @@ export function TodayPlan({
   const reviewBatch = useRef(false);
   // 개편 3단계: Logbank 오늘 카드가 맡긴 열쇠(curriculum/quizFocus.ts) — 그 열쇠부터 다섯씩, 다 내면 한 줄 그대로.
   const focusKeys = useRef<string[]>([]);
+  // 어림 hard(예문 없이 쓰기)로 낸 열쇠 — 맞히면 장부 쓰기 sure(curriculum/quizTier.ts, 2026-11-08).
+  const sureKeys = useRef<Set<string>>(new Set());
+  // 고르기로 맞힌 New — 다음 묶음에 쓰기로 다시(2026-11-08 사용자 "처음 사용자는 퀴즈 유형이 고정" → 고르기로 맞힌 말이 다시 안 나오던 구멍).
+  const pickedNew = useRef<string[]>([]);
   const [focusSerial, setFocusSerial] = useState(0);
   useEffect(() => {
     if (!reform) return;
@@ -592,7 +597,11 @@ export function TodayPlan({
     let logged = log;
     let nextTally = tally;
     for (const { key, correct, shape, miss, src } of results) {
-      noteQuizDay(language, localDay(), correct, key, shape, miss, src);
+      const sure = sureKeys.current.has(key) && shape === "t";
+      sureKeys.current.delete(key);
+      // 고르기로 맞힌 New(쓰기·첫 측정·대화 기록 없음)는 다음 묶음에 쓰기로 다시.
+      if (reform && correct && shape === "c" && !src && isDeckKey(key) && !pickedNew.current.includes(key) && !answeredKeys(readLedger(language).filter((event) => event.k === key && event.m !== "pick")).has(key)) pickedNew.current.push(key);
+      noteQuizDay(language, localDay(), correct, key, shape, miss, src, sure);
       // 틀린 문장구조·표현·문법은 정기 시험 재료로(curriculum/exam.ts).
       if (!correct) notePool(language, key, "wrong");
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
@@ -719,9 +728,30 @@ export function TodayPlan({
   };
   // 개편 퀴즈(quiz.ts cardQuiz): 낱말·표현은 카드 변형 — 맞힌 적 없으면 뜻 가리기(뜻 고르기), 있으면 뜻만 보여 주기(그 말 쓰기).
   // 카드가 없는 열쇠·문법·문장구조는 old(예전 모양)로, 순서는 받은 대로.
-  const reformAsk = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }): { keys: string[]; questions: QuizQuestion[] } => {
-    const face = cardFaces(readLedger(language));
-    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, face(key), `${day}-${round}`, { judge: true }) }));
+  // 어림(아는 확률): 단어 = 수준 어림 × 빈도 순위, 표현 = 그 표현 단계 vs 지금 단계(curriculum/quizTier.ts).
+  const estimateOf = (key: string): number | null => {
+    if (key.startsWith("w|")) {
+      const rank = rankOf.get(key);
+      return rank === undefined ? null : knowChance(levelOf(circleRef.current, stage, cuts), rank);
+    }
+    if (key.startsWith("e|")) {
+      const at = ladderFor(language)?.stages.find((one) => one.expressions.includes(key.slice(2)))?.order;
+      return at === undefined ? null : expressionChance(at, stage);
+    }
+    return null;
+  };
+  // 카드 문제 하나: 기록이 있으면 기록대로(맞나 틀리나 섞음), 없으면 어림으로 고르기·쓰기·예문 없이 쓰기.
+  const askCard = (key: string, face: (key: string) => "hide" | "show", answered: ReadonlySet<string>, seed: string, noJudge = false): QuizQuestion | null => {
+    const how = cardMode(face(key), answered.has(key), reform ? estimateOf(key) : null);
+    const question = cardQuiz(language, key, how.mode, seed, { judge: how.judge && !noJudge, bare: how.bare });
+    if (question && how.bare) sureKeys.current.add(key);
+    return question;
+  };
+  const reformAsk = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }, noJudge = false): { keys: string[]; questions: QuizQuestion[] } => {
+    const ledgerNow = readLedger(language);
+    const face = cardFaces(ledgerNow);
+    const answered = answeredKeys(ledgerNow);
+    const made = keys.map((key) => ({ key, question: askCard(key, face, answered, `${day}-${round}`, noJudge) }));
     const rest = made.filter((one) => !one.question).map((one) => one.key);
     const back = rest.length ? old(rest) : { keys: [], questions: [] };
     const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
@@ -1278,6 +1308,13 @@ export function TodayPlan({
       const made = bundleFor("learn", keys);
       if (made) return takeBatch(made);
     }
+    if (reform && pickedNew.current.length >= 3) {
+      // 고르기로 맞힌 New를 쓰기로 다시(그 사이 한 묶음쯤 지나 — 5~8문제 뒤).
+      const keys = pickedNew.current.splice(0, 5);
+      reviewBatch.current = false;
+      const made = reformAsk(keys, () => ({ keys: [], questions: [] }), true);
+      if (made.keys.length) return takeBatch(made);
+    }
     if (reform) {
       // 한 줄: 다시 볼 것이 있으면 새 묶음과 번갈아(연달아 다시 볼 것만 나오지 않게), 새 것이 떨어지면 다시 볼 것만.
       if (!reviewBatch.current) {
@@ -1306,6 +1343,11 @@ export function TodayPlan({
           ? []
           : levelPick(QUIZ_SIZE + 1, { skip: lastCircle.current })
         : pickCircle(circleRef.current, circleOrder, { n: QUIZ_SIZE + 1, now: Date.now(), usable: usableKey, known: knownWord, skip: lastCircle.current });
+      // 개편: 경계보다 한참 아래("아마 앎") 안 본 낱말 하나를 셋째 자리에 — 어림이 높아 예문 없이 쓰기로 확인(2026-11-08 사용자 "하위 단계는 고난이도부터").
+      if (reform && levelOn && bank && keys.length && !paused) {
+        const low = presumedWords(circleRef.current, levelOf(circleRef.current, stage, cuts), { ranked, usable: (key) => bank.ready.has(key), known: knownWord, n: 1, seed: round });
+        for (const one of low) if (!keys.includes(one) && !lastCircle.current.has(one)) keys.splice(Math.min(2, keys.length), 0, one);
+      }
       // 낱말 묶음마다 아직 안 본 표현 하나를 둘째 자리에(새 낱말을 쉬는 중이면 표현도 쉼). 영어는 그 자리에 넣어 둔 문법·표현 고르기.
       // 넣어 둔 표현 문제가 없는 언어(영어 말고는 문법만 넣어 둠, 2026-11-06)는 표현 카드를 그대로.
       if (!paused && !prepared?.some((item) => item.kind === "expression")) {
@@ -1336,10 +1378,12 @@ export function TodayPlan({
       }
       if (reform) {
         // 개편: 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·예전 모양).
-        const face = cardFaces(readLedger(language));
+        const ledgerNow = readLedger(language);
+        const face = cardFaces(ledgerNow);
+        const answered = answeredKeys(ledgerNow);
         for (const key of keys) {
           const word = face(key) === "show" ? writtenWord.get(key) : undefined;
-          const question = cardQuiz(language, key, face(key), `${day}-${round}`, { judge: true }) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+          const question = askCard(key, face, answered, `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
           if (question) {
             questions.push(question);
             used.push(key);

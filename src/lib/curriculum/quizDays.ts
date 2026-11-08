@@ -55,7 +55,8 @@ export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: 
 }
 
 /** src judge = 맞나 틀리나 판단(장부 출처만 다름 — 날 기록은 그대로). */
-export function noteQuizDay(language: string, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string, src: "quiz" | "judge" = "quiz"): void {
+/** sure = 어림이 높은 처음 본 말을 예문 없이 써서 맞힘(quizTier.ts — 장부 쓰기 sure). */
+export function noteQuizDay(language: string, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string, src: "quiz" | "judge" = "quiz", sure = false): void {
   try {
     localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct, key, shape, miss)));
     window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));
@@ -63,7 +64,7 @@ export function noteQuizDay(language: string, day: string, correct: boolean, key
     // 이번에만.
   }
   // Logbank 사건 장부에도(같이 쓰기 — curriculum/logLedger.ts).
-  if (key) noteLedger(language, [{ k: key, src, r: correct ? "ok" : "miss", ...(shape ? { m: shape === "t" ? "write" : "pick" } : {}) }]);
+  if (key) noteLedger(language, [{ k: key, src, r: correct ? "ok" : "miss", ...(shape ? { m: shape === "t" ? (sure && correct ? "sure" : "write") : "pick" } : {}) }]);
 }
 
 /** "2026-10-31" 같은 날(localDay) → 비교용 수. */

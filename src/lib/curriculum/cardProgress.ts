@@ -14,7 +14,7 @@ export type CardProgress = { before: Dots; after: Dots; known: boolean; recovere
 
 const dotsOf = (state: CheckState, recognized: boolean): Dots => (state.level === "known" ? 3 : state.level === "hard" ? 2 : recognized ? 0.5 : 0);
 
-export function cardProgress(events: readonly LogEvent[], key: string, answer: { correct: boolean; mode: "write" | "pick"; t: number }, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): CardProgress {
+export function cardProgress(events: readonly LogEvent[], key: string, answer: { correct: boolean; mode: "write" | "pick" | "sure"; t: number }, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): CardProgress {
   const mine = events.filter((event) => event.k === key).sort((a, b) => a.t - b.t);
   let state: CheckState = { level: "new", step: 0, last: 0 };
   let recognized = false;

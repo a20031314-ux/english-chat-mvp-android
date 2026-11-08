@@ -349,7 +349,7 @@ export function QuestionView({
               events={ledgerBefore}
               locale={locale}
               bankKey={dotKey}
-              mode={quizShapeOf(question as never, { correct: answered.correct, ...(answered.typed ? { typed: true } : {}) }, (text) => text.split(" ")).shape === "t" ? "write" : "pick"}
+              mode={quizShapeOf(question as never, { correct: answered.correct, ...(answered.typed ? { typed: true } : {}) }, (text) => text.split(" ")).shape === "t" ? (question.kind === "type" && question.bare && answered.correct ? "sure" : "write") : "pick"}
               correct={answered.correct && !answered.assisted}
             />
           ) : null}
@@ -375,7 +375,7 @@ export function QuestionView({
         </div>
       ) : null}
       {/* 사전 주석(2026-11-08): 답한 뒤에만 — 답하기 전에 뜻이 보이면 답이 샌다. */}
-      {answered && sentenceOf(question) ? <DictNotes key={sentenceOf(question)} text={sentenceOf(question)!} language={language} locale={isLocale(locale) ? locale : undefined} /> : null}
+      {answered && sentenceOf(question) ? <DictNotes key={sentenceOf(question)} text={sentenceOf(question)!} language={language} locale={isLocale(locale) ? locale : undefined} skip={bankKey} /> : null}
       {dictWord ? <DictionarySheet ui={ui} language={language} locale={locale} word={dictWord} title={ui.languagebankTitle} onClose={() => setDictWord(null)} /> : null}
     </section>
   );
@@ -384,7 +384,7 @@ export function QuestionView({
 /** 문제 한 줄 요약(점검용 data 속성): 모양·문장·보기·정답 자리 — 화면에 보이는 것 그대로라 새로 드러나는 것은 없다(정답 자리 빼고). */
 function quizMeta(question: QuizQuestion): string {
   const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string; shown: string; wrong: string | null; from: string }>;
-  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong, bad: question.wrong ? slipBadIndex(question.slip) : -1 } : {}) });
+  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong, bad: question.wrong ? slipBadIndex(question.slip) : -1 } : {}), ...(question.kind === "type" && question.card ? { tier: question.bare ? "hard" : "mid" } : {}), ...(question.kind === "meaning" && question.card ? { tier: "easy" } : {}) });
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";
@@ -713,6 +713,7 @@ function TypeView({
           }
           lineGloss={gloss}
           speak={answered ? { text: question.text, tag } : null}
+          hideLine={Boolean(question.bare) && !answered}
         />
         <TypeBox
           ui={ui}
@@ -1680,7 +1681,7 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
  * 카드 한 장(개편 cardQuiz, 2026-11-06 사용자 "카드를 그대로 두고 예문에 빈칸, 단어만 가리고"): 낱말 · 뜻 · 예문 · 예문 뜻.
  * 가린 칸은 null(＿＿＿) — 뜻 가림이면 예문 뜻도 답한 뒤에(뜻이 새지 않게), 낱말 가림이면 예문에도 빈칸.
  */
-export function CardFace({ word, meaning, line, lineGloss, speak }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null }) {
+export function CardFace({ word, meaning, line, lineGloss, speak, hideLine = false }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null; /** 예문 칸을 아예 숨김(어림 hard — 뜻만 보고 쓰기). */ hideLine?: boolean }) {
   const tone = useBankTone();
   const hidden = <span className={`font-semibold ${tone.blank}`}>＿＿＿</span>;
   return (
@@ -1691,7 +1692,7 @@ export function CardFace({ word, meaning, line, lineGloss, speak }: { word: stri
       <p dir="auto" data-card-meaning className="text-chat text-slate-200">
         {meaning ?? hidden}
       </p>
-      <div className="flex items-start gap-2 border-t border-line pt-2">
+      {hideLine ? null : <div className="flex items-start gap-2 border-t border-line pt-2">
         <div className="min-w-0 flex-1">
           <p dir="auto" className="text-chat text-slate-100">
             {line}
@@ -1703,7 +1704,7 @@ export function CardFace({ word, meaning, line, lineGloss, speak }: { word: stri
           ) : null}
         </div>
         {speak ? <TTSButton text={speak.text} lang={speak.tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
-      </div>
+      </div>}
     </div>
   );
 }

@@ -142,5 +142,10 @@ export function reviewKeys(input: { events: readonly LogEvent[]; states: Readonl
     if (!last || input.today(last.t) !== today) add(key);
   }
   for (const [key, state] of byLast) if (state.level === "new" && lastQuiz.get(key)?.r === "miss") add(key);
+  // 고르기로만 맞힌 New(그날 쓰기까지 못 감)는 다음 날부터 — 쓰기로 나온다(카드 face show, 2026-11-08).
+  for (const [key, state] of byLast) {
+    const last = lastQuiz.get(key);
+    if (state.level === "new" && last?.r === "ok" && last.m === "pick" && input.today(last.t) !== today) add(key);
+  }
   return out;
 }

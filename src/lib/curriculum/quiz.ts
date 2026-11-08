@@ -64,7 +64,7 @@ export type QuizQuestion =
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 넣어 둔 단어 문제. 뜻만 보고 단어를 쓴다. 문장은 답한 뒤에. hint는 첫 글자, mark는 "한 글자"·"한 단어". */ prepared?: { hint?: string; mark?: string }; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 넣어 둔 단어 문제. 뜻만 보고 단어를 쓴다. 문장은 답한 뒤에. hint는 첫 글자, mark는 "한 글자"·"한 단어". */ prepared?: { hint?: string; mark?: string }; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 예문 없이 뜻만 보고 쓰기(어림이 높은 처음 본 말 — quizTier.ts hard). 맞히면 장부 쓰기 sure. */ bare?: true }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
@@ -1313,7 +1313,7 @@ export function cardFaceOf(language: string, key: string): { word: string; meani
   return { word: key.slice(2), meaning: source.wordGloss.trim(), text: source.text, piece: source.piece, gloss: source.gloss };
 }
 
-export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string, how: { judge?: boolean } = {}): QuizQuestion | null {
+export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string, how: { judge?: boolean; bare?: boolean } = {}): QuizQuestion | null {
   // 개편: 맞힌 적 있는 말(show)은 반쯤 "맞나 틀리나"로(2026-11-08 사용자 "틀린 답을 끼워 넣고 맞는지 판단 > 틀릴 시 맞는 답 타이핑").
   if (mode === "show" && how.judge && rng(`${seed}|${key}|judge?`)() < JUDGE_SHARE) {
     const judged = judgeQuiz(language, key, seed);
@@ -1353,6 +1353,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
       gloss: source.gloss,
       from: key,
       card: face,
+      ...(how.bare ? { bare: true as const } : {}),
     };
   }
   // 오답: 같은 품사 + 빈도 순위가 가까운 카드의 뜻 먼저(드문 낱말 뜻은 한눈에 지워짐 — 2026-11-07 점검 easy-decoy "area ↔ 바나나"),
