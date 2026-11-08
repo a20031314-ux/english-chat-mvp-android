@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "bc45c050fa4a4bd7385ed94b518a30c099886b65",
- "at": "2026-11-07T16:23:25.805Z",
+ "last": "e738bf8aa731769712c37ba48b51cc11356572ba",
+ "at": "2026-11-08T02:22:08.180Z",
  "screensFiredAt": "2026-11-07T14:27:51.242Z",
  "metrics": {
-  "commit": "bc45c05",
+  "commit": "e738bf8",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -197,6 +197,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 모델 호출": "2",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 값 매기는 법": "claude-haiku-5-5 600/500 토큰 (기능 translate)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 근거": "가정",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · callReplay · 한 번": "0.7원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · callReplay · 모델 호출": "1",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · callReplay · 값 매기는 법": "claude-haiku-5-5 1300/700 토큰 (기능 callReplay)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · callReplay · 근거": "가정",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayListen · 한 번": "0.5원",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayListen · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayListen · 값 매기는 법": "받아쓰기 6초 scribe_v2",
@@ -450,6 +454,9 @@
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayContext · 모델": "claude-haiku-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayContext · 입력/출력 (100만 토큰당)": "$0.1 / $0.5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayContext · 출처": "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · callReplay · 모델": "claude-haiku-5-5",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · callReplay · 입력/출력 (100만 토큰당)": "$0.1 / $0.5",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · callReplay · 출처": "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · video · 모델": "claude-haiku-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · video · 입력/출력 (100만 토큰당)": "$0.1 / $0.5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · video · 출처": "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)",
