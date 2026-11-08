@@ -91,3 +91,15 @@ test("스페인어·프랑스어·이탈리아어·포르투갈어: 명사 성 (
   assert.equal(read("it")["moto"]?.g, "f");
   assert.equal(read("pt")["princípio"]?.g, "m", "a princípio — a는 전치사");
 });
+
+test("힌디어·아랍어: 명사 성 (किताब f · घर m · डॉक्टर 둘 다 · مدرسة f · شمس f · رجل m)", () => {
+  const read = (language: string) => JSON.parse(readFileSync(new URL(`${language}.json`, DIR), "utf8")) as Record<string, { g?: string }>;
+  const hi = read("hi");
+  assert.equal(hi["किताब"]?.g, "f");
+  assert.equal(hi["घर"]?.g, "m");
+  assert.equal(hi["डॉक्टर"]?.g, "mf");
+  const ar = read("ar");
+  assert.equal(ar["مدرسة"]?.g, "f");
+  assert.equal(ar["شمس"]?.g, "f", "ة 없는 여성 명사");
+  assert.equal(ar["رجل"]?.g, "m");
+});
