@@ -260,3 +260,8 @@
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1413 — 한국어 이/가 실수 열쇠가 g|1:1인데 ko 사다리 1:1은 "N이/가 아니에요" — 결과가 엉뚱한 칸에 쌓이고 📐 문이 다른 수업을 엶 (주격 조사 칸 열쇠로)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/learnerLanguages.ts:26 — 주석은 "배우는 언어는 뺌"인데 프로필 할 수 있는 언어를 그대로 넣어, 학습 언어를 적은 사람은 비중 최솟값이 1로 잡혀 모국어에 없는 칸 먼저 내기가 꺼짐 (학습 언어 빼기)
 - 2026-11-08 dev → store: 대본 플랜 `script_monthly` 판매 중지(사용자 "대본은 그냥 빼줘") — 앱 다음 빌드부터 결제 화면에 안 나옴(이미 구독 중인 사람만 자기 플랜으로 보임). Play Console에서 새 구매 막기(기본 요금제 비활성) 여부·기존 구독자 처리(그대로 둘지)는 사람이, App Store Connect에는 만들지 않음. iOS 1차 범위의 "대본 플랜 추가"도 빠짐(`hub/drafts/ios-launch.md`).
+- 2026-11-08 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:1495 — 맞나 틀리나에서 틀린 곳을 누르기만 해도 쓰기 맞음으로 기록돼, 직접 써 보지 않고 그 문법이 알아요가 됨 (누르기는 고르기로 셈, RULES 11 ④)
+- 2026-11-08 watch → dev: [my] src/components/studyMap/Logbank.tsx:825 — ⏱ 목록에서 🎭 상황 줄은 뺐는데 상황 시간이 막대·합계엔 남아 목록 합과 안 맞음 (합계에서도 빼기)
+- 2026-11-08 watch → dev: [공통] src/lib/copy.ts:2483 — ✓ 익힘(itemsMastered)과 ↷ 스스로 건너뜀(checkKnown)이 둘 다 "알아요" (다른 기능 = 다른 이름)
+- 2026-11-08 watch → dev: [my] src/lib/copy.ts:4585 — 첫 측정 예/아니오 짝이 es "Lo sé"/"No la conozco"·it·fr에서 동사·대명사 어긋남 (짝 맞추기)
+- 2026-11-08 watch → dev: [ai] src/components/RoleplayReview.tsx:444 — 돌아보기 고친 문장 머리 ✎에 title·aria-label 없음 (다른 ✎ 자리처럼 붙이기)
