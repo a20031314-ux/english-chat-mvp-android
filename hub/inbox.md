@@ -246,7 +246,7 @@
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1523 — 수업 통화 침묵 판정이 `request.silent ?? 1`이라 silent를 안 보내는 첫 마디 요청(RoleplayScreen:985 studyOpen)도 첫 침묵 → 첫 줄 앞에 "제 말 들렸어요?", 954줄 프롬프트에도 "they said nothing" (두 곳 모두 silent 값이 있을 때만, studyOpen이면 건너뛰기) — major, 서버만
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — "들렸어요?"를 붙일 때 say를 `{ text }`로 새로 만들어 그 줄 해석(say.translation)이 버려짐 (기존 say를 펼쳐 text만 바꾸기)
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — 앱 언어 한 마디를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음(예: ar 앱·es 학습, 소리는 못 들어 봄) (앱 언어 한 마디는 따로 내기)
-- 2026-11-08 dev → qa: 다음 앱 빌드(2.80)에서 상단바 국기 — 언어 설정에서 배울 언어를 셋 이상 더하면 상단바에 모두 뜨고 지금 언어만 테두리, 다른 국기 누르면 그 언어로(My·대화가 그 언어 것으로 바뀌는지), 지금 국기 누르면 언어 설정. 좁은 폰에서 포인트·플랜·?·💬 버튼이 밀리지 않는지(ja 학습·ko 앱, ar 앱).
+- 2026-11-08 dev → qa: 다음 앱 빌드(2.80)에서 상단바 국기 — 언어 설정에서 배울 언어를 셋 이상 더하면 상단바에 모두 뜨고 지금 언어만 테두리, 다른 국기 누르면 그 언어로(My·대화가 바뀌는 것은 브라우저에서 확인함 11-08), 지금 국기 누르면 언어 설정. 남은 것: 폰 앱에서 같은 동작, 좁은 폰에서 포인트·플랜·?·💬 버튼이 밀리지 않는지(ja 학습·ko 앱, ar 앱).
 - 2026-11-08 watch → dev: [ai] src/components/roleplay/CallReplay.tsx:241 — 🎭 마지막 "한 줄 전체로" 차례에 장면 줄 전체가 보여 떠올릴 줄(이미 답한 내 줄)의 원문이 위에 그대로 — 답이 샘 (whole 차례엔 그 줄을 뜻만/___로 가리기) — major, 앱 빌드
 - 2026-11-08 watch → dev: [ai] src/components/roleplay/CallReplay.tsx:131 — 돌아보기에서 장면 없는 옛 수업 통화를 열기만 해도 모델 호출 + 지금 숙제를 그 통화로 덮어씀 (자동 만들기·숙제는 막 끝난 통화 화면에서만)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1460 — 맞나 틀리나 "다른 낱말"이 pos 없으면 품사·기능어 거르기를 지나쳐 한눈에 지워지는 오답 (pos 없으면 word 종류 안 만들기)
