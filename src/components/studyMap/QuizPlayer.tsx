@@ -40,6 +40,8 @@ import { useOptionNotes } from "@/lib/curriculum/optionNotes";
 export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string;
   /** 💡 힌트·모르겠어요로 답을 본 차례 — 맞게 쳤어도 맞음으로 세지 않는다(correct false), 화면엔 ✓ 대신 💡. */
   assisted?: boolean;
+  /** 맞나 틀리나: 바른 꼴까지 쳐서 답함(쓰기로 셈) — 판단만이면 없음(고르기로 셈). */
+  typed?: boolean;
   /** 복합 문제(multi·spots): 소재(열쇠)마다 맞음/틀림 — 부르는 쪽이 열쇠마다 따로 기록한다. */
   parts?: { key: string; correct: boolean }[];
 };
@@ -314,6 +316,7 @@ export function QuestionView({
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
+      {question.kind === "judge" ? <JudgeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "reply" ? <ReplyView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {answered && examples && bankKey && "text" in question ? <MoreExamples key={question.text} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
@@ -329,7 +332,7 @@ export function QuestionView({
               events={ledgerBefore}
               locale={locale}
               bankKey={bankKey}
-              mode={quizShapeOf(question as never, { correct: answered.correct }, (text) => text.split(" ")).shape === "t" ? "write" : "pick"}
+              mode={quizShapeOf(question as never, { correct: answered.correct, ...(answered.typed ? { typed: true } : {}) }, (text) => text.split(" ")).shape === "t" ? "write" : "pick"}
               correct={answered.correct && !answered.assisted}
             />
           ) : null}
@@ -361,8 +364,8 @@ export function QuestionView({
 
 /** 문제 한 줄 요약(점검용 data 속성): 모양·문장·보기·정답 자리 — 화면에 보이는 것 그대로라 새로 드러나는 것은 없다(정답 자리 빼고). */
 function quizMeta(question: QuizQuestion): string {
-  const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string }>;
-  return JSON.stringify({ kind: question.kind, ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}) });
+  const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string; shown: string; wrong: string | null }>;
+  return JSON.stringify({ kind: question.kind, ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong } : {}) });
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";
@@ -1456,6 +1459,84 @@ function OrderView({
           </button>
         </>
       )}
+    </div>
+  );
+}
+
+/**
+ * 맞나 틀리나(2026-11-08 사용자 "빈칸이 아니라 틀린 답(다른 단어·스펠링·문법)을 끼워 넣고 맞는지 판단 > 틀릴 시 맞는 답 타이핑"):
+ * 카드(낱말 칸 가림 · 뜻 · 끼운 꼴에 밑줄인 예문 · 예문 뜻) → ⭕ / ❌(글 없이, 이름은 aria-label).
+ * 맞는 문장에 ⭕ = 맞음(고르기로 셈) · 틀린 문장에 ❌ = 입력칸에서 바른 꼴 쓰기(맞으면 쓰기로 셈) · 판단이 틀리면 틀림 + 바른 꼴을 보여 줌.
+ */
+function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "judge" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const tone = useBankTone();
+  const [said, setSaid] = useState<"o" | "x" | null>(null);
+  const [result, setResult] = useState<Graded | null>(null);
+  const [hint, setHint] = useState(0);
+  const wrong = question.wrong !== null;
+  const typing = said === "x" && wrong;
+  const judge = (pick: "o" | "x") => {
+    if (said || answered) return;
+    setSaid(pick);
+    if (pick === "o") onAnswer({ correct: !wrong, picked: "o" });
+    else if (!wrong) onAnswer({ correct: false, picked: "x" });
+  };
+  const submit = (typed: string) => {
+    const local = typedRight(question.answer, typed, { language, near: [question.shown] });
+    setResult(local);
+    onAnswer({ correct: Boolean(local) && hint === 0, typed: true, ...(hint ? { assisted: true } : {}) });
+  };
+  const shownRight = answered ? (said === "o" && !wrong) || (typing && Boolean(result)) : false;
+  return (
+    <div className="flex flex-col gap-3">
+      <CardFace
+        word={answered ? question.card.word : null}
+        meaning={question.card.meaning}
+        line={
+          <>
+            {question.before}
+            {answered && wrong ? (
+              <>
+                <s className="text-bad decoration-2">{question.shown}</s> <strong className={`font-semibold ${tone.accent}`}>{question.answer}</strong>
+              </>
+            ) : (
+              <span data-judge-shown className={`font-semibold underline decoration-2 underline-offset-4 ${answered ? (shownRight ? tone.accent : "text-ink") : "text-ink"}`}>
+                {question.shown}
+              </span>
+            )}
+            {question.after}
+          </>
+        }
+        lineGloss={quizGloss(question.gloss, locale, language)}
+        speak={answered ? { text: question.text, tag } : null}
+      />
+      {said ? null : (
+        <div className="flex items-center justify-center gap-3">
+          <button type="button" data-judge="o" aria-label={ui.quizRight} title={ui.quizRight} onClick={() => judge("o")} className="flex h-12 w-20 items-center justify-center rounded-full border border-line text-xl hover:bg-white/10">
+            ⭕
+          </button>
+          <button type="button" data-judge="x" aria-label={ui.quizWrong} title={ui.quizWrong} onClick={() => judge("x")} className="flex h-12 w-20 items-center justify-center rounded-full border border-line text-xl hover:bg-white/10">
+            ❌
+          </button>
+        </div>
+      )}
+      {typing ? (
+        <TypeBox
+          ui={ui}
+          tag={tag}
+          answer={question.answer}
+          done={Boolean(answered)}
+          result={answered ? result : null}
+          busy={false}
+          hint={hint}
+          onHint={() => setHint((n) => n + 1)}
+          onSubmit={submit}
+          onGiveUp={() => {
+            setResult(false);
+            onAnswer({ correct: false, typed: true, assisted: true });
+          }}
+        />
+      ) : null}
     </div>
   );
 }

@@ -702,7 +702,7 @@ export function TodayPlan({
   // 카드가 없는 열쇠·문법·문장구조는 old(예전 모양)로, 순서는 받은 대로.
   const reformAsk = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }): { keys: string[]; questions: QuizQuestion[] } => {
     const face = cardFaces(readLedger(language));
-    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, face(key), `${day}-${round}`) }));
+    const made = keys.map((key) => ({ key, question: cardQuiz(language, key, face(key), `${day}-${round}`, { judge: true }) }));
     const rest = made.filter((one) => !one.question).map((one) => one.key);
     const back = rest.length ? old(rest) : { keys: [], questions: [] };
     const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
@@ -1318,7 +1318,7 @@ export function TodayPlan({
         const face = cardFaces(readLedger(language));
         for (const key of keys) {
           const word = face(key) === "show" ? writtenWord.get(key) : undefined;
-          const question = cardQuiz(language, key, face(key), `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+          const question = cardQuiz(language, key, face(key), `${day}-${round}`, { judge: true }) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
           if (question) {
             questions.push(question);
             used.push(key);

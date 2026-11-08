@@ -62,9 +62,11 @@ function editDistance(a: string, b: string): number {
  */
 export function quizShapeOf(
   question: { kind: string; options?: readonly unknown[]; answer?: number | string },
-  answer: { correct: boolean; picked?: string },
+  answer: { correct: boolean; picked?: string; typed?: boolean },
   segment: (text: string) => string[],
 ): { shape: "c" | "t"; miss?: MissKind } {
+  // 맞나 틀리나(judge): ⭕/❌ 판단만이면 고르기, 바른 꼴까지 쳤으면 쓰기(2026-11-08).
+  if (question.kind === "judge") return { shape: answer.typed ? "t" : "c" };
   const choose = question.kind === "choose" || question.kind === "meaning" || question.kind === "reply" || question.kind === "order" || (question.kind === "fix" && Boolean(question.options?.length));
   const shape = choose ? "c" : "t";
   if (answer.correct || !answer.picked || !question.options?.length || typeof question.answer !== "number") return { shape };
