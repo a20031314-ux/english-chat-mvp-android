@@ -37,3 +37,11 @@ test("러시아어: 성·상 몇 개 (стол m · книга f · окно n �
   assert.equal(ru["прочитать"]?.a, "p");
   assert.equal(ru["использовать"]?.a, "b");
 });
+
+test("중국어: 양사 (书 本 · 狗 只 · 孩子 个 · 时间 없음)", () => {
+  const zh = JSON.parse(readFileSync(new URL("zh.json", DIR), "utf8")) as Record<string, { cl?: string[] }>;
+  assert.equal(zh["书"]?.cl?.[0], "本");
+  assert.equal(zh["狗"]?.cl?.[0], "只");
+  assert.equal(zh["孩子"]?.cl?.[0], "个");
+  assert.equal(zh["时间"], undefined, "시간 말은 양사를 정하지 않음");
+});

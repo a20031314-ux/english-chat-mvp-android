@@ -36,6 +36,7 @@ export type TraitBook = Record<string, WordTraits>;
 // JSON 모양 그대로 받으면 타입이 너무 커서 unknown으로 받고 TraitBook으로 본다.
 const BOOKS: Record<string, () => Promise<{ default: unknown }>> = {
   ru: () => import("./word-traits/ru.json"),
+  zh: () => import("./word-traits/zh.json"),
 };
 
 const cache = new Map<string, Promise<TraitBook | null>>();
