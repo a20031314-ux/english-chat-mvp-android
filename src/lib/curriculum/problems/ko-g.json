@@ -1,0 +1,722 @@
+{
+ "g|1:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "N이에요/예요 (to be)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I'm a student.",
+  "before": "저는 학생",
+  "after": ".",
+  "answer": "이에요",
+  "why": "학생 ends in a consonant (ㅇ), so it takes 이에요.",
+  "options": [
+   "이에요",
+   "예요",
+   "이예요",
+   "에요"
+  ],
+  "line": "저는 학생이에요."
+ },
+ "g|1:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "N이/가 아니에요 (not to be)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "This isn't my bag.",
+  "before": "이건 제 ",
+  "after": " 아니에요.",
+  "answer": "가방이",
+  "why": "아니에요 takes 이/가, and 가방 ends in a consonant, so 가방이.",
+  "options": [
+   "가방이",
+   "가방가",
+   "가방을",
+   "가방에"
+  ],
+  "line": "이건 제 가방이 아니에요."
+ },
+ "g|1:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Topic particle 은/는",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I'm Korean.",
+  "before": "",
+  "after": " 한국 사람이에요.",
+  "answer": "저는",
+  "why": "After a vowel the topic particle is 는: 저는.",
+  "options": [
+   "저는",
+   "저은",
+   "저를",
+   "저가"
+  ],
+  "line": "저는 한국 사람이에요."
+ },
+ "g|1:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Present tense -아요/어요",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I eat breakfast every day.",
+  "before": "매일 아침을 ",
+  "after": ".",
+  "answer": "먹어요",
+  "why": "먹- has the vowel ㅓ (not ㅏ or ㅗ), so it takes -어요.",
+  "options": [
+   "먹어요",
+   "먹아요",
+   "먹요",
+   "먹으요"
+  ],
+  "line": "매일 아침을 먹어요."
+ },
+ "g|1:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Object particle 을/를",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I drink coffee.",
+  "before": "",
+  "after": " 마셔요.",
+  "answer": "커피를",
+  "why": "After a vowel the object particle is 를: 커피를.",
+  "options": [
+   "커피를",
+   "커피을",
+   "커피가",
+   "커피에"
+  ],
+  "line": "커피를 마셔요."
+ },
+ "g|1:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "있어요/없어요 (have, there is)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I don't have time today.",
+  "before": "오늘은 시간이 ",
+  "after": ".",
+  "answer": "없어요",
+  "why": "To say you don't have something, use 없어요, not 안 있어요.",
+  "options": [
+   "없어요",
+   "안 있어요",
+   "있어요",
+   "아니에요"
+  ],
+  "line": "오늘은 시간이 없어요."
+ },
+ "g|1:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "N 주세요 (please give me)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "Two coffees, please.",
+  "before": "커피 두 잔 ",
+  "after": ".",
+  "answer": "주세요",
+  "why": "To ask for something, put 주세요 after the item.",
+  "options": [
+   "주세요",
+   "주요",
+   "드려요",
+   "줘요세요"
+  ],
+  "line": "커피 두 잔 주세요."
+ },
+ "g|1:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Negation with 안",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I don't eat meat.",
+  "before": "저는 고기를 ",
+  "after": ".",
+  "answer": "안 먹어요",
+  "why": "안 goes right before the verb: 안 먹어요.",
+  "options": [
+   "안 먹어요",
+   "먹어요 안",
+   "않 먹어요",
+   "먹지 안아요"
+  ],
+  "line": "저는 고기를 안 먹어요."
+ },
+ "g|2:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Past tense -았/었어요",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I watched a movie yesterday.",
+  "before": "어제 영화를 ",
+  "after": ".",
+  "answer": "봤어요",
+  "why": "Yesterday means past: 보다 + -았어요 → 봤어요.",
+  "options": [
+   "봤어요",
+   "봐요",
+   "볼 거예요",
+   "보았요"
+  ],
+  "line": "어제 영화를 봤어요."
+ },
+ "g|2:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Future -(으)ㄹ 거예요",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I'm going to meet a friend tomorrow.",
+  "before": "내일 친구를 ",
+  "after": ".",
+  "answer": "만날 거예요",
+  "why": "만나- ends in a vowel, so -ㄹ 거예요: 만날 거예요 (spelled 거예요).",
+  "options": [
+   "만날 거예요",
+   "만났어요",
+   "만나을 거예요",
+   "만날 거에요"
+  ],
+  "line": "내일 친구를 만날 거예요."
+ },
+ "g|2:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-고 싶어요 (want to)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I want to go to Jeju Island.",
+  "before": "제주도에 ",
+  "after": ".",
+  "answer": "가고 싶어요",
+  "why": "Want to = verb stem + -고 싶어요.",
+  "options": [
+   "가고 싶어요",
+   "가고 싶다요",
+   "가 싶어요",
+   "가고 싶었요"
+  ],
+  "line": "제주도에 가고 싶어요."
+ },
+ "g|2:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ 수 있어요/없어요 (can, cannot)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I can speak a little Korean.",
+  "before": "한국어를 조금 ",
+  "after": ".",
+  "answer": "할 수 있어요",
+  "why": "하- ends in a vowel, so -ㄹ 수 있어요: 할 수 있어요.",
+  "options": [
+   "할 수 있어요",
+   "하을 수 있어요",
+   "할 수 있다요",
+   "할 수 이어요"
+  ],
+  "line": "한국어를 조금 할 수 있어요."
+ },
+ "g|2:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-고 (and then)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I washed and then had breakfast.",
+  "before": "",
+  "after": " 아침을 먹었어요.",
+  "answer": "씻고",
+  "why": "To link actions, put -고 right on the stem: 씻고.",
+  "options": [
+   "씻고",
+   "씻어고",
+   "씻으고",
+   "씻는고"
+  ],
+  "line": "씻고 아침을 먹었어요."
+ },
+ "g|2:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)러 가요 (go to do)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I'm going to the market to buy fruit.",
+  "before": "과일을 ",
+  "after": " 시장에 가요.",
+  "answer": "사러",
+  "why": "With 가다/오다, purpose is -(으)러; 사- ends in a vowel → 사러.",
+  "options": [
+   "사러",
+   "사으러",
+   "사려",
+   "사고러"
+  ],
+  "line": "과일을 사러 시장에 가요."
+ },
+ "g|2:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ까요? (shall we)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "Shall we eat together?",
+  "before": "같이 ",
+  "after": "?",
+  "answer": "먹을까요",
+  "why": "Shall we = -(으)ㄹ까요; 먹- ends in a consonant → 먹을까요.",
+  "options": [
+   "먹을까요",
+   "먹까요",
+   "먹을게요",
+   "먹으까요"
+  ],
+  "line": "같이 먹을까요?"
+ },
+ "g|2:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Place particles 에 and 에서",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I study at the library.",
+  "before": "",
+  "after": " 공부해요.",
+  "answer": "도서관에서",
+  "why": "Where an action happens takes 에서 (에 is where something is or goes).",
+  "options": [
+   "도서관에서",
+   "도서관에",
+   "도서관을",
+   "도서관에게"
+  ],
+  "line": "도서관에서 공부해요."
+ },
+ "g|3:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)니까 (because, so — with suggestions)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "It's raining, so let's take a taxi.",
+  "before": "비가 ",
+  "after": " 택시를 타요.",
+  "answer": "오니까",
+  "why": "With a suggestion (let's …), use -(으)니까, not -아서 or -기 때문에.",
+  "options": [
+   "오니까",
+   "와서",
+   "오으니까",
+   "오기 때문에"
+  ],
+  "line": "비가 오니까 택시를 타요."
+ },
+ "g|3:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-아서/어서 (because, then)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I was tired, so I went to bed early.",
+  "before": "",
+  "after": " 일찍 잤어요.",
+  "answer": "피곤해서",
+  "why": "-아서/어서 never takes past -았/었-: 피곤해서, not 피곤했어서.",
+  "options": [
+   "피곤해서",
+   "피곤했어서",
+   "피곤하어서",
+   "피곤하니까서"
+  ],
+  "line": "피곤해서 일찍 잤어요."
+ },
+ "g|3:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-는데 (background, contrast)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I went to the store, but it was closed.",
+  "before": "가게에 ",
+  "after": " 문을 닫았어요.",
+  "answer": "갔는데",
+  "why": "Background with a verb is -는데; past 갔 + 는데 → 갔는데.",
+  "options": [
+   "갔는데",
+   "갔은데",
+   "갔데",
+   "가서는데"
+  ],
+  "line": "가게에 갔는데 문을 닫았어요."
+ },
+ "g|3:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)면 (if, when)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "If you have time, call me.",
+  "before": "시간이 ",
+  "after": " 전화하세요.",
+  "answer": "있으면",
+  "why": "있- ends in a consonant, so -으면: 있으면.",
+  "options": [
+   "있으면",
+   "있면",
+   "있어면",
+   "있는면"
+  ],
+  "line": "시간이 있으면 전화하세요."
+ },
+ "g|3:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ게요 (I will, promise)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I'll call you later.",
+  "before": "나중에 ",
+  "after": ".",
+  "answer": "전화할게요",
+  "why": "The promise ending -(으)ㄹ게요 is spelled 게, never 께.",
+  "options": [
+   "전화할게요",
+   "전화할께요",
+   "전화하을게요",
+   "전화핼게요"
+  ],
+  "line": "나중에 전화할게요."
+ },
+ "g|3:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄴ 적이 있다 (have done before)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I have been to Busan before.",
+  "before": "부산에 ",
+  "after": " 적이 있어요.",
+  "answer": "가 본",
+  "why": "Experience uses the past modifier -(으)ㄴ: 가 본 적이 있어요.",
+  "options": [
+   "가 본",
+   "가 보는",
+   "가 볼",
+   "가 봤"
+  ],
+  "line": "부산에 가 본 적이 있어요."
+ },
+ "g|3:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-기 때문에 (because of)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I have an exam, so I can't go out.",
+  "before": "시험이 ",
+  "after": " 때문에 못 나가요.",
+  "answer": "있기",
+  "why": "Verb + -기 때문에 (a noun takes 때문에 directly).",
+  "options": [
+   "있기",
+   "있는",
+   "있어서",
+   "있음"
+  ],
+  "line": "시험이 있기 때문에 못 나가요."
+ },
+ "g|3:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Casual speech 반말 -아/어",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "(to a close friend) Where are you going?",
+  "before": "어디 ",
+  "after": "?",
+  "answer": "가",
+  "why": "Between close friends, drop 요: 어디 가?",
+  "options": [
+   "가",
+   "가요",
+   "가세요",
+   "갑니까"
+  ],
+  "line": "어디 가?"
+ },
+ "g|4:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Honorific -(으)시- with 께서, 드리다, 여쭤보다",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "My grandmother is sleeping.",
+  "before": "할머니께서 ",
+  "after": ".",
+  "answer": "주무세요",
+  "why": "자다 has its own honorific verb: 주무시다 → 주무세요.",
+  "options": [
+   "주무세요",
+   "자세요",
+   "자요",
+   "잡니다"
+  ],
+  "line": "할머니께서 주무세요."
+ },
+ "g|4:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "Reported speech -대요/-래요",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "(I heard) she says she's busy today.",
+  "before": "오늘 ",
+  "after": ".",
+  "answer": "바쁘대요",
+  "why": "Reporting what someone said is -대요 (from -다고 해요); -데요 is for what you saw yourself.",
+  "options": [
+   "바쁘대요",
+   "바쁘데요",
+   "바쁘래요",
+   "바쁜대요"
+  ],
+  "line": "오늘 바쁘대요."
+ },
+ "g|4:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-더라고요 (what I noticed)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "(I went and found that) the food there was really good.",
+  "before": "거기 음식이 정말 ",
+  "after": ".",
+  "answer": "맛있더라고요",
+  "why": "What you noticed yourself is -더라고요 (spelled 더, not 드).",
+  "options": [
+   "맛있더라고요",
+   "맛있드라고요",
+   "맛있대라고요",
+   "맛있더래고요"
+  ],
+  "line": "거기 음식이 정말 맛있더라고요."
+ },
+ "g|4:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-잖아요 (you know)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "You know, today's Sunday!",
+  "before": "오늘 ",
+  "after": "!",
+  "answer": "일요일이잖아요",
+  "why": "A noun ending in a consonant takes 이잖아요 (spelled 잖아요).",
+  "options": [
+   "일요일이잖아요",
+   "일요일잖아요",
+   "일요일이자나요",
+   "일요일이지않아요"
+  ],
+  "line": "오늘 일요일이잖아요!"
+ },
+ "g|4:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-거든요 (giving the reason)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "(Why am I tired?) I worked late yesterday.",
+  "before": "어제 늦게까지 ",
+  "after": ".",
+  "answer": "일했거든요",
+  "why": "Giving the reason is -거든요; yesterday needs past: 했 + 거든요.",
+  "options": [
+   "일했거든요",
+   "일하거든요",
+   "일했걸든요",
+   "일했거던요"
+  ],
+  "line": "어제 늦게까지 일했거든요."
+ },
+ "g|4:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ 뻔했다 (almost)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I almost missed the bus.",
+  "before": "버스를 ",
+  "after": ".",
+  "answer": "놓칠 뻔했어요",
+  "why": "Almost = -(으)ㄹ 뻔했다, always in the past.",
+  "options": [
+   "놓칠 뻔했어요",
+   "놓칠 뻔해요",
+   "놓친 뻔했어요",
+   "놓칠 번했어요"
+  ],
+  "line": "버스를 놓칠 뻔했어요."
+ },
+ "g|4:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-는 바람에 (because of an unexpected event)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "The alarm didn't go off, so I was late.",
+  "before": "알람이 안 ",
+  "after": " 늦었어요.",
+  "answer": "울리는 바람에",
+  "why": "It is always -는 바람에, even for past events.",
+  "options": [
+   "울리는 바람에",
+   "울린 바람에",
+   "울려서 바람에",
+   "울리는 바람애"
+  ],
+  "line": "알람이 안 울리는 바람에 늦었어요."
+ },
+ "g|4:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ 텐데 (probably, I'm concerned that)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "He's probably busy, so call him later.",
+  "before": "",
+  "after": " 나중에 전화하세요.",
+  "answer": "바쁠 텐데",
+  "why": "A guess with concern is -(으)ㄹ 텐데 (spelled 텐데).",
+  "options": [
+   "바쁠 텐데",
+   "바쁜 텐데",
+   "바쁠 탠데",
+   "바쁘을 텐데"
+  ],
+  "line": "바쁠 텐데 나중에 전화하세요."
+ },
+ "g|5:0": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-다 보니 (as I kept doing, it turned out)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "As we kept talking, we became close.",
+  "before": "자주 ",
+  "after": " 친해졌어요.",
+  "answer": "이야기하다 보니",
+  "why": "-다 보니 goes on the plain stem, without -았/었-.",
+  "options": [
+   "이야기하다 보니",
+   "이야기했다 보니",
+   "이야기하다 봐서",
+   "이야기하는 보니"
+  ],
+  "line": "자주 이야기하다 보니 친해졌어요."
+ },
+ "g|5:1": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-는 셈이다 (it amounts to)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "We've practically finished.",
+  "before": "거의 다 ",
+  "after": ".",
+  "answer": "끝난 셈이에요",
+  "why": "Something already done is -(으)ㄴ 셈이다 (spelled 셈).",
+  "options": [
+   "끝난 셈이에요",
+   "끝난 샘이에요",
+   "끝났 셈이에요",
+   "끝난 셈해요"
+  ],
+  "line": "거의 다 끝난 셈이에요."
+ },
+ "g|5:2": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ 걸 그랬다 (I should have)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I should have brought an umbrella.",
+  "before": "우산을 ",
+  "after": ".",
+  "answer": "가져올 걸 그랬어요",
+  "why": "Regret is -(으)ㄹ 걸 그랬다, in the past and spelled 걸.",
+  "options": [
+   "가져올 걸 그랬어요",
+   "가져올 걸 그래요",
+   "가져온 걸 그랬어요",
+   "가져올 껄 그랬어요"
+  ],
+  "line": "우산을 가져올 걸 그랬어요."
+ },
+ "g|5:3": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-기는 하는데 (it is true, but)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I do exercise, but not often.",
+  "before": "운동을 ",
+  "after": " 자주 안 해요.",
+  "answer": "하기는 하는데",
+  "why": "With a verb it is -기는 하는데 (with an adjective, -기는 한데).",
+  "options": [
+   "하기는 하는데",
+   "하기는 한데",
+   "하는 하는데",
+   "하기는 해서"
+  ],
+  "line": "운동을 하기는 하는데 자주 안 해요."
+ },
+ "g|5:4": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄴ/는 척하다 (pretend)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "He pretended not to know.",
+  "before": "",
+  "after": ".",
+  "answer": "모르는 척했어요",
+  "why": "Pretend is -는 척하다; here in the past: 척했어요.",
+  "options": [
+   "모르는 척했어요",
+   "모르는 척해요",
+   "몰르는 척했어요",
+   "모르기 척했어요"
+  ],
+  "line": "모르는 척했어요."
+ },
+ "g|5:5": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ 만하다 (it's understandable, worth it)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "That movie is worth watching.",
+  "before": "그 영화 ",
+  "after": ".",
+  "answer": "볼 만해요",
+  "why": "Worth doing is -(으)ㄹ 만하다: 보- → 볼 만해요.",
+  "options": [
+   "볼 만해요",
+   "보는 만해요",
+   "볼 만큼해요",
+   "보을 만해요"
+  ],
+  "line": "그 영화 볼 만해요."
+ },
+ "g|5:6": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-더니 (contrast or result from what you saw)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "He studied hard, and then he passed.",
+  "before": "열심히 ",
+  "after": " 합격했어요.",
+  "answer": "공부하더니",
+  "why": "What you saw him do, then the result: -더니 (spelled 더).",
+  "options": [
+   "공부하더니",
+   "공부하드니",
+   "공부해더니",
+   "공부하든이"
+  ],
+  "line": "열심히 공부하더니 합격했어요."
+ },
+ "g|5:7": {
+  "kind": "grammar",
+  "type": "choose",
+  "name": "-(으)ㄹ까 봐 (in case, worried that)",
+  "ask": "Pick the Korean that fits the meaning.",
+  "gloss": "I left early in case I'd be late.",
+  "before": "",
+  "after": " 일찍 나왔어요.",
+  "answer": "늦을까 봐",
+  "why": "Worried that = -(으)ㄹ까 봐: 늦- → 늦을까 봐.",
+  "options": [
+   "늦을까 봐",
+   "늦는까 봐",
+   "늦을가 봐",
+   "늦을까 봤"
+  ],
+  "line": "늦을까 봐 일찍 나왔어요."
+ }
+}

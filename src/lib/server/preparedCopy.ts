@@ -17,7 +17,7 @@ const CHUNK = 40;
 
 const FILES: Record<string, (() => Promise<{ default: Record<string, Raw> }>)[]> = {
   en: [2, 3, 4, 5].flatMap((n) => [() => import(`../curriculum/problems/en-e${n}.json`), () => import(`../curriculum/problems/en-g${n}.json`)]).concat([() => import("../curriculum/problems/en-g.json")]),
-  ...Object.fromEntries(["zh", "ja", "es", "fr", "it", "pt", "ru", "vi", "id", "ar", "th", "hi"].map((lang) => [lang, [() => import(`../curriculum/problems/${lang}-g.json`)]])),
+  ...Object.fromEntries(["zh", "ja", "es", "fr", "it", "pt", "ru", "vi", "id", "ar", "th", "hi", "ko"].map((lang) => [lang, [() => import(`../curriculum/problems/${lang}-g.json`)]])),
 };
 
 /** 옮길 문제(고르기만 — 단어 문제는 카드가 맡음): 열쇠 순서대로 [뜻, 까닭]. */
@@ -34,7 +34,10 @@ export async function preparedSource(language: string): Promise<{ key: string; g
   return out;
 }
 
-async function translateChunk(lines: string[], target: string, uiName: string, ui: string): Promise<string[] | null> {
+/** 문제 원문의 말: 한국어 학습만 영어(한국어 뜻은 답이 보임, 2026-11-08), 나머지는 한국어. */
+export const sourceOf = (language: string) => (language === "ko" ? "en" : "ko");
+
+async function translateChunk(lines: string[], target: string, uiName: string, ui: string, from: "ko" | "en"): Promise<string[] | null> {
   const client = getOpenAIClient();
   if (!client) return null;
   const completion = await completeChat(client, "translate", {
@@ -43,7 +46,9 @@ async function translateChunk(lines: string[], target: string, uiName: string, u
     messages: [
       {
         role: "system",
-        content: `Translate each numbered line from Korean into ${uiName}. The lines belong to a quiz on a ${target}-learning app read by a ${uiName} speaker: some are the meaning of a ${target} sentence, some explain in one sentence why a ${target} form is right. Write every line in ${uiName}. Keep every ${target} word, form, particle and grammar term exactly as written in ${target} — never translate or change them. Every Korean word must be translated, including Korean inside quotes or brackets (like '～보다 더' or '~하고 싶다'); no Korean (Hangul) may remain. Plain and natural, the same length or shorter. Answer with exactly ${lines.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
+        content: from === "en"
+          ? `Translate each numbered line from English into ${uiName}. The lines belong to a quiz on a ${target}-learning app read by a ${uiName} speaker: some are the meaning of a ${target} sentence, some explain in one sentence why a ${target} form is right. Write every line in ${uiName}. Keep every ${target} word, form, particle and grammar term exactly as written in ${target} (in Hangul) — never translate or change them. Plain and natural, the same length or shorter. Answer with exactly ${lines.length} lines in the same order, each as <number>|<translation>, and nothing else.`
+          : `Translate each numbered line from Korean into ${uiName}. The lines belong to a quiz on a ${target}-learning app read by a ${uiName} speaker: some are the meaning of a ${target} sentence, some explain in one sentence why a ${target} form is right. Write every line in ${uiName}. Keep every ${target} word, form, particle and grammar term exactly as written in ${target} — never translate or change them. Every Korean word must be translated, including Korean inside quotes or brackets (like '～보다 더' or '~하고 싶다'); no Korean (Hangul) may remain. Plain and natural, the same length or shorter. Answer with exactly ${lines.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
       },
       { role: "user", content: lines.map((text, index) => `${index + 1}|${text.replace(/\s+/g, " ")}`).join("\n") },
     ],
@@ -56,19 +61,20 @@ async function translateChunk(lines: string[], target: string, uiName: string, u
   }
   const texts = lines.map((_, index) => byNumber.get(index + 1) ?? "");
   // 한글이 남으면(따옴표 속 한국어 풀이를 그대로 둔 것) 그 묶음은 버린다 — 2026-11-06 th·ar 운영 확인.
-  if (texts.some((text) => !text || /\p{Script=Hangul}/u.test(text)) || !looksLike(ui, texts)) return null;
+  // 한국어 학습(원문 영어)은 한국어 꼴을 그대로 두라고 했으니 한글이 남아도 된다 — 빈 줄·앱 언어 글자만 본다.
+  if (texts.some((text) => !text || (from === "ko" && /\p{Script=Hangul}/u.test(text))) || !looksLike(ui, texts)) return null;
   return texts;
 }
 
 /**
- * 그 학습 언어 문제의 뜻·까닭을 앱 언어로. 한국어 앱은 원문 그대로, 앱 언어 = 학습 언어면 빈 표(뜻 줄이 곧 문장이라 문제를 안 냄).
+ * 그 학습 언어 문제의 뜻·까닭을 앱 언어로. 원문 말(한국어, 한국어 학습은 영어) 앱은 원문 그대로, 앱 언어 = 학습 언어면 빈 표(뜻 줄이 곧 문장이라 문제를 안 냄).
  * `onMake`는 실제로 모델을 부를 때만(요금 기록 — preparedCopy op).
  */
 export async function preparedCopy(language: string, ui: string, onMake?: () => void): Promise<PreparedCopy> {
   if (ui === language) return {};
   const source = await preparedSource(language);
   if (!source.length) return {};
-  if (ui === "ko") return Object.fromEntries(source.map((one) => [one.key, { gloss: one.gloss, why: one.why }]));
+  if (ui === sourceOf(language)) return Object.fromEntries(source.map((one) => [one.key, { gloss: one.gloss, why: one.why }]));
   const uiName = INTERFACE_LANGUAGE_LABELS[ui];
   const target = INTERFACE_LANGUAGE_LABELS[language] ?? language;
   if (!uiName) return {};
@@ -92,7 +98,7 @@ export async function preparedCopy(language: string, ui: string, onMake?: () => 
           metered = true;
           onMake?.();
         }
-        texts = await translateChunk(lines, target, uiName, ui).catch(() => null);
+        texts = await translateChunk(lines, target, uiName, ui, sourceOf(language)).catch(() => null);
         if (texts) await kvSetJson(key, texts, TTL_SECONDS).catch(() => undefined);
       }
       if (!texts) return;

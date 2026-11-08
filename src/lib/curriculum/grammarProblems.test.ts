@@ -33,5 +33,5 @@ test("문법 고르기 문제: 모양·열쇠·보기 (ja·th·es 포함 모든 
       assert.ok(!`${item.before} ${item.after}`.toLocaleLowerCase().includes(item.answer.trim().toLocaleLowerCase()), `${where}: 문장에 정답이 또`);
     }
   }
-  for (const lang of ["ja", "th", "es", "zh", "ar", "hi"]) assert.ok(langs.has(lang), lang);
+  for (const lang of ["ja", "th", "es", "zh", "ar", "hi", "ko"]) assert.ok(langs.has(lang), lang);
 });

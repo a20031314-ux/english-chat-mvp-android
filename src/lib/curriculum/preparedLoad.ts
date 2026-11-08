@@ -50,6 +50,8 @@ const FILES: Record<string, (() => Promise<{ default: Record<string, Raw> }>)[]>
   ar: [() => import("./problems/ar-g.json")],
   th: [() => import("./problems/th-g.json")],
   hi: [() => import("./problems/hi-g.json")],
+  // 한국어 학습은 뜻·까닭이 영어(한국어를 배우는 사람에게 한국어 뜻은 답이 보임 — 2026-11-08 사용자 "진행해줘", 문법 칸 40).
+  ko: [() => import("./problems/ko-g.json")],
 };
 
 const cache = new Map<string, Promise<PreparedItem[] | null>>();
@@ -131,8 +133,11 @@ const COPY_DAYS = 30;
  * 앱 언어가 한국어가 아니면 뜻·까닭을 그 말로(server/preparedCopy.ts, 2026-11-06 사용자 "다른 앱언어도 나오게해줘").
  * 옮긴 것이 없는 문제와 단어 문제(뜻이 한국어뿐 — 카드가 맡음)는 뺀다. 이 폰에 30일.
  */
+/** 넣어 둔 문제의 뜻·까닭이 쓰인 말: 한국어 학습만 영어, 나머지는 한국어(server/preparedCopy.ts sourceOf와 같게). */
+export const preparedSourceOf = (language: string) => (language === "ko" ? "en" : "ko");
+
 async function inUi(language: string, ui: string, items: PreparedItem[]): Promise<PreparedItem[]> {
-  if (ui === "ko") return items;
+  if (ui === preparedSourceOf(language)) return items;
   const cacheKey = `${COPY}.${language}.${ui}`;
   let copy: Record<string, { gloss: string; why: string }> | null = null;
   try {
