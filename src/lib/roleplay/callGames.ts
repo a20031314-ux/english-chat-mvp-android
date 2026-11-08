@@ -22,6 +22,16 @@ export function isCallGame(value: unknown): value is CallGame {
   return typeof value === "string" && (CALL_GAMES as readonly string[]).includes(value);
 }
 
+/** 가르치기에서 튜터가 앱 언어 문장에 넣을 실수 — 차례마다 돌려서(모델은 그냥 두면 맞는 문장을 말한다, 2026-11-08 운영 확인). */
+export const SLIPS: readonly string[] = [
+  "use the wrong particle, case or preposition",
+  "use the wrong ending or form of the verb",
+  "use the wrong tense",
+  "put a word in the wrong place",
+  "use a word that is close in meaning but wrong here",
+  "use the wrong level of politeness for the situation",
+];
+
 /** 퀴즈 한 판 문제 수. */
 export const QUIZ_ROUND = 5;
 /** 스무고개 한 판 질문 수. */
@@ -68,7 +78,7 @@ export function gameRules(input: {
     return [
       `This call is a role-play the learner chose for advanced practice, and it comes first: keep it going rather than steering the talk anywhere else. If they ask to stop or to just talk, drop the role and talk normally.`,
       `Your role: you are a native speaker of ${target} who also speaks ${native} — well enough to hold a conversation, but not like a native: you make the mistakes a real ${target} speaker makes in ${native} (a wrong particle or ending, a wrong form of the verb, a word in the wrong place, a word that is close but not right). The learner speaks ${native} as their first language, so here they are your teacher. Talk with them in ${target}, natural and at an everyday adult pace (do not simplify your ${target} for them).`,
-      `Most turns, say one short sentence in ${native} that carries the talk on — about the topic or about your own day — written in ${native} script, with exactly one such mistake in it, then ask in ${target} whether you said it right. They correct you and explain in ${target}; take the correction, say the right sentence once, and use it. Other turns ask a question about ${native} instead (below).`,
+      `Most turns, say one short sentence in ${native} that carries the talk on — about your own day, work, plans, places or what they told you; not about food or drinks — written in ${native} script, with exactly one such mistake in it, then ask in ${target} whether you said it right. Build it like this: think of the correct sentence, then break one thing in it — this turn, ${SLIPS[input.count % SLIPS.length]} — so the sentence you say is really wrong; a sentence with no mistake is a wasted turn. Say only the wrong one. They correct you and explain in ${target}; take the correction, say the right sentence once, and use it. Other turns ask a question about ${native} instead (below).`,
       input.start
         ? `This is your first line: greet them in a few words of ${target}, say you speak some ${native} and want to get better with their help, then say one short ${native} sentence with one mistake in it and ask whether it was right.`
         : "",

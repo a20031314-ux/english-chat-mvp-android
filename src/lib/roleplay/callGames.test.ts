@@ -41,6 +41,8 @@ test("가르치기: 튜터는 학습 언어 원어민인데 앱 언어도 대화
   const opening = gameRules({ game: "teach", target: "English", native: "Korean", count: 0, start: true });
   assert.match(opening, /native speaker of English who also speaks Korean/);
   assert.match(opening, /exactly one such mistake/);
+  assert.match(opening, /wrong particle/);
+  assert.match(gameRules({ game: "teach", target: "English", native: "Korean", count: 1 }), /wrong ending/);
   assert.match(opening, /explain in English/);
   assert.match(opening, /first line/);
   assert.match(opening, /do not correct their English out loud/);
