@@ -252,3 +252,6 @@
 - 2026-11-08 watch → dev: [ai] src/lib/roleplay/fixFocus.ts:15 — better가 내 말보다 문장이 적으면 맞는 문장("Sí.")이 교정 카드·숙제 틀린 곳 고치기에 틀린 것으로 남음 (고친 문장마다 가장 비슷한 내 문장과 짝짓고 짝 없는 문장은 버리기) — major, 앱 빌드
 - 2026-11-08 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:1491 — 맞나 틀리나에서 실수 없는 문장에 ⭕만 눌러도 화면에 안 나온 문법이 맞힌 것으로 장부에 (실수 없는 문제는 문법 열쇠에 안 셈)
 - 2026-11-08 watch → dev: [ai] src/lib/roleplay/homeworkQuiz.ts:56 — 말한 조각과 고치기 답을 글자 일부로 비교해 답이 "a"·"el"처럼 짧으면 장면 빈칸이 거의 다 빠짐 (freshPieces처럼 낱말 단위로)
+- 2026-11-08 watch → dev: [my] src/lib/curriculum/word-traits/ja.json — 割る·混じる가 vt "1"(일단), 실제는 오단 (vt "5"로, 테스트 한 줄)
+- 2026-11-08 watch → dev: [my] src/lib/curriculum/word-traits/ja.json — jt "na"에 同じ·とうとう·さっぱり·そっくり·ぴったり (빼거나 따로 표시 — "同じな" 막기)
+- 2026-11-08 watch → dev: [my] src/lib/curriculum/word-traits/ja.json — ある hon.down이 ござる(정중어지 겸양 아님) (down 빼기)
