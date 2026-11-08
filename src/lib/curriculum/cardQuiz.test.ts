@@ -102,6 +102,14 @@ test("맞나 틀리나: 맞는 문장이 섞이고, 틀린 꼴은 바른 꼴과 
   }
   registerQuizSources("hi", [card("w|पानी", "मैं पानी पीता हूँ", "पानी", "물")]);
   assert.equal(judgeQuiz("hi", "w|पानी", "s"), null, "끼울 틀린 꼴이 없으면 안 냄");
+  registerQuizSources("en", [
+    card("w|take", "Can you take this bag?", "take", "가져가다", "verb"),
+    ...Array.from({ length: 45 }, (_, i) => card(i % 2 ? "w|would" : `w|verb${i}`, i % 2 ? "I would go." : `I verb${i} it.`, i % 2 ? "would" : `verb${i}`, "동사", "verb")),
+  ]);
+  for (let i = 0; i < 40; i += 1) {
+    const q = judgeQuiz("en", "w|take", `aux${i}`);
+    if (q?.kind === "judge") assert.notEqual(q.shown.toLowerCase(), "would", "조동사는 다른 낱말로 안 끼움");
+  }
   assert.ok(!misspellings("form", new Set(["from"])).includes("from"));
   assert.ok(misspellings("believe", new Set()).includes("beleive"));
   assert.ok(misspellings("más", new Set()).includes("mas"));

@@ -1380,6 +1380,14 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
 export const JUDGE_SHARE = 0.5;
 /** 그중 이만큼은 맞는 문장(늘 틀린 문장이면 ❌만 누르면 됨). */
 export const JUDGE_RIGHT_SHARE = 1 / 3;
+/** 다른 낱말로 끼우지 않을 조동사·be·have류(빈도 목록에 verb로 적혀 있어 품사로 못 거름 — 2026-11-08 "Can you would this bag" 확인). */
+const AUX_WORDS: Partial<Record<string, ReadonlySet<string>>> = {
+  en: new Set(["be", "is", "are", "was", "were", "been", "have", "has", "had", "do", "does", "did", "can", "could", "will", "would", "shall", "should", "may", "might", "must", "let", "get", "go"]),
+  es: new Set(["ser", "estar", "haber", "es", "está", "son", "hay", "fue", "era", "poder", "puede", "deber", "ir", "va", "tener", "tiene"]),
+  fr: new Set(["être", "est", "avoir", "a", "ont", "faire", "fait", "pouvoir", "peut", "devoir", "aller", "va"]),
+  it: new Set(["essere", "è", "avere", "ha", "fare", "potere", "può", "dovere", "andare", "va"]),
+  pt: new Set(["ser", "é", "estar", "está", "ter", "tem", "haver", "há", "poder", "pode", "ir", "vai"]),
+};
 /** 철자 틀림을 만드는 학습 언어 — 띄어쓰기 없는 말(ja·zh·th)·성조/모음 부호가 뜻을 바꾸는 말(vi·ar·hi)·한국어는 안 만듦. */
 const SPELL_LANGUAGES = new Set(["en", "es", "fr", "it", "pt", "id", "ru"]);
 
@@ -1450,6 +1458,7 @@ export function judgeQuiz(language: string, key: string, seed: string): QuizQues
       const one = sources.find((item) => item.piece);
       // 같은 품사만, 조동사·기능어는 빼고(내용어 자리에 Could — 한눈에 지워짐).
       if (!one?.piece || (source.pos && one.pos !== source.pos) || /^(aux|modal|pron|det|prep|conj|part|num)/.test(one.pos ?? "") || lower(one.piece) === lower(piece)) continue;
+      if (AUX_WORDS[language]?.has(lower(one.piece)) || AUX_WORDS[language]?.has(lower(other.slice(2)))) continue;
       words.push(keepCase(one.piece));
     }
   }
