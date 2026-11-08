@@ -1,5 +1,6 @@
 "use client";
 
+import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { checkStates } from "@/lib/curriculum/checkState";
@@ -57,7 +58,16 @@ function StatusMark({ ui, status }: { ui: UICopy; status: { level: "known" | "ha
   );
 }
 
-export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean }) {
+/** 넘겨 보기(LanguageBank BankFlip)의 가리기: 무엇을 가렸는지 · 이미 열었는지 · 열기. */
+export type CardMask = { hide: "meaning" | "word" | "example"; shown: boolean; onShow: () => void };
+
+/** 예문 속 그 낱말을 빈칸으로(대소문자 무시, 처음 하나). 못 찾으면 null. */
+function blankIn(text: string, word: string): string | null {
+  const at = text.toLocaleLowerCase().indexOf(word.toLocaleLowerCase());
+  return at < 0 ? null : `${text.slice(0, at)}＿＿＿${text.slice(at + word.length)}`;
+}
+
+export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true, mask }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean; mask?: CardMask }) {
   const tone = useBankTone();
   const open = true;
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
@@ -130,6 +140,18 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
     };
   }, [open, entries, language]);
   const posName: Record<string, string> = { noun: ui.posNoun, verb: ui.posVerb, adj: ui.posAdj, adv: ui.posAdv, function: ui.posFunction };
+  const veiled = (part: CardMask["hide"]) => Boolean(mask && !mask.shown && mask.hide === part);
+  const anyVeil = Boolean(mask && !mask.shown);
+  const veil = (
+    <button type="button" data-flip-veil onClick={mask?.onShow} aria-label={ui.flipReveal} title={ui.flipReveal} className="mt-2 block w-full rounded-lg border border-dashed border-line px-3 py-2 text-start text-chat text-slate-500 hover:bg-white/5">
+      ＿＿＿
+    </button>
+  );
+  /** 가린 예문(낱말 가림·예문 가림이면 그 낱말 자리 빈칸, 예문 가림인데 못 찾으면 통째로). */
+  const exampleText = (text: string, word: string) => {
+    if (!veiled("word") && !veiled("example")) return text;
+    return blankIn(text, word) ?? (veiled("example") ? "＿＿＿" : text);
+  };
   // 찾기·목록의 뜻: 한국어 앱은 넣어 둔 짧은 뜻, 그 밖은 이 폰에 받아 둔 카드 뜻(퀴즈·사전에서 연 묶음) — 앱 언어 아닌 뜻은 섞지 않는다.
   const shaped = useMemo(() => {
     if (!entries) return null;
@@ -168,7 +190,7 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
               ) : null}
               {picked ? (
                 <div data-dictionary-entry className="mt-3 min-h-0 overflow-y-auto">
-                  <button
+                  {mask ? null : <button
                     type="button"
                     data-dictionary-back
                     onClick={() => {
@@ -180,14 +202,14 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                   >
                     <span aria-hidden className="rtl:rotate-180">‹ </span>
                     {onIndex ? ui.languagebankTitle : ui.dictionaryTitle}
-                  </button>
+                  </button>}
                   <div data-dictionary-card={reform ? "1" : undefined} className={reform ? "mt-2 rounded-xl border border-line p-3" : undefined}>
                   <div className={`${reform ? "" : "mt-2 "}flex flex-wrap items-center gap-2`}>
-                    <p dir="auto" className="text-xl font-semibold text-ink">{picked.word}</p>
-                    <TTSButton text={picked.word} ariaLabel={ui.listen} />
+                    <p dir="auto" data-card-word className="text-xl font-semibold text-ink">{veiled("word") ? <button type="button" data-flip-veil onClick={mask?.onShow} aria-label={ui.flipReveal} className="text-slate-500">＿＿＿</button> : picked.word}</p>
+                    {veiled("word") ? null : <TTSButton text={picked.word} ariaLabel={ui.listen} />}
                     {reform && status ? <StatusMark ui={ui} status={status} /> : null}
                   </div>
-                  {picked.reading ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{picked.reading}</p> : null}
+                  {picked.reading && !veiled("word") ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{picked.reading}</p> : null}
                   <p className="mt-1 text-meta text-slate-400">
                     {posName[posGroup(picked.pos)] ?? picked.pos}
                     <span className="mx-1.5">·</span>
@@ -195,6 +217,7 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                   </p>
                   {(() => {
                     const many = senses[picked.word] ?? [];
+                    if (veiled("meaning")) return veil;
                     if (many.length >= 2) {
                       return (
                         <ol data-dictionary-senses className="mt-2 flex flex-col gap-2">
@@ -206,7 +229,12 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                                   {sense.gloss}
                                   {sense.pos ? <span className="ms-1.5 text-meta text-slate-500">{posName[posGroup(sense.pos)] ?? ""}</span> : null}
                                 </p>
-                                {sense.example ? <p dir="auto" className="mt-0.5 text-meta text-slate-300">{sense.example}</p> : null}
+                                {sense.example ? (
+                                  <div className="mt-0.5 flex flex-wrap items-start gap-x-1">
+                                    <p dir="auto" className="min-w-0 flex-1 text-meta text-slate-300">{exampleText(sense.example, picked.word)}</p>
+                                    {anyVeil ? null : <DictNotesToggle text={sense.example} language={language} label={ui.languagebankTitle} />}
+                                  </div>
+                                ) : null}
                                 {sense.example && sense.exampleGloss && sense.exampleGloss !== sense.example ? <p dir="auto" className="text-meta text-slate-500">{sense.exampleGloss}</p> : null}
                               </div>
                             </li>
@@ -230,9 +258,10 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                       <div data-dictionary-examples className="mt-3 rounded-xl bg-white/[0.04] px-3 py-2">
                         <p className="text-meta text-slate-500">{ui.dictionaryExample}</p>
                         {shown.map((one) => (
-                          <div key={one.text} className="mt-1.5 first-of-type:mt-0.5">
-                            <p dir="auto" className="text-chat text-ink">{one.text}</p>
-                            {one.gloss && one.gloss !== one.text ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{one.gloss}</p> : null}
+                          <div key={one.text} className="mt-1.5 flex flex-wrap items-start gap-x-1 first-of-type:mt-0.5">
+                            <p dir="auto" className="min-w-0 flex-1 text-chat text-ink">{exampleText(one.text, picked.word)}</p>
+                            {anyVeil ? null : <DictNotesToggle text={one.text} language={language} label={ui.languagebankTitle} />}
+                            {one.gloss && one.gloss !== one.text && !veiled("meaning") ? <p dir="auto" className="mt-0.5 basis-full text-meta text-slate-400">{one.gloss}</p> : null}
                           </div>
                         ))}
                         {busy ? <p aria-busy className="mt-1.5 animate-pulse text-meta text-slate-500">…</p> : null}
@@ -283,11 +312,11 @@ export function DictionaryButton({ ui, language, locale }: { ui: UICopy; languag
 }
 
 /** 사전 시트 — 📕 단어 사전, 그리고 개편 Quizbank 문제의 사전 문(word를 주면 그 낱말 화면부터). */
-export function DictionarySheet({ ui, language, locale, word, title, onClose }: { ui: UICopy; language: string; locale: string; word?: string; title?: string; onClose: () => void }) {
+export function DictionarySheet({ ui, language, locale, word, title, onClose, above = false }: { ui: UICopy; language: string; locale: string; word?: string; title?: string; onClose: () => void; /** 대화·통화(z-[95]) 위에서 열 때. */ above?: boolean }) {
   const [pick, setPick] = useState<string | undefined>(word);
   return (
     <BodyLayer>
-      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={onClose}>
+      <div className={`fixed inset-0 ${above ? "z-[130]" : "z-[90]"} flex items-end justify-center bg-black/60 sm:items-center`} onClick={onClose}>
         <div
           role="dialog"
           aria-modal="true"

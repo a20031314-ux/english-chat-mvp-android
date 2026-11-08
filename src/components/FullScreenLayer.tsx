@@ -41,7 +41,11 @@ function useLayer(): number {
   return id;
 }
 
+/** 대화·통화(z-[95]) 위에서 연 층이면 true — 그 위로 띄운다(LessonHost가 openLesson above로 감쌈, 2026-11-08 사전 주석). */
+export const LayerAboveContext = createContext(false);
+
 export function FullScreenLayer({ children }: { children: ReactNode }) {
+  const above = useContext(LayerAboveContext);
   // False while rendering on the server, true once on the client, without a
   // state write in an effect and without a hydration mismatch.
   const onClient = useSyncExternalStore(
@@ -54,7 +58,7 @@ export function FullScreenLayer({ children }: { children: ReactNode }) {
   if (!onClient) return null;
   return createPortal(
     <AdLayerContext.Provider value={layer}>
-      <div className="fixed inset-0 z-[70] flex flex-col bg-[#050505]">{children}</div>
+      <div className={`fixed inset-0 ${above ? "z-[130]" : "z-[70]"} flex flex-col bg-[#050505]`}>{children}</div>
     </AdLayerContext.Provider>,
     document.body,
   );

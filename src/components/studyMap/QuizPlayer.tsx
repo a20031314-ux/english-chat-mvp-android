@@ -1,5 +1,6 @@
 "use client";
 
+import { DictNotes } from "@/components/studyMap/DictNotes";
 import { CardProgressDots, ladderName } from "@/components/studyMap/Growth";
 import { quizShapeOf } from "@/lib/curriculum/missKind";
 import { readLedger } from "@/lib/curriculum/logLedger";
@@ -12,7 +13,7 @@ import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
-import type { UICopy } from "@/lib/copy";
+import { isLocale, type UICopy } from "@/lib/copy";
 import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -46,6 +47,12 @@ export type Answer = { correct: boolean; heard?: string; practice?: Practice | n
   /** 소재마다 결과 — seen = 봤음만(맞나 틀리나의 카드 낱말: 문제가 그 낱말을 묻지 않음, 장부·익힘에 안 셈). */
   parts?: { key: string; correct: boolean; seen?: boolean; shape?: "c" | "t"; src?: "judge" }[];
 };
+
+/** 문제의 바른 문장(주석용) — 틀린 곳 문제는 고친 쪽. */
+function sentenceOf(question: QuizQuestion): string | null {
+  if ("right" in question && question.right) return question.right;
+  return "text" in question && question.text ? question.text : null;
+}
 
 export function QuizPlayer({
   ui,
@@ -367,6 +374,8 @@ export function QuestionView({
           </button>
         </div>
       ) : null}
+      {/* 사전 주석(2026-11-08): 답한 뒤에만 — 답하기 전에 뜻이 보이면 답이 샌다. */}
+      {answered && sentenceOf(question) ? <DictNotes key={sentenceOf(question)} text={sentenceOf(question)!} language={language} locale={isLocale(locale) ? locale : undefined} /> : null}
       {dictWord ? <DictionarySheet ui={ui} language={language} locale={locale} word={dictWord} title={ui.languagebankTitle} onClose={() => setDictWord(null)} /> : null}
     </section>
   );

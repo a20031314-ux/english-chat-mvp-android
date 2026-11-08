@@ -1,5 +1,6 @@
 "use client";
 
+import { BankFlip } from "@/components/studyMap/BankFlip";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
 import { DictionaryBody } from "@/components/studyMap/Dictionary";
@@ -103,6 +104,7 @@ export function LanguageBank({
   const [words, setWords] = useState<readonly BankWord[] | null>(null);
   const [view, setView] = useState<View>({ kind: null, axis: "topic", row: null, lv: null });
   const [help, setHelp] = useState(false);
+  const [flip, setFlip] = useState<string[] | null>(null);
   const [level, setLevel] = useState<Level | null>(null);
   useEffect(() => {
     let live = true;
@@ -313,9 +315,17 @@ export function LanguageBank({
               </div>
               {bundle ? (
                 <section data-lb-bundle className="rounded-2xl border border-line bg-surface p-3">
-                  <p className="text-meta text-slate-400">
-                    {bundle.length.toLocaleString()} · {pct(bundle)}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="flex-1 text-meta text-slate-400">
+                      {bundle.length.toLocaleString()} · {pct(bundle)}
+                    </p>
+                    {/* 넘겨 보기(2026-11-08): 단어 묶음만 — 표현·문법은 수업으로 연다. */}
+                    {kind === "word" ? (
+                      <button type="button" data-lb-flip aria-label={ui.flipStart} title={ui.flipStart} onClick={() => setFlip(bundle.map((one) => one.word ?? one.name))} className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-note text-slate-900">
+                        <span aria-hidden>▶</span>
+                      </button>
+                    ) : null}
+                  </div>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {bundle.slice(0, 200).map((one) => (
                       <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(valueOf(one))}>
@@ -329,6 +339,7 @@ export function LanguageBank({
           ) : null}
         </>
       )}
+      {flip ? <BankFlip ui={ui} language={language} locale={locale} words={flip} onClose={() => setFlip(null)} /> : null}
     </div>
   );
 }

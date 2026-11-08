@@ -1041,7 +1041,13 @@
     "homeworkTalk": "会話",
     "callModeGame": "ゲーム",
     "gameTwenty": "20の質問",
-    "gameTeach": "教えて"
+    "gameTeach": "教えて",
+    "flipStart": "めくって見る",
+    "flipHideMeaning": "意味を隠す",
+    "flipHideWord": "単語を隠す",
+    "flipHideExample": "例文を穴埋め",
+    "flipReveal": "見る",
+    "flipDone": "{n}枚中{m}枚わかる"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2085,7 +2091,13 @@
     "homeworkTalk": "对话",
     "callModeGame": "游戏",
     "gameTwenty": "二十个问题",
-    "gameTeach": "教我"
+    "gameTeach": "教我",
+    "flipStart": "翻看",
+    "flipHideMeaning": "隐藏意思",
+    "flipHideWord": "隐藏单词",
+    "flipHideExample": "例句填空",
+    "flipReveal": "显示",
+    "flipDone": "{n}张里会了{m}张"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3132,7 +3144,13 @@
     "homeworkTalk": "Hội thoại",
     "callModeGame": "Trò chơi",
     "gameTwenty": "Hai mươi câu hỏi",
-    "gameTeach": "Dạy tôi"
+    "gameTeach": "Dạy tôi",
+    "flipStart": "Lật xem",
+    "flipHideMeaning": "Ẩn nghĩa",
+    "flipHideWord": "Ẩn từ",
+    "flipHideExample": "Chỗ trống trong ví dụ",
+    "flipReveal": "Xem",
+    "flipDone": "Biết {m}/{n} thẻ"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4184,7 +4202,13 @@
     "homeworkTalk": "Conversation",
     "callModeGame": "Jeu",
     "gameTwenty": "Vingt questions",
-    "gameTeach": "Apprends-moi"
+    "gameTeach": "Apprends-moi",
+    "flipStart": "Feuilleter",
+    "flipHideMeaning": "Masquer le sens",
+    "flipHideWord": "Masquer le mot",
+    "flipHideExample": "Trou dans l'exemple",
+    "flipReveal": "Afficher",
+    "flipDone": "{m} sur {n} sus"
   },
   "it": {
     "archive": "Report",
@@ -5427,7 +5451,13 @@
     "homeworkTalk": "Conversazione",
     "callModeGame": "Gioco",
     "gameTwenty": "Venti domande",
-    "gameTeach": "Insegnami"
+    "gameTeach": "Insegnami",
+    "flipStart": "Sfoglia",
+    "flipHideMeaning": "Nascondi significato",
+    "flipHideWord": "Nascondi parola",
+    "flipHideExample": "Spazio nell'esempio",
+    "flipReveal": "Mostra",
+    "flipDone": "{m} su {n} conosciute"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6482,7 +6512,13 @@
     "homeworkTalk": "Conversa",
     "callModeGame": "Jogo",
     "gameTwenty": "Vinte perguntas",
-    "gameTeach": "Me ensine"
+    "gameTeach": "Me ensine",
+    "flipStart": "Folhear",
+    "flipHideMeaning": "Ocultar significado",
+    "flipHideWord": "Ocultar palavra",
+    "flipHideExample": "Lacuna no exemplo",
+    "flipReveal": "Mostrar",
+    "flipDone": "{m} de {n} conhecidas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7723,7 +7759,13 @@
     "homeworkTalk": "Разговор",
     "callModeGame": "Игра",
     "gameTwenty": "Двадцать вопросов",
-    "gameTeach": "Научи меня"
+    "gameTeach": "Научи меня",
+    "flipStart": "Листать",
+    "flipHideMeaning": "Скрыть значение",
+    "flipHideWord": "Скрыть слово",
+    "flipHideExample": "Пропуск в примере",
+    "flipReveal": "Показать",
+    "flipDone": "Знаю {m} из {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8774,7 +8816,13 @@
     "homeworkTalk": "Percakapan",
     "callModeGame": "Permainan",
     "gameTwenty": "Dua puluh pertanyaan",
-    "gameTeach": "Ajari aku"
+    "gameTeach": "Ajari aku",
+    "flipStart": "Lihat bergantian",
+    "flipHideMeaning": "Sembunyikan arti",
+    "flipHideWord": "Sembunyikan kata",
+    "flipHideExample": "Rumpang di contoh",
+    "flipReveal": "Lihat",
+    "flipDone": "Tahu {m} dari {n}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9818,7 +9866,13 @@
     "homeworkTalk": "محادثة",
     "callModeGame": "لعبة",
     "gameTwenty": "عشرون سؤالًا",
-    "gameTeach": "علّمني"
+    "gameTeach": "علّمني",
+    "flipStart": "تصفّح البطاقات",
+    "flipHideMeaning": "إخفاء المعنى",
+    "flipHideWord": "إخفاء الكلمة",
+    "flipHideExample": "فراغ في المثال",
+    "flipReveal": "إظهار",
+    "flipDone": "تعرف {m} من {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10862,7 +10916,13 @@
     "homeworkTalk": "บทสนทนา",
     "callModeGame": "เกม",
     "gameTwenty": "ยี่สิบคำถาม",
-    "gameTeach": "สอนฉันหน่อย"
+    "gameTeach": "สอนฉันหน่อย",
+    "flipStart": "พลิกดู",
+    "flipHideMeaning": "ซ่อนความหมาย",
+    "flipHideWord": "ซ่อนคำ",
+    "flipHideExample": "เว้นช่องในตัวอย่าง",
+    "flipReveal": "ดู",
+    "flipDone": "รู้แล้ว {m} จาก {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11906,6 +11966,12 @@
     "homeworkTalk": "बातचीत",
     "callModeGame": "खेल",
     "gameTwenty": "बीस सवाल",
-    "gameTeach": "मुझे सिखाओ"
+    "gameTeach": "मुझे सिखाओ",
+    "flipStart": "पलटकर देखें",
+    "flipHideMeaning": "अर्थ छिपाएँ",
+    "flipHideWord": "शब्द छिपाएँ",
+    "flipHideExample": "उदाहरण में खाली जगह",
+    "flipReveal": "दिखाएँ",
+    "flipDone": "{n} में से {m} आते हैं"
   }
 }

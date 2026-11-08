@@ -1,5 +1,6 @@
 "use client";
 
+import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 /**
  * 표현 카드(2026-11-03 사용자 "🔤 칩은 표현 카드로"): 통화 정리·Logbank·Quizbank 다시 보기에서 표현(e|)을 누르면 Stagebank 수업 대신
  * Quizbank 어휘 탭과 같은 표현 카드 — 표현 · 뜻 · 예문(그 표현 칠함)·예문 뜻 · 들려주기. 통화에서 왔으면 그 문장도 위에.
@@ -99,7 +100,7 @@ export function ExpressionCard({
             </section>
             <section data-expression-example>
               <h3 className="text-meta font-semibold text-slate-400">{ui.example}</h3>
-              <div className="mt-1 flex items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
+              <div className="mt-1 flex flex-wrap items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
                 <span className="min-w-0 flex-1">
                   <span dir="auto" className="block text-chat text-ink">
                     {at >= 0 ? (
@@ -116,6 +117,7 @@ export function ExpressionCard({
                     {card.exampleGloss}
                   </span>
                 </span>
+                <DictNotesToggle text={card.example} language={language} label={ui.languagebankTitle} />
                 <TTSButton text={card.example} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
               </div>
             </section>

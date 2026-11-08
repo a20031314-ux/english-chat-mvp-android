@@ -1,5 +1,6 @@
 "use client";
 
+import { DictNotes } from "@/components/studyMap/DictNotes";
 import { useState, type ReactNode } from "react";
 import { splitSentences } from "@/lib/splitSentences";
 import { TTSButton } from "@/components/TTSButton";
@@ -77,6 +78,8 @@ export function LineTools({
         </button>
       ) : null}
       {extra}
+      {/* 사전 주석(2026-11-08): 학습 언어 줄이면 그 줄의 Languagebank 단어·표현 칩 — 줄 도구와 함께만 보인다. */}
+      {analyzeLabel && lineLanguage ? <DictNotes text={clean} language={lineLanguage} tone={tone} className="basis-full" /> : null}
       {choosing && sentences.length > 1 ? (
         <div className="flex w-full flex-col gap-1">
           {sentences.map((sentence) => (

@@ -1,5 +1,6 @@
 "use client";
 
+import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 import { noteSpot } from "@/lib/resumeSpot";
 import { goingToNextStudy, offerUpNext } from "@/lib/curriculum/upNext";
 import { UpNextButton } from "@/components/studyMap/UpNext";
@@ -466,7 +467,7 @@ export function FrameLesson({
             <h3 className="-mb-1 text-meta font-semibold text-slate-400">{ui.example}</h3>
             <ul className="flex flex-col gap-2">
               {shownExamples.map((example, index) => (
-                <li key={index} className="flex items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
+                <li key={index} className="flex flex-wrap items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block text-chat text-ink">
                       <ExampleMarks text={example.text} slot={example.slot} core={frame?.core} />
@@ -478,6 +479,7 @@ export function FrameLesson({
                       </span>
                     ) : null}
                   </span>
+                  <DictNotesToggle text={example.text} language={language} label={ui.languagebankTitle} />
                   <TTSButton text={example.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
                 </li>
               ))}
