@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { blanked, giveHomework, keepReplay, noteReplayResult, parseReplay, pieceSaid, readHomework, replayable, replayFor, replayPrompt, wholeLineOf, wholeSaid } from "./replay.ts";
+import { blanked, freshPieces, giveHomework, keepReplay, noteReplayResult, parseReplay, pieceSaid, readHomework, replayable, replayFor, replayPrompt, wholeLineOf, wholeSaid } from "./replay.ts";
 
 const es = {
   scenes: [
@@ -91,4 +91,15 @@ test("저장: 이 폰에 통화마다, 결과를 남기면 그 통화 숙제가 
   noteReplayResult(store, "es", "c1", "same", { ok: 2, of: 2, whole: true, at: 5 });
   assert.equal(replayFor(store, "es", "c1")?.results.same?.ok, 2);
   assert.equal(readHomework(store, "es")?.done, 5);
+});
+
+test("빈칸: 통화에서 그대로 말한 조각은 비우지 않음(줄 전체로) — 스페인어·일본어", () => {
+  const scenes = parseReplay(es);
+  const fresh = freshPieces(scenes, [{ who: "learner", text: "Sí, porque hacía sol." }, { who: "tutor", text: "y comimos mariscos" }]);
+  const pieces = fresh[0]!.lines.filter((line) => line.who === "me").map((line) => (line.who === "me" ? line.piece : ""));
+  assert.deepEqual(pieces, ["y comimos mariscos", null]);
+  const ja = parseReplay({ scenes: [{ kind: "same", lines: [{ who: "tutor", text: "何を？" }, { who: "me", text: "一緒にラーメンを食べました。", meaning: "같이 라멘", piece: "ラーメンを食べました" }, { who: "tutor", text: "どう？" }, { who: "me", text: "おいしかったです。", meaning: "맛있었어요", piece: "おいしかった" }] }] });
+  const jaFresh = freshPieces(ja, [{ who: "learner", text: "昨日、ラーメンを食べましたよ" }]);
+  assert.equal(jaFresh[0]!.lines[1]!.who === "me" && jaFresh[0]!.lines[1]!.piece, null);
+  assert.equal(jaFresh[0]!.lines[3]!.who === "me" && jaFresh[0]!.lines[3]!.piece, "おいしかった");
 });

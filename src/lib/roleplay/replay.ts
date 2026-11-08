@@ -10,6 +10,7 @@
  * 순수 모듈(저장은 localStorage를 받아서): 서버 라우트·화면·테스트가 같이 쓴다.
  */
 import { compareToTarget, shadowPasses, typedMatches } from "./practice.ts";
+import { isSpaceless } from "../wordSegments.ts";
 
 export type ReplayKind = "same" | "further" | "branch";
 export const REPLAY_KINDS: readonly ReplayKind[] = ["same", "further", "branch"];
@@ -143,6 +144,22 @@ export function parseReplay(raw: unknown): ReplayScene[] {
   if (!same) return [];
   const other = out.find((scene) => scene.kind !== "same");
   return other ? [same, other] : [same];
+}
+
+/**
+ * 빈칸 조각을 내가 통화에서 그대로 말했다면 비우지 않는다 — 그 줄은 뜻만 보고 줄 전체로(2026-11-08 통화 체감 점검 easy-copy:
+ * "A veces"·"have to go to work"처럼 내가 이미 맞게 한 말을 빈칸으로 내면 연습이 안 됨). 부호·대소문자·띄어쓰기는 무시.
+ */
+export function freshPieces(scenes: readonly ReplayScene[], said: readonly { who: string; text: string }[]): ReplayScene[] {
+  const norm = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]+/gu, " ").trim();
+  const mine = said.filter((line) => line.who === "learner").map((line) => ` ${norm(line.text)} `).join("|");
+  return scenes.map((scene) => ({
+    ...scene,
+    // 띄어쓰기 없는 말(일본어·중국어·태국어)은 낱말 경계가 없어 그대로 들어 있는지만 본다.
+    lines: scene.lines.map((line) =>
+      line.who === "me" && line.piece && mine.includes(isSpaceless(line.piece) ? norm(line.piece) : ` ${norm(line.piece)} `) ? { ...line, piece: null } : line,
+    ),
+  }));
 }
 
 /** 연습할 만한 통화인가: 내 줄(말한 것)이 둘 이상. */

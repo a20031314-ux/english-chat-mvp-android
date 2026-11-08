@@ -68,6 +68,8 @@ export function QuizPlayer({
   bundleKeys,
   onBundle,
   fromToday = false,
+  glossFirst = false,
+  scoreEnd = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -103,6 +105,10 @@ export function QuizPlayer({
   onBundle?: (results: { key: string; correct: boolean; skipped: boolean }[]) => void;
   /** 오늘 할 것에서 연 묶음(대본 하나 문제) — 닫을 때 전면 광고는 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
   fromToday?: boolean;
+  /** 빈칸 쓰기에서 앱 언어 뜻을 먼저 보여 준다(통화 숙제 — 뜻 없이는 답이 여럿, 2026-11-08 점검). */
+  glossFirst?: boolean;
+  /** 끝 화면 제목을 맞음/틀림 대신 점수만(통화 숙제 — 4/6에 "틀렸어요"가 실패처럼 보임, 2026-11-08 점검). */
+  scoreEnd?: boolean;
 }) {
   // round: 이 열쇠를 몇 번 풀었나 — 매번 다른 줄·다른 모양(curriculum/quiz.ts buildQuiz). 연 동안은 고정.
   const [opened] = useState(() => round);
@@ -176,11 +182,12 @@ export function QuizPlayer({
             onAnswer={answer}
             onNext={() => setIndex((n) => n + 1)}
             bankKey={bundleKeys?.[index] ?? quizKey}
+            glossFirst={glossFirst}
           />
         ) : null}
         {done && questions.length ? (
           <div className="mt-6 flex flex-col items-center gap-3">
-            <p className="text-body font-semibold text-ink">{passed ? `✓ ${ui.quizRight}` : ui.quizWrong}</p>
+            {scoreEnd ? null : <p className="text-body font-semibold text-ink">{passed ? `✓ ${ui.quizRight}` : ui.quizWrong}</p>}
             <p className="text-caption tabular-nums text-slate-400">{ui.quizScore.replace("{n}", String(correct)).replace("{m}", String(counted))}</p>
             <div className="flex flex-wrap justify-center gap-2">
               {!passed && onThen ? (

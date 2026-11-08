@@ -5,6 +5,7 @@
 import type { StuckTurn, TranscriptLine } from "./review.ts";
 import { REDO_MAX_TRIES } from "./director.ts";
 import type { TurnMark } from "./turnTally.ts";
+import { focusFix } from "./fixFocus.ts";
 
 /**
  * Put what was said about their sentence under their sentence.
@@ -136,14 +137,17 @@ export function nextCoachCard(
   // 자유대화: 고친 말·더 자연스러운 말을 그 차례에 바로 카드로, 새 카드가 없으면 한 차례 흐리게 남겼다가 사라짐.
   if (turn.quiet && !turn.retry) {
     const said = turn.heard.trim();
-    if (right && said) return { kind: turn.meant ? "meant" : "fix", said, right, why, quiet: true };
+    // 맞는 앞 문장까지 지우지 않게 바뀐 문장만(fixFocus.ts, 2026-11-08 점검).
+    if (right && said) return { kind: turn.meant ? "meant" : "fix", ...(turn.meant ? { said, right } : focusFix(said, right)), why, quiet: true };
     const smoother = (turn.smoother ?? "").trim();
     if (smoother && said) return { kind: "offer", said, right: smoother, why: "", quiet: true };
     return current?.quiet && !current.old ? { ...current, old: true } : null;
   }
   if (turn.retry === "ask") {
     if (!right) return current;
-    return { kind: turn.offer ? "offer" : turn.meant ? "meant" : "fix", said: turn.heard.trim(), right, why: turn.offer ? "" : why };
+    const kind = turn.offer ? "offer" : turn.meant ? "meant" : "fix";
+    const pair = kind === "fix" ? focusFix(turn.heard.trim(), right) : { said: turn.heard.trim(), right };
+    return { kind, ...pair, why: turn.offer ? "" : why };
   }
   if (turn.retry === "miss") {
     if (!current || turn.gaveUp) return null;

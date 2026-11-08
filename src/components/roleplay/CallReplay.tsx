@@ -15,6 +15,7 @@ import { homeworkQuiz } from "@/lib/roleplay/homeworkQuiz";
 import { compareToTarget } from "@/lib/roleplay/practice";
 import {
   blanked,
+  freshPieces,
   giveHomework,
   keepReplay,
   noteHomeworkQuiz,
@@ -120,7 +121,7 @@ export function CallReplay({
     if (asked.current || !canMake) return;
     asked.current = true;
     setLoading(true);
-    const scenes = await fetchScenes({ scenarioId, said, nativeLanguage: locale, level, isPremium });
+    const scenes = freshPieces(await fetchScenes({ scenarioId, said, nativeLanguage: locale, level, isPremium }), said);
     setLoading(false);
     if (!scenes.length) {
       setFailed(true);
@@ -261,6 +262,8 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
             if (next) onStored(next);
           }}
           onDone={() => undefined}
+          glossFirst
+          scoreEnd
           onClose={() => setPlaying(false)}
         />
       ) : null}
@@ -427,10 +430,14 @@ function ReplayPlayer({
             );
           }
           const done = answers[String(at)];
+          // 한 줄 전체로 차례엔 그 줄의 답을 위에서 가린다(바로 위 초록 줄을 읽으면 끝 — 2026-11-08 점검 easy-leak).
+          const hide = step.at === "whole" && !answers.whole && whole === one;
           return (
             <li key={at} className="ms-8 rounded-2xl border border-white/15 px-3 py-2">
               <p className="text-meta text-slate-400">{one.meaning}</p>
-              {done ? (
+              {hide ? (
+                <p className="mt-1 text-chat text-slate-500">…</p>
+              ) : done ? (
                 <>
                   <p dir="auto" className={`mt-1 text-chat ${done.ok ? "text-emerald-300" : "text-amber-200"}`}>{done.ok ? "✓ " : ""}{one.text}</p>
                   {!done.ok ? <Attempt outcomes={compareToTarget(one.text, done.heard).outcomes} ui={ui} /> : null}
