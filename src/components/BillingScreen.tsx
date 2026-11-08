@@ -91,7 +91,6 @@ function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true): string[] {
       ? ui.planLineLibrary
       : ui.planLineLibraryTrial.replace("{n}", String(FREE_CATALOG_TRIAL_COUNT)),
   );
-  if (callBuilt && terms.extraPacks > 0) lines.push(ui.planLineExtraPacks.replace("{n}", String(terms.extraPacks)));
   return lines;
 }
 
