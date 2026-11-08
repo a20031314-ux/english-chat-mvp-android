@@ -37,9 +37,10 @@ test("판 끝 읽기·학습자 차례 세기", () => {
   assert.equal(learnerTurns([{ who: "tutor", text: "¿Es un animal?" }, { who: "learner", text: "…" }, { who: "learner", text: "¿Es grande?" }, { who: "learner", text: "大きいですか" }]), 2);
 });
 
-test("가르치기: 튜터가 앱 언어를 배우는 사람, 학습자는 학습 언어로 설명 — 튜터는 말로 안 고침", () => {
+test("가르치기: 튜터는 학습 언어 원어민인데 앱 언어도 대화는 됨(틀리게), 학습자는 학습 언어로 설명 — 튜터는 말로 안 고침", () => {
   const opening = gameRules({ game: "teach", target: "English", native: "Korean", count: 0, start: true });
-  assert.match(opening, /just started learning Korean/);
+  assert.match(opening, /native speaker of English who also speaks Korean/);
+  assert.match(opening, /exactly one such mistake/);
   assert.match(opening, /explain in English/);
   assert.match(opening, /first line/);
   assert.match(opening, /do not correct their English out loud/);

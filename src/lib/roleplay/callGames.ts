@@ -8,7 +8,8 @@
  *   튜터가 맞혔다고(또는 스무 번) 판을 끝내면 "round": "over" → 앱이 다음 것을 고른다. 앱이 들고 있어야 판 가운데 답이 바뀌지 않는다.
  *
  * - teach 가르치기(상급, 2026-11-08 사용자 "튜터한테 사용 언어 가르쳐 주기 — 한국어가 어눌한 미국인을 튜터가 연기"):
- *   튜터는 학습자의 모국어(앱 언어)를 막 배우는 학습 언어 사용자를 연기하고, 학습자는 그 말·표현·쓰임을 학습 언어로 설명한다.
+ *   튜터는 학습 언어 원어민인데 학습자의 모국어(앱 언어)도 대화는 되는 사람(원어민급 아님 — 그 나라 사람이 흔히 하는 실수, 사용자 2026-11-08).
+ *   차례마다 앱 언어 문장 하나에 실수 하나 → 학습자가 학습 언어로 고쳐 주고 설명("you can say …"), 가끔 앱 언어에 대해 묻기.
  *   누구나 열 수 있고 이름 옆에 "상급"만(잠그지 않음).
  *
  * 예문은 지시에 넣지 않는다(RULES — 모델이 그대로 베낀 적이 있음).
@@ -66,12 +67,13 @@ export function gameRules(input: {
   if (game === "teach") {
     return [
       `This call is a role-play the learner chose for advanced practice, and it comes first: keep it going rather than steering the talk anywhere else. If they ask to stop or to just talk, drop the role and talk normally.`,
-      `Your role: you are a speaker of ${target} — this is your own language — who has just started learning ${native} and is curious and a little clumsy at it. The learner speaks ${native} as their first language, so they are your teacher. Talk to them in ${target}, natural and at an everyday adult pace (do not simplify your ${target} for them). Now and then try a few words of ${native} — short, a bit wrong in the way a beginner gets them wrong (a wrong ending, a wrong particle, a word used in the wrong place), written in ${native} script — and ask whether you said it right.`,
+      `Your role: you are a native speaker of ${target} who also speaks ${native} — well enough to hold a conversation, but not like a native: you make the mistakes a real ${target} speaker makes in ${native} (a wrong particle or ending, a wrong form of the verb, a word in the wrong place, a word that is close but not right). The learner speaks ${native} as their first language, so here they are your teacher. Talk with them in ${target}, natural and at an everyday adult pace (do not simplify your ${target} for them).`,
+      `Most turns, say one short sentence in ${native} that carries the talk on — about the topic or about your own day — written in ${native} script, with exactly one such mistake in it, then ask in ${target} whether you said it right. They correct you and explain in ${target}; take the correction, say the right sentence once, and use it. Other turns ask a question about ${native} instead (below).`,
       input.start
-        ? `This is your first line: greet them in a few words of ${target}, say you are learning ${native} and would love their help, try one short ${native} phrase clumsily, and ask your first question about ${native}.`
+        ? `This is your first line: greet them in a few words of ${target}, say you speak some ${native} and want to get better with their help, then say one short ${native} sentence with one mistake in it and ask whether it was right.`
         : "",
-      `Every turn ask one thing about ${native} that makes them explain in ${target}. Often it is simply how to say something: give a word or a short everyday sentence in ${target} and ask how to say it in ${native}, then ask them to say it slowly or explain a part of it. Other times: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
-      `Make them explain properly: if their answer is short or vague, ask a follow-up (an example, when exactly, what if I said it to my boss). Then try using what they taught you in a short ${native} line — sometimes get it slightly wrong so they have to correct you again — and thank them like a learner would.`,
+      `Questions about ${native}, to make them explain in ${target}: often simply how to say something: give a word or a short everyday sentence in ${target} and ask how to say it in ${native}, then ask them to say it slowly or explain a part of it. Other times: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
+      `Make them explain properly: if their answer is short or vague, ask a follow-up (an example, when exactly, what if I said it to my boss). Then use what they taught you in your next ${native} line, and thank them like a learner would. Do not make the same mistake twice once they fixed it.`,
       `You are the student here: do not correct their ${target} out loud and do not teach them anything. Put a correction of their ${target} only in "better" as usual, when there is a real mistake.`,
     ]
       .filter(Boolean)
