@@ -6,7 +6,7 @@
 두 라틴 언어 사이(es↔it 등)는 같은 영어 낱말로 이어지는 닮은 말끼리. 일본어 ↔ 중국어는 같은 한자 낱말(글자 그대로 같은 것만).
 결과: src/lib/curriculum/pairs/cognates.json  {"es": {"problema": {"en": "problem", "it": "problema", ...}}, "f": {"es>en": {"embarazada": "embarrassed"}}}
 python3 scripts/cognates.py → 뜻이 다른 닮은 말 후보는 tmp/cognates-false.txt (손으로 고른 목록은 FALSE_FRIENDS)
-빈도 목록은 tmp/bank-words.json(언어 → 낱말 목록, vocabBank.ts loadBank에서 뽑아 둠) — 없으면 먼저 만든다.
+빈도 목록은 tmp/bank-words.json(없으면 스크립트가 vocabBank.ts loadBank로 만듦).
 """
 import json, re, unicodedata, difflib, sys
 from pathlib import Path
@@ -50,8 +50,22 @@ FALSE_FRIENDS = {
 }
 FALSE_FRIENDS = {l: dict(x.split(":") for x in v.split()) for l, v in FALSE_FRIENDS.items()}
 
+def bank_words():
+    """빈도 목록(언어 → 낱말) — vocabBank.ts loadBank에서. tmp/bank-words.json에 한 번 만들어 둠."""
+    target = ROOT / "tmp/bank-words.json"
+    if not target.exists():
+        import subprocess
+        target.parent.mkdir(exist_ok=True)
+        code = ("import { loadBank } from './src/lib/curriculum/vocabBank.ts'; const out = {}; "
+                "for (const l of ['ar','en','es','fr','hi','id','it','ja','ko','pt','ru','th','vi','zh']) out[l] = (await loadBank(l)).map((w) => w.w); "
+                "process.stdout.write(JSON.stringify(out));")
+        res = subprocess.run(["node", "--experimental-strip-types", "--input-type=module", "-e", code], cwd=ROOT, capture_output=True, text=True, check=True)
+        target.write_text(res.stdout)
+    return json.load(open(target))
+
 def main():
     out = {}; cand = []
+    BANK = bank_words()
     for l in LATIN:
         D = load(l)
         for k, lines in D.items():
@@ -95,8 +109,8 @@ def main():
     kept = {}; dropped = []
     for l, pairs in FALSE_FRIENDS.items():
         D = load(l)
-        bank = set(json.load(open(ROOT / "tmp/bank-words.json"))[l])
-        en_bank = set(json.load(open(ROOT / "tmp/bank-words.json"))["en"])
+        bank = set(BANK[l])
+        en_bank = set(BANK["en"])
         for w, e in pairs.items():
             lines = D.get("w|" + w) or []
             if w not in bank or e not in en_bank: dropped.append((l, w, e, "빈도 목록에 없음")); continue
