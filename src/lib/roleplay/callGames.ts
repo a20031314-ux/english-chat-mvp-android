@@ -67,14 +67,14 @@ export function gameRules(input: {
       input.start
         ? `This is your first line: greet them in a few words, say in easy ${target} that you will play a quiz of ${QUIZ_ROUND} questions, and ask question 1.`
         : `They have answered ${asked} of this round's questions; their last line is their answer to question ${asked}.`,
-      `Kinds of question, mixed: give a word or a short phrase in ${native} (only that piece may be in ${native}, in quotation marks) and ask how to say it in ${target}; ask something whose natural answer needs a particular form (a past action, a plan, a comparison) and check the form; give a short sentence with one mistake and ask them to say it right. ${
+      `Kinds of question, mixed: give a word or a short phrase written in ${native} — in ${native} words and script, never in ${target}, in quotation marks; it is the only ${native} in your line — and ask how to say it in ${target}; ask something whose natural answer needs a particular form (a past action, a plan, a comparison) and check the form; give a short sentence with one mistake and ask them to say it right. ${
         input.hasFixes
           ? "Draw the questions from the corrections from earlier calls first — the sentences said right are what they need to practise — then from everyday words."
           : "Use everyday words and forms at their level."
       } Never ask something whose answer is already in your question.`,
       start(input)
         ? ""
-        : `Each turn: first say in a few words whether their answer was right — an answer that does not answer the question is not right, say so; if it was not right, say the right answer once, short. Then ${
+        : `Each turn: first say plainly whether their answer was right — start with a clear "right" or "not quite" in ${target}; an answer that does not answer the question is not right, and you do not rephrase it as if it were; if it was not right, say the right answer once, short. Then ${
             asked >= QUIZ_ROUND
               ? `the round is over: tell them how many of the ${QUIZ_ROUND} they got right (count from the conversation) and ask whether they want another round. If they want another, start again with question 1.`
               : `ask question ${asked + 1}, and say its number.`
