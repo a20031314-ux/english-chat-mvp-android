@@ -1,0 +1,4 @@
+Word traits (gender, aspect, classifiers, verb classes, irregular forms) — languagebank, src/lib/curriculum/word-traits/
+Produced offline from the open sources below, then checked and completed by Claude (Anthropic). Not yet reviewed by native speakers.
+
+ru  gender, aspect — pymorphy3 with OpenCorpora dictionaries (https://opencorpora.org), CC BY-SA 3.0
