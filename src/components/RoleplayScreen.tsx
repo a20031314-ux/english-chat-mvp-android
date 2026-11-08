@@ -794,7 +794,7 @@ export function RoleplayScreen({
   /**
    * 🙉 못 알아들었어요(2026-11-01) — 실제 통화처럼 "다시 말해 줄래?". 마이크를 닫고 그 튜터 줄에 표시를 남긴 뒤
    * 감독에게 같은 말을 더 쉽게 다시 해 달라고 한다(session.missedLine → 감독 한 차례, 통화 시간 안).
-   * 쉽게 다시 한 줄을 또 못 알아들으면 감독을 부르지 않고 그 줄을 뜻과 함께 자막으로 보여 주고 내 차례로 돌아온다.
+   * 쉽게 다시 한 줄을 또 못 알아들으면 자유대화는 쉬운 다른 화제로(missedAgain), 정해진 장면은 감독을 부르지 않고 그 줄을 뜻과 함께 자막으로 보여 주고 내 차례로 돌아온다.
    */
   const missLine = useCallback(() => {
     if (!scenario || !state || instruction?.do !== "listen" || reviewing) return;
@@ -808,6 +808,14 @@ export function RoleplayScreen({
     setVoiceOn(false);
     setPending("");
     setSaid((current) => markMissed(current, tutorAt));
+    // 쉽게 다시 한 줄도 못 알아들었으면: 자유대화는 그 질문을 두고 쉬운 다른 화제로(2026-11-08 사용자 "더 쉬운 말로 풀어 주거나 화제 전환"),
+    // 정해진 장면은 예전처럼 그 줄을 뜻과 함께 자막으로.
+    if (said[tutorAt]!.again && scenario.openEnded) {
+      const switching = missedLine(scenario, bank, state, true);
+      setState(switching.state);
+      setInstruction(switching.instruction);
+      return;
+    }
     if (said[tutorAt]!.again) {
       setForcedCaption(tutorAt);
       if (!said[tutorAt]!.translation) translateLine(said[tutorAt]!.text);
@@ -825,9 +833,12 @@ export function RoleplayScreen({
 
   const closeReview = useCallback(() => {
     // 통화 중 힌트로 받은 문장은 그 질문(튜터 줄) 아래 도움말로 남긴다 — 끝난 뒤 돌아보기에서도 보이게.
-    const hinted = reviewing?.turn.live && reviewing.review?.say ? reviewing.review : null;
+    const hinted = reviewing?.turn.live && (reviewing.review?.say || reviewing.review?.pieces?.length) ? reviewing.review : null;
     if (hinted) {
-      const tip = hinted.meaning ? `${hinted.say} — ${hinted.meaning}` : hinted.say;
+      // 힌트가 표현 조각이면(2026-11-08) 조각들을 · 로 이어 남긴다.
+      const tip = hinted.pieces?.length
+        ? hinted.pieces.map((piece) => (piece.meaning ? `${piece.text} — ${piece.meaning}` : piece.text)).join(" · ")
+        : hinted.meaning ? `${hinted.say} — ${hinted.meaning}` : hinted.say;
       setSaid((current) => tipOnLastTutorLine(current, tip));
     }
     setReviewing(null);

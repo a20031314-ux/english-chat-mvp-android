@@ -108,6 +108,9 @@ const ASSESSMENTS: readonly Assessment[] = [
 export type SpokenLine = { who: "tutor" | "learner"; text: string };
 
 /** What the app sends when the script could not take a turn. */
+/** 🙉 뒤 튜터가 "천천히 해요"만 하지 않게(2026-11-08 사용자 "괜찮아 천천히 해가 아니라 더 쉬운 말로 풀어 주거나 화제 전환"). */
+const NOREASSURE = ' Do not answer with reassurance alone ("no rush", "take your time", "it\'s okay", "don\'t worry") — the easier words themselves are the help.';
+
 export type DirectorRequest = {
   scenarioId: string;
   /** The learner step the conversation is on, or will return to. */
@@ -158,6 +161,8 @@ export type DirectorRequest = {
    * 이때 `heard`는 비어 있고, 학습자 줄도 없다.
    */
   missed?: boolean;
+  /** 🙉를 같은 질문에 두 번째로 — 쉽게 다시 한 줄도 못 알아들었다. 그 질문은 두고 쉬운 다른 화제로. */
+  missedAgain?: boolean;
   /**
    * 고른 튜터(여자·남자, lib/tutorGender.ts) — "그냥 대화"에서만. 이름·성별을 말해 둬서 화면의 이름·목소리와 맞고,
    * 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt)에서 자기를 말하는 꼴이 맞게. 없으면 그 언어의 예전 튜터.
@@ -827,7 +832,7 @@ ${steps
 How to answer them:
 - Judge what they meant, not their wording. Someone who says they will sit by the window has told you "for here".
 - If they answered, just not in the words you expected, take it and move on.
-${scenario.openEnded && !coaching ? `- If they are stuck — silence, the wrong words — ask again more simply, inside the conversation. Leave "note" empty.` : `- If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.`}
+${scenario.openEnded && !coaching ? `- If they are stuck — silence, the wrong words — ask again more simply, inside the conversation: easier words, or two choices, or a smaller question. Do not answer with reassurance alone ("no rush", "take your time", "it's okay") — the easier question itself is the help. Leave "note" empty.` : `- If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.`}
 - A sentence that stops on a word like "and", "but", "because" or "the" was cut off while they were still thinking, not abandoned. Do not finish it for them. Answer what they did say and leave them room to go on ("And…?", "Go on"). That is on_track, not stuck.
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
@@ -935,9 +940,11 @@ ${request.context.trim()}`
           : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
       : "",
-    request.missed
-      ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty. Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
-      : "",
+    request.missed && request.missedAgain && scenario.openEnded
+      ? `They pressed "I didn't catch that" again: they did not understand your easier version either. Let that question go — do not repeat it or explain it — and move to a different, easier topic close to everyday life, with one short question they can answer with a word or two (or two choices to pick from). Use the most common words. Do not mention that they missed it and do not apologise.${NOREASSURE} Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
+      : request.missed
+        ? `They did not catch your last line and pressed "I didn't catch that". Say what you meant again in different, easier words — never the same sentence or a near copy of it. Fewer words, the most common ones, one idea; if it was a question, make it one they can answer with a word or two, or offer two choices. Talk the way a person does when the line is bad and the listener is still learning. Do not move on, do not change the subject and do not mention that they missed it; keep "next" where it was and leave "open" and "follow" empty.${NOREASSURE} Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
+        : "",
     lastTurn(request)
       ? `This is the last turn you have: close the conversation warmly, with "end".`
       : "",

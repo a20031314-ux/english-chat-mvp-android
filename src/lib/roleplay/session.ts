@@ -97,7 +97,7 @@ export type SessionState = {
   queue: QueuedLine[];
   /** A turn waiting on the director, with what is needed to score it afterwards. */
   /** `missed`: 🙉 못 알아들었어요 — 들은 말 없이 튜터에게 바로 앞 말을 쉽게 다시 해 달라고 한다. */
-  pending: { heard: string; attempts: number; hesitationMs: number; missed?: true } | null;
+  pending: { heard: string; attempts: number; hesitationMs: number; missed?: true; missedAgain?: true } | null;
   /** Consecutive turns spent off the script. */
   freeTurns: number;
   /** Director turns this session. */
@@ -336,6 +336,7 @@ function instructionFor(
         directedTurns: state.directedTurns,
         level: state.difficulty.level,
         ...(state.pending.missed ? { missed: true } : {}),
+        ...(state.pending.missedAgain ? { missedAgain: true } : {}),
       },
     };
   }
@@ -601,6 +602,8 @@ export function missedLine(
   scenario: RoleplayScenario,
   bank: SentenceBank,
   state: SessionState,
+  /** 쉽게 다시 한 줄도 못 알아들었다 — 그 질문은 두고 쉬운 다른 화제로(자유대화, 2026-11-08 사용자). */
+  again = false,
 ): { state: SessionState; instruction: Instruction } {
   const node = scenario.nodes[state.nodeId];
   if (state.finished || state.closing || state.pending || state.queue.length > 0 || !node || !isLearnerNode(node)) {
@@ -609,7 +612,7 @@ export function missedLine(
   const asking: SessionState = {
     ...state,
     listeningSince: null,
-    pending: { heard: "", attempts: state.attempts, hesitationMs: 0, missed: true },
+    pending: { heard: "", attempts: state.attempts, hesitationMs: 0, missed: true, ...(again ? { missedAgain: true as const } : {}) },
   };
   return { state: asking, instruction: currentInstruction(scenario, bank, asking) };
 }

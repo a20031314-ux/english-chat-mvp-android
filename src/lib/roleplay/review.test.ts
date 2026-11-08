@@ -89,16 +89,27 @@ test("a review is cut to what fits on a phone", () => {
   assert.equal(long?.say.length, 200);
 });
 
-test("통화 중 힌트는 끊긴 앞부분을 살려 이어 말할 문장을 묻는다", () => {
+test("통화 중 힌트는 문장 대신 쓸 수 있는 표현 조각을 묻는다 — 끊긴 앞부분부터", () => {
   const live = prompt({ live: true, heard: "I want to 예약 a" });
   assert.match(live, /paused, waiting for their answer/);
   assert.match(live, /"I want to 예약 a"/);
-  assert.match(live, /Finish what they started/);
+  assert.match(live, /carry on from what they started/);
+  assert.match(live, /Never a complete sentence/);
+  assert.doesNotMatch(live, /"say"/);
   assert.match(live, /mixed in words from Korean/);
   assert.doesNotMatch(live, /already moved on/, "돌아보기 문구가 아니다");
   const silent = prompt({ live: true, heard: "" });
   assert.match(silent, /not managed to say anything yet/);
-  assert.doesNotMatch(silent, /Finish what they started/);
+  assert.doesNotMatch(silent, /carry on from what they started/);
+});
+
+test("힌트 조각 읽기: 셋까지, 글자 없는 것은 버림 — 스페인어·일본어", () => {
+  const es = parseReview(JSON.stringify({ why: "어제 뭐 했는지 물어요.", pieces: [{ text: "ayer trabajé", meaning: "어제 일했어요" }, { text: "en el hospital", meaning: "병원에서" }, { text: "", meaning: "x" }, { text: "después", meaning: "그 뒤에" }, { text: "y luego", meaning: "그리고 나서" }] }));
+  assert.deepEqual(es?.pieces?.map((piece) => piece.text), ["ayer trabajé", "en el hospital", "después"]);
+  assert.equal(es?.say, "");
+  const ja = parseReview(JSON.stringify({ why: "週末について", pieces: [{ text: "友達に会って", meaning: "친구를 만나서" }] }));
+  assert.equal(ja?.pieces?.[0]?.meaning, "친구를 만나서");
+  assert.equal(parseReview(JSON.stringify({ why: "x" }))?.pieces, undefined);
 });
 
 test("돌아보기는 그대로", () => {

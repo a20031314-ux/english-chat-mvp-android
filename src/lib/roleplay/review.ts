@@ -92,6 +92,11 @@ export type Review = {
   say: string;
   /** What that means, in the learner's own language. */
   meaning: string;
+  /**
+   * 통화 중 💡(live)만: 지금 대답에 쓸 수 있는 표현 조각 2~3개와 뜻 — 문장을 통째로 주지 않는다
+   * (2026-11-08 사용자 "힌트 버튼은 활용 가능한 표현만 부분적으로"). live면 say·meaning은 비어 있다.
+   */
+  pieces?: { text: string; meaning: string }[];
 };
 
 /**
@@ -193,19 +198,18 @@ ${transcript}
 The ${input.tutorRole} has just said "${turn.asked}".
 ${started}
 
-Write for them, in ${input.nativeLanguage}, speaking to them directly. Address them politely, and keep the same level of politeness throughout.
-- "why": one or two short sentences. What they are being asked, and how they can go on${turn.heard ? " from what they already said" : ""}. No praise, no scolding, no talk of scores or levels.
-- "say": the sentence they can say now, in ${input.targetLanguage}. ${turn.heard ? "Finish what they started: keep their own words and their own idea, put right, and complete it. Do not swap in a different answer." : "A short, natural answer to what was asked."} The way a person really answers — one sentence.
-- "meaning": that sentence in ${input.nativeLanguage}, and nothing else — no "it means", no quotation marks, no alternatives.${
+Do not give them a whole answer: they should build the sentence themselves. Give them a few pieces to build it with.
+- "why": one short sentence in ${input.nativeLanguage}, speaking to them politely: what they are being asked${turn.heard ? ", and that they can carry on from what they started" : ""}. No praise, no scolding, no answer in it.
+- "pieces": two or three short expressions in ${input.targetLanguage} they can use in their answer — each two to five words, a chunk a speaker would really say here${turn.heard ? " (the first one is the words they need to carry on from what they started, not a finished sentence)" : ""}: a verb phrase, a time word with its preposition, a way to start the answer. Never a complete sentence, never the whole answer, not names or numbers alone. Each with "meaning": what it means in ${input.nativeLanguage}, nothing else.${
     input.focus
       ? `
 
-What goes wrong in ${input.targetLanguage} in particular, which the sentence you write must not get wrong:
+What goes wrong in ${input.targetLanguage} in particular, which the pieces you write must not get wrong:
 ${input.focus}`
       : ""
   }
 
-Reply as JSON only: {"why": "...", "say": "...", "meaning": "..."}`;
+Reply as JSON only: {"why": "...", "pieces": [{"text": "...", "meaning": "..."}]}`;
 }
 
 /** The review out of the model's answer, or null when there is nothing to show. */
@@ -224,9 +228,20 @@ export function parseReview(raw: string): Review | null {
   // Without the explanation there is no review: the line on its own is the
   // "here is the right answer" card this exists instead of.
   if (!why) return null;
+  const rawPieces = (parsed as { pieces?: unknown }).pieces;
+  const pieces = Array.isArray(rawPieces)
+    ? rawPieces
+        .map((piece) => {
+          const row = (piece ?? {}) as { text?: unknown; meaning?: unknown };
+          return { text: read(row.text, 80), meaning: read(row.meaning, 80) };
+        })
+        .filter((piece) => piece.text)
+        .slice(0, 3)
+    : [];
   return {
     why,
     say: read(record.say, 200),
     meaning: read(record.meaning, 200),
+    ...(pieces.length ? { pieces } : {}),
   };
 }

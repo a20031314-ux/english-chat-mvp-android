@@ -425,6 +425,20 @@ export function RoleplayReviewPanel({
             <p className="mt-3 whitespace-pre-line text-[13px] leading-relaxed text-neutral-200">
               {review.why}
             </p>
+            {/* 통화 중 💡: 문장 대신 쓸 수 있는 표현 조각만(2026-11-08 사용자) — 문장은 학습자가 만든다. */}
+            {turn.live && review.pieces?.length ? (
+              <ul className="mt-3 space-y-2" data-hint-pieces>
+                {review.pieces.map((piece) => (
+                  <li key={piece.text} className="flex items-start gap-2 rounded-xl bg-white/5 px-3 py-2">
+                    <div className="min-w-0 flex-1">
+                      <p dir="auto" className="text-[14px] text-neutral-100">{piece.text}</p>
+                      {piece.meaning ? <p dir="auto" className="mt-0.5 text-[12px] text-neutral-500">{piece.meaning}</p> : null}
+                    </div>
+                    <TTSButton text={piece.text} className="shrink-0" />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
             {review.say ? (
               <div className="mt-3 rounded-xl bg-white/5 p-3">
                 <p className="text-[11px] text-neutral-500">{turn.live ? ui.roleplayBetter : ui.roleplayReviewSay}</p>
