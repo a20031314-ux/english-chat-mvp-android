@@ -256,7 +256,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "그 밖에",
         "body": [
-          "하루 채팅: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · 프리미엄 100번."
+          "하루 채팅: {ui:planLiteName} 30 · {ui:planPlusName} 50 · 프리미엄 100번."
         ]
       }
     ]
@@ -308,7 +308,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "통화 시간",
         "body": [
-          "자유 통화: {ui:planScriptName} 사흘마다 5분 · 매일 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 프리미엄 30분."
+          "자유 통화: 매일 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 프리미엄 30분."
         ]
       }
     ]
@@ -644,7 +644,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Also",
         "body": [
-          "Chats a day: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+          "Chats a day: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
         ]
       }
     ]
@@ -696,7 +696,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Call time",
         "body": [
-          "Free calls: {ui:planScriptName} 5 min every 3 days · daily {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
+          "Free calls: daily {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
         ]
       }
     ]

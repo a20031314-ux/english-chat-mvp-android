@@ -826,7 +826,6 @@ function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: Peri
     { icon: "📞", title: ui.callRecordsTitle, count: String(summary.calls), minutes: summary.callMinutes, show: summary.calls > 0 },
     { icon: "🧩", title: ui.framesTitle, count: String(summary.lessons), minutes: minutesOf("lesson"), show: summary.lessons > 0 },
     { icon: "🎯", title: ui.recallTitle, count: String(summary.recalls), minutes: minutesOf("recall"), show: summary.recalls > 0 },
-    { icon: "🎭", title: ui.stageScriptsTitle, count: String(summary.scripts), minutes: minutesOf("script"), show: summary.scripts > 0 },
     { icon: "📝", title: ui.keepTitle, count: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), minutes: Math.round(summary.quizN * ESTIMATE.quizQuestion), show: summary.quizN > 0 },
   ];
   const shown = rows.filter((one) => one.show);

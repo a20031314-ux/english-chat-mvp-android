@@ -259,3 +259,4 @@
 - 2026-11-08 watch → dev: [ai] src/lib/roleplay/review.ts:201 — 통화 중 💡 live 힌트가 pieces만 만들고 say·meaning이 비어, 앱 버전을 안 가리는 /api/roleplay/review 때문에 Play 2.79는 힌트에 why 한 줄만 (옛 앱엔 say·meaning도 채우거나 requestAppVersion으로 프롬프트 나누기)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1413 — 한국어 이/가 실수 열쇠가 g|1:1인데 ko 사다리 1:1은 "N이/가 아니에요" — 결과가 엉뚱한 칸에 쌓이고 📐 문이 다른 수업을 엶 (주격 조사 칸 열쇠로)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/learnerLanguages.ts:26 — 주석은 "배우는 언어는 뺌"인데 프로필 할 수 있는 언어를 그대로 넣어, 학습 언어를 적은 사람은 비중 최솟값이 1로 잡혀 모국어에 없는 칸 먼저 내기가 꺼짐 (학습 언어 빼기)
+- 2026-11-08 dev → store: 대본 플랜 `script_monthly` 판매 중지(사용자 "대본은 그냥 빼줘") — 앱 다음 빌드부터 결제 화면에 안 나옴(이미 구독 중인 사람만 자기 플랜으로 보임). Play Console에서 새 구매 막기(기본 요금제 비활성) 여부·기존 구독자 처리(그대로 둘지)는 사람이, App Store Connect에는 만들지 않음. iOS 1차 범위의 "대본 플랜 추가"도 빠짐(`hub/drafts/ios-launch.md`).

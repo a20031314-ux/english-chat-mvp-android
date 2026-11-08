@@ -291,6 +291,7 @@ for (const file of [...sourceFiles("src/components"), ...sourceFiles("src/app")]
   const SAME_TERMS = [
     ["lbAgain", "lbCardCheck", "studyReview", "weakTitle"],
     ["knownTag", "itemsMastered", "checkKnown", "fcKnow", "markKnown"],
+    ["lbCardNew", "lbNew"],
   ];
   const source = readFileSync("src/lib/copy.ts", "utf8").split("\n");
   const start = (code) => source.findIndex((line) => line === `  ${code}: {`);

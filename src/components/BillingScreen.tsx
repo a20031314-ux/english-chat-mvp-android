@@ -70,10 +70,8 @@ type PlanSummary = {
 };
 
 /** What a plan gives, one short line each, from the server's terms. */
-function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true, tier?: PlanTier): string[] {
+function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true): string[] {
   const lines: string[] = [];
-  // 대본 플랜: 대본은 모두 무료라는 것을 먼저(이 플랜이 더하는 것은 그 표현을 써 보는 대화).
-  if (tier === "script") lines.push(ui.planLineScripts);
   if (callBuilt && terms.dailyCallMinutes !== null) {
     const days = terms.callWindowDays ?? 1;
     lines.push(
@@ -302,7 +300,7 @@ export function BillingScreen({
   const current = termsOf(tier);
   const statusText = !isPremium
     ? dailyLimit === 0
-      ? ui.planFreeScripts
+      ? ui.billingFreeLabel
       : ui.planFree.replace("{used}", String(dailyUsed)).replace("{limit}", String(dailyLimit))
     : todayLeftSeconds !== null && current.dailyChat !== null
       ? ui.planStatusDaily
@@ -435,16 +433,12 @@ export function BillingScreen({
           <h2 className="mt-6 text-lg font-semibold text-white">
             {ui.paywallTitle}
           </h2>
-          {callBuilt ? (
-            <p className="mt-2 text-sm leading-relaxed text-slate-300">
-              {ui.planSubtitle}
-            </p>
-          ) : null}
 
           {/* Cheapest first, the plan in use marked. A plan the store does not
               sell yet is not listed (billingService.fetchPlanOffers). */}
           <div className="mt-4 flex flex-col gap-3">
-            {(offers ?? []).map((offer) => {
+            {/* The script plan is no longer sold (user, 2026-11-08); only someone already on it still sees it as their plan. */}
+            {(offers ?? []).filter((offer) => offer.tier !== "script" || (isPremium && tier === "script")).map((offer) => {
               const mine = isPremium && tier === offer.tier;
               const name = planName(offer.tier, ui);
               return (
@@ -456,7 +450,7 @@ export function BillingScreen({
                 >
                   <p className="text-sm font-semibold text-white">{name}</p>
                   <ul className="mt-1.5 space-y-1 text-[13px] text-slate-300">
-                    {planLines(termsOf(offer.tier), ui, callBuilt, offer.tier).map((line) => (
+                    {planLines(termsOf(offer.tier), ui, callBuilt).map((line) => (
                       <li key={line} className="flex gap-2">
                         <span className="text-slate-500" aria-hidden>
                           ·

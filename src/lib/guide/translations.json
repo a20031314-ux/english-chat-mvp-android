@@ -129,7 +129,7 @@
         {
           "heading": "Más opciones",
           "body": [
-            "Mensajes al día: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Mensajes al día: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -181,7 +181,7 @@
         {
           "heading": "Tiempo de llamada",
           "body": [
-            "Llamadas libres: {ui:planScriptName} 5 min cada 3 días · al día {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
+            "Llamadas libres: al día {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -517,7 +517,7 @@
         {
           "heading": "その他の機能",
           "body": [
-            "1日のチャット：{ui:planScriptName} 20・{ui:planLiteName} 30・{ui:planPlusName} 50・プレミアム 100回。"
+            "1日のチャット：{ui:planLiteName} 30・{ui:planPlusName} 50・プレミアム 100回。"
           ]
         }
       ]
@@ -569,7 +569,7 @@
         {
           "heading": "通話時間",
           "body": [
-            "自由通話：{ui:planScriptName} 3日ごとに5分・毎日 {ui:planLiteName} 7・{ui:planPlusName} 10・プレミアム 30分。"
+            "自由通話：毎日 {ui:planLiteName} 7・{ui:planPlusName} 10・プレミアム 30分。"
           ]
         }
       ]
@@ -905,7 +905,7 @@
         {
           "heading": "更多功能",
           "body": [
-            "每天聊天次数：{ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · 高级 100。"
+            "每天聊天次数：{ui:planLiteName} 30 · {ui:planPlusName} 50 · 高级 100。"
           ]
         }
       ]
@@ -957,7 +957,7 @@
         {
           "heading": "通话时间",
           "body": [
-            "自由通话：{ui:planScriptName} 每 3 天 5 分钟 · 每天 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 高级 30 分钟。"
+            "自由通话：每天 {ui:planLiteName} 7 · {ui:planPlusName} 10 · 高级 30 分钟。"
           ]
         }
       ]
@@ -1293,7 +1293,7 @@
         {
           "heading": "Lưu ý khác",
           "body": [
-            "Lượt chat mỗi ngày: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Lượt chat mỗi ngày: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -1345,7 +1345,7 @@
         {
           "heading": "Thời gian gọi",
           "body": [
-            "Gọi tự do: {ui:planScriptName} 5 phút mỗi 3 ngày · mỗi ngày {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 phút."
+            "Gọi tự do: mỗi ngày {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 phút."
           ]
         }
       ]
@@ -1681,7 +1681,7 @@
         {
           "heading": "Astuces",
           "body": [
-            "Messages par jour : {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Messages par jour : {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -1733,7 +1733,7 @@
         {
           "heading": "Temps d’appel",
           "body": [
-            "Appels libres : {ui:planScriptName} 5 min tous les 3 jours · par jour {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
+            "Appels libres : par jour {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2069,7 +2069,7 @@
         {
           "heading": "Altre funzioni",
           "body": [
-            "Chat al giorno: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Chat al giorno: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -2121,7 +2121,7 @@
         {
           "heading": "Tempo di chiamata",
           "body": [
-            "Chiamate libere: {ui:planScriptName} 5 min ogni 3 giorni · al giorno {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
+            "Chiamate libere: al giorno {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2457,7 +2457,7 @@
         {
           "heading": "Outras dicas",
           "body": [
-            "Mensagens por dia: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Mensagens por dia: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -2509,7 +2509,7 @@
         {
           "heading": "Tempo de chamada",
           "body": [
-            "Chamadas livres: {ui:planScriptName} 5 min a cada 3 dias · por dia {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
+            "Chamadas livres: por dia {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 min."
           ]
         }
       ]
@@ -2845,7 +2845,7 @@
         {
           "heading": "Дополнительно",
           "body": [
-            "Сообщений в день: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Сообщений в день: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -2897,7 +2897,7 @@
         {
           "heading": "Время звонков",
           "body": [
-            "Свободные звонки: {ui:planScriptName} 5 мин раз в 3 дня · в день {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 мин."
+            "Свободные звонки: в день {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 мин."
           ]
         }
       ]
@@ -3233,7 +3233,7 @@
         {
           "heading": "Lainnya",
           "body": [
-            "Chat per hari: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
+            "Chat per hari: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100."
           ]
         }
       ]
@@ -3285,7 +3285,7 @@
         {
           "heading": "Waktu panggilan",
           "body": [
-            "Panggilan bebas: {ui:planScriptName} 5 menit tiap 3 hari · per hari {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 menit."
+            "Panggilan bebas: per hari {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 menit."
           ]
         }
       ]
@@ -3621,7 +3621,7 @@
         {
           "heading": "ملاحظات أخرى",
           "body": [
-            "المحادثات يوميًا: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · بريميوم 100."
+            "المحادثات يوميًا: {ui:planLiteName} 30 · {ui:planPlusName} 50 · بريميوم 100."
           ]
         }
       ]
@@ -3673,7 +3673,7 @@
         {
           "heading": "وقت المكالمات",
           "body": [
-            "المكالمات الحرّة: {ui:planScriptName} 5 دقائق كل 3 أيام · يوميًا {ui:planLiteName} 7 · {ui:planPlusName} 10 · بريميوم 30 دقيقة."
+            "المكالمات الحرّة: يوميًا {ui:planLiteName} 7 · {ui:planPlusName} 10 · بريميوم 30 دقيقة."
           ]
         }
       ]
@@ -4009,7 +4009,7 @@
         {
           "heading": "เพิ่มเติม",
           "body": [
-            "แชตต่อวัน: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100"
+            "แชตต่อวัน: {ui:planLiteName} 30 · {ui:planPlusName} 50 · Premium 100"
           ]
         }
       ]
@@ -4061,7 +4061,7 @@
         {
           "heading": "เวลาโทร",
           "body": [
-            "โทรอิสระ: {ui:planScriptName} 5 นาทีทุก 3 วัน · ต่อวัน {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 นาที"
+            "โทรอิสระ: ต่อวัน {ui:planLiteName} 7 · {ui:planPlusName} 10 · Premium 30 นาที"
           ]
         }
       ]
@@ -4397,7 +4397,7 @@
         {
           "heading": "अन्य बातें",
           "body": [
-            "रोज़ की चैट: {ui:planScriptName} 20 · {ui:planLiteName} 30 · {ui:planPlusName} 50 · प्रीमियम 100।"
+            "रोज़ की चैट: {ui:planLiteName} 30 · {ui:planPlusName} 50 · प्रीमियम 100।"
           ]
         }
       ]
@@ -4449,7 +4449,7 @@
         {
           "heading": "कॉल का समय",
           "body": [
-            "फ्री कॉल: {ui:planScriptName} हर 3 दिन 5 मिनट · रोज़ {ui:planLiteName} 7 · {ui:planPlusName} 10 · प्रीमियम 30 मिनट।"
+            "फ्री कॉल: रोज़ {ui:planLiteName} 7 · {ui:planPlusName} 10 · प्रीमियम 30 मिनट।"
           ]
         }
       ]
