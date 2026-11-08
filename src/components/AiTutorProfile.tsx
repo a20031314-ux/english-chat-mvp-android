@@ -100,7 +100,7 @@ export function chatWithTutor(targetLanguage: string, gender: TutorGender | unde
   sendAppIntent("openTab", { tab: "chat" });
 }
 
-type CallKind = "talk" | "lesson" | "quiz" | "twenty" | "teach";
+type CallKind = "talk" | "lesson" | "twenty" | "teach";
 
 /** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 그 종류의 통화를 연다. */
 function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
@@ -133,9 +133,6 @@ function CallChoices({ ui, wide, onPick }: { ui: UICopy; wide?: boolean; onPick:
       </div>
       {games ? (
         <div className="flex flex-wrap justify-end gap-2">
-          <button type="button" data-call-choice="quiz" onClick={() => onPick("quiz")} className={chip}>
-            {ui.quizTag}
-          </button>
           <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className={chip}>
             {ui.gameTwenty}
           </button>

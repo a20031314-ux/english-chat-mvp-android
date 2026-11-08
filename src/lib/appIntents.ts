@@ -35,7 +35,7 @@ export type AppIntents = {
    * CallHost가 받는다(앱 어디서나 떠 있는 통화 화면).
    */
   /** lesson = 수업 통화(My에서 연 것, 2026-11-07) — 없으면 자유대화. */
-  startCall: { resumeId?: string; lesson?: boolean; game?: "quiz" | "twenty" | "teach" };
+  startCall: { resumeId?: string; lesson?: boolean; game?: "twenty" | "teach" };
   /** 저장된 통화 하나를 돌아보기로 연다(대화 안 🗒 통화 기록 카드·지난 대화 서랍에서). */
   /** id 없음 = 통화 기록 목록(CallList, 2026-10-27 채팅과 통화 기록 분리). */
   /** replay = 그 통화의 🎭 장면을 바로(숙제 줄, 2026-11-08). */

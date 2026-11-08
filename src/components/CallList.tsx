@@ -35,7 +35,7 @@ export function CallList({
   for (const call of all) counts[kindOf(call)] += 1;
   const calls = all.filter((call) => kindOf(call) === kind);
   // 게임 칸의 📞는 마지막에 한 게임으로.
-  const lastGame = all.find((call) => call.mode === "game")?.game ?? "quiz";
+  const lastGame = all.find((call) => call.mode === "game")?.game ?? "twenty";
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">

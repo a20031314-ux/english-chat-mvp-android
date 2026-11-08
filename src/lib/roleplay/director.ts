@@ -959,7 +959,6 @@ ${request.context.trim()}`
           count: request.gameCount ?? 0,
           start: request.gameStart,
           secret: request.gameSecret,
-          hasFixes: Boolean(request.fixes?.trim()),
         })
       : "",
     request.missed && request.missedAgain && scenario.openEnded

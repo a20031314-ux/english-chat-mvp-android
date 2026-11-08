@@ -2,8 +2,7 @@
  * 튜터와 통화로 하는 게임(2026-11-08 사용자 "튜터의 퀴즈, 게임 이런 것도" · "튜터 프로필에 자유대화, 수업, 게임으로 나눠줘").
  * 통화 화면·목소리·받아쓰기는 자유대화 그대로고, 감독(director.ts)에게 이번 통화가 어떤 게임인지만 더 알린다.
  *
- * - quiz 퀴즈: 튜터가 한 차례에 한 문제 — 지난 통화에서 고친 말(fixes)이 있으면 그것부터, 없으면 그 수준의 일상 낱말·꼴.
- *   다섯 문제마다 점수를 말하고 한 판 더 할지 묻는다.
+ * - quiz 퀴즈는 뺌(사용자 2026-11-08 "퀴즈 모드는 일단 삭제").
  * - twenty 스무고개: 앱이 정한 것(secret, 영어로 — 튜터가 학습 언어로 옮김)을 튜터만 알고, 학습자가 예/아니오 질문으로 맞힌다.
  *   튜터가 맞혔다고(또는 스무 번) 판을 끝내면 "round": "over" → 앱이 다음 것을 고른다. 앱이 들고 있어야 판 가운데 답이 바뀌지 않는다.
  *
@@ -15,8 +14,8 @@
  * 예문은 지시에 넣지 않는다(RULES — 모델이 그대로 베낀 적이 있음).
  */
 
-export type CallGame = "quiz" | "twenty" | "teach";
-export const CALL_GAMES: readonly CallGame[] = ["quiz", "twenty", "teach"];
+export type CallGame = "twenty" | "teach";
+export const CALL_GAMES: readonly CallGame[] = ["twenty", "teach"];
 
 export function isCallGame(value: unknown): value is CallGame {
   return typeof value === "string" && (CALL_GAMES as readonly string[]).includes(value);
@@ -32,8 +31,6 @@ export const SLIPS: readonly string[] = [
   "use the wrong level of politeness for the situation",
 ];
 
-/** 퀴즈 한 판 문제 수. */
-export const QUIZ_ROUND = 5;
 /** 스무고개 한 판 질문 수. */
 export const TWENTY_ROUND = 20;
 
@@ -70,7 +67,6 @@ export function gameRules(input: {
   count: number;
   start?: boolean;
   secret?: string;
-  hasFixes?: boolean;
 }): string {
   const { game, target, native, count } = input;
   const common = `This call is a game the learner chose, and the game comes first: play it rather than steering the talk anywhere else. Stay warm and quick, speak ${target}, short turns, words at their level. If they ask to stop or to just talk, stop the game and talk normally.`;
@@ -85,31 +81,6 @@ export function gameRules(input: {
       `Questions about ${native}, to make them explain in ${target}: often simply how to say something: give a word or a short everyday sentence in ${target} and ask how to say it in ${native}, then ask them to say it slowly or explain a part of it. Other times: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
       `Make them explain properly: if their answer is short or vague, ask a follow-up (an example, when exactly, what if I said it to my boss). Then use what they taught you in your next ${native} line, and thank them like a learner would. Do not make the same mistake twice once they fixed it.`,
       `You are the student here: do not correct their ${target} out loud and do not teach them anything. Put a correction of their ${target} only in "better" as usual, when there is a real mistake.`,
-    ]
-      .filter(Boolean)
-      .join("\n");
-  }
-  if (game === "quiz") {
-    const asked = Math.min(count, QUIZ_ROUND);
-    return [
-      common,
-      `The game is a spoken quiz: you are the quizmaster and ask one short question a turn, ${QUIZ_ROUND} questions to a round.`,
-      input.start
-        ? `This is your first line: greet them in a few words, say in easy ${target} that you will play a quiz of ${QUIZ_ROUND} questions, and ask question 1.`
-        : `They have answered ${asked} of this round's questions; their last line is their answer to question ${asked}.`,
-      `Kinds of question, mixed: give a word or a short phrase written in ${native} — in ${native} words and script, never in ${target}, in quotation marks; it is the only ${native} in your line — and ask how to say it in ${target}; ask something whose natural answer needs a particular form (a past action, a plan, a comparison) and check the form; give a short sentence with one mistake and ask them to say it right. ${
-        input.hasFixes
-          ? "Draw the questions from the corrections from earlier calls first — the sentences said right are what they need to practise — then from everyday words."
-          : "Use everyday words and forms at their level."
-      } Never ask something whose answer is already in your question.`,
-      start(input)
-        ? ""
-        : `Each turn: first say plainly whether their answer was right — start with a clear "right" or "not quite" in ${target}; an answer that does not answer the question is not right, and you do not rephrase it as if it were; if it was not right, say the right answer once, short. Then ${
-            asked >= QUIZ_ROUND
-              ? `the round is over: tell them how many of the ${QUIZ_ROUND} they got right (count from the conversation) and ask whether they want another round. If they want another, start again with question 1.`
-              : `ask question ${asked + 1}, and say its number.`
-          }`,
-      `Leave "better", "meant" and "smoother" empty when their line was only an answer to a quiz question — the quiz itself says what was right.`,
     ]
       .filter(Boolean)
       .join("\n");
