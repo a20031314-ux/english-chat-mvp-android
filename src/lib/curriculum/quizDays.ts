@@ -54,7 +54,8 @@ export function addQuizDay(days: QuizDays, day: string, correct: boolean, key?: 
   return next;
 }
 
-export function noteQuizDay(language: string, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string): void {
+/** src judge = 맞나 틀리나 판단(장부 출처만 다름 — 날 기록은 그대로). */
+export function noteQuizDay(language: string, day: string, correct: boolean, key?: string, shape?: QuizShape, miss?: string, src: "quiz" | "judge" = "quiz"): void {
   try {
     localStorage.setItem(`${KEY}.${language}`, JSON.stringify(addQuizDay(readQuizDays(language), day, correct, key, shape, miss)));
     window.dispatchEvent(new CustomEvent("quiz-days", { detail: language }));
@@ -62,7 +63,7 @@ export function noteQuizDay(language: string, day: string, correct: boolean, key
     // 이번에만.
   }
   // Logbank 사건 장부에도(같이 쓰기 — curriculum/logLedger.ts).
-  if (key) noteLedger(language, [{ k: key, src: "quiz", r: correct ? "ok" : "miss", ...(shape ? { m: shape === "t" ? "write" : "pick" } : {}) }]);
+  if (key) noteLedger(language, [{ k: key, src, r: correct ? "ok" : "miss", ...(shape ? { m: shape === "t" ? "write" : "pick" } : {}) }]);
 }
 
 /** "2026-10-31" 같은 날(localDay) → 비교용 수. */

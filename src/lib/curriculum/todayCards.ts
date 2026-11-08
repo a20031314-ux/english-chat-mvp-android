@@ -38,7 +38,7 @@ export function partOf(key: string): CardPart | null {
   return null;
 }
 
-const quizLike = (event: LogEvent) => event.src === "quiz" || event.src === "exam";
+const quizLike = (event: LogEvent) => event.src === "quiz" || event.src === "exam" || event.src === "judge";
 
 /** 순수: 그날의 카드 셋을 고른다. canCall = 통화 시간이 있는 사람(없으면 ④를 안 냄). */
 export function pickCards(input: { events: readonly LogEvent[]; states: ReadonlyMap<string, CheckState>; now: number; canCall: boolean }): TodayCard[] {

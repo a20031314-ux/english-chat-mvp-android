@@ -586,13 +586,13 @@ export function TodayPlan({
           : passedSet.has(item.id) || practiced.has(item.id);
   // 퀴즈 결과를 열쇠마다(묶음 퀴즈는 여럿을 한 번에 — 상태를 한 번에 고쳐 덮어쓰지 않게).
   // seen = 봤음만(맞나 틀리나의 카드 낱말 — 그 문제는 문법을 물음): 오늘 낸 것에만 넣고 장부·기록·익힘에는 안 셈(2026-11-08).
-  const finishMany = (all: readonly { key: string; correct: boolean; review?: string; shape?: "c" | "t"; miss?: string; seen?: boolean }[]) => {
+  const finishMany = (all: readonly { key: string; correct: boolean; review?: string; shape?: "c" | "t"; miss?: string; seen?: boolean; src?: "judge" }[]) => {
     if (!all.length) return;
     const results = all.filter((one) => !one.seen);
     let logged = log;
     let nextTally = tally;
-    for (const { key, correct, shape, miss } of results) {
-      noteQuizDay(language, localDay(), correct, key, shape, miss);
+    for (const { key, correct, shape, miss, src } of results) {
+      noteQuizDay(language, localDay(), correct, key, shape, miss, src);
       // 틀린 문장구조·표현·문법은 정기 시험 재료로(curriculum/exam.ts).
       if (!correct) notePool(language, key, "wrong");
       // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
@@ -1570,7 +1570,7 @@ export function TodayPlan({
           // 복합 문제: 소재마다 한 번에(따로 부르면 기록이 서로 덮임).
           if (asReview()) for (const part of parts) askedWrong.current.add(part.key);
           else setAsked((current) => new Set([...current, ...parts.map((part) => part.key)]));
-          finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined, ...(part.seen ? { seen: true } : {}) })));
+          finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined, ...(part.seen ? { seen: true } : {}), ...(part.shape ? { shape: part.shape } : {}), ...(part.src ? { src: part.src } : {}) })));
         }}
         dictDoor={reform}
         empty={

@@ -7,7 +7,7 @@
  *   새로     그 열쇠를 처음 푼 답(퀴즈·시험·대본)이 기간 안
  *   익힘     체크 셋이 처음으로 앎이 된 때가 기간 안(checkState.ts stepState)
  *   다시 맞힘 앞서 틀린 열쇠를 다른 날 맞히거나 대화에서 씀 — 그 첫 맞음이 기간 안
- *   써 봄    통화·채팅·사람 대화에서 내가 맞게 쓴 열쇠(used)가 기간 안
+ *   써 봄    통화·채팅·사람 대화에서 내가 맞게 쓴 열쇠(used) · 맞나 틀리나에서 틀린 곳을 짚은 열쇠(judge ok)가 기간 안 — 표 칸 "활용"
  *   앎       지금 앎인 열쇠 전체(누적, 기간과 상관없음)
  * 고쳐 씀(짝): 대화에서 고쳐진 내 줄(틀린 꼴 → 바른 꼴) 뒤, 다른 날 대화에서 그 열쇠를 내가 먼저 맞게 쓴 줄.
  */
@@ -15,10 +15,14 @@ import type { LogEvent } from "./logLedger.ts";
 import { dayOfSeconds, stepState, type CheckState } from "./checkState.ts";
 import { partOf } from "./todayCards.ts";
 
-export type ProgressCounts = { studied: string[]; fresh: string[]; learned: string[]; recovered: string[]; used: string[]; known: string[] };
+/** usedTalk·usedJudge = 활용(used)을 나눈 것: 대화에서 씀 · 맞나 틀리나에서 틀린 곳을 짚음(둘 다면 둘 다에). */
+export type ProgressCounts = { studied: string[]; fresh: string[]; learned: string[]; recovered: string[]; used: string[]; usedTalk: string[]; usedJudge: string[]; known: string[] };
 
-const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script") && (event.r === "ok" || event.r === "miss");
+// 맞나 틀리나(judge)도 학습에 셈 — 틀린 곳을 짚으면 학습과 활용이 같이 오름(2026-11-08 사용자 "학습과 활용 동시에 올리는 방식").
+const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script" || event.src === "judge") && (event.r === "ok" || event.r === "miss");
 const talked = (event: LogEvent) => event.src === "call" || event.src === "people" || event.src === "chat";
+/** 활용 = 대화에서 맞게 씀 + 맞나 틀리나에서 틀린 곳을 짚음(2026-11-08 사용자 "이쪽은 활용점수에"). */
+const applied = (event: LogEvent) => (event.r === "used" && talked(event)) || (event.src === "judge" && event.r === "ok");
 
 /** 기간(inDay — 시각(초)이 기간 안인가)의 개수. 열쇠마다 한 번, 늦게 일어난 것부터. */
 export function progressIn(events: readonly LogEvent[], inDay: (t: number) => boolean, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): ProgressCounts {
@@ -29,7 +33,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (list) list.push(event);
     else byKey.set(event.k, [event]);
   }
-  const at = { studied: new Map<string, number>(), fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>() };
+  const at = { studied: new Map<string, number>(), fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>(), usedTalk: new Map<string, number>(), usedJudge: new Map<string, number>() };
   const known: [string, number][] = [];
   for (const [key, list] of byKey) {
     list.sort((a, b) => a.t - b.t);
@@ -48,7 +52,10 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
         if (inDay(event.t)) at.recovered.set(key, event.t);
         missDay = null;
       }
-      if (event.r === "used" && talked(event) && inDay(event.t)) at.used.set(key, event.t);
+      if (applied(event) && inDay(event.t)) {
+        at.used.set(key, event.t);
+        (event.src === "judge" ? at.usedJudge : at.usedTalk).set(key, event.t);
+      }
       state = stepState(state, event, dayOf);
       if (state.level === "known" && !wasKnown) {
         wasKnown = true;
@@ -58,7 +65,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (state.level === "known") known.push([key, state.last]);
   }
   const order = (map: Map<string, number>) => [...map].sort((a, b) => b[1] - a[1]).map(([key]) => key);
-  return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
+  return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), usedTalk: order(at.usedTalk), usedJudge: order(at.usedJudge), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
 }
 
 /** 그 시각(초)까지의 답으로 앎인 열쇠 수 — 학습 곡선 선(누적). */
@@ -69,7 +76,7 @@ export function knownAt(events: readonly LogEvent[], until: number, dayOf: (t: n
 /** 그 시각(초)까지 대화에서 맞게 쓴 열쇠 수(누적, 줄지 않음) — 학습 곡선 선(2026-11-07 밤 사용자 "1번으로" — 표 칸 활용과 같은 말). */
 export function usedAt(events: readonly LogEvent[], until: number): number {
   const keys = new Set<string>();
-  for (const event of events) if (event.t <= until && event.r === "used" && talked(event) && partOf(event.k)) keys.add(event.k);
+  for (const event of events) if (event.t <= until && applied(event) && partOf(event.k)) keys.add(event.k);
   return keys.size;
 }
 

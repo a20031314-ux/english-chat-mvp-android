@@ -1315,6 +1315,12 @@ function Learned({
       ) : null}
       {openCell ? (
         <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
+          {openCell.col === "used" ? (
+            // 활용 출처(2026-11-08): 대화에서 씀 · 문장 판단(맞나 틀리나) — 둘 다 한 낱말이면 둘 다에 셈.
+            <p data-used-from className="text-caption tabular-nums text-slate-400">
+              📞 {ui.homeTabTalk} {progress.usedTalk.filter((key) => partOf(key) === openCell.part).length} · ⭕❌ {ui.growFromJudge} {progress.usedJudge.filter((key) => partOf(key) === openCell.part).length}
+            </p>
+          ) : null}
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}

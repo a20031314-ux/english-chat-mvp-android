@@ -4,7 +4,8 @@
  *
  *   처음 봄       고르기 맞음·찾아봄은 그대로 · 쓰기 맞음 → 적용이 힘듦
  *   적용이 힘듦   다른 날 쓰기 맞음, 또는 통화·사람 대화에서 씀(used) → 앎
- *   앎            확인(1·3·7·30일)에서 틀림, 통화·사람 틀림 → 적용이 힘듦(처음 봄으로는 안 내림)
+ *   앎            확인(1·3·7·30일)에서 틀림, 통화·사람 틀림, 맞나 틀리나 틀림 → 적용이 힘듦(처음 봄으로는 안 내림)
+ *   맞나 틀리나(src judge)에서 틀린 곳을 짚음 = 쓰기 맞음과 같게(m write) — 대화 "씀"처럼 바로 올리지 않음(2026-11-08).
  *
  * 통화·사람 "씀"을 앎 근거로 세는 것은 설계 권장안(정할 것 2) — 사용자가 다르게 정하면 USED_LIFTS만 끈다.
  */
@@ -54,7 +55,7 @@ export function stepState(prev: CheckState, event: LogEvent, dayOf: (t: number) 
     return state;
   }
   // 앎
-  if (event.r === "miss" && (talk || event.src === "quiz" || event.src === "exam")) return { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
+  if (event.r === "miss" && (talk || event.src === "quiz" || event.src === "exam" || event.src === "judge")) return { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
   if ((event.r === "ok" || event.r === "used") && state.due !== undefined && event.t >= state.due) {
     // 확인 때가 지나 다시 맞힘 = 다음 확인으로.
     const step = state.step + 1;

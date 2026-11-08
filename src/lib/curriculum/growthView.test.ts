@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { growthPairs, progressIn, type MissLine, type UsedLine } from "./growthView.ts";
+import { growthPairs, progressIn, usedAt, type MissLine, type UsedLine } from "./growthView.ts";
 import { growthLinesOf } from "../roleplay/talkGrowth.ts";
 import type { LogEvent } from "./logLedger.ts";
 
@@ -70,4 +70,26 @@ test("학습 곡선 선(누적 활용): 대화에서 맞게 쓴 열쇠 수, 줄�
   const ev = (k: string, r: LogEvent["r"], day: number, src: LogEvent["src"]): LogEvent => ({ k, src, r, t: T + day * D + 60 });
   const events = [ev("w|casa", "ok", 0, "quiz"), ev("e|por cierto", "used", 1, "chat"), ev("g|2:0", "used", 2, "call"), ev("e|por cierto", "used", 3, "call"), ev("g|2:0", "miss", 3, "call")];
   assert.deepEqual([0, 1, 2, 3].map((day) => usedAt(events, T + day * D + 3600)), [0, 1, 2, 2]);
+});
+
+test("맞나 틀리나 점수: 틀린 곳을 짚음 = 학습 + 활용(판단 출처) · ⭕ 맞는 문장 = 학습만 · 체크 셋은 쓰기와 같게", async () => {
+  const { stateOf } = await import("./checkState.ts");
+  const day = (n: number) => 1_800_000_000 + n * 86400;
+  const dayOf = (t: number) => String(Math.floor(t / 86400));
+  const events: LogEvent[] = [
+    { k: "g|1:4", src: "judge", r: "ok", m: "write", t: day(0) },
+    { k: "g|1:2", src: "quiz", r: "ok", m: "pick", t: day(0) },
+    { k: "g|1:1", src: "judge", r: "miss", m: "pick", t: day(0) },
+    { k: "e|hi", src: "call", r: "used", t: day(0) },
+  ];
+  const p = progressIn(events, () => true, dayOf);
+  assert.deepEqual([...p.studied].sort(), ["g|1:1", "g|1:2", "g|1:4"]);
+  assert.deepEqual([...p.used].sort(), ["e|hi", "g|1:4"]);
+  assert.deepEqual(p.usedJudge, ["g|1:4"]);
+  assert.deepEqual(p.usedTalk, ["e|hi"]);
+  assert.equal(stateOf([events[0]!], dayOf).level, "hard", "짚음 = 쓰기 맞음 → 적용이 힘듦");
+  assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(0) + 60 }], dayOf).level, "hard", "같은 날 또 = 그대로");
+  assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(1) }], dayOf).level, "known", "다른 날 또 → 앎");
+  assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(1) }, { k: "g|1:4", src: "judge", r: "miss", t: day(3) }], dayOf).level, "hard", "앎에서 판단 틀림 → 내려감");
+  assert.equal(usedAt(events, day(1)), 2, "활용 누적에 판단도");
 });

@@ -44,7 +44,7 @@ export type Answer = { correct: boolean; heard?: string; practice?: Practice | n
   typed?: boolean;
   /** 복합 문제(multi·spots): 소재(열쇠)마다 맞음/틀림 — 부르는 쪽이 열쇠마다 따로 기록한다. */
   /** 소재마다 결과 — seen = 봤음만(맞나 틀리나의 카드 낱말: 문제가 그 낱말을 묻지 않음, 장부·익힘에 안 셈). */
-  parts?: { key: string; correct: boolean; seen?: boolean }[];
+  parts?: { key: string; correct: boolean; seen?: boolean; shape?: "c" | "t"; src?: "judge" }[];
 };
 
 export function QuizPlayer({
@@ -1491,18 +1491,19 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
   // 밑줄은 카드 낱말에만(조사는 빼고 — 한국어 조사가 붙은 빈칸 "가구를"에서 "가구"만).
   const word = slip.attached ? question.card.word : question.shown;
   const markAt = wrong ? (slip.attached ? slip.lead.length - word.length : slip.lead.length + slip.bad.length + 1) : question.before.length;
-  const finish = (correct: boolean, extra: Partial<Answer> = {}) =>
-    onAnswer({ correct, ...extra, parts: [{ key: slip.key, correct }, { key: question.from, correct: true, seen: true }] });
+  // 점수(2026-11-08 사용자 "이쪽은 활용점수에"): 틀린 곳을 짚음 = 활용(장부 judge · 쓰기와 같게 체크 셋을 올림), ⭕ 맞는 문장 = 학습(고르기), 판단·짚기가 틀림 = judge 틀림.
+  const finish = (correct: boolean, extra: Partial<Answer> = {}, how: { shape: "c" | "t"; judged: boolean } = { shape: "c", judged: true }) =>
+    onAnswer({ correct, ...extra, ...(how.shape === "t" ? { typed: true } : {}), parts: [{ key: slip.key, correct, shape: how.shape, ...(how.judged ? { src: "judge" as const } : {}) }, { key: question.from, correct: true, seen: true }] });
   const judge = (pick: "o" | "x") => {
     if (said || answered) return;
     setSaid(pick);
-    if (pick === "o") finish(!wrong, { picked: "o" });
+    if (pick === "o") finish(!wrong, { picked: "o" }, { shape: "c", judged: wrong });
     else if (!wrong) finish(false, { picked: "x" });
   };
   const tap = (i: number) => {
     if (answered || tapped !== null) return;
     setTapped(i);
-    finish(i === badAt, { picked: "x" });
+    finish(i === badAt, { picked: "x" }, { shape: i === badAt ? "t" : "c", judged: true });
   };
   const finding = said === "x" && wrong && !answered;
   const why = (() => {

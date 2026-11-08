@@ -17,7 +17,7 @@ export const MIN_SCORE = 3;
 export type LearnedItem = { key: string; ok: number; miss: number; last: number; lastOk: boolean };
 export type CurvePoint = { day: string; n: number; ok: number; score: number | null };
 
-const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script") && (event.r === "ok" || event.r === "miss");
+const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script" || event.src === "judge") && (event.r === "ok" || event.r === "miss");
 
 /** 기간(그 폰 날짜 inDay가 참인 날) 안에 답한 열쇠를 요소별로 — 마지막에 푼 것부터. */
 export function learnedIn(events: readonly LogEvent[], inDay: (t: number) => boolean): Record<CardPart, LearnedItem[]> {
