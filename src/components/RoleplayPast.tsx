@@ -5,6 +5,8 @@ import { translateUtterance } from "@/lib/translateUtterance";
 import { withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { CallRecap } from "@/components/roleplay/CallRecap";
+import { CallReplay } from "@/components/roleplay/CallReplay";
+import { findScenario } from "@/lib/roleplay/catalog";
 import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
@@ -37,8 +39,11 @@ export function RoleplayPast({
   nativeLanguage,
   isPremium,
   onLeave,
+  openReplay = false,
 }: {
   saved: SavedConversation;
+  /** 숙제 줄에서 열었을 때 — 🎭 장면을 바로 연다. */
+  openReplay?: boolean;
   ui: UICopy;
   onClose: () => void;
   /** My로 넘어갈 때 — 돌아보기와 그 아래 통화 기록 목록까지 닫는다(없으면 onClose). */
@@ -101,6 +106,20 @@ export function RoleplayPast({
         seconds={callSeconds(saved)}
         tally={tallyCall(saved.said)}
       />
+      {findScenario(saved.scenarioId)?.openEnded ? (
+        <CallReplay
+          ui={ui}
+          language={saved.language}
+          locale={nativeLanguage}
+          scenarioId={saved.scenarioId}
+          callId={saved.id}
+          lesson={saved.mode === "lesson"}
+          said={saved.said}
+          level={saved.state.difficulty?.level ?? 2}
+          isPremium={isPremium}
+          openFirst={openReplay}
+        />
+      ) : null}
 
       <CallPages ui={ui}>
         {lines.map((line, index) => (

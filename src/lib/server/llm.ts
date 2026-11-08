@@ -50,6 +50,7 @@ export const TASKS = {
   notes: { tier: "basic", openai: chatDefault, about: "노트 자리 찾기" },
   learnerAsk: { tier: "basic", openai: chatDefault, about: "My 직접 묻기" },
   roleplayContext: { tier: "basic", openai: chatDefault, about: "통화 상황 만들기" },
+  callReplay: { tier: "basic", openai: chatDefault, about: "통화 끝 🎭 이렇게도 말할 수 있었어요 — 내 말을 한 단계 위로 바꾼 연습 장면 둘" },
   video: { tier: "basic", openai: chatDefault, about: "영상 자막·해석·찾기" },
   vision: { tier: "basic", openai: () => env("OPENAI_VISION_MODEL") ?? chatDefault(), about: "영상 장면 보기" },
   roleplayTutor: { tier: "basic", openai: () => env("OPENAI_DIRECTOR_MODEL") ?? D.roleplayTutor, about: "AI 통화 튜터 턴" },

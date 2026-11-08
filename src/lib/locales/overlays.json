@@ -1021,7 +1021,15 @@
     "talkTop": "使った最高ステージ",
     "talkNewUse": "初めて使えたもの",
     "growUsedAll": "今までの活用",
-    "lbNew": "新規"
+    "lbNew": "新規",
+    "replayTitle": "こんなふうにも言えました",
+    "replaySame": "同じ流れ",
+    "replayFurther": "もう一歩",
+    "replayBranch": "別の道",
+    "replayWhole": "一文まるごと",
+    "replayMaking": "場面を作っています…",
+    "replayType": "入力",
+    "homeworkTag": "宿題"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2045,7 +2053,15 @@
     "talkTop": "用到的最高阶段",
     "talkNewUse": "第一次用上的",
     "growUsedAll": "至今用上",
-    "lbNew": "新的"
+    "lbNew": "新的",
+    "replayTitle": "也可以这样说",
+    "replaySame": "同样的思路",
+    "replayFurther": "再进一步",
+    "replayBranch": "另一种走向",
+    "replayWhole": "整句",
+    "replayMaking": "正在准备场景…",
+    "replayType": "输入",
+    "homeworkTag": "作业"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3072,7 +3088,15 @@
     "talkTop": "Giai đoạn cao nhất đã dùng",
     "talkNewUse": "Lần đầu bạn dùng",
     "growUsedAll": "Đã dùng đến nay",
-    "lbNew": "Mới"
+    "lbNew": "Mới",
+    "replayTitle": "Bạn cũng có thể nói thế này",
+    "replaySame": "Cùng mạch",
+    "replayFurther": "Thêm một bước",
+    "replayBranch": "Hướng khác",
+    "replayWhole": "Cả câu",
+    "replayMaking": "Đang chuẩn bị cảnh…",
+    "replayType": "Gõ",
+    "homeworkTag": "Bài tập"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4104,7 +4128,15 @@
     "talkTop": "Étape la plus haute utilisée",
     "talkNewUse": "Utilisé pour la première fois",
     "growUsedAll": "Utilisé à ce jour",
-    "lbNew": "Nouveau"
+    "lbNew": "Nouveau",
+    "replayTitle": "Tu aurais aussi pu le dire comme ça",
+    "replaySame": "Même fil",
+    "replayFurther": "Un pas de plus",
+    "replayBranch": "Autre chemin",
+    "replayWhole": "La phrase entière",
+    "replayMaking": "Préparation des scènes…",
+    "replayType": "Écrire",
+    "homeworkTag": "Devoir"
   },
   "it": {
     "archive": "Report",
@@ -5327,7 +5359,15 @@
     "talkTop": "Livello più alto usato",
     "talkNewUse": "Usato per la prima volta",
     "growUsedAll": "Usate finora",
-    "lbNew": "Nuove"
+    "lbNew": "Nuove",
+    "replayTitle": "Avresti potuto dirlo anche così",
+    "replaySame": "Stesso filo",
+    "replayFurther": "Un passo in più",
+    "replayBranch": "Un’altra strada",
+    "replayWhole": "La frase intera",
+    "replayMaking": "Preparo le scene…",
+    "replayType": "Scrivi",
+    "homeworkTag": "Compito"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6362,7 +6402,15 @@
     "talkTop": "Etapa mais alta usada",
     "talkNewUse": "Usou pela primeira vez",
     "growUsedAll": "Usadas até agora",
-    "lbNew": "Novas"
+    "lbNew": "Novas",
+    "replayTitle": "Você também poderia dizer assim",
+    "replaySame": "Mesmo fio",
+    "replayFurther": "Um passo além",
+    "replayBranch": "Outro caminho",
+    "replayWhole": "A frase inteira",
+    "replayMaking": "Preparando as cenas…",
+    "replayType": "Digitar",
+    "homeworkTag": "Tarefa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7583,7 +7631,15 @@
     "talkTop": "Самый высокий этап",
     "talkNewUse": "Впервые использовали",
     "growUsedAll": "Применено всего",
-    "lbNew": "Новые"
+    "lbNew": "Новые",
+    "replayTitle": "Можно было сказать и так",
+    "replaySame": "Тот же ход",
+    "replayFurther": "Ещё шаг",
+    "replayBranch": "Другой путь",
+    "replayWhole": "Фраза целиком",
+    "replayMaking": "Готовим сцены…",
+    "replayType": "Написать",
+    "homeworkTag": "Домашнее задание"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8614,7 +8670,15 @@
     "talkTop": "Tahap tertinggi dipakai",
     "talkNewUse": "Pertama kali kamu pakai",
     "growUsedAll": "Dipakai sejauh ini",
-    "lbNew": "Baru"
+    "lbNew": "Baru",
+    "replayTitle": "Kamu juga bisa bilang begini",
+    "replaySame": "Alur yang sama",
+    "replayFurther": "Selangkah lagi",
+    "replayBranch": "Jalan lain",
+    "replayWhole": "Kalimat utuh",
+    "replayMaking": "Menyiapkan adegan…",
+    "replayType": "Ketik",
+    "homeworkTag": "PR"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9638,7 +9702,15 @@
     "talkTop": "أعلى مرحلة استخدمتها",
     "talkNewUse": "استخدمتها لأول مرة",
     "growUsedAll": "استخدمتها حتى الآن",
-    "lbNew": "جديدة"
+    "lbNew": "جديدة",
+    "replayTitle": "كان يمكنك أن تقولها هكذا أيضًا",
+    "replaySame": "نفس المسار",
+    "replayFurther": "خطوة أبعد",
+    "replayBranch": "طريق آخر",
+    "replayWhole": "الجملة كاملة",
+    "replayMaking": "جارٍ تحضير المشاهد…",
+    "replayType": "اكتب",
+    "homeworkTag": "واجب"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10662,7 +10734,15 @@
     "talkTop": "ขั้นสูงสุดที่ใช้",
     "talkNewUse": "ใช้เป็นครั้งแรก",
     "growUsedAll": "ใช้จริงทั้งหมด",
-    "lbNew": "ใหม่"
+    "lbNew": "ใหม่",
+    "replayTitle": "พูดแบบนี้ก็ได้นะ",
+    "replaySame": "แนวเดิม",
+    "replayFurther": "อีกขั้น",
+    "replayBranch": "อีกทางหนึ่ง",
+    "replayWhole": "ทั้งประโยค",
+    "replayMaking": "กำลังเตรียมฉาก…",
+    "replayType": "พิมพ์",
+    "homeworkTag": "การบ้าน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11686,6 +11766,14 @@
     "talkTop": "इस्तेमाल किया सबसे ऊँचा चरण",
     "talkNewUse": "पहली बार इस्तेमाल किया",
     "growUsedAll": "अब तक इस्तेमाल",
-    "lbNew": "नए"
+    "lbNew": "नए",
+    "replayTitle": "आप ऐसे भी कह सकते थे",
+    "replaySame": "वही धारा",
+    "replayFurther": "एक कदम आगे",
+    "replayBranch": "दूसरा रास्ता",
+    "replayWhole": "पूरा वाक्य",
+    "replayMaking": "दृश्य तैयार हो रहे हैं…",
+    "replayType": "लिखें",
+    "homeworkTag": "होमवर्क"
   }
 }

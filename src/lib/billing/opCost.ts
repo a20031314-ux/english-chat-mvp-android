@@ -149,6 +149,8 @@ export const OP_COST: Record<string, OpCost> = {
   roleplayCorrect: llm("roleplayTutor"),
   roleplayTurn: { kind: "llm", task: "roleplayTutor", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
   roleplayContext: llm("roleplayContext"),
+  // 🎭 장면 둘: 지시 약 700 + 대본 30줄 약 600토큰, 답은 장면 둘(줄 10개 안팎 + 앱 언어 뜻) 약 700토큰(2026-11-08 어림).
+  callReplay: estimated("callReplay", { input: 1300, output: 700 }),
   // 장면·대화 약 1,500토큰 + 이유 문장(추론 모델이면 생각 토큰 포함 약 800, 2026-10-22 어림 — 예전 정액 $0.002와 같은 규모).
   roleplayReview: estimated("roleplayReview", { input: 1500, output: 800 }),
   roleplayPractice: llm("roleplayPractice"),

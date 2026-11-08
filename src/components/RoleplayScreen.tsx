@@ -6,6 +6,7 @@ import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard"
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallReplay } from "@/components/roleplay/CallReplay";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
 import { CALL_CAPTIONS_KEY, CALL_MEANING_KEY } from "@/components/speech/CallKit";
@@ -1150,6 +1151,20 @@ export function RoleplayScreen({
           tally={tallyCall(said)}
         />
         {tutorNote ? <TutorNote text={tutorNote} language={scenario.language} gender={tutorGender} /> : null}
+        {scenario.openEnded ? (
+          <CallReplay
+            ui={ui}
+            language={scenario.language}
+            locale={nativeLanguage}
+            scenarioId={scenario.id}
+            callId={savedId.current}
+            lesson={coachOn}
+            said={said}
+            level={state?.difficulty.level ?? 2}
+            isPremium={isPremium}
+            gender={tutorGender}
+          />
+        ) : null}
         {reformOn() ? <div className="px-4"><CallGrowthPairs ui={ui} language={scenario.language} locale={nativeLanguage} since={Math.floor(openedAt.current / 1000)} /></div> : null}
         {lettersBeginner && scenario.openEnded ? (
           <LettersHomework

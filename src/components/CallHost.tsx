@@ -51,6 +51,7 @@ export function CallHost({
   // 수업 통화인가(My에서 연 것 — 들어올 때 이미 온 연습 요청도 수업, 2026-11-07).
   const [lesson, setLesson] = useState(() => Boolean(arrived));
   const [reading, setReading] = useState<SavedConversation | null>(null);
+  const [replayOpen, setReplayOpen] = useState(false);
   const [ownLine, setOwnLine] = useState(false);
   const [listing, setListing] = useState(false);
   const { isPremium } = usePremium();
@@ -86,13 +87,16 @@ export function CallHost({
   );
   useEffect(
     () =>
-      onAppIntent("openCall", ({ id }) => {
+      onAppIntent("openCall", ({ id, replay }) => {
         if (!id) {
           setListing(true);
           return;
         }
         const row = readCalls().find((call) => call.id === id);
-        if (row) setReading(row);
+        if (row) {
+          setReplayOpen(Boolean(replay));
+          setReading(row);
+        }
       }),
     [],
   );
@@ -124,6 +128,7 @@ export function CallHost({
       {reading ? (
         <RoleplayPast
           saved={reading}
+          openReplay={replayOpen}
           ui={ui}
           onClose={() => setReading(null)}
           onLeave={() => {

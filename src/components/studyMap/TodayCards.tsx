@@ -5,6 +5,9 @@ import { useEffect, useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { usePremium } from "@/contexts/PremiumContext";
 import { sendAppIntent } from "@/lib/appIntents";
+import { AiAvatar } from "@/components/AiTutorProfile";
+import { readHomework, type Homework } from "@/lib/roleplay/replay";
+import { readCalls } from "@/lib/roleplay/callStore";
 import { useBankTone } from "@/components/studyMap/bankTone";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { checkStates } from "@/lib/curriculum/checkState";
@@ -135,6 +138,7 @@ function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
         {allDone ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
       <TodayGrowth ui={ui} language={language} />
+      <HomeworkRow ui={ui} language={language} />
       {view.today.cards.map((card, index) => (
         <CardRow key={`${card.kind}-${index}`} ui={ui} card={card} done={view.done[index] ?? false} soft={tone.soft} language={language} />
       ))}
@@ -201,6 +205,46 @@ function LessonDoor({ ui }: { ui: UICopy }) {
       <span aria-hidden className="flex h-6 w-6 shrink-0 items-center justify-center text-title">📞</span>
       <span className="min-w-0 flex-1 text-chat font-semibold text-ink">{ui.callModeStudy}</span>
       <span aria-hidden className="shrink-0 text-caption text-slate-300">›</span>
+    </button>
+  );
+}
+
+/**
+ * 수업 숙제 한 줄(2026-11-08, 설계 call-modes 5절 — 지금 종류는 🎭 이렇게도 말할 수 있었어요): 튜터 얼굴 + 숙제 + 🎭.
+ * 누르면 그 통화 돌아보기에서 장면을 바로 연다(openCall replay). 끝냈으면 ✓, 그 통화 기록이 지워졌으면 안 보임.
+ */
+function HomeworkRow({ ui, language }: { ui: UICopy; language: string }) {
+  const [homework, setHomework] = useState<Homework | null>(null);
+  useEffect(() => {
+    const load = () => {
+      try {
+        const row = readHomework(globalThis.localStorage, language);
+        setHomework(row && readCalls().some((call) => call.id === row.callId) ? row : null);
+      } catch {
+        setHomework(null);
+      }
+    };
+    load();
+    window.addEventListener("focus", load);
+    window.addEventListener("storage", load);
+    return () => {
+      window.removeEventListener("focus", load);
+      window.removeEventListener("storage", load);
+    };
+  }, [language]);
+  if (!homework) return null;
+  return (
+    <button
+      type="button"
+      data-today-homework={homework.done ? "done" : "open"}
+      onClick={() => sendAppIntent("openCall", { id: homework.callId, replay: true })}
+      className="flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
+    >
+      <AiAvatar size={24} language={language} />
+      <span className="min-w-0 flex-1 truncate text-chat font-semibold text-ink">
+        {ui.homeworkTag} · 🎭 {ui.replayTitle}
+      </span>
+      <span aria-hidden className="shrink-0 text-caption text-slate-300">{homework.done ? "✓" : "›"}</span>
     </button>
   );
 }

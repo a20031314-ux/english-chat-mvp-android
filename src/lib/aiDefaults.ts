@@ -27,6 +27,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   notes: "gpt-6-luna",
   learnerAsk: "gpt-6-luna",
   roleplayContext: "gpt-6-luna",
+  callReplay: "gpt-6-luna",
   video: "gpt-6-luna",
   vision: "gpt-6-luna",
   roleplayTutor: "gpt-6-luna",
@@ -79,6 +80,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   notes: HAIKU,
   learnerAsk: HAIKU,
   roleplayContext: HAIKU,
+  // 🎭 이렇게도 말할 수 있었어요(2026-11-08): 통화 끝에 장면 둘 — 수업 통화마다 한 번이라 기본 Haiku(사용자 원칙 2026-10-21).
+  callReplay: HAIKU,
   video: HAIKU,
   vision: HAIKU,
   roleplayPractice: HAIKU,

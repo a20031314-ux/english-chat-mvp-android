@@ -38,7 +38,8 @@ export type AppIntents = {
   startCall: { resumeId?: string; lesson?: boolean };
   /** 저장된 통화 하나를 돌아보기로 연다(대화 안 🗒 통화 기록 카드·지난 대화 서랍에서). */
   /** id 없음 = 통화 기록 목록(CallList, 2026-10-27 채팅과 통화 기록 분리). */
-  openCall: { id?: string };
+  /** replay = 그 통화의 🎭 장면을 바로(숙제 줄, 2026-11-08). */
+  openCall: { id?: string; replay?: boolean };
   /** 내 문장 말해보기(예전 통화 첫 화면 → AI 대화 ⋮ 메뉴). */
   sayOwnLine: Record<string, never>;
   /** 노트(My)의 한 부분을 연다 — 단어장 탭이 노트로 들어온 뒤 "단어장으로" 가던 곳. */
