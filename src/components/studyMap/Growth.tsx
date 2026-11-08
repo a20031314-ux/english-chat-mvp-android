@@ -10,11 +10,12 @@
  * - TalkCompare: 같은 종류 질문에 한 대답 짝 · 처음 3통 vs 최근 3통 많이 나아진 칸 셋 · 처음 써 본 문법·표현(자유대화).
  * 재료는 이 폰뿐(장부 logbank.v1 · growthLines.v1 · callNotes.v1 · talkAnswers.v1 · talkFirstUse.v1). 모델 없음.
  */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
+import { LEDGER_EVENT, readLedger, type LogEvent } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, progressIn, type GrowthPair } from "@/lib/curriculum/growthView";
+import { cardProgress } from "@/lib/curriculum/cardProgress";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT, readCallNotes } from "@/lib/roleplay/callNotes";
 import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
@@ -41,9 +42,8 @@ function useTick(events: readonly string[], language: string): number {
 
 const LEDGER_EVENTS = [LEDGER_EVENT] as const;
 const LINE_EVENTS = [GROWTH_LINES_EVENT] as const;
-const NOTE_EVENTS = [CALL_NOTES_EVENT] as const;
 
-/** 오늘 한 줄(오늘 칸 머리 아래). */
+/** 오늘 한 줄(Logbank 오늘 칸 머리 아래 · Quizbank 문제 위). 숫자가 늘면 그 칸이 잠깐 커지고 밝아짐(2026-11-08 — 퀴즈 중 실시간). */
 export function TodayGrowth({ ui, language }: { ui: UICopy; language: string }) {
   const tick = useTick(LEDGER_EVENTS, language);
   const [today] = useState(() => dayOfSeconds(Math.floor(Date.now() / 1000)));
@@ -53,17 +53,33 @@ export function TodayGrowth({ ui, language }: { ui: UICopy; language: string }) 
   }, [tick, language, today]);
   const parts = [
     // Logbank "배운 것" 표의 칸 이름 그대로 — 같은 숫자의 오늘 몫(2026-11-07 밤).
-    { icon: "", label: ui.lbFresh, n: counts.studied.length },
-    { icon: "", label: ui.growUsed, n: counts.used.length },
-    { icon: "↺", label: ui.growRecovered, n: counts.recovered.length },
-  ].filter((one) => one.n > 0);
-  if (!parts.length) return null;
+    { id: "studied", icon: "", label: ui.lbFresh, n: counts.studied.length },
+    { id: "used", icon: "", label: ui.growUsed, n: counts.used.length },
+    { id: "recovered", icon: "↺", label: ui.growRecovered, n: counts.recovered.length },
+  ];
+  const seen = useRef<Record<string, number> | null>(null);
+  const [lit, setLit] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    const now = Object.fromEntries(parts.map((one) => [one.id, one.n]));
+    const before = seen.current;
+    seen.current = now;
+    if (!before) return;
+    const grew = new Set(parts.filter((one) => one.n > (before[one.id] ?? 0)).map((one) => one.id));
+    if (!grew.size) return;
+    setLit(grew);
+    const timer = window.setTimeout(() => setLit(new Set()), 900);
+    return () => window.clearTimeout(timer);
+    // parts는 counts에서 — counts가 바뀔 때만.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [counts]);
+  const shown = parts.filter((one) => one.n > 0);
+  if (!shown.length) return null;
   return (
     <p data-today-growth className="flex flex-wrap gap-x-3 gap-y-0.5 text-caption tabular-nums text-slate-300">
-      {parts.map((one) => (
-        <span key={one.label}>
+      {shown.map((one) => (
+        <span key={one.id} data-today-part={one.id} className={`inline-block origin-left transition-all duration-300 ${lit.has(one.id) ? "scale-110 text-good" : ""}`}>
           {one.icon ? <span aria-hidden>{one.icon} </span> : null}
-          {one.label} <span className="font-semibold text-ink">{one.n}</span>
+          {one.label} <span className={`font-semibold ${lit.has(one.id) ? "text-good" : "text-ink"}`}>{one.n}</span>
         </span>
       ))}
     </p>
@@ -240,5 +256,51 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
         </div>
       ) : null}
     </section>
+  );
+}
+
+/**
+ * 퀴즈 답한 순간 카드 아래 점 셋(lib/curriculum/cardProgress.ts, 2026-11-08 사용자 "점수 상승을 실시간으로, 수치는 아니더라도 가시적으로").
+ * 답하기 전 장부(events — 부르는 쪽이 문제를 낼 때 잡아 둠, 답하면 곧바로 장부에 들어가서)로 전 점을 내고, 답하면 바뀐 점만 톡 커졌다 돌아옴. 앎이 되면 점 셋 둘레가 빛남,
+ * 전에 틀린 걸 다른 날 맞히면 ↺ 그 날짜. 글 없이 — 이름은 aria-label(Logbank 표와 같은 말이 아니라 체크 셋 이름).
+ */
+export function CardProgressDots({ events, locale, bankKey, mode, correct }: { events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick"; correct: boolean }) {
+  const [at] = useState(() => Math.floor(Date.now() / 1000));
+  const progress = useMemo(() => cardProgress(events, bankKey, { correct, mode, t: at }), [events, bankKey, correct, mode, at]);
+  const [phase, setPhase] = useState(0);
+  useEffect(() => {
+    const one = window.setTimeout(() => setPhase(1), 80);
+    const two = window.setTimeout(() => setPhase(2), 700);
+    return () => {
+      window.clearTimeout(one);
+      window.clearTimeout(two);
+    };
+  }, []);
+  const shown = phase === 0 ? progress.before : progress.after;
+  const fill = (i: number, dots: number) => (dots >= i + 1 ? 1 : i === 0 && dots === 0.5 ? 0.5 : 0);
+  return (
+    <span data-card-progress={`${progress.before}>${progress.after}`} className="inline-flex items-center gap-2">
+      <span
+        aria-label={`${progress.after}/3`}
+        className={`inline-flex items-center gap-1 rounded-full px-1.5 py-1 transition-shadow duration-500 ${progress.known && phase === 1 ? "ring-2 ring-good/50" : ""}`}
+      >
+        {[0, 1, 2].map((i) => {
+          const value = fill(i, shown);
+          const changed = phase === 1 && fill(i, progress.after) !== fill(i, progress.before);
+          return (
+            <span
+              key={i}
+              data-card-dot={value}
+              className={`block h-2.5 w-2.5 rounded-full border transition-all duration-300 ${value ? "border-good bg-good" : "border-slate-500 bg-transparent"} ${value === 0.5 ? "opacity-50" : ""} ${changed ? "scale-150" : "scale-100"}`}
+            />
+          );
+        })}
+      </span>
+      {progress.recoveredFrom !== null ? (
+        <span data-card-recovered className={`text-caption font-semibold text-good transition-opacity duration-500 ${phase ? "opacity-100" : "opacity-0"}`}>
+          ↺ {shortDay(locale, progress.recoveredFrom)}
+        </span>
+      ) : null}
+    </span>
   );
 }

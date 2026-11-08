@@ -1,5 +1,6 @@
 "use client";
 
+import { TodayGrowth } from "@/components/studyMap/Growth";
 import { reformOn } from "@/lib/reform";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { cardFaces, checkStates, dayOfSeconds, dueKeys } from "@/lib/curriculum/checkState";
@@ -1532,6 +1533,8 @@ export function TodayPlan({
         </button>
       ) : null}
       {examTab ? examBody : null}
+      {/* 개편: 문제 위 오늘 줄 — 답할 때마다 늘어난 칸이 잠깐 밝아짐(Logbank 오늘 줄과 같은 숫자, 2026-11-08). */}
+      {reform && !examTab ? <TodayGrowth ui={ui} language={language} /> : null}
       {examTab ? null : <InlineQuiz
         ui={ui}
         locale={locale}

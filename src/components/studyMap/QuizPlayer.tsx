@@ -1,5 +1,8 @@
 "use client";
 
+import { CardProgressDots } from "@/components/studyMap/Growth";
+import { quizShapeOf } from "@/lib/curriculum/missKind";
+import { readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -248,6 +251,11 @@ export function QuestionView({
   dictDoor?: boolean;
 }) {
   const [dictWord, setDictWord] = useState<string | null>(null);
+  // 답하기 전 그 열쇠의 장부(답하면 부르는 쪽이 곧바로 장부에 씀) — 점 셋의 "전"(개편만, 2026-11-08).
+  const ledgerBefore = useMemo(() => (dictDoor && bankKey ? readLedger(language).filter((event) => event.k === bankKey) : []),
+    // 문제가 바뀔 때만 다시 — 답한 뒤에는 그대로.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [dictDoor, bankKey, given, language]);
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
   const question: QuizQuestion = useMemo(
     () =>
@@ -314,6 +322,17 @@ export function QuestionView({
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
+          {/* 개편: 답한 순간 그 소재의 점 셋이 바뀜(studyMap/Growth CardProgressDots, 2026-11-08). 문제마다 새로 그려 답하기 전 장부를 잡는다. */}
+          {dictDoor && bankKey && /^[wefg]\|/.test(bankKey) && !answered.skipped ? (
+            <CardProgressDots
+              key={`${bankKey}|${"text" in question ? question.text : ""}`}
+              events={ledgerBefore}
+              locale={locale}
+              bankKey={bankKey}
+              mode={quizShapeOf(question as never, { correct: answered.correct }, (text) => text.split(" ")).shape === "t" ? "write" : "pick"}
+              correct={answered.correct && !answered.assisted}
+            />
+          ) : null}
           {dictDoor && bankKey && /^[wefg]\|/.test(bankKey) ? (
             <button
               type="button"
