@@ -100,10 +100,49 @@ export function chatWithTutor(targetLanguage: string, gender: TutorGender | unde
   sendAppIntent("openTab", { tab: "chat" });
 }
 
-/** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 통화를 연다. */
-function callTutor(targetLanguage: string, gender: TutorGender | undefined) {
+type CallKind = "talk" | "lesson" | "quiz" | "twenty";
+
+/** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 그 종류의 통화를 연다. */
+function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
   if (gender) writeTutorGender(targetLanguage, gender);
-  sendAppIntent("startCall", {});
+  sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "quiz" || kind === "twenty" ? { game: kind } : {});
+}
+
+/**
+ * 📞를 누르면 펼쳐지는 통화 종류(2026-11-08 사용자 "튜터 프로필에 자유대화, 수업, 게임으로 나눠줘. 통화 버튼은 클릭하면 그 탭 나열이 펼쳐지게"):
+ * [자유대화 · 수업 · 게임] — 게임을 누르면 [퀴즈 · 스무고개]. 고르면 그 통화가 바로 시작.
+ */
+function CallChoices({ ui, wide, onPick }: { ui: UICopy; wide?: boolean; onPick: (kind: CallKind) => void }) {
+  const [games, setGames] = useState(false);
+  const chip = wide
+    ? "flex-1 rounded-xl border border-white/20 px-3 py-2 text-sm text-slate-100 hover:bg-white/10"
+    : "rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10";
+  const on = wide ? " border-white/60 bg-white/15" : " border-white/60 bg-white/15";
+  return (
+    <div data-call-choices className="mt-2 flex flex-col gap-2">
+      <div className="flex flex-wrap justify-end gap-2">
+        <button type="button" data-call-choice="talk" onClick={() => onPick("talk")} className={chip}>
+          {ui.callModeTalk}
+        </button>
+        <button type="button" data-call-choice="lesson" onClick={() => onPick("lesson")} className={chip}>
+          {ui.callModeStudy}
+        </button>
+        <button type="button" data-call-choice="game" aria-expanded={games} onClick={() => setGames((open) => !open)} className={chip + (games ? on : "")}>
+          {ui.callModeGame} {games ? "▾" : "›"}
+        </button>
+      </div>
+      {games ? (
+        <div className="flex flex-wrap justify-end gap-2">
+          <button type="button" data-call-choice="quiz" onClick={() => onPick("quiz")} className={chip}>
+            {ui.quizTag}
+          </button>
+          <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className={chip}>
+            {ui.gameTwenty}
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 /**
@@ -124,6 +163,7 @@ export function AiTutorPeople({ ui, targetLanguage, canCall }: { ui: UICopy; tar
 /** 사람 탭 목록의 AI 튜터 한 줄(사람 카드와 같은 모양). */
 export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UICopy; targetLanguage: string; canCall: boolean; gender?: TutorGender }) {
   const [open, setOpen] = useState(false);
+  const [choosing, setChoosing] = useState(false);
   const about = useTutorAbout(targetLanguage, ui.aiTutorBio, gender);
   return (
     <>
@@ -148,15 +188,25 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             {canCall ? (
               <button
                 type="button"
-                onClick={() => callTutor(targetLanguage, gender)}
+                onClick={() => setChoosing((now) => !now)}
                 aria-label={ui.talkAiCall}
+                aria-expanded={choosing}
                 title={ui.talkAiCall}
-                className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100"
+                className={`rounded-full border px-3 py-1 text-meta text-slate-100 ${choosing ? "border-white/60 bg-white/15" : "border-white/20"}`}
               >
                 📞 {ui.homeTabCall}
               </button>
             ) : null}
           </div>
+          {canCall && choosing ? (
+            <CallChoices
+              ui={ui}
+              onPick={(kind) => {
+                setChoosing(false);
+                callTutor(targetLanguage, gender, kind);
+              }}
+            />
+          ) : null}
         </div>
       </div>
       {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} gender={gender} onClose={() => setOpen(false)} /> : null}
@@ -185,6 +235,7 @@ export function AiTutorSheet({
   // 사람 프로필과 같은 버튼 이름(rooms/copy — 14개 언어 이미 있음).
   const t = roomCopy(appLocale());
   const following = useFollowedTutors(targetLanguage).includes(who);
+  const [choosing, setChoosing] = useState(false);
   const go = (action: () => void) => () => {
     onClose();
     action();
@@ -219,9 +270,10 @@ export function AiTutorSheet({
       </button>
       {canCall ? (
         <>
-          <button type="button" onClick={go(() => callTutor(targetLanguage, gender))} className={PROFILE_WIDE_BUTTON}>
-            📞 {ui.homeTabCall}
+          <button type="button" aria-expanded={choosing} onClick={() => setChoosing((now) => !now)} className={PROFILE_WIDE_BUTTON}>
+            📞 {ui.homeTabCall} {choosing ? "▾" : ""}
           </button>
+          {choosing ? <CallChoices ui={ui} wide onPick={(kind) => go(() => callTutor(targetLanguage, gender, kind))()} /> : null}
           <button type="button" onClick={go(() => sendAppIntent("openCall", {}))} className={PROFILE_WIDE_BUTTON}>
             {ui.callRecordsTitle}
           </button>

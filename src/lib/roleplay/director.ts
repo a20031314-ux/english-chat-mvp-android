@@ -1,3 +1,4 @@
+import { gameRules, roundOverOf, type CallGame } from "./callGames.ts";
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
 import { personaBrief } from "../tutorPersona.ts";
@@ -163,6 +164,14 @@ export type DirectorRequest = {
   missed?: boolean;
   /** 🙉를 같은 질문에 두 번째로 — 쉽게 다시 한 줄도 못 알아들었다. 그 질문은 두고 쉬운 다른 화제로. */
   missedAgain?: boolean;
+  /** 튜터와 게임(callGames.ts, 2026-11-08) — 자유대화 장면에서만. */
+  game?: CallGame;
+  /** 스무고개 이번 판의 답(앱이 고름, 영어). */
+  gameSecret?: string;
+  /** 이번 판에서 학습자가 한 차례 수. */
+  gameCount?: number;
+  /** 게임 통화의 첫 마디(튜터가 먼저 규칙을 말함). */
+  gameStart?: boolean;
   /**
    * 고른 튜터(여자·남자, lib/tutorGender.ts) — "그냥 대화"에서만. 이름·성별을 말해 둬서 화면의 이름·목소리와 맞고,
    * 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt)에서 자기를 말하는 꼴이 맞게. 없으면 그 언어의 예전 튜터.
@@ -294,6 +303,8 @@ export type Direction = {
   native?: boolean;
   /** 자유대화 채우기: aimCheck를 보냈을 때만 — 앞 차례 겨냥을 이번 말에서 해냈나. */
   aim?: AimResult;
+  /** 스무고개: 이 차례에 판이 끝남(맞힘·스무 번) — 앱이 다음 답을 고른다(callGames.ts). */
+  round?: "over";
 };
 
 export type { Heard, Lead, LeadHow };
@@ -856,7 +867,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -939,6 +950,17 @@ ${request.context.trim()}`
           ? `You have asked them twice to say "${request.redo}". This turn is their last try: "pass" if they said it right; otherwise "miss" — tell them it is fine in a few words and carry the conversation on with a question. Do not ask them to say it again.`
           : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
+      : "",
+    scenario.openEnded && request.game
+      ? gameRules({
+          game: request.game,
+          target: request.targetLanguage,
+          native: request.nativeLanguage,
+          count: request.gameCount ?? 0,
+          start: request.gameStart,
+          secret: request.gameSecret,
+          hasFixes: Boolean(request.fixes?.trim()),
+        })
       : "",
     request.missed && request.missedAgain && scenario.openEnded
       ? `They pressed "I didn't catch that" again: they did not understand your easier version either. Let that question go — do not repeat it or explain it — and move to a different, easier topic from their own life — something they told you earlier in this call or in what you know of them (their work or studies, plans, family, a place, a hobby), or else their day today; not food or drinks unless they talked about them — with one short question they can answer with a word or two (or two choices to pick from). Use the most common words. Do not mention that they missed it and do not apologise.${NOREASSURE} Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
@@ -1550,6 +1572,7 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
+    ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
 }
 

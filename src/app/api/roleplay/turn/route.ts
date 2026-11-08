@@ -1,3 +1,4 @@
+import { isCallGame } from "@/lib/roleplay/callGames";
 import { serverTutorGender } from "@/lib/chatPartner";
 import { fastestEffort, isReasoningModel } from "@/lib/server/llm";
 import { openaiModel } from "@/lib/server/llm";
@@ -193,6 +194,15 @@ export async function POST(request: NextRequest) {
     // 🙉 못 알아들었어요(2026-11-01 새 통화 화면) — 바로 앞 말을 더 쉽게 다시.
     ...(body.missed === true ? { missed: true } : {}),
     ...(body.missed === true && body.missedAgain === true ? { missedAgain: true } : {}),
+    // 튜터와 게임(callGames.ts, 2026-11-08).
+    ...(isCallGame(body.game)
+      ? {
+          game: body.game,
+          gameCount: Math.min(99, readCount(body.gameCount)),
+          ...(body.gameStart === true ? { gameStart: true } : {}),
+          ...(typeof body.gameSecret === "string" && body.gameSecret.trim() ? { gameSecret: body.gameSecret.trim().slice(0, 60) } : {}),
+        }
+      : {}),
     // 고른 튜터(여자·남자, lib/tutorGender.ts) — 그냥 대화의 이름·성별. 옛 앱은 예전 기본.
     tutorGender: serverTutorGender(scenario.language, body.tutorGender),
     // 튜터 수업(통화 화면 🎓, lib/callStyle.ts) — 큰 실수만 소리로 짚고 다시 말해 보기(director.ts coachRules).

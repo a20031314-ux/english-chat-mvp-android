@@ -431,8 +431,8 @@ export function RoleplayReviewPanel({
                 {review.pieces.map((piece) => (
                   <li key={piece.text} className="flex items-start gap-2 rounded-xl bg-white/5 px-3 py-2">
                     <div className="min-w-0 flex-1">
-                      <p dir="auto" className="text-[14px] text-neutral-100">{piece.text}</p>
-                      {piece.meaning ? <p dir="auto" className="mt-0.5 text-[12px] text-neutral-500">{piece.meaning}</p> : null}
+                      <p dir="auto" className="text-chat text-slate-100">{piece.text}</p>
+                      {piece.meaning ? <p dir="auto" className="mt-0.5 text-meta text-slate-500">{piece.meaning}</p> : null}
                     </div>
                     <TTSButton text={piece.text} className="shrink-0" />
                   </li>

@@ -1,5 +1,6 @@
 "use client";
 
+import type { CallGame } from "@/lib/roleplay/callGames";
 import { useEffect, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { CallList } from "@/components/CallList";
@@ -50,6 +51,8 @@ export function CallHost({
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
   // 수업 통화인가(My에서 연 것 — 들어올 때 이미 온 연습 요청도 수업, 2026-11-07).
   const [lesson, setLesson] = useState(() => Boolean(arrived));
+  // 게임 통화(튜터 프로필 📞 → 게임, 2026-11-08).
+  const [game, setGame] = useState<CallGame | null>(null);
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [replayOpen, setReplayOpen] = useState(false);
   const [ownLine, setOwnLine] = useState(false);
@@ -69,18 +72,20 @@ export function CallHost({
         setResuming(null);
         // My에서 연 연습(써 보기 카드 등)은 수업 통화(2026-11-07).
         setLesson(true);
+        setGame(null);
         setPlaying(openTalk);
       }),
     [enabled, openTalk],
   );
   useEffect(
     () =>
-      onAppIntent("startCall", ({ resumeId, lesson: asLesson }) => {
+      onAppIntent("startCall", ({ resumeId, lesson: asLesson, game: asGame }) => {
         if (!enabled || !openTalk) return;
         const carry = resumeId ? (readCalls().find((row) => row.id === resumeId) ?? null) : null;
         setPractice(null);
         setResuming(carry);
-        setLesson(Boolean(asLesson));
+        setLesson(Boolean(asLesson) && !asGame);
+        setGame(asGame && !asLesson ? asGame : null);
         setPlaying(carry?.scenarioId ?? openTalk);
       }),
     [enabled, openTalk],
@@ -114,11 +119,13 @@ export function CallHost({
           onSaved={keepCall}
           practice={practice}
           lesson={lesson}
+          game={game}
           onClose={() => {
             setPlaying(null);
             setResuming(null);
             setPractice(null);
             setLesson(false);
+            setGame(null);
           }}
         />
       ) : null}

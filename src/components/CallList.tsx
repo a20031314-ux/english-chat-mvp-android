@@ -28,9 +28,14 @@ export function CallList({
 }) {
   const all = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer).filter((call) => call.language === language);
   // 자유대화 / 수업 기록을 따로(2026-11-07 사용자 "통화기록도 구분해서"). mode 없는 예전 기록은 자유대화.
-  const [kind, setKind] = useState<"talk" | "lesson">("talk");
-  const counts = { talk: all.filter((call) => call.mode !== "lesson").length, lesson: all.filter((call) => call.mode === "lesson").length };
-  const calls = all.filter((call) => (kind === "lesson" ? call.mode === "lesson" : call.mode !== "lesson"));
+  // 게임 통화도 따로(2026-11-08 사용자 "자유대화, 수업, 게임으로 나눠줘").
+  const [kind, setKind] = useState<"talk" | "lesson" | "game">("talk");
+  const kindOf = (call: { mode?: string }): "talk" | "lesson" | "game" => (call.mode === "lesson" ? "lesson" : call.mode === "game" ? "game" : "talk");
+  const counts = { talk: 0, lesson: 0, game: 0 };
+  for (const call of all) counts[kindOf(call)] += 1;
+  const calls = all.filter((call) => kindOf(call) === kind);
+  // 게임 칸의 📞는 마지막에 한 게임으로.
+  const lastGame = all.find((call) => call.mode === "game")?.game ?? "quiz";
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
@@ -41,7 +46,7 @@ export function CallList({
               type="button"
               onClick={() => {
                 onClose();
-                sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : {});
+                sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "game" ? { game: lastGame } : {});
               }}
               aria-label={ui.talkAiCall}
               title={ui.talkAiCall}
@@ -60,7 +65,7 @@ export function CallList({
         </div>
       </header>
       <div role="tablist" className="flex shrink-0 gap-2 px-3 pt-3" data-call-kinds>
-        {(["talk", "lesson"] as const).map((one) => (
+        {(["talk", "lesson", "game"] as const).map((one) => (
           <button
             key={one}
             type="button"
@@ -70,7 +75,7 @@ export function CallList({
             onClick={() => setKind(one)}
             className={`rounded-full border px-3 py-1 text-meta ${kind === one ? "border-white/50 bg-white/15 text-white" : "border-white/15 text-slate-400"}`}
           >
-            {one === "talk" ? ui.callModeTalk : ui.callModeStudy} <span className="tabular-nums opacity-70">{counts[one]}</span>
+            {one === "talk" ? ui.callModeTalk : one === "lesson" ? ui.callModeStudy : ui.callModeGame} <span className="tabular-nums opacity-70">{counts[one]}</span>
           </button>
         ))}
       </div>
