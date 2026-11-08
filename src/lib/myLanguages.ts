@@ -40,10 +40,31 @@ export function readMyLanguages(current: LearningLanguageCode): LearningLanguage
   }
 }
 
+const CHANGED = "my-languages-changed";
+
 export function saveMyLanguages(list: readonly LearningLanguageCode[]): void {
   try {
     window.localStorage.setItem(MY_LANGUAGES_KEY, JSON.stringify(list));
   } catch {
     // 저장 못 해도 이번 실행 동안은 화면 상태로
+  }
+  window.dispatchEvent(new Event(CHANGED));
+}
+
+/** 상단바 국기 줄이 목록 바뀜을 듣는다(useSyncExternalStore). 저장된 원문을 그대로 돌려 값이 안정적이다. */
+export function subscribeMyLanguages(onChange: () => void): () => void {
+  window.addEventListener(CHANGED, onChange);
+  window.addEventListener("storage", onChange);
+  return () => {
+    window.removeEventListener(CHANGED, onChange);
+    window.removeEventListener("storage", onChange);
+  };
+}
+
+export function myLanguagesRaw(): string | null {
+  try {
+    return window.localStorage.getItem(MY_LANGUAGES_KEY);
+  } catch {
+    return null;
   }
 }

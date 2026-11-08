@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { useLearningLanguage } from "@/contexts/LearningLanguageContext";
@@ -12,7 +12,7 @@ import {
   SUPPORTED_LEARNING_LANGUAGES,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { readMyLanguages, saveMyLanguages, toggleMyLanguage } from "@/lib/myLanguages";
+import { myLanguagesRaw, parseMyLanguages, readMyLanguages, saveMyLanguages, subscribeMyLanguages, toggleMyLanguage } from "@/lib/myLanguages";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { readTutorGender, writeTutorGender } from "@/lib/tutorGender";
@@ -21,7 +21,8 @@ import { readTutorGender, writeTutorGender } from "@/lib/tutorGender";
  * 배울 언어·앱 언어 고르기(사용자 2026-10-31).
  * - 처음 설치: 배울 언어 국기만(`FirstLanguagePick`) — 여러 개 눌러 고르고 "시작"(2026-11-02 여러 개). 앱 언어는 묻지 않고 기기 언어로(lib/firstLanguage.ts).
  *   그다음 고른 언어마다 튜터 둘 얼굴에서 하나(2026-11-06 사용자 "앱 설치했을 때 프로필로 선택하게 해서 쭉") — tutorGender.v1, 바꾸기는 ⋮ 튜터 목소리·사람 탭 튜터 프로필.
- * - 그 뒤: 상단바의 지금 배우는 언어 국기 하나 → 언어 설정 시트(`LanguageSettingsButton`).
+ * - 그 뒤: 상단바에 내 배울 언어 국기가 다 뜸(2026-11-08 사용자 "학습언어로 설정한 언어는 위에 버튼이 다 뜨게, 학습중인 언어는 표시") —
+ *   지금 배우는 언어는 테두리·밝게, 다른 국기를 누르면 그 언어로 바로, 지금 국기를 누르면 언어 설정 시트(`LanguageSettingsButton`).
  *   맨 위 줄 = 내 언어(누르면 그 언어로 바로), 아래 국기 모음 = 내 언어에 더하기·빼기(✓), 앱 언어는 바로.
  *   목록은 lib/myLanguages.ts(이 폰). 학습 기록은 언어마다 따로 남아 돌아오면 이어진다.
  */
@@ -230,7 +231,7 @@ function FirstTutorPick({
   );
 }
 
-/** 상단바: 지금 배우는 언어 국기 하나 → 언어 설정(배울 언어 · 앱 언어). */
+/** 상단바: 내 배울 언어 국기를 모두 — 지금 배우는 언어는 표시, 누르면 언어 설정. 다른 국기는 누르면 그 언어로. */
 export function LanguageSettingsButton({
   ui,
   locale,
@@ -240,9 +241,11 @@ export function LanguageSettingsButton({
   locale: Locale;
   onLocale: (next: Locale) => void;
 }) {
-  const { targetLanguage, targetLanguageInfo, setTargetLanguage } = useLearningLanguage();
+  const { targetLanguage, setTargetLanguage } = useLearningLanguage();
   const [open, setOpen] = useState(false);
   const [mine, setMine] = useState<LearningLanguageCode[]>([]);
+  const raw = useSyncExternalStore(subscribeMyLanguages, myLanguagesRaw, () => null);
+  const flags = useMemo(() => parseMyLanguages(raw, targetLanguage), [raw, targetLanguage]);
   const close = () => setOpen(false);
   const toggle = (code: LearningLanguageCode) => {
     const next = toggleMyLanguage(mine, code, targetLanguage);
@@ -251,19 +254,36 @@ export function LanguageSettingsButton({
   };
   return (
     <>
-      <button
-        type="button"
-        onClick={() => {
-          setMine(readMyLanguages(targetLanguage));
-          setOpen(true);
-        }}
-        aria-label={ui.languageSettings}
-        title={ui.languageSettings}
-        data-language-settings
-        className="inline-flex items-center rounded-lg border border-line bg-white/5 p-1.5 hover:bg-white/10"
-      >
-        <LearningLanguageFlag language={targetLanguageInfo} />
-      </button>
+      <div className="flex max-w-[60%] items-center gap-1 overflow-x-auto" data-my-language-flags>
+        {flags.map((code) => {
+          const active = code === targetLanguage;
+          const info = getLearningLanguage(code);
+          return (
+            <button
+              key={code}
+              type="button"
+              aria-pressed={active}
+              onClick={() => {
+                if (!active) {
+                  setTargetLanguage(code);
+                  return;
+                }
+                setMine(readMyLanguages(targetLanguage));
+                setOpen(true);
+              }}
+              aria-label={active ? ui.languageSettings : info.nativeLabel}
+              title={active ? ui.languageSettings : info.nativeLabel}
+              data-language-settings={active ? "" : undefined}
+              data-language-flag={code}
+              className={`inline-flex shrink-0 items-center rounded-lg border p-1.5 ${
+                active ? "border-platinum bg-white/10" : "border-transparent opacity-50 hover:bg-white/5 hover:opacity-100"
+              }`}
+            >
+              <LearningLanguageFlag language={info} />
+            </button>
+          );
+        })}
+      </div>
       {open ? (
         <BodyLayer>
           <div className="fixed inset-0 z-[120] flex items-end justify-center bg-black/60 p-3 sm:items-center" onClick={close}>
