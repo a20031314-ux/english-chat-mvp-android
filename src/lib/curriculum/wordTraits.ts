@@ -18,7 +18,7 @@ export type WordTraits = {
   vt?: "5" | "1" | "k" | "s";
   /** 형용사 종류(ja): i い형용사 · na な형용사. */
   jt?: "i" | "na";
-  /** 불규칙 활용(ko): ㅂ·ㄷ·르·ㅅ·ㅎ·러·우·여(하다). 규칙이면 없음. */
+  /** 불규칙 활용(ko): ㅂ·ㄷ·르·ㅅ·ㅎ·러·우·여(하다). 규칙이면 없음(소리가 같은 다른 낱말 — 묻다 "땅에" — 은 흔한 뜻으로: 묻다 ㄷ). */
   ir?: string;
   /** 높임·겸양 짝(ko·ja): 존경 · 겸양. */
   hon?: { up?: string; down?: string };
@@ -35,6 +35,8 @@ export type TraitBook = Record<string, WordTraits>;
 
 // JSON 모양 그대로 받으면 타입이 너무 커서 unknown으로 받고 TraitBook으로 본다.
 const BOOKS: Record<string, () => Promise<{ default: unknown }>> = {
+  ja: () => import("./word-traits/ja.json"),
+  ko: () => import("./word-traits/ko.json"),
   ru: () => import("./word-traits/ru.json"),
   zh: () => import("./word-traits/zh.json"),
 };

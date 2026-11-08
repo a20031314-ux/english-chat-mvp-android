@@ -3,3 +3,5 @@ Produced offline from the open sources below, then checked and completed by Clau
 
 ru  gender, aspect — pymorphy3 with OpenCorpora dictionaries (https://opencorpora.org), CC BY-SA 3.0
 zh  classifiers — CC-CEDICT (https://www.mdbg.net/chinese/dictionary?page=cc-cedict) via pycccedict, CC BY-SA 4.0; frequent nouns missing there filled by Claude
+ja  verb and adjective classes — fugashi with UniDic (unidic-lite, NINJAL, BSD/LGPL/GPL); keigo pairs by Claude
+ko  irregular conjugation classes and honorific pairs — rules and exception lists by Claude

@@ -45,3 +45,26 @@ test("중국어: 양사 (书 本 · 狗 只 · 孩子 个 · 时间 없음)", ()
   assert.equal(zh["孩子"]?.cl?.[0], "个");
   assert.equal(zh["时间"], undefined, "시간 말은 양사를 정하지 않음");
 });
+
+test("일본어: 동사·형용사 종류·경어 (帰る 5 · 食べる 1 · 来る k · する s · 高い i · きれい na · 言う おっしゃる/申す)", () => {
+  const ja = JSON.parse(readFileSync(new URL("ja.json", DIR), "utf8")) as Record<string, { vt?: string; jt?: string; hon?: { up?: string; down?: string } }>;
+  assert.equal(ja["帰る"]?.vt, "5");
+  assert.equal(ja["食べる"]?.vt, "1");
+  assert.equal(ja["来る"]?.vt, "k");
+  assert.equal(ja["する"]?.vt, "s");
+  assert.equal(ja["高い"]?.jt, "i");
+  assert.equal(ja["きれい"]?.jt, "na");
+  assert.deepEqual(ja["言う"]?.hon, { up: "おっしゃる", down: "申す" });
+});
+
+test("한국어: 불규칙 활용·높임 (돕다 ㅂ · 입다 규칙 · 듣다 ㄷ · 모르다 르 · 따르다 규칙 · 하얗다 ㅎ · 좋다 규칙 · 먹다 드시다)", () => {
+  const ko = JSON.parse(readFileSync(new URL("ko.json", DIR), "utf8")) as Record<string, { ir?: string; hon?: { up?: string } }>;
+  assert.equal(ko["돕다"]?.ir, "ㅂ");
+  assert.equal(ko["입다"]?.ir, undefined);
+  assert.equal(ko["듣다"]?.ir, "ㄷ");
+  assert.equal(ko["모르다"]?.ir, "르");
+  assert.equal(ko["따르다"]?.ir, undefined);
+  assert.equal(ko["하얗다"]?.ir, "ㅎ");
+  assert.equal(ko["좋다"]?.ir, undefined);
+  assert.equal(ko["먹다"]?.hon?.up, "드시다");
+});
