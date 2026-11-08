@@ -44,6 +44,8 @@ import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
+import { loadWordTraits } from "@/lib/curriculum/wordTraits";
+import { registerWordGender } from "@/lib/curriculum/quiz";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
 import { readCachedAccount } from "@/lib/account/session";
 import { factsOf } from "@/lib/account/profileFacts";
@@ -344,6 +346,17 @@ export function TodayPlan({
   // 넣어 둔 문제(problems/*.json)는 뜻·까닭이 한국어뿐이라 앱 언어가 한국어일 때만 낸다. 다른 앱 언어는 예전 문제 그대로.
   // 넣어 둔 문법·표현 문제: 한국어 앱은 원문, 다른 앱 언어는 서버가 옮긴 뜻·까닭(server/preparedCopy.ts, 2026-11-06).
   const prepared = usePrepared(language, locale);
+  // 맞나 틀리나 관사 성 규칙(es·fr·it·pt)에 쓸 낱말 성(word-traits) — 개편만, 받으면 quiz.ts에 넣어 둠(2026-11-08).
+  useEffect(() => {
+    if (!reform) return;
+    let live = true;
+    void loadWordTraits(language).then((book) => {
+      if (live && book) registerWordGender(language, book);
+    });
+    return () => {
+      live = false;
+    };
+  }, [language, reform]);
   // 원(circle.ts)이 다루는 열쇠 — 카드가 온 낱말과 표현(단어 시험·틀림 셈·새 것 쉬기에 같이).
   const usableKey = (key: string) => Boolean(bank?.ready.has(key)) || exprCards.ready.has(key);
   const isDeckKey = (key: string) => key.startsWith("w|") || key.startsWith("e|");

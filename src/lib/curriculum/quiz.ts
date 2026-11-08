@@ -1390,11 +1390,42 @@ export const JUDGE_RIGHT_SHARE = 1 / 3;
  *   modalTo  조동사 + to + 동사 원형  "I will to do"     (to를 넣음)
  *   beBase   be동사 + 동사 원형       "I am like movies" (am·are를 넣음)
  *   an       자음 앞 an               "an car"           (a·the를 an으로)
- * 영어만(1단계). 다른 낱말·철자·다른 꼴 끼우기는 맞는 문장이 섞여 뺐다(운영 표본 en 45개 중 7개, 2026-11-08).
+ * 다른 낱말·철자·다른 꼴 끼우기는 맞는 문장이 섞여 뺐다(운영 표본 en 45개 중 7개, 2026-11-08).
+ * 같은 날 더함(사용자 "진행해줘" — 언어별 규칙):
+ *   particle (ko) 받침에 맞지 않는 조사  "사과을"   (을↔를 · 은↔는 · 이↔가, 카드 낱말 바로 뒤)
+ *   gender   (es·fr·it·pt) 명사 성에 맞지 않는 관사  "el casa"  (낱말 성질 word-traits — 관사가 성과 맞을 때만 바꿈, el agua 같은 것은 안 씀)
  */
-export type GrammarSlipRule = "modalTo" | "beBase" | "an";
-/** lead + bad + tail = 보여 줄 틀린 문장, fix = bad 자리의 바른 말(""이면 지우기), key = 그 문법 열쇠(장부에 남김), modal = 까닭에 쓸 조동사. */
-export type GrammarSlip = { rule: GrammarSlipRule; lead: string; bad: string; tail: string; fix: string; key: string; modal?: string };
+export type GrammarSlipRule = "modalTo" | "beBase" | "an" | "particle" | "gender";
+/**
+ * lead + bad + tail = 보여 줄 틀린 문장, fix = bad 자리의 바른 말(""이면 지우기), key = 그 문법 열쇠(장부에 남김), modal = 까닭에 쓸 조동사.
+ * attached = bad가 앞말에 붙음(한국어 조사 — 띄어 쓰지 않음). gender = 까닭에 쓸 명사 성.
+ */
+export type GrammarSlip = { rule: GrammarSlipRule; lead: string; bad: string; tail: string; fix: string; key: string; modal?: string; attached?: boolean; gender?: "m" | "f" };
+
+/** 낱말 성(낱말 성질 word-traits/<언어>.json g) — 화면이 불러와 넣는다(registerWordGender). */
+const GENDER = new Map<string, Map<string, string>>();
+export function registerWordGender(language: string, book: Record<string, { g?: string }>): void {
+  GENDER.set(language, new Map(Object.entries(book).filter(([, traits]) => traits.g).map(([word, traits]) => [word, traits.g!])));
+}
+export const wordGenderOf = (language: string, word: string): string | undefined => GENDER.get(language)?.get(word);
+
+/** 받침이 있는 말 뒤 · 없는 말 뒤 조사와 그 문법 칸. */
+const KO_PARTICLES: [string, string, string][] = [["을", "를", "g|1:4"], ["은", "는", "g|1:2"], ["이", "가", "g|1:1"]];
+/** 관사 성 바꾸기(남성 ↔ 여성)와 그 문법 칸 — 관사가 바로 앞에 있을 때만. */
+const ARTICLE_SWAP: Record<string, { m: string[]; f: string[]; key: string }> = {
+  es: { m: ["el", "un", "los", "unos"], f: ["la", "una", "las", "unas"], key: "g|1:4" },
+  fr: { m: ["le", "un"], f: ["la", "une"], key: "g|1:2" },
+  it: { m: ["il", "un", "i"], f: ["la", "una", "le"], key: "g|1:2" },
+  pt: { m: ["o", "um", "os", "uns"], f: ["a", "uma", "as", "umas"], key: "g|1:2" },
+};
+/** 조사 짝(받침 있음, 없음) — 까닭 줄. */
+export const KO_PARTICLE_PAIRS: readonly (readonly [string, string])[] = KO_PARTICLES.map(([a, b]) => [a, b] as const);
+/** 틀린 문장을 띄어쓰기로 자른 낱말 가운데 끼운 말이 든 자리(누르기 찾기). 붙은 조사면 그 앞말 자리. */
+export const slipBadIndex = (slip: GrammarSlip): number => (slip.attached ? slip.lead.split(" ").length - 1 : slip.lead.split(" ").filter(Boolean).length);
+const hasBatchim = (ch: string) => {
+  const code = ch.charCodeAt(0) - 0xac00;
+  return code >= 0 && code < 11172 ? code % 28 !== 0 : null;
+};
 
 const MODAL_KEYS: Record<string, string> = { can: "g|1:6", could: "g|1:6", will: "g|2:2", would: "g|2:2", should: "g|3:3", must: "g|3:3", might: "g|3:3", may: "g|3:3" };
 const BE_OF: Record<string, string> = { i: "am", you: "are", we: "are", they: "are" };
@@ -1404,12 +1435,43 @@ const BE_OK = new Set(["like", "back", "open", "close", "clean", "clear", "free"
 const SILENT_H = /^(hour|honest|honou?r|heir)/i;
 const lowerOf = (text: string) => text.toLocaleLowerCase();
 /** 카드 예문에서 끼울 실수 하나(없으면 null). 순수 — 테스트용으로 밖에 둠. */
-export function grammarSlip(language: string, text: string, piece: string, word: string, pos: string | undefined): GrammarSlip | null {
-  if (language !== "en") return null;
+export function grammarSlip(language: string, text: string, piece: string, word: string, pos: string | undefined, gender?: string): GrammarSlip | null {
   const at = pieceAt(text, piece, language);
   if (at < 0) return null;
   const before = text.slice(0, at);
   const after = text.slice(at + piece.length);
+  if (language === "ko") {
+    // 카드 낱말(명사) 바로 뒤 조사를 받침에 맞지 않는 꼴로. 사전 예문 빈칸은 조사까지(가구를) — 낱말 + 조사로 나눠 본다.
+    // 조사 뒤는 띄어쓰기·문장부호·끝이어야(이에요·이다의 "이"는 안 잡힘).
+    if (pos !== "noun") return null;
+    const joined = piece.startsWith(word) && piece.length > word.length;
+    const noun = joined ? word : piece;
+    const rest = joined ? piece.slice(word.length) + after : after;
+    const batchim = hasBatchim(noun.charAt(noun.length - 1));
+    if (batchim === null) return null;
+    for (const [withB, withoutB, key] of KO_PARTICLES) {
+      const right = batchim ? withB : withoutB;
+      if (!new RegExp(`^${right}(?=[\\s.,!?]|$)`).test(rest)) continue;
+      return { rule: "particle", lead: before + noun, bad: batchim ? withoutB : withB, tail: rest.slice(right.length), fix: right, key, attached: true };
+    }
+    return null;
+  }
+  const swap = ARTICLE_SWAP[language];
+  if (swap) {
+    if (pos !== "noun" || (gender !== "m" && gender !== "f")) return null;
+    const art = before.match(/(\S+)\s+$/);
+    if (!art) return null;
+    const word0 = art[1]!;
+    const lower = lowerOf(word0);
+    const list = swap[gender as "m" | "f"];
+    const i = list.indexOf(lower);
+    // 관사가 낱말 성과 맞을 때만(el agua처럼 성과 다른 관사를 쓰는 말·전치사 a는 여기서 걸러짐).
+    if (i < 0) return null;
+    const other = swap[gender === "m" ? "f" : "m"][i]!;
+    const bad = word0.charAt(0) !== lower.charAt(0) ? other.charAt(0).toLocaleUpperCase() + other.slice(1) : other;
+    return { rule: "gender", lead: before.slice(0, before.length - art[0].length), bad, tail: ` ${piece}${after}`, fix: word0, key: swap.key, gender: gender as "m" | "f" };
+  }
+  if (language !== "en") return null;
   const prev = before.match(/(\S+)\s+$/);
   if (!prev) return null;
   const prevWord = prev[1]!;
@@ -1440,7 +1502,7 @@ export function judgeQuiz(language: string, key: string, seed: string): QuizQues
   const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
   const usable = (pool?.get(key) ?? [])
     .filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece))
-    .map((one) => ({ one, slip: grammarSlip(language, one.text, one.piece!, key.slice(2), one.pos) }))
+    .map((one) => ({ one, slip: grammarSlip(language, one.text, one.piece!, key.slice(2), one.pos, wordGenderOf(language, key.slice(2))) }))
     .filter((pair): pair is { one: QuizSource; slip: GrammarSlip } => pair.slip !== null);
   if (!usable.length) return null;
   const { one: source, slip } = usable[Math.floor(rng(`${seed}|${key}|src`)() * usable.length)]!;

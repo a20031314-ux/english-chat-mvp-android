@@ -164,7 +164,7 @@ function rowValue(id: CompareRow["id"], value: number): string {
 const TALK_EVENTS = [CALL_NOTES_EVENT, TALK_MEMORY_EVENT] as const;
 
 /** g|단계:번호 → 단계 문법 이름(앱 언어, 없으면 영어) — 노트 칸 이름이 없을 때. */
-function ladderName(language: string, locale: string, key: string): string {
+export function ladderName(language: string, locale: string, key: string): string {
   const m = /^g\|(\d+):(\d+)$/.exec(key);
   if (!m) return "";
   const grammar = ladderFor(language)?.stages.find((stage) => stage.order === Number(m[1]))?.grammar[Number(m[2])];

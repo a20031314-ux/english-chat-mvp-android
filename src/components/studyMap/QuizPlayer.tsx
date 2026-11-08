@@ -1,6 +1,6 @@
 "use client";
 
-import { CardProgressDots } from "@/components/studyMap/Growth";
+import { CardProgressDots, ladderName } from "@/components/studyMap/Growth";
 import { quizShapeOf } from "@/lib/curriculum/missKind";
 import { readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
@@ -13,7 +13,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
-import { buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -375,7 +375,7 @@ export function QuestionView({
 /** 문제 한 줄 요약(점검용 data 속성): 모양·문장·보기·정답 자리 — 화면에 보이는 것 그대로라 새로 드러나는 것은 없다(정답 자리 빼고). */
 function quizMeta(question: QuizQuestion): string {
   const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string; shown: string; wrong: string | null; from: string }>;
-  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong, bad: question.wrong ? question.slip.lead.split(" ").filter(Boolean).length : -1 } : {}) });
+  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong, bad: question.wrong ? slipBadIndex(question.slip) : -1 } : {}) });
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";
@@ -1487,7 +1487,10 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
   const wrong = question.wrong !== null;
   const shownText = wrong ? `${slip.lead}${slip.bad}${slip.tail}` : question.text;
   const words = shownText.split(" ");
-  const badAt = slip.lead.split(" ").filter(Boolean).length;
+  const badAt = slipBadIndex(slip);
+  // 밑줄은 카드 낱말에만(조사는 빼고 — 한국어 조사가 붙은 빈칸 "가구를"에서 "가구"만).
+  const word = slip.attached ? question.card.word : question.shown;
+  const markAt = wrong ? (slip.attached ? slip.lead.length - word.length : slip.lead.length + slip.bad.length + 1) : question.before.length;
   const finish = (correct: boolean, extra: Partial<Answer> = {}) =>
     onAnswer({ correct, ...extra, parts: [{ key: slip.key, correct }, { key: question.from, correct: true, seen: true }] });
   const judge = (pick: "o" | "x") => {
@@ -1502,8 +1505,24 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
     finish(i === badAt, { picked: "x" });
   };
   const finding = said === "x" && wrong && !answered;
-  const why =
-    slip.rule === "modalTo" ? ui.judgeWhyTo.replace("{w}", slip.modal ?? "") : slip.rule === "beBase" ? ui.judgeWhyBe : ui.judgeWhyAn;
+  const why = (() => {
+    if (slip.rule === "modalTo") return ui.judgeWhyTo.replace("{w}", slip.modal ?? "");
+    if (slip.rule === "beBase") return ui.judgeWhyBe;
+    if (slip.rule === "an") return ui.judgeWhyAn;
+    if (slip.rule === "particle") {
+      const pair = KO_PARTICLE_PAIRS.find((one) => one.includes(slip.fix)) ?? [slip.fix, slip.bad];
+      return ui.judgeWhyParticle.replace("{yes}", pair[0]!).replace("{no}", pair[1]!);
+    }
+    return ui.judgeWhyGender.replace("{w}", question.card.word).replace("{g}", slip.gender === "f" ? ui.judgeFem : ui.judgeMasc);
+  })();
+  const marked = (text: string, accent: boolean) => (
+    <>
+      {text.slice(0, markAt)}
+      <span data-judge-shown className={`font-semibold underline decoration-2 underline-offset-4 ${accent ? tone.accent : "text-ink"}`}>{text.slice(markAt, markAt + word.length)}</span>
+      {text.slice(markAt + word.length)}
+    </>
+  );
+  const grammarName = ladderName(language, locale, slip.key);
   return (
     <div className="flex flex-col gap-3">
       <CardFace
@@ -1524,26 +1543,14 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
               <s className="text-bad decoration-2">{slip.bad}</s>
               {slip.fix ? (
                 <>
-                  {" "}
+                  {slip.attached ? null : " "}
                   <strong className={`font-semibold ${tone.accent}`}>{slip.fix}</strong>
                 </>
               ) : null}
               {slip.tail}
             </>
-          ) : wrong ? (
-            <>
-              {slip.lead}
-              {slip.bad}
-              {" "}
-              <span data-judge-shown className="font-semibold underline decoration-2 underline-offset-4">{question.shown}</span>
-              {question.after}
-            </>
           ) : (
-            <>
-              {question.before}
-              <span data-judge-shown className={`font-semibold underline decoration-2 underline-offset-4 ${answered ? tone.accent : "text-ink"}`}>{question.shown}</span>
-              {question.after}
-            </>
+            marked(shownText, Boolean(answered))
           )
         }
         lineGloss={quizGloss(question.gloss, locale, language)}
@@ -1563,6 +1570,11 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
         <p data-judge-why dir="auto" className="text-caption text-slate-300">
           {why}
         </p>
+      ) : null}
+      {answered && grammarName ? (
+        <button type="button" data-judge-grammar onClick={() => openLesson({ language, key: slip.key })} className={`self-start rounded-full border border-line px-3 py-1 text-caption ${tone.accent} hover:bg-white/10`}>
+          📐 {grammarName} ›
+        </button>
       ) : null}
     </div>
   );

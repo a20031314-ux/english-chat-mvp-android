@@ -105,3 +105,22 @@ test("맞나 틀리나: 낱말은 그대로, 앞에 문법 실수 하나(조동�
   assert.ok(judged.includes("judge") && judged.includes("type"), judged.join());
   assert.ok(Array.from({ length: 20 }, (_, i) => cardQuiz("en", "w|need", "show", `x${i}`)?.kind).every((kind) => kind === "type"));
 });
+
+test("맞나 틀리나: 한국어 조사 받침 · 스페인어·프랑스어·이탈리아어·포르투갈어 관사 성 (맞는 관사일 때만 바꿈)", async () => {
+  const { grammarSlip, slipBadIndex } = await import("./quiz.ts");
+  const ko = grammarSlip("ko", "새 가구를 들여서 방이 달라져.", "가구를", "가구", "noun");
+  assert.deepEqual(ko && [ko.rule, `${ko.lead}${ko.bad}${ko.tail}`, ko.fix, ko.key, ko.attached], ["particle", "새 가구을 들여서 방이 달라져.", "를", "g|1:4", true]);
+  assert.equal(slipBadIndex(ko!), 1, "붙은 조사 = 앞말 자리");
+  assert.equal(grammarSlip("ko", "가능성이 높아.", "가능성이", "가능성", "noun")?.bad, "가");
+  assert.equal(grammarSlip("ko", "저는 학생이에요.", "학생이에요", "학생", "noun"), null, "이에요의 이는 조사가 아님");
+  assert.equal(grammarSlip("ko", "그럴 가능성도 있어.", "가능성도", "가능성", "noun"), null, "받침과 상관없는 조사");
+  assert.equal(grammarSlip("ko", "밥을 먹어.", "먹어", "먹다", "verb"), null, "명사만");
+  const es = grammarSlip("es", "La casa es grande.", "casa", "casa", "noun", "f");
+  assert.deepEqual(es && [`${es.lead}${es.bad}${es.tail}`, es.fix, es.key, es.gender], ["El casa es grande.", "La", "g|1:4", "f"]);
+  assert.equal(slipBadIndex(es!), 0);
+  assert.equal(grammarSlip("es", "Bebo el agua fría.", "agua", "agua", "noun", "f"), null, "el agua — 성과 다른 관사는 안 바꿈");
+  assert.equal(grammarSlip("es", "Es un artista.", "artista", "artista", "noun", "mf"), null, "두 성 낱말");
+  assert.equal(`${grammarSlip("fr", "J'aime le café.", "café", "café", "noun", "m")!.bad}`, "la");
+  assert.equal(grammarSlip("pt", "Vou a praia.", "praia", "praia", "noun", "m"), null, "a가 전치사(성과 안 맞음)");
+  assert.equal(grammarSlip("it", "Ho comprato una macchina.", "macchina", "macchina", "noun", "f")!.bad, "un");
+});
