@@ -25,6 +25,7 @@ test("스무고개 규칙: 답을 알려 주되 말하지 말라고, 판이 끝�
   assert.match(rules, /never before/);
   assert.match(rules, /"round" to "over"/);
   assert.match(rules, /asked 3 questions/);
+  assert.match(rules, /17 are left/);
   // 베낄 수 있는 예문(따옴표 안 학습 언어 문장)을 넣지 않는다.
   assert.doesNotMatch(rules, /"Is it/);
 });

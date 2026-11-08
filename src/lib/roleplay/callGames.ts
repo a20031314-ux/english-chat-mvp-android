@@ -74,7 +74,7 @@ export function gameRules(input: {
       } Never ask something whose answer is already in your question.`,
       start(input)
         ? ""
-        : `Each turn: first say in a few words whether their answer was right; if it was not, say the right answer once, short. Then ${
+        : `Each turn: first say in a few words whether their answer was right — an answer that does not answer the question is not right, say so; if it was not right, say the right answer once, short. Then ${
             asked >= QUIZ_ROUND
               ? `the round is over: tell them how many of the ${QUIZ_ROUND} they got right (count from the conversation) and ask whether they want another round. If they want another, start again with question 1.`
               : `ask question ${asked + 1}, and say its number.`
@@ -90,10 +90,10 @@ export function gameRules(input: {
     `The game is twenty questions. The thing you are thinking of this round is ${secret} — say it in ${target} only when they guess it or when the round is over, never before, and never hint at its name.`,
     input.start
       ? `This is your first line: greet them in a few words and explain in easy ${target}: you are thinking of one everyday thing (an animal, an object, a place or something in nature) and they ask yes-or-no questions to find it, up to ${TWENTY_ROUND}. Then invite their first question.`
-      : `They have asked ${count} question${count === 1 ? "" : "s"} this round.`,
+      : `They have asked ${count} question${count === 1 ? "" : "s"} this round, so ${Math.max(0, TWENTY_ROUND - count)} are left — say that number, do not count again yourself.`,
     start(input)
       ? ""
-      : `Each turn: if their line is a yes-or-no question, answer it truly for ${secret} — yes or no, with at most one short extra sentence — and say how many questions they have left. If it is a guess, say whether it is right. If it is not a question, help them ask one by giving the first words of a question they could ask. When they guess it, or after ${TWENTY_ROUND} questions, say what it was, a few warm words, and ask whether they want another round; that turn set "round" to "over". On every other turn leave "round" empty.`,
+      : `Each turn: if their line is a yes-or-no question, answer it truly for ${secret} — yes or no, with at most one short extra sentence — and say how many questions are left (the number above). If it is a guess, say whether it is right. If it is not a question, help them ask one by giving the first words of a question they could ask. When they guess it, or after ${TWENTY_ROUND} questions, say what it was, a few warm words, and ask whether they want another round; that turn set "round" to "over". On every other turn leave "round" empty.`,
     `Their question may have small mistakes: answer what they meant; correct them only in "better" as usual.`,
   ]
     .filter(Boolean)
