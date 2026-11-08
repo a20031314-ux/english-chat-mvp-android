@@ -1504,8 +1504,11 @@ function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: re
         <p data-curve-detail className="flex flex-wrap items-center gap-x-3 text-meta tabular-nums text-slate-400">
           <span className="text-slate-300">{dateLabel(at.day)}</span>
           <span className="inline-flex items-center gap-1">
-            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
             {`${ui.lbFresh} ${at.fresh + at.again}`}
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
+            {`${ui.lbNew} ${at.fresh}`}
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-25`}><rect width="8" height="8" rx="2" /></svg>

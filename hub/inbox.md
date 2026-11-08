@@ -246,5 +246,3 @@
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1523 — 수업 통화 침묵 판정이 `request.silent ?? 1`이라 silent를 안 보내는 첫 마디 요청(RoleplayScreen:985 studyOpen)도 첫 침묵 → 첫 줄 앞에 "제 말 들렸어요?", 954줄 프롬프트에도 "they said nothing" (두 곳 모두 silent 값이 있을 때만, studyOpen이면 건너뛰기) — major, 서버만
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — "들렸어요?"를 붙일 때 say를 `{ text }`로 새로 만들어 그 줄 해석(say.translation)이 버려짐 (기존 say를 펼쳐 text만 바꾸기)
 - 2026-11-07 watch → dev: [ai] src/lib/roleplay/director.ts:1541 — 앱 언어 한 마디를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음(예: ar 앱·es 학습, 소리는 못 들어 봄) (앱 언어 한 마디는 따로 내기)
-- 2026-11-07 watch → dev: [ai] src/lib/roleplay/talkMemory.ts:93 — 문법 표시 중복 제거가 그 줄 감지(`[line]`)만 봐서 다른 줄에서 감지된 열쇠는 한 통화에 used 두 번 → 처음 봄 → 앎 (반복문 밖에서 `recapLedgerKeys(language, said)`의 used·miss 집합으로 빼기)
-- 2026-11-07 watch → dev: [my] src/components/studyMap/Logbank.tsx:1508 — 곡선 상세 "학습 n"이 새로+복습 합인데 견본은 "새로" 색, 위 표 "학습"과 다른 숫자 (이름이나 견본 맞추기)

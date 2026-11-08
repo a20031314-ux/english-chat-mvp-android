@@ -86,11 +86,14 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
   const ledger: { k: string; src: "call"; r: "used" }[] = [];
   const used: { k: string[]; x: string; t: number; s: "call" }[] = [];
   const t = Math.round(input.at / 1000);
+  const callKeys = recapLedgerKeys(language, said);
+  const callDetected = new Set([...callKeys.used, ...callKeys.miss]);
   opening.forEach((line, i) => {
     if (!spoken(line) || fixedLine(line)) return;
     for (const key of keysOf(line)) if (!firstUses[key]) firstUses[key] = { at: input.at, line: line.text.trim() };
     // 감지기가 이미 잡은 열쇠는 callHooks가 장부에 남겼으니 빼서, 한 통화에 두 번 used로 처음 봄 → 앎이 되지 않게(변경 감시 2026-11-07 major).
-    const detected = new Set(recapLedgerKeys(language, [line]).used);
+    // 그 통화 어느 줄에서든 감지된 열쇠(쓴 것·틀린 것)는 빼기 — callHooks가 통화 단위로 이미 남김(변경 감시 2026-11-07 두 번째).
+    const detected = callDetected;
     const extra = (tags.uses[i] ?? []).filter((key) => !detected.has(key));
     if (extra.length) {
       for (const k of extra) ledger.push({ k, src: "call", r: "used" });

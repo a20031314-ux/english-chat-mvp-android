@@ -1020,7 +1020,8 @@
     "talkKinds": "使った文法・表現",
     "talkTop": "使った最高ステージ",
     "talkNewUse": "初めて使えたもの",
-    "growUsedAll": "今までの活用"
+    "growUsedAll": "今までの活用",
+    "lbNew": "新規"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2043,7 +2044,8 @@
     "talkKinds": "用到的语法·表达",
     "talkTop": "用到的最高阶段",
     "talkNewUse": "第一次用上的",
-    "growUsedAll": "至今用上"
+    "growUsedAll": "至今用上",
+    "lbNew": "新的"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3069,7 +3071,8 @@
     "talkKinds": "Ngữ pháp & cách nói đã dùng",
     "talkTop": "Giai đoạn cao nhất đã dùng",
     "talkNewUse": "Lần đầu bạn dùng",
-    "growUsedAll": "Đã dùng đến nay"
+    "growUsedAll": "Đã dùng đến nay",
+    "lbNew": "Mới"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4100,7 +4103,8 @@
     "talkKinds": "Grammaire et expressions utilisées",
     "talkTop": "Étape la plus haute utilisée",
     "talkNewUse": "Utilisé pour la première fois",
-    "growUsedAll": "Utilisé à ce jour"
+    "growUsedAll": "Utilisé à ce jour",
+    "lbNew": "Nouveau"
   },
   "it": {
     "archive": "Report",
@@ -5322,7 +5326,8 @@
     "talkKinds": "Grammatica ed espressioni usate",
     "talkTop": "Livello più alto usato",
     "talkNewUse": "Usato per la prima volta",
-    "growUsedAll": "Usate finora"
+    "growUsedAll": "Usate finora",
+    "lbNew": "Nuove"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6356,7 +6361,8 @@
     "talkKinds": "Gramática e expressões usadas",
     "talkTop": "Etapa mais alta usada",
     "talkNewUse": "Usou pela primeira vez",
-    "growUsedAll": "Usadas até agora"
+    "growUsedAll": "Usadas até agora",
+    "lbNew": "Novas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7576,7 +7582,8 @@
     "talkKinds": "Грамматика и выражения",
     "talkTop": "Самый высокий этап",
     "talkNewUse": "Впервые использовали",
-    "growUsedAll": "Применено всего"
+    "growUsedAll": "Применено всего",
+    "lbNew": "Новые"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8606,7 +8613,8 @@
     "talkKinds": "Tata bahasa & ungkapan dipakai",
     "talkTop": "Tahap tertinggi dipakai",
     "talkNewUse": "Pertama kali kamu pakai",
-    "growUsedAll": "Dipakai sejauh ini"
+    "growUsedAll": "Dipakai sejauh ini",
+    "lbNew": "Baru"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9629,7 +9637,8 @@
     "talkKinds": "قواعد وتعابير استخدمتها",
     "talkTop": "أعلى مرحلة استخدمتها",
     "talkNewUse": "استخدمتها لأول مرة",
-    "growUsedAll": "استخدمتها حتى الآن"
+    "growUsedAll": "استخدمتها حتى الآن",
+    "lbNew": "جديدة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10652,7 +10661,8 @@
     "talkKinds": "ไวยากรณ์และสำนวนที่ใช้",
     "talkTop": "ขั้นสูงสุดที่ใช้",
     "talkNewUse": "ใช้เป็นครั้งแรก",
-    "growUsedAll": "ใช้จริงทั้งหมด"
+    "growUsedAll": "ใช้จริงทั้งหมด",
+    "lbNew": "ใหม่"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11675,6 +11685,7 @@
     "talkKinds": "इस्तेमाल किए व्याकरण·अभिव्यक्ति",
     "talkTop": "इस्तेमाल किया सबसे ऊँचा चरण",
     "talkNewUse": "पहली बार इस्तेमाल किया",
-    "growUsedAll": "अब तक इस्तेमाल"
+    "growUsedAll": "अब तक इस्तेमाल",
+    "lbNew": "नए"
   }
 }
