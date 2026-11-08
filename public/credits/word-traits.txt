@@ -10,3 +10,5 @@ es fr pt  noun gender — articles in the example sentences plus spaCy core_news
 it  noun gender — articles in the example sentences, ending rules and checks by Claude (the spaCy Italian model is CC BY-NC-SA, so it was not used)
 hi  noun gender — agreement in the example sentences (मेरा/मेरी, का/की, adjectives), frequent nouns without evidence by Claude
 ar  noun gender — ة rule, exception lists and demonstratives in the example sentences (هذا/هذه), by Claude
+th  romanization — PyThaiNLP (https://github.com/PyThaiNLP/pythainlp), Apache 2.0, Royal Thai General System, no tone marks; classifiers by Claude
+vi  classifiers by Claude

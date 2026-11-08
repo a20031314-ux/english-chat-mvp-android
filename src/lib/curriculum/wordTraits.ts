@@ -45,6 +45,8 @@ const BOOKS: Record<string, () => Promise<{ default: unknown }>> = {
   ko: () => import("./word-traits/ko.json"),
   pt: () => import("./word-traits/pt.json"),
   ru: () => import("./word-traits/ru.json"),
+  th: () => import("./word-traits/th.json"),
+  vi: () => import("./word-traits/vi.json"),
   zh: () => import("./word-traits/zh.json"),
 };
 

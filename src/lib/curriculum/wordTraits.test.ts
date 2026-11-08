@@ -103,3 +103,15 @@ test("힌디어·아랍어: 명사 성 (किताब f · घर m · डॉ�
   assert.equal(ar["شمس"]?.g, "f", "ة 없는 여성 명사");
   assert.equal(ar["رجل"]?.g, "m");
 });
+
+test("태국어·베트남어: 양사·로마자 (หมา ตัว · หนังสือ เล่ม · รถ คัน · หมา ma · chó con · sách cuốn)", () => {
+  const read = (language: string) => JSON.parse(readFileSync(new URL(`${language}.json`, DIR), "utf8")) as Record<string, { cl?: string[]; rom?: string }>;
+  const th = read("th");
+  assert.equal(th["หมา"]?.cl?.[0], "ตัว");
+  assert.equal(th["หนังสือ"]?.cl?.[0], "เล่ม");
+  assert.equal(th["รถ"]?.cl?.[0], "คัน");
+  assert.equal(th["หมา"]?.rom, "ma");
+  const vi = read("vi");
+  assert.equal(vi["chó"]?.cl?.[0], "con");
+  assert.equal(vi["sách"]?.cl?.[0], "cuốn");
+});
