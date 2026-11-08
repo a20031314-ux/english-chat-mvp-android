@@ -124,3 +124,21 @@ test("맞나 틀리나: 한국어 조사 받침 · 스페인어·프랑스어·�
   assert.equal(grammarSlip("pt", "Vou a praia.", "praia", "praia", "noun", "m"), null, "a가 전치사(성과 안 맞음)");
   assert.equal(grammarSlip("it", "Ho comprato una macchina.", "macchina", "macchina", "noun", "f")!.bad, "un");
 });
+
+test("맞나 틀리나 관사 성: 두 성이 맞거나 성에 따라 뜻이 바뀌는 낱말은 word-traits에 mf → 관사를 안 바꿈 (es·fr·it·pt)", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { grammarSlip } = await import("./quiz.ts");
+  // el/la azúcar · el final(끝)/la final(결승) · el cura(신부)/la cura(치료) · il/la radio · o/a personagem …
+  const both: Record<string, string[]> = {
+    es: ["azúcar", "final", "cura", "radio", "mar", "papa", "coma", "margen", "lente", "comandante", "pariente"],
+    fr: ["radio", "guide", "finale", "dentiste"],
+    it: ["radio", "fonte", "assistente", "tenente"],
+    pt: ["cura", "grama", "cabeça", "rádio", "caixa", "personagem", "parente"],
+  };
+  for (const [language, words] of Object.entries(both)) {
+    const book = JSON.parse(readFileSync(new URL(`./word-traits/${language}.json`, import.meta.url), "utf8")) as Record<string, { g?: string }>;
+    for (const word of words) assert.equal(book[word]?.g, "mf", `${language} ${word}`);
+  }
+  assert.equal(grammarSlip("es", "Me gusta el azúcar.", "azúcar", "azúcar", "noun", "mf"), null);
+  assert.equal(grammarSlip("pt", "A personagem principal é forte.", "personagem", "personagem", "noun", "mf"), null);
+});

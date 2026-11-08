@@ -256,6 +256,5 @@
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/word-traits/ja.json — jt "na"에 同じ·とうとう·さっぱり·そっくり·ぴったり (빼거나 따로 표시 — "同じな" 막기)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/word-traits/ja.json — ある hon.down이 ござる(정중어지 겸양 아님) (down 빼기)
 - 2026-11-08 watch → dev: [ai] src/lib/roleplay/review.ts:201 — 통화 중 💡 live 힌트가 pieces만 만들고 say·meaning이 비어, 앱 버전을 안 가리는 /api/roleplay/review 때문에 Play 2.79는 힌트에 why 한 줄만 (옛 앱엔 say·meaning도 채우거나 requestAppVersion으로 프롬프트 나누기)
-- 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1468 — 맞나 틀리나 관사 성 바꾸기가 성 하나만 믿어 es azúcar·final·cura·radio, pt personagem 같은 두 성·뜻 바뀜 낱말의 맞는 문장을 ❌로 채점 (제외 목록 또는 word-traits에 "mf" 보강, 테스트 한 줄)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1413 — 한국어 이/가 실수 열쇠가 g|1:1인데 ko 사다리 1:1은 "N이/가 아니에요" — 결과가 엉뚱한 칸에 쌓이고 📐 문이 다른 수업을 엶 (주격 조사 칸 열쇠로)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/learnerLanguages.ts:26 — 주석은 "배우는 언어는 뺌"인데 프로필 할 수 있는 언어를 그대로 넣어, 학습 언어를 적은 사람은 비중 최솟값이 1로 잡혀 모국어에 없는 칸 먼저 내기가 꺼짐 (학습 언어 빼기)
