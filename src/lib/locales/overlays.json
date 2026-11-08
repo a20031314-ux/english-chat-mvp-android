@@ -1029,7 +1029,8 @@
     "replayWhole": "一文まるごと",
     "replayMaking": "場面を作っています…",
     "replayType": "入力",
-    "homeworkTag": "宿題"
+    "homeworkTag": "宿題",
+    "homeworkTalk": "会話"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2061,7 +2062,8 @@
     "replayWhole": "整句",
     "replayMaking": "正在准备场景…",
     "replayType": "输入",
-    "homeworkTag": "作业"
+    "homeworkTag": "作业",
+    "homeworkTalk": "对话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3096,7 +3098,8 @@
     "replayWhole": "Cả câu",
     "replayMaking": "Đang chuẩn bị cảnh…",
     "replayType": "Gõ",
-    "homeworkTag": "Bài tập"
+    "homeworkTag": "Bài tập",
+    "homeworkTalk": "Hội thoại"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4136,7 +4139,8 @@
     "replayWhole": "La phrase entière",
     "replayMaking": "Préparation des scènes…",
     "replayType": "Écrire",
-    "homeworkTag": "Devoir"
+    "homeworkTag": "Devoir",
+    "homeworkTalk": "Conversation"
   },
   "it": {
     "archive": "Report",
@@ -5367,7 +5371,8 @@
     "replayWhole": "La frase intera",
     "replayMaking": "Preparo le scene…",
     "replayType": "Scrivi",
-    "homeworkTag": "Compito"
+    "homeworkTag": "Compito",
+    "homeworkTalk": "Conversazione"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6410,7 +6415,8 @@
     "replayWhole": "A frase inteira",
     "replayMaking": "Preparando as cenas…",
     "replayType": "Digitar",
-    "homeworkTag": "Tarefa"
+    "homeworkTag": "Tarefa",
+    "homeworkTalk": "Conversa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7639,7 +7645,8 @@
     "replayWhole": "Фраза целиком",
     "replayMaking": "Готовим сцены…",
     "replayType": "Написать",
-    "homeworkTag": "Домашнее задание"
+    "homeworkTag": "Домашнее задание",
+    "homeworkTalk": "Разговор"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8678,7 +8685,8 @@
     "replayWhole": "Kalimat utuh",
     "replayMaking": "Menyiapkan adegan…",
     "replayType": "Ketik",
-    "homeworkTag": "PR"
+    "homeworkTag": "PR",
+    "homeworkTalk": "Percakapan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9710,7 +9718,8 @@
     "replayWhole": "الجملة كاملة",
     "replayMaking": "جارٍ تحضير المشاهد…",
     "replayType": "اكتب",
-    "homeworkTag": "واجب"
+    "homeworkTag": "واجب",
+    "homeworkTalk": "محادثة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10742,7 +10751,8 @@
     "replayWhole": "ทั้งประโยค",
     "replayMaking": "กำลังเตรียมฉาก…",
     "replayType": "พิมพ์",
-    "homeworkTag": "การบ้าน"
+    "homeworkTag": "การบ้าน",
+    "homeworkTalk": "บทสนทนา"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11774,6 +11784,7 @@
     "replayWhole": "पूरा वाक्य",
     "replayMaking": "दृश्य तैयार हो रहे हैं…",
     "replayType": "लिखें",
-    "homeworkTag": "होमवर्क"
+    "homeworkTag": "होमवर्क",
+    "homeworkTalk": "बातचीत"
   }
 }

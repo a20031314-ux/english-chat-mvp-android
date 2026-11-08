@@ -42,7 +42,7 @@ export function RoleplayPast({
   openReplay = false,
 }: {
   saved: SavedConversation;
-  /** 숙제 줄에서 열었을 때 — 🎭 장면을 바로 연다. */
+  /** 숙제 줄에서 열었을 때 — 숙제 화면 [퀴즈 | 대화]를 바로 연다. */
   openReplay?: boolean;
   ui: UICopy;
   onClose: () => void;

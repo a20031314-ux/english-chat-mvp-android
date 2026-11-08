@@ -210,8 +210,8 @@ function LessonDoor({ ui }: { ui: UICopy }) {
 }
 
 /**
- * 수업 숙제 한 줄(2026-11-08, 설계 call-modes 5절 — 지금 종류는 🎭 이렇게도 말할 수 있었어요): 튜터 얼굴 + 숙제 + 🎭.
- * 누르면 그 통화 돌아보기에서 장면을 바로 연다(openCall replay). 끝냈으면 ✓, 그 통화 기록이 지워졌으면 안 보임.
+ * 수업 숙제 한 줄(2026-11-08, 설계 call-modes 5절): 튜터 얼굴 + 숙제 · 퀴즈 · 대화(🎭는 Room 게임과 겹쳐 뺌).
+ * 누르면 그 통화 돌아보기 위에 숙제 화면 [퀴즈 | 대화](openCall replay → roleplay/CallReplay HomeworkSheet). 끝냈으면 ✓, 그 통화 기록이 지워졌으면 안 보임.
  */
 function HomeworkRow({ ui, language }: { ui: UICopy; language: string }) {
   const [homework, setHomework] = useState<Homework | null>(null);
@@ -242,7 +242,10 @@ function HomeworkRow({ ui, language }: { ui: UICopy; language: string }) {
     >
       <AiAvatar size={24} language={language} />
       <span className="min-w-0 flex-1 truncate text-chat font-semibold text-ink">
-        {ui.homeworkTag} · 🎭 {ui.replayTitle}
+        {ui.homeworkTag}
+        <span className="ms-2 font-normal text-slate-400">
+          {ui.quizTag} · {ui.homeworkTalk}
+        </span>
       </span>
       <span aria-hidden className="shrink-0 text-caption text-slate-300">{homework.done ? "✓" : "›"}</span>
     </button>

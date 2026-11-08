@@ -24,7 +24,15 @@ export type ReplayScene = { kind: ReplayKind; lines: ReplayLine[] };
 /** 장면 하나의 결과(이 폰에만): 내 줄마다 맞힘 + 마지막 한 줄 전체. */
 export type ReplayResult = { ok: number; of: number; whole: boolean; at: number };
 
-export type StoredReplay = { callId: string; scenes: ReplayScene[]; results: Partial<Record<ReplayKind, ReplayResult>>; at: number };
+/** 숙제 퀴즈 결과(homeworkQuiz.ts, 2026-11-08 사용자 "숙제 > 하위탭(퀴즈, 대화)"). */
+export type HomeworkQuizResult = { ok: number; of: number; at: number };
+
+export type StoredReplay = { callId: string; scenes: ReplayScene[]; results: Partial<Record<ReplayKind, ReplayResult>>; quiz?: HomeworkQuizResult; at: number };
+
+/** 숙제가 끝났나: 대화(장면 하나 이상)와, 퀴즈가 있으면 퀴즈까지. */
+export function homeworkComplete(row: StoredReplay, hasQuiz: boolean): boolean {
+  return Object.keys(row.results).length > 0 && (!hasQuiz || Boolean(row.quiz));
+}
 
 export const MAX_REPLAY_CALLS = 20;
 const MAX_LINE_CHARS = 220;
@@ -210,21 +218,37 @@ export function keepReplay(store: Storage | undefined | null, language: string, 
   write(store, `${REPLAYS}.${language}`, [row, ...rest].slice(0, MAX_REPLAY_CALLS));
 }
 
-export function noteReplayResult(store: Storage | undefined | null, language: string, callId: string, kind: ReplayKind, result: ReplayResult): StoredReplay | null {
+export function noteReplayResult(
+  store: Storage | undefined | null,
+  language: string,
+  callId: string,
+  kind: ReplayKind,
+  result: ReplayResult,
+  hasQuiz = false,
+): StoredReplay | null {
   const row = replayFor(store, language, callId);
   if (!row) return null;
-  const next = { ...row, results: { ...row.results, [kind]: result } };
+  return settle(store, language, { ...row, results: { ...row.results, [kind]: result } }, hasQuiz, result.at);
+}
+
+export function noteHomeworkQuiz(store: Storage | undefined | null, language: string, callId: string, result: HomeworkQuizResult): StoredReplay | null {
+  const row = replayFor(store, language, callId);
+  if (!row) return null;
+  return settle(store, language, { ...row, quiz: result }, true, result.at);
+}
+
+function settle(store: Storage | undefined | null, language: string, next: StoredReplay, hasQuiz: boolean, at: number): StoredReplay {
   keepReplay(store, language, next);
   const homework = readHomework(store, language);
-  if (homework && homework.callId === callId && homework.kind === "replay" && !homework.done) {
-    write(store, `${HOMEWORK}.${language}`, { ...homework, done: result.at });
+  if (homework && homework.callId === next.callId && homework.kind === "replay" && !homework.done && homeworkComplete(next, hasQuiz)) {
+    write(store, `${HOMEWORK}.${language}`, { ...homework, done: at });
   }
   return next;
 }
 
 /**
  * 수업 숙제(설계 call-modes 5절, 2026-11-08 — 종류 하나씩 늘림): 한 번에 하나, 새 숙제가 지난 숙제를 덮어씀, 안 해도 잠금 없음.
- * 지금 종류는 replay(🎭)뿐 — 퀴즈 한 판·세 줄 쓰기·사전 찾기는 다음에.
+ * 지금 종류는 replay 하나 — 숙제 화면 안 [퀴즈 | 대화](퀴즈 = 그 통화에서 고친 말·장면 조각, homeworkQuiz.ts). 세 줄 쓰기·사전 찾기는 다음에.
  */
 export type Homework = { kind: "replay"; callId: string; at: number; done?: number };
 

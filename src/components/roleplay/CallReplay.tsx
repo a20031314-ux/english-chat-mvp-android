@@ -1,19 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { Attempt } from "@/components/speech/Attempt";
+import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { chatPartnerForLanguage, tutorVoice, type TutorGender } from "@/lib/chatPartner";
 import type { UICopy } from "@/lib/copy";
 import { coerceLanguageCode, learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
+import type { QuizQuestion } from "@/lib/curriculum/quiz";
+import { homeworkQuiz } from "@/lib/roleplay/homeworkQuiz";
 import { compareToTarget } from "@/lib/roleplay/practice";
 import {
   blanked,
   giveHomework,
   keepReplay,
+  noteHomeworkQuiz,
   noteReplayResult,
   parseReplay,
   pieceSaid,
@@ -73,8 +77,10 @@ async function fetchScenes(input: {
 }
 
 /**
- * 끝난 통화 화면·돌아보기의 🎭 이렇게도 말할 수 있었어요(lib/roleplay/replay.ts, 2026-11-08).
- * 수업 통화는 처음 그려질 때 장면을 받아 두고 그 통화를 숙제로, 자유대화는 줄을 눌러야 받는다. 받은 장면은 이 폰에만.
+ * 끝난 통화 화면·돌아보기의 이렇게도 말할 수 있었어요(lib/roleplay/replay.ts, 2026-11-08).
+ * 수업 통화는 처음 그려질 때 장면을 받아 두고 그 통화를 숙제로 — 숙제는 [퀴즈 | 대화](2026-11-08 사용자 "숙제 > 하위탭(퀴즈, 대화)"):
+ * 퀴즈 = 그 통화에서 고친 말·장면 조각(homeworkQuiz.ts), 대화 = 장면. 자유대화는 줄을 눌러야 장면을 받고 숙제가 아니다. 받은 장면은 이 폰에만.
+ * 🎭는 Room 게임과 겹쳐 쓰지 않는다(2026-11-08).
  */
 export function CallReplay({
   ui,
@@ -99,15 +105,16 @@ export function CallReplay({
   level: number;
   isPremium: boolean;
   gender?: TutorGender;
-  /** 숙제 줄에서 열었을 때 — 아직 안 한 장면을 바로 연다. */
+  /** 숙제 줄에서 열었을 때 — 숙제 화면을 바로 연다. */
   openFirst?: boolean;
 }) {
   const [stored, setStored] = useState<StoredReplay | null>(() => (callId ? replayFor(storage(), language, callId) : null));
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
-  const [playing, setPlaying] = useState<ReplayScene | null>(null);
+  const [sheet, setSheet] = useState(false);
   const asked = useRef(false);
   const canMake = Boolean(callId) && replayable(said);
+  const quiz = useMemo(() => (stored && lesson ? homeworkQuiz(language, said, stored.scenes) : []), [stored, lesson, language, said]);
 
   const make = async () => {
     if (asked.current || !canMake) return;
@@ -133,52 +140,157 @@ export function CallReplay({
   }, [lesson, callId]);
 
   useEffect(() => {
-    if (!openFirst || !stored || playing) return;
-    const next = stored.scenes.find((scene) => !stored.results[scene.kind]) ?? stored.scenes[0];
-    if (next) setPlaying(next);
+    if (openFirst && stored) setSheet(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openFirst, stored?.callId]);
 
   if (!canMake && !stored) return null;
 
+  const body = stored ? (
+    lesson ? (
+      <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} />
+    ) : (
+      <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} />
+    )
+  ) : loading ? (
+    <p className="mt-2 text-meta text-slate-400">{ui.replayMaking}</p>
+  ) : (
+    <button
+      type="button"
+      data-replay-make
+      onClick={() => void make()}
+      className="mt-2 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
+    >
+      {failed ? "↻" : "▶"} {ui.replaySame} · {ui.replayFurther}
+    </button>
+  );
+
   return (
     <section className="shrink-0 border-b border-white/10 px-4 py-2.5" data-call-replay={stored ? "ready" : loading ? "making" : "idle"}>
-      <div className="flex items-center gap-2">
-        <span aria-hidden className="text-body">🎭</span>
-        <span className="min-w-0 flex-1 truncate text-note font-semibold text-ink">{ui.replayTitle}</span>
-        {lesson ? <span className="shrink-0 rounded-full border border-white/20 px-2 py-0.5 text-meta text-slate-300">{ui.homeworkTag}</span> : null}
+      <p className="truncate text-note font-semibold text-ink">{lesson ? ui.homeworkTag : ui.replayTitle}</p>
+      {body}
+      {sheet && stored ? (
+        <HomeworkSheet ui={ui} language={language} gender={gender} onClose={() => setSheet(false)}>
+          {lesson ? (
+            <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} />
+          ) : (
+            <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} />
+          )}
+        </HomeworkSheet>
+      ) : null}
+    </section>
+  );
+}
+
+/** 숙제 줄(Logbank)에서 연 숙제 화면: 튜터 얼굴 · 숙제 · ✕, 아래 [퀴즈 | 대화]. */
+function HomeworkSheet({ ui, language, gender, onClose, children }: { ui: UICopy; language: string; gender?: TutorGender; onClose: () => void; children: ReactNode }) {
+  const chosen = useTutorGender(language);
+  return (
+    <FullScreenLayer>
+      <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]" data-homework-sheet>
+        <AiAvatar size={28} language={language} gender={gender ?? chosen} />
+        <p className="min-w-0 flex-1 truncate text-body font-semibold text-ink">{ui.homeworkTag}</p>
+        <button type="button" onClick={onClose} aria-label={ui.guideClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+          ✕
+        </button>
       </div>
-      {stored ? (
-        <div className="mt-2 flex flex-wrap gap-2">
-          {stored.scenes.map((scene) => {
-            const result = stored.results[scene.kind];
-            return (
-              <button
-                key={scene.kind}
-                type="button"
-                data-replay-scene={scene.kind}
-                onClick={() => setPlaying(scene)}
-                className="flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
-              >
-                <span aria-hidden>{KIND_ICON[scene.kind]}</span>
-                <span>{kindName(ui, scene.kind)}</span>
-                {result ? <span className="tabular-nums text-slate-300">✓ {result.ok}/{result.of}</span> : null}
-              </button>
-            );
-          })}
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">{children}</div>
+    </FullScreenLayer>
+  );
+}
+
+type Shared = {
+  ui: UICopy;
+  language: string;
+  locale: LearningLanguageCode;
+  stored: StoredReplay;
+  gender?: TutorGender;
+  isPremium: boolean;
+  onStored: (row: StoredReplay) => void;
+};
+
+/** 숙제 = [퀴즈 | 대화]. 퀴즈가 없으면(고친 말·조각이 없음) 대화만. 처음 탭은 아직 안 한 쪽. */
+function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestion[] }) {
+  const { ui, language, locale, stored, onStored } = shared;
+  const [tab, setTab] = useState<"quiz" | "talk">(() => (quiz.length && !stored.quiz ? "quiz" : "talk"));
+  const [playing, setPlaying] = useState(false);
+  const talkDone = Object.keys(stored.results).length > 0;
+  const tabClass = (on: boolean) =>
+    `flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-meta ${on ? "border-white/60 bg-white/15 text-white" : "border-white/15 text-slate-300 hover:bg-white/10"}`;
+  return (
+    <div className="mt-2">
+      {quiz.length ? (
+        <div role="tablist" className="flex gap-2">
+          <button type="button" role="tab" aria-selected={tab === "quiz"} data-homework-tab="quiz" onClick={() => setTab("quiz")} className={tabClass(tab === "quiz")}>
+            {ui.quizTag}
+            {stored.quiz ? <span className="tabular-nums">✓ {stored.quiz.ok}/{stored.quiz.of}</span> : null}
+          </button>
+          <button type="button" role="tab" aria-selected={tab === "talk"} data-homework-tab="talk" onClick={() => setTab("talk")} className={tabClass(tab === "talk")}>
+            {ui.homeworkTalk}
+            {talkDone ? <span>✓</span> : null}
+          </button>
         </div>
-      ) : loading ? (
-        <p className="mt-2 text-meta text-slate-400">{ui.replayMaking}</p>
-      ) : (
+      ) : null}
+      {tab === "quiz" && quiz.length ? (
         <button
           type="button"
-          data-replay-make
-          onClick={() => void make()}
-          className="mt-2 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
+          data-homework-quiz
+          onClick={() => setPlaying(true)}
+          className="mt-2 flex w-full items-center gap-2 rounded-2xl border border-white/20 px-3 py-2.5 text-start text-note text-white hover:bg-white/10"
         >
-          {failed ? "↻" : "▶"} {ui.replaySame} · {ui.replayFurther}
+          <span aria-hidden>{stored.quiz ? "↻" : "▶"}</span>
+          <span className="min-w-0 flex-1">{ui.quizTag}</span>
+          <span className="tabular-nums text-slate-300">{stored.quiz ? `${stored.quiz.ok}/${stored.quiz.of}` : quiz.length}</span>
         </button>
+      ) : (
+        <SceneChips {...shared} hasQuiz={quiz.length > 0} />
       )}
+      {playing ? (
+        <QuizPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          quizKey={`hw|${stored.callId}`}
+          title={ui.homeworkTag}
+          seed={stored.callId}
+          unit={quiz}
+          bundleKeys={quiz.map((_, at) => `hw|${stored.callId}|${at}`)}
+          onBundle={(results) => {
+            const counted = results.filter((one) => !one.skipped);
+            const next = noteHomeworkQuiz(storage(), language, stored.callId, { ok: counted.filter((one) => one.correct).length, of: results.length, at: Date.now() });
+            if (next) onStored(next);
+          }}
+          onDone={() => undefined}
+          onClose={() => setPlaying(false)}
+        />
+      ) : null}
+    </div>
+  );
+}
+
+/** 대화: 장면 칩(같은 흐름 · 한 걸음 더/다른 갈래) → 장면 연습. */
+function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz }: Shared & { hasQuiz: boolean }) {
+  const [playing, setPlaying] = useState<ReplayScene | null>(null);
+  return (
+    <>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {stored.scenes.map((scene) => {
+          const result = stored.results[scene.kind];
+          return (
+            <button
+              key={scene.kind}
+              type="button"
+              data-replay-scene={scene.kind}
+              onClick={() => setPlaying(scene)}
+              className="flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
+            >
+              <span aria-hidden>{KIND_ICON[scene.kind]}</span>
+              <span>{kindName(ui, scene.kind)}</span>
+              {result ? <span className="tabular-nums text-slate-300">✓ {result.ok}/{result.of}</span> : null}
+            </button>
+          );
+        })}
+      </div>
       {playing ? (
         <ReplayPlayer
           ui={ui}
@@ -188,13 +300,13 @@ export function CallReplay({
           gender={gender}
           isPremium={isPremium}
           onDone={(result) => {
-            const next = noteReplayResult(storage(), language, callId, playing.kind, { ...result, at: Date.now() });
-            if (next) setStored(next);
+            const next = noteReplayResult(storage(), language, stored.callId, playing.kind, { ...result, at: Date.now() }, hasQuiz);
+            if (next) onStored(next);
           }}
           onClose={() => setPlaying(null)}
         />
       ) : null}
-    </section>
+    </>
   );
 }
 
