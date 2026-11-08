@@ -33,7 +33,8 @@ export type WordTraits = {
 };
 export type TraitBook = Record<string, WordTraits>;
 
-const BOOKS: Record<string, () => Promise<{ default: TraitBook }>> = {
+// JSON 모양 그대로 받으면 타입이 너무 커서 unknown으로 받고 TraitBook으로 본다.
+const BOOKS: Record<string, () => Promise<{ default: unknown }>> = {
   ru: () => import("./word-traits/ru.json"),
 };
 
@@ -43,7 +44,7 @@ const cache = new Map<string, Promise<TraitBook | null>>();
 export function loadWordTraits(language: string): Promise<TraitBook | null> {
   const have = cache.get(language);
   if (have) return have;
-  const made = (BOOKS[language]?.().then((mod) => mod.default).catch(() => null) ?? Promise.resolve(null)) as Promise<TraitBook | null>;
+  const made = BOOKS[language]?.().then((mod) => mod.default as TraitBook).catch(() => null) ?? Promise.resolve(null);
   cache.set(language, made);
   return made;
 }
