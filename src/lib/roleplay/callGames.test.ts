@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { gameRules, learnerTurns, pickSecret, roundOverOf, TWENTY_THINGS } from "./callGames.ts";
+import { gameRules, isCallGame, learnerTurns, pickSecret, roundOverOf, TWENTY_THINGS } from "./callGames.ts";
 
 test("스무고개 답: 이번 통화에서 낸 것은 다시 안 고름, 다 쓰면 처음부터", () => {
   const first = pickSecret([], () => 0);
@@ -35,4 +35,17 @@ test("판 끝 읽기·학습자 차례 세기", () => {
   assert.equal(roundOverOf({ round: "over" }, "quiz"), false);
   assert.equal(roundOverOf({ round: "" }, "twenty"), false);
   assert.equal(learnerTurns([{ who: "tutor", text: "¿Es un animal?" }, { who: "learner", text: "…" }, { who: "learner", text: "¿Es grande?" }, { who: "learner", text: "大きいですか" }]), 2);
+});
+
+test("가르치기: 튜터가 앱 언어를 배우는 사람, 학습자는 학습 언어로 설명 — 튜터는 말로 안 고침", () => {
+  const opening = gameRules({ game: "teach", target: "English", native: "Korean", count: 0, start: true });
+  assert.match(opening, /just started learning Korean/);
+  assert.match(opening, /explain in English/);
+  assert.match(opening, /first line/);
+  assert.match(opening, /do not correct their English out loud/);
+  const later = gameRules({ game: "teach", target: "Spanish", native: "Arabic", count: 4 });
+  assert.doesNotMatch(later, /first line/);
+  assert.match(later, /written in Arabic script/);
+  assert.equal(isCallGame("teach"), true);
+  assert.equal(roundOverOf({ round: "over" }, "teach"), false);
 });

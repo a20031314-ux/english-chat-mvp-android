@@ -100,17 +100,17 @@ export function chatWithTutor(targetLanguage: string, gender: TutorGender | unde
   sendAppIntent("openTab", { tab: "chat" });
 }
 
-type CallKind = "talk" | "lesson" | "quiz" | "twenty";
+type CallKind = "talk" | "lesson" | "quiz" | "twenty" | "teach";
 
 /** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 그 종류의 통화를 연다. */
 function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
   if (gender) writeTutorGender(targetLanguage, gender);
-  sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "quiz" || kind === "twenty" ? { game: kind } : {});
+  sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "talk" ? {} : { game: kind });
 }
 
 /**
  * 📞를 누르면 펼쳐지는 통화 종류(2026-11-08 사용자 "튜터 프로필에 자유대화, 수업, 게임으로 나눠줘. 통화 버튼은 클릭하면 그 탭 나열이 펼쳐지게"):
- * [자유대화 · 수업 · 게임] — 게임을 누르면 [퀴즈 · 스무고개]. 고르면 그 통화가 바로 시작.
+ * [자유대화 · 수업 · 게임] — 게임을 누르면 [퀴즈 · 스무고개 · 가르치기(상급)]. 고르면 그 통화가 바로 시작.
  */
 function CallChoices({ ui, wide, onPick }: { ui: UICopy; wide?: boolean; onPick: (kind: CallKind) => void }) {
   const [games, setGames] = useState(false);
@@ -138,6 +138,10 @@ function CallChoices({ ui, wide, onPick }: { ui: UICopy; wide?: boolean; onPick:
           </button>
           <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className={chip}>
             {ui.gameTwenty}
+          </button>
+          {/* 튜터가 내 말을 배우는 사람을 연기 — 상급(잠그지 않고 표시만, 2026-11-08). */}
+          <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className={chip}>
+            {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
           </button>
         </div>
       ) : null}

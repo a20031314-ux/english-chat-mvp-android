@@ -1040,7 +1040,8 @@
     "homeworkTag": "宿題",
     "homeworkTalk": "会話",
     "callModeGame": "ゲーム",
-    "gameTwenty": "20の質問"
+    "gameTwenty": "20の質問",
+    "gameTeach": "教えて"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2083,7 +2084,8 @@
     "homeworkTag": "作业",
     "homeworkTalk": "对话",
     "callModeGame": "游戏",
-    "gameTwenty": "二十个问题"
+    "gameTwenty": "二十个问题",
+    "gameTeach": "教我"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3129,7 +3131,8 @@
     "homeworkTag": "Bài tập",
     "homeworkTalk": "Hội thoại",
     "callModeGame": "Trò chơi",
-    "gameTwenty": "Hai mươi câu hỏi"
+    "gameTwenty": "Hai mươi câu hỏi",
+    "gameTeach": "Dạy tôi"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4180,7 +4183,8 @@
     "homeworkTag": "Devoir",
     "homeworkTalk": "Conversation",
     "callModeGame": "Jeu",
-    "gameTwenty": "Vingt questions"
+    "gameTwenty": "Vingt questions",
+    "gameTeach": "Apprends-moi"
   },
   "it": {
     "archive": "Report",
@@ -5422,7 +5426,8 @@
     "homeworkTag": "Compito",
     "homeworkTalk": "Conversazione",
     "callModeGame": "Gioco",
-    "gameTwenty": "Venti domande"
+    "gameTwenty": "Venti domande",
+    "gameTeach": "Insegnami"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6476,7 +6481,8 @@
     "homeworkTag": "Tarefa",
     "homeworkTalk": "Conversa",
     "callModeGame": "Jogo",
-    "gameTwenty": "Vinte perguntas"
+    "gameTwenty": "Vinte perguntas",
+    "gameTeach": "Me ensine"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7716,7 +7722,8 @@
     "homeworkTag": "Домашнее задание",
     "homeworkTalk": "Разговор",
     "callModeGame": "Игра",
-    "gameTwenty": "Двадцать вопросов"
+    "gameTwenty": "Двадцать вопросов",
+    "gameTeach": "Научи меня"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8766,7 +8773,8 @@
     "homeworkTag": "PR",
     "homeworkTalk": "Percakapan",
     "callModeGame": "Permainan",
-    "gameTwenty": "Dua puluh pertanyaan"
+    "gameTwenty": "Dua puluh pertanyaan",
+    "gameTeach": "Ajari aku"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9809,7 +9817,8 @@
     "homeworkTag": "واجب",
     "homeworkTalk": "محادثة",
     "callModeGame": "لعبة",
-    "gameTwenty": "عشرون سؤالًا"
+    "gameTwenty": "عشرون سؤالًا",
+    "gameTeach": "علّمني"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10852,7 +10861,8 @@
     "homeworkTag": "การบ้าน",
     "homeworkTalk": "บทสนทนา",
     "callModeGame": "เกม",
-    "gameTwenty": "ยี่สิบคำถาม"
+    "gameTwenty": "ยี่สิบคำถาม",
+    "gameTeach": "สอนฉันหน่อย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11895,6 +11905,7 @@
     "homeworkTag": "होमवर्क",
     "homeworkTalk": "बातचीत",
     "callModeGame": "खेल",
-    "gameTwenty": "बीस सवाल"
+    "gameTwenty": "बीस सवाल",
+    "gameTeach": "मुझे सिखाओ"
   }
 }

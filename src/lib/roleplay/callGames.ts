@@ -7,11 +7,15 @@
  * - twenty 스무고개: 앱이 정한 것(secret, 영어로 — 튜터가 학습 언어로 옮김)을 튜터만 알고, 학습자가 예/아니오 질문으로 맞힌다.
  *   튜터가 맞혔다고(또는 스무 번) 판을 끝내면 "round": "over" → 앱이 다음 것을 고른다. 앱이 들고 있어야 판 가운데 답이 바뀌지 않는다.
  *
+ * - teach 가르치기(상급, 2026-11-08 사용자 "튜터한테 사용 언어 가르쳐 주기 — 한국어가 어눌한 미국인을 튜터가 연기"):
+ *   튜터는 학습자의 모국어(앱 언어)를 막 배우는 학습 언어 사용자를 연기하고, 학습자는 그 말·표현·쓰임을 학습 언어로 설명한다.
+ *   누구나 열 수 있고 이름 옆에 "상급"만(잠그지 않음).
+ *
  * 예문은 지시에 넣지 않는다(RULES — 모델이 그대로 베낀 적이 있음).
  */
 
-export type CallGame = "quiz" | "twenty";
-export const CALL_GAMES: readonly CallGame[] = ["quiz", "twenty"];
+export type CallGame = "quiz" | "twenty" | "teach";
+export const CALL_GAMES: readonly CallGame[] = ["quiz", "twenty", "teach"];
 
 export function isCallGame(value: unknown): value is CallGame {
   return typeof value === "string" && (CALL_GAMES as readonly string[]).includes(value);
@@ -59,6 +63,20 @@ export function gameRules(input: {
 }): string {
   const { game, target, native, count } = input;
   const common = `This call is a game the learner chose, and the game comes first: play it rather than steering the talk anywhere else. Stay warm and quick, speak ${target}, short turns, words at their level. If they ask to stop or to just talk, stop the game and talk normally.`;
+  if (game === "teach") {
+    return [
+      `This call is a role-play the learner chose for advanced practice, and it comes first: keep it going rather than steering the talk anywhere else. If they ask to stop or to just talk, drop the role and talk normally.`,
+      `Your role: you are a speaker of ${target} — this is your own language — who has just started learning ${native} and is curious and a little clumsy at it. The learner speaks ${native} as their first language, so they are your teacher. Talk to them in ${target}, natural and at an everyday adult pace (do not simplify your ${target} for them). Now and then try a few words of ${native} — short, a bit wrong in the way a beginner gets them wrong (a wrong ending, a wrong particle, a word used in the wrong place), written in ${native} script — and ask whether you said it right.`,
+      input.start
+        ? `This is your first line: greet them in a few words of ${target}, say you are learning ${native} and would love their help, try one short ${native} phrase clumsily, and ask your first question about ${native}.`
+        : "",
+      `Every turn ask one thing about ${native} that makes them explain in ${target}: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
+      `Make them explain properly: if their answer is short or vague, ask a follow-up (an example, when exactly, what if I said it to my boss). Then try using what they taught you in a short ${native} line — sometimes get it slightly wrong so they have to correct you again — and thank them like a learner would.`,
+      `You are the student here: do not correct their ${target} out loud and do not teach them anything. Put a correction of their ${target} only in "better" as usual, when there is a real mistake.`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+  }
   if (game === "quiz") {
     const asked = Math.min(count, QUIZ_ROUND);
     return [
