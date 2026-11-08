@@ -5,3 +5,4 @@ ru  gender, aspect — pymorphy3 with OpenCorpora dictionaries (https://opencorp
 zh  classifiers — CC-CEDICT (https://www.mdbg.net/chinese/dictionary?page=cc-cedict) via pycccedict, CC BY-SA 4.0; frequent nouns missing there filled by Claude
 ja  verb and adjective classes — fugashi with UniDic (unidic-lite, NINJAL, BSD/LGPL/GPL); keigo pairs by Claude
 ko  irregular conjugation classes and honorific pairs — rules and exception lists by Claude
+en  irregular verb forms and plurals — LemmInflect (https://github.com/bjascob/LemmInflect), MIT; uncountable nouns by Claude

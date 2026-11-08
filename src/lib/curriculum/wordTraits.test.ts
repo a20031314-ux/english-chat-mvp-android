@@ -68,3 +68,13 @@ test("한국어: 불규칙 활용·높임 (돕다 ㅂ · 입다 규칙 · 듣다
   assert.equal(ko["좋다"]?.ir, undefined);
   assert.equal(ko["먹다"]?.hon?.up, "드시다");
 });
+
+test("영어: 불규칙 꼴·셀 수 없음 (go went gone · walk 없음 · child children · person people · information u)", () => {
+  const en = JSON.parse(readFileSync(new URL("en.json", DIR), "utf8")) as Record<string, { f?: { past?: string; pp?: string; pl?: string }; cnt?: string }>;
+  assert.deepEqual(en["go"]?.f, { past: "went", pp: "gone" });
+  assert.equal(en["walk"], undefined);
+  assert.equal(en["child"]?.f?.pl, "children");
+  assert.equal(en["person"]?.f?.pl, "people");
+  assert.equal(en["information"]?.cnt, "u");
+  for (const [word, traits] of Object.entries(en)) for (const form of Object.values(traits.f ?? {})) assert.ok(!/[-\s]/.test(String(form)), `${word}: ${String(form)}`);
+});
