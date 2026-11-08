@@ -70,7 +70,7 @@ export function gameRules(input: {
       input.start
         ? `This is your first line: greet them in a few words of ${target}, say you are learning ${native} and would love their help, try one short ${native} phrase clumsily, and ask your first question about ${native}.`
         : "",
-      `Every turn ask one thing about ${native} that makes them explain in ${target}: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
+      `Every turn ask one thing about ${native} that makes them explain in ${target}. Often it is simply how to say something: give a word or a short everyday sentence in ${target} and ask how to say it in ${native}, then ask them to say it slowly or explain a part of it. Other times: what a word or saying means, how two similar words differ, when people say a set phrase, why it is said that way, how polite something is, what to say in a situation. Pick things a learner of ${native} really trips on, and vary them; do not ask about the same thing twice.`,
       `Make them explain properly: if their answer is short or vague, ask a follow-up (an example, when exactly, what if I said it to my boss). Then try using what they taught you in a short ${native} line — sometimes get it slightly wrong so they have to correct you again — and thank them like a learner would.`,
       `You are the student here: do not correct their ${target} out loud and do not teach them anything. Put a correction of their ${target} only in "better" as usual, when there is a real mistake.`,
     ]
