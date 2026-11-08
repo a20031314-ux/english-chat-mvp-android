@@ -87,7 +87,15 @@ export function parseReplay(raw: unknown): ReplayScene[] {
       return [];
     }
   }
-  const scenes = (value as { scenes?: unknown } | null)?.scenes;
+  let scenes = (value as { scenes?: unknown } | null)?.scenes;
+  // Haiku가 JSON 모드에서 배열을 글로 한 번 더 싸서 줄 때가 있다("scenes":"[...]").
+  if (typeof scenes === "string") {
+    try {
+      scenes = JSON.parse(scenes);
+    } catch {
+      return [];
+    }
+  }
   if (!Array.isArray(scenes)) return [];
   const out: ReplayScene[] = [];
   for (const scene of scenes.slice(0, 3)) {
