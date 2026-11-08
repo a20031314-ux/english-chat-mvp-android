@@ -71,7 +71,8 @@ test("지시: 대본·고친 말·앱 언어가 들어가고 베낄 예문은 �
   const prompt = replayPrompt({ target: "Spanish", native: "Arabic", level: 2, lines: [{ who: "tutor", text: "¿Qué tal?" }, { who: "learner", text: "Yo ir playa", better: "Fui a la playa" }] });
   assert.match(prompt, /LEARNER: Yo ir playa {3}\(put right: Fui a la playa\)/);
   assert.match(prompt, /in Arabic/);
-  assert.match(prompt, /level 3 learner/);
+  assert.doesNotMatch(prompt, /level \d/);
+  assert.match(prompt, /fluent speaker would naturally/);
 });
 
 class Memory {

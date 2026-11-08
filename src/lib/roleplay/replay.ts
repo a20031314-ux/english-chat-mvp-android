@@ -2,7 +2,7 @@
  * 🎭 이렇게도 말할 수 있었어요(2026-11-08 사용자 "결과화면에서 가능했던 대화흐름(학습자의 발화보다 더 고차원의 대화)을 가정해서
  * 몇 개를 수행하게 — 스크립트를 변형한 형태로" → "1,2는 추천대로, 3은 녹음받아쓰기 방식을 먼저, 4는 숙제 중 하나로").
  *
- * 끝난 통화 대본을 뼈대로 장면 둘: ① 같은 흐름에서 내 말만 한 단계 위로(늘) ② 한 걸음 더(더 깊은 화제) 또는 다른 갈래(다른 대답).
+ * 끝난 통화 대본을 뼈대로 장면 둘: ① 같은 흐름에서 내 말을 그 상황에 맞는 말로(늘, 단계 제한 없음 — 사용자 2026-11-08) ② 한 걸음 더(더 깊은 화제) 또는 다른 갈래(다른 대답).
  * 연습은 대본처럼: 튜터 줄 듣고 → 내 차례엔 앱 언어 뜻 + 바뀐 조각만 빈칸 → 🎙 말해서 받아쓰기(모델 판단 없음, 낱말 대조) →
  * 마지막에 뜻만 보고 한 줄 전체. 수업 통화는 끝나면 저절로 만들고 그 통화의 숙제가 되며, 자유대화는 끝 화면에서 눌러야 만든다.
  *
@@ -36,7 +36,8 @@ const MAX_ME_LINES = 4;
 export type ReplayInput = {
   target: string;
   native: string;
-  level: number;
+  /** 예전 앱이 보냄 — 2026-11-08부터 지시에 안 씀(단계 제한 없이 상황에 맞는 말). */
+  level?: number;
   lines: readonly { who: "tutor" | "learner"; text: string; better?: string }[];
 };
 
@@ -45,7 +46,6 @@ export type ReplayInput = {
  * 내 말은 같은 뜻·같은 사실로 한 단계만 위로(배운 적 없는 틀만 가득하지 않게), 바뀐 조각을 piece로 — 그 자리만 빈칸이 된다.
  */
 export function replayPrompt(input: ReplayInput): string {
-  const level = Math.min(5, Math.max(1, Math.round(input.level) || 2));
   const transcript = input.lines
     .filter((line) => line.text.trim())
     .slice(-30)
@@ -55,18 +55,18 @@ export function replayPrompt(input: ReplayInput): string {
         : `LEARNER: ${line.text.trim()}${line.better ? `   (put right: ${line.better.trim()})` : ""}`,
     )
     .join("\n");
-  return `You write two short practice scenes from a real phone call between a ${input.target} tutor and a learner (level ${level} of 5). The learner will act out their own part again, saying better lines than they managed in the call.
+  return `You write two short practice scenes from a real phone call between a ${input.target} tutor and a learner. The learner will act out their own part again, saying what a fluent speaker would naturally say in that moment.
 
 The call:
 ${transcript}
 
 Write exactly two scenes, in ${input.target}.
-Scene 1, "same": follow the call's own flow and topic. Keep the tutor's lines close to what the tutor said (shorten them if long). Rewrite each of the learner's turns one step above what they said: the same meaning and the same facts, but more complete, better connected, more natural, with their mistakes put right. One step only — use what a level ${Math.min(5, level + 1)} learner can say, not rare words or long sentences.
+Scene 1, "same": follow the call's own flow and topic. Keep the tutor's lines close to what the tutor said (shorten them if long). Rewrite each of the learner's turns as the most fitting thing to say there: the same meaning and the same facts, with the words and phrasing a fluent speaker would naturally choose for this situation and this person, mistakes put right. Do not hold back to the learner's level and do not show off — natural everyday speech that suits the moment.
 Scene 2: pick whichever fits the call better — "further": the conversation goes one step deeper where the learner stopped short (the tutor follows up on something they said, and they answer with more detail); or "branch": at one key moment the learner gives a different, fuller answer and the talk goes that way. New details must fit what they told the tutor about themselves.
 
 Each scene: starts with a tutor line, then alternates, ${MIN_ME_LINES} to ${MAX_ME_LINES} learner lines, each under 18 words. For every learner line give:
 - "meaning": what it means, in ${input.native}, natural and short.
-- "piece": the part of the line that is the step up — the words the learner would not have said in the call (a phrase of one to five words, copied exactly from the line). Not a name, not a number. If nothing in the line is new, use its most useful phrase.
+- "piece": the word or phrase in the line most worth learning for this situation — preferably one the learner did not use in the call (one to five words, copied exactly from the line). Not a name, not a number.
 
 Answer only JSON: {"scenes":[{"kind":"same","lines":[{"who":"tutor","text":"..."},{"who":"me","text":"...","meaning":"...","piece":"..."}]},{"kind":"further","lines":[...]}]}`;
 }
