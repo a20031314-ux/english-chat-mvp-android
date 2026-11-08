@@ -88,12 +88,18 @@ export function parseReplay(raw: unknown): ReplayScene[] {
     }
   }
   let scenes = (value as { scenes?: unknown } | null)?.scenes;
-  // Haiku가 JSON 모드에서 배열을 글로 한 번 더 싸서 줄 때가 있다("scenes":"[...]").
+  // Haiku가 JSON 모드에서 배열을 글로 한 번 더 싸서 줄 때가 있다("scenes":"[...]}" — 끝에 괄호가 하나 더 붙기도).
   if (typeof scenes === "string") {
-    try {
-      scenes = JSON.parse(scenes);
-    } catch {
-      return [];
+    const text = scenes;
+    const tries = [text, text.slice(0, text.lastIndexOf("]") + 1)];
+    scenes = undefined;
+    for (const one of tries) {
+      try {
+        scenes = JSON.parse(one);
+        break;
+      } catch {
+        // 다음 것
+      }
     }
   }
   if (!Array.isArray(scenes)) return [];

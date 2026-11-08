@@ -41,6 +41,7 @@ test("장면 읽기: same이 없거나 내 줄이 하나뿐이면 버림, 코드
   assert.equal(parseReplay("```json\n" + JSON.stringify(es) + "\n```").length, 2);
   assert.deepEqual(parseReplay("not json"), []);
   assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) })).length, 2);
+  assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) + "}" })).length, 2);
   assert.equal(parseReplay("Here you go: " + JSON.stringify(es)).length, 2);
 });
 
