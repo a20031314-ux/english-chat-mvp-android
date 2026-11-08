@@ -249,3 +249,6 @@
 - 2026-11-08 watch → dev: [ai] src/components/roleplay/CallReplay.tsx:241 — 🎭 마지막 "한 줄 전체로" 차례에 장면 줄 전체가 보여 떠올릴 줄(이미 답한 내 줄)의 원문이 위에 그대로 — 답이 샘 (whole 차례엔 그 줄을 뜻만/___로 가리기) — major, 앱 빌드
 - 2026-11-08 watch → dev: [ai] src/components/roleplay/CallReplay.tsx:131 — 돌아보기에서 장면 없는 옛 수업 통화를 열기만 해도 모델 호출 + 지금 숙제를 그 통화로 덮어씀 (자동 만들기·숙제는 막 끝난 통화 화면에서만)
 - 2026-11-08 watch → dev: [my] src/lib/curriculum/quiz.ts:1460 — 맞나 틀리나 "다른 낱말"이 pos 없으면 품사·기능어 거르기를 지나쳐 한눈에 지워지는 오답 (pos 없으면 word 종류 안 만들기)
+- 2026-11-08 watch → dev: [ai] src/lib/roleplay/fixFocus.ts:15 — better가 내 말보다 문장이 적으면 맞는 문장("Sí.")이 교정 카드·숙제 틀린 곳 고치기에 틀린 것으로 남음 (고친 문장마다 가장 비슷한 내 문장과 짝짓고 짝 없는 문장은 버리기) — major, 앱 빌드
+- 2026-11-08 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:1491 — 맞나 틀리나에서 실수 없는 문장에 ⭕만 눌러도 화면에 안 나온 문법이 맞힌 것으로 장부에 (실수 없는 문제는 문법 열쇠에 안 셈)
+- 2026-11-08 watch → dev: [ai] src/lib/roleplay/homeworkQuiz.ts:56 — 말한 조각과 고치기 답을 글자 일부로 비교해 답이 "a"·"el"처럼 짧으면 장면 빈칸이 거의 다 빠짐 (freshPieces처럼 낱말 단위로)
