@@ -6,3 +6,5 @@ zh  classifiers — CC-CEDICT (https://www.mdbg.net/chinese/dictionary?page=cc-c
 ja  verb and adjective classes — fugashi with UniDic (unidic-lite, NINJAL, BSD/LGPL/GPL); keigo pairs by Claude
 ko  irregular conjugation classes and honorific pairs — rules and exception lists by Claude
 en  irregular verb forms and plurals — LemmInflect (https://github.com/bjascob/LemmInflect), MIT; uncountable nouns by Claude
+es fr pt  noun gender — articles in the example sentences plus spaCy core_news_sm models (https://spacy.io; es GPL 3.0, fr LGPL-LR, pt CC BY-SA 4.0); exceptions and nouns of both genders by Claude
+it  noun gender — articles in the example sentences, ending rules and checks by Claude (the spaCy Italian model is CC BY-NC-SA, so it was not used)

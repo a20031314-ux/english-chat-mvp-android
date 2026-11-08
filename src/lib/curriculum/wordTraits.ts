@@ -36,8 +36,12 @@ export type TraitBook = Record<string, WordTraits>;
 // JSON 모양 그대로 받으면 타입이 너무 커서 unknown으로 받고 TraitBook으로 본다.
 const BOOKS: Record<string, () => Promise<{ default: unknown }>> = {
   en: () => import("./word-traits/en.json"),
+  es: () => import("./word-traits/es.json"),
+  fr: () => import("./word-traits/fr.json"),
+  it: () => import("./word-traits/it.json"),
   ja: () => import("./word-traits/ja.json"),
   ko: () => import("./word-traits/ko.json"),
+  pt: () => import("./word-traits/pt.json"),
   ru: () => import("./word-traits/ru.json"),
   zh: () => import("./word-traits/zh.json"),
 };

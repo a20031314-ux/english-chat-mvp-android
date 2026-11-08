@@ -78,3 +78,16 @@ test("영어: 불규칙 꼴·셀 수 없음 (go went gone · walk 없음 · chil
   assert.equal(en["information"]?.cnt, "u");
   for (const [word, traits] of Object.entries(en)) for (const form of Object.values(traits.f ?? {})) assert.ok(!/[-\s]/.test(String(form)), `${word}: ${String(form)}`);
 });
+
+test("스페인어·프랑스어·이탈리아어·포르투갈어: 명사 성 (el agua는 여성 · 사람 낱말은 둘 다)", () => {
+  const read = (language: string) => JSON.parse(readFileSync(new URL(`${language}.json`, DIR), "utf8")) as Record<string, { g?: string }>;
+  const es = read("es");
+  assert.equal(es["casa"]?.g, "f");
+  assert.equal(es["agua"]?.g, "f", "el agua — 강세 a로 시작하는 여성 명사");
+  assert.equal(es["artista"]?.g, "mf");
+  const fr = read("fr");
+  assert.equal(fr["voiture"]?.g, "f");
+  assert.equal(fr["tour"]?.g, "mf", "le tour / la tour");
+  assert.equal(read("it")["moto"]?.g, "f");
+  assert.equal(read("pt")["princípio"]?.g, "m", "a princípio — a는 전치사");
+});
