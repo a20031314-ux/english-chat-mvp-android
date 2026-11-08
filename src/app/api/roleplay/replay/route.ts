@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     if (!scenes.length) {
       const raw = completion.choices[0]?.message?.content ?? "";
       // 무엇이 걸렸는지만(내용은 안 돌려줌): 끝까지 왔나·길이.
-      return jsonWithCors(request, { error: "NO_SCENES", finish: completion.choices[0]?.finish_reason ?? null, chars: raw.length }, { status: 502 });
+      return jsonWithCors(request, { error: "NO_SCENES", finish: completion.choices[0]?.finish_reason ?? null, chars: raw.length, ...((request.headers.get("x-rc-user") ?? "").startsWith("simcheck-") ? { raw: raw.slice(0, 3000) } : {}) }, { status: 502 });
     }
     return jsonWithCors(request, { scenes });
   } catch (error) {
