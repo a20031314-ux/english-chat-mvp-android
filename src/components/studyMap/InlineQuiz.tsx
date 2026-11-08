@@ -44,7 +44,7 @@ export function InlineQuiz({
   retryKey?: string;
   onResult: (result: { key: string; correct: boolean; skipped: boolean; shape?: "c" | "t"; miss?: string }) => void;
   /** 복합 문제(소재 여럿)의 결과를 한 번에 — 없으면 소재마다 onResult. */
-  onParts?: (parts: { key: string; correct: boolean }[]) => void;
+  onParts?: (parts: { key: string; correct: boolean; seen?: boolean }[]) => void;
   empty: React.ReactNode;
   /** 틀리면 "설명"으로 Stagebank 그 소재 수업(다시 보기 탭). */
   explainLink?: boolean;
@@ -131,7 +131,7 @@ export function InlineQuiz({
           // 복합 문제는 소재(열쇠)마다 따로 기록(curriculum/multiQuiz.ts).
           if (value.parts?.length) {
             if (onParts) onParts(value.parts);
-            else for (const part of value.parts) onResult({ key: part.key, correct: part.correct, skipped: false });
+            else for (const part of value.parts) if (!part.seen) onResult({ key: part.key, correct: part.correct, skipped: false });
           }
           else onResult({ key: batch.keys[index] ?? "", correct: value.correct, skipped: Boolean(value.skipped), ...quizShapeOf(question, value, (text) => segmentWords(text, language)) });
         }}

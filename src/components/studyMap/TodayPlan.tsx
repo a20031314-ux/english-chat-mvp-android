@@ -568,8 +568,10 @@ export function TodayPlan({
           ? false
           : passedSet.has(item.id) || practiced.has(item.id);
   // 퀴즈 결과를 열쇠마다(묶음 퀴즈는 여럿을 한 번에 — 상태를 한 번에 고쳐 덮어쓰지 않게).
-  const finishMany = (results: readonly { key: string; correct: boolean; review?: string; shape?: "c" | "t"; miss?: string }[]) => {
-    if (!results.length) return;
+  // seen = 봤음만(맞나 틀리나의 카드 낱말 — 그 문제는 문법을 물음): 오늘 낸 것에만 넣고 장부·기록·익힘에는 안 셈(2026-11-08).
+  const finishMany = (all: readonly { key: string; correct: boolean; review?: string; shape?: "c" | "t"; miss?: string; seen?: boolean }[]) => {
+    if (!all.length) return;
+    const results = all.filter((one) => !one.seen);
     let logged = log;
     let nextTally = tally;
     for (const { key, correct, shape, miss } of results) {
@@ -588,7 +590,7 @@ export function TodayPlan({
     saveQuizLog(language, logged, false);
     const allRight = results.every((one) => one.correct);
     setMissRun((run) => (allRight ? 0 : run + 1));
-    const nextDone = new Set([...quizDone, ...results.map((one) => one.key)]);
+    const nextDone = new Set([...quizDone, ...all.map((one) => one.key)]);
     setQuizDone(nextDone);
     saveQuizDone(day, nextDone);
     // 다시 볼 것에서 온 것은 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 것은 틀렸을 때만 다시 볼 것에 넣는다.
@@ -1549,7 +1551,7 @@ export function TodayPlan({
           // 복합 문제: 소재마다 한 번에(따로 부르면 기록이 서로 덮임).
           if (asReview()) for (const part of parts) askedWrong.current.add(part.key);
           else setAsked((current) => new Set([...current, ...parts.map((part) => part.key)]));
-          finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined })));
+          finishMany(parts.map((part) => ({ key: part.key, correct: part.correct, review: review[part.key] ? part.key : undefined, ...(part.seen ? { seen: true } : {}) })));
         }}
         dictDoor={reform}
         empty={

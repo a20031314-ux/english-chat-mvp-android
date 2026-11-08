@@ -64,58 +64,44 @@ test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저,
   assert.ok(b.options.filter((o) => o.raw !== "뜻3").every((o) => !prev.has(o.raw)), "앞 문제 보기 다시");
 });
 
-test("맞나 틀리나: 맞는 문장이 섞이고, 틀린 꼴은 바른 꼴과 다르며 문장은 그대로, 철자 틀림은 실제 낱말이 아님, ja는 철자 틀림 없음 (es·ja)", async () => {
-  const { judgeQuiz, misspellings } = await import("./quiz.ts");
-  registerQuizSources("es", [
-    { key: "w|comer", sources: [...card("w|comer", "Ayer comimos paella.", "comimos", "먹다", "verb").sources, ...card("w|comer", "Yo como pan.", "como", "먹다", "verb").sources] },
-    card("w|beber", "Bebo agua.", "Bebo", "마시다", "verb"),
-    card("w|vivir", "Vivo aquí.", "Vivo", "살다", "verb"),
-  ]);
-  registerQuizSources("ja", [
-    card("w|食べる", "パンを食べた。", "食べ", "먹다", "verb"),
-    card("w|飲む", "水を飲んだ。", "飲ん", "마시다", "verb"),
-    card("w|見る", "映画を見た。", "見", "보다", "verb"),
-    // 빈도 목록 맨 앞 40개는 다른 낱말로 안 끼우니, 그 뒤 동사도 몇 개.
-    ...Array.from({ length: 45 }, (_, i) => card(`w|動詞${i}`, `毎日動詞${i}た。`, `動詞${i}`, `동사${i}`, "verb")),
-  ]);
-  for (const [language, key] of [["es", "w|comer"], ["ja", "w|食べる"]] as const) {
-    let right = 0;
-    let made = 0;
-    const kinds = new Set<string>();
-    for (let s = 0; s < 90; s += 1) {
-      const q = judgeQuiz(language, key, `seed${s}`);
-      if (!q || q.kind !== "judge") continue;
-      made += 1;
-      assert.equal(q.before + q.answer + q.after, q.text);
-      if (q.wrong === null) {
-        right += 1;
-        assert.equal(q.shown, q.answer);
-      } else {
-        kinds.add(q.wrong);
-        assert.notEqual(q.shown.toLocaleLowerCase(), q.answer.toLocaleLowerCase(), `${language} ${q.shown}`);
-      }
-    }
-    assert.ok(made >= 80, `${language} ${made}`);
-    assert.ok(right > made * 0.15 && right < made * 0.6, `${language} 맞는 문장 ${right}/${made}`);
-    if (language === "ja") assert.ok(!kinds.has("spell"), "ja는 철자 틀림 없음");
-    if (language === "es") assert.ok(kinds.has("form") && kinds.has("spell"), [...kinds].join());
-  }
-  registerQuizSources("hi", [card("w|पानी", "मैं पानी पीता हूँ", "पानी", "물")]);
-  assert.equal(judgeQuiz("hi", "w|पानी", "s"), null, "끼울 틀린 꼴이 없으면 안 냄");
+test("맞나 틀리나: 낱말은 그대로, 앞에 문법 실수 하나(조동사+to · be+원형 · 자음 앞 an), 맞는 문장이 섞임, 영어만 (en·es·ja)", async () => {
+  const { judgeQuiz, grammarSlip } = await import("./quiz.ts");
+  // 규칙마다: 틀린 문장 = lead + bad + tail, 낱말(piece)은 tail에 그대로.
+  const to = grammarSlip("en", "I will do my homework later.", "do", "do", "verb");
+  assert.deepEqual(to && [to.rule, `${to.lead}${to.bad}${to.tail}`, to.key, to.fix], ["modalTo", "I will to do my homework later.", "g|2:2", ""]);
+  const be = grammarSlip("en", "Do you know her name?", "know", "know", "verb");
+  assert.deepEqual(be && [be.rule, `${be.lead}${be.bad}${be.tail}`, be.key], ["beBase", "Do you are know her name?", "g|1:0"]);
+  const an = grammarSlip("en", "The car is red.", "car", "car", "noun");
+  assert.deepEqual(an && [an.rule, `${an.lead}${an.bad}${an.tail}`, an.fix], ["an", "An car is red.", "The"]);
+  // 맞는 문장이 되는 자리는 안 씀: be 뒤에 와도 되는 말 · 원형이 아닌 꼴 · 소리 안 나는 h · 앞말에 문장부호.
+  assert.equal(grammarSlip("en", "I like watching movies.", "like", "like", "verb"), null, "I am like … = 맞을 수 있음");
+  assert.equal(grammarSlip("en", "I will took it.", "took", "take", "verb"), null, "원형이 아니면 안 씀");
+  assert.equal(grammarSlip("en", "Wait a hour.", "hour", "hour", "noun"), null, "an hour");
+  assert.equal(grammarSlip("en", "Yes, I need it.", "need", "need", "verb")?.rule, "beBase");
+  assert.equal(grammarSlip("en", "Well, need it.", "need", "need", "verb"), null);
+  assert.equal(grammarSlip("es", "Yo como pan.", "como", "comer", "verb"), null, "영어만");
   registerQuizSources("en", [
-    card("w|take", "Can you take this bag?", "take", "가져가다", "verb"),
-    ...Array.from({ length: 45 }, (_, i) => card(i % 2 ? "w|would" : `w|verb${i}`, i % 2 ? "I would go." : `I verb${i} it.`, i % 2 ? "would" : `verb${i}`, "동사", "verb")),
+    { key: "w|need", sources: [...card("w|need", "I need a new pair of shoes.", "need", "필요하다", "verb").sources, ...card("w|need", "Needs are many.", "Needs", "필요하다", "verb").sources] },
+    card("w|car", "Is that your car?", "car", "자동차", "noun"),
   ]);
-  for (let i = 0; i < 40; i += 1) {
-    const q = judgeQuiz("en", "w|take", `aux${i}`);
-    if (q?.kind === "judge") assert.notEqual(q.shown.toLowerCase(), "would", "조동사는 다른 낱말로 안 끼움");
+  let right = 0;
+  let made = 0;
+  for (let s = 0; s < 90; s += 1) {
+    const q = judgeQuiz("en", "w|need", `seed${s}`);
+    if (!q || q.kind !== "judge") continue;
+    made += 1;
+    assert.equal(q.before + q.answer + q.after, q.text);
+    assert.equal(q.text, "I need a new pair of shoes.", "실수를 끼울 수 있는 예문만");
+    if (q.wrong === null) right += 1;
+    else assert.equal(`${q.slip.lead}${q.slip.bad}${q.slip.tail}`, "I am need a new pair of shoes.");
   }
-  assert.ok(!misspellings("form", new Set(["from"])).includes("from"));
-  assert.ok(misspellings("believe", new Set()).includes("beleive"));
-  assert.ok(misspellings("más", new Set()).includes("mas"));
-  assert.equal(misspellings("más", new Set(["mas"])).includes("mas"), false);
+  assert.equal(made, 90);
+  assert.ok(right > 15 && right < 50, `맞는 문장 ${right}/90`);
+  assert.equal(judgeQuiz("en", "w|car", "s"), null, "your 앞은 안 바꿈 → 끼울 실수 없으면 안 냄");
+  registerQuizSources("ja", [card("w|食べる", "パンを食べた。", "食べ", "먹다", "verb")]);
+  assert.equal(judgeQuiz("ja", "w|食べる", "s"), null);
   // cardQuiz는 judge를 켰을 때만, 맞힌 말(show)에서 반쯤.
-  const judged = Array.from({ length: 40 }, (_, i) => cardQuiz("es", "w|comer", "show", `x${i}`, { judge: true })?.kind);
+  const judged = Array.from({ length: 40 }, (_, i) => cardQuiz("en", "w|need", "show", `x${i}`, { judge: true })?.kind);
   assert.ok(judged.includes("judge") && judged.includes("type"), judged.join());
-  assert.ok(Array.from({ length: 20 }, (_, i) => cardQuiz("es", "w|comer", "show", `x${i}`)?.kind).every((kind) => kind === "type"));
+  assert.ok(Array.from({ length: 20 }, (_, i) => cardQuiz("en", "w|need", "show", `x${i}`)?.kind).every((kind) => kind === "type"));
 });
