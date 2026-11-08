@@ -86,7 +86,7 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
   const ledger: { k: string; src: "call"; r: "used" }[] = [];
   const used: { k: string[]; x: string; t: number; s: "call" }[] = [];
   const t = Math.round(input.at / 1000);
-  const callKeys = recapLedgerKeys(language, said);
+  const callKeys = recapLedgerKeys(language, [...said]);
   const callDetected = new Set([...callKeys.used, ...callKeys.miss]);
   opening.forEach((line, i) => {
     if (!spoken(line) || fixedLine(line)) return;
