@@ -115,6 +115,11 @@ type Spoken = TranscriptLine;
 const HELP_AFTER_MS = 3000;
 /** 수업 통화에서 첫 말을 기다리는 시간 — 이 뒤엔 튜터가 "들었어요?"·힌트로 먼저(기본 12초보다 짧게). */
 const LESSON_NO_SPEECH_MS = 7000;
+/**
+ * 자유대화에서 내 차례가 말없이 저절로 넘어가기까지(2026-11-08 통화 체감 점검 — 🙉·💡가 3초에 뜨고 12초에 차례가 끝나
+ * 누를 틈이 9초뿐이었음). 기본 12초보다 길게 — 버튼이 뜬 뒤 15초.
+ */
+const TALK_NO_SPEECH_MS = 18000;
 
 export function RoleplayScreen({
   scenarioId,
@@ -223,6 +228,8 @@ export function RoleplayScreen({
   // 🙉·💡는 필요할 때만(2026-11-07 사용자): 내 차례에 3초 말이 없거나(hesitating), 감독이 막힘·못 알아들음·애매함·앱 언어로 읽은 다음 차례(helpCue).
   const [hesitating, setHesitating] = useState(false);
   const [helpCue, setHelpCue] = useState(false);
+  // 지금 소리가 나는 중인가(말이 멈추면 다시 false) — learnerTalking은 한 번 말하면 그 차례 끝까지 true라 🙉·💡에는 이것을 쓴다(2026-11-08 점검).
+  const [voiceOn, setVoiceOn] = useState(false);
   /** Lets a review or a close release the wait for the rest of a sentence. */
   const releaseRestRef = useRef<() => void>(() => undefined);
   // The director is deciding what the character says. Shown as the character
@@ -249,13 +256,14 @@ export function RoleplayScreen({
   const [lead, setLead] = useState(0);
   // 내 차례가 열리고 말이 없으면 3초 뒤 🙉·💡(앱 망설임 셈 review.ts LONG_SILENCE_MS와 같은 값).
   useEffect(() => {
-    if (!recording || learnerTalking) {
+    if (!recording || voiceOn) {
       setHesitating(false);
       return;
     }
+    // 말을 하다 멈춰도 3초 뒤 다시(말하다 막힌 순간이 가장 도움이 필요함).
     const timer = window.setTimeout(() => setHesitating(true), HELP_AFTER_MS);
     return () => window.clearTimeout(timer);
-  }, [recording, learnerTalking]);
+  }, [recording, voiceOn]);
   const stateRef = useRef<SessionState | null>(null);
   stateRef.current = state;
   // The turn being looked back at, if any. `review` is null while it is being
@@ -797,6 +805,7 @@ export function RoleplayScreen({
     releaseRestRef.current();
     setRecording(false);
     setLearnerTalking(false);
+    setVoiceOn(false);
     setPending("");
     setSaid((current) => markMissed(current, tutorAt));
     if (said[tutorAt]!.again) {
@@ -837,10 +846,11 @@ export function RoleplayScreen({
         isPremium,
         onSpeaking: (yes) => {
           if (yes) setLearnerTalking(true);
+          setVoiceOn(yes);
         },
         onSettled: () => setSettled((count) => count + 1),
-        // 수업 통화는 🙉·💡가 없어 튜터가 먼저 묻는다 — 말이 없으면 더 일찍 넘긴다.
-        ...(coachOn ? { noSpeechMs: LESSON_NO_SPEECH_MS } : {}),
+        // 수업 통화는 🙉·💡가 없어 튜터가 먼저 묻는다 — 말이 없으면 더 일찍 넘긴다. 자유대화는 버튼을 누를 틈을 준다.
+        ...(coachOn ? { noSpeechMs: LESSON_NO_SPEECH_MS } : scenario.openEnded ? { noSpeechMs: TALK_NO_SPEECH_MS } : {}),
       });
       setRecording(true);
     } catch {
@@ -864,6 +874,7 @@ export function RoleplayScreen({
     let heard = await recorder.stop();
     setThinking(false);
     setLearnerTalking(false);
+    setVoiceOn(false);
     let lastEnd = endedAt;
 
     // Cut off mid-sentence by the pause that ends a turn: "…coffee and". Give
@@ -876,6 +887,7 @@ export function RoleplayScreen({
         // Closed or put down while waiting: this turn is no longer being sent.
         setPending("");
         setLearnerTalking(false);
+        setVoiceOn(false);
         return;
       }
       if (!rest.text) break;
@@ -907,6 +919,7 @@ export function RoleplayScreen({
         noSpeechMs: REST_OF_SENTENCE_MS,
         onSpeaking: (yes) => {
           if (yes) setLearnerTalking(true);
+          setVoiceOn(yes);
         },
         onSettled: () => settle(),
       });
@@ -929,6 +942,7 @@ export function RoleplayScreen({
     const text = await more.stop();
     setThinking(false);
     setLearnerTalking(false);
+    setVoiceOn(false);
     return { text, endedAt };
   };
 
@@ -1306,7 +1320,7 @@ export function RoleplayScreen({
         onMissed={missLine}
         onToggleCaptions={toggleCaptions}
         onHint={openHelp}
-        help={!scenario.openEnded ? true : coachOn ? "none" : lettersBeginner || ((hesitating || helpCue) && !learnerTalking)}
+        help={!scenario.openEnded ? true : coachOn ? "none" : lettersBeginner || ((hesitating || helpCue) && !voiceOn && canAnswer)}
         onEnd={hangUp}
         leaving={leaving}
       />

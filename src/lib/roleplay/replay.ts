@@ -75,7 +75,7 @@ Scene 2: pick whichever fits the call better — "further": the conversation goe
 
 Each scene: starts with a tutor line, then alternates, ${MIN_ME_LINES} to ${MAX_ME_LINES} learner lines, each under 18 words. For every learner line give:
 - "meaning": what it means, in ${input.native}, natural and short.
-- "piece": the word or phrase in the line most worth learning for this situation — preferably one the learner did not use in the call (one to five words, copied exactly from the line). Not a name, not a number.
+- "piece": the word or phrase in the line most worth learning for this situation (one to five words, copied exactly from the line). Not a name, not a number. When that turn of the call was put right, the piece is the part that was put right (the words that differ from what the learner said). Otherwise pick words the learner did not use in the call — never words they already said correctly.
 
 Answer only JSON: {"scenes":[{"kind":"same","lines":[{"who":"tutor","text":"..."},{"who":"me","text":"...","meaning":"...","piece":"..."}]},{"kind":"further","lines":[...]}]}`;
 }
