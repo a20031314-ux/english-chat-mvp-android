@@ -435,8 +435,9 @@ export const REPERTOIRE_SINCE: Partial<Record<LearningLanguageCode, string>> = {
 const BANK_OFFERED_IN_OPEN_TALK = false;
 
 /** The brief, which is the model's to read and so stays in one language. */
+// 2026-11-08: 예전 카페 대본 시절의 "over coffee"를 뺌 — 🙉 두 번째 화제 전환이 늘 커피·차로 갔다(사용자 "예전 스크립트 내용이 계속 반영").
 const SETTING =
-  "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.";
+  "A relaxed phone call with a friendly acquaintance, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's own life — their day, work or studies, plans, family, places and interests; the learner can bring up anything at all.";
 
 export const JUST_TALK_HELLO = "open.hi";
 export const JUST_TALK_BYE = "open.bye";

@@ -37,7 +37,7 @@ export const SITUATIONS: SituationBrief[] = [
     title: "Just talk",
     tutorRole: "friend",
     setting:
-      "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests.",
+      "A relaxed phone call with a friendly acquaintance, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's own life — their day, work or studies, plans, family, places and interests.",
     objective: "Keep a conversation going about anything: answer, ask back, and follow it where it goes.",
     likelyTrouble:
       "Answering in one word and leaving the other person to carry the whole conversation.",
