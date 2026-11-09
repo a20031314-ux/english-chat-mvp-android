@@ -57,6 +57,22 @@
    "blank": "abattre"
   }
  ],
+ "w|abdomen": [
+  {
+   "text": "Lucas montre au pharmacien l'endroit de l'abdomen où il a mal.",
+   "en": "Lucas shows the pharmacist the spot on his abdomen where it hurts.",
+   "ko": "루카는 약사에게 배의 어느 부분이 아픈지 보여 줘요.",
+   "blank": "abdomen",
+   "src": "made"
+  },
+  {
+   "text": "Camille cherche un maillot qui ne serre pas trop l'abdomen.",
+   "en": "Camille looks for a swimsuit that isn't too tight around the stomach.",
+   "ko": "카미유는 배를 너무 조이지 않는 수영복을 찾아요.",
+   "blank": "abdomen",
+   "src": "made"
+  }
+ ],
  "w|abeille": [
   {
    "text": "Paul reste immobile pendant qu'une abeille tourne autour de son sandwich.",
@@ -147,6 +163,22 @@
    "en": "The animals sleep under the shelter every night.",
    "ko": "동물들은 매일 밤 대피소 밑에서 자.",
    "blank": "abri"
+  }
+ ],
+ "w|abriter": [
+  {
+   "text": "La vieille pharmacie où travaille Lucas abritait autrefois une épicerie.",
+   "en": "The old pharmacy where Lucas works used to house a grocery shop.",
+   "ko": "루카가 일하는 오래된 약국 자리는 예전에 식료품점이었어요.",
+   "blank": "abritait",
+   "src": "made"
+  },
+  {
+   "text": "Le grand magasin où flâne Camille abrite une verrière du siècle dernier.",
+   "en": "The department store Camille is wandering through houses a glass roof from the last century.",
+   "ko": "카미유가 거니는 백화점에는 지난 세기의 유리 천장이 있어요.",
+   "blank": "abrite",
+   "src": "made"
   }
  ],
  "w|absence": [
@@ -4465,6 +4497,22 @@
    "src": "made"
   }
  ],
+ "w|assembler": [
+  {
+   "text": "Lucas aide sa grand-mère à assembler son pilulier de la semaine.",
+   "en": "Lucas helps his grandmother put together her pill organiser for the week.",
+   "ko": "루카는 할머니가 일주일 약통을 채우는 걸 도와 드려요.",
+   "blank": "assembler",
+   "src": "made"
+  },
+  {
+   "text": "Camille a passé tout le dimanche à assembler l'étagère achetée au rayon maison.",
+   "en": "Camille spent all Sunday assembling the shelf she bought in the home section.",
+   "ko": "카미유는 생활용품 코너에서 산 선반을 조립하느라 일요일을 다 보냈어요.",
+   "blank": "assembler",
+   "src": "made"
+  }
+ ],
  "w|asseoir": [
   {
    "text": "Hugo a fait asseoir le témoin près de la fenêtre.",
@@ -5621,6 +5669,22 @@
    "blank": "aux"
   }
  ],
+ "w|auxiliaire": [
+  {
+   "text": "Lucas a appris le métier comme préparateur auxiliaire avant de passer son diplôme.",
+   "en": "Lucas learned the trade as an assistant technician before getting his diploma.",
+   "ko": "루카는 학위를 따기 전에 보조 조제사로 일을 배웠어요.",
+   "blank": "auxiliaire",
+   "src": "made"
+  },
+  {
+   "text": "Pendant les fêtes, le magasin embauche du personnel auxiliaire, comme le cousin de Camille.",
+   "en": "During the holidays, the store hires temporary staff, like Camille's cousin.",
+   "ko": "연말에는 백화점이 카미유의 사촌 같은 임시 직원을 뽑아요.",
+   "blank": "auxiliaire",
+   "src": "made"
+  }
+ ],
  "w|avaler": [
   {
    "text": "Attention à ne pas avaler trop vite.",
@@ -6462,6 +6526,22 @@
    "en": "Chloé lost the note, so she asks her neighbour for the building manager's bank details.",
    "ko": "클로에는 쪽지를 잃어버려서 이웃에게 관리 회사 계좌 정보를 물어봐요.",
    "blank": "bancaires",
+   "src": "made"
+  }
+ ],
+ "w|bandage": [
+  {
+   "text": "Le pharmacien refait le bandage autour du poignet de Lucas.",
+   "en": "The pharmacist redoes the bandage around Lucas's wrist.",
+   "ko": "약사가 루카의 손목 붕대를 다시 감아 줘요.",
+   "blank": "bandage",
+   "src": "made"
+  },
+  {
+   "text": "Au rayon sport, Camille achète un bandage élastique pour sa cheville fragile.",
+   "en": "In the sports section, Camille buys an elastic bandage for her weak ankle.",
+   "ko": "스포츠 코너에서 카미유는 약한 발목에 감을 탄력 붕대를 사요.",
+   "blank": "bandage",
    "src": "made"
   }
  ],
@@ -14477,6 +14557,22 @@
    "src": "made"
   }
  ],
+ "w|combler": [
+  {
+   "text": "La nouvelle pharmacienne va combler le manque de personnel le samedi, se réjouit Lucas.",
+   "en": "The new pharmacist will fill the staffing gap on Saturdays, Lucas is glad to hear.",
+   "ko": "루카는 새 약사가 토요일 인력 공백을 메워 준다니 기뻐해요.",
+   "blank": "combler",
+   "src": "made"
+  },
+  {
+   "text": "Ce sac va combler le vide dans la garde-robe de Camille.",
+   "en": "This bag will fill the gap in Camille's wardrobe.",
+   "ko": "이 가방이면 카미유 옷장의 빈 자리가 채워질 거예요.",
+   "blank": "combler",
+   "src": "made"
+  }
+ ],
  "w|comédie": [
   {
    "text": "Nous allons voir une comédie ce soir au théâtre.",
@@ -15317,6 +15413,22 @@
    "en": "You should try to understand his point of view.",
    "ko": "그의 관점을 이해하려고 노력해야 해.",
    "blank": "comprendre"
+  }
+ ],
+ "w|comprimé": [
+  {
+   "text": "Le pharmacien conseille à Lucas d'avaler le comprimé avec un grand verre d'eau.",
+   "en": "The pharmacist tells Lucas to swallow the tablet with a big glass of water.",
+   "ko": "약사는 루카에게 알약을 물 한 컵과 함께 삼키라고 해요.",
+   "blank": "comprimé",
+   "src": "made"
+  },
+  {
+   "text": "Pris d'un mal de tête au milieu des rayons, Camille avale un comprimé à la cafétéria.",
+   "en": "Hit by a headache among the aisles, Camille swallows a tablet in the cafeteria.",
+   "ko": "매장 한가운데서 두통이 온 카미유는 카페에서 알약을 하나 삼켜요.",
+   "blank": "comprimé",
+   "src": "made"
   }
  ],
  "w|compris": [
@@ -16910,6 +17022,22 @@
    "en": "Émilie lays out a course in the garden where you have to go around the flowerpots.",
    "ko": "에밀리는 화분을 돌아서 가야 하는 코스를 정원에 만들어요.",
    "blank": "contourner",
+   "src": "made"
+  }
+ ],
+ "w|contraction": [
+  {
+   "text": "La femme de Lucas sent une première contraction, alors il court chercher la voiture.",
+   "en": "Lucas's wife feels a first contraction, so he runs to get the car.",
+   "ko": "루카의 아내가 첫 진통을 느끼자 루카는 차를 가지러 뛰어가요.",
+   "blank": "contraction",
+   "src": "made"
+  },
+  {
+   "text": "La contraction des ventes de jouets inquiète la responsable de Camille.",
+   "en": "The drop in toy sales worries Camille's manager.",
+   "ko": "장난감 매출 감소 때문에 카미유의 팀장이 걱정해요.",
+   "blank": "contraction",
    "src": "made"
   }
  ],
@@ -18513,6 +18641,22 @@
    "en": "I am starting to fear the worst.",
    "ko": "나는 최악을 걱정하기 시작했어.",
    "blank": "craindre"
+  }
+ ],
+ "w|crampe": [
+  {
+   "text": "Depuis son footing, Lucas a une crampe au mollet qui ne passe pas.",
+   "en": "Since his run, Lucas has had a cramp in his calf that won't go away.",
+   "ko": "조깅을 한 뒤로 루카는 종아리에 쥐가 나서 낫지 않아요.",
+   "blank": "crampe",
+   "src": "made"
+  },
+  {
+   "text": "Après trois heures de shopping, Camille a une crampe dans la main à force de porter les sacs.",
+   "en": "After three hours of shopping, Camille gets a cramp in her hand from carrying the bags.",
+   "ko": "세 시간 쇼핑 끝에 카미유는 가방을 드느라 손에 쥐가 나요.",
+   "blank": "crampe",
+   "src": "made"
   }
  ],
  "w|cran": [
@@ -22910,6 +23054,22 @@
    "en": "Inès called in a repairman to diagnose the corner shop's fridge.",
    "ko": "이네스는 가게 냉장고를 점검받으려고 수리 기사를 불렀어요.",
    "blank": "diagnostic",
+   "src": "made"
+  }
+ ],
+ "w|diagnostiquer": [
+  {
+   "text": "Le pharmacien rappelle à Lucas qu'il ne peut pas diagnostiquer une angine au comptoir.",
+   "en": "The pharmacist reminds Lucas that he can't diagnose strep throat at the counter.",
+   "ko": "약사는 루카에게 카운터에서 편도염을 진단할 수는 없다고 말해요.",
+   "blank": "diagnostiquer",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur n'a pas su diagnostiquer la panne de la machine à café, alors Camille la rapporte.",
+   "en": "The salesman couldn't diagnose what was wrong with the coffee machine, so Camille brings it back.",
+   "ko": "판매원이 커피 머신 고장 원인을 찾지 못해서 카미유는 기계를 반품해요.",
+   "blank": "diagnostiquer",
    "src": "made"
   }
  ],
@@ -27597,6 +27757,22 @@
    "blank": "ensuite"
   }
  ],
+ "w|entamer": [
+  {
+   "text": "Le pharmacien conseille à Lucas d'entamer une nouvelle boîte seulement après la fin de l'ancienne.",
+   "en": "The pharmacist advises Lucas to open a new box only once the old one is finished.",
+   "ko": "약사는 루카에게 이전 통을 다 먹은 뒤에 새 통을 뜯으라고 해요.",
+   "blank": "entamer",
+   "src": "made"
+  },
+  {
+   "text": "Camille hésite à entamer son budget de vacances pour ce manteau.",
+   "en": "Camille hesitates to dip into her holiday budget for this coat.",
+   "ko": "카미유는 이 코트를 사려고 휴가 예산을 헐까 망설여요.",
+   "blank": "entamer",
+   "src": "made"
+  }
+ ],
  "w|entendre": [
   {
    "text": "Je peux entendre la musique d’ici.",
@@ -28600,6 +28776,22 @@
    "en": "Sarah had to cancel her flight because of a volcanic eruption that closed the skies.",
    "ko": "하늘길을 막은 화산 폭발 때문에 사라는 비행기를 취소해야 했어요.",
    "blank": "éruption",
+   "src": "made"
+  }
+ ],
+ "w|escalade": [
+  {
+   "text": "Les mains de Lucas sont abîmées par l'escalade, alors il prend une crème réparatrice.",
+   "en": "Lucas's hands are worn from climbing, so he gets a repair cream.",
+   "ko": "루카는 암벽 등반으로 손이 상해서 회복 크림을 사요.",
+   "blank": "escalade",
+   "src": "made"
+  },
+  {
+   "text": "Camille achète des chaussons d'escalade pour sa salle de bloc.",
+   "en": "Camille buys climbing shoes for her bouldering gym.",
+   "ko": "카미유는 볼더링장에서 신을 암벽화를 사요.",
+   "blank": "escalade",
    "src": "made"
   }
  ],
@@ -30877,6 +31069,22 @@
    "src": "made"
   }
  ],
+ "w|facial": [
+  {
+   "text": "Lucas achète une crème hydratante faciale pour sa peau desséchée par le froid.",
+   "en": "Lucas buys a facial moisturiser for his skin, dried out by the cold.",
+   "ko": "루카는 추위에 튼 피부에 바를 얼굴 보습 크림을 사요.",
+   "blank": "faciale",
+   "src": "made"
+  },
+  {
+   "text": "Au rayon beauté, Camille se fait offrir un soin facial de dix minutes.",
+   "en": "At the beauty counter, Camille gets a free ten-minute facial.",
+   "ko": "화장품 코너에서 카미유는 십 분짜리 얼굴 관리를 무료로 받아요.",
+   "blank": "facial",
+   "src": "made"
+  }
+ ],
  "w|facile": [
   {
    "text": "Ce problème est très facile à résoudre.",
@@ -32591,6 +32799,22 @@
    "src": "made"
   }
  ],
+ "w|flatteur": [
+  {
+   "text": "La lumière de la cabine d'essayage n'est pas flatteuse, plaisante Lucas en essayant des lunettes.",
+   "en": "The fitting-room light isn't flattering, Lucas jokes as he tries on glasses.",
+   "ko": "루카는 안경을 써 보며 거울 조명이 영 안 받쳐 준다고 농담해요.",
+   "blank": "flatteuse",
+   "src": "made"
+  },
+  {
+   "text": "La coupe de ce pantalon est très flatteuse, assure la vendeuse à Camille.",
+   "en": "The cut of these trousers is very flattering, the saleswoman assures Camille.",
+   "ko": "점원은 카미유에게 이 바지 핏이 아주 잘 받는다고 장담해요.",
+   "blank": "flatteuse",
+   "src": "made"
+  }
+ ],
  "w|fléau": [
   {
    "text": "Pour Hugo, l'humidité est le pire fléau des vieux livres.",
@@ -33229,6 +33453,22 @@
    "en": "That shape is strange.",
    "ko": "저 형태는 이상해.",
    "blank": "forme"
+  }
+ ],
+ "w|formel": [
+  {
+   "text": "Le pharmacien est formel : Lucas ne doit pas mélanger ce sirop avec de l'alcool.",
+   "en": "The pharmacist is categorical: Lucas must not mix this syrup with alcohol.",
+   "ko": "약사는 루카가 이 시럽을 술과 같이 먹으면 절대 안 된다고 단호하게 말해요.",
+   "blank": "formel",
+   "src": "made"
+  },
+  {
+   "text": "Camille cherche une robe formelle pour le mariage de sa collègue.",
+   "en": "Camille is looking for a formal dress for her colleague's wedding.",
+   "ko": "카미유는 동료 결혼식에 입을 격식 있는 원피스를 찾아요.",
+   "blank": "formelle",
+   "src": "made"
   }
  ],
  "w|former": [
@@ -34701,6 +34941,22 @@
    "blank": "géant"
   }
  ],
+ "w|gel": [
+  {
+   "text": "Lucas prend un gel antibactérien pour son sac de sport.",
+   "en": "Lucas takes a sanitising gel for his gym bag.",
+   "ko": "루카는 운동 가방에 넣을 손 소독 젤을 사요.",
+   "blank": "gel",
+   "src": "made"
+  },
+  {
+   "text": "Camille prend un gel douche à la fleur d'oranger en promotion.",
+   "en": "Camille picks up an orange-blossom shower gel that's on offer.",
+   "ko": "카미유는 할인 중인 오렌지꽃 샤워 젤을 골라요.",
+   "blank": "gel",
+   "src": "made"
+  }
+ ],
  "w|gelée": [
   {
    "text": "Antoine nappe ses tartelettes aux fraises d'une fine couche de gelée.",
@@ -36129,6 +36385,22 @@
    "src": "made"
   }
  ],
+ "w|grossir": [
+  {
+   "text": "Lucas demande si ce médicament risque de le faire grossir.",
+   "en": "Lucas asks whether this medicine might make him put on weight.",
+   "ko": "루카는 이 약을 먹으면 살이 찔 수도 있는지 물어요.",
+   "blank": "grossir",
+   "src": "made"
+  },
+  {
+   "text": "Camille a peur que ce manteau la fasse grossir sur les photos.",
+   "en": "Camille is afraid this coat makes her look bigger in photos.",
+   "ko": "카미유는 이 코트를 입으면 사진에 뚱뚱해 보일까 봐 걱정해요.",
+   "blank": "grossir",
+   "src": "made"
+  }
+ ],
  "w|grotesque": [
   {
    "text": "Le titre proposé par le stagiaire est si grotesque que Louis éclate de rire.",
@@ -37056,6 +37328,22 @@
    "en": "Seeing the pig escape into the neighbour's garden was hilarious, Claire says.",
    "ko": "돼지가 이웃집 마당으로 도망치는 걸 보니 정말 웃겼다고 클레르가 이야기해요.",
    "blank": "hilarant",
+   "src": "made"
+  }
+ ],
+ "w|hisser": [
+  {
+   "text": "Lucas aide le livreur à hisser les cartons de médicaments sur l'étagère du haut.",
+   "en": "Lucas helps the delivery man hoist the boxes of medicine onto the top shelf.",
+   "ko": "루카는 배달원을 도와 약 상자를 맨 위 선반에 올려요.",
+   "blank": "hisser",
+   "src": "made"
+  },
+  {
+   "text": "Les employés doivent hisser la grande banderole des soldes au-dessus de l'entrée, et Camille tient l'échelle.",
+   "en": "The staff have to hoist the big sale banner over the entrance, and Camille holds the ladder.",
+   "ko": "직원들이 입구 위로 큰 세일 현수막을 올려야 해서 카미유가 사다리를 잡아요.",
+   "blank": "hisser",
    "src": "made"
   }
  ],
@@ -38831,6 +39119,22 @@
    "src": "made"
   }
  ],
+ "w|impulsif": [
+  {
+   "text": "Lucas regrette son achat impulsif d'un complément miracle vu à la télé.",
+   "en": "Lucas regrets his impulsive purchase of a miracle supplement he saw on TV.",
+   "ko": "루카는 TV에서 본 기적의 영양제를 충동적으로 산 걸 후회해요.",
+   "blank": "impulsif",
+   "src": "made"
+  },
+  {
+   "text": "Camille sait qu'elle est trop impulsive pendant les soldes.",
+   "en": "Camille knows she's too impulsive during the sales.",
+   "ko": "카미유는 세일 때 자기가 너무 충동적이라는 걸 알아요.",
+   "blank": "impulsive",
+   "src": "made"
+  }
+ ],
  "w|impulsion": [
   {
    "text": "Sous l'impulsion de sa cheffe, Thomas prend déjà en charge un petit dossier.",
@@ -38966,6 +39270,22 @@
    "en": "The new cafeteria encourages Léa to have lunch with her colleagues.",
    "ko": "새 구내식당 덕분에 레아는 동료들과 점심을 먹게 돼요.",
    "blank": "incite",
+   "src": "made"
+  }
+ ],
+ "w|incliner": [
+  {
+   "text": "Pour mettre les gouttes, Lucas doit incliner la tête en arrière.",
+   "en": "To put the drops in, Lucas has to tilt his head back.",
+   "ko": "안약을 넣으려면 루카는 고개를 뒤로 젖혀야 해요.",
+   "blank": "incliner",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur montre à Camille comment incliner le dossier du fauteuil.",
+   "en": "The salesman shows Camille how to recline the armchair's backrest.",
+   "ko": "판매원은 카미유에게 안락의자 등받이를 젖히는 법을 보여 줘요.",
+   "blank": "incliner",
    "src": "made"
   }
  ],
@@ -39687,6 +40007,22 @@
    "blank": "inhabituel"
   }
  ],
+ "w|inhumain": [
+  {
+   "text": "Lucas trouve inhumain de faire attendre les personnes âgées debout dans la file.",
+   "en": "Lucas finds it inhumane to make elderly people wait standing in the queue.",
+   "ko": "루카는 노인들을 줄에 서서 기다리게 하는 게 너무하다고 생각해요.",
+   "blank": "inhumain",
+   "src": "made"
+  },
+  {
+   "text": "Les horaires des vendeurs pendant les fêtes sont presque inhumains, confie une employée à Camille.",
+   "en": "The salespeople's hours during the holidays are almost inhumane, an employee confides to Camille.",
+   "ko": "한 직원이 카미유에게 연말 근무 시간이 거의 비인간적이라고 털어놓아요.",
+   "blank": "inhumains",
+   "src": "made"
+  }
+ ],
  "w|initiale": [
   {
    "text": "Sur le document, Antoine remarque une initiale griffonnée en bas de page.",
@@ -39716,6 +40052,22 @@
    "en": "Chloé had the idea of offering home repairs.",
    "ko": "클로에는 출장 수리를 해 보자는 생각을 먼저 했어요.",
    "blank": "initiative",
+   "src": "made"
+  }
+ ],
+ "w|injecter": [
+  {
+   "text": "L'infirmière apprend à Lucas comment injecter l'insuline à son père.",
+   "en": "The nurse shows Lucas how to inject his father's insulin.",
+   "ko": "간호사는 루카에게 아버지께 인슐린을 주사하는 법을 알려 줘요.",
+   "blank": "injecter",
+   "src": "made"
+  },
+  {
+   "text": "La direction veut injecter de l'argent dans la rénovation du rayon enfants, apprend Camille.",
+   "en": "Management wants to inject money into renovating the children's section, Camille learns.",
+   "ko": "카미유는 경영진이 아동 코너 리모델링에 돈을 투입하려 한다는 걸 알게 돼요.",
+   "blank": "injecter",
    "src": "made"
   }
  ],
@@ -42348,6 +42700,22 @@
    "en": "To celebrate the solstice, Manon's friends organized karaoke in the garden.",
    "ko": "하지를 축하하려고 마농의 친구들이 정원에서 노래 파티를 열었어요.",
    "blank": "karaoké",
+   "src": "made"
+  }
+ ],
+ "w|karaté": [
+  {
+   "text": "Lucas s'est tordu le pouce au cours de karaté de mardi.",
+   "en": "Lucas twisted his thumb at Tuesday's karate class.",
+   "ko": "루카는 화요일 가라테 수업에서 엄지를 삐었어요.",
+   "blank": "karaté",
+   "src": "made"
+  },
+  {
+   "text": "Camille achète un kimono de karaté pour l'anniversaire de son neveu.",
+   "en": "Camille buys a karate suit for her nephew's birthday.",
+   "ko": "카미유는 조카 생일 선물로 가라테 도복을 사요.",
+   "blank": "karaté",
    "src": "made"
   }
  ],
@@ -45620,6 +45988,22 @@
    "en": "For the school show, Sarah helps make up the little ones as animals.",
    "ko": "학교 공연 때 사라는 아이들을 동물 분장시키는 걸 도와요.",
    "blank": "maquiller",
+   "src": "made"
+  }
+ ],
+ "w|marathon": [
+  {
+   "text": "Lucas prépare un marathon et achète des pansements contre les ampoules.",
+   "en": "Lucas is training for a marathon and buys plasters for blisters.",
+   "ko": "루카는 마라톤을 준비하면서 물집용 반창고를 사요.",
+   "blank": "marathon",
+   "src": "made"
+  },
+  {
+   "text": "Le jour des soldes, faire tous les étages est un vrai marathon pour Camille.",
+   "en": "On sale day, going through every floor is a real marathon for Camille.",
+   "ko": "세일 날 모든 층을 도는 건 카미유에게 그야말로 마라톤이에요.",
+   "blank": "marathon",
    "src": "made"
   }
  ],
@@ -50803,6 +51187,22 @@
    "blank": "obliger"
   }
  ],
+ "w|obscène": [
+  {
+   "text": "Un client a laissé un mot obscène sur la boîte à idées, ce qui choque Lucas.",
+   "en": "A customer left an obscene note in the suggestion box, which shocks Lucas.",
+   "ko": "손님이 의견함에 음란한 쪽지를 남겨서 루카는 충격을 받아요.",
+   "blank": "obscène",
+   "src": "made"
+  },
+  {
+   "text": "Le prix de ce sac est obscène, murmure Camille à son amie.",
+   "en": "The price of this bag is obscene, Camille whispers to her friend.",
+   "ko": "카미유는 친구에게 이 가방 값이 말도 안 된다고 속삭여요.",
+   "blank": "obscène",
+   "src": "made"
+  }
+ ],
  "w|obscur": [
   {
    "text": "Le sous-sol est complètement obscur, alors Louis installe des projecteurs.",
@@ -51041,6 +51441,22 @@
    "en": "In October, the leaves change color.",
    "ko": "10월에는 나뭇잎 색깔이 변해.",
    "blank": "octobre"
+  }
+ ],
+ "w|oculaire": [
+  {
+   "text": "Lucas a besoin d'un collyre pour une petite irritation oculaire.",
+   "en": "Lucas needs eye drops for a slight eye irritation.",
+   "ko": "루카는 가벼운 눈 자극 때문에 안약이 필요해요.",
+   "blank": "oculaire",
+   "src": "made"
+  },
+  {
+   "text": "Au stand de lunettes, l'opticien fait passer à Camille un petit test oculaire.",
+   "en": "At the glasses stand, the optician gives Camille a quick eye test.",
+   "ko": "안경 코너에서 안경사가 카미유에게 간단한 시력 검사를 해 줘요.",
+   "blank": "oculaire",
+   "src": "made"
   }
  ],
  "w|odeur": [
@@ -51544,6 +51960,22 @@
    "en": "After the puncture, Inès's car is back in working order.",
    "ko": "펑크를 고친 뒤 이네스의 차는 다시 달릴 수 있게 됐어요.",
    "blank": "opérationnelle",
+   "src": "made"
+  }
+ ],
+ "w|opératoire": [
+  {
+   "text": "Après son opération du genou, Lucas vient chercher des bas de contention pour la période post-opératoire.",
+   "en": "After his knee surgery, Lucas comes to pick up compression stockings for the post-operative period.",
+   "ko": "무릎 수술 뒤 루카는 수술 후 기간에 신을 압박 스타킹을 사러 와요.",
+   "blank": "opératoire",
+   "src": "made"
+  },
+  {
+   "text": "Camille achète une tenue confortable pour son bloc opératoire, car elle est infirmière.",
+   "en": "Camille buys a comfortable outfit for the operating theatre, since she's a nurse.",
+   "ko": "간호사인 카미유는 수술실에서 입을 편한 옷을 사요.",
+   "blank": "opératoire",
    "src": "made"
   }
  ],
@@ -58173,6 +58605,22 @@
    "src": "made"
   }
  ],
+ "w|prélèvement": [
+  {
+   "text": "Le laboratoire à côté de la pharmacie fait le prélèvement sanguin de Lucas à jeun.",
+   "en": "The lab next to the pharmacy takes Lucas's blood sample on an empty stomach.",
+   "ko": "약국 옆 검사실에서 공복 상태의 루카에게 채혈을 해요.",
+   "blank": "prélèvement",
+   "src": "made"
+  },
+  {
+   "text": "En payant, Camille choisit le prélèvement automatique pour sa carte du magasin.",
+   "en": "When paying, Camille chooses direct debit for her store card.",
+   "ko": "계산하면서 카미유는 매장 카드 대금을 자동 이체로 정해요.",
+   "blank": "prélèvement",
+   "src": "made"
+  }
+ ],
  "w|prélever": [
   {
    "text": "Les enquêteurs ont pu prélever des traces d'ADN sur le verre.",
@@ -58335,6 +58783,22 @@
    "en": "The bakery is very close.",
    "ko": "빵집이 바로 가까워.",
    "blank": "près"
+  }
+ ],
+ "w|prescription": [
+  {
+   "text": "Sans prescription, le pharmacien ne peut pas donner cet antibiotique à Lucas.",
+   "en": "Without a prescription, the pharmacist can't give Lucas this antibiotic.",
+   "ko": "처방전 없이는 약사가 루카에게 이 항생제를 줄 수 없어요.",
+   "blank": "prescription",
+   "src": "made"
+  },
+  {
+   "text": "L'opticien demande à Camille la prescription de son ophtalmologue.",
+   "en": "The optician asks Camille for her eye doctor's prescription.",
+   "ko": "안경사는 카미유에게 안과 처방전을 달라고 해요.",
+   "blank": "prescription",
+   "src": "made"
   }
  ],
  "w|prescrire": [
@@ -60267,6 +60731,22 @@
    "src": "made"
   }
  ],
+ "w|psychotique": [
+  {
+   "text": "Lucas lit dans une revue médicale que les symptômes psychotiques se traitent mieux quand ils sont repérés tôt.",
+   "en": "Lucas reads in a medical magazine that psychotic symptoms are treated better when they're spotted early.",
+   "ko": "루카는 의학 잡지에서 정신병적 증상은 일찍 발견할수록 치료가 잘된다는 글을 읽어요.",
+   "blank": "psychotiques",
+   "src": "made"
+  },
+  {
+   "text": "Camille feuillette au rayon livres un roman dont le narrateur traverse un épisode psychotique.",
+   "en": "In the book section, Camille leafs through a novel whose narrator goes through a psychotic episode.",
+   "ko": "카미유는 서점 코너에서 화자가 정신병적 증상을 겪는 소설을 넘겨 봐요.",
+   "blank": "psychotique",
+   "src": "made"
+  }
+ ],
  "w|pub": [
   {
    "text": "Paul a vu une pub pour une tente légère et il est tenté.",
@@ -60495,6 +60975,22 @@
    "en": "The punishment was to copy one hundred lines.",
    "ko": "벌로 백 번을 적어야 했어.",
    "blank": "punition"
+  }
+ ],
+ "w|pupille": [
+  {
+   "text": "Avec ces gouttes, la pupille de Lucas restera dilatée quelques heures.",
+   "en": "With these drops, Lucas's pupil will stay dilated for a few hours.",
+   "ko": "이 안약을 넣으면 루카의 동공이 몇 시간 동안 커진 채로 있을 거예요.",
+   "blank": "pupille",
+   "src": "made"
+  },
+  {
+   "text": "Le maquillage du stand fait ressortir la pupille sombre de Camille.",
+   "en": "The make-up at the stand brings out Camille's dark pupil.",
+   "ko": "매장 화장이 카미유의 짙은 눈동자를 돋보이게 해요.",
+   "blank": "pupille",
+   "src": "made"
   }
  ],
  "w|pur": [
@@ -61256,6 +61752,22 @@
    "en": "Going from freelance to a fixed office is a radical change for Émilie.",
    "ko": "프리랜서에서 정규 사무실로 옮기는 건 에밀리에게 큰 변화예요.",
    "blank": "radical",
+   "src": "made"
+  }
+ ],
+ "w|radieux": [
+  {
+   "text": "Guéri, Lucas est sorti de la pharmacie avec un sourire radieux.",
+   "en": "Recovered, Lucas left the pharmacy with a beaming smile.",
+   "ko": "다 나은 루카는 환한 얼굴로 약국을 나섰어요.",
+   "blank": "radieux",
+   "src": "made"
+  },
+  {
+   "text": "Camille ressort du magasin radieuse, sa nouvelle robe sous le bras.",
+   "en": "Camille comes out of the store beaming, her new dress under her arm.",
+   "ko": "카미유는 새 원피스를 들고 환하게 웃으며 백화점을 나와요.",
+   "blank": "radieuse",
    "src": "made"
   }
  ],
@@ -63279,6 +63791,22 @@
    "blank": "regret"
   }
  ],
+ "w|regrettable": [
+  {
+   "text": "Le pharmacien trouve regrettable que Lucas ait arrêté son traitement trop tôt.",
+   "en": "The pharmacist finds it unfortunate that Lucas stopped his treatment too early.",
+   "ko": "약사는 루카가 치료를 너무 일찍 그만둔 게 안타깝다고 해요.",
+   "blank": "regrettable",
+   "src": "made"
+  },
+  {
+   "text": "Il est regrettable que l'escalator du troisième soit encore en panne, soupire Camille.",
+   "en": "It's unfortunate that the escalator on the third floor is broken again, Camille sighs.",
+   "ko": "3층 에스컬레이터가 또 고장이라니 아쉽다고 카미유가 한숨을 쉬어요.",
+   "blank": "regrettable",
+   "src": "made"
+  }
+ ],
  "w|regretter": [
   {
    "text": "Je vais regretter cette décision plus tard.",
@@ -63335,6 +63863,22 @@
    "en": "In this story, the queen is very kind.",
    "ko": "이 이야기에서 여왕은 정말 친절해.",
    "blank": "reine"
+  }
+ ],
+ "w|rejet": [
+  {
+   "text": "Après sa greffe, Lucas prend chaque jour un traitement contre le rejet.",
+   "en": "After his transplant, Lucas takes anti-rejection medication every day.",
+   "ko": "이식 수술 뒤로 루카는 매일 거부 반응을 막는 약을 먹어요.",
+   "blank": "rejet",
+   "src": "made"
+  },
+  {
+   "text": "La banque a envoyé un rejet de paiement, et Camille doit utiliser une autre carte.",
+   "en": "The bank sent a payment rejection, and Camille has to use another card.",
+   "ko": "은행에서 결제를 거절해서 카미유는 다른 카드를 써야 해요.",
+   "blank": "rejet",
+   "src": "made"
   }
  ],
  "w|rejeter": [
@@ -65782,6 +66326,22 @@
    "en": "Chloé's manager says the team's diversity is an asset.",
    "ko": "클로에의 상사는 팀의 다양성이 자산이라고 말해요.",
    "blank": "richesse",
+   "src": "made"
+  }
+ ],
+ "w|ride": [
+  {
+   "text": "La vendeuse propose à Lucas un sérum contre les rides pour sa mère.",
+   "en": "The assistant suggests an anti-wrinkle serum to Lucas for his mother.",
+   "ko": "점원은 루카에게 어머니께 드릴 주름 개선 세럼을 권해요.",
+   "blank": "rides",
+   "src": "made"
+  },
+  {
+   "text": "La vendeuse assure à Camille que cette crème efface les ridules, mais pas les rides.",
+   "en": "The saleswoman assures Camille this cream smooths fine lines, but not wrinkles.",
+   "ko": "점원은 카미유에게 이 크림이 잔주름은 없애도 깊은 주름은 못 없앤다고 해요.",
+   "blank": "rides",
    "src": "made"
   }
  ],
@@ -69173,6 +69733,22 @@
    "src": "made"
   }
  ],
+ "w|sexualité": [
+  {
+   "text": "Une brochure sur la santé et la sexualité des adolescents est posée près de la caisse, remarque Lucas.",
+   "en": "A leaflet on teenage health and sexuality sits near the till, Lucas notices.",
+   "ko": "루카는 계산대 옆에 청소년 건강과 성에 관한 안내 책자가 놓인 걸 봐요.",
+   "blank": "sexualité",
+   "src": "made"
+  },
+  {
+   "text": "Au rayon librairie, Camille feuillette un manuel sur la sexualité destiné aux parents.",
+   "en": "In the book section, Camille leafs through a guide on sexuality written for parents.",
+   "ko": "서점 코너에서 카미유는 부모를 위한 성교육 책을 훑어봐요.",
+   "blank": "sexualité",
+   "src": "made"
+  }
+ ],
  "w|sexuel": [
   {
    "text": "Le dentiste pose à Nicolas des questions sur sa santé sexuelle, puis s'excuse.",
@@ -71670,6 +72246,22 @@
    "en": "Sarah finds the meeting pointless, because nobody offers a real solution.",
    "ko": "아무도 진짜 해결책을 내놓지 않아서 사라는 그 회의가 소득이 없다고 생각해요.",
    "blank": "stérile",
+   "src": "made"
+  }
+ ],
+ "w|stéroïde": [
+  {
+   "text": "Pour son asthme, le médecin a prescrit à Lucas un stéroïde en inhalateur.",
+   "en": "For his asthma, the doctor prescribed Lucas an inhaled steroid.",
+   "ko": "의사는 루카의 천식에 흡입형 스테로이드를 처방했어요.",
+   "blank": "stéroïde",
+   "src": "made"
+  },
+  {
+   "text": "Camille rit devant une affiche de bodybuilder qui semble gonflé au stéroïde.",
+   "en": "Camille laughs at a poster of a bodybuilder who looks pumped up on steroids.",
+   "ko": "카미유는 스테로이드로 부풀린 것 같은 보디빌더 포스터를 보고 웃어요.",
+   "blank": "stéroïde",
    "src": "made"
   }
  ],
@@ -74571,6 +75163,22 @@
    "src": "made"
   }
  ],
+ "w|tic": [
+  {
+   "text": "Le fils de Lucas a un petit tic nerveux à l'œil depuis la rentrée.",
+   "en": "Lucas's son has had a little nervous twitch in his eye since school started.",
+   "ko": "루카의 아들은 개학 뒤로 눈을 깜빡이는 작은 틱이 생겼어요.",
+   "blank": "tic",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur a un tic de langage qui fait sourire Camille : il dit « en fait » à chaque fois.",
+   "en": "The salesman has a verbal tic that makes Camille smile: he says “actually” every time.",
+   "ko": "판매원이 말끝마다 “사실은”이라고 하는 버릇이 있어서 카미유는 웃음이 나요.",
+   "blank": "tic",
+   "src": "made"
+  }
+ ],
  "w|ticket": [
   {
    "text": "J'ai perdu mon ticket de cinéma.",
@@ -74977,6 +75585,22 @@
    "src": "made"
   }
  ],
+ "w|torcher": [
+  {
+   "text": "Lucas achète des lingettes pour torcher le bébé pendant le voyage.",
+   "en": "Lucas buys wipes to clean the baby's bottom during the trip.",
+   "ko": "루카는 여행 중에 아기 엉덩이를 닦아 줄 물티슈를 사요.",
+   "blank": "torcher",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur a torché l'emballage cadeau, et Camille doit le refaire elle-même.",
+   "en": "The salesman did a sloppy job on the gift wrap, and Camille has to redo it herself.",
+   "ko": "판매원이 선물 포장을 대충 해서 카미유가 직접 다시 싸야 해요.",
+   "blank": "torché",
+   "src": "made"
+  }
+ ],
  "w|tordre": [
   {
    "text": "Arrête de tordre ta serviette.",
@@ -75314,6 +75938,22 @@
    "en": "Inès sells honey lozenges for coughs near the till.",
    "ko": "이네스는 계산대 옆에서 기침에 좋은 꿀 사탕을 팔아요.",
    "blank": "toux",
+   "src": "made"
+  }
+ ],
+ "w|toxine": [
+  {
+   "text": "Le pharmacien explique à Lucas que le foie élimine la toxine de l'alcool.",
+   "en": "The pharmacist explains to Lucas that the liver gets rid of the toxin from alcohol.",
+   "ko": "약사는 루카에게 간이 알코올 독소를 없앤다고 설명해요.",
+   "blank": "toxine",
+   "src": "made"
+  },
+  {
+   "text": "Une conseillère explique à Camille que la toxine botulique n'est pas vendue en magasin.",
+   "en": "A beauty adviser explains to Camille that botulinum toxin isn't sold in shops.",
+   "ko": "상담원은 카미유에게 보툴리눔 독소는 매장에서 팔지 않는다고 설명해요.",
+   "blank": "toxine",
    "src": "made"
   }
  ],

@@ -1521,6 +1521,22 @@
    "src": "made"
   }
  ],
+ "w|अनन्य": [
+  {
+   "text": "विकास और उसके साथी हवलदार में अनन्य दोस्ती है।",
+   "en": "Vikas and his fellow head constable share a unique friendship.",
+   "ko": "비카스와 동료 경사는 둘도 없는 친구예요.",
+   "blank": "अनन्य",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को समुद्र से अनन्य प्रेम है, वह हर साल यहीं आती है।",
+   "en": "Shalini has a singular love for the sea; she comes here every year.",
+   "ko": "샬리니는 바다를 유난히 사랑해서 해마다 여기에 와요.",
+   "blank": "अनन्य",
+   "src": "made"
+  }
+ ],
  "w|अनमोल": [
   {
    "text": "रवि अपने गुरु की दी हुई पुरानी क़लम को अनमोल मानता है।",
@@ -2953,6 +2969,22 @@
    "blank": "अलग अलग"
   }
  ],
+ "w|अलगाववादी": [
+  {
+   "text": "टीवी पर ख़बर थी कि सीमा के पास एक अलगाववादी नेता को गिरफ़्तार किया गया है।",
+   "en": "The TV news said a separatist leader had been arrested near the border.",
+   "ko": "텔레비전에서 국경 근처에서 분리주의 지도자가 체포됐다는 뉴스가 나왔어요.",
+   "blank": "अलगाववादी",
+   "src": "made"
+  },
+  {
+   "text": "होटल के अख़बार में एक अलगाववादी संगठन पर लगे प्रतिबंध की ख़बर थी।",
+   "en": "The hotel's newspaper had a report on the ban placed on a separatist organisation.",
+   "ko": "호텔 신문에 분리주의 단체가 금지됐다는 기사가 실렸어요.",
+   "blank": "अलगाववादी",
+   "src": "made"
+  }
+ ],
  "w|अलमारी": [
   {
    "text": "कपड़े अलमारी में रख दो।",
@@ -3271,6 +3303,22 @@
    "src": "made"
   }
  ],
+ "w|असमानता": [
+  {
+   "text": "विकास मानता है कि बहुत-से छोटे अपराधों की जड़ में आर्थिक असमानता है।",
+   "en": "Vikas believes economic inequality lies at the root of many petty crimes.",
+   "ko": "비카스는 많은 경범죄의 뿌리에 경제적 불평등이 있다고 봐요.",
+   "blank": "असमानता",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने देखा कि आलीशान होटलों और मछुआरों की झोपड़ियों में कितनी असमानता है।",
+   "en": "Shalini noticed how much inequality there is between the luxury hotels and the fishermen's huts.",
+   "ko": "샬리니는 호화 호텔과 어부들의 오두막 사이 격차가 얼마나 큰지 봤어요.",
+   "blank": "असमानता",
+   "src": "made"
+  }
+ ],
  "w|असर": [
   {
    "text": "दवाई का असर जल्दी दिखेगा।",
@@ -3454,6 +3502,22 @@
    "en": "During the repairs, reception is running from a temporary room.",
    "ko": "수리하는 동안 프런트는 임시 방에서 운영되고 있어요.",
    "blank": "अस्थायी",
+   "src": "made"
+  }
+ ],
+ "w|अस्थिर": [
+  {
+   "text": "पूछताछ में आदमी का बयान बार-बार बदल रहा था, वह मानसिक रूप से अस्थिर लग रहा था।",
+   "en": "The man's statement kept changing during questioning; he seemed mentally unstable.",
+   "ko": "조사 중 그 남자의 진술이 자꾸 바뀌어서 정신적으로 불안정해 보였어요.",
+   "blank": "अस्थिर",
+   "src": "made"
+  },
+  {
+   "text": "मौसम अस्थिर था, इसलिए मछुआरे उस दिन समुद्र में नहीं गए।",
+   "en": "The weather was unsettled, so the fishermen didn't go out to sea that day.",
+   "ko": "날씨가 변덕스러워서 그날 어부들은 바다에 나가지 않았어요.",
+   "blank": "अस्थिर",
    "src": "made"
   }
  ],
@@ -4253,6 +4317,22 @@
    "src": "made"
   }
  ],
+ "w|आत्मकथा": [
+  {
+   "text": "रिटायर्ड कमिश्नर की आत्मकथा विकास की मेज़ पर रखी है।",
+   "en": "The retired commissioner's autobiography lies on Vikas's desk.",
+   "ko": "은퇴한 경찰청장의 자서전이 비카스 책상 위에 놓여 있어요.",
+   "blank": "आत्मकथा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी धूप में लेटकर एक मशहूर नाविक की आत्मकथा पढ़ रही थी।",
+   "en": "Lying in the sun, Shalini was reading a famous sailor's autobiography.",
+   "ko": "샬리니는 햇볕에 누워 유명한 선원의 자서전을 읽고 있었어요.",
+   "blank": "आत्मकथा",
+   "src": "made"
+  }
+ ],
  "w|आत्मनिर्भर": [
   {
    "text": "अजय की मंडली अब किसी प्रायोजक के बिना आत्मनिर्भर हो गई है।",
@@ -4282,6 +4362,22 @@
    "en": "After learning three languages, Anjali's confidence grew.",
    "ko": "세 언어를 배우고 나서 안잘리는 자신감이 붙었어요.",
    "blank": "आत्मविश्वास",
+   "src": "made"
+  }
+ ],
+ "w|आत्मसमर्पण": [
+  {
+   "text": "तीन दिन फ़रार रहने के बाद चोर ने थाने आकर आत्मसमर्पण कर दिया।",
+   "en": "After three days on the run, the thief came to the station and surrendered.",
+   "ko": "사흘을 도망 다니던 도둑이 파출소에 와서 자수했어요.",
+   "blank": "आत्मसमर्पण",
+   "src": "made"
+  },
+  {
+   "text": "बीच पर लगी प्रदर्शनी में पुराने युद्ध के आत्मसमर्पण की तस्वीरें थीं।",
+   "en": "The exhibition on the beach had photos of the surrender in an old war.",
+   "ko": "해변 전시회에는 옛 전쟁의 항복 장면 사진이 있었어요.",
+   "blank": "आत्मसमर्पण",
    "src": "made"
   }
  ],
@@ -5941,6 +6037,22 @@
    "blank": "इनाम"
   }
  ],
+ "w|इबादत": [
+  {
+   "text": "थाने के पास वाली मस्जिद में शुक्रवार की इबादत के समय विकास ट्रैफ़िक संभालता है।",
+   "en": "Vikas handles traffic during Friday prayers at the mosque near the station.",
+   "ko": "비카스는 금요일 예배 시간에 파출소 옆 모스크 앞 교통을 정리해요.",
+   "blank": "इबादत",
+   "src": "made"
+  },
+  {
+   "text": "शाम को किनारे की दरगाह में लोग शांति से इबादत कर रहे थे।",
+   "en": "In the evening, people were praying quietly at the shrine on the shore.",
+   "ko": "저녁에 바닷가 성소에서 사람들이 조용히 기도하고 있었어요.",
+   "blank": "इबादत",
+   "src": "made"
+  }
+ ],
  "w|इमली": [
   {
    "text": "रवि ने रास्ते में पेड़ से पकी इमली तोड़कर चखी।",
@@ -6027,6 +6139,22 @@
    "en": "Start treatment soon.",
    "ko": "빨리 치료를 시작해.",
    "blank": "इलाज"
+  }
+ ],
+ "w|इल्ज़ाम": [
+  {
+   "text": "पड़ोसी ने विकास के सामने अपने किरायेदार पर झूठा इल्ज़ाम लगाया था।",
+   "en": "The neighbour had made a false accusation against his tenant in front of Vikas.",
+   "ko": "이웃은 비카스 앞에서 자기 세입자에게 거짓 누명을 씌웠어요.",
+   "blank": "इल्ज़ाम",
+   "src": "made"
+  },
+  {
+   "text": "नारियल वाले ने हँसकर कहा कि महँगा बेचने का इल्ज़ाम उस पर ग़लत है।",
+   "en": "The coconut seller laughed and said the accusation of overcharging was unfair.",
+   "ko": "코코넛 장수는 비싸게 판다는 소리는 억울하다며 웃었어요.",
+   "blank": "इल्ज़ाम",
+   "src": "made"
   }
  ],
  "w|इशारा": [
@@ -7448,6 +7576,22 @@
    "en": "Neha wrote at the end of the email that the above points will be discussed tomorrow.",
    "ko": "네하는 이메일 끝에 위 내용을 내일 논의하겠다고 썼어요.",
    "blank": "उपरोक्त",
+   "src": "made"
+  }
+ ],
+ "w|उपर्युक्त": [
+  {
+   "text": "विकास ने रिपोर्ट में लिखा कि उपर्युक्त सभी सामान चोर के घर से बरामद हुआ।",
+   "en": "Vikas wrote in the report that all the above-mentioned items were recovered from the thief's house.",
+   "ko": "비카스는 보고서에 위에 적은 물건이 모두 도둑 집에서 나왔다고 썼어요.",
+   "blank": "उपर्युक्त",
+   "src": "made"
+  },
+  {
+   "text": "होटल के नोटिस में लिखा था कि उपर्युक्त नियम सभी मेहमानों पर लागू हैं।",
+   "en": "The hotel notice said the above rules apply to all guests.",
+   "ko": "호텔 안내문에는 위 규칙이 모든 손님에게 적용된다고 적혀 있었어요.",
+   "blank": "उपर्युक्त",
    "src": "made"
   }
  ],
@@ -11965,6 +12109,22 @@
    "src": "made"
   }
  ],
+ "w|कूटनीति": [
+  {
+   "text": "दो गुटों का झगड़ा सुलझाने में विकास ने ताक़त से ज़्यादा कूटनीति से काम लिया।",
+   "en": "To settle the fight between two groups, Vikas relied more on diplomacy than force.",
+   "ko": "두 패거리의 싸움을 풀 때 비카스는 힘보다 외교적 수완을 썼어요.",
+   "blank": "कूटनीति",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की बहन विदेश मंत्रालय में कूटनीति का काम देखती है।",
+   "en": "Shalini's sister handles diplomacy work at the foreign ministry.",
+   "ko": "샬리니의 언니는 외교부에서 외교 업무를 맡고 있어요.",
+   "blank": "कूटनीति",
+   "src": "made"
+  }
+ ],
  "w|कूड़ा": [
   {
    "text": "कूड़ा सही जगह पर डालो।",
@@ -15571,6 +15731,22 @@
    "src": "made"
   }
  ],
+ "w|गाँठ": [
+  {
+   "text": "चोर ने रस्सी में ऐसी गाँठ लगाई थी कि विकास को चाकू से काटनी पड़ी।",
+   "en": "The thief had tied such a knot in the rope that Vikas had to cut it with a knife.",
+   "ko": "도둑이 밧줄을 하도 단단히 묶어서 비카스는 칼로 잘라야 했어요.",
+   "blank": "गाँठ",
+   "src": "made"
+  },
+  {
+   "text": "मछुआरे ने जाल की टूटी रस्सी में मज़बूत गाँठ बाँधी।",
+   "en": "The fisherman tied a strong knot in the net's broken rope.",
+   "ko": "어부는 그물의 끊어진 줄을 단단히 매듭지었어요.",
+   "blank": "गाँठ",
+   "src": "made"
+  }
+ ],
  "w|गाड़ना": [
   {
    "text": "बाग़ में पौधा गाड़ दो।",
@@ -18429,6 +18605,22 @@
    "src": "made"
   }
  ],
+ "w|चालाकी": [
+  {
+   "text": "ठग ने बड़ी चालाकी से नकली नोट असली नोटों के बीच छिपा रखे थे।",
+   "en": "The swindler had cleverly hidden fake notes among the real ones.",
+   "ko": "사기꾼은 아주 교묘하게 위조지폐를 진짜 지폐 사이에 숨겨 놨어요.",
+   "blank": "चालाकी",
+   "src": "made"
+  },
+  {
+   "text": "बंदर ने बड़ी चालाकी से शालिनी के हाथ से भुट्टा छीन लिया।",
+   "en": "The monkey very slyly snatched the corn cob from Shalini's hand.",
+   "ko": "원숭이가 아주 약삭빠르게 샬리니 손에서 옥수수를 낚아챘어요.",
+   "blank": "चालाकी",
+   "src": "made"
+  }
+ ],
  "w|चालान": [
   {
    "text": "स्पीड से ज़्यादा गाड़ी चलाने पर चालान कट गया।",
@@ -19659,6 +19851,22 @@
    "en": "Sleeping on the roof feels nice in summer.",
    "ko": "여름에 옥상에서 자면 좋아.",
    "blank": "छत"
+  }
+ ],
+ "w|छंद": [
+  {
+   "text": "विकास ने थाने की विदाई पार्टी में कबीर का एक छंद सुनाया।",
+   "en": "At the station's farewell party, Vikas recited a verse by Kabir.",
+   "ko": "비카스는 파출소 송별회에서 카비르의 시 한 구절을 읊었어요.",
+   "blank": "छंद",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने रेत पर समुद्र के बारे में एक छोटा-सा छंद लिखा।",
+   "en": "Shalini wrote a little verse about the sea on the sand.",
+   "ko": "샬리니는 모래 위에 바다에 관한 짧은 시구를 썼어요.",
+   "blank": "छंद",
+   "src": "made"
   }
  ],
  "w|छपना": [
@@ -27081,6 +27289,22 @@
    "blank": "दक्षिण"
   }
  ],
+ "w|दक्षिणा": [
+  {
+   "text": "विकास ने बताया कि मंदिर के पुजारी की दक्षिणा वाली थैली चोरी हो गई थी।",
+   "en": "Vikas said the bag holding the temple priest's offerings had been stolen.",
+   "ko": "비카스는 사원 사제의 사례금 주머니가 도난당했다고 했어요.",
+   "blank": "दक्षिणा",
+   "src": "made"
+  },
+  {
+   "text": "समुद्र किनारे के मंदिर में शालिनी ने पूजा के बाद पुजारी को दक्षिणा दी।",
+   "en": "At the seaside temple, Shalini gave the priest an offering after the prayers.",
+   "ko": "바닷가 사원에서 샬리니는 예배 뒤 사제에게 사례금을 드렸어요.",
+   "blank": "दक्षिणा",
+   "src": "made"
+  }
+ ],
  "w|दख़ल": [
   {
    "text": "अजय को स्क्रिप्ट में किसी का दख़ल पसंद नहीं है।",
@@ -29439,6 +29663,22 @@
    "blank": "दौलत"
   }
  ],
+ "w|द्योतक": [
+  {
+   "text": "विकास कहता है कि थाने में शिकायतों का घटना जनता के भरोसे का द्योतक है।",
+   "en": "Vikas says the drop in complaints at the station is a sign of public trust.",
+   "ko": "비카스는 신고가 줄어든 게 시민 신뢰의 표시라고 해요.",
+   "blank": "द्योतक",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने कहा कि किनारे पर कछुओं के अंडे साफ़ समुद्र के द्योतक हैं।",
+   "en": "The guide said turtle eggs on the shore are a sign of a clean sea.",
+   "ko": "가이드는 해변의 거북알이 깨끗한 바다의 표시라고 했어요.",
+   "blank": "द्योतक",
+   "src": "made"
+  }
+ ],
  "w|द्वार": [
   {
    "text": "डाकिया हर सुबह राहुल के द्वार पर घंटी बजाकर चिट्ठियाँ देता था।",
@@ -30877,6 +31117,22 @@
    "src": "made"
   }
  ],
+ "w|नर्म": [
+  {
+   "text": "विकास बच्चों से हमेशा नर्म आवाज़ में बात करता है।",
+   "en": "Vikas always speaks to children in a gentle voice.",
+   "ko": "비카스는 아이들에게 늘 부드러운 목소리로 말해요.",
+   "blank": "नर्म",
+   "src": "made"
+  },
+  {
+   "text": "सुबह की रेत नर्म और ठंडी थी।",
+   "en": "The sand was soft and cool in the morning.",
+   "ko": "아침 모래는 부드럽고 시원했어요.",
+   "blank": "नर्म",
+   "src": "made"
+  }
+ ],
  "w|नर्स": [
   {
    "text": "अस्पताल की नर्स बहुत दयालु थी।",
@@ -31705,6 +31961,22 @@
    "en": "Have breakfast before going to the office.",
    "ko": "회사 가기 전에 아침을 먹어.",
    "blank": "नाश्ता"
+  }
+ ],
+ "w|नास्तिक": [
+  {
+   "text": "थाने का हवलदार ख़ुद को नास्तिक कहता है, फिर भी त्योहार पर सबको मिठाई बाँटता है।",
+   "en": "The station's head constable calls himself an atheist, yet he hands out sweets to everyone at festivals.",
+   "ko": "파출소 경사는 자신을 무신론자라고 하면서도 명절엔 모두에게 단것을 나눠 줘요.",
+   "blank": "नास्तिक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का दोस्त नास्तिक है, पर उसे भी समुद्र का सूर्योदय किसी पूजा जैसा लगता है।",
+   "en": "Shalini's friend is an atheist, but even he finds the sunrise over the sea like a kind of worship.",
+   "ko": "샬리니의 친구는 무신론자지만 바다 일출은 기도처럼 느낀대요.",
+   "blank": "नास्तिक",
+   "src": "made"
   }
  ],
  "w|निकट": [
@@ -33193,6 +33465,22 @@
    "blank": "नौकर"
   }
  ],
+ "w|नौकरशाही": [
+  {
+   "text": "एक साधारण रिपोर्ट के लिए भी इतनी फ़ाइलें भरनी पड़ती हैं कि विकास नौकरशाही से थक गया है।",
+   "en": "Even a simple report needs so many files filled in that Vikas is tired of the bureaucracy.",
+   "ko": "간단한 보고서 하나에도 서류가 너무 많아서 비카스는 관료주의에 지쳤어요.",
+   "blank": "नौकरशाही",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को नाव का परमिट लेने के लिए तीन दफ़्तरों के चक्कर लगाने पड़े, ऐसी है यहाँ की नौकरशाही।",
+   "en": "Shalini had to go round three offices to get a boat permit; that's the bureaucracy here.",
+   "ko": "샬리니는 배 허가를 받으려고 사무실 세 곳을 돌아야 했어요. 여기 관료주의가 그래요.",
+   "blank": "नौकरशाही",
+   "src": "made"
+  }
+ ],
  "w|नौकरी": [
   {
    "text": "उसे शहर में नई नौकरी मिली।",
@@ -34563,6 +34851,22 @@
    "en": "The result of the hard work turned out well.",
    "ko": "노력의 결과가 좋았어.",
    "blank": "परिणाम"
+  }
+ ],
+ "w|परिधि": [
+  {
+   "text": "यह गाँव थाने की परिधि से बाहर है, इसलिए विकास ने मामला दूसरे थाने को भेज दिया।",
+   "en": "This village is outside the station's jurisdiction, so Vikas sent the case to another station.",
+   "ko": "이 마을은 관할 밖이라 비카스는 사건을 다른 파출소로 넘겼어요.",
+   "blank": "परिधि",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों ने रेत पर एक बड़ा गोला बनाया और उसकी परिधि पर सीपियाँ सजाईं।",
+   "en": "The children drew a big circle in the sand and decorated its circumference with shells.",
+   "ko": "아이들은 모래에 큰 원을 그리고 둘레에 조개껍데기를 꾸몄어요.",
+   "blank": "परिधि",
+   "src": "made"
   }
  ],
  "w|परिपक्व": [
@@ -36679,6 +36983,22 @@
    "src": "made"
   }
  ],
+ "w|पूछताछ करना": [
+  {
+   "text": "इंस्पेक्टर विकास ने दुकानदार से चोरी की रात के बारे में पूछताछ की।",
+   "en": "Inspector Vikas questioned the shopkeeper about the night of the theft.",
+   "ko": "비카스 경위는 가게 주인에게 도난 사건 밤에 대해 캐물었어요.",
+   "blank": "पूछताछ की",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने होटल वाले से नाव की सवारी के बारे में पूछताछ की।",
+   "en": "Shalini asked the hotel staff about boat rides.",
+   "ko": "샬리니는 호텔 직원에게 배 타기에 대해 물어봤어요.",
+   "blank": "पूछताछ की",
+   "src": "made"
+  }
+ ],
  "w|पूछना": [
   {
    "text": "उसने मेरा नाम पूछा।",
@@ -37911,6 +38231,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिद्वंद्वी": [
+  {
+   "text": "दुकानदार ने शिकायत की कि उसके प्रतिद्वंद्वी ने रात में उसका बोर्ड तोड़ दिया।",
+   "en": "The shopkeeper complained that his rival had broken his signboard in the night.",
+   "ko": "가게 주인은 경쟁자가 밤에 간판을 부쉈다고 신고했어요.",
+   "blank": "प्रतिद्वंद्वी",
+   "src": "made"
+  },
+  {
+   "text": "तैराकी प्रतियोगिता में शालिनी का सबसे कड़ा प्रतिद्वंद्वी एक स्थानीय लड़का था।",
+   "en": "Shalini's toughest rival in the swimming competition was a local boy.",
+   "ko": "수영 대회에서 샬리니의 가장 강한 맞수는 동네 소년이었어요.",
+   "blank": "प्रतिद्वंद्वी",
+   "src": "made"
+  }
+ ],
  "w|प्रतिनिधि": [
   {
    "text": "कक्षा का प्रतिनिधि चुना गया।",
@@ -38834,6 +39170,22 @@
    "en": "The drummers at the wedding were artists trained since childhood.",
    "ko": "결혼식에 온 북 연주자들은 어릴 때부터 훈련받은 연주자였어요.",
    "blank": "प्रशिक्षित",
+   "src": "made"
+  }
+ ],
+ "w|प्रशिक्षु": [
+  {
+   "text": "विकास इस हफ़्ते एक नए प्रशिक्षु को गश्त का तरीक़ा सिखा रहा है।",
+   "en": "This week Vikas is teaching a new trainee how to patrol.",
+   "ko": "비카스는 이번 주에 새 수습 경찰에게 순찰하는 법을 가르치고 있어요.",
+   "blank": "प्रशिक्षु",
+   "src": "made"
+  },
+  {
+   "text": "गोताखोरी स्कूल में शालिनी अभी प्रशिक्षु है।",
+   "en": "Shalini is still a trainee at the diving school.",
+   "ko": "샬리니는 다이빙 학교에서 아직 연수생이에요.",
+   "blank": "प्रशिक्षु",
    "src": "made"
   }
  ],
@@ -42215,6 +42567,22 @@
    "src": "made"
   }
  ],
+ "w|बहिष्कार करना": [
+  {
+   "text": "बस्ती वालों ने नए थानेदार का बहिष्कार किया, पर विकास ने उनसे बात करके मामला शांत किया।",
+   "en": "The neighbourhood residents boycotted the new station chief, but Vikas calmed things down by talking to them.",
+   "ko": "동네 주민들이 새 서장을 보이콧했지만 비카스가 대화로 상황을 진정시켰어요.",
+   "blank": "बहिष्कार किया",
+   "src": "made"
+  },
+  {
+   "text": "मछुआरों ने बड़े ट्रॉलरों का बहिष्कार करने का फ़ैसला किया।",
+   "en": "The fishermen decided to boycott the big trawlers.",
+   "ko": "어부들은 대형 저인망 어선을 보이콧하기로 했어요.",
+   "blank": "बहिष्कार करने",
+   "src": "made"
+  }
+ ],
  "w|बहुत": [
   {
    "text": "आज बहुत ठंड है।",
@@ -42907,6 +43275,22 @@
    "src": "made"
   }
  ],
+ "w|बाँसुरी": [
+  {
+   "text": "ड्यूटी के बाद विकास छत पर बैठकर बाँसुरी बजाता है।",
+   "en": "After duty, Vikas sits on the roof and plays the flute.",
+   "ko": "비카스는 근무가 끝나면 옥상에 앉아 피리를 불어요.",
+   "blank": "बाँसुरी",
+   "src": "made"
+  },
+  {
+   "text": "लहरों की आवाज़ के साथ कहीं दूर से बाँसुरी की धुन आ रही थी।",
+   "en": "Along with the sound of the waves, a flute tune was drifting from somewhere far off.",
+   "ko": "파도 소리에 섞여 어디선가 멀리서 피리 소리가 들려왔어요.",
+   "blank": "बाँसुरी",
+   "src": "made"
+  }
+ ],
  "w|बाँह": [
   {
    "text": "उसने मेरी बाँह पकड़ ली।",
@@ -43081,6 +43465,22 @@
    "en": "The electricity bill came today.",
    "ko": "오늘 전기 요금 고지서가 왔어.",
    "blank": "बिजली"
+  }
+ ],
+ "w|बिठाना": [
+  {
+   "text": "विकास ने डरे हुए बच्चे को कुर्सी पर बिठाया और पानी पिलाया।",
+   "en": "Vikas sat the frightened child down on a chair and gave him water.",
+   "ko": "비카스는 겁먹은 아이를 의자에 앉히고 물을 먹였어요.",
+   "blank": "बिठाया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने भतीजे को अपने कंधों पर बिठाया ताकि वह जहाज़ देख सके।",
+   "en": "Shalini sat her nephew on her shoulders so he could see the ship.",
+   "ko": "샬리니는 조카가 배를 볼 수 있게 어깨 위에 앉혔어요.",
+   "blank": "बिठाया",
+   "src": "made"
   }
  ],
  "w|बिताना": [
@@ -44543,6 +44943,22 @@
    "en": "Fire can easily flare up in dry grass.",
    "ko": "마른 풀에서는 불이 쉽게 붙어요.",
    "blank": "भड़कना"
+  }
+ ],
+ "w|भड़काना": [
+  {
+   "text": "कुछ लोग भीड़ को भड़काने की कोशिश कर रहे थे, पर विकास ने समय रहते उन्हें रोक लिया।",
+   "en": "Some people were trying to stir up the crowd, but Vikas stopped them in time.",
+   "ko": "몇몇이 군중을 선동하려 했지만 비카스가 제때 막았어요.",
+   "blank": "भड़काने",
+   "src": "made"
+  },
+  {
+   "text": "तेज़ हवा ने अलाव की आग को और भड़का दिया।",
+   "en": "The strong wind made the bonfire blaze up even more.",
+   "ko": "거센 바람에 모닥불이 더 활활 타올랐어요.",
+   "blank": "भड़का",
+   "src": "made"
   }
  ],
  "w|भतीजा": [
@@ -46371,6 +46787,22 @@
    "blank": "मतलब"
   }
  ],
+ "w|मताधिकार": [
+  {
+   "text": "चुनाव के दिन विकास ने पक्का किया कि हर नागरिक बिना डर के अपने मताधिकार का इस्तेमाल कर सके।",
+   "en": "On election day, Vikas made sure every citizen could use their right to vote without fear.",
+   "ko": "선거일에 비카스는 모든 시민이 두려움 없이 투표권을 쓸 수 있게 했어요.",
+   "blank": "मताधिकार",
+   "src": "made"
+  },
+  {
+   "text": "संग्रहालय में शालिनी ने पढ़ा कि इस इलाके की औरतों को मताधिकार कब मिला था।",
+   "en": "At the museum, Shalini read about when women in this region got the right to vote.",
+   "ko": "샬리니는 박물관에서 이 지역 여성이 언제 투표권을 얻었는지 읽었어요.",
+   "blank": "मताधिकार",
+   "src": "made"
+  }
+ ],
  "w|मंत्र": [
   {
    "text": "पुजारी ने शांति का मंत्र पढ़ा।",
@@ -46761,6 +47193,22 @@
    "en": "Enjoy entertainment with family on holiday.",
    "ko": "휴일에 가족과 함께 즐겨.",
    "blank": "मनोरंजन"
+  }
+ ],
+ "w|मन्नत": [
+  {
+   "text": "खोया बच्चा मिलने पर उसकी माँ ने कहा कि उसकी मन्नत पूरी हो गई।",
+   "en": "When her lost child was found, the mother said her prayer had been answered.",
+   "ko": "잃어버린 아이를 찾자 엄마는 소원이 이루어졌다고 했어요.",
+   "blank": "मन्नत",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने समुद्र में फूल बहाकर अपनी मन्नत माँगी।",
+   "en": "Shalini floated flowers on the sea and made her wish.",
+   "ko": "샬리니는 바다에 꽃을 띄우며 소원을 빌었어요.",
+   "blank": "मन्नत",
+   "src": "made"
   }
  ],
  "w|ममता": [
@@ -47372,6 +47820,22 @@
    "en": "Kavita and Meena first met in the college library.",
    "ko": "카비타와 미나는 대학 도서관에서 처음 만났어요.",
    "blank": "महाविद्यालय",
+   "src": "made"
+  }
+ ],
+ "w|महाशिवरात्रि": [
+  {
+   "text": "महाशिवरात्रि पर मंदिर में भीड़ संभालने के लिए विकास की पूरी टीम तैनात थी।",
+   "en": "On Mahashivratri, Vikas's whole team was posted at the temple to manage the crowd.",
+   "ko": "마하시바라트리 날 비카스의 팀 전원이 사원 인파 관리에 배치됐어요.",
+   "blank": "महाशिवरात्रि",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी इस बार महाशिवरात्रि पर समुद्र किनारे के शिव मंदिर गई।",
+   "en": "This time Shalini went to the Shiva temple by the sea on Mahashivratri.",
+   "ko": "샬리니는 이번 마하시바라트리에 바닷가 시바 사원에 갔어요.",
+   "blank": "महाशिवरात्रि",
    "src": "made"
   }
  ],
@@ -48209,6 +48673,22 @@
    "en": "His innocent eyes told the truth.",
    "ko": "그의 순진한 눈이 진실을 말해 줬어.",
    "blank": "मासूम"
+  }
+ ],
+ "w|मासूमियत": [
+  {
+   "text": "बच्ची की मासूमियत देखकर सख़्त हवलदार भी मुस्कुरा दिया।",
+   "en": "Seeing the little girl's innocence, even the strict head constable smiled.",
+   "ko": "여자아이의 천진함을 보고 무뚝뚝한 경사도 웃었어요.",
+   "blank": "मासूमियत",
+   "src": "made"
+  },
+  {
+   "text": "लहरों से डरते बच्चे की मासूमियत पर शालिनी हँस पड़ी।",
+   "en": "Shalini laughed at the innocence of the child who was scared of the waves.",
+   "ko": "샬리니는 파도를 무서워하는 아이의 순진함에 웃음이 났어요.",
+   "blank": "मासूमियत",
+   "src": "made"
   }
  ],
  "w|माह": [
@@ -51814,6 +52294,22 @@
    "en": "The packers gave Priya a small discount on the price.",
    "ko": "이삿짐 업체는 프리야에게 가격을 조금 깎아 줬어요.",
    "blank": "रियायत",
+   "src": "made"
+  }
+ ],
+ "w|रियासत": [
+  {
+   "text": "थाने की इमारत कभी एक छोटी रियासत के राजा का दफ़्तर हुआ करती थी।",
+   "en": "The police station building was once the office of the king of a small princely state.",
+   "ko": "파출소 건물은 예전에 작은 토후국 왕의 집무실이었어요.",
+   "blank": "रियासत",
+   "src": "made"
+  },
+  {
+   "text": "समुद्र किनारे का पुराना महल कभी एक रियासत के राजा का गर्मियों का घर था।",
+   "en": "The old palace by the sea was once the summer home of a princely state's king.",
+   "ko": "바닷가의 옛 궁전은 한때 토후국 왕의 여름 별장이었어요.",
+   "blank": "रियासत",
    "src": "made"
   }
  ],
@@ -57359,6 +57855,22 @@
    "src": "made"
   }
  ],
+ "w|शिथिल": [
+  {
+   "text": "रात भर की ड्यूटी के बाद विकास का शरीर शिथिल पड़ गया था।",
+   "en": "After the all-night duty, Vikas's body had gone limp.",
+   "ko": "밤샘 근무 뒤 비카스는 몸이 축 처졌어요.",
+   "blank": "शिथिल",
+   "src": "made"
+  },
+  {
+   "text": "दोपहर की गर्मी में किनारे का बाज़ार शिथिल पड़ जाता है।",
+   "en": "In the afternoon heat, the market on the shore goes slack.",
+   "ko": "한낮 더위에 바닷가 시장은 한산해져요.",
+   "blank": "शिथिल",
+   "src": "made"
+  }
+ ],
  "w|शिफ़्ट": [
   {
    "text": "सुनील की इस हफ़्ते रात की शिफ़्ट है।",
@@ -58575,6 +59087,22 @@
    "blank": "संघर्ष"
   }
  ],
+ "w|संघीय": [
+  {
+   "text": "बड़े घोटाले की जाँच अब एक संघीय एजेंसी के हाथ में है।",
+   "en": "The investigation into the big scam is now in the hands of a federal agency.",
+   "ko": "대형 비리 수사는 이제 연방 기관이 맡았어요.",
+   "blank": "संघीय",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने बताया कि यह द्वीप संघीय सरकार के सीधे प्रशासन में आता है।",
+   "en": "The guide said this island comes under the direct administration of the federal government.",
+   "ko": "가이드는 이 섬이 연방 정부 직할이라고 설명했어요.",
+   "blank": "संघीय",
+   "src": "made"
+  }
+ ],
  "w|सच": [
   {
    "text": "सच बताओ, कहाँ थे?",
@@ -59261,6 +59789,22 @@
    "en": "Spreading doubt without proof is wrong.",
    "ko": "증거 없이 의심을 퍼뜨리는 건 잘못이야.",
    "blank": "संदेह"
+  }
+ ],
+ "w|सद्भाव": [
+  {
+   "text": "होली से पहले विकास ने मोहल्ले में सद्भाव बनाए रखने के लिए बैठक बुलाई।",
+   "en": "Before Holi, Vikas called a meeting to keep harmony in the neighbourhood.",
+   "ko": "홀리 전에 비카스는 동네 화합을 위해 모임을 열었어요.",
+   "blank": "सद्भाव",
+   "src": "made"
+  },
+  {
+   "text": "इस तटीय कस्बे में अलग-अलग भाषाएँ बोलने वाले लोग सद्भाव से रहते हैं।",
+   "en": "In this coastal town, people who speak different languages live in harmony.",
+   "ko": "이 바닷가 마을에는 서로 다른 말을 쓰는 사람들이 사이좋게 살아요.",
+   "blank": "सद्भाव",
+   "src": "made"
   }
  ],
  "w|सनातन": [
@@ -60175,6 +60719,22 @@
    "src": "made"
   }
  ],
+ "w|समाजसेवी": [
+  {
+   "text": "एक बुज़ुर्ग समाजसेवी हर महीने थाने आकर लावारिस बच्चों के लिए कपड़े दे जाते हैं।",
+   "en": "An elderly social worker comes to the station every month and leaves clothes for abandoned children.",
+   "ko": "나이 든 사회봉사가가 매달 파출소에 와서 버려진 아이들 옷을 두고 가요.",
+   "blank": "समाजसेवी",
+   "src": "made"
+  },
+  {
+   "text": "एक युवा समाजसेवी हर रविवार बच्चों के साथ बीच की सफ़ाई करता है।",
+   "en": "A young social worker cleans the beach with children every Sunday.",
+   "ko": "젊은 사회봉사가가 일요일마다 아이들과 해변을 청소해요.",
+   "blank": "समाजसेवी",
+   "src": "made"
+  }
+ ],
  "w|समाधान": [
   {
    "text": "हर समस्या का कोई समाधान होता है।",
@@ -60841,6 +61401,22 @@
    "blank": "सर्दी"
   }
  ],
+ "w|सर्वत्र": [
+  {
+   "text": "मेले के दिन शहर में सर्वत्र पुलिस तैनात थी।",
+   "en": "On the day of the fair, police were deployed everywhere in the city.",
+   "ko": "장날에는 도시 곳곳에 경찰이 배치됐어요.",
+   "blank": "सर्वत्र",
+   "src": "made"
+  },
+  {
+   "text": "तूफ़ान के बाद किनारे पर सर्वत्र सीपियाँ बिखरी थीं।",
+   "en": "After the storm, shells were scattered all over the shore.",
+   "ko": "폭풍 뒤 바닷가 곳곳에 조개껍데기가 흩어져 있었어요.",
+   "blank": "सर्वत्र",
+   "src": "made"
+  }
+ ],
  "w|सर्वर": [
   {
    "text": "चुनाव के नतीजों वाली रात अख़बार का सर्वर बैठ गया।",
@@ -61477,6 +62053,22 @@
    "en": "The new institution will open tomorrow.",
    "ko": "새 기관이 내일 열려.",
    "blank": "संस्था"
+  }
+ ],
+ "w|संस्थागत": [
+  {
+   "text": "विकास का कहना है कि सिर्फ़ एक अफ़सर बदलने से संस्थागत भ्रष्टाचार ख़त्म नहीं होता।",
+   "en": "Vikas says changing just one officer doesn't end institutional corruption.",
+   "ko": "비카스는 관리 한 명 바꾼다고 제도적 부패가 사라지지 않는다고 해요.",
+   "blank": "संस्थागत",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने कहा कि तट की रक्षा के लिए संस्थागत योजना की ज़रूरत है।",
+   "en": "The guide said an institutional plan is needed to protect the coast.",
+   "ko": "가이드는 해안을 지키려면 제도적인 계획이 필요하다고 했어요.",
+   "blank": "संस्थागत",
+   "src": "made"
   }
  ],
  "w|संस्थान": [
@@ -62303,6 +62895,22 @@
    "en": "This is a normal thing.",
    "ko": "이건 흔한 일이야.",
    "blank": "सामान्य"
+  }
+ ],
+ "w|सामान्यतः": [
+  {
+   "text": "सामान्यतः रविवार को थाने में ज़्यादा शिकायतें नहीं आतीं।",
+   "en": "Usually not many complaints come into the station on Sundays.",
+   "ko": "보통 일요일엔 파출소에 신고가 많지 않아요.",
+   "blank": "सामान्यतः",
+   "src": "made"
+  },
+  {
+   "text": "सामान्यतः इस मौसम में समुद्र शांत रहता है।",
+   "en": "Usually the sea stays calm in this season.",
+   "ko": "보통 이 계절엔 바다가 잔잔해요.",
+   "blank": "सामान्यतः",
+   "src": "made"
   }
  ],
  "w|सामूहिक": [
@@ -63793,6 +64401,22 @@
    "en": "Learn to resolve a quarrel peacefully.",
    "ko": "다툼을 평화롭게 푸는 법을 배워.",
    "blank": "सुलझाना"
+  }
+ ],
+ "w|सुलह": [
+  {
+   "text": "दोनों भाइयों में ज़मीन को लेकर सुलह विकास के थाने में ही हुई।",
+   "en": "The two brothers reconciled over the land right there at Vikas's station.",
+   "ko": "두 형제는 땅 문제로 비카스의 파출소에서 화해했어요.",
+   "blank": "सुलह",
+   "src": "made"
+  },
+  {
+   "text": "छुट्टी पर आकर शालिनी और उसके भाई के बीच पुरानी नाराज़गी की सुलह हो गई।",
+   "en": "On holiday, Shalini and her brother made up over an old grudge.",
+   "ko": "휴가 와서 샬리니와 남동생은 오랜 서운함을 풀고 화해했어요.",
+   "blank": "सुलह",
+   "src": "made"
   }
  ],
  "w|सुलाना": [
@@ -66205,6 +66829,22 @@
    "en": "Mother said yes, so go and play.",
    "ko": "엄마가 그렇다고 했어, 이제 놀러 가.",
    "blank": "हाँ"
+  }
+ ],
+ "w|हाज़िर": [
+  {
+   "text": "अदालत ने गवाह को अगले सोमवार हाज़िर होने का आदेश दिया, और विकास ने उसे सूचना पहुँचाई।",
+   "en": "The court ordered the witness to appear next Monday, and Vikas delivered the notice.",
+   "ko": "법원이 증인에게 다음 월요일 출석을 명했고 비카스가 통지를 전했어요.",
+   "blank": "हाज़िर",
+   "src": "made"
+  },
+  {
+   "text": "सुबह की नाव के लिए शालिनी ठीक छह बजे घाट पर हाज़िर थी।",
+   "en": "Shalini was present at the jetty exactly at six for the morning boat.",
+   "ko": "샬리니는 아침 배를 타려고 여섯 시 정각에 선착장에 나와 있었어요.",
+   "blank": "हाज़िर",
+   "src": "made"
   }
  ],
  "w|हाज़िरी": [
