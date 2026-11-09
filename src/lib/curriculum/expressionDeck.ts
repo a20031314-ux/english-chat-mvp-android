@@ -57,10 +57,25 @@ export function deckExpressions(language: string, upTo: number): DeckExpression[
 export const EXPRESSIONS_PER_BATCH = 1;
 
 /** 낼 다음 표현(아직 안 본 것 — seen: 원에 기록이 있거나 이미 앎, ready: 카드가 온 것). */
-export function nextExpressions(deck: readonly DeckExpression[], options: { seen: (key: string) => boolean; ready: (key: string) => boolean; skip?: ReadonlySet<string>; n?: number }): string[] {
+export function nextExpressions(
+  deck: readonly DeckExpression[],
+  options: {
+    seen: (key: string) => boolean;
+    ready: (key: string) => boolean;
+    skip?: ReadonlySet<string>;
+    n?: number;
+    /**
+     * 이 단계부터(첫 측정 표현 단계): 그 아래 단계 표현은 위 단계를 다 낸 뒤에야.
+     * 2026-11-09 측정: es·ar 표현 5단계인데 hola·gracias가 1단계부터 차례로 — 80문제 중 17개.
+     */
+    from?: number;
+  },
+): string[] {
   const n = options.n ?? EXPRESSIONS_PER_BATCH;
   const out: string[] = [];
-  for (const one of deck) {
+  const from = options.from ?? 0;
+  const ordered = from > 1 ? [...deck.filter((one) => one.stage >= from), ...deck.filter((one) => one.stage < from)] : deck;
+  for (const one of ordered) {
     if (out.length >= n) break;
     if (options.skip?.has(one.key) || options.seen(one.key) || !options.ready(one.key)) continue;
     out.push(one.key);

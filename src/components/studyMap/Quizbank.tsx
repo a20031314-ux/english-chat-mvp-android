@@ -19,6 +19,7 @@ import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
+import { readFirstCheck } from "@/lib/curriculum/firstCheck";
 import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { loadWordTraits } from "@/lib/curriculum/wordTraits";
@@ -373,7 +374,12 @@ export function Quizbank({
     }
     // 넣어 둔 표현 문제가 없는 언어(영어 말고는 문법만 넣어 둠)는 표현 카드를 둘째 자리에.
     if (!prepared?.some((item) => item.kind === "expression")) {
-      const more = nextExpressions(exprCards.deck, { seen: (key) => Boolean(circleRef.current.items[key]) || knownWord(key), ready: (key) => exprCards.ready.has(key), skip: lastCircle.current });
+      // 첫 측정 표현 단계부터 — 그 아래 단계는 본 표현 네 개에 하나만 끼워 확인(사용자 2026-11-09 "어쩌다 한 번이면 괜찮").
+      // 몇 번째인지는 본 표현 수로 센다(묶음 번호는 다시 볼 것 묶음과 번갈아 홀짝이 고정).
+      const exprSeen = (key: string) => Boolean(circleRef.current.items[key]) || knownWord(key);
+      const placed = readFirstCheck(language);
+      const exprFrom = placed && !placed.letters && exprCards.deck.filter((one) => exprSeen(one.key)).length % 4 !== 3 ? placed.expression : undefined;
+      const more = nextExpressions(exprCards.deck, { seen: exprSeen, ready: (key) => exprCards.ready.has(key), skip: lastCircle.current, ...(exprFrom ? { from: exprFrom } : {}) });
       keys.splice(Math.min(1, keys.length), 0, ...more);
     }
     // 같은 단계 문법은 이 학습자에게 무거운 칸(모국어·아는 언어에 없는 개념)부터 — 프로필 모국어 → 국적 → 앱 언어.

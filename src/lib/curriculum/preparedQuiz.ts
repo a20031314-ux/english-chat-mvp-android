@@ -66,7 +66,8 @@ export function pickPrepared(
   const take = (kind: PreparedItem["kind"], n: number) => {
     const open = items.filter((item) => item.kind === kind && item.stage <= options.stage && !skip.has(item.key));
     const here = heavier(open.filter((item) => item.stage === options.stage));
-    const earlier = heavier(open.filter((item) => item.stage < options.stage));
+    // 지금 단계를 다 풀면 바로 아래 단계부터(예전엔 1단계부터 — 2026-11-09 측정: es 5단계가 5단계 일곱 칸 뒤 g|1:0·1:1·1:5).
+    const earlier = heavier(open.filter((item) => item.stage < options.stage)).sort((a, b) => b.stage - a.stage);
     return [...here, ...earlier].slice(0, n);
   };
   return [...take("grammar", options.grammar ?? 1), ...take("expression", options.expression ?? 1)];

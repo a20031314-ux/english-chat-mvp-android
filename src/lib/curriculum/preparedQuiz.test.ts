@@ -79,3 +79,12 @@ describe("prepared quiz", () => {
     assert.deepEqual(picked.map((item) => item.key), ["g|1:0", "e|สวัสดี"]);
   });
 });
+
+describe("pickPrepared 아래 단계 순서(2026-11-09)", () => {
+  it("지금 단계를 다 풀면 바로 아래 단계부터 — es·ja", () => {
+    const es = [1, 2, 4, 5].map((stage) => ({ ...grammar, key: `g|${stage}:0`, stage }));
+    assert.deepEqual(pickPrepared(es, { stage: 5, skip: new Set(["g|5:0"]) }).map((item) => item.key), ["g|4:0"]);
+    const ja = [1, 3].map((stage) => ({ ...grammar, key: `g|${stage}:1`, stage, answer: "は", options: ["は", "が"] }));
+    assert.deepEqual(pickPrepared(ja, { stage: 4 }).map((item) => item.key), ["g|3:1"]);
+  });
+});
