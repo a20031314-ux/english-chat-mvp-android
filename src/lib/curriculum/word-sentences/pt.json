@@ -77,6 +77,22 @@
    "src": "tatoeba:12179882/Advanced en:251777/U2FS"
   }
  ],
+ "w|abajur": [
+  {
+   "text": "O tio do Gabriel cochilou no sofá com o abajur ainda aceso.",
+   "en": "Gabriel's uncle dozed off on the sofa with the lamp still on.",
+   "ko": "가브리에우의 삼촌은 스탠드를 켠 채 소파에서 졸았어요.",
+   "blank": "abajur",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa trouxe um abajur de casa porque a luz do escritório é fraca.",
+   "en": "Luísa brought a lamp from home because the office light is weak.",
+   "ko": "사무실 조명이 어두워서 루이자는 집에서 스탠드를 가져왔어요.",
+   "blank": "abajur",
+   "src": "made"
+  }
+ ],
  "w|abandonar": [
   {
    "text": "Nós tivemos que abandonar o carro.",
@@ -245,6 +261,22 @@
    "ko": "그게 얼마나 터무니없는지 모르겠어?",
    "blank": "absurdo",
    "src": "tatoeba:10707126/MrJuice en:8251450/Ergulis"
+  }
+ ],
+ "w|abuso": [
+  {
+   "text": "A peça do Pedro fala sobre abuso de poder numa cidade pequena.",
+   "en": "Pedro's play is about abuse of power in a small town.",
+   "ko": "페드루의 연극은 작은 도시의 권력 남용을 다뤄요.",
+   "blank": "abuso",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz alerta os pacientes sobre o abuso de antibióticos.",
+   "en": "Beatriz warns patients about the overuse of antibiotics.",
+   "ko": "베아트리스는 환자들에게 항생제 남용을 경고해요.",
+   "blank": "abuso",
+   "src": "made"
   }
  ],
  "w|acabar": [
@@ -1245,6 +1277,22 @@
    "src": "tatoeba:3474543/Balamax en:3474525/Balamax"
   }
  ],
+ "w|alegrar": [
+  {
+   "text": "Um abraço do irmão sempre consegue alegrar a Clara.",
+   "en": "A hug from her brother always manages to cheer Clara up.",
+   "ko": "동생이 안아 주면 클라라는 늘 기분이 좋아져요.",
+   "blank": "alegrar",
+   "src": "made"
+  },
+  {
+   "text": "A notícia de que a carteira foi encontrada alegrou a turista.",
+   "en": "The news that the wallet had been found made the tourist happy.",
+   "ko": "지갑을 찾았다는 소식에 관광객은 기뻐했어요.",
+   "blank": "alegrou",
+   "src": "made"
+  }
+ ],
  "w|alegre": [
   {
    "text": "Por que você está tão alegre hoje?",
@@ -1533,6 +1581,38 @@
    "ko": "저는 이런 음식은 못 먹어요.",
    "blank": "alimento",
    "src": "tatoeba:1140342/alexmarcelo en:1140184/CK"
+  }
+ ],
+ "w|aliviado": [
+  {
+   "text": "O João ficou aliviado quando descobriu que a irmã não estava brava de verdade.",
+   "en": "João was relieved when he found out his sister wasn't really angry.",
+   "ko": "누나가 진짜로 화난 게 아니라는 걸 알고 주앙은 안심했어요.",
+   "blank": "aliviado",
+   "src": "made"
+  },
+  {
+   "text": "A mãe ficou aliviada quando a Ana trouxe o filho perdido de volta.",
+   "en": "The mother was relieved when Ana brought her lost son back.",
+   "ko": "아나가 길 잃은 아들을 데려오자 엄마는 안도했어요.",
+   "blank": "aliviada",
+   "src": "made"
+  }
+ ],
+ "w|alívio": [
+  {
+   "text": "Foi um alívio para o João quando a Clara finalmente riu da história.",
+   "en": "It was a relief for João when Clara finally laughed about the whole thing.",
+   "ko": "클라라가 마침내 그 일을 웃어넘기자 주앙은 안도했어요.",
+   "blank": "alívio",
+   "src": "made"
+  },
+  {
+   "text": "A senhora suspirou de alívio quando a Ana encontrou o gato dela.",
+   "en": "The lady sighed with relief when Ana found her cat.",
+   "ko": "아나가 고양이를 찾아 주자 할머니는 안도의 한숨을 쉬었어요.",
+   "blank": "alívio",
+   "src": "made"
   }
  ],
  "w|alma": [
@@ -1988,6 +2068,22 @@
    "en": "My dog is my best buddy.",
    "ko": "우리 개는 제 단짝이에요.",
    "blank": "amigão",
+   "src": "made"
+  }
+ ],
+ "w|amigável": [
+  {
+   "text": "O porteiro do teatro é muito amigável e conhece o Pedro há anos.",
+   "en": "The theater doorman is very friendly and has known Pedro for years.",
+   "ko": "극장 수위는 아주 친절하고 페드루를 오래전부터 알아요.",
+   "blank": "amigável",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz tem um jeito amigável que acalma até as crianças mais assustadas.",
+   "en": "Beatriz has a friendly way that calms even the most frightened children.",
+   "ko": "베아트리스는 상냥해서 가장 겁먹은 아이들도 진정시켜요.",
+   "blank": "amigável",
    "src": "made"
   }
  ],
@@ -2543,6 +2639,22 @@
    "blank": "Apesar"
   }
  ],
+ "w|aplauso": [
+  {
+   "text": "O aplauso no fim da estreia durou quase cinco minutos.",
+   "en": "The applause at the end of the premiere lasted almost five minutes.",
+   "ko": "초연이 끝나고 박수가 거의 오 분 동안 이어졌어요.",
+   "blank": "aplauso",
+   "src": "made"
+  },
+  {
+   "text": "Os médicos receberam um aplauso dos vizinhos no fim do turno.",
+   "en": "The doctors got a round of applause from the neighbors at the end of the shift.",
+   "ko": "교대가 끝날 때 의사들은 이웃들에게서 박수를 받았어요.",
+   "blank": "aplauso",
+   "src": "made"
+  }
+ ],
  "w|apoiar": [
   {
    "text": "Eu vou te apoiar hoje e sempre!",
@@ -2741,6 +2853,22 @@
    "blank": "aproveitar"
   }
  ],
+ "w|aproximadamente": [
+  {
+   "text": "A viagem dos tios até a casa do Gabriel leva aproximadamente seis horas.",
+   "en": "The aunt and uncle's trip to Gabriel's house takes approximately six hours.",
+   "ko": "삼촌네가 가브리에우 집까지 오는 데 대략 여섯 시간이 걸려요.",
+   "blank": "aproximadamente",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Luísa tem aproximadamente duzentos funcionários.",
+   "en": "Luísa's company has approximately two hundred employees.",
+   "ko": "루이자의 회사는 직원이 대략 이백 명이에요.",
+   "blank": "aproximadamente",
+   "src": "made"
+  }
+ ],
  "w|aproximar": [
   {
    "text": "O tigre começou a se aproximar de nós.",
@@ -2770,6 +2898,22 @@
    "en": "Help me, I'm in a jam!",
    "ko": "도와줘, 나 곤란한 상황이야!",
    "blank": "apuro",
+   "src": "made"
+  }
+ ],
+ "w|aquecedor": [
+  {
+   "text": "Nas férias de julho, o Gabriel tirou o aquecedor do armário.",
+   "en": "During the July holidays, Gabriel took the heater out of the closet.",
+   "ko": "겨울인 칠월 방학에 가브리에우는 벽장에서 난로를 꺼냈어요.",
+   "blank": "aquecedor",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa usa um aquecedor portátil debaixo da mesa no inverno.",
+   "en": "Luísa uses a portable heater under her desk in winter.",
+   "ko": "루이자는 겨울에 책상 밑에 휴대용 난로를 둬요.",
+   "blank": "aquecedor",
    "src": "made"
   }
  ],
@@ -2827,6 +2971,22 @@
    "en": "The air feels heavy today.",
    "ko": "오늘 공기가 탁해.",
    "blank": "ar"
+  }
+ ],
+ "w|ar-condicionado": [
+  {
+   "text": "O Gabriel ligou o ar-condicionado do quarto para os avós dormirem melhor.",
+   "en": "Gabriel turned on the bedroom air conditioner so his grandparents would sleep better.",
+   "ko": "가브리에우는 조부모님이 더 잘 주무시도록 방 에어컨을 켰어요.",
+   "blank": "ar-condicionado",
+   "src": "made"
+  },
+  {
+   "text": "Toda semana alguém briga pela temperatura do ar-condicionado no escritório da Luísa.",
+   "en": "Every week someone argues over the air conditioner temperature in Luísa's office.",
+   "ko": "루이자네 사무실에서는 매주 누군가 에어컨 온도로 다퉈요.",
+   "blank": "ar-condicionado",
+   "src": "made"
   }
  ],
  "w|árabe": [
@@ -3077,6 +3237,22 @@
    "ko": "제 목숨을 걸고 싶지 않아요.",
    "blank": "arriscar",
    "src": "tatoeba:974276/alexmarcelo en:569163/Scott"
+  }
+ ],
+ "w|arrogante": [
+  {
+   "text": "Um rapaz arrogante ocupou o aparelho e não deixou o Lucas revezar.",
+   "en": "An arrogant guy hogged the machine and wouldn't let Lucas take turns.",
+   "ko": "거만한 청년이 기구를 차지하고 루카스와 번갈아 쓰지 않았어요.",
+   "blank": "arrogante",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana se surpreendeu porque ninguém na equipe nova é arrogante.",
+   "en": "Mariana was surprised because no one on the new team is arrogant.",
+   "ko": "새 팀에 거만한 사람이 한 명도 없어서 마리아나는 놀랐어요.",
+   "blank": "arrogante",
+   "src": "made"
   }
  ],
  "w|arroz": [
@@ -4915,6 +5091,22 @@
    "blank": "beijo"
   }
  ],
+ "w|beira": [
+  {
+   "text": "A briga deixou a Clara à beira das lágrimas.",
+   "en": "The fight left Clara on the verge of tears.",
+   "ko": "싸움 때문에 클라라는 울기 직전이었어요.",
+   "blank": "beira",
+   "src": "made"
+  },
+  {
+   "text": "A delegacia da Ana fica na beira da estrada, perto do posto.",
+   "en": "Ana's station is on the side of the road, near the gas station.",
+   "ko": "아나의 경찰서는 길가 주유소 근처에 있어요.",
+   "blank": "beira",
+   "src": "made"
+  }
+ ],
  "w|beisebol": [
   {
    "text": "Por que vocês não estão no time de beisebol?",
@@ -5069,6 +5261,22 @@
    "src": "tatoeba:9370554/bill en:9360241/CK"
   }
  ],
+ "w|bigode": [
+  {
+   "text": "O instrutor da academia tem um bigode enorme que virou piada entre os alunos.",
+   "en": "The gym instructor has a huge mustache that became a joke among the members.",
+   "ko": "헬스장 트레이너의 커다란 콧수염은 회원들 사이에서 농담거리가 됐어요.",
+   "blank": "bigode",
+   "src": "made"
+  },
+  {
+   "text": "O porteiro do prédio, de bigode branco, cumprimentou a Mariana pelo nome.",
+   "en": "The building doorman, with a white mustache, greeted Mariana by name.",
+   "ko": "흰 콧수염을 기른 건물 수위가 마리아나의 이름을 부르며 인사했어요.",
+   "blank": "bigode",
+   "src": "made"
+  }
+ ],
  "w|bilhão": [
   {
    "text": "O que você faria se tivesse um bilhão de dólares?",
@@ -5115,6 +5323,22 @@
    "ko": "그 쿠키 다시 상자에 넣어!",
    "blank": "biscoito",
    "src": "tatoeba:4660422/Akira en:4660402/Hybrid"
+  }
+ ],
+ "w|bloco": [
+  {
+   "text": "No carnaval, o Pedro sai fantasiado num bloco de rua com o elenco.",
+   "en": "At Carnival, Pedro goes out in costume with the cast in a street parade group.",
+   "ko": "카니발 때 페드루는 극단 배우들과 분장하고 거리 행진 무리에 나가요.",
+   "blank": "bloco",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz trabalha no bloco cirúrgico do terceiro andar.",
+   "en": "Beatriz works in the surgical unit on the third floor.",
+   "ko": "베아트리스는 삼 층 수술동에서 일해요.",
+   "blank": "bloco",
+   "src": "made"
   }
  ],
  "w|boa noite": [
@@ -5253,6 +5477,22 @@
    "blank": "bola"
   }
  ],
+ "w|bolha": [
+  {
+   "text": "O Pedro sente que o teatro é uma bolha onde o mundo lá fora não entra.",
+   "en": "Pedro feels the theater is a bubble the outside world doesn't get into.",
+   "ko": "페드루는 극장이 바깥세상이 들어오지 못하는 하나의 거품 같다고 느껴요.",
+   "blank": "bolha",
+   "src": "made"
+  },
+  {
+   "text": "O sapato novo deixou uma bolha no pé da Beatriz depois do plantão.",
+   "en": "Her new shoes left a blister on Beatriz's foot after the shift.",
+   "ko": "새 신발 때문에 근무가 끝나고 베아트리스의 발에 물집이 생겼어요.",
+   "blank": "bolha",
+   "src": "made"
+  }
+ ],
  "w|bolo": [
   {
    "text": "O bolo ainda está quente.",
@@ -5353,6 +5593,22 @@
    "ko": "소방관이 되고 싶었던 적은 없어요.",
    "blank": "bombeiro",
    "src": "tatoeba:1900199/alexmarcelo en:1898361/CK"
+  }
+ ],
+ "w|bondade": [
+  {
+   "text": "A bondade da Clara fez o João perceber que tinha exagerado.",
+   "en": "Clara's kindness made João realize he had overreacted.",
+   "ko": "클라라의 다정함 덕분에 주앙은 자기가 지나쳤다는 걸 깨달았어요.",
+   "blank": "bondade",
+   "src": "made"
+  },
+  {
+   "text": "Um desconhecido teve a bondade de devolver os documentos perdidos na delegacia.",
+   "en": "A stranger was kind enough to return the lost documents to the station.",
+   "ko": "한 낯선 사람이 친절하게도 잃어버린 서류를 경찰서에 가져다줬어요.",
+   "blank": "bondade",
+   "src": "made"
   }
  ],
  "w|boneca": [
@@ -6843,6 +7099,22 @@
    "src": "tatoeba:3135550/carlosalberto en:14014905/haomakk"
   }
  ],
+ "w|carinho": [
+  {
+   "text": "Apesar das brigas, o João tem muito carinho pela irmã mais velha.",
+   "en": "Despite the fights, João has a lot of affection for his older sister.",
+   "ko": "다투긴 해도 주앙은 누나를 무척 아껴요.",
+   "blank": "carinho",
+   "src": "made"
+  },
+  {
+   "text": "As crianças da escola mandaram cartas com muito carinho para a equipe da Ana.",
+   "en": "The schoolchildren sent letters full of affection to Ana's team.",
+   "ko": "학교 아이들이 아나의 팀에 정성 가득한 편지를 보냈어요.",
+   "blank": "carinho",
+   "src": "made"
+  }
+ ],
  "w|carnaval": [
   {
    "text": "Durante o carnaval, a escola do João fica fechada por quase uma semana.",
@@ -7105,6 +7377,22 @@
    "en": "It's a rare case.",
    "ko": "드문 경우야.",
    "blank": "caso"
+  }
+ ],
+ "w|cassino": [
+  {
+   "text": "O musical se passa num cassino dos anos cinquenta, e o Pedro faz o crupiê.",
+   "en": "The musical is set in a casino in the fifties, and Pedro plays the dealer.",
+   "ko": "뮤지컬은 오십 년대 카지노가 배경이고 페드루는 딜러 역이에요.",
+   "blank": "cassino",
+   "src": "made"
+  },
+  {
+   "text": "O prédio do hospital da Beatriz já foi um cassino há muito tempo.",
+   "en": "The building of Beatriz's hospital was once a casino a long time ago.",
+   "ko": "베아트리스의 병원 건물은 아주 오래전에 카지노였어요.",
+   "blank": "cassino",
+   "src": "made"
   }
  ],
  "w|castelo": [
@@ -7395,6 +7683,22 @@
    "en": "The market scene was funny.",
    "ko": "시장 장면이 웃겼어.",
    "blank": "cena"
+  }
+ ],
+ "w|cenário": [
+  {
+   "text": "A sala decorada parecia um cenário de filme de Natal.",
+   "en": "The decorated living room looked like the set of a Christmas movie.",
+   "ko": "장식한 거실은 크리스마스 영화 세트장 같았어요.",
+   "blank": "cenário",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa apresentou um cenário otimista e outro pessimista para as vendas.",
+   "en": "Luísa presented an optimistic scenario and a pessimistic one for sales.",
+   "ko": "루이자는 매출에 대해 낙관적인 시나리오와 비관적인 시나리오를 발표했어요.",
+   "blank": "cenário",
+   "src": "made"
   }
  ],
  "w|cenoura": [
@@ -8043,6 +8347,22 @@
    "src": "made"
   }
  ],
+ "w|chuveiro": [
+  {
+   "text": "Com a casa cheia, o Gabriel teve que esperar meia hora para usar o chuveiro.",
+   "en": "With the house full, Gabriel had to wait half an hour to use the shower.",
+   "ko": "집에 사람이 많아서 가브리에우는 샤워하려고 삼십 분을 기다려야 했어요.",
+   "blank": "chuveiro",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa vai de bicicleta e toma banho no chuveiro do vestiário do prédio.",
+   "en": "Luísa cycles in and showers in the building's locker room.",
+   "ko": "루이자는 자전거로 출근해서 건물 탈의실에서 샤워해요.",
+   "blank": "chuveiro",
+   "src": "made"
+  }
+ ],
  "w|chuvoso": [
   {
    "text": "O inverno chuvoso deixou as estradas da vila do Bruno cheias de lama.",
@@ -8323,6 +8643,22 @@
    "ko": "환자는 아직 수술실에 있어요?",
    "blank": "cirurgia",
    "src": "tatoeba:11507059/carlosalberto en:11507048/carlosalberto"
+  }
+ ],
+ "w|cirurgião": [
+  {
+   "text": "O cirurgião disse ao Lucas que ele podia voltar a correr devagar.",
+   "en": "The surgeon told Lucas he could start running again slowly.",
+   "ko": "외과 의사는 루카스에게 천천히 다시 달려도 된다고 했어요.",
+   "blank": "cirurgião",
+   "src": "made"
+  },
+  {
+   "text": "O novo chefe da Mariana era cirurgião antes de virar diretor do hospital.",
+   "en": "Mariana's new boss was a surgeon before becoming hospital director.",
+   "ko": "마리아나의 새 상사는 병원장이 되기 전에 외과 의사였어요.",
+   "blank": "cirurgião",
+   "src": "made"
   }
  ],
  "w|ciúme": [
@@ -8661,6 +8997,22 @@
    "en": "What a strange thing.",
    "ko": "정말 이상한 거네.",
    "blank": "coisa"
+  }
+ ],
+ "w|colapso": [
+  {
+   "text": "Com as provas e a briga com o irmão, a Clara disse que estava perto de um colapso.",
+   "en": "With exams and the fight with her brother, Clara said she was close to a breakdown.",
+   "ko": "시험에 동생과의 싸움까지 겹쳐서 클라라는 무너지기 직전이라고 했어요.",
+   "blank": "colapso",
+   "src": "made"
+  },
+  {
+   "text": "Durante o temporal, a Ana ajudou a isolar a área do colapso de um muro.",
+   "en": "During the storm, Ana helped cordon off the area where a wall collapsed.",
+   "ko": "폭풍우 동안 아나는 담이 무너진 구역을 통제하는 걸 도왔어요.",
+   "blank": "colapso",
+   "src": "made"
   }
  ],
  "w|colar": [
@@ -9087,6 +9439,22 @@
    "blank": "como"
   }
  ],
+ "w|compaixão": [
+  {
+   "text": "A Clara olhou para o irmão com compaixão quando viu que ele estava arrependido.",
+   "en": "Clara looked at her brother with compassion when she saw he was sorry.",
+   "ko": "동생이 후회하는 걸 보자 클라라는 안쓰러운 눈으로 바라봤어요.",
+   "blank": "compaixão",
+   "src": "made"
+  },
+  {
+   "text": "A Ana tratou o rapaz assustado com paciência e compaixão.",
+   "en": "Ana treated the frightened young man with patience and compassion.",
+   "ko": "아나는 겁먹은 청년을 인내심과 연민으로 대했어요.",
+   "blank": "compaixão",
+   "src": "made"
+  }
+ ],
  "w|companheiro": [
   {
    "text": "Meu companheiro de quarto ronca.",
@@ -9393,6 +9761,22 @@
    "ko": "소통이라니 무슨 뜻이에요?",
    "blank": "comunicação",
    "src": "tatoeba:1396981/alexmarcelo en:56408"
+  }
+ ],
+ "w|comunicar": [
+  {
+   "text": "O Lucas precisou comunicar à academia que ia viajar e congelar a matrícula.",
+   "en": "Lucas had to inform the gym that he was traveling and freeze his membership.",
+   "ko": "루카스는 여행 간다고 헬스장에 알리고 회원권을 정지해야 했어요.",
+   "blank": "comunicar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana aprendeu a comunicar os problemas logo, sem esperar a reunião.",
+   "en": "Mariana learned to report problems right away, without waiting for the meeting.",
+   "ko": "마리아나는 회의를 기다리지 않고 문제를 바로 알리는 법을 배웠어요.",
+   "blank": "comunicar",
+   "src": "made"
   }
  ],
  "w|comunidade": [
@@ -9771,6 +10155,22 @@
    "src": "tatoeba:2614155/alexmarcelo en:2613122/Shishir"
   }
  ],
+ "w|conforto": [
+  {
+   "text": "O Gabriel adora o conforto de ficar de pijama o dia todo no feriado.",
+   "en": "Gabriel loves the comfort of staying in pajamas all day on a holiday.",
+   "ko": "가브리에우는 연휴에 하루 종일 잠옷 차림으로 있는 편안함을 좋아해요.",
+   "blank": "conforto",
+   "src": "made"
+  },
+  {
+   "text": "A empresa trocou as cadeiras para dar mais conforto à equipe da Luísa.",
+   "en": "The company replaced the chairs to give Luísa's team more comfort.",
+   "ko": "회사는 루이자네 팀이 더 편하도록 의자를 바꿨어요.",
+   "blank": "conforto",
+   "src": "made"
+  }
+ ],
  "w|confusão": [
   {
    "text": "Nesse ponto, minha confusão foi absoluta.",
@@ -10061,6 +10461,22 @@
    "src": "made"
   }
  ],
+ "w|constante": [
+  {
+   "text": "O barulho constante da obra ao lado atrapalhou o ensaio do Pedro.",
+   "en": "The constant noise from the construction next door disrupted Pedro's rehearsal.",
+   "ko": "옆 공사장의 끊임없는 소음이 페드루의 연습을 방해했어요.",
+   "blank": "constante",
+   "src": "made"
+  },
+  {
+   "text": "O paciente precisa de acompanhamento constante nas primeiras horas.",
+   "en": "The patient needs constant monitoring in the first few hours.",
+   "ko": "환자는 처음 몇 시간 동안 계속 지켜봐야 해요.",
+   "blank": "constante",
+   "src": "made"
+  }
+ ],
  "w|construção": [
   {
    "text": "Uma nova estrada está em construção.",
@@ -10089,6 +10505,22 @@
    "en": "My dad built this.",
    "ko": "이건 아빠가 지었어.",
    "blank": "construiu"
+  }
+ ],
+ "w|consulta": [
+  {
+   "text": "Antes de entrar na academia, o Lucas marcou uma consulta com o cardiologista.",
+   "en": "Before joining the gym, Lucas booked an appointment with the cardiologist.",
+   "ko": "헬스장에 등록하기 전에 루카스는 심장내과 진료를 예약했어요.",
+   "blank": "consulta",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana teve que remarcar uma consulta médica por causa do primeiro dia no emprego novo.",
+   "en": "Mariana had to reschedule a doctor's appointment because of her first day at the new job.",
+   "ko": "마리아나는 새 직장 첫날 때문에 병원 예약을 다시 잡아야 했어요.",
+   "blank": "consulta",
+   "src": "made"
   }
  ],
  "w|conta": [
@@ -10433,6 +10865,22 @@
    "src": "tatoeba:10790462/megamanenm en:9558486/Adelpa"
   }
  ],
+ "w|coordenada": [
+  {
+   "text": "O aplicativo do Lucas grava as coordenadas de cada corrida.",
+   "en": "Lucas's app records the coordinates of every run.",
+   "ko": "루카스의 앱은 달릴 때마다 좌표를 기록해요.",
+   "blank": "coordenadas",
+   "src": "made"
+  },
+  {
+   "text": "O chefe mandou as coordenadas do estacionamento para a Mariana pelo celular.",
+   "en": "The boss sent Mariana the parking lot's coordinates by phone.",
+   "ko": "상사가 주차장 좌표를 휴대폰으로 마리아나에게 보냈어요.",
+   "blank": "coordenadas",
+   "src": "made"
+  }
+ ],
  "w|cópia": [
   {
    "text": "Vocês deveriam ter feito uma cópia.",
@@ -10659,6 +11107,22 @@
    "en": "You don't need to rush now.",
    "ko": "지금은 서두를 필요 없어.",
    "blank": "correr"
+  }
+ ],
+ "w|corretamente": [
+  {
+   "text": "O João não leu corretamente o recado e foi buscar a irmã no lugar errado.",
+   "en": "João didn't read the note correctly and went to pick up his sister at the wrong place.",
+   "ko": "주앙은 쪽지를 제대로 안 읽어서 엉뚱한 곳으로 누나를 데리러 갔어요.",
+   "blank": "corretamente",
+   "src": "made"
+  },
+  {
+   "text": "A Ana conferiu se o nome da vítima estava escrito corretamente.",
+   "en": "Ana checked whether the victim's name was spelled correctly.",
+   "ko": "아나는 피해자 이름이 제대로 쓰였는지 확인했어요.",
+   "blank": "corretamente",
+   "src": "made"
   }
  ],
  "w|correto": [
@@ -10963,6 +11427,22 @@
    "blank": "crescer"
   }
  ],
+ "w|cretino": [
+  {
+   "text": "Alguém fez um comentário cretino sobre o peso do Lucas, e ele ignorou.",
+   "en": "Someone made a stupid comment about Lucas's weight, and he ignored it.",
+   "ko": "누군가 루카스의 몸무게에 대해 멍청한 말을 했지만 그는 무시했어요.",
+   "blank": "cretino",
+   "src": "made"
+  },
+  {
+   "text": "Um cliente cretino gritou no telefone, mas a Mariana manteve a calma.",
+   "en": "A jerk of a client yelled on the phone, but Mariana stayed calm.",
+   "ko": "무례한 고객이 전화로 소리를 질렀지만 마리아나는 침착했어요.",
+   "blank": "cretino",
+   "src": "made"
+  }
+ ],
  "w|criação": [
   {
    "text": "A matemática é a mais bela e mais poderosa criação do espírito humano.",
@@ -11099,6 +11579,22 @@
    "src": "tatoeba:933811/alexmarcelo en:924409/CK"
   }
  ],
+ "w|cristal": [
+  {
+   "text": "Na confusão, o João esbarrou no vaso de cristal da mãe.",
+   "en": "In the commotion, João bumped into his mother's crystal vase.",
+   "ko": "소란 중에 주앙이 엄마의 크리스털 꽃병에 부딪쳤어요.",
+   "blank": "cristal",
+   "src": "made"
+  },
+  {
+   "text": "Os ladrões levaram copos de cristal de uma loja no centro.",
+   "en": "The thieves took crystal glasses from a shop downtown.",
+   "ko": "도둑들이 시내 가게에서 크리스털 잔을 훔쳐 갔어요.",
+   "blank": "cristal",
+   "src": "made"
+  }
+ ],
  "w|cristão": [
   {
    "text": "Qual é o seu hino cristão preferido?",
@@ -11177,6 +11673,22 @@
    "ko": "더하기 기호는 십자가처럼 생겼어요.",
    "blank": "cruz",
    "src": "tatoeba:7902938/piterkeo en:6759702/swolesuki"
+  }
+ ],
+ "w|cruzar": [
+  {
+   "text": "O João e a Clara cruzaram no corredor sem dizer uma palavra.",
+   "en": "João and Clara passed each other in the hallway without saying a word.",
+   "ko": "주앙과 클라라는 복도에서 한마디도 없이 스쳐 지나갔어요.",
+   "blank": "cruzaram",
+   "src": "made"
+  },
+  {
+   "text": "A Ana viu o suspeito cruzar a avenida e correu atrás dele.",
+   "en": "Ana saw the suspect cross the avenue and ran after him.",
+   "ko": "아나는 용의자가 대로를 건너는 걸 보고 뒤쫓아 갔어요.",
+   "blank": "cruzar",
+   "src": "made"
   }
  ],
  "w|cuidado": [
@@ -11935,6 +12447,22 @@
    "src": "tatoeba:1555567/alexmarcelo en:240372/CK"
   }
  ],
+ "w|delegado": [
+  {
+   "text": "Na comédia, o Pedro faz um delegado atrapalhado que nunca resolve nada.",
+   "en": "In the comedy, Pedro plays a bumbling police chief who never solves anything.",
+   "ko": "코미디에서 페드루는 아무것도 해결 못 하는 어수룩한 서장을 연기해요.",
+   "blank": "delegado",
+   "src": "made"
+  },
+  {
+   "text": "O delegado veio ao hospital conversar com uma testemunha do acidente.",
+   "en": "The police chief came to the hospital to talk with a witness to the accident.",
+   "ko": "경찰서장이 사고 목격자와 이야기하러 병원에 왔어요.",
+   "blank": "delegado",
+   "src": "made"
+  }
+ ],
  "w|deles": [
   {
    "text": "A escolha é deles.",
@@ -12051,6 +12579,22 @@
    "en": "I broke my tooth at dinner.",
    "ko": "저녁 먹다가 이를 부러뜨렸어.",
    "blank": "dente"
+  }
+ ],
+ "w|dentista": [
+  {
+   "text": "O Lucas quebrou um dente no treino de boxe e foi direto ao dentista.",
+   "en": "Lucas broke a tooth in boxing practice and went straight to the dentist.",
+   "ko": "루카스는 권투 연습 중에 이가 깨져서 바로 치과에 갔어요.",
+   "blank": "dentista",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana trabalha na recepção de uma clínica e atende os pacientes do dentista.",
+   "en": "Mariana works at a clinic's front desk and looks after the dentist's patients.",
+   "ko": "마리아나는 병원 접수처에서 일하며 치과 환자들을 맞아요.",
+   "blank": "dentista",
+   "src": "made"
   }
  ],
  "w|dentre": [
@@ -12529,6 +13073,22 @@
    "src": "made"
   }
  ],
+ "w|desenvolvimento": [
+  {
+   "text": "Os pais acompanham de perto o desenvolvimento da amizade entre o João e a Clara.",
+   "en": "The parents closely follow how the friendship between João and Clara develops.",
+   "ko": "부모님은 주앙과 클라라의 우정이 어떻게 커 가는지 가까이서 지켜봐요.",
+   "blank": "desenvolvimento",
+   "src": "made"
+  },
+  {
+   "text": "A Ana participa de um projeto para o desenvolvimento de jovens do bairro.",
+   "en": "Ana takes part in a project for the development of young people in the neighborhood.",
+   "ko": "아나는 동네 청소년 성장 프로그램에 참여해요.",
+   "blank": "desenvolvimento",
+   "src": "made"
+  }
+ ],
  "w|deserto": [
   {
    "text": "Eu sou a voz do que clama no deserto.",
@@ -12543,6 +13103,54 @@
    "ko": "사막에 살아요?",
    "blank": "deserto",
    "src": "tatoeba:4425583/KimiP en:2191541/CM"
+  }
+ ],
+ "w|desesperado": [
+  {
+   "text": "O João ficou desesperado procurando a chave que a irmã tinha guardado.",
+   "en": "João was desperately looking for the key his sister had put away.",
+   "ko": "주앙은 누나가 치워 둔 열쇠를 미친 듯이 찾았어요.",
+   "blank": "desesperado",
+   "src": "made"
+  },
+  {
+   "text": "Um pai desesperado ligou para a Ana porque a filha não voltou da escola.",
+   "en": "A desperate father called Ana because his daughter hadn't come home from school.",
+   "ko": "딸이 학교에서 돌아오지 않자 다급한 아버지가 아나에게 전화했어요.",
+   "blank": "desesperado",
+   "src": "made"
+  }
+ ],
+ "w|desfile": [
+  {
+   "text": "Depois do desfile de fantasias, o Pedro tirou fotos com as crianças.",
+   "en": "After the costume parade, Pedro took photos with the kids.",
+   "ko": "의상 퍼레이드가 끝나고 페드루는 아이들과 사진을 찍었어요.",
+   "blank": "desfile",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz fez plantão extra na noite do desfile de carnaval.",
+   "en": "Beatriz did an extra shift on the night of the Carnival parade.",
+   "ko": "베아트리스는 카니발 퍼레이드가 있던 밤에 추가 근무를 했어요.",
+   "blank": "desfile",
+   "src": "made"
+  }
+ ],
+ "w|desgraça": [
+  {
+   "text": "A estreia foi uma desgraça: o cenário caiu e a luz apagou.",
+   "en": "The premiere was a disaster: the set fell and the lights went out.",
+   "ko": "초연은 엉망이었어요. 무대 세트가 무너지고 조명이 꺼졌거든요.",
+   "blank": "desgraça",
+   "src": "made"
+  },
+  {
+   "text": "O paciente chamou a gripe de uma desgraça que estragou as férias dele.",
+   "en": "The patient called the flu a disaster that ruined his vacation.",
+   "ko": "환자는 독감 때문에 휴가를 망친 건 재앙이었다고 했어요.",
+   "blank": "desgraça",
+   "src": "made"
   }
  ],
  "w|desistir": [
@@ -12725,6 +13333,22 @@
    "ko": "그거 꼭 하기로 마음먹은 것 같네요.",
    "blank": "determinado",
    "src": "tatoeba:7959580/lucasmg123 en:6247433/CK"
+  }
+ ],
+ "w|detestar": [
+  {
+   "text": "O João detesta quando a irmã mexe nas coisas dele sem avisar.",
+   "en": "João hates it when his sister goes through his things without saying anything.",
+   "ko": "주앙은 누나가 말없이 자기 물건을 건드리는 걸 정말 싫어해요.",
+   "blank": "detesta",
+   "src": "made"
+  },
+  {
+   "text": "A Ana detesta preencher relatórios no fim do plantão.",
+   "en": "Ana hates filling out reports at the end of her shift.",
+   "ko": "아나는 근무 끝에 보고서 쓰는 걸 아주 싫어해요.",
+   "blank": "detesta",
+   "src": "made"
   }
  ],
  "w|detetive": [
@@ -13010,6 +13634,22 @@
    "en": "Beatriz looked up a word from the rulebook in the dictionary.",
    "ko": "베아트리스는 규정에 나온 단어 뜻을 사전에서 찾았어요.",
    "blank": "dicionário",
+   "src": "made"
+  }
+ ],
+ "w|dieta": [
+  {
+   "text": "O Lucas começou uma dieta com mais proteína e menos açúcar.",
+   "en": "Lucas started a diet with more protein and less sugar.",
+   "ko": "루카스는 단백질은 늘리고 설탕은 줄이는 식단을 시작했어요.",
+   "blank": "dieta",
+   "src": "made"
+  },
+  {
+   "text": "No almoço, a Mariana descobriu que metade da equipe está de dieta.",
+   "en": "At lunch, Mariana found out that half the team is on a diet.",
+   "ko": "점심때 마리아나는 팀원 절반이 다이어트 중이라는 걸 알았어요.",
+   "blank": "dieta",
    "src": "made"
   }
  ],
@@ -13309,6 +13949,22 @@
    "en": "The two of them argued over nothing.",
    "ko": "둘은 쓸데없이 다퉜어.",
    "blank": "discutiram"
+  }
+ ],
+ "w|disfarce": [
+  {
+   "text": "O Gabriel se vestiu de Papai Noel, mas as crianças descobriram o disfarce.",
+   "en": "Gabriel dressed up as Santa Claus, but the kids saw through the disguise.",
+   "ko": "가브리에우는 산타 분장을 했지만 아이들이 변장을 알아챘어요.",
+   "blank": "disfarce",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa foi à festa da firma com um disfarce de pirata.",
+   "en": "Luísa went to the company party in a pirate costume.",
+   "ko": "루이자는 해적 분장을 하고 회사 파티에 갔어요.",
+   "blank": "disfarce",
+   "src": "made"
   }
  ],
  "w|disparar": [
@@ -13725,6 +14381,22 @@
    "blank": "dólar"
   }
  ],
+ "w|doloroso": [
+  {
+   "text": "O primeiro treino de perna foi tão doloroso que o Lucas mal conseguiu descer a escada.",
+   "en": "The first leg workout was so painful that Lucas could barely walk down the stairs.",
+   "ko": "첫 하체 운동이 너무 고통스러워서 루카스는 계단을 겨우 내려갔어요.",
+   "blank": "doloroso",
+   "src": "made"
+  },
+  {
+   "text": "Sair do emprego antigo foi doloroso, mas a Mariana sabia que era a hora.",
+   "en": "Leaving her old job was painful, but Mariana knew it was time.",
+   "ko": "예전 직장을 떠나는 건 괴로웠지만 마리아나는 때가 됐다는 걸 알았어요.",
+   "blank": "doloroso",
+   "src": "made"
+  }
+ ],
  "w|dom": [
   {
    "text": "Nenhum dom é mais precioso que a confiança.",
@@ -14043,6 +14715,22 @@
    "src": "made"
   }
  ],
+ "w|dúzia": [
+  {
+   "text": "O Gabriel comprou uma dúzia de ovos para fazer rabanada.",
+   "en": "Gabriel bought a dozen eggs to make French toast.",
+   "ko": "가브리에우는 프렌치토스트를 만들려고 달걀 한 판을 샀어요.",
+   "blank": "dúzia",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa levou uma dúzia de pães de queijo para a reunião de sexta.",
+   "en": "Luísa brought a dozen cheese breads to the Friday meeting.",
+   "ko": "루이자는 금요일 회의에 치즈빵 열두 개를 가져갔어요.",
+   "blank": "dúzia",
+   "src": "made"
+  }
+ ],
  "w|e": [
   {
    "text": "Pão e café.",
@@ -14273,6 +14961,22 @@
    "blank": "eles"
   }
  ],
+ "w|eletricidade": [
+  {
+   "text": "Faltou eletricidade na rua, e a família do Gabriel jantou à luz de velas.",
+   "en": "The power went out on the street, and Gabriel's family had dinner by candlelight.",
+   "ko": "동네에 전기가 나가서 가브리에우네 가족은 촛불을 켜고 저녁을 먹었어요.",
+   "blank": "eletricidade",
+   "src": "made"
+  },
+  {
+   "text": "A conta de eletricidade do escritório subiu muito no verão.",
+   "en": "The office electricity bill went up a lot in summer.",
+   "ko": "여름에 사무실 전기 요금이 많이 올랐어요.",
+   "blank": "eletricidade",
+   "src": "made"
+  }
+ ],
  "w|eletricista": [
   {
    "text": "Quando a luz caiu, o Pedro chamou o eletricista da fábrica.",
@@ -14303,6 +15007,22 @@
    "ko": "이 전기면도기를 사기 전에 써 봤어야 했어요.",
    "blank": "elétrico",
    "src": "tatoeba:1175346/paula_guisard en:1008901/AOCinJAPAN"
+  }
+ ],
+ "w|eletrônico": [
+  {
+   "text": "O João achou que a Clara tinha apagado o jogo eletrônico dele do computador.",
+   "en": "João thought Clara had deleted his video game from the computer.",
+   "ko": "주앙은 클라라가 컴퓨터에서 자기 전자 게임을 지운 줄 알았어요.",
+   "blank": "eletrônico",
+   "src": "made"
+  },
+  {
+   "text": "A delegacia da Ana passou a aceitar denúncias por correio eletrônico.",
+   "en": "Ana's station started accepting reports by email.",
+   "ko": "아나의 경찰서는 전자 우편으로도 신고를 받기 시작했어요.",
+   "blank": "eletrônico",
+   "src": "made"
   }
  ],
  "w|elevador": [
@@ -14441,6 +15161,22 @@
    "blank": "embaixo"
   }
  ],
+ "w|embaixo de": [
+  {
+   "text": "O Pedro deixou o roteiro embaixo da cadeira e quase esqueceu na saída.",
+   "en": "Pedro left the script under his chair and almost forgot it on the way out.",
+   "ko": "페드루는 대본을 의자 밑에 두고 나가다 잊어버릴 뻔했어요.",
+   "blank": "embaixo da",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz achou o estetoscópio perdido embaixo da maca.",
+   "en": "Beatriz found the lost stethoscope under the stretcher.",
+   "ko": "베아트리스는 잃어버린 청진기를 들것 밑에서 찾았어요.",
+   "blank": "embaixo da",
+   "src": "made"
+  }
+ ],
  "w|embora": [
   {
    "text": "Vou embora cedo.",
@@ -14485,6 +15221,22 @@
    "src": "tatoeba:4804338/carlosalberto en:4806558/Objectivesea"
   }
  ],
+ "w|emocional": [
+  {
+   "text": "Depois da briga, o João precisou de apoio emocional da avó.",
+   "en": "After the fight, João needed emotional support from his grandmother.",
+   "ko": "싸운 뒤 주앙은 할머니의 정서적 위로가 필요했어요.",
+   "blank": "emocional",
+   "src": "made"
+  },
+  {
+   "text": "A delegacia oferece apoio emocional às vítimas com a ajuda de uma psicóloga.",
+   "en": "The station offers emotional support to victims with the help of a psychologist.",
+   "ko": "경찰서는 심리 상담사의 도움으로 피해자들에게 정서적 지원을 해요.",
+   "blank": "emocional",
+   "src": "made"
+  }
+ ],
  "w|emocionante": [
   {
    "text": "Eu nunca pensei que seria tão emocionante.",
@@ -14501,6 +15253,22 @@
    "src": "tatoeba:1416948/alexmarcelo en:36124/CM"
   }
  ],
+ "w|emocionar": [
+  {
+   "text": "A carta de desculpas do João emocionou a irmã.",
+   "en": "João's apology letter moved his sister.",
+   "ko": "주앙의 사과 편지에 누나는 감동했어요.",
+   "blank": "emocionou",
+   "src": "made"
+  },
+  {
+   "text": "A história do cachorro resgatado emocionou todos na delegacia.",
+   "en": "The story of the rescued dog moved everyone at the station.",
+   "ko": "구조된 개 이야기에 경찰서 사람들 모두 감동했어요.",
+   "blank": "emocionou",
+   "src": "made"
+  }
+ ],
  "w|empatar": [
   {
    "text": "Na hora do almoço, o Lucas viu no celular que o time dele tinha empatado.",
@@ -14514,6 +15282,22 @@
    "en": "Mariana and her neighbor tied in the contest of who could find the cheapest tomato.",
    "ko": "마리아나와 이웃은 누가 더 싼 토마토를 찾나 내기에서 비겼어요.",
    "blank": "empataram",
+   "src": "made"
+  }
+ ],
+ "w|empolgado": [
+  {
+   "text": "A Clara estava empolgada para contar uma novidade, mas o João nem quis ouvir.",
+   "en": "Clara was excited to share some news, but João didn't even want to listen.",
+   "ko": "클라라는 소식을 전하고 싶어 들떠 있었는데 주앙은 들으려고도 안 했어요.",
+   "blank": "empolgada",
+   "src": "made"
+  },
+  {
+   "text": "O novo policial chegou empolgado para o primeiro plantão com a Ana.",
+   "en": "The new officer arrived excited for his first shift with Ana.",
+   "ko": "신입 경찰관은 아나와 함께하는 첫 근무에 들떠서 왔어요.",
+   "blank": "empolgado",
    "src": "made"
   }
  ],
@@ -14609,6 +15393,22 @@
    "src": "tatoeba:7775370/pedrolima en:60506/CK"
   }
  ],
+ "w|encaixar": [
+  {
+   "text": "O Lucas não conseguia encaixar a anilha na barra de jeito nenhum.",
+   "en": "Lucas just couldn't get the weight plate to fit onto the bar.",
+   "ko": "루카스는 원판을 바에 도무지 끼울 수가 없었어요.",
+   "blank": "encaixar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana tenta encaixar o almoço entre uma reunião e outra.",
+   "en": "Mariana tries to fit lunch in between one meeting and the next.",
+   "ko": "마리아나는 회의 사이사이에 점심을 끼워 넣으려고 해요.",
+   "blank": "encaixar",
+   "src": "made"
+  }
+ ],
  "w|encanador": [
   {
    "text": "O banheiro dos funcionários vazou e o Pedro teve que chamar um encanador.",
@@ -14639,6 +15439,22 @@
    "ko": "그는 정말 매력적이야!",
    "blank": "encantador",
    "src": "tatoeba:1245193/Welton en:813098/papabear"
+  }
+ ],
+ "w|encantar": [
+  {
+   "text": "O jeito engraçado do João sempre consegue encantar a irmã depois de uma briga.",
+   "en": "João's funny way always manages to charm his sister after a fight.",
+   "ko": "싸운 뒤에도 주앙의 웃긴 모습은 늘 누나의 마음을 사로잡아요.",
+   "blank": "encantar",
+   "src": "made"
+  },
+  {
+   "text": "O cão farejador da delegacia conseguiu encantar todos os visitantes.",
+   "en": "The station's sniffer dog managed to charm all the visitors.",
+   "ko": "경찰서의 탐지견은 방문객 모두를 사로잡았어요.",
+   "blank": "encantar",
+   "src": "made"
   }
  ],
  "w|encarar": [
@@ -15227,6 +16043,22 @@
    "blank": "época"
   }
  ],
+ "w|equilíbrio": [
+  {
+   "text": "A avó ajuda a manter o equilíbrio quando o João e a irmã discutem.",
+   "en": "Grandma helps keep the balance when João and his sister argue.",
+   "ko": "주앙과 누나가 다투면 할머니가 균형을 잡아 줘요.",
+   "blank": "equilíbrio",
+   "src": "made"
+  },
+  {
+   "text": "A Ana tenta manter o equilíbrio entre o trabalho e a família.",
+   "en": "Ana tries to keep a balance between work and family.",
+   "ko": "아나는 일과 가정 사이에서 균형을 잡으려고 해요.",
+   "blank": "equilíbrio",
+   "src": "made"
+  }
+ ],
  "w|equipamento": [
   {
    "text": "Eu tenho permissão para inspecionar este equipamento.",
@@ -15463,6 +16295,22 @@
    "en": "I'm going to hide the gift.",
    "ko": "선물은 숨겨 둘게.",
    "blank": "esconder"
+  }
+ ],
+ "w|esconderijo": [
+  {
+   "text": "As crianças fizeram um esconderijo de cobertores debaixo da mesa do Gabriel.",
+   "en": "The kids built a blanket hideout under Gabriel's table.",
+   "ko": "아이들은 가브리에우네 식탁 아래에 담요로 아지트를 만들었어요.",
+   "blank": "esconderijo",
+   "src": "made"
+  },
+  {
+   "text": "A sala de arquivos virou o esconderijo da Luísa quando ela precisa de silêncio.",
+   "en": "The file room became Luísa's hiding place when she needs quiet.",
+   "ko": "조용한 게 필요할 때 문서 보관실은 루이자의 은신처가 돼요.",
+   "blank": "esconderijo",
+   "src": "made"
   }
  ],
  "w|escondido": [
@@ -16129,6 +16977,22 @@
    "blank": "estado"
   }
  ],
+ "w|estante": [
+  {
+   "text": "O Gabriel arrumou os jogos de tabuleiro na estante da sala.",
+   "en": "Gabriel tidied the board games on the living room bookcase.",
+   "ko": "가브리에우는 거실 책장에 보드게임을 정리했어요.",
+   "blank": "estante",
+   "src": "made"
+  },
+  {
+   "text": "Os contratos antigos ficam na estante do fundo da sala da Luísa.",
+   "en": "The old contracts are kept on the bookcase at the back of Luísa's room.",
+   "ko": "옛 계약서들은 루이자 방 안쪽 책장에 있어요.",
+   "blank": "estante",
+   "src": "made"
+  }
+ ],
  "w|estar": [
   {
    "text": "Quero estar em casa.",
@@ -16337,6 +17201,22 @@
    "en": "She's the star of the neighborhood.",
    "ko": "그 애는 동네에서 제일 잘나가.",
    "blank": "estrela"
+  }
+ ],
+ "w|estresse": [
+  {
+   "text": "O estresse das provas deixou o João irritado com todo mundo, inclusive a irmã.",
+   "en": "Exam stress made João irritable with everyone, including his sister.",
+   "ko": "시험 스트레스 때문에 주앙은 누나를 포함해 모두에게 짜증을 냈어요.",
+   "blank": "estresse",
+   "src": "made"
+  },
+  {
+   "text": "Para aliviar o estresse, a Ana corre no parque depois do plantão.",
+   "en": "To relieve stress, Ana goes running in the park after her shift.",
+   "ko": "스트레스를 풀려고 아나는 근무가 끝나면 공원에서 달려요.",
+   "blank": "estresse",
+   "src": "made"
   }
  ],
  "w|estrutura": [
@@ -16597,6 +17477,22 @@
    "src": "tatoeba:2603653/alexmarcelo en:2542377/CK"
   }
  ],
+ "w|exceção": [
+  {
+   "text": "O João nunca empresta o videogame, mas abriu uma exceção para a irmã.",
+   "en": "João never lends his video game, but he made an exception for his sister.",
+   "ko": "주앙은 게임기를 절대 안 빌려주는데 누나에게는 예외를 뒀어요.",
+   "blank": "exceção",
+   "src": "made"
+  },
+  {
+   "text": "Na delegacia da Ana, todo mundo usa uniforme, sem exceção.",
+   "en": "At Ana's station, everyone wears a uniform, without exception.",
+   "ko": "아나의 경찰서에서는 예외 없이 모두 제복을 입어요.",
+   "blank": "exceção",
+   "src": "made"
+  }
+ ],
  "w|excelência": [
   {
    "text": "Ele ganhou o prêmio pela excelência em todos os itens.",
@@ -16639,6 +17535,22 @@
    "en": "Everyone came except Ana.",
    "ko": "아나만 빼고 다 왔어.",
    "blank": "exceto"
+  }
+ ],
+ "w|excitante": [
+  {
+   "text": "Para o João, a ideia de viajar sozinho com a irmã parecia excitante.",
+   "en": "For João, the idea of traveling alone with his sister seemed exciting.",
+   "ko": "주앙에게는 누나와 단둘이 여행 가는 게 신나는 일 같았어요.",
+   "blank": "excitante",
+   "src": "made"
+  },
+  {
+   "text": "A Ana diz que o trabalho na delegacia é menos excitante do que nos filmes.",
+   "en": "Ana says police station work is less exciting than in the movies.",
+   "ko": "아나는 경찰서 일이 영화만큼 짜릿하지는 않다고 해요.",
+   "blank": "excitante",
+   "src": "made"
   }
  ],
  "w|execução": [
@@ -16851,6 +17763,22 @@
    "en": "Don't let the argument blow up.",
    "ko": "말다툼이 터지게 두지 마.",
    "blank": "explodir"
+  }
+ ],
+ "w|explorar": [
+  {
+   "text": "Quando eram pequenos, o João e a Clara adoravam explorar o sótão da casa.",
+   "en": "When they were little, João and Clara loved exploring the attic of the house.",
+   "ko": "어릴 때 주앙과 클라라는 집 다락방을 탐험하는 걸 좋아했어요.",
+   "blank": "explorar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu à equipe para explorar todas as pistas antes de fechar o caso.",
+   "en": "Ana asked the team to explore every lead before closing the case.",
+   "ko": "아나는 사건을 종결하기 전에 모든 단서를 살펴보라고 팀에 지시했어요.",
+   "blank": "explorar",
+   "src": "made"
   }
  ],
  "w|explosão": [
@@ -17101,6 +18029,38 @@
    "blank": "faculdade"
   }
  ],
+ "w|fada": [
+  {
+   "text": "Na montagem infantil, o Pedro precisou usar asas de fada.",
+   "en": "In the children's production, Pedro had to wear fairy wings.",
+   "ko": "어린이 공연에서 페드루는 요정 날개를 달아야 했어요.",
+   "blank": "fada",
+   "src": "made"
+  },
+  {
+   "text": "Uma menina internada pediu à Beatriz uma história de fada antes de dormir.",
+   "en": "A girl in the ward asked Beatriz for a fairy tale before bed.",
+   "ko": "입원한 여자아이가 자기 전에 베아트리스에게 요정 이야기를 해 달라고 했어요.",
+   "blank": "fada",
+   "src": "made"
+  }
+ ],
+ "w|faixa": [
+  {
+   "text": "O Lucas finalmente ganhou a faixa azul no jiu-jítsu.",
+   "en": "Lucas finally earned his blue belt in jiu-jitsu.",
+   "ko": "루카스는 드디어 주짓수 파란 띠를 땄어요.",
+   "blank": "faixa",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana pegou a faixa errada da avenida e demorou para achar o prédio.",
+   "en": "Mariana took the wrong lane on the avenue and took a while to find the building.",
+   "ko": "마리아나는 대로에서 차선을 잘못 타서 건물을 찾는 데 한참 걸렸어요.",
+   "blank": "faixa",
+   "src": "made"
+  }
+ ],
  "w|falar": [
   {
    "text": "Quero falar com você.",
@@ -17275,6 +18235,22 @@
    "en": "What a fantastic idea.",
    "ko": "정말 멋진 생각이야.",
    "blank": "fantástica"
+  }
+ ],
+ "w|farmácia": [
+  {
+   "text": "O Lucas passou na farmácia para comprar pomada para o ombro.",
+   "en": "Lucas stopped by the pharmacy to buy ointment for his shoulder.",
+   "ko": "루카스는 어깨에 바를 연고를 사러 약국에 들렀어요.",
+   "blank": "farmácia",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana comprou um remédio para dor de cabeça na farmácia da esquina.",
+   "en": "Mariana bought a headache medicine at the corner pharmacy.",
+   "ko": "마리아나는 길모퉁이 약국에서 두통약을 샀어요.",
+   "blank": "farmácia",
+   "src": "made"
   }
  ],
  "w|fascinante": [
@@ -17579,6 +18555,22 @@
    "ko": "포르투갈어의 모든 명사는 남성 아니면 여성이에요.",
    "blank": "feminino",
    "src": "tatoeba:1112728/alexmarcelo en:1112727/CN"
+  }
+ ],
+ "w|feriado": [
+  {
+   "text": "O teatro do Pedro faz sessão extra em todo feriado.",
+   "en": "Pedro's theater puts on an extra show every holiday.",
+   "ko": "페드루의 극장은 공휴일마다 추가 공연을 해요.",
+   "blank": "feriado",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz vai trabalhar no feriado porque o hospital nunca fecha.",
+   "en": "Beatriz is going to work on the holiday because the hospital never closes.",
+   "ko": "병원은 문을 닫지 않으니 베아트리스는 공휴일에도 출근해요.",
+   "blank": "feriado",
+   "src": "made"
   }
  ],
  "w|férias": [
@@ -18163,6 +19155,22 @@
    "src": "tatoeba:8418910/lucasmg123 en:3143792/Hybrid"
   }
  ],
+ "w|fogão": [
+  {
+   "text": "No Natal, a mãe do Gabriel usou as quatro bocas do fogão ao mesmo tempo.",
+   "en": "At Christmas, Gabriel's mother used all four burners of the stove at once.",
+   "ko": "크리스마스에 가브리에우의 엄마는 가스레인지 화구 네 개를 한꺼번에 썼어요.",
+   "blank": "fogão",
+   "src": "made"
+  },
+  {
+   "text": "A copa do escritório da Luísa tem geladeira, mas não tem fogão.",
+   "en": "The office kitchenette where Luísa works has a fridge, but no stove.",
+   "ko": "루이자네 사무실 탕비실에는 냉장고는 있지만 가스레인지는 없어요.",
+   "blank": "fogão",
+   "src": "made"
+  }
+ ],
  "w|fogo": [
   {
    "text": "Cuidado com o fogo.",
@@ -18354,6 +19362,22 @@
    "en": "The whole team went to Beatriz's graduation wearing the club jersey.",
    "ko": "팀 전체가 클럽 유니폼을 입고 베아트리스의 졸업식에 갔어요.",
    "blank": "formatura",
+   "src": "made"
+  }
+ ],
+ "w|forno": [
+  {
+   "text": "O peru ficou quatro horas no forno até dourar.",
+   "en": "The turkey stayed in the oven for four hours until it browned.",
+   "ko": "칠면조는 노릇해질 때까지 오븐에서 네 시간을 있었어요.",
+   "blank": "forno",
+   "src": "made"
+  },
+  {
+   "text": "Um colega da Luísa esqueceu a marmita no forno e encheu a copa de fumaça.",
+   "en": "One of Luísa's coworkers forgot his lunch in the oven and filled the kitchenette with smoke.",
+   "ko": "루이자의 동료가 도시락을 오븐에 넣고 잊어버려서 탕비실이 연기로 가득 찼어요.",
+   "blank": "forno",
    "src": "made"
   }
  ],
@@ -18678,6 +19702,22 @@
    "en": "The city's bus fleet is new.",
    "ko": "이 도시 버스들은 다 새 차예요.",
    "blank": "frota",
+   "src": "made"
+  }
+ ],
+ "w|frustrado": [
+  {
+   "text": "O João ficou frustrado porque ninguém acreditava na versão dele.",
+   "en": "João got frustrated because nobody believed his side of the story.",
+   "ko": "아무도 자기 말을 믿어 주지 않아서 주앙은 답답했어요.",
+   "blank": "frustrado",
+   "src": "made"
+  },
+  {
+   "text": "A Ana ficou frustrada com a falta de provas no caso do roubo.",
+   "en": "Ana was frustrated by the lack of evidence in the robbery case.",
+   "ko": "아나는 절도 사건에 증거가 없어서 답답했어요.",
+   "blank": "frustrada",
    "src": "made"
   }
  ],
@@ -19485,6 +20525,22 @@
    "src": "tatoeba:7104320/carlosalberto en:12925404/rul"
   }
  ],
+ "w|gol": [
+  {
+   "text": "Durante o intervalo, o Pedro comemorou um gol do time dele no celular.",
+   "en": "During the intermission, Pedro celebrated his team's goal on his phone.",
+   "ko": "막간에 페드루는 휴대폰으로 응원하는 팀의 골을 보고 환호했어요.",
+   "blank": "gol",
+   "src": "made"
+  },
+  {
+   "text": "O garoto internado ouviu o gol pelo rádio e quase pulou da cama.",
+   "en": "The boy in the hospital heard the goal on the radio and nearly jumped out of bed.",
+   "ko": "입원한 남자아이는 라디오로 골 소식을 듣고 침대에서 뛰어오를 뻔했어요.",
+   "blank": "gol",
+   "src": "made"
+  }
+ ],
  "w|golfe": [
   {
    "text": "Vocês dois jogaram golfe juntos?",
@@ -19593,6 +20649,22 @@
    "src": "tatoeba:11128568/carlosalberto en:11128565/carlosalberto"
   }
  ],
+ "w|gota": [
+  {
+   "text": "Uma gota de suor escorreu pelo rosto do Pedro no monólogo final.",
+   "en": "A drop of sweat ran down Pedro's face during the final monologue.",
+   "ko": "마지막 독백 때 땀 한 방울이 페드루의 얼굴을 타고 흘렀어요.",
+   "blank": "gota",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz conferiu se cada gota do soro caía no ritmo certo.",
+   "en": "Beatriz checked that each drop of the IV was falling at the right pace.",
+   "ko": "베아트리스는 수액 한 방울 한 방울이 제 속도로 떨어지는지 확인했어요.",
+   "blank": "gota",
+   "src": "made"
+  }
+ ],
  "w|governador": [
   {
    "text": "O governador libertou os prisioneiros.",
@@ -19635,6 +20707,22 @@
    "en": "We got into the museum for free.",
    "ko": "박물관에 공짜로 들어갔어.",
    "blank": "graça"
+  }
+ ],
+ "w|grade": [
+  {
+   "text": "O teatro do Pedro mudou a grade de espetáculos para incluir sessões de domingo.",
+   "en": "Pedro's theater changed its show schedule to include Sunday performances.",
+   "ko": "페드루의 극장은 일요일 공연을 넣으려고 공연 편성표를 바꿨어요.",
+   "blank": "grade",
+   "src": "made"
+  },
+  {
+   "text": "A janela do quarto da ala infantil tem grade por segurança.",
+   "en": "The window of the pediatric ward room has bars for safety.",
+   "ko": "소아 병동 병실 창문에는 안전을 위해 창살이 있어요.",
+   "blank": "grade",
+   "src": "made"
   }
  ],
  "w|grama": [
@@ -19825,6 +20913,22 @@
    "src": "tatoeba:5995946/sergiomelo en:5769082/Hybrid"
   }
  ],
+ "w|gravidez": [
+  {
+   "text": "Uma aluna continuou fazendo ioga durante toda a gravidez, com orientação médica.",
+   "en": "One member kept doing yoga throughout her pregnancy, with medical guidance.",
+   "ko": "한 회원은 의사의 지도를 받으며 임신 기간 내내 요가를 계속했어요.",
+   "blank": "gravidez",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana vai substituir uma colega que saiu de licença no fim da gravidez.",
+   "en": "Mariana is replacing a colleague who went on leave at the end of her pregnancy.",
+   "ko": "마리아나는 임신 막바지에 휴가를 낸 동료 대신 일하게 돼요.",
+   "blank": "gravidez",
+   "src": "made"
+  }
+ ],
  "w|grego": [
   {
    "text": "Na aula de história, o João aprendeu o alfabeto grego.",
@@ -19854,6 +20958,22 @@
    "en": "Carla had the flu and couldn't sing at the recital.",
    "ko": "카를라는 감기에 걸려서 발표회에서 노래를 못 했어요.",
    "blank": "gripada",
+   "src": "made"
+  }
+ ],
+ "w|gripe": [
+  {
+   "text": "O Lucas faltou à academia a semana inteira por causa de uma gripe.",
+   "en": "Lucas missed the gym the whole week because of the flu.",
+   "ko": "루카스는 독감 때문에 일주일 내내 헬스장에 못 갔어요.",
+   "blank": "gripe",
+   "src": "made"
+  },
+  {
+   "text": "Metade do escritório da Mariana estava com gripe na primeira semana.",
+   "en": "Half of Mariana's office had the flu in the first week.",
+   "ko": "첫 주에 마리아나네 사무실 절반이 독감에 걸렸어요.",
+   "blank": "gripe",
    "src": "made"
   }
  ],
@@ -20293,6 +21413,22 @@
    "blank": "horrível"
   }
  ],
+ "w|horror": [
+  {
+   "text": "A Clara assiste a filmes de horror, e o João sempre acaba dormindo de luz acesa.",
+   "en": "Clara watches horror movies, and João always ends up sleeping with the light on.",
+   "ko": "클라라는 공포 영화를 보고, 주앙은 결국 늘 불을 켜고 자요.",
+   "blank": "horror",
+   "src": "made"
+  },
+  {
+   "text": "A testemunha descreveu com horror o incêndio no armazém.",
+   "en": "The witness described the warehouse fire with horror.",
+   "ko": "목격자는 창고 화재를 공포에 질려 묘사했어요.",
+   "blank": "horror",
+   "src": "made"
+  }
+ ],
  "w|hóspede": [
   {
    "text": "Você é nossa hóspede da semana.",
@@ -20593,6 +21729,22 @@
    "en": "The island is an hour by boat.",
    "ko": "그 섬은 배로 한 시간이야.",
    "blank": "ilha"
+  }
+ ],
+ "w|ilusão": [
+  {
+   "text": "O Lucas achava que ia ganhar músculos em uma semana, mas era ilusão.",
+   "en": "Lucas thought he'd gain muscle in a week, but it was an illusion.",
+   "ko": "루카스는 일주일이면 근육이 붙을 줄 알았지만 착각이었어요.",
+   "blank": "ilusão",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana achava que ia aprender tudo num dia, mas logo perdeu essa ilusão.",
+   "en": "Mariana thought she'd learn everything in a day, but she soon lost that illusion.",
+   "ko": "마리아나는 하루면 다 배울 줄 알았지만 곧 그 착각에서 깼어요.",
+   "blank": "ilusão",
+   "src": "made"
   }
  ],
  "w|imagem": [
@@ -21075,6 +22227,22 @@
    "src": "tatoeba:9805974/Ricardo14 en:9805868/Igider"
   }
  ],
+ "w|inconsciente": [
+  {
+   "text": "Um aluno desmaiou na esteira e ficou inconsciente por alguns segundos.",
+   "en": "A member fainted on the treadmill and was unconscious for a few seconds.",
+   "ko": "한 회원이 러닝머신에서 쓰러져 몇 초 동안 의식을 잃었어요.",
+   "blank": "inconsciente",
+   "src": "made"
+  },
+  {
+   "text": "No treinamento, a Mariana aprendeu o que fazer se alguém ficar inconsciente.",
+   "en": "In training, Mariana learned what to do if someone becomes unconscious.",
+   "ko": "교육에서 마리아나는 누군가 의식을 잃으면 어떻게 해야 하는지 배웠어요.",
+   "blank": "inconsciente",
+   "src": "made"
+  }
+ ],
  "w|incrível": [
   {
    "text": "Você estava incrível ontem.",
@@ -21229,6 +22397,22 @@
    "ko": "그의 아이 같은 웃음이 매력적이에요.",
    "blank": "infantil",
    "src": "tatoeba:3428192/piterkeo en:286453/CM"
+  }
+ ],
+ "w|infecção": [
+  {
+   "text": "O Lucas usa chinelo no vestiário para não pegar infecção no pé.",
+   "en": "Lucas wears flip-flops in the locker room so he doesn't get a foot infection.",
+   "ko": "루카스는 발에 감염이 생기지 않도록 탈의실에서 슬리퍼를 신어요.",
+   "blank": "infecção",
+   "src": "made"
+  },
+  {
+   "text": "A nova colega da Mariana faltou por causa de uma infecção no ouvido.",
+   "en": "Mariana's new coworker was out because of an ear infection.",
+   "ko": "마리아나의 새 동료는 귀에 염증이 생겨서 결근했어요.",
+   "blank": "infecção",
+   "src": "made"
   }
  ],
  "w|infeliz": [
@@ -21411,6 +22595,22 @@
    "blank": "inimigo"
   }
  ],
+ "w|injeção": [
+  {
+   "text": "O médico deu uma injeção para aliviar a dor nas costas do Lucas.",
+   "en": "The doctor gave Lucas an injection to ease his back pain.",
+   "ko": "의사는 루카스의 허리 통증을 덜려고 주사를 놓았어요.",
+   "blank": "injeção",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Mariana organizou uma campanha de vacina, com injeção na própria sala.",
+   "en": "Mariana's company organized a vaccination drive, with shots given right in the office.",
+   "ko": "마리아나의 회사는 사무실에서 바로 주사를 놓는 예방 접종 행사를 열었어요.",
+   "blank": "injeção",
+   "src": "made"
+  }
+ ],
  "w|inocente": [
   {
    "text": "Foi uma brincadeira inocente.",
@@ -21470,6 +22670,22 @@
    "en": "The inspector checked all the documents.",
    "ko": "검사관이 서류를 다 확인했어요.",
    "blank": "inspetor",
+   "src": "made"
+  }
+ ],
+ "w|inspiração": [
+  {
+   "text": "O ex-gordinho que virou atleta é a maior inspiração do Lucas.",
+   "en": "The formerly chubby guy who became an athlete is Lucas's biggest inspiration.",
+   "ko": "통통했다가 운동선수가 된 그 사람이 루카스에게 가장 큰 자극이에요.",
+   "blank": "inspiração",
+   "src": "made"
+  },
+  {
+   "text": "A história da fundadora da empresa serviu de inspiração para a Mariana.",
+   "en": "The story of the company's founder served as inspiration for Mariana.",
+   "ko": "회사 창업자의 이야기는 마리아나에게 영감이 됐어요.",
+   "blank": "inspiração",
    "src": "made"
   }
  ],
@@ -21783,6 +22999,22 @@
    "src": "tatoeba:2165189/alexmarcelo en:2012628/CK"
   }
  ],
+ "w|interruptor": [
+  {
+   "text": "O sobrinho do Gabriel não alcança o interruptor do banheiro.",
+   "en": "Gabriel's nephew can't reach the bathroom light switch.",
+   "ko": "가브리에우의 조카는 화장실 스위치에 손이 안 닿아요.",
+   "blank": "interruptor",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa procurou o interruptor no escuro quando a reunião acabou tarde.",
+   "en": "Luísa felt for the light switch in the dark when the meeting ended late.",
+   "ko": "회의가 늦게 끝나서 루이자는 어둠 속에서 스위치를 더듬어 찾았어요.",
+   "blank": "interruptor",
+   "src": "made"
+  }
+ ],
  "w|intervalo": [
   {
    "text": "Nós poríamos o intervalo às cinco horas.",
@@ -22013,6 +23245,22 @@
    "ko": "너 짜증 난 거 알아.",
    "blank": "irritado",
    "src": "tatoeba:2634578/alexmarcelo en:2631447/Joseph"
+  }
+ ],
+ "w|irritante": [
+  {
+   "text": "O celular que tocou na plateia foi irritante para o Pedro e para o público.",
+   "en": "The phone ringing in the audience was annoying for Pedro and the crowd.",
+   "ko": "객석에서 울린 휴대폰 소리에 페드루도 관객도 짜증이 났어요.",
+   "blank": "irritante",
+   "src": "made"
+  },
+  {
+   "text": "O apito irritante de uma máquina não deixava a Beatriz se concentrar.",
+   "en": "The annoying beep of a machine wouldn't let Beatriz concentrate.",
+   "ko": "기계의 거슬리는 삐 소리 때문에 베아트리스는 집중할 수가 없었어요.",
+   "blank": "irritante",
+   "src": "made"
   }
  ],
  "w|irritar": [
@@ -22469,6 +23717,22 @@
    "src": "made"
   }
  ],
+ "w|junta": [
+  {
+   "text": "Na peça histórica, o Pedro faz um general da junta que governa o país.",
+   "en": "In the historical play, Pedro plays a general in the junta that rules the country.",
+   "ko": "역사극에서 페드루는 나라를 다스리는 군사 평의회의 장군을 연기해요.",
+   "blank": "junta",
+   "src": "made"
+  },
+  {
+   "text": "Uma junta médica avaliou o caso antes da cirurgia.",
+   "en": "A medical board assessed the case before the surgery.",
+   "ko": "수술 전에 의료진 협의회가 사례를 검토했어요.",
+   "blank": "junta",
+   "src": "made"
+  }
+ ],
  "w|juntar": [
   {
    "text": "Junta os copos sujos.",
@@ -22495,6 +23759,22 @@
    "en": "Leave it with the bag.",
    "ko": "가방이랑 같이 둬.",
    "blank": "junto"
+  }
+ ],
+ "w|junto a": [
+  {
+   "text": "O Pedro esperou os colegas junto à porta dos fundos do teatro.",
+   "en": "Pedro waited for his colleagues by the back door of the theater.",
+   "ko": "페드루는 극장 뒷문 옆에서 동료들을 기다렸어요.",
+   "blank": "junto à",
+   "src": "made"
+  },
+  {
+   "text": "A família esperou junto ao leito enquanto a Beatriz media a pressão.",
+   "en": "The family waited by the bed while Beatriz took the blood pressure.",
+   "ko": "베아트리스가 혈압을 재는 동안 가족들은 침대 곁에서 기다렸어요.",
+   "blank": "junto ao",
+   "src": "made"
   }
  ],
  "w|juntos": [
@@ -22799,6 +24079,22 @@
    "src": "tatoeba:4505092/ToinhoAlam en:4505034/AlanF_US"
   }
  ],
+ "w|lamentar": [
+  {
+   "text": "O João lamenta ter gritado com a irmã por causa de uma bobagem.",
+   "en": "João regrets having yelled at his sister over something silly.",
+   "ko": "주앙은 별것도 아닌 일로 누나에게 소리친 걸 후회해요.",
+   "blank": "lamenta",
+   "src": "made"
+  },
+  {
+   "text": "A delegada Ana lamentou não poder dar mais informações aos jornalistas.",
+   "en": "Chief Ana regretted not being able to give more information to the journalists.",
+   "ko": "아나 서장은 기자들에게 더 알려 줄 수 없어 유감이라고 했어요.",
+   "blank": "lamentou",
+   "src": "made"
+  }
+ ],
  "w|lançamento": [
   {
    "text": "Quando ocorreu o lançamento do primeiro satélite?",
@@ -22957,6 +24253,22 @@
    "src": "tatoeba:999715/alexmarcelo en:999634/CK"
   }
  ],
+ "w|leal": [
+  {
+   "text": "Mesmo brigando, a Clara continua leal ao irmão na frente dos outros.",
+   "en": "Even when they fight, Clara stays loyal to her brother in front of others.",
+   "ko": "싸우더라도 클라라는 남들 앞에서는 늘 동생 편이에요.",
+   "blank": "leal",
+   "src": "made"
+  },
+  {
+   "text": "O parceiro da Ana é leal e nunca a deixa sozinha numa ocorrência.",
+   "en": "Ana's partner is loyal and never leaves her alone on a call.",
+   "ko": "아나의 동료는 의리가 있어서 출동할 때 그녀를 절대 혼자 두지 않아요.",
+   "blank": "leal",
+   "src": "made"
+  }
+ ],
  "w|lealdade": [
   {
    "text": "O que entendemos quando falamos de lealdade?",
@@ -23015,6 +24327,22 @@
    "en": "Make the subtitles bigger, please.",
    "ko": "자막 좀 키워 줘.",
    "blank": "legenda"
+  }
+ ],
+ "w|legista": [
+  {
+   "text": "Na esteira, o Lucas assiste a uma série sobre um médico legista que resolve crimes.",
+   "en": "On the treadmill, Lucas watches a series about a medical examiner who solves crimes.",
+   "ko": "러닝머신 위에서 루카스는 범죄를 해결하는 법의학자 드라마를 봐요.",
+   "blank": "legista",
+   "src": "made"
+  },
+  {
+   "text": "A vizinha de mesa da Mariana trabalhou como legista antes de mudar de carreira.",
+   "en": "The woman at the desk next to Mariana worked as a medical examiner before changing careers.",
+   "ko": "마리아나의 옆자리 동료는 직업을 바꾸기 전에 검시관으로 일했어요.",
+   "blank": "legista",
+   "src": "made"
   }
  ],
  "w|legítimo": [
@@ -23438,6 +24766,22 @@
    "en": "Beatriz showed leadership when the team was losing.",
    "ko": "팀이 지고 있을 때 베아트리스는 리더십을 보여 줬어요.",
    "blank": "liderança",
+   "src": "made"
+  }
+ ],
+ "w|lido": [
+  {
+   "text": "O avô do Gabriel é um homem muito lido e conta histórias na mesa.",
+   "en": "Gabriel's grandfather is a very well-read man and tells stories at the table.",
+   "ko": "가브리에우의 할아버지는 책을 많이 읽은 분이라 식탁에서 이야기를 들려줘요.",
+   "blank": "lido",
+   "src": "made"
+  },
+  {
+   "text": "O e-mail da Luísa aparece como lido, mas ninguém respondeu.",
+   "en": "Luísa's email shows as read, but nobody has replied.",
+   "ko": "루이자의 이메일은 읽음으로 뜨는데 아무도 답장을 안 했어요.",
+   "blank": "lido",
    "src": "made"
   }
  ],
@@ -24173,6 +25517,38 @@
    "blank": "mágica"
   }
  ],
+ "w|magnífico": [
+  {
+   "text": "Do terraço da academia, o Lucas tem uma vista magnífica da cidade.",
+   "en": "From the gym's rooftop, Lucas has a magnificent view of the city.",
+   "ko": "헬스장 옥상에서 루카스는 도시의 멋진 전경을 볼 수 있어요.",
+   "blank": "magnífica",
+   "src": "made"
+  },
+  {
+   "text": "O escritório novo da Mariana fica num prédio antigo e magnífico do centro.",
+   "en": "Mariana's new office is in a magnificent old building downtown.",
+   "ko": "마리아나의 새 사무실은 시내의 웅장한 옛 건물에 있어요.",
+   "blank": "magnífico",
+   "src": "made"
+  }
+ ],
+ "w|magoado": [
+  {
+   "text": "A Clara ficou magoada quando o João leu o diário dela sem pedir.",
+   "en": "Clara was hurt when João read her diary without asking.",
+   "ko": "주앙이 허락 없이 일기를 읽어서 클라라는 상처받았어요.",
+   "blank": "magoada",
+   "src": "made"
+  },
+  {
+   "text": "Um senhor magoado com o vizinho veio fazer uma queixa na delegacia.",
+   "en": "An old man upset with his neighbor came to file a complaint at the station.",
+   "ko": "이웃에게 마음이 상한 한 할아버지가 경찰서에 신고하러 왔어요.",
+   "blank": "magoado",
+   "src": "made"
+  }
+ ],
  "w|magro": [
   {
    "text": "O ajudante do Miguel é magro, mas carrega sacos de cimento sem reclamar.",
@@ -24421,6 +25797,22 @@
    "blank": "manhã"
   }
  ],
+ "w|mansão": [
+  {
+   "text": "Para o Gabriel, a casa simples da avó vale mais que qualquer mansão.",
+   "en": "For Gabriel, his grandmother's simple house is worth more than any mansion.",
+   "ko": "가브리에우에게는 할머니의 소박한 집이 어떤 대저택보다 소중해요.",
+   "blank": "mansão",
+   "src": "made"
+  },
+  {
+   "text": "O jantar da empresa foi numa mansão antiga alugada para eventos.",
+   "en": "The company dinner was held in an old mansion rented for events.",
+   "ko": "회사 만찬은 행사용으로 빌린 오래된 대저택에서 열렸어요.",
+   "blank": "mansão",
+   "src": "made"
+  }
+ ],
  "w|manteiga": [
   {
    "text": "Eu comprei legumes, carne e manteiga.",
@@ -24449,6 +25841,22 @@
    "en": "I want to keep my word.",
    "ko": "약속은 지키고 싶어.",
    "blank": "manter"
+  }
+ ],
+ "w|manual": [
+  {
+   "text": "O Pedro consultou o manual para entender como funciona a mesa de luz.",
+   "en": "Pedro checked the manual to understand how the lighting board works.",
+   "ko": "페드루는 조명 콘솔 사용법을 알려고 설명서를 찾아봤어요.",
+   "blank": "manual",
+   "src": "made"
+  },
+  {
+   "text": "Cada aparelho novo vem com um manual que a Beatriz lê com atenção.",
+   "en": "Each new device comes with a manual that Beatriz reads carefully.",
+   "ko": "새 기기마다 설명서가 딸려 오는데 베아트리스는 꼼꼼히 읽어요.",
+   "blank": "manual",
+   "src": "made"
   }
  ],
  "w|mão": [
@@ -24585,6 +25993,22 @@
    "blank": "marcar"
   }
  ],
+ "w|marcha": [
+  {
+   "text": "O Lucas faz marcha atlética na pista da academia três vezes por semana.",
+   "en": "Lucas does race walking on the gym track three times a week.",
+   "ko": "루카스는 일주일에 세 번 헬스장 트랙에서 경보를 해요.",
+   "blank": "marcha",
+   "src": "made"
+  },
+  {
+   "text": "O carro da Mariana não engatava a marcha e ela quase chegou atrasada.",
+   "en": "Mariana's car wouldn't go into gear and she almost arrived late.",
+   "ko": "마리아나의 차가 기어가 안 들어가서 하마터면 지각할 뻔했어요.",
+   "blank": "marcha",
+   "src": "made"
+  }
+ ],
  "w|marco": [
   {
    "text": "Esse dia foi um marco na minha vida.",
@@ -24707,6 +26131,22 @@
    "ko": "반죽을 튀겼어요.",
    "blank": "massa",
    "src": "tatoeba:6365738/mervert1 en:6365727/mervert1"
+  }
+ ],
+ "w|massagem": [
+  {
+   "text": "Depois da maratona, o Lucas ganhou uma massagem de presente da namorada.",
+   "en": "After the marathon, Lucas got a massage as a gift from his girlfriend.",
+   "ko": "마라톤이 끝나고 루카스는 여자 친구에게 마사지를 선물받았어요.",
+   "blank": "massagem",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Mariana oferece massagem rápida para os funcionários às sextas.",
+   "en": "Mariana's company offers quick massages to employees on Fridays.",
+   "ko": "마리아나의 회사는 금요일마다 직원들에게 짧은 마사지를 제공해요.",
+   "blank": "massagem",
+   "src": "made"
   }
  ],
  "w|mata": [
@@ -24861,6 +26301,22 @@
    "src": "made"
   }
  ],
+ "w|medalha": [
+  {
+   "text": "Na peça, o Pedro faz um velho soldado que guarda uma medalha de guerra.",
+   "en": "In the play, Pedro plays an old soldier who keeps a war medal.",
+   "ko": "연극에서 페드루는 전쟁 훈장을 간직한 늙은 병사를 연기해요.",
+   "blank": "medalha",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Beatriz ganhou uma medalha da prefeitura pelo trabalho na enchente.",
+   "en": "Beatriz's team received a medal from the city for their work during the flood.",
+   "ko": "베아트리스의 팀은 홍수 때 한 일로 시청에서 메달을 받았어요.",
+   "blank": "medalha",
+   "src": "made"
+  }
+ ],
  "w|mediante": [
   {
    "text": "O Lucas só pode entrar na sala mediante apresentação de documento.",
@@ -25011,6 +26467,22 @@
    "en": "There's a vase in the middle.",
    "ko": "한가운데 화병이 있어.",
    "blank": "meio"
+  }
+ ],
+ "w|meio ambiente": [
+  {
+   "text": "O cenário da peça foi feito com material reciclado, pensando no meio ambiente.",
+   "en": "The play's set was made with recycled material, with the environment in mind.",
+   "ko": "연극 무대 세트는 환경을 생각해서 재활용 재료로 만들었어요.",
+   "blank": "meio ambiente",
+   "src": "made"
+  },
+  {
+   "text": "O hospital da Beatriz separa o lixo para proteger o meio ambiente.",
+   "en": "Beatriz's hospital sorts its waste to protect the environment.",
+   "ko": "베아트리스의 병원은 환경을 지키려고 쓰레기를 분리해요.",
+   "blank": "meio ambiente",
+   "src": "made"
   }
  ],
  "w|meio-dia": [
@@ -25499,6 +26971,22 @@
    "blank": "mexe"
   }
  ],
+ "w|micro-ondas": [
+  {
+   "text": "O Gabriel esquentou as sobras da ceia no micro-ondas.",
+   "en": "Gabriel heated the leftovers from the dinner in the microwave.",
+   "ko": "가브리에우는 저녁 식사 남은 음식을 전자레인지에 데웠어요.",
+   "blank": "micro-ondas",
+   "src": "made"
+  },
+  {
+   "text": "Na hora do almoço, a fila para o micro-ondas dá volta na copa.",
+   "en": "At lunchtime, the line for the microwave wraps around the kitchenette.",
+   "ko": "점심시간이면 전자레인지 앞 줄이 탕비실을 한 바퀴 돌아요.",
+   "blank": "micro-ondas",
+   "src": "made"
+  }
+ ],
  "w|mídia": [
   {
    "text": "A mídia está se aproveitando da situação.",
@@ -25663,6 +27151,22 @@
    "en": "The slimmest chance still exists.",
    "ko": "아주 작은 가능성은 아직 있어.",
    "blank": "mínima"
+  }
+ ],
+ "w|ministério": [
+  {
+   "text": "O teatro do Pedro recebeu verba do ministério da cultura para a nova montagem.",
+   "en": "Pedro's theater received funding from the culture ministry for the new production.",
+   "ko": "페드루의 극장은 새 작품을 위해 문화부 지원금을 받았어요.",
+   "blank": "ministério",
+   "src": "made"
+  },
+  {
+   "text": "O ministério da saúde mandou novas vacinas para o hospital da Beatriz.",
+   "en": "The health ministry sent new vaccines to Beatriz's hospital.",
+   "ko": "보건부가 베아트리스의 병원에 새 백신을 보냈어요.",
+   "blank": "ministério",
+   "src": "made"
   }
  ],
  "w|ministro": [
@@ -26467,6 +27971,22 @@
    "src": "tatoeba:1779539/alexmarcelo en:1776740/Amastan"
   }
  ],
+ "w|músculo": [
+  {
+   "text": "O Lucas sentiu cada músculo das pernas no dia seguinte ao treino.",
+   "en": "Lucas felt every muscle in his legs the day after the workout.",
+   "ko": "운동 다음 날 루카스는 다리 근육 하나하나가 다 느껴졌어요.",
+   "blank": "músculo",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana ficou tão tensa que sentiu um músculo do pescoço travar.",
+   "en": "Mariana got so tense that she felt a muscle in her neck lock up.",
+   "ko": "마리아나는 너무 긴장해서 목 근육이 뭉치는 게 느껴졌어요.",
+   "blank": "músculo",
+   "src": "made"
+  }
+ ],
  "w|museu": [
   {
    "text": "Há um bom museu em minha cidade.",
@@ -26999,6 +28519,22 @@
    "blank": "Nenhuma"
   }
  ],
+ "w|nervo": [
+  {
+   "text": "O Lucas sentiu um choque no braço quando bateu o cotovelo bem no nervo.",
+   "en": "Lucas felt a jolt in his arm when he hit his elbow right on the nerve.",
+   "ko": "루카스는 팔꿈치 신경 부위를 부딪쳐서 팔이 찌릿했어요.",
+   "blank": "nervo",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana estava com os nervos à flor da pele, mas fingiu calma.",
+   "en": "Mariana's nerves were on edge, but she pretended to be calm.",
+   "ko": "마리아나는 신경이 곤두서 있었지만 침착한 척했어요.",
+   "blank": "nervos",
+   "src": "made"
+  }
+ ],
  "w|nervoso": [
   {
    "text": "Estou nervoso com a prova.",
@@ -27121,6 +28657,22 @@
    "src": "tatoeba:6178448/Mecamute en:43350/eirik174"
   }
  ],
+ "w|noção": [
+  {
+   "text": "O primo pequeno do Gabriel não tem noção de quanto doce já comeu.",
+   "en": "Gabriel's little cousin has no idea how much candy he has already eaten.",
+   "ko": "가브리에우의 어린 사촌은 사탕을 얼마나 먹었는지 감도 없어요.",
+   "blank": "noção",
+   "src": "made"
+  },
+  {
+   "text": "O estagiário ainda não tem noção de como funciona o sistema da empresa.",
+   "en": "The intern still has no idea how the company's system works.",
+   "ko": "인턴은 아직 회사 시스템이 어떻게 돌아가는지 감을 못 잡았어요.",
+   "blank": "noção",
+   "src": "made"
+  }
+ ],
  "w|noite": [
   {
    "text": "Hoje à noite eu saio.",
@@ -27181,6 +28733,22 @@
    "ko": "역겨운 것 같아요.",
    "blank": "nojento",
    "src": "tatoeba:2462991/alexmarcelo en:2458469/CK"
+  }
+ ],
+ "w|nojo": [
+  {
+   "text": "O João sente nojo quando a irmã deixa a louça suja na pia por dias.",
+   "en": "João feels disgusted when his sister leaves dirty dishes in the sink for days.",
+   "ko": "누나가 며칠씩 설거지를 싱크대에 쌓아 두면 주앙은 역겨워해요.",
+   "blank": "nojo",
+   "src": "made"
+  },
+  {
+   "text": "A cela antiga da delegacia dava nojo antes da reforma.",
+   "en": "The station's old cell was disgusting before the renovation.",
+   "ko": "보수 공사 전에 경찰서의 옛 유치장은 역겨울 정도였어요.",
+   "blank": "nojo",
+   "src": "made"
   }
  ],
  "w|nome": [
@@ -27583,6 +29151,22 @@
    "blank": "o que"
   }
  ],
+ "w|oba": [
+  {
+   "text": "Quando a Clara propôs fazer as pazes com pizza, o João gritou um oba.",
+   "en": "When Clara suggested making up over pizza, João shouted a happy \"yay\".",
+   "ko": "클라라가 피자 먹으며 화해하자고 하자 주앙이 \"야호\" 하고 외쳤어요.",
+   "blank": "oba",
+   "src": "made"
+  },
+  {
+   "text": "Quando a pizza chegou no plantão da madrugada, a equipe da Ana soltou um oba.",
+   "en": "When the pizza arrived on the night shift, Ana's team let out a cheer.",
+   "ko": "새벽 근무 중에 피자가 오자 아나의 팀은 환호했어요.",
+   "blank": "oba",
+   "src": "made"
+  }
+ ],
  "w|objetivo": [
   {
    "text": "Meu objetivo é me tornar um médico.",
@@ -27645,6 +29229,22 @@
    "blank": "Obrigado"
   }
  ],
+ "w|observação": [
+  {
+   "text": "O professor fez uma observação sobre a postura do Lucas no agachamento.",
+   "en": "The instructor made a comment about Lucas's posture during squats.",
+   "ko": "트레이너는 스쿼트할 때 루카스의 자세에 대해 한마디 했어요.",
+   "blank": "observação",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana passou o primeiro dia em observação, acompanhando uma colega experiente.",
+   "en": "Mariana spent her first day observing, shadowing an experienced colleague.",
+   "ko": "마리아나는 첫날 노련한 동료를 따라다니며 지켜보기만 했어요.",
+   "blank": "observação",
+   "src": "made"
+  }
+ ],
  "w|observar": [
   {
    "text": "Eu adoro observar aves.",
@@ -27659,6 +29259,22 @@
    "ko": "너를 지켜볼 거야.",
    "blank": "observar",
    "src": "tatoeba:9771721/Ricardo14 en:8541880/CK"
+  }
+ ],
+ "w|obstáculo": [
+  {
+   "text": "A corrida tinha um obstáculo de lama que derrubou o Lucas duas vezes.",
+   "en": "The race had a mud obstacle that knocked Lucas down twice.",
+   "ko": "경주에 진흙 장애물이 있어서 루카스는 두 번이나 넘어졌어요.",
+   "blank": "obstáculo",
+   "src": "made"
+  },
+  {
+   "text": "O sistema complicado foi o primeiro obstáculo da Mariana no emprego novo.",
+   "en": "The complicated system was Mariana's first obstacle at the new job.",
+   "ko": "복잡한 시스템이 새 직장에서 마리아나가 맞닥뜨린 첫 장애물이었어요.",
+   "blank": "obstáculo",
+   "src": "made"
   }
  ],
  "w|obter": [
@@ -28141,6 +29757,22 @@
    "blank": "opção"
   }
  ],
+ "w|ópera": [
+  {
+   "text": "O Pedro sonha em cantar numa ópera, mas por enquanto só faz teatro.",
+   "en": "Pedro dreams of singing in an opera, but for now he only does theater.",
+   "ko": "페드루는 오페라에서 노래하는 게 꿈이지만 지금은 연극만 해요.",
+   "blank": "ópera",
+   "src": "made"
+  },
+  {
+   "text": "No intervalo, a Beatriz relaxa ouvindo ópera no fone de ouvido.",
+   "en": "On her break, Beatriz relaxes listening to opera on her headphones.",
+   "ko": "쉬는 시간에 베아트리스는 이어폰으로 오페라를 들으며 쉬어요.",
+   "blank": "ópera",
+   "src": "made"
+  }
+ ],
  "w|operação": [
   {
    "text": "A operação correu bem.",
@@ -28153,6 +29785,22 @@
    "en": "They postponed the operation.",
    "ko": "수술을 미뤘어.",
    "blank": "operação"
+  }
+ ],
+ "w|operar": [
+  {
+   "text": "O médico teve que operar o joelho do Lucas depois do jogo de futebol.",
+   "en": "The doctor had to operate on Lucas's knee after the soccer game.",
+   "ko": "축구 경기 후 의사는 루카스의 무릎을 수술해야 했어요.",
+   "blank": "operar",
+   "src": "made"
+  },
+  {
+   "text": "No primeiro dia, a Mariana aprendeu a operar a máquina de etiquetas.",
+   "en": "On the first day, Mariana learned to operate the label machine.",
+   "ko": "첫날 마리아나는 라벨 기계 다루는 법을 배웠어요.",
+   "blank": "operar",
+   "src": "made"
   }
  ],
  "w|opinião": [
@@ -28181,6 +29829,22 @@
    "en": "I missed the opportunity yesterday.",
    "ko": "어제 기회를 놓쳤어.",
    "blank": "oportunidade"
+  }
+ ],
+ "w|oposto": [
+  {
+   "text": "O Pedro e a colega fazem personagens de temperamento oposto.",
+   "en": "Pedro and his colleague play characters with opposite temperaments.",
+   "ko": "페드루와 동료는 성격이 정반대인 인물을 연기해요.",
+   "blank": "oposto",
+   "src": "made"
+  },
+  {
+   "text": "A sala de raio-x fica no lado oposto do corredor.",
+   "en": "The X-ray room is on the opposite side of the hallway.",
+   "ko": "엑스레이실은 복도 반대편에 있어요.",
+   "blank": "oposto",
+   "src": "made"
   }
  ],
  "w|ora": [
@@ -28441,6 +30105,22 @@
    "blank": "ouro"
   }
  ],
+ "w|ousar": [
+  {
+   "text": "Ninguém ousou mexer no pudim da avó do Gabriel antes da sobremesa.",
+   "en": "Nobody dared touch Gabriel's grandmother's pudding before dessert.",
+   "ko": "디저트 시간 전에는 아무도 가브리에우 할머니의 푸딩에 손댈 엄두를 못 냈어요.",
+   "blank": "ousou",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa ousou discordar do diretor na frente de todo mundo.",
+   "en": "Luísa dared to disagree with the director in front of everyone.",
+   "ko": "루이자는 모두 앞에서 감히 이사의 의견에 반대했어요.",
+   "blank": "ousou",
+   "src": "made"
+  }
+ ],
  "w|outrem": [
   {
    "text": "O promotor lembrou ao Lucas que ninguém pode tomar o que é de outrem.",
@@ -28529,6 +30209,22 @@
    "en": "I overcooked the egg.",
    "ko": "달걀을 너무 익혔어.",
    "blank": "ovo"
+  }
+ ],
+ "w|oxalá": [
+  {
+   "text": "A mãe suspirou e disse que os dois iam se entender, e oxalá fosse logo.",
+   "en": "Their mother sighed and said the two would sort it out, and hopefully soon.",
+   "ko": "엄마는 한숨을 쉬며 둘이 화해할 거라고, 부디 빨리 그러길 바란다고 했어요.",
+   "blank": "oxalá",
+   "src": "made"
+  },
+  {
+   "text": "A Ana prometeu encontrar a bicicleta roubada, e oxalá consiga até amanhã.",
+   "en": "Ana promised to find the stolen bike, and hopefully she'll manage by tomorrow.",
+   "ko": "아나는 도둑맞은 자전거를 찾겠다고 약속했고, 부디 내일까지 찾길 바라요.",
+   "blank": "oxalá",
+   "src": "made"
   }
  ],
  "w|oxigênio": [
@@ -29729,6 +31425,38 @@
    "blank": "pensar"
   }
  ],
+ "w|pente": [
+  {
+   "text": "O Gabriel emprestou o pente para o primo antes da foto da família.",
+   "en": "Gabriel lent his comb to his cousin before the family photo.",
+   "ko": "가브리에우는 가족사진을 찍기 전에 사촌에게 빗을 빌려줬어요.",
+   "blank": "pente",
+   "src": "made"
+  },
+  {
+   "text": "Antes da reunião, a Luísa passou um pente no cabelo no banheiro.",
+   "en": "Before the meeting, Luísa ran a comb through her hair in the bathroom.",
+   "ko": "회의 전에 루이자는 화장실에서 머리를 빗었어요.",
+   "blank": "pente",
+   "src": "made"
+  }
+ ],
+ "w|pentear": [
+  {
+   "text": "O Gabriel penteou a irmãzinha para a ceia de Ano-Novo.",
+   "en": "Gabriel combed his little sister's hair for the New Year's Eve dinner.",
+   "ko": "가브리에우는 새해 전야 식사를 위해 여동생 머리를 빗겨 줬어요.",
+   "blank": "penteou",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa só tem tempo de pentear o cabelo no elevador.",
+   "en": "Luísa only has time to comb her hair in the elevator.",
+   "ko": "루이자는 엘리베이터 안에서나 겨우 머리를 빗을 시간이 있어요.",
+   "blank": "pentear",
+   "src": "made"
+  }
+ ],
  "w|pequeno": [
   {
    "text": "O quarto é pequeno.",
@@ -30089,6 +31817,22 @@
    "src": "tatoeba:8586451/Ricardo14 en:10570104/DJ_Saidez"
   }
  ],
+ "w|perspectiva": [
+  {
+   "text": "Depois de conversar, o João entendeu a perspectiva da irmã.",
+   "en": "After talking, João understood his sister's perspective.",
+   "ko": "이야기를 나눈 뒤 주앙은 누나의 입장을 이해했어요.",
+   "blank": "perspectiva",
+   "src": "made"
+  },
+  {
+   "text": "A testemunha deu uma perspectiva diferente sobre o acidente.",
+   "en": "The witness offered a different perspective on the accident.",
+   "ko": "목격자는 사고에 대해 다른 관점을 내놓았어요.",
+   "blank": "perspectiva",
+   "src": "made"
+  }
+ ],
  "w|pertencer": [
   {
    "text": "Essa vaga pertence a ela.",
@@ -30131,6 +31875,22 @@
    "ko": "우리 집은 버스 정류장에서 가까워요.",
    "blank": "perto de",
    "src": "tatoeba:1732220/alexmarcelo en:250534/CK"
+  }
+ ],
+ "w|perturbar": [
+  {
+   "text": "A música alta da Clara perturbava o João enquanto ele estudava.",
+   "en": "Clara's loud music bothered João while he was studying.",
+   "ko": "클라라의 시끄러운 음악이 공부하는 주앙을 방해했어요.",
+   "blank": "perturbava",
+   "src": "made"
+  },
+  {
+   "text": "Um homem foi levado à delegacia por perturbar a vizinhança com som alto.",
+   "en": "A man was taken to the station for disturbing the neighborhood with loud music.",
+   "ko": "한 남자가 시끄러운 음악으로 동네를 소란스럽게 해서 경찰서로 연행됐어요.",
+   "blank": "perturbar",
+   "src": "made"
   }
  ],
  "w|peru": [
@@ -30503,6 +32263,22 @@
    "src": "tatoeba:4824697/Sistemas en:4813020/Hybrid"
   }
  ],
+ "w|pisar": [
+  {
+   "text": "O Gabriel pisou num brinquedo de plástico no escuro e quase caiu.",
+   "en": "Gabriel stepped on a plastic toy in the dark and almost fell.",
+   "ko": "가브리에우는 어둠 속에서 플라스틱 장난감을 밟고 넘어질 뻔했어요.",
+   "blank": "pisou",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa nunca pisa na sala do chefe sem bater na porta.",
+   "en": "Luísa never steps into the boss's office without knocking.",
+   "ko": "루이자는 노크하지 않고는 절대 상사 방에 발을 들이지 않아요.",
+   "blank": "pisa",
+   "src": "made"
+  }
+ ],
  "w|piscina": [
   {
    "text": "Eu reconheço aquela piscina!",
@@ -30701,6 +32477,22 @@
    "blank": "pobre"
   }
  ],
+ "w|pobreza": [
+  {
+   "text": "A peça mostra a pobreza de uma família no sertão.",
+   "en": "The play shows the poverty of a family in the backlands.",
+   "ko": "이 연극은 내륙 오지에 사는 한 가족의 가난을 보여 줘요.",
+   "blank": "pobreza",
+   "src": "made"
+  },
+  {
+   "text": "Muitos pacientes do hospital vivem na pobreza e não têm como comprar remédios.",
+   "en": "Many of the hospital's patients live in poverty and can't afford medicine.",
+   "ko": "이 병원 환자 중 상당수는 가난해서 약을 살 형편이 안 돼요.",
+   "blank": "pobreza",
+   "src": "made"
+  }
+ ],
  "w|poço": [
   {
    "text": "Eu vou pegar um pouco de água do poço.",
@@ -30759,6 +32551,22 @@
    "ko": "시를 외워 보는 건 처음이에요.",
    "blank": "poema",
    "src": "tatoeba:2571842/alexmarcelo en:1679963/Amastan"
+  }
+ ],
+ "w|poesia": [
+  {
+   "text": "Antes de cada ensaio, o Pedro lê um pouco de poesia em voz alta.",
+   "en": "Before each rehearsal, Pedro reads a bit of poetry aloud.",
+   "ko": "매 연습 전에 페드루는 시를 조금 소리 내어 읽어요.",
+   "blank": "poesia",
+   "src": "made"
+  },
+  {
+   "text": "Uma paciente idosa recita poesia para a Beatriz durante a troca de curativo.",
+   "en": "An elderly patient recites poetry to Beatriz while her dressing is changed.",
+   "ko": "한 할머니 환자는 붕대를 갈 때 베아트리스에게 시를 읊어 줘요.",
+   "blank": "poesia",
+   "src": "made"
   }
  ],
  "w|pois": [
@@ -31399,6 +33207,22 @@
    "blank": "povo"
   }
  ],
+ "w|praga": [
+  {
+   "text": "No segundo ato, a bruxa joga uma praga no personagem do Pedro.",
+   "en": "In the second act, the witch puts a curse on Pedro's character.",
+   "ko": "두 번째 막에서 마녀가 페드루가 맡은 인물에게 저주를 내려요.",
+   "blank": "praga",
+   "src": "made"
+  },
+  {
+   "text": "Uma praga de pombos no telhado obrigou o hospital a chamar a dedetização.",
+   "en": "A pigeon infestation on the roof forced the hospital to call pest control.",
+   "ko": "지붕에 비둘기가 들끓어서 병원은 방역 업체를 불러야 했어요.",
+   "blank": "praga",
+   "src": "made"
+  }
+ ],
  "w|praia": [
   {
    "text": "A praia lotou no feriado.",
@@ -31442,6 +33266,22 @@
    "en": "Beatriz's team won a silver medal in the regional tournament.",
    "ko": "베아트리스 팀은 지역 대회에서 은메달을 땄어요.",
    "blank": "prateada",
+   "src": "made"
+  }
+ ],
+ "w|prateleira": [
+  {
+   "text": "A avó do Gabriel guarda as compotas na prateleira mais alta da despensa.",
+   "en": "Gabriel's grandmother keeps the jams on the highest shelf in the pantry.",
+   "ko": "가브리에우의 할머니는 잼을 식료품실 맨 위 선반에 둬요.",
+   "blank": "prateleira",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa colocou uma planta na prateleira ao lado do computador.",
+   "en": "Luísa put a plant on the shelf next to her computer.",
+   "ko": "루이자는 컴퓨터 옆 선반에 화분을 올려놨어요.",
+   "blank": "prateleira",
    "src": "made"
   }
  ],
@@ -32509,6 +34349,22 @@
    "src": "tatoeba:12957054/jvlopes91 en:250271/CK"
   }
  ],
+ "w|proprietário": [
+  {
+   "text": "O proprietário da casa alugada deixou o Gabriel receber a família toda.",
+   "en": "The owner of the rented house let Gabriel host the whole family.",
+   "ko": "셋집 주인은 가브리에우가 가족 모두를 초대해도 된다고 했어요.",
+   "blank": "proprietário",
+   "src": "made"
+  },
+  {
+   "text": "O proprietário do prédio aumentou o aluguel do escritório da Luísa.",
+   "en": "The building owner raised the rent on Luísa's office.",
+   "ko": "건물주가 루이자네 사무실 임대료를 올렸어요.",
+   "blank": "proprietário",
+   "src": "made"
+  }
+ ],
  "w|próprio": [
   {
    "text": "O próprio dono veio.",
@@ -32614,6 +34470,22 @@
    "en": "There was a big protest downtown today.",
    "ko": "오늘 시내에서 큰 시위가 있었어요.",
    "blank": "protesto",
+   "src": "made"
+  }
+ ],
+ "w|protocolo": [
+  {
+   "text": "Na casa do Gabriel, abrir os presentes segue um protocolo rígido: os mais novos primeiro.",
+   "en": "At Gabriel's house, opening presents follows a strict protocol: youngest first.",
+   "ko": "가브리에우네 집에서는 선물 뜯는 순서가 엄격해요. 막내부터예요.",
+   "blank": "protocolo",
+   "src": "made"
+  },
+  {
+   "text": "Para trocar de senha, a Luísa precisa seguir o protocolo de segurança da empresa.",
+   "en": "To change her password, Luísa has to follow the company's security protocol.",
+   "ko": "비밀번호를 바꾸려면 루이자는 회사 보안 절차를 따라야 해요.",
+   "blank": "protocolo",
    "src": "made"
   }
  ],
@@ -32795,6 +34667,38 @@
    "ko": "손목은 어쩌다 삐었어?",
    "blank": "pulso",
    "src": "tatoeba:5909246/sergiomelo en:5905076/CK"
+  }
+ ],
+ "w|punição": [
+  {
+   "text": "O treinador brincou que cada atraso do Lucas vale uma punição de flexões.",
+   "en": "The coach joked that each time Lucas is late earns him a push-up penalty.",
+   "ko": "코치는 루카스가 늦을 때마다 팔굽혀펴기 벌칙이라고 농담했어요.",
+   "blank": "punição",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana leu no regulamento que atrasos frequentes podem levar a uma punição.",
+   "en": "Mariana read in the rules that frequent lateness can lead to a penalty.",
+   "ko": "마리아나는 규정에서 잦은 지각은 징계를 받을 수 있다는 걸 읽었어요.",
+   "blank": "punição",
+   "src": "made"
+  }
+ ],
+ "w|punir": [
+  {
+   "text": "Os pais não quiseram punir o João, só pediram que ele conversasse com a irmã.",
+   "en": "The parents didn't want to punish João, they just asked him to talk with his sister.",
+   "ko": "부모님은 주앙을 벌주지 않고 누나와 이야기해 보라고만 했어요.",
+   "blank": "punir",
+   "src": "made"
+  },
+  {
+   "text": "A lei serve para punir quem dirige depois de beber, explicou a Ana.",
+   "en": "The law exists to punish those who drive after drinking, Ana explained.",
+   "ko": "음주 운전자를 처벌하려고 법이 있는 거라고 아나가 설명했어요.",
+   "blank": "punir",
+   "src": "made"
   }
  ],
  "w|puro": [
@@ -33091,6 +34995,22 @@
    "blank": "que"
   }
  ],
+ "w|quebra": [
+  {
+   "text": "Para a família do Gabriel, o feriado foi uma quebra de rotina muito bem-vinda.",
+   "en": "For Gabriel's family, the holiday was a very welcome break from routine.",
+   "ko": "가브리에우네 가족에게 연휴는 일상에서 벗어난 반가운 휴식이었어요.",
+   "blank": "quebra",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Luísa processou o fornecedor por quebra de contrato.",
+   "en": "Luísa's company sued the supplier for breach of contract.",
+   "ko": "루이자의 회사는 계약 위반으로 납품업체를 고소했어요.",
+   "blank": "quebra",
+   "src": "made"
+  }
+ ],
  "w|quebrado": [
   {
    "text": "Eu tenho certeza de que está quebrado.",
@@ -33181,6 +35101,22 @@
    "ko": "고소하고 싶지 않아요.",
    "blank": "queixa",
    "src": "tatoeba:5990079/bill en:2013914/CK"
+  }
+ ],
+ "w|queixo": [
+  {
+   "text": "Na barra fixa, o Lucas precisa passar o queixo acima da barra.",
+   "en": "On the pull-up bar, Lucas has to get his chin above the bar.",
+   "ko": "턱걸이할 때 루카스는 턱을 철봉 위로 올려야 해요.",
+   "blank": "queixo",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana apoiou o queixo na mão enquanto ouvia a apresentação longa.",
+   "en": "Mariana rested her chin on her hand while listening to the long presentation.",
+   "ko": "마리아나는 긴 발표를 들으며 손으로 턱을 괴었어요.",
+   "blank": "queixo",
+   "src": "made"
   }
  ],
  "w|quem": [
@@ -33361,6 +35297,22 @@
    "ko": "오늘이 목요일이야, 금요일이야?",
    "blank": "quinta-feira",
    "src": "tatoeba:9988978/bill en:6809286/Eccles17"
+  }
+ ],
+ "w|quintal": [
+  {
+   "text": "O pai pediu para o Gabriel varrer as folhas do quintal antes do almoço.",
+   "en": "His father asked Gabriel to sweep the leaves in the yard before lunch.",
+   "ko": "아빠는 점심 전에 마당의 낙엽을 쓸라고 가브리에우에게 시켰어요.",
+   "blank": "quintal",
+   "src": "made"
+  },
+  {
+   "text": "O prédio da Luísa tem um quintal onde os funcionários tomam café.",
+   "en": "Luísa's building has a backyard where the staff have coffee.",
+   "ko": "루이자네 건물에는 직원들이 커피를 마시는 뒤뜰이 있어요.",
+   "blank": "quintal",
+   "src": "made"
   }
  ],
  "w|quinze": [
@@ -33574,6 +35526,22 @@
    "en": "It's rare to see you up so early.",
    "ko": "네가 이렇게 일찍 일어나 있는 건 드문 일이야.",
    "blank": "raro",
+   "src": "made"
+  }
+ ],
+ "w|rastrear": [
+  {
+   "text": "O Gabriel usou o celular para rastrear o pacote dos presentes.",
+   "en": "Gabriel used his phone to track the gift package.",
+   "ko": "가브리에우는 휴대폰으로 선물 택배를 추적했어요.",
+   "blank": "rastrear",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Luísa consegue rastrear cada entrega pelo sistema.",
+   "en": "Luísa's team can track every delivery through the system.",
+   "ko": "루이자네 팀은 시스템으로 배송을 하나하나 추적할 수 있어요.",
+   "blank": "rastrear",
    "src": "made"
   }
  ],
@@ -33871,6 +35839,22 @@
    "src": "tatoeba:6936761/Ricardo14 en:5859849/CK"
   }
  ],
+ "w|recolher": [
+  {
+   "text": "No fim da aula, o Lucas ajuda a recolher os pesos espalhados pelo chão.",
+   "en": "At the end of class, Lucas helps pick up the weights scattered on the floor.",
+   "ko": "수업이 끝나면 루카스는 바닥에 흩어진 아령을 치우는 걸 도와요.",
+   "blank": "recolher",
+   "src": "made"
+  },
+  {
+   "text": "No fim do expediente, a Mariana ajudou a recolher as xícaras da sala de reunião.",
+   "en": "At the end of the workday, Mariana helped collect the cups from the meeting room.",
+   "ko": "퇴근 무렵 마리아나는 회의실 컵을 치우는 걸 도왔어요.",
+   "blank": "recolher",
+   "src": "made"
+  }
+ ],
  "w|recompensa": [
   {
    "text": "Toda tentativa merece uma recompensa.",
@@ -33930,6 +35914,22 @@
    "en": "Rita's book club set a record for attendance this year.",
    "ko": "히타의 독서 모임은 올해 참가자 수 기록을 세웠어요.",
    "blank": "recorde",
+   "src": "made"
+  }
+ ],
+ "w|recuperação": [
+  {
+   "text": "Depois da lesão, a recuperação do Lucas levou dois meses.",
+   "en": "After the injury, Lucas's recovery took two months.",
+   "ko": "부상 뒤 루카스가 회복하는 데 두 달이 걸렸어요.",
+   "blank": "recuperação",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana substitui uma funcionária que está em recuperação de uma cirurgia.",
+   "en": "Mariana is filling in for an employee who is recovering from surgery.",
+   "ko": "마리아나는 수술 후 회복 중인 직원 대신 일해요.",
+   "blank": "recuperação",
    "src": "made"
   }
  ],
@@ -33995,6 +35995,22 @@
    "ko": "바다에 그물을 던졌어요.",
    "blank": "rede",
    "src": "tatoeba:10793977/DavidDias en:22248/bekindtoall"
+  }
+ ],
+ "w|rede social": [
+  {
+   "text": "O Pedro divulga as peças na rede social do grupo.",
+   "en": "Pedro promotes the plays on the group's social media.",
+   "ko": "페드루는 극단 SNS에 공연을 홍보해요.",
+   "blank": "rede social",
+   "src": "made"
+  },
+  {
+   "text": "O hospital publicou numa rede social uma foto da equipe da Beatriz.",
+   "en": "The hospital posted a photo of Beatriz's team on social media.",
+   "ko": "병원이 SNS에 베아트리스 팀의 사진을 올렸어요.",
+   "blank": "rede social",
+   "src": "made"
   }
  ],
  "w|redondo": [
@@ -34333,6 +36349,22 @@
    "src": "tatoeba:1230547/alexmarcelo en:1230545/alec"
   }
  ],
+ "w|remover": [
+  {
+   "text": "Depois da peça, o Pedro leva meia hora para remover a maquiagem.",
+   "en": "After the play, Pedro takes half an hour to remove his makeup.",
+   "ko": "공연이 끝나면 페드루는 분장을 지우는 데 삼십 분이 걸려요.",
+   "blank": "remover",
+   "src": "made"
+  },
+  {
+   "text": "O médico vai remover os pontos na semana que vem, explicou a Beatriz.",
+   "en": "The doctor will remove the stitches next week, Beatriz explained.",
+   "ko": "다음 주에 의사가 실밥을 뽑을 거라고 베아트리스가 설명했어요.",
+   "blank": "remover",
+   "src": "made"
+  }
+ ],
  "w|repente": [
   {
    "text": "De repente a luz caiu.",
@@ -34390,6 +36422,22 @@
    "en": "She's going to represent the class at the meeting.",
    "ko": "그녀가 회의에서 반 대표로 나갈 거예요.",
    "blank": "representar",
+   "src": "made"
+  }
+ ],
+ "w|república": [
+  {
+   "text": "Na faculdade, o Pedro morava numa república com outros três atores.",
+   "en": "In college, Pedro lived in a student house with three other actors.",
+   "ko": "대학 시절 페드루는 다른 배우 세 명과 함께 공동 하숙집에 살았어요.",
+   "blank": "república",
+   "src": "made"
+  },
+  {
+   "text": "O sobrinho da Beatriz mora numa república perto da faculdade de medicina.",
+   "en": "Beatriz's nephew lives in a student house near the medical school.",
+   "ko": "베아트리스의 조카는 의대 근처 공동 하숙집에 살아요.",
+   "blank": "república",
    "src": "made"
   }
  ],
@@ -34743,6 +36791,22 @@
    "src": "tatoeba:2556522/MethodGT en:315583/CK"
   }
  ],
+ "w|retrato": [
+  {
+   "text": "Na parede da recepção tem um retrato do fundador da academia.",
+   "en": "On the reception wall there's a portrait of the gym's founder.",
+   "ko": "안내 데스크 벽에는 헬스장 창립자의 초상화가 걸려 있어요.",
+   "blank": "retrato",
+   "src": "made"
+  },
+  {
+   "text": "O RH pediu um retrato recente da Mariana para fazer o crachá.",
+   "en": "HR asked for a recent photo of Mariana to make her badge.",
+   "ko": "인사팀은 사원증을 만들려고 마리아나의 최근 사진을 달라고 했어요.",
+   "blank": "retrato",
+   "src": "made"
+  }
+ ],
  "w|réu": [
   {
    "text": "Ele depôs desfavoravelmente ao réu.",
@@ -34911,6 +36975,38 @@
    "blank": "ridículo"
   }
  ],
+ "w|rifle": [
+  {
+   "text": "O rifle que o Pedro usa em cena é de madeira pintada.",
+   "en": "The rifle Pedro uses on stage is made of painted wood.",
+   "ko": "페드루가 무대에서 쓰는 소총은 색칠한 나무로 만든 거예요.",
+   "blank": "rifle",
+   "src": "made"
+  },
+  {
+   "text": "O pai da Beatriz guarda um rifle antigo pendurado na parede da sala.",
+   "en": "Beatriz's father keeps an old rifle hanging on the living room wall.",
+   "ko": "베아트리스의 아버지는 거실 벽에 오래된 소총을 걸어 두고 있어요.",
+   "blank": "rifle",
+   "src": "made"
+  }
+ ],
+ "w|rim": [
+  {
+   "text": "O nutricionista disse ao Lucas que beber água ajuda o rim a funcionar bem.",
+   "en": "The nutritionist told Lucas that drinking water helps the kidney work well.",
+   "ko": "영양사는 루카스에게 물을 마시면 신장이 잘 기능한다고 했어요.",
+   "blank": "rim",
+   "src": "made"
+  },
+  {
+   "text": "O pai da Mariana fez um transplante de rim e agora está ótimo.",
+   "en": "Mariana's father had a kidney transplant and is doing great now.",
+   "ko": "마리아나의 아버지는 신장 이식을 받았고 지금은 아주 건강해요.",
+   "blank": "rim",
+   "src": "made"
+  }
+ ],
  "w|rio": [
   {
    "text": "O rio passa atrás de casa.",
@@ -34923,6 +37019,22 @@
    "en": "The river is shallow here.",
    "ko": "여기는 강이 얕아.",
    "blank": "rio"
+  }
+ ],
+ "w|riqueza": [
+  {
+   "text": "O personagem do Pedro perde toda a riqueza no primeiro ato.",
+   "en": "Pedro's character loses all his wealth in the first act.",
+   "ko": "페드루가 맡은 인물은 첫 막에서 재산을 몽땅 잃어요.",
+   "blank": "riqueza",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz diz que a saúde é a maior riqueza que alguém pode ter.",
+   "en": "Beatriz says health is the greatest wealth anyone can have.",
+   "ko": "베아트리스는 건강이 누구든 가질 수 있는 가장 큰 재산이라고 해요.",
+   "blank": "riqueza",
+   "src": "made"
   }
  ],
  "w|rir": [
@@ -35355,6 +37467,22 @@
    "src": "made"
   }
  ],
+ "w|sabonete": [
+  {
+   "text": "A prima do Gabriel trouxe um sabonete de lavanda para cada pessoa da família.",
+   "en": "Gabriel's cousin brought a lavender soap for everyone in the family.",
+   "ko": "가브리에우의 사촌은 가족 한 명 한 명에게 라벤더 비누를 가져왔어요.",
+   "blank": "sabonete",
+   "src": "made"
+  },
+  {
+   "text": "O sabonete líquido do banheiro do escritório acabou de novo.",
+   "en": "The liquid soap in the office bathroom ran out again.",
+   "ko": "사무실 화장실 물비누가 또 떨어졌어요.",
+   "blank": "sabonete",
+   "src": "made"
+  }
+ ],
  "w|sabor": [
   {
    "text": "Baunilha é meu sabor favorito de sorvete.",
@@ -35566,6 +37694,22 @@
    "en": "Inês sells salted peanuts in little bags near the register.",
    "ko": "이네스는 계산대 옆에서 작은 봉지에 든 짭짤한 땅콩을 팔아요.",
    "blank": "salgado",
+   "src": "made"
+  }
+ ],
+ "w|saltar": [
+  {
+   "text": "O cachorro do Gabriel saltou na mesa e roubou um pedaço de peru.",
+   "en": "Gabriel's dog jumped on the table and stole a piece of turkey.",
+   "ko": "가브리에우의 개가 식탁에 뛰어올라 칠면조 한 조각을 훔쳤어요.",
+   "blank": "saltou",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa prefere saltar a parte chata da apresentação e ir direto aos números.",
+   "en": "Luísa prefers to skip the boring part of the presentation and go straight to the numbers.",
+   "ko": "루이자는 발표의 지루한 부분은 건너뛰고 바로 수치로 가는 걸 좋아해요.",
+   "blank": "saltar",
    "src": "made"
   }
  ],
@@ -36453,6 +38597,22 @@
    "blank": "sequer"
   }
  ],
+ "w|sequestro": [
+  {
+   "text": "A nova peça do Pedro conta a história de um sequestro que termina em comédia.",
+   "en": "Pedro's new play tells the story of a kidnapping that ends in comedy.",
+   "ko": "페드루의 새 연극은 코미디로 끝나는 납치 사건 이야기예요.",
+   "blank": "sequestro",
+   "src": "made"
+  },
+  {
+   "text": "O jornal noticiou que a vítima do sequestro foi atendida no hospital e está bem.",
+   "en": "The newspaper reported that the kidnapping victim was treated at the hospital and is fine.",
+   "ko": "신문은 납치 피해자가 병원 치료를 받고 무사하다고 보도했어요.",
+   "blank": "sequestro",
+   "src": "made"
+  }
+ ],
  "w|ser": [
   {
    "text": "Quero ser médico.",
@@ -36883,6 +39043,22 @@
    "src": "tatoeba:3876614/muriloricci en:3729066/CM"
   }
  ],
+ "w|sincronia": [
+  {
+   "text": "Os bailarinos dançaram em perfeita sincronia ao lado do Pedro.",
+   "en": "The dancers moved in perfect sync beside Pedro.",
+   "ko": "무용수들은 페드루 옆에서 완벽하게 호흡을 맞춰 춤췄어요.",
+   "blank": "sincronia",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Beatriz trabalha em sincronia na sala de emergência.",
+   "en": "Beatriz's team works in sync in the emergency room.",
+   "ko": "베아트리스의 팀은 응급실에서 손발이 척척 맞아요.",
+   "blank": "sincronia",
+   "src": "made"
+  }
+ ],
  "w|sino": [
   {
    "text": "Eu partirei assim que o sino tocar.",
@@ -36897,6 +39073,22 @@
    "ko": "아침마다 교회 종소리가 들려요.",
    "blank": "sino",
    "src": "tatoeba:2037499/patlima en:464362/lukaszpp"
+  }
+ ],
+ "w|sintoma": [
+  {
+   "text": "O instrutor explicou ao Lucas qual sintoma indica que ele deve parar o treino.",
+   "en": "The instructor explained to Lucas which symptom means he should stop training.",
+   "ko": "트레이너는 어떤 증상이 나타나면 운동을 멈춰야 하는지 루카스에게 설명했어요.",
+   "blank": "sintoma",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana acordou com dor de garganta, mas achou que era sintoma de nervosismo.",
+   "en": "Mariana woke up with a sore throat, but thought it was a symptom of nerves.",
+   "ko": "마리아나는 목이 아파서 깼지만 긴장해서 생긴 증상이라고 생각했어요.",
+   "blank": "sintoma",
+   "src": "made"
   }
  ],
  "w|sistema": [
@@ -37557,6 +39749,22 @@
    "src": "tatoeba:4939974/alexmarcelo en:4938419/CK"
   }
  ],
+ "w|sotaque": [
+  {
+   "text": "A tia do Gabriel mora no Sul e chegou com um sotaque carregado.",
+   "en": "Gabriel's aunt lives in the South and arrived with a strong accent.",
+   "ko": "남부에 사는 가브리에우의 이모는 억양이 강해요.",
+   "blank": "sotaque",
+   "src": "made"
+  },
+  {
+   "text": "O cliente novo da Luísa fala português com sotaque espanhol.",
+   "en": "Luísa's new client speaks Portuguese with a Spanish accent.",
+   "ko": "루이자의 새 고객은 스페인어 억양으로 포르투갈어를 해요.",
+   "blank": "sotaque",
+   "src": "made"
+  }
+ ],
  "w|sozinho": [
   {
    "text": "Voltei sozinho para casa.",
@@ -37675,6 +39883,22 @@
    "blank": "sugeriu"
   }
  ],
+ "w|sugestão": [
+  {
+   "text": "A diretora aceitou a sugestão do Pedro de cortar uma cena longa.",
+   "en": "The director accepted Pedro's suggestion to cut a long scene.",
+   "ko": "연출가는 긴 장면을 빼자는 페드루의 제안을 받아들였어요.",
+   "blank": "sugestão",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz deixou uma sugestão na caixa para melhorar a sala de espera.",
+   "en": "Beatriz left a suggestion in the box to improve the waiting room.",
+   "ko": "베아트리스는 대기실을 개선하자는 제안을 건의함에 넣었어요.",
+   "blank": "sugestão",
+   "src": "made"
+  }
+ ],
  "w|suicídio": [
   {
    "text": "A escola fez uma palestra sobre prevenção do suicídio.",
@@ -37704,6 +39928,22 @@
    "en": "Be careful not to get the rug dirty.",
    "ko": "카펫 더럽히지 않게 조심해.",
    "blank": "sujar",
+   "src": "made"
+  }
+ ],
+ "w|sujeira": [
+  {
+   "text": "Os primos fizeram tanta sujeira na cozinha que o Gabriel ficou uma hora limpando.",
+   "en": "The cousins made such a mess in the kitchen that Gabriel spent an hour cleaning.",
+   "ko": "사촌들이 부엌을 너무 어질러서 가브리에우는 한 시간이나 치웠어요.",
+   "blank": "sujeira",
+   "src": "made"
+  },
+  {
+   "text": "Depois da mudança de sala, ficou muita sujeira debaixo dos armários.",
+   "en": "After the office move, a lot of dirt was left under the cabinets.",
+   "ko": "사무실을 옮긴 뒤 캐비닛 밑에 먼지가 잔뜩 남았어요.",
+   "blank": "sujeira",
    "src": "made"
   }
  ],
@@ -37857,6 +40097,38 @@
    "ko": "그건 제가 감당할 수 있는 수준을 넘어요.",
    "blank": "suportar",
    "src": "tatoeba:1749492/franca en:42059/CM"
+  }
+ ],
+ "w|suporte": [
+  {
+   "text": "A Clara sempre deu suporte ao João nos momentos difíceis.",
+   "en": "Clara has always supported João in hard times.",
+   "ko": "클라라는 힘들 때마다 늘 주앙을 받쳐 줬어요.",
+   "blank": "suporte",
+   "src": "made"
+  },
+  {
+   "text": "O computador da delegacia travou, e a Ana chamou o suporte técnico.",
+   "en": "The station computer froze, and Ana called tech support.",
+   "ko": "경찰서 컴퓨터가 멈춰서 아나는 기술 지원팀을 불렀어요.",
+   "blank": "suporte",
+   "src": "made"
+  }
+ ],
+ "w|supostamente": [
+  {
+   "text": "O bolo supostamente era surpresa, mas o Gabriel viu a caixa na geladeira.",
+   "en": "The cake was supposedly a surprise, but Gabriel saw the box in the fridge.",
+   "ko": "케이크는 깜짝 선물이라고 했지만 가브리에우는 냉장고에서 상자를 봤어요.",
+   "blank": "supostamente",
+   "src": "made"
+  },
+  {
+   "text": "O relatório supostamente ficaria pronto ontem, mas a Luísa ainda está esperando.",
+   "en": "The report was supposedly going to be ready yesterday, but Luísa is still waiting.",
+   "ko": "보고서는 어제 끝난다고 했지만 루이자는 아직 기다리고 있어요.",
+   "blank": "supostamente",
+   "src": "made"
   }
  ],
  "w|supremo": [
@@ -38595,6 +40867,22 @@
    "src": "tatoeba:8626115/Ricardo14 en:6898725/CK"
   }
  ],
+ "w|tensão": [
+  {
+   "text": "Dava para sentir a tensão no jantar entre o João e a irmã.",
+   "en": "You could feel the tension at dinner between João and his sister.",
+   "ko": "저녁 식탁에서 주앙과 누나 사이의 긴장감이 느껴졌어요.",
+   "blank": "tensão",
+   "src": "made"
+  },
+  {
+   "text": "A Ana tentou acalmar a tensão entre os dois motoristas depois da batida.",
+   "en": "Ana tried to ease the tension between the two drivers after the crash.",
+   "ko": "아나는 사고 뒤 두 운전자 사이의 긴장을 누그러뜨리려 했어요.",
+   "blank": "tensão",
+   "src": "made"
+  }
+ ],
  "w|tentar": [
   {
    "text": "Vou tentar de novo.",
@@ -38653,6 +40941,22 @@
    "blank": "ter"
   }
  ],
+ "w|terapeuta": [
+  {
+   "text": "A academia do Lucas tem um terapeuta que ajuda quem está voltando de lesão.",
+   "en": "Lucas's gym has a therapist who helps people coming back from injury.",
+   "ko": "루카스의 헬스장에는 부상에서 회복 중인 사람을 돕는 치료사가 있어요.",
+   "blank": "terapeuta",
+   "src": "made"
+  },
+  {
+   "text": "A terapeuta da Mariana disse que é normal sentir medo no primeiro dia.",
+   "en": "Mariana's therapist said it's normal to feel scared on the first day.",
+   "ko": "마리아나의 상담사는 첫날 두려운 건 당연하다고 했어요.",
+   "blank": "terapeuta",
+   "src": "made"
+  }
+ ],
  "w|terapia": [
   {
    "text": "Você fez terapia durante muito tempo?",
@@ -38697,6 +41001,22 @@
    "en": "Take the third street.",
    "ko": "세 번째 길로 가.",
    "blank": "terceira"
+  }
+ ],
+ "w|terço": [
+  {
+   "text": "Um terço da família do Gabriel chegou atrasado para o almoço.",
+   "en": "A third of Gabriel's family arrived late for lunch.",
+   "ko": "가브리에우네 가족의 삼분의 일이 점심에 늦게 왔어요.",
+   "blank": "terço",
+   "src": "made"
+  },
+  {
+   "text": "Quase um terço do orçamento da equipe da Luísa vai para viagens.",
+   "en": "Almost a third of Luísa's team budget goes to travel.",
+   "ko": "루이자네 팀 예산의 거의 삼분의 일이 출장비로 나가요.",
+   "blank": "terço",
+   "src": "made"
   }
  ],
  "w|terminar": [
@@ -38867,6 +41187,22 @@
    "src": "tatoeba:4437460/Jeve en:4436872/maaster"
   }
  ],
+ "w|testa": [
+  {
+   "text": "O suor escorria da testa do Lucas no fim da aula de spinning.",
+   "en": "Sweat was running down Lucas's forehead at the end of the spinning class.",
+   "ko": "스피닝 수업이 끝날 무렵 루카스의 이마에서 땀이 흘러내렸어요.",
+   "blank": "testa",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana bateu a testa na porta de vidro logo na chegada.",
+   "en": "Mariana bumped her forehead on the glass door right as she arrived.",
+   "ko": "마리아나는 도착하자마자 유리문에 이마를 부딪쳤어요.",
+   "blank": "testa",
+   "src": "made"
+  }
+ ],
  "w|testamento": [
   {
    "text": "O João leu sobre o testamento de um rei antigo para um trabalho.",
@@ -38989,6 +41325,22 @@
    "blank": "teu"
   }
  ],
+ "w|texto": [
+  {
+   "text": "Tudo começou com um texto que a Clara postou na internet e o João entendeu errado.",
+   "en": "It all started with a post Clara put online that João misunderstood.",
+   "ko": "모든 건 클라라가 인터넷에 올린 글을 주앙이 잘못 이해하면서 시작됐어요.",
+   "blank": "texto",
+   "src": "made"
+  },
+  {
+   "text": "A Ana revisou o texto do boletim de ocorrência antes de assinar.",
+   "en": "Ana reviewed the text of the police report before signing.",
+   "ko": "아나는 서명하기 전에 사건 보고서 내용을 검토했어요.",
+   "blank": "texto",
+   "src": "made"
+  }
+ ],
  "w|tia": [
   {
    "text": "A tia ligou agora pouco.",
@@ -39061,6 +41413,22 @@
    "en": "Her uncle lives in the countryside.",
    "ko": "그 사람 삼촌은 시골에 살아.",
    "blank": "tio"
+  }
+ ],
+ "w|típico": [
+  {
+   "text": "Um sábado típico do Lucas começa com musculação e termina com açaí.",
+   "en": "A typical Saturday for Lucas starts with weight training and ends with açaí.",
+   "ko": "루카스의 평범한 토요일은 근력 운동으로 시작해서 아사이로 끝나요.",
+   "blank": "típico",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana recebeu um kit típico de boas-vindas: caneca, camiseta e caderno.",
+   "en": "Mariana received a typical welcome kit: mug, T-shirt and notebook.",
+   "ko": "마리아나는 머그잔, 티셔츠, 공책이 든 전형적인 환영 선물을 받았어요.",
+   "blank": "típico",
+   "src": "made"
   }
  ],
  "w|tipo": [
@@ -39331,6 +41699,38 @@
    "blank": "toque"
   }
  ],
+ "w|torcer": [
+  {
+   "text": "O Pedro torce para o time da cidade e assiste aos jogos no camarim.",
+   "en": "Pedro roots for the city team and watches the games in the dressing room.",
+   "ko": "페드루는 지역 팀을 응원해서 분장실에서 경기를 봐요.",
+   "blank": "torce",
+   "src": "made"
+  },
+  {
+   "text": "Todo mundo na enfermaria torceu pela recuperação do senhor Antônio.",
+   "en": "Everyone in the ward rooted for Mr. Antônio's recovery.",
+   "ko": "병동 사람들 모두 안토니우 할아버지가 회복하길 응원했어요.",
+   "blank": "torceu",
+   "src": "made"
+  }
+ ],
+ "w|torcida": [
+  {
+   "text": "Os amigos do Pedro vieram em torcida organizada para a estreia.",
+   "en": "Pedro's friends came as an organized cheering squad for the premiere.",
+   "ko": "페드루의 친구들이 응원단처럼 무리 지어 초연을 보러 왔어요.",
+   "blank": "torcida",
+   "src": "made"
+  },
+  {
+   "text": "A torcida do time visitou as crianças da ala infantil com presentes.",
+   "en": "The team's fans visited the children in the pediatric ward with gifts.",
+   "ko": "축구팀 응원단이 선물을 들고 소아 병동 아이들을 찾아왔어요.",
+   "blank": "torcida",
+   "src": "made"
+  }
+ ],
  "w|tornar": [
   {
    "text": "Isso pode se tornar hábito.",
@@ -39343,6 +41743,38 @@
    "en": "Don't let the talk turn into a fight.",
    "ko": "대화가 싸움이 되게 두지 마.",
    "blank": "tornar"
+  }
+ ],
+ "w|torneio": [
+  {
+   "text": "O grupo do Pedro ganhou o torneio de improviso da cidade.",
+   "en": "Pedro's group won the city improv tournament.",
+   "ko": "페드루의 극단은 시 즉흥극 대회에서 우승했어요.",
+   "blank": "torneio",
+   "src": "made"
+  },
+  {
+   "text": "Um jogador se machucou no torneio de futebol e veio para o pronto-socorro.",
+   "en": "A player got hurt at the soccer tournament and came to the ER.",
+   "ko": "축구 대회에서 한 선수가 다쳐서 응급실에 왔어요.",
+   "blank": "torneio",
+   "src": "made"
+  }
+ ],
+ "w|torneira": [
+  {
+   "text": "A torneira da cozinha começou a pingar bem no meio do feriado.",
+   "en": "The kitchen faucet started dripping right in the middle of the holiday.",
+   "ko": "연휴 한가운데에 부엌 수도꼭지가 똑똑 새기 시작했어요.",
+   "blank": "torneira",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa avisou a manutenção que a torneira do banheiro estava quebrada.",
+   "en": "Luísa told maintenance that the bathroom faucet was broken.",
+   "ko": "루이자는 화장실 수도꼭지가 고장 났다고 관리팀에 알렸어요.",
+   "blank": "torneira",
+   "src": "made"
   }
  ],
  "w|torno": [
@@ -39359,6 +41791,22 @@
    "ko": "그녀는 머리에 리본을 두르고 있었어요.",
    "blank": "torno",
    "src": "tatoeba:3700859/carlosalberto en:2259193/_undertoad"
+  }
+ ],
+ "w|tornozelo": [
+  {
+   "text": "O Lucas torceu o tornozelo pulando corda e ficou de molho.",
+   "en": "Lucas sprained his ankle jumping rope and had to rest.",
+   "ko": "루카스는 줄넘기를 하다 발목을 삐어서 쉬어야 했어요.",
+   "blank": "tornozelo",
+   "src": "made"
+  },
+  {
+   "text": "O sapato novo machucou o tornozelo da Mariana no caminho para o trabalho.",
+   "en": "Her new shoes hurt Mariana's ankle on the way to work.",
+   "ko": "새 신발 때문에 출근길에 마리아나의 발목이 아팠어요.",
+   "blank": "tornozelo",
+   "src": "made"
   }
  ],
  "w|torre": [
@@ -39621,6 +42069,22 @@
    "ko": "너를 배신하지 않을게.",
    "blank": "trair",
    "src": "tatoeba:4670314/Ricardo14 en:2271953/CK"
+  }
+ ],
+ "w|trancado": [
+  {
+   "text": "O Pedro chegou cedo, mas o camarim ainda estava trancado.",
+   "en": "Pedro arrived early, but the dressing room was still locked.",
+   "ko": "페드루는 일찍 왔지만 분장실은 아직 잠겨 있었어요.",
+   "blank": "trancado",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz encontrou o armário de remédios trancado e foi buscar a chave.",
+   "en": "Beatriz found the medicine cabinet locked and went to get the key.",
+   "ko": "베아트리스는 약장이 잠겨 있어서 열쇠를 가지러 갔어요.",
+   "blank": "trancado",
+   "src": "made"
   }
  ],
  "w|trancar": [
@@ -40367,6 +42831,22 @@
    "blank": "Uau"
   }
  ],
+ "w|ué": [
+  {
+   "text": "O João abriu a gaveta e falou: cadê o meu carregador, ué?",
+   "en": "João opened the drawer and said: where's my charger, huh?",
+   "ko": "주앙은 서랍을 열고 말했어요. 내 충전기 어디 갔지?",
+   "blank": "ué",
+   "src": "made"
+  },
+  {
+   "text": "A Ana olhou o registro e comentou: esse caso já não foi resolvido, ué?",
+   "en": "Ana looked at the record and said: wasn't this case already solved?",
+   "ko": "아나는 기록을 보더니 말했어요. 이 사건 벌써 해결된 거 아니었어?",
+   "blank": "ué",
+   "src": "made"
+  }
+ ],
  "w|uísque": [
   {
    "text": "Vocês preferem vinho ou uísque?",
@@ -40845,6 +43325,38 @@
    "blank": "vários"
   }
  ],
+ "w|varrer": [
+  {
+   "text": "O pai pediu para o Gabriel varrer as folhas do quintal antes do almoço.",
+   "en": "His father asked Gabriel to sweep the leaves in the yard before lunch.",
+   "ko": "아빠는 점심 전에 마당의 낙엽을 쓸라고 가브리에우에게 시켰어요.",
+   "blank": "varrer",
+   "src": "made"
+  },
+  {
+   "text": "O faxineiro passa para varrer o escritório da Luísa toda tarde.",
+   "en": "The cleaner comes by every afternoon to sweep Luísa's office.",
+   "ko": "청소부가 매일 오후 루이자의 사무실을 쓸러 와요.",
+   "blank": "varrer",
+   "src": "made"
+  }
+ ],
+ "w|vassoura": [
+  {
+   "text": "Depois da festa, o Gabriel pegou a vassoura e limpou a varanda.",
+   "en": "After the party, Gabriel grabbed the broom and cleaned the porch.",
+   "ko": "파티가 끝나고 가브리에우는 빗자루를 들고 베란다를 쓸었어요.",
+   "blank": "vassoura",
+   "src": "made"
+  },
+  {
+   "text": "O faxineiro esqueceu a vassoura encostada na porta da sala da Luísa.",
+   "en": "The cleaner left the broom leaning against Luísa's office door.",
+   "ko": "청소부가 루이자 방 문에 빗자루를 기대 놓고 갔어요.",
+   "blank": "vassoura",
+   "src": "made"
+  }
+ ],
  "w|vazio": [
   {
    "text": "Meu copo está completamente vazio.",
@@ -41028,6 +43540,22 @@
    "en": "When it starts to get windy, the sign on Sofia's shop sways all over.",
    "ko": "바람이 불기 시작하면 소피아네 가게 간판이 마구 흔들려요.",
    "blank": "ventar",
+   "src": "made"
+  }
+ ],
+ "w|ventilador": [
+  {
+   "text": "Fazia tanto calor que a família inteira almoçou em volta do ventilador.",
+   "en": "It was so hot that the whole family ate lunch around the fan.",
+   "ko": "너무 더워서 온 가족이 선풍기 주위에 모여 점심을 먹었어요.",
+   "blank": "ventilador",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa tem um ventilador pequeno em cima da mesa.",
+   "en": "Luísa has a small fan on top of her desk.",
+   "ko": "루이자는 책상 위에 작은 선풍기가 있어요.",
+   "blank": "ventilador",
    "src": "made"
   }
  ],
@@ -42045,6 +44573,22 @@
    "src": "made"
   }
  ],
+ "w|xampu": [
+  {
+   "text": "Com tanta gente em casa, o xampu acabou em dois dias.",
+   "en": "With so many people in the house, the shampoo ran out in two days.",
+   "ko": "집에 사람이 너무 많아서 샴푸가 이틀 만에 떨어졌어요.",
+   "blank": "xampu",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa guarda um xampu seco na gaveta para os dias corridos.",
+   "en": "Luísa keeps dry shampoo in her drawer for busy days.",
+   "ko": "루이자는 바쁜 날을 대비해 서랍에 드라이 샴푸를 둬요.",
+   "blank": "xampu",
+   "src": "made"
+  }
+ ],
  "w|xerife": [
   {
    "text": "O xerife trancou o bar.",
@@ -42073,6 +44617,22 @@
    "ko": "핫초코 한 잔 만들었어요.",
    "blank": "xícara",
    "src": "tatoeba:6994898/Ricardo14 en:4296322/mervert1"
+  }
+ ],
+ "w|zangado": [
+  {
+   "text": "A Clara ficou zangada porque achou que o João tinha quebrado o fone dela.",
+   "en": "Clara got angry because she thought João had broken her headphones.",
+   "ko": "클라라는 주앙이 자기 이어폰을 망가뜨린 줄 알고 화가 났어요.",
+   "blank": "zangada",
+   "src": "made"
+  },
+  {
+   "text": "Um motorista zangado reclamou da multa no balcão da Ana.",
+   "en": "An angry driver complained about the fine at Ana's desk.",
+   "ko": "화난 운전자가 아나의 창구에서 벌금에 대해 항의했어요.",
+   "blank": "zangado",
+   "src": "made"
   }
  ],
  "w|zebra": [
