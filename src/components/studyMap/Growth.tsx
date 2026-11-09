@@ -16,6 +16,7 @@ import { LEDGER_EVENT, readLedger, type LogEvent } from "@/lib/curriculum/logLed
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, progressIn, type GrowthPair } from "@/lib/curriculum/growthView";
 import { cardProgress } from "@/lib/curriculum/cardProgress";
+import { knowTag, knowTagLabel, type KnowTag } from "@/lib/curriculum/studyTimeline";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT, readCallNotes } from "@/lib/roleplay/callNotes";
 import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
@@ -264,9 +265,19 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
  * 답하기 전 장부(events — 부르는 쪽이 문제를 낼 때 잡아 둠, 답하면 곧바로 장부에 들어가서)로 전 점을 내고, 답하면 바뀐 점만 톡 커졌다 돌아옴. 앎이 되면 점 셋 둘레가 빛남,
  * 전에 틀린 걸 다른 날 맞히면 ↺ 그 날짜. 글 없이 — 이름은 aria-label(Logbank 표와 같은 말이 아니라 체크 셋 이름).
  */
-export function CardProgressDots({ events, locale, bankKey, mode, correct }: { events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick" | "sure"; correct: boolean }) {
+/**
+ * 답한 순간 그 소재의 표시(2026-11-09 사용자 "옛 상태 이름은 다 삭제" — 점 셋(체크 셋) 대신 있었던 일만):
+ * 학습 · n번 학습 · 자주 씀(studyTimeline.ts knowTag), 이번 답으로 바뀌면 잠깐 커짐. ↺ = 틀렸던 것을 다른 날 다시 맞힘(그날).
+ */
+export function CardProgressDots({ ui, events, locale, bankKey, mode, correct }: { ui: UICopy; events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick" | "sure"; correct: boolean }) {
   const [at] = useState(() => Math.floor(Date.now() / 1000));
   const progress = useMemo(() => cardProgress(events, bankKey, { correct, mode, t: at }), [events, bankKey, correct, mode, at]);
+  const tags = useMemo(() => {
+    const dayOf = (t: number) => dayOfSeconds(t);
+    const before = knowTag(events, bankKey, dayOf);
+    const after = knowTag([...events, { k: bankKey, src: "quiz", r: correct ? "ok" : "miss", m: mode, t: at }], bankKey, dayOf);
+    return { before, after };
+  }, [events, bankKey, correct, mode, at]);
   const [phase, setPhase] = useState(0);
   useEffect(() => {
     const one = window.setTimeout(() => setPhase(1), 80);
@@ -276,27 +287,15 @@ export function CardProgressDots({ events, locale, bankKey, mode, correct }: { e
       window.clearTimeout(two);
     };
   }, []);
-  // New(○○○)는 보이지 않는다(2026-11-08 사용자 "처음 본 단어에 New가 떠버려" → 표시 빼기): 처음 보는 말은 답한 뒤 단계부터, 그대로 New면 점 없음.
-  const shown = phase === 0 && progress.before !== 0 ? progress.before : progress.after;
-  if (progress.after === 0 && progress.recoveredFrom === null) return null;
-  const fill = (i: number, dots: number) => (dots >= i + 1 ? 1 : i === 0 && dots === 0.5 ? 0.5 : 0);
+  const label = (tag: KnowTag | null) => (tag ? `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}` : "");
+  const before = label(tags.before);
+  const after = label(tags.after);
+  if (!after) return null;
+  const changed = before !== after;
   return (
-    <span data-card-progress={`${progress.before}>${progress.after}`} className="inline-flex items-center gap-2">
-      <span
-        aria-label={`${progress.after}/3`}
-        className={`inline-flex items-center gap-1 rounded-full px-1.5 py-1 transition-shadow duration-500 ${progress.known && phase === 1 ? "ring-2 ring-good/50" : ""}`}
-      >
-        {[0, 1, 2].map((i) => {
-          const value = fill(i, shown);
-          const changed = phase === 1 && fill(i, progress.after) !== fill(i, progress.before);
-          return (
-            <span
-              key={i}
-              data-card-dot={value}
-              className={`block h-2.5 w-2.5 rounded-full border transition-all duration-300 ${value ? "border-good bg-good" : "border-slate-500 bg-transparent"} ${value === 0.5 ? "opacity-50" : ""} ${changed ? "scale-150" : "scale-100"}`}
-            />
-          );
-        })}
+    <span data-card-progress={after} className="inline-flex items-center gap-2">
+      <span className={`inline-block rounded-full border border-line px-2 py-0.5 text-caption text-slate-200 transition-transform duration-300 ${changed && phase === 1 ? "scale-125 border-good text-good" : "scale-100"}`}>
+        {phase === 0 && before ? before : after}
       </span>
       {progress.recoveredFrom !== null ? (
         <span data-card-recovered className={`text-caption font-semibold text-good transition-opacity duration-500 ${phase ? "opacity-100" : "opacity-0"}`}>

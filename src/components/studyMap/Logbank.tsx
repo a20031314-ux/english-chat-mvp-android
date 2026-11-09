@@ -48,7 +48,7 @@ import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type A
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
-import { cardHistory, knowTag, sessionMinutes, sessionsOf, summarizeSession, type KnowTag, type Place, type Session } from "@/lib/curriculum/studyTimeline";
+import { cardHistory, knowTag, knowTagLabel, sessionMinutes, sessionsOf, summarizeSession, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
@@ -979,12 +979,6 @@ function placeName(ui: UICopy, place: Place): string {
   return { quiz: ui.keepTitle, call: ui.homeTabCall, lesson: ui.framesTitle, dict: ui.languagebankTitle, chat: ui.homeTabChat, people: ui.homeTabPeople }[place];
 }
 
-/** 아는 정도 표시(studyTimeline.ts knowTag — 2026-11-09 사용자 결정: 학습 · n번 학습 · 자주 씀, 체크 셋 이름은 안 씀). */
-export function knowTagLabel(ui: UICopy, tag: KnowTag | null): string {
-  if (!tag) return "";
-  if (tag.kind === "often") return ui.tlOften;
-  return tag.kind === "times" ? ui.tlLearnedN.replace("{n}", String(tag.n)) : ui.lbFresh;
-}
 
 function modeName(ui: UICopy, mode: LogMode | undefined): string {
   return mode === "pick" ? ui.tlPick : mode === "sure" ? ui.tlBare : mode === "write" ? ui.tlWrite : "";

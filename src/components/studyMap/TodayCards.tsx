@@ -13,6 +13,7 @@ import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { checkStates } from "@/lib/curriculum/checkState";
 import { cardsForDay, doneOf, parseCards, pickCards, type TodayCard, type TodayCards as Saved } from "@/lib/curriculum/todayCards";
 import { focusQuiz } from "@/lib/curriculum/quizFocus";
+import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { localDay } from "@/lib/curriculum/resume";
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { openLettersBank } from "@/lib/curriculum/lettersOpen";
@@ -157,11 +158,25 @@ function partLabel(ui: UICopy, part: TodayCard["part"]): string {
 
 function CardRow({ ui, card, done, soft, language }: { ui: UICopy; card: TodayCard; done: boolean; soft: string; language: string }) {
   const n = String(card.n);
-  const title = { check: ui.lbCardCheck, stuck: ui.lbCardStuck, hard: ui.lbCardHard, try: ui.lbCardTry, new: ui.lbCardNew }[card.kind];
-  const why =
-    card.kind === "hard"
-      ? `${partLabel(ui, card.part)} ${n}`
-      : { check: ui.lbWhyCheck, stuck: ui.lbWhyStuck, try: ui.lbWhyTry, new: ui.lbWhyNew }[card.kind].replace("{n}", n);
+  // 옛 상태 이름(복습·적용이 힘듦·New)은 쓰지 않는다(2026-11-09 사용자 "옛 상태의 데이터, 이름들은 다 삭제") —
+  // 다시 낼 것은 "다시 학습 n" + 그 소재 이름 몇 개, 새것은 "새로 학습 n". 어느 열쇠를 낼지는 그대로(todayCards.ts).
+  const again = card.kind === "check" || card.kind === "hard";
+  const title =
+    card.kind === "stuck"
+      ? ui.lbCardStuck
+      : card.kind === "try"
+        ? ui.lbCardTry
+        : card.kind === "new"
+          ? ui.tlFreshN.replace("{n}", n)
+          : `${card.kind === "hard" ? `${partLabel(ui, card.part)} ` : ""}${ui.tlAgainN.replace("{n}", n)}`;
+  const why = again
+    ? card.keys
+        .slice(0, 3)
+        .map((key) => reviewLabel(language, key) || key.slice(2))
+        .join(" · ")
+    : card.kind === "new"
+      ? ""
+      : (card.kind === "stuck" ? ui.lbWhyStuck : ui.lbWhyTry).replace("{n}", n);
   const call = card.kind === "try";
   const go = () => {
     if (call) {
@@ -183,7 +198,11 @@ function CardRow({ ui, card, done, soft, language }: { ui: UICopy; card: TodayCa
       </span>
       <span className="flex min-w-0 flex-1 flex-col">
         <span className="text-chat font-semibold text-ink">{title}</span>
-        <span className="text-caption text-slate-400">{why}</span>
+        {why ? (
+          <span dir="auto" className="truncate text-caption text-slate-400">
+            {why}
+          </span>
+        ) : null}
       </span>
       <span className="shrink-0 text-caption text-slate-300">{call ? `📞 ${ui.callModeStudy}` : `▶ ${ui.keepTitle}`}</span>
     </button>

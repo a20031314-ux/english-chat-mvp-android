@@ -8,7 +8,6 @@
 import type { LogEvent } from "./logLedger.ts";
 import { partOf, type CardPart } from "./todayCards.ts";
 import { BANK_AXES, type FillResult } from "./fill.ts";
-import { checkStates } from "./checkState.ts";
 
 export const LEARN_PARTS: readonly CardPart[] = ["word", "grammar", "expression", "frame"];
 export const CURVE_MIN_DAYS = 2;
@@ -94,22 +93,4 @@ export function sureOf(result: FillResult): number {
 export function dayEndMs(day: string): number {
   const [y, m, d] = day.split("-").map(Number);
   return new Date(y ?? 1970, (m ?? 1) - 1, (d ?? 1) + 1).getTime();
-}
-
-/** 내 것(Languagebank 종류별): 날마다 그날 끝의 체크 셋 — 앎 수 · 적용이 힘듦 수. keep = 그 종류 열쇠. 오늘 뒤 날은 null. */
-export type OwnPoint = { day: string; known: number; hard: number } | null;
-
-export function ownCurve(events: readonly LogEvent[], days: readonly string[], keep: (key: string) => boolean, today: string): OwnPoint[] {
-  const mine = events.filter((event) => keep(event.k)).sort((a, b) => a.t - b.t);
-  return days.map((day) => {
-    if (day > today) return null;
-    const end = dayEndMs(day) / 1000;
-    let known = 0;
-    let hard = 0;
-    for (const state of checkStates(mine.filter((event) => event.t < end)).values()) {
-      if (state.level === "known") known += 1;
-      else if (state.level === "hard") hard += 1;
-    }
-    return { day, known, hard };
-  });
 }

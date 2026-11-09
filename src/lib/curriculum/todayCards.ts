@@ -10,6 +10,7 @@
  *
  * 셋 중 한 자리는 ④가 들어갈 수 있게 남긴다(퀴즈만 셋이 되지 않게). 카드는 그날 처음 정하고 하루 동안 그대로,
  * 끝은 체크박스가 아니라 사건으로(doneOf). 화면 글은 근거 숫자와 문(버튼 이름)만 — 권유 문장 없음.
+ * 화면 이름(2026-11-09 사용자 "옛 상태 이름 다 삭제"): check·hard = "다시 학습 n"(hard는 앞에 종류) + 소재 이름 셋, stuck = 막힌 것, try = 써 보기, new = "새로 학습 n" — 위 표의 상태 이름은 고르는 규칙 설명일 뿐 화면에 안 씀.
  */
 import type { LogEvent } from "./logLedger.ts";
 import type { CheckState } from "./checkState.ts";

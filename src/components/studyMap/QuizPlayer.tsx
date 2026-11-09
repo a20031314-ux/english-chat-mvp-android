@@ -345,6 +345,7 @@ export function QuestionView({
           {/* 개편: 답한 순간 그 소재의 점 셋이 바뀜(studyMap/Growth CardProgressDots, 2026-11-08). 문제마다 새로 그려 답하기 전 장부를 잡는다. */}
           {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && !answered.skipped ? (
             <CardProgressDots
+              ui={ui}
               key={`${dotKey}|${"text" in question ? question.text : ""}`}
               events={ledgerBefore}
               locale={locale}

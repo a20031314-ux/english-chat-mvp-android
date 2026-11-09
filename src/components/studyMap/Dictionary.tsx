@@ -3,7 +3,8 @@
 import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
-import { checkStates } from "@/lib/curriculum/checkState";
+import { dayOfSeconds } from "@/lib/curriculum/checkState";
+import { knowTag, knowTagLabel, type KnowTag } from "@/lib/curriculum/studyTimeline";
 import { reformOn } from "@/lib/reform";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
@@ -40,20 +41,17 @@ function grownLines(language: string, word: string, locale: string, have: readon
  * (2026-11-06 사용자 "사전에서 열어볼 때는 어떻게" → "만들어줘"): 앎 ✓ + 다음 확인 n일 뒤 · 적용이 힘듦 ◐ · 그 밖(고르기로만 맞힘·처음 봄·기록 없음)은 없음.
  * 어림값은 사전에 붙이지 않는다(2026-11-06 결정). 열어 본 것은 장부에 찾아봄으로만(상태는 그대로).
  */
-function cardStatus(language: string, word: string): { level: "known" | "hard"; days?: number } | null {
-  const state = checkStates(readLedger(language).filter((event) => event.k === wordKey(word))).get(wordKey(word));
-  if (!state || state.level === "new") return null;
-  if (state.level === "hard") return { level: "hard" };
-  const days = state.due === undefined ? undefined : Math.max(0, Math.ceil((state.due - Date.now() / 1000) / 86400));
-  return { level: "known", ...(days === undefined ? {} : { days }) };
+function cardStatus(language: string, word: string): KnowTag | null {
+  const key = wordKey(word);
+  return knowTag(readLedger(language).filter((event) => event.k === key), key, (t) => dayOfSeconds(t));
 }
 
-function StatusMark({ ui, status }: { ui: UICopy; status: { level: "known" | "hard"; days?: number } }) {
-  const label = status.level === "hard" ? ui.lbCardHard : status.days === undefined ? "✓" : status.days === 0 ? ui.lbCheckNow : ui.lbCheckIn.replace("{n}", String(status.days));
+/** 사전 낱말 화면 구석 표시 = 있었던 일만(2026-11-09 사용자 "옛 상태 이름 다 삭제" — 체크 셋 ✓·◐·n일 뒤 대신): 학습 · n번 학습 · 자주 씀. */
+function StatusMark({ ui, status }: { ui: UICopy; status: KnowTag }) {
+  const label = `${knowTagLabel(ui, status)}${status.miss ? " ✗" : ""}`;
   return (
-    <span data-card-status={status.level} title={label} aria-label={label} className="ms-auto flex shrink-0 items-center gap-1.5 text-meta">
-      <span aria-hidden className={status.level === "known" ? "text-status-learned" : "text-slate-400"}>{status.level === "known" ? "✓" : "◐"}</span>
-      {status.level === "known" && status.days !== undefined ? <span className="text-slate-500">{label}</span> : null}
+    <span data-card-status={status.kind} className="ms-auto shrink-0 text-meta text-slate-400">
+      {label}
     </span>
   );
 }

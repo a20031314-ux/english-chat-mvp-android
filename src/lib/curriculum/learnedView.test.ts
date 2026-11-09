@@ -55,24 +55,6 @@ test("학습량: 새로(처음 푼 열쇠)·다시(전에 푼 열쇠) — 기간
   ]);
 });
 
-test("내 것: 날마다 그날 끝의 앎·적용이 힘듦 — 다른 날 쓰기로 맞히면 앎, 종류 밖 열쇠는 안 셈, 오늘 뒤는 null", async () => {
-  const { ownCurve, dayEndMs } = await import("./learnedView.ts");
-  const start = dayEndMs("2026-11-01") / 1000 + 3600; // 11-02 01시(그 폰 시각)
-  const D = 86400;
-  const events = [
-    { k: "g|1:0", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
-    { k: "g|1:1", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
-    { k: "g|1:0", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start + D },
-    { k: "w|casa", src: "quiz" as const, r: "ok" as const, m: "write" as const, t: start },
-  ];
-  const curve = ownCurve(events, ["2026-11-02", "2026-11-03", "2026-11-04"], (key) => key.startsWith("g|"), "2026-11-03");
-  assert.deepEqual(curve, [
-    { day: "2026-11-02", known: 0, hard: 2 },
-    { day: "2026-11-03", known: 1, hard: 1 },
-    null,
-  ]);
-});
-
 test("확인된 실력: 네 꼭짓점 아래 끝 평균 — 답이 쌓이면 오름 (es)", async () => {
   const { sureOf } = await import("./learnedView.ts");
   const { computeFill, fillCatalog } = await import("./fill.ts");

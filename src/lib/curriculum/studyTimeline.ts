@@ -157,6 +157,13 @@ export function knowTag(events: readonly LogEvent[], key: string, dayOf: (t: num
   return null;
 }
 
+/** 화면 글(학습 · n번 학습 · 자주 씀, 마지막 틀림이면 ✗ 붙이는 것은 부르는 쪽). */
+export function knowTagLabel(ui: { tlOften: string; tlLearnedN: string; lbFresh: string }, tag: KnowTag | null): string {
+  if (!tag) return "";
+  if (tag.kind === "often") return ui.tlOften;
+  return tag.kind === "times" ? ui.tlLearnedN.replace("{n}", String(tag.n)) : ui.lbFresh;
+}
+
 export type CardHistoryRow = { t: number; src: LogEvent["src"]; r: LogEvent["r"]; mode?: LogMode; tag: KnowTag | null };
 
 /** 순수: 카드 한 장의 지난 기록(새것부터) — 줄마다 그때까지의 표시. 같은 1분 안의 같은 결과는 한 줄. */

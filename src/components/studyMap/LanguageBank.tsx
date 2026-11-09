@@ -4,16 +4,14 @@ import { BankFlip } from "@/components/studyMap/BankFlip";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
 import { DictionaryBody } from "@/components/studyMap/Dictionary";
-import { loadBank, posGroup, stageCuts, stageOfRank, type BankWord } from "@/lib/curriculum/vocabBank";
-import { knowChance, levelOf, type Level } from "@/lib/curriculum/vocabLevel";
-import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
+import { loadBank, posGroup, stageOfRank, type BankWord } from "@/lib/curriculum/vocabBank";
 import { ladderFor } from "@/lib/curriculum/stages/index";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
 import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
-import { checkStates } from "@/lib/curriculum/checkState";
-import { ownCurve, type OwnPoint } from "@/lib/curriculum/learnedView";
+import { dayOfSeconds } from "@/lib/curriculum/checkState";
+import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
 
 /**
  * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/drafts/languagebank-2026-11-03.md,
@@ -26,6 +24,7 @@ import { ownCurve, type OwnPoint } from "@/lib/curriculum/learnedView";
  * - 종류 화면: 줄(단어 = 주제 | 품사, 표현·문법 = 난이도) × 열(난이도), 칸 = 비율·개수, 누르면 아래 묶음.
  * - 묶음: 칩(진하기 = 어림), 낱말 → 사전 낱말 화면, 표현·문법 → 그 수업(openLesson, studyMap/LessonHost).
  * 학습한 단어 표시는 여기 없음(사용자 2026-11-06 — 낱말 화면과 Logbank에만).
+ * 2026-11-09(사용자 "옛 상태의 데이터, 이름들은 다 삭제"): 칠하기·숫자는 학습한 것만(studyTimeline.ts knowTag — 학습 · n번 학습 · 자주 씀), 어림·체크 셋·내 것 곡선은 뺌. 아래는 그 전.
  * 2026-11-07(사용자 "데이터상 맞지 않는 것들도"): 표현·문법은 낱말 어림을 빌리지 않고 체크 셋(사건 장부 — 앎 1 · 적용이 힘듦 ½ · 처음 봄 0)으로.
  * 예전엔 낱말 경계를 표현·문법에도 씌워 세 종류 %가 늘 같았다(체감 점검 11-07). 낱말만 어림(~).
  */
@@ -45,17 +44,6 @@ const ribbon = (items: readonly Item[], chance: (one: Item) => number): CSSPrope
   });
   return { background: steps > 1 ? `linear-gradient(90deg, ${stops.join(", ")})` : stops[0]!.split(" ").slice(0, -1).join(" ") };
 };
-
-function readLevel(language: string, stage: number): Level {
-  let circle: Circle = emptyCircle();
-  try {
-    const raw = JSON.parse(localStorage.getItem(`quizCircle.v1.${language}`) ?? "null") as Circle | null;
-    if (raw && typeof raw.size === "number" && raw.items) circle = raw;
-  } catch {
-    // 없으면 처음 어림.
-  }
-  return levelOf(circle, Math.max(1, stage), stageCuts(language));
-}
 
 /** 표현·문법은 난이도 안 차례대로 그 단계 순위 구간에 고르게 놓는다. */
 function placed(items: Omit<Item, "rank">[]): Item[] {
@@ -105,19 +93,16 @@ export function LanguageBank({
   const [view, setView] = useState<View>({ kind: null, axis: "topic", row: null, lv: null });
   const [help, setHelp] = useState(false);
   const [flip, setFlip] = useState<string[] | null>(null);
-  const [level, setLevel] = useState<Level | null>(null);
   useEffect(() => {
     let live = true;
     void loadBank(language).then((list) => {
       if (!live) return;
       setWords(list);
-      setLevel(readLevel(language, stage));
     });
     return () => {
       live = false;
     };
   }, [language, stage]);
-  const chance = (rank: number) => (level ? knowChance(level, rank) : 0);
   const [ledgerTick, setLedgerTick] = useState(0);
   useEffect(() => {
     const on = () => setLedgerTick((n) => n + 1);
@@ -128,11 +113,20 @@ export function LanguageBank({
     void ledgerTick;
     return readLedger(language);
   }, [language, ledgerTick]);
-  const states = useMemo(() => checkStates(ledger), [ledger]);
+  // 칠하기·숫자 = 있었던 일만(2026-11-09 사용자 "옛 상태의 데이터, 이름들은 다 삭제" — 체크 셋·단어 어림 % 대신):
+  // 학습 0.4 · n번 학습 0.7 · 자주 씀 1, 숫자는 학습한 수 / 전체.
+  const tags = useMemo(() => {
+    const keys = new Set(ledger.map((event) => event.k));
+    const out = new Map<string, KnowTag>();
+    for (const key of keys) {
+      const tag = knowTag(ledger, key, (t) => dayOfSeconds(t));
+      if (tag) out.set(key, tag);
+    }
+    return out;
+  }, [ledger]);
   const valueOf = (one: Item) => {
-    if (one.key.startsWith("w|")) return chance(one.rank);
-    const level = states.get(one.key)?.level;
-    return level === "known" ? 1 : level === "hard" ? 0.5 : 0;
+    const tag = tags.get(one.key);
+    return !tag ? 0 : tag.kind === "often" ? 1 : tag.kind === "times" ? 0.7 : 0.4;
   };
   const items = useMemo(() => {
     const ladder = ladderFor(language);
@@ -151,9 +145,8 @@ export function LanguageBank({
     );
     return { word: wordItems, expr, gram, posOf };
   }, [words, language, locale]);
-  const avg = (list: readonly Item[]) => (list.length ? list.reduce((sum, one) => sum + valueOf(one), 0) / list.length : 0);
-  // 낱말은 어림이라 "~", 표현·문법은 체크 셋 그대로.
-  const pct = (list: readonly Item[]) => (list.length ? `${list[0]!.key.startsWith("w|") ? "~" : ""}${Math.round(100 * avg(list))}%` : "");
+  // 학습한 수 / 전체 — 아랍어 화면에서도 왼쪽부터 읽게 묶음(LRI … PDI).
+  const pct = (list: readonly Item[]) => (list.length ? `\u2066${list.filter((one) => tags.has(one.key)).length.toLocaleString()} / ${list.length.toLocaleString()}\u2069` : "");
   const kindName: Record<Kind, string> = { word: ui.partVocab, expr: ui.partExpression, gram: ui.partGrammar };
   const levels = (kind: Kind) => (kind === "word" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5]);
   const lvName = (lv: number) => (lv === 6 ? ui.lbExtended : String(lv));
@@ -215,8 +208,8 @@ export function LanguageBank({
           ) : null}
           {lettersView && letters ? <div data-lb-letters>{letters.body}</div> : null}
           {!lettersView && letters && !kind ? letters.row(() => setLettersView(true)) : null}
-          {lettersView ? null : !words || !level ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
-          {!lettersView && words && level && !kind
+          {lettersView ? null : !words ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
+          {!lettersView && words && !kind
             ? (["word", "expr", "gram"] as const).map((k) => {
                 const all = items[k];
                 if (!all.length) return null;
@@ -253,7 +246,7 @@ export function LanguageBank({
                 );
               })
             : null}
-          {!lettersView && words && level && kind ? (
+          {!lettersView && words && kind ? (
             <>
               {kind === "word" ? (
                 <div className="flex gap-1.5">
@@ -270,7 +263,6 @@ export function LanguageBank({
                   ))}
                 </div>
               ) : null}
-              <OwnCurve ui={ui} points={ownPoints(ledger, new Set(items[kind].map((one) => one.key)))} />
               <div className="grid gap-1" style={{ gridTemplateColumns: `4.5rem repeat(${levels(kind).length}, minmax(0, 1fr))` }}>
                 <span />
                 {levels(kind).map((lv) => (
@@ -317,7 +309,7 @@ export function LanguageBank({
                 <section data-lb-bundle className="rounded-2xl border border-line bg-surface p-3">
                   <div className="flex items-center gap-2">
                     <p className="flex-1 text-meta text-slate-400">
-                      {bundle.length.toLocaleString()} · {pct(bundle)}
+                      {pct(bundle)}
                     </p>
                     {/* 넘겨 보기(2026-11-08): 단어 묶음만 — 표현·문법은 수업으로 연다. */}
                     {kind === "word" ? (
@@ -344,56 +336,4 @@ export function LanguageBank({
   );
 }
 
-/** 최근 이 폰 날짜 n일(오래된 것부터, 오늘까지). */
-function recentDays(n: number): { days: string[]; today: string } {
-  const pad = (v: number) => String(v).padStart(2, "0");
-  const key = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-  const now = new Date();
-  const days = Array.from({ length: n }, (_, i) => key(new Date(now.getFullYear(), now.getMonth(), now.getDate() - (n - 1 - i))));
-  return { days, today: key(now) };
-}
 
-const OWN_DAYS = 14;
-
-function ownPoints(ledger: Parameters<typeof ownCurve>[0], keys: ReadonlySet<string>): OwnPoint[] {
-  const { days, today } = recentDays(OWN_DAYS);
-  return ownCurve(ledger, days, (key) => keys.has(key), today);
-}
-
-/**
- * 내 것 곡선(종류 화면 머리, 2026-11-07 사용자 "Languagebank 각 사전 아래 그래프, 채운 것만"): 최근 14일 날마다 그날 끝의
- * 앎(선) · 앎 + 적용이 힘듦(옅은 면) 개수 — 체크 셋(checkState.ts) 그대로라 거의 늘 오르고, 확인에서 잊으면 내려간다.
- * 푼 것이 없으면 안 그린다. 학습량(푼 수)은 Logbank에만.
- */
-function OwnCurve({ ui, points }: { ui: UICopy; points: readonly OwnPoint[] }) {
-  const real = points.filter((one): one is NonNullable<OwnPoint> => Boolean(one));
-  const last = real[real.length - 1];
-  if (!last || !real.some((one) => one.known + one.hard > 0)) return null;
-  const W = 320;
-  const H = 56;
-  const max = Math.max(1, ...real.map((one) => one.known + one.hard)) * 1.15;
-  const step = W / Math.max(1, points.length - 1);
-  const y = (v: number) => H - (v / max) * (H - 4);
-  const at = (i: number) => (step * i).toFixed(1);
-  const idx = points.map((one, i) => (one ? i : -1)).filter((i) => i >= 0);
-  const area = `M${at(idx[0]!)},${H} ` + idx.map((i) => `L${at(i)},${y(points[i]!.known + points[i]!.hard).toFixed(1)}`).join(" ") + ` L${at(idx[idx.length - 1]!)},${H} Z`;
-  const line = idx.map((i, n) => `${n ? "L" : "M"}${at(i)},${y(points[i]!.known).toFixed(1)}`).join(" ");
-  return (
-    <figure data-lb-own className="m-0 flex flex-col gap-1 rounded-xl border border-line px-3 py-2">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ui.lbCurve} direction="ltr" preserveAspectRatio="none" className="h-14 w-full">
-        <path d={area} className="fill-status-learned/15" />
-        <path d={line} className="fill-none stroke-status-learned" strokeWidth="2" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
-      </svg>
-      <p className="flex flex-wrap gap-x-3 text-meta tabular-nums text-slate-400">
-        <span className="inline-flex items-center gap-1">
-          <span aria-hidden className="h-0.5 w-3 rounded-full bg-status-learned" />
-          {`${ui.knownTag} ${last.known}`}
-        </span>
-        <span className="inline-flex items-center gap-1">
-          <span aria-hidden className="h-2 w-3 rounded-full bg-status-learned/15" />
-          {`${ui.lbCardHard} ${last.hard}`}
-        </span>
-      </p>
-    </figure>
-  );
-}
