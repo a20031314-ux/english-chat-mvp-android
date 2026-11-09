@@ -9,6 +9,7 @@
  */
 import type { LogEvent } from "./logLedger.ts";
 import { readFirstCheck, type FirstCheckResult } from "./firstCheck.ts";
+import { knowChance } from "./vocabLevel.ts";
 
 export const RECHECK_DAYS = 14;
 export const TALK_WINDOW_DAYS = 14;
@@ -84,4 +85,16 @@ export function checkRows(history: readonly SkillCheck[], events: readonly LogEv
 export function climbFrom(last: SkillCheck | undefined): { expression: number; grammar: number } {
   const from = (stage: number | undefined) => Math.max(1, Math.min(5, (stage ?? 1) - 1));
   return { expression: from(last?.expression), grammar: from(last?.grammar) };
+}
+
+/**
+ * Languagebank 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 확인 하나로 칸마다 "아는 정도" 0~1.
+ *   낱말 = 빈도 순위가 경계 b 근처면 반쯤(vocabLevel.knowChance — 첫 측정과 같은 곡선)
+ *   표현·문법 = 잰 단계 아래는 1, 그 단계는 0.5, 위는 0
+ * 퀴즈 기록(학습)은 섞지 않는다 — 그건 낱말 카드에만.
+ */
+export function estimateChance(check: Pick<SkillCheck, "b" | "expression" | "grammar">, item: { kind: "word" | "expr" | "gram"; rank: number; lv: number }): number {
+  if (item.kind === "word") return knowChance({ b: check.b, n: 0 }, item.rank);
+  const stage = item.kind === "expr" ? check.expression : check.grammar;
+  return item.lv < stage ? 1 : item.lv === stage ? 0.5 : 0;
 }

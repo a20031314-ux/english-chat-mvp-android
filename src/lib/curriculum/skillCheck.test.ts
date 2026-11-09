@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { checkHistory, checkRows, climbFrom, recheckDue, talkUsedBefore, RECHECK_DAYS } from "./skillCheck.ts";
+import { checkHistory, checkRows, climbFrom, recheckDue, talkUsedBefore, RECHECK_DAYS , estimateChance } from "./skillCheck.ts";
 import { climbAnswer, climbStart, startClimb } from "./firstCheck.ts";
 import type { LogEvent } from "./logLedger.ts";
 
@@ -46,4 +46,14 @@ test("다시 측정 오르기: 지난번 한 단계 아래부터, 거기서 막�
   assert.equal(climb.lanes.expression.stopped, true);
   assert.equal(climbStart(climb.lanes.expression), 2, "지난번 3 → 이번 2");
   assert.equal(startClimb({ expression: true, grammar: true }).lanes.grammar.stage, 1, "첫 측정은 그대로 1단계부터");
+});
+
+test("estimateChance: 낱말은 경계 b 곡선, 표현·문법은 잰 단계 아래 1 · 그 단계 0.5 · 위 0", () => {
+  const check = { b: 600, expression: 2, grammar: 3 };
+  assert.ok(estimateChance(check, { kind: "word", rank: 50, lv: 1 }) > 0.8);
+  assert.ok(Math.abs(estimateChance(check, { kind: "word", rank: 600, lv: 1 }) - 0.5) < 0.01);
+  assert.ok(estimateChance(check, { kind: "word", rank: 5000, lv: 5 }) < 0.2);
+  assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 1 }), 1);
+  assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 2 }), 0.5);
+  assert.equal(estimateChance(check, { kind: "gram", rank: 0, lv: 4 }), 0);
 });

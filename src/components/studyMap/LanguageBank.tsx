@@ -10,8 +10,7 @@ import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
 import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
-import { dayOfSeconds } from "@/lib/curriculum/checkState";
-import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
+import { estimateChance, latestCheck } from "@/lib/curriculum/skillCheck";
 import { oftenUsed, talkCounts } from "@/lib/curriculum/wordUse";
 
 /**
@@ -35,7 +34,6 @@ type Item = { key: string; name: string; lv: number; rank: number; group: string
 type View = { kind: Kind | null; axis: "topic" | "pos"; row: string | null; lv: number | null };
 
 const STARTS = [0, 0, 700, 1500, 2500, 3500, 5000, 7000];
-const tint = (p: number): CSSProperties => ({ background: `color-mix(in oklab, var(--color-status-learned) ${Math.round(6 + 80 * p)}%, transparent)` });
 const ribbon = (items: readonly Item[], chance: (one: Item) => number): CSSProperties => {
   if (!items.length) return { background: "color-mix(in oklab, var(--color-status-learned) 4%, transparent)" };
   const sorted = [...items].sort((a, b) => a.rank - b.rank);
@@ -117,24 +115,15 @@ export function LanguageBank({
     void ledgerTick;
     return readLedger(language);
   }, [language, ledgerTick]);
-  // 칠하기·숫자 = 있었던 일만(2026-11-09 사용자 "옛 상태의 데이터, 이름들은 다 삭제" — 체크 셋·단어 어림 % 대신):
-  // 학습 0.4 · n번 학습 0.6·0.8·1(넷째 날부터 꽉), 숫자는 학습한 수 / 전체. 퀴즈 답만(2026-11-09 앎·말하기 분리 — 그 전엔 자주 씀 1).
-  const tags = useMemo(() => {
-    const keys = new Set(ledger.map((event) => event.k));
-    const out = new Map<string, KnowTag>();
-    for (const key of keys) {
-      const tag = knowTag(ledger, key, (t) => dayOfSeconds(t));
-      if (tag) out.set(key, tag);
-    }
-    return out;
-  }, [ledger]);
+  // 칠하기·숫자 = 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 첫 측정·실력 확인 하나로
+  // 칸마다 아는 정도(skillCheck.ts estimateChance), 숫자는 ≈ 추정 수 / 전체. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않고 전체 수만.
+  const check = useMemo(() => {
+    void ledgerTick;
+    return latestCheck(language);
+  }, [language, ledgerTick]);
   // 대화에서 쓴 수(curriculum/wordUse.ts) — 퀴즈 칠하기와 따로, 자주 쓴 말 줄·대화 순서에만.
   const talks = useMemo(() => talkCounts(ledger), [ledger]);
   const often = useMemo(() => oftenUsed(ledger, 8), [ledger]);
-  const valueOf = (one: Item) => {
-    const tag = tags.get(one.key);
-    return !tag ? 0 : Math.min(1, 0.4 + 0.2 * (tag.n - 1));
-  };
   const items = useMemo(() => {
     const ladder = ladderFor(language);
     const wordItems: Item[] = (words ?? []).map((one, rank) => ({
@@ -152,8 +141,25 @@ export function LanguageBank({
     );
     return { word: wordItems, expr, gram, posOf };
   }, [words, language, locale]);
-  // 학습한 수 / 전체 — 아랍어 화면에서도 왼쪽부터 읽게 묶음(LRI … PDI).
-  const pct = (list: readonly Item[]) => (list.length ? `\u2066${list.filter((one) => tags.has(one.key)).length.toLocaleString()} / ${list.length.toLocaleString()}\u2069` : "");
+  // 낱말 곡선의 합을 잰 경계 b에 맞춘다 — 곡선 꼬리 때문에 합이 b보다 커져 실력 확인 표(≈b)와 숫자가 어긋나지 않게.
+  const wordScale = useMemo(() => {
+    if (!check) return 1;
+    const sum = items.word.reduce((total, one) => total + estimateChance(check, { kind: "word", rank: one.rank, lv: one.lv }), 0);
+    return sum > 0 ? Math.min(1, check.b / sum) : 1;
+  }, [check, items.word]);
+  const valueOf = (one: Item) => {
+    if (!check) return 0;
+    const kind = one.key.startsWith("w|") ? "word" : one.key.startsWith("e|") ? "expr" : "gram";
+    const chance = estimateChance(check, { kind, rank: one.rank, lv: one.lv });
+    return kind === "word" ? Math.min(1, chance * wordScale) : chance;
+  };
+  // ≈ 추정 수 / 전체 — 아랍어 화면에서도 왼쪽부터 읽게 묶음(LRI … PDI). 잰 적이 없으면 전체 수만.
+  const pct = (list: readonly Item[]) => {
+    if (!list.length) return "";
+    if (!check) return `\u2066${list.length.toLocaleString()}\u2069`;
+    const about = Math.round(list.reduce((sum, one) => sum + valueOf(one), 0));
+    return `\u2066≈${about.toLocaleString()} / ${list.length.toLocaleString()}\u2069`;
+  };
   const kindName: Record<Kind, string> = { word: ui.partVocab, expr: ui.partExpression, gram: ui.partGrammar };
   const levels = (kind: Kind) => (kind === "word" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5]);
   const lvName = (lv: number) => (lv === 6 ? ui.lbExtended : String(lv));
@@ -364,7 +370,7 @@ export function LanguageBank({
                   </div>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {bundle.slice(0, 200).map((one) => (
-                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="flex items-baseline gap-1.5 rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(valueOf(one))}>
+                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="flex items-baseline gap-1.5 rounded-lg border border-line px-2.5 py-1 text-note text-ink">
                         {one.name}
                         {order === "talk" && talks.get(one.key) ? <span className="text-meta tabular-nums text-info">{talks.get(one.key)}</span> : null}
                       </button>

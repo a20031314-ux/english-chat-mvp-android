@@ -513,6 +513,17 @@
         "2"
       ],
       "asks": []
+    },
+    {
+      "at": "2026-11-09 15:46",
+      "from": "2",
+      "base": "d8aac4eae8d9632512b98a9c1ba3e1cf3eae2435",
+      "head": "efc36d3",
+      "what": "Languagebank 숫자 = 실력 확인 추정, skillCheck.ts estimateChance 추가",
+      "tabs": [
+        "2"
+      ],
+      "asks": []
     }
   ],
   "seq": {
