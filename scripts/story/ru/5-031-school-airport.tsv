@@ -2,7 +2,7 @@ A	На уроке труда Иван случайно порезал палец
 A	Учитель попросил Ивана найти радиус окружности.	The teacher asked Ivan to find the radius of the circle.	선생님이 이반에게 원의 반지름을 구해 보라고 했어요.	радиус=радиус
 A	Из окна класса Иван видит балкон соседнего дома.	From the classroom window Ivan can see the balcony of the house next door.	이반은 교실 창문으로 옆 건물 발코니를 볼 수 있어요.	балкон=балкон
 A	На перемене Иван угостил друга грецким орехом.	At break Ivan treated his friend to a walnut.	쉬는 시간에 이반은 친구에게 호두를 하나 줬어요.	орех=орехом
-A	Директор сказал Ивану: «Давненько я не видел таких хороших оценок».	The headmaster told Ivan: "It's been quite a while since I saw such good marks."	교장 선생님이 이반에게 "이렇게 좋은 점수는 꽤 오랜만에 보는구나"라고 했어요.	давненько=Давненько
+A	Директор сказал Ивану, что давненько не видел таких хороших оценок.	The headmaster told Ivan it had been quite a while since he'd seen such good marks.	교장 선생님이 이반에게 이렇게 좋은 점수는 꽤 오랜만에 본다고 했어요.	давненько=давненько
 A	Иван выбрал испанский как второй иностранный язык.	Ivan chose Spanish as his second foreign language.	이반은 제2외국어로 스페인어를 골랐어요.	иностранный=иностранный
 A	До школы Ивану полчаса езды на автобусе.	It's half an hour by bus from Ivan's home to school.	이반은 학교까지 버스로 30분 걸려요.	езда=езды
 A	Отец Ивана по дороге в школу заехал на заправку.	On the way to school Ivan's father stopped at a petrol station.	학교 가는 길에 이반의 아버지가 주유소에 들렀어요.	заправка=заправку
@@ -13,7 +13,7 @@ A	Иван нашёл свои старые тетради на чердаке �
 A	Мама каждый день кладёт Ивану в рюкзак бутерброд с сыром.	Every day Ivan's mum puts a cheese sandwich in his backpack.	엄마는 매일 이반의 가방에 치즈 샌드위치를 넣어 줘요.	бутерброд=бутерброд
 A	На выпускном вечере Ивану подали огромный стейк.	At the graduation party Ivan was served a huge steak.	졸업 파티에서 이반에게 커다란 스테이크가 나왔어요.	стейк=стейк
 A	В школьном супе Иван нашёл слишком много перца.	Ivan found far too much pepper in the school soup.	이반이 보니 학교 수프에 후추가 너무 많이 들어 있었어요.	перец=перца
-A	Иван так быстро бежал по коридору, что не успел тормозить.	Ivan was running down the corridor so fast that he couldn't stop in time.	이반은 복도를 너무 빨리 달려서 미처 멈추지 못했어요.	тормозить=тормозить
+A	Иван бежал по коридору так быстро, что у двери класса пришлось резко тормозить.	Ivan was running down the corridor so fast that he had to brake hard at the classroom door.	이반은 복도를 너무 빨리 달려서 교실 문 앞에서 급히 멈춰야 했어요.	тормозить=тормозить
 A	Иван назвал школьный хор просто божественным.	Ivan called the school choir simply divine.	이반은 학교 합창단을 그저 천상의 소리라고 했어요.	божественный=божественным
 A	В школьном музее Иван рассматривал модель старого танка.	In the school museum Ivan studied a model of an old tank.	이반은 학교 박물관에서 옛 탱크 모형을 살펴봤어요.	танк=танка
 A	Иван сыграл главную роль на премьере школьного спектакля.	Ivan played the lead role at the premiere of the school play.	이반은 학교 연극 첫 공연에서 주인공을 맡았어요.	премьера=премьере
@@ -64,16 +64,16 @@ B	Ребёнок сзади всю дорогу давал Анне пинок �
 B	Авиакомпания публично извинилась перед Анной и другими пассажирами.	The airline publicly apologised to Anna and the other passengers.	항공사는 안나와 다른 승객들에게 공개적으로 사과했어요.	публично=публично
 B	Анна написала в отзыве резкую критику работы аэропорта.	In her review Anna wrote sharp criticism of how the airport is run.	안나는 후기에 공항 운영을 날카롭게 비판하는 글을 썼어요.	критика=критику
 B	Анна летит на встречу, где её юристы будут общаться с прокуратурой.	Anna is flying to a meeting where her lawyers will deal with the prosecutor's office.	안나는 변호사들이 검찰과 협의할 회의에 가려고 비행기를 타요.	прокуратура=прокуратурой
-B	Анна — давняя сторонница прямых рейсов без пересадок.	Anna is a long-time supporter of direct flights without transfers.	안나는 오래전부터 환승 없는 직항을 선호해 왔어요.	сторонник=сторонница
+B	Муж Анны — убеждённый сторонник прямых рейсов без пересадок.	Anna's husband is a firm supporter of direct flights without transfers.	안나의 남편은 환승 없는 직항을 굳게 지지해요.	сторонник=сторонник
 B	В дьюти-фри Анне дали пробу новых духов.	At the duty-free Anna was given a sample of a new perfume.	면세점에서 안나는 새 향수 샘플을 받았어요.	проба=пробу
-B	Фотограф взял Анну на прицел, когда она выходила из зоны прилёта.	The photographer had Anna in his sights as she walked out of arrivals.	안나가 입국장을 나설 때 사진기자가 그녀에게 카메라를 겨눴어요.	прицел=прицел
+B	Фотограф взял Анну на прицел, когда она выходила из зоны прилёта.	The photographer had Anna in his sights as she walked out of arrivals.	안나가 입국장을 나설 때 사진기자가 안나에게 카메라를 겨눴어요.	прицел=прицел
 B	Анна показала коллеге фрагмент видео, снятого из иллюминатора.	Anna showed a colleague a clip of the video she shot from the plane window.	안나는 비행기 창밖으로 찍은 영상의 한 부분을 동료에게 보여 줬어요.	фрагмент=фрагмент
 B	Старый аэропорт, куда прилетела Анна, построили рядом с бывшим бункером.	The old airport where Anna landed was built next to a former bunker.	안나가 도착한 옛 공항은 예전 벙커 옆에 지어졌어요.	бункер=бункером
 B	Анна летела на конференцию от своего научного учреждения.	Anna was flying to a conference on behalf of her research institution.	안나는 소속 연구 기관을 대표해 학회에 가는 길이었어요.	учреждение=учреждения
 B	Анна прилетела посмотреть на римский амфитеатр.	Anna flew in to see the Roman amphitheatre.	안나는 로마 원형 극장을 보러 비행기를 타고 왔어요.	римский=римский
 B	В аэропорту Анна прочитала новость о том, что парламент принял новый закон.	At the airport Anna read the news that parliament had passed a new law.	안나는 공항에서 의회가 새 법을 통과시켰다는 소식을 읽었어요.	парламент=парламент
 B	После десятичасовой задержки Анна чудом сохранила рассудок.	After a ten-hour delay Anna miraculously kept her sanity.	안나는 열 시간이나 지연된 끝에 간신히 정신을 붙들었어요.	рассудок=рассудок
-B	В аэропорту Анну встречали представители общины её родного города.	At the airport Anna was met by members of her hometown community.	공항에서는 안나의 고향 공동체 사람들이 그녀를 마중 나왔어요.	община=общины
+B	В аэропорту Анну встречали представители общины её родного города.	At the airport Anna was met by members of her hometown community.	공항에서는 고향 공동체 사람들이 안나를 마중 나왔어요.	община=общины
 B	Анна пишет в свой блог о путешествиях прямо в зале ожидания.	Anna writes her travel blog right in the waiting area.	안나는 대기실에서 바로 여행 블로그를 써요.	блог=блог
 B	Для авиакомпании, где работает Анна, новый маршрут стал настоящим прорывом.	For the airline Anna works for, the new route was a real breakthrough.	안나가 다니는 항공사에 새 노선은 큰 도약이 됐어요.	прорыв=прорывом
 B	В зоне вылета у Анны всё время пропадало соединение с интернетом.	In the departure area Anna's internet connection kept dropping.	출국장에서 안나의 인터넷 연결이 자꾸 끊겼어요.	соединение=соединение

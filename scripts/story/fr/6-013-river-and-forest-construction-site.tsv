@@ -31,8 +31,8 @@ A	Julien porte une veste et un bonnet assortis aux couleurs de l'automne.	Julien
 A	Les pêcheurs veulent dévier le ruisseau, mais Julien s'y oppose.	The anglers want to divert the stream, but Julien is against it.	낚시꾼들은 개울 물길을 돌리려 하지만 쥘리앵은 반대해요.	dévier=dévier
 A	Julien veut mouler l'empreinte de renard avec du plâtre pour l'école.	Julien wants to make a plaster cast of the fox print for the school.	쥘리앵은 학교에 가져가려고 여우 발자국을 석고로 본뜨고 싶어 해요.	mouler=mouler
 A	L'eau de la source est si transparente que Julien voit chaque caillou au fond.	The spring water is so clear that Julien can see every pebble on the bottom.	샘물이 너무 맑아서 쥘리앵은 바닥 자갈까지 다 보여요.	transparent=transparente
-A	Julien reste aux aguets dans sa cabane de guet pour voir passer les chevreuils.	Julien keeps watch in his lookout hide to see the roe deer go by.	쥘리앵은 노루가 지나가는 걸 보려고 망보는 오두막에서 숨죽이고 기다려요.	guet=guet
-A	Les feuilles commencent à accumuler au fond de la mare, regrette Julien.	Leaves are starting to pile up at the bottom of the pond, Julien laments.	쥘리앵은 웅덩이 바닥에 낙엽이 쌓이기 시작했다며 아쉬워해요.	accumuler=accumuler
+A	À l'aube, Julien fait le guet près du ruisseau pour voir passer les chevreuils.	At dawn, Julien keeps watch by the stream to see the roe deer go by.	새벽에 쥘리앵은 노루가 지나가는 걸 보려고 개울가에서 망을 봐요.	guet=guet
+A	Julien ramasse les déchets que le courant finit par accumuler sous le pont.	Julien picks up the rubbish that the current ends up piling under the bridge.	쥘리앵은 물살에 밀려 다리 밑에 쌓인 쓰레기를 주워요.	accumuler=accumuler
 A	Une puanteur d'algues pourries monte de l'étang en août, et Julien s'éloigne.	A stench of rotting algae rises from the pond in August, and Julien moves away.	팔월이면 연못에서 썩은 이끼 냄새가 올라와서 쥘리앵은 자리를 떠요.	puanteur=puanteur
 A	Pour Julien, une marche matinale en forêt est plus stimulante qu'un café.	For Julien, a morning walk in the forest is more invigorating than a coffee.	쥘리앵에게 아침 숲 산책은 커피보다 더 기운을 북돋워요.	stimulant=stimulante
 A	Un rayon de soleil vient transpercer les nuages au-dessus de la rivière, et Julien sort son appareil.	A ray of sunlight pierces the clouds over the river, and Julien gets out his camera.	강 위 구름 사이로 햇살이 꿰뚫고 나오자 쥘리앵은 카메라를 꺼내요.	transpercer=transpercer
@@ -40,7 +40,7 @@ A	Julien trouve immoral de jeter des déchets dans une rivière aussi belle.	Jul
 A	Julien finit les préparatifs du camping avant que la pluie arrive.	Julien finishes the camping preparations before the rain comes.	쥘리앵은 비가 오기 전에 캠핑 준비를 마쳐요.	préparatif=préparatifs
 B	Manon a collé sur son casque un autocollant de crocodile offert par sa fille.	Manon stuck a crocodile sticker her daughter gave her on her helmet.	마농은 딸이 준 악어 스티커를 안전모에 붙였어요.	crocodile=crocodile
 B	Un tracteur apporte les sacs de ciment jusqu'au chantier de Manon.	A tractor brings the bags of cement to Manon's site.	트랙터 한 대가 시멘트 포대를 마농의 공사장까지 실어 와요.	tracteur=tracteur
-B	Manon surnomme Coyote le grutier qui hurle toujours dans la radio.	Manon nicknames the crane operator who always yells over the radio Coyote.	마농은 무전기로 늘 소리치는 크레인 기사를 코요테라고 불러요.	coyote=Coyote
+B	Manon appelle le grutier « le coyote » parce qu'il hurle toujours dans la radio.	Manon calls the crane operator “the coyote” because he's always howling over the radio.	마농은 크레인 기사가 무전기로 늘 소리를 질러서 “코요테”라고 불러요.	coyote=coyote
 B	Les ouvriers de Manon installent une plaque en bronze sur la façade de la nouvelle école.	Manon's workers put up a bronze plaque on the new school's facade.	마농의 인부들이 새 학교 정면에 청동 명판을 달아요.	bronze=bronze
 B	Avant de couler les fondations, Manon fait retirer la couche de terre organique.	Before pouring the foundations, Manon has the layer of organic soil removed.	기초를 붓기 전에 마농은 유기물 흙층을 걷어 내게 해요.	organique=organique
 B	Le noyau en béton de la tour abrite l'ascenseur, explique Manon aux visiteurs.	The tower's concrete core houses the lift, Manon explains to visitors.	마농은 방문객들에게 건물의 콘크리트 코어 안에 엘리베이터가 있다고 설명해요.	noyau=noyau
@@ -51,7 +51,7 @@ B	Manon fait creuser un fossé pour évacuer l'eau de pluie du terrain.	Manon ha
 B	Avant les travaux, Manon a vérifié que le sol ne contenait aucun matériau radioactif.	Before the works, Manon checked that the ground contained no radioactive material.	공사 전에 마농은 땅에 방사성 물질이 없는지 확인했어요.	radioactif=radioactif
 B	Manon s'assure de l'extinction de tous les projecteurs avant de quitter le chantier.	Manon makes sure all the floodlights are switched off before leaving the site.	마농은 공사장을 떠나기 전에 조명이 모두 꺼졌는지 확인해요.	extinction=extinction
 B	L'ascension de Manon dans l'entreprise a été rapide : elle dirige déjà trois chantiers.	Manon's rise in the company has been quick: she already runs three sites.	마농은 회사에서 빠르게 승진해서 벌써 공사장 세 곳을 맡고 있어요.	ascension=ascension
-B	Un merle est venu pondre dans un tuyau oublié, et Manon a reporté les travaux de la clôture.	A blackbird came to lay its eggs in a forgotten pipe, and Manon postponed the fence work.	찌르레기가 잊힌 관 속에 알을 낳으러 와서 마농은 울타리 공사를 미뤘어요.	pondre=pondre
+B	Un merle est venu pondre dans un tuyau oublié, et Manon a reporté les travaux de la clôture.	A blackbird came to lay its eggs in a forgotten pipe, and Manon postponed the fence work.	지빠귀가 잊힌 관 속에 알을 낳으러 와서 마농은 울타리 공사를 미뤘어요.	pondre=pondre
 B	Manon travaille comme un castor, de sept heures du matin à la tombée de la nuit.	Manon works like a beaver, from seven in the morning until nightfall.	마농은 아침 일곱 시부터 해 질 때까지 비버처럼 부지런히 일해요.	castor=castor
 B	Manon rêve de cultiver un potager sur le toit de l'immeuble qu'elle construit.	Manon dreams of growing a vegetable garden on the roof of the building she's constructing.	마농은 짓고 있는 건물 옥상에 텃밭을 가꾸는 꿈을 꿔요.	cultiver=cultiver
 B	Ce retard de livraison est une épine dans le pied de Manon.	This delivery delay is a thorn in Manon's side.	이 납품 지연이 마농에게는 눈엣가시예요.	épine=épine
@@ -72,7 +72,7 @@ B	La police a dû dévier la circulation pendant que la grue de Manon livrait le
 B	Manon fait mouler des corniches identiques à celles de la façade d'origine.	Manon has cornices cast identical to the ones on the original facade.	마농은 원래 건물 정면과 똑같은 처마 장식을 틀로 떠서 만들게 해요.	mouler=mouler
 B	Manon veut un appel d'offres transparent pour choisir les sous-traitants.	Manon wants a transparent tender process to choose the subcontractors.	마농은 하청업체를 투명한 입찰로 뽑고 싶어 해요.	transparent=transparent
 B	La nuit, un vigile fait le guet devant les engins du chantier de Manon.	At night, a guard keeps watch over the machines on Manon's site.	밤에는 경비원이 마농의 공사장 장비 앞을 지켜요.	guet=guet
-B	Les retards commencent à accumuler, et Manon réorganise le planning.	Delays are starting to pile up, and Manon reworks the schedule.	지연이 쌓이기 시작해서 마농은 일정을 다시 짜요.	accumuler=accumuler
+B	Le sous-traitant n'arrête pas d'accumuler les retards, alors Manon réorganise le planning.	The subcontractor keeps piling up delays, so Manon reworks the schedule.	하청업체가 계속 일정을 미뤄서 마농은 계획을 다시 짜요.	accumuler=accumuler
 B	En ouvrant la vieille canalisation, Manon a reculé devant la puanteur.	When she opened the old pipe, Manon recoiled from the stench.	낡은 배관을 열자 마농은 악취에 뒷걸음질 쳤어요.	puanteur=puanteur
 B	Manon trouve ce projet de passerelle très stimulant.	Manon finds this footbridge project very exciting.	마농은 이 육교 공사가 아주 의욕을 북돋운다고 생각해요.	stimulant=stimulant
 B	La perceuse a réussi à transpercer le mur porteur, à la grande surprise de Manon.	The drill managed to go right through the load-bearing wall, much to Manon's surprise.	드릴이 내력벽을 뚫어서 마농은 깜짝 놀랐어요.	transpercer=transpercer

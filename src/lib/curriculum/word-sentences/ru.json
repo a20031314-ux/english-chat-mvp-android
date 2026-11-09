@@ -1263,6 +1263,22 @@
    "src": "made"
   }
  ],
+ "w|балкон": [
+  {
+   "text": "Из окна класса Иван видит балкон соседнего дома.",
+   "en": "From the classroom window Ivan can see the balcony of the house next door.",
+   "ko": "이반은 교실 창문으로 옆 건물 발코니를 볼 수 있어요.",
+   "blank": "балкон",
+   "src": "made"
+  },
+  {
+   "text": "В номере у Анны был балкон с видом на взлётную полосу.",
+   "en": "Anna's hotel room had a balcony overlooking the runway.",
+   "ko": "안나의 방에는 활주로가 내다보이는 발코니가 있었어요.",
+   "blank": "балкон",
+   "src": "made"
+  }
+ ],
  "w|балл": [
   {
    "text": "Сергей написал о школьниках, набравших высший балл на экзамене.",
@@ -2495,6 +2511,22 @@
    "src": "made"
   }
  ],
+ "w|блог": [
+  {
+   "text": "Иван ведёт блог о жизни в старших классах.",
+   "en": "Ivan runs a blog about life in high school.",
+   "ko": "이반은 고등학교 생활에 관한 블로그를 운영해요.",
+   "blank": "блог",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет в свой блог о путешествиях прямо в зале ожидания.",
+   "en": "Anna writes her travel blog right in the waiting area.",
+   "ko": "안나는 대기실에서 바로 여행 블로그를 써요.",
+   "blank": "блог",
+   "src": "made"
+  }
+ ],
  "w|блок": [
   {
    "text": "Кабинет математики, где учится Алексей, находится в новом блоке школы.",
@@ -2634,6 +2666,22 @@
    "en": "When he was young, Maria's neighbour was a firefighter in a fire brigade.",
    "ko": "마리아의 이웃은 젊었을 때 소방대원이었어요.",
    "blank": "бойцом",
+   "src": "made"
+  }
+ ],
+ "w|божественный": [
+  {
+   "text": "Иван назвал школьный хор просто божественным.",
+   "en": "Ivan called the school choir simply divine.",
+   "ko": "이반은 학교 합창단을 그저 천상의 소리라고 했어요.",
+   "blank": "божественным",
+   "src": "made"
+  },
+  {
+   "text": "С высоты закат показался Анне божественным.",
+   "en": "From up high the sunset seemed divine to Anna.",
+   "ko": "높은 데서 본 노을이 안나에게는 황홀하게 느껴졌어요.",
+   "blank": "божественным",
    "src": "made"
   }
  ],
@@ -3463,6 +3511,22 @@
    "src": "made"
   }
  ],
+ "w|бункер": [
+  {
+   "text": "Под школой Иван обнаружил старый бункер времён войны.",
+   "en": "Under the school Ivan discovered an old wartime bunker.",
+   "ko": "이반은 학교 아래에서 전쟁 때 쓰던 낡은 벙커를 발견했어요.",
+   "blank": "бункер",
+   "src": "made"
+  },
+  {
+   "text": "Старый аэропорт, куда прилетела Анна, построили рядом с бывшим бункером.",
+   "en": "The old airport where Anna landed was built next to a former bunker.",
+   "ko": "안나가 도착한 옛 공항은 예전 벙커 옆에 지어졌어요.",
+   "blank": "бункером",
+   "src": "made"
+  }
+ ],
  "w|бургер": [
   {
    "text": "Дмитрий собрал бургер с котлетой собственного приготовления.",
@@ -3492,6 +3556,22 @@
    "en": "The news of the launch of Maria's app caused a real storm on social media.",
    "ko": "마리아의 앱 출시 소식은 소셜 미디어에서 그야말로 큰 파장을 일으켰어요.",
    "blank": "бурю",
+   "src": "made"
+  }
+ ],
+ "w|бутерброд": [
+  {
+   "text": "Мама каждый день кладёт Ивану в рюкзак бутерброд с сыром.",
+   "en": "Every day Ivan's mum puts a cheese sandwich in his backpack.",
+   "ko": "엄마는 매일 이반의 가방에 치즈 샌드위치를 넣어 줘요.",
+   "blank": "бутерброд",
+   "src": "made"
+  },
+  {
+   "text": "В зале ожидания Анна съела бутерброд, который взяла из дома.",
+   "en": "In the waiting area Anna ate the sandwich she had brought from home.",
+   "ko": "안나는 대기실에서 집에서 싸 온 샌드위치를 먹었어요.",
+   "blank": "бутерброд",
    "src": "made"
   }
  ],
@@ -4545,6 +4625,22 @@
    "en": "Shall we go to the party?",
    "ko": "파티에 갈까?",
    "blank": "вечеринку"
+  }
+ ],
+ "w|вечерний": [
+  {
+   "text": "Иван ходит в вечернюю школу, потому что днём работает.",
+   "en": "Ivan goes to evening school because he works during the day.",
+   "ko": "이반은 낮에 일하기 때문에 야간 학교에 다녀요.",
+   "blank": "вечернюю",
+   "src": "made"
+  },
+  {
+   "text": "Анна летит вечерним рейсом и прибудет к полуночи.",
+   "en": "Anna is taking an evening flight and will arrive by midnight.",
+   "ko": "안나는 저녁 비행기를 타고 자정쯤 도착해요.",
+   "blank": "вечерним",
+   "src": "made"
   }
  ],
  "w|вечно": [
@@ -11221,6 +11317,22 @@
    "src": "tatoeba:13845234/marafon en:13845230/JK_Summerlin"
   }
  ],
+ "w|давненько": [
+  {
+   "text": "Директор сказал Ивану, что давненько не видел таких хороших оценок.",
+   "en": "The headmaster told Ivan it had been quite a while since he'd seen such good marks.",
+   "ko": "교장 선생님이 이반에게 이렇게 좋은 점수는 꽤 오랜만에 본다고 했어요.",
+   "blank": "давненько",
+   "src": "made"
+  },
+  {
+   "text": "Анна давненько не летала так далеко.",
+   "en": "Anna hadn't flown this far in quite a while.",
+   "ko": "안나는 꽤 오랫동안 이렇게 멀리 비행기를 타지 않았어요.",
+   "blank": "давненько",
+   "src": "made"
+  }
+ ],
  "w|давно": [
   {
    "text": "Давно не ел борща.",
@@ -14377,6 +14489,22 @@
    "src": "made"
   }
  ],
+ "w|езда": [
+  {
+   "text": "До школы Ивану полчаса езды на автобусе.",
+   "en": "It's half an hour by bus from Ivan's home to school.",
+   "ko": "이반은 학교까지 버스로 30분 걸려요.",
+   "blank": "езды",
+   "src": "made"
+  },
+  {
+   "text": "Анна плохо переносит долгую езду, поэтому выбрала самолёт.",
+   "en": "Anna doesn't handle long drives well, so she chose to fly.",
+   "ko": "안나는 오래 차를 타는 걸 힘들어해서 비행기를 골랐어요.",
+   "blank": "езду",
+   "src": "made"
+  }
+ ],
  "w|ездить": [
   {
    "text": "Ты умеешь ездить верхом на лошади?",
@@ -17295,6 +17423,22 @@
    "src": "tatoeba:3755965/Ooneykcall en:3433979/Hybrid"
   }
  ],
+ "w|заправка": [
+  {
+   "text": "Отец Ивана по дороге в школу заехал на заправку.",
+   "en": "On the way to school Ivan's father stopped at a petrol station.",
+   "ko": "학교 가는 길에 이반의 아버지가 주유소에 들렀어요.",
+   "blank": "заправку",
+   "src": "made"
+  },
+  {
+   "text": "Таксист Анны остановился на заправке прямо перед аэропортом.",
+   "en": "Anna's taxi driver stopped at a petrol station right in front of the airport.",
+   "ko": "안나가 탄 택시 기사는 공항 바로 앞 주유소에 차를 세웠어요.",
+   "blank": "заправке",
+   "src": "made"
+  }
+ ],
  "w|запрет": [
   {
    "text": "В школе ввели запрет на телефоны, и Андрей теперь оставляет свой в шкафчике.",
@@ -19688,6 +19832,22 @@
    "en": "Life in the mountains flows at a different pace, and Natalia quickly sensed it.",
    "ko": "산에서는 삶이 다른 속도로 흘러서 나탈리야는 금세 그걸 느꼈어요.",
    "blank": "ином",
+   "src": "made"
+  }
+ ],
+ "w|иностранный": [
+  {
+   "text": "Иван выбрал испанский как второй иностранный язык.",
+   "en": "Ivan chose Spanish as his second foreign language.",
+   "ko": "이반은 제2외국어로 스페인어를 골랐어요.",
+   "blank": "иностранный",
+   "src": "made"
+  },
+  {
+   "text": "На паспортном контроле Анна встала в очередь для иностранных граждан.",
+   "en": "At passport control Anna joined the queue for foreign citizens.",
+   "ko": "입국 심사대에서 안나는 외국인 줄에 섰어요.",
+   "blank": "иностранных",
    "src": "made"
   }
  ],
@@ -23770,6 +23930,22 @@
    "en": "At lunch Elena learned that the man sitting next to her used to be a forensic scientist.",
    "ko": "점심을 먹다가 옐레나는 옆자리 동료가 예전에 감식 전문가였다는 걸 알았어요.",
    "blank": "криминалистом",
+   "src": "made"
+  }
+ ],
+ "w|критика": [
+  {
+   "text": "Иван спокойно принял критику своего сочинения.",
+   "en": "Ivan calmly accepted the criticism of his essay.",
+   "ko": "이반은 자기 작문에 대한 비판을 차분히 받아들였어요.",
+   "blank": "критику",
+   "src": "made"
+  },
+  {
+   "text": "Анна написала в отзыве резкую критику работы аэропорта.",
+   "en": "In her review Anna wrote sharp criticism of how the airport is run.",
+   "ko": "안나는 후기에 공항 운영을 날카롭게 비판하는 글을 썼어요.",
+   "blank": "критику",
    "src": "made"
   }
  ],
@@ -34307,6 +34483,22 @@
    "blank": "общую"
   }
  ],
+ "w|община": [
+  {
+   "text": "Школа Ивана устроила ярмарку для всей местной общины.",
+   "en": "Ivan's school held a fair for the whole local community.",
+   "ko": "이반의 학교는 지역 공동체 전체를 위한 장터를 열었어요.",
+   "blank": "общины",
+   "src": "made"
+  },
+  {
+   "text": "В аэропорту Анну встречали представители общины её родного города.",
+   "en": "At the airport Anna was met by members of her hometown community.",
+   "ko": "공항에서는 고향 공동체 사람들이 안나를 마중 나왔어요.",
+   "blank": "общины",
+   "src": "made"
+  }
+ ],
  "w|объект": [
   {
    "text": "Ты когда-нибудь видел неопознанный летающий объект?",
@@ -35997,6 +36189,22 @@
    "src": "tatoeba:4959984/odexed en:2359761/CK"
   }
  ],
+ "w|орден": [
+  {
+   "text": "Прадед Ивана получил орден за службу в армии.",
+   "en": "Ivan's great-grandfather received an order for his army service.",
+   "ko": "이반의 증조할아버지는 군 복무로 훈장을 받았어요.",
+   "blank": "орден",
+   "src": "made"
+  },
+  {
+   "text": "Рядом с Анной в самолёте сидел пожилой мужчина с орденом на пиджаке.",
+   "en": "Next to Anna on the plane sat an elderly man with an order on his jacket.",
+   "ko": "비행기에서 안나 옆에는 재킷에 훈장을 단 노신사가 앉아 있었어요.",
+   "blank": "орденом",
+   "src": "made"
+  }
+ ],
  "w|ордер": [
   {
    "text": "Полиция получила ордер на обыск, и Дмитрий первым сообщил об этом.",
@@ -36026,6 +36234,22 @@
    "en": "The new neighbour told Irina that an eagle lives in the mountains outside town.",
    "ko": "새 이웃은 도시 밖 산에 독수리가 산다고 이리나에게 얘기해 줬어요.",
    "blank": "орёл",
+   "src": "made"
+  }
+ ],
+ "w|орех": [
+  {
+   "text": "На перемене Иван угостил друга грецким орехом.",
+   "en": "At break Ivan treated his friend to a walnut.",
+   "ko": "쉬는 시간에 이반은 친구에게 호두를 하나 줬어요.",
+   "blank": "орехом",
+   "src": "made"
+  },
+  {
+   "text": "Анна взяла в самолёт пакетик солёных орехов.",
+   "en": "Anna took a bag of salted nuts on the plane.",
+   "ko": "안나는 짭짤한 견과류 한 봉지를 들고 비행기에 탔어요.",
+   "blank": "орехов",
    "src": "made"
   }
  ],
@@ -39025,6 +39249,22 @@
    "src": "made"
   }
  ],
+ "w|парламент": [
+  {
+   "text": "Класс Ивана ездил на экскурсию в парламент.",
+   "en": "Ivan's class went on a trip to parliament.",
+   "ko": "이반네 반은 의회로 견학을 갔어요.",
+   "blank": "парламент",
+   "src": "made"
+  },
+  {
+   "text": "В аэропорту Анна прочитала новость о том, что парламент принял новый закон.",
+   "en": "At the airport Anna read the news that parliament had passed a new law.",
+   "ko": "안나는 공항에서 의회가 새 법을 통과시켰다는 소식을 읽었어요.",
+   "blank": "парламент",
+   "src": "made"
+  }
+ ],
  "w|парнишка": [
   {
    "text": "Тропу к озеру Михаилу показал деревенский парнишка.",
@@ -39893,6 +40133,22 @@
    "src": "made"
   }
  ],
+ "w|перец": [
+  {
+   "text": "В школьном супе Иван нашёл слишком много перца.",
+   "en": "Ivan found far too much pepper in the school soup.",
+   "ko": "이반이 보니 학교 수프에 후추가 너무 많이 들어 있었어요.",
+   "blank": "перца",
+   "src": "made"
+  },
+  {
+   "text": "На таможне у Анны спросили, везёт ли она острый перец.",
+   "en": "At customs Anna was asked whether she was carrying chilli peppers.",
+   "ko": "세관에서 안나는 고추를 가지고 들어오는지 질문을 받았어요.",
+   "blank": "перец",
+   "src": "made"
+  }
+ ],
  "w|периметр": [
   {
    "text": "Вдоль всего периметра вокзала стояли патрули, и Павел заранее приготовил документы.",
@@ -40275,6 +40531,22 @@
    "src": "made"
   }
  ],
+ "w|пинок": [
+  {
+   "text": "На футболе во дворе школы Иван получил пинок по ноге.",
+   "en": "Playing football in the schoolyard, Ivan got a kick in the leg.",
+   "ko": "학교 운동장에서 축구를 하다가 이반은 다리를 걷어차였어요.",
+   "blank": "пинок",
+   "src": "made"
+  },
+  {
+   "text": "Ребёнок сзади всю дорогу давал Анне пинок в спинку кресла.",
+   "en": "The child behind kept kicking the back of Anna's seat the whole way.",
+   "ko": "뒷자리 아이가 가는 내내 안나의 의자 등받이를 발로 찼어요.",
+   "blank": "пинок",
+   "src": "made"
+  }
+ ],
  "w|пират": [
   {
    "text": "На школьном карнавале Алексей нарядился пиратом с повязкой на глазу.",
@@ -40305,6 +40577,22 @@
    "ko": "마지막으로 케이크 구운 게 언제야?",
    "blank": "пирог",
    "src": "tatoeba:8085965/fjay69 en:1748037/Amastan"
+  }
+ ],
+ "w|пирожное": [
+  {
+   "text": "В школьной столовой Иван купил пирожное с кремом.",
+   "en": "In the school canteen Ivan bought a cream cake.",
+   "ko": "이반은 학교 식당에서 크림 케이크를 샀어요.",
+   "blank": "пирожное",
+   "src": "made"
+  },
+  {
+   "text": "Перед посадкой Анна съела в кафе шоколадное пирожное.",
+   "en": "Before boarding Anna ate a chocolate pastry in the café.",
+   "ko": "탑승 전에 안나는 카페에서 초콜릿 케이크를 먹었어요.",
+   "blank": "пирожное",
+   "src": "made"
   }
  ],
  "w|писатель": [
@@ -45219,6 +45507,22 @@
    "src": "made"
   }
  ],
+ "w|порезать": [
+  {
+   "text": "На уроке труда Иван случайно порезал палец ножом.",
+   "en": "In crafts class Ivan accidentally cut his finger with a knife.",
+   "ko": "기술 시간에 이반은 실수로 칼에 손가락을 베었어요.",
+   "blank": "порезал",
+   "src": "made"
+  },
+  {
+   "text": "В кафе аэропорта Анне аккуратно порезали лимон к чаю.",
+   "en": "At the airport café they neatly sliced a lemon for Anna's tea.",
+   "ko": "공항 카페에서 안나의 차에 곁들일 레몬을 깔끔하게 썰어 줬어요.",
+   "blank": "порезали",
+   "src": "made"
+  }
+ ],
  "w|порог": [
   {
    "text": "Каждое утро у порога редакции Дмитрия ждёт свежий тираж.",
@@ -47403,6 +47707,22 @@
    "src": "tatoeba:10933129/marafon en:6536308/AlanF_US"
   }
  ],
+ "w|предлог": [
+  {
+   "text": "Учительница русского попросила Ивана подчеркнуть каждый предлог.",
+   "en": "The Russian teacher asked Ivan to underline every preposition.",
+   "ko": "러시아어 선생님이 이반에게 전치사를 모두 밑줄 치라고 했어요.",
+   "blank": "предлог",
+   "src": "made"
+  },
+  {
+   "text": "Под предлогом усталости Анна отказалась идти с коллегами в бар аэропорта.",
+   "en": "On the pretext of being tired, Anna declined to go to the airport bar with her colleagues.",
+   "ko": "안나는 피곤하다는 핑계로 동료들과 공항 바에 가지 않았어요.",
+   "blank": "предлогом",
+   "src": "made"
+  }
+ ],
  "w|предложение": [
   {
    "text": "У меня есть предложение.",
@@ -48024,6 +48344,22 @@
    "en": "Irina jokes that she fixes phones so fast that the prime minister himself would envy her.",
    "ko": "이리나는 자기가 휴대폰을 너무 빨리 고쳐서 총리도 부러워할 거라고 농담해요.",
    "blank": "премьер-министр",
+   "src": "made"
+  }
+ ],
+ "w|премьера": [
+  {
+   "text": "Иван сыграл главную роль на премьере школьного спектакля.",
+   "en": "Ivan played the lead role at the premiere of the school play.",
+   "ko": "이반은 학교 연극 첫 공연에서 주인공을 맡았어요.",
+   "blank": "премьере",
+   "src": "made"
+  },
+  {
+   "text": "Анна летит в столицу на премьеру фильма своей подруги.",
+   "en": "Anna is flying to the capital for the premiere of her friend's film.",
+   "ko": "안나는 친구의 영화 시사회에 가려고 수도로 날아가요.",
+   "blank": "премьеру",
    "src": "made"
   }
  ],
@@ -49937,6 +50273,22 @@
    "src": "made"
   }
  ],
+ "w|прицел": [
+  {
+   "text": "Завуч давно держит Ивана на прицеле из-за опозданий.",
+   "en": "The deputy head has long had Ivan in her sights because of his lateness.",
+   "ko": "교감 선생님은 지각 때문에 이반을 오래전부터 눈여겨보고 있어요.",
+   "blank": "прицеле",
+   "src": "made"
+  },
+  {
+   "text": "Фотограф взял Анну на прицел, когда она выходила из зоны прилёта.",
+   "en": "The photographer had Anna in his sights as she walked out of arrivals.",
+   "ko": "안나가 입국장을 나설 때 사진기자가 안나에게 카메라를 겨눴어요.",
+   "blank": "прицел",
+   "src": "made"
+  }
+ ],
  "w|причастный": [
   {
    "text": "Никита выяснил, что чиновник был причастен к скандалу со стройкой.",
@@ -50103,6 +50455,22 @@
    "en": "This is a movie about the sea.",
    "ko": "이거 바다 영화야.",
    "blank": "про"
+  }
+ ],
+ "w|проба": [
+  {
+   "text": "Иван записался на пробу в школьный театр.",
+   "en": "Ivan signed up for an audition at the school theatre.",
+   "ko": "이반은 학교 연극부 오디션에 신청했어요.",
+   "blank": "пробу",
+   "src": "made"
+  },
+  {
+   "text": "В дьюти-фри Анне дали пробу новых духов.",
+   "en": "At the duty-free Anna was given a sample of a new perfume.",
+   "ko": "면세점에서 안나는 새 향수 샘플을 받았어요.",
+   "blank": "пробу",
+   "src": "made"
   }
  ],
  "w|пробить": [
@@ -51049,6 +51417,22 @@
    "src": "made"
   }
  ],
+ "w|прокуратура": [
+  {
+   "text": "На экскурсии Иван узнал, чем занимается прокуратура.",
+   "en": "On a school trip Ivan learned what the prosecutor's office does.",
+   "ko": "이반은 견학에서 검찰청이 하는 일을 배웠어요.",
+   "blank": "прокуратура",
+   "src": "made"
+  },
+  {
+   "text": "Анна летит на встречу, где её юристы будут общаться с прокуратурой.",
+   "en": "Anna is flying to a meeting where her lawyers will deal with the prosecutor's office.",
+   "ko": "안나는 변호사들이 검찰과 협의할 회의에 가려고 비행기를 타요.",
+   "blank": "прокуратурой",
+   "src": "made"
+  }
+ ],
  "w|прокурор": [
   {
    "text": "Прокурор задал мне наводящий вопрос.",
@@ -51189,6 +51573,22 @@
    "ko": "좀 지나가도 될까요?",
    "blank": "пропустить",
    "src": "tatoeba:12291747/marafon en:4736734/paper1n0"
+  }
+ ],
+ "w|прорыв": [
+  {
+   "text": "Учитель назвал результаты Ивана по математике настоящим прорывом.",
+   "en": "The teacher called Ivan's maths results a real breakthrough.",
+   "ko": "선생님은 이반의 수학 성적을 진짜 큰 도약이라고 했어요.",
+   "blank": "прорывом",
+   "src": "made"
+  },
+  {
+   "text": "Для авиакомпании, где работает Анна, новый маршрут стал настоящим прорывом.",
+   "en": "For the airline Anna works for, the new route was a real breakthrough.",
+   "ko": "안나가 다니는 항공사에 새 노선은 큰 도약이 됐어요.",
+   "blank": "прорывом",
+   "src": "made"
   }
  ],
  "w|просить": [
@@ -52099,6 +52499,22 @@
    "src": "made"
   }
  ],
+ "w|публично": [
+  {
+   "text": "Учитель публично похвалил Ивана перед всем классом.",
+   "en": "The teacher praised Ivan publicly in front of the whole class.",
+   "ko": "선생님이 반 전체 앞에서 이반을 공개적으로 칭찬했어요.",
+   "blank": "публично",
+   "src": "made"
+  },
+  {
+   "text": "Авиакомпания публично извинилась перед Анной и другими пассажирами.",
+   "en": "The airline publicly apologised to Anna and the other passengers.",
+   "ko": "항공사는 안나와 다른 승객들에게 공개적으로 사과했어요.",
+   "blank": "публично",
+   "src": "made"
+  }
+ ],
  "w|публичный": [
   {
    "text": "Иван боится публичных выступлений, но всё равно вызвался читать стихи.",
@@ -52799,6 +53215,22 @@
    "ko": "라디오 소리 좀 줄여 주실래요?",
    "blank": "радио",
    "src": "tatoeba:3474492/Inego en:51432/CK"
+  }
+ ],
+ "w|радиус": [
+  {
+   "text": "Учитель попросил Ивана найти радиус окружности.",
+   "en": "The teacher asked Ivan to find the radius of the circle.",
+   "ko": "선생님이 이반에게 원의 반지름을 구해 보라고 했어요.",
+   "blank": "радиус",
+   "src": "made"
+  },
+  {
+   "text": "Анна искала отель в радиусе пяти километров от аэропорта.",
+   "en": "Anna was looking for a hotel within a five-kilometre radius of the airport.",
+   "ko": "안나는 공항 반경 5킬로미터 안에서 호텔을 찾고 있었어요.",
+   "blank": "радиусе",
+   "src": "made"
   }
  ],
  "w|радоваться": [
@@ -54271,6 +54703,22 @@
    "src": "made"
   }
  ],
+ "w|рассудок": [
+  {
+   "text": "Перед экзаменом Иван чуть не потерял рассудок от волнения.",
+   "en": "Before the exam Ivan nearly lost his mind from nerves.",
+   "ko": "시험 전에 이반은 긴장해서 정신이 나갈 뻔했어요.",
+   "blank": "рассудок",
+   "src": "made"
+  },
+  {
+   "text": "После десятичасовой задержки Анна чудом сохранила рассудок.",
+   "en": "After a ten-hour delay Anna miraculously kept her sanity.",
+   "ko": "안나는 열 시간이나 지연된 끝에 간신히 정신을 붙들었어요.",
+   "blank": "рассудок",
+   "src": "made"
+  }
+ ],
  "w|рассчитывать": [
   {
    "text": "Я могу рассчитывать на вашу лояльность?",
@@ -55200,6 +55648,22 @@
    "en": "Natalia finally made up her mind to sign up for the synchronised swimming group.",
    "ko": "나탈리야는 마침내 싱크로나이즈드 수영반에 등록하기로 마음먹었어요.",
    "blank": "решилась",
+   "src": "made"
+  }
+ ],
+ "w|римский": [
+  {
+   "text": "На доске Иван написал год римскими цифрами.",
+   "en": "Ivan wrote the year on the board in Roman numerals.",
+   "ko": "이반은 칠판에 연도를 로마 숫자로 썼어요.",
+   "blank": "римскими",
+   "src": "made"
+  },
+  {
+   "text": "Анна прилетела посмотреть на римский амфитеатр.",
+   "en": "Anna flew in to see the Roman amphitheatre.",
+   "ko": "안나는 로마 원형 극장을 보러 비행기를 타고 왔어요.",
+   "blank": "римский",
    "src": "made"
   }
  ],
@@ -60315,6 +60779,22 @@
    "src": "made"
   }
  ],
+ "w|соединение": [
+  {
+   "text": "На химии Иван получил новое соединение меди.",
+   "en": "In chemistry Ivan produced a new copper compound.",
+   "ko": "화학 시간에 이반은 새로운 구리 화합물을 만들었어요.",
+   "blank": "соединение",
+   "src": "made"
+  },
+  {
+   "text": "В зоне вылета у Анны всё время пропадало соединение с интернетом.",
+   "en": "In the departure area Anna's internet connection kept dropping.",
+   "ko": "출국장에서 안나의 인터넷 연결이 자꾸 끊겼어요.",
+   "blank": "соединение",
+   "src": "made"
+  }
+ ],
  "w|соединить": [
   {
    "text": "Мама давно мечтала соединить детей за одним столом.",
@@ -62681,6 +63161,22 @@
    "src": "made"
   }
  ],
+ "w|стейк": [
+  {
+   "text": "На выпускном вечере Ивану подали огромный стейк.",
+   "en": "At the graduation party Ivan was served a huge steak.",
+   "ko": "졸업 파티에서 이반에게 커다란 스테이크가 나왔어요.",
+   "blank": "стейк",
+   "src": "made"
+  },
+  {
+   "text": "В ресторане аэропорта Анна заказала стейк средней прожарки.",
+   "en": "At the airport restaurant Anna ordered a medium steak.",
+   "ko": "안나는 공항 식당에서 미디엄으로 구운 스테이크를 시켰어요.",
+   "blank": "стейк",
+   "src": "made"
+  }
+ ],
  "w|стекло": [
   {
    "text": "Ты должен держать лобовое стекло чистым.",
@@ -63037,6 +63533,22 @@
    "en": "I'm on your side.",
    "ko": "나는 네 편이야.",
    "blank": "стороне"
+  }
+ ],
+ "w|сторонник": [
+  {
+   "text": "В школьных дебатах Иван выступал как сторонник единой формы.",
+   "en": "In the school debate Ivan spoke as a supporter of uniforms.",
+   "ko": "학교 토론에서 이반은 교복 찬성 쪽으로 나섰어요.",
+   "blank": "сторонник",
+   "src": "made"
+  },
+  {
+   "text": "Муж Анны — убеждённый сторонник прямых рейсов без пересадок.",
+   "en": "Anna's husband is a firm supporter of direct flights without transfers.",
+   "ko": "안나의 남편은 환승 없는 직항을 굳게 지지해요.",
+   "blank": "сторонник",
+   "src": "made"
   }
  ],
  "w|стошнить": [
@@ -64683,6 +65195,22 @@
    "src": "tatoeba:423154/Hellerick en:56533/CK"
   }
  ],
+ "w|танк": [
+  {
+   "text": "В школьном музее Иван рассматривал модель старого танка.",
+   "en": "In the school museum Ivan studied a model of an old tank.",
+   "ko": "이반은 학교 박물관에서 옛 탱크 모형을 살펴봤어요.",
+   "blank": "танка",
+   "src": "made"
+  },
+  {
+   "text": "В фильме, который Анна смотрела в самолёте, по пустыне ехал танк.",
+   "en": "In the film Anna watched on the plane, a tank drove across the desert.",
+   "ko": "안나가 비행기에서 본 영화에서는 탱크가 사막을 달렸어요.",
+   "blank": "танк",
+   "src": "made"
+  }
+ ],
  "w|танцевать": [
   {
    "text": "Как вы научились так хорошо танцевать?",
@@ -64903,6 +65431,22 @@
    "ko": "텔레비전 소리 좀 줄여 줄래?",
    "blank": "телевизор",
    "src": "tatoeba:3708574/marafon en:3396435/CK"
+  }
+ ],
+ "w|телеграмма": [
+  {
+   "text": "На уроке истории Иван читал вслух старую военную телеграмму.",
+   "en": "In history class Ivan read an old wartime telegram aloud.",
+   "ko": "역사 시간에 이반은 옛 전시 전보를 소리 내어 읽었어요.",
+   "blank": "телеграмму",
+   "src": "made"
+  },
+  {
+   "text": "Бабушка в шутку прислала Анне в аэропорт настоящую телеграмму.",
+   "en": "As a joke, Anna's grandmother sent her a real telegram at the airport.",
+   "ko": "할머니가 장난으로 공항에 있는 안나에게 진짜 전보를 보냈어요.",
+   "blank": "телеграмму",
+   "src": "made"
   }
  ],
  "w|телефон": [
@@ -65812,6 +66356,22 @@
    "en": "The workers took the old wheelbarrow, whose brake didn't work, off the porch, and Elena gave it away for scrap.",
    "ko": "인부들이 브레이크가 안 되는 낡은 손수레를 현관에서 치웠고, 옐레나는 그걸 고철로 넘겼어요.",
    "blank": "тормоз",
+   "src": "made"
+  }
+ ],
+ "w|тормозить": [
+  {
+   "text": "Иван бежал по коридору так быстро, что у двери класса пришлось резко тормозить.",
+   "en": "Ivan was running down the corridor so fast that he had to brake hard at the classroom door.",
+   "ko": "이반은 복도를 너무 빨리 달려서 교실 문 앞에서 급히 멈춰야 했어요.",
+   "blank": "тормозить",
+   "src": "made"
+  },
+  {
+   "text": "Самолёт Анны резко начал тормозить после посадки.",
+   "en": "Anna's plane started braking hard after landing.",
+   "ko": "안나가 탄 비행기는 착륙한 뒤 급하게 속도를 줄이기 시작했어요.",
+   "blank": "тормозить",
    "src": "made"
   }
  ],
@@ -69649,6 +70209,22 @@
    "src": "tatoeba:1568699/Biga en:16456/kebukebu"
   }
  ],
+ "w|учреждение": [
+  {
+   "text": "Иван учится в старейшем учебном учреждении города.",
+   "en": "Ivan studies at the oldest educational institution in the city.",
+   "ko": "이반은 도시에서 가장 오래된 교육 기관에 다녀요.",
+   "blank": "учреждении",
+   "src": "made"
+  },
+  {
+   "text": "Анна летела на конференцию от своего научного учреждения.",
+   "en": "Anna was flying to a conference on behalf of her research institution.",
+   "ko": "안나는 소속 연구 기관을 대표해 학회에 가는 길이었어요.",
+   "blank": "учреждения",
+   "src": "made"
+  }
+ ],
  "w|ущерб": [
   {
    "text": "Вы не можете возместить ущерб?",
@@ -70283,6 +70859,22 @@
    "en": "The photo came out blurry.",
    "ko": "사진이 흐리게 나왔어.",
    "blank": "Фотография"
+  }
+ ],
+ "w|фрагмент": [
+  {
+   "text": "Иван выучил наизусть фрагмент из поэмы для урока литературы.",
+   "en": "Ivan learned a passage from the poem by heart for literature class.",
+   "ko": "이반은 문학 수업을 위해 시의 한 대목을 외웠어요.",
+   "blank": "фрагмент",
+   "src": "made"
+  },
+  {
+   "text": "Анна показала коллеге фрагмент видео, снятого из иллюминатора.",
+   "en": "Anna showed a colleague a clip of the video she shot from the plane window.",
+   "ko": "안나는 비행기 창밖으로 찍은 영상의 한 부분을 동료에게 보여 줬어요.",
+   "blank": "фрагмент",
+   "src": "made"
   }
  ],
  "w|фраза": [
@@ -71914,6 +72506,22 @@
    "en": "After the rain a worm crawled out onto the asphalt, and Svetlana carefully drove around it.",
    "ko": "비가 그치자 아스팔트로 지렁이가 기어 나와서 스베틀라나는 조심스럽게 피해 갔어요.",
    "blank": "червь",
+   "src": "made"
+  }
+ ],
+ "w|чердак": [
+  {
+   "text": "Иван нашёл свои старые тетради на чердаке у бабушки.",
+   "en": "Ivan found his old exercise books in his grandmother's attic.",
+   "ko": "이반은 할머니 집 다락에서 옛 공책을 찾았어요.",
+   "blank": "чердаке",
+   "src": "made"
+  },
+  {
+   "text": "Свой старый чемодан Анна нашла на чердаке перед поездкой.",
+   "en": "Anna found her old suitcase in the attic before the trip.",
+   "ko": "안나는 여행 전에 다락에서 낡은 여행 가방을 찾았어요.",
+   "blank": "чердаке",
    "src": "made"
   }
  ],
@@ -73695,6 +74303,22 @@
    "src": "made"
   }
  ],
+ "w|эра": [
+  {
+   "text": "На уроке истории Иван узнал, когда началась наша эра.",
+   "en": "In history class Ivan learned when the Common Era began.",
+   "ko": "이반은 역사 시간에 서기가 언제 시작됐는지 배웠어요.",
+   "blank": "эра",
+   "src": "made"
+  },
+  {
+   "text": "Анна шутит, что началась эра дешёвых перелётов.",
+   "en": "Anna jokes that the era of cheap flights has begun.",
+   "ko": "안나는 저렴한 비행의 시대가 열렸다고 농담해요.",
+   "blank": "эра",
+   "src": "made"
+  }
+ ],
  "w|этаж": [
   {
    "text": "Ты поднялся на лифте на третий этаж.",
@@ -73958,6 +74582,22 @@
    "en": "Natalia showed up last for breakfast and got cold pancakes.",
    "ko": "나탈리야는 아침에 제일 늦게 나와서 식은 블린을 받았어요.",
    "blank": "явилась",
+   "src": "made"
+  }
+ ],
+ "w|явление": [
+  {
+   "text": "Иван сделал доклад о том, какое явление называют радугой.",
+   "en": "Ivan gave a report on which phenomenon is called a rainbow.",
+   "ko": "이반은 무지개라고 부르는 현상에 대해 발표했어요.",
+   "blank": "явление",
+   "src": "made"
+  },
+  {
+   "text": "Задержки рейсов зимой Анна считает обычным явлением.",
+   "en": "Anna considers flight delays in winter a normal occurrence.",
+   "ko": "안나는 겨울에 비행기가 늦는 걸 흔한 일로 여겨요.",
+   "blank": "явлением",
    "src": "made"
   }
  ],
