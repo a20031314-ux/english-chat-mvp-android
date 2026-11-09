@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (21)
+## 탭이 확인할 것 (22)
 
 ### 탭 1 메인
 
@@ -81,6 +81,10 @@
 - **a261110-1-2** (2026-11-10 00:19, 탭 1 · 38a694b) 안 쓰는 함수 전부 지움(동작 변화 없음, tsc·테스트 통과) — 이 탭에서 작업 중인 코드가 지운 함수를 다시 쓰려 하면 git 기록에서 되살리고 같은 커밋에서 쓰게 할 것. 지금 화면에서 바뀐 게 있으면 고침으로
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · 실력 확인 · Logbank · 오늘 · 학습 수 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/ChatWindow.tsx` · `components/RoleplayReview.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/roleplay/callHooks.ts` · `app/api/roleplay/turn/route.ts` · `app/api/video-library/route.ts` · `components/contentDiscovery/ContentDiscoveryPanel.tsx` … 42개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261110-2-3** (2026-11-10 00:21, 탭 2 · d04ba27) Logbank 오늘 칸 제목을 '오늘의 학습 n'으로(lbToday 문구 바뀜 — 숫자를 제목에, 아래 줄에서 '학습 n' 뺌, 활용·↺만 남음). 이 칸을 띄우는 화면이 있으면 제목이 맞게 보이는지
+  - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · 소재 수업
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
