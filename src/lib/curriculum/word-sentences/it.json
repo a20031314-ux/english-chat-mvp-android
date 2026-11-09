@@ -675,6 +675,22 @@
    "blank": "accettare"
   }
  ],
+ "w|acchiappare": [
+  {
+   "text": "Stefano corre per acchiappare l'autobus delle otto e arrivare in ufficio in tempo.",
+   "en": "Stefano runs to catch the eight o'clock bus and get to the office on time.",
+   "ko": "스테파노는 여덟 시 버스를 잡아타고 제시간에 출근하려고 뛰어요.",
+   "blank": "acchiappare",
+   "src": "made"
+  },
+  {
+   "text": "Laura corre giù per le scale ad acchiappare il gatto scappato di casa.",
+   "en": "Laura runs down the stairs to catch the cat that escaped from the flat.",
+   "ko": "라우라는 집을 빠져나간 고양이를 잡으러 계단을 뛰어 내려가요.",
+   "blank": "acchiappare",
+   "src": "made"
+  }
+ ],
  "w|acciaio": [
   {
    "text": "Il molo nuovo è fatto di acciaio e cemento, e Davide ci va a pescare ogni sera.",
@@ -3165,6 +3181,22 @@
    "blank": "ambiente"
   }
  ],
+ "w|ambiguo": [
+  {
+   "text": "Stefano trova ambiguo il nuovo regolamento sui parcheggi e chiede chiarimenti.",
+   "en": "Stefano finds the new parking regulation ambiguous and asks for clarification.",
+   "ko": "스테파노는 새 주차 규정이 애매하다고 생각해서 설명을 요청해요.",
+   "blank": "ambiguo",
+   "src": "made"
+  },
+  {
+   "text": "Il biglietto lasciato dal vicino sulla porta di Laura ha un tono ambiguo.",
+   "en": "The note the neighbour left on Laura's door has an ambiguous tone.",
+   "ko": "이웃이 라우라의 문에 남긴 쪽지는 말투가 애매해요.",
+   "blank": "ambiguo",
+   "src": "made"
+  }
+ ],
  "w|ambito": [
   {
    "text": "Marco vuole lavorare nell'ambito della ricerca scientifica.",
@@ -3608,6 +3640,22 @@
    "en": "At the breakfast buffet Elena adds fresh pineapple for foreign guests.",
    "ko": "엘레나는 외국 손님들을 위해 조식 뷔페에 신선한 파인애플을 더해요.",
    "blank": "ananas",
+   "src": "made"
+  }
+ ],
+ "w|anatomia": [
+  {
+   "text": "La figlia di Stefano ha l'esame di anatomia domani, così lui esce prima dal municipio.",
+   "en": "Stefano's daughter has her anatomy exam tomorrow, so he leaves city hall early.",
+   "ko": "스테파노의 딸이 내일 해부학 시험이 있어서 스테파노는 시청에서 일찍 나와요.",
+   "blank": "anatomia",
+   "src": "made"
+  },
+  {
+   "text": "Lo studente che abita sopra Laura ripassa anatomia ad alta voce fino a mezzanotte.",
+   "en": "The student who lives above Laura goes over his anatomy out loud until midnight.",
+   "ko": "라우라 윗집 학생은 자정까지 소리 내어 해부학을 복습해요.",
+   "blank": "anatomia",
    "src": "made"
   }
  ],
@@ -4263,6 +4311,22 @@
    "en": "I don't want to seem rude, but no.",
    "ko": "무례해 보이고 싶진 않지만, 아니야.",
    "blank": "antipatico"
+  }
+ ],
+ "w|antiquato": [
+  {
+   "text": "Il sistema informatico del comune è così antiquato che Stefano stampa ancora tutto.",
+   "en": "The town's computer system is so outdated that Stefano still prints everything.",
+   "ko": "시청 전산 시스템이 너무 낡아서 스테파노는 아직도 전부 출력해요.",
+   "blank": "antiquato",
+   "src": "made"
+  },
+  {
+   "text": "L'ascensore del palazzo è antiquato, con le porte di ferro che Laura deve chiudere a mano.",
+   "en": "The building's lift is old-fashioned, with iron doors that Laura has to close by hand.",
+   "ko": "건물 엘리베이터는 구식이라 라우라가 쇠문을 손으로 닫아야 해요.",
+   "blank": "antiquato",
+   "src": "made"
   }
  ],
  "w|anzi": [
@@ -6593,6 +6657,22 @@
    "src": "made"
   }
  ],
+ "w|attentatore": [
+  {
+   "text": "In archivio Stefano trova vecchi giornali che parlano dell'attentatore arrestato negli anni Settanta.",
+   "en": "In the archive Stefano finds old newspapers about the bomber arrested in the seventies.",
+   "ko": "스테파노는 기록 보관소에서 칠십 년대에 체포된 테러범을 다룬 옛 신문을 찾아요.",
+   "blank": "attentatore",
+   "src": "made"
+  },
+  {
+   "text": "La sera Laura guarda un film in cui un poliziotto insegue un attentatore per tutta la città.",
+   "en": "In the evening Laura watches a film in which a police officer chases a bomber across the whole city.",
+   "ko": "라우라는 저녁에 경찰이 도시 곳곳에서 테러범을 쫓는 영화를 봐요.",
+   "blank": "attentatore",
+   "src": "made"
+  }
+ ],
  "w|attento": [
   {
    "text": "Attento alla porta.",
@@ -7784,6 +7864,22 @@
    "en": "The juice of a red berry serves Francesca as fake blood.",
    "ko": "프란체스카는 빨간 열매즙을 가짜 피로 써요.",
    "blank": "bacca",
+   "src": "made"
+  }
+ ],
+ "w|bacheca": [
+  {
+   "text": "Stefano appende l'avviso del nuovo orario sulla bacheca all'ingresso del municipio.",
+   "en": "Stefano pins the notice with the new opening hours on the noticeboard at the city hall entrance.",
+   "ko": "스테파노는 시청 입구 게시판에 새 운영 시간 안내문을 붙여요.",
+   "blank": "bacheca",
+   "src": "made"
+  },
+  {
+   "text": "Laura legge sulla bacheca dell'androne che domani manca l'acqua.",
+   "en": "Laura reads on the noticeboard in the entrance hall that the water will be off tomorrow.",
+   "ko": "라우라는 현관 게시판에서 내일 단수된다는 걸 읽어요.",
+   "blank": "bacheca",
    "src": "made"
   }
  ],
@@ -9349,6 +9445,22 @@
    "blank": "binario"
   }
  ],
+ "w|biografia": [
+  {
+   "text": "Nella biblioteca comunale Stefano trova una biografia del primo sindaco della città.",
+   "en": "In the town library Stefano finds a biography of the city's first mayor.",
+   "ko": "스테파노는 시립 도서관에서 이 도시 첫 시장의 전기를 찾아요.",
+   "blank": "biografia",
+   "src": "made"
+  },
+  {
+   "text": "Laura presta alla vicina una biografia di una famosa cantante lirica.",
+   "en": "Laura lends her neighbour a biography of a famous opera singer.",
+   "ko": "라우라는 이웃에게 유명한 오페라 가수의 전기를 빌려줘요.",
+   "blank": "biografia",
+   "src": "made"
+  }
+ ],
  "w|biologico": [
   {
    "text": "Tutta la verdura che vende Simone viene da agricoltura biologica.",
@@ -9586,6 +9698,22 @@
    "en": "The rug seller tries to bluff about the price, but Chiara doesn't fall for it.",
    "ko": "양탄자 장수는 값을 두고 허세를 부리지만 키아라는 넘어가지 않아요.",
    "blank": "bluffare",
+   "src": "made"
+  }
+ ],
+ "w|bobina": [
+  {
+   "text": "In archivio Stefano trova una bobina con la registrazione di un vecchio consiglio comunale.",
+   "en": "In the archive Stefano finds a reel with the recording of an old council meeting.",
+   "ko": "스테파노는 기록 보관소에서 옛 시의회 녹음이 담긴 릴을 찾아요.",
+   "blank": "bobina",
+   "src": "made"
+  },
+  {
+   "text": "In cantina Laura trova una vecchia bobina di filo da cucire della nonna.",
+   "en": "In the cellar Laura finds an old spool of her grandmother's sewing thread.",
+   "ko": "라우라는 지하 창고에서 할머니가 쓰던 낡은 실패를 찾아요.",
+   "blank": "bobina",
    "src": "made"
   }
  ],
@@ -11742,6 +11870,38 @@
    "en": "For New Year's Eve Giulia has ordered a red sequinned dress.",
    "ko": "새해 전야를 위해 줄리아는 빨간 스팽글 원피스를 주문했어요.",
    "blank": "capodanno",
+   "src": "made"
+  }
+ ],
+ "w|caposquadra": [
+  {
+   "text": "Il caposquadra degli operai comunali chiede a Stefano più tempo per riparare la strada.",
+   "en": "The foreman of the council workers asks Stefano for more time to repair the road.",
+   "ko": "시청 작업반장이 스테파노에게 도로를 고칠 시간을 더 달라고 해요.",
+   "blank": "caposquadra",
+   "src": "made"
+  },
+  {
+   "text": "Il caposquadra degli imbianchini promette a Laura che la scala sarà pronta venerdì.",
+   "en": "The painters' foreman promises Laura that the stairwell will be ready on Friday.",
+   "ko": "페인트공 반장이 라우라에게 계단이 금요일까지 끝난다고 약속해요.",
+   "blank": "caposquadra",
+   "src": "made"
+  }
+ ],
+ "w|cappellano": [
+  {
+   "text": "Il cappellano dell'ospedale viene in comune a chiedere a Stefano un contributo per la mensa dei poveri.",
+   "en": "The hospital chaplain comes to the town hall to ask Stefano for a grant for the soup kitchen.",
+   "ko": "병원 사제가 무료 급식소 지원금을 부탁하러 시청에 스테파노를 찾아와요.",
+   "blank": "cappellano",
+   "src": "made"
+  },
+  {
+   "text": "Un vecchio cappellano militare in pensione abita accanto a Laura e le regala i limoni del suo balcone.",
+   "en": "A retired old army chaplain lives next to Laura and gives her lemons from his balcony.",
+   "ko": "은퇴한 늙은 군종 신부가 라우라 옆집에 살면서 발코니에서 딴 레몬을 줘요.",
+   "blank": "cappellano",
    "src": "made"
   }
  ],
@@ -14522,6 +14682,22 @@
    "en": "For the big shopping trip, Laura drives down to the small town in the valley.",
    "ko": "장을 크게 보러 라우라는 차를 타고 계곡 아래 작은 도시로 내려가요.",
    "blank": "cittadina",
+   "src": "made"
+  }
+ ],
+ "w|cittadinanza": [
+  {
+   "text": "Ogni mese Stefano celebra in municipio le cerimonie per la cittadinanza dei nuovi italiani.",
+   "en": "Every month Stefano holds the citizenship ceremonies for new Italians at city hall.",
+   "ko": "스테파노는 매달 시청에서 새 이탈리아 시민들의 시민권 수여식을 진행해요.",
+   "blank": "cittadinanza",
+   "src": "made"
+  },
+  {
+   "text": "La vicina del terzo piano ha appena ottenuto la cittadinanza, e Laura le porta una torta.",
+   "en": "The neighbour on the third floor has just got citizenship, and Laura brings her a cake.",
+   "ko": "삼 층 이웃이 막 시민권을 받아서 라우라가 케이크를 가져다줘요.",
+   "blank": "cittadinanza",
    "src": "made"
   }
  ],
@@ -18343,6 +18519,22 @@
    "src": "made"
   }
  ],
+ "w|contrattaccare": [
+  {
+   "text": "Quando l'opposizione lo critica, Stefano prepara i dati per contrattaccare alla prossima seduta.",
+   "en": "When the opposition criticises him, Stefano prepares the figures to hit back at the next session.",
+   "ko": "야당이 비판하면 스테파노는 다음 회의에서 반격할 자료를 준비해요.",
+   "blank": "contrattaccare",
+   "src": "made"
+  },
+  {
+   "text": "Quando il vicino si lamenta del rumore, Laura decide di contrattaccare con una lettera all'amministratore.",
+   "en": "When the neighbour complains about the noise, Laura decides to hit back with a letter to the building manager.",
+   "ko": "이웃이 소음 불평을 하자 라우라는 관리인에게 편지를 써서 반격하기로 해요.",
+   "blank": "contrattaccare",
+   "src": "made"
+  }
+ ],
  "w|contratto": [
   {
    "text": "Ho firmato il contratto di lavoro ieri.",
@@ -18490,6 +18682,22 @@
    "en": "Elena prefers conventional but welcoming furnishings for the rooms.",
    "ko": "엘레나는 객실에 평범하지만 아늑한 가구를 좋아해요.",
    "blank": "convenzionale",
+   "src": "made"
+  }
+ ],
+ "w|convenzione": [
+  {
+   "text": "Il comune ha firmato una convenzione con l'università, e Stefano segue i tirocinanti.",
+   "en": "The town has signed an agreement with the university, and Stefano looks after the interns.",
+   "ko": "시가 대학과 협약을 맺어서 스테파노가 실습생들을 맡아요.",
+   "blank": "convenzione",
+   "src": "made"
+  },
+  {
+   "text": "Laura scopre che il condominio ha una convenzione con un idraulico della zona.",
+   "en": "Laura finds out that the building has an agreement with a local plumber.",
+   "ko": "라우라는 아파트가 동네 배관공과 계약을 맺고 있다는 걸 알게 돼요.",
+   "blank": "convenzione",
    "src": "made"
   }
  ],
@@ -27395,6 +27603,22 @@
    "src": "made"
   }
  ],
+ "w|espellere": [
+  {
+   "text": "Il presidente del consiglio minaccia di espellere dall'aula chi disturba, e Stefano annuisce.",
+   "en": "The council chairman threatens to throw anyone who disrupts out of the chamber, and Stefano nods.",
+   "ko": "의장이 소란을 피우는 사람은 회의장에서 내보내겠다고 하자 스테파노가 고개를 끄덕여요.",
+   "blank": "espellere",
+   "src": "made"
+  },
+  {
+   "text": "Il tecnico spiega a Laura che il tubo deve espellere i fumi della caldaia sopra il tetto.",
+   "en": "The technician explains to Laura that the pipe has to expel the boiler fumes above the roof.",
+   "ko": "기사는 라우라에게 그 관이 보일러 연기를 지붕 위로 내보내야 한다고 설명해요.",
+   "blank": "espellere",
+   "src": "made"
+  }
+ ],
  "w|esperienza": [
   {
    "text": "È stata un'esperienza indimenticabile.",
@@ -28120,6 +28344,22 @@
    "en": "The phone had obviously fallen in water, but the customer told Martina it hadn't.",
    "ko": "휴대폰은 분명히 물에 빠졌는데 손님은 마르티나에게 아니라고 했어요.",
    "blank": "evidentemente",
+   "src": "made"
+  }
+ ],
+ "w|evidenza": [
+  {
+   "text": "Stefano mette in evidenza le scadenze più importanti con un pennarello giallo.",
+   "en": "Stefano highlights the most important deadlines with a yellow marker.",
+   "ko": "스테파노는 노란 펜으로 가장 중요한 마감일을 눈에 띄게 표시해요.",
+   "blank": "evidenza",
+   "src": "made"
+  },
+  {
+   "text": "Per non dimenticarle, Laura lascia le chiavi in evidenza sul tavolo dell'ingresso.",
+   "en": "So as not to forget them, Laura leaves her keys in plain sight on the hall table.",
+   "ko": "라우라는 잊지 않으려고 현관 탁자 위 잘 보이는 곳에 열쇠를 둬요.",
+   "blank": "evidenza",
    "src": "made"
   }
  ],
@@ -33019,6 +33259,22 @@
    "blank": "gentiluomo"
   }
  ],
+ "w|gergo": [
+  {
+   "text": "Quando scrive ai cittadini, Stefano cerca di evitare il gergo burocratico.",
+   "en": "When he writes to citizens, Stefano tries to avoid bureaucratic jargon.",
+   "ko": "스테파노는 시민들에게 글을 쓸 때 관공서 말투를 피하려고 해요.",
+   "blank": "gergo",
+   "src": "made"
+  },
+  {
+   "text": "Laura non capisce il gergo dei ragazzi del primo piano.",
+   "en": "Laura doesn't understand the slang of the kids on the first floor.",
+   "ko": "라우라는 일 층 아이들이 쓰는 은어를 못 알아들어요.",
+   "blank": "gergo",
+   "src": "made"
+  }
+ ],
  "w|gesso": [
   {
    "text": "Ogni mattina Stefano scrive con il gesso il menù del giorno sulla lavagna.",
@@ -34276,6 +34532,22 @@
    "en": "The shop cat left a scratch on Martina's hand.",
    "ko": "가게 고양이가 마르티나의 손을 할퀴었어요.",
    "blank": "graffio",
+   "src": "made"
+  }
+ ],
+ "w|graffito": [
+  {
+   "text": "Sul muro del municipio è comparso un graffito, e Stefano chiama la ditta delle pulizie.",
+   "en": "A graffito has appeared on the city hall wall, and Stefano calls the cleaning company.",
+   "ko": "시청 벽에 낙서가 생겨서 스테파노는 청소 업체에 전화해요.",
+   "blank": "graffito",
+   "src": "made"
+  },
+  {
+   "text": "Qualcuno ha disegnato un graffito colorato sul portone, e a Laura piace.",
+   "en": "Someone has drawn a colourful graffito on the front door, and Laura likes it.",
+   "ko": "누가 대문에 알록달록한 그라피티를 그렸는데 라우라는 마음에 들어요.",
+   "blank": "graffito",
    "src": "made"
   }
  ],
@@ -39269,6 +39541,22 @@
    "src": "made"
   }
  ],
+ "w|interazione": [
+  {
+   "text": "Stefano preferisce l'interazione diretta con i cittadini allo sportello online.",
+   "en": "Stefano prefers direct interaction with citizens to the online service desk.",
+   "ko": "스테파노는 온라인 창구보다 시민들과 직접 만나는 걸 더 좋아해요.",
+   "blank": "interazione",
+   "src": "made"
+  },
+  {
+   "text": "Nel condominio di Laura l'unica interazione tra vicini avviene in ascensore.",
+   "en": "In Laura's building the only interaction between neighbours happens in the lift.",
+   "ko": "라우라네 아파트에서 이웃끼리 마주치는 건 엘리베이터 안뿐이에요.",
+   "blank": "interazione",
+   "src": "made"
+  }
+ ],
  "w|intercettare": [
   {
    "text": "Simone riesce a intercettare il ministro all'uscita della conferenza.",
@@ -39734,6 +40022,22 @@
    "en": "At the machine, Laura has to insert her boarding pass into the reader.",
    "ko": "기계에서 라우라는 탑승권을 판독기에 넣어야 해요.",
    "blank": "introdurre",
+   "src": "made"
+  }
+ ],
+ "w|introduzione": [
+  {
+   "text": "Stefano scrive l'introduzione al bilancio annuale del comune.",
+   "en": "Stefano writes the introduction to the town's annual budget.",
+   "ko": "스테파노는 시의 연간 예산서 서문을 써요.",
+   "blank": "introduzione",
+   "src": "made"
+  },
+  {
+   "text": "Alla riunione di condominio l'amministratore fa una lunga introduzione prima di arrivare al punto, e Laura sbuffa.",
+   "en": "At the residents' meeting the manager gives a long introduction before getting to the point, and Laura sighs.",
+   "ko": "주민 회의에서 관리인이 본론 전에 서론을 길게 늘어놓자 라우라가 한숨을 쉬어요.",
+   "blank": "introduzione",
    "src": "made"
   }
  ],
@@ -40652,6 +40956,22 @@
    "en": "Francesca buys some tiles from an Israeli craftsman who lives in the village.",
    "ko": "프란체스카는 마을에 사는 이스라엘 출신 장인에게서 타일을 사요.",
    "blank": "israeliano",
+   "src": "made"
+  }
+ ],
+ "w|issare": [
+  {
+   "text": "Stefano aiuta il custode a issare la bandiera sul balcone del municipio.",
+   "en": "Stefano helps the caretaker hoist the flag on the city hall balcony.",
+   "ko": "스테파노는 관리인을 도와 시청 발코니에 깃발을 올려요.",
+   "blank": "issare",
+   "src": "made"
+  },
+  {
+   "text": "I traslocatori devono issare il divano di Laura dal balcone con una corda.",
+   "en": "The movers have to hoist Laura's sofa up through the balcony with a rope.",
+   "ko": "이삿짐센터 사람들은 라우라의 소파를 밧줄로 발코니로 끌어올려야 해요.",
+   "blank": "issare",
    "src": "made"
   }
  ],
@@ -45671,6 +45991,22 @@
    "src": "made"
   }
  ],
+ "w|mercatino": [
+  {
+   "text": "Stefano firma il permesso per il mercatino di Natale in piazza.",
+   "en": "Stefano signs the permit for the Christmas market in the square.",
+   "ko": "스테파노는 광장의 크리스마스 장터 허가서에 서명해요.",
+   "blank": "mercatino",
+   "src": "made"
+  },
+  {
+   "text": "Laura organizza un mercatino nel cortile per vendere i vestiti che non usa più.",
+   "en": "Laura organises a little market in the courtyard to sell the clothes she no longer wears.",
+   "ko": "라우라는 더 안 입는 옷을 팔려고 마당에서 작은 벼룩시장을 열어요.",
+   "blank": "mercatino",
+   "src": "made"
+  }
+ ],
  "w|mercato": [
   {
    "text": "Andiamo al mercato a comprare la frutta.",
@@ -45760,6 +46096,22 @@
    "en": "Chiara remembers the snack cake they used to share at break time.",
    "ko": "키아라는 쉬는 시간에 나눠 먹던 간식 과자를 떠올려요.",
    "blank": "merendina",
+   "src": "made"
+  }
+ ],
+ "w|meridionale": [
+  {
+   "text": "Prima di arrivare qui, Stefano ha lavorato a lungo in un piccolo comune dell'Italia meridionale.",
+   "en": "Before coming here, Stefano worked for a long time in a small town in southern Italy.",
+   "ko": "스테파노는 이곳에 오기 전에 이탈리아 남부의 작은 마을에서 오래 일했어요.",
+   "blank": "meridionale",
+   "src": "made"
+  },
+  {
+   "text": "Il lato meridionale del palazzo prende sole tutto il giorno, e Laura ci tiene le piante.",
+   "en": "The south side of the building gets sun all day, and Laura keeps her plants there.",
+   "ko": "건물 남쪽은 하루 종일 해가 들어서 라우라는 거기에 화분을 둬요.",
+   "blank": "meridionale",
    "src": "made"
   }
  ],
@@ -46563,6 +46915,22 @@
    "src": "made"
   }
  ],
+ "w|minorile": [
+  {
+   "text": "Stefano coordina un programma contro la delinquenza minorile nei quartieri periferici.",
+   "en": "Stefano coordinates a programme against juvenile crime in the outlying neighbourhoods.",
+   "ko": "스테파노는 외곽 동네의 청소년 범죄를 막는 프로그램을 맡고 있어요.",
+   "blank": "minorile",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino di Laura fa l'avvocato e si occupa di diritto minorile.",
+   "en": "Laura's neighbour is a lawyer and works in juvenile law.",
+   "ko": "라우라의 이웃은 변호사인데 소년법을 다뤄요.",
+   "blank": "minorile",
+   "src": "made"
+  }
+ ],
  "w|minuscolo": [
   {
    "text": "Sul muschio Paolo osserva un fiore minuscolo, quasi invisibile.",
@@ -46773,6 +47141,22 @@
    "en": "They tested a new type of missile.",
    "ko": "그들은 새 종류의 미사일을 시험했어.",
    "blank": "missile"
+  }
+ ],
+ "w|missionario": [
+  {
+   "text": "Un anziano missionario tornato dall'estero chiede a Stefano una sala per raccontare il suo viaggio.",
+   "en": "An elderly missionary back from abroad asks Stefano for a hall to talk about his journey.",
+   "ko": "외국에서 돌아온 나이 든 선교사가 여행 이야기를 할 강당을 스테파노에게 부탁해요.",
+   "blank": "missionario",
+   "src": "made"
+  },
+  {
+   "text": "Il signore dell'ultimo piano è stato missionario in Africa per molti anni, racconta Laura.",
+   "en": "The man on the top floor was a missionary in Africa for many years, Laura says.",
+   "ko": "꼭대기 층 할아버지는 아프리카에서 오랫동안 선교사로 지냈다고 라우라가 말해요.",
+   "blank": "missionario",
+   "src": "made"
   }
  ],
  "w|missione": [
@@ -47152,6 +47536,22 @@
    "en": "Elena asks the waiter not to bother the guests with loud music.",
    "ko": "엘레나는 웨이터에게 시끄러운 음악으로 손님들을 괴롭히지 말라고 부탁해요.",
    "blank": "molestare",
+   "src": "made"
+  }
+ ],
+ "w|molestatore": [
+  {
+   "text": "Secondo la cronaca locale un molestatore è stato fermato vicino alla stazione, e Stefano propone più luci nel parco.",
+   "en": "According to the local news a harasser was stopped near the station, and Stefano proposes more lights in the park.",
+   "ko": "지역 뉴스에 따르면 역 근처에서 성추행범이 붙잡혔고, 스테파노는 공원에 조명을 더 달자고 제안해요.",
+   "blank": "molestatore",
+   "src": "made"
+  },
+  {
+   "text": "Dopo una notizia su un molestatore in zona, i condomini di Laura decidono di mettere un citofono con telecamera.",
+   "en": "After a news report about a harasser in the area, Laura's fellow residents decide to install a video entryphone.",
+   "ko": "동네에 성추행범이 있다는 뉴스가 나온 뒤 라우라네 주민들은 카메라 달린 인터폰을 달기로 해요.",
+   "blank": "molestatore",
    "src": "made"
   }
  ],
@@ -47862,6 +48262,22 @@
    "en": "Elena got a fine because she had parked in front of the school.",
    "ko": "엘레나는 학교 앞에 주차해서 과태료를 물었어요.",
    "blank": "multa",
+   "src": "made"
+  }
+ ],
+ "w|multinazionale": [
+  {
+   "text": "Una società multinazionale vuole aprire una fabbrica in città, e Stefano studia il progetto.",
+   "en": "A multinational company wants to open a factory in town, and Stefano studies the plan.",
+   "ko": "다국적 기업이 시내에 공장을 열고 싶어 해서 스테파노가 계획서를 검토해요.",
+   "blank": "multinazionale",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo inquilino lavora per un'azienda multinazionale e viaggia sempre, dice Laura.",
+   "en": "The new tenant works for a multinational company and is always travelling, Laura says.",
+   "ko": "새 세입자는 다국적 기업에서 일해서 늘 출장 중이라고 라우라가 말해요.",
+   "blank": "multinazionale",
    "src": "made"
   }
  ],
@@ -50839,6 +51255,22 @@
    "blank": "ora"
   }
  ],
+ "w|oracolo": [
+  {
+   "text": "Per i colleghi Stefano è un oracolo: conosce ogni regolamento del comune a memoria.",
+   "en": "To his colleagues Stefano is an oracle: he knows every town regulation by heart.",
+   "ko": "동료들에게 스테파노는 척척박사예요. 시의 규정을 전부 외우고 있거든요.",
+   "blank": "oracolo",
+   "src": "made"
+  },
+  {
+   "text": "La portinaia è l'oracolo del palazzo: sa tutto di tutti, dice Laura ridendo.",
+   "en": "The concierge is the building's oracle: she knows everything about everyone, Laura says, laughing.",
+   "ko": "관리인 아주머니는 건물의 척척박사라서 모두에 대해 다 안다고 라우라가 웃으며 말해요.",
+   "blank": "oracolo",
+   "src": "made"
+  }
+ ],
  "w|orario": [
   {
    "text": "Controlla l'orario del treno.",
@@ -51866,6 +52298,22 @@
    "en": "The new production line will start in October, and Francesca will be in charge of it.",
    "ko": "새 생산 라인은 시월에 가동되고 프란체스카가 책임을 맡을 거예요.",
    "blank": "ottobre",
+   "src": "made"
+  }
+ ],
+ "w|ovale": [
+  {
+   "text": "Stefano disegna le aiuole della piazza come un grande ovale intorno alla fontana.",
+   "en": "Stefano designs the flowerbeds in the square as a large oval around the fountain.",
+   "ko": "스테파노는 광장 화단을 분수를 둘러싼 커다란 타원으로 설계해요.",
+   "blank": "ovale",
+   "src": "made"
+  },
+  {
+   "text": "Sul soffitto dell'ingresso di Laura c'è un ovale di stucco decorato.",
+   "en": "On the ceiling of Laura's hallway there is a decorated stucco oval.",
+   "ko": "라우라네 현관 천장에는 장식된 회반죽 타원이 있어요.",
+   "blank": "ovale",
    "src": "made"
   }
  ],
@@ -53286,6 +53734,22 @@
    "en": "Because of the fog the guests have only a partial view of the lake, Anna notices.",
    "ko": "안개 때문에 손님들은 호수를 일부만 볼 수 있다고 안나가 느껴요.",
    "blank": "parziale",
+   "src": "made"
+  }
+ ],
+ "w|parzialmente": [
+  {
+   "text": "La piazza davanti al municipio è parzialmente chiusa per i lavori, avvisa Stefano.",
+   "en": "The square in front of city hall is partly closed for works, Stefano warns.",
+   "ko": "시청 앞 광장이 공사 때문에 일부 막혀 있다고 스테파노가 알려요.",
+   "blank": "parzialmente",
+   "src": "made"
+  },
+  {
+   "text": "Il garage del condominio è parzialmente allagato, e Laura sposta la macchina in strada.",
+   "en": "The building's garage is partly flooded, and Laura moves her car onto the street.",
+   "ko": "아파트 주차장이 일부 물에 잠겨서 라우라는 차를 길가로 옮겨요.",
+   "blank": "parzialmente",
    "src": "made"
   }
  ],
@@ -59655,6 +60119,22 @@
    "blank": "provo"
   }
  ],
+ "w|provenienza": [
+  {
+   "text": "Per il censimento Stefano deve indicare la provenienza di ogni nuovo residente.",
+   "en": "For the census Stefano has to record where each new resident comes from.",
+   "ko": "스테파노는 인구 조사를 위해 새 주민마다 어디에서 왔는지 적어야 해요.",
+   "blank": "provenienza",
+   "src": "made"
+  },
+  {
+   "text": "Laura cerca la provenienza dello strano odore che sale dalle scale.",
+   "en": "Laura is looking for the source of the strange smell coming up the stairs.",
+   "ko": "라우라는 계단에서 올라오는 이상한 냄새가 어디서 나는지 찾고 있어요.",
+   "blank": "provenienza",
+   "src": "made"
+  }
+ ],
  "w|provenire": [
   {
    "text": "Stefano sa da dove provengono tutte le verdure che usa.",
@@ -59778,6 +60258,22 @@
    "en": "The dust in the old house gives Francesca a bad itch in her nose.",
    "ko": "낡은 집 먼지 때문에 프란체스카는 코가 몹시 간지러워요.",
    "blank": "prurito",
+   "src": "made"
+  }
+ ],
+ "w|pseudonimo": [
+  {
+   "text": "Una lettera di protesta arriva in comune firmata con uno pseudonimo, e Stefano non sa a chi rispondere.",
+   "en": "A letter of complaint arrives at the town hall signed with a pseudonym, and Stefano doesn't know whom to answer.",
+   "ko": "가명으로 서명한 항의 편지가 시청에 와서 스테파노는 누구에게 답해야 할지 몰라요.",
+   "blank": "pseudonimo",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino di Laura scrive gialli con uno pseudonimo, e nessuno nel palazzo lo sa.",
+   "en": "Laura's neighbour writes detective novels under a pseudonym, and nobody in the building knows.",
+   "ko": "라우라의 이웃은 필명으로 추리 소설을 쓰는데, 건물 안에서 아무도 몰라요.",
+   "blank": "pseudonimo",
    "src": "made"
   }
  ],
@@ -60269,6 +60765,22 @@
    "en": "I'll take care of it too.",
    "ko": "그것도 내가 알아서 할게.",
    "blank": "pure"
+  }
+ ],
+ "w|purgatorio": [
+  {
+   "text": "Per Stefano la fila all'anagrafe del lunedì mattina è un vero purgatorio.",
+   "en": "For Stefano the Monday morning queue at the registry office is real purgatory.",
+   "ko": "스테파노에게 월요일 아침 주민센터 줄은 그야말로 고역이에요.",
+   "blank": "purgatorio",
+   "src": "made"
+  },
+  {
+   "text": "Traslocare al quinto piano senza ascensore è stato un purgatorio, ricorda Laura.",
+   "en": "Moving to the fifth floor without a lift was purgatory, Laura remembers.",
+   "ko": "엘리베이터 없이 오 층으로 이사하는 건 고생 그 자체였다고 라우라는 기억해요.",
+   "blank": "purgatorio",
+   "src": "made"
   }
  ],
  "w|puro": [
@@ -64529,6 +65041,22 @@
    "src": "made"
   }
  ],
+ "w|rinascita": [
+  {
+   "text": "In consiglio comunale Stefano presenta un progetto per la rinascita del centro storico.",
+   "en": "At the town council Stefano presents a plan for the revival of the historic centre.",
+   "ko": "스테파노는 시의회에서 구도심을 되살릴 계획을 발표해요.",
+   "blank": "rinascita",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la ristrutturazione il vecchio palazzo di Laura vive una vera rinascita.",
+   "en": "After the renovation Laura's old building is enjoying a real rebirth.",
+   "ko": "수리 뒤에 라우라네 낡은 건물은 완전히 새로 태어났어요.",
+   "blank": "rinascita",
+   "src": "made"
+  }
+ ],
  "w|rinchiudere": [
   {
    "text": "Per sbaglio un cameriere ha rinchiuso Stefano nella dispensa per qualche minuto.",
@@ -66461,6 +66989,22 @@
    "en": "I still have sand in my shoes.",
    "ko": "신발에 아직 모래가 있어.",
    "blank": "sabbia"
+  }
+ ],
+ "w|sabotaggio": [
+  {
+   "text": "Al municipio qualcuno sospetta un sabotaggio dopo il guasto all'impianto elettrico, ma Stefano pensa a un corto circuito.",
+   "en": "At city hall someone suspects sabotage after the electrical failure, but Stefano thinks it was a short circuit.",
+   "ko": "시청에서 누군가 전기 고장 뒤에 고의적인 방해를 의심하지만, 스테파노는 합선이라고 생각해요.",
+   "blank": "sabotaggio",
+   "src": "made"
+  },
+  {
+   "text": "Laura sospetta un sabotaggio quando l'ascensore si ferma per la terza volta in una settimana.",
+   "en": "Laura suspects sabotage when the lift stops for the third time in a week.",
+   "ko": "엘리베이터가 일주일에 세 번째로 멈추자 라우라는 누가 일부러 망가뜨렸다고 의심해요.",
+   "blank": "sabotaggio",
+   "src": "made"
   }
  ],
  "w|sabotare": [
@@ -69253,6 +69797,22 @@
    "blank": "scusi"
   }
  ],
+ "w|sdolcinato": [
+  {
+   "text": "Il discorso del sindaco per la festa degli innamorati è un po' sdolcinato, pensa Stefano.",
+   "en": "The mayor's speech for Valentine's Day is a bit soppy, Stefano thinks.",
+   "ko": "연인의 날 시장 연설이 좀 닭살 돋는다고 스테파노는 생각해요.",
+   "blank": "sdolcinato",
+   "src": "made"
+  },
+  {
+   "text": "Il biglietto di auguri del vicino è così sdolcinato che Laura scoppia a ridere.",
+   "en": "The neighbour's greeting card is so soppy that Laura bursts out laughing.",
+   "ko": "이웃의 축하 카드가 너무 닭살 돋아서 라우라는 웃음을 터뜨려요.",
+   "blank": "sdolcinato",
+   "src": "made"
+  }
+ ],
  "w|se": [
   {
    "text": "Se ti va, usciamo.",
@@ -71611,6 +72171,22 @@
    "en": "This room is for a single guest.",
    "ko": "이 방은 혼자 쓰는 손님용이야.",
    "blank": "single"
+  }
+ ],
+ "w|singolare": [
+  {
+   "text": "Stefano riceve una richiesta singolare: un cittadino vuole sposarsi sul tetto del municipio.",
+   "en": "Stefano receives an unusual request: a citizen wants to get married on the roof of city hall.",
+   "ko": "스테파노는 특이한 요청을 받아요. 한 시민이 시청 옥상에서 결혼하고 싶대요.",
+   "blank": "singolare",
+   "src": "made"
+  },
+  {
+   "text": "Laura ha un vicino singolare che annaffia le piante alle tre di notte.",
+   "en": "Laura has a peculiar neighbour who waters his plants at three in the morning.",
+   "ko": "라우라에게는 새벽 세 시에 화분에 물을 주는 특이한 이웃이 있어요.",
+   "blank": "singolare",
+   "src": "made"
   }
  ],
  "w|singolo": [
@@ -74945,6 +75521,22 @@
    "blank": "stabilito"
   }
  ],
+ "w|stabilizzare": [
+  {
+   "text": "Stefano spera di stabilizzare i contratti dei precari del comune entro l'anno.",
+   "en": "Stefano hopes to make the temporary council staff permanent within the year.",
+   "ko": "스테파노는 올해 안에 시청 비정규직의 계약을 정규직으로 바꾸고 싶어 해요.",
+   "blank": "stabilizzare",
+   "src": "made"
+  },
+  {
+   "text": "Prima di rifare la facciata, l'impresa deve stabilizzare le fondamenta del palazzo, spiega Laura.",
+   "en": "Before redoing the facade, the firm has to stabilise the building's foundations, Laura explains.",
+   "ko": "외벽을 새로 하기 전에 업체가 건물 기초를 단단히 다져야 한다고 라우라가 설명해요.",
+   "blank": "stabilizzare",
+   "src": "made"
+  }
+ ],
  "w|staccare": [
   {
    "text": "A giugno Marco ha staccato il suo disegno dalla parete dell'aula.",
@@ -75974,6 +76566,22 @@
    "en": "March weather is unpredictable, and Giulia goes out with an umbrella and sunglasses.",
    "ko": "삼월 날씨는 변덕스러워서 줄리아는 우산과 선글라스를 같이 챙겨 나가요.",
    "blank": "stravagante",
+   "src": "made"
+  }
+ ],
+ "w|straziante": [
+  {
+   "text": "La lettera di una madre sfrattata è straziante, e Stefano la legge due volte.",
+   "en": "The letter from an evicted mother is heartbreaking, and Stefano reads it twice.",
+   "ko": "집에서 쫓겨난 한 엄마의 편지가 너무 가슴 아파서 스테파노는 두 번 읽어요.",
+   "blank": "straziante",
+   "src": "made"
+  },
+  {
+   "text": "Il cane del vicino ulula in modo straziante quando resta solo, e Laura non riesce a dormire.",
+   "en": "The neighbour's dog howls heartbreakingly when it's left alone, and Laura can't sleep.",
+   "ko": "이웃집 개가 혼자 남으면 애처롭게 울부짖어서 라우라는 잠을 못 자요.",
+   "blank": "straziante",
    "src": "made"
   }
  ],
@@ -77697,6 +78305,22 @@
    "text": "La tattica di Martina per non piangere con le cipolle è tenerle in frigo.",
    "en": "Martina's tactic for not crying over onions is to keep them in the fridge.",
    "ko": "양파 때문에 울지 않으려고 마르티나는 양파를 냉장고에 넣어 둬요.",
+   "blank": "tattica",
+   "src": "made"
+  }
+ ],
+ "w|tattico": [
+  {
+   "text": "Rinviare la riunione è stato un errore tattico, ammette Stefano.",
+   "en": "Postponing the meeting was a tactical mistake, Stefano admits.",
+   "ko": "회의를 미룬 건 전략상 실수였다고 스테파노가 인정해요.",
+   "blank": "tattico",
+   "src": "made"
+  },
+  {
+   "text": "Quando vede l'amministratore sulle scale, Laura fa una ritirata tattica in casa.",
+   "en": "When she sees the building manager on the stairs, Laura makes a tactical retreat into her flat.",
+   "ko": "계단에서 관리인을 보면 라우라는 전략적으로 집 안으로 후퇴해요.",
    "blank": "tattica",
    "src": "made"
   }
@@ -82815,6 +83439,22 @@
    "en": "Revenge never brings peace.",
    "ko": "복수는 결코 평화를 가져오지 않아.",
    "blank": "vendetta"
+  }
+ ],
+ "w|vendicativo": [
+  {
+   "text": "Un consigliere vendicativo vota sempre contro le proposte di Stefano.",
+   "en": "A vindictive councillor always votes against Stefano's proposals.",
+   "ko": "앙심을 품은 시의원 한 명이 스테파노의 안건에 늘 반대표를 던져요.",
+   "blank": "vendicativo",
+   "src": "made"
+  },
+  {
+   "text": "Laura teme che il vicino vendicativo si lamenti di nuovo del suo cane.",
+   "en": "Laura fears that the vindictive neighbour will complain about her dog again.",
+   "ko": "라우라는 앙심 깊은 이웃이 또 자기 개 때문에 불평할까 봐 걱정해요.",
+   "blank": "vendicativo",
+   "src": "made"
   }
  ],
  "w|vendicatore": [

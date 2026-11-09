@@ -9027,6 +9027,22 @@
    "src": "made"
   }
  ],
+ "w|ابتهج": [
+  {
+   "text": "ابتهج أحمد حين وجد رسالة صديقه في صندوق البريد.",
+   "en": "Ahmad was delighted when he found his friend's letter in the mailbox.",
+   "ko": "아흐마드는 우편함에서 친구의 편지를 발견하고 기뻐했어요.",
+   "blank": "ابتهج",
+   "src": "made"
+  },
+  {
+   "text": "ابتهج الأطفال حين سمحت لهم مريم بلمس حجر النيزك.",
+   "en": "The children were delighted when Maryam let them touch the meteorite stone.",
+   "ko": "마리암이 운석을 만져 보게 해 주자 아이들이 신이 났어요.",
+   "blank": "ابتهج",
+   "src": "made"
+  }
+ ],
  "w|ابن": [
   {
    "text": "ابن الجيران يلعب في الحديقة.",
@@ -12855,6 +12871,22 @@
    "src": "made"
   }
  ],
+ "w|اصطدام": [
+  {
+   "text": "كتب أحمد عن اصطدام سيارته بعمود الإنارة، وطمأن صديقه بأنه لم يصب بأذى.",
+   "en": "Ahmad wrote about his car hitting a lamppost and reassured his friend that he wasn't hurt.",
+   "ko": "아흐마드는 차가 가로등에 부딪힌 일을 쓰고, 다치지 않았다고 친구를 안심시켰어요.",
+   "blank": "اصطدام",
+   "src": "made"
+  },
+  {
+   "text": "سمعت مريم صوت اصطدام في القاعة المجاورة، فركضت لترى ما حدث.",
+   "en": "Maryam heard the sound of a crash in the next hall and ran to see what happened.",
+   "ko": "마리암은 옆 전시실에서 뭔가 부딪히는 소리를 듣고 무슨 일인지 보러 뛰어갔어요.",
+   "blank": "اصطدام",
+   "src": "made"
+  }
+ ],
  "w|اصطدم": [
   {
    "text": "اصطدم السائق بالحائط فجأة.",
@@ -15935,6 +15967,22 @@
    "src": "made"
   }
  ],
+ "w|انقباض": [
+  {
+   "text": "أصاب أحمد انقباض في صدره حين لم يصله رد طوال الشتاء.",
+   "en": "Ahmad felt a tightness in his chest when no reply came all winter.",
+   "ko": "겨울 내내 답장이 오지 않자 아흐마드는 가슴이 답답했어요.",
+   "blank": "انقباض",
+   "src": "made"
+  },
+  {
+   "text": "يثير الضوء الخافت في قاعة المقابر انقباضا عند بعض الزوار، كما لاحظت مريم.",
+   "en": "The dim light in the tombs hall makes some visitors feel uneasy, as Maryam noticed.",
+   "ko": "마리암이 보기에 무덤 전시실의 어스름한 조명은 몇몇 관람객의 마음을 무겁게 해요.",
+   "blank": "انقباضا",
+   "src": "made"
+  }
+ ],
  "w|انقراض": [
   {
    "text": "يربي سامي سلالة قديمة من الدجاج لينقذها من الانقراض.",
@@ -17209,6 +17257,22 @@
    "en": "My brother wants to become a sailor in the future.",
    "ko": "내 동생은 미래에 선원이 되고 싶어 해.",
    "blank": "بحار"
+  }
+ ],
+ "w|بحبوحة": [
+  {
+   "text": "أخبر أحمد صديقه أن أسرته تعيش الآن في بحبوحة بعد سنوات صعبة.",
+   "en": "Ahmad told his friend that his family now lives in comfort after hard years.",
+   "ko": "아흐마드는 힘든 몇 년이 지나고 이제 가족이 넉넉하게 산다고 친구에게 알렸어요.",
+   "blank": "بحبوحة",
+   "src": "made"
+  },
+  {
+   "text": "عاش التجار في هذه المدينة في بحبوحة، كما تدل الحلي المعروضة.",
+   "en": "The merchants of this city lived in comfort, as the displayed jewelry shows.",
+   "ko": "전시된 장신구가 보여 주듯 이 도시의 상인들은 넉넉하게 살았어요.",
+   "blank": "بحبوحة",
+   "src": "made"
   }
  ],
  "w|بحث": [
@@ -20493,6 +20557,22 @@
    "src": "made"
   }
  ],
+ "w|تأسى": [
+  {
+   "text": "تأسى أحمد على ضياع بعض رسائل صديقه حين انتقل من بيته.",
+   "en": "Ahmad grieved over losing some of his friend's letters when he moved house.",
+   "ko": "아흐마드는 이사하다가 친구의 편지 몇 통을 잃어버려 마음 아파했어요.",
+   "blank": "تأسى",
+   "src": "made"
+  },
+  {
+   "text": "تأسى زائر عجوز أمام صورة قريته التي هدمها الزلزال.",
+   "en": "An old visitor grieved in front of the picture of his village destroyed by the earthquake.",
+   "ko": "나이 든 관람객이 지진으로 무너진 자기 마을 사진 앞에서 슬퍼했어요.",
+   "blank": "تأسى",
+   "src": "made"
+  }
+ ],
  "w|تأسيس": [
   {
    "text": "فتح سامي الموسوعة القديمة ليتأكد من تاريخ تأسيس الجريدة.",
@@ -21410,6 +21490,22 @@
    "en": "Layla noticed that the plan had crinkled from the rain.",
    "ko": "라일라는 도면이 비에 젖어 쭈글쭈글해진 걸 알아챘어요.",
    "blank": "تجعد",
+   "src": "made"
+  }
+ ],
+ "w|تجلد": [
+  {
+   "text": "تجلد أحمد حين وصله خبر وفاة معلمهما القديم.",
+   "en": "Ahmad held himself together when the news of their old teacher's death reached him.",
+   "ko": "옛 선생님의 부고를 받았을 때 아흐마드는 꾹 참고 마음을 다잡았어요.",
+   "blank": "تجلد",
+   "src": "made"
+  },
+  {
+   "text": "تقول مريم إن الأسير الذي كتب هذه الرسائل تجلد طوال سنوات سجنه.",
+   "en": "Maryam says the prisoner who wrote these letters endured patiently through his years in prison.",
+   "ko": "마리암은 이 편지를 쓴 포로가 수감된 내내 꿋꿋이 견뎠다고 말해요.",
+   "blank": "تجلد",
    "src": "made"
   }
  ],
@@ -23839,6 +23935,22 @@
    "blank": "تصالح"
   }
  ],
+ "w|تصبر": [
+  {
+   "text": "تصبر أحمد في ليالي الغربة بقراءة رسائل صديقه القديمة.",
+   "en": "Ahmad endured the nights abroad by reading his friend's old letters.",
+   "ko": "아흐마드는 타지의 밤을 친구의 옛 편지를 읽으며 견뎠어요.",
+   "blank": "تصبر",
+   "src": "made"
+  },
+  {
+   "text": "تصبر الطفل قليلا حتى جاء دوره لرؤية الهيكل العظمي.",
+   "en": "The child waited patiently for a bit until it was his turn to see the skeleton.",
+   "ko": "아이는 뼈대를 볼 차례가 올 때까지 조금 참고 기다렸어요.",
+   "blank": "تصبر",
+   "src": "made"
+  }
+ ],
  "w|تصحر": [
   {
    "text": "قرأ عمر أن بعض الأراضي جنوب الغابة بدأت تتصحر.",
@@ -24004,6 +24116,22 @@
    "en": "Fatima prefers homemade sauce to ready-made factory-produced sauces.",
    "ko": "파티마는 공장에서 만든 기성 소스보다 집에서 만든 소스를 좋아해요.",
    "blank": "التصنيع",
+   "src": "made"
+  }
+ ],
+ "w|تصنيف": [
+  {
+   "text": "أخبر أحمد صديقه أن جامعتهما صعدت في تصنيف الجامعات هذا العام.",
+   "en": "Ahmad told his friend that their university rose in the university rankings this year.",
+   "ko": "아흐마드는 친구에게 둘이 다닌 대학이 올해 대학 순위에서 올랐다고 알려 줬어요.",
+   "blank": "تصنيف",
+   "src": "made"
+  },
+  {
+   "text": "تعمل مريم على تصنيف القطع الأثرية حسب العصر الذي جاءت منه.",
+   "en": "Maryam works on classifying the artifacts by the era they came from.",
+   "ko": "마리암은 유물을 시대별로 분류하는 일을 해요.",
+   "blank": "تصنيف",
    "src": "made"
   }
  ],
@@ -24421,6 +24549,22 @@
    "blank": "تعارف"
   }
  ],
+ "w|تعاسة": [
+  {
+   "text": "اعترف أحمد في رسالته بأن تعاسة الغربة أثقلت قلبه.",
+   "en": "Ahmad admitted in his letter that the misery of living abroad weighed on his heart.",
+   "ko": "아흐마드는 타지 생활의 불행이 마음을 짓눌렀다고 편지에서 털어놨어요.",
+   "blank": "تعاسة",
+   "src": "made"
+  },
+  {
+   "text": "تصور اللوحة تعاسة الفلاحين في سنة الجفاف، كما شرحت مريم.",
+   "en": "The painting depicts the misery of farmers in the year of drought, as Maryam explained.",
+   "ko": "마리암이 설명했듯이 그 그림은 가뭄 든 해 농민들의 비참함을 그려요.",
+   "blank": "تعاسة",
+   "src": "made"
+  }
+ ],
  "w|تعاطف": [
   {
    "text": "تعاطف أحمد مع بطل الرواية الذي فقد بيته في الحرب.",
@@ -24465,6 +24609,22 @@
    "en": "The children recovered from the cold quickly.",
    "ko": "아이들이 감기에서 빠르게 나았다.",
    "blank": "تعافى"
+  }
+ ],
+ "w|تعاقب": [
+  {
+   "text": "تعاقب على البيت القديم سكان كثيرون منذ رحل صديق أحمد.",
+   "en": "Many residents have come one after another to the old house since Ahmad's friend left.",
+   "ko": "아흐마드의 친구가 떠난 뒤로 그 옛집에는 여러 사람이 번갈아 살았어요.",
+   "blank": "تعاقب",
+   "src": "made"
+  },
+  {
+   "text": "تعاقب على حكم هذه المدينة ملوك كثيرون، كما شرحت مريم للطلاب.",
+   "en": "Many kings ruled this city one after another, as Maryam explained to the students.",
+   "ko": "마리암이 학생들에게 설명했듯이 이 도시는 여러 왕이 차례로 다스렸어요.",
+   "blank": "تعاقب",
+   "src": "made"
   }
  ],
  "w|تعاقد": [
@@ -24642,6 +24802,22 @@
    "en": "Huda's husband works for a distant mining company and returns at the end of the week.",
    "ko": "후다의 남편은 먼 곳의 광업 회사에서 일하고 주말에 돌아와요.",
    "blank": "تعدين",
+   "src": "made"
+  }
+ ],
+ "w|تعذب": [
+  {
+   "text": "تعذب أحمد أسابيع وهو ينتظر رد صديقه على رسالته الطويلة.",
+   "en": "Ahmad suffered for weeks waiting for his friend's reply to his long letter.",
+   "ko": "아흐마드는 긴 편지에 대한 친구의 답장을 기다리며 몇 주 동안 애를 태웠어요.",
+   "blank": "تعذب",
+   "src": "made"
+  },
+  {
+   "text": "تعذب الرسام سنوات قبل أن ينهي هذه اللوحة، كما تروي مريم.",
+   "en": "The painter struggled for years before finishing this painting, as Maryam tells.",
+   "ko": "마리암의 말로는 그 화가는 이 그림을 끝내기까지 몇 년을 괴로워했대요.",
+   "blank": "تعذب",
    "src": "made"
   }
  ],
@@ -25299,6 +25475,22 @@
    "src": "made"
   }
  ],
+ "w|تفتت": [
+  {
+   "text": "تفتت الورق القديم بين يدي أحمد حين فتح الرسالة الأولى.",
+   "en": "The old paper crumbled in Ahmad's hands when he opened the first letter.",
+   "ko": "아흐마드가 첫 편지를 펼치자 낡은 종이가 손안에서 부스러졌어요.",
+   "blank": "تفتت",
+   "src": "made"
+  },
+  {
+   "text": "تفتت جزء من التمثال الطيني قبل أن يصل إلى المتحف.",
+   "en": "Part of the clay statue crumbled before it reached the museum.",
+   "ko": "흙으로 만든 조각상의 일부가 박물관에 오기 전에 부서졌어요.",
+   "blank": "تفتت",
+   "src": "made"
+  }
+ ],
  "w|تفتح": [
   {
    "text": "الورد تفتح بعد المطر.",
@@ -25389,6 +25581,22 @@
    "en": "I want a clear explanation, not going in circles.",
    "ko": "빙빙 돌리지 말고 분명히 말해 줘.",
    "blank": "تفسير"
+  }
+ ],
+ "w|تفصيل": [
+  {
+   "text": "يحكي أحمد في رسائله كل تفصيل صغير من يومه.",
+   "en": "Ahmad tells every small detail of his day in his letters.",
+   "ko": "아흐마드는 편지에 하루의 사소한 일까지 하나하나 적어요.",
+   "blank": "تفصيل",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت مريم تفصيلا دقيقا في اللوحة لم ينتبه إليه أحد من قبل.",
+   "en": "Maryam noticed a fine detail in the painting that nobody had noticed before.",
+   "ko": "마리암은 아무도 눈치채지 못했던 그림 속 작은 부분을 발견했어요.",
+   "blank": "تفصيلا",
+   "src": "made"
   }
  ],
  "w|تفضل": [
@@ -25834,6 +26042,22 @@
    "en": "Because of sugar rationing, Huda doesn't sell more than two bags per customer.",
    "ko": "설탕 배급제 때문에 후다는 손님 한 명당 두 봉지까지만 팔아요.",
    "blank": "تقنين",
+   "src": "made"
+  }
+ ],
+ "w|تقوى": [
+  {
+   "text": "تقوى أحمد بكلمات صديقه في أيام مرضه الطويل.",
+   "en": "Ahmad drew strength from his friend's words during his long illness.",
+   "ko": "아흐마드는 오래 앓는 동안 친구의 말에서 힘을 얻었어요.",
+   "blank": "تقوى",
+   "src": "made"
+  },
+  {
+   "text": "تقوى الجدار القديم بدعامات حديدية، كما شرحت مريم للزوار.",
+   "en": "The old wall was strengthened with iron supports, as Maryam explained to visitors.",
+   "ko": "마리암이 관람객에게 설명했듯이 오래된 벽은 철제 버팀대로 보강됐어요.",
+   "blank": "تقوى",
    "src": "made"
   }
  ],
@@ -32997,6 +33221,22 @@
    "blank": "حرق"
   }
  ],
+ "w|حرقة": [
+  {
+   "text": "ما زالت حرقة الفراق في قلب أحمد رغم مرور السنين.",
+   "en": "The ache of separation is still in Ahmad's heart despite the passing years.",
+   "ko": "세월이 흘렀어도 아흐마드의 마음엔 이별의 아픔이 남아 있어요.",
+   "blank": "حرقة",
+   "src": "made"
+  },
+  {
+   "text": "بقيت في صوت الزائرة العجوز حرقة وهي تنظر إلى صورة قريتها.",
+   "en": "There was anguish in the old visitor's voice as she looked at the photo of her village.",
+   "ko": "나이 든 관람객은 자기 마을 사진을 보며 목소리에 아픔이 묻어났어요.",
+   "blank": "حرقة",
+   "src": "made"
+  }
+ ],
  "w|حرك": [
   {
    "text": "حرك الكرسي إلى الجانب.",
@@ -33065,6 +33305,22 @@
    "en": "I love silk clothes.",
    "ko": "실크 옷이 좋아.",
    "blank": "الحرير"
+  }
+ ],
+ "w|حريري": [
+  {
+   "text": "لف أحمد الرسالة بمنديل حريري كان صديقه قد أهداه إياه.",
+   "en": "Ahmad wrapped the letter in a silk handkerchief his friend had once given him.",
+   "ko": "아흐마드는 친구가 예전에 선물한 실크 손수건으로 편지를 쌌어요.",
+   "blank": "حريري",
+   "src": "made"
+  },
+  {
+   "text": "توقفت مريم طويلا أمام فستان حريري مطرز بخيوط الذهب.",
+   "en": "Maryam stopped for a long time in front of a silk dress embroidered with gold thread.",
+   "ko": "마리암은 금실로 수놓은 실크 드레스 앞에 오래 서 있었어요.",
+   "blank": "حريري",
+   "src": "made"
   }
  ],
  "w|حريص": [
@@ -36272,6 +36528,22 @@
    "en": "Huda puts the day's earnings in an iron cash box under the table.",
    "ko": "후다는 그날 번 돈을 탁자 밑 철제 금고에 넣어요.",
    "blank": "خزنة",
+   "src": "made"
+  }
+ ],
+ "w|خزي": [
+  {
+   "text": "غمر الخزي أحمد حين تذكر أنه نسي عيد ميلاد صديقه.",
+   "en": "Shame washed over Ahmad when he remembered he had forgotten his friend's birthday.",
+   "ko": "친구 생일을 잊었다는 걸 깨닫고 아흐마드는 몹시 부끄러웠어요.",
+   "blank": "الخزي",
+   "src": "made"
+  },
+  {
+   "text": "تشرح مريم أن الخائن في هذه الحكاية عاش بقية عمره في خزي.",
+   "en": "Maryam explains that the traitor in this tale lived the rest of his life in disgrace.",
+   "ko": "마리암은 이 이야기 속 배신자가 남은 생을 치욕 속에 살았다고 설명해요.",
+   "blank": "خزي",
    "src": "made"
   }
  ],
@@ -41148,6 +41420,22 @@
    "en": "The coach was gentle with Layla when she got a cramp in her leg.",
    "ko": "라일라가 다리에 쥐가 났을 때 코치는 너그럽게 대해 줬어요.",
    "blank": "رحيما",
+   "src": "made"
+  }
+ ],
+ "w|رخاء": [
+  {
+   "text": "كتب أحمد أن أيام الرخاء في بلدتهما انتهت حين أغلق المصنع.",
+   "en": "Ahmad wrote that the days of prosperity in their town ended when the factory closed.",
+   "ko": "아흐마드는 공장이 문을 닫으면서 고향의 풍족하던 시절이 끝났다고 썼어요.",
+   "blank": "الرخاء",
+   "src": "made"
+  },
+  {
+   "text": "تعرض القاعة الثالثة عملات من عصر رخاء عاشته المدينة.",
+   "en": "The third hall displays coins from an era of prosperity the city lived through.",
+   "ko": "세 번째 전시실에는 도시가 번영하던 시대의 동전이 전시돼 있어요.",
+   "blank": "رخاء",
    "src": "made"
   }
  ],
@@ -46227,6 +46515,22 @@
    "blank": "سلامة"
   }
  ],
+ "w|سلب": [
+  {
+   "text": "كتب أحمد أن العمل الطويل سلب منه وقت القراءة.",
+   "en": "Ahmad wrote that the long working hours robbed him of his reading time.",
+   "ko": "아흐마드는 긴 근무 시간 때문에 책 읽을 시간을 빼앗겼다고 썼어요.",
+   "blank": "سلب",
+   "src": "made"
+  },
+  {
+   "text": "سلب اللصوص هذا الكنز من المعبد قبل قرون، كما تروي مريم للزوار.",
+   "en": "Thieves stole this treasure from the temple centuries ago, as Maryam tells visitors.",
+   "ko": "마리암이 관람객에게 들려주듯, 도둑들이 수백 년 전 신전에서 이 보물을 빼앗아 갔어요.",
+   "blank": "سلب",
+   "src": "made"
+  }
+ ],
  "w|سلبي": [
   {
    "text": "لاحظ يوسف أن للضوء القوي أثرا سلبيا على الألوان في اللوحات القديمة.",
@@ -48217,6 +48521,22 @@
    "blank": "أشجع"
   }
  ],
+ "w|شجن": [
+  {
+   "text": "تملأ رسائل أحمد نبرة من الشجن حين يتذكر أيام المدرسة.",
+   "en": "A tone of melancholy fills Ahmad's letters when he remembers school days.",
+   "ko": "학창 시절을 떠올릴 때면 아흐마드의 편지에는 애잔함이 묻어나요.",
+   "blank": "الشجن",
+   "src": "made"
+  },
+  {
+   "text": "استمعت مريم إلى لحن قديم فيه شجن عميق في قاعة الآلات.",
+   "en": "Maryam listened to an old tune full of deep melancholy in the instruments hall.",
+   "ko": "마리암은 악기 전시실에서 깊은 애수가 담긴 옛 선율을 들었어요.",
+   "blank": "شجن",
+   "src": "made"
+  }
+ ],
  "w|شجيرة": [
   {
    "text": "اختبأ سلطعون صغير تحت شجيرة على حافة الرمل.",
@@ -49166,6 +49486,22 @@
    "en": "Rana pushed her way through the runners in the last kilometer.",
    "ko": "라나는 마지막 1킬로미터에서 선수들 사이를 뚫고 나아갔어요.",
    "blank": "شقت",
+   "src": "made"
+  }
+ ],
+ "w|شقاء": [
+  {
+   "text": "تذكر أحمد شقاء أيام الدراسة حين كانا يعملان ليلا ويدرسان نهارا.",
+   "en": "Ahmad remembered the hardship of student days when they worked at night and studied by day.",
+   "ko": "아흐마드는 밤에는 일하고 낮에는 공부하던 학창 시절의 고생을 떠올렸어요.",
+   "blank": "شقاء",
+   "src": "made"
+  },
+  {
+   "text": "يحكي المعرض الجديد شقاء عمال المناجم قبل قرن من الزمان.",
+   "en": "The new exhibition tells of the hardship of miners a century ago.",
+   "ko": "새 전시는 백 년 전 광부들의 고된 삶을 이야기해요.",
+   "blank": "شقاء",
    "src": "made"
   }
  ],
@@ -51235,6 +51571,22 @@
    "src": "made"
   }
  ],
+ "w|صفيحة": [
+  {
+   "text": "يحفظ أحمد رسائل صديقه في صفيحة حلوى قديمة.",
+   "en": "Ahmad keeps his friend's letters in an old candy tin.",
+   "ko": "아흐마드는 친구의 편지를 오래된 사탕 깡통에 보관해요.",
+   "blank": "صفيحة",
+   "src": "made"
+  },
+  {
+   "text": "نقش كاتب قديم اسمه على صفيحة من النحاس تعرضها مريم في الواجهة.",
+   "en": "An ancient scribe carved his name on a copper plate that Maryam displays in the case.",
+   "ko": "옛 서기가 이름을 새긴 구리판을 마리암이 진열장에 전시해요.",
+   "blank": "صفيحة",
+   "src": "made"
+  }
+ ],
  "w|صقر": [
   {
    "text": "درّب الرجل صقر للصيد.",
@@ -53266,6 +53618,22 @@
    "en": "Sara learned from a medical article that the spleen is on the left side of the abdomen.",
    "ko": "사라는 의학 기사에서 비장이 배 왼쪽에 있다는 것을 배웠어요.",
    "blank": "الطحال",
+   "src": "made"
+  }
+ ],
+ "w|طحلب": [
+  {
+   "text": "كتب أحمد أن طحلبا أخضر غطى جدار مدرستهما القديمة.",
+   "en": "Ahmad wrote that green moss had covered the wall of their old school.",
+   "ko": "아흐마드는 옛 학교 담벼락이 초록 이끼로 덮였다고 썼어요.",
+   "blank": "طحلبا",
+   "src": "made"
+  },
+  {
+   "text": "يغطي طحلب أخضر الحجر الذي أخرج من البحر، كما تشرح مريم للأطفال.",
+   "en": "Green algae covers the stone that was taken out of the sea, as Maryam explains to the children.",
+   "ko": "마리암이 아이들에게 설명하듯, 바다에서 건진 돌은 초록 해조로 덮여 있어요.",
+   "blank": "طحلب",
    "src": "made"
   }
  ],
@@ -58937,6 +59305,22 @@
    "blank": "تغش"
   }
  ],
+ "w|غصة": [
+  {
+   "text": "بقيت غصة في حلق أحمد بعد أن ودع صديقه في المحطة.",
+   "en": "A lump stayed in Ahmad's throat after he said goodbye to his friend at the station.",
+   "ko": "역에서 친구와 작별한 뒤 아흐마드는 목이 메었어요.",
+   "blank": "غصة",
+   "src": "made"
+  },
+  {
+   "text": "وقفت مريم أمام رسائل الجنود القديمة، وفي حلقها غصة.",
+   "en": "Maryam stood in front of the soldiers' old letters with a lump in her throat.",
+   "ko": "마리암은 군인들의 옛 편지 앞에서 목이 메었어요.",
+   "blank": "غصة",
+   "src": "made"
+  }
+ ],
  "w|غصن": [
   {
    "text": "كسر الريح غصن الشجرة.",
@@ -61299,6 +61683,22 @@
    "src": "made"
   }
  ],
+ "w|فعالية": [
+  {
+   "text": "دعا أحمد صديقه إلى فعالية ثقافية تقام في مدينتهما الشهر القادم.",
+   "en": "Ahmad invited his friend to a cultural event being held in their town next month.",
+   "ko": "아흐마드는 다음 달 고향에서 열리는 문화 행사에 친구를 초대했어요.",
+   "blank": "فعالية",
+   "src": "made"
+  },
+  {
+   "text": "نظمت مريم فعالية للأطفال في المتحف يوم الجمعة.",
+   "en": "Maryam organized an event for children at the museum on Friday.",
+   "ko": "마리암은 금요일에 박물관에서 아이들을 위한 행사를 열었어요.",
+   "blank": "فعالية",
+   "src": "made"
+  }
+ ],
  "w|فعل": [
   {
    "text": "سأتعلم كيف أستخدم فعل في الجملة.",
@@ -62408,6 +62808,22 @@
    "en": "Mariam bought woolen gloves because of the biting cold in the open market.",
    "ko": "마리암은 노천 시장의 매서운 추위 때문에 털장갑을 샀어요.",
    "blank": "القارس",
+   "src": "made"
+  }
+ ],
+ "w|قارض": [
+  {
+   "text": "سأل أحمد صديقه هل ما زال يربي ذلك القارض الصغير في قفصه.",
+   "en": "Ahmad asked his friend whether he still keeps that little rodent in its cage.",
+   "ko": "아흐마드는 친구에게 그 작은 설치류를 아직 우리에서 키우는지 물었어요.",
+   "blank": "القارض",
+   "src": "made"
+  },
+  {
+   "text": "في قسم الحيوانات هيكل قارض ضخم عاش قبل آلاف السنين.",
+   "en": "In the animal section there is the skeleton of a huge rodent that lived thousands of years ago.",
+   "ko": "동물관에는 수천 년 전에 살았던 거대한 설치류의 뼈대가 있어요.",
+   "blank": "قارض",
    "src": "made"
   }
  ],
@@ -64231,6 +64647,22 @@
    "en": "I like cotton clothes in summer.",
    "ko": "여름엔 면 옷이 좋아.",
    "blank": "القطن"
+  }
+ ],
+ "w|قطني": [
+  {
+   "text": "أرسل أحمد إلى صديقه القديم قميصا قطنيا مع الرسالة.",
+   "en": "Ahmad sent his old friend a cotton shirt along with the letter.",
+   "ko": "아흐마드는 편지와 함께 옛 친구에게 면 셔츠를 보냈어요.",
+   "blank": "قطنيا",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم في المتحف ثوبا قطنيا خاطته امرأة قبل مئة عام.",
+   "en": "Maryam saw a cotton gown in the museum that a woman sewed a hundred years ago.",
+   "ko": "마리암은 박물관에서 백 년 전 한 여인이 지은 면 옷을 봤어요.",
+   "blank": "قطنيا",
+   "src": "made"
   }
  ],
  "w|قطيع": [
@@ -67127,6 +67559,22 @@
    "src": "made"
   }
  ],
+ "w|كمد": [
+  {
+   "text": "كتب أحمد أن جارهما العجوز مات كمدا بعد أن فقد ابنه.",
+   "en": "Ahmad wrote that their old neighbor died of grief after losing his son.",
+   "ko": "아흐마드는 늙은 이웃이 아들을 잃고 상심 끝에 세상을 떠났다고 썼어요.",
+   "blank": "كمدا",
+   "src": "made"
+  },
+  {
+   "text": "تقول الحكاية تحت اللوحة إن الملكة ماتت من الكمد بعد رحيل زوجها.",
+   "en": "The story under the painting says the queen died of grief after her husband's passing.",
+   "ko": "그림 아래 이야기에는 왕비가 남편을 잃고 상심해 죽었다고 쓰여 있어요.",
+   "blank": "الكمد",
+   "src": "made"
+  }
+ ],
  "w|كمون": [
   {
    "text": "أحب طعم كمون في الأطباق الهندية.",
@@ -67692,6 +68140,22 @@
    "en": "The film crew celebrated Huda's birthday with a slice of chocolate cake.",
    "ko": "촬영팀은 초콜릿 케이크 한 조각으로 후다의 생일을 축하했어요.",
    "blank": "كيك",
+   "src": "made"
+  }
+ ],
+ "w|كيلا": [
+  {
+   "text": "كتب أحمد العنوان بخط واضح كيلا تضيع الرسالة.",
+   "en": "Ahmad wrote the address in clear handwriting so the letter wouldn't get lost.",
+   "ko": "아흐마드는 편지가 분실되지 않게 주소를 또박또박 썼어요.",
+   "blank": "كيلا",
+   "src": "made"
+  },
+  {
+   "text": "تطلب مريم من الزوار ألا يلمسوا الزجاج كيلا تبقى عليه آثار الأصابع.",
+   "en": "Maryam asks visitors not to touch the glass so that fingerprints don't stay on it.",
+   "ko": "마리암은 유리에 손자국이 남지 않게 관람객에게 만지지 말라고 부탁해요.",
+   "blank": "كيلا",
    "src": "made"
   }
  ],
@@ -68578,6 +69042,22 @@
    "en": "A mosquito bit Fatima while she was reading near the open window.",
    "ko": "파티마는 열린 창가에서 책을 읽다가 모기에 물렸어요.",
    "blank": "لدغت",
+   "src": "made"
+  }
+ ],
+ "w|لدغة": [
+  {
+   "text": "حكى أحمد لصديقه عن لدغة نحلة أصابته في الحديقة.",
+   "en": "Ahmad told his friend about a bee sting he got in the garden.",
+   "ko": "아흐마드는 친구에게 정원에서 벌에 쏘인 이야기를 했어요.",
+   "blank": "لدغة",
+   "src": "made"
+  },
+  {
+   "text": "يشرح لوح في المتحف أن لدغة هذه الأفعى قد تقتل خلال ساعات.",
+   "en": "A panel in the museum explains that this snake's bite can kill within hours.",
+   "ko": "박물관 안내판에는 이 뱀에게 물리면 몇 시간 안에 죽을 수 있다고 쓰여 있어요.",
+   "blank": "لدغة",
    "src": "made"
   }
  ],
@@ -72515,6 +72995,22 @@
    "blank": "متوتر"
   }
  ],
+ "w|متوجس": [
+  {
+   "text": "كان أحمد متوجسا من أن صديقه قد نسيه بعد كل هذه السنين.",
+   "en": "Ahmad was apprehensive that his friend might have forgotten him after all these years.",
+   "ko": "아흐마드는 이렇게 오랜 세월이 지나 친구가 자기를 잊었을까 봐 걱정했어요.",
+   "blank": "متوجسا",
+   "src": "made"
+  },
+  {
+   "text": "دخل طفل متوجس إلى قاعة المومياوات ممسكا بيد مريم.",
+   "en": "An apprehensive child entered the mummy hall holding Maryam's hand.",
+   "ko": "겁먹은 아이가 마리암의 손을 꼭 잡고 미라 전시실에 들어갔어요.",
+   "blank": "متوجس",
+   "src": "made"
+  }
+ ],
  "w|متوسط": [
   {
    "text": "معدلي الدراسي متوسط هذا العام.",
@@ -72737,6 +73233,22 @@
    "en": "You can explain to me, for example, in this way.",
    "ko": "예를 들어 이렇게 설명해 줄 수 있어.",
    "blank": "مثلا"
+  }
+ ],
+ "w|مثلث": [
+  {
+   "text": "رسم أحمد في آخر الرسالة مثلثا صغيرا، وهو رمزهما السري منذ المدرسة.",
+   "en": "Ahmad drew a small triangle at the end of the letter, their secret symbol since school.",
+   "ko": "아흐마드는 편지 끝에 작은 삼각형을 그렸는데, 학교 때부터 둘만의 비밀 표시예요.",
+   "blank": "مثلثا",
+   "src": "made"
+  },
+  {
+   "text": "أشارت مريم إلى قطعة حجرية على شكل مثلث وجدت في الصحراء.",
+   "en": "Maryam pointed to a triangle-shaped piece of stone found in the desert.",
+   "ko": "마리암은 사막에서 발견된 삼각형 모양의 돌 조각을 가리켰어요.",
+   "blank": "مثلث",
+   "src": "made"
   }
  ],
  "w|مثلجات": [
@@ -74783,6 +75295,22 @@
    "src": "made"
   }
  ],
+ "w|مدمر": [
+  {
+   "text": "كتب أحمد أن الفيضان الأخير كان مدمرا لقريتهما القديمة.",
+   "en": "Ahmad wrote that the last flood was devastating for their old village.",
+   "ko": "아흐마드는 지난번 홍수가 둘이 살던 옛 마을을 휩쓸었다고 썼어요.",
+   "blank": "مدمرا",
+   "src": "made"
+  },
+  {
+   "text": "تعرض القاعة الأخيرة صورا للزلزال المدمر الذي ضرب المدينة قديما.",
+   "en": "The last hall shows photos of the devastating earthquake that struck the city long ago.",
+   "ko": "마지막 전시실에는 오래전 도시를 덮친 파괴적인 지진의 사진이 걸려 있어요.",
+   "blank": "المدمر",
+   "src": "made"
+  }
+ ],
  "w|مدمن": [
   {
    "text": "هو مدمن على مشاهدة الأفلام.",
@@ -75397,6 +75925,22 @@
    "en": "Try this food once.",
    "ko": "이 음식을 한 번 먹어봐.",
    "blank": "مرة"
+  }
+ ],
+ "w|مرتاب": [
+  {
+   "text": "جاء الرد قصيرا وباردا، فبقي أحمد مرتابا في سببه أياما.",
+   "en": "The reply came short and cold, so Ahmad remained suspicious about the reason for days.",
+   "ko": "답장이 짧고 차가워서 아흐마드는 며칠 동안 그 이유를 의심했어요.",
+   "blank": "مرتابا",
+   "src": "made"
+  },
+  {
+   "text": "بدا الحارس مرتابا من رجل يصور كل لوحة عن قرب.",
+   "en": "The guard seemed suspicious of a man photographing every painting up close.",
+   "ko": "경비원은 그림마다 바짝 다가가 사진을 찍는 남자를 수상하게 여기는 듯했어요.",
+   "blank": "مرتابا",
+   "src": "made"
   }
  ],
  "w|مرتاح": [
@@ -76479,6 +77023,22 @@
    "en": "I am traveling to a new city tomorrow.",
    "ko": "나는 내일 새로운 도시로 여행한다.",
    "blank": "مسافر"
+  }
+ ],
+ "w|مساندة": [
+  {
+   "text": "لم ينس أحمد مساندة صديقه له حين خسر عمله.",
+   "en": "Ahmad never forgot his friend's support when he lost his job.",
+   "ko": "아흐마드는 일자리를 잃었을 때 친구가 곁에서 힘이 되어 준 걸 잊지 않았어요.",
+   "blank": "مساندة",
+   "src": "made"
+  },
+  {
+   "text": "قدمت مريم مساندة كبيرة لزميلتها الجديدة في أسبوعها الأول.",
+   "en": "Maryam gave a lot of support to her new colleague in her first week.",
+   "ko": "마리암은 새 동료가 첫 주를 잘 보내도록 많이 도와줬어요.",
+   "blank": "مساندة",
+   "src": "made"
   }
  ],
  "w|مساهم": [
@@ -78783,6 +79343,22 @@
    "en": "You are wanted in the manager's office.",
    "ko": "너는 관리자 사무실로 오라는 요청을 받았어.",
    "blank": "مطلوب"
+  }
+ ],
+ "w|مطمئن": [
+  {
+   "text": "نام أحمد مطمئنا بعد أن عرف أن صديقه بخير.",
+   "en": "Ahmad slept at ease after learning his friend was well.",
+   "ko": "아흐마드는 친구가 잘 지낸다는 걸 알고 마음 놓고 잤어요.",
+   "blank": "مطمئنا",
+   "src": "made"
+  },
+  {
+   "text": "خرجت مريم من المتحف مطمئنة إلى أن القطع كلها في مكانها.",
+   "en": "Maryam left the museum reassured that all the pieces were in place.",
+   "ko": "마리암은 유물이 모두 제자리에 있는 걸 확인하고 안심하며 박물관을 나섰어요.",
+   "blank": "مطمئنة",
+   "src": "made"
   }
  ],
  "w|مطول": [
@@ -85169,6 +85745,22 @@
    "src": "made"
   }
  ],
+ "w|ناج": [
+  {
+   "text": "روى أحمد قصة جارهما العجوز، وهو ناج من غرق سفينة في شبابه.",
+   "en": "Ahmad told the story of their old neighbor, a survivor of a shipwreck in his youth.",
+   "ko": "아흐마드는 젊을 때 배가 침몰했다가 살아남은 늙은 이웃의 이야기를 들려줬어요.",
+   "blank": "ناج",
+   "src": "made"
+  },
+  {
+   "text": "تحدث في المتحف ناج من الزلزال الكبير عن ليلة الكارثة.",
+   "en": "A survivor of the great earthquake spoke at the museum about the night of the disaster.",
+   "ko": "대지진의 생존자가 박물관에서 그 재난의 밤에 대해 이야기했어요.",
+   "blank": "ناج",
+   "src": "made"
+  }
+ ],
  "w|ناجح": [
   {
    "text": "أخي طالب ناجح في الجامعة.",
@@ -88161,6 +88753,22 @@
    "blank": "نكتة"
   }
  ],
+ "w|نكد": [
+  {
+   "text": "كتب أحمد ممازحا أن الحياة بلا رسائل صديقه نكد دائم.",
+   "en": "Ahmad wrote jokingly that life without his friend's letters is constant misery.",
+   "ko": "아흐마드는 친구 편지 없는 삶은 늘 우울하다고 농담처럼 썼어요.",
+   "blank": "نكد",
+   "src": "made"
+  },
+  {
+   "text": "تتجنب مريم النكد مع زملائها وتحل الخلاف بهدوء.",
+   "en": "Maryam avoids bickering with her colleagues and settles disagreements calmly.",
+   "ko": "마리암은 동료들과 언짢게 다투지 않고 의견 차이를 차분히 풀어요.",
+   "blank": "النكد",
+   "src": "made"
+  }
+ ],
  "w|نكهة": [
   {
    "text": "اخترت نكهة الفانيليا للآيس كريم.",
@@ -89563,6 +90171,22 @@
    "blank": "هنا"
   }
  ],
+ "w|هناء": [
+  {
+   "text": "يعيش أحمد اليوم في هناء مع أسرته الصغيرة، كما كتب لصديقه.",
+   "en": "Ahmad now lives in contentment with his small family, as he wrote to his friend.",
+   "ko": "아흐마드는 친구에게 쓴 대로 지금 작은 가족과 행복하게 살아요.",
+   "blank": "هناء",
+   "src": "made"
+  },
+  {
+   "text": "تصور اللوحة الكبيرة عائلة ريفية تجلس في هناء حول المائدة.",
+   "en": "The large painting shows a rural family sitting contentedly around the table.",
+   "ko": "큰 그림에는 시골 가족이 식탁에 둘러앉아 행복하게 지내는 모습이 담겨 있어요.",
+   "blank": "هناء",
+   "src": "made"
+  }
+ ],
  "w|هناك": [
   {
    "text": "هناك كتاب على الطاولة.",
@@ -90543,6 +91167,22 @@
    "en": "There is no existence of any problem.",
    "ko": "아무 문제도 없어.",
    "blank": "وجود"
+  }
+ ],
+ "w|وجوم": [
+  {
+   "text": "خيم الوجوم على أحمد بعد أن قرأ خبر مرض صديقه.",
+   "en": "A gloomy silence fell over Ahmad after he read the news of his friend's illness.",
+   "ko": "친구가 아프다는 소식을 읽고 아흐마드는 말없이 침울해졌어요.",
+   "blank": "الوجوم",
+   "src": "made"
+  },
+  {
+   "text": "ساد وجوم في القاعة حين روت مريم قصة السفينة الغارقة.",
+   "en": "A heavy silence fell over the hall when Maryam told the story of the sunken ship.",
+   "ko": "마리암이 침몰한 배 이야기를 하자 전시실에 무거운 침묵이 흘렀어요.",
+   "blank": "وجوم",
+   "src": "made"
   }
  ],
  "w|وجيز": [
