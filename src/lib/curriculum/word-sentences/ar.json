@@ -1237,6 +1237,22 @@
    "src": "made"
   }
  ],
+ "w|أخصائي": [
+  {
+   "text": "قابل سامي أخصائي تغذية لكتابة مقال عن الصيام.",
+   "en": "Sami met a nutrition specialist to write an article about fasting.",
+   "ko": "사미는 단식에 관한 기사를 쓰려고 영양 전문가를 만났어요.",
+   "blank": "أخصائي",
+   "src": "made"
+  },
+  {
+   "text": "نصح أخصائي العظام رنا بالتوقف كل ساعتين لتمد ظهرها.",
+   "en": "The orthopedic specialist advised Rana to stop every two hours to stretch her back.",
+   "ko": "정형외과 전문의는 라나에게 두 시간마다 쉬면서 허리를 펴라고 했어요.",
+   "blank": "أخصائي",
+   "src": "made"
+  }
+ ],
  "w|أخضر": [
   {
    "text": "الحديقة مليئة بالنباتات الخضراء.",
@@ -1751,6 +1767,22 @@
    "en": "I need four pens.",
    "ko": "네 개의 펜이 필요해.",
    "blank": "أربعة"
+  }
+ ],
+ "w|أربعمائة": [
+  {
+   "text": "كتب سامي مقالا من أربعمائة كلمة عن المهرجان.",
+   "en": "Sami wrote a four-hundred-word article about the festival.",
+   "ko": "사미는 축제에 관해 사백 단어짜리 기사를 썼어요.",
+   "blank": "أربعمائة",
+   "src": "made"
+  },
+  {
+   "text": "قادت رنا أربعمائة كيلومتر في يوم واحد.",
+   "en": "Rana drove four hundred kilometers in a single day.",
+   "ko": "라나는 하루 만에 사백 킬로미터를 달렸어요.",
+   "blank": "أربعمائة",
+   "src": "made"
   }
  ],
  "w|أربعون": [
@@ -7387,6 +7419,22 @@
    "blank": "إمكانية"
   }
  ],
+ "w|إملاء": [
+  {
+   "text": "صحح سامي أخطاء الإملاء في تقرير المتدرب الجديد.",
+   "en": "Sami corrected the spelling mistakes in the new intern's report.",
+   "ko": "사미는 새 인턴의 기사에서 맞춤법 실수를 고쳤어요.",
+   "blank": "الإملاء",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت رنا من خطأ الإملاء على لافتة المطعم.",
+   "en": "Rana laughed at the spelling mistake on the restaurant sign.",
+   "ko": "라나는 식당 간판의 맞춤법 실수를 보고 웃었어요.",
+   "blank": "الإملاء",
+   "src": "made"
+  }
+ ],
  "w|إن": [
   {
    "text": "إن الجو جميل اليوم.",
@@ -7625,6 +7673,38 @@
    "src": "made"
   }
  ],
+ "w|إياكم": [
+  {
+   "text": "قال سامي للمتدربين: إياكم ونشر خبر قبل التأكد منه.",
+   "en": "Sami told the interns: beware of publishing a story before verifying it.",
+   "ko": "사미는 인턴들에게 확인하기 전에는 절대 기사를 내지 말라고 했어요.",
+   "blank": "إياكم",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا لأطفالها: إياكم وإخراج أيديكم من النافذة.",
+   "en": "Rana told her children: don't you dare stick your hands out of the window.",
+   "ko": "라나는 아이들에게 창밖으로 절대 손을 내밀지 말라고 했어요.",
+   "blank": "إياكم",
+   "src": "made"
+  }
+ ],
+ "w|إيانا": [
+  {
+   "text": "سأل المصور: إيانا تقصد بهذا الكلام يا سامي؟",
+   "en": "The photographer asked: is it us you mean by that, Sami?",
+   "ko": "사진기자가 물었어요. \"사미, 그 말 우리한테 하는 거야?\"",
+   "blank": "إيانا",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا لصديقتها: ظننت أن الرجل الذي يلوح يقصد إيانا، لا السيارة الأخرى.",
+   "en": "Rana told her friend: I thought the waving man meant us, not the other car.",
+   "ko": "라나가 친구에게 말했어요. \"손 흔드는 사람이 다른 차가 아니라 우리를 부르는 줄 알았어.\"",
+   "blank": "إيانا",
+   "src": "made"
+  }
+ ],
  "w|إياه": [
   {
    "text": "إياه أقصد، مو أخوه.",
@@ -7651,6 +7731,22 @@
    "en": "We went back to the same problem again.",
    "ko": "다시 그 문제로 돌아갔어.",
    "blank": "إياها"
+  }
+ ],
+ "w|إياي": [
+  {
+   "text": "قال سامي: لم يخبر المدير أحدا بالسر إلا إياي.",
+   "en": "Sami said: the manager told no one the secret except me.",
+   "ko": "사미가 말했어요. \"부장님은 그 비밀을 나 말고는 아무에게도 말하지 않았어.\"",
+   "blank": "إياي",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا مازحة: لم تنتظر الحافلة أحدا من الركاب إلا إياي.",
+   "en": "Rana joked: the bus waited for none of the passengers except me.",
+   "ko": "라나가 농담했어요. \"버스가 승객 중에 나만 기다려 줬어.\"",
+   "blank": "إياي",
+   "src": "made"
   }
  ],
  "w|إيثار": [
@@ -8315,6 +8411,22 @@
    "en": "I bought two books.",
    "ko": "책 두 권을 샀어요.",
    "blank": "اثنان"
+  }
+ ],
+ "w|اثنتا": [
+  {
+   "text": "تعمل في قسم سامي اثنتا عشرة صحفية.",
+   "en": "Twelve female journalists work in Sami's department.",
+   "ko": "사미의 부서에는 여기자 열두 명이 일해요.",
+   "blank": "اثنتا",
+   "src": "made"
+  },
+  {
+   "text": "مرت اثنتا عشرة ساعة قبل أن تصل رنا إلى الحدود.",
+   "en": "Twelve hours passed before Rana reached the border.",
+   "ko": "라나가 국경에 닿기까지 열두 시간이 걸렸어요.",
+   "blank": "اثنتا",
+   "src": "made"
   }
  ],
  "w|اثنتان": [
@@ -9809,6 +9921,22 @@
    "src": "made"
   }
  ],
+ "w|استحوذ": [
+  {
+   "text": "كتب سامي أن شركة كبيرة استحوذت على المطبعة المحلية.",
+   "en": "Sami wrote that a big company had acquired the local printing house.",
+   "ko": "사미는 큰 회사가 지역 인쇄소를 인수했다고 썼어요.",
+   "blank": "استحوذت",
+   "src": "made"
+  },
+  {
+   "text": "استحوذت المناظر الجبلية على انتباه رنا طوال الطريق.",
+   "en": "The mountain scenery captured Rana's attention all the way.",
+   "ko": "산 풍경이 가는 내내 라나의 시선을 사로잡았어요.",
+   "blank": "استحوذت",
+   "src": "made"
+  }
+ ],
  "w|استحى": [
   {
    "text": "استحى الطفل من التحدث أمام الغرباء.",
@@ -11187,6 +11315,22 @@
    "src": "made"
   }
  ],
+ "w|اشترط": [
+  {
+   "text": "اشترط المصدر على سامي ألا يذكر اسمه.",
+   "en": "The source made it a condition that Sami not mention his name.",
+   "ko": "취재원은 사미에게 자기 이름을 밝히지 않는다는 조건을 걸었어요.",
+   "blank": "اشترط",
+   "src": "made"
+  },
+  {
+   "text": "اشترط صاحب السيارة المستأجرة أن تعيدها رنا بخزان ممتلئ.",
+   "en": "The rental car owner required Rana to return it with a full tank.",
+   "ko": "렌터카 주인은 라나에게 기름을 가득 채워 돌려 달라는 조건을 걸었어요.",
+   "blank": "اشترط",
+   "src": "made"
+  }
+ ],
  "w|اشترك": [
   {
    "text": "اشترك في القناة لمتابعة الجديد.",
@@ -12265,6 +12409,22 @@
    "en": "I overcame a difficult period of depression.",
    "ko": "힘든 우울증 시기를 극복했어.",
    "blank": "اكتئاب"
+  }
+ ],
+ "w|اكتتب": [
+  {
+   "text": "اكتتب كثير من القراء في أسهم الشركة بعد مقال سامي.",
+   "en": "Many readers subscribed to the company's shares after Sami's article.",
+   "ko": "사미의 기사가 나간 뒤 많은 독자가 그 회사 주식 청약에 참여했어요.",
+   "blank": "اكتتب",
+   "src": "made"
+  },
+  {
+   "text": "اكتتبت رنا مع رفاقها في جمع مال لإصلاح بئر القرية.",
+   "en": "Rana and her friends chipped in to a fund to fix the village well.",
+   "ko": "라나는 친구들과 마을 우물을 고칠 돈을 모으는 데 돈을 보탰어요.",
+   "blank": "اكتتبت",
+   "src": "made"
   }
  ],
  "w|اكتساب": [
@@ -17075,6 +17235,22 @@
    "src": "made"
   }
  ],
+ "w|بلاغة": [
+  {
+   "text": "أعجب رئيس التحرير ببلاغة سامي في مقال الافتتاحية.",
+   "en": "The editor-in-chief admired Sami's eloquence in the editorial.",
+   "ko": "편집장은 사설에 담긴 사미의 수사력에 감탄했어요.",
+   "blank": "ببلاغة",
+   "src": "made"
+  },
+  {
+   "text": "وصف الدليل الصحراء ببلاغة جعلت رنا تصمت طويلا.",
+   "en": "The guide described the desert so eloquently that Rana fell silent for a long time.",
+   "ko": "안내인이 사막을 어찌나 유려하게 묘사했는지 라나는 한참 말이 없었어요.",
+   "blank": "ببلاغة",
+   "src": "made"
+  }
+ ],
  "w|بلد": [
   {
    "text": "سافرت إلى بلد جديد في الصيف.",
@@ -17277,6 +17453,22 @@
    "en": "He slept as soon as he got home.",
    "ko": "그는 집에 도착하자마자 잠들었어.",
    "blank": "بمجرد"
+  }
+ ],
+ "w|بمحاذاة": [
+  {
+   "text": "وضعت إدارة الجريدة مكتب سامي بمحاذاة النافذة الكبيرة.",
+   "en": "The newspaper management put Sami's desk alongside the big window.",
+   "ko": "신문사는 사미의 책상을 큰 창문 옆에 붙여 놓았어요.",
+   "blank": "بمحاذاة",
+   "src": "made"
+  },
+  {
+   "text": "قادت رنا بمحاذاة البحر ساعتين كاملتين.",
+   "en": "Rana drove along the sea for two whole hours.",
+   "ko": "라나는 꼬박 두 시간 동안 바닷가를 따라 달렸어요.",
+   "blank": "بمحاذاة",
+   "src": "made"
   }
  ],
  "w|بموجب": [
@@ -17946,6 +18138,22 @@
    "en": "Huda works at a school that was founded a hundred years ago.",
    "ko": "후다는 백 년 전에 세워진 학교에서 일해요.",
    "blank": "تأسست",
+   "src": "made"
+  }
+ ],
+ "w|تأسيس": [
+  {
+   "text": "فتح سامي الموسوعة القديمة ليتأكد من تاريخ تأسيس الجريدة.",
+   "en": "Sami opened the old encyclopedia to check the date the newspaper was founded.",
+   "ko": "사미는 신문사 창간 날짜를 확인하려고 오래된 백과사전을 펼쳤어요.",
+   "blank": "تأسيس",
+   "src": "made"
+  },
+  {
+   "text": "زارت رنا قلعة يعود تأسيسها إلى قرون مضت.",
+   "en": "Rana visited a castle whose founding goes back centuries.",
+   "ko": "라나는 몇 세기 전에 세워진 성을 둘러봤어요.",
+   "blank": "تأسيسها",
    "src": "made"
   }
  ],
@@ -20066,6 +20274,22 @@
    "en": "Maryam organized a fun day for the employees in a public park.",
    "ko": "마리암은 공원에서 직원들을 위한 야유회를 열었어요.",
    "blank": "ترفيهيا",
+   "src": "made"
+  }
+ ],
+ "w|ترقى": [
+  {
+   "text": "ترقى سامي إلى منصب نائب رئيس التحرير.",
+   "en": "Sami was promoted to deputy editor-in-chief.",
+   "ko": "사미는 부편집장으로 승진했어요.",
+   "blank": "ترقى",
+   "src": "made"
+  },
+  {
+   "text": "احتفلت رنا برحلة طويلة بعد أن ترقت في عملها.",
+   "en": "Rana celebrated with a long trip after she was promoted at work.",
+   "ko": "라나는 승진한 뒤 긴 여행으로 자축했어요.",
+   "blank": "ترقت",
    "src": "made"
   }
  ],
@@ -22325,6 +22549,22 @@
    "blank": "تقاسمتم"
   }
  ],
+ "w|تقاضى": [
+  {
+   "text": "تقاضى سامي مكافأة إضافية عن تغطيته للفيضان.",
+   "en": "Sami received an extra bonus for his coverage of the flood.",
+   "ko": "사미는 홍수 취재로 추가 보너스를 받았어요.",
+   "blank": "تقاضى",
+   "src": "made"
+  },
+  {
+   "text": "تقاضى صاحب الموقف من رنا مبلغا كبيرا لليلة واحدة.",
+   "en": "The parking lot owner charged Rana a large sum for one night.",
+   "ko": "주차장 주인은 라나에게 하룻밤에 큰돈을 받았어요.",
+   "blank": "تقاضى",
+   "src": "made"
+  }
+ ],
  "w|تقاطع": [
   {
    "text": "انعطف يميناً عند التقاطع القادم.",
@@ -24183,6 +24423,22 @@
    "src": "made"
   }
  ],
+ "w|توسيع": [
+  {
+   "text": "تناقش الإدارة توسيع قسم سامي ليشمل الأخبار الرياضية.",
+   "en": "Management is discussing expanding Sami's department to include sports news.",
+   "ko": "경영진은 사미의 부서를 스포츠 뉴스까지 넓히는 걸 논의하고 있어요.",
+   "blank": "توسيع",
+   "src": "made"
+  },
+  {
+   "text": "تأخرت رنا بسبب أعمال توسيع الطريق السريع.",
+   "en": "Rana was delayed by the highway widening works.",
+   "ko": "라나는 고속도로 확장 공사 때문에 늦었어요.",
+   "blank": "توسيع",
+   "src": "made"
+  }
+ ],
  "w|توصل": [
   {
    "text": "توصل طلاب خالد إلى حل المسألة بعد نقاش طويل.",
@@ -24258,6 +24514,22 @@
    "en": "The company plans to localize some of its services in small cities.",
    "ko": "회사는 일부 서비스를 작은 도시들로 옮길 계획이에요.",
    "blank": "لتوطين",
+   "src": "made"
+  }
+ ],
+ "w|توظف": [
+  {
+   "text": "توظف سامي في الجريدة مباشرة بعد التخرج.",
+   "en": "Sami got hired at the newspaper right after graduating.",
+   "ko": "사미는 졸업하자마자 신문사에 취직했어요.",
+   "blank": "توظف",
+   "src": "made"
+  },
+  {
+   "text": "توظفت رنا حديثا، فأخذت أول إجازة لها في رحلة بالسيارة.",
+   "en": "Rana was recently hired, so she took her first vacation as a road trip.",
+   "ko": "라나는 얼마 전 취직해서 첫 휴가를 자동차 여행으로 보냈어요.",
+   "blank": "توظفت",
    "src": "made"
   }
  ],
@@ -27613,6 +27885,22 @@
    "src": "made"
   }
  ],
+ "w|جيولوجيا": [
+  {
+   "text": "سأل سامي خبيرا في الجيولوجيا عن سبب الهزة الأرضية.",
+   "en": "Sami asked a geology expert about the cause of the earthquake.",
+   "ko": "사미는 지질학 전문가에게 지진의 원인을 물었어요.",
+   "blank": "الجيولوجيا",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا كتابا عن جيولوجيا الجبال التي مرت بها.",
+   "en": "Rana bought a book about the geology of the mountains she passed through.",
+   "ko": "라나는 지나온 산들의 지질에 관한 책을 샀어요.",
+   "blank": "جيولوجيا",
+   "src": "made"
+  }
+ ],
  "w|حائر": [
   {
    "text": "الطالب حائر في الاختيار.",
@@ -27814,6 +28102,22 @@
    "en": "The editor-in-chief took Nour to task for a mistake in a guest's name.",
    "ko": "편집장은 손님 이름을 잘못 쓴 일로 누르를 나무랐어요.",
    "blank": "حاسب",
+   "src": "made"
+  }
+ ],
+ "w|حاسم": [
+  {
+   "text": "اتخذ سامي قرارا حاسما بنشر التحقيق كاملا.",
+   "en": "Sami made a decisive choice to publish the full investigation.",
+   "ko": "사미는 탐사 기사를 전부 싣기로 단호하게 결정했어요.",
+   "blank": "حاسما",
+   "src": "made"
+  },
+  {
+   "text": "كان قرار رنا بالعودة قبل العاصفة حاسما.",
+   "en": "Rana's decision to turn back before the storm was crucial.",
+   "ko": "폭풍 전에 돌아가기로 한 라나의 결정이 결정적이었어요.",
+   "blank": "حاسما",
    "src": "made"
   }
  ],
@@ -32373,6 +32677,22 @@
    "blank": "خطير"
   }
  ],
+ "w|خفاء": [
+  {
+   "text": "يعمل سامي في الخفاء على تحقيق كبير منذ شهرين.",
+   "en": "Sami has been working secretly on a big investigation for two months.",
+   "ko": "사미는 두 달째 몰래 큰 탐사 기사를 준비하고 있어요.",
+   "blank": "الخفاء",
+   "src": "made"
+  },
+  {
+   "text": "خرجت رنا من الخيمة في خفاء عن رفاقها لترى الشروق.",
+   "en": "Rana slipped out of the tent unseen by her friends to watch the sunrise.",
+   "ko": "라나는 해돋이를 보려고 친구들 몰래 텐트를 빠져나왔어요.",
+   "blank": "خفاء",
+   "src": "made"
+  }
+ ],
  "w|خفض": [
   {
    "text": "خفض الصوت قليلاً من فضلك.",
@@ -32866,6 +33186,22 @@
    "en": "Sara wrapped tape around her injured little finger.",
    "ko": "사라는 다친 새끼손가락에 테이프를 감았어요.",
    "blank": "خنصرها",
+   "src": "made"
+  }
+ ],
+ "w|خوارزمية": [
+  {
+   "text": "يشكو سامي من أن خوارزمية الموقع تخفي المقالات الطويلة.",
+   "en": "Sami complains that the site's algorithm hides long articles.",
+   "ko": "사미는 사이트 알고리즘이 긴 기사를 숨긴다고 불평해요.",
+   "blank": "خوارزمية",
+   "src": "made"
+  },
+  {
+   "text": "اقترحت خوارزمية التطبيق على رنا طريقا أقصر عبر الجبال.",
+   "en": "The app's algorithm suggested a shorter route through the mountains to Rana.",
+   "ko": "앱 알고리즘이 라나에게 산을 넘는 더 짧은 길을 추천했어요.",
+   "blank": "خوارزمية",
    "src": "made"
   }
  ],
@@ -34879,6 +35215,22 @@
    "blank": "ذرة"
   }
  ],
+ "w|ذروة": [
+  {
+   "text": "يصل ضغط العمل على سامي إلى ذروته ليلة الانتخابات.",
+   "en": "The work pressure on Sami peaks on election night.",
+   "ko": "사미의 업무 부담은 선거 날 밤에 정점에 달해요.",
+   "blank": "ذروته",
+   "src": "made"
+  },
+  {
+   "text": "وصلت رنا إلى قمة الجبل في ذروة الحر.",
+   "en": "Rana reached the mountaintop at the peak of the heat.",
+   "ko": "라나는 더위가 가장 심할 때 산꼭대기에 도착했어요.",
+   "blank": "ذروة",
+   "src": "made"
+  }
+ ],
  "w|ذعر": [
   {
    "text": "ذعر الناس في الشارع كان واضحًا.",
@@ -36185,6 +36537,22 @@
    "src": "made"
   }
  ],
+ "w|رديء": [
+  {
+   "text": "كان الاتصال رديئا فلم يسمع سامي المراسل جيدا.",
+   "en": "The connection was poor, so Sami couldn't hear the correspondent well.",
+   "ko": "연결 상태가 나빠서 사미는 특파원의 말을 잘 듣지 못했어요.",
+   "blank": "رديئا",
+   "src": "made"
+  },
+  {
+   "text": "نامت رنا ليلة في فندق رديء على الطريق.",
+   "en": "Rana spent a night in a poor roadside hotel.",
+   "ko": "라나는 길가의 허름한 호텔에서 하룻밤을 잤어요.",
+   "blank": "رديء",
+   "src": "made"
+  }
+ ],
  "w|رذاذ": [
   {
    "text": "وقف سامي على الصخرة ورذاذ الموج يبلل وجهه.",
@@ -37452,6 +37820,22 @@
    "en": "Huda starts her day with a fixed routine: she sweeps the sidewalk and opens the door.",
    "ko": "후다는 정해진 순서로 하루를 시작해요. 보도를 쓸고 문을 열어요.",
    "blank": "بروتين",
+   "src": "made"
+  }
+ ],
+ "w|روج": [
+  {
+   "text": "روج سامي لمقاله الجديد على حسابه الشخصي.",
+   "en": "Sami promoted his new article on his personal account.",
+   "ko": "사미는 개인 계정에 새 기사를 홍보했어요.",
+   "blank": "روج",
+   "src": "made"
+  },
+  {
+   "text": "روجت رنا في صفحتها لمطعم صغير وجدته على الطريق.",
+   "en": "Rana promoted a small restaurant she found on the road on her page.",
+   "ko": "라나는 길에서 찾은 작은 식당을 자기 페이지에 홍보했어요.",
+   "blank": "روجت",
    "src": "made"
   }
  ],
@@ -41309,6 +41693,22 @@
    "blank": "سير"
   }
  ],
+ "w|سيرة": [
+  {
+   "text": "كتب سامي سيرة قصيرة للكاتب الراحل في صفحة الثقافة.",
+   "en": "Sami wrote a short biography of the late writer on the culture page.",
+   "ko": "사미는 문화면에 세상을 떠난 작가의 짧은 약력을 썼어요.",
+   "blank": "سيرة",
+   "src": "made"
+  },
+  {
+   "text": "استمعت رنا في الطريق إلى كتاب صوتي عن سيرة رحالة مشهور.",
+   "en": "On the road Rana listened to an audiobook about the life of a famous traveler.",
+   "ko": "라나는 길에서 유명한 여행가의 일대기를 담은 오디오북을 들었어요.",
+   "blank": "سيرة",
+   "src": "made"
+  }
+ ],
  "w|سيرك": [
   {
    "text": "نظم كريم حركة المرور حول خيمة السيرك في عطلة العيد.",
@@ -42014,6 +42414,22 @@
    "en": "Fatima lent her new neighbor a winter blanket until his things arrived.",
    "ko": "파티마는 짐이 올 때까지 새 이웃에게 겨울 이불을 빌려줬어요.",
    "blank": "شتوية",
+   "src": "made"
+  }
+ ],
+ "w|شتى": [
+  {
+   "text": "يكتب سامي في شتى المواضيع، من السياسة إلى الطبخ.",
+   "en": "Sami writes on all kinds of topics, from politics to cooking.",
+   "ko": "사미는 정치부터 요리까지 온갖 주제로 글을 써요.",
+   "blank": "شتى",
+   "src": "made"
+  },
+  {
+   "text": "التقطت رنا صورا لطيور من شتى الأنواع.",
+   "en": "Rana took pictures of birds of all sorts of species.",
+   "ko": "라나는 온갖 종류의 새 사진을 찍었어요.",
+   "blank": "شتى",
    "src": "made"
   }
  ],
@@ -45341,6 +45757,22 @@
    "en": "Fishing requires a lot of patience.",
    "ko": "낚시는 많은 인내심이 필요해.",
    "blank": "صيد"
+  }
+ ],
+ "w|صيدلة": [
+  {
+   "text": "أجرى سامي مقابلة مع أستاذة صيدلة عن نقص الأدوية.",
+   "en": "Sami interviewed a pharmacy professor about the medicine shortage.",
+   "ko": "사미는 약 부족 문제로 약학 교수를 인터뷰했어요.",
+   "blank": "صيدلة",
+   "src": "made"
+  },
+  {
+   "text": "أخبرت رنا رفاقها أن أختها تدرس الصيدلة وتعرف علاج دوار السفر.",
+   "en": "Rana told her friends that her sister studies pharmacy and knows how to treat motion sickness.",
+   "ko": "라나는 친구들에게 언니가 약학을 공부해서 멀미 치료법을 안다고 했어요.",
+   "blank": "الصيدلة",
+   "src": "made"
   }
  ],
  "w|صيدلي": [
@@ -54255,6 +54687,22 @@
    "src": "made"
   }
  ],
+ "w|فهرس": [
+  {
+   "text": "فهرس سامي أرشيف الصور حسب السنوات.",
+   "en": "Sami indexed the photo archive by year.",
+   "ko": "사미는 사진 자료를 연도별로 목록을 만들었어요.",
+   "blank": "فهرس",
+   "src": "made"
+  },
+  {
+   "text": "فهرست رنا صور الرحلة حسب المدن.",
+   "en": "Rana catalogued the trip photos by city.",
+   "ko": "라나는 여행 사진을 도시별로 정리했어요.",
+   "blank": "فهرست",
+   "src": "made"
+  }
+ ],
  "w|فهم": [
   {
    "text": "هل فهم ما قلته؟",
@@ -57137,6 +57585,22 @@
    "blank": "كأننا"
   }
  ],
+ "w|كأنما": [
+  {
+   "text": "ركض سامي إلى غرفة الأخبار كأنما اشتعلت فيها النار.",
+   "en": "Sami ran to the newsroom as if it had caught fire.",
+   "ko": "사미는 보도국에 불이라도 난 것처럼 달려갔어요.",
+   "blank": "كأنما",
+   "src": "made"
+  },
+  {
+   "text": "بدت السهول من نافذة رنا كأنما رسمها فنان.",
+   "en": "The plains from Rana's window looked as if an artist had painted them.",
+   "ko": "라나의 창밖 들판은 마치 화가가 그린 것 같았어요.",
+   "blank": "كأنما",
+   "src": "made"
+  }
+ ],
  "w|كائن": [
   {
    "text": "وجد حسن في الحديقة كائنا صغيرا غريبا تبين أنه نوع من الحلزون.",
@@ -57979,6 +58443,22 @@
    "en": "Do you want more cherries?",
    "ko": "체리를 더 먹고 싶니?",
    "blank": "الكرز"
+  }
+ ],
+ "w|كرس": [
+  {
+   "text": "كرس سامي عشرين سنة من حياته للصحافة.",
+   "en": "Sami devoted twenty years of his life to journalism.",
+   "ko": "사미는 인생의 이십 년을 언론에 바쳤어요.",
+   "blank": "كرس",
+   "src": "made"
+  },
+  {
+   "text": "كرست رنا عطلتها كلها لهذه الرحلة.",
+   "en": "Rana devoted her entire vacation to this trip.",
+   "ko": "라나는 휴가 전부를 이번 여행에 쏟았어요.",
+   "blank": "كرست",
+   "src": "made"
   }
  ],
  "w|كرسي": [
@@ -59371,6 +59851,22 @@
    "en": "What he said was not proper in front of the guests.",
    "ko": "그의 말은 손님들 앞에서 적절하지 않았어.",
    "blank": "لائق"
+  }
+ ],
+ "w|لابتوب": [
+  {
+   "text": "نسي سامي لابتوب العمل في سيارة الأجرة صباحا.",
+   "en": "Sami left his work laptop in the taxi this morning.",
+   "ko": "사미는 아침에 업무용 노트북을 택시에 두고 내렸어요.",
+   "blank": "لابتوب",
+   "src": "made"
+  },
+  {
+   "text": "شحنت رنا اللابتوب من ولاعة السيارة.",
+   "en": "Rana charged the laptop from the car's cigarette lighter.",
+   "ko": "라나는 차 시거잭으로 노트북을 충전했어요.",
+   "blank": "اللابتوب",
+   "src": "made"
   }
  ],
  "w|لاجئ": [
@@ -61597,6 +62093,22 @@
    "blank": "مازال"
   }
  ],
+ "w|ماسح": [
+  {
+   "text": "وضع سامي الوثائق القديمة على الماسح ليحفظها في الأرشيف.",
+   "en": "Sami put the old documents on the scanner to save them in the archive.",
+   "ko": "사미는 오래된 문서를 기록 보관소에 남기려고 스캐너에 올렸어요.",
+   "blank": "الماسح",
+   "src": "made"
+  },
+  {
+   "text": "تعطل ماسح الزجاج في سيارة رنا تحت المطر.",
+   "en": "The windshield wiper on Rana's car broke down in the rain.",
+   "ko": "비가 오는데 라나 차의 와이퍼가 고장 났어요.",
+   "blank": "ماسح",
+   "src": "made"
+  }
+ ],
  "w|ماشية": [
   {
    "text": "ترافع أحمد عن مزارع اتهمه جاره بسرقة ماشيته.",
@@ -62693,6 +63205,22 @@
    "en": "Their words are similar in meaning.",
    "ko": "그들의 말은 의미가 비슷해.",
    "blank": "متشابه"
+  }
+ ],
+ "w|متصفح": [
+  {
+   "text": "فتح سامي المتصفح وبحث عن آخر الأخبار العاجلة.",
+   "en": "Sami opened the browser and searched for the latest breaking news.",
+   "ko": "사미는 브라우저를 열고 최신 속보를 찾아봤어요.",
+   "blank": "المتصفح",
+   "src": "made"
+  },
+  {
+   "text": "فتحت رنا الخريطة في متصفح الهاتف لأن التطبيق لا يعمل.",
+   "en": "Rana opened the map in the phone's browser because the app wasn't working.",
+   "ko": "앱이 안 돼서 라나는 휴대폰 브라우저로 지도를 열었어요.",
+   "blank": "متصفح",
+   "src": "made"
   }
  ],
  "w|متصل": [
@@ -64807,6 +65335,22 @@
    "en": "The goods were stored in a large warehouse.",
    "ko": "물품이 큰 창고에 보관되었어요.",
    "blank": "مخزن"
+  }
+ ],
+ "w|مخزون": [
+  {
+   "text": "قال سامي إن مخزون الورق في المطبعة يكفي أسبوعا فقط.",
+   "en": "Sami said the paper stock at the printing house is only enough for a week.",
+   "ko": "사미는 인쇄소의 종이 재고가 일주일 치밖에 없다고 했어요.",
+   "blank": "مخزون",
+   "src": "made"
+  },
+  {
+   "text": "نفد مخزون الماء في سيارة رنا قبل الوصول إلى البلدة.",
+   "en": "The water supply in Rana's car ran out before reaching the town.",
+   "ko": "마을에 닿기도 전에 라나 차에 실은 물이 다 떨어졌어요.",
+   "blank": "مخزون",
+   "src": "made"
   }
  ],
  "w|مخطئ": [
@@ -69355,6 +69899,22 @@
    "blank": "معلوماتي"
   }
  ],
+ "w|معلوماتية": [
+  {
+   "text": "طلب سامي من قسم المعلوماتية إصلاح الشبكة قبل الطبع.",
+   "en": "Sami asked the IT department to fix the network before printing.",
+   "ko": "사미는 인쇄 전에 전산팀에 네트워크를 고쳐 달라고 했어요.",
+   "blank": "المعلوماتية",
+   "src": "made"
+  },
+  {
+   "text": "يعمل زوج رنا مهندسا في المعلوماتية، فأصلح جهاز الملاحة بسرعة.",
+   "en": "Rana's husband is an IT engineer, so he fixed the navigation device quickly.",
+   "ko": "라나의 남편은 IT 엔지니어라서 내비게이션을 금방 고쳤어요.",
+   "blank": "المعلوماتية",
+   "src": "made"
+  }
+ ],
  "w|معمل": [
   {
    "text": "يأتي الحديد إلى الموقع من معمل قريب على أطراف المدينة.",
@@ -70906,6 +71466,22 @@
    "en": "Layla read her son a story about an explorer who crossed the ice in winter.",
    "ko": "라일라는 아들에게 겨울에 얼음을 건넌 탐험가 이야기를 읽어 줬어요.",
    "blank": "مكتشف",
+   "src": "made"
+  }
+ ],
+ "w|مكتمل": [
+  {
+   "text": "سلم سامي التقرير غير مكتمل لأن الوقت انتهى.",
+   "en": "Sami handed in the report incomplete because time ran out.",
+   "ko": "시간이 다 돼서 사미는 기사를 덜 끝낸 채 넘겼어요.",
+   "blank": "مكتمل",
+   "src": "made"
+  },
+  {
+   "text": "بقيت خريطة رنا غير مكتملة لأنها لم تزر الجنوب.",
+   "en": "Rana's map stayed incomplete because she didn't visit the south.",
+   "ko": "라나는 남쪽에 가지 못해서 지도를 다 채우지 못했어요.",
+   "blank": "مكتملة",
    "src": "made"
   }
  ],
@@ -73451,6 +74027,22 @@
    "src": "made"
   }
  ],
+ "w|موسوعة": [
+  {
+   "text": "فتح سامي الموسوعة القديمة ليتأكد من تاريخ تأسيس الجريدة.",
+   "en": "Sami opened the old encyclopedia to check the date the newspaper was founded.",
+   "ko": "사미는 신문사 창간 날짜를 확인하려고 오래된 백과사전을 펼쳤어요.",
+   "blank": "الموسوعة",
+   "src": "made"
+  },
+  {
+   "text": "قبل الرحلة قرأت رنا في الموسوعة عن تاريخ الواحات.",
+   "en": "Before the trip, Rana read about the history of the oases in the encyclopedia.",
+   "ko": "여행 전에 라나는 백과사전에서 오아시스의 역사를 읽었어요.",
+   "blank": "الموسوعة",
+   "src": "made"
+  }
+ ],
  "w|موسيقى": [
   {
    "text": "أحب الاستماع إلى موسيقى هادئة.",
@@ -74014,6 +74606,22 @@
    "en": "A dog barked at Sara and bared a long fang, so she picked up her pace.",
    "ko": "개가 사라에게 짖으며 긴 송곳니를 드러내서 사라는 걸음을 재촉했어요.",
    "blank": "ناب",
+   "src": "made"
+  }
+ ],
+ "w|ناتج": [
+  {
+   "text": "كتب سامي عن ارتفاع الناتج المحلي هذا العام.",
+   "en": "Sami wrote about the rise in domestic output this year.",
+   "ko": "사미는 올해 국내 총생산이 늘어난 것에 대해 썼어요.",
+   "blank": "الناتج",
+   "src": "made"
+  },
+  {
+   "text": "قال المرشد لرنا إن الملح حول البحيرة ناتج عن تبخر الماء.",
+   "en": "The guide told Rana the salt around the lake is the result of water evaporating.",
+   "ko": "안내인은 라나에게 호수 주변 소금이 물이 증발해서 생긴 거라고 했어요.",
+   "blank": "ناتج",
    "src": "made"
   }
  ],
@@ -74697,6 +75305,22 @@
    "en": "We will make an effort to get a good result.",
    "ko": "좋은 결과를 얻기 위해 노력할 것이다.",
    "blank": "نتيجة"
+  }
+ ],
+ "w|نثر": [
+  {
+   "text": "يكتب سامي النثر بسهولة، لكنه يتعب في كتابة العناوين القصيرة.",
+   "en": "Sami writes prose easily, but he struggles with writing short headlines.",
+   "ko": "사미는 산문은 쉽게 쓰지만 짧은 제목을 쓰는 건 힘들어해요.",
+   "blank": "النثر",
+   "src": "made"
+  },
+  {
+   "text": "تحب رنا قراءة النثر أكثر من الشعر في الطريق الطويل.",
+   "en": "On long drives Rana prefers reading prose to poetry.",
+   "ko": "긴 여정에서 라나는 시보다 산문 읽기를 더 좋아해요.",
+   "blank": "النثر",
+   "src": "made"
   }
  ],
  "w|نجا": [
@@ -76273,6 +76897,22 @@
    "en": "Do you prefer beef or chicken sausages?",
    "ko": "소고기 소시지와 닭고기 소시지 중 무엇을 더 좋아해?",
    "blank": "نقانق"
+  }
+ ],
+ "w|نقح": [
+  {
+   "text": "نقح سامي المقال ثلاث مرات قبل إرساله.",
+   "en": "Sami revised the article three times before sending it.",
+   "ko": "사미는 기사를 보내기 전에 세 번 다듬었어요.",
+   "blank": "نقح",
+   "src": "made"
+  },
+  {
+   "text": "نقحت رنا خطة الرحلة بعد إغلاق أحد الطرق.",
+   "en": "Rana revised the trip plan after one of the roads closed.",
+   "ko": "길 하나가 막히자 라나는 여행 계획을 고쳤어요.",
+   "blank": "نقحت",
+   "src": "made"
   }
  ],
  "w|نقد": [
