@@ -8,7 +8,14 @@
 
 없음
 
-## 탭이 확인할 것 (3)
+## 탭이 확인할 것 (5)
+
+### 탭 1 메인
+
+- **a261109-2-3** (2026-11-09 15:33, 탭 2 · 0d26174) Languagebank 자주 쓴 말·단어 화면 학습/대화 수 따로·같이 배우기 칩(사전 시트에서도 — Dictionary.tsx)
+  - 기능: 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
 
@@ -19,6 +26,10 @@
 - **a261109-2-2** (2026-11-09 15:09, 탭 2 · cf72967) Logbank 오늘을 ▶ Quizbank 하나로 합침(막힌 것·다시 학습·새로 학습·써 보기 카드 없음), todayCards.ts pickCards·doneOf 지움 → stuckKeys·answeredToday, Quizbank 다시 볼 것은 막힌 것 먼저, 표현 시작 단계 = 최근 실력 확인. 오늘 카드·써 보기를 가리키던 화면·글이 있으면 확인
   - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261109-2-4** (2026-11-09 15:33, 탭 2 · 0d26174) Languagebank 자주 쓴 말·단어 화면 학습/대화 수 따로·같이 배우기 칩(사전 시트에서도 — Dictionary.tsx)
+  - 기능: 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
+  - 볼 곳: `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

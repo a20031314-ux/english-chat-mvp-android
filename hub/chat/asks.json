@@ -380,6 +380,60 @@
       "base": "328d114d34530da4be97d7ba2dd45ca6090501e2",
       "head": "cf72967",
       "status": "open"
+    },
+    {
+      "id": "a261109-2-3",
+      "at": "2026-11-09 15:33",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "Languagebank 자주 쓴 말·단어 화면 학습/대화 수 따로·같이 배우기 칩(사전 시트에서도 — Dictionary.tsx)",
+      "files": [
+        "src/components/FindInMy.tsx"
+      ],
+      "features": [
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "686c32211e1341e24d1a1f5e2eef3661457c98fe",
+      "head": "0d26174",
+      "status": "open"
+    },
+    {
+      "id": "a261109-2-4",
+      "at": "2026-11-09 15:33",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "Languagebank 자주 쓴 말·단어 화면 학습/대화 수 따로·같이 배우기 칩(사전 시트에서도 — Dictionary.tsx)",
+      "files": [
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/components/roleplay/CallReplay.tsx"
+      ],
+      "features": [
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "686c32211e1341e24d1a1f5e2eef3661457c98fe",
+      "head": "0d26174",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -432,10 +486,26 @@
         "a261109-2-1",
         "a261109-2-2"
       ]
+    },
+    {
+      "at": "2026-11-09 15:33",
+      "from": "2",
+      "base": "686c32211e1341e24d1a1f5e2eef3661457c98fe",
+      "head": "0d26174",
+      "what": "Languagebank 자주 쓴 말·단어 화면 학습/대화 수 따로·같이 배우기 칩(사전 시트에서도 — Dictionary.tsx)",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261109-2-3",
+        "a261109-2-4"
+      ]
     }
   ],
   "seq": {
     "261109": 9,
-    "261109-2": 2
+    "261109-2": 4
   }
 }
