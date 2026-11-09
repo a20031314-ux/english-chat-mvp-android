@@ -931,6 +931,22 @@
    "src": "tatoeba:3334339/odexed en:29191/CK"
   }
  ],
+ "w|аромат": [
+  {
+   "text": "В офисе стоял аромат свежего кофе, и Павел сразу почувствовал себя лучше.",
+   "en": "The office smelled of fresh coffee, and Pavel immediately felt better.",
+   "ko": "사무실에 갓 내린 커피 향이 가득해서 파벨은 금세 기분이 나아졌어요.",
+   "blank": "аромат",
+   "src": "made"
+  },
+  {
+   "text": "Когда Елена открыла духовку, аромат корицы заполнил всю кухню.",
+   "en": "The aroma of cinnamon filled the kitchen when Elena opened the oven.",
+   "ko": "옐레나가 오븐을 열자 계피 향이 부엌에 가득 퍼졌어요.",
+   "blank": "аромат",
+   "src": "made"
+  }
+ ],
  "w|артерия": [
   {
    "text": "Хирург объяснил Никите, что укол делают подальше от крупной артерии.",
@@ -1056,6 +1072,22 @@
    "en": "After the courtyard was renovated the atmosphere became calmer, and Maria walks her dog there in the evenings.",
    "ko": "마당 공사가 끝나고 분위기가 차분해져서 마리아는 저녁마다 개를 데리고 산책해요.",
    "blank": "атмосфера",
+   "src": "made"
+  }
+ ],
+ "w|атом": [
+  {
+   "text": "Алексей объяснял сыну у костра, что всё вокруг состоит из атомов.",
+   "en": "By the campfire Alexei explained to his son that everything around is made of atoms.",
+   "ko": "알렉세이는 모닥불 옆에서 아들에게 세상 모든 게 원자로 되어 있다고 설명했어요.",
+   "blank": "атомов",
+   "src": "made"
+  },
+  {
+   "text": "Наталья прочитала, что зимой атомы в воде двигаются медленнее.",
+   "en": "Natalya read that in winter the atoms in water move more slowly.",
+   "ko": "나탈리야는 겨울에는 물속 원자가 더 느리게 움직인다는 글을 읽었어요.",
+   "blank": "атомы",
    "src": "made"
   }
  ],
@@ -1423,6 +1455,22 @@
    "src": "tatoeba:4489983/Wezel en:1173002/eastasiastudent"
   }
  ],
+ "w|барахло": [
+  {
+   "text": "На чердаке избушки Алексей хранит всякое барахло для рыбалки.",
+   "en": "Alexei keeps all sorts of fishing junk in the cabin's attic.",
+   "ko": "알렉세이는 오두막 다락에 낚시 잡동사니를 잔뜩 쌓아 둬요.",
+   "blank": "барахло",
+   "src": "made"
+  },
+  {
+   "text": "Каждую весну Наталья выносит из кладовки ненужное барахло.",
+   "en": "Every spring Natalya clears unneeded junk out of the storeroom.",
+   "ko": "매년 봄 나탈리야는 창고에서 필요 없는 잡동사니를 내다 버려요.",
+   "blank": "барахло",
+   "src": "made"
+  }
+ ],
  "w|барбекю": [
   {
    "text": "Друзья позвали Никиту на зимнее барбекю за городом.",
@@ -1501,6 +1549,22 @@
    "ko": "저는 매일 시립 수영장에 가요.",
    "blank": "бассейн",
    "src": "tatoeba:1370094/Biga en:322429/Swift"
+  }
+ ],
+ "w|батарейка": [
+  {
+   "text": "В беспроводной мышке Павла села батарейка в первый же час.",
+   "en": "The battery in Pavel's wireless mouse died in the very first hour.",
+   "ko": "파벨의 무선 마우스 배터리가 첫 시간에 바로 나갔어요.",
+   "blank": "батарейка",
+   "src": "made"
+  },
+  {
+   "text": "В кухонных весах Елены села батарейка прямо во время урока.",
+   "en": "The battery in Elena's kitchen scale died right in the middle of the lesson.",
+   "ko": "수업 도중에 옐레나의 주방 저울 배터리가 나갔어요.",
+   "blank": "батарейка",
+   "src": "made"
   }
  ],
  "w|башня": [
@@ -2082,6 +2146,22 @@
    "en": "Arguing with the movers was pointless, so Anna just waited.",
    "ko": "이삿짐 직원들과 다투는 건 소용없는 일이라 안나는 그냥 기다렸어요.",
    "blank": "бессмысленным",
+   "src": "made"
+  }
+ ],
+ "w|бешенство": [
+  {
+   "text": "Принтер зажевал бумагу, и Павел чуть не пришёл в бешенство.",
+   "en": "The printer jammed the paper, and Pavel nearly flew into a rage.",
+   "ko": "프린터에 종이가 걸려서 파벨은 하마터면 폭발할 뻔했어요.",
+   "blank": "бешенство",
+   "src": "made"
+  },
+  {
+   "text": "Когда кто-то съел её пирожки, Елена пришла в настоящее бешенство.",
+   "en": "When someone ate her pies, Elena flew into a real rage.",
+   "ko": "누군가 자기 만두빵을 먹어 버리자 옐레나는 정말 불같이 화를 냈어요.",
+   "blank": "бешенство",
    "src": "made"
   }
  ],
@@ -3731,6 +3811,22 @@
    "src": "made"
   }
  ],
+ "w|быстренько": [
+  {
+   "text": "Перед дождём Алексей быстренько собрал палатку.",
+   "en": "Before the rain Alexei quickly packed up the tent.",
+   "ko": "비가 오기 전에 알렉세이는 얼른 텐트를 걷었어요.",
+   "blank": "быстренько",
+   "src": "made"
+  },
+  {
+   "text": "Перед грозой Наталья быстренько сняла бельё с верёвки.",
+   "en": "Before the thunderstorm Natalya quickly took the washing off the line.",
+   "ko": "천둥이 치기 전에 나탈리야는 얼른 빨래를 걷었어요.",
+   "blank": "быстренько",
+   "src": "made"
+  }
+ ],
  "w|быстро": [
   {
    "text": "Быстро вытри стол.",
@@ -4084,6 +4180,22 @@
    "en": "Before take-off Tatiana took a deep breath and closed her eyes.",
    "ko": "이륙 전에 타티야나는 숨을 깊이 들이쉬고 눈을 감았어요.",
    "blank": "вдох",
+   "src": "made"
+  }
+ ],
+ "w|вдохновение": [
+  {
+   "text": "Новый проект вызвал у Павла настоящее вдохновение.",
+   "en": "The new project gave Pavel real inspiration.",
+   "ko": "새 프로젝트는 파벨에게 진짜 영감을 불어넣었어요.",
+   "blank": "вдохновение",
+   "src": "made"
+  },
+  {
+   "text": "Новые рецепты Елена ищет там, где её посещает вдохновение, — на рынке.",
+   "en": "Elena looks for new recipes where inspiration strikes her — at the market.",
+   "ko": "옐레나는 영감이 떠오르는 곳, 시장에서 새 요리법을 찾아요.",
+   "blank": "вдохновение",
    "src": "made"
   }
  ],
@@ -5589,6 +5701,22 @@
    "src": "tatoeba:4659711/odexed en:10097604/ddnktr"
   }
  ],
+ "w|влево": [
+  {
+   "text": "Охранник объяснил Павлу, что бухгалтерия — влево по коридору.",
+   "en": "The security guard explained to Pavel that accounts is to the left down the corridor.",
+   "ko": "경비원이 파벨에게 회계팀은 복도에서 왼쪽이라고 알려 줬어요.",
+   "blank": "влево",
+   "src": "made"
+  },
+  {
+   "text": "Шеф попросил Елену сдвинуть кастрюлю чуть влево.",
+   "en": "The chef asked Elena to move the pot a little to the left.",
+   "ko": "셰프가 옐레나에게 냄비를 조금 왼쪽으로 옮기라고 했어요.",
+   "blank": "влево",
+   "src": "made"
+  }
+ ],
  "w|влезть": [
   {
    "text": "Сергей сократил статью, чтобы она смогла влезть в отведённое место на полосе.",
@@ -5698,6 +5826,22 @@
    "en": "He walks around the office like a teenager in love.",
    "ko": "그는 사랑에 빠진 십 대처럼 사무실을 돌아다녀요.",
    "blank": "влюблённый",
+   "src": "made"
+  }
+ ],
+ "w|влюбляться": [
+  {
+   "text": "Алексей шутит, что каждое лето заново влюбляется в эту реку.",
+   "en": "Alexei jokes that every summer he falls in love with this river all over again.",
+   "ko": "알렉세이는 여름마다 이 강에 새로 반한다고 농담해요.",
+   "blank": "влюбляется",
+   "src": "made"
+  },
+  {
+   "text": "Наталья уверена, что весной люди чаще влюбляются.",
+   "en": "Natalya is sure that people fall in love more often in spring.",
+   "ko": "나탈리야는 봄에 사람들이 더 자주 사랑에 빠진다고 믿어요.",
+   "blank": "влюбляются",
    "src": "made"
   }
  ],
@@ -6217,6 +6361,22 @@
    "ko": "그들은 막강한 무기를 가지고 있어요.",
    "blank": "военный",
    "src": "tatoeba:3344577/odexed en:1386709/quickfitter"
+  }
+ ],
+ "w|вождение": [
+  {
+   "text": "До лесной избушки Алексей добирается по разбитой дороге, и вождение там требует терпения.",
+   "en": "Alexei reaches the forest cabin on a broken road, and driving there takes patience.",
+   "ko": "알렉세이는 망가진 길로 숲속 오두막에 가는데, 그 길은 운전하려면 인내심이 필요해요.",
+   "blank": "вождение",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Наталья откладывает вождение, пока дороги не очистят ото льда.",
+   "en": "In winter Natalya puts off driving until the roads are cleared of ice.",
+   "ko": "겨울에 나탈리야는 길에 얼음이 치워질 때까지 운전을 미뤄요.",
+   "blank": "вождение",
+   "src": "made"
   }
  ],
  "w|вождь": [
@@ -8229,6 +8389,22 @@
    "src": "tatoeba:9442816/marafon en:8390509/Amastan"
   }
  ],
+ "w|выбрасывать": [
+  {
+   "text": "Павлу объяснили, что старые документы здесь нельзя просто выбрасывать.",
+   "en": "Pavel was told that old documents here can't just be thrown away.",
+   "ko": "파벨은 여기서는 오래된 서류를 그냥 버리면 안 된다는 설명을 들었어요.",
+   "blank": "выбрасывать",
+   "src": "made"
+  },
+  {
+   "text": "Шеф научил Елену не выбрасывать корки, а делать из них сухари.",
+   "en": "The chef taught Elena not to throw away crusts but to make rusks from them.",
+   "ko": "셰프는 옐레나에게 빵 껍질을 버리지 말고 러스크로 만들라고 가르쳤어요.",
+   "blank": "выбрасывать",
+   "src": "made"
+  }
+ ],
  "w|выбрать": [
   {
    "text": "Выбери сам.",
@@ -8618,6 +8794,22 @@
    "en": "Maria's neighbour keeps winning little things in the lottery.",
    "ko": "마리아의 이웃은 복권에서 자잘한 경품을 자꾸 타요.",
    "blank": "выигрывает",
+   "src": "made"
+  }
+ ],
+ "w|выигрыш": [
+  {
+   "text": "Павел шутит, что новая работа для него как выигрыш в лотерею.",
+   "en": "Pavel jokes that the new job is like a lottery win for him.",
+   "ko": "파벨은 새 직장이 자기에겐 복권 당첨 같다고 농담해요.",
+   "blank": "выигрыш",
+   "src": "made"
+  },
+  {
+   "text": "Курсы кулинарии Елена оплатила из выигрыша в конкурсе.",
+   "en": "Elena paid for the cooking course with her winnings from a contest.",
+   "ko": "옐레나는 대회 상금으로 요리 수업료를 냈어요.",
+   "blank": "выигрыша",
    "src": "made"
   }
  ],
@@ -10387,6 +10579,22 @@
    "src": "tatoeba:4741456/marafon en:4529141/CK"
   }
  ],
+ "w|голубь": [
+  {
+   "text": "Алексей кормит голубей, которые живут под крышей его сарая.",
+   "en": "Alexei feeds the pigeons that live under the roof of his shed.",
+   "ko": "알렉세이는 헛간 지붕 아래 사는 비둘기들에게 모이를 줘요.",
+   "blank": "голубей",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Наталья насыпает голубям семечки на подоконник.",
+   "en": "In winter Natalya scatters sunflower seeds on the windowsill for the pigeons.",
+   "ko": "겨울이면 나탈리야는 창턱에 비둘기들 먹으라고 해바라기씨를 뿌려 줘요.",
+   "blank": "голубям",
+   "src": "made"
+  }
+ ],
  "w|голый": [
   {
    "text": "За окном Михаил видел голые берёзы и первый снег.",
@@ -10528,6 +10736,22 @@
    "en": "The firewood is too damp to burn.",
    "ko": "장작이 너무 젖어서 안 타요.",
    "blank": "гореть",
+   "src": "made"
+  }
+ ],
+ "w|горизонт": [
+  {
+   "text": "С холма Алексей смотрел, как солнце садится за горизонт.",
+   "en": "From the hill Alexei watched the sun set below the horizon.",
+   "ko": "알렉세이는 언덕에서 해가 지평선 너머로 지는 걸 바라봤어요.",
+   "blank": "горизонт",
+   "src": "made"
+  },
+  {
+   "text": "Осенью над горизонтом Наталья часто видит клинья улетающих птиц.",
+   "en": "In autumn Natalya often sees wedges of departing birds above the horizon.",
+   "ko": "가을이면 나탈리야는 지평선 위로 떠나는 새 떼를 자주 봐요.",
+   "blank": "горизонтом",
    "src": "made"
   }
  ],
@@ -10872,6 +11096,22 @@
    "en": "In the painting Irina was copying, pirates are plundering a merchant ship.",
    "ko": "이리나가 따라 그린 그림에서는 해적들이 상선을 약탈하고 있어요.",
    "blank": "грабят",
+   "src": "made"
+  }
+ ],
+ "w|гравитация": [
+  {
+   "text": "Алексей объяснил сыну, что яблоки падают из-за гравитации.",
+   "en": "Alexei explained to his son that apples fall because of gravity.",
+   "ko": "알렉세이는 아들에게 사과가 중력 때문에 떨어진다고 설명했어요.",
+   "blank": "гравитации",
+   "src": "made"
+  },
+  {
+   "text": "Наталья шутит, что зимой гравитация тянет её обратно под одеяло.",
+   "en": "Natalya jokes that in winter gravity pulls her back under the blanket.",
+   "ko": "나탈리야는 겨울이면 중력이 자기를 다시 이불 속으로 끌어당긴다고 농담해요.",
+   "blank": "гравитация",
    "src": "made"
   }
  ],
@@ -11257,6 +11497,22 @@
    "src": "tatoeba:4626507/Wezel en:2809011/CK"
   }
  ],
+ "w|грусть": [
+  {
+   "text": "Павел с лёгкой грустью вспомнил прежних коллег.",
+   "en": "Pavel thought of his former colleagues with a touch of sadness.",
+   "ko": "파벨은 옛 동료들을 떠올리며 살짝 쓸쓸해졌어요.",
+   "blank": "грустью",
+   "src": "made"
+  },
+  {
+   "text": "На последнем занятии Елена с лёгкой грустью попрощалась с группой.",
+   "en": "At the last class Elena said goodbye to the group with a touch of sadness.",
+   "ko": "마지막 수업에서 옐레나는 조금 아쉬운 마음으로 반 사람들과 작별했어요.",
+   "blank": "грустью",
+   "src": "made"
+  }
+ ],
  "w|грязный": [
   {
    "text": "Отель, в котором я остановился, грязный.",
@@ -11457,6 +11713,22 @@
    "en": "We haven't taken a walk together in a long time.",
    "ko": "우리 같이 산책한 지 오래됐어.",
    "blank": "давно"
+  }
+ ],
+ "w|давность": [
+  {
+   "text": "Алексей нашёл в лесу старую землянку, но за давностью лет никто не помнит, чья она.",
+   "en": "Alexei found an old dugout in the forest, but it's been so long that nobody remembers whose it was.",
+   "ko": "알렉세이는 숲에서 오래된 토굴을 찾았는데 너무 오래돼서 누구 것이었는지 아무도 몰라요.",
+   "blank": "давностью",
+   "src": "made"
+  },
+  {
+   "text": "Наталья хранит семейный рецепт варенья, которому уже не один век давности.",
+   "en": "Natalya keeps a family jam recipe that is more than a century old.",
+   "ko": "나탈리야는 백 년도 넘은 집안 잼 레시피를 간직하고 있어요.",
+   "blank": "давности",
+   "src": "made"
   }
  ],
  "w|давным-давно": [
@@ -11669,6 +11941,22 @@
    "en": "I gave him the address.",
    "ko": "그 사람한테 주소를 줬어.",
    "blank": "дал"
+  }
+ ],
+ "w|дача": [
+  {
+   "text": "Начальник Павла сказал, что по пятницам уезжает на дачу пораньше.",
+   "en": "Pavel's boss said that on Fridays he leaves early for his dacha.",
+   "ko": "파벨의 상사는 금요일마다 다차에 일찍 간다고 했어요.",
+   "blank": "дачу",
+   "src": "made"
+  },
+  {
+   "text": "Зелень для салата Елена привезла со своей дачи.",
+   "en": "Elena brought the herbs for the salad from her dacha.",
+   "ko": "옐레나는 샐러드에 넣을 허브를 자기 다차에서 가져왔어요.",
+   "blank": "дачи",
+   "src": "made"
   }
  ],
  "w|два": [
@@ -12212,6 +12500,22 @@
    "en": "In the business literature section Anna was looking for a book on negotiations.",
    "ko": "경영 도서 코너에서 안나는 협상에 관한 책을 찾고 있었어요.",
    "blank": "деловой",
+   "src": "made"
+  }
+ ],
+ "w|дельфин": [
+  {
+   "text": "Алексей рассказывал детям, что в некоторых реках живут пресноводные дельфины.",
+   "en": "Alexei told the children that freshwater dolphins live in some rivers.",
+   "ko": "알렉세이는 아이들에게 어떤 강에는 민물 돌고래가 산다고 이야기해 줬어요.",
+   "blank": "дельфины",
+   "src": "made"
+  },
+  {
+   "text": "Летом на море Наталья видела, как у берега играли дельфины.",
+   "en": "In summer at the seaside Natalya saw dolphins playing near the shore.",
+   "ko": "여름에 바닷가에서 나탈리야는 돌고래들이 해안 가까이에서 노는 걸 봤어요.",
+   "blank": "дельфины",
    "src": "made"
   }
  ],
@@ -13839,6 +14143,22 @@
    "src": "made"
   }
  ],
+ "w|дорожный": [
+  {
+   "text": "На въезде в лес Алексей увидел дорожный знак с лосем.",
+   "en": "At the entrance to the forest Alexei saw a road sign with a moose on it.",
+   "ko": "알렉세이는 숲 입구에서 큰사슴 그림이 있는 도로 표지판을 봤어요.",
+   "blank": "дорожный",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Наталья всегда берёт с собой дорожный зонтик.",
+   "en": "In autumn Natalya always takes a travel umbrella with her.",
+   "ko": "가을에 나탈리야는 늘 휴대용 우산을 챙겨요.",
+   "blank": "дорожный",
+   "src": "made"
+  }
+ ],
  "w|доска": [
   {
    "text": "Андрей вспоминает, как друг рисовал карикатуры на школьной доске.",
@@ -14249,6 +14569,22 @@
    "src": "made"
   }
  ],
+ "w|дрова": [
+  {
+   "text": "Начальник Павла хвастался, что сам колет дрова на даче.",
+   "en": "Pavel's boss boasted that he chops firewood himself at his dacha.",
+   "ko": "파벨의 상사는 다차에서 장작을 직접 팬다고 자랑했어요.",
+   "blank": "дрова",
+   "src": "made"
+  },
+  {
+   "text": "Для урока в дровяной печи Елена вместе с шефом принесла дрова.",
+   "en": "For the wood-oven lesson Elena brought firewood together with the chef.",
+   "ko": "화덕 수업을 위해 옐레나는 셰프와 함께 장작을 날랐어요.",
+   "blank": "дрова",
+   "src": "made"
+  }
+ ],
  "w|дрожать": [
   {
    "text": "У Михаила дрожали руки, когда он надевал кольцо невесте.",
@@ -14400,6 +14736,22 @@
    "en": "Anna laughs that as a child she wore a silly bunny costume at a school party.",
    "ko": "안나는 어릴 때 학예회에서 우스운 토끼 옷을 입었다며 웃어요.",
    "blank": "дурацкий",
+   "src": "made"
+  }
+ ],
+ "w|дуть": [
+  {
+   "text": "С реки весь вечер дул холодный ветер, и Алексей надел куртку.",
+   "en": "A cold wind blew off the river all evening, and Alexei put on a jacket.",
+   "ko": "저녁 내내 강에서 찬 바람이 불어서 알렉세이는 재킷을 입었어요.",
+   "blank": "дул",
+   "src": "made"
+  },
+  {
+   "text": "В марте с юга начинает дуть тёплый ветер, и Наталья открывает окна.",
+   "en": "In March a warm wind starts to blow from the south, and Natalya opens the windows.",
+   "ko": "3월이 되면 남쪽에서 따뜻한 바람이 불기 시작해서 나탈리야는 창문을 열어요.",
+   "blank": "дуть",
    "src": "made"
   }
  ],
@@ -14646,6 +14998,22 @@
    "en": "The team acted as a single organism.",
    "ko": "팀은 한 몸처럼 움직였어요.",
    "blank": "единый",
+   "src": "made"
+  }
+ ],
+ "w|ежедневно": [
+  {
+   "text": "Павлу объяснили, что отчёт нужно отправлять ежедневно до шести.",
+   "en": "Pavel was told that the report has to be sent daily by six.",
+   "ko": "파벨은 보고서를 매일 6시 전까지 보내야 한다는 설명을 들었어요.",
+   "blank": "ежедневно",
+   "src": "made"
+  },
+  {
+   "text": "После курсов Елена ежедневно печёт хлеб дома.",
+   "en": "After the course Elena bakes bread at home every day.",
+   "ko": "수업을 들은 뒤로 옐레나는 매일 집에서 빵을 구워요.",
+   "blank": "ежедневно",
    "src": "made"
   }
  ],
@@ -15725,6 +16093,22 @@
    "src": "tatoeba:2880765/odexed en:2880753/patgfisher"
   }
  ],
+ "w|забор": [
+  {
+   "text": "Алексей починил забор вокруг огорода у реки.",
+   "en": "Alexei fixed the fence around the vegetable patch by the river.",
+   "ko": "알렉세이는 강가 텃밭을 두른 울타리를 고쳤어요.",
+   "blank": "забор",
+   "src": "made"
+  },
+  {
+   "text": "Весной Наталья покрасила забор на даче в зелёный цвет.",
+   "en": "In spring Natalya painted the fence at her dacha green.",
+   "ko": "봄에 나탈리야는 다차 울타리를 초록색으로 칠했어요.",
+   "blank": "забор",
+   "src": "made"
+  }
+ ],
  "w|забота": [
   {
    "text": "Безопасность - первейшая забота.",
@@ -16519,6 +16903,22 @@
    "src": "made"
   }
  ],
+ "w|заинтересоваться": [
+  {
+   "text": "Директор заинтересовался идеей Павла уже на первой встрече.",
+   "en": "The director became interested in Pavel's idea at the very first meeting.",
+   "ko": "사장은 첫 만남에서 바로 파벨의 아이디어에 관심을 보였어요.",
+   "blank": "заинтересовался",
+   "src": "made"
+  },
+  {
+   "text": "На курсах Елена всерьёз заинтересовалась японской кухней.",
+   "en": "At the course Elena became seriously interested in Japanese cooking.",
+   "ko": "옐레나는 수업을 들으며 일본 요리에 진지하게 관심을 갖게 됐어요.",
+   "blank": "заинтересовалась",
+   "src": "made"
+  }
+ ],
  "w|зайти": [
   {
    "text": "Зайди на минутку.",
@@ -17161,6 +17561,22 @@
    "src": "made"
   }
  ],
+ "w|замешательство": [
+  {
+   "text": "Когда Павла попросили выступить, он на секунду пришёл в замешательство.",
+   "en": "When Pavel was asked to speak, he was thrown into confusion for a second.",
+   "ko": "발표를 부탁받자 파벨은 순간 당황했어요.",
+   "blank": "замешательство",
+   "src": "made"
+  },
+  {
+   "text": "Увидев незнакомую рыбу, Елена пришла в лёгкое замешательство.",
+   "en": "Seeing an unfamiliar fish, Elena was a little confused.",
+   "ko": "처음 보는 생선을 보고 옐레나는 살짝 당황했어요.",
+   "blank": "замешательство",
+   "src": "made"
+  }
+ ],
  "w|замок": [
   {
    "text": "Зачем ты закрываешь дверь на замок?",
@@ -17392,6 +17808,22 @@
    "en": "The chef told Svetlana about the Western tradition of serving cheese after dessert.",
    "ko": "셰프는 스베틀라나에게 디저트 뒤에 치즈를 내는 서양 전통을 이야기했어요.",
    "blank": "западной",
+   "src": "made"
+  }
+ ],
+ "w|запаниковать": [
+  {
+   "text": "Павел чуть не запаниковал, когда не смог войти в рабочую почту.",
+   "en": "Pavel almost panicked when he couldn't log in to his work email.",
+   "ko": "파벨은 회사 메일에 로그인이 안 되자 하마터면 허둥댈 뻔했어요.",
+   "blank": "запаниковал",
+   "src": "made"
+  },
+  {
+   "text": "Когда сковорода вспыхнула, Елена чуть не запаниковала, но вовремя накрыла её крышкой.",
+   "en": "When the pan caught fire, Elena nearly panicked but covered it with a lid in time.",
+   "ko": "프라이팬에 불이 붙자 옐레나는 허둥댈 뻔했지만 제때 뚜껑을 덮었어요.",
+   "blank": "запаниковала",
    "src": "made"
   }
  ],
@@ -18675,6 +19107,22 @@
    "ko": "녹차랑 홍차 중에 뭐 좋아해?",
    "blank": "зелёный",
    "src": "tatoeba:3540448/odexed en:2731067/CK"
+  }
+ ],
+ "w|землетрясение": [
+  {
+   "text": "Старый лесник рассказал Алексею, что после землетрясения река поменяла русло.",
+   "en": "The old forester told Alexei that the river changed course after the earthquake.",
+   "ko": "늙은 산림 관리인은 지진이 난 뒤 강줄기가 바뀌었다고 알렉세이에게 말해 줬어요.",
+   "blank": "землетрясения",
+   "src": "made"
+  },
+  {
+   "text": "Наталья прочитала, что весной в горах случилось слабое землетрясение.",
+   "en": "Natalya read that there had been a weak earthquake in the mountains in spring.",
+   "ko": "나탈리야는 봄에 산에서 약한 지진이 났다는 기사를 읽었어요.",
+   "blank": "землетрясение",
+   "src": "made"
   }
  ],
  "w|земля": [
@@ -20297,6 +20745,22 @@
    "src": "tatoeba:8501890/odexed en:5336535/mailohilohi"
   }
  ],
+ "w|интуиция": [
+  {
+   "text": "Тропинку к роднику Алексей нашёл, доверившись интуиции.",
+   "en": "Alexei found the path to the spring by trusting his intuition.",
+   "ko": "알렉세이는 직감을 믿고 샘으로 가는 오솔길을 찾아냈어요.",
+   "blank": "интуиции",
+   "src": "made"
+  },
+  {
+   "text": "Наталье подсказала интуиция, что первый снег выпадет уже завтра.",
+   "en": "Natalya's intuition told her that the first snow would fall as soon as tomorrow.",
+   "ko": "나탈리야는 내일 바로 첫눈이 올 거라는 직감이 들었어요.",
+   "blank": "интуиция",
+   "src": "made"
+  }
+ ],
  "w|инфекция": [
   {
    "text": "Перед поездкой врач предупредил Михаила, что в дороге легко подхватить инфекцию.",
@@ -20434,6 +20898,22 @@
    "en": "Elena can't rule out that the sample was contaminated.",
    "ko": "옐레나는 시료가 오염됐을 가능성을 배제할 수 없어요.",
    "blank": "исключить",
+   "src": "made"
+  }
+ ],
+ "w|искра": [
+  {
+   "text": "Из костра Алексея высоко в небо летели искры.",
+   "en": "Sparks flew high into the sky from Alexei's campfire.",
+   "ko": "알렉세이의 모닥불에서 불티가 하늘 높이 날아올랐어요.",
+   "blank": "искры",
+   "src": "made"
+  },
+  {
+   "text": "Зимой от свитера Натальи в темноте сыплются искры.",
+   "en": "In winter sparks crackle off Natalya's sweater in the dark.",
+   "ko": "겨울이면 어둠 속에서 나탈리야의 스웨터에서 정전기 불꽃이 튀어요.",
+   "blank": "искры",
    "src": "made"
   }
  ],
@@ -22019,6 +22499,22 @@
    "src": "made"
   }
  ],
+ "w|клей": [
+  {
+   "text": "Павел заклеил порванную папку канцелярским клеем.",
+   "en": "Pavel glued the torn folder with office glue.",
+   "ko": "파벨은 찢어진 서류철을 사무용 풀로 붙였어요.",
+   "blank": "клеем",
+   "src": "made"
+  },
+  {
+   "text": "Елена сделала из муки и воды съедобный клей для пряничного домика.",
+   "en": "Elena made edible glue from flour and water for the gingerbread house.",
+   "ko": "옐레나는 밀가루와 물로 진저브레드 집을 붙일 먹는 풀을 만들었어요.",
+   "blank": "клей",
+   "src": "made"
+  }
+ ],
  "w|клетка": [
   {
    "text": "Эта клетка может защитить от акулы?",
@@ -22325,6 +22821,22 @@
    "src": "tatoeba:578291/Olya en:578282/darinmex"
   }
  ],
+ "w|коготь": [
+  {
+   "text": "На сосне Алексей заметил свежие следы медвежьих когтей.",
+   "en": "On a pine tree Alexei spotted fresh marks from a bear's claws.",
+   "ko": "알렉세이는 소나무에서 곰 발톱 자국이 새로 난 걸 발견했어요.",
+   "blank": "когтей",
+   "src": "made"
+  },
+  {
+   "text": "Соседская кошка поцарапала Наталье руку острыми когтями.",
+   "en": "The neighbour's cat scratched Natalya's hand with its sharp claws.",
+   "ko": "이웃집 고양이가 날카로운 발톱으로 나탈리야의 손을 할퀴었어요.",
+   "blank": "когтями",
+   "src": "made"
+  }
+ ],
  "w|код": [
   {
    "text": "Ты знаешь телефонный код?",
@@ -22576,6 +23088,22 @@
    "en": "Olga added a new cup to her collection on the shelf.",
    "ko": "올가는 새 컵을 선반 위 자기 수집품 사이에 놓았어요.",
    "blank": "коллекцию",
+   "src": "made"
+  }
+ ],
+ "w|колодец": [
+  {
+   "text": "Воду для чая Алексей берёт из старого колодца.",
+   "en": "Alexei takes water for tea from an old well.",
+   "ko": "알렉세이는 오래된 우물에서 찻물을 길어요.",
+   "blank": "колодца",
+   "src": "made"
+  },
+  {
+   "text": "Летом Наталья достаёт ледяную воду из колодца на даче.",
+   "en": "In summer Natalya draws icy water from the well at her dacha.",
+   "ko": "여름이면 나탈리야는 다차 우물에서 얼음장 같은 물을 길어요.",
+   "blank": "колодца",
    "src": "made"
   }
  ],
@@ -23257,6 +23785,22 @@
    "src": "made"
   }
  ],
+ "w|конфетка": [
+  {
+   "text": "Секретарь протянула Павлу мятную конфетку и пожелала удачи.",
+   "en": "The secretary handed Pavel a mint sweet and wished him luck.",
+   "ko": "비서가 파벨에게 박하사탕을 건네며 행운을 빌어 줬어요.",
+   "blank": "конфетку",
+   "src": "made"
+  },
+  {
+   "text": "Елена украсила торт маленькими шоколадными конфетками.",
+   "en": "Elena decorated the cake with little chocolate sweets.",
+   "ko": "옐레나는 작은 초콜릿 사탕으로 케이크를 장식했어요.",
+   "blank": "конфетками",
+   "src": "made"
+  }
+ ],
  "w|конфликт": [
   {
    "text": "Библиотекарь быстро уладила конфликт между Павлом и шумными школьниками.",
@@ -23765,6 +24309,22 @@
    "src": "made"
   }
  ],
+ "w|котёнок": [
+  {
+   "text": "Возле избушки Алексей подобрал брошенного котёнка.",
+   "en": "Near the cabin Alexei picked up an abandoned kitten.",
+   "ko": "알렉세이는 오두막 근처에서 버려진 새끼 고양이를 거뒀어요.",
+   "blank": "котёнка",
+   "src": "made"
+  },
+  {
+   "text": "Весной у кошки Натальи родился рыжий котёнок.",
+   "en": "In spring Natalya's cat had a ginger kitten.",
+   "ko": "봄에 나탈리야네 고양이가 주황색 새끼를 낳았어요.",
+   "blank": "котёнок",
+   "src": "made"
+  }
+ ],
  "w|который": [
   {
    "text": "Который час?",
@@ -24029,6 +24589,22 @@
    "src": "made"
   }
  ],
+ "w|креветка": [
+  {
+   "text": "Друг привёз Алексею к костру замороженные креветки.",
+   "en": "A friend brought Alexei frozen shrimp for the campfire.",
+   "ko": "친구가 모닥불에 구워 먹으라고 알렉세이에게 냉동 새우를 가져왔어요.",
+   "blank": "креветки",
+   "src": "made"
+  },
+  {
+   "text": "Летом на террасе Наталья жарит креветки на гриле.",
+   "en": "In summer Natalya grills shrimp on the terrace.",
+   "ko": "여름이면 나탈리야는 테라스에서 새우를 구워요.",
+   "blank": "креветки",
+   "src": "made"
+  }
+ ],
  "w|кредит": [
   {
    "text": "Хозяин ресторана взял кредит, чтобы обновить плиты.",
@@ -24221,6 +24797,22 @@
    "src": "made"
   }
  ],
+ "w|кристалл": [
+  {
+   "text": "В ручье Алексей нашёл камень с прозрачным кристаллом внутри.",
+   "en": "In the stream Alexei found a stone with a clear crystal inside.",
+   "ko": "알렉세이는 개울에서 속에 투명한 결정이 든 돌을 찾았어요.",
+   "blank": "кристаллом",
+   "src": "made"
+  },
+  {
+   "text": "На стекле Наталья разглядывала ледяные кристаллы, похожие на папоротник.",
+   "en": "On the glass Natalya studied ice crystals that looked like ferns.",
+   "ko": "나탈리야는 유리창에 핀 고사리 모양의 얼음 결정을 들여다봤어요.",
+   "blank": "кристаллы",
+   "src": "made"
+  }
+ ],
  "w|критика": [
   {
    "text": "Иван спокойно принял критику своего сочинения.",
@@ -24343,6 +24935,22 @@
    "en": "Everyone except the cat is asleep.",
    "ko": "고양이만 빼고 다 자.",
    "blank": "кроме"
+  }
+ ],
+ "w|крот": [
+  {
+   "text": "Весь огород Алексея перекопал крот.",
+   "en": "A mole dug up Alexei's entire vegetable patch.",
+   "ko": "두더지가 알렉세이의 텃밭을 온통 파헤쳐 놓았어요.",
+   "blank": "крот",
+   "src": "made"
+  },
+  {
+   "text": "Весной Наталья заметила, что на лужайке снова поселился крот.",
+   "en": "In spring Natalya noticed that a mole had moved into the lawn again.",
+   "ko": "봄에 나탈리야는 잔디밭에 두더지가 다시 자리 잡은 걸 알아챘어요.",
+   "blank": "крот",
+   "src": "made"
   }
  ],
  "w|крошечный": [
@@ -25141,6 +25749,22 @@
    "src": "made"
   }
  ],
+ "w|лампочка": [
+  {
+   "text": "В избушке у Алексея перегорела последняя лампочка.",
+   "en": "The last light bulb in Alexei's cabin burned out.",
+   "ko": "알렉세이 오두막의 마지막 전구가 나갔어요.",
+   "blank": "лампочка",
+   "src": "made"
+  },
+  {
+   "text": "На новогодней ёлке у Натальи перегорела одна лампочка в гирлянде.",
+   "en": "One bulb in the garland on Natalya's New Year tree burned out.",
+   "ko": "나탈리야네 새해 트리 장식 줄의 전구 하나가 나갔어요.",
+   "blank": "лампочка",
+   "src": "made"
+  }
+ ],
  "w|ланч": [
   {
    "text": "Я всегда брал в школу ланч в упаковке.",
@@ -25327,6 +25951,22 @@
    "ko": "누워서 아무것도 안 하는 게 좋아요.",
    "blank": "лежать",
    "src": "tatoeba:12421427/marafon en:12421321/Orange"
+  }
+ ],
+ "w|лезвие": [
+  {
+   "text": "Алексей наточил лезвие топора перед тем, как колоть дрова.",
+   "en": "Alexei sharpened the axe blade before chopping wood.",
+   "ko": "알렉세이는 장작을 패기 전에 도끼날을 갈았어요.",
+   "blank": "лезвие",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Наталья меняет лезвие у старой газонокосилки.",
+   "en": "In autumn Natalya replaces the blade on her old lawnmower.",
+   "ko": "가을에 나탈리야는 낡은 잔디깎이 날을 갈아 끼워요.",
+   "blank": "лезвие",
+   "src": "made"
   }
  ],
  "w|лезть": [
@@ -26454,6 +27094,22 @@
    "en": "The major came in and everyone stood up.",
    "ko": "소령이 들어오자 모두 일어섰어요.",
    "blank": "Майор",
+   "src": "made"
+  }
+ ],
+ "w|макияж": [
+  {
+   "text": "У новой коллеги Павла такой яркий макияж, что он сначала растерялся.",
+   "en": "Pavel's new colleague wore such bold make-up that he was taken aback at first.",
+   "ko": "파벨의 새 동료는 화장이 너무 진해서 파벨은 처음에 당황했어요.",
+   "blank": "макияж",
+   "src": "made"
+  },
+  {
+   "text": "На кулинарные курсы Елена приходит без макияжа, чтобы не мешал пар.",
+   "en": "Elena comes to cooking class without make-up so the steam doesn't bother her.",
+   "ko": "옐레나는 김이 신경 쓰이지 않게 화장을 안 하고 요리 수업에 와요.",
+   "blank": "макияжа",
    "src": "made"
   }
  ],
@@ -29433,6 +30089,22 @@
    "src": "made"
   }
  ],
+ "w|мясник": [
+  {
+   "text": "Перед поездкой в лес Алексей купил у мясника кусок свинины.",
+   "en": "Before the trip to the forest Alexei bought a piece of pork from the butcher.",
+   "ko": "숲에 가기 전에 알렉세이는 정육점에서 돼지고기 한 덩이를 샀어요.",
+   "blank": "мясника",
+   "src": "made"
+  },
+  {
+   "text": "Перед зимой знакомый мясник советует Наталье запастись мясом.",
+   "en": "Before winter the butcher Natalya knows advises her to stock up on meat.",
+   "ko": "겨울이 오기 전에 단골 정육점 주인은 나탈리야에게 고기를 쟁여 두라고 해요.",
+   "blank": "мясник",
+   "src": "made"
+  }
+ ],
  "w|мясо": [
   {
    "text": "Вы предпочитаете белое или красное мясо?",
@@ -29540,6 +30212,22 @@
    "en": "Anna got some boiling water from the carriage boiler for tea.",
    "ko": "안나는 객차 온수기에서 차에 쓸 뜨거운 물을 받았어요.",
    "blank": "набрала",
+   "src": "made"
+  }
+ ],
+ "w|навеки": [
+  {
+   "text": "Павел запомнил свой первый рабочий день навеки.",
+   "en": "Pavel will remember his first working day forever.",
+   "ko": "파벨은 첫 출근 날을 평생 잊지 못할 거예요.",
+   "blank": "навеки",
+   "src": "made"
+  },
+  {
+   "text": "Бабушкин рецепт пирога Елена решила сохранить в своей тетради навеки.",
+   "en": "Elena decided to keep her grandmother's pie recipe in her notebook forever.",
+   "ko": "옐레나는 할머니의 파이 레시피를 공책에 영원히 간직하기로 했어요.",
+   "blank": "навеки",
    "src": "made"
   }
  ],
@@ -33305,6 +33993,22 @@
    "src": "made"
   }
  ],
+ "w|нить": [
+  {
+   "text": "Алексей привязал к удочке новую прочную нить.",
+   "en": "Alexei tied a strong new line to his fishing rod.",
+   "ko": "알렉세이는 낚싯대에 튼튼한 새 줄을 맸어요.",
+   "blank": "нить",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Наталья любит смотреть, как в воздухе летают тонкие нити паутины.",
+   "en": "In autumn Natalya likes watching thin threads of spider web float in the air.",
+   "ko": "가을에 나탈리야는 가는 거미줄이 바람에 날리는 걸 보는 게 좋아요.",
+   "blank": "нити",
+   "src": "made"
+  }
+ ],
  "w|ничего": [
   {
    "text": "Ничего страшного.",
@@ -34361,6 +35065,22 @@
    "src": "tatoeba:642541/Maksimo en:894769/pauldhunt"
   }
  ],
+ "w|обнимать": [
+  {
+   "text": "Перед выходом жена крепко обнимала Павла и желала ему удачи.",
+   "en": "Before he left, Pavel's wife hugged him tightly and wished him luck.",
+   "ko": "집을 나서기 전에 파벨의 아내가 그를 꼭 안아 주며 행운을 빌었어요.",
+   "blank": "обнимала",
+   "src": "made"
+  },
+  {
+   "text": "Довольный шеф готов был обнимать Елену за идеальное суфле.",
+   "en": "The delighted chef was ready to hug Elena for her perfect soufflé.",
+   "ko": "셰프는 옐레나의 완벽한 수플레에 기뻐서 안아 주고 싶을 정도였어요.",
+   "blank": "обнимать",
+   "src": "made"
+  }
+ ],
  "w|обнять": [
   {
    "text": "В холле отеля Андрей крепко обнял старого друга.",
@@ -34487,6 +35207,22 @@
    "ko": "수중 촬영 장비 있어요?",
    "blank": "оборудование",
    "src": "tatoeba:10456204/odexed en:10761063/AlanF_US"
+  }
+ ],
+ "w|обрадоваться": [
+  {
+   "text": "Павел очень обрадовался, когда увидел в отделе старого знакомого.",
+   "en": "Pavel was really pleased when he saw an old acquaintance in the department.",
+   "ko": "파벨은 부서에서 옛 지인을 보고 무척 반가웠어요.",
+   "blank": "обрадовался",
+   "src": "made"
+  },
+  {
+   "text": "Елена обрадовалась, когда её хлеб получился с хрустящей корочкой.",
+   "en": "Elena was delighted when her bread came out with a crispy crust.",
+   "ko": "옐레나는 빵이 바삭한 껍질로 구워지자 기뻐했어요.",
+   "blank": "обрадовалась",
+   "src": "made"
   }
  ],
  "w|образ": [
@@ -36335,6 +37071,22 @@
    "src": "tatoeba:598843/kobylkin en:33033/CK"
   }
  ],
+ "w|опоздание": [
+  {
+   "text": "Павел извинился за опоздание и тихо сел за стол.",
+   "en": "Pavel apologised for being late and quietly sat down at his desk.",
+   "ko": "파벨은 늦어서 죄송하다고 하고 조용히 자리에 앉았어요.",
+   "blank": "опоздание",
+   "src": "made"
+  },
+  {
+   "text": "Из-за опоздания Елена пропустила, как правильно резать лук.",
+   "en": "Because she was late, Elena missed how to cut onions properly.",
+   "ko": "옐레나는 늦게 와서 양파 써는 법을 놓쳤어요.",
+   "blank": "опоздания",
+   "src": "made"
+  }
+ ],
  "w|опоздать": [
   {
    "text": "Я спешил, чтобы не опоздать на поезд.",
@@ -36827,6 +37579,22 @@
    "src": "made"
   }
  ],
+ "w|осколок": [
+  {
+   "text": "Алексей порезал ногу об осколок стекла на берегу.",
+   "en": "Alexei cut his foot on a shard of glass on the riverbank.",
+   "ko": "알렉세이는 강가에서 유리 조각에 발을 베었어요.",
+   "blank": "осколок",
+   "src": "made"
+  },
+  {
+   "text": "Весной на реке Наталья видела, как льдина разбилась на осколки.",
+   "en": "In spring on the river Natalya saw an ice floe break into pieces.",
+   "ko": "봄에 나탈리야는 강에서 얼음장이 조각조각 깨지는 걸 봤어요.",
+   "blank": "осколки",
+   "src": "made"
+  }
+ ],
  "w|оскорбить": [
   {
    "text": "Иван извинился, что случайно оскорбил одноклассника шуткой.",
@@ -37047,6 +37815,22 @@
    "ko": "넌 나한테 특별해.",
    "blank": "особенный",
    "src": "tatoeba:9501252/Ricardo14 en:2821627/CK"
+  }
+ ],
+ "w|особняк": [
+  {
+   "text": "Офис, где теперь работает Павел, находится в старинном особняке.",
+   "en": "The office where Pavel now works is in an old mansion.",
+   "ko": "파벨이 이제 일하는 사무실은 오래된 저택 안에 있어요.",
+   "blank": "особняке",
+   "src": "made"
+  },
+  {
+   "text": "Занятия, на которые ходит Елена, проходят в бывшем купеческом особняке.",
+   "en": "The classes Elena attends are held in a former merchant's mansion.",
+   "ko": "옐레나가 다니는 수업은 옛 상인의 저택에서 열려요.",
+   "blank": "особняке",
+   "src": "made"
   }
  ],
  "w|особо": [
@@ -39937,6 +40721,22 @@
    "src": "made"
   }
  ],
+ "w|пауза": [
+  {
+   "text": "На совещании Павел сделал паузу, прежде чем ответить начальнику.",
+   "en": "At the meeting Pavel paused before answering the boss.",
+   "ko": "회의에서 파벨은 상사에게 대답하기 전에 잠시 멈췄어요.",
+   "blank": "паузу",
+   "src": "made"
+  },
+  {
+   "text": "Пока тесто поднималось, у Елены была пауза на чай.",
+   "en": "While the dough was rising, Elena had a break for tea.",
+   "ko": "반죽이 부풀 동안 옐레나는 잠깐 차를 마셨어요.",
+   "blank": "пауза",
+   "src": "made"
+  }
+ ],
  "w|паук": [
   {
    "text": "В углу пляжного домика Павел заметил паука с длинными лапками.",
@@ -40519,6 +41319,22 @@
    "src": "tatoeba:4061685/marafon en:2210905/CK"
   }
  ],
+ "w|пересадка": [
+  {
+   "text": "Чтобы добраться до работы, Павлу приходится делать пересадку на кольцевой.",
+   "en": "To get to work Pavel has to change trains on the circle line.",
+   "ko": "파벨은 출근하려면 순환선에서 갈아타야 해요.",
+   "blank": "пересадку",
+   "src": "made"
+  },
+  {
+   "text": "Елена едет на курсы с пересадкой и всегда берёт с собой фартук.",
+   "en": "Elena has to change on the way to class and always takes her apron with her.",
+   "ko": "옐레나는 갈아타고 수업에 가는데 늘 앞치마를 챙겨요.",
+   "blank": "пересадкой",
+   "src": "made"
+  }
+ ],
  "w|пересечь": [
   {
    "text": "За ночь поезд Павла пересёк три области.",
@@ -40626,6 +41442,22 @@
    "en": "Svetlana caught the minister at the exit and asked her question.",
    "ko": "스베틀라나는 출구에서 장관을 붙잡고 질문을 던졌어요.",
    "blank": "перехватила",
+   "src": "made"
+  }
+ ],
+ "w|переход": [
+  {
+   "text": "Павел не сразу нашёл подземный переход к офису.",
+   "en": "Pavel didn't find the underpass to the office right away.",
+   "ko": "파벨은 사무실로 가는 지하도를 바로 찾지 못했어요.",
+   "blank": "переход",
+   "src": "made"
+  },
+  {
+   "text": "Шеф показал Елене плавный переход от соуса к гарниру на тарелке.",
+   "en": "The chef showed Elena a smooth transition from sauce to side dish on the plate.",
+   "ko": "셰프가 옐레나에게 접시 위 소스에서 곁들임으로 자연스럽게 넘어가는 담음새를 보여 줬어요.",
+   "blank": "переход",
    "src": "made"
   }
  ],
@@ -41605,6 +42437,22 @@
    "ko": "그녀가 제 어깨에 머리를 기댔어요.",
    "blank": "плечо",
    "src": "tatoeba:5217866/Selena777 en:4149469/Hybrid"
+  }
+ ],
+ "w|плита": [
+  {
+   "text": "В избушке у Алексея стоит старая газовая плита.",
+   "en": "Alexei has an old gas stove in his cabin.",
+   "ko": "알렉세이의 오두막에는 낡은 가스레인지가 있어요.",
+   "blank": "плита",
+   "src": "made"
+  },
+  {
+   "text": "Холодными вечерами Наталья варит глинтвейн на плите.",
+   "en": "On cold evenings Natalya makes mulled wine on the stove.",
+   "ko": "추운 저녁이면 나탈리야는 레인지에 뱅쇼를 끓여요.",
+   "blank": "плите",
+   "src": "made"
   }
  ],
  "w|плод": [
@@ -45324,6 +46172,22 @@
    "en": "Thanks to Irina many pupils came to love chemistry.",
    "ko": "이리나 덕분에 많은 학생이 화학을 좋아하게 됐어요.",
    "blank": "полюбили",
+   "src": "made"
+  }
+ ],
+ "w|помада": [
+  {
+   "text": "На чашке, которую дали Павлу, остался след чужой помады.",
+   "en": "The cup Pavel was given still had someone else's lipstick mark on it.",
+   "ko": "파벨이 받은 컵에 다른 사람 립스틱 자국이 남아 있었어요.",
+   "blank": "помады",
+   "src": "made"
+  },
+  {
+   "text": "На краю бокала Елены осталась красная помада.",
+   "en": "There was red lipstick left on the rim of Elena's glass.",
+   "ko": "옐레나의 잔 가장자리에 빨간 립스틱이 묻어 있었어요.",
+   "blank": "помада",
    "src": "made"
   }
  ],
@@ -51441,6 +52305,22 @@
    "src": "made"
   }
  ],
+ "w|прогноз": [
+  {
+   "text": "Перед сплавом по реке Алексей всегда проверяет прогноз погоды.",
+   "en": "Before rafting down the river Alexei always checks the weather forecast.",
+   "ko": "알렉세이는 강에서 래프팅을 하기 전에 늘 일기 예보를 확인해요.",
+   "blank": "прогноз",
+   "src": "made"
+  },
+  {
+   "text": "По прогнозу весна в этом году придёт рано, и Наталья уже купила семена.",
+   "en": "According to the forecast spring will come early this year, and Natalya has already bought seeds.",
+   "ko": "예보에 따르면 올봄은 일찍 온다고 해서 나탈리야는 벌써 씨앗을 샀어요.",
+   "blank": "прогнозу",
+   "src": "made"
+  }
+ ],
  "w|проголодаться": [
   {
    "text": "К концу занятия Дмитрий так проголодался, что съел всё приготовленное сам.",
@@ -53187,6 +54067,22 @@
    "src": "made"
   }
  ],
+ "w|психологический": [
+  {
+   "text": "Алексей говорит, что неделя у реки — лучшая психологическая разгрузка.",
+   "en": "Alexei says a week by the river is the best mental unwinding.",
+   "ko": "알렉세이는 강가에서 보내는 일주일이 최고의 마음 휴식이라고 해요.",
+   "blank": "психологическая",
+   "src": "made"
+  },
+  {
+   "text": "Наталья читала, что короткий световой день оказывает сильное психологическое влияние.",
+   "en": "Natalya read that short days have a strong psychological effect.",
+   "ko": "나탈리야는 낮이 짧으면 심리적으로 큰 영향을 받는다는 글을 읽었어요.",
+   "blank": "психологическое",
+   "src": "made"
+  }
+ ],
  "w|психология": [
   {
    "text": "В старших классах Иван выбрал факультатив по психологии.",
@@ -53345,6 +54241,22 @@
    "ko": "맥박 좀 재 볼게.",
    "blank": "пульс",
    "src": "tatoeba:4201884/sharptoothed en:3319244/CK"
+  }
+ ],
+ "w|пульт": [
+  {
+   "text": "В переговорной Павел долго искал пульт от проектора.",
+   "en": "In the meeting room Pavel spent a long time looking for the projector remote.",
+   "ko": "파벨은 회의실에서 프로젝터 리모컨을 한참 찾았어요.",
+   "blank": "пульт",
+   "src": "made"
+  },
+  {
+   "text": "Шеф пультом включил вытяжку над плитой Елены.",
+   "en": "The chef switched on the hood above Elena's stove with a remote.",
+   "ko": "셰프가 리모컨으로 옐레나 레인지 위 환풍기를 켰어요.",
+   "blank": "пультом",
+   "src": "made"
   }
  ],
  "w|пуля": [
@@ -54250,6 +55162,22 @@
    "en": "With the warm weather Natalya untied the sacks of stored tulip bulbs.",
    "ko": "날이 따뜻해지자 나탈리야는 보관해 둔 튤립 알뿌리 자루를 풀었어요.",
    "blank": "развязала",
+   "src": "made"
+  }
+ ],
+ "w|разгар": [
+  {
+   "text": "В разгар лета Алексей уходит в лес на целую неделю.",
+   "en": "At the height of summer Alexei goes off into the forest for a whole week.",
+   "ko": "한여름이 되면 알렉세이는 일주일 내내 숲에 들어가 지내요.",
+   "blank": "разгар",
+   "src": "made"
+  },
+  {
+   "text": "В разгар осени Наталья собирает в парке самые красивые листья.",
+   "en": "In the middle of autumn Natalya collects the most beautiful leaves in the park.",
+   "ko": "가을이 한창일 때 나탈리야는 공원에서 가장 예쁜 낙엽을 모아요.",
+   "blank": "разгар",
    "src": "made"
   }
  ],
@@ -55436,6 +56364,22 @@
    "en": "Irina tries not to upset her coach by skipping training.",
    "ko": "이리나는 훈련을 빠져서 코치를 실망시키지 않으려고 해요.",
    "blank": "расстраивать",
+   "src": "made"
+  }
+ ],
+ "w|расстраиваться": [
+  {
+   "text": "Начальник сказал Павлу не расстраиваться из-за первой ошибки.",
+   "en": "The boss told Pavel not to get upset about his first mistake.",
+   "ko": "상사는 파벨에게 첫 실수로 속상해하지 말라고 했어요.",
+   "blank": "расстраиваться",
+   "src": "made"
+  },
+  {
+   "text": "Шеф попросил Елену не расстраиваться, если тесто не поднимется с первого раза.",
+   "en": "The chef asked Elena not to be upset if the dough doesn't rise the first time.",
+   "ko": "셰프는 옐레나에게 반죽이 처음에 안 부풀어도 속상해하지 말라고 했어요.",
+   "blank": "расстраиваться",
    "src": "made"
   }
  ],
@@ -59859,6 +60803,22 @@
    "src": "made"
   }
  ],
+ "w|скука": [
+  {
+   "text": "К обеду Павел уже боролся со скукой, читая инструкции.",
+   "en": "By lunchtime Pavel was already fighting boredom reading the instructions.",
+   "ko": "점심때쯤 파벨은 벌써 지침서를 읽으며 지루함과 싸우고 있었어요.",
+   "blank": "скукой",
+   "src": "made"
+  },
+  {
+   "text": "Елена записалась на курсы готовки, чтобы спастись от зимней скуки.",
+   "en": "Elena signed up for cooking classes to escape winter boredom.",
+   "ko": "옐레나는 겨울의 지루함에서 벗어나려고 요리 수업에 등록했어요.",
+   "blank": "скуки",
+   "src": "made"
+  }
+ ],
  "w|скучать": [
   {
    "text": "Я по тебе скучаю.",
@@ -62499,6 +63459,22 @@
    "src": "made"
   }
  ],
+ "w|сострадание": [
+  {
+   "text": "Павел с состраданием смотрел на стажёра, которого отчитали при всех.",
+   "en": "Pavel looked with compassion at the intern who was told off in front of everyone.",
+   "ko": "파벨은 사람들 앞에서 꾸중 들은 인턴을 안쓰럽게 바라봤어요.",
+   "blank": "состраданием",
+   "src": "made"
+  },
+  {
+   "text": "Шеф учит Елену готовить с состраданием к тем, кто будет есть.",
+   "en": "The chef teaches Elena to cook with compassion for those who will eat.",
+   "ko": "셰프는 옐레나에게 먹을 사람을 생각하는 마음으로 요리하라고 가르쳐요.",
+   "blank": "состраданием",
+   "src": "made"
+  }
+ ],
  "w|сосуд": [
   {
    "text": "Врач объяснил Никите, что у него слабые сосуды.",
@@ -62672,6 +63648,22 @@
    "en": "Natalia's compartment neighbour turned out to be a social worker from Kazan.",
    "ko": "나탈리야와 같은 칸 여자는 카잔에서 온 사회복지사였어요.",
    "blank": "социальным",
+   "src": "made"
+  }
+ ],
+ "w|сочувствие": [
+  {
+   "text": "Коллеги с сочувствием слушали, как Павел заблудился по дороге.",
+   "en": "The colleagues listened sympathetically as Pavel told how he got lost on the way.",
+   "ko": "동료들은 파벨이 오는 길에 헤맨 이야기를 안쓰럽게 들었어요.",
+   "blank": "сочувствием",
+   "src": "made"
+  },
+  {
+   "text": "Елена с сочувствием смотрела на соседа, у которого подгорело мясо.",
+   "en": "Elena looked sympathetically at the classmate whose meat had burned.",
+   "ko": "옐레나는 고기를 태운 옆 사람을 안쓰럽게 바라봤어요.",
+   "blank": "сочувствием",
    "src": "made"
   }
  ],
@@ -63033,6 +64025,22 @@
    "en": "Add milk to the list.",
    "ko": "목록에 우유를 넣어.",
    "blank": "список"
+  }
+ ],
+ "w|спичка": [
+  {
+   "text": "Алексей разжёг костёр с первой же спички.",
+   "en": "Alexei lit the fire with the very first match.",
+   "ko": "알렉세이는 성냥 한 개비로 단번에 모닥불을 피웠어요.",
+   "blank": "спички",
+   "src": "made"
+  },
+  {
+   "text": "Во время осенней грозы свет погас, и Наталья искала спички на ощупь.",
+   "en": "During an autumn storm the power went out, and Natalya felt around for matches.",
+   "ko": "가을 폭풍 때 전기가 나가서 나탈리야는 더듬더듬 성냥을 찾았어요.",
+   "blank": "спички",
+   "src": "made"
   }
  ],
  "w|спланировать": [
@@ -63807,6 +64815,22 @@
    "src": "made"
   }
  ],
+ "w|стадо": [
+  {
+   "text": "Алексей подождал, пока стадо коров перейдёт реку вброд.",
+   "en": "Alexei waited for the herd of cows to ford the river.",
+   "ko": "알렉세이는 소 떼가 강을 건널 때까지 기다렸어요.",
+   "blank": "стадо",
+   "src": "made"
+  },
+  {
+   "text": "Весной Наталья увидела в поле стадо овец с новорождёнными ягнятами.",
+   "en": "In spring Natalya saw a flock of sheep with newborn lambs in the field.",
+   "ko": "봄에 나탈리야는 들판에서 갓 태어난 새끼 양들과 함께 있는 양 떼를 봤어요.",
+   "blank": "стадо",
+   "src": "made"
+  }
+ ],
  "w|стакан": [
   {
    "text": "Ты не мог бы принести мне стакан воды?",
@@ -64181,6 +65205,22 @@
    "en": "This wall is full of cracks.",
    "ko": "이 벽은 금이 가득해.",
    "blank": "стена"
+  }
+ ],
+ "w|стенка": [
+  {
+   "text": "За стенкой кабинета Павла кто-то весь день громко говорил по телефону.",
+   "en": "Behind the wall of Pavel's office someone talked loudly on the phone all day.",
+   "ko": "파벨 사무실 벽 너머에서 누군가 하루 종일 큰 소리로 통화했어요.",
+   "blank": "стенкой",
+   "src": "made"
+  },
+  {
+   "text": "Елена прислонила противень к стенке духовки.",
+   "en": "Elena leaned the baking tray against the side of the oven.",
+   "ko": "옐레나는 오븐 벽에 오븐 팬을 기대어 놓았어요.",
+   "blank": "стенке",
+   "src": "made"
   }
  ],
  "w|степень": [
@@ -65879,6 +66919,22 @@
    "src": "made"
   }
  ],
+ "w|сытый": [
+  {
+   "text": "После обеда в столовой Павел вернулся сытым и сонным.",
+   "en": "After lunch in the canteen Pavel came back full and sleepy.",
+   "ko": "구내식당에서 점심을 먹고 파벨은 배부르고 졸린 채 돌아왔어요.",
+   "blank": "сытым",
+   "src": "made"
+  },
+  {
+   "text": "С курсов Елена всегда уходит сытая и довольная.",
+   "en": "Elena always leaves the class full and happy.",
+   "ko": "옐레나는 수업이 끝나면 늘 배부르고 흐뭇하게 돌아가요.",
+   "blank": "сытая",
+   "src": "made"
+  }
+ ],
  "w|сэндвич": [
   {
    "text": "Ты бы хотел, чтобы я сделал тебе сэндвич?",
@@ -66375,6 +67431,22 @@
    "ko": "오늘 저녁에 연극 보러 갈래?",
    "blank": "театр",
    "src": "tatoeba:2979907/odexed en:682166/Source_VOA"
+  }
+ ],
+ "w|текила": [
+  {
+   "text": "Вечером коллеги позвали Павла в бар выпить текилы за знакомство.",
+   "en": "In the evening his colleagues invited Pavel to a bar for tequila to celebrate meeting him.",
+   "ko": "저녁에 동료들은 첫 만남을 기념해 데킬라 한잔하자며 파벨을 바에 불렀어요.",
+   "blank": "текилы",
+   "src": "made"
+  },
+  {
+   "text": "На занятии по мексиканской кухне Елена добавила в соус каплю текилы.",
+   "en": "In the Mexican cooking class Elena added a drop of tequila to the sauce.",
+   "ko": "멕시코 요리 수업에서 옐레나는 소스에 데킬라를 한 방울 넣었어요.",
+   "blank": "текилы",
+   "src": "made"
   }
  ],
  "w|текст": [
@@ -67113,6 +68185,22 @@
    "blank": "тоже"
   }
  ],
+ "w|ток": [
+  {
+   "text": "Алексей провёл в избушку ток от маленького генератора.",
+   "en": "Alexei ran electric current into the cabin from a small generator.",
+   "ko": "알렉세이는 작은 발전기로 오두막에 전기를 끌어왔어요.",
+   "blank": "ток",
+   "src": "made"
+  },
+  {
+   "text": "После весенней грозы у Натальи на даче два дня не было тока.",
+   "en": "After the spring storm there was no electricity at Natalya's dacha for two days.",
+   "ko": "봄 폭풍이 지나간 뒤 나탈리야의 다차에는 이틀 동안 전기가 끊겼어요.",
+   "blank": "тока",
+   "src": "made"
+  }
+ ],
  "w|толк": [
   {
    "text": "Я всё никак не могу взять этого в толк.",
@@ -67431,6 +68519,22 @@
    "src": "made"
   }
  ],
+ "w|тоска": [
+  {
+   "text": "Зимой в городе Алексея охватывает тоска по реке.",
+   "en": "In winter, in the city, Alexei is gripped by longing for the river.",
+   "ko": "겨울에 도시에 있으면 알렉세이는 강이 그리워 견딜 수가 없어요.",
+   "blank": "тоска",
+   "src": "made"
+  },
+  {
+   "text": "Каждый ноябрь на Наталью нападает осенняя тоска.",
+   "en": "Every November Natalya is hit by the autumn blues.",
+   "ko": "매년 11월이면 나탈리야는 가을 우울에 빠져요.",
+   "blank": "тоска",
+   "src": "made"
+  }
+ ],
  "w|тост": [
   {
    "text": "На завтрак у меня всегда кофе и тост.",
@@ -67745,6 +68849,22 @@
    "ko": "그 경보는 왜 울린 거예요?",
    "blank": "тревога",
    "src": "tatoeba:2264469/sharptoothed en:2264468/sharptoothed"
+  }
+ ],
+ "w|тревожить": [
+  {
+   "text": "Алексея тревожит, что в реке стало меньше рыбы.",
+   "en": "It worries Alexei that there are fewer fish in the river.",
+   "ko": "알렉세이는 강에 물고기가 줄어든 게 걱정이에요.",
+   "blank": "тревожит",
+   "src": "made"
+  },
+  {
+   "text": "Наталью тревожит, что зима в этом году такая тёплая.",
+   "en": "It worries Natalya that this winter is so warm.",
+   "ko": "나탈리야는 올겨울이 이렇게 따뜻한 게 걱정이에요.",
+   "blank": "тревожит",
+   "src": "made"
   }
  ],
  "w|трейлер": [
@@ -68123,6 +69243,22 @@
    "ko": "화장실 가야 해?",
    "blank": "туалет",
    "src": "tatoeba:13713284/gregoryguy en:13713293/Babelball"
+  }
+ ],
+ "w|туалетный": [
+  {
+   "text": "В туалетной комнате на этаже Павла сломался кран.",
+   "en": "The tap broke in the washroom on Pavel's floor.",
+   "ko": "파벨네 층 화장실 수도꼭지가 고장 났어요.",
+   "blank": "туалетной",
+   "src": "made"
+  },
+  {
+   "text": "Перед готовкой Елена вымыла руки туалетным мылом.",
+   "en": "Before cooking Elena washed her hands with toilet soap.",
+   "ko": "옐레나는 요리 전에 세숫비누로 손을 씻었어요.",
+   "blank": "туалетным",
+   "src": "made"
   }
  ],
  "w|туда": [
@@ -68679,6 +69815,22 @@
    "src": "made"
   }
  ],
+ "w|уборная": [
+  {
+   "text": "У Алексея уборная стоит в самом конце огорода.",
+   "en": "Alexei's outhouse stands at the end of the vegetable patch.",
+   "ko": "알렉세이네 바깥 화장실은 텃밭 끝에 있어요.",
+   "blank": "уборная",
+   "src": "made"
+  },
+  {
+   "text": "В старом доме Натальи зимой в уборной так холодно, что изо рта идёт пар.",
+   "en": "In winter it's so cold in the toilet of Natalya's old house that you can see your breath.",
+   "ko": "겨울이면 나탈리야네 오래된 집 화장실은 입김이 보일 만큼 추워요.",
+   "blank": "уборной",
+   "src": "made"
+  }
+ ],
  "w|убрать": [
   {
    "text": "Убери крошки со стола.",
@@ -69082,6 +70234,22 @@
    "en": "Tatiana decided to treat her compartment neighbours to homemade biscuits.",
    "ko": "타티아나는 같은 칸 사람들에게 집에서 구운 쿠키를 나눠 주기로 했어요.",
    "blank": "угостить",
+   "src": "made"
+  }
+ ],
+ "w|угощаться": [
+  {
+   "text": "Коллеги принесли торт и предложили Павлу угощаться.",
+   "en": "The colleagues brought a cake and told Pavel to help himself.",
+   "ko": "동료들이 케이크를 가져와 파벨에게 마음껏 먹으라고 했어요.",
+   "blank": "угощаться",
+   "src": "made"
+  },
+  {
+   "text": "В конце урока шеф пригласил всех угощаться тем, что приготовила Елена.",
+   "en": "At the end of the lesson the chef invited everyone to help themselves to what Elena had made.",
+   "ko": "수업이 끝날 무렵 셰프는 모두에게 옐레나가 만든 음식을 맛보라고 했어요.",
+   "blank": "угощаться",
    "src": "made"
   }
  ],
@@ -70123,6 +71291,22 @@
    "src": "tatoeba:1568938/Biga en:256885/CK"
   }
  ],
+ "w|унижение": [
+  {
+   "text": "На прошлой работе Павел терпел постоянное унижение от начальника.",
+   "en": "At his previous job Pavel put up with constant humiliation from his boss.",
+   "ko": "예전 직장에서 파벨은 상사에게 늘 모욕을 참아야 했어요.",
+   "blank": "унижение",
+   "src": "made"
+  },
+  {
+   "text": "Елена вспоминает строгого шефа, на чьих уроках каждая ошибка была унижением.",
+   "en": "Elena remembers a strict chef in whose classes every mistake was a humiliation.",
+   "ko": "옐레나는 실수 하나하나가 굴욕이었던 깐깐한 셰프의 수업을 떠올려요.",
+   "blank": "унижением",
+   "src": "made"
+  }
+ ],
  "w|уникальный": [
   {
    "text": "На заводе Дмитрия делают уникальные детали, которых нет больше нигде.",
@@ -70930,6 +72114,22 @@
    "en": "Elena called the workshop to confirm the window measurements.",
    "ko": "옐레나는 창문 치수를 확인하려고 공방에 전화했어요.",
    "blank": "уточнить",
+   "src": "made"
+  }
+ ],
+ "w|утрата": [
+  {
+   "text": "Павел узнал, что коллектив недавно пережил утрату старого директора.",
+   "en": "Pavel learned that the team had recently suffered the loss of their old director.",
+   "ko": "파벨은 팀이 얼마 전 오랜 사장을 잃었다는 걸 알게 됐어요.",
+   "blank": "утрату",
+   "src": "made"
+  },
+  {
+   "text": "Елена готовит мамин борщ, чтобы пережить утрату.",
+   "en": "Elena makes her mother's borscht to cope with her loss.",
+   "ko": "옐레나는 상실을 견디려고 엄마의 보르시를 끓여요.",
+   "blank": "утрату",
    "src": "made"
   }
  ],
@@ -71871,6 +73071,22 @@
    "src": "made"
   }
  ],
+ "w|фонарь": [
+  {
+   "text": "Домой Павел шёл поздно, и на улице уже горели фонари.",
+   "en": "Pavel walked home late, and the street lamps were already on.",
+   "ko": "파벨이 늦게 집에 걸어갈 때 거리에는 벌써 가로등이 켜져 있었어요.",
+   "blank": "фонари",
+   "src": "made"
+  },
+  {
+   "text": "Елена в шутку предложила повесить над столом фонарь, чтобы лучше видеть соус.",
+   "en": "Elena jokingly suggested hanging a lamp over the table to see the sauce better.",
+   "ko": "옐레나는 소스가 잘 보이게 탁자 위에 등을 달자고 장난스레 말했어요.",
+   "blank": "фонарь",
+   "src": "made"
+  }
+ ],
  "w|фонд": [
   {
    "text": "Они создали фонд для поддержки жертв.",
@@ -72313,6 +73529,22 @@
    "src": "made"
   }
  ],
+ "w|химический": [
+  {
+   "text": "Алексей заметил, что вода в реке пахнет чем-то химическим.",
+   "en": "Alexei noticed that the river water smelled of something chemical.",
+   "ko": "알렉세이는 강물에서 화학 약품 같은 냄새가 나는 걸 알아챘어요.",
+   "blank": "химическим",
+   "src": "made"
+  },
+  {
+   "text": "Весной Наталья подкармливает розы химическими удобрениями.",
+   "en": "In spring Natalya feeds her roses with chemical fertiliser.",
+   "ko": "봄에 나탈리야는 장미에 화학 비료를 줘요.",
+   "blank": "химическими",
+   "src": "made"
+  }
+ ],
  "w|химия": [
   {
    "text": "Для научной страницы Сергей пишет о том, как химия помогает очищать воду.",
@@ -72438,6 +73670,22 @@
    "en": "In her article Maria wrote about the troubles of young parents.",
    "ko": "마리야는 기사에서 젊은 부모들의 고생에 대해 썼어요.",
    "blank": "хлопотах",
+   "src": "made"
+  }
+ ],
+ "w|хлопья": [
+  {
+   "text": "На завтрак в лесу Алексей ест овсяные хлопья с ягодами.",
+   "en": "For breakfast in the forest Alexei eats oat flakes with berries.",
+   "ko": "알렉세이는 숲에서 아침으로 귀리 플레이크에 산딸기를 얹어 먹어요.",
+   "blank": "хлопья",
+   "src": "made"
+  },
+  {
+   "text": "Наталья смотрела, как за окном падают крупные хлопья снега.",
+   "en": "Natalya watched big flakes of snow falling outside the window.",
+   "ko": "나탈리야는 창밖으로 함박눈이 내리는 걸 바라봤어요.",
+   "blank": "хлопья",
    "src": "made"
   }
  ],
@@ -74589,6 +75837,22 @@
    "src": "tatoeba:10357294/marafon en:1832116/Spamster"
   }
  ],
+ "w|шерсть": [
+  {
+   "text": "У лесной собаки Алексея такая густая шерсть, что ей не страшен мороз.",
+   "en": "Alexei's forest dog has such thick fur that the frost doesn't bother her.",
+   "ko": "알렉세이의 숲 개는 털이 워낙 두꺼워서 추위를 타지 않아요.",
+   "blank": "шерсть",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Наталья вяжет тёплые носки из овечьей шерсти.",
+   "en": "In autumn Natalya knits warm socks from sheep's wool.",
+   "ko": "가을이면 나탈리야는 양털로 따뜻한 양말을 떠요.",
+   "blank": "шерсти",
+   "src": "made"
+  }
+ ],
  "w|шестнадцать": [
   {
    "text": "Дмитрий проверил шестнадцать камер наблюдения, прежде чем нашёл машину.",
@@ -75356,6 +76620,22 @@
    "en": "Before the concert Maria had time to go on a tour of the theatre.",
    "ko": "공연 전에 마리야는 극장 투어를 다녀왔어요.",
    "blank": "экскурсию",
+   "src": "made"
+  }
+ ],
+ "w|экспедиция": [
+  {
+   "text": "Начальник рассказал Павлу, что компания готовит экспедицию на север.",
+   "en": "The boss told Pavel that the company is preparing an expedition to the north.",
+   "ko": "상사는 파벨에게 회사가 북쪽 탐사를 준비하고 있다고 말해 줬어요.",
+   "blank": "экспедицию",
+   "src": "made"
+  },
+  {
+   "text": "Шеф рассказал Елене, как готовил еду для научной экспедиции в горах.",
+   "en": "The chef told Elena how he cooked for a scientific expedition in the mountains.",
+   "ko": "셰프는 옐레나에게 산악 과학 탐사대 식사를 만들던 이야기를 들려줬어요.",
+   "blank": "экспедиции",
    "src": "made"
   }
  ],

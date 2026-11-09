@@ -235,6 +235,22 @@
    "src": "tatoeba:1693420/alexmarcelo en:1693402/DJ_Saidez"
   }
  ],
+ "w|abóbora": [
+  {
+   "text": "O Lucas recomenda abóbora cozida para cães com o intestino sensível.",
+   "en": "Lucas recommends cooked pumpkin for dogs with sensitive guts.",
+   "ko": "루카스는 장이 예민한 개에게 삶은 호박을 권해요.",
+   "blank": "abóbora",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana fez uma matéria sobre a maior abóbora da feira agrícola.",
+   "en": "Mariana did a story about the biggest pumpkin at the agricultural fair.",
+   "ko": "마리아나는 농업 박람회에서 가장 큰 호박에 관한 기사를 썼어요.",
+   "blank": "abóbora",
+   "src": "made"
+  }
+ ],
  "w|abordagem": [
   {
    "text": "A abordagem do policial foi educada, e o Lucas se sentiu à vontade.",
@@ -1479,6 +1495,22 @@
    "src": "tatoeba:8428981/JGEN en:2891961/CK"
   }
  ],
+ "w|adormecer": [
+  {
+   "text": "O Lucas esperou o cachorro adormecer antes de começar a cirurgia.",
+   "en": "Lucas waited for the dog to fall asleep before starting the surgery.",
+   "ko": "루카스는 개가 잠들기를 기다렸다가 수술을 시작했어요.",
+   "blank": "adormecer",
+   "src": "made"
+  },
+  {
+   "text": "Depois de fechar a edição, a Mariana custa a adormecer de tão ligada.",
+   "en": "After closing the edition, Mariana has trouble falling asleep because she's so wired.",
+   "ko": "마감을 마치고 나면 마리아나는 너무 각성돼서 잠들기가 힘들어요.",
+   "blank": "adormecer",
+   "src": "made"
+  }
+ ],
  "w|adormecido": [
   {
    "text": "O bebê da prima ficou adormecido no colo do Lucas o resto da tarde.",
@@ -1540,6 +1572,22 @@
    "en": "Beatriz managed to get tickets for the fireworks on the waterfront.",
    "ko": "베아트리스는 해변 불꽃놀이 입장권을 구했어요.",
    "blank": "adquirir",
+   "src": "made"
+  }
+ ],
+ "w|adrenalina": [
+  {
+   "text": "Numa emergência, a adrenalina faz o Lucas esquecer o cansaço.",
+   "en": "In an emergency, adrenaline makes Lucas forget his tiredness.",
+   "ko": "응급 상황이면 아드레날린 덕에 루카스는 피곤함도 잊어요.",
+   "blank": "adrenalina",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana diz que trabalhar em noite de eleição é pura adrenalina.",
+   "en": "Mariana says working on election night is pure adrenaline.",
+   "ko": "마리아나는 선거 날 밤 근무는 아드레날린 그 자체라고 해요.",
+   "blank": "adrenalina",
    "src": "made"
   }
  ],
@@ -2040,6 +2088,22 @@
    "en": "Sofia didn't like the security guard's aggressive tone with the tourists.",
    "ko": "소피아는 경비원이 관광객에게 쓰는 공격적인 말투가 싫었어요.",
    "blank": "agressivo",
+   "src": "made"
+  }
+ ],
+ "w|agressor": [
+  {
+   "text": "A medida protetiva proíbe o agressor de chegar perto da cliente do Rafael.",
+   "en": "The restraining order forbids the aggressor from coming near Rafael's client.",
+   "ko": "접근 금지 명령으로 가해자는 하파에우의 의뢰인에게 다가갈 수 없어요.",
+   "blank": "agressor",
+   "src": "made"
+  },
+  {
+   "text": "A Carla separou a briga e o segurança levou o agressor para fora do canteiro.",
+   "en": "Carla broke up the fight and the guard took the aggressor off the site.",
+   "ko": "카를라가 싸움을 말렸고 경비원이 가해자를 현장 밖으로 데리고 나갔어요.",
+   "blank": "agressor",
    "src": "made"
   }
  ],
@@ -2813,6 +2877,22 @@
    "ko": "피에트로가 외계인에게 아주 가까이 다가갔어요.",
    "blank": "alienígena",
    "src": "tatoeba:12719391/kleberlucas en:11717870/Amastan"
+  }
+ ],
+ "w|alimentação": [
+  {
+   "text": "O Rafael pediu que o juiz fixasse uma pensão para a alimentação das crianças.",
+   "en": "Rafael asked the judge to set child support for the children's food.",
+   "ko": "하파에우는 판사에게 아이들 양육비를 정해 달라고 요청했어요.",
+   "blank": "alimentação",
+   "src": "made"
+  },
+  {
+   "text": "A Carla acha que a alimentação da equipe melhora quando a empresa paga o almoço.",
+   "en": "Carla thinks the crew eats better when the company pays for lunch.",
+   "ko": "카를라는 회사가 점심을 내면 팀원들 식사가 나아진다고 생각해요.",
+   "blank": "alimentação",
+   "src": "made"
   }
  ],
  "w|alimentar": [
@@ -3927,6 +4007,22 @@
    "blank": "ano"
   }
  ],
+ "w|anoitecer": [
+  {
+   "text": "A clínica do Lucas fica aberta até anoitecer, e depois só atende emergência.",
+   "en": "Lucas's clinic stays open until nightfall, and after that only takes emergencies.",
+   "ko": "루카스의 동물병원은 해 질 때까지 열고, 그 뒤로는 응급만 받아요.",
+   "blank": "anoitecer",
+   "src": "made"
+  },
+  {
+   "text": "A redação do jornal fica mais tranquila depois de anoitecer, segundo a Mariana.",
+   "en": "The newsroom gets calmer after nightfall, according to Mariana.",
+   "ko": "마리아나 말로는 해가 지면 신문사 편집국이 좀 조용해져요.",
+   "blank": "anoitecer",
+   "src": "made"
+  }
+ ],
  "w|anomalia": [
   {
    "text": "Os técnicos acharam uma anomalia na temperatura da sala, e o Tiago fechou a porta.",
@@ -4129,6 +4225,38 @@
    "blank": "antes que"
   }
  ],
+ "w|antibiótico": [
+  {
+   "text": "O Lucas receitou antibiótico por dez dias para a ferida do cachorro.",
+   "en": "Lucas prescribed antibiotics for ten days for the dog's wound.",
+   "ko": "루카스는 개 상처에 열흘 치 항생제를 처방했어요.",
+   "blank": "antibiótico",
+   "src": "made"
+  },
+  {
+   "text": "A matéria da Mariana alertava para o uso de antibiótico sem receita.",
+   "en": "Mariana's story warned about using antibiotics without a prescription.",
+   "ko": "마리아나의 기사는 처방 없는 항생제 사용을 경고했어요.",
+   "blank": "antibiótico",
+   "src": "made"
+  }
+ ],
+ "w|antídoto": [
+  {
+   "text": "O Lucas sempre guarda antídoto para picada de cobra na clínica.",
+   "en": "Lucas always keeps antidote for snakebites at the clinic.",
+   "ko": "루카스는 늘 병원에 뱀 물림 해독제를 둬요.",
+   "blank": "antídoto",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana escreveu que a boa informação é o antídoto contra boatos.",
+   "en": "Mariana wrote that good information is the antidote to rumors.",
+   "ko": "마리아나는 좋은 정보가 소문에 대한 해독제라고 썼어요.",
+   "blank": "antídoto",
+   "src": "made"
+  }
+ ],
  "w|antigamente": [
   {
    "text": "Segundo o chefe do Gabriel, antigamente todo relatório era feito à mão.",
@@ -4157,6 +4285,22 @@
    "en": "He's an old friend.",
    "ko": "오래된 친구야.",
    "blank": "antigo"
+  }
+ ],
+ "w|antiguidade": [
+  {
+   "text": "A clínica do Lucas funciona num casarão que já foi loja de antiguidade.",
+   "en": "Lucas's clinic operates in a big old house that used to be an antique shop.",
+   "ko": "루카스의 병원은 예전에 골동품 가게였던 큰 옛집에 있어요.",
+   "blank": "antiguidade",
+   "src": "made"
+  },
+  {
+   "text": "O editor pediu à Mariana um texto sobre os comerciantes de antiguidade do centro.",
+   "en": "The editor asked Mariana for a piece on the antique dealers downtown.",
+   "ko": "편집자는 마리아나에게 시내 골동품상에 관한 글을 부탁했어요.",
+   "blank": "antiguidade",
+   "src": "made"
   }
  ],
  "w|antipático": [
@@ -4556,6 +4700,22 @@
    "en": "After a day of renovation work, Sofia had a big appetite.",
    "ko": "하루 종일 수리하고 나니 소피아는 입맛이 확 돌았어요.",
    "blank": "apetite",
+   "src": "made"
+  }
+ ],
+ "w|apito": [
+  {
+   "text": "No fim de semana, o Rafael é juiz de futebol amador e nunca esquece o apito.",
+   "en": "On weekends, Rafael is an amateur soccer referee and never forgets his whistle.",
+   "ko": "주말에 하파에우는 아마추어 축구 심판을 보는데 호루라기를 절대 잊지 않아요.",
+   "blank": "apito",
+   "src": "made"
+  },
+  {
+   "text": "Quando o apito da obra toca, todo mundo sabe que a Carla liberou o almoço.",
+   "en": "When the site whistle blows, everyone knows Carla has called lunch.",
+   "ko": "공사장 호루라기가 울리면 다들 카를라가 점심시간을 알린 걸 알아요.",
+   "blank": "apito",
    "src": "made"
   }
  ],
@@ -5293,6 +5453,22 @@
    "src": "made"
   }
  ],
+ "w|arder": [
+  {
+   "text": "Os olhos do Rafael começaram a arder depois de horas lendo o processo.",
+   "en": "Rafael's eyes started to sting after hours of reading the case file.",
+   "ko": "몇 시간 동안 사건 기록을 읽었더니 하파에우의 눈이 따갑기 시작했어요.",
+   "blank": "arder",
+   "src": "made"
+  },
+  {
+   "text": "O sol forte fazia a pele da Carla arder mesmo com protetor.",
+   "en": "The strong sun made Carla's skin burn even with sunscreen.",
+   "ko": "햇볕이 강해서 선크림을 발라도 카를라의 피부가 화끈거렸어요.",
+   "blank": "arder",
+   "src": "made"
+  }
+ ],
  "w|área": [
   {
    "text": "A área da piscina fechou.",
@@ -5398,6 +5574,22 @@
    "en": "Ana helped an older man fix the frame of his glasses.",
    "ko": "아나는 한 할아버지가 안경테 고치는 걸 도와드렸어요.",
    "blank": "armação",
+   "src": "made"
+  }
+ ],
+ "w|armada": [
+  {
+   "text": "O Rafael defendeu um ex-oficial da armada acusado de desviar verbas.",
+   "en": "Rafael defended a former navy officer accused of embezzling funds.",
+   "ko": "하파에우는 공금 횡령 혐의를 받은 전직 해군 장교를 변호했어요.",
+   "blank": "armada",
+   "src": "made"
+  },
+  {
+   "text": "A Carla reformou um prédio antigo que pertenceu à armada no século passado.",
+   "en": "Carla renovated an old building that belonged to the navy in the last century.",
+   "ko": "카를라는 지난 세기에 해군 소유였던 오래된 건물을 개보수했어요.",
+   "blank": "armada",
    "src": "made"
   }
  ],
@@ -6042,6 +6234,22 @@
    "en": "Pineapple skin is rough, so Mariana wears gloves to peel it.",
    "ko": "파인애플 껍질이 거칠어서 마리아나는 장갑을 끼고 깎아요.",
    "blank": "áspera",
+   "src": "made"
+  }
+ ],
+ "w|aspirina": [
+  {
+   "text": "O Lucas avisou que aspirina pode ser perigosa para gatos.",
+   "en": "Lucas warned that aspirin can be dangerous for cats.",
+   "ko": "루카스는 아스피린이 고양이에게 위험할 수 있다고 경고했어요.",
+   "blank": "aspirina",
+   "src": "made"
+  },
+  {
+   "text": "Com dor de cabeça, a Mariana tomou uma aspirina e voltou a escrever.",
+   "en": "With a headache, Mariana took an aspirin and went back to writing.",
+   "ko": "머리가 아파서 마리아나는 아스피린 한 알을 먹고 다시 썼어요.",
+   "blank": "aspirina",
    "src": "made"
   }
  ],
@@ -6825,6 +7033,22 @@
    "ko": "곧 3막이 시작해요.",
    "blank": "ato",
    "src": "tatoeba:4945579/bill en:2259459/_undertoad"
+  }
+ ],
+ "w|átomo": [
+  {
+   "text": "O perito disse ao Rafael que não sobrou um átomo de DNA na arma.",
+   "en": "The expert told Rafael that not an atom of DNA was left on the weapon.",
+   "ko": "감정인은 하파에우에게 흉기에 DNA가 한 톨도 남지 않았다고 말했어요.",
+   "blank": "átomo",
+   "src": "made"
+  },
+  {
+   "text": "O engenheiro brincou que cada átomo daquele concreto tinha custado caro, e a Carla riu.",
+   "en": "The engineer joked that every atom of that concrete had cost a fortune, and Carla laughed.",
+   "ko": "엔지니어가 그 콘크리트 원자 하나하나가 다 비쌌다고 농담하자 카를라가 웃었어요.",
+   "blank": "átomo",
+   "src": "made"
   }
  ],
  "w|ator": [
@@ -8815,6 +9039,22 @@
    "src": "made"
   }
  ],
+ "w|batizar": [
+  {
+   "text": "Os advogados da sala costumam batizar cada processo com um apelido, e o Rafael adora isso.",
+   "en": "The lawyers in the office usually give each case a nickname, and Rafael loves that.",
+   "ko": "사무실 변호사들은 사건마다 별명을 붙이곤 하는데 하파에우는 그걸 좋아해요.",
+   "blank": "batizar",
+   "src": "made"
+  },
+  {
+   "text": "Os moradores querem batizar a nova praça com o nome de uma professora do bairro, e a Carla gostou da ideia.",
+   "en": "The residents want to name the new square after a teacher from the neighborhood, and Carla liked the idea.",
+   "ko": "주민들이 새 광장에 동네 선생님 이름을 붙이고 싶어 하는데 카를라도 좋은 생각이라고 했어요.",
+   "blank": "batizar",
+   "src": "made"
+  }
+ ],
  "w|batom": [
   {
    "text": "A irmã do Miguel passou batom antes da foto em frente à cachoeira.",
@@ -10037,6 +10277,22 @@
    "blank": "branco"
   }
  ],
+ "w|brasileiro": [
+  {
+   "text": "O Rafael estuda o direito brasileiro desde os dezoito anos.",
+   "en": "Rafael has been studying Brazilian law since he was eighteen.",
+   "ko": "하파에우는 열여덟 살 때부터 브라질 법을 공부해 왔어요.",
+   "blank": "brasileiro",
+   "src": "made"
+  },
+  {
+   "text": "A Carla foi elogiada por um arquiteto brasileiro famoso pela qualidade da obra.",
+   "en": "Carla was praised by a famous Brazilian architect for the quality of the work.",
+   "ko": "카를라는 유명한 브라질 건축가에게 공사 품질로 칭찬을 받았어요.",
+   "blank": "brasileiro",
+   "src": "made"
+  }
+ ],
  "w|bravo": [
   {
    "text": "O chefe ficou bravo.",
@@ -10751,6 +11007,22 @@
    "ko": "아침으로 뭐 먹었어요?",
    "blank": "café da manhã",
    "src": "tatoeba:1710989/alexmarcelo en:401809/CK"
+  }
+ ],
+ "w|cafeteria": [
+  {
+   "text": "No intervalo da audiência, o Rafael tomou café na cafeteria do fórum.",
+   "en": "During the hearing break, Rafael had coffee at the courthouse café.",
+   "ko": "심리 휴정 시간에 하파에우는 법원 카페에서 커피를 마셨어요.",
+   "blank": "cafeteria",
+   "src": "made"
+  },
+  {
+   "text": "Na hora do almoço, a equipe da Carla lota a cafeteria da esquina.",
+   "en": "At lunchtime, Carla's crew packs the corner café.",
+   "ko": "점심시간이면 카를라네 팀이 모퉁이 카페를 가득 채워요.",
+   "blank": "cafeteria",
+   "src": "made"
   }
  ],
  "w|caiar": [
@@ -11883,6 +12155,22 @@
    "blank": "caramba"
   }
  ],
+ "w|caranguejo": [
+  {
+   "text": "Um cachorro chegou à clínica do Lucas com a pata machucada por um caranguejo na praia.",
+   "en": "A dog came to Lucas's clinic with its paw hurt by a crab at the beach.",
+   "ko": "해변에서 게에게 발을 다친 개가 루카스의 병원에 왔어요.",
+   "blank": "caranguejo",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana escreveu uma reportagem sobre a queda na pesca do caranguejo no mangue.",
+   "en": "Mariana wrote a report about the drop in crab fishing in the mangrove.",
+   "ko": "마리아나는 맹그로브 숲의 게잡이가 줄어든 것에 관해 기사를 썼어요.",
+   "blank": "caranguejo",
+   "src": "made"
+  }
+ ],
  "w|caráter": [
   {
    "text": "O gerente disse que contratou o Rafael pelo caráter, não só pelo currículo.",
@@ -12435,6 +12723,22 @@
    "en": "I'm not even thinking of marrying.",
    "ko": "결혼은 생각도 안 해.",
    "blank": "casar"
+  }
+ ],
+ "w|casca": [
+  {
+   "text": "O Lucas explicou que a casca do abacate pode fazer mal aos cães.",
+   "en": "Lucas explained that avocado skin can be harmful to dogs.",
+   "ko": "루카스는 아보카도 껍질이 개에게 해로울 수 있다고 설명했어요.",
+   "blank": "casca",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana come amendoim na mesa e deixa casca espalhada pelo teclado.",
+   "en": "Mariana eats peanuts at her desk and leaves shells scattered over the keyboard.",
+   "ko": "마리아나는 책상에서 땅콩을 먹고 키보드에 껍질을 흘려 둬요.",
+   "blank": "casca",
+   "src": "made"
   }
  ],
  "w|casco": [
@@ -14939,6 +15243,22 @@
    "src": "made"
   }
  ],
+ "w|cócegas": [
+  {
+   "text": "O filhote se contorceu de cócegas quando o Lucas examinou as patinhas dele.",
+   "en": "The puppy squirmed with tickles when Lucas examined its little paws.",
+   "ko": "루카스가 발바닥을 살펴보자 강아지가 간지러워서 몸을 비틀었어요.",
+   "blank": "cócegas",
+   "src": "made"
+  },
+  {
+   "text": "O sobrinho da Mariana morre de cócegas quando ela faz brincadeira no pé dele.",
+   "en": "Mariana's nephew can't stop laughing from the tickling when she plays with his feet.",
+   "ko": "마리아나가 발을 간질이면 조카는 간지러워 숨이 넘어가요.",
+   "blank": "cócegas",
+   "src": "made"
+  }
+ ],
  "w|coco": [
   {
    "text": "O Tiago sempre toma um gole de água de coco antes de começar as compras.",
@@ -17211,6 +17531,22 @@
    "src": "made"
   }
  ],
+ "w|conhaque": [
+  {
+   "text": "Depois do plantão, o Lucas tomou um gole de conhaque para relaxar.",
+   "en": "After his shift, Lucas had a sip of brandy to relax.",
+   "ko": "당직이 끝나고 루카스는 긴장을 풀려고 코냑을 한 모금 마셨어요.",
+   "blank": "conhaque",
+   "src": "made"
+  },
+  {
+   "text": "O editor-chefe guarda uma garrafa de conhaque na gaveta para as noites de eleição, e a Mariana sabe disso.",
+   "en": "The editor-in-chief keeps a bottle of brandy in the drawer for election nights, and Mariana knows it.",
+   "ko": "편집장이 선거 날 밤을 위해 서랍에 코냑 한 병을 둔다는 걸 마리아나는 알아요.",
+   "blank": "conhaque",
+   "src": "made"
+  }
+ ],
  "w|conhecer": [
   {
    "text": "Quero conhecer a cidade.",
@@ -18256,6 +18592,22 @@
    "en": "Luísa's goal is to convert more free users into paying ones.",
    "ko": "루이자의 목표는 무료 사용자를 더 많이 유료로 바꾸는 거예요.",
    "blank": "converter",
+   "src": "made"
+  }
+ ],
+ "w|convés": [
+  {
+   "text": "O Lucas atendeu o cachorro de um pescador que escorregou no convés do barco.",
+   "en": "Lucas treated a fisherman's dog that slipped on the boat's deck.",
+   "ko": "루카스는 배 갑판에서 미끄러진 어부의 개를 치료했어요.",
+   "blank": "convés",
+   "src": "made"
+  },
+  {
+   "text": "Para uma reportagem, a Mariana passou dois dias no convés de um navio de carga.",
+   "en": "For a report, Mariana spent two days on the deck of a cargo ship.",
+   "ko": "취재를 위해 마리아나는 화물선 갑판에서 이틀을 보냈어요.",
+   "blank": "convés",
    "src": "made"
   }
  ],
@@ -20793,6 +21145,22 @@
    "blank": "defesa"
   }
  ],
+ "w|deficiente": [
+  {
+   "text": "O Lucas adaptou uma cadeirinha de rodas para um cachorro deficiente das patas traseiras.",
+   "en": "Lucas adapted a little wheelchair for a dog with disabled hind legs.",
+   "ko": "루카스는 뒷다리가 불편한 개를 위해 작은 휠체어를 맞춰 줬어요.",
+   "blank": "deficiente",
+   "src": "made"
+  },
+  {
+   "text": "A reportagem da Mariana mostrou que muitas calçadas não são acessíveis para quem é deficiente visual.",
+   "en": "Mariana's report showed that many sidewalks are not accessible to visually impaired people.",
+   "ko": "마리아나의 기사는 많은 보도가 시각장애인에게 불편하다는 걸 보여 줬어요.",
+   "blank": "deficiente",
+   "src": "made"
+  }
+ ],
  "w|definição": [
   {
    "text": "O João copiou a definição de democracia no caderno.",
@@ -21053,6 +21421,22 @@
    "src": "tatoeba:8864176/JGEN en:8860426/AlanF_US"
   }
  ],
+ "w|delito": [
+  {
+   "text": "O Rafael explicou ao cliente que o delito prescreveu há anos.",
+   "en": "Rafael explained to the client that the offense expired years ago.",
+   "ko": "하파에우는 의뢰인에게 그 범죄는 몇 년 전에 공소시효가 지났다고 설명했어요.",
+   "blank": "delito",
+   "src": "made"
+  },
+  {
+   "text": "Furtar material da obra é delito, e a Carla avisou isso a todos no primeiro dia.",
+   "en": "Stealing material from the site is an offense, and Carla warned everyone about it on the first day.",
+   "ko": "공사 자재를 훔치는 건 범죄라고 카를라는 첫날 모두에게 경고했어요.",
+   "blank": "delito",
+   "src": "made"
+  }
+ ],
  "w|demais": [
   {
    "text": "Cobraram demais.",
@@ -21297,6 +21681,22 @@
    "blank": "dentro de"
   }
  ],
+ "w|denúncia": [
+  {
+   "text": "A investigação começou com uma denúncia anônima que chegou ao escritório do Rafael.",
+   "en": "The investigation began with an anonymous tip that reached Rafael's office.",
+   "ko": "수사는 하파에우의 사무실에 들어온 익명 제보로 시작됐어요.",
+   "blank": "denúncia",
+   "src": "made"
+  },
+  {
+   "text": "A Carla recebeu uma denúncia de que faltavam capacetes no turno da noite.",
+   "en": "Carla received a report that helmets were missing on the night shift.",
+   "ko": "카를라는 야간조에 안전모가 모자란다는 신고를 받았어요.",
+   "blank": "denúncia",
+   "src": "made"
+  }
+ ],
  "w|denunciar": [
   {
    "text": "O Lucas foi denunciar à coordenação que alguém pichou o banheiro.",
@@ -21492,6 +21892,22 @@
    "en": "The intern spilled acid on the bench, and Inês cleaned it carefully.",
    "ko": "인턴이 실험대에 산을 쏟자 이네스가 조심스럽게 닦았어요.",
    "blank": "derramou",
+   "src": "made"
+  }
+ ],
+ "w|derrame": [
+  {
+   "text": "O cachorro velho do senhor Raul teve um derrame, e o Lucas o atendeu de madrugada.",
+   "en": "Mr. Raul's old dog had a stroke, and Lucas treated it in the early hours.",
+   "ko": "하울 씨의 늙은 개가 뇌졸중을 일으켜서 루카스가 새벽에 진료했어요.",
+   "blank": "derrame",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana escreveu o obituário de um ator que morreu de derrame.",
+   "en": "Mariana wrote the obituary of an actor who died of a stroke.",
+   "ko": "마리아나는 뇌졸중으로 세상을 떠난 배우의 부고 기사를 썼어요.",
+   "blank": "derrame",
    "src": "made"
   }
  ],
@@ -23981,6 +24397,22 @@
    "src": "made"
   }
  ],
+ "w|distúrbio": [
+  {
+   "text": "O Lucas acredita que o distúrbio de comportamento do gato começou com a mudança de casa.",
+   "en": "Lucas believes the cat's behavioral disorder began with the house move.",
+   "ko": "루카스는 고양이의 행동 장애가 이사 이후 시작됐다고 봐요.",
+   "blank": "distúrbio",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana escreveu sobre um distúrbio do sono comum entre motoristas de caminhão.",
+   "en": "Mariana wrote about a sleep disorder common among truck drivers.",
+   "ko": "마리아나는 트럭 운전사들에게 흔한 수면 장애에 관해 썼어요.",
+   "blank": "distúrbio",
+   "src": "made"
+  }
+ ],
  "w|ditar": [
   {
    "text": "No balcão, o João teve que ditar o número do passaporte letra por letra.",
@@ -24399,6 +24831,22 @@
    "en": "He got sick yesterday.",
    "ko": "그 사람 어제부터 아팠어.",
    "blank": "doente"
+  }
+ ],
+ "w|doentio": [
+  {
+   "text": "O Lucas diz que o apego doentio de alguns donos deixa o animal ansioso.",
+   "en": "Lucas says the unhealthy attachment of some owners makes the animal anxious.",
+   "ko": "루카스는 일부 주인의 병적인 집착이 동물을 불안하게 한다고 말해요.",
+   "blank": "doentio",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana criticou numa coluna o interesse doentio da internet pela vida dos famosos.",
+   "en": "In a column, Mariana criticized the internet's unhealthy interest in celebrities' lives.",
+   "ko": "마리아나는 칼럼에서 유명인 사생활에 대한 인터넷의 병적인 관심을 비판했어요.",
+   "blank": "doentio",
+   "src": "made"
   }
  ],
  "w|doer": [
@@ -24832,6 +25280,22 @@
    "en": "The beach festival ended with a duel between improvising singers.",
    "ko": "해변 축제는 즉흥 시인들의 노래 대결로 끝났어요.",
    "blank": "duelo",
+   "src": "made"
+  }
+ ],
+ "w|duende": [
+  {
+   "text": "A testemunha jurou que viu um homem vestido de duende fugindo da loja.",
+   "en": "The witness swore she saw a man dressed as an elf running from the store.",
+   "ko": "증인은 요정 옷을 입은 남자가 가게에서 도망치는 걸 봤다고 맹세했어요.",
+   "blank": "duende",
+   "src": "made"
+  },
+  {
+   "text": "A Carla achou um anão de jardim em forma de duende enterrado no terreno da obra.",
+   "en": "Carla found a garden gnome shaped like an elf buried on the construction site.",
+   "ko": "카를라는 공사 현장 땅속에서 요정 모양의 정원 인형을 찾았어요.",
+   "blank": "duende",
    "src": "made"
   }
  ],
@@ -25282,6 +25746,22 @@
    "en": "Crossing the finish line, Rita shouted: here's my first marathon!",
    "ko": "결승선을 넘으며 리타가 외쳤어요. 내 첫 마라톤이야!",
    "blank": "eis",
+   "src": "made"
+  }
+ ],
+ "w|eixo": [
+  {
+   "text": "Para o Rafael, a confissão do réu é o eixo de todo o processo.",
+   "en": "For Rafael, the defendant's confession is the axis of the whole case.",
+   "ko": "하파에우에게 피고의 자백은 소송 전체의 중심축이에요.",
+   "blank": "eixo",
+   "src": "made"
+  },
+  {
+   "text": "O caminhão quebrou o eixo na estrada de terra, e a Carla ficou sem cimento.",
+   "en": "The truck broke its axle on the dirt road, and Carla was left without cement.",
+   "ko": "트럭이 흙길에서 차축이 부러져서 카를라는 시멘트를 못 받았어요.",
+   "blank": "eixo",
    "src": "made"
   }
  ],
@@ -26238,6 +26718,22 @@
    "en": "Inês admits that she tried to hide her sadness in her last letters.",
    "ko": "이네스는 지난 편지들에서 슬픔을 감추려 했다고 털어놓아요.",
    "blank": "encobrir",
+   "src": "made"
+  }
+ ],
+ "w|encomenda": [
+  {
+   "text": "A encomenda de vacinas atrasou, e o Lucas teve que remarcar as consultas.",
+   "en": "The vaccine order was delayed, and Lucas had to reschedule the appointments.",
+   "ko": "백신 주문이 늦어져서 루카스는 진료 예약을 다시 잡아야 했어요.",
+   "blank": "encomenda",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana investigou uma empresa que cobrava encomenda e nunca entregava os produtos.",
+   "en": "Mariana investigated a company that charged for orders and never delivered the products.",
+   "ko": "마리아나는 주문 대금을 받고 물건을 보내지 않는 회사를 취재했어요.",
+   "blank": "encomenda",
    "src": "made"
   }
  ],
@@ -27687,6 +28183,22 @@
    "src": "made"
   }
  ],
+ "w|escravidão": [
+  {
+   "text": "O Rafael atuou num caso de trabalho análogo à escravidão numa fazenda.",
+   "en": "Rafael worked on a case of labor akin to slavery on a farm.",
+   "ko": "하파에우는 한 농장의 노예 노동 같은 사건을 맡았어요.",
+   "blank": "escravidão",
+   "src": "made"
+  },
+  {
+   "text": "O terreno da obra da Carla fica ao lado de um museu sobre a história da escravidão.",
+   "en": "The site of Carla's project is next to a museum about the history of slavery.",
+   "ko": "카를라의 공사 현장은 노예제 역사 박물관 옆에 있어요.",
+   "blank": "escravidão",
+   "src": "made"
+  }
+ ],
  "w|escravo": [
   {
    "text": "Eu trabalho como um escravo!",
@@ -28348,6 +28860,22 @@
    "en": "Inês remembers the toy rifle that Clara's brother carried everywhere.",
    "ko": "이네스는 클라라의 남동생이 어디든 들고 다니던 장난감 총을 떠올려요.",
    "blank": "espingarda",
+   "src": "made"
+  }
+ ],
+ "w|espionagem": [
+  {
+   "text": "O Rafael acompanhou um julgamento de espionagem industrial entre duas fábricas.",
+   "en": "Rafael followed an industrial espionage trial between two factories.",
+   "ko": "하파에우는 두 공장 사이의 산업 스파이 재판을 지켜봤어요.",
+   "blank": "espionagem",
+   "src": "made"
+  },
+  {
+   "text": "A Carla brinca que o vizinho da obra faz espionagem com binóculo da varanda.",
+   "en": "Carla jokes that the neighbor spies on the site with binoculars from his balcony.",
+   "ko": "카를라는 공사장 옆집 사람이 발코니에서 쌍안경으로 염탐한다고 농담해요.",
+   "blank": "espionagem",
    "src": "made"
   }
  ],
@@ -29407,6 +29935,22 @@
    "blank": "estúpido"
   }
  ],
+ "w|estuprador": [
+  {
+   "text": "Na sala de espera, o Lucas leu no jornal que a polícia prendeu um estuprador procurado havia anos.",
+   "en": "In the waiting room, Lucas read in the paper that police arrested a rapist who had been wanted for years.",
+   "ko": "대기실에서 루카스는 경찰이 몇 년째 수배 중이던 성폭행범을 붙잡았다는 신문 기사를 읽었어요.",
+   "blank": "estuprador",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana cobriu o julgamento de um estuprador condenado a muitos anos de prisão.",
+   "en": "Mariana covered the trial of a rapist sentenced to many years in prison.",
+   "ko": "마리아나는 중형을 선고받은 성폭행범의 재판을 취재했어요.",
+   "blank": "estuprador",
+   "src": "made"
+  }
+ ],
  "w|estupro": [
   {
    "text": "Segundo o jornal, a polícia investiga um caso de estupro no bairro, e a prefeitura reforçou a iluminação.",
@@ -30063,6 +30607,22 @@
    "src": "tatoeba:1789225/alexmarcelo en:843054/J_S"
   }
  ],
+ "w|exercitar": [
+  {
+   "text": "O Lucas mandou a dona exercitar o cachorro obeso com caminhadas curtas.",
+   "en": "Lucas told the owner to exercise the obese dog with short walks.",
+   "ko": "루카스는 주인에게 비만견을 짧은 산책으로 운동시키라고 했어요.",
+   "blank": "exercitar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana escreveu que é preciso exercitar a memória tanto quanto os músculos.",
+   "en": "Mariana wrote that you need to exercise your memory as much as your muscles.",
+   "ko": "마리아나는 근육만큼 기억력도 단련해야 한다고 썼어요.",
+   "blank": "exercitar",
+   "src": "made"
+  }
+ ],
  "w|exército": [
   {
    "text": "Meu irmão entrou no exército.",
@@ -30514,6 +31074,22 @@
    "en": "At the weekly meeting, everyone can express an opinion about the product.",
    "ko": "주간 회의에서는 누구나 제품에 대한 의견을 말할 수 있어요.",
    "blank": "expressar",
+   "src": "made"
+  }
+ ],
+ "w|expresso": [
+  {
+   "text": "O Rafael pegou o ônibus expresso para não se atrasar para a audiência.",
+   "en": "Rafael took the express bus so he wouldn't be late for the hearing.",
+   "ko": "하파에우는 심리에 늦지 않으려고 급행버스를 탔어요.",
+   "blank": "expresso",
+   "src": "made"
+  },
+  {
+   "text": "A Carla mandou os documentos por correio expresso para a prefeitura.",
+   "en": "Carla sent the documents by express mail to city hall.",
+   "ko": "카를라는 서류를 빠른우편으로 시청에 보냈어요.",
+   "blank": "expresso",
    "src": "made"
   }
  ],
@@ -31373,6 +31949,22 @@
    "src": "tatoeba:1048318/brauliobezerra en:953456/CK"
   }
  ],
+ "w|fascista": [
+  {
+   "text": "O Rafael estudou o período do regime fascista na Itália para um artigo sobre direitos civis.",
+   "en": "Rafael studied the period of the fascist regime in Italy for an article on civil rights.",
+   "ko": "하파에우는 시민권에 관한 글을 쓰려고 이탈리아 파시스트 정권 시기를 공부했어요.",
+   "blank": "fascista",
+   "src": "made"
+  },
+  {
+   "text": "A Carla apagou uma pichação fascista que apareceu no muro da obra.",
+   "en": "Carla erased fascist graffiti that appeared on the site wall.",
+   "ko": "카를라는 공사장 담에 생긴 파시스트 낙서를 지웠어요.",
+   "blank": "fascista",
+   "src": "made"
+  }
+ ],
  "w|fase": [
   {
    "text": "A adolescência é uma fase complicada.",
@@ -31402,6 +31994,22 @@
    "en": "Forgetting to measure the door was Mariana's fatal mistake with the new fridge.",
    "ko": "문 폭을 재지 않은 게 새 냉장고를 두고 마리아나가 한 치명적인 실수였어요.",
    "blank": "fatal",
+   "src": "made"
+  }
+ ],
+ "w|fatia": [
+  {
+   "text": "Uma dona trouxe o cachorro porque ele comeu uma fatia inteira de bolo de chocolate, e o Lucas ficou preocupado.",
+   "en": "An owner brought her dog because it ate a whole slice of chocolate cake, and Lucas got worried.",
+   "ko": "한 주인이 개가 초콜릿 케이크 한 조각을 통째로 먹었다며 데려와서 루카스는 걱정했어요.",
+   "blank": "fatia",
+   "src": "made"
+  },
+  {
+   "text": "No fechamento da edição, a Mariana só teve tempo de comer uma fatia de pizza.",
+   "en": "At the edition's deadline, Mariana only had time to eat a slice of pizza.",
+   "ko": "마감 때 마리아나는 피자 한 조각 먹을 시간밖에 없었어요.",
+   "blank": "fatia",
    "src": "made"
   }
  ],
@@ -35213,6 +35821,22 @@
    "src": "made"
   }
  ],
+ "w|ginástica": [
+  {
+   "text": "A filha do Lucas faz ginástica olímpica e às vezes visita a clínica depois do treino.",
+   "en": "Lucas's daughter does artistic gymnastics and sometimes visits the clinic after practice.",
+   "ko": "루카스의 딸은 체조를 하는데 가끔 훈련 끝나고 병원에 들러요.",
+   "blank": "ginástica",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana fez uma matéria sobre idosos que fazem ginástica na praça toda manhã.",
+   "en": "Mariana did a story on elderly people who do exercises in the square every morning.",
+   "ko": "마리아나는 매일 아침 광장에서 체조하는 노인들에 관한 기사를 썼어요.",
+   "blank": "ginástica",
+   "src": "made"
+  }
+ ],
  "w|girafa": [
   {
    "text": "O sobrinho do Bruno nunca viu uma girafa de verdade, só na televisão.",
@@ -36309,6 +36933,22 @@
    "src": "tatoeba:3453834/piterkeo en:33897/CM"
   }
  ],
+ "w|hematoma": [
+  {
+   "text": "O Lucas encontrou um hematoma na barriga do gato e pediu um raio-x.",
+   "en": "Lucas found a bruise on the cat's belly and ordered an x-ray.",
+   "ko": "루카스는 고양이 배에서 멍을 발견하고 엑스레이를 찍게 했어요.",
+   "blank": "hematoma",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana bateu a perna na mesa da redação e ficou com um hematoma enorme.",
+   "en": "Mariana hit her leg on the newsroom desk and ended up with a huge bruise.",
+   "ko": "마리아나는 편집국 책상에 다리를 부딪쳐서 커다란 멍이 들었어요.",
+   "blank": "hematoma",
+   "src": "made"
+  }
+ ],
  "w|hemorragia": [
   {
    "text": "O Miguel conseguiu parar a hemorragia do cachorro atropelado em poucos minutos.",
@@ -36772,6 +37412,22 @@
    "en": "On the straight road through the backlands, Rita saw nothing but asphalt to the horizon.",
    "ko": "내륙의 곧은 도로에서 히타 눈에는 지평선까지 아스팔트뿐이었어요.",
    "blank": "horizonte",
+   "src": "made"
+  }
+ ],
+ "w|hormônio": [
+  {
+   "text": "O Lucas pediu um exame para ver se o problema da gata era de hormônio.",
+   "en": "Lucas ordered a test to see if the cat's problem was hormonal.",
+   "ko": "루카스는 고양이의 문제가 호르몬 때문인지 보려고 검사를 했어요.",
+   "blank": "hormônio",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana entrevistou uma médica sobre o papel do hormônio do sono nos adolescentes.",
+   "en": "Mariana interviewed a doctor about the role of the sleep hormone in teenagers.",
+   "ko": "마리아나는 청소년의 수면 호르몬 역할에 관해 의사를 인터뷰했어요.",
+   "blank": "hormônio",
    "src": "made"
   }
  ],
@@ -37453,6 +38109,22 @@
    "src": "made"
   }
  ],
+ "w|imigrante": [
+  {
+   "text": "Uma imigrante recém-chegada levou o papagaio ao Lucas e pagou em moedas.",
+   "en": "A newly arrived immigrant woman took her parrot to Lucas and paid in coins.",
+   "ko": "갓 도착한 이민자 여성이 앵무새를 루카스에게 데려와 동전으로 값을 냈어요.",
+   "blank": "imigrante",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana entrevistou um imigrante que abriu uma padaria no bairro.",
+   "en": "Mariana interviewed an immigrant who opened a bakery in the neighborhood.",
+   "ko": "마리아나는 동네에 빵집을 연 이민자를 인터뷰했어요.",
+   "blank": "imigrante",
+   "src": "made"
+  }
+ ],
  "w|imitação": [
   {
    "text": "O Bruno faz uma imitação perfeita do diretor nos intervalos.",
@@ -37624,6 +38296,22 @@
    "en": "The Roman Empire lasted for many centuries.",
    "ko": "로마 제국은 수 세기 동안 이어졌어요.",
    "blank": "Império",
+   "src": "made"
+  }
+ ],
+ "w|implante": [
+  {
+   "text": "O Lucas colocou um implante de microchip no pescoço da gatinha.",
+   "en": "Lucas put a microchip implant in the kitten's neck.",
+   "ko": "루카스는 새끼 고양이 목에 마이크로칩을 이식했어요.",
+   "blank": "implante",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana entrevistou uma dentista sobre o preço do implante dentário.",
+   "en": "Mariana interviewed a dentist about the price of dental implants.",
+   "ko": "마리아나는 치과 임플란트 가격에 관해 치과의사를 인터뷰했어요.",
+   "blank": "implante",
    "src": "made"
   }
  ],
@@ -38211,6 +38899,22 @@
    "src": "made"
   }
  ],
+ "w|incriminar": [
+  {
+   "text": "O Rafael provou que alguém plantou a prova para incriminar o cliente dele.",
+   "en": "Rafael proved that someone planted the evidence to frame his client.",
+   "ko": "하파에우는 누군가 의뢰인에게 누명을 씌우려고 증거를 심었다는 걸 입증했어요.",
+   "blank": "incriminar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla guarda todas as notas fiscais para ninguém tentar incriminar a equipe dela.",
+   "en": "Carla keeps all the receipts so nobody can try to frame her crew.",
+   "ko": "카를라는 누구도 자기 팀에 누명을 씌우지 못하게 영수증을 모두 보관해요.",
+   "blank": "incriminar",
+   "src": "made"
+  }
+ ],
  "w|incrível": [
   {
    "text": "Você estava incrível ontem.",
@@ -38335,6 +39039,22 @@
    "ko": "목소리 톤으로 감정을 알 수 있어요.",
    "blank": "indicar",
    "src": "tatoeba:390902/brauliobezerra en:271930/CM"
+  }
+ ],
+ "w|indígena": [
+  {
+   "text": "O Rafael defende uma comunidade indígena numa disputa por terras.",
+   "en": "Rafael is defending an indigenous community in a land dispute.",
+   "ko": "하파에우는 토지 분쟁에서 원주민 공동체를 변호하고 있어요.",
+   "blank": "indígena",
+   "src": "made"
+  },
+  {
+   "text": "A Carla decorou a fachada com grafismos de arte indígena.",
+   "en": "Carla decorated the facade with indigenous art patterns.",
+   "ko": "카를라는 건물 앞면을 원주민 미술 문양으로 꾸몄어요.",
+   "blank": "indígena",
+   "src": "made"
   }
  ],
  "w|índio": [
@@ -38492,6 +39212,22 @@
    "en": "Mariana's new coworker was out because of an ear infection.",
    "ko": "마리아나의 새 동료는 귀에 염증이 생겨서 결근했어요.",
    "blank": "infecção",
+   "src": "made"
+  }
+ ],
+ "w|infectado": [
+  {
+   "text": "O Lucas isolou o gato infectado para não passar a doença aos outros.",
+   "en": "Lucas isolated the infected cat so it wouldn't pass the disease to the others.",
+   "ko": "루카스는 감염된 고양이를 격리해서 다른 동물에게 옮기지 않게 했어요.",
+   "blank": "infectado",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana descobriu que o computador da redação estava infectado por um vírus.",
+   "en": "Mariana found out that the newsroom computer was infected with a virus.",
+   "ko": "마리아나는 편집국 컴퓨터가 바이러스에 감염된 걸 알아냈어요.",
+   "blank": "infectado",
    "src": "made"
   }
  ],
@@ -38990,6 +39726,22 @@
    "en": "The building owner sent a notice to every tenant, including Beatriz's startup.",
    "ko": "건물주는 베아트리스의 스타트업을 포함해 세입자마다 공지를 보냈어요.",
    "blank": "inquilino",
+   "src": "made"
+  }
+ ],
+ "w|insanidade": [
+  {
+   "text": "O Lucas acha uma insanidade deixar cachorro preso no carro no sol.",
+   "en": "Lucas thinks it's insane to leave a dog shut in a car in the sun.",
+   "ko": "루카스는 햇볕 아래 차에 개를 가둬 두는 건 미친 짓이라고 생각해요.",
+   "blank": "insanidade",
+   "src": "made"
+  },
+  {
+   "text": "O advogado do réu alegou insanidade, e a Mariana anotou tudo no caderno.",
+   "en": "The defendant's lawyer pleaded insanity, and Mariana wrote everything down in her notebook.",
+   "ko": "피고 측 변호사가 심신상실을 주장했고 마리아나는 공책에 모두 적었어요.",
+   "blank": "insanidade",
    "src": "made"
   }
  ],
@@ -39988,6 +40740,22 @@
    "en": "The movie is about an alien invasion.",
    "ko": "그 영화는 외계인 침공 이야기예요.",
    "blank": "invasão",
+   "src": "made"
+  }
+ ],
+ "w|invasor": [
+  {
+   "text": "O gato da vizinha trata qualquer visita como um invasor, até o Lucas.",
+   "en": "The neighbor's cat treats any visitor as an invader, even Lucas.",
+   "ko": "이웃집 고양이는 손님을 다 침입자로 여겨요, 루카스까지도요.",
+   "blank": "invasor",
+   "src": "made"
+  },
+  {
+   "text": "A matéria da Mariana falava de um peixe invasor que está tomando conta do rio.",
+   "en": "Mariana's story was about an invasive fish that is taking over the river.",
+   "ko": "마리아나의 기사는 강을 점령해 가는 외래 물고기에 관한 것이었어요.",
+   "blank": "invasor",
    "src": "made"
   }
  ],
@@ -42135,6 +42903,22 @@
    "src": "made"
   }
  ],
+ "w|leitor": [
+  {
+   "text": "O Rafael é leitor assíduo de processos antigos e sempre acha detalhes esquecidos.",
+   "en": "Rafael is an avid reader of old case files and always finds forgotten details.",
+   "ko": "하파에우는 옛 소송 기록을 즐겨 읽어서 늘 잊힌 세부를 찾아내요.",
+   "blank": "leitor",
+   "src": "made"
+  },
+  {
+   "text": "A Carla instalou um leitor de crachá na entrada do canteiro de obras.",
+   "en": "Carla installed a badge reader at the entrance of the construction site.",
+   "ko": "카를라는 공사 현장 입구에 출입증 리더기를 달았어요.",
+   "blank": "leitor",
+   "src": "made"
+  }
+ ],
  "w|leitura": [
   {
    "text": "A leitura é a minha paixão.",
@@ -43355,6 +44139,22 @@
    "blank": "loucura"
   }
  ],
+ "w|louvar": [
+  {
+   "text": "No discurso de despedida, os colegas fizeram questão de louvar a honestidade do Rafael.",
+   "en": "In the farewell speech, his colleagues made a point of praising Rafael's honesty.",
+   "ko": "송별사에서 동료들은 하파에우의 정직함을 꼭 칭찬하고 싶어 했어요.",
+   "blank": "louvar",
+   "src": "made"
+  },
+  {
+   "text": "Na inauguração, o prefeito subiu ao palco para louvar o trabalho da equipe da Carla.",
+   "en": "At the opening, the mayor went on stage to praise Carla's crew's work.",
+   "ko": "준공식에서 시장이 무대에 올라 카를라네 팀의 일을 치하했어요.",
+   "blank": "louvar",
+   "src": "made"
+  }
+ ],
  "w|lua": [
   {
    "text": "Olha a lua cheia.",
@@ -44079,6 +44879,22 @@
    "src": "made"
   }
  ],
+ "w|malhar": [
+  {
+   "text": "Depois do trabalho, o Lucas vai malhar na academia do bairro.",
+   "en": "After work, Lucas goes to work out at the neighborhood gym.",
+   "ko": "퇴근 후 루카스는 동네 헬스장에 운동하러 가요.",
+   "blank": "malhar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana acorda cedo para malhar antes de ir para a redação.",
+   "en": "Mariana wakes up early to work out before going to the newsroom.",
+   "ko": "마리아나는 편집국에 가기 전에 운동하려고 일찍 일어나요.",
+   "blank": "malhar",
+   "src": "made"
+  }
+ ],
  "w|maligno": [
   {
    "text": "Na palestra da farmácia, o médico explicou que um tumor maligno precisa de tratamento rápido.",
@@ -44184,6 +45000,22 @@
    "en": "Mariana joked that the reunion deserved a newspaper headline.",
    "ko": "마리아나는 이 모임이 신문 헤드라인감이라고 농담했어요.",
    "blank": "manchete",
+   "src": "made"
+  }
+ ],
+ "w|mandado": [
+  {
+   "text": "A polícia só entrou na casa depois que o juiz expediu um mandado, como o Rafael exigiu.",
+   "en": "The police only entered the house after the judge issued a warrant, as Rafael demanded.",
+   "ko": "하파에우가 요구한 대로 판사가 영장을 발부한 뒤에야 경찰이 집에 들어갔어요.",
+   "blank": "mandado",
+   "src": "made"
+  },
+  {
+   "text": "A Carla foi chamada para depor depois que a justiça emitiu um mandado contra a construtora vizinha.",
+   "en": "Carla was called to testify after the court issued a warrant against the neighboring builder.",
+   "ko": "법원이 이웃 건설사에 영장을 발부한 뒤 카를라도 증언하러 불려 갔어요.",
+   "blank": "mandado",
    "src": "made"
   }
  ],
@@ -44914,6 +45746,22 @@
    "en": "Mariana's company offers quick massages to employees on Fridays.",
    "ko": "마리아나의 회사는 금요일마다 직원들에게 짧은 마사지를 제공해요.",
    "blank": "massagem",
+   "src": "made"
+  }
+ ],
+ "w|mastigar": [
+  {
+   "text": "O cachorro do Lucas não consegue mastigar ração dura depois de perder dois dentes.",
+   "en": "Lucas's dog can't chew hard kibble after losing two teeth.",
+   "ko": "루카스의 개는 이빨 두 개가 빠진 뒤로 딱딱한 사료를 못 씹어요.",
+   "blank": "mastigar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana tem mania de mastigar a tampa da caneta enquanto escreve.",
+   "en": "Mariana has a habit of chewing her pen cap while she writes.",
+   "ko": "마리아나는 글을 쓸 때 펜 뚜껑을 씹는 버릇이 있어요.",
+   "blank": "mastigar",
    "src": "made"
   }
  ],
@@ -46413,6 +47261,22 @@
    "en": "One minute and I'm back.",
    "ko": "일 분이면 돌아올게.",
    "blank": "minuto"
+  }
+ ],
+ "w|miolo": [
+  {
+   "text": "O Rafael só come o miolo do pão e deixa a casca no prato.",
+   "en": "Rafael only eats the soft inside of the bread and leaves the crust on the plate.",
+   "ko": "하파에우는 빵 속살만 먹고 껍질은 접시에 남겨요.",
+   "blank": "miolo",
+   "src": "made"
+  },
+  {
+   "text": "A Carla fez um sanduíche de miolo de alcatra para o almoço.",
+   "en": "Carla made a top sirloin sandwich for lunch.",
+   "ko": "카를라는 점심으로 우둔살 샌드위치를 만들었어요.",
+   "blank": "miolo",
+   "src": "made"
   }
  ],
  "w|mirar": [
@@ -49437,6 +50301,22 @@
    "src": "made"
   }
  ],
+ "w|observador": [
+  {
+   "text": "O Lucas é um bom observador e percebe quando um gato esconde a dor.",
+   "en": "Lucas is a good observer and notices when a cat is hiding its pain.",
+   "ko": "루카스는 관찰력이 좋아서 고양이가 아픈 걸 숨길 때 알아채요.",
+   "blank": "observador",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana foi como observador independente acompanhar a votação no sindicato.",
+   "en": "Mariana went as an independent observer to follow the union vote.",
+   "ko": "마리아나는 독립 참관인으로 노조 투표를 지켜보러 갔어요.",
+   "blank": "observador",
+   "src": "made"
+  }
+ ],
  "w|observar": [
   {
    "text": "Eu adoro observar aves.",
@@ -51637,6 +52517,22 @@
    "en": "Congrats, the cake looks beautiful.",
    "ko": "축하해, 케이크 정말 예쁘다.",
    "blank": "Parabéns"
+  }
+ ],
+ "w|paradeiro": [
+  {
+   "text": "A polícia ainda não sabe o paradeiro da testemunha, e o Rafael está preocupado.",
+   "en": "The police still don't know the witness's whereabouts, and Rafael is worried.",
+   "ko": "경찰은 아직 증인의 행방을 몰라서 하파에우는 걱정하고 있어요.",
+   "blank": "paradeiro",
+   "src": "made"
+  },
+  {
+   "text": "A Carla procurou o fornecedor por dias, mas ninguém sabia do paradeiro dele.",
+   "en": "Carla looked for the supplier for days, but nobody knew his whereabouts.",
+   "ko": "카를라는 며칠이나 납품업자를 찾았지만 아무도 행방을 몰랐어요.",
+   "blank": "paradeiro",
+   "src": "made"
   }
  ],
  "w|parado": [
@@ -54121,6 +55017,22 @@
    "src": "made"
   }
  ],
+ "w|pinguim": [
+  {
+   "text": "O Rafael brinca que, de terno preto, parece um pinguim no tribunal.",
+   "en": "Rafael jokes that, in his black suit, he looks like a penguin in court.",
+   "ko": "하파에우는 검은 정장을 입으면 법정의 펭귄 같다고 농담해요.",
+   "blank": "pinguim",
+   "src": "made"
+  },
+  {
+   "text": "O filho da Carla pediu um pinguim de pelúcia de aniversário.",
+   "en": "Carla's son asked for a stuffed penguin for his birthday.",
+   "ko": "카를라의 아들은 생일 선물로 펭귄 인형을 달라고 했어요.",
+   "blank": "pinguim",
+   "src": "made"
+  }
+ ],
  "w|pintar": [
   {
    "text": "Você pode me ajudar a pintar minha casa?",
@@ -54836,6 +55748,22 @@
    "en": "The prototype's screen is only five inches, so Inês simplified the menu.",
    "ko": "시제품 화면이 오 인치밖에 안 돼서 이네스는 메뉴를 단순하게 만들었어요.",
    "blank": "polegadas",
+   "src": "made"
+  }
+ ],
+ "w|polegar": [
+  {
+   "text": "Um papagaio nervoso bicou o polegar do Lucas durante a consulta.",
+   "en": "A nervous parrot pecked Lucas's thumb during the appointment.",
+   "ko": "예민한 앵무새가 진료 중에 루카스의 엄지를 쪼았어요.",
+   "blank": "polegar",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana machucou o polegar fechando a gaveta da mesa.",
+   "en": "Mariana hurt her thumb closing her desk drawer.",
+   "ko": "마리아나는 책상 서랍을 닫다가 엄지를 다쳤어요.",
+   "blank": "polegar",
    "src": "made"
   }
  ],
@@ -55579,6 +56507,22 @@
    "src": "made"
   }
  ],
+ "w|postura": [
+  {
+   "text": "De tanto se curvar sobre a mesa de exame, o Lucas ficou com a postura ruim.",
+   "en": "From bending over the exam table so much, Lucas ended up with bad posture.",
+   "ko": "진료대 위로 너무 많이 몸을 숙여서 루카스는 자세가 나빠졌어요.",
+   "blank": "postura",
+   "src": "made"
+  },
+  {
+   "text": "A ortopedista disse à Mariana que a postura dela no computador estava péssima.",
+   "en": "The orthopedist told Mariana that her posture at the computer was terrible.",
+   "ko": "정형외과 의사는 마리아나에게 컴퓨터 앞 자세가 엉망이라고 했어요.",
+   "blank": "postura",
+   "src": "made"
+  }
+ ],
  "w|pote": [
   {
    "text": "A mãe do João mandou um pote de doce caseiro para a casa nova.",
@@ -55749,6 +56693,22 @@
    "en": "Let the people in.",
    "ko": "사람들 들여보내.",
    "blank": "povo"
+  }
+ ],
+ "w|povoar": [
+  {
+   "text": "O Rafael leu que imigrantes ajudaram a povoar a região onde o avô dele nasceu.",
+   "en": "Rafael read that immigrants helped populate the region where his grandfather was born.",
+   "ko": "하파에우는 할아버지가 태어난 지역에 이민자들이 정착해 살았다는 걸 읽었어요.",
+   "blank": "povoar",
+   "src": "made"
+  },
+  {
+   "text": "O loteamento que a Carla constrói vai povoar uma área que hoje é só pasto.",
+   "en": "The development Carla is building will populate an area that is just pasture today.",
+   "ko": "카를라가 짓는 단지가 지금은 목초지뿐인 땅에 사람들을 불러들일 거예요.",
+   "blank": "povoar",
+   "src": "made"
   }
  ],
  "w|praça": [
@@ -58003,6 +58963,22 @@
    "src": "made"
   }
  ],
+ "w|proximidade": [
+  {
+   "text": "A proximidade entre o juiz e uma das partes levou o Rafael a pedir outro juiz.",
+   "en": "The closeness between the judge and one of the parties led Rafael to request another judge.",
+   "ko": "판사와 한쪽 당사자가 가까운 사이라서 하파에우는 판사를 바꿔 달라고 했어요.",
+   "blank": "proximidade",
+   "src": "made"
+  },
+  {
+   "text": "A proximidade da obra com o hospital obriga a Carla a controlar o barulho.",
+   "en": "The site's proximity to the hospital forces Carla to keep the noise down.",
+   "ko": "공사장이 병원과 가까워서 카를라는 소음을 줄여야 해요.",
+   "blank": "proximidade",
+   "src": "made"
+  }
+ ],
  "w|próximo": [
   {
    "text": "O próximo sou eu.",
@@ -58600,6 +59576,22 @@
    "en": "The house Sofia bought is more than forty years old.",
    "ko": "소피아가 산 집은 지은 지 마흔 해가 넘었어요.",
    "blank": "quarenta",
+   "src": "made"
+  }
+ ],
+ "w|quarentena": [
+  {
+   "text": "O cachorro resgatado ficou em quarentena na clínica do Lucas por duas semanas.",
+   "en": "The rescued dog stayed in quarantine at Lucas's clinic for two weeks.",
+   "ko": "구조된 개는 루카스의 병원에서 두 주 동안 격리됐어요.",
+   "blank": "quarentena",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana cobriu a quarentena de um navio que chegou com passageiros doentes.",
+   "en": "Mariana covered the quarantine of a ship that arrived with sick passengers.",
+   "ko": "마리아나는 환자를 태우고 도착한 배의 격리 상황을 취재했어요.",
+   "blank": "quarentena",
    "src": "made"
   }
  ],
@@ -61131,6 +62123,22 @@
    "blank": "repente"
   }
  ],
+ "w|repentino": [
+  {
+   "text": "O silêncio repentino do réu deixou o Rafael desconfiado.",
+   "en": "The defendant's sudden silence made Rafael suspicious.",
+   "ko": "피고가 갑자기 입을 다물자 하파에우는 의심이 들었어요.",
+   "blank": "repentino",
+   "src": "made"
+  },
+  {
+   "text": "Uma chuva repentina obrigou a Carla a parar a concretagem.",
+   "en": "A sudden rain forced Carla to stop pouring the concrete.",
+   "ko": "갑작스러운 비 때문에 카를라는 콘크리트 타설을 멈춰야 했어요.",
+   "blank": "repentina",
+   "src": "made"
+  }
+ ],
  "w|repetir": [
   {
    "text": "Repete o nome devagar.",
@@ -61658,6 +62666,22 @@
    "en": "After the New Year's party, Carla woke up with a terrible hangover.",
    "ko": "새해 파티 다음 날 카를라는 숙취가 심했어요.",
    "blank": "ressaca",
+   "src": "made"
+  }
+ ],
+ "w|ressuscitar": [
+  {
+   "text": "A defesa tentou ressuscitar um caso arquivado, mas o Rafael achou a estratégia fraca.",
+   "en": "The defense tried to revive a shelved case, but Rafael thought the strategy was weak.",
+   "ko": "변호인단이 종결된 사건을 되살리려 했지만 하파에우는 그 전략이 약하다고 봤어요.",
+   "blank": "ressuscitar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla conseguiu ressuscitar uma betoneira velha que todo mundo achava perdida.",
+   "en": "Carla managed to bring back to life an old cement mixer everyone thought was lost.",
+   "ko": "카를라는 다들 끝났다고 여긴 낡은 믹서기를 되살려 냈어요.",
+   "blank": "ressuscitar",
    "src": "made"
   }
  ],
@@ -64933,6 +65957,22 @@
    "blank": "sequer"
   }
  ],
+ "w|sequestrador": [
+  {
+   "text": "O juiz condenou o sequestrador, e o Rafael respirou aliviado pela família da vítima.",
+   "en": "The judge convicted the kidnapper, and Rafael breathed a sigh of relief for the victim's family.",
+   "ko": "판사가 납치범에게 유죄를 선고하자 하파에우는 피해자 가족을 생각하며 안도했어요.",
+   "blank": "sequestrador",
+   "src": "made"
+  },
+  {
+   "text": "A filha da Carla adora um filme em que um sequestrador desastrado leva o cachorro errado.",
+   "en": "Carla's daughter loves a movie where a clumsy kidnapper takes the wrong dog.",
+   "ko": "카를라의 딸은 어설픈 납치범이 엉뚱한 개를 데려가는 영화를 좋아해요.",
+   "blank": "sequestrador",
+   "src": "made"
+  }
+ ],
  "w|sequestrar": [
   {
    "text": "No jornal, o Tiago leu que bandidos tentaram sequestrar um turista durante o carnaval.",
@@ -67411,6 +68451,22 @@
    "src": "made"
   }
  ],
+ "w|suposição": [
+  {
+   "text": "O juiz lembrou ao Rafael que uma suposição não vale como prova.",
+   "en": "The judge reminded Rafael that an assumption doesn't count as evidence.",
+   "ko": "판사는 하파에우에게 추측은 증거가 아니라고 일깨웠어요.",
+   "blank": "suposição",
+   "src": "made"
+  },
+  {
+   "text": "A Carla não trabalha com suposição e pede que meçam tudo duas vezes.",
+   "en": "Carla doesn't work on assumptions and asks for everything to be measured twice.",
+   "ko": "카를라는 짐작으로 일하지 않고 모든 걸 두 번씩 재게 해요.",
+   "blank": "suposição",
+   "src": "made"
+  }
+ ],
  "w|supostamente": [
   {
    "text": "O bolo supostamente era surpresa, mas o Gabriel viu a caixa na geladeira.",
@@ -67601,6 +68657,22 @@
    "src": "made"
   }
  ],
+ "w|sushi": [
+  {
+   "text": "Depois de ganhar a causa, o Rafael comemorou com sushi no restaurante da esquina.",
+   "en": "After winning the case, Rafael celebrated with sushi at the corner restaurant.",
+   "ko": "소송에서 이긴 뒤 하파에우는 모퉁이 식당에서 초밥으로 축하했어요.",
+   "blank": "sushi",
+   "src": "made"
+  },
+  {
+   "text": "Para comemorar o fim da laje, a Carla pagou sushi para a equipe toda.",
+   "en": "To celebrate finishing the slab, Carla paid for sushi for the whole crew.",
+   "ko": "슬래브 공사를 마친 기념으로 카를라는 팀 전체에 초밥을 샀어요.",
+   "blank": "sushi",
+   "src": "made"
+  }
+ ],
  "w|suspeitar": [
   {
    "text": "O Bruno começou a suspeitar que um gambá estava roubando os ovos.",
@@ -67772,6 +68844,22 @@
    "en": "The coach gave Ana a subtle signal to pick up the pace.",
    "ko": "코치가 아나에게 속도를 올리라고 살짝 신호를 줬어요.",
    "blank": "sutil",
+   "src": "made"
+  }
+ ],
+ "w|tabaco": [
+  {
+   "text": "O Lucas explicou que a fumaça do tabaco também faz mal aos animais da casa.",
+   "en": "Lucas explained that tobacco smoke also harms pets in the home.",
+   "ko": "루카스는 담배 연기가 집 안 동물에게도 해롭다고 설명했어요.",
+   "blank": "tabaco",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana publicou uma série sobre a indústria do tabaco no interior do estado.",
+   "en": "Mariana published a series about the tobacco industry in the countryside of the state.",
+   "ko": "마리아나는 주 내륙의 담배 산업에 관한 연재 기사를 냈어요.",
+   "blank": "tabaco",
    "src": "made"
   }
  ],
@@ -68547,6 +69635,22 @@
    "en": "The rainy season has arrived.",
    "ko": "우기가 시작됐어.",
    "blank": "temporada"
+  }
+ ],
+ "w|temporal": [
+  {
+   "text": "O Lucas ensinou que o osso temporal do cavalo fica perto do olho.",
+   "en": "Lucas taught that the horse's temporal bone is near the eye.",
+   "ko": "루카스는 말의 측두골이 눈 근처에 있다고 가르쳐 줬어요.",
+   "blank": "temporal",
+   "src": "made"
+  },
+  {
+   "text": "O jornal da Mariana publicou um alerta de chuva forte e temporal para a madrugada.",
+   "en": "Mariana's paper published a warning of heavy rain and storms for the early morning.",
+   "ko": "마리아나네 신문은 새벽에 폭우와 폭풍이 온다는 경보를 실었어요.",
+   "blank": "temporal",
+   "src": "made"
   }
  ],
  "w|temporário": [
@@ -70567,6 +71671,22 @@
    "src": "made"
   }
  ],
+ "w|transição": [
+  {
+   "text": "O Rafael ajudou o escritório na transição para os processos digitais.",
+   "en": "Rafael helped the firm in the transition to digital case files.",
+   "ko": "하파에우는 사무실이 전자 소송으로 넘어가는 걸 도왔어요.",
+   "blank": "transição",
+   "src": "made"
+  },
+  {
+   "text": "A Carla planejou a transição entre o piso de madeira e o de pedra.",
+   "en": "Carla planned the transition between the wood floor and the stone floor.",
+   "ko": "카를라는 나무 바닥과 돌 바닥이 이어지는 부분을 설계했어요.",
+   "blank": "transição",
+   "src": "made"
+  }
+ ],
  "w|trânsito": [
   {
    "text": "Eu nunca sofri um acidente de trânsito.",
@@ -70863,6 +71983,22 @@
    "en": "Don't forget to bring bread.",
    "ko": "빵 가져오는 거 잊지 마.",
    "blank": "trazer"
+  }
+ ],
+ "w|trégua": [
+  {
+   "text": "Os dois irmãos fizeram uma trégua no corredor, e o Rafael conseguiu um acordo.",
+   "en": "The two brothers called a truce in the hallway, and Rafael reached a settlement.",
+   "ko": "두 형제가 복도에서 휴전을 해서 하파에우는 합의를 끌어냈어요.",
+   "blank": "trégua",
+   "src": "made"
+  },
+  {
+   "text": "Depois de dias de chuva, o tempo deu uma trégua e a Carla adiantou o telhado.",
+   "en": "After days of rain, the weather gave a break and Carla got ahead on the roof.",
+   "ko": "며칠 비가 온 뒤 날씨가 잠잠해져서 카를라는 지붕 공사를 앞당겼어요.",
+   "blank": "trégua",
+   "src": "made"
   }
  ],
  "w|treinado": [
@@ -71927,6 +73063,22 @@
    "src": "tatoeba:1567895/alexmarcelo en:868536/LittleBoy"
   }
  ],
+ "w|urbano": [
+  {
+   "text": "O Rafael se especializou em direito urbano e casos de moradia.",
+   "en": "Rafael specialized in urban law and housing cases.",
+   "ko": "하파에우는 도시법과 주거 사건을 전문으로 해요.",
+   "blank": "urbano",
+   "src": "made"
+  },
+  {
+   "text": "A Carla participa de um projeto de transporte urbano para o bairro.",
+   "en": "Carla is part of an urban transit project for the neighborhood.",
+   "ko": "카를라는 그 동네 도시 교통 사업에 참여하고 있어요.",
+   "blank": "urbano",
+   "src": "made"
+  }
+ ],
  "w|urgente": [
   {
    "text": "Eu não tinha ideia de que era tão urgente.",
@@ -72050,6 +73202,22 @@
    "en": "An anonymous user left a funny message on the site's board.",
    "ko": "익명의 사용자가 사이트 게시판에 웃긴 글을 남겼어요.",
    "blank": "usuário",
+   "src": "made"
+  }
+ ],
+ "w|útero": [
+  {
+   "text": "A cadela estava com infecção no útero, e o Lucas operou no mesmo dia.",
+   "en": "The female dog had an infection in her uterus, and Lucas operated the same day.",
+   "ko": "암컷 개가 자궁에 염증이 있어서 루카스는 그날 바로 수술했어요.",
+   "blank": "útero",
+   "src": "made"
+  },
+  {
+   "text": "A Mariana entrevistou uma ginecologista sobre doenças do útero que demoram a ser diagnosticadas.",
+   "en": "Mariana interviewed a gynecologist about uterine diseases that take a long time to diagnose.",
+   "ko": "마리아나는 진단이 늦어지는 자궁 질환에 관해 산부인과 의사를 인터뷰했어요.",
+   "blank": "útero",
    "src": "made"
   }
  ],
@@ -72241,6 +73409,22 @@
    "en": "We went down to the valley.",
    "ko": "골짜기까지 내려갔어.",
    "blank": "vale"
+  }
+ ],
+ "w|valentão": [
+  {
+   "text": "O Rafael defendeu um garoto que reagiu ao valentão da escola.",
+   "en": "Rafael defended a boy who stood up to the school bully.",
+   "ko": "하파에우는 학교 일진에게 맞선 소년을 변호했어요.",
+   "blank": "valentão",
+   "src": "made"
+  },
+  {
+   "text": "Um pedreiro bancava o valentão com os novatos até a Carla dar uma bronca nele.",
+   "en": "A bricklayer was acting like a bully toward the newcomers until Carla told him off.",
+   "ko": "한 벽돌공이 신참들에게 으스대다가 카를라에게 혼났어요.",
+   "blank": "valentão",
+   "src": "made"
   }
  ],
  "w|valente": [
@@ -73113,6 +74297,22 @@
    "src": "made"
   }
  ],
+ "w|verificação": [
+  {
+   "text": "O Rafael pediu uma verificação das assinaturas no contrato.",
+   "en": "Rafael requested a verification of the signatures on the contract.",
+   "ko": "하파에우는 계약서 서명을 확인해 달라고 요청했어요.",
+   "blank": "verificação",
+   "src": "made"
+  },
+  {
+   "text": "A fiscal da prefeitura fez a verificação do alvará, e a Carla mostrou tudo em ordem.",
+   "en": "The city inspector checked the permit, and Carla showed everything was in order.",
+   "ko": "시청 감독관이 허가증을 확인했고 카를라는 모든 게 제대로라는 걸 보여 줬어요.",
+   "blank": "verificação",
+   "src": "made"
+  }
+ ],
  "w|verificar": [
   {
    "text": "Verifica o óleo do carro.",
@@ -73202,6 +74402,22 @@
    "en": "On the eve of the marathon, Sofia ate pasta and went to bed early.",
    "ko": "마라톤 전날 소피아는 파스타를 먹고 일찍 잤어요.",
    "blank": "véspera",
+   "src": "made"
+  }
+ ],
+ "w|vestiário": [
+  {
+   "text": "O Rafael trocou de roupa no vestiário do clube antes da partida de domingo.",
+   "en": "Rafael changed clothes in the club locker room before Sunday's match.",
+   "ko": "하파에우는 일요일 경기 전에 클럽 탈의실에서 옷을 갈아입었어요.",
+   "blank": "vestiário",
+   "src": "made"
+  },
+  {
+   "text": "A Carla mandou construir um vestiário com chuveiro para os operários.",
+   "en": "Carla had a locker room with showers built for the workers.",
+   "ko": "카를라는 인부들을 위해 샤워실 딸린 탈의실을 짓게 했어요.",
+   "blank": "vestiário",
    "src": "made"
   }
  ],
@@ -73556,6 +74772,22 @@
    "en": "In a toy box, Ana's son found the figure of his favorite villain.",
    "ko": "장난감 상자에서 아나의 아들이 제일 좋아하는 악당 인형을 찾았어요.",
    "blank": "vilão",
+   "src": "made"
+  }
+ ],
+ "w|vilarejo": [
+  {
+   "text": "O réu do caso do Rafael mora num vilarejo de pescadores a horas da capital.",
+   "en": "The defendant in Rafael's case lives in a fishing village hours from the capital.",
+   "ko": "하파에우가 맡은 사건의 피고는 수도에서 몇 시간 떨어진 어촌 마을에 살아요.",
+   "blank": "vilarejo",
+   "src": "made"
+  },
+  {
+   "text": "A construtora da Carla está fazendo uma escola num vilarejo do interior.",
+   "en": "Carla's construction company is building a school in a village in the countryside.",
+   "ko": "카를라의 건설사는 시골 마을에 학교를 짓고 있어요.",
+   "blank": "vilarejo",
    "src": "made"
   }
  ],
@@ -74293,6 +75525,22 @@
    "ko": "토하기 시작했어요.",
    "blank": "vomitar",
    "src": "tatoeba:1916132/alexmarcelo en:1911899/Spamster"
+  }
+ ],
+ "w|vômito": [
+  {
+   "text": "O Lucas perguntou se o vômito do cachorro tinha sangue.",
+   "en": "Lucas asked whether the dog's vomit had blood in it.",
+   "ko": "루카스는 개의 토사물에 피가 섞여 있었는지 물었어요.",
+   "blank": "vômito",
+   "src": "made"
+  },
+  {
+   "text": "Na reportagem sobre o barco, a Mariana contou que metade dos passageiros passou mal e o convés ficou cheio de vômito.",
+   "en": "In the boat story, Mariana reported that half the passengers got sick and the deck was full of vomit.",
+   "ko": "배 기사에서 마리아나는 승객 절반이 멀미를 해 갑판이 토사물로 가득했다고 썼어요.",
+   "blank": "vômito",
+   "src": "made"
   }
  ],
  "w|vontade": [

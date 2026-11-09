@@ -1057,6 +1057,22 @@
    "blank": "admettre"
   }
  ],
+ "w|administrateur": [
+  {
+   "text": "Antoine appelle l'administrateur du réseau, car aucune machine ne répond plus.",
+   "en": "Antoine calls the network administrator because none of the machines are responding.",
+   "ko": "기계가 하나도 응답하지 않아서 앙투안은 네트워크 관리자에게 전화해요.",
+   "blank": "administrateur",
+   "src": "made"
+  },
+  {
+   "text": "Sarah écrit à l'administrateur du site de randonnée pour signaler un pont effondré.",
+   "en": "Sarah writes to the hiking website's administrator to report a collapsed bridge.",
+   "ko": "사라는 무너진 다리를 알리려고 등산 사이트 관리자에게 글을 써요.",
+   "blank": "administrateur",
+   "src": "made"
+  }
+ ],
  "w|administration": [
   {
    "text": "L’administration ferme à seize heures aujourd’hui.",
@@ -3851,6 +3867,22 @@
    "src": "made"
   }
  ],
+ "w|apprentissage": [
+  {
+   "text": "Antoine forme un jeune en apprentissage qui passe deux jours par semaine à l'usine.",
+   "en": "Antoine trains a young apprentice who spends two days a week at the factory.",
+   "ko": "앙투안은 일주일에 이틀 공장에 나오는 견습생을 가르쳐요.",
+   "blank": "apprentissage",
+   "src": "made"
+  },
+  {
+   "text": "Sarah observe un jeune faucon en plein apprentissage du vol au-dessus de la rivière.",
+   "en": "Sarah watches a young falcon learning to fly above the river.",
+   "ko": "사라는 강 위에서 나는 법을 배우고 있는 어린 매를 지켜봐요.",
+   "blank": "apprentissage",
+   "src": "made"
+  }
+ ],
  "w|apprêter": [
   {
    "text": "Lucas s'apprête à partir quand une machine tombe en panne.",
@@ -5553,6 +5585,22 @@
    "blank": "audition"
   }
  ],
+ "w|auditionner": [
+  {
+   "text": "Le samedi, Antoine joue de la batterie et va bientôt auditionner pour un groupe de jazz.",
+   "en": "On Saturdays, Antoine plays drums and will soon audition for a jazz band.",
+   "ko": "앙투안은 토요일마다 드럼을 치는데 곧 재즈 밴드 오디션을 볼 거예요.",
+   "blank": "auditionner",
+   "src": "made"
+  },
+  {
+   "text": "Le soir, au camping, Sarah aide son ami à répéter la scène qu'il va auditionner la semaine prochaine.",
+   "en": "In the evening at the campsite, Sarah helps her friend rehearse the scene he'll audition with next week.",
+   "ko": "사라는 저녁에 캠핑장에서 친구가 다음 주 오디션 볼 장면 연습을 도와줘요.",
+   "blank": "auditionner",
+   "src": "made"
+  }
+ ],
  "w|augmentation": [
   {
    "text": "J'ai enfin eu mon augmentation.",
@@ -7194,6 +7242,22 @@
    "en": "Chloé is reading a novel based on the true story of a family of railway workers.",
    "ko": "클로에는 한 철도원 가족의 실화를 바탕으로 한 소설을 읽어요.",
    "blank": "basé",
+   "src": "made"
+  }
+ ],
+ "w|basique": [
+  {
+   "text": "Antoine rappelle aux nouveaux les règles de sécurité les plus basiques, comme porter des gants.",
+   "en": "Antoine reminds the new hires of the most basic safety rules, like wearing gloves.",
+   "ko": "앙투안은 신입들에게 장갑 끼기 같은 가장 기본적인 안전 수칙을 일러 줘요.",
+   "blank": "basiques",
+   "src": "made"
+  },
+  {
+   "text": "Pour camper, Sarah n'emporte que le matériel le plus basique.",
+   "en": "To camp, Sarah takes only the most basic gear.",
+   "ko": "사라는 캠핑할 때 가장 기본적인 장비만 챙겨요.",
+   "blank": "basique",
    "src": "made"
   }
  ],
@@ -14207,6 +14271,22 @@
    "src": "made"
   }
  ],
+ "w|clavier": [
+  {
+   "text": "Le clavier de l'ordinateur de contrôle est couvert de poussière, soupire Antoine.",
+   "en": "The control computer's keyboard is covered in dust, Antoine sighs.",
+   "ko": "앙투안은 제어용 컴퓨터 자판이 먼지투성이라고 한숨을 쉬어요.",
+   "blank": "clavier",
+   "src": "made"
+  },
+  {
+   "text": "De retour au chalet, Sarah tape ses notes sur un petit clavier pliable.",
+   "en": "Back at the cabin, Sarah types her notes on a small folding keyboard.",
+   "ko": "오두막에 돌아온 사라는 접이식 작은 키보드로 메모를 쳐요.",
+   "blank": "clavier",
+   "src": "made"
+  }
+ ],
  "w|clé": [
   {
    "text": "J'ai perdu ma clé ce matin.",
@@ -14310,6 +14390,22 @@
    "en": "This little roadside restaurant has a clientele of loyal truckers, Claire notices.",
    "ko": "클레르는 이 길가 식당 손님이 단골 트럭 기사들이라는 걸 알아채요.",
    "blank": "clientèle",
+   "src": "made"
+  }
+ ],
+ "w|cligner": [
+  {
+   "text": "Sous la lumière trop vive des néons, Antoine ne peut s'empêcher de cligner des yeux.",
+   "en": "Under the harsh glare of the neon lights, Antoine can't help blinking.",
+   "ko": "앙투안은 너무 밝은 형광등 아래에서 자꾸 눈을 깜빡여요.",
+   "blank": "cligner",
+   "src": "made"
+  },
+  {
+   "text": "Éblouie par le soleil sur l'eau, Sarah se met à cligner des yeux.",
+   "en": "Dazzled by the sun on the water, Sarah starts blinking.",
+   "ko": "물에 비친 햇빛에 눈이 부셔서 사라는 눈을 깜빡여요.",
+   "blank": "cligner",
    "src": "made"
   }
  ],
@@ -14758,6 +14854,22 @@
    "en": "Émilie sent a parcel to her mother before leaving.",
    "ko": "에밀리는 떠나기 전에 엄마에게 소포를 보냈어요.",
    "blank": "colis",
+   "src": "made"
+  }
+ ],
+ "w|collaborateur": [
+  {
+   "text": "Le directeur présente à Antoine un nouveau collaborateur qui rejoindra l'équipe de nuit.",
+   "en": "The director introduces Antoine to a new colleague who will join the night shift.",
+   "ko": "공장장이 앙투안에게 야간조에 들어올 새 동료를 소개해요.",
+   "blank": "collaborateur",
+   "src": "made"
+  },
+  {
+   "text": "Pour son étude sur les castors, Sarah travaille avec un collaborateur de l'université.",
+   "en": "For her study on beavers, Sarah works with a colleague from the university.",
+   "ko": "사라는 비버 연구를 대학 동료와 함께 해요.",
+   "blank": "collaborateur",
    "src": "made"
   }
  ],
@@ -17561,6 +17673,22 @@
    "src": "made"
   }
  ],
+ "w|conteneur": [
+  {
+   "text": "Antoine surveille le chargement du conteneur qui part ce soir pour le port.",
+   "en": "Antoine oversees the loading of the container leaving for the port tonight.",
+   "ko": "앙투안은 오늘 밤 항구로 떠날 컨테이너 짐 싣는 걸 지켜봐요.",
+   "blank": "conteneur",
+   "src": "made"
+  },
+  {
+   "text": "Sarah jette ses déchets dans le conteneur prévu à l'entrée du sentier.",
+   "en": "Sarah throws her rubbish in the container at the start of the trail.",
+   "ko": "사라는 산책로 입구에 있는 수거함에 쓰레기를 버려요.",
+   "blank": "conteneur",
+   "src": "made"
+  }
+ ],
  "w|contenir": [
   {
    "text": "Cette boîte peut contenir beaucoup d'objets.",
@@ -19105,6 +19233,22 @@
    "en": "These pants are a bit short for me.",
    "ko": "이 바지는 나에게 좀 짧아.",
    "blank": "court"
+  }
+ ],
+ "w|courtier": [
+  {
+   "text": "Antoine discute avec un courtier en assurances pour couvrir les nouvelles machines.",
+   "en": "Antoine talks with an insurance broker to cover the new machines.",
+   "ko": "앙투안은 새 기계 보험 때문에 보험 중개인과 상의해요.",
+   "blank": "courtier",
+   "src": "made"
+  },
+  {
+   "text": "Le propriétaire du chalet a acheté la maison par un courtier sans jamais l'avoir vue, raconte Sarah.",
+   "en": "The cabin's owner bought the house through a broker without ever seeing it, Sarah says.",
+   "ko": "사라는 오두막 주인이 중개인을 통해 한 번도 안 보고 집을 샀다고 말해요.",
+   "blank": "courtier",
+   "src": "made"
   }
  ],
  "w|courtoisie": [
@@ -20993,6 +21137,22 @@
    "blank": "Décembre"
   }
  ],
+ "w|décence": [
+  {
+   "text": "Antoine estime que chaque ouvrier mérite un salaire qui lui permette de vivre dans la décence.",
+   "en": "Antoine believes every worker deserves a wage that lets them live decently.",
+   "ko": "앙투안은 모든 노동자가 품위 있게 살 만한 월급을 받아야 한다고 생각해요.",
+   "blank": "décence",
+   "src": "made"
+  },
+  {
+   "text": "Sarah trouve qu'il faut un minimum de décence pour ne pas laisser ses déchets en pleine nature.",
+   "en": "Sarah thinks it takes a minimum of decency not to leave your rubbish out in nature.",
+   "ko": "사라는 자연에 쓰레기를 두고 가지 않는 건 최소한의 예의라고 생각해요.",
+   "blank": "décence",
+   "src": "made"
+  }
+ ],
  "w|décennie": [
   {
    "text": "Le restaurant d'Antoine appartient à la même famille depuis plus d'une décennie.",
@@ -21067,6 +21227,22 @@
    "en": "This movie is going to disappoint a lot of people.",
    "ko": "이 영화는 많은 사람을 실망시킬 거야.",
    "blank": "décevoir"
+  }
+ ],
+ "w|déchaîné": [
+  {
+   "text": "Après l'annonce de la fermeture, Antoine fait face à une foule déchaînée devant les grilles.",
+   "en": "After the closure announcement, Antoine faces a furious crowd at the gates.",
+   "ko": "폐쇄 발표 뒤 앙투안은 철문 앞에서 성난 사람들과 마주해요.",
+   "blank": "déchaînée",
+   "src": "made"
+  },
+  {
+   "text": "Après les pluies, Sarah regarde la rivière déchaînée emporter des troncs entiers.",
+   "en": "After the rains, Sarah watches the raging river carry away whole tree trunks.",
+   "ko": "비가 온 뒤 사라는 거센 강물이 통나무를 통째로 휩쓸어 가는 걸 봐요.",
+   "blank": "déchaînée",
+   "src": "made"
   }
  ],
  "w|décharge": [
@@ -24723,6 +24899,22 @@
    "en": "The wallet disappeared without a trace.",
    "ko": "지갑이 흔적도 없이 사라졌어.",
    "blank": "disparu"
+  }
+ ],
+ "w|dispersé": [
+  {
+   "text": "Les pièces sont dispersées sur trois sites, ce qui complique le travail d'Antoine.",
+   "en": "The parts are spread across three sites, which complicates Antoine's work.",
+   "ko": "부품이 세 곳에 흩어져 있어서 앙투안의 일이 복잡해요.",
+   "blank": "dispersées",
+   "src": "made"
+  },
+  {
+   "text": "Sarah remarque que les graines sont dispersées par le vent sur toute la clairière.",
+   "en": "Sarah notices the seeds are scattered by the wind across the whole clearing.",
+   "ko": "사라는 씨앗이 바람에 실려 빈터 전체에 흩어진 걸 봐요.",
+   "blank": "dispersées",
+   "src": "made"
   }
  ],
  "w|disponible": [
@@ -30201,6 +30393,22 @@
    "blank": "esprit"
   }
  ],
+ "w|esquiver": [
+  {
+   "text": "Antoine a dû esquiver une palette qui tombait du chariot élévateur.",
+   "en": "Antoine had to dodge a pallet falling off the forklift.",
+   "ko": "앙투안은 지게차에서 떨어지는 팔레트를 피해야 했어요.",
+   "blank": "esquiver",
+   "src": "made"
+  },
+  {
+   "text": "Sarah réussit à esquiver une branche basse en descendant le sentier à vélo.",
+   "en": "Sarah manages to dodge a low branch while riding down the trail.",
+   "ko": "사라는 자전거로 산길을 내려가다가 낮은 가지를 겨우 피해요.",
+   "blank": "esquiver",
+   "src": "made"
+  }
+ ],
  "w|essai": [
   {
    "text": "J'ai écrit un essai sur ce sujet.",
@@ -31399,6 +31607,22 @@
    "blank": "exécuter"
   }
  ],
+ "w|exécutif": [
+  {
+   "text": "Antoine présente son projet au comité exécutif de l'entreprise.",
+   "en": "Antoine presents his project to the company's executive committee.",
+   "ko": "앙투안은 회사 경영 위원회에 자기 계획을 발표해요.",
+   "blank": "exécutif",
+   "src": "made"
+  },
+  {
+   "text": "Sarah apprend que le bureau exécutif de l'association des pêcheurs veut protéger la rivière.",
+   "en": "Sarah learns that the anglers' association executive board wants to protect the river.",
+   "ko": "사라는 낚시 협회 집행부가 강을 지키려 한다는 걸 알게 돼요.",
+   "blank": "exécutif",
+   "src": "made"
+  }
+ ],
  "w|exécution": [
   {
    "text": "L'exécution du projet a commencé hier.",
@@ -31625,6 +31849,22 @@
    "blank": "expérience"
   }
  ],
+ "w|expérimental": [
+  {
+   "text": "Antoine teste un procédé expérimental pour recycler les chutes de plastique.",
+   "en": "Antoine is testing an experimental process for recycling plastic offcuts.",
+   "ko": "앙투안은 플라스틱 자투리를 재활용하는 실험적인 공정을 시험하고 있어요.",
+   "blank": "expérimental",
+   "src": "made"
+  },
+  {
+   "text": "Sarah visite un jardin expérimental où l'on teste des arbres résistants à la sécheresse.",
+   "en": "Sarah visits an experimental garden where drought-resistant trees are being tested.",
+   "ko": "사라는 가뭄에 강한 나무를 시험하는 실험 정원을 찾아가요.",
+   "blank": "expérimental",
+   "src": "made"
+  }
+ ],
  "w|expérimenté": [
   {
    "text": "Nicolas travaille toujours avec un collègue expérimenté sur les machines dangereuses.",
@@ -31653,6 +31893,22 @@
    "en": "She is an expert in IT.",
    "ko": "그녀는 IT 전문가다.",
    "blank": "expert"
+  }
+ ],
+ "w|expertise": [
+  {
+   "text": "Grâce à son expertise en mécanique, Antoine répare la machine en moins d'une heure.",
+   "en": "Thanks to his expertise in mechanics, Antoine fixes the machine in under an hour.",
+   "ko": "기계에 대한 전문 지식 덕분에 앙투안은 한 시간도 안 돼서 기계를 고쳐요.",
+   "blank": "expertise",
+   "src": "made"
+  },
+  {
+   "text": "Sarah fait appel à l'expertise d'un botaniste pour identifier une fleur rare près de la rivière.",
+   "en": "Sarah calls on a botanist's expertise to identify a rare flower near the river.",
+   "ko": "사라는 강가의 희귀한 꽃을 알아보려고 식물학자의 전문 지식을 빌려요.",
+   "blank": "expertise",
+   "src": "made"
   }
  ],
  "w|expirer": [
@@ -34691,6 +34947,22 @@
    "blank": "forêt"
   }
  ],
+ "w|forge": [
+  {
+   "text": "Au fond de l'usine, Antoine montre aux visiteurs l'ancienne forge où l'on chauffait le métal.",
+   "en": "At the back of the factory, Antoine shows visitors the old forge where metal used to be heated.",
+   "ko": "앙투안은 공장 안쪽에서 방문객들에게 예전에 쇠를 달구던 대장간을 보여 줘요.",
+   "blank": "forge",
+   "src": "made"
+  },
+  {
+   "text": "Au bord de la rivière, Sarah visite une ancienne forge alimentée autrefois par un moulin.",
+   "en": "By the river, Sarah visits an old forge once powered by a mill.",
+   "ko": "사라는 강가에서 예전에 물레방아로 돌아가던 옛 대장간을 찾아가요.",
+   "blank": "forge",
+   "src": "made"
+  }
+ ],
  "w|formalité": [
   {
    "text": "Pour Nicolas, le contrôle des badges à l'entrée n'est qu'une formalité.",
@@ -36515,6 +36787,22 @@
    "blank": "génération"
   }
  ],
+ "w|générer": [
+  {
+   "text": "Les nouvelles turbines doivent générer assez d'électricité pour toute l'usine, explique Antoine.",
+   "en": "The new turbines should generate enough electricity for the whole factory, Antoine explains.",
+   "ko": "앙투안은 새 터빈이 공장 전체에 쓸 전기를 만들어야 한다고 설명해요.",
+   "blank": "générer",
+   "src": "made"
+  },
+  {
+   "text": "Le petit barrage sur la rivière permet de générer l'électricité du village, explique Sarah.",
+   "en": "The small dam on the river generates the village's electricity, Sarah explains.",
+   "ko": "사라는 강의 작은 댐이 마을 전기를 만든다고 설명해요.",
+   "blank": "générer",
+   "src": "made"
+  }
+ ],
  "w|généreux": [
   {
    "text": "Il est très généreux avec ses amis.",
@@ -36974,6 +37262,22 @@
    "en": "The package arrived all swollen, and Manon is afraid the product leaked.",
    "ko": "소포가 잔뜩 부푼 채 도착해서 마농은 내용물이 샜을까 봐 걱정해요.",
    "blank": "gonflé",
+   "src": "made"
+  }
+ ],
+ "w|gonfler": [
+  {
+   "text": "Antoine vérifie la pression avant de gonfler les pneus du chariot.",
+   "en": "Antoine checks the pressure before inflating the cart's tires.",
+   "ko": "앙투안은 수레 타이어에 바람을 넣기 전에 압력을 확인해요.",
+   "blank": "gonfler",
+   "src": "made"
+  },
+  {
+   "text": "Avec une pompe à main, Sarah commence à gonfler son kayak au bord de la rivière.",
+   "en": "With a hand pump, Sarah starts inflating her kayak by the river.",
+   "ko": "사라는 강가에서 손 펌프로 카약에 바람을 넣기 시작해요.",
+   "blank": "gonfler",
    "src": "made"
   }
  ],
@@ -38739,6 +39043,22 @@
    "blank": "hier"
   }
  ],
+ "w|hiérarchie": [
+  {
+   "text": "Antoine trouve que la hiérarchie de l'entreprise est trop lourde pour prendre des décisions rapides.",
+   "en": "Antoine finds the company hierarchy too heavy for making quick decisions.",
+   "ko": "앙투안은 회사 위계가 너무 무거워서 빨리 결정하기 어렵다고 생각해요.",
+   "blank": "hiérarchie",
+   "src": "made"
+  },
+  {
+   "text": "Sarah étudie la hiérarchie au sein d'une meute de loups qui vit dans la forêt.",
+   "en": "Sarah studies the hierarchy within a wolf pack that lives in the forest.",
+   "ko": "사라는 숲에 사는 늑대 무리 안의 서열을 연구해요.",
+   "blank": "hiérarchie",
+   "src": "made"
+  }
+ ],
  "w|hilarant": [
   {
    "text": "Le discours de départ du directeur était hilarant, et Louis a pleuré de rire.",
@@ -39681,6 +40001,22 @@
    "en": "It's foolish to do that without thinking.",
    "ko": "생각 없이 그렇게 하는 건 어리석어.",
    "blank": "idiot"
+  }
+ ],
+ "w|idiotie": [
+  {
+   "text": "Antoine regrette l'idiotie qu'il a dite au chef pendant la réunion.",
+   "en": "Antoine regrets the stupid thing he said to the boss during the meeting.",
+   "ko": "앙투안은 회의 때 상사에게 한 바보 같은 말을 후회해요.",
+   "blank": "idiotie",
+   "src": "made"
+  },
+  {
+   "text": "Sarah trouve que c'est une idiotie de faire un feu en pleine forêt l'été.",
+   "en": "Sarah thinks it's stupid to light a fire in the middle of the forest in summer.",
+   "ko": "사라는 여름에 숲 한가운데서 불을 피우는 건 어리석은 짓이라고 생각해요.",
+   "blank": "idiotie",
+   "src": "made"
   }
  ],
  "w|idole": [
@@ -41515,6 +41851,22 @@
    "src": "made"
   }
  ],
+ "w|ingénierie": [
+  {
+   "text": "Antoine a fait ses études dans une école d'ingénierie avant d'entrer à l'usine.",
+   "en": "Antoine studied at an engineering school before joining the factory.",
+   "ko": "앙투안은 공장에 들어오기 전에 공대에서 공부했어요.",
+   "blank": "ingénierie",
+   "src": "made"
+  },
+  {
+   "text": "Sarah admire l'ingénierie des castors, qui bâtissent des barrages d'une solidité étonnante.",
+   "en": "Sarah admires the engineering of beavers, who build remarkably sturdy dams.",
+   "ko": "사라는 놀랍도록 튼튼한 댐을 짓는 비버의 공학 솜씨에 감탄해요.",
+   "blank": "ingénierie",
+   "src": "made"
+  }
+ ],
  "w|ingénieur": [
   {
    "text": "Mon cousin est ingénieur en informatique.",
@@ -41527,6 +41879,22 @@
    "en": "My sister is an engineer at Airbus.",
    "ko": "내 여동생은 에어버스에서 엔지니어야.",
    "blank": "ingénieur"
+  }
+ ],
+ "w|ingénieux": [
+  {
+   "text": "Antoine a trouvé un moyen ingénieux de réutiliser l'eau de refroidissement.",
+   "en": "Antoine came up with a clever way to reuse the cooling water.",
+   "ko": "앙투안은 냉각수를 다시 쓰는 기발한 방법을 찾아냈어요.",
+   "blank": "ingénieux",
+   "src": "made"
+  },
+  {
+   "text": "Sarah fabrique un abri ingénieux avec des branches et une simple bâche.",
+   "en": "Sarah builds a clever shelter out of branches and a simple tarp.",
+   "ko": "사라는 나뭇가지와 방수포 하나로 기발한 쉼터를 만들어요.",
+   "blank": "ingénieux",
+   "src": "made"
   }
  ],
  "w|ingrat": [
@@ -41760,6 +42128,22 @@
    "en": "Chloé reassures the customer: this warning message is harmless.",
    "ko": "클로에는 손님을 안심시켜요. 이 경고 메시지는 해가 없어요.",
    "blank": "inoffensif",
+   "src": "made"
+  }
+ ],
+ "w|inondé": [
+  {
+   "text": "Après l'orage, Antoine découvre le sous-sol de l'usine complètement inondé.",
+   "en": "After the storm, Antoine finds the factory basement completely flooded.",
+   "ko": "폭풍이 지난 뒤 앙투안은 공장 지하가 완전히 물에 잠긴 걸 봐요.",
+   "blank": "inondé",
+   "src": "made"
+  },
+  {
+   "text": "Le sentier qui longe la rivière est inondé, alors Sarah doit faire un détour.",
+   "en": "The trail along the river is flooded, so Sarah has to take a detour.",
+   "ko": "강을 따라가는 산책로가 물에 잠겨서 사라는 돌아가야 해요.",
+   "blank": "inondé",
    "src": "made"
   }
  ],
@@ -42747,6 +43131,22 @@
    "en": "The radio interview lasted twenty minutes.",
    "ko": "라디오 인터뷰는 이십 분 동안 진행됐어요.",
    "blank": "interview"
+  }
+ ],
+ "w|interviewer": [
+  {
+   "text": "Une journaliste vient interviewer Antoine sur la reconversion de l'usine.",
+   "en": "A journalist comes to interview Antoine about the factory's conversion.",
+   "ko": "기자가 공장 업종 전환에 대해 앙투안을 인터뷰하러 와요.",
+   "blank": "interviewer",
+   "src": "made"
+  },
+  {
+   "text": "Sarah doit interviewer le garde forestier pour son article sur la rivière.",
+   "en": "Sarah has to interview the forest ranger for her article on the river.",
+   "ko": "사라는 강에 관한 기사 때문에 산림 관리원을 인터뷰해야 해요.",
+   "blank": "interviewer",
+   "src": "made"
   }
  ],
  "w|intestin": [
@@ -44493,6 +44893,22 @@
    "blank": "là-haut"
   }
  ],
+ "w|label": [
+  {
+   "text": "Antoine est fier que les produits de l'usine aient obtenu un label écologique.",
+   "en": "Antoine is proud that the factory's products have earned an eco-label.",
+   "ko": "앙투안은 공장 제품이 친환경 인증을 받아서 뿌듯해요.",
+   "blank": "label",
+   "src": "made"
+  },
+  {
+   "text": "Sarah achète du miel portant le label bio chez un apiculteur près de la rivière.",
+   "en": "Sarah buys honey with the organic label from a beekeeper near the river.",
+   "ko": "사라는 강가 양봉가에게서 유기농 인증 꿀을 사요.",
+   "blank": "label",
+   "src": "made"
+  }
+ ],
  "w|labo": [
   {
    "text": "On va au labo pour finir nos expériences aujourd'hui.",
@@ -45451,6 +45867,22 @@
    "blank": "licence"
   }
  ],
+ "w|licenciement": [
+  {
+   "text": "La rumeur d'un licenciement collectif inquiète Antoine et ses collègues.",
+   "en": "The rumor of mass layoffs worries Antoine and his colleagues.",
+   "ko": "대량 해고 소문에 앙투안과 동료들은 불안해해요.",
+   "blank": "licenciement",
+   "src": "made"
+  },
+  {
+   "text": "Le garde forestier raconte à Sarah qu'il a changé de vie après un licenciement économique.",
+   "en": "The forest ranger tells Sarah he changed his life after being laid off for economic reasons.",
+   "ko": "산림 관리원은 사라에게 경영상 해고를 당한 뒤 삶을 바꿨다고 말해요.",
+   "blank": "licenciement",
+   "src": "made"
+  }
+ ],
  "w|lien": [
   {
    "text": "Envoie-moi le lien du site, s'il te plaît.",
@@ -45999,6 +46431,22 @@
    "en": "You need to follow simple logic.",
    "ko": "간단한 논리를 따라야 해.",
    "blank": "logique"
+  }
+ ],
+ "w|logo": [
+  {
+   "text": "Antoine vérifie que le nouveau logo de l'entreprise est bien imprimé sur chaque carton.",
+   "en": "Antoine checks that the company's new logo is properly printed on every box.",
+   "ko": "앙투안은 회사의 새 로고가 상자마다 제대로 찍혔는지 확인해요.",
+   "blank": "logo",
+   "src": "made"
+  },
+  {
+   "text": "Sur le panneau du parc naturel, Sarah reconnaît le logo en forme de feuille de chêne.",
+   "en": "On the nature park sign, Sarah recognizes the oak-leaf logo.",
+   "ko": "사라는 자연공원 표지판에서 떡갈나무 잎 모양 로고를 알아봐요.",
+   "blank": "logo",
+   "src": "made"
   }
  ],
  "w|loi": [
@@ -47963,6 +48411,22 @@
    "blank": "marquer"
   }
  ],
+ "w|marqueur": [
+  {
+   "text": "Avec un marqueur rouge, Antoine entoure les caisses à expédier en priorité.",
+   "en": "With a red marker, Antoine circles the crates to ship first.",
+   "ko": "앙투안은 빨간 마커로 먼저 보낼 상자에 동그라미를 쳐요.",
+   "blank": "marqueur",
+   "src": "made"
+  },
+  {
+   "text": "Sarah remarque un marqueur de peinture jaune sur les arbres qui indique le chemin.",
+   "en": "Sarah notices a yellow paint marker on the trees showing the way.",
+   "ko": "사라는 길을 알려 주는 나무 위 노란 페인트 표시를 봐요.",
+   "blank": "marqueur",
+   "src": "made"
+  }
+ ],
  "w|marrant": [
   {
    "text": "Ce film était vraiment marrant, j'ai beaucoup ri.",
@@ -49300,6 +49764,22 @@
    "en": "Manon got a coach's message, but it was the receptionist who acted as messenger.",
    "ko": "마농은 코치의 메시지를 받았는데 전달한 건 안내 직원이었어요.",
    "blank": "messager",
+   "src": "made"
+  }
+ ],
+ "w|messagerie": [
+  {
+   "text": "En arrivant au bureau, Antoine consulte d'abord sa messagerie pour voir les commandes de la nuit.",
+   "en": "When he gets to the office, Antoine first checks his inbox to see the overnight orders.",
+   "ko": "앙투안은 사무실에 오면 먼저 메일함을 열어 밤사이 들어온 주문을 봐요.",
+   "blank": "messagerie",
+   "src": "made"
+  },
+  {
+   "text": "Au fond de la forêt, Sarah n'a plus de réseau et ne peut plus consulter sa messagerie.",
+   "en": "Deep in the forest, Sarah has no signal and can't check her messages anymore.",
+   "ko": "숲 깊은 곳에서 사라는 신호가 안 잡혀 메시지함을 못 봐요.",
+   "blank": "messagerie",
    "src": "made"
   }
  ],
@@ -51318,6 +51798,22 @@
    "en": "Inès had to answer multiple emails before even having her coffee.",
    "ko": "이네스는 커피를 마시기도 전에 이메일 여러 통에 답해야 했어요.",
    "blank": "multiples",
+   "src": "made"
+  }
+ ],
+ "w|multiplier": [
+  {
+   "text": "Antoine espère multiplier la production par deux avant la fin de l'année.",
+   "en": "Antoine hopes to double production before the end of the year.",
+   "ko": "앙투안은 연말 전에 생산량을 두 배로 늘리고 싶어 해요.",
+   "blank": "multiplier",
+   "src": "made"
+  },
+  {
+   "text": "Les champignons semblent se multiplier après chaque averse, remarque Sarah.",
+   "en": "Mushrooms seem to multiply after every shower, Sarah notices.",
+   "ko": "사라는 소나기가 올 때마다 버섯이 불어나는 것 같다고 해요.",
+   "blank": "multiplier",
    "src": "made"
   }
  ],
@@ -54595,6 +55091,22 @@
    "en": "The opening of the festival was spectacular.",
    "ko": "축제 개막식이 정말 멋졌어.",
    "blank": "ouverture"
+  }
+ ],
+ "w|ouvrage": [
+  {
+   "text": "Dans la salle de pause, Antoine lit un ouvrage sur l'histoire de l'industrie textile.",
+   "en": "In the break room, Antoine reads a book on the history of the textile industry.",
+   "ko": "앙투안은 휴게실에서 섬유 산업의 역사에 관한 책을 읽어요.",
+   "blank": "ouvrage",
+   "src": "made"
+  },
+  {
+   "text": "Sarah emporte un ouvrage sur les champignons de la forêt pour sa promenade.",
+   "en": "Sarah takes a book on forest mushrooms with her on her walk.",
+   "ko": "사라는 숲 버섯에 관한 책을 들고 산책을 나가요.",
+   "blank": "ouvrage",
+   "src": "made"
   }
  ],
  "w|ouvrier": [
@@ -58859,6 +59371,22 @@
    "blank": "plonger"
   }
  ],
+ "w|plongeur": [
+  {
+   "text": "Avant l'usine, Antoine a travaillé comme plongeur dans un grand restaurant.",
+   "en": "Before the factory, Antoine worked as a dishwasher in a big restaurant.",
+   "ko": "앙투안은 공장에 오기 전에 큰 식당에서 설거지 담당으로 일했어요.",
+   "blank": "plongeur",
+   "src": "made"
+  },
+  {
+   "text": "Sarah suit des yeux un plongeur qui explore le fond du lac à la recherche d'épaves.",
+   "en": "Sarah watches a diver exploring the bottom of the lake for wrecks.",
+   "ko": "사라는 난파선을 찾아 호수 바닥을 살피는 잠수부를 눈으로 따라가요.",
+   "blank": "plongeur",
+   "src": "made"
+  }
+ ],
  "w|pluie": [
   {
    "text": "La pluie tombe fort ce matin.",
@@ -59689,6 +60217,22 @@
    "src": "made"
   }
  ],
+ "w|portier": [
+  {
+   "text": "Chaque matin, Antoine salue le portier qui ouvre la grande grille de l'usine.",
+   "en": "Every morning, Antoine greets the doorman who opens the factory's big gate.",
+   "ko": "앙투안은 매일 아침 공장 큰 철문을 여는 문지기에게 인사해요.",
+   "blank": "portier",
+   "src": "made"
+  },
+  {
+   "text": "Le portier du vieil hôtel forestier donne à Sarah une carte des sentiers.",
+   "en": "The doorman at the old forest hotel gives Sarah a map of the trails.",
+   "ko": "숲속 오래된 호텔의 문지기가 사라에게 산책로 지도를 줘요.",
+   "blank": "portier",
+   "src": "made"
+  }
+ ],
  "w|portrait": [
   {
    "text": "Peux-tu me montrer ton portrait préféré ?",
@@ -60184,6 +60728,22 @@
    "en": "The teacher tells Sarah not to let the model fruit rot on the table.",
    "ko": "선생님은 사라에게 그림용 과일이 탁자 위에서 썩지 않게 하라고 해요.",
    "blank": "pourrir",
+   "src": "made"
+  }
+ ],
+ "w|pourriture": [
+  {
+   "text": "Une odeur de pourriture monte des vieilles caisses en bois, et Antoine les fait jeter.",
+   "en": "A smell of rot rises from the old wooden crates, and Antoine has them thrown out.",
+   "ko": "오래된 나무 상자에서 썩은 냄새가 올라와서 앙투안은 버리게 해요.",
+   "blank": "pourriture",
+   "src": "made"
+  },
+  {
+   "text": "Sarah explique à son neveu que la pourriture des feuilles nourrit le sol de la forêt.",
+   "en": "Sarah explains to her nephew that rotting leaves feed the forest soil.",
+   "ko": "사라는 조카에게 썩은 잎이 숲의 흙을 기름지게 한다고 설명해요.",
+   "blank": "pourriture",
    "src": "made"
   }
  ],
@@ -65295,6 +65855,22 @@
    "en": "You have to step back a bit, it's dangerous here.",
    "ko": "여긴 위험하니까 좀 물러서야 해.",
    "blank": "reculer"
+  }
+ ],
+ "w|récupération": [
+  {
+   "text": "Antoine organise la récupération des copeaux de bois pour chauffer les bureaux.",
+   "en": "Antoine organizes the collection of wood chips to heat the offices.",
+   "ko": "앙투안은 사무실 난방에 쓰려고 나무 부스러기를 모으는 일을 맡아요.",
+   "blank": "récupération",
+   "src": "made"
+  },
+  {
+   "text": "Après une longue marche, Sarah s'accorde une soirée de récupération au chalet.",
+   "en": "After a long hike, Sarah treats herself to an evening of rest at the cabin.",
+   "ko": "오래 걸은 뒤 사라는 오두막에서 저녁 내내 쉬어요.",
+   "blank": "récupération",
+   "src": "made"
   }
  ],
  "w|récupérer": [
@@ -74421,6 +74997,22 @@
    "src": "made"
   }
  ],
+ "w|stabilité": [
+  {
+   "text": "Les ouvriers réclament surtout de la stabilité, après des années de contrats courts, dit Antoine.",
+   "en": "The workers mostly want stability after years of short contracts, Antoine says.",
+   "ko": "앙투안은 노동자들이 오랜 단기 계약 끝에 무엇보다 안정을 원한다고 말해요.",
+   "blank": "stabilité",
+   "src": "made"
+  },
+  {
+   "text": "Les racines des arbres assurent la stabilité des berges, explique Sarah.",
+   "en": "Tree roots keep the riverbanks stable, Sarah explains.",
+   "ko": "사라는 나무뿌리가 강둑을 단단하게 잡아 준다고 설명해요.",
+   "blank": "stabilité",
+   "src": "made"
+  }
+ ],
  "w|stable": [
   {
    "text": "La situation reste stable pour le moment.",
@@ -74678,6 +75270,22 @@
    "en": "The corner grocer tells Chloé that the flour is out of stock.",
    "ko": "동네 식료품점 주인이 클로에에게 밀가루가 다 떨어졌다고 해요.",
    "blank": "stock",
+   "src": "made"
+  }
+ ],
+ "w|stockage": [
+  {
+   "text": "Antoine cherche une solution de stockage pour les pièces détachées qui encombrent l'atelier.",
+   "en": "Antoine is looking for a storage solution for the spare parts cluttering the workshop.",
+   "ko": "앙투안은 작업장을 어지럽히는 예비 부품을 보관할 방법을 찾고 있어요.",
+   "blank": "stockage",
+   "src": "made"
+  },
+  {
+   "text": "Le garde explique à Sarah que la forêt joue un rôle clé dans le stockage du carbone.",
+   "en": "The ranger explains to Sarah that the forest plays a key role in carbon storage.",
+   "ko": "관리원은 사라에게 숲이 탄소 저장에 큰 역할을 한다고 설명해요.",
+   "blank": "stockage",
    "src": "made"
   }
  ],
@@ -81606,6 +82214,38 @@
    "en": "Émilie asks her teams to be vigilant about phishing emails.",
    "ko": "에밀리는 팀원들에게 피싱 메일을 조심하라고 해요.",
    "blank": "vigilantes",
+   "src": "made"
+  }
+ ],
+ "w|vigile": [
+  {
+   "text": "La nuit, un vigile fait le tour de l'usine avec une lampe torche, explique Antoine.",
+   "en": "At night, a security guard makes rounds of the factory with a flashlight, Antoine explains.",
+   "ko": "앙투안은 밤에는 경비원이 손전등을 들고 공장을 돈다고 설명해요.",
+   "blank": "vigile",
+   "src": "made"
+  },
+  {
+   "text": "Le garde prévient Sarah qu'un vigile ferme la barrière du parking forestier au coucher du soleil.",
+   "en": "The ranger warns Sarah that a security guard closes the forest car park barrier at sunset.",
+   "ko": "해 질 녘이면 경비원이 숲 주차장 차단기를 닫는다고 사라에게 알려 줘요.",
+   "blank": "vigile",
+   "src": "made"
+  }
+ ],
+ "w|vil": [
+  {
+   "text": "Antoine trouve vil le procédé du concurrent qui copie leurs modèles sans scrupule.",
+   "en": "Antoine finds the competitor's practice of copying their designs without scruple contemptible.",
+   "ko": "앙투안은 거리낌 없이 디자인을 베끼는 경쟁사의 수법이 비열하다고 생각해요.",
+   "blank": "vil",
+   "src": "made"
+  },
+  {
+   "text": "Sarah raconte une vieille légende où un vil seigneur voulait vendre toute la forêt.",
+   "en": "Sarah tells an old legend in which a wicked lord wanted to sell the whole forest.",
+   "ko": "사라는 비열한 영주가 숲을 통째로 팔려 했다는 옛 전설을 들려줘요.",
+   "blank": "vil",
    "src": "made"
   }
  ],

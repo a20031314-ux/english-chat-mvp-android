@@ -1941,6 +1941,22 @@
    "src": "made"
   }
  ],
+ "w|अनुयायी": [
+  {
+   "text": "करण ने एक पुराने लोकसंत के अनुयायियों के मेले पर रिपोर्ट लिखी।",
+   "en": "Karan wrote a report on the fair held by the followers of an old folk saint.",
+   "ko": "카란은 옛 민간 성자의 추종자들이 여는 축제에 관한 기사를 썼어요.",
+   "blank": "अनुयायियों",
+   "src": "made"
+  },
+  {
+   "text": "दीपा पुरानी लघुचित्र शैली की सच्ची अनुयायी है।",
+   "en": "Deepa is a true follower of the old miniature painting style.",
+   "ko": "디파는 옛 세밀화 화풍을 충실히 따르는 사람이에요.",
+   "blank": "अनुयायी",
+   "src": "made"
+  }
+ ],
  "w|अनुरूप": [
   {
    "text": "स्कूल की नई किताबें राष्ट्रीय पाठ्यक्रम के अनुरूप तैयार की गई हैं।",
@@ -3244,6 +3260,22 @@
    "en": "Seeing the dilapidated condition of the old bridge, Deepa got a little scared.",
    "ko": "낡은 다리의 허름한 상태를 보고 디파는 조금 겁이 났어요.",
    "blank": "अवस्था",
+   "src": "made"
+  }
+ ],
+ "w|अवहेलना": [
+  {
+   "text": "करण ने बताया कि कई कारख़ाने अदालत के आदेश की अवहेलना कर रहे हैं।",
+   "en": "Karan reported that several factories are disregarding the court's order.",
+   "ko": "카란은 여러 공장이 법원 명령을 무시하고 있다고 보도했어요.",
+   "blank": "अवहेलना",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने कहा कि रंग मिलाने के नियमों की अवहेलना करोगे तो चित्र गंदा दिखेगा।",
+   "en": "Deepa said that if you ignore the rules of mixing colours, the painting will look muddy.",
+   "ko": "디파는 색 섞는 규칙을 무시하면 그림이 탁해 보인다고 말했어요.",
+   "blank": "अवहेलना",
    "src": "made"
   }
  ],
@@ -5743,6 +5775,22 @@
    "src": "made"
   }
  ],
+ "w|आसन": [
+  {
+   "text": "योग दिवस पर करण ने हर आसन की सही विधि समझाने वाला पन्ना बनाया।",
+   "en": "On Yoga Day, Karan made a page explaining the correct way to do each pose.",
+   "ko": "요가의 날에 카란은 자세마다 바른 방법을 설명하는 지면을 만들었어요.",
+   "blank": "आसन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा फ़र्श पर अपना आसन बिछाकर बैठती है और घुटनों पर बोर्ड रखती है।",
+   "en": "Deepa spreads her mat on the floor, sits down and rests the board on her knees.",
+   "ko": "디파는 바닥에 방석을 깔고 앉아 무릎 위에 화판을 올려요.",
+   "blank": "आसन",
+   "src": "made"
+  }
+ ],
  "w|आसमान": [
   {
    "text": "आज आसमान बिलकुल साफ़ है।",
@@ -5890,6 +5938,22 @@
    "en": "Dipa adjusts her diet according to the season.",
    "ko": "디파는 계절에 맞춰 식단을 바꿔요.",
    "blank": "आहार",
+   "src": "made"
+  }
+ ],
+ "w|आहुति": [
+  {
+   "text": "करण के लेख में आज़ादी के लिए प्राणों की आहुति देने वाले सेनानियों की कहानियाँ थीं।",
+   "en": "Karan's article had stories of fighters who sacrificed their lives for freedom.",
+   "ko": "카란의 글에는 독립을 위해 목숨을 바친 투사들의 이야기가 담겼어요.",
+   "blank": "आहुति",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने हवन में आहुति डालते पुजारी का एक जीवंत चित्र बनाया।",
+   "en": "Deepa painted a lively picture of a priest making an offering into the sacred fire.",
+   "ko": "디파는 제단 불에 공물을 바치는 사제를 생생하게 그렸어요.",
+   "blank": "आहुति",
    "src": "made"
   }
  ],
@@ -6683,6 +6747,22 @@
    "blank": "ईद"
   }
  ],
+ "w|ईंधन": [
+  {
+   "text": "ईंधन की बढ़ती क़ीमतों पर करण की ख़बर पहले पन्ने पर छपी।",
+   "en": "Karan's story on rising fuel prices was printed on the front page.",
+   "ko": "연료값 상승에 관한 카란의 기사가 1면에 실렸어요.",
+   "blank": "ईंधन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने सीखा कि मिट्टी के बर्तन पकाने वाली भट्ठी में कौन-सा ईंधन सबसे अच्छा रहता है।",
+   "en": "Deepa learned which fuel works best in a kiln for firing clay pots.",
+   "ko": "디파는 도자기 가마에 어떤 연료가 가장 좋은지 배웠어요.",
+   "blank": "ईंधन",
+   "src": "made"
+  }
+ ],
  "w|ईमानदार": [
   {
    "text": "ईमानदार आदमी पर सब भरोसा करते हैं।",
@@ -7183,6 +7263,22 @@
    "en": "The answer was not clear.",
    "ko": "답이 분명하지 않았어.",
    "blank": "उत्तर"
+  }
+ ],
+ "w|उत्तरदायित्व": [
+  {
+   "text": "करण मानता है कि हर ख़बर के साथ पत्रकार का उत्तरदायित्व भी जुड़ा होता है।",
+   "en": "Karan believes that every story comes with the journalist's responsibility.",
+   "ko": "카란은 기사마다 기자의 책임이 따른다고 믿어요.",
+   "blank": "उत्तरदायित्व",
+   "src": "made"
+  },
+  {
+   "text": "प्रदर्शनी की पूरी तैयारी का उत्तरदायित्व इस बार दीपा पर है।",
+   "en": "This time, responsibility for the entire exhibition preparation lies with Deepa.",
+   "ko": "이번에는 전시회 준비 전체를 디파가 책임져요.",
+   "blank": "उत्तरदायित्व",
+   "src": "made"
   }
  ],
  "w|उत्तरदायी": [
@@ -10147,6 +10243,22 @@
    "blank": "कब"
   }
  ],
+ "w|कबड्डी": [
+  {
+   "text": "करण ने ज़िला स्तर की कबड्डी प्रतियोगिता की रिपोर्टिंग की।",
+   "en": "Karan reported on the district-level kabaddi tournament.",
+   "ko": "카란은 지역 카바디 대회를 취재했어요.",
+   "blank": "कबड्डी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने गाँव के मैदान में कबड्डी खेलते लड़कों का स्केच बनाया।",
+   "en": "Deepa sketched boys playing kabaddi on the village ground.",
+   "ko": "디파는 마을 운동장에서 카바디를 하는 소년들을 스케치했어요.",
+   "blank": "कबड्डी",
+   "src": "made"
+  }
+ ],
  "w|कंबल": [
   {
    "text": "ठंडी रात में चौकीदार को अजय ने एक पुराना कंबल दे दिया।",
@@ -10739,6 +10851,22 @@
    "en": "A teacher's duty is to teach students.",
    "ko": "선생님의 의무는 학생을 가르치는 거야.",
    "blank": "कर्तव्य"
+  }
+ ],
+ "w|कर्फ़्यू": [
+  {
+   "text": "शहर में कर्फ़्यू लगने पर करण को दफ़्तर में ही सोना पड़ा।",
+   "en": "When a curfew was imposed in the city, Karan had to sleep at the office.",
+   "ko": "도시에 통행금지가 내려지자 카란은 사무실에서 자야 했어요.",
+   "blank": "कर्फ़्यू",
+   "src": "made"
+  },
+  {
+   "text": "कर्फ़्यू के दिनों में दीपा ने खिड़की से दिखती गली के चित्र बनाए।",
+   "en": "During the days of the curfew, Deepa painted the lane she could see from her window.",
+   "ko": "통행금지 기간에 디파는 창밖으로 보이는 골목을 그렸어요.",
+   "blank": "कर्फ़्यू",
+   "src": "made"
   }
  ],
  "w|कर्म": [
@@ -15929,6 +16057,22 @@
    "blank": "गद्दा"
   }
  ],
+ "w|गद्य": [
+  {
+   "text": "करण का गद्य सीधा और साफ़ है, इसलिए पाठक उसकी ख़बरें पसंद करते हैं।",
+   "en": "Karan's prose is direct and clear, so readers like his stories.",
+   "ko": "카란의 문장은 간결하고 명확해서 독자들이 그의 기사를 좋아해요.",
+   "blank": "गद्य",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने एक पुरानी गद्य कथा पढ़कर उसके दृश्यों के चित्र बनाए।",
+   "en": "Deepa read an old prose tale and painted its scenes.",
+   "ko": "디파는 옛 산문 이야기를 읽고 그 장면들을 그렸어요.",
+   "blank": "गद्य",
+   "src": "made"
+  }
+ ],
  "w|गंध": [
   {
    "text": "रसोई से मिठास की गंध आ रही है।",
@@ -17402,6 +17546,22 @@
    "en": "As soon as Priya opened the parcel, her cat jumped into her lap.",
    "ko": "소포를 열자마자 프리야의 고양이가 무릎 위로 뛰어올랐어요.",
    "blank": "गोद",
+   "src": "made"
+  }
+ ],
+ "w|गोद लेना": [
+  {
+   "text": "करण ने एक दंपती की कहानी लिखी जिन्होंने एक अनाथ बच्ची को गोद लिया।",
+   "en": "Karan wrote the story of a couple who adopted an orphaned girl.",
+   "ko": "카란은 고아 여자아이를 입양한 부부의 이야기를 썼어요.",
+   "blank": "गोद लिया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने हाल ही में एक बिल्ली गोद ली है, जो अब उसकी पेंटिंग में भी दिखती है।",
+   "en": "Deepa recently adopted a cat, which now shows up in her paintings too.",
+   "ko": "디파는 얼마 전에 고양이를 입양했는데 이제 그림에도 나와요.",
+   "blank": "गोद ली",
    "src": "made"
   }
  ],
@@ -20163,6 +20323,22 @@
    "src": "made"
   }
  ],
+ "w|चूसना": [
+  {
+   "text": "लिखते समय करण अक्सर पेन का ढक्कन चूसता रहता है।",
+   "en": "While writing, Karan often keeps sucking on his pen cap.",
+   "ko": "카란은 글을 쓸 때 펜 뚜껑을 자주 빨아요.",
+   "blank": "चूसता",
+   "src": "made"
+  },
+  {
+   "text": "रंग भरते समय छोटा आरव अँगूठा चूसने लगा, तो दीपा मुस्कुरा दी।",
+   "en": "Little Aarav started sucking his thumb while colouring, and Deepa smiled.",
+   "ko": "어린 아라브가 색칠하다가 엄지를 빨기 시작하자 디파는 미소 지었어요.",
+   "blank": "चूसने",
+   "src": "made"
+  }
+ ],
  "w|चूहा": [
   {
    "text": "रसोई में एक चूहा दिख गया।",
@@ -20558,6 +20734,22 @@
    "en": "When the nearby company had layoffs, the shop's sales fell too.",
    "ko": "근처 회사에서 감원이 있자 가게 매출도 줄었어요.",
    "blank": "छँटनी",
+   "src": "made"
+  }
+ ],
+ "w|छठ": [
+  {
+   "text": "छठ पर्व पर करण ने घाटों की सजावट की तस्वीरें छापीं।",
+   "en": "During the Chhath festival, Karan printed photos of the decorated ghats.",
+   "ko": "차트 축제 때 카란은 꾸며진 강가 계단 사진을 실었어요.",
+   "blank": "छठ",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने छठ पूजा पर नदी में खड़ी औरतों का एक बड़ा चित्र बनाया।",
+   "en": "Deepa made a large painting of women standing in the river during Chhath puja.",
+   "ko": "디파는 차트 푸자 때 강물에 서 있는 여인들을 크게 그렸어요.",
+   "blank": "छठ",
    "src": "made"
   }
  ],
@@ -21659,6 +21851,22 @@
    "src": "made"
   }
  ],
+ "w|जनादेश": [
+  {
+   "text": "चुनाव नतीजों के बाद करण ने लिखा कि जनादेश बदलाव के पक्ष में है।",
+   "en": "After the election results, Karan wrote that the mandate is in favour of change.",
+   "ko": "선거 결과가 나오자 카란은 민심이 변화를 택했다고 썼어요.",
+   "blank": "जनादेश",
+   "src": "made"
+  },
+  {
+   "text": "चुनाव के बाद दीपा के विद्यार्थियों ने जनादेश विषय पर कार्टून बनाए।",
+   "en": "After the election, Deepa's students drew cartoons on the theme of the people's mandate.",
+   "ko": "선거가 끝나자 디파의 학생들은 민심을 주제로 만화를 그렸어요.",
+   "blank": "जनादेश",
+   "src": "made"
+  }
+ ],
  "w|जनाब": [
   {
    "text": "दुकानदार ने मुस्कुराकर पूछा, जनाब, आज कौन-सी चाय लेंगे?",
@@ -22528,6 +22736,22 @@
    "en": "A runner deliberately blocked Priya's path and was disqualified.",
    "ko": "한 주자가 일부러 프리야의 길을 막아서 실격됐어요.",
    "blank": "जानबूझकर",
+   "src": "made"
+  }
+ ],
+ "w|जानलेवा": [
+  {
+   "text": "करण ने शहर के जानलेवा गड्ढों पर कई ख़बरें लिखीं।",
+   "en": "Karan wrote several stories on the city's deadly potholes.",
+   "ko": "카란은 도시의 위험천만한 도로 구덩이에 관한 기사를 여러 편 썼어요.",
+   "blank": "जानलेवा",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने विद्यार्थियों को चेताया कि कुछ पुराने रंगों में जानलेवा सीसा होता है।",
+   "en": "Deepa warned her students that some old paints contain deadly lead.",
+   "ko": "디파는 학생들에게 오래된 물감 중에는 치명적인 납이 든 것도 있다고 주의를 줬어요.",
+   "blank": "जानलेवा",
    "src": "made"
   }
  ],
@@ -24863,6 +25087,22 @@
    "blank": "ठगना"
   }
  ],
+ "w|ठगी": [
+  {
+   "text": "करण ने ऑनलाइन ठगी से बचने के तरीक़ों पर एक लेख लिखा।",
+   "en": "Karan wrote an article on ways to avoid online fraud.",
+   "ko": "카란은 온라인 사기를 피하는 방법에 관한 글을 썼어요.",
+   "blank": "ठगी",
+   "src": "made"
+  },
+  {
+   "text": "एक नकली कला-व्यापारी ने दीपा के साथ ठगी की और पैसे लेकर भाग गया।",
+   "en": "A fake art dealer cheated Deepa and ran off with the money.",
+   "ko": "가짜 미술상이 디파에게 사기를 치고 돈을 들고 달아났어요.",
+   "blank": "ठगी",
+   "src": "made"
+  }
+ ],
  "w|ठंड": [
   {
    "text": "पहाड़ों में रात की ठंड बहुत तेज़ है।",
@@ -26371,6 +26611,22 @@
    "blank": "तब से"
   }
  ],
+ "w|तबला": [
+  {
+   "text": "करण ने एक बूढ़े उस्ताद का इंटरव्यू किया जो सत्तर साल से तबला बजा रहे हैं।",
+   "en": "Karan interviewed an old maestro who has been playing the tabla for seventy years.",
+   "ko": "카란은 칠십 년째 타블라를 연주해 온 노 거장을 인터뷰했어요.",
+   "blank": "तबला",
+   "src": "made"
+  },
+  {
+   "text": "बगल के कमरे में कोई तबला बजाता है और दीपा उसी लय पर ब्रश चलाती है।",
+   "en": "Someone plays the tabla in the next room, and Deepa moves her brush to the same rhythm.",
+   "ko": "옆방에서 누가 타블라를 치면 디파는 그 박자에 맞춰 붓을 놀려요.",
+   "blank": "तबला",
+   "src": "made"
+  }
+ ],
  "w|तभी": [
   {
    "text": "दरवाज़ा खुला, तभी मेहमान आ गए।",
@@ -27187,6 +27443,22 @@
    "en": "Children were playing by the pond.",
    "ko": "아이들이 연못 가에서 놀고 있었어.",
    "blank": "तालाब"
+  }
+ ],
+ "w|तालीम": [
+  {
+   "text": "करण ने लड़कियों की तालीम के लिए काम करने वाली एक संस्था पर लिखा।",
+   "en": "Karan wrote about an organisation that works for girls' education.",
+   "ko": "카란은 여자아이들의 교육을 위해 일하는 단체에 관해 썼어요.",
+   "blank": "तालीम",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने कला की तालीम अपने नाना से ली थी।",
+   "en": "Deepa had received her training in art from her maternal grandfather.",
+   "ko": "디파는 외할아버지에게서 미술을 배웠어요.",
+   "blank": "तालीम",
+   "src": "made"
   }
  ],
  "w|तालु": [
@@ -31051,6 +31323,22 @@
    "src": "made"
   }
  ],
+ "w|धर्मनिरपेक्षता": [
+  {
+   "text": "संविधान दिवस पर करण ने धर्मनिरपेक्षता के अर्थ पर एक संपादकीय लिखा।",
+   "en": "On Constitution Day, Karan wrote an editorial on the meaning of secularism.",
+   "ko": "헌법의 날에 카란은 세속주의의 의미에 관한 사설을 썼어요.",
+   "blank": "धर्मनिरपेक्षता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने स्कूल की प्रदर्शनी के लिए धर्मनिरपेक्षता विषय पर एक पोस्टर बनाया।",
+   "en": "Deepa made a poster on the theme of secularism for the school exhibition.",
+   "ko": "디파는 학교 전시회에 낼 세속주의 주제 포스터를 만들었어요.",
+   "blank": "धर्मनिरपेक्षता",
+   "src": "made"
+  }
+ ],
  "w|धर्मशाला": [
   {
    "text": "तीर्थयात्री रात धर्मशाला में रुके।",
@@ -33333,6 +33621,22 @@
    "src": "made"
   }
  ],
+ "w|नित्य": [
+  {
+   "text": "करण नित्य सुबह चाय के साथ सारे अख़बार पलटता है।",
+   "en": "Every morning Karan leafs through all the newspapers with his tea.",
+   "ko": "카란은 매일 아침 차를 마시며 신문을 모두 훑어봐요.",
+   "blank": "नित्य",
+   "src": "made"
+  },
+  {
+   "text": "दीपा कहती है कि नित्य अभ्यास के बिना हाथ नहीं सधता।",
+   "en": "Deepa says the hand doesn't become steady without daily practice.",
+   "ko": "디파는 매일 연습하지 않으면 손이 익지 않는다고 말해요.",
+   "blank": "नित्य",
+   "src": "made"
+  }
+ ],
  "w|निदेशक": [
   {
    "text": "होटल के निदेशक ने रोहन की बनाई दाल की ख़ूब तारीफ़ की।",
@@ -34727,6 +35031,22 @@
    "src": "made"
   }
  ],
+ "w|नौजवान": [
+  {
+   "text": "एक नौजवान फ़ोटोग्राफ़र ने करण को बाढ़ की शानदार तस्वीरें भेजीं।",
+   "en": "A young photographer sent Karan some superb photos of the flood.",
+   "ko": "한 젊은 사진기자가 카란에게 홍수 사진을 멋지게 찍어 보냈어요.",
+   "blank": "नौजवान",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की क्लास में एक नौजवान इंजीनियर भी आता है जो सिर्फ़ पहाड़ बनाता है।",
+   "en": "A young engineer also comes to Deepa's class, and he paints only mountains.",
+   "ko": "디파의 수업에는 산만 그리는 젊은 엔지니어도 와요.",
+   "blank": "नौजवान",
+   "src": "made"
+  }
+ ],
  "w|नौवाँ": [
   {
    "text": "नौवाँ गाना सबको सबसे पसंद आया।",
@@ -35117,6 +35437,22 @@
    "blank": "पंचायत"
   }
  ],
+ "w|पंचायती": [
+  {
+   "text": "करण ने गाँवों में पंचायती राज की हालत पर एक श्रृंखला लिखी।",
+   "en": "Karan wrote a series on the state of local self-government in the villages.",
+   "ko": "카란은 마을 자치 제도의 실태에 관한 연재 기사를 썼어요.",
+   "blank": "पंचायती",
+   "src": "made"
+  },
+  {
+   "text": "पंचायती राज दिवस पर दीपा के विद्यार्थियों ने गाँव की दीवारें सजाईं।",
+   "en": "On Panchayati Raj Day, Deepa's students decorated the village walls.",
+   "ko": "지방자치의 날에 디파의 학생들이 마을 벽을 꾸몄어요.",
+   "blank": "पंचायती",
+   "src": "made"
+  }
+ ],
  "w|पचास": [
   {
    "text": "टिकट की क़ीमत पचास रुपये है।",
@@ -35251,6 +35587,22 @@
    "en": "Don't slam the books on the table.",
    "ko": "책을 탁자에 쾅 내려놓지 마.",
    "blank": "पटकना"
+  }
+ ],
+ "w|पटवारी": [
+  {
+   "text": "करण ने रिश्वत माँगने वाले एक पटवारी की ख़बर छापी।",
+   "en": "Karan printed a story about a land-records officer who demanded a bribe.",
+   "ko": "카란은 뇌물을 요구한 토지 기록 담당 공무원에 관한 기사를 실었어요.",
+   "blank": "पटवारी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के पिता गाँव के पटवारी थे, और उनके ज़मीन के नक़्शे देखकर ही दीपा को रेखाएँ खींचने का शौक़ लगा।",
+   "en": "Deepa's father was the village land-records officer, and seeing his land maps gave Deepa a love of drawing lines.",
+   "ko": "디파의 아버지는 마을 토지 기록 담당이었는데, 그 토지 지도를 보며 디파는 선 긋기를 좋아하게 됐어요.",
+   "blank": "पटवारी",
+   "src": "made"
   }
  ],
  "w|पट्टी": [
@@ -35933,6 +36285,22 @@
    "blank": "परमात्मा"
   }
  ],
+ "w|परलोक": [
+  {
+   "text": "करण ने परलोक के बारे में लोक मान्यताओं पर एक हल्का-फुल्का फ़ीचर लिखा।",
+   "en": "Karan wrote a light feature on folk beliefs about the afterlife.",
+   "ko": "카란은 저승에 관한 민간 믿음을 다룬 가벼운 특집을 썼어요.",
+   "blank": "परलोक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने एक पुरानी लोककथा के परलोक वाले दृश्य को नीले और सुनहरे रंगों में बनाया।",
+   "en": "Deepa painted the afterlife scene of an old folk tale in blue and gold.",
+   "ko": "디파는 옛 민담 속 저승 장면을 파란색과 금색으로 그렸어요.",
+   "blank": "परलोक",
+   "src": "made"
+  }
+ ],
  "w|परवाह": [
   {
    "text": "रवि ने लिखा कि दूरी के बावजूद उसे तुम्हारी उतनी ही परवाह है।",
@@ -36309,6 +36677,22 @@
    "en": "Even small trouble brings anxiety.",
    "ko": "작은 문제도 불안을 가져와.",
    "blank": "परेशानी"
+  }
+ ],
+ "w|परोपकार": [
+  {
+   "text": "करण ने एक रिक्शेवाले के परोपकार की कहानी छापी जो बीमारों को मुफ़्त अस्पताल ले जाता है।",
+   "en": "Karan printed the story of a rickshaw puller's kindness: he takes sick people to hospital for free.",
+   "ko": "카란은 아픈 사람들을 무료로 병원에 태워 주는 릭샤꾼의 선행을 기사로 실었어요.",
+   "blank": "परोपकार",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को परोपकार में सच्ची ख़ुशी मिलती है, इसलिए वह बस्ती के बच्चों को मुफ़्त चित्रकला सिखाती है।",
+   "en": "Deepa finds true joy in helping others, so she teaches painting free to the children of the slum.",
+   "ko": "디파는 남을 돕는 데서 진정한 기쁨을 느껴서 동네 아이들에게 그림을 무료로 가르쳐요.",
+   "blank": "परोपकार",
+   "src": "made"
   }
  ],
  "w|परोसना": [
@@ -36887,6 +37271,22 @@
    "en": "Read this letter first.",
    "ko": "이 편지부터 읽어.",
    "blank": "पहले"
+  }
+ ],
+ "w|पहले पहल": [
+  {
+   "text": "करण को पहले पहल रात की पाली बहुत भारी लगती थी।",
+   "en": "At first, Karan found the night shift very hard.",
+   "ko": "카란은 처음에는 야간 근무가 무척 힘들었어요.",
+   "blank": "पहले पहल",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को पहले पहल तेल रंगों की गंध बिल्कुल पसंद नहीं थी।",
+   "en": "At first, Deepa didn't like the smell of oil paints at all.",
+   "ko": "디파는 처음에 유화 물감 냄새를 전혀 좋아하지 않았어요.",
+   "blank": "पहले पहल",
+   "src": "made"
   }
  ],
  "w|पहले से": [
@@ -39745,6 +40145,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिवर्ष": [
+  {
+   "text": "करण का अख़बार प्रतिवर्ष दिवाली पर एक विशेष परिशिष्ट निकालता है।",
+   "en": "Karan's newspaper brings out a special supplement every year at Diwali.",
+   "ko": "카란의 신문사는 해마다 디왈리에 특별 부록을 내요.",
+   "blank": "प्रतिवर्ष",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की कला-कक्षा प्रतिवर्ष दिसंबर में एक प्रदर्शनी लगाती है।",
+   "en": "Deepa's art class puts on an exhibition every December.",
+   "ko": "디파의 미술 교실은 해마다 십이월에 전시회를 열어요.",
+   "blank": "प्रतिवर्ष",
+   "src": "made"
+  }
+ ],
  "w|प्रतिशत": [
   {
    "text": "छूट का प्रतिशत बोर्ड पर लिखा है।",
@@ -40140,6 +40556,22 @@
    "en": "This medicine's smell is so strong that Anjali keeps it in a separate box.",
    "ko": "이 약은 냄새가 너무 강해서 안잘리는 따로 상자에 둬요.",
    "blank": "प्रबल",
+   "src": "made"
+  }
+ ],
+ "w|प्रभात": [
+  {
+   "text": "गांधी जयंती पर करण ने स्कूली बच्चों की प्रभात फेरी की तस्वीरें छापीं।",
+   "en": "On Gandhi Jayanti, Karan printed photos of the schoolchildren's morning procession.",
+   "ko": "간디 탄생일에 카란은 학생들의 새벽 행진 사진을 실었어요.",
+   "blank": "प्रभात",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने नदी किनारे प्रभात का दृश्य हल्के गुलाबी रंगों में बनाया।",
+   "en": "Deepa painted the dawn by the river in soft pink tones.",
+   "ko": "디파는 강가의 새벽 풍경을 연분홍빛으로 그렸어요.",
+   "blank": "प्रभात",
    "src": "made"
   }
  ],
@@ -43571,6 +44003,22 @@
    "en": "During the monsoon the roads fill with water.",
    "ko": "장마철에는 도로가 물로 차.",
    "blank": "बरसात"
+  }
+ ],
+ "w|बरसों": [
+  {
+   "text": "करण ने बरसों बाद अपने पहले संपादक से दफ़्तर में मुलाक़ात की।",
+   "en": "Karan met his first editor at the office after many years.",
+   "ko": "카란은 몇 년 만에 첫 편집장을 사무실에서 만났어요.",
+   "blank": "बरसों",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बरसों बाद फिर से ब्रश हाथ में लिया।",
+   "en": "Deepa picked up a brush again after many years.",
+   "ko": "디파는 몇 년 만에 다시 붓을 들었어요.",
+   "blank": "बरसों",
+   "src": "made"
   }
  ],
  "w|बराबर": [
@@ -53861,6 +54309,22 @@
    "src": "made"
   }
  ],
+ "w|राजमार्ग": [
+  {
+   "text": "करण ने राजमार्ग पर हुए हादसे की ख़बर रात में ही भेज दी।",
+   "en": "Karan sent in the story of the highway accident that same night.",
+   "ko": "카란은 고속도로 사고 기사를 그날 밤에 바로 보냈어요.",
+   "blank": "राजमार्ग",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने राजमार्ग के किनारे बने एक ढाबे की दीवार पर बड़ा चित्र बनाया।",
+   "en": "Deepa painted a large mural on the wall of a roadside eatery on the highway.",
+   "ko": "디파는 고속도로변 식당 벽에 커다란 그림을 그렸어요.",
+   "blank": "राजमार्ग",
+   "src": "made"
+  }
+ ],
  "w|राजस्व": [
   {
    "text": "पार्किंग शुल्क से नगर निगम के राजस्व में अच्छी बढ़ोतरी हुई है।",
@@ -54125,6 +54589,22 @@
    "en": "Everyone stood up for the national anthem.",
    "ko": "국가가 나오자 모두 일어섰어.",
    "blank": "राष्ट्रीय"
+  }
+ ],
+ "w|राष्ट्रीयता": [
+  {
+   "text": "करण ने लिखा कि हादसे में घायल विदेशी पर्यटकों की राष्ट्रीयता अभी पता नहीं चली है।",
+   "en": "Karan wrote that the nationality of the foreign tourists injured in the accident was not yet known.",
+   "ko": "카란은 사고로 다친 외국인 관광객들의 국적이 아직 밝혀지지 않았다고 썼어요.",
+   "blank": "राष्ट्रीयता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की क्लास में अलग-अलग राष्ट्रीयता के विद्यार्थी साथ बैठकर चित्र बनाते हैं।",
+   "en": "In Deepa's class, students of different nationalities sit and paint together.",
+   "ko": "디파의 수업에서는 국적이 다른 학생들이 함께 앉아 그림을 그려요.",
+   "blank": "राष्ट्रीयता",
+   "src": "made"
   }
  ],
  "w|रास्ता": [
@@ -55778,6 +56258,22 @@
    "en": "The landlord handed over the new keys in a brown envelope.",
    "ko": "집주인은 새 열쇠를 갈색 봉투에 넣어 줬어요.",
    "blank": "लिफ़ाफ़े",
+   "src": "made"
+  }
+ ],
+ "w|लिहाज़": [
+  {
+   "text": "संपादक ने कहा कि सुरक्षा के लिहाज़ से करण रात में अकेले न जाए।",
+   "en": "The editor said that, for safety's sake, Karan should not go alone at night.",
+   "ko": "편집장은 안전을 생각해서 카란이 밤에 혼자 가지 말라고 했어요.",
+   "blank": "लिहाज़",
+   "src": "made"
+  },
+  {
+   "text": "रोशनी के लिहाज़ से दीपा ने अपना ईज़ल खिड़की के पास रखा।",
+   "en": "Considering the light, Deepa placed her easel near the window.",
+   "ko": "빛을 생각해서 디파는 이젤을 창가에 뒀어요.",
+   "blank": "लिहाज़",
    "src": "made"
   }
  ],
@@ -58515,6 +59011,22 @@
    "blank": "वैध"
   }
  ],
+ "w|वैराग्य": [
+  {
+   "text": "करण ने एक अफ़सर का इंटरव्यू लिया जिसने नौकरी छोड़कर वैराग्य अपना लिया।",
+   "en": "Karan interviewed an officer who quit his job and renounced worldly life.",
+   "ko": "카란은 직장을 그만두고 세속을 떠난 공무원을 인터뷰했어요.",
+   "blank": "वैराग्य",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के चित्र में एक बूढ़े साधु के चेहरे पर गहरा वैराग्य झलकता है।",
+   "en": "In Deepa's painting, deep detachment shows on an old ascetic's face.",
+   "ko": "디파의 그림 속 늙은 수행자의 얼굴에는 깊은 무욕이 드러나요.",
+   "blank": "वैराग्य",
+   "src": "made"
+  }
+ ],
  "w|वैश्विक": [
   {
    "text": "अंतरराष्ट्रीय पन्ने पर वैश्विक मंदी की आशंका पर लेख था।",
@@ -59567,6 +60079,22 @@
    "blank": "शहीद"
   }
  ],
+ "w|शाकाहारी": [
+  {
+   "text": "करण ने शहर के सबसे पुराने शाकाहारी ढाबे पर एक फ़ीचर लिखा।",
+   "en": "Karan wrote a feature on the city's oldest vegetarian eatery.",
+   "ko": "카란은 도시에서 가장 오래된 채식 식당에 관한 특집을 썼어요.",
+   "blank": "शाकाहारी",
+   "src": "made"
+  },
+  {
+   "text": "क्लास के बाद दीपा और उसके विद्यार्थी पास के शाकाहारी भोजनालय में खाना खाते हैं।",
+   "en": "After class, Deepa and her students eat at the vegetarian restaurant nearby.",
+   "ko": "수업이 끝나면 디파와 학생들은 근처 채식 식당에서 밥을 먹어요.",
+   "blank": "शाकाहारी",
+   "src": "made"
+  }
+ ],
  "w|शाखा": [
   {
    "text": "पेड़ की शाखा टूट गई।",
@@ -60091,6 +60619,22 @@
    "en": "Mom is feeding milk to the infant.",
    "ko": "엄마가 아기에게 우유를 먹이고 있어.",
    "blank": "शिशु"
+  }
+ ],
+ "w|शिष्टाचार": [
+  {
+   "text": "फ़ोन पर इंटरव्यू करते समय करण हमेशा शिष्टाचार का ध्यान रखता है।",
+   "en": "When doing interviews over the phone, Karan always minds his manners.",
+   "ko": "카란은 전화 인터뷰를 할 때 늘 예의를 지켜요.",
+   "blank": "शिष्टाचार",
+   "src": "made"
+  },
+  {
+   "text": "दीपा अपने विद्यार्थियों को सिखाती है कि दूसरों के चित्रों पर बोलते समय शिष्टाचार न भूलें।",
+   "en": "Deepa teaches her students not to forget their manners when commenting on others' paintings.",
+   "ko": "디파는 학생들에게 남의 그림을 평할 때 예의를 잊지 말라고 가르쳐요.",
+   "blank": "शिष्टाचार",
+   "src": "made"
   }
  ],
  "w|शिष्य": [
@@ -61791,6 +62335,22 @@
    "blank": "सत्ताईस"
   }
  ],
+ "w|सत्तारूढ़": [
+  {
+   "text": "सत्तारूढ़ दल के प्रवक्ता ने करण की ख़बर पर सफ़ाई दी।",
+   "en": "The ruling party's spokesperson gave an explanation about Karan's story.",
+   "ko": "여당 대변인이 카란의 기사에 대해 해명했어요.",
+   "blank": "सत्तारूढ़",
+   "src": "made"
+  },
+  {
+   "text": "सत्तारूढ़ पार्टी के एक नेता ने दीपा की प्रदर्शनी का उद्घाटन किया।",
+   "en": "A leader of the ruling party inaugurated Deepa's exhibition.",
+   "ko": "여당의 한 정치인이 디파의 전시회 개막을 맡았어요.",
+   "blank": "सत्तारूढ़",
+   "src": "made"
+  }
+ ],
  "w|सत्तू": [
   {
    "text": "गर्मी में रोहन दफ़्तर के लिए टिफ़िन की जगह सत्तू का शरबत लेकर आता है।",
@@ -63083,6 +63643,22 @@
    "src": "made"
   }
  ],
+ "w|समाप्ति": [
+  {
+   "text": "चुनाव प्रचार की समाप्ति पर करण ने पूरे महीने का सार लिखा।",
+   "en": "At the end of the election campaign, Karan wrote a summary of the whole month.",
+   "ko": "선거 운동이 끝나자 카란은 한 달 전체를 정리하는 글을 썼어요.",
+   "blank": "समाप्ति",
+   "src": "made"
+  },
+  {
+   "text": "कोर्स की समाप्ति पर दीपा ने हर विद्यार्थी को एक छोटा-सा चित्र भेंट किया।",
+   "en": "At the end of the course, Deepa gave each student a small painting.",
+   "ko": "강좌가 끝날 때 디파는 학생마다 작은 그림을 선물했어요.",
+   "blank": "समाप्ति",
+   "src": "made"
+  }
+ ],
  "w|समारोह": [
   {
    "text": "स्कूल का वार्षिक समारोह कल है।",
@@ -63889,6 +64465,22 @@
    "en": "We decided after hearing the advisor's opinion.",
    "ko": "고문 의견을 듣고 결정을 내렸어.",
    "blank": "सलाहकार"
+  }
+ ],
+ "w|सल्तनत": [
+  {
+   "text": "इतिहास वाले पन्ने के लिए करण ने दिल्ली सल्तनत के सिक्कों पर लिखा।",
+   "en": "For the history page, Karan wrote about the coins of the Delhi Sultanate.",
+   "ko": "역사 지면에 카란은 델리 술탄국의 동전에 관해 썼어요.",
+   "blank": "सल्तनत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने संग्रहालय में सल्तनत काल की नक़्क़ाशी देखकर नए डिज़ाइन बनाए।",
+   "en": "Deepa saw Sultanate-era carvings at the museum and made new designs.",
+   "ko": "디파는 박물관에서 술탄국 시대 조각을 보고 새 도안을 만들었어요.",
+   "blank": "सल्तनत",
+   "src": "made"
   }
  ],
  "w|सँवरना": [
@@ -65040,6 +65632,22 @@
    "en": "For Deepa, science is something that rises above communal divisions and unites everyone.",
    "ko": "디파에게 과학은 종교로 갈린 벽을 넘어 모두를 잇는 것이에요.",
    "blank": "सांप्रदायिक",
+   "src": "made"
+  }
+ ],
+ "w|सांप्रदायिकता": [
+  {
+   "text": "संपादक ने करण से कहा कि दंगों की ख़बर में सांप्रदायिकता भड़काने वाले शब्द न हों।",
+   "en": "The editor told Karan that the riot story should contain no words that stir up communal hatred.",
+   "ko": "편집장은 카란에게 폭동 기사에 종교 갈등을 부추기는 말이 없어야 한다고 했어요.",
+   "blank": "सांप्रदायिकता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने सांप्रदायिकता के ख़िलाफ़ शांति पोस्टर प्रतियोगिता में इनाम जीता।",
+   "en": "Deepa won a prize in a peace poster competition against communalism.",
+   "ko": "디파는 종교 갈등에 반대하는 평화 포스터 대회에서 상을 받았어요.",
+   "blank": "सांप्रदायिकता",
    "src": "made"
   }
  ],
@@ -66232,6 +66840,22 @@
    "en": "Seema taught the neighbor's son that you should put on the seatbelt as soon as you get in a car.",
    "ko": "시마는 이웃집 아들에게 차에 타면 바로 안전벨트를 매야 한다고 가르쳤어요.",
    "blank": "सीटबेल्ट",
+   "src": "made"
+  }
+ ],
+ "w|सीटी": [
+  {
+   "text": "करण ने लिखा कि ट्रैफ़िक पुलिस अब सीटी की जगह कैमरों से चालान काटती है।",
+   "en": "Karan wrote that the traffic police now issue fines with cameras instead of whistles.",
+   "ko": "카란은 교통경찰이 이제 호루라기 대신 카메라로 딱지를 뗀다고 썼어요.",
+   "blank": "सीटी",
+   "src": "made"
+  },
+  {
+   "text": "रसोई से कुकर की सीटी सुनकर दीपा ने ब्रश नीचे रख दिया।",
+   "en": "Hearing the pressure cooker's whistle from the kitchen, Deepa put her brush down.",
+   "ko": "부엌에서 압력솥 김 빠지는 소리가 나자 디파는 붓을 내려놨어요.",
+   "blank": "सीटी",
    "src": "made"
   }
  ],
@@ -68086,6 +68710,22 @@
    "en": "Mid-race, Priya thought of her first coach.",
    "ko": "경주 중에 프리야는 첫 코치를 떠올렸어요.",
    "blank": "स्मरण",
+   "src": "made"
+  }
+ ],
+ "w|स्मारक": [
+  {
+   "text": "करण की ख़बर छपने के बाद नगर निगम ने पुराने युद्ध स्मारक की सफ़ाई करवाई।",
+   "en": "After Karan's story was printed, the municipality had the old war memorial cleaned.",
+   "ko": "카란의 기사가 나간 뒤 시청이 오래된 전쟁 기념비를 청소했어요.",
+   "blank": "स्मारक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने धूप में बैठकर शहर के पुराने स्मारक का स्केच बनाया।",
+   "en": "Deepa sat in the sun and sketched the city's old monument.",
+   "ko": "디파는 햇볕 아래 앉아 도시의 옛 기념물을 스케치했어요.",
+   "blank": "स्मारक",
    "src": "made"
   }
  ],
