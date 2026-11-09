@@ -2453,6 +2453,22 @@
    "src": "made"
   }
  ],
+ "w|अमूल्य": [
+  {
+   "text": "रवि ने लिखा कि तुम्हारी दोस्ती मेरे लिए अमूल्य है।",
+   "en": "Ravi wrote that his friend's friendship is priceless to him.",
+   "ko": "라비는 네 우정이 자기에게 더없이 소중하다고 썼어요.",
+   "blank": "अमूल्य",
+   "src": "made"
+  },
+  {
+   "text": "एक मेहमान ने कहा कि अंजलि की दी हुई सलाह उसके लिए अमूल्य थी।",
+   "en": "A guest said that Anjali's advice was invaluable to him.",
+   "ko": "한 손님은 안잘리가 준 조언이 정말 값졌다고 했어요.",
+   "blank": "अमूल्य",
+   "src": "made"
+  }
+ ],
  "w|अमृत": [
   {
    "text": "संस्कृत की कक्षा में बच्चों ने समुद्र मंथन और अमृत की कथा पढ़ी।",
@@ -3086,6 +3102,22 @@
    "en": "Grandma says the neighbourhood's old pond no longer even exists.",
    "ko": "할머니는 동네의 옛 연못이 이제는 아예 없어졌다고 해요.",
    "blank": "अस्तित्व",
+   "src": "made"
+  }
+ ],
+ "w|अस्थायी": [
+  {
+   "text": "रवि ने लिखा कि शहर में उसका ठिकाना अभी अस्थायी है।",
+   "en": "Ravi wrote that his place in the city is temporary for now.",
+   "ko": "라비는 도시에서 사는 곳이 아직 임시라고 썼어요.",
+   "blank": "अस्थायी",
+   "src": "made"
+  },
+  {
+   "text": "मरम्मत के दौरान रिसेप्शन एक अस्थायी कमरे में चल रहा है।",
+   "en": "During the repairs, reception is running from a temporary room.",
+   "ko": "수리하는 동안 프런트는 임시 방에서 운영되고 있어요.",
+   "blank": "अस्थायी",
    "src": "made"
   }
  ],
@@ -3725,6 +3757,22 @@
    "src": "made"
   }
  ],
+ "w|आतंक": [
+  {
+   "text": "रवि को याद है कि बचपन में मोहल्ले के कुत्ते का कितना आतंक था।",
+   "en": "Ravi remembers how much the neighbourhood dog terrorised them as children.",
+   "ko": "라비는 어릴 때 동네 개가 얼마나 무서웠는지 기억해요.",
+   "blank": "आतंक",
+   "src": "made"
+  },
+  {
+   "text": "रात को होटल की छत पर बंदरों का आतंक रहता है।",
+   "en": "At night, monkeys wreak havoc on the hotel roof.",
+   "ko": "밤이면 호텔 옥상에 원숭이들이 날뛰어요.",
+   "blank": "आतंक",
+   "src": "made"
+  }
+ ],
  "w|आतंकवाद": [
   {
    "text": "थाने में आतंकवाद से निपटने पर एक प्रशिक्षण शिविर लगा।",
@@ -3786,6 +3834,22 @@
    "en": "Puja had the inner walls of the new flat painted a light yellow.",
    "ko": "푸자는 새 아파트 안쪽 벽을 연한 노란색으로 칠했어요.",
    "blank": "आंतरिक",
+   "src": "made"
+  }
+ ],
+ "w|आत्मविश्वास": [
+  {
+   "text": "रवि ने लिखा कि नई नौकरी से उसका आत्मविश्वास बहुत बढ़ा है।",
+   "en": "Ravi wrote that his new job has greatly boosted his confidence.",
+   "ko": "라비는 새 직장 덕분에 자신감이 많이 생겼다고 썼어요.",
+   "blank": "आत्मविश्वास",
+   "src": "made"
+  },
+  {
+   "text": "तीन भाषाएँ सीखने के बाद अंजलि का आत्मविश्वास बढ़ गया।",
+   "en": "After learning three languages, Anjali's confidence grew.",
+   "ko": "세 언어를 배우고 나서 안잘리는 자신감이 붙었어요.",
+   "blank": "आत्मविश्वास",
    "src": "made"
   }
  ],
@@ -4775,6 +4839,22 @@
    "blank": "आवेदन"
   }
  ],
+ "w|आशंका": [
+  {
+   "text": "रवि को आशंका थी कि शायद दोस्त उसकी चिट्ठी का जवाब न दे।",
+   "en": "Ravi feared that his friend might not reply to his letter.",
+   "ko": "라비는 친구가 답장을 안 할까 봐 걱정했어요.",
+   "blank": "आशंका",
+   "src": "made"
+  },
+  {
+   "text": "तूफ़ान की आशंका से कई मेहमानों ने अपनी बुकिंग रद्द कर दी।",
+   "en": "Fearing a storm, many guests cancelled their bookings.",
+   "ko": "태풍이 올까 봐 여러 손님이 예약을 취소했어요.",
+   "blank": "आशंका",
+   "src": "made"
+  }
+ ],
  "w|आशा": [
   {
    "text": "मुझे सफलता की आशा है।",
@@ -5359,6 +5439,22 @@
    "en": "Sleep well before the exam.",
    "ko": "시험 전에 잠을 잘 자.",
    "blank": "इम्तिहान"
+  }
+ ],
+ "w|इरादा": [
+  {
+   "text": "रवि का इरादा है कि इस सर्दी में वह अपने दोस्त से मिलने जाए।",
+   "en": "Ravi intends to go and see his friend this winter.",
+   "ko": "라비는 이번 겨울에 친구를 만나러 갈 생각이에요.",
+   "blank": "इरादा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि का इरादा है कि एक दिन वह अपना छोटा होटल खोले।",
+   "en": "Anjali intends to open her own small hotel one day.",
+   "ko": "안잘리는 언젠가 작은 호텔을 직접 열 생각이에요.",
+   "blank": "इरादा",
+   "src": "made"
   }
  ],
  "w|इलाका": [
@@ -9301,6 +9397,22 @@
    "src": "made"
   }
  ],
+ "w|कल्पना करना": [
+  {
+   "text": "रवि अक्सर कल्पना करता है कि दोनों फिर से उसी पुराने स्कूल के मैदान में बैठे हैं।",
+   "en": "Ravi often imagines the two of them sitting again on the old school ground.",
+   "ko": "라비는 둘이 다시 그 옛 학교 운동장에 앉아 있는 모습을 자주 상상해요.",
+   "blank": "कल्पना करता",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने कभी कल्पना नहीं की थी कि उसे इतने देशों के मेहमानों से मिलने का मौक़ा मिलेगा।",
+   "en": "Anjali never imagined she would get to meet guests from so many countries.",
+   "ko": "안잘리는 이렇게 많은 나라 손님을 만날 줄은 상상도 못 했어요.",
+   "blank": "कल्पना नहीं की",
+   "src": "made"
+  }
+ ],
  "w|कल्याण": [
   {
    "text": "सरकार ने जन कल्याण योजना चलाई।",
@@ -9385,6 +9497,22 @@
    "en": "He broke the oath of friendship.",
    "ko": "그는 우정의 맹세를 깨뜨렸어.",
    "blank": "कसम"
+  }
+ ],
+ "w|कसर": [
+  {
+   "text": "रवि ने लिखा कि तुम्हारी शादी में आने में मैं कोई कसर नहीं छोड़ूँगा।",
+   "en": "Ravi wrote that he would spare no effort to come to his friend's wedding.",
+   "ko": "라비는 네 결혼식에 가려고 무슨 수를 써서라도 노력하겠다고 썼어요.",
+   "blank": "कसर",
+   "src": "made"
+  },
+  {
+   "text": "शादी की बुकिंग के लिए स्टाफ़ ने तैयारी में कोई कसर नहीं रखी।",
+   "en": "The staff left nothing lacking in their preparations for the wedding booking.",
+   "ko": "직원들은 결혼식 예약 준비에 빈틈이 없었어요.",
+   "blank": "कसर",
+   "src": "made"
   }
  ],
  "w|कसरत": [
@@ -9905,6 +10033,22 @@
    "en": "Safety rules are strict in the factory.",
    "ko": "공장에서는 안전 규정이 엄격해.",
    "blank": "कारख़ाना"
+  }
+ ],
+ "w|कारगर": [
+  {
+   "text": "रवि ने अपने दोस्त को नींद के लिए एक कारगर नुस्ख़ा बताया।",
+   "en": "Ravi told his friend an effective remedy for sleep.",
+   "ko": "라비는 친구에게 잠이 잘 오는 효과 좋은 방법을 알려 줬어요.",
+   "blank": "कारगर",
+   "src": "made"
+  },
+  {
+   "text": "मच्छरों से बचने के लिए अंजलि ने एक कारगर उपाय निकाला।",
+   "en": "Anjali came up with an effective way to keep the mosquitoes away.",
+   "ko": "안잘리는 모기를 막는 효과적인 방법을 생각해 냈어요.",
+   "blank": "कारगर",
+   "src": "made"
   }
  ],
  "w|कारण": [
@@ -13619,6 +13763,22 @@
    "blank": "खोला"
   }
  ],
+ "w|ख़ौफ़": [
+  {
+   "text": "रवि ने याद दिलाया कि परीक्षा के नतीजों का ख़ौफ़ दोनों को कैसे जगाए रखता था।",
+   "en": "Ravi recalled how the dread of exam results used to keep them both awake.",
+   "ko": "라비는 시험 결과가 무서워서 둘 다 잠을 못 자던 때를 떠올렸어요.",
+   "blank": "ख़ौफ़",
+   "src": "made"
+  },
+  {
+   "text": "एक बच्ची को लिफ़्ट का इतना ख़ौफ़ था कि वह सीढ़ियों से ही चढ़ी।",
+   "en": "One little girl was so scared of the lift that she climbed the stairs instead.",
+   "ko": "한 여자아이는 엘리베이터를 너무 무서워해서 계단으로만 올라갔어요.",
+   "blank": "ख़ौफ़",
+   "src": "made"
+  }
+ ],
  "w|खौलना": [
   {
    "text": "सुनील ने दफ़्तर की केतली में पानी खौलने रखा और नोट्स पढ़ने लगा।",
@@ -14893,6 +15053,22 @@
    "en": "The tourists went inside the cave.",
    "ko": "관광객들이 동굴 안으로 들어갔어.",
    "blank": "गुफ़ा"
+  }
+ ],
+ "w|गुमराह": [
+  {
+   "text": "रवि ने माना कि कॉलेज के दिनों में कुछ ग़लत दोस्तों ने उसे गुमराह किया था।",
+   "en": "Ravi admitted that in his college days some bad friends had led him astray.",
+   "ko": "라비는 대학 시절 나쁜 친구들 때문에 길을 잃었었다고 인정했어요.",
+   "blank": "गुमराह",
+   "src": "made"
+  },
+  {
+   "text": "ग़लत नक़्शे ने पर्यटकों को गुमराह कर दिया और वे दूसरे होटल पहुँच गए।",
+   "en": "A wrong map misled the tourists and they ended up at another hotel.",
+   "ko": "잘못된 지도 때문에 관광객들이 헷갈려서 다른 호텔로 가 버렸어요.",
+   "blank": "गुमराह",
+   "src": "made"
   }
  ],
  "w|गुरु": [
@@ -16405,6 +16581,22 @@
    "blank": "चढ़ाना"
   }
  ],
+ "w|चतुर": [
+  {
+   "text": "रवि ने लिखा कि हमारी क्लास में तुम सबसे चतुर लड़के थे।",
+   "en": "Ravi wrote that his friend had been the cleverest boy in their class.",
+   "ko": "라비는 네가 우리 반에서 제일 영리한 아이였다고 썼어요.",
+   "blank": "चतुर",
+   "src": "made"
+  },
+  {
+   "text": "चतुर अंजलि ने एक ही कमरे के लिए दो बुकिंग की ग़लती तुरंत पकड़ ली।",
+   "en": "Clever Anjali immediately caught the mistake of two bookings for the same room.",
+   "ko": "영리한 안잘리는 방 하나에 예약이 두 번 된 실수를 바로 잡아냈어요.",
+   "blank": "चतुर",
+   "src": "made"
+  }
+ ],
  "w|चंद": [
   {
    "text": "चंद मिनटों में करण की बारी आ गई।",
@@ -17284,6 +17476,22 @@
    "en": "Seema's brother teases her that her shop has more tea cups than phones.",
    "ko": "시마의 남동생은 누나 가게에 휴대폰보다 찻잔이 더 많다고 놀려요.",
    "blank": "चिढ़ाता",
+   "src": "made"
+  }
+ ],
+ "w|चिंतन": [
+  {
+   "text": "रवि ने लिखा कि अकेले रहने से उसे जीवन पर चिंतन करने का समय मिला।",
+   "en": "Ravi wrote that living alone gave him time to reflect on life.",
+   "ko": "라비는 혼자 살면서 삶을 돌아볼 시간이 생겼다고 썼어요.",
+   "blank": "चिंतन",
+   "src": "made"
+  },
+  {
+   "text": "हर महीने के अंत में स्टाफ़ बैठकर शिकायतों पर चिंतन करता है।",
+   "en": "At the end of every month the staff sit down and reflect on the complaints.",
+   "ko": "매달 말에 직원들은 모여서 불만 사항을 곰곰이 따져 봐요.",
+   "blank": "चिंतन",
    "src": "made"
   }
  ],
@@ -20195,6 +20403,22 @@
    "en": "I need just as much as you do.",
    "ko": "나도 너만큼만 필요해.",
    "blank": "जितना"
+  }
+ ],
+ "w|ज़िद": [
+  {
+   "text": "बचपन में रवि की ज़िद पर दोनों दोस्त बारिश में फ़ुटबॉल खेलते थे।",
+   "en": "As children, the two friends played football in the rain because Ravi insisted.",
+   "ko": "어릴 때 라비가 고집을 부려서 두 친구는 빗속에서 축구를 하곤 했어요.",
+   "blank": "ज़िद",
+   "src": "made"
+  },
+  {
+   "text": "एक बच्चे की ज़िद पर अंजलि ने रात को आइसक्रीम मँगवाई।",
+   "en": "At a child's insistence, Anjali ordered ice cream at night.",
+   "ko": "한 아이가 떼를 써서 안잘리는 밤에 아이스크림을 주문해 줬어요.",
+   "blank": "ज़िद",
+   "src": "made"
   }
  ],
  "w|ज़िंदगी": [
@@ -23247,6 +23471,22 @@
    "blank": "तत्काल"
   }
  ],
+ "w|तत्पर": [
+  {
+   "text": "रवि ने लिखा कि ज़रूरत पड़ने पर वह मदद के लिए हमेशा तत्पर है।",
+   "en": "Ravi wrote that he is always ready to help when needed.",
+   "ko": "라비는 필요하면 언제든 도울 준비가 돼 있다고 썼어요.",
+   "blank": "तत्पर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि मेहमानों की हर माँग पूरी करने के लिए तत्पर रहती है।",
+   "en": "Anjali is always eager to meet every request of the guests.",
+   "ko": "안잘리는 손님 요청이라면 뭐든 들어줄 준비가 돼 있어요.",
+   "blank": "तत्पर",
+   "src": "made"
+  }
+ ],
  "w|तंत्र": [
   {
    "text": "शहर का सुरक्षा तंत्र अब कैमरों और कंट्रोल रूम से जुड़ा है।",
@@ -25323,6 +25563,22 @@
    "blank": "दम आलू"
   }
  ],
+ "w|दमदार": [
+  {
+   "text": "रवि ने कहा कि तुम्हारी पिछली चिट्ठी की भाषा बहुत दमदार थी।",
+   "en": "Ravi said the language of his friend's last letter was very powerful.",
+   "ko": "라비는 네 지난 편지의 글이 아주 힘 있었다고 했어요.",
+   "blank": "दमदार",
+   "src": "made"
+  },
+  {
+   "text": "होटल के रसोइये की बनाई दाल का स्वाद बड़ा दमदार है।",
+   "en": "The dal made by the hotel cook has a really strong flavour.",
+   "ko": "호텔 요리사가 끓인 달은 맛이 정말 진해요.",
+   "blank": "दमदार",
+   "src": "made"
+  }
+ ],
  "w|दमा": [
   {
    "text": "करण की बहन को दमा है, इसलिए वह हमेशा इनहेलर साथ रखती है।",
@@ -26657,6 +26913,22 @@
    "en": "Everyone survived the accident.",
    "ko": "사고에서 모두 살아남았어.",
    "blank": "दुर्घटना"
+  }
+ ],
+ "w|दुर्भाग्य": [
+  {
+   "text": "दुर्भाग्य से रवि की पिछली चिट्ठी किसी ग़लत पते पर चली गई।",
+   "en": "Unfortunately, Ravi's last letter went to a wrong address.",
+   "ko": "안타깝게도 라비의 지난 편지는 엉뚱한 주소로 갔어요.",
+   "blank": "दुर्भाग्य",
+   "src": "made"
+  },
+  {
+   "text": "मेहमान का दुर्भाग्य था कि उसका सामान दूसरी फ़्लाइट में चला गया।",
+   "en": "It was the guest's bad luck that his luggage went on another flight.",
+   "ko": "운 나쁘게도 그 손님의 짐은 다른 비행기로 가 버렸어요.",
+   "blank": "दुर्भाग्य",
+   "src": "made"
   }
  ],
  "w|दुर्लभ": [
@@ -30323,6 +30595,22 @@
    "src": "made"
   }
  ],
+ "w|निश्चय": [
+  {
+   "text": "रवि ने निश्चय किया है कि अब वह हर महीने एक चिट्ठी लिखेगा।",
+   "en": "Ravi has decided that he will now write a letter every month.",
+   "ko": "라비는 이제 달마다 편지를 한 통씩 쓰기로 마음먹었어요.",
+   "blank": "निश्चय",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने निश्चय किया कि वह हर मेहमान का नाम याद रखेगी।",
+   "en": "Anjali resolved to remember every guest's name.",
+   "ko": "안잘리는 손님 이름을 모두 기억하기로 마음먹었어요.",
+   "blank": "निश्चय",
+   "src": "made"
+  }
+ ],
  "w|निश्चित": [
   {
    "text": "यह बात लगभग निश्चित है।",
@@ -31997,6 +32285,22 @@
    "blank": "परमात्मा"
   }
  ],
+ "w|परवाह": [
+  {
+   "text": "रवि ने लिखा कि दूरी के बावजूद उसे तुम्हारी उतनी ही परवाह है।",
+   "en": "Ravi wrote that despite the distance he cares about his friend just as much.",
+   "ko": "라비는 멀리 있어도 여전히 너를 그만큼 아낀다고 썼어요.",
+   "blank": "परवाह",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि छोटे-छोटे बच्चों वाले परिवारों की ख़ास परवाह करती है।",
+   "en": "Anjali takes special care of families with little children.",
+   "ko": "안잘리는 어린아이가 있는 가족을 특히 잘 챙겨요.",
+   "blank": "परवाह",
+   "src": "made"
+  }
+ ],
  "w|परसों": [
   {
    "text": "परसों हम बाज़ार जाएँगे।",
@@ -32647,6 +32951,22 @@
    "en": "It's natural for her to like the color blue.",
    "ko": "그가 파란색을 좋아하는 건 자연스러워.",
    "blank": "पसंद करना"
+  }
+ ],
+ "w|पसंदीदा": [
+  {
+   "text": "चिट्ठी में रवि ने पूछा कि क्या तुम्हारा पसंदीदा गाना अब भी वही है।",
+   "en": "In the letter, Ravi asked whether his friend's favourite song was still the same.",
+   "ko": "라비는 편지에서 네가 제일 좋아하는 노래가 아직도 그거냐고 물었어요.",
+   "blank": "पसंदीदा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि का पसंदीदा काम मेहमानों को शहर घुमाने की योजना बनाना है।",
+   "en": "Anjali's favourite task is planning city tours for guests.",
+   "ko": "안잘리가 제일 좋아하는 일은 손님들 시내 구경 계획을 짜는 거예요.",
+   "blank": "पसंदीदा",
+   "src": "made"
   }
  ],
  "w|पसली": [
@@ -33676,6 +33996,22 @@
    "en": "The spices have been ground well.",
    "ko": "양념이 곱게 빻아졌어요.",
    "blank": "पिस",
+   "src": "made"
+  }
+ ],
+ "w|पीछा करना": [
+  {
+   "text": "रवि को याद आया कि एक बार दोनों ने पतंग लूटने के लिए पूरे मोहल्ले में उसका पीछा किया था।",
+   "en": "Ravi remembered that once they both chased a kite through the whole neighbourhood to catch it.",
+   "ko": "라비는 둘이 연을 잡으려고 온 동네를 쫓아다녔던 일을 떠올렸어요.",
+   "blank": "पीछा किया",
+   "src": "made"
+  },
+  {
+   "text": "होटल के चौकीदार ने चुपके से घुसे आदमी का पीछा किया।",
+   "en": "The hotel watchman chased the man who had sneaked in.",
+   "ko": "호텔 경비원은 몰래 들어온 남자를 뒤쫓았어요.",
+   "blank": "पीछा किया",
    "src": "made"
   }
  ],
@@ -35287,6 +35623,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिकूल": [
+  {
+   "text": "रवि ने लिखा कि प्रतिकूल हालात में भी तुमने हिम्मत नहीं छोड़ी।",
+   "en": "Ravi wrote that his friend didn't lose courage even in adverse circumstances.",
+   "ko": "라비는 네가 어려운 상황에서도 용기를 잃지 않았다고 썼어요.",
+   "blank": "प्रतिकूल",
+   "src": "made"
+  },
+  {
+   "text": "प्रतिकूल मौसम के कारण होटल की छत वाली पार्टी अंदर करनी पड़ी।",
+   "en": "Because of bad weather, the hotel's rooftop party had to be moved inside.",
+   "ko": "날씨가 나빠서 호텔 옥상 파티를 안에서 해야 했어요.",
+   "blank": "प्रतिकूल",
+   "src": "made"
+  }
+ ],
  "w|प्रतिक्रिया": [
   {
    "text": "गिरफ़्तारी की ख़बर पर मोहल्ले से मिली-जुली प्रतिक्रिया आई।",
@@ -36241,6 +36593,22 @@
    "blank": "प्रसन्न"
   }
  ],
+ "w|प्रसन्नता": [
+  {
+   "text": "दोस्त की शादी की ख़बर सुनकर रवि ने बड़ी प्रसन्नता जताई।",
+   "en": "Ravi expressed great joy on hearing the news of his friend's wedding.",
+   "ko": "라비는 친구의 결혼 소식을 듣고 무척 기뻐했어요.",
+   "blank": "प्रसन्नता",
+   "src": "made"
+  },
+  {
+   "text": "होटल को पुरस्कार मिलने पर पूरे स्टाफ़ ने प्रसन्नता से मिठाई बाँटी।",
+   "en": "When the hotel won an award, the whole staff happily handed out sweets.",
+   "ko": "호텔이 상을 받자 직원들은 모두 기뻐하며 단것을 나눴어요.",
+   "blank": "प्रसन्नता",
+   "src": "made"
+  }
+ ],
  "w|प्रसव": [
   {
    "text": "अस्पताल में सुरक्षित प्रसव हुआ।",
@@ -36618,6 +36986,22 @@
    "en": "The pool rules include a provision for separate hours for disabled swimmers.",
    "ko": "수영장 규칙에는 장애인 수영자를 위한 별도 시간 조항이 있어요.",
    "blank": "प्रावधान",
+   "src": "made"
+  }
+ ],
+ "w|प्रासंगिक": [
+  {
+   "text": "रवि ने कहा कि दादाजी की पुरानी सीख आज भी प्रासंगिक लगती है।",
+   "en": "Ravi said that grandfather's old advice still feels relevant today.",
+   "ko": "라비는 할아버지의 옛 가르침이 지금도 와닿는다고 했어요.",
+   "blank": "प्रासंगिक",
+   "src": "made"
+  },
+  {
+   "text": "प्रशिक्षण में अंजलि ने केवल प्रासंगिक सवाल पूछे।",
+   "en": "In the training, Anjali asked only relevant questions.",
+   "ko": "안잘리는 교육 때 핵심적인 질문만 했어요.",
+   "blank": "प्रासंगिक",
    "src": "made"
   }
  ],
@@ -38723,6 +39107,22 @@
    "src": "made"
   }
  ],
+ "w|बँधना": [
+  {
+   "text": "रवि लिखता है कि बचपन की दोस्ती में दोनों एक अनोखे रिश्ते में बँध गए थे।",
+   "en": "Ravi writes that in their childhood friendship the two became bound by a unique bond.",
+   "ko": "라비는 어린 시절 우정으로 둘이 특별한 관계로 묶였다고 써요.",
+   "blank": "बँध",
+   "src": "made"
+  },
+  {
+   "text": "मेहमानों के सामान पर नाम लिखी पट्टियाँ बँधी थीं।",
+   "en": "Name tags were tied onto the guests' luggage.",
+   "ko": "손님들 짐에는 이름표가 묶여 있었어요.",
+   "blank": "बँधी",
+   "src": "made"
+  }
+ ],
  "w|बधाई": [
   {
    "text": "परीक्षा पास करने पर बधाई दो।",
@@ -38792,6 +39192,22 @@
    "en": "The topic of the meeting was working from home versus working from the office.",
    "ko": "회의 주제는 재택근무 대 사무실 근무였어요.",
    "blank": "बनाम",
+   "src": "made"
+  }
+ ],
+ "w|बनावट": [
+  {
+   "text": "रवि ने पुराने लिफ़ाफ़े की बनावट देखकर पहचान लिया कि वह दोस्त का भेजा हुआ है।",
+   "en": "Ravi recognised from the look of the old envelope that his friend had sent it.",
+   "ko": "라비는 낡은 봉투 모양을 보고 친구가 보낸 걸 알아봤어요.",
+   "blank": "बनावट",
+   "src": "made"
+  },
+  {
+   "text": "होटल की पुरानी इमारत की बनावट पर्यटकों को बहुत भाती है।",
+   "en": "Tourists really love the design of the hotel's old building.",
+   "ko": "관광객들은 호텔 옛 건물의 구조를 무척 좋아해요.",
+   "blank": "बनावट",
    "src": "made"
   }
  ],
@@ -41193,6 +41609,22 @@
    "en": "Put the empty bottle in the recycle bin.",
    "ko": "빈 병은 재활용통에 넣어.",
    "blank": "बोतल"
+  }
+ ],
+ "w|बोध": [
+  {
+   "text": "रवि को देर से बोध हुआ कि सच्चे दोस्त कम ही मिलते हैं।",
+   "en": "Ravi realised late that true friends are rare.",
+   "ko": "라비는 진짜 친구는 드물다는 걸 뒤늦게 깨달았어요.",
+   "blank": "बोध",
+   "src": "made"
+  },
+  {
+   "text": "होटल में काम करके अंजलि को धैर्य का सच्चा बोध हुआ।",
+   "en": "Working at the hotel gave Anjali a true sense of patience.",
+   "ko": "호텔에서 일하며 안잘리는 인내가 뭔지 제대로 깨달았어요.",
+   "blank": "बोध",
+   "src": "made"
   }
  ],
  "w|बोना": [
@@ -45487,6 +45919,22 @@
    "src": "made"
   }
  ],
+ "w|मुख्यतः": [
+  {
+   "text": "रवि की चिट्ठी मुख्यतः उनकी स्कूल की यादों के बारे में थी।",
+   "en": "Ravi's letter was mainly about their school memories.",
+   "ko": "라비의 편지는 주로 학창 시절 추억에 관한 거였어요.",
+   "blank": "मुख्यतः",
+   "src": "made"
+  },
+  {
+   "text": "इस होटल में मुख्यतः विदेशी पर्यटक ठहरते हैं।",
+   "en": "Mainly foreign tourists stay at this hotel.",
+   "ko": "이 호텔에는 주로 외국인 관광객이 묵어요.",
+   "blank": "मुख्यतः",
+   "src": "made"
+  }
+ ],
  "w|मुख्यमंत्री": [
   {
    "text": "मुख्यमंत्री कल गाँव आ रहे हैं।",
@@ -48967,6 +49415,22 @@
    "blank": "रोशनी"
   }
  ],
+ "w|रोष": [
+  {
+   "text": "पुराने झगड़े का रोष अब रवि के मन में बिल्कुल नहीं बचा।",
+   "en": "No anger over the old quarrel is left in Ravi's heart now.",
+   "ko": "옛 다툼에 대한 노여움은 이제 라비 마음에 전혀 남아 있지 않아요.",
+   "blank": "रोष",
+   "src": "made"
+  },
+  {
+   "text": "पानी बंद होने पर मेहमानों ने रिसेप्शन पर अपना रोष जताया।",
+   "en": "When the water was cut off, the guests vented their anger at reception.",
+   "ko": "물이 끊기자 손님들은 프런트에서 화를 냈어요.",
+   "blank": "रोष",
+   "src": "made"
+  }
+ ],
  "w|रौंदना": [
   {
    "text": "हाथियों ने खेत को रौंद दिया।",
@@ -49054,6 +49518,22 @@
    "en": "A lame dog lives in the corner of the market and everyone feeds it.",
    "ko": "시장 구석에 다리 저는 개가 사는데 모두 먹이를 줘요.",
    "blank": "लंगड़ा",
+   "src": "made"
+  }
+ ],
+ "w|लगन": [
+  {
+   "text": "रवि ने दोस्त की पढ़ाई के प्रति लगन को हमेशा सराहा।",
+   "en": "Ravi always admired his friend's devotion to studying.",
+   "ko": "라비는 친구가 공부에 열심인 걸 늘 칭찬했어요.",
+   "blank": "लगन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बड़ी लगन से नया रसोइया तैयार किया।",
+   "en": "Anjali trained the new cook with great dedication.",
+   "ko": "안잘리는 새 요리사를 정성껏 가르쳤어요.",
+   "blank": "लगन",
    "src": "made"
   }
  ],
@@ -52333,6 +52813,22 @@
    "blank": "वोट"
   }
  ],
+ "w|व्यक्त करना": [
+  {
+   "text": "रवि ने पुराने दोस्त को चिट्ठी लिखकर अपना आभार व्यक्त किया।",
+   "en": "Ravi wrote a letter to his old friend and expressed his gratitude.",
+   "ko": "라비는 옛 친구에게 편지를 써서 고마움을 표현했어요.",
+   "blank": "व्यक्त किया",
+   "src": "made"
+  },
+  {
+   "text": "होटल के मेहमान ने अंजलि के अच्छे व्यवहार के लिए धन्यवाद व्यक्त किया।",
+   "en": "The hotel guest expressed thanks for Anjali's kind manner.",
+   "ko": "호텔 손님은 안잘리의 친절한 태도에 고마움을 전했어요.",
+   "blank": "व्यक्त किया",
+   "src": "made"
+  }
+ ],
  "w|व्यक्ति": [
   {
    "text": "वह बहुत शांत व्यक्ति है।",
@@ -52689,6 +53185,22 @@
    "en": "Suspecting without reason is not right.",
    "ko": "이유 없이 의심하는 건 좋지 않아.",
    "blank": "शक"
+  }
+ ],
+ "w|शक करना": [
+  {
+   "text": "रवि ने लिखा कि उसने कभी तुम्हारी दोस्ती पर शक नहीं किया।",
+   "en": "Ravi wrote that he had never doubted their friendship.",
+   "ko": "라비는 네 우정을 한 번도 의심한 적 없다고 썼어요.",
+   "blank": "शक नहीं किया",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर ने किसी मेहमान पर चोरी का शक किया, पर बटुआ कमरे में ही मिल गया।",
+   "en": "The manager suspected a guest of theft, but the wallet turned up in the room.",
+   "ko": "매니저는 한 손님을 도둑으로 의심했지만 지갑은 방 안에서 나왔어요.",
+   "blank": "शक किया",
+   "src": "made"
   }
  ],
  "w|शक्कर": [
@@ -54537,6 +55049,22 @@
    "blank": "सख़्त"
   }
  ],
+ "w|सख़्ती": [
+  {
+   "text": "रवि ने याद किया कि हेडमास्टर कितनी सख़्ती से अनुशासन रखते थे।",
+   "en": "Ravi recalled how strictly the headmaster kept discipline.",
+   "ko": "라비는 교장 선생님이 얼마나 엄하게 규율을 지켰는지 떠올렸어요.",
+   "blank": "सख़्ती",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर सफ़ाई के नियम बड़ी सख़्ती से लागू करते हैं।",
+   "en": "The manager enforces the cleaning rules very strictly.",
+   "ko": "매니저는 청소 규칙을 아주 엄격하게 지키게 해요.",
+   "blank": "सख़्ती",
+   "src": "made"
+  }
+ ],
  "w|संख्या": [
   {
    "text": "बच्चों की संख्या गिन लो, कोई बाहर न रह जाए।",
@@ -55059,6 +55587,22 @@
    "en": "One should learn to stay satisfied with little.",
    "ko": "적은 것으로 만족하는 법을 배워야 해.",
    "blank": "संतुष्ट"
+  }
+ ],
+ "w|संतोष": [
+  {
+   "text": "रवि को इस बात का संतोष है कि दोस्ती अब भी बनी हुई है।",
+   "en": "Ravi is content that the friendship still lasts.",
+   "ko": "라비는 우정이 아직 이어지고 있어서 마음이 놓여요.",
+   "blank": "संतोष",
+   "src": "made"
+  },
+  {
+   "text": "मेहमानों के चेहरे पर संतोष देखकर अंजलि की थकान उतर जाती है।",
+   "en": "Seeing satisfaction on the guests' faces, Anjali's tiredness goes away.",
+   "ko": "손님들 얼굴에 만족스러운 표정을 보면 안잘리의 피로가 풀려요.",
+   "blank": "संतोष",
+   "src": "made"
   }
  ],
  "w|सत्तर": [
@@ -56103,6 +56647,22 @@
    "src": "made"
   }
  ],
+ "w|समर्पण": [
+  {
+   "text": "रवि ने अपने दोस्त के संगीत के प्रति समर्पण की तारीफ़ की।",
+   "en": "Ravi praised his friend's dedication to music.",
+   "ko": "라비는 친구가 음악에 쏟는 헌신을 칭찬했어요.",
+   "blank": "समर्पण",
+   "src": "made"
+  },
+  {
+   "text": "होटल के मालिक अंजलि के समर्पण से बहुत प्रभावित हैं।",
+   "en": "The hotel owner is very impressed by Anjali's dedication.",
+   "ko": "호텔 주인은 안잘리의 헌신에 크게 감동했어요.",
+   "blank": "समर्पण",
+   "src": "made"
+  }
+ ],
  "w|समर्पित": [
   {
    "text": "मीना अपने लेखन के प्रति पूरी तरह समर्पित है।",
@@ -56517,6 +57077,22 @@
    "en": "A portrait of the emperor hangs in the museum.",
    "ko": "박물관에 황제 초상화가 걸려 있어.",
    "blank": "सम्राट"
+  }
+ ],
+ "w|संयम": [
+  {
+   "text": "रवि ने माना कि उस दिन उसे थोड़ा संयम रखना चाहिए था।",
+   "en": "Ravi admitted he should have shown a little restraint that day.",
+   "ko": "라비는 그날 좀 참았어야 했다고 인정했어요.",
+   "blank": "संयम",
+   "src": "made"
+  },
+  {
+   "text": "गुस्साए मेहमान के सामने भी अंजलि ने संयम नहीं खोया।",
+   "en": "Anjali didn't lose her composure even in front of the angry guest.",
+   "ko": "화난 손님 앞에서도 안잘리는 침착함을 잃지 않았어요.",
+   "blank": "संयम",
+   "src": "made"
   }
  ],
  "w|संयुक्त": [
@@ -59227,6 +59803,38 @@
    "en": "Drying the hair after washing is necessary.",
    "ko": "머리를 감은 뒤 말리는 게 필요해.",
    "blank": "सुखाना"
+  }
+ ],
+ "w|सुखी": [
+  {
+   "text": "रवि ने लिखा कि यह जानकर अच्छा लगा कि तुम्हारा परिवार सुखी है।",
+   "en": "Ravi wrote that it was good to know his friend's family is happy.",
+   "ko": "라비는 네 가족이 행복하다니 기쁘다고 썼어요.",
+   "blank": "सुखी",
+   "src": "made"
+  },
+  {
+   "text": "होटल में ठहरा बुज़ुर्ग जोड़ा बहुत सुखी लग रहा था।",
+   "en": "The elderly couple staying at the hotel looked very happy.",
+   "ko": "호텔에 묵은 노부부는 무척 행복해 보였어요.",
+   "blank": "सुखी",
+   "src": "made"
+  }
+ ],
+ "w|सुगम": [
+  {
+   "text": "रवि ने बताया कि अब उसके शहर से तुम्हारे गाँव तक का सफ़र सुगम हो गया है।",
+   "en": "Ravi said that the journey from his city to his friend's village has now become easy.",
+   "ko": "라비는 이제 자기 도시에서 네 마을까지 가는 길이 편해졌다고 알렸어요.",
+   "blank": "सुगम",
+   "src": "made"
+  },
+  {
+   "text": "होटल से रेलवे स्टेशन तक जाना काफ़ी सुगम है।",
+   "en": "Getting from the hotel to the railway station is quite easy.",
+   "ko": "호텔에서 기차역까지 가기가 꽤 편해요.",
+   "blank": "सुगम",
+   "src": "made"
   }
  ],
  "w|सुझाव": [
@@ -62059,6 +62667,22 @@
    "blank": "हासिल करना"
   }
  ],
+ "w|हास्य": [
+  {
+   "text": "रवि की चिट्ठियों में हास्य भरा रहता है, इसलिए दोस्त उन्हें दो बार पढ़ता है।",
+   "en": "Ravi's letters are full of humour, so his friend reads them twice.",
+   "ko": "라비의 편지는 유머가 넘쳐서 친구는 두 번씩 읽어요.",
+   "blank": "हास्य",
+   "src": "made"
+  },
+  {
+   "text": "होटल के शाम के कार्यक्रम में एक हास्य कलाकार भी आया।",
+   "en": "A comedian also came to the hotel's evening programme.",
+   "ko": "호텔 저녁 행사에는 코미디언도 왔어요.",
+   "blank": "हास्य",
+   "src": "made"
+  }
+ ],
  "w|हिचकिचाना": [
   {
    "text": "कुछ भी पूछने में मत हिचकिचाओ।",
@@ -62533,6 +63157,22 @@
    "en": "I am surprised hearing what he said.",
    "ko": "그 사람 말을 듣고 놀라.",
    "blank": "हैरान"
+  }
+ ],
+ "w|हैरान होना": [
+  {
+   "text": "दोस्त की लंबी चिट्ठी पाकर रवि हैरान हो गया।",
+   "en": "Ravi was surprised to receive a long letter from his friend.",
+   "ko": "라비는 친구의 긴 편지를 받고 깜짝 놀랐어요.",
+   "blank": "हैरान हो",
+   "src": "made"
+  },
+  {
+   "text": "सुबह खिड़की से पहाड़ देखकर मेहमान हैरान हो गए।",
+   "en": "The guests were amazed to see the mountains from the window in the morning.",
+   "ko": "아침에 창밖으로 산을 본 손님들은 감탄했어요.",
+   "blank": "हैरान हो",
+   "src": "made"
   }
  ],
  "w|हैरानी": [
