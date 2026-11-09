@@ -29,6 +29,22 @@
    "src": "made"
   }
  ],
+ "w|अंकतालिका": [
+  {
+   "text": "सुनील के नए सहायक ने नौकरी के लिए अपनी अंकतालिका की फ़ोटोकॉपी जमा की।",
+   "en": "Sunil's new assistant handed in a photocopy of his mark sheet for the job.",
+   "ko": "수닐의 새 보조는 취직하려고 성적표 사본을 냈어요.",
+   "blank": "अंकतालिका",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने भतीजे की अंकतालिका देखकर उसे मैराथन देखने साथ ले चलने का इनाम दिया।",
+   "en": "After seeing her nephew's mark sheet, Kavita rewarded him by taking him to watch the marathon.",
+   "ko": "카비타는 조카 성적표를 보고 상으로 마라톤 구경에 데려갔어요.",
+   "blank": "अंकतालिका",
+   "src": "made"
+  }
+ ],
  "w|अंकल": [
   {
    "text": "अंकल ने जन्मदिन पर तोहफ़ा दिया।",
@@ -1023,6 +1039,22 @@
    "en": "Use less oil when frying an egg.",
    "ko": "계란 프라이할 때 기름을 적게 써.",
    "blank": "अंडा"
+  }
+ ],
+ "w|अंडाकार": [
+  {
+   "text": "रवि ने ग्राहक को दिखाया कि विटामिन की गोली पीली और अंडाकार है।",
+   "en": "Ravi showed the customer that the vitamin tablet is yellow and oval.",
+   "ko": "라비는 손님에게 비타민 알약이 노랗고 타원형이라고 보여 줬어요.",
+   "blank": "अंडाकार",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बड़े परिवार के लिए अंडाकार मेज़ लगवाई।",
+   "en": "Anjali had an oval table set up for the large family.",
+   "ko": "안잘리는 대가족을 위해 타원형 식탁을 놓았어요.",
+   "blank": "अंडाकार",
+   "src": "made"
   }
  ],
  "w|अडिग": [
@@ -2365,6 +2397,22 @@
    "src": "made"
   }
  ],
+ "w|अनिद्रा": [
+  {
+   "text": "रवि ने अनिद्रा से परेशान ग्राहक को डॉक्टर से मिलने की सलाह दी।",
+   "en": "Ravi advised a customer troubled by insomnia to see a doctor.",
+   "ko": "라비는 불면증에 시달리는 손님에게 의사를 만나 보라고 했어요.",
+   "blank": "अनिद्रा",
+   "src": "made"
+  },
+  {
+   "text": "त्योहारों के मौसम में अंजलि अक्सर अनिद्रा का शिकार हो जाती है।",
+   "en": "During the festival season Anjali often suffers from insomnia.",
+   "ko": "명절 철이면 안잘리는 자주 불면증에 시달려요.",
+   "blank": "अनिद्रा",
+   "src": "made"
+  }
+ ],
  "w|अनिवार्य": [
   {
    "text": "रसोई में टोपी और एप्रन पहनना सबके लिए अनिवार्य है।",
@@ -2445,6 +2493,22 @@
    "src": "made"
   }
  ],
+ "w|अनुक्रमणिका": [
+  {
+   "text": "सुनील ने अनुक्रमणिका देखकर दाल मखनी वाला पन्ना खोला।",
+   "en": "Sunil checked the index and opened the page for dal makhani.",
+   "ko": "수닐은 색인을 보고 달 마카니 쪽을 펼쳤어요.",
+   "blank": "अनुक्रमणिका",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने किताब की अनुक्रमणिका में पानी की कमी वाला अध्याय ढूँढा।",
+   "en": "Kavita looked up the chapter on dehydration in the book's index.",
+   "ko": "카비타는 책 색인에서 탈수에 관한 장을 찾았어요.",
+   "blank": "अनुक्रमणिका",
+   "src": "made"
+  }
+ ],
  "w|अनुचित": [
   {
    "text": "बीच शो में फ़ोन पर ज़ोर से बात करना अनुचित है।",
@@ -2473,6 +2537,22 @@
    "en": "This article is part of the constitution.",
    "ko": "이 조항은 헌법의 일부야.",
    "blank": "अनुच्छेद"
+  }
+ ],
+ "w|अनुत्तीर्ण": [
+  {
+   "text": "सुनील बारहवीं में एक बार अनुत्तीर्ण हुआ था, पर खाना बनाने में हमेशा अव्वल रहा।",
+   "en": "Sunil once failed twelfth grade, but he was always top at cooking.",
+   "ko": "수닐은 고3 때 한 번 낙제했지만 요리만큼은 늘 일등이었어요.",
+   "blank": "अनुत्तीर्ण",
+   "src": "made"
+  },
+  {
+   "text": "पिछले साल कविता फ़िटनेस जाँच में अनुत्तीर्ण होने के कारण दौड़ नहीं पाई थी।",
+   "en": "Last year Kavita couldn't run because she failed the fitness test.",
+   "ko": "작년에 카비타는 체력 검사에 떨어져서 뛰지 못했어요.",
+   "blank": "अनुत्तीर्ण",
+   "src": "made"
   }
  ],
  "w|अनुदान": [
@@ -3064,6 +3144,22 @@
    "en": "Shalini loves exploring new trails.",
    "ko": "샬리니는 새로운 오솔길을 탐험하는 걸 아주 좋아해요.",
    "blank": "अन्वेषण",
+   "src": "made"
+  }
+ ],
+ "w|अपच": [
+  {
+   "text": "शादी की दावत के बाद अपच से परेशान लोग अगले दिन रवि की दुकान पर पहुँचते हैं।",
+   "en": "After a wedding feast, people with indigestion turn up at Ravi's shop the next day.",
+   "ko": "결혼 잔치 다음 날이면 소화가 안 되는 사람들이 라비 약국에 와요.",
+   "blank": "अपच",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि रात में तला हुआ खाना कम खाती है, क्योंकि उसे अपच हो जाता है।",
+   "en": "Anjali eats little fried food at night because it gives her indigestion.",
+   "ko": "안잘리는 밤에 튀긴 음식을 덜 먹어요. 소화가 안 되거든요.",
+   "blank": "अपच",
    "src": "made"
   }
  ],
@@ -4425,6 +4521,22 @@
    "src": "made"
   }
  ],
+ "w|अलबत्ता": [
+  {
+   "text": "सुनील की रसोई छोटी है, अलबत्ता हर चीज़ अपनी जगह पर रहती है।",
+   "en": "Sunil's kitchen is small; mind you, everything stays in its place.",
+   "ko": "수닐 주방은 작지만, 그래도 모든 게 제자리에 있어요.",
+   "blank": "अलबत्ता",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने पदक नहीं जीता, अलबत्ता अपना अब तक का सबसे अच्छा समय निकाला।",
+   "en": "Kavita didn't win a medal; she did, however, run her best time yet.",
+   "ko": "카비타는 메달은 못 땄지만 대신 자기 최고 기록을 냈어요.",
+   "blank": "अलबत्ता",
+   "src": "made"
+  }
+ ],
  "w|अलमारी": [
   {
    "text": "कपड़े अलमारी में रख दो।",
@@ -4498,6 +4610,22 @@
    "en": "Priya ordered an embroidered bedsheet made by a minority artisan community.",
    "ko": "프리야는 소수 장인 공동체가 만든 자수 침대보를 주문했어요.",
    "blank": "अल्पसंख्यक",
+   "src": "made"
+  }
+ ],
+ "w|अल्पायु": [
+  {
+   "text": "रवि ने किताब में पढ़ा कि पुराने ज़माने में टीके न होने से कई बच्चे अल्पायु में ही चल बसते थे।",
+   "en": "Ravi read in a book that in the old days, without vaccines, many children died young.",
+   "ko": "라비는 옛날엔 백신이 없어서 많은 아이가 어려서 세상을 떠났다고 책에서 읽었어요.",
+   "blank": "अल्पायु",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के दादाजी के पिता अल्पायु में चल बसे थे, इसलिए दादाजी ने छोटी उम्र में ही ढाबा सँभाल लिया।",
+   "en": "Anjali's grandfather's father died young, so Grandpa took over the eatery at a young age.",
+   "ko": "안잘리 할아버지의 아버지가 일찍 돌아가셔서 할아버지는 어린 나이에 식당을 맡았어요.",
+   "blank": "अल्पायु",
    "src": "made"
   }
  ],
@@ -5481,6 +5609,22 @@
    "en": "True realization comes only after a loss.",
    "ko": "진짜 깨달음은 손해를 본 뒤에야 와.",
    "blank": "अहसास"
+  }
+ ],
+ "w|अहा": [
+  {
+   "text": "सुनील ने ढक्कन उठाया तो मालिक बोले, \"अहा, क्या ख़ुशबू है!\"",
+   "en": "When Sunil lifted the lid, the owner said, \"Ah, what an aroma!\"",
+   "ko": "수닐이 뚜껑을 열자 사장님이 \"아, 냄새 좋다!\" 하셨어요.",
+   "blank": "अहा",
+   "src": "made"
+  },
+  {
+   "text": "आख़िरी मोड़ पर कविता बोली, \"अहा, आख़िर मंज़िल दिख गई!\"",
+   "en": "At the last bend Kavita said, \"Ah, the finish is finally in sight!\"",
+   "ko": "마지막 굽이에서 카비타가 \"아, 드디어 결승점이 보인다!\" 했어요.",
+   "blank": "अहा",
+   "src": "made"
   }
  ],
  "w|अहिंसा": [
@@ -8845,6 +8989,22 @@
    "src": "made"
   }
  ],
+ "w|इत्तफ़ाक़": [
+  {
+   "text": "सुनील का पुराना उस्ताद इत्तफ़ाक़ से उसी रेस्टोरेंट में खाना खाने आ गया।",
+   "en": "By chance, Sunil's old mentor came to eat at that very restaurant.",
+   "ko": "우연히 수닐의 옛 스승이 바로 그 식당에 밥을 먹으러 왔어요.",
+   "blank": "इत्तफ़ाक़",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ में कविता को इत्तफ़ाक़ से अपनी स्कूल की सहेली मिल गई।",
+   "en": "During the race Kavita happened to run into a school friend.",
+   "ko": "경주 중에 카비타는 우연히 학교 친구를 만났어요.",
+   "blank": "इत्तफ़ाक़",
+   "src": "made"
+  }
+ ],
  "w|इत्यादि": [
   {
    "text": "बेकरी में ब्रेड, बिस्कुट, केक इत्यादि सब कुछ मिलता है।",
@@ -10591,6 +10751,22 @@
    "src": "made"
   }
  ],
+ "w|उद्घोषक": [
+  {
+   "text": "रेडियो के उद्घोषक ने बारिश की ख़बर दी, तो सुनील ने पकौड़ों की तैयारी शुरू कर दी।",
+   "en": "The radio announcer reported rain, so Sunil started getting pakoras ready.",
+   "ko": "라디오 아나운서가 비 소식을 전하자 수닐은 파코라 준비를 시작했어요.",
+   "blank": "उद्घोषक",
+   "src": "made"
+  },
+  {
+   "text": "फ़िनिश लाइन पर उद्घोषक ने कविता का नाम ज़ोर से पुकारा।",
+   "en": "At the finish line the announcer called out Kavita's name loudly.",
+   "ko": "결승선에서 아나운서가 카비타 이름을 크게 불렀어요.",
+   "blank": "उद्घोषक",
+   "src": "made"
+  }
+ ],
  "w|उद्दंड": [
   {
    "text": "माँ बताती हैं कि बचपन में अमित बड़ा उद्दंड था, पर पूजा हमेशा उसे डाँट से बचाती थी।",
@@ -11332,6 +11508,22 @@
    "en": "Anjali happily shared that she was the runner-up in the city's poetry competition.",
    "ko": "안잘리는 시 낭송 대회에서 준우승했다고 기쁘게 알렸어요.",
    "blank": "उपविजेता",
+   "src": "made"
+  }
+ ],
+ "w|उपसंहार": [
+  {
+   "text": "सुनील ने रसोई पर लिखे अपने निबंध के उपसंहार में माँ को याद किया।",
+   "en": "In the conclusion of his essay on cooking, Sunil remembered his mother.",
+   "ko": "수닐은 요리에 관한 글의 맺음말에서 어머니를 떠올렸어요.",
+   "blank": "उपसंहार",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने मैराथन पर लिखे लेख के उपसंहार में सभी स्वयंसेवकों को धन्यवाद दिया।",
+   "en": "In the conclusion of her article on the marathon, Kavita thanked all the volunteers.",
+   "ko": "카비타는 마라톤에 관한 글 맺음말에서 자원봉사자 모두에게 고마움을 전했어요.",
+   "blank": "उपसंहार",
    "src": "made"
   }
  ],
@@ -12717,6 +12909,22 @@
    "src": "made"
   }
  ],
+ "w|ऐंठन": [
+  {
+   "text": "रात को पैरों में ऐंठन की शिकायत लेकर एक बुज़ुर्ग रवि के पास आए।",
+   "en": "An elderly man came to Ravi complaining of leg cramps at night.",
+   "ko": "밤에 다리에 쥐가 난다며 어르신 한 분이 라비를 찾아왔어요.",
+   "blank": "ऐंठन",
+   "src": "made"
+  },
+  {
+   "text": "ज़्यादा मिर्च खाने से ग्राहक के पेट में ऐंठन होने लगी, तो अंजलि ने उसे छाछ दी।",
+   "en": "The customer got stomach cramps from too much chilli, so Anjali gave him buttermilk.",
+   "ko": "매운 걸 많이 먹은 손님이 배가 뒤틀리자 안잘리가 버터밀크를 줬어요.",
+   "blank": "ऐंठन",
+   "src": "made"
+  }
+ ],
  "w|ऐंठना": [
   {
    "text": "पूरी रात बिना खाए काम करने से सुनील का पेट ऐंठने लगा।",
@@ -13183,6 +13391,22 @@
    "en": "Oh no, the bus got away.",
    "ko": "아 안 돼, 버스를 놓쳤어.",
    "blank": "ओह"
+  }
+ ],
+ "w|ओहो": [
+  {
+   "text": "सुनील बोला, \"ओहो, दूध फिर उबलकर गिर गया!\"",
+   "en": "Sunil said, \"Oh no, the milk boiled over again!\"",
+   "ko": "수닐이 \"아이고, 우유가 또 끓어 넘쳤네!\" 했어요.",
+   "blank": "ओहो",
+   "src": "made"
+  },
+  {
+   "text": "जूते का फ़ीता खुला तो कविता के मुँह से निकला, \"ओहो, अभी ही खुलना था!\"",
+   "en": "When her shoelace came undone, Kavita blurted, \"Oh great, it had to be now!\"",
+   "ko": "신발 끈이 풀리자 카비타 입에서 \"아이참, 하필 지금!\"이 나왔어요.",
+   "blank": "ओहो",
+   "src": "made"
   }
  ],
  "w|औक़ात": [
@@ -16681,6 +16905,22 @@
    "src": "made"
   }
  ],
+ "w|कार्यसूची": [
+  {
+   "text": "रविवार की बैठक की कार्यसूची में सुनील की नई मेन्यू योजना सबसे ऊपर थी।",
+   "en": "Sunil's new menu plan was at the top of the agenda for Sunday's meeting.",
+   "ko": "일요일 회의 안건 맨 위에 수닐의 새 메뉴 계획이 있었어요.",
+   "blank": "कार्यसूची",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने क्लब की बैठक की कार्यसूची में पानी के स्टॉल का मुद्दा जुड़वाया।",
+   "en": "Kavita had the water-station issue added to the club meeting's agenda.",
+   "ko": "카비타는 클럽 회의 안건에 급수대 문제를 넣었어요.",
+   "blank": "कार्यसूची",
+   "src": "made"
+  }
+ ],
  "w|कार्यस्थल": [
   {
    "text": "रोहन का मानना है कि कार्यस्थल पर सबके साथ बराबरी का व्यवहार होना चाहिए।",
@@ -17228,6 +17468,22 @@
    "en": "Anjali had pesticide sprayed in the clinic on Sunday, when there were no patients.",
    "ko": "안잘리는 환자가 없는 일요일에 치과에 방역 약을 뿌렸어요.",
    "blank": "कीटनाशक",
+   "src": "made"
+  }
+ ],
+ "w|कीटाणु": [
+  {
+   "text": "रवि काउंटर को दिन में कई बार पोंछता है ताकि कीटाणु न फैलें।",
+   "en": "Ravi wipes the counter several times a day so germs don't spread.",
+   "ko": "라비는 세균이 퍼지지 않게 하루에 몇 번씩 계산대를 닦아요.",
+   "blank": "कीटाणु",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि सब्ज़ियाँ नमक के पानी में धोती है ताकि कीटाणु निकल जाएँ।",
+   "en": "Anjali washes the vegetables in salt water to get rid of germs.",
+   "ko": "안잘리는 세균이 빠지라고 채소를 소금물에 씻어요.",
+   "blank": "कीटाणु",
    "src": "made"
   }
  ],
@@ -19433,6 +19689,22 @@
    "src": "made"
   }
  ],
+ "w|क्रियाविशेषण": [
+  {
+   "text": "सुनील की बेटी ने हिंदी के होमवर्क में हर क्रियाविशेषण के नीचे लकीर खींची।",
+   "en": "In her Hindi homework Sunil's daughter underlined every adverb.",
+   "ko": "수닐 딸은 힌디어 숙제에서 부사마다 밑줄을 그었어요.",
+   "blank": "क्रियाविशेषण",
+   "src": "made"
+  },
+  {
+   "text": "कविता की बेटी के निबंध में \"तेज़ दौड़ती है\" लिखा था, और शिक्षिका ने \"तेज़\" को क्रियाविशेषण बताया।",
+   "en": "Kavita's daughter wrote \"runs fast\" in her essay, and the teacher said \"fast\" was an adverb.",
+   "ko": "카비타 딸 작문에 \"빨리 달린다\"가 있었는데 선생님은 \"빨리\"가 부사라고 했어요.",
+   "blank": "क्रियाविशेषण",
+   "src": "made"
+  }
+ ],
  "w|क्रिसमस": [
   {
    "text": "क्रिसमस पर घर सजाने का मज़ा अलग है।",
@@ -19710,6 +19982,22 @@
    "en": "This app now works in several regional languages as well as Hindi.",
    "ko": "이 앱은 이제 힌디어와 함께 여러 지역 언어로도 돼요.",
    "blank": "क्षेत्रीय",
+   "src": "made"
+  }
+ ],
+ "w|खगोल विज्ञान": [
+  {
+   "text": "रसोइया बनने से पहले सुनील खगोल विज्ञान पढ़ना चाहता था।",
+   "en": "Before becoming a cook, Sunil wanted to study astronomy.",
+   "ko": "요리사가 되기 전에 수닐은 천문학을 공부하고 싶었어요.",
+   "blank": "खगोल विज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "कविता खगोल विज्ञान की प्रोफ़ेसर है और सुबह तारों के नीचे दौड़ने निकलती है।",
+   "en": "Kavita is an astronomy professor and goes running under the stars in the morning.",
+   "ko": "카비타는 천문학 교수인데 새벽 별 아래서 달리러 나가요.",
+   "blank": "खगोल विज्ञान",
    "src": "made"
   }
  ],
@@ -20033,6 +20321,22 @@
    "en": "This news is true.",
    "ko": "이 소식은 사실이야.",
    "blank": "ख़बर"
+  }
+ ],
+ "w|खबरनवीस": [
+  {
+   "text": "एक खबरनवीस सुनील की रसोई पर लेख लिखने आया था।",
+   "en": "A newsman came to write an article about Sunil's kitchen.",
+   "ko": "한 기자가 수닐의 주방에 대해 기사를 쓰러 왔어요.",
+   "blank": "खबरनवीस",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ ख़त्म होते ही एक खबरनवीस ने कविता से बात की।",
+   "en": "As soon as the race ended, a reporter talked to Kavita.",
+   "ko": "경주가 끝나자마자 기자 한 명이 카비타와 이야기했어요.",
+   "blank": "खबरनवीस",
+   "src": "made"
   }
  ],
  "w|ख़याल": [
@@ -20659,6 +20963,22 @@
    "src": "made"
   }
  ],
+ "w|खिंचाव": [
+  {
+   "text": "जिम से लौटे ग्राहक ने रवि से कहा कि उसकी पीठ में खिंचाव है।",
+   "en": "A customer back from the gym told Ravi he had a strain in his back.",
+   "ko": "헬스장에서 온 손님이 라비에게 등이 결린다고 했어요.",
+   "blank": "खिंचाव",
+   "src": "made"
+  },
+  {
+   "text": "भारी पतीला उठाते ही अंजलि के कंधे में खिंचाव आ गया।",
+   "en": "As soon as Anjali lifted the heavy pot, she strained her shoulder.",
+   "ko": "무거운 냄비를 들자마자 안잘리는 어깨가 결렸어요.",
+   "blank": "खिंचाव",
+   "src": "made"
+  }
+ ],
  "w|खिड़की": [
   {
    "text": "खिड़की खोलकर ताज़ी हवा आने दो।",
@@ -20958,6 +21278,22 @@
    "en": "It took Kavita's team a whole day to scrape the old paint off the stage floor.",
    "ko": "카비타 팀은 무대 바닥의 낡은 페인트를 긁어내는 데 하루가 꼬박 걸렸어요.",
    "blank": "खुरचने",
+   "src": "made"
+  }
+ ],
+ "w|खुरदरा": [
+  {
+   "text": "रवि ने कहा कि इस क्रीम से खुरदरी एड़ियाँ मुलायम हो जाएँगी।",
+   "en": "Ravi said this cream will make rough heels soft.",
+   "ko": "라비는 이 크림을 바르면 거친 뒤꿈치가 부드러워진다고 했어요.",
+   "blank": "खुरदरी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि को लकड़ी की खुरदरी मेज़ें पसंद हैं, उनमें पुराना अपनापन है।",
+   "en": "Anjali likes the rough wooden tables; they have an old, homely feel.",
+   "ko": "안잘리는 거친 나무 탁자가 좋아요. 오래된 정이 느껴지거든요.",
+   "blank": "खुरदरी",
    "src": "made"
   }
  ],
@@ -21263,6 +21599,22 @@
    "blank": "खेत"
   }
  ],
+ "w|खेतिहर": [
+  {
+   "text": "सुनील एक खेतिहर परिवार से आता है, इसलिए अनाज का एक दाना भी बर्बाद नहीं करता।",
+   "en": "Sunil comes from a farming family, so he doesn't waste a single grain.",
+   "ko": "수닐은 농사짓는 집안 출신이라 곡식 한 톨도 버리지 않아요.",
+   "blank": "खेतिहर",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते के खेतिहर गाँवों के बच्चे कविता को पानी की बोतलें पकड़ा रहे थे।",
+   "en": "Children from the farming villages along the route were handing Kavita water bottles.",
+   "ko": "길가 농촌 마을 아이들이 카비타에게 물병을 건네고 있었어요.",
+   "blank": "खेतिहर",
+   "src": "made"
+  }
+ ],
  "w|खेल": [
   {
    "text": "आज मैदान में बड़ा खेल है।",
@@ -21336,6 +21688,22 @@
    "en": "When Neha knocked on the door, it sounded hollow inside.",
    "ko": "네하가 문을 두드려 보니 속이 빈 것 같았어요.",
    "blank": "खोखला",
+   "src": "made"
+  }
+ ],
+ "w|खोखलापन": [
+  {
+   "text": "रवि को विज्ञापनों के बड़े-बड़े दावों का खोखलापन साफ़ दिखता है।",
+   "en": "Ravi can clearly see how hollow the big claims in the adverts are.",
+   "ko": "라비 눈에는 광고 속 거창한 약속이 빈말이라는 게 훤히 보여요.",
+   "blank": "खोखलापन",
+   "src": "made"
+  },
+  {
+   "text": "दीवार ठोकने पर खोखलापन महसूस हुआ, तो अंजलि समझ गई कि अंदर दीमक लगी है।",
+   "en": "Knocking on the wall, Anjali felt it was hollow and realised termites were inside.",
+   "ko": "벽을 두드려 보니 속이 비어 있어서 안잘리는 흰개미가 먹었다는 걸 알았어요.",
+   "blank": "खोखलापन",
    "src": "made"
   }
  ],
@@ -25599,6 +25967,22 @@
    "blank": "चना"
   }
  ],
+ "w|चपटा": [
+  {
+   "text": "रवि ने दादी को बताया कि सुबह वाली गोली चपटी और सफ़ेद है।",
+   "en": "Ravi told Grandma that the morning pill is flat and white.",
+   "ko": "라비는 할머니께 아침 약은 납작하고 하얀 거라고 알려 드렸어요.",
+   "blank": "चपटी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दादी चपटे तवे पर पतली रोटियाँ सेंकती हैं।",
+   "en": "Anjali's grandmother roasts thin rotis on a flat griddle.",
+   "ko": "안잘리 할머니는 납작한 철판에 얇은 로티를 구우세요.",
+   "blank": "चपटे",
+   "src": "made"
+  }
+ ],
  "w|चपरासी": [
   {
    "text": "दफ़्तर का चपरासी नए सहकर्मी के लिए पानी और चाय ले आया।",
@@ -25780,6 +26164,22 @@
    "en": "In the evening bats can be seen flying above the mango tree.",
    "ko": "저녁이면 망고나무 위로 박쥐가 날아다녀요.",
    "blank": "चमगादड़",
+   "src": "made"
+  }
+ ],
+ "w|चमचमाता": [
+  {
+   "text": "रवि की दुकान का चमचमाता नया काउंटर सबको पसंद आया।",
+   "en": "Everyone liked the gleaming new counter in Ravi's shop.",
+   "ko": "라비 약국의 반짝이는 새 계산대를 다들 좋아했어요.",
+   "blank": "चमचमाता",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के रेस्टोरेंट में पीतल की चमचमाती थालियों में खाना परोसा जाता है।",
+   "en": "At Anjali's restaurant food is served on gleaming brass plates.",
+   "ko": "안잘리 식당에서는 반짝이는 놋쇠 쟁반에 음식을 내요.",
+   "blank": "चमचमाती",
    "src": "made"
   }
  ],
@@ -26756,6 +27156,22 @@
    "en": "Seema's brother teases her that her shop has more tea cups than phones.",
    "ko": "시마의 남동생은 누나 가게에 휴대폰보다 찻잔이 더 많다고 놀려요.",
    "blank": "चिढ़ाता",
+   "src": "made"
+  }
+ ],
+ "w|चितकबरा": [
+  {
+   "text": "रवि की दुकान के बाहर एक चितकबरी बिल्ली रोज़ धूप सेंकती है।",
+   "en": "A spotted cat suns itself outside Ravi's shop every day.",
+   "ko": "라비 약국 앞에서 얼룩 고양이가 매일 햇볕을 쬐어요.",
+   "blank": "चितकबरी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के भतीजे ने चितकबरे कुत्ते को रोटी का टुकड़ा दे दिया।",
+   "en": "Anjali's nephew gave a piece of roti to the spotted dog.",
+   "ko": "안잘리 조카가 얼룩 개에게 로티 한 조각을 줬어요.",
+   "blank": "चितकबरे",
    "src": "made"
   }
  ],
@@ -29332,6 +29748,22 @@
    "en": "The manager said understanding customers' feelings is also part of sales.",
    "ko": "매니저는 손님 마음을 헤아리는 것도 판매의 일부라고 했어요.",
    "blank": "जज़्बात",
+   "src": "made"
+  }
+ ],
+ "w|जटा": [
+  {
+   "text": "लंबी जटा वाले एक बाबा रवि से सिरदर्द की गोली लेने आए।",
+   "en": "An old man with long matted hair came to Ravi for a headache pill.",
+   "ko": "긴 머리를 틀어 올린 노인이 라비에게 두통약을 사러 왔어요.",
+   "blank": "जटा",
+   "src": "made"
+  },
+  {
+   "text": "बरगद की लंबी जटाएँ अंजलि के रेस्टोरेंट के आँगन तक लटकती हैं।",
+   "en": "The banyan's long hanging roots dangle down into the courtyard of Anjali's restaurant.",
+   "ko": "반얀나무의 긴 공기뿌리가 안잘리 식당 마당까지 늘어져 있어요.",
+   "blank": "जटाएँ",
    "src": "made"
   }
  ],
@@ -32323,6 +32755,22 @@
    "blank": "जोड़ी"
   }
  ],
+ "w|जोतना": [
+  {
+   "text": "सुनील के पिता गाँव में बैलों से खेत जोतते थे, और अब उसी खेत की सब्ज़ियाँ सुनील की रसोई में आती हैं।",
+   "en": "Sunil's father used to plough the fields with oxen; now vegetables from that field come to Sunil's kitchen.",
+   "ko": "수닐 아버지는 시골에서 소로 밭을 갈았는데, 이제 그 밭 채소가 수닐 주방으로 와요.",
+   "blank": "जोतते",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन का रास्ता उन खेतों से गुज़रा जहाँ किसान ट्रैक्टर से ज़मीन जोत रहे थे।",
+   "en": "The marathon route passed fields where farmers were ploughing with tractors.",
+   "ko": "마라톤 코스는 농부들이 트랙터로 땅을 갈고 있는 밭을 지나갔어요.",
+   "blank": "जोत",
+   "src": "made"
+  }
+ ],
  "w|ज़ोर": [
   {
    "text": "दरवाज़े पर ज़ोर से मत खटखटाओ।",
@@ -32518,6 +32966,22 @@
    "en": "Anjali's grandmother checks astrology to say whether a competition day is auspicious.",
    "ko": "안잘리의 할머니는 점성술을 보고 대회 날이 길한지 알려 줘요.",
    "blank": "ज्योतिष",
+   "src": "made"
+  }
+ ],
+ "w|ज्वर": [
+  {
+   "text": "केमिस्ट रवि ने बुज़ुर्ग ग्राहक से पूछा कि ज्वर कब से है।",
+   "en": "Ravi the chemist asked the elderly customer how long he had had the fever.",
+   "ko": "약사 라비는 나이 든 손님에게 열이 언제부터 났는지 물었어요.",
+   "blank": "ज्वर",
+   "src": "made"
+  },
+  {
+   "text": "तेज़ ज्वर के बावजूद अंजलि के पिता शनिवार की भीड़ में रसोई से नहीं हटे।",
+   "en": "Despite a high fever, Anjali's father didn't leave the kitchen during the Saturday rush.",
+   "ko": "안잘리 아버지는 고열에도 토요일 손님이 몰릴 때 주방을 떠나지 않았어요.",
+   "blank": "ज्वर",
    "src": "made"
   }
  ],
@@ -33335,6 +33799,22 @@
    "blank": "टालना"
   }
  ],
+ "w|टालमटोल": [
+  {
+   "text": "सुनील ने मालिक से कहा कि नया चूल्हा लगवाने में अब और टालमटोल न करें।",
+   "en": "Sunil told the owner not to put off installing the new stove any longer.",
+   "ko": "수닐은 사장님께 새 화덕 설치를 더 미루지 말라고 했어요.",
+   "blank": "टालमटोल",
+   "src": "made"
+  },
+  {
+   "text": "महीनों की टालमटोल के बाद कविता ने आख़िर मैराथन में नाम लिखवा दिया।",
+   "en": "After months of putting it off, Kavita finally signed up for the marathon.",
+   "ko": "몇 달을 미루다 카비타는 마침내 마라톤에 신청했어요.",
+   "blank": "टालमटोल",
+   "src": "made"
+  }
+ ],
  "w|टिकट": [
   {
    "text": "ट्रेन का टिकट पहले से लो।",
@@ -33438,6 +33918,22 @@
    "en": "A guest posted a very good comment online about the hotel's food.",
    "ko": "한 손님이 호텔 음식에 대해 온라인에 아주 좋은 평을 남겼어요.",
    "blank": "टिप्पणी की",
+   "src": "made"
+  }
+ ],
+ "w|टिप्पणीकार": [
+  {
+   "text": "खाने के एक जाने-माने टिप्पणीकार ने सुनील की बिरयानी की खुलकर तारीफ़ की।",
+   "en": "A well-known food commentator openly praised Sunil's biryani.",
+   "ko": "유명한 음식 평론가가 수닐의 비리야니를 크게 칭찬했어요.",
+   "blank": "टिप्पणीकार",
+   "src": "made"
+  },
+  {
+   "text": "रेडियो के टिप्पणीकार ने कविता की रफ़्तार को कमाल का बताया।",
+   "en": "The radio commentator called Kavita's pace amazing.",
+   "ko": "라디오 해설자는 카비타의 속도가 대단하다고 했어요.",
+   "blank": "टिप्पणीकार",
    "src": "made"
   }
  ],
@@ -34348,6 +34844,22 @@
    "en": "When a scorpion stung Seema's son in the garden in summer, she took him to the doctor.",
    "ko": "여름에 시마의 아들이 정원에서 전갈에 쏘여서 시마는 아들을 병원에 데려갔어요.",
    "blank": "डंक",
+   "src": "made"
+  }
+ ],
+ "w|डकार": [
+  {
+   "text": "बार-बार खट्टी डकार आने की शिकायत पर रवि ने ग्राहक को एंटासिड दिया।",
+   "en": "When a customer complained of frequent sour burps, Ravi gave him an antacid.",
+   "ko": "신트림이 자꾸 난다는 손님에게 라비는 제산제를 줬어요.",
+   "blank": "डकार",
+   "src": "made"
+  },
+  {
+   "text": "पेट भर खाने के बाद अंजलि के चाचा ज़ोर से डकार लेकर हँस पड़े।",
+   "en": "After a full meal, Anjali's uncle burped loudly and burst out laughing.",
+   "ko": "배불리 먹은 안잘리 삼촌은 크게 트림을 하고 웃음을 터뜨렸어요.",
+   "blank": "डकार",
    "src": "made"
   }
  ],
@@ -37125,6 +37637,22 @@
    "src": "made"
   }
  ],
+ "w|तिगुना": [
+  {
+   "text": "त्योहार के दिन सुनील की रसोई में ऑर्डर तिगुने हो जाते हैं।",
+   "en": "On festival days the orders in Sunil's kitchen triple.",
+   "ko": "명절에는 수닐 주방의 주문이 세 배가 돼요.",
+   "blank": "तिगुने",
+   "src": "made"
+  },
+  {
+   "text": "कुछ ही सालों में कविता की दौड़ने की दूरी तिगुनी हो गई है।",
+   "en": "In just a few years Kavita's running distance has tripled.",
+   "ko": "몇 년 만에 카비타가 달리는 거리가 세 배가 됐어요.",
+   "blank": "तिगुनी",
+   "src": "made"
+  }
+ ],
  "w|तिजोरी": [
   {
    "text": "दीवार के पीछे से एक पुरानी तिजोरी निकली, पर उसमें बस काग़ज़ थे।",
@@ -37186,6 +37714,22 @@
    "en": "This quarter, the revenue from Neha's app doubled.",
    "ko": "이번 분기에 네하 앱의 수익이 두 배가 됐어요.",
    "blank": "तिमाही",
+   "src": "made"
+  }
+ ],
+ "w|तिरछा": [
+  {
+   "text": "रवि डॉक्टरों की तिरछी लिखावट भी आसानी से पढ़ लेता है।",
+   "en": "Ravi can easily read even doctors' slanted handwriting.",
+   "ko": "라비는 의사들의 비뚤비뚤한 글씨도 척척 읽어요.",
+   "blank": "तिरछी",
+   "src": "made"
+  },
+  {
+   "text": "दीवार पर टँगी पुरानी तस्वीर तिरछी थी, अंजलि ने उसे सीधा किया।",
+   "en": "The old picture on the wall was crooked, so Anjali straightened it.",
+   "ko": "벽에 걸린 옛날 사진이 비뚤어져서 안잘리가 바로 걸었어요.",
+   "blank": "तिरछी",
    "src": "made"
   }
  ],
@@ -38187,6 +38731,22 @@
    "blank": "थकान"
   }
  ],
+ "w|थकावट": [
+  {
+   "text": "दिन भर खड़े रहने से शाम तक रवि को बहुत थकावट हो जाती है।",
+   "en": "Standing all day leaves Ravi very tired by evening.",
+   "ko": "하루 종일 서 있다 보면 저녁엔 라비가 무척 지쳐요.",
+   "blank": "थकावट",
+   "src": "made"
+  },
+  {
+   "text": "शादी के बड़े ऑर्डर के बाद अंजलि की थकावट दो दिन तक नहीं उतरी।",
+   "en": "After the big wedding order, Anjali's tiredness didn't wear off for two days.",
+   "ko": "큰 결혼식 주문을 치른 뒤 안잘리는 이틀 동안 피로가 안 풀렸어요.",
+   "blank": "थकावट",
+   "src": "made"
+  }
+ ],
  "w|थपथपाना": [
   {
    "text": "गाँव का एक कुत्ता पूँछ हिलाता आया, तो रोहन ने उसकी पीठ थपथपाई।",
@@ -39176,6 +39736,22 @@
    "en": "After darshan at the temple, Pooja went to the market to buy flowers and offerings.",
    "ko": "사원 참배를 마치고 푸자는 꽃과 공물을 사러 시장에 갔어요.",
    "blank": "दर्शन",
+   "src": "made"
+  }
+ ],
+ "w|दर्शनशास्त्र": [
+  {
+   "text": "सुनील ने कॉलेज में दर्शनशास्त्र पढ़ा, फिर भी उसे सबसे ज़्यादा सुकून तंदूर के पास मिलता है।",
+   "en": "Sunil studied philosophy in college, yet he finds most peace beside the tandoor.",
+   "ko": "수닐은 대학에서 철학을 했지만 탄두르 옆에서 가장 마음이 편해요.",
+   "blank": "दर्शनशास्त्र",
+   "src": "made"
+  },
+  {
+   "text": "कविता कहती है कि लंबी दौड़ का अपना दर्शनशास्त्र है: बस अगला क़दम।",
+   "en": "Kavita says long-distance running has its own philosophy: just the next step.",
+   "ko": "카비타는 장거리 달리기에도 나름의 철학이 있다고 해요. 그저 다음 한 걸음.",
+   "blank": "दर्शनशास्त्र",
    "src": "made"
   }
  ],
@@ -41721,6 +42297,22 @@
    "blank": "दोहराना"
   }
  ],
+ "w|दोहराव": [
+  {
+   "text": "सुनील कहता है कि रसोई में रोज़ का दोहराव ही हाथ को सधा हुआ बनाता है।",
+   "en": "Sunil says the daily repetition in the kitchen is what makes your hands steady.",
+   "ko": "수닐은 주방에서 매일 같은 일을 되풀이해야 손이 익는다고 해요.",
+   "blank": "दोहराव",
+   "src": "made"
+  },
+  {
+   "text": "ट्रेनिंग में रोज़ एक ही रास्ते का दोहराव कविता को उबाऊ लगता था।",
+   "en": "Repeating the same route every day in training bored Kavita.",
+   "ko": "훈련 때 날마다 같은 길을 되풀이하는 게 카비타는 지루했어요.",
+   "blank": "दोहराव",
+   "src": "made"
+  }
+ ],
  "w|दौड़ना": [
   {
    "text": "सुबह पार्क में दौड़ना स्वस्थ रखता है।",
@@ -41972,6 +42564,22 @@
    "en": "Anjali's team rolls out new features every week without hesitation.",
    "ko": "안잘리 팀은 매주 거침없이 새 기능을 내놓아요.",
    "blank": "धड़ल्ले से",
+   "src": "made"
+  }
+ ],
+ "w|धत": [
+  {
+   "text": "नमक की जगह चीनी डालते ही सुनील के मुँह से निकला, \"धत तेरे की!\"",
+   "en": "The moment he added sugar instead of salt, Sunil blurted, \"Oh, damn it!\"",
+   "ko": "소금 대신 설탕을 넣자마자 수닐 입에서 \"에이, 젠장!\"이 튀어나왔어요.",
+   "blank": "धत",
+   "src": "made"
+  },
+  {
+   "text": "पानी की बोतल हाथ से गिरी तो कविता ने \"धत\" कहा और आगे बढ़ गई।",
+   "en": "When the water bottle slipped from her hand, Kavita said \"drat\" and kept going.",
+   "ko": "물병을 떨어뜨리자 카비타는 \"에잇\" 하고 계속 달렸어요.",
+   "blank": "धत",
    "src": "made"
   }
  ],
@@ -43309,6 +43917,22 @@
    "src": "made"
   }
  ],
+ "w|नटखटपन": [
+  {
+   "text": "सुनील के सबसे छोटे सहायक का नटखटपन रसोई में हँसी बिखेर देता है।",
+   "en": "The mischief of Sunil's youngest assistant fills the kitchen with laughter.",
+   "ko": "수닐의 막내 보조가 장난을 쳐서 주방에 웃음이 퍼져요.",
+   "blank": "नटखटपन",
+   "src": "made"
+  },
+  {
+   "text": "कविता का भतीजा नटखटपन में धावकों के पीछे दौड़ पड़ा।",
+   "en": "Out of mischief, Kavita's nephew ran off after the runners.",
+   "ko": "카비타 조카는 장난삼아 주자들 뒤를 따라 뛰었어요.",
+   "blank": "नटखटपन",
+   "src": "made"
+  }
+ ],
  "w|नतीजतन": [
   {
    "text": "प्रेस में मशीन ख़राब हो गई, नतीजतन अख़बार एक घंटा देर से छपा।",
@@ -44214,6 +44838,22 @@
    "en": "The short paan seller sits on a high stool to make paan.",
    "ko": "키 작은 판 장수는 높은 의자에 앉아 판을 만들어요.",
    "blank": "नाटे",
+   "src": "made"
+  }
+ ],
+ "w|नाड़ी": [
+  {
+   "text": "दवाखाने के डॉक्टर ने रवि की नाड़ी देखकर कहा कि घबराने की कोई बात नहीं।",
+   "en": "The clinic doctor checked Ravi's pulse and said there was nothing to worry about.",
+   "ko": "진료소 의사는 라비의 맥을 짚어 보고 걱정할 것 없다고 했어요.",
+   "blank": "नाड़ी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने चक्कर खाकर गिरे ग्राहक की नाड़ी जाँची और एम्बुलेंस बुलाई।",
+   "en": "Anjali checked the pulse of a customer who had fainted and called an ambulance.",
+   "ko": "안잘리는 어지러워 쓰러진 손님의 맥을 확인하고 구급차를 불렀어요.",
+   "blank": "नाड़ी",
    "src": "made"
   }
  ],
@@ -46765,6 +47405,22 @@
    "blank": "नुकसान"
   }
  ],
+ "w|नुकीला": [
+  {
+   "text": "रवि ने इंजेक्शन की नुकीली सुई को सावधानी से डिब्बे में डाला।",
+   "en": "Ravi carefully dropped the sharp syringe needle into the box.",
+   "ko": "라비는 뾰족한 주삿바늘을 조심스럽게 통에 넣었어요.",
+   "blank": "नुकीली",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बच्चों की मेज़ से नुकीले काँटे हटा दिए।",
+   "en": "Anjali removed the pointed forks from the children's table.",
+   "ko": "안잘리는 아이들 식탁에서 뾰족한 포크를 치웠어요.",
+   "blank": "नुकीले",
+   "src": "made"
+  }
+ ],
  "w|नुक्ताचीनी": [
   {
    "text": "राहुल की कॉपी में मास्टरजी हर छोटी ग़लती पर नुक्ताचीनी करते हैं।",
@@ -48147,6 +48803,22 @@
    "blank": "पतला"
   }
  ],
+ "w|पतलापन": [
+  {
+   "text": "रवि की बहन अपने बेटे के पतलेपन को लेकर चिंतित रहती है।",
+   "en": "Ravi's sister worries about how thin her son is.",
+   "ko": "라비 누나는 아들이 너무 말라서 늘 걱정이에요.",
+   "blank": "पतलेपन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने चखकर कहा कि दाल में थोड़ा पतलापन है, इसे और पकाओ।",
+   "en": "Anjali tasted it and said the dal was a bit thin, cook it more.",
+   "ko": "안잘리는 맛을 보고 달이 좀 묽으니 더 끓이라고 했어요.",
+   "blank": "पतलापन",
+   "src": "made"
+  }
+ ],
  "w|पतलून": [
   {
    "text": "अमित ने बताया कि यहाँ फ़ॉर्मल पतलून रोज़ पहनना ज़रूरी नहीं है।",
@@ -49099,6 +49771,22 @@
    "en": "Eat together with the family.",
    "ko": "가족이랑 같이 밥 먹어.",
    "blank": "परिवार"
+  }
+ ],
+ "w|परिशिष्ट": [
+  {
+   "text": "सुनील की रेसिपी की किताब के परिशिष्ट में मसालों की पूरी सूची है।",
+   "en": "The appendix of Sunil's recipe book has a full list of spices.",
+   "ko": "수닐 요리책 부록에는 향신료 목록이 다 있어요.",
+   "blank": "परिशिष्ट",
+   "src": "made"
+  },
+  {
+   "text": "कविता की ट्रेनिंग गाइड के परिशिष्ट में खाने की तालिका दी गई है।",
+   "en": "The appendix of Kavita's training guide has a meal chart.",
+   "ko": "카비타 훈련 안내서 부록에는 식단표가 있어요.",
+   "blank": "परिशिष्ट",
+   "src": "made"
   }
  ],
  "w|परिश्रम": [
@@ -50299,6 +50987,22 @@
    "en": "This curriculum also includes practical work.",
    "ko": "이 교육과정에는 실습도 들어 있어.",
    "blank": "पाठ्यक्रम"
+  }
+ ],
+ "w|पाठ्यपुस्तक": [
+  {
+   "text": "सुनील ने होटल मैनेजमेंट की पुरानी पाठ्यपुस्तक अब भी रसोई की अलमारी में रखी है।",
+   "en": "Sunil still keeps his old hotel management textbook in the kitchen cupboard.",
+   "ko": "수닐은 호텔 경영 옛 교과서를 아직도 주방 찬장에 두고 있어요.",
+   "blank": "पाठ्यपुस्तक",
+   "src": "made"
+  },
+  {
+   "text": "कविता की बेटी ने अपनी पाठ्यपुस्तक में पढ़ा था कि मैराथन का नाम एक यूनानी जगह से आया है।",
+   "en": "Kavita's daughter had read in her textbook that the marathon is named after a Greek place.",
+   "ko": "카비타 딸은 교과서에서 마라톤이 그리스 지명에서 왔다고 읽었어요.",
+   "blank": "पाठ्यपुस्तक",
+   "src": "made"
   }
  ],
  "w|पात्र": [
@@ -52133,6 +52837,22 @@
    "src": "made"
   }
  ],
+ "w|पूर्वोक्त": [
+  {
+   "text": "सुनील ने शिकायत के जवाब में लिखा कि पूर्वोक्त दिन रसोई में बिजली नहीं थी।",
+   "en": "In reply to the complaint, Sunil wrote that on the aforementioned day the kitchen had no power.",
+   "ko": "수닐은 항의에 대한 답장에 앞서 말한 날 주방에 전기가 없었다고 썼어요.",
+   "blank": "पूर्वोक्त",
+   "src": "made"
+  },
+  {
+   "text": "आयोजकों की सूचना में लिखा था कि पूर्वोक्त नियम सभी धावकों पर लागू होंगे।",
+   "en": "The organisers' notice said the aforementioned rules would apply to all runners.",
+   "ko": "주최 측 공지에는 앞서 말한 규칙이 모든 주자에게 적용된다고 쓰여 있었어요.",
+   "blank": "पूर्वोक्त",
+   "src": "made"
+  }
+ ],
  "w|पृथ्वी": [
   {
    "text": "पृथ्वी सूर्य के चारों ओर घूमती है।",
@@ -53885,6 +54605,22 @@
    "src": "made"
   }
  ],
+ "w|प्रत्यारोपण": [
+  {
+   "text": "रवि की दुकान पर एक मरीज़ आता है जिसका किडनी प्रत्यारोपण हो चुका है।",
+   "en": "A patient who has had a kidney transplant comes to Ravi's shop.",
+   "ko": "신장 이식을 받은 환자 한 분이 라비 약국에 와요.",
+   "blank": "प्रत्यारोपण",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के मामा के लिवर प्रत्यारोपण के बाद परिवार ने रेस्टोरेंट में छोटी सी दावत रखी।",
+   "en": "After Anjali's uncle's liver transplant, the family held a small party at the restaurant.",
+   "ko": "안잘리 외삼촌이 간 이식을 받은 뒤 가족은 식당에서 작은 잔치를 열었어요.",
+   "blank": "प्रत्यारोपण",
+   "src": "made"
+  }
+ ],
  "w|प्रत्याशी": [
   {
    "text": "पार्षद चुनाव के हर प्रत्याशी को नगर भवन में अपना नामांकन जमा करना पड़ता है।",
@@ -53927,6 +54663,22 @@
    "en": "Everyone met on the very first day.",
    "ko": "첫날에 다들 만났어.",
    "blank": "प्रथम"
+  }
+ ],
+ "w|प्रथमतः": [
+  {
+   "text": "सुनील नए रसोइयों को सिखाता है कि प्रथमतः हाथ धोएँ, फिर कुछ छुएँ।",
+   "en": "Sunil teaches new cooks to wash their hands first of all, then touch anything.",
+   "ko": "수닐은 새 요리사들에게 무엇보다 먼저 손을 씻고 나서 뭘 만지라고 가르쳐요.",
+   "blank": "प्रथमतः",
+   "src": "made"
+  },
+  {
+   "text": "कविता की कोच ने कहा कि प्रथमतः शरीर गरम करो, फिर रफ़्तार बढ़ाओ।",
+   "en": "Kavita's coach said first warm up your body, then increase your speed.",
+   "ko": "카비타 코치는 먼저 몸을 풀고 나서 속도를 올리라고 했어요.",
+   "blank": "प्रथमतः",
+   "src": "made"
   }
  ],
  "w|प्रथा": [
@@ -54371,6 +55123,22 @@
    "en": "The main issue in the meeting was water.",
    "ko": "회의의 주요 안건은 물이었어.",
    "blank": "प्रमुख"
+  }
+ ],
+ "w|प्रमेय": [
+  {
+   "text": "सुनील की बेटी रसोई के कोने में बैठकर ज्यामिति का प्रमेय रट रही थी।",
+   "en": "Sunil's daughter sat in a corner of the kitchen memorising a geometry theorem.",
+   "ko": "수닐 딸은 주방 구석에 앉아 기하 정리를 외우고 있었어요.",
+   "blank": "प्रमेय",
+   "src": "made"
+  },
+  {
+   "text": "लंबी दौड़ में कविता मन ही मन गणित का कोई प्रमेय सुलझाती रहती है।",
+   "en": "On long runs Kavita keeps working out some maths theorem in her head.",
+   "ko": "긴 달리기 중에 카비타는 속으로 수학 정리를 풀곤 해요.",
+   "blank": "प्रमेय",
+   "src": "made"
   }
  ],
  "w|प्रमोशन": [
@@ -54952,6 +55720,22 @@
    "en": "The fame of Seema's homemade pickles has spread across the whole city.",
    "ko": "시마가 집에서 담근 피클은 온 도시에 이름이 났어요.",
    "blank": "प्रसिद्धि",
+   "src": "made"
+  }
+ ],
+ "w|प्रसूति": [
+  {
+   "text": "रवि की बहन प्रसूति के लिए सरकारी अस्पताल में भर्ती है।",
+   "en": "Ravi's sister has been admitted to the government hospital to give birth.",
+   "ko": "라비 여동생은 출산 때문에 공립 병원에 입원해 있어요.",
+   "blank": "प्रसूति",
+   "src": "made"
+  },
+  {
+   "text": "रसोइए की पत्नी की प्रसूति के कारण अंजलि ने उसे दो हफ़्ते की छुट्टी दी।",
+   "en": "Because the cook's wife was giving birth, Anjali gave him two weeks off.",
+   "ko": "요리사 아내의 출산 때문에 안잘리는 요리사에게 두 주 휴가를 줬어요.",
+   "blank": "प्रसूति",
    "src": "made"
   }
  ],
@@ -57417,6 +58201,22 @@
    "src": "made"
   }
  ],
+ "w|बचकाना": [
+  {
+   "text": "सुनील को लगा कि मिर्च की मात्रा पर झगड़ना बचकाना है।",
+   "en": "Sunil felt that fighting over the amount of chilli was childish.",
+   "ko": "수닐은 고추 양을 두고 다투는 건 유치하다고 생각했어요.",
+   "blank": "बचकाना",
+   "src": "made"
+  },
+  {
+   "text": "कविता के दोस्त ने पहले किलोमीटर में ही पूरी ताक़त लगा दी, जो कविता को बचकाना लगा।",
+   "en": "Kavita's friend went all out in the very first kilometre, which Kavita found childish.",
+   "ko": "카비타 친구가 첫 일 킬로미터부터 전력을 다하는 게 카비타 눈엔 유치해 보였어요.",
+   "blank": "बचकाना",
+   "src": "made"
+  }
+ ],
  "w|बचत": [
   {
    "text": "हर महीने थोड़ी बचत ज़रूरी है।",
@@ -58395,6 +59195,22 @@
    "src": "made"
   }
  ],
+ "w|बनिस्बत": [
+  {
+   "text": "सुनील को गैस के बनिस्बत लकड़ी की आँच पर पकी दाल ज़्यादा पसंद है।",
+   "en": "Sunil prefers dal cooked over a wood fire compared with gas.",
+   "ko": "수닐은 가스보다 장작불에 끓인 달을 더 좋아해요.",
+   "blank": "बनिस्बत",
+   "src": "made"
+  },
+  {
+   "text": "इस साल कविता पिछले साल के बनिस्बत ज़्यादा आराम से दौड़ी।",
+   "en": "This year Kavita ran more comfortably compared with last year.",
+   "ko": "올해 카비타는 작년보다 훨씬 편하게 달렸어요.",
+   "blank": "बनिस्बत",
+   "src": "made"
+  }
+ ],
  "w|बबूल": [
   {
    "text": "जिम के पीछे वाले मैदान में बबूल के कुछ काँटेदार पेड़ हैं।",
@@ -58624,6 +59440,22 @@
    "en": "Seema told the class the news that the stolen famous painting had been recovered by police in another city.",
    "ko": "시마는 도둑맞은 유명 그림을 경찰이 다른 도시에서 되찾았다는 소식을 반에 들려줬어요.",
    "blank": "बरामद",
+   "src": "made"
+  }
+ ],
+ "w|बरौनी": [
+  {
+   "text": "ग्राहक की आँख में बरौनी चली गई, तो रवि ने आँख धोने का घोल दिया।",
+   "en": "An eyelash got into a customer's eye, so Ravi gave her an eyewash.",
+   "ko": "손님 눈에 속눈썹이 들어가자 라비가 눈 세척액을 줬어요.",
+   "blank": "बरौनी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की भतीजी ने गाल पर गिरी बरौनी फूँककर एक मन्नत माँगी।",
+   "en": "Anjali's niece blew away an eyelash that had fallen on her cheek and made a wish.",
+   "ko": "안잘리 조카는 볼에 떨어진 속눈썹을 불며 소원을 빌었어요.",
+   "blank": "बरौनी",
    "src": "made"
   }
  ],
@@ -59038,6 +59870,22 @@
    "en": "In the letter Priya recalled that it was Anu who used to tempt her to sneak off from school to the fair.",
    "ko": "프리야는 편지에서 학교를 빠져나가 장 구경 가자고 꼬드기던 게 늘 아누였다고 떠올렸어요.",
    "blank": "बहकाती",
+   "src": "made"
+  }
+ ],
+ "w|बहकावा": [
+  {
+   "text": "सुनील का सहायक किसी के बहकावे में आकर नौकरी छोड़ने वाला था।",
+   "en": "Sunil's assistant, misled by someone, was about to quit his job.",
+   "ko": "수닐의 보조는 누구 꾐에 넘어가 일을 그만두려던 참이었어요.",
+   "blank": "बहकावे",
+   "src": "made"
+  },
+  {
+   "text": "कविता किसी के बहकावे में आकर बीच रास्ते में तेज़ नहीं दौड़ी।",
+   "en": "Kavita didn't let anyone talk her into speeding up midway.",
+   "ko": "카비타는 누가 부추겨도 중간에 속도를 올리지 않았어요.",
+   "blank": "बहकावे",
    "src": "made"
   }
  ],
@@ -59715,6 +60563,22 @@
    "blank": "बादाम"
   }
  ],
+ "w|बादामी": [
+  {
+   "text": "रवि ने दवाइयाँ बादामी लिफ़ाफ़े में रखकर ग्राहक को दीं।",
+   "en": "Ravi put the medicines in a brown envelope and handed them to the customer.",
+   "ko": "라비는 약을 갈색 봉투에 넣어 손님에게 건넸어요.",
+   "blank": "बादामी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि पराठों को हल्का बादामी होने तक सेंकती है।",
+   "en": "Anjali cooks the parathas until they're light brown.",
+   "ko": "안잘리는 파라타를 연한 갈색이 될 때까지 구워요.",
+   "blank": "बादामी",
+   "src": "made"
+  }
+ ],
  "w|बाँध": [
   {
    "text": "नदी पर बड़ा बाँध बनाया गया है।",
@@ -60239,6 +61103,22 @@
    "en": "Mood going bad affects work.",
    "ko": "기분이 상하면 일에 영향이 가.",
    "blank": "बिगड़ना"
+  }
+ ],
+ "w|बिगड़ैल": [
+  {
+   "text": "मालिक का बिगड़ैल बेटा रसोई में आकर सुनील को हुक्म देने लगा।",
+   "en": "The owner's spoilt son came into the kitchen and started ordering Sunil around.",
+   "ko": "사장님의 버릇없는 아들이 주방에 와서 수닐에게 이래라저래라 했어요.",
+   "blank": "बिगड़ैल",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते में एक बिगड़ैल साँड़ आ गया, तो कविता और बाक़ी धावक किनारे हो गए।",
+   "en": "An unruly bull wandered onto the road, so Kavita and the other runners moved aside.",
+   "ko": "길에 사나운 황소가 나타나자 카비타와 다른 주자들이 길가로 비켰어요.",
+   "blank": "बिगड़ैल",
+   "src": "made"
   }
  ],
  "w|बिगाड़ना": [
@@ -61173,6 +62053,22 @@
    "blank": "बेचैनी"
   }
  ],
+ "w|बेझिझक": [
+  {
+   "text": "रवि ग्राहकों से कहता है कि कोई भी सवाल हो तो बेझिझक पूछिए।",
+   "en": "Ravi tells customers to feel free to ask any question.",
+   "ko": "라비는 손님들에게 궁금한 게 있으면 편하게 물어보라고 해요.",
+   "blank": "बेझिझक",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने मेहमानों से कहा कि और रोटी चाहिए तो बेझिझक माँग लीजिए।",
+   "en": "Anjali told the guests to feel free to ask if they wanted more roti.",
+   "ko": "안잘리는 손님들에게 로티가 더 필요하면 편하게 말씀하시라고 했어요.",
+   "blank": "बेझिझक",
+   "src": "made"
+  }
+ ],
  "w|बेटा": [
   {
    "text": "बेटा स्कूल से लौट आया।",
@@ -61417,6 +62313,22 @@
    "en": "Wood-apple fruits are sweet.",
    "ko": "벨 열매는 달콤해.",
    "blank": "बेल"
+  }
+ ],
+ "w|बेलचा": [
+  {
+   "text": "सुनील ने तंदूर की राख बेलचे से बाहर निकाली।",
+   "en": "Sunil shovelled the ash out of the tandoor.",
+   "ko": "수닐은 삽으로 탄두르의 재를 퍼냈어요.",
+   "blank": "बेलचे",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ से पहले मज़दूर रास्ते की रेत बेलचे से हटा रहे थे, तो कविता ने उन्हें धन्यवाद कहा।",
+   "en": "Before the race workers were shovelling sand off the road, and Kavita thanked them.",
+   "ko": "경주 전에 인부들이 삽으로 길의 모래를 치우고 있어서 카비타가 고맙다고 했어요.",
+   "blank": "बेलचे",
+   "src": "made"
   }
  ],
  "w|बेलन": [
@@ -63297,6 +64209,22 @@
    "blank": "भाषा"
   }
  ],
+ "w|भाषाविज्ञान": [
+  {
+   "text": "सुनील से भाषाविज्ञान की एक छात्रा ने मसालों के पुराने नाम पूछे।",
+   "en": "A linguistics student asked Sunil the old names of spices.",
+   "ko": "언어학을 공부하는 학생이 수닐에게 향신료의 옛 이름을 물었어요.",
+   "blank": "भाषाविज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "कविता भाषाविज्ञान पढ़ती है, इसलिए उसने धावकों के नारों में कई बोलियाँ पहचान लीं।",
+   "en": "Kavita studies linguistics, so she picked out several dialects in the runners' chants.",
+   "ko": "카비타는 언어학을 공부해서 주자들 구호 속 여러 방언을 알아들었어요.",
+   "blank": "भाषाविज्ञान",
+   "src": "made"
+  }
+ ],
  "w|भिखारी": [
   {
    "text": "स्टेशन के बाहर एक भिखारी बैठा था।",
@@ -63761,6 +64689,22 @@
    "blank": "भूलना"
   }
  ],
+ "w|भूविज्ञान": [
+  {
+   "text": "सुनील का भाई भूविज्ञान पढ़ता है और सेंधा नमक की चट्टानों के बारे में बताता रहता है।",
+   "en": "Sunil's brother studies geology and keeps talking about rock salt formations.",
+   "ko": "수닐 동생은 지질학을 공부해서 암염 이야기를 늘 늘어놓아요.",
+   "blank": "भूविज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "कविता के साथ दौड़ रहा भूविज्ञान का छात्र रास्ते की चट्टानें पहचान रहा था।",
+   "en": "The geology student running with Kavita was identifying the rocks along the way.",
+   "ko": "카비타와 같이 뛰던 지질학과 학생이 길가 바위를 알아보고 있었어요.",
+   "blank": "भूविज्ञान",
+   "src": "made"
+  }
+ ],
  "w|भूस्खलन": [
   {
    "text": "भूस्खलन के कारण जंगल की सड़क तीन दिन बंद रही।",
@@ -64036,6 +64980,22 @@
    "en": "At the eatery near the gym, Deepa eats boiled vegetables and roti.",
    "ko": "디파는 헬스장 근처 식당에서 삶은 채소와 로티를 먹어요.",
    "blank": "भोजनालय",
+   "src": "made"
+  }
+ ],
+ "w|भोथरा": [
+  {
+   "text": "रवि ने भोथरी कैंची रख दी और पट्टी काटने के लिए नई कैंची निकाली।",
+   "en": "Ravi put the blunt scissors aside and took out new ones to cut the bandage.",
+   "ko": "라비는 무딘 가위를 내려놓고 붕대 자를 새 가위를 꺼냈어요.",
+   "blank": "भोथरी",
+   "src": "made"
+  },
+  {
+   "text": "भोथरे चाकू से टमाटर कुचलते देख अंजलि ने उसे धार लगवाने भेज दिया।",
+   "en": "Seeing tomatoes being squashed with the blunt knife, Anjali sent it off to be sharpened.",
+   "ko": "무딘 칼에 토마토가 뭉개지는 걸 보고 안잘리는 칼을 갈러 보냈어요.",
+   "blank": "भोथरे",
    "src": "made"
   }
  ],
@@ -64842,6 +65802,22 @@
    "en": "The dholak player has mutton cooked at home every Sunday.",
    "ko": "돌락 연주자 형은 일요일마다 집에서 양고기 요리를 해 먹어요.",
    "blank": "मटन",
+   "src": "made"
+  }
+ ],
+ "w|मटमैला": [
+  {
+   "text": "बारिश के बाद दुकान के बाहर मटमैला पानी भर गया, तो रवि ने वहाँ बोरी बिछा दी।",
+   "en": "After the rain muddy water collected outside the shop, so Ravi laid a sack there.",
+   "ko": "비가 온 뒤 약국 앞에 흙탕물이 고이자 라비가 포대를 깔았어요.",
+   "blank": "मटमैला",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों के खेलने के बाद मेज़पोश मटमैला हो गया, तो अंजलि ने उसे फ़ौरन बदला।",
+   "en": "The tablecloth got grubby after the kids played, so Anjali changed it at once.",
+   "ko": "아이들이 놀고 나서 식탁보가 꼬질꼬질해지자 안잘리가 바로 바꿨어요.",
+   "blank": "मटमैला",
    "src": "made"
   }
  ],
@@ -65669,6 +66645,22 @@
    "src": "made"
   }
  ],
+ "w|मरहम पट्टी": [
+  {
+   "text": "साइकिल से गिरे बच्चे की रवि ने दुकान पर ही मरहम पट्टी कर दी।",
+   "en": "Ravi dressed the wound of a child who fell off a bicycle right there in the shop.",
+   "ko": "라비는 자전거에서 넘어진 아이를 약국에서 바로 치료해 붕대를 감아 줬어요.",
+   "blank": "मरहम पट्टी",
+   "src": "made"
+  },
+  {
+   "text": "गरम तेल के छींटे पड़ने पर अंजलि ने रसोइए की मरहम पट्टी की।",
+   "en": "When hot oil splashed on the cook, Anjali dressed his burn.",
+   "ko": "뜨거운 기름이 튀자 안잘리가 요리사에게 연고를 바르고 붕대를 감아 줬어요.",
+   "blank": "मरहम पट्टी",
+   "src": "made"
+  }
+ ],
  "w|मरा": [
   {
    "text": "पुराना पौधा गर्मी में मरा पड़ा था।",
@@ -65882,6 +66874,22 @@
    "en": "Shalini wrote a feature on hill farmers' mushroom farming.",
    "ko": "샬리니는 산간 농민들의 버섯 재배에 관한 특집을 썼어요.",
    "blank": "मशरूम",
+   "src": "made"
+  }
+ ],
+ "w|मशवरा": [
+  {
+   "text": "सुनील ने नई डिश के लिए अपनी माँ से मशवरा लिया।",
+   "en": "Sunil consulted his mother about the new dish.",
+   "ko": "수닐은 새 요리를 두고 어머니께 조언을 구했어요.",
+   "blank": "मशवरा",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने घुटने के दर्द के बारे में डॉक्टर से मशवरा किया।",
+   "en": "Kavita consulted a doctor about her knee pain.",
+   "ko": "카비타는 무릎 통증 때문에 의사와 상담했어요.",
+   "blank": "मशवरा",
    "src": "made"
   }
  ],
@@ -67203,6 +68211,22 @@
    "src": "made"
   }
  ],
+ "w|मारफ़त": [
+  {
+   "text": "सुनील ने एक दोस्त की मारफ़त गाँव से शुद्ध घी मँगवाया।",
+   "en": "Sunil got pure ghee from the village through a friend.",
+   "ko": "수닐은 친구를 통해 시골에서 순수 기를 받아 왔어요.",
+   "blank": "मारफ़त",
+   "src": "made"
+  },
+  {
+   "text": "कविता को अपना बिब नंबर क्लब के सचिव की मारफ़त मिला।",
+   "en": "Kavita received her bib number through the club secretary.",
+   "ko": "카비타는 클럽 총무를 통해 배번표를 받았어요.",
+   "blank": "मारफ़त",
+   "src": "made"
+  }
+ ],
  "w|मार्ग": [
   {
    "text": "मेट्रो का नया मार्ग खुलने से रोहन का दफ़्तर पहुँचना आसान हो गया।",
@@ -67669,6 +68693,22 @@
    "en": "The bus will arrive in five minutes.",
    "ko": "버스는 오 분 안에 올 거야.",
    "blank": "मिनट"
+  }
+ ],
+ "w|मिर्गी": [
+  {
+   "text": "रवि ने समझाया कि मिर्गी की दवा एक भी दिन छोड़नी नहीं चाहिए।",
+   "en": "Ravi explained that epilepsy medicine shouldn't be skipped even for a day.",
+   "ko": "라비는 뇌전증 약은 하루도 거르면 안 된다고 설명했어요.",
+   "blank": "मिर्गी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने प्राथमिक चिकित्सा की क्लास में सीखा कि मिर्गी का दौरा पड़ने पर मरीज़ को करवट दिला दें।",
+   "en": "Anjali learned in a first-aid class to turn a patient on their side during an epileptic fit.",
+   "ko": "안잘리는 응급 처치 수업에서 뇌전증 발작이 오면 환자를 옆으로 눕히라고 배웠어요.",
+   "blank": "मिर्गी",
+   "src": "made"
   }
  ],
  "w|मिर्च": [
@@ -68509,6 +69549,22 @@
    "src": "made"
   }
  ],
+ "w|मुर्गीपालन": [
+  {
+   "text": "सुनील अंडे पास के मुर्गीपालन केंद्र से ताज़ा मँगवाता है।",
+   "en": "Sunil gets his eggs fresh from a nearby poultry farm.",
+   "ko": "수닐은 근처 양계장에서 달걀을 신선하게 받아 와요.",
+   "blank": "मुर्गीपालन",
+   "src": "made"
+  },
+  {
+   "text": "कविता की सहेली का मुर्गीपालन का धंधा है और वह कविता को रोज़ अंडे भेजती है।",
+   "en": "Kavita's friend runs a poultry business and sends Kavita eggs every day.",
+   "ko": "카비타 친구는 양계업을 해서 카비타에게 날마다 달걀을 보내요.",
+   "blank": "मुर्गीपालन",
+   "src": "made"
+  }
+ ],
  "w|मुलाक़ात": [
   {
    "text": "मेले में करण की मुलाक़ात अपने बचपन के दोस्त से हुई।",
@@ -68870,6 +69926,22 @@
    "en": "The doctor said drinking too little water in the heat makes urine darker, so Meena drank more water.",
    "ko": "더위에 물을 적게 마시면 소변 색이 짙어진다고 의사가 말해서 미나는 물을 더 마셨어요.",
    "blank": "मूत्र",
+   "src": "made"
+  }
+ ],
+ "w|मूत्राशय": [
+  {
+   "text": "रवि ने पर्ची पढ़कर बताया कि यह दवा मूत्राशय के संक्रमण के लिए है।",
+   "en": "Ravi read the prescription and said this medicine is for a bladder infection.",
+   "ko": "라비는 처방전을 보고 이 약이 방광염 약이라고 알려 줬어요.",
+   "blank": "मूत्राशय",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के पिता ने मूत्राशय की जाँच करवाई, इसलिए उस दिन रेस्टोरेंट देर से खुला।",
+   "en": "Anjali's father had a bladder test, so the restaurant opened late that day.",
+   "ko": "안잘리 아버지가 방광 검사를 받으셔서 그날 식당이 늦게 열었어요.",
+   "blank": "मूत्राशय",
    "src": "made"
   }
  ],
@@ -69687,6 +70759,22 @@
    "en": "Bending the wire hard is not good.",
    "ko": "전선을 세게 구부리는 건 좋지 않아.",
    "blank": "मोड़ना"
+  }
+ ],
+ "w|मोतियाबिंद": [
+  {
+   "text": "रवि की दादी का मोतियाबिंद का ऑपरेशन अगले हफ़्ते है, इसलिए वह आँखों की दवा ले जा रहा है।",
+   "en": "Ravi's grandmother has her cataract surgery next week, so he's taking eye drops home.",
+   "ko": "라비 할머니가 다음 주에 백내장 수술을 하셔서 라비는 안약을 챙겨 가요.",
+   "blank": "मोतियाबिंद",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दादी मोतियाबिंद के ऑपरेशन के बाद फिर से बिल पढ़ने लगी हैं।",
+   "en": "After her cataract operation, Anjali's grandmother can read the bills again.",
+   "ko": "안잘리 할머니는 백내장 수술 뒤로 다시 계산서를 읽으세요.",
+   "blank": "मोतियाबिंद",
+   "src": "made"
   }
  ],
  "w|मोती": [
@@ -70854,6 +71942,22 @@
    "en": "A blood donation camp was set up outside the store, so Priya went to give blood too.",
    "ko": "매장 밖에 헌혈 행사가 있어서 프리야도 헌혈하러 갔어요.",
    "blank": "रक्तदान",
+   "src": "made"
+  }
+ ],
+ "w|रक्तस्राव": [
+  {
+   "text": "रवि ने बताया कि यह दवा लेते समय मसूड़ों से रक्तस्राव हो तो तुरंत डॉक्टर को दिखाएँ।",
+   "en": "Ravi said that if the gums bleed while on this medicine, see a doctor at once.",
+   "ko": "라비는 이 약을 먹다가 잇몸에서 피가 나면 바로 의사에게 가라고 했어요.",
+   "blank": "रक्तस्राव",
+   "src": "made"
+  },
+  {
+   "text": "प्याज़ काटते हुए अंजलि की उँगली कट गई, पर रक्तस्राव जल्दी रुक गया।",
+   "en": "Anjali cut her finger chopping onions, but the bleeding stopped quickly.",
+   "ko": "양파를 썰다 안잘리 손가락이 베였지만 피는 금방 멎었어요.",
+   "blank": "रक्तस्राव",
    "src": "made"
   }
  ],
@@ -72713,6 +73817,22 @@
    "blank": "रुपये"
   }
  ],
+ "w|रुपहला": [
+  {
+   "text": "रवि ने दवा की पत्ती की रुपहली पन्नी पर छपी तारीख़ ग्राहक को दिखाई।",
+   "en": "Ravi showed the customer the date printed on the silvery foil of the blister pack.",
+   "ko": "라비는 약 포장의 은빛 포일에 찍힌 날짜를 손님에게 보여 줬어요.",
+   "blank": "रुपहली",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि मिठाई पर रुपहला वर्क लगाकर परोसती है।",
+   "en": "Anjali serves the sweets topped with silver leaf.",
+   "ko": "안잘리는 단과자에 은박을 얹어 내놓아요.",
+   "blank": "रुपहला",
+   "src": "made"
+  }
+ ],
  "w|रुलाना": [
   {
    "text": "माँ और बेटे के बिछड़ने वाला दृश्य हर रात दर्शकों को रुलाता है।",
@@ -73025,6 +74145,22 @@
    "en": "The doctor explained the treatment for the disease.",
    "ko": "의사가 병의 치료법을 알려 줬어.",
    "blank": "रोग"
+  }
+ ],
+ "w|रोग प्रतिरोधक": [
+  {
+   "text": "सर्दियों में लोग रवि से रोग प्रतिरोधक क्षमता बढ़ाने वाले विटामिन माँगते हैं।",
+   "en": "In winter people ask Ravi for vitamins that boost immunity.",
+   "ko": "겨울이면 사람들이 라비에게 면역력을 높이는 비타민을 찾아요.",
+   "blank": "रोग प्रतिरोधक",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दादी का मानना है कि हल्दी वाला दूध रोग प्रतिरोधक शक्ति बढ़ाता है।",
+   "en": "Anjali's grandmother believes turmeric milk strengthens immunity.",
+   "ko": "안잘리 할머니는 강황 우유가 면역력을 높인다고 믿으세요.",
+   "blank": "रोग प्रतिरोधक",
+   "src": "made"
   }
  ],
  "w|रोगी": [
@@ -73856,6 +74992,22 @@
    "en": "The smell of pakoras from the canteen tempts the whole office.",
    "ko": "구내식당에서 풍기는 파코라 냄새가 사무실 사람들을 다 유혹해요.",
    "blank": "ललचाती",
+   "src": "made"
+  }
+ ],
+ "w|ललाट": [
+  {
+   "text": "एक माँ ने रवि को बताया कि बच्चे का ललाट तप रहा है, तो रवि ने थर्मामीटर निकाला।",
+   "en": "A mother told Ravi her child's forehead was burning, so Ravi took out a thermometer.",
+   "ko": "한 엄마가 아이 이마가 뜨겁다고 하자 라비는 체온계를 꺼냈어요.",
+   "blank": "ललाट",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दादी ललाट पर बड़ी सी बिंदी लगाकर काउंटर पर बैठती हैं।",
+   "en": "Anjali's grandmother sits at the counter with a big bindi on her forehead.",
+   "ko": "안잘리 할머니는 이마에 큰 빈디를 붙이고 계산대에 앉아 계세요.",
+   "blank": "ललाट",
    "src": "made"
   }
  ],
@@ -75081,6 +76233,22 @@
    "src": "made"
   }
  ],
+ "w|लोकोक्ति": [
+  {
+   "text": "सुनील अक्सर यह लोकोक्ति दोहराता है कि जैसा खाए अन्न, वैसा होए मन।",
+   "en": "Sunil often repeats the saying that as the food you eat, so your mind becomes.",
+   "ko": "수닐은 먹는 음식이 마음을 만든다는 속담을 자주 말해요.",
+   "blank": "लोकोक्ति",
+   "src": "made"
+  },
+  {
+   "text": "कविता की कोच हमेशा यह लोकोक्ति सुनाती है कि बूँद-बूँद से घड़ा भरता है।",
+   "en": "Kavita's coach always quotes the saying that drop by drop the pot fills.",
+   "ko": "카비타 코치는 티끌 모아 태산이라는 속담을 늘 들려줘요.",
+   "blank": "लोकोक्ति",
+   "src": "made"
+  }
+ ],
  "w|लोग": [
   {
    "text": "लोग अभी भी बाहर खड़े हैं।",
@@ -75349,6 +76517,22 @@
    "en": "The bag's weight is too much.",
    "ko": "가방 무게가 너무 많아.",
    "blank": "वज़न"
+  }
+ ],
+ "w|वज़न घटाना": [
+  {
+   "text": "रवि कहता है कि बिना डॉक्टर की सलाह के गोलियों से वज़न घटाना ठीक नहीं।",
+   "en": "Ravi says losing weight with pills without a doctor's advice isn't wise.",
+   "ko": "라비는 의사 상담 없이 약으로 살을 빼는 건 좋지 않다고 해요.",
+   "blank": "वज़न घटाना",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि का भाई वज़न घटाना चाहता है, पर माँ के बनाए पराठे देखकर रुक नहीं पाता।",
+   "en": "Anjali's brother wants to lose weight but can't resist Mum's parathas.",
+   "ko": "안잘리 오빠는 살을 빼고 싶지만 엄마가 만든 파라타를 보면 못 참아요.",
+   "blank": "वज़न घटाना",
+   "src": "made"
   }
  ],
  "w|वजह": [
@@ -78801,6 +79985,22 @@
    "blank": "व्यवहार"
   }
  ],
+ "w|व्यसन": [
+  {
+   "text": "रवि मानता है कि तंबाकू का व्यसन छोड़ना आसान नहीं, पर नामुमकिन भी नहीं।",
+   "en": "Ravi believes quitting a tobacco addiction isn't easy, but it isn't impossible either.",
+   "ko": "라비는 담배 중독을 끊기가 쉽진 않지만 불가능하지도 않다고 생각해요.",
+   "blank": "व्यसन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के पिता हँसकर कहते हैं कि उन्हें काम के सिवा कोई व्यसन नहीं है।",
+   "en": "Anjali's father laughs and says he has no addiction except work.",
+   "ko": "안잘리 아버지는 일 말고는 중독된 게 없다며 웃으세요.",
+   "blank": "व्यसन",
+   "src": "made"
+  }
+ ],
  "w|व्यस्त": [
   {
    "text": "आज मैं बहुत व्यस्त हूँ।",
@@ -78827,6 +80027,22 @@
    "en": "The teacher corrected the grammar mistake.",
    "ko": "선생님이 문법 실수를 고쳤어.",
    "blank": "व्याकरण"
+  }
+ ],
+ "w|व्याकरणिक": [
+  {
+   "text": "सुनील ने नए मेन्यू कार्ड में एक व्याकरणिक ग़लती पकड़ ली।",
+   "en": "Sunil spotted a grammatical mistake on the new menu card.",
+   "ko": "수닐은 새 메뉴판에서 문법 실수를 하나 찾아냈어요.",
+   "blank": "व्याकरणिक",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने देखा कि दौड़ के बैनर पर एक व्याकरणिक भूल थी।",
+   "en": "Kavita noticed a grammatical error on the race banner.",
+   "ko": "카비타는 대회 현수막에 문법 오류가 있는 걸 봤어요.",
+   "blank": "व्याकरणिक",
+   "src": "made"
   }
  ],
  "w|व्याकुल": [
@@ -91239,6 +92455,22 @@
    "blank": "हटाना"
   }
  ],
+ "w|हठी": [
+  {
+   "text": "रवि का हठी चाचा कड़वी दवा पीने से साफ़ मना कर देता है।",
+   "en": "Ravi's stubborn uncle flatly refuses to drink bitter medicine.",
+   "ko": "고집 센 라비 삼촌은 쓴 약은 딱 잘라 안 먹어요.",
+   "blank": "हठी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि का हठी भतीजा केवल फ़्रेंच फ़्राइज़ खाने की ज़िद पर अड़ा रहा।",
+   "en": "Anjali's stubborn nephew insisted on eating nothing but French fries.",
+   "ko": "안잘리의 고집 센 조카는 감자튀김만 먹겠다고 버텼어요.",
+   "blank": "हठी",
+   "src": "made"
+  }
+ ],
  "w|हड़कंप": [
   {
    "text": "एक क़ीमती हार ग़ायब होने की ख़बर से संग्रहालय में हड़कंप मच गया।",
@@ -91987,6 +93219,22 @@
    "en": "The children laughed loudly.",
    "ko": "아이들이 크게 웃었어.",
    "blank": "हँसे"
+  }
+ ],
+ "w|हँसमुख": [
+  {
+   "text": "मोहल्ले के लोग हँसमुख रवि की वजह से उसी की दुकान पर आते हैं।",
+   "en": "The neighbourhood comes to Ravi's shop because he's so cheerful.",
+   "ko": "동네 사람들은 늘 웃는 라비 때문에 그 약국에만 가요.",
+   "blank": "हँसमुख",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के रेस्टोरेंट का हँसमुख वेटर बच्चों को गुब्बारे देता है।",
+   "en": "The cheerful waiter at Anjali's restaurant gives the children balloons.",
+   "ko": "안잘리 식당의 싹싹한 웨이터는 아이들에게 풍선을 줘요.",
+   "blank": "हँसमुख",
+   "src": "made"
   }
  ],
  "w|हसरत": [
@@ -92865,6 +94113,22 @@
    "src": "made"
   }
  ],
+ "w|हीमोग्लोबिन": [
+  {
+   "text": "रवि की माँ का हीमोग्लोबिन कम निकला, इसलिए डॉक्टर ने आयरन की गोलियाँ लिखीं।",
+   "en": "Ravi's mother's haemoglobin came out low, so the doctor prescribed iron tablets.",
+   "ko": "라비 어머니 혈색소 수치가 낮게 나와서 의사가 철분제를 처방했어요.",
+   "blank": "हीमोग्लोबिन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की माँ हीमोग्लोबिन बढ़ाने के लिए रोज़ पालक और चुकंदर खाती हैं।",
+   "en": "Anjali's mother eats spinach and beetroot every day to raise her haemoglobin.",
+   "ko": "안잘리 어머니는 혈색소를 늘리려고 날마다 시금치와 비트를 드세요.",
+   "blank": "हीमोग्लोबिन",
+   "src": "made"
+  }
+ ],
  "w|हीरा": [
   {
    "text": "उस अंगूठी में बड़ा हीरा जड़ा है।",
@@ -92939,6 +94203,22 @@
    "en": "The artisan's skill is worth watching.",
    "ko": "장인의 솜씨는 볼 만해.",
    "blank": "हुनर"
+  }
+ ],
+ "w|हुर्रे": [
+  {
+   "text": "पहला बड़ा ऑर्डर पूरा होते ही सुनील की टीम ने हुर्रे कहकर ताली बजाई।",
+   "en": "As soon as the first big order was done, Sunil's team cheered \"hurray\" and clapped.",
+   "ko": "첫 큰 주문을 끝내자 수닐 팀은 만세를 외치며 손뼉을 쳤어요.",
+   "blank": "हुर्रे",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने फ़िनिश लाइन पार की तो उसकी बेटी हुर्रे चिल्लाई।",
+   "en": "When Kavita crossed the finish line, her daughter shouted hurray.",
+   "ko": "카비타가 결승선을 넘자 딸이 만세를 외쳤어요.",
+   "blank": "हुर्रे",
+   "src": "made"
   }
  ],
  "w|हृदय": [

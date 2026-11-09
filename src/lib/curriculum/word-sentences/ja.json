@@ -1231,6 +1231,22 @@
    "src": "made"
   }
  ],
+ "w|いまだ": [
+  {
+   "text": "翔太は、いまだに子どもの頃の目覚まし時計を使っている。",
+   "en": "Shota still uses the alarm clock he had as a child.",
+   "ko": "쇼타는 아직도 어릴 때 쓰던 자명종을 쓰고 있어요.",
+   "blank": "いまだ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、初めてのマラソンでゴールした瞬間をいまだに忘れられない。",
+   "en": "Yumi still can't forget the moment she crossed the finish line in her first marathon.",
+   "ko": "유미는 첫 마라톤에서 결승선을 통과한 순간을 아직도 잊지 못해요.",
+   "blank": "いまだ",
+   "src": "made"
+  }
+ ],
  "w|イメージ": [
   {
    "text": "イメージと違うよ。",
@@ -1530,6 +1546,22 @@
    "en": "Misaki carelessly forgot her race bib at home and panicked at the registration desk.",
    "ko": "미사키는 깜빡하고 번호표를 집에 두고 와서 대회 접수처에서 당황했어요.",
    "blank": "うっかり",
+   "src": "made"
+  }
+ ],
+ "w|うつ病": [
+  {
+   "text": "動物にもうつ病に似た状態があると、悠斗は飼い主に説明した。",
+   "en": "Yuto explained to the owner that animals can also have a condition similar to depression.",
+   "ko": "동물에게도 우울증과 비슷한 상태가 있다고 유토는 주인에게 설명했어요.",
+   "blank": "うつ病",
+   "src": "made"
+  },
+  {
+   "text": "日照時間が短い冬は、うつ病に似た症状が出ることがあると千尋は本で読んだ。",
+   "en": "Chihiro read in a book that symptoms similar to depression can appear in winter when the days are short.",
+   "ko": "해가 짧은 겨울에는 우울증과 비슷한 증상이 나타날 수 있다고 지히로는 책에서 읽었어요.",
+   "blank": "うつ病",
    "src": "made"
   }
  ],
@@ -6531,6 +6563,22 @@
    "src": "made"
   }
  ],
+ "w|セーラー服": [
+  {
+   "text": "セーラー服を着た近くの中学生たちが、健太の店でアイスを買っていく。",
+   "en": "Middle school girls in sailor uniforms from nearby stop at Kenta's shop to buy ice cream.",
+   "ko": "세일러복을 입은 근처 중학생들이 겐타네 가게에서 아이스크림을 사 가요.",
+   "blank": "セーラー服",
+   "src": "made"
+  },
+  {
+   "text": "押し入れの箱から、美咲の祖母が着ていたセーラー服が出てきた。",
+   "en": "The sailor uniform Misaki's grandmother used to wear turned up in a box in the closet.",
+   "ko": "벽장 상자에서 미사키의 할머니가 입던 세일러복이 나왔어요.",
+   "blank": "セーラー服",
+   "src": "made"
+  }
+ ],
  "w|セール": [
   {
    "text": "週末にセールがある。",
@@ -7955,6 +8003,22 @@
    "en": "Hey, listen a second.",
    "ko": "잠깐 들어 봐.",
    "blank": "ちょっと"
+  }
+ ],
+ "w|ちょっぴり": [
+  {
+   "text": "常連客が引っ越すと聞いて、健太はちょっぴり寂しくなった。",
+   "en": "Kenta felt a little lonely when he heard a regular customer was moving away.",
+   "ko": "단골손님이 이사 간다는 말을 듣고 겐타는 조금 쓸쓸해졌어요.",
+   "blank": "ちょっぴり",
+   "src": "made"
+  },
+  {
+   "text": "古い柱を取り替えるとき、美咲はちょっぴり寂しかった。",
+   "en": "Misaki felt a little sad when the old pillar was replaced.",
+   "ko": "오래된 기둥을 바꿀 때 미사키는 조금 서운했어요.",
+   "blank": "ちょっぴり",
+   "src": "made"
   }
  ],
  "w|ツール": [
@@ -10645,6 +10709,22 @@
    "blank": "ひどい"
   }
  ],
+ "w|ひとまず": [
+  {
+   "text": "雨が降り出したので、翔太はひとまず駅のカフェに入った。",
+   "en": "It started to rain, so Shota ducked into a café at the station for the time being.",
+   "ko": "비가 내리기 시작해서 쇼타는 일단 역 카페에 들어갔어요.",
+   "blank": "ひとまず",
+   "src": "made"
+  },
+  {
+   "text": "由美は、目標の記録はひとまず置いて、楽しく走ることにした。",
+   "en": "Yumi decided to set aside her target time for now and just enjoy running.",
+   "ko": "유미는 목표 기록은 일단 접어 두고 즐겁게 달리기로 했어요.",
+   "blank": "ひとまず",
+   "src": "made"
+  }
+ ],
  "w|ビル": [
   {
    "text": "あのビル、見える？",
@@ -11752,6 +11832,22 @@
    "en": "Sakura stopped in her tracks at the faint scent of plum blossoms.",
    "ko": "매화의 은은한 향기에 사쿠라는 저도 모르게 걸음을 멈췄어요.",
    "blank": "ほのか",
+   "src": "made"
+  }
+ ],
+ "w|ほのぼの": [
+  {
+   "text": "健太の店先で子どもとお年寄りが話す姿は、ほのぼのとしている。",
+   "en": "The sight of children and elderly people chatting in front of Kenta's shop is heartwarming.",
+   "ko": "겐타네 가게 앞에서 아이들과 어르신들이 이야기하는 모습은 훈훈해요.",
+   "blank": "ほのぼの",
+   "src": "made"
+  },
+  {
+   "text": "柱に残った子どもの背比べの跡を見て、美咲はほのぼのとした気持ちになった。",
+   "en": "Seeing the marks of children's heights left on a pillar gave Misaki a warm feeling.",
+   "ko": "기둥에 남은 아이들 키 재기 자국을 보고 미사키는 마음이 훈훈해졌어요.",
+   "blank": "ほのぼの",
    "src": "made"
   }
  ],
@@ -14523,6 +14619,38 @@
    "src": "made"
   }
  ],
+ "w|一式": [
+  {
+   "text": "悠斗は、往診用の道具一式をかばんに詰めた。",
+   "en": "Yuto packed a full set of tools for house calls into his bag.",
+   "ko": "유토는 왕진용 도구 일체를 가방에 챙겼어요.",
+   "blank": "一式",
+   "src": "made"
+  },
+  {
+   "text": "冬が来る前に、千尋はスキー道具一式をそろえた。",
+   "en": "Before winter came, Chihiro got a full set of ski gear.",
+   "ko": "겨울이 오기 전에 지히로는 스키 장비 일체를 갖췄어요.",
+   "blank": "一式",
+   "src": "made"
+  }
+ ],
+ "w|一律": [
+  {
+   "text": "亮の市は、全世帯に一律の給付金を配ることを決めた。",
+   "en": "Ryo's city decided to give every household the same flat payment.",
+   "ko": "료의 시는 모든 가구에 일률적인 지원금을 나눠 주기로 했어요.",
+   "blank": "一律",
+   "src": "made"
+  },
+  {
+   "text": "真由の無人販売所の野菜は、どれも一律百円だ。",
+   "en": "All the vegetables at Mayu's unmanned stand are the same price of a hundred yen.",
+   "ko": "마유네 무인 판매대의 채소는 전부 일률 백 엔이에요.",
+   "blank": "一律",
+   "src": "made"
+  }
+ ],
  "w|一応": [
   {
    "text": "一応確認しておこう。",
@@ -15725,6 +15853,22 @@
    "src": "made"
   }
  ],
+ "w|下落": [
+  {
+   "text": "キャベツの値段が下落し、健太の店は特売を始めた。",
+   "en": "Cabbage prices fell, so Kenta's shop started a sale.",
+   "ko": "양배추값이 떨어져서 겐타네 가게는 특별 세일을 시작했어요.",
+   "blank": "下落",
+   "src": "made"
+  },
+  {
+   "text": "古い家の価値が下落する前に直そうと、美咲は決めた。",
+   "en": "Misaki decided to fix up the old house before its value dropped.",
+   "ko": "낡은 집의 가치가 떨어지기 전에 고치자고 미사키는 마음먹었어요.",
+   "blank": "下落",
+   "src": "made"
+  }
+ ],
  "w|下記": [
   {
    "text": "工場内の安全ルールは下記のとおりです。",
@@ -15929,6 +16073,22 @@
    "blank": "不可能"
   }
  ],
+ "w|不器用": [
+  {
+   "text": "健太は不器用で、商品をきれいに包むのが苦手だ。",
+   "en": "Kenta is clumsy and not good at wrapping goods neatly.",
+   "ko": "겐타는 손재주가 없어서 상품을 예쁘게 포장하는 걸 잘 못해요.",
+   "blank": "不器用",
+   "src": "made"
+  },
+  {
+   "text": "不器用な美咲も、ペンキ塗りだけは上手になった。",
+   "en": "Even clumsy Misaki got good at painting, at least.",
+   "ko": "손재주 없는 미사키도 페인트칠만큼은 능숙해졌어요.",
+   "blank": "不器用",
+   "src": "made"
+  }
+ ],
  "w|不在": [
   {
    "text": "局長の不在中は、副局長が紙面の最終判断をする。",
@@ -15972,6 +16132,22 @@
    "en": "The server was unstable, and the app crashed again and again from the morning.",
    "ko": "서버가 불안정해서 아침부터 앱이 몇 번이나 멈췄어요.",
    "blank": "不安定",
+   "src": "made"
+  }
+ ],
+ "w|不定期": [
+  {
+   "text": "翔太は、不定期に近所の子どもたちにサッカーを教えている。",
+   "en": "Shota teaches soccer to the neighborhood kids now and then.",
+   "ko": "쇼타는 비정기적으로 동네 아이들에게 축구를 가르쳐요.",
+   "blank": "不定期",
+   "src": "made"
+  },
+  {
+   "text": "由美のランニングクラブは、不定期に合宿をしている。",
+   "en": "Yumi's running club holds training camps irregularly.",
+   "ko": "유미의 러닝 클럽은 비정기적으로 합숙을 해요.",
+   "blank": "不定期",
    "src": "made"
   }
  ],
@@ -16571,6 +16747,22 @@
    "blank": "両親"
   }
  ],
+ "w|両面": [
+  {
+   "text": "翔太は、資料を両面に印刷して紙を節約した。",
+   "en": "Shota printed the documents double-sided to save paper.",
+   "ko": "쇼타는 자료를 양면으로 인쇄해서 종이를 아꼈어요.",
+   "blank": "両面",
+   "src": "made"
+  },
+  {
+   "text": "由美は、走ることの楽しさと苦しさの両面を知っている。",
+   "en": "Yumi knows both sides of running: the joy and the pain.",
+   "ko": "유미는 달리기의 즐거움과 괴로움 양면을 다 알아요.",
+   "blank": "両面",
+   "src": "made"
+  }
+ ],
  "w|並びに": [
   {
    "text": "署長は、警察官並びに職員全員に注意を呼びかけた。",
@@ -16877,6 +17069,22 @@
    "src": "made"
   }
  ],
+ "w|中期": [
+  {
+   "text": "翔太は、会社の中期計画の資料を午後いっぱいかけて作った。",
+   "en": "Shota spent the whole afternoon making materials for the company's medium-term plan.",
+   "ko": "쇼타는 회사 중기 계획 자료를 오후 내내 만들었어요.",
+   "blank": "中期",
+   "src": "made"
+  },
+  {
+   "text": "由美は、来年の大会に向けて中期の練習計画を立てた。",
+   "en": "Yumi made a medium-term training plan for next year's race.",
+   "ko": "유미는 내년 대회를 목표로 중기 연습 계획을 세웠어요.",
+   "blank": "中期",
+   "src": "made"
+  }
+ ],
  "w|中枢": [
   {
    "text": "大輔の署は、県の捜査の中枢を担っている。",
@@ -16890,6 +17098,22 @@
    "en": "Heavy winter snow paralyzed the town's central functions.",
    "ko": "겨울 폭설로 마을의 중추 기능이 마비돼 버렸어요.",
    "blank": "中枢",
+   "src": "made"
+  }
+ ],
+ "w|中核": [
+  {
+   "text": "悠斗の病院は、地域の動物医療の中核を担っている。",
+   "en": "Yuto's clinic plays a central role in animal health care in the area.",
+   "ko": "유토의 병원은 지역 동물 의료의 중심을 맡고 있어요.",
+   "blank": "中核",
+   "src": "made"
+  },
+  {
+   "text": "千尋の町では、秋祭りが一年の行事の中核だ。",
+   "en": "In Chihiro's town, the autumn festival is the centerpiece of the year's events.",
+   "ko": "지히로네 마을에서는 가을 축제가 한 해 행사의 중심이에요.",
+   "blank": "中核",
    "src": "made"
   }
  ],
@@ -17621,6 +17845,22 @@
    "src": "made"
   }
  ],
+ "w|乱用": [
+  {
+   "text": "亮は、公用車の乱用を防ぐ新しいルールを作った。",
+   "en": "Ryo made new rules to prevent the misuse of official vehicles.",
+   "ko": "료는 관용차 남용을 막는 새 규칙을 만들었어요.",
+   "blank": "乱用",
+   "src": "made"
+  },
+  {
+   "text": "真由は、肥料の乱用が土を悪くすることを知っている。",
+   "en": "Mayu knows that overusing fertilizer harms the soil.",
+   "ko": "마유는 비료를 남용하면 흙이 나빠진다는 걸 알아요.",
+   "blank": "乱用",
+   "src": "made"
+  }
+ ],
  "w|乱闘": [
   {
    "text": "健太は、ゆうべのプロ野球で起きた乱闘の話を教室でしていた。",
@@ -17714,6 +17954,22 @@
    "en": "Got it, I'll come right away.",
    "ko": "알겠어요, 바로 갈게요.",
    "blank": "了解",
+   "src": "made"
+  }
+ ],
+ "w|予め": [
+  {
+   "text": "「手術の日は予め食事を抜いてください」と悠斗は伝えた。",
+   "en": "Yuto said, \"Please don't feed your pet beforehand on the day of the surgery.\"",
+   "ko": "\"수술 날은 미리 밥을 굶겨 주세요\"라고 유토는 전했어요.",
+   "blank": "予め",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、台風の季節に備えて予め懐中電灯を用意した。",
+   "en": "Chihiro got flashlights ready in advance for typhoon season.",
+   "ko": "지히로는 태풍철에 대비해서 미리 손전등을 준비했어요.",
+   "blank": "予め",
    "src": "made"
   }
  ],
@@ -17822,6 +18078,22 @@
    "en": "It's hard to predict tomorrow's weather.",
    "ko": "내일 날씨를 예측하기는 어려워요.",
    "blank": "予測",
+   "src": "made"
+  }
+ ],
+ "w|予知": [
+  {
+   "text": "健太は、雨を予知したかのように傘を店先に並べていた。",
+   "en": "Kenta had lined up umbrellas in front of the shop as if he had foreseen the rain.",
+   "ko": "겐타는 비를 예지한 것처럼 우산을 가게 앞에 늘어놓았어요.",
+   "blank": "予知",
+   "src": "made"
+  },
+  {
+   "text": "地震を予知するのは難しいので、美咲は家の耐震工事をした。",
+   "en": "Since earthquakes are hard to predict, Misaki had her house reinforced against them.",
+   "ko": "지진을 예지하기는 어려워서 미사키는 집에 내진 공사를 했어요.",
+   "blank": "予知",
    "src": "made"
   }
  ],
@@ -18465,6 +18737,22 @@
    "src": "made"
   }
  ],
+ "w|交響": [
+  {
+   "text": "亮は、市の交響楽団の定期演奏会を担当した。",
+   "en": "Ryo was in charge of the regular concert of the city's symphony orchestra.",
+   "ko": "료는 시 교향악단의 정기 연주회를 담당했어요.",
+   "blank": "交響",
+   "src": "made"
+  },
+  {
+   "text": "真由は、牛に交響曲を聞かせると乳の出がよくなると聞いて試してみた。",
+   "en": "Mayu heard that playing symphonies to cows makes them give more milk, so she tried it.",
+   "ko": "마유는 소에게 교향곡을 들려주면 젖이 잘 나온다는 말을 듣고 해 봤어요.",
+   "blank": "交響",
+   "src": "made"
+  }
+ ],
  "w|人": [
   {
    "text": "人が多いね。",
@@ -19003,6 +19291,22 @@
    "src": "made"
   }
  ],
+ "w|今期": [
+  {
+   "text": "翔太のチームは、今期の目標をなんとか達成した。",
+   "en": "Shota's team managed to reach its goal for this term.",
+   "ko": "쇼타의 팀은 이번 분기 목표를 겨우 달성했어요.",
+   "blank": "今期",
+   "src": "made"
+  },
+  {
+   "text": "由美の陸上部は、今期から新しいコーチを迎えた。",
+   "en": "Yumi's track club welcomed a new coach starting this season.",
+   "ko": "유미의 육상부는 이번 시즌부터 새 코치를 맞이했어요.",
+   "blank": "今期",
+   "src": "made"
+  }
+ ],
  "w|今週": [
   {
    "text": "今週は忙しいよ。",
@@ -19382,6 +19686,22 @@
    "en": "Keiko attends a high school affiliated with a music university.",
    "ko": "게이코는 음악 대학 부속 고등학교에 다녀요.",
    "blank": "付属",
+   "src": "made"
+  }
+ ],
+ "w|付着": [
+  {
+   "text": "翔太のシャツに、昼に食べたカレーが付着していた。",
+   "en": "Curry from Shota's lunch was stuck to his shirt.",
+   "ko": "쇼타의 셔츠에 점심때 먹은 카레가 묻어 있었어요.",
+   "blank": "付着",
+   "src": "made"
+  },
+  {
+   "text": "雨のレースで、由美の靴にたくさんの泥が付着した。",
+   "en": "In the rainy race, lots of mud stuck to Yumi's shoes.",
+   "ko": "비 오는 레이스에서 유미의 신발에 진흙이 잔뜩 묻었어요.",
+   "blank": "付着",
    "src": "made"
   }
  ],
@@ -19932,6 +20252,22 @@
    "en": "Joining the market cleanup is voluntary, but Chihiro shows up every time.",
    "ko": "시장 청소 활동 참가는 자유지만 지히로는 매번 참석해요.",
    "blank": "任意",
+   "src": "made"
+  }
+ ],
+ "w|任期": [
+  {
+   "text": "翔太には、マンションの管理組合の理事の任期がまだ残っている。",
+   "en": "Shota still has time left in his term as a board member of the condo association.",
+   "ko": "쇼타에게는 아파트 관리 조합 이사 임기가 아직 남아 있어요.",
+   "blank": "任期",
+   "src": "made"
+  },
+  {
+   "text": "由美は、ランニングクラブの代表の任期を終えた。",
+   "en": "Yumi finished her term as head of the running club.",
+   "ko": "유미는 러닝 클럽 대표 임기를 마쳤어요.",
+   "blank": "任期",
    "src": "made"
   }
  ],
@@ -20503,6 +20839,22 @@
    "blank": "低い"
   }
  ],
+ "w|低め": [
+  {
+   "text": "翔太は、エアコンの温度を低めに設定した。",
+   "en": "Shota set the air conditioner to a slightly low temperature.",
+   "ko": "쇼타는 에어컨 온도를 조금 낮게 설정했어요.",
+   "blank": "低め",
+   "src": "made"
+  },
+  {
+   "text": "大会当日は気温が低めで、由美には走りやすかった。",
+   "en": "The temperature was on the low side on race day, which made it easy for Yumi to run.",
+   "ko": "대회 당일은 기온이 조금 낮아서 유미에게는 달리기 편했어요.",
+   "blank": "低め",
+   "src": "made"
+  }
+ ],
  "w|低下": [
   {
    "text": "視力が低下してきた。",
@@ -20742,6 +21094,22 @@
    "en": "Yumi ordered a book of exercises you can do at home.",
    "ko": "유미는 집에서 할 수 있는 체조 책을 주문했어요.",
    "blank": "体操",
+   "src": "made"
+  }
+ ],
+ "w|体格": [
+  {
+   "text": "悠斗は、犬の体格に合わせて薬の量を決める。",
+   "en": "Yuto decides the dose of medicine according to the dog's size.",
+   "ko": "유토는 개의 체격에 맞춰 약의 양을 정해요.",
+   "blank": "体格",
+   "src": "made"
+  },
+  {
+   "text": "夏休みの部活で、千尋の弟はすっかり体格がよくなった。",
+   "en": "Thanks to club activities over summer vacation, Chihiro's younger brother really filled out.",
+   "ko": "여름방학 동아리 활동으로 지히로의 남동생은 체격이 완전히 좋아졌어요.",
+   "blank": "体格",
    "src": "made"
   }
  ],
@@ -21313,6 +21681,22 @@
    "src": "made"
   }
  ],
+ "w|使い捨て": [
+  {
+   "text": "健太の店は、使い捨てのレジ袋をやめて紙袋にした。",
+   "en": "Kenta's shop stopped using disposable plastic bags and switched to paper bags.",
+   "ko": "겐타네 가게는 일회용 비닐봉지를 없애고 종이봉투로 바꿨어요.",
+   "blank": "使い捨て",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、ペンキを塗るときに使い捨ての手袋をはめた。",
+   "en": "Misaki wore disposable gloves when she painted.",
+   "ko": "미사키는 페인트칠을 할 때 일회용 장갑을 꼈어요.",
+   "blank": "使い捨て",
+   "src": "made"
+  }
+ ],
  "w|使い方": [
   {
    "text": "使い方を教えて。",
@@ -21427,6 +21811,22 @@
    "en": "What would you do, for example?",
    "ko": "예를 들면 어떻게 해?",
    "blank": "例えば"
+  }
+ ],
+ "w|例える": [
+  {
+   "text": "健太は、自分の店を町の冷蔵庫に例える。",
+   "en": "Kenta compares his shop to the town's refrigerator.",
+   "ko": "겐타는 자기 가게를 마을의 냉장고에 비유해요.",
+   "blank": "例える",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、古い家の修理を宝探しに例えた。",
+   "en": "Misaki compared fixing up the old house to a treasure hunt.",
+   "ko": "미사키는 낡은 집 수리를 보물찾기에 비유했어요.",
+   "blank": "例えた",
+   "src": "made"
   }
  ],
  "w|例外": [
@@ -21784,6 +22184,22 @@
    "en": "When she filed her change of address, the office also gave her information about the health center.",
    "ko": "전입 신고를 하자 관공서에서 보건소 안내도 받았어요.",
    "blank": "保健",
+   "src": "made"
+  }
+ ],
+ "w|保健所": [
+  {
+   "text": "悠斗は、保健所から引き取られた犬の健康診断をした。",
+   "en": "Yuto gave a health checkup to a dog adopted from the animal shelter.",
+   "ko": "유토는 보건소에서 입양된 개의 건강 검진을 했어요.",
+   "blank": "保健所",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、保健所の食中毒の注意を見て、弁当の中身に気をつけた。",
+   "en": "After seeing the public health center's food poisoning warning, Chihiro was careful about what she put in her lunch box.",
+   "ko": "지히로는 보건소의 식중독 주의 안내를 보고 도시락 반찬에 신경 썼어요.",
+   "blank": "保健所",
    "src": "made"
   }
  ],
@@ -22277,6 +22693,22 @@
    "src": "tatoeba:207257 en:44508"
   }
  ],
+ "w|俳句": [
+  {
+   "text": "亮の市では、毎年市民から俳句を募集している。",
+   "en": "Ryo's city invites residents to submit haiku every year.",
+   "ko": "료의 시에서는 해마다 시민들에게서 하이쿠를 모집해요.",
+   "blank": "俳句",
+   "src": "made"
+  },
+  {
+   "text": "真由の祖父は、畑仕事の合間に俳句を詠む。",
+   "en": "Mayu's grandfather composes haiku between his work in the fields.",
+   "ko": "마유의 할아버지는 밭일 틈틈이 하이쿠를 지어요.",
+   "blank": "俳句",
+   "src": "made"
+  }
+ ],
  "w|俺": [
   {
    "text": "俺も行くよ。",
@@ -22398,6 +22830,22 @@
    "en": "The homeroom teacher values each student's individuality.",
    "ko": "담임 선생님은 한 사람 한 사람의 개성을 소중히 여겨요.",
    "blank": "個性",
+   "src": "made"
+  }
+ ],
+ "w|倍増": [
+  {
+   "text": "亮が担当するふるさと納税の寄付額が、去年から倍増した。",
+   "en": "Hometown tax donations, which Ryo is in charge of, have doubled since last year.",
+   "ko": "료가 담당하는 고향 납세 기부액이 작년보다 두 배로 늘었어요.",
+   "blank": "倍増",
+   "src": "made"
+  },
+  {
+   "text": "新しい品種に替えて、真由のいちごの収穫が倍増した。",
+   "en": "After switching to a new variety, Mayu's strawberry harvest doubled.",
+   "ko": "새 품종으로 바꿨더니 마유의 딸기 수확이 두 배로 늘었어요.",
+   "blank": "倍増",
    "src": "made"
   }
  ],
@@ -22538,6 +22986,22 @@
    "en": "Keiko's letter said bus fares had been lowered in her town.",
    "ko": "게이코네 동네에서는 버스 요금이 내렸다고 편지에 적혀 있었어요.",
    "blank": "値下げ",
+   "src": "made"
+  }
+ ],
+ "w|値引き": [
+  {
+   "text": "閉店まぎわになると、健太は弁当に値引きのシールを貼る。",
+   "en": "Just before closing, Kenta puts discount stickers on the boxed lunches.",
+   "ko": "문 닫을 무렵이 되면 겐타는 도시락에 할인 스티커를 붙여요.",
+   "blank": "値引き",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、工務店に少し値引きしてもらった。",
+   "en": "Misaki got the builder to give her a small discount.",
+   "ko": "미사키는 시공사에서 조금 깎아 줬어요.",
+   "blank": "値引き",
    "src": "made"
   }
  ],
@@ -24228,6 +24692,22 @@
    "en": "Mayu once won a prize in a piano competition when she was a student.",
    "ko": "마유는 학창 시절 피아노 대회에서 입상한 적이 있어요.",
    "blank": "入賞",
+   "src": "made"
+  }
+ ],
+ "w|入金": [
+  {
+   "text": "健太は、取引先からの入金を銀行で確かめた。",
+   "en": "Kenta checked at the bank that the payment from his business partner had come in.",
+   "ko": "겐타는 거래처에서 들어온 입금을 은행에서 확인했어요.",
+   "blank": "入金",
+   "src": "made"
+  },
+  {
+   "text": "工務店への入金を済ませて、美咲は工事が始まるのを待った。",
+   "en": "After paying the builder, Misaki waited for the work to begin.",
+   "ko": "시공사에 입금을 마치고 미사키는 공사가 시작되기를 기다렸어요.",
+   "blank": "入金",
    "src": "made"
   }
  ],
@@ -26067,6 +26547,22 @@
    "src": "made"
   }
  ],
+ "w|凍る": [
+  {
+   "text": "停電で冷凍庫が止まり、健太はまだ凍っている商品を急いで移した。",
+   "en": "The freezer stopped in a power outage, so Kenta hurried to move the products that were still frozen.",
+   "ko": "정전으로 냉동고가 멈춰서 겐타는 아직 얼어 있는 상품을 서둘러 옮겼어요.",
+   "blank": "凍って",
+   "src": "made"
+  },
+  {
+   "text": "冬の朝、水道管が凍ってしまい、美咲は困り果てた。",
+   "en": "One winter morning the water pipes froze, and Misaki was at a loss.",
+   "ko": "겨울 아침 수도관이 얼어 버려서 미사키는 몹시 난처했어요.",
+   "blank": "凍って",
+   "src": "made"
+  }
+ ],
  "w|凍結": [
   {
    "text": "延滞が続いたので、翔太のカードは一時的に凍結された。",
@@ -26759,6 +27255,22 @@
    "blank": "分けて"
   }
  ],
+ "w|分別": [
+  {
+   "text": "健太の店の前には、ごみを分別して捨てる箱がある。",
+   "en": "In front of Kenta's shop there are bins for sorting garbage.",
+   "ko": "겐타네 가게 앞에는 쓰레기를 분리해서 버리는 통이 있어요.",
+   "blank": "分別",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、解体で出た木材と金属を分別した。",
+   "en": "Misaki sorted the wood and metal that came out of the demolition.",
+   "ko": "미사키는 철거하면서 나온 목재와 금속을 분리했어요.",
+   "blank": "分別",
+   "src": "made"
+  }
+ ],
  "w|分割": [
   {
    "text": "直樹は、修学旅行の費用を分割で払うことにした。",
@@ -26883,6 +27395,22 @@
    "en": "I analyzed the cause.",
    "ko": "원인을 분석했어.",
    "blank": "分析"
+  }
+ ],
+ "w|分泌": [
+  {
+   "text": "悠斗は、犬の涙の分泌が少ないことに気づいた。",
+   "en": "Yuto noticed that the dog wasn't producing enough tears.",
+   "ko": "유토는 개의 눈물 분비가 적다는 걸 알아챘어요.",
+   "blank": "分泌",
+   "src": "made"
+  },
+  {
+   "text": "朝日を浴びるとホルモンの分泌が整うと聞いて、千尋は朝の散歩を始めた。",
+   "en": "Hearing that morning sunlight helps regulate hormone secretion, Chihiro started taking morning walks.",
+   "ko": "아침 햇볕을 쬐면 호르몬 분비가 정돈된다는 말을 듣고 지히로는 아침 산책을 시작했어요.",
+   "blank": "分泌",
+   "src": "made"
   }
  ],
  "w|分裂": [
@@ -27897,6 +28425,22 @@
    "src": "made"
   }
  ],
+ "w|刻む": [
+  {
+   "text": "翔太は、夕飯のためにねぎを細かく刻んだ。",
+   "en": "Shota finely chopped green onions for dinner.",
+   "ko": "쇼타는 저녁밥에 쓸 파를 잘게 썰었어요.",
+   "blank": "刻んだ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、一定のリズムで足音を刻みながら走った。",
+   "en": "Yumi ran, her footsteps beating out a steady rhythm.",
+   "ko": "유미는 일정한 리듬으로 발소리를 새기며 달렸어요.",
+   "blank": "刻み",
+   "src": "made"
+  }
+ ],
  "w|削る": [
   {
    "text": "翔太は鉛筆を小刀で削ってから、便せんに向かった。",
@@ -28159,6 +28703,22 @@
    "src": "made"
   }
  ],
+ "w|前述": [
+  {
+   "text": "翔太は報告書に「前述のとおり、作業は順調です」と書いた。",
+   "en": "Shota wrote in his report, \"As stated above, the work is going smoothly.\"",
+   "ko": "쇼타는 보고서에 \"앞서 말한 대로 작업은 순조롭습니다\"라고 썼어요.",
+   "blank": "前述",
+   "src": "made"
+  },
+  {
+   "text": "由美は、ブログで前述の練習方法をさらに詳しく紹介した。",
+   "en": "On her blog, Yumi described the training method mentioned earlier in more detail.",
+   "ko": "유미는 블로그에서 앞서 말한 연습 방법을 더 자세히 소개했어요.",
+   "blank": "前述",
+   "src": "made"
+  }
+ ],
  "w|前進": [
   {
    "text": "昔の探検隊は、吹雪の中を少しずつ前進したそうだ。",
@@ -28188,6 +28748,22 @@
    "en": "Chihiro firmly pinned her race bib to the front of her running top with safety pins.",
    "ko": "치히로는 번호표를 운동복 전면에 안전핀으로 단단히 달았어요.",
    "blank": "前面",
+   "src": "made"
+  }
+ ],
+ "w|前髪": [
+  {
+   "text": "悠斗は、目にかかるプードルの前髪を短く切ってあげた。",
+   "en": "Yuto trimmed the poodle's bangs that were falling into its eyes.",
+   "ko": "유토는 눈을 가리는 푸들의 앞머리를 짧게 잘라 줬어요.",
+   "blank": "前髪",
+   "src": "made"
+  },
+  {
+   "text": "春が来たので、千尋は思い切って前髪を切った。",
+   "en": "Since spring had come, Chihiro boldly cut her bangs.",
+   "ko": "봄이 와서 지히로는 과감하게 앞머리를 잘랐어요.",
+   "blank": "前髪",
    "src": "made"
   }
  ],
@@ -28597,6 +29173,22 @@
    "blank": "加工"
   }
  ],
+ "w|加担": [
+  {
+   "text": "健太は、近所の店同士の値下げ競争に加担したくなかった。",
+   "en": "Kenta didn't want to take part in the price war among the neighborhood shops.",
+   "ko": "겐타는 동네 가게끼리의 가격 인하 경쟁에 가담하고 싶지 않았어요.",
+   "blank": "加担",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、古い家を壊して建て替える話には加担したくなかった。",
+   "en": "Misaki didn't want to be part of the plan to tear down the old house and rebuild.",
+   "ko": "미사키는 낡은 집을 허물고 새로 짓자는 이야기에는 가담하고 싶지 않았어요.",
+   "blank": "加担",
+   "src": "made"
+  }
+ ],
  "w|加減": [
   {
    "text": "見出しの言葉は、強さの加減が難しい。",
@@ -28860,6 +29452,22 @@
    "en": "A trip with many transfers takes effort, but Yoko enjoys that too.",
    "ko": "환승이 많은 여행은 품이 들지만 요코에게는 그것도 즐거워요.",
    "blank": "労力",
+   "src": "made"
+  }
+ ],
+ "w|効力": [
+  {
+   "text": "古い条例は今月で効力を失うと、亮は市民に説明した。",
+   "en": "Ryo explained to residents that the old ordinance would lose its effect this month.",
+   "ko": "오래된 조례는 이달로 효력을 잃는다고 료는 시민에게 설명했어요.",
+   "blank": "効力",
+   "src": "made"
+  },
+  {
+   "text": "真由は、虫よけのハーブの効力を畑で試した。",
+   "en": "Mayu tested the effectiveness of insect-repelling herbs in her field.",
+   "ko": "마유는 벌레 쫓는 허브의 효력을 밭에서 시험했어요.",
+   "blank": "効力",
    "src": "made"
   }
  ],
@@ -30011,6 +30619,22 @@
    "src": "made"
   }
  ],
+ "w|半日": [
+  {
+   "text": "土曜日、翔太は半日かけて部屋を掃除した。",
+   "en": "On Saturday, Shota spent half the day cleaning his room.",
+   "ko": "토요일에 쇼타는 반나절 동안 방을 청소했어요.",
+   "blank": "半日",
+   "src": "made"
+  },
+  {
+   "text": "由美は、レースのあと半日ほど足が動かなかった。",
+   "en": "After the race, Yumi couldn't move her legs for about half a day.",
+   "ko": "유미는 레이스가 끝나고 반나절쯤 다리가 움직이지 않았어요.",
+   "blank": "半日",
+   "src": "made"
+  }
+ ],
  "w|半減": [
   {
    "text": "雨のせいで、文化祭に来た客は去年より半減した。",
@@ -30271,6 +30895,22 @@
    "en": "I just want to watch.",
    "ko": "그냥 보고 싶을 뿐이야.",
    "blank": "単に"
+  }
+ ],
+ "w|単一": [
+  {
+   "text": "翔太の古いラジオは、単一電池で動く。",
+   "en": "Shota's old radio runs on D batteries.",
+   "ko": "쇼타의 오래된 라디오는 D형 건전지로 움직여요.",
+   "blank": "単一",
+   "src": "made"
+  },
+  {
+   "text": "由美の時計は、時間を測る単一の機能しかないシンプルなものだ。",
+   "en": "Yumi's watch is a simple one with only a single function: timing.",
+   "ko": "유미의 시계는 시간을 재는 단 하나의 기능만 있는 단순한 거예요.",
+   "blank": "単一",
+   "src": "made"
   }
  ],
  "w|単位": [
@@ -30592,6 +31232,38 @@
    "en": "When Yumi called with questions, the company gave her a quote right away.",
    "ko": "유미가 전화로 묻자 업체는 즉석에서 견적을 내 줬어요.",
    "blank": "即座",
+   "src": "made"
+  }
+ ],
+ "w|即日": [
+  {
+   "text": "翔太が昼に注文した本は、即日配達で夕方に届いた。",
+   "en": "The book Shota ordered at noon arrived in the evening with same-day delivery.",
+   "ko": "쇼타가 점심때 주문한 책은 당일 배송으로 저녁에 도착했어요.",
+   "blank": "即日",
+   "src": "made"
+  },
+  {
+   "text": "大会の申し込みは即日締め切られ、由美はぎりぎり間に合った。",
+   "en": "Entries for the race closed on the same day they opened, and Yumi just made it.",
+   "ko": "대회 신청은 당일에 마감됐는데 유미는 아슬아슬하게 늦지 않았어요.",
+   "blank": "即日",
+   "src": "made"
+  }
+ ],
+ "w|即死": [
+  {
+   "text": "「交通事故では即死することも多いので、リードは必ずつけて」と悠斗は飼い主に話した。",
+   "en": "Yuto told the owner, \"Pets are often killed instantly in traffic accidents, so always use a leash.\"",
+   "ko": "\"교통사고로 즉사하는 경우도 많으니 목줄은 꼭 채우세요\"라고 유토는 주인에게 말했어요.",
+   "blank": "即死",
+   "src": "made"
+  },
+  {
+   "text": "雷による即死の事故がニュースで流れ、千尋は夏山に登るのをやめた。",
+   "en": "The news reported an accident where someone was killed instantly by lightning, so Chihiro gave up climbing in the summer mountains.",
+   "ko": "벼락으로 즉사한 사고가 뉴스에 나와서 지히로는 여름 산행을 그만뒀어요.",
+   "blank": "即死",
    "src": "made"
   }
  ],
@@ -31569,6 +32241,22 @@
    "src": "made"
   }
  ],
+ "w|収束": [
+  {
+   "text": "感染症が収束し、亮の市役所でも窓口の仕切りが外された。",
+   "en": "With the epidemic over, the partitions at the counters in Ryo's city hall were taken down too.",
+   "ko": "감염병이 수습되어 료가 일하는 시청에서도 창구 칸막이가 치워졌어요.",
+   "blank": "収束",
+   "src": "made"
+  },
+  {
+   "text": "鳥インフルエンザの騒ぎが収束し、真由は鶏の出荷を再開した。",
+   "en": "The bird flu scare ended, and Mayu resumed shipping her chickens.",
+   "ko": "조류 독감 소동이 진정되어 마유는 닭 출하를 다시 시작했어요.",
+   "blank": "収束",
+   "src": "made"
+  }
+ ],
  "w|収益": [
   {
    "text": "今月の店の収益は、先月よりわずかに上がった。",
@@ -31679,6 +32367,22 @@
    "src": "tatoeba:212934 en:50219"
   }
  ],
+ "w|取り出す": [
+  {
+   "text": "翔太は、冷蔵庫から冷えた麦茶を取り出した。",
+   "en": "Shota took some cold barley tea out of the fridge.",
+   "ko": "쇼타는 냉장고에서 시원한 보리차를 꺼냈어요.",
+   "blank": "取り出した",
+   "src": "made"
+  },
+  {
+   "text": "由美は、ポーチから塩あめを取り出してなめた。",
+   "en": "Yumi took a salt candy out of her pouch and sucked on it.",
+   "ko": "유미는 파우치에서 소금 사탕을 꺼내 먹었어요.",
+   "blank": "取り出して",
+   "src": "made"
+  }
+ ],
  "w|取り戻す": [
   {
    "text": "大輔は、盗まれたバイクを持ち主のもとに取り戻した。",
@@ -31708,6 +32412,22 @@
    "en": "Yumi wrote on the parcel to handle it with care because the dish was fragile.",
    "ko": "유미는 깨지기 쉬운 그릇이니 취급에 주의하라고 소포에 적었어요.",
    "blank": "取り扱い",
+   "src": "made"
+  }
+ ],
+ "w|取り扱う": [
+  {
+   "text": "翔太の会社は、医療機器を取り扱っている。",
+   "en": "Shota's company deals in medical equipment.",
+   "ko": "쇼타의 회사는 의료 기기를 취급해요.",
+   "blank": "取り扱って",
+   "src": "made"
+  },
+  {
+   "text": "由美が働くスポーツ店は、マラソン用の靴を幅広く取り扱っている。",
+   "en": "The sports shop where Yumi works carries a wide range of marathon shoes.",
+   "ko": "유미가 일하는 스포츠 매장은 마라톤용 신발을 폭넓게 취급해요.",
+   "blank": "取り扱って",
    "src": "made"
   }
  ],
@@ -31756,6 +32476,38 @@
    "en": "Aoi is now involved in an activity reading picture books aloud to local children.",
    "ko": "아오이는 요즘 동네 아이들에게 그림책을 읽어 주는 활동을 하고 있어요.",
    "blank": "取り組んで",
+   "src": "made"
+  }
+ ],
+ "w|取り込む": [
+  {
+   "text": "夕立が来る前に、翔太は洗濯物を取り込んだ。",
+   "en": "Shota brought in the laundry before the evening shower came.",
+   "ko": "소나기가 오기 전에 쇼타는 빨래를 걷었어요.",
+   "blank": "取り込んだ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、練習のデータをパソコンに取り込んで分析した。",
+   "en": "Yumi imported her training data into her computer and analyzed it.",
+   "ko": "유미는 연습 데이터를 컴퓨터로 옮겨서 분석했어요.",
+   "blank": "取り込んで",
+   "src": "made"
+  }
+ ],
+ "w|取り除く": [
+  {
+   "text": "亮は、歩道に倒れた木を取り除くよう業者に頼んだ。",
+   "en": "Ryo asked a contractor to remove a tree that had fallen on the sidewalk.",
+   "ko": "료는 인도에 쓰러진 나무를 치워 달라고 업체에 부탁했어요.",
+   "blank": "取り除く",
+   "src": "made"
+  },
+  {
+   "text": "真由は、畑の石を一つずつ取り除いた。",
+   "en": "Mayu removed the stones from the field one by one.",
+   "ko": "마유는 밭의 돌을 하나씩 골라냈어요.",
+   "blank": "取り除いた",
    "src": "made"
   }
  ],
@@ -32402,6 +33154,22 @@
    "en": "While swimming, Keiko went over the lines of her play in her head.",
    "ko": "게이코는 헤엄치면서 연극 대사를 머릿속으로 되뇌었어요.",
    "blank": "台詞",
+   "src": "made"
+  }
+ ],
+ "w|台頭": [
+  {
+   "text": "若い議員の台頭で議会の雰囲気が変わったと、亮は感じている。",
+   "en": "Ryo feels the atmosphere in the council has changed with the rise of young members.",
+   "ko": "젊은 의원들이 대두하면서 의회 분위기가 달라졌다고 료는 느껴요.",
+   "blank": "台頭",
+   "src": "made"
+  },
+  {
+   "text": "大規模な農家の台頭で、真由のような小さな農場は苦労している。",
+   "en": "With the rise of large-scale farms, small farms like Mayu's are struggling.",
+   "ko": "대규모 농가가 대두하면서 마유네 같은 작은 농장은 고생하고 있어요.",
+   "blank": "台頭",
    "src": "made"
   }
  ],
@@ -33143,6 +33911,22 @@
    "en": "A similar problem came up.",
    "ko": "비슷한 문제가 나왔어.",
    "blank": "同様"
+  }
+ ],
+ "w|同点": [
+  {
+   "text": "市役所対抗のソフトボール大会で、亮のチームは最終回に同点に追いついた。",
+   "en": "At the city hall softball tournament, Ryo's team tied the game in the last inning.",
+   "ko": "시청 대항 소프트볼 대회에서 료의 팀은 마지막 회에 동점을 만들었어요.",
+   "blank": "同点",
+   "src": "made"
+  },
+  {
+   "text": "品評会で、真由のかぼちゃは隣の農家のものと同点で一位になった。",
+   "en": "At the fair, Mayu's pumpkin tied for first place with the one from the farm next door.",
+   "ko": "품평회에서 마유의 호박은 이웃 농가의 것과 동점으로 일등을 했어요.",
+   "blank": "同点",
+   "src": "made"
   }
  ],
  "w|同然": [
@@ -34479,6 +35263,22 @@
    "src": "made"
   }
  ],
+ "w|商法": [
+  {
+   "text": "健太は、客に無理に買わせるような商法はしないと決めている。",
+   "en": "Kenta has decided never to use business tactics that pressure customers into buying.",
+   "ko": "겐타는 손님에게 억지로 사게 하는 상술은 쓰지 않기로 했어요.",
+   "blank": "商法",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、高い工事を勧める悪質な商法に気をつけた。",
+   "en": "Misaki was wary of shady business tactics that push expensive construction work.",
+   "ko": "미사키는 비싼 공사를 권하는 악질 상술을 조심했어요.",
+   "blank": "商法",
+   "src": "made"
+  }
+ ],
  "w|問い": [
   {
    "text": "本当に必要な工事なのかという住民の問いに、誠は丁寧に答えた。",
@@ -35039,6 +35839,22 @@
    "en": "You shouldn't only dodge problems.",
    "ko": "문제 회피만 해서는 안 돼.",
    "blank": "回避"
+  }
+ ],
+ "w|因子": [
+  {
+   "text": "翔太は、健康診断で病気の危険因子について説明を受けた。",
+   "en": "At his health checkup, Shota was told about risk factors for disease.",
+   "ko": "쇼타는 건강 검진에서 질병의 위험 인자에 대해 설명을 들었어요.",
+   "blank": "因子",
+   "src": "made"
+  },
+  {
+   "text": "由美は、長距離走に向く遺伝の因子についての記事を読んだ。",
+   "en": "Yumi read an article about genetic factors that make people suited to distance running.",
+   "ko": "유미는 장거리 달리기에 맞는 유전 인자에 관한 기사를 읽었어요.",
+   "blank": "因子",
+   "src": "made"
   }
  ],
  "w|団体": [
@@ -36257,6 +37073,22 @@
    "src": "made"
   }
  ],
+ "w|地道": [
+  {
+   "text": "翔太は、通勤電車の中で地道に英単語を覚えている。",
+   "en": "Shota steadily memorizes English vocabulary on his commuter train.",
+   "ko": "쇼타는 출근 전철 안에서 꾸준히 영어 단어를 외우고 있어요.",
+   "blank": "地道",
+   "src": "made"
+  },
+  {
+   "text": "由美の完走は、地道な練習のたまものだ。",
+   "en": "Yumi's finishing the race is the fruit of steady training.",
+   "ko": "유미의 완주는 꾸준한 연습 덕분이에요.",
+   "blank": "地道",
+   "src": "made"
+  }
+ ],
  "w|地震": [
   {
    "text": "地震、あった？",
@@ -36363,6 +37195,22 @@
    "src": "made"
   }
  ],
+ "w|埋もれる": [
+  {
+   "text": "亮の机は、書類の山に埋もれている。",
+   "en": "Ryo's desk is buried under piles of documents.",
+   "ko": "료의 책상은 서류 더미에 파묻혀 있어요.",
+   "blank": "埋もれて",
+   "src": "made"
+  },
+  {
+   "text": "大雪で、真由の農場のビニールハウスが雪に埋もれた。",
+   "en": "Heavy snow buried the greenhouses on Mayu's farm.",
+   "ko": "폭설로 마유네 농장의 비닐하우스가 눈에 파묻혔어요.",
+   "blank": "埋もれた",
+   "src": "made"
+  }
+ ],
  "w|埋葬": [
   {
    "text": "歴史の授業で、健太は古墳が王の埋葬のために造られたことを説明した。",
@@ -36392,6 +37240,22 @@
    "en": "On the course, there was even a costumed runner dressed as a butler.",
    "ko": "코스에는 집사 차림으로 달리는 분장 러너도 있었어요.",
    "blank": "執事",
+   "src": "made"
+  }
+ ],
+ "w|執拗": [
+  {
+   "text": "翔太は、執拗に鳴り続けるアラームをようやく止めた。",
+   "en": "Shota finally stopped the alarm that kept ringing relentlessly.",
+   "ko": "쇼타는 집요하게 계속 울리는 알람을 겨우 껐어요.",
+   "blank": "執拗",
+   "src": "made"
+  },
+  {
+   "text": "由美は、執拗な足の痛みに耐えながら走った。",
+   "en": "Yumi ran while enduring a persistent pain in her leg.",
+   "ko": "유미는 집요한 다리 통증을 참으며 달렸어요.",
+   "blank": "執拗",
    "src": "made"
   }
  ],
@@ -37067,6 +37931,22 @@
    "src": "made"
   }
  ],
+ "w|壮絶": [
+  {
+   "text": "翔太は、寝る前に壮絶なサバイバル映画を見た。",
+   "en": "Before bed, Shota watched an intense survival movie.",
+   "ko": "쇼타는 자기 전에 처절한 생존 영화를 봤어요.",
+   "blank": "壮絶",
+   "src": "made"
+  },
+  {
+   "text": "由美は、最後の一キロで壮絶なデッドヒートを繰り広げた。",
+   "en": "Yumi was in a fierce neck-and-neck battle in the final kilometer.",
+   "ko": "유미는 마지막 일 킬로미터에서 치열한 접전을 벌였어요.",
+   "blank": "壮絶",
+   "src": "made"
+  }
+ ],
  "w|声": [
   {
    "text": "声が小さいよ。",
@@ -37124,6 +38004,22 @@
    "en": "The limited-edition knife Aoi wanted was sold out at the class shop.",
    "ko": "아오이가 갖고 싶던 한정판 식칼은 교실 매점에서 다 팔렸어요.",
    "blank": "売り切れ",
+   "src": "made"
+  }
+ ],
+ "w|売り場": [
+  {
+   "text": "健太は、お菓子の売り場を子どもの目の高さに作り直した。",
+   "en": "Kenta rearranged the candy section to be at children's eye level.",
+   "ko": "겐타는 과자 코너를 아이들 눈높이에 맞게 다시 꾸몄어요.",
+   "blank": "売り場",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、ホームセンターのペンキ売り場で色を選んだ。",
+   "en": "Misaki chose a color in the paint section of the home-improvement store.",
+   "ko": "미사키는 홈센터 페인트 코너에서 색을 골랐어요.",
+   "blank": "売り場",
    "src": "made"
   }
  ],
@@ -37351,6 +38247,22 @@
    "src": "made"
   }
  ],
+ "w|変装": [
+  {
+   "text": "ハロウィンの日、亮たち職員は変装して子どもたちを迎えた。",
+   "en": "On Halloween, Ryo and the other staff dressed up in costumes to welcome the children.",
+   "ko": "핼러윈 날 료와 직원들은 변장하고 아이들을 맞이했어요.",
+   "blank": "変装",
+   "src": "made"
+  },
+  {
+   "text": "収穫祭で、真由は野菜の着ぐるみで変装して子どもたちを喜ばせた。",
+   "en": "At the harvest festival, Mayu dressed up in a vegetable costume and delighted the children.",
+   "ko": "수확 축제에서 마유는 채소 인형 옷으로 변장해서 아이들을 즐겁게 했어요.",
+   "blank": "変装",
+   "src": "made"
+  }
+ ],
  "w|変身": [
   {
    "text": "幕が下りている間に、拓也は老人から若者へ早変わりの変身をした。",
@@ -37364,6 +38276,22 @@
    "en": "Keiko's playing went through a remarkable transformation after she came back from studying abroad.",
    "ko": "게이코의 연주는 유학에서 돌아와 몰라볼 만큼 변신했어요.",
    "blank": "変身",
+   "src": "made"
+  }
+ ],
+ "w|変革": [
+  {
+   "text": "新しい市長は、市役所の働き方の変革を掲げたと亮は話した。",
+   "en": "Ryo said the new mayor had pledged to transform the way city hall works.",
+   "ko": "새 시장은 시청 업무 방식의 변혁을 내걸었다고 료는 말했어요.",
+   "blank": "変革",
+   "src": "made"
+  },
+  {
+   "text": "真由は、ドローンを使って農業の変革に挑んでいる。",
+   "en": "Mayu is taking on the challenge of transforming agriculture using drones.",
+   "ko": "마유는 드론을 써서 농업의 변혁에 도전하고 있어요.",
+   "blank": "変革",
    "src": "made"
   }
  ],
@@ -37889,6 +38817,22 @@
    "src": "made"
   }
  ],
+ "w|多額": [
+  {
+   "text": "健太は、店の改装のために多額の借金をした。",
+   "en": "Kenta took out a large loan to renovate his shop.",
+   "ko": "겐타는 가게 리모델링을 위해 큰돈을 빌렸어요.",
+   "blank": "多額",
+   "src": "made"
+  },
+  {
+   "text": "美咲の家の屋根の修理には、思ったより多額の費用がかかった。",
+   "en": "Repairing the roof of Misaki's house cost much more than she expected.",
+   "ko": "미사키네 집 지붕 수리에는 생각보다 많은 비용이 들었어요.",
+   "blank": "多額",
+   "src": "made"
+  }
+ ],
  "w|夜": [
   {
    "text": "夜に電話して。",
@@ -37948,6 +38892,22 @@
    "en": "On the day, Keiko got up at dawn and went to get dressed.",
    "ko": "당일 게이코는 동틀 무렵 일어나 옷을 입으러 갔어요.",
    "blank": "夜明け",
+   "src": "made"
+  }
+ ],
+ "w|夜行": [
+  {
+   "text": "翔太は、出張先から夜行バスで朝早く帰ってきた。",
+   "en": "Shota came back early in the morning from his business trip on an overnight bus.",
+   "ko": "쇼타는 출장지에서 야간 버스를 타고 아침 일찍 돌아왔어요.",
+   "blank": "夜行",
+   "src": "made"
+  },
+  {
+   "text": "由美は、マラソン大会に出るために夜行バスで会場の町へ向かった。",
+   "en": "Yumi took an overnight bus to the town where the marathon was being held.",
+   "ko": "유미는 마라톤 대회에 나가려고 야간 버스를 타고 대회가 열리는 도시로 향했어요.",
+   "blank": "夜行",
    "src": "made"
   }
  ],
@@ -41393,6 +42353,22 @@
    "src": "made"
   }
  ],
+ "w|宝くじ": [
+  {
+   "text": "健太の店で買った宝くじが当たったと、常連客が喜んでいた。",
+   "en": "A regular customer was delighted that the lottery ticket bought at Kenta's shop had won.",
+   "ko": "겐타네 가게에서 산 복권이 당첨됐다고 단골손님이 기뻐했어요.",
+   "blank": "宝くじ",
+   "src": "made"
+  },
+  {
+   "text": "宝くじが当たったら家を全部直したいと、美咲は笑った。",
+   "en": "Misaki laughed that if she won the lottery, she'd fix up the whole house.",
+   "ko": "복권에 당첨되면 집을 전부 고치고 싶다고 미사키는 웃었어요.",
+   "blank": "宝くじ",
+   "src": "made"
+  }
+ ],
  "w|宝物": [
   {
    "text": "大輔の宝物は、修業時代から使っている包丁だ。",
@@ -42323,6 +43299,22 @@
    "src": "made"
   }
  ],
+ "w|密接": [
+  {
+   "text": "健太の店は、近所の人々の暮らしと密接につながっている。",
+   "en": "Kenta's shop is closely tied to the daily lives of the people in the neighborhood.",
+   "ko": "겐타네 가게는 이웃들의 생활과 밀접하게 이어져 있어요.",
+   "blank": "密接",
+   "src": "made"
+  },
+  {
+   "text": "古い家の造りはその土地の気候と密接な関係があると、美咲は知った。",
+   "en": "Misaki learned that the structure of old houses is closely related to the local climate.",
+   "ko": "낡은 집의 구조는 그 지역 기후와 밀접한 관계가 있다는 걸 미사키는 알았어요.",
+   "blank": "密接",
+   "src": "made"
+  }
+ ],
  "w|密着": [
   {
    "text": "テレビ局が、警察署の夜勤に密着取材をした。",
@@ -42367,6 +43359,22 @@
    "en": "My hands are cold.",
    "ko": "손이 추워.",
    "blank": "寒い"
+  }
+ ],
+ "w|寝かす": [
+  {
+   "text": "健太は、売れ残った在庫をしばらく倉庫に寝かしておいた。",
+   "en": "Kenta left the unsold stock sitting in the storeroom for a while.",
+   "ko": "겐타는 팔다 남은 재고를 한동안 창고에 묵혀 뒀어요.",
+   "blank": "寝かして",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、練った漆喰を一晩寝かしてから壁に塗った。",
+   "en": "Misaki let the mixed plaster sit overnight before applying it to the wall.",
+   "ko": "미사키는 반죽한 회반죽을 하룻밤 숙성시킨 뒤 벽에 발랐어요.",
+   "blank": "寝かして",
+   "src": "made"
   }
  ],
  "w|寝る": [
@@ -42973,6 +43981,22 @@
    "blank": "尋ねる"
   }
  ],
+ "w|尋常": [
+  {
+   "text": "犬の様子が尋常ではないと、飼い主が夜中に悠斗に電話してきた。",
+   "en": "An owner called Yuto in the middle of the night saying the dog wasn't acting normal.",
+   "ko": "개 상태가 심상치 않다며 주인이 한밤중에 유토에게 전화했어요.",
+   "blank": "尋常",
+   "src": "made"
+  },
+  {
+   "text": "今年の夏の暑さは尋常ではないと、千尋は思った。",
+   "en": "Chihiro thought this summer's heat was far from normal.",
+   "ko": "올여름 더위는 심상치 않다고 지히로는 생각했어요.",
+   "blank": "尋常",
+   "src": "made"
+  }
+ ],
  "w|導く": [
   {
    "text": "新しい工場長が、赤字のラインを黒字に導いた。",
@@ -43029,6 +44053,22 @@
    "en": "I opened a little box.",
    "ko": "작은 상자를 열었어.",
    "blank": "小さな"
+  }
+ ],
+ "w|小便": [
+  {
+   "text": "悠斗は、猫の小便の量が増えていないか飼い主に尋ねた。",
+   "en": "Yuto asked the owner whether the cat was urinating more than usual.",
+   "ko": "유토는 고양이 소변 양이 늘지 않았는지 주인에게 물었어요.",
+   "blank": "小便",
+   "src": "made"
+  },
+  {
+   "text": "寒い夜は小便が近くなると、千尋の祖父はこぼす。",
+   "en": "Chihiro's grandfather complains that he has to pee more often on cold nights.",
+   "ko": "추운 밤에는 소변이 자주 마렵다고 지히로의 할아버지는 투덜거려요.",
+   "blank": "小便",
+   "src": "made"
   }
  ],
  "w|小僧": [
@@ -43366,6 +44406,22 @@
    "en": "When they surveyed club preferences, only a few students chose the tea ceremony club.",
    "ko": "동아리 희망을 받아 보니 다도부를 고른 학생은 소수였어요.",
    "blank": "少数",
+   "src": "made"
+  }
+ ],
+ "w|少量": [
+  {
+   "text": "健太の店では、一人暮らしの人のために野菜を少量ずつ売っている。",
+   "en": "Kenta's shop sells vegetables in small amounts for people who live alone.",
+   "ko": "겐타네 가게에서는 혼자 사는 사람을 위해 채소를 조금씩 팔아요.",
+   "blank": "少量",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、少量の接着剤で床のきしみを直した。",
+   "en": "Misaki fixed the creaking floor with a small amount of glue.",
+   "ko": "미사키는 적은 양의 접착제로 바닥 삐걱거림을 고쳤어요.",
+   "blank": "少量",
    "src": "made"
   }
  ],
@@ -44171,6 +45227,22 @@
    "src": "made"
   }
  ],
+ "w|左派": [
+  {
+   "text": "亮は、左派と右派の両方の議員から意見を聞いた。",
+   "en": "Ryo heard opinions from council members on both the left and the right.",
+   "ko": "료는 좌파와 우파 양쪽 의원들에게서 의견을 들었어요.",
+   "blank": "左派",
+   "src": "made"
+  },
+  {
+   "text": "真由の祖父は若い頃、左派の農民運動に加わっていたらしい。",
+   "en": "Apparently, Mayu's grandfather took part in a left-wing farmers' movement when he was young.",
+   "ko": "마유의 할아버지는 젊을 때 좌파 농민 운동에 참여했었대요.",
+   "blank": "左派",
+   "src": "made"
+  }
+ ],
  "w|左翼": [
   {
    "text": "その芝居は、学生運動の時代の左翼の若者たちを描いている。",
@@ -44200,6 +45272,22 @@
    "en": "Yoko was impressed by the attendant skillfully pushing the cart in the swaying train.",
    "ko": "흔들리는 열차 안에서 능숙하게 카트를 미는 판매원에게 요코는 감탄했어요.",
    "blank": "巧み",
+   "src": "made"
+  }
+ ],
+ "w|巧妙": [
+  {
+   "text": "翔太は、巧妙な詐欺のメールに危うくだまされそうになった。",
+   "en": "Shota nearly fell for a cleverly crafted scam email.",
+   "ko": "쇼타는 교묘한 사기 메일에 하마터면 속을 뻔했어요.",
+   "blank": "巧妙",
+   "src": "made"
+  },
+  {
+   "text": "由美は、ライバルの巧妙なペース配分に感心した。",
+   "en": "Yumi was impressed by her rival's clever pacing.",
+   "ko": "유미는 라이벌의 교묘한 페이스 배분에 감탄했어요.",
+   "blank": "巧妙",
    "src": "made"
   }
  ],
@@ -44442,6 +45530,22 @@
    "en": "On a sunny morning, Misaki aired her futon on the veranda.",
    "ko": "맑은 아침, 미사키는 툇마루에 이불을 널었어요.",
    "blank": "布団",
+   "src": "made"
+  }
+ ],
+ "w|布教": [
+  {
+   "text": "市役所の前での布教活動は許可されていないと、亮は説明した。",
+   "en": "Ryo explained that religious proselytizing in front of city hall is not permitted.",
+   "ko": "시청 앞에서의 포교 활동은 허가되지 않는다고 료는 설명했어요.",
+   "blank": "布教",
+   "src": "made"
+  },
+  {
+   "text": "昔この村には布教のために遠くから来た僧が住んでいたと、真由は聞いた。",
+   "en": "Mayu heard that a monk who came from far away to spread his teachings once lived in this village.",
+   "ko": "옛날 이 마을에 포교하러 멀리서 온 스님이 살았다고 마유는 들었어요.",
+   "blank": "布教",
    "src": "made"
   }
  ],
@@ -44949,6 +46053,22 @@
    "blank": "年"
   }
  ],
+ "w|年々": [
+  {
+   "text": "翔太が乗る通勤電車は、年々混むようになっている。",
+   "en": "The commuter train Shota rides is getting more crowded year by year.",
+   "ko": "쇼타가 타는 출근 전철은 해마다 더 붐비고 있어요.",
+   "blank": "年々",
+   "src": "made"
+  },
+  {
+   "text": "由美が毎年出る大会は、参加者が年々増えている。",
+   "en": "The race Yumi enters every year has more participants year by year.",
+   "ko": "유미가 해마다 나가는 대회는 참가자가 해마다 늘고 있어요.",
+   "blank": "年々",
+   "src": "made"
+  }
+ ],
  "w|年上": [
   {
    "text": "年上のいとこが、餅つきのコツを健太に教えてくれた。",
@@ -45011,6 +46131,22 @@
    "blank": "年代"
   }
  ],
+ "w|年内": [
+  {
+   "text": "翔太は、年内に運転免許を取るつもりだ。",
+   "en": "Shota plans to get his driver's license before the end of the year.",
+   "ko": "쇼타는 올해 안에 운전면허를 딸 생각이에요.",
+   "blank": "年内",
+   "src": "made"
+  },
+  {
+   "text": "由美は、年内にフルマラソンを走りたいと思っている。",
+   "en": "Yumi wants to run a full marathon before the end of the year.",
+   "ko": "유미는 올해 안에 풀코스 마라톤을 뛰고 싶어 해요.",
+   "blank": "年内",
+   "src": "made"
+  }
+ ],
  "w|年収": [
   {
    "text": "転職すれば年収が上がるかもしれないと、拓也は考えている。",
@@ -45055,6 +46191,22 @@
    "en": "I made a plan for the year.",
    "ko": "연도 계획을 세웠어.",
    "blank": "年度"
+  }
+ ],
+ "w|年月": [
+  {
+   "text": "翔太は、長い年月をかけて集めたレコードを聴いた。",
+   "en": "Shota listened to the records he had collected over many years.",
+   "ko": "쇼타는 오랜 세월에 걸쳐 모은 레코드를 들었어요.",
+   "blank": "年月",
+   "src": "made"
+  },
+  {
+   "text": "マラソンを始めてからの年月を、由美は懐かしく振り返った。",
+   "en": "Yumi looked back fondly on the years since she started running marathons.",
+   "ko": "마라톤을 시작한 뒤로 흘러간 세월을 유미는 그립게 돌아봤어요.",
+   "blank": "年月",
+   "src": "made"
   }
  ],
  "w|年末": [
@@ -47249,6 +48401,22 @@
    "blank": "後ろ"
   }
  ],
+ "w|後世": [
+  {
+   "text": "翔太は、昼休みに後世に残る名作と言われる小説を読んでいる。",
+   "en": "During lunch break, Shota reads a novel said to be a masterpiece for future generations.",
+   "ko": "쇼타는 점심시간에 후세에 남을 명작이라는 소설을 읽고 있어요.",
+   "blank": "後世",
+   "src": "made"
+  },
+  {
+   "text": "由美は、後世に語り継がれる名ランナーの本を読んだ。",
+   "en": "Yumi read a book about a great runner whose story will be passed down to future generations.",
+   "ko": "유미는 후세에 전해질 명 러너에 관한 책을 읽었어요.",
+   "blank": "後世",
+   "src": "made"
+  }
+ ],
  "w|後半": [
   {
    "text": "試合の後半が熱い。",
@@ -47897,6 +49065,22 @@
    "blank": "心臓"
   }
  ],
+ "w|心身": [
+  {
+   "text": "散歩は犬の心身の健康に欠かせないと、悠斗は話した。",
+   "en": "Yuto said that walks are essential for a dog's physical and mental health.",
+   "ko": "산책은 개의 심신 건강에 꼭 필요하다고 유토는 말했어요.",
+   "blank": "心身",
+   "src": "made"
+  },
+  {
+   "text": "秋の山歩きで、千尋は心身ともにリフレッシュした。",
+   "en": "Hiking in the autumn mountains refreshed Chihiro in body and mind.",
+   "ko": "가을 산행으로 지히로는 몸과 마음 모두 상쾌해졌어요.",
+   "blank": "心身",
+   "src": "made"
+  }
+ ],
  "w|心配": [
   {
    "text": "心配しないで。",
@@ -47909,6 +49093,22 @@
    "en": "I'm a little worried.",
    "ko": "좀 걱정되네.",
    "blank": "心配"
+  }
+ ],
+ "w|心霊": [
+  {
+   "text": "亮は、市民から「空き家で心霊現象が起きる」という相談を受けた。",
+   "en": "A resident came to Ryo saying that paranormal things were happening in an empty house.",
+   "ko": "료는 시민에게서 '빈집에서 심령 현상이 일어난다'는 상담을 받았어요.",
+   "blank": "心霊",
+   "src": "made"
+  },
+  {
+   "text": "真由の農場の古い納屋は、子どもたちのあいだで心霊スポットと噂されている。",
+   "en": "The old barn on Mayu's farm is rumored among the kids to be a haunted spot.",
+   "ko": "마유네 농장의 낡은 헛간은 아이들 사이에서 심령 장소라고 소문나 있어요.",
+   "blank": "心霊",
+   "src": "made"
   }
  ],
  "w|必ず": [
@@ -48546,6 +49746,22 @@
    "en": "The number of tourists visiting the village has been surging recently.",
    "ko": "최근 마을을 찾는 관광객이 급증하고 있어요.",
    "blank": "急増",
+   "src": "made"
+  }
+ ],
+ "w|急性": [
+  {
+   "text": "急性の胃腸炎になった子犬が、夜中に悠斗の病院へ運ばれてきた。",
+   "en": "A puppy with acute gastroenteritis was brought to Yuto's clinic in the middle of the night.",
+   "ko": "급성 위장염에 걸린 강아지가 한밤중에 유토의 병원으로 실려 왔어요.",
+   "blank": "急性",
+   "src": "made"
+  },
+  {
+   "text": "真夏の暑さで、千尋の父は急性の脱水症状を起こした。",
+   "en": "In the midsummer heat, Chihiro's father suffered acute dehydration.",
+   "ko": "한여름 더위에 지히로의 아버지는 급성 탈수 증상을 일으켰어요.",
+   "blank": "急性",
    "src": "made"
   }
  ],
@@ -49967,6 +51183,22 @@
    "blank": "感謝"
   }
  ],
+ "w|慈善": [
+  {
+   "text": "亮は、市が開く慈善バザーの準備を手伝った。",
+   "en": "Ryo helped prepare for the charity bazaar held by the city.",
+   "ko": "료는 시가 여는 자선 바자회 준비를 도왔어요.",
+   "blank": "慈善",
+   "src": "made"
+  },
+  {
+   "text": "真由は、取れすぎた野菜を慈善団体に寄付している。",
+   "en": "Mayu donates surplus vegetables to a charity.",
+   "ko": "마유는 너무 많이 수확한 채소를 자선 단체에 기부해요.",
+   "blank": "慈善",
+   "src": "made"
+  }
+ ],
  "w|態勢": [
   {
    "text": "引っ越し業者は、朝早くから作業の態勢を整えて待っていた。",
@@ -50026,6 +51258,22 @@
    "en": "It was a dangerous scene, so the crew prepared carefully.",
    "ko": "위험한 장면이라서 스태프는 신중하게 준비했어요.",
    "blank": "慎重",
+   "src": "made"
+  }
+ ],
+ "w|慢性": [
+  {
+   "text": "獣医の悠斗は、慢性の腎臓病を抱える老猫を診察した。",
+   "en": "Yuto, a vet, examined an old cat with chronic kidney disease.",
+   "ko": "수의사 유토는 만성 신장병을 앓는 늙은 고양이를 진찰했어요.",
+   "blank": "慢性",
+   "src": "made"
+  },
+  {
+   "text": "季節の変わり目になると、千尋の慢性的な頭痛がひどくなる。",
+   "en": "When the seasons change, Chihiro's chronic headaches get worse.",
+   "ko": "환절기가 되면 지히로의 만성 두통이 심해져요.",
+   "blank": "慢性",
    "src": "made"
   }
  ],
@@ -50228,6 +51476,22 @@
    "en": "During the long weekend, Keiko single-handedly finished cleaning the entire house.",
    "ko": "게이코는 연휴 동안 집 안 대청소를 혼자 해냈어요.",
    "blank": "成し遂げた",
+   "src": "made"
+  }
+ ],
+ "w|成り立つ": [
+  {
+   "text": "悠斗の病院は、地域の飼い主の信頼で成り立っている。",
+   "en": "Yuto's clinic runs on the trust of pet owners in the area.",
+   "ko": "유토의 병원은 지역 반려인들의 신뢰로 유지되고 있어요.",
+   "blank": "成り立って",
+   "src": "made"
+  },
+  {
+   "text": "千尋の町の観光は、秋の紅葉で成り立っている。",
+   "en": "Tourism in Chihiro's town depends on the autumn leaves.",
+   "ko": "지히로네 마을의 관광은 가을 단풍으로 유지되고 있어요.",
+   "blank": "成り立って",
    "src": "made"
   }
  ],
@@ -50471,6 +51735,22 @@
    "blank": "戦う"
   }
  ],
+ "w|戦える": [
+  {
+   "text": "体力をつければまだまだ戦えると、翔太は草サッカーの仲間に言った。",
+   "en": "Shota told his amateur soccer teammates that if they built up their stamina, they could still compete.",
+   "ko": "체력을 기르면 아직 충분히 싸울 수 있다고 쇼타는 동네 축구 동료들에게 말했어요.",
+   "blank": "戦える",
+   "src": "made"
+  },
+  {
+   "text": "由美は、膝の痛みが治ればまだ戦えると信じている。",
+   "en": "Yumi believes she can still compete once her knee pain heals.",
+   "ko": "유미는 무릎 통증이 나으면 아직 겨룰 수 있다고 믿어요.",
+   "blank": "戦える",
+   "src": "made"
+  }
+ ],
  "w|戦争": [
   {
    "text": "戦争の話はよそう。",
@@ -50669,6 +51949,22 @@
    "en": "Entering battle mode.",
    "ko": "전투 모드로 들어가.",
    "blank": "戦闘"
+  }
+ ],
+ "w|戸籍": [
+  {
+   "text": "亮は、戸籍に関する問い合わせに一日中対応した。",
+   "en": "Ryo handled inquiries about family registers all day.",
+   "ko": "료는 호적에 관한 문의를 하루 종일 응대했어요.",
+   "blank": "戸籍",
+   "src": "made"
+  },
+  {
+   "text": "真由は、祖先を調べるために古い戸籍を取り寄せた。",
+   "en": "Mayu ordered old family registers to research her ancestors.",
+   "ko": "마유는 조상을 알아보려고 옛 호적을 떼어 봤어요.",
+   "blank": "戸籍",
+   "src": "made"
   }
  ],
  "w|戻す": [
@@ -51056,6 +52352,22 @@
    "en": "The student who fell was treated right away in the nurse's office.",
    "ko": "넘어진 학생은 보건실에서 바로 치료를 받았어요.",
    "blank": "手当",
+   "src": "made"
+  }
+ ],
+ "w|手掛ける": [
+  {
+   "text": "悠斗は、これまでに千件以上の手術を手掛けてきた。",
+   "en": "Yuto has performed over a thousand operations so far.",
+   "ko": "유토는 지금까지 천 건 이상의 수술을 맡아 왔어요.",
+   "blank": "手掛けて",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、季節ごとの庭の植え替えを自分で手掛けている。",
+   "en": "Chihiro takes care of replanting her garden each season by herself.",
+   "ko": "지히로는 계절마다 정원 식물을 바꿔 심는 일을 직접 해요.",
+   "blank": "手掛けて",
    "src": "made"
   }
  ],
@@ -51657,6 +52969,22 @@
    "blank": "投げ"
   }
  ],
+ "w|投ずる": [
+  {
+   "text": "翔太は、ボーナスの一部を新しい趣味に投じた。",
+   "en": "Shota put part of his bonus into a new hobby.",
+   "ko": "쇼타는 보너스 일부를 새 취미에 쏟아부었어요.",
+   "blank": "投じた",
+   "src": "made"
+  },
+  {
+   "text": "由美は、新しいランニングシューズに一か月分のバイト代を投じた。",
+   "en": "Yumi spent a month's worth of part-time wages on new running shoes.",
+   "ko": "유미는 새 러닝화에 한 달 치 아르바이트비를 쏟아부었어요.",
+   "blank": "投じた",
+   "src": "made"
+  }
+ ],
  "w|投下": [
   {
    "text": "会社が巨額の資金を投下した事業をめぐって、株主が訴えを起こした。",
@@ -51702,6 +53030,22 @@
    "en": "More workers were brought in to meet the construction deadline.",
    "ko": "공기를 맞추려고 작업자를 더 투입했어요.",
    "blank": "投入",
+   "src": "made"
+  }
+ ],
+ "w|投影": [
+  {
+   "text": "翔太は、会議でパソコンの画面をスクリーンに投影した。",
+   "en": "At the meeting, Shota projected his computer screen onto the big screen.",
+   "ko": "쇼타는 회의에서 컴퓨터 화면을 스크린에 투영했어요.",
+   "blank": "投影",
+   "src": "made"
+  },
+  {
+   "text": "由美がゴールすると、その姿が会場の大画面に投影された。",
+   "en": "When Yumi crossed the finish line, her image was projected on the big screen at the venue.",
+   "ko": "유미가 결승선에 들어오자 그 모습이 행사장 대형 화면에 비춰졌어요.",
+   "blank": "投影",
    "src": "made"
   }
  ],
@@ -52417,6 +53761,22 @@
    "src": "made"
   }
  ],
+ "w|持ち物": [
+  {
+   "text": "健太は、遠足の持ち物を買いに来た子どもにお菓子を選んであげた。",
+   "en": "Kenta helped a child who came to buy things for a field trip choose some snacks.",
+   "ko": "겐타는 소풍 준비물을 사러 온 아이에게 과자를 골라 줬어요.",
+   "blank": "持ち物",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、前の住人の持ち物を丁寧に整理した。",
+   "en": "Misaki carefully sorted through the previous resident's belongings.",
+   "ko": "미사키는 전에 살던 사람의 소지품을 꼼꼼히 정리했어요.",
+   "blank": "持ち物",
+   "src": "made"
+  }
+ ],
  "w|持ち込む": [
   {
    "text": "閲覧室に飲み物を持ち込むことは禁止されている。",
@@ -52888,6 +54248,22 @@
    "en": "The city donated new lab equipment to promote science education.",
    "ko": "시는 과학 교육 진흥을 위해 새 실험 기구를 기부했어요.",
    "blank": "振興",
+   "src": "made"
+  }
+ ],
+ "w|振込": [
+  {
+   "text": "健太の店では、公共料金の振込もできる。",
+   "en": "You can also pay utility bills by bank transfer at Kenta's shop.",
+   "ko": "겐타네 가게에서는 공과금 이체도 할 수 있어요.",
+   "blank": "振込",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、職人さんへの支払いを銀行振込にした。",
+   "en": "Misaki paid the craftsmen by bank transfer.",
+   "ko": "미사키는 장인에게 줄 돈을 은행 이체로 보냈어요.",
+   "blank": "振込",
    "src": "made"
   }
  ],
@@ -54214,6 +55590,22 @@
    "en": "At the autumn tournament, Sakura's high school beat the previous champions.",
    "ko": "가을 대회에서 사쿠라의 고등학교는 지난 대회 우승 학교를 격파했어요.",
    "blank": "撃破",
+   "src": "made"
+  }
+ ],
+ "w|撃退": [
+  {
+   "text": "健太は、店の前に集まるカラスを撃退する方法を考えた。",
+   "en": "Kenta thought of a way to drive off the crows that gather in front of the shop.",
+   "ko": "겐타는 가게 앞에 모이는 까마귀를 쫓아낼 방법을 궁리했어요.",
+   "blank": "撃退",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、屋根裏に住みついたネズミを撃退した。",
+   "en": "Misaki drove out the mice that had settled in the attic.",
+   "ko": "미사키는 다락에 자리 잡은 쥐를 퇴치했어요.",
+   "blank": "撃退",
    "src": "made"
   }
  ],
@@ -56081,6 +57473,22 @@
    "src": "made"
   }
  ],
+ "w|文芸": [
+  {
+   "text": "亮の市は、市民の文芸作品を集めた冊子を毎年出している。",
+   "en": "Ryo's city publishes a booklet of residents' literary works every year.",
+   "ko": "료의 시는 시민들의 문예 작품을 모은 책자를 해마다 내요.",
+   "blank": "文芸",
+   "src": "made"
+  },
+  {
+   "text": "真由は、農作業の日々をつづった随筆で地元の文芸賞を受けた。",
+   "en": "Mayu won a local literary prize for an essay about her days of farm work.",
+   "ko": "마유는 농사일의 나날을 적은 수필로 지역 문예상을 받았어요.",
+   "blank": "文芸",
+   "src": "made"
+  }
+ ],
  "w|文章": [
   {
    "text": "文章を短く直した。",
@@ -56871,6 +58279,22 @@
    "blank": "日々"
   }
  ],
+ "w|日の出": [
+  {
+   "text": "翔太は、ベランダから日の出を眺めながらコーヒーを飲んだ。",
+   "en": "Shota drank coffee while watching the sunrise from his balcony.",
+   "ko": "쇼타는 베란다에서 해돋이를 보며 커피를 마셨어요.",
+   "blank": "日の出",
+   "src": "made"
+  },
+  {
+   "text": "由美は、日の出とともにスタートするレースに出た。",
+   "en": "Yumi ran in a race that started at sunrise.",
+   "ko": "유미는 해돋이와 함께 출발하는 레이스에 나갔어요.",
+   "blank": "日の出",
+   "src": "made"
+  }
+ ],
  "w|日付": [
   {
    "text": "回覧板には、ゴミの日が変わる日付が書いてあった。",
@@ -57013,6 +58437,22 @@
    "src": "made"
   }
  ],
+ "w|日替わり": [
+  {
+   "text": "翔太は、会社の近くの食堂で日替わり定食を頼んだ。",
+   "en": "Shota ordered the daily special at a diner near his office.",
+   "ko": "쇼타는 회사 근처 식당에서 오늘의 정식을 주문했어요.",
+   "blank": "日替わり",
+   "src": "made"
+  },
+  {
+   "text": "由美は、日替わりで練習のメニューを変えている。",
+   "en": "Yumi changes her training menu every day.",
+   "ko": "유미는 날마다 연습 메뉴를 바꿔요.",
+   "blank": "日替わり",
+   "src": "made"
+  }
+ ],
  "w|日本一": [
   {
    "text": "この劇団は、日本一笑える喜劇を作ることを目標にしている。",
@@ -57101,6 +58541,22 @@
    "en": "I reread my old diary.",
    "ko": "옛날 일기를 다시 읽었어.",
    "blank": "日記"
+  }
+ ],
+ "w|日誌": [
+  {
+   "text": "翔太は、寝る前に仕事の日誌をつける。",
+   "en": "Shota writes in his work log before going to bed.",
+   "ko": "쇼타는 자기 전에 업무 일지를 써요.",
+   "blank": "日誌",
+   "src": "made"
+  },
+  {
+   "text": "由美は、毎回の練習の内容を日誌に書いている。",
+   "en": "Yumi writes down the details of every training session in a log.",
+   "ko": "유미는 매번 연습 내용을 일지에 적어요.",
+   "blank": "日誌",
+   "src": "made"
   }
  ],
  "w|日頃": [
@@ -57224,6 +58680,22 @@
    "en": "This airline offers cheaper fares for customers who book early.",
    "ko": "이 항공사는 조기 예약 손님에게 싼 운임을 마련해 둬요.",
    "blank": "早期",
+   "src": "made"
+  }
+ ],
+ "w|早起き": [
+  {
+   "text": "翔太は、早起きして近所を散歩するのが日課だ。",
+   "en": "Getting up early and taking a walk around the neighborhood is Shota's daily routine.",
+   "ko": "쇼타는 일찍 일어나서 동네를 산책하는 게 일과예요.",
+   "blank": "早起き",
+   "src": "made"
+  },
+  {
+   "text": "大会の当日、由美は四時に早起きした。",
+   "en": "On the day of the race, Yumi got up early at four o'clock.",
+   "ko": "대회 당일 유미는 네 시에 일찍 일어났어요.",
+   "blank": "早起き",
    "src": "made"
   }
  ],
@@ -59029,6 +60501,22 @@
    "en": "I got my clothes dirty.",
    "ko": "옷 더러워졌어.",
    "blank": "服"
+  }
+ ],
+ "w|服用": [
+  {
+   "text": "「この薬は朝と晩に服用させてください」と悠斗は飼い主に伝えた。",
+   "en": "Yuto told the owner, \"Please give this medicine in the morning and evening.\"",
+   "ko": "\"이 약은 아침저녁으로 먹여 주세요\"라고 유토는 주인에게 전했어요.",
+   "blank": "服用",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、花粉症の薬を毎朝服用している。",
+   "en": "Chihiro takes her hay fever medicine every morning.",
+   "ko": "지히로는 꽃가루 알레르기 약을 매일 아침 복용해요.",
+   "blank": "服用",
+   "src": "made"
   }
  ],
  "w|服装": [
@@ -61179,6 +62667,22 @@
    "src": "made"
   }
  ],
+ "w|極上": [
+  {
+   "text": "診察を頑張った犬に、悠斗は極上のおやつをあげた。",
+   "en": "Yuto gave a top-quality treat to the dog that was good during the checkup.",
+   "ko": "진찰을 잘 견딘 개에게 유토는 최고급 간식을 줬어요.",
+   "blank": "極上",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、旬の秋刀魚を極上の味だと喜んで食べた。",
+   "en": "Chihiro happily ate the in-season Pacific saury, calling it exquisite.",
+   "ko": "지히로는 제철 꽁치를 최고의 맛이라며 기쁘게 먹었어요.",
+   "blank": "極上",
+   "src": "made"
+  }
+ ],
  "w|極力": [
   {
    "text": "直樹は、旅の荷物を極力少なくしている。",
@@ -61954,6 +63458,22 @@
    "en": "In his speech, the groom told Chihiro he had come to love her, flaws and all.",
    "ko": "신랑은 스피치에서 결점까지 포함해서 좋아하게 됐다고 지히로에게 말했어요.",
    "blank": "欠点",
+   "src": "made"
+  }
+ ],
+ "w|欠片": [
+  {
+   "text": "悠斗は、犬の胃からプラスチックの欠片を取り出した。",
+   "en": "Yuto removed a piece of plastic from a dog's stomach.",
+   "ko": "유토는 개의 위에서 플라스틱 조각을 꺼냈어요.",
+   "blank": "欠片",
+   "src": "made"
+  },
+  {
+   "text": "春の日差しで、千尋の家の池に残っていた氷の欠片が溶けた。",
+   "en": "In the spring sunshine, the pieces of ice left in the pond at Chihiro's house melted.",
+   "ko": "봄 햇살에 지히로네 연못에 남아 있던 얼음 조각이 녹았어요.",
+   "blank": "欠片",
    "src": "made"
   }
  ],
@@ -62907,6 +64427,22 @@
    "src": "made"
   }
  ],
+ "w|死因": [
+  {
+   "text": "悠斗は、急に亡くなったウサギの死因を飼い主に説明した。",
+   "en": "Yuto explained the cause of death of the rabbit that died suddenly to its owner.",
+   "ko": "유토는 갑자기 죽은 토끼의 사인을 주인에게 설명했어요.",
+   "blank": "死因",
+   "src": "made"
+  },
+  {
+   "text": "冬に多い死因の一つは浴室での事故だと、千尋はニュースで知った。",
+   "en": "Chihiro learned from the news that one of the common causes of death in winter is accidents in the bathroom.",
+   "ko": "겨울에 많은 사인 중 하나는 욕실 사고라고 지히로는 뉴스에서 알았어요.",
+   "blank": "死因",
+   "src": "made"
+  }
+ ],
  "w|死後": [
   {
    "text": "翔太は、祖父の死後に受け継いだ古い鏡を丁寧に磨いた。",
@@ -63461,6 +64997,22 @@
    "src": "made"
   }
  ],
+ "w|毛皮": [
+  {
+   "text": "健太の店に、毛皮のコートを着た上品な老婦人が立ち寄った。",
+   "en": "An elegant elderly woman in a fur coat stopped by Kenta's shop.",
+   "ko": "겐타네 가게에 모피 코트를 입은 기품 있는 할머니가 들렀어요.",
+   "blank": "毛皮",
+   "src": "made"
+  },
+  {
+   "text": "屋根裏から、古い毛皮の襟巻きが出てきて美咲は驚いた。",
+   "en": "Misaki was surprised when an old fur stole turned up in the attic.",
+   "ko": "다락에서 오래된 모피 목도리가 나와서 미사키는 놀랐어요.",
+   "blank": "毛皮",
+   "src": "made"
+  }
+ ],
  "w|毛穴": [
   {
    "text": "犬は人と違って、毛穴から汗をほとんどかかない。",
@@ -63827,6 +65379,22 @@
    "en": "Watch out for temperature changes.",
    "ko": "기온 변화에 주의해.",
    "blank": "気温"
+  }
+ ],
+ "w|気絶": [
+  {
+   "text": "注射を見ただけで飼い主が気絶しそうになり、悠斗はあわてた。",
+   "en": "The owner nearly fainted just from seeing the needle, and Yuto panicked.",
+   "ko": "주사를 보기만 했는데 주인이 기절할 뻔해서 유토는 당황했어요.",
+   "blank": "気絶",
+   "src": "made"
+  },
+  {
+   "text": "夏の暑さで、千尋は危うく気絶しそうになった。",
+   "en": "Chihiro almost fainted from the summer heat.",
+   "ko": "여름 더위에 지히로는 하마터면 기절할 뻔했어요.",
+   "blank": "気絶",
+   "src": "made"
   }
  ],
  "w|気象": [
@@ -64793,6 +66361,22 @@
    "blank": "治療"
   }
  ],
+ "w|治癒": [
+  {
+   "text": "悠斗が手術した猫の傷は、ひと月後には完全に治癒した。",
+   "en": "The wound of the cat Yuto operated on was completely healed a month later.",
+   "ko": "유토가 수술한 고양이의 상처는 한 달 뒤에 완전히 나았어요.",
+   "blank": "治癒",
+   "src": "made"
+  },
+  {
+   "text": "千尋の冬のしもやけは、春になって自然に治癒した。",
+   "en": "Chihiro's winter chilblains healed naturally when spring came.",
+   "ko": "지히로의 겨울 동상은 봄이 되자 저절로 나았어요.",
+   "blank": "治癒",
+   "src": "made"
+  }
+ ],
  "w|沿岸": [
   {
    "text": "沿岸の道を車で走ると、右手にずっと海が見えた。",
@@ -64977,6 +66561,22 @@
    "en": "I was so happy I could cry.",
    "ko": "울 만큼 기뻤어.",
    "blank": "泣く"
+  }
+ ],
+ "w|泣ける": [
+  {
+   "text": "長く通った老犬との別れの話は何度思い出しても泣けると、悠斗は言う。",
+   "en": "Yuto says the story of parting with an old dog that came for years makes him cry every time he remembers it.",
+   "ko": "오래 다닌 늙은 개와의 이별 이야기는 몇 번을 떠올려도 눈물이 난다고 유토는 말해요.",
+   "blank": "泣ける",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、桜が散る場面のある映画を見て「泣ける」と言った。",
+   "en": "Watching a movie with a scene of falling cherry blossoms, Chihiro said, \"This makes me cry.\"",
+   "ko": "지히로는 벚꽃이 지는 장면이 있는 영화를 보고 \"눈물 나\"라고 말했어요.",
+   "blank": "泣ける",
+   "src": "made"
   }
  ],
  "w|泥棒": [
@@ -66265,6 +67865,22 @@
    "blank": "混乱"
   }
  ],
+ "w|混入": [
+  {
+   "text": "健太は、仕入れたパンに異物が混入していないか確かめた。",
+   "en": "Kenta checked that no foreign objects had gotten into the bread he stocked.",
+   "ko": "겐타는 들여온 빵에 이물질이 섞여 들어가지 않았는지 확인했어요.",
+   "blank": "混入",
+   "src": "made"
+  },
+  {
+   "text": "古い壁の土にわらが混入されていることを、美咲は初めて知った。",
+   "en": "Misaki learned for the first time that straw is mixed into the clay of old walls.",
+   "ko": "오래된 벽 흙에 짚이 섞여 있다는 걸 미사키는 처음 알았어요.",
+   "blank": "混入",
+   "src": "made"
+  }
+ ],
  "w|混合": [
   {
    "text": "二種類の塗料を混合するときは、マスクをつける。",
@@ -66294,6 +67910,22 @@
    "en": "Mayu checked several times so as not to confuse two companies with similar names.",
    "ko": "마유는 이름이 비슷한 두 회사를 혼동하지 않도록 몇 번이나 확인했어요.",
    "blank": "混同",
+   "src": "made"
+  }
+ ],
+ "w|混沌": [
+  {
+   "text": "年末の健太の店の奥は、段ボールの山で混沌としている。",
+   "en": "At the end of the year, the back of Kenta's shop is chaotic with piles of cardboard boxes.",
+   "ko": "연말이면 겐타네 가게 안쪽은 상자 더미로 혼돈 그 자체예요.",
+   "blank": "混沌",
+   "src": "made"
+  },
+  {
+   "text": "工事の真っ最中、美咲の家の中は混沌としていた。",
+   "en": "In the middle of the work, the inside of Misaki's house was chaos.",
+   "ko": "공사가 한창일 때 미사키네 집 안은 엉망진창이었어요.",
+   "blank": "混沌",
    "src": "made"
   }
  ],
@@ -67411,6 +69043,22 @@
    "src": "made"
   }
  ],
+ "w|激戦": [
+  {
+   "text": "市長選は激戦となり、亮たち職員も結果を見守った。",
+   "en": "The mayoral election was a close race, and Ryo and the other staff watched the results.",
+   "ko": "시장 선거는 접전이 되어 료와 직원들도 결과를 지켜봤어요.",
+   "blank": "激戦",
+   "src": "made"
+  },
+  {
+   "text": "直売所の多い国道沿いは激戦区で、真由の店も工夫を重ねている。",
+   "en": "The national road lined with farm stands is fiercely competitive, so Mayu's shop keeps coming up with new ideas.",
+   "ko": "직판장이 많은 국도변은 격전지라서 마유의 가게도 궁리를 거듭하고 있어요.",
+   "blank": "激戦",
+   "src": "made"
+  }
+ ],
  "w|激減": [
   {
    "text": "ダムができてから、川のホタルは激減した。",
@@ -67521,6 +69169,22 @@
    "src": "made"
   }
  ],
+ "w|火傷": [
+  {
+   "text": "悠斗は、ストーブで火傷をした猫を治療した。",
+   "en": "Yuto treated a cat that had burned itself on a heater.",
+   "ko": "유토는 난로에 화상을 입은 고양이를 치료했어요.",
+   "blank": "火傷",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、冬に湯たんぽで低温火傷をした。",
+   "en": "Chihiro got a low-temperature burn from a hot water bottle in winter.",
+   "ko": "지히로는 겨울에 탕파 때문에 저온 화상을 입었어요.",
+   "blank": "火傷",
+   "src": "made"
+  }
+ ],
  "w|火力": [
   {
    "text": "直樹は川原でたき火をしたが、湿った枝では火力が足りなかった。",
@@ -67596,6 +69260,22 @@
    "en": "There was a fire in the building next to the pool, and Keiko and the others evacuated outside.",
    "ko": "수영장 옆 건물에서 화재가 나서 게이코네는 밖으로 대피했어요.",
    "blank": "火災",
+   "src": "made"
+  }
+ ],
+ "w|火葬": [
+  {
+   "text": "亮は、市営の火葬場の予約システムを新しくした。",
+   "en": "Ryo updated the booking system for the city crematorium.",
+   "ko": "료는 시립 화장장 예약 시스템을 새로 바꿨어요.",
+   "blank": "火葬",
+   "src": "made"
+  },
+  {
+   "text": "真由の村では昔、火葬ではなく土葬が普通だった。",
+   "en": "In Mayu's village, burial rather than cremation used to be the norm.",
+   "ko": "마유네 마을에서는 옛날에 화장이 아니라 매장이 보통이었어요.",
+   "blank": "火葬",
    "src": "made"
   }
  ],
@@ -68903,6 +70583,22 @@
    "src": "made"
   }
  ],
+ "w|物価": [
+  {
+   "text": "物価が上がっても、健太はコロッケの値段を変えていない。",
+   "en": "Even though prices have gone up, Kenta hasn't changed the price of his croquettes.",
+   "ko": "물가가 올라도 겐타는 크로켓 가격을 바꾸지 않았어요.",
+   "blank": "物価",
+   "src": "made"
+  },
+  {
+   "text": "物価の上昇で、美咲の改修の予算はぎりぎりだ。",
+   "en": "With prices rising, Misaki's renovation budget is very tight.",
+   "ko": "물가 상승으로 미사키의 수리 예산은 빠듯해요.",
+   "blank": "物価",
+   "src": "made"
+  }
+ ],
  "w|物凄い": [
   {
    "text": "締め切り前の悠斗は、物凄い速さでキーボードを打つ。",
@@ -69007,6 +70703,22 @@
    "blank": "特に"
   }
  ],
+ "w|特価": [
+  {
+   "text": "健太の店では、毎週火曜日に野菜が特価になる。",
+   "en": "At Kenta's shop, vegetables are on special every Tuesday.",
+   "ko": "겐타네 가게에서는 매주 화요일에 채소가 특가예요.",
+   "blank": "特価",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、特価になっていた壁紙をまとめて買った。",
+   "en": "Misaki bought a large amount of wallpaper that was on special.",
+   "ko": "미사키는 특가로 나온 벽지를 한꺼번에 샀어요.",
+   "blank": "特価",
+   "src": "made"
+  }
+ ],
  "w|特典": [
   {
    "text": "会員の特典があるよ。",
@@ -69033,6 +70745,22 @@
    "en": "It's a special day.",
    "ko": "특별한 날이네.",
    "blank": "特別"
+  }
+ ],
+ "w|特大": [
+  {
+   "text": "悠斗は、大型犬用の特大のケージを注文した。",
+   "en": "Yuto ordered an extra-large cage for big dogs.",
+   "ko": "유토는 대형견용 특대 케이지를 주문했어요.",
+   "blank": "特大",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、夏祭りで特大のかき氷を食べた。",
+   "en": "Chihiro ate an extra-large shaved ice at the summer festival.",
+   "ko": "지히로는 여름 축제에서 특대 빙수를 먹었어요.",
+   "blank": "特大",
+   "src": "made"
   }
  ],
  "w|特定": [
@@ -69186,6 +70914,22 @@
    "en": "A distinctive feature of Yoko's old school is that it values students' independence.",
    "ko": "요코 모교의 특색은 학생의 자율성을 중시하는 거예요.",
    "blank": "特色",
+   "src": "made"
+  }
+ ],
+ "w|特製": [
+  {
+   "text": "健太の店の特製おにぎりは、朝のうちになくなる。",
+   "en": "The special rice balls at Kenta's shop are gone by the end of the morning.",
+   "ko": "겐타네 가게의 특제 주먹밥은 아침나절에 다 떨어져요.",
+   "blank": "特製",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、大工さんに特製の本棚を作ってもらった。",
+   "en": "Misaki had a carpenter build a custom bookshelf for her.",
+   "ko": "미사키는 목수에게 특제 책장을 만들어 달라고 했어요.",
+   "blank": "特製",
    "src": "made"
   }
  ],
@@ -69745,6 +71489,22 @@
    "blank": "王"
   }
  ],
+ "w|王冠": [
+  {
+   "text": "亮の市役所のロビーには、姉妹都市から贈られた王冠の模型が飾られている。",
+   "en": "A model of a crown given by a sister city is displayed in the lobby of Ryo's city hall.",
+   "ko": "료가 일하는 시청 로비에는 자매도시에서 보낸 왕관 모형이 장식되어 있어요.",
+   "blank": "王冠",
+   "src": "made"
+  },
+  {
+   "text": "真由は、パイナップルの上の葉の部分を「王冠」と呼んでいる。",
+   "en": "Mayu calls the leafy top of a pineapple its \"crown.\"",
+   "ko": "마유는 파인애플 위쪽 잎 부분을 '왕관'이라고 불러요.",
+   "blank": "王冠",
+   "src": "made"
+  }
+ ],
  "w|王国": [
   {
    "text": "物語の舞台は王国だ。",
@@ -69818,6 +71578,22 @@
    "en": "Aoi dreams of someday taking the crown at this race.",
    "ko": "아오이는 언젠가 이 대회에서 정상에 오르는 꿈을 꿔요.",
    "blank": "王座",
+   "src": "made"
+  }
+ ],
+ "w|王朝": [
+  {
+   "text": "亮は、ある古い王朝の歴史を紹介する展示を企画した。",
+   "en": "Ryo planned an exhibition introducing the history of an ancient dynasty.",
+   "ko": "료는 어느 옛 왕조의 역사를 소개하는 전시를 기획했어요.",
+   "blank": "王朝",
+   "src": "made"
+  },
+  {
+   "text": "真由の育てる古い品種のお茶は、昔の王朝の時代から伝わるものだそうだ。",
+   "en": "The old variety of tea Mayu grows is said to have been handed down since the days of an ancient dynasty.",
+   "ko": "마유가 기르는 오래된 품종의 차는 옛 왕조 시대부터 전해 내려온 거래요.",
+   "blank": "王朝",
    "src": "made"
   }
  ],
@@ -70553,6 +72329,22 @@
    "src": "made"
   }
  ],
+ "w|生前": [
+  {
+   "text": "翔太は、祖父が生前に使っていた万年筆で手紙を書いた。",
+   "en": "Shota wrote a letter with the fountain pen his grandfather used while he was alive.",
+   "ko": "쇼타는 할아버지가 생전에 쓰던 만년필로 편지를 썼어요.",
+   "blank": "生前",
+   "src": "made"
+  },
+  {
+   "text": "由美のコーチは、生前「最後まであきらめるな」が口ぐせだった。",
+   "en": "While he was alive, Yumi's coach always used to say, \"Never give up until the end.\"",
+   "ko": "유미의 코치는 생전에 \"끝까지 포기하지 마\"가 입버릇이었어요.",
+   "blank": "生前",
+   "src": "made"
+  }
+ ],
  "w|生命": [
   {
    "text": "生命の危険がある。",
@@ -71012,6 +72804,22 @@
    "en": "Applications for the autumn haiku class close this week.",
    "ko": "가을 하이쿠 교실 신청은 이번 주에 마감이에요.",
    "blank": "申し込み",
+   "src": "made"
+  }
+ ],
+ "w|申し込む": [
+  {
+   "text": "亮は、市役所の窓口で娘の保育園の入園を申し込んだ。",
+   "en": "At the city hall counter, Ryo applied for his daughter's admission to nursery school.",
+   "ko": "료는 시청 창구에서 딸의 어린이집 입소를 신청했어요.",
+   "blank": "申し込んだ",
+   "src": "made"
+  },
+  {
+   "text": "真由は、新しいトラクターを買うための補助金を申し込んだ。",
+   "en": "Mayu applied for a subsidy to buy a new tractor.",
+   "ko": "마유는 새 트랙터를 사기 위한 보조금을 신청했어요.",
+   "blank": "申し込んだ",
    "src": "made"
   }
  ],
@@ -71682,6 +73490,22 @@
    "en": "A guest who had been worrying got her spirits back after soaking in the hot spring.",
    "ko": "걱정에 시달리던 손님이 온천에 몸을 담그고 기운을 되찾았어요.",
    "blank": "病ん",
+   "src": "made"
+  }
+ ],
+ "w|病棟": [
+  {
+   "text": "悠斗の病院には、入院中の動物のための小さな病棟がある。",
+   "en": "Yuto's clinic has a small ward for hospitalized animals.",
+   "ko": "유토의 병원에는 입원한 동물을 위한 작은 병동이 있어요.",
+   "blank": "病棟",
+   "src": "made"
+  },
+  {
+   "text": "看護師の千尋の姉は、冬になると病棟が風邪の患者で忙しくなると言う。",
+   "en": "Chihiro's older sister, a nurse, says the ward gets busy with cold patients in winter.",
+   "ko": "간호사인 지히로의 언니는 겨울이 되면 병동이 감기 환자로 바빠진다고 해요.",
+   "blank": "病棟",
    "src": "made"
   }
  ],
@@ -72588,6 +74412,22 @@
    "en": "The cooking class Aoi attends is on an upper floor of the department store in front of the station.",
    "ko": "아오이가 다니는 요리 교실은 역 앞 백화점 위층에 있어요.",
    "blank": "百貨店",
+   "src": "made"
+  }
+ ],
+ "w|的中": [
+  {
+   "text": "亮の予想が的中し、窓口は朝から大混雑だった。",
+   "en": "Just as Ryo predicted, the counters were packed from the morning.",
+   "ko": "료의 예상이 적중해서 창구는 아침부터 몹시 붐볐어요.",
+   "blank": "的中",
+   "src": "made"
+  },
+  {
+   "text": "雨が降るという真由の予想が的中し、種まきを延ばしたのは正解だった。",
+   "en": "Mayu's prediction of rain was spot on, so postponing the sowing was the right call.",
+   "ko": "비가 올 거라는 마유의 예상이 적중해서 씨뿌리기를 미룬 건 잘한 일이었어요.",
+   "blank": "的中",
    "src": "made"
   }
  ],
@@ -73645,6 +75485,22 @@
    "src": "made"
   }
  ],
+ "w|真っ先": [
+  {
+   "text": "家に帰ると、翔太は真っ先に猫にえさをやる。",
+   "en": "When he gets home, the first thing Shota does is feed his cat.",
+   "ko": "집에 오면 쇼타는 가장 먼저 고양이에게 밥을 줘요.",
+   "blank": "真っ先",
+   "src": "made"
+  },
+  {
+   "text": "ゴールした由美は、真っ先に母に電話した。",
+   "en": "After crossing the finish line, the first thing Yumi did was call her mother.",
+   "ko": "결승선을 통과한 유미는 맨 먼저 어머니에게 전화했어요.",
+   "blank": "真っ先",
+   "src": "made"
+  }
+ ],
  "w|真っ暗": [
   {
    "text": "部活が終わって校門を出ると、外はもう真っ暗だった。",
@@ -74137,6 +75993,22 @@
    "en": "Good-quality sleep is important.",
    "ko": "질 좋은 수면이 중요해.",
    "blank": "睡眠"
+  }
+ ],
+ "w|瞑想": [
+  {
+   "text": "手術と手術の合間に、悠斗は数分だけ瞑想をする。",
+   "en": "Between operations, Yuto meditates for just a few minutes.",
+   "ko": "수술과 수술 사이에 유토는 몇 분만 명상을 해요.",
+   "blank": "瞑想",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、春の縁側で瞑想するのが好きだ。",
+   "en": "Chihiro likes to meditate on the veranda in spring.",
+   "ko": "지히로는 봄날 툇마루에서 명상하는 걸 좋아해요.",
+   "blank": "瞑想",
+   "src": "made"
   }
  ],
  "w|瞬間": [
@@ -75229,6 +77101,22 @@
    "src": "made"
   }
  ],
+ "w|神殿": [
+  {
+   "text": "亮は、旅行先で撮った古い神殿の写真を課のみんなに見せた。",
+   "en": "Ryo showed his colleagues photos of an ancient temple he took on his trip.",
+   "ko": "료는 여행지에서 찍은 오래된 신전 사진을 과 사람들에게 보여 줬어요.",
+   "blank": "神殿",
+   "src": "made"
+  },
+  {
+   "text": "真由の農場の近くの神社では、秋になると神殿に新米が供えられる。",
+   "en": "At the shrine near Mayu's farm, new rice is offered at the main hall every autumn.",
+   "ko": "마유네 농장 근처 신사에서는 가을이 되면 신전에 햅쌀을 바쳐요.",
+   "blank": "神殿",
+   "src": "made"
+  }
+ ],
  "w|神父": [
   {
    "text": "教会の結婚式で、神父が大輔たちの誓いの言葉を読み上げた。",
@@ -75551,6 +77439,22 @@
    "en": "It's a town with good welfare services.",
    "ko": "복지가 잘 갖춰진 동네야.",
    "blank": "福祉"
+  }
+ ],
+ "w|福袋": [
+  {
+   "text": "正月、健太の店では駄菓子の福袋がすぐに売り切れた。",
+   "en": "At New Year's, the cheap-candy grab bags at Kenta's shop sold out right away.",
+   "ko": "설날에 겐타네 가게에서는 과자 복주머니가 금방 다 팔렸어요.",
+   "blank": "福袋",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、ホームセンターの福袋に入っていた工具を家の修理に使った。",
+   "en": "Misaki used the tools from a home-improvement store grab bag to fix up her house.",
+   "ko": "미사키는 철물점 복주머니에 들어 있던 공구를 집수리에 썼어요.",
+   "blank": "福袋",
+   "src": "made"
   }
  ],
  "w|私": [
@@ -76587,6 +78491,22 @@
    "src": "made"
   }
  ],
+ "w|立ち寄る": [
+  {
+   "text": "健太の店に、毛皮のコートを着た上品な老婦人が立ち寄った。",
+   "en": "An elegant elderly woman in a fur coat stopped by Kenta's shop.",
+   "ko": "겐타네 가게에 모피 코트를 입은 기품 있는 할머니가 들렀어요.",
+   "blank": "立ち寄った",
+   "src": "made"
+  },
+  {
+   "text": "近所の大工さんが、美咲の家にときどき立ち寄って助言してくれる。",
+   "en": "A carpenter from the neighborhood sometimes drops by Misaki's house to give her advice.",
+   "ko": "이웃 목수가 가끔 미사키네 집에 들러서 조언해 줘요.",
+   "blank": "立ち寄って",
+   "src": "made"
+  }
+ ],
  "w|立つ": [
   {
    "text": "ここに立つ予定だ。",
@@ -76709,6 +78629,22 @@
    "ko": "괜찮아, 넌 할 수 있어! 자신을 믿어! 넌 이미 훌륭한 수영 선수야!",
    "blank": "立派",
    "src": "tatoeba:75897/mookeee en:327821"
+  }
+ ],
+ "w|童話": [
+  {
+   "text": "亮の市は、町出身の童話作家の記念館を建てた。",
+   "en": "Ryo's city built a memorial hall for a children's story writer from the town.",
+   "ko": "료의 시는 이 마을 출신 동화 작가의 기념관을 지었어요.",
+   "blank": "童話",
+   "src": "made"
+  },
+  {
+   "text": "真由は、子どもの頃に読んだ童話の農場に憧れて農家になった。",
+   "en": "Mayu became a farmer because she longed for the farm in a children's story she read as a child.",
+   "ko": "마유는 어릴 때 읽은 동화 속 농장을 동경해서 농부가 됐어요.",
+   "blank": "童話",
+   "src": "made"
   }
  ],
  "w|端末": [
@@ -77239,6 +79175,22 @@
    "blank": "精神"
   }
  ],
+ "w|精神病": [
+  {
+   "text": "悠斗は、精神病の患者が入院する施設で、犬を使ったセラピーに協力している。",
+   "en": "Yuto helps with dog-assisted therapy at a facility for patients with mental illness.",
+   "ko": "유토는 정신 질환 환자가 입원한 시설에서 개를 활용한 치료에 협력하고 있어요.",
+   "blank": "精神病",
+   "src": "made"
+  },
+  {
+   "text": "昔は精神病という言葉が広く使われていたと、千尋は心理学の授業で習った。",
+   "en": "In psychology class, Chihiro learned that the term \"mental disease\" used to be widely used.",
+   "ko": "옛날에는 '정신병'이라는 말이 널리 쓰였다고 지히로는 심리학 수업에서 배웠어요.",
+   "blank": "精神病",
+   "src": "made"
+  }
+ ],
  "w|糖尿": [
   {
    "text": "亮の父は糖尿の気があるので、キャンプ飯も甘いものを控えめにした。",
@@ -77575,6 +79527,22 @@
    "blank": "素直"
   }
  ],
+ "w|素顔": [
+  {
+   "text": "白衣を脱いだ悠斗の素顔は、意外とおっとりしている。",
+   "en": "Out of his white coat, Yuto's true self is surprisingly easygoing.",
+   "ko": "흰 가운을 벗은 유토의 맨얼굴은 의외로 느긋해요.",
+   "blank": "素顔",
+   "src": "made"
+  },
+  {
+   "text": "暑い夏の日、千尋は化粧をせずに素顔で出かけた。",
+   "en": "On a hot summer day, Chihiro went out without makeup.",
+   "ko": "더운 여름날 지히로는 화장을 하지 않고 맨얼굴로 외출했어요.",
+   "blank": "素顔",
+   "src": "made"
+  }
+ ],
  "w|紫": [
   {
    "text": "目撃者によると、犯人は紫の帽子をかぶっていたらしい。",
@@ -77846,6 +79814,22 @@
    "en": "The move is in its final stage, and only the fridge and washing machine are left.",
    "ko": "이사도 막바지라 남은 건 냉장고와 세탁기뿐이에요.",
    "blank": "終盤",
+   "src": "made"
+  }
+ ],
+ "w|終身": [
+  {
+   "text": "翔太の父の時代は、終身雇用が当たり前だった。",
+   "en": "In Shota's father's generation, lifetime employment was the norm.",
+   "ko": "쇼타의 아버지 세대에는 종신 고용이 당연했어요.",
+   "blank": "終身",
+   "src": "made"
+  },
+  {
+   "text": "由美のランニングクラブには、終身会員の制度がある。",
+   "en": "Yumi's running club has a lifetime membership system.",
+   "ko": "유미의 러닝 클럽에는 종신 회원 제도가 있어요.",
+   "blank": "終身",
    "src": "made"
   }
  ],
@@ -78907,6 +80891,22 @@
    "src": "made"
   }
  ],
+ "w|総集編": [
+  {
+   "text": "亮は、市の広報番組の一年分の総集編を作った。",
+   "en": "Ryo put together a compilation of a year's worth of the city's public relations program.",
+   "ko": "료는 시 홍보 프로그램 일 년 치 총집편을 만들었어요.",
+   "blank": "総集編",
+   "src": "made"
+  },
+  {
+   "text": "真由の農場を一年間追ったテレビ番組の総集編が放送された。",
+   "en": "A compilation episode of a TV program that followed Mayu's farm for a year was broadcast.",
+   "ko": "마유네 농장을 일 년 동안 따라간 TV 프로그램의 총집편이 방송됐어요.",
+   "blank": "総集編",
+   "src": "made"
+  }
+ ],
  "w|総額": [
   {
    "text": "レジの客が今日の買い物の総額を見て、少し驚いていた。",
@@ -79647,6 +81647,22 @@
    "blank": "羽"
   }
  ],
+ "w|翌年": [
+  {
+   "text": "翔太は、大学を出た翌年に今のアパートに引っ越した。",
+   "en": "Shota moved into his current apartment the year after he graduated from university.",
+   "ko": "쇼타는 대학을 졸업한 다음 해에 지금 아파트로 이사했어요.",
+   "blank": "翌年",
+   "src": "made"
+  },
+  {
+   "text": "初めて完走した翌年、由美はもっと長いレースに挑んだ。",
+   "en": "The year after she first finished a race, Yumi took on a longer one.",
+   "ko": "처음 완주한 다음 해에 유미는 더 긴 레이스에 도전했어요.",
+   "blank": "翌年",
+   "src": "made"
+  }
+ ],
  "w|翌日": [
   {
    "text": "台風が過ぎた翌日は、雲ひとつない青空だった。",
@@ -80221,6 +82237,22 @@
    "blank": "肌"
   }
  ],
+ "w|肖像": [
+  {
+   "text": "亮が働く市役所の廊下には、歴代市長の肖像が並んでいる。",
+   "en": "Portraits of past mayors line the hallway of the city hall where Ryo works.",
+   "ko": "료가 일하는 시청 복도에는 역대 시장의 초상이 걸려 있어요.",
+   "blank": "肖像",
+   "src": "made"
+  },
+  {
+   "text": "真由の家の居間には、農場を開いた曽祖父の肖像画が飾られている。",
+   "en": "A portrait of the great-grandfather who started the farm hangs in the living room of Mayu's house.",
+   "ko": "마유네 거실에는 농장을 연 증조할아버지의 초상화가 걸려 있어요.",
+   "blank": "肖像",
+   "src": "made"
+  }
+ ],
  "w|肝心": [
   {
    "text": "稽古を重ねても、肝心のせりふを忘れては意味がないと演出家は言った。",
@@ -80250,6 +82282,22 @@
    "en": "The role is a heavy drinker, but Aoi, mindful of her liver, drank tea during filming.",
    "ko": "술이 센 역이지만 아오이는 간을 생각해서 촬영 때는 차를 마셨어요.",
    "blank": "肝臓",
+   "src": "made"
+  }
+ ],
+ "w|肥満": [
+  {
+   "text": "悠斗は、おやつのあげすぎによる犬の肥満を心配している。",
+   "en": "Yuto is worried about dogs becoming obese from too many treats.",
+   "ko": "유토는 간식을 너무 줘서 생기는 개의 비만을 걱정해요.",
+   "blank": "肥満",
+   "src": "made"
+  },
+  {
+   "text": "冬に食べすぎた千尋の猫は、少し肥満気味だ。",
+   "en": "Chihiro's cat, which ate too much over the winter, is a bit overweight.",
+   "ko": "겨울에 너무 많이 먹은 지히로의 고양이는 조금 비만이에요.",
+   "blank": "肥満",
    "src": "made"
   }
  ],
@@ -80573,6 +82621,22 @@
    "blank": "脱いだ"
   }
  ],
+ "w|脱げる": [
+  {
+   "text": "急いで書類を届けに行く途中、亮は靴が脱げてしまった。",
+   "en": "On his way to hurriedly deliver some documents, Ryo's shoe came off.",
+   "ko": "서둘러 서류를 갖다주러 가는 길에 료는 신발이 벗겨지고 말았어요.",
+   "blank": "脱げて",
+   "src": "made"
+  },
+  {
+   "text": "田んぼのぬかるみで、真由の長靴が脱げた。",
+   "en": "Mayu's rubber boot came off in the mud of the rice paddy.",
+   "ko": "논의 진흙탕에서 마유의 장화가 벗겨졌어요.",
+   "blank": "脱げた",
+   "src": "made"
+  }
+ ],
  "w|脱出": [
   {
    "text": "彼はやっとのことでその燃えているバスから脱出した。",
@@ -80850,6 +82914,22 @@
    "en": "The carpenter told Aoi that replacing the entire roof would cost a huge amount.",
    "ko": "지붕을 다 바꾸면 막대한 비용이 든다고 목수에게 들었어요.",
    "blank": "膨大",
+   "src": "made"
+  }
+ ],
+ "w|膨張": [
+  {
+   "text": "犬の胃が膨張する病気はとても危険だと、悠斗は説明した。",
+   "en": "Yuto explained that the condition where a dog's stomach bloats is very dangerous.",
+   "ko": "개의 위가 팽창하는 병은 매우 위험하다고 유토는 설명했어요.",
+   "blank": "膨張",
+   "src": "made"
+  },
+  {
+   "text": "夏の暑さで空気が膨張するので、千尋は自転車のタイヤの空気を少し抜いた。",
+   "en": "Because air expands in the summer heat, Chihiro let a little air out of her bicycle tires.",
+   "ko": "여름 더위에 공기가 팽창하니까 지히로는 자전거 타이어 바람을 조금 뺐어요.",
+   "blank": "膨張",
    "src": "made"
   }
  ],
@@ -81242,6 +83322,22 @@
    "en": "Yumi started practicing scales every morning on her own initiative.",
    "ko": "유미는 자발적으로 매일 아침 음계 연습을 시작했어요.",
    "blank": "自発",
+   "src": "made"
+  }
+ ],
+ "w|自白": [
+  {
+   "text": "市のお金を盗んだ元職員が自白したと聞いて、亮は驚いた。",
+   "en": "Ryo was surprised to hear that a former employee who stole city money had confessed.",
+   "ko": "시의 돈을 훔친 전 직원이 자백했다는 말을 듣고 료는 놀랐어요.",
+   "blank": "自白",
+   "src": "made"
+  },
+  {
+   "text": "真由の畑のスイカを盗んだ男が自白したと、警察から連絡があった。",
+   "en": "The police called Mayu to say that the man who stole watermelons from her field had confessed.",
+   "ko": "마유네 밭의 수박을 훔친 남자가 자백했다고 경찰에서 연락이 왔어요.",
+   "blank": "自白",
    "src": "made"
   }
  ],
@@ -81901,6 +83997,22 @@
    "src": "made"
   }
  ],
+ "w|若年": [
+  {
+   "text": "翔太の会社は、若年層向けの商品を作っている。",
+   "en": "Shota's company makes products aimed at young people.",
+   "ko": "쇼타의 회사는 젊은 층을 위한 상품을 만들어요.",
+   "blank": "若年",
+   "src": "made"
+  },
+  {
+   "text": "由美が出る大会には、若年の部とシニアの部がある。",
+   "en": "The race Yumi runs in has a youth division and a senior division.",
+   "ko": "유미가 나가는 대회에는 청소년부와 시니어부가 있어요.",
+   "blank": "若年",
+   "src": "made"
+  }
+ ],
  "w|若手": [
   {
    "text": "佐藤さんは、若手の中でもいちばん元気がいい。",
@@ -82537,6 +84649,22 @@
    "src": "made"
   }
  ],
+ "w|落札": [
+  {
+   "text": "健太は、ネットのオークションで古いレジを落札した。",
+   "en": "Kenta won an old cash register in an online auction.",
+   "ko": "겐타는 인터넷 경매에서 오래된 계산대를 낙찰받았어요.",
+   "blank": "落札",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、オークションで古い引き戸を安く落札した。",
+   "en": "Misaki won an old sliding door cheaply at an auction.",
+   "ko": "미사키는 경매에서 오래된 미닫이문을 싸게 낙찰받았어요.",
+   "blank": "落札",
+   "src": "made"
+  }
+ ],
  "w|落語": [
   {
    "text": "国語の時間に、健太たちは落語のビデオを見て大笑いした。",
@@ -82707,6 +84835,22 @@
    "en": "This medicine works.",
    "ko": "이 약 잘 들어.",
    "blank": "薬"
+  }
+ ],
+ "w|薬剤師": [
+  {
+   "text": "人間の薬を犬に与える前に、薬剤師ではなく獣医に相談してほしいと悠斗は言う。",
+   "en": "Yuto says that before giving human medicine to a dog, owners should consult a vet, not a pharmacist.",
+   "ko": "사람 약을 개에게 주기 전에 약사가 아니라 수의사와 상담해 달라고 유토는 말해요.",
+   "blank": "薬剤師",
+   "src": "made"
+  },
+  {
+   "text": "花粉の季節が来ると、千尋は薬剤師に相談して薬を選ぶ。",
+   "en": "When pollen season comes, Chihiro consults a pharmacist to choose her medicine.",
+   "ko": "꽃가루 철이 오면 지히로는 약사와 상담해서 약을 골라요.",
+   "blank": "薬剤師",
+   "src": "made"
   }
  ],
  "w|薬品": [
@@ -83244,6 +85388,22 @@
    "en": "The department manager's and section chief's opinions clashed, and the meeting dragged on.",
    "ko": "부장님과 과장님의 의견이 충돌해서 회의가 길어졌어요.",
    "blank": "衝突",
+   "src": "made"
+  }
+ ],
+ "w|衣服": [
+  {
+   "text": "健太の店では、食べ物だけでなく簡単な衣服も売っている。",
+   "en": "Kenta's shop sells not only food but also some basic clothing.",
+   "ko": "겐타네 가게에서는 먹을 것뿐 아니라 간단한 옷도 팔아요.",
+   "blank": "衣服",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、古い家の押し入れから昔の衣服をたくさん見つけた。",
+   "en": "Misaki found a lot of old clothing in the closet of the old house.",
+   "ko": "미사키는 낡은 집 벽장에서 옛날 옷을 잔뜩 발견했어요.",
+   "blank": "衣服",
    "src": "made"
   }
  ],
@@ -84557,6 +86717,22 @@
    "src": "made"
   }
  ],
+ "w|見当": [
+  {
+   "text": "猫が元気をなくした原因に、悠斗はだいたい見当がついていた。",
+   "en": "Yuto had a rough idea of why the cat had lost its energy.",
+   "ko": "고양이가 기운이 없어진 원인을 유토는 대강 짐작하고 있었어요.",
+   "blank": "見当",
+   "src": "made"
+  },
+  {
+   "text": "春の服をどこにしまったのか、千尋は見当もつかなかった。",
+   "en": "Chihiro had no idea where she had put away her spring clothes.",
+   "ko": "봄옷을 어디에 넣어 뒀는지 지히로는 짐작도 가지 않았어요.",
+   "blank": "見当",
+   "src": "made"
+  }
+ ],
  "w|見当たる": [
   {
    "text": "被害者の財布だけが、どこにも見当たらなかった。",
@@ -84602,6 +86778,22 @@
    "en": "Even with the same data, the conclusion changes depending on how you look at it.",
    "ko": "같은 데이터라도 보는 시각에 따라 결론이 달라져요.",
    "blank": "見方",
+   "src": "made"
+  }
+ ],
+ "w|見本": [
+  {
+   "text": "健太は、新しいお菓子の見本をレジの横に置いた。",
+   "en": "Kenta put a sample of the new snack next to the register.",
+   "ko": "겐타는 새 과자 견본을 계산대 옆에 놓았어요.",
+   "blank": "見本",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、床材の見本を何枚も並べて比べた。",
+   "en": "Misaki lined up several flooring samples and compared them.",
+   "ko": "미사키는 바닥재 견본을 여러 장 늘어놓고 비교했어요.",
+   "blank": "見本",
    "src": "made"
   }
  ],
@@ -86573,6 +88765,22 @@
    "src": "made"
   }
  ],
+ "w|話し方": [
+  {
+   "text": "悠斗の穏やかな話し方に、怖がっていた犬も落ち着いた。",
+   "en": "Yuto's gentle way of speaking calmed even the frightened dog.",
+   "ko": "유토의 차분한 말투에 겁먹었던 개도 진정했어요.",
+   "blank": "話し方",
+   "src": "made"
+  },
+  {
+   "text": "新しい職場では、千尋はゆっくりした話し方を心がけている。",
+   "en": "At her new workplace, Chihiro makes a point of speaking slowly.",
+   "ko": "새 직장에서 지히로는 천천히 말하려고 신경 써요.",
+   "blank": "話し方",
+   "src": "made"
+  }
+ ],
  "w|話す": [
   {
    "text": "あとで話そう。",
@@ -88425,6 +90633,22 @@
    "blank": "販売"
   }
  ],
+ "w|責める": [
+  {
+   "text": "手続きのミスで、亮は市民に強く責められた。",
+   "en": "Ryo was harshly blamed by a resident for a mistake in the paperwork.",
+   "ko": "수속 실수 때문에 료는 시민에게 심하게 질책을 받았어요.",
+   "blank": "責められた",
+   "src": "made"
+  },
+  {
+   "text": "真由は、霜で苗を枯らしてしまった自分を責めた。",
+   "en": "Mayu blamed herself for letting the seedlings die in the frost.",
+   "ko": "마유는 서리로 모종을 말려 죽인 자신을 탓했어요.",
+   "blank": "責めた",
+   "src": "made"
+  }
+ ],
  "w|責任": [
   {
    "text": "責任、取ってよ。",
@@ -88515,6 +90739,22 @@
    "en": "It became a valuable experience.",
    "ko": "귀중한 경험이 됐어.",
    "blank": "貴重"
+  }
+ ],
+ "w|買い取る": [
+  {
+   "text": "亮の勤める市は、駅前の空き地を買い取って公園にする計画だ。",
+   "en": "The city where Ryo works plans to buy the vacant lot in front of the station and turn it into a park.",
+   "ko": "료가 일하는 시는 역 앞 공터를 사들여서 공원으로 만들 계획이에요.",
+   "blank": "買い取って",
+   "src": "made"
+  },
+  {
+   "text": "近所の業者が、真由の育てた大豆をすべて買い取った。",
+   "en": "A local dealer bought all the soybeans Mayu grew.",
+   "ko": "근처 업체가 마유가 기른 콩을 전부 사들였어요.",
+   "blank": "買い取った",
+   "src": "made"
   }
  ],
  "w|買い物": [
@@ -89085,6 +91325,22 @@
    "src": "made"
   }
  ],
+ "w|購買": [
+  {
+   "text": "健太の店は、昔は近くの高校の購買も任されていた。",
+   "en": "Kenta's shop used to run the school store at the nearby high school as well.",
+   "ko": "겐타네 가게는 옛날에 근처 고등학교 매점도 맡았었어요.",
+   "blank": "購買",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、昔は学校の購買だった建物を住まいに作り替えた。",
+   "en": "Misaki converted a building that used to be a school store into a home.",
+   "ko": "미사키는 예전에 학교 매점이던 건물을 집으로 개조했어요.",
+   "blank": "購買",
+   "src": "made"
+  }
+ ],
  "w|贅沢": [
   {
    "text": "誠の隣の夫婦は、たまの休みに温泉旅行という贅沢をしている。",
@@ -89488,6 +91744,22 @@
    "en": "Cables got tangled at her feet, and Sakura almost tripped.",
    "ko": "케이블이 발밑에서 엉켜서 사쿠라는 하마터면 넘어질 뻔했어요.",
    "blank": "足元",
+   "src": "made"
+  }
+ ],
+ "w|足首": [
+  {
+   "text": "暴れる犬を押さえたとき、悠斗は足首をひねってしまった。",
+   "en": "Yuto twisted his ankle while holding down a struggling dog.",
+   "ko": "날뛰는 개를 붙잡다가 유토는 발목을 삐고 말았어요.",
+   "blank": "足首",
+   "src": "made"
+  },
+  {
+   "text": "凍った道で滑って、千尋は足首を痛めた。",
+   "en": "Chihiro slipped on an icy road and hurt her ankle.",
+   "ko": "언 길에서 미끄러져서 지히로는 발목을 다쳤어요.",
+   "blank": "足首",
    "src": "made"
   }
  ],
@@ -90825,6 +93097,22 @@
    "src": "made"
   }
  ],
+ "w|近頃": [
+  {
+   "text": "近頃、翔太は夜更かしをしなくなった。",
+   "en": "Lately, Shota has stopped staying up late.",
+   "ko": "요즘 쇼타는 밤늦게까지 깨어 있지 않게 됐어요.",
+   "blank": "近頃",
+   "src": "made"
+  },
+  {
+   "text": "近頃、由美の走るペースが上がってきた。",
+   "en": "Lately, Yumi's running pace has picked up.",
+   "ko": "요즘 유미의 달리는 속도가 빨라졌어요.",
+   "blank": "近頃",
+   "src": "made"
+  }
+ ],
  "w|返す": [
   {
    "text": "本を返すね。",
@@ -91429,6 +93717,22 @@
    "en": "Shipping became free.",
    "ko": "배송비가 무료가 됐어.",
    "blank": "送料"
+  }
+ ],
+ "w|送金": [
+  {
+   "text": "健太は、遠くの大学に通う娘に毎月送金している。",
+   "en": "Kenta sends money every month to his daughter, who goes to a university far away.",
+   "ko": "겐타는 먼 대학에 다니는 딸에게 매달 송금해요.",
+   "blank": "送金",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、遠くに住む兄から修理代の送金を受けた。",
+   "en": "Misaki received money for the repairs from her older brother, who lives far away.",
+   "ko": "미사키는 멀리 사는 오빠에게서 수리비를 송금받았어요.",
+   "blank": "送金",
+   "src": "made"
   }
  ],
  "w|逃げる": [
@@ -93025,6 +95329,22 @@
    "src": "made"
   }
  ],
+ "w|過半数": [
+  {
+   "text": "亮がまとめた条例案は、市議会で過半数の賛成を得た。",
+   "en": "The ordinance bill Ryo drafted won majority support in the city council.",
+   "ko": "료가 정리한 조례안은 시의회에서 과반수의 찬성을 얻었어요.",
+   "blank": "過半数",
+   "src": "made"
+  },
+  {
+   "text": "真由の村では、農家の過半数が新しい直売所の計画に賛成した。",
+   "en": "In Mayu's village, a majority of farmers supported the plan for a new farm stand.",
+   "ko": "마유네 마을에서는 농가의 과반수가 새 직판장 계획에 찬성했어요.",
+   "blank": "過半数",
+   "src": "made"
+  }
+ ],
  "w|過去": [
   {
    "text": "過去の話だよ。",
@@ -93297,6 +95617,22 @@
    "en": "This is the wrong road.",
    "ko": "길이 아니야.",
    "blank": "違う"
+  }
+ ],
+ "w|違える": [
+  {
+   "text": "重い段ボールを持ち上げたとき、健太は首の筋を違えた。",
+   "en": "Kenta cricked his neck when he lifted a heavy cardboard box.",
+   "ko": "무거운 상자를 들어 올리다가 겐타는 목을 삐끗했어요.",
+   "blank": "違えた",
+   "src": "made"
+  },
+  {
+   "text": "「約束は違えない」と言った職人は、期日どおりに美咲の家の工事を終えた。",
+   "en": "The craftsman who said \"I never break a promise\" finished the work on Misaki's house on schedule.",
+   "ko": "\"약속은 어기지 않는다\"고 한 장인은 기한에 맞춰 미사키네 집 공사를 끝냈어요.",
+   "blank": "違えない",
+   "src": "made"
   }
  ],
  "w|違反": [
@@ -94765,6 +97101,38 @@
    "src": "made"
   }
  ],
+ "w|重度": [
+  {
+   "text": "亮は、重度の障害がある人のための支援制度を担当している。",
+   "en": "Ryo is in charge of the support system for people with severe disabilities.",
+   "ko": "료는 중증 장애가 있는 사람을 위한 지원 제도를 맡고 있어요.",
+   "blank": "重度",
+   "src": "made"
+  },
+  {
+   "text": "真由の牛が重度の病気にかかり、獣医が毎日来ていた。",
+   "en": "One of Mayu's cows came down with a serious illness, and the vet came every day.",
+   "ko": "마유의 소가 심한 병에 걸려서 수의사가 매일 왔어요.",
+   "blank": "重度",
+   "src": "made"
+  }
+ ],
+ "w|重症": [
+  {
+   "text": "車にはねられた猫が重症で運ばれてきて、悠斗はすぐに手術をした。",
+   "en": "A cat hit by a car was brought in seriously injured, and Yuto operated right away.",
+   "ko": "차에 치인 고양이가 중상으로 실려 와서 유토는 바로 수술을 했어요.",
+   "blank": "重症",
+   "src": "made"
+  },
+  {
+   "text": "千尋の花粉症は、今年は特に重症だ。",
+   "en": "Chihiro's hay fever is especially severe this year.",
+   "ko": "지히로의 꽃가루 알레르기는 올해 특히 심해요.",
+   "blank": "重症",
+   "src": "made"
+  }
+ ],
  "w|重視": [
   {
    "text": "この学校は、勉強と同じくらい挨拶を重視している。",
@@ -94977,6 +97345,22 @@
    "en": "We recycle metal.",
    "ko": "금속을 재활용해.",
    "blank": "金属"
+  }
+ ],
+ "w|金庫": [
+  {
+   "text": "健太は、店を閉めると売り上げを金庫にしまう。",
+   "en": "When Kenta closes the shop, he puts the day's takings in the safe.",
+   "ko": "겐타는 가게 문을 닫으면 매상을 금고에 넣어요.",
+   "blank": "金庫",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、床下から古い金庫を見つけた。",
+   "en": "Misaki found an old safe under the floor.",
+   "ko": "미사키는 마루 밑에서 오래된 금고를 발견했어요.",
+   "blank": "金庫",
+   "src": "made"
   }
  ],
  "w|金持ち": [
@@ -95467,6 +97851,22 @@
    "blank": "長官"
   }
  ],
+ "w|長寿": [
+  {
+   "text": "悠斗の病院に通う柴犬は、二十歳を迎えた長寿の犬だ。",
+   "en": "The Shiba Inu that comes to Yuto's clinic is a long-lived dog that has turned twenty.",
+   "ko": "유토의 병원에 다니는 시바견은 스무 살이 된 장수 개예요.",
+   "blank": "長寿",
+   "src": "made"
+  },
+  {
+   "text": "千尋の祖母は、旬のものを食べるのが長寿の秘訣だと言う。",
+   "en": "Chihiro's grandmother says that eating food in season is the secret to a long life.",
+   "ko": "지히로의 할머니는 제철 음식을 먹는 게 장수 비결이라고 말해요.",
+   "blank": "長寿",
+   "src": "made"
+  }
+ ],
  "w|長年": [
   {
    "text": "長年使ったこたつを、亮はついに買い替えることにした。",
@@ -95757,6 +98157,22 @@
    "en": "Want me to open the window?",
    "ko": "창문 열까?",
    "blank": "開ける"
+  }
+ ],
+ "w|開会": [
+  {
+   "text": "亮は、市民祭りの開会のあいさつを市長のために書いた。",
+   "en": "Ryo wrote the opening speech for the mayor at the citizens' festival.",
+   "ko": "료는 시민 축제 개회 인사말을 시장을 위해 썼어요.",
+   "blank": "開会",
+   "src": "made"
+  },
+  {
+   "text": "収穫祭の開会を告げる太鼓が鳴り、真由は会場へ急いだ。",
+   "en": "The drum signaling the opening of the harvest festival sounded, and Mayu hurried to the grounds.",
+   "ko": "수확 축제 개회를 알리는 북이 울리자 마유는 행사장으로 서둘러 갔어요.",
+   "blank": "開会",
+   "src": "made"
   }
  ],
  "w|開催": [
@@ -96214,6 +98630,22 @@
    "en": "At the end of summer the cabinet was reshuffled, and the lineup of new ministers was on the news.",
    "ko": "여름이 끝날 무렵 내각이 개편돼서 새 각료 명단이 뉴스에 나왔어요.",
    "blank": "閣僚",
+   "src": "made"
+  }
+ ],
+ "w|閣議": [
+  {
+   "text": "国の閣議で決まった方針を、亮は市の会議で説明した。",
+   "en": "Ryo explained a policy decided at the national cabinet meeting at a city meeting.",
+   "ko": "나라 각의에서 정해진 방침을 료는 시 회의에서 설명했어요.",
+   "blank": "閣議",
+   "src": "made"
+  },
+  {
+   "text": "閣議で米の新しい政策が決まり、真由はニュースを熱心に見た。",
+   "en": "A new rice policy was decided at a cabinet meeting, and Mayu watched the news closely.",
+   "ko": "각의에서 쌀에 관한 새 정책이 정해져서 마유는 뉴스를 열심히 봤어요.",
+   "blank": "閣議",
    "src": "made"
   }
  ],
@@ -96884,6 +99316,22 @@
    "en": "Misaki fished out a spoon that fell between the fridge and the wall with long cooking chopsticks.",
    "ko": "미사키는 냉장고와 벽 틈에 떨어진 숟가락을 긴 조리용 젓가락으로 집었어요.",
    "blank": "隙間",
+   "src": "made"
+  }
+ ],
+ "w|際する": [
+  {
+   "text": "新庁舎の完成に際して、亮は記念式典の準備をした。",
+   "en": "On the completion of the new city office building, Ryo prepared the commemorative ceremony.",
+   "ko": "새 청사 완공을 맞아 료는 기념식을 준비했어요.",
+   "blank": "際して",
+   "src": "made"
+  },
+  {
+   "text": "真由は、農場を継ぐに際して祖父から多くのことを学んだ。",
+   "en": "Mayu learned a great deal from her grandfather when she took over the farm.",
+   "ko": "마유는 농장을 물려받으면서 할아버지에게서 많은 것을 배웠어요.",
+   "blank": "際して",
    "src": "made"
   }
  ],
@@ -97831,6 +100279,22 @@
    "blank": "静か"
   }
  ],
+ "w|静止": [
+  {
+   "text": "レントゲンを撮るあいだ、悠斗は犬を静止させるのに苦労した。",
+   "en": "Yuto had a hard time keeping the dog still while taking an X-ray.",
+   "ko": "엑스레이를 찍는 동안 유토는 개를 가만히 있게 하느라 애먹었어요.",
+   "blank": "静止",
+   "src": "made"
+  },
+  {
+   "text": "風のやんだ秋の湖は、千尋の目には静止した絵のように見えた。",
+   "en": "To Chihiro, the autumn lake with no wind looked like a still painting.",
+   "ko": "바람이 멎은 가을 호수는 지히로의 눈에는 멈춰 있는 그림처럼 보였어요.",
+   "blank": "静止",
+   "src": "made"
+  }
+ ],
  "w|非公式": [
   {
    "text": "悠斗は、大臣の非公式な発言をいち早くつかんだ。",
@@ -98427,6 +100891,22 @@
    "src": "made"
   }
  ],
+ "w|預言": [
+  {
+   "text": "「この町はいつか大きな市になる」という昔の村長の言葉は、預言のようだと亮は思った。",
+   "en": "Ryo thought the old village head's words, \"this town will one day become a big city,\" were like a prophecy.",
+   "ko": "'이 마을은 언젠가 큰 시가 될 것'이라는 옛 촌장의 말은 예언 같다고 료는 생각했어요.",
+   "blank": "預言",
+   "src": "made"
+  },
+  {
+   "text": "真由の祖母は、まるで天気の預言者のように雨の日を当てる。",
+   "en": "Mayu's grandmother predicts rainy days as if she were a weather prophet.",
+   "ko": "마유의 할머니는 마치 날씨 예언자처럼 비 오는 날을 맞혀요.",
+   "blank": "預言",
+   "src": "made"
+  }
+ ],
  "w|預金": [
   {
    "text": "大きな買い物をする前に、大輔は預金の残高を確かめた。",
@@ -98686,6 +101166,22 @@
    "en": "Yumi decided they would build the app themselves without relying on outside companies.",
    "ko": "유미는 외부 회사에 의존하지 않고 직접 앱을 만들기로 했어요.",
    "blank": "頼らず",
+   "src": "made"
+  }
+ ],
+ "w|題する": [
+  {
+   "text": "悠斗は「犬と長く暮らすために」と題する講演をした。",
+   "en": "Yuto gave a talk titled \"For a Long Life with Your Dog.\"",
+   "ko": "유토는 '개와 오래 살기 위해'라는 제목의 강연을 했어요.",
+   "blank": "題する",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、「季節の変わり目」と題する作文を書いた。",
+   "en": "Chihiro wrote an essay titled \"When the Seasons Change.\"",
+   "ko": "지히로는 '계절이 바뀔 때'라는 제목의 작문을 썼어요.",
+   "blank": "題する",
    "src": "made"
   }
  ],
@@ -99101,6 +101597,22 @@
    "blank": "食べ物"
   }
  ],
+ "w|食らう": [
+  {
+   "text": "悠斗は、診察中に猫パンチをまともに食らった。",
+   "en": "Yuto took a cat swipe square on during an examination.",
+   "ko": "유토는 진찰 중에 고양이 펀치를 정통으로 맞았어요.",
+   "blank": "食らった",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、春一番の強い風をまともに食らった。",
+   "en": "Chihiro took the full force of the first strong spring wind.",
+   "ko": "지히로는 봄의 첫 강풍을 정면으로 맞았어요.",
+   "blank": "食らった",
+   "src": "made"
+  }
+ ],
  "w|食事": [
   {
    "text": "食事、もうした？",
@@ -99500,6 +102012,22 @@
    "en": "The TV in the waiting room was showing news about a summit meeting.",
    "ko": "대기실 텔레비전에서는 정상회담 뉴스가 나오고 있었어요.",
    "blank": "首脳",
+   "src": "made"
+  }
+ ],
+ "w|首輪": [
+  {
+   "text": "健太の店の看板猫は、赤い首輪をつけている。",
+   "en": "The cat that is the mascot of Kenta's shop wears a red collar.",
+   "ko": "겐타네 가게의 간판 고양이는 빨간 목걸이를 하고 있어요.",
+   "blank": "首輪",
+   "src": "made"
+  },
+  {
+   "text": "美咲の犬は、工事の音に驚いて首輪を抜けて逃げ出した。",
+   "en": "Startled by the construction noise, Misaki's dog slipped out of its collar and ran off.",
+   "ko": "미사키의 개는 공사 소리에 놀라 목걸이를 빼고 달아났어요.",
+   "blank": "首輪",
    "src": "made"
   }
  ],
@@ -100183,6 +102711,22 @@
    "src": "made"
   }
  ],
+ "w|高騰": [
+  {
+   "text": "卵の値段が高騰し、健太は仕入れに頭を悩ませた。",
+   "en": "Egg prices soared, and Kenta struggled with his stock orders.",
+   "ko": "달걀값이 폭등해서 겐타는 물건 들여오는 문제로 골머리를 앓았어요.",
+   "blank": "高騰",
+   "src": "made"
+  },
+  {
+   "text": "木材の価格が高騰し、美咲の改修計画は遅れた。",
+   "en": "Lumber prices soared, and Misaki's renovation plans were delayed.",
+   "ko": "목재 가격이 폭등해서 미사키의 수리 계획이 늦어졌어요.",
+   "blank": "高騰",
+   "src": "made"
+  }
+ ],
  "w|高齢": [
   {
    "text": "高齢の方が多い町だ。",
@@ -100299,6 +102843,22 @@
    "en": "I want to share this town's charm.",
    "ko": "이 마을의 매력을 전하고 싶어.",
    "blank": "魅力"
+  }
+ ],
+ "w|魅惑": [
+  {
+   "text": "亮は、観光ポスターに「魅惑の夜景」という言葉を考えた。",
+   "en": "Ryo came up with the line \"enchanting night view\" for the tourism poster.",
+   "ko": "료는 관광 포스터에 '매혹의 야경'이라는 문구를 생각해 냈어요.",
+   "blank": "魅惑",
+   "src": "made"
+  },
+  {
+   "text": "真由の農場の完熟マンゴーは、魅惑の甘さだと評判だ。",
+   "en": "The ripe mangoes from Mayu's farm are famous for their enchanting sweetness.",
+   "ko": "마유네 농장의 완숙 망고는 매혹적인 단맛으로 소문났어요.",
+   "blank": "魅惑",
+   "src": "made"
   }
  ],
  "w|魔女": [
