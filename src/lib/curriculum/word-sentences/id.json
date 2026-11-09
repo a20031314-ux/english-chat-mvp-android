@@ -641,6 +641,22 @@
    "blank": "aksi"
   }
  ],
+ "w|akta": [
+  {
+   "text": "Agus memeriksa akta pendirian yayasan yang sedang diselidiki.",
+   "en": "Agus checked the founding deed of the foundation under investigation.",
+   "ko": "아구스는 수사 중인 재단의 설립 증서를 살펴봤어요.",
+   "blank": "akta",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengurus akta perkawinan di kantor catatan sipil.",
+   "en": "Wati took care of the marriage certificate at the civil registry office.",
+   "ko": "와티는 호적 사무소에서 혼인 증명서를 처리했어요.",
+   "blank": "akta",
+   "src": "made"
+  }
+ ],
  "w|aktif": [
   {
    "text": "Dia sangat aktif di kegiatan sekolah.",
@@ -1778,6 +1794,22 @@
    "en": "Rina's grandmother gave her silver earrings that are a family heirloom.",
    "ko": "리나의 할머니는 집안 대대로 내려온 은귀걸이를 리나에게 줬어요.",
    "blank": "anting",
+   "src": "made"
+  }
+ ],
+ "w|antivirus": [
+  {
+   "text": "Semua komputer redaksi wajib memakai antivirus terbaru.",
+   "en": "All newsroom computers must run the latest antivirus.",
+   "ko": "편집국 컴퓨터는 모두 최신 백신 프로그램을 써야 해요.",
+   "blank": "antivirus",
+   "src": "made"
+  },
+  {
+   "text": "Laptop untuk tayangan foto pernikahan sudah dipasangi antivirus.",
+   "en": "The laptop for the wedding slideshow already has antivirus installed.",
+   "ko": "결혼식 사진 상영용 노트북에는 백신 프로그램이 깔려 있어요.",
+   "blank": "antivirus",
    "src": "made"
   }
  ],
@@ -5542,6 +5574,22 @@
    "en": "Store staff of different religions cover each other's shifts on holidays.",
    "ko": "종교가 서로 다른 매장 직원들은 명절에 서로 근무를 바꿔 줘요.",
    "blank": "beragama",
+   "src": "made"
+  }
+ ],
+ "w|berair": [
+  {
+   "text": "Mata Agus berair setelah semalaman menatap layar.",
+   "en": "Agus's eyes were watering after staring at the screen all night.",
+   "ko": "밤새 화면을 들여다본 아구스의 눈에서 눈물이 났어요.",
+   "blank": "berair",
+   "src": "made"
+  },
+  {
+   "text": "Mata Wati berair saat sang ayah memberi restu.",
+   "en": "Wati's eyes welled up when her father gave his blessing.",
+   "ko": "아버지가 축복을 건네자 와티의 눈이 촉촉해졌어요.",
+   "blank": "berair",
    "src": "made"
   }
  ],
@@ -12065,6 +12113,22 @@
    "src": "made"
   }
  ],
+ "w|bertubuh": [
+  {
+   "text": "Narasumber Agus adalah pria bertubuh kecil dengan suara lantang.",
+   "en": "Agus's source is a small-built man with a booming voice.",
+   "ko": "아구스의 취재원은 몸집은 작지만 목소리가 우렁찬 남자예요.",
+   "blank": "bertubuh",
+   "src": "made"
+  },
+  {
+   "text": "Pengantin pria bertubuh tinggi, jadi jas harus dijahit khusus.",
+   "en": "The groom is tall, so his suit had to be specially tailored.",
+   "ko": "신랑이 키가 커서 양복을 따로 맞춰야 했어요.",
+   "blank": "bertubuh",
+   "src": "made"
+  }
+ ],
  "w|bertugas": [
   {
    "text": "Polisi bertugas menjaga keamanan malam.",
@@ -17637,6 +17701,22 @@
    "blank": "dokumen"
   }
  ],
+ "w|dokumentasi": [
+  {
+   "text": "Agus meminta dokumentasi foto dari panitia acara.",
+   "en": "Agus asked the event committee for photo documentation.",
+   "ko": "아구스는 행사 주최 측에 사진 자료를 요청했어요.",
+   "blank": "dokumentasi",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyewa tim dokumentasi untuk foto dan video pernikahan.",
+   "en": "Wati hired a documentation team for the wedding photos and video.",
+   "ko": "와티는 결혼식 사진과 영상을 찍을 촬영팀을 불렀어요.",
+   "blank": "dokumentasi",
+   "src": "made"
+  }
+ ],
  "w|dokumenter": [
   {
    "text": "Sebuah tim film membuat dokumenter tentang pekerjaan Fajar dan rekan-rekannya di balai kota.",
@@ -18180,6 +18260,22 @@
    "en": "Wati feels that buying kitchen supplies online is more efficient than going to the market.",
    "ko": "와티는 부엌 살림을 온라인으로 사는 게 시장에 가는 것보다 효율적이라고 느껴요.",
    "blank": "efisien",
+   "src": "made"
+  }
+ ],
+ "w|efisiensi": [
+  {
+   "text": "Redaksi memangkas halaman cetak demi efisiensi.",
+   "en": "The newsroom cut print pages for the sake of efficiency.",
+   "ko": "편집국은 효율을 위해 지면을 줄였어요.",
+   "blank": "efisiensi",
+   "src": "made"
+  },
+  {
+   "text": "Demi efisiensi, Wati mengirim undangan digital.",
+   "en": "For efficiency, Wati sent digital invitations.",
+   "ko": "와티는 효율을 위해 모바일 청첩장을 보냈어요.",
+   "blank": "efisiensi",
    "src": "made"
   }
  ],
@@ -18945,6 +19041,22 @@
    "en": "A red dawn colored the morning sky.",
    "ko": "붉은 새벽이 그날 아침 하늘을 물들였어.",
    "blank": "Fajar"
+  }
+ ],
+ "w|faks": [
+  {
+   "text": "Dulu redaksi menerima siaran pers lewat faks.",
+   "en": "The newsroom used to receive press releases by fax.",
+   "ko": "예전에 편집국은 보도 자료를 팩스로 받았어요.",
+   "blank": "faks",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Wati mengirim ucapan selamat lewat faks dari kantor lama.",
+   "en": "Wati's grandfather sent his congratulations by fax from his old office.",
+   "ko": "와티의 할아버지는 옛 사무실에서 팩스로 축하 인사를 보냈어요.",
+   "blank": "faks",
+   "src": "made"
   }
  ],
  "w|faksi": [
@@ -24757,6 +24869,22 @@
    "src": "made"
   }
  ],
+ "w|jajaran": [
+  {
+   "text": "Agus mewawancarai jajaran direksi perusahaan air minum.",
+   "en": "Agus interviewed the board of directors of the water company.",
+   "ko": "아구스는 수도 회사 이사진을 인터뷰했어요.",
+   "blank": "jajaran",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyusun jajaran meja panjang di taman.",
+   "en": "Wati arranged rows of long tables in the garden.",
+   "ko": "와티는 정원에 긴 탁자를 줄지어 놓았어요.",
+   "blank": "jajaran",
+   "src": "made"
+  }
+ ],
  "w|jaket": [
   {
    "text": "Jaket tebal itu menjaga tubuhnya tetap hangat.",
@@ -28422,6 +28550,22 @@
    "en": "Moving to a small town felt like a revival of fresh spirit for Rina.",
    "ko": "작은 도시로 이사한 건 리나에게 새 기운이 살아나는 느낌이었어요.",
    "blank": "kebangkitan",
+   "src": "made"
+  }
+ ],
+ "w|kebangkrutan": [
+  {
+   "text": "Agus melaporkan kebangkrutan maskapai kecil itu.",
+   "en": "Agus reported on the bankruptcy of that small airline.",
+   "ko": "아구스는 그 작은 항공사의 파산을 보도했어요.",
+   "blank": "kebangkrutan",
+   "src": "made"
+  },
+  {
+   "text": "Wati panik mendengar kebangkrutan vendor tenda seminggu sebelum hari H.",
+   "en": "Wati panicked when she heard the tent vendor had gone bankrupt a week before the big day.",
+   "ko": "와티는 결혼식 일주일 전에 천막 업체가 파산했다는 소식을 듣고 당황했어요.",
+   "blank": "kebangkrutan",
    "src": "made"
   }
  ],
@@ -40245,6 +40389,22 @@
    "src": "made"
   }
  ],
+ "w|mandor": [
+  {
+   "text": "Agus mewawancarai mandor proyek jalan tol.",
+   "en": "Agus interviewed the foreman on the toll road project.",
+   "ko": "아구스는 고속도로 공사 현장 감독을 인터뷰했어요.",
+   "blank": "mandor",
+   "src": "made"
+  },
+  {
+   "text": "Wati berbicara dengan mandor tenda soal letak panggung.",
+   "en": "Wati talked to the tent foreman about where to put the stage.",
+   "ko": "와티는 천막 감독과 무대 위치를 의논했어요.",
+   "blank": "mandor",
+   "src": "made"
+  }
+ ],
  "w|mangga": [
   {
    "text": "Dimas memilih mangga yang paling harum untuk dipajang di depan lapak.",
@@ -43349,6 +43509,22 @@
    "src": "made"
   }
  ],
+ "w|memasok": [
+  {
+   "text": "Agus menulis tentang petani yang memasok sayur ke hotel-hotel.",
+   "en": "Agus wrote about farmers who supply vegetables to hotels.",
+   "ko": "아구스는 호텔에 채소를 납품하는 농부들에 대해 썼어요.",
+   "blank": "memasok",
+   "src": "made"
+  },
+  {
+   "text": "Kebun bunga milik bibi Wati memasok mawar untuk dekorasi.",
+   "en": "Wati's aunt's flower garden supplies roses for the decorations.",
+   "ko": "와티 이모의 꽃밭에서 장식용 장미를 대 줘요.",
+   "blank": "memasok",
+   "src": "made"
+  }
+ ],
  "w|memastikan": [
   {
    "text": "Tolong memastikan pintu terkunci.",
@@ -46289,6 +46465,22 @@
    "src": "made"
   }
  ],
+ "w|memperdaya": [
+  {
+   "text": "Agus menulis berita tentang penipu yang memperdaya warga dengan undian palsu.",
+   "en": "Agus wrote a story about a con man who tricked residents with a fake lottery.",
+   "ko": "아구스는 가짜 경품으로 주민들을 속인 사기꾼에 관한 기사를 썼어요.",
+   "blank": "memperdaya",
+   "src": "made"
+  },
+  {
+   "text": "Wati waspada terhadap vendor palsu yang memperdaya calon pengantin.",
+   "en": "Wati is wary of fake vendors who trick engaged couples.",
+   "ko": "와티는 예비부부를 속이는 가짜 업체를 조심해요.",
+   "blank": "memperdaya",
+   "src": "made"
+  }
+ ],
  "w|memperdebatkan": [
   {
    "text": "Warga desa memperdebatkan rencana jalan baru di rumah Agus.",
@@ -47865,6 +48057,22 @@
    "blank": "menangkap"
   }
  ],
+ "w|menangkis": [
+  {
+   "text": "Juru bicara itu berusaha menangkis pertanyaan Agus tentang anggaran.",
+   "en": "The spokesperson tried to fend off Agus's questions about the budget.",
+   "ko": "대변인은 예산에 관한 아구스의 질문을 피하려 했어요.",
+   "blank": "menangkis",
+   "src": "made"
+  },
+  {
+   "text": "Wati pandai menangkis pertanyaan tante soal kapan punya anak.",
+   "en": "Wati is good at deflecting her aunt's questions about when she'll have kids.",
+   "ko": "와티는 언제 아이를 낳느냐는 이모의 질문을 잘 받아넘겨요.",
+   "blank": "menangkis",
+   "src": "made"
+  }
+ ],
  "w|menantang": [
   {
    "text": "Soal ini menantang bahkan untuk ahli.",
@@ -48430,6 +48638,22 @@
    "en": "That foreman likes to criticize other people's work without offering solutions.",
    "ko": "그 반장은 해결책도 없이 남의 작업을 깎아내리길 좋아해요.",
    "blank": "mencela",
+   "src": "made"
+  }
+ ],
+ "w|mencelakai": [
+  {
+   "text": "Agus melaporkan sopir truk yang hampir mencelakai pengendara motor.",
+   "en": "Agus reported on a truck driver who nearly injured a motorcyclist.",
+   "ko": "아구스는 오토바이 운전자를 다치게 할 뻔한 트럭 기사에 대해 보도했어요.",
+   "blank": "mencelakai",
+   "src": "made"
+  },
+  {
+   "text": "Panitia memastikan kembang api tidak akan mencelakai tamu.",
+   "en": "The organizers made sure the fireworks wouldn't hurt the guests.",
+   "ko": "주최 측은 불꽃놀이로 하객이 다치지 않게 확인했어요.",
+   "blank": "mencelakai",
    "src": "made"
   }
  ],
@@ -50403,6 +50627,22 @@
    "blank": "Menerobos"
   }
  ],
+ "w|meneror": [
+  {
+   "text": "Agus melaporkan orang tak dikenal yang meneror redaksi lewat telepon.",
+   "en": "Agus reported on an unknown person who was terrorizing the newsroom by phone.",
+   "ko": "아구스는 전화로 편집국을 위협한 신원 미상의 인물에 대해 보도했어요.",
+   "blank": "meneror",
+   "src": "made"
+  },
+  {
+   "text": "Mantan pacar pengantin pria sempat meneror Wati lewat pesan singkat.",
+   "en": "The groom's ex-girlfriend harassed Wati with text messages for a while.",
+   "ko": "신랑의 전 여자 친구가 한동안 문자로 와티를 괴롭혔어요.",
+   "blank": "meneror",
+   "src": "made"
+  }
+ ],
  "w|menertawakan": [
   {
    "text": "Tetangga menertawakan Budi yang memakai jas hujan padahal langit cerah.",
@@ -52265,6 +52505,22 @@
    "en": "Don't always complain without trying.",
    "ko": "해보지도 않고 늘 불평하지 마.",
    "blank": "mengeluh"
+  }
+ ],
+ "w|mengeluhkan": [
+  {
+   "text": "Pembaca mengeluhkan judul berita yang terlalu panjang.",
+   "en": "Readers complained about headlines that were too long.",
+   "ko": "독자들은 기사 제목이 너무 길다고 불평했어요.",
+   "blank": "mengeluhkan",
+   "src": "made"
+  },
+  {
+   "text": "Beberapa tamu mengeluhkan antrean prasmanan yang panjang.",
+   "en": "Some guests complained about the long buffet line.",
+   "ko": "몇몇 하객이 뷔페 줄이 길다고 불평했어요.",
+   "blank": "mengeluhkan",
+   "src": "made"
   }
  ],
  "w|mengemas": [
@@ -61245,6 +61501,22 @@
    "src": "made"
   }
  ],
+ "w|mikroskop": [
+  {
+   "text": "Agus memotret ilmuwan yang sedang melihat sampel lewat mikroskop.",
+   "en": "Agus photographed a scientist looking at a sample through a microscope.",
+   "ko": "아구스는 현미경으로 시료를 보는 과학자를 찍었어요.",
+   "blank": "mikroskop",
+   "src": "made"
+  },
+  {
+   "text": "Wati, seorang peneliti, bercanda bahwa memilih gaun lebih sulit daripada memakai mikroskop.",
+   "en": "Wati, a researcher, joked that choosing a dress is harder than using a microscope.",
+   "ko": "연구원인 와티는 드레스 고르기가 현미경 다루기보다 어렵다고 농담했어요.",
+   "blank": "mikroskop",
+   "src": "made"
+  }
+ ],
  "w|mil": [
   {
    "text": "Jaraknya dua mil.",
@@ -61809,6 +62081,22 @@
    "en": "Wait for the right moment to speak.",
    "ko": "말할 알맞은 순간을 기다려.",
    "blank": "momen"
+  }
+ ],
+ "w|moneter": [
+  {
+   "text": "Agus menulis analisis kebijakan moneter bank sentral.",
+   "en": "Agus wrote an analysis of the central bank's monetary policy.",
+   "ko": "아구스는 중앙은행의 통화 정책을 분석하는 기사를 썼어요.",
+   "blank": "moneter",
+   "src": "made"
+  },
+  {
+   "text": "Orang tua Wati menikah saat krisis moneter, jadi pesta mereka sangat sederhana.",
+   "en": "Wati's parents married during the financial crisis, so their party was very simple.",
+   "ko": "와티의 부모님은 외환 위기 때 결혼해서 잔치가 아주 소박했어요.",
+   "blank": "moneter",
+   "src": "made"
   }
  ],
  "w|monster": [
@@ -64877,6 +65165,22 @@
    "blank": "panas"
   }
  ],
+ "w|pancang": [
+  {
+   "text": "Agus memotret tiang pancang jembatan yang sedang dibangun.",
+   "en": "Agus photographed the piles of the bridge under construction.",
+   "ko": "아구스는 공사 중인 다리의 말뚝을 사진에 담았어요.",
+   "blank": "pancang",
+   "src": "made"
+  },
+  {
+   "text": "Pekerja menancapkan pancang bambu untuk tenda pesta.",
+   "en": "Workers drove in bamboo stakes for the party tent.",
+   "ko": "일꾼들이 잔치 천막을 치려고 대나무 말뚝을 박았어요.",
+   "blank": "pancang",
+   "src": "made"
+  }
+ ],
  "w|pancaran": [
   {
    "text": "Budi menikmati pancaran matahari pagi di atas pematang.",
@@ -66303,6 +66607,22 @@
    "en": "He learned from that bitter lesson.",
    "ko": "그는 그 쓰라린 교훈에서 배웠어.",
    "blank": "pelajaran"
+  }
+ ],
+ "w|pelaksanaan": [
+  {
+   "text": "Agus meliput pelaksanaan ujian akhir di sekolah-sekolah desa.",
+   "en": "Agus covered how the final exams were carried out in village schools.",
+   "ko": "아구스는 시골 학교들의 기말시험 진행 상황을 취재했어요.",
+   "blank": "pelaksanaan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyerahkan pelaksanaan acara kepada pembawa acara berpengalaman.",
+   "en": "Wati left the running of the event to an experienced emcee.",
+   "ko": "와티는 행사 진행을 노련한 사회자에게 맡겼어요.",
+   "blank": "pelaksanaan",
+   "src": "made"
   }
  ],
  "w|pelaku": [
@@ -68040,6 +68360,22 @@
    "en": "Putri rented a concrete breaker to tear up the old floor.",
    "ko": "푸트리는 옛 바닥을 뜯으려고 콘크리트 파쇄기를 빌렸어요.",
    "blank": "pemecah",
+   "src": "made"
+  }
+ ],
+ "w|pemecatan": [
+  {
+   "text": "Agus meliput pemecatan ratusan buruh pabrik sepatu.",
+   "en": "Agus covered the dismissal of hundreds of shoe factory workers.",
+   "ko": "아구스는 신발 공장 노동자 수백 명의 해고를 취재했어요.",
+   "blank": "pemecatan",
+   "src": "made"
+  },
+  {
+   "text": "Kabar pemecatan di kantor calon suami sempat membuat Wati cemas.",
+   "en": "News of dismissals at her fiancé's office made Wati anxious for a while.",
+   "ko": "예비 신랑 회사의 해고 소식에 와티는 한동안 불안했어요.",
+   "blank": "pemecatan",
    "src": "made"
   }
  ],
@@ -70473,6 +70809,22 @@
    "src": "made"
   }
  ],
+ "w|pengecekan": [
+  {
+   "text": "Setiap berita melewati pengecekan fakta sebelum terbit.",
+   "en": "Every story goes through fact-checking before it's published.",
+   "ko": "모든 기사는 나가기 전에 사실 확인을 거쳐요.",
+   "blank": "pengecekan",
+   "src": "made"
+  },
+  {
+   "text": "Wati melakukan pengecekan terakhir pada daftar tamu.",
+   "en": "Wati did a final check of the guest list.",
+   "ko": "와티는 하객 명단을 마지막으로 점검했어요.",
+   "blank": "pengecekan",
+   "src": "made"
+  }
+ ],
  "w|pengecualian": [
   {
    "text": "Semua pemain wajib ikut latihan, tanpa pengecualian.",
@@ -71399,6 +71751,22 @@
    "en": "She underwent treatment for weeks.",
    "ko": "그녀는 몇 주 동안 치료를 받았어.",
    "blank": "pengobatan"
+  }
+ ],
+ "w|pengolahan": [
+  {
+   "text": "Agus meliput pabrik pengolahan sampah plastik di pinggir kota.",
+   "en": "Agus covered a plastic waste processing plant on the edge of the city.",
+   "ko": "아구스는 도시 외곽의 플라스틱 폐기물 처리 공장을 취재했어요.",
+   "blank": "pengolahan",
+   "src": "made"
+  },
+  {
+   "text": "Wati memilih katering yang punya dapur pengolahan yang bersih.",
+   "en": "Wati chose a caterer with a clean food-processing kitchen.",
+   "ko": "와티는 조리 시설이 깨끗한 출장 뷔페를 골랐어요.",
+   "blank": "pengolahan",
+   "src": "made"
   }
  ],
  "w|pengorbanan": [
@@ -72527,6 +72895,22 @@
    "src": "made"
   }
  ],
+ "w|penyedia": [
+  {
+   "text": "Redaksi mengganti penyedia internet karena koneksi sering putus.",
+   "en": "The newsroom switched internet providers because the connection kept dropping.",
+   "ko": "연결이 자주 끊겨서 편집국은 인터넷 업체를 바꿨어요.",
+   "blank": "penyedia",
+   "src": "made"
+  },
+  {
+   "text": "Wati membandingkan tiga penyedia katering sebelum memilih.",
+   "en": "Wati compared three catering providers before choosing.",
+   "ko": "와티는 고르기 전에 출장 뷔페 업체 세 곳을 비교했어요.",
+   "blank": "penyedia",
+   "src": "made"
+  }
+ ],
  "w|penyelam": [
   {
    "text": "Tetangga baru Andi adalah penyelam yang bekerja di proyek terumbu karang.",
@@ -73293,6 +73677,22 @@
    "blank": "perangkat"
   }
  ],
+ "w|perangko": [
+  {
+   "text": "Agus menulis artikel tentang kolektor perangko tua.",
+   "en": "Agus wrote an article about an old stamp collector.",
+   "ko": "아구스는 옛 우표 수집가에 관한 기사를 썼어요.",
+   "blank": "perangko",
+   "src": "made"
+  },
+  {
+   "text": "Wati menempelkan perangko pada undangan untuk kerabat di desa.",
+   "en": "Wati stuck stamps on the invitations for relatives in the village.",
+   "ko": "와티는 시골 친척에게 보낼 청첩장에 우표를 붙였어요.",
+   "blank": "perangko",
+   "src": "made"
+  }
+ ],
  "w|perantara": [
   {
    "text": "Seorang perantara menawarkan dokumen rahasia, tetapi Fajar menolaknya.",
@@ -73850,6 +74250,22 @@
    "en": "The river in Intan's village is very cold, so only brave swimmers go in.",
    "ko": "인탄네 마을 강물은 아주 차서 용감한 사람만 헤엄치러 들어가요.",
    "blank": "perenang",
+   "src": "made"
+  }
+ ],
+ "w|perencana": [
+  {
+   "text": "Agus mewawancarai perencana kota soal jalur sepeda.",
+   "en": "Agus interviewed a city planner about bike lanes.",
+   "ko": "아구스는 자전거 도로에 대해 도시 계획가를 인터뷰했어요.",
+   "blank": "perencana",
+   "src": "made"
+  },
+  {
+   "text": "Wati memakai jasa perencana pernikahan agar tidak stres.",
+   "en": "Wati hired a wedding planner so she wouldn't get stressed.",
+   "ko": "와티는 스트레스받지 않으려고 웨딩 플래너를 썼어요.",
+   "blank": "perencana",
    "src": "made"
   }
  ],
@@ -74864,6 +75280,22 @@
    "en": "Ayu drew a pirate ship for a children's storybook illustration.",
    "ko": "아유는 어린이 동화책 삽화로 해적선을 그렸어요.",
    "blank": "perompak",
+   "src": "made"
+  }
+ ],
+ "w|perpanjangan": [
+  {
+   "text": "Agus meminta perpanjangan tenggat kepada redaktur.",
+   "en": "Agus asked the editor for a deadline extension.",
+   "ko": "아구스는 편집자에게 마감 연장을 부탁했어요.",
+   "blank": "perpanjangan",
+   "src": "made"
+  },
+  {
+   "text": "Wati membayar perpanjangan sewa gedung selama satu jam.",
+   "en": "Wati paid for a one-hour extension of the hall rental.",
+   "ko": "와티는 예식장 대관을 한 시간 연장하는 비용을 냈어요.",
+   "blank": "perpanjangan",
    "src": "made"
   }
  ],
@@ -77993,6 +78425,22 @@
    "blank": "publik"
   }
  ],
+ "w|publikasi": [
+  {
+   "text": "Redaktur menunda publikasi artikel Agus sampai fakta diperiksa.",
+   "en": "The editor delayed publication of Agus's article until the facts were checked.",
+   "ko": "편집자는 사실 확인이 끝날 때까지 아구스의 기사 게재를 미뤘어요.",
+   "blank": "publikasi",
+   "src": "made"
+  },
+  {
+   "text": "Wati meminta fotografer tidak melakukan publikasi foto tanpa izin.",
+   "en": "Wati asked the photographer not to publish photos without permission.",
+   "ko": "와티는 사진가에게 허락 없이 사진을 공개하지 말라고 했어요.",
+   "blank": "publikasi",
+   "src": "made"
+  }
+ ],
  "w|publisitas": [
   {
    "text": "Pentas seni sekolah mendapat publisitas di koran lokal, dan foto Budi ikut dimuat.",
@@ -79559,6 +80007,22 @@
    "src": "made"
   }
  ],
+ "w|rekrutan": [
+  {
+   "text": "Agus membimbing rekrutan baru di meja ekonomi.",
+   "en": "Agus mentors the new recruits on the business desk.",
+   "ko": "아구스는 경제부 신입 기자들을 지도해요.",
+   "blank": "rekrutan",
+   "src": "made"
+  },
+  {
+   "text": "Katering itu memakai banyak rekrutan baru untuk melayani tamu.",
+   "en": "The caterer used many new recruits to serve the guests.",
+   "ko": "그 출장 뷔페 업체는 신입 직원을 많이 써서 하객을 접대했어요.",
+   "blank": "rekrutan",
+   "src": "made"
+  }
+ ],
  "w|rel": [
   {
    "text": "Kereta Dimas berhenti sebentar karena ada perbaikan rel di depan.",
@@ -80617,6 +81081,22 @@
    "en": "This bread is still warm from the oven.",
    "ko": "이 빵은 오븐에서 나온 지 얼마 안 돼 따뜻해.",
    "blank": "Roti"
+  }
+ ],
+ "w|royalti": [
+  {
+   "text": "Agus menulis tentang musisi yang menuntut royalti dari stasiun radio.",
+   "en": "Agus wrote about musicians demanding royalties from radio stations.",
+   "ko": "아구스는 라디오 방송국에 저작권료를 요구하는 음악가들에 대해 썼어요.",
+   "blank": "royalti",
+   "src": "made"
+  },
+  {
+   "text": "Gedung resepsi membayar royalti untuk lagu-lagu yang diputar.",
+   "en": "The reception hall pays royalties for the songs it plays.",
+   "ko": "예식장은 트는 노래들에 대해 저작권료를 내요.",
+   "blank": "royalti",
+   "src": "made"
   }
  ],
  "w|ruam": [
@@ -83755,6 +84235,22 @@
    "src": "made"
   }
  ],
+ "w|sekunder": [
+  {
+   "text": "Agus memakai data sekunder dari lembaga statistik untuk artikel itu.",
+   "en": "Agus used secondary data from the statistics agency for that article.",
+   "ko": "아구스는 그 기사에 통계청의 이차 자료를 썼어요.",
+   "blank": "sekunder",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Wati, dekorasi mewah hanyalah kebutuhan sekunder.",
+   "en": "For Wati, fancy decorations are only a secondary need.",
+   "ko": "와티에게 화려한 장식은 부차적인 것일 뿐이에요.",
+   "blank": "sekunder",
+   "src": "made"
+  }
+ ],
  "w|sekutu": [
   {
    "text": "Negara itu mendapat dukungan dari sekutu dekat.",
@@ -84643,6 +85139,22 @@
    "en": "The weather is perfect for a walk.",
    "ko": "산책하기에 완벽한 날씨야.",
    "blank": "sempurna"
+  }
+ ],
+ "w|semu": [
+  {
+   "text": "Agus menulis bahwa kenaikan harga saham itu hanya keuntungan semu.",
+   "en": "Agus wrote that the share price rise was only an illusory gain.",
+   "ko": "아구스는 그 주가 상승이 겉보기 이익일 뿐이라고 썼어요.",
+   "blank": "semu",
+   "src": "made"
+  },
+  {
+   "text": "Wati tidak mau kebahagiaan semu demi pesta mewah yang penuh utang.",
+   "en": "Wati doesn't want a false happiness built on a lavish party full of debt.",
+   "ko": "와티는 빚더미 호화 잔치로 얻는 겉치레 행복을 원하지 않아요.",
+   "blank": "semu",
+   "src": "made"
   }
  ],
  "w|semua": [
@@ -88891,6 +89403,22 @@
    "src": "made"
   }
  ],
+ "w|suruhan": [
+  {
+   "text": "Agus curiga beberapa pengunjuk rasa itu orang suruhan.",
+   "en": "Agus suspects some of the protesters were hired hands.",
+   "ko": "아구스는 시위대 몇몇이 누군가 보낸 사람이라고 의심해요.",
+   "blank": "suruhan",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Wati mengirim orang suruhan untuk mengambil kue pengantin.",
+   "en": "Wati's mother sent an errand runner to pick up the wedding cake.",
+   "ko": "와티의 어머니는 심부름꾼을 보내 웨딩 케이크를 찾아오게 했어요.",
+   "blank": "suruhan",
+   "src": "made"
+  }
+ ],
  "w|surut": [
   {
    "text": "Setelah banjir surut, Budi memeriksa tanaman jagung di ladang.",
@@ -92083,6 +92611,22 @@
    "src": "made"
   }
  ],
+ "w|tercela": [
+  {
+   "text": "Redaksi menegur wartawan yang melakukan perbuatan tercela saat liputan.",
+   "en": "The newsroom reprimanded a reporter who behaved disgracefully while on assignment.",
+   "ko": "편집국은 취재 중 부끄러운 짓을 한 기자를 징계했어요.",
+   "blank": "tercela",
+   "src": "made"
+  },
+  {
+   "text": "Keluarga besar menganggap mabuk di pesta pernikahan sebagai perbuatan tercela.",
+   "en": "The extended family considers getting drunk at a wedding disgraceful.",
+   "ko": "친척들은 결혼식에서 술에 취하는 걸 부끄러운 짓으로 여겨요.",
+   "blank": "tercela",
+   "src": "made"
+  }
+ ],
  "w|tercemar": [
   {
    "text": "Bayu sedih karena sungai di bagian hilir sudah tercemar limbah pabrik.",
@@ -92718,6 +93262,22 @@
    "en": "From the vocal room came the shouts of voice warm-up exercises.",
    "ko": "성악실에서 발성 연습하는 소리가 크게 들렸어요.",
    "blank": "teriakan",
+   "src": "made"
+  }
+ ],
+ "w|teridentifikasi": [
+  {
+   "text": "Polisi memberi tahu Agus bahwa pelaku penipuan itu sudah teridentifikasi.",
+   "en": "The police told Agus the scammer had already been identified.",
+   "ko": "경찰은 사기범의 신원이 이미 확인됐다고 아구스에게 알려 줬어요.",
+   "blank": "teridentifikasi",
+   "src": "made"
+  },
+  {
+   "text": "Penyebab listrik padam di gedung resepsi akhirnya teridentifikasi.",
+   "en": "The cause of the power cut at the reception hall was finally identified.",
+   "ko": "피로연장 정전 원인이 마침내 밝혀졌어요.",
+   "blank": "teridentifikasi",
    "src": "made"
   }
  ],
@@ -93414,6 +93974,22 @@
    "en": "Rina had already prepared the medicine before the cat's owner canceled the appointment.",
    "ko": "고양이 주인이 예약을 취소하기 전에 리나는 이미 약을 준비해 버렸어요.",
    "blank": "terlanjur",
+   "src": "made"
+  }
+ ],
+ "w|terlantar": [
+  {
+   "text": "Agus menulis tentang anak-anak terlantar di stasiun kota.",
+   "en": "Agus wrote about abandoned children at the city station.",
+   "ko": "아구스는 도시 역에 버려진 아이들에 대해 썼어요.",
+   "blank": "terlantar",
+   "src": "made"
+  },
+  {
+   "text": "Wati tidak ingin ada tamu yang terlantar tanpa tempat duduk.",
+   "en": "Wati doesn't want any guests left stranded without a seat.",
+   "ko": "와티는 자리 없이 방치되는 하객이 없기를 바라요.",
+   "blank": "terlantar",
    "src": "made"
   }
  ],
@@ -95171,6 +95747,22 @@
    "blank": "Tes"
   }
  ],
+ "w|tesis": [
+  {
+   "text": "Agus mengutip tesis seorang mahasiswa tentang nelayan pesisir.",
+   "en": "Agus quoted a student's thesis on coastal fishermen.",
+   "ko": "아구스는 해안 어민에 관한 한 대학생의 논문을 인용했어요.",
+   "blank": "tesis",
+   "src": "made"
+  },
+  {
+   "text": "Wati menunda pernikahan sampai tesis selesai.",
+   "en": "Wati postponed the wedding until her thesis was finished.",
+   "ko": "와티는 논문을 끝낼 때까지 결혼을 미뤘어요.",
+   "blank": "tesis",
+   "src": "made"
+  }
+ ],
  "w|testis": [
   {
    "text": "Fajar membagikan brosur pemeriksaan kanker testis untuk pria muda.",
@@ -96873,6 +97465,22 @@
    "blank": "tur"
   }
  ],
+ "w|turbin": [
+  {
+   "text": "Agus meliput pemasangan turbin angin di pesisir selatan.",
+   "en": "Agus covered the installation of wind turbines on the south coast.",
+   "ko": "아구스는 남부 해안의 풍력 터빈 설치를 취재했어요.",
+   "blank": "turbin",
+   "src": "made"
+  },
+  {
+   "text": "Suami Wati bekerja sebagai teknisi turbin di pembangkit listrik.",
+   "en": "Wati's husband works as a turbine technician at the power plant.",
+   "ko": "와티의 남편은 발전소에서 터빈 기술자로 일해요.",
+   "blank": "turbin",
+   "src": "made"
+  }
+ ],
  "w|turis": [
   {
    "text": "Di gerbong makan, Dimas mengobrol dengan dua turis yang sedang belajar bahasa Indonesia.",
@@ -97051,6 +97659,22 @@
    "en": "The blood test is scheduled for tomorrow morning.",
    "ko": "혈액 검사는 내일 아침으로 잡혀 있어.",
    "blank": "Uji"
+  }
+ ],
+ "w|uji coba": [
+  {
+   "text": "Agus menulis tentang uji coba bus listrik di pusat kota.",
+   "en": "Agus wrote about the trial run of electric buses in the city center.",
+   "ko": "아구스는 도심 전기 버스 시범 운행에 대해 썼어요.",
+   "blank": "uji coba",
+   "src": "made"
+  },
+  {
+   "text": "Wati ikut uji coba menu bersama katering sebulan sebelum pesta.",
+   "en": "Wati joined a menu tasting with the caterer a month before the party.",
+   "ko": "와티는 잔치 한 달 전에 출장 뷔페와 함께 메뉴 시식을 했어요.",
+   "blank": "uji coba",
+   "src": "made"
   }
  ],
  "w|ujian": [
@@ -97803,6 +98427,22 @@
    "en": "The children dressed as vampires at the party.",
    "ko": "아이들이 파티에서 뱀파이어처럼 옷을 입었어.",
    "blank": "vampir"
+  }
+ ],
+ "w|variabel": [
+  {
+   "text": "Agus menjelaskan variabel survei itu kepada redaktur.",
+   "en": "Agus explained the survey's variables to the editor.",
+   "ko": "아구스는 편집자에게 그 설문의 변수를 설명했어요.",
+   "blank": "variabel",
+   "src": "made"
+  },
+  {
+   "text": "Wati mempertimbangkan banyak variabel saat memilih tanggal, dari cuaca sampai jadwal keluarga.",
+   "en": "Wati weighed many variables when choosing the date, from the weather to family schedules.",
+   "ko": "와티는 날을 고를 때 날씨부터 가족 일정까지 여러 변수를 따졌어요.",
+   "blank": "variabel",
+   "src": "made"
   }
  ],
  "w|ventilasi": [
