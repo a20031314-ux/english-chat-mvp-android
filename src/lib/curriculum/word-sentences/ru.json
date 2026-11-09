@@ -1641,6 +1641,22 @@
    "src": "made"
   }
  ],
+ "w|бекон": [
+  {
+   "text": "Дмитрий обжарил бекон до хруста.",
+   "en": "Dmitry fried the bacon until crisp.",
+   "ko": "드미트리는 베이컨을 바삭하게 구웠어요.",
+   "blank": "бекон",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала Наташе, что муж каждое утро жарит яичницу с беконом.",
+   "en": "Olga wrote to Natasha that her husband fries eggs and bacon every morning.",
+   "ko": "올가는 나타샤에게 남편이 매일 아침 베이컨 달걀프라이를 한다고 썼어요.",
+   "blank": "беконом",
+   "src": "made"
+  }
+ ],
  "w|белый": [
   {
    "text": "Белый хлеб кончился.",
@@ -2271,6 +2287,22 @@
    "ko": "가장 가까운 동물원이 어디예요?",
    "blank": "ближайший",
    "src": "tatoeba:5659318/odexed en:27256/AlanF_US"
+  }
+ ],
+ "w|ближний": [
+  {
+   "text": "Дмитрий поставил кастрюлю на ближнюю конфорку.",
+   "en": "Dmitry put the pot on the front burner.",
+   "ko": "드미트리는 냄비를 앞쪽 화구에 올렸어요.",
+   "blank": "ближнюю",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что переехала в ближний пригород.",
+   "en": "Olga wrote that she had moved to a nearby suburb.",
+   "ko": "올가는 가까운 교외로 이사했다고 썼어요.",
+   "blank": "ближний",
+   "src": "made"
   }
  ],
  "w|близкий": [
@@ -3188,6 +3220,22 @@
    "en": "Olga always carries a paper notebook, not just her phone.",
    "ko": "올가는 휴대폰만이 아니라 종이 수첩도 늘 들고 다녀요.",
    "blank": "бумажный",
+   "src": "made"
+  }
+ ],
+ "w|бургер": [
+  {
+   "text": "Дмитрий собрал бургер с котлетой собственного приготовления.",
+   "en": "Dmitry assembled a burger with a patty he had made himself.",
+   "ko": "드미트리는 직접 만든 패티로 버거를 만들었어요.",
+   "blank": "бургер",
+   "src": "made"
+  },
+  {
+   "text": "Ольга с улыбкой описала, как её дочь съела бургер больше своей головы.",
+   "en": "Olga described with a smile how her daughter ate a burger bigger than her head.",
+   "ko": "올가는 딸이 자기 머리보다 큰 버거를 먹은 이야기를 웃으며 적었어요.",
+   "blank": "бургер",
    "src": "made"
   }
  ],
@@ -5657,6 +5705,22 @@
    "ko": "운전 가르쳐 주실 수 있어요?",
    "blank": "водить",
    "src": "tatoeba:7872710/marafon en:6438734/CK"
+  }
+ ],
+ "w|водка": [
+  {
+   "text": "Дмитрий узнал, что в соус для пасты иногда добавляют немного водки.",
+   "en": "Dmitry learned that a little vodka is sometimes added to pasta sauce.",
+   "ko": "드미트리는 파스타 소스에 보드카를 조금 넣기도 한다는 걸 알게 됐어요.",
+   "blank": "водки",
+   "src": "made"
+  },
+  {
+   "text": "В письме Ольга вспоминала, как дедушка Наташи угощал гостей водкой на Новый год.",
+   "en": "In the letter Olga recalled how Natasha's grandfather treated guests to vodka at New Year.",
+   "ko": "올가는 편지에서 나타샤의 할아버지가 새해에 손님들에게 보드카를 대접하던 일을 떠올렸어요.",
+   "blank": "водкой",
+   "src": "made"
   }
  ],
  "w|воевать": [
@@ -13145,6 +13209,22 @@
    "src": "made"
   }
  ],
+ "w|драгоценный": [
+  {
+   "text": "Шафран дорогой, поэтому Дмитрий отмерял каждую драгоценную ниточку.",
+   "en": "Saffron is expensive, so Dmitry measured out every precious thread.",
+   "ko": "사프란은 비싸서 드미트리는 귀한 한 가닥 한 가닥을 재서 넣었어요.",
+   "blank": "драгоценную",
+   "src": "made"
+  },
+  {
+   "text": "Ольга бережёт письма Наташи как драгоценный подарок.",
+   "en": "Olga keeps Natasha's letters like a precious gift.",
+   "ko": "올가는 나타샤의 편지를 귀한 선물처럼 간직해요.",
+   "blank": "драгоценный",
+   "src": "made"
+  }
+ ],
  "w|драка": [
   {
    "text": "Я не помню, с чего началась драка.",
@@ -13919,6 +13999,38 @@
    "src": "made"
   }
  ],
+ "w|жать": [
+  {
+   "text": "Дмитрий слишком сильно жал на нож, и помидор раздавился.",
+   "en": "Dmitry pressed too hard on the knife and the tomato got squashed.",
+   "ko": "드미트리가 칼을 너무 세게 눌러서 토마토가 뭉개졌어요.",
+   "blank": "жал",
+   "src": "made"
+  },
+  {
+   "text": "Ольга пожаловалась Наташе, что новые туфли ужасно жмут.",
+   "en": "Olga complained to Natasha that her new shoes pinch terribly.",
+   "ko": "올가는 나타샤에게 새 구두가 너무 낀다고 투덜댔어요.",
+   "blank": "жмут",
+   "src": "made"
+  }
+ ],
+ "w|жвачка": [
+  {
+   "text": "Шеф попросил Дмитрия выбросить жвачку перед дегустацией.",
+   "en": "The chef asked Dmitry to throw out his gum before the tasting.",
+   "ko": "셰프가 드미트리에게 시식 전에 껌을 버리라고 했어요.",
+   "blank": "жвачку",
+   "src": "made"
+  },
+  {
+   "text": "Ольга вспомнила, как Наташа однажды прилепила жвачку к стулу учителя.",
+   "en": "Olga remembered how Natasha once stuck chewing gum on the teacher's chair.",
+   "ko": "올가는 나타샤가 한번은 선생님 의자에 껌을 붙였던 일을 떠올렸어요.",
+   "blank": "жвачку",
+   "src": "made"
+  }
+ ],
  "w|ждать": [
   {
    "text": "Я жду внизу.",
@@ -14648,6 +14760,22 @@
    "en": "The office cat managed to climb onto the server cabinet, and Tatiana filmed it.",
    "ko": "사무실 고양이가 서버 장 위로 기어 올라갔고, 타티야나가 그걸 영상으로 찍었어요.",
    "blank": "забраться",
+   "src": "made"
+  }
+ ],
+ "w|забросить": [
+  {
+   "text": "Дмитрий чуть не забросил курсы после первого сгоревшего пирога.",
+   "en": "Dmitry almost gave up the course after his first burnt pie.",
+   "ko": "드미트리는 처음 파이를 태우고 나서 수업을 그만둘 뻔했어요.",
+   "blank": "забросил",
+   "src": "made"
+  },
+  {
+   "text": "Ольга призналась, что давно забросила рисование.",
+   "en": "Olga admitted that she had long since given up drawing.",
+   "ko": "올가는 그림 그리기를 그만둔 지 오래됐다고 털어놓았어요.",
+   "blank": "забросила",
    "src": "made"
   }
  ],
@@ -15645,6 +15773,22 @@
    "src": "made"
   }
  ],
+ "w|закуска": [
+  {
+   "text": "На холодную закуску Дмитрий подал тарталетки с сыром.",
+   "en": "For the cold appetizer Dmitry served cheese tartlets.",
+   "ko": "드미트리는 차가운 전채로 치즈 타르틀렛을 냈어요.",
+   "blank": "закуску",
+   "src": "made"
+  },
+  {
+   "text": "Ольга пообещала Наташе приготовить к встрече её любимые закуски.",
+   "en": "Olga promised Natasha she would make her favorite snacks for their meeting.",
+   "ko": "올가는 나타샤에게 만나면 좋아하는 안주를 만들어 주겠다고 약속했어요.",
+   "blank": "закуски",
+   "src": "made"
+  }
+ ],
  "w|зал": [
   {
    "text": "Ты идёшь сегодня в тренажёрный зал?",
@@ -16509,6 +16653,22 @@
    "ko": "이 중에 미리 알고 있었던 게 얼마나 돼?",
    "blank": "заранее",
    "src": "tatoeba:2934117/astyng en:2912630/CK"
+  }
+ ],
+ "w|зарегистрировать": [
+  {
+   "text": "Жена зарегистрировала Дмитрия на курсы итальянской кухни.",
+   "en": "His wife signed Dmitry up for an Italian cooking course.",
+   "ko": "아내가 드미트리를 이탈리아 요리 강좌에 등록해 줬어요.",
+   "blank": "зарегистрировала",
+   "src": "made"
+  },
+  {
+   "text": "Ольга сообщила, что они с мужем наконец зарегистрировали брак.",
+   "en": "Olga announced that she and her husband had finally registered their marriage.",
+   "ko": "올가는 남편과 드디어 혼인 신고를 했다고 알렸어요.",
+   "blank": "зарегистрировали",
+   "src": "made"
   }
  ],
  "w|зарплата": [
@@ -18557,6 +18717,22 @@
    "blank": "иначе"
   }
  ],
+ "w|индейка": [
+  {
+   "text": "Шеф объяснил Дмитрию, как не пересушить индейку в духовке.",
+   "en": "The chef explained to Dmitry how not to dry out the turkey in the oven.",
+   "ko": "셰프가 드미트리에게 오븐에서 칠면조가 퍽퍽해지지 않게 하는 법을 설명했어요.",
+   "blank": "индейку",
+   "src": "made"
+  },
+  {
+   "text": "Ольга пригласила Наташу на праздничную индейку в конце ноября.",
+   "en": "Olga invited Natasha over for a holiday turkey at the end of November.",
+   "ko": "올가는 나타샤를 11월 말 명절 칠면조 저녁에 초대했어요.",
+   "blank": "индейку",
+   "src": "made"
+  }
+ ],
  "w|инженер": [
   {
    "text": "Для статьи о мосте Сергей позвонил знакомому инженеру.",
@@ -19975,6 +20151,22 @@
    "src": "tatoeba:8695311/marafon en:286952/CM"
   }
  ],
+ "w|касательно": [
+  {
+   "text": "У Дмитрия было много вопросов касательно выбора ножей.",
+   "en": "Dmitry had a lot of questions regarding the choice of knives.",
+   "ko": "드미트리는 칼 고르는 것에 관해 질문이 많았어요.",
+   "blank": "касательно",
+   "src": "made"
+  },
+  {
+   "text": "Ольга задала Наташе пару вопросов касательно летней поездки.",
+   "en": "Olga asked Natasha a couple of questions regarding the summer trip.",
+   "ko": "올가는 나타샤에게 여름 여행에 관해 몇 가지를 물었어요.",
+   "blank": "касательно",
+   "src": "made"
+  }
+ ],
  "w|касаться": [
   {
    "text": "Давайте не будем касаться этой темы.",
@@ -20131,6 +20323,22 @@
    "en": "I live in this apartment.",
    "ko": "나는 이 아파트에 살아.",
    "blank": "квартире"
+  }
+ ],
+ "w|кекс": [
+  {
+   "text": "Первый кекс у Дмитрия получился сырым внутри.",
+   "en": "Dmitry's first cupcake came out raw inside.",
+   "ko": "드미트리의 첫 머핀은 속이 덜 익었어요.",
+   "blank": "кекс",
+   "src": "made"
+  },
+  {
+   "text": "Ольга отправила Наташе рецепт лимонного кекса.",
+   "en": "Olga sent Natasha a recipe for lemon cake.",
+   "ko": "올가는 나타샤에게 레몬 파운드케이크 레시피를 보냈어요.",
+   "blank": "кекса",
+   "src": "made"
   }
  ],
  "w|километр": [
@@ -23159,6 +23367,22 @@
    "src": "made"
   }
  ],
+ "w|кушать": [
+  {
+   "text": "Маленькая дочка Дмитрия с удовольствием кушает всё, что он готовит на курсах.",
+   "en": "Dmitry's little daughter happily eats everything he cooks at the course.",
+   "ko": "드미트리의 어린 딸은 아빠가 수업에서 만든 건 뭐든 맛있게 먹어요.",
+   "blank": "кушает",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что внук Наташи на фото так аппетитно кушает кашу.",
+   "en": "Olga wrote that Natasha's grandson in the photo is eating his porridge so heartily.",
+   "ko": "올가는 사진 속 나타샤의 손주가 죽을 참 맛있게 먹는다고 썼어요.",
+   "blank": "кушает",
+   "src": "made"
+  }
+ ],
  "w|лаборатория": [
   {
    "text": "Лаборатория была разрушена при пожаре.",
@@ -23266,6 +23490,22 @@
    "en": "Elena's cat walked its paw across the keyboard and deleted a line of code.",
    "ko": "엘레나의 고양이가 발로 키보드를 밟고 지나가서 코드 한 줄이 지워졌어요.",
    "blank": "лапой",
+   "src": "made"
+  }
+ ],
+ "w|лапша": [
+  {
+   "text": "Дмитрий впервые раскатал тесто и сделал лапшу вручную.",
+   "en": "Dmitry rolled out dough for the first time and made noodles by hand.",
+   "ko": "드미트리는 처음으로 반죽을 밀어 손으로 국수를 만들었어요.",
+   "blank": "лапшу",
+   "src": "made"
+  },
+  {
+   "text": "Ольга призналась Наташе, что в студенчестве жила на одной лапше.",
+   "en": "Olga confessed to Natasha that as a student she lived on noodles alone.",
+   "ko": "올가는 나타샤에게 대학 시절 라면만 먹고 살았다고 털어놓았어요.",
+   "blank": "лапше",
    "src": "made"
   }
  ],
@@ -24499,6 +24739,22 @@
    "en": "You never know what might happen.",
    "ko": "무슨 일이 생길지 모르잖아.",
    "blank": "Мало"
+  }
+ ],
+ "w|малость": [
+  {
+   "text": "Дмитрий малость пересолил рагу.",
+   "en": "Dmitry oversalted the stew a little.",
+   "ko": "드미트리가 스튜를 조금 짜게 만들었어요.",
+   "blank": "малость",
+   "src": "made"
+  },
+  {
+   "text": "Ольга призналась, что малость завидует Наташе, которая живёт у моря.",
+   "en": "Olga admitted that she's a little envious of Natasha, who lives by the sea.",
+   "ko": "올가는 바닷가에 사는 나타샤가 조금 부럽다고 털어놓았어요.",
+   "blank": "малость",
+   "src": "made"
   }
  ],
  "w|малый": [
@@ -30967,6 +31223,22 @@
    "src": "made"
   }
  ],
+ "w|ничуть": [
+  {
+   "text": "Суп Дмитрия ничуть не уступал супу шефа.",
+   "en": "Dmitry's soup was in no way inferior to the chef's.",
+   "ko": "드미트리의 수프는 셰프의 수프에 조금도 뒤지지 않았어요.",
+   "blank": "ничуть",
+   "src": "made"
+  },
+  {
+   "text": "Ольга писала, что Наташа на фотографии ничуть не изменилась.",
+   "en": "Olga wrote that Natasha hadn't changed a bit in the photo.",
+   "ko": "올가는 사진 속 나타샤가 조금도 변하지 않았다고 썼어요.",
+   "blank": "ничуть",
+   "src": "made"
+  }
+ ],
  "w|но": [
   {
    "text": "Хочу спать, но ещё рано.",
@@ -35657,6 +35929,22 @@
    "src": "made"
   }
  ],
+ "w|отослать": [
+  {
+   "text": "Дмитрий отослал шефу фотографию своего первого торта.",
+   "en": "Dmitry sent the chef a photo of his first cake.",
+   "ko": "드미트리는 셰프에게 자기가 처음 만든 케이크 사진을 보냈어요.",
+   "blank": "отослал",
+   "src": "made"
+  },
+  {
+   "text": "Ольга отослала письмо Наташе только через неделю после того, как написала.",
+   "en": "Olga sent the letter to Natasha only a week after she wrote it.",
+   "ko": "올가는 편지를 쓰고 일주일이 지나서야 나타샤에게 부쳤어요.",
+   "blank": "отослала",
+   "src": "made"
+  }
+ ],
  "w|отпечаток": [
   {
    "text": "Мокрая ваза оставила отпечаток на столе.",
@@ -36617,6 +36905,22 @@
    "src": "tatoeba:12941867/marafon en:8581644/CK"
   }
  ],
+ "w|паб": [
+  {
+   "text": "После урока Дмитрий с одногруппниками зашёл в паб за углом.",
+   "en": "After the lesson Dmitry went with his classmates to the pub around the corner.",
+   "ko": "수업이 끝나고 드미트리는 같은 반 사람들과 모퉁이 펍에 들렀어요.",
+   "blank": "паб",
+   "src": "made"
+  },
+  {
+   "text": "Ольга описала Наташе маленький паб, где по пятницам играет живая музыка.",
+   "en": "Olga described to Natasha a little pub where there's live music on Fridays.",
+   "ko": "올가는 나타샤에게 금요일마다 라이브 음악이 나오는 작은 펍 이야기를 했어요.",
+   "blank": "паб",
+   "src": "made"
+  }
+ ],
  "w|падать": [
   {
    "text": "Нельзя падать духом только потому, что ты не очень талантлив.",
@@ -36708,6 +37012,22 @@
    "en": "The teacher pointed at the map with a long stick, and Irina followed it.",
    "ko": "선생님이 긴 막대기로 지도를 가리키자 이리나는 눈으로 따라갔어요.",
    "blank": "палкой",
+   "src": "made"
+  }
+ ],
+ "w|палочка": [
+  {
+   "text": "Шеф показал Дмитрию, как правильно держать палочки для еды.",
+   "en": "The chef showed Dmitry how to hold chopsticks properly.",
+   "ko": "셰프가 드미트리에게 젓가락을 제대로 잡는 법을 보여 줬어요.",
+   "blank": "палочки",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала Наташе, что наконец научилась есть палочками.",
+   "en": "Olga wrote to Natasha that she had finally learned to eat with chopsticks.",
+   "ko": "올가는 나타샤에게 드디어 젓가락질을 배웠다고 편지를 썼어요.",
+   "blank": "палочками",
    "src": "made"
   }
  ],
@@ -39479,6 +39799,22 @@
    "en": "Hold on, I'm coming.",
    "ko": "잠깐만요, 지금 갈게요.",
    "blank": "Погодите"
+  }
+ ],
+ "w|погубить": [
+  {
+   "text": "Шеф предупредил Дмитрия, что лишняя щепотка соли может погубить весь соус.",
+   "en": "The chef warned Dmitry that an extra pinch of salt can ruin the whole sauce.",
+   "ko": "셰프는 드미트리에게 소금 한 꼬집만 더 들어가도 소스 전체를 망칠 수 있다고 경고했어요.",
+   "blank": "погубить",
+   "src": "made"
+  },
+  {
+   "text": "Ольга писала, что весенние заморозки погубили почти все её розы.",
+   "en": "Olga wrote that the spring frosts had killed almost all her roses.",
+   "ko": "올가는 봄 서리 때문에 장미가 거의 다 죽었다고 썼어요.",
+   "blank": "погубили",
+   "src": "made"
   }
  ],
  "w|под": [
@@ -42385,6 +42721,22 @@
    "blank": "понравился"
   }
  ],
+ "w|пончик": [
+  {
+   "text": "На десерт группа Дмитрия жарила пончики с вареньем.",
+   "en": "For dessert Dmitry's group fried jam doughnuts.",
+   "ko": "디저트로 드미트리네 조는 잼 도넛을 튀겼어요.",
+   "blank": "пончики",
+   "src": "made"
+  },
+  {
+   "text": "Ольга до сих пор помнит пончики с сахарной пудрой, которые они с Наташей ели после школы.",
+   "en": "Olga still remembers the powdered-sugar doughnuts she and Natasha ate after school.",
+   "ko": "올가는 나타샤와 방과 후에 먹던 슈거파우더 도넛을 아직도 기억해요.",
+   "blank": "пончики",
+   "src": "made"
+  }
+ ],
  "w|понятие": [
   {
    "text": "У меня нет понятия.",
@@ -42519,6 +42871,22 @@
    "ko": "톰은 걸리지 않으려고 했어요.",
    "blank": "попасться",
    "src": "tatoeba:8359032/odexed en:3503226/CK"
+  }
+ ],
+ "w|попить": [
+  {
+   "text": "Дмитрий отошёл от горячей плиты, чтобы попить воды.",
+   "en": "Dmitry stepped away from the hot stove to drink some water.",
+   "ko": "드미트리는 물을 마시려고 뜨거운 레인지에서 물러났어요.",
+   "blank": "попить",
+   "src": "made"
+  },
+  {
+   "text": "Ольга предложила старой подруге встретиться и попить кофе в выходные.",
+   "en": "Olga suggested to her old friend that they meet for coffee at the weekend.",
+   "ko": "올가는 오랜 친구에게 주말에 만나서 커피 한잔하자고 했어요.",
+   "blank": "попить",
+   "src": "made"
   }
  ],
  "w|поправиться": [
@@ -42848,6 +43216,22 @@
    "en": "On her very first day the boss decided to entrust Elena with a report for a client.",
    "ko": "첫날부터 상사는 옐레나에게 고객용 보고서를 맡기기로 했어요.",
    "blank": "поручить",
+   "src": "made"
+  }
+ ],
+ "w|порция": [
+  {
+   "text": "Шеф попросил Дмитрия разлить суп по порциям.",
+   "en": "The chef asked Dmitry to ladle the soup into portions.",
+   "ko": "셰프가 드미트리에게 수프를 1인분씩 나눠 담으라고 했어요.",
+   "blank": "порциям",
+   "src": "made"
+  },
+  {
+   "text": "Ольга шутила в письме, что в новом городе порции в кафе огромные.",
+   "en": "Olga joked in her letter that portions in the cafés of her new town are huge.",
+   "ko": "올가는 새 동네 카페는 1인분 양이 어마어마하다고 편지에서 농담했어요.",
+   "blank": "порции",
    "src": "made"
   }
  ],
@@ -44697,6 +45081,22 @@
    "ko": "내 인내심에도 한계가 있어.",
    "blank": "предел",
    "src": "tatoeba:10488675/Ooneykcall en:8358808/Ergulis"
+  }
+ ],
+ "w|предельно": [
+  {
+   "text": "Шеф объяснил Дмитрию технику предельно просто.",
+   "en": "The chef explained the technique to Dmitry as simply as possible.",
+   "ko": "셰프는 드미트리에게 그 기술을 아주 쉽게 설명했어요.",
+   "blank": "предельно",
+   "src": "made"
+  },
+  {
+   "text": "Ольга решила быть с Наташей предельно честной и рассказала о своих сомнениях.",
+   "en": "Olga decided to be completely honest with Natasha and told her about her doubts.",
+   "ko": "올가는 나타샤에게 숨김없이 털어놓기로 하고 자기 고민을 이야기했어요.",
+   "blank": "предельно",
+   "src": "made"
   }
  ],
  "w|предлагать": [
@@ -47617,6 +48017,22 @@
    "blank": "проводим"
   }
  ],
+ "w|проглотить": [
+  {
+   "text": "Дмитрий попробовал соус и чуть не проглотил лавровый лист.",
+   "en": "Dmitry tasted the sauce and nearly swallowed a bay leaf.",
+   "ko": "드미트리는 소스 맛을 보다가 월계수 잎을 삼킬 뻔했어요.",
+   "blank": "проглотил",
+   "src": "made"
+  },
+  {
+   "text": "Ольга проглотила новый роман за один вечер и тут же посоветовала его Наташе.",
+   "en": "Olga devoured a new novel in one evening and immediately recommended it to Natasha.",
+   "ko": "올가는 새 소설을 하룻저녁에 다 읽고 바로 나타샤에게 추천했어요.",
+   "blank": "проглотила",
+   "src": "made"
+  }
+ ],
  "w|прогнать": [
   {
    "text": "Собака Андрея быстро прогнала ворон с поля.",
@@ -47630,6 +48046,22 @@
    "en": "Irina shooed the kids out of the room so she could assemble the wardrobe in peace.",
    "ko": "이리나는 옷장을 차분히 조립하려고 아이들을 방에서 내보냈어요.",
    "blank": "прогнала",
+   "src": "made"
+  }
+ ],
+ "w|проголодаться": [
+  {
+   "text": "К концу занятия Дмитрий так проголодался, что съел всё приготовленное сам.",
+   "en": "By the end of the class Dmitry was so hungry he ate everything he had cooked himself.",
+   "ko": "수업이 끝날 무렵 드미트리는 너무 배가 고파서 만든 걸 혼자 다 먹었어요.",
+   "blank": "проголодался",
+   "src": "made"
+  },
+  {
+   "text": "«Пока писала тебе, совсем проголодалась», — призналась Ольга в конце письма.",
+   "en": "\"While writing to you, I got really hungry,\" Olga admitted at the end of the letter.",
+   "ko": "\"너한테 편지 쓰다 보니 배가 너무 고파졌어.\" 올가가 편지 끝에 털어놓았어요.",
+   "blank": "проголодалась",
    "src": "made"
   }
  ],
@@ -51691,6 +52123,22 @@
    "src": "tatoeba:11511654/marafon en:9460606/sundown"
   }
  ],
+ "w|резать": [
+  {
+   "text": "Дмитрий всё ещё очень медленно режет лук.",
+   "en": "Dmitry still chops onions very slowly.",
+   "ko": "드미트리는 아직도 양파를 아주 천천히 썰어요.",
+   "blank": "режет",
+   "src": "made"
+  },
+  {
+   "text": "Ольга с гордостью писала, что сын уже сам режет овощи для салата.",
+   "en": "Olga proudly wrote that her son already cuts vegetables for salad by himself.",
+   "ko": "올가는 아들이 이제 샐러드 채소를 혼자 썬다고 자랑스럽게 썼어요.",
+   "blank": "режет",
+   "src": "made"
+  }
+ ],
  "w|резко": [
   {
    "text": "Сосед резко хлопнул дверью, и Андрей вздрогнул.",
@@ -52449,6 +52897,22 @@
    "src": "made"
   }
  ],
+ "w|рождаться": [
+  {
+   "text": "Шеф говорит Дмитрию, что лучшие рецепты рождаются из ошибок.",
+   "en": "The chef tells Dmitry that the best recipes are born from mistakes.",
+   "ko": "셰프는 드미트리에게 최고의 레시피는 실수에서 태어난다고 말해요.",
+   "blank": "рождаются",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что у соседской кошки котята рождаются чуть ли не каждую весну.",
+   "en": "Olga wrote that the neighbors' cat has kittens almost every spring.",
+   "ko": "올가는 이웃집 고양이가 거의 봄마다 새끼를 낳는다고 썼어요.",
+   "blank": "рождаются",
+   "src": "made"
+  }
+ ],
  "w|рождение": [
   {
    "text": "Рождение ребёнка всё изменило.",
@@ -53058,6 +53522,22 @@
    "en": "I'll have the soup and a salad.",
    "ko": "수프랑 샐러드 주세요.",
    "blank": "салат",
+   "src": "made"
+  }
+ ],
+ "w|салфетка": [
+  {
+   "text": "Дмитрий вытер руки бумажной салфеткой и взялся за тесто.",
+   "en": "Dmitry wiped his hands with a paper napkin and got to work on the dough.",
+   "ko": "드미트리는 종이 냅킨으로 손을 닦고 반죽을 시작했어요.",
+   "blank": "салфеткой",
+   "src": "made"
+  },
+  {
+   "text": "В конверт Ольга вложила салфетку из кафе, где они с Наташей познакомились.",
+   "en": "Olga put into the envelope a napkin from the café where she and Natasha met.",
+   "ko": "올가는 나타샤와 처음 만난 카페의 냅킨을 봉투에 넣었어요.",
+   "blank": "салфетку",
    "src": "made"
   }
  ],
@@ -53898,6 +54378,22 @@
    "en": "Seeing a funny note in the margins, Anna couldn't hold back her laughter.",
    "ko": "여백에 적힌 웃긴 메모를 보고 안나는 웃음을 참지 못했어요.",
    "blank": "сдержать",
+   "src": "made"
+  }
+ ],
+ "w|сдерживать": [
+  {
+   "text": "Дмитрий с трудом сдерживал смех, когда тесто прилипло к потолку.",
+   "en": "Dmitry could barely hold back his laughter when the dough stuck to the ceiling.",
+   "ko": "반죽이 천장에 들러붙자 드미트리는 웃음을 겨우 참았어요.",
+   "blank": "сдерживал",
+   "src": "made"
+  },
+  {
+   "text": "Ольга не могла сдерживать слёзы, когда читала ответ Наташи.",
+   "en": "Olga couldn't hold back her tears as she read Natasha's reply.",
+   "ko": "올가는 나타샤의 답장을 읽으며 눈물을 참을 수 없었어요.",
+   "blank": "сдерживать",
    "src": "made"
   }
  ],
@@ -55529,6 +56025,22 @@
    "src": "made"
   }
  ],
+ "w|сливки": [
+  {
+   "text": "Дмитрий взбил сливки слишком сильно, и получилось масло.",
+   "en": "Dmitry whipped the cream too hard and it turned into butter.",
+   "ko": "드미트리가 생크림을 너무 세게 휘저어서 버터가 됐어요.",
+   "blank": "сливки",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что теперь пьёт кофе только со сливками.",
+   "en": "Olga wrote that she now drinks her coffee only with cream.",
+   "ko": "올가는 이제 커피에 꼭 크림을 넣어 마신다고 썼어요.",
+   "blank": "сливками",
+   "src": "made"
+  }
+ ],
  "w|слишком": [
   {
    "text": "Слишком жарко.",
@@ -55961,6 +56473,22 @@
    "ko": "톰이 이름을 바꾸고 싶다고 했어요.",
    "blank": "сменить",
    "src": "tatoeba:8548551/Wezel en:8547390/CK"
+  }
+ ],
+ "w|смертельно": [
+  {
+   "text": "К концу долгого занятия Дмитрий смертельно устал.",
+   "en": "By the end of the long class Dmitry was dead tired.",
+   "ko": "긴 수업이 끝날 무렵 드미트리는 녹초가 됐어요.",
+   "blank": "смертельно",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что после переезда смертельно устала, но счастлива.",
+   "en": "Olga wrote that she was dead tired after the move but happy.",
+   "ko": "올가는 이사하고 녹초가 됐지만 행복하다고 썼어요.",
+   "blank": "смертельно",
+   "src": "made"
   }
  ],
  "w|смертельный": [
@@ -57525,6 +58053,22 @@
    "src": "made"
   }
  ],
+ "w|сосиска": [
+  {
+   "text": "Для детского меню Дмитрий завернул сосиски в тесто.",
+   "en": "For the children's menu Dmitry wrapped sausages in dough.",
+   "ko": "어린이 메뉴로 드미트리는 소시지를 반죽으로 감쌌어요.",
+   "blank": "сосиски",
+   "src": "made"
+  },
+  {
+   "text": "Ольга вспоминала походы, где они с Наташей жарили сосиски на костре.",
+   "en": "Olga recalled the hikes where she and Natasha roasted sausages over a campfire.",
+   "ko": "올가는 나타샤와 캠핑 가서 모닥불에 소시지를 구워 먹던 일을 떠올렸어요.",
+   "blank": "сосиски",
+   "src": "made"
+  }
+ ],
  "w|сосредоточиться": [
   {
    "text": "Как вы решаете, на чем сосредоточиться?",
@@ -58606,6 +59150,22 @@
    "en": "Anna asked to compare the old and new lung scans.",
    "ko": "안나는 예전 폐 사진과 새 사진을 비교해 달라고 했어요.",
    "blank": "сравнить",
+   "src": "made"
+  }
+ ],
+ "w|сравниться": [
+  {
+   "text": "Ни один магазинный соус не сравнится с тем, что сварил Дмитрий.",
+   "en": "No store-bought sauce can compare with the one Dmitry made.",
+   "ko": "가게에서 파는 어떤 소스도 드미트리가 만든 소스에 비할 수 없어요.",
+   "blank": "сравнится",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что ни одна новая подруга не сравнится с Наташей.",
+   "en": "Olga wrote that no new friend could compare with Natasha.",
+   "ko": "올가는 어떤 새 친구도 나타샤와는 비교가 안 된다고 썼어요.",
+   "blank": "сравнится",
    "src": "made"
   }
  ],
@@ -67083,6 +67643,22 @@
    "src": "tatoeba:1593167/Biga en:953866/CK"
   }
  ],
+ "w|целиться": [
+  {
+   "text": "Дмитрий долго целился, чтобы выдавить крем точно в центр пирожного.",
+   "en": "Dmitry took a long time aiming to pipe the cream right into the center of the pastry.",
+   "ko": "드미트리는 크림을 케이크 한가운데에 정확히 짜려고 한참 겨눴어요.",
+   "blank": "целился",
+   "src": "made"
+  },
+  {
+   "text": "Ольга вспомнила, как Наташа в тире долго целилась и всё равно промахнулась.",
+   "en": "Olga recalled how Natasha aimed for ages at the shooting gallery and still missed.",
+   "ko": "올가는 나타샤가 사격장에서 한참 겨누고도 빗맞혔던 일을 떠올렸어요.",
+   "blank": "целилась",
+   "src": "made"
+  }
+ ],
  "w|целовать": [
   {
    "text": "Уходя из кафе, Иван поцеловал жену и поехал на работу.",
@@ -67349,6 +67925,22 @@
    "src": "tatoeba:13609255/marafon en:13920686/araneo"
   }
  ],
+ "w|цыплёнок": [
+  {
+   "text": "Сегодня Дмитрий учится запекать цыплёнка с лимоном и чесноком.",
+   "en": "Today Dmitry is learning to roast a chicken with lemon and garlic.",
+   "ko": "오늘 드미트리는 레몬과 마늘을 넣은 영계 구이를 배워요.",
+   "blank": "цыплёнка",
+   "src": "made"
+  },
+  {
+   "text": "Ольга рассказала Наташе, что на даче у неё вылупился первый цыплёнок.",
+   "en": "Olga told Natasha that the first chick had hatched at her dacha.",
+   "ko": "올가는 나타샤에게 별장에서 첫 병아리가 깨어났다고 전했어요.",
+   "blank": "цыплёнок",
+   "src": "made"
+  }
+ ],
  "w|чай": [
   {
    "text": "Что тебе больше нравится, чай или кофе?",
@@ -67485,6 +68077,22 @@
    "en": "Leave me a piece of the pie.",
    "ko": "파이 한 조각은 나한테 남겨 줘.",
    "blank": "часть"
+  }
+ ],
+ "w|чашечка": [
+  {
+   "text": "В перерыве Дмитрий выпил чашечку крепкого кофе.",
+   "en": "During the break Dmitry drank a little cup of strong coffee.",
+   "ko": "쉬는 시간에 드미트리는 진한 커피 한 잔을 마셨어요.",
+   "blank": "чашечку",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала подруге: «Приезжай, выпьем по чашечке чая и поболтаем».",
+   "en": "Olga wrote to her friend: \"Come over, we'll have a cup of tea and chat.\"",
+   "ko": "올가는 친구에게 \"놀러 와, 차 한잔하면서 수다 떨자\"라고 썼어요.",
+   "blank": "чашечке",
+   "src": "made"
   }
  ],
  "w|чашка": [
@@ -67936,6 +68544,22 @@
    "en": "The patient's card has a chip with his data.",
    "ko": "환자 카드에는 정보가 담긴 칩이 있어요.",
    "blank": "чип",
+   "src": "made"
+  }
+ ],
+ "w|чипсы": [
+  {
+   "text": "На курсах Дмитрий научился делать домашние чипсы из картофеля.",
+   "en": "At the course Dmitry learned to make homemade potato chips.",
+   "ko": "드미트리는 수업에서 감자로 집에서 감자칩 만드는 법을 배웠어요.",
+   "blank": "чипсы",
+   "src": "made"
+  },
+  {
+   "text": "Ольга вспоминала, как они с Наташей тайком ели чипсы на уроках.",
+   "en": "Olga recalled how she and Natasha secretly ate chips in class.",
+   "ko": "올가는 나타샤와 수업 시간에 몰래 과자를 먹던 일을 떠올렸어요.",
+   "blank": "чипсы",
    "src": "made"
   }
  ],
@@ -68727,6 +69351,22 @@
    "ko": "어떤 초콜릿을 제일 좋아해?",
    "blank": "шоколад",
    "src": "tatoeba:13030732/marafon en:13030727/abiniz"
+  }
+ ],
+ "w|шоколадный": [
+  {
+   "text": "Дмитрий растопил сливочное масло для шоколадного крема.",
+   "en": "Dmitry melted butter for the chocolate cream.",
+   "ko": "드미트리는 초콜릿 크림에 넣을 버터를 녹였어요.",
+   "blank": "шоколадного",
+   "src": "made"
+  },
+  {
+   "text": "Ольга написала, что всё ещё скучает по шоколадному торту мамы Наташи.",
+   "en": "Olga wrote that she still misses the chocolate cake Natasha's mom used to make.",
+   "ko": "올가는 나타샤 어머니의 초콜릿 케이크가 아직도 그립다고 썼어요.",
+   "blank": "шоколадному",
+   "src": "made"
   }
  ],
  "w|шоссе": [
